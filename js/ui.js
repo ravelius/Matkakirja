@@ -47,6 +47,7 @@ import {
 import { AFRICA_SAAPUMISET } from './packs/africa-saapumiset.js';
 import { AFRICA_KULTTUURI, KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
 import { EUROPE_SAAPUMISET } from './packs/europe-saapumiset.js';
+import { EUROPE_KAARI } from './packs/europe-kaari.js';
 import { ASIA_SAAPUMISET } from './packs/asia-saapumiset.js';
 import { NORTHAMERICA_SAAPUMISET } from './packs/northamerica-saapumiset.js';
 import { SOUTHAMERICA_SAAPUMISET } from './packs/southamerica-saapumiset.js';
@@ -1772,6 +1773,8 @@ export class UI {
     this.quizQuestion = document.getElementById('quiz-question');
     // Kohtaamisen tervehdys kysymyksen yllä (js/packs/kohtaamiset.js).
     this.quizKohtaaminen = document.getElementById('quiz-kohtaaminen');
+    this.quizIsoisa = document.getElementById('quiz-isoisa');
+    this.quizIsoisaTeksti = document.getElementById('quiz-isoisa-teksti');
     // Tervehdys luetaan kerran per kaupunki ja istunto — toistuvassa
     // käynnissä hahmo menee suoraan asiaan.
     this.kohtaamisetNahty = new Set();
@@ -5759,7 +5762,7 @@ export class UI {
           } else if (tila === 'lyhyt') {
             this.playDiaryVoice(this.diaryFullUrl, {
               ekaLauseeseen: true,
-              osuus: eka.length / (uusi.kuvaus.length + 1 + uusi.nosto.length),
+              osuus: eka.length / (uusi.kuvaus.length + 1 + (uusi.nosto?.length ?? 0)),
               viive: 1000,
             });
           } else {
@@ -11324,6 +11327,21 @@ export class UI {
       this.quizQuestion.textContent = '';
       this.quizKohtaaminen.textContent = '';
       this.quizKohtaaminen.hidden = !tervehdys;
+      /*
+       * Isoisän sitaatti kysymyksen yllä (omistajan päätös 8.8.2026:
+       * "matkakirja siteeraisi suoraan pelkkää isoisän tarinaa siinä
+       * paikassa"). Vain tavallisessa kaupunkivisassa — pulmilla,
+       * valokuvilla ja porteilla on omat kehyksensä. Luenta soi
+       * isoisän omalla äänellä, ellei kertojaa ole hiljennetty.
+       */
+      const kaari = (!quiz.kind && !quiz.gate) ? EUROPE_KAARI[quiz.cityId] : null;
+      this.quizIsoisa.hidden = !kaari?.visa;
+      if (kaari?.visa) {
+        this.quizIsoisaTeksti.textContent = kaari.visa;
+        if (kaari.luennat && kertojaTila() !== 'ei') {
+          this.playDiaryVoice(`assets/audio/puhe-europe-visa-${quiz.cityId}.mp3`, { viive: 500 });
+        }
+      }
       const vaihtoehdot = () => {
         if (this.dead || this.typedQuizFor !== quiz) return;
         this.quizStage = 2;
@@ -11751,6 +11769,20 @@ export class UI {
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
     /*
+     * Isoisän aarresitaatti paljastuksen alle (omistajan päätös
+     * 8.8.2026): kätkön löytyessä isoisä puhuu omalla äänellään ja
+     * sulkee saapumisen kuvan. Ei tyhjälle laatalle — pettymyksellä
+     * on oma selitteensä.
+     */
+    const kaari = type !== 'empty' ? EUROPE_KAARI[this.game.quiz?.cityId] : null;
+    if (kaari?.aarre) {
+      caption.appendChild(html('p', 'reveal-isoisa', `"${kaari.aarre}"`));
+      caption.appendChild(html('span', 'reveal-isoisa-nimio', 'Isoisän matkakirjasta, 1873'));
+      if (kaari.luennat && kertojaTila() !== 'ei') {
+        this.playDiaryVoice(`assets/audio/puhe-europe-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 });
+      }
+    }
+    /*
      * Taikalasin kohdalla "Taikalasi" ei kerro vielä mitään: pelaajan
      * pitää nähdä KUMPI lasi löytyi ja mitä sillä näkee. Nimi ja kuvaus
      * asuvat linssimoduulissa (suunnitelman luku 3), joten ne haetaan
@@ -11771,7 +11803,7 @@ export class UI {
     // Näyttöaika kasvaa selitteen mukana: "+300 puntaa" saa vilahtaa,
     // mutta pitkä selite (esim. tyhjän laatan "merkintä oli vanhentunut")
     // pitää ehtiä lukea. Napautus ohittaa odotuksen.
-    const seliteMs = (REVEAL_SUB[type] ?? '').length * 45;
+    const seliteMs = ((REVEAL_SUB[type] ?? '').length + (kaari?.aarre?.length ?? 0)) * 45;
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });
     });

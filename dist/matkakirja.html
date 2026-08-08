@@ -7219,6 +7219,50 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 
 .tutki-nuoli svg { width: 100%; height: 100%; display: block; }
 
+/* ── Isoisän sitaatit visassa ja aarteessa ────────────────────────
+ * Matkakirja lainaa pelkkää isoisän tarinaa (omistajan päätös
+ * 8.8.2026); nimiö kertoo kehyksen, sitaatti on kursiivia kuin
+ * vanha käsiala. */
+.quiz-isoisa {
+  margin: 0.35rem 0 0.6rem;
+  padding: 0.55rem 0.75rem;
+  background: rgba(90, 70, 40, 0.08);
+  border-left: 2px solid rgba(70, 51, 31, 0.4);
+}
+
+.quiz-isoisa-nimio {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-type);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.6);
+}
+
+.quiz-isoisa-teksti {
+  margin: 0;
+  font-style: italic;
+  line-height: 1.45;
+  color: rgba(40, 30, 18, 0.92);
+}
+
+.reveal-isoisa {
+  margin: 0.5rem 0 0.1rem;
+  font-style: italic;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  max-width: 26rem;
+}
+
+.reveal-isoisa-nimio {
+  display: block;
+  font-family: var(--font-type);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
 /* Rivin järjestys: nuolet sivunumeron kummallakin puolella,
  * vaikka DOM:issa numero on viimeisenä. */
 .tutki-nuoli.edellinen { order: 1; }
@@ -10092,6 +10136,12 @@ body.maatiedot-tila .board-hint {
     <p id="quiz-selite" class="quiz-selite" hidden></p>
     <!-- Valokuvakysymyksen kuva: matkavalokuvaajan vedos. -->
     <img id="quiz-photo" class="quiz-photo" alt="" hidden />
+    <!-- Isoisän suora sitaatti kysymyksen yllä: matkakirja lainaa
+         pelkkää isoisän tarinaa siinä paikassa (js/packs/europe-kaari.js). -->
+    <div id="quiz-isoisa" class="quiz-isoisa" hidden>
+      <p class="quiz-isoisa-nimio">Isoisän matkakirjasta, 1873</p>
+      <p id="quiz-isoisa-teksti" class="quiz-isoisa-teksti"></p>
+    </div>
     <!-- Kohtaamisen avaus: hahmon tervehdys kirjoittuu ennen kysymystä
          (kaupungit, joilla on rivi js/packs/kohtaamiset.js:ssä). -->
     <p id="quiz-kohtaaminen" class="quiz-kohtaaminen" hidden></p>
@@ -16729,19 +16779,23 @@ const EUROPE_SAAPUMISET = {
    * viimeinen kosketus Euroopassa (raamattu: "askeleet sumussa
    * kyllä, vaara ei"). Tykki laukaisee jännityksen huumoriksi.
    */
+  /*
+   * Uusi malli (omistajan päätös 8.8.2026 illalla): saapuminen on
+   * pelkkää Reginaldia koko välimitassa, isoisä puhuu visassa ja
+   * aarteessa (europe-kaari.js). Pilotti: Edinburgh ja Pietari.
+   */
   edinburgh: {
-    kuvaus: 'Sumussa selkäni takana kuului askeleita — kunnes linnan '
-      + 'tykki pamahti kello yksi, ja me molemmat hypähdimme. '
-      + 'Askeleet kääntyivät kiireesti pois.',
-    nosto: 'Isoisä kirjoitti: "Tykki ammutaan joka päivä kello yksi, '
-      + 'jotta sataman laivat asettavat kellonsa oikeaan." Minä '
-      + 'kiitin sitä tänään muustakin.',
-    luenta: '[whispers] Sumussa selkäni takana kuului askeleita — '
-      + '[excited] kunnes linnan tykki pamahti kello yksi, ja me '
-      + 'molemmat hypähdimme. Askeleet kääntyivät kiireesti pois. '
-      + '[softly] Isoisä kirjoitti: "Tykki ammutaan joka päivä kello '
-      + 'yksi, jotta sataman laivat asettavat kellonsa oikeaan." '
-      + '[warmly] Minä kiitin sitä tänään muustakin.',
+    kuvaus: 'Kujalla kaasulyhdyn valoympyrän reunalla seisoi hahmo '
+      + 'liikkumatta, ja omat askeleeni kuuluivat liian kovaa. '
+      + 'Astuin lähemmäs — yövartija nosti lakkiaan: "Eksyitte, '
+      + 'nuori herra. Täällä kaikki eksyvät ensin." Kävelin hänen '
+      + 'perässään valosta valoon.',
+    luenta: '[whispers] Kujalla kaasulyhdyn valoympyrän reunalla '
+      + 'seisoi hahmo liikkumatta, ja omat askeleeni kuuluivat '
+      + 'liian kovaa. [curious] Astuin lähemmäs — [warmly] '
+      + 'yövartija nosti lakkiaan: "Eksyitte, nuori herra. Täällä '
+      + 'kaikki eksyvät ensin." [softly] Kävelin hänen perässään '
+      + 'valosta valoon.',
   },
 
   dublin: {
@@ -16974,20 +17028,17 @@ const EUROPE_SAAPUMISET = {
       + 'ikkunassa tikittää yhä taskukello.',
   },
 
+  /* Uusi malli — ks. Edinburghin kommentti. */
   pietari: {
-    kuvaus: 'Kesäyö ei pimennyt lainkaan: luin katukylttiä keskiyöllä '
-      + 'ilman lamppua. Sitten Nevan sillat nousivat pystyyn, ja jäin '
-      + 'katsomaan kuin portin avautumista.',
-    nosto: 'Isoisä kirjoitti: "Sillat nousivat, ja jäin väärälle '
-      + 'rannalle aamuun asti. En harmitellut — halusin nähdä, kuka '
-      + 'muu jäi." Katsoin ympärilleni minäkin.',
-    luenta: '[curious] Kesäyö ei pimennyt lainkaan: luin katukylttiä '
-      + 'keskiyöllä ilman lamppua. [excited] Sitten Nevan sillat '
-      + 'nousivat pystyyn, ja jäin katsomaan kuin portin '
-      + 'avautumista. [softly] Isoisä kirjoitti: "Sillat nousivat, '
-      + 'ja jäin väärälle rannalle aamuun asti. En harmitellut — '
-      + 'halusin nähdä, kuka muu jäi." [whispers] Katsoin '
-      + 'ympärilleni minäkin.',
+    kuvaus: 'Eremitaasin salissa kissa käveli ohitseni kuin '
+      + 'virkamies kiireisellä asialla. Vahtimestari kuiskasi: '
+      + 'kissat ovat vartioineet tauluja keisarinnan ajoista, ja '
+      + 'jokaisella on oma kerros.',
+    luenta: '[curious] Eremitaasin salissa kissa käveli ohitseni '
+      + 'kuin virkamies kiireisellä asialla. [whispers] '
+      + 'Vahtimestari kuiskasi: kissat ovat vartioineet tauluja '
+      + 'keisarinnan ajoista, [warmly] ja jokaisella on oma '
+      + 'kerros.',
   },
 
   tallinna: {
@@ -17145,6 +17196,64 @@ const EUROPE_SAAPUMISET = {
       + 't-paidassa. [softly] Isoisä kirjoitti: "Puodissa kuulee '
       + 'norjaa, suomea ja venäjää samassa lauseessa. Tätä sanotaan '
       + 'Pohjolan Pariisiksi." [warmly] Nimi on käytössä yhä.',
+  },
+};
+
+// ===== js/packs/europe-kaari.js =====
+/*
+ * Isoisän kaari: suorat sitaatit visaan ja aarteeseen.
+ *
+ * Omistajan päätökset 8.8.2026 illalla:
+ *  - isoisä pois saapumisista (ellei todella hyvää syytä) ja sisään
+ *    kysymys- ja aarrehetkiin
+ *  - "matkakirja siteeraisi suoraan pelkkää isoisän tarinaa" — tekstit
+ *    ovat PUHDASTA isoisää (minä-muoto, 1873), kehyksen kertoo
+ *    käyttöliittymän nimiö "Isoisän matkakirjasta, 1873"
+ *  - luennat isoisän omalla äänellä (pilotissa omistajan valitsema
+ *    voice id R3XXDwKMU2YHwBcuYUH3)
+ *
+ * visa  = sitaatti tietovisan yllä; sitoo kysymyksen kaupunkiin ja
+ *         siihen ihmiseen, jonka nuori herra kohtasi saapumisessa.
+ * aarre = sitaatti kätkön paljastuessa; SULKEE SAMAN KUVAN, jonka
+ *         saapuminen avasi (sääntö: ei viittauksia kuviin, joita
+ *         teksteissä ei enää ole).
+ * luennat = true kun äänitiedostot on generoitu:
+ *         assets/audio/puhe-europe-visa-<id>.mp3 ja
+ *         assets/audio/puhe-europe-aarre-<id>.mp3.
+ *
+ * PILOTTI: Edinburgh ja Pietari (omistajan tilaus 8.8.: "tee kaksi
+ * kokonaista kaupunkia kaikkine lukuäänineen"). Loput kaupungit
+ * kirjoitetaan, kun omistaja on kuullut pilotin.
+ *
+ * Vain Fable kirjoittaa tähän tiedostoon (tarinallinen aines).
+ */
+const EUROPE_KAARI = {
+  edinburgh: {
+    visa: 'Tässä kaupungissa oikea vastaus on avain. Kadut ovat '
+      + 'päällekkäin kuin kirjan sivut — ja väärä kerros vie '
+      + 'väärälle vuosisadalle.',
+    visaLuenta: '[softly] Tässä kaupungissa oikea vastaus on avain. '
+      + 'Kadut ovat päällekkäin kuin kirjan sivut — [whispers] ja '
+      + 'väärä kerros vie väärälle vuosisadalle.',
+    aarre: 'Yövartija saattoi minutkin kerran oikealle sivulle. Jos '
+      + 'löysit tämän, hän näytti tietä sinullekin — kiitä häntä '
+      + 'puolestani.',
+    aarreLuenta: '[warmly] Yövartija saattoi minutkin kerran '
+      + 'oikealle sivulle. [softly] Jos löysit tämän, hän näytti '
+      + 'tietä sinullekin — kiitä häntä puolestani.',
+    luennat: true,
+  },
+  pietari: {
+    visa: 'Eremitaasissa älä seuraa opasta vaan kissaa. Se vie '
+      + 'oikean taulun luo — jos osaat vastata sen katseeseen.',
+    visaLuenta: '[softly] Eremitaasissa älä seuraa opasta vaan '
+      + 'kissaa. [whispers] Se vie oikean taulun luo — jos osaat '
+      + 'vastata sen katseeseen.',
+    aarre: 'Minutkin johdatti tänne kissa. Luota aina virkamieheen, '
+      + 'jolla on viikset.',
+    aarreLuenta: '[warmly] Minutkin johdatti tänne kissa. [softly] '
+      + 'Luota aina virkamieheen, jolla on viikset.',
+    luennat: true,
   },
 };
 
@@ -106348,6 +106457,8 @@ class UI {
     this.quizQuestion = document.getElementById('quiz-question');
     // Kohtaamisen tervehdys kysymyksen yllä (js/packs/kohtaamiset.js).
     this.quizKohtaaminen = document.getElementById('quiz-kohtaaminen');
+    this.quizIsoisa = document.getElementById('quiz-isoisa');
+    this.quizIsoisaTeksti = document.getElementById('quiz-isoisa-teksti');
     // Tervehdys luetaan kerran per kaupunki ja istunto — toistuvassa
     // käynnissä hahmo menee suoraan asiaan.
     this.kohtaamisetNahty = new Set();
@@ -110334,7 +110445,7 @@ class UI {
           } else if (tila === 'lyhyt') {
             this.playDiaryVoice(this.diaryFullUrl, {
               ekaLauseeseen: true,
-              osuus: eka.length / (uusi.kuvaus.length + 1 + uusi.nosto.length),
+              osuus: eka.length / (uusi.kuvaus.length + 1 + (uusi.nosto?.length ?? 0)),
               viive: 1000,
             });
           } else {
@@ -115897,6 +116008,21 @@ class UI {
       this.quizQuestion.textContent = '';
       this.quizKohtaaminen.textContent = '';
       this.quizKohtaaminen.hidden = !tervehdys;
+      /*
+       * Isoisän sitaatti kysymyksen yllä (omistajan päätös 8.8.2026:
+       * "matkakirja siteeraisi suoraan pelkkää isoisän tarinaa siinä
+       * paikassa"). Vain tavallisessa kaupunkivisassa — pulmilla,
+       * valokuvilla ja porteilla on omat kehyksensä. Luenta soi
+       * isoisän omalla äänellä, ellei kertojaa ole hiljennetty.
+       */
+      const kaari = (!quiz.kind && !quiz.gate) ? EUROPE_KAARI[quiz.cityId] : null;
+      this.quizIsoisa.hidden = !kaari?.visa;
+      if (kaari?.visa) {
+        this.quizIsoisaTeksti.textContent = kaari.visa;
+        if (kaari.luennat && kertojaTila() !== 'ei') {
+          this.playDiaryVoice(`assets/audio/puhe-europe-visa-${quiz.cityId}.mp3`, { viive: 500 });
+        }
+      }
       const vaihtoehdot = () => {
         if (this.dead || this.typedQuizFor !== quiz) return;
         this.quizStage = 2;
@@ -116324,6 +116450,20 @@ class UI {
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
     /*
+     * Isoisän aarresitaatti paljastuksen alle (omistajan päätös
+     * 8.8.2026): kätkön löytyessä isoisä puhuu omalla äänellään ja
+     * sulkee saapumisen kuvan. Ei tyhjälle laatalle — pettymyksellä
+     * on oma selitteensä.
+     */
+    const kaari = type !== 'empty' ? EUROPE_KAARI[this.game.quiz?.cityId] : null;
+    if (kaari?.aarre) {
+      caption.appendChild(html('p', 'reveal-isoisa', `"${kaari.aarre}"`));
+      caption.appendChild(html('span', 'reveal-isoisa-nimio', 'Isoisän matkakirjasta, 1873'));
+      if (kaari.luennat && kertojaTila() !== 'ei') {
+        this.playDiaryVoice(`assets/audio/puhe-europe-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 });
+      }
+    }
+    /*
      * Taikalasin kohdalla "Taikalasi" ei kerro vielä mitään: pelaajan
      * pitää nähdä KUMPI lasi löytyi ja mitä sillä näkee. Nimi ja kuvaus
      * asuvat linssimoduulissa (suunnitelman luku 3), joten ne haetaan
@@ -116344,7 +116484,7 @@ class UI {
     // Näyttöaika kasvaa selitteen mukana: "+300 puntaa" saa vilahtaa,
     // mutta pitkä selite (esim. tyhjän laatan "merkintä oli vanhentunut")
     // pitää ehtiä lukea. Napautus ohittaa odotuksen.
-    const seliteMs = (REVEAL_SUB[type] ?? '').length * 45;
+    const seliteMs = ((REVEAL_SUB[type] ?? '').length + (kaari?.aarre?.length ?? 0)) * 45;
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });
     });
@@ -117095,6 +117235,8 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 408, teksti: 'Isoisä puhuu omalla äänellään: pilotti kahdessa kaupungissa' },
+  { v: 408, teksti: 'Edinburgh ja Pietari uuteen malliin äänineen' },
   { v: 407, teksti: 'Kymmenen uutta kaupunkilehteä Ateenasta Budapestiin' },
   { v: 406, teksti: 'Maan nimikilpi kutistuu kaukaa katsottuna maan mukana' },
   { v: 405, teksti: 'Lehden vieritys ei enää pompahda takaisin pohjaan' },
@@ -117577,7 +117719,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-08.407';
+const APP_VERSION = '2026-08-08.408';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

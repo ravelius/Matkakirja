@@ -265,19 +265,23 @@ export const EUROPE_SAAPUMISET = {
    * viimeinen kosketus Euroopassa (raamattu: "askeleet sumussa
    * kyllä, vaara ei"). Tykki laukaisee jännityksen huumoriksi.
    */
+  /*
+   * Uusi malli (omistajan päätös 8.8.2026 illalla): saapuminen on
+   * pelkkää Reginaldia koko välimitassa, isoisä puhuu visassa ja
+   * aarteessa (europe-kaari.js). Pilotti: Edinburgh ja Pietari.
+   */
   edinburgh: {
-    kuvaus: 'Sumussa selkäni takana kuului askeleita — kunnes linnan '
-      + 'tykki pamahti kello yksi, ja me molemmat hypähdimme. '
-      + 'Askeleet kääntyivät kiireesti pois.',
-    nosto: 'Isoisä kirjoitti: "Tykki ammutaan joka päivä kello yksi, '
-      + 'jotta sataman laivat asettavat kellonsa oikeaan." Minä '
-      + 'kiitin sitä tänään muustakin.',
-    luenta: '[whispers] Sumussa selkäni takana kuului askeleita — '
-      + '[excited] kunnes linnan tykki pamahti kello yksi, ja me '
-      + 'molemmat hypähdimme. Askeleet kääntyivät kiireesti pois. '
-      + '[softly] Isoisä kirjoitti: "Tykki ammutaan joka päivä kello '
-      + 'yksi, jotta sataman laivat asettavat kellonsa oikeaan." '
-      + '[warmly] Minä kiitin sitä tänään muustakin.',
+    kuvaus: 'Kujalla kaasulyhdyn valoympyrän reunalla seisoi hahmo '
+      + 'liikkumatta, ja omat askeleeni kuuluivat liian kovaa. '
+      + 'Astuin lähemmäs — yövartija nosti lakkiaan: "Eksyitte, '
+      + 'nuori herra. Täällä kaikki eksyvät ensin." Kävelin hänen '
+      + 'perässään valosta valoon.',
+    luenta: '[whispers] Kujalla kaasulyhdyn valoympyrän reunalla '
+      + 'seisoi hahmo liikkumatta, ja omat askeleeni kuuluivat '
+      + 'liian kovaa. [curious] Astuin lähemmäs — [warmly] '
+      + 'yövartija nosti lakkiaan: "Eksyitte, nuori herra. Täällä '
+      + 'kaikki eksyvät ensin." [softly] Kävelin hänen perässään '
+      + 'valosta valoon.',
   },
 
   dublin: {
@@ -510,20 +514,17 @@ export const EUROPE_SAAPUMISET = {
       + 'ikkunassa tikittää yhä taskukello.',
   },
 
+  /* Uusi malli — ks. Edinburghin kommentti. */
   pietari: {
-    kuvaus: 'Kesäyö ei pimennyt lainkaan: luin katukylttiä keskiyöllä '
-      + 'ilman lamppua. Sitten Nevan sillat nousivat pystyyn, ja jäin '
-      + 'katsomaan kuin portin avautumista.',
-    nosto: 'Isoisä kirjoitti: "Sillat nousivat, ja jäin väärälle '
-      + 'rannalle aamuun asti. En harmitellut — halusin nähdä, kuka '
-      + 'muu jäi." Katsoin ympärilleni minäkin.',
-    luenta: '[curious] Kesäyö ei pimennyt lainkaan: luin katukylttiä '
-      + 'keskiyöllä ilman lamppua. [excited] Sitten Nevan sillat '
-      + 'nousivat pystyyn, ja jäin katsomaan kuin portin '
-      + 'avautumista. [softly] Isoisä kirjoitti: "Sillat nousivat, '
-      + 'ja jäin väärälle rannalle aamuun asti. En harmitellut — '
-      + 'halusin nähdä, kuka muu jäi." [whispers] Katsoin '
-      + 'ympärilleni minäkin.',
+    kuvaus: 'Eremitaasin salissa kissa käveli ohitseni kuin '
+      + 'virkamies kiireisellä asialla. Vahtimestari kuiskasi: '
+      + 'kissat ovat vartioineet tauluja keisarinnan ajoista, ja '
+      + 'jokaisella on oma kerros.',
+    luenta: '[curious] Eremitaasin salissa kissa käveli ohitseni '
+      + 'kuin virkamies kiireisellä asialla. [whispers] '
+      + 'Vahtimestari kuiskasi: kissat ovat vartioineet tauluja '
+      + 'keisarinnan ajoista, [warmly] ja jokaisella on oma '
+      + 'kerros.',
   },
 
   tallinna: {

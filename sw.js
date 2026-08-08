@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-08.407';
+const CACHE = 'matkakirja-2026-08-08.408';
 const SHELL = [
   './',
   './index.html',
@@ -75,6 +75,7 @@ const SHELL = [
   './js/packs/europe-puzzles.js',
   './js/packs/europe-countries.js',
   './js/packs/europe-saapumiset.js',
+  './js/packs/europe-kaari.js',
   './js/packs/asia-saapumiset.js',
   './js/packs/northamerica-saapumiset.js',
   './js/packs/southamerica-saapumiset.js',
@@ -216,6 +217,11 @@ const SHELL = [
   './assets/audio/puhe-europe-saapuminen-bukarest.mp3',
   './assets/audio/puhe-europe-saapuminen-dublin.mp3',
   './assets/audio/puhe-europe-saapuminen-edinburgh.mp3',
+  // Isoisän visa- ja aarresitaatit (pilotti: Edinburgh ja Pietari).
+  './assets/audio/puhe-europe-visa-edinburgh.mp3',
+  './assets/audio/puhe-europe-aarre-edinburgh.mp3',
+  './assets/audio/puhe-europe-visa-pietari.mp3',
+  './assets/audio/puhe-europe-aarre-pietari.mp3',
   './assets/audio/puhe-europe-saapuminen-granada.mp3',
   './assets/audio/puhe-europe-saapuminen-helsinki.mp3',
   './assets/audio/puhe-europe-saapuminen-islanti.mp3',
