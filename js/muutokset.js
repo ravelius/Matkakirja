@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 409, teksti: 'Kymmenen lehden faktat ja kuvatekstit tarkistettu' },
   { v: 408, teksti: 'Isoisä puhuu omalla äänellään: pilotti kahdessa kaupungissa' },
   { v: 408, teksti: 'Edinburgh ja Pietari uuteen malliin äänineen' },
   { v: 407, teksti: 'Kymmenen uutta kaupunkilehteä Ateenasta Budapestiin' },

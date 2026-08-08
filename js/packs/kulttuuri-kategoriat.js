@@ -2783,8 +2783,9 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Istanbul',
-      johdanto: 'Kaupunki kahdella mantereella, jonka alla on järvi, keskellä '
-        + 'faaraon obeliski ja joka kadunkulmassa oma kissa.',
+      johdanto: 'Kaupunki kahdella mantereella, jonka alla on pylväiden '
+        + 'kannattama vesisäiliö, keskellä faaraon obeliski ja joka '
+        + 'kadunkulmassa oma kissa.',
       kansikuvat: [
         {
           tiedosto: 'Hagia Sophia Mars 2013.jpg',
@@ -2816,8 +2817,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'miljoonaan. Niitä ei pidetä irtolaisina vaan korttelin '
             + 'yhteisinä lemmikkeinä: kauppias jättää ovensa eteen vesikupin '
             + 'ja talveksi pahvilaatikon. Kuuluisin niistä oli Gli, joka '
-            + 'syntyi Hagia Sofiassa vuonna 2004 ja asui siellä kuolemaansa '
-            + '2020 asti. Presidentti Barack Obama pysähtyi silittämään sitä '
+            + 'syntyi Hagia Sofiassa vuonna 2004 ja asui siellä kuudentoista '
+            + 'vuoden ajan. Presidentti Barack Obama pysähtyi silittämään sitä '
             + 'vierailullaan 2009. Gli haudattiin Hagia Sofian pihaan.',
           selite: 'Gli Hagia Sofian marmorilattialla ruokakuppinsa vieressä. '
             + 'Kissa syntyi rakennuksessa, joka oli silloin museo, ja tuli '
@@ -2828,7 +2829,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Medusa kannattelee pylvästä ylösalaisin',
           tiedosto: 'Medusa Head at Basilica Cistern, Istanbul, Turkey (Ank Kumar) 06.jpg',
-          teksti: 'Hagia Sofian kulmalta laskeutuu 52 porrasta maan alle. Siellä '
+          teksti: 'Hagia Sofiasta parinsadan metrin päässä laskeutuu 52 porrasta '
+            + 'maan alle. Siellä '
             + 'on Yerebatan, keisari Justinianuksen 500-luvulla rakennuttama '
             + 'vesisäiliö: 336 pylvästä, jokainen yhdeksän metriä korkea. '
             + 'Kaupunki unohti sen vuosisadoiksi. Vasta 1500-luvulla '
@@ -2849,7 +2851,8 @@ export const KULTTUURI_KATEGORIAT = {
           teksti: 'Sultanahmetin aukio oli ennen hippodromi, hevosvaunujen '
             + 'kilparata. Sen keskellä seisoo yhä punagraniittinen obeliski, '
             + 'joka veistettiin Egyptissä faarao Thutmosis III:n aikana noin '
-            + '1450 eaa. Se on kaupungin vanhin pystyssä oleva muistomerkki. '
+            + '1450 eaa. Mikään muu kaupungissa pystyssä oleva ei ole yhtä '
+            + 'vanhaa tekoa. '
             + 'Keisari Theodosius toi sen Konstantinopoliin vuonna 390, ja '
             + 'jalustaan hakattiin kaksi kertomusta pystyttämisestä: '
             + 'latinankielinen kehuu työn kestäneen kolmekymmentä päivää, '
@@ -2864,7 +2867,7 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Hieroglyfit läheltä',
               tiedosto: 'Obelisk of Thutmosis III, Istanbul, Turkey 001.jpg',
               selite: 'Obeliskin kylkeä läheltä: soikion sisällä on faaraon nimi, '
-                + 'ja sen alla erottuvat haukka, kovakuoriainen ja '
+                + 'jossa erottuu kovakuoriainen, ja soikion alla haukka ja '
                 + 'aaltoviivat.',
               lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
             },
@@ -2891,8 +2894,9 @@ export const KULTTUURI_KATEGORIAT = {
             + '1826, mutta Istanbulin sotilasmuseon johtaja herätti sen '
             + 'henkiin 1911. Museossa se marssii yhä.',
           selite: 'Mehter-soittokunta esiintyy Istanbulin sotilasmuseossa '
-            + 'Harbiyessä. Rummut ovat kaksipuolisia davuleita, ja soittajat '
-            + 'astelevat hitaasti kääntyen vuoroin oikealle ja vasemmalle.',
+            + 'Harbiyessä. Tummansiniviittaiset rumpalit kantavat hihnoilla '
+            + 'viininpunaisia, kullalla koristeltuja davul-rumpuja, ja '
+            + 'oikealla erottuu vihreä ja punainen kaftaani sekä sapeli.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mehter',
           musiikki: 'https://music.apple.com/fi/search?term=mehter',
@@ -2907,9 +2911,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kukkulalta toiselle. Se on Valensin vesijohto, joka vihittiin '
             + 'käyttöön vuonna 373, ja sitä on jäljellä 921 metriä. Kaarien '
             + 'alta kulkee nykyään vilkas Atatürk-bulevardi: autot ajavat '
-            + 'suoraan yli 1600 vuotta vanhan sillan alitse. Vesi tuotiin '
-            + 'kaupunkiin yli 250 kilometrin päästä, ja se varastoitiin maan '
-            + 'alle — muun muassa siihen säiliöön, jossa Medusa nukkuu.',
+            + 'suoraan yli 1600 vuotta vanhan sillan alitse. Vettä tuotiin '
+            + 'lähteiltä yli sadan kilometrin päästä, ja kanavia kertyi '
+            + 'kaikkiaan yli 250 kilometriä — antiikin pisin. Vesi '
+            + 'varastoitiin maan alle, muun muassa siihen säiliöön, jossa '
+            + 'Medusa nukkuu.',
           selite: 'Bozdoğan Kemeri Atatürk-bulevardin yllä. Alempi kaaririvi '
             + 'kannattaa ylempää, ja autot ajavat kaaren alitse molempiin '
             + 'suuntiin.',
@@ -2948,9 +2954,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hautuu väkevä uute. Se tarjoillaan tulppaanin muotoisessa '
             + 'korvattomassa lasissa, josta pidetään kiinni reunasta, jottei '
             + 'sormia polta.',
-          selite: 'Teepuutarha Çengelköyssä Istanbulin Aasian puolella. Pöydät on '
-            + 'aseteltu vanhan plataanin alle, ja jokaisella pöydällä on oma '
-            + 'pieni teepannu.',
+          selite: 'Teepuutarha Çengelköyssä Istanbulin Aasian puolella. Tyhjät '
+            + 'pöydät on aseteltu vanhan plataanin alle, ja yhdellä niistä '
+            + 'odottaa pieni tumma teepannu.',
           lahde: 'M. Fatih Morgül, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Tee',
         },
@@ -2963,9 +2969,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kadulla ja huusi pitkään bo-zaa, jotta ikkunat aukeaisivat. '
             + 'Matkakirjailija Evliya Çelebi laski 1600-luvun Istanbulissa '
             + 'satoja bozapuoteja. Vefan korttelissa avattiin puoti vuonna '
-            + '1876, ja sitä pitää yhä perustajien suku.',
+            + '1876, ja se on yhä samassa paikassa.',
           selite: 'Bozalaseja rivissä Vefan puodissa. Juoma on paksua ja '
-            + 'vaaleankeltaista, ja jokaisen lasin päälle on ripoteltu '
+            + 'vaaleankeltaista, ja etummaisiin laseihin on ripoteltu '
             + 'kanelia; takana näkyy sinivalkoinen kaakeliseinä.',
           lahde: 'William Neuheisel, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Boza',
@@ -3036,7 +3042,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Coddle on tähteiden pata',
-          tiedosto: 'Irish Coddle.jpg',
+          tiedosto: 'Coddle and Irish Soda bread.jpg',
           teksti: 'Coddle on dublinilaisten oma pata: makkarat, pekoni, perunat '
             + 'ja sipuli haudutetaan samassa liemessä tiiviin kannen alla. '
             + 'Mausteina on yleensä vain suola ja pippuri, eikä mitään '
@@ -3044,10 +3050,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maistuu. Coddlea keitettiin, jotta viikon tähteet saatiin '
             + 'syödyksi, eikä sitä juuri tunneta muualla Irlannissa. Myös '
             + 'James Joyce mainitsee sen teksteissään.',
-          selite: 'Kulhollinen coddlea ylhäältä kuvattuna: perunanpuolikkaita, '
-            + 'paksuja porkkanaviipaleita, makkarapaloja ja pekonia samassa '
-            + 'vaaleassa liemessä. Mitään ei ole ruskistettu.',
-          lahde: 'Shushshello, Wikimedia Commons (CC0)',
+          selite: 'Lautasellinen coddlea dublinilaisessa pubissa, vieressä viipale '
+            + 'soodaleipää ja takana tumma olut. Makkarat ja pekoni ovat '
+            + 'vaaleanharmaita eikä yhdessäkään ole ruskistettua pintaa.',
+          lahde: 'Kari Haley, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Irlantilainen keittiö',
         },
         {
@@ -3055,7 +3061,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Parade, hurling match.jpg',
           teksti: 'Hurlingissa lyödään saarnipuisella mailalla nahkaista '
             + 'sliotar-palloa maalin ylitse tai sisään. Peli on irlantilainen '
-            + 'ja hyvin vanha: siitä kerrotaan jo keskiaikaisissa laeissa. '
+            + 'ja hyvin vanha: siitä kerrotaan jo 600-luvun lakiteksteissä. '
             + 'Croke Parkiin Dublinissa mahtuu 82 300 katsojaa, mikä on '
             + 'Euroopan neljänneksi eniten, mutta yksikään pelaaja ei saa '
             + 'ottelusta palkkaa — kaikki ovat amatöörejä ja käyvät arkena '
@@ -3078,10 +3084,11 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Säkkipilli, jota ei puhalleta',
           tiedosto: 'Patrick D\'Arcy, musician..jpg',
           teksti: 'Uilleann-pilli on Irlannin oma säkkipilli, eikä siihen '
-            + 'puhalleta lainkaan: ilma pumpataan palkeella, joka on hihnalla '
-            + 'kiinni oikeassa kyynärpäässä. Nimi tuleekin irlannin sanasta '
-            + 'uillinn eli kyynärpää. Soittaja istuu ja painaa melodiapillin '
-            + 'pään oikeaa polveaan vasten: kun kaikki sormireiät ovat '
+            + 'puhalleta lainkaan: ilma pumpataan palkeella, joka on hihnoilla '
+            + 'kiinni vyötäröllä ja oikeassa käsivarressa. Nimi tulee irlannin '
+            + 'sanasta uillinn eli kyynärpää, sillä juuri kyynärpää painaa '
+            + 'paljetta kokoon. Soittaja istuu ja painaa melodiapillin '
+            + 'pään reittään vasten: kun kaikki sormireiät ovat '
             + 'peitettyinä, ääni vaikenee kokonaan. Unesco otti '
             + 'uilleann-pillin perinneluetteloonsa vuonna 2017.',
           selite: 'Uilleann-pillin täysi setti soittajan olalla: melodiapilli, '
@@ -3121,9 +3128,8 @@ export const KULTTUURI_KATEGORIAT = {
           'Käsipumpulla',
         ],
         oikea: 1,
-        fakta: 'Uilleann-pillin ilma tulee palkeesta, joka on hihnalla soittajan '
-          + 'oikeassa kyynärpäässä — siitä nimikin, sillä uillinn on iiriksi '
-          + 'kyynärpää.',
+        fakta: 'Ilma tulee palkeesta, jota soittajan kyynärpää painaa kokoon — '
+          + 'siitä nimikin, sillä uillinn on iiriksi kyynärpää.',
       },
     },
     {
@@ -3143,8 +3149,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'taskuveitsellään Broom Bridgen kiveen. Kaava kuvaa '
             + 'kvaternioita, ja niillä käännellään nykyään esineitä '
             + 'kolmiulotteisesti: peliruudulla, roboteissa ja satelliiteissa. '
-            + 'Joka 16. lokakuuta kanavan vartta kävellään sama matka '
-            + 'uudestaan.',
+            + 'Joka 16. lokakuuta matka kävellään uudestaan: Dunsinkin '
+            + 'observatoriolta, jossa Hamilton asui, samalle sillalle.',
           selite: 'William Rowan Hamilton (1805–1865) vanhassa painokuvassa: '
             + 'kalju päälaki, tuuheat pulisongit ja korkea valkoinen kaulus. '
             + 'Hän asui Dunsinkin observatoriossa Dublinin laidalla.',
@@ -3246,7 +3252,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kannetaan pöytään säkkipillin soidessa, runo luetaan ääneen ja '
             + 'puukko työnnetään makkaraan juuri oikeassa kohdassa runoa.',
           selite: 'Ravintola-annos: pyöreä haggisnokare on kasattu oranssin '
-            + 'lanttusoseen päälle, ruskea kastike lainehtii valkoisella '
+            + 'lanttusoseen päälle, ja aivan alimpana erottuu vaalea '
+            + 'perunakerros. Ruskea kastike lainehtii valkoisella '
             + 'lautasella ja päällä on persiljanoksa. Kotona osat ladotaan '
             + 'lautaselle vierekkäin, ei päällekkäin.',
           lahde: 'Metukkalihis, Wikimedia Commons (CC BY-SA 3.0)',
@@ -3262,7 +3269,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'taakseen pitkän loivan hännän. Sitä häntää pitkin laskeutuu '
             + 'Royal Mile linnalta palatsille asti, ja siksi linnaan pääsee '
             + 'kävellen vain idästä. Vettä kalliolta ei sen sijaan tahtonut '
-            + 'saada: 28 metriä syvä kaivo ehtyi piiritysten aikana.',
+            + 'saada: 34 metriä syvä kaivo ehtyi piiritysten aikana.',
           selite: 'Linna Princes Street Gardensin puolelta nähtynä. Muurit '
             + 'alkavat suoraan jyrkänteen päältä, alempana rinne on ruohoa ja '
             + 'puita, ja etualalla riippuu pihlajanmarjoja.',
@@ -3292,8 +3299,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Melodiapillistä saa vain yhdeksän säveltä, eikä ääntä voi '
             + 'katkaista lainkaan — siksi soittaja erottaa peräkkäiset '
             + 'sävelet toisistaan salamannopeilla koristenuoteilla. Soitin on '
-            + 'tehty ulkona soitettavaksi: se soi noin 110 desibeliä, saman '
-            + 'verran kuin moottorisaha.',
+            + 'tehty ulkona soitettavaksi: sisätiloissa se peittää alleen '
+            + 'kaikki muut soittimet.',
           selite: 'Katusoittaja Edinburghissa. Säkki on kainalossa, puhallusputki '
             + 'suussa ja kolme bordunapilliä lepää olkapäällä; kiltti on '
             + 'punaruudullinen ja jalassa valkoiset polvisukat. Alanurkassa '
@@ -3328,8 +3335,8 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'tiede',
       nimi: 'Tiede',
       johdanto: 'Kaksi maailmaa muuttanutta koetta tehtiin täällä: toinen '
-        + 'ruokasalin pöydän ääressä, toinen lammasnavetassa kaupungin '
-        + 'laidalla.',
+        + 'ruokasalin pöydän ääressä, toinen tutkimuslaitoksen '
+        + 'laboratoriossa kaupungin eteläpuolella.',
       tehtava: {
         kysymys: 'Miksi kloonilammas sai nimen Dolly?',
         vaihtoehdot: ['Se syntyi Dolly-nimisessä navetassa', 'Nimi arvottiin koululaisten kilpailussa', 'Solu oli otettu utareesta, ja tutkijat muistivat laulaja Dolly Partonin', 'Tutkijan tytär oli nimeltään Dolly'],
@@ -3394,7 +3401,7 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Marché poisson Marseille 013.jpg',
           selite: 'Vanhan sataman kalatiskin sinisessä laatikossa kiemurtelee '
             + 'täplikäs murena. Ympärillä on punaisia rascasse-kaloja eli '
-            + 'kivikaloja, jotka ovat bouillabaissen tärkein aines.',
+            + 'skorpionisimppuja, jotka ovat bouillabaissen tärkein aines.',
           lahde: 'Arnaud 25, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -3430,12 +3437,13 @@ export const KULTTUURI_KATEGORIAT = {
             + '1500-luvulla linnoitus, josta tuli pian vankila. Alexandre '
             + 'Dumas sijoitti sinne romaaninsa Monte Criston kreivi, ja '
             + 'kirjasta tuli niin kuuluisa, että saarelle tehtiin turisteja '
-            + 'varten Faria-isän selli — vaikka koko munkki on keksitty. '
+            + 'varten Faria-isän selli, vaikka romaanin pappi on Dumas’n '
+            + 'keksintöä eikä koskaan istunut siellä. '
             + 'Oikeat vangit eivät päässeet minnekään: saarelta ei '
             + 'tiettävästi ole koskaan paennut kukaan.',
-          selite: 'Château d\'If matalalla kalliosaarellaan. Kolme pyöreää tornia '
-            + 'nousee muurin takaa, ja kaukana vasemmalla häämöttää kaupungin '
-            + 'rantaviiva. Linnoitus valmistui 1531 puolustamaan satamaa.',
+          selite: 'Château d\'If matalalla kalliosaarellaan. Kaksi pyöreää tornia '
+            + 'nousee muurin takaa ja niiden välissä on nelikulmainen '
+            + 'päärakennus; kaukana vasemmalla häämöttää kaupungin rantaviiva.',
           lahde: 'Rémih, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ifin linna',
         },
@@ -3446,8 +3454,8 @@ export const KULTTUURI_KATEGORIAT = {
             + '25.–26. huhtikuuta 1792, ja se sai nimekseen Reinin armeijan '
             + 'sotalaulu. Nuotti kulkeutui etelään, ja Marseillen '
             + 'vapaaehtoiset ottivat sen marssilaulukseen. Kun he saapuivat '
-            + 'Pariisiin 30. heinäkuuta 1792, pariisilaiset kuulivat laulun '
-            + 'ensi kertaa ja alkoivat heti sanoa sitä marseillelaisten '
+            + 'Pariisiin 30. heinäkuuta 1792, he lauloivat sitä koko matkan, '
+            + 'ja pariisilaiset alkoivat sanoa sitä marseillelaisten '
             + 'lauluksi. Nimi jäi, vaikka kaupungilla ei ollut sävelmän '
             + 'synnyn kanssa mitään tekemistä.',
           selite: 'Isidore Pilsin maalaus vuodelta 1849: Rouget de Lisle seisoo '
@@ -3467,11 +3475,11 @@ export const KULTTUURI_KATEGORIAT = {
         + 'halunnut ostaa, ja sen kuuluisin keksi leivotaan pikkuveneen '
         + 'muotoon.',
       tehtava: {
-        kysymys: 'Minkä muotoisia navette-keksit ovat?',
-        vaihtoehdot: ['Tähden muotoisia', 'Renkaan muotoisia', 'Pikkuveneen muotoisia', 'Kalan muotoisia'],
-        oikea: 2,
-        fakta: 'Navette tarkoittaa pikkuvenettä, ja keksi leivotaan juuri sen '
-          + 'muotoon — vastaus löytyi navette-nostosta.',
+        kysymys: 'Miksi navette-keksejä ostetaan tusina kerrallaan?',
+        vaihtoehdot: ['Yksi jokaista viikonpäivää kohti', 'Yksi jokaista kuukautta kohti', 'Yksi jokaista sataman laituria kohti', 'Yksi jokaista kirkon kelloa kohti'],
+        oikea: 1,
+        fakta: 'Tusinaan tulee yksi keksi jokaista vuoden kuukautta kohti, ja '
+          + 'ennen vanhaan navetteja pidettiin kotona onnenkaluina.',
       },
       nostot: [
         {
@@ -3486,7 +3494,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'osassa: ensin liemi valkosipulileivän kanssa, sitten kalat.',
           selite: 'Kalastajien verkkoja levitettynä Saint-Jeanin laiturille; '
             + 'kaksi miestä istuu paikkaamassa niitä ja kolmas seisoo edessä '
-            + 'lippalakissa. Kuva on 1900-luvun alun postikortista.',
+            + 'kovassa knallihatussa. Kuva on 1900-luvun alun postikortista.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Bouillabaisse',
         },
@@ -3584,9 +3592,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Torre Belém April 2009-4a.jpg',
-          selite: 'Belémin torni Tejo-joen rannassa. Se valmistui 1519 '
-            + 'vartioimaan joensuuta; parvekkeiden alla kiertää kiveen '
-            + 'veistetty köysi ja vartiotornien huiput ovat kupoleja.',
+          selite: 'Belémin torni Tejo-joen rannassa. Parvekkeiden alla kiertää '
+            + 'kiveen veistetty köysi ja vartiotornien huiput ovat kupoleja.',
           lahde: 'Alvesgaspar, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -3668,8 +3675,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'viisikymmentä vuotta, ja kun hän kuoli 1999, Portugalissa '
             + 'vietettiin kolme päivää kansallista surua.',
           selite: 'Amália Rodrigues Schipholin lentokentällä lokakuussa 1964 '
-            + 'kesken kiertueen. Hän esiintyi lähes aina mustissa vaatteissa '
-            + 'ja huivi hartioilla — asusta tuli fadolaulajan tunnusmerkki.',
+            + 'Päässä on tumma huivi solmittuna hiusten yli, kaulassa leveä '
+            + 'metallikoru ja sylissä turkki. Musta asu oli hänen '
+            + 'tunnusmerkkinsä.',
           lahde: 'Harry Pot / Anefo, Wikimedia Commons (CC0)',
           wiki: 'Amália Rodrigues',
           musiikki: 'https://music.apple.com/fi/search?term=am%C3%A1lia%20rodrigues',
@@ -3718,9 +3726,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa '
             + 'niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis '
             + 'de belém — muualla ne ovat pastel de nata.',
-          selite: 'Leivoksia myyntitiskillä Pastéis de Belémissä Lissabonissa. '
-            + 'Kuoren pitää olla rapea ja täytteen pinnan hieman palanut: '
-            + 'juuri ne mustat läiskät ovat oikein paistetun merkki.',
+          selite: 'Leivoskoju torilla: korillinen pastel de nata -tortuja, joiden '
+            + 'pinnassa on tummia läiskiä, ja liitutaulussa lukee hinta. '
+            + 'Ympärillä on sokeroituja munkkeja ja muita leivonnaisia.',
           lahde: 'ProtoplasmaKid, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -3786,7 +3794,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaksitoista soitinta — flabiol-huilun soittaja lyö samalla '
             + 'käsivarteensa sidottua pikkurumpua. Barcelonassa piiri syntyy '
             + 'usein katedraalin edustalle.',
-          selite: 'Sardanaa tanssitaan katedraalin edessä Barcelonassa. Tanssijat '
+          selite: 'Sardanapiiri Barcelonan katedraalin aukiolla, kuvattuna '
+            + 'kirkosta poispäin: taustalla on parvekkeellinen kivitalo. Tanssijat '
             + 'ovat jättäneet laukkunsa ja takkinsa piirin keskelle; se '
             + 'kuuluu tapaan yhtä lailla kuin askeleet.',
           lahde: 'Canaan, Wikimedia Commons (CC BY-SA 4.0)',
@@ -3807,7 +3816,8 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lipussa on raitaa. Torni lasketaan onnistuneeksi vasta, kun se '
             + 'on purettu kaatumatta.',
           selite: 'Castell nimeltä 4 de 9 amb folre Tarragonan kilpailussa: neljä '
-            + 'ihmistä joka kerroksessa ja yhdeksän kerrosta. Alhaalla näkyy '
+            + 'ihmistä rinnakkain rungon joka kerroksessa ja yhdeksän kerrosta; '
+            + 'ylimmillä kerroksilla kiipeää enää yksi kerrallaan. Alhaalla näkyy '
             + 'pinya, joka kannattelee tornia ja ottaa sen kiinni, jos se '
             + 'sortuu.',
           lahde: 'Ferran ( fer55 ), Wikimedia Commons (CC BY-SA 2.0)',
@@ -3850,7 +3860,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'avotulella viiniköynnöksen oksista. Musta kuori vedetään '
             + 'sormin pois, valkoinen sisus kastetaan romesco-kastikkeeseen '
             + 'ja pudotetaan suuhun pää takakenossa — siksi kaulaan sidotaan '
-            + 'esiliina. Kausi kestää tammikuusta kevääseen. Valls, josta '
+            + 'esiliina. Kausi kestää marraskuusta huhtikuuhun. Valls, josta '
             + 'laji on kotoisin, järjestää calçotada-juhlansa tammikuun '
             + 'viimeisenä sunnuntaina, ja siellä kilpaillaan myös syömisessä.',
           selite: 'Calçoteja paahdetaan kadulla Vallsissa. Sipulit on ladottu '
@@ -3903,8 +3913,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Parvekkeet muistuttavat naamioita, ja talon lempinimi on '
             + 'luutalo.',
           selite: 'Casa Batllón julkisivun yläosa: suomukatto, tornin kärjessä '
-            + 'nelihaarainen risti ja alempana kolme parveketta, jotka '
-            + 'näyttävät silmikoilta. Seinäpinta on rikotusta lasista ja '
+            + 'nelihaarainen risti ja alempana kaksi parveketta, jotka '
+            + 'näyttävät silmikoilta, ja niiden välissä kolme '
+            + 'vihreäluukkuista ikkunaa. Seinäpinta on rikotusta lasista ja '
             + 'kaakelista.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Casa Batlló',
@@ -3958,7 +3969,8 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Sacromonte-Granada (1).jpg',
           selite: 'Sacromonten rinnettä: valkoiseksi kalkittu talo sinisin '
             + 'reunuksin on rakennettu kiinni kallioon, seinään on ripustettu '
-            + 'rivi kukkaruukkuja ja alla kiertää kivinen kuja.',
+            + 'rivi kukkaruukkuja ja alla kiertää kivinen kuja. Seinään on '
+            + 'maalattu isoin kirjaimin flamencoluolan ja ravintolan nimi.',
           lahde: 'Alberto-g-rovi, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -3974,7 +3986,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'uudestaan ja uudestaan: se oli hallitsijasuvun tunnuslause, ja '
             + 'se kuuluu "ei ole voittajaa paitsi Jumala".',
           selite: 'Alhambra kukkulallaan ja takana Sierra Nevada, jonka huipuilla '
-            + 'on lunta vielä kesäkuussa. Vuoret ovat myös syy palatsin '
+            + 'on lunta vielä toukokuussa. Vuoret ovat myös syy palatsin '
             + 'puutarhoihin: sulamisvesi tuotiin kanavaa pitkin suoraan '
             + 'suihkulähteisiin.',
           lahde: 'Adam Jones, Ph.D., Wikimedia Commons (CC BY-SA 3.0)',
@@ -3983,8 +3995,8 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Avaimet luovutettiin tammikuun toisena',
           tiedosto: 'Granada 1492 Detail.jpg',
-          teksti: 'Granadan viimeinen hallitsija Muhammad XII, jota espanjalaiset '
-            + 'sanoivat Boabdiliksi, luovutti kaupungin avaimet 2. tammikuuta '
+          teksti: 'Granadan viimeinen hallitsija, jota espanjalaiset sanoivat '
+            + 'Boabdiliksi, luovutti kaupungin avaimet 2. tammikuuta '
             + '1492. Sopimuksessa oli luvattu, että asukkaat saavat pitää '
             + 'uskontonsa ja kielensä — lupaus rikottiin alle kymmenessä '
             + 'vuodessa. Etelään johtavalla tiellä on yhä paikka nimeltä '
@@ -4002,7 +4014,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Aamulla hiihtoa, iltapäivällä merta',
           tiedosto: 'Sierra Nevada Borreguiles 5.jpg',
-          teksti: 'Granadan keskustasta on reilut kolmekymmentä kilometriä '
+          teksti: 'Granadan keskustasta on vajaat kolmekymmentä kilometriä '
             + 'Euroopan eteläisimpään hiihtokeskukseen ja noin '
             + 'seitsemänkymmentä Välimeren rannalle, joten saman päivän '
             + 'aikana ehtii sekä rinteeseen että uimaan. Hissit nousevat yli '
@@ -4113,9 +4125,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ruudukko, kaksi katua ristissä ja neljä porttia. Siellä '
             + 'allekirjoitettiin huhtikuussa 1492 sopimus, jolla Kristoffer '
             + 'Kolumbus sai luvan lähteä merelle. Nykyään Santa Fe tunnetaan '
-            + 'aivan muusta: leipuri Ceferino Isla keksi siellä 1897 pienen '
-            + 'siirappiin kastetun leivoksen ja nimesi sen paavi Pius IX:n '
-            + 'mukaan — italiaksi Pío Nono, siitä pionono.',
+            + 'aivan muusta: sieltä on kotoisin pionono, pieni siirappiin '
+            + 'kastettu leivos. Sen keksijäksi kerrotaan leipuri Ceferino '
+            + 'Isla, ja nimi tulee paavi Pius IX:stä — italiaksi Pío Nono, '
+            + 'siitä pionono.',
           selite: 'Pionono kämmenellä paperivuoassa: pieni siirappiin kastettu '
             + 'kääretorttu, jonka päällä on ruskistettua kermaa, ja mukana '
             + 'muovilusikka. Koko on parin suupalan luokkaa.',
@@ -4130,8 +4143,7 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kaupunki',
       nimi: 'Budapest',
       johdanto: 'Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. '
-        + 'Samana vuonna niistä tehtiin yksi: Budapest, jonka alla pulppuaa '
-        + 'toistasataa lämmintä lähdettä.',
+        + 'Samana vuonna niistä tehtiin yksi ainoa: Budapest.',
       kansikuvat: [
         {
           tiedosto: 'Matthias Church Budapest Roof Tiles.jpg',
@@ -4182,8 +4194,9 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Rubiks cube by keqs.jpg',
           teksti: 'Ernő Rubik opetti arkkitehtuuria Budapestin taideteollisessa '
             + 'korkeakoulussa ja rakensi vuonna 1974 oppilailleen '
-            + 'havaintovälineen: 27 puupalikkaa, jotka pyörivät toistensa '
-            + 'ympäri hajoamatta. Kun hän värjäsi sivut ja sekoitti ne, hän '
+            + 'havaintovälineen: 26 pientä palikkaa, jotka pyörivät '
+            + 'piilossa olevan keskiosan ympäri hajoamatta. Kun hän värjäsi '
+            + 'sivut ja sekoitti ne, hän '
             + 'tajusi tehneensä pulman — ja tarvitsi kokonaisen kuukauden '
             + 'ratkaistakseen sen itse. Unkarissa lelu myytiin nimellä bűvös '
             + 'kocka, taikakuutio. Asentoja on yli 43 triljoonaa, mutta '

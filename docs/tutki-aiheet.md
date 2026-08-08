@@ -442,4 +442,35 @@ Tarkistus, joka kannattaa ajaa QA:ssa: koko paketin duplikaattihaku
 (kansikuvat + nostot + galleriat + listat) löytää nämä ja kaikki
 myöhemmin syntyvät. Skripti on scratchpadissa, mutta sen voi kirjoittaa
 uusiksi kymmenessä rivissä — olennaista on, että se katsoo KAIKKI
-kuvakentät eikä vain nostojen tiedostoja.
+kuvakentät eikä vain nostojen tiedostoja. Ajettu v407:ssa: 314 kuvaa,
+ei yhtään uutta duplikaattia.
+
+## Kolme vikaa, jotka toistuvat agenttien tuottamassa lehtityössä
+
+Nämä eivät ole yksittäistapauksia vaan sama vika eri kaupungeissa.
+Kannattaa tarkistaa jokaisesta erästä erikseen.
+
+1. **Käyttäjänimen takaa arvattu oikea nimi.** Barcelonan kansikuvan
+   lähteeksi oli kirjoitettu "Pere López", vaikka Commons nimeää
+   tekijäksi käyttäjänimen `pere prlpz`. Arvaus näyttää siistimmältä ja
+   on tekijänoikeusvirhe. CC BY -kuvissa tekijä on kirjoitettava juuri
+   niin kuin `extmetadata.Artist` sen antaa. Lyhenteen saa avata vain
+   tarkistettuna (CNG = Classical Numismatic Group).
+
+2. **Minitehtävä osuu kaupungin omaan kulttuurivisaan.** Ateenan
+   ensimmäinen tehtävä kysyi foustanella-hameen 400 laskosta — ja
+   `europe-kulttuuri.js`:n ateena-visa kysyy jo "Mitä evzonin puvun 400
+   laskosta esittävät?" eli antaa luvun kysymyksessään. Kirjoittaja ei
+   lukenut visaa, vaikka ohje käskee. Tarkista aina kaupungin
+   `kysymys`-kenttä ennen kuin hyväksyt tehtävän.
+
+3. **Fakta on lähdevirke sanasta sanaan, tai siihen on lisätty
+   syy-yhteys.** Istanbulin ja Dublinin faktoista oli vaihdettu vain
+   sidesana. Istanbulin bozafakta väitti, että juoma saa paksuutensa
+   viljasta — lähde ei sano niin. Kumpikin menee helposti läpi, koska
+   teksti kuulostaa oikealta.
+
+Kahdeksasta v407:n uudesta minitehtävästä kaikki kahdeksan hylättiin
+ensimmäisellä kierroksella. Riippumaton tarkistaja, joka ei näe
+kirjoittajan perusteluja ja jolle sanotaan "oleta että jotain on
+pielessä", löytää nämä. Pelkkä kirjoittajan oma tarkistus ei löydä.
