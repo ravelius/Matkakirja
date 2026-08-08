@@ -106,6 +106,22 @@ export const KEHITYS_KAARI = [
  */
 export const AANINAYTTEET = [
   {
+    ryhma: 'Isoisä-ehdokas (omistajan löytö 8.8., voice id '
+      + 'HAvvFKatz0uu0Fv55Riy)',
+    naytteet: [
+      {
+        tiedosto: 'nayte-isoisa-alpit.mp3',
+        nimi: 'Vaarallinen tarina (Alpit)',
+        kuvaus: 'Jäätikönhalkeama — isoisän oma ääni saapumisessa',
+      },
+      {
+        tiedosto: 'nayte-isoisa-visa.mp3',
+        nimi: 'Visasitaatti (Edinburgh)',
+        kuvaus: 'Isoisän matkakirjasta, 1873 — tietovisan ylle',
+      },
+    ],
+  },
+  {
     ryhma: 'Kertojaehdokkaat (dekkarinäyte, Tukholman kuja)',
     naytteet: [
       { tiedosto: 'nayte-kertoja-george.mp3', nimi: 'George', kuvaus: 'brittiläinen tarinankertoja, lämmin' },
