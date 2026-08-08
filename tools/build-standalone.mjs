@@ -29,6 +29,7 @@ const MODULES = [
   'js/packs/omat-tiivistelmat.js',
   'js/packs/europe-countries.js',
   'js/packs/europe-saapumiset.js',
+  'js/packs/europe-kaari.js',
   'js/packs/asia-saapumiset.js',
   'js/packs/northamerica-saapumiset.js',
   'js/packs/southamerica-saapumiset.js',
