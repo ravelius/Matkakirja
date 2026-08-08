@@ -35,18 +35,20 @@ export const TILANNE = {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'MAALEHDET VALMIIT, menovinkit 29/30 (Egypti '
-        + 'agentilla). Kaupunkilehdet: 8 täydessä mallissa — '
-        + 'Lontoo, Praha, Wien, Madrid, Berliini, Venetsia, '
-        + 'Tukholma (v394/396) ja Pariisi (v398). Kaikki neljä '
-        + 'karttakaupunkia tehty sovitussa järjestyksessä; kannet '
-        + 'siirtyivät sanatarkasti, tarkistettu koneellisesti.',
-      seuraavaksi: 'Loput ~30 kaupunkia vapaassa järjestyksessä '
-        + '3–4 agentin erissä (Ateena, Amsterdam ja Egypti '
-        + 'käynnissä). Samalla minitehtävä jokaiselle '
-        + 'kaupunkilehden aihesivulle (+10 puntaa, omistajan '
-        + 'lopullinen päätös v400) — myös jo valmiisiin '
-        + 'takautuvasti.',
+      tehtava: 'Kaupunkilehdet: 18 täydessä mallissa minitehtävineen '
+        + '— v404 lisäsi tehtävät kahdeksaan vanhaan, v407 toi '
+        + 'kymmenen uutta (Ateena, Amsterdam, Istanbul, Dublin, '
+        + 'Edinburgh, Marseille, Lissabon, Barcelona, Granada, '
+        + 'Budapest). Laatulöydöt: Barcelonan tekijänoikeuskorjaus, '
+        + 'visa/minitehtävä-päällekkäisyystarkistus, uusi '
+        + 'tests/lehdet.test.mjs.',
+      seuraavaksi: '12 kaupungin erä kirjoituksessa (Rooma, Krakova, '
+        + 'Varsova, Helsinki, Tallinna, Kiova, Pietari, Moskova, '
+        + 'Sofia, Bukarest, Sarajevo, Odessa), sitten Tromssa ja 5 '
+        + 'aluetta samalla lehtimallilla (Fablen päätös: ei omaa '
+        + 'muotoa). Rinnalla Tšekin ja muiden ohuiden maalehtien '
+        + 'täydennys. Kaupunkilehti palkitsee +20 (2 sivua × 10 p) '
+        + '— todettu ok.',
     },
     {
       tekija: 'Opus 2',
