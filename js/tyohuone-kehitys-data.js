@@ -181,5 +181,205 @@ export const KAARI_PAKETIT = {
         + 'risti on aamulla aina seinässä, aina samaa valkoista '
         + 'liitua." Katsoin vielä taakseni: käytävä oli tyhjä.',
     },
+    {
+      id: 'lontoo',
+      otsikko: 'Lontoo — kello joka löi sumussa',
+      saapuminen: 'Sumu nousi joesta niin sakeana, että kadut sammuivat yksi '
+        + 'kerrallaan. Silloin kello löi — mutta ääni ei tullut '
+        + 'tornista, vaan joen puolelta, laskuveden paljastamalta '
+        + 'liejulta. Menin rantaan ja löysin liejuun puoliksi '
+        + 'hautautuneen taskukellon, jonka viisarit seisoivat. Sinä, '
+        + 'joka tätä luet: kello käy taas. Kuuntele.',
+      henkilo: 'Jokilöytäjä Ned etsii laskuveden liejusta joen pudottamia '
+        + 'esineitä, kuten hänen sukunsa on etsinyt sata vuotta.',
+      kohtaaminen: 'Rannalla jokilöytäjä Ned punnitsee taskukelloa kädessään. '
+        + '"Suvussani sanotaan: joki antaa takaisin sen, minkä omistaja '
+        + 'unohti. Tämän kannessa on kaksi kirjainta — H. F. Vastaa '
+        + 'kirjan kysymykseen, niin kello on sinun."',
+      kysymys: {
+        q: 'Kaikki tuntevat nimen Big Ben. Mitä se alun perin '
+          + 'tarkoittaa?',
+        vaihtoehdot: [
+          'Tornin suurinta kelloa',
+          'Koko kellotornia',
+          'Kellon rakentajaa',
+          'Westminsterin palatsin porttia',
+        ],
+        oikea: 0,
+        fakta: 'Big Ben on tornin 13,7 tonnin painoinen suurin kello. Torni '
+          + 'itse on nimeltään Elizabeth Tower — mutta kellon nimi '
+          + 'tarttui koko torniin.',
+      },
+      aarre: 'Ned avasi kellon kannen: sisällä oli isoisän käsialalla '
+        + 'pelkkä kellonaika — sama, johon viisarit olivat pysähtyneet. '
+        + '"Joki ei pysäyttänyt tätä kelloa", Ned sanoi hiljaa. "Joku '
+        + 'pysäytti sen tahallaan — ja liejussa oli tuoreet jäljet, kun '
+        + 'löysin sen."',
+    },
+    {
+      id: 'pariisi',
+      otsikko: 'Pariisi — kirja joka odotti rannalla',
+      saapuminen: 'Seinen rannalla kirjalaatikot suljettiin yöksi, mutta yksi '
+        + 'kansi jäi raolleen. Sen alla odotti kirja, jonka sivut oli '
+        + 'leikattu auki veitsellä — paitsi viimeinen. Kannessa ei '
+        + 'ollut nimeä, vain liidulla piirretty tähtäinristi. Ostin '
+        + 'kirjan hinnalla, jota myyjä ei suostunut sanomaan ääneen.',
+      henkilo: 'Bukinisti Colette myy vanhoja kirjoja Seinen rannalla '
+        + 'samasta laatikosta kuin isoisoisänsä.',
+      kohtaaminen: 'Colette tunnistaa laatikkonsa liitumerkin yhdellä '
+        + 'vilkaisulla. "Isoisoisäni piti yhtä kirjaa, jota ei saanut '
+        + 'myydä — sen sai vain antaa sille, joka osaa vastata sen '
+        + 'kysymykseen. Kirja on odottanut sataa vuotta. Vastaa."',
+      kysymys: {
+        q: 'Notre Damen katedraalin seinillä nököttää kivisiä '
+          + 'hirviöhahmoja. Mikä tehtävä gargoyleilla oikeasti on?',
+        vaihtoehdot: [
+          'Ne ovat syöksytorvia, jotka johtavat sadeveden pois seiniltä',
+          'Ne pelottivat vihollisia loitolle',
+          'Ne kantavat katon painoa',
+          'Ne ovat kuninkaiden muotokuvia',
+        ],
+        oikea: 0,
+        fakta: 'Gargoylet ovat koristeltuja syöksytorvia: sadevesi virtaa '
+          + 'niiden suun läpi kauas seinästä, ettei kivi rapaudu. Nimi '
+          + 'tulee ranskan kurlaamista tarkoittavasta sanasta.',
+      },
+      aarre: 'Kirjan viimeinen, avaamaton sivu kätki litteän kätkön. '
+        + 'Colette leikkasi sivun auki ja vaikeni hetkeksi: "Tämä ei '
+        + 'ole isoisoisäni veitsenjälkeä. Joku on avannut kirjan kerran '
+        + '— ja ommellut sivun kiinni uudelleen." Lanka oli valkoista, '
+        + 'kuin liitu.',
+    },
+    {
+      id: 'berliini',
+      otsikko: 'Berliini — kaukoputki joka katsoi tyhjää',
+      saapuminen: 'Tähtitornin kupoli oli raollaan, vaikka yö oli pilvinen. '
+        + 'Kaukoputki osoitti taivaankohtaan, jossa ei paljain silmin '
+        + 'näkynyt mitään — ja messinkiin oli raaputettu lukema, jonka '
+        + 'tunsin omakseni. Istuin katsomaan. Pilvet aukesivat '
+        + 'hetkeksi, ja tyhjässä kohdassa syttyi sininen piste.',
+      henkilo: 'Tähtitornin hoitaja Lotte kirjaa joka yön havainnot kirjaan, '
+        + 'jota hänen sukunsa on pitänyt observatorion alusta asti.',
+      kohtaaminen: 'Lotte avaa havaintokirjan vuoden 1873 kohdalta. "Tässä: '
+        + 'vieras istui kaukoputken ääressä aamuun asti eikä kertonut, '
+        + 'mitä etsi. Hän jätti kysymyksen — se on odottanut '
+        + 'vastaajaansa siitä yöstä."',
+      kysymys: {
+        q: 'Yksi planeetta löydettiin ensin kynällä ja paperilla — ja '
+          + 'vasta sitten kaukoputkella, juuri Berliinissä. Mikä?',
+        vaihtoehdot: [
+          'Neptunus',
+          'Uranus',
+          'Mars',
+          'Jupiter',
+        ],
+        oikea: 0,
+        fakta: 'Neptunuksen paikka laskettiin Uranuksen radan '
+          + 'heilahduksista, ja Berliinin observatorio löysi sen '
+          + 'kaukoputkella 1846 — alle asteen päässä lasketusta kohdasta.',
+      },
+      aarre: 'Kätkö oli kaukoputken jalustan ontossa jalassa. Lotte selasi '
+        + 'kirjan viimeiselle sivulle: "Sama taivaankohta on kirjattu '
+        + 'uudelleen viime talvena. Käsiala ei ole minun — eikä kirja '
+        + 'ole poistunut tästä huoneesta."',
+    },
+    {
+      id: 'rooma',
+      otsikko: 'Rooma — kolikko joka palasi altaaseen',
+      saapuminen: 'Trevin allas tyhjennettiin puhdistusta varten, ja pohjalta '
+        + 'nousi kolikoiden sade. Yksi kolikko oli muita vanhempi, ja '
+        + 'sen reunaan oli viilattu tähtäinristi. Heitin sen takaisin '
+        + 'olkapääni yli, niin kuin tapa vaatii — ja kuulin sen osuvan '
+        + 'veteen kahdesti.',
+      henkilo: 'Suihkulähteenhoitaja Enzo nostaa Trevin kolikot talteen joka '
+        + 'viikko, kuten hänen isänsä ja isoisänsä nostivat.',
+      kohtaaminen: 'Enzo kääntelee vanhaa kolikkoa hansikkaassa kädessään. "Tämä '
+        + 'nousee altaasta joka ainoa viikko, vaikka panen sen aina '
+        + 'talteen. Isäni sanoi: älä kysy keneltä, kysy miksi. Vastaa '
+        + 'tavan kysymykseen, niin saat pitää sen."',
+      kysymys: {
+        q: 'Mitä tarun mukaan tapahtuu, kun heittää kolikon Trevin '
+          + 'suihkulähteeseen olkapään yli?',
+        vaihtoehdot: [
+          'Palaat vielä Roomaan',
+          'Saat vuoden onnea',
+          'Toiveesi toteutuu heti',
+          'Löydät aarteen',
+        ],
+        oikea: 0,
+        fakta: 'Tarun mukaan kolikko takaa paluun Roomaan. Kolikot nostetaan '
+          + 'oikeasti talteen ja lahjoitetaan hyväntekeväisyyteen — niitä '
+          + 'kertyy noin miljoona euroa vuodessa.',
+      },
+      aarre: 'Kätkö odotti altaan huoltoluukun takana. Enzo saattoi minut '
+        + 'portille: "Tajuatko, mitä vanha kolikko tarkoittaa? Joku '
+        + 'heitti sen luvatakseen palata — eikä ole vielä palannut. Tai '
+        + 'sitten palaa. Joka viikko."',
+    },
+    {
+      id: 'madrid',
+      otsikko: 'Madrid — kello joka löi kolmetoista',
+      saapuminen: 'Puerta del Solin kello löi keskiyön, ja laskin lyönnit '
+        + 'vanhasta tottumuksesta. Niitä oli kolmetoista. Aukiolla '
+        + 'kukaan muu ei ollut kuulevinaan — mutta tornin ikkunassa '
+        + 'paloi valo, ja varjo kumartui koneiston ylle kuin anteeksi '
+        + 'pyytäen.',
+      henkilo: 'Kellomestari Pilar hoitaa Puerta del Solin kelloa, jonka '
+        + 'mukaan koko Espanja laskee uudenvuoden rypäleensä.',
+      kohtaaminen: 'Tornissa Pilar valvoo koneiston vieressä. "Kello ei lyö '
+        + 'kolmeatoista — paitsi jos joku lisää lyönnin käsin. '
+        + 'Suvussani sanotaan, että se on viesti. Vastaa kysymykseen, '
+        + 'niin näytän, mihin viesti osoittaa."',
+      kysymys: {
+        q: 'Mitä madridilaiset tekevät, kun tämä kello lyö kaksitoista '
+          + 'kertaa uudenvuodenyönä?',
+        vaihtoehdot: [
+          'Syövät viinirypäleen joka lyönnillä',
+          'Soittavat kaikkia kirkonkelloja',
+          'Sytyttävät kaksitoista kynttilää',
+          'Heittävät kolikon suihkulähteeseen',
+        ],
+        oikea: 0,
+        fakta: 'Uudenvuoden tapa on syödä kaksitoista rypälettä, yksi joka '
+          + 'lyönnillä — onneksi jokaiselle kuukaudelle. Tapa levisi '
+          + 'Madridista koko maahan.',
+      },
+      aarre: 'Kolmastoista lyönti oli viesti: se osoitti koneiston '
+        + 'huoltotilaan, jossa kätkö odotti. Pilar sammutti tornin '
+        + 'valon: "Lyönti lisättiin koneistoon kauan ennen minua. Mutta '
+        + 'joku kävi virittämässä sen uudelleen — tänä keväänä."',
+    },
+    {
+      id: 'ateena',
+      otsikko: 'Ateena — pöllö joka vartioi rahaa',
+      saapuminen: 'Akropoliin juurella pöllö istui kaatuneella pylväällä ja '
+        + 'katsoi minua liikahtamatta, kuin olisi odottanut. Sen jalan '
+        + 'alla kiilsi hopearaha — vanhempi kuin mikään näkemäni. Kun '
+        + 'kumarruin, pöllö ei lentänyt pois. Se siirtyi askeleen ja '
+        + 'jäi katsomaan, mitä tekisin.',
+      henkilo: 'Marmorinveistäjä Nikos korjaa Akropoliin pylväitä ja tuntee '
+        + 'jokaisen kiven — ja rahan, jota siellä vartioidaan.',
+      kohtaaminen: 'Nikos laskee talttansa nähdessään rahan. "Isoisoisäni löysi '
+        + 'samanlaisen ja pani sen takaisin — hän sanoi, että pöllö '
+        + 'laskee ne. Kirjasi omistaja tiesi rahasta. Vastaa hänen '
+        + 'kysymykseensä, niin raha ei jää vartioimatta."',
+      kysymys: {
+        q: 'Minkä linnun muinaiset ateenalaiset löivät hopearahoihinsa?',
+        vaihtoehdot: [
+          'Pöllön',
+          'Kotkan',
+          'Riikinkukon',
+          'Joutsenen',
+        ],
+        oikea: 0,
+        fakta: 'Ateenan tetradrakmassa oli Athene-jumalattaren pöllö, '
+          + 'viisauden merkki. "Viedä pöllöjä Ateenaan" tarkoittaa yhä '
+          + 'turhaa työtä — niitä oli siellä jo valmiiksi.',
+      },
+      aarre: 'Kätkö oli pylvään onkalossa, rahan alla. Nikos katsoi ylös '
+        + 'rinteeseen: "Pöllö on istunut samalla pylväällä joka ilta '
+        + 'niin kauan kuin suku muistaa. Kukaan ei tiedä, kuka sitä '
+        + 'ruokkii."',
+    },
   ],
 };
