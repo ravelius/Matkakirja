@@ -74315,25 +74315,29 @@ function arvoPylvaat(rng) {
 const piirraPylvaat = (svg, data) => {
   const jarjestys = data?.jarjestys ?? PYLVAAT;
   const kysytty = data?.kysytty ?? PYLVAAT[1];
-  // Nimet ovat pitkiä ("korinttilainen" on neljätoista merkkiä), ja
-  // aiemmassa 58 pikselin välissä ne piirtyivät toistensa päälle
-  // lukukelvottomaksi puuroksi. Väli on nyt nimen levyinen ja kuva
-  // vastaavasti leveämpi.
+  /*
+   * Nimet ovat pitkiä ("korinttilainen" on neljätoista merkkiä), ja
+   * yksi rivi ei riitä millään järkevällä välillä: 82 pikselin väli
+   * korjattiin jo kerran (v263), mutta omistajan iPadilla nimet
+   * valuivat silti yhteen (havainto 9.8.2026). Nimet ladotaan nyt
+   * KAHDELLE VUORORIVILLE — vierekkäiset nimet eivät ole samalla
+   * rivillä, joten ne eivät voi osua toisiinsa fontista riippumatta.
+   */
   const VALI = 82;
   const ALKU = 52;
-  svg.setAttribute('viewBox', '0 0 360 160');
+  svg.setAttribute('viewBox', '0 0 360 170');
   text(180, 16, 'PYLVÄIDEN PÄÄT — NIMET ALLA', svg, 11);
   jarjestys.forEach((tyyli, i) => {
     const x = ALKU + i * VALI;
     piirraPaa(x, 46, tyyli, svg);
-    text(x, 108, tyyli, svg, 9);
+    text(x, 108 + (i % 2) * 15, tyyli, svg, 9);
   });
   // Neljäs: sama tyyli kuin kysytty, mutta nimen tilalla kysymysmerkki.
   const viiva = ALKU + 2 * VALI + VALI / 2;
-  ink(`M${viiva},24 L${viiva},120`, svg);
+  ink(`M${viiva},24 L${viiva},128`, svg);
   piirraPaa(viiva + 34, 46, kysytty, svg);
-  text(viiva + 34, 108, '?', svg, 15);
-  text(180, 140, 'Mikä on neljännen pylvään nimi?', svg, 11);
+  text(viiva + 34, 112, '?', svg, 15);
+  text(180, 152, 'Mikä on neljännen pylvään nimi?', svg, 11);
 };
 
 // --- 3. Suola-altaat --------------------------------------------------------
@@ -131822,6 +131826,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 472, teksti: 'Pylväspulman nimet vuororiveille, ei enää päällekkäin' },
   { v: 471, teksti: 'Ateenan nähtävyysjuttuihin lisää kuvia' },
   { v: 470, teksti: 'Lähi-idän laudalle maatiedot ja menovinkit' },
   { v: 469, teksti: 'Kolmen lehden vanhat jutut pois kahdentumasta' },
@@ -132377,7 +132382,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.471';
+const APP_VERSION = '2026-08-09.472';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
