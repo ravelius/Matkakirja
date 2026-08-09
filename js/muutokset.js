@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 462, teksti: 'Maastotekstien mallitiedoston kommentti oikeaksi' },
   { v: 461, teksti: 'Tanskalle ja Islannille omat aihesivut' },
   { v: 460, teksti: 'Tarinakaari pelissä: kohtaamiset ja vihjeet Euroopassa' },
   { v: 459, teksti: 'Aarre nousee mustasta — kortti ja kuvat uusiksi' },

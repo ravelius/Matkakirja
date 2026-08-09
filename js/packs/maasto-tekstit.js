@@ -1,10 +1,22 @@
 // Maastonimien tekstit: joet, järvet ja vuoristot.
 //
-// Sama rakenne kuin js/packs/maasto-tekstit-malli.js:ssä, joka on
-// tämän esikuva ja sisältää kymmenen ensimmäistä kohdetta. Ohje on
-// docs/maastotekstit-ohje.md. Avaimet ovat kaksitasoiset — laji ensin,
-// sitten kohteen avain nimipaketista sellaisenaan — koska 'Ural' on
-// sekä joki että vuoristo.
+// Rakenne on sama kuin js/packs/maasto-tekstit-malli.js:ssä, joka on
+// tämän esikuva.
+//
+// MALLI EI OLE PELKKÄ RAKENNE-ESIMERKKI. Se sisältää AINEISTONA
+// kymmenen kuuluisimman kohteen tekstit — Niili, Amazon, Volga,
+// Ganges, Jangtse, Baikal, Kaspianmeri, Himalaja, Andit ja Alpit,
+// mukana kymmenen tarkistettua aikalaislainausta. Niitä ei ole tässä
+// tiedostossa: koostajan lähde-JSONit jättävät ne tahallaan pois,
+// koska ne ovat mallissa. Mallia EI siis saa poistaa
+// "käyttämättömänä" — sen mukana katoaisi kymmenen kohdetta. Poistoa
+// yritettiin 9.8.2026 sillä perusteella, ettei mikään UI-koodi
+// importtaa sitä; se pitää paikkansa, mutta ei importtaa tätäkään
+// tiedostoa. Maastotekstejä ei ole vielä kytketty i-ikkunaan.
+//
+// Ohje on docs/arkisto/maastotekstit-ohje.md. Avaimet ovat
+// kaksitasoiset — laji ensin, sitten kohteen avain nimipaketista
+// sellaisenaan — koska 'Ural' on sekä joki että vuoristo.
 //
 // 201 kohdetta, 130 aikalaislainausta, 209 kuvaa.
 //
