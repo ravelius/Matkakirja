@@ -1547,6 +1547,133 @@ export const MAAKARTAT = {
  * vasemmalle puolelle, kun oikealla olisi ahdasta.
  */
 export const KAUPUNKIKARTAT = {
+  ateena: {
+    polku: 'assets/kartat/ateena-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
+    esittely: 'Ateena syntyi kallion ympärille. Akropolis kohoaa noin '
+      + '90 metriä ympäröivän tasangon yli ja 156 metrin korkeuteen '
+      + 'merenpinnasta. Seinämät ovat jyrkät ja sisään pääsee vain '
+      + 'länsipäästä, ja rinteillä oli lähteitä, joten kukkula kesti '
+      + 'pitkänkin piirityksen. Meri jäi kauas: Pireuksen satama on '
+      + 'kahdeksan kilometriä lounaaseen, eikä keskustan läpi virtaa '
+      + 'yhtään jokea. Ateena on siis linnavuoren kaupunki, ei sataman '
+      + 'eikä joen.\n\nKartalla ei siksi näy vettä. Sen tilalla '
+      + 'erottuu vaaleina laikkuina kukkuloiden puistoja: lounaassa '
+      + 'metsäinen Filopáppos, keskellä Akropoliin kallio rinteineen '
+      + 'ja idässä Kansallispuutarha. Koillisessa on vielä yksi '
+      + 'kukkula, jota kartta ei näytä mutta numero löytää: '
+      + 'Lykavittós, 277 metriä korkea ja koko keskustan korkein '
+      + 'kohta. Kukkuloiden välissä vanhat kadut ovat kapeita ja '
+      + 'mutkaisia. Pohjoisempana ne suoristuvat, '
+      + 'sillä se osa piirrettiin 1830-luvulla kerralla uuden '
+      + 'pääkaupungin ruutukaavaksi. Oikeassa alalaidassa erottuu '
+      + 'hevosenkengän muotoinen stadion. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAKSI TÄSMENNYSSIVUANSAA, jotka on tarkistettu 9.8.2026 —
+       * älä "korjaa" näitä lyhyempiin otsikoihin:
+       *   'Zeus Olympioksen temppeli' on täsmennyssivu (Akragas,
+       *   Ateena, Dion); Ateenan artikkeli on 'Olympoksen Zeuksen
+       *   temppeli'.
+       *   'Syntagman aukio' ja 'Panathinaikon-stadion' ilman tarkkeita
+       *   ovat punaisia linkkejä; oikeat ovat 'Sýntagma' ja
+       *   'Panathinaïkó-stadion' (huomaa ï).
+       *
+       * Tuulten torni on lehden oma nosto ja mahtuisi kartalle, mutta
+       * se on 9,5 prosenttiyksikköä Antiikin agorasta — numerot
+       * menisivät päällekkäin, joten agora voitti.
+       */
+      { nimi: 'Antiikin agora', lat: 37.975, lon: 23.7225, wiki: 'Agora (Ateena)' },
+      { nimi: 'Akropolis', lat: 37.9715, lon: 23.7266, wiki: 'Akropolis (Ateena)' },
+      { nimi: 'Zeuksen temppeli', lat: 37.9694, lon: 23.7331, wiki: 'Olympoksen Zeuksen temppeli' },
+      { nimi: 'Sýntagman aukio', lat: 37.9756, lon: 23.7347, wiki: 'Sýntagma' },
+      { nimi: 'Lykavittós', lat: 37.9819, lon: 23.7432, wiki: 'Lykavittós' },
+      { nimi: 'Kallimarmaro', lat: 37.9683, lon: 23.7411, wiki: 'Panathinaïkó-stadion' },
+    ],
+  },
+  amsterdam: {
+    polku: 'assets/kartat/amsterdam-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 52.3855, etela: 52.356, lansi: 4.868, ita: 4.922 },
+    esittely: 'Amsterdam syntyi padosta. Amstel-joki laski ennen '
+      + 'suoraan IJ-lahteen, ja lahdesta pääsi merelle. Noin vuonna '
+      + '1270 joki padottiin, ja padon päälle kasvoi kylä Amstelredam '
+      + '— siitä tuli Amsterdam. Pato oli myös lastauspaikka: '
+      + 'merilaivat jäivät lahden puolelle, jokiveneet toiselle, ja '
+      + 'tavara kannettiin välissä. Maa oli pehmeää suota, joten '
+      + 'kanavia kaivettiin sekä kulkuväyliksi että kuivattamaan maata. '
+      + 'Pato on yhä paikallaan, mutta sen päällä on nyt aukio, jonka '
+      + 'nimi on lyhyesti Dam.\n\nKartalla näkyy kolme puolikuuta: '
+      + 'Herengracht, Keizersgracht ja Prinsengracht, joita alettiin '
+      + 'kaivaa vuonna 1613. Vesi pilkkoo keskustan noin '
+      + 'yhdeksäksikymmeneksi saareksi, ja niitä yhdistää toistatuhatta '
+      + 'siltaa. Ylhäällä levittäytyy avoin vesi, entinen merenlahti '
+      + 'IJ, ja siellä on kaupungin satama. Keskusasema ei ole rannalla '
+      + 'vaan veden päällä: se rakennettiin 1880-luvulla kolmelle '
+      + 'tekosaarelle, jotka kasattiin hiekasta lahden pohjaan. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Rembrandtin talosta ei ole suomenkielistä artikkelia, joten se
+       * jää pelkäksi merkiksi — se on silti listalla, koska se sitoo
+       * lehden Yövartio-jutun siihen taloon, jossa taulu maalattiin.
+       *
+       * Van Gogh -museo ja Westerkerk hylättiin: edellinen olisi
+       * osunut 92 %:n kohdalle aivan alalaitaan, jälkimmäinen on 70
+       * metriä Anne Frankin talosta eli numerot olisivat menneet
+       * päällekkäin.
+       */
+      { nimi: 'Keskusrautatieasema', lat: 52.379, lon: 4.9006, wiki: 'Amsterdamin keskusrautatieasema' },
+      { nimi: 'Anne Frankin talo', lat: 52.3752, lon: 4.8841, wiki: 'Anne Frankin talo' },
+      { nimi: 'Kuninkaanpalatsi', lat: 52.3731, lon: 4.8913, wiki: 'Amsterdamin kuninkaallinen palatsi' },
+      { nimi: 'Rembrandtin talo', lat: 52.3693, lon: 4.9012 },
+      { nimi: 'Artis-eläintarha', lat: 52.367, lon: 4.913, wiki: 'Artis (eläintarha)' },
+      { nimi: 'Rijksmuseum', lat: 52.3599, lon: 4.885, wiki: 'Rijksmuseum' },
+    ],
+  },
+  dublin: {
+    polku: 'assets/kartat/dublin-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 53.355, etela: 53.335, lansi: -6.294, ita: -6.244 },
+    esittely: 'Dublinilla on kaksi nimeä, ja molemmat kertovat vedestä. '
+      + 'Iirinkielinen Baile Átha Cliath tarkoittaa risuista tehdyn '
+      + 'kahlaamon kaupunkia: Liffey-joen yli päästiin kävellen '
+      + 'kohdassa, johon oli ladottu punottuja risuaitoja. '
+      + 'Englanninkielinen Dublin taas tulee sanoista dubh linn eli '
+      + 'musta lammikko. Se oli tumma vuorovesiallas siinä, missä pieni '
+      + 'Poddle-joki laski Liffeyhin. Viikingit perustivat altaan '
+      + 'rannalle tukikohdan vuonna 841 ja pitivät siinä laivojaan. '
+      + 'Allas on nykyään Dublinin linnan takapiha.\n\nKartan halki '
+      + 'kulkee Liffey. Sen lähde on vuorilla vain runsaan '
+      + 'kahdenkymmenen kilometrin päässä etelässä, mutta joki kiertää '
+      + 'sisämaan kautta pitkän lenkin ennen kuin palaa tänne mereen. '
+      + 'Joki jakaa kaupungin pohjoiseen ja eteläiseen puoleen, ja '
+      + 'tällä kartalla sen ylittää toistakymmentä siltaa. Kuuluisin on '
+      + 'valurautainen Ha’penny-silta vuodelta 1816: sen yli sai '
+      + 'kävellä puolen pennin maksusta, ja maksua perittiin sata '
+      + 'vuotta. Pohjoispuolella kohoaa 120 metriä korkea teräsneula '
+      + 'Spire. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Dublinin linnasta ja Ha’penny-sillasta ei ole suomenkielistä
+       * artikkelia; molemmat jäävät pelkiksi merkeiksi. Linna on
+       * listalla siksi, että se seisoo täsmälleen sillä paikalla,
+       * jossa esittelyn "musta lammikko" oli.
+       *
+       * Christ Church olisi kelvannut ja siitä on fi-artikkeli, mutta
+       * se on vain 9 prosenttiyksikköä linnasta — numerot olisivat
+       * menneet päällekkäin.
+       */
+      { nimi: 'Guinness-panimo', lat: 53.3419, lon: -6.2867, wiki: 'Guinness Storehouse' },
+      { nimi: 'Patrickin katedraali', lat: 53.3395, lon: -6.2715, wiki: 'Pyhän Patrickin katedraali (Dublin)' },
+      { nimi: 'Dublinin linna', lat: 53.3427, lon: -6.2669 },
+      { nimi: 'Ha’penny-silta', lat: 53.3463, lon: -6.2631 },
+      { nimi: 'Spire', lat: 53.3498, lon: -6.2603, wiki: 'Spire of Dublin' },
+      { nimi: 'Trinity College', lat: 53.3437, lon: -6.2545, wiki: 'Trinity College (Dublin)' },
+    ],
+  },
   pariisi: {
     polku: 'assets/kartat/pariisi-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
