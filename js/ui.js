@@ -47,7 +47,7 @@ import {
 import { AFRICA_SAAPUMISET } from './packs/africa-saapumiset.js';
 import { AFRICA_KULTTUURI, KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
 import { EUROPE_SAAPUMISET } from './packs/europe-saapumiset.js';
-import { EUROPE_KAARI } from './packs/europe-kaari.js';
+import { TARINAKAARI, KAARI_LAUDAT } from './packs/tarinakaari.js';
 import { ASIA_SAAPUMISET } from './packs/asia-saapumiset.js';
 import { NORTHAMERICA_SAAPUMISET } from './packs/northamerica-saapumiset.js';
 import { SOUTHAMERICA_SAAPUMISET } from './packs/southamerica-saapumiset.js';
@@ -5809,7 +5809,17 @@ export class UI {
       const aikatauluLisa = aikataulu && aikataulu.packId === game.pack.id
         ? `:a${aikataulu.day}` : '';
 
-      const uusi = (SAAPUMISTEKSTIT[saapuminen.packId] ?? {})[saapuminen.cityId];
+      /*
+       * Tarinakaaren saapumismerkintä syrjäyttää vanhan mallin
+       * (omistajan tilaus 9.8.2026: paketti suoraan peliin) — isoisän
+       * merkintä on kirjoitettu kaaren kohtaamisen ja aarteen pariksi.
+       * Nosto jää pois: merkintä on jo kokonainen.
+       */
+      const kaariMerkinta = KAARI_LAUDAT.has(saapuminen.packId)
+        ? TARINAKAARI[saapuminen.cityId] : null;
+      const uusi = kaariMerkinta
+        ? { kuvaus: kaariMerkinta.saapuminen, nosto: '' }
+        : (SAAPUMISTEKSTIT[saapuminen.packId] ?? {})[saapuminen.cityId];
       if (uusi && kaupunki) {
         const luentaAvain = `saapui:${saapuminen.packId}:${saapuminen.cityId}`;
         const key = luentaAvain + aikatauluLisa;
@@ -5839,7 +5849,10 @@ export class UI {
         });
         // Kaiutin ja luenta vain kaupungeille, joille luenta on generoitu.
         // Ilman tätä nappi näkyi kaikilla ja tuotti hiljaisuutta.
-        const saapumisLauta = luentaLauta(SAAPUMISLUENNAT, saapuminen.packId, saapuminen.cityId);
+        // Kaaren kohteilla luenta on aina: puhe-kaari-saapuminen-<id>.mp3.
+        const saapumisLauta = kaariMerkinta
+          ? 'kaari'
+          : luentaLauta(SAAPUMISLUENNAT, saapuminen.packId, saapuminen.cityId);
         this.diaryFullUrl = saapumisLauta
           ? `assets/audio/puhe-${saapumisLauta}-saapuminen-${saapuminen.cityId}.mp3`
           : null;
@@ -11318,9 +11331,19 @@ export class UI {
     // valokuva, lippu, portti) pitävät omat kehyshahmonsa.
     const kohtaaminen = (!quiz.kind && !quiz.gate) ? (KOHTAAMISET[quiz.cityId] ?? null) : null;
     const tervehdysAvain = `${game.pack.id}:${quiz.cityId}`;
-    const tervehdys = kohtaaminen && !this.kohtaamisetNahty.has(tervehdysAvain)
-      ? kohtaaminen.tervehdys
-      : null;
+    /*
+     * Tarinakaaren kohtaaminen syrjäyttää tavallisen tervehdyksen:
+     * kaupungin ensimmäisessä aarrevisassa puhuu kaaren henkilö, ja
+     * hänen kysymyksensä on visan kysymys (game.js pariutti ne).
+     * Avain merkitään nähdyksi, ettei vanha tervehdyshahmo esittäydy
+     * heti perään toisessa visassa.
+     */
+    const kaariTarina = quiz.kaari ? (TARINAKAARI[quiz.cityId] ?? null) : null;
+    const tervehdys = kaariTarina
+      ? kaariTarina.kohtaaminen
+      : (kohtaaminen && !this.kohtaamisetNahty.has(tervehdysAvain)
+        ? kohtaaminen.tervehdys
+        : null);
     // Pulman piirros ensin, kysymysrivi alla — kortti on isoisän luonnos.
     // HUOM: SVGElement ei peri HTMLElementiä, joten .hidden-ominaisuus ei
     // heijastu attribuuttiin — se jäisi päälle ja [hidden]-sääntö piilottaisi
@@ -11377,6 +11400,10 @@ export class UI {
       otsikko = `Isoisän päiväkirjasta, 1873${aihe} — pitääkö tämä yhä paikkansa?`;
     } else if (quiz.gate) {
       otsikko = `${city.name} — portti: ${quiz.gate.label}`;
+    } else if (kaariTarina) {
+      // Tarinakaaren kohtaaminen: kehyksenä kaupunki ja kohtaaminen —
+      // henkilö esittäytyy itse repliikissään.
+      otsikko = `${city.name} — kohtaaminen:${hardTag}`;
     } else if (kohtaaminen) {
       // Tarinallinen kohtaaminen (omistajan toive 5.8.2026): nimetty
       // paikallinen hahmo kysyy, ei satunnainen kysyjä.
@@ -11400,20 +11427,12 @@ export class UI {
       this.quizKohtaaminen.textContent = '';
       this.quizKohtaaminen.hidden = !tervehdys;
       /*
-       * Isoisän sitaatti kysymyksen yllä (omistajan päätös 8.8.2026:
-       * "matkakirja siteeraisi suoraan pelkkää isoisän tarinaa siinä
-       * paikassa"). Vain tavallisessa kaupunkivisassa — pulmilla,
-       * valokuvilla ja porteilla on omat kehyksensä. Luenta soi
-       * isoisän omalla äänellä, ellei kertojaa ole hiljennetty.
+       * Vanha isoisän sitaattilohko poistui, kun tarinakaari korvasi
+       * sen (omistajan tilaus 9.8.2026): isoisän jälki kulkee nyt
+       * kohtaamisen ja sen kysymyksen kautta, ei erillisenä
+       * sitaattina kysymyksen yllä.
        */
-      const kaari = (!quiz.kind && !quiz.gate) ? EUROPE_KAARI[quiz.cityId] : null;
-      this.quizIsoisa.hidden = !kaari?.visa;
-      if (kaari?.visa) {
-        this.quizIsoisaTeksti.textContent = kaari.visa;
-        if (kaari.luennat && kertojaTila() !== 'ei') {
-          this.playDiaryVoice(`assets/audio/puhe-europe-visa-${quiz.cityId}.mp3`, { viive: 500 });
-        }
-      }
+      this.quizIsoisa.hidden = true;
       const vaihtoehdot = () => {
         if (this.dead || this.typedQuizFor !== quiz) return;
         this.quizStage = 2;
@@ -11439,7 +11458,13 @@ export class UI {
         // rajaus 7.8.2026: "riittää vain alkutarinan luenta"). Kertoja
         // lukee kehyksen ja hahmo repliikkinsä omalla äänellään —
         // playDiaryVoice hiljentää musiikin puheen ajaksi.
-        if (KOHTAAMISLUENNAT.has(quiz.cityId) && kertojaTila() !== 'ei') {
+        // Tarinakaaren kohtaamisella on oma luentansa joka kohteelle.
+        if (kaariTarina && kertojaTila() !== 'ei') {
+          this.playDiaryVoice(
+            `assets/audio/puhe-kaari-kohtaaminen-${quiz.cityId}.mp3`,
+            { viive: 300 },
+          );
+        } else if (!kaariTarina && KOHTAAMISLUENNAT.has(quiz.cityId) && kertojaTila() !== 'ei') {
           this.playDiaryVoice(
             `assets/audio/puhe-kohtaaminen-${quiz.cityId}-tervehdys.mp3`,
             { viive: 300 },
@@ -11865,17 +11890,19 @@ export class UI {
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
     /*
-     * Isoisän aarresitaatti paljastuksen alle (omistajan päätös
-     * 8.8.2026): kätkön löytyessä isoisä puhuu omalla äänellään ja
-     * sulkee saapumisen kuvan. Ei tyhjälle laatalle — pettymyksellä
-     * on oma selitteensä.
+     * Tarinakaaren aarreteksti paljastuksen alle: kätkön löytyessä
+     * kaaren henkilö sulkee kohtaamisen ja jättää auki jäävän vihjeen
+     * (omistajan tilaus 9.8.2026 — korvasi isoisän aarresitaatin).
+     * Ei tyhjälle laatalle — pettymyksellä on oma selitteensä. Teksti
+     * on kerrontaa eikä sitaatti, joten lainausmerkkejä tai nimiötä
+     * ei lisätä päälle.
      */
-    const kaari = type !== 'empty' ? EUROPE_KAARI[this.game.quiz?.cityId] : null;
+    const kaari = (type !== 'empty' && KAARI_LAUDAT.has(this.game.pack.id))
+      ? TARINAKAARI[this.game.quiz?.cityId] : null;
     if (kaari?.aarre) {
-      caption.appendChild(html('p', 'reveal-isoisa', `"${kaari.aarre}"`));
-      caption.appendChild(html('span', 'reveal-isoisa-nimio', 'Matkakirjasta'));
-      if (kaari.luennat && kertojaTila() !== 'ei') {
-        this.playDiaryVoice(`assets/audio/puhe-europe-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 });
+      caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
+      if (kertojaTila() !== 'ei') {
+        this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 });
       }
     }
     /*

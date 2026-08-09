@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 460, teksti: 'Tarinakaari pelissä: kohtaamiset ja vihjeet Euroopassa' },
   { v: 459, teksti: 'Aarre nousee mustasta — kortti ja kuvat uusiksi' },
   { v: 458, teksti: 'Irakin lehden lue lisää -linkki Eufratiin' },
   { v: 457, teksti: 'Maakartat Irakille ja Iranille' },
