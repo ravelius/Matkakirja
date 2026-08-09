@@ -42,13 +42,13 @@ export const TILANNE = {
         + 'Budapest). Laatulöydöt: Barcelonan tekijänoikeuskorjaus, '
         + 'visa/minitehtävä-päällekkäisyystarkistus, uusi '
         + 'tests/lehdet.test.mjs.',
-      seuraavaksi: '12 kaupungin erä kirjoituksessa (Rooma, Krakova, '
-        + 'Varsova, Helsinki, Tallinna, Kiova, Pietari, Moskova, '
-        + 'Sofia, Bukarest, Sarajevo, Odessa), sitten Tromssa ja 5 '
-        + 'aluetta samalla lehtimallilla (Fablen päätös: ei omaa '
-        + 'muotoa). Rinnalla Tšekin ja muiden ohuiden maalehtien '
-        + 'täydennys. Kaupunkilehti palkitsee +20 (2 sivua × 10 p) '
-        + '— todettu ok.',
+      seuraavaksi: 'ISO LÄPIKÄYNTI (omistajan linjaus 9.8.): '
+        + 'maalehden pitää aina olla pidempi kuin kaupunkilehden — '
+        + 'vaihe A kartoittaa kaikki 30 maata ja ehdottaa siirrot '
+        + '(pahin: Helsinki vs Suomi), vaihe B toteuttaa Fablen '
+        + 'kuittauksen jälkeen. Lisäksi kaikkien valokuvakysymysten '
+        + 'kuvat tarkistetaan kuva kuvalta (Kumasi-tapaus). '
+        + 'Jonossa: Tromssa + 5 aluetta samalla lehtimallilla.',
     },
     {
       tekija: 'Opus 2',
