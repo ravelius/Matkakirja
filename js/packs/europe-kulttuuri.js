@@ -1106,20 +1106,24 @@ export const EUROPE_KULTTUURI = {
      * siirrettiin lehden sivuille. Tänne jää vain visa
      * (docs/tutki-aiheet.md).
      */
+    /*
+     * Finlandia-kysymys siirtyi pois 9.8.2026, kun Sibelius-nosto
+     * muutti Suomen maalehden Sävel-sivulle (v443) — kaupunkivisa
+     * kysyy nyt kaupungin omasta jutusta (Linnanmäki, kansisivu).
+     */
     kysymys: {
-      q: 'Miksi Sibeliuksen Finlandiaa esitettiin aikoinaan muilla nimillä, '
-           + 'kuten "Impromptu"?',
+      q: 'Miksi Linnanmäen puisen vuoristoradan junassa seisoo aina '
+           + 'jarrumestari?',
       options: [
-        'Venäjän hallinto piti kappaletta liian isänmaallisena',
-        'Sibelius ei pitänyt nimestä Finlandia',
-        'Nimi oli jo varattu toiselle teokselle',
-        'Nuotit olivat kadonneet ensiesityksessä',
+        'Vauhtia hidastetaan käsin, ja hän hoitaa jarrutuksen',
+        'Hän tarkastaa matkaliput kyydin aikana',
+        'Hän kuuluttaa mäkien nimet matkustajille',
+        'Hän korjaa rataa kierrosten välissä',
       ],
       correct: 0,
-      fact: 'Finlandia syntyi 1899, kun Venäjän hallinto rajoitti Suomen '
-              + 'itsehallintoa. Kappale innosti kuulijoita niin voimakkaasti, '
-              + 'että konserttiohjelmiin painettiin varmuuden vuoksi jokin '
-              + 'toinen nimi.',
+      fact: 'Puinen Vuoristorata valmistui 1951, ja se on yksi maailman '
+              + 'harvoista radoista, joilla junan vauhtia hidastetaan käsin '
+              + '— jarrumestari seisoo junan takaosassa koko matkan.',
     },
   },
 
