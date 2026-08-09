@@ -2282,16 +2282,16 @@ export const MAAKARTAT = {
       otsikko: 'Talo, jossa ei ole yhtään naulaa',
       tiedosto: 'Roofing of reed Mudhif - guesthouse, Southern marshlands, Iraq.jpg',
       /*
-       * WIKI-LINKKI ON HARKITTU. `Etelä-Irakin Ahwar` on aiheen tarkka
-       * osuma (Unescon kohde 2016) ja kaksi ensimmäistä kappaletta
-       * ovat maantiedettä ja arkeologiaa. Kolmannessa on yksi lause
-       * Saddam Husseinin kostosta suoarabeille — sorto mainitaan,
-       * väkivaltaa ei kuvata. Se on selvästi lievempi kuin Syyrian
-       * `Hama` (verilöyly kuolonlukuineen), jonka takia vesirattaista
-       * linkitettiin jokeen. `Suoarabit` olisi huonompi: siellä sama
-       * asia on jo ingressissä. Jos linja on tiukempi, neutraali
-       * naapuri on `Eufrat` — juuri sen ja Tigriksen leviäminen tekee
-       * nämä suot.
+       * WIKI OSOITTAA JOKEEN EIKÄ SUOHON, ja se on Fablen päätös
+       * (9.8.2026), sama linja kuin Syyrian Hama/Orontes-ratkaisussa.
+       * Aiheen tarkka osuma olisi `Etelä-Irakin Ahwar` (Unescon kohde
+       * 2016), mutta sen kolmannessa kappaleessa on lause Saddam
+       * Husseinin kostosta suoarabeille. Lasten pelissä ei ole sorto-
+       * eikä sotamainintoja edes yhden lauseen verran silloin, kun
+       * neutraali vaihtoehto on olemassa. `Eufrat` on neutraali ja
+       * aiheen vieressä: juuri sen ja Tigriksen leviäminen tekee nämä
+       * suot. `Suoarabit` on tästä syystä poissuljettu kokonaan —
+       * siellä sama asia on jo ingressissä.
        *
        * Soiden pinta-alaa ei anneta: lähteet sanovat 9 000, 15 000 ja
        * 20 000 neliökilometriä. Kaarien lukumäärää ei myöskään:
@@ -2322,7 +2322,7 @@ export const MAAKARTAT = {
         + 'paikoilleen. Vasemmalla nojaa pitkä seiväs, jota pitkin '
         + 'ylös kiivetään.',
       lahde: 'Hassan Al-Jarrah, Wikimedia Commons (CC BY-SA 4.0)',
-      wiki: 'Etelä-Irakin Ahwar',
+      wiki: 'Eufrat',
     },
   },
   IRN: {
