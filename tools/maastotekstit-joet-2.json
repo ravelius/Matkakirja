@@ -2,483 +2,724 @@
   "joet": {
     "Mississippi": {
       "kappaleet": [
-        { "teksti": "Samuel Clemens opetteli luotsiksi vuosina 1857-1859. Työ vaati koko uoman ulkoa molempiin suuntiin ja pimeässä: matalikot, kannot ja mutkat, jotka siirtyivät joka kevättulvassa. Kun hän vihdoin osasi lukea veden pinnan, hän huomasi menettäneensä samalla jotain." },
-        { "lainaus": "Romantiikka ja kauneus olivat kadonneet joesta. Ainoa arvo, joka millään sen piirteellä enää oli minulle, oli se hyöty, jonka siitä irtosi höyrylaivan turvalliseen luotsaamiseen.",
+        {
+          "teksti": "Samuel Clemens opetteli luotsiksi vuosina 1857-1859. Työ vaati koko uoman ulkoa molempiin suuntiin ja pimeässä: matalikot, kannot ja mutkat, jotka siirtyivät joka kevättulvassa. Kun hän vihdoin osasi lukea veden pinnan, hän huomasi menettäneensä samalla jotain."
+        },
+        {
+          "lainaus": "Romantiikka ja kauneus olivat kadonneet joesta. Ainoa arvo, joka millään sen piirteellä enää oli minulle, oli se hyöty, jonka siitä irtosi höyrylaivan turvalliseen luotsaamiseen.",
           "kuka": "Mark Twain",
           "teos": "Life on the Mississippi",
           "vuosi": 1883,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/245" },
-        { "tiedosto": "The Great Mississippi Steamboat Race. From New Orleans to St. Louis, July 1870.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/245"
+        },
+        {
+          "tiedosto": "The Great Mississippi Steamboat Race. From New Orleans to St. Louis, July 1870.jpg",
           "selite": "Robert E. Lee ja Natchez kilpailivat New Orleansista St. Louisiin heinäkuussa 1870, ja Currier & Ives painoi kuvan saman tien. Lee voitti kolmessa vuorokaudessa ja kahdeksassatoista tunnissa.",
-          "lahde": "Wikimedia Commons (PD), Currier & Ives" },
-        { "teksti": "Joki oikoo itseään. Twain laski, että alajuoksu oli lyhentynyt 176 vuodessa 242 mailia mutkien katketessa, ja teki laskelmasta pilaa jatkamalla sitä tulevaisuuteen. Nykyään armeijan insinöörit pitävät uomaa paikallaan penkerein ja kivetyksin." }
+          "lahde": "Wikimedia Commons (PD), Currier & Ives"
+        },
+        {
+          "teksti": "Joki oikoo itseään. Twain laski, että alajuoksu oli lyhentynyt 176 vuodessa 242 mailia mutkien katketessa, ja teki laskelmasta pilaa jatkamalla sitä tulevaisuuteen. Nykyään armeijan insinöörit pitävät uomaa paikallaan penkerein ja kivetyksin."
+        }
       ]
     },
-
     "Tonava": {
       "kappaleet": [
-        { "teksti": "Herodotos halusi selittää, miksi Ister ei nouse eikä laske vuodenaikojen mukana niin kuin muut tuntemansa joet. Selitys, jonka hän keksi, on yksityiskohdissaan väärä ja rakenteeltaan oikea: kaksi vastakkaista voimaa kumoavat toisensa." },
-        { "lainaus": "Ister virtaa aina samalla korkeudella sekä kesällä että talvella. Talvella se on luonnollisessa koossaan, sillä tähän maahan sataa talvella vähän vettä mutta lakkaamatta lunta; kesällä taas talven lumi sulaa ja juoksee joka suunnalta Isteriin.",
+        {
+          "teksti": "Herodotos halusi selittää, miksi Ister ei nouse eikä laske vuodenaikojen mukana niin kuin muut tuntemansa joet. Selitys, jonka hän keksi, on yksityiskohdissaan väärä ja rakenteeltaan oikea: kaksi vastakkaista voimaa kumoavat toisensa."
+        },
+        {
+          "lainaus": "Ister virtaa aina samalla korkeudella sekä kesällä että talvella. Talvella se on luonnollisessa koossaan, sillä tähän maahan sataa talvella vähän vettä mutta lakkaamatta lunta; kesällä taas talven lumi sulaa ja juoksee joka suunnalta Isteriin.",
           "kuka": "Herodotos",
           "teos": "Historiateos IV.50, engl. G. C. Macaulay 1890",
           "vuosi": "n. 430 eaa.",
           "suomennos": "oma, Macaulayn englanninnoksesta",
-          "linkki": "https://www.gutenberg.org/ebooks/2707" },
-        { "teksti": "Alppien lumi ja Karpaattien kesäsateet tekevät suunnilleen sen, minkä Herodotos arvasi, vaikka hän uskoi auringon juovan jokea kesällä. Tasaisuus on suhteellista: Tonava tulvii keväällä, mutta se ei kuivu koskaan, ja siksi sitä on voinut kulkea ympäri vuoden." },
-        { "tiedosto": "Danube near Iron Gate 2006.JPG",
+          "linkki": "https://www.gutenberg.org/ebooks/2707"
+        },
+        {
+          "teksti": "Alppien lumi ja Karpaattien kesäsateet tekevät suunnilleen sen, minkä Herodotos arvasi, vaikka hän uskoi auringon juovan jokea kesällä. Tasaisuus on suhteellista: Tonava tulvii keväällä, mutta se ei kuivu koskaan, ja siksi sitä on voinut kulkea ympäri vuoden."
+        },
+        {
+          "tiedosto": "Danube near Iron Gate 2006.JPG",
           "selite": "Rautaportti Serbian ja Romanian välissä. Kallionkielekkeet tekivät solasta vaarallisen, ja 1890-luvulla niihin räjäytettiin väylä. Vuoden 1972 pato nosti veden kymmeniä metrejä; kielekkeet ovat yhä sen alla.",
-          "lahde": "Wikimedia Commons (CC BY-SA 3.0), Cornelius Bechtler" }
+          "lahde": "Wikimedia Commons (CC BY-SA 3.0), Cornelius Bechtler"
+        }
       ]
     },
-
     "Yukon": {
       "kappaleet": [
-        { "teksti": "Frederick Schwatka lähti kesällä 1883 latvajärviltä alavirtaan lautalla, jonka hänen miehensä kaatoivat ja sitoivat rannalla. Kartoitettavaa oli runsaat kaksituhatta kilometriä, eikä kukaan ulkopuolinen ollut kulkenut jokea päästä päähän." },
-        { "tiedosto": "Five Finger Rapids island, Yukon, ca. 1899 - DPLA - d6c77ff606e121c7bb3237c810e052c0.jpg",
+        {
+          "teksti": "Frederick Schwatka lähti kesällä 1883 latvajärviltä alavirtaan lautalla, jonka hänen miehensä kaatoivat ja sitoivat rannalla. Kartoitettavaa oli runsaat kaksituhatta kilometriä, eikä kukaan ulkopuolinen ollut kulkenut jokea päästä päähän."
+        },
+        {
+          "tiedosto": "Five Finger Rapids island, Yukon, ca. 1899 - DPLA - d6c77ff606e121c7bb3237c810e052c0.jpg",
           "selite": "Viiden sormen kosket, joissa neljä kalliopaadetta jakaa joen viideksi väyläksi. Vain itäisin on kuljettava. Kultaryntäyksen höyrylaivat vinssattiin siitä ylös kallioon pultattua vaijeria pitkin.",
-          "lahde": "Wikimedia Commons (PD), Arthur C. Pillsbury" },
-        { "lainaus": "Lautta on epäilemättä vanhin yhä käytössä oleva kulkuneuvo vedessä ja epäilemättä huonoin. On kiinnostavaa tietää, kuinka hyödyllinen lautta voi olla maantieteellisen tutkimuksen apuna, ja oma lauttamatkani oli kyllä riittävän pitkä koetteeksi.",
+          "lahde": "Wikimedia Commons (PD), Arthur C. Pillsbury"
+        },
+        {
+          "lainaus": "Lautta on epäilemättä vanhin yhä käytössä oleva kulkuneuvo vedessä ja epäilemättä huonoin. On kiinnostavaa tietää, kuinka hyödyllinen lautta voi olla maantieteellisen tutkimuksen apuna, ja oma lauttamatkani oli kyllä riittävän pitkä koetteeksi.",
           "kuka": "Frederick Schwatka",
           "teos": "Along Alaska's Great River",
           "vuosi": 1885,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/47402" },
-        { "teksti": "Neljätoista vuotta myöhemmin Bonanza Creekiltä löytyi kultaa, ja samaa reittiä tuli kymmeniätuhansia ihmisiä. Dawsonista kasvoi vuodessa alueen suurin kaupunki, ja se tyhjeni yhtä nopeasti. Joki oli koko ajan ainoa tie sisään ja ulos." }
+          "linkki": "https://www.gutenberg.org/ebooks/47402"
+        },
+        {
+          "teksti": "Neljätoista vuotta myöhemmin Bonanza Creekiltä löytyi kultaa, ja samaa reittiä tuli kymmeniätuhansia ihmisiä. Dawsonista kasvoi vuodessa alueen suurin kaupunki, ja se tyhjeni yhtä nopeasti. Joki oli koko ajan ainoa tie sisään ja ulos."
+        }
       ]
     },
-
     "Seine": {
       "kappaleet": [
-        { "teksti": "Pariisi joi Seinestä pitkään senkin jälkeen, kun se oli laskenut viemärinsä samaan uomaan. Vasta 1860-luvulla kaupungin juomavesi tuotiin Dhuis-akveduktia myöten sadan kilometrin päästä, ja joki jäi liikenteelle ja tulville." },
-        { "teksti": "Tulva on joen tavallinen tila eikä poikkeus. Alfred Sisley maalasi Port-Marlyn tulvan kahdesti, 1872 ja 1876, lähes samasta kohdasta: kadulla soudetaan, ja vesi on ikkunalautaa ylempänä." },
-        { "tiedosto": "Alfred Sisley, Flood at Port-Marly, 1872, NGA 66436.jpg",
+        {
+          "teksti": "Pariisi joi Seinestä pitkään senkin jälkeen, kun se oli laskenut viemärinsä samaan uomaan. Vasta 1860-luvulla kaupungin juomavesi tuotiin Dhuis-akveduktia myöten sadan kilometrin päästä, ja joki jäi liikenteelle ja tulville."
+        },
+        {
+          "teksti": "Tulva on joen tavallinen tila eikä poikkeus. Alfred Sisley maalasi Port-Marlyn tulvan kahdesti, 1872 ja 1876, lähes samasta kohdasta: kadulla soudetaan, ja vesi on ikkunalautaa ylempänä."
+        },
+        {
+          "tiedosto": "Alfred Sisley, Flood at Port-Marly, 1872, NGA 66436.jpg",
           "selite": "Alfred Sisley, Tulva Port-Marlyssa (1872). Talo on viinikauppiaan, ja vesi ulottuu oven yläreunaan. Sisley palasi samaan paikkaan neljä vuotta myöhemmin, kun tulva toistui.",
-          "lahde": "Wikimedia Commons (CC0), Alfred Sisley" },
-        { "teksti": "Suurin mitattu tulva tuli tammikuussa 1910, jolloin vesi nousi Pariisissa kahdeksan ja puoli metriä. Metrotunnelit täyttyivät ja kaduilla kuljettiin lankkusiltoja pitkin. Kaupungissa ei hukkunut ketään." }
+          "lahde": "Wikimedia Commons (CC0), Alfred Sisley"
+        },
+        {
+          "teksti": "Suurin mitattu tulva tuli tammikuussa 1910, jolloin vesi nousi Pariisissa kahdeksan ja puoli metriä. Metrotunnelit täyttyivät ja kaduilla kuljettiin lankkusiltoja pitkin. Kaupungissa ei hukkunut ketään."
+        }
       ]
     },
-
     "Missouri": {
       "kappaleet": [
-        { "teksti": "Meriwether Lewis käveli kesäkuussa 1805 joukkonsa edellä etsimässä paikkaa, jonka mandanit olivat kuvailleet hänelle talven aikana. Hän kuuli sen ennen kuin näki." },
-        { "lainaus": "Korviani tervehti miellyttävä veden putoamisen ääni, ja hieman edempänä näin vesipölyn nousevan tasangon ylle kuin savupatsaan — ja pian se alkoi pauhata liian hirmuisesti, jotta syy olisi voinut olla mikään muu kuin Missourin suuret putoukset.",
+        {
+          "teksti": "Meriwether Lewis käveli kesäkuussa 1805 joukkonsa edellä etsimässä paikkaa, jonka mandanit olivat kuvailleet hänelle talven aikana. Hän kuuli sen ennen kuin näki."
+        },
+        {
+          "lainaus": "Korviani tervehti miellyttävä veden putoamisen ääni, ja hieman edempänä näin vesipölyn nousevan tasangon ylle kuin savupatsaan — ja pian se alkoi pauhata liian hirmuisesti, jotta syy olisi voinut olla mikään muu kuin Missourin suuret putoukset.",
           "kuka": "Meriwether Lewis",
           "teos": "The Journals of Lewis and Clark, 1804-1806",
           "vuosi": 1805,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/8419" },
-        { "tiedosto": "Rainbow Falls Great Falls MT1.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/8419"
+        },
+        {
+          "tiedosto": "Rainbow Falls Great Falls MT1.jpg",
           "selite": "Sateenkaariputous, viidestä putouksesta toinen. Lewis piti sitä kauniina ja alempaa Suurta putousta mahtavana ja epäröi kumman asettaisi edelle. Molempien harjalla on nyt pato.",
-          "lahde": "Wikimedia Commons (CC BY-SA 4.0), Acroterion" },
-        { "teksti": "Putousten ohitus vei kuukauden. Kanootit ja tavarat vedettiin kärryillä lähes kolmekymmentä kilometriä preerian yli piikkiöpuntian läpi, ja pyörät sahattiin puuvillapuun rungosta. Retkikunta oli varannut koko mantereen ylitykseen suunnilleen sen ajan, jonka pelkkä ohitus söi." }
+          "lahde": "Wikimedia Commons (CC BY-SA 4.0), Acroterion"
+        },
+        {
+          "teksti": "Putousten ohitus vei kuukauden. Kanootit ja tavarat vedettiin kärryillä lähes kolmekymmentä kilometriä preerian yli piikkiöpuntian läpi, ja pyörät sahattiin puuvillapuun rungosta. Retkikunta oli varannut koko mantereen ylitykseen suunnilleen sen ajan, jonka pelkkä ohitus söi."
+        }
       ]
     },
-
     "Rein": {
       "kappaleet": [
-        { "teksti": "Köln oli 1820-luvulla yhtä aikaa Euroopan vilkkaimman vesitien varrella ja sen viemärissä. Samuel Taylor Coleridge kävi kaupungissa 1828 ja laski hajut." },
-        { "lainaus": "Te nymfit, jotka hallitsette viemäreitä ja kaivoja: Rein, kuten hyvin tiedetään, pesee kaupunkinne Kölnin. Mutta sanokaa, nymfit, mikä jumalainen mahti pesee tästedes Reinin?",
+        {
+          "teksti": "Köln oli 1820-luvulla yhtä aikaa Euroopan vilkkaimman vesitien varrella ja sen viemärissä. Samuel Taylor Coleridge kävi kaupungissa 1828 ja laski hajut."
+        },
+        {
+          "lainaus": "Te nymfit, jotka hallitsette viemäreitä ja kaivoja: Rein, kuten hyvin tiedetään, pesee kaupunkinne Kölnin. Mutta sanokaa, nymfit, mikä jumalainen mahti pesee tästedes Reinin?",
           "kuka": "Samuel Taylor Coleridge",
           "teos": "Cologne",
           "vuosi": 1828,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/29091" },
-        { "tiedosto": "Königswinter, Drachenfels, Blick auf den Rhein -- 2024 -- 3926.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/29091"
+        },
+        {
+          "tiedosto": "Königswinter, Drachenfels, Blick auf den Rhein -- 2024 -- 3926.jpg",
           "selite": "Drachenfels Königswinterin yllä. Vuoren trakiittia louhittiin Kölnin tuomiokirkkoon asti, kunnes Preussi lopetti louhinnan 1836, koska kallio oli katoamassa. Höyrylaiva toi silloin jo matkailijoita päivittäin.",
-          "lahde": "Wikimedia Commons (CC BY-SA 4.0), Dietmar Rabich" },
-        { "teksti": "Marraskuussa 1986 Baselissa paloi kemiantehtaan varasto, ja sammutusvesi huuhtoi torjunta-aineita Reiniin. Ankeriaat kuolivat satojen kilometrien matkalta. Puhdistamot rakennettiin sen jälkeen uudestaan, ja lohi palasi jokeen 1990-luvun lopulla." }
+          "lahde": "Wikimedia Commons (CC BY-SA 4.0), Dietmar Rabich"
+        },
+        {
+          "teksti": "Marraskuussa 1986 Baselissa paloi kemiantehtaan varasto, ja sammutusvesi huuhtoi torjunta-aineita Reiniin. Ankeriaat kuolivat satojen kilometrien matkalta. Puhdistamot rakennettiin sen jälkeen uudestaan, ja lohi palasi jokeen 1990-luvun lopulla."
+        }
       ]
     },
-
     "Ohio": {
       "kappaleet": [
-        { "teksti": "Ohio oli sata vuotta päätie länteen. Perhe osti Pittsburghista lautan, lastasi siihen kaiken omistamansa ja laski virran mukana, kunnes valitsi rannan. Charles Dickens matkusti reitin höyrylaivalla 1842 ja katsoi, kun väkeä jätettiin maihin." },
-        { "lainaus": "Viisi miestä, yhtä monta naista ja pieni tyttö. Koko heidän maallinen omaisuutensa on säkki, iso arkku ja vanha tuoli. — Ensimmäisellä airon loiskahduksella joukon vanhin nainen istuutuu tuoliin aivan veden rajaan sanomatta sanaakaan.",
+        {
+          "teksti": "Ohio oli sata vuotta päätie länteen. Perhe osti Pittsburghista lautan, lastasi siihen kaiken omistamansa ja laski virran mukana, kunnes valitsi rannan. Charles Dickens matkusti reitin höyrylaivalla 1842 ja katsoi, kun väkeä jätettiin maihin."
+        },
+        {
+          "lainaus": "Viisi miestä, yhtä monta naista ja pieni tyttö. Koko heidän maallinen omaisuutensa on säkki, iso arkku ja vanha tuoli. — Ensimmäisellä airon loiskahduksella joukon vanhin nainen istuutuu tuoliin aivan veden rajaan sanomatta sanaakaan.",
           "kuka": "Charles Dickens",
           "teos": "American Notes",
           "vuosi": 1842,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/675" },
-        { "tiedosto": "George Caleb Bingham - Jolly Flatboatmen in Port.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/675"
+        },
+        {
+          "tiedosto": "George Caleb Bingham - Jolly Flatboatmen in Port.jpg",
           "selite": "George Caleb Bingham maalasi lauttamiehiä 1850-luvulla, kun höyry oli jo syrjäyttämässä heidät. Lautta purettiin määränpäässä ja myytiin lankkuina, sillä ylävirtaan sillä ei ollut asiaa.",
-          "lahde": "Wikimedia Commons (PD), George Caleb Bingham" },
-        { "teksti": "Sama joki oli raja. Pohjoispuolella oli Ohio, jossa orjuutta ei ollut, eteläpuolella Kentucky ja Virginia, joissa oli. Karkumatka alkoi tai päättyi vedessä, ja Ripleyn kaltaisista jokivarren pikkukaupungeista tuli avustajaverkoston solmuja." }
+          "lahde": "Wikimedia Commons (PD), George Caleb Bingham"
+        },
+        {
+          "teksti": "Sama joki oli raja. Pohjoispuolella oli Ohio, jossa orjuutta ei ollut, eteläpuolella Kentucky ja Virginia, joissa oli. Karkumatka alkoi tai päättyi vedessä, ja Ripleyn kaltaisista jokivarren pikkukaupungeista tuli avustajaverkoston solmuja."
+        }
       ]
     },
-
     "Dnepr": {
       "kappaleet": [
-        { "teksti": "Herodotos luetteli skyyttien joet ja pysähtyi neljännen kohdalle pidemmäksi aikaa kuin muiden. Borysthenes oli hänen mukaansa hyödyllisin kaikista maailman joista Niiliä lukuun ottamatta, ja perustelu oli käytännöllinen." },
-        { "lainaus": "Se antaa kauneimmat ja rehevimmät laitumet karjalle, ja kaloja parempia ja lukuisampia kuin mikään muu joki; sen vesi on juotavaksi makeinta ja virtaa kirkkaana, vaikka muut sen vieressä ovat sameita.",
+        {
+          "teksti": "Herodotos luetteli skyyttien joet ja pysähtyi neljännen kohdalle pidemmäksi aikaa kuin muiden. Borysthenes oli hänen mukaansa hyödyllisin kaikista maailman joista Niiliä lukuun ottamatta, ja perustelu oli käytännöllinen."
+        },
+        {
+          "lainaus": "Se antaa kauneimmat ja rehevimmät laitumet karjalle, ja kaloja parempia ja lukuisampia kuin mikään muu joki; sen vesi on juotavaksi makeinta ja virtaa kirkkaana, vaikka muut sen vieressä ovat sameita.",
           "kuka": "Herodotos",
           "teos": "Historiateos IV.53, engl. G. C. Macaulay 1890",
           "vuosi": "n. 430 eaa.",
           "suomennos": "oma, Macaulayn englanninnoksesta",
-          "linkki": "https://www.gutenberg.org/ebooks/2707" },
-        { "tiedosto": "DneproGES 1947.JPG",
+          "linkki": "https://www.gutenberg.org/ebooks/2707"
+        },
+        {
+          "tiedosto": "DneproGES 1947.JPG",
           "selite": "Dneprin kosket olivat purjehduksen este Kiovan ja meren välillä tuhat vuotta. Vuoden 1932 pato nosti veden niiden ylle. Kuva on vuodelta 1947: pato oli räjäytetty sodassa kahdesti ja rakennettu kolmannen kerran.",
-          "lahde": "Wikimedia Commons (PD)" },
-        { "teksti": "Viikinkiajan reitti Konstantinopoliin kulki koskien ohi, ja veneet kannettiin maitse ohitusten yli. Keisari Konstantinos VII kirjasi 900-luvulla koskien nimet sekä slaaviksi että pohjoismaisittain; se on vanhin säilynyt luettelo niistä." }
+          "lahde": "Wikimedia Commons (PD)"
+        },
+        {
+          "teksti": "Viikinkiajan reitti Konstantinopoliin kulki koskien ohi, ja veneet kannettiin maitse ohitusten yli. Keisari Konstantinos VII kirjasi 900-luvulla koskien nimet sekä slaaviksi että pohjoismaisittain; se on vanhin säilynyt luettelo niistä."
+        }
       ]
     },
-
     "Colorado": {
       "kappaleet": [
-        { "teksti": "John Wesley Powell menetti oikean käsivartensa Shilohissa 1862 ja lähti seitsemän vuotta myöhemmin neljällä veneellä alas jokea, jota ei ollut kartoitettu. Elokuun 13. päivänä 1869 retkikunta oli kanjonin pohjalla ja muonaa oli kuukaudeksi." },
-        { "tiedosto": "Grand Canyon, Colorado River, Ariz. - Hillers. LCCN00649751.jpg",
+        {
+          "teksti": "John Wesley Powell menetti oikean käsivartensa Shilohissa 1862 ja lähti seitsemän vuotta myöhemmin neljällä veneellä alas jokea, jota ei ollut kartoitettu. Elokuun 13. päivänä 1869 retkikunta oli kanjonin pohjalla ja muonaa oli kuukaudeksi."
+        },
+        {
+          "tiedosto": "Grand Canyon, Colorado River, Ariz. - Hillers. LCCN00649751.jpg",
           "selite": "John K. Hillers kuvasi kanjonin Powellin toisella retkellä 1870-luvulla. Märkälevytekniikka vaati, että lasilevy valmistettiin ja kehitettiin heti kuvauksen yhteydessä, joten pimiö kulki veneessä.",
-          "lahde": "Wikimedia Commons (PD), James Fennemore / John K. Hillers" },
-        { "lainaus": "Olemme kolme neljännesmailia maan syvyyksissä, ja suuri joki kutistuu mitättömäksi lyödessään vihaisia aaltojaan seinämiin. — Edessä on tuntematon matka, tutkimaton joki. Emme tiedä, mitä putouksia tulee, emme mitä kallioita väylässä on.",
+          "lahde": "Wikimedia Commons (PD), James Fennemore / John K. Hillers"
+        },
+        {
+          "lainaus": "Olemme kolme neljännesmailia maan syvyyksissä, ja suuri joki kutistuu mitättömäksi lyödessään vihaisia aaltojaan seinämiin. — Edessä on tuntematon matka, tutkimaton joki. Emme tiedä, mitä putouksia tulee, emme mitä kallioita väylässä on.",
           "kuka": "John Wesley Powell",
           "teos": "Powellin päiväkirja 1869, Horace Kephartin toimittamassa laitoksessa First through the Grand Canyon (1915)",
           "vuosi": 1869,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/74466" },
-        { "teksti": "Kolme miestä jätti retkikunnan kolme päivää ennen loppua ja lähti kiipeämään ulos kanjonista. Heitä ei nähty enää. Loput seitsemän tulivat ulos elokuun lopussa, ja Powell sai kongressilta rahat toiseen retkeen." }
+          "linkki": "https://www.gutenberg.org/ebooks/74466"
+        },
+        {
+          "teksti": "Kolme miestä jätti retkikunnan kolme päivää ennen loppua ja lähti kiipeämään ulos kanjonista. Heitä ei nähty enää. Loput seitsemän tulivat ulos elokuun lopussa, ja Powell sai kongressilta rahat toiseen retkeen."
+        }
       ]
     },
-
     "Loire": {
       "kappaleet": [
-        { "teksti": "Henry James kiersi Ranskan linnat syksyllä 1882 ja katsoi Loirea Amboisen pengermältä. Hän piti jokea komeana mutta epäluotettavana kumppanina maisemalle, joka nojasi siihen." },
-        { "lainaus": "Se on hyvin oikukas virta, ja toisinaan sen nähdään käyvän ohueksi ja paljastavan uomansa kaikki karkeudet — ilmeinen puute joessa, jonka niin suuresti oletetaan antavan arvokkuutta paikoille, joita se kastelee.",
+        {
+          "teksti": "Henry James kiersi Ranskan linnat syksyllä 1882 ja katsoi Loirea Amboisen pengermältä. Hän piti jokea komeana mutta epäluotettavana kumppanina maisemalle, joka nojasi siihen."
+        },
+        {
+          "lainaus": "Se on hyvin oikukas virta, ja toisinaan sen nähdään käyvän ohueksi ja paljastavan uomansa kaikki karkeudet — ilmeinen puute joessa, jonka niin suuresti oletetaan antavan arvokkuutta paikoille, joita se kastelee.",
           "kuka": "Henry James",
           "teos": "A Little Tour in France",
           "vuosi": 1884,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/2159" },
-        { "tiedosto": "Amboise Loire Panorama - July 2011.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/2159"
+        },
+        {
+          "tiedosto": "Amboise Loire Panorama - July 2011.jpg",
           "selite": "Loire Amboisen kohdalla. Hiekkasärkät ovat pysyvä piirre: virtaama vaihtelee kymmenkertaisesti, ja loppukesällä uoma on paikoin kahluusyvyinen. Keski- ja alajuoksulla joessa ei ole yhtään patoa.",
-          "lahde": "Wikimedia Commons (CC BY-SA 3.0), Diliff" },
-        { "teksti": "Padottomuus näkyy toiseen suuntaan tulvina. Kesäkuun 1856 tulva mursi suojapenkereet yli sadasta kohdasta ja upotti laakson; Napoleon III matkusti katsomaan tuhoja. Penkereitä korotettiin, ja yhtä suurta tulvaa on siitä asti odotettu." }
+          "lahde": "Wikimedia Commons (CC BY-SA 3.0), Diliff"
+        },
+        {
+          "teksti": "Padottomuus näkyy toiseen suuntaan tulvina. Kesäkuun 1856 tulva mursi suojapenkereet yli sadasta kohdasta ja upotti laakson; Napoleon III matkusti katsomaan tuhoja. Penkereitä korotettiin, ja yhtä suurta tulvaa on siitä asti odotettu."
+        }
       ]
     },
-
     "Mackenzie": {
       "kappaleet": [
-        { "teksti": "Alexander Mackenzie lähti kesäkuussa 1789 Isolta Orjajärveltä kanooteilla ja odotti päätyvänsä Tyynellemerelle. Heinäkuun 14. päivänä yksi hänen miehistään näki vedessä joukon olioita, joita piti ensin jäänkappaleina." },
-        { "lainaus": "Huomasin heti, että ne olivat valaita, ja käskin varustaa kanootin, ja lähdimme niiden perään. Se oli todella hyvin villi ja ajattelematon yritys, ja oli onnenpotku, ettemme saaneet niitä kiinni: yksi isku näiden jättikalojen pyrstöstä olisi murskannut kanootin.",
+        {
+          "teksti": "Alexander Mackenzie lähti kesäkuussa 1789 Isolta Orjajärveltä kanooteilla ja odotti päätyvänsä Tyynellemerelle. Heinäkuun 14. päivänä yksi hänen miehistään näki vedessä joukon olioita, joita piti ensin jäänkappaleina."
+        },
+        {
+          "lainaus": "Huomasin heti, että ne olivat valaita, ja käskin varustaa kanootin, ja lähdimme niiden perään. Se oli todella hyvin villi ja ajattelematon yritys, ja oli onnenpotku, ettemme saaneet niitä kiinni: yksi isku näiden jättikalojen pyrstöstä olisi murskannut kanootin.",
           "kuka": "Alexander Mackenzie",
           "teos": "Voyages from Montreal Through the Continent of North America to the Frozen and Pacific Oceans in 1789 and 1793",
           "vuosi": 1789,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/35658" },
-        { "teksti": "Valaat merkitsivät suolaista vettä ja väärää valtamerta. Joki oli vienyt pohjoiseen, ja Mackenzie kääntyi takaisin. Tyynellemerelle hän pääsi neljä vuotta myöhemmin toista reittiä, ja siitä retkestä tuli mantereen ensimmäinen ylitys Meksikon pohjoispuolella." },
-        { "tiedosto": "Mackenzie river enters Beaufort sea.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/35658"
+        },
+        {
+          "teksti": "Valaat merkitsivät suolaista vettä ja väärää valtamerta. Joki oli vienyt pohjoiseen, ja Mackenzie kääntyi takaisin. Tyynellemerelle hän pääsi neljä vuotta myöhemmin toista reittiä, ja siitä retkestä tuli mantereen ensimmäinen ylitys Meksikon pohjoispuolella."
+        },
+        {
+          "tiedosto": "Mackenzie river enters Beaufort sea.jpg",
           "selite": "Suisto Beaufortinmerellä: kymmeniätuhansia kanavia ja järviä ikiroudan päällä. Ruskea kieli on lietettä, jota joki tuo Kalliovuorilta asti ja joka värjää meren kesäisin kauas ulapalle.",
-          "lahde": "Wikimedia Commons (PD), NASA Earth Observatory" }
+          "lahde": "Wikimedia Commons (PD), NASA Earth Observatory"
+        }
       ]
     },
-
     "Paraná": {
       "kappaleet": [
-        { "teksti": "Vuosina 1827-1832 Río de la Platan takamailla ei satanut. Karjatilat menettivät eläimensä, ja lopulta laumat juoksivat jokeen eivätkä jaksaneet nousta mutaisia rantoja ylös. Darwin kuuli tapauksesta silminnäkijältä ja mietti sitä geologin silmin." },
-        { "lainaus": "Mitä geologi ajattelisi nähdessään tällaisen valtavan luukokoelman, kaikenlaisia eläimiä kaiken ikäisinä, upotettuna yhteen paksuun maakerrokseen? Eikö hän lukisi sitä tulvaksi, joka pyyhkäisi maan yli, eikä asioiden tavalliseksi kuluksi?",
+        {
+          "teksti": "Vuosina 1827-1832 Río de la Platan takamailla ei satanut. Karjatilat menettivät eläimensä, ja lopulta laumat juoksivat jokeen eivätkä jaksaneet nousta mutaisia rantoja ylös. Darwin kuuli tapauksesta silminnäkijältä ja mietti sitä geologin silmin."
+        },
+        {
+          "lainaus": "Mitä geologi ajattelisi nähdessään tällaisen valtavan luukokoelman, kaikenlaisia eläimiä kaiken ikäisinä, upotettuna yhteen paksuun maakerrokseen? Eikö hän lukisi sitä tulvaksi, joka pyyhkäisi maan yli, eikä asioiden tavalliseksi kuluksi?",
           "kuka": "Charles Darwin",
           "teos": "The Voyage of the Beagle",
           "vuosi": 1845,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/944" },
-        { "teksti": "Satojen tuhansien eläinten ruhot jäivät liejuun, ja seuraavan vuoden tulva hautasi ne. Darwinin kysymys oli menetelmällinen: kerros ei kerro syytään, ja katastrofin näköinen kerros voi syntyä kuivuudesta." },
-        { "tiedosto": "Paraná Delta near Rosario.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/944"
+        },
+        {
+          "teksti": "Satojen tuhansien eläinten ruhot jäivät liejuun, ja seuraavan vuoden tulva hautasi ne. Darwinin kysymys oli menetelmällinen: kerros ei kerro syytään, ja katastrofin näköinen kerros voi syntyä kuivuudesta."
+        },
+        {
+          "tiedosto": "Paraná Delta near Rosario.jpg",
           "selite": "Suisto alkaa jo satojen kilometrien päässä merestä. Saaria on tuhansia, ja ne syntyvät ja katoavat vuosikymmenissä; Darwinin laivuri muisti useiden hävinneen omana aikanaan.",
-          "lahde": "Wikimedia Commons (CC BY-SA 3.0), Pablo D. Flores" }
+          "lahde": "Wikimedia Commons (CC BY-SA 3.0), Pablo D. Flores"
+        }
       ]
     },
-
     "Veiksel": {
       "kappaleet": [
-        { "teksti": "Puolan vilja ja puu kulkivat Gdańskiin Veikseliä myöten. Lauttamiehet sitoivat rungoista lautan Karpaattien juurella, lastasivat päälle viljasäkit ja lähtivät alavirtaan. Perillä myytiin sekä lasti että lautta." },
-        { "tiedosto": "Stryowski-Flisacy nad Wisla.jpg",
+        {
+          "teksti": "Puolan vilja ja puu kulkivat Gdańskiin Veikseliä myöten. Lauttamiehet sitoivat rungoista lautan Karpaattien juurella, lastasivat päälle viljasäkit ja lähtivät alavirtaan. Perillä myytiin sekä lasti että lautta."
+        },
+        {
+          "tiedosto": "Stryowski-Flisacy nad Wisla.jpg",
           "selite": "Wilhelm August Stryowski maalasi lauttamiehiä Gdańskissa 1800-luvulla. Miehet asuivat matkan ajan lautalle rakennetussa majassa. Paluu ylävirtaan tehtiin jalan.",
-          "lahde": "Wikimedia Commons (PD), Wilhelm August Stryowski" },
-        { "teksti": "Kauppa katkesi, kun Puola jaettiin. Kolme valtakuntaa asetti joelle rajat ja tullit, ja Gdańskin vilja-aitat tyhjenivät. Joki oli kokonaan yhden valtion sisällä vasta 1918." },
-        { "teksti": "Veiksel on Euroopan suurista joista vähiten suoristettu. Alajuoksulla on yksi pato, Włocławek vuodelta 1970; muualla uoma vaeltaa hiekkasärkkiensä välissä kuten ennenkin, ja saarilla pesii lintuja, jotka ovat muualta kadonneet." }
+          "lahde": "Wikimedia Commons (PD), Wilhelm August Stryowski"
+        },
+        {
+          "teksti": "Kauppa katkesi, kun Puola jaettiin. Kolme valtakuntaa asetti joelle rajat ja tullit, ja Gdańskin vilja-aitat tyhjenivät. Joki oli kokonaan yhden valtion sisällä vasta 1918."
+        },
+        {
+          "teksti": "Veiksel on Euroopan suurista joista vähiten suoristettu. Alajuoksulla on yksi pato, Włocławek vuodelta 1970; muualla uoma vaeltaa hiekkasärkkiensä välissä kuten ennenkin, ja saarilla pesii lintuja, jotka ovat muualta kadonneet."
+        }
       ]
     },
-
     "Rio Negro": {
       "kappaleet": [
-        { "teksti": "Rio Negron vesi on kasvien hajoamistuotteiden värjäämää ja syvällä lähes mustaa. Alfred Russel Wallace nousi jokea 1850-luvulla ja huomasi heti, miten toisenlainen se on kuin Amazon muutaman kilometrin päässä." },
-        { "tiedosto": "Arquipélago de Mariauá.jpg",
+        {
+          "teksti": "Rio Negron vesi on kasvien hajoamistuotteiden värjäämää ja syvällä lähes mustaa. Alfred Russel Wallace nousi jokea 1850-luvulla ja huomasi heti, miten toisenlainen se on kuin Amazon muutaman kilometrin päässä."
+        },
+        {
+          "tiedosto": "Arquipélago de Mariauá.jpg",
           "selite": "Mariuán saaristo. Uoma jakautuu satoihin haaroihin, ja veden laskiessa niiden väliin jää pitkulaisia saaria. Saaristo jatkuu satoja kilometrejä ja on maailman laajin jokisaaristo.",
-          "lahde": "Wikimedia Commons (CC BY-SA 2.0), INPE" },
-        { "lainaus": "Täällä ei ollut kelluvia ruohosaaria, ei tukkeja eikä juuriltaan repeytyneitä puita lokkilasteineen, tuskin virtaa lainkaan ja vähän merkkejä elämästä mustassa ja hitaassa vedessä. Silti myrskyssä aallot ovat suurempia ja vaarallisempia kuin Amazonilla.",
+          "lahde": "Wikimedia Commons (CC BY-SA 2.0), INPE"
+        },
+        {
+          "lainaus": "Täällä ei ollut kelluvia ruohosaaria, ei tukkeja eikä juuriltaan repeytyneitä puita lokkilasteineen, tuskin virtaa lainkaan ja vähän merkkejä elämästä mustassa ja hitaassa vedessä. Silti myrskyssä aallot ovat suurempia ja vaarallisempia kuin Amazonilla.",
           "kuka": "Alfred Russel Wallace",
           "teos": "A Narrative of Travels on the Amazon and Rio Negro",
           "vuosi": 1853,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/71436" },
-        { "teksti": "Ero on ravinteissa. Andeilta tuleva savi lannoittaa Amazonin tulvametsät joka vuosi, mutta Rio Negron valuma-alue on vanhaa hiekkakiveä, josta ei liukene juuri mitään. Vesi on hapanta, hyttysiä on vähän, ja siksi rannoille rakennettiin." }
+          "linkki": "https://www.gutenberg.org/ebooks/71436"
+        },
+        {
+          "teksti": "Ero on ravinteissa. Andeilta tuleva savi lannoittaa Amazonin tulvametsät joka vuosi, mutta Rio Negron valuma-alue on vanhaa hiekkakiveä, josta ei liukene juuri mitään. Vesi on hapanta, hyttysiä on vähän, ja siksi rannoille rakennettiin."
+        }
       ]
     },
-
     "Rhône": {
       "kappaleet": [
-        { "teksti": "Ennen höyryä Rhônea noustiin hevosvoimin. Alaspäin päästiin nopeasti ja usein hengenvaarallisesti, ylös Arlesista Lyoniin tarvittiin parikymmentä hevosta ja viikkoja. Charles Dickens kulki alavirran suuntaan 1844." },
-        { "lainaus": "Pian päivänkoiton jälkeen seuraavana aamuna kuljimme höyryllä alas nuolen nopeaa Rhônea kahdenkymmenen mailin tuntivauhtia hyvin likaisessa aluksessa, joka oli täynnä kauppatavaraa.",
+        {
+          "teksti": "Ennen höyryä Rhônea noustiin hevosvoimin. Alaspäin päästiin nopeasti ja usein hengenvaarallisesti, ylös Arlesista Lyoniin tarvittiin parikymmentä hevosta ja viikkoja. Charles Dickens kulki alavirran suuntaan 1844."
+        },
+        {
+          "lainaus": "Pian päivänkoiton jälkeen seuraavana aamuna kuljimme höyryllä alas nuolen nopeaa Rhônea kahdenkymmenen mailin tuntivauhtia hyvin likaisessa aluksessa, joka oli täynnä kauppatavaraa.",
           "kuka": "Charles Dickens",
           "teos": "Pictures from Italy",
           "vuosi": 1846,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/650" },
-        { "tiedosto": "Suspension bridge over the Rhone, Avignon, Provence, France-LCCN2001698589.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/650"
+        },
+        {
+          "tiedosto": "Suspension bridge over the Rhone, Avignon, Provence, France-LCCN2001698589.jpg",
           "selite": "Rhône Avignonissa noin 1890. Riippusilta on 1800-luvulta. Sen takana näkyvä Pont Saint-Bénézet menetti kaarensa tulviin, ja kahdestakymmenestä on jäljellä neljä.",
-          "lahde": "Wikimedia Commons (PD), Photochrom Print Collection" },
-        { "teksti": "Virta on sittemmin kesytetty. Vuodesta 1948 alkaen jokeen rakennettiin toistakymmentä patoa ja ohitusuomaa, ja Lyonista mereen pääsee nyt proomulla. Nopeus, jota Dickens ihaili, menee sähköksi." }
+          "lahde": "Wikimedia Commons (PD), Photochrom Print Collection"
+        },
+        {
+          "teksti": "Virta on sittemmin kesytetty. Vuodesta 1948 alkaen jokeen rakennettiin toistakymmentä patoa ja ohitusuomaa, ja Lyonista mereen pääsee nyt proomulla. Nopeus, jota Dickens ihaili, menee sähköksi."
+        }
       ]
     },
-
     "Uruguay": {
       "kappaleet": [
-        { "teksti": "Río Uruguay on kirkas siellä missä Paraná on savinen, ja jokien vedet kohtaavat Río de la Platan yläpäässä. Darwin katsoi rajaa Punta Gordan niemeltä marraskuussa 1833." },
-        { "lainaus": "Tästä kohdasta Río Uruguay avautui eteemme jalona vesimääränä. Kirkkautensa ja nopeutensa vuoksi se näytti paljon paremmalta kuin naapurinsa Paraná. — Auringon paistaessa vesien kaksi väriä erottuivat aivan selvästi.",
+        {
+          "teksti": "Río Uruguay on kirkas siellä missä Paraná on savinen, ja jokien vedet kohtaavat Río de la Platan yläpäässä. Darwin katsoi rajaa Punta Gordan niemeltä marraskuussa 1833."
+        },
+        {
+          "lainaus": "Tästä kohdasta Río Uruguay avautui eteemme jalona vesimääränä. Kirkkautensa ja nopeutensa vuoksi se näytti paljon paremmalta kuin naapurinsa Paraná. — Auringon paistaessa vesien kaksi väriä erottuivat aivan selvästi.",
           "kuka": "Charles Darwin",
           "teos": "The Voyage of the Beagle",
           "vuosi": 1845,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/944" },
-        { "teksti": "Joki on suurimman osan matkastaan valtakunnanraja, ja se on tehnyt siitä riidan paikan. Vuonna 2007 Fray Bentosiin valmistui suomalainen sellutehdas. Argentiina vei asian Haagiin ja hävisi 2010, ja sillat olivat sitä ennen suljettuina vuosia." },
-        { "tiedosto": "Río Uruguay - Salto, Uruguay.JPG",
+          "linkki": "https://www.gutenberg.org/ebooks/944"
+        },
+        {
+          "teksti": "Joki on suurimman osan matkastaan valtakunnanraja, ja se on tehnyt siitä riidan paikan. Vuonna 2007 Fray Bentosiin valmistui suomalainen sellutehdas. Argentiina vei asian Haagiin ja hävisi 2010, ja sillat olivat sitä ennen suljettuina vuosia."
+        },
+        {
+          "tiedosto": "Río Uruguay - Salto, Uruguay.JPG",
           "selite": "Salton kaupunki sai nimensä koskesta, joka katkaisi laivaliikenteen. Koski jäi Salto Granden padon altaan alle, ja padon harjalla kulkee nyt tie Argentiinan ja Uruguayn välillä.",
-          "lahde": "Wikimedia Commons (CC BY-SA 3.0), ManuelaGB" }
+          "lahde": "Wikimedia Commons (CC BY-SA 3.0), ManuelaGB"
+        }
       ]
     },
-
     "Vienanjoki": {
       "kappaleet": [
-        { "teksti": "Vienanjoen suulla oli 1500-luvulla Venäjän ainoa satama, jonka ja meren välissä ei ollut toista valtaa. Englantilaiset löysivät sen 1553 etsiessään koillisväylää Kiinaan. Anthony Jenkinson nousi jokea Vologdaan 1557." },
-        { "lainaus": "Koko matkalla en kertaakaan tullut taloon sisälle vaan yövyin erämaassa joen rannalla ja kannoin eväät mukanani. Sen, joka aikoo kulkea noita teitä, täytyy ottaa mukaan kirves, tuluskukkaro ja pata, jotta saa tulen ja voi keittää ruokansa.",
+        {
+          "teksti": "Vienanjoen suulla oli 1500-luvulla Venäjän ainoa satama, jonka ja meren välissä ei ollut toista valtaa. Englantilaiset löysivät sen 1553 etsiessään koillisväylää Kiinaan. Anthony Jenkinson nousi jokea Vologdaan 1557."
+        },
+        {
+          "lainaus": "Koko matkalla en kertaakaan tullut taloon sisälle vaan yövyin erämaassa joen rannalla ja kannoin eväät mukanani. Sen, joka aikoo kulkea noita teitä, täytyy ottaa mukaan kirves, tuluskukkaro ja pata, jotta saa tulen ja voi keittää ruokansa.",
           "kuka": "Anthony Jenkinson",
           "teos": "The first voyage made by Master Anthonie Ienkinson, 1557, kokoelmassa Richard Hakluyt, The Principal Navigations, osa 3",
           "vuosi": 1557,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/7476" },
-        { "tiedosto": "Arkhangelsk. Northern Dvina River P7151096 2200.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/7476"
+        },
+        {
+          "tiedosto": "Arkhangelsk. Northern Dvina River P7151096 2200.jpg",
           "selite": "Arkangeli Vienanjoen rannalla. Satama jäätyy puoleksi vuodeksi. Pietarin perustaminen 1703 vei kaupalta merkityksen, ja tsaari rajoitti määräajaksi viennin täältä pakottaakseen liikenteen uuteen kaupunkiin.",
-          "lahde": "Wikimedia Commons (CC BY-SA 4.0), Alexxx1979" },
-        { "teksti": "Sota palautti reitin käyttöön. Talvella 1915-1916 Arkangelin rata levennettiin normaaliraiteiseksi ja liittoutuneiden laivat toivat sinne aseita, koska Itämeri ja Mustameri olivat suljetut. Sama toistui 1941." }
+          "lahde": "Wikimedia Commons (CC BY-SA 4.0), Alexxx1979"
+        },
+        {
+          "teksti": "Sota palautti reitin käyttöön. Talvella 1915-1916 Arkangelin rata levennettiin normaaliraiteiseksi ja liittoutuneiden laivat toivat sinne aseita, koska Itämeri ja Mustameri olivat suljetut. Sama toistui 1941."
+        }
       ]
     },
-
     "Tajo": {
       "kappaleet": [
-        { "teksti": "Antiikin kirjoittajat tunsivat Tajon kultajokena, ja huhu oli tosi sen verran, että joen hiekasta huuhdottiin kultaa roomalaisajalle asti. Byron purjehti jokisuuhun 1809 ja käytti tarua sellaisenaan." },
-        { "lainaus": "Ja Tajo syöksyy eteenpäin syvyyteen viemään taruista kultaista veroaan.",
+        {
+          "teksti": "Antiikin kirjoittajat tunsivat Tajon kultajokena, ja huhu oli tosi sen verran, että joen hiekasta huuhdottiin kultaa roomalaisajalle asti. Byron purjehti jokisuuhun 1809 ja käytti tarua sellaisenaan."
+        },
+        {
+          "lainaus": "Ja Tajo syöksyy eteenpäin syvyyteen viemään taruista kultaista veroaan.",
           "kuka": "Lord Byron",
           "teos": "Childe Harold's Pilgrimage I.14",
           "vuosi": 1812,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/5131" },
-        { "tiedosto": "Tagus River, sunrise next to Lisbon, 2009.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/5131"
+        },
+        {
+          "tiedosto": "Tagus River, sunrise next to Lisbon, 2009.jpg",
           "selite": "Tajon suu Lissabonin kohdalla. Sisämaassa jokisuu levenee altaaksi, jota kutsutaan Olkimereksi; kaupungin kohdalla kapeikkoa on runsaat kaksi kilometriä rannasta rantaan.",
-          "lahde": "Wikimedia Commons (CC BY-SA 3.0 de), Avarim" },
-        { "teksti": "Marraskuun 1. päivänä 1755 maa tärisi, ja lissabonilaiset pakenivat avoimelle rantatorille. Vesi vetäytyi ja paljasti satama-altaan pohjan, ja sitten se palasi kolmena aaltona. Kaupunki rakennettiin uudestaan suoraviivaiseksi ruudukoksi, joka on yhä pystyssä." }
+          "lahde": "Wikimedia Commons (CC BY-SA 3.0 de), Avarim"
+        },
+        {
+          "teksti": "Marraskuun 1. päivänä 1755 maa tärisi, ja lissabonilaiset pakenivat avoimelle rantatorille. Vesi vetäytyi ja paljasti satama-altaan pohjan, ja sitten se palasi kolmena aaltona. Kaupunki rakennettiin uudestaan suoraviivaiseksi ruudukoksi, joka on yhä pystyssä."
+        }
       ]
     },
-
     "Orinoco": {
       "kappaleet": [
-        { "teksti": "Walter Raleigh nousi Orinocoa 1595 etsimässä kultakaupunkia, jonka espanjalaiset olivat nimenneet El Doradoksi. Hän ei löytänyt sitä. Kirja, jonka hän kirjoitti palattuaan, myi silti kaiken sen, mitä hän oli luvannut." },
-        { "lainaus": "En ole nähnyt kauniimpaa maata enkä eloisampia näkymiä — peurat ylittivät joka polun, linnut lauloivat illansuussa joka puussa tuhannella eri sävelellä — ja jokainen kivi, jonka kumarruimme poimimaan, lupasi väriltään kultaa tai hopeaa.",
+        {
+          "teksti": "Walter Raleigh nousi Orinocoa 1595 etsimässä kultakaupunkia, jonka espanjalaiset olivat nimenneet El Doradoksi. Hän ei löytänyt sitä. Kirja, jonka hän kirjoitti palattuaan, myi silti kaiken sen, mitä hän oli luvannut."
+        },
+        {
+          "lainaus": "En ole nähnyt kauniimpaa maata enkä eloisampia näkymiä — peurat ylittivät joka polun, linnut lauloivat illansuussa joka puussa tuhannella eri sävelellä — ja jokainen kivi, jonka kumarruimme poimimaan, lupasi väriltään kultaa tai hopeaa.",
           "kuka": "Walter Raleigh",
           "teos": "The Discovery of Guiana",
           "vuosi": 1596,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/2272" },
-        { "tiedosto": "Orinoco river from Parmana Venezuela.jpg",
+          "linkki": "https://www.gutenberg.org/ebooks/2272"
+        },
+        {
+          "tiedosto": "Orinoco river from Parmana Venezuela.jpg",
           "selite": "Orinoco Parmanan kohdalla. Sadekaudella pinta nousee toistakymmentä metriä ja joki leviää tulvatasangolle. Kuivalla kaudella hiekkasärkät nousevat esiin, ja jokikilpikonnat nousevat niille munimaan.",
-          "lahde": "Wikimedia Commons (CC BY-SA 3.0), Paolostefano1412" },
-        { "teksti": "Raleigh palasi 1617 vanhana miehenä ja armahdettuna vankina, ehdolla ettei taistelisi espanjalaisia vastaan. Hänen miehensä polttivat San Thomén siirtokunnan ja hänen poikansa kaatui siinä. Jaakko I mestautti hänet Lontoossa seuraavana vuonna." }
+          "lahde": "Wikimedia Commons (CC BY-SA 3.0), Paolostefano1412"
+        },
+        {
+          "teksti": "Raleigh palasi 1617 vanhana miehenä ja armahdettuna vankina, ehdolla ettei taistelisi espanjalaisia vastaan. Hänen miehensä polttivat San Thomén siirtokunnan ja hänen poikansa kaatui siinä. Jaakko I mestautti hänet Lontoossa seuraavana vuonna."
+        }
       ]
     },
-
     "Po": {
       "kappaleet": [
-        { "teksti": "Po laskee Adrianmereen suistona, joka kasvaa ulospäin. Dante antoi Francescan nimetä kotikaupunkinsa joen kautta, ja Ravenna oli hänen aikanaan meren rannalla." },
-        { "lainaus": "Se maa, jossa synnyin, sijaitsee sillä rannalla, jonne Po laskeutuu saadakseen rauhan seuraajiensa kanssa.",
+        {
+          "teksti": "Po laskee Adrianmereen suistona, joka kasvaa ulospäin. Dante antoi Francescan nimetä kotikaupunkinsa joen kautta, ja Ravenna oli hänen aikanaan meren rannalla."
+        },
+        {
+          "lainaus": "Se maa, jossa synnyin, sijaitsee sillä rannalla, jonne Po laskeutuu saadakseen rauhan seuraajiensa kanssa.",
           "kuka": "Dante Alighieri",
           "teos": "La Divina Commedia, Inferno V",
           "vuosi": "n. 1310",
           "suomennos": "oma, italiasta",
-          "linkki": "https://www.gutenberg.org/ebooks/997" },
-        { "teksti": "Nyt Ravennasta on merelle kymmenen kilometriä. Suisto on työntynyt itään Apenniinien eroosion tahdissa, ja vauhti kasvoi keskiajalla, kun valuma-alueen metsiä kaadettiin. Rannikko siirtyi paikoin kilometrin vuosisadassa." },
-        { "tiedosto": "Po River Delta- ISS020-E-9731.JPG",
+          "linkki": "https://www.gutenberg.org/ebooks/997"
+        },
+        {
+          "teksti": "Nyt Ravennasta on merelle kymmenen kilometriä. Suisto on työntynyt itään Apenniinien eroosion tahdissa, ja vauhti kasvoi keskiajalla, kun valuma-alueen metsiä kaadettiin. Rannikko siirtyi paikoin kilometrin vuosisadassa."
+        },
+        {
+          "tiedosto": "Po River Delta- ISS020-E-9731.JPG",
           "selite": "Suisto avaruudesta. Uoma kulkee penkereiden välissä paikoin ympäröivää maata korkeammalla, ja suistossa maanpinta on painunut merenpinnan alapuolelle pohjaveden ja maakaasun oton takia.",
-          "lahde": "Wikimedia Commons (PD), NASA" }
+          "lahde": "Wikimedia Commons (PD), NASA"
+        }
       ]
     },
-
     "Saint Lawrence": {
       "kappaleet": [
-        { "teksti": "Jacques Cartier purjehti 1535 ylös jokea kohti Kiinaa ja pysähtyi Montrealin kohdalla koskiin, joiden yli ei päässyt. Koski sai myöhemmin nimen La Chine, ja pilkka jäi kartalle neljäksisadaksi vuodeksi." },
-        { "lainaus": "Jokainen siirtolainen, joka saapuu tähän maahan Saint Lawrencea myöten, näkee Orléansin saaren niemen avautuessa Montmorencin syöksyvän Suureen jokeen komeana valkoisena verhona ja tekevän lisäyksensä painokkaasti.",
+        {
+          "teksti": "Jacques Cartier purjehti 1535 ylös jokea kohti Kiinaa ja pysähtyi Montrealin kohdalla koskiin, joiden yli ei päässyt. Koski sai myöhemmin nimen La Chine, ja pilkka jäi kartalle neljäksisadaksi vuodeksi."
+        },
+        {
+          "lainaus": "Jokainen siirtolainen, joka saapuu tähän maahan Saint Lawrencea myöten, näkee Orléansin saaren niemen avautuessa Montmorencin syöksyvän Suureen jokeen komeana valkoisena verhona ja tekevän lisäyksensä painokkaasti.",
           "kuka": "Henry David Thoreau",
           "teos": "A Yankee in Canada",
           "vuosi": 1866,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/70123" },
-        { "tiedosto": "Rapides de Lachine 1.JPG",
+          "linkki": "https://www.gutenberg.org/ebooks/70123"
+        },
+        {
+          "tiedosto": "Rapides de Lachine 1.JPG",
           "selite": "Lachinen kosket Montrealin yläpuolella. Ne ohitettiin ensin kanavalla 1825. Nykyinen meriväylä avattiin 1959, ja se nostaa valtamerilaivat sulkuportailla Ontariojärveen asti.",
-          "lahde": "Wikimedia Commons (PD)" },
-        { "teksti": "Talvi sulki joen puoleksi vuodeksi, ja se ratkaisi paljon: Ranskan siirtokunta oli jäissä marraskuusta huhtikuuhun eikä saanut apua eikä uutisia. Nyt jäänmurtajat pitävät väylän Montrealiin auki ympäri vuoden." }
+          "lahde": "Wikimedia Commons (PD)"
+        },
+        {
+          "teksti": "Talvi sulki joen puoleksi vuodeksi, ja se ratkaisi paljon: Ranskan siirtokunta oli jäissä marraskuusta huhtikuuhun eikä saanut apua eikä uutisia. Nyt jäänmurtajat pitävät väylän Montrealiin auki ympäri vuoden."
+        }
       ]
     },
-
     "Elbe": {
       "kappaleet": [
-        { "teksti": "Kuivina kesinä Elben pohjasta nousee kiviä, joihin on hakattu vuosilukuja. Ne merkitsevät edellisiä kuivuuksia, ja niiden lukeminen oli varoitus: matala vesi tarkoitti seisovia myllyjä, pysähtynyttä laivaliikennettä ja kallista viljaa." },
-        { "tiedosto": "Hungerstein in Decin (21).JPG",
+        {
+          "teksti": "Kuivina kesinä Elben pohjasta nousee kiviä, joihin on hakattu vuosilukuja. Ne merkitsevät edellisiä kuivuuksia, ja niiden lukeminen oli varoitus: matala vesi tarkoitti seisovia myllyjä, pysähtynyttä laivaliikennettä ja kallista viljaa."
+        },
+        {
+          "tiedosto": "Hungerstein in Decin (21).JPG",
           "selite": "Nälkäkivi Děčínissä. Vanhin selvästi luettava vuosiluku on 1616, ja uudempia on lisätty myöhempinä kuivina kesinä. Kivi näkyy vain silloin, kun pinta laskee tavallista alemmas.",
-          "lahde": "Wikimedia Commons (CC BY-SA 3.0), Bernd Gross" },
-        { "teksti": "Elbe kantoi Böömin lasin ja Saksin viljan Hampuriin, ja tulli kannettiin jokaisen linnan kohdalla. 1800-luvun sopimukset poistivat tullit, ja joesta tuli yhtenäinen väylä ensi kertaa." },
-        { "teksti": "Vuoden 1945 jälkeen se katkesi uudestaan. Torgaussa amerikkalaiset ja neuvostojoukot kohtasivat huhtikuussa 1945 räjäytetyn sillan luona, ja jokivartta pitkin kulki sen jälkeen neljäkymmentä vuotta vartioitu raja." }
+          "lahde": "Wikimedia Commons (CC BY-SA 3.0), Bernd Gross"
+        },
+        {
+          "teksti": "Elbe kantoi Böömin lasin ja Saksin viljan Hampuriin, ja tulli kannettiin jokaisen linnan kohdalla. 1800-luvun sopimukset poistivat tullit, ja joesta tuli yhtenäinen väylä ensi kertaa."
+        },
+        {
+          "teksti": "Vuoden 1945 jälkeen se katkesi uudestaan. Torgaussa amerikkalaiset ja neuvostojoukot kohtasivat huhtikuussa 1945 räjäytetyn sillan luona, ja jokivartta pitkin kulki sen jälkeen neljäkymmentä vuotta vartioitu raja."
+        }
       ]
     },
-
     "Columbia": {
       "kappaleet": [
-        { "teksti": "Columbian suulla on hiekkasärkkä, jossa joen virta ja Tyynenmeren maininki kohtaavat. John Jacob Astorin laiva Tonquin saapui sinne maaliskuussa 1811, ja kapteeni lähetti perämies Foxin luotaamaan väylää valaanpyyntiveneellä." },
-        { "tiedosto": "Fishermen at Celilo Falls on the Columbia River (3229038197).jpg",
+        {
+          "teksti": "Columbian suulla on hiekkasärkkä, jossa joen virta ja Tyynenmeren maininki kohtaavat. John Jacob Astorin laiva Tonquin saapui sinne maaliskuussa 1811, ja kapteeni lähetti perämies Foxin luotaamaan väylää valaanpyyntiveneellä."
+        },
+        {
+          "tiedosto": "Fishermen at Celilo Falls on the Columbia River (3229038197).jpg",
           "selite": "Kalastuslavat Celilon putouksella. Lohta on nostettu tästä kohdasta haavilla tuhansia vuosia. The Dallesin pato sulki porttinsa maaliskuussa 1957, ja putous oli veden alla saman päivän aikana.",
-          "lahde": "Wikimedia Commons (No restrictions), OSU Special Collections & Archives" },
-        { "lainaus": "Minut lähetetään ilman merimiehiä veneeseeni myrskyisellä säällä luoteisrannikon vaarallisimpaan kohtaan. Setäni hukkui muutama vuosi sitten samalle särkälle, ja nyt minä menen panemaan luuni hänen viereensä.",
+          "lahde": "Wikimedia Commons (No restrictions), OSU Special Collections & Archives"
+        },
+        {
+          "lainaus": "Minut lähetetään ilman merimiehiä veneeseeni myrskyisellä säällä luoteisrannikon vaarallisimpaan kohtaan. Setäni hukkui muutama vuosi sitten samalle särkälle, ja nyt minä menen panemaan luuni hänen viereensä.",
           "kuka": "perämies Fox, Washington Irvingin kirjaamana",
           "teos": "Astoria; or, Anecdotes of an Enterprise Beyond the Rocky Mountains",
           "vuosi": 1836,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/1371" },
-        { "teksti": "Fox ja hänen miehensä hukkuivat, ja sama käynti vei toisenkin veneen. Särkkä on nielaissut runsaat kaksituhatta alusta, ja luotsit nousevat laivoihin yhä avomerellä. Joessa on nyt neljätoista patoa, ja lohi nousee kalaportaita." }
+          "linkki": "https://www.gutenberg.org/ebooks/1371"
+        },
+        {
+          "teksti": "Fox ja hänen miehensä hukkuivat, ja sama käynti vei toisenkin veneen. Särkkä on nielaissut runsaat kaksituhatta alusta, ja luotsit nousevat laivoihin yhä avomerellä. Joessa on nyt neljätoista patoa, ja lohi nousee kalaportaita."
+        }
       ]
     },
-
     "São Francisco": {
       "kappaleet": [
-        { "teksti": "São Francisco virtaa koko matkansa Brasilian sisällä ja halkoo sertãon, missä sadetta voi olla odotettava vuosia. Sitä kutsutaan kansalliseksi joeksi, koska se on alueen ainoa vesi, joka ei lopu." },
-        { "teksti": "Höyrylaivat kulkivat Piraporan ja Juazeiron välillä runsaat tuhat kilometriä, ja niiden keulissa oli carranca, puusta veistetty koirankuonoinen hahmo, joka piti loitolla veden henkiä. Veistäjät tekivät niitä 1800-luvun lopulta 1950-luvulle." },
-        { "tiedosto": "Canyon, Paulo Afonso - BA, Brazil.JPG",
+        {
+          "teksti": "São Francisco virtaa koko matkansa Brasilian sisällä ja halkoo sertãon, missä sadetta voi olla odotettava vuosia. Sitä kutsutaan kansalliseksi joeksi, koska se on alueen ainoa vesi, joka ei lopu."
+        },
+        {
+          "teksti": "Höyrylaivat kulkivat Piraporan ja Juazeiron välillä runsaat tuhat kilometriä, ja niiden keulissa oli carranca, puusta veistetty koirankuonoinen hahmo, joka piti loitolla veden henkiä. Veistäjät tekivät niitä 1800-luvun lopulta 1950-luvulle."
+        },
+        {
+          "tiedosto": "Canyon, Paulo Afonso - BA, Brazil.JPG",
           "selite": "Paulo Afonson kanjoni, johon joki putosi kahdeksankymmentä metriä. Vuodesta 1949 vesi on ohjattu voimalaitokseen, ja putouksessa on vettä lähinnä tulvien ja koeajojen aikaan.",
-          "lahde": "Wikimedia Commons (CC BY-SA 4.0), Ingridgaab" },
-        { "teksti": "Yläjuoksulla vettä otetaan kasteluun, ja 2010-luvulla kaksi kanavaa alkoi siirtää sitä koillisen kaupungeille. Suistossa merivesi työntyy uomaan ylöspäin, koska joen oma virtaus ei enää vastusta sitä yhtä lujaa." }
+          "lahde": "Wikimedia Commons (CC BY-SA 4.0), Ingridgaab"
+        },
+        {
+          "teksti": "Yläjuoksulla vettä otetaan kasteluun, ja 2010-luvulla kaksi kanavaa alkoi siirtää sitä koillisen kaupungeille. Suistossa merivesi työntyy uomaan ylöspäin, koska joen oma virtaus ei enää vastusta sitä yhtä lujaa."
+        }
       ]
     },
-
     "Ural": {
       "kappaleet": [
-        { "teksti": "Uraljoki on ollut Euroopan ja Aasian raja 1700-luvulta, jolloin Vasili Tatištšev ehdotti rajaksi Uralvuoria ja niiden eteläpuolella jokea. Raja on sopimus eikä havainto: aro on samanlaista molemmin puolin." },
-        { "tiedosto": "Atyrau - Oural.JPG",
+        {
+          "teksti": "Uraljoki on ollut Euroopan ja Aasian raja 1700-luvulta, jolloin Vasili Tatištšev ehdotti rajaksi Uralvuoria ja niiden eteläpuolella jokea. Raja on sopimus eikä havainto: aro on samanlaista molemmin puolin."
+        },
+        {
+          "tiedosto": "Atyrau - Oural.JPG",
           "selite": "Atyrau Kazakstanissa on rakennettu joen molemmin puolin, joten kaupunki on yhtä aikaa Euroopassa ja Aasiassa. Sillan päähän on pystytetty merkki siitä, missä kohtaa maanosa vaihtuu.",
-          "lahde": "Wikimedia Commons (PD), Patrice78500" },
-        { "teksti": "Joki oli nimeltään Jaik, kunnes Katariina II käski vaihtaa nimen 1775. Jaikin kasakat olivat nousseet kapinaan Jemeljan Pugatšovin johdolla, ja nimen poistaminen kuului rangaistukseen: joki, kaupunki ja kasakkajoukko nimettiin kaikki uudelleen." },
-        { "teksti": "Kaspianmeren sammet nousevat kutemaan Uralia myöten, koska se on Volgasta poiketen padottamaton. Saaliit ovat silti romahtaneet, ja kutuvaellus riippuu keväästä: matalana vuonna kalat eivät pääse suistosta ylös." }
+          "lahde": "Wikimedia Commons (PD), Patrice78500"
+        },
+        {
+          "teksti": "Joki oli nimeltään Jaik, kunnes Katariina II käski vaihtaa nimen 1775. Jaikin kasakat olivat nousseet kapinaan Jemeljan Pugatšovin johdolla, ja nimen poistaminen kuului rangaistukseen: joki, kaupunki ja kasakkajoukko nimettiin kaikki uudelleen."
+        },
+        {
+          "teksti": "Kaspianmeren sammet nousevat kutemaan Uralia myöten, koska se on Volgasta poiketen padottamaton. Saaliit ovat silti romahtaneet, ja kutuvaellus riippuu keväästä: matalana vuonna kalat eivät pääse suistosta ylös."
+        }
       ]
     },
-
     "Magdalena": {
       "kappaleet": [
-        { "teksti": "Bogotá on kahden ja puolen kilometrin korkeudessa, eikä sinne päässyt rannikolta muuten kuin Magdalenaa myöten. Matka ylös kesti höyrylaivalla viikkoja ja sitä ennen soutuveneellä kuukausia. Se oli Kolumbian pääväylä kolmesataa vuotta." },
-        { "tiedosto": "Rio Magdalena Bootsfahrt 01.jpg",
+        {
+          "teksti": "Bogotá on kahden ja puolen kilometrin korkeudessa, eikä sinne päässyt rannikolta muuten kuin Magdalenaa myöten. Matka ylös kesti höyrylaivalla viikkoja ja sitä ennen soutuveneellä kuukausia. Se oli Kolumbian pääväylä kolmesataa vuotta."
+        },
+        {
+          "tiedosto": "Rio Magdalena Bootsfahrt 01.jpg",
           "selite": "Magdalena Momposin kohdalla. Kaupunki jäi sivuun, kun päähaara siirtyi 1700-luvulla toiseen uomaan. Barokkikirkot jäivät paikoilleen, ja liikenne meni muualta.",
-          "lahde": "Wikimedia Commons (CC BY-SA 4.0), Burkhard Mücke" },
-        { "teksti": "Höyrylaiva tuli 1823 ja katosi 1960-luvulla, kun tiet ja lentokoneet veivät liikenteen. Uoma mataloitui samaan aikaan, koska valuma-alueen metsä kaadettiin ja lietettä tuli enemmän kuin joki jaksoi viedä." },
-        { "teksti": "Joki oli myös hautausmaa. Sisällissodan vuosina alavirtaan ajelehti tunnistamattomia vainajia, ja Puerto Berríon kylässä syntyi tapa, jossa asukkaat ottivat yhden heistä omakseen, hautasivat ja hoitivat hautaa vuosikymmeniä." }
+          "lahde": "Wikimedia Commons (CC BY-SA 4.0), Burkhard Mücke"
+        },
+        {
+          "teksti": "Höyrylaiva tuli 1823 ja katosi 1960-luvulla, kun tiet ja lentokoneet veivät liikenteen. Uoma mataloitui samaan aikaan, koska valuma-alueen metsä kaadettiin ja lietettä tuli enemmän kuin joki jaksoi viedä."
+        },
+        {
+          "teksti": "Joki oli myös hautausmaa. Sisällissodan vuosina alavirtaan ajelehti tunnistamattomia vainajia, ja Puerto Berríon kylässä syntyi tapa, jossa asukkaat ottivat yhden heistä omakseen, hautasivat ja hoitivat hautaa vuosikymmeniä."
+        }
       ]
     },
-
     "Thames": {
       "kappaleet": [
-        { "teksti": "Vanha Lontoon silta seisoi yhdeksällätoista kapealla holvilla, jotka padottivat joen. Ylävirran puoli virtasi hitaasti ja jäätyi kylminä talvina umpeen. Jäälle rakennettiin katuja." },
-        { "lainaus": "Lontoon edustalla Thames oli yhä täynnä kojuja säännöllisinä katuina, kaikenlaisia kauppoja tavaroineen, jopa kirjapaino, jossa väki ja naiset innostuivat painattamaan nimensä sekä päivän ja vuoden, jona ne painettiin Thamesilla.",
+        {
+          "teksti": "Vanha Lontoon silta seisoi yhdeksällätoista kapealla holvilla, jotka padottivat joen. Ylävirran puoli virtasi hitaasti ja jäätyi kylminä talvina umpeen. Jäälle rakennettiin katuja."
+        },
+        {
+          "lainaus": "Lontoon edustalla Thames oli yhä täynnä kojuja säännöllisinä katuina, kaikenlaisia kauppoja tavaroineen, jopa kirjapaino, jossa väki ja naiset innostuivat painattamaan nimensä sekä päivän ja vuoden, jona ne painettiin Thamesilla.",
           "kuka": "John Evelyn",
           "teos": "The Diary of John Evelyn, merkintä 24. tammikuuta 1684",
           "vuosi": 1684,
           "suomennos": "oma",
-          "linkki": "https://www.gutenberg.org/ebooks/42081" },
-        { "tiedosto": "Thomas Wyke- Thames frost fair.JPG",
+          "linkki": "https://www.gutenberg.org/ebooks/42081"
+        },
+        {
+          "tiedosto": "Thomas Wyke- Thames frost fair.JPG",
           "selite": "Talven 1683-1684 jäämarkkinat. Uusi Lontoon silta valmistui 1831 ja poisti padon; virta nopeutui, ja penkereet kavensivat uoman. Joki ei ole sen jälkeen jäätynyt kaupungin kohdalla.",
-          "lahde": "Wikimedia Commons (PD), Thomas Wyke" },
-        { "teksti": "Kaksisataa vuotta myöhemmin vaiva oli päinvastainen. Kesäkuussa 1858 helle nosti viemäriksi muuttuneen joen hajun niin sietämättömäksi, että parlamentti keskeytti istuntonsa. Kolmessa viikossa se myönsi Joseph Bazalgettelle rahat viemäriverkkoon." },
-        { "tiedosto": "Caricature; Faraday giving his card to Father Thames. Wellcome M0012507.jpg",
+          "lahde": "Wikimedia Commons (PD), Thomas Wyke"
+        },
+        {
+          "teksti": "Kaksisataa vuotta myöhemmin vaiva oli päinvastainen. Kesäkuussa 1858 helle nosti viemäriksi muuttuneen joen hajun niin sietämättömäksi, että parlamentti keskeytti istuntonsa. Kolmessa viikossa se myönsi Joseph Bazalgettelle rahat viemäriverkkoon."
+        },
+        {
+          "tiedosto": "Caricature; Faraday giving his card to Father Thames. Wellcome M0012507.jpg",
           "selite": "Punchin pilakuva vuodelta 1855: Michael Faraday ojentaa käyntikorttinsa Isä Thamesille. Faraday oli kirjoittanut lehteen joen tilasta samana kesänä, ja kuva vastasi siihen.",
-          "lahde": "Wikimedia Commons (PD), Wellcome Collection" }
+          "lahde": "Wikimedia Commons (PD), Wellcome Collection"
+        }
       ]
     },
-
     "Ebro": {
       "kappaleet": [
-        { "teksti": "Ebro on Iberian niemimaan runsasvetisin joki ja antoi sille nimen. Kreikkalaiset kutsuivat rannikon asukkaita joen mukaan ibereiksi, ja nimi levisi vähitellen koko niemimaahan." },
-        { "teksti": "Rooma ja Karthago sopivat 226 eaa. rajasta Ebrolla. Kun Hannibal valtasi Saguntumin sen eteläpuolelta, sopimus oli tulkinnanvarainen ja sota alkoi; se kesti seitsemäntoista vuotta ja vei Karthagolta Espanjan." },
-        { "tiedosto": "Río Ebro en su desembocadura en el Delta del Ebre.jpg",
+        {
+          "teksti": "Ebro on Iberian niemimaan runsasvetisin joki ja antoi sille nimen. Kreikkalaiset kutsuivat rannikon asukkaita joen mukaan ibereiksi, ja nimi levisi vähitellen koko niemimaahan."
+        },
+        {
+          "teksti": "Rooma ja Karthago sopivat 226 eaa. rajasta Ebrolla. Kun Hannibal valtasi Saguntumin sen eteläpuolelta, sopimus oli tulkinnanvarainen ja sota alkoi; se kesti seitsemäntoista vuotta ja vei Karthagolta Espanjan."
+        },
+        {
+          "tiedosto": "Río Ebro en su desembocadura en el Delta del Ebre.jpg",
           "selite": "Suisto työntyy Välimereen parikymmentä kilometriä. Se on kutistumassa: yläjuoksun padot pidättävät liejun, eikä uutta maata synny yhtä nopeasti kuin meri vie vanhaa.",
-          "lahde": "Wikimedia Commons (CC BY-SA 4.0), jorgegdphoto.com" },
-        { "teksti": "Suistossa kasvaa riisi, ja vesi jaetaan kanavilla. Ebron vedestä on riidelty koko maan mitassa: vuoden 2001 suunnitelma olisi siirtänyt osan siitä etelään rannikkokaupungeille, ja se peruttiin kolme vuotta myöhemmin." }
+          "lahde": "Wikimedia Commons (CC BY-SA 4.0), jorgegdphoto.com"
+        },
+        {
+          "teksti": "Suistossa kasvaa riisi, ja vesi jaetaan kanavilla. Ebron vedestä on riidelty koko maan mitassa: vuoden 2001 suunnitelma olisi siirtänyt osan siitä etelään rannikkokaupungeille, ja se peruttiin kolme vuotta myöhemmin."
+        }
       ]
     },
-
     "Daugava": {
       "kappaleet": [
-        { "teksti": "Väinäjoki oli varhaiskeskiajalla reitti Itämereltä itään. Laivat nostettiin latvoilla maalle ja vedettiin Dneprin vesille, ja joen suulla käytiin kauppaa vahalla, hampulla ja turkiksilla. Riikaan tuli hansakaupunki." },
-        { "teksti": "Yläjuoksulla oli koskia ja rantakallioita, joiden päälle rakennettiin linnoja. Koknesen piispanlinna nousi 1200-luvulla jyrkänteelle, jonka ohi tavara kulki, ja siitä tuli tullipaikka." },
-        { "tiedosto": "View near Koknese in 1833.png",
+        {
+          "teksti": "Väinäjoki oli varhaiskeskiajalla reitti Itämereltä itään. Laivat nostettiin latvoilla maalle ja vedettiin Dneprin vesille, ja joen suulla käytiin kauppaa vahalla, hampulla ja turkiksilla. Riikaan tuli hansakaupunki."
+        },
+        {
+          "teksti": "Yläjuoksulla oli koskia ja rantakallioita, joiden päälle rakennettiin linnoja. Koknesen piispanlinna nousi 1200-luvulla jyrkänteelle, jonka ohi tavara kulki, ja siitä tuli tullipaikka."
+        },
+        {
+          "tiedosto": "View near Koknese in 1833.png",
           "selite": "August Matthias Hagen maalasi Koknesen näkymän 1833. Rauniot seisovat kalliolla joen yllä. Pļaviņasin voimalaitos nosti veden 1966, ja rauniot ovat nyt matalalla saarella aivan vedenrajassa.",
-          "lahde": "Wikimedia Commons (CC BY-SA 4.0), August Matthias Hagen" },
-        { "teksti": "Pato hukutti kalliot ja koskijakson, joita latvialaisissa lauluissa oli laulettu. 1980-luvun lopulla suunniteltiin vielä yhtä patoa Daugavpilsiin. Sitä vastustettiin julkisesti ensi kertaa Neuvostoliitossa, ja se jäi rakentamatta." }
+          "lahde": "Wikimedia Commons (CC BY-SA 4.0), August Matthias Hagen"
+        },
+        {
+          "teksti": "Pato hukutti kalliot ja koskijakson, joita latvialaisissa lauluissa oli laulettu. 1980-luvun lopulla suunniteltiin vielä yhtä patoa Daugavpilsiin. Sitä vastustettiin julkisesti ensi kertaa Neuvostoliitossa, ja se jäi rakentamatta."
+        }
       ]
     },
-
     "Madeira": {
       "kappaleet": [
-        { "teksti": "Madeira tuo Andeilta niin paljon lietettä, että sen vesi on Amazonin pääuomaakin vaaleampaa. Nimi tarkoittaa portugaliksi puuta ja viittaa runkoihin, joita tulva vie mukanaan koko sadekauden ajan." },
-        { "teksti": "Kaupan este oli runsaan kolmensadan kilometrin koskijakso. Bolivian kumi ja kiniini piti kantaa sen ohi maitse, ja 1907 alettiin rakentaa rautatietä. Työmaa kulki malaria-alueen halki, ja kuolleita laskettiin tuhansissa." },
-        { "tiedosto": "Passageiros no Vagão-Plataforma do Trem, na Altura do Quilômetro 151 da Ferrovia Madeira-Mamoré - 1107, Acervo do Museu Paulista da USP.jpg",
-          "selite": "Matkustajia Madeira-Mamorén radan lavavaunussa kilometrillä 151. Rata valmistui 1912, samoihin aikoihin kun Aasian viljelykumi romahdutti Amazonin hinnat. Liikenne loppui 1972.",
-          "lahde": "Wikimedia Commons (PD), Museu Paulista da USP" },
-        { "teksti": "Koskissa on nyt kaksi patoa, Santo Antônio ja Jirau, molemmat 2010-luvulta. Ne tuottavat sähköä kahdentuhannen kilometrin päähän ja katkaisivat vaelluksen, joka vei jokea nousevat sompakalat Andien juurelle asti." }
+        {
+          "teksti": "Madeira tuo Andeilta niin paljon lietettä, että sen vesi on Amazonin pääuomaakin vaaleampaa. Nimi tarkoittaa portugaliksi puuta ja viittaa runkoihin, joita tulva vie mukanaan koko sadekauden ajan."
+        },
+        {
+          "teksti": "Kaupan este oli runsaan kolmensadan kilometrin koskijakso. Bolivian kumi ja kiniini piti kantaa sen ohi maitse, ja 1907 alettiin rakentaa rautatietä. Työmaa kulki malaria-alueen halki, ja kuolleita laskettiin tuhansissa."
+        },
+        {
+          "tiedosto": "Rio Madeira- Cachoeira do Teotônio.jpg",
+          "selite": "Teotônion koski Madeirassa ennen patoja: vaalea lietevesi kuohuu, ja kalastajakylä seisoo paaluillaan aivan kosken partaalla. Tällaisten koskien ohi kumi piti kantaa maitse.",
+          "lahde": "Wilson Dias / Agência Brasil, Wikimedia Commons (CC BY 3.0 BR)"
+        },
+        {
+          "teksti": "Koskissa on nyt kaksi patoa, Santo Antônio ja Jirau, molemmat 2010-luvulta. Ne tuottavat sähköä kahdentuhannen kilometrin päähän ja katkaisivat vaelluksen, joka vei jokea nousevat sompakalat Andien juurelle asti."
+        }
       ]
     },
-
     "Oder": {
       "kappaleet": [
-        { "teksti": "Oder oli Preussin ensimmäisiä suuria vesirakennuskohteita. Friedrich II kuivatti 1750-luvulla Oderbruchin suoalueen ja siirsi joen kaivettuun uomaan. Kuivunutta maata tuli tuhat neliökilometriä, ja sinne asutettiin kymmeniätuhansia uudisasukkaita." },
-        { "teksti": "Vuonna 1945 joesta tuli raja. Oder-Neisse-linja siirsi Puolan länteen ja Saksan rajan tälle joelle; Stettinistä tuli Szczecin, ja miljoonat ihmiset muuttivat molempiin suuntiin muutamassa vuodessa." },
-        { "tiedosto": "Odra o zachodzie słońca.jpg",
+        {
+          "teksti": "Oder oli Preussin ensimmäisiä suuria vesirakennuskohteita. Friedrich II kuivatti 1750-luvulla Oderbruchin suoalueen ja siirsi joen kaivettuun uomaan. Kuivunutta maata tuli tuhat neliökilometriä, ja sinne asutettiin kymmeniätuhansia uudisasukkaita."
+        },
+        {
+          "teksti": "Vuonna 1945 joesta tuli raja. Oder-Neisse-linja siirsi Puolan länteen ja Saksan rajan tälle joelle; Stettinistä tuli Szczecin, ja miljoonat ihmiset muuttivat molempiin suuntiin muutamassa vuodessa."
+        },
+        {
+          "tiedosto": "Odra o zachodzie słońca.jpg",
           "selite": "Odra Szczecinin kohdalla. Satama on 65 kilometriä merestä sisämaassa ja yhteydessä Itämerelle lahden kautta. Väylä on ruopattava, koska joki ei syvennä sitä itse.",
-          "lahde": "Wikimedia Commons (CC BY-SA 2.0), włodi" },
-        { "teksti": "Heinäkuussa 1997 tuli tulva, joka nousi Wrocławissa katutasolle ja tappoi yli sata ihmistä kahdessa maassa. Sen jälkeen penkereitä on korotettu ja osa tulvatasangoista palautettu joen käyttöön." }
+          "lahde": "Wikimedia Commons (CC BY-SA 2.0), włodi"
+        },
+        {
+          "teksti": "Heinäkuussa 1997 tuli tulva, joka nousi Wrocławissa katutasolle ja tappoi yli sata ihmistä kahdessa maassa. Sen jälkeen penkereitä on korotettu ja osa tulvatasangoista palautettu joen käyttöön."
+        }
       ]
     },
-
     "Rio Grande": {
       "kappaleet": [
-        { "teksti": "Rio Grande on rajajoki, joka liikkuu. Tulva voi siirtää uomaa satoja metrejä yhdessä yössä, ja kun raja on määritelty uoman keskilinjaksi, maa vaihtaa valtiota ilman että kukaan päättää siitä." },
-        { "tiedosto": "Big Bend Santa Elena Canyon 2006.JPG",
+        {
+          "teksti": "Rio Grande on rajajoki, joka liikkuu. Tulva voi siirtää uomaa satoja metrejä yhdessä yössä, ja kun raja on määritelty uoman keskilinjaksi, maa vaihtaa valtiota ilman että kukaan päättää siitä."
+        },
+        {
+          "tiedosto": "Big Bend Santa Elena Canyon 2006.JPG",
           "selite": "Santa Elenan kanjoni Big Bendissä. Seinämät nousevat runsaat neljäsataa metriä, ja joki kulkee niiden välissä paikoin kymmenen metrin levyisenä. Oikea puoli on Meksikoa, vasen Yhdysvaltoja.",
-          "lahde": "Wikimedia Commons (PD)" },
-        { "teksti": "El Pason ja Ciudad Juárezin välillä uoma siirtyi 1860-luvulla etelään ja jätti Chamizalin alueen väärälle puolelle. Riita kesti sata vuotta ja sovittiin 1963: uoma vuorattiin betonilla paikalleen ja maa jaettiin." },
-        { "teksti": "Vettä ei riitä kaikille. Kastelu ja kaupungit ottavat sitä niin paljon, että joki ei joinakin vuosina yllä Meksikonlahdelle vaan häviää hiekkaan kymmeniä kilometrejä ennen merta." }
+          "lahde": "Wikimedia Commons (PD)"
+        },
+        {
+          "teksti": "El Pason ja Ciudad Juárezin välillä uoma siirtyi 1860-luvulla etelään ja jätti Chamizalin alueen väärälle puolelle. Riita kesti sata vuotta ja sovittiin 1963: uoma vuorattiin betonilla paikalleen ja maa jaettiin."
+        },
+        {
+          "teksti": "Vettä ei riitä kaikille. Kastelu ja kaupungit ottavat sitä niin paljon, että joki ei joinakin vuosina yllä Meksikonlahdelle vaan häviää hiekkaan kymmeniä kilometrejä ennen merta."
+        }
       ]
     },
-
     "Neva": {
       "kappaleet": [
-        { "teksti": "Neva on lyhyt ja nuori. Se puhkaisi uomansa Laatokasta Suomenlahteen noin kolmetuhatta vuotta sitten, ja koko Laatokan vesi kulkee sitä myöten seitsemänkymmentä kilometriä. Vesimäärältään se on Euroopan kärkeä pituudestaan huolimatta." },
-        { "tiedosto": "SPB Panoramic view of Neva downstream by Atkinson 1802-1805.jpg",
+        {
+          "teksti": "Neva on lyhyt ja nuori. Se puhkaisi uomansa Laatokasta Suomenlahteen noin kolmetuhatta vuotta sitten, ja koko Laatokan vesi kulkee sitä myöten seitsemänkymmentä kilometriä. Vesimäärältään se on Euroopan kärkeä pituudestaan huolimatta."
+        },
+        {
+          "tiedosto": "SPB Panoramic view of Neva downstream by Atkinson 1802-1805.jpg",
           "selite": "John Augustus Atkinsonin näkymä Nevalle 1800-luvun alussa. Uoma on kaupungin kohdalla noin puoli kilometriä leveä ja niin syvä, että purjelaivat pääsivät keskustaan asti.",
-          "lahde": "Wikimedia Commons (PD), John Augustus Atkinson" },
-        { "teksti": "Länsituuli työntää Suomenlahden vettä suistoon, eikä joki mahdu ulos. Marraskuussa 1824 pinta nousi yli neljä metriä normaalin yläpuolelle ja kaupunki oli veden alla. Puoltatoista metriä suurempia tulvia on kirjattu yli kolmesataa." },
-        { "teksti": "Suojapato valmistui 2011: kaksikymmentäviisi kilometriä penkereitä ja portteja lahden poikki. Portit suljetaan, kun ennuste ylittää rajan, ja kaupunki jää padon sisäpuolelle." }
+          "lahde": "Wikimedia Commons (PD), John Augustus Atkinson"
+        },
+        {
+          "teksti": "Länsituuli työntää Suomenlahden vettä suistoon, eikä joki mahdu ulos. Marraskuussa 1824 pinta nousi yli neljä metriä normaalin yläpuolelle ja kaupunki oli veden alla. Puoltatoista metriä suurempia tulvia on kirjattu yli kolmesataa."
+        },
+        {
+          "teksti": "Suojapato valmistui 2011: kaksikymmentäviisi kilometriä penkereitä ja portteja lahden poikki. Portit suljetaan, kun ennuste ylittää rajan, ja kaupunki jää padon sisäpuolelle."
+        }
       ]
     },
-
     "Don": {
       "kappaleet": [
-        { "teksti": "Don virtaa hitaasti. Putousta on koko matkalla vajaat kaksisataa metriä, joten vesi liikkuu kävelyvauhtia ja seisoo jäässä neljä kuukautta vuodesta. Purjehduskausi on lyhyt ja väylä matala." },
-        { "tiedosto": "William Heath - Russian Cossacks at a Boathouse on the Banks of the Don - B1975.4.1542 - Yale Center for British Art.jpg",
+        {
+          "teksti": "Don virtaa hitaasti. Putousta on koko matkalla vajaat kaksisataa metriä, joten vesi liikkuu kävelyvauhtia ja seisoo jäässä neljä kuukautta vuodesta. Purjehduskausi on lyhyt ja väylä matala."
+        },
+        {
+          "tiedosto": "William Heath - Russian Cossacks at a Boathouse on the Banks of the Don - B1975.4.1542 - Yale Center for British Art.jpg",
           "selite": "William Heath piirsi donkasakoita venevajan luona pian Napoleonin sotien jälkeen, kun kasakat olivat Länsi-Euroopassa uutuus. Piirtäjä ei ollut käynyt Donilla; kuva on tehty kuvausten pohjalta.",
-          "lahde": "Wikimedia Commons (CC0), William Heath" },
-        { "teksti": "Kasakat olivat alkujaan karkureita. Venäjän ja Puolan maaorjat pakenivat aroille, jonne kruunun valta ei ulottunut, ja järjestäytyivät yhteisöksi, joka valitsi johtajansa. Moskova osti heidät palvelukseensa viljalla, ruudilla ja lopulta maalla." },
-        { "teksti": "Volgan ja Donin väliä on kuusikymmentä kilometriä. Kanavaa yritettiin kaivaa 1569 ja uudestaan Pietari I:n aikana, mutta se valmistui vasta 1952 vankityönä. Sitä myöten Kaspianmereltä pääsee Mustallemerelle." }
+          "lahde": "Wikimedia Commons (CC0), William Heath"
+        },
+        {
+          "teksti": "Kasakat olivat alkujaan karkureita. Venäjän ja Puolan maaorjat pakenivat aroille, jonne kruunun valta ei ulottunut, ja järjestäytyivät yhteisöksi, joka valitsi johtajansa. Moskova osti heidät palvelukseensa viljalla, ruudilla ja lopulta maalla."
+        },
+        {
+          "teksti": "Volgan ja Donin väliä on kuusikymmentä kilometriä. Kanavaa yritettiin kaivaa 1569 ja uudestaan Pietari I:n aikana, mutta se valmistui vasta 1952 vankityönä. Sitä myöten Kaspianmereltä pääsee Mustallemerelle."
+        }
       ]
     }
   }
