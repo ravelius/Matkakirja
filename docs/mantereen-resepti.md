@@ -63,10 +63,13 @@ kuka sen tekee. Voimassa olevat roolit: docs/roolitus.md.
 ## Opit ja kehityskohteet (9.8. kerätty)
 
 1. **cityCountry heti geometrian mukana** — siirretty vaiheeseen 2.
-2. **Hiljaisesta ohituksesta näkyvä virhe.** Kaksi vikaluokkaa
-   samana päivänä (galleriat, päällekkäisjutut) johtui työkalusta,
-   joka ohitti hiljaa sen minkä olisi pitänyt kaataa. Sääntö:
-   tarkistin kaatuu mieluummin kuin vaikenee.
+2. **Hiljaisesta ohituksesta näkyvä virhe.** Kolme vikaluokkaa
+   samana päivänä: työkalu ohitti hiljaa (galleriat), vertailu meni
+   läpi tyhjänä (päällekkäisjutut) ja testiajon `tail -3` piilotti
+   "# fail" -rivin, jolloin punainen luettiin vihreäksi kolmessa
+   erässä. Säännöt: tarkistin kaatuu mieluummin kuin vaikenee, ja
+   testituloksesta luetaan aina "# pass"- ja "# fail" -rivit —
+   ei katkaistua häntää.
 3. **Jonot mitataan datasta, ei muistilistasta.** "Kuusi aluelehteä"
    olikin yksitoista lehdetöntä kaupunkia, kun asia laskettiin.
 4. **Sisältö luetaan ennen poistoa.** maasto-tekstit-malli.js olisi
