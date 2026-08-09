@@ -53744,8 +53744,11 @@ const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Lontoon silmä',
-        lat: 51.5033,
-        lon: -0.1196,
+        // Ratas kaartuu joen yli mutta seisoo South Bankilla, ja
+        // keskipiste osui Thamesiin (vesitarkistin 9.8.2026). Piste on
+        // nyt rakenteen juuressa rannalla.
+        lat: 51.5031,
+        lon: -0.1191,
         wiki: 'London Eye',
       },
       {
@@ -53915,7 +53918,9 @@ const KAUPUNKIKARTAT = {
       { nimi: 'Rialton silta', lat: 45.438, lon: 12.3359, wiki: 'Rialton silta' },
       { nimi: 'Pyhän Markuksen tori', lat: 45.4341, lon: 12.3387, wiki: 'Pyhän Markuksen tori' },
       { nimi: 'San Giorgio Maggiore', lat: 45.4294, lon: 12.3433, wiki: 'San Giorgio Maggiore' },
-      { nimi: 'Arsenaali', lat: 45.4348, lon: 12.3496, wiki: 'Arsenale' },
+      // Portin edusta eikä altaan reuna: entinen piste osui
+      // telakka-altaaseen (vesitarkistin 9.8.2026).
+      { nimi: 'Arsenaali', lat: 45.4344, lon: 12.3506, wiki: 'Arsenale' },
     ],
   },
   rooma: {
@@ -133233,6 +133238,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 480, teksti: 'Kaupunkikarttojen vedet: saaret ja suihkulähteet' },
   { v: 479, teksti: 'Engel sai oman jutun — nimi Helsingin teksteissä on linkki' },
   { v: 478, teksti: 'Pysähdyksessä yksi tehtävä: pulma korvaa kohtaamisvisan' },
   { v: 477, teksti: 'Nähtävyysjutut Lissaboniin, Barcelonaan, Granadaan' },
@@ -133796,7 +133802,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.479';
+const APP_VERSION = '2026-08-09.480';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
