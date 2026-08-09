@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '9.8.2026 (yö)',
+  paivitetty: '9.8.2026 (myöhäisyö)',
   tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
     + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
     + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
@@ -21,49 +21,52 @@ export const TILANNE = {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
       tila: 'valmis',
-      tehtava: 'TARINAKAARI ON PELISSÄ (v460): saapumiskortti lukee '
-        + 'kaaren merkinnän, ensimmäinen aarrevisa on kohtaaminen '
-        + 'pariutettuine kysymyksineen ja paljastus päättyy vihjeeseen '
-        + '— 41 kohdetta, 123 luentaa. Aarrekuvat nousevat mustasta '
-        + '(v459); vaalea vertailuversio näytetty, musta valittiin.',
-      seuraavaksi: 'Sonnet 1:n faktatarkistuksen korjaukset kaaren '
-        + 'kysymyksiin, kun raportti tulee. Pääaarteiden kuvat jos '
-        + 'omistaja tilaa.',
+      tehtava: 'Tarinakaari pelissä (v460) ja kahdesti riippumattomasti '
+        + 'tarkastettu: faktatarkistus (ainoa löydös, Sarajevon '
+        + 'anakronismi, korjattu v463) ja integraatio-QA oikealla '
+        + 'selaimella — puhdas tulos. Aarrekuvat mustasta (v459).',
+      seuraavaksi: 'Koordinointi: Dubai-erän QA kun Opus 2:n kytkentä '
+        + 'on mainissa. Pääaarteiden kuvat jos omistaja tilaa.',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Sveitsi+Norja (v456) ja Tanska+Islanti (v461) saivat '
-        + 'aihesivut; siirtoerien galleria-vika löytyi ja korjattiin, '
-        + 'kaikki 28 sivua auditoitu puhtaiksi.',
-      seuraavaksi: 'Latvia, Liettua ja Kroatia (kohdan f viimeinen '
-        + 'erä) → Dubain lehti → Tromssa + aluelehdet + '
-        + 'valokuvarajatapaukset + kuvaduplikaattilista '
-        + '(docs/kuvaduplikaatit.md, 17 vaihtoa).',
+      tehtava: 'KOHTA F VALMIS: yhtään maalehteä ilman aihesivua ei '
+        + 'enää ole (120 aihesivua, 442 juttua; v456–v464). Lisäksi '
+        + 'Dubain lehti (v465) ja Tromssan lehti (v466). Mittasi '
+        + 'jonon itse: lehdettömiä kaupunkeja onkin kymmenen, ei '
+        + 'kuusi.',
+      seuraavaksi: 'Kolmen maalehtijutun päällekkäisyys korjataan '
+        + 'ensin (Kööpenhaminan voileipä, Oslon juusto, Vilnan '
+        + 'Užupis) → loput 9 lehdetöntä kaupunkia erissä → '
+        + 'valokuvarajatapaukset + kuvaduplikaattilista → Lähi-idän '
+        + 'maiden aihesivut (ARE ensin).',
     },
     {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
-      tila: 'odottaa',
-      tehtava: 'Lähi-idän maakartat valmiit (v457), Irakin linkki '
-        + 'Eufratiin (v458) ja mallitiedoston kommentti oikeaksi '
-        + '(v462). Tarkisti myös Fablen siivousoletuksen ja esti '
-        + 'kymmenen maastokohteen tekstien katoamisen.',
-      seuraavaksi: 'Odottaa Opus 1:n Dubai-lehteä (kohdekartta) ja '
-        + 'Lähi-idän maalehtiä (laudan kytkentä). Fable herättää '
-        + 'triggerillä.',
+      tila: 'tyossa',
+      tehtava: 'Lähi-idän maakartat valmiit (v457) ja kaksi '
+        + 'huolellista pikkuerää (v458, v462) — esti myös kymmenen '
+        + 'maastokohteen tekstien katoamisen ja löysi koostajan '
+        + 'lähde-eron (korjattu #674).',
+      seuraavaksi: 'Työn alla: Dubain kohdekartta + middleeast-laudan '
+        + 'cityCountry-kytkentä (Opus 1:n löytö: ilman sitä Dubain '
+        + 'lehteen ei tule menovinkkejä eikä maa numeroina -sivua).',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA + työhuone',
-      tila: 'tyossa',
-      tehtava: 'Tuplakuvien luokittelu valmis (17 vaihdettavaa, lista '
-        + 'docs/kuvaduplikaatit.md). Nyt työn alla: tarinakaaren 30 '
-        + 'uuden kohteen visakysymysten ja faktojen riippumaton '
-        + 'faktatarkistus + anakronismit vuoteen 1873.',
-      seuraavaksi: 'Faktatarkistusraportti Fablelle — Fable korjaa '
-        + 'löydökset suoraan peliin.',
+      tila: 'valmis',
+      tehtava: 'Kaksi puhdasta kierrosta putkeen: tarinakaaren '
+        + 'faktatarkistus (löysi Sarajevon anakronismin, korjattu '
+        + 'v463) ja kaaren peli-integraation QA oikealla selaimella '
+        + '(5 kaupungin ketju, rajaus, tallennus/lataus — ei '
+        + 'löydöksiä).',
+      seuraavaksi: 'Valmiudessa: Dubai-erän QA (lehti + kartta + '
+        + 'menovinkit + lehdettömien ME-maiden i-napit) kun Opus 2:n '
+        + 'kytkentä on mainissa.',
     },
     {
       tekija: 'Sonnet 2',
@@ -92,24 +95,34 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
-    otsikko: 'Tarinakaari pelissä (v460)',
+    otsikko: 'Dubain ja Tromssan lehdet (v465, v466)',
+    ohje: 'Avaa Lähi-idän laudalta Dubai: helmenkalastuskansi, jonka '
+      + 'kaiverrus on vuodelta 1881 — samaa vuosikymmentä kuin '
+      + 'isoisän päiväkirja. Tromssassa kansi ja Valo-aihesivu '
+      + '(keskiyön aurinko, kaamos). Dubain menovinkit syttyvät kun '
+      + 'laudan kytkentä valmistuu.',
+  },
+  {
+    otsikko: 'Tarinakaari pelissä (v460, QA-tarkastettu)',
     ohje: 'Pelaa Eurooppaa: saapumiskortti lukee isoisän merkinnän, '
       + 'kaupungin ensimmäinen aarrevisa on kohtaaminen jonka henkilö '
       + 'esittää isoisän kysymyksen, ja aarteen paljastus päättyy auki '
-      + 'jäävään vihjeeseen — kaikki luettuna ääneen. 41 kohdetta.',
+      + 'jäävään vihjeeseen — kaikki luettuna ääneen. 41 kohdetta; '
+      + 'faktatarkistettu ja integraatio-QA puhdas.',
   },
   {
     otsikko: 'Aarre nousee mustasta (v459)',
     ohje: 'Vastaa aarrevisaan oikein millä tahansa mantereella: '
       + 'AI-piirretty aarre nousee pimeästä ilman kehyksiä, huudahdus '
-      + 'yllä ja nimi arvoineen alla. Vaalea vertailuversio näytettiin '
-      + '— musta valittiin.',
+      + 'yllä ja nimi arvoineen alla.',
   },
   {
-    otsikko: 'Uudet aihesivut: CHE, NOR, DNK, ISL (v456, v461)',
-    ohje: 'Avaa Sveitsin, Norjan, Tanskan tai Islannin maalehti: '
-      + 'kolme aihesivua ja yhdeksän juttua kullakin, minitehtävät '
-      + 'mukana. Latvia, Liettua ja Kroatia tulossa.',
+    otsikko: 'Kohta f valmis: joka maalehdellä aihesivut (v464)',
+    ohje: 'Avaa mikä tahansa Euroopan maalehti: jokaisella on nyt '
+      + 'aihesivut juttuineen ja minitehtävineen — viimeisinä Latvia, '
+      + 'Liettua ja Kroatia (mm. Zadarin meriurut ja laskuvarjopiirros '
+      + 'vuodelta 1595).',
   },
 ];
+
 
