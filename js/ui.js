@@ -75,10 +75,9 @@ import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import {
-  haeUutiset, haeArtikkeli, haeLiveTunniste, haeTallenne,
+  haeUutiset, haeArtikkeli,
   kaannaSuomeksi, uutislahde,
 } from './uutiset.js';
-import { TV_KANAVAT } from './packs/uutislahteet.js';
 import {
   haeSaaTanaan, saaKuvaus, SAA_IKONIT, kuukausiSsa, piirraVuosiSaa,
 } from './saa.js';
@@ -6454,20 +6453,18 @@ export class UI {
     }
     if (city && this.arrivalMediaKaupunki) {
       this.naytaKieliNappi(city, this.arrivalMediaKaupunki);
-      this.naytaTvNappi(iso, this.arrivalMediaKaupunki);
     }
     // Maaosaston rivi vain, kun osasto ei ole kaupungin etusivulla.
     if (!(this.tutkiMaaEtusivu || this.tutkiTila === 'maa')) return;
     /*
      * Maalehden voi avata mistä tahansa maasta (Maiden tiedot), eikä
-     * se silloin ole se maa, jossa pelaaja seisoo. Radio ja tv ovat
-     * maan omia ja seuraavat lehteä, mutta kaupungissa nauhoitettu
-     * kielinäyte EI kuulu vieraan maan lehteen — se olisi väärästä
-     * paikasta. Siksi kaupunki annetaan vain oman maan lehdelle.
+     * se silloin ole se maa, jossa pelaaja seisoo. Radio on maan oma ja
+     * seuraa lehteä, mutta kaupungissa nauhoitettu kielinäyte EI kuulu
+     * vieraan maan lehteen — se olisi väärästä paikasta. Siksi kaupunki
+     * annetaan vain oman maan lehdelle.
      */
     const maanIso = this.tutkiTila === 'maa' ? (this.tutkiMaaLehti ?? iso) : iso;
     this.naytaKieliNappi(maanIso === iso ? city : null, this.arrivalMedia, maanIso);
-    this.naytaTvNappi(maanIso, this.arrivalMedia);
   }
 
   naytaKieliNappi(city, kohde = this.arrivalMedia, iso = null) {
@@ -6510,117 +6507,6 @@ export class UI {
       suora: Boolean(radio),
     }, nappi));
     kohde.appendChild(nappi);
-  }
-
-  /**
-   * Maan tv-kanavan suora lähetys (omistajan toive 5.8.2026): nappi
-   * radion viereen mediariville, ja lähetys aukeaa popup-ikkunaan.
-   * Kanavat: js/packs/uutislahteet.js TV_KANAVAT — YouTuben
-   * kanavaupotus seuraa aina kulloistakin suoraa lähetystä.
-   */
-  naytaTvNappi(iso, kohde = this.arrivalMedia) {
-    const tv = iso ? TV_KANAVAT[iso] : null;
-    if (!tv) return;
-    kohde.hidden = false;
-    const nappi = html('button', 'kulttuuri-kuuntele kieli-kuuntele');
-    nappi.type = 'button';
-    // Tallennelähteellä nappi lupaa uutislähetykset, ei suoraa.
-    nappi.title = tv.tallenteet
-      ? `${tv.nimi} — uutislähetykset tallenteina`
-      : `${tv.nimi} — suora tv-lähetys`;
-    nappi.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">'
-      + '<rect x="3" y="6.5" width="18" height="12.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/>'
-      + '<path d="M8.5 3.5 12 6.5l3.5-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>'
-      + '</svg>'
-      + `<span>${suojaa(tv.nimi)}</span>`
-      + (tv.tallenteet
-        ? '<span class="live" title="uutislähetykset tallenteina">video</span>'
-        : '<span class="live" title="suora lähetys">live</span>');
-    nappi.addEventListener('click', () => (tv.tallenteet
-      ? this.avaaTallenneIkkuna(tv)
-      : this.avaaTvIkkuna(tv)));
-    kohde.appendChild(nappi);
-  }
-
-  /**
-   * Uutislähetysten tallenteet popupissa (omistajan päätös 7.8.2026:
-   * livet vaihdetaan klippeihin). Sama riisuttu 16:9-kortti kuin
-   * suorassa, mutta YouTube-upotuksen sijaan video-elementti ja
-   * mp4-tallenne — soi kaikilla laitteilla ilman upotusongelmia.
-   * Yläreunassa pillerit lähetyksille: lyhyt kooste ja päälähetys.
-   */
-  avaaTallenneIkkuna(tv) {
-    this.suljeKulttuuriKuva();
-    sfx.play('paper');
-    this.lisaaKevytHuntu();
-    const kortti = html('div', 'postikortti kulttuuri-suurennos tv-kortti');
-    const video = document.createElement('video');
-    video.className = 'tv-upotus';
-    video.controls = true;
-    video.autoplay = true;
-    video.playsInline = true;
-    kortti.appendChild(video);
-    const rivi = html('div', 'tallenne-valinnat');
-    const valitse = async (valinta, valintaNappi) => {
-      for (const n of rivi.querySelectorAll('button')) n.classList.toggle('valittu', n === valintaNappi);
-      const tallenne = await haeTallenne(tv.tallenteet.api, valinta.kanava);
-      if (!kortti.isConnected) return;
-      if (!tallenne) {
-        valintaNappi.textContent = 'Ei saatu haettua';
-        return;
-      }
-      video.src = tallenne.url;
-      video.play?.().catch(() => {});
-    };
-    tv.tallenteet.valinnat.forEach((valinta, i) => {
-      const valintaNappi = html('button', 'tallenne-valinta', valinta.nappi);
-      valintaNappi.type = 'button';
-      // Kortin napautus sulkee — valinta ei saa sulkea.
-      valintaNappi.addEventListener('click', (e) => {
-        e.stopPropagation();
-        valitse(valinta, valintaNappi);
-      });
-      rivi.appendChild(valintaNappi);
-      if (i === 0) valitse(valinta, valintaNappi);
-    });
-    kortti.appendChild(rivi);
-    // Videon säätimiin osuva napautus ei saa sulkea korttia.
-    video.addEventListener('click', (e) => e.stopPropagation());
-    kortti.addEventListener('click', () => this.suljeKulttuuriKuva());
-    this.arrivalDialog.appendChild(kortti);
-    this.kulttuuriKuvaEl = kortti;
-  }
-
-  /**
-   * Tv-lähetys popupissa: pelkkä 16:9-upotus ilman rastia (omistajan
-   * toive) — lähetyksen ulkopuolinen napautus (sumennettu huntu)
-   * sulkee. Lähetyksen tunniste haetaan kanavan live-sivulta workerin
-   * kautta, koska YouTuben kanavaupotus oli epävakaa iPadilla; jos
-   * hakua ei saada, kanavaupotus jää varareitiksi.
-   */
-  avaaTvIkkuna(tv) {
-    this.suljeKulttuuriKuva();
-    sfx.play('paper');
-    this.lisaaKevytHuntu();
-    const kortti = html('div', 'postikortti kulttuuri-suurennos tv-kortti');
-    const upotus = document.createElement('iframe');
-    upotus.className = 'tv-upotus';
-    upotus.title = `${tv.nimi} — suora lähetys`;
-    upotus.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-    upotus.setAttribute('allowfullscreen', '');
-    kortti.appendChild(upotus);
-    haeLiveTunniste(tv.livesivu).then((tunniste) => {
-      if (!kortti.isConnected) return;
-      // playsinline pitää soiton popupissa iOS:lla; nocookie-osoite
-      // ohittaa osan evästemuureista.
-      upotus.src = tunniste
-        ? `https://www.youtube-nocookie.com/embed/${tunniste}`
-          + '?autoplay=1&playsinline=1'
-        : tv.upotus;
-    });
-    kortti.addEventListener('click', () => this.suljeKulttuuriKuva());
-    this.arrivalDialog.appendChild(kortti);
-    this.kulttuuriKuvaEl = kortti;
   }
 
   /**
