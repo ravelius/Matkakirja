@@ -300,7 +300,9 @@ export const ASIA = {
     // tuhansien vuosien ajan.
     types: themedTokenTypes({
       star: { name: 'Keisarin jadesinetti' },
-      topaz: { name: 'Jade', color: '#5fa87a' },
+      ruby: { name: 'Sukeltajan helmi', color: '#e8e4da' },
+      emerald: { name: 'Silkkikäärö', color: '#c94f7c' },
+      topaz: { name: 'Posliinikuppi', color: '#7f9fc9' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 10 },
   },

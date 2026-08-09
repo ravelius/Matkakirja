@@ -263,7 +263,12 @@ export const AFRICA = {
      * käytti oletusnimeä — eikä se enää käy: Unohdettu aarre on oma pelinsä,
      * ja pääaarre on nyt oikea esine oikeine tarinoineen.
      */
-    types: themedTokenTypes({ star: { name: 'Suuren Zimbabwen kivilintu' } }),
+    types: themedTokenTypes({
+      star: { name: 'Suuren Zimbabwen kivilintu' },
+      ruby: { name: 'Kimberleyn timantti', color: '#bcd6e8' },
+      emerald: { name: 'Kultahippu', color: '#e0b02a' },
+      topaz: { name: 'Kaurikotilo', color: '#e0cfa8' },
+    }),
     // 37 laattakaupunkia seitsemän uuden paikan jälkeen (omistajan laajennus).
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 11 },
   },

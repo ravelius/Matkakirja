@@ -277,7 +277,9 @@ export const SOUTHAMERICA = {
     // Andien hopea, jonka takia koko manner aikanaan valloitettiin.
     types: themedTokenTypes({
       star: { name: 'El Doradon aarre' },
-      topaz: { name: 'Potosín hopea', color: '#c9ccd4' },
+      ruby: { name: 'Inkojen kultafiguuri', color: '#e0b02a' },
+      emerald: { name: 'Kolumbian smaragdi', color: '#2fa36b' },
+      topaz: { name: 'Potosín hopeakolikko', color: '#c9ccd4' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },
   },
