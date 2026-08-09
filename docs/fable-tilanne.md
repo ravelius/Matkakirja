@@ -167,8 +167,33 @@ on mainissa; lue ne kun tarvitset yksityiskohdat:
 
 ## Luvat ja tahti (päivitetty 9.8. iltapäivä)
 
-- Omistajan lupa 9.8.: julkaista, mergetä ja jakaa tehtäviä saa —
-  tavoitteena Eurooppa valmiiksi, sitten Lähi-idän lehdet.
+- **TÄYSI VALTUUTUS (omistaja ~14:30Z): "Saat päättää kaiken ja saat
+  triggeröidä vapaasti"** — ei tarvitse kysyä lupaa päätöksiin,
+  triggereihin, julkaisuihin eikä mergeihin. Omistaja haluaa työn
+  jatkuvan katkoitta. Tavoite: Eurooppa valmiiksi, sitten Lähi-idän
+  lehdet.
+- **Fablen päätökset 9.8. ~14:37Z (triggerit lähetetty):**
+  - Opus 1: PR #630 (vaihe B erä 2) törmäsi v437:ään (#631 vei numeron)
+    → rebase + uusi numero + merge; eräjako 5–7 kaupunkia/erä
+    hyväksytty; Lontoon haamusisältö maakartat.js:2257–2674 poistoon
+    erän kyljessä.
+  - Opus 2: nimiVasen-kommenttikorjaus erän kyljessä;
+    `middleeast-countries.js` kuuluu Opus 2:lle (Euroopan jälkeen,
+    EI testiporttia välissä); Dubai pilotiksi; **Jerusalem + Petra/
+    Siinai/Rub al-Khali/Persepolis/Kappadokia = erikoiskohteita ilman
+    maa-attribuutiota** (kaanonpäätös, tarinapuoli suunnitellaan kun
+    Matkakirja palaa parkista).
+  - Sonnet 1: kierros 2 = 9 linkin selainpistokoe + duplikaattilista
+    + siirtojen regressiovahti (#630 ja Sonnet 2:n erät).
+    **Duplikaattilinjaus: korjataan vain 3×+ toistuvat ja saman
+    tiedoston sisäiset; 2× eri yhteyksissä saa jäädä.**
+- **Irtosessiovaroitus (opittu 9.8.):** kun trigger laukeaa kesken
+  Fablen vuoron, syntyy rinnakkainen irto-Fable joka allekirjoittaa
+  samalla sessio-ID:llä. Näin kävi ~13:30–13:50Z (irtoinstanssi teki
+  #627–#629 ja #632 — hyvää työtä, omaksuttu). Jos huomaat mainissa
+  tämän ID:n committeja joita et muista tehneesi, ne ovat
+  todennäköisesti irtoinstanssin; tarkista sisältö äläkä oleta
+  virhettä. Pidä tilannekuva ajan tasalla juuri tämän varalta.
 - Matkakirja (5 kaupungin paketti, äänivalinnat, sateenvarjomies)
   parkissa omistajan päätöksiä odottamassa — EI ääniä, EI uusia
   tarinatekstejä ennen kuin omistaja palaa asiaan.
