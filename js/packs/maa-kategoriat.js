@@ -8745,6 +8745,226 @@ export const MAA_KATEGORIAT = {
   ],
   DNK: [
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Tanskan historia on kaiverrettu kiveen ja mitattu maastoon: kivi, '
+        + 'jossa maan nimi mainitaan ensimmäisen kerran, linnoitus joka on '
+        + 'täydellinen ympyrä, ja lippu jonka kerrotaan pudonneen taivaalta.',
+      nostot: [
+        {
+          otsikko: 'Kivi, jossa maan nimi lukee ensimmäisen kerran',
+          aika: '965',
+          tiedosto: 'Jelling rune stones.1.ajb.jpg',
+          teksti: 'Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti '
+            + 'noin vuonna 965 kuningas Harald Sinihammas, ja siihen on '
+            + 'hakattu, että hän voitti koko Tanskan ja Norjan ja teki '
+            + 'tanskalaisista kristittyjä. Sana Tanska esiintyy siinä '
+            + 'ensimmäisen kerran maan omalla kielellä, ja siksi kiveä '
+            + 'sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon '
+            + 'jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen '
+            + 'mukaansa, koska se yhdistää laitteita kuten hän yhdisti '
+            + 'heimoja.',
+          selite: 'Kaksi riimukiveä lasisen suojakatoksen alla valkoisen kirkon '
+            + 'vieressä. Isompi kivi on kolmion muotoinen ja sen pinta on '
+            + 'täynnä kaiverruksia.',
+          lahde: 'Ajepbah, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Jellingin kivet',
+        },
+        {
+          otsikko: 'Linnoitus, joka on täydellinen ympyrä',
+          aika: '980',
+          tiedosto: 'Trelleborg airphoto.JPG',
+          teksti: 'Trelleborgin linnoitus rakennettiin noin vuonna 980, ja se on '
+            + 'ilmasta katsottuna tarkka ympyrä: valli kiertää alueen ja '
+            + 'kaksi tietä risteää keskellä kuin kellotaulun viisarit. '
+            + 'Sisällä oli neljä taloryhmää, joissa jokaisessa neljä pitkää '
+            + 'taloa. Samalla mitalla rakennettiin useita linnoituksia eri '
+            + 'puolille maata — ne ovat niin samanlaisia, että ne on selvästi '
+            + 'suunniteltu yhdessä paikassa ja mitattu tarkasti maastoon. '
+            + 'Unesco otti linnoitukset maailmanperintöluetteloon vuonna '
+            + '2023.',
+          selite: 'Trelleborgin rengaslinnoitus ilmasta iltavalossa. Nurmen '
+            + 'peittämä valli muodostaa ympyrän, jonka halki kulkee kaksi '
+            + 'tietä ristissä.',
+          lahde: 'Thue C. Leibrandt, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Lippu, joka putosi taivaalta',
+          aika: '1219',
+          tiedosto: 'Kopenhagen (DK), Kastell von Kopenhagen, Dänische Flagge -- 2017 -- 1770.jpg',
+          teksti: 'Tarun mukaan tanskalaiset olivat häviämässä taistelua Virossa '
+            + '15. kesäkuuta 1219, kun taivaalta putosi punainen lippu '
+            + 'valkoisine ristineen — ja voitto kääntyi. Dannebrog on vanhin '
+            + 'yhä käytössä oleva kansallislippu, ja tanskalaiset käyttävät '
+            + 'sitä toisin kuin moni muu: pieniä lippuja pistetään '
+            + 'syntymäpäiväkakkuun, ripustetaan joulukuuseen ja viedään '
+            + 'mukaan lentokentälle vastaanottamaan matkalaisia. Lippu ei ole '
+            + 'juhlava harvinaisuus vaan arkinen ilon merkki.',
+          selite: 'Tanskan lippu liehuu salossa harmaata pilvitaivasta vasten. '
+            + 'Punaisessa kankaassa on valkoinen risti, jonka pystyosa on '
+            + 'lähempänä salkoa.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dannebrog',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka pystytti Jellingin suuren riimukiven?',
+        vaihtoehdot: [
+          'Kaarle Suuri',
+          'Harald Sinihammas',
+          'Kuningatar Margareeta',
+          'Knuut Suuri',
+        ],
+        oikea: 1,
+        fakta: 'Hänen mukaansa on nimetty myös langaton yhteys, joka yhdistää '
+          + 'laitteita.',
+      },
+    },
+    {
+      id: 'keksinnot',
+      nimi: 'Keksinnöt',
+      johdanto: 'Tanskalainen keksintö on usein yksinkertainen ja kestävä: palikka '
+        + 'joka sopii vielä kuudenkymmenen vuoden takaisiin, myllyt jotka '
+        + 'tekevät sähköä merellä, ja tie joka on rakennettu vain pyörille.',
+      nostot: [
+        {
+          otsikko: 'Palikka, joka sopii yhä vanhoihin',
+          aika: '1958',
+          tiedosto: 'Lego 2x4 brick.jpg',
+          teksti: 'Puuseppä Ole Kirk Christiansen alkoi 1930-luvun pulavuosina '
+            + 'tehdä puisia leluja Billundin kylässä. Nimeksi tuli Lego '
+            + 'kahdesta tanskan sanasta: leg godt, leiki hyvin. Nykyinen '
+            + 'muovipalikka patentoitiin 1958, ja sen salaisuus on palikan '
+            + 'sisällä olevat putket, jotka pitävät osat kiinni juuri '
+            + 'sopivalla voimalla. Mitat ovat pysyneet samoina, joten vuonna '
+            + '1958 tehty palikka sopii tänään ostettuun. Kuudesta '
+            + 'samanlaisesta kahdeksan nystyn palikasta saa yli 900 miljoonaa '
+            + 'erilaista yhdistelmää.',
+          selite: 'Musta legopalikka lähikuvassa. Päällä on kahdeksan nystyä, '
+            + 'joissa lukee LEGO, ja alta näkyy ontto sisus.',
+          lahde: 'Ziongarage, Wikimedia Commons (CC0)',
+          wiki: 'Lego',
+        },
+        {
+          otsikko: 'Myllyt seisovat meressä',
+          aika: '2000',
+          tiedosto: 'Middelgrunden wind farm 2009-07-01 edit filtered.jpg',
+          teksti: 'Tanska on tehnyt sähköä tuulesta pitempään kuin melkein '
+            + 'kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla '
+            + 'tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. '
+            + 'Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin '
+            + 'merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa '
+            + 'merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet '
+            + 'tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. '
+            + 'Nykyään tuuli tuottaa yli puolet koko maan sähköstä.',
+          selite: 'Kaksikymmentä tuulimyllyä seisoo kaarena tyynellä merellä '
+            + 'sinisessä usvassa. Tornit heijastuvat veteen pitkinä juovina.',
+          lahde: 'Kim Hansen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tie, joka on vain pyörille',
+          aika: '2014',
+          tiedosto: 'Cykelslangen 10.JPG',
+          teksti: 'Kööpenhaminassa on enemmän polkupyöriä kuin asukkaita, ja '
+            + 'useampi kulkee töihin pyörällä kuin autolla. Kaupunki on '
+            + 'rakentanut sitä varten omia teitä: pyöräkaistat ovat leveitä '
+            + 'ja korotettuja, ja vuonna 2014 avattu Cykelslangen eli '
+            + 'pyöräkäärme on kokonainen silta, jolle autot eivät pääse '
+            + 'lainkaan. Se kaartaa sataman yli neljän metrin korkeudessa ja '
+            + 'on neljä metriä leveä. Naapurikuntiin johtaa pyöräteitä, joita '
+            + 'sanotaan supercykelstier — pyörien moottoriteiksi.',
+          selite: 'Oranssiksi maalattu pyörätie nousee siltana ylös kaiteiden '
+            + 'välissä. Keskellä kulkee valkoinen katkoviiva ja oikealla on '
+            + 'sininen pyöräilykyltti.',
+          lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna nykyinen legopalikka patentoitiin?',
+        vaihtoehdot: [
+          '1938',
+          '1978',
+          '1998',
+          '1958',
+        ],
+        oikea: 3,
+        fakta: 'Mitat eivät ole muuttuneet, joten silloin tehty palikka sopii '
+          + 'yhä uusiin.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Tanskalainen ruoka on kadulta ja lounaspöydästä: voileipä jota '
+        + 'syödään veitsellä ja haarukalla, makkarakärry kadunkulmassa ja '
+        + 'leivos, joka ei ole sieltä mistä sen nimi kertoo.',
+      nostot: [
+        {
+          otsikko: 'Voileipä syödään haarukalla',
+          aika: 'Lounasaikaan',
+          tiedosto: 'Smørrebrød 2.jpg',
+          teksti: 'Smørrebrød on avoin voileipä tummalla ruisleivällä, ja se on '
+            + 'lounas eikä välipala: leipä syödään veitsellä ja haarukalla '
+            + 'lautaselta. Päällyste ladotaan huolella niin, että leipä '
+            + 'peittyy kokonaan — silakkaa, paistettua kalaa, maksapasteijaa, '
+            + 'katkarapuja tai rullamakkaraa kurkun ja sipulin kanssa. '
+            + 'Järjestykselläkin on sääntönsä: kala syödään ensin, sitten '
+            + 'liha ja lopuksi juusto. Ravintoloissa lista voi olla pitkä '
+            + 'kuin kirja.',
+          selite: 'Avoin voileipä pahvilautasella, jonka reunassa kiertää Tanskan '
+            + 'lippuja. Päällä on rullamakkaraa, kurkkuviipaleita, tomaattia '
+            + 'ja sipulirenkaita.',
+          lahde: 'Nillerdk, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Smørrebrød',
+        },
+        {
+          otsikko: 'Makkarakärry kadunkulmassa',
+          aika: '1921',
+          tiedosto: 'Pølsevogn (hot dog stand) in Copenhagen, 1988.jpg',
+          teksti: 'Pølsevogn eli makkarakärry sai ensimmäiset myyntilupansa '
+            + 'vuonna 1921, ja siitä tuli koko maan kadunkulmien '
+            + 'vakiokalustoa. Tarjolla on punaisia makkaroita, jotka saavat '
+            + 'värinsä väriaineesta, ja päälle tulee remoulade-kastiketta, '
+            + 'paahdettua sipulia ja suolakurkkua. Kärryä on sanottu '
+            + 'tanskalaisten yhteiseksi ruokapöydäksi: sen ääressä seisovat '
+            + 'vierekkäin puvussa tuleva ja työhaalarissa tuleva. Kärryjä on '
+            + 'nykyään vähemmän kuin ennen, mutta ne eivät ole kadonneet.',
+          selite: 'Ihmiset jonottavat makkarakärryn luukulla Kööpenhaminassa '
+            + 'vuonna 1988. Vaatteet ovat vaaleita, jalkakäytävällä kävelee '
+            + 'kyyhkysiä.',
+          lahde: 'Ian Watson, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Wienerleipä ei ole Wienistä',
+          aika: '1850',
+          tiedosto: 'Danish pastry.JPG',
+          teksti: 'Tanskalaiset leipurit menivät vuonna 1850 lakkoon, ja leipomot '
+            + 'palkkasivat tilalle ulkomaisia työntekijöitä — muun muassa '
+            + 'itävaltalaisia. He toivat mukanaan taikinan, joka taitellaan '
+            + 'voin kanssa monta kertaa, niin että paistuessa syntyy satoja '
+            + 'ohuita kerroksia. Lakon jälkeen tanskalaiset leipurit '
+            + 'jatkoivat menetelmällä ja kehittivät siitä omansa. Siksi '
+            + 'tanskalainen sanoo leivosta wienerleiväksi, mutta muualla '
+            + 'maailmassa sitä sanotaan tanskalaiseksi.',
+          selite: 'Leivoksia leipomon myyntitiskillä. Taikina on kääritty '
+            + 'kierteelle, päällä on kuorrutusta ja vaaleaa täytettä.',
+          lahde: 'RhinoMind, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä tanskalainen wienerleipä sai alkunsa?',
+        vaihtoehdot: [
+          'Leipurien lakosta',
+          'Kuninkaan käskystä',
+          'Merimiesten tuomana',
+          'Luostarin reseptistä',
+        ],
+        oikea: 0,
+        fakta: 'Lakon ajaksi palkatut itävaltalaiset toivat mukanaan taitellun '
+          + 'taikinan.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Tanska on siirtänyt itsensä ruudulle: kansallisgallerian teokset '
@@ -10751,6 +10971,225 @@ export const MAA_KATEGORIAT = {
     },
   ],
   ISL: [
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Islanti on kesken oleva maa: kuuma vesi purskahtaa maasta muutaman '
+        + 'minuutin välein, merestä on noussut uusi saari, ja kokonaista '
+        + 'kylää on kerran puolustettu laavalta paloletkuilla.',
+      nostot: [
+        {
+          otsikko: 'Vesi purskahtaa muutaman minuutin välein',
+          aika: 'Nykyisin',
+          tiedosto: 'Strokkur geyser eruption, close-up view.jpg',
+          teksti: 'Haukadalurin laaksossa maan alla on kuumaa vettä, joka kiehuu '
+            + 'paineen alla. Kun paine kasvaa liian suureksi, vesi purskahtaa '
+            + 'ilmaan pylvääksi. Strokkur tekee sen viiden tai kymmenen '
+            + 'minuutin välein ja nostaa vettä parikymmentä metriä. Sen '
+            + 'naapuri Geysir oli aikanaan vielä isompi, ja juuri siitä koko '
+            + 'ilmiö sai maailmalla nimensä: sana geysir tulee islannin '
+            + 'verbistä gjósa eli purskahtaa. Ennen purkausta vesi kohoaa '
+            + 'hetkeksi siniseksi kuplaksi.',
+          selite: 'Strokkur-lähde purskauttaa vesipatsaan ilmaan matalan auringon '
+            + 'edessä. Ympärillä on höyryävä kivinen tasanko ja vettä maan '
+            + 'pinnalla.',
+          lahde: 'Andreas Tille, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Strokkur',
+        },
+        {
+          otsikko: 'Saari, joka nousi merestä',
+          aika: '1963',
+          tiedosto: 'Surtsey by Brian Gratwicke.jpg',
+          teksti: 'Marraskuussa 1963 kalastajat näkivät merellä savua ja luulivat '
+            + 'sitä palavaksi laivaksi. Kyseessä oli tulivuorenpurkaus '
+            + 'merenpohjassa, ja purkaus jatkui vuoteen 1967, jolloin '
+            + 'pinnalle oli kasvanut kokonainen uusi saari. Surtseyhin ei '
+            + 'päästetä ketään muuta kuin tutkijoita, koska halutaan nähdä, '
+            + 'miten elämä valtaa aivan tyhjän maan itsestään. Siemenet '
+            + 'tulivat merivirtojen mukana, linnut lensivät, ja saarelle on '
+            + 'ilmestynyt kasveja, hyönteisiä ja lintuja ilman ihmisen apua.',
+          selite: 'Surtseyn saari merellä harmaana päivänä. Matala tummasta '
+            + 'laavasta muodostunut kumpare kohoaa aalloista, ja rinteillä '
+            + 'näkyy vaaleaa kasvillisuutta.',
+          lahde: 'Brian Gratwicke, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Surtsey',
+        },
+        {
+          otsikko: 'Kylä puolusti itseään paloletkuilla',
+          aika: '1973',
+          tiedosto: 'The town of Vestmannaeyjar and the harbor during the eruption of Eldfell in 1973.jpg',
+          teksti: 'Tammikuussa 1973 Heimaeyn saarella aukesi kylän laidalle '
+            + 'railo, josta purkautui laavaa. Koko väestö, yli viisituhatta '
+            + 'ihmistä, vietiin yhdessä yössä turvaan kalastuslaivoilla — '
+            + 'sattumalta laivasto oli myrskyn takia satamassa. Laava eteni '
+            + 'kohti satamaa, joka oli kylän elinehto. Silloin ryhdyttiin '
+            + 'pumppaamaan merivettä laavan päälle: vesi jäähdytti reunan '
+            + 'kovaksi ja käänsi virtaa. Satama säilyi, ja lopulta siitä tuli '
+            + 'aiempaa suojaisampi.',
+          selite: 'Tuhkapilvi nousee tulivuoren kartiosta Vestmannaeyjarin '
+            + 'talojen takana. Etualalla on sataman putkia ja letkuja, joilla '
+            + 'merivettä pumpattiin laavalle.',
+          lahde: 'Jack Lockwood, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Heimaeyn laavavirta saatiin kääntymään vuonna 1973?',
+        vaihtoehdot: [
+          'Ruiskuttamalla merivettä',
+          'Räjäyttämällä kalliomuuri',
+          'Kaivamalla kanava',
+          'Odottamalla talven tuloa',
+        ],
+        oikea: 0,
+        fakta: 'Satamasta tuli lopulta aiempaa suojaisampi.',
+      },
+    },
+    {
+      id: 'elaimet',
+      nimi: 'Eläimet',
+      johdanto: 'Islannin eläimet ovat tulleet sinne meren yli tai ihmisen mukana, '
+        + 'ja kaikki ovat sopeutuneet samaan asiaan: tuuleen, kylmään ja '
+        + 'puuttomaan maisemaan.',
+      nostot: [
+        {
+          otsikko: 'Hevonen, joka kulkee viittä tahtia',
+          aika: 'Vuosisatoja',
+          tiedosto: '11 Icelandic horse tour - Icelandic horses in Skaftafell National Park.jpg',
+          teksti: 'Islanninhevonen tuotiin saarelle viikinkiaikana, ja muita '
+            + 'hevosia ei ole tuotu sen jälkeen — laki on kieltänyt sen tuhat '
+            + 'vuotta, jotta taudit eivät pääsisi maahan. Sama laki koskee '
+            + 'lähtijöitä: hevonen, joka viedään maasta pois, ei saa enää '
+            + 'koskaan palata. Rotu on pieni ja tanakka, ja sillä on viisi '
+            + 'askellajia kolmen sijaan. Tunnetuin on tölt, jossa yksi jalka '
+            + 'on aina maassa — niin tasainen, että ratsastaja voi kantaa '
+            + 'täyttä lasia kaatamatta.',
+          selite: 'Ratsastajaryhmä ylittää mustan hiekkatasangon '
+            + 'islanninhevosilla. Hevoset ovat pieniä ja tuuheaharjaisia, ja '
+            + 'takana kohoaa laaja autio maisema.',
+          lahde: 'Marek Ślusarczyk, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Islanninhevonen',
+        },
+        {
+          otsikko: 'Lapset pelastavat eksyneet linnut',
+          aika: 'Elokuussa',
+          tiedosto: 'Colony of Atlantic puffins on a cliff on the Dyrhólaey peninsula in Iceland, 20240720 0931 2106.jpg',
+          teksti: 'Lunni pesii jyrkänteiden koloissa, ja Islannissa on maailman '
+            + 'suurimpia yhdyskuntia. Poikanen lähtee pesästä pimeällä '
+            + 'elokuun öinä ja suunnistaa kuunvalon mukaan merelle — mutta '
+            + 'kylän valot hämäävät, ja moni päätyy kaduille. '
+            + 'Vestmannaeyjarissa lapset lähtevät öisin ulos laatikoiden '
+            + 'kanssa etsimään niitä, ja aamulla poikaset viedään '
+            + 'rantakalliolle ja heitetään ilmaan kohti merta. Tapaa sanotaan '
+            + 'lunnipartioksi.',
+          selite: 'Lunneja kalliojyrkänteellä meren äärellä. Linnuilla on musta '
+            + 'selkä, valkoiset posket ja iso kolmivärinen nokka, ja ne '
+            + 'istuvat ruohoisilla kielekkeillä.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Lunni',
+        },
+        {
+          otsikko: 'Ainoa, joka oli täällä ensin',
+          aika: 'Jääkauden jälkeen',
+          tiedosto: 'Vulpes lagopus in Iceland.jpg',
+          teksti: 'Naali on Islannin ainoa maanisäkäs, joka eli saarella jo ennen '
+            + 'ihmisiä: se käveli sinne jääkauden lopulla merijäätä pitkin. '
+            + 'Kaikki muut nelijalkaiset — hevoset, lampaat, hiiret, porot — '
+            + 'ovat tulleet ihmisen mukana. Naalin turkki vaihtaa väriä '
+            + 'vuodenajan mukaan: talvella se on valkoinen ja kesällä '
+            + 'ruskeanharmaa. Turkki on nisäkkäiden lämpimimpiä, ja tassujen '
+            + 'pohjat ovat karvaiset, joten jää ei liukastele eikä kylmä '
+            + 'pure.',
+          selite: 'Valkoturkkinen naali istuu lumella ja katsoo kameraan. Tausta '
+            + 'on lähes kokonaan valkoinen, ja vain silmät ja kuononpää '
+            + 'erottuvat tummina.',
+          lahde: 'Jonathen Pie, Wikimedia Commons (CC0)',
+          wiki: 'Naali',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä tapahtuu islanninhevoselle, joka viedään pois maasta?',
+        vaihtoehdot: [
+          'Se palaa keväällä',
+          'Se saa uuden nimen',
+          'Se ei saa enää palata',
+          'Se pääsee näyttelyyn',
+        ],
+        oikea: 2,
+        fakta: 'Sääntö suojaa saaren hevosia taudeilta, joita niillä ei ole.',
+      },
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Islantilainen arki pyörii kuuman veden, lampaiden ja sään '
+        + 'ympärillä: uimala on kylän olohuone, syksyllä koko kylä lähtee '
+        + 'vuorille, ja talot tehtiin ennen turpeesta.',
+      nostot: [
+        {
+          otsikko: 'Uimala on kylän olohuone',
+          aika: 'Ympäri vuoden',
+          tiedosto: 'Laugardalslaug.JPG',
+          teksti: 'Islannissa maan alta saa kuumaa vettä, ja sillä lämmitetään '
+            + 'sekä talot että uima-altaat. Lähes joka kylässä on uimala, '
+            + 'joka on auki ympäri vuoden ja myös pakkasella. Varsinaisen '
+            + 'altaan vieressä on pieniä kuumia altaita, joissa istutaan '
+            + 'leuat vedessä ja jutellaan — siellä puhutaan säästä, '
+            + 'politiikasta ja naapureista. Yksi sääntö on ehdoton: ennen '
+            + 'altaaseen menoa peseydytään ilman uimapukua, ja siitä '
+            + 'muistuttavat kyltit pukuhuoneen seinällä.',
+          selite: 'Ulkouimala hämärtyvässä illassa. Takana on ratamerkein jaettu '
+            + 'iso allas ja katsomo, edessä pyöreitä kuumia altaita, joissa '
+            + 'istuu ihmisiä.',
+          lahde: '(WT-en) Meltwaterfalls, Wikimedia Commons (CC BY-SA 1.0)',
+        },
+        {
+          otsikko: 'Syksyllä koko kylä lähtee vuorille',
+          aika: 'Syyskuussa',
+          tiedosto: 'Iclandic Réttir for annual sheep roundup 1861.jpg',
+          teksti: 'Lampaat päästetään kesäksi vapaaksi ylängölle, jossa ne '
+            + 'kulkevat ilman aitoja satojen neliökilometrien alueella. '
+            + 'Syyskuussa ne haetaan takaisin: kylän väki ratsastaa ja '
+            + 'kävelee vuorille useaksi päiväksi ja ajaa laumat alas. Kotona '
+            + 'odottaa rétt, ympyrän tai ruudukon muotoinen karsina-alue, '
+            + 'jonne lampaat ajetaan ja jossa ne lajitellaan omistajille '
+            + 'korvamerkkien mukaan. Työn päätteeksi lauletaan ja syödään '
+            + 'yhdessä — réttir on yhtä paljon juhla kuin työ.',
+          selite: 'Lampaiden lajittelukarsinat vihreässä laaksossa vuoren '
+            + 'juurella. Valkoiset aidat muodostavat ruudukon, ja takana '
+            + 'näkyy maatilan rakennuksia.',
+          lahde: 'ImagePerson, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Talon seinät kasvoivat ruohoa',
+          aika: '1800-luku',
+          tiedosto: 'Turf houses in Glaumbær open-air museum, Iceland, 20240715 1439 0952.jpg',
+          teksti: 'Islannissa ei kasva metsää, joten rakennuspuuta piti tuoda '
+            + 'meren takaa tai kerätä ajopuuna rannalta. Siksi talot tehtiin '
+            + 'siitä, mitä oli: kiviä, turvetta ja vähän puuta. Seinät '
+            + 'ladottiin turvelevyistä kalanruodon kuvioon, ja katolla kasvoi '
+            + 'ruoho. Sisällä oli lämmin, mutta pimeä ja kostea. '
+            + 'Turvetaloissa asuttiin yleisesti vielä 1800-luvulla ja paikoin '
+            + '1900-luvun puolelle asti. Glaumbærin museossa niitä on '
+            + 'säilynyt kokonainen rivi.',
+          selite: 'Rivi turvetaloja museoalueella. Päädyt ovat valkoisia '
+            + 'lautaseiniä, mutta katot ja seinien välit ovat paksua ruohoa '
+            + 'kasvavaa turvetta.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä islantilaisessa uimalassa pitää tehdä ennen altaaseen '
+          + 'menoa?',
+        vaihtoehdot: [
+          'Ostaa oma pyyhe',
+          'Ilmoittautua vahtimestarille',
+          'Odottaa vuoroa altaalla',
+          'Peseytyä ilman uimapukua',
+        ],
+        oikea: 3,
+        fakta: 'Siitä muistuttavat kyltit pukuhuoneen seinällä.',
+      },
+    },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
