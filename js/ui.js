@@ -7333,7 +7333,16 @@ export class UI {
     // tarkennus 7.8.2026: "kartta pitäisi olla jo ihan ensimmäisellä
     // sivulla" — aiemmin kaupunki-aihesivun pohjalla). Piirto on
     // kevyt ja kuva paikallinen, joten se tehdään joka avauksella.
-    const karttaEtusivulla = etusivu && KAUPUNKIKARTAT[this.arrivalShownFor];
+    /*
+     * Vain kaupunkilehdessä: maalehden nimiösivu on myös indeksi 0,
+     * ja ilman tutkiTila-ehtoa Suomen lehden ensimmäisellä sivulla
+     * luki "Kaupunki kartalla" ja alla oli Helsingin kohdekartta
+     * (omistajan havainto 9.8.2026). Vika näkyi silloin, kun maalehti
+     * avattiin kaupunkilehden liitenapista, koska arrivalShownFor
+     * osoittaa yhä kaupunkiin.
+     */
+    const karttaEtusivulla = etusivu && this.tutkiTila !== 'maa'
+      && KAUPUNKIKARTAT[this.arrivalShownFor];
     this.arrivalKaupunkiKartta.hidden = !karttaEtusivulla;
     this.arrivalKaupunkiKartta.replaceChildren();
     if (karttaEtusivulla) this.piirraKaupunkiKartta(this.arrivalKaupunkiKartta);
