@@ -16,7 +16,11 @@
  * valmistuvat.
  */
 export const KAARI_PAKETIT = {
-  johdanto: 'Koko Euroopan tarinakaari: 41 kohdetta, kolme osaa kutakin '
+  johdanto: 'Tarinakaari: Euroopan 41 kohdetta luentoineen JA UUTENA '
+    + 'Lähi-idän 28 kohdetta ilman luentoja (omistajan tilaus 9.8. '
+    + 'yö: tekstit arvioon ensin, äänet vasta hyväksynnän jälkeen; '
+    + 'Mekkaan ja Medinaan isoisä ei astu — kohtaamiset niiden '
+    + 'porteilla ja karavaaniteillä). Kolme osaa kutakin kohdetta '
     + 'kohti — isoisän matkakirjamerkintä saapumisesta, '
     + 'KOHTAAMINEN jossa henkilö esittää isoisän jättämän '
     + 'kysymyksen (oikea visakysymys vaihtoehtoineen mukana, jotta '
@@ -1442,6 +1446,1092 @@ export const KAARI_PAKETIT = {
         + 'ja sen alta löytyi kätkö. Björk katseli kalkkikerrosta: '
         + '"Kaiverruksen pitäisi olla kokonaan kalkin alla. Joku on '
         + 'raaputtanut sen esiin — tänä keväänä."',
+    },
+    {
+      id: 'aden',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Aden — kaupunki kraatterissa',
+      saapuminen: 'Höyrylaiva pysähtyi hiiltä ottamaan, ja minä nousin maihin '
+        + 'kaupunkiin, joka on rakennettu sammuneen tulivuoren sisään. '
+        + 'Kalliot kohosivat joka puolella kuin muurin, ja vanhat '
+        + 'kivisäiliöt porrastuivat rinteeseen odottamassa sadetta, '
+        + 'jota tulee kerran vuodessa. Alimman säiliön reunalla istui '
+        + 'mies, joka ei odottanut sadetta. Hän odotti minua.',
+      henkilo: 'Vesisäiliöiden vartija Said mittaa Tawilan säiliöiden veden, '
+        + 'kuten hänen sukunsa on mitannut kauan ennen höyrylaivoja.',
+      kohtaaminen: 'Säiliön portailla Said laskee mittakeppinsä. "Isoisäsi '
+        + 'kysyi, minne kaupunki kätkee sateensa — ja jätti kysymyksen '
+        + 'niille, jotka tulevat perässä. Vastaa siihen, niin näytän '
+        + 'missä vesi on syvintä."',
+      kysymys: {
+        q: 'Adenin vanha kaupunki on rakennettu erikoiseen paikkaan. '
+          + 'Minne?',
+        vaihtoehdot: [
+          'Sammuneen tulivuoren kraatteriin',
+          'Kelluville lautoille lahden päälle',
+          'Maan alle kaivettuihin holveihin',
+          'Jokisuiston saarille',
+        ],
+        oikea: 0,
+        fakta: 'Adenin vanhin osa, nimeltäänkin Crater, lepää sammuneen '
+          + 'tulivuoren sisällä. Kalliot suojaavat kaupunkia, ja sadevesi '
+          + 'kerättiin talteen kivisiin Tawilan säiliöihin — sadetta kun '
+          + 'tulee vain kourallinen vuodessa.',
+      },
+      aarre: 'Kätkö odotti kuivan säiliön pohjakivien alla. Said katsoi '
+        + 'mittakeppiään: "Tämä säiliö on ollut tyhjä sukupolven. Mutta '
+        + 'pohjalla oli tuoreita kengänjälkiä ennen sinun jälkiäsi."',
+    },
+    {
+      id: 'ankara',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Ankara — vuohien valkoinen kulta',
+      saapuminen: 'Ylängön ilta oli viileä, ja markkinoilla punnittiin villaa, '
+        + 'joka hohti kuin silkki. Angoravuohen villaa, sanoi kauppias, '
+        + 'eikä sitä saa mistään muualta kuin näiltä ylängöiltä. Yhden '
+        + 'paalin päällä oli sinetti, jota kukaan ei tunnistanut — '
+        + 'paitsi että vahassa oli barometrin kuva, ja paali oli '
+        + 'maksettu kolmekymmentä vuotta sitten. Noutajaa odotettiin '
+        + 'yhä.',
+      henkilo: 'Villankehrääjä Elif kehrää mohairia samalla värttinällä kuin '
+        + 'äitinsä ja tämän äiti, ja tuntee jokaisen paalin tarinan.',
+      kohtaaminen: 'Markkinakatoksen alla Elif punnitsee lankavyyhtiä. '
+        + '"Sinetöity paali on suvullamme tallessa — maksaja käski '
+        + 'antaa sen sille, joka tietää, mistä villan nimi tulee. '
+        + 'Vastaa, niin avaan sinetin."',
+      kysymys: {
+        q: 'Pehmeä ja kiiltävä mohair-villa on saanut nimensä '
+          + 'kuuluisaksi tehneen vuohen mukaan. Mikä vuohi on kyseessä?',
+        vaihtoehdot: [
+          'Angoravuohi, joka on nimetty Ankaran mukaan',
+          'Alppivuohi, joka elää jäätiköiden reunalla',
+          'Kašmirvuohi, joka on nimetty laakson mukaan',
+          'Vuorikauris, jonka villa kerätään pensaista',
+        ],
+        oikea: 0,
+        fakta: 'Angoravuohi kantaa Ankaran vanhaa nimeä Angora. Sen '
+          + 'silkinkiiltävästä villasta kehrätään mohairia, ja '
+          + 'vuosisatojen ajan aitoa angoravillaa sai vain näiltä '
+          + 'Anatolian ylängöiltä.',
+      },
+      aarre: 'Paalin sisällä, villan keskellä, odotti kätkö. Elif kääri '
+        + 'villan huolella takaisin: "Sinetti oli ehjä — mutta narut '
+        + 'oli solmittu uudelleen. Kehrääjä näkee sen yhdellä '
+        + 'silmäyksellä."',
+    },
+    {
+      id: 'bagdad',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Bagdad — rauhan kaupungin kirjurit',
+      saapuminen: 'Tigrisin rannalla kirjurit istuivat rivissä varjossa, ja '
+        + 'ruokokynät rapisivat kuin sade. Vanhin heistä kopioi kirjaa, '
+        + 'jonka reunaan joku oli merkinnyt lukemia — minun barometrini '
+        + 'lukemia, vuosien takaa. Kysyin, kuka kirjan toi. Kirjuri ei '
+        + 'nostanut katsettaan: se, joka tuo kirjan, ei kerro nimeään. '
+        + 'Se, joka noutaa sen, kertoo.',
+      henkilo: 'Kirjuri Yusuf kopioi vanhoja käsikirjoituksia Tigrisin '
+        + 'rannalla, kuten hänen sukunsa on kopioinut kalifien ajoista.',
+      kohtaaminen: 'Yusuf laskee ruokokynänsä telineeseen. "Kirja odottaa '
+        + 'noutajaansa, ja noutaja tunnetaan vastauksesta. Isoisäsi '
+        + 'valitsi kysymyksen itse — se kertoo kaupungista, joka '
+        + 'rakennettiin ympyräksi. Vastaa."',
+      kysymys: {
+        q: 'Kalifi al-Mansur perusti Bagdadin 700-luvulla harvinaisen '
+          + 'muotoiseksi. Millainen kaupungista rakennettiin?',
+        vaihtoehdot: [
+          'Täysin pyöreä, ja sitä kutsuttiin Rauhan kaupungiksi',
+          'Tähdenmuotoinen, jossa oli seitsemän sakaraa',
+          'Neliö, jonka kulmat osoittivat ilmansuuntiin',
+          'Puolikuun muotoinen joen mutkassa',
+        ],
+        oikea: 0,
+        fakta: 'Al-Mansurin Bagdad oli pyöreä kaupunki, jonka virallinen '
+          + 'nimi oli Madinat as-Salam, Rauhan kaupunki. Kehämuurien '
+          + 'keskellä olivat palatsi ja moskeija, ja portteja oli neljä — '
+          + 'yksi kuhunkin ilmansuuntaan.',
+      },
+      aarre: 'Kirjan selkämyksen ontelossa odotti kätkö. Yusuf sulki '
+        + 'kannen varovasti: "Kopioin tämän kirjan reunamerkinnät '
+        + 'kymmenen vuotta sitten. Silloin viimeinen lukema puuttui. '
+        + 'Nyt se on siinä — ja muste on tuoretta."',
+    },
+    {
+      id: 'damaskos',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Damaskos — kangas joka sai kaupungin nimen',
+      saapuminen: 'Katetussa basaarissa kangaspakat hohtivat, ja kutoja käänsi '
+        + 'pakkaa valossa: kuvio vaihtui himmeästä hohtavaksi kuin '
+        + 'vesi. Tämä kangas kantaa kaupunkimme nimeä, hän sanoi. '
+        + 'Pyysin nähdä vanhimman pakan. Sen sisään oli kudottu '
+        + 'kirjaimet, joita kukaan paikalla ollut ei ollut kutonut: H. '
+        + 'F.',
+      henkilo: 'Damastikutoja Amina kutoo kangasta, jonka kuvio näkyy vain '
+        + 'valoa vasten, samoilla loimilla kuin sukunsa satoja vuosia.',
+      kohtaaminen: 'Kangaspuiden ääressä Amina pysäyttää sukkulan. "Kirjaimet '
+        + 'kudottiin sukuni puilla, mutta tilaaja jätti maksun ja '
+        + 'kysymyksen. Vastaa hänen kysymykseensä, niin leikkaan pakan '
+        + 'auki."',
+      kysymys: {
+        q: 'Damaskos on antanut nimensä kuuluisalle kankaalle. Mikä '
+          + 'siinä on erikoista?',
+        vaihtoehdot: [
+          'Kuvio on kudottu kankaaseen niin, että se näkyy valoa vasten',
+          'Kangas on kudottu kullasta ja hopeasta',
+          'Se on maailman ohuin kangas, jonka läpi voi lukea',
+          'Kangas vaihtaa väriä lämpimässä',
+        ],
+        oikea: 0,
+        fakta: 'Damasti on kangasta, jonka kuvio syntyy kudonnasta '
+          + 'itsestään: kiiltävä ja himmeä pinta vaihtavat paikkaa, joten '
+          + 'kuvio välkehtii valossa. Damaskos oli kuuluisa myös '
+          + 'damaskoteräksestään — kaupungin nimi kulki maailmalle kahta '
+          + 'tietä.',
+      },
+      aarre: 'Pakan sydämestä löytyi litteä kätkö. Amina laski kankaan '
+        + 'hitaasti: "Loimi on sukuni loimi, mutta tässä kohdassa '
+        + 'kudetta on jatkettu — joku on avannut kankaan ja kutonut sen '
+        + 'kiinni. Taidolla, jota en opettanut kenellekään."',
+    },
+    {
+      id: 'doha',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Doha — purjeet jotka odottavat tuulta',
+      saapuminen: 'Rannassa dhow-veneiden purjeet oli laskettu, ja '
+        + 'purjeentekijä ompeli katoksensa alla suurta kolmiopurjetta. '
+        + 'Hän kertoi, että veneet lähtevät kun tuuli kääntyy — ja '
+        + 'tuuli kääntyy täällä kellontarkasti, kaksi kertaa vuodessa. '
+        + 'Purjeen helmaan oli ommeltu pieni tasku. Se ei kuulu '
+        + 'purjeeseen, sanoi tekijä. Se kuuluu sille, joka osaa kysyä '
+        + 'tuulesta.',
+      henkilo: 'Purjeentekijä Jassim ompelee dhow-veneiden purjeet käsin ja '
+        + 'lukee tuulet taivaalta ennen kuin ne saapuvat.',
+      kohtaaminen: 'Jassim vetää langan kireälle. "Isoisäsi istui tässä '
+        + 'katoksessa ja kysyi tuulista, joilla veneet kulkevat Intiaan '
+        + 'ja takaisin. Hän jätti saman kysymyksen taskuun. Vastaa, '
+        + 'niin ratkon ompeleen."',
+      kysymys: {
+        q: 'Dhow-kauppalaivat purjehtivat Arabiasta Intiaan ja takaisin '
+          + 'ilman konetta. Mikä teki edestakaisen matkan mahdolliseksi?',
+        vaihtoehdot: [
+          'Monsuunituulet, jotka puhaltavat puoli vuotta yhteen ja '
+            + 'puoli vuotta toiseen suuntaan',
+          'Airot, joita souti sata miestä',
+          'Meriväylä, jossa virta kiertää ympyrää',
+          'Purjeet, jotka kääntävät tuulen suunnan',
+        ],
+        oikea: 0,
+        fakta: 'Monsuuni puhaltaa Intian valtamerellä puoli vuotta kohti '
+          + 'Intiaa ja kääntyy sitten vastakkaiseksi. Dhow-kauppiaat '
+          + 'purjehtivat menomatkan yhdellä monsuunilla, odottivat '
+          + 'käännettä ja palasivat toisella — aikataulu oli taivaassa.',
+      },
+      aarre: 'Purjetaskussa odotti öljykankainen kätkö. Jassim silitti '
+        + 'ommelta: "Tasku on ommeltu minun pistoillani — mutta lanka '
+        + 'on vahattu tavalla, jota käytti vain isoisäni. Hän kuoli '
+        + 'ennen kuin minä opin ompelemaan."',
+    },
+    {
+      id: 'dubai',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Dubai — lahti joka ylitetään soutaen',
+      saapuminen: 'Khorin suulla helmenpyytäjien veneet lepäsivät rinnakkain, '
+        + 'ja abra-lautturit soutivat väkeä rannalta toiselle '
+        + 'muutamalla vedolla. Lautturini pysähtyi keskellä lahtea ja '
+        + 'antoi veneen kellua. Tässä kohtaa, hän sanoi, isäni isä '
+        + 'pudotti kerran airon — ja nosti sen sijaan jotakin muuta. '
+        + 'Hän ei sanonut mitä. Hän katsoi minua kuin olisin tiennyt.',
+      henkilo: 'Abra-lautturi Rashid soutaa Khorin yli kymmeniä kertoja '
+        + 'päivässä ja tuntee lahden pohjan paremmin kuin sen rannat.',
+      kohtaaminen: 'Rashid lepuuttaa airoja keskellä lahtea. "Isäni isä nosti '
+        + 'pohjasta lippaan ja sai ohjeen: souda tällä paikalla, kunnes '
+        + 'joku vastaa kysymykseen, joka lippaan mukana tuli. Minä olen '
+        + 'soutanut tässä koko ikäni. Vastaa."',
+      kysymys: {
+        q: 'Dubain vanhassa kaupungissa lahden yli kuljetaan yhä '
+          + 'pienillä puuveneillä. Mikä tällainen vesibussi on nimeltään?',
+        vaihtoehdot: [
+          'Abra',
+          'Gondoli',
+          'Feluka',
+          'Sampaani',
+        ],
+        oikea: 0,
+        fakta: 'Abra on avoin puuvene, joka on kuljettanut väkeä Khor Dubain '
+          + 'yli sukupolvien ajan — Bur Dubain ja Deiran rantojen välillä '
+          + 'ei vanhastaan ollut siltaa. Abrat liikennöivät yhä samoilla '
+          + 'reiteillä.',
+      },
+      aarre: 'Lipas nousi veneen pohjalaudan alta, kuivana ja rasvattuna. '
+        + 'Rashid souti rantaan hiljaa ja sanoi vasta laiturissa: '
+        + '"Pohjalauta on vaihdettu uuteen. Minä en ole vaihtanut sitä '
+        + '— eikä kukaan lainaa toisen abraa."',
+    },
+    {
+      id: 'halab',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Halab — saippua joka kypsyy vuosia',
+      saapuminen: 'Saippuamestarin holvissa tornit kohosivat kattoon asti: '
+        + 'vihreitä kuutioita kuivumassa, vanhimmat jo '
+        + 'pähkinänruskeita. Tämä erä odottaa kolmatta vuottaan, '
+        + 'mestari sanoi, hyvä saippua ei kiirehdi. Yhden tornin '
+        + 'huipulla oli kuutio, johon oli painettu vieras leima. Se erä '
+        + 'täyttää tänä vuonna sata vuotta, hän sanoi. Sitä ei myydä. '
+        + 'Sitä vartioidaan.',
+      henkilo: 'Saippuamestari Karim keittää laakerisaippuaa samassa pajassa '
+        + 'kuin sukunsa, ja jokainen erä leimataan suvun merkillä.',
+      kohtaaminen: 'Karim nostaa satavuotiaan kuution hyllyltä. "Erän maksoi '
+        + 'matkalainen, joka pyysi säilyttämään yhden kuution — ja '
+        + 'luovuttamaan sen vastausta vastaan. Kysymys koskee sitä, '
+        + 'mikä tekee saippuastamme kuuluisan. Vastaa."',
+      kysymys: {
+        q: 'Halabin kuuluisa saippua on väriltään ulkoa ruskea mutta '
+          + 'sisältä vihreä. Mikä öljy antaa sille vihreän sydämen?',
+        vaihtoehdot: [
+          'Laakerinmarjaöljy',
+          'Ruusuöljy',
+          'Seesamöljy',
+          'Mantelipuun pihka',
+        ],
+        oikea: 0,
+        fakta: 'Halabin saippua keitetään oliiviöljystä ja '
+          + 'laakerinmarjaöljystä. Se kypsyy varastossa kuukausia tai '
+          + 'vuosia: pinta hapettuu ruskeaksi, mutta sisus pysyy '
+          + 'laakerinvihreänä — leikkauspinta paljastaa aidon saippuan.',
+      },
+      aarre: 'Kuution sisään oli valettu pieni kätkö. Karim punnitsi '
+        + 'puolikkaita kädessään: "Sata vuotta hyllyllä — mutta vaha '
+        + 'kätkön ympärillä on pehmeää. Joku on avannut ja valanut sen '
+        + 'uudelleen tällä vuosikymmenellä."',
+    },
+    {
+      id: 'isfahan',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Isfahan — puoli maailmaa yhdellä torilla',
+      saapuminen: 'Suuri tori aukeni edessäni niin avarana, että toinen pää '
+        + 'häipyi iltausvaan. Täällä sanotaan: Isfahan on puoli '
+        + 'maailmaa. Sillan holveissa istuttiin laulamassa, ja laulu '
+        + 'kiersi kaaresta kaareen. Yhden holvin kiveen oli piirretty '
+        + 'pieni ympyrä ja sen sisään viiva — merkki, jonka isoisäni '
+        + 'teki karttoihinsa aina sinne, minne aikoi palata.',
+      henkilo: 'Sillanvartija Farhad tuntee Khajun sillan kolmekymmentäkolme '
+        + 'holvia ja tietää, missä holvissa laulu kaikuu kauneimmin.',
+      kohtaaminen: 'Farhad koputtaa holvin kylkeä. "Merkin tekijä istui tässä '
+        + 'holvissa iltaan asti ja jätti vartijalle kysymyksen — se '
+        + 'kulkee suvussamme kuin laulu. Vastaa siihen, niin näytän '
+        + 'mitä holvin kivi kätkee."',
+      kysymys: {
+        q: 'Isfahanista on vanha persialainen sanonta. Miten se kuuluu?',
+        vaihtoehdot: [
+          'Isfahan on puoli maailmaa',
+          'Isfahan on tuhannen sillan kaupunki',
+          'Kaikki tiet vievät Isfahaniin',
+          'Isfahanissa aurinko ei laske',
+        ],
+        oikea: 0,
+        fakta: 'Sanonta Esfahan nesf-e jahan — Isfahan on puoli maailmaa — '
+          + 'syntyi, kun kaupunki oli Persian loistava pääkaupunki: '
+          + 'kupolit, sillat ja maailman suurimpiin kuuluva tori saivat '
+          + 'matkalaiset tuntemaan, että puoli maailmaa oli koossa '
+          + 'yhdessä kaupungissa.',
+      },
+      aarre: 'Holvin irtokiven takana odotti kätkö. Farhad pani kiven '
+        + 'paikalleen ja lauloi hiljaa yhden säkeen: "Kaiku vastasi '
+        + 'väärästä holvista. Joku istuu iltaisin siellä, missä ei '
+        + 'pitäisi olla ketään."',
+    },
+    {
+      id: 'izmir',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Izmir — viikunoiden satama',
+      saapuminen: 'Satamassa tuoksui auringossa kuivattu hedelmä: viikunakoreja '
+        + 'kannettiin laivoihin jonossa, joka ei katkennut koko '
+        + 'päivänä. Kauppias avasi yhden korin ja kaivoi sen pohjalta '
+        + 'paperiin käärityn viikunan, kovan kuin kivi. Tämä on '
+        + 'kulkenut varastossamme kauemmin kuin minä, hän sanoi. '
+        + 'Paperissa lukee, että se avataan, kun oikea ostaja kysyy '
+        + 'oikean hinnan.',
+      henkilo: 'Viikunakauppias Selin punnitsee sadon ja tuntee jokaisen '
+        + 'laakson hedelmät maun perusteella.',
+      kohtaaminen: 'Selin pyörittää kivikovaa viikunaa sormissaan. "Oikea hinta '
+        + 'ei ole rahaa — se on vastaus. Isoisäsi jätti kysymyksen, '
+        + 'joka koskee sitä, mistä satamamme tunnetaan. Vastaa."',
+      kysymys: {
+        q: 'Izmirin satamasta laivattiin 1800-luvulla koko maailmaan '
+          + 'herkkua, josta kaupunki tunnettiin. Mitä?',
+        vaihtoehdot: [
+          'Viikunoita ja rusinoita',
+          'Appelsiineja ja sitruunoita',
+          'Taateleita ja manteleita',
+          'Oliiveja ja hunajaa',
+        ],
+        oikea: 0,
+        fakta: 'Izmir — silloiselta nimeltään Smyrna — oli viikunoiden ja '
+          + 'rusinoiden suursatama. Smyrnan viikuna oli oma käsitteensä '
+          + 'maailman markkinoilla, ja sadonkorjuun aikaan satama eli '
+          + 'hedelmäkoreista.',
+      },
+      aarre: 'Paperikääreen sisällä ei ollut viikunaa vaan kätkö, viikunan '
+        + 'muotoiseksi vahattu. Selin haisteli käärettä: "Vaha on '
+        + 'tuoretta mehiläisvahaa. Varastossa sata vuotta maannut kääre '
+        + 'tuoksuisi pölyltä."',
+    },
+    {
+      id: 'jerusalem',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Jerusalem — portti joka on kiinni',
+      saapuminen: 'Kävelin vanhan kaupungin muurin ympäri ja laskin portit: '
+        + 'seitsemästä kuljettiin sisään ja ulos, kahdeksas oli '
+        + 'muurattu umpeen kauan sitten. Muuratun portin edessä seisoi '
+        + 'mies, joka ei mennyt minnekään. Hän piirsi keppinsä kärjellä '
+        + 'hiekkaan merkkejä ja pyyhki ne pois ennen kuin ehdin lukea. '
+        + 'Yhden hän jätti: kolme aaltoviivaa. Isoisäni tapa sulkea '
+        + 'kirje.',
+      henkilo: 'Portinvartijoiden sukua oleva Elias tuntee muurin jokaisen '
+        + 'kiven ja kertoo porttien tarinat niille, jotka osaavat '
+        + 'kysyä.',
+      kohtaaminen: 'Elias nojaa keppiinsä muurin varjossa. "Suvussani sanotaan: '
+        + 'se joka tuntee portit, tuntee kaupungin. Isoisäsi tunsi ne '
+        + 'kaikki — myös sen, josta ei kuljeta. Vastaa hänen '
+        + 'kysymykseensä, niin kerron, mitä hän tänne jätti."',
+      kysymys: {
+        q: 'Jerusalemin vanhan kaupungin muurissa on kahdeksan porttia. '
+          + 'Mikä niistä on erikoinen?',
+        vaihtoehdot: [
+          'Yksi porteista on muurattu kokonaan umpeen',
+          'Yksi porteista on veistetty yhdestä kivestä',
+          'Yksi porteista avautuu vain kerran vuodessa',
+          'Yksi porteista on veden alla',
+        ],
+        oikea: 0,
+        fakta: 'Kultainen portti itämuurissa on ollut muurattuna umpeen '
+          + 'vuosisatoja — ainoana kahdeksasta portista siitä ei kuljeta. '
+          + 'Muut seitsemän, kuten Damaskoksen portti ja Jaffan portti, '
+          + 'ovat yhä kaupungin ovet.',
+      },
+      aarre: 'Kätkö oli muurin juurella, irtokiven takana kolmen '
+        + 'aaltoviivan kohdalla. Elias tasoitti hiekan kepillään: '
+        + '"Piirsin merkin, koska joku piirsi sen minulle eilen — ja '
+        + 'käski odottaa sitä, joka tuntee sen."',
+    },
+    {
+      id: 'kairo',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Kairo — joen mitta',
+      saapuminen: 'Rodan saarella laskeuduin portaita alas kaivoon, jonka '
+        + 'keskellä seisoo kahdeksankulmainen pylväs. Siihen on '
+        + 'kaiverrettu viivat: joka vuosi tulvan noustessa katsottiin, '
+        + 'mille viivalle Niili yltää. Vartija näytti viivan, jolle '
+        + 'vesi nousi sinä vuonna, kun muuan matkalainen kävi '
+        + 'mittaamassa sen itse. Viivan viereen on raaputettu pieni '
+        + 'risti. Se ei kuulu asteikkoon.',
+      henkilo: 'Nilometrin vartija Fatima lukee joen mittaa, kuten hänen '
+        + 'sukunsa on lukenut niin kauan kuin tulvia on kirjattu.',
+      kohtaaminen: 'Fatima laskee kätensä kaiverretulle viivalle. "Matkalainen '
+        + 'maksoi siitä, että hänen viivansa pidetään puhtaana. Ja hän '
+        + 'jätti kysymyksen: vastaa, niin kerron miksi juuri tämä '
+        + 'viiva."',
+      kysymys: {
+        q: 'Rodan saaren nilometrillä mitattiin Niilin tulvan korkeutta. '
+          + 'Miksi mittaus oli niin tärkeä?',
+        vaihtoehdot: [
+          'Tulvan korkeus kertoi, kuinka hyvä sato oli tulossa',
+          'Sillä laskettiin laivojen syväys satamaan',
+          'Se näytti, milloin krokotiilit tulevat',
+          'Sillä mitattiin juomaveden puhtautta',
+        ],
+        oikea: 0,
+        fakta: 'Niilin tulva toi pelloille veden ja lietteen. Nilometrin '
+          + 'viivoilta luettiin, riittäisikö tulva satoon: matala vesi '
+          + 'tiesi nälkää, sopiva runsautta — ja lukeman mukaan '
+          + 'määrättiin jopa verot.',
+      },
+      aarre: 'Ristin kohdalta, asteikon takaa, aukesi kapea kolo ja siinä '
+        + 'kätkö. Fatima pyyhki viivan huolella: "Puhdistan tämän joka '
+        + 'kuukausi. Viime kuussa risti oli himmeä — nyt se on terävä. '
+        + 'Joku on syventänyt sitä."',
+    },
+    {
+      id: 'kapadokia',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Kapadokia — kaupunki maan alla',
+      saapuminen: 'Laakso oli täynnä kivitorneja kuin jättiläisen pelilauta, ja '
+        + 'talot oli koverrettu suoraan pehmeään kiveen. Isäntäni vei '
+        + 'minut kellariinsa, avasi jauhosäkkien takaa matalan oven — '
+        + 'ja sen takana portaat jatkuivat alas, ja taas alas. '
+        + 'Kokonainen kaupunki nukkui maan alla. Portaiden '
+        + 'kymmenennellä askelmalla paloi kynttilä. Isäntä vannoi, '
+        + 'ettei hän ollut sytyttänyt sitä.',
+      henkilo: 'Kyyhkyslakkojen hoitaja Meryem tuntee laakson tornit ja '
+        + 'tietää, mitkä käytävät johtavat maan alle ja mitkä '
+        + 'umpikujaan.',
+      kohtaaminen: 'Meryem suojaa kynttilää kädellään portaikossa. '
+        + '"Alakaupungissa on käytävä, jonka päässä sukuni on pitänyt '
+        + 'valoa — maksu siitä tuli kauan sitten, ja kuitiksi käy '
+        + 'vastaus. Isoisäsi kysymys koskee tätä kaupunkia. Vastaa."',
+      kysymys: {
+        q: 'Kapadokiassa on kokonaisia kaupunkeja maan alla. Kuinka '
+          + 'syviä suurimmat ovat?',
+        vaihtoehdot: [
+          'Monta kerrosta — syvimmät ulottuvat kymmenien metrien '
+            + 'syvyyteen',
+          'Yhden kerroksen — matalia kellareita',
+          'Ne ovat vain tarinaa, ei oikeita kaupunkeja',
+          'Pohjattomia — kukaan ei ole käynyt pohjalla',
+        ],
+        oikea: 0,
+        fakta: 'Derinkuyun kaltaiset maanalaiset kaupungit porrastuvat monta '
+          + 'kerrosta pehmeään tuffikiveen — syvimmillään kymmeniä '
+          + 'metrejä. Niissä oli asuinhuoneita, talleja, kaivoja ja '
+          + 'pyöreät kivioven, jotka vieritettiin käytävän tukkeeksi.',
+      },
+      aarre: 'Käytävän päässä, kiviovien takana, odotti kätkö ja sammunut '
+        + 'lyhty. Meryem kosketti lyhdyn nokea: "Meidän kynttilämme '
+        + 'palaa portaissa. Tämä lyhty on kulkenut syvemmällä — ja noki '
+        + 'on yhä pehmeää."',
+    },
+    {
+      id: 'kuwait',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Kuwait — kaupunki joka juo merestä tuodun joen',
+      saapuminen: 'Rannalla veistettiin venettä, ja lankut taipuivat höyryssä '
+        + 'kaarelle ilman yhtäkään piirustusta — mitta oli mestarin '
+        + 'silmässä. Satamaan saapui vene, jonka lasti ei ollut kalaa '
+        + 'eikä helmiä vaan vettä: makeaa jokivettä ruukuissa, tuotu '
+        + 'kaukaa joensuulta. Vesiveneen kylkeen oli maalattu merkki, '
+        + 'jonka maalari oli kuollut aikoja sitten. Merkki maalataan '
+        + 'silti uudelleen joka kevät.',
+      henkilo: 'Veneenveistäjä Nasser rakentaa dhow-veneitä silmämitalla, '
+        + 'kuten isänsä ja tämän isä, eikä yksikään kaari ole koskaan '
+        + 'väärä.',
+      kohtaaminen: 'Nasser laskee höylän penkille. "Vesiveneen merkki on sukuni '
+        + 'maalaama — työn maksoi matkalainen, joka sanoi: maalatkaa '
+        + 'kunnes tulija vastaa kysymykseeni. Kysymys koskee sitä, mitä '
+        + 'veneet tähän kaupunkiin toivat. Vastaa."',
+      kysymys: {
+        q: 'Kuwaitin kaupungilla ei vanhastaan ollut omaa jokea eikä '
+          + 'lähdettä. Mistä juomavesi saatiin?',
+        vaihtoehdot: [
+          'Veneet toivat makeaa vettä ruukuissa kaukaa joensuulta',
+          'Sadevesi riitti ympäri vuoden',
+          'Vesi tislattiin merivedestä auringossa',
+          'Kamelit kantoivat sen vuorilta',
+        ],
+        oikea: 0,
+        fakta: 'Kuwait eli merestä: helmistä, kaupasta — ja vedestä, jonka '
+          + 'dhow-veneet toivat Shatt al-Arabin joensuulta asti ruukuissa '
+          + 'ja säiliöissä. Vesiveneet olivat kaupungille yhtä tärkeitä '
+          + 'kuin kaivot muille.',
+      },
+      aarre: 'Kätkö oli veistämön vanhimman veneen kölilaudan alla. Nasser '
+        + 'silitti lankkua: "Tämä vene ei ole kastunut mieheni ikänä. '
+        + 'Mutta kölilaudan naulat on vaihdettu — ja naulat ovat uutta '
+        + 'takoa."',
+    },
+    {
+      id: 'luxor',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Luxor — laakso joka vartioi kuninkaitaan',
+      saapuminen: 'Auringon laskiessa vuoret lännessä hehkuivat kullanvärisinä, '
+        + 'ja lautturi sanoi: tuolla nukkuvat kuninkaat, eikä kukaan '
+        + 'tiedä kaikkia heidän oviaan. Rannassa poika myi savikuvia ja '
+        + 'katsoi minua kauan. Sinä olet se, jonka kirja tietää, hän '
+        + 'sanoi lopulta ja juoksi pois. En ollut näyttänyt kirjaa '
+        + 'kenellekään.',
+      henkilo: 'Laakson vartijasuvun Ahmed tuntee länsirannan polut ja '
+        + 'tietää, mitkä tarinat kerrotaan ääneen ja mitkä kuiskataan.',
+      kohtaaminen: 'Ahmed istuu polun laidalle ja puhuu hiljaa. "Suvullani on '
+        + 'laaksossa salaisuuksia, ja yksi niistä ei ole meidän — se '
+        + 'jätettiin meille säilytettäväksi. Ehto on vastaus '
+        + 'kysymykseen, joka koskee kuninkaiden piiloja. Vastaa."',
+      kysymys: {
+        q: 'Uuden valtakunnan faaraot eivät enää rakentaneet pyramideja '
+          + 'vaan hautautivat Kuninkaiden laaksoon. Miksi?',
+        vaihtoehdot: [
+          'Kalliohaudat oli helpompi kätkeä ryöstäjiltä kuin pyramidit',
+          'Pyramidien rakentajat olivat unohtaneet taitonsa',
+          'Laakso oli lähempänä pääkaupunkia',
+          'Kivi loppui pyramidien rakentamisesta',
+        ],
+        oikea: 0,
+        fakta: 'Pyramidi näkyi kauas ja kertoi ryöstäjille, missä aarteet '
+          + 'olivat — ja lähes kaikki ryöstettiin. Uuden valtakunnan '
+          + 'faaraot hakkasivat hautansa piiloon Kuninkaiden laakson '
+          + 'kallioihin, ja sisäänkäynnit peitettiin.',
+      },
+      aarre: 'Kätkö odotti polun varressa kivenkolossa, johon aurinko osui '
+        + 'vain laskiessaan. Ahmed peitti kolon hiekalla: "Suvussa '
+        + 'sanotaan, että säilytämme tätä kolmatta sukupolvea. Mutta '
+        + 'hiekka oli tasoitettu jo valmiiksi — eilen, viimeistään."',
+    },
+    {
+      id: 'masqat',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Masqat — kahden linnoituksen satama',
+      saapuminen: 'Satama aukeni kallioiden välistä kuin portti, ja sen '
+        + 'molemmilla puolilla vartioi vanha linnoitus, kumpikin omalla '
+        + 'jyrkänteellään. Kalastaja souti minut poikki ja sanoi: '
+        + 'linnoitukset eivät ole koskaan nukkuneet yhtä aikaa — kun '
+        + 'toinen pimenee, toisessa syttyy valo. Katsoin illalla. Se '
+        + 'piti paikkansa.',
+      henkilo: 'Satamavahti Salim kirjaa saapuvat purret ja tietää, kummassa '
+        + 'linnoituksessa valo palaa minäkin yönä.',
+      kohtaaminen: 'Salim sulkee kirjansa laiturilla. "Vuorottelu on vanha '
+        + 'sopimus, ja sen aloitti pyyntö, jonka teki muuan '
+        + 'matkalainen: pitäkää toinen valo aina palamassa, kunnes '
+        + 'kysyjä palaa. Vastaa hänen kysymykseensä, niin sammutamme '
+        + 'sen yhdessä."',
+      kysymys: {
+        q: 'Masqatin satamaa vartioi kaksi vanhaa linnoitusta '
+          + 'vastakkaisilla kallioilla. Miksi satama oli niin tarkasti '
+          + 'vartioitu?',
+        vaihtoehdot: [
+          'Se oli suojaisa syväsatama Intian kauppareitin varrella, '
+            + 'jonka moni halusi itselleen',
+          'Sataman pohjassa uskottiin olevan kultaa',
+          'Linnoituksista tähystettiin valaita',
+          'Kaupungin vesi säilytettiin linnoituksissa',
+        ],
+        oikea: 0,
+        fakta: 'Masqatin kalliosatama on harvoja suojaisia syvänteitä Intian '
+          + 'valtameren kauppareitillä, ja siitä kilpailtiin vuosisatoja. '
+          + 'Portugalilaiset rakensivat 1500-luvulla satamakallioille '
+          + 'Mirani- ja Jalali-linnoitukset, jotka vartioivat lahtea yhä.',
+      },
+      aarre: 'Kätkö oli vartiovalon lyhtykomerossa, öljyruukun takana. '
+        + 'Salim nosti lyhtyä: "Öljyä kuluu joka yö yhtä paljon. Viime '
+        + 'kuussa ruukku hupeni kahden edestä — joku muukin on pitänyt '
+        + 'valoa."',
+    },
+    {
+      id: 'medina',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Medina — karavaanien kaivo',
+      saapuminen: 'Kaupunkiin itseensä en kulkenut — se on pyhiinvaeltajien '
+        + 'kaupunki, eikä minun tieni vie porteista sisään. Leiriydyin '
+        + 'karavaanipaikalle sen ulkopuolelle, missä kaivon ympärillä '
+        + 'lepäsi satoja kameleita. Vedennostaja kertoi matkalaisista, '
+        + 'jotka olivat tulleet Damaskoksesta asti nelikymmentä päivää '
+        + 'erämaan halki. Kaivon kivessä oli nimikirjaimia monella '
+        + 'kielellä. Kaksi niistä tunsin.',
+      henkilo: 'Vedennostaja Omar juottaa karavaanien kamelit kaivolla, '
+        + 'jonka äärellä hänen sukunsa on palvellut kulkijoita '
+        + 'sukupolvien ajan.',
+      kohtaaminen: 'Omar kiertää köyden vinssille. "Kirjaimet hakkasi kiveen '
+        + 'matkalainen, joka ei mennyt kaupunkiin vaan istui kaivolla '
+        + 'kolme päivää kyselemässä karavaaneista. Hän jätti '
+        + 'kysymyksensä minun isoisälleni. Vastaa."',
+      kysymys: {
+        q: 'Pyhiinvaeltajat matkasivat Damaskoksesta Medinaan kauan '
+          + 'ennen rautatietä. Miten pitkä erämaataival tehtiin?',
+        vaihtoehdot: [
+          'Kamelikaravaaneissa, joissa kulki tuhansia ihmisiä yhdessä',
+          'Jokilaivoilla virtaa pitkin',
+          'Härkävankkureilla tietä pitkin',
+          'Jalkaisin yksin, kukin omaa polkuaan',
+        ],
+        oikea: 0,
+        fakta: 'Pyhiinvaellus kulki suurina kamelikaravaaneina: tuhansia '
+          + 'ihmisiä, kameleita ja vesivarastoja eteni yhdessä noin '
+          + 'neljäkymmentä päivää Damaskoksesta Medinaan. Karavaani oli '
+          + 'kuin liikkuva kaupunki, jota kaivot ja levähdyspaikat '
+          + 'rytmittivät.',
+      },
+      aarre: 'Kätkö oli kaivon kivijalassa, nimikirjainten alla irtokiven '
+        + 'takana. Omar laski kiven paikalleen: "Kaivolla käy tuhansia '
+        + 'käsiä vuodessa. Silti juuri tämä kivi on aina ollut tiukassa '
+        + '— eilen se oli löysällä."',
+    },
+    {
+      id: 'mekka',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Mekka — suunta jota koko maailma katsoo',
+      saapuminen: 'Jiddan satamassa laivat purkivat pyhiinvaeltajia aamusta '
+        + 'iltaan, ja kaikilla oli sama määränpää, jonne minun tieni ei '
+        + 'vie: pyhä kaupunki vuorten takana. Istuin satamassa vanhan '
+        + 'oppaan kanssa, joka oli saattanut kulkijoita koko ikänsä. '
+        + 'Hän piirsi hiekkaan viivan ja sanoi: minne ikinä menetkin, '
+        + 'tämä suunta kulkee mukanasi. Katso kirjastasi — sinne on '
+        + 'piirretty sama viiva.',
+      henkilo: 'Pyhiinvaeltajien oppaan jälkeläinen Bilal saattaa kulkijoita '
+        + 'Jiddan satamasta vuoristotielle, kuten isänsä ja tämän isä.',
+      kohtaaminen: 'Bilal tasoittaa hiekan kämmenellään satamalaiturilla. '
+        + '"Isoisäni saattoi kerran matkalaisen, joka ei mennyt '
+        + 'kaupunkiin mutta kysyi enemmän kuin kukaan kulkija. Hänen '
+        + 'kysymyksensä jäi suvullemme. Vastaa."',
+      kysymys: {
+        q: 'Muslimit rukoilevat kaikkialla maailmassa samaan suuntaan. '
+          + 'Mihin rukous suunnataan?',
+        vaihtoehdot: [
+          'Kohti Mekkaa ja sen Kaabaa',
+          'Kohti nousevaa aurinkoa',
+          'Kohti Jerusalemia',
+          'Jokainen omaan kotikaupunkiinsa päin',
+        ],
+        oikea: 0,
+        fakta: 'Rukoussuunta eli qibla osoittaa Mekkaan, Kaaban luo, joka '
+          + 'puolelta maailmaa. Moskeijoissa suunnan näyttää '
+          + 'seinäsyvennys nimeltä mihrab — ja merenkulkijat ja '
+          + 'tähtitieteilijät laskivat qiblan suuntia jo keskiajalla.',
+      },
+      aarre: 'Oppaan sauvan kädensijan sisällä odotti kapea kätkö. Bilal '
+        + 'kiersi kädensijan takaisin: "Sauva on kulkenut suvussa neljä '
+        + 'polvea. Kierteet ovat kuluneet sileiksi — mutta ne aukesivat '
+        + 'kuin eilen öljytyt."',
+    },
+    {
+      id: 'mosul',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Mosul — kangas ohuempi kuin aamu-usva',
+      saapuminen: 'Kutomon ikkunasta näkyi Tigris, ja puilla syntyi kangasta '
+        + 'niin ohutta, että sen läpi saattoi lukea kirjettä. Tätä '
+        + 'kangasta on viety maailmalle meidän kaupunkimme nimellä, '
+        + 'kutoja sanoi. Hän avasi arkun ja nosti esiin harson, johon '
+        + 'oli kiedottu jotakin. Tämä jätettiin pantiksi, hän sanoi. '
+        + 'Panttia ei lunastettu. Vielä.',
+      henkilo: 'Kankaankutoja Layla kutoo ohutta musliinia samoilla puilla '
+        + 'kuin sukunsa, ja arkussa säilyvät myös lunastamattomat '
+        + 'pantit.',
+      kohtaaminen: 'Layla laskee harson pöydälle kuin henkäyksen. "Pantin '
+        + 'jättäjä sanoi: se lunastetaan vastauksella, ei rahalla. '
+        + 'Kysymys koskee kangastamme. Vastaa."',
+      kysymys: {
+        q: 'Ohut, ilmava puuvillakangas musliini on saanut nimensä '
+          + 'kaupungista. Mistä?',
+        vaihtoehdot: [
+          'Mosulista',
+          'Moskovasta',
+          'Marseillesta',
+          'Maskatista',
+        ],
+        oikea: 0,
+        fakta: 'Musliini kulki Eurooppaan Mosulin kauppateitse, ja kaupungin '
+          + 'nimi tarttui kankaaseen: ranskan mousseline ja meidän '
+          + 'musliinimme muistavat yhä Mosulin. Hienointa musliinia '
+          + 'kudottiin niin ohueksi, että sitä kutsuttiin kudotuksi '
+          + 'ilmaksi.',
+      },
+      aarre: 'Harson sisältä paljastui kätkö, kevyt kuin tyhjä. Layla '
+        + 'taitteli kankaan takaisin: "Musliini kellastuu arkussa '
+        + 'vuosikymmenessä. Tämä harso on valkoinen — se on vaihdettu '
+        + 'uuteen, eikä vaihtaja ollut minä."',
+    },
+    {
+      id: 'nikosia',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Nikosia — saari joka antoi nimen kuparille',
+      saapuminen: 'Muurit kiersivät kaupungin täydellisenä tähtenä — laskin '
+        + 'vallisakarat: yksitoista. Sepänkujalla vasarat kalkuttivat '
+        + 'kuparia, ja vanhin sepistä näytti minulle harkon, jossa oli '
+        + 'lyötynä merkki härän taljan muotoon. Tällaisina harkkoina '
+        + 'saaremme kupari kulki maailmalle jo ennen kreikkalaisia, hän '
+        + 'sanoi. Tämä harkko odottaa hakijaansa kauempaa kuin muistan.',
+      henkilo: 'Kaivosmiehen jälkeläinen Andreas takoo kuparia kujalla, '
+        + 'jolla saaren punainen metalli on soinut aina.',
+      kohtaaminen: 'Andreas kääntää harkkoa pihdeissä. "Harkon toi mies, joka '
+        + 'maksoi säilytyksestä sata vuotta etukäteen — ja jätti '
+        + 'kysymyksen saaremme metallista. Vastaa, niin harkko on '
+        + 'sinun."',
+      kysymys: {
+        q: 'Kyproksen saari ja eräs metalli ovat antaneet nimen '
+          + 'toisilleen. Mikä metalli?',
+        vaihtoehdot: [
+          'Kupari',
+          'Hopea',
+          'Tina',
+          'Rauta',
+        ],
+        oikea: 0,
+        fakta: 'Kupari sai latinankielisen nimensä Kyproksesta: aes Cyprium, '
+          + 'Kyproksen metalli, lyheni muotoon cuprum — siitä kupari. '
+          + 'Saaren kaivokset olivat antiikin maailman tärkeimpiä, ja '
+          + 'kuparia laivattiin härän taljan muotoisina harkkoina.',
+      },
+      aarre: 'Harkko oli valettu ontoksi, ja sisällä odotti kätkö. Andreas '
+        + 'punnitsi puolikkaita: "Valu on vanhaa työtä. Mutta sauma on '
+        + 'juotettu uudelleen — ja juote kiiltää kuin tämän vuoden '
+        + 'takoa."',
+    },
+    {
+      id: 'persepolis',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Persepolis — kulkue joka ei koskaan pääty',
+      saapuminen: 'Rauniokaupungin portaita nousin keskellä kivistä kulkuetta: '
+        + 'seinään oli veistetty satojen lahdenkantajien jono, ja '
+        + 'jokainen kantoi jotakin — kannua, kangasta, karitsaa. '
+        + 'Paimen, joka laidunsi laumaansa raunioilla, näytti minulle '
+        + 'kohdan, jossa yksi veistetty kantaja kantaa arkkua ilman '
+        + 'koristetta. Sitä ei ole viimeistelty, hän sanoi. Tai sitten '
+        + 'se odottaa jotakin.',
+      henkilo: 'Paimen Dariush tuntee rauniot lampaidensa laitumena ja '
+        + 'kivikulkueen hahmot paremmin kuin moni oppinut.',
+      kohtaaminen: 'Dariush nojaa sauvaansa reliefin äärellä. "Isoisäsi istui '
+        + 'tämän seinän edessä päivän ja piirsi kulkueen kirjaansa. '
+        + 'Lähtiessään hän jätti kysymyksen: minkä juhlan kulkue tämä '
+        + 'on? Vastaa."',
+      kysymys: {
+        q: 'Persepoliin seiniin on veistetty loputon kulkue, jossa eri '
+          + 'kansat tuovat lahjoja kuninkaalle. Mitä juhlaa varten '
+          + 'kaupunki rakennettiin?',
+        vaihtoehdot: [
+          'Kevään uudenvuodenjuhlaa, jota vietetään päiväntasauksena',
+          'Kuninkaan syntymäpäivää keskitalvella',
+          'Sadonkorjuujuhlaa syksyllä',
+          'Voitonjuhlaa sotaretkien jälkeen',
+        ],
+        oikea: 0,
+        fakta: 'Persepolis oli Persian kuninkaiden juhlakaupunki, jonne '
+          + 'valtakunnan kansat toivat lahjansa Nowruzin, '
+          + 'kevätpäiväntasauksen uudenvuodenjuhlan, aikaan. Nowruzia '
+          + 'juhlitaan yhä — se on kevään ja uuden alun juhla.',
+      },
+      aarre: 'Koristelemattoman arkun takana kivi oli irti, ja kolossa '
+        + 'odotti kätkö. Dariush laski kiven takaisin: "Lampaani '
+        + 'kulkevat tästä joka päivä, eivätkä ne säikähdä mitään '
+        + 'tuttua. Kolme aamua sitten koko lauma pysähtyi tähän."',
+    },
+    {
+      id: 'petra',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Petra — kallioon veistetty aarrekammio',
+      saapuminen: 'Kuljin kapeaa rotkoa, jonka seinät nousivat niin korkealle, '
+        + 'että taivas oli enää halkeama — ja sitten rotko aukesi, ja '
+        + 'edessä seisoi palatsi, veistetty suoraan ruusunpunaiseen '
+        + 'kallioon. Oppaani osoitti julkisivun huipulla olevaa '
+        + 'kiviuurnaa: sitä sanotaan aarrekammioksi, koska uurnan '
+        + 'uskotaan kätkevän faaraon kullan. Uurnassa näkyi kolhuja. '
+        + 'Moni on yrittänyt, opas sanoi. Kukaan ei ole kysynyt.',
+      henkilo: 'Beduiiniopas Suleiman johdattaa kulkijat rotkon läpi ja '
+        + 'tuntee kallioiden värit jokaisena vuorokaudenaikana.',
+      kohtaaminen: 'Suleiman istahtaa aarrekammion portaille. "Isoisäsi ei '
+        + 'katsonut uurnaa vaan kalliota sen alla — ja jätti minun '
+        + 'isoisälleni kysymyksen tästä kaupungista. Vastaa, niin '
+        + 'näytän mitä hän katsoi."',
+      kysymys: {
+        q: 'Petran rakennuksia ei muurattu kivistä. Miten ne tehtiin?',
+        vaihtoehdot: [
+          'Ne veistettiin suoraan kallioseinään ylhäältä alaspäin '
+            + 'edeten',
+          'Ne valettiin savesta ja poltettiin kovaksi',
+          'Ne koottiin muualta tuoduista marmorilohkoista',
+          'Ne kaivettiin maan alle ja katettiin puulla',
+        ],
+        oikea: 0,
+        fakta: 'Nabatealaiset veistivät Petran temppelit ja haudat suoraan '
+          + 'hiekkakivikallioon — työ eteni ylhäältä alas, telineinä itse '
+          + 'kallio. Kuuluisin julkisivu, al-Khazneh, tarkoittaa '
+          + 'aarrekammiota: tarun faaraon kulta uskottiin kätketyksi sen '
+          + 'kiviuurnaan.',
+      },
+      aarre: 'Kallion juurella, veistäjien vanhan jalansijan kolossa, '
+        + 'odotti kätkö. Suleiman pyyhkäisi punaista hiekkaa: "Rotkon '
+        + 'tuuli täyttää tällaisen kolon hiekalla kuukaudessa. Tämä oli '
+        + 'lakaistu puhtaaksi."',
+    },
+    {
+      id: 'riad',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Riad — savilinnojen kaupunki',
+      saapuminen: 'Aavikon keskeltä nousi kaupunki, jonka muurit ja tornit oli '
+        + 'rakennettu auringossa kuivatusta savesta. Keskipäivän '
+        + 'helteellä talojen sisällä oli viileää kuin kaivossa, ja '
+        + 'illalla seinät hehkuivat päivän keräämää lämpöä. '
+        + 'Kaivonkaivaja näytti minulle kaivon, jonka pohjalta oli '
+        + 'hänen isänsä aikana nostettu vieras työkalu: pieni '
+        + 'messinkinen luoti mittanauhoineen. Kukaan kaupungissa ei '
+        + 'mitannut sellaisella.',
+      henkilo: 'Kaivonkaivaja Abdullah löytää veden aavikon alta merkeistä, '
+        + 'jotka hänen sukunsa on oppinut lukemaan hiekasta ja '
+        + 'kasveista.',
+      kohtaaminen: 'Abdullah kelaa köyttä kaivolta. "Työkalun omistaja kävi '
+        + 'täällä ja kysyi, miksi rakennamme savesta emmekä kivestä. '
+        + 'Hän tiesi vastauksen itse — ja jätti kysymyksen perinnöksi. '
+        + 'Vastaa."',
+      kysymys: {
+        q: 'Aavikkokaupunkien talot rakennettiin auringossa kuivatuista '
+          + 'savitiilistä. Miksi savi sopii aavikolle niin hyvin?',
+        vaihtoehdot: [
+          'Paksut saviseinät pitävät päivän helteen ulkona ja yön '
+            + 'kylmyyden loitolla',
+          'Savi hylkii hiekkaa, joten myrskyt eivät kuluta sitä',
+          'Savi on aavikolla kiveä kalliimpaa ja siksi arvokasta',
+          'Savitalot voi siirtää mukana uuteen paikkaan',
+        ],
+        oikea: 0,
+        fakta: 'Paksu savitiiliseinä varastoi lämpöä hitaasti: päivällä '
+          + 'sisällä pysyy viileää ja kylmänä aavikkoyönä seinä luovuttaa '
+          + 'päivän lämmön takaisin. Siksi savesta rakennettiin aavikolla '
+          + 'kaikkialla — ja siksi vanhat savilinnat tuntuvat sisältä '
+          + 'kaivoilta.',
+      },
+      aarre: 'Kätkö nousi kaivosta samassa sangossa kuin vesi, savikuoreen '
+        + 'valettuna. Abdullah rikkoi kuoren: "Savi on meidän '
+        + 'savontamme. Mutta sen sisällä oleva kääre on kuiva — se ei '
+        + 'ole ollut kaivossa viikkoa kauempaa."',
+    },
+    {
+      id: 'rubalkhali',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Rub al-Khali — hiekka joka laulaa',
+      saapuminen: 'Dyynit jatkuivat horisonttiin kuin punainen meri, ja kun '
+        + 'aurinko laski, kuulin sen: matalan huminan, joka nousi '
+        + 'hiekasta itsestään, kun dyynin rinne valui. Beduiinioppaani '
+        + 'hymyili: hiekka laulaa, kun se puhuu totta. Leiripaikalta '
+        + 'löysin kiven, jonka alle oli taitettu paperi. Se oli sivu '
+        + 'jonkun matkakirjasta. Käsialan tunsin, sivun numeron '
+        + 'tunnistin — omasta kirjastani puuttuu sama sivu.',
+      henkilo: 'Jäljenlukija Saif kulkee Tyhjän neljänneksen reunoja ja '
+        + 'lukee dyyneistä, kuka on kulkenut ja milloin, kuin kirjaa.',
+      kohtaaminen: 'Saif kyykistyy dyynin rinteeseen ja pyyhkäisee hiekkaa. '
+        + '"Sivun jätti mies, jonka jäljet isoisäni luki: kamelin askel '
+        + 'kevyt, miehen askel painava — hän kantoi jotain tullessaan '
+        + 'eikä lähtiessään. Vastaa hänen kysymykseensä, niin luen '
+        + 'sinulle loput jäljet."',
+      kysymys: {
+        q: 'Rub al-Khalin dyyneillä voi kuulla oudon äänen, kun hiekka '
+          + 'valuu rinnettä alas. Mikä ilmiö on kyseessä?',
+        vaihtoehdot: [
+          'Laulava hiekka — valuvat hiekanjyvät saavat dyynin '
+            + 'humisemaan',
+          'Tuuli soittaa dyynien onttoja käytäviä',
+          'Maan alla virtaava joki kohisee',
+          'Kuumuus saa kivet halkeilemaan äänekkäästi',
+        ],
+        oikea: 0,
+        fakta: 'Kun kuiva, tasarakeinen hiekka lähtee valumaan dyynin '
+          + 'rinnettä, miljoonat jyvät hankautuvat toisiinsa samassa '
+          + 'tahdissa ja dyyni alkaa väristä — syntyy matala humina, '
+          + 'jonka kuulee kauas. Ilmiö tunnetaan maailman suurilla '
+          + 'hiekka-aavikoilla.',
+      },
+      aarre: 'Jälkien päässä, leirikiven alla, odotti kätkö — ja sen '
+        + 'päällä puuttuva sivuni. Saif katsoi dyynien yli: "Hiekka '
+        + 'peittää jäljet kolmessa päivässä. Nämä jäljet on peitetty '
+        + 'käsin — ja se, joka peittää jälkiä, aikoo palata."',
+    },
+    {
+      id: 'salalah',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Salalah — rannikko joka vihertyy',
+      saapuminen: 'Purjehdimme etelään pitkin rantaa, joka oli paahtunutta '
+        + 'kalliota — kunnes se ei ollutkaan: vuoret Salalahin takana '
+        + 'olivat vihreät, ja usva valui rinteitä kuin harso. Muu '
+        + 'Arabia paahtuu, sanoi kapteeni, mutta tämä rannikko saa oman '
+        + 'sateensa. Rannassa suitsukepuiden pihkaa punnittiin '
+        + 'vaakakupeissa kuin kultaa, ja yhdessä kupissa painona oli '
+        + 'pieni messinkipunnus, jossa luki vieraita kirjaimia. Luin ne '
+        + 'kahdesti. Ne olivat suomea: PALAA.',
+      henkilo: 'Suitsukkeenkerääjä Mariam viiltää puiden kuorta ja kerää '
+        + 'pihkan kyynelinä, kuten hänen sukunsa on kerännyt aina.',
+      kohtaaminen: 'Mariam laskee punnuksen kämmenelleni. "Punnuksen jätti '
+        + 'matkalainen, joka osti pihkaa yhden kyynelen verran ja '
+        + 'maksoi kuin säkistä. Hän sanoi: kysymys on hinta. Vastaa '
+        + 'siihen, niin kerron mitä hän oikeasti osti."',
+      kysymys: {
+        q: 'Salalahin rannikko vihertyy kesällä, kun muu Arabian '
+          + 'niemimaa paahtuu. Mikä sen selittää?',
+        vaihtoehdot: [
+          'Khareef-monsuuni tuo mereltä usvan ja sateet juuri tälle '
+            + 'rannikolle',
+          'Vuorten lumi sulaa kesällä rinteille',
+          'Joet tuovat vettä Afrikasta asti',
+          'Rannikolla sataa talvella kymmenen kuukautta',
+        ],
+        oikea: 0,
+        fakta: 'Kesäinen khareef-monsuuni osuu Arabian niemimaalla juuri '
+          + 'Dhofarin rannikkoon: meri-ilma nousee vuoria vasten usvaksi '
+          + 'ja tihkuksi, ja Salalahin seutu vihertyy keskellä kuuminta '
+          + 'kesää. Samoilta seuduilta kerätään maailman parasta '
+          + 'suitsukepihkaa.',
+      },
+      aarre: 'Vaakakaapin kaksoispohjasta löytyi kätkö. Mariam punnitsi '
+        + 'sen kaupan päälle: "Se painaa täsmälleen punnuksen verran. '
+        + 'Kukaan ei tee sellaista vahingossa — kätkö on punnittu tällä '
+        + 'vaakakupilla."',
+    },
+    {
+      id: 'sana',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Sanaa — tornitalojen kaupunki',
+      saapuminen: 'Kaupunki nousi edessäni monikerroksisina savitorneina, '
+        + 'joiden ikkunoita kiersivät valkoiset kipsiraidat kuin '
+        + 'sokerikuorrutus. Auringon laskiessa ikkunoiden puolikuut '
+        + 'syttyivät sisältä väreihin: punaiseen, kultaan, vihreään. '
+        + 'Ikkunantekijä vei minut työhuoneeseensa katolle ja näytti '
+        + 'puolikuun, joka odotti kehyksessään asennusta. Se on ollut '
+        + 'valmiina kauan, hän sanoi. Taloa, johon se kuuluu, ei ole '
+        + 'vielä sanottu meille.',
+      henkilo: 'Ikkunantekijä Hamza valaa kipsiin värilasit, jotka muuttavat '
+        + 'auringonlaskun huoneen sisällä juhlaksi, sukunsa viidentenä.',
+      kohtaaminen: 'Hamza kohottaa puolikuun valoa vasten. "Ikkunan tilasi '
+        + 'matkalainen ja sanoi: asennetaan, kun tulija vastaa '
+        + 'kysymykseen. Kysymys koskee talojamme. Vastaa."',
+      kysymys: {
+        q: 'Sanaan vanhassakaupungissa asutaan taloissa, jotka ovat '
+          + 'harvinaisia koko maailmassa. Millaisia ne ovat?',
+        vaihtoehdot: [
+          'Monikerroksisia savitorneja, joita on koristeltu valkoisin '
+            + 'kipsikuvioin',
+          'Kokonaan maan alle kaivettuja',
+          'Puusta veistettyjä paalutaloja',
+          'Yksikerroksisia kivimajoja ilman ikkunoita',
+        ],
+        oikea: 0,
+        fakta: 'Sanaan vanhakaupunki on täynnä satoja vuosia vanhoja '
+          + 'tornitaloja: monta kerrosta savitiiltä, joiden ikkunoita ja '
+          + 'räystäitä kiertävät valkoiset kipsikoristeet. Ylimpien '
+          + 'kerrosten qamariya-ikkunoissa kipsikehys pitää sisällään '
+          + 'värilasit, jotka värjäävät auringonvalon.',
+      },
+      aarre: 'Ikkunakehyksen ontelosta löytyi kätkö. Hamza asetti '
+        + 'puolikuun takaisin telineeseen: "Kipsi kovettuu kerran eikä '
+        + 'anna periksi. Tämä kehys on avattu taltalla ja kipsattu '
+        + 'uudelleen — käsi oli taitava, mutta ei minun."',
+    },
+    {
+      id: 'siinai',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Siinai — kirjasto vuorten sylissä',
+      saapuminen: 'Nousimme kamelein paljaiden vuorten väliin, ja laakson '
+        + 'pohjalla odotti muurien ympäröimä luostari, vanhempi kuin '
+        + 'yksikään tuntemani kirja. Munkki avasi portin ja vei minut '
+        + 'kirjastoon, jossa käsikirjoituksia on säilytetty puolitoista '
+        + 'vuosituhatta. Yhdellä hyllyllä oli tyhjä kohta ja sen '
+        + 'kohdalla lappu. Munkki käänsi lapun minulle: tähän '
+        + 'palautetaan se, mikä lainattiin. Lainaajaa ei mainittu. '
+        + 'Päivämäärä oli kolmenkymmenen vuoden takaa.',
+      henkilo: 'Munkki Gabriel hoitaa luostarin kirjastoa, jossa jokainen '
+        + 'käsikirjoitus tunnetaan ja jokainen tyhjä kohta muistetaan.',
+      kohtaaminen: 'Gabriel laskee kynttilän hyllyn ääreen. "Lainaaja jätti '
+        + 'pantiksi kysymyksen ja sanoi: vastaus on palautus. Kysymys '
+        + 'koskee tätä paikkaa. Vastaa."',
+      kysymys: {
+        q: 'Pyhän Katariinan luostari Siinain vuorilla on erikoinen koko '
+          + 'maailmassa. Miksi?',
+        vaihtoehdot: [
+          'Se on toiminut yhtäjaksoisesti noin puolitoista '
+            + 'vuosituhatta, ja sen kirjasto on maailman vanhimpia',
+          'Se on rakennettu kokonaan vuoren sisään',
+          'Sinne pääsee vain köysillä laskeutumalla',
+          'Se siirretään uuteen paikkaan joka vuosisata',
+        ],
+        oikea: 0,
+        fakta: 'Pyhän Katariinan luostari on toiminut keskeytyksettä '
+          + '500-luvulta asti — pidempään kuin juuri mikään luostari '
+          + 'maailmassa. Sen kirjastossa on säilynyt ainutlaatuisia '
+          + 'käsikirjoituksia, ja juuri täältä löydettiin 1800-luvulla '
+          + 'yksi vanhimmista Raamatun käsikirjoituksista.',
+      },
+      aarre: 'Tyhjän kohdan takana, hyllylevyn alla, odotti litteä kätkö. '
+        + 'Gabriel suoristi lapun: "Pöly laskeutuu kirjastossa '
+        + 'tasaisesti, ja tyhjässä kohdassa sitä ei ollut lainkaan. '
+        + 'Joku on koskettanut hyllyä tällä viikolla."',
+    },
+    {
+      id: 'tabriz',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Tabriz — basaari jolla ei näy loppua',
+      saapuminen: 'Astuin katetun basaarin holvien alle aamulla, ja kun luulin '
+        + 'nähneeni sen kaiken, oli jo ilta. Holvikäytävät haarautuivat '
+        + 'kuin joki: mausteet, kupari, kirjat, matot. Mattokauppias '
+        + 'levitti eteeni maton ja käänsi sen nurin: solmuja oli niin '
+        + 'tiheässä, ettei sormi mahtunut niiden väliin. Hyvä matto '
+        + 'tehdään kahdesti, hän sanoi — kerran solmuina, kerran '
+        + 'tarinana. Tämän maton tarina on kesken.',
+      henkilo: 'Matonkutoja Zahra solmii mattoja, joiden kuviot kulkevat '
+        + 'suvussa muistina — jokainen matto kertoo jotakin, jos osaa '
+        + 'lukea.',
+      kohtaaminen: 'Zahra kääntää keskeneräisen maton loimet esiin. "Maton '
+        + 'tilasi matkalainen ja jätti kuvion kesken tahallaan: '
+        + 'viimeinen rivi solmitaan, kun joku vastaa hänen '
+        + 'kysymykseensä. Kysymys koskee mattojamme. Vastaa."',
+      kysymys: {
+        q: 'Käsin solmittu itämainen matto syntyy hitaasti. Miten se '
+          + 'tehdään?',
+        vaihtoehdot: [
+          'Solmu kerrallaan käsin — isossa matossa solmuja on miljoonia',
+          'Valamalla villa muottiin',
+          'Ompelemalla valmiit kuviopalat yhteen',
+          'Kutomalla koneella, joka toistaa kuvion',
+        ],
+        oikea: 0,
+        fakta: 'Solmumatto syntyy käsin solmu kerrallaan: kutoja kiertää '
+          + 'villalangan loimiin ja katkaisee sen, riviltä toiselle. '
+          + 'Hienossa matossa on satoja solmuja neliösenttimetrillä — '
+          + 'kokonaisessa matossa miljoonia — ja työ kestää kuukausia tai '
+          + 'vuosia.',
+      },
+      aarre: 'Maton kääröstä, loimien välistä, löytyi kätkö. Zahra laski '
+        + 'sormensa keskeneräiselle riville: "Tähän on solmittu kolme '
+        + 'solmua, joita minä en ole solminut. Ne ovat oikein '
+        + 'solmittuja — mutta lanka on värjätty toisessa kaupungissa."',
+    },
+    {
+      id: 'teheran',
+      lauta: 'middleeast',
+      luennat: false,
+      otsikko: 'Teheran — sali joka on tehty peileistä',
+      saapuminen: 'Palatsin salissa pysähdyin ovelle: seinät ja katto oli '
+        + 'katettu tuhansilla peilinpaloilla, ja yksi kynttilä syttyi '
+        + 'tuhanneksi. Oppaani kertoi tarinan: peilit tilattiin kaukaa '
+        + 'meren takaa, mutta ne saapuivat perille pirstoutuneina — ja '
+        + 'mestarit päättivät, etteivät heitä sirpaleita pois vaan '
+        + 'tekevät niistä jotakin kauniimpaa. Yhdessä nurkassa '
+        + 'peilipinnassa oli himmeä pala. Sen takana ei ollut peiliä. '
+        + 'Sen takana oli lokero.',
+      henkilo: 'Peilimosaiikin korjaaja Reza vaihtaa saliin himmenneet palat '
+        + 'uusiin ja tuntee jokaisen sirpaleen paikan.',
+      kohtaaminen: 'Reza nostaa himmeän palan varovasti irti. "Lokeron teki '
+        + 'mestari, joka sai maksun matkalaiselta: pitäkää pala '
+        + 'himmeänä, kunnes kysyjä tulee. Kysymys on tarina tästä '
+        + 'salista. Vastaa."',
+      kysymys: {
+        q: 'Persialaisten palatsien peilisalit kimaltavat tuhansina '
+          + 'sirpaleina. Miten tarinan mukaan tämä taide sai alkunsa?',
+        vaihtoehdot: [
+          'Peilit saapuivat Euroopasta rikkoutuneina, ja sirpaleista '
+            + 'tehtiin mosaiikkia',
+          'Kuningas rikkoi peilit, ettei näkisi itseään vanhana',
+          'Sirpaleet tuotiin meren pohjasta hylyistä',
+          'Kokonaisia peilejä ei osattu valmistaa',
+        ],
+        oikea: 0,
+        fakta: 'Tarinan mukaan Eurooopasta laivatut suuret peilit särkyivät '
+          + 'matkalla — ja persialaiset mestarit tekivät tappiosta '
+          + 'taidetta: sirpaleet ladottiin kipsiin mosaiikiksi, joka '
+          + 'rikkoo valon tuhansiksi kimalluksiksi. Peilimosaiikista eli '
+          + 'aina-karista tuli palatsien ylpeys.',
+      },
+      aarre: 'Lokerossa odotti kätkö, peilinpalan kokoinen. Reza sovitti '
+        + 'himmeän palan takaisin: "Vaihdan himmenneet palat joka vuosi '
+        + '— tämä on ainoa, jonka olen käsketty jättää. Mutta kipsi sen '
+        + 'ympärillä on uusittu, eikä uusija ollut minä."',
     },
   ],
 };

@@ -349,7 +349,8 @@
         const ohjain = el('div', 'todo-aani');
         const soitaNappi = document.createElement('button');
         soitaNappi.type = 'button';
-        soitaNappi.textContent = `▶ Soita kaikki peräkkäin (${KAARI_PAKETIT.kohteet.length * 3} pätkää)`;
+        const luennalliset = KAARI_PAKETIT.kohteet.filter((m) => m.luennat !== false);
+        soitaNappi.textContent = `▶ Soita kaikki peräkkäin (${luennalliset.length * 3} pätkää)`;
         soitaNappi.addEventListener('click', () => soitaAlkaen(0));
         const pysaytaNappi = document.createElement('button');
         pysaytaNappi.type = 'button';
@@ -360,14 +361,19 @@
         return [johdanto, ...KAARI_PAKETIT.kohteet.map((m) => {
           const k = el('div', 'kortti');
           k.append(el('h3', '', m.otsikko));
+          /* Lähi-idän kohteilla ei vielä ole luentoja (omistajan
+           * tilaus: tekstit ensin arvioon, äänet vasta hyväksynnän
+           * jälkeen) — soittimia ei näytetä turhaan. */
+          const aanet = m.luennat !== false;
+          if (!aanet) k.append(el('p', 'pieni', 'Luennat generoidaan hyväksynnän jälkeen.'));
           k.append(nimio('Matkakirja: saapuminen (isoisän ääni, 1873)'));
           k.append(el('p', '', m.saapuminen));
-          k.append(aaniRivi('saapuminen', m.id));
+          if (aanet) k.append(aaniRivi('saapuminen', m.id));
           k.append(nimio('Henkilö (suunnittelumuistio)'));
           k.append(el('p', 'pieni', m.henkilo));
           k.append(nimio('Kohtaaminen'));
           k.append(el('p', '', m.kohtaaminen));
-          k.append(aaniRivi('kohtaaminen', m.id));
+          if (aanet) k.append(aaniRivi('kohtaaminen', m.id));
           /* Suoja julkaisuikkunaa vastaan: jos data ja sivu ovat eri
            * versiota (verkko-ensin voi hetken antaa ristiparin),
            * puuttuva kysymys ei saa kaataa koko osiota tyhjäksi. */
@@ -383,7 +389,7 @@
           }
           k.append(nimio('Aarre — päättyy henkilön avoimeen vihjeeseen'));
           k.append(el('p', '', m.aarre));
-          k.append(aaniRivi('aarre', m.id));
+          if (aanet) k.append(aaniRivi('aarre', m.id));
           return k;
         })];
       },
