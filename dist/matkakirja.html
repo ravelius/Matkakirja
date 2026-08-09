@@ -5765,6 +5765,19 @@ body.katselu #newgame-btn { display: none; }
  * vaan merkintä pergamentilla — se saa reagoida, mutta pinnalla eikä
  * muodolla.
  */
+/*
+ * Tuore päivitys korostuu (omistajan toive 9.8.2026): numero on
+ * ensimmäisen puolen minuutin ajan selvästi isompi ja tummempi,
+ * sitten se kutistuu tavalliseksi pehmeällä siirtymällä.
+ */
+.versio-kulma { transition: font-size 0.6s ease, opacity 0.6s ease; }
+
+.versio-kulma.tuore {
+  font-size: 1.5em;
+  opacity: 1;
+  font-weight: 700;
+}
+
 .versio-kulma:hover:not(:disabled),
 .versio-kulma:focus-visible {
   background: none;
@@ -7380,15 +7393,6 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
  * oikealle tasatuksi rivikseen nimiön ylle (DOM-järjestys), jolloin
  * kumpikaan ei väisty eikä mikään mene päällekkäin.
  */
-@media (max-width: 560px) {
-  .dialog.lehti button.maa-linkki {
-    position: static;
-    display: block;
-    margin-left: auto;
-    margin-bottom: 0.1rem;
-  }
-  .dialog.lehti button.maa-linkki[hidden] { display: none; }
-}
 
 /* Lehden nimiö: kaupungin nimi isolla antiikvalla keskitettynä. */
 .dialog.lehti #arrival-city {
@@ -7402,6 +7406,8 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 
 /* Päiväysrivi tuplaviivan ja ohuen viivan välissä kuin sanomalehdessä. */
 .lehti-alarivi {
+  /* Ankkuri liitelinkille, joka tasataan rivin oikeaan reunaan. */
+  position: relative;
   margin: 0.35rem 0 0.85rem;
   padding: 0.24rem 0;
   border-top: 3px double rgba(70, 51, 31, 0.75);
@@ -8508,24 +8514,25 @@ body.vertailu-tila .pawns { display: none; }
  * #arrival-maa siirtyy tälle sivulle etusivulta — ks. piirraMaaEtusivu.
  */
 
-/* Kulmalinkki lehden etusivulta maaosioon ("Saksa-osio ›"). */
+/*
+ * Liitelinkki päiväysrivillä ("Suomi-liite", omistajan taitto-ohje
+ * 9.8.2026): sama rivi kuin päiväys, oikeaan reunaan viivojen
+ * väliin tasattuna. Rivi itse on position: relative -ankkuri.
+ */
 .dialog button.maa-linkki {
   position: absolute;
-  /* Safe-area mukaan: lehti täyttää koko ruudun, ja ilman varaa
-   * linkki jäi iPadilla kameraloven korkeudelle eikä siihen voinut
-   * osua (omistajan havainto 8.8.2026). */
-  top: calc(0.7rem + env(safe-area-inset-top, 0px));
-  right: 0.75rem;
-  z-index: 4;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   border: 0;
   /* Yleisen nappisäännön käsinpiirretty kulmapyöristys kaartaisi
    * alaviivan ylös vasemmalta — linkin viiva on suora. */
   border-radius: 0;
   background: none;
-  padding: 0.15rem 0.1rem;
+  padding: 0.1rem 0;
   min-height: 0;
   font-family: var(--font-type);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(70, 51, 31, 0.85);
@@ -9755,11 +9762,6 @@ body.maatiedot-tila .board-hint {
        tarina tulee kartan päiväkirjasta ja koko artikkeli Lue lisää -linkistä. -->
   <dialog id="arrival-dialog" class="dialog">
    <div class="dialog-card arrival-card" tabindex="-1" autofocus>
-    <!-- Kulmalinkki maaosion aloitussivulle (maat, joilla on iso
-         kartta js/packs/maakartat.js:ssä): maaosasto ei enää asu
-         lehden etusivulla, vaan omalla sivullaan (omistajan toive
-         7.8.2026). Teksti täytetään maan mukaan: "Saksa-osio ›". -->
-    <button id="arrival-maa-linkki" class="maa-linkki" type="button" hidden></button>
     <!-- Kaupunki ja maa vierekkäisinä palstoina leveällä ruudulla,
          kapealla allekkain (omistajan toive). -->
     <div class="arrival-palstat">
@@ -9773,7 +9775,13 @@ body.maatiedot-tila .board-hint {
            sekä kaupunki- että maalehden yllä. -->
       <p id="arrival-lehti-yla" class="lehti-ylarivi" hidden>Unohdettu aarre</p>
       <h2 id="arrival-city"></h2>
-      <p id="arrival-lehti-ala" class="lehti-alarivi" hidden></p>
+      <!-- Päiväysrivi keskellä; oikeassa reunassa viivoihin tasattuna
+           liitelinkki maalehteen ("Suomi-liite", omistajan taitto-ohje
+           9.8.2026). Päiväys on omassa spanissa, jottei linkki pyyhkiydy
+           tekstin päivittyessä. -->
+      <p id="arrival-lehti-ala" class="lehti-alarivi" hidden><span
+        id="arrival-lehti-pvm"></span><button id="arrival-maa-linkki"
+        class="maa-linkki" type="button" hidden></button></p>
       <!-- Päivän sää maston alla (lehtikaupungit, joilla on rivi
            js/packs/saatiedot.js:ssä). Napautus avaa koko vuoden
            graafin; ilman verkkoa rivillä lukee kuukausinormaali. -->
@@ -10176,7 +10184,7 @@ body.maatiedot-tila .board-hint {
     <!-- Isoisän suora sitaatti kysymyksen yllä: matkakirja lainaa
          pelkkää isoisän tarinaa siinä paikassa (js/packs/europe-kaari.js). -->
     <div id="quiz-isoisa" class="quiz-isoisa" hidden>
-      <p class="quiz-isoisa-nimio">Isoisän matkakirjasta, 1873</p>
+      <p class="quiz-isoisa-nimio">Matkakirjasta</p>
       <p id="quiz-isoisa-teksti" class="quiz-isoisa-teksti"></p>
     </div>
     <!-- Kohtaamisen avaus: hahmon tervehdys kirjoittuu ennen kysymystä
@@ -16603,37 +16611,32 @@ const EUROPE_SAAPUMISET = {
    * Pariisi (pari: Madridin kohtaaminen), punta Rooma, E. G:n kortti
    * vain Kairossa (africa-saapumiset).
    */
+  /* Uusi malli — ks. Edinburghin kommentti. */
   pariisi: {
-    kuvaus: 'Kahvilan tarjoilija toi kaakaon, jota en ollut tilannut: '
-      + '"Pöytä seitsemän tarjoaa aina teidän suvullenne." Pöydän '
-      + 'kannen alle oli liimattu pieni messinkiavain.',
-    nosto: 'Isoisä kirjoitti: "Istuin kolme tuntia samassa kahvilassa. '
-      + 'En huvikseni — ovella seisoi mies, joka ei tilannut mitään." '
-      + 'Tilasin toisen kaakaon ja jäin.',
-    luenta: '[curious] Kahvilan tarjoilija toi kaakaon, jota en ollut '
-      + 'tilannut: "Pöytä seitsemän tarjoaa aina teidän suvullenne." '
-      + '[whispers] Pöydän kannen alle oli liimattu pieni '
-      + 'messinkiavain. [softly] Isoisä kirjoitti: "Istuin kolme '
-      + 'tuntia samassa kahvilassa. En huvikseni — ovella seisoi mies, '
-      + 'joka ei tilannut mitään." [warmly] Tilasin toisen kaakaon ja '
-      + 'jäin.',
+    kuvaus: 'Kioskin myyjä työnsi lehden kainalooni: "Sivu '
+      + 'yhdeksän, monsieur." Sivulla oli ilmoitus: '
+      + '"Löytötavaratoimistossa englantilainen matkalaukku '
+      + 'vuodelta 1873. Noudettava ennen sunnuntaita." Tänään on '
+      + 'lauantai.',
+    luenta: '[curious] Kioskin myyjä työnsi lehden kainalooni: '
+      + '"Sivu yhdeksän, monsieur." [softly] Sivulla oli ilmoitus: '
+      + '[whispers] "Löytötavaratoimistossa englantilainen '
+      + 'matkalaukku vuodelta 1873. Noudettava ennen sunnuntaita." '
+      + '[curious] Tänään on lauantai.',
   },
 
+  /* Uusi malli — ks. Edinburghin kommentti. */
   ateena: {
-    kuvaus: 'Akropoliin lippuluukulla myyjä ojensi lipun, jota en '
-      + 'ollut ostanut: "Seuralaisenne maksoi jo." Huipulla ei '
-      + 'odottanut ketään — vain tyhjä penkki, ja siinä vielä lämmin '
-      + 'paikka.',
-    nosto: 'Isoisä kirjoitti temppelin juurella: "Täällä keksittiin, '
-      + 'että kaupunkia voi johtaa keskustelemalla. Kaikkien kanssa en '
-      + 'silti keskustele." Ukolla oli tapana olla oikeassa.',
-    luenta: '[curious] Akropoliin lippuluukulla myyjä ojensi lipun, '
-      + 'jota en ollut ostanut: "Seuralaisenne maksoi jo." [whispers] '
-      + 'Huipulla ei odottanut ketään — vain tyhjä penkki, ja siinä '
-      + 'vielä lämmin paikka. [softly] Isoisä kirjoitti temppelin '
-      + 'juurella: "Täällä keksittiin, että kaupunkia voi johtaa '
-      + 'keskustelemalla. Kaikkien kanssa en silti keskustele." '
-      + '[warmly] Ukolla oli tapana olla oikeassa.',
+    kuvaus: 'Torin kauppias antoi minun maistaa oliiveja kolmesta '
+      + 'ruukusta ja kysyi, mikä vuori maistui parhaalta. Nauroin, '
+      + 'kunnes hän osoitti rinteitä kaupungin takana: jokainen '
+      + 'ruukku oli omaltaan. Ostin pussillisen sitä vuorta, jonka '
+      + 'nimeä en osannut lausua.',
+    luenta: '[curious] Torin kauppias antoi minun maistaa oliiveja '
+      + 'kolmesta ruukusta ja kysyi, mikä vuori maistui parhaalta. '
+      + '[warmly] Nauroin, kunnes hän osoitti rinteitä kaupungin '
+      + 'takana: jokainen ruukku oli omaltaan. Ostin pussillisen '
+      + 'sitä vuorta, jonka nimeä en osannut lausua.',
   },
 
   rooma: {
@@ -17238,58 +17241,99 @@ const EUROPE_SAAPUMISET = {
 
 // ===== js/packs/europe-kaari.js =====
 /*
- * Isoisän kaari: suorat sitaatit visaan ja aarteeseen.
+ * Isoisän kaari: sitaatit visaan ja aarteeseen.
  *
- * Omistajan päätökset 8.8.2026 illalla:
- *  - isoisä pois saapumisista (ellei todella hyvää syytä) ja sisään
- *    kysymys- ja aarrehetkiin
- *  - "matkakirja siteeraisi suoraan pelkkää isoisän tarinaa" — tekstit
- *    ovat PUHDASTA isoisää (minä-muoto, 1873), kehyksen kertoo
- *    käyttöliittymän nimiö "Isoisän matkakirjasta, 1873"
- *  - luennat isoisän omalla äänellä (pilotissa omistajan valitsema
- *    voice id R3XXDwKMU2YHwBcuYUH3)
+ * Omistajan päätökset 8.–9.8.2026:
+ *  - isoisä pois saapumisista; hän puhuu visan ja aarteen hetkissä
+ *  - "kaksi eri lukijan ääntä ei toimi" — SAMA kertojaääni lukee
+ *    kaiken, ja puhuja selviää TEKSTISTÄ: lainausmerkit, vanha
+ *    tyyli, vuosiluku tai nuoren herran kommentti lopussa kertovat
+ *    kumpi puhuu. "Isoisä kirjoitti" -muotoa vältetään, mutta sitä
+ *    saa käyttää jos se on jossain tekstissä paras.
  *
- * visa  = sitaatti tietovisan yllä; sitoo kysymyksen kaupunkiin ja
- *         siihen ihmiseen, jonka nuori herra kohtasi saapumisessa.
- * aarre = sitaatti kätkön paljastuessa; SULKEE SAMAN KUVAN, jonka
- *         saapuminen avasi (sääntö: ei viittauksia kuviin, joita
- *         teksteissä ei enää ole).
+ * visa  = isoisän rivi lainausmerkeissä + Reginaldin lyhyt reaktio;
+ *         näkyy tietovisan yllä nimiöllä "Matkakirjasta".
+ * aarre = isoisän rivi + Reginaldin kuittaus kätkön paljastuessa;
+ *         SULKEE SAMAN KUVAN, jonka saapuminen avasi.
  * luennat = true kun äänitiedostot on generoitu:
  *         assets/audio/puhe-europe-visa-<id>.mp3 ja
- *         assets/audio/puhe-europe-aarre-<id>.mp3.
+ *         assets/audio/puhe-europe-aarre-<id>.mp3 — kaikki samalla
+ *         kertojaäänellä kuin saapumiset.
  *
- * PILOTTI: Edinburgh ja Pietari (omistajan tilaus 8.8.: "tee kaksi
- * kokonaista kaupunkia kaikkine lukuäänineen"). Loput kaupungit
- * kirjoitetaan, kun omistaja on kuullut pilotin.
+ * PILOTTI: Edinburgh, Pariisi, Ateena ja Pietari (omistajan tilaus
+ * 9.8.: "tee neljä kaupunkia kokonaan uusiksi ja generoi niin
+ * kuuntelen"). Loput kaupungit vasta kuuntelun jälkeen.
  *
  * Vain Fable kirjoittaa tähän tiedostoon (tarinallinen aines).
  */
 const EUROPE_KAARI = {
   edinburgh: {
-    visa: 'Tässä kaupungissa oikea vastaus on avain. Kadut ovat '
-      + 'päällekkäin kuin kirjan sivut — ja väärä kerros vie '
-      + 'väärälle vuosisadalle.',
-    visaLuenta: '[softly] Tässä kaupungissa oikea vastaus on avain. '
-      + 'Kadut ovat päällekkäin kuin kirjan sivut — [whispers] ja '
-      + 'väärä kerros vie väärälle vuosisadalle.',
-    aarre: 'Yövartija saattoi minutkin kerran oikealle sivulle. Jos '
-      + 'löysit tämän, hän näytti tietä sinullekin — kiitä häntä '
-      + 'puolestani.',
-    aarreLuenta: '[warmly] Yövartija saattoi minutkin kerran '
-      + 'oikealle sivulle. [softly] Jos löysit tämän, hän näytti '
-      + 'tietä sinullekin — kiitä häntä puolestani.',
+    visa: '"Tässä kaupungissa oikea vastaus on avain. Kadut ovat '
+      + 'päällekkäin kuin kirjan sivut — väärä kerros vie väärälle '
+      + 'vuosisadalle." Käsiala oli haalistunutta mutta varmaa. '
+      + 'Vastasin kuin koe olisi hänen.',
+    visaLuenta: '[softly] "Tässä kaupungissa oikea vastaus on '
+      + 'avain. Kadut ovat päällekkäin kuin kirjan sivut — '
+      + '[whispers] väärä kerros vie väärälle vuosisadalle." '
+      + '[curious] Käsiala oli haalistunutta mutta varmaa. Vastasin '
+      + 'kuin koe olisi hänen.',
+    aarre: '"Yövartija saattoi minutkin kerran oikealle sivulle. '
+      + 'Kiitä häntä puolestani." Kujan päässä lyhty heilahti kuin '
+      + 'lakki.',
+    aarreLuenta: '[softly] "Yövartija saattoi minutkin kerran '
+      + 'oikealle sivulle. Kiitä häntä puolestani." [warmly] Kujan '
+      + 'päässä lyhty heilahti kuin lakki.',
+    luennat: true,
+  },
+  pariisi: {
+    visa: '"Löytötavaratoimiston tiskillä ei kysytä nimeä vaan '
+      + 'asiaa. Jos laukkuni on yhä siellä, vastaa niin kuin minä '
+      + 'vastaisin." Merkintä oli tehty viisikymmentä vuotta sitten '
+      + '— ja silti se tiesi, että seisoisin tässä.',
+    visaLuenta: '[softly] "Löytötavaratoimiston tiskillä ei kysytä '
+      + 'nimeä vaan asiaa. Jos laukkuni on yhä siellä, vastaa niin '
+      + 'kuin minä vastaisin." [curious] Merkintä oli tehty '
+      + 'viisikymmentä vuotta sitten — [whispers] ja silti se '
+      + 'tiesi, että seisoisin tässä.',
+    aarre: '"Jätin laukkuun valokuvan pöydästä seitsemän. Tilaa '
+      + 'kaakao ja jää istumaan — joku tulee aina." Tilasin.',
+    aarreLuenta: '[softly] "Jätin laukkuun valokuvan pöydästä '
+      + 'seitsemän. Tilaa kaakao ja jää istumaan — joku tulee '
+      + 'aina." [warmly] Tilasin.',
+    luennat: true,
+  },
+  ateena: {
+    visa: '"Torin kauppias kysyy kaikilta saman kysymyksen. Vastaa '
+      + 'oikein, niin saat neljännen maun — sitä ei myydä rahalla." '
+      + 'Vuoden 1873 mustetta, mutta kauppias nyökkäsi kuin ohje '
+      + 'olisi eilinen.',
+    visaLuenta: '[softly] "Torin kauppias kysyy kaikilta saman '
+      + 'kysymyksen. Vastaa oikein, niin saat neljännen maun — '
+      + '[whispers] sitä ei myydä rahalla." [curious] Vuoden 1873 '
+      + 'mustetta, mutta kauppias nyökkäsi kuin ohje olisi eilinen.',
+    aarre: '"Kätkin ruukun oliivipuun juurelle. Vanhinta ei etsitä '
+      + 'museosta — tämä puu ehti nähdä Sokrateen." Ja nyt minut, '
+      + 'lisäsin mielessäni.',
+    aarreLuenta: '[softly] "Kätkin ruukun oliivipuun juurelle. '
+      + 'Vanhinta ei etsitä museosta — tämä puu ehti nähdä '
+      + 'Sokrateen." [warmly] Ja nyt minut, lisäsin mielessäni.',
     luennat: true,
   },
   pietari: {
-    visa: 'Eremitaasissa älä seuraa opasta vaan kissaa. Se vie '
-      + 'oikean taulun luo — jos osaat vastata sen katseeseen.',
-    visaLuenta: '[softly] Eremitaasissa älä seuraa opasta vaan '
-      + 'kissaa. [whispers] Se vie oikean taulun luo — jos osaat '
-      + 'vastata sen katseeseen.',
-    aarre: 'Minutkin johdatti tänne kissa. Luota aina virkamieheen, '
-      + 'jolla on viikset.',
-    aarreLuenta: '[warmly] Minutkin johdatti tänne kissa. [softly] '
-      + 'Luota aina virkamieheen, jolla on viikset.',
+    visa: '"Eremitaasissa älä seuraa opasta vaan kissaa. Se vie '
+      + 'oikean taulun luo, jos osaat vastata sen katseeseen." En '
+      + 'tiennyt kumpaa katsoa tarkemmin: riviä vai kissaa, joka jo '
+      + 'odotti ovella.',
+    visaLuenta: '[softly] "Eremitaasissa älä seuraa opasta vaan '
+      + 'kissaa. Se vie oikean taulun luo, jos osaat vastata sen '
+      + 'katseeseen." [curious] En tiennyt kumpaa katsoa tarkemmin: '
+      + 'riviä vai kissaa, joka jo odotti ovella.',
+    aarre: '"Minutkin johdatti tänne kissa. Luota aina '
+      + 'virkamieheen, jolla on viikset." Kissa nuolaisi '
+      + 'käpäläänsä kuin kuittaukseksi.',
+    aarreLuenta: '[softly] "Minutkin johdatti tänne kissa. Luota '
+      + 'aina virkamieheen, jolla on viikset." [warmly] Kissa '
+      + 'nuolaisi käpäläänsä kuin kuittaukseksi.',
     luennat: true,
   },
 };
@@ -110218,6 +110262,7 @@ class UI {
     this.arrivalLehtiKuvat = document.getElementById('arrival-lehti-kuvat');
     this.arrivalLehtiYla = document.getElementById('arrival-lehti-yla');
     this.arrivalLehtiAla = document.getElementById('arrival-lehti-ala');
+    this.arrivalLehtiPvm = document.getElementById('arrival-lehti-pvm');
     // Päivän sää maston alla; napautus avaa koko vuoden graafin.
     this.arrivalSaa = document.getElementById('arrival-saa');
     this.arrivalSaa.addEventListener('click', () => this.naytaVuosiSaa());
@@ -116004,7 +116049,8 @@ class UI {
     if (maakartta) this.arrivalMaa.hidden = true;
     this.tutkiMaaIso = maanIso;
     this.tutkiMaaNimi = otsikonMaa ?? null;
-    this.arrivalMaaLinkki.textContent = maakartta ? `${otsikonMaa}-osio ›` : '';
+    // Liitelinkki päiväysrivillä: "Suomi-liite" (omistajan taitto-ohje 9.8.2026).
+    this.arrivalMaaLinkki.textContent = maakartta ? `${otsikonMaa}-liite` : '';
     this.arrivalDialog.classList.toggle('lehti', lehti);
     this.piirraLehtiKuvat(kansi?.kansikuvat);
     // Lehdessä ei ole Lue lisää -nappeja eikä wikin kuvakarusellia:
@@ -116018,7 +116064,7 @@ class UI {
     this.arrivalLehtiYla.hidden = !lehti;
     // Päiväysrivi kuin lehden nimiön alla: maa ja monesko matkapäivä.
     const maanNimi = this.arrivalMaaTiedot?.nimi;
-    this.arrivalLehtiAla.textContent = lehti
+    this.arrivalLehtiPvm.textContent = lehti
       ? [maanNimi, `${this.game.dayCount()}. matkapäivä`].filter(Boolean).join(' · ')
       : '';
     this.arrivalLehtiAla.hidden = !lehti;
@@ -116201,7 +116247,7 @@ class UI {
     this.arrivalIntro.hidden = true;
     this.arrivalLehtiYla.hidden = false;
     this.arrivalCity.textContent = otsikko;
-    this.arrivalLehtiAla.textContent = 'Maan oma lehti';
+    this.arrivalLehtiPvm.textContent = 'Maan oma lehti';
     this.arrivalLehtiAla.hidden = false;
     this.naytaLehtiSaa(null);
     if (!this.arrivalDialog.open) this.arrivalDialog.showModal();
@@ -116285,13 +116331,12 @@ class UI {
     const etusivulla = (this.tutkiSivu ?? 0) === 0;
     const maalehti = this.tutkiTila === 'maa';
     /*
-     * Kohtaaminen/kätkö heti saapuessa: nappi on kaupunkilehden
-     * ETUSIVULLA täysleveänä palkkina, ei enää viimeisellä sivulla
-     * (omistajan päätös 9.8.2026 — aiempi "vasta viimeisellä
-     * sivulla" -malli hautasi napin koko lehden selaamisen taakse,
-     * kun lähes joka kaupungilla on nyt lehti).
+     * Kohtaaminen/kätkö JOKAISEN kaupunkisivun alareunassa
+     * (omistajan tarkennus 9.8.2026: "etsi kätkö pitää olla
+     * jokaisen kaupunkisivun alareunassa") — täysleveä palkki, jota
+     * ei tarvitse etsiä miltään tietyltä sivulta.
      */
-    kyllä.hidden = maalehti || !etusivulla;
+    kyllä.hidden = maalehti;
     ei.textContent = maalehti || viimeisella ? 'Poistu' : 'Poistu lehdestä';
 
     /*
@@ -116311,7 +116356,8 @@ class UI {
     }
     const liiteNimi = this.tutkiMaaNimi;
     liite.hidden = maalehti || !viimeisella || !this.tutkiMaaIso || !liiteNimi;
-    liite.textContent = liiteNimi ? `Lue ${liiteNimi}-liite ›` : '';
+    // Pelkkä "Suomi-liite" (omistajan tarkennus 9.8.2026).
+    liite.textContent = liiteNimi ? `${liiteNimi}-liite` : '';
 
     let palkki = this.arrivalDialog.querySelector(':scope .tutki-alanapit');
     if (!palkki) {
@@ -120506,7 +120552,7 @@ class UI {
     const kaari = type !== 'empty' ? EUROPE_KAARI[this.game.quiz?.cityId] : null;
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', `"${kaari.aarre}"`));
-      caption.appendChild(html('span', 'reveal-isoisa-nimio', 'Isoisän matkakirjasta, 1873'));
+      caption.appendChild(html('span', 'reveal-isoisa-nimio', 'Matkakirjasta'));
       if (kaari.luennat && kertojaTila() !== 'ei') {
         this.playDiaryVoice(`assets/audio/puhe-europe-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 });
       }
@@ -121283,6 +121329,9 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 419, teksti: 'Neljä kaupunkia yhden kertojan malliin äänineen' },
+  { v: 419, teksti: 'Etsi kätkö joka kaupunkisivun alareunassa' },
+  { v: 419, teksti: 'Liitelinkki päiväysriville, tuore versionumero isompana' },
   { v: 418, teksti: 'Kohdekartta Prahaan, Wieniin, Budapestiin ja Pariisiin' },
   { v: 417, teksti: 'Valokuvakysymys näyttää taas paikkoja, ei henkilöitä' },
   { v: 416, teksti: 'Lue maa-liite -nappi kaupunkilehden loppuun' },
@@ -121779,7 +121828,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.418';
+const APP_VERSION = '2026-08-09.419';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -122098,6 +122147,22 @@ function paivitaVersioKulma() {
   versioKulma.textContent = numero;
 }
 paivitaVersioKulma();
+
+/*
+ * Tuore päivitys näkyy isommalla (omistajan toive 9.8.2026:
+ * "versionumero saisi näkyä vielä isommalla jonkun aikaa aina
+ * päivityksen jälkeen ja sitten pienentyä"). Ensimmäinen avaus
+ * uudella versiolla pitää numeron korostettuna puoli minuuttia,
+ * sitten se kutistuu tavalliseksi CSS-siirtymällä.
+ */
+try {
+  const AVAIN = 'matkakirja-nahty-versio';
+  if (localStorage.getItem(AVAIN) !== APP_VERSION) {
+    localStorage.setItem(AVAIN, APP_VERSION);
+    versioKulma.classList.add('tuore');
+    setTimeout(() => versioKulma.classList.remove('tuore'), 30000);
+  }
+} catch { /* yksityistila ilman localStoragea: ei korostusta */ }
 
 /*
  * Päivitysloki napautuksesta (omistajan toive). Numero kulmassa on jo

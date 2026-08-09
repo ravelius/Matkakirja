@@ -1531,6 +1531,7 @@ export class UI {
     this.arrivalLehtiKuvat = document.getElementById('arrival-lehti-kuvat');
     this.arrivalLehtiYla = document.getElementById('arrival-lehti-yla');
     this.arrivalLehtiAla = document.getElementById('arrival-lehti-ala');
+    this.arrivalLehtiPvm = document.getElementById('arrival-lehti-pvm');
     // Päivän sää maston alla; napautus avaa koko vuoden graafin.
     this.arrivalSaa = document.getElementById('arrival-saa');
     this.arrivalSaa.addEventListener('click', () => this.naytaVuosiSaa());
@@ -7318,7 +7319,8 @@ export class UI {
     if (maakartta) this.arrivalMaa.hidden = true;
     this.tutkiMaaIso = maanIso;
     this.tutkiMaaNimi = otsikonMaa ?? null;
-    this.arrivalMaaLinkki.textContent = maakartta ? `${otsikonMaa}-osio ›` : '';
+    // Liitelinkki päiväysrivillä: "Suomi-liite" (omistajan taitto-ohje 9.8.2026).
+    this.arrivalMaaLinkki.textContent = maakartta ? `${otsikonMaa}-liite` : '';
     this.arrivalDialog.classList.toggle('lehti', lehti);
     this.piirraLehtiKuvat(kansi?.kansikuvat);
     // Lehdessä ei ole Lue lisää -nappeja eikä wikin kuvakarusellia:
@@ -7332,7 +7334,7 @@ export class UI {
     this.arrivalLehtiYla.hidden = !lehti;
     // Päiväysrivi kuin lehden nimiön alla: maa ja monesko matkapäivä.
     const maanNimi = this.arrivalMaaTiedot?.nimi;
-    this.arrivalLehtiAla.textContent = lehti
+    this.arrivalLehtiPvm.textContent = lehti
       ? [maanNimi, `${this.game.dayCount()}. matkapäivä`].filter(Boolean).join(' · ')
       : '';
     this.arrivalLehtiAla.hidden = !lehti;
@@ -7515,7 +7517,7 @@ export class UI {
     this.arrivalIntro.hidden = true;
     this.arrivalLehtiYla.hidden = false;
     this.arrivalCity.textContent = otsikko;
-    this.arrivalLehtiAla.textContent = 'Maan oma lehti';
+    this.arrivalLehtiPvm.textContent = 'Maan oma lehti';
     this.arrivalLehtiAla.hidden = false;
     this.naytaLehtiSaa(null);
     if (!this.arrivalDialog.open) this.arrivalDialog.showModal();
@@ -7599,13 +7601,12 @@ export class UI {
     const etusivulla = (this.tutkiSivu ?? 0) === 0;
     const maalehti = this.tutkiTila === 'maa';
     /*
-     * Kohtaaminen/kätkö heti saapuessa: nappi on kaupunkilehden
-     * ETUSIVULLA täysleveänä palkkina, ei enää viimeisellä sivulla
-     * (omistajan päätös 9.8.2026 — aiempi "vasta viimeisellä
-     * sivulla" -malli hautasi napin koko lehden selaamisen taakse,
-     * kun lähes joka kaupungilla on nyt lehti).
+     * Kohtaaminen/kätkö JOKAISEN kaupunkisivun alareunassa
+     * (omistajan tarkennus 9.8.2026: "etsi kätkö pitää olla
+     * jokaisen kaupunkisivun alareunassa") — täysleveä palkki, jota
+     * ei tarvitse etsiä miltään tietyltä sivulta.
      */
-    kyllä.hidden = maalehti || !etusivulla;
+    kyllä.hidden = maalehti;
     ei.textContent = maalehti || viimeisella ? 'Poistu' : 'Poistu lehdestä';
 
     /*
@@ -7625,7 +7626,8 @@ export class UI {
     }
     const liiteNimi = this.tutkiMaaNimi;
     liite.hidden = maalehti || !viimeisella || !this.tutkiMaaIso || !liiteNimi;
-    liite.textContent = liiteNimi ? `Lue ${liiteNimi}-liite ›` : '';
+    // Pelkkä "Suomi-liite" (omistajan tarkennus 9.8.2026).
+    liite.textContent = liiteNimi ? `${liiteNimi}-liite` : '';
 
     let palkki = this.arrivalDialog.querySelector(':scope .tutki-alanapit');
     if (!palkki) {
@@ -11822,7 +11824,7 @@ export class UI {
     const kaari = type !== 'empty' ? EUROPE_KAARI[this.game.quiz?.cityId] : null;
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', `"${kaari.aarre}"`));
-      caption.appendChild(html('span', 'reveal-isoisa-nimio', 'Isoisän matkakirjasta, 1873'));
+      caption.appendChild(html('span', 'reveal-isoisa-nimio', 'Matkakirjasta'));
       if (kaari.luennat && kertojaTila() !== 'ei') {
         this.playDiaryVoice(`assets/audio/puhe-europe-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 });
       }

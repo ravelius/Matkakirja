@@ -19,7 +19,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.418';
+const APP_VERSION = '2026-08-09.419';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -338,6 +338,22 @@ function paivitaVersioKulma() {
   versioKulma.textContent = numero;
 }
 paivitaVersioKulma();
+
+/*
+ * Tuore päivitys näkyy isommalla (omistajan toive 9.8.2026:
+ * "versionumero saisi näkyä vielä isommalla jonkun aikaa aina
+ * päivityksen jälkeen ja sitten pienentyä"). Ensimmäinen avaus
+ * uudella versiolla pitää numeron korostettuna puoli minuuttia,
+ * sitten se kutistuu tavalliseksi CSS-siirtymällä.
+ */
+try {
+  const AVAIN = 'matkakirja-nahty-versio';
+  if (localStorage.getItem(AVAIN) !== APP_VERSION) {
+    localStorage.setItem(AVAIN, APP_VERSION);
+    versioKulma.classList.add('tuore');
+    setTimeout(() => versioKulma.classList.remove('tuore'), 30000);
+  }
+} catch { /* yksityistila ilman localStoragea: ei korostusta */ }
 
 /*
  * Päivitysloki napautuksesta (omistajan toive). Numero kulmassa on jo
