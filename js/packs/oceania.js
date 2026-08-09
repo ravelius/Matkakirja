@@ -265,7 +265,9 @@ export const OCEANIA = {
     // jalo-opaaleista, ja kaivoskaupungissa asutaan maan alla helteen takia.
     types: themedTokenTypes({
       star: { name: 'Eteläristin helmi' },
-      topaz: { name: 'Opaali', color: '#7fb7c9' },
+      ruby: { name: 'Opaali', color: '#7fb7c9' },
+      emerald: { name: 'Paua-simpukkakoru', color: '#3a9ea6' },
+      topaz: { name: 'Simpukkarahanauha', color: '#e0cfa8' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 6, empty: 9 },
   },

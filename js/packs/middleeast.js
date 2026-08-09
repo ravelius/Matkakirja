@@ -189,7 +189,9 @@ export const MIDDLE_EAST = {
     // Turkoosi on saanut nimensä Turkista, jonka kautta kivi kulki Eurooppaan.
     types: themedTokenTypes({
       star: { name: 'Sheban kuningattaren aarre' },
-      topaz: { name: 'Turkoosi', color: '#3aaea6' },
+      ruby: { name: 'Messinkilamppu', color: '#c88f2b' },
+      emerald: { name: 'Suitsukepihka', color: '#d8c690' },
+      topaz: { name: 'Sahramipussi', color: '#e05c20' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 3, emerald: 4, topaz: 6, empty: 7 },
   },

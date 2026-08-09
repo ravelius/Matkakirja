@@ -66340,7 +66340,12 @@ const AFRICA = {
      * käytti oletusnimeä — eikä se enää käy: Unohdettu aarre on oma pelinsä,
      * ja pääaarre on nyt oikea esine oikeine tarinoineen.
      */
-    types: themedTokenTypes({ star: { name: 'Suuren Zimbabwen kivilintu' } }),
+    types: themedTokenTypes({
+      star: { name: 'Suuren Zimbabwen kivilintu' },
+      ruby: { name: 'Kimberleyn timantti', color: '#bcd6e8' },
+      emerald: { name: 'Kultahippu', color: '#e0b02a' },
+      topaz: { name: 'Kaurikotilo', color: '#e0cfa8' },
+    }),
     // 37 laattakaupunkia seitsemän uuden paikan jälkeen (omistajan laajennus).
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 11 },
   },
@@ -71430,6 +71435,8 @@ const EUROPE = {
     // Meripihka on Itämeren oma jalokivi: fossiloitunutta puuhartsia.
     types: themedTokenTypes({
       star: { name: 'Meripihkahuoneen aarre' },
+      ruby: { name: 'Kruununjalokivi', color: '#b0304a' },
+      emerald: { name: 'Ritarin hopeamiekka', color: '#aeb6c2' },
       topaz: { name: 'Meripihka', color: '#d98f2b' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 12 },
@@ -71725,7 +71732,9 @@ const MIDDLE_EAST = {
     // Turkoosi on saanut nimensä Turkista, jonka kautta kivi kulki Eurooppaan.
     types: themedTokenTypes({
       star: { name: 'Sheban kuningattaren aarre' },
-      topaz: { name: 'Turkoosi', color: '#3aaea6' },
+      ruby: { name: 'Messinkilamppu', color: '#c88f2b' },
+      emerald: { name: 'Suitsukepihka', color: '#d8c690' },
+      topaz: { name: 'Sahramipussi', color: '#e05c20' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 3, emerald: 4, topaz: 6, empty: 7 },
   },
@@ -74539,7 +74548,9 @@ const ASIA = {
     // tuhansien vuosien ajan.
     types: themedTokenTypes({
       star: { name: 'Keisarin jadesinetti' },
-      topaz: { name: 'Jade', color: '#5fa87a' },
+      ruby: { name: 'Sukeltajan helmi', color: '#e8e4da' },
+      emerald: { name: 'Silkkikäärö', color: '#c94f7c' },
+      topaz: { name: 'Posliinikuppi', color: '#7f9fc9' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 10 },
   },
@@ -76894,7 +76905,9 @@ const OCEANIA = {
     // jalo-opaaleista, ja kaivoskaupungissa asutaan maan alla helteen takia.
     types: themedTokenTypes({
       star: { name: 'Eteläristin helmi' },
-      topaz: { name: 'Opaali', color: '#7fb7c9' },
+      ruby: { name: 'Opaali', color: '#7fb7c9' },
+      emerald: { name: 'Paua-simpukkakoru', color: '#3a9ea6' },
+      topaz: { name: 'Simpukkarahanauha', color: '#e0cfa8' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 6, empty: 9 },
   },
@@ -79569,7 +79582,9 @@ const NORTHAMERICA = {
     // kymmeniätuhansia onnenonkijoita Yukonin jokilaaksoon.
     types: themedTokenTypes({
       star: { name: 'Montezuman aarre' },
-      topaz: { name: 'Klondiken kulta', color: '#e0b02a' },
+      ruby: { name: 'Kultaryntäyksen hippu', color: '#e0b02a' },
+      emerald: { name: 'Turkoosikoru', color: '#3aaea6' },
+      topaz: { name: 'Kaakaopavut', color: '#8a5a33' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },
   },
@@ -82258,7 +82273,9 @@ const SOUTHAMERICA = {
     // Andien hopea, jonka takia koko manner aikanaan valloitettiin.
     types: themedTokenTypes({
       star: { name: 'El Doradon aarre' },
-      topaz: { name: 'Potosín hopea', color: '#c9ccd4' },
+      ruby: { name: 'Inkojen kultafiguuri', color: '#e0b02a' },
+      emerald: { name: 'Kolumbian smaragdi', color: '#2fa36b' },
+      topaz: { name: 'Potosín hopeakolikko', color: '#c9ccd4' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },
   },
@@ -125161,6 +125178,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 447, teksti: 'Joka mantereella nyt omat aarteet jalokivien tilalla' },
   { v: 446, teksti: 'Helsingin visa kysyy nyt Linnanmäen jarrumestarista' },
   { v: 445, teksti: 'Vaihe B valmis: viimeiset neljä kaupunkia' },
   { v: 444, teksti: 'Lähi-idän maiden rajat valmiina lautaa varten' },
@@ -125689,7 +125707,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.446';
+const APP_VERSION = '2026-08-09.447';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

@@ -273,7 +273,9 @@ export const NORTHAMERICA = {
     // kymmeniätuhansia onnenonkijoita Yukonin jokilaaksoon.
     types: themedTokenTypes({
       star: { name: 'Montezuman aarre' },
-      topaz: { name: 'Klondiken kulta', color: '#e0b02a' },
+      ruby: { name: 'Kultaryntäyksen hippu', color: '#e0b02a' },
+      emerald: { name: 'Turkoosikoru', color: '#3aaea6' },
+      topaz: { name: 'Kaakaopavut', color: '#8a5a33' },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },
   },
