@@ -7,6 +7,7 @@ import {
   sourceLabel, sourceList, voiceTitle,
 } from '../js/pack.js';
 import { arvoksi, hasSketch } from '../js/packs/africa-puzzles.js';
+import { TARINAKAARI } from '../js/packs/tarinakaari.js';
 import { hasSketch as europeHasSketch } from '../js/packs/europe-puzzles.js';
 
 /** Lähde on merkkijono tai lista merkkijonoja; verkko-osoite vain http(s). */
@@ -2594,7 +2595,15 @@ test('oikea pulma tuo kokemuspisteet, väärä ei rankaise', () => {
   assert.ok(vaarin.quiz.fact);
 });
 
-test('pulma ei käännä laattaa eikä päätä vuoroa', () => {
+/*
+ * Omistajan linjaus 10.8.2026: "Pulma korvaa kohtaamisvisan. Aina on
+ * siis vain yksi tehtävä, joko visa, pulma, tai joku muu." Laatallisessa
+ * kaupungissa pulma on siis pysähdyksen ainoa tehtävä: oikea ratkaisu
+ * kääntää laatan ja sulkeminen päättää vuoron kuten visassa. (Vanha
+ * sääntö "pulma ei käännä laattaa" jää voimaan vain laatattomissa
+ * kaupungeissa — testi alla.)
+ */
+test('laatallisessa kaupungissa pulma on pysähdyksen tehtävä: kääntää laatan ja päättää vuoron', () => {
   const puzzle = packById('africa').puzzles.find((p) => p.city !== 'kairo');
   const game = puzzleGame(405, puzzle.city);
   game.tokens.set(puzzle.city, 'emerald');
@@ -2603,11 +2612,55 @@ test('pulma ei käännä laattaa eikä päätä vuoroa', () => {
 
   game.openPuzzle();
   game.answerQuiz(game.quiz.correct);
+  assert.equal(game.quiz.found, 'emerald', 'oikea ratkaisu paljastaa laatan');
   game.closeQuiz();
 
-  assert.ok(game.tokens.has(puzzle.city), 'pulma käänsi laatan');
+  assert.ok(!game.tokens.has(puzzle.city), 'laatan piti kääntyä');
+  assert.notEqual(game.turnCount, vuoroEnnen, 'vuoron piti päättyä kuten visassa');
+});
+
+test('laatattomassa kaupungissa pulma ei käännä laattaa eikä päätä vuoroa', () => {
+  const puzzle = packById('africa').puzzles.find((p) => p.city !== 'kairo');
+  const game = puzzleGame(405, puzzle.city);
+  game.tokens.delete(puzzle.city);
+  game.phase = 'action';
+  const vuoroEnnen = game.turnCount;
+
+  game.openPuzzle();
+  game.answerQuiz(game.quiz.correct);
+  assert.ok(!game.quiz.found, 'ilman laattaa ei ole paljastettavaa');
+  game.closeQuiz();
+
   assert.equal(game.turnCount, vuoroEnnen, 'pulma päätti vuoron');
   assert.equal(game.phase, 'action', 'vuoro jatkuu siitä mihin jäätiin');
+});
+
+test('tarinakaari ei pakota muotoa: lippukysymys ohittaa kaaren, visa käyttää sen', () => {
+  const pack = packById('europe');
+  const kaupunki = pack.cities.find((c) => TARINAKAARI[c.id]?.kysymys)?.id;
+  assert.ok(kaupunki, 'Euroopassa on kaarikaupunki');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: pack.cities[0].id }],
+    pack,
+    seed: 408,
+  });
+  for (const p of pack.puzzles ?? []) game.puzzlesSeen.add(`europe:${p.city}`);
+  game.player.pos = { type: 'city', city: kaupunki };
+  game.tokens.set(kaupunki, 'ruby');
+  game.phase = 'action';
+
+  // Nimetty muoto (lippukysymys) pysyy lippuna eikä kuluta kaarta
+  // (omistajan linjaus 10.8.2026: muodot vaihtelevat, kaari ei pakota).
+  assert.ok(game.actionQuiz({ form: 'flag' }).ok);
+  assert.equal(game.quiz.kind, 'flag');
+  assert.equal(game.kaariKaytetty.size, 0, 'lippukysymys ei saa kuluttaa kaarta');
+  game.quiz = null;
+  game.phase = 'action';
+
+  // Kun muoto on visa, kaupungin ensimmäinen visa on kaaren kohtaaminen.
+  assert.ok(game.actionQuiz({ form: 'quiz' }).ok);
+  assert.equal(game.quiz.kaari, true, 'ensimmäinen visa on kohtaaminen');
+  assert.equal(game.quiz.question, TARINAKAARI[kaupunki].kysymys.q);
 });
 
 test('pulmassa on apukeinot: vihje ja 50:50', () => {

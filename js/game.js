@@ -1048,9 +1048,13 @@ export class Game {
     if (this.phase !== 'offer' && this.phase !== 'action') {
       return { ok: false, error: 'Väärä vaihe' };
     }
-    // Isoisän pulma avataan ensin: Tutki paikka (oletuskutsu ilman muotoa)
-    // näyttää sen ennen laatan kysymystä, ja pulman jälkeen palataan
-    // saapumiskorttiin. Nimetty muoto tai vaikea kysymys ohittaa pulman.
+    // Isoisän pulma on pysähdyksen AINOA tehtävä silloin kun se on
+    // näkemättä (omistajan linjaus 10.8.2026: "Pulma korvaa
+    // kohtaamisvisan. Aina on siis vain yksi tehtävä, joko visa, pulma,
+    // tai joku muu"). Laatallisessa kaupungissa pulma siis kääntää
+    // laatan kuten visa; laatattomassa se on entiseen tapaan pelkkä
+    // kokemuspistepysähdys. Nimetty muoto tai vaikea kysymys ohittaa
+    // pulman.
     if (!hard && form === null && this.pendingPuzzle()) return this.openPuzzle();
 
     const city = this.tokenHere();
@@ -1066,13 +1070,15 @@ export class Game {
 
     /*
      * Tarinakaari (omistajan tilaus 9.8.2026: paketti suoraan peliin):
-     * kaupungin ensimmäinen aarrepysähdys on KOHTAAMINEN, jossa
-     * henkilö esittää isoisän jättämän kysymyksen. Pari on kirjoitettu
-     * yhteen, joten muoto ei arvo korttia ohi eikä kysymystä arvota
-     * pankista — kaaren jälkeen kaupunki palaa tavalliseen arvontaan.
+     * kohtaaminen, jossa henkilö esittää isoisän jättämän kysymyksen.
+     * Muoto arvotaan silti normaalisti (omistajan linjaus 10.8.2026:
+     * muodot vaihtelevat, kaari ei saa pakottaa joka kaupungin
+     * ensimmäistä tehtävää visaksi) — kaaren kysymys käytetään sillä
+     * kerralla, kun arvonta osuu visaan, ja sen jälkeen kaupunki
+     * palaa tavalliseen kysymyspankkiin.
      */
-    const kaari = hard ? null : this.kaariTarina(city.id);
-    const muoto = (hard || kaari) ? 'quiz' : (form ?? this.pickForm(city.id));
+    const muoto = hard ? 'quiz' : (form ?? this.pickForm(city.id));
+    const kaari = (hard || muoto !== 'quiz') ? null : this.kaariTarina(city.id);
     this.lastForm = muoto;
     if (muoto === 'claim') return this.openClaim(city);
     if (muoto === 'photo') return this.openPhotoQuestion(city);
@@ -1432,13 +1438,18 @@ export class Game {
 
   /**
    * Avaa pulman. Pulma on monivalinta kuten muutkin, joten vastaaminen ja
-   * tuloksen näyttö toimivat ennallaan — vain palkinto ja sulkeminen
-   * poikkeavat: pulma ei käännä laattaa eikä päätä vuoroa.
+   * tuloksen näyttö toimivat ennallaan. Laatallisessa kaupungissa pulma
+   * on pysähdyksen ainoa tehtävä: oikea ratkaisu kääntää laatan ja
+   * sulkeminen päättää vuoron kuten visassa (omistajan linjaus
+   * 10.8.2026). Laatattomassa kaupungissa (esim. aloituskaupunki) pulma
+   * on entiseen tapaan kevyt välipysähdys: kokemuspisteet oikeasta,
+   * vuoro jatkuu saapumiskortista.
    */
   openPuzzle() {
     const puzzle = this.pendingPuzzle();
     if (!puzzle) return { ok: false, error: 'Ei avointa pulmaa' };
 
+    const laatta = Boolean(this.tokenHere());
     this.puzzlesSeen.add(`${this.pack.id}:${puzzle.city}`);
     this.puzzlePrevPhase = this.phase;
     // Sama pulma on joka pelikerralla vähän erilainen. Generointi tapahtuu
@@ -1453,6 +1464,7 @@ export class Game {
     const order = this.shuffledOrder(options.length);
     this.quiz = {
       kind: 'puzzle',
+      laatta,
       cityId: puzzle.city,
       puzzleId: puzzle.id,
       sketchData: sketch,
@@ -1492,13 +1504,19 @@ export class Game {
     this.quiz.right = index === this.quiz.correct;
     this.countAnswer(p, this.quiz.right);
 
-    // Pulma: oikeasta kokemuspisteitä, väärästä ei rangaistusta. Pulma ei
-    // käännä laattaa eikä koskaan estä etenemistä — oikea ratkaisu vain
-    // näytetään.
+    // Pulma: oikeasta kokemuspisteitä, väärästä ei rangaistusta.
+    // Laatallisessa kaupungissa pulma on pysähdyksen ainoa tehtävä,
+    // joten oikea ratkaisu kääntää laatan kuten visassa (omistajan
+    // linjaus 10.8.2026); laatattomassa oikea ratkaisu vain näytetään.
     if (this.quiz.kind === 'puzzle') {
       if (this.quiz.right) {
         this.awardXp(p, XP_PUZZLE);
-        this.say(p.id, `${p.name} ratkaisi isoisän pulman (+${XP_PUZZLE} kp).`);
+        if (this.quiz.laatta) {
+          this.say(p.id, `${p.name} ratkaisi isoisän pulman (+${XP_PUZZLE} kp) ja saa kääntää laatan.`);
+          this.quiz.found = this.revealToken(this.quiz.cityId);
+        } else {
+          this.say(p.id, `${p.name} ratkaisi isoisän pulman (+${XP_PUZZLE} kp).`);
+        }
       } else {
         this.say(p.id, `${p.name} ei ratkaissut isoisän pulmaa — isoisä olisi ollut armollinen.`);
       }
@@ -1613,8 +1631,11 @@ export class Game {
   /** Sulkee kysymyksen ja päättää vuoron — tai aloittaa rosvon kaksintaistelun. */
   closeQuiz() {
     if (!this.quiz) return { ok: false, error: 'Ei avointa kysymystä' };
-    // Pulma keskeytti saapumisen, joten vuoro jatkuu siitä mihin jäätiin.
-    if (this.quiz.kind === 'puzzle') {
+    // Laatattoman kaupungin pulma keskeytti saapumisen, joten vuoro
+    // jatkuu siitä mihin jäätiin. Laatallisen kaupungin pulma sen
+    // sijaan OLI pysähdyksen tehtävä — se suljetaan kuten visa alla
+    // (vuoro päättyy), koska muuten pelaaja saisi heti toisen tehtävän.
+    if (this.quiz.kind === 'puzzle' && !this.quiz.laatta) {
       this.quiz = null;
       if (this.phase !== 'over') this.phase = this.puzzlePrevPhase ?? 'action';
       this.puzzlePrevPhase = null;
