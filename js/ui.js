@@ -7306,6 +7306,7 @@ export class UI {
     this.tutkiMaaEtusivu = Boolean(maakartta);
     if (maakartta) this.arrivalMaa.hidden = true;
     this.tutkiMaaIso = maanIso;
+    this.tutkiMaaNimi = otsikonMaa ?? null;
     this.arrivalMaaLinkki.textContent = maakartta ? `${otsikonMaa}-osio ›` : '';
     this.arrivalDialog.classList.toggle('lehti', lehti);
     this.piirraLehtiKuvat(kansi?.kansikuvat);
@@ -7595,6 +7596,25 @@ export class UI {
      */
     kyllä.hidden = maalehti || !etusivulla;
     ei.textContent = maalehti || viimeisella ? 'Poistu' : 'Poistu lehdestä';
+
+    /*
+     * "Lue X-liite" kaupunkilehden viimeiselle sivulle (omistajan
+     * toive 9.8.2026): lehden lopusta pääsee suoraan maalehteen,
+     * jossa pitkä versio asuu. Nappi rakennetaan kerran ja
+     * päivitetään sivun mukana.
+     */
+    let liite = this.arrivalDialog.querySelector(':scope .maa-liite-nappi');
+    if (!liite) {
+      liite = html('button', 'maa-liite-nappi');
+      liite.type = 'button';
+      liite.addEventListener('click', () => {
+        if (this.tutkiMaaIso) this.avaaMaalehti(this.tutkiMaaIso);
+      });
+      ei.parentElement?.appendChild(liite);
+    }
+    const liiteNimi = this.tutkiMaaNimi;
+    liite.hidden = maalehti || !viimeisella || !this.tutkiMaaIso || !liiteNimi;
+    liite.textContent = liiteNimi ? `Lue ${liiteNimi}-liite ›` : '';
 
     let palkki = this.arrivalDialog.querySelector(':scope .tutki-alanapit');
     if (!palkki) {

@@ -9479,3 +9479,16 @@ body.maatiedot-tila .board-hint {
   color: rgba(70, 51, 31, 0.75);
   cursor: pointer;
 }
+
+/*
+ * "Lue X-liite" kaupunkilehden viimeisellä sivulla: täysleveä matala
+ * palkki alanappien alla, samaan tapaan kuin etusivun Tapaa X
+ * (omistajan toive 9.8.2026). Tiedoston lopussa, jotta se voittaa
+ * lehden yleisen alanappisäännön samalla erottelutarkkuudella.
+ */
+.dialog .arrival-card .dialog-actions button.maa-liite-nappi {
+  order: 9;
+  flex: 1 1 100%;
+  min-height: 0;
+  padding: 0.45rem 0.8rem;
+}
