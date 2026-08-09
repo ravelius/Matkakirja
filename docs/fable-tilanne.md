@@ -33,26 +33,24 @@ käytä aikaa lautojen kaupunkisijaintien uudelleentarkistuksiin
 (esim. piste-monikulmiossa-ajot); tarkista vain UUSI data jota
 peliin tuodaan, ei olemassa olevaa lautaa.
 
-## ODOTTAA KONTIN KIERRÄTYSTÄ: aarrekuvien AI-generointi
+## Aarrekuvat: TEHTY (v455) + avaimen kierrätys suositeltava
 
-Omistaja lisäsi GOOGLE_API_KEY:n ympäristömuuttujiin 9.8. illalla —
-se näkyy vasta kun kontti käynnistyy uudelleen. HETI kun
-`echo $GOOGLE_API_KEY` tuottaa arvon: aja
-`NODE_USE_ENV_PROXY=1 node tools/generoi-aarrekuvat.mjs` (21 kuvaa,
-Imagen 3, yhtenäinen tyyliprompti), katso jokainen kuva silmin,
-pienennä ~640 px:iin (PIL ei ole kontissa — käytä Chromium-canvasta
-Playwrightilla), vaihda pakettien kuva-kentät paikallisiin
-(`assets/aarteet/aarre-<lauta>-<taso>.png`), poista kuvaLahde-rivit
-(AI-kuva ei tarvitse Commons-lähderiviä), lisää tiedostot sw.js:n
-SHELL-listaan ja julkaise versionostolla. Suunnitelma ja promptit:
-tools/aarrekuvat-promptit.md ja tools/generoi-aarrekuvat.mjs.
+Kaikki 21 manneraarretta generoitu `gemini-3-pro-image`-mallilla
+(Imagen 3/4 eivät olleet avaimen käytettävissä), silmätarkistettu,
+pienennetty 640 px JPEG:ksi ja kytketty peliin (#662). Pääaarteiden
+promptit (tools/aarrekuvat-promptit.md kohdat 22–31) odottavat
+omistajan erillistä tilausta. HUOM: omistaja liitti Google-avaimen
+suoraan chattiin — avain on poistettu levyltä käytön jälkeen, mutta
+omistajalle on suositeltu sen kierrättämistä (aistudio.google.com).
+GOOGLE_API_KEY voi silti olla ympäristömuuttujissa kontin
+kierrätyksen jälkeen, jos pääaarteet halutaan generoida.
 
 ## Julkaisumekaniikka (törmäyksiä tulee jatkuvasti)
 
-- Main on **v436** (`matkakirja-2026-08-09.436`). Versiot `2026-08-09.NNN`.
-  Tuoreimmat: Opus 1:n neljä maalehteä + Helsinki/Suomi-siirto (v435, #599),
-  Sonnet 2:n Ateena/Amsterdam/Dublin-nähtävyysjutut (v436, #624; korvasi
-  vanhentuneen #611:n). `git fetch origin main` silti aina ennen numeroa.
+- Main on **v455** (`matkakirja-2026-08-09.455`). Versiot `2026-08-09.NNN`.
+  Tuoreimmat: minitehtävät kaikille aihesivuille (v454, #659), Eurooppa-
+  kaaripaketin erä 1 työhuoneeseen (#660), AI-aarrekuvat (v455, #662).
+  `git fetch origin main` silti aina ennen numeroa.
 - Opus 2 julkaisee karttoja tiheään → versionumerotörmäykset ovat sääntö.
   `git fetch origin main` **juuri ennen** numeron valintaa. Jos oma haara
   vanhentuu: tallenna omat lähdemuutokset patchina,

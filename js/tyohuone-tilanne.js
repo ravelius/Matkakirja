@@ -21,77 +21,61 @@ export const TILANNE = {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
       tila: 'tyossa',
-      tehtava: 'Koordinointi, raporttien kokoaminen ja '
-        + 'versiotörmäysten ratkonta. Työhuone siivottu 9.8.: vanhat '
-        + 'kokeilut pois, jäljellä vain uusin tekstipaketti.',
-      seuraavaksi: 'Nähtävyyskuvien laatupassi erissä (Helsinki tehty '
-        + 'pilottina v437; jonossa Berliini, Lontoo, Kairo ym.) ja '
-        + 'Ateenan pylväspulma oikeilla Commons-kuvilla.',
+      tehtava: 'Aarrekuvat AI-generoitu yhtenäiseen satukirjatyyliin, '
+        + 'kaikki 21 manneraarretta pelissä (v455). Tarinakaaren erä 1 '
+        + 'työhuoneessa: 11 kaupunkia teksteineen ja luentoineen.',
+      seuraavaksi: 'Tarinakaaren erät 2–6: loput 30 Euroopan kohdetta '
+        + 'samalla mallilla (tekstit + luennat + työhuone).',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Vaihe B lähes valmis (v440): 24/27 siirtoa tehty, 22 '
-        + 'kaupunkia kolmessa ruudussa, kahdeksan maata sai '
-        + 'ensimmäisen aihesivunsa, Lontoon haamusisältö poistettu.',
-      seuraavaksi: 'Järjestys: Helsinki/Suomi-sisältökorjaus (Suomen '
-        + 'kansi, Sibelius-siirto, Linnanmäki, menovinkit) + Suomen '
-        + 'maalehden täydennys → Granada/Rooma/Pariisi omina sivuina '
-        + '(päätös: mitään ei pudoteta) → Lontoo → linkki- ja '
-        + 'duplikaattisiivous → minitehtävät (31) → seitsemän '
-        + 'aihesivuttoman maan sivut → Tromssa + aluelehdet + '
-        + 'valokuvarajatapaukset.',
+      tehtava: 'Vaihe B valmis: kaikki 27 kaupunkisiirtoa tehty ja QA '
+        + 'todensi ne riippumattomasti. Minitehtäväjono tyhjä (v454) — '
+        + 'joka maalehden aihesivulla on nyt minitehtävä, yhteensä 134.',
+      seuraavaksi: 'Seitsemän aihesivuttoman maan sivut (Sveitsi, '
+        + 'Norja, Tanska, Islanti, Latvia, Liettua, Kroatia) → Dubain '
+        + 'lehti → Tromssa + aluelehdet + valokuvarajatapaukset + '
+        + 'hitaan cimec-linkin vaihto.',
     },
     {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
       tila: 'tyossa',
-      tehtava: 'Kaikki kartat tehty: kohdekartat 31/31, Euroopan '
-        + 'maakartat 29/29. Uusimmat: jokirelaatioiden korjaus — '
-        + 'Neva, Dnepr ja Tonava piirtyvät vetenä (v438) — ja '
-        + 'Suomenlinna-kainalo oikeaan alanurkkaan (v439). Lähi-idän '
-        + 'selvitysmuistio valmis (maakartat tarvitsevat ensin '
-        + 'lautageometrian middleeast-countries.js).',
-      seuraavaksi: 'Eurooppa valmis karttapuolelta (31/31 + 29/29, '
-        + 'nimiVasen-kommentti korjattu #637). Nyt: Lähi-idän '
-        + 'lautageometria middleeast-countries.js pilottina — '
-        + 'kuvakaappaus Fablelle ennen maakarttoja. Erikoiskohteet '
-        + '(Jerusalem, Petra ym.) ilman maa-attribuutiota.',
+      tehtava: 'Eurooppa valmis (kohdekartat 31/31, maakartat 29/29). '
+        + 'Lähi-idän lauta pelattavana ja maakartat 10/12: uusimpina '
+        + 'Saudi-Arabia, Jemen, Kypros ja Syyria (v453).',
+      seuraavaksi: 'Viimeinen erä: Irakin ja Iranin maakartat. Sitten '
+        + 'Lähi-itä odottaa maalehtiä (Opus 1) ennen kytkentää.',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA + työhuone',
       tila: 'tyossa',
-      tehtava: 'QA-kierros 1 valmis (read-only): 2521 kuvaa, 111 '
-        + 'lippua ja 346 ääntä kunnossa, karttamatematiikka '
-        + 'todennettu, testit puhtaat. Löydökset jaettu: Lontoon '
-        + 'haamusisältö (Opus 1), nimiVasen-kommentti (Opus 2), '
-        + 'lisenssitarkistimen sokea piste kirjattu.',
-      seuraavaksi: 'Kierros 2 lähes valmis: linkeistä vain kaksi '
-        + 'aidosti rikki (vaihto Opus 1:llä), duplikaattilista '
-        + 'toimitettu. Jäljellä siirtoerien kenttien '
-        + 'regressiotarkistus (#630 nyt mainissa).',
+      tehtava: 'Kierros 2 valmis puhtain tuloksin: siirtoerien kentät, '
+        + 'karttamatematiikka ja linkit todennettu, PR #644 tarkistettu. '
+        + 'Verkkolöydökset merkitään jatkossa epävarmoiksi (hiekkalaatikon '
+        + 'verkko vääristää).',
+      seuraavaksi: '26 mahdollisen tuplakuvan luokittelu: aito tupla '
+        + 'vai sama kohde eri kuvakulmasta.',
     },
     {
       tekija: 'Sonnet 2',
       rooli: 'nähtävyysjutut',
       tila: 'tyossa',
-      tehtava: 'Livenä 14 kaupunkia (uusimpina v436: Ateena, '
-        + 'Amsterdam, Dublin) ja Helsingin kuvien parannus (v437). '
-        + 'Jonossa Opus 2:n viisi karttaerää = 17 uutta kaupunkia, '
-        + '~102 kohdetta.',
-      seuraavaksi: 'Erät järjestyksessä, Istanbul/Marseille/'
-        + 'Edinburgh ensin, raportti erien välissä. Wiki-ansat '
-        + 'muistissa: fi-wikin "Neitsyttorni" on Bakun torni ja '
-        + '"Belém" Brasilian kaupunki.',
+      tehtava: 'Livenä 14 kaupunkia; jonossa Opus 2:n karttaerät = 17 '
+        + 'uutta kaupunkia, ~102 kohdetta.',
+      seuraavaksi: 'Erät järjestyksessä, Istanbul/Marseille/Edinburgh '
+        + 'ensin. Wiki-ansat muistissa: fi-wikin "Neitsyttorni" on '
+        + 'Bakun torni ja "Belém" Brasilian kaupunki.',
     },
   ],
   odottaaPaatosta: [
-    'Viiden kaupungin tekstipaketti (Kehitys-välilehti): mitkä osat '
-      + 'luetaan ääneen? Ääniä ei generoida ennen päätöstäsi.',
     'Isoisän ääni pelissä: pilotti (v408, Edinburgh ja Pietari) — '
       + '"kaipaavat vielä työstöä, palataan myöhemmin".',
+    'Pääaarteiden (tähtilaattojen) AI-kuvat: promptit valmiina, '
+      + 'generoidaan jos haluat myös ne kuvitettuina.',
   ],
 };
 
@@ -103,44 +87,28 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
-    otsikko: 'Paketti v2: kohtaaminen ja kysymys yhdessä (työhuone)',
-    ohje: 'Työhuone → Kehitys: palautteesi mukaan tiivistetty kolmeen '
-      + 'osaan — saapuminen ennallaan, kohtaaminen jonka päättää '
-      + 'OIKEA kysymys vaihtoehtoineen (parin sopivuuden näkee '
-      + 'suoraan), ja aarre jonka lopettaa henkilön avoin vihje. '
-      + 'Lue ja kerro kelpaako rakenne ja mitkä osat luetaan ääneen.',
+    otsikko: 'Aarrekuvat satukirjatyyliin (v455)',
+    ohje: 'Pelaa millä tahansa mantereella ja vastaa visaan oikein: '
+      + 'paljastuskortissa on nyt AI-piirretty aarre yhtenäisessä '
+      + 'tyylissä — guassi, pergamentti ja kynttilänvalo. 21 kuvaa, '
+      + 'kolme per manner.',
   },
   {
-    otsikko: 'Suomenlinna ja isot joet kartoilla (v438–v439)',
-    ohje: 'Avaa Helsingin kohdekartta: Suomenlinna-kainalo istuu '
-      + 'nyt oikeassa alanurkassa. Katso myös Kiova, Pietari ja '
-      + 'Budapest: Dnepr, Neva ja Tonava piirtyvät vetenä eivätkä '
-      + 'pelkkänä viivana.',
+    otsikko: 'Tarinakaaren erä 1 työhuoneessa (11 kaupunkia)',
+    ohje: 'Työhuone → Kehitys: hyväksymälläsi mallilla nyt myös '
+      + 'Lontoo, Pariisi, Berliini, Rooma, Madrid ja Ateena — '
+      + 'jokaisella saapuminen, kohtaaminen kysymyksineen ja aarre, '
+      + 'kaikki kuunneltavissa. Loput Euroopan kohteet tulevat erissä.',
   },
   {
-    otsikko: 'Helsingin nähtävyyskuvat paremmiksi (v437)',
-    ohje: 'Avaa Helsingin kaupunkikartta ja napauta numeroita: 6/7 '
-      + 'kuvaa vaihdettu laatupassissa (valo, kohde pääosassa, ei '
-      + 'roinaa). Sama passi tulossa muihin kaupunkeihin — kerro '
-      + 'jos jälki kelpaa.',
+    otsikko: 'Huudahdus paljastushetkellä (v452)',
+    ohje: 'Vastaa visaan oikein: nuori herra huudahtaa juuri kun '
+      + 'aarre kääntyy esiin, ja huudahdus kasvaa aarteen arvon '
+      + 'mukana. Sama satunnaisvaihtelu joka laudalla.',
   },
   {
-    otsikko: 'Kaupunkilehdet kolmeen ruutuun (v435→)',
-    ohje: 'Avaa Helsinki: kansi, historia ja menovinkit — arki '
-      + 'siirtyi Suomen maalehteen. Sama siirto on tehty seitsemälle '
-      + 'kaupungille (tulossa mainiin PR #630:ssä) ja loput '
-      + 'seuraavat erissä.',
-  },
-  {
-    otsikko: 'Nähtävyysjutut 14 kaupungissa (v436)',
-    ohje: 'Uusimpina Ateena, Amsterdam ja Dublin: avaa '
-      + 'kaupunkikartta ja napauta numeroympyröitä. 18 uutta '
-      + 'juttua, mm. Anne Frankin talo ja Guinness-panimo.',
-  },
-  {
-    otsikko: 'Neljä uutta maalehteä (v435)',
-    ohje: 'Turkki, Irlanti, Portugali ja Unkari saivat maalehden: '
-      + '16 aihesivua, 64 juttua ja 16 minitehtävää. Avaa maan i '
-      + 'kartalta.',
+    otsikko: 'Minitehtävä joka aihesivulla (v454)',
+    ohje: 'Avaa minkä tahansa maalehden aihesivu: lopussa on nyt '
+      + 'aina pieni tehtävä. Uusia tuli 31, yhteensä 134.',
   },
 ];
