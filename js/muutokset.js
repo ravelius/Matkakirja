@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 417, teksti: 'Valokuvakysymys näyttää taas paikkoja, ei henkilöitä' },
   { v: 416, teksti: 'Lue maa-liite -nappi kaupunkilehden loppuun' },
   { v: 415, teksti: 'Kätkön ja kohtaamisen pääsee heti lehden etusivulta' },
   { v: 414, teksti: 'Tapaa-nappi täysleveänä myös lehden viimeisellä sivulla' },

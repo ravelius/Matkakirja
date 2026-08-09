@@ -1575,7 +1575,12 @@ export class UI {
     this.quizPhoto = document.getElementById('quiz-photo');
     this.quizPhoto.addEventListener('click', () => {
       const quiz = this.game.quiz;
-      if (quiz?.photoWiki) this.openLightbox(quiz.photoWiki, 'Matkavalokuvaajan vedos');
+      // Vain kuratoitu valokuva suurena, ei artikkeligalleriaa: se
+      // paljastaisi vastauksen kuvateksteissään.
+      if (quiz?.photoFile) {
+        this.openLightbox(null, 'Matkavalokuvaajan vedos',
+          valokuvaUrl(quiz.photoFile, 1600));
+      }
     });
     this.quizBadge = document.getElementById('quiz-badge');
 
@@ -5943,33 +5948,39 @@ export class UI {
   }
 
   /**
-   * Lataa laudan kaupunkien kuvia taustalla valokuvakysymyksiä varten ja
-   * kertoo moottorille, mitkä ovat valmiina. Lista ei ole pelitilaa:
-   * ilman verkkoa se jää tyhjäksi ja valokuvamuoto putoaa pois käytöstä.
-   * Haut porrastetaan, ettei Wikipediaa kuormiteta ryöpyllä.
+   * Kertoo moottorille, mistä laudan kaupungeista on kuratoitu valokuva
+   * valokuvakysymystä varten.
+   *
+   * Ennen v413:a tämä latasi Wikipedian artikkelikuvia taustalla ja
+   * hyväksyi kaupungin poolliin, jos kuva ylipäätään saatiin. Kuvan
+   * SISÄLTÖÄ ei tarkistettu mitenkään, ja siksi paikkakysymykseen
+   * päätyi Kumasin kohdalla Kofi Annanin muotokuva ja Nairobin kohdalla
+   * kuva vuoden 1998 pommi-iskusta.
+   *
+   * Matkakirjan omat valokuvat (KAIKKI_VALOKUVAT) on valittu käsin ja
+   * ne esittävät paikkaa. Ne ovat myös repossa ja peilissä, joten
+   * kysymys toimii ilman verkkoa eikä latausta tarvitse odottaa.
    */
   primePhotoPool() {
     const pack = this.game.pack;
     this.photoPools ??= new Map();
     if (!this.photoPools.has(pack.id)) {
-      const valmiit = new Set();
-      this.photoPools.set(pack.id, valmiit);
-      const kaupungit = pack.cities.filter((c) => c.wiki);
-      // Sekoitus tavallisella satunnaisluvulla — kuvien latausjärjestys
-      // ei ole pelitilaa eikä saa kuluttaa pelin siemenlukua.
-      const arvottu = [...kaupungit].sort(() => Math.random() - 0.5).slice(0, 12);
-      arvottu.forEach((c, i) => {
-        setTimeout(() => {
-          if (this.dead) return;
-          cachedImage(c.wiki).then((url) => {
-            if (this.dead || !url) return;
-            valmiit.add(c.id);
-            if (this.game.pack.id === pack.id) this.game.setPhotoPool([...valmiit]);
-          });
-        }, 400 * i);
-      });
+      const kuvat = new Map();
+      for (const c of pack.cities) {
+        const valokuva = KAIKKI_VALOKUVAT[c.id];
+        /*
+         * Nykykuva ensin: kysymys on "mikä paikka tämä on", ja
+         * nykyvalokuva vastaa siihen suoremmin kuin isoisän ajan vedos.
+         * Vanha vedos kelpaa varalle — sekin on kuva samasta paikasta.
+         */
+        const valittu = valokuva?.uusi?.tiedosto ? valokuva.uusi : valokuva;
+        if (!valittu?.tiedosto) continue;
+        kuvat.set(c.id, { tiedosto: valittu.tiedosto, lahde: valittu.lahde ?? null });
+      }
+      this.photoPools.set(pack.id, kuvat);
     }
-    this.game.setPhotoPool([...this.photoPools.get(pack.id)]);
+    const kuvat = this.photoPools.get(pack.id);
+    this.game.setPhotoPool([...kuvat.keys()], kuvat);
   }
 
   render() {
@@ -9221,7 +9232,7 @@ export class UI {
   }
 
   async openLightbox(title, alt = '', aloitusSrc = null) {
-    if (!title) return;
+    if (!title && !aloitusSrc) return;
     const parent = [this.wikiDialog, this.arrivalDialog].find((d) => d.open) ?? document.body;
     const overlay = html('div', 'lightbox');
     const img = html('img', 'lightbox-img');
@@ -9294,12 +9305,18 @@ export class UI {
 
     // Ensimmäinen kuva heti ruutuun, koko galleria kun lista on haettu.
     // Jos suurennos avattiin selatusta pikkukuvasta, aloitetaan siitä.
-    const eka = aloitusSrc || await cachedImage(title);
+    const eka = aloitusSrc || (title ? await cachedImage(title) : null);
     if (!overlay.isConnected) return;
     if (eka) {
       kuvat = [{ src: eka, caption: null }];
       nayta();
     }
+    /*
+     * Ilman otsikkoa suurennos jää yhteen kuvaan. Valokuvakysymys
+     * käyttää tätä: artikkeligalleria näyttäisi samat kuvat, joista
+     * koko vika alkoi, ja sen kuvatekstit kertoisivat vastauksen.
+     */
+    if (!title) return;
     const lista = await cachedGallery(title);
     if (!overlay.isConnected || !lista.length) return;
     const nykyinen = kuvat[0]?.src ?? null;
@@ -11299,11 +11316,13 @@ export class UI {
     if (quiz.kind === 'photo' && this.photoShownFor !== quiz) {
       this.photoShownFor = quiz;
       this.quizPhoto.removeAttribute('src');
-      cachedImage(quiz.photoWiki).then((url) => {
-        if (this.photoShownFor !== quiz || !url) return;
-        this.quizPhoto.src = url;
+      // Kuratoitu valokuva samasta putkesta kuin postikortit ja liput:
+      // paikallinen kopio tai peili ensin, Commons varalla.
+      if (quiz.photoFile) {
+        asetaKuva(this.quizPhoto,
+          valokuvaUrl(quiz.photoFile, 640), valokuvaVara(quiz.photoFile, 640));
         this.quizPhoto.alt = 'Matkavalokuvaajan vedos';
-      });
+      }
     }
     /*
      * Lippu tulee samaan kehykseen kuin valokuva, mutta se on repossa

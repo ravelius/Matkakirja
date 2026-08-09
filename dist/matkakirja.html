@@ -107455,12 +107455,24 @@ class Game {
   }
 
   /**
-   * Käyttöliittymä syöttää tänne kaupungit, joiden Wikipedia-kuva on
-   * saatu ladattua. Lista ei ole pelitilaa eikä sitä tallenneta: ilman
-   * verkkoa se jää tyhjäksi ja valokuvamuoto putoaa painoista pois.
+   * Käyttöliittymä syöttää tänne kaupungit, joista on kuratoitu
+   * valokuva, ja kuvien tiedot (tiedostonimi ja lähde).
+   *
+   * Ennen v413:a lista rakennettiin Wikipedian artikkelikuvista, ja
+   * kuva saattoi esittää mitä tahansa: omistaja näki Kumasin kohdalla
+   * Kofi Annanin muotokuvan. Syy oli se, että artikkelin pääkuva on
+   * usein montaasi, ja montaasin hylkäävä suodatin poimi tilalle
+   * kuvalistan ensimmäisen valokuvan — Nairobissa se oli kuva vuoden
+   * 1998 pommi-iskusta. Paikkakysymykseen ei voi arpoa kuvaa lähteestä,
+   * joka ei lupaa kuvan esittävän paikkaa.
+   *
+   * Lista ei ole pelitilaa eikä sitä tallenneta. Kuratoidut kuvat ovat
+   * repossa ja peilissä, joten valokuvamuoto toimii nyt myös ilman
+   * verkkoa.
    */
-  setPhotoPool(cityIds) {
+  setPhotoPool(cityIds, kuvat = null) {
     this.photoPool = new Set(cityIds);
+    this.photoFiles = kuvat instanceof Map ? kuvat : new Map(Object.entries(kuvat ?? {}));
   }
 
   /** Kuvakohteet, joita ei ole vielä kysytty tässä pelissä. */
@@ -107540,15 +107552,26 @@ class Game {
   }
 
   /**
-   * Valokuvakysymys: matkavalokuvaaja näyttää oikean valokuvan paikasta
-   * (Wikipedian kuva, sama putki kuin saapumiskorteissa), ja pelaaja
-   * päättelee mikä paikka kuvassa on. Vanhat karttakysymykset testasivat
-   * pelilaudan keksittyä reittiverkkoa — tämä opettaa miltä paikat
-   * oikeasti näyttävät.
+   * Valokuvakysymys: matkavalokuvaaja näyttää oikean valokuvan paikasta,
+   * ja pelaaja päättelee mikä paikka kuvassa on. Vanhat karttakysymykset
+   * testasivat pelilaudan keksittyä reittiverkkoa — tämä opettaa miltä
+   * paikat oikeasti näyttävät.
+   *
+   * Kuva tulee kuratoiduista matkakirjavalokuvista (setPhotoPool), ei
+   * Wikipedian artikkelikuvasta. Kuratoitu kuva on silmällä tarkistettu
+   * ja esittää nimenomaan sitä paikkaa; artikkelikuva ei sitä lupaa.
    */
   openPhotoQuestion(city) {
-    const kohteet = this.photoTargets();
-    // Ilman ladattuja kuvia pudotaan tavalliseen monivalintaan.
+    /*
+     * Kuvan kohde ei saa olla se kaupunki, jossa pelaaja seisoo:
+     * kysymyskortin otsikko on "<kaupunki> — matkavalokuvaaja levittää
+     * vedoksensa", eli nimi lukisi vastauksena kysymyksen yläpuolella.
+     * Ennen v413:a pooli oli vain kourallinen ladattuja kuvia, joten
+     * osuma oli harvinainen; nyt poolissa on laudan kaikki kaupungit,
+     * joten rajaus on pakko tehdä täällä.
+     */
+    const kohteet = this.photoTargets().filter((id) => id !== city.id);
+    // Ilman kuvia pudotaan tavalliseen monivalintaan.
     if (!kohteet.length) return this.actionQuiz({ form: 'quiz' });
 
     const kohdeId = kohteet[Math.floor(this.rng() * kohteet.length)];
@@ -107563,17 +107586,19 @@ class Game {
     const jarj = this.shuffledOrder(PHOTO_CHOICES);
     const ehdokkaat = jarj.map((i) => [kohde, ...vaarat][i]);
 
+    const kuva = this.photoFiles?.get(kohdeId) ?? null;
+
     this.quiz = {
       kind: 'photo',
       cityId: city.id,
-      // Kuvan kohde voi olla eri paikka kuin missä seistään — kuva
-      // ladataan otsikon perusteella käyttöliittymässä.
+      // Kuvan kohde voi olla eri paikka kuin missä seistään.
       photoCity: kohde.id,
+      photoFile: kuva?.tiedosto ?? null,
       photoWiki: kohde.wiki ?? kohde.name,
       hard: false,
       frame: 'matkavalokuvaaja levittää vedoksensa pöytään ja kysyy',
       question: 'Mikä paikka valokuvassa on?',
-      fact: `Kuvassa on ${kohde.name}. Valokuva: Wikipedia (CC).`,
+      fact: `Kuvassa on ${kohde.name}.${kuva?.lahde ? ` Valokuva: ${kuva.lahde}.` : ''}`,
       source: [],
       options: ehdokkaat.map((c) => c.name),
       correct: ehdokkaat.indexOf(kohde),
@@ -110084,7 +110109,12 @@ class UI {
     this.quizPhoto = document.getElementById('quiz-photo');
     this.quizPhoto.addEventListener('click', () => {
       const quiz = this.game.quiz;
-      if (quiz?.photoWiki) this.openLightbox(quiz.photoWiki, 'Matkavalokuvaajan vedos');
+      // Vain kuratoitu valokuva suurena, ei artikkeligalleriaa: se
+      // paljastaisi vastauksen kuvateksteissään.
+      if (quiz?.photoFile) {
+        this.openLightbox(null, 'Matkavalokuvaajan vedos',
+          valokuvaUrl(quiz.photoFile, 1600));
+      }
     });
     this.quizBadge = document.getElementById('quiz-badge');
 
@@ -114451,33 +114481,39 @@ class UI {
   }
 
   /**
-   * Lataa laudan kaupunkien kuvia taustalla valokuvakysymyksiä varten ja
-   * kertoo moottorille, mitkä ovat valmiina. Lista ei ole pelitilaa:
-   * ilman verkkoa se jää tyhjäksi ja valokuvamuoto putoaa pois käytöstä.
-   * Haut porrastetaan, ettei Wikipediaa kuormiteta ryöpyllä.
+   * Kertoo moottorille, mistä laudan kaupungeista on kuratoitu valokuva
+   * valokuvakysymystä varten.
+   *
+   * Ennen v413:a tämä latasi Wikipedian artikkelikuvia taustalla ja
+   * hyväksyi kaupungin poolliin, jos kuva ylipäätään saatiin. Kuvan
+   * SISÄLTÖÄ ei tarkistettu mitenkään, ja siksi paikkakysymykseen
+   * päätyi Kumasin kohdalla Kofi Annanin muotokuva ja Nairobin kohdalla
+   * kuva vuoden 1998 pommi-iskusta.
+   *
+   * Matkakirjan omat valokuvat (KAIKKI_VALOKUVAT) on valittu käsin ja
+   * ne esittävät paikkaa. Ne ovat myös repossa ja peilissä, joten
+   * kysymys toimii ilman verkkoa eikä latausta tarvitse odottaa.
    */
   primePhotoPool() {
     const pack = this.game.pack;
     this.photoPools ??= new Map();
     if (!this.photoPools.has(pack.id)) {
-      const valmiit = new Set();
-      this.photoPools.set(pack.id, valmiit);
-      const kaupungit = pack.cities.filter((c) => c.wiki);
-      // Sekoitus tavallisella satunnaisluvulla — kuvien latausjärjestys
-      // ei ole pelitilaa eikä saa kuluttaa pelin siemenlukua.
-      const arvottu = [...kaupungit].sort(() => Math.random() - 0.5).slice(0, 12);
-      arvottu.forEach((c, i) => {
-        setTimeout(() => {
-          if (this.dead) return;
-          cachedImage(c.wiki).then((url) => {
-            if (this.dead || !url) return;
-            valmiit.add(c.id);
-            if (this.game.pack.id === pack.id) this.game.setPhotoPool([...valmiit]);
-          });
-        }, 400 * i);
-      });
+      const kuvat = new Map();
+      for (const c of pack.cities) {
+        const valokuva = KAIKKI_VALOKUVAT[c.id];
+        /*
+         * Nykykuva ensin: kysymys on "mikä paikka tämä on", ja
+         * nykyvalokuva vastaa siihen suoremmin kuin isoisän ajan vedos.
+         * Vanha vedos kelpaa varalle — sekin on kuva samasta paikasta.
+         */
+        const valittu = valokuva?.uusi?.tiedosto ? valokuva.uusi : valokuva;
+        if (!valittu?.tiedosto) continue;
+        kuvat.set(c.id, { tiedosto: valittu.tiedosto, lahde: valittu.lahde ?? null });
+      }
+      this.photoPools.set(pack.id, kuvat);
     }
-    this.game.setPhotoPool([...this.photoPools.get(pack.id)]);
+    const kuvat = this.photoPools.get(pack.id);
+    this.game.setPhotoPool([...kuvat.keys()], kuvat);
   }
 
   render() {
@@ -117728,7 +117764,7 @@ class UI {
   }
 
   async openLightbox(title, alt = '', aloitusSrc = null) {
-    if (!title) return;
+    if (!title && !aloitusSrc) return;
     const parent = [this.wikiDialog, this.arrivalDialog].find((d) => d.open) ?? document.body;
     const overlay = html('div', 'lightbox');
     const img = html('img', 'lightbox-img');
@@ -117801,12 +117837,18 @@ class UI {
 
     // Ensimmäinen kuva heti ruutuun, koko galleria kun lista on haettu.
     // Jos suurennos avattiin selatusta pikkukuvasta, aloitetaan siitä.
-    const eka = aloitusSrc || await cachedImage(title);
+    const eka = aloitusSrc || (title ? await cachedImage(title) : null);
     if (!overlay.isConnected) return;
     if (eka) {
       kuvat = [{ src: eka, caption: null }];
       nayta();
     }
+    /*
+     * Ilman otsikkoa suurennos jää yhteen kuvaan. Valokuvakysymys
+     * käyttää tätä: artikkeligalleria näyttäisi samat kuvat, joista
+     * koko vika alkoi, ja sen kuvatekstit kertoisivat vastauksen.
+     */
+    if (!title) return;
     const lista = await cachedGallery(title);
     if (!overlay.isConnected || !lista.length) return;
     const nykyinen = kuvat[0]?.src ?? null;
@@ -119805,11 +119847,13 @@ class UI {
     if (quiz.kind === 'photo' && this.photoShownFor !== quiz) {
       this.photoShownFor = quiz;
       this.quizPhoto.removeAttribute('src');
-      cachedImage(quiz.photoWiki).then((url) => {
-        if (this.photoShownFor !== quiz || !url) return;
-        this.quizPhoto.src = url;
+      // Kuratoitu valokuva samasta putkesta kuin postikortit ja liput:
+      // paikallinen kopio tai peili ensin, Commons varalla.
+      if (quiz.photoFile) {
+        asetaKuva(this.quizPhoto,
+          valokuvaUrl(quiz.photoFile, 640), valokuvaVara(quiz.photoFile, 640));
         this.quizPhoto.alt = 'Matkavalokuvaajan vedos';
-      });
+      }
     }
     /*
      * Lippu tulee samaan kehykseen kuin valokuva, mutta se on repossa
@@ -121086,6 +121130,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 417, teksti: 'Valokuvakysymys näyttää taas paikkoja, ei henkilöitä' },
   { v: 416, teksti: 'Lue maa-liite -nappi kaupunkilehden loppuun' },
   { v: 415, teksti: 'Kätkön ja kohtaamisen pääsee heti lehden etusivulta' },
   { v: 414, teksti: 'Tapaa-nappi täysleveänä myös lehden viimeisellä sivulla' },
@@ -121580,7 +121625,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.416';
+const APP_VERSION = '2026-08-09.417';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

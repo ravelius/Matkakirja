@@ -1119,12 +1119,24 @@ export class Game {
   }
 
   /**
-   * Käyttöliittymä syöttää tänne kaupungit, joiden Wikipedia-kuva on
-   * saatu ladattua. Lista ei ole pelitilaa eikä sitä tallenneta: ilman
-   * verkkoa se jää tyhjäksi ja valokuvamuoto putoaa painoista pois.
+   * Käyttöliittymä syöttää tänne kaupungit, joista on kuratoitu
+   * valokuva, ja kuvien tiedot (tiedostonimi ja lähde).
+   *
+   * Ennen v413:a lista rakennettiin Wikipedian artikkelikuvista, ja
+   * kuva saattoi esittää mitä tahansa: omistaja näki Kumasin kohdalla
+   * Kofi Annanin muotokuvan. Syy oli se, että artikkelin pääkuva on
+   * usein montaasi, ja montaasin hylkäävä suodatin poimi tilalle
+   * kuvalistan ensimmäisen valokuvan — Nairobissa se oli kuva vuoden
+   * 1998 pommi-iskusta. Paikkakysymykseen ei voi arpoa kuvaa lähteestä,
+   * joka ei lupaa kuvan esittävän paikkaa.
+   *
+   * Lista ei ole pelitilaa eikä sitä tallenneta. Kuratoidut kuvat ovat
+   * repossa ja peilissä, joten valokuvamuoto toimii nyt myös ilman
+   * verkkoa.
    */
-  setPhotoPool(cityIds) {
+  setPhotoPool(cityIds, kuvat = null) {
     this.photoPool = new Set(cityIds);
+    this.photoFiles = kuvat instanceof Map ? kuvat : new Map(Object.entries(kuvat ?? {}));
   }
 
   /** Kuvakohteet, joita ei ole vielä kysytty tässä pelissä. */
@@ -1204,15 +1216,26 @@ export class Game {
   }
 
   /**
-   * Valokuvakysymys: matkavalokuvaaja näyttää oikean valokuvan paikasta
-   * (Wikipedian kuva, sama putki kuin saapumiskorteissa), ja pelaaja
-   * päättelee mikä paikka kuvassa on. Vanhat karttakysymykset testasivat
-   * pelilaudan keksittyä reittiverkkoa — tämä opettaa miltä paikat
-   * oikeasti näyttävät.
+   * Valokuvakysymys: matkavalokuvaaja näyttää oikean valokuvan paikasta,
+   * ja pelaaja päättelee mikä paikka kuvassa on. Vanhat karttakysymykset
+   * testasivat pelilaudan keksittyä reittiverkkoa — tämä opettaa miltä
+   * paikat oikeasti näyttävät.
+   *
+   * Kuva tulee kuratoiduista matkakirjavalokuvista (setPhotoPool), ei
+   * Wikipedian artikkelikuvasta. Kuratoitu kuva on silmällä tarkistettu
+   * ja esittää nimenomaan sitä paikkaa; artikkelikuva ei sitä lupaa.
    */
   openPhotoQuestion(city) {
-    const kohteet = this.photoTargets();
-    // Ilman ladattuja kuvia pudotaan tavalliseen monivalintaan.
+    /*
+     * Kuvan kohde ei saa olla se kaupunki, jossa pelaaja seisoo:
+     * kysymyskortin otsikko on "<kaupunki> — matkavalokuvaaja levittää
+     * vedoksensa", eli nimi lukisi vastauksena kysymyksen yläpuolella.
+     * Ennen v413:a pooli oli vain kourallinen ladattuja kuvia, joten
+     * osuma oli harvinainen; nyt poolissa on laudan kaikki kaupungit,
+     * joten rajaus on pakko tehdä täällä.
+     */
+    const kohteet = this.photoTargets().filter((id) => id !== city.id);
+    // Ilman kuvia pudotaan tavalliseen monivalintaan.
     if (!kohteet.length) return this.actionQuiz({ form: 'quiz' });
 
     const kohdeId = kohteet[Math.floor(this.rng() * kohteet.length)];
@@ -1227,17 +1250,19 @@ export class Game {
     const jarj = this.shuffledOrder(PHOTO_CHOICES);
     const ehdokkaat = jarj.map((i) => [kohde, ...vaarat][i]);
 
+    const kuva = this.photoFiles?.get(kohdeId) ?? null;
+
     this.quiz = {
       kind: 'photo',
       cityId: city.id,
-      // Kuvan kohde voi olla eri paikka kuin missä seistään — kuva
-      // ladataan otsikon perusteella käyttöliittymässä.
+      // Kuvan kohde voi olla eri paikka kuin missä seistään.
       photoCity: kohde.id,
+      photoFile: kuva?.tiedosto ?? null,
       photoWiki: kohde.wiki ?? kohde.name,
       hard: false,
       frame: 'matkavalokuvaaja levittää vedoksensa pöytään ja kysyy',
       question: 'Mikä paikka valokuvassa on?',
-      fact: `Kuvassa on ${kohde.name}. Valokuva: Wikipedia (CC).`,
+      fact: `Kuvassa on ${kohde.name}.${kuva?.lahde ? ` Valokuva: ${kuva.lahde}.` : ''}`,
       source: [],
       options: ehdokkaat.map((c) => c.name),
       correct: ehdokkaat.indexOf(kohde),
