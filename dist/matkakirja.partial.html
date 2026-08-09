@@ -2278,12 +2278,16 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 }
 
 /*
- * Etsi kätkö kaikkien nappien alle koko leveänä ja matalana
- * (omistajan toive 9.8.2026). Järjestys käännetään orderilla —
- * DOMissa nappi pysyy ensimmäisenä, jotta Enter valitsee sen yhä.
+ * Etsi kätkö / Tapaa X kaikkien nappien alle koko leveänä ja
+ * matalana (omistajan toive 9.8.2026) — MYÖS lehden viimeisellä
+ * sivulla, jossa se aiemmin hukkui alanappirivin jatkoksi
+ * (omistaja: "ei näy Etsi kätkö eli tapaa x nappia"). Järjestys
+ * käännetään orderilla — DOMissa nappi pysyy ensimmäisenä, jotta
+ * Enter valitsee sen yhä. Lehtitilassa order 4 tulee lehden omasta
+ * säännöstä ja pitää napin viimeisenä sielläkin.
  */
-.dialog:not(.lehti) .arrival-card .dialog-actions #arrival-yes {
-  order: 2;
+.arrival-card .dialog-actions #arrival-yes {
+  order: 9;
   flex: 1 1 100%;
   min-height: 0;
   padding: 0.45rem 0.8rem;
@@ -121036,6 +121040,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 414, teksti: 'Tapaa-nappi täysleveänä myös lehden viimeisellä sivulla' },
   { v: 413, teksti: 'Napautuskaista pois: väkänen vierittää sivun loppuun' },
   { v: 413, teksti: 'Etsi kätkö omalle riville koko leveänä ja matalana' },
   { v: 412, teksti: 'Maan nimikilpi aina kaupunkinimien kokoinen' },
@@ -121527,7 +121532,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.413';
+const APP_VERSION = '2026-08-09.414';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

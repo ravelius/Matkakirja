@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 414, teksti: 'Tapaa-nappi täysleveänä myös lehden viimeisellä sivulla' },
   { v: 413, teksti: 'Napautuskaista pois: väkänen vierittää sivun loppuun' },
   { v: 413, teksti: 'Etsi kätkö omalle riville koko leveänä ja matalana' },
   { v: 412, teksti: 'Maan nimikilpi aina kaupunkinimien kokoinen' },
