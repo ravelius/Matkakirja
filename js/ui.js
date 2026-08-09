@@ -4425,9 +4425,22 @@ export class UI {
      * kerrallaan.
      */
     this.meriRajaus = null;
-    // Nimi piirretään leikkaamattomaan kerrokseen: maan todellinen
-    // keskipiste voi osua tyylitellyn rannikon ulkopuolelle, eikä
-    // kaunokirjoituksen saa katketa siihen.
+    /*
+     * Nimi piirretään leikkaamattomaan kerrokseen: maan todellinen
+     * keskipiste voi osua tyylitellyn rannikon ulkopuolelle, eikä
+     * kaunokirjoituksen saa katketa siihen.
+     *
+     * Kerros luodaan tässä mutta NOSTETAAN kaupunkien päälle heti kun
+     * kaupunkikerros on olemassa (ks. root.appendChild alempana).
+     * Omistajan bugilöydös 9.8.2026: Ateenassa Kreikan kyltistä näkyi
+     * vain kirjainten häntä kaupunginnimen takaa, eikä i-nappia
+     * erottanut lainkaan. Kyltti on nappi, jota pelaajan on määrä
+     * painaa — se ei voi jäädä koristeen alle. Koneellinen mittaus
+     * kertoi, ettei kyse ollut yhdestä maasta: Euroopan 29 maasta
+     * 15:llä kaupungin nimi peitti kylttiä, ja kuudella peitto osui
+     * i-nappiin asti. Pelkkä ankkurin siirto olisi korjannut yhden
+     * ruudun ja jättänyt loput.
+     */
     this.countryNameLayer = el('g', { class: 'country-names' }, root);
     /*
      * Maastonimet: joet, järvet ja vuoristot kaunokirjoituksella.
@@ -4687,6 +4700,20 @@ export class UI {
     // lentokone liikkui sen alla. Kartta näyttää samalta, mutta liikkuvat
     // osat eivät enää maksa koko ruudun sekoitusta.
     drawPaperOverlay(svg, this.game.pack.map);
+
+    /*
+     * Maakyltti kaupunkien PÄÄLLE (ks. countryNameLayer yllä). Kyltti
+     * näkyy vain siinä maassa, jossa pelaaja juuri on, ja katoaa heti
+     * kun hän siirtyy rajan yli — se ei siis peitä karttaa pysyvästi,
+     * ja sen alle jäävä kaupunki on se, jonka nimen pelaaja näkee
+     * muutenkin saapumiskortissa.
+     *
+     * Nappulat ja laatat jäävät tarkoituksella kyltin päälle: ne
+     * kertovat, missä pelaaja on ja mitä on jo löydetty, eikä kyltti
+     * saa piilottaa niitä. Kyltin ankkureita siirrettiin samassa
+     * erässä niin, että päällekkäisyys nappulan kanssa on harvinaista.
+     */
+    root.appendChild(this.countryNameLayer);
 
     this.tokenLayer = el('g', { class: 'tokens' }, root);
     this.targetLayer = el('g', { class: 'targets' }, root);
