@@ -22,8 +22,18 @@
 
 import { KAARI_PAKETIT } from '../tyohuone-kehitys-data.js';
 
+/*
+ * Peliin otetaan vain kohteet, joiden luennat on generoitu
+ * (luennat !== false). Lähi-idän kohteet ovat datassa työhuoneen
+ * arviota varten ILMAN luentoja (omistajan tilaus 9.8.2026:
+ * "kirjoittaa saa, ei vielä generoida") — ilman tätä suodatusta ne
+ * aktivoituisivat maailmankartalla, jolla on samat kaupunkitunnukset,
+ * ja saapumiskortti yrittäisi soittaa ääntä jota ei ole.
+ */
 export const TARINAKAARI = Object.fromEntries(
-  KAARI_PAKETIT.kohteet.map((kohde) => [kohde.id, kohde]),
+  KAARI_PAKETIT.kohteet
+    .filter((kohde) => kohde.luennat !== false)
+    .map((kohde) => [kohde.id, kohde]),
 );
 
 /*
