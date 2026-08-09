@@ -14537,4 +14537,72 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  ARE: [
+    {
+      id: 'menovinkit',
+      nimi: 'Menovinkit',
+      johdanto: 'Emiraateissa museot ovat uusia ja verkossa hyvin esillä: '
+        + 'taidekokoelmia, tulevaisuuden näyttelyitä ja avaruuskeskus, joka '
+        + 'lähetti luotaimen Marsiin.',
+      lista: [
+        {
+          otsikko: 'Museot ja taide',
+          kohteet: [
+            {
+              nimi: 'Emiraatit Google Arts & Culturessa',
+              teksti: 'Museoiden esineitä ja valokuvia samassa näkymässä: '
+                + 'helmenkalastuksen välineitä, vanhoja karttoja ja '
+                + 'kaupunkikuvia ajalta ennen pilvenpiirtäjiä. Kuvia voi '
+                + 'suurentaa hyvin lähelle.',
+              linkki: 'https://artsandculture.google.com/entity/united-arab-emirates/m0j1z8',
+            },
+            {
+              nimi: 'Sharjah Art Foundation — näyttelyt verkossa',
+              teksti: 'Sharjahin taidesäätiön sivuilla on näyttelyitä, videoita '
+                + 'ja kokonaisia näyttelyluetteloita luettavaksi. Painopiste '
+                + 'on Lähi-idän ja Pohjois-Afrikan nykytaiteessa.',
+              linkki: 'https://www.sharjahart.org/',
+            },
+            {
+              nimi: 'Museum of the Future — talo, joka on kaava',
+              teksti: 'Dubain soikea, kaiverruksilla peitetty museorakennus '
+                + 'esittelee sivuillaan näyttelynsä. Julkisivun kuviot ovat '
+                + 'arabiankielistä kalligrafiaa, ja ikkunat ovat kirjaimien '
+                + 'aukkoja.',
+              linkki: 'https://museumofthefuture.ae/',
+            },
+          ],
+        },
+        {
+          otsikko: 'Tiede ja luonto',
+          kohteet: [
+            {
+              nimi: 'Mohammed bin Rashid -avaruuskeskus',
+              teksti: 'Keskus rakensi Hope-luotaimen, joka lähti Marsin '
+                + 'kiertoradalle 2020, ja julkaisee sen ottamia kuvia. '
+                + 'Sivuilta löytyy myös satelliittikuvia Emiraateista ja '
+                + 'tietoa astronauttien koulutuksesta.',
+              linkki: 'https://www.mbrsc.ae/',
+            },
+            {
+              nimi: 'Emirates Nature-WWF — aavikon eläimet',
+              teksti: 'Mitä aavikolla oikeasti elää: arabiangaselli, hiekkakissa, '
+                + 'haukat ja merikilpikonnat. Sivuilla on retkiä, '
+                + 'seurantahankkeita ja ohjeita siitä, miten aavikolla '
+                + 'liikutaan jälkiä jättämättä.',
+              linkki: 'https://www.emiratesnaturewwf.ae/',
+            },
+            {
+              nimi: 'Dubai Frame — kehys, josta katsoo kahteen aikaan',
+              teksti: 'Sadanviidenkymmenen metrin korkuinen kehys keskellä '
+                + 'kaupunkia: toiselta puolelta näkyy vanha Dubai ja toiselta '
+                + 'uusi. Sivuilla on kuvia molemmista suunnista ja tietoa '
+                + 'rakennuksesta.',
+              linkki: 'https://www.dubaiframe.ae/',
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };
