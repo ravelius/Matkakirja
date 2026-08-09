@@ -113,6 +113,38 @@ const KAUPUNGIT = {
     // kuvassa.
     rajat: { pohjoinen: 48.892, etela: 48.847, lansi: 2.277, ita: 2.3675 },
   },
+  amsterdam: {
+    // Kanavakehä on hevosenkengän muotoinen, ei soikea, joten rajaus on
+    // tarkoituksella lähes neliö: leveämpi kuva litistäisi kaaret ja
+    // jättäisi sivut tyhjiksi. Pohjoisreuna ottaa mukaan IJ-lahden
+    // avoveden — lahti on syy koko kaupungin olemassaoloon.
+    //
+    // Kanavat piirtyvät ilman lisäyksiä: ne ovat OSM:ssä
+    // waterway=canal -viivoja, jotka kysely jo hakee (Prinsengracht,
+    // Keizersgracht ja Herengracht yhteensä yli 90 polkua), ja IJ
+    // tulee vesirelaationa, jonka Tukholmaa varten lisätty rivi
+    // hoitaa. Vesiveto 14 px vastaa tällä mittakaavalla noin 32 metriä
+    // eli kanavien todellista leveyttä; kaaret eivät sula yhteen.
+    rajat: { pohjoinen: 52.3855, etela: 52.356, lansi: 4.868, ita: 4.922 },
+  },
+  dublin: {
+    // Liffey kulkee vaakasuoraan kuvan halki ja jakaa sen. Ydinkeskusta
+    // on todella pieni, joten 3,3 × 2,2 km riittää: koko keskiaikainen
+    // Dublin — linna, katedraali ja se musta lammikko, josta kaupunki
+    // sai nimensä — mahtuu kuvan alaosaan.
+    //
+    // Samuel Beckettin silta jää 173 metriä itärajan ulkopuolelle,
+    // vaikka se on lehden kansikuva. Sisään ottaminen olisi työntänyt
+    // Guinnessin kuvan reunaan. Croke Park on 634 m pohjoiseen.
+    rajat: { pohjoinen: 53.355, etela: 53.335, lansi: -6.294, ita: -6.244 },
+  },
+  ateena: {
+    // Ateenassa ei ole jokea eikä rantaa, joten kuvan selkäranka on
+    // kukkularivi lounaasta koilliseen: Filopáppos, Akropolis,
+    // Kansallispuutarha ja Lykavittós. Pireus on 8 km lounaaseen eikä
+    // mahdu millään ydinkeskustarajauksella.
+    rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
+  },
   lontoo: {
     // Hyde Parkin itälaidalta Tower Bridgelle, Regent's Parkin
     // eteläpuolelta Thamesin etelärannalle. Kaikki kuusi kohdetta
@@ -172,6 +204,18 @@ async function haeOverpass(rajat) {
     way["highway"~"^(${luokat})$"]${alue};
     way["waterway"~"^(river|canal)$"]${alue};
     way["natural"~"^(water|coastline)$"]${alue};
+    /*
+     * Metsäiset rinteet eivät ole OSM:ssä puistoja vaan luontoa, joten
+     * ilman tätä riviä ne jäävät paperin värisiksi.
+     *
+     * TÄMÄ EI RIITÄ ISOILLE KUKKULOILLE. Ateenan Lykavittós on
+     * relaatio (natural=wood + landuse=forest), ja kysely hakee
+     * relaatioista vain vedet — kukkula jää siksi yhä piirtymättä.
+     * Sen korjaaminen vaatisi relaatiohaaran uudelleenkirjoituksen:
+     * nyt jokaisen relaation jäsenpolut työnnetään joet-listaan, eli
+     * puistorelaatio piirtyisi jokena. Ks. piirra().
+     */
+    way["natural"~"^(wood|scrub)$"]${alue};
     way["leisure"~"^(park|garden)$"]${alue};
     way["landuse"~"^(forest|grass|recreation_ground|cemetery)$"]${alue};
     way["railway"="rail"]${alue};
