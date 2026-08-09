@@ -267,18 +267,15 @@ export const AFRICA = {
       star: { name: 'Suuren Zimbabwen kivilintu' },
       ruby: {
         name: 'Kimberleyn timantti', color: '#bcd6e8',
-        kuva: 'Cullinan Diamond (replica) (Premier Kimberlite Pipe, Precambrian; Premier Mine, South Africa) 4 (17872516620).jpg',
-        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+        kuva: 'assets/aarteet/aarre-africa-ruby.jpg',
       },
       emerald: {
         name: 'Kultahippu', color: '#e0b02a',
-        kuva: 'Gold nugget (Australia) 4 (16848647509).jpg',
-        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+        kuva: 'assets/aarteet/aarre-africa-emerald.jpg',
       },
       topaz: {
         name: 'Kaurikotilo', color: '#e0cfa8',
-        kuva: 'Different cowries.jpg',
-        kuvaLahde: 'Wikimedia Commons (CC BY 2.5)',
+        kuva: 'assets/aarteet/aarre-africa-topaz.jpg',
       },
     }),
     // 37 laattakaupunkia seitsemän uuden paikan jälkeen (omistajan laajennus).

@@ -191,18 +191,15 @@ export const MIDDLE_EAST = {
       star: { name: 'Sheban kuningattaren aarre' },
       ruby: {
         name: 'Messinkilamppu', color: '#c88f2b',
-        kuva: 'Oil Lamp MET DP246007.jpg',
-        kuvaLahde: 'Metropolitan Museum of Art, Wikimedia Commons (CC0)',
+        kuva: 'assets/aarteet/aarre-middleeast-ruby.jpg',
       },
       emerald: {
         name: 'Suitsukepihka', color: '#d8c690',
-        kuva: 'Frankincense 2005-12-31.jpg',
-        kuvaLahde: 'snotch, Wikimedia Commons (PD)',
+        kuva: 'assets/aarteet/aarre-middleeast-emerald.jpg',
       },
       topaz: {
         name: 'Sahramipussi', color: '#e05c20',
-        kuva: 'Saffron threads in a glass jar ( Viora Saffron packaging).jpg',
-        kuvaLahde: 'ulleo, Wikimedia Commons (CC0)',
+        kuva: 'assets/aarteet/aarre-middleeast-topaz.jpg',
       },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 3, emerald: 4, topaz: 6, empty: 7 },
