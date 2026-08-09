@@ -3198,6 +3198,243 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Keltainen linnake', lat: 43.86146, lon: 18.43772 },
     ],
   },
+  kiova: {
+    polku: 'assets/kartat/kiova-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 50.47, etela: 50.44, lansi: 30.499, ita: 30.539 },
+    esittely: 'Kiova seisoo Dneprin länsirannalla, kohdassa jossa joen '
+      + 'törmä nousee jyrkäksi kukkulaksi. Paikka valittiin kahdesta '
+      + 'syystä. Kukkulan laella oli helppo puolustautua, ja sen '
+      + 'juurella, joen rannassa, oli suojaisa satama. Dnepr oli '
+      + 'keskiajan valtatie: sitä pitkin kuljettiin pohjoisen metsistä '
+      + 'etelän kaupunkeihin, ja Kiova oli matkan puolivälissä. Siksi '
+      + 'kaupunki kasvoi kahteen kerrokseen: ylhäällä kirkkojen ja '
+      + 'porttien yläkaupunki, alhaalla Podil eli alakaupunki.\n\nKartan '
+      + 'yläreunassa on Podilin suora ruudukko aivan joen rannassa. Sen '
+      + 'alapuolella levittäytyy vaalea vihreä vyö: se on jyrkkä rinne, '
+      + 'jota pitkin noustaan ylös. Rinteen laella kadut kiemurtelevat, '
+      + 'ja siellä ovat kartan vanhimmat kohteet. Oikeassa yläkulmassa '
+      + 'kaartaa Dnepr. Se on niin leveä, ettei kartta piirrä sitä '
+      + 'yhtenä vetenä: näkyviin tulevat vain sen rannat omina '
+      + 'viivoinaan, ja niiden väliin jäävä vaalea kaista on itse joki. '
+      + 'Keskeltä lähtee alaviistoon leveä '
+      + 'katu, Hreštšatyk: se on 1,2 kilometriä pitkä ja kulkee '
+      + 'Itsenäisyyden aukion halki. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään: Podilista rinnettä ylös
+       * yläkaupunkiin ja siitä Hreštšatykia pitkin etelään.
+       *
+       * Kiovan funikulaari on lehden kansikuva ja olisi lapselle
+       * kiinnostava, mutta se jätettiin pois kahdesta syystä: siitä ei
+       * ole fi-artikkelia, eikä railway=funicular ole työkalun
+       * kyselyssä — numero jäisi tyhjälle vihreälle rinteelle.
+       *
+       * ANSAT. Pelkkä Kultainen portti on yleissivu, joka luettelee
+       * useita kultaisia portteja; oikea on Kiovan kultainen portti.
+       * Mariinskin palatsi osoittaa PIETARIIN, ei Kiovaan — Kiovan
+       * omasta palatsista ei ole artikkelia. Pyhän Andreaksen kirkko
+       * ilman täsmennettä ohjautuu täsmennyssivulle.
+       */
+      { nimi: 'Kontraktovan aukio', lat: 50.4636, lon: 30.5178 },
+      {
+        nimi: 'Andreaksen kirkko',
+        lat: 50.4589,
+        lon: 30.5181,
+        wiki: 'Pyhän Andreaksen kirkko (Kiova)',
+      },
+      {
+        nimi: 'Pyhän Mikaelin luostari',
+        lat: 50.4557,
+        lon: 30.5227,
+        wiki: 'Pyhän Mikaelin kultakupolinen luostari',
+      },
+      {
+        nimi: 'Pyhän Sofian katedraali',
+        lat: 50.4528,
+        lon: 30.5144,
+        wiki: 'Pyhän Sofian katedraali (Kiova)',
+      },
+      {
+        nimi: 'Itsenäisyyden aukio',
+        lat: 50.45,
+        lon: 30.5242,
+        wiki: 'Itsenäisyyden aukio (Kiova)',
+      },
+      {
+        nimi: 'Kiovan kultainen portti',
+        lat: 50.4489,
+        lon: 30.5133,
+        wiki: 'Kiovan kultainen portti',
+      },
+    ],
+  },
+  pietari: {
+    polku: 'assets/kartat/pietari-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 59.9545, etela: 59.9215, lansi: 30.284, ita: 30.347 },
+    esittely: 'Pietaria ei ollut olemassa ennen vuotta 1703. Se '
+      + 'rakennettiin Nevan suistoon, matalille ja soisille saarille, '
+      + 'koska Venäjä halusi oman sataman Itämerelle. Neva on lyhyt '
+      + 'mutta valtava joki: se tuo Laatokan vedet mereen ja on '
+      + 'Talvipalatsin kohdalla lähes 700 metriä leveä. Maa oli niin '
+      + 'märkää, että kaduille piti ensin kaivaa ojia veden johtamiseksi '
+      + 'pois. Ojista tuli kanavia, ja kanavista tuli koko kaupungin '
+      + 'tuntomerkki.\n\nKartan yläosassa virtaa Neva, ja sen keskellä '
+      + 'on pieni tähdenmuotoinen saari: Pietari-Paavalin linnoitus, '
+      + 'kaupungin ensimmäinen rakennus. Vasemmalla joki haarautuu '
+      + 'kahdeksi. Alaosassa kaartaa kolme kanavaa sisäkkäisinä kaarina '
+      + '— Moika, Gribojedovin kanava ja Fontanka — ja niiden poikki '
+      + 'vetää suora viiva vasemmalta oikealle. Se on Nevski prospekt, '
+      + 'kaupungin pääkatu. Kanavien välissä kadut ovat suoria, koska ne '
+      + 'piirrettiin valmiiksi ennen kuin taloja oli. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään. Tämä on pelin ainoa
+       * kaupunkikartta, jolla kaikilla kuudella kohteella on
+       * fi.wikipedia-artikkeli, ja väljin: pienin pariväli 18,5
+       * prosenttiyksikköä.
+       *
+       * Iisakinkirkko olisi vaihtoehto Vaskiratsastajalle (350 metriä,
+       * 9,4 pp), mutta Vaskiratsastaja on lehden kansikuva eikä
+       * Iisakinkirkkoa mainita lehdessä lainkaan.
+       *
+       * Kesäpuutarhasta, Smolnan katedraalista ja Marsin kentästä ei
+       * ole fi-artikkelia. Talvipalatsi ja Eremitaaši ovat eri
+       * artikkeleita; kartta linkittää rakennukseen, lehti museoon.
+       */
+      {
+        nimi: 'Pietari-Paavalin linnoitus',
+        lat: 59.95,
+        lon: 30.317,
+        wiki: 'Pietari-Paavalin linnoitus',
+      },
+      { nimi: 'Talvipalatsi', lat: 59.9404, lon: 30.3139, wiki: 'Talvipalatsi' },
+      {
+        nimi: 'Verikirkko',
+        lat: 59.94,
+        lon: 30.3286,
+        wiki: 'Kristuksen ylösnousemuksen katedraali',
+      },
+      { nimi: 'Vaskiratsastaja', lat: 59.9364, lon: 30.3022, wiki: 'Vaskiratsastaja' },
+      { nimi: 'Kazanin katedraali', lat: 59.9343, lon: 30.3245, wiki: 'Kazanin katedraali' },
+      { nimi: 'Mariinski-teatteri', lat: 59.9256, lon: 30.2961, wiki: 'Mariinski-teatteri' },
+    ],
+  },
+  moskova: {
+    polku: 'assets/kartat/moskova-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
+    esittely: 'Moskova syntyi kukkulalle, jonka juurella Moskova-joki '
+      + 'tekee mutkan. Mutkan sisään jäävää niemekettä oli helppo '
+      + 'puolustaa: vettä kahdella sivulla ja jyrkkä rinne kolmannella. '
+      + 'Sinne rakennettiin puinen linnoitus, kreml, ja sen ympärille '
+      + 'kaupunki. Moskova ei ole meren rannalla eikä suuren joen '
+      + 'suulla, mutta se on Venäjän tasangon keskellä, kohdassa josta '
+      + 'pääsee jokia pitkin joka suuntaan. Kaupunki kasvoi renkaina: '
+      + 'kun se täyttyi, ympärille vedettiin uusi muuri, ja muurien '
+      + 'paikoille jäivät leveät kehäkadut.\n\nKartan keskellä on '
+      + 'Kremlin kolmio. Sen ympäri kiertää vaalea vesijuova: se on '
+      + 'Neglinnaja-joki, joka virtaa nykyään maan alla putkessa. '
+      + 'Kolmion sisällä näkyy vain muutama viiva, sillä kartta ei '
+      + 'piirrä rakennuksia. Alhaalla kaartaa Moskova-joki leveänä '
+      + 'nauhana ja sen eteläpuolella toinen, kapeampi vesi — tulvia '
+      + 'varten kaivettu kanava. Ylhäällä ja sivuilla erottuu kaksi '
+      + 'kaarta, jotka kiertävät keskustaa: Bulevardikehä ja '
+      + 'Puutarhakehä. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään.
+       *
+       * Punainen tori, Pyhän Vasilin katedraali ja Kreml ovat 8,2–10,5
+       * prosenttiyksikön päässä toisistaan, koska ne ovat oikeasti
+       * naapuritontteja. Yli 5 pp:n rajan mennään, mutta älä lisää
+       * tähän neljättä keskustapistettä.
+       *
+       * ANSAT. Pelkkä Kreml on yleissivu venäläisistä linnoituksista;
+       * oikea on Moskovan Kreml. Vasili Autuaan katedraalia ei ole
+       * olemassa — otsikko on Pyhän Vasilin katedraali. Pokrovan
+       * katedraali osoittaa HARKOVAAN. Gorkin puisto on täsmennyssivu.
+       * Bolshoi-teatteri ohjautuu muotoon Bolšoi-teatteri.
+       *
+       * Vapahtajan katedraali on lyhennetty selite: koko nimi olisi 29
+       * merkkiä eli pidempi kuin yksikään muu kartan kohde.
+       */
+      { nimi: 'Bolšoi-teatteri', lat: 55.7603, lon: 37.6186, wiki: 'Bolšoi-teatteri' },
+      { nimi: 'Punainen tori', lat: 55.7542, lon: 37.62, wiki: 'Punainen tori' },
+      {
+        nimi: 'Pyhän Vasilin katedraali',
+        lat: 55.7525,
+        lon: 37.6231,
+        wiki: 'Pyhän Vasilin katedraali',
+      },
+      { nimi: 'Moskovan Kreml', lat: 55.7517, lon: 37.6178, wiki: 'Moskovan Kreml' },
+      {
+        nimi: 'Vapahtajan katedraali',
+        lat: 55.7444,
+        lon: 37.6056,
+        wiki: 'Kristus Vapahtajan katedraali (Moskova)',
+      },
+      {
+        nimi: 'Tretjakovin galleria',
+        lat: 55.7414,
+        lon: 37.6209,
+        wiki: 'Tretjakovin galleria',
+      },
+    ],
+  },
+  odessa: {
+    polku: 'assets/kartat/odessa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
+    esittely: 'Odessa on Mustanmeren rannalla kohdassa, jossa maa loppuu '
+      + 'jyrkkään törmään. Törmän alla on suojainen lahti, johon laivat '
+      + 'pääsevät tuulelta piiloon, ja törmän päällä on tasainen aro, '
+      + 'jolle mahtuu kokonainen kaupunki. Satamalle annettiin käsky '
+      + 'vuonna 1794, ja siitä lasketaan Odessan ikä. Kaupunki oli heti '
+      + 'kauppasatama: viljalastit tulivat aroa pitkin ja lähtivät '
+      + 'täältä laivoilla maailmalle. Talot tehtiin '
+      + 'simpukkakalkkikivestä, jota louhittiin suoraan kaupungin '
+      + 'alta.\n\nKartan oikea kolmannes on merta. Yläreunassa on '
+      + 'satama: laiturit työntyvät veteen kuin sormet, ja niiden '
+      + 'ulkopuolella kaartaa aallonmurtaja, jonka kärjessä seisoo '
+      + 'majakka. Vasemmalla ja alhaalla levittäytyy suora ruudukko. Se '
+      + 'ei ole kasvanut itsekseen vaan piirrettiin kerralla valmiiksi, '
+      + 'ja siksi kadut jatkuvat suorina kilometrikaupalla. Ruudukon ja '
+      + 'sataman välissä on jyrkkä rinne, ja sitä ylös nousevat '
+      + 'Potjomkinin portaat. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään: majakalta satamaan, portaita
+       * ylös ruudukkoon ja sen halki Privozille.
+       *
+       * Vain kahdella on wiki, ja se on tarkistettu tulos: Privozista,
+       * majakasta, satamasta ja kaupunginpuistosta ei ole
+       * fi-artikkelia. ANSA: Vorontsovin palatsi osoittaa ALUPKAAN
+       * Krimillä eikä Odessaan, ja pelkkä Potjomkin on täsmennyssivu
+       * (sotamarsalkka, taistelulaiva, elokuva).
+       *
+       * Katakombeja ei voi merkitä kartalle: ne ovat maan alla koko
+       * kaupungin alla ja museon sisäänkäynti on 12 km kaupungin
+       * ulkopuolella.
+       */
+      { nimi: 'Vorontsovin majakka', lat: 46.4966, lon: 30.7601 },
+      { nimi: 'Odessan satama', lat: 46.4908, lon: 30.7462 },
+      { nimi: 'Potjomkinin portaat', lat: 46.4886, lon: 30.742, wiki: 'Potjomkinin portaat' },
+      {
+        nimi: 'Odessan oopperatalo',
+        lat: 46.4854,
+        lon: 30.7413,
+        wiki: 'Odessan kansallinen akateeminen ooppera- ja balettiteatteri',
+      },
+      { nimi: 'Kaupunginpuisto', lat: 46.4848, lon: 30.7344 },
+      { nimi: 'Privozin tori', lat: 46.4699, lon: 30.7368 },
+    ],
+  },
 };
 
 /*
