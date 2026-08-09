@@ -5165,4 +5165,154 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  tromssa: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tromssa',
+      johdanto: 'Kaupunki napapiirin pohjoispuolella: aurinko katoaa kahdeksi '
+        + 'kuukaudeksi, turska tulee itse rannikolle, ja pimeimpään aikaan '
+        + 'tehtiin kellareissa musiikkia, joka kuultiin maailmalla.',
+      kansikuvat: [
+        {
+          tiedosto: 'Aurora Borealis Tromsø Norway.jpg',
+          selite: 'Revontulet kaartuvat vihreinä lumisten tunturien yllä Tromssan '
+            + 'lähellä. Etualalla on koivuja ja hankea, ja pilvien raosta '
+            + 'näkyy tähtiä.',
+          lahde: 'Andi Gentsch, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: '09512 Tromsdalen church and bridge - Tromso, Norway - V-P.jpg',
+          selite: 'Tromssan silta kaartaa salmen yli kirkkaana kesäpäivänä. '
+            + 'Vastarannalla nousee lumihuippuinen tunturi, ja rannassa näkyy '
+            + 'kaupungin taloja.',
+          lahde: 'Virtual-Pano, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tromsø Hurtigruten Trollfjord 01.jpg',
+          selite: 'Hurtigrutenin laiva Trollfjord Tromssan laiturissa. Laiva on '
+            + 'poikennut samaa rannikkoreittiä vuodesta 1893, ja se tuo yhä '
+            + 'matkustajien lisäksi rahtia.',
+          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Syntikat soivat kaamoksen läpi',
+          tiedosto: 'Röyksopp - Glastonbury Festival 2005 crop.jpg',
+          teksti: 'Tromssassa alettiin 1980-luvulla tehdä elektronista musiikkia '
+            + 'kellareissa silloin, kun ulkona oli pimeää. Kaupungissa '
+            + 'perustettiin Bel Canto vuonna 1985, samasta porukasta tuli '
+            + 'Biosphere, ja lapsuudenystävät Svein Berge ja Torbjørn '
+            + 'Brundtland perustivat Röyksoppin 1998. Pieni kaupunki kuuluu '
+            + 'yhä maailman festivaaleilla.',
+          selite: 'Röyksopp Glastonburyn festivaalilla 2005: kaksi miestä, pino '
+            + 'Korgin syntetisaattoreita ja valotaulu. Duon kotikaupunki on '
+            + 'noin 350 kilometriä napapiiristä pohjoiseen.',
+          lahde: 'Beyond My Ken (talk), Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Röyksopp',
+        },
+        {
+          otsikko: 'Turska, joka tulee itse käymään',
+          tiedosto: 'Tørrfisk.jpg',
+          teksti: 'Skrei on turska, joka ui joka talvi Barentsinmereltä Norjan '
+            + 'rannikolle kutemaan. Osa syödään heti mølje-ateriana: kalaa, '
+            + 'mätiä, maksaa ja perunaa. Osa ripustetaan telineille '
+            + 'helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. '
+            + 'Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia '
+            + 'vedestä, ja sen jälkeen se säilyy vuosia.',
+          selite: 'Kapakalatelineitä Moskenesissä Lofooteilla. Samanlaisia '
+            + 'telineitä on pitkin Pohjois-Norjan rannikkoa. Suurin osa '
+            + 'valmiista kalasta viedään Italiaan, missä se liotetaan viikon '
+            + 'ajan ennen ruoanlaittoa.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Kapakala',
+        },
+        {
+          otsikko: 'Aurinkopäivä on 21. tammikuuta',
+          tiedosto: 'Ishavskatedralen Tromsø.jpg',
+          teksti: 'Tromssassa aurinko pysyy horisontin alapuolella marraskuun '
+            + 'lopusta tammikuun puoliväliin. Kaupungin eteläpuoliset vuoret '
+            + 'peittävät sen vielä pari viikkoa, joten aurinko nähdään vasta '
+            + '21. tammikuuta. Se päivä juhlitaan: kouluissa ja päiväkodeissa '
+            + 'syödään aurinkopullia ja appelsiineja. Kesällä aurinko ei '
+            + 'laske toukokuun puolivälistä heinäkuun loppuun.',
+          selite: 'Jäämeren katedraali eli Tromsdalenin kirkko tapaninpäivänä '
+            + 'kello 14.50. Keskellä kaamosta taivas on tunnin tai kaksi '
+            + 'juuri näin sininen — se on päivän valoisin hetki.',
+          lahde: 'Harald Groven, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kaamos',
+        },
+      ],
+    },
+    {
+      id: 'valo',
+      nimi: 'Valo',
+      johdanto: 'Napapiirin pohjoispuolella valo ei tule ja mene päivittäin vaan '
+        + 'vuodenajoittain — ja juuri siksi tästä kaupungista tuli paikka, '
+        + 'jossa taivasta tutkitaan.',
+      tehtava: {
+        kysymys: 'Mistä Kristian Birkeland päätteli revontulien syntyvän?',
+        vaihtoehdot: [
+          'Auringosta tulevat hiukkaset',
+          'Kaukaiset ukkosmyrskyt jäältä',
+          'Kuun heijastus lumesta',
+          'Jään kimallus ilmassa',
+        ],
+        oikea: 0,
+        fakta: 'Moni ei uskonut häntä ennen kuin satelliitit todistivat asian '
+          + '1960-luvulla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kesällä aurinko ei laske ollenkaan',
+          tiedosto: 'Midnattssol-fra-Fjellheisen.gif',
+          teksti: 'Toukokuun 20. päivästä heinäkuun 22. päivään aurinko ei käy '
+            + 'Tromssassa horisontin alapuolella lainkaan. Se kiertää '
+            + 'taivasta ympäri ja on yölläkin ylhäällä, joten kello ei kerro '
+            + 'mitään valosta. Ihmiset tekevät töitä puutarhassa keskiyöllä, '
+            + 'ja lapset kysyvät, milloin on ilta. Monessa ikkunassa on '
+            + 'pimennysverho. Kaupungissa järjestetään keskiyön aurinkoon '
+            + 'ajoitettuja konsertteja ja maratonjuoksu, joka lähtee vasta '
+            + 'puoli yhdeltätoista illalla.',
+          selite: 'Keskiyön aurinko matalalla Tromssan yllä vuorelta nähtynä. '
+            + 'Valo on oranssi, salmi hohtaa ja silta erottuu tummana kaarena '
+            + 'veden päällä.',
+          lahde: 'Osopolar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Taivasta tutkittiin ensin vuoren huipulla',
+          tiedosto: 'The simple northern lights observatory at Haldetoppen.jpg',
+          teksti: 'Fyysikko Kristian Birkeland halusi selvittää, mistä revontulet '
+            + 'syntyvät, ja rakensi vuonna 1899 havaintoaseman tunturin '
+            + 'huipulle Pohjois-Norjaan. Hän talvehti siellä apulaistensa '
+            + 'kanssa mittaamassa magneettikenttää pakkasessa ja myrskyssä. '
+            + 'Birkeland päätteli oikein, että syynä ovat auringosta '
+            + 'sinkoutuvat sähköiset hiukkaset, jotka törmäävät ilmakehän '
+            + 'kaasuihin. Moni ei uskonut sitä ennen kuin satelliitit '
+            + 'todistivat asian vasta 1960-luvulla.',
+          selite: 'Vanha valokuva kivestä muuratusta havaintoasemasta paljaan '
+            + 'tunturin huipulla. Katolla liehuu Norjan lippu ja seinistä '
+            + 'lähtee harusvaijereita.',
+          lahde: 'Kristian Birkeland, Wikimedia Commons (public domain)',
+          wiki: 'Kristian Birkeland',
+        },
+        {
+          otsikko: 'Pohjoisin yliopisto maailmassa',
+          tiedosto: 'University of Tromsø Breivika campus.JPG',
+          teksti: 'Tromssan yliopisto perustettiin 1968 ja aloitti opetuksen '
+            + '1972. Se on maailman pohjoisin yliopisto, ja sen erikoisalat '
+            + 'seuraavat sijaintia: revontulet, merentutkimus, arktinen '
+            + 'lääketiede ja saamen kieli. Revontuliobservatorio perustettiin '
+            + 'kaupunkiin jo 1928, ja sen mittaussarja on maailman pisimpiä. '
+            + 'Kaupunki on pieni mutta täynnä tutkijoita, ja opiskelijoita '
+            + 'tulee kymmenistä maista — moni jää talveksi juuri nähdäkseen '
+            + 'pimeän ajan.',
+          selite: 'Tromssan yliopiston kampus Breivikassa syksyllä. Matalia '
+            + 'tiilirakennuksia nurmikentän takana, edessä hiekkatie ja '
+            + 'koivuja.',
+          lahde: 'Edricson, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+  ],
 };
