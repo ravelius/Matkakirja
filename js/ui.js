@@ -7097,8 +7097,19 @@ export class UI {
    * Muotoilee koko artikkelin tekstin: MediaWiki extracts palauttaa
    * väliotsikot muodossa "== Otsikko ==", ja ne muutetaan omiksi
    * otsikkoriveiksi. Pelkkää tekstiä — HTML:ää ei upoteta.
+   *
+   * Artikkeli katkaistaan ensimmäiseen HÄNTÄOSASTOON (Lähteet, Katso
+   * myös, Aiheesta muualla…): explaintext riisuu viiteluettelot,
+   * linkkilistat ja galleriat, joten näistä osastoista jää jäljelle
+   * vain rivi tyhjiä otsikoita artikkelin perään (omistajan havainto
+   * 10.8.2026 Espanjalaisista portaista: "Tätä ei ole siistitty").
+   * Häntäosastot ovat Wikipediassa aina artikkelin lopussa, joten
+   * katkaisu ei vie asiasisältöä mukanaan. Lista kattaa molemmat
+   * hakukielet (WIKI_LANGS: fi ja en) — Colosseumin kaltaiset paikat
+   * ratkeavat englanninkieliseen artikkeliin.
    */
   renderArticle(container, text) {
+    const hanta = /^(katso myös|lähteet|viitteet|lähteet ja viitteet|kirjallisuutta?|aiheesta muualla|ulkoiset linkit|kuvia|kuvagalleria|galleria|huomautukset|aiheeseen liittyvää|see also|references|notes|footnotes|citations|sources|bibliography|further reading|external links|gallery)$/i;
     container.textContent = '';
     let para = [];
     const flush = () => {
@@ -7114,6 +7125,7 @@ export class UI {
       const m = t.match(/^(={2,6})\s*(.+?)\s*={2,6}$/);
       if (m) {
         flush();
+        if (m[1].length <= 2 && hanta.test(m[2])) return;
         container.appendChild(html('p', m[1].length <= 2 ? 'wiki-h2' : 'wiki-h3', m[2]));
       } else {
         para.push(t);
