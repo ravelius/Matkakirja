@@ -21,6 +21,14 @@
  * ydinkeskustan kuuluisimmat kohteet (n. 5–8 km leveä alue — laajempi
  * muuttuu puuroksi). Aja työkalu ja KATSO kuva silmin ennen käyttöä.
  *
+ * TARKISTA PISTEET VIELÄ ERIKSEEN:
+ *   node tools/tarkista-karttapisteet.mjs <kaupunki>
+ * Se lukee valmiista PNG:stä pikselin värin jokaisesta kohteesta ja
+ * kertoo, osuuko piste veteen. Silmällä sitä ei näe, koska
+ * numeroympyrä peittää juuri sen kohdan: Dubain kartassa kaksi
+ * kuudesta oli lahdelmassa. Sillat ja majakat saavat olla vedellä,
+ * muut eivät.
+ *
  * Lisenssi: OpenStreetMapin aineisto on ODbL — lähderiviksi peliin
  * "© OpenStreetMap-tekijät (ODbL)". Tyyli on pelin oma.
  */
