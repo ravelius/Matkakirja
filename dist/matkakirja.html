@@ -64238,17 +64238,24 @@ const VALOKUVAT_PAIKALLISET = new Map([
 // Avain on Commonsin tiedostonimi, arvo tiedosto kansiossa assets/liput.
 // Älä muokkaa käsin.
 const LIPUT_PAIKALLISET = new Map([
+  ["\n          + ", '.png'],
+  ["Ainu flag.svg", 'ainu-flag.png'],
   ["Bandeira-de-Miranda-do-Douro.png", 'bandeira-de-miranda-do-douro-png.png'],
   ["Berber flag.svg", 'berber-flag.png'],
   ["Flag of Afghanistan (2013–2021).svg", 'afghanistan-2013-2021.png'],
+  ["Flag of Afghanistan.svg", 'afghanistan.png'],
   ["Flag of Algeria.svg", 'algeria.png'],
   ["Flag of Angola.svg", 'angola.png'],
+  ["Flag of Assyria.svg", 'assyria.png'],
   ["Flag of Austria.svg", 'austria.png'],
+  ["Flag of Azerbaijan.svg", 'azerbaijan.png'],
+  ["Flag of Bangladesh.svg", 'bangladesh.png'],
   ["Flag of Bashkortostan.svg", 'bashkortostan.png'],
   ["Flag of Bosnia and Herzegovina.svg", 'bosnia-and-herzegovina.png'],
   ["Flag of Bulgaria.svg", 'bulgaria.png'],
   ["Flag of Cameroon.svg", 'cameroon.png'],
   ["Flag of Catalonia.svg", 'catalonia.png'],
+  ["Flag of Cebu Province.svg", 'cebu-province.png'],
   ["Flag of Chad.svg", 'chad.png'],
   ["Flag of Croatia.svg", 'croatia.png'],
   ["Flag of Cyprus.svg", 'cyprus.png'],
@@ -64264,6 +64271,7 @@ const LIPUT_PAIKALLISET = new Map([
   ["Flag of Ghana.svg", 'ghana.png'],
   ["Flag of Greece.svg", 'greece.png'],
   ["Flag of Greenland.svg", 'greenland.png'],
+  ["Flag of Hong Kong.svg", 'hong-kong.png'],
   ["Flag of Hungary.svg", 'hungary.png'],
   ["Flag of Iceland.svg", 'iceland.png'],
   ["Flag of India.svg", 'india.png'],
@@ -64273,9 +64281,12 @@ const LIPUT_PAIKALLISET = new Map([
   ["Flag of Ireland.svg", 'ireland.png'],
   ["Flag of Italy.svg", 'italy.png'],
   ["Flag of Japan.svg", 'japan.png'],
+  ["Flag of Jeju Province.svg", 'jeju-province.png'],
   ["Flag of Jordan.svg", 'jordan.png'],
+  ["Flag of Karakalpakstan.svg", 'karakalpakstan.png'],
   ["Flag of Kazakhstan.svg", 'kazakhstan.png'],
   ["Flag of Kenya.svg", 'kenya.png'],
+  ["Flag of Khyber Pakhtunkhwa.svg", 'khyber-pakhtunkhwa.png'],
   ["Flag of Kurdistan.svg", 'kurdistan.png'],
   ["Flag of Kuwait.svg", 'kuwait.png'],
   ["Flag of Latgale.svg", 'latgale.png'],
@@ -64294,10 +64305,12 @@ const LIPUT_PAIKALLISET = new Map([
   ["Flag of Nigeria.svg", 'nigeria.png'],
   ["Flag of Norway.svg", 'norway.png'],
   ["Flag of Occitania.svg", 'occitania.png'],
+  ["Flag of Okinawa Prefecture.svg", 'okinawa-prefecture.png'],
   ["Flag of Oman.svg", 'oman.png'],
   ["Flag of Pakistan.svg", 'pakistan.png'],
   ["Flag of Poland.svg", 'poland.png'],
   ["Flag of Portugal.svg", 'portugal.png'],
+  ["Flag of Punjab.svg", 'punjab.png'],
   ["Flag of Qatar.svg", 'qatar.png'],
   ["Flag of Romania.svg", 'romania.png'],
   ["Flag of Russia.svg", 'russia.png'],
@@ -64307,6 +64320,7 @@ const LIPUT_PAIKALLISET = new Map([
   ["Flag of Senegal.svg", 'senegal.png'],
   ["Flag of Serbia.svg", 'serbia.png'],
   ["Flag of Sierra Leone.svg", 'sierra-leone.png'],
+  ["Flag of Sindh.svg", 'sindh.png'],
   ["Flag of Slovakia.svg", 'slovakia.png'],
   ["Flag of Slovenia.svg", 'slovenia.png'],
   ["Flag of Somalia.svg", 'somalia.png'],
@@ -64320,6 +64334,8 @@ const LIPUT_PAIKALLISET = new Map([
   ["Flag of Sweden.svg", 'sweden.png'],
   ["Flag of Switzerland.svg", 'switzerland.png'],
   ["Flag of Syria (1980–2024).svg", 'syria-1980-2024.png'],
+  ["Flag of Syria.svg", 'syria.png'],
+  ["Flag of Tajikistan.svg", 'tajikistan.png'],
   ["Flag of Tanzania.svg", 'tanzania.png'],
   ["Flag of Tatarstan.svg", 'tatarstan.png'],
   ["Flag of Thailand.svg", 'thailand.png'],
@@ -64343,6 +64359,7 @@ const LIPUT_PAIKALLISET = new Map([
   ["Flag of the Netherlands.svg", 'netherlands.png'],
   ["Flag of the People", 'people.png'],
   ["Flag of the People's Republic of China.svg", 'people-s-republic-of-china.png'],
+  ["Flag of the People\\", 'people.png'],
   ["Flag of the Philippines.svg", 'philippines.png'],
   ["Flag of the Republic of China.svg", 'republic-of-china.png'],
   ["Flag of the Romani people.svg", 'romani-people.png'],
@@ -76918,7 +76935,34 @@ const MIDDLE_EAST = {
   tagline: 'Etsi Sheban kuningattaren aarre basaarien ja aavikoiden kätköistä.',
   ariaLabel: 'Lähi-idän aarrekartta',
 
-  map: { ...ME_MAP, outlines: [ME_MAP.mainlandPoints, ME_MAP.cyprusPoints] },
+  /*
+   * countryShapes ja cityCountry kytkettiin 9.8.2026. Ennen sitä
+   * Lähi-idän laudalta puuttui koko kaupunki→maa-tieto, ja ui.js
+   * johtaa siitä kolme asiaa: maalohkon lehden etusivulla, maalehden
+   * (i-painike kartalla) ja menovinkkisivun. Dubain lehdestä puuttui
+   * siksi menovinkit, vaikka aineisto oli valmiina.
+   *
+   * LEHDETÖN MAA EI RIKO MITÄÄN, ja se on tarkistettu Afrikan
+   * ennakkotapauksesta eikä oletettu: Afrikan 27 maasta 26:lla ei ole
+   * maalehteä eikä korkokarttaa, ja kytkentä on siellä ollut pitkään
+   * käytössä. avaaMaalehti() lisää aina "<maa> numeroina"
+   * -sivun, joten sisältö ei voi jäädä tyhjäksi, ja se palaa heti jos
+   * countryShapes ei tunne koodia. Lähi-itä on tässä Afrikkaa
+   * turvallisemmalla pohjalla: kaikilla 12 maalla on sekä lautamuoto
+   * että korkokartta, joten jokainen maalehti saa vähintään kaksi
+   * sivua (kartta + numerot).
+   *
+   * Taulussa on 23 kaupunkia laudan 29:stä. Kuusi puuttuvaa —
+   * Jerusalem, Petra, Siinai, Rub al-Khali, Persepolis ja Kappadokia —
+   * ovat erikoiskohteita ilman maa-attribuutiota (kaanonpäätös), ja
+   * niillä maalohko pysyy piilossa niin kuin kuuluukin.
+   */
+  map: {
+    ...ME_MAP,
+    outlines: [ME_MAP.mainlandPoints, ME_MAP.cyprusPoints],
+    countryShapes: MIDDLE_EAST_COUNTRY_SHAPES,
+    cityCountry: MIDDLE_EAST_CITY_COUNTRY,
+  },
   cities: ME_CITIES,
   edges: ME_EDGES,
   airRoutes: ME_AIR_ROUTES,
@@ -77085,13 +77129,21 @@ const MIDDLE_EAST = {
 // päiväkirja puhuu paikasta itsestään eikä valtiosta. Esitystapa on
 // Fablen pöydällä. ÄLÄ lisää niitä tauluun ilman Fablen päätöstä.
 //
-// TÄTÄ TIEDOSTOA EI OLE VIELÄ KYTKETTY LAUTAAN, ja se on tarkoitus.
-// Kytkentä on kaksi riviä middleeast.js:n map-olioon (countryShapes ja
-// cityCountry) niin kuin europe.js:ssä ja africa.js:ssä, mutta se tuo
-// samalla näkyviin maan nimen ja i-napin. i-nappi avaa maalehden, ja
-// Lähi-idän maalehtiä ei ole vielä olemassa — pelaaja päätyisi
-// tyhjälle sivulle. Kytke vasta kun maalehdet ovat mainissa, ja nosta
-// silloin versio.
+// KYTKETTY LAUTAAN 9.8.2026 (middleeast.js:n map-olio: countryShapes
+// ja cityCountry, samoin kuin europe.js:ssä ja africa.js:ssä).
+//
+// Tässä luki aiemmin, ettei kytkentää saa tehdä ennen Lähi-idän
+// maalehtiä, koska i-nappi veisi tyhjälle sivulle. HUOLI OSOITTAUTUI
+// AIHEETTOMAKSI, ja se tarkistettiin Afrikan ennakkotapauksesta:
+// Afrikan 27 maasta 26:lla ei ole maalehteä eikä korkokarttaa, ja
+// kytkentä on siellä ollut käytössä pitkään. avaaMaalehti() lisää
+// aina "<maa> numeroina" -sivun, joten sisältö ei jää tyhjäksi.
+// Lähi-idässä jokaisella maalla on lisäksi korkokartta, joten
+// lehdetönkin maa saa kaksi sivua: kartta ja numerot.
+//
+// Kytkennän todellinen syy oli Dubain lehti: ilman kaupunki→maa-tietoa
+// siitä puuttuivat menovinkit ja maa numeroina, vaikka aineisto oli
+// valmiina.
 //
 // Siksi taulussa ei myöskään ole Jordaniaa eikä Israelia: laudalla
 // niiden ainoat kohteet ovat Petra ja Jerusalem, jotka on rajattu
@@ -77176,7 +77228,17 @@ const MIDDLE_EAST_COUNTRY_SHAPES = {
     ],
   },
   ARE: {
-    nimi: 'Arabiemiraatit',
+    /*
+     * NIMI ON MAAILMANKARTAN MUKAINEN, EI FI-WIKIN. Tässä luki ensin
+     * 'Arabiemiraatit', mutta maailmankartta.js ja asia-maatiedot.js
+     * sanovat 'Arabiemiirikunnat'. Sama maa kahdella nimellä samassa
+     * pelissä on virhe, jonka pelaaja näkee siirtyessään laudalta
+     * maailmankartalle, ja lisäksi maa-kategoriat.js:n genetiivitaulu
+     * tuntee vain vanhemman muodon. `wiki` osoittaa silti artikkelin
+     * omaan otsikkoon. Jos nimi joskus yhtenäistetään, se tehdään
+     * kaikkiin kolmeen paikkaan kerralla ja genetiivi mukana.
+     */
+    nimi: 'Arabiemiirikunnat',
     wiki: 'Yhdistyneet arabiemiraatit',
     lippu: 'Flag of the United Arab Emirates.svg',
     keskus: [749.8, 578.5],
@@ -130620,6 +130682,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 470, teksti: 'Lähi-idän laudalle maatiedot ja menovinkit' },
   { v: 469, teksti: 'Kolmen lehden vanhat jutut pois kahdentumasta' },
   { v: 468, teksti: 'Islanti ja Lappi saivat omat lehtensä' },
   { v: 468, teksti: 'Nähtävyysjutut Istanbuliin, Marseilleen, Edinburghiin' },
@@ -131173,7 +131236,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.469';
+const APP_VERSION = '2026-08-09.470';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

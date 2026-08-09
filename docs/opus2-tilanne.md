@@ -20,10 +20,14 @@ tarinamateriaali vain Fablen kautta.
   valmis** (v457): ARE, OMN, KWT, QAT, SAU, YEM, CYP, SYR, IRQ, IRN —
   TUR ja EGY palvelevat laudalla jo Euroopan ja Afrikan puolelta,
   koska MAAKARTAT on avaimennettu ISO-koodilla eikä laudoittain.
-- **`js/packs/middleeast-countries.js` on olemassa mutta EI KYTKETTY
-  lautaan** (v444). Kytkentä on kaksi riviä `middleeast.js`:ään, ja se
-  tehdään vasta Fablen luvalla, kun Lähi-idän maalehdet ovat olemassa
-  — muuten i-nappi avaisi olemattoman lehden.
+- **`js/packs/middleeast-countries.js` on kytketty lautaan** (v470).
+  Pelko siitä, että lehdetön maa rikkoisi i-napin, osoittautui
+  aiheettomaksi: Afrikan 27 maasta 26:lla ei ole maalehteä, ja
+  `avaaMaalehti()` lisää aina "<maa> numeroina" -sivun. Lähi-idässä
+  jokaisella maalla on lisäksi korkokartta, joten lehdetönkin maa saa
+  kaksi sivua.
+- **Dubain kohdekartta valmis** (v467), ja Dubain lehti sai kytkennän
+  myötä menovinkit ja maa numeroina.
 - **Kaupunkikartat (KAUPUNKIKARTAT): 31/31 valmis** (v433, PR #614).
   Isot joet täyttyvät vetenä v438 (PR #633): Dnepr, Neva ja Tonava
   piirtyvät nyt vetenä eivätkä paljaina rantaviivoina.
