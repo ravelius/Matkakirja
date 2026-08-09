@@ -5070,6 +5070,26 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
 
 .reveal-caption.shown { opacity: 1; transform: none; }
 
+/* Aarteen oikea valokuva paljastuksen alla: pieni kehystetty vedos.
+ * max-height pitää pystykuvatkin (esim. silkkikäärö) kurissa, ja
+ * object-fit: contain näyttää esineen kokonaan leikkaamatta. */
+.reveal-kuva {
+  max-width: min(58vw, 15rem);
+  max-height: 9.5rem;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid rgba(246, 226, 184, 0.55);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+  margin-top: 0.35rem;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.reveal-caption .reveal-kuvalahde {
+  font-size: 0.62rem;
+  color: rgba(216, 196, 162, 0.75);
+  max-width: min(70vw, 18rem);
+}
+
 .reveal-caption strong {
   font-family: var(--font-type);
   font-size: clamp(1.4rem, 4.5vmin, 2rem);
@@ -66649,9 +66669,21 @@ const AFRICA = {
      */
     types: themedTokenTypes({
       star: { name: 'Suuren Zimbabwen kivilintu' },
-      ruby: { name: 'Kimberleyn timantti', color: '#bcd6e8' },
-      emerald: { name: 'Kultahippu', color: '#e0b02a' },
-      topaz: { name: 'Kaurikotilo', color: '#e0cfa8' },
+      ruby: {
+        name: 'Kimberleyn timantti', color: '#bcd6e8',
+        kuva: 'Cullinan Diamond (replica) (Premier Kimberlite Pipe, Precambrian; Premier Mine, South Africa) 4 (17872516620).jpg',
+        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+      },
+      emerald: {
+        name: 'Kultahippu', color: '#e0b02a',
+        kuva: 'Gold nugget (Australia) 4 (16848647509).jpg',
+        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+      },
+      topaz: {
+        name: 'Kaurikotilo', color: '#e0cfa8',
+        kuva: 'Different cowries.jpg',
+        kuvaLahde: 'Wikimedia Commons (CC BY 2.5)',
+      },
     }),
     // 37 laattakaupunkia seitsemän uuden paikan jälkeen (omistajan laajennus).
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 11 },
@@ -71742,9 +71774,21 @@ const EUROPE = {
     // Meripihka on Itämeren oma jalokivi: fossiloitunutta puuhartsia.
     types: themedTokenTypes({
       star: { name: 'Meripihkahuoneen aarre' },
-      ruby: { name: 'Kruununjalokivi', color: '#b0304a' },
-      emerald: { name: 'Ritarin hopeamiekka', color: '#aeb6c2' },
-      topaz: { name: 'Meripihka', color: '#d98f2b' },
+      ruby: {
+        name: 'Kruununjalokivi', color: '#b0304a',
+        kuva: 'Crown of King Christian IV of Denmark.jpg',
+        kuvaLahde: 'Bradley Rentz, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      emerald: {
+        name: 'Ritarin hopeamiekka', color: '#aeb6c2',
+        kuva: 'Medieval sword at Athens War Museum on November 22, 2022.jpg',
+        kuvaLahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      topaz: {
+        name: 'Meripihka', color: '#d98f2b',
+        kuva: 'Amber necklace with insects.jpg',
+        kuvaLahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
+      },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 12 },
   },
@@ -72039,9 +72083,21 @@ const MIDDLE_EAST = {
     // Turkoosi on saanut nimensä Turkista, jonka kautta kivi kulki Eurooppaan.
     types: themedTokenTypes({
       star: { name: 'Sheban kuningattaren aarre' },
-      ruby: { name: 'Messinkilamppu', color: '#c88f2b' },
-      emerald: { name: 'Suitsukepihka', color: '#d8c690' },
-      topaz: { name: 'Sahramipussi', color: '#e05c20' },
+      ruby: {
+        name: 'Messinkilamppu', color: '#c88f2b',
+        kuva: 'Oil Lamp MET DP246007.jpg',
+        kuvaLahde: 'Metropolitan Museum of Art, Wikimedia Commons (CC0)',
+      },
+      emerald: {
+        name: 'Suitsukepihka', color: '#d8c690',
+        kuva: 'Frankincense 2005-12-31.jpg',
+        kuvaLahde: 'snotch, Wikimedia Commons (PD)',
+      },
+      topaz: {
+        name: 'Sahramipussi', color: '#e05c20',
+        kuva: 'Saffron threads in a glass jar ( Viora Saffron packaging).jpg',
+        kuvaLahde: 'ulleo, Wikimedia Commons (CC0)',
+      },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 3, emerald: 4, topaz: 6, empty: 7 },
   },
@@ -74855,9 +74911,21 @@ const ASIA = {
     // tuhansien vuosien ajan.
     types: themedTokenTypes({
       star: { name: 'Keisarin jadesinetti' },
-      ruby: { name: 'Sukeltajan helmi', color: '#e8e4da' },
-      emerald: { name: 'Silkkikäärö', color: '#c94f7c' },
-      topaz: { name: 'Posliinikuppi', color: '#7f9fc9' },
+      ruby: {
+        name: 'Sukeltajan helmi', color: '#e8e4da',
+        kuva: 'Pearl from Pinctada maxima (gold-lipped pearl oyster) 2.jpg',
+        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+      },
+      emerald: {
+        name: 'Silkkikäärö', color: '#c94f7c',
+        kuva: 'China, Qing dynasty (1644-1911), Jiangnan Imperial Factory - Silk Panel with Dragon and Cloud Motif - 1976.1087 - Cleveland Museum of Art.tif',
+        kuvaLahde: 'Cleveland Museum of Art, Wikimedia Commons (CC0)',
+      },
+      topaz: {
+        name: 'Posliinikuppi', color: '#7f9fc9',
+        kuva: '20241025 Blue and White Porcelain Cup with Kangxi Reign Mark, Qing Dynasty.jpg',
+        kuvaLahde: 'Windmemories, Wikimedia Commons (CC BY-SA 4.0)',
+      },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 10 },
   },
@@ -77212,9 +77280,21 @@ const OCEANIA = {
     // jalo-opaaleista, ja kaivoskaupungissa asutaan maan alla helteen takia.
     types: themedTokenTypes({
       star: { name: 'Eteläristin helmi' },
-      ruby: { name: 'Opaali', color: '#7fb7c9' },
-      emerald: { name: 'Paua-simpukkakoru', color: '#3a9ea6' },
-      topaz: { name: 'Simpukkarahanauha', color: '#e0cfa8' },
+      ruby: {
+        name: 'Opaali', color: '#7fb7c9',
+        kuva: 'Precious opal (Andamooka Opal Fields, South Australia) 9.jpg',
+        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+      },
+      emerald: {
+        name: 'Paua-simpukkakoru', color: '#3a9ea6',
+        kuva: 'Abalone-Paua-Shell-Pieces-AlbionFireandIce-0475.jpg',
+        kuvaLahde: 'John Burrows, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      topaz: {
+        name: 'Simpukkarahanauha', color: '#e0cfa8',
+        kuva: 'Muschelgeld Neuirland Papua Neuguinea um 1900 02.JPG',
+        kuvaLahde: 'Bin im Garten, Wikimedia Commons (CC BY-SA 3.0)',
+      },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 6, empty: 9 },
   },
@@ -79889,9 +79969,21 @@ const NORTHAMERICA = {
     // kymmeniätuhansia onnenonkijoita Yukonin jokilaaksoon.
     types: themedTokenTypes({
       star: { name: 'Montezuman aarre' },
-      ruby: { name: 'Kultaryntäyksen hippu', color: '#e0b02a' },
-      emerald: { name: 'Turkoosikoru', color: '#3aaea6' },
-      topaz: { name: 'Kaakaopavut', color: '#8a5a33' },
+      ruby: {
+        name: 'Kultaryntäyksen hippu', color: '#e0b02a',
+        kuva: 'Gold nugget (placer gold) (California, USA) (16839560358).jpg',
+        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+      },
+      emerald: {
+        name: 'Turkoosi', color: '#3aaea6',
+        kuva: 'Turquoise with quartz.jpg',
+        kuvaLahde: 'Wikimedia Commons (PD)',
+      },
+      topaz: {
+        name: 'Kaakaopavut', color: '#8a5a33',
+        kuva: 'Cacao beans.jpg',
+        kuvaLahde: 'Isai Symens, Wikimedia Commons (CC BY-SA 4.0)',
+      },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },
   },
@@ -82580,9 +82672,21 @@ const SOUTHAMERICA = {
     // Andien hopea, jonka takia koko manner aikanaan valloitettiin.
     types: themedTokenTypes({
       star: { name: 'El Doradon aarre' },
-      ruby: { name: 'Inkojen kultafiguuri', color: '#e0b02a' },
-      emerald: { name: 'Kolumbian smaragdi', color: '#2fa36b' },
-      topaz: { name: 'Potosín hopeakolikko', color: '#c9ccd4' },
+      ruby: {
+        name: 'Inkojen kultafiguuri', color: '#e0b02a',
+        kuva: 'BOG 03 2018 Tunjos Muiscas Museo de Oro 8439.jpg',
+        kuvaLahde: 'Mario Roberto Durán Ortiz, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      emerald: {
+        name: 'Kolumbian smaragdi', color: '#2fa36b',
+        kuva: '(Muzo) Emerald crystal in its matrix.jpg',
+        kuvaLahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 3.0)',
+      },
+      topaz: {
+        name: 'Potosín hopeakolikko', color: '#c9ccd4',
+        kuva: '8 reales de 1651 (Potosí) - anverso.jpg',
+        kuvaLahde: 'Reinhard Saczewski, Wikimedia Commons (CC0)',
+      },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },
   },
@@ -114918,6 +115022,21 @@ class UI {
     this.observer = new ResizeObserver(() => this.fitViewBox());
     this.observer.observe(this.svg.parentElement);
     this.render();
+    this.esilataaAarrekuvat();
+  }
+
+  /*
+   * Aarteiden valokuvat lämpimiksi ennen ensimmäistä paljastusta:
+   * paljastuskortti on ruudulla vain pari sekuntia, eikä peili-404 +
+   * Commons-varareitti ehtisi siihen ikkunaan kylmästä. Kolme pientä
+   * kuvaa per lauta — halpa hinta siitä, että aarre NÄKYY.
+   */
+  esilataaAarrekuvat() {
+    for (const type of Object.values(this.game.tokenTypes ?? {})) {
+      if (!type.kuva) continue;
+      const kuva = new Image();
+      asetaKuva(kuva, valokuvaUrl(type.kuva, 640), valokuvaVara(type.kuva, 640));
+    }
   }
 
   /**
@@ -124701,6 +124820,20 @@ class UI {
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
     /*
+     * Aarteen oikea valokuva (omistajan päätös 9.8.2026: "ennemmin
+     * oikea kuva" kuin piirros). Kuva on laattatyypin oma, Commonsista
+     * kuratoitu — laudoilla joilla kenttää ei ole (esim. maailmankartta)
+     * paljastus näyttää entiseltään.
+     */
+    if (token.kuva) {
+      const kuva = document.createElement('img');
+      kuva.className = 'reveal-kuva';
+      kuva.alt = token.name;
+      asetaKuva(kuva, valokuvaUrl(token.kuva, 640), valokuvaVara(token.kuva, 640));
+      caption.appendChild(kuva);
+      if (token.kuvaLahde) caption.appendChild(html('span', 'reveal-kuvalahde', token.kuvaLahde));
+    }
+    /*
      * Isoisän aarresitaatti paljastuksen alle (omistajan päätös
      * 8.8.2026): kätkön löytyessä isoisä puhuu omalla äänellään ja
      * sulkee saapumisen kuvan. Ei tyhjälle laatalle — pettymyksellä
@@ -125486,6 +125619,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 451, teksti: 'Aarteen paljastus näyttää nyt oikean valokuvan' },
   { v: 450, teksti: 'Maakartat Kuwaitille, Qatarille, Emiraateille, Omanille' },
   { v: 449, teksti: 'Tšadjärvi ja Madeira saivat omat kuvansa' },
   { v: 448, teksti: 'Britannian musiikki kahdelle sivulle, kuvatoistot pois' },
@@ -126018,7 +126152,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.450';
+const APP_VERSION = '2026-08-09.451';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

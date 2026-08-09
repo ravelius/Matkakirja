@@ -300,9 +300,21 @@ export const ASIA = {
     // tuhansien vuosien ajan.
     types: themedTokenTypes({
       star: { name: 'Keisarin jadesinetti' },
-      ruby: { name: 'Sukeltajan helmi', color: '#e8e4da' },
-      emerald: { name: 'Silkkikäärö', color: '#c94f7c' },
-      topaz: { name: 'Posliinikuppi', color: '#7f9fc9' },
+      ruby: {
+        name: 'Sukeltajan helmi', color: '#e8e4da',
+        kuva: 'Pearl from Pinctada maxima (gold-lipped pearl oyster) 2.jpg',
+        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+      },
+      emerald: {
+        name: 'Silkkikäärö', color: '#c94f7c',
+        kuva: 'China, Qing dynasty (1644-1911), Jiangnan Imperial Factory - Silk Panel with Dragon and Cloud Motif - 1976.1087 - Cleveland Museum of Art.tif',
+        kuvaLahde: 'Cleveland Museum of Art, Wikimedia Commons (CC0)',
+      },
+      topaz: {
+        name: 'Posliinikuppi', color: '#7f9fc9',
+        kuva: '20241025 Blue and White Porcelain Cup with Kangxi Reign Mark, Qing Dynasty.jpg',
+        kuvaLahde: 'Windmemories, Wikimedia Commons (CC BY-SA 4.0)',
+      },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 10 },
   },

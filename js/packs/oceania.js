@@ -265,9 +265,21 @@ export const OCEANIA = {
     // jalo-opaaleista, ja kaivoskaupungissa asutaan maan alla helteen takia.
     types: themedTokenTypes({
       star: { name: 'Eteläristin helmi' },
-      ruby: { name: 'Opaali', color: '#7fb7c9' },
-      emerald: { name: 'Paua-simpukkakoru', color: '#3a9ea6' },
-      topaz: { name: 'Simpukkarahanauha', color: '#e0cfa8' },
+      ruby: {
+        name: 'Opaali', color: '#7fb7c9',
+        kuva: 'Precious opal (Andamooka Opal Fields, South Australia) 9.jpg',
+        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+      },
+      emerald: {
+        name: 'Paua-simpukkakoru', color: '#3a9ea6',
+        kuva: 'Abalone-Paua-Shell-Pieces-AlbionFireandIce-0475.jpg',
+        kuvaLahde: 'John Burrows, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      topaz: {
+        name: 'Simpukkarahanauha', color: '#e0cfa8',
+        kuva: 'Muschelgeld Neuirland Papua Neuguinea um 1900 02.JPG',
+        kuvaLahde: 'Bin im Garten, Wikimedia Commons (CC BY-SA 3.0)',
+      },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 6, empty: 9 },
   },
