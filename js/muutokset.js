@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 422, teksti: 'Radio kartan ylle, liitelinkki pois päiväyksen päältä' },
   { v: 421, teksti: 'Kohdekartta Ateenaan, Amsterdamiin ja Dubliniin' },
   { v: 420, teksti: 'Valokuvakysymyksen kuvat käyty läpi yksi kerrallaan' },
   { v: 419, teksti: 'Neljä kaupunkia yhden kertojan malliin äänineen' },
