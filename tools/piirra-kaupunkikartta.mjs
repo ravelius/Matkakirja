@@ -62,9 +62,24 @@ const KAUPUNGIT = {
     // Riddarfjärden lännessä ja Djurgården idässä. Kaikki kuusi
     // kohdetta osuvat alueelle, ja vesi jakaa kuvan niin kuin se
     // jakaa kaupungin — Tukholmassa ranta on kartan pääpiirre.
+    //
+    // Ainoa jo julkaistu kartta, joka piirrettiin uudestaan
+    // merentäytöllä (9.8.2026). Ennen vesi oli rannan myötäinen nauha
+    // ja Riddarfjärdenin sekä Saltsjön keskiosat jäivät paperin
+    // värisiksi; nyt ne ovat vettä ja saaret lukevat saarina.
+    // Tarkistettu silmällä: kaikki kuusi pistettä osuvat yhä oikein.
     rajat: { pohjoinen: 59.342, etela: 59.313, lansi: 18.03, ita: 18.11 },
+    meri: true,
   },
   venetsia: {
+    /*
+     * ÄLÄ LISÄÄ TÄHÄN meri: true. Kokeiltu 9.8.2026, ja tulos oli
+     * kartta, jossa MERI PEITTI KOKO KAUPUNGIN: laguunissa rantaviiva
+     * pilkkoutuu kymmeniksi pätkiksi, joista osa sulkeutuu väärin
+     * päin, ja saaret jäivät veden alle. Venetsian kanavat piirtyvät
+     * oikein rantanauhana, koska ne ovat kapeita — juuri siihen nauha
+     * on tehty.
+     */
     // Koko historiallinen keskusta rautatieasemalta Arsenaalille:
     // Canal Grande kaartaa kuvan halki S-kirjaimena, ja kaikki kuusi
     // kohdetta (asema, Ca' d'Oro, Rialto, Accademia, San Marco,
@@ -280,6 +295,226 @@ async function haeOverpassSitkeasti(rajat, yrityksia = 3) {
   }
 }
 
+const avain = (p) => `${p.lat.toFixed(7)},${p.lon.toFixed(7)}`;
+
+/** Monikulmion pinta-ala asteneliöinä (kenkänauhakaava). */
+function renkaanAla(rengas) {
+  let a = 0;
+  for (let i = 0, j = rengas.length - 1; i < rengas.length; j = i, i += 1) {
+    a += (rengas[j].lon * rengas[i].lat) - (rengas[i].lon * rengas[j].lat);
+  }
+  return Math.abs(a / 2);
+}
+
+/**
+ * Ketjuttaa polkujoukon renkaiksi päätepisteitä yhdistellen. Polun
+ * suunnalla ei ole väliä, joten polkuja saa kääntää — käytetään
+ * vesirelaatioiden ulkorenkaisiin.
+ */
+function ketjuta(polut) {
+  const jaljella = polut.map((g) => g.slice());
+  const ketjut = [];
+  while (jaljella.length) {
+    let k = jaljella.pop();
+    for (let muuttui = true; muuttui;) {
+      muuttui = false;
+      for (let i = 0; i < jaljella.length; i += 1) {
+        const o = jaljella[i];
+        const paa = avain(k[k.length - 1]);
+        const alku = avain(k[0]);
+        if (paa === avain(o[0])) k = k.concat(o.slice(1));
+        else if (paa === avain(o[o.length - 1])) k = k.concat(o.slice().reverse().slice(1));
+        else if (alku === avain(o[o.length - 1])) k = o.slice(0, -1).concat(k);
+        else if (alku === avain(o[0])) k = o.slice().reverse().slice(0, -1).concat(k);
+        else continue;
+        jaljella.splice(i, 1);
+        muuttui = true;
+        break;
+      }
+    }
+    ketjut.push(k);
+  }
+  return ketjut;
+}
+
+/*
+ * Rantaviivalle OMA ketjutus: polkuja EI SAA KÄÄNTÄÄ. OSM piirtää
+ * rantaviivan aina niin, että maa on kulkusuunnan vasemmalla ja vesi
+ * oikealla, ja peräkkäiset polut liittyvät pää–häntä. Jos ketjutus
+ * kääntää polun, suuntatieto katoaa ja meri täyttyy kaupungin päälle.
+ */
+function ketjutaSuunnassa(polut) {
+  const alut = new Map();
+  polut.forEach((g, i) => {
+    const a = avain(g[0]);
+    if (!alut.has(a)) alut.set(a, []);
+    alut.get(a).push(i);
+  });
+  const paat = new Set(polut.map((g) => avain(g[g.length - 1])));
+  const kaytetty = new Set();
+  const ketjut = [];
+  const kasvata = (i) => {
+    kaytetty.add(i);
+    let ketju = polut[i].slice();
+    for (;;) {
+      const seur = (alut.get(avain(ketju[ketju.length - 1])) ?? []).find((j) => !kaytetty.has(j));
+      if (seur === undefined) break;
+      kaytetty.add(seur);
+      ketju = ketju.concat(polut[seur].slice(1));
+    }
+    ketjut.push(ketju);
+  };
+  // Ensin ketjut, joiden alkuun ei liity mitään; sitten loput (renkaat).
+  polut.forEach((g, i) => { if (!kaytetty.has(i) && !paat.has(avain(g[0]))) kasvata(i); });
+  polut.forEach((g, i) => { if (!kaytetty.has(i)) kasvata(i); });
+  return ketjut;
+}
+
+/*
+ * MEREN TÄYTTÖ RANTAVIIVASTA (Fablen päätös 9.8.2026, vaihtoehto a).
+ *
+ * Avomeri ei ole OSM:ssä monikulmio vaan pelkkä rantaviiva: maa on
+ * viivan vasemmalla puolella ja vesi oikealla, eikä vettä ole
+ * piirretty minkään muodon sisään. Tukholmassa tämä ei haitannut,
+ * koska siellä vedet ovat kapeita salmia ja rantaa myötäilevä
+ * vesiveto riitti. Marseillessa koko kuvan länsipuoli jäi paperin
+ * väriseksi ja Istanbulissa Bosporin 1,2–2 km olisi jäänyt tyhjäksi.
+ *
+ * Ratkaisu: ketjuta rantaviivat suunnassa, leikkaa ne rajauslaatikkoon
+ * ja sulje kukin pätkä laatikon reunaa pitkin vesipuolelle.
+ *
+ * Kolme sudenkuoppaa, jotka kaikki on kierretty tässä:
+ *  1. Sulkusuunta valitaan KOEPISTEELLÄ eikä päättelemällä. Rannan
+ *     keskikohdasta otetaan pieni askel kulkusuunnan oikealle eli
+ *     veteen, ja valitaan se rengas, jonka sisään koepiste jää.
+ *     Pelkkä orientaation päättely menee helposti väärin, koska
+ *     ruutukoordinaatiston y-akseli osoittaa alas.
+ *  2. Lähes koko laatikon peittävät renkaat hylätään. Pätkä, joka
+ *     poikkeaa laatikkoon ja palaa samalta reunalta, sulkeutuisi
+ *     muuten koko kehän ympäri ja täyttäisi kaupungin merellä.
+ *  3. Suljetut ketjut ovat saaria, ja ne piirretään paperin värillä
+ *     meren päälle.
+ *
+ * Tunnettu puute: jos rantaviiva poistuu laatikosta sivureunan kautta
+ * ja palaa samalle reunalle, väliin jäävä reunapätkä jää täyttämättä.
+ * Se näkyy paperinvärisenä kiilana reunassa. Rajaus kannattaa valita
+ * niin, ettei näin käy — ja kuva pitää joka tapauksessa katsoa.
+ */
+function merenTaytto(ketjut, r) {
+  const sisalla = (p) => p.lon >= r.lansi && p.lon <= r.ita && p.lat >= r.etela && p.lat <= r.pohjoinen;
+  const W = r.ita - r.lansi;
+  const H = r.pohjoinen - r.etela;
+  // Myötäpäivään kiertävä reunaparametri 0..4, jotta reunaa pitkin
+  // kävely osaa valita oikeat kulmat oikeassa järjestyksessä.
+  const t = (p) => {
+    const eL = Math.abs(p.lon - r.lansi);
+    const eI = Math.abs(p.lon - r.ita);
+    const eE = Math.abs(p.lat - r.etela);
+    const eP = Math.abs(p.lat - r.pohjoinen);
+    const m = Math.min(eL, eI, eE, eP);
+    if (m === eL) return (p.lat - r.etela) / H;
+    if (m === eP) return 1 + (p.lon - r.lansi) / W;
+    if (m === eI) return 2 + (r.pohjoinen - p.lat) / H;
+    return 3 + (r.ita - p.lon) / W;
+  };
+  const kulmat = [
+    { t: 1, lon: r.lansi, lat: r.pohjoinen },
+    { t: 2, lon: r.ita, lat: r.pohjoinen },
+    { t: 3, lon: r.ita, lat: r.etela },
+    { t: 0, lon: r.lansi, lat: r.etela },
+  ];
+  const leikkaa = (a, b) => {
+    let lo = 0;
+    let hi = 1;
+    for (let i = 0; i < 40; i += 1) {
+      const m = (lo + hi) / 2;
+      const p = { lon: a.lon + (b.lon - a.lon) * m, lat: a.lat + (b.lat - a.lat) * m };
+      if (sisalla(p)) lo = m; else hi = m;
+    }
+    return {
+      lon: Math.min(r.ita, Math.max(r.lansi, a.lon + (b.lon - a.lon) * lo)),
+      lat: Math.min(r.pohjoinen, Math.max(r.etela, a.lat + (b.lat - a.lat) * lo)),
+    };
+  };
+
+  const palat = [];
+  const saaret = [];
+  for (const k of ketjut) {
+    if (avain(k[0]) === avain(k[k.length - 1])) {
+      if (k.some(sisalla)) saaret.push(k);
+      continue;
+    }
+    let pala = null;
+    for (let i = 0; i < k.length; i += 1) {
+      const p = k[i];
+      if (sisalla(p)) {
+        if (!pala) {
+          pala = [];
+          if (i > 0) pala.push(leikkaa(p, k[i - 1]));
+        }
+        pala.push(p);
+      } else if (pala) {
+        pala.push(leikkaa(k[i - 1], p));
+        palat.push(pala);
+        pala = null;
+      }
+    }
+    if (pala) palat.push(pala);
+  }
+
+  const kavele = (pala, eteen) => {
+    const tA = t(pala[0]);
+    const rengas = pala.slice();
+    let kaynti = t(pala[pala.length - 1]);
+    for (let kierros = 0; kierros < 8; kierros += 1) {
+      const etaisyys = (c) => (eteen ? ((c.t - kaynti) + 4) % 4 : ((kaynti - c.t) + 4) % 4) || 4;
+      const kohde = (eteen ? ((tA - kaynti) + 4) % 4 : ((kaynti - tA) + 4) % 4);
+      const c = kulmat.map((k) => ({ ...k, d: etaisyys(k) })).sort((a, b) => a.d - b.d)[0];
+      if (kohde === 0 || c.d >= kohde) break;
+      rengas.push({ lat: c.lat, lon: c.lon });
+      kaynti = c.t;
+    }
+    return rengas;
+  };
+  const sisassa = (rengas, p) => {
+    let osuu = false;
+    for (let i = 0, j = rengas.length - 1; i < rengas.length; j = i, i += 1) {
+      const a = rengas[i];
+      const b = rengas[j];
+      if ((a.lat > p.lat) !== (b.lat > p.lat)
+        && p.lon < ((b.lon - a.lon) * (p.lat - a.lat)) / (b.lat - a.lat) + a.lon) osuu = !osuu;
+    }
+    return osuu;
+  };
+  const ala = (rengas) => {
+    let a = 0;
+    for (let i = 0, j = rengas.length - 1; i < rengas.length; j = i, i += 1) {
+      a += (rengas[j].lon * rengas[i].lat) - (rengas[i].lon * rengas[j].lat);
+    }
+    return Math.abs(a / 2);
+  };
+  const renkaat = palat.flatMap((pala) => {
+    const m = Math.max(1, Math.floor(pala.length / 2));
+    const a = pala[m - 1];
+    const b = pala[m];
+    const dx = b.lon - a.lon;
+    const dy = b.lat - a.lat;
+    const pit = Math.hypot(dx, dy) || 1;
+    const askel = 0.00025;
+    // Oikea puoli kulkusuunnasta on vesi: (dy, −dx).
+    const koe = {
+      lon: (a.lon + b.lon) / 2 + (dy / pit) * askel,
+      lat: (a.lat + b.lat) / 2 - (dx / pit) * askel,
+    };
+    if (!sisalla(koe) || pala.length < 6) return [];
+    const ehdokkaat = [kavele(pala, true), kavele(pala, false)]
+      .filter((rg) => sisassa(rg, koe) && ala(rg) < W * H * 0.9)
+      .sort((x, y) => ala(x) - ala(y));
+    return ehdokkaat.length ? [ehdokkaat[0]] : [];
+  });
+  return { renkaat, saaret };
+}
+
 /**
  * Rajauksen kuvasuhde: leveys yhtä korkeusyksikköä kohden.
  *
@@ -298,22 +533,45 @@ function kuvasuhde(rajat) {
  * kainalokartat — kainalossa vain x ja y osoittavat pieneen ruutuun
  * pääkuvan sisällä.
  */
-function kokoaKerrokset(elementit, x, y) {
+function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
   const pisteet = (geom) => geom.map((p) => `${x(p.lon)},${y(p.lat)}`).join(' ');
-  const kerrokset = { puistot: [], vedet: [], joet: [], radat: [], kadut: KADUT.map(() => []) };
+  const kerrokset = {
+    meri: [], saaret: [], puistot: [], vedet: [], joet: [], radat: [], kadut: KADUT.map(() => []),
+  };
+  const rantaviivat = [];
+  const laatikonAla = (rajat.ita - rajat.lansi) * (rajat.pohjoinen - rajat.etela);
   for (const e of elementit) {
     /*
-     * Vesirelaation jäsenpolut piirretään samana rantanauhana kuin
-     * rantaviiva: monikulmion kokoaminen ulko- ja sisärenkaineen olisi
-     * paljon työtä siitä, mikä tässä tyylissä näkyy vain reunana.
-     * Sisärenkaat (saaret järvessä) ovat sama nauha, ja se on oikein —
-     * saaren ranta on ranta.
+     * Vesirelaatio TÄYTETÄÄN, ei piirretä nauhana. Aiemmin jäsenpolut
+     * työnnettiin joet-listaan, jolloin Marseillen Vanhasatama —
+     * relaatio 10793156 — piirtyi ontoksi suorakaiteeksi keskelle
+     * kaupunkia. Ulkorenkaat ketjutetaan jäsenpoluista; suunnalla ei
+     * ole väliä, joten yleiskäyttöinen ketjuta riittää.
+     *
+     * VAROITUS: tämä haara olettaa relaation olevan VESI, koska
+     * kysely hakee vain relation["natural"="water"]. Jos joku lisää
+     * kyselyyn puisto- tai metsärelaatioita, ne täyttyisivät vetenä.
+     * Lisää silloin tagitarkistus tähän.
      */
     if (e.type === 'relation') {
-      for (const jasen of e.members ?? []) {
-        if (jasen.type === 'way' && jasen.geometry?.length) {
-          kerrokset.joet.push(`<polyline points="${pisteet(jasen.geometry)}"/>`);
+      const ulko = (e.members ?? [])
+        .filter((m) => m.type === 'way' && m.geometry?.length && m.role !== 'inner')
+        .map((m) => m.geometry);
+      for (const rengas of ketjuta(ulko)) {
+        if (rengas.length < 4) continue;
+        /*
+         * VAIN PIENET ALTAAT TÄYTETÄÄN. Iso vesirelaatio on
+         * ympäröivä vesistö, jonka SISÄLLÄ kartta on — ja koska
+         * työkalulla ei ole maa-alueita, täyttö peittäisi kaupungin.
+         * Venetsiassa kävi juuri niin: laguuni on yksi relaatio, ja
+         * täytettynä koko kuva muuttui vedeksi. Marseillen
+         * Vanhasatama on 3 % rajauksesta ja täyttyy oikein.
+         */
+        if (renkaanAla(rengas) > laatikonAla * 0.3) {
+          for (const geom of ulko) kerrokset.joet.push(`<polyline points="${pisteet(geom)}"/>`);
+          break;
         }
+        kerrokset.vedet.push(`<polygon points="${pisteet(rengas)}"/>`);
       }
       continue;
     }
@@ -325,31 +583,59 @@ function kokoaKerrokset(elementit, x, y) {
     } else if (t.waterway) {
       kerrokset.joet.push(`<polyline points="${pisteet(e.geometry)}"/>`);
     } else if (t.natural === 'coastline') {
-      /*
-       * Meri on OSM:ssä rantaviiva, ei vesialue: avomerta ei ole
-       * piirretty minkään monikulmion sisään, vaan maa on rantaviivan
-       * vasemmalla puolella. Sen täyttäminen vaatisi renkaiden
-       * kokoamisen rajauslaatikkoa vasten, ja saaristossa siitä tulee
-       * herkkä. Siksi rantaviiva piirretään SAMOIN KUIN JOKI: leveänä
-       * vesivetona rannan myötäisesti.
-       *
-       * Se ei ole hätäratkaisu vaan pelin oma kartankieli — pääkartalla
-       * meri on juuri tällainen rantaa myötäilevä viiva (.sea-echo,
-       * sama sävy #b99a68). Ilman tätä Tukholma piirtyi kaupungiksi,
-       * jonka keskellä on tyhjiä peltoja: Riddarfjärden ja Saltsjön
-       * ovat rantaviivaa, joten ne jäivät paperin värisiksi.
-       *
-       * Mitta: veto on 14 px, ja 1600 px:n kuvassa se on Tukholman
-       * rajauksella noin 40 metriä. Kapeimmatkin salmet (Strömmen,
-       * noin 200 m) pysyvät siis auki.
-       */
-      kerrokset.joet.push(`<polyline points="${pisteet(e.geometry)}"/>`);
+      // Kerätään talteen; meri täytetään näistä alempana.
+      rantaviivat.push(e.geometry);
     } else if (t.natural === 'water') {
       kerrokset.vedet.push(`<polygon points="${pisteet(e.geometry)}"/>`);
     } else if (t.railway) {
       kerrokset.radat.push(`<polyline points="${pisteet(e.geometry)}"/>`);
     } else {
       kerrokset.puistot.push(`<polygon points="${pisteet(e.geometry)}"/>`);
+    }
+  }
+
+  /*
+   * MERI ON KAUPUNKIKOHTAISESTI VALITTAVA (meri: true), eikä se ole
+   * oletuksena päällä. Syy on kova ja mitattu: Venetsiassa täyttö
+   * peitti KOKO KAUPUNGIN vedellä. Laguunissa rantaviiva pilkkoutuu
+   * kymmeniksi pätkiksi, joista osa sulkeutuu väärin päin, ja
+   * lopputulos oli kartta jossa saaret olivat meren alla.
+   *
+   * Luulin ensin, että tyhjään tulokseen peräytyminen riittäisi
+   * turvaksi. Ei riitä: peräännytys laukeaa vain kun renkaita ei
+   * synny lainkaan, ei silloin kun ne ovat vääriä. Geometrinen
+   * heuristiikka, joka voi kääntää maan ja meren päikseen, ei kuulu
+   * oletukseksi — se kuuluu valinnaksi, jonka tekijä on katsonut.
+   *
+   * Toinen vahti on pinta-ala: jos renkaat peittävät yli 85 %
+   * rajauksesta, jotain meni pieleen ja piirretään vanha rantanauha.
+   * Kaupunkia ei ole, jossa meri veisi niin paljon ja kartta olisi
+   * silti mielekäs.
+   *
+   * Vanha nauha ei ole hätäratkaisu vaan pelin oma kartankieli:
+   * pääkartalla meri on rantaa myötäilevä viiva (.sea-echo, sama sävy
+   * #b99a68). Kapeille salmille se riittää yhä, ja juuri niin
+   * Tukholma piirrettiin ennen.
+   */
+  if (rantaviivat.length) {
+    const nauhaksi = () => {
+      for (const geom of rantaviivat) kerrokset.joet.push(`<polyline points="${pisteet(geom)}"/>`);
+    };
+    if (!meri) {
+      nauhaksi();
+    } else {
+      const { renkaat, saaret } = merenTaytto(ketjutaSuunnassa(rantaviivat), rajat);
+      const pintaAla = renkaat.reduce((summa, rengas) => summa + renkaanAla(rengas), 0);
+      if (!renkaat.length || pintaAla > laatikonAla * 0.85) {
+        if (renkaat.length) {
+          console.log(`  VAROITUS: meri peittäisi ${Math.round((pintaAla / laatikonAla) * 100)} %`
+            + ' rajauksesta — piirretään rantanauha. Tarkista rajaus.');
+        }
+        nauhaksi();
+      } else {
+        for (const rengas of renkaat) kerrokset.meri.push(`<polygon points="${pisteet(rengas)}"/>`);
+        for (const saari of saaret) kerrokset.saaret.push(`<polygon points="${pisteet(saari)}"/>`);
+      }
     }
   }
   return kerrokset;
@@ -365,6 +651,11 @@ function kerrosKuvaus(kerrokset, mitta = 1) {
   const katuryhmat = KADUT.map((k, i) => `<g fill="none" stroke="${k.vari}" stroke-width="${v(k.leveys)}"
     stroke-linecap="round" stroke-linejoin="round">${kerrokset.kadut[i].join('')}</g>`).join('\n');
   return `
+  <!-- Meri pohjimmaiseksi, saaret sen päälle: saaren ranta on
+       rantaviivan sisärengas, ja ilman tätä järjestystä luodot
+       katoaisivat veden alle. -->
+  <g fill="${VESI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.meri.join('')}</g>
+  <g fill="${PAPERI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.saaret.join('')}</g>
   <g fill="${PUISTO}" stroke="none">${kerrokset.puistot.join('')}</g>
   <!-- Joen reunaviiva: leveämpi tumma veto alle, vesi päälle — jokeen
        tulee sama ohut ranta kuin vesialtaiden stroke-reunaan. -->
@@ -408,7 +699,7 @@ function piirraKainalo(kainalo, elementit, W, H) {
   // Viivat kainalon mittakaavaan: sama suhde kuin ruudun leveys
   // pääkuvan leveyteen, pohjalla 0,45 jottei kaikki katoa.
   const mitta = Math.max(0.45, w / W);
-  const kerrokset = kokoaKerrokset(elementit, x, y);
+  const kerrokset = kokoaKerrokset(elementit, x, y, kainalo.rajat, kainalo.meri);
   const tunnus = `kainalo${Math.round(x0)}_${Math.round(y0)}`;
   /*
    * Suuntamerkinnän koko on mitattu eikä arvattu. Lehti näyttää kuvan
@@ -446,12 +737,12 @@ function piirraKainalo(kainalo, elementit, W, H) {
 }
 
 function piirra(kaupunki, elementit, kainaloAineistot = []) {
-  const { rajat, kainalot = [] } = KAUPUNGIT[kaupunki];
+  const { rajat, kainalot = [], meri = false } = KAUPUNGIT[kaupunki];
   const W = 1600;
   const H = Math.round(W / kuvasuhde(rajat));
   const x = (lon) => (((lon - rajat.lansi) / (rajat.ita - rajat.lansi)) * W).toFixed(1);
   const y = (lat) => (((rajat.pohjoinen - lat) / (rajat.pohjoinen - rajat.etela)) * H).toFixed(1);
-  const kerrokset = kokoaKerrokset(elementit, x, y);
+  const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri);
   const kainaloKuvat = kainalot
     .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H)).join('\n');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
