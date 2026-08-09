@@ -4108,9 +4108,9 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Helsinki',
-      johdanto: 'Meren päällä kuuden saaren linnoitus, aseman ovella neljä '
-        + 'kivimiestä — ja keskusta, joka on kelvannut elokuvissa Moskovan '
-        + 'sijaiseksi.',
+      johdanto: 'Huvipuisto, jonka junaa jarrutetaan käsin, syksyinen '
+        + 'kalamarkkina vuodelta 1743 — ja aseman ovella neljä kivimiestä, '
+        + 'jotka ovat kaikki sama mies.',
       kansikuvat: [
         {
           tiedosto: 'Lutheran Cathedral Helsinki.jpg',
@@ -4127,34 +4127,29 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Sibelius Momument pipes.jpg',
-          selite: 'Sibelius-monumentin teräsputkia lähikuvassa. Eila Hiltusen '
-            + 'veistoksessa on yli 600 putkea, se painaa 24 tonnia ja '
-            + 'valmistui 1967.',
-          lahde: 'Tarja Kaltiomaa (photographer), Eila Hiltunen (sculptor), Wikimedia Commons (CC BY 4.0)',
+          tiedosto: 'Passengers of Suomenlinna ferry on an early winter morning; Helsinki, Finland, 2024 January.jpg',
+          selite: 'Suomenlinnan lautan matkustajat kävelevät Kauppatorin '
+            + 'lumiselle rannalle talviaamuna. Oikealla on lautta '
+            + 'laiturissa, takana Uspenskin katedraalin vihreät kupolit.',
+          lahde: 'Pekka Vyhtinen, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       nostot: [
         {
-          otsikko: 'Finlandia soitettiin väärällä nimellä',
-          tiedosto: 'Jean-Sibelius-at-the-piano.jpg',
-          teksti: 'Marraskuussa 1899 Helsingissä järjestettiin sanomalehtien '
-            + 'juhla vastalauseeksi Venäjän sortotoimille. Ruotsalaisessa '
-            + 'teatterissa esitettiin kuvaelmia Suomen historiasta, ja Jean '
-            + 'Sibelius johti itse viimeisen osan, jonka nimi oli Suomi '
-            + 'herää. Se kiihotti kuulijoita niin, että kappaletta soitettiin '
-            + 'sen jälkeen vaihtuvilla nimillä — yksi niistä oli pelkkä '
-            + 'Impromptu. Nimen Finlandia teos sai vasta vuonna 1900. Se '
-            + 'kestää noin kahdeksan minuuttia.',
-          selite: 'Jean Sibelius soittamassa flyygeliä kotonaan Ainolassa '
-            + 'Järvenpäässä. Talo valmistui 1904, ja säveltäjä asui siellä '
-            + 'yli viisikymmentä vuotta kuolemaansa 1957 asti.',
-          lahde: 'Wikimedia Commons (PD)',
-          wiki: 'Jean Sibelius',
-          musiikki: 'https://music.apple.com/fi/search?term=sibelius%20finlandia',
-          musiikkiNimi: 'Sibeliuksen Finlandia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/SIBELIUSFinlandia-NEWTRANSFER/Sibelius-FinlandiaOp.26.mp3',
-          musiikkiNayteNimi: 'Sibelius: Finlandia — Artur Rodzinski, CC BY-NC-SA',
+          otsikko: 'Vuoristoradan takana seisoo jarrumestari',
+          tiedosto: 'Linnanmäki Vuoristorata.jpg',
+          teksti: 'Linnanmäen huvipuisto avattiin 1950 vanhalle vesitornimäelle, '
+            + 'ja puinen Vuoristorata seuraavana kesänä 13. heinäkuuta 1951. '
+            + 'Se on yksi maailman harvoista radoista, joilla junan vauhtia '
+            + 'hidastetaan käsin: jarrumestari seisoo junan takaosassa koko '
+            + 'matkan ja hoitaa jarrutuksen. Kesässä rataa kierretään noin '
+            + '47 000 kertaa. Huvipuiston omistaa Lasten Päivän Säätiö, ja '
+            + 'tuotto jaetaan kuudelle lastensuojelujärjestölle.',
+          selite: 'Vuoristoradan sininen juna kiipeää ylös täydessä lastissa. '
+            + 'Kiskojen alusta, pylväät ja kaiteet ovat puuta, kuten radan '
+            + 'valmistuessa 1951.',
+          lahde: 'Oona Räisänen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Vuoristorata (Linnanmäki)',
         },
         {
           otsikko: 'Silakkamarkkinat vuodesta 1743',
@@ -4199,12 +4194,12 @@ export const KULTTUURI_KATEGORIAT = {
         + 'niin venäläinen ilme, että Neuvostoliittoa on tultu kuvaamaan '
         + 'tänne.',
       tehtava: {
-        kysymys: 'Mikä helsinkiläinen puisto sai esittää Moskovan huvipuistoa '
-          + 'elokuvassa Gorky Park?',
-        vaihtoehdot: ['Kaivopuisto', 'Sibeliuksen puisto', 'Kaisaniemen puisto', 'Esplanadin puisto'],
+        kysymys: 'Kuinka monta lyhyttä välähdystä Suomenlinnan kirkontornin '
+          + 'majakka antaa kerrallaan?',
+        vaihtoehdot: ['Kaksi', 'Kolme', 'Neljä', 'Viisi'],
         oikea: 2,
-        fakta: 'Gorky Park kuvattiin pääosin Helsingissä, ja elokuvan '
-          + 'nimikkopuistona toimi Kaisaniemen puisto.',
+        fakta: 'Neljä lyhyttä on morseaakkosten H — sama kirjain kuin '
+          + 'Helsingin alussa.',
       },
       nostot: [
         {
