@@ -9293,6 +9293,23 @@ body.vertailu-tila .pawns { display: none; }
  */
 .dialog.lehti .dialog-actions { justify-content: space-between; }
 .dialog.lehti .dialog-actions #arrival-no { order: 0; }
+
+/*
+ * Poistu himmeämmäksi lehdessä (omistajan toive 9.8.2026): se on aina
+ * tarjolla muttei koskaan se, mitä lukija on juuri tekemässä —
+ * suuntanapit ja kätkö saavat erottua. Hover palauttaa täyden värin.
+ */
+.dialog.lehti .dialog-actions #arrival-no {
+  color: rgba(70, 51, 31, 0.55);
+  border-color: rgba(70, 51, 31, 0.3);
+  background: none;
+}
+
+.dialog.lehti .dialog-actions #arrival-no:hover:not(:disabled) {
+  color: var(--map-ink);
+  border-color: rgba(70, 51, 31, 0.55);
+  background: rgba(255, 255, 255, 0.6);
+}
 .dialog.lehti .dialog-actions .tutki-alanappi.sisallysnappi { order: 1; margin-right: auto; }
 .dialog.lehti .dialog-actions .tutki-alanappi.edellinen { order: 2; }
 .dialog.lehti .dialog-actions .tutki-alanappi.seuraava { order: 3; }
@@ -9433,7 +9450,20 @@ body.maatiedot-tila .board-hint {
 /*
  * Alanapin kaksi riviä: suunta ja sen alla aihe, jolle nappi vie.
  */
-.tutki-alanappi { display: inline-flex; flex-direction: column; align-items: center; line-height: 1.15; }
+/*
+ * justify-content keskittää kaksirivisen sisällön myös pystysuunnassa:
+ * rivin napit venyvät korkeimman (kaksirivinen Poistu lehdestä)
+ * mittaisiksi, ja ilman sitä suunta ja aihe kasautuivat yläreunaan
+ * (omistajan havainto 9.8.2026: "Keskitä paremmin seuraava ja
+ * edellinen tekstit napeissa").
+ */
+.tutki-alanappi {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.15;
+}
 .alanappi-suunta { font-size: 0.82rem; }
 
 .alanappi-aihe {
@@ -121524,6 +121554,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 423, teksti: 'Poistu-nappi himmeämmäksi, suuntanapit keskitetty' },
   { v: 422, teksti: 'Radio kartan ylle, liitelinkki pois päiväyksen päältä' },
   { v: 421, teksti: 'Kohdekartta Ateenaan, Amsterdamiin ja Dubliniin' },
   { v: 420, teksti: 'Valokuvakysymyksen kuvat käyty läpi yksi kerrallaan' },
@@ -122026,7 +122057,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.422';
+const APP_VERSION = '2026-08-09.423';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
