@@ -266,3 +266,31 @@ on mainissa; lue ne kun tarvitset yksityiskohdat:
   julkaisseet tunnin sisällä paitsi Sonnet 1, jolta odotetaan
   Dubai-QA-vastausta tilannekyselyyn — jos ei vastausta seuraavaan
   kierrokseen mennessä, kierrätä kontti ja anna QA-erä uudelleen).
+
+## Omistajan portti 10.8. klo ~1.20: "Ilmoita kun valmista"
+
+Omistaja EI testipelaa Eurooppaa ennen kuin ilmoitan että matkakirja-
+ja etsi kätkö -pelit luentoineen ovat VALMIIT. Ei osittaisilmoituksia.
+Valmiuden tarkistuslista (ilmoitus vasta kun KAIKKI kohdat kiinni ja
+Sonnet 1:n loppu-QA ajettu):
+
+1. [x] Tarinakaari 41/41 Euroopan kaupunkia, luennat 123/123 (v460).
+2. [x] Tehtävämuodot: yksi tehtävä/pysähdys, pulma korvaa visan (v478).
+3. [ ] Viisi puuttuvaa kaupunkilehteä: Riika, Vilna, Oslo,
+       Kööpenhamina, Dubrovnik (Opus 1, työn alla).
+4. [ ] Orpo minitehtävä -auditointi (evzone-tapaus: vastaus eri
+       sivulla kuin kysymys) — Opus 1 jonossa.
+5. [ ] Menovinkkisivujen kuvat (omistajan havainto Suomen lehdestä)
+       — Opus 1 jonossa 5 lehden jälkeen.
+6. [ ] Uusien lehtikaupunkien kohdekartat + vesikorjaukset (Tukholma,
+       Madrid, Lontoo) — Opus 2, työn alla.
+7. [ ] Nähtävyysjutut kohdekartallisiin kaupunkeihin: erä 9 (Rooma,
+       Krakova, Varsova, Tallinna — työn alla), erä 10 (Sofia,
+       Bukarest, Sarajevo), erä 11 (Kiova, Pietari, Moskova, Odessa)
+       — Sonnet 2.
+8. [ ] Sonnet 1:n kokoava QA-kierros koko Euroopalle (peli + lehdet +
+       luennat) kun 3–7 ovat mainissa.
+9. [ ] Fablen oma läpipelaus Playwrightilla + ilmoitus omistajalle.
+
+Löytöluentoja (puhe-kohtaaminen-*-loyto) EI lasketa valmiuteen:
+kaaren aarreluenta kattaa paljastuksen äänen kaarilaudoilla.
