@@ -173,56 +173,6 @@ export const EUROPE_KULTTUURI = {
   },
 
   kreeta: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Härän yli hypättiin',
-        tiedosto: 'Bull leaping minoan fresco archmus Heraklion.jpg',
-        teksti: 'Knossoksen seinämaalauksissa nuoret tarttuvat juoksevan '
-          + 'härän sarviin ja heittävät kuperkeikan sen selän yli. '
-          + 'Tutkijat kiistelevät yhä siitä, oliko se urheilua, uskonnon '
-          + 'meno vai molempia — eikä kukaan tiedä, onnistuiko se '
-          + 'oikeasti koskaan.',
-        selite: 'Härkähyppyfreskon jäänteet Herakleionin arkeologisessa '
-          + 'museossa, maalattu noin 1500 eaa. Vaaleat hahmot ovat '
-          + 'naisia, tumma mies — minolainen tapa merkitä sukupuoli '
-          + 'värillä.',
-        lahde: 'Wikimedia Commons (CC0)',
-        wiki: 'Knossos',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Lyyra soi polvella',
-        tiedosto: 'Cretan lyra.jpg',
-        teksti: 'Kreetalainen lyyra on kolmikielinen jousisoitin, jota '
-          + 'pidetään pystyssä polvella eikä leuan alla. Sitä soitetaan '
-          + 'häissä ja kylän juhlissa, usein läpi yön: tanssi kestää niin '
-          + 'kauan kuin soittajaa jaksaa.',
-        selite: 'Kreetalainen lyyra. Kieliä painetaan kynsien kyljellä, '
-          + 'ei sormenpäillä — siitä tulee soittimen erikoinen liukuva '
-          + 'ääni.',
-        lahde: 'Lemur12, Wikimedia Commons (CC BY 3.0)',
-        wiki: 'Psarantónis',
-        musiikki: 'https://music.apple.com/fi/search?term=cretan%20lyra',
-        musiikkiNimi: 'Kreetalaista lyyramusiikkia Apple Musicissa',
-        musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Cretan_Lyra_-_Sample.mp3',
-        musiikkiNayteNimi: 'Kreetalainen lyyra — Aerakis, CC BY',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Öljypuita enemmän kuin ihmisiä',
-        tiedosto: 'Olive-Harvest-Sitia-Lasithi-Crete-Greece.jpg',
-        teksti: 'Kreetalla kasvaa noin 30 miljoonaa oliivipuuta ja asuu '
-          + 'reilut 600 000 ihmistä — puita on siis viisikymmentä kertaa '
-          + 'enemmän. Osa puista on tuhansia vuosia vanhoja ja tuottaa '
-          + 'yhä satoa. Sato korjataan talvella, usein koko suvun voimin.',
-        selite: 'Oliivinkorjuuta Sitiassa Itä-Kreetalla. Verkot '
-          + 'levitetään puun alle ja oksat ravistellaan tai kammataan '
-          + 'tyhjiksi.',
-        lahde: 'Petro Stelte, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Oliivi',
-      },
-    ],
     kysymys: {
       q: 'Kuinka vanha Knossoksen palatsikulttuuri on?',
       options: [
@@ -239,55 +189,6 @@ export const EUROPE_KULTTUURI = {
   },
 
   sisilia: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Ritarit narujen varassa',
-        tiedosto: 'Sicilian puppets.JPG',
-        teksti: 'Opera dei pupi on sisilialainen nukketeatteri, jossa '
-          + 'metrin mittaiset haarniskoidut ritarit taistelevat '
-          + 'Kaarle Suuren tarinoissa. Sama tarina jatkui iltaa toisensa '
-          + 'jälkeen kuukausia, ja yleisö tuli katsomaan kuin '
-          + 'televisiosarjaa. Unesco suojeli perinteen 2001.',
-        selite: 'Sisilialaisia pupi-nukkeja haarniskoissaan. Nuket '
-          + 'painavat jopa kymmenen kiloa, ja niitä ohjataan '
-          + 'rautatangoilla ylhäältä.',
-        lahde: 'Lookandlike, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Opera dei pupi',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Cannolo täytetään vasta tilauksesta',
-        tiedosto: 'Cannoli siciliani.jpg',
-        teksti: 'Cannolo on paistettu taikinaputki, joka täytetään '
-          + 'makeutetulla ricotta-juustolla. Kunnon leipomossa se '
-          + 'täytetään vasta kun asiakas tilaa — muuten kuori pehmenee. '
-          + 'Ricotta tehdään lampaanmaidosta, ja arabit toivat '
-          + 'sokeriruo’on saarelle 800-luvulla.',
-        selite: 'Cannoli siciliani tarjolla. Päihin painetaan usein '
-          + 'pistaasirouhetta tai kandeerattua hedelmää.',
-        lahde: 'Stefano Mortellaro, Wikimedia Commons (CC BY 2.0)',
-        wiki: 'Cannolo',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Torilla huudetaan laulaen',
-        tiedosto: 'Ballarò, gente en el mercado, Palermo, Sicilia, Italia, 2015.JPG',
-        teksti: 'Palermon Ballarò on toiminut samalla paikalla yli '
-          + 'tuhat vuotta, arabivallan ajoista asti. Myyjien huuto on '
-          + 'oma taiteenlajinsa nimeltä abbanniata: hinta ja tavara '
-          + 'lauletaan venytetyllä melodialla, joka kuuluu korttelin '
-          + 'päähän.',
-        selite: 'Ballarò-tori Palermossa. Kojujen välissä myydään kalaa, '
-          + 'vihanneksia ja katuruokaa; markkina alkaa aamuvarhain ja '
-          + 'jatkuu iltaan.',
-        lahde: 'Benjamín Núñez González, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Palermo',
-        // Kenttä-äänitys juuri tältä torilta maaliskuussa 2009.
-        aani: 'https://archive.org/download/aporee_6826_8498/palermoballarmarzo2009.MP3',
-        aaniLahde: '"ballarò" — Attilio Migliorati, radio aporee (CC BY-SA 3.0)',
-      },
-    ],
     kysymys: {
       q: 'Mikä on abbanniata?',
       options: [
@@ -619,58 +520,6 @@ export const EUROPE_KULTTUURI = {
   },
 
   alpit: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Torvi, joka puhuu laaksosta toiseen',
-        tiedosto: 'Alphornblaeserformation über Kreuz in Zermatt - panoramio.jpg',
-        teksti: 'Alppitorvessa ei ole yhtäkään venttiiliä eikä läppää, '
-                  + 'joten siitä saa vain luonnonsävelsarjan äänet — taitava '
-                  + 'soittaja yltää kuuteentoista. Ääni kantaa maastosta '
-                  + 'riippuen viidestä kymmeneen kilometriin. Sillä kutsuttiin '
-                  + 'karja kotiin ja viestittiin naapurilaaksoon, kun muuta '
-                  + 'puhelinta ei ollut.',
-        selite: 'Alppitorvensoittajia Zermattissa. Torvien suppilot '
-                  + 'lepäävät maassa; jokainen on veistetty kuusesta ja koottu '
-                  + 'kolmesta osasta, ja seinämä on vain 6–8 millimetriä paksu.',
-        lahde: 'Walter Schärer, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Alppitorvi',
-        musiikki: 'https://music.apple.com/fi/search?term=alphorn',
-        musiikkiNimi: 'Alppitorvimusiikkia Apple Musicissa',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kansallisruoka, joka piti keksiä',
-        tiedosto: 'Full cheese fondue set - in Switzerland.JPG',
-        teksti: 'Juustofondue oli 1900-luvun alussa tuttu vain muutamassa '
-                  + 'laaksossa. Sveitsin juustoliitto teki siitä kansallisruoan '
-                  + 'mainoskampanjalla, ja armeijan keittokirja levitti '
-                  + 'reseptin koko maahan 1950-luvulla. Tunnetuin sekoitus on '
-                  + 'moitié-moitié: puolet gruyèrea, puolet vacherinia. Pataan '
-                  + 'pudonnut leipä maksaa laulun.',
-        selite: 'Fonduepata eli caquelon lämmittimen päällä, vieressä '
-                  + 'leipäkuutioita ja pikkukurkkuja. Juusto pidetään sulana '
-                  + 'pienellä liekillä ja sitä sekoitetaan koko ajan.',
-        lahde: 'Wikimedia Commons (PD)',
-        wiki: 'Fondue',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Vuoren kanssa opitaan elämään',
-        tiedosto: 'St. Antönien Lawinenverbauung 02.jpg',
-        teksti: 'Alppikylissä lumivyöryn hallinta on taitoa, joka on '
-                  + 'siirtynyt sukupolvelta toiselle: mitä metsää ei kaadeta, '
-                  + 'minne ei rakenneta, milloin tie suljetaan. Rinteisiin on '
-                  + 'pystytetty teräsaitoja pitämään lumi paikallaan. Unesco '
-                  + 'lisäsi tämän osaamisen kulttuuriperintöluetteloonsa vuonna '
-                  + '2018 Sveitsin ja Itävallan yhteisestä hakemuksesta.',
-        selite: 'Lumivyöryesteitä St. Antöniessa Graubündenin kantonissa. '
-                  + 'Teräsristikot on rakennettu juuri sinne, mistä vyöry '
-                  + 'lähtisi liikkeelle — kylän yläpuoliseen rinteeseen.',
-        lahde: 'Paebi, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Lumivyöry',
-      },
-    ],
     kysymys: {
       q: 'Miksi alppitorvella voi soittaa vain tietyt sävelet?',
       options: [
