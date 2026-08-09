@@ -49407,8 +49407,15 @@ const MAAKARTAT = {
  * muutama kuuluisa kohde, joista osa avaa artikkelin). Sama
  * sijaintikarttaperhe ja prosenttiasemointi kuin MAAKARTAT-taulussa.
  * Kohteen wiki on tarkistettu fi.wikipedian artikkeli; ilman wikiä
- * piste on pelkkä merkki. nimiVasen kääntää nimen pisteen
- * vasemmalle puolelle, kun oikealla olisi ahdasta.
+ * piste on pelkkä merkki.
+ *
+ * Tässä luki aiemmin, että nimiVasen kääntäisi nimen pisteen
+ * vasemmalle puolelle ahtaassa paikassa. SELLAISTA KENTTÄÄ EI OLE
+ * KOSKAAN OLLUT, eikä sitä tarvita: kartalla näkyy vain numero, ja
+ * nimet ovat kuvan alla selitelistassa. Tooltip on tarkoituksella
+ * keskitetty eikä tunnista reunoja (css/styles.css:8833). Lupaus
+ * ehti harhauttaa useaa sessiota ehdottamaan kenttää, joten se on
+ * kirjattu tähän eikä vain poistettu. Löytö: Sonnet 1:n QA.
  */
 const KAUPUNKIKARTAT = {
   istanbul: {
