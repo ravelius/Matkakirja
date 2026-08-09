@@ -5315,4 +5315,295 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  islanti: [
+    {
+      id: 'kaupunki',
+      nimi: 'Islanti',
+      johdanto: 'Saari, jossa käräjät pidettiin kahden mantereen välissä, kieli ei '
+        + 'ole muuttunut tuhanteen vuoteen ja kirjoja julkaistaan enemmän '
+        + 'asukasta kohti kuin missään muualla.',
+      kansikuvat: [
+        {
+          tiedosto: 'Gullfoss, Suðurland, Islandia, 2014-08-16, DD 119.JPG',
+          selite: 'Gullfossin putous syöksyy kahdessa portaassa kapeaan rotkoon. '
+            + 'Vesipölyyn on noussut sateenkaari, ja reunoilla on ruskeaa '
+            + 'sammalta.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'View of Reykjavík from Hallgrímskirkja, 20230507 1229 5733.jpg',
+          selite: 'Reykjavík kirkontornista nähtynä: värikkäitä peltikattoja '
+            + 'tiiviisti vierekkäin, takana satama ja meren takana '
+            + 'lumihuippuinen vuori.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Reynisfjara and Reynisdrangar, Iceland.jpg',
+          selite: 'Reynisfjaran musta hiekkaranta ja siitä merestä nousevat '
+            + 'basalttipilarit. Aallot lyövät rantaan valkoisina vaahtoina.',
+          lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Käräjät kahden mantereen välissä',
+          tiedosto: 'Almannagjá Gorge, Þingvellir National Park, Iceland.jpg',
+          teksti: 'Þingvellirissä islantilaiset kokoontuivat käräjille vuodesta '
+            + '930 alkaen: lait luettiin ääneen kalliolta, koska niitä ei '
+            + 'ollut kirjoitettu mihinkään. Paikka sattuu olemaan kohdassa, '
+            + 'jossa Pohjois-Amerikan ja Euraasian mannerlaatat erkanevat — '
+            + 'rotko levenee pari senttiä vuodessa.',
+          selite: 'Almannagjá, Þingvellirin suurin repeämä. Kalliolta lainlukija '
+            + 'esitti kolmasosan laeista joka vuosi, jotta koko lakikokoelma '
+            + 'tuli luetuksi kolmen vuoden välein.',
+          lahde: 'Marine SABRES, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Þingvellir',
+        },
+        {
+          otsikko: 'Kieli, joka ei liikkunut',
+          tiedosto: 'GKS 1005 fol., 0005v - 15 (cropped).jpg',
+          teksti: 'Islannin kieli on muuttunut niin vähän, että koululainen voi '
+            + 'lukea 1200-luvun saagoja alkukielellä. Uusille asioille ei '
+            + 'lainata sanoja vaan tehdään omat: tietokone on tölva, "lukujen '
+            + 'ennustaja", ja kaikille islantilaisille tuttu sana yhtä '
+            + 'lailla.',
+          selite: 'Aukeama Flateyjarbókista, Islannin suurimmasta keskiaikaisesta '
+            + 'käsikirjoituksesta (1387–1394). Se sisältää Norjan kuninkaiden '
+            + 'saagoja ja kertomuksen Vinlandin löytämisestä.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Flateyjarbók',
+        },
+        {
+          otsikko: 'Björk ja pieni maa, joka soi',
+          tiedosto: 'BjörkCoachella.jpg',
+          teksti: 'Islannissa asuu vähemmän ihmisiä kuin monessa suomalaisessa '
+            + 'maakunnassa, mutta musiikkia tulee ulos kuin suurmaasta. Björk '
+            + 'aloitti kotimaassaan jo lapsitähtenä ja löi läpi maailmalla '
+            + '1990-luvulla; hänen jälkeensä tulivat muun muassa Sigur Rós ja '
+            + 'Of Monsters and Men.',
+          selite: 'Björk esiintymässä. Hän on levyttänyt sekä islanniksi että '
+            + 'englanniksi ja tehnyt yhteistyötä muusikoiden ja '
+            + 'kuvataiteilijoiden kanssa ympäri maailman.',
+          lahde: 'Paul Familetti, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Björk',
+        },
+      ],
+    },
+    {
+      id: 'kirjat',
+      nimi: 'Kirjat',
+      johdanto: 'Islannissa lukeminen ei ole harrastus vaan tapa: kirjat annetaan '
+        + 'lahjaksi samana iltana, vanhat käsikirjoitukset otettiin vastaan '
+        + 'kuin kuninkaat, ja pienestä maasta tuli Nobel-palkittu.',
+      tehtava: {
+        kysymys: 'Milloin islantilaiset avaavat kirjalahjansa?',
+        vaihtoehdot: [
+          'Uudenvuodenaattona',
+          'Jouluaattona',
+          'Juhannuksena',
+          'Loppiaisena',
+        ],
+        oikea: 1,
+        fakta: 'Sama ilta jatkuu lukemisella — moni menee sänkyyn kirjan kanssa '
+          + 'jo heti.',
+      },
+      nostot: [
+        {
+          otsikko: 'Joulun kirjatulva',
+          tiedosto: 'Man in bookshop of Reykjavík (749038732).jpg',
+          teksti: 'Islannissa suurin osa vuoden kirjoista ilmestyy syksyllä, ja '
+            + 'marraskuussa joka kotiin jaetaan luettelo, jossa ne kaikki '
+            + 'ovat. Ilmiötä sanotaan nimellä jólabókaflóð, joulun '
+            + 'kirjatulva. Kirja on tavallisin joululahja, ja se avataan '
+            + 'jouluaattona — moni jää samana iltana lukemaan sängyssä '
+            + 'suklaan kanssa. Asukasta kohti Islannissa julkaistaan enemmän '
+            + 'kirjoja kuin missään muussa maassa, ja sanotaan että joka '
+            + 'kymmenes islantilainen julkaisee elämänsä aikana kirjan.',
+          selite: 'Mies seisoo reykjavíkilaisen kirjakaupan hyllyjen edessä. '
+            + 'Hyllyt ovat lattiasta kattoon täynnä kirjoja, ja niiden '
+            + 'reunoissa on hintakylttejä.',
+          lahde: 'Helgi Halldórsson, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Käsikirjoitukset tuotiin takaisin laivalla',
+          tiedosto: 'Dividing a whale, from a manuscript from the 16th century.jpg',
+          teksti: 'Keskiaikaiset islantilaiset käsikirjoitukset vietiin 1600- ja '
+            + '1700-luvuilla Tanskaan tutkittaviksi, ja ne jäivät sinne '
+            + 'kahdeksi vuosisadaksi. Kun Islanti pyysi niitä takaisin, '
+            + 'syntyi pitkä kiista — Tanskan yliopistot vastustivat. Lopulta '
+            + 'ensimmäiset niteet palasivat 21. huhtikuuta 1971 laivalla, '
+            + 'jota oli vastassa satamassa väkijoukko ja televisiokamerat. '
+            + 'Koulut pidettiin kiinni, jotta lapset pääsivät katsomaan. '
+            + 'Palautus jatkui vuosikymmeniä.',
+          selite: 'Sivu 1500-luvun islantilaisesta käsikirjoituksesta. Tekstin '
+            + 'alla on piirros, jossa ihmiset paloittelevat valasta rannalla '
+            + 'ja hevonen kantaa koria.',
+          lahde: 'Tuntematon kirjuri, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Pieni maa sai Nobelin',
+          tiedosto: 'Halldór Kiljan Laxness 1955.jpg',
+          teksti: 'Halldór Laxness sai kirjallisuuden Nobelin vuonna 1955. Hänen '
+            + 'kirjansa kertovat tavallisista islantilaisista: lampaista, '
+            + 'sitkeydestä ja köyhyydestä, mutta niin että lukija nauraa ja '
+            + 'liikuttuu samaan aikaan. Tunnetuin on Sallittu ihminen eli '
+            + 'Sjálfstætt fólk, tarina lampuriperheestä, joka ei suostu '
+            + 'ottamaan apua keneltäkään. Kun palkinto tuli, maassa oli alle '
+            + 'sataseitsemänkymmentätuhatta asukasta — pienin maa, josta '
+            + 'kirjallisuuden Nobel oli siihen asti tullut.',
+          selite: 'Mustavalkoinen muotokuva Halldór Laxnessista vuodelta 1955. '
+            + 'Kirjailija katsoo sivulle, hiukset kammattuna taakse ja puvun '
+            + 'kaulus auki.',
+          lahde: 'Nobel-säätiö, Wikimedia Commons (public domain)',
+          wiki: 'Halldór Laxness',
+        },
+      ],
+    },
+  ],
+  lappi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Lappi',
+      johdanto: 'Alue, jossa laulu ei kerro kohteestaan vaan on se, ruoka valmistuu '
+        + 'jäisestä lihasta, ja kieltä puhutaan vain täällä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Gentle but wide green aurora display over Levi, Kittilä, Lapland, Finland, 2023 September - 2.jpg',
+          selite: 'Revontulet leviävät vihreinä juovina tunturin yllä Kittilässä. '
+            + 'Alhaalla erottuu matalaa männikköä ja jäkäläpeitteistä maata.',
+          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Betula pubescens czerepanovii in autumn colors on the lower peak of Sallatunturit in Salla, Lapland, Finland.jpg',
+          selite: 'Tunturikoivu hehkuu oranssina ruskan aikaan Sallassa. Takana '
+            + 'aukeaa metsäinen laakso ja seuraavat tunturit.',
+          lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Reindeer farm, Inari, Suomi - Finland 2013-03-10 f.jpg',
+          selite: 'Poroja valjaissa ahkioiden edessä Inarissa. Aidan takana '
+            + 'odottaa jono rekiä, ja tienvarressa on kolmion muotoinen '
+            + 'porovaroituskyltti.',
+          lahde: 'Manfred Werner, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Joikua ei lauleta jostakusta',
+          tiedosto: 'Wimme Saari.jpg',
+          teksti: 'Joiku on saamelaisten vanha laulutapa: ihmiselle, paikalle tai '
+            + 'eläimelle tehdään oma sävelmä. Ihmisestä ei lauleta — hänet '
+            + 'joikataan, ja valmis joiku on kuin toinen nimi. Sitä ei enää '
+            + 'muuteta, ja se voi periytyä suvussa. Kirkko piti joikaamista '
+            + 'syntinä, ja vielä 1950-luvulla se oli kielletty '
+            + 'saamelaisalueen kouluissa.',
+          selite: 'Wimme Saari joikaa Etno-Espan lavalla Helsingissä elokuussa '
+            + '2006. Yllään hänellä on gákti eli saamenpuku. Joikaaja tulee '
+            + 'toimeen ilman soittimia: sävel muuntuu kurkunpään lihaksilla.',
+          lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Joiku',
+        },
+        {
+          otsikko: 'Käristys tehdään jäisestä lihasta',
+          tiedosto: 'Poronkäristys.jpg',
+          teksti: 'Poronkäristykseen liha höylätään jäätyneenä ohuiksi lastuiksi, '
+            + 'kuullotetaan rasvassa ja haudutetaan pehmeäksi. Seuraksi tulee '
+            + 'perunamuusia ja puolukkaa. Porot laiduntavat vapaina: '
+            + 'poronhoitoalue on 122 936 neliökilometriä eli 36 prosenttia '
+            + 'Suomen maapinta-alasta, ja suurin sallittu poromäärä on ollut '
+            + '203 700 eloporoa.',
+          selite: 'Poronkäristystä perunamuusin, puolukan ja suolakurkun kanssa '
+            + 'Muonion Jeriksellä. Liha on porosta, joka on ollut ulkona koko '
+            + 'elämänsä — siksi lastut ovat tummia ja lähes rasvattomia.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Poronkäristys',
+        },
+        {
+          otsikko: 'Kieli, jota puhutaan vain Suomessa',
+          tiedosto: 'Sajos sign OCT2022 IMG 4712a.jpg',
+          teksti: 'Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä. '
+            + '1990-luvun puolivälissä kieltä puhui lapsilleen enää kaksi '
+            + 'perhettä ja alle 20-vuotiaita puhujia oli neljä. Vuonna 1997 '
+            + 'Inarissa aloitettiin kielipesä, jossa aikuiset puhuvat '
+            + 'lapsille vain inarinsaamea. Nyt puhujia on muutama sata, ja '
+            + 'osa kielipesän lapsista opettaa kieltä itse.',
+          selite: 'Sajos-talon opastaulu Inarissa: samat asiat pohjoissaameksi, '
+            + 'inarinsaameksi, koltansaameksi ja suomeksi. Alimmalla rivillä '
+            + 'on Anarâškielâ servi, inarinsaamen kieliyhdistys.',
+          lahde: 'Kimberli Mäkäräinen, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Inarinsaame',
+        },
+      ],
+    },
+    {
+      id: 'tunturi',
+      nimi: 'Tunturi',
+      johdanto: 'Tunturissa eläminen on aina ollut liikkumista ja lämmön '
+        + 'säästämistä: eläin kulkee vapaana mutta on jonkun oma, tavarat '
+        + 'kulkivat ahkiossa, ja talo kaivettiin maahan.',
+      tehtava: {
+        kysymys: 'Mistä poron omistaja tunnistetaan?',
+        vaihtoehdot: [
+          'Korvamerkistä',
+          'Kaulapannasta',
+          'Sarvien muodosta',
+          'Turkin väristä',
+        ],
+        oikea: 0,
+        fakta: 'Merkit ovat suvuittain periytyviä, ja ne opetellaan ulkoa kuin '
+          + 'nimet.',
+      },
+      nostot: [
+        {
+          otsikko: 'Eläin, joka ei ole villi eikä kesy',
+          tiedosto: 'Utsjoki, Lapland, Finland - 51228525801.jpg',
+          teksti: 'Poro kulkee kesät vapaana tuntureilla, mutta jokaisella on '
+            + 'omistaja. Tunnistus tehdään korvamerkistä: vasan korvaan '
+            + 'leikataan syntymäkesänä oman suvun kuvio, ja merkkejä on '
+            + 'satoja erilaisia. Suomessa poroja on noin kaksisataatuhatta, '
+            + 'ja poronhoitoalue kattaa lähes kolmanneksen maasta. Syksyllä '
+            + 'porot kootaan erotukseen, jossa ne lajitellaan omistajille ja '
+            + 'osa erotetaan teuraaksi. Aidan sisällä pyörii tuhansia eläimiä '
+            + 'samaan aikaan.',
+          selite: 'Neljä poroa kulkee lumisella rinteellä Utsjoella. Maassa on '
+            + 'paljasta kangasta ja lunta laikuittain, ja takana näkyy '
+            + 'tunturin rinne.',
+          lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Poro',
+        },
+        {
+          otsikko: 'Ennen porolla kuljetettiin kaikki',
+          tiedosto: 'MECHELIN(1894) p085 A Reindeer caravan at rest.jpg',
+          teksti: 'Ennen moottorikelkkoja poro oli Lapin kulkuneuvo: se veti '
+            + 'ahkiota, kapeaa venemäistä rekeä, joka liukui hangella '
+            + 'tavaroiden ja ihmisten kanssa. Karavaanissa porot kulkivat '
+            + 'jonossa toisiinsa sidottuina, ja päivämatka oli kymmeniä '
+            + 'kilometrejä. Kuvan piirsi Gunnar Berndtson vuonna 1894 — '
+            + 'samaan aikaan kun isoisä kirjoitti omaa päiväkirjaansa. '
+            + 'Nykyään ahkiota vedetään kelkalla, mutta poroajot ovat yhä '
+            + 'laji: kilpaa ajetaan jäällä suksilla perässä.',
+          selite: 'Vanha kaiverrus vuodelta 1894: poroja ja ahkioita lepäämässä '
+            + 'lumikentällä, edessä turkkiin pukeutunut mies pitelemässä '
+            + 'poroa.',
+          lahde: 'Gunnar Berndtson, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Talo kaivettiin maahan',
+          tiedosto: 'Turvekammi Utsjoen kirkkotuvilla.jpg',
+          teksti: 'Turvekammi on tunturin oma rakennus: runko tehtiin puusta, ja '
+            + 'päälle ladottiin turvetta niin, että seinät ja katto '
+            + 'sulautuvat maastoon. Sisällä on yksi huone ja keskellä '
+            + 'tulisija, ja lämpö pysyy, koska turve eristää paremmin kuin '
+            + 'lauta. Utsjoen kirkkotuvilla niitä on säilynyt: kammit '
+            + 'rakennettiin siksi, että pitkän matkan takaa tulleet saivat '
+            + 'yöpyä kirkonmenojen ajan. Osaa käytettiin vielä 1900-luvun '
+            + 'puolella.',
+          selite: 'Turvekammi, jonka katto ja seinät ovat paksun ruohon peitossa. '
+            + 'Keskellä on pieni ikkuna, ja ympärillä kasvaa heinää ja '
+            + 'kukkia.',
+          lahde: 'EerikLehto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
 };
