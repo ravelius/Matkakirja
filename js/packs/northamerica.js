@@ -275,18 +275,15 @@ export const NORTHAMERICA = {
       star: { name: 'Montezuman aarre' },
       ruby: {
         name: 'Kultaryntäyksen hippu', color: '#e0b02a',
-        kuva: 'Gold nugget (placer gold) (California, USA) (16839560358).jpg',
-        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+        kuva: 'assets/aarteet/aarre-northamerica-ruby.jpg',
       },
       emerald: {
         name: 'Turkoosi', color: '#3aaea6',
-        kuva: 'Turquoise with quartz.jpg',
-        kuvaLahde: 'Wikimedia Commons (PD)',
+        kuva: 'assets/aarteet/aarre-northamerica-emerald.jpg',
       },
       topaz: {
         name: 'Kaakaopavut', color: '#8a5a33',
-        kuva: 'Cacao beans.jpg',
-        kuvaLahde: 'Isai Symens, Wikimedia Commons (CC BY-SA 4.0)',
+        kuva: 'assets/aarteet/aarre-northamerica-topaz.jpg',
       },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },

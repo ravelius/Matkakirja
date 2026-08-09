@@ -114,6 +114,13 @@ pergamentti), jotta kortti istuu paljastusruutuun.
 31. Lapin kulta (Suomi) — "gold flakes in a wooden panning dish
     with cold river water"
 
+## Tilanne 9.8.2026
+
+Kaikki 21 manneraarretta generoitu `gemini-3-pro-image`-mallilla
+(tools/generoi-aarrekuvat.mjs), pienennetty 640 px JPEG:ksi ja
+kytketty peliin (assets/aarteet/, v455). Pääaarteet (22–31) odottavat
+omistajan erillistä tilausta.
+
 ## Putki (valmiina ajettavaksi kun avain tulee)
 
 1. `AARRE_API_KEY=... node tools/generoi-aarrekuvat.mjs` (skripti

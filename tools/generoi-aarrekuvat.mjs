@@ -4,8 +4,9 @@
  *
  * Käyttö:  NODE_USE_ENV_PROXY=1 GOOGLE_API_KEY=... node tools/generoi-aarrekuvat.mjs [avain …]
  * Ilman argumentteja generoi kaikki. Avaimet: europe-ruby, africa-topaz …
- * Malli: Imagen 3 Gemini API:n kautta; vaihdettavissa AARRE_MALLI-
- * ympäristömuuttujalla. Ulos: assets/aarteet/aarre-<avain>.png
+ * Malli: Gemini-kuvamalli (generateContent); vaihdettavissa
+ * AARRE_MALLI-ympäristömuuttujalla. (Imagen 3/4 eivät olleet avaimen
+ * käytettävissä 9.8.2026 — Gemini-kuvamallit olivat.) Ulos: assets/aarteet/aarre-<avain>.png
  * (1024×1024 — pienennys ~640 px:iin tehdään erillisenä vaiheena
  * ennen peliin kytkemistä, ks. tools/aarrekuvat-promptit.md).
  *
@@ -17,7 +18,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const MALLI = process.env.AARRE_MALLI ?? 'imagen-3.0-generate-002';
+const MALLI = process.env.AARRE_MALLI ?? 'gemini-3-pro-image';
 
 const avain = process.env.GOOGLE_API_KEY;
 if (!avain) {
@@ -79,13 +80,16 @@ if (!jono.length) {
 mkdirSync(resolve(JUURI, 'assets/aarteet'), { recursive: true });
 
 async function generoi(tunnus, esine) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MALLI}:predict?key=${avain}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MALLI}:generateContent?key=${avain}`;
   const vastaus = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      instances: [{ prompt: TYYLI(esine) }],
-      parameters: { sampleCount: 1, aspectRatio: '1:1', personGeneration: 'dont_allow' },
+      contents: [{ parts: [{ text: TYYLI(esine) }] }],
+      generationConfig: {
+        responseModalities: ['IMAGE'],
+        imageConfig: { aspectRatio: '1:1' },
+      },
     }),
     signal: AbortSignal.timeout(120000),
   });
@@ -95,9 +99,10 @@ async function generoi(tunnus, esine) {
     return false;
   }
   const data = await vastaus.json();
-  const b64 = data.predictions?.[0]?.bytesBase64Encoded;
+  const osat = data.candidates?.[0]?.content?.parts ?? [];
+  const b64 = osat.find((p) => p.inlineData)?.inlineData?.data;
   if (!b64) {
-    console.error(`${tunnus}: vastauksessa ei kuvaa (${JSON.stringify(Object.keys(data)).slice(0, 120)})`);
+    console.error(`${tunnus}: vastauksessa ei kuvaa (${JSON.stringify(data).slice(0, 160).replace(new RegExp(avain, 'g'), '***')})`);
     return false;
   }
   const polku = resolve(JUURI, `assets/aarteet/aarre-${tunnus}.png`);

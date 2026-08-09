@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.454';
+const CACHE = 'matkakirja-2026-08-09.455';
 const SHELL = [
   './',
   './index.html',
@@ -129,6 +129,28 @@ const SHELL = [
   // selaillaan eniten.
   './assets/linssit/yokartta.jpg',
   './assets/linssit/topografia.webp',
+  // AI-generoidut aarrekuvat (paljastuskortti) — 21 kpl, 7 lautaa.
+  './assets/aarteet/aarre-europe-ruby.jpg',
+  './assets/aarteet/aarre-europe-emerald.jpg',
+  './assets/aarteet/aarre-europe-topaz.jpg',
+  './assets/aarteet/aarre-africa-ruby.jpg',
+  './assets/aarteet/aarre-africa-emerald.jpg',
+  './assets/aarteet/aarre-africa-topaz.jpg',
+  './assets/aarteet/aarre-middleeast-ruby.jpg',
+  './assets/aarteet/aarre-middleeast-emerald.jpg',
+  './assets/aarteet/aarre-middleeast-topaz.jpg',
+  './assets/aarteet/aarre-asia-ruby.jpg',
+  './assets/aarteet/aarre-asia-emerald.jpg',
+  './assets/aarteet/aarre-asia-topaz.jpg',
+  './assets/aarteet/aarre-northamerica-ruby.jpg',
+  './assets/aarteet/aarre-northamerica-emerald.jpg',
+  './assets/aarteet/aarre-northamerica-topaz.jpg',
+  './assets/aarteet/aarre-southamerica-ruby.jpg',
+  './assets/aarteet/aarre-southamerica-emerald.jpg',
+  './assets/aarteet/aarre-southamerica-topaz.jpg',
+  './assets/aarteet/aarre-oceania-ruby.jpg',
+  './assets/aarteet/aarre-oceania-emerald.jpg',
+  './assets/aarteet/aarre-oceania-topaz.jpg',
   './assets/kartat/berliini-keskusta.png',
   './assets/kartat/kairo-keskusta.png',
   './assets/kartat/lontoo-keskusta.png',

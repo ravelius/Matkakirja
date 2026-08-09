@@ -1044,6 +1044,18 @@ function arvoHuudahdus(type, token) {
 }
 
 /*
+ * Aarrekuvan osoitepari asetaKuvalle. AI-generoidut aarrekuvat ovat
+ * repon omassa assets/aarteet-kansiossa — ne ladataan suoraan, ilman
+ * peiliä tai Commons-varareittiä, joita niillä ei ole. Commons-nimi
+ * (ilman assets-alkua) kulkee entistä peili + Commons -reittiä, jos
+ * jokin lauta vielä sellaista käyttää.
+ */
+function aarrekuvanOsoitteet(kuva) {
+  if (kuva.startsWith('assets/')) return [kuva, null];
+  return [valokuvaUrl(kuva, 640), valokuvaVara(kuva, 640)];
+}
+
+/*
  * Valittu linssi on laitteen katseluasetus, ei pelin tapahtuma.
  *
  * Siksi se ei kuulu pelitallennukseen vaan omaan avaimeensa kuten
@@ -2031,16 +2043,17 @@ export class UI {
   }
 
   /*
-   * Aarteiden valokuvat lämpimiksi ennen ensimmäistä paljastusta:
-   * paljastuskortti on ruudulla vain pari sekuntia, eikä peili-404 +
-   * Commons-varareitti ehtisi siihen ikkunaan kylmästä. Kolme pientä
-   * kuvaa per lauta — halpa hinta siitä, että aarre NÄKYY.
+   * Aarteiden kuvat lämpimiksi ennen ensimmäistä paljastusta:
+   * paljastuskortti on ruudulla vain pari sekuntia, eikä kylmä lataus
+   * ehtisi siihen ikkunaan. Kolme pientä kuvaa per lauta — halpa hinta
+   * siitä, että aarre NÄKYY.
    */
   esilataaAarrekuvat() {
     for (const type of Object.values(this.game.tokenTypes ?? {})) {
       if (!type.kuva) continue;
       const kuva = new Image();
-      asetaKuva(kuva, valokuvaUrl(type.kuva, 640), valokuvaVara(type.kuva, 640));
+      const [osoite, vara] = aarrekuvanOsoitteet(type.kuva);
+      asetaKuva(kuva, osoite, vara);
     }
   }
 
@@ -11832,16 +11845,20 @@ export class UI {
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
     /*
-     * Aarteen oikea valokuva (omistajan päätös 9.8.2026: "ennemmin
-     * oikea kuva" kuin piirros). Kuva on laattatyypin oma, Commonsista
-     * kuratoitu — laudoilla joilla kenttää ei ole (esim. maailmankartta)
-     * paljastus näyttää entiseltään.
+     * Aarteen kuva (omistajan päätös 9.8.2026: AI-generoitu yhtenäiseen
+     * tyyliin — Commons-valokuvat olivat keskenään liian kirjavia).
+     * Kuva on laattatyypin oma, repon assets/aarteet-kansiosta —
+     * laudoilla joilla kenttää ei ole (esim. maailmankartta) paljastus
+     * näyttää entiseltään. Jos tiedostoa ei löydy (yhden tiedoston
+     * versio levyltä), kortti jatkaa ilman kuvaa — ei rikkinäistä
+     * kuvakuvaketta.
      */
     if (token.kuva) {
       const kuva = document.createElement('img');
       kuva.className = 'reveal-kuva';
       kuva.alt = token.name;
-      asetaKuva(kuva, valokuvaUrl(token.kuva, 640), valokuvaVara(token.kuva, 640));
+      const [osoite, vara] = aarrekuvanOsoitteet(token.kuva);
+      asetaKuva(kuva, osoite, vara, () => kuva.remove());
       caption.appendChild(kuva);
       if (token.kuvaLahde) caption.appendChild(html('span', 'reveal-kuvalahde', token.kuvaLahde));
     }

@@ -592,18 +592,15 @@ export const EUROPE = {
       star: { name: 'Meripihkahuoneen aarre' },
       ruby: {
         name: 'Kruununjalokivi', color: '#b0304a',
-        kuva: 'Crown of King Christian IV of Denmark.jpg',
-        kuvaLahde: 'Bradley Rentz, Wikimedia Commons (CC BY-SA 4.0)',
+        kuva: 'assets/aarteet/aarre-europe-ruby.jpg',
       },
       emerald: {
         name: 'Ritarin hopeamiekka', color: '#aeb6c2',
-        kuva: 'Medieval sword at Athens War Museum on November 22, 2022.jpg',
-        kuvaLahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
+        kuva: 'assets/aarteet/aarre-europe-emerald.jpg',
       },
       topaz: {
         name: 'Meripihka', color: '#d98f2b',
-        kuva: 'Amber necklace with insects.jpg',
-        kuvaLahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
+        kuva: 'assets/aarteet/aarre-europe-topaz.jpg',
       },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 12 },

@@ -279,18 +279,15 @@ export const SOUTHAMERICA = {
       star: { name: 'El Doradon aarre' },
       ruby: {
         name: 'Inkojen kultafiguuri', color: '#e0b02a',
-        kuva: 'BOG 03 2018 Tunjos Muiscas Museo de Oro 8439.jpg',
-        kuvaLahde: 'Mario Roberto Durán Ortiz, Wikimedia Commons (CC BY-SA 4.0)',
+        kuva: 'assets/aarteet/aarre-southamerica-ruby.jpg',
       },
       emerald: {
         name: 'Kolumbian smaragdi', color: '#2fa36b',
-        kuva: '(Muzo) Emerald crystal in its matrix.jpg',
-        kuvaLahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 3.0)',
+        kuva: 'assets/aarteet/aarre-southamerica-emerald.jpg',
       },
       topaz: {
         name: 'Potosín hopeakolikko', color: '#c9ccd4',
-        kuva: '8 reales de 1651 (Potosí) - anverso.jpg',
-        kuvaLahde: 'Reinhard Saczewski, Wikimedia Commons (CC0)',
+        kuva: 'assets/aarteet/aarre-southamerica-topaz.jpg',
       },
     }),
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },
