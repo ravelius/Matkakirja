@@ -73,6 +73,46 @@ const KAUPUNGIT = {
     // kanavia — ks. KADUT-taulun kommentti jalankulkuluokista.
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
   },
+  praha: {
+    // Vltavan mutka: Petřínin kukkula ja Hradčany lännessä,
+    // Vanhankaupungin sokkelo idässä, Václavin aukio oikeassa
+    // alanurkassa. Joki tulee kuvaan alhaalta, kaartaa Kaarlensillan
+    // kohdalla ja poistuu oikeasta ylänurkasta — loiva S kuvan halki.
+    // Vyšehrad jää ulkopuolelle: se on 1,2 km etelämpänä, ja mukaan
+    // ottaminen leventäisi kuvan niin ettei joen mutka enää erotu.
+    rajat: { pohjoinen: 50.095, etela: 50.074, lansi: 14.382, ita: 14.446 },
+  },
+  wien: {
+    // Ring on kuvan pääpiirre: purettu kaupunginmuuri jätti soikean
+    // kehäkadun, jonka sisäpuolella katuverkko on sokkelo ja
+    // ulkopuolella suoraviivainen. Koillisessa kaartaa Donaukanal ja
+    // sen takana on Praterin vihreä. Schönbrunn jätettiin
+    // ulkopuolelle: se on 4,3 km lounaaseen, ja mukaan ottaminen
+    // vaatisi 7,2 km leveän rajauksen — sama päätös kuin Kairon
+    // pyramidien kanssa.
+    rajat: { pohjoinen: 48.22, etela: 48.188, lansi: 16.34, ita: 16.404 },
+  },
+  budapest: {
+    // Kaksi kaupunkia yhdessä kuvassa: Budan kukkula lännessä, Pestin
+    // tasanko idässä, ja Tonava vinosti niiden välissä (joen keskilinja
+    // x 37 % ylhäällä, x 64 % alhaalla). Margitin sillalta
+    // Vapaudensillalle eli neljä siltaa. Sankarien aukio ja
+    // Széchenyin kylpylä jäävät ulos: ne ovat 3 km koilliseen, ja
+    // mukaan ottaminen olisi työntänyt joen kuvan laitaan.
+    rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+  },
+  pariisi: {
+    // Eiffel-tornilta Notre-Damelle ja Montmartren laelle. Molemmat
+    // mahtuvat (4,8 km toisistaan), eikä 6,6 km ole puuroa: Pariisin
+    // korttelit ovat isoja, joten katutiheys on pienempi kuin
+    // Lontoossa, jonka kartta on jo julkaistu.
+    //
+    // Hinta on etelälaita: Panthéon ja Luxembourgin puutarha jäävät
+    // ulos. Vaihtoehto oli tiukempi rajaus ilman Montmartrea, mutta
+    // silloin lapsen kaksi tunnetuinta kohdetta eivät olisi samassa
+    // kuvassa.
+    rajat: { pohjoinen: 48.892, etela: 48.847, lansi: 2.277, ita: 2.3675 },
+  },
   lontoo: {
     // Hyde Parkin itälaidalta Tower Bridgelle, Regent's Parkin
     // eteläpuolelta Thamesin etelärannalle. Kaikki kuusi kohdetta

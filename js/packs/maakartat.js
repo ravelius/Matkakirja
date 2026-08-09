@@ -1547,6 +1547,159 @@ export const MAAKARTAT = {
  * vasemmalle puolelle, kun oikealla olisi ahdasta.
  */
 export const KAUPUNKIKARTAT = {
+  pariisi: {
+    polku: 'assets/kartat/pariisi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 48.892, etela: 48.847, lansi: 2.277, ita: 2.3675 },
+    esittely: 'Pariisi alkoi saarelta. Seine haarautuu keskellä '
+      + 'kaupunkia kahdeksi kapeaksi uomaksi, ja niiden väliin jää '
+      + 'Île de la Cité — saari, joka on kymmenen katua pitkä ja viisi '
+      + 'leveä. Kapeat haarat oli helppo ylittää ja saari helppo '
+      + 'puolustaa, joten kelttiläinen kalastajakylä ja sen jälkeen '
+      + 'roomalaisten Lutetia asettuivat juuri tähän. Kaupunki kasvoi '
+      + 'saarelta molemmille rannoille, ja joen suuri kaari on yhä sen '
+      + 'selkäranka.\n\nKartan keskellä näkyy saari, josta sillat '
+      + 'vievät molemmille rannoille. Vanhin Seinen silloista on Pont '
+      + 'Neuf, joka rakennettiin vuosina 1578–1607 — nimi tarkoittaa '
+      + 'uutta siltaa. Vasemmalla tusina katua kohtaa yhdessä '
+      + 'pisteessä ja piirtää kartalle tähden; sen keskellä seisoo '
+      + 'Riemukaari. Ylhäällä oikealla kohoaa Montmartre, kaupungin '
+      + 'korkein kukkula, 130 metriä merenpinnan yläpuolella, ja sen '
+      + 'laella on valkoinen Sacré-Cœur. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Pelin laajin kaupunkirajaus, 6,6 km. Se on tietoinen
+       * poikkeus tiiviiseen ydinkeskustaan: Eiffel-torni ja
+       * Sacré-Cœur ovat 4,8 km:n päässä toisistaan, ja lapsen kaksi
+       * tunnetuinta kohdetta kuuluvat samaan kuvaan. Pariisin
+       * korttelit ovat isoja, joten kuva ei silti mene puuroksi.
+       * Hinta on etelälaita: Panthéon ja Luxembourgin puutarha
+       * jäävät ulkopuolelle.
+       */
+      { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni' },
+      { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
+      { nimi: 'Concorden aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
+      { nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre' },
+      { nimi: 'Sacré-Cœur', lat: 48.8868, lon: 2.343, wiki: 'Sacré-Cœur' },
+      { nimi: 'Notre-Dame', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali' },
+    ],
+  },
+  budapest: {
+    polku: 'assets/kartat/budapest-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+    esittely: 'Budapest seisoo siinä, missä Budan kalkkikivikukkulat '
+      + 'loppuvat ja Unkarin suuri tasanko alkaa. Raja kulkee Tonavaa '
+      + 'pitkin: läntisellä rannalla maa nousee jyrkästi, itäisellä se '
+      + 'on tasaista niin kauas kuin näkee. Samaa kallionrakoa myöten '
+      + 'maasta nousee yli sata lämmintä lähdettä, ja niiden päälle on '
+      + 'rakennettu kylpylöitä satojen vuosien ajan. Kaupunkeja oli '
+      + 'pitkään kolme — Buda kukkulalla, Óbuda pohjoisessa ja Pest '
+      + 'tasangolla — ja ne yhdistettiin yhdeksi vasta vuonna '
+      + '1873.\n\nEro näkyy kartalla heti. Lännessä kadut mutkittelevat '
+      + 'rinnettä ylös, ja Gellértinvuori kohoaa 140 metriä joen '
+      + 'yläpuolelle. Idässä kadut lähtevät suorina säteinä ja kaarina '
+      + 'tasangolle. Välissä virtaa Tonava. Ensimmäinen pysyvä silta '
+      + 'sen yli oli Ketjusilta, joka avattiin marraskuussa 1849: 375 '
+      + 'metriä pitkä ja keskijänteeltään 202 metriä, tuohon aikaan '
+      + 'maailman pisimpiä. Sitä ennen rannat yhdisti ponttonisilta, '
+      + 'joka oli talvella jäiden takia usein poissa käytöstä. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Kolme kohdetta kummallakin rannalla, jotta kartan juoni —
+       * kukkula lännessä, tasanko idässä — näkyy myös numeroissa.
+       * Suuresta kauppahallista ei ole suomenkielistä artikkelia,
+       * joten se jää pelkäksi merkiksi; lehden ruokasivu kertoo siitä.
+       */
+      { nimi: 'Kalastajanlinnake', lat: 47.5023, lon: 19.0347, wiki: 'Kalastajanlinnake' },
+      { nimi: 'Ketjusilta', lat: 47.499, lon: 19.0436, wiki: 'Széchenyin ketjusilta' },
+      { nimi: 'Parlamenttitalo', lat: 47.507, lon: 19.0459, wiki: 'Unkarin parlamenttitalo' },
+      { nimi: 'Gellértinvuori', lat: 47.4869, lon: 19.0446, wiki: 'Gellértinvuori' },
+      { nimi: 'Pyhän Tapanin kirkko', lat: 47.5008, lon: 19.054, wiki: 'Pyhän Tapanin kirkko (Budapest)' },
+      { nimi: 'Suuri kauppahalli', lat: 47.4866, lon: 19.059 },
+    ],
+  },
+  praha: {
+    polku: 'assets/kartat/praha-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 50.095, etela: 50.074, lansi: 14.382, ita: 14.446 },
+    esittely: 'Praha kasvoi Vltavan mutkaan. Joki on Tšekin pisin, 430 '
+      + 'kilometriä, ja Prahan kohdalla se kaartaa jyrkän '
+      + 'kallioharjanteen ympäri. Harjanteen päälle perustettiin '
+      + '800-luvulla linna, ja vastarannan tasaiselle maalle syntyi '
+      + 'kauppiaiden Vanhakaupunki. Linna on Guinnessin mukaan '
+      + 'maailman suurin muinaislinna: 570 metriä pitkä ja '
+      + 'keskimäärin 128 metriä leveä.\n\nKartan halki kulkee joki, ja '
+      + 'sen yli vie Kaarlensilta: 516 metriä pitkä, kuusitoista '
+      + 'kaarta. Se oli yli neljäsataa vuotta Prahan ainoa silta — '
+      + 'seuraava valmistui vasta 1841. Vanhankaupungin kadut ovat '
+      + 'kapeita ja mutkaisia, ja ne kulkevat pari metriä '
+      + 'alkuperäistä ylempänä: 1200-luvulla koko kaupunginosan '
+      + 'maanpinta nostettiin tulvien takia, ja vanhat pohjakerrokset '
+      + 'jäivät kellareiksi. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Lännestä itään: Petřínin kukkulalta Václavin aukion yläpäähän.
+       * Petřínin näkötornista ei ole suomenkielistä artikkelia, joten
+       * se jää pelkäksi merkiksi — kukkulan oma artikkeli on kolmen
+       * lauseen tynkä eikä kerro tornista lainkaan.
+       *
+       * Kaarlensillan koordinaatti on sillan KESKELTÄ. Wikipedian
+       * 50.0864/14.4119 osoittaa itäpäähän, ja koska silta ei ole
+       * suora, piste olisi näyttänyt osuvan rantaan eikä joen päälle.
+       */
+      { nimi: 'Petřínin näkötorni', lat: 50.0835, lon: 14.3951 },
+      { nimi: 'Prahan linna', lat: 50.0903, lon: 14.401, wiki: 'Prahan linna' },
+      { nimi: 'Kaarlensilta', lat: 50.0866, lon: 14.4106, wiki: 'Kaarlensilta' },
+      { nimi: 'Vanhauusi synagoga', lat: 50.09, lon: 14.4186, wiki: 'Vanhauusi synagoga' },
+      { nimi: 'Astronominen kello', lat: 50.087, lon: 14.4207, wiki: 'Prahan astronominen kello' },
+      { nimi: 'Kansallismuseo', lat: 50.0789, lon: 14.4308, wiki: 'Prahan kansallismuseo' },
+    ],
+  },
+  wien: {
+    polku: 'assets/kartat/wien-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 48.22, etela: 48.188, lansi: 16.34, ita: 16.404 },
+    esittely: 'Wien seisoo kohdassa, jossa Tonava tulee ulos vuorten '
+      + 'välistä. Lännessä nousee Wienerwald, Alppien viimeinen '
+      + 'kukkulaselänne, ja idässä alkaa tasainen lakeus, joka jatkuu '
+      + 'Unkariin asti. Roomalaiset huomasivat paikan ensin: he '
+      + 'perustivat tänne Vindobonan leirin lähes kaksituhatta vuotta '
+      + 'sitten, sillä Tonava oli heidän valtakuntansa pohjoisraja. '
+      + 'Vanhakaupunki ei silti ole ison joen rannalla vaan sen '
+      + 'sivuhaaran, Donaukanalin, varrella — pääuoma suoristettiin '
+      + 'nykyiselle paikalleen vasta 1870-luvulla.\n\nKartan keskellä '
+      + 'näkyy soikea katukehä. Se on Ring: kaupunginmuuri purettiin '
+      + 'keisarin käskystä, ja tilalle avattiin 1865 yli viisi '
+      + 'kilometriä pitkä puistokatu, jonka varrelle rakennettiin '
+      + 'ooppera, raatihuone ja museot. Kehän sisällä kadut ovat '
+      + 'kapeita ja mutkaisia, ulkopuolella leveitä ja suoria. '
+      + 'Koillisessa kaartaa Donaukanal, ja sen takana levittäytyy '
+      + 'Praterin vihreä — entinen keisarin metsästysmaa, jonka '
+      + 'reunalla pyörii jättiratas. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Lännestä itään. Belvedere on 89 %:n kohdalla ja jättiratas
+       * 10 %:n — molemmat tarkoituksella laidassa, koska muuten
+       * kaikki kuusi kasautuisivat Ringin sisään kuvan keskelle.
+       *
+       * Jättirattaalla ei ole omaa suomenkielistä artikkelia, joten
+       * linkki vie Prateriin, jonka johdannossa ratas mainitaan.
+       * Schönbrunn ja Karl-Marx-Hof ovat lehdessä mutta 4,3 km kartan
+       * ulkopuolella kumpikin — ks. rajauksen perustelu työkalussa.
+       */
+      { nimi: 'Raatihuone', lat: 48.2108, lon: 16.3566, wiki: 'Wienin raatihuone' },
+      { nimi: 'Hofburg', lat: 48.2064, lon: 16.3657, wiki: 'Hofburg' },
+      { nimi: 'Valtionooppera', lat: 48.2033, lon: 16.3692, wiki: 'Wienin valtionooppera' },
+      { nimi: 'Stephansdom', lat: 48.2085, lon: 16.3731, wiki: 'Stephansdom' },
+      { nimi: 'Belvedere', lat: 48.1915, lon: 16.3809, wiki: 'Belvedere' },
+      { nimi: 'Jättiratas', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
+    ],
+  },
   kairo: {
     // Sama työkalu kuin muissa (tools/piirra-kaupunkikartta.mjs).
     // Rajaus tehtiin kahdesti: ensimmäisessä Niili jäi kuvan vasempaan
