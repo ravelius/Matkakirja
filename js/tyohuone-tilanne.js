@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '8.8.2026',
+  paivitetty: '9.8.2026',
   tavoite: 'LOPPUKIRI (omistajan tilaus 8.8. ilta): kaikki Euroopan '
     + 'kaupunki- ja maalehdet valmiiksi. Agenttiparvet sallittu '
     + 'vauhtiin, kunhan mitään turhaa ei tehdä.',
@@ -22,14 +22,13 @@ export const TILANNE = {
       tehtava: 'Koordinointi ja raporttien kokoaminen. Euroopan '
         + 'tarinatekstit valmiit: 41 dekkarimerkintää äänineen, '
         + 'aarrevihjeet ilmansuunnittain, Lontoon kohtaamisluennat.',
-      seuraavaksi: 'v397: nähtävyyskortti ulottuu puhelimella '
-        + 'alareunaan asti. Kuusi uutta väliversiota tyhjältä '
-        + 'pöydältä on Kehitys-välilehdellä vanhan tekstin '
-        + 'rinnalla — luennat generoidaan heti kun ääniavain on '
-        + 'taas kontissa (ELEVEN_API_KEY puuttuu ympäristöstä). '
-        + 'Visapalkinnot: kulttuurivisa antaa jo +25 p ja '
-        + 'maalehden minitehtävät +10 p; Opus 1 lisää minitehtävät '
-        + 'myös kaupunkilehtien aihesivuihin.',
+      seuraavaksi: 'Uusin (9.8.): koko tekstipaketti viidelle '
+        + 'kaupungille (Praha, Istanbul, Wien, Venetsia, Budapest) '
+        + 'henkilöineen on Kehitys-välilehden ylimpänä osiona — '
+        + 'jokaisessa saapuminen, kohtaaminen, visa, aarre ja '
+        + 'henkilön vihje aarteen jälkeen. Odottaa omistajan lukua '
+        + 'ennen äänien generointia. Kehitys-valikko järjestetty: '
+        + 'uusin kokeilu ylimpänä, vanhat kootussa valikossa.',
     },
     {
       tekija: 'Opus 1',
@@ -121,6 +120,15 @@ export const TILANNE = {
  * näyttää listan pelilinkkien vieressä. Uusin ensin.
  */
 export const TESTATTAVAA = [
+  {
+    otsikko: 'Koko paketti: 5 kaupunkia ja henkilöt (työhuone)',
+    ohje: 'Työhuone → Kehitys → ylin osio: Praha, Istanbul, Wien, '
+      + 'Venetsia ja Budapest koko kaarena — saapuminen (isoisän '
+      + 'ääni), kohtaaminen nimetyn henkilön kanssa, visa, aarre ja '
+      + 'henkilön vihje vasta aarteen jälkeen (cliffhanger). Lue ja '
+      + 'kerro, mitkä osat luetaan ääneen. Vanhat kokeilut ovat nyt '
+      + 'kootussa Vanhat kokeilut -valikossa saman välilehden alla.',
+  },
   {
     otsikko: 'Visat palkitsevat taas puntina (v400)',
     ohje: 'Omistajan päätös: raha on yksinkertaisin. Kulttuurivisa '
