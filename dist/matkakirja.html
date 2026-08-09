@@ -50275,6 +50275,355 @@ const MAAKARTAT = {
       wiki: 'Al-Zubarah',
     },
   },
+  SAU: {
+    /*
+     * Moduulin oma image1, ja rajat on dokumentoitu kahdesti:
+     * `Module:Location map/data/Saudi Arabia` (hain sen itse) ja
+     * tiedostosivun oma rivi "Equirectangular projection, N/S
+     * stretching 110 %". Ei yhtään hyppyä ketjussa.
+     *
+     * Kuvasuhde varmistaa saman: 2003 × 1668 px antaa 91,88 px/°
+     * pitkittäin ja 101,09 px/° leveyspiireittäin eli suhteen 1,1002,
+     * ja tasaväliprojektio keskileveysasteella 24,25° vaatii 1,0968 —
+     * 0,3 %:n tarkkuus.
+     *
+     * Merialueet ovat puhtaat: Punaisellamerellä ei ole yhtään viivaa
+     * ja Persianlahdella vain kaksi 1–2 px:n merkkiä, jotka eivät
+     * erotu lehden koossa. Vaihtoehtoa ei ole — Tschubbyn
+     * `Reliefkarte Saudi-Arabien.png` ei ole olemassa.
+     *
+     * Tiedostosivun {{BadJPG}} on huoltomerkintä (kartan "pitäisi"
+     * olla SVG), ei lisenssi- eikä laatuongelma; sama karttaperhe on
+     * käytössä jo Kreikalla ja Omanilla.
+     */
+    tiedosto: 'Saudi Arabia relief location map.jpg',
+    lahde: 'Carport, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 32.5, etela: 16.0, lansi: 34.2, ita: 56.0 },
+    /*
+     * Laudan kolme kohdetta Riad, Mekka ja Medina ovat mukana. Loput
+     * piirtävät maan muodon: Tabuk luoteisnurkkaan, Dammam
+     * Persianlahdelle ja Abha Asirin vuorille etelään.
+     *
+     * JIDDA ON TAHALLAAN POIS. Se on maan toiseksi suurin kaupunki,
+     * mutta osuu kolmen prosenttiyksikön päähän Mekasta eli noin
+     * 10 pikselin päähän lehden koossa — nimet menisivät päällekkäin,
+     * ja laudan kaupunki voittaa.
+     *
+     * Kaakkoisneljännes jää tyhjäksi. Se on Rub al-Khali; siellä ei
+     * ole kaupunkeja, joten tyhjyys on totta eikä puute.
+     */
+    kaupungit: [
+      { nimi: 'Riad', lat: 24.6333, lon: 46.7167, paa: true },
+      { nimi: 'Tabuk', lat: 28.3833, lon: 36.5833 },
+      { nimi: 'Dammam', lat: 26.4333, lon: 50.1 },
+      { nimi: 'Medina', lat: 24.4667, lon: 39.6 },
+      { nimi: 'Mekka', lat: 21.4225, lon: 39.8262 },
+      { nimi: 'Abha', lat: 18.2167, lon: 42.5 },
+    ],
+    // Kartalla Medina on radan pääteasema ja Tabuk yksi sen
+    // asemakaupungeista, joten nosto selittää kaksi pistettä kerralla.
+    nosto: {
+      otsikko: 'Juna, joka ei koskaan päässyt Mekkaan',
+      /*
+       * Kuvassa on tekijän oma vesileima veturin astinlaudalla
+       * ("Photo by Ahmad Hasanat"). Se on kirjattu tähän, jottei sitä
+       * löydetä myöhemmin ilmoittamattomana vikana: katsoin kuvan
+       * lehden 500 px:n koossa eikä leima erotu lainkaan. Vaihtoehto
+       * oli museohallin sisäkuva, jonka seinällä on töhryjä — selvästi
+       * huonompi. Lisenssi on kunnossa (CC BY-SA 4.0).
+       */
+      tiedosto: 'Al-Ulla Hijaz Railway.jpg',
+      teksti: 'Vuonna 1900 Osmanien sulttaani Abdulhamid II käski '
+        + 'rakentaa rautatien Damaskoksesta Medinaan. Rata oli ennen '
+        + 'kaikkea pyhiinvaeltajia varten: matka, johon '
+        + 'kamelikaravaanilla kului noin neljäkymmentä päivää, taittui '
+        + 'junalla viidessä. Rahat kerättiin suureksi osaksi '
+        + 'lahjoituksina muslimeilta ympäri maailmaa. Kiskoväli oli '
+        + 'kapea, vain 1 050 millimetriä, ja rata eteni aavikolla '
+        + 'asema asemalta. Vaikeinta ei ollut kiskojen naulaaminen '
+        + 'vaan vesi: höyryveturi juo enemmän kuin matkustajat, ja '
+        + 'autiomaan osuuksilla vesi, ruoka ja rakennustarpeet '
+        + 'kannettiin työmaalle kameleilla. Ensimmäinen juna saapui '
+        + 'Medinaan 1. syyskuuta 1908, ja valmista oli silloin '
+        + '1 300 kilometriä. Mekkaan olisi ollut vielä neljäsataa, '
+        + 'mutta sitä pätkää ei rakennettu koskaan. Junat lakkasivat '
+        + 'kulkemasta vuoteen 1920 mennessä, ja Saudi-Arabian puolella '
+        + 'rata jäi hiekkaan: asemarakennuksia ja vetureita seisoo yhä '
+        + 'paikoillaan. Ratapenkkaa myös kaivellaan yhä, koska '
+        + 'kerrotaan, että radalta jäi maahan piilotettua kultaa.',
+      selite: 'Kunnostettu höyryveturi ja vaunurivi Hijazin radan '
+        + 'vanhalla asemalla Al-Ulassa. Veturin edessä on kiiloiksi '
+        + 'taivutettu puskin, savupiipun takana vihreä höyrykupu, ja '
+        + 'kauempana soratasanteen laidalla näkyvät aseman matalat '
+        + 'rakennukset.',
+      lahde: 'Ahmad AlHasanat, Wikimedia Commons (CC BY-SA 4.0)',
+      wiki: 'Hijazin rautatie',
+    },
+  },
+  YEM: {
+    /*
+     * Moduulin oma image1, ja tiedostosivu ilmoittaa samat rajat itse
+     * ("Equirectangular projection, N/S stretching 104 %"). Hain
+     * luvut `Module:Location map/data/Yemen` -sivulta.
+     *
+     * Kuvasuhde varmistaa: 1693 × 1106 px antaa 131,24 px/°
+     * pitkittäin ja 136,54 px/° leveyspiireittäin eli suhteen 1,0404,
+     * ja tasaväliprojektio keskileveysasteella 15,45° vaatii 1,0375.
+     *
+     * SOKOTRA MAHTUU: saari on 53,3–54,55° E ja 12,1–12,7° N, kartan
+     * itäraja 54,7 ja eteläraja 11,4, joten koko saaristo näkyy
+     * kaakkoisnurkassa. Siksi Sokotra on myös kaupunkilistalla ja
+     * noston aihe. Huom: laudan maamuodoista se on tahallaan
+     * pudotettu (irrallinen läiskä avomerellä) — maakartta ja lauta
+     * ovat tässä eri mieltä tarkoituksella.
+     *
+     * ÄLÄ VAIHDA `Yemen location map Topographic.png`:hen, vaikka se
+     * on moduulin image2 ja 2350 px: sen lisenssi on pelkkä GFDL 1.2,
+     * ei PD eikä CC. Tschubbyn `Reliefkarte Jemen.png` ei ole
+     * olemassa, joten muuta vaihtoehtoa ei ole.
+     *
+     * MERIRAJA HYVÄKSYTTY TIETOISESTI: Adeninlahdella Sokotrasta
+     * lounaaseen kulkee katkoviivainen Jemenin ja Somalian meriraja.
+     * Se lukee rajaviivana eikä naarmuna, ja koska kelvollista
+     * vaihtoehtoa ei ole, tilanne on sama kuin Qatarissa.
+     */
+    tiedosto: 'Yemen relief location map.jpg',
+    lahde: 'Carport, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 19.5, etela: 11.4, lansi: 41.8, ita: 54.7 },
+    /*
+     * Laudan kohteet Sana ja Aden ovat mukana. Hodeida merkitsee
+     * Punaisenmeren rannikon, Sayun Hadramautin sisämaan, Mukalla
+     * itäisen sataman ja Sokotra sen, että maahan kuuluu kaukainen
+     * saari.
+     *
+     * TAIZZ ON TAHALLAAN POIS. Se mahtuisi ilman törmäystä, mutta jää
+     * Sanan ja Adenin väliin samaan läntiseen vuoristoon eikä kerro
+     * kartasta mitään uutta; Sayun kertoo Hadramautin.
+     *
+     * Sana ja Hodeida ovat ahtain pari: pystyväli on noin 15 px
+     * lehden leveydellä. Tarkistettu piirtämällä pisteet kuvan
+     * päälle. Aden istuu rantaviivalla, koska Adenin niemimaa on
+     * kartan yleistyksessä muutaman pikselin kokoinen — se on oikein.
+     */
+    kaupungit: [
+      { nimi: 'Sana', lat: 15.3483, lon: 44.2064, paa: true },
+      { nimi: 'Sayun', lat: 15.9436, lon: 48.7878 },
+      { nimi: 'Hodeida', lat: 14.7979, lon: 42.9545 },
+      { nimi: 'Mukalla', lat: 14.5425, lon: 49.1242 },
+      { nimi: 'Aden', lat: 12.7833, lon: 45.0167 },
+      { nimi: 'Sokotra', lat: 12.5, lon: 53.87 },
+    ],
+    // Kartan kaakkoisnurkassa on erillinen saari; nosto vastaa siihen,
+    // mikä se on.
+    nosto: {
+      otsikko: 'Saari, jonka puut vuotavat punaista',
+      tiedosto: 'Ancient Dragon\'s Blood Trees, Socotra Island (13510645265).jpg',
+      /*
+       * ETÄISYYKSIÄ EI ANNETA KILOMETREINÄ. en.wikipedia sanoo 380 km
+       * Arabian niemimaasta ja 232 km Afrikan sarvesta, fi.wikipedia
+       * noin 300 ja noin 240. Koska wiki-linkki osoittaa juuri
+       * fi-artikkeliin, täsmäluku olisi ristiriidassa sen kanssa,
+       * jonka lapsi näkee klikatessaan. Suunta on molempien mukaan
+       * sama, ja se riittää.
+       */
+      teksti: 'Jemenille kuuluu Sokotran saari, joka on kaukana '
+        + 'keskellä Intian valtamerta. Matkaa Arabian niemimaalle on '
+        + 'satoja kilometrejä, ja Afrikan sarvi on selvästi lähempänä '
+        + 'kuin oma emämaa. Saari on 132 kilometriä pitkä, ja sen '
+        + 'keskellä kohoaa vuoristo. Se irtosi mantereesta niin kauan '
+        + 'sitten, että kasvit ehtivät kehittyä omanlaisikseen: '
+        + '835 putkilokasvilajista runsas kolmannes kasvaa '
+        + 'luonnonvaraisena vain täällä. Kuuluisin on '
+        + 'sokotrantraakkipuu, jota sanotaan myös '
+        + 'lohikäärmeenveripuuksi. Se kasvaa yhdeksänmetriseksi, ja '
+        + 'sen oksat haarautuvat aina kahtia, kunnes latvus '
+        + 'levittäytyy tiiviiksi sateenvarjoksi. Lehtiä on vain '
+        + 'nuorimpien oksien kärjissä, ja puu pudottaa ne kerralla '
+        + 'kolmen tai neljän vuoden välein. Nimi tulee mahlasta: '
+        + 'runkoon tehdystä viillosta tihkuu tummanpunaista pihkaa. '
+        + 'Sillä on värjätty villaa, liimattu saviastioita ja tehty '
+        + 'lääkettä ja huulipunaa. Saarella kasvaa myös maailman '
+        + 'ainoa puuksi kasvava kurkkukasvi, jonka runko on paksu '
+        + 'kuin pullo. Saarelaisia on noin 50 000, ja he puhuvat '
+        + 'arabian lisäksi omaa kieltään sokotraa. Unesco otti saaren '
+        + 'maailmanperintöluetteloon vuonna 2008.',
+      selite: 'Kaksi sokotrantraakkipuuta kivisellä ylätasangolla. '
+        + 'Etummaisen paksu vaalea runko jakautuu ylhäällä sadoiksi '
+        + 'ruskeiksi oksiksi, ja vain niiden kärjissä on vihreää — '
+        + 'latvus on niin tiivis, että sen alle jää varjoa kuin '
+        + 'katokseen.',
+      lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
+      wiki: 'Sokotra',
+    },
+  },
+  CYP: {
+    /*
+     * Moduulin oma image1, ja rajat on dokumentoitu kahdesti: sekä
+     * `Module:Location map/data/Cyprus` (hain sen itse) että
+     * tiedostosivu ("N/S stretching 115 %").
+     *
+     * VENYTYS ON 115 %, EI 1/cos(35,1°) = 122 %, eikä se ole virhe.
+     * Kuva on 2126 × 1268 px eli 787 px/° pitkittäin ja 906 px/°
+     * leveyspiireittäin; suhde 1,150 vastaa ilmoitettua 115:tä mutta
+     * jää 5,9 % todellisesta geometriasta. Venytys on tässä
+     * karttaperheessä vapaa parametri — Tschubbyn Zypern-kartta
+     * ilmoittaa SAMAT rajat mutta on piirretty 122 %:lla. Se ei
+     * vaikuta prosenttiasemointiin, koska molemmat akselit ovat
+     * lineaarisia asteissa, ja pisteet osuvat rannoille.
+     *
+     * KUVA ON MATALA: 1,68:1, joten lehden 340 px:n leveydellä
+     * kartta on vain noin 203 px korkea — pelin matalin maakartta.
+     * Saari täyttää silti kehyksen, koska rajaus on tiukka.
+     *
+     * ÄLÄ VAIHDA Tschubbyn `Reliefkarte Zypern.png`:hen: siinä on
+     * koko piirijako umpiviivoina ja siniset joet päälle.
+     *
+     * Kartassa näkyy YK:n puskurivyöhyke ohuena katkoviivana ja
+     * tukikohta-alueiden ääriviivat kaakossa. Ne ovat kartan omia
+     * merkintöjä, eikä ilman niitä olevaa versiota ole olemassa;
+     * oikeassa koossa ne ovat hiusviivoja. Kaupungit on valittu
+     * pelkän maantieteen mukaan koko saarelta.
+     */
+    tiedosto: 'Cyprus relief location map.jpg',
+    lahde: 'Carport, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 35.8, etela: 34.4, lansi: 32.1, ita: 34.8 },
+    /*
+     * FAMAGUSTA ON TAHALLAAN POIS. Se osuu 67,7 %:n kohdalle, saa
+     * siis luokan nimi-vasen, ja nimi aukeaisi länteen suoraan
+     * Nikosian nimen päälle — pystyeroa on vain 3,6 % eli noin 7 px.
+     * Kokeiltu selaimessa. Tilalla Rizokarpaso, joka näyttää
+     * Karpasian niemen; ilman sitä kartan itäkolmannes olisi tyhjä.
+     *
+     * Loput piirtävät saaren muodon: Pafos länsikärki, Limassol
+     * etelärannikko, Larnaka kaakko, Kyrenia pohjoisrannikko ja
+     * Nikosia keskellä Mesaorían tasankoa.
+     */
+    kaupungit: [
+      { nimi: 'Nikosia', lat: 35.1794, lon: 33.4047, paa: true },
+      { nimi: 'Kyrenia', lat: 35.3403, lon: 33.3192 },
+      { nimi: 'Rizokarpaso', lat: 35.5986, lon: 34.3806 },
+      { nimi: 'Larnaka', lat: 34.9036, lon: 33.6214 },
+      { nimi: 'Limassol', lat: 34.6747, lon: 33.0414 },
+      { nimi: 'Pafos', lat: 34.7667, lon: 32.4167 },
+    ],
+    nosto: {
+      otsikko: 'Sienisukeltaja löysi laivan saviruukkujen alta',
+      tiedosto: 'Girne Kyrenia Castle Shipwreck Museum 02.jpg',
+      /*
+       * Uppoamisvuotta ei anneta tarkkana: INA sanoo 295 eaa. ja
+       * fi.wikipedia 306 eaa. "Noin 300 eaa." on totta molempien
+       * mukaan. Samasta syystä myllynkivet ovat "lähes kolmekymmentä"
+       * (lähteissä 27 tai 29) ja ruukut "yli neljäsataa" (400–500).
+       */
+      teksti: 'Vuonna 1965 sienisukeltaja Andreas Kariolou huomasi '
+        + 'Kyrenian edustalla merenpohjassa kasan saviruukkuja. '
+        + 'Niiden alla oli laiva. Se makasi noin 27 metrin syvyydessä '
+        + 'vajaan kahden kilometrin päässä rannasta, ja arkeologit '
+        + 'nostivat sen pintaan pala palalta kesinä 1968 ja 1969. '
+        + 'Runko oli aleppomäntyä ja noin 14 metriä pitkä, ja siitä '
+        + 'oli säilynyt yli puolet. Laiva upposi noin 300 eaa. Se oli '
+        + 'silloin jo vanha: arvioiden mukaan se oli purjehtinut '
+        + 'kahdeksankymmentä vuotta. Lastina oli yli neljäsataa '
+        + 'viiniruukkua, enimmäkseen Rodokselta, lähes kolmekymmentä '
+        + 'myllynkiveä painolastina ja ruukuittain manteleita — niitä '
+        + 'laskettiin tuhansia. Miehistön koko selvisi keittiöstä: '
+        + 'juomakuppeja, lusikoita ja öljykannuja löytyi neljä '
+        + 'kutakin, joten merimiehiä oli luultavasti neljä. Laiva on '
+        + 'nyt esillä Kyrenian linnan hylkymuseossa, ja sen kuva on '
+        + 'Kyproksen 10, 20 ja 50 sentin kolikoissa.',
+      selite: 'Kyrenialaisen laivan runko hylkymuseossa puisten '
+        + 'pukkien päällä. Kaaret ja lankut ovat mustuneet, mutta '
+        + 'kylki ja pohja ovat lähes kokonaisia; taustalla '
+        + 'museosalin sininen seinä ja valkoinen kaareva katto.',
+      lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+      wiki: 'Kyrenialainen laiva',
+    },
+  },
+  SYR: {
+    /*
+     * `Syria relief location map.jpg` EI OLE OLEMASSA (tarkistettu
+     * 9.8.2026, 404) — perheen nimeäminen poikkeaa tässä maassa.
+     * Tämä on moduulin oma image1, ja rajat on dokumentoitu kolmesti
+     * samoina: Module:Location map/data/Syria (hain sen itse), tämän
+     * tiedoston oma sivu ja moduulin image-tiedoston malline.
+     *
+     * Kuvasuhde vahvistaa ketjun: 921 × 806 px eli 118,1 px/°
+     * pitkittäin ja 143,9 px/° leveyspiireittäin. Suhde 1,219 vastaa
+     * tasaväliprojektiota leveyspiirillä 34,8° (1,217) 0,14 %:n
+     * tarkkuudella — erän tarkin osuma.
+     *
+     * TÄMÄ ON PELIN AINOA SVG-MAAKARTTA. Se ei ole ongelma: pelin
+     * kuvaosoite on Special:FilePath?width=1000, ja testasin sen —
+     * Commons rasteroi SVG:n PNG:ksi (content-type image/png). Pieni
+     * kanvaasi ei siis rajoita tarkkuutta.
+     *
+     * ÄLÄ VAIHDA Tschubbyn `Reliefkarte Syrien.png`:hen, vaikka se on
+     * 2597 px ja lisenssi kelpaa: se on tasavärinen, Syyria ei erotu
+     * naapureista ja Eufrat sekä Assadjärvi hukkuvat taustaan. Tässä
+     * ne erottuvat ja naapurimaat on himmennetty.
+     */
+    tiedosto: 'Syria physical location map.svg',
+    lahde: 'NordNordWest ja Urutseg, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 37.6, etela: 32.0, lansi: 34.9, ita: 42.7 },
+    /*
+     * Laudan kohteet Damaskos ja Aleppo ovat kartan vastakkaisissa
+     * päissä. Latakia näyttää rannikon, Hama Oronteksen laakson,
+     * Palmyra keskiaavikon ja Dair al-Zaur Eufratin mutkan idässä —
+     * ilman viimeistä kartan itäpuolisko olisi tyhjä.
+     *
+     * HOMS JÄTETTY POIS Haman hyväksi, vaikka se on isompi kaupunki:
+     * pisteet ovat käytännössä samalla pituuspiirillä ja vain 7 %
+     * erillään pystysuunnassa, eikä toinen kertoisi kartalla mitään
+     * lisää. Hama on lisäksi noston paikka.
+     */
+    kaupungit: [
+      { nimi: 'Damaskos', lat: 33.5131, lon: 36.2919, paa: true },
+      { nimi: 'Aleppo', lat: 36.2167, lon: 37.1667 },
+      { nimi: 'Latakia', lat: 35.5167, lon: 35.7833 },
+      { nimi: 'Hama', lat: 35.1333, lon: 36.75 },
+      { nimi: 'Palmyra', lat: 34.55, lon: 38.28 },
+      { nimi: 'Dair al-Zaur', lat: 35.3333, lon: 40.15 },
+    ],
+    nosto: {
+      otsikko: 'Puiset jättipyörät nostavat jokea ylös',
+      tiedosto: 'Hama noria 8287.jpg',
+      /*
+       * WIKI OSOITTAA JOKEEN EIKÄ KAUPUNKIIN, ja se on harkittu.
+       * fi.wikipedian `Hama` mainitsee kyllä vesirattaat, mutta sen
+       * kolmas kappale kertoo vuoden 1982 verilöylystä. Peli välttää
+       * sotaa ja väkivaltaa tarkoituksella, eikä vesirattaista
+       * kertovan jutun "lue lisää" saa viedä lasta sinne. `Orontes`
+       * on neutraali ja aiheen vieressä: juuri se joki nostetaan
+       * rattailla ylös. Jos Fable haluaa tarkemman osuman, `Hama` on
+       * vaihtoehto — mutta se on tarinapuolen päätös.
+       *
+       * Rattaiden määrää ei anneta tarkkana: en.wikipedia sanoo 17,
+       * fi.wikipedia 16. "Toistakymmentä" on totta molempien mukaan.
+       */
+      teksti: 'Haman läpi virtaa Orontesjoki. Sen rannat ovat korkeat '
+        + 'eikä vesi nouse itsestään pelloille, joten kaupunkiin '
+        + 'rakennettiin nooria: valtavia puisia vesirattaita, joita '
+        + 'joki itse pyörittää. Mikään moottori ei niitä liikuta, '
+        + 'pelkkä virtaus riittää. Rattaan kehällä on laatikoita. Ne '
+        + 'painuvat veteen, täyttyvät ja nousevat ylös, kunnes '
+        + 'kaatavat vetensä kivikouruun, joka vie veden puutarhoihin '
+        + 'ja taloihin. Rattaita on jäljellä toistakymmentä. Suurin '
+        + 'niistä, al-Muhammadijja, on halkaisijaltaan 21 metriä eli '
+        + 'seitsenkerroksisen talon korkuinen, ja sen kouruun on '
+        + 'hakattu vuosiluku 1361. Pienin on seitsemän metriä. '
+        + 'Akselit veistetään pähkinäpuusta ja muut osat enimmäkseen '
+        + 'poppelista, ja puu on vaihdettava uuteen noin viidentoista '
+        + 'vuoden välein. Kääntyessään rattaat narisevat ja voihkivat '
+        + 'niin että ääni kuuluu kauas. Haman nuoret ovat vanhastaan '
+        + 'kiivenneet rattaan kyytiin ja hypänneet ylhäältä jokeen.',
+      selite: 'Yksi Haman suurista vesirattaista Orontesjoen '
+        + 'rannalla. Puinen kehä kohoaa kivimuurin takaa korkeammalle '
+        + 'kuin viereisen rakennuksen holvikaaret, ja joen vihreässä '
+        + 'vedessä näkyy rattaan ja kupolien heijastus.',
+      lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+      wiki: 'Orontes',
+    },
+  },
 };
 
 /*
@@ -126048,7 +126397,8 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
-  { v: 453, teksti: 'Minitehtävä joka maalehden aihesivulle' },
+  { v: 454, teksti: 'Minitehtävä joka maalehden aihesivulle' },
+  { v: 453, teksti: 'Maakartat Saudi-Arabialle, Jemenille, Kyprokselle, Syyrialle' },
   { v: 452, teksti: 'Nuori herra huudahtaa kun aarre paljastuu' },
   { v: 451, teksti: 'Aarteen paljastus näyttää nyt oikean valokuvan' },
   { v: 450, teksti: 'Maakartat Kuwaitille, Qatarille, Emiraateille, Omanille' },
@@ -126583,7 +126933,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.453';
+const APP_VERSION = '2026-08-09.454';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
