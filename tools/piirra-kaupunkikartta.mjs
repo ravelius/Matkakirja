@@ -71,13 +71,18 @@ const KAUPUNGIT = {
     // kohdetta osuvat alueelle, ja vesi jakaa kuvan niin kuin se
     // jakaa kaupungin — Tukholmassa ranta on kartan pääpiirre.
     //
-    // Ainoa jo julkaistu kartta, joka piirrettiin uudestaan
-    // merentäytöllä (9.8.2026). Ennen vesi oli rannan myötäinen nauha
-    // ja Riddarfjärdenin sekä Saltsjön keskiosat jäivät paperin
-    // värisiksi; nyt ne ovat vettä ja saaret lukevat saarina.
-    // Tarkistettu silmällä: kaikki kuusi pistettä osuvat yhä oikein.
+    // EI meri: true, ja se on mitattu päätös eikä unohdus.
+    // Merentäyttö kokeiltiin 9.8.2026 ja se upotti Djurgårdenin:
+    // Vasa-museo ja Skansen jäivät aallokkoon, koska Djurgårdenin
+    // rantaviiva poistuu rajauksesta eikä sulkeudu saareksi (ks.
+    // merenTaytto-funktion tunnettu puute). Ilman täyttöä Saltsjö jää
+    // paperin väriseksi, mutta väärä meri on pahempi kuin vaalea meri.
+    //
+    // Riddarfjärden ja Saltsjön piirtyvät silti vetenä, koska ne ovat
+    // OSM:ssä vesirelaatioita — ja niiden sisärenkaat (Kungsholmen,
+    // Södermalm) tulevat vasta 9.8.2026 tehdyn reikäkorjauksen
+    // jälkeen oikein. Ennen sitä puoli kaupunkia oli veden alla.
     rajat: { pohjoinen: 59.342, etela: 59.313, lansi: 18.03, ita: 18.11 },
-    meri: true,
   },
   venetsia: {
     /*
@@ -730,6 +735,18 @@ function renkaanAla(rengas) {
   return Math.abs(a / 2);
 }
 
+/*
+ * Monikulmion pinta-ala neliömetreinä. Asteneliö ei kelpaa vertailuun
+ * kaupunkien välillä, koska pituuspiirit kapenevat pohjoiseen:
+ * Tukholmassa asteneliö on puolet Kairon vastaavasta.
+ */
+function alaNelioMetreina(rengas) {
+  if (!rengas?.length) return 0;
+  const lat = rengas.reduce((s, p) => s + p.lat, 0) / rengas.length;
+  const metriaAsteessa = 111320;
+  return renkaanAla(rengas) * metriaAsteessa * metriaAsteessa * Math.cos((lat * Math.PI) / 180);
+}
+
 const lonLeikkaus = (a, b, lon) => ({
   lon, lat: a.lat + ((b.lat - a.lat) * (lon - a.lon)) / (b.lon - a.lon),
 });
@@ -1069,6 +1086,27 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
       const ulko = (e.members ?? [])
         .filter((m) => m.type === 'way' && m.geometry?.length && m.role !== 'inner')
         .map((m) => m.geometry);
+      /*
+       * SISÄRENKAAT OVAT SAARIA, JA NE ON PIIRRETTÄVÄ REIKINÄ.
+       *
+       * Tässä luettiin ensin vain ulkorenkaat, ja Tukholmassa se
+       * upotti puolet kaupungista: Riddarfjärdenin vesirelaation
+       * ulkorengas kiertää Kungsholmenin ja Södermalmin, jotka ovat
+       * relaation sisärenkaita eli saaria. Ilman reikiä täyttö valui
+       * niiden päälle, ja katuverkko piirtyi veden yli — kaupungintalo
+       * seisoi kartalla aallokossa. Vika ei näkynyt muissa
+       * kaupungeissa, koska niiden vesissä ei ole saaria.
+       *
+       * SVG:n evenodd täyttää parittomat kerrokset, joten sama polku
+       * hoitaa ulkorenkaan ja reiät ilman erillistä maskia.
+       */
+      const sisa = ketjuta((e.members ?? [])
+        .filter((m) => m.type === 'way' && m.geometry?.length && m.role === 'inner')
+        .map((m) => m.geometry))
+        .filter((rengas) => rengas.length >= 4);
+      const polku = (renkaat) => renkaat
+        .map((rengas) => `M${pisteet(rengas).replace(/ /g, ' L')}Z`)
+        .join(' ');
       for (const rengas of ketjuta(ulko)) {
         if (rengas.length < 4) continue;
         /*
@@ -1102,7 +1140,11 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
           for (const geom of ulko) kerrokset.joet.push(`<polyline points="${pisteet(geom)}"/>`);
           break;
         }
-        kerrokset.vedet.push(`<polygon points="${pisteet(rengas)}"/>`);
+        if (sisa.length) {
+          kerrokset.vedet.push(`<path fill-rule="evenodd" d="${polku([rengas, ...sisa])}"/>`);
+        } else {
+          kerrokset.vedet.push(`<polygon points="${pisteet(rengas)}"/>`);
+        }
       }
       continue;
     }
@@ -1117,7 +1159,20 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
       // Kerätään talteen; meri täytetään näistä alempana.
       rantaviivat.push(e.geometry);
     } else if (t.natural === 'water') {
-      kerrokset.vedet.push(`<polygon points="${pisteet(e.geometry)}"/>`);
+      /*
+       * SUIHKULÄHDETTÄ EI PIIRRETÄ VEDEKSI.
+       *
+       * Kolmen kilometrin kartalla parinkymmenen metrin allas on
+       * muutaman pikselin täplä, joka lukee virheenä: Madridin
+       * Cibeleen aukio ja Tukholman Sergelin tori näyttivät
+       * pisteentarkistimessa upotetuilta, koska aukion oma
+       * suihkulähde piirtyi vetenä juuri kohteen kohdalle. Järvi ja
+       * lampi ovat eri asia, joten raja on pinta-alassa eikä tagissa:
+       * alle 2000 neliömetrin (n. 45 × 45 m) vesi on koriste.
+       */
+      if (alaNelioMetreina(e.geometry) >= 2000) {
+        kerrokset.vedet.push(`<polygon points="${pisteet(e.geometry)}"/>`);
+      }
     } else if (t.railway) {
       kerrokset.radat.push(`<polyline points="${pisteet(e.geometry)}"/>`);
     } else {

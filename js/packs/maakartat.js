@@ -3136,8 +3136,11 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Lontoon silmä',
-        lat: 51.5033,
-        lon: -0.1196,
+        // Ratas kaartuu joen yli mutta seisoo South Bankilla, ja
+        // keskipiste osui Thamesiin (vesitarkistin 9.8.2026). Piste on
+        // nyt rakenteen juuressa rannalla.
+        lat: 51.5031,
+        lon: -0.1191,
         wiki: 'London Eye',
       },
       {
@@ -3307,7 +3310,9 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Rialton silta', lat: 45.438, lon: 12.3359, wiki: 'Rialton silta' },
       { nimi: 'Pyhän Markuksen tori', lat: 45.4341, lon: 12.3387, wiki: 'Pyhän Markuksen tori' },
       { nimi: 'San Giorgio Maggiore', lat: 45.4294, lon: 12.3433, wiki: 'San Giorgio Maggiore' },
-      { nimi: 'Arsenaali', lat: 45.4348, lon: 12.3496, wiki: 'Arsenale' },
+      // Portin edusta eikä altaan reuna: entinen piste osui
+      // telakka-altaaseen (vesitarkistin 9.8.2026).
+      { nimi: 'Arsenaali', lat: 45.4344, lon: 12.3506, wiki: 'Arsenale' },
     ],
   },
   rooma: {

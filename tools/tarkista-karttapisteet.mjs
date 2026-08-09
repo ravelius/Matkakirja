@@ -36,12 +36,22 @@
  * oikein. Tarkistettava on se piste, jonka pitäisi olla kuivalla
  * maalla ja joka ei ole.
  *
- * Koko kartaston ajo 9.8.2026 löysi neljä tarkistettavaa: Madridin
- * Cibeleen aukio (suihkulähde piirtyy vetenä) ja Tukholman neljästä
- * kohteesta neljä (Kaupungintalo, Riddarholmen, Sergelin tori,
- * Vasa-museo) — Tukholman osumatarkkuus on niin huono, että vika on
- * todennäköisesti rajauksessa eikä yksittäisissä koordinaateissa.
- * Fablen jonossa; älä korjaa ohimennen.
+ * Koko kartaston ajo 9.8.2026 löysi neljä tarkistettavaa, ja kaikki
+ * neljä on korjattu. Kolme niistä osoittautui TYÖKALUN vioiksi eikä
+ * huonoiksi koordinaateiksi, mikä on tämän tarkistimen paras
+ * saavutus tähän mennessä:
+ *
+ *  - Tukholmassa neljä kuudesta kohteesta oli vedessä, koska
+ *    vesirelaation sisärenkaat (Kungsholmen, Södermalm) jäivät
+ *    piirtämättä reikinä ja täyttö valui saarten päälle;
+ *  - Madridin Cibeleen aukio ja Tukholman Sergelin tori upposivat
+ *    aukion omaan suihkulähteeseen, joka piirtyi vetenä;
+ *  - Lontoon silmä ja Venetsian Arsenaali olivat oikeasti rannan
+ *    väärällä puolella, ja niiden pisteet siirrettiin.
+ *
+ * Nykyisin jäljellä olevat osumat ovat kaikki oikeita: neljä siltaa,
+ * majakka aallonmurtajalla, Marseillen satama-allas ja Dubain
+ * abra-laiturit rantaviivalla.
  *
  * PNG puretaan tässä itse (zlib + suodatinrivit) eikä selaimella:
  * Chromiumin --dump-dom ei ehdi nähdä canvasista luettua tulosta, ja
@@ -55,9 +65,25 @@ import { fileURLToPath } from 'node:url';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
-/** Piirtäjän vesisävy ja suurin hyväksytty poikkeama (RGB-summa). */
+/*
+ * Piirtäjän vesisävy ja suurin hyväksytty poikkeama (RGB-summa).
+ *
+ * YKSI PIKSELI EI RIITÄ, ja se opittiin kantapään kautta. Ensimmäinen
+ * versio luki tarkalleen yhden pikselin, ja se antoi vääriä osumia:
+ * paperin (#f6eeda) ja kadun (#c8bb9e) välinen pehmennetty reuna
+ * osuu puolivälissä arvoon (223, 212, 188), jonka etäisyys vedestä on
+ * 29 eli juuri rajan alla. Kadunreunalle osunut piste ilmoitettiin
+ * siis vetenä. Tukholmassa se näytti neljältä upotetulta kohteelta,
+ * vaikka osa niistä seisoi kuivalla kadulla.
+ *
+ * Siksi jokaisesta pisteestä luetaan kiekko ja lasketaan, kuinka
+ * moni pikseli on vettä. Pehmennetty viiva on pari pikseliä leveä
+ * eikä koskaan täytä kiekkoa, mutta lahdelma täyttää.
+ */
 const VESI = [0xe8, 0xd5, 0xa9];
 const RAJA = 30;
+const SADE = 5;        // kiekon säde pikseleinä
+const OSUUS = 0.6;     // näin suuren osan kiekosta oltava vettä
 
 function puraPng(polku) {
   const b = readFileSync(polku);
@@ -144,18 +170,35 @@ if (!pisteet.length) {
 }
 
 const kuva = puraPng(`${JUURI}/${kartta.polku}`);
+const pikseli = (px, py) => {
+  const k = (py * kuva.leveys + px) * kuva.kanavat;
+  return [kuva.data[k], kuva.data[k + 1], kuva.data[k + 2]];
+};
+
 let vedessa = 0;
 for (const [nimi, lat, lon] of pisteet) {
   const { x, y } = karttapiste(kartta, lat, lon);
   const px = Math.min(Math.max(Math.round((x / 100) * kuva.leveys), 0), kuva.leveys - 1);
   const py = Math.min(Math.max(Math.round((y / 100) * kuva.korkeus), 0), kuva.korkeus - 1);
-  const k = (py * kuva.leveys + px) * kuva.kanavat;
-  const v = [kuva.data[k], kuva.data[k + 1], kuva.data[k + 2]];
-  const hex = v.map((n) => n.toString(16).padStart(2, '0')).join('');
-  const vesi = ero(v, VESI) < RAJA;
+  let vesipikseleita = 0;
+  let kaikki = 0;
+  for (let dy = -SADE; dy <= SADE; dy += 1) {
+    for (let dx = -SADE; dx <= SADE; dx += 1) {
+      if (dx * dx + dy * dy > SADE * SADE) continue;
+      const ax = px + dx;
+      const ay = py + dy;
+      if (ax < 0 || ay < 0 || ax >= kuva.leveys || ay >= kuva.korkeus) continue;
+      kaikki += 1;
+      if (ero(pikseli(ax, ay), VESI) < RAJA) vesipikseleita += 1;
+    }
+  }
+  const osuus = kaikki ? vesipikseleita / kaikki : 0;
+  const hex = pikseli(px, py).map((n) => n.toString(16).padStart(2, '0')).join('');
+  const vesi = osuus >= OSUUS;
   if (vesi) vedessa += 1;
   const sijainti = `${x.toFixed(1).padStart(5)}% ${y.toFixed(1).padStart(5)}%`;
-  console.log(`${String(nimi).padEnd(24)} ${sijainti}  #${hex}  ${vesi ? 'VESI' : 'maa'}`);
+  const prosentti = `${Math.round(osuus * 100)}`.padStart(3);
+  console.log(`${String(nimi).padEnd(24)} ${sijainti}  #${hex}  vettä ${prosentti} %  ${vesi ? 'VESI' : 'maa'}`);
 }
 
 console.log(vedessa ? `\n${vedessa} pistettä vedessä — siirrä ne rannalle.` : '\nkaikki pisteet maalla');
