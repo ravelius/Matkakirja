@@ -27,17 +27,25 @@ if (!avain) {
 }
 
 /*
- * Yhtenäinen tyyli joka promptin ympärille: lasten seikkailukirjan
- * guassikuvitus pergamenttitaustalla, lämmin kynttilänvalo — sama
- * paperimaailma kuin pelin arkeissa.
+ * Yhtenäinen tyyli joka promptin ympärille (omistajan palaute
+ * 9.8.2026 myöhäisilta: "generoi aarteet uudestaan niin että nousevat
+ * mustasta... kuva ilman rajoja keskelle jonka ympärille tekstit").
+ * Esine nousee puhtaasta mustasta kynttilänvalossa — reunat häipyvät
+ * saumatta paljastuskortin tummaan taustaan, ei kehyksiä eikä
+ * pergamenttia.
  */
 const TYYLI = (esine) => `Vintage children's adventure book illustration of ${esine}, `
-  + 'painted in warm gouache with fine ink outlines. The object sits '
-  + 'centered on aged parchment paper background with soft vignette '
-  + 'edges, lit warmly from the upper left like candlelight. Rich '
-  + 'detail on the object, plain background, no text, no people, '
-  + 'no borders. Muted antique palette with one strong accent color '
-  + 'from the object itself.';
+  + 'painted in warm gouache with fine ink outlines, emerging from '
+  + 'pure black darkness. The object is centered and lit warmly by '
+  + 'unseen candlelight from the upper left; everything around it '
+  + 'fades smoothly into solid pure black (#000000) at the edges. '
+  + 'No background scenery, no parchment, no frame, no border, no '
+  + 'text, no people, no candle visible. The darkness fills the '
+  + 'ENTIRE square canvas edge to edge: all four corners and edges '
+  + 'are solid black, never white, never paper — do not paint a '
+  + 'black circle on a light page. Rich glowing detail on the '
+  + 'object itself, muted antique palette with one strong accent '
+  + 'color from the object.';
 
 const KUVAT = [
   // Eurooppa

@@ -5077,25 +5077,31 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-/* Aarteen oikea valokuva paljastuksen alla: pieni kehystetty vedos.
- * max-height pitää pystykuvatkin (esim. silkkikäärö) kurissa, ja
- * object-fit: contain näyttää esineen kokonaan leikkaamatta. */
-.reveal-kuva {
-  max-width: min(58vw, 15rem);
-  max-height: 9.5rem;
-  object-fit: contain;
-  border-radius: 8px;
-  border: 2px solid rgba(246, 226, 184, 0.55);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
-  margin-top: 0.35rem;
-  background: rgba(0, 0, 0, 0.35);
+/* Aarrekuvallinen paljastus: tausta lähes mustaksi, jotta kuvan oma
+ * musta pohja sulautuu saumatta eikä mitään reunaa näy. */
+.reveal-overlay.kuvallinen {
+  background: radial-gradient(circle at 50% 45%, rgba(8, 5, 2, 0.94), rgba(0, 0, 0, 0.985));
 }
 
-.reveal-caption .reveal-kuvalahde {
-  font-size: 0.62rem;
-  color: rgba(216, 196, 162, 0.75);
-  max-width: min(70vw, 18rem);
+/* AI-piirretty aarre nousee mustasta kortin keskelle ilman kehyksiä
+ * (omistajan palaute 9.8.2026). Säteittäinen maski häivyttää kuvan
+ * reunat, joten esine leijuu pimeässä — tekstit asettuvat ympärille.
+ * object-fit: contain näyttää esineen kokonaan leikkaamatta. */
+.reveal-aarrekuva {
+  /* Neliö: kuvat ovat 1:1, ja maskin on osuttava kuvan reunoihin —
+   * leveämmässä laatikossa kuvan pystyreunat jäisivät maskin
+   * kirkkaalle alueelle näkyviin. */
+  width: min(76vw, 22rem, 52vh);
+  aspect-ratio: 1;
+  object-fit: contain;
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at center, #000 50%, transparent 74%);
+  mask-image: radial-gradient(ellipse 70% 70% at center, #000 50%, transparent 74%);
+  opacity: 0;
+  transform: scale(0.86);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
+
+.reveal-aarrekuva.shown { opacity: 1; transform: none; }
 
 .reveal-caption strong {
   font-family: var(--font-type);
