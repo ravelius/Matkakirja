@@ -69,11 +69,11 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 | Sonnet 2 | session_01RQtKAgCVRDZzMGRKYJLoWS | 8.8.2026 |
 
 Kaistajako, kun sessioita on viisi: **Opus 1** — lehtisisällöt
-(maa-kategoriat.js, menovinkit), UI ja rakenne (radio/tv-napit
-molempiin lehtiin, uutislahteet.js). **Opus 2** — kartat ja introt
-(maakartat.js, assets/kartat, europe-artikkelit.js,
-piirra-kaupunkikartta.mjs) järjestyksessä ITA → ESP → SWE, sen
-jälkeen tv-tallennekandidaattien haku. **Sonnet 1** — QA ja
+(maa-kategoriat.js, menovinkit), UI ja rakenne (radionapit
+molempiin lehtiin, uutislahteet.js; tv-napeista luovuttiin
+v434, joten tv-tehtäviä ei enää ole). **Opus 2** — kartat ja
+introt (maakartat.js, assets/kartat, europe-artikkelit.js,
+piirra-kaupunkikartta.mjs). **Sonnet 1** — QA ja
 työhuoneen Kehitys-välilehti (tyohuone.html, js/tyohuone-*.js).
 **Sonnet 2** — nähtävyysjutut kaupunkikarttojen kohteille
 (omistajan siirto Opukselta 8.8.2026): tiedot en-Wikipediasta

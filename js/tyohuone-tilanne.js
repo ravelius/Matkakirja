@@ -33,74 +33,62 @@ export const TILANNE = {
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
-      tila: 'tyossa',
-      tehtava: 'Kaupunkilehdet 31/36 Euroopassa (v410: Rooma, Krakova, '
-        + 'Varsova, Helsinki, Tallinna, Kiova, Pietari, Moskova, Sofia, '
-        + 'Bukarest, Sarajevo, Odessa). Maalehtien auditointi: 8 maata '
-        + 'oli kokonaan ilman aihesivuja (CZE AUT GRC NLD TUR IRL PRT '
-        + 'HUN) — v411 täydensi viisi (Tšekki, Itävalta, Kreikka, '
-        + 'Alankomaat, Ranska: 20 sivua, 80 nostoa). Palkkioavaimeen '
-        + 'lisätty maatunnus (eri maan sama aihe ei enää näy '
-        + 'ratkaistuna). Esitarkistin vertaa nyt jokaista minitehtävää '
-        + 'kaupungin kulttuurivisaan sanoina JA lukuina (Ateenan oppi).',
-      seuraavaksi: 'Tromssa + 5 aluetta (Islanti, Kreeta, Sisilia, '
-        + 'Alpit, Lappi) lehtimallilla, sitten jonon 4 maalehteä '
-        + '(Turkki, Irlanti, Portugali, Unkari). Fablen päätös 9.8.: '
-        + 'vanhojen maalehtien aihesivut ilman minitehtävää (DEU 6/6, '
-        + 'GBR 7/8, ESP 4/5, ITA 4/5, SWE 5/6) täydennetään samalla '
-        + 'säännöllä — koneisto on nyt kovennettu.',
+      tila: 'odottaa',
+      tehtava: 'Valmista (v435): Turkin, Irlannin, Portugalin ja '
+        + 'Unkarin maalehdet (16 aihesivua, 64 juttua, 16 '
+        + 'minitehtävää) sekä vaiheen B ensimmäinen siirto: Helsingin '
+        + 'arki Suomen maalehteen, Helsingille jäi historia — lehti '
+        + 'on nyt kolme sisältöruutua neljän sijaan.',
+      seuraavaksi: 'Odottaa omistajan kuittausta Helsinki/Suomi-erästä '
+        + 'ennen vaiheen B loppusiirtoja (docs/lehtitasapaino.md, '
+        + '30 kaupunkia maa kerrallaan). Päätöstä odottavat myös: '
+        + 'menovinkkiruudun irrotus kaupunkilehdestä (oma erä, '
+        + 'yhteinen koodipolku) ja Suomen maalehden täydennys '
+        + '(pelaajan kotimaa on nyt ohuin lehti). Jonossa lisäksi '
+        + 'valokuvakysymysten rajatapaukset (~50) ja vanhojen '
+        + 'maalehtien minitehtävät (33 aihesivua).',
     },
     {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
-      tila: 'tyossa',
-      tehtava: 'Kaupunkikartat lehtikaupungeille: erä 1/4 julkaistu '
-        + '(v418: Praha, Wien, Budapest + listojen välistä '
-        + 'pelastettu Pariisi). Oma tarkistustyökalu: pisteet '
-        + 'rajojen sisällä, numerot eivät päällekkäin, silmäkuva. '
-        + 'Tietoiset rajaukset: Wienin Schönbrunn ja Budapestin '
-        + 'Sankarien aukio jäävät karttarajauksen ulkopuolelle; '
-        + 'Praha on vaalein kartta (puolet ruudusta puistoa — '
-        + 'kaupungin totuus, ei virhe).',
-      seuraavaksi: 'Helsinki julkaistu (v424: kohdekartta, Suomenlinna '
-        + 'kainalossa, meri vetenä). Merentäyttö nyt kaupunkikohtainen '
-        + 'valinta + <30 % relaatioraja + pinta-alavahti (Venetsia-oppi: '
-        + 'väärät renkaat peittivät koko laguunin). Tukholma ja Venetsia '
-        + 'piirretty uudestaan vetineen (Fablen kuittaus). Seuraavaksi '
-        + 'Istanbul → Marseille + Edinburgh kolmen erässä, sitten '
-        + 'Lissabon/Barcelona/Granada.',
+      tila: 'odottaa',
+      tehtava: 'KARTTATYÖ VALMIS: kohdekartat 31/31 kaupungille ja '
+        + 'Euroopan maakartat 29/29 — tarkistettu ohjelmallisesti '
+        + 'molempiin suuntiin (9.8.). Ei yhtään lehteä ilman karttaa '
+        + 'eikä karttaa ilman lehteä.',
+      seuraavaksi: 'Ehdolla työkaluparannus: isojen jokirelaatioiden '
+        + 'täyttö (kokoaKerrokset() ohittaa yli 0,3 × rajauslaatikon '
+        + 'renkaat, joten Kiovan Dnepr, Pietarin Neva ja Budapestin '
+        + 'Tonava piirtyvät paljaina rantaviivoina). Yksi korjaus, '
+        + 'kolme karttaa paremmaksi. Afrikan kartat (26 maata ilman) '
+        + 'vasta omistajan Eurooppa-testin jälkeen.',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA + työhuone',
-      tila: 'tyossa',
-      tehtava: 'Iso loppu-QA koko Euroopalle ennen omistajan '
-        + 'testiä. Valmiina: v356 työhuoneen kokonaisuudistus (5 '
-        + 'välilehteä, Testaa-välilehti pelilinkkeineen), v352 '
-        + 'Kehitys-välilehti.',
-      seuraavaksi: 'QA-raportti Fablelle; löydöt korjauslistaksi. '
-        + 'Briefiin kertyneet erityiskohteet: Mercator-vääristymä '
-        + 'karttapisteissä, Opus 2:n curl+karttapiste-tarkistus, '
-        + 'haikara/Vasa-kuvakaksoiskappaleet, roskapolkutesti ja '
-        + 'Flickr Commonsin "No restrictions" -lisenssimerkintä '
-        + '(Tukholman Elias Martin -galleria; tarkistin ei tunne '
-        + 'merkintää, vaikka se on käytännössä PD) ja maakartat.js:n '
-        + 'nimiVasen-kenttä, jonka kommentti lupaa mutta jota ei ole '
-        + 'toteutettu eikä käytetä — kommentti tai toteutus '
-        + 'korjattava.',
+      tila: 'odottaa',
+      tehtava: 'Valmis QA-tehtäviin, odottaa Fablen loppu-QA-briefiä '
+        + '(iso QA koko Euroopalle ennen omistajan testiä).',
+      seuraavaksi: 'Briefiin kertyneet erityiskohteet: Mercator-'
+        + 'vääristymä karttapisteissä, curl+karttapiste-tarkistus, '
+        + 'haikara/Vasa-kuvakaksoiskappaleet, roskapolkutesti, Flickr '
+        + 'Commonsin "No restrictions" -lisenssimerkintä (tarkistin '
+        + 'ei tunne, vaikka käytännössä PD) ja maakartat.js:n '
+        + 'nimiVasen-kenttä (kommentti lupaa, toteutus puuttuu).',
     },
     {
       tekija: 'Sonnet 2',
       rooli: 'nähtävyysjutut',
-      tila: 'tyossa',
-      tehtava: 'Nähtävyysjutut Opus 2:n uusille kohdekartoille lukittuun '
-        + 'malliin. Erä 4 julki (v426): Praha, Wien, Budapest, Pariisi — '
-        + '24 kohdetta, jokainen kuva itsenäisesti Commons-API-tarkistettu '
-        + '(PD/CC, vaaka). Aiemmat: Kairo, Venetsia, Madrid, Tukholma, '
-        + 'Berliini, Lontoo.',
-      seuraavaksi: 'HELSINKI kärjessä (omistaja odottaa): kuusi kohdetta '
-        + '+ Suomenlinna. Sen jälkeen Ateena/Amsterdam/Dublin (v421). '
-        + 'Ateenan kohteissa disambiguointisääntö mielessä.',
+      tila: 'odottaa',
+      tehtava: 'Livenä 14 kaupunkia (uusimpina v436: Ateena, '
+        + 'Amsterdam, Dublin). Jonossa Opus 2:n viisi karttaerää = '
+        + '17 uutta kaupunkia, ~102 kohdetta (v427 Istanbul/'
+        + 'Marseille/Edinburgh → v433 Kiova/Pietari/Moskova/Odessa).',
+      seuraavaksi: 'Ehdotus odottaa lupaa: aloitus vanhimmasta erästä '
+        + '(Istanbul, Marseille, Edinburgh) totutulla prosessilla. '
+        + 'Wiki-ansat muistissa: fi-wikin "Neitsyttorni" on Bakun '
+        + 'torni (Istanbulin kohde on Kız Kulesi) ja "Belém" '
+        + 'Brasilian kaupunki (Lissabonissa kaupunginosa).',
     },
   ],
   odottaaPaatosta: [
