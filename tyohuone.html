@@ -203,7 +203,7 @@
     } from './js/tyohuone-data.js';
     import {
       KEHITYS_KAARI, AANINAYTTEET, MANTERE_KOKEILUT, LYHYT_KOKEILUT, UUDET_VALIT,
-      VISA_AARRE_KOKEILUT,
+      VISA_AARRE_KOKEILUT, KAARI_KAUPUNGIT,
     } from './js/tyohuone-kehitys-data.js';
     import { TILANNE, TESTATTAVAA } from './js/tyohuone-tilanne.js';
     import { KOHTAAMISET } from './js/packs/kohtaamiset.js';
@@ -494,6 +494,73 @@
             k.append(el('p', '', m.aarre));
             return k;
           })];
+        },
+      },
+      {
+        /*
+         * Isoisä äänessä jo saapumisessa — viisi jännityskaupunkia
+         * (omistajan tilaus 9.8.2026: "laita ne työhuoneeseen siten että
+         * voin kuunnella ne pätkä helposti putkeen kun ajan autoa").
+         * Soittolista soittaa 15 pätkää järjestyksessä: yksi napautus, ja
+         * kun pätkä loppuu, seuraava alkaa itsestään. Yksittäissoittimet
+         * jäävät alle, jos haluaa kuunnella vain yhden.
+         */
+        otsikko: 'Isoisä äänessä — 5 uutta (9.8.)',
+        maara: `${KAARI_KAUPUNGIT.kohteet.length} kaupunkia`,
+        rakenna: () => {
+          const nimio = (teksti) => {
+            const b = el('p', 'pieni');
+            b.append(el('b', null, teksti));
+            return b;
+          };
+          const soittimet = [];
+          let ketjussa = false;
+          const pysayta = () => {
+            ketjussa = false;
+            for (const a of soittimet) { a.pause(); a.onended = null; }
+          };
+          const soitaAlkaen = (i) => {
+            if (i >= soittimet.length) { ketjussa = false; return; }
+            ketjussa = true;
+            for (const a of soittimet) { if (a !== soittimet[i]) a.pause(); }
+            const a = soittimet[i];
+            a.onended = () => { if (ketjussa) soitaAlkaen(i + 1); };
+            a.scrollIntoView({ block: 'center', behavior: 'smooth' });
+            a.play().catch(() => {});
+          };
+
+          const johdanto = el('div', 'kortti');
+          johdanto.append(el('h3', '', 'Isoisä äänessä — viisi jännityskaupunkia'));
+          johdanto.append(el('p', '', KAARI_KAUPUNGIT.johdanto));
+          const ohjain = el('div', 'todo-aani');
+          const soitaNappi = document.createElement('button');
+          soitaNappi.type = 'button';
+          soitaNappi.textContent = '▶ Soita kaikki peräkkäin (15 pätkää)';
+          soitaNappi.addEventListener('click', () => soitaAlkaen(0));
+          const pysaytaNappi = document.createElement('button');
+          pysaytaNappi.type = 'button';
+          pysaytaNappi.textContent = '⏸ Pysäytä';
+          pysaytaNappi.addEventListener('click', pysayta);
+          ohjain.append(soitaNappi, pysaytaNappi);
+          johdanto.append(ohjain);
+
+          const kortit = [johdanto];
+          for (const m of KAARI_KAUPUNGIT.kohteet) {
+            const k = el('div', 'kortti');
+            k.append(el('h3', '', m.otsikko));
+            const osa = (teksti, nimi, tunnus) => {
+              k.append(nimio(nimi));
+              k.append(el('p', '', teksti));
+              const rivi = aaniRivi('Kuuntele', null, `assets/audio/puhe-kaari-${tunnus}-${m.id}.mp3`);
+              soittimet.push(rivi.querySelector('audio'));
+              k.append(rivi);
+            };
+            osa(m.saapuminen, 'Saapuminen (isoisän ääni)', 'saapuminen');
+            osa(m.visa, 'Kohtaaminen tietovisassa', 'visa');
+            osa(m.aarre, 'Aarteen paljastuminen', 'aarre');
+            kortit.push(k);
+          }
+          return kortit;
         },
       },
     ]);
