@@ -5014,4 +5014,155 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  dubai: [
+    {
+      id: 'kaupunki',
+      nimi: 'Dubai',
+      johdanto: 'Sata vuotta sitten täällä oli lahti, jonka rannalla sukellettiin '
+        + 'helmiä. Nyt samasta paikasta nousee maailman korkein torni — ja '
+        + 'kultaa myydään kiloittain kadun varressa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Sheikh Zayed Road Skyline from Satwa on 16 May 2007.jpg',
+          selite: 'Sheikh Zayed Roadin pilvenpiirtäjät kohoavat matalien kattojen '
+            + 'takaa. Etualan katoilla on vesisäiliöitä ja '
+            + 'satelliittiantenneja — vanha ja uusi kaupunki ovat korttelin '
+            + 'päässä toisistaan.',
+          lahde: 'Imre Solt, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'People riding camels on Dubai Dunes.jpg',
+          selite: 'Kameliratsastajia hiekkasärkän harjalla auringonlaskun '
+            + 'keltaisessa valossa. Kaupungin laidalta pääsee aavikolle '
+            + 'puolessa tunnissa.',
+          lahde: 'iMahesh, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Dubai Gold Souk on 31 May 2007 Pict 1.jpg',
+          selite: 'Deiran kultatorin katettu kuja. Näyteikkunat ovat täynnä '
+            + 'kaulakoruja, ja katossa kulkee puinen ristikko, joka pitää '
+            + 'auringon ulkona.',
+          lahde: 'Imre Solt, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Helmi nostettiin yhdellä hengenvedolla',
+          tiedosto: 'The Pearl Fishery in the Persian Gulf - The Graphic 1881.jpg',
+          teksti: 'Ennen öljyä Dubai eli helmistä. Kesäkuusta syyskuuhun '
+            + 'purjeveneet lähtivät lahdelle, ja sukeltajat menivät pohjaan '
+            + 'ilman happilaitteita: nenässä oli luinen puristin, vyössä '
+            + 'kivipaino ja kaulassa kori simpukoille. Pohjassa oltiin '
+            + 'minuutin verran, ja sukelluksia tehtiin kymmeniä päivässä. '
+            + 'Ammatti katosi nopeasti 1930-luvulla, kun Japanissa opittiin '
+            + 'kasvattamaan helmiä viljellysti ja maailman talous romahti. '
+            + 'Öljyä löytyi vasta 1966.',
+          selite: 'Vanha kaiverrus vuodelta 1881: purjeveneitä ankkurissa, '
+            + 'sukeltajia menossa alas ja pohjassa työssä. Reunakuvissa näkyy '
+            + 'sukeltajan nenäpuristin ja simpukkakori.',
+          lahde: 'Tuntematon kaivertaja, Wikimedia Commons (public domain)',
+          wiki: 'Helmenkalastus',
+        },
+        {
+          otsikko: 'Metrossa ei ole kuljettajaa',
+          tiedosto: 'Dubai metro rail & station.JPG',
+          teksti: 'Dubain metro avattiin 9. syyskuuta 2009, ja se kulkee ilman '
+            + 'kuljettajaa: junat ohjautuvat tietokoneella, ja etuikkunasta '
+            + 'näkee suoraan radalle. Asemat ovat ilmastoituja ja '
+            + 'lasiseinäisiä, koska ulkona on kesällä yli neljäkymmentä '
+            + 'astetta. Rata kulkee suurimmaksi osaksi katujen yläpuolella '
+            + 'pilareilla. Ensimmäisessä vaunussa on osa, johon saavat mennä '
+            + 'vain naiset ja lapset, ja väärästä vaunusta saa sakon.',
+          selite: 'Metrojuna saapuu asemalle korkealla kaupungin yllä. Laiturin '
+            + 'lasiseinä on kiinni, ja radan molemmin puolin näkyy kaupunki.',
+          lahde: 'Shahroozporia, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Dubain metro',
+        },
+        {
+          otsikko: 'Kulta myydään painon mukaan',
+          tiedosto: 'Dubai Gold Souk-Dubai UAE-Andres Larin.jpg',
+          teksti: 'Deiran kultatorilla on satoja liikkeitä samassa katetussa '
+            + 'kujassa. Koru punnitaan asiakkaan edessä, ja hinta lasketaan '
+            + 'päivän kultakurssista plus työn osuus — samasta kaulakorusta '
+            + 'maksetaan eri hinta eri päivinä. Torilla on ollut esillä '
+            + 'maailman painavin sormus: se painoi lähes kuusikymmentä kiloa, '
+            + 'eikä sitä voinut pitää sormessa vaan vitriinissä. '
+            + 'Kaupankäynnissä tinkiminen kuuluu asiaan.',
+          selite: 'Kultakaupan näyteikkuna täynnä kaulakoruja ja rannerenkaita. '
+            + 'Korut on ripustettu riveihin niin tiheästi, että ikkuna hohtaa '
+            + 'keltaisena.',
+          lahde: 'Saaremees, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Dubaissa rakennetaan sitä, mitä ei ole: torni joka on korkeampi '
+        + 'kuin mikään ennen, saari jota ei ollut kartalla, ja juomavesi, '
+        + 'joka tehdään merestä.',
+      tehtava: {
+        kysymys: 'Kuinka korkea Burj Khalifa on?',
+        vaihtoehdot: [
+          '282 metriä',
+          '828 metriä',
+          '1 828 metriä',
+          '88 metriä',
+        ],
+        oikea: 1,
+        fakta: 'Torni piti maailmanennätystä heti valmistuttuaan, eikä sitä ole '
+          + 'vieläkään ohitettu.',
+      },
+      nostot: [
+        {
+          otsikko: 'Torni, jonka huipulla paastotaan pidempään',
+          tiedosto: 'Burj Khalifa (16260269606).jpg',
+          teksti: 'Burj Khalifa valmistui vuonna 2010, ja se on 828 metriä korkea '
+            + '— yli puolitoista kertaa aiempaa ennätystä korkeampi. '
+            + 'Kerroksia on 163. Torni on niin korkea, että sen huipulla '
+            + 'aurinko laskee pari minuuttia myöhemmin kuin katutasossa. '
+            + 'Ramadanin aikana se otettiin huomioon virallisesti: ylimmissä '
+            + 'kerroksissa paastotaan hetken pidempään kuin alhaalla. '
+            + 'Rakennuksen muoto kapenee portaittain, jotta tuuli ei saisi '
+            + 'siitä otetta.',
+          selite: 'Burj Khalifa kohoaa muiden pilvenpiirtäjien yli kirkkaassa '
+            + 'auringonpaisteessa. Torni kapenee portaittain ja päättyy '
+            + 'ohueen piikkiin.',
+          lahde: 'Laika ac, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Burj Khalifa',
+        },
+        {
+          otsikko: 'Saari, joka on merenpohjaa',
+          tiedosto: 'Palm Jumeirah on 8 May 2008 Pict 1.jpg',
+          teksti: 'Palm Jumeirah rakennettiin 2000-luvun alussa keinotekoisesti '
+            + 'mereen palmun muotoon: runko, seitsemäntoista lehteä ja '
+            + 'kaareva aallonmurtaja ympärillä. Materiaali ruopattiin '
+            + 'merenpohjasta — hiekkaa ja kiveä, ei betonia. Rantaviivaa '
+            + 'saari lisäsi kymmeniä kilometrejä, ja se erottuu avaruudesta '
+            + 'otetuissa kuvissa. Hiekka tiivistettiin täryttämällä, jotta se '
+            + 'kestäisi rakennukset, ja aallonmurtajaan ladottiin miljoonia '
+            + 'tonneja louhittua kiveä.',
+          selite: 'Ilmakuva Palm Jumeirahin lehdistä: kapeita hiekkakaistoja '
+            + 'turkoosissa vedessä, ja jokaisella talorivi ja oma ranta.',
+          lahde: 'Imre Solt, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Palm Jumeirah',
+        },
+        {
+          otsikko: 'Juomavesi tehdään merestä',
+          tiedosto: 'Multi Stage Flash Desalination Plant at Jebel Ali G Station.jpg',
+          teksti: 'Emiraateissa sataa muutamana päivänä vuodessa eikä siellä ole '
+            + 'yhtään pysyvää jokea, joten lähes kaikki hanavesi tehdään '
+            + 'merivedestä. Jebel Alin laitos on maailman suurimpia: merivesi '
+            + 'kuumennetaan, höyry kerätään talteen ja tiivistetään puhtaaksi '
+            + 'vedeksi, ja suola jää jäljelle. Työ vie paljon energiaa, ja '
+            + 'jäljelle jäävä väkevä suolaliuos palautetaan mereen — se '
+            + 'lämmittää ja suolaa lahtea, mikä on alueen isoja '
+            + 'ympäristökysymyksiä.',
+          selite: 'Merivedenpuhdistamon putkistoa ja säiliöitä meren rannalla. '
+            + 'Sinisiksi maalatut putket kulkevat pitkin rakennuksen kylkeä.',
+          lahde: 'Starsend, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+  ],
 };
