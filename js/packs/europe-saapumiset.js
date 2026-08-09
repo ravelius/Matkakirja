@@ -52,37 +52,32 @@ export const EUROPE_SAAPUMISET = {
    * Pariisi (pari: Madridin kohtaaminen), punta Rooma, E. G:n kortti
    * vain Kairossa (africa-saapumiset).
    */
+  /* Uusi malli — ks. Edinburghin kommentti. */
   pariisi: {
-    kuvaus: 'Kahvilan tarjoilija toi kaakaon, jota en ollut tilannut: '
-      + '"Pöytä seitsemän tarjoaa aina teidän suvullenne." Pöydän '
-      + 'kannen alle oli liimattu pieni messinkiavain.',
-    nosto: 'Isoisä kirjoitti: "Istuin kolme tuntia samassa kahvilassa. '
-      + 'En huvikseni — ovella seisoi mies, joka ei tilannut mitään." '
-      + 'Tilasin toisen kaakaon ja jäin.',
-    luenta: '[curious] Kahvilan tarjoilija toi kaakaon, jota en ollut '
-      + 'tilannut: "Pöytä seitsemän tarjoaa aina teidän suvullenne." '
-      + '[whispers] Pöydän kannen alle oli liimattu pieni '
-      + 'messinkiavain. [softly] Isoisä kirjoitti: "Istuin kolme '
-      + 'tuntia samassa kahvilassa. En huvikseni — ovella seisoi mies, '
-      + 'joka ei tilannut mitään." [warmly] Tilasin toisen kaakaon ja '
-      + 'jäin.',
+    kuvaus: 'Kioskin myyjä työnsi lehden kainalooni: "Sivu '
+      + 'yhdeksän, monsieur." Sivulla oli ilmoitus: '
+      + '"Löytötavaratoimistossa englantilainen matkalaukku '
+      + 'vuodelta 1873. Noudettava ennen sunnuntaita." Tänään on '
+      + 'lauantai.',
+    luenta: '[curious] Kioskin myyjä työnsi lehden kainalooni: '
+      + '"Sivu yhdeksän, monsieur." [softly] Sivulla oli ilmoitus: '
+      + '[whispers] "Löytötavaratoimistossa englantilainen '
+      + 'matkalaukku vuodelta 1873. Noudettava ennen sunnuntaita." '
+      + '[curious] Tänään on lauantai.',
   },
 
+  /* Uusi malli — ks. Edinburghin kommentti. */
   ateena: {
-    kuvaus: 'Akropoliin lippuluukulla myyjä ojensi lipun, jota en '
-      + 'ollut ostanut: "Seuralaisenne maksoi jo." Huipulla ei '
-      + 'odottanut ketään — vain tyhjä penkki, ja siinä vielä lämmin '
-      + 'paikka.',
-    nosto: 'Isoisä kirjoitti temppelin juurella: "Täällä keksittiin, '
-      + 'että kaupunkia voi johtaa keskustelemalla. Kaikkien kanssa en '
-      + 'silti keskustele." Ukolla oli tapana olla oikeassa.',
-    luenta: '[curious] Akropoliin lippuluukulla myyjä ojensi lipun, '
-      + 'jota en ollut ostanut: "Seuralaisenne maksoi jo." [whispers] '
-      + 'Huipulla ei odottanut ketään — vain tyhjä penkki, ja siinä '
-      + 'vielä lämmin paikka. [softly] Isoisä kirjoitti temppelin '
-      + 'juurella: "Täällä keksittiin, että kaupunkia voi johtaa '
-      + 'keskustelemalla. Kaikkien kanssa en silti keskustele." '
-      + '[warmly] Ukolla oli tapana olla oikeassa.',
+    kuvaus: 'Torin kauppias antoi minun maistaa oliiveja kolmesta '
+      + 'ruukusta ja kysyi, mikä vuori maistui parhaalta. Nauroin, '
+      + 'kunnes hän osoitti rinteitä kaupungin takana: jokainen '
+      + 'ruukku oli omaltaan. Ostin pussillisen sitä vuorta, jonka '
+      + 'nimeä en osannut lausua.',
+    luenta: '[curious] Torin kauppias antoi minun maistaa oliiveja '
+      + 'kolmesta ruukusta ja kysyi, mikä vuori maistui parhaalta. '
+      + '[warmly] Nauroin, kunnes hän osoitti rinteitä kaupungin '
+      + 'takana: jokainen ruukku oli omaltaan. Ostin pussillisen '
+      + 'sitä vuorta, jonka nimeä en osannut lausua.',
   },
 
   rooma: {

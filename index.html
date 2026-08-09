@@ -267,11 +267,6 @@
        tarina tulee kartan päiväkirjasta ja koko artikkeli Lue lisää -linkistä. -->
   <dialog id="arrival-dialog" class="dialog">
    <div class="dialog-card arrival-card" tabindex="-1" autofocus>
-    <!-- Kulmalinkki maaosion aloitussivulle (maat, joilla on iso
-         kartta js/packs/maakartat.js:ssä): maaosasto ei enää asu
-         lehden etusivulla, vaan omalla sivullaan (omistajan toive
-         7.8.2026). Teksti täytetään maan mukaan: "Saksa-osio ›". -->
-    <button id="arrival-maa-linkki" class="maa-linkki" type="button" hidden></button>
     <!-- Kaupunki ja maa vierekkäisinä palstoina leveällä ruudulla,
          kapealla allekkain (omistajan toive). -->
     <div class="arrival-palstat">
@@ -285,7 +280,13 @@
            sekä kaupunki- että maalehden yllä. -->
       <p id="arrival-lehti-yla" class="lehti-ylarivi" hidden>Unohdettu aarre</p>
       <h2 id="arrival-city"></h2>
-      <p id="arrival-lehti-ala" class="lehti-alarivi" hidden></p>
+      <!-- Päiväysrivi keskellä; oikeassa reunassa viivoihin tasattuna
+           liitelinkki maalehteen ("Suomi-liite", omistajan taitto-ohje
+           9.8.2026). Päiväys on omassa spanissa, jottei linkki pyyhkiydy
+           tekstin päivittyessä. -->
+      <p id="arrival-lehti-ala" class="lehti-alarivi" hidden><span
+        id="arrival-lehti-pvm"></span><button id="arrival-maa-linkki"
+        class="maa-linkki" type="button" hidden></button></p>
       <!-- Päivän sää maston alla (lehtikaupungit, joilla on rivi
            js/packs/saatiedot.js:ssä). Napautus avaa koko vuoden
            graafin; ilman verkkoa rivillä lukee kuukausinormaali. -->
@@ -688,7 +689,7 @@
     <!-- Isoisän suora sitaatti kysymyksen yllä: matkakirja lainaa
          pelkkää isoisän tarinaa siinä paikassa (js/packs/europe-kaari.js). -->
     <div id="quiz-isoisa" class="quiz-isoisa" hidden>
-      <p class="quiz-isoisa-nimio">Isoisän matkakirjasta, 1873</p>
+      <p class="quiz-isoisa-nimio">Matkakirjasta</p>
       <p id="quiz-isoisa-teksti" class="quiz-isoisa-teksti"></p>
     </div>
     <!-- Kohtaamisen avaus: hahmon tervehdys kirjoittuu ennen kysymystä

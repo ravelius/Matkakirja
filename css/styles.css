@@ -5757,6 +5757,19 @@ body.katselu #newgame-btn { display: none; }
  * vaan merkintä pergamentilla — se saa reagoida, mutta pinnalla eikä
  * muodolla.
  */
+/*
+ * Tuore päivitys korostuu (omistajan toive 9.8.2026): numero on
+ * ensimmäisen puolen minuutin ajan selvästi isompi ja tummempi,
+ * sitten se kutistuu tavalliseksi pehmeällä siirtymällä.
+ */
+.versio-kulma { transition: font-size 0.6s ease, opacity 0.6s ease; }
+
+.versio-kulma.tuore {
+  font-size: 1.5em;
+  opacity: 1;
+  font-weight: 700;
+}
+
 .versio-kulma:hover:not(:disabled),
 .versio-kulma:focus-visible {
   background: none;
@@ -7372,15 +7385,6 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
  * oikealle tasatuksi rivikseen nimiön ylle (DOM-järjestys), jolloin
  * kumpikaan ei väisty eikä mikään mene päällekkäin.
  */
-@media (max-width: 560px) {
-  .dialog.lehti button.maa-linkki {
-    position: static;
-    display: block;
-    margin-left: auto;
-    margin-bottom: 0.1rem;
-  }
-  .dialog.lehti button.maa-linkki[hidden] { display: none; }
-}
 
 /* Lehden nimiö: kaupungin nimi isolla antiikvalla keskitettynä. */
 .dialog.lehti #arrival-city {
@@ -7394,6 +7398,8 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 
 /* Päiväysrivi tuplaviivan ja ohuen viivan välissä kuin sanomalehdessä. */
 .lehti-alarivi {
+  /* Ankkuri liitelinkille, joka tasataan rivin oikeaan reunaan. */
+  position: relative;
   margin: 0.35rem 0 0.85rem;
   padding: 0.24rem 0;
   border-top: 3px double rgba(70, 51, 31, 0.75);
@@ -8500,24 +8506,25 @@ body.vertailu-tila .pawns { display: none; }
  * #arrival-maa siirtyy tälle sivulle etusivulta — ks. piirraMaaEtusivu.
  */
 
-/* Kulmalinkki lehden etusivulta maaosioon ("Saksa-osio ›"). */
+/*
+ * Liitelinkki päiväysrivillä ("Suomi-liite", omistajan taitto-ohje
+ * 9.8.2026): sama rivi kuin päiväys, oikeaan reunaan viivojen
+ * väliin tasattuna. Rivi itse on position: relative -ankkuri.
+ */
 .dialog button.maa-linkki {
   position: absolute;
-  /* Safe-area mukaan: lehti täyttää koko ruudun, ja ilman varaa
-   * linkki jäi iPadilla kameraloven korkeudelle eikä siihen voinut
-   * osua (omistajan havainto 8.8.2026). */
-  top: calc(0.7rem + env(safe-area-inset-top, 0px));
-  right: 0.75rem;
-  z-index: 4;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   border: 0;
   /* Yleisen nappisäännön käsinpiirretty kulmapyöristys kaartaisi
    * alaviivan ylös vasemmalta — linkin viiva on suora. */
   border-radius: 0;
   background: none;
-  padding: 0.15rem 0.1rem;
+  padding: 0.1rem 0;
   min-height: 0;
   font-family: var(--font-type);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(70, 51, 31, 0.85);

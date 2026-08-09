@@ -13,6 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 419, teksti: 'Neljä kaupunkia yhden kertojan malliin äänineen' },
+  { v: 419, teksti: 'Etsi kätkö joka kaupunkisivun alareunassa' },
+  { v: 419, teksti: 'Liitelinkki päiväysriville, tuore versionumero isompana' },
   { v: 418, teksti: 'Kohdekartta Prahaan, Wieniin, Budapestiin ja Pariisiin' },
   { v: 417, teksti: 'Valokuvakysymys näyttää taas paikkoja, ei henkilöitä' },
   { v: 416, teksti: 'Lue maa-liite -nappi kaupunkilehden loppuun' },
