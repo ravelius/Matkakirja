@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '10.8.2026 (yövahti klo 0.50)',
+  paivitetty: '10.8.2026 (yövahti klo 1.30)',
   tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
     + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
     + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
@@ -21,55 +21,58 @@ export const TILANNE = {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
       tila: 'valmis',
-      tehtava: 'Omistajan illan testipelilöydökset korjattu (v475): '
-        + 'nähtävyysjuttujen lisäkuvat karuselliin, lehden loppuun '
-        + 'vieritysvara (sivunumero ei enää peitä Etsi kätköä) ja '
-        + 'Lue lisää -artikkelien tyhjät loppuotsikot pois.',
+      tehtava: 'Illan testipelilöydökset korjattu: kuvakaruselli + '
+        + 'vieritysvara + wikihännät (v475), yksi tehtävä per '
+        + 'pysähdys (v478) ja Engel-henkilöjuttu (v479). Omistajan '
+        + 'valmiusportti kirjattu: ilmoitus vasta kun Eurooppa on '
+        + 'kokonaan valmis (docs/fable-tilanne.md, 9 kohtaa).',
       seuraavaksi: 'Yövahti: raporttien kuittaus, erien jako, konttien '
-        + 'kierrätys erätauoilla, jumitarkistus tunneittain.',
+        + 'kierrätys erätauoilla, jumitarkistus tunneittain. Lopuksi '
+        + 'kokoava QA + oma läpipelaus + ilmoitus omistajalle.',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Kreeta, Sisilia ja Alpit saivat lehtensä (v473) — '
-        + 'aluelehtien erä valmis. Aiemmin Islanti + Lappi (v468) ja '
-        + 'päällekkäisjuttujen siivous (v467, v469).',
-      seuraavaksi: 'Viisi kaupunkilehteä järjestyksessä Riika, Vilna, '
-        + 'Oslo, Kööpenhamina, Dubrovnik (1–2 lehteä per PR) → '
-        + 'valokuvarajatapaukset + kuvaduplikaattilista → Lähi-idän '
-        + 'maiden aihesivut (ARE ensin).',
+      tehtava: 'EUROOPPA ON LEHTIEN OSALTA TÄYSI: viisi viimeistä '
+        + 'kaupunkilehteä (Dubrovnik, Riika, Vilna, Oslo, '
+        + 'Kööpenhamina) yhtenä eränä (v481), sitä ennen aluelehdet '
+        + '(v473).',
+      seuraavaksi: 'Orpo minitehtävä -auditointi + menovinkkisivujen '
+        + 'kuvat (pilotti Suomi) + valokuvarajatapaukset ja '
+        + 'kuvaduplikaatit → Lähi-idän maiden aihesivut (ARE ensin).',
     },
     {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
       tila: 'tyossa',
-      tehtava: 'Maakylttien törmäykset korjattu mittaamalla (v474): '
-        + 'kyltti nousee kaupunkinimien päälle. Aiemmin Dubain '
-        + 'kohdekartta (v467) ja cityCountry-kytkentä (v470).',
-      seuraavaksi: 'Mittakaavajana kaupunkikarttoihin (Google Maps '
-        + '-tyyliin), Tromssan kohdekartta ja vesitarkistuksen '
-        + 'korjaukset (Tukholma, Madridin Cibele, Lontoon silmä).',
+      tehtava: 'Maakyltit mittaamalla kuntoon (v474), mittakaavajana '
+        + 'kaikkiin kohdekarttoihin (v476) ja karttojen '
+        + 'vesikorjaukset saarineen ja suihkulähteineen (v480).',
+      seuraavaksi: 'Kuusi kohdekarttaa uusille lehtikaupungeille: '
+        + 'Tromssa, Dubrovnik, Riika, Vilna, Oslo, Kööpenhamina — '
+        + 'valmiusportin viimeinen karttakohta.',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA + työhuone',
       tila: 'tyossa',
-      tehtava: 'Dubai-erän QA käynnissä (lehti + kartta + menovinkit '
-        + '+ lehdettömien ME-maiden i-napit). Aiemmin kaksi puhdasta '
-        + 'kierrosta: kaaren faktat ja peli-integraatio.',
-      seuraavaksi: 'Raportti Dubai-QA:sta; sitten valmiudessa kunnes '
-        + 'Opus 1:n viiden lehden erä on mainissa (QA-kierros sille).',
+      tehtava: 'Dubai/Lähi-itä-QA valmis: puhdas tulos kaikissa '
+        + 'neljässä kohdassa. Aiemmin kaaren faktat ja '
+        + 'peli-integraatio, molemmat puhtaita.',
+      seuraavaksi: 'QA kahdeksalle uudelle lehdelle (Kreeta, Sisilia, '
+        + 'Alpit + viisi kaupunkia) sekä v478-pelisäännölle ja v479 '
+        + 'Engel-jutulle.',
     },
     {
       tekija: 'Sonnet 2',
       rooli: 'nähtävyysjutut',
       tila: 'tyossa',
-      tehtava: 'Erä 8 valmis: Lissabon, Barcelona, Granada (PR #693; '
-        + 'versionumero päivitetään työkalulla ennen mergeä). Livenä '
-        + 'sen jälkeen 17 kaupunkia.',
-      seuraavaksi: 'Erä 9: Rooma, Krakova, Varsova, Tallinna. Uusi '
-        + 'kuvakaruselli (v475) sallii 2–4 kuvaa per juttu siististi.',
+      tehtava: 'Erä 8 mainissa (v477): Lissabon, Barcelona, Granada '
+        + '— nähtävyysjuttuja on nyt 17 kaupungissa.',
+      seuraavaksi: 'Erä 9 työn alla: Rooma, Krakova, Varsova, '
+        + 'Tallinna uudella monikuvalinjalla (pääkohteille 2–3 '
+        + 'kuvaa, aikalaiskuva kun laadukas löytyy).',
     },
   ],
   odottaaPaatosta: [
@@ -98,10 +101,18 @@ export const TESTATTAVAA = [
       + 'tyhjät Kuvia/Lähteet-otsikot ovat poissa.',
   },
   {
-    otsikko: 'Kreetan, Sisilian ja Alppien lehdet (v473)',
-    ohje: 'Avaa Euroopan laudalta aluekohteet: Kreetalla Samarian '
-      + 'rotko ja tuulimyllyt, Sisiliassa temppelilaakso, Alpeilla '
-      + 'murmeli ja partakorppikotka.',
+    otsikko: 'Eurooppa on lehtien osalta täysi (v481)',
+    ohje: 'Viisi viimeistä kaupunkilehteä: Dubrovnikilla Tasavalta, '
+      + 'Riialla Vanhakaupunki, Vilnalla Oppi, Oslolla Laivat ja '
+      + 'Kööpenhaminalla Sadut. Aiemmin aluelehdet Kreeta, Sisilia '
+      + 'ja Alpit (v473).',
+  },
+  {
+    otsikko: 'Yksi tehtävä per pysähdys (v478) ja Engel (v479)',
+    ohje: 'Pulma korvaa nyt kohtaamisvisan — pysähdyksessä on aina '
+      + 'täsmälleen yksi tehtävä ja muodot vaihtelevat. Helsingin '
+      + 'Tuomiokirkko-jutussa Engelin nimi on linkki hänen omaan '
+      + 'juttuunsa.',
   },
   {
     otsikko: 'Maakyltit nousevat kaupunkien päälle (v474)',
