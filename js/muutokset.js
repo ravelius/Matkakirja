@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 464, teksti: 'Joka maalehdessä on nyt omia aihesivuja' },
   { v: 463, teksti: 'Sarajevon merkintä korjattu: kaivon tarina, ei kaivo' },
   { v: 462, teksti: 'Maastotekstien mallitiedoston kommentti oikeaksi' },
   { v: 461, teksti: 'Tanskalle ja Islannille omat aihesivut' },
