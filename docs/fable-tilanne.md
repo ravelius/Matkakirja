@@ -12,11 +12,15 @@ ENSIN, sitten `CLAUDE.md`, `docs/roolitus.md`, `docs/isoisan-raamattu.md`,
   pysähdyn heti, ilmoitan sen selkeästi enkä jatka — pyydän omistajaa
   vaihtamaan takaisin Fableen. Malli-identiteetti vastauksissa
   `claude-fable-5`; EI koskaan commiteihin, PR:iin tai koodiin.
-- **TV- ja videostriimien selvitys ulkopuolisista lähteistä on
-  suljettu — älä käynnistä sitä uudelleen.** Sveitsi (SRF) ja Viro
-  (ERR) tv-napit jäivät liveen (v429), muut maat ilman. Jos "maan
-  tunnelmaa" halutaan lisää, ainoa hyväksytty tapa on Commonsin vapaat
-  (PD/CC) tunnelmavideot — ne on jo kartoitettu, ks. alempaa.
+- **TV-napit on POISTETTU pelistä kokonaan (v434, omistajan päätös
+  9.8.).** Poistettu koodista, tyyleistä, muutoslokista, tilannetaulusta
+  ja worker-ohjeesta. **ÄLÄ lisää niitä takaisin äläkä käynnistä mitään
+  tv-/videostriimiselvitystä.** Radio, uutisotsikot ja käännös jäävät
+  ennalleen. Jos "maan tunnelmaa" halutaan lisää, ainoa hyväksytty tapa
+  on Commonsin vapaat (PD/CC) tunnelmavideot.
+- **HUOM PR #599 (Opus 1):** siihen on niputettu Kreikan tv-nappi, joka
+  on nyt kielletty. Ennen mergeä tv-osa on RIISUTTAVA PR:stä — vain
+  Turkin/Irlannin maalehden aihesivut jäävät.
 - **Tiimi (raportoivat vain Fablelle triggereillä; persistent_session_id):**
   - Opus 1 (lehdet/rakenne): `session_01AEN2as7TAggi2SX3w3DqWV`
   - Opus 2 (kartat): `session_017kajFQA5rFWByGvVLXc9Df`
