@@ -1843,4 +1843,211 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  helsinki: {
+    'Temppeliaukion kirkko': {
+      aika: '1968–1969',
+      teksti: 'Temppeliaukion kirkko on louhittu suoraan Töölön '
+          + 'kalliomäkeen. Sitä alettiin rakentaa helmikuussa 1968, ja '
+          + 'se vihittiin käyttöön syyskuussa 1969. Suunnittelijat, '
+          + 'veljekset Timo ja Tuomo Suomalainen, eivät aluksi '
+          + 'uskaltaneet edes ehdottaa kilpailussa niin rohkeaa ideaa '
+          + 'kuin paljas, räjäytetty kalliopinta sisäseininä — lopulta '
+          + 'juuri se teki kirkosta ainutlaatuisen.'
+        + '\n\n'
+        + 'Katossa kiertää kupariholvi, jota reunustava ikkunarengas '
+          + 'päästää päivänvalon virtaamaan sisään pitkin karkeaa '
+          + 'kiveä. Kirkossa ei ole lainkaan oikeita kelloja: kellojen '
+          + 'ääni kuuluu kaiuttimista nauhalta. Kalliopinnat tekevät '
+          + 'tilasta niin kaikuisan, että urkujen 3001 pilliä ja '
+          + 'konsertit kuulostavat siellä poikkeuksellisen hyviltä.'
+        + '\n\n'
+        + 'Kesällä 1968, kun kirkkoa vielä rakennettiin, joukko '
+          + 'nuoria maalasi ulkoseinään sanan BIAFRA muistuttaakseen '
+          + 'nälänhädän uhreista Afrikassa. Nykyään kirkossa käy silti '
+          + 'noin puoli miljoonaa vierailijaa joka vuosi.',
+      kuvat: [
+        {
+          tiedosto: 'Temppeliaukio Church 07.jpg',
+          selite: 'Temppeliaukion kirkon ulkonäkymä kalliosta nousevine '
+            + 'kupariholveineen.',
+          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Päärautatieasema: {
+      aika: '1919',
+      teksti: 'Nykyinen asemarakennus syntyi arkkitehti Eliel Saarisen '
+          + 'kilpailuehdotuksesta, jonka nimi oli "Siivekäs pyörä '
+          + 'maapallon päällä". Rakennustyöt alkoivat vuonna 1912, '
+          + 'mutta ensimmäinen maailmansota hidasti niitä — kesken '
+          + 'rakennustöiden asema toimi jopa venäläisten '
+          + 'sotilassairaalana vuosina 1915–1916. Uusi asema avattiin '
+          + 'lopulta 5. maaliskuuta 1919.'
+        + '\n\n'
+        + 'Pääsisäänkäyntiä vartioi neljä kivijättiläistä, niin '
+          + 'kutsuttua lyhdynkantajaa, jotka kuvanveistäjä Emil '
+          + 'Wikström loi — jokainen patsas pitelee kädessään valaistua '
+          + 'palloa. Kellotorniin kellot asennettiin vasta vuonna 1922, '
+          + 'ja julkisivun punainen graniitti tuotiin kaukaa Hangosta.'
+        + '\n\n'
+        + 'Nykyään asemalla vilisee vilkkaimpina päivinä yli 200 000 '
+          + 'ihmistä. Brittiläinen BBC valitsi aseman vuonna 2013 '
+          + 'yhdeksi maailman kauneimmista rautatieasemista.',
+      lainaus: {
+        teksti: 'Yksi maailman kauneimmista rautatieasemista.',
+        lahde: 'BBC, 2013',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Helsinki Central railway station in Finland, 2021 July.jpg',
+          selite: 'Näkymä Asema-aukiolta kohti päärautatieasemaa ja sen '
+            + 'kellotornia.',
+          lahde: 'Anne Pietarinen, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kaisaniemen puisto': {
+      aika: '1812',
+      teksti: 'Kaisaniemi on Helsingin vanhin julkinen puisto — se sai '
+          + 'alkunsa jo vuonna 1812. Puisto on saanut nimensä '
+          + 'paikallisesta naisesta, Catharina eli "Kajsa" '
+          + 'Wahllundista. Vuonna 1829 osa alueesta annettiin Helsingin '
+          + 'yliopistolle puutarhaksi, ja vuonna 1889 sinne avattiin '
+          + 'ensimmäinen kasvihuone — Kaisaniemen kasvitieteellinen '
+          + 'puutarha kasvattaa siellä kasveja edelleen.'
+        + '\n\n'
+        + 'Puistosta löytyy myös Helsingin vanhin julkinen '
+          + 'muistomerkki sekä jalkapallo-, tennis- ja '
+          + 'koripallokenttiä. Puisto sijaitsee aivan päärautatieaseman '
+          + 'kupeessa, joten se on ollut vuosikymmenien ajan '
+          + 'helsinkiläisten suosima kohtauspaikka.'
+        + '\n\n'
+        + 'Puistossa on juhlittu isojakin asioita: vuonna 2019 '
+          + 'tuhannet ihmiset kokoontuivat sinne juhlimaan Suomen '
+          + 'jääkiekkomaajoukkueen MM-kultaa.',
+      kuvat: [
+        {
+          tiedosto: 'Kaisaniemenpuiston hiekkateiden risteys.jpg',
+          selite: 'Kaisaniemen puiston hiekkapolkuja ja kasvitieteellisen '
+            + 'puutarhan kasvihuone taustalla.',
+          lahde: 'Hagiksenfriidu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tuomiokirkko: {
+      aika: '1830–1852',
+      teksti: 'Senaatintorin valkoisen tuomiokirkon suunnitteli '
+          + 'saksalaissyntyinen arkkitehti Carl Ludvig Engel. '
+          + 'Rakennustyöt alkoivat vuonna 1830, mutta Engel kuoli jo '
+          + 'vuonna 1840 ennen kirkon valmistumista. Kirkko vihittiin '
+          + 'lopulta käyttöön 15. helmikuuta 1852. Aluksi sitä '
+          + 'kutsuttiin Nikolainkirkoksi Venäjän keisarin mukaan, ja '
+          + 'nykyisen nimensä se sai vasta Suomen itsenäistyttyä 1917.'
+        + '\n\n'
+        + 'Kirkon vihreä kupoli ja sitä ympäröivät neljä pienempää '
+          + 'kupolia näkyvät kauas merelle asti. Katolla seisoo 12 '
+          + 'sinkistä valettua apostolinpatsasta, jotka valmistettiin '
+          + 'Berliinissä 1840-luvulla.'
+        + '\n\n'
+        + 'Kirkkoon mahtuu istumaan 1300 ihmistä. Moni suomalainen '
+          + 'tunnistaa kirkon myös tutulta musiikkivideolta — se näkyy '
+          + 'Darude-artistin Sandstorm-kappaleen videon alussa.',
+      kuvat: [
+        {
+          tiedosto: 'Helsinki\'s Cathedral.jpg',
+          selite: 'Helsingin tuomiokirkko vihreine kupoleineen Senaatintorin '
+            + 'laidalla.',
+          lahde: 'Julie Tsarfati, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Uspenskin katedraali': {
+      aika: '1862–1868',
+      teksti: 'Katajanokan kalliolla kohoava Uspenskin katedraali on '
+          + 'Pohjois- ja Länsi-Euroopan suurin ortodoksinen kirkko. Sen '
+          + 'suunnitteli venäläinen arkkitehti Aleksei Gornostajev, '
+          + 'mutta hän ehti kuolla ennen rakennustöiden alkua — '
+          + 'rakentamista johti lopulta insinööri Ivan Varnek vuosina '
+          + '1862–1868.'
+        + '\n\n'
+        + 'Kirkko muurattiin lähes 700 000 tiilestä, jotka purettiin '
+          + 'Bomarsundin linnoituksesta Ahvenanmaalta ja kuljetettiin '
+          + 'proomuilla Helsinkiin asti. Katedraali vihittiin käyttöön '
+          + '25. lokakuuta 1868.'
+        + '\n\n'
+        + 'Kirkon sisällä kultaiset ikonit ja kuvakaiteen eli '
+          + 'ikonostaasin maalasi Pavel Shiltsov. Nykyään katedraalissa '
+          + 'käy noin puoli miljoonaa vierailijaa vuodessa ihailemassa '
+          + 'sen punatiilistä ulkoasua ja kultaisia kupoleita.',
+      kuvat: [
+        {
+          tiedosto: 'Front of Uspenski Cathedral In Helsinki.jpg',
+          selite: 'Uspenskin katedraalin punatiilinen julkisivu ja kultaiset '
+            + 'kupolit.',
+          lahde: 'John Samuel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Johanneksenkirkko: {
+      aika: '1888–1891',
+      teksti: 'Ullanlinnassa seisova Johanneksenkirkko on Suomen suurin '
+          + 'kivikirkko istumapaikkojen määrällä — sinne mahtuu peräti '
+          + '2600 ihmistä. Ruotsalainen arkkitehti Adolf Melander '
+          + 'suunnitteli sen goottilaista tyyliä mukaillen, ja kirkko '
+          + 'rakennettiin vuosina 1888–1891 kukkulalle, jolla ennen '
+          + 'poltettiin juhannuskokkoja.'
+        + '\n\n'
+        + 'Kirkon kaksoistornit kohoavat 74 metrin korkeuteen ja '
+          + 'näkyvät kauas ympäri kaupunkia. Sisällä alttaritaulun '
+          + '"Jumalallinen ilmestys" maalasi taidemaalari Eero '
+          + 'Järnefelt vuonna 1932.'
+        + '\n\n'
+        + 'Kirkon urkuja on kasvatettu vuosikymmenien varrella: '
+          + 'ensimmäiset urut tulivat Saksasta vuonna 1891, ja nykyisin '
+          + 'niissä on peräti 66 äänikertaa ja 4036 pilliä — yksi maan '
+          + 'suurimmista urkuinstrumenteista.',
+      kuvat: [
+        {
+          tiedosto: 'Johanneksen kirkko puisto 210309.jpg',
+          selite: 'Johanneksenkirkon kaksoistornit ja punatiilinen julkisivu '
+            + 'Ullanlinnassa.',
+          lahde: 'DreferComm, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Suomenlinna: {
+      aika: '1748',
+      teksti: 'Merilinnoitus Suomenlinna alkoi nousta kahdeksalle '
+          + 'saarelle Helsingin edustalla vuonna 1748, kun Ruotsin '
+          + 'kruunu halusi vahvan tukikohdan Venäjää vastaan. Työmaalla '
+          + 'riitti väkeä: parhaimmillaan vuonna 1755 linnoitusta '
+          + 'rakensi yhtä aikaa noin 7000 työntekijää. Alun perin '
+          + 'linnoitus tunnettiin nimellä Sveaborg.'
+        + '\n\n'
+        + 'Maineestaan huolimatta — sitä kutsuttiin "Pohjolan '
+          + 'Gibraltariksi" — linnoitus antautui venäläisille jo vuonna '
+          + '1808, vain parin kuukauden piirityksen jälkeen. Vuonna '
+          + '1855 Krimin sodan aikana Englannin ja Ranskan laivastot '
+          + 'pommittivat saaria voimakkaasti.'
+        + '\n\n'
+        + 'Linnoitus sai suomenkielisen nimensä Suomenlinna vasta '
+          + 'vuonna 1918, ja vuonna 1991 siitä tuli Unescon '
+          + 'maailmanperintökohde. Nykyään saarilla asuu ympäri vuoden '
+          + 'noin 900 ihmistä.',
+      kuvat: [
+        {
+          tiedosto: 'Suomenlinna from northeast.JPG',
+          selite: 'Näkymä Suomenlinnan saarille ja bastioneille koillisesta.',
+          lahde: 'MKFI, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
