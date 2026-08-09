@@ -1005,6 +1005,45 @@ const REVEAL_SUB = {
 };
 
 /*
+ * Nuoren herran huudahdus paljastushetkellä (omistajan tilaus
+ * 9.8.2026): lyhyt spontaani repliikki heti kun aarre kääntyy esiin,
+ * ENNEN varsinaista cliffhanger-tekstiä. Sävy kasvaa aarteen arvon
+ * mukana — pikkulöytö kuitataan, suurlöytö vie sanat. Arvotaan joka
+ * kerta, jotta toisto ei kulu.
+ */
+const HUUDAHDUKSET = {
+  300: [
+    'Hei — löytyi sittenkin!',
+    'Pieni, mutta aito!',
+    'Kelpaa tämäkin!',
+    'Taskuun ja eteenpäin!',
+  ],
+  600: [
+    'Mahtavaa!',
+    'Sepä vasta löytö!',
+    'Isoisä olisi hykerrellyt!',
+    'Tämä merkitään päiväkirjaan!',
+  ],
+  1000: [
+    'Uskomatonta!',
+    'Jes! Katsokaa nyt tätä!',
+    'Sydän hakkaa — mikä löytö!',
+    'Juuri tällaisesta isoisä kirjoitti!',
+  ],
+  star: [
+    'Se on totta... se on oikeasti totta!',
+    'Aarni oli oikeassa — se on olemassa!',
+    'Isoisä... minä löysin sen.',
+  ],
+};
+
+/** Arvo huudahdus laattatyypin mukaan; muille kuin aarteille ei mitään. */
+function arvoHuudahdus(type, token) {
+  const lista = type === 'star' ? HUUDAHDUKSET.star : HUUDAHDUKSET[token.value];
+  return lista ? lista[Math.floor(Math.random() * lista.length)] : null;
+}
+
+/*
  * Valittu linssi on laitteen katseluasetus, ei pelin tapahtuma.
  *
  * Siksi se ei kuulu pelitallennukseen vaan omaan avaimeensa kuten
@@ -11786,6 +11825,10 @@ export class UI {
     rays.classList.add('reveal-rays');
 
     const caption = html('div', 'reveal-caption');
+    // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
+    // kun aarre tulee näkyviin; cliffhanger-teksti vasta sen jälkeen.
+    const huudahdus = arvoHuudahdus(type, token);
+    if (huudahdus) caption.appendChild(html('span', 'reveal-huudahdus', huudahdus));
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
     /*

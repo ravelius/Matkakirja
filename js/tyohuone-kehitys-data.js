@@ -6,7 +6,9 @@
  * ja visa yhdistetty yhdeksi kohtaamiseksi jonka päättää OIKEA
  * kysymys vaihtoehtoineen; aarre ja henkilön cliffhanger-vihje
  * yhdistetty. Kohtaamisia ja aarteita lyhennetty vielä lauseella
- * (omistajan palaute 9.8. myöhäisilta). Saapumiset ennallaan
+ * (omistajan palaute 9.8. myöhäisilta), ja aarteita lyhennetty
+ * vielä kerran + nuoren herran mietintö kolmeen (Praha, Venetsia,
+ * Budapest). Saapumiset ennallaan
  * (omistaja: "Matkakirjan koetekstit ovat hyvät"). Vanhat versiot
  * git-historiassa. ÄLÄ generoi ääniä ennen omistajan hyväksyntää.
  */
@@ -49,11 +51,10 @@ export const KAARI_PAKETIT = {
           + '— portaat ullakolle purettiin, ettei kukaan pääsisi '
           + 'katsomaan.',
       },
-      aarre: 'Kätkön päällä oli kynttilänpätkä, sydän vielä lämmin. '
-        + 'Isoisän rivi: "Jos liekki paloi, kun tulit, en ollut '
-        + 'viimeinen etsijä." Tomáš sytyttää kynttilän uudelleen: '
-        + '"Kynttilöitä oli tilauksessa kaksi — toinen palaa jossain, '
-        + 'missä maa on lämmin."',
+      aarre: 'Kätkön päällä oli kynttilänpätkä, sydän yhä lämmin. Tomáš '
+        + 'sytytti sen uudelleen: "Kynttilöitä oli tilauksessa kaksi — '
+        + 'toinen palaa jossain, missä maa on lämmin." Jäin miettimään: '
+        + 'kuka vartioi sitä toista?',
     },
     {
       id: 'istanbul',
@@ -83,11 +84,10 @@ export const KAARI_PAKETIT = {
           + 'ylösalaisin käännettynä katse painuu maahan. Toinen pää '
           + 'makaa kyljellään samasta syystä.',
       },
-      aarre: 'Kätkö nousi vedestä köyden päässä, ja lyhdyn valo osui '
-        + 'kivikasvoihin. Isoisän rivi: "Kasvot vartioivat tätä, koska '
-        + 'pyysin kohteliaasti." Emine sanoo hiljaa: "Isoisoäitini '
-        + 'kirjoitti mittauskirjaan, kumpi kasvoista on vartija ja '
-        + 'kumpi vanki — joku on leikannut sen sivun irti."',
+      aarre: 'Kätkö nousi vedestä köyden päässä, ja valo osui '
+        + 'kivikasvoihin. Emine sanoi hiljaa: "Isoisoäitini kirjoitti '
+        + 'kirjaan, kumpi kasvoista on vartija ja kumpi vanki — joku on '
+        + 'leikannut sen sivun irti."',
     },
     {
       id: 'wien',
@@ -117,9 +117,9 @@ export const KAARI_PAKETIT = {
           + 'painava ja kaksi seuraavaa keveitä — siksi valssi keinuu.',
       },
       aarre: 'Kätkön päällä seisoi kolmas lyhty, lasi yhä lämmin. Anton '
-        + 'puhuu portaita kohti: "Veto tulee ovesta, jota ei ole avattu '
-        + 'minun aikanani — isoisäsi kirjoitti kirjaan vain: sinne ei '
-        + 'mennä alakautta."',
+        + 'puhui portaita kohti: "Veto tulee ovesta, jota ei minun '
+        + 'aikanani ole avattu — ja kirjassa lukee vain: sinne ei mennä '
+        + 'alakautta."',
     },
     {
       id: 'venetsia',
@@ -149,11 +149,10 @@ export const KAARI_PAKETIT = {
           + 'Naamiosta tuli myöhemmin karnevaalin tunnus.',
       },
       aarre: 'Kätkö nousi kanaalista, ja naamio jäi kellumaan kasvot '
-        + 'ylöspäin. Isoisän rivi: "Käännä vartija kasvot alaspäin — '
-        + 'niin seuraava etsijä tietää, että joku ehti ensin." Lucia '
-        + 'sulkee tilauskirjan: "Naamioita oli kaksi — viime keväänä '
-        + 'joku palautti toisen ja jätti vain lapun, jossa oli pelkkä '
-        + 'ilmanpaineen lukema."',
+        + 'ylöspäin. Lucia sulki tilauskirjan: "Joku palautti toisen '
+        + 'naamion viime keväänä — jätti vain lapun, jossa oli '
+        + 'ilmanpaineen lukema." Barometrilukema. Aivan kuin isoisän '
+        + 'kirjassa.',
     },
     {
       id: 'budapest',
@@ -184,10 +183,9 @@ export const KAARI_PAKETIT = {
           + 'linnanalaisen labyrintin seinät.',
       },
       aarre: 'Kätkö odotti lämpimän seinän takana, höyryn peitossa. '
-        + 'Isoisän rivi: "Pyyhi merkkini pois — meidän jälkemme saa '
-        + 'päättyä tähän." Portilla Márta sanoo: "Niin pyyhki '
-        + 'isoisoäitinikin, ja silti risti on aamulla aina seinässä — '
-        + 'liitu aina samaa valkoista."',
+        + 'Portilla Márta sanoi: "Isoisoäitinikin pyyhki merkin — silti '
+        + 'risti on aamulla aina seinässä, aina samaa valkoista '
+        + 'liitua." Katsoin taakseni vielä portilta. Käytävä oli tyhjä.',
     },
   ],
 };
