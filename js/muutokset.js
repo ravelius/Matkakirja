@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 483, teksti: 'Viisi kulttuurivisaa osoitti kadonneeseen juttuun' },
   { v: 482, teksti: 'Tromssa sai kohdekartan: salmi, silta ja kaksi rantaa' },
   { v: 481, teksti: 'Viisi viimeistä Euroopan kaupunkia sai lehtensä' },
   { v: 480, teksti: 'Kaupunkikarttojen vedet: saaret ja suihkulähteet' },

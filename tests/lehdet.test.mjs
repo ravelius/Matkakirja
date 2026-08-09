@@ -103,3 +103,33 @@ test('maalehden aihesivuilla on minitehtävä ja menovinkit on viimeisenä', () 
     }
   }
 });
+
+test('kulttuurivisan vastaus löytyy kaupunkilehden kansisivulta', async () => {
+  /*
+   * Visa näkyy lehden kansisivulla (2/4). Vaihe B siirsi juttuja
+   * kannelta aihesivuille ja maalehtiin, ja viisi visaa jäi kannelle
+   * ilman lähdejuttuaan — omistaja löysi ensimmäisen testipelissä
+   * ("Mitä evzonin puvun 400 laskosta esittävät?" sivulla, jolla ei
+   * puhuttu evzoneista). Siirto tehtiin, mutta riippuvuutta ei
+   * tarkistettu siirron jälkeen; tämä testi tarkistaa sen koneellisesti.
+   */
+  const { EUROPE_KULTTUURI } = await import('../js/packs/europe-kulttuuri.js');
+  const ytimet = (s) => s.toLowerCase()
+    .split(/[^a-zåäöáéíóúüñ0-9]+/)
+    .filter((w) => w.length >= 6)
+    .map((w) => w.slice(0, 7));
+
+  for (const [kaupunki, tiedot] of Object.entries(EUROPE_KULTTUURI)) {
+    const visa = tiedot.kysymys;
+    if (!visa) continue;
+    const sivut = KULTTUURI_KATEGORIAT[kaupunki];
+    const nostot = sivut
+      ? (sivut.find((s) => s.id === 'kaupunki') ?? sivut[0]).nostot ?? []
+      : tiedot.nostot ?? [];
+    const kansi = nostot.map((n) => `${n.otsikko ?? ''} ${n.teksti ?? ''}`).join(' ').toLowerCase();
+    const avain = [...new Set([...ytimet(visa.q), ...ytimet(visa.options[visa.correct])])];
+    assert.ok(avain.some((w) => kansi.includes(w)),
+      `${kaupunki}: kulttuurivisan aihetta ei käsitellä kansisivun jutuissa `
+      + `— "${visa.q}"`);
+  }
+});
