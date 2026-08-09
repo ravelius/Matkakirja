@@ -380,6 +380,26 @@ const KAUPUNGIT = {
     // osoittavat kolmeen muuhun suuntaan.
     rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
   },
+  tromssa: {
+    // Tromssan salmi keskellä: saarikaupunki lännessä, Tromsdalen ja
+    // Jäämerenkatedraali idässä, ja niiden välissä silta. Rajaus on
+    // valittu sillan ympärille, koska Tromssassa kuva on kahden
+    // rannan kuva — pelkkä saari jättäisi katedraalin ja köysiradan
+    // pois, ja pelkkä keskusta olisi kortteliruutu ilman merta.
+    //
+    // 3,0 × 2,3 km on työkalun ohjetta (5–8 km) pienempi, ja syy on
+    // sama kuin Dubaissa: kaupunki itse on tämän kokoinen. Tromssan
+    // keskusta mahtuu kilometrin matkalle Storgataa, ja laajempi
+    // rajaus toisi kuvaan vain Tromsøyan metsäselännettä.
+    //
+    // meri: true — Norjan rannikko on OSM:ssä pelkkää rantaviivaa
+    // eikä yhtään vesimonikulmiota, joten ilman lippua salmi jäisi
+    // paperin väriseksi ja saarikaupunki näyttäisi mantereelta.
+    // Tarkistettu vesitarkistimella (tools/tarkista-karttapisteet.mjs),
+    // ettei täyttö valu kummankaan rannan päälle.
+    rajat: { pohjoinen: 69.6575, etela: 69.6365, lansi: 18.937, ita: 19.013 },
+    meri: 'maa',
+  },
   tallinna: {
     // Kaksiosainen kuva: ylhäällä Suomenlahti ja satamaniemi
     // sormimaisine laitureineen, keskellä vanhankaupungin soikea

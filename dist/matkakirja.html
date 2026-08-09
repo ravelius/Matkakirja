@@ -55024,6 +55024,53 @@ const KAUPUNKIKARTAT = {
       { nimi: 'Privozin tori', lat: 46.4699, lon: 30.7368 },
     ],
   },
+  tromssa: {
+    polku: 'assets/kartat/tromssa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 69.6575, etela: 69.6365, lansi: 18.937, ita: 19.013 },
+    esittely: 'Tromssa on rakennettu saarelle. Tromsøya on noin '
+      + 'yhdeksän kilometriä pitkä ja kolme leveä, ja kaupungin '
+      + 'keskusta on sen itärannalla, kapean salmen varrella. Salmi '
+      + 'on Tromssan koko olemassaolon syy: se on syvä ja jäätyy '
+      + 'harvoin, koska Golfvirta tuo lämmintä vettä napapiirin '
+      + 'pohjoispuolelle asti. Siksi täältä pääsi merelle silloinkin, '
+      + 'kun Itämeri oli umpijäässä. Isoisän matkan aikaan 1870-luvulla '
+      + 'Tromssa oli noin viiden tuhannen asukkaan puukaupunki, josta '
+      + 'lähdettiin pohjoiseen: hylkeenpyytäjien ja jäämerenkalastajien '
+      + 'laivat purjehtivat täältä Huippuvuorille ja Novaja Zemljalle, '
+      + 'ja myöhemmin samasta satamasta lähtivät myös naparetkikunnat. '
+      + 'Kaupunkia sanottiin Pohjolan Pariisiksi, koska merimiehet '
+      + 'ihmettelivät, että näin kaukana pohjoisessa oli katulyhtyjä, '
+      + 'kauppoja ja soittokunta.\n\nKartalla on salmi keskellä ja kaksi '
+      + 'rantaa. Vasemmalla on saari ja sen keskusta, jossa kadut '
+      + 'kulkevat tiiviinä ruutuna rannan suuntaisesti — pisin niistä '
+      + 'on Storgata, kaupungin vanha pääkatu. Rannassa erottuvat '
+      + 'satamalaiturit sormina, ja niiden juurella on puinen '
+      + 'tuomiokirkko. Oikealla on manner, Tromsdalenin puoli, jonne '
+      + 'noustaan jyrkkää rinnettä; siellä sijaitsevat '
+      + 'Jäämerenkatedraali ja köysirata, joka vie vuorelle. Rantoja '
+      + 'yhdistää yksi kaari: Tromssan silta valmistui vuonna 1960, ja '
+      + 'sitä ennen salmen yli mentiin lautalla — aivan kuten Dubaissa. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään, kuten Dubaissa ja Odessassa.
+       *
+       * KOLMELLA KUUDESTA ON PAIKAN OMA WIKI, ja se on tarkistettu
+       * hakemalla eikä oletettu. fi.wikipediassa EI ole artikkelia
+       * Polaarimuseosta, Tromssan sillasta eikä Fjellheisenistä, joten
+       * ne ovat pelkkiä merkkejä. Polarian artikkeli on nimellä
+       * `Polaria (akvaario)`, koska pelkkä `Polaria` on
+       * täsmennyssivu — sitä ei saa linkittää.
+       */
+      { nimi: 'Polaarimuseo', lat: 69.6543, lon: 18.9631 },
+      { nimi: 'Tromssan silta', lat: 69.6516, lon: 18.9742 },
+      { nimi: 'Tromssan tuomiokirkko', lat: 69.6497, lon: 18.956, wiki: 'Tromssan tuomiokirkko' },
+      { nimi: 'Jäämerenkatedraali', lat: 69.6489, lon: 18.9976, wiki: 'Jäämerenkatedraali' },
+      { nimi: 'Polaria', lat: 69.6455, lon: 18.9515, wiki: 'Polaria (akvaario)' },
+      { nimi: 'Fjellheisenin köysirata', lat: 69.6395, lon: 18.9958 },
+    ],
+  },
   dubai: {
     polku: 'assets/kartat/dubai-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -133748,6 +133795,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 482, teksti: 'Tromssa sai kohdekartan: salmi, silta ja kaksi rantaa' },
   { v: 481, teksti: 'Viisi viimeistä Euroopan kaupunkia sai lehtensä' },
   { v: 480, teksti: 'Kaupunkikarttojen vedet: saaret ja suihkulähteet' },
   { v: 479, teksti: 'Engel sai oman jutun — nimi Helsingin teksteissä on linkki' },
@@ -134313,7 +134361,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.481';
+const APP_VERSION = '2026-08-09.482';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
