@@ -67,55 +67,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   krakova: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Lohikäärme puhaltaa yhä tulta',
-        tiedosto: 'Smok Wawelski, Kraków.jpg',
-        teksti: 'Wawelin kukkulan juurella on luola ja luolan edessä '
-          + 'pronssinen lohikäärme, joka puhaltaa oikeaa tulta muutaman '
-          + 'minuutin välein. Tarina kertoo suutarinoppipojasta, joka '
-          + 'voitti pedon tarjoamalla sille rikillä täytetyn lampaan — '
-          + 'lohikäärme joi järven tyhjäksi ja halkesi.',
-        selite: 'Bronisław Chromyn veistämä Smok Wawelski (1972) '
-          + 'Veiksel-joen rannassa lohikäärmeen luolan suulla. Tulen '
-          + 'saa nykyään puhallettua myös tekstiviestillä.',
-        lahde: 'Milena Bielecka-Sujak, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Wawel',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Torvisoitto, joka katkeaa kesken',
-        tiedosto: 'Hejnalista krakowski.jpg',
-        teksti: 'Marian kirkon tornista soitetaan joka tunti torvella '
-          + 'hejnał — ja se katkeaa aina kesken sävelen. Perimätiedon '
-          + 'mukaan nuoli osui torvensoittajaan hänen varoittaessaan '
-          + 'kaupunkia hyökkäyksestä. Katkos toistetaan uskollisesti '
-          + 'joka tunti, myös radiossa keskipäivän aikaan.',
-        selite: 'Torvensoittaja Marian kirkon tornissa. Soitto '
-          + 'toistetaan neljään ilmansuuntaan, ja tornissa päivystetään '
-          + 'ympäri vuorokauden.',
-        lahde: 'Jadwiga, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Hejnał mariacki',
-        musiikki: 'https://commons.wikimedia.org/wiki/File:Cracow_trumpet_signal.ogg',
-        musiikkiNimi: 'Kuuntele hejnał (Wikimedia Commons)',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kauppahalli keskellä toria',
-        tiedosto: 'Kraków Cloth Hall, 3 Main Market square, Old Town, Krakow, Poland.jpg',
-        teksti: 'Sukiennice eli kangashalli on seissyt torin keskellä '
-          + 'keskiajalta asti, ja siellä myydään yhä tavaraa. Krakova oli '
-          + 'Hansan ja idän karavaanireittien risteyskohta: tänne tuotiin '
-          + 'suolaa läheisestä Wieliczkan kaivoksesta ja vietiin kangasta, '
-          + 'lyijyä ja kuparia.',
-        selite: 'Sukiennice Rynek Głównyn keskellä. Nykyinen '
-          + 'renessanssiasu on 1500-luvulta; yläkerrassa on Puolan '
-          + '1800-luvun maalaustaiteen kokoelma.',
-        lahde: 'Igor123121, Wikimedia Commons (CC BY 4.0)',
-        wiki: 'Sukiennice',
-      },
-    ],
+    /*
+     * Krakova sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Miksi Krakovan Marian kirkon torvisoitto katkeaa aina kesken sävelen?',
       options: [
@@ -133,55 +90,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   sarajevo: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kahvi on aikayksikkö',
-        tiedosto: 'Baščaršija.jpg',
-        teksti: 'Baščaršijan basaari on 1400-luvulta, ja sen keskellä '
-          + 'seisoo Sebilj, puinen vesikioski. Bosnialainen kahvi '
-          + 'keitetään kuparisessa džezvassa ja tarjoillaan pienen '
-          + 'kuparitarjottimen kanssa: mukana tulee vesilasi ja pala '
-          + 'rahat-lokumia. Kahvia ei juoda janoon vaan seuraksi.',
-        selite: 'Sebiljin kioski Baščaršijan aukiolla. Nykyinen kioski '
-          + 'on vuodelta 1891, ja kyyhkyjen määrästä aukio on saanut '
-          + 'lempinimensä "kyyhkytori".',
-        lahde: 'Yukof, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Baščaršija',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Sevdalinka — kaupunkilaulu kaipuusta',
-        tiedosto: 'Stevan Kragujevic, Nada Mamula, Tv emisija Sjelo na vrelu Bosne, 1962.jpg',
-        teksti: 'Sevdalinka on Bosnian oma laulutyyli: hidas, koristeltu '
-          + 'ja aina kaipuusta. Nimi tulee turkin sanasta sevda, '
-          + 'rakkaudenkaipuu. Laulut ovat vanhoja kaupunkilauluja, ja ne '
-          + 'säilyivät suullisesti sukupolvelta toiselle ennen kuin '
-          + 'radio alkoi levittää niitä 1900-luvulla.',
-        selite: 'Nada Mamula (1927–2001) esiintymässä televisiossa '
-          + 'vuonna 1962. Hän oli sevdalinkan tunnetuimpia tulkitsijoita, '
-          + 'ja hänen levytyksensä ovat yhä mittapuu.',
-        lahde: 'Stevan Kragujević, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Sevdalinka',
-        musiikki: 'https://music.apple.com/fi/artist/nada-mamula/289134144',
-        musiikkiNimi: 'Nada Mamula Apple Musicissa',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Silta, jolta maailma muuttui',
-        tiedosto: 'Latin Bridge Sarajevo summer 2010.JPG',
-        teksti: 'Miljackan yli kulkevan Latinalaissillan kulmassa '
-          + 'ammuttiin kesäkuussa 1914 Itävalta-Unkarin kruununprinssi '
-          + 'Frans Ferdinand. Kuukautta myöhemmin Eurooppa oli sodassa. '
-          + 'Sillan vieressä on nykyään museo, jonka ikkunasta näkee '
-          + 'täsmälleen sen kadunkulman.',
-        selite: 'Latinalaissilta Sarajevossa. Paikalla on ollut silta '
-          + '1500-luvulta asti, ja nykyinen kiviholvi on 1790-luvulta — '
-          + 'se on seissyt paikallaan kaikkien vaiheiden läpi.',
-        lahde: 'BiHVolim, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Stari most',
-      },
-    ],
+    /*
+     * Sarajevo sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Mistä sana sevdalinka on peräisin?',
       options: [
@@ -287,58 +201,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   rooma: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kolikko olan yli',
-        tiedosto: 'Trevi Fountain - Roma.jpg',
-        teksti: 'Trevin lähteeseen heitetään kolikko oikealla kädellä '
-          + 'vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. '
-          + 'Lähteestä kerätään noin puolitoista miljoonaa euroa vuodessa, '
-          + 'ja rahat menevät hyväntekeväisyyteen — ruoka-apuun kaupungin '
-          + 'vähävaraisille.',
-        selite: 'Fontana di Trevi valmistui 1762. Keskellä on meren '
-          + 'jumala Oceanus simpukkavaunuissaan, ja vesi tulee yhä '
-          + 'antiikin akveduktia pitkin.',
-        lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Trevin suihkulähde',
-        // Kenttä-äänitys Rooman kadulta suihkulähteelle käveltäessä —
-        // ei Trevin vaan Pantheonin aukiolta, mutta sama ääni: askelia
-        // katukivillä ja veden solinaa.
-        aani: 'https://archive.org/download/aporee_15080_17587/WalkingtoPantheonFountainRome.mp3',
-        aaniLahde: '"Walking to Pantheon Fountain, Rome" — Rolf Yngve, radio aporee (public domain)',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Carbonarassa ei ole kermaa',
-        tiedosto: 'Pasta carbonara.jpg',
-        teksti: 'Roomalaisessa carbonarassa on vain neljä ainesta: '
-          + 'munankeltuainen, pecorino-juusto, pippuri ja guanciale eli '
-          + 'suolattu posken liha. Kermaa ei ole — sen lisääminen on '
-          + 'roomalaiselle sama kuin ketsuppi kalakeitossa. Ruoka on '
-          + 'yllättävän nuori: se keksittiin vasta toisen maailmansodan '
-          + 'jälkeen.',
-        selite: 'Carbonara-annos. Kastike syntyy, kun kuuma pasta '
-          + 'sekoitetaan keltuaisen ja juuston kanssa liedeltä pois '
-          + 'otettuna — jos pannu on liian kuuma, muna kypsyy munakkaaksi.',
-        lahde: 'Dandy1022, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Carbonara',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Vesi kulkee yhä',
-        tiedosto: 'Parco degli Acquedotti 02.jpg',
-        teksti: 'Roomaan rakennettiin yksitoista akveduktia, jotka '
-          + 'toivat vuorilta vettä yli sadan kilometrin päästä. Ne '
-          + 'toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain '
-          + 'kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua '
-          + 'Virgo, syöttää yhä Trevin lähdettä.',
-        selite: 'Akveduktipuisto kaupungin laidalla: Aqua Claudian kaaret '
-          + 'jatkuvat peltojen yli. Rakennettu vuosina 38–52 jKr.',
-        lahde: 'Saverio.G, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Rooman akveduktit',
-      },
-    ],
+    /*
+     * Rooma sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Miten Rooman akveduktit saivat veden liikkeelle?',
       options: [
@@ -548,58 +416,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   sofia: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Gaida — säkkipilli Balkanilla',
-        tiedosto: 'Kostadin Varimezov playing the gaida.jpg',
-        teksti: 'Gaida on vuohennahasta tehty säkkipilli, jota soitetaan '
-          + 'Bulgarian häissä ja tansseissa. Rodopeilta kotoisin oleva '
-          + 'iso kaba gaida soi matalasti ja käheästi. Bulgarialainen '
-          + 'kansanmusiikki tunnetaan oudoista tahtilajeista: yleisiä '
-          + 'ovat 7/8 ja 11/16.',
-        selite: 'Kostadin Varimezov, yksi Bulgarian tunnetuimmista '
-          + 'gaida-soittajista. Puhallusputki on suussa, sormet '
-          + 'melodiapillillä ja säkki kainalossa.',
-        lahde: 'Martha Forsyth, Wikimedia Commons (CC BY 4.0)',
-        wiki: 'Gaida',
-        musiikki: 'https://music.apple.com/fi/search?term=bulgarian%20folk%20gaida',
-        musiikkiNimi: 'Bulgarialaista kansanmusiikkia Apple Musicissa',
-        // Kenttä-äänitys Sofian keskustasta: laulua, gaidaa ja rumpua
-        // kadulla. Lisenssi varmistettu archive.orgin metatiedoista.
-        aani: 'https://archive.org/download/aporee_34245_39372/streetmusicianssofia.mp3',
-        aaniLahde: '"Sofia Center — street musicians: voice, gaida and drum" — dohfoh, radio aporee (public domain)',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Banitsassa on onnenviesti',
-        tiedosto: 'Banitsa in Sofia Bulgaria 20090404 001.JPG',
-        teksti: 'Banitsa on filotaikinasta ja juustosta kierretty '
-          + 'piirakka, jota syödään aamiaiseksi jogurttijuoman kanssa. '
-          + 'Uudenvuoden banitsan sisään kätketään paperilappuja, joihin '
-          + 'on kirjoitettu toivotuksia — se, minkä lapun saa, kertoo '
-          + 'tulevasta vuodesta.',
-        selite: 'Banitsa Sofiassa. Taikina kierretään kierteelle ja '
-          + 'paistetaan pellillä; täytteenä on sirene-juustoa ja munaa.',
-        lahde: 'Apostoloff, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Banitsa',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Ruusulaakson aamut',
-        tiedosto: 'Rose-picking in Bulgaria 1870ies.jpg',
-        teksti: 'Kazanlakin Ruusulaaksossa kasvatetaan damaskonruusua '
-          + 'hajuvesiöljyä varten. Bulgaria tuottaa siitä suuren osan '
-          + 'koko maailman tarpeesta. Kukat poimitaan käsin auringon '
-          + 'noustessa: päivän lämmössä tuoksuöljy haihtuu, joten '
-          + 'työ tehdään aamuviideltä.',
-        selite: 'Ruusunpoimintaa Bulgariassa 1870-luvulla — Felix '
-          + 'Kanitzin piirros isoisän matkan ajoilta. Työtapa on '
-          + 'sama vielä tänäänkin.',
-        lahde: 'Wikimedia Commons (PD)',
-        wiki: 'Ruusulaakso',
-      },
-    ],
+    /*
+     * Sofia sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Miksi Bulgarian ruusut poimitaan aamuviideltä?',
       options: [
@@ -964,64 +786,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   varsova: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Sydän palasi ilman omistajaansa',
-        tiedosto: 'Frédéric Chopin - Eugène Delacroix - Musée du Louvre Peintures RF 1717.jpg',
-        teksti: 'Fryderyk Chopin kasvoi Varsovassa ja lähti kaupungista '
-                  + '20-vuotiaana marraskuussa 1830. Hän ei nähnyt sitä enää '
-                  + 'koskaan. Kun hän kuoli Pariisissa 1849, hänen sisarensa '
-                  + 'Ludwika toi sydämen Varsovaan, ja se on yhä muurattuna '
-                  + 'Pyhän Ristin kirkon pilariin. Chopinin pianokilpailu on '
-                  + 'järjestetty kaupungissa viiden vuoden välein vuodesta '
-                  + '1927.',
-        selite: 'Eugène Delacroix’n muotokuva Chopinista vuodelta 1838. '
-                  + 'Maalaus oli alun perin kaksoismuotokuva, jossa oli myös '
-                  + 'kirjailija George Sand; kangas leikattiin myöhemmin '
-                  + 'kahtia.',
-        lahde: 'Wikimedia Commons (PD)',
-        wiki: 'Fryderyk Chopin',
-        musiikki: 'https://music.apple.com/fi/search?term=chopin',
-        musiikkiNimi: 'Fryderyk Chopin Apple Musicissa',
-        musiikkiNayte: 'https://archive.org/download/ChopinAsDurPolonaise1/Chopin%20As%20Dur%20Polonaise%201.mp3',
-        musiikkiNayteNimi: 'Chopin: Polonaise As-duuri — Ignaz Friedman, PD',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Maitobaari on yhä auki',
-        tiedosto: 'Bar Mleczny Prasowy w Warszawie.png',
-        teksti: 'Ensimmäisen maitobaarin avasi varsovalainen maidonmyyjä '
-                  + 'Stanisław Dłużewski vuonna 1896: halpaa ruokaa maidosta, '
-                  + 'munista ja jauhoista, ei lihaa eikä alkoholia. Sosialismin '
-                  + 'aikana niitä oli Puolassa tuhansia, nykyään noin 150. '
-                  + 'Valtio maksaa yhä osan raaka-aineista, joten lautasellinen '
-                  + 'pierogeja maksaa murto-osan ravintolahinnasta.',
-        selite: 'Bar Prasowy Varsovan keskustassa. Ikkunassa lukee vain '
-                  + '"bar mleczny", maitobaari. Ruokalista on seinällä tiskin '
-                  + 'takana, ja jonossa seisovat opiskelijat ja eläkeläiset '
-                  + 'rinnakkain.',
-        lahde: 'Artur Kuczmarski, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Bar mleczny',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kaupungin läpi virtaa villi joki',
-        tiedosto: 'POL Warszawa plaza 23.JPG',
-        teksti: 'Veiksel kulkee Varsovan halki patoamattomana, ja itäranta '
-                  + 'on jätetty lähes luonnontilaan: hiekkasärkkiä, pajukkoa ja '
-                  + 'majavia keskellä lähes kahden miljoonan asukkaan '
-                  + 'kaupunkia. Ranta kuuluu EU:n Natura 2000 '
-                  + '-suojeluverkostoon. Kesäisin kaupunkilaiset makaavat '
-                  + 'samoilla hiekoilla, joilla linnut pesivät, ja '
-                  + 'vastarannalla näkyy lasitorneja.',
-        selite: 'Varsovan kaupunkiranta Veikselin varrella sillan kupeessa. '
-                  + 'Vasemmalla hiekkaa ja pensaikkoa, oikealla silta, jota '
-                  + 'pitkin kulkee kaupungin liikenne.',
-        lahde: 'Tadeusz Rudzki, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Veiksel',
-      },
-    ],
+    /*
+     * Varsova sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Mitä Fryderyk Chopinista palasi Varsovaan hänen kuolemansa '
            + 'jälkeen?',
@@ -1039,68 +809,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   bukarest: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Soittajasuku maailmannäyttelyssä',
-        tiedosto: 'P. Nadar - Exposition universelle de Paris. Section roumaine - Bande de Dinicu.jpg',
-        teksti: 'Lăutar on romanialainen ammattisoittaja: hän soittaa '
-                  + 'häissä, kastajaisissa ja hautajaisissa, ja sävelmät '
-                  + 'opitaan korvakuulolta ilman nuotteja. Suurin osa '
-                  + 'lăutareista on ollut romaneja. Valakian ja Moldavian '
-                  + 'ruhtinaskunnissa aateliset, luostarit ja valtio pitivät '
-                  + 'romaneja orjinaan, ja moni lăutar soitti orjana; '
-                  + 'ruhtinaskunnat lakkauttivat orjuuden vuonna 1856. Romaneja '
-                  + 'asuu Romaniassa satoja tuhansia, ja he tekevät kaikkia '
-                  + 'ammatteja. Bukarestilainen Dinicun suku vei tämän musiikin '
-                  + 'Pariisin maailmannäyttelyyn vuonna 1889 — samaan '
-                  + 'näyttelyyn, jota varten Eiffel-torni rakennettiin.',
-        selite: 'Dinicun soittokunta Pariisin maailmannäyttelyssä 1889, '
-                  + 'Paul Nadarin kuvaamana. Eturivissä soitetaan naita eli '
-                  + 'panhuilua ja näppäiltävää cobzaa, takana viuluja ja '
-                  + 'kontrabassoa.',
-        lahde: 'Wikimedia Commons (PD)',
-        wiki: 'Panhuilu',
-        musiikki: 'https://music.apple.com/fi/search?term=lautari%20romania',
-        musiikkiNimi: 'Romanialaista lăutari-musiikkia Apple Musicissa',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Makkara, jolta loppui kuori',
-        tiedosto: 'Mititei la gratar.jpg',
-        teksti: 'Mici eli mititei, "pienet", ovat kuorettomia '
-                  + 'jauhelihamakkaroita, joissa on valkosipulia, timjamia ja '
-                  + 'ruokasoodaa — sooda tekee niistä kuohkeita. Tarinan mukaan '
-                  + 'ne syntyivät 1800-luvun Bukarestissa, kun eräältä '
-                  + 'kapakoitsijalta loppuivat makkarankuoret kesken illan ja '
-                  + 'hän paistoi massan sellaisenaan. Vappuna niitä grillataan '
-                  + 'koko maassa pihoilla ja puistoissa.',
-        selite: 'Micejä hiiligrillissä. Massa puristetaan sormenpaksuisiksi '
-                  + 'pötköiksi ilman kuorta ja käännellään hiilloksella '
-                  + 'muutaman minuutin ajan. Lisukkeeksi tulee sinappia ja '
-                  + 'leipää.',
-        lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Mititei',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Maailman painavin rakennus',
-        tiedosto: 'Avenida de la Unión, Bucarest, Rumanía, 2016-05-29, DD 57.jpg',
-        teksti: 'Parlamenttipalatsin rakentaminen alkoi vuonna 1984 Nicolae '
-                  + 'Ceaușescun määräyksestä. Lattiapinta-alaa on 365 000 '
-                  + 'neliömetriä ja painoa noin 4,1 miljoonaa tonnia — enemmän '
-                  + 'kuin missään muussa rakennuksessa maailmassa. Tieltä '
-                  + 'purettiin kokonainen vanha kaupunginosa, ja '
-                  + 'kymmenettuhannet asukkaat muuttivat muualle. Nyt talossa '
-                  + 'kokoontuu Romanian parlamentti.',
-        selite: 'Unirii-bulevardi johtaa suoraan Parlamenttipalatsin '
-                  + 'edustalle. Bulevardi rakennettiin samaan aikaan palatsin '
-                  + 'kanssa, ja se on runsaat kolme kilometriä pitkä ja lähes '
-                  + 'sata metriä leveä.',
-        lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Casa Poporului',
-      },
-    ],
+    /*
+     * Bukarest sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Minkä maailmanennätyksen Bukarestin Parlamenttipalatsi pitää?',
       options: [
@@ -1118,64 +832,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   kiova: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kobzari lauloi, ja sali vaikeni',
-        tiedosto: 'Вересай Остап з дружиною.jpg',
-        teksti: 'Kobzarit olivat sokeita kiertäviä laulajia, jotka '
-                  + 'esittivät dumia — pitkiä kertovia lauluja — banduran '
-                  + 'säestyksellä. Kuuluisin heistä, Ostap Veresai, kutsuttiin '
-                  + 'Kiovaan vuonna 1873 maantieteellisen seuran kokoukseen: '
-                  + 'kuulijoina oli 28 seuran jäsentä ja 60 kutsuvierasta. '
-                  + 'Seuraavana vuonna hän lauloi Kiovan arkeologisessa '
-                  + 'kongressissa, ja lontoolainen Athenaeum-lehti vertasi '
-                  + 'häntä antiikin Kreikan runonlaulajiin.',
-        selite: 'Ostap Veresai vaimonsa kanssa vuonna 1873. Bandura on '
-                  + 'polvella ja kävelykeppi nojaa seinään — kobzarit kulkivat '
-                  + 'kylästä kylään oppaan kanssa.',
-        lahde: 'Wikimedia Commons (PD)',
-        wiki: 'Bandura',
-        musiikki: 'https://music.apple.com/fi/search?term=bandura%20kobzar',
-        musiikkiNimi: 'Bandura-musiikkia Apple Musicissa',
-        musiikkiNayte: 'https://archive.org/download/jamendo-369605/01-1720225-Nataliya%20Bermas-Ukrainian%20Melody%20Ivanko.mp3',
-        musiikkiNayteNimi: 'Ukrainalainen sävelmä "Ivanko" — Nataliya Bermas, CC BY-NC',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Borssi sai kiireellisen suojelun',
-        tiedosto: 'Ukrainian borscht.jpg',
-        teksti: 'Borssi on punajuuresta keitetty hapan keitto, jonka päälle '
-                  + 'tulee lusikallinen smetanaa ja viereen valkosipulisämpylä. '
-                  + 'Unesco otti ukrainalaisen borssinkeiton kulttuurin '
-                  + 'kiireellistä suojelua vaativien luetteloon heinäkuussa '
-                  + '2022. Samalla se muistutti, että borssia keitetään monessa '
-                  + 'maassa eikä merkintä tee siitä kenenkään yksinomaista '
-                  + 'omaisuutta.',
-        selite: 'Ukrainalainen borssi lautasella. Punajuuri antaa värin, '
-                  + 'smetana kelluu keskellä ja päälle on ripoteltu tilliä ja '
-                  + 'persiljaa.',
-        lahde: 'Nillerdk, Wikimedia Commons (CC BY 3.0)',
-        wiki: 'Borssi',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Sata metriä alas ja takaisin',
-        tiedosto: 'Escalators at the deepest metro station of the world Arsenalna (105.5m) (8601894844).jpg',
-        teksti: 'Kiovan Arsenalnan metroasema on 105,5 metriä maanpinnan '
-                  + 'alapuolella. Se oli maailman syvin asema vuoteen 2022 '
-                  + 'asti, jolloin Kiinan Chongqingiin avattiin 116 metrin '
-                  + 'syvyyteen ulottuva Hongyancunin asema. Liukuportaita on '
-                  + 'kaksi peräkkäin, 55,8 ja 46,6 metriä, ja niiden välissä on '
-                  + 'oma väliaula. Syvyys johtuu Dneprin jyrkästä '
-                  + 'rantatörmästä, jonka sisään asema on kaivettu.',
-        selite: 'Arsenalnan liukuportaat ylhäältä kuvattuna. Matka pinnalta '
-                  + 'laiturille kestää useita minuutteja, ja tunnelin pää '
-                  + 'katoaa näkyvistä.',
-        lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
-        wiki: 'Kiovan metro',
-      },
-    ],
+    /*
+     * Kiova sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Miksi Kiovan Arsenalnan metroasema kaivettiin yli sadan metrin '
            + 'syvyyteen?',
@@ -1192,62 +854,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   odessa: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Odessan ääni',
-        tiedosto: 'Leonid Utesov 1934.jpg',
-        teksti: 'Leonid Utjosov syntyi Odessassa 1895 nimellä Lazar '
-                  + 'Vaisbein, aloitti uransa sirkusakrobaattina ja perusti '
-                  + '1920-luvulla yhden Neuvostoliiton ensimmäisistä '
-                  + 'jazzorkestereista. Hänen ohjelmistossaan olivat '
-                  + 'satamakortteleiden laulut ja odessalainen sanailu. Vuonna '
-                  + '1965 hänestä tuli ensimmäinen kevyen musiikin laulaja, '
-                  + 'joka sai Neuvostoliiton kansantaiteilijan arvon.',
-        selite: 'Leonid Utjosov vuonna 1934, jolloin hänen '
-                  + 'Thea-Jazz-orkesterinsa oli maan tunnetuin. Laulun ja '
-                  + 'vitsin väliä hän ei erotellut lainkaan.',
-        lahde: 'Wikimedia Commons (PD)',
-        wiki: 'Jazz',
-        musiikki: 'https://music.apple.com/fi/search?term=leonid%20utesov',
-        musiikkiNimi: 'Leonid Utjosov Apple Musicissa',
-        musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Der_Terk_in_America.mp3',
-        musiikkiNayteNimi: 'Klezmeria: Der Terk in America — PD',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Privozilla hinta on keskustelu',
-        tiedosto: 'At the Privoz Market in Odessa.jpg',
-        teksti: 'Privoz alkoi vuonna 1827 hevoskärryjen takalaidoilta ja on '
-                  + 'yhä Odessan suurin ruokatori. Kauppa käydään ääneen: myyjä '
-                  + 'sanoo hinnan, ostaja nauraa, ja lopullinen summa on jotain '
-                  + 'siltä väliltä. Tiskeillä on suolattua silliä, mustanmeren '
-                  + 'kalaa ja forshmakia — sillitahnaa, joka tuli kaupungin '
-                  + 'juutalaisesta keittiöstä.',
-        selite: 'Privozin valmisruokatiski: säilöttyjä punajuuria, '
-                  + 'merilevää, sieniä ja täytettyjä paprikoita rasioissa, '
-                  + 'kauhat valmiina rivissä.',
-        lahde: 'jmv, Wikimedia Commons (CC BY 2.0)',
-        wiki: 'Odessa',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kaupunki seisoo oman louhoksensa päällä',
-        tiedosto: 'Odessa Catacombs 01.jpg',
-        teksti: 'Odessan talot on rakennettu simpukkakalkkikivestä, jota '
-                  + 'louhittiin suoraan kaupungin alta. Käytäviä kertyi '
-                  + 'arviolta 2 500 kilometriä — enemmän kuin minkään muun '
-                  + 'kaupungin alle maailmassa — ja syvimmillään ne ulottuvat '
-                  + '60 metriä merenpinnan alapuolelle. Louhoksia on käytävistä '
-                  + '95 prosenttia, eikä koko verkostoa ole koskaan '
-                  + 'kartoitettu.',
-        selite: 'Katakombien käytävä. Seinissä näkyvät sahanjäljet: '
-                  + 'kalkkikivi leikattiin suorakulmaisiksi lohkoiksi ja '
-                  + 'nostettiin ylös talojen seiniksi.',
-        lahde: 'Vi Ko, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Katakombi',
-      },
-    ],
+    /*
+     * Odessa sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Miten Odessan alle syntyi noin 2 500 kilometriä käytäviä?',
       options: [
@@ -1264,63 +876,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   moskova: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Bolshoi tarkoittaa suurta',
-        tiedosto: 'Bolshoi ballet troupe.jpeg',
-        teksti: 'Bolshoi-teatterin juuret ulottuvat vuoteen 1776, ja sen '
-                  + 'balettiryhmässä tanssii yli 200 tanssijaa — enemmän kuin '
-                  + 'missään muussa maailman balettiryhmässä. Nykyinen talo '
-                  + 'avattiin uudelleen lokakuussa 2011 kuusi vuotta kestäneen '
-                  + 'korjauksen jälkeen, jossa palautettiin salin alkuperäinen '
-                  + 'akustiikka. Teatterin julkisivu on painettu Venäjän sadan '
-                  + 'ruplan seteliin.',
-        selite: 'Bolshoin koko seurue lavalla. Taustakankaaseen on maalattu '
-                  + 'teatterin oma julkisivu pylväineen, ja edessä seisovat '
-                  + 'balettitanssijat mustissa tutuissa.',
-        lahde: 'Kremlin.ru, Wikimedia Commons (CC BY 4.0)',
-        wiki: 'Bolshoi-teatteri',
-        musiikki: 'https://music.apple.com/fi/search?term=bolshoi%20ballet',
-        musiikkiNimi: 'Bolshoi-baletin musiikkia Apple Musicissa',
-        musiikkiNayte: 'https://archive.org/download/TchaikovskyTheNutcrackerSuite/Tchaikovsky_nutcrackerSuitePartTwo.mp3',
-        musiikkiNayteNimi: 'Tšaikovski: Pähkinänsärkijä — CC BY',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Laskiaisviikolla syödään aurinkoja',
-        tiedosto: 'Tea party with pancakes and a samovar.jpg',
-        teksti: 'Maslenitsa on viikon mittainen juhla ennen ortodoksisen '
-                  + 'kirkon suurta paastoa, ja sen ruoka on blini: ohut lettu, '
-                  + 'joka esittää aurinkoa. Täytteenä on smetanaa, hilloa, '
-                  + 'suolakalaa tai kaviaaria, ja teevesi keitetään '
-                  + 'samovaarissa. Viikko päättyy sunnuntaihin, jolloin on '
-                  + 'tapana pyytää anteeksi kaikilta, joita on vuoden mittaan '
-                  + 'loukannut.',
-        selite: 'Laskiaispöytä lumihangessa. Samovaari höyryää keskellä, '
-                  + 'koreissa on blinejä ja piirakoita, ja seurue seisoo ulkona '
-                  + 'takit päällä.',
-        lahde: 'Avsolov, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Maslenitsa',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Maanalainen palatsi',
-        tiedosto: 'Vertical panorama of the Mayakovskaya Metro Station.jpg',
-        teksti: 'Majakovskajan metroasema avattiin syyskuussa 1938 ja on 33 '
-                  + 'metriä syvällä. Katon soikeissa kuopissa on 34 mosaiikkia, '
-                  + 'joiden sarjan nimi on "Vuorokausi neuvostotaivaalla", ja '
-                  + 'pylväät on päällystetty ruostumattomalla teräksellä ja '
-                  + 'vaaleanpunaisella rodoniitilla. Aseman suunnittelija '
-                  + 'Aleksei Dushkin sai New Yorkin maailmannäyttelyn '
-                  + 'pääpalkinnon 1939.',
-        selite: 'Majakovskajan laituri alhaalta kuvattuna. Kattoon on '
-                  + 'upotettu soikeita kuoppia, joiden pohjassa on mosaiikki ja '
-                  + 'reunalla rengas lamppuja.',
-        lahde: 'Andrey Kryuchenko, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Moskovan metro',
-      },
-    ],
+    /*
+     * Moskova sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Mitä Majakovskajan metroaseman katon 34 mosaiikkia esittävät?',
       options: [
@@ -1337,61 +898,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   pietari: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Sinfonia piiritetyssä kaupungissa',
-        tiedosto: 'Fireman shostakovich.jpg',
-        teksti: 'Dmitri Šostakovitš aloitti seitsemännen sinfoniansa '
-                  + 'Leningradissa 1941, kun kaupunki oli saarrettu. Teos '
-                  + 'esitettiin siellä 9. elokuuta 1942. Kaupungin '
-                  + 'radio-orkesterista oli jäljellä vain 15 soittajaa, joten '
-                  + 'muita haettiin rintamalta. Esitys kuului kaiuttimista '
-                  + 'kaduilla ja kaupungin ulkopuolelle asti. Sinfonia kestää '
-                  + 'noin 80 minuuttia.',
-        selite: 'Šostakovitš palokunnan varusteissa. Hän oli sodan alussa '
-                  + 'Leningradin konservatorion palovartiossa, ja kuva kiersi '
-                  + 'maailman lehdissä 1942.',
-        lahde: 'Wikimedia Commons (PD)',
-        wiki: 'Dmitri Šostakovitš',
-        musiikki: 'https://music.apple.com/fi/search?term=shostakovich%20symphony%207',
-        musiikkiNimi: 'Šostakovitšin 7. sinfonia Apple Musicissa',
-        musiikkiNayte: 'https://archive.org/download/ShostakovichSymphonyNo.5-Stokowski/02.Ii.Allegretto.mp3',
-        musiikkiNayteNimi: 'Šostakovitš: 5. sinfonia — Leopold Stokowski, CC BY-NC-SA',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kevät tuoksuu kurkulta',
-        tiedosto: 'Homemaid fried smelt Saint Petersburg Russia.jpg',
-        teksti: 'Kuore nousee keväällä Nevaan kutemaan, ja tuoreena se '
-                  + 'tuoksuu tuoreelta kurkulta — sen tunnistaa torilla nenällä '
-                  + 'ennen kuin näkee. Kala pyöritetään jauhoissa ja paistetaan '
-                  + 'kokonaisena. Pietarissa kevään katsotaan alkavan siitä, '
-                  + 'kun kuore ilmestyy myyntiin, ja kaupungissa on 2000-luvun '
-                  + 'alusta järjestetty sille oma juhla.',
-        selite: 'Paistettuja kuoreita lautasella Pietarissa. Kalat ovat '
-                  + 'kämmenen mittaisia ja ne syödään kokonaisina, päät ja '
-                  + 'pyrstöt mukaan lukien.',
-        lahde: 'Markovka, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Kuore',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Museon virkakissat',
-        tiedosto: 'Hermitage cat1.JPG',
-        teksti: 'Talvipalatsin kellareissa asuu kissoja, joiden työ on '
-                  + 'pitää hiiret poissa taidekokoelmien kimpusta. Keisarinna '
-                  + 'Elisabet määräsi vuonna 1745 tuomaan palatsiin kissoja '
-                  + 'Kazanista, jonka hiirenpyytäjiä pidettiin maan parhaina. '
-                  + 'Nykyään kissoja on noin 60, niillä on kolme hoitajaa, ja '
-                  + 'museossa on lehdistösihteeri pelkästään kissoja varten.',
-        selite: 'Eremitaašin kissa istumassa museon graniittiportaalla. '
-                  + 'Kissat asuvat kellarikerroksessa mutta käyvät kesäisin '
-                  + 'ulkona rantakadulla.',
-        lahde: 'Petrov Victor, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Eremitaaši',
-      },
-    ],
+    /*
+     * Pietari sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Miksi Eremitaašin kellareissa asuu kissoja?',
       options: [
@@ -1408,60 +920,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   tallinna: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Laulukaari täyttyy viiden vuoden välein',
-        tiedosto: 'Üldlaulupidu 2014 - 26.JPG',
-        teksti: 'Viron laulujuhlia on pidetty vuodesta 1869, ja laulukaaren '
-                  + 'lavalle mahtuu noin 15 000 laulajaa ja kentälle jopa 100 '
-                  + '000 kuulijaa. Syyskuussa 1988 samalle kentälle kokoontui '
-                  + 'arviolta 300 000 ihmistä laulamaan lauluja, joita ei '
-                  + 'silloin saanut laulaa julkisesti. Siitä tuli nimi laulava '
-                  + 'vallankumous.',
-        selite: 'XXVI laulujuhlat kesällä 2014. Yhteiskuoro seisoo '
-                  + 'laulukaaren alla ja yleisö kentällä. Kaari valmistui 1960, '
-                  + 'ja sen kaareva katto heijastaa äänen alas väkijoukkoon.',
-        lahde: 'Ivo Kruusamägi, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Tallinnan laulujuhlat',
-        musiikki: 'https://music.apple.com/fi/search?term=estonian%20choir',
-        musiikkiNimi: 'Virolaista kuorolaulua Apple Musicissa',
-        musiikkiNayte: 'https://archive.org/download/aporee_19813_23018/20130704Estland07Tartu07MannerchorimParkgegenuberLossi3Donnerstag1707Uhr.mp3',
-        musiikkiNayteNimi: 'Virolainen mieskuoro Tartossa — Fritz Schlüter, CC BY',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kamaa ei keitetä ollenkaan',
-        tiedosto: 'Kama.jpg',
-        teksti: 'Kamajauho on sekoitus paahdettua ohraa, ruista, kauraa ja '
-                  + 'hernettä. Sitä ei kypsennetä lainkaan: jauho vatkataan '
-                  + 'piimään, päälle pannaan marjoja, ja aamiainen on valmis '
-                  + 'minuutissa. Paahdettu jauho säilyi ennen kuukausia '
-                  + 'pilaantumatta, joten se oli pellolle ja merimatkalle '
-                  + 'sopiva eväs.',
-        selite: 'Kamajauhoa piimäkulhossa ja takana puolen kilon kamapussi. '
-                  + 'Jauhe on hienoa ja hiekanväristä, ja se sekoitetaan '
-                  + 'lusikalla, kunnes seos on tasaista.',
-        lahde: 'Mmh, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Kama',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Valtio mahtuu muovikorttiin',
-        tiedosto: 'E-Residency card.jpg',
-        teksti: 'Viro oli vuonna 2005 maailman ensimmäinen maa, jossa sai '
-                  + 'äänestää vaaleissa internetissä. Äänestäjä tunnistautuu '
-                  + 'sirullisella henkilökortilla. Vuoden 2023 '
-                  + 'parlamenttivaaleissa yli puolet äänistä annettiin '
-                  + 'verkossa, ja samalla kortilla haetaan resepti, '
-                  + 'allekirjoitetaan sopimus ja perustetaan yritys.',
-        selite: 'Viron e-residentin henkilökortti. Sirulle tallennettu '
-                  + 'varmenne käy allekirjoituksesta, ja ulkomaalainenkin voi '
-                  + 'hakea kortin ja perustaa sillä virolaisen yrityksen.',
-        lahde: 'Masayuki (Yuki) Kawagishi, Wikimedia Commons (CC BY 2.0)',
-        wiki: 'Sähköinen äänestys',
-      },
-    ],
+    /*
+     * Tallinna sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Mikä maa antoi ensimmäisenä äänestää vaaleissa internetissä?',
       options: [
@@ -1636,63 +1100,12 @@ export const EUROPE_KULTTUURI = {
   },
 
   helsinki: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Finlandia soitettiin väärällä nimellä',
-        tiedosto: 'Jean-Sibelius-at-the-piano.jpg',
-        teksti: 'Jean Sibelius sävelsi Finlandian vuonna 1899, kun Venäjän '
-                  + 'hallinto kiristi otettaan Suomen itsehallinnosta. Kappale '
-                  + 'kiihotti kuulijoita niin, että sitä esitettiin varmuuden '
-                  + 'vuoksi vaihtuvilla nimillä — yksi niistä oli pelkkä '
-                  + '"Impromptu". Sibelius sävelsi kaikkiaan seitsemän '
-                  + 'sinfoniaa, mutta Finlandia on hänen tunnetuin teoksensa, '
-                  + 'ja se kestää vain noin kahdeksan minuuttia.',
-        selite: 'Jean Sibelius soittamassa flyygeliä kotonaan Ainolassa '
-                  + 'Järvenpäässä. Talo valmistui 1904, ja säveltäjä asui '
-                  + 'siellä yli viisikymmentä vuotta kuolemaansa 1957 asti.',
-        lahde: 'Wikimedia Commons (PD)',
-        wiki: 'Jean Sibelius',
-        musiikki: 'https://music.apple.com/fi/search?term=sibelius%20finlandia',
-        musiikkiNimi: 'Sibeliuksen Finlandia Apple Musicissa',
-        musiikkiNayte: 'https://archive.org/download/SIBELIUSFinlandia-NEWTRANSFER/Sibelius-FinlandiaOp.26.mp3',
-        musiikkiNayteNimi: 'Sibelius: Finlandia — Artur Rodzinski, CC BY-NC-SA',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Silakkamarkkinat vuodesta 1743',
-        tiedosto: 'Kauppatori, syys- eli silakkamarkkinat - G30676 - hkm.HKMS000005-km0000pheu.jpg',
-        teksti: 'Joka lokakuu Kauppatorille purjehtii kalastajia myymään '
-                  + 'suolattua ja maustettua silakkaa suoraan veneen kannelta. '
-                  + 'Markkinat on pidetty vuodesta 1743, ja ne ovat Helsingin '
-                  + 'vanhin yhtäjaksoisesti järjestetty tapahtuma. Mukana '
-                  + 'myydään myös tummaa saaristolaisleipää, ja viikon '
-                  + 'päätteeksi valitaan vuoden paras silakkatuote.',
-        selite: 'Syys- eli silakkamarkkinat Kauppatorilla 1890-luvulla. '
-                  + 'Silakan lisäksi kojuissa myytiin villasukkia ja '
-                  + 'kangaspakkoja — markkinat olivat saariston ja kaupungin '
-                  + 'vuosittainen kohtaaminen.',
-        lahde: 'Unknown author, Wikimedia Commons (CC BY 4.0)',
-        wiki: 'Silakkamarkkinat',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kolme miljoonaa saunaa',
-        tiedosto: 'Kotiharjun yleinen sauna (Kotiharju public sauna in Helsinki) Helsingin Torkkelinmäellä Kalliossa 01.jpg',
-        teksti: 'Suomessa on noin kolme miljoonaa saunaa ja 5,6 miljoonaa '
-                  + 'asukasta — sauna kuuluu kerrostaloasuntoonkin. Unesco '
-                  + 'lisäsi suomalaisen saunomisen ihmiskunnan aineettoman '
-                  + 'kulttuuriperinnön luetteloon vuonna 2020. Yleisessä '
-                  + 'saunassa vieraat istuvat vieretysten tuntemattomien '
-                  + 'kanssa, ja löylyn jälkeen mennään kadulle jäähtymään pyyhe '
-                  + 'päällä.',
-        selite: 'Kotiharjun sauna Torkkelinmäellä Kalliossa. Se avattiin '
-                  + '1928 ja on Helsingin viimeinen alkuperäisessä käytössä '
-                  + 'säilynyt puulämmitteinen yleinen sauna.',
-        lahde: 'Paasikivi, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Kotiharjun sauna',
-      },
-    ],
+    /*
+     * Helsinki sai kategoriat (kulttuuri-kategoriat.js), jotka
+     * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
+     * siirrettiin lehden sivuille. Tänne jää vain visa
+     * (docs/tutki-aiheet.md).
+     */
     kysymys: {
       q: 'Miksi Sibeliuksen Finlandiaa esitettiin aikoinaan muilla nimillä, '
            + 'kuten "Impromptu"?',
