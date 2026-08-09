@@ -49546,6 +49546,178 @@ const KAUPUNKIKARTAT = {
       { nimi: 'Matkustajasatama', lat: 59.4448, lon: 24.7618, wiki: 'Tallinnan satama' },
     ],
   },
+  sofia: {
+    polku: 'assets/kartat/sofia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 42.705, etela: 42.681, lansi: 23.312, ita: 23.345 },
+    esittely: 'Sofia on tasaisessa laaksossa noin 550 metrin '
+      + 'korkeudessa. Etelässä kohoaa Vitosha-vuori ja pohjoisessa '
+      + 'Balkanvuoret, ja niiden välinen sola on ollut kulkureitti '
+      + 'Keski-Euroopasta Istanbuliin. Kaupunki syntyi silti veden '
+      + 'takia: maan alla on 49 kivennäis- ja lämpölähdettä, ja '
+      + 'roomalaiset rakensivat niiden ympärille kaupungin nimeltä '
+      + 'Serdica. Keskustan hanoista tulee yhä lämmintä lähdevettä. '
+      + 'Isoa jokea täällä ei ole, vain kaksi pientä: Vladajska ja '
+      + 'Perlovska.\n\nKartalla sen näkee heti: leveät bulevardit '
+      + 'lähtevät keskustasta säteinä joka suuntaan kuin pyörän puolat, '
+      + 'eikä yksikään joki katkaise niitä. Keskeltä oikealta erottuu '
+      + 'soikea aukio, ja sen keskellä seisoo Aleksanteri Nevskin '
+      + 'katedraali. Alaoikealla kulkee vinosti vaalea nauha: se on '
+      + 'Perlovska, joka on kaivettu aivan suoraksi. Nauhan takana '
+      + 'levittäytyy Borisovan puutarha polkuineen ja järvineen. '
+      + 'Alavasemmalla on iso aukea, jonka reunassa kohoaa '
+      + 'Kansalliskulttuuripalatsi. Vanha keskusta on ylhäällä '
+      + 'vasemmalla, mutta se ei erotu: siellä kadut vain tihenevät. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään.
+       *
+       * Nimi on Sofian katedraali eikä Nevskin katedraali, koska
+       * jälkimmäinen on jo Tallinnassa. Wiki on pakko antaa
+       * sulkumuodossa: pelkkä Aleksanteri Nevskin katedraali on
+       * fi.wikipediassa täsmennyssivu, joka luettelee kuusi kirkkoa.
+       *
+       * Neljältä kohteelta puuttuu wiki, koska fi.wikipedian
+       * Sofia-kattavuus on ohut: mineraalikylpylästä, rotundasta,
+       * Borisovan puutarhasta eikä kulttuuripalatsista ole artikkelia.
+       * Banja Bashin moskeija, synagoga ja Serdican rauniot jäivät
+       * listalta pois kahdesta syystä: niistäkään ei ole artikkelia, ja
+       * ne ovat 3–6 prosenttiyksikön päässä kylpylästä eli numerot
+       * menisivät päällekkäin.
+       */
+      { nimi: 'Mineraalikylpylä', lat: 42.69923, lon: 23.3238 },
+      { nimi: 'Pyhän Yrjön rotunda', lat: 42.69689, lon: 23.32288 },
+      {
+        nimi: 'Sofian katedraali',
+        lat: 42.69581,
+        lon: 23.33279,
+        wiki: 'Aleksanteri Nevskin katedraali (Sofia)',
+      },
+      { nimi: 'Sofian yliopisto', lat: 42.69354, lon: 23.33528, wiki: 'Sofian yliopisto' },
+      { nimi: 'Borisovan puutarha', lat: 42.6893, lon: 23.3372 },
+      { nimi: 'Kansalliskulttuuripalatsi', lat: 42.68476, lon: 23.31894 },
+    ],
+  },
+  bukarest: {
+    polku: 'assets/kartat/bukarest-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 44.4445, etela: 44.4235, lansi: 26.08, ita: 26.109 },
+    kainalot: [
+      { rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
+        x: 3, y: 9, leveys: 26, korkeus: 24.86 },
+    ],
+    esittely: 'Bukarest on keskellä Valakian tasankoa, Karpaattien ja '
+      + 'Tonavan välissä. Tonavalle on täältä noin 60 kilometriä '
+      + 'etelään. Kaupunki kasvoi Dâmbovița-joen varteen: joki toi '
+      + 'veden, ja ympärillä oli tammimetsää ja soita, joiden suojaan '
+      + 'oli helppo kadota. Ensimmäisen kerran Bukarest mainitaan '
+      + 'asiakirjassa vuonna 1459, ja sen antoi ruhtinas Vlad III. '
+      + 'Dâmbovița on 286 kilometriä pitkä ja laskee '
+      + 'Argeș-jokeen.\n\nKartan halki kulkee vaalea, hämmästyttävän '
+      + 'suora nauha. Se on Dâmbovița, joka kaivettiin 1880-luvulla '
+      + 'suoraksi kanavaksi, jottei se enää tulvisi. Ylhäällä '
+      + 'vasemmalla on iso vihreä laikku ja sen keskellä mutkitteleva '
+      + 'järvi: Cișmigiun puutarha. Oikealla erottuu sokkelo kapeita '
+      + 'kujia — se on vanhakaupunki, ainoa osa Bukarestia, jossa kadut '
+      + 'eivät ole suoria. Alhaalla vasemmalla ammottaa outo tyhjä '
+      + 'alue: siellä seisoo Parlamenttipalatsi, jonka tieltä purettiin '
+      + 'kokonainen kaupunginosa. Vasemmassa ylänurkassa on oma pieni '
+      + 'kartta kilometrin päästä pohjoisesta, ja sen tähtimäisessä '
+      + 'risteyksessä seisoo Antipan museo. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään: ateneumilta vanhaankaupunkiin
+       * ja siitä lounaaseen Parlamenttipalatsille. Antipan museo on
+       * viimeisenä, koska se on kainalossa eikä pääkuvassa.
+       *
+       * Cișmigiun koordinaatti on MITATTU KUVASTA eikä haettu
+       * hakukoneesta: Nominatim palauttaa puiston osoitepisteen
+       * kaakkoiskulman kadulta, ja se osuisi puiston ulkopuolelle.
+       *
+       * Viideltä puuttuu wiki. ÄLÄ LINKITÄ sanaa Ateneum: se on ohjaus
+       * täsmennyssivulle Athenaion, joka kertoo antiikin
+       * Athene-temppeleistä. Älä myöskään linkitä muotoa Dâmbovița —
+       * sekin on täsmennyssivu, jokiartikkeli on Dâmbovița (joki).
+       *
+       * Vanhan ruhtinaanhovin wiki osoittaa Vlad III:een, koska
+       * hovista itsestään ei ole artikkelia — sama ratkaisu kuin
+       * Granadan Manuel de Fallan talossa ja Wienin jättirattaassa.
+       * Vlad rakennutti hovin, ja hänen asiakirjansa vuodelta 1459 on
+       * Bukarestin ensimmäinen maininta.
+       */
+      { nimi: 'Romanian ateneum', lat: 44.44136, lon: 26.09736 },
+      { nimi: 'Cișmigiun puutarha', lat: 44.4372, lon: 26.0906 },
+      { nimi: 'Yliopiston aukio', lat: 44.43497, lon: 26.10088 },
+      { nimi: 'Stavropoleoksen kirkko', lat: 44.43178, lon: 26.09883 },
+      { nimi: 'Vanha ruhtinaanhovi', lat: 44.43011, lon: 26.10131, wiki: 'Vlad III' },
+      {
+        nimi: 'Parlamenttipalatsi',
+        lat: 44.42751,
+        lon: 26.08725,
+        wiki: 'Romanian parlamenttitalo',
+      },
+      // Kainalossa vasemmassa ylänurkassa.
+      { nimi: 'Antipan museo', lat: 44.4526, lon: 26.0858 },
+    ],
+  },
+  sarajevo: {
+    polku: 'assets/kartat/sarajevo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
+    esittely: 'Sarajevo on kapeassa laaksossa noin 500 metrin '
+      + 'korkeudessa. Laakson pohjalla virtaa Miljacka-joki, ja joka '
+      + 'suunnalla kohoaa vuoria: Trebević, Jahorina, Bjelašnica ja '
+      + 'Igman. Samoilla vuorilla hiihdettiin talviolympialaisissa '
+      + 'vuonna 1984. Kaupunki syntyi kohtaan, jossa vuoristotie ylitti '
+      + 'joen ja maasta nousi lähteitä. Osmanien käskynhaltija Isa-beg '
+      + 'Ishaković rakennutti tänne 1460-luvulla basaarin, sillan ja '
+      + 'majatalon, ja niiden ympärille kasvoi kaupunki. Nimi tulee '
+      + 'turkin sanasta saray, joka tarkoittaa hallitsijan '
+      + 'taloa.\n\nKartta on leveä ja matala, koska laakso on: taloja '
+      + 'mahtuu vain idästä länteen. Miljacka kulkee kuvan halki '
+      + 'vaaleana nauhana ja tekee oikealla suuren mutkan, jossa laakso '
+      + 'kapenee rotkoksi. Joen yläpuolella rinne on täynnä ohuita '
+      + 'mutkittelevia katuja, jotka kiipeävät ylös. Alapuolella '
+      + 'Trebevićin rinne on melkein tyhjä: se on liian jyrkkä, ja '
+      + 'sinne nousee vain muutama serpentiinitie. Keskellä erottuu '
+      + 'tiheä kujaruudukko, ja se on Baščaršijan basaari. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi lännestä itään, koska laakso kulkee niin.
+       *
+       * Pisteet 2, 3 ja 4 ovat ahtaammassa kuin missään muussa
+       * kaupungissa: välit ovat 8,2 ja 7,9 prosenttiyksikköä. Syy on
+       * maantieteessä — Baščaršijan kolme kärkikohdetta ovat oikeasti
+       * 200–350 metrin päässä toisistaan. Rajan (5 pp) yli mennään,
+       * mutta älä lisää tähän neljättä keskustapistettä.
+       *
+       * Sahat-kulan kellotorni on 40 metriä pisteestä 2 eikä siksi
+       * mahdu erikseen, vaikka se on lehden nosto. Moskeija valittiin,
+       * koska sillä on artikkeli ja kellotornilla ei.
+       *
+       * Latinalaissillasta ei ole artikkelia. ÄLÄ LINKITÄ sitä
+       * artikkeliin Sarajevon laukaukset: lehden nosto käyttää jo sitä,
+       * ja artikkeli kertoo salamurhasta eikä sillasta.
+       *
+       * Baščaršijan koordinaatti on Sebiljin vesikioski basaarin
+       * pohjoislaidassa.
+       */
+      { nimi: 'Sarajevon katedraali', lat: 43.85943, lon: 18.42536 },
+      {
+        nimi: 'Gazi Husrev-begin moskeija',
+        lat: 43.85915,
+        lon: 18.429,
+        wiki: 'Gazi Husrev-begin moskeija',
+      },
+      { nimi: 'Baščaršija', lat: 43.85972, lon: 18.43122 },
+      { nimi: 'Vijećnica', lat: 43.85917, lon: 18.43335, wiki: 'Vijećnica' },
+      { nimi: 'Latinalaissilta', lat: 43.85763, lon: 18.42893 },
+      { nimi: 'Keltainen linnake', lat: 43.86146, lon: 18.43772 },
+    ],
+  },
 };
 
 /*
@@ -123277,6 +123449,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 432, teksti: 'Kohdekartat Sofiaan, Bukarestiin ja Sarajevoon' },
   { v: 431, teksti: 'Helsingille nähtävyysjutut, Suomenlinna mukana' },
   { v: 430, teksti: 'Kohdekartat Roomaan, Krakovaan, Varsovaan, Tallinnaan' },
   { v: 429, teksti: 'TV-napit Sveitsille (SRF) ja Virolle (ERR)' },
@@ -123791,7 +123964,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.431';
+const APP_VERSION = '2026-08-09.432';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

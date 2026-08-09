@@ -396,6 +396,89 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
     meri: true,
   },
+  sofia: {
+    // Sofiassa ei ole jokea, rantaa eikä kehäkatua. Kuvan juoni on
+    // SÄTEITTÄINEN BULEVARDIVIUHKA: leveät kadut lähtevät keskustasta
+    // joka suuntaan kuin pyörän puolat, eikä mikään katkaise niitä.
+    // Neljä muuta tunnistettavaa aihetta: Nevskin soikea aukio
+    // keskellä, Perlovskan suora vesinauha alaoikealla, Borisovan
+    // puutarha järvineen oikeassa alaneljänneksessä ja
+    // Kansalliskulttuuripalatsin aukea vasemmassa alanurkassa.
+    //
+    // MITÄ TÄSTÄ EI NÄY, JA SE ON MITATTU: lehden kärkiaiheet —
+    // Serdica, kylpylä, kirkkojen ja moskeijan kortteli — eivät piirry
+    // lainkaan. Sveta Nedeljan aukio on pieni siksak (x 27, y 37), ja
+    // siinä kaikki: rakennuksia ei piirretä ja Largon kävelyalueet ovat
+    // footway. Tiukempi 2,05 km:n rajaus kokeiltiin — silloin viuhka
+    // katosi eikä ydin silti tullut näkyviin. 2,7 km on oikea leveys.
+    //
+    // Ei meri-lippua: rantaviivoja nolla. Rajauksessa on kaksi jokea,
+    // Vladajska ja Perlovska, ja kumpikin piirtyy oikein.
+    //
+    // Bojanan kirkko jää 5,5 km lounaaseen ja Tšerni Vrah 13,3 km
+    // etelään. Kumpikaan ei sovi kainaloksi: niiden ympärillä ei ole
+    // katuverkkoa, eli ruudusta tulisi tyhjä paperi kuten Tallinnan
+    // laulukentästä.
+    rajat: { pohjoinen: 42.705, etela: 42.681, lansi: 23.312, ita: 23.345 },
+  },
+  bukarest: {
+    // Kaksi juonta samassa kuvassa. Dâmbovița kulkee halki
+    // hämmästyttävän suorana nauhana — se kanavoitiin 1880-luvulla
+    // eikä mutkittele metriäkään. Ja Ceaușescun akseli:
+    // Parlamenttipalatsin tyhjä valtava kortteli alavasemmalla, siitä
+    // itään suihkulähdeketjun reunustama bulevardi ja sen päässä
+    // Unirii-aukion ympyrä. Lisäksi Cișmigiun vihreä mutkittelevine
+    // järvineen ylävasemmalla ja vanhankaupungin kujasokkelo oikealla
+    // — kuvan ainoa kohta, jossa kadut eivät ole suoria.
+    //
+    // Kokeiltu myös 3,2 × 3,4 km:n rajaus, joka olisi ottanut mukaan
+    // Antipan museon ja Piața Victoriein. Se oli mitattavasti huonompi:
+    // kujasokkelo, kuvan paras yksityiskohta, kutistui täpläksi eikä
+    // Victoriei tuonut yhtään uutta muotoa. 2,3 km on oikea leveys.
+    //
+    // Ei meri-lippua. Dâmbovița piirtyy waterway-nauhana ja
+    // Unirii-bulevardin suihkulähdealtaat natural=water-monikulmioina —
+    // juuri ne tekevät bulevardista kuvassa katkoviivamaisen ketjun.
+    rajat: { pohjoinen: 44.4445, etela: 44.4235, lansi: 26.08, ita: 26.109 },
+    kainalot: [
+      {
+        rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
+        x: 3, y: 9, leveys: 26, suunta: '1 km pohjoiseen',
+      },
+    ],
+  },
+  sarajevo: {
+    // Kapea laakso, joten kuva on leveä ja matala: 2,65 × 1,33 km eli
+    // kuvasuhde melkein 2:1. Miljacka on selkäranka — se tulee
+    // vasemmasta alanurkasta, kulkee koko kuvan halki ja tekee oikealla
+    // suuren S-mutkan, jossa laakso kuroutuu rotkoksi.
+    //
+    // Pohjoisreuna on nostettu tahallaan 43.8655:een. Tiukempi rajaus
+    // (43.863) piirtyi kelvollisesti, mutta silloin alaosan 40 % oli
+    // Trebevićin tyhjää metsärinnettä ja pohjoisrinteen mahalat
+    // leikkautuivat pois. Nyt kuva on kolmikerroksinen: ylhäällä
+    // hiuksenohut rinnekatuverkko, keskellä laakson pohja ja basaari,
+    // alhaalla jyrkkä tyhjä rinne muutamine serpentiineineen.
+    //
+    // Baščaršijan kujat piirtyvät, koska ne ovat OSM:ssä pedestrian
+    // eivätkä footway — toisin kuin Tallinnan vanhassakaupungissa.
+    //
+    // EI KAINALOA, ja se on mitattu päätös. Kansallismuseo (Sarajevon
+    // haggada) jää 0,75 km länteen ja on lehden nosto, joten
+    // kainalosääntö osoittaisi kainaloon. Ruutu piirrettiin ja
+    // katsottiin (Marijin Dvor, 24 % leveä, vasen alanurkka):
+    //   - se EI ole tyhjä, katuverkkoa on — mutta sisältö on muutama
+    //     yhdensuuntainen bulevardin viiva eikä siitä tunnista mitään;
+    //   - ja se PEITTÄÄ kohdan, jossa Miljacka tulee kuvaan, eli
+    //     katkaisee kartan ainoan juonen.
+    // Tyhjää nurkkaa ei ole: laakso täyttää kehyksen. Vika on eri kuin
+    // Tallinnan laulukentässä (tyhjä ruutu) — tässä ruutu on täysi
+    // mutta hinta liian kova.
+    //
+    // Bobirata jää 1,47 km kaakkoon ja ylös vuorelle, Bijela tabija
+    // 98,5 %:n kohdalle eli käytännössä ulos.
+    rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
+  },
 };
 
 /*

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 432, teksti: 'Kohdekartat Sofiaan, Bukarestiin ja Sarajevoon' },
   { v: 431, teksti: 'Helsingille nähtävyysjutut, Suomenlinna mukana' },
   { v: 430, teksti: 'Kohdekartat Roomaan, Krakovaan, Varsovaan, Tallinnaan' },
   { v: 429, teksti: 'TV-napit Sveitsille (SRF) ja Virolle (ERR)' },
