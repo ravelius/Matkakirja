@@ -46,8 +46,8 @@ ENSIN, sitten `CLAUDE.md`, `docs/roolitus.md`, `docs/isoisan-raamattu.md`,
 - Oma työhaara: `claude/valtion-analyysi-lehtisivu-e5s1lw`.
 - Attribuutio joka GitHub-postaukseen (footer). Committeihin
   `Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>` +
-  `Claude-Session: https://claude.ai/code/<oman sessiosi id>` (käytä
-  OMAN sessiosi tunnusta — tämä on uusi sessio, ei entinen).
+  `Claude-Session: https://claude.ai/code/session_01R1jVv12E56gbU5qtH5xGaG`
+  (Fablen sessio-ID — sama sessio clearin yli).
 
 ## SEURAAVA ISO TEHTÄVÄ — 5 kaupunkia, KOKO tekstipaketti (omistajan tilaus)
 
@@ -106,14 +106,13 @@ repliikki jää auki ja vie eteenpäin. Suunnittele paketti tämä kärkenä.
   lyhyt tunnelma-/kielivideo (kevyet ~5–15 MB kelpaa; raskaat korvattava).
   Ei toteutettu.
 
-## Tiimin tila — KAIKKI CLEARATTU 9.8.2026
+## Tiimin tila — KAIKKI CLEARATTU 9.8.2026 (sama sessio, tyhjä konteksti)
 
 Koko tiimi (Opus 1, Opus 2, Sonnet 1, Sonnet 2) clearattiin samaan
-aikaan kanssani. **Yllä olevan taulukon sessio-ID:t ovat vanhentuneet
-— tiimiläiset saavat clearissa uudet ID:t.** Kun tiimiläinen raportoi
-ensimmäisen kerran, hän kertoo uuden ID:nsä — päivitä se taulukkoon ja
-käytä triggereissä. Kunkin oma tilannekuva on mainissa; lue ne kun
-tarvitset yksityiskohdat:
+aikaan kanssani, mutta **samoissa sessioissa — yllä olevan taulukon
+sessio-ID:t ovat yhä voimassa** (clear tyhjentää vain kontekstin, ei
+vaihda ID:tä). Käytä niitä triggereissä suoraan. Kunkin oma tilannekuva
+on mainissa; lue ne kun tarvitset yksityiskohdat:
 
 - **Opus 1** (lehdet/rakenne) → `docs/opus1-tilanne.md`. Viimeksi
   mainissa: neljä maalehteä (Turkki/Irlanti/Portugali/Unkari) + vaiheen
