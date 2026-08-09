@@ -1,7 +1,23 @@
 // Maastonimien tekstit — MALLI. Kymmenen kohdetta, joita muut matkivat.
 //
-// Ohje kirjoittajalle: docs/maastotekstit-ohje.md. Lue se ennen kuin
-// lisäät yhtään riviä; tämä tiedosto on sen esimerkkiosa, ei sääntö.
+// ÄLÄ POISTA TÄTÄ TIEDOSTOA. Nimestä huolimatta se ei ole pelkkä
+// esimerkki: se on kymmenen kuuluisimman kohteen — Niili, Amazon,
+// Volga, Ganges, Jangtse, Baikal, Kaspianmeri, Himalaja, Andit,
+// Alpit — AINOA teksti. Niitä ei ole js/packs/maasto-tekstit.js:ssä
+// (201 kohdetta), koska koostajan lähde-JSONit jättävät ne tahallaan
+// pois juuri siksi, että ne ovat täällä. Mukana on kymmenen
+// tarkistettua aikalaislainausta, joihin tools/lainausankkurit.json
+// viittaa, ja tools/tarkista-lainaukset.mjs lukee tämän tiedoston.
+//
+// Poistoa yritettiin 9.8.2026 sillä perusteella, ettei mikään UI-koodi
+// importtaa tätä. Se pitää paikkansa — mutta ei importtaa
+// maasto-tekstit.js:ääkään: maastotekstejä ei ole vielä kytketty
+// i-ikkunaan, joka näyttää yhä nimipaketin `selitys`-kentän.
+// Importoimattomuus ei siis kerro tästä tiedostosta mitään.
+//
+// Ohje kirjoittajalle: docs/arkisto/maastotekstit-ohje.md. Lue se
+// ennen kuin lisäät yhtään riviä; tämä tiedosto on sen esimerkkiosa,
+// ei sääntö.
 //
 // --- mitä tämä korvaa ---
 //
