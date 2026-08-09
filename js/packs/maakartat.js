@@ -1547,6 +1547,82 @@ export const MAAKARTAT = {
  * vasemmalle puolelle, kun oikealla olisi ahdasta.
  */
 export const KAUPUNKIKARTAT = {
+  edinburgh: {
+    polku: 'assets/kartat/edinburgh-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
+    esittely: 'Edinburgh seisoo sammuneen tulivuoren päällä. Kallio '
+      + 'jähmettyi noin 350 miljoonaa vuotta sitten niin kovaksi, '
+      + 'ettei jäätikkö jaksanut kuluttaa sitä: jää kiersi kallion ja '
+      + 'kaivoi maan sen molemmilta puolilta, mutta taakse jäi pitkä '
+      + 'loiva rinne. Kallion laelle rakennettiin linna ja rinteelle '
+      + 'kaupunki, kapealle harjanteelle, jonne pääsi vain yhtä '
+      + 'tietä.\n\nKartalla näkyy kaksi kaupunkia vierekkäin. '
+      + 'Alaosassa kulkee vanhankaupungin harjanne: yksi katu linnalta '
+      + 'Holyroodin palatsille, vajaat kaksi kilometriä, ja sen '
+      + 'molemmin puolin kapeita kujia kuin kalanruotoja. Yläosassa on '
+      + 'Uusikaupunki, jonka suorat kadut ja aukiot muodostavat '
+      + 'ruudukon. Sitä alettiin rakentaa vuonna 1767, kun vanha '
+      + 'harjanne oli tullut täyteen. Kaupunkien välissä on vihreä '
+      + 'notko. Siellä oli ennen tekojärvi nimeltä Nor Loch; se '
+      + 'laskettiin kuiviin 1700-luvun lopulla, ja nyt notkossa on '
+      + 'puisto ja rautatie. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Charlotte Squaresta ei ole suomenkielistä artikkelia, joten se
+       * jää pelkäksi merkiksi. Se on silti listalla, koska se on ainoa
+       * piste Uudenkaupungin ruutukaavan puolella — ilman sitä kartan
+       * juoni jäisi kertomatta selitelistassa.
+       */
+      { nimi: 'Charlotte Square', lat: 55.9514, lon: -3.2086 },
+      { nimi: 'Edinburghin linna', lat: 55.9487, lon: -3.2004, wiki: 'Edinburghin linna' },
+      { nimi: 'St Gilesin katedraali', lat: 55.9495, lon: -3.1909, wiki: 'St Gilesin katedraali' },
+      { nimi: 'Greyfriars Bobby', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby' },
+      { nimi: 'Calton Hill', lat: 55.9553, lon: -3.1828, wiki: 'Calton Hill' },
+      { nimi: 'Holyroodin palatsi', lat: 55.9527, lon: -3.1716, wiki: 'Holyroodin palatsi' },
+    ],
+  },
+  marseille: {
+    polku: 'assets/kartat/marseille-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
+    esittely: 'Marseille on rakennettu valkoisten kalkkikivikukkuloiden '
+      + 'muodostamaan kulhoon, joka aukeaa länteen merelle. Kulhon '
+      + 'pohjassa on kapea luonnonpoukama, noin kilometrin mittainen '
+      + 'halkeama rannassa. Poukama on suojassa mistraalilta, '
+      + 'kylmältä tuulelta, joka syöksyy tänne luoteesta. Juuri siksi '
+      + 'kreikkalaiset purjehtijat pysähtyivät tähän noin 600 eaa. ja '
+      + 'perustivat Massalian. Makeaa vettä kukkuloilla ei sen sijaan '
+      + 'ollut juuri lainkaan: lopulta se tuotiin 80 kilometrin päästä '
+      + 'kanavaa pitkin, ja kanava valmistui vuonna 1849.\n\nKartan '
+      + 'keskellä on tuo poukama, Vanhasatama. Vesiallas on noin 900 '
+      + 'metriä pitkä ja 400 metriä leveä, ja sitä reunustaa laituri '
+      + 'kolmelta sivulta. Nykyään siinä on huviveneitä, ei '
+      + 'rahtilaivoja: isot laivat siirtyivät pohjoisempiin '
+      + 'satama-altaisiin 1800-luvun puolivälissä. Pohjoispuolella '
+      + 'kohoaa kukkulalle vanha kaupunginosa Le Panier, ja etelässä '
+      + 'nousee 149 metriä korkea kalliokieleke, jonka laella on '
+      + 'Notre-Dame de la Garde. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Saint-Victorin kirkosta ja Saint-Charlesin asemasta ei ole
+       * suomenkielisiä artikkeleita; molemmat jäävät merkeiksi.
+       *
+       * Vanhasataman koordinaatti on ALTAAN KESKELTÄ eikä laiturilta:
+       * piste kuuluu veden päälle, koska juuri allas on kaupungin syy
+       * olla olemassa. Se näkyy nyt vetenä — ennen merentäyttöä se
+       * piirtyi ontoksi suorakaiteeksi.
+       */
+      { nimi: 'MuCEM', lat: 43.2967, lon: 5.361, wiki: 'MuCEM' },
+      { nimi: 'Marseillen katedraali', lat: 43.2998, lon: 5.3649, wiki: 'Marseillen katedraali' },
+      { nimi: 'Saint-Victorin kirkko', lat: 43.2903, lon: 5.3656 },
+      { nimi: 'Vanhasatama', lat: 43.2946, lon: 5.3693, wiki: 'Marseillen vanha satama' },
+      { nimi: 'Notre-Dame de la Garde', lat: 43.2839, lon: 5.3712, wiki: 'Notre-Dame de la Garde' },
+      { nimi: 'Saint-Charlesin asema', lat: 43.3032, lon: 5.3816 },
+    ],
+  },
   helsinki: {
     polku: 'assets/kartat/helsinki-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

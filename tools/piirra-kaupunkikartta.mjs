@@ -206,6 +206,41 @@ const KAUPUNGIT = {
       },
     ],
   },
+  marseille: {
+    // Kulho, joka aukeaa länteen: avomeri vasemmalla, Vanhasataman
+    // suorakaide keskellä, Notre-Dame de la Garden kallio etelässä.
+    // Rajaus on lähes neliö, koska kapeampi kuva työntäisi meren
+    // laitaan — Marseillessa meri ON kuva.
+    //
+    // Tämä kaupunki pakotti työkaluun merentäytön. Ilman sitä koko
+    // länsipuoli oli paperia ja Vanhasatama ontto suorakaide:
+    // Välimeri on OSM:ssä pelkkää rantaviivaa (nolla vesimonikulmiota)
+    // ja satama on relaatio 10793156, joka nauhana piirtyi laatikoksi.
+    //
+    // Länsireuna 5.345 ei ole sattumaa: se pitää rantaviivan kuvassa
+    // koko korkeudeltaan (läntisin rantapiste on lon 5.3456). Kapeampi
+    // rajaus jättää länsireunaan täyttämättömän kiilan.
+    //
+    // Ifin linna jää 1,6 km länsirajan taakse — se on lehden nosto,
+    // mutta kainalo keskelle avomerta näyttäisi oudolta, ja saari on
+    // niin pieni ettei siitä tulisi tunnistettavaa minikarttaa.
+    rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
+    meri: true,
+  },
+  edinburgh: {
+    // Kaksi kaupunkia yhdessä kuvassa: Uudenkaupungin ruutukaava
+    // ylhäällä, vanhankaupungin harjanne alhaalla, ja niiden välissä
+    // Princes Street Gardensin notko — entinen Nor Loch, jonka
+    // pohjalla kulkee nyt rautatie. Charlotte Squarelta Holyroodiin.
+    //
+    // Arthur's Seat jää ulos: se osuisi 90 %:n kohdalle oikeaan
+    // alanurkkaan, ja Holyrood Park veisi kolmanneksen kuvasta
+    // tyhjänä vihreänä — työkalu ei piirrä korkeuskäyriä, joten
+    // kukkulasta ei näkyisi mitään. Puiston länsireuna näkyy silti.
+    //
+    // Ei meri: true — rajaus ei ulotu Forthin lahdelle asti.
+    rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
+  },
   lontoo: {
     // Hyde Parkin itälaidalta Tower Bridgelle, Regent's Parkin
     // eteläpuolelta Thamesin etelärannalle. Kaikki kuusi kohdetta
