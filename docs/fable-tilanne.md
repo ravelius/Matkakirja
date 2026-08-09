@@ -129,8 +129,12 @@ ja `js/tyohuone-tilanne.js`.*
   vetineen (hyväksytty). Istanbul = 2 maanosaa.
 - **Sonnet 2:** nähtävyysjutut. Erät julki: Kairo/Venetsia/Madrid/
   Tukholma/Berliini/Lontoo (vanhat), Praha/Wien/Budapest/Pariisi (v426),
-  **Helsinki (#604, ei mergetty — ks. AVOIN)**. Seuraavaksi
-  Ateena/Amsterdam/Dublin, sitten Opus 2:n 36 uutta kohdetta.
+  Helsinki (v431, #604, mergetty ja vahvistettu livenä 9.8.2026).
+  Ateena/Amsterdam/Dublin valmis ja QA-testattu (v432, **PR #611, ei
+  vielä mergetty**). TV-nappien poisto (v434) tarkistettu: ei
+  viittauksia omassa sisällössä. Oma tilannekuva:
+  `docs/sonnet2-tilanne.md`. Seuraavaksi Opus 2:n uudet kartat (Rooma/
+  Krakova/Varsova/Tallinna v430, sitten loput 7).
   - **Wiki-ansat välitettäväksi Sonnet 2:lle** ennen Istanbul/Lissabon-
     juttuja: fi-wiki "Neitsyttorni" = Bakun torni (Istanbulin = Kız
     Kulesi); fi-wiki "Belém" = Brasilian kaupunki (Lissabonin =
