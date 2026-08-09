@@ -11,9 +11,10 @@
 
 export const TILANNE = {
   paivitetty: '9.8.2026',
-  tavoite: 'LOPPUKIRI (omistajan tilaus 8.8. ilta): kaikki Euroopan '
-    + 'kaupunki- ja maalehdet valmiiksi. Agenttiparvet sallittu '
-    + 'vauhtiin, kunhan mitään turhaa ei tehdä.',
+  tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
+    + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
+    + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
+    + 'parkissa — siihen palataan myöhemmin.',
   rivit: [
     {
       tekija: 'Fable',
@@ -33,43 +34,44 @@ export const TILANNE = {
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
-      tila: 'odottaa',
+      tila: 'tyossa',
       tehtava: 'Valmista (v435): Turkin, Irlannin, Portugalin ja '
         + 'Unkarin maalehdet (16 aihesivua, 64 juttua, 16 '
         + 'minitehtävää) sekä vaiheen B ensimmäinen siirto: Helsingin '
         + 'arki Suomen maalehteen, Helsingille jäi historia — lehti '
         + 'on nyt kolme sisältöruutua neljän sijaan.',
-      seuraavaksi: 'Odottaa omistajan kuittausta Helsinki/Suomi-erästä '
-        + 'ennen vaiheen B loppusiirtoja (docs/lehtitasapaino.md, '
-        + '30 kaupunkia maa kerrallaan). Päätöstä odottavat myös: '
-        + 'menovinkkiruudun irrotus kaupunkilehdestä (oma erä, '
-        + 'yhteinen koodipolku) ja Suomen maalehden täydennys '
-        + '(pelaajan kotimaa on nyt ohuin lehti). Jonossa lisäksi '
-        + 'valokuvakysymysten rajatapaukset (~50) ja vanhojen '
-        + 'maalehtien minitehtävät (33 aihesivua).',
+      seuraavaksi: 'Tehtävänanto 9.8. (Helsinki/Suomi-malli '
+        + 'hyväksytty): vaiheen B siirrot loppuun maa kerrallaan → '
+        + 'menovinkkiruudun irrotus kaupunkilehdestä (oma erä) → '
+        + 'Suomen maalehden täydennys → vanhojen maalehtien '
+        + 'minitehtävät (33 aihesivua) → Tromssa + 5 aluelehteä → '
+        + 'valokuvakysymysten rajatapaukset (~50, Vasa-duplikaatti '
+        + 'mukaan). Raportti erien välissä.',
     },
     {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
-      tila: 'odottaa',
+      tila: 'tyossa',
       tehtava: 'KARTTATYÖ VALMIS: kohdekartat 31/31 kaupungille ja '
         + 'Euroopan maakartat 29/29 — tarkistettu ohjelmallisesti '
         + 'molempiin suuntiin (9.8.). Ei yhtään lehteä ilman karttaa '
         + 'eikä karttaa ilman lehteä.',
-      seuraavaksi: 'Ehdolla työkaluparannus: isojen jokirelaatioiden '
-        + 'täyttö (kokoaKerrokset() ohittaa yli 0,3 × rajauslaatikon '
-        + 'renkaat, joten Kiovan Dnepr, Pietarin Neva ja Budapestin '
-        + 'Tonava piirtyvät paljaina rantaviivoina). Yksi korjaus, '
-        + 'kolme karttaa paremmaksi. Afrikan kartat (26 maata ilman) '
-        + 'vasta omistajan Eurooppa-testin jälkeen.',
+      seuraavaksi: 'Tehtävänanto 9.8.: 1) jokirelaatioiden '
+        + 'täyttökorjaus (Kiovan Dnepr, Pietarin Neva, Budapestin '
+        + 'Tonava paremmiksi yhdellä työkalukorjauksella), 2) '
+        + 'tv-jäämien siivous docs/tyolista-opukselle.md:stä, 3) '
+        + 'Lähi-idän selvitysmuistio (maakarttatarpeet ja '
+        + 'lehtikaupunkikandidaatit, ei vielä piirtoa).',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA + työhuone',
-      tila: 'odottaa',
-      tehtava: 'Valmis QA-tehtäviin, odottaa Fablen loppu-QA-briefiä '
-        + '(iso QA koko Euroopalle ennen omistajan testiä).',
-      seuraavaksi: 'Briefiin kertyneet erityiskohteet: Mercator-'
+      tila: 'tyossa',
+      tehtava: 'Loppu-QA-brief saatu 9.8.: kierros 1 nykyiselle '
+        + 'mainille (linkit, lisenssit, duplikaatit, karttapisteet, '
+        + 'äänet, muutosloki), kierros 2 myöhemmin uusille erille. '
+        + 'Read-only — löydöt korjauslistaksi Fablelle.',
+      seuraavaksi: 'Briefin erityiskohteet: Mercator-'
         + 'vääristymä karttapisteissä, curl+karttapiste-tarkistus, '
         + 'haikara/Vasa-kuvakaksoiskappaleet, roskapolkutesti, Flickr '
         + 'Commonsin "No restrictions" -lisenssimerkintä (tarkistin '
@@ -79,16 +81,17 @@ export const TILANNE = {
     {
       tekija: 'Sonnet 2',
       rooli: 'nähtävyysjutut',
-      tila: 'odottaa',
+      tila: 'tyossa',
       tehtava: 'Livenä 14 kaupunkia (uusimpina v436: Ateena, '
         + 'Amsterdam, Dublin). Jonossa Opus 2:n viisi karttaerää = '
         + '17 uutta kaupunkia, ~102 kohdetta (v427 Istanbul/'
         + 'Marseille/Edinburgh → v433 Kiova/Pietari/Moskova/Odessa).',
-      seuraavaksi: 'Ehdotus odottaa lupaa: aloitus vanhimmasta erästä '
-        + '(Istanbul, Marseille, Edinburgh) totutulla prosessilla. '
-        + 'Wiki-ansat muistissa: fi-wikin "Neitsyttorni" on Bakun '
-        + 'torni (Istanbulin kohde on Kız Kulesi) ja "Belém" '
-        + 'Brasilian kaupunki (Lissabonissa kaupunginosa).',
+      seuraavaksi: 'Tehtävänanto 9.8.: kaikki viisi erää '
+        + 'järjestyksessä, erä kerrallaan — Istanbul/Marseille/'
+        + 'Edinburgh ensin, raportti erien välissä. Wiki-ansat '
+        + 'muistissa: fi-wikin "Neitsyttorni" on Bakun torni '
+        + '(Istanbulin kohde on Kız Kulesi) ja "Belém" Brasilian '
+        + 'kaupunki (Lissabonissa kaupunginosa).',
     },
   ],
   odottaaPaatosta: [

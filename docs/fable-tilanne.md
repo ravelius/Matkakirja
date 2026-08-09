@@ -119,16 +119,29 @@ repliikki jää auki ja vie eteenpäin. Suunnittele paketti tämä kärkenä.
 
 ## Tiimin tila — KAIKKI CLEARATTU 9.8.2026 (sama sessio, tyhjä konteksti)
 
-**Kaikki neljä kuittasivat valmiutensa 9.8. clearin jälkeen — tuoreet
-tilat ja ehdotukset ovat tilannetaulussa (js/tyohuone-tilanne.js).
-Kukaan ei aloita ennen tehtävänantoa; tehtäviä ei jaeta ennen
-omistajan lupaa. Avoimet ehdotukset: Sonnet 2 aloittaisi Istanbul/
-Marseille/Edinburgh-erän; Opus 2:lla karttatyö valmis (31/31, 29/29),
-ehdolla jokirelaatioiden täyttökorjaus; Opus 1 odottaa omistajan
-kuittausta Helsinki/Suomi-erästä + päätöksiä (menovinkkiruutu, Suomen
-maalehti); Sonnet 1 odottaa Fablen loppu-QA-briefiä. Opus 2 huomasi
-tv-jäämät: roolitus.md siivottu 9.8., docs/tyolista-opukselle.md:n
-tv-osuudet (rivit ~256–363) SIIVOAMATTA.**
+**OMISTAJAN UUSI SUUNTA 9.8. (iltapäivä): "Eurooppa valmiiksi
+kaikilta osin", sen jälkeen SUORAAN Lähi-idän kaupunki- ja
+maalehtiin (lauta middleeast.js, ~28 kaupunkia, on jo pelissä).
+Matkakirjan tarinapuoli PARKISSA — palataan myöhemmin. Lupa
+tehtävänjakoon ja julkaisuihin annettu.**
+
+**Tehtävänannot lähetetty triggereinä 9.8. ~13:50Z kaikille
+neljälle:**
+- **Opus 1:** Helsinki/Suomi-malli kuitattu hyväksytyksi (Fable
+  omistajan valtuutuksella) → vaiheen B siirrot loppuun →
+  menovinkkiruudun irrotus → Suomen maalehden täydennys →
+  minitehtävät (33) → Tromssa + 5 aluetta → valokuvarajatapaukset.
+- **Opus 2:** jokirelaatioiden täyttökorjaus (Dnepr/Neva/Tonava) →
+  tv-siivous docs/tyolista-opukselle.md → Lähi-idän selvitysmuistio
+  (ei vielä piirtoa). roolitus.md:n tv-jäämät siivosin itse 9.8.
+- **Sonnet 1:** loppu-QA-brief, kierros 1 nykyiselle mainille;
+  kierros 2 uusille erille kun Fable ilmoittaa. Read-only.
+- **Sonnet 2:** kaikki viisi nähtävyysjuttuerää järjestyksessä
+  (Istanbul/Marseille/Edinburgh ensin), erä kerrallaan, raportti
+  välissä, wiki-ansat muistissa.
+
+Kaikki raportoivat Fablelle triggereillä erien välissä ja jatkavat
+suoraan seuraavaan erään, ellei Fable keskeytä.
 
 Koko tiimi (Opus 1, Opus 2, Sonnet 1, Sonnet 2) clearattiin samaan
 aikaan kanssani, mutta **samoissa sessioissa — yllä olevan taulukon
@@ -152,8 +165,15 @@ on mainissa; lue ne kun tarvitset yksityiskohdat:
     kaupunginosa).
 - **Sonnet 1** (QA) → `docs/sonnet-tilanne.md`. Loppu-QA-brief kesken.
 
-## Avoin lupaa vailla
+## Luvat ja tahti (päivitetty 9.8. iltapäivä)
 
-- Älä lähetä triggereitä, julkaise tai mergeä ilman omistajan lupaa —
-  hän ohjaa tahdin. (Vanhat avoimet PR:t #611/#599 on jo hoidettu:
-  #599 merged, #611 korvattu #624:llä ja suljettu.)
+- Omistajan lupa 9.8.: julkaista, mergetä ja jakaa tehtäviä saa —
+  tavoitteena Eurooppa valmiiksi, sitten Lähi-idän lehdet.
+- Matkakirja (5 kaupungin paketti, äänivalinnat, sateenvarjomies)
+  parkissa omistajan päätöksiä odottamassa — EI ääniä, EI uusia
+  tarinatekstejä ennen kuin omistaja palaa asiaan.
+- Fablen oma seuraava työ: kokoa tiimin raportit, pidä tilannetaulu
+  ajan tasalla, ratko versiotörmäykset. Euroopan valmistuttua
+  suunnittele Lähi-idän lehtien työnjako (Opus 2:n selvitysmuistio
+  pohjaksi; Opus 1:lle kaupunki/maa-lehtijono; Sonnet 2:lle
+  nähtävyysjutut karttojen tahdissa).
