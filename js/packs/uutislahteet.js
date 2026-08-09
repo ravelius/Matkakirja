@@ -256,4 +256,48 @@ export const TV_KANAVAT = {
       ],
     },
   },
+  /*
+   * SVEITSI — SRF Tagesschau (kartoitettu ja mitattu 9.8.2026).
+   *
+   * Kolmas maa Saksan ja Espanjan jälkeen, ja samasta syystä: lähetys
+   * saadaan oikeana mp4-tiedostona, ei upotuksena. Reitti on julkinen
+   * eikä vaadi avainta:
+   *   1. videos-by-show-id (CORS *) listaa tuoreimmat Tagesschau-jaksot
+   *      → poimitaan uusimman urn.
+   *   2. SRG:n integration layer mediaComposition byUrn (CORS *) antaa
+   *      resourceList-taulussa suoran progressiivisen H264-mp4:n
+   *      (protocol HTTP). Osoite tulee http:nä, mutta pelkkä skeeman
+   *      vaihto https:ksi tuottaa 206:n ja oikeat ftyp-tavut (mitattu),
+   *      joten workeria ei tarvita kuten RTVE:llä. Ks. haeTallenne
+   *      (js/uutiset.js) SRF-haara.
+   */
+  CHE: {
+    nimi: 'SRF',
+    tallenteet: {
+      api: 'https://www.srf.ch/play/v3/api/srf/production/videos-by-show-id?showId=ff969c14-c5a7-44ab-ab72-14d4c9e427a9&pageSize=1',
+      valinnat: [
+        { nappi: 'Tagesschau', kanava: 'srf' },
+      ],
+    },
+  },
+  /*
+   * VIRO — ERR Aktuaalne kaamera (kartoitettu ja mitattu 9.8.2026).
+   *
+   * Puhtain löytö: ERR:n oma julkinen Jupiter-rajapinta antaa yhdellä
+   * haulla suoran mp4:n. getContentPageData-vastauksen mainContent on
+   * sarjan tuorein jakso, ja medias[0].src.file on suora
+   * //vod.err.ee/file/…​.mp4 (CORS *, ftyp isom/h264, ei tokenia — API
+   * kertoo itse drm:false, geoBlock:false). Skeema lisätään
+   * (//→https:) haeTallenteessa. Kanava-kenttää ei tarvita: lähde on
+   * yksi sarja.
+   */
+  EST: {
+    nimi: 'ERR',
+    tallenteet: {
+      api: 'https://services.err.ee/api/v2/vodContent/getContentPageData?contentId=1038278',
+      valinnat: [
+        { nappi: 'Aktuaalne kaamera', kanava: 'err' },
+      ],
+    },
+  },
 };

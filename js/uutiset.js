@@ -206,8 +206,66 @@ async function rtveOsoite(id) {
   }
 }
 
+/*
+ * ERR (Viro) ja SRF (Sveitsi) ovat omat muotonsa, jotka eivät sovi
+ * channels/items-malliin, joten niillä on omat hakijat. Molemmat
+ * palauttavat suoraan tuoreimman lähetyksen {url, pvm}. Tulos
+ * muistetaan sen sijaan että lista muistettaisiin, koska kummallakin
+ * on vain yksi valinta (tuorein uutislähetys).
+ */
+async function haeErr(api) {
+  const muisti = tallenneMuisti.get(api);
+  if (muisti && Date.now() - muisti.aika < TALLENNE_MUISTI_MS) return muisti.tulos;
+  try {
+    const vastaus = await fetch(api, { signal: AbortSignal.timeout(10000) });
+    if (!vastaus.ok) return null;
+    const data = await vastaus.json();
+    const media = data?.data?.mainContent?.medias?.[0];
+    const tiedosto = media?.src?.file;
+    if (!tiedosto) return null;
+    // API antaa protokollattoman //vod.err.ee/…-osoitteen.
+    const url = tiedosto.startsWith('//') ? `https:${tiedosto}` : tiedosto;
+    const tulos = { url, pvm: media?.date ?? null };
+    tallenneMuisti.set(api, { aika: Date.now(), tulos });
+    return tulos;
+  } catch {
+    return null;
+  }
+}
+
+async function haeSrf(api) {
+  const muisti = tallenneMuisti.get(api);
+  if (muisti && Date.now() - muisti.aika < TALLENNE_MUISTI_MS) return muisti.tulos;
+  try {
+    const vastaus = await fetch(api, { signal: AbortSignal.timeout(10000) });
+    if (!vastaus.ok) return null;
+    const data = await vastaus.json();
+    const jakso = data?.data?.data?.[0];
+    if (!jakso?.urn) return null;
+    const kompApi = 'https://il.srgssr.ch/integrationlayer/2.1/mediaComposition/byUrn/'
+      + `${encodeURIComponent(jakso.urn)}?onlyChapters=true`;
+    const komp = await fetch(kompApi, { signal: AbortSignal.timeout(10000) });
+    if (!komp.ok) return null;
+    const kdata = await komp.json();
+    const resurssit = kdata?.chapterList?.[0]?.resourceList ?? [];
+    // Progressiivinen H264-mp4 (ei HLS); ensimmäinen on paras laatu.
+    const mp4 = resurssit.find((r) => r.protocol === 'HTTP' && r.encoding === 'H264');
+    if (!mp4?.url) return null;
+    // Osoite tulee http:nä; https toimii suoraan (mitattu 9.8.2026).
+    const url = mp4.url.replace(/^http:\/\//, 'https://');
+    const tulos = { url, pvm: jakso.date ?? null };
+    tallenneMuisti.set(api, { aika: Date.now(), tulos });
+    return tulos;
+  } catch {
+    return null;
+  }
+}
+
 export async function haeTallenne(api, kanava) {
-  if (!api || !kanava) return null;
+  if (!api) return null;
+  if (api.includes('services.err.ee')) return haeErr(api);
+  if (api.includes('srf.ch')) return haeSrf(api);
+  if (!kanava) return null;
   const vanha = tallenneMuisti.get(api);
   let kanavat = vanha && Date.now() - vanha.aika < TALLENNE_MUISTI_MS ? vanha.kanavat : null;
   const rtve = api.includes(RTVE_LISTA);
