@@ -7282,6 +7282,18 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   visibility: hidden;
 }
 
+/*
+ * Vieritysvara sivunumeropillerille: pilleri on dialogin lapsi eikä
+ * vieri kortin mukana, joten pohjaan vieritetty sisältö (ETSI KÄTKÖ
+ * -nappi) jäi sen alle (omistajan palaute 10.8.2026: "Sivu saisi
+ * rullautua alemmas ... jotta sivunumerointi ei jäisi kätkö
+ * painikkeen päälle"). Lisäpehmuste vain kun pilleri on näkyvissä —
+ * yksisivuinen lehti ei tarvitse tyhjää häntää.
+ */
+.dialog.lehti:has(> .tutki-navi:not([hidden])) .dialog-card {
+  padding-bottom: 3.6rem;
+}
+
 .tutki-nuoli svg { width: 100%; height: 100%; display: block; }
 
 /* ── Isoisän sitaatit visassa ja aarteessa ────────────────────────
@@ -9200,6 +9212,50 @@ body.vertailu-tila .pawns { display: none; }
   font-family: var(--font-type);
   font-size: 0.68rem;
   color: rgba(70, 51, 31, 0.66);
+}
+
+/*
+ * Useamman kuvan karuselli (omistajan palaute 10.8.2026: lisäkuvat
+ * karuselliin, ei peräkkäin — sivu venyi liian pitkäksi). Nuolet ja
+ * laskuri kelluvat kuvan päällä samalla pergamenttipillerityylillä
+ * kuin lehden sivunumero, joten ne eivät kasvata kehyksen mittaa.
+ */
+.karuselli-ikkuna { position: relative; }
+
+.karuselli-nuoli {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.7rem;
+  height: 1.7rem;
+  min-height: 0;
+  padding: 0 0 0.15rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(246, 231, 198, 0.82);
+  color: rgba(70, 51, 31, 0.72);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.karuselli-nuoli:hover,
+.karuselli-nuoli:focus-visible { color: rgba(70, 51, 31, 0.98); }
+
+.karuselli-nuoli.vasen { left: 0.35rem; }
+.karuselli-nuoli.oikea { right: 0.35rem; }
+
+.karuselli-laskuri {
+  position: absolute;
+  right: 0.35rem;
+  bottom: 0.35rem;
+  padding: 0.08rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(246, 231, 198, 0.82);
+  color: rgba(70, 51, 31, 0.8);
+  font-family: var(--font-type);
+  font-size: 0.68rem;
 }
 
 /* Lähdemaininta ilman fi.wikipedian artikkelia: pelkkä teksti, ei

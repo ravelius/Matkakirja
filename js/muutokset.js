@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 474, teksti: 'Nähtävyyskuvat karuselliin, lehden loppuun vieritysvaraa' },
   { v: 472, teksti: 'Pylväspulman nimet vuororiveille, ei enää päällekkäin' },
   { v: 471, teksti: 'Ateenan nähtävyysjuttuihin lisää kuvia' },
   { v: 470, teksti: 'Lähi-idän laudalle maatiedot ja menovinkit' },
