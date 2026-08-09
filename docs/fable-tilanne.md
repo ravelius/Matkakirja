@@ -276,14 +276,15 @@ Sonnet 1:n loppu-QA ajettu):
 
 1. [x] Tarinakaari 41/41 Euroopan kaupunkia, luennat 123/123 (v460).
 2. [x] Tehtävämuodot: yksi tehtävä/pysähdys, pulma korvaa visan (v478).
-3. [ ] Viisi puuttuvaa kaupunkilehteä: Riika, Vilna, Oslo,
-       Kööpenhamina, Dubrovnik (Opus 1, työn alla).
+3. [x] Viisi puuttuvaa kaupunkilehteä (v481 — Eurooppa on lehtien
+       osalta täysi; Opus 1 teki koko erän kerralla).
 4. [ ] Orpo minitehtävä -auditointi (evzone-tapaus: vastaus eri
        sivulla kuin kysymys) — Opus 1 jonossa.
 5. [ ] Menovinkkisivujen kuvat (omistajan havainto Suomen lehdestä)
        — Opus 1 jonossa 5 lehden jälkeen.
-6. [ ] Uusien lehtikaupunkien kohdekartat + vesikorjaukset (Tukholma,
-       Madrid, Lontoo) — Opus 2, työn alla.
+6. [ ] Uusien lehtikaupunkien kohdekartat: Tromssa, Dubrovnik,
+       Riika, Vilna, Oslo, Kööpenhamina — Opus 2, työn alla.
+       Vesikorjaukset (Tukholma, Madrid, Lontoo) TEHTY v480:ssa.
 7. [ ] Nähtävyysjutut kohdekartallisiin kaupunkeihin: erä 9 (Rooma,
        Krakova, Varsova, Tallinna — työn alla), erä 10 (Sofia,
        Bukarest, Sarajevo), erä 11 (Kiova, Pietari, Moskova, Odessa)
@@ -294,3 +295,15 @@ Sonnet 1:n loppu-QA ajettu):
 
 Löytöluentoja (puhe-kohtaaminen-*-loyto) EI lasketa valmiuteen:
 kaaren aarreluenta kattaa paljastuksen äänen kaarilaudoilla.
+
+### Yövahtikierros 2 (klo ~1.25): jaetut erät
+
+- Opus 1 (trig 22:40Z): orpo minitehtävä -auditointi + menovinkkien
+  kuvat (pilotti Suomi) + valokuvarajatapaukset/duplikaatit.
+- Opus 2 (trig 22:42Z): kuusi kohdekarttaa (Tromssa, Dubrovnik,
+  Riika, Vilna, Oslo, Kööpenhamina) erissä.
+- Sonnet 1 (trig 22:44Z): QA kahdeksalle uudelle lehdelle + v478-
+  pelisääntö + v479 Engel.
+- Sonnet 2: erä 9 työn alla (ei uutta triggeriä).
+- Kierrätykset yhä tekemättä Opus 1/Opus 2/Sonnet 2:lle — tehdään
+  raporttien saapuessa erätauolla, ei kesken ajon.
