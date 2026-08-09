@@ -327,14 +327,19 @@
           k.append(el('p', 'pieni', m.henkilo));
           k.append(nimio('Kohtaaminen'));
           k.append(el('p', '', m.kohtaaminen));
-          k.append(nimio('Kysymys (pari kohtaamiselle)'));
-          k.append(el('p', '', m.kysymys.q));
-          const lista = el('ul', 'pieni');
-          m.kysymys.vaihtoehdot.forEach((v, i) => {
-            lista.append(el('li', '', i === m.kysymys.oikea ? `✓ ${v}` : v));
-          });
-          k.append(lista);
-          k.append(el('p', 'pieni', `Fakta: ${m.kysymys.fakta}`));
+          /* Suoja julkaisuikkunaa vastaan: jos data ja sivu ovat eri
+           * versiota (verkko-ensin voi hetken antaa ristiparin),
+           * puuttuva kysymys ei saa kaataa koko osiota tyhjäksi. */
+          if (m.kysymys) {
+            k.append(nimio('Kysymys (pari kohtaamiselle)'));
+            k.append(el('p', '', m.kysymys.q));
+            const lista = el('ul', 'pieni');
+            m.kysymys.vaihtoehdot.forEach((v, i) => {
+              lista.append(el('li', '', i === m.kysymys.oikea ? `✓ ${v}` : v));
+            });
+            k.append(lista);
+            k.append(el('p', 'pieni', `Fakta: ${m.kysymys.fakta}`));
+          }
           k.append(nimio('Aarre — päättyy henkilön avoimeen vihjeeseen'));
           k.append(el('p', '', m.aarre));
           return k;
