@@ -49364,6 +49364,188 @@ const KAUPUNKIKARTAT = {
       { nimi: 'Arsenaali', lat: 45.4348, lon: 12.3496, wiki: 'Arsenale' },
     ],
   },
+  rooma: {
+    polku: 'assets/kartat/rooma-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 41.9135, etela: 41.8845, lansi: 12.4455, ita: 12.5005 },
+    esittely: 'Rooma syntyi Tiberin mutkaan noin 25 kilometriä merestä '
+      + 'ylävirtaan, ja paikan valitsi joki. Keskellä virtaa on saari, '
+      + 'Isola Tiberina, joka jakaa uoman kahdeksi kapeaksi haaraksi. '
+      + 'Siinä kohtaa joen yli pääsi kahlaamalla, eikä toista yhtä '
+      + 'helppoa ylityspaikkaa ollut pitkään matkaan. Kahlaamon '
+      + 'ympärillä kohoaa seitsemän kukkulaa, ja niiden välinen suo '
+      + 'kuivattiin viemärillä nimeltä Cloaca Maxima. Kuivatusta '
+      + 'notkosta tuli Forum Romanum, kaupungin tori.\n\nKartalla Tiber '
+      + 'tulee alhaalta, tekee kaksi jyrkkää mutkaa ja poistuu '
+      + 'ylälaidasta. Vasemmalle puolelle jokea jää Vatikaani, '
+      + 'oikealle vanhakaupunki. Sen kujaverkko on niin sekava, että '
+      + 'muutamat suorat kadut erottuvat siitä heti — ne on puhkaistu '
+      + 'talojen läpi vasta myöhemmin. Oikeassa alalaidassa katuverkko '
+      + 'harvenee ja tilalle tulee antiikin alue: siellä ovat Forum ja '
+      + 'Colosseum. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi kulkee lännestä itään, eli samassa järjestyksessä
+       * kuin kävelijä ylittää joen ja etenee antiikin puolelle.
+       *
+       * Trevin wiki on fi.wikipedian kanoninen otsikko Fontana di
+       * Trevi; lehden nostossa on sama artikkeli ohjauksen kautta.
+       * Castel Sant’Angelossa on kaareva heittomerkki (U+2019) —
+       * suora heittomerkki antaa 404:n.
+       */
+      { nimi: 'Pietarinkirkko', lat: 41.9022, lon: 12.4534, wiki: 'Pietarinkirkko' },
+      { nimi: 'Castel Sant’Angelo', lat: 41.9031, lon: 12.4664, wiki: 'Castel Sant’Angelo' },
+      { nimi: 'Espanjalaiset portaat', lat: 41.9061, lon: 12.4828, wiki: 'Espanjalaiset portaat' },
+      { nimi: 'Trevin suihkulähde', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
+      { nimi: 'Pantheon', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
+      { nimi: 'Colosseum', lat: 41.8902, lon: 12.4922, wiki: 'Colosseum' },
+    ],
+  },
+  krakova: {
+    polku: 'assets/kartat/krakova-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 50.069, etela: 50.047, lansi: 19.9225, ita: 19.9585 },
+    esittely: 'Krakova kasvoi Veikselin rannalle kalkkikivikukkulan '
+      + 'juurelle. Kukkula on Wawel, ja se on täynnä reikiä: kalkkikiveen '
+      + 'on liuennut luolia, ja suurin niistä avautuu suoraan joen '
+      + 'rantaan. Sitä sanotaan Lohikäärmeen luolaksi. Kaupunki paloi '
+      + 'mongolien hyökkäyksessä vuonna 1241 ja rakennettiin uudestaan '
+      + '1257 kokonaan uudella kaavalla: suorakulmainen ruudukko, jonka '
+      + 'keskellä on kaksisataa metriä sivultaan oleva tori. Se on yhä '
+      + 'Euroopan suurimpia keskiaikaisia toreja.\n\nKartan keskellä '
+      + 'näkyy soikea vihreä kehä. Siinä kulki kaupunginmuuri, joka '
+      + 'purettiin 1820-luvulla, ja tilalle istutettiin puistovyö nimeltä '
+      + 'Planty. Muurista jätettiin pystyyn vain pohjoispää: Barbakaani '
+      + 'ja sen takana yksi portti. Kehän sisällä ovat ruudukko ja tori, '
+      + 'etelässä Wawelin kukkula joen mutkassa, ja siitä alas oikealle '
+      + 'Kazimierz, joka oli 1300-luvulta 1800-luvun alkuun oma '
+      + 'kaupunkinsa Krakovan vieressä. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään: Barbakaanilta Plantyn kehän
+       * läpi Wawelin kukkulalle ja siitä Kazimierziin.
+       *
+       * Kolmelta kohteelta puuttuu wiki tahallaan. Barbakaanista ei ole
+       * fi.wikipediassa omaa artikkelia — pelkkä Barbakaani kertoo
+       * linnoituslaitteesta yleensä eikä Krakovasta. Wawelin
+       * lohikäärmeestä ei ole artikkelia lainkaan, ja lehden nosto
+       * linkittää sen jo Wawelin linnaan; sama linkki kahdesti kartalla
+       * olisi harhaanjohtava. Collegium Maiuksen wiki osoittaa Jagellon
+       * yliopistoon, koska rakennuksesta itsestään ei ole artikkelia.
+       */
+      { nimi: 'Barbakaani', lat: 50.0655, lon: 19.9417 },
+      { nimi: 'Collegium Maius', lat: 50.0617, lon: 19.9337, wiki: 'Jagellon yliopisto' },
+      { nimi: 'Mariankirkko', lat: 50.0617, lon: 19.9392, wiki: 'Mariankirkko (Krakova)' },
+      { nimi: 'Wawelin linna', lat: 50.0544, lon: 19.9366, wiki: 'Wawelin linna' },
+      { nimi: 'Wawelin lohikäärme', lat: 50.053, lon: 19.9336 },
+      { nimi: 'Kazimierz', lat: 50.0517, lon: 19.9449, wiki: 'Kazimierz' },
+    ],
+  },
+  varsova: {
+    polku: 'assets/kartat/varsova-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
+    esittely: 'Varsova seisoo Veikselin länsirannalla keskellä Puolan '
+      + 'tasankoa. Veiksel on Puolan pisin joki, 1 047 kilometriä, eikä '
+      + 'siinä ole yhtään patoa. Kaupunki syntyi tähän kohtaan kahdesta '
+      + 'syystä. Länsirannalla kulkee jyrkkä törmä, jonka päältä näki '
+      + 'kauas ja jota oli helppo puolustaa, ja törmän alla oli hyvä '
+      + 'lastauspaikka: viljaa vietiin täältä lautoilla Itämerelle '
+      + 'asti. Vuonna 1596 kuningas siirsi hovinsa Krakovasta tänne, ja '
+      + 'kauppakaupungista tuli pääkaupunki.\n\nKartalla Veiksel tulee '
+      + 'ylhäältä ja kaartaa oikeaan alanurkkaan. Joki on tässä kohtaa '
+      + 'noin 350 metriä leveä, ja vedessä näkyy pitkiä hiekkasaaria: '
+      + 'kun jokea ei ole padottu, hiekka pääsee liikkumaan ja saaret '
+      + 'vaihtavat paikkaa. Ylhäällä vasemmalla erottuu vanhankaupungin '
+      + 'tiivis kujaverkko. Se rakennettiin sodan jälkeen uudelleen, ja '
+      + 'apuna käytettiin Bernardo Bellotton 1700-luvulla maalaamia '
+      + 'kaupunkinäkymiä: niistä laskettiin ikkunat ja koristeet '
+      + 'takaisin paikoilleen. Alhaalla vasemmalla aukeaa iso tyhjä '
+      + 'kenttä, ja sen keskellä seisoo Kulttuuri- ja tiedepalatsi, '
+      + 'Neuvostoliiton lahja vuodelta 1955. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään, eli Kuninkaantietä pitkin
+       * vanhastakaupungista Kulttuuri- ja tiedepalatsille.
+       *
+       * Nimet ovat Varsovan linna ja Varsovan kansallismuseo, koska
+       * pelkkä Kuninkaanlinna on jo Madridissa ja Tukholmassa ja
+       * Kansallismuseo Prahassa.
+       *
+       * Vanhankaupungin torista, Kopernikuksen tiedekeskuksesta ja
+       * kansallismuseosta ei ole fi.wikipediassa artikkelia. Puolan
+       * kansallismuseo on olemassa mutta kertoo museoverkostosta eikä
+       * tästä rakennuksesta — älä linkitä siihen.
+       */
+      { nimi: 'Vanhankaupungin tori', lat: 52.2498, lon: 21.0122 },
+      { nimi: 'Varsovan linna', lat: 52.2479, lon: 21.0152, wiki: 'Varsovan linna' },
+      { nimi: 'Kopernikuksen tiedekeskus', lat: 52.2419, lon: 21.0286 },
+      {
+        nimi: 'Pyhän ristin kirkko',
+        lat: 52.2387,
+        lon: 21.0168,
+        wiki: 'Pyhän ristin kirkko (Varsova)',
+      },
+      { nimi: 'Varsovan kansallismuseo', lat: 52.2317, lon: 21.0248 },
+      {
+        nimi: 'Kulttuuri- ja tiedepalatsi',
+        lat: 52.2318,
+        lon: 21.0062,
+        wiki: 'Kulttuurin ja tieteen palatsi',
+      },
+    ],
+  },
+  tallinna: {
+    polku: 'assets/kartat/tallinna-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
+    esittely: 'Tallinna on Suomenlahden etelärannalla, 80 kilometrin '
+      + 'päässä Helsingistä. Rannassa on suojaisa lahti, johon laivat '
+      + 'pääsevät tuulelta piiloon, ja aivan sen vieressä kohoaa '
+      + 'kalkkikivikallio Toompea. Kallion päälle rakennettiin linna ja '
+      + 'sen juurelle kauppiaiden kaupunki. Paikka oli keskellä '
+      + 'kauppatietä: Novgorodista tuleva turkis ja vaha vaihtoivat '
+      + 'täällä laivaa matkalla länteen. Tallinna liittyi hansaan '
+      + 'vuonna 1285, ja kauppa toi rahat, joilla muuri '
+      + 'rakennettiin.\n\nKartan yläreunassa on meri ja satama, jonka '
+      + 'laiturit työntyvät veteen kuin sormet. Sieltä lähtee lautta '
+      + 'Helsinkiin. Keskellä näkyy soikea rengas: siinä kulki '
+      + 'kaupunginmuuri. Sen sisään jäi 35 hehtaaria eli noin '
+      + 'viidenkymmenen jalkapallokentän verran maata, ja muurista on '
+      + 'yhä pystyssä 1,85 kilometriä ja 28 tornia. Renkaan sisällä '
+      + 'kadut mutkittelevat, ulkopuolella ne suoristuvat. Renkaan '
+      + 'vasemmassa laidassa on oma tasaisempi laikkunsa: se on '
+      + 'Toompean kallio, jonne alakaupungista nousee vain kaksi '
+      + 'katua. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään, lopuksi satama.
+       *
+       * Nimet ovat Raatihuoneentori ja Matkustajasatama, koska pelkkä
+       * Raatihuone on jo Wienissä ja Vanhasatama Marseillessa.
+       * Nevskin katedraali on lyhennetty selite: koko nimi on 30
+       * merkkiä eli pidempi kuin yksikään muu kartan kohde.
+       *
+       * Paksusta Margareetasta ja Virun portista ei ole
+       * fi.wikipediassa artikkelia. Ansa: pelkkä Raatihuoneentori on
+       * täsmennyssivu, joten linkki osoittaa raatihuoneeseen.
+       */
+      { nimi: 'Paksu Margareeta', lat: 59.4426, lon: 24.7496 },
+      { nimi: 'Olevisten kirkko', lat: 59.4413, lon: 24.7479, wiki: 'Olevisten kirkko' },
+      { nimi: 'Raatihuoneentori', lat: 59.4369, lon: 24.7453, wiki: 'Tallinnan raatihuone' },
+      {
+        nimi: 'Nevskin katedraali',
+        lat: 59.4357,
+        lon: 24.7393,
+        wiki: 'Aleksanteri Nevskin katedraali (Tallinna)',
+      },
+      { nimi: 'Virun portti', lat: 59.4365, lon: 24.7503 },
+      { nimi: 'Matkustajasatama', lat: 59.4448, lon: 24.7618, wiki: 'Tallinnan satama' },
+    ],
+  },
 };
 
 /*
@@ -122888,6 +123070,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 430, teksti: 'Kohdekartat Roomaan, Krakovaan, Varsovaan, Tallinnaan' },
   { v: 429, teksti: 'TV-napit Sveitsille (SRF) ja Virolle (ERR)' },
   { v: 428, teksti: 'Kohdekartat Lissaboniin, Barcelonaan ja Granadaan' },
   { v: 427, teksti: 'Kohdekartat Istanbuliin, Marseilleen, Edinburghiin' },
@@ -123400,7 +123583,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.429';
+const APP_VERSION = '2026-08-09.430';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
