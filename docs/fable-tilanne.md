@@ -25,6 +25,14 @@ ENSIN, sitten `CLAUDE.md`, `docs/roolitus.md`, `docs/isoisan-raamattu.md`,
   ovat jo matkalla tiimille — "Pysähdy" pysäyttää vain uudet Fablen
   ohjeet, ei jo annettuja seisovia ohjeita.
 
+## Omistajan linjaus 9.8.: laudat on jo tarkistettu
+
+Mantereiden kaupungit ja niiden paikat on tarkistettu jo aiemmin
+koko maailmassa — **niitä ei tarvitse varmistaa uudelleen.** Älä
+käytä aikaa lautojen kaupunkisijaintien uudelleentarkistuksiin
+(esim. piste-monikulmiossa-ajot); tarkista vain UUSI data jota
+peliin tuodaan, ei olemassa olevaa lautaa.
+
 ## Julkaisumekaniikka (törmäyksiä tulee jatkuvasti)
 
 - Main on **v436** (`matkakirja-2026-08-09.436`). Versiot `2026-08-09.NNN`.
