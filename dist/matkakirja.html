@@ -7290,6 +7290,18 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   visibility: hidden;
 }
 
+/*
+ * Vieritysvara sivunumeropillerille: pilleri on dialogin lapsi eikä
+ * vieri kortin mukana, joten pohjaan vieritetty sisältö (ETSI KÄTKÖ
+ * -nappi) jäi sen alle (omistajan palaute 10.8.2026: "Sivu saisi
+ * rullautua alemmas ... jotta sivunumerointi ei jäisi kätkö
+ * painikkeen päälle"). Lisäpehmuste vain kun pilleri on näkyvissä —
+ * yksisivuinen lehti ei tarvitse tyhjää häntää.
+ */
+.dialog.lehti:has(> .tutki-navi:not([hidden])) .dialog-card {
+  padding-bottom: 3.6rem;
+}
+
 .tutki-nuoli svg { width: 100%; height: 100%; display: block; }
 
 /* ── Isoisän sitaatit visassa ja aarteessa ────────────────────────
@@ -9208,6 +9220,50 @@ body.vertailu-tila .pawns { display: none; }
   font-family: var(--font-type);
   font-size: 0.68rem;
   color: rgba(70, 51, 31, 0.66);
+}
+
+/*
+ * Useamman kuvan karuselli (omistajan palaute 10.8.2026: lisäkuvat
+ * karuselliin, ei peräkkäin — sivu venyi liian pitkäksi). Nuolet ja
+ * laskuri kelluvat kuvan päällä samalla pergamenttipillerityylillä
+ * kuin lehden sivunumero, joten ne eivät kasvata kehyksen mittaa.
+ */
+.karuselli-ikkuna { position: relative; }
+
+.karuselli-nuoli {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.7rem;
+  height: 1.7rem;
+  min-height: 0;
+  padding: 0 0 0.15rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(246, 231, 198, 0.82);
+  color: rgba(70, 51, 31, 0.72);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.karuselli-nuoli:hover,
+.karuselli-nuoli:focus-visible { color: rgba(70, 51, 31, 0.98); }
+
+.karuselli-nuoli.vasen { left: 0.35rem; }
+.karuselli-nuoli.oikea { right: 0.35rem; }
+
+.karuselli-laskuri {
+  position: absolute;
+  right: 0.35rem;
+  bottom: 0.35rem;
+  padding: 0.08rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(246, 231, 198, 0.82);
+  color: rgba(70, 51, 31, 0.8);
+  font-family: var(--font-type);
+  font-size: 0.68rem;
 }
 
 /* Lähdemaininta ilman fi.wikipedian artikkelia: pelkkä teksti, ei
@@ -126579,8 +126635,19 @@ class UI {
    * Muotoilee koko artikkelin tekstin: MediaWiki extracts palauttaa
    * väliotsikot muodossa "== Otsikko ==", ja ne muutetaan omiksi
    * otsikkoriveiksi. Pelkkää tekstiä — HTML:ää ei upoteta.
+   *
+   * Artikkeli katkaistaan ensimmäiseen HÄNTÄOSASTOON (Lähteet, Katso
+   * myös, Aiheesta muualla…): explaintext riisuu viiteluettelot,
+   * linkkilistat ja galleriat, joten näistä osastoista jää jäljelle
+   * vain rivi tyhjiä otsikoita artikkelin perään (omistajan havainto
+   * 10.8.2026 Espanjalaisista portaista: "Tätä ei ole siistitty").
+   * Häntäosastot ovat Wikipediassa aina artikkelin lopussa, joten
+   * katkaisu ei vie asiasisältöä mukanaan. Lista kattaa molemmat
+   * hakukielet (WIKI_LANGS: fi ja en) — Colosseumin kaltaiset paikat
+   * ratkeavat englanninkieliseen artikkeliin.
    */
   renderArticle(container, text) {
+    const hanta = /^(katso myös|lähteet|viitteet|lähteet ja viitteet|kirjallisuutta?|aiheesta muualla|ulkoiset linkit|kuvia|kuvagalleria|galleria|huomautukset|aiheeseen liittyvää|see also|references|notes|footnotes|citations|sources|bibliography|further reading|external links|gallery)$/i;
     container.textContent = '';
     let para = [];
     const flush = () => {
@@ -126596,6 +126663,7 @@ class UI {
       const m = t.match(/^(={2,6})\s*(.+?)\s*={2,6}$/);
       if (m) {
         flush();
+        if (m[1].length <= 2 && hanta.test(m[2])) return;
         container.appendChild(html('p', m[1].length <= 2 ? 'wiki-h2' : 'wiki-h3', m[2]));
       } else {
         para.push(t);
@@ -128123,10 +128191,9 @@ class UI {
    * niiden nostossa gallerian sijaan tekstin joukossa 3-5"*).
    *
    * Taitto on lehtijutun taitto eikä galleriaselain: kappaleet ovat
-   * lyhyitä, ja kuvat ladotaan niiden VÄLIIN vuorotellen. Kuvien
-   * sijoittelu lasketaan kappalemäärästä, jotta ne jakautuvat tasan
-   * koko jutulle — kolme kuvaa kuudelle kappaleelle asettuu joka
-   * toiseen väliin, viisi kuvaa tiheämmin.
+   * lyhyitä, ja kuvat ovat yhdessä kehyksessä avauskappaleen jälkeen
+   * — useampi kuva karusellina (omistajan palaute 10.8.2026:
+   * peräkkäin ladottuina lisäkuvat venyttivät sivun liian pitkäksi).
    *
    * Vuosiluku on oma rivinsä otsikon yllä (omistajan toive: "käytä
    * vuosiluku korostuksia"), ja lainaus nostetaan kappaleiden väliin
@@ -128160,12 +128227,14 @@ class UI {
     const kappaleet = String(kohde.teksti ?? '').split('\n\n').filter(Boolean);
     const kuvat = (kohde.kuvat ?? []).slice(0, 5);
     /*
-     * Kuvien paikat: jaetaan kappaleiden välit tasan. Ensimmäinen kuva
-     * tulee heti avauskappaleen jälkeen, viimeinen ennen viimeistä
-     * kappaletta — juttu ei siis ala eikä lopu kuvaan.
+     * Useampi kuva näytetään KARUSELLINA yhden kehyksen sisällä
+     * (omistajan palaute 10.8.2026: peräkkäin ladottuina lisäkuvat
+     * venyttivät sivun liian pitkäksi). Kehys tulee heti
+     * avauskappaleen jälkeen — juttu ei ala eikä lopu kuvaan.
      */
-    const valit = Math.max(1, kappaleet.length - 1);
-    const paikat = kuvat.map((_, i) => 1 + Math.round((i * (valit - 1)) / Math.max(1, kuvat.length - 1)));
+    const kuvaKehys = kuvat.length > 1
+      ? this.nahtavyydenKaruselli(kuvat)
+      : (kuvat.length ? this.nahtavyydenKuva(kuvat[0]) : null);
     // Lainaus keskelle, kappaleiden puoliväliin.
     const lainauksenPaikka = kohde.lainaus ? Math.ceil(kappaleet.length / 2) : -1;
 
@@ -128179,17 +128248,11 @@ class UI {
         }
         sisalto.appendChild(lohko);
       }
-      for (const [j, kuva] of kuvat.entries()) {
-        if (paikat[j] !== i + 1) continue;
-        sisalto.appendChild(this.nahtavyydenKuva(kuva));
-      }
+      if (i === 0 && kuvaKehys) sisalto.appendChild(kuvaKehys);
     });
-    // Kuvat, joiden paikka jäi tekstin ulkopuolelle (lyhyt juttu):
-    // ladotaan loppuun, jottei yksikään katoa.
-    kuvat.forEach((kuva, j) => {
-      if (paikat[j] <= kappaleet.length) return;
-      sisalto.appendChild(this.nahtavyydenKuva(kuva));
-    });
+    // Kappaleeton juttu (ei pitäisi olla, mutta data voi yllättää):
+    // kuva ei saa kadota.
+    if (!kappaleet.length && kuvaKehys) sisalto.appendChild(kuvaKehys);
 
     // Jutun ensimmäinen kuva saa oman luokkansa: vaakana se levenee
     // koko palstalle, pystynä se pysyy pienenä (omistajan ohje).
@@ -128282,6 +128345,64 @@ class UI {
     if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
     if (kuva.lahde) teksti.appendChild(html('span', 'nahtavyys-lahde', kuva.lahde));
     kehys.appendChild(teksti);
+    return kehys;
+  }
+
+  /**
+   * Useamman kuvan karuselli nähtävyysjuttuun: yksi kuva kerrallaan
+   * samassa kehyksessä, nuolet ja "1/3"-laskuri päällä (omistajan
+   * palaute 10.8.2026: peräkkäin ladottuina lisäkuvat venyttivät
+   * sivun liian pitkäksi).
+   *
+   * Kuvaelementti luodaan joka vaihdolla UUTENA, koska
+   * varustaNostonKuva olettaa kertakäytön: se lisää elementille
+   * virhe- ja napautuskuuntelijat, jotka kasautuisivat samaa
+   * elementtiä kierrätettäessä (suurennos aukeaisi väärään kuvaan).
+   * Suuntaluokka (kuva-vaaka/pysty) lasketaan joka kuvalle load-
+   * hetkellä uudestaan, koska pysty- ja vaakakuvia voi olla sekaisin
+   * samassa jutussa.
+   */
+  nahtavyydenKaruselli(kuvat) {
+    const kehys = html('figure', 'nahtavyys-kuvakehys nahtavyys-karuselli');
+    const ikkuna = html('div', 'karuselli-ikkuna');
+    const teksti = html('figcaption', 'nahtavyys-kuvateksti');
+    let kohta = 0;
+    let el = null;
+
+    const nayta = (i) => {
+      kohta = (i + kuvat.length) % kuvat.length;
+      const kuva = kuvat[kohta];
+      kehys.classList.remove('kuva-vaaka', 'kuva-pysty');
+      const uusi = document.createElement('img');
+      uusi.className = 'nahtavyys-kuva kulttuuri-kuva-nappi';
+      uusi.addEventListener('load', () => {
+        if (uusi !== el || !uusi.naturalWidth || !uusi.naturalHeight) return;
+        kehys.classList.add(uusi.naturalWidth >= uusi.naturalHeight ? 'kuva-vaaka' : 'kuva-pysty');
+      });
+      this.varustaNostonKuva(uusi, kuva, 900);
+      if (el) el.replaceWith(uusi); else ikkuna.prepend(uusi);
+      el = uusi;
+      teksti.replaceChildren();
+      if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
+      if (kuva.lahde) teksti.appendChild(html('span', 'nahtavyys-lahde', kuva.lahde));
+      laskuri.textContent = `${kohta + 1}/${kuvat.length}`;
+    };
+
+    const nuoli = (luokka, merkki, siirto, nimi) => {
+      const nappi = html('button', `karuselli-nuoli ${luokka}`, merkki);
+      nappi.type = 'button';
+      nappi.setAttribute('aria-label', nimi);
+      nappi.addEventListener('click', () => nayta(kohta + siirto));
+      return nappi;
+    };
+    ikkuna.appendChild(nuoli('vasen', '‹', -1, 'Edellinen kuva'));
+    ikkuna.appendChild(nuoli('oikea', '›', 1, 'Seuraava kuva'));
+    const laskuri = html('span', 'karuselli-laskuri');
+    ikkuna.appendChild(laskuri);
+
+    kehys.appendChild(ikkuna);
+    kehys.appendChild(teksti);
+    nayta(0);
     return kehys;
   }
 
@@ -132175,6 +132296,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 475, teksti: 'Kuvakaruselli, lehteen vieritysvara, wikihännät pois' },
   { v: 474, teksti: 'Maakyltti nousi kaupunkien päälle, ankkurit mitattiin' },
   { v: 473, teksti: 'Kreeta, Sisilia ja Alpit saivat omat lehtensä' },
   { v: 472, teksti: 'Pylväspulman nimet vuororiveille, ei enää päällekkäin' },
@@ -132733,7 +132855,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.474';
+const APP_VERSION = '2026-08-09.475';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
