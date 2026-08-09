@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 440, teksti: 'Kaksikymmentäkolme sivua siirtyi maalehtiin' },
   { v: 439, teksti: 'Suomenlinna-kainalo kiinni oikeaan alanurkkaan' },
   { v: 438, teksti: 'Isot joet piirtyvät vetenä: Neva, Dnepr, Tonava' },
   { v: 437, teksti: 'Helsingin nähtävyysjuttuihin paremmat kuvat' },
