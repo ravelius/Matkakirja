@@ -5,8 +5,8 @@
  * KAARI_PAKETIT v2 (9.8.2026 ilta, omistajan palaute): kohtaaminen
  * ja visa yhdistetty yhdeksi kohtaamiseksi jonka päättää OIKEA
  * kysymys vaihtoehtoineen; aarre ja henkilön cliffhanger-vihje
- * yhdistetty; kaikki saapumista lukuun ottamatta selvästi lyhyempiä.
- * Saapumiset säilytetty edellisestä versiosta sellaisinaan
+ * yhdistetty. Kohtaamisia ja aarteita lyhennetty vielä lauseella
+ * (omistajan palaute 9.8. myöhäisilta). Saapumiset ennallaan
  * (omistaja: "Matkakirjan koetekstit ovat hyvät"). Vanhat versiot
  * git-historiassa. ÄLÄ generoi ääniä ennen omistajan hyväksyntää.
  */
@@ -33,8 +33,8 @@ export const KAARI_PAKETIT = {
         + 'kahdeksan kynttilä palaa, kunnes etsijä palaa.',
       kohtaaminen: 'Kujalla tikkaiden päällä seisoo lyhdynsytyttäjä Tomáš. '
         + '"Talon kahdeksan kynttilä on sukuni työ — isoisäsi maksoi '
-        + 'siitä sadaksi vuodeksi. Hän jätti kysymyksen sille, joka '
-        + 'tulee kysymään loppulaskua. Vastaa, niin lasku on sinun."',
+        + 'siitä sadaksi vuodeksi. Vastaa hänen kysymykseensä, niin '
+        + 'lasku on sinun."',
       kysymys: {
         q: 'Prahan tarun mukaan rabbi teki savesta vartijan, Golemin. '
           + 'Minne Golem kätkettiin, kun se lopulta sammutettiin?',
@@ -51,10 +51,9 @@ export const KAARI_PAKETIT = {
       },
       aarre: 'Kätkön päällä oli kynttilänpätkä, sydän vielä lämmin. '
         + 'Isoisän rivi: "Jos liekki paloi, kun tulit, en ollut '
-        + 'viimeinen etsijä." Tomáš sytyttää kynttilän uudelleen ja '
-        + 'sanoo: "Tilauksessa oli kaksi kynttilää. Toista en ole '
-        + 'löytänyt koskaan — tiedän vain, että se palaa jossain, missä '
-        + 'maa on lämmin."',
+        + 'viimeinen etsijä." Tomáš sytyttää kynttilän uudelleen: '
+        + '"Kynttilöitä oli tilauksessa kaksi — toinen palaa jossain, '
+        + 'missä maa on lämmin."',
     },
     {
       id: 'istanbul',
@@ -66,11 +65,10 @@ export const KAARI_PAKETIT = {
         + 'palamaan toinen valo, joka ei ollut minun.',
       henkilo: 'Vedenvartija Emine mittaa säiliön vettä, kuten sukunsa '
         + 'sulttaanien ajoista — ja tuntee molemmat kivikasvot.',
-      kohtaaminen: 'Portaiden alla vedenvartija Emine nostaa lyhtyään. "Sukuni '
-        + 'on mitannut tämän veden sulttaanien ajoista, ja kirjasi '
-        + 'omistaja istui isoisoäitini kanssa koko yön lukuja '
-        + 'vertaamassa. Hän jätti kysymyksen sinulle — vastaa, niin '
-        + 'soudan sinut kasvojen luo."',
+      kohtaaminen: 'Portaiden alla vedenvartija Emine nostaa lyhtyään. "Kirjasi '
+        + 'omistaja istui isoisoäitini kanssa koko yön vedenmittoja '
+        + 'vertaamassa. Vastaa hänen kysymykseensä, niin soudan sinut '
+        + 'kasvojen luo."',
       kysymys: {
         q: 'Säiliön pylvään alla lepää kivinen Medusan pää ylösalaisin. '
           + 'Miksi se tarun mukaan käännettiin?',
@@ -89,7 +87,7 @@ export const KAARI_PAKETIT = {
         + 'kivikasvoihin. Isoisän rivi: "Kasvot vartioivat tätä, koska '
         + 'pyysin kohteliaasti." Emine sanoo hiljaa: "Isoisoäitini '
         + 'kirjoitti mittauskirjaan, kumpi kasvoista on vartija ja '
-        + 'kumpi vanki. Joku on leikannut sen sivun irti."',
+        + 'kumpi vanki — joku on leikannut sen sivun irti."',
     },
     {
       id: 'wien',
@@ -102,9 +100,9 @@ export const KAARI_PAKETIT = {
       henkilo: 'Suntio Anton hoitaa holvien kynttilät ja saattajien kirjaa, '
         + 'jossa on sekä Horation että hänen isoisänsä nimi.',
       kohtaaminen: 'Holvien suulla suntio Anton nostaa kynttilänsammuttimen '
-        + 'olalleen. "Saattajien kirjassa on isoisäsi nimi. He '
-        + 'laskeutuivat kolmen lyhdyn kanssa, ja ylös palasi kaksi. Hän '
-        + 'jätti kysymyksen — vastaa, niin kerron, minne kolmas jäi."',
+        + 'olalleen. "Saattajien kirjassa on isoisäsi nimi: he '
+        + 'laskeutuivat kolmen lyhdyn kanssa, ja ylös palasi kaksi. '
+        + 'Vastaa hänen kysymykseensä, niin kerron, minne kolmas jäi."',
       kysymys: {
         q: 'Wien on valssin kaupunki. Montako iskua valssin yhteen '
           + 'tahtiin kuuluu?',
@@ -118,12 +116,10 @@ export const KAARI_PAKETIT = {
         fakta: 'Valssi soi kolmijakoisessa tahdissa: ensimmäinen isku on '
           + 'painava ja kaksi seuraavaa keveitä — siksi valssi keinuu.',
       },
-      aarre: 'Kätkön päällä seisoi kolmas lyhty, lasi yhä lämmin. Isoisän '
-        + 'rivi: "Jätin valon tänne, koska luut eivät sitä tarvitse, '
-        + 'mutta etsijä tarvitsee." Anton puhuu portaita kohti: "Veto '
-        + 'tulee ovesta, jota ei minun aikanani ole avattu. Isoisäsi '
-        + 'kirjoitti kirjaan vain yhden lauseen: sinne ei mennä '
-        + 'alakautta."',
+      aarre: 'Kätkön päällä seisoi kolmas lyhty, lasi yhä lämmin. Anton '
+        + 'puhuu portaita kohti: "Veto tulee ovesta, jota ei ole avattu '
+        + 'minun aikanani — isoisäsi kirjoitti kirjaan vain: sinne ei '
+        + 'mennä alakautta."',
     },
     {
       id: 'venetsia',
@@ -137,8 +133,8 @@ export const KAARI_PAKETIT = {
         + 'tilauskirjassa on vuosi 1873 ja nimikirjaimet H. F.',
       kohtaaminen: 'Pajassa naamiontekijä Lucia tunnistaa linnunnokan yhdellä '
         + 'vilkaisulla. "Tuo on pajamme työtä — tilauskirjassa lukee '
-        + '1873 ja nimikirjaimet H. F. Tilauksen väliin on taitettu '
-        + 'kysymys. Vastaa, niin luen tilauksen loppuun."',
+        + '1873 ja nimikirjaimet H. F. Vastaa väliin taitettuun '
+        + 'kysymykseen, niin luen tilauksen loppuun."',
       kysymys: {
         q: 'Miksi ruttolääkärin naamiossa on pitkä linnunnokka?',
         vaihtoehdot: [
@@ -155,9 +151,9 @@ export const KAARI_PAKETIT = {
       aarre: 'Kätkö nousi kanaalista, ja naamio jäi kellumaan kasvot '
         + 'ylöspäin. Isoisän rivi: "Käännä vartija kasvot alaspäin — '
         + 'niin seuraava etsijä tietää, että joku ehti ensin." Lucia '
-        + 'sulkee tilauskirjan: "Naamioita oli kaksi. Viime keväänä '
-        + 'joku palautti toisen pajaan — jätti vain maksun ja lapun, '
-        + 'jossa oli pelkkä ilmanpaineen lukema."',
+        + 'sulkee tilauskirjan: "Naamioita oli kaksi — viime keväänä '
+        + 'joku palautti toisen ja jätti vain lapun, jossa oli pelkkä '
+        + 'ilmanpaineen lukema."',
     },
     {
       id: 'budapest',
@@ -170,9 +166,9 @@ export const KAARI_PAKETIT = {
       henkilo: 'Kylpymestari Márta on kylpylän vanhin kylvettäjä; hänen '
         + 'isoisoäitinsä opetti Horatiolle lämpimän seinän säännön.',
       kohtaaminen: 'Kylpylän ovella kylpymestari Márta koskettaa kirjan kantta '
-        + 'kuin vanhaa tuttua. "Isoisoäitini vei kirjasi omistajan '
-        + 'linnan alle ja opetti hänelle säännön, jolla sieltä '
-        + 'palataan. Sääntö on sinun, kun vastaat hänen kysymykseensä."',
+        + 'kuin vanhaa tuttua. "Isoisoäitini opetti kirjasi omistajalle '
+        + 'säännön, jolla linnan alta palataan — sääntö on sinun, kun '
+        + 'vastaat hänen kysymykseensä."',
       kysymys: {
         q: 'Labyrintin seinät ovat lämpimät kuin iho. Mikä lämmittää '
           + 'Budapestin maanalaiset käytävät?',
@@ -188,11 +184,10 @@ export const KAARI_PAKETIT = {
           + 'linnanalaisen labyrintin seinät.',
       },
       aarre: 'Kätkö odotti lämpimän seinän takana, höyryn peitossa. '
-        + 'Isoisän rivi: "Pyyhi merkkini pois, kun olet ulkona — meidän '
-        + 'jälkemme saa päättyä tähän." Portilla Márta sanoo: "Niin '
-        + 'pyyhki isoisoäitinikin. Silti risti on aamulla aina '
-        + 'seinässä, ja liitu on aina samaa — valkoista, kuin '
-        + 'ensimmäisellä kerralla."',
+        + 'Isoisän rivi: "Pyyhi merkkini pois — meidän jälkemme saa '
+        + 'päättyä tähän." Portilla Márta sanoo: "Niin pyyhki '
+        + 'isoisoäitinikin, ja silti risti on aamulla aina seinässä — '
+        + 'liitu aina samaa valkoista."',
     },
   ],
 };
