@@ -1,6 +1,6 @@
 # Opus 2 — tilanne kontekstin nollausta varten
 
-Päivitetty 9.8.2026, main v439.
+Päivitetty 9.8.2026, main v457.
 
 ## Kuka ja miten
 
@@ -16,7 +16,14 @@ tarinamateriaali vain Fablen kautta.
 
 ## Mikä on valmista
 
-- **Maakartat (MAAKARTAT): Eurooppa valmis**, 30 maata.
+- **Maakartat (MAAKARTAT): Eurooppa valmis**, 30 maata. **Lähi-itä
+  valmis** (v457): ARE, OMN, KWT, QAT, SAU, YEM, CYP, SYR, IRQ, IRN —
+  TUR ja EGY palvelevat laudalla jo Euroopan ja Afrikan puolelta,
+  koska MAAKARTAT on avaimennettu ISO-koodilla eikä laudoittain.
+- **`js/packs/middleeast-countries.js` on olemassa mutta EI KYTKETTY
+  lautaan** (v444). Kytkentä on kaksi riviä `middleeast.js`:ään, ja se
+  tehdään vasta Fablen luvalla, kun Lähi-idän maalehdet ovat olemassa
+  — muuten i-nappi avaisi olemattoman lehden.
 - **Kaupunkikartat (KAUPUNKIKARTAT): 31/31 valmis** (v433, PR #614).
   Isot joet täyttyvät vetenä v438 (PR #633): Dnepr, Neva ja Tonava
   piirtyvät nyt vetenä eivätkä paljaina rantaviivoina.
@@ -72,28 +79,36 @@ mergattuun mainiin.
 
 ## Mitä seuraavaksi
 
-**Eurooppa-jononi on tyhjä** (#629:n kolme tehtävää tehty: jokikorjaus
-v438, tv-siivous #634, Lähi-idän muistio). Odota Fablen tehtävänantoa
-äläkä aloita Lähi-itää omin päin — se on Fablen nimenomainen ohje.
+**Jononi on tyhjä.** Eurooppa valmistui #629:n kolmella tehtävällä ja
+Lähi-idän maakartat v457:ssä. Odota Fablen tehtävänantoa äläkä aloita
+mitään omin päin — se on Fablen nimenomainen ohje.
 
-Kun Lähi-itä aikanaan alkaa, Fablen päätökset ovat:
+Tiedossa olevat seuraavat askeleet, kaikki Fablen luvan takana:
 
-- **`middleeast-countries.js` kuuluu minulle** (maiden lautamuodot +
-  kaupunki→maa-taulu). Se on PAKOLLINEN ENNEN maalehtiä: Lähi-idän
-  laudalla ei ole `countryShapes`- eikä `cityCountry`-taulua, ja juuri
-  niistä ui.js johtaa `MAAKARTAT[iso]`-haun. Ilman niitä maakartta olisi
-  kuollutta dataa, johon laudalta ei pääse.
-- **Dubain kaupunkilehti on ykköspilotti** (kolmas aloituskaupunki,
-  ainoa ilman omaa lehteä). Yksi kaupunki ensin, sitten vasta erä.
+- **Dubain kaupunkikartta odottaa Opus 1:n Dubai-lehteä.** Sääntö on
+  "ei karttaa ilman lehteä", eikä sitä rikota. Dubai on kolmas
+  aloituskaupunki ja ainoa ilman omaa lehteä.
+- **`middleeast-countries.js`:n kytkentä lautaan** (kaksi riviä
+  `middleeast.js`:ään) vasta kun Lähi-idän maalehdet ovat olemassa:
+  Lähi-idän laudalla ei ole `countryShapes`- eikä `cityCountry`-taulua,
+  ja juuri niistä ui.js johtaa `MAAKARTAT[iso]`-haun. Ennen lehtiä
+  kytkentä avaisi i-napista olemattoman lehden.
 - **Jerusalem on erikoiskohde ilman maa-attribuutiota** (kaanonpäätös).
   Sama esitystapa tulee Petralle, Siinaille, Rub al-Khalille,
   Persepolisille ja Kappadokialle — ne eivät ole kaupunkeja, ja
   katuverkkokartta niistä olisi tyhjää paperia. Fable suunnittelee
   esitystavan tarinapuolen kanssa.
 
-Työkalu itse on valmis Lähi-idän leveysasteille: ainoa leveysasteesta
-riippuva kohta on `kuvasuhde()`:n cos(keskileveys). Testaamatta on
-OSM:n aineistotiheys Jemenin, Irakin ja Iranin kaupungeissa.
+Kaupunkikarttatyökalu on valmis Lähi-idän leveysasteille: ainoa
+leveysasteesta riippuva kohta on `kuvasuhde()`:n cos(keskileveys).
+Testaamatta on OSM:n aineistotiheys Lähi-idän kaupungeissa.
+
+**Maakarttojen työtapa on nyt kirjattu itse koodiin**
+(`js/packs/maakartat.js`, MAAKARTAT-taulun otsikkokommentti): rajat
+haetaan aina itse `Module:Location map/data/<Maa>`-sivulta ENNEN kuin
+tutkimusagentin raporttia luetaan, ne ristiinvarmistetaan kuvasuhteesta
+ja pisteet todennetaan lopuksi pelin omalla `karttapiste()`-funktiolla
+kuvan päälle piirrettynä. Lue se kommentti ennen seuraavaa maakarttaa.
 
 Muu mahdollinen työ: **rakennusten piirto**. Ilman sitä kainalokartta
 kohteesta, jonka ympärillä ei ole katuverkkoa, on tyhjä paperi
