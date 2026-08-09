@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 446, teksti: 'Helsingin visa kysyy nyt Linnanmäen jarrumestarista' },
   { v: 445, teksti: 'Vaihe B valmis: viimeiset neljä kaupunkia' },
   { v: 444, teksti: 'Lähi-idän maiden rajat valmiina lautaa varten' },
   { v: 443, teksti: 'Suomen lehti kuntoon: Sävel-sivu ja omat menovinkit' },
