@@ -1,0 +1,39 @@
+# Kuvaduplikaattien vaihtolista (Sonnet 1:n QA 9.8.2026, Fable päätti)
+
+Sonnet 1 kävi kaikki kahdesti esiintyvät kuvat läpi lukemalla molemmat
+esiintymisyhteydet. Fablen päätös: alla olevat 17 vaihdetaan (toinen
+esiintymä saa uuden kuvan), Las Meninas JÄÄ (kuva on itse taideteos,
+josta molemmat tekstit puhuvat — vaihtokuvaa ei ole olemassa), Gizan
+pyramidit JÄÄ (eri ominaisuus: lehden kansi vs. päivän kuva -palsta).
+
+Tekijä: Opus 1, valokuvarajatapausten erän yhteydessä (sama työtapa:
+jokainen korvaaja katsotaan silmällä 480 px:ssä, PD/CC ja peilaus).
+Vaihda se esiintymä, jonka yhteyteen löytyy luonteva toinen kuva —
+yleensä valokuvat.js/kategoriat-puolen "uusi"/"lisät"-kenttä, jotta
+kulttuurinoston kuratoitu kuva säilyy.
+
+1. Assekremin huiput — africa-kulttuuri.js:674 / africa-valokuvat.js:1227
+2. Paluuttoman portti, Benin — africa-kulttuuri.js:836 / africa-valokuvat.js:363
+3. Tšadjärven kalastaja — africa-kulttuuri.js:917 / maasto-tekstit.js:433
+   (syntyi #652:n korjauksen sivuvaikutuksena)
+4. Sossusvlein dyynit — africa-kulttuuri.js:1044 / africa-valokuvat.js:948
+5. Big Hole, Kimberley — africa-kulttuuri.js:1164 / africa-valokuvat.js:533
+6. Ilha de Moçambique — africa-kulttuuri.js:1205 / africa-valokuvat.js:1260
+7. Kirahvi Nairobin siluetilla — africa-kulttuuri.js:1589 / africa-valokuvat.js:1083
+8. Khan el-Khalili -basaari — africa-valokuvat.js:59 / nahtavyysjutut.js:367
+9. Pyhän Katariinan luostari, Siinai — asia-valokuvat.js:1554 / maakartat.js:66
+10. Härkähyppy-fresko, Kreeta — europe-kulttuuri.js:230 / europe-valokuvat.js:481
+11. Brunost-juusto — europe-kulttuuri.js:1182 / europe-valokuvat.js:2434
+12. Rossion aukion aaltokivetys — europe-valokuvat.js:1088 / maa-kategoriat.js:6589
+13. Széchényin kylpylän shakki — europe-valokuvat.js:1575 / kulttuuri-kategoriat.js:3190
+14. Arsenalnan liukuportaat, Kiova — europe-valokuvat.js:1747 / kulttuuri-kategoriat.js:4086
+15. Eremitaasin kissa — europe-valokuvat.js:1933 / kulttuuri-kategoriat.js:4248
+16. Muhammad Alin moskeija — kulttuuri-kategoriat.js:255 / nahtavyysjutut.js:341
+17. Brandenburgin portti — kulttuuri-kategoriat.js:985 / nahtavyysjutut.js:87
+
+Rivinumerot ovat v452:n (HEAD ed11bc3) mukaiset — tarkista grep'llä
+tiedostonimen mukaan, rivit ovat voineet siirtyä.
+
+Matala prioriteetti (ei kuvanvaihtoa): js/packs/maasto-tekstit-malli.js
+on käyttämätöntä koodia (vain kommenttiviite maasto-tekstit.js:ssä) —
+siivousaihe joskus.
