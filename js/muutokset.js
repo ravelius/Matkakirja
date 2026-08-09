@@ -13,6 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 424, teksti: 'Helsingille kohdekartta ja Suomenlinna kainaloon' },
+  { v: 424, teksti: 'Kaukokohteet takaisin kartoille pikkukarttana' },
+  { v: 424, teksti: 'Meri piirtyy vetenä eikä pelkkänä rantaviivana' },
   { v: 423, teksti: 'Poistu-nappi himmeämmäksi, suuntanapit keskitetty' },
   { v: 422, teksti: 'Radio kartan ylle, liitelinkki pois päiväyksen päältä' },
   { v: 421, teksti: 'Kohdekartta Ateenaan, Amsterdamiin ja Dubliniin' },

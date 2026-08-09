@@ -1547,6 +1547,63 @@ export const MAAKARTAT = {
  * vasemmalle puolelle, kun oikealla olisi ahdasta.
  */
 export const KAUPUNKIKARTAT = {
+  helsinki: {
+    polku: 'assets/kartat/helsinki-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 60.184, etela: 60.1545, lansi: 24.916, ita: 24.9835 },
+    /*
+     * Kainalokartta Suomenlinnasta. Se on lehden historiaosion
+     * pääkohde eikä mahdu mihinkään järkevään päärajaukseen — 3 km
+     * kaakkoon. Ruutu on sijoitettu kuvan kaakkoiskulman avomerelle,
+     * eli se peittää samalla sen alueen, jossa muuten olisi vähiten
+     * katsottavaa, ja se on oikea suunta.
+     */
+    kainalot: [
+      { rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
+        x: 66, y: 68, leveys: 22, korkeus: 28.85 },
+    ],
+    esittely: 'Helsinki ei ole aina ollut tässä. Kustaa Vaasa perusti '
+      + 'sen vuonna 1550 Vantaanjoen suulle Tallinnan kilpailijaksi, '
+      + 'mutta satama oli matala, ja vuonna 1640 koko kaupunki '
+      + 'siirrettiin runsaat viisi kilometriä etelämmäs Vironniemen '
+      + 'kärkeen. Niemellä on merta kolmella sivulla, ja edustalla on '
+      + 'saaria ja matalikkoja, joiden välistä laiva pääsee vain '
+      + 'kapeita väyliä pitkin. Siksi Ruotsi alkoi 1748 rakentaa '
+      + 'väylän suulle merilinnoitusta. Kun Venäjän keisari valitsi '
+      + 'Helsingin pääkaupungiksi vuonna 1812, linnoitus oli jo '
+      + 'valmiina.\n\nKartalla niemi näkyy kokonaan. Idässä työntyy '
+      + 'mereen Katajanokka, joka oli ennen kiinni mantereessa; nyt '
+      + 'sen erottaa kaivettu kanava, jonka yli kulkee neljä siltaa. '
+      + 'Väliin jää Eteläsatama, jonka perukassa on Kauppatori. '
+      + 'Ylhäällä oleva lahti on Töölönlahti — se näyttää järveltä, '
+      + 'mutta on merenlahti, jonka rautatiepenger sulkee: veden ainoa '
+      + 'tie mereen kulkee penkereen ali kapeana väylänä. Penkereeltä '
+      + 'etelään levittäytyy kartan levein raita, ratapiha, joka '
+      + 'päättyy päärautatieasemaan. Rata loppuu siihen: junat '
+      + 'peruuttavat ulos. Oikeassa alanurkassa on oma pieni kartta '
+      + 'Suomenlinnasta. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Lännestä itään ja lopuksi etelään. Kauppatori jätettiin pois
+       * vaikka se mahtuisi: se olisi kasannut kolmannen numeron
+       * Senaatintorin ja Katajanokan väliin. Se mainitaan esittelyssä
+       * nimeltä, ja silakkamarkkinat ovat lehdessä omana nostonaan.
+       *
+       * Kallion kirkko jää 22 metriä pohjoisrajan ulkopuolelle. Rajaa
+       * ei nostettu, koska 60,187 olisi vaatinut 4,3 km leveän kuvan
+       * ja työntänyt niemen kärjen alalaitaan.
+       */
+      { nimi: 'Temppeliaukion kirkko', lat: 60.1731, lon: 24.9253, wiki: 'Temppeliaukion kirkko' },
+      { nimi: 'Päärautatieasema', lat: 60.1719, lon: 24.9414, wiki: 'Helsingin päärautatieasema' },
+      { nimi: 'Kaisaniemen puisto', lat: 60.1747, lon: 24.9458, wiki: 'Kaisaniemen puisto' },
+      { nimi: 'Tuomiokirkko', lat: 60.1703, lon: 24.9522, wiki: 'Helsingin tuomiokirkko' },
+      { nimi: 'Uspenskin katedraali', lat: 60.1683, lon: 24.96, wiki: 'Uspenskin katedraali' },
+      { nimi: 'Johanneksenkirkko', lat: 60.1618, lon: 24.9447, wiki: 'Johanneksenkirkko (Helsinki)' },
+      // Kainalossa oikeassa alanurkassa.
+      { nimi: 'Suomenlinna', lat: 60.1472, lon: 24.9864, wiki: 'Suomenlinna' },
+    ],
+  },
   ateena: {
     polku: 'assets/kartat/ateena-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

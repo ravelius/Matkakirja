@@ -181,6 +181,31 @@ const KAUPUNGIT = {
     // mahdu millään ydinkeskustarajauksella.
     rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
   },
+  helsinki: {
+    // Kuvan pääpiirre on NIEMI: ydinkeskusta on kolmelta sivulta veden
+    // ympäröimä kielike, ja rajaus on vedetty niin että koko kielike
+    // mahtuu sisään. Idässä Katajanokka työntyy kokonaan mereen,
+    // pohjoisessa Töölönlahti sulkeutuu ehjänä renkaana, etelässä
+    // Kaivopuiston ranta sulkee alalaidan.
+    //
+    // Itäreunaa EI saa siirtää Korkeasaareen asti: silloin oikeasta
+    // kolmanneksesta tulee lähes pelkkää avovettä.
+    //
+    // Kolme lehden kohdetta jää alle puolen kilometrin päähän reunasta
+    // mutta eri suuntiin: Sibelius-monumentti lännessä, Linnanmäki ja
+    // Kotiharjun sauna pohjoisessa. Yksikään venytys ei saa niitä
+    // kaikkia sisään ilman että kuva paisuu yli neljän kilometrin.
+    rajat: { pohjoinen: 60.184, etela: 60.1545, lansi: 24.916, ita: 24.9835 },
+    meri: true,
+    kainalot: [
+      {
+        // Rajaus mitattu OSM:n rantaviivoista: eteläreuna 60.1368 on
+        // valittu niin, ettei Kustaanmiekan kärki katkea.
+        rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
+        x: 66, y: 68, leveys: 22, suunta: '3 km kaakkoon', meri: true,
+      },
+    ],
+  },
   lontoo: {
     // Hyde Parkin itälaidalta Tower Bridgelle, Regent's Parkin
     // eteläpuolelta Thamesin etelärannalle. Kaikki kuusi kohdetta
@@ -512,6 +537,26 @@ function merenTaytto(ketjut, r) {
       .sort((x, y) => ala(x) - ala(y));
     return ehdokkaat.length ? [ehdokkaat[0]] : [];
   });
+  /*
+   * PELKKIÄ SAARIA: jos rajauksen sisällä on suljettuja
+   * rantaviivarenkaita muttei yhtään avointa rantaa, koko rajaus on
+   * merta ja renkaat ovat saaria sen keskellä. Silloin vesi on
+   * "kaikki paitsi saaret", eli pohjaksi tulee koko laatikko.
+   *
+   * Tämä on Suomenlinnan kainalon tapaus: linnoitussaaret ovat
+   * keskellä merta, eikä mantereen rantaa ole ruudussa lainkaan.
+   * Ilman tätä haaraa kainalo jäi paperiksi, jossa kellui muutama
+   * ääriviiva. Sääntö on turvallinen, koska OSM:n rantaviiva
+   * ympäröi aina maata: suljettu rengas ON saari.
+   */
+  if (!renkaat.length && saaret.length) {
+    renkaat.push([
+      { lat: r.pohjoinen, lon: r.lansi },
+      { lat: r.pohjoinen, lon: r.ita },
+      { lat: r.etela, lon: r.ita },
+      { lat: r.etela, lon: r.lansi },
+    ]);
+  }
   return { renkaat, saaret };
 }
 
@@ -625,7 +670,13 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
       nauhaksi();
     } else {
       const { renkaat, saaret } = merenTaytto(ketjutaSuunnassa(rantaviivat), rajat);
-      const pintaAla = renkaat.reduce((summa, rengas) => summa + renkaanAla(rengas), 0);
+      /*
+       * Näkyvä vesi = meri miinus saaret. Ero on olennainen
+       * pelkkien saarten tapauksessa (Suomenlinnan kainalo), jossa
+       * meri on koko laatikko mutta iso osa siitä on saarten alla.
+       */
+      const pintaAla = renkaat.reduce((summa, rengas) => summa + renkaanAla(rengas), 0)
+        - saaret.reduce((summa, saari) => summa + renkaanAla(saari), 0);
       if (!renkaat.length || pintaAla > laatikonAla * 0.85) {
         if (renkaat.length) {
           console.log(`  VAROITUS: meri peittäisi ${Math.round((pintaAla / laatikonAla) * 100)} %`
