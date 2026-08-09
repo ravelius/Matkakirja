@@ -8753,9 +8753,21 @@ export class UI {
   piirraMinitehtava(kohde, kategoria) {
     const { tehtava } = kategoria;
     const cityId = this.arrivalShownFor;
+    /*
+     * Maalehden aihe erotellaan maatunnuksella. Ilman sitä avain on
+     * pakka:kaupunki:aihe, ja koska maan lehden saa auki kartalta
+     * mistä tahansa (v390), Prahassa seisova pelaaja olisi voinut
+     * ratkaista Tšekin Historian ja sitten Saksan Historia-sivu olisi
+     * ollut "jo ratkaistu" — eri maa, sama aihetunnus, sama kaupunki.
+     * Kaupunki jää avaimeen, joten maan aihesivu palkitsee yhä
+     * uudestaan saman maan toisessa kaupungissa.
+     */
+    const aiheAvain = this.tutkiTila === 'maa' && this.tutkiMaaLehti
+      ? `${this.tutkiMaaLehti}:${kategoria.id}`
+      : kategoria.id;
     const laatikko = html('div', 'minitehtava');
     laatikko.appendChild(html('p', 'minitehtava-otsikko', 'Lehden minitehtävä'));
-    const avain = `${this.game.pack.id}:${cityId}:${kategoria.id}`;
+    const avain = `${this.game.pack.id}:${cityId}:${aiheAvain}`;
     if (this.game.minitehtavatVastatut?.has(avain)) {
       /*
        * "Tämän SIVUN", ei "tämän lehden": palkkioavain on
@@ -8780,7 +8792,7 @@ export class UI {
       nappi.addEventListener('click', () => {
         const oikein = i === tehtava.oikea;
         const vastaus = this.game.actionMinitehtava(
-          cityId, kategoria.id, oikein, MINITEHTAVA_PALKKIO,
+          cityId, aiheAvain, oikein, MINITEHTAVA_PALKKIO,
         );
         if (!vastaus.ok) return;
         vaihtoehdot.replaceChildren();
