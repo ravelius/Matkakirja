@@ -51,10 +51,9 @@ export const KAARI_PAKETIT = {
           + '— portaat ullakolle purettiin, ettei kukaan pääsisi '
           + 'katsomaan.',
       },
-      aarre: 'Kätkön päällä oli kynttilänpätkä, sydän yhä lämmin. Tomáš '
-        + 'sytytti sen uudelleen: "Kynttilöitä oli tilauksessa kaksi — '
-        + 'toinen palaa jossain, missä maa on lämmin." Jäin miettimään: '
-        + 'kuka vartioi sitä toista?',
+      aarre: 'Tomáš sytytti kynttilänpätkän uudelleen: "Niitä oli '
+        + 'tilauksessa kaksi — toinen palaa jossain, missä maa on '
+        + 'lämmin." Jäin miettimään: kuka vartioi sitä toista?',
     },
     {
       id: 'istanbul',
@@ -84,10 +83,9 @@ export const KAARI_PAKETIT = {
           + 'ylösalaisin käännettynä katse painuu maahan. Toinen pää '
           + 'makaa kyljellään samasta syystä.',
       },
-      aarre: 'Kätkö nousi vedestä köyden päässä, ja valo osui '
-        + 'kivikasvoihin. Emine sanoi hiljaa: "Isoisoäitini kirjoitti '
-        + 'kirjaan, kumpi kasvoista on vartija ja kumpi vanki — joku on '
-        + 'leikannut sen sivun irti."',
+      aarre: 'Kun kätkö nousi vedestä, Emine sanoi hiljaa: "Isoisoäitini '
+        + 'kirjoitti kirjaan, kumpi kasvoista on vartija ja kumpi vanki '
+        + '— joku on leikannut sen sivun irti."',
     },
     {
       id: 'wien',
@@ -116,10 +114,9 @@ export const KAARI_PAKETIT = {
         fakta: 'Valssi soi kolmijakoisessa tahdissa: ensimmäinen isku on '
           + 'painava ja kaksi seuraavaa keveitä — siksi valssi keinuu.',
       },
-      aarre: 'Kätkön päällä seisoi kolmas lyhty, lasi yhä lämmin. Anton '
-        + 'puhui portaita kohti: "Veto tulee ovesta, jota ei minun '
-        + 'aikanani ole avattu — ja kirjassa lukee vain: sinne ei mennä '
-        + 'alakautta."',
+      aarre: 'Kätkön päällä seisoi kolmas lyhty, ja Anton puhui portaita '
+        + 'kohti: "Veto tulee ovesta, jota ei minun aikanani ole avattu '
+        + '— kirjassa lukee vain: sinne ei mennä alakautta."',
     },
     {
       id: 'venetsia',
@@ -148,11 +145,9 @@ export const KAARI_PAKETIT = {
           + 'kukilla, joiden uskottiin puhdistavan hengitysilman. '
           + 'Naamiosta tuli myöhemmin karnevaalin tunnus.',
       },
-      aarre: 'Kätkö nousi kanaalista, ja naamio jäi kellumaan kasvot '
-        + 'ylöspäin. Lucia sulki tilauskirjan: "Joku palautti toisen '
-        + 'naamion viime keväänä — jätti vain lapun, jossa oli '
-        + 'ilmanpaineen lukema." Barometrilukema. Aivan kuin isoisän '
-        + 'kirjassa.',
+      aarre: 'Lucia sulki tilauskirjan: "Joku palautti toisen naamion '
+        + 'viime keväänä — jätti vain lapun, jossa oli ilmanpaineen '
+        + 'lukema." Barometrilukema, aivan kuin isoisän kirjassa.',
     },
     {
       id: 'budapest',
@@ -182,10 +177,9 @@ export const KAARI_PAKETIT = {
           + 'täyttää kaupungin kuuluisat kylpylät — ja lämmittää '
           + 'linnanalaisen labyrintin seinät.',
       },
-      aarre: 'Kätkö odotti lämpimän seinän takana, höyryn peitossa. '
-        + 'Portilla Márta sanoi: "Isoisoäitinikin pyyhki merkin — silti '
+      aarre: 'Portilla Márta sanoi: "Isoisoäitinikin pyyhki merkin — silti '
         + 'risti on aamulla aina seinässä, aina samaa valkoista '
-        + 'liitua." Katsoin taakseni vielä portilta. Käytävä oli tyhjä.',
+        + 'liitua." Katsoin vielä taakseni: käytävä oli tyhjä.',
     },
   ],
 };
