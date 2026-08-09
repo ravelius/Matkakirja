@@ -9783,6 +9783,11 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Suomenlinna — merilinnoitus kuudella saarella',
+              tiedosto: 'Suomenlinna, submarine Vesikko.jpg',
+              selite: 'Sukellusvene Vesikko nostettuna Suomenlinnan '
+                + 'rantakalliolle. Punapohjainen runko erottuu vihreän saaren '
+                + 'edessä, ja takana näkyy linnoituksen muuria.',
+              lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
               teksti: 'Lautta lähtee Kauppatorilta ja kuuluu Helsingin '
                 + 'joukkoliikenteeseen, joten sinne pääsee samalla lipulla '
                 + 'kuin ratikkaan. Saarilla on tykkejä, tunneleita, '
@@ -9791,6 +9796,10 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Korkeasaaren eläintarha — eläimet omalla saarellaan',
+              tiedosto: 'Snow leopard in Korkeasaari Zoo.jpg',
+              selite: 'Lumileopardi lepää katolla Korkeasaaressa. Vaaleaa turkkia '
+                + 'kirjovat tummat täplät, ja edessä roikkuu vaahteranoksa.',
+              lahde: 'Annika Sorjonen / Korkeasaari Zoo, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Yksi maailman pohjoisimmista eläintarhoista, perustettu '
                 + '1889. Lajivalinta on kylmän puolelta: lumileopardi, '
                 + 'myskihärkä ja metsäpeura tarkenevat ulkona ympäri vuoden.',
@@ -9798,6 +9807,10 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Seurasaaren ulkomuseo — vanha Suomi yhdellä saarella',
+              tiedosto: 'Seurasaari Open-Air Museum - panoramio.jpg',
+              selite: 'Vanha keltainen puutalo Seurasaaressa iltavalossa. Kuistin '
+                + 'edessä on kiviportaat, ja takana siintää meren lahti.',
+              lahde: 'Tevfik Teker, Wikimedia Commons (CC BY 3.0)',
               teksti: 'Ympäri maata siirrettyjä taloja: pappila, tuulimylly, '
                 + 'savupirtti ja 1600-luvun kirkko. Saarella asuu myös '
                 + 'oravia, jotka tulevat kädestä syömään.',
@@ -9810,6 +9823,10 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Norppalive — saimaannorppa suorana kuvana',
+              tiedosto: 'Pusa hispida saimensis 304551354.jpg',
+              selite: 'Saimaannorppa makaa rantakivellä. Tumma turkki on täynnä '
+                + 'vaaleaa rengaskuviota, ja takana kasvaa korkeaa kaislaa.',
+              lahde: 'Linda Lötjönen, Wikimedia Commons (CC BY 4.0)',
               teksti: 'WWF:n kamera osoittaa Saimaan kalliolle, jolla norpat '
                 + 'köllöttelevät auringossa. Lähetys on käynnissä kesäisin, '
                 + 'ja parhaat hetket ovat aamulla. Saimaannorppia on '
@@ -9818,6 +9835,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Heureka — tiedekeskus, jossa saa koskea',
+              tiedosto: 'Science centre Heureka in Tikkurila, Vantaa, Finland, 2022 June.jpg',
+              selite: 'Heurekan vaalea rakennus Tikkurilassa kesäiltana. Pyöreä '
+                + 'planetaariosiipi kohoaa oikealla, ja sisäänkäynnille '
+                + 'johtaa suora kivetty käytävä.',
+              lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY 4.0)',
               teksti: 'Vantaalla oleva tiedekeskus, jonka laitteita on '
                 + 'tarkoitus käyttää itse. Ulkona on Galilei-puisto ja '
                 + 'sisällä planetaario.',
@@ -9825,6 +9847,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Ateneum — kokoelma verkossa ja paikan päällä',
+              tiedosto: 'Art museum Ateneum in Kluuvi, Helsinki, Finland, 2014.jpg',
+              selite: 'Ateneumin julkisivu Rautatientorin laidalla. Vaalean '
+                + 'kivitalon seinällä on suuria näyttelyjulisteita, ja aukion '
+                + 'poikki kävelee ihmisiä.',
+              lahde: 'Kansallisgalleria / Yehia Eweis, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Suomen tunnetuimmat maalaukset, muun muassa Gallen-Kallelan '
                 + 'Kalevala-aiheet ja Edelfeltin muotokuvat. Kokoelmaa voi '
                 + 'selata verkossa ennen käyntiä tai sen sijaan.',
@@ -9832,6 +9859,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Oodi — kirjasto, jossa on ompelukone ja studio',
+              tiedosto: 'Central Library Oodi in Helsinki 02.jpg',
+              selite: 'Oodin sisäänkäynti puisen aaltoilevan katon alla. '
+                + 'Lasiseinän takana näkyy kirjaston valoja, ja edessä kulkee '
+                + 'ihmisiä talvitakeissa.',
+              lahde: 'Ninaras, Wikimedia Commons (CC BY 4.0)',
               teksti: 'Helsingin keskustakirjastossa lainataan kirjojen lisäksi '
                 + 'soittimia, työkaluja ja pelikonsoleita. Ylin kerros on '
                 + 'lasiseinäinen ja sinne saa mennä ilman asiaa.',
@@ -9839,6 +9871,10 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Luontoportti — lajit tunnistettavaksi',
+              tiedosto: 'Grat Tit (52398676319).jpg',
+              selite: 'Talitiainen istuu oksalla metsässä. Keltainen rinta, musta '
+                + 'kaulanauha ja valkoinen poski erottuvat selvästi.',
+              lahde: 'yrjö jyske, Wikimedia Commons (CC BY 2.0)',
               teksti: 'Kuvahaku, jolla selvittää mikä kukka, puu, lintu tai '
                 + 'kala on kyseessä. Toimii myös metsässä puhelimella, jos '
                 + 'verkko kuuluu.',
