@@ -3906,6 +3906,94 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Privozin tori', lat: 46.4699, lon: 30.7368 },
     ],
   },
+  oslo: {
+    polku: 'assets/kartat/oslo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
+    esittely: 'Oslo on vuonon perukassa. Oslovuono työntyy merestä '
+      + 'noin sata kilometriä sisämaahan, ja kaupunki on sen '
+      + 'pohjoisimmassa päässä, siinä missä vesi loppuu ja metsäiset '
+      + 'kukkulat alkavat. Metsä ei ole kaukana: kaupungin pohjoisosista '
+      + 'pääsee raitiovaunulla suoraan Nordmarkaan, joka on suurempi '
+      + 'kuin koko rakennettu kaupunki. Keskusta on rakennettu '
+      + 'suoraviivaiseksi ruuduksi 1600-luvulla, kun vanha puukaupunki '
+      + 'oli palanut ja Tanskan kuningas Kristian IV käski rakentaa '
+      + 'uuden linnoituksen suojaan — kaupunki kantoi hänen nimeään '
+      + 'Kristianiana aina vuoteen 1925.\n\nKartalla vuono on '
+      + 'vasemmalla alhaalla ja kaupunki kiertyy sen ympärille. '
+      + 'Keskustan kadut ovat suoria ja risteävät suorassa kulmassa, '
+      + 'mikä erottaa Oslon Tallinnan tai Vilnan kaltaisista '
+      + 'keskiaikaisista kaupungeista. Yksi katu kulkee vinosti muiden '
+      + 'poikki: se on Karl Johans gate, joka vie kuninkaanlinnalta '
+      + 'tuomiokirkolle ja rautatieasemalle. Niemellä sataman kupeessa '
+      + 'näkyy tumma vallirengas — Akershusin linnoitus, joka on '
+      + 'seisonut paikallaan 1300-luvulta. Oopperatalo on veden '
+      + 'toisella puolella oikealla, ja sen katolle voi kävellä. '
+      + 'Lehden laivamuseot eli viikinkilaiva, Fram ja Kon-Tiki ovat '
+      + 'Bygdøyn niemellä kolme ja puoli kilometriä lännessä, kartan '
+      + 'ulkopuolella. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * VIIDELLÄ KUUDESTA ON PAIKAN OMA WIKI — kartaston paras
+       * osuus, ja se kertoo enemmän fi.wikipediasta kuin Oslosta.
+       * Kuninkaanlinnasta ei ole artikkelia millään kokeillulla
+       * nimellä.
+       */
+      { nimi: 'Kuninkaanlinna', lat: 59.9169, lon: 10.7275 },
+      { nimi: 'Karl Johans gate', lat: 59.9139, lon: 10.74, wiki: 'Karl Johans gate' },
+      { nimi: 'Oslon tuomiokirkko', lat: 59.9128, lon: 10.7442, wiki: 'Oslon tuomiokirkko' },
+      { nimi: 'Kaupungintalo', lat: 59.912, lon: 10.7335, wiki: 'Oslon kaupungintalo' },
+      { nimi: 'Akershusin linnoitus', lat: 59.9075, lon: 10.7365, wiki: 'Akershusin linnoitus' },
+      { nimi: 'Oopperatalo', lat: 59.9075, lon: 10.7522, wiki: 'Oslon oopperatalo' },
+    ],
+  },
+  kobenhavn: {
+    polku: 'assets/kartat/kobenhavn-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 55.6945, etela: 55.669, lansi: 12.5555, ita: 12.6116 },
+    esittely: 'Kööpenhamina on satamakaupunki kahden saaren välissä. '
+      + 'Vanha kaupunki on Sjællandin puolella ja sen vastarannalla on '
+      + 'Amager, ja niiden välissä kulkee satamakanava, jota pitkin '
+      + 'laivat pääsevät kaupungin läpi. Nimi tarkoittaa '
+      + 'kauppasatamaa. Kaupunki on hyvin matala — korkeimmat asiat '
+      + 'ovat kirkontornit — ja se on rakennettu veden ehdoilla: '
+      + 'kanavia on kaivettu lisää sinne, missä niitä tarvittiin, ja '
+      + 'vanhat vallihaudat ovat nykyään järviä keskellä kaupunkia. '
+      + 'Isoisän matkan aikaan Kööpenhaminassa asui jo yli sata tuhatta '
+      + 'ihmistä, ja kaupungin ympäriltä oli juuri purettu muurit, '
+      + 'jotka olivat estäneet sitä kasvamasta.\n\nKartalla kanava '
+      + 'kulkee ylhäältä alas oikeanpuoleisen kolmanneksen halki. '
+      + 'Vasemmalla ovat pitkulaiset järvet, jotka ovat entisiä '
+      + 'vallihautoja, ja niiden ja kanavan välissä on vanha kaupunki '
+      + 'kapeine katuineen. Oikeassa yläkulmassa erottuu tähden '
+      + 'muotoinen linnoitus vallihautoineen: se on Kastellet, ja sen '
+      + 'takana rannalla istuu Pieni merenneito. Kanavan itäpuolella '
+      + 'on Christianshavn, jonka omat kanavat näkyvät suorina '
+      + 'juovina — se rakennettiin hollantilaiseen tapaan kaivamalla. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * AMALIENBORG ON ANSA. fi.wikipedian `Amalienborg` EI ole
+       * Tanskan kuninkaanlinna vaan ruotsalainen panimo
+       * (Amalienborg Aktiebolags Bryggeri). Linnasta ei ole
+       * artikkelia, joten kohde on pelkkä merkki. Älä linkitä.
+       *
+       * `Pieni merenneito` yksinään on satu; patsaasta kertoo
+       * `Pieni merenneito (patsas)`, ja kohde tarkoittaa patsasta.
+       */
+      // Patsas istuu kivellä vedessä; piste on rantapromenadilla,
+      // jotta se osuu maalle (vesitarkistin).
+      { nimi: 'Pieni merenneito', lat: 55.6926, lon: 12.5989, wiki: 'Pieni merenneito (patsas)' },
+      { nimi: 'Amalienborg', lat: 55.6841, lon: 12.5934 },
+      { nimi: 'Rundetårn', lat: 55.6813, lon: 12.5757, wiki: 'Rundetårn' },
+      // Nyhavn on kanava, ja kuuluisa osa on pohjoisen laiturin
+      // värikkäät talot — piste on laiturilla eikä vedessä.
+      { nimi: 'Nyhavn', lat: 55.6802, lon: 12.59, wiki: 'Nyhavn' },
+      { nimi: 'Christiansborgin linna', lat: 55.6761, lon: 12.5797, wiki: 'Christiansborgin linna' },
+      { nimi: 'Tivoli', lat: 55.6737, lon: 12.5681 },
+    ],
+  },
   dubrovnik: {
     polku: 'assets/kartat/dubrovnik-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

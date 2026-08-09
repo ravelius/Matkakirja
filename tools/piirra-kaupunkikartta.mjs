@@ -21,6 +21,12 @@
  * ydinkeskustan kuuluisimmat kohteet (n. 5–8 km leveä alue — laajempi
  * muuttuu puuroksi). Aja työkalu ja KATSO kuva silmin ennen käyttöä.
  *
+ * KATSO MYÖS VASEN ALAKULMA. Lehti piirtää sinne mittakaavajanan
+ * (ui.js), eikä työkalu tiedä siitä mitään. Kööpenhaminassa Tivolin
+ * numeroympyrä osui janan päälle, ja se korjattiin laskemalla
+ * rajauksen eteläreunaa. Kuva kannattaa siis katsoa lehdessä eikä
+ * vain tiedostona.
+ *
  * TARKISTA PISTEET VIELÄ ERIKSEEN:
  *   node tools/tarkista-karttapisteet.mjs <kaupunki>
  * Se lukee valmiista PNG:stä pikselin värin jokaisesta kohteesta ja
@@ -379,6 +385,37 @@ const KAUPUNGIT = {
     // vasemman reunan yli. Łazienki, POLIN ja kansannousun museo
     // osoittavat kolmeen muuhun suuntaan.
     rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
+  },
+  oslo: {
+    // Vuonon peruka ja sen ympärille kiertyvä keskusta: kuninkaanlinna
+    // ylhäällä, Karl Johans gate siitä alas kohti tuomiokirkkoa,
+    // Akershusin linnoitus niemellä ja oopperatalo veden toisella
+    // puolella idässä. Satama-altaat jäävät väliin, ja juuri ne
+    // tekevät Oslosta Oslon.
+    //
+    // Bygdøyn laivamuseot (viikinkilaiva, Fram, Kon-Tiki) jäävät
+    // tahallaan pois: ne ovat 3,5 km lännessä, ja mukaan ottaminen
+    // kolminkertaistaisi rajauksen. Lehden laivaosasto kertoo niistä,
+    // ja kartan esittely sanoo, mihin suuntaan ne jäävät.
+    rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
+    meri: true,
+  },
+  kobenhavn: {
+    // Satamakanava halkoo kuvan pohjois–eteläsuunnassa: vasemmalla
+    // vanha kaupunki Tivolista Rundetårniin, oikealla Christianshavn
+    // ja Amager. Pohjoisreuna on valittu niin, että Pieni merenneito
+    // mahtuu mukaan — se on 1,5 km keskustasta pohjoiseen, ja ilman
+    // sitä kartalta puuttuisi se, mitä lapsi ensimmäisenä etsii.
+    //
+    // meri: 'maa' eikä true — koeajo tavallisella täytöllä varoitti
+    // meren peittävän 113 % rajauksesta eli valinneen väärän puolen.
+    // Kööpenhaminassa maata on kanavan molemmin puolin, joten täyttö
+    // osuu oikein vasta käännettynä.
+    // Eteläreuna 55.669 eikä 55.672: Tivolin numeroympyrä osui
+    // muuten mittakaavajanan päälle kuvan vasemmassa alakulmassa
+    // (mitattu selaimessa).
+    rajat: { pohjoinen: 55.6945, etela: 55.669, lansi: 12.5555, ita: 12.6116 },
+    meri: 'maa',
   },
   dubrovnik: {
     // Muurikaupunki kokonaan kuvassa: Pilen portti lännessä,
