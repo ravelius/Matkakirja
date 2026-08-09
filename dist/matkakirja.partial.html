@@ -73833,11 +73833,20 @@ const KAARI_PAKETIT = {
     {
       id: 'sarajevo',
       otsikko: 'Sarajevo — kaivo joka kutsuu takaisin',
+      /*
+       * QA-korjaus 9.8.2026 (Sonnet 1): torilla EI ollut kaivoa 1873 —
+       * vanha Sebilj paloi 1852 ja nykyinen rakennettiin vasta 1891.
+       * Isoisä kuulee siksi PALANEEN kaivon tarinan sepältä; nykyhetken
+       * kohtaaminen, visa ja aarre koskevat torilla tänään seisovaa
+       * kaivoa, joten ne pysyvät ennallaan.
+       */
       saapuminen: 'Basaarin kujat soivat: sepät takoivat kuparia, ja jokainen '
-        + 'vasara löi omaa tahtiaan. Torin keskellä puinen kaivo '
-        + 'tarjosi vettä, ja vanha seppä sanoi: joka tästä juo, palaa '
-        + 'vielä kaupunkiin. Join. Kupissa, jonka hän ojensi, oli '
-        + 'pohjassa kaksi kaiverrettua kirjainta, jotka tunnen: H. F.',
+        + 'vasara löi omaa tahtiaan. Vanha seppä kertoi torin '
+        + 'kaivosta, joka oli palanut ennen hänen aikaansa: joka siitä '
+        + 'joi, palasi vielä kaupunkiin. Kaivoa ei enää ole, sanoin. '
+        + 'Tarina ei palanut, seppä vastasi ja ojensi kupin vettä. '
+        + 'Kupin pohjassa oli kaksi kaiverrettua kirjainta, jotka '
+        + 'tunnen: H. F.',
       henkilo: 'Kupariseppä Emir takoo kannuja ja kuppeja kujalla, jolla '
         + 'hänen sukunsa paja on soinut kolmesataa vuotta.',
       kohtaaminen: 'Pajan ovella Emir kääntelee kuparilevyä pihdeissään. '
@@ -93075,8 +93084,8 @@ const MAASTO_TEKSTIT = {
           tiedosto: 'Waving fisherman on Lake Chad (detilt).jpg',
           selite: 'Kalastaja tervehtii veneestään Tšadjärvellä kaislikon '
             + 'laidassa. Järvi on täynnä matalia salmia ja ruokosaaria — '
-            + 'juuri sitä avoveden ja niittymaan vaihtelua, josta '
-            + 'Barthille kerrottiin.',
+            + 'juuri sitä avoveden ja niittymaan vaihtelua, josta Barthille '
+            + 'kerrottiin.',
           lahde: 'Cooltho, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -94227,10 +94236,9 @@ const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Rio Madeira- Cachoeira do Teotônio.jpg',
-          selite: 'Teotônion koski Madeirassa ennen patoja: vaalea '
-            + 'lietevesi kuohuu, ja kalastajakylä seisoo paaluillaan '
-            + 'aivan kosken partaalla. Tällaisten koskien ohi kumi '
-            + 'piti kantaa maitse.',
+          selite: 'Teotônion koski Madeirassa ennen patoja: vaalea lietevesi '
+            + 'kuohuu, ja kalastajakylä seisoo paaluillaan aivan kosken '
+            + 'partaalla. Tällaisten koskien ohi kumi piti kantaa maitse.',
           lahde: 'Wilson Dias / Agência Brasil, Wikimedia Commons (CC BY 3.0 BR)',
         },
         {
@@ -129055,6 +129063,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 463, teksti: 'Sarajevon merkintä korjattu: kaivon tarina, ei kaivo' },
   { v: 462, teksti: 'Maastotekstien mallitiedoston kommentti oikeaksi' },
   { v: 461, teksti: 'Tanskalle ja Islannille omat aihesivut' },
   { v: 460, teksti: 'Tarinakaari pelissä: kohtaamiset ja vihjeet Euroopassa' },
@@ -129599,7 +129608,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.462';
+const APP_VERSION = '2026-08-09.463';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
