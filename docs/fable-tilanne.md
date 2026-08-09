@@ -27,7 +27,10 @@ ENSIN, sitten `CLAUDE.md`, `docs/roolitus.md`, `docs/isoisan-raamattu.md`,
 
 ## Julkaisumekaniikka (törmäyksiä tulee jatkuvasti)
 
-- Main on **v431** (`matkakirja-2026-08-09.431`). Versiot `2026-08-09.NNN`.
+- Main on **v436** (`matkakirja-2026-08-09.436`). Versiot `2026-08-09.NNN`.
+  Tuoreimmat: Opus 1:n neljä maalehteä + Helsinki/Suomi-siirto (v435, #599),
+  Sonnet 2:n Ateena/Amsterdam/Dublin-nähtävyysjutut (v436, #624; korvasi
+  vanhentuneen #611:n). `git fetch origin main` silti aina ennen numeroa.
 - Opus 2 julkaisee karttoja tiheään → versionumerotörmäykset ovat sääntö.
   `git fetch origin main` **juuri ennen** numeron valintaa. Jos oma haara
   vanhentuu: tallenna omat lähdemuutokset patchina,
@@ -103,27 +106,33 @@ repliikki jää auki ja vie eteenpäin. Suunnittele paketti tämä kärkenä.
   lyhyt tunnelma-/kielivideo (kevyet ~5–15 MB kelpaa; raskaat korvattava).
   Ei toteutettu.
 
-## Tiimin tila (ks. myös js/tyohuone-tilanne.js)
+## Tiimin tila — KAIKKI CLEARATTU 9.8.2026
 
-- **Opus 1:** vaihe B (lehtitasapaino, `docs/lehtitasapaino.md`) käynnissä.
-  Päätökset: Helsinki/Suomi ensin; Madrid Urheilu + Venetsia Käsityö
-  SÄILYTETÄÄN; Lontoo luonto→Britannia + nykytaide 6→4; valokuvien
-  rajatapaukset KORJATAAN KAIKKI. v420 valokuva-auditti tehty.
-- **Opus 2:** kohdekartat 24/31 (v430 Rooma/Krakova/Varsova/Tallinna).
-  Jäljellä 7: Kiova, Pietari, Moskova, Sofia, Bukarest, Sarajevo, Odessa.
-  Merentäyttö 3 varianttia (nauha/vesipuoli/maapuoli). Istanbul = 2
-  maanosaa.
-- **Sonnet 2:** nähtävyysjutut. Live: mm. Praha/Wien/Budapest/Pariisi
-  (v426) ja **Helsinki (v431, #604) — LIVE, "Helsinki valmis" kerrottu
-  omistajalle**. Ateena/Amsterdam/Dublin valmis PR #611 (odottaa mergeä).
-  Seuraavaksi Opus 2:n uudet kartat.
-  - **Wiki-ansat Sonnet 2:lle** myöhempiin juttuihin: fi-wiki
-    "Neitsyttorni" = Bakun torni (Istanbulin = Kız Kulesi); fi-wiki
-    "Belém" = Brasilian kaupunki (Lissabonin = kaupunginosa).
-- **Sonnet 1:** loppu-QA-brief kesken.
+Koko tiimi (Opus 1, Opus 2, Sonnet 1, Sonnet 2) clearattiin samaan
+aikaan kanssani. **Yllä olevan taulukon sessio-ID:t ovat vanhentuneet
+— tiimiläiset saavat clearissa uudet ID:t.** Kun tiimiläinen raportoi
+ensimmäisen kerran, hän kertoo uuden ID:nsä — päivitä se taulukkoon ja
+käytä triggereissä. Kunkin oma tilannekuva on mainissa; lue ne kun
+tarvitset yksityiskohdat:
 
-## Avoin lupaa vailla (omistaja sanoi "Pysähdy")
+- **Opus 1** (lehdet/rakenne) → `docs/opus1-tilanne.md`. Viimeksi
+  mainissa: neljä maalehteä (Turkki/Irlanti/Portugali/Unkari) + vaiheen
+  B ensimmäinen siirto Helsinki/Suomi (v435, #599). Vaihe B kesken
+  (`docs/lehtitasapaino.md`).
+- **Opus 2** (kartat) → `docs/opus2-tilanne.md`. Kohdekartat: v430
+  mennessä 24/31. Jäljellä oli 7: Kiova, Pietari, Moskova, Sofia,
+  Bukarest, Sarajevo, Odessa (osa saattoi valmistua ennen clearia —
+  `git log origin/main`). Istanbul = 2 maanosaa.
+- **Sonnet 2** (nähtävyysjutut) → `docs/sonnet2-tilanne.md`. Live:
+  Praha/Wien/Budapest/Pariisi (v426), Helsinki (v431), Ateena/
+  Amsterdam/Dublin (v436). Seuraavaksi Opus 2:n uudet kartat.
+  - **Wiki-ansat:** fi-wiki "Neitsyttorni" = Bakun torni (Istanbulin =
+    Kız Kulesi); fi-wiki "Belém" = Brasilian kaupunki (Lissabonin =
+    kaupunginosa).
+- **Sonnet 1** (QA) → `docs/sonnet-tilanne.md`. Loppu-QA-brief kesken.
 
-- **PR #611** (Ateena/Amsterdam/Dublin nähtävyysjutut, v432) odottaa
-  mergeä — kysy lupa ennen ajoa.
-- Älä lähetä triggereitä, julkaise tai mergeä ilman uutta lupaa.
+## Avoin lupaa vailla
+
+- Älä lähetä triggereitä, julkaise tai mergeä ilman omistajan lupaa —
+  hän ohjaa tahdin. (Vanhat avoimet PR:t #611/#599 on jo hoidettu:
+  #599 merged, #611 korvattu #624:llä ja suljettu.)
