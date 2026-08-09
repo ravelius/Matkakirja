@@ -227,13 +227,14 @@ export const OCEANIA_VALOKUVAT = {
       },
     ],
     uusi: {
-      tiedosto: 'Birdsville Hotel.jpg',
+      tiedosto: 'Birdsville Pub (34616985520).jpg',
       vuosi: '2007',
-      lahde: 'Stuart Edwards, Commons (PD)',
-      selite: 'Birdsville Hotel jouluaamuna. Päädyn kilvessä lukee 1884, ja '
-        + 'taustalla näkyy kylän lentokenttä pienkoneineen; asukkaita on '
-        + 'muutamia kymmeniä, mutta syyskuun hevoskilpailut tuovat paikalle '
-        + 'tuhansia.',
+      lahde: 'NomadicPics from cairns, australia, Wikimedia Commons (CC BY 2.0)',
+      selite: 'Matala valkoinen hotellirakennus leveine kuistikatoksineen '
+        + 'autiomaakylän hiljaisen pääkadun varrella hämärän aikaan. Katolla '
+        + 'liehuu Australian lippu, täysikuu nousee sen takana ja ikkunoista '
+        + 'hohtaa lämmin valo, kun taustalla tasainen aavikko jatkuu '
+        + 'horisonttiin.',
     },
   },
   brisbane: {
@@ -1167,13 +1168,12 @@ export const OCEANIA_VALOKUVAT = {
       },
     ],
     uusi: {
-      tiedosto: 'VU-portvila-hafen-1.jpg',
+      tiedosto: 'Port Vila waterfront, Vanuatu, 2 June 2006 - Flickr - PhillipC.jpg',
       vuosi: '2019',
-      lahde: 'Balou46, Commons (CC BY-SA 4.0)',
-      selite: 'Port Vilan satama nykyään. Vanuatu itsenäistyi vuonna 1980 ja '
-        + 'lopetti sata vuotta jatkuneen kaksoishallinnon; kaupungissa '
-        + 'puhutaan yhä sekä englantia että ranskaa, ja yhteinen kieli on '
-        + 'bislama.',
+      lahde: 'Phillip Capper, Commons (CC BY 2.0)',
+      selite: 'Näkymä yli suojaisan sataman: kymmeniä purjeveneitä ja pieniä '
+        + 'työveneitä poijuissa, ja takana rantakadun matalat toimisto- ja '
+        + 'hotellirakennukset nousevat rinteeseen tiheän viidakon keskelle.',
     },
   },
   sepik: {

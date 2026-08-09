@@ -126,6 +126,32 @@ const KAIKKI_SAAPUMISET = {
   ...NORTHAMERICA_SAAPUMISET, ...SOUTHAMERICA_SAAPUMISET, ...OCEANIA_SAAPUMISET,
 };
 const KAIKKI_KULTTUURI = { ...AFRICA_KULTTUURI, ...EUROPE_KULTTUURI };
+/*
+ * Kohteet, joita ei kysytä valokuvakysymyksessä.
+ *
+ * Kysymys on "Mikä paikka valokuvassa on?", joten kuvan on esitettävä
+ * paikkaa. Näiltä neljältä ei löydy Commonsista yhtään vapaasti
+ * lisensoitua paikkakuvaa, joka täyttäisi vaatimuksen:
+ *
+ *   rashafun, sanambrosio  Asumattomia ja käytännössä saavuttamattomia.
+ *                          Kaikki riittävän suuret tiedostot ovat
+ *                          satelliittikuvia tai karttoja, ja
+ *                          satelliittikuva näyttää lapsen silmin
+ *                          kartalta, ei valokuvalta paikasta.
+ *   alkufra, bahrelghazal  Kelvolliset paikkakuvat ovat vuosilta 1930
+ *                          ja 1958. Ne kelpaisivat kysymykseen, mutta
+ *                          uusi-kenttä on postikortin NYKYPUOLI, ja
+ *                          vanha vedos siinä rikkoisi ennen–nyt-parin.
+ *                          Kohteiden omat kuvat jäävät siis ennalleen,
+ *                          ja ne vain jäävät pois kysymyksestä.
+ *
+ * Postikortit ja kuvapinot käyttävät näiden kohteiden kuvia yhä —
+ * rajaus koskee vain valokuvakysymystä.
+ */
+const EI_VALOKUVAKYSYMYKSEEN = new Set([
+  'rashafun', 'sanambrosio', 'alkufra', 'bahrelghazal',
+]);
+
 const KAIKKI_VALOKUVAT = {
   ...AFRICA_VALOKUVAT, ...EUROPE_VALOKUVAT, ...ASIA_VALOKUVAT, ...ASIA_LISAT_VALOKUVAT,
   ...NORTHAMERICA_VALOKUVAT, ...SOUTHAMERICA_VALOKUVAT, ...OCEANIA_VALOKUVAT,
@@ -5968,6 +5994,7 @@ export class UI {
     if (!this.photoPools.has(pack.id)) {
       const kuvat = new Map();
       for (const c of pack.cities) {
+        if (EI_VALOKUVAKYSYMYKSEEN.has(c.id)) continue;
         const valokuva = KAIKKI_VALOKUVAT[c.id];
         /*
          * Nykykuva ensin: kysymys on "mikä paikka tämä on", ja

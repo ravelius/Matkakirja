@@ -181,11 +181,11 @@ export const NORTHAMERICA_VALOKUVAT = {
       },
     ],
     uusi: {
-      tiedosto: 'The Chicago Theater (48353771986).jpg',
-      lahde: 'Thank You (Flickr), Commons (CC BY 2.0)',
-      selite: 'Chicago Theatren valokyltti State Streetillä, samalla kadulla kuin '
-        + 'vanha kuva. Elokuvateatteri valmistui 1921, ja sen kyltti on '
-        + 'jäänyt kaupungin tunnusmerkiksi.',
+      tiedosto: 'Chicago Skyline 2022 3.jpg',
+      lahde: 'Sea Cow, Wikimedia Commons (CC BY-SA 4.0)',
+      selite: 'Chicagon pilvenpiirtäjärivistö Michiganjärven rannalla. Etualalla '
+        + 'aallonmurtajien suojaama venesatama ja rantapuisto, taustalla '
+        + 'keskustan tornit Willis Towerin antenneineen.',
     },
   },
   churchill: {
@@ -1278,13 +1278,13 @@ export const NORTHAMERICA_VALOKUVAT = {
       },
     ],
     uusi: {
-      tiedosto: 'Castillo San Cristobal - panoramio (7).jpg',
+      tiedosto: 'Castillo San Felipe del Morro, Puerto Rico.jpg',
       vuosi: '2014',
-      lahde: 'socaltraveler, Commons (CC BY-SA 3.0)',
-      selite: 'Sama San Cristóbal nykyään. Vallit ovat pystyssä ja niiden päällä '
-        + 'kuljetaan kävellen; linnoitus kuuluu Unescon '
-        + 'maailmanperintöluetteloon ja sitä hoitaa Yhdysvaltain '
-        + 'kansallispuistovirasto.',
+      lahde: 'Breezy Baldwin, Commons (CC BY 2.0)',
+      selite: 'Castillo San Felipe del Morron linnoitus San Juanin niemen '
+        + 'kärjessä, edessään laaja nurmikenttä, jolla kaupunkilaiset '
+        + 'lennättävät leijoja. Muurin päällä näkyvä valkoinen majakka on '
+        + 'rakennettu vanhan espanjalaisen linnakkeen ylimmälle vallille.',
     },
   },
   santafe: {
@@ -1547,13 +1547,13 @@ export const NORTHAMERICA_VALOKUVAT = {
       },
     ],
     uusi: {
-      tiedosto: 'Winnipeg skyline and WINNIPEG sign at The Forks, Manitoba, Canada.jpg',
+      tiedosto: 'Winnipeg Esplanade Riel Bridge & CMHR.jpg',
       vuosi: '2026',
-      lahde: 'Ethan Sahagun, Commons (CC BY 4.0)',
-      selite: 'Keskustan siluetti hämärissä The Forksin puistosta katsottuna, '
-        + 'edessä valaistu WINNIPEG-kyltti. Oikealla kaartuu Kanadan '
-        + 'ihmisoikeusmuseon lasiseinä. Tämä on sama jokien kohtaamispaikka, '
-        + 'jossa Fort Garryn portti seisoo.',
+      lahde: 'Travel Manitoba, Wikimedia Commons (CC BY 2.0)',
+      selite: 'Vinoköysisilta ja sen yksi vino pyloni kaartuvat joen yli sinisenä '
+        + 'hetkenä, ja takana kohoavat lasikupolinen museorakennus tornineen '
+        + 'sekä keskustan pilvenpiirtäjät. Valot heijastuvat tyynestä '
+        + 'jokivedestä.',
     },
   },
   yellowknife: {

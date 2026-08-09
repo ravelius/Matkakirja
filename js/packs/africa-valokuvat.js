@@ -191,11 +191,11 @@ export const AFRICA_VALOKUVAT = {
       + 'ovat rakennustelineiksi jätettyjä puunrunkoja. Songhain '
       + 'suurvallan mahtavin muistomerkki.',
     uusi: {
-      tiedosto: '2014.11.29 - Tombeau des Askia.jpg',
-      lahde: 'Commons (CC0)',
-      selite: 'Askian hauta seisoo yhä — puupiikit törröttävät savesta kuten '
-      + 'viisisataa vuotta sitten, ja muuraus uusitaan käsin joka '
-      + 'vuosi.',
+      tiedosto: 'Tombeau dAskia in Gao by David Sessoms.jpg',
+      lahde: 'David Sessoms from Fribourg, Switzerland, Wikimedia Commons (CC BY-SA 2.0)',
+      selite: 'Savesta muurattu porrasmainen pyramidihauta, jonka seinistä '
+        + 'työntyy ulos puisia tukipuita, ja sen edessä matala savitiiliaita '
+        + 'hiekkaisen aukion laidalla.',
     },
   },
   dakar: {
@@ -896,11 +896,11 @@ export const AFRICA_VALOKUVAT = {
       + 'Afrikan-lennolla — juuri sellaiselta matkalta, joista isoisäkin '
       + 'luki lehdistä.',
     uusi: {
-      tiedosto: 'Waving fisherman on Lake Chad (detilt).jpg',
-      lahde: 'Coolthoom1 Removed tilt: Hike395, Commons (CC BY-SA 4.0)',
-      selite: 'Kalastaja Tšad-järvellä nykyään. Järvi on kutistunut '
-      + 'murto-osaan isoisän ajoista, mutta ruokkii yhä miljoonia '
-      + 'ihmisiä neljässä maassa.',
+      tiedosto: 'Lake chad shore (detilt).jpg',
+      lahde: 'Coolthoom1 Detilt: Hike395, Commons (CC BY-SA 4.0)',
+      selite: 'Tšad-järven avointa vettä ja vastarantaa: matalaa vettä, ruoho- ja '
+        + 'kaislakasvustoa sekä tiheä puurivi rannalla. Järvi on hyvin '
+        + 'matala, ja sen rantaviiva on paksun kasvillisuuden peittämä.',
     },
   },
   kamerun: {
