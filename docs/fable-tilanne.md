@@ -52,7 +52,8 @@ ENSIN, sitten `CLAUDE.md`, `docs/roolitus.md`, `docs/isoisan-raamattu.md`,
 - Oma työhaara: `claude/valtion-analyysi-lehtisivu-e5s1lw`.
 - Attribuutio joka GitHub-postaukseen (footer). Committeihin
   `Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>` +
-  `Claude-Session: https://claude.ai/code/session_01R1jVv12E56gbU5qtH5xGaG`.
+  `Claude-Session: https://claude.ai/code/<oman sessiosi id>` (käytä
+  OMAN sessiosi tunnusta — tämä on uusi sessio, ei entinen).
 
 ## SEURAAVA ISO TEHTÄVÄ — 5 kaupunkia, KOKO tekstipaketti (omistajan tilaus)
 
@@ -71,9 +72,17 @@ tekstipaketti kerralla suunniteltuna**. Yhdelle kaupungille kuuluu:
 toimii cliffhangerinä AARTEEN LÖYTYMISEN JÄLKEEN** — eli henkilön
 repliikki jää auki ja vie eteenpäin. Suunnittele paketti tämä kärkenä.
 
-- Luonnokset viidestä kaupungista (saapuminen/visa/aarre jo
-  uudelleenkirjoitettuina) ovat **`docs/kaari-luonnos.md`:ssä** —
-  jatka niistä, lisää kohtaaminen + henkilö.
+- Luonnokset viidestä kaupungista ovat **`docs/kaari-luonnos.md`:ssä**
+  (saapuminen, kohtaaminen + henkilö, visa, aarre, henkilön vihje).
+  **HUOM: nämä luonnokset kirjoitti Opus mallipudotuksen aikana, EIVÄT
+  Fable — käytä niitä pelkkänä referenssinä ja kaupunkien/kuvien
+  muistilistana, ja kirjoita tekstit omalla äänelläsi uusiksi.** Älä
+  ota niitä kaanonina.
+- Nykytila mainissa: työhuoneessa on VAIN aiempi Fablen viisikko
+  (`KAARI_KAUPUNGIT`, js/tyohuone-kehitys-data.js: saapuminen/visa/aarre
+  + 15 mp3 `assets/audio/puhe-kaari-*.mp3`, osio "Isoisä äänessä — 5
+  uutta"). Henkilöt/kohtaamiset ja valikon uudelleenjärjestys EIVÄT ole
+  mainissa — ne ovat tekemättä.
 - **ÄLÄ generoi ääniä vielä.** Omistaja päättää lopuksi, mitä luetaan
   ääneen ja mitä ei. Generointi: `tools/generoi-kaari.mjs` (Viisas
   Kertoja, eleven_v3, stability 0.5) vasta kun tekstit hyväksytty.
