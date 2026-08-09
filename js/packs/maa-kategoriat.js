@@ -677,100 +677,12 @@ export const MAA_KATEGORIAT = {
           musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/2/28/ELGAR_Pomp_and_Circumstance_in_D%2C_Opus_39%2C_No._1_-_United_States_Marine_Band.mp3',
           musiikkiNayteNimi: 'Elgar: Pomp and Circumstance nro 1 — United States Marine Band, PD',
         },
-        {
-          otsikko: 'Öljytynnyri, joka soittaa melodian',
-          tiedosto: 'Ebony Steel Band raising funds for NSPCC Oxford Street, London.jpg',
-          teksti: 'Steel pan taotaan kahdensadan litran peltitynnyristä: pohja '
-            + 'lyödään kupiksi ja siihen taotaan soikeita kenttiä, joista '
-            + 'jokainen soi omaa säveltään. Mitä isompi soikio, sitä '
-            + 'matalampi ääni, ja korkeimpaan tenoripanniin mahtuu noin '
-            + 'kolmekymmentä säveltä. Soitin syntyi Trinidadissa, ja '
-            + 'Lontoossa se nähtiin ensi kerran vuoden 1951 Festival of '
-            + 'Britainissa. Notting Hillin karnevaalia edeltävässä '
-            + 'Panorama-kisassa soittaa nykyään noin tuhat ihmistä, kaikki '
-            + 'ulkomuistista.',
-          selite: 'Lontoolainen Ebony Steel Band soittaa Oxford Streetin varrella '
-            + 'House of Fraserin edustalla joulukuussa 2021 ja kerää samalla '
-            + 'rahaa lastensuojelujärjestö NSPCC:lle. Etualalla seisova '
-            + 'kerääjä pitelee vihreää keräyslipasta. Bassopanneista näkee '
-            + 'yhä tynnyrin: kiiltävät pellit seisovat pyörillä, ja kylkeen '
-            + 'on maalattu bändin nimi.',
-          lahde: 'Philafrenzy, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Steel pan',
-        },
-        {
-          otsikko: 'Metron soittopaikat jaetaan koesoitolla',
-          tiedosto: 'Busker at Piccadilly Circus tube station in March 2012.JPG',
-          teksti: 'Lontoon metrossa katusoitto on luvanvaraista. Transport for '
-            + 'London ylläpitää 39 soittopaikkaa 25 keskusta-asemalla, ja '
-            + 'luvan saa vain läpäisemällä raadin edessä pidettävän '
-            + 'koesoiton. Paikat on maalattu asemien lattioihin puolikaarina: '
-            + 'kaaren sisällä saa soittaa, sen ulkopuolella ei. Maan päällä '
-            + 'säännöt vaihtelevat kaupunginosittain. Cityn alueella '
-            + 'katusoitto on kielletty, ja Leicester Squaren esiintymispaikat '
-            + 'suljettiin huhtikuussa 2025, kun tuomioistuin oli määrännyt '
-            + 'melun loppumaan.',
-          selite: 'Kitaristi soittaa Piccadilly Circusin metroasemalla '
-            + 'maaliskuussa 2012. Hän istuu retkijakkaralla lattiaan maalatun '
-            + 'soittopaikan laidalla, kaaren reunassa lukee Mayor of London '
-            + 'ja Transport for London, ja kolikot kilahtavat auki jätettyyn '
-            + 'kitarapussiin. Vieressä olevalla kärryllä on kannettava '
-            + 'tietokone ja kaksi nukkea.',
-          lahde: 'Editor5807, Wikimedia Commons (CC BY-SA 3.0)',
-          wiki: 'Katusoittaja',
-        },
-        {
-          otsikko: 'Yhdeksän säveltä, ei yhtään taukoa',
-          aika: 'Vuosisatoja',
-          tiedosto: 'Piper busking in Edinburgh DSC05049.JPG',
-          teksti: 'Skotlantilaisessa säkkipillissä on melodiapilli ja kolme '
-            + 'bordunapilliä, jotka soivat koko ajan samaa säveltä. '
-            + 'Melodiapillistä saa vain yhdeksän säveltä, eikä ääntä voi '
-            + 'katkaista lainkaan — siksi soittaja erottaa peräkkäiset '
-            + 'sävelet toisistaan salamannopeilla koristenuoteilla. Soitin on '
-            + 'tehty ulkona soitettavaksi: sisätiloissa se peittää alleen '
-            + 'kaikki muut soittimet.',
-          selite: 'Katusoittaja Edinburghissa. Säkki on kainalossa, puhallusputki '
-            + 'suussa ja kolme bordunapilliä lepää olkapäällä; kiltti on '
-            + 'punaruudullinen ja jalassa valkoiset polvisukat. Alanurkassa '
-            + 'makaa soittajan vaalea koira.',
-          lahde: 'David Monniaux, Wikimedia Commons (CC BY-SA 3.0)',
-          wiki: 'Säkkipilli',
-          musiikki: 'https://music.apple.com/fi/search?term=highland%20bagpipe',
-          musiikkiNimi: 'Skotlantilaista säkkipillimusiikkia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/raretunes_364_beating-retreat-edinburgh-castle/raretunesedretreat.mp3',
-          musiikkiNayteNimi: 'Pipe band, Edinburgh Castle — CC BY-NC-SA',
-        },
-        {
-          otsikko: 'Tattoo tarkoitti: sulkekaa hanat',
-          aika: '1600-luku',
-          tiedosto: 'Royal Edinburgh Military Tattoo, The Finale - geograph.org.uk - 6233821.jpg',
-          teksti: 'Joka elokuu linnan edustalle rakennetaan katsomot, ja niiden '
-            + 'keskellä marssivat sotilassoittokunnat. Nimi tulee 1600-luvun '
-            + 'hollannista: rumpalit soittivat iltaisin majatalojen edessä '
-            + 'merkin doe den tap toe eli sulkekaa hanat, jolloin sotilaiden '
-            + 'oli aika lopettaa ja palata nukkumaan. Ensimmäinen Edinburghin '
-            + 'tattoo pidettiin vuonna 1950. Siinä oli kahdeksan '
-            + 'ohjelmanumeroa ja noin 6 000 katsojaa rakennustelineillä; '
-            + 'nykyään katsomoon mahtuu 8 800 ihmistä joka ilta.',
-          selite: 'Loppukohtaus katsomon edessä: punatakkisia soittajia tuubien, '
-            + 'torvien ja rumpujen kanssa, karvalakkipäisiä kaartilaisia ja '
-            + 'kiltteihin pukeutuneita pillipiipareita. Takana katsomo on '
-            + 'täynnä väkeä.',
-          lahde: 'David Dixon, Wikimedia Commons (CC BY-SA 2.0)',
-        },
       ],
       tehtava: {
-        kysymys: 'Mitä sana tattoo alun perin tarkoitti?',
-        vaihtoehdot: [
-          'Sotilaan käsivarteen piirrettyä kuvaa',
-          'Hollantilaista kehotusta sulkea oluthanat',
-          'Säkkipillin matalinta bordunapilliä',
-          'Linnan tykin laukausta kello yksi',
-        ],
+        kysymys: 'Minä vuonna Proms-konserttisarja soi ensimmäisen kerran?',
+        vaihtoehdot: ['1795', '1895', '1945', '1995'],
         oikea: 1,
-        fakta: 'Rumpalit soittivat majatalojen edessä merkin doe den tap toe eli '
-          + 'sulkekaa hanat — se kerrotaan tattoo-nostossa.',
+        fakta: 'Sarja on soinut joka kesä siitä lähtien, myös sotavuosina.',
       },
     },
     {
@@ -1436,6 +1348,110 @@ export const MAA_KATEGORIAT = {
         fakta: 'Viininmyyjien ja värjärien ammattikunnat ovat omistaneet osan '
           + 'linnuista satojen vuosien ajan; kruunun laskijat tunnistaa '
           + 'punaisesta asusta.',
+      },
+    },
+    {
+      id: 'soittajat',
+      nimi: 'Soittajat',
+      johdanto: 'Tynnyristä taottu soitin, metron soittopaikka jonka saa vain '
+        + 'koesoitolla, ja pilli jonka ääntä ei voi katkaista lainkaan.',
+      nostot: [
+        {
+          otsikko: 'Öljytynnyri, joka soittaa melodian',
+          aika: '1900-luku',
+          tiedosto: 'Ebony Steel Band raising funds for NSPCC Oxford Street, London.jpg',
+          teksti: 'Steel pan taotaan kahdensadan litran peltitynnyristä: pohja '
+            + 'lyödään kupiksi ja siihen taotaan soikeita kenttiä, joista '
+            + 'jokainen soi omaa säveltään. Mitä isompi soikio, sitä '
+            + 'matalampi ääni, ja korkeimpaan tenoripanniin mahtuu noin '
+            + 'kolmekymmentä säveltä. Soitin syntyi Trinidadissa, ja '
+            + 'Lontoossa se nähtiin ensi kerran vuoden 1951 Festival of '
+            + 'Britainissa. Notting Hillin karnevaalia edeltävässä '
+            + 'Panorama-kisassa soittaa nykyään noin tuhat ihmistä, kaikki '
+            + 'ulkomuistista.',
+          selite: 'Lontoolainen Ebony Steel Band soittaa Oxford Streetin varrella '
+            + 'House of Fraserin edustalla joulukuussa 2021 ja kerää samalla '
+            + 'rahaa lastensuojelujärjestö NSPCC:lle. Etualalla seisova '
+            + 'kerääjä pitelee vihreää keräyslipasta. Bassopanneista näkee '
+            + 'yhä tynnyrin: kiiltävät pellit seisovat pyörillä, ja kylkeen '
+            + 'on maalattu bändin nimi.',
+          lahde: 'Philafrenzy, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Steel pan',
+        },
+        {
+          otsikko: 'Metron soittopaikat jaetaan koesoitolla',
+          aika: 'Nykyisin',
+          tiedosto: 'Busker at Piccadilly Circus tube station in March 2012.JPG',
+          teksti: 'Lontoon metrossa katusoitto on luvanvaraista. Transport for '
+            + 'London ylläpitää 39 soittopaikkaa 25 keskusta-asemalla, ja '
+            + 'luvan saa vain läpäisemällä raadin edessä pidettävän '
+            + 'koesoiton. Paikat on maalattu asemien lattioihin puolikaarina: '
+            + 'kaaren sisällä saa soittaa, sen ulkopuolella ei. Maan päällä '
+            + 'säännöt vaihtelevat kaupunginosittain. Cityn alueella '
+            + 'katusoitto on kielletty, ja Leicester Squaren esiintymispaikat '
+            + 'suljettiin huhtikuussa 2025, kun tuomioistuin oli määrännyt '
+            + 'melun loppumaan.',
+          selite: 'Kitaristi soittaa Piccadilly Circusin metroasemalla '
+            + 'maaliskuussa 2012. Hän istuu retkijakkaralla lattiaan maalatun '
+            + 'soittopaikan laidalla, kaaren reunassa lukee Mayor of London '
+            + 'ja Transport for London, ja kolikot kilahtavat auki jätettyyn '
+            + 'kitarapussiin. Vieressä olevalla kärryllä on kannettava '
+            + 'tietokone ja kaksi nukkea.',
+          lahde: 'Editor5807, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Katusoittaja',
+        },
+        {
+          otsikko: 'Yhdeksän säveltä, ei yhtään taukoa',
+          aika: 'Vuosisatoja',
+          tiedosto: 'Piper busking in Edinburgh DSC05049.JPG',
+          teksti: 'Skotlantilaisessa säkkipillissä on melodiapilli ja kolme '
+            + 'bordunapilliä, jotka soivat koko ajan samaa säveltä. '
+            + 'Melodiapillistä saa vain yhdeksän säveltä, eikä ääntä voi '
+            + 'katkaista lainkaan — siksi soittaja erottaa peräkkäiset '
+            + 'sävelet toisistaan salamannopeilla koristenuoteilla. Soitin on '
+            + 'tehty ulkona soitettavaksi: sisätiloissa se peittää alleen '
+            + 'kaikki muut soittimet.',
+          selite: 'Katusoittaja Edinburghissa. Säkki on kainalossa, puhallusputki '
+            + 'suussa ja kolme bordunapilliä lepää olkapäällä; kiltti on '
+            + 'punaruudullinen ja jalassa valkoiset polvisukat. Alanurkassa '
+            + 'makaa soittajan vaalea koira.',
+          lahde: 'David Monniaux, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Säkkipilli',
+          musiikki: 'https://music.apple.com/fi/search?term=highland%20bagpipe',
+          musiikkiNimi: 'Skotlantilaista säkkipillimusiikkia Apple Musicissa',
+          musiikkiNayte: 'https://archive.org/download/raretunes_364_beating-retreat-edinburgh-castle/raretunesedretreat.mp3',
+          musiikkiNayteNimi: 'Pipe band, Edinburgh Castle — CC BY-NC-SA',
+        },
+        {
+          otsikko: 'Tattoo tarkoitti: sulkekaa hanat',
+          aika: '1600-luku',
+          tiedosto: 'Royal Edinburgh Military Tattoo, The Finale - geograph.org.uk - 6233821.jpg',
+          teksti: 'Joka elokuu linnan edustalle rakennetaan katsomot, ja niiden '
+            + 'keskellä marssivat sotilassoittokunnat. Nimi tulee 1600-luvun '
+            + 'hollannista: rumpalit soittivat iltaisin majatalojen edessä '
+            + 'merkin doe den tap toe eli sulkekaa hanat, jolloin sotilaiden '
+            + 'oli aika lopettaa ja palata nukkumaan. Ensimmäinen Edinburghin '
+            + 'tattoo pidettiin vuonna 1950. Siinä oli kahdeksan '
+            + 'ohjelmanumeroa ja noin 6 000 katsojaa rakennustelineillä; '
+            + 'nykyään katsomoon mahtuu 8 800 ihmistä joka ilta.',
+          selite: 'Loppukohtaus katsomon edessä: punatakkisia soittajia tuubien, '
+            + 'torvien ja rumpujen kanssa, karvalakkipäisiä kaartilaisia ja '
+            + 'kiltteihin pukeutuneita pillipiipareita. Takana katsomo on '
+            + 'täynnä väkeä.',
+          lahde: 'David Dixon, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä sana tattoo alun perin tarkoitti?',
+        vaihtoehdot: [
+          'Sotilaan käsivarteen piirrettyä kuvaa',
+          'Hollantilaista kehotusta sulkea oluthanat',
+          'Säkkipillin matalinta bordunapilliä',
+          'Linnan tykin laukausta kello yksi',
+        ],
+        oikea: 1,
+        fakta: 'Rumpalit soittivat majatalojen edessä merkin doe den tap toe eli '
+          + 'sulkekaa hanat — se kerrotaan tattoo-nostossa.',
       },
     },
     {
@@ -3437,7 +3453,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Laiva, joka kaatui tuhannen metrin jälkeen',
           aika: '1628',
-          tiedosto: 'Lateral view of the Vasa ship, Vasa Museum, Stockholm, Sweden julesvernex2.jpg',
+          tiedosto: 'The Vasa from the Bow.jpg',
           teksti: 'Sotalaiva Vasa lähti neitsytmatkalleen Tukholman '
             + 'satamasta 10. elokuuta 1628. Se ehti purjehtia noin '
             + 'tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen '
@@ -3447,9 +3463,10 @@ export const MAA_KATEGORIAT = {
             + 'ei elä laivamato, joka syö puun muissa merissä — siksi '
             + 'laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on '
             + 'alkuperäistä puuta yli 95 prosenttia.',
-          selite: 'Vasan kylki Vasa-museossa. Neliönmuotoiset aukot ovat '
-            + 'tykkiluukkuja: juuri niistä vesi pääsi sisään.',
-          lahde: 'Jules Verne Times Two, Wikimedia Commons (CC BY-SA 4.0)',
+          selite: 'Vasa keulasta nähtynä Vasa-museossa. Tumma tammirunko kohoaa '
+            + 'kolmen kerroksen korkeuteen, ja kyljessä näkyvät '
+            + 'neliönmuotoiset tykkiluukut, joista vesi pääsi sisään.',
+          lahde: 'JavierKohen, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Vasa (laiva)',
         },
         {

@@ -1197,9 +1197,9 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Anton Nosik, Wikimedia Commons (CC BY 3.0)',
         },
         {
-          tiedosto: 'Canal Grande Chiesa della Salute e Dogana dal ponte dell Accademia.jpg',
-          selite: 'Canal Grande ja Santa Maria della Saluten kupolit Accademian '
-            + 'sillalta.',
+          tiedosto: 'Palazzi Corner Spinelli Casa Salome Barocci Canal Grande Venezia.jpg',
+          selite: 'Canal Granden palatseja ja vesibussi pysäkillä: kadun sijasta '
+            + 'talon ovelta astutaan veneeseen.',
           lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -1554,7 +1554,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Laiva, joka upposi ja nousi',
-          tiedosto: 'Lateral view of the Vasa ship, Vasa Museum, Stockholm, Sweden julesvernex2.jpg',
+          tiedosto: 'Vasa 14 maj 1961.jpg',
           teksti: 'Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen '
             + 'Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen '
             + 'kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli '
@@ -1564,9 +1564,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään '
             + 'alus seisoo omassa museossaan yhä valtaosin alkuperäisenä '
             + 'puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.',
-          selite: 'Vasan kylkeä Vasa-museossa. Juuri nämä tykkiportit upottivat '
-            + 'laivan: alin porttirivi painui kallistuksessa veden alle.',
-          lahde: 'Jules Verne Times Two, Wikimedia Commons (CC BY-SA 4.0)',
+          selite: 'Vasa hinataan Beckholmenin kuivatelakalle 14. toukokuuta 1961, '
+            + 'kohta noston jälkeen. Runko on musta ja liejun peitossa, vesi '
+            + 'valuu kannelta ja rannalla seisoo katsojia.',
+          lahde: 'Tuntematon lehtikuvaaja, Wikimedia Commons (public domain)',
           wiki: 'Vasa (laiva)',
         },
       ],

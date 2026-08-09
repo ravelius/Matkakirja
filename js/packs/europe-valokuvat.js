@@ -37,11 +37,11 @@ export const EUROPE_VALOKUVAT = {
       + 'jo isoisän aikaan. Taustalla dogen palatsi ja Markuksen leijona '
       + 'pylväänsä päässä.',
     uusi: {
-      tiedosto: 'Canal Grande Chiesa della Salute e Dogana dal ponte dell Accademia.jpg',
-      lahde: 'Wolfgang Moroder, Commons (CC BY-SA 3.0)',
-      selite: 'Canal Grande nykyään Accademian sillalta: gondolit ja '
-        + 'vesibussit risteilevät, ja Santa Maria della Saluten kupoli '
-        + 'vartioi kanavan suuta kuten 350 vuotta.',
+      tiedosto: 'Early Morning Gondolas at Piazza San Marco (3500989834).jpg',
+      lahde: 'Rob Young, Commons (CC BY 2.0)',
+      selite: 'Sama ranta nykyään ylhäältä nähtynä: gondolit odottavat '
+        + 'rivissä sinisten suojapeitteiden alla, ja pylvään päässä seisoo '
+        + 'yhä sama siivekäs leijona kuin vanhassa kuvassa.',
     },
   },
 
