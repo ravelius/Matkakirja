@@ -4033,6 +4033,63 @@ function suoraPiste(rajat, lat, lon) {
  * asettaa ne päällekkäin, kainalo voittaa ja piste menee väärään
  * paikkaan. Älä siis tee päällekkäistä kainaloa.
  */
+/*
+ * MITTAKAAVAJANA kohdekartan kulmaan (omistajan toive 9.8.2026
+ * testipelistä: "Google Maps -tyyliin, pieni vaakajana joka kertoo
+ * minkä matkan tietty pituus vastaa todellisuudessa").
+ *
+ * Jana lasketaan rajauksesta eikä kirjoiteta käsin: jokaisen
+ * kohdekartan rajat ovat asteina, ja kuva täyttää rajauksen leveyden
+ * tarkalleen (ks. suoraPiste), joten x-prosentti on suoraan matkan
+ * osuus. Uusi kaupunki saa janan ilman että tähän kosketaan.
+ *
+ * Pituus valitaan karttojen vakiosarjasta 1 / 2 / 2,5 / 5 × 10ⁿ, ja
+ * tavoite on neljäsosa kartan leveydestä. Sarjasta poikkeaminen
+ * antaisi tarkemman osuman mutta rumemman luvun: "700 m" ei ole
+ * mittakaavajana vaan sattuma. Siksi Dubain kaltaisessa tiiviissä
+ * rajauksessa (2,8 km) jana jää 500 metriin eli 18 prosenttiin, ja se
+ * on oikea valinta — vaihtoehto olisi ollut kilometri, joka veisi yli
+ * kolmanneksen kuvasta.
+ *
+ * Leveysaste kaventaa pituuspiirejä, joten kilometrit lasketaan
+ * rajauksen keskileveydellä. Ilman kosinia Tromssan kartta väittäisi
+ * olevansa kolme kertaa todellista leveämpi.
+ */
+const JANAN_PITUUDET = [
+  50, 100, 200, 250, 500, 1000, 2000, 2500, 5000, 10000, 20000, 25000, 50000,
+];
+
+export function mittakaava(kartta) {
+  /*
+   * Vain suorakulmaiselle rajaukselle. Laea-kartoissa (maiden
+   * korkokartat) mittakaava vaihtelee kuvan sisällä, joten yksi jana
+   * valehtelisi reunoilla — palautetaan mieluummin null kuin väärä
+   * luku. Kainaloita ei myöskään huomioida: jana kertoo pääkartan
+   * mittakaavan, ja kainalo on oma kuvansa omalla rajauksellaan.
+   */
+  if (kartta?.projektio === 'laea') return null;
+  const r = kartta?.rajat;
+  if (!r) return null;
+  const keskileveys = ((r.pohjoinen + r.etela) / 2) * (Math.PI / 180);
+  const metria = (r.ita - r.lansi) * 111320 * Math.cos(keskileveys);
+  if (!Number.isFinite(metria) || metria <= 0) return null;
+  const tavoite = metria * 0.25;
+  let paras = JANAN_PITUUDET[0];
+  for (const pituus of JANAN_PITUUDET) {
+    if (Math.abs(pituus - tavoite) < Math.abs(paras - tavoite)) paras = pituus;
+  }
+  const osuus = (paras / metria) * 100;
+  return {
+    metria: paras,
+    osuus,
+    // Teksti valmiina: alle kilometrin metreinä, muuten kilometreinä
+    // ja pilkulla, koska peli on suomeksi ("1,5 km" eikä "1.5 km").
+    teksti: paras < 1000
+      ? `${paras} m`
+      : `${String(paras / 1000).replace('.', ',')} km`,
+  };
+}
+
 export function karttapiste(kartta, lat, lon) {
   if (kartta.projektio === 'laea') return laeaPiste(kartta.laea, lat, lon);
   for (const kainalo of kartta.kainalot ?? []) {

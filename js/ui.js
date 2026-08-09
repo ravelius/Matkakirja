@@ -70,7 +70,7 @@ import { radioMaalle } from './packs/radiot.js';
 import { EUROPE_KULTTUURI } from './packs/europe-kulttuuri.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
-import { MAAKARTAT, KAUPUNKIKARTAT, karttapiste } from './packs/maakartat.js';
+import { MAAKARTAT, KAUPUNKIKARTAT, karttapiste, mittakaava } from './packs/maakartat.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
@@ -4425,9 +4425,22 @@ export class UI {
      * kerrallaan.
      */
     this.meriRajaus = null;
-    // Nimi piirretään leikkaamattomaan kerrokseen: maan todellinen
-    // keskipiste voi osua tyylitellyn rannikon ulkopuolelle, eikä
-    // kaunokirjoituksen saa katketa siihen.
+    /*
+     * Nimi piirretään leikkaamattomaan kerrokseen: maan todellinen
+     * keskipiste voi osua tyylitellyn rannikon ulkopuolelle, eikä
+     * kaunokirjoituksen saa katketa siihen.
+     *
+     * Kerros luodaan tässä mutta NOSTETAAN kaupunkien päälle heti kun
+     * kaupunkikerros on olemassa (ks. root.appendChild alempana).
+     * Omistajan bugilöydös 9.8.2026: Ateenassa Kreikan kyltistä näkyi
+     * vain kirjainten häntä kaupunginnimen takaa, eikä i-nappia
+     * erottanut lainkaan. Kyltti on nappi, jota pelaajan on määrä
+     * painaa — se ei voi jäädä koristeen alle. Koneellinen mittaus
+     * kertoi, ettei kyse ollut yhdestä maasta: Euroopan 29 maasta
+     * 15:llä kaupungin nimi peitti kylttiä, ja kuudella peitto osui
+     * i-nappiin asti. Pelkkä ankkurin siirto olisi korjannut yhden
+     * ruudun ja jättänyt loput.
+     */
     this.countryNameLayer = el('g', { class: 'country-names' }, root);
     /*
      * Maastonimet: joet, järvet ja vuoristot kaunokirjoituksella.
@@ -4687,6 +4700,20 @@ export class UI {
     // lentokone liikkui sen alla. Kartta näyttää samalta, mutta liikkuvat
     // osat eivät enää maksa koko ruudun sekoitusta.
     drawPaperOverlay(svg, this.game.pack.map);
+
+    /*
+     * Maakyltti kaupunkien PÄÄLLE (ks. countryNameLayer yllä). Kyltti
+     * näkyy vain siinä maassa, jossa pelaaja juuri on, ja katoaa heti
+     * kun hän siirtyy rajan yli — se ei siis peitä karttaa pysyvästi,
+     * ja sen alle jäävä kaupunki on se, jonka nimen pelaaja näkee
+     * muutenkin saapumiskortissa.
+     *
+     * Nappulat ja laatat jäävät tarkoituksella kyltin päälle: ne
+     * kertovat, missä pelaaja on ja mitä on jo löydetty, eikä kyltti
+     * saa piilottaa niitä. Kyltin ankkureita siirrettiin samassa
+     * erässä niin, että päällekkäisyys nappulan kanssa on harvinaista.
+     */
+    root.appendChild(this.countryNameLayer);
 
     this.tokenLayer = el('g', { class: 'tokens' }, root);
     this.targetLayer = el('g', { class: 'targets' }, root);
@@ -7097,8 +7124,19 @@ export class UI {
    * Muotoilee koko artikkelin tekstin: MediaWiki extracts palauttaa
    * väliotsikot muodossa "== Otsikko ==", ja ne muutetaan omiksi
    * otsikkoriveiksi. Pelkkää tekstiä — HTML:ää ei upoteta.
+   *
+   * Artikkeli katkaistaan ensimmäiseen HÄNTÄOSASTOON (Lähteet, Katso
+   * myös, Aiheesta muualla…): explaintext riisuu viiteluettelot,
+   * linkkilistat ja galleriat, joten näistä osastoista jää jäljelle
+   * vain rivi tyhjiä otsikoita artikkelin perään (omistajan havainto
+   * 10.8.2026 Espanjalaisista portaista: "Tätä ei ole siistitty").
+   * Häntäosastot ovat Wikipediassa aina artikkelin lopussa, joten
+   * katkaisu ei vie asiasisältöä mukanaan. Lista kattaa molemmat
+   * hakukielet (WIKI_LANGS: fi ja en) — Colosseumin kaltaiset paikat
+   * ratkeavat englanninkieliseen artikkeliin.
    */
   renderArticle(container, text) {
+    const hanta = /^(katso myös|lähteet|viitteet|lähteet ja viitteet|kirjallisuutta?|aiheesta muualla|ulkoiset linkit|kuvia|kuvagalleria|galleria|huomautukset|aiheeseen liittyvää|see also|references|notes|footnotes|citations|sources|bibliography|further reading|external links|gallery)$/i;
     container.textContent = '';
     let para = [];
     const flush = () => {
@@ -7114,6 +7152,7 @@ export class UI {
       const m = t.match(/^(={2,6})\s*(.+?)\s*={2,6}$/);
       if (m) {
         flush();
+        if (m[1].length <= 2 && hanta.test(m[2])) return;
         container.appendChild(html('p', m[1].length <= 2 ? 'wiki-h2' : 'wiki-h3', m[2]));
       } else {
         para.push(t);
@@ -8567,6 +8606,25 @@ export class UI {
     if (kartta.polku) kuva.src = kartta.polku;
     else asetaKuva(kuva, valokuvaUrl(kartta.tiedosto, 1000), valokuvaVara(kartta.tiedosto, 1000));
     kotelo.appendChild(kuva);
+    /*
+     * Mittakaavajana kartan vasempaan alakulmaan (omistajan toive
+     * 9.8.2026). Pituus ja teksti tulevat rajauksesta
+     * (maakartat.js:n mittakaava), joten uusi kaupunki saa janan
+     * ilman että tähän kosketaan.
+     *
+     * Leveys on prosentteina kuvan leveydestä eikä pikseleinä: kuva
+     * skaalautuu puhelimesta työpöytään, ja pikselimitta valehtelisi
+     * heti ensimmäisellä kokomuutoksella. Prosentti pitää janan
+     * oikeana joka leveydellä.
+     */
+    const jana = mittakaava(kartta);
+    if (jana) {
+      const mitta = html('div', 'kartta-mittajana');
+      mitta.style.width = `${jana.osuus.toFixed(2)}%`;
+      mitta.appendChild(html('span', 'kartta-mittajana-teksti', jana.teksti));
+      mitta.setAttribute('aria-label', `Mittakaava: janan pituus vastaa ${jana.teksti}`);
+      kotelo.appendChild(mitta);
+    }
     const selitteet = html('div', 'kartta-selitteet');
     /*
      * Nähtävyysjuttu voi asua joko suoraan kartan kohdeoliossa
@@ -8642,10 +8700,9 @@ export class UI {
    * niiden nostossa gallerian sijaan tekstin joukossa 3-5"*).
    *
    * Taitto on lehtijutun taitto eikä galleriaselain: kappaleet ovat
-   * lyhyitä, ja kuvat ladotaan niiden VÄLIIN vuorotellen. Kuvien
-   * sijoittelu lasketaan kappalemäärästä, jotta ne jakautuvat tasan
-   * koko jutulle — kolme kuvaa kuudelle kappaleelle asettuu joka
-   * toiseen väliin, viisi kuvaa tiheämmin.
+   * lyhyitä, ja kuvat ovat yhdessä kehyksessä avauskappaleen jälkeen
+   * — useampi kuva karusellina (omistajan palaute 10.8.2026:
+   * peräkkäin ladottuina lisäkuvat venyttivät sivun liian pitkäksi).
    *
    * Vuosiluku on oma rivinsä otsikon yllä (omistajan toive: "käytä
    * vuosiluku korostuksia"), ja lainaus nostetaan kappaleiden väliin
@@ -8679,12 +8736,14 @@ export class UI {
     const kappaleet = String(kohde.teksti ?? '').split('\n\n').filter(Boolean);
     const kuvat = (kohde.kuvat ?? []).slice(0, 5);
     /*
-     * Kuvien paikat: jaetaan kappaleiden välit tasan. Ensimmäinen kuva
-     * tulee heti avauskappaleen jälkeen, viimeinen ennen viimeistä
-     * kappaletta — juttu ei siis ala eikä lopu kuvaan.
+     * Useampi kuva näytetään KARUSELLINA yhden kehyksen sisällä
+     * (omistajan palaute 10.8.2026: peräkkäin ladottuina lisäkuvat
+     * venyttivät sivun liian pitkäksi). Kehys tulee heti
+     * avauskappaleen jälkeen — juttu ei ala eikä lopu kuvaan.
      */
-    const valit = Math.max(1, kappaleet.length - 1);
-    const paikat = kuvat.map((_, i) => 1 + Math.round((i * (valit - 1)) / Math.max(1, kuvat.length - 1)));
+    const kuvaKehys = kuvat.length > 1
+      ? this.nahtavyydenKaruselli(kuvat)
+      : (kuvat.length ? this.nahtavyydenKuva(kuvat[0]) : null);
     // Lainaus keskelle, kappaleiden puoliväliin.
     const lainauksenPaikka = kohde.lainaus ? Math.ceil(kappaleet.length / 2) : -1;
 
@@ -8698,17 +8757,11 @@ export class UI {
         }
         sisalto.appendChild(lohko);
       }
-      for (const [j, kuva] of kuvat.entries()) {
-        if (paikat[j] !== i + 1) continue;
-        sisalto.appendChild(this.nahtavyydenKuva(kuva));
-      }
+      if (i === 0 && kuvaKehys) sisalto.appendChild(kuvaKehys);
     });
-    // Kuvat, joiden paikka jäi tekstin ulkopuolelle (lyhyt juttu):
-    // ladotaan loppuun, jottei yksikään katoa.
-    kuvat.forEach((kuva, j) => {
-      if (paikat[j] <= kappaleet.length) return;
-      sisalto.appendChild(this.nahtavyydenKuva(kuva));
-    });
+    // Kappaleeton juttu (ei pitäisi olla, mutta data voi yllättää):
+    // kuva ei saa kadota.
+    if (!kappaleet.length && kuvaKehys) sisalto.appendChild(kuvaKehys);
 
     // Jutun ensimmäinen kuva saa oman luokkansa: vaakana se levenee
     // koko palstalle, pystynä se pysyy pienenä (omistajan ohje).
@@ -8801,6 +8854,64 @@ export class UI {
     if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
     if (kuva.lahde) teksti.appendChild(html('span', 'nahtavyys-lahde', kuva.lahde));
     kehys.appendChild(teksti);
+    return kehys;
+  }
+
+  /**
+   * Useamman kuvan karuselli nähtävyysjuttuun: yksi kuva kerrallaan
+   * samassa kehyksessä, nuolet ja "1/3"-laskuri päällä (omistajan
+   * palaute 10.8.2026: peräkkäin ladottuina lisäkuvat venyttivät
+   * sivun liian pitkäksi).
+   *
+   * Kuvaelementti luodaan joka vaihdolla UUTENA, koska
+   * varustaNostonKuva olettaa kertakäytön: se lisää elementille
+   * virhe- ja napautuskuuntelijat, jotka kasautuisivat samaa
+   * elementtiä kierrätettäessä (suurennos aukeaisi väärään kuvaan).
+   * Suuntaluokka (kuva-vaaka/pysty) lasketaan joka kuvalle load-
+   * hetkellä uudestaan, koska pysty- ja vaakakuvia voi olla sekaisin
+   * samassa jutussa.
+   */
+  nahtavyydenKaruselli(kuvat) {
+    const kehys = html('figure', 'nahtavyys-kuvakehys nahtavyys-karuselli');
+    const ikkuna = html('div', 'karuselli-ikkuna');
+    const teksti = html('figcaption', 'nahtavyys-kuvateksti');
+    let kohta = 0;
+    let el = null;
+
+    const nayta = (i) => {
+      kohta = (i + kuvat.length) % kuvat.length;
+      const kuva = kuvat[kohta];
+      kehys.classList.remove('kuva-vaaka', 'kuva-pysty');
+      const uusi = document.createElement('img');
+      uusi.className = 'nahtavyys-kuva kulttuuri-kuva-nappi';
+      uusi.addEventListener('load', () => {
+        if (uusi !== el || !uusi.naturalWidth || !uusi.naturalHeight) return;
+        kehys.classList.add(uusi.naturalWidth >= uusi.naturalHeight ? 'kuva-vaaka' : 'kuva-pysty');
+      });
+      this.varustaNostonKuva(uusi, kuva, 900);
+      if (el) el.replaceWith(uusi); else ikkuna.prepend(uusi);
+      el = uusi;
+      teksti.replaceChildren();
+      if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
+      if (kuva.lahde) teksti.appendChild(html('span', 'nahtavyys-lahde', kuva.lahde));
+      laskuri.textContent = `${kohta + 1}/${kuvat.length}`;
+    };
+
+    const nuoli = (luokka, merkki, siirto, nimi) => {
+      const nappi = html('button', `karuselli-nuoli ${luokka}`, merkki);
+      nappi.type = 'button';
+      nappi.setAttribute('aria-label', nimi);
+      nappi.addEventListener('click', () => nayta(kohta + siirto));
+      return nappi;
+    };
+    ikkuna.appendChild(nuoli('vasen', '‹', -1, 'Edellinen kuva'));
+    ikkuna.appendChild(nuoli('oikea', '›', 1, 'Seuraava kuva'));
+    const laskuri = html('span', 'karuselli-laskuri');
+    ikkuna.appendChild(laskuri);
+
+    kehys.appendChild(ikkuna);
+    kehys.appendChild(teksti);
+    nayta(0);
     return kehys;
   }
 

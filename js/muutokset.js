@@ -13,7 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 472, teksti: 'Nähtävyysjutut Lissabonille, Barcelonalle, Granadalle' },
+  { v: 476, teksti: 'Kohdekarttoihin mittakaavajana' },
+  { v: 475, teksti: 'Kuvakaruselli, lehteen vieritysvara, wikihännät pois' },
+  { v: 474, teksti: 'Maakyltti nousi kaupunkien päälle, ankkurit mitattiin' },
+  { v: 473, teksti: 'Kreeta, Sisilia ja Alpit saivat omat lehtensä' },
+  { v: 472, teksti: 'Pylväspulman nimet vuororiveille, ei enää päällekkäin' },
   { v: 471, teksti: 'Ateenan nähtävyysjuttuihin lisää kuvia' },
   { v: 470, teksti: 'Lähi-idän laudalle maatiedot ja menovinkit' },
   { v: 469, teksti: 'Kolmen lehden vanhat jutut pois kahdentumasta' },
