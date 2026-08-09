@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 478, teksti: 'Pysähdyksessä yksi tehtävä: pulma korvaa kohtaamisvisan' },
   { v: 476, teksti: 'Kohdekarttoihin mittakaavajana' },
   { v: 475, teksti: 'Kuvakaruselli, lehteen vieritysvara, wikihännät pois' },
   { v: 474, teksti: 'Maakyltti nousi kaupunkien päälle, ankkurit mitattiin' },
