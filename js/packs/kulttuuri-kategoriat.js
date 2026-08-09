@@ -5606,4 +5606,425 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  kreeta: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kreeta',
+      johdanto: 'Saari, jossa hypättiin härän yli neljätuhatta vuotta sitten, '
+        + 'soitin lepää polvella eikä olkapäällä, ja oliivipuita on enemmän '
+        + 'kuin ihmisiä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Chania Old Harbour in Crete, Greece 004.jpg',
+          selite: 'Chanian vanha satama iltavalossa. Venetsialaisajan talot '
+            + 'kaartuvat rannan mukana, ja veden pinnassa näkyy niiden '
+            + 'peilikuva.',
+          lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Ruins of the Minoan Palace in Knossos.jpg',
+          selite: 'Knossoksen palatsin raunioita: punaisia pylväitä, portaita ja '
+            + 'kivimuureja. Palatsissa oli satoja huoneita käytävien '
+            + 'varrella.',
+          lahde: 'Annatsach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Elafonisi pink sand beach - panoramio.jpg',
+          selite: 'Elafonisin matala lahti, jossa vesi on turkoosia ja hiekassa '
+            + 'on vaaleanpunaista sävyä murskautuneista simpukankuorista.',
+          lahde: 'trolvag, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Härän yli hypättiin',
+          tiedosto: 'Bull leaping minoan fresco archmus Heraklion.jpg',
+          teksti: 'Knossoksen seinämaalauksissa nuoret tarttuvat juoksevan härän '
+            + 'sarviin ja heittävät kuperkeikan sen selän yli. Tutkijat '
+            + 'kiistelevät yhä siitä, oliko se urheilua, uskonnon meno vai '
+            + 'molempia — eikä kukaan tiedä, onnistuiko se oikeasti koskaan.',
+          selite: 'Härkähyppyfreskon jäänteet Herakleionin arkeologisessa '
+            + 'museossa, maalattu noin 1500 eaa. Vaaleat hahmot ovat naisia, '
+            + 'tumma mies — minolainen tapa merkitä sukupuoli värillä.',
+          lahde: 'Wikimedia Commons (CC0)',
+          wiki: 'Knossos',
+        },
+        {
+          otsikko: 'Lyyra soi polvella',
+          tiedosto: 'Cretan lyra.jpg',
+          teksti: 'Kreetalainen lyyra on kolmikielinen jousisoitin, jota pidetään '
+            + 'pystyssä polvella eikä leuan alla. Sitä soitetaan häissä ja '
+            + 'kylän juhlissa, usein läpi yön: tanssi kestää niin kauan kuin '
+            + 'soittajaa jaksaa.',
+          selite: 'Kreetalainen lyyra. Kieliä painetaan kynsien kyljellä, ei '
+            + 'sormenpäillä — siitä tulee soittimen erikoinen liukuva ääni.',
+          lahde: 'Lemur12, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Psarantónis',
+        },
+        {
+          otsikko: 'Öljypuita enemmän kuin ihmisiä',
+          tiedosto: 'Olive-Harvest-Sitia-Lasithi-Crete-Greece.jpg',
+          teksti: 'Kreetalla kasvaa noin 30 miljoonaa oliivipuuta ja asuu reilut '
+            + '600 000 ihmistä — puita on siis viisikymmentä kertaa enemmän. '
+            + 'Osa puista on tuhansia vuosia vanhoja ja tuottaa yhä satoa. '
+            + 'Sato korjataan talvella, usein koko suvun voimin.',
+          selite: 'Oliivinkorjuuta Sitiassa Itä-Kreetalla. Verkot levitetään puun '
+            + 'alle ja oksat ravistellaan tai kammataan tyhjiksi.',
+          lahde: 'Petro Stelte, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Oliivi',
+        },
+      ],
+    },
+    {
+      id: 'maasto',
+      nimi: 'Maasto',
+      johdanto: 'Kreeta on vuori keskellä merta: sen halki kulkee rotko, jonka läpi '
+        + 'kävellään päivässä, ylätasangolla pyöri tuhat purjetuulimyllyä, ja '
+        + 'korkeimman huipun kyljessä on luola.',
+      tehtava: {
+        kysymys: 'Kuinka kapea Samarian rotko on kapeimmalta kohdaltaan?',
+        vaihtoehdot: [
+          'Noin kolme metriä',
+          'Noin kolmekymmentä metriä',
+          'Noin sata metriä',
+          'Noin puoli metriä',
+        ],
+        oikea: 0,
+        fakta: 'Kohtaa sanotaan rautaportiksi, ja seinät nousevat siinä satojen '
+          + 'metrien korkeuteen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Rotko, jonka läpi kävellään päivässä',
+          tiedosto: 'Φαράγγι Σαμαριάς 3754.jpg',
+          teksti: 'Samarian rotko halkaisee Valkoiset vuoret ja laskee '
+            + 'kuudentoista kilometrin matkalla noin 1 200 metrin korkeudesta '
+            + 'merenrantaan. Kävely kestää aamusta iltapäivään, ja se tehdään '
+            + 'aina alamäkeen: ylös kiipeäminen olisi kohtuutonta. '
+            + 'Kapeimmassa kohdassa seinien väliin jää vain kolmisen metriä, '
+            + 'ja siellä kalliot nousevat molemmin puolin satoja metrejä. '
+            + 'Alue on ollut kansallispuisto vuodesta 1962, ja kesällä siellä '
+            + 'kulkee tuhansia kävijöitä päivässä.',
+          selite: 'Näkymä Samarian rotkon suulle sumuisena päivänä. Jyrkät '
+            + 'kalliorinteet sukeltavat alas laaksoon, ja etualalla '
+            + 'mutkittelee polku.',
+          lahde: 'C messier, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tasangolla pyöri tuhat purjetta',
+          tiedosto: 'Windmill at Lassithi plateau.jpg',
+          teksti: 'Lassithin ylätasanko on vuorten ympäröimä viljelyaukea 800 '
+            + 'metrin korkeudessa. Sinne rakennettiin 1900-luvun alussa '
+            + 'tuhansia pieniä tuulimyllyjä, joiden tehtävä ei ollut jauhaa '
+            + 'vaan pumpata: valkoiset kangaspurjeet pyörittivät pumppua, '
+            + 'joka nosti kasteluveden pellolle. Parhaimmillaan myllyjä oli '
+            + 'noin kymmenentuhatta. Nykyään useimmat on korvattu '
+            + 'moottoripumpuilla, mutta osa on kunnostettu ja purjeet '
+            + 'nostetaan kesäksi paikoilleen.',
+          selite: 'Metallinen tuulimylly Lassithin tasangolla. Pyörässä on '
+            + 'kymmenen valkoista kangaspurjetta, ja alla on betoninen '
+            + 'vesisäiliö.',
+          lahde: 'Lourakis, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Luola vuoren kyljessä',
+          tiedosto: 'Idaean Cave panorama.jpg',
+          teksti: 'Kreetan korkeimman vuoren Psiloritiksen kyljessä, noin 1 500 '
+            + 'metrin korkeudessa, aukeaa Idan luola. Sinne on tuotu '
+            + 'uhrilahjoja tuhansia vuosia, ja kaivauksissa on löydetty '
+            + 'pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luolan edessä '
+            + 'avautuu Nidan tasanko, jonne paimenet vievät lampaansa yhä '
+            + 'kesäksi. Luola on kolea ja pimeä myös helteellä, ja sisään '
+            + 'mennään taskulampun kanssa.',
+          selite: 'Idan luolan suu kalliorinteessä. Aukko on tumma ja leveä, ja '
+            + 'sen eteen on rakennettu kapea kiskoilla kulkeva ratayhteys '
+            + 'kaivauksia varten.',
+          lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
+  sisilia: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sisilia',
+      johdanto: 'Saari, jossa nukketeatterin ritarit taistelevat narujen varassa, '
+        + 'leivos täytetään vasta tilauksesta, ja torilla huudetaan laulaen.',
+      kansikuvat: [
+        {
+          tiedosto: 'Taormina BW 2025-04-27 09-32-42.jpg',
+          selite: 'Taormina rinteellä meren yllä. Talot kiipeävät kukkulalle '
+            + 'terasseittain, ja alhaalla siintää Joonianmeren rannikko.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Mount Etna snow-toppd.jpg',
+          selite: 'Etna lumihuippuisena. Tulivuoren rinteillä on tummaa laavaa ja '
+            + 'alempana vihreää viljelysmaata.',
+          lahde: 'Jeanne boleyn, Wikimedia Commons (public domain)',
+        },
+        {
+          tiedosto: 'Palermo Cathedral BW 2025-04-29 11-14-42.jpg',
+          selite: 'Palermon katedraalin portaali ja kupoli. Rakennuksessa näkyy '
+            + 'päällekkäin arabialaista, normannilaista ja espanjalaista '
+            + 'tyyliä.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Ritarit narujen varassa',
+          tiedosto: 'Sicilian puppets.JPG',
+          teksti: 'Opera dei pupi on sisilialainen nukketeatteri, jossa metrin '
+            + 'mittaiset haarniskoidut ritarit taistelevat Kaarle Suuren '
+            + 'tarinoissa. Sama tarina jatkui iltaa toisensa jälkeen '
+            + 'kuukausia, ja yleisö tuli katsomaan kuin televisiosarjaa. '
+            + 'Unesco suojeli perinteen 2001.',
+          selite: 'Sisilialaisia pupi-nukkeja haarniskoissaan. Nuket painavat '
+            + 'jopa kymmenen kiloa, ja niitä ohjataan rautatangoilla '
+            + 'ylhäältä.',
+          lahde: 'Lookandlike, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Opera dei pupi',
+        },
+        {
+          otsikko: 'Cannolo täytetään vasta tilauksesta',
+          tiedosto: 'Cannoli siciliani.jpg',
+          teksti: 'Cannolo on paistettu taikinaputki, joka täytetään makeutetulla '
+            + 'ricotta-juustolla. Kunnon leipomossa se täytetään vasta kun '
+            + 'asiakas tilaa — muuten kuori pehmenee. Ricotta tehdään '
+            + 'lampaanmaidosta, ja arabit toivat sokeriruo’on saarelle '
+            + '800-luvulla.',
+          selite: 'Cannoli siciliani tarjolla. Päihin painetaan usein '
+            + 'pistaasirouhetta tai kandeerattua hedelmää.',
+          lahde: 'Stefano Mortellaro, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Cannolo',
+        },
+        {
+          otsikko: 'Torilla huudetaan laulaen',
+          tiedosto: 'Ballarò, gente en el mercado, Palermo, Sicilia, Italia, 2015.JPG',
+          teksti: 'Palermon Ballarò on toiminut samalla paikalla yli tuhat '
+            + 'vuotta, arabivallan ajoista asti. Myyjien huuto on oma '
+            + 'taiteenlajinsa nimeltä abbanniata: hinta ja tavara lauletaan '
+            + 'venytetyllä melodialla, joka kuuluu korttelin päähän.',
+          selite: 'Ballarò-tori Palermossa. Kojujen välissä myydään kalaa, '
+            + 'vihanneksia ja katuruokaa; markkina alkaa aamuvarhain ja '
+            + 'jatkuu iltaan.',
+          lahde: 'Benjamín Núñez González, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Palermo',
+        },
+      ],
+    },
+    {
+      id: 'rauniot',
+      nimi: 'Rauniot',
+      johdanto: 'Sisiliassa jokainen valloittaja jätti jälkensä kiveen: '
+        + 'kreikkalaisten temppelit, roomalaisten mosaiikit ja teatteri, '
+        + 'jossa näytelmiä esitetään yhä.',
+      tehtava: {
+        kysymys: 'Miksi Villa Romanan mosaiikit säilyivät niin hyvin?',
+        vaihtoehdot: [
+          'Maanvyöry hautasi ne',
+          'Ne maalattiin yli',
+          'Ne siirrettiin museoon',
+          'Ne peitettiin matoilla',
+        ],
+        oikea: 0,
+        fakta: 'Muta suojasi kuvia yli seitsemänsataa vuotta, kunnes ne '
+          + 'kaivettiin esiin 1950-luvulla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Temppeli säilyi, koska siitä tuli kirkko',
+          tiedosto: 'Valle dei Templi – towards Temple of Concordia.jpg',
+          teksti: 'Agrigenton temppelilaakso on kreikkalaisten 400-luvulla ennen '
+            + 'ajanlaskua rakentama rivi temppeleitä harjanteella meren yllä. '
+            + 'Parhaiten säilynyt on Concordian temppeli, ja syy on '
+            + 'käytännöllinen: 500-luvulla se muutettiin kirkoksi, jolloin '
+            + 'pylväiden välit muurattiin umpeen ja rakennusta hoidettiin. '
+            + 'Muut temppelit jäivät raunioiksi ja niiden kiviä vietiin '
+            + 'muualle. Alue on Unescon maailmanperintökohde ja yksi Kreikan '
+            + 'ulkopuolella olevista suurimmista kreikkalaisista '
+            + 'kokonaisuuksista.',
+          selite: 'Concordian temppeli harjanteella. Kaikki pylväät ovat pystyssä '
+            + 'ja kattopääty ehjä, ja ympärillä kasvaa oliivipuita.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Muta piilotti mosaiikit seitsemäksisadaksi vuodeksi',
+          tiedosto: 'Mosaïque de la Grande Chasse, villa de Casale.jpg',
+          teksti: 'Piazza Armerinan lähellä oleva roomalainen huvila rakennettiin '
+            + '300-luvulla, ja sen lattioissa on noin 3 500 neliömetriä '
+            + 'mosaiikkia — enemmän kuin missään muussa säilyneessä '
+            + 'roomalaistalossa. Vuonna 1161 maanvyöry hautasi rakennuksen '
+            + 'mutaan, ja juuri se pelasti kuvat: ne kaivettiin esiin vasta '
+            + '1950-luvulla lähes ennallaan. Kuuluisin on kuusikymmentä '
+            + 'metriä pitkä käytävä, jonka mosaiikissa pyydystetään '
+            + 'villieläimiä eri puolilta valtakuntaa.',
+          selite: 'Roomalainen lattiamosaiikki, jossa metsästäjät ajavat tiikeriä '
+            + 'ja villisikaa. Hahmot on tehty pienistä värillisistä kivistä.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Teatteri, jossa esitetään yhä',
+          tiedosto: 'Teatro greco di Siracusa - Greek Theatre of Syracuse - Sicily, Italy - 3 Jan. 2007.jpg',
+          teksti: 'Syrakusan kreikkalainen teatteri on hakattu suoraan kallioon '
+            + '400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin '
+            + 'viisitoistatuhatta ihmistä. Näytelmäkirjailija Aiskhylos näki '
+            + 'omia näytelmiään ensi-illassa juuri täällä. Teatteri ei ole '
+            + 'museokohde vaan käytössä: joka kevät siellä esitetään antiikin '
+            + 'tragedioita, ja yleisö istuu samoilla kiviportailla kuin '
+            + 'kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee '
+            + 'niin, että mukaan otetaan tyyny.',
+          selite: 'Kallioon hakattu puolikaaren muotoinen katsomo. Kivipenkit '
+            + 'nousevat riveittäin, ja alhaalla on pyöreä näyttämöpaikka.',
+          lahde: 'Andrew Malone, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+  ],
+  alpit: [
+    {
+      id: 'kaupunki',
+      nimi: 'Alpit',
+      johdanto: 'Vuoristo, jossa torvi kantaa laaksosta toiseen, kansallisruoka '
+        + 'piti keksiä mainoskampanjalla, ja lumivyöryn kanssa on opittu '
+        + 'elämään.',
+      kansikuvat: [
+        {
+          tiedosto: 'CH.VS.Zermatt 2021-10-17 Matterhorn 8726.jpg',
+          selite: 'Matterhorn kohoaa yksinäisenä pyramidina. Rinteillä on lunta '
+            + 'juovina, ja alempana kulkee polku kivikossa.',
+          lahde: 'Roy Egloff, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Alpine meadows.jpg',
+          selite: 'Alppiniitty kesällä. Keltaiset katkerot kukkivat rinteellä, ja '
+            + 'takana nousee kolmituhantisten harjanne.',
+          lahde: 'Peter Sabol, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Wetterhorn from Grindelwald.jpg',
+          selite: 'Wetterhorn kohoaa Grindelwaldin kylän yllä. Vuoren juurella '
+            + 'näkyy taloja ja niittyjä, huipulla lunta.',
+          lahde: 'Einaz80, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Torvi, joka puhuu laaksosta toiseen',
+          tiedosto: 'Alphornblaeserformation über Kreuz in Zermatt - panoramio.jpg',
+          teksti: 'Alppitorvessa ei ole yhtäkään venttiiliä eikä läppää, joten '
+            + 'siitä saa vain luonnonsävelsarjan äänet — taitava soittaja '
+            + 'yltää kuuteentoista. Ääni kantaa maastosta riippuen viidestä '
+            + 'kymmeneen kilometriin. Sillä kutsuttiin karja kotiin ja '
+            + 'viestittiin naapurilaaksoon, kun muuta puhelinta ei ollut.',
+          selite: 'Alppitorvensoittajia Zermattissa. Torvien suppilot lepäävät '
+            + 'maassa; jokainen on veistetty kuusesta ja koottu kolmesta '
+            + 'osasta, ja seinämä on vain 6–8 millimetriä paksu.',
+          lahde: 'Walter Schärer, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Alppitorvi',
+        },
+        {
+          otsikko: 'Kansallisruoka, joka piti keksiä',
+          tiedosto: 'Full cheese fondue set - in Switzerland.JPG',
+          teksti: 'Juustofondue oli 1900-luvun alussa tuttu vain muutamassa '
+            + 'laaksossa. Sveitsin juustoliitto teki siitä kansallisruoan '
+            + 'mainoskampanjalla, ja armeijan keittokirja levitti reseptin '
+            + 'koko maahan 1950-luvulla. Tunnetuin sekoitus on moitié-moitié: '
+            + 'puolet gruyèrea, puolet vacherinia. Pataan pudonnut leipä '
+            + 'maksaa laulun.',
+          selite: 'Fonduepata eli caquelon lämmittimen päällä, vieressä '
+            + 'leipäkuutioita ja pikkukurkkuja. Juusto pidetään sulana '
+            + 'pienellä liekillä ja sitä sekoitetaan koko ajan.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Fondue',
+        },
+        {
+          otsikko: 'Vuoren kanssa opitaan elämään',
+          tiedosto: 'St. Antönien Lawinenverbauung 02.jpg',
+          teksti: 'Alppikylissä lumivyöryn hallinta on taitoa, joka on siirtynyt '
+            + 'sukupolvelta toiselle: mitä metsää ei kaadeta, minne ei '
+            + 'rakenneta, milloin tie suljetaan. Rinteisiin on pystytetty '
+            + 'teräsaitoja pitämään lumi paikallaan. Unesco lisäsi tämän '
+            + 'osaamisen kulttuuriperintöluetteloonsa vuonna 2018 Sveitsin ja '
+            + 'Itävallan yhteisestä hakemuksesta.',
+          selite: 'Lumivyöryesteitä St. Antöniessa Graubündenin kantonissa. '
+            + 'Teräsristikot on rakennettu juuri sinne, mistä vyöry lähtisi '
+            + 'liikkeelle — kylän yläpuoliseen rinteeseen.',
+          lahde: 'Paebi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lumivyöry',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Alppien luonto elää jyrkässä maastossa: yksi nisäkäs nukkuu puolet '
+        + 'vuodesta, yksi lintu syö luita, ja jää vetäytyy vuosi vuodelta '
+        + 'ylemmäs.',
+      tehtava: {
+        kysymys: 'Kuinka leveä partakorppikotkan siipiväli on?',
+        vaihtoehdot: [
+          'Lähes metrin',
+          'Lähes kaksi metriä',
+          'Lähes kolme metriä',
+          'Lähes viisi metriä',
+        ],
+        oikea: 2,
+        fakta: 'Se on Alppien suurin lintu ja tunnistetaan ilmassa vinoneliön '
+          + 'muotoisesta pyrstöstä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Nukkuu puolet vuodesta',
+          tiedosto: 'Marmota marmota -Swiss Alps-8.jpg',
+          teksti: 'Murmeli on jyrsijä, joka elää kolonioissa puurajan '
+            + 'yläpuolella. Se kaivaa maahan käytävästön ja viettää siellä '
+            + 'lokakuusta huhtikuuhun horroksessa: sydän lyö muutaman kerran '
+            + 'minuutissa ja ruumiinlämpö laskee lähelle viittä astetta. '
+            + 'Kesällä murmelit syövät ruohoa lihoakseen kaksinkertaisiksi. '
+            + 'Vaaran uhatessa vartija viheltää kimeästi, ja koko rinne '
+            + 'katoaa koloihinsa sekunneissa — vihellys kuuluu kilometrin '
+            + 'päähän.',
+          selite: 'Murmeli seisoo takajaloillaan kivikkoisella rinteellä ja '
+            + 'pitelee etukäpälissään ruohoa. Turkki on ruskea ja tuuhea.',
+          lahde: 'Fundraisingnetz, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Alppimurmeli',
+        },
+        {
+          otsikko: 'Lintu, joka syö luita',
+          tiedosto: '010d Wild Bearded Vulture in flight at Pfyn-Finges (Switzerland) Photo by Giles Laurent.jpg',
+          teksti: 'Partakorppikotkan ravinnosta valtaosa on luuta — se on ainoa '
+            + 'lintu maailmassa, joka elää lähes pelkillä luilla. Isot luut '
+            + 'se kantaa ilmaan ja pudottaa kalliolle, kunnes ne murtuvat, ja '
+            + 'nielee palat kokonaisina; vatsahapot ovat niin väkeviä, että '
+            + 'luu liukenee. Siipiväli on lähes kolme metriä. Lintu tapettiin '
+            + 'Alpeilta sukupuuttoon 1900-luvun alkuun mennessä, koska sen '
+            + 'luultiin vievän lampaita ja lapsia. Palautus aloitettiin 1986, '
+            + 'ja nyt niitä pesii taas satakunta paria.',
+          selite: 'Partakorppikotka liitää lumisten vuorenrinteiden edessä. '
+            + 'Siivet ovat suorina levällään ja pyrstö on vinoneliön '
+            + 'muotoinen.',
+          lahde: 'Giles Laurent, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Partakorppikotka',
+        },
+        {
+          otsikko: 'Jää vetäytyy ylöspäin',
+          tiedosto: 'Katastrophe Refotografie 001 2014 08 05.jpg',
+          teksti: 'Alppien jäätiköt ovat kutistuneet nopeasti: 1800-luvun '
+            + 'puolivälin jälkeen niistä on sulanut yli puolet, ja pelkästään '
+            + '2000-luvulla kutistuminen on kiihtynyt. Vuoristomajoja, jotka '
+            + 'rakennettiin aikanaan jäätikön reunaan, seisoo nyt satoja '
+            + 'metrejä paljaan kiven yllä. Sulaminen ei ole vain '
+            + 'maisema-asia: jäätiköt varastoivat talven lumen ja päästävät '
+            + 'sen jokiin kesällä, joten niiden kadotessa muuttuu myös se, '
+            + 'milloin Euroopan suurissa joissa on vettä.',
+          selite: 'Vuoristomaja rinteellä, ja sen takana jyrkkä vuori, jonka '
+            + 'rinteessä on enää kapeita jäälaikkuja siellä missä ennen oli '
+            + 'yhtenäinen jäätikkö.',
+          lahde: 'Friedrich Haag, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
 };
