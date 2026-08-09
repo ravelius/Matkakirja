@@ -10,36 +10,33 @@
  */
 
 export const TILANNE = {
-  paivitetty: '9.8.2026 (myöhäisyö)',
+  paivitetty: '10.8.2026 (yövahti klo 0.50)',
   tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
     + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
     + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
-    + 'parkissa — siihen palataan myöhemmin. Omistaja delegoi 9.8. '
-    + 'päätökset ja tehtävänjaon Fablelle.',
+    + 'parkissa — siihen palataan myöhemmin. Tiimi työskentelee yön '
+    + 'yli; Fablen yövahti kiertää tunneittain.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
       tila: 'valmis',
-      tehtava: 'Tarinakaari pelissä (v460) ja kahdesti riippumattomasti '
-        + 'tarkastettu: faktatarkistus (ainoa löydös, Sarajevon '
-        + 'anakronismi, korjattu v463) ja integraatio-QA oikealla '
-        + 'selaimella — puhdas tulos. Aarrekuvat mustasta (v459).',
-      seuraavaksi: 'Koordinointi: Dubai-erän QA kun Opus 2:n kytkentä '
-        + 'on mainissa. Pääaarteiden kuvat jos omistaja tilaa.',
+      tehtava: 'Omistajan illan testipelilöydökset korjattu (v475): '
+        + 'nähtävyysjuttujen lisäkuvat karuselliin, lehden loppuun '
+        + 'vieritysvara (sivunumero ei enää peitä Etsi kätköä) ja '
+        + 'Lue lisää -artikkelien tyhjät loppuotsikot pois.',
+      seuraavaksi: 'Yövahti: raporttien kuittaus, erien jako, konttien '
+        + 'kierrätys erätauoilla, jumitarkistus tunneittain.',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'KOHTA F VALMIS: yhtään maalehteä ilman aihesivua ei '
-        + 'enää ole (120 aihesivua, 442 juttua; v456–v464). Lisäksi '
-        + 'Dubain lehti (v465) ja Tromssan lehti (v466). Mittasi '
-        + 'jonon itse: lehdettömiä kaupunkeja onkin kymmenen, ei '
-        + 'kuusi.',
-      seuraavaksi: 'Kolmen maalehtijutun päällekkäisyys korjataan '
-        + 'ensin (Kööpenhaminan voileipä, Oslon juusto, Vilnan '
-        + 'Užupis) → loput 9 lehdetöntä kaupunkia erissä → '
+      tehtava: 'Kreeta, Sisilia ja Alpit saivat lehtensä (v473) — '
+        + 'aluelehtien erä valmis. Aiemmin Islanti + Lappi (v468) ja '
+        + 'päällekkäisjuttujen siivous (v467, v469).',
+      seuraavaksi: 'Viisi kaupunkilehteä järjestyksessä Riika, Vilna, '
+        + 'Oslo, Kööpenhamina, Dubrovnik (1–2 lehteä per PR) → '
         + 'valokuvarajatapaukset + kuvaduplikaattilista → Lähi-idän '
         + 'maiden aihesivut (ARE ensin).',
     },
@@ -47,36 +44,32 @@ export const TILANNE = {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
       tila: 'tyossa',
-      tehtava: 'Lähi-idän maakartat valmiit (v457) ja kaksi '
-        + 'huolellista pikkuerää (v458, v462) — esti myös kymmenen '
-        + 'maastokohteen tekstien katoamisen ja löysi koostajan '
-        + 'lähde-eron (korjattu #674).',
-      seuraavaksi: 'Työn alla: Dubain kohdekartta + middleeast-laudan '
-        + 'cityCountry-kytkentä (Opus 1:n löytö: ilman sitä Dubain '
-        + 'lehteen ei tule menovinkkejä eikä maa numeroina -sivua).',
+      tehtava: 'Maakylttien törmäykset korjattu mittaamalla (v474): '
+        + 'kyltti nousee kaupunkinimien päälle. Aiemmin Dubain '
+        + 'kohdekartta (v467) ja cityCountry-kytkentä (v470).',
+      seuraavaksi: 'Mittakaavajana kaupunkikarttoihin (Google Maps '
+        + '-tyyliin), Tromssan kohdekartta ja vesitarkistuksen '
+        + 'korjaukset (Tukholma, Madridin Cibele, Lontoon silmä).',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA + työhuone',
-      tila: 'valmis',
-      tehtava: 'Kaksi puhdasta kierrosta putkeen: tarinakaaren '
-        + 'faktatarkistus (löysi Sarajevon anakronismin, korjattu '
-        + 'v463) ja kaaren peli-integraation QA oikealla selaimella '
-        + '(5 kaupungin ketju, rajaus, tallennus/lataus — ei '
-        + 'löydöksiä).',
-      seuraavaksi: 'Valmiudessa: Dubai-erän QA (lehti + kartta + '
-        + 'menovinkit + lehdettömien ME-maiden i-napit) kun Opus 2:n '
-        + 'kytkentä on mainissa.',
+      tila: 'tyossa',
+      tehtava: 'Dubai-erän QA käynnissä (lehti + kartta + menovinkit '
+        + '+ lehdettömien ME-maiden i-napit). Aiemmin kaksi puhdasta '
+        + 'kierrosta: kaaren faktat ja peli-integraatio.',
+      seuraavaksi: 'Raportti Dubai-QA:sta; sitten valmiudessa kunnes '
+        + 'Opus 1:n viiden lehden erä on mainissa (QA-kierros sille).',
     },
     {
       tekija: 'Sonnet 2',
       rooli: 'nähtävyysjutut',
       tila: 'tyossa',
-      tehtava: 'Livenä 14 kaupunkia; jonossa Opus 2:n karttaerät = 17 '
-        + 'uutta kaupunkia, ~102 kohdetta.',
-      seuraavaksi: 'Erät järjestyksessä, Istanbul/Marseille/Edinburgh '
-        + 'ensin. Wiki-ansat muistissa: fi-wikin "Neitsyttorni" on '
-        + 'Bakun torni ja "Belém" Brasilian kaupunki.',
+      tehtava: 'Erä 8 valmis: Lissabon, Barcelona, Granada (PR #693; '
+        + 'versionumero päivitetään työkalulla ennen mergeä). Livenä '
+        + 'sen jälkeen 17 kaupunkia.',
+      seuraavaksi: 'Erä 9: Rooma, Krakova, Varsova, Tallinna. Uusi '
+        + 'kuvakaruselli (v475) sallii 2–4 kuvaa per juttu siististi.',
     },
   ],
   odottaaPaatosta: [
@@ -84,6 +77,8 @@ export const TILANNE = {
       + '"kaipaavat vielä työstöä, palataan myöhemmin".',
     'Pääaarteiden (tähtilaattojen) AI-kuvat: promptit valmiina, '
       + 'generoidaan jos haluat myös ne kuvitettuina.',
+    'Lähi-idän tarinakaaritekstit (28 kohdetta) työhuoneessa '
+      + 'luettavina — luennat generoidaan kun sanot "generoi".',
   ],
 };
 
@@ -95,12 +90,24 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
-    otsikko: 'Dubain ja Tromssan lehdet (v465, v466)',
-    ohje: 'Avaa Lähi-idän laudalta Dubai: helmenkalastuskansi, jonka '
-      + 'kaiverrus on vuodelta 1881 — samaa vuosikymmentä kuin '
-      + 'isoisän päiväkirja. Tromssassa kansi ja Valo-aihesivu '
-      + '(keskiyön aurinko, kaamos). Dubain menovinkit syttyvät kun '
-      + 'laudan kytkentä valmistuu.',
+    otsikko: 'Illan testipelikorjaukset (v475)',
+    ohje: 'Avaa Ateenan kartalta Akropolis: kolme kuvaa on nyt yhtenä '
+      + 'karusellina nuolineen ja 1/3-laskureineen. Istanbulin lehden '
+      + 'lopussa Etsi kätkö -nappi ei enää jää sivunumeron alle. '
+      + 'Espanjalaisten portaiden Lue lisää päättyy asiatekstiin — '
+      + 'tyhjät Kuvia/Lähteet-otsikot ovat poissa.',
+  },
+  {
+    otsikko: 'Kreetan, Sisilian ja Alppien lehdet (v473)',
+    ohje: 'Avaa Euroopan laudalta aluekohteet: Kreetalla Samarian '
+      + 'rotko ja tuulimyllyt, Sisiliassa temppelilaakso, Alpeilla '
+      + 'murmeli ja partakorppikotka.',
+  },
+  {
+    otsikko: 'Maakyltit nousevat kaupunkien päälle (v474)',
+    ohje: 'Zoomaa Euroopan karttaa: maan nimikyltti ei enää peitä '
+      + 'kaupunkien nimiä (esim. Kreikka/Ateena) — sijainnit '
+      + 'mitattiin törmäystarkistuksella.',
   },
   {
     otsikko: 'Tarinakaari pelissä (v460, QA-tarkastettu)',
@@ -110,19 +117,4 @@ export const TESTATTAVAA = [
       + 'jäävään vihjeeseen — kaikki luettuna ääneen. 41 kohdetta; '
       + 'faktatarkistettu ja integraatio-QA puhdas.',
   },
-  {
-    otsikko: 'Aarre nousee mustasta (v459)',
-    ohje: 'Vastaa aarrevisaan oikein millä tahansa mantereella: '
-      + 'AI-piirretty aarre nousee pimeästä ilman kehyksiä, huudahdus '
-      + 'yllä ja nimi arvoineen alla.',
-  },
-  {
-    otsikko: 'Kohta f valmis: joka maalehdellä aihesivut (v464)',
-    ohje: 'Avaa mikä tahansa Euroopan maalehti: jokaisella on nyt '
-      + 'aihesivut juttuineen ja minitehtävineen — viimeisinä Latvia, '
-      + 'Liettua ja Kroatia (mm. Zadarin meriurut ja laskuvarjopiirros '
-      + 'vuodelta 1595).',
-  },
 ];
-
-

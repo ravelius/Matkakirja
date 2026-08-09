@@ -238,3 +238,31 @@ on mainissa; lue ne kun tarvitset yksityiskohdat:
 - **Pulmien laatuloikka Fablen pöydällä:** Ateenan pylväspulma
   oikeilla Commons-kuvilla (kuvat haettu, ks. "Muut kesken"),
   sitten geysir/laiturit/kukko kulttuuripohjaisiksi.
+
+## Yövahti 10.8. (omistaja jätti tiimin yöksi; tunneittainen cron)
+
+- **Cron:** `23 * * * *` (trig_01XuRjdzwJ9VGjzFjCBj5XYN). Täysi
+  valtuutus; omistajalle EI viestejä ennen aamua ellei jokin mene
+  peruuttamattomasti rikki. Aamulla kootaan yhteenveto.
+- **Yön julkaisut tähän asti:** v473 aluelehdet (Opus 1), v474
+  maakyltit (Opus 2), v475 illan testipelikorjaukset (Fable:
+  kuvakaruselli, lehden vieritysvara, wikihäntien siistintä).
+- **Versiotörmäys ratkottu klo 0.45:** #697 vei v474:n jonka #696 oli
+  varannut → #696 mergettiin mainiin ja nostettiin v475:ksi
+  työkalulla. Sonnet 2:n #693 (v472-törmäys) korjautetaan Sonnet 2:lla
+  itsellään työkalulla (tehtävänanto lähetetty, merge valtuutettu).
+- **Konttien kierrätys (lupakyselyjen poisto):** Sonnet 1 KIERRÄTETTY
+  (illalla, todennettu). Opus 1, Opus 2, Sonnet 2 EI VIELÄ — kumpikin
+  Opus julkaisi klo 0.32–0.45 eikä raporttia ole, joten voivat olla
+  kesken ajon; kierrätys tehdään kun erätauko on varmistettu
+  raportista ("raportoi ja jää odottamaan" -ohje on triggereissä).
+- **Jonot annettu klo 0.48–0.55 triggereillä:** Opus 1 = Riika,
+  Vilna, Oslo, Kööpenhamina, Dubrovnik (1–2 lehteä/PR). Opus 2 =
+  mittakaavajana + Tromssan kohdekartta + vesikorjaukset (Tukholma,
+  Madrid Cibele, Lontoon silmä). Sonnet 2 = #693:n versiokorjaus ja
+  merge + erä 9 (Rooma, Krakova, Varsova, Tallinna). Sonnet 1 =
+  Dubai-QA-tilannekysely; seuraava kierros Opus 1:n 5 lehden jälkeen.
+- **Jumitarkistus:** ei jumeja havaittu tällä kierroksella (kaikki
+  julkaisseet tunnin sisällä paitsi Sonnet 1, jolta odotetaan
+  Dubai-QA-vastausta tilannekyselyyn — jos ei vastausta seuraavaan
+  kierrokseen mennessä, kierrätä kontti ja anna QA-erä uudelleen).
