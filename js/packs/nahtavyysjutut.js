@@ -997,9 +997,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Markus Trienke, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
-          tiedosto: 'Landseer Lion, Trafalgar Square, London - geograph.org.uk - 6823604.jpg',
-          selite: 'Kaksi Landseerin pronssileijonaa graniittijalustoillaan.',
-          lahde: 'habiloid, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: "Landseer's lion and the clock tower seen from Trafalgar Square.jpg",
+          selite: 'Landseerin pronssileijona jalustallaan iltavalossa, '
+            + 'taustalla Big Benin kellotorni ja punainen '
+            + 'kaksikerrosbussi.',
+          lahde: 'Maggie Jones, Wikimedia Commons (PD)',
         },
       ],
       lahde: 'Wikipedia',
@@ -1057,10 +1059,11 @@ export const NAHTAVYYSJUTUT = {
           + 'eikä pysähdy koskaan — kyytiin astutaan sen liikkuessa.',
       kuvat: [
         {
-          tiedosto: 'London eye and county hall pano edited 2008-02-19.jpg',
-          selite: 'Koko pyörä joen toiselta rannalta, kehää '
-            + 'kannattavat ohuet teräsvaijerit kuin polkupyörän pinnat.',
-          lahde: 'Kim Hansen, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'London Eye County Hall River Thames Lambeth London England 02.jpg',
+          selite: 'Koko pyörä joen toiselta rannalta aurinkoisena '
+            + 'päivänä, kehää kannattavat ohuet teräsvaijerit kuin '
+            + 'polkupyörän pinnat.',
+          lahde: 'Acabashi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The London Eye Under Construction - August 1999.jpg',
@@ -1129,10 +1132,11 @@ export const NAHTAVYYSJUTUT = {
           + 'tarina, että ostaja luuli saavansa juuri tämän sillan.',
       kuvat: [
         {
-          tiedosto: 'Puente de la Torre, Londres, Inglaterra, 2022-11-26, DD 145.jpg',
-          selite: 'Silta läheltä joelta: kaksi kivistä tornia, niiden '
-            + 'välissä yläkäytävät ja siniset riippuketjut.',
-          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Tower bridge London Twilight - November 2006.jpg',
+          selite: 'Silta joelta iltahämärässä valot sytytettyinä: '
+            + 'kaksi kivistä tornia, niiden välissä yläkäytävät ja '
+            + 'vaaleansiniset riippuketjut.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Tower Bridge walkway.jpg',
