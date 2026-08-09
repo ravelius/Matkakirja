@@ -18,6 +18,38 @@
 // poimi rajat tiedostosivun "Map to illustrate ... borders"
 // -kohdasta ja KATSO 480 px pikkukuva silmin kuten muutkin kuvat.
 // Kaupunkien koordinaatit suomenkielisestä Wikipediasta.
+//
+// RAJAT HAETAAN LÄHTEESTÄ ITSE, EIKÄ KOSKAAN OTETA VASTAAN VALMIINA
+// (Fablen ohje 9.8.2026 Lähi-idän erien jälkeen). Väärä rajaluku ei
+// riko mitään näkyvästi — se vain siirtää jokaisen kaupunkipisteen,
+// ja virhe huomataan vasta kuvasta. Siksi:
+//
+//  1. Hae top/bottom/left/right sivulta
+//     `Module:Location map/data/<Maa>` (en.wikipedia, action=raw) ja
+//     katso samalla, onko valitsemasi tiedosto moduulin `image1`.
+//     Jos kartta on Tschubbyn `Reliefkarte`-perhettä, rajat ovat
+//     yhden hypyn takana: tiedostosivu sanoo "Grenzen: <maa> adm
+//     location map.svg", ja juuri se tiedosto on moduulin `image`.
+//     Lue ketju molemmista päistä.
+//  2. Jos käytät tutkimusapuria, HAE RAJAT ITSE ENNEN KUIN LUET SEN
+//     RAPORTIN. Silloin sinulla on riippumaton vertailukohta etkä
+//     vahvista vain sitä mitä apuri ehdotti.
+//  3. Ristiinvarmista kuvasuhteesta: px/° pitkittäin ja
+//     leveyspiireittäin, ja suhteen pitäisi olla lähellä arvoa
+//     1/cos(keskileveysaste). Muutaman prosentin heitto on normaali —
+//     osa karttaperheen kuvista ilmoittaa oman venytyksensä
+//     ("N/S stretching NNN %"), joka saa poiketa geometriasta
+//     (esim. Kypros 115 % vs. 122 %). Se ei vaikuta
+//     prosenttiasemointiin, koska akselit ovat lineaarisia asteissa.
+//  4. Todenna lopuksi pisteet pelin omalla karttapiste()-funktiolla
+//     kuvan päälle piirrettynä ja KATSO KUVA.
+//
+// SVG kelpaa pohjakuvaksi (Syyria): Special:FilePath?width=1000
+// rasteroi sen PNG:ksi. Testattu 9.8.2026.
+//
+// Kun lähteet ovat eri mieltä luvusta, sitä EI kirjoiteta täsmällisenä
+// (Fablen linjaus: Moreebin dyyni). Ks. ARE, YEM, CYP ja SYR — kaikissa
+// on kommentti siitä, mikä luku jätettiin pois ja miksi.
 
 /**
  * ISO3-koodi → kartta.
