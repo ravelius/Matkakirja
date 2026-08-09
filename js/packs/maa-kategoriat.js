@@ -3548,6 +3548,64 @@ export const MAA_KATEGORIAT = {
       ],
     },
     {
+      id: 'elaimet',
+      nimi: 'Eläimet kaupungissa',
+      johdanto: 'Keskellä pääkaupunkia nostetaan lohia, ja Djurgårdenin mäellä '
+        + 'laiduntaa eläin, joka oli kerran kadota koko maailmasta.',
+      nostot: [
+        {
+          otsikko: 'Lohi ui eduskuntatalon ohi',
+          aika: '2000',
+          tiedosto: 'Håvbåt på Strömmen 2020.jpg',
+          teksti: 'Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen '
+            + 'aivan eduskuntatalon vierestä. Siitä nostetaan joka vuosi '
+            + 'satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka '
+            + 'painoi lähes 22 kiloa. Vedessä elää noin kolmekymmentä '
+            + 'kalalajia, enemmän kuin missään muualla Tukholman seudun '
+            + 'vesissä. Kalat palasivat 1970-luvulla aloitettujen istutusten '
+            + 'myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin '
+            + 'kalatieksi, jota myöten kalat pääsevät nousemaan järveen.',
+          selite: 'Vihreä haavivene kiinni Norrströmin virrassa Kuninkaallisen '
+            + 'oopperan edessä. Puomista roikkuu iso nostohaavi, joka '
+            + 'lasketaan veteen kalaa odottamaan.',
+          lahde: 'Frankie Fouganthin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lohi',
+          galleria: '[object Object]',
+        },
+        {
+          otsikko: 'Visentti pelastui kaupungin mäellä',
+          aika: '1891',
+          tiedosto: 'Bison bonasus, Skansen (23157746126).jpg',
+          teksti: 'Djurgårdenin Skansen avattiin 1891, ja sinne siirrettiin '
+            + 'kokonaisia taloja ympäri Ruotsia. Malli levisi niin laajalle, '
+            + 'että monessa kielessä sana skansen tarkoittaa yhä '
+            + 'ulkoilmamuseota. Skansenilla pidettiin myös visenttejä, '
+            + 'Euroopan raskaimpia maaeläimiä. Kun laji oli 1920-luvulla '
+            + 'katoamassa, koko maailmassa oli enää 54 visenttiä — ja kaksi '
+            + 'niistä eli täällä. Vuonna 1929 Skansenilta lähetettiin hiehoja '
+            + 'Puolan Białowieżaan, jonne laji päästettiin takaisin metsään '
+            + '1952.',
+          selite: 'Visentin pää lähikuvassa Skansenilla: paksu ruskea otsatukka, '
+            + 'lyhyet ylöspäin kaartuvat sarvet ja tumma turpa. Taustalla '
+            + 'näkyy aitauksen lauta-aita talvivalossa.',
+          lahde: 'Bengt Nyman, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Visentti',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minne Skansenilta lähetettiin visenttejä vuonna 1929?',
+        vaihtoehdot: [
+          'Norjan Dovrefjelliin',
+          'Skotlannin Cairngormsiin',
+          'Puolan Białowieżaan',
+          'Romanian Karpaateille',
+        ],
+        oikea: 2,
+        fakta: 'Skansen luovutti vuonna 1929 nuoria naarasvisenttejä Puolan '
+          + 'Białowieżaan, ja siellä laji pääsi takaisin metsään vuonna 1952.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Ruotsi on avannut kokoelmansa poikkeuksellisen laajasti: klassikot '
@@ -4214,6 +4272,65 @@ export const MAA_KATEGORIAT = {
      * samassa kansiossa) — ui.js liittää sen id:n 'valokuvaus'
      * perusteella.
      */
+    {
+      id: 'arki',
+      nimi: 'Arki ja kadut',
+      johdanto: 'Kaupungin oma katuruoka syntyi ketsupista, jota idän puolella ei '
+        + 'saanut — ja kaupasta, jonka valo palaa, kun kaikki muut ovat '
+        + 'kiinni.',
+      nostot: [
+        {
+          otsikko: 'Currywurst keksittiin kadunkulmassa',
+          aika: '1949',
+          tiedosto: 'Currywurst-1.jpg',
+          teksti: 'Herta Heuwer piti kioskia Charlottenburgissa Kantstraßen ja '
+            + 'Kaiser-Friedrich-Straßen kulmassa. Hän kertoi sekoittaneensa '
+            + '4. syyskuuta 1949 tomaatista ja mausteista kastikkeen, '
+            + 'kaataneensa sen paistetun makkaran päälle ja ripotelleensa '
+            + 'vielä currya pinnalle. Ainekset hän oli saanut '
+            + 'brittisotilailta. Kastikkeen hän rekisteröi 1959 nimellä '
+            + 'Chillup — chilistä ja ketsupista. Kulmassa on nykyään hänen '
+            + 'muistolaattansa.',
+          selite: 'Berliiniläinen currywurst pahvivadissa: paloiteltu makkara, '
+            + 'punaista kastiketta, päällä currymaustetta ja pystyssä pieni '
+            + 'sininen muovihaarukka.',
+          lahde: 'Rainer Zenz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Currywurst',
+          galleria: '[object Object]',
+        },
+        {
+          otsikko: 'Puoti, joka on auki kun muut ovat kiinni',
+          aika: '1950-luku',
+          tiedosto: 'Spätkauf Late Night Shop.jpg',
+          teksti: 'Saksassa kaupat sulkeutuvat illalla aikaisin ja sunnuntaisin '
+            + 'kokonaan. Berliinissä on silti melkein joka korttelissa pieni '
+            + 'puoti, jonka valo palaa myöhään: Späti. Nimi tulee sanasta '
+            + 'spät, myöhään. Itä-Berliinissä avattiin 1950-luvulla '
+            + 'vuorotyöläisiä varten spätverkaufsstelle-kauppoja, ja '
+            + 'länsipuolella samanlaisia alettiin 1980-luvulla kutsua nimellä '
+            + 'Spätkauf. Lyhennys Späti otettiin Duden-sanakirjaan vuonna '
+            + '2017.',
+          selite: 'Keltainen kilpi talon seinässä. Siinä lukee isoin punaisin '
+            + 'kirjaimin SPÄTKAUF ja sen alla pienemmällä LATE NIGHT SHOP.',
+          lahde: 'ChickSR, Wikimedia Commons (CC BY-SA 4.0)',
+          galleria: '[object Object]',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Keneltä Herta Heuwer sai ainekset ensimmäiseen '
+          + 'currywurst-kastikkeeseensa?',
+        vaihtoehdot: [
+          'Ranskalaisilta sotilailta',
+          'Neuvostoliiton sotilailta',
+          'Brittiläisiltä sotilailta',
+          'Amerikkalaisilta sotilailta',
+        ],
+        oikea: 2,
+        fakta: 'Herta Heuwer sai kastikkeensa ainekset brittisotilailta ja alkoi '
+          + 'myydä sen kanssa paistettua makkaraa kioskillaan '
+          + 'Charlottenburgissa.',
+      },
+    },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
@@ -5559,6 +5676,82 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'arki',
+      nimi: 'Arki ja tavat',
+      johdanto: 'Vaunun kokoinen soitin, kala joka syödään pyrstöstä, ja pieni '
+        + 'paalu jonka kyljessä on kaupungin vaakuna.',
+      nostot: [
+        {
+          otsikko: 'Katu-urut ja kolisevat kolikot',
+          aika: '1875',
+          tiedosto: 'Amsterdam. Een draaiorgel op een van de grachten, Bestanddeelnr 901-8132.jpg',
+          teksti: 'Belgialainen Leon Warnies avasi Amsterdamiin katu-urkujen '
+            + 'vuokraamon vuonna 1875, ja siitä alkoi koko hollantilainen '
+            + 'perinne. Musiikki tulee taitellusta pahvikirjasta, johon on '
+            + 'lyöty reikiä: yksi kirja on yksi kappale. Urkuri kääntää '
+            + 'kampea ja ravistaa toisella kädellä rahalipasta '
+            + 'ohikulkijoille. Warniesin jälkeläiset ovat yhä samassa työssä: '
+            + 'Amsterdamissa toimii urkuliike Perlee.',
+          selite: 'Katu-urut kanavan rannalla vuonna 1946. Soitin on kokonainen '
+            + 'koristeltu vaunu, jota työnnetään käsin paikasta toiseen — '
+            + 'soittajan lisäksi mukana on aina rahankerääjä.',
+          lahde: 'Charles Breijer / Anefo, Wikimedia Commons (CC0)',
+          wiki: 'Posetiivi',
+          musiikki: 'https://music.apple.com/fi/search?term=draaiorgel',
+          musiikkiNimi: 'Katu-urkumusiikkia Apple Musicissa',
+          musiikkiNayte: 'https://archive.org/download/VPROreisnaarheteinde-draaiorgel/draaiorgel.mp3',
+          musiikkiNayteNimi: 'Katu-urut — VPRO / lolaradio, CC BY-SA',
+        },
+        {
+          otsikko: 'Silli syödään pyrstöstä',
+          aika: 'Keväisin',
+          tiedosto: 'Hollandse nieuwe haring eten bij een haringstal in Amsterdam, Bestanddeelnr 932-6068.jpg',
+          teksti: 'Hollandse Nieuwe on kevään ensimmäinen suolasilli, ja sen saa '
+            + 'myydä vasta kun kalan rasvapitoisuus on noussut noin 16 '
+            + 'prosenttiin. Perkauksessa haima jätetään paikalleen: sen '
+            + 'entsyymit kypsyttävät lihan muutamassa päivässä. Nimi on '
+            + 'suojattu: kalan pitää olla vähintään kolmivuotias, ja pyytää '
+            + 'sen saa vain touko–elokuussa. Kojulla silli kastetaan sipuliin '
+            + 'ja lasketaan suuhun pyrstöstä pidellen.',
+          selite: 'Silliä syödään amsterdamilaisella kalakojulla vuonna 1983. '
+            + 'Mies pitelee kalaa pyrstöstä pään yläpuolella ja laskee sen '
+            + 'suuhunsa; pää on poistettu ja ruoto vedetty pois.',
+          lahde: 'Rob Croes / Anefo, Wikimedia Commons (CC0)',
+          wiki: 'Silli',
+        },
+        {
+          otsikko: 'Paalu, jonka kyljessä on kolme ristiä',
+          aika: 'Nykyisin',
+          tiedosto: 'Amsterdammertje.jpg',
+          teksti: 'Amsterdamin jalkakäytävillä seisoo tuhansia matalia '
+            + 'punaruskeita paaluja. Ne estävät autoja nousemasta '
+            + 'kävelytielle, ja jokaisen kyljessä on kolme vinoristiä — samat '
+            + 'kuin kaupungin vaakunassa. Siksi niitä sanotaan '
+            + 'amsterdammertjeiksi eli pikkuamsterdamilaisiksi. Paalu on 1,06 '
+            + 'metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on '
+            + 'kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, '
+            + 'vuonna 2003 enää alle 40 000.',
+          selite: 'Amsterdammertje läheltä: pyöreä punaruskea pylväs, jonka '
+            + 'kupera lakki on kulunut kiiltäväksi ja jonka kylkeen on '
+            + 'valettu kolme vinoristiä päällekkäin.',
+          lahde: 'M.Minderhoud, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Amsterdam',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä sillin elin jätetään perkauksessa paikalleen?',
+        vaihtoehdot: [
+          'Maksa',
+          'Haima',
+          'Sydän',
+          'Uimarakko',
+        ],
+        oikea: 1,
+        fakta: 'Haima jää sillin sisään tarkoituksella, sillä sen entsyymit '
+          + 'kypsyttävät lihan muutamassa päivässä.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Alankomaat on skannannut itsensä verkkoon: maalaukset '
@@ -6604,6 +6797,69 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Sataman köyhien laulu päätyi Unescon luetteloon, ja koko maailman '
+        + 'tuntema kreikkalainen tanssi keksittiin vasta vuonna 1964.',
+      nostot: [
+        {
+          otsikko: 'Rebetiko — sataman blues',
+          aika: '1920-luku',
+          tiedosto: 'The Famous Quartet of Pireaus about 1934.jpg',
+          teksti: 'Pireuksen satamakortteleissa syntyi 1920- ja 1930-luvulla '
+            + 'rebetiko: pakolaisten ja köyhien laulu. Soittimena oli '
+            + 'bouzouki ja sen pikkuveli baglamas, joka on niin pieni, että '
+            + 'sen sai tehdyksi vankilassa ja piilotetuksi poliisilta. '
+            + 'Diktaattori Metaxasin sensuuri kävi laulujen sanojen kimppuun '
+            + 'vuodesta 1937, mutta musiikki jäi henkiin. Unesco otti '
+            + 'rebetikon ihmiskunnan kulttuuriperinnön luetteloon vuonna '
+            + '2017.',
+          selite: 'Pireuksen kuuluisa kvartetti noin vuonna 1934: neljä nuorta '
+            + 'miestä puvuissa ja solmioissa, sylissä pitkäkaulaisia '
+            + 'bouzoukeja. Vasemmalla istuvalla on kädessä pienempi baglamas. '
+            + 'Yhtyeen tunnetuin soittaja oli Markos Vamvakaris.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Rebetiko',
+          musiikki: 'https://music.apple.com/fi/search?term=rebetiko',
+          musiikkiNimi: 'Rebetiko Apple Musicissa',
+        },
+        {
+          otsikko: 'Zorbaksen tanssi keksittiin elokuvaa varten',
+          aika: '1964',
+          tiedosto: 'Mikis Theodorakis in Helsinki 1972 (JOKAHBL3F C23-3).tif',
+          teksti: 'Sirtaki ei ole vanha kansantanssi. Se koottiin vanhoista '
+            + 'tansseista vuonna 1964 elokuvaa Kerro minulle, Zorbas varten. '
+            + 'Pääosan näyttelijä Anthony Quinn kertoi, ettei pystynyt '
+            + 'loukkaantuneella jalallaan hyppimään, joten askeleista tuli '
+            + 'liukuvia ja vauhti kiihtyy vasta lopussa. Musiikin sävelsi '
+            + 'Mikis Theodorakis. Kun sotilasjuntta kielsi hänen musiikkinsa '
+            + 'vuonna 1967, sitä laulettiin muualla — kiertueen solistina oli '
+            + 'suomalainen Arja Saijonmaa.',
+          selite: 'Theodorakis ja Arja Saijonmaa saapuvat Seutulan lentoasemalle '
+            + 'Helsinkiin 9. helmikuuta 1972. Säveltäjä nauraa '
+            + 'turkiskauluksisessa takissaan, Saijonmaalla on hapsuhuivi '
+            + 'kaulassa.',
+          lahde: 'Hugo Sundström, Museovirasto, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Míkis Theodorákis',
+          musiikki: 'https://music.apple.com/fi/search?term=theodorakis%20zorba',
+          musiikkiNimi: 'Theodorakiksen Zorbas Apple Musicissa',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä baglamas oli niin pieni, että sellaisen sai tehdyksi '
+          + 'salaa?',
+        vaihtoehdot: [
+          'Laivan ruumassa',
+          'Vankilassa',
+          'Kirkon kellarissa',
+          'Vuoristoluolassa',
+        ],
+        oikea: 1,
+        fakta: 'Bouzoukin pikkuveli baglamas on niin pieni soitin, että se '
+          + 'syntyi vankilassa ja mahtui piiloon poliisilta.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Kreikan aarteet ovat auki selaimessa: Akropoliille pääsee '
@@ -7610,6 +7866,63 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'arki',
+      nimi: 'Arki ja tavat',
+      johdanto: 'Kaupunki, jossa yhtä kahvikuppia voi venyttää koko iltapäivän ja '
+        + 'jossa kaupunki itse ryhtyi rakentamaan asuntoja.',
+      nostot: [
+        {
+          otsikko: 'Kahvila on kaupungin olohuone',
+          aika: 'Vuosisatoja',
+          tiedosto: 'Cafe Central in Vienna interior near portraits.JPG',
+          teksti: 'Wieniläisessä kahvilassa yhden kupin voi venyttää koko '
+            + 'iltapäiväksi, ja lehdet kuuluvat hintaan. Kahvin kanssa '
+            + 'tuodaan aina lasi hanavettä, joka täytetään pyytämättä '
+            + 'uudelleen. Jokaisella kahvilajilla on oma nimensä: melangessa '
+            + 'on maitoa ja maitovaahtoa, ja einspänner tarjoillaan lasissa '
+            + 'kermavaahtohatun alla. Nimi tulee yksivaljakon ajureista, '
+            + 'jotka pitivät lasia toisessa kädessä ja ohjaksia toisessa — '
+            + 'vaahto piti kahvin lämpimänä.',
+          selite: 'Café Centralin holvisali Wienissä. Seinällä on kaksi suurta '
+            + 'muotokuvaa, keisari Frans Joosef ja keisarinna Elisabet, ja '
+            + 'niiden alla istutaan valkoisilla liinoilla katetuissa '
+            + 'pöydissä.',
+          lahde: 'Clayton Tang, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Wien',
+        },
+        {
+          otsikko: 'Kilometrin pituinen kotitalo',
+          aika: '1930',
+          tiedosto: 'Karl Marx Hof.jpg',
+          teksti: 'Vuoden 1917 asuntolaskennassa 92 prosentissa Wienin asunnoista '
+            + 'ei ollut omaa vessaa eikä 95 prosentissa vesijohtoa. Kaupunki '
+            + 'ryhtyi silloin itse rakennuttajaksi. Karl-Marx-Hof avattiin '
+            + '12. lokakuuta 1930: se on noin 1 050 metriä pitkä ja siihen '
+            + 'tehtiin 1 382 asuntoa noin viidelletuhannelle asukkaalle. '
+            + 'Tontista rakennettiin vain 23 prosenttia — kaikki muu '
+            + 'jätettiin pihaksi ja leikkikentäksi.',
+          selite: 'Karl-Marx-Hofin julkisivu Döblingin kaupunginosassa. '
+            + 'Punatiilisen rakennuksen läpi johtaa neljä suurta holvikaarta, '
+            + 'torneissa on lipputangot, ja edessä on nurmikko ja kukkiva '
+            + 'kastanja.',
+          lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Karl-Marx-Hof',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä wieniläisessä kahvilassa tuodaan aina kahvin kanssa?',
+        vaihtoehdot: [
+          'Lasillinen hanavettä',
+          'Lasillinen omenamehua',
+          'Kuppi kuumaa kaakaota',
+          'Lasillinen kylmää maitoa',
+        ],
+        oikea: 0,
+        fakta: 'Vesilasi kuuluu Wienissä kahviin itsestään selvästi, ja '
+          + 'tyhjentynyt lasi täytetään uudelleen ilman erillistä pyyntöä.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Itävalta on avannut verkkoon sen, mitä salissa ei näe: maalin alle '
@@ -8288,6 +8601,60 @@ export const MAA_KATEGORIAT = {
         oikea: 3,
         fakta: 'Zátopek ilmoittautui maratonille vasta viime hetkellä eikä ollut '
           + 'juossut sitä matkaa koskaan ennen.',
+      },
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki ja tavat',
+      johdanto: 'Kaupungin oma voileipä ja teatteri, jossa näyttelijät roikkuvat '
+        + 'langoissa.',
+      nostot: [
+        {
+          otsikko: 'Nukketeatteri puolusti kieltä',
+          aika: '1800-luku',
+          tiedosto: 'Marionette Opera Prague.jpg',
+          teksti: 'Habsburgien valtakunnassa virastojen ja koulujen kieli oli '
+            + 'saksa, mutta kiertävät nukkenäyttelijät esittivät markkinoilla '
+            + 'näytelmänsä tšekiksi — siksi marionetit muistetaan Tšekissä '
+            + 'kielen puolustajina. Unesco otti tšekkiläisen ja '
+            + 'slovakialaisen nukketeatterin ihmiskunnan kulttuuriperinnön '
+            + 'luetteloon vuonna 2016. Prahassa on yhä teattereita, joissa '
+            + 'lankojen varassa esitetään kokonainen ooppera.',
+          selite: 'Prahan Vanhankaupungin nukketeatterin sisäänkäynti. Kyltti '
+            + 'mainostaa Don Giovannia — Mozartin ooppera sai maailman '
+            + 'ensi-iltansa Prahassa 29. lokakuuta 1787 säveltäjän itsensä '
+            + 'johtamana.',
+          lahde: 'Jim Milles, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Marionetti',
+        },
+        {
+          otsikko: 'Voileipä, joka syödään haarukalla',
+          aika: '1910-luku',
+          tiedosto: 'Obložené chlebíčky.jpg',
+          teksti: 'Chlebíček on paksu viipale vaaleaa leipää, jonka päälle '
+            + 'ladotaan perunasalaattia, kinkkua, kananmunaa ja suolakurkkua. '
+            + 'Prahalainen herkkukauppias Jan Paukert alkoi myydä niitä '
+            + 'liikkeessään 1910-luvulla, ja tapa levisi koko maahan. '
+            + 'Syntymäpäiviin ja hautajaisiin niitä tehdään yhä vadillinen, '
+            + 'ja kaupassa hinta lasketaan kappaleittain.',
+          selite: 'Vadillinen chlebíčkejä katetulla pöydällä. Pohjana on '
+            + 'tavallisesti perunasalaatti, ja päälle tulee kinkkua, salamia, '
+            + 'munaa ja suolakurkkua — jokainen leipä koristellaan erikseen.',
+          lahde: 'Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä oli virastojen ja koulujen kieli Habsburgien valtakunnassa?',
+        vaihtoehdot: [
+          'Saksan kieli',
+          'Unkarin kieli',
+          'Puolan kieli',
+          'Latinan kieli',
+        ],
+        oikea: 0,
+        fakta: 'Saksa oli Habsburgien virastojen ja koulujen kieli, joten '
+          + 'tšekiksi esiintyneistä nukkenäyttelijöistä tuli kielen '
+          + 'puolustajia.',
       },
     },
     {
