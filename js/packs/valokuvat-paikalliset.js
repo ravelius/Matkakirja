@@ -42,6 +42,7 @@ export const VALOKUVAT_PAIKALLISET = new Map([
   ["ETH-BIB-Fokker in der Sahara-Tschadseeflug 1930-31-LBS MH02-08-0405.tif", 'vanha-sahara.jpg'],
   ["ETH-BIB-Grabmal von Askia, Gao-Tschadseeflug 1930-31-LBS MH02-08-0548.tif", 'vanha-gao.jpg'],
   ["ETH-BIB-Ufer des Tschadsee-Tschadseeflug 1930-31-LBS MH02-08-0976.tif", 'vanha-tshadjarvi.jpg'],
+  ["Early Morning Gondolas at Piazza San Marco (3500989834).jpg", 'early-morning-gondolas-at-piazza-san-marco-3500989834.jpg'],
   ["ElFasherDarfurSudan RomanDeckert18022015.jpg", 'uusi-darfur.jpg'],
   ["ElFnarMarrakech2014.jpg", 'elfnarmarrakech2014.jpg'],
   ["Eremitage Foucauld (1991).jpg", 'vanha-ahaggar.jpg'],
