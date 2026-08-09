@@ -65,9 +65,12 @@ export const TILANNE = {
         + 'Praha on vaalein kartta (puolet ruudusta puistoa — '
         + 'kaupungin totuus, ei virhe).',
       seuraavaksi: 'Helsinki julkaistu (v424: kohdekartta, Suomenlinna '
-        + 'kainalokartassa, meri piirtyy vetenä). Jäljellä rantakaupunkien '
-        + 'vesitäyttö (Istanbul ym.) ja loput kartat. Sonnet 2:n '
-        + 'nähtävyysjutut yhä Helsinki edellä — kartta on, jutut kesken.',
+        + 'kainalossa, meri vetenä). Merentäyttö nyt kaupunkikohtainen '
+        + 'valinta + <30 % relaatioraja + pinta-alavahti (Venetsia-oppi: '
+        + 'väärät renkaat peittivät koko laguunin). Tukholma ja Venetsia '
+        + 'piirretty uudestaan vetineen (Fablen kuittaus). Seuraavaksi '
+        + 'Istanbul → Marseille + Edinburgh kolmen erässä, sitten '
+        + 'Lissabon/Barcelona/Granada.',
     },
     {
       tekija: 'Sonnet 1',
@@ -91,13 +94,15 @@ export const TILANNE = {
     {
       tekija: 'Sonnet 2',
       rooli: 'nähtävyysjutut',
-      tila: 'valmis',
-      tehtava: 'NÄHTÄVYYSJUTUT VALMIIT KAIKISSA KARTTAKAUPUNGEISSA: '
-        + 'v376 Kairo+Venetsia, v377 Madrid+Tukholma, v381 Lontoon '
-        + 'vanhat muunnettu lukittuun malliin. 30 kohdetta '
-        + 'tarkistettu kolmessa näyttökoossa.',
-      seuraavaksi: 'Kaista tyhjä — jatkuu, kun Opus 2 tekee uusia '
-        + 'kaupunkikarttoja (nähtävyysvaihe).',
+      tila: 'tyossa',
+      tehtava: 'Nähtävyysjutut Opus 2:n uusille kohdekartoille lukittuun '
+        + 'malliin. Erä 4 julki (v426): Praha, Wien, Budapest, Pariisi — '
+        + '24 kohdetta, jokainen kuva itsenäisesti Commons-API-tarkistettu '
+        + '(PD/CC, vaaka). Aiemmat: Kairo, Venetsia, Madrid, Tukholma, '
+        + 'Berliini, Lontoo.',
+      seuraavaksi: 'HELSINKI kärjessä (omistaja odottaa): kuusi kohdetta '
+        + '+ Suomenlinna. Sen jälkeen Ateena/Amsterdam/Dublin (v421). '
+        + 'Ateenan kohteissa disambiguointisääntö mielessä.',
     },
   ],
   odottaaPaatosta: [
