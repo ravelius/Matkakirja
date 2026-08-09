@@ -1,8 +1,9 @@
 /*
- * Isoisä-saapumisten kaari-kokeilun luennat (KAARI_KAUPUNGIT,
- * js/tyohuone-kehitys-data.js). Kirjoittaa kolme mp3:a per kaupunki:
- * puhe-kaari-saapuminen-<id>.mp3, puhe-kaari-visa-<id>.mp3 ja
- * puhe-kaari-aarre-<id>.mp3. Sama resepti kuin generoi-luennat.mjs:ssä
+ * Kaaripaketin luennat (KAARI_PAKETIT, js/tyohuone-kehitys-data.js).
+ * Kirjoittaa mp3:n per osa per kaupunki:
+ * puhe-kaari-<osa>-<id>.mp3 (saapuminen, tervehdys, visa, aarre,
+ * vihje). ÄLÄ aja ennen omistajan hyväksyntää — omistaja päättää,
+ * mitkä osat luetaan. Sama resepti kuin generoi-luennat.mjs:ssä
  * (Viisas Kertoja, eleven_v3, /v1/text-to-dialogue, mp3_44100_128,
  * stability 0.5, lopputauko).
  *
@@ -15,7 +16,7 @@ import { writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { KAARI_KAUPUNGIT } from '../js/tyohuone-kehitys-data.js';
+import { KAARI_PAKETIT } from '../js/tyohuone-kehitys-data.js';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
@@ -29,16 +30,20 @@ if (!avain) {
   process.exit(1);
 }
 
+/* Luentakenttä per osa; jos luenta*-kenttää ei ole, käytetään
+ * tekstikenttää sellaisenaan. */
 const OSAT = [
-  ['saapuminen', 'saapumisLuenta'],
-  ['visa', 'visaLuenta'],
-  ['aarre', 'aarreLuenta'],
+  ['saapuminen', 'saapumisLuenta', 'saapuminen'],
+  ['tervehdys', 'tervehdysLuenta', 'tervehdys'],
+  ['visa', 'visaLuenta', 'visa'],
+  ['aarre', 'aarreLuenta', 'aarre'],
+  ['vihje', 'vihjeLuenta', 'vihje'],
 ];
 
 const pyydetyt = process.argv.slice(2);
-const kohteet = KAARI_KAUPUNGIT.kohteet.filter((k) => !pyydetyt.length || pyydetyt.includes(k.id));
+const kohteet = KAARI_PAKETIT.kohteet.filter((k) => !pyydetyt.length || pyydetyt.includes(k.id));
 if (!kohteet.length) {
-  console.error('Ei kohteita. Tunnetut:', KAARI_KAUPUNGIT.kohteet.map((k) => k.id).join(', '));
+  console.error('Ei kohteita. Tunnetut:', KAARI_PAKETIT.kohteet.map((k) => k.id).join(', '));
   process.exit(1);
 }
 
@@ -67,9 +72,9 @@ async function generoi(teksti, polku, nimi) {
 }
 
 for (const k of kohteet) {
-  for (const [osa, luentaKentta] of OSAT) {
-    const teksti = k[luentaKentta];
-    if (!teksti) { console.error(`${k.id}/${osa}: ${luentaKentta} puuttuu — ohitetaan.`); continue; }
+  for (const [osa, luentaKentta, tekstiKentta] of OSAT) {
+    const teksti = k[luentaKentta] ?? k[tekstiKentta];
+    if (!teksti) { console.error(`${k.id}/${osa}: teksti puuttuu — ohitetaan.`); continue; }
     const polku = resolve(JUURI, `assets/audio/puhe-kaari-${osa}-${k.id}.mp3`);
     await generoi(teksti, polku, `${k.id}/${osa}`);
   }
