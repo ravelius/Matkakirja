@@ -8601,6 +8601,44 @@ body.vertailu-tila .pawns { display: none; }
   color: rgba(90, 74, 51, 0.75);
 }
 
+/*
+ * MITTAKAAVAJANA kohdekartan vasempaan alakulmaan.
+ *
+ * Piirretty kuten paperikartan jana eikä kuten käyttöliittymän
+ * kontrolli: ohut vaakaviiva, päissä pystyviivat ja niiden yllä
+ * pieni teksti. Viivat ovat elementin omia reunoja (border), joten
+ * janassa ei ole yhtään ylimääräistä solmua.
+ *
+ * Väri on kartan mustetta läpikuultavana ja alla on vaalea kaista,
+ * jotta jana erottuu sekä vaalealta paperilta että tummalta
+ * vedeltä — Dubain jana osuu lahdelmaan, Venetsian laguuniin.
+ */
+.kartta-mittajana {
+  position: absolute;
+  left: 3.2%;
+  bottom: 5%;
+  height: 6px;
+  border: 1px solid rgba(44, 35, 24, 0.85);
+  border-top: 0;
+  background: linear-gradient(rgba(247, 240, 222, 0) 40%, rgba(247, 240, 222, 0.55) 40%);
+  pointer-events: none;
+}
+
+.kartta-mittajana-teksti {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 1px);
+  transform: translateX(-50%);
+  padding: 0 3px;
+  font-family: var(--font-type);
+  font-size: 0.58rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  color: rgba(44, 35, 24, 0.9);
+  background: rgba(247, 240, 222, 0.72);
+  border-radius: 2px;
+}
+
 /* Kaupunkipiste: musteen värinen täplä, pääkaupunki kullattuna ja
  * rengastettuna kuten pelilaudan kohdekaupunki. */
 .maakartta-piste {
