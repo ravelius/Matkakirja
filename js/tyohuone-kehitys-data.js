@@ -516,3 +516,186 @@ export const MANTERE_KOKEILUT = [
       + 'eteläpuolella."',
   },
 ];
+
+/*
+ * ISOISÄ SAAPUMISESSA — viisi jännityskaupunkia kuunneltavaksi
+ * (omistajan tilaus 9.8.2026: "Tee joku äänigenerointi missä isoisä on
+ * äänessä kun saavutaan kaupunkiin (jännittävä ja pelottava). Kysymys
+ * ja löytö teksteistä puuttuu cliffhanger. Tee viisi kokonaan uutta
+ * kaupunkia generoituine äänineen ja laita ne työhuoneeseen").
+ *
+ * KOKEILU, ei pelissä: nämä ovat vain työhuoneen kuuntelulistalla,
+ * kunnes omistaja on kuunnellut ja hyväksynyt sävyn (sama tapa kuin
+ * neljän kaupungin pilotissa v419). Vasta sitten ne viedään
+ * SAAPUMISET- ja EUROPE_KAARI-dataan.
+ *
+ * Malli poikkeaa pilotista: tässä ISOISÄ (Horatio Fogg, 1873) on
+ * kertoja jo saapumisessa — jännittävä ja pelottava tunnelma, mutta
+ * kaanonin sääntö pitää: "askeleet sumussa kyllä, vaara ei". Cliffhanger
+ * on nyt myös visassa ja aarteessa: koukku jää auki, aarre sulkee saman
+ * kuvan jonka saapuminen avasi ja jättää silti suunnan (ei nimettyä
+ * kaupunkia). Motiivit toistuvat: barometri, liidulla piirretty
+ * tähtäinristi, askel joka kaikuu liian myöhään.
+ *
+ * Äänet: node tools/generoi-kaari.mjs — kirjoittaa kolme mp3:a per
+ * kaupunki (puhe-kaari-saapuminen/visa/aarre-<id>.mp3). Sama resepti
+ * kuin muissa luennoissa: Viisas Kertoja, eleven_v3, stability 0.5.
+ * luenta-kentissä 2–5 tunnetagia, sävykaari alusta loppuun.
+ */
+export const KAARI_KAUPUNGIT = {
+  johdanto: 'Viisi jännityskaupunkia, joissa isoisä itse on äänessä jo '
+    + 'saapuessa. Kuuntele putkeen: jokaisesta kaupungista soi kolme '
+    + 'pätkää järjestyksessä — saapuminen, kohtaaminen tietovisassa ja '
+    + 'aarteen paljastuminen. Cliffhanger jää auki kaikkiin kolmeen. '
+    + 'Nämä eivät ole vielä pelissä; kuuntele ja kerro, kestääkö sävy.',
+  kohteet: [
+    {
+      id: 'praha',
+      otsikko: 'Praha — kynttilä tyhjässä talossa',
+      saapuminen: 'Kultaisella kujalla, talossa numero kahdeksan, paloi '
+        + 'kynttilä — vaikka talo oli seisonut tyhjänä kolmesataa vuotta. '
+        + 'Pöydälle oli jätetty auki kirja, ja sen reunaan kirjoitettu '
+        + 'barometrini lukema. Käsiala ei ollut minun. Joku oli mitannut '
+        + 'ilman ennen minua.',
+      saapumisLuenta: '[curious] Kultaisella kujalla, talossa numero '
+        + 'kahdeksan, paloi kynttilä — [softly] vaikka talo oli seisonut '
+        + 'tyhjänä kolmesataa vuotta. Pöydälle oli jätetty auki kirja, ja '
+        + 'sen reunaan kirjoitettu barometrini lukema. [whispers] Käsiala '
+        + 'ei ollut minun. Joku oli mitannut ilman ennen minua.',
+      visa: 'Isoisä oli merkinnyt sivun reunaan: "Tässä kaupungissa '
+        + 'savesta tehtiin kerran vartija. Oikea sana herättää sen, väärä '
+        + 'nukuttaa — valitse kuin heräisit itse." Alempana, ohuemmalla '
+        + 'musteella: "En ehtinyt kokeilla. Portti kävi."',
+      visaLuenta: '[softly] Isoisä oli merkinnyt sivun reunaan: "Tässä '
+        + 'kaupungissa savesta tehtiin kerran vartija. Oikea sana herättää '
+        + 'sen, väärä nukuttaa — [curious] valitse kuin heräisit itse." '
+        + '[whispers] Alempana, ohuemmalla musteella: "En ehtinyt kokeilla. '
+        + 'Portti kävi."',
+      aarre: 'Kätkön alta löytyi kynttilänpätkä, vielä lämmin. Isoisän '
+        + 'rivi: "Jos liekki palaa yhä, en ollutkaan viimeinen, joka etsi. '
+        + 'Puhalla se sammuksiin puolestani — ja katso, kuka kääntyy."',
+      aarreLuenta: '[curious] Kätkön alta löytyi kynttilänpätkä, vielä '
+        + 'lämmin. [softly] Isoisän rivi: "Jos liekki palaa yhä, en '
+        + 'ollutkaan viimeinen, joka etsi. [whispers] Puhalla se sammuksiin '
+        + 'puolestani — ja katso, kuka kääntyy."',
+    },
+    {
+      id: 'istanbul',
+      otsikko: 'Istanbul — upotettu palatsi',
+      saapuminen: 'Laskeuduin kahdeksankymmentä porrasta maan alle, ja '
+        + 'kaupunki katosi yläpuoleltani. Pimeässä seisoi kolmesataa '
+        + 'pylvästä vedessä, ja yhden juurella lepäsi kivinen naisen kasvo '
+        + 'ylösalaisin. Vesi kantoi ääntä: joku toinen laski askeleitaan '
+        + 'minun tahdissani.',
+      saapumisLuenta: '[curious] Laskeuduin kahdeksankymmentä porrasta maan '
+        + 'alle, ja kaupunki katosi yläpuoleltani. [softly] Pimeässä seisoi '
+        + 'kolmesataa pylvästä vedessä, ja yhden juurella lepäsi kivinen '
+        + 'naisen kasvo ylösalaisin. [whispers] Vesi kantoi ääntä: joku '
+        + 'toinen laski askeleitaan minun tahdissani.',
+      visa: 'Isoisä kirjoitti reunaan: "Täällä oikea vastaus on käännettävä '
+        + 'ylösalaisin, kuten kasvot veden alla. Joka katsoo suoraan, '
+        + 'kivettyy — joka katsoo heijastuksesta, näkee." Muste oli '
+        + 'kastunut alareunasta.',
+      visaLuenta: '[softly] Isoisä kirjoitti reunaan: "Täällä oikea vastaus '
+        + 'on käännettävä ylösalaisin, kuten kasvot veden alla. [curious] '
+        + 'Joka katsoo suoraan, kivettyy — joka katsoo heijastuksesta, '
+        + 'näkee." [whispers] Muste oli kastunut alareunasta.',
+      aarre: 'Kätkö oli veden pinnan alla, ja siitä nousi kylmä kuplajono. '
+        + 'Isoisän rivi: "Kivikasvot vartioivat tätä, koska minä pyysin. '
+        + 'Nyt ne katsovat sinua — nyökkää takaisin, niin tiet aukeavat."',
+      aarreLuenta: '[curious] Kätkö oli veden pinnan alla, ja siitä nousi '
+        + 'kylmä kuplajono. [softly] Isoisän rivi: "Kivikasvot vartioivat '
+        + 'tätä, koska minä pyysin. [warmly] Nyt ne katsovat sinua — nyökkää '
+        + 'takaisin, niin tiet aukeavat."',
+    },
+    {
+      id: 'wien',
+      otsikko: 'Wien — luiden holvit kirkon alla',
+      saapuminen: 'Kirkon alle vievä ovi oli raollaan, ja kynttilänliekit '
+        + 'taipuivat yhteen suuntaan, vaikka ilma seisoi. Luiden holvit '
+        + 'ulottuivat pimeään niin syvälle, ettei barometri enää tiennyt '
+        + 'pohjaa. Askelteni kaiku palasi aina yhtä askelta liian myöhään.',
+      saapumisLuenta: '[curious] Kirkon alle vievä ovi oli raollaan, ja '
+        + 'kynttilänliekit taipuivat yhteen suuntaan, [softly] vaikka ilma '
+        + 'seisoi. Luiden holvit ulottuivat pimeään niin syvälle, ettei '
+        + 'barometri enää tiennyt pohjaa. [whispers] Askelteni kaiku palasi '
+        + 'aina yhtä askelta liian myöhään.',
+      visa: 'Isoisä oli merkinnyt: "Kaupungissa musiikki peittää sen, mitä '
+        + 'maan alla on. Kuuntele valssia, mutta laske tahdit — kolmas isku '
+        + 'on aina liikaa. Siitä tunnistat väärän vastauksen." Sivun kulma '
+        + 'oli poltettu.',
+      visaLuenta: '[softly] Isoisä oli merkinnyt: "Kaupungissa musiikki '
+        + 'peittää sen, mitä maan alla on. [curious] Kuuntele valssia, mutta '
+        + 'laske tahdit — kolmas isku on aina liikaa. Siitä tunnistat väärän '
+        + 'vastauksen." [whispers] Sivun kulma oli poltettu.',
+      aarre: 'Kätkön päällä oli sammunut kynttilä, ja liekki oli taipunut '
+        + 'samaan suuntaan kuin ovella. Isoisän rivi: "Veto tulee sieltä, '
+        + 'mistä minäkin tulin. Seuraa sitä ulos — äläkä katso taakse ennen '
+        + 'päivänvaloa."',
+      aarreLuenta: '[curious] Kätkön päällä oli sammunut kynttilä, ja liekki '
+        + 'oli taipunut samaan suuntaan kuin ovella. [softly] Isoisän rivi: '
+        + '"Veto tulee sieltä, mistä minäkin tulin. [whispers] Seuraa sitä '
+        + 'ulos — äläkä katso taakse ennen päivänvaloa."',
+    },
+    {
+      id: 'venetsia',
+      otsikko: 'Venetsia — naamio sillan kaiteella',
+      saapuminen: 'Vesi nousi kaduille keskellä yötä, ja kanaalit kääntyivät '
+        + 'peiliksi. Sillan kaiteella lepäsi valkoinen naamio, jolla oli '
+        + 'pitkä linnunnokka — ruttolääkärin kasvot, tyhjät. Kun nostin sen, '
+        + 'sen takaa katsoi minua oma heijastukseni vedestä.',
+      saapumisLuenta: '[softly] Vesi nousi kaduille keskellä yötä, ja '
+        + 'kanaalit kääntyivät peiliksi. [curious] Sillan kaiteella lepäsi '
+        + 'valkoinen naamio, jolla oli pitkä linnunnokka — [softly] '
+        + 'ruttolääkärin kasvot, tyhjät. [whispers] Kun nostin sen, sen '
+        + 'takaa katsoi minua oma heijastukseni vedestä.',
+      visa: 'Isoisä kirjoitti: "Täällä kaikki kelluu — myös valheet. Oikea '
+        + 'vastaus painuu pohjaan, väärä jää pinnalle kuin naamio. Paina '
+        + 'jokaista sormella ennen kuin uskot." Rivin alle oli piirretty '
+        + 'märkä tähtäinristi.',
+      visaLuenta: '[softly] Isoisä kirjoitti: "Täällä kaikki kelluu — myös '
+        + 'valheet. [curious] Oikea vastaus painuu pohjaan, väärä jää '
+        + 'pinnalle kuin naamio. Paina jokaista sormella ennen kuin uskot." '
+        + '[whispers] Rivin alle oli piirretty märkä tähtäinristi.',
+      aarre: 'Kätkö nousi veden alta, ja naamio kellui sen vieressä kasvot '
+        + 'ylöspäin. Isoisän rivi: "Jätin sen vartioimaan, koska naamio ei '
+        + 'sulje silmiään. Ota kätkö — mutta kun vesi laskee, katso kuka '
+        + 'seisoo sillalla."',
+      aarreLuenta: '[curious] Kätkö nousi veden alta, ja naamio kellui sen '
+        + 'vieressä kasvot ylöspäin. [softly] Isoisän rivi: "Jätin sen '
+        + 'vartioimaan, koska naamio ei sulje silmiään. [whispers] Ota kätkö '
+        + '— mutta kun vesi laskee, katso kuka seisoo sillalla."',
+    },
+    {
+      id: 'budapest',
+      otsikko: 'Budapest — hengittävä labyrintti',
+      saapuminen: 'Linnan alla aukeaa labyrintti, jonka seinillä hikoili '
+        + 'lämmin vesi kuin luola hengittäisi. Vein kynttilän syvimpään '
+        + 'käytävään ja löysin seinästä liidulla piirretyn tähtäinristin — '
+        + 'minun merkkini, vaikken ollut käynyt täällä koskaan.',
+      saapumisLuenta: '[curious] Linnan alla aukeaa labyrintti, jonka '
+        + 'seinillä hikoili lämmin vesi kuin luola hengittäisi. [softly] '
+        + 'Vein kynttilän syvimpään käytävään ja löysin seinästä liidulla '
+        + 'piirretyn tähtäinristin — [whispers] minun merkkini, vaikken '
+        + 'ollut käynyt täällä koskaan.',
+      visa: 'Isoisä oli merkinnyt: "Maan alla suunnat valehtelevat. Lämmin '
+        + 'seinä osoittaa aina lähteelle, kylmä ulos — luota ihoosi, älä '
+        + 'silmiisi. Väärä käytävä vie syvemmälle kuin uskot." Liitu oli '
+        + 'vielä sivun välissä.',
+      visaLuenta: '[softly] Isoisä oli merkinnyt: "Maan alla suunnat '
+        + 'valehtelevat. [curious] Lämmin seinä osoittaa aina lähteelle, '
+        + 'kylmä ulos — luota ihoosi, älä silmiisi. Väärä käytävä vie '
+        + 'syvemmälle kuin uskot." [whispers] Liitu oli vielä sivun '
+        + 'välissä.',
+      aarre: 'Kätkö oli lämpimän seinän takana, höyryn peitossa. Isoisän '
+        + 'rivi: "Piirsin ristin, jotta löytäisit takaisin — tai jotta minä '
+        + 'löytäisin sinut. Pyyhi se pois, kun olet ulkona, ettei seuraava '
+        + 'eksy minun jälkeeni."',
+      aarreLuenta: '[curious] Kätkö oli lämpimän seinän takana, höyryn '
+        + 'peitossa. [softly] Isoisän rivi: "Piirsin ristin, jotta '
+        + 'löytäisit takaisin — [warmly] tai jotta minä löytäisin sinut. '
+        + 'Pyyhi se pois, kun olet ulkona, ettei seuraava eksy minun '
+        + 'jälkeeni."',
+    },
+  ],
+};
