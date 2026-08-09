@@ -671,12 +671,12 @@ export const ASIA_LISAT_VALOKUVAT = {
       },
     ],
     uusi: {
-      tiedosto: '天安门 - Gate of Heavenly Peace - the main entrance to the Forbidden City (7943241664).jpg',
-      lahde: 'Nikolaj Potanin, Commons (CC BY-SA 2.0)',
-      selite: 'Tiananmen eli Taivaallisen rauhan portti, keisarillisen kaupungin '
-        + 'pääsisäänkäynti. Portin takaa alkaa Kielletty kaupunki, joka oli '
-        + 'suljettu tavallisilta ihmisiltä viisisataa vuotta ja avattiin '
-        + 'museoksi 1925.',
+      tiedosto: 'Hall of Supreme Harmony, Forbidden City, from southeast.jpg',
+      lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+      selite: 'Kielletyn kaupungin suurin rakennus, Ylimmän sopusoinnun sali, '
+        + 'kohoaa kolminkertaisen marmoriterassin päällä. Keisarillisen '
+        + 'palatsin punaiset seinät ja keltatiiliset katot erottuvat laajan '
+        + 'kivetyn pihan takana.',
     },
   },
   shanghai: {

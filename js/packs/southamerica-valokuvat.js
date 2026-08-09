@@ -540,12 +540,11 @@ export const SOUTHAMERICA_VALOKUVAT = {
       },
     ],
     uusi: {
-      tiedosto: '20180809-Galápagos giant tortoise eating leaves (9960).jpg',
-      lahde: 'Nicolas Völcker, Commons (CC BY-SA 4.0)',
-      selite: 'Santa Cruzin jättiläiskilpikonna syömässä Charles Darwinin '
-        + 'tutkimusasemalla. Sata vuotta sen jälkeen, kun kilpikonnia vietiin '
-        + 'saarilta laatikoittain, asemalla kasvatetaan poikasia ja '
-        + 'palautetaan niitä takaisin saarille.',
+      tiedosto: 'Bartholomew - Beautiful Galapagos (35570836620).jpg',
+      lahde: 'Derek Keats from Johannesburg, South Africa, Wikimedia Commons (CC BY 2.0)',
+      selite: 'Näkymä Bartolomén saaren huipulta: terävä Pinnacle Rock -kallio '
+        + 'nousee merestä, ja kapea hiekkakannas erottaa kaksi lahtea '
+        + 'toisistaan. Taustalla kohoaa karuja tulivuorenkartioita.',
     },
   },
   iguazu: {

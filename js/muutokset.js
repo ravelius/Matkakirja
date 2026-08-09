@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 420, teksti: 'Valokuvakysymyksen kuvat käyty läpi yksi kerrallaan' },
   { v: 419, teksti: 'Neljä kaupunkia yhden kertojan malliin äänineen' },
   { v: 419, teksti: 'Etsi kätkö joka kaupunkisivun alareunassa' },
   { v: 419, teksti: 'Liitelinkki päiväysriville, tuore versionumero isompana' },
