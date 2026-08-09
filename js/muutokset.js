@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 412, teksti: 'Maan nimikilpi aina kaupunkinimien kokoinen' },
   { v: 411, teksti: 'Tšekille, Itävallalle ja kolmelle muulle maalle aihesivut' },
   { v: 411, teksti: 'Toisen maan lehti ei enää luule tehtävää ratkaistuksi' },
   { v: 410, teksti: 'Kaksitoista uutta kaupunkilehteä Roomasta Odessaan' },
