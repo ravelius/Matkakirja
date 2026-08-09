@@ -8191,12 +8191,11 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 .uutinen-rivi-teksti { display: block; min-width: 0; }
 
 /*
- * Mediarivi: maan radio ja tv-nappi vierekkäin. Lehtitaitossa rivi
- * istuu uutisten alla oikeassa palstassa, jossa on tilaa.
+ * Mediarivi: maan paikallisradio. Lehtitaitossa rivi istuu uutisten
+ * alla oikeassa palstassa, jossa on tilaa. Ruudukko on kaksipalstainen
+ * ja pitkä asemannimi lyhenee kolmella pisteellä sen sijaan että rivi
+ * kiertyisi.
  */
-/* Radio ja tv AINA vierekkäin (omistajan toive): tasalevyinen
- * kaksipalstainen ruudukko, ja pitkä asemannimi lyhenee kolmella
- * pisteellä sen sijaan että rivi kiertyisi. */
 .maa-media {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
