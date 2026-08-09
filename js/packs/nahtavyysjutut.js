@@ -1144,4 +1144,703 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  praha: {
+    'Petřínin näkötorni': {
+      aika: '1891',
+      teksti: 'Kun prahalaiset turistiseuran jäsenet kävivät Pariisin '
+          + 'maailmannäyttelyssä vuonna 1889 ja näkivät '
+          + 'vastavalmistuneen Eiffel-tornin, he innostuivat niin, että '
+          + 'päättivät rakentaa Prahaan oman pienoisversion. Rahat '
+          + 'kerättiin nopeasti, ja torni nousi Petřínin kukkulalle '
+          + 'vain neljässä kuukaudessa vuonna 1891 suurta '
+          + 'juhlanäyttelyä varten.'
+        + '\n\n'
+        + 'Petřínin torni on 63,5 metriä korkea, mutta toisin kuin '
+          + 'Eiffel-torni, sen jalusta on kahdeksankulmainen eikä '
+          + 'neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka '
+          + 'on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja '
+          + 'toinen alas, joten kiipeäjät eivät koskaan törmää '
+          + 'vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen '
+          + 'hissi kuudelle hengelle, mutta se purettiin vuonna 1953, '
+          + 'kun torniin asennettiin televisiolähetin — Petřín toimi '
+          + 'Prahan tv-signaalin lähettäjänä aina vuoteen 1992 asti.'
+        + '\n\n'
+        + 'Nykyään torniin pääsee myös köysirataa pitkin, ja '
+          + 'näköalapaikka on yhä suosittu: pelkästään vuonna 2014 '
+          + 'kävijöitä oli yli 557 000, ja suurin osa heistä oli '
+          + 'ulkomaalaisia matkailijoita.',
+      kuvat: [
+        {
+          tiedosto: 'Petrin Tower.jpg',
+          selite: 'Petřínin näkötorni Prahan puistossa.',
+          lahde: 'Carmelo Bayarcal, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Prahan linna': {
+      aika: '870',
+      teksti: 'Prahan linnan rakentaminen alkoi jo vuonna 870, kun '
+          + 'kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä '
+          + 'lähtien linnaa on laajennettu ja rakennettu uudelleen yli '
+          + 'tuhannen vuoden ajan, ja nykyään se on Guinnessin '
+          + 'ennätystenkirjan mukaan maailman suurin muinainen '
+          + 'linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja '
+          + 'se on lähes 570 metriä pitkä.'
+        + '\n\n'
+        + 'Linnassa on asunut Böömin kuninkaita ja Pyhän '
+          + 'saksalais-roomalaisen keisarikunnan hallitsijoita, ja '
+          + 'nykyisin se on Tšekin tasavallan presidentin virka-asunto. '
+          + 'Linnan sisällä, salaisessa kammiossa, säilytetään myös '
+          + 'Böömin kruununjalokiviä, joita pääsee katsomaan vain '
+          + 'harvoin.'
+        + '\n\n'
+        + 'Linnan pihalla on koettu myös dramaattisia hetkiä: '
+          + 'natsi-Saksan miehityksen aikana täällä yöpyi jopa Adolf '
+          + 'Hitler vuonna 1939. Nykyään linna on Tšekin suosituin '
+          + 'nähtävyys: vuonna 2024 siellä kävi peräti 2,59 miljoonaa '
+          + 'vierailijaa.',
+      kuvat: [
+        {
+          tiedosto: 'Prague Castle from Charles Bridge panorama.JPG',
+          selite: 'Prahan linna Kaarlensillalta kuvattuna.',
+          lahde: 'Janmad, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaarlensilta: {
+      aika: '1357–1402',
+      teksti: 'Kaarlensillan rakensi keisari Kaarle IV vuonna 1357 '
+          + 'korvaamaan vanhan Judit-sillan, jonka tulva oli tuhonnut. '
+          + 'Legendan mukaan rakennustyöt aloitettiin tarkalleen kello '
+          + '5.31 aamulla 9. heinäkuuta 1357 — päivämäärä ja kellonaika '
+          + 'muodostavat yhdessä palindromin, ja Kaarle IV uskoi tämän '
+          + 'erikoisen lukusarjan tekevän sillasta vahvemman.'
+        + '\n\n'
+        + 'Silta on 516 metriä pitkä ja lepää 16 kaariholvin päällä. '
+          + 'Vuosina 1683–1714 sillan kaiteille pystytettiin 30 '
+          + 'barokkipatsasta pyhimyksistä — nykyään sillalla nähtävät '
+          + 'patsaat ovat kuitenkin kopioita, sillä alkuperäiset '
+          + 'siirrettiin talteen museoon vuodesta 1965 lähtien sään ja '
+          + 'saasteiden vaurioittamina.'
+        + '\n\n'
+        + 'Kaarlensilta oli Vltava-joen ainoa ylityspaikka aina '
+          + 'vuoteen 1841 asti, ja vielä pitkään sillalla kulki myös '
+          + 'hevoskärryjä ja myöhemmin raitiovaunuja. Vasta vuonna 1978 '
+          + 'sillasta tehtiin pelkästään jalankulkijoille tarkoitettu.',
+      kuvat: [
+        {
+          tiedosto: 'Charles Bridge (Karlův most), Vltava River, Prague, 2015.jpg',
+          selite: 'Kaarlensilta ja Vltava-joki.',
+          lahde: 'Peter K Burian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanhauusi synagoga': {
+      aika: '1270',
+      teksti: 'Vanhauusi synagoga valmistui Prahan juutalaiskortteliin '
+          + 'noin vuonna 1270, ja se on Euroopan vanhin yhä toimiva '
+          + 'synagoga. Rakennus on goottilaista tyyliä, ja sen '
+          + 'kivikattoa kannattelee poikkeuksellinen viisisakarainen '
+          + 'holvikaari — useimmissa goottilaisissa rakennuksissa '
+          + 'holvissa on neljä tai kuusi sakaraa, mutta täällä niitä on '
+          + 'juuri viisi.'
+        + '\n\n'
+        + 'Synagogassa on kaksitoista pitkää, kapeaa ikkunaa — yksi '
+          + 'Israelin jokaista sukukuntaa kohden. Rakennuksen vintillä '
+          + 'säilytetään legendan mukaan rabbi Jehuda Löw ben Becalelin '
+          + '1500-luvulla luoman Golemin, savesta muovatun '
+          + 'jättiläisolennon, ruumista. Kun vintti lopulta todella '
+          + 'tutkittiin vuonna 2014, sieltä ei kuitenkaan löytynyt '
+          + 'Golemista jälkeäkään.',
+      kuvat: [
+        {
+          tiedosto: 'Prague Praha 2014 Holmstad Den gammelnye synagogen.JPG',
+          selite: 'Vanhauusi synagoga Prahan juutalaiskorttelissa.',
+          lahde: 'Øyvind Holmstad, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Astronominen kello': {
+      aika: '1410',
+      teksti: 'Prahan astronominen kello eli Orloj on maailman vanhin yhä '
+          + 'toimiva astronominen kello — sen vanhin osa valmistui jo '
+          + 'vuonna 1410, ja sen suunnittelivat kellomestari Mikuláš '
+          + 'Kadaňista ja matemaatikko Jan Šindel. Kello ei näytä '
+          + 'pelkästään kellonaikaa, vaan myös Auringon ja Kuun paikan '
+          + 'taivaalla sekä kalenterivuoden.'
+        + '\n\n'
+        + 'Joka tunti kellon yläpuolella avautuu kaksi pientä '
+          + 'ikkunaa, joista kulkee ohi kaikki kaksitoista apostolia. '
+          + 'Samalla luurankona kuvattu Kuolema-hahmo soittaa kelloaan, '
+          + 'ja muutkin kellon vieressä seisovat patsaat liikahtavat. '
+          + 'Legendan mukaan Prahalle käy huonosti, jos kelloa '
+          + 'laiminlyödään.'
+        + '\n\n'
+        + 'Kellon kuunkiertoa näyttävä osa toimii pelkän painovoiman '
+          + 'ja ruuvikierteen avulla eikä tarvitse erillistä moottoria, '
+          + 'ja se osuu kuun vaiheen kohdalleen niin tarkasti, että '
+          + 'virhe on vain noin yksi päivä viidessä vuodessa. Kello '
+          + 'selvisi elossa myös toisen maailmansodan pommituksista '
+          + 'vuonna 1945 ja saatiin korjattua toimintaan jälleen vuonna '
+          + '1948.',
+      kuvat: [
+        {
+          tiedosto: 'Prague - Astronomical Clock Detail 1.JPG',
+          selite: 'Prahan astronomisen kellon kellotaulu.',
+          lahde: 'Maros Mraz, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kansallismuseo: {
+      aika: '1885–1891',
+      teksti: 'Prahan kansallismuseo perustettiin jo vuonna 1818, mutta '
+          + 'nykyinen komea rakennus Vaclavin aukion päässä valmistui '
+          + 'vasta vuosina 1885–1891 arkkitehti Josef Schulzin '
+          + 'suunnitelmien mukaan. Museon kokoelmissa on nykyään noin '
+          + '14 miljoonaa esinettä — kivennäisistä ja eläimistä '
+          + 'keskiaikaisiin käsikirjoituksiin.'
+        + '\n\n'
+        + 'Elokuussa 1968, kun Varsovan liiton joukot miehittivät '
+          + 'Tšekkoslovakian, museon julkisivuun ammuttiin lukuisia '
+          + 'luoteja neuvostosotilaiden konekivääreistä. Reiät '
+          + 'paikattiin, mutta koska korjauksiin käytettiin hieman '
+          + 'vaaleampaa hiekkakiveä kuin alkuperäisessä julkisivussa, '
+          + 'luodinreikien paikat erottuvat seinästä yhä tänäkin '
+          + 'päivänä.'
+        + '\n\n'
+        + 'Vuosina 2011–2018 koko museo remontoitiin '
+          + 'perusteellisesti, ja kaikki 14 miljoonaa esinettä piti '
+          + 'siirtää tilapäisesti muualle — se oli suurin '
+          + 'museokokoelman muutto Tšekin historiassa.',
+      kuvat: [
+        {
+          tiedosto: 'Main building of National Museum in Prague.JPG',
+          selite: 'Prahan kansallismuseon päärakennus.',
+          lahde: 'Interfase, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  wien: {
+    Raatihuone: {
+      aika: '1872–1883',
+      teksti: 'Wienin komea raatihuone rakennettiin vuosina 1872–1883 '
+          + 'arkkitehti Friedrich von Schmidtin suunnitelmien mukaan. '
+          + 'Rakennuksesta tuli niin kallis — peräti 14 miljoonaa '
+          + 'guldenia — että sekä kaupunki että keisarikunta maksoivat '
+          + 'siitä yhdessä.'
+        + '\n\n'
+        + 'Talo on valtava: siellä on 1575 huonetta ja 2035 ikkunaa. '
+          + 'Torni kohoaa 98 metrin korkeuteen, ja sen huipulla seisoo '
+          + 'rautainen ritarihahmo nimeltä Rathausmann, joka nostaa '
+          + 'kokonaiskorkeuden yli sataan metriin. Rakennuksen '
+          + 'juhlasali on Itävallan suurin historiallinen sali.'
+        + '\n\n'
+        + 'Toisen maailmansodan pommitukset vaurioittivat '
+          + 'raatihuonetta pahoin, mutta se korjattiin. Nykyään se on '
+          + 'Wienin pormestarin työpaikka ja koko kaupungin sydän, '
+          + 'jonka edustalla Rathausplatzilla järjestetään yhä suuria '
+          + 'juhlia.',
+      kuvat: [
+        {
+          tiedosto: 'Wien Rathaus hochauflösend.jpg',
+          selite: 'Wienin raatihuoneen komea uusgoottilainen julkisivu ja '
+            + 'torni.',
+          lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Hofburg: {
+      aika: 'noin 1200-luvulta 1913',
+      teksti: 'Hofburg ei ole vain yksi linna, vaan kokonainen '
+          + 'keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 '
+          + 'vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, '
+          + 'rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat '
+          + 'asuivat ja hallitsivat täältä käsin lähes koko '
+          + 'keisarikunnan historian ajan.'
+        + '\n\n'
+        + 'Linnan sisällä on outo ja hieman kammottavakin huone: '
+          + 'Sydänten krypta, jossa säilytetään 54 Habsburg-suvun '
+          + 'jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa '
+          + 'työskentelee Itävallan presidentti.'
+        + '\n\n'
+        + 'Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, '
+          + 'jossa Euroopan valtiot neuvottelivat sodan jälkeisistä '
+          + 'rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat '
+          + 'niin loistokkaiksi, että aikalaiset alkoivat pilkata koko '
+          + 'tapahtumaa.',
+      lainaus: {
+        teksti: 'Kongressi tanssii, mutta ei etene mihinkään.',
+        lahde: 'Ruhtinas Charles-Joseph de Ligne Wienin kongressista, '
+          + '1814–1815',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Wien - Neue Hofburg.JPG',
+          selite: 'Hofburgin Neue Burg -siipi ja Heldenplatz-aukio.',
+          lahde: 'C.Stadler/Bwag, Wikimedia Commons (CC BY-SA 3.0 AT)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Valtionooppera: {
+      aika: '1869',
+      teksti: 'Wienin valtionooppera rakennettiin vuosina 1861–1869 '
+          + 'uudelle, hienolle Ringstrasse-kehätielle — se oli '
+          + 'ensimmäinen suurista rakennuksista, jotka nousivat kadun '
+          + 'varrelle. Wieniläiset eivät aluksi pitäneet uudesta '
+          + 'talosta lainkaan, vaan vertasivat sitä pilkallisesti '
+          + 'uponneeseen aarrearkkuun.'
+        + '\n\n'
+        + 'Molempien arkkitehtien elämä päättyi surullisesti ennen '
+          + 'avajaisia: toinen teki itsemurhan ankaran arvostelun '
+          + 'painostamana, ja toinen kuoli sairauteen vain viikkoja '
+          + 'myöhemmin. Talo avattiin toukokuussa 1869 Mozartin '
+          + 'oopperalla Don Giovanni, eivätkä kumpikaan rakentaja '
+          + 'päässyt sitä koskaan näkemään.'
+        + '\n\n'
+        + 'Pommitus tuhosi oopperatalon pahoin vuonna 1945, mutta se '
+          + 'rakennettiin uudelleen ja avattiin taas 1955. Nykyään '
+          + 'talossa nähdään vuosittain yli 350 esitystä, ja '
+          + 'seisomapaikkalippuja myydään edullisesti vain 80 minuuttia '
+          + 'ennen esityksen alkua.',
+      kuvat: [
+        {
+          tiedosto: 'Staatsoper Wien DSC 5273w.jpg',
+          selite: 'Wienin valtionoopperan julkisivu Ringstrassen varrella.',
+          lahde: 'Peter Haas, Wikimedia Commons (CC BY-SA 3.0 AT)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Stephansdom: {
+      aika: '1359–1433',
+      teksti: 'Stephansdomin historia alkoi jo vuonna 1137, mutta suuri '
+          + 'tulipalo tuhosi kirkon vuonna 1258. Nykyisen goottilaisen '
+          + 'kirkon rakentaminen alkoi vuonna 1359, ja eteläinen torni, '
+          + 'jota wieniläiset kutsuvat hellästi nimellä Steffl, '
+          + 'valmistui vuonna 1433. Se kohoaa 137 metrin korkeuteen.'
+        + '\n\n'
+        + 'Tornissa vartioitiin öitäkin myöten aina vuoteen 1955 asti '
+          + '— vartijat tähyilivät ylhäältä tulipaloja ja jopa '
+          + 'vihollisjoukkoja. Katto on vielä hurjempi näky: se on '
+          + 'peitetty 230 000 värikkäällä kattotiilellä, jotka '
+          + 'muodostavat yhdessä valtavan kaksoiskotkan kuvion.'
+        + '\n\n'
+        + 'Kirkon pohjoistornissa riippuu Itävallan suurin kello, '
+          + 'lempinimeltään Pummerin, joka painaa yli 20 000 kiloa. '
+          + 'Kirkon alla kiemurtelevissa katakombeissa lepää yli 11 000 '
+          + 'ihmisen jäännökset.',
+      kuvat: [
+        {
+          tiedosto: '0181-0183a - Wien - Stephansdom.jpg',
+          selite: 'Stephansdomin laaja ulkonäkymä päiväsaikaan.',
+          lahde: 'Andrew Bossi, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+        {
+          tiedosto: 'Wien Stephansdom Dachziegel Gaube.jpg',
+          selite: 'Lähikuva katon värikkäistä, kaksoiskotkakuvion '
+            + 'muodostavista kattotiilistä.',
+          lahde: 'Herbert Heim, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Belvedere: {
+      aika: '1712–1723',
+      teksti: 'Belvedere rakennettiin vuosina 1712–1723 kesälinnaksi '
+          + 'kuuluisalle sotasankarille, prinssi Eugen Savoyilaiselle. '
+          + 'Arkkitehti Johann Lukas von Hildebrandt suunnitteli kaksi '
+          + 'upeaa palatsia, Ylä- ja Ala-Belvederen, joiden välissä '
+          + 'levittäytyvät koristeelliset puutarhat.'
+        + '\n\n'
+        + 'Prinssin kuoltua palatsin osti keisarinna Maria Theresia, '
+          + 'ja vuonna 1776 siitä tehtiin julkinen taidegalleria — yksi '
+          + 'Euroopan ensimmäisistä paikoista, joissa tavalliset '
+          + 'ihmiset pääsivät ihailemaan taidetta. Nykyään Belvederessä '
+          + 'on esillä muun muassa Gustav Klimtin kuuluisa maalaus '
+          + 'Suudelma.'
+        + '\n\n'
+        + 'Vuonna 1955 Ylä-Belvederessä allekirjoitettiin Itävallan '
+          + 'valtiosopimus, joka teki maasta jälleen itsenäisen. '
+          + 'Palatsin kuva on niin tunnettu, että se löytyy jokaisesta '
+          + 'Itävallan 20 sentin kolikosta.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio Belvedere, Viena, Austria, 2020-02-01, DD 93-95 HDR.jpg',
+          selite: 'Ylä-Belvedere palatsi ja sen edusta hämärän valossa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Jättiratas: {
+      aika: '1897',
+      teksti: 'Praterin puiston jättiratas valmistui vuonna 1897 '
+          + 'juhlistamaan keisari Frans Joosef I:n 50-vuotista '
+          + 'hallituskautta. Sen suunnittelivat brittiläiset '
+          + 'insinöörit. Pyörä oli niin ylivoimainen, että se oli '
+          + 'maailman korkein jättiratas peräti 65 vuoden ajan, vuosina '
+          + '1920–1985.'
+        + '\n\n'
+        + 'Pyörä oli lähellä katoamista jo vuonna 1916, kun sille '
+          + 'myönnettiin purkulupa — mutta rahat loppuivat, eikä sitä '
+          + 'koskaan purettu. Toisessa maailmansodassa pyörä vaurioitui '
+          + 'pahoin, ja alkuperäisistä 30 kopista jäljelle jäi vain 15, '
+          + 'jotka pyörivät yhä tänään 64,75 metrin korkeudessa.'
+        + '\n\n'
+        + 'Jättiratas on myös elokuvatähti: se esiintyy kuuluisassa '
+          + 'vuoden 1949 elokuvassa Kolmas mies, jonka ikimuistoisin '
+          + 'kohtaus kuvattiin suoraan kopin sisällä pyörän kiertäessä '
+          + 'korkealla Wienin yllä.',
+      lainaus: {
+        teksti: 'Sveitsissä oli viisisataa vuotta rauhaa ja demokratiaa — '
+          + 'ja mitä se tuotti? Käkikellon.',
+        lahde: 'Harry Lime (Orson Welles), elokuva Kolmas mies, 1949, '
+          + 'kuvattu jättirattaan kopissa',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Wien Riesenrad.jpg',
+          selite: 'Praterin jättiratas kuvattuna puiston ulkopuolelta.',
+          lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  budapest: {
+    Kalastajanlinnake: {
+      aika: '1895–1902',
+      teksti: 'Kalastajanlinnake näyttää keskiaikaiselta satulinnalta '
+          + 'Budan kukkulalla, mutta se ei ole koskaan puolustanut '
+          + 'ketään. Arkkitehti Frigyes Schulek suunnitteli sen '
+          + 'kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt '
+          + 'kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan '
+          + 'seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka '
+          + 'asettuivat Karpaattien altaaseen vuonna 895.'
+        + '\n\n'
+        + 'Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan '
+          + 'vartioineen tätä kukkulanreunaa vihollisilta. Nykyään '
+          + 'paikalta avautuu yksi kaupungin komeimmista näköaloista '
+          + 'Tonavalle ja Pestin puolelle. Toisessa maailmansodassa '
+          + 'linnake vaurioitui pahoin, mutta se korjattiin täysin '
+          + 'ennalleen vuoteen 1953 mennessä.',
+      kuvat: [
+        {
+          tiedosto: 'Fishermansbastion.jpg',
+          selite: 'Kalastajanlinnake Budan puolella, Matthias-kirkon '
+            + 'vieressä.',
+          lahde: 'Ian Pitchford, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Ketjusilta: {
+      aika: '1840–1849',
+      teksti: 'Ennen vuotta 1849 Budan ja Pestin välillä ei ollut yhtään '
+          + 'pysyvää siltaa — talvella joki jäätyi, keväällä se täyttyi '
+          + 'ajojäästä, ja ihmiset joutuivat odottamaan tai '
+          + 'turvautumaan veneisiin. Kreivi István Széchenyi tilasi '
+          + 'ratkaisun englantilaiselta insinööriltä William Tierney '
+          + 'Clarkilta, ja silta valmistui 375 metrin pituisena — '
+          + 'aikanaan mullistava insinööritaidon näyte.'
+        + '\n\n'
+        + 'Sillan päissä makaa neljä kivileijonaa, jotka János '
+          + 'Marschalkó veisti vuonna 1852. Kaupungissa kiertää vanha '
+          + 'tarina, jonka mukaan leijonilta unohdettiin veistää kielet '
+          + '— todellisuudessa kielet ovat paikallaan, ne eivät vain '
+          + 'näy kadulta. Vuonna 1945 saksalaisjoukot räjäyttivät '
+          + 'sillan sodan lopulla; se rakennettiin uudelleen ja '
+          + 'avattiin jälleen vuonna 1949.',
+      kuvat: [
+        {
+          tiedosto: 'Danube River and Chain Bridge in Budapest.jpg',
+          selite: 'Ketjusilta yhdistää Budan ja Pestin Tonavan yli.',
+          lahde: 'Ivanildo Figueiredo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Parlamenttitalo: {
+      aika: '1885–1904',
+      teksti: 'Unkarin parlamenttitalo on niin valtava, että siinä on 691 '
+          + 'huonetta, 29 porrashuonetta ja peräti 13 hissiä. '
+          + 'Arkkitehti Imre Steindl otti mallia Lontoon '
+          + 'parlamenttitalosta ja suunnitteli rakennuksen 96 metrin '
+          + 'korkuiseksi — luku viittaa vuoteen 896, jolloin '
+          + 'unkarilaiset asettuivat nykyiselle alueelleen. '
+          + 'Rakentamiseen käytettiin 40 miljoonaa tiiltä ja lähes 40 '
+          + 'kiloa kultaa koristeisiin.'
+        + '\n\n'
+        + 'Työt alkoivat vuonna 1885 ja valmistuivat vuonna 1904, '
+          + 'mutta Steindl itse ei ehtinyt nähdä lopputulosta: hän '
+          + 'sokeutui ja kuoli juuri ennen valmistumista. Rakennuksen '
+          + 'keskeisessä kuusitoistakulmaisessa salissa säilytetään '
+          + 'nykyään Unkarin pyhää kruunua, jota vartioi aina kaksi '
+          + 'sotilasta.',
+      kuvat: [
+        {
+          tiedosto: 'Hungarian Parliament Building from across the Danube, 2025-01-11.jpg',
+          selite: 'Unkarin parlamenttitalo Tonavan rannalla.',
+          lahde: 'Kilyann Le Hen, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Gellértinvuori: {
+      aika: '1850–1854',
+      teksti: 'Gellértinvuori kohoaa 235 metrin korkeuteen Tonavan yllä, '
+          + 'ja sen nimi tulee piispa Gellertistä, joka surmattiin '
+          + 'kukkulalla kansannousussa vuonna 1046 — tarinan mukaan '
+          + 'hänet suljettiin piikkitynnyriin ja vieritettiin alas '
+          + 'rinnettä. Kukkulan sisällä on kuumien lähteiden muovaamia '
+          + 'luolia; vuonna 2007 sieltä löytyi kokonainen kristallien '
+          + 'peittämä luola, joka on syntynyt jo 300 000–500 000 vuotta '
+          + 'sitten.'
+        + '\n\n'
+        + 'Huipulla seisoo Citadella-linnoitus, jonka Habsburgit '
+          + 'rakensivat 1850-luvulla vuoden 1848 kansannousun jälkeen '
+          + 'pitääkseen kaupunkia kurissa. Sen vieressä kohoaa iso '
+          + 'pronssipatsas, jonka neuvostojoukot pystyttivät toisen '
+          + 'maailmansodan jälkeen voiton muistoksi — patsas näkyy '
+          + 'lähes joka puolelle kaupunkia ja on yksi Budapestin '
+          + 'tunnetuimmista maamerkeistä.',
+      kuvat: [
+        {
+          tiedosto: '20151003 082 Budapest - Gellért Hill (21733573719).jpg',
+          selite: 'Citadella-linnoitus Gellértinvuoren huipulla.',
+          lahde: 'Sjaak Kempe, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Tapanin kirkko': {
+      aika: '1851–1906',
+      teksti: 'Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, '
+          + 'vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui '
+          + 'katastrofi: vuonna 1858 kesken rakennustöiden kupoli '
+          + 'romahti, ja lähes valmis rakennus piti purkaa ja aloittaa '
+          + 'alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia '
+          + 'ennen kuin kirkko vihdoin valmistui.'
+        + '\n\n'
+        + 'Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen '
+          + 'saman verran kuin parlamenttitalon kupoli — kaupungissa '
+          + 'kuulemma sovittiin, ettei mikään muu rakennus saisi nousta '
+          + 'korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään '
+          + 'yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin '
+          + 'yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.',
+      kuvat: [
+        {
+          tiedosto: 'Budapest Szent Istvan Bazilika R01.jpg',
+          selite: 'Pyhän Tapanin kirkko Budapestissa.',
+          lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri kauppahalli': {
+      aika: '1897',
+      teksti: 'Suuri kauppahalli avasi ovensa 15. helmikuuta 1897, ja se '
+          + 'on yhä Budapestin suurin ja vanhin sisämarkkinahalli — '
+          + 'lattiapinta-alaa on peräti 10 000 neliömetriä. Ajatus '
+          + 'hallista syntyi jo 1860-luvulla, kun kaupunki tarvitsi '
+          + 'paremman paikan ruoan myyntiin.'
+        + '\n\n'
+        + 'Arkkitehti Samu Pecz suunnitteli hallille teräksisen '
+          + 'kattorakenteen, jonka päällä kimaltelevat Pécsin '
+          + 'kaupungista tuodut värikkäät Zsolnay-keramiikkalaatat. '
+          + 'Toinen maailmansota jätti rakennuksen surkeaan kuntoon '
+          + 'vuosikymmeniksi, kunnes se kunnostettiin perusteellisesti '
+          + 'ja avattiin uudelleen vuonna 1997.',
+      kuvat: [
+        {
+          tiedosto: 'Great Market Hall Budapest.jpg',
+          selite: 'Suuri kauppahalli Budapestin Fővám-torilla.',
+          lahde: 'Randy Connolly, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  pariisi: {
+    'Eiffel-torni': {
+      aika: '1889',
+      teksti: 'Kun Pariisiin rakennettiin maailmannäyttelyä varten vuonna '
+          + '1889, insinööri Gustave Eiffelin toimisto pystytti Champ '
+          + 'de Mars -puistoon 330 metriä korkean rautatornin vain '
+          + 'reilussa kahdessa vuodessa. Torniin käytettiin 18 038 '
+          + 'metalliosaa ja peräti 2,5 miljoonaa niittiä, ja koko '
+          + 'rakennustyön aikana sattui vain yksi kuolemantapaus.'
+        + '\n\n'
+        + 'Moni pariisilainen taiteilija vihasi tornia aluksi: '
+          + 'kolmisensataa taiteilijaa ja kirjailijaa allekirjoitti '
+          + 'vetoomuksen, jossa torni tuomittiin rumaksi ja '
+          + 'hyödyttömäksi. Kirjailija Guy de Maupassant väitti '
+          + 'syövänsä lounasta tornin ravintolassa joka päivä juuri '
+          + 'siksi, että se oli ainoa paikka Pariisissa, josta tornia '
+          + 'ei näkynyt.'
+        + '\n\n'
+        + 'Torni oli tarkoitus purkaa jo vuonna 1909, mutta se '
+          + 'pelastui, koska siitä tuli tärkeä radiolähetysasema. '
+          + 'Toisen maailmansodan lopulla Hitler käski räjäyttää tornin '
+          + 'Pariisin vapautuessa — mutta käskyä ei toteltu, ja torni '
+          + 'seisoo yhä paikallaan.',
+      kuvat: [
+        {
+          tiedosto: 'Eiffel tower from trocadero.jpg',
+          selite: 'Eiffel-torni Trocadéron puutarhoista kuvattuna.',
+          lahde: 'NonOmnisMoriar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Riemukaari: {
+      aika: '1806–1836',
+      teksti: 'Keisari Napoleon käski rakentaa valtavan riemukaaren '
+          + 'vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa. '
+          + 'Kaari on lähes 50 metriä korkea, ja sen pintoihin on '
+          + 'kaiverrettu 158 taistelun ja 660 sotapäällikön nimet. '
+          + 'Napoleon ei koskaan nähnyt valmista kaarta, sillä se '
+          + 'saatiin valmiiksi vasta vuonna 1836.'
+        + '\n\n'
+        + 'Kaaren alla lepää Tuntemattoman sotilaan hauta, jonne '
+          + 'haudattiin vuonna 1920 nimetön ranskalaissotilas muistoksi '
+          + 'kaikista sodissa kadonneista. Haudalla palaa ikuinen '
+          + 'liekki, joka sytytetään uudelleen joka ilta.'
+        + '\n\n'
+        + 'Vuonna 1919 lentäjä Charles Godefroy lensi '
+          + 'kaksitasokoneellaan kaaren läpi — uskomaton temppu, sillä '
+          + 'aukko on vain reilut 14 metriä leveä.',
+      kuvat: [
+        {
+          tiedosto: 'Arc de Triomphe, Paris 21 October 2010.jpg',
+          selite: 'Riemukaari Pariisissa.',
+          lahde: 'Jiuguang Wang, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Concorden aukio': {
+      aika: '1757–1772',
+      teksti: 'Arkkitehti Ange-Jacques Gabriel suunnitteli Pariisin '
+          + 'suurimman aukion 1700-luvulla kuningas Ludvig XV:n '
+          + 'kunniaksi. Vallankumouksen aikana aukiolle pystytettiin '
+          + 'giljotiini, ja siellä mestattiin muun muassa kuningas '
+          + 'Ludvig XVI ja kuningatar Marie Antoinette. Kaikkiaan '
+          + 'aukiolla teloitettiin yli tuhat ihmistä reilun vuoden '
+          + 'aikana.'
+        + '\n\n'
+        + 'Aukion keskellä kohoaa 23-metrinen, yli 3 300 vuotta vanha '
+          + 'Luxorin obeliski, jonka Egyptin hallitsija lahjoitti '
+          + 'Ranskalle vuonna 1829. Kivijättiläinen tuotiin laivalla '
+          + 'Niililtä asti ja pystytettiin aukiolle vuonna 1836 '
+          + 'valtavan väkijoukon seuratessa.'
+        + '\n\n'
+        + 'Nykyään aukiolla poreilevat komeat suihkulähteet ja sitä '
+          + 'reunustavat kahdeksan naispatsasta, jotka kuvaavat Ranskan '
+          + 'suurkaupunkeja.',
+      kuvat: [
+        {
+          tiedosto: 'Obelisk and fountain in Place de la Concorde, Paris.JPG',
+          selite: 'Luxorin obeliski ja suihkulähde Concorden aukiolla.',
+          lahde: 'Rodrigo Menezes, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Louvre: {
+      aika: '1793',
+      teksti: 'Louvre ei ollut alun perin museo vaan linnoitus: kuningas '
+          + 'Filip II rakennutti sen 1100-luvun lopulla puolustamaan '
+          + 'Pariisia. Vuosisatojen kuluessa siitä tehtiin '
+          + 'kuninkaallinen palatsi, kunnes Ranskan vallankumouksen '
+          + 'jälkeen se avattiin kaikille kansalaisille museona '
+          + 'elokuussa 1793.'
+        + '\n\n'
+        + 'Nykyään Louvressa on esillä noin 35 000 taideteosta, ja '
+          + 'koko kokoelmassa on peräti 500 000 esinettä. Museo on '
+          + 'maailman suurin, ja sen käytävät ovat kilometrien '
+          + 'mittaiset.'
+        + '\n\n'
+        + 'Vuonna 1989 palatsin sisäpihalle nousi yllättävä uutuus: '
+          + 'arkkitehti I. M. Pein suunnittelema lasinen pyramidi, '
+          + 'josta tuli museon pääsisäänkäynti. Aluksi moni '
+          + 'pariisilainen paheksui lasirakennelmaa vanhan palatsin '
+          + 'edessä, mutta siitä tuli pian yksi Pariisin tunnetuimmista '
+          + 'maamerkeistä.',
+      kuvat: [
+        {
+          tiedosto: 'Louvre Museum Wikimedia Commons.jpg',
+          selite: 'Louvren lasipyramidi ja palatsin siivet '
+            + 'iltavalaistuksessa.',
+          lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sacré-Cœur': {
+      aika: '1875–1914',
+      teksti: 'Basilika Sacré-Cœur eli Pyhän sydämen kirkko rakennettiin '
+          + 'Montmartren kukkulan huipulle sen jälkeen, kun Ranska oli '
+          + 'hävinnyt sodan Preussille vuonna 1870. Arkkitehti Paul '
+          + 'Abadie valittiin suunnittelijaksi peräti 77 ehdotuksen '
+          + 'joukosta, ja kirkko valmistui vasta 40 vuotta myöhemmin.'
+        + '\n\n'
+        + 'Kirkon ulkoseinät on tehty erikoisesta '
+          + 'travertiini-kalkkikivestä, joka valkenee sateella eikä '
+          + 'koskaan tummu — siksi kirkko hohtaa yhä valkoisena, vaikka '
+          + 'se on jo yli sata vuotta vanha. Sisällä kattoa koristaa '
+          + 'yksi maailman suurimmista mosaiikeista, joka on koottu 25 '
+          + '000 pienestä keraamisesta palasesta.'
+        + '\n\n'
+        + 'Tornissa riippuu "Savoyarde", Ranskan suurin kello, joka '
+          + 'painaa lähes 19 tonnia. Kirkon huipulta, 200 metrin '
+          + 'korkeudesta Seine-joen yläpuolelta, avautuu näkymä koko '
+          + 'Pariisiin.',
+      kuvat: [
+        {
+          tiedosto: 'Paris - Basilique du Sacré-Cœur de Montmartre - 2025-09-30 23-31-57 001.jpg',
+          selite: 'Sacré-Cœurin basilika Montmartren kukkulalla.',
+          lahde: 'Giò Terra, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Notre-Dame': {
+      aika: '1163–1345',
+      teksti: 'Notre-Damen katedraalin rakentaminen kesti uskomattomat '
+          + '182 vuotta — työ alkoi vuonna 1163 ja valmistui vasta '
+          + '1345. Kirkko oli aikansa insinööritaidon huippu: sen '
+          + 'kivikattoa kannattelevat ulkopuoliset tukikaaret, niin '
+          + 'sanotut lentävät tukipilarit, jotka keksittiin juuri '
+          + 'tällaisia jättimäisiä kirkkoja varten.'
+        + '\n\n'
+        + 'Katedraalissa on tapahtunut historian suuria hetkiä: '
+          + 'vuonna 1804 Napoleon kruunasi itsensä keisariksi kirkon '
+          + 'alttarilla, ja vuonna 1944 kenraali de Gaulle kiitti '
+          + 'Jumalaa Pariisin vapautumisesta samassa kirkossa.'
+        + '\n\n'
+        + 'Huhtikuussa 2019 katedraalin vintillä syttyi tulipalo, '
+          + 'joka tuhosi vanhan puukaton ja tornihuipun. Palomiehet '
+          + 'onnistuivat kuitenkin pelastamaan tornit, julkisivun ja '
+          + 'lasimaalaukset. Katedraali korjattiin ennätysajassa, ja se '
+          + 'avattiin yleisölle uudelleen joulukuussa 2024.',
+      kuvat: [
+        {
+          tiedosto: 'Notre-Dame de Paris, 4 October 2017.jpg',
+          selite: 'Notre-Damen katedraali Seine-joen rannalla.',
+          lahde: 'Ali Sabbagh, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
