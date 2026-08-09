@@ -7,6 +7,7 @@ import {
   sourceLabel, sourceList, voiceTitle,
 } from '../js/pack.js';
 import { arvoksi, hasSketch } from '../js/packs/africa-puzzles.js';
+import { hasSketch as europeHasSketch } from '../js/packs/europe-puzzles.js';
 
 /** Lähde on merkkijono tai lista merkkijonoja; verkko-osoite vain http(s). */
 function checkSources(source, where) {
@@ -2418,6 +2419,42 @@ test('Afrikan pulmadata on ehjä', () => {
   }
   // Yksi kaupunki, yksi pulma: muuten toinen jäisi ikuisesti avaamatta.
   const kaupungit = puzzles.map((p) => p.city);
+  assert.equal(new Set(kaupungit).size, kaupungit.length, 'kahdella pulmalla sama kaupunki');
+});
+
+test('Euroopan pulmadata on ehjä', () => {
+  const puzzles = packById('europe').puzzles ?? [];
+  assert.ok(puzzles.length >= 6, 'Euroopalla pitää olla vähintään kuusi pulmaa');
+  const cityIds = new Set(packById('europe').cities.map((c) => c.id));
+  const nahdyt = new Set();
+  const kaupungit = [];
+  for (const p of puzzles) {
+    assert.ok(p.id && typeof p.id === 'string', 'pulmalta puuttuu id');
+    assert.ok(!nahdyt.has(p.id), `sama pulma-id kahdesti: ${p.id}`);
+    nahdyt.add(p.id);
+    assert.ok(cityIds.has(p.city), `pulman ${p.id} kaupunki ${p.city} ei ole laudalla`);
+    assert.ok(europeHasSketch(p.id), `pulmalta ${p.id} puuttuu piirros`);
+    assert.ok(p.title && p.title.length > 2, `pulmalta ${p.id} puuttuu otsikko`);
+    assert.ok(p.selite && p.selite.length > 20, `pulmalta ${p.id} puuttuu selite`);
+    assert.ok(p.q && p.q.length > 20, `pulman ${p.id} kysymys on liian lyhyt`);
+    assert.ok(p.fact && p.fact.length > 40, `pulmalta ${p.id} puuttuu selitys`);
+    assert.equal(typeof p.generate, 'function', `pulmalta ${p.id} puuttuu generate`);
+    checkSources(p.source, `pulma "${p.id}"`);
+    kaupungit.push(p.city);
+    // Arvonta tuottaa aina neljä eri vaihtoehtoa ja kelvollisen vastauksen,
+    // eri siemenillä (numerot ja ajat vaihtelevat generaattorissa).
+    for (const siemen of [1, 7, 42, 128, 999]) {
+      const rng = mulberry32(siemen);
+      const arvottu = p.generate(rng);
+      assert.equal(arvottu.options.length, 4, `pulman ${p.id} arvonta ei anna neljää vaihtoehtoa`);
+      assert.equal(new Set(arvottu.options).size, 4, `pulman ${p.id} arvonnassa on kaksi samaa vaihtoehtoa (siemen ${siemen})`);
+      assert.ok(
+        Number.isInteger(arvottu.correct) && arvottu.correct >= 0 && arvottu.correct < 4,
+        `pulman ${p.id} oikea vastaus on virheellinen (siemen ${siemen})`,
+      );
+    }
+  }
+  // Yksi kaupunki, yksi pulma: muuten toinen jäisi ikuisesti avaamatta.
   assert.equal(new Set(kaupungit).size, kaupungit.length, 'kahdella pulmalla sama kaupunki');
 });
 
