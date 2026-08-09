@@ -35,20 +35,22 @@ export const TILANNE = {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Kaupunkilehdet: 18 täydessä mallissa minitehtävineen '
-        + '— v404 lisäsi tehtävät kahdeksaan vanhaan, v407 toi '
-        + 'kymmenen uutta (Ateena, Amsterdam, Istanbul, Dublin, '
-        + 'Edinburgh, Marseille, Lissabon, Barcelona, Granada, '
-        + 'Budapest). Laatulöydöt: Barcelonan tekijänoikeuskorjaus, '
-        + 'visa/minitehtävä-päällekkäisyystarkistus, uusi '
-        + 'tests/lehdet.test.mjs.',
-      seuraavaksi: 'ISO LÄPIKÄYNTI (omistajan linjaus 9.8.): '
-        + 'maalehden pitää aina olla pidempi kuin kaupunkilehden — '
-        + 'vaihe A kartoittaa kaikki 30 maata ja ehdottaa siirrot '
-        + '(pahin: Helsinki vs Suomi), vaihe B toteuttaa Fablen '
-        + 'kuittauksen jälkeen. Lisäksi kaikkien valokuvakysymysten '
-        + 'kuvat tarkistetaan kuva kuvalta (Kumasi-tapaus). '
-        + 'Jonossa: Tromssa + 5 aluetta samalla lehtimallilla.',
+      tehtava: 'Kaupunkilehdet 31/36 Euroopassa (v410: Rooma, Krakova, '
+        + 'Varsova, Helsinki, Tallinna, Kiova, Pietari, Moskova, Sofia, '
+        + 'Bukarest, Sarajevo, Odessa). Maalehtien auditointi: 8 maata '
+        + 'oli kokonaan ilman aihesivuja (CZE AUT GRC NLD TUR IRL PRT '
+        + 'HUN) — v411 täydensi viisi (Tšekki, Itävalta, Kreikka, '
+        + 'Alankomaat, Ranska: 20 sivua, 80 nostoa). Palkkioavaimeen '
+        + 'lisätty maatunnus (eri maan sama aihe ei enää näy '
+        + 'ratkaistuna). Esitarkistin vertaa nyt jokaista minitehtävää '
+        + 'kaupungin kulttuurivisaan sanoina JA lukuina (Ateenan oppi).',
+      seuraavaksi: 'Tromssa + 5 aluetta (Islanti, Kreeta, Sisilia, '
+        + 'Alpit, Lappi) lehtimallilla, sitten jonon 4 maalehteä '
+        + '(Turkki, Irlanti, Portugali, Unkari). Fablen päätös 9.8.: '
+        + 'vanhojen maalehtien aihesivut ilman minitehtävää (DEU 6/6, '
+        + 'GBR 7/8, ESP 4/5, ITA 4/5, SWE 5/6) täydennetään samalla '
+        + 'säännöllä — koneisto on nyt kovennettu. Kreikan tv-tallenne '
+        + 'erikseen (ks. mediarivi).',
     },
     {
       tekija: 'Opus 2',
@@ -62,9 +64,10 @@ export const TILANNE = {
         + 'Sankarien aukio jäävät karttarajauksen ulkopuolelle; '
         + 'Praha on vaalein kartta (puolet ruudusta puistoa — '
         + 'kaupungin totuus, ei virhe).',
-      seuraavaksi: 'Erä 2 käynnissä, HELSINKI nostettu kärkeen '
-        + '(omistaja odottaa). Jäljellä 21 kaupunkia. Sonnet 2 '
-        + 'kirjoittaa nähtävyysjutut perään, Helsinki edellä.',
+      seuraavaksi: 'Helsinki julkaistu (v424: kohdekartta, Suomenlinna '
+        + 'kainalokartassa, meri piirtyy vetenä). Jäljellä rantakaupunkien '
+        + 'vesitäyttö (Istanbul ym.) ja loput kartat. Sonnet 2:n '
+        + 'nähtävyysjutut yhä Helsinki edellä — kartta on, jutut kesken.',
     },
     {
       tekija: 'Sonnet 1',
