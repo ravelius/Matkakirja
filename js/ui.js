@@ -7584,9 +7584,16 @@ export class UI {
     if (!kyllä || !ei) return;
     const sivuja = this.tutkiSivuja();
     const viimeisella = (this.tutkiSivu ?? 0) >= sivuja - 1;
+    const etusivulla = (this.tutkiSivu ?? 0) === 0;
     const maalehti = this.tutkiTila === 'maa';
-    // Kohtaaminen vain kaupunkilehden viimeisellä sivulla.
-    kyllä.hidden = maalehti || !viimeisella;
+    /*
+     * Kohtaaminen/kätkö heti saapuessa: nappi on kaupunkilehden
+     * ETUSIVULLA täysleveänä palkkina, ei enää viimeisellä sivulla
+     * (omistajan päätös 9.8.2026 — aiempi "vasta viimeisellä
+     * sivulla" -malli hautasi napin koko lehden selaamisen taakse,
+     * kun lähes joka kaupungilla on nyt lehti).
+     */
+    kyllä.hidden = maalehti || !etusivulla;
     ei.textContent = maalehti || viimeisella ? 'Poistu' : 'Poistu lehdestä';
 
     let palkki = this.arrivalDialog.querySelector(':scope .tutki-alanapit');
