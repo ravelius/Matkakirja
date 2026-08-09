@@ -265,9 +265,21 @@ export const AFRICA = {
      */
     types: themedTokenTypes({
       star: { name: 'Suuren Zimbabwen kivilintu' },
-      ruby: { name: 'Kimberleyn timantti', color: '#bcd6e8' },
-      emerald: { name: 'Kultahippu', color: '#e0b02a' },
-      topaz: { name: 'Kaurikotilo', color: '#e0cfa8' },
+      ruby: {
+        name: 'Kimberleyn timantti', color: '#bcd6e8',
+        kuva: 'Cullinan Diamond (replica) (Premier Kimberlite Pipe, Precambrian; Premier Mine, South Africa) 4 (17872516620).jpg',
+        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+      },
+      emerald: {
+        name: 'Kultahippu', color: '#e0b02a',
+        kuva: 'Gold nugget (Australia) 4 (16848647509).jpg',
+        kuvaLahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+      },
+      topaz: {
+        name: 'Kaurikotilo', color: '#e0cfa8',
+        kuva: 'Different cowries.jpg',
+        kuvaLahde: 'Wikimedia Commons (CC BY 2.5)',
+      },
     }),
     // 37 laattakaupunkia seitsemän uuden paikan jälkeen (omistajan laajennus).
     counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 11 },

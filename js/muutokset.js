@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 451, teksti: 'Aarteen paljastus näyttää nyt oikean valokuvan' },
   { v: 450, teksti: 'Maakartat Kuwaitille, Qatarille, Emiraateille, Omanille' },
   { v: 449, teksti: 'Tšadjärvi ja Madeira saivat omat kuvansa' },
   { v: 448, teksti: 'Britannian musiikki kahdelle sivulle, kuvatoistot pois' },

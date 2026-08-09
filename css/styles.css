@@ -5067,6 +5067,26 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
 
 .reveal-caption.shown { opacity: 1; transform: none; }
 
+/* Aarteen oikea valokuva paljastuksen alla: pieni kehystetty vedos.
+ * max-height pitää pystykuvatkin (esim. silkkikäärö) kurissa, ja
+ * object-fit: contain näyttää esineen kokonaan leikkaamatta. */
+.reveal-kuva {
+  max-width: min(58vw, 15rem);
+  max-height: 9.5rem;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid rgba(246, 226, 184, 0.55);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+  margin-top: 0.35rem;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.reveal-caption .reveal-kuvalahde {
+  font-size: 0.62rem;
+  color: rgba(216, 196, 162, 0.75);
+  max-width: min(70vw, 18rem);
+}
+
 .reveal-caption strong {
   font-family: var(--font-type);
   font-size: clamp(1.4rem, 4.5vmin, 2rem);

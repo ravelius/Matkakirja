@@ -1988,6 +1988,21 @@ export class UI {
     this.observer = new ResizeObserver(() => this.fitViewBox());
     this.observer.observe(this.svg.parentElement);
     this.render();
+    this.esilataaAarrekuvat();
+  }
+
+  /*
+   * Aarteiden valokuvat lämpimiksi ennen ensimmäistä paljastusta:
+   * paljastuskortti on ruudulla vain pari sekuntia, eikä peili-404 +
+   * Commons-varareitti ehtisi siihen ikkunaan kylmästä. Kolme pientä
+   * kuvaa per lauta — halpa hinta siitä, että aarre NÄKYY.
+   */
+  esilataaAarrekuvat() {
+    for (const type of Object.values(this.game.tokenTypes ?? {})) {
+      if (!type.kuva) continue;
+      const kuva = new Image();
+      asetaKuva(kuva, valokuvaUrl(type.kuva, 640), valokuvaVara(type.kuva, 640));
+    }
   }
 
   /**
@@ -11773,6 +11788,20 @@ export class UI {
     const caption = html('div', 'reveal-caption');
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
+    /*
+     * Aarteen oikea valokuva (omistajan päätös 9.8.2026: "ennemmin
+     * oikea kuva" kuin piirros). Kuva on laattatyypin oma, Commonsista
+     * kuratoitu — laudoilla joilla kenttää ei ole (esim. maailmankartta)
+     * paljastus näyttää entiseltään.
+     */
+    if (token.kuva) {
+      const kuva = document.createElement('img');
+      kuva.className = 'reveal-kuva';
+      kuva.alt = token.name;
+      asetaKuva(kuva, valokuvaUrl(token.kuva, 640), valokuvaVara(token.kuva, 640));
+      caption.appendChild(kuva);
+      if (token.kuvaLahde) caption.appendChild(html('span', 'reveal-kuvalahde', token.kuvaLahde));
+    }
     /*
      * Isoisän aarresitaatti paljastuksen alle (omistajan päätös
      * 8.8.2026): kätkön löytyessä isoisä puhuu omalla äänellään ja
