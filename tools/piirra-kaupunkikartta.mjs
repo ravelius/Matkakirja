@@ -241,6 +241,71 @@ const KAUPUNGIT = {
     // Ei meri: true — rajaus ei ulotu Forthin lahdelle asti.
     rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
   },
+  lissabon: {
+    // Baixan ruudukko keskellä, Alfama oikealla ja Bairro Alto
+    // vasemmalla — kaksi kukkulaa ja niiden välissä 800 metriä leveä
+    // ruutukaava, joka vedettiin vuoden 1755 maanjäristyksen jälkeen.
+    // Tejo tulee kuvaan vasemmasta alanurkasta ja kääntyy oikeassa
+    // laidassa pohjoiseen.
+    //
+    // Belém jää ulos: torni on 7,1 km ja luostari 6,2 km Kauppatorilta,
+    // ja mukaan ottaminen vaatisi 9 km leveän kuvan. Kumpikin on
+    // lehden kohde, joten se on kerrottava lehden puolella.
+    rajat: { pohjoinen: 38.7265, etela: 38.7035, lansi: -9.1505, ita: -9.118 },
+    meri: true,
+  },
+  barcelona: {
+    // Pelin toiseksi laajin rajaus Pariisin jälkeen, ja syy on
+    // ruudukko: Eixamplen korttelit ovat vain 113 metriä sivultaan,
+    // joten 4,3 km:n kuvassa yksi kortteli on noin 42 px — tarpeeksi
+    // iso että viistetyt kulmat näkyvät, tarpeeksi pieni että toisto
+    // syntyy. Keskellä ruudukko katkeaa terävään reunaan (siinä kulki
+    // purettu muuri) ja alkaa gotiikkakorttelin sokkelo.
+    //
+    // Rajaus on neliö, koska ruudukko on itse 45 asteen kulmassa.
+    // Park Güell jää 630 m pohjoisrajan yläpuolelle: mukaan ottaminen
+    // liimaisi sen ja Kolumbuksen patsaan kumpikin omaan laitaansa.
+    rajat: { pohjoinen: 41.4085, etela: 41.37, lansi: 2.147, ita: 2.1984 },
+    meri: true,
+  },
+  granada: {
+    // Näistä pienin, 2,2 km neliö. Darro tulee oikeasta laidasta ja
+    // laskeutuu vinosti keskelle — se on kuvan selkäranka ja se rako,
+    // joka erottaa Albaicínin ja Alhambran kukkulat toisistaan. Genil
+    // kulkee alalaidassa.
+    //
+    // Darron kaupunkiosuus on OSM:ssä tunnel=culvert mutta piirtyy
+    // avoimena jokena. Se jätettiin tahallaan: se selittää miksi
+    // Reyes Católicos kaartaa juuri noin, ja ilman sitä Granadalta
+    // katoaisi yksi harvoista tunnistettavista piirteistä.
+    //
+    // Ei merta — Granada on 60 km sisämaassa.
+    rajat: { pohjoinen: 37.1875, etela: 37.1675, lansi: -3.6045, ita: -3.5795 },
+  },
+  istanbul: {
+    /*
+     * Kaikki kolme kaupunginosaa samassa kuvassa: vanhakaupunki
+     * niemellä vasemmalla, Galata ja Beyoğlu Kultaisen sarven
+     * pohjoispuolella, ja Aasian puoli Bosporin takana oikealla. Se
+     * maksaa leveyttä (5,5 km) ja kolmanneksen kuvasta vettä — mutta
+     * salmi ei ole hinta vaan aihe. Tämä on pelin ainoa kartta, jolla
+     * näkyy kaksi maanosaa.
+     *
+     * MERI ON 'maa' EIKÄ true. Tavallinen vesipuolen täyttö ei toimi
+     * täällä, koska maata on veden MOLEMMIN PUOLIN: jokaisen rannan
+     * vesipuoli sisältää muut maamassat, ja renkaiden unioni peittää
+     * 160–255 % rajauksesta. Maapuolitapa maalaa koko ruudun mereksi
+     * ja maamassat paperilla päälle (niemi 21 %, Beyoğlu 13 %, Aasia
+     * 11 %). Älä vaihda tätä true:ksi — pinta-alavahti kyllä
+     * pysäyttää sen, mutta silloin Bosporinsalmi jää paperiksi.
+     *
+     * Taksim jää 380 m ja Dolmabahçe 630 m pohjoisrajan taakse, Balat
+     * 760 m länteen ja Kadıköy 800 m etelään — neljä eri suuntaan,
+     * joten mikään venytys ei saa niitä sisään.
+     */
+    rajat: { pohjoinen: 41.0335, etela: 40.9975, lansi: 28.958, ita: 29.024 },
+    meri: 'maa',
+  },
   lontoo: {
     // Hyde Parkin itälaidalta Tower Bridgelle, Regent's Parkin
     // eteläpuolelta Thamesin etelärannalle. Kaikki kuusi kohdetta
@@ -307,9 +372,13 @@ async function haeOverpass(rajat) {
      * TÄMÄ EI RIITÄ ISOILLE KUKKULOILLE. Ateenan Lykavittós on
      * relaatio (natural=wood + landuse=forest), ja kysely hakee
      * relaatioista vain vedet — kukkula jää siksi yhä piirtymättä.
-     * Sen korjaaminen vaatisi relaatiohaaran uudelleenkirjoituksen:
-     * nyt jokaisen relaation jäsenpolut työnnetään joet-listaan, eli
-     * puistorelaatio piirtyisi jokena. Ks. piirra().
+     *
+     * ÄLÄ KORJAA SITÄ LISÄÄMÄLLÄ metsärelaatioita tähän kyselyyn.
+     * Relaatiohaara kokoaa jäsenpolut VESIMONIKULMIOKSI eikä katso
+     * merkintöjä, koska se voi luottaa siihen että kysely hakee vain
+     * vesirelaatioita. Metsärelaatio täyttyisi siis sinisenä. Jos
+     * kukkulat halutaan, relaatiohaaraan pitää ensin lisätä
+     * tagitarkistus. Ks. kokoaKerrokset().
      */
     way["natural"~"^(wood|scrub)$"]${alue};
     way["leisure"~"^(park|garden)$"]${alue};
@@ -460,7 +529,7 @@ function ketjutaSuunnassa(polut) {
  * Se näkyy paperinvärisenä kiilana reunassa. Rajaus kannattaa valita
  * niin, ettei näin käy — ja kuva pitää joka tapauksessa katsoa.
  */
-function merenTaytto(ketjut, r) {
+function merenTaytto(ketjut, r, tapa = 'vesi') {
   const sisalla = (p) => p.lon >= r.lansi && p.lon <= r.ita && p.lat >= r.etela && p.lat <= r.pohjoinen;
   const W = r.ita - r.lansi;
   const H = r.pohjoinen - r.etela;
@@ -567,31 +636,50 @@ function merenTaytto(ketjut, r) {
       lat: (a.lat + b.lat) / 2 - (dx / pit) * askel,
     };
     if (!sisalla(koe) || pala.length < 6) return [];
+    if (tapa === 'maa') {
+      // Maapuoli = rengas, joka EI sisällä vesikoepistettä. Isoin
+      // kelpaava on oikea: pienemmät ovat saman rannan lahtia.
+      const maa = [kavele(pala, true), kavele(pala, false)]
+        .filter((rg) => !sisassa(rg, koe))
+        .sort((x, y) => ala(y) - ala(x));
+      return maa.length ? [maa[0]] : [];
+    }
     const ehdokkaat = [kavele(pala, true), kavele(pala, false)]
       .filter((rg) => sisassa(rg, koe) && ala(rg) < W * H * 0.9)
       .sort((x, y) => ala(x) - ala(y));
     return ehdokkaat.length ? [ehdokkaat[0]] : [];
   });
+  const kokoLaatikko = [
+    { lat: r.pohjoinen, lon: r.lansi },
+    { lat: r.pohjoinen, lon: r.ita },
+    { lat: r.etela, lon: r.ita },
+    { lat: r.etela, lon: r.lansi },
+  ];
+  /*
+   * MAAPUOLITAPA: koko rajaus on merta ja maamassat piirretään sen
+   * päälle. Tämä on ainoa toimiva tapa silloin, kun rajauksessa on
+   * maata VEDEN MOLEMMIN PUOLIN — Istanbulissa niemi, Beyoğlu ja
+   * Aasian puoli. Silloin tavallinen vesipuolen rengas sisältää aina
+   * ne muut maamassat, ja renkaiden unioni peittää koko kuvan
+   * (mitattu: 160–255 % rajauksesta).
+   *
+   * Tämä EI kelpaa oletukseksi: Helsingissä maapuolitapa tuottaa
+   * 27 päällekkäistä maakuviota ja hajoaa. Kummallekin kaupungille
+   * on oma oikea tapansa, ja siksi se on valinta.
+   */
+  if (tapa === 'maa') {
+    return renkaat.length || saaret.length
+      ? { renkaat: [kokoLaatikko], saaret: [...renkaat, ...saaret] }
+      : { renkaat: [], saaret: [] };
+  }
   /*
    * PELKKIÄ SAARIA: jos rajauksen sisällä on suljettuja
    * rantaviivarenkaita muttei yhtään avointa rantaa, koko rajaus on
-   * merta ja renkaat ovat saaria sen keskellä. Silloin vesi on
-   * "kaikki paitsi saaret", eli pohjaksi tulee koko laatikko.
-   *
-   * Tämä on Suomenlinnan kainalon tapaus: linnoitussaaret ovat
-   * keskellä merta, eikä mantereen rantaa ole ruudussa lainkaan.
-   * Ilman tätä haaraa kainalo jäi paperiksi, jossa kellui muutama
-   * ääriviiva. Sääntö on turvallinen, koska OSM:n rantaviiva
-   * ympäröi aina maata: suljettu rengas ON saari.
+   * merta ja renkaat ovat saaria sen keskellä. Tämä on Suomenlinnan
+   * kainalon tapaus — sama idea kuin maapuolitavassa, mutta se
+   * syntyy tässä itsestään eikä vaadi valintaa.
    */
-  if (!renkaat.length && saaret.length) {
-    renkaat.push([
-      { lat: r.pohjoinen, lon: r.lansi },
-      { lat: r.pohjoinen, lon: r.ita },
-      { lat: r.etela, lon: r.ita },
-      { lat: r.etela, lon: r.lansi },
-    ]);
-  }
+  if (!renkaat.length && saaret.length) renkaat.push(kokoLaatikko);
   return { renkaat, saaret };
 }
 
@@ -704,7 +792,8 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
     if (!meri) {
       nauhaksi();
     } else {
-      const { renkaat, saaret } = merenTaytto(ketjutaSuunnassa(rantaviivat), rajat);
+      const { renkaat, saaret } = merenTaytto(ketjutaSuunnassa(rantaviivat), rajat,
+        meri === 'maa' ? 'maa' : 'vesi');
       /*
        * Näkyvä vesi = meri miinus saaret. Ero on olennainen
        * pelkkien saarten tapauksessa (Suomenlinnan kainalo), jossa

@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 427, teksti: 'Kohdekartat Istanbuliin, Marseilleen, Edinburghiin' },
+  { v: 427, teksti: 'Istanbulin kartalla näkyy kaksi maanosaa' },
   { v: 426, teksti: 'Nähtävyysjutut Prahaan, Wieniin, Budapestiin, Pariisiin' },
   { v: 425, teksti: 'Kolme uutta isoisän pulmaa: geysir, vuorovesi, tuulikukko' },
   { v: 424, teksti: 'Helsingille kohdekartta ja Suomenlinna kainaloon' },
