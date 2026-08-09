@@ -314,6 +314,88 @@ const KAUPUNGIT = {
     // Thames kaartaa kuvan halki tunnistettavana.
     rajat: { pohjoinen: 51.525, etela: 51.4925, lansi: -0.16, ita: -0.06 },
   },
+  rooma: {
+    // Tiber tulee kuvaan alhaalta, kaartaa Vatikaanin ohi ja poistuu
+    // ylhäältä — se jakaa kuvan niin että Pietarinkirkko ja Castel
+    // Sant'Angelo ovat lännessä ja neljä muuta kohdetta idässä.
+    // Antiikin Rooma (Pantheon, Trevi, Colosseum) on itälaidan
+    // sokkelossa, ja Via del Corso vetää sen halki suorana viivana.
+    //
+    // Kokeiltu myös tiukempi rajaus + kainalo Vatikaanille: se oli
+    // selvästi huonompi. Tiber kutistui nurkan siivuksi, ja ainoa
+    // tyhjä nurkka oli sama johon kainalon suuntateksti olisi osunut.
+    // 4,6 km on tässä oikea leveys, koska joen mutka on kuvan juoni.
+    //
+    // Ei merta — Ostia on 25 km lounaassa.
+    rajat: { pohjoinen: 41.9135, etela: 41.8845, lansi: 12.4455, ita: 12.5005 },
+  },
+  krakova: {
+    // Planty on kuvan juoni: purettu kaupunginmuuri jätti soikean
+    // puistokehän, ja sen sisällä on keskiaikainen ruutukaava
+    // Suurtorin ympärillä. Sama idea kuin Wienin Ring, mutta puistona
+    // eikä katuna — ja tässä kehä mahtuu kuvaan kokonaan.
+    //
+    // Kehän pohjoisreunalla on Barbakaani, eteläpäässä Wawelin kukkula
+    // Veikselin rannalla, ja siitä etelään Kazimierz. Vain 2,6 km
+    // leveä, joten kortteleiden kujat erottuvat.
+    //
+    // Auschwitz on 65 km länteen eikä ole kaupunkikartan kohde.
+    rajat: { pohjoinen: 50.069, etela: 50.047, lansi: 19.9225, ita: 19.9585 },
+  },
+  varsova: {
+    // Veiksel tulee ylhäältä ja poistuu oikeasta alanurkasta vinona
+    // nauhana. Itäranta (Praga) on mukana kapeana kaistana tahallaan:
+    // ilman sitä joki olisi kuvan reuna eikä joki, ja lapsi näkee nyt
+    // että kaupunki on veden molemmin puolin.
+    //
+    // Rajaus on lähes neliö, koska Varsovan maamerkit ovat jonossa
+    // pohjoisesta etelään — vanhastakaupungista Kulttuuri- ja
+    // tiedepalatsille on 2 km. Leveämpi kuva olisi puristanut ne
+    // kapeaan pystyraitaan.
+    //
+    // Ei meri-lippua. Varsovassa ei ole yhtään natural=coastline-viivaa,
+    // ja Veiksel piirtyy oikein natural=water-monikulmiona.
+    //
+    // Kansallisstadion jää 190 m itärajan taakse. Sisään ottaminen
+    // työntäisi sen 96 %:n kohdalle ja Kulttuuri- ja tiedepalatsin
+    // vasemman reunan yli. Łazienki, POLIN ja kansannousun museo
+    // osoittavat kolmeen muuhun suuntaan.
+    rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
+  },
+  tallinna: {
+    // Kaksiosainen kuva: ylhäällä Suomenlahti ja satamaniemi
+    // sormimaisine laitureineen, keskellä vanhankaupungin soikea
+    // rengas — purettujen muurien tilalle jäänyt vallihautapuistojen
+    // ja kehäkadun kehä. Pohjoisreuna on valittu niin, että merta jää
+    // ylälaitaan noin 400 metriä; tiukemmalla rajauksella merestä jäi
+    // pelkkä tilkku eikä kuva enää kertonut merenrantakaupungista.
+    //
+    // Vanhankaupungin kujat ovat OSM:ssä pääosin footway (805 kpl),
+    // joita työkalu ei piirrä — sisus jää siis ilmavaksi eikä
+    // sokkeloiseksi. Kartan juoni on muurirengas ja meri, ei kujaverkko.
+    // Leveämmällä 2,55 km:n rajauksella rengas alkaa hukkua.
+    //
+    // meri: true eikä 'maa': maata on vain veden eteläpuolella, joten
+    // tavallinen vesipuolen täyttö osuu oikein. Ilman lippua
+    // Tallinnanlahti jäisi paperin väriseksi ja satama-altaat
+    // näyttäisivät joelta.
+    //
+    // EI KAINALOA, ja se on mitattu päätös eikä unohdus. Lauluväljak
+    // on lehden kärkinosto ja jää 1,6 km itärajan taakse, eli
+    // kainalosääntö osoittaisi kainaloon. Kaksi ruutua piirrettiin ja
+    // katsottiin:
+    //   1) Kadriorg + Lauluväljak yhdessä (2,3 × 1,2 km, 30 % leveä)
+    //      → yhtenäinen vihreä läntti, jossa erottuu vain laulukaaren
+    //      viuhka. Palatsi ja barokkipuutarha eivät piirry.
+    //   2) pelkkä Lauluväljak tiukasti (0,8 × 0,6 km, 26 % leveä)
+    //      → täysin tyhjä vihreä ruutu. Laulukaari on rakennus, jota
+    //      työkalu ei piirrä, ja katsomo on nurmea.
+    // Sama vika kuin Suomenlinnan ensimmäisessä kainalossa: ruutu, jossa
+    // ei ole katuverkkoa, on paperia. Jos laulukenttä halutaan kartalle,
+    // se vaatii työkaluun rakennusten piirron — ei uutta rajausta.
+    rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
+    meri: true,
+  },
 };
 
 /*
