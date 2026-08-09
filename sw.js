@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.469';
+const CACHE = 'matkakirja-2026-08-09.470';
 const SHELL = [
   './',
   './index.html',
@@ -633,6 +633,21 @@ const SHELL = [
   './assets/liput/united-kingdom.png',
   './assets/liput/upper-silesia.png',
   './assets/liput/zimbabwe.png',
+  /*
+   * Lähi-idän laudan liput. Ne tarvittiin vasta 9.8.2026, kun lauta sai
+   * cityCountry-taulun: sitä ennen lauta ei näyttänyt maan lippua
+   * lainkaan. Turkki, Saudi-Arabia ja Egypti ovat jo yllä muiden
+   * lautojen mukana.
+   */
+  './assets/liput/cyprus.png',
+  './assets/liput/iran.png',
+  './assets/liput/iraq.png',
+  './assets/liput/kuwait.png',
+  './assets/liput/oman.png',
+  './assets/liput/qatar.png',
+  './assets/liput/syria.png',
+  './assets/liput/united-arab-emirates.png',
+  './assets/liput/yemen.png',
   './assets/audio/puhe-africa-saapuminen-kairo.mp3',
   './assets/audio/puhe-africa-saapuminen-marrakech.mp3',
   './assets/audio/puhe-africa-saapuminen-lagos.mp3',

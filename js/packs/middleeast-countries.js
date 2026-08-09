@@ -20,13 +20,21 @@
 // päiväkirja puhuu paikasta itsestään eikä valtiosta. Esitystapa on
 // Fablen pöydällä. ÄLÄ lisää niitä tauluun ilman Fablen päätöstä.
 //
-// TÄTÄ TIEDOSTOA EI OLE VIELÄ KYTKETTY LAUTAAN, ja se on tarkoitus.
-// Kytkentä on kaksi riviä middleeast.js:n map-olioon (countryShapes ja
-// cityCountry) niin kuin europe.js:ssä ja africa.js:ssä, mutta se tuo
-// samalla näkyviin maan nimen ja i-napin. i-nappi avaa maalehden, ja
-// Lähi-idän maalehtiä ei ole vielä olemassa — pelaaja päätyisi
-// tyhjälle sivulle. Kytke vasta kun maalehdet ovat mainissa, ja nosta
-// silloin versio.
+// KYTKETTY LAUTAAN 9.8.2026 (middleeast.js:n map-olio: countryShapes
+// ja cityCountry, samoin kuin europe.js:ssä ja africa.js:ssä).
+//
+// Tässä luki aiemmin, ettei kytkentää saa tehdä ennen Lähi-idän
+// maalehtiä, koska i-nappi veisi tyhjälle sivulle. HUOLI OSOITTAUTUI
+// AIHEETTOMAKSI, ja se tarkistettiin Afrikan ennakkotapauksesta:
+// Afrikan 27 maasta 26:lla ei ole maalehteä eikä korkokarttaa, ja
+// kytkentä on siellä ollut käytössä pitkään. avaaMaalehti() lisää
+// aina "<maa> numeroina" -sivun, joten sisältö ei jää tyhjäksi.
+// Lähi-idässä jokaisella maalla on lisäksi korkokartta, joten
+// lehdetönkin maa saa kaksi sivua: kartta ja numerot.
+//
+// Kytkennän todellinen syy oli Dubain lehti: ilman kaupunki→maa-tietoa
+// siitä puuttuivat menovinkit ja maa numeroina, vaikka aineisto oli
+// valmiina.
 //
 // Siksi taulussa ei myöskään ole Jordaniaa eikä Israelia: laudalla
 // niiden ainoat kohteet ovat Petra ja Jerusalem, jotka on rajattu
@@ -111,7 +119,17 @@ export const MIDDLE_EAST_COUNTRY_SHAPES = {
     ],
   },
   ARE: {
-    nimi: 'Arabiemiraatit',
+    /*
+     * NIMI ON MAAILMANKARTAN MUKAINEN, EI FI-WIKIN. Tässä luki ensin
+     * 'Arabiemiraatit', mutta maailmankartta.js ja asia-maatiedot.js
+     * sanovat 'Arabiemiirikunnat'. Sama maa kahdella nimellä samassa
+     * pelissä on virhe, jonka pelaaja näkee siirtyessään laudalta
+     * maailmankartalle, ja lisäksi maa-kategoriat.js:n genetiivitaulu
+     * tuntee vain vanhemman muodon. `wiki` osoittaa silti artikkelin
+     * omaan otsikkoon. Jos nimi joskus yhtenäistetään, se tehdään
+     * kaikkiin kolmeen paikkaan kerralla ja genetiivi mukana.
+     */
+    nimi: 'Arabiemiirikunnat',
     wiki: 'Yhdistyneet arabiemiraatit',
     lippu: 'Flag of the United Arab Emirates.svg',
     keskus: [749.8, 578.5],

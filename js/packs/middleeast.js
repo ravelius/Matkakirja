@@ -10,6 +10,7 @@
 // jotta nimet ja nappulat mahtuvat laudalle.
 
 import { MIDDLEEAST_QUESTIONS, MIDDLEEAST_FACTS } from './middleeast-questions.js';
+import { MIDDLE_EAST_COUNTRY_SHAPES, MIDDLE_EAST_CITY_COUNTRY } from './middleeast-countries.js';
 import { themedTokenTypes } from '../tokens.js';
 
 const ME_MAP = {
@@ -178,7 +179,34 @@ export const MIDDLE_EAST = {
   tagline: 'Etsi Sheban kuningattaren aarre basaarien ja aavikoiden kätköistä.',
   ariaLabel: 'Lähi-idän aarrekartta',
 
-  map: { ...ME_MAP, outlines: [ME_MAP.mainlandPoints, ME_MAP.cyprusPoints] },
+  /*
+   * countryShapes ja cityCountry kytkettiin 9.8.2026. Ennen sitä
+   * Lähi-idän laudalta puuttui koko kaupunki→maa-tieto, ja ui.js
+   * johtaa siitä kolme asiaa: maalohkon lehden etusivulla, maalehden
+   * (i-painike kartalla) ja menovinkkisivun. Dubain lehdestä puuttui
+   * siksi menovinkit, vaikka aineisto oli valmiina.
+   *
+   * LEHDETÖN MAA EI RIKO MITÄÄN, ja se on tarkistettu Afrikan
+   * ennakkotapauksesta eikä oletettu: Afrikan 27 maasta 26:lla ei ole
+   * maalehteä eikä korkokarttaa, ja kytkentä on siellä ollut pitkään
+   * käytössä. avaaMaalehti() lisää aina "<maa> numeroina"
+   * -sivun, joten sisältö ei voi jäädä tyhjäksi, ja se palaa heti jos
+   * countryShapes ei tunne koodia. Lähi-itä on tässä Afrikkaa
+   * turvallisemmalla pohjalla: kaikilla 12 maalla on sekä lautamuoto
+   * että korkokartta, joten jokainen maalehti saa vähintään kaksi
+   * sivua (kartta + numerot).
+   *
+   * Taulussa on 23 kaupunkia laudan 29:stä. Kuusi puuttuvaa —
+   * Jerusalem, Petra, Siinai, Rub al-Khali, Persepolis ja Kappadokia —
+   * ovat erikoiskohteita ilman maa-attribuutiota (kaanonpäätös), ja
+   * niillä maalohko pysyy piilossa niin kuin kuuluukin.
+   */
+  map: {
+    ...ME_MAP,
+    outlines: [ME_MAP.mainlandPoints, ME_MAP.cyprusPoints],
+    countryShapes: MIDDLE_EAST_COUNTRY_SHAPES,
+    cityCountry: MIDDLE_EAST_CITY_COUNTRY,
+  },
   cities: ME_CITIES,
   edges: ME_EDGES,
   airRoutes: ME_AIR_ROUTES,
