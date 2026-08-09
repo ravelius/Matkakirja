@@ -1800,7 +1800,7 @@ export const KAUPUNKIKARTAT = {
      */
     kainalot: [
       { rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
-        x: 66, y: 68, leveys: 22, korkeus: 28.85 },
+        x: 76, y: 69.15, leveys: 22, korkeus: 28.85 },
     ],
     esittely: 'Helsinki ei ole aina ollut tässä. Kustaa Vaasa perusti '
       + 'sen vuonna 1550 Vantaanjoen suulle Tallinnan kilpailijaksi, '

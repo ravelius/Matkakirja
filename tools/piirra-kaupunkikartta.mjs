@@ -201,8 +201,13 @@ const KAUPUNGIT = {
       {
         // Rajaus mitattu OSM:n rantaviivoista: eteläreuna 60.1368 on
         // valittu niin, ettei Kustaanmiekan kärki katkea.
+        // Ruutu on KIINNI OIKEASSA ALANURKASSA (omistajan palaute
+        // 9.8.2026: "nyt se on turhaan irti oikeasta reunasta").
+        // Marginaali on 2 % kummallakin sivulla, sama kuin Budapestin
+        // kainalossa — täysin reunaan asti vietynä ruudun oma
+        // reunaviiva jäisi puoliksi kuvan ulkopuolelle.
         rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
-        x: 66, y: 68, leveys: 22, suunta: '3 km kaakkoon', meri: true,
+        x: 76, y: 69.15, leveys: 22, suunta: '3 km kaakkoon', meri: true,
       },
     ],
   },
