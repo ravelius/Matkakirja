@@ -445,8 +445,8 @@ export const MAASTO_TEKSTIT = {
           tiedosto: 'Waving fisherman on Lake Chad (detilt).jpg',
           selite: 'Kalastaja tervehtii veneestään Tšadjärvellä kaislikon '
             + 'laidassa. Järvi on täynnä matalia salmia ja ruokosaaria — '
-            + 'juuri sitä avoveden ja niittymaan vaihtelua, josta '
-            + 'Barthille kerrottiin.',
+            + 'juuri sitä avoveden ja niittymaan vaihtelua, josta Barthille '
+            + 'kerrottiin.',
           lahde: 'Cooltho, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -1597,10 +1597,9 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Rio Madeira- Cachoeira do Teotônio.jpg',
-          selite: 'Teotônion koski Madeirassa ennen patoja: vaalea '
-            + 'lietevesi kuohuu, ja kalastajakylä seisoo paaluillaan '
-            + 'aivan kosken partaalla. Tällaisten koskien ohi kumi '
-            + 'piti kantaa maitse.',
+          selite: 'Teotônion koski Madeirassa ennen patoja: vaalea lietevesi '
+            + 'kuohuu, ja kalastajakylä seisoo paaluillaan aivan kosken '
+            + 'partaalla. Tällaisten koskien ohi kumi piti kantaa maitse.',
           lahde: 'Wilson Dias / Agência Brasil, Wikimedia Commons (CC BY 3.0 BR)',
         },
         {
