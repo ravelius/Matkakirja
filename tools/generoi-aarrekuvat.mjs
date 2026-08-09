@@ -40,7 +40,10 @@ const TYYLI = (esine) => `Vintage children's adventure book illustration of ${es
   + 'unseen candlelight from the upper left; everything around it '
   + 'fades smoothly into solid pure black (#000000) at the edges. '
   + 'No background scenery, no parchment, no frame, no border, no '
-  + 'text, no people, no candle visible. Rich glowing detail on the '
+  + 'text, no people, no candle visible. The darkness fills the '
+  + 'ENTIRE square canvas edge to edge: all four corners and edges '
+  + 'are solid black, never white, never paper — do not paint a '
+  + 'black circle on a light page. Rich glowing detail on the '
   + 'object itself, muted antique palette with one strong accent '
   + 'color from the object.';
 

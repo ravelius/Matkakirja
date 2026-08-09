@@ -5088,8 +5088,11 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
  * reunat, joten esine leijuu pimeässä — tekstit asettuvat ympärille.
  * object-fit: contain näyttää esineen kokonaan leikkaamatta. */
 .reveal-aarrekuva {
-  width: min(76vw, 22rem);
-  max-height: 48vh;
+  /* Neliö: kuvat ovat 1:1, ja maskin on osuttava kuvan reunoihin —
+   * leveämmässä laatikossa kuvan pystyreunat jäisivät maskin
+   * kirkkaalle alueelle näkyviin. */
+  width: min(76vw, 22rem, 52vh);
+  aspect-ratio: 1;
   object-fit: contain;
   -webkit-mask-image: radial-gradient(ellipse 70% 70% at center, #000 50%, transparent 74%);
   mask-image: radial-gradient(ellipse 70% 70% at center, #000 50%, transparent 74%);
