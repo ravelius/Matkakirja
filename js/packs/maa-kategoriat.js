@@ -11468,6 +11468,142 @@ export const MAA_KATEGORIAT = {
   ],
   LVA: [
     {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Latvian maisema on pehmeää: jyrkänteet ovat hiekkakiveä, suon yli '
+        + 'kuljetaan lankkuja pitkin ja ranta jatkuu kymmeniä kilometrejä '
+        + 'ilman kalliota.',
+      nostot: [
+        {
+          otsikko: 'Jyrkänne, jonka voi raapia kynnellä',
+          aika: '1973',
+          tiedosto: 'Gauja National Park 1.jpg',
+          teksti: 'Gaujan laaksossa joki on kuluttanut rantaan punertavia '
+            + 'jyrkänteitä, jotka ovat devonikautista hiekkakiveä — niin '
+            + 'pehmeää, että siihen voi piirtää kynnellä. Korkeimmat seinämät '
+            + 'kohoavat parikymmentä metriä, ja niiden juurella on luolia. '
+            + 'Tunnetuimman luolan seinissä on nimikirjaimia jo 1600-luvulta, '
+            + 'joten turistien tapa kaivertaa nimensä kiveen on paljon '
+            + 'vanhempi kuin luulisi. Gaujan kansallispuisto perustettiin '
+            + '1973, ja se on Latvian suurin.',
+          selite: 'Vaaleanpunertava hiekkakivijyrkänne joen rannassa. Kiven '
+            + 'päällä kasvaa tiheä lehtimetsä, ja rannassa on kapea vihreä '
+            + 'kaistale.',
+          lahde: 'Ewa Dryjanska, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Suon yli kuljetaan lankkuja pitkin',
+          aika: 'Aamuisin',
+          tiedosto: 'Ķemeru purva laipa.jpg',
+          teksti: 'Ķemerin kansallispuistossa on keidassuo, jonka yli on '
+            + 'rakennettu kilometrien mittainen lankkupolku. Suon pinnalla on '
+            + 'tummia lampareita ja matalia mäntyjä, ja aamulla usva makaa '
+            + 'veden päällä niin, että maisema näyttää toiselta planeetalta. '
+            + 'Turve kasvaa hitaasti: noin millimetrin vuodessa, joten metrin '
+            + 'paksuinen kerros on tuhat vuotta vanha. Suoveden ja mudan '
+            + 'takia alueella on myös kylpylä, jonne tultiin jo tsaarin '
+            + 'aikaan hoitoihin.',
+          selite: 'Puinen lankkupolku johtaa suon yli. Ympärillä on matalia '
+            + 'mäntyjä, sammalta ja tummia lampareita, ja taivas heijastuu '
+            + 'vedestä.',
+          lahde: 'Jolanta Liva, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ranta jatkuu kolmekymmentä kilometriä',
+          aika: 'Kesällä',
+          tiedosto: 'Jurmala 2017 05.jpg',
+          teksti: 'Jūrmala on Riianlahden rannalla oleva kaupunki, joka on '
+            + 'käytännössä yhtä pitkää hiekkarantaa: valkoista, matalaa ja '
+            + 'niin loivaa, että vesi ulottuu kauas polviin asti. Rannan '
+            + 'takana kasvaa mäntymetsä, ja metsän seassa on puisia huviloita '
+            + '1800-luvun lopulta, jolloin paikasta tuli kylpyläkaupunki. '
+            + 'Ranta on niin leveä, että tuuli kasaa siitä hiekkavalleja, ja '
+            + 'talvella meri jäätyy paikoin rantaviivaan asti.',
+          selite: 'Leveä vaalea hiekkaranta ja matala meri harmaana päivänä. '
+            + 'Rannalla seisoo pelastustorni ja kaukana näkyy metsän reuna.',
+          lahde: 'Trogain, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka nopeasti suon turve kasvaa?',
+        vaihtoehdot: [
+          'Noin metrin vuosikymmenessä',
+          'Noin millimetrin vuodessa',
+          'Noin sentin päivässä',
+          'Se ei kasva enää lainkaan',
+        ],
+        oikea: 1,
+        fakta: 'Metrin paksuinen turvekerros on siis noin tuhat vuotta vanha.',
+      },
+    },
+    {
+      id: 'tavat',
+      nimi: 'Tavat',
+      johdanto: 'Latvian tavoissa toistuu kolme asiaa: yhdessä laulaminen, '
+        + 'koristeltu julkisivu ja tumma leipä, jota riittää viikoiksi.',
+      nostot: [
+        {
+          otsikko: 'Kolmekymmentätuhatta laulajaa yhdellä lavalla',
+          aika: '1873',
+          tiedosto: 'Riga. IX Latvian Song Celebration. 1938.png',
+          teksti: 'Ensimmäiset laulujuhlat pidettiin 1873, ja siitä lähtien ne on '
+            + 'järjestetty viiden vuoden välein. Kuorot harjoittelevat vuosia '
+            + 'päästäkseen mukaan, ja lopulta lavalla seisoo kymmeniätuhansia '
+            + 'laulajia yhtä aikaa kansallispuvuissa. Neuvostoaikana juhlista '
+            + 'tuli hiljainen mielenosoitus: kun ihmiset lauloivat '
+            + 'kiellettyjä kansanlauluja yhdessä, ketään ei voitu pidättää. '
+            + 'Unesco otti Baltian laulujuhlat aineettoman kulttuuriperinnön '
+            + 'luetteloon vuonna 2003.',
+          selite: 'Naisia kansallispuvuissa istuu tiiviissä rivissä katsomon '
+            + 'portailla laulujuhlilla vuonna 1938. Käsissä on kukkakimppuja '
+            + 'ja taustalla liehuu lippuja. Kuva on mustavalkoinen.',
+          lahde: 'Tuntematon valokuvaaja, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Talot, joissa on kasvot',
+          aika: '1900-luku',
+          tiedosto: 'Immeuble art nouveau (Riga) (7561800214).jpg',
+          teksti: 'Riiassa on enemmän jugendtaloja kuin missään muussa '
+            + 'kaupungissa: keskustan rakennuksista noin kolmasosa on tehty '
+            + 'tuossa tyylissä parinkymmenen vuoden aikana ennen ensimmäistä '
+            + 'maailmansotaa. Julkisivuissa on kivisiä kasvoja, leijonia, '
+            + 'käärmeitä ja kasviköynnöksiä, ja parvekkeita kannattelevat '
+            + 'naishahmot. Monet niistä suunnitteli Mihail Eisenstein, jonka '
+            + 'poika Sergei tuli myöhemmin kuuluisaksi elokuvaohjaajana.',
+          selite: 'Jugendtalon julkisivu Riiassa. Parvekkeiden alla on kivisiä '
+            + 'naisenkasvoja ja koristeaiheita, ja ikkunoiden ympärillä '
+            + 'kiertää kasviornamentti.',
+          lahde: 'Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Leipä, joka säilyy viikkoja',
+          aika: 'Vuosisatoja',
+          tiedosto: 'Латвиски црн р\'жан леб.jpg',
+          teksti: 'Rupjmaize on tumma hapanleipä, joka tehdään kokonaisesta '
+            + 'rukiista ja hapatetaan taikinajuurella. Se paistetaan usein '
+            + 'kaali- tai vaahteranlehden päällä, ja pohjaan jää lehden '
+            + 'kuvio. Leipä on kostea ja tiivis, ja se säilyy syömäkelpoisena '
+            + 'viikkoja — siksi sitä leivottiin kerralla iso satsi. Vanhasta '
+            + 'leivästä tehdään jälkiruoka, jossa murut sekoitetaan kanelin '
+            + 'ja sokerin kanssa ja peitetään kermavaahdolla.',
+          selite: 'Tumma limppu leikkuulaudalla. Kuori on lähes musta ja '
+            + 'kiiltävä, ja leikkuupinnasta näkyy tiivis ruskea sisus.',
+          lahde: 'TravelerMK, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka usein Latvian laulujuhlat järjestetään?',
+        vaihtoehdot: [
+          'Joka vuosi',
+          'Joka toinen vuosi',
+          'Kerran sukupolvessa',
+          'Viiden vuoden välein',
+        ],
+        oikea: 3,
+        fakta: 'Kuorot harjoittelevat vuosia päästäkseen lavalle.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Latvia on pannut verkkoon yllättävän paljon: kaksi miljoonaa '
@@ -11586,6 +11722,148 @@ export const MAA_KATEGORIAT = {
     },
   ],
   LTU: [
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Liettuan luonto on hiekkaa ja vettä: kapea niemi, jonka dyynit '
+        + 'vaeltavat, ikivanha kivi jonka sisään on jäänyt hyönteisiä, ja '
+        + 'tuhansia järviä metsien keskellä.',
+      nostot: [
+        {
+          otsikko: 'Dyyni vaeltaa ja hautaa kylän',
+          aika: '2000',
+          tiedosto: 'Dune slope with view over the lagoon at Curonian Spit, Lithuania.jpg',
+          teksti: 'Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, '
+            + 'joka erottaa matalan lahden merestä. Kapeimmillaan se on vain '
+            + 'muutaman sadan metrin levyinen. Kun niemen metsät hakattiin '
+            + '1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa: '
+            + 'dyynit alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. '
+            + 'Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata '
+            + 'vuotta kestäneellä työllä. Unesco otti niemen '
+            + 'maailmanperintöluetteloon vuonna 2000.',
+          selite: 'Jyrkkä hiekkadyynin rinne laskeutuu tyyneen lahteen. Hiekka on '
+            + 'vaaleaa ja aivan puutonta, ja vastaranta häämöttää kaukana.',
+          lahde: 'Hartmut Schmidt Heidelberg, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kuurinkynnäs',
+        },
+        {
+          otsikko: 'Kivi, joka kelluu suolavedessä',
+          aika: 'Myrskyn jälkeen',
+          tiedosto: 'Sun of Amber.jpg',
+          teksti: 'Meripihka ei ole kivi vaan havupuiden pihkaa, joka on '
+            + 'kovettunut kymmeniä miljoonia vuosia sitten ja säilynyt '
+            + 'merenpohjan hiekassa. Myrskyn jälkeen aallot heittävät sitä '
+            + 'rannalle, ja kevyimmät palat kelluvat suolaisessa vedessä. '
+            + 'Pihkaan on joskus jäänyt kiinni hyönteinen tai kasvinlehti, '
+            + 'joka näkyy sisällä kuin ikkunan takana. Palangan museossa on '
+            + 'pala nimeltä Meripihkan aurinko: se painaa noin kolme ja puoli '
+            + 'kiloa.',
+          selite: 'Suuri meripihkapala vitriinissä. Kivi on kellanruskea ja osin '
+            + 'läpikuultava, ja sen pinta on epätasainen kuin sula vaha.',
+          lahde: 'Beny Shlevich, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Meripihka',
+        },
+        {
+          otsikko: 'Järviä on tuhansia',
+          aika: '1974',
+          tiedosto: 'Palūšė 16.jpg',
+          teksti: 'Liettuassa on yli kaksituhatta järveä, ja suurin osa niistä on '
+            + 'maan itäosassa metsien keskellä. Aukštaitijan kansallispuisto '
+            + 'perustettiin 1974 ensimmäisenä maassa, ja sen alueella on '
+            + 'satakunta järveä, jotka on yhdistetty toisiinsa kapeilla '
+            + 'salmilla ja joilla — veneellä pääsee järvestä toiseen ilman '
+            + 'maakuljetusta. Kylissä on säilynyt vanhoja puutaloja ja '
+            + 'mehiläistarhoja, sillä hunajan keräys on ollut alueella tärkeä '
+            + 'elinkeino satojen vuosien ajan.',
+          selite: 'Sinisiä soutuveneitä nurmella järven rannalla. Vastarannalla '
+            + 'kasvaa havumetsä ja vesi on tyyni.',
+          lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä meripihka oikeastaan on?',
+        vaihtoehdot: [
+          'Puun pihkaa',
+          'Merilevää',
+          'Tulivuoren lasia',
+          'Kalkkikiveä',
+        ],
+        oikea: 0,
+        fakta: 'Sisään on joskus jäänyt hyönteinen, joka näkyy kuin ikkunan '
+          + 'takana.',
+      },
+    },
+    {
+      id: 'tavat',
+      nimi: 'Tavat',
+      johdanto: 'Liettuassa tavat kertovat sitkeydestä: kukkula, joka nousi '
+        + 'kolmesti uudelleen, kaupunginosa jolla on oma perustuslaki, ja '
+        + 'peli jota katsotaan kuin juhlapyhää.',
+      nostot: [
+        {
+          otsikko: 'Kukkula, jolle jokainen tuo ristin',
+          aika: '1961',
+          tiedosto: 'Hill of Crosses 1, Siauliai, Lithuania.JPG',
+          teksti: 'Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä '
+            + '1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. '
+            + 'Neuvostoaikana paikka tulkittiin vastarinnaksi, ja '
+            + 'viranomaiset raivasivat kukkulan puskutraktoreilla kolme '
+            + 'kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit '
+            + 'takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä '
+            + 'ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka '
+            + 'tahansa saa tuoda omansa.',
+          selite: 'Kukkula, joka on aivan täynnä ristejä. Isojen puuristien '
+            + 'välissä riippuu tuhansia pieniä risteja ja rukousnauhoja, ja '
+            + 'keskellä on Kristuksen patsas.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ristien kukkula',
+        },
+        {
+          otsikko: 'Kaupunginosa, jolla on oma perustuslaki',
+          aika: '1997',
+          tiedosto: 'The Angel of Užupis Vilnius (5993391627).jpg',
+          teksti: 'Vilnan Užupis oli pitkään rapistunut kortteli joen takana, '
+            + 'kunnes sinne muuttaneet taiteilijat julistivat sen 1. '
+            + 'huhtikuuta 1997 omaksi tasavallakseen. Sillä on lippu, '
+            + 'presidentti ja perustuslaki, joka on kiinnitetty seinään '
+            + 'peililevyinä kymmenillä kielillä. Pykälät ovat leikkisiä mutta '
+            + 'lämpimiä: jokaisella on oikeus olla onnellinen, jokaisella on '
+            + 'oikeus olla onneton, ja koiralla on oikeus olla koira. Torilla '
+            + 'seisoo enkelipatsas vuodesta 2002.',
+          selite: 'Enkelipatsas seisoo korkean pylvään päässä pienellä torilla. '
+            + 'Ympärillä on matalia vanhoja taloja ja mukulakivetys.',
+          lahde: 'FaceMePLS, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Peli, jota katsotaan kuin juhlapyhää',
+          aika: '1992',
+          tiedosto: 'Lithuania men\'s national basketball team fans at Žalgiris Arena in 2011.jpg',
+          teksti: 'Liettuassa koripallo ei ole vain urheilua: maa voitti Euroopan '
+            + 'mestaruuden jo 1937 ja 1939, ja ottelupäivinä kadut '
+            + 'hiljenevät. Kuuluisin voitto tuli 1992 Barcelonan '
+            + 'olympialaisissa, joissa juuri itsenäistynyt maa sai pronssia. '
+            + 'Joukkueella ei ollut rahaa varusteisiin, ja apuun tuli '
+            + 'yhdysvaltalainen yhtye Grateful Dead — pelaajat nousivat '
+            + 'palkintokorokkeelle keltavihreissä batiikkipaidoissa, joista '
+            + 'tuli koko maan tunnus.',
+          selite: 'Katsojia koripalloareenalla. Etualalla on kannattajia '
+            + 'keltaisissa, vihreissä ja punaisissa peruukeissa, ja alhaalla '
+            + 'näkyy valaistu pelikenttä.',
+          lahde: 'globalite, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta kertaa viranomaiset raivasivat Ristien kukkulan?',
+        vaihtoehdot: [
+          'Kerran',
+          'Kolme kertaa',
+          'Kymmenen kertaa',
+          'Ei kertaakaan',
+        ],
+        oikea: 1,
+        fakta: 'Joka kerta ristit tuotiin takaisin öisin.',
+      },
+    },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
@@ -13790,6 +14068,154 @@ export const MAA_KATEGORIAT = {
     },
   ],
   HRV: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kroatian rannikolla roomalaiset rakensivat niin lujaa, että '
+        + 'rakennukset ovat yhä käytössä: palatsissa asutaan, areenassa '
+        + 'soitetaan ja muurilla kävellään.',
+      nostot: [
+        {
+          otsikko: 'Palatsi, jonka sisään muutti kokonainen kaupunki',
+          aika: '300',
+          tiedosto: 'Peristyle of Diocletian\'s Palace - Split - 51387487617.jpg',
+          teksti: 'Keisari Diocletianus rakennutti itselleen noin vuonna 300 '
+            + 'eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus '
+            + 'kuin huvila: korkeat muurit, neljä porttia ja keskellä '
+            + 'pylväiden reunustama aukio. Kun Rooman valta hajosi, '
+            + 'lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. '
+            + 'Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin '
+            + 'palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa '
+            + 'asuu yhä tuhansia ihmisiä keisarin muurien sisällä.',
+          selite: 'Pylväiden reunustama aukio Splitin vanhassa kaupungissa. Kivet '
+            + 'ovat kellertäviä ja kuluneita, ja portailla istuu ihmisiä.',
+          lahde: 'TimeTravelRome, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Diocletianuksen palatsi',
+        },
+        {
+          otsikko: 'Muuri, jota ei koskaan murrettu',
+          aika: '1400-luku',
+          tiedosto: 'City walls of Dubrovnik 05.jpg',
+          teksti: 'Dubrovnikin kaupunkia kiertää lähes kahden kilometrin '
+            + 'mittainen muuri, joka on paikoin viisi metriä paksu ja '
+            + 'kaksikymmentäviisi metriä korkea. Sitä vahvistettiin '
+            + 'vuosisatojen ajan, eikä sitä koskaan valloitettu '
+            + 'piirittämällä. Kaupunki oli oma pieni tasavaltansa ja säilytti '
+            + 'itsenäisyytensä ostamalla rauhan: se maksoi veroa '
+            + 'naapureilleen ja lähetti lahjoja sulttaanille. Muurin päällä '
+            + 'kulkee kävelytie, jota pitkin kiertää koko kaupungin ympäri '
+            + 'katot allaan.',
+          selite: 'Dubrovnikin kaupunginmuuri meren rannalla. Vaalea kivimuuri '
+            + 'kiertää punakattoista vanhaakaupunkia, ja alla lyö sininen '
+            + 'meri.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Areena, jossa soitetaan yhä',
+          aika: '1. vuosisata',
+          tiedosto: 'Anfiteatro de Pula, Croacia, 2017-04-17, DD 13-18 HDR PAN.jpg',
+          teksti: 'Pulan amfiteatteri rakennettiin ensimmäisellä vuosisadalla, ja '
+            + 'siihen mahtui yli kaksikymmentätuhatta katsojaa. Se on '
+            + 'harvinaisuus: kaikki kolme kerrosta ovat säilyneet pystyssä, '
+            + 'mikä onnistui vain kuudelta roomalaiselta areenalta. '
+            + 'Keskiajalla kiveä yritettiin viedä muualle rakennusaineeksi, '
+            + 'mutta kaupunki esti sen. Nykyään areenassa järjestetään '
+            + 'konsertteja ja elokuvafestivaali — yleisö istuu samoilla '
+            + 'paikoilla kuin kaksituhatta vuotta sitten, mutta katsoo '
+            + 'elokuvaa.',
+          selite: 'Pulan amfiteatteri iltahämärässä. Kaksi kerrosta kaariaukkoja '
+            + 'kiertää soikean rakennuksen, ja kivet hohtavat lämpimän '
+            + 'keltaisina.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka pitkä Dubrovnikin kaupunginmuuri on?',
+        vaihtoehdot: [
+          'Noin sata metriä',
+          'Noin kaksi kilometriä',
+          'Noin kymmenen kilometriä',
+          'Noin puoli kilometriä',
+        ],
+        oikea: 1,
+        fakta: 'Muurin päällä kulkee kävelytie, jota pitkin kiertää koko '
+          + 'kaupungin.',
+      },
+    },
+    {
+      id: 'keksinnot',
+      nimi: 'Keksinnöt',
+      johdanto: 'Kroatialaiset keksinnöt ovat käytännöllisiä ja hieman hulluja: '
+        + 'laskuvarjo neljäsataa vuotta ennen lentokoneita, kynä joka '
+        + 'kiertämällä syöttää lyijyn, ja soitin jota soittaa meri.',
+      nostot: [
+        {
+          otsikko: 'Piirros lentävästä miehestä',
+          aika: '1595',
+          tiedosto: 'Homo Volans.jpg',
+          teksti: 'Faust Vrančić oli piispa, kielitieteilijä ja keksijä, joka '
+            + 'julkaisi kirjassaan piirroksen nimeltä Homo Volans, lentävä '
+            + 'ihminen. Kuvassa mies laskeutuu tornista neliömäisen purjeen '
+            + 'varassa — se on varhaisimpia kuvauksia laskuvarjosta, ja idean '
+            + 'pohjana oli Leonardo da Vincin luonnos. Kertomuksen mukaan '
+            + 'Vrančić kokeili laitetta itse Venetsiassa. Vaikka koe olisi '
+            + 'tarua, piirros on tosi: sen mitat toimivat, ja samalla '
+            + 'periaatteella laskuvarjot tehtiin vielä satoja vuosia '
+            + 'myöhemmin.',
+          selite: 'Vanha kuparipiirros, jossa mies riippuu neliömäisen purjeen '
+            + 'alla korkean tornin yläpuolella. Alla näkyy kaupunki ja '
+            + 'satama.',
+          lahde: 'Faust Vrančić, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kynä, jonka nimestä tuli sana',
+          aika: '1906',
+          tiedosto: 'Slavoljub Eduard Penkala.jpg',
+          teksti: 'Insinööri Slavoljub Penkala patentoi vuonna 1906 mekaanisen '
+            + 'lyijykynän, jossa lyijy työntyy ulos kiertämällä — kynää ei '
+            + 'tarvinnut teroittaa lainkaan. Vuotta myöhemmin hän patentoi '
+            + 'täytekynän, ja Zagrebiin perustettiin tehdas, joka valmisti '
+            + 'niitä miljoonittain. Keksijän nimestä tuli kroaatin kielessä '
+            + 'arkinen sana: penkala tarkoittaa yhä lyijykynää. Hän ehti '
+            + 'patentoida elämänsä aikana yli kahdeksankymmentä keksintöä, '
+            + 'muun muassa kuumavesipullon ja lentokoneen.',
+          selite: 'Mustavalkoinen muotokuva Slavoljub Penkalasta vuodelta 1920. '
+            + 'Mies seisoo puvussa ja katsoo suoraan kameraan.',
+          lahde: 'Tuntematon valokuvaaja, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Portaat, joita soittaa meri',
+          aika: '2005',
+          tiedosto: 'Sea organ Zadar 3.JPG',
+          teksti: 'Zadarin rantaan rakennettiin vuonna 2005 marmoriportaat, jotka '
+            + 'laskeutuvat suoraan mereen. Portaiden alle on piilotettu '
+            + 'kolmisenkymmentä eri mittaista putkea. Kun aalto työntyy '
+            + 'portaiden alle, se painaa ilmaa putkiin ja soitin soi — '
+            + 'matalat putket huokaavat pitkään ja lyhyet vastaavat '
+            + 'korkeammalta. Sävelmää ei voi ennustaa, koska sen tekevät '
+            + 'aallot: tyynellä säällä ääni on hiljainen huokaus, myrskyllä '
+            + 'kokonainen soinnutus. Portailla istutaan kuuntelemassa '
+            + 'auringonlaskua.',
+          selite: 'Valkoiset marmoriportaat laskeutuvat mereen kaupungin '
+            + 'rantabulevardilla. Ihmisiä istuu portailla ja kävelee '
+            + 'laiturilla.',
+          lahde: 'Andrej Šalov, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Meriurut',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä soittaa Zadarin meriurkuja?',
+        vaihtoehdot: [
+          'Aallot',
+          'Tuuli',
+          'Sähkömoottori',
+          'Soittaja',
+        ],
+        oikea: 0,
+        fakta: 'Tyynellä säällä ääni on hiljainen huokaus, myrskyllä kokonainen '
+          + 'soinnutus.',
+      },
+    },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
