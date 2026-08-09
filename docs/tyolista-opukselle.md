@@ -253,31 +253,23 @@ main-pushista (wrangler.jsonc; ks. tools/uutisproxy/OHJE.md).
    Retiron puisto. Elämä-nosto: tapakset ja markkinahallit tai paseo;
    henkilö+musiikki: Paco de Lucía tai zarzuela-perinne (Apple
    Music). Uutisehdokkaat curl-testiin: El País (feeds.elpais.com),
-   RTVE, 20minutos. Tv: RTVE Noticias lähettää YouTubeen 24/7.
+   RTVE, 20minutos.
 2. ✅ **TEHTY v316.** **Saksa / Berliini.** Galleria: Eduard Gaertnerin Berliini-vedutat
    1800-luvulta (PD) — suora Canaletto-vastine. Kansikuvat:
    Brandenburgin portti, Museosaari tai tv-torni, East Side Gallery.
    Henkilö+musiikki: Marlene Dietrich (Apple Music). Uutisehdokkaat:
-   tagesschau (tagesschau.de/xml/rss2), Spiegel, ZDF heute. Tv:
-   tagesschau24 tai DW Deutsch — molemmilla YouTube-live ilman
-   aluerajausta.
+   tagesschau (tagesschau.de/xml/rss2), Spiegel, ZDF heute.
 3. ✅ **TEHTY v315.** **Ruotsi / Tukholma.** Galleria: Elias Martinin Tukholma-näkymät
    1700-luvulta (PD); vaihtoehtona Vädersolstavlan-tarina nostona.
    Kansikuvat: Gamla stan ja Stortorget, Stadshuset, saaristolautat.
    Henkilö+musiikki: ABBA (Apple Music). Uutisehdokkaat: SVT
    (svt.se/rss), Sveriges Radio Ekot (api.sr.se), Aftonbladet.
-   Tv: Ruotsin yleisradiot eivät lähetä YouTubeen — jos 24/7-liveä
-   ilman aluerajausta ei löydy (kokeile esim. Expressen TV),
-   JÄTÄ TV POIS: lehti toimii ilman tv-riviä, älä valitse huonoa
-   kanavaa väkisin.
-   **Toteutuksessa:** tv jätettiin pois. Tarkistettiin 7.8.2026
-   @expressen, @svt, @SVTNyheter, @TV4Nyheterna ja @aftonbladet —
-   yhdelläkään ei ollut käynnissä olevaa liveä. Uutislähteeksi tuli
+   **Toteutuksessa:** uutislähteeksi tuli
    SVT (`www.svt.se/rss.xml`); Sveriges Radion Ekot hylättiin, koska
    api.sr.se antaa ATOM-syötteen ja peli lukee RSS:n `<item>`-alkioita.
 4. **Ranska / Pariisi.** Galleria: Pissarron ja Caillebotten
    katunäkymät (PD). Uutisehdokkaat: Le Monde, France Info,
-   Le Figaro. Tv: France 24 (français) — 24/7 YouTube-live.
+   Le Figaro.
 
 ### ⚠ FABLELLE: lehtirakenne muuttuu (omistajan päätös 8.8.2026)
 
@@ -355,15 +347,12 @@ Tason osat kaupunkia kohti:
 3. **Aika-leimat**: historia-nostoihin `aika`-kenttä (tehty kaikille
    viidelle maalle v327). Muille sivuille vain, jos ajankohta on
    jutun ydin.
-4. **Tv tallenteiksi** (omistajan päätös 7.8.2026: livet eivät toimi):
-   etsi lähteen avoin rajapinta tai sivu, josta saa pääuutislähetyksen
-   ja/tai lyhytkoosteen SUORANA mp4-osoitteena — malli
-   `TV_KANAVAT.DEU` (tagesschaun api2u/channels; curl-testaa CORS ja
-   mp4). Ehdokkaita: SVT Play/öppet api, RTVE alacarta, BBC One
-   minute news, RaiPlay. Jos suoraa mp4:ää ei löydy, jätä tv pois —
-   älä palaa YouTube-liveen. `haeTallenne` (js/uutiset.js) olettaa
-   tagesschaun muodon; muille kirjoitetaan oma pieni haku samaan
-   tiedostoon.
+4. ~~**Tv tallenteiksi**~~ — **tv-napeista luovuttiin v434
+   (omistajan päätös 9.8.2026), eikä tv-tehtäviä enää ole.** Älä lisää
+   tv:tä missään muodossa: ei kanavahakuja, ei tallenteita, ei
+   mediarivin nappia. Radio ja uutissyötteet jäävät ennalleen. Kohta
+   on jätetty tähän numeroituna, jottei alempien kohtien numerointi
+   muutu.
 5. **Uudet aihesivut** (omistajan hyväksyntä 7.8.2026): valitse maalle
    1–2 UUTTA aihetta listasta *Urheilu, Juhlat, Sadut ja tarinat,
    Rakennukset, Meri* — vain ne, jotka maalle aidosti istuvat. Ehdotus:
