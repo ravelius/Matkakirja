@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 449, teksti: 'Tšadjärvi ja Madeira saivat omat kuvansa' },
   { v: 448, teksti: 'Britannian musiikki kahdelle sivulle, kuvatoistot pois' },
   { v: 447, teksti: 'Joka mantereella nyt omat aarteet jalokivien tilalla' },
   { v: 446, teksti: 'Helsingin visa kysyy nyt Linnanmäen jarrumestarista' },
