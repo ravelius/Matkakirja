@@ -72,6 +72,7 @@ import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { MAAKARTAT, KAUPUNKIKARTAT, karttapiste, mittakaava } from './packs/maakartat.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
+import { HENKILOT, HENKILOLINKIT } from './packs/henkilot.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import {
@@ -8708,9 +8709,17 @@ export class UI {
    * vuosiluku korostuksia"), ja lainaus nostetaan kappaleiden väliin
    * omaksi lohkokseen silloin kun se on mielekäs — ei väkisin.
    */
-  avaaNahtavyys(kohde, numero) {
+  avaaNahtavyys(kohde, numero, { henkilolinkit = null } = {}) {
     const dialogi = document.getElementById('nahtavyys-dialog');
     if (!dialogi) return;
+    /*
+     * Nähtävyystekstissä mainittu henkilö linkitetään omaan juttuunsa
+     * (omistajan tilaus 10.8.2026, pilotti: Engel Helsingissä).
+     * Linkit tulevat kaupungin mukaan (arrivalShownFor on kaupunki,
+     * jonka kartalta juttu avattiin); henkilöjuttu itse avataan
+     * tyhjällä listalla, ettei nimi linkitä itseensä.
+     */
+    const linkit = henkilolinkit ?? (HENKILOLINKIT[this.arrivalShownFor] ?? []);
     /*
      * Sulku taustaa napauttamalla (omistajan toive 8.8.2026). Kortti
      * täyttää dialogin tarkalleen, joten dialogiin itseensä osuva
@@ -8748,7 +8757,7 @@ export class UI {
     const lainauksenPaikka = kohde.lainaus ? Math.ceil(kappaleet.length / 2) : -1;
 
     kappaleet.forEach((kappale, i) => {
-      sisalto.appendChild(this.nahtavyysKappale(kappale));
+      sisalto.appendChild(this.nahtavyysKappale(kappale, linkit));
       if (i + 1 === lainauksenPaikka) {
         const lohko = html('blockquote', 'nahtavyys-lainaus');
         lohko.appendChild(html('p', 'nahtavyys-lainaus-teksti', kohde.lainaus.teksti));
@@ -8801,8 +8810,40 @@ export class UI {
    * ensimmäisessä versiossa vuodelta. Kaksinumeroisia ei korosteta
    * lainkaan — ne ovat lähes aina lukumääriä.
    */
-  nahtavyysKappale(teksti) {
+  nahtavyysKappale(teksti, henkilot = []) {
     const p = html('p', 'nahtavyys-kappale');
+    /*
+     * Henkilölinkit ensin: kappale jaetaan nimiosumien kohdalta, nimet
+     * muuttuvat napeiksi jotka avaavat henkilön oman jutun
+     * (js/packs/henkilot.js), ja muut osat saavat vuosikorostuksen
+     * entiseen tapaan. Nappi eikä <a>, koska kohde ei ole osoite vaan
+     * saman dialogin sisältö — ja tekstisolmupohjainen jako pitää
+     * saman turvatakuun kuin vuosikorostus: aineiston merkit eivät
+     * voi muuttua merkkaukseksi.
+     */
+    let loppu = teksti;
+    for (;;) {
+      let eka = null;
+      for (const h of henkilot) {
+        const osuma = loppu.match(h.kuvio);
+        if (osuma && (!eka || osuma.index < eka.osuma.index)) eka = { h, osuma };
+      }
+      if (!eka) break;
+      this.vuosikorosta(p, loppu.slice(0, eka.osuma.index));
+      const nappi = html('button', 'henkilo-linkki', eka.osuma[0]);
+      nappi.type = 'button';
+      const henkilo = HENKILOT[eka.h.id];
+      nappi.addEventListener('click', () => this.avaaNahtavyys(henkilo, null, { henkilolinkit: [] }));
+      p.appendChild(nappi);
+      loppu = loppu.slice(eka.osuma.index + eka.osuma[0].length);
+    }
+    this.vuosikorosta(p, loppu);
+    return p;
+  }
+
+  /** Lisää tekstin kappaleeseen vuosiluvut korostettuina (ks. yllä). */
+  vuosikorosta(p, teksti) {
+    if (!teksti) return;
     const jakso = '(?:\\s?[–-]\\s?\\d{2,4})?';
     const kuvio = new RegExp(
       `\\b\\d{4}${jakso}(?:-luvu\\w*)?(?:\\s(?:eaa\\.|jaa\\.))?`
@@ -8825,7 +8866,6 @@ export class UI {
       kohta = osuma.index + osuma[0].length;
     }
     if (kohta < teksti.length) p.appendChild(document.createTextNode(teksti.slice(kohta)));
-    return p;
   }
 
   /** Yksi nähtävyysjutun kuva selitteineen ja lähteineen. */

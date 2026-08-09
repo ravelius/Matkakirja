@@ -9296,6 +9296,24 @@ body.vertailu-tila .pawns { display: none; }
   font-size: 0.68rem;
 }
 
+/* Henkilölinkki nähtävyystekstissä: nimi näyttää lehden linkiltä
+ * (sama muste, pisteviiva-alleviivaus) mutta on nappi, joka avaa
+ * henkilön oman jutun samaan dialogiin. */
+.henkilo-linkki {
+  background: none;
+  border: 0;
+  padding: 0;
+  min-height: 0;
+  font: inherit;
+  color: rgba(107, 76, 34, 0.95);
+  text-decoration: underline dotted rgba(107, 76, 34, 0.6);
+  text-underline-offset: 0.15em;
+  cursor: pointer;
+}
+
+.henkilo-linkki:hover,
+.henkilo-linkki:focus-visible { color: rgba(70, 51, 31, 1); }
+
 /* Lähdemaininta ilman fi.wikipedian artikkelia: pelkkä teksti, ei
  * linkkiä eikä nappia (omistajan spesifikaatio 8.8.2026). */
 .nahtavyys-lahderivi {
