@@ -54,15 +54,17 @@ export const TILANNE = {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
       tila: 'tyossa',
-      tehtava: 'MAAKARTAT VALMIIT: koko Eurooppa kartoitettu '
-        + '(v374–v395, Venäjä laea-haaralla). Uusi tehtävä 9.8.: '
-        + 'kaupunkikartat kaikille lehtikaupungeille (omistajan '
-        + 'havainto: "kaupunkilehdistä puuttuu kartat").',
-      seuraavaksi: 'Kohdekartat 12 julkaistulle lehtikaupungille '
-        + '(Praha, Wien, Ateena, Amsterdam, Istanbul, Dublin, '
-        + 'Edinburgh, Marseille, Lissabon, Barcelona, Granada, '
-        + 'Budapest) 3–4 kaupungin erissä, Overpass-tauot välissä. '
-        + 'Sonnet 2 kirjoittaa nähtävyysjutut perään.',
+      tehtava: 'Kaupunkikartat lehtikaupungeille: erä 1/4 julkaistu '
+        + '(v418: Praha, Wien, Budapest + listojen välistä '
+        + 'pelastettu Pariisi). Oma tarkistustyökalu: pisteet '
+        + 'rajojen sisällä, numerot eivät päällekkäin, silmäkuva. '
+        + 'Tietoiset rajaukset: Wienin Schönbrunn ja Budapestin '
+        + 'Sankarien aukio jäävät karttarajauksen ulkopuolelle; '
+        + 'Praha on vaalein kartta (puolet ruudusta puistoa — '
+        + 'kaupungin totuus, ei virhe).',
+      seuraavaksi: 'Erä 2 käynnissä, HELSINKI nostettu kärkeen '
+        + '(omistaja odottaa). Jäljellä 21 kaupunkia. Sonnet 2 '
+        + 'kirjoittaa nähtävyysjutut perään, Helsinki edellä.',
     },
     {
       tekija: 'Sonnet 1',
@@ -78,7 +80,10 @@ export const TILANNE = {
         + 'haikara/Vasa-kuvakaksoiskappaleet, roskapolkutesti ja '
         + 'Flickr Commonsin "No restrictions" -lisenssimerkintä '
         + '(Tukholman Elias Martin -galleria; tarkistin ei tunne '
-        + 'merkintää, vaikka se on käytännössä PD).',
+        + 'merkintää, vaikka se on käytännössä PD) ja maakartat.js:n '
+        + 'nimiVasen-kenttä, jonka kommentti lupaa mutta jota ei ole '
+        + 'toteutettu eikä käytetä — kommentti tai toteutus '
+        + 'korjattava.',
     },
     {
       tekija: 'Sonnet 2',
