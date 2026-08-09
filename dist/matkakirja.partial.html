@@ -5070,6 +5070,16 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
 
 .reveal-caption.shown { opacity: 1; transform: none; }
 
+/* Nuoren herran huudahdus paljastuksen kärjessä: käsialamainen,
+ * lämmin ja hieman isompi kuin arvorivi — spontaani repliikki, ei
+ * otsikko. */
+.reveal-caption .reveal-huudahdus {
+  font-style: italic;
+  font-size: 1.08rem;
+  color: #f0d9a8;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
 /* Aarteen oikea valokuva paljastuksen alla: pieni kehystetty vedos.
  * max-height pitää pystykuvatkin (esim. silkkikäärö) kurissa, ja
  * object-fit: contain näyttää esineen kokonaan leikkaamatta. */
@@ -114039,6 +114049,45 @@ const REVEAL_SUB = {
 };
 
 /*
+ * Nuoren herran huudahdus paljastushetkellä (omistajan tilaus
+ * 9.8.2026): lyhyt spontaani repliikki heti kun aarre kääntyy esiin,
+ * ENNEN varsinaista cliffhanger-tekstiä. Sävy kasvaa aarteen arvon
+ * mukana — pikkulöytö kuitataan, suurlöytö vie sanat. Arvotaan joka
+ * kerta, jotta toisto ei kulu.
+ */
+const HUUDAHDUKSET = {
+  300: [
+    'Hei — löytyi sittenkin!',
+    'Pieni, mutta aito!',
+    'Kelpaa tämäkin!',
+    'Taskuun ja eteenpäin!',
+  ],
+  600: [
+    'Mahtavaa!',
+    'Sepä vasta löytö!',
+    'Isoisä olisi hykerrellyt!',
+    'Tämä merkitään päiväkirjaan!',
+  ],
+  1000: [
+    'Uskomatonta!',
+    'Jes! Katsokaa nyt tätä!',
+    'Sydän hakkaa — mikä löytö!',
+    'Juuri tällaisesta isoisä kirjoitti!',
+  ],
+  star: [
+    'Se on totta... se on oikeasti totta!',
+    'Aarni oli oikeassa — se on olemassa!',
+    'Isoisä... minä löysin sen.',
+  ],
+};
+
+/** Arvo huudahdus laattatyypin mukaan; muille kuin aarteille ei mitään. */
+function arvoHuudahdus(type, token) {
+  const lista = type === 'star' ? HUUDAHDUKSET.star : HUUDAHDUKSET[token.value];
+  return lista ? lista[Math.floor(Math.random() * lista.length)] : null;
+}
+
+/*
  * Valittu linssi on laitteen katseluasetus, ei pelin tapahtuma.
  *
  * Siksi se ei kuulu pelitallennukseen vaan omaan avaimeensa kuten
@@ -124817,6 +124866,10 @@ class UI {
     rays.classList.add('reveal-rays');
 
     const caption = html('div', 'reveal-caption');
+    // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
+    // kun aarre tulee näkyviin; cliffhanger-teksti vasta sen jälkeen.
+    const huudahdus = arvoHuudahdus(type, token);
+    if (huudahdus) caption.appendChild(html('span', 'reveal-huudahdus', huudahdus));
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
     /*
@@ -125619,6 +125672,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 452, teksti: 'Nuori herra huudahtaa kun aarre paljastuu' },
   { v: 451, teksti: 'Aarteen paljastus näyttää nyt oikean valokuvan' },
   { v: 450, teksti: 'Maakartat Kuwaitille, Qatarille, Emiraateille, Omanille' },
   { v: 449, teksti: 'Tšadjärvi ja Madeira saivat omat kuvansa' },
@@ -126152,7 +126206,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.451';
+const APP_VERSION = '2026-08-09.452';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
