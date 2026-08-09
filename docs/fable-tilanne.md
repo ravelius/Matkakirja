@@ -119,6 +119,17 @@ repliikki jää auki ja vie eteenpäin. Suunnittele paketti tämä kärkenä.
 
 ## Tiimin tila — KAIKKI CLEARATTU 9.8.2026 (sama sessio, tyhjä konteksti)
 
+**Kaikki neljä kuittasivat valmiutensa 9.8. clearin jälkeen — tuoreet
+tilat ja ehdotukset ovat tilannetaulussa (js/tyohuone-tilanne.js).
+Kukaan ei aloita ennen tehtävänantoa; tehtäviä ei jaeta ennen
+omistajan lupaa. Avoimet ehdotukset: Sonnet 2 aloittaisi Istanbul/
+Marseille/Edinburgh-erän; Opus 2:lla karttatyö valmis (31/31, 29/29),
+ehdolla jokirelaatioiden täyttökorjaus; Opus 1 odottaa omistajan
+kuittausta Helsinki/Suomi-erästä + päätöksiä (menovinkkiruutu, Suomen
+maalehti); Sonnet 1 odottaa Fablen loppu-QA-briefiä. Opus 2 huomasi
+tv-jäämät: roolitus.md siivottu 9.8., docs/tyolista-opukselle.md:n
+tv-osuudet (rivit ~256–363) SIIVOAMATTA.**
+
 Koko tiimi (Opus 1, Opus 2, Sonnet 1, Sonnet 2) clearattiin samaan
 aikaan kanssani, mutta **samoissa sessioissa — yllä olevan taulukon
 sessio-ID:t ovat yhä voimassa** (clear tyhjentää vain kontekstin, ei
