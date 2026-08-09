@@ -3635,3 +3635,95 @@ test('päivitysloki kattaa nykyisen version', async () => {
   assert.equal(MUUTOKSET[0].v, nykyinen,
     `loki alkaa versiosta ${MUUTOKSET[0].v}, mutta peli on versiossa ${nykyinen}`);
 });
+
+test('valokuvakysymys näyttää kuratoidun kuvan, ei artikkelin pääkuvaa', () => {
+  /*
+   * Omistaja näki paikkakysymyksessä Kofi Annanin muotokuvan, kun
+   * vastaus oli Kumasi. Kuva haettiin Wikipedian artikkelista: pääkuva
+   * oli montaasi, montaasisuodatin hylkäsi sen, ja tilalle poimittiin
+   * kuvalistan ensimmäinen valokuva — joka oli kaupungissa syntynyt
+   * henkilö. Nairobissa sama polku antoi kuvan vuoden 1998
+   * pommi-iskusta. Artikkelikuva ei lupaa esittävänsä paikkaa, joten
+   * kysymys käyttää nyt kuratoituja matkakirjavalokuvia.
+   */
+  const game = newGame(311);
+  game.player.pos = { type: 'city', city: 'timbuktu' };
+  game.tokens.set('timbuktu', 'emerald');
+  game.setPhotoPool(['tripoli', 'kairo'], new Map([
+    ['tripoli', { tiedosto: 'Tripoli-katu.jpg', lahde: 'CC BY (Kuvaaja, Commons)' }],
+    ['kairo', { tiedosto: 'Kairo-tori.jpg', lahde: 'CC BY-SA (Toinen, Commons)' }],
+  ]));
+  assert.ok(game.actionQuiz({ form: 'photo' }).ok);
+  const quiz = game.quiz;
+  assert.equal(quiz.kind, 'photo');
+  assert.ok(quiz.photoFile, 'kysymyksellä on kuvatiedosto');
+  assert.ok(['Tripoli-katu.jpg', 'Kairo-tori.jpg'].includes(quiz.photoFile),
+    'kuva tulee kuratoidusta listasta');
+  assert.match(quiz.fact, /Commons/, 'fakta kertoo kuvan lähteen');
+  assert.doesNotMatch(quiz.fact, /Wikipedia \(CC\)/,
+    'lähde ei ole enää geneerinen "Wikipedia (CC)"');
+});
+
+test('jokaisella valokuvalaudan kaupungilla on kuratoitu valokuva', async () => {
+  /*
+   * Valokuvakysymys arpoo kohteen laudan kaupungeista. Jos yhdeltäkin
+   * puuttuisi kuratoitu kuva, se putoaisi hiljaa pois kysymyksistä —
+   * tai pahemmassa tapauksessa joku palauttaisi Wikipedia-varapolun.
+   * Tämä testi pitää kuvakattavuuden näkyvissä.
+   */
+  const paketit = await Promise.all([
+    import('../js/packs/africa-valokuvat.js'),
+    import('../js/packs/europe-valokuvat.js'),
+    import('../js/packs/asia-valokuvat.js'),
+    import('../js/packs/asia-lisat-valokuvat.js'),
+    import('../js/packs/northamerica-valokuvat.js'),
+    import('../js/packs/southamerica-valokuvat.js'),
+    import('../js/packs/oceania-valokuvat.js'),
+  ]);
+  const valokuvat = Object.assign({}, ...paketit.map((m) => Object.values(m)[0]));
+  // Laudat, joilla valokuvakysymys on käytössä: ne, joiden kaupungeista
+  // on kuvia. Suomi- ja Istanbul-laudat ovat omia erikoislautojaan.
+  const LAUDAT = ['maailmankartta', 'africa', 'europe', 'asia', 'oceania',
+    'northamerica', 'southamerica', 'middleeast', 'maailma'];
+  for (const pack of PACKS.filter((p) => LAUDAT.includes(p.id))) {
+    const puuttuu = pack.cities.filter((c) => {
+      const v = valokuvat[c.id];
+      return !(v?.uusi?.tiedosto ?? v?.tiedosto);
+    });
+    assert.deepEqual(puuttuu.map((c) => c.id), [],
+      `${pack.id}: näiltä kaupungeilta puuttuu kuratoitu valokuva`);
+  }
+});
+
+test('valokuvakysymys ei näytä kuvaa siitä kaupungista, jossa seistään', () => {
+  /*
+   * Kysymyskortin otsikko on "<kaupunki> — matkavalokuvaaja levittää
+   * vedoksensa pöytään ja kysyy", ja <kaupunki> on se, jossa pelaaja
+   * seisoo. Jos kuva olisi samasta kaupungista, vastaus lukisi
+   * kysymyksen yläpuolella.
+   */
+  const game = newGame(312);
+  game.player.pos = { type: 'city', city: 'timbuktu' };
+  game.tokens.set('timbuktu', 'emerald');
+  // Poolissa on vain nykyinen kaupunki -> valokuvamuoto ei kelpaa,
+  // vaan kysymys putoaa tavalliseen monivalintaan.
+  game.setPhotoPool(['timbuktu'], new Map([['timbuktu', { tiedosto: 'x.jpg' }]]));
+  assert.ok(game.actionQuiz({ form: 'photo' }).ok);
+  assert.notEqual(game.quiz.kind, 'photo',
+    'pelkkä oma kaupunki poolissa ei riitä valokuvakysymykseen');
+
+  // Kun poolissa on muitakin, kohde ei koskaan ole oma kaupunki.
+  for (const seed of [313, 314, 315, 316, 317]) {
+    const peli = newGame(seed);
+    peli.player.pos = { type: 'city', city: 'timbuktu' };
+    peli.tokens.set('timbuktu', 'emerald');
+    peli.setPhotoPool(['timbuktu', 'tripoli'], new Map([
+      ['timbuktu', { tiedosto: 'a.jpg' }],
+      ['tripoli', { tiedosto: 'b.jpg' }],
+    ]));
+    assert.ok(peli.actionQuiz({ form: 'photo' }).ok);
+    if (peli.quiz.kind !== 'photo') continue;
+    assert.notEqual(peli.quiz.photoCity, 'timbuktu',
+      'kuva ei ole siitä kaupungista, jossa seistään');
+  }
+});
