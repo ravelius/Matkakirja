@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 411, teksti: 'Tšekille, Itävallalle ja kolmelle muulle maalle aihesivut' },
+  { v: 411, teksti: 'Toisen maan lehti ei enää luule tehtävää ratkaistuksi' },
   { v: 410, teksti: 'Kaksitoista uutta kaupunkilehteä Roomasta Odessaan' },
   { v: 409, teksti: 'Kymmenen lehden faktat ja kuvatekstit tarkistettu' },
   { v: 408, teksti: 'Isoisä puhuu omalla äänellään: pilotti kahdessa kaupungissa' },

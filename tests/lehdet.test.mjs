@@ -8,7 +8,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
+import { Game } from '../js/game.js';
 import { KULTTUURI_KATEGORIAT } from '../js/packs/kulttuuri-kategoriat.js';
+import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
 
 /** Minitehtävän ja kulttuurivisan yhteiset muotovaatimukset. */
 function tarkistaTehtava(t, missa) {
@@ -55,5 +57,49 @@ test('sama nosto ei ole sekä lehdessä että vanhoissa litteissä nostoissa', a
     assert.equal(vanhat.length, 0,
       `${kaupunki}: lehti on olemassa, joten europe-kulttuuri.js:n `
       + `${vanhat.length} nostoa näkyisivät kahdesti`);
+  }
+});
+
+test('kahden maan samanniminen aihesivu palkitsee erikseen', () => {
+  /*
+   * Maan lehden saa auki kartalta mistä tahansa (v390), joten Prahassa
+   * seisova pelaaja voi avata sekä Tšekin että Saksan lehden. Molemmilla
+   * on Historia-sivu. Palkkioavain oli pakka:kaupunki:aihe, jolloin
+   * jälkimmäinen näytti tekstin "Tämän sivun minitehtävä on jo
+   * ratkaistu" eikä maksanut mitään. ui.js lisää nyt maatunnuksen
+   * aiheen eteen; tämä testi pitää sopimuksen voimassa.
+   */
+  const game = new Game({
+    players: [{ name: 'A', color: '#f00', start: 'tanger' }],
+    seed: 7,
+  });
+  const raha = () => game.players[0].money;
+  const alku = raha();
+
+  const eka = game.actionMinitehtava('praha', 'CZE:historia', true);
+  assert.equal(eka.ok, true, 'ensimmäinen vastaus menee läpi');
+  assert.equal(raha(), alku + 10, 'ensimmäinen palkitsee');
+
+  const toinen = game.actionMinitehtava('praha', 'DEU:historia', true);
+  assert.equal(toinen.ok, true, 'toisen maan sama aihe on eri tehtävä');
+  assert.equal(raha(), alku + 20, 'myös toinen palkitsee');
+
+  const uudelleen = game.actionMinitehtava('praha', 'CZE:historia', true);
+  assert.equal(uudelleen.ok, false, 'sama tehtävä ei palkitse kahdesti');
+  assert.equal(raha(), alku + 20, 'raha ei kasva toistosta');
+});
+
+test('maalehden aihesivuilla on minitehtävä ja menovinkit on viimeisenä', () => {
+  for (const [iso, sivut] of Object.entries(MAA_KATEGORIAT)) {
+    if (sivut.length < 2) continue;
+    const vinkki = sivut.findIndex((s) => s.id === 'menovinkit');
+    if (vinkki >= 0) {
+      assert.equal(vinkki, sivut.length - 1,
+        `${iso}: menovinkit on linkkilista ja kuuluu viimeiseksi`);
+    }
+    for (const s of sivut) {
+      if (s.id === 'menovinkit' || !s.tehtava) continue;
+      tarkistaTehtava(s.tehtava, `${iso}/${s.id}`);
+    }
   }
 });
