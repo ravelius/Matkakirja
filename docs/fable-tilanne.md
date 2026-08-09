@@ -177,3 +177,19 @@ on mainissa; lue ne kun tarvitset yksityiskohdat:
   suunnittele Lähi-idän lehtien työnjako (Opus 2:n selvitysmuistio
   pohjaksi; Opus 1:lle kaupunki/maa-lehtijono; Sonnet 2:lle
   nähtävyysjutut karttojen tahdissa).
+- **Nähtävyyskuvien laatupassi (omistajan palaute 9.8. ennen lähtöä:
+  "huonot kuvat, ainakin Helsingissä").** Helsinki tehty pilottina
+  (v437, #631): 6/7 kuvaa vaihdettu — prosessi: kohteen nykykuva ja
+  3+ Commons-kandidaattia ladataan ja KATSOTAAN, paras valitaan
+  (valo, kohde pääosassa, ei roinaa etualalla), lisenssi + tekijä
+  Commons-API:sta, selite päivitetään kuvan mukaiseksi (ei
+  ylilupauksia). JONOSSA samalla prosessilla: Berliini, Lontoo,
+  Kairo, Venetsia, Madrid, Tukholma, Pariisi, Praha, Wien, Budapest,
+  Ateena, Amsterdam, Dublin — Fable tekee erissä (2–3 kaupunkia per
+  PR) muun koordinaation lomassa. Sonnet 2:n uudet erät syntyvät jo
+  tiukennetuilla kuvakriteereillä (trigger 9.8.), niitä ei tarvitse
+  passittaa erikseen. Omistajan huomio Helsingin kartan kainalosta →
+  Opus 2:lla työjonossa.
+- **Pulmien laatuloikka Fablen pöydällä:** Ateenan pylväspulma
+  oikeilla Commons-kuvilla (kuvat haettu, ks. "Muut kesken"),
+  sitten geysir/laiturit/kukko kulttuuripohjaisiksi.
