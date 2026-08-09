@@ -34,6 +34,12 @@ kulttuurinoston kuratoitu kuva säilyy.
 Rivinumerot ovat v452:n (HEAD ed11bc3) mukaiset — tarkista grep'llä
 tiedostonimen mukaan, rivit ovat voineet siirtyä.
 
-Matala prioriteetti (ei kuvanvaihtoa): js/packs/maasto-tekstit-malli.js
-on käyttämätöntä koodia (vain kommenttiviite maasto-tekstit.js:ssä) —
-siivousaihe joskus.
+KORJAUS 9.8. myöhäisilta: aiempi merkintä maasto-tekstit-malli.js:n
+"siivouksesta" oli VÄÄRÄ. Opus 2 tarkisti sisällön ennen poistoa:
+tiedosto sisältää pelin kymmenen kuuluisimman maastokohteen (Niili,
+Amazon, Volga, Ganges, Jangtse, Baikal, Kaspianmeri, Himalaja, Andit,
+Alpit) AINOAT tekstit ja 10 aikalaislainausta, joihin
+tools/lainausankkurit.json ja tarkista-lainaukset.mjs nojaavat.
+Tiedosto SÄILYY; vain sen harhaanjohtava kommenttiviite korjataan
+(Opus 2:n erä). "Ei UI-importtia" ei kelpaa poistoperusteeksi —
+kumpaakaan maastotekstipakettia ei ole vielä kytketty käyttöliittymään.
