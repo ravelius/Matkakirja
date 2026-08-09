@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 457, teksti: 'Maakartat Irakille ja Iranille' },
   { v: 456, teksti: 'Sveitsille ja Norjalle omat aihesivut' },
   { v: 455, teksti: 'Aarrekuvat piirretty yhtenäiseen satukirjatyyliin' },
   { v: 454, teksti: 'Minitehtävä joka maalehden aihesivulle' },

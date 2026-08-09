@@ -48932,6 +48932,38 @@ const MAA_KATEGORIAT = {
 // poimi rajat tiedostosivun "Map to illustrate ... borders"
 // -kohdasta ja KATSO 480 px pikkukuva silmin kuten muutkin kuvat.
 // Kaupunkien koordinaatit suomenkielisestä Wikipediasta.
+//
+// RAJAT HAETAAN LÄHTEESTÄ ITSE, EIKÄ KOSKAAN OTETA VASTAAN VALMIINA
+// (Fablen ohje 9.8.2026 Lähi-idän erien jälkeen). Väärä rajaluku ei
+// riko mitään näkyvästi — se vain siirtää jokaisen kaupunkipisteen,
+// ja virhe huomataan vasta kuvasta. Siksi:
+//
+//  1. Hae top/bottom/left/right sivulta
+//     `Module:Location map/data/<Maa>` (en.wikipedia, action=raw) ja
+//     katso samalla, onko valitsemasi tiedosto moduulin `image1`.
+//     Jos kartta on Tschubbyn `Reliefkarte`-perhettä, rajat ovat
+//     yhden hypyn takana: tiedostosivu sanoo "Grenzen: <maa> adm
+//     location map.svg", ja juuri se tiedosto on moduulin `image`.
+//     Lue ketju molemmista päistä.
+//  2. Jos käytät tutkimusapuria, HAE RAJAT ITSE ENNEN KUIN LUET SEN
+//     RAPORTIN. Silloin sinulla on riippumaton vertailukohta etkä
+//     vahvista vain sitä mitä apuri ehdotti.
+//  3. Ristiinvarmista kuvasuhteesta: px/° pitkittäin ja
+//     leveyspiireittäin, ja suhteen pitäisi olla lähellä arvoa
+//     1/cos(keskileveysaste). Muutaman prosentin heitto on normaali —
+//     osa karttaperheen kuvista ilmoittaa oman venytyksensä
+//     ("N/S stretching NNN %"), joka saa poiketa geometriasta
+//     (esim. Kypros 115 % vs. 122 %). Se ei vaikuta
+//     prosenttiasemointiin, koska akselit ovat lineaarisia asteissa.
+//  4. Todenna lopuksi pisteet pelin omalla karttapiste()-funktiolla
+//     kuvan päälle piirrettynä ja KATSO KUVA.
+//
+// SVG kelpaa pohjakuvaksi (Syyria): Special:FilePath?width=1000
+// rasteroi sen PNG:ksi. Testattu 9.8.2026.
+//
+// Kun lähteet ovat eri mieltä luvusta, sitä EI kirjoiteta täsmällisenä
+// (Fablen linjaus: Moreebin dyyni). Ks. ARE, YEM, CYP ja SYR — kaikissa
+// on kommentti siitä, mikä luku jätettiin pois ja miksi.
 
 /**
  * ISO3-koodi → kartta.
@@ -51020,10 +51052,10 @@ const MAAKARTAT = {
      * tasaväliprojektiota leveyspiirillä 34,8° (1,217) 0,14 %:n
      * tarkkuudella — erän tarkin osuma.
      *
-     * TÄMÄ ON PELIN AINOA SVG-MAAKARTTA. Se ei ole ongelma: pelin
-     * kuvaosoite on Special:FilePath?width=1000, ja testasin sen —
-     * Commons rasteroi SVG:n PNG:ksi (content-type image/png). Pieni
-     * kanvaasi ei siis rajoita tarkkuutta.
+     * TÄMÄ OLI PELIN ENSIMMÄINEN SVG-MAAKARTTA (Irak on toinen). Se ei
+     * ole ongelma: pelin kuvaosoite on Special:FilePath?width=1000, ja
+     * testasin sen — Commons rasteroi SVG:n PNG:ksi (content-type
+     * image/png). Pieni kanvaasi ei siis rajoita tarkkuutta.
      *
      * ÄLÄ VAIHDA Tschubbyn `Reliefkarte Syrien.png`:hen, vaikka se on
      * 2597 px ja lisenssi kelpaa: se on tasavärinen, Syyria ei erotu
@@ -51090,6 +51122,236 @@ const MAAKARTAT = {
         + 'vedessä näkyy rattaan ja kupolien heijastus.',
       lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
       wiki: 'Orontes',
+    },
+  },
+  IRQ: {
+    /*
+     * `Iraq relief location map.jpg` EI OLE OLEMASSA (tarkistettu
+     * 9.8.2026, 404) — Irakista ei ole tehty perheen relief-versiota.
+     * Tämä on moduulin oma image1, ja rajat on dokumentoitu kolmesti
+     * samoina: Module:Location map/data/Iraq (hain sen itse),
+     * `Iraq location map.svg` ("N/S stretching 115 %") ja
+     * `Iraq adm location map.svg` ({{Location map series N}}).
+     *
+     * KUVASUHTEEN JA GEOMETRIAN ERO ON TAHALLINEN, EI VIRHE.
+     * 1238 × 1260 px antaa 117,9 px/° pitkittäin ja 135,5 px/°
+     * leveyspiireittäin eli suhteen 1,149, joka osuu kartan omaan
+     * ilmoitettuun 115 %:n venytykseen 0,08 %:n tarkkuudella.
+     * Tasaväliprojektio keskileveysasteella 33,1° vaatisi 1,193, eli
+     * kartta on 3,7 % litteämpi kuin geometrinen ihanne. Sarja
+     * pyöristää venytyksen tasalukuun. Prosenttiasemointiin tällä ei
+     * ole vaikutusta: rajaus on sama neliö ja molemmat akselit ovat
+     * lineaarisia asteissa.
+     *
+     * VASEMMASSA ALANURKASSA ON KORKEUSASTEIKON SELITELAATIKKO, pelin
+     * ainoa. Se peittää Saudi-Arabian ja Jordanian kulmaa, ei
+     * yhtäkään kaupunkia, ja lehden koossa se näyttää kartan
+     * selitteeltä eikä virheeltä.
+     *
+     * ÄLÄ VAIHDA Tschubbyn `Reliefkarte Irak.png`:hen, vaikka se on
+     * 2861 px, ilman selitelaatikkoa ja lisenssi kelpaa
+     * (Cc-by-sa-3.0-migrated): se on litteä, koko Irak on tasaista
+     * vihreää, Tigris ja Eufrat hukkuvat taustaan eivätkä suot erotu.
+     * Tässä joet, järvet ja Hammarin suot näkyvät sinisenä ja Irak
+     * erottuu naapureista vaaleampana.
+     */
+    tiedosto: 'Iraq physical map.svg',
+    lahde: 'Urutseg, Wikimedia Commons (CC0)',
+    rajat: { pohjoinen: 37.7, etela: 28.4, lansi: 38.4, ita: 48.9 },
+    /*
+     * Laudan kohteet Bagdad ja Mosul ovat mukana. Loput piirtävät
+     * maan lävitse kulkevan jokilinjan: Kirkuk koillisen vuorten
+     * juurelle, Najaf Eufratin länsipuolelle, Nasiriyya soiden
+     * reunaan ja Basra Shatt al-Arabin varteen. Kartalta näkee sen,
+     * mikä Irakissa on olennaista — asutus on kahden joen varressa.
+     *
+     * ERBIL ON TAHALLAAN POIS. Se on Irakin Kurdistanin pääkaupunki
+     * ja kiinnostavampi kuin Kirkuk, mutta osuu kohtaan 53,4 % /
+     * 16,2 %: Mosulin nimi aukeaa itään pisteestä 45,0 % ja ulottuu
+     * noin 55 %:iin, ja pystyeroa on vain 1,6 % eli kuusi pikseliä.
+     * Nimet menisivät päällekkäin, eikä .nimi-vasen auta, koska sen
+     * laukaisee vasta x > 60. Kirkuk täyttää saman kolkan.
+     *
+     * RAMADI ON POIS SAMASTA SYYSTÄ: se on käytännössä Bagdadin
+     * leveyspiirillä (y-ero 1,2 % ≈ 4 px) ja sen nimi törmäisi
+     * Bagdadin pisteeseen. Siksi länsipuolisko jää tyhjäksi — se on
+     * Anbarin aavikko, joten tyhjyys on totta eikä puute.
+     *
+     * Najafin koordinaatti on en.wikipediasta: fi.wikipedian
+     * pyöristetty 32 / 44,55 on 26 km liian idässä ja siirtäisi
+     * pisteen Eufratin väärälle puolelle.
+     */
+    kaupungit: [
+      { nimi: 'Bagdad', lat: 33.3333, lon: 44.4333, paa: true },
+      { nimi: 'Mosul', lat: 36.3417, lon: 43.1292 },
+      { nimi: 'Kirkuk', lat: 35.4667, lon: 44.3167 },
+      { nimi: 'Najaf', lat: 31.9959, lon: 44.3148 },
+      { nimi: 'Nasiriyya', lat: 31.0439, lon: 46.2575 },
+      { nimi: 'Basra', lat: 30.5, lon: 47.8167 },
+    ],
+    // Nasiriyya ja Basra ovat kartalla soiden laidalla, ja Hammarin
+    // suot näkyvät kuvassa sinisenä läiskänä niiden välissä. Nosto
+    // kertoo, mitä siellä tehdään.
+    nosto: {
+      otsikko: 'Talo, jossa ei ole yhtään naulaa',
+      tiedosto: 'Roofing of reed Mudhif - guesthouse, Southern marshlands, Iraq.jpg',
+      /*
+       * WIKI-LINKKI ON HARKITTU. `Etelä-Irakin Ahwar` on aiheen tarkka
+       * osuma (Unescon kohde 2016) ja kaksi ensimmäistä kappaletta
+       * ovat maantiedettä ja arkeologiaa. Kolmannessa on yksi lause
+       * Saddam Husseinin kostosta suoarabeille — sorto mainitaan,
+       * väkivaltaa ei kuvata. Se on selvästi lievempi kuin Syyrian
+       * `Hama` (verilöyly kuolonlukuineen), jonka takia vesirattaista
+       * linkitettiin jokeen. `Suoarabit` olisi huonompi: siellä sama
+       * asia on jo ingressissä. Jos linja on tiukempi, neutraali
+       * naapuri on `Eufrat` — juuri sen ja Tigriksen leviäminen tekee
+       * nämä suot.
+       *
+       * Soiden pinta-alaa ei anneta: lähteet sanovat 9 000, 15 000 ja
+       * 20 000 neliökilometriä. Kaarien lukumäärää ei myöskään:
+       * "aina pariton" on yleisesti siteerattu mutta lähteetön.
+       */
+      teksti: 'Etelä-Irakissa Tigris ja Eufrat leviävät ennen mereen '
+        + 'laskuaan laajoiksi kosteikoiksi. Siellä kasvaa '
+        + 'qasab-niminen järviruoko, sormen paksuista ja jopa viiden '
+        + 'metrin korkuista, ja siitä rakennetaan taloja ilman '
+        + 'ainuttakaan naulaa, lautaa tai kiveä. Ruoko sidotaan '
+        + 'tiukoiksi pylväiksi, pylväät työnnetään maahan vinosti '
+        + 'vastakkain ja taivutetaan yhteen kaariksi. Kaarien päälle '
+        + 'kääritään punottuja ruokomattoja, joihin jätetään reikiä '
+        + 'valoa ja ilmaa varten. Valmis mudhif eli kylän vierastalo '
+        + 'on kuin keltainen tunneli, ja sen ovi osoittaa aina '
+        + 'Mekkaan. Englantilainen matkaaja Gertrude Bell istui '
+        + 'yhdessä niistä vuonna 1918 ja kirjoitti kotiin, että talo '
+        + 'oli täydellisen säännöllinen keltainen tunneli ja lähes '
+        + 'viidenkymmenen metrin pituinen. Rakennustapa on '
+        + 'hämmästyttävän vanha: Urukin raunioista löytyi noin '
+        + '5 300 vuotta vanha kaiverrus, jossa on täsmälleen '
+        + 'samanlainen kaarikattoinen ruokotalo. Talo tehdään '
+        + 'uudestaan noin kymmenen vuoden välein, eikä se haittaa — '
+        + 'ruoko kasvaa suolla joka kesä uudelleen.',
+      selite: 'Mudhif nousee Etelä-Irakin soilla. Ruokokaaret on jo '
+        + 'pystytetty riviin ja seinät verhottu punotuilla matoilla; '
+        + 'katolla kaksi miestä sitoo suoria ruokokimppuja '
+        + 'paikoilleen. Vasemmalla nojaa pitkä seiväs, jota pitkin '
+        + 'ylös kiivetään.',
+      lahde: 'Hassan Al-Jarrah, Wikimedia Commons (CC BY-SA 4.0)',
+      wiki: 'Etelä-Irakin Ahwar',
+    },
+  },
+  IRN: {
+    /*
+     * Moduulin oma image1, ja rajat on dokumentoitu kahdesti:
+     * `Module:Location map/data/Iran` (hain sen itse) ja tiedostosivun
+     * oma teksti ("Equirectangular projection. Strechted by 118.0%.").
+     * Ei yhtään hyppyä ketjussa.
+     *
+     * Kuvasuhde vahvistaa saman: 1200 × 1071 px antaa 58,5 px/°
+     * pitkittäin ja 69,1 px/° leveyspiireittäin eli suhteen 1,180,
+     * joka on kartan oma ilmoitettu 118,0 %. Tasaväliprojektio
+     * keskileveysasteella 32,25° vaatii 1,182 — 0,17 %:n tarkkuus,
+     * Lähi-idän erän toiseksi tarkin osuma Syyrian jälkeen.
+     *
+     * Merialueet ovat puhtaat: Persianlahti ja Kaspianmeri ovat ilman
+     * merirajaviivoja. Kartan harmaat viivat ovat maakunta- ja
+     * valtakunnanrajoja, kaikki maalla.
+     *
+     * ÄLÄ VAIHDA `Iran relief location light map.jpg`:hen, vaikka
+     * rajat, koko ja lisenssi ovat samat: vaalennettu versio on pesty,
+     * Zagrosin harjanteet katoavat ja Iran erottuu naapureista
+     * huonommin. Muita vaihtoehtoja ei ole —
+     * `Iran physical location map.svg` ja `Reliefkarte Iran.png`
+     * eivät ole olemassa (404, tarkistettu 9.8.2026).
+     *
+     * Iranin valtionraja on tässä perheessä vain ohut harmaa viiva;
+     * maa erottuu väristä eikä viivasta. Se on tyylin hinta.
+     */
+    tiedosto: 'Iran relief location map.jpg',
+    lahde: 'Uwe Dedering, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 40.0, etela: 24.5, lansi: 43.5, ita: 64.0 },
+    /*
+     * Laudan kolme kohdetta Teheran, Isfahan ja Tabriz ovat mukana.
+     * Loput venyttävät kartan täyteen: Mashhad koilliseen 78,6 %:iin,
+     * Shiraz Zagrosin eteläpäähän ja Bandar Abbas Hormuzinsalmelle.
+     * Ilman kahta viimeistä puolet kartasta olisi tyhjää.
+     *
+     * BANDAR ABBAS OSUU JUURI RAJAN YLI: x = 62,3 % > 60, joten se saa
+     * automaattisesti luokan .nimi-vasen ja nimi aukeaa länteen. Se on
+     * välttämätöntä — kaksitoista merkkiä itään auetessaan valuisi
+     * kuvan reunan yli.
+     *
+     * YAZD ON TAHALLAAN POIS, vaikka se olisi tähän maahan sopiva
+     * (tuulenpyydystornit, qanatit): se osuu kohtaan 53,0 % / 52,3 %,
+     * ja Isfahanin nimi aukeaa itään pisteestä 39,9 % ulottuen noin
+     * 54 %:iin. Pystyeroa on vain 4,9 % eli 15 px, kun nimet ovat
+     * 13 px korkeita. Ahvaz on pois samasta syystä. Siksi lounainen
+     * Khuzestan jää tyhjäksi.
+     *
+     * Itä ja kaakko jäävät Mashhadia lukuun ottamatta tyhjiksi.
+     * Siellä ovat Dasht-e Kavir ja Dasht-e Lut, joten tyhjyys on
+     * totta eikä puute.
+     *
+     * Nimiasu on pelin arkimuoto eikä fi.wikipedian translitteraatio:
+     * Mashhad (fi-artikkeli "Mašhad") ja Shiraz (fi-artikkeli
+     * "Šīrāz"), samaan tapaan kuin laudalla.
+     */
+    kaupungit: [
+      { nimi: 'Teheran', lat: 35.6962, lon: 51.423, paa: true },
+      { nimi: 'Tabriz', lat: 38.0739, lon: 46.296 },
+      { nimi: 'Mashhad', lat: 36.287, lon: 59.614 },
+      { nimi: 'Isfahan', lat: 32.658, lon: 51.669 },
+      { nimi: 'Shiraz', lat: 29.61, lon: 52.5425 },
+      { nimi: 'Bandar Abbas', lat: 27.177, lon: 56.266 },
+    ],
+    // Kartta on melkein kauttaaltaan ruskeaa ylänköä ja aavikkoa, ja
+    // silti sinne mahtuu kaupunkeja. Nosto kertoo miten.
+    nosto: {
+      otsikko: 'Joki, joka virtaa maan alla',
+      /*
+       * Kuva on juuri se Gonabadin Qasabeh-qanat, josta teksti kertoo:
+       * tiedostosivun persiankielinen kuvaus sanoo sen, ja kuva on
+       * otettu pitkällä valotusajalla.
+       *
+       * ÄLÄ VAIHDA tiedostoon `Puits de creusement et de maintenance
+       * d'un qanat en Iran.jpg`, vaikka se on Commonsin paras ilmakuva
+       * kuilujonosta ja vaikka se on merkitty CC BY-SA 4.0:ksi: sen
+       * oma lähderivi kertoo sen olevan ruutukaappaus Arte-kanavan
+       * dokumentista, jota lataaja ei voi lisensoida. Jos ilmakuva
+       * joskus tarvitaan, aidosti vapaa vastine on
+       * `Irán, aéreas (2000) 08.jpg` (LBM1948, CC BY-SA 4.0).
+       *
+       * Kaksi lukua on jätetty tahallaan pois. Emäkaivon syvyyttä
+       * ("yli 300 m") ei saatu varmennettua: Unescon sivu ei vastaa ja
+       * Wikipedia antaa toisen qanatin kohdalla 122 m. Qanatien
+       * lukumäärästä Iranissa lähteet ovat suorassa ristiriidassa:
+       * 50 000, 37 000, 34 355 ja 33 691.
+       */
+      tiedosto: 'Ghasabe Qanats of Gonabad.jpg',
+      teksti: 'Iranin ylängöllä sataa vähän, mutta vuorten juurella '
+        + 'maan alla on vettä. Noin kolmetuhatta vuotta sitten '
+        + 'keksittiin, miten se saadaan kylään ilman pumppua: '
+        + 'kaivetaan maan alle tunneli, joka laskee hyvin loivasti. '
+        + 'Ensin kaivetaan syvä emäkaivo sinne mistä vesi löytyy, '
+        + 'sitten tunnelia kohti kylää. Matkan varrelle tehdään '
+        + 'pystykuiluja muutaman kymmenen metrin välein. Niitä pitkin '
+        + 'maa nostetaan ylös ämpäreillä, niistä tulee tunneliin '
+        + 'ilmaa, ja niistä kaivaja laskeutuu myöhemmin korjaamaan '
+        + 'sortumia. Kaltevuus pitää osata: liian loivassa vesi '
+        + 'seisoo, liian jyrkässä virta syö tunnelin rikki. Maan alla '
+        + 'vesi ei myöskään haihdu auringossa. Ylhäältä katsottuna '
+        + 'valmis qanat näyttää kraatterien jonolta, joka juoksee '
+        + 'halki aavikon. Useimmat qanatit ovat alle viiden '
+        + 'kilometrin mittaisia, mutta Gonabadin Qasabeh-qanatissa on '
+        + '427 kuilua ja tunnelia 33 kilometriä. Se kaivettiin noin '
+        + '2 700 vuotta sitten ja antaa yhä vetensä lähes '
+        + '40 000 ihmiselle.',
+      selite: 'Gonabadin Qasabeh-qanatin tunneli pitkällä '
+        + 'valotusajalla kuvattuna. Käsin hakattu kallioholvi kaartuu '
+        + 'korkealle, seinien kuopat ja iskunjäljet näkyvät '
+        + 'lämpimässä valossa, ja pohjalla juokseva vesi katoaa '
+        + 'sileänä nauhana pimeään.',
+      lahde: 'Tavasoli mohsen, Wikimedia Commons (CC BY-SA 4.0)',
+      wiki: 'Persian qanatit',
     },
   },
 };
@@ -126861,6 +127123,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 457, teksti: 'Maakartat Irakille ja Iranille' },
   { v: 456, teksti: 'Sveitsille ja Norjalle omat aihesivut' },
   { v: 455, teksti: 'Aarrekuvat piirretty yhtenäiseen satukirjatyyliin' },
   { v: 454, teksti: 'Minitehtävä joka maalehden aihesivulle' },
@@ -127399,7 +127662,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.456';
+const APP_VERSION = '2026-08-09.457';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
