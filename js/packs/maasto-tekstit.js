@@ -430,12 +430,12 @@ export const MAASTO_TEKSTIT = {
           linkki: 'https://www.gutenberg.org/ebooks/76317',
         },
         {
-          tiedosto: 'Lake Chad from Apollo 7.jpg',
-          selite: 'Tšadjärvi Apollo 7:stä lokakuussa 1968. Vesi oli tuolloin '
-            + 'lähellä laajimmillaan. Vuoteen 1985 mennessä siitä oli '
-            + 'jäljellä alle kymmenesosa, ja loppu oli sitä niittymaata, '
-            + 'josta Barthille kerrottiin.',
-          lahde: 'Wikimedia Commons (PD), NASA',
+          tiedosto: 'Waving fisherman on Lake Chad (detilt).jpg',
+          selite: 'Kalastaja tervehtii veneestään Tšadjärvellä kaislikon '
+            + 'laidassa. Järvi on täynnä matalia salmia ja ruokosaaria — '
+            + 'juuri sitä avoveden ja niittymaan vaihtelua, josta '
+            + 'Barthille kerrottiin.',
+          lahde: 'Cooltho, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           teksti: 'Chari tuo järveen yhdeksän kymmenesosaa sen vedestä. Kun joen '
@@ -1584,11 +1584,12 @@ export const MAASTO_TEKSTIT = {
             + 'halki, ja kuolleita laskettiin tuhansissa.',
         },
         {
-          tiedosto: 'Passageiros no Vagão-Plataforma do Trem, na Altura do Quilômetro 151 da Ferrovia Madeira-Mamoré - 1107, Acervo do Museu Paulista da USP.jpg',
-          selite: 'Matkustajia Madeira-Mamorén radan lavavaunussa kilometrillä '
-            + '151. Rata valmistui 1912, samoihin aikoihin kun Aasian '
-            + 'viljelykumi romahdutti Amazonin hinnat. Liikenne loppui 1972.',
-          lahde: 'Wikimedia Commons (PD), Museu Paulista da USP',
+          tiedosto: 'Rio Madeira- Cachoeira do Teotônio.jpg',
+          selite: 'Teotônion koski Madeirassa ennen patoja: vaalea '
+            + 'lietevesi kuohuu, ja kalastajakylä seisoo paaluillaan '
+            + 'aivan kosken partaalla. Tällaisten koskien ohi kumi '
+            + 'piti kantaa maitse.',
+          lahde: 'Wilson Dias / Agência Brasil, Wikimedia Commons (CC BY 3.0 BR)',
         },
         {
           teksti: 'Koskissa on nyt kaksi patoa, Santo Antônio ja Jirau, molemmat '
