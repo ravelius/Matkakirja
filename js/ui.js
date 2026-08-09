@@ -6093,6 +6093,17 @@ export class UI {
     }
   }
 
+  /*
+   * Selain säilyttää dialogikortin vierityskohdan sulkemisen yli ja
+   * palauttaa sen showModalissa. Suljettu dialogi on display:none —
+   * ennen avaamista tehty scrollTop-nollaus valuu siksi hukkaan, ja
+   * lehti tai popup aukesi edellisen käynnin kohdasta (omistajan
+   * havainto 9.8.2026). Nollaus tehdään siksi aina showModalin JÄLKEEN.
+   */
+  nollaaDialoginVieritys(dialogi) {
+    for (const kortti of dialogi.querySelectorAll('.dialog-card')) kortti.scrollTop = 0;
+  }
+
   /**
    * Saapumiskortti: kaupungin matkatarina keskellä ruutua ja sen lopussa
    * valinta, avataanko aarre. Kieltävä vastaus päättää vuoron, jolloin
@@ -6207,6 +6218,7 @@ export class UI {
     // kaupungeissa, suora leikattu reuna.)
     this.arrivalDialog.classList.add('arkki');
     if (!this.arrivalDialog.open) this.arrivalDialog.showModal();
+    this.nollaaDialoginVieritys(this.arrivalDialog);
     const arkki = this.arrivalDialog.querySelector('.dialog-card');
     // Sivujen selaus pyyhkäisyllä ja nuolinäppäimillä.
     if (arkki) this.kytkeTutkiSelaus(arkki);
@@ -8624,6 +8636,7 @@ export class UI {
       sisalto.appendChild(html('p', 'nahtavyys-lahderivi', kohde.lahde));
     }
     if (!dialogi.open) dialogi.showModal();
+    this.nollaaDialoginVieritys(dialogi);
   }
 
   /**
@@ -8988,6 +9001,7 @@ export class UI {
     this.wikiExtract.textContent = alkuteksti || 'Haetaan…';
     this.wikiSource.textContent = '';
     if (!this.wikiDialog.open) this.wikiDialog.showModal();
+    this.nollaaDialoginVieritys(this.wikiDialog);
 
     const summary = await cachedSummary(title);
     // Pelaaja on voinut ehtiä sulkea dialogin tai avata toisen paikan.
@@ -9963,6 +9977,7 @@ export class UI {
     this.renderAarteet();
     this.renderFinds();
     if (!this.passportDialog.open) this.passportDialog.showModal();
+    this.nollaaDialoginVieritys(this.passportDialog);
     this.asemoiLaukku();
   }
 
@@ -10209,6 +10224,7 @@ export class UI {
       this.lahteetRakennettu = true;
     }
     if (!this.lahteetDialog.open) this.lahteetDialog.showModal();
+    this.nollaaDialoginVieritys(this.lahteetDialog);
   }
 
   // --- linssit: valitsin, kerros ja selitekortti -----------------------------
@@ -10514,6 +10530,7 @@ export class UI {
     if (!dialogi || !sisalto || !ylarivi) return;
     this.vertailuPois ??= new Set();
     if (!dialogi.open) dialogi.showModal();
+    this.nollaaDialoginVieritys(dialogi);
     sisalto.replaceChildren(html('p', 'johdanto', 'Haetaan tilastoja…'));
     this.rakennaVertailuYlarivi();
     try {
