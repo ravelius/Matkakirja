@@ -11820,22 +11820,42 @@ export class UI {
     });
   }
 
-  /** Iso laatta kääntyy ruudun keskellä ja paljastaa sisällön. */
+  /**
+   * Aarteen paljastus ruudun keskellä. Aarre, jolla on oma AI-kuva
+   * (ruby/emerald/topaz), NOUSEE MUSTASTA: kuva keskelle ilman
+   * kehyksiä ja tekstit sen ympärille (omistajan palaute 9.8.2026 —
+   * vanha kääntyvä laattakuva oli kuvan rinnalla sekava). Kuvattomat
+   * laatat (tähti, kenkä, rosvo, tyhjä, linssi) kääntyvät entiseen
+   * tapaan.
+   */
   async playTokenReveal(type) {
     const token = this.game.tokenTypes[type];
-    const overlay = html('div', 'reveal-overlay');
+    const onKuva = Boolean(token.kuva);
+    const overlay = html('div', `reveal-overlay${onKuva ? ' kuvallinen' : ''}`);
     const scene = html('div', 'reveal-scene');
-    const disc = html('div', `reveal-disc ${type}`);
 
-    const back = html('div', 'reveal-face reveal-back');
-    back.appendChild(revealFaceSvg('back'));
-    const front = html('div', 'reveal-face reveal-front');
-    front.appendChild(revealFaceSvg('front', type));
-    disc.appendChild(back);
-    disc.appendChild(front);
-
-    const rays = revealRaysSvg();
-    rays.classList.add('reveal-rays');
+    let disc = null;
+    let aarrekuva = null;
+    let rays = null;
+    if (onKuva) {
+      aarrekuva = document.createElement('img');
+      aarrekuva.className = 'reveal-aarrekuva';
+      aarrekuva.alt = token.name;
+      const [osoite, vara] = aarrekuvanOsoitteet(token.kuva);
+      // Puuttuva tiedosto (yhden tiedoston versio levyltä) ei saa
+      // jättää rikkinäistä kuvaketta — kortti jatkaa tekstillä.
+      asetaKuva(aarrekuva, osoite, vara, () => aarrekuva.remove());
+    } else {
+      disc = html('div', `reveal-disc ${type}`);
+      const back = html('div', 'reveal-face reveal-back');
+      back.appendChild(revealFaceSvg('back'));
+      const front = html('div', 'reveal-face reveal-front');
+      front.appendChild(revealFaceSvg('front', type));
+      disc.appendChild(back);
+      disc.appendChild(front);
+      rays = revealRaysSvg();
+      rays.classList.add('reveal-rays');
+    }
 
     const caption = html('div', 'reveal-caption');
     // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
@@ -11844,24 +11864,6 @@ export class UI {
     if (huudahdus) caption.appendChild(html('span', 'reveal-huudahdus', huudahdus));
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
-    /*
-     * Aarteen kuva (omistajan päätös 9.8.2026: AI-generoitu yhtenäiseen
-     * tyyliin — Commons-valokuvat olivat keskenään liian kirjavia).
-     * Kuva on laattatyypin oma, repon assets/aarteet-kansiosta —
-     * laudoilla joilla kenttää ei ole (esim. maailmankartta) paljastus
-     * näyttää entiseltään. Jos tiedostoa ei löydy (yhden tiedoston
-     * versio levyltä), kortti jatkaa ilman kuvaa — ei rikkinäistä
-     * kuvakuvaketta.
-     */
-    if (token.kuva) {
-      const kuva = document.createElement('img');
-      kuva.className = 'reveal-kuva';
-      kuva.alt = token.name;
-      const [osoite, vara] = aarrekuvanOsoitteet(token.kuva);
-      asetaKuva(kuva, osoite, vara, () => kuva.remove());
-      caption.appendChild(kuva);
-      if (token.kuvaLahde) caption.appendChild(html('span', 'reveal-kuvalahde', token.kuvaLahde));
-    }
     /*
      * Isoisän aarresitaatti paljastuksen alle (omistajan päätös
      * 8.8.2026): kätkön löytyessä isoisä puhuu omalla äänellään ja
@@ -11885,10 +11887,14 @@ export class UI {
      */
     if (type === 'linssi') void this.taydennaLinssiPaljastus(caption);
 
-    const stage = html('div', 'reveal-stage');
-    stage.appendChild(rays);
-    stage.appendChild(disc);
-    scene.appendChild(stage);
+    if (onKuva) {
+      scene.appendChild(aarrekuva);
+    } else {
+      const stage = html('div', 'reveal-stage');
+      stage.appendChild(rays);
+      stage.appendChild(disc);
+      scene.appendChild(stage);
+    }
     scene.appendChild(caption);
     overlay.appendChild(scene);
     // Dialogi on top layerissa, joten paljastus lisätään sen sisään.
@@ -11903,11 +11909,25 @@ export class UI {
     });
 
     if (this.reducedMotion) {
-      disc.classList.add('flipped');
-      rays.classList.add('shown');
+      if (onKuva) {
+        aarrekuva.classList.add('shown');
+      } else {
+        disc.classList.add('flipped');
+        rays.classList.add('shown');
+      }
       caption.classList.add('shown');
       sfx.play(treasureSound(type));
       await Promise.race([this.wait(900 + seliteMs), napautus]);
+    } else if (onKuva) {
+      // Kuva nousee mustasta: hidas häivytys ja kasvu, ei kääntöä.
+      await this.wait(420);
+      aarrekuva.classList.add('shown');
+      sfx.play(treasureSound(type));
+      await this.wait(760);
+      caption.classList.add('shown');
+      await Promise.race([this.wait(1250 + seliteMs), napautus]);
+      overlay.classList.add('leaving');
+      await this.wait(300);
     } else {
       await this.wait(420);
       disc.classList.add('flipped');
