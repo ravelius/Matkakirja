@@ -9299,6 +9299,24 @@ body.vertailu-tila .pawns { display: none; }
   font-size: 0.68rem;
 }
 
+/* Henkilölinkki nähtävyystekstissä: nimi näyttää lehden linkiltä
+ * (sama muste, pisteviiva-alleviivaus) mutta on nappi, joka avaa
+ * henkilön oman jutun samaan dialogiin. */
+.henkilo-linkki {
+  background: none;
+  border: 0;
+  padding: 0;
+  min-height: 0;
+  font: inherit;
+  color: rgba(107, 76, 34, 0.95);
+  text-decoration: underline dotted rgba(107, 76, 34, 0.6);
+  text-underline-offset: 0.15em;
+  cursor: pointer;
+}
+
+.henkilo-linkki:hover,
+.henkilo-linkki:focus-visible { color: rgba(70, 51, 31, 1); }
+
 /* Lähdemaininta ilman fi.wikipedian artikkelia: pelkkä teksti, ei
  * linkkiä eikä nappia (omistajan spesifikaatio 8.8.2026). */
 .nahtavyys-lahderivi {
@@ -58542,6 +58560,71 @@ const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+};
+
+// ===== js/packs/henkilot.js =====
+// Henkilöjutut: nähtävyysteksteissä mainittu henkilö saa oman
+// juttunsa, joka aukeaa nimestä (omistajan tilaus 10.8.2026:
+// "Helsinkiin voisi tehdä oman jutun Engelistä joka aukeaisi hänen
+// nimen linkistä"). Juttu on samaa muotoa kuin nähtävyysjuttu
+// (aika, teksti \n\n-kappaleina, kuvat, lahde), joten se renderöityy
+// samalla avaaNahtavyys-polulla — vain avaustapa on eri.
+//
+// HENKILOLINKIT kertoo, minkä kaupungin jutuissa kenenkin nimi
+// muutetaan linkiksi. Kuvio on säännöllinen lauseke, joka kattaa
+// nimen taivutusmuodot ("Engelin", "Engeliä"); linkiksi muuttuu
+// osuma sellaisenaan, joten teksti ei muutu.
+//
+// Pilotti: Carl Ludvig Engel Helsingissä. Uudet henkilöt lisätään
+// tähän samalla kaavalla, kun omistaja tilaa ne.
+
+const HENKILOT = {
+  engel: {
+    nimi: 'Carl Ludvig Engel',
+    aika: 'Arkkitehti · 1778–1840',
+    teksti: 'Carl Ludvig Engel syntyi Berliinissä vuonna 1778 '
+        + 'muurarimestarin poikana ja opiskeli arkkitehdiksi samassa '
+        + 'koulussa kuin aikansa kuuluisimmat saksalaiset rakentajat. '
+        + 'Työt veivät hänet ensin Tallinnaan ja Turkuun, ja matkan '
+        + 'varrella hän ehti suunnitella taloja myös Pietarissa.'
+      + '\n\n'
+      + 'Vuonna 1816 Engel sai elämänsä tehtävän: Helsingistä oli '
+        + 'juuri tullut Suomen pääkaupunki, ja sille piti rakentaa '
+        + 'pääkaupungin näköinen keskusta. Engel suunnitteli '
+        + 'Senaatintorin ympärille kokonaisuuden, jossa tuomiokirkko, '
+        + 'senaatintalo ja yliopiston rakennukset seisovat vaaleina ja '
+        + 'pylväikköineen kuin antiikin temppelit. Tyyliä kutsutaan '
+        + 'empireksi, ja Helsingin keskusta on sen hienoimpia '
+        + 'kokonaisuuksia koko maailmassa.'
+      + '\n\n'
+      + 'Engel ei piirtänyt vain Helsinkiä: hänen kynästään lähti '
+        + 'kirkkoja, raatihuoneita ja kartanoita eri puolille Suomea, '
+        + 'ja vuodesta 1824 hän johti koko maan julkista rakentamista. '
+        + 'Kirjeissään hän ikävöi välillä Berliiniä, mutta kehui '
+        + 'niissä myös Helsingin kaunista paikkaa meren äärellä.'
+      + '\n\n'
+      + 'Engel kuoli Helsingissä vuonna 1840, kaksitoista vuotta '
+        + 'ennen kuin hänen suurin työnsä, Senaatintorin tuomiokirkko, '
+        + 'vihittiin käyttöön. Kirkon portailla seisova näkee yhä '
+        + 'yhdellä silmäyksellä, millaisen kaupungin yksi arkkitehti '
+        + 'osasi piirtää.',
+    kuvat: [
+      {
+        tiedosto: 'CFEngel-2.jpg',
+        selite: 'Carl Ludvig Engel Johan Erik Lindhin maalaamassa '
+          + 'muotokuvassa noin vuodelta 1840.',
+        lahde: 'Johan Erik Lindh, Wikimedia Commons (PD)',
+      },
+    ],
+    lahde: 'Wikipedia',
+  },
+};
+
+const HENKILOLINKIT = {
+  helsinki: [
+    // "Carl Ludvig Engel", "Engel", "Engelin", "Engeliä", …
+    { id: 'engel', kuvio: /(?:Carl Ludvig )?Engel\w*/ },
+  ],
 };
 
 // ===== js/packs/saatiedot.js =====
@@ -129014,9 +129097,17 @@ class UI {
    * vuosiluku korostuksia"), ja lainaus nostetaan kappaleiden väliin
    * omaksi lohkokseen silloin kun se on mielekäs — ei väkisin.
    */
-  avaaNahtavyys(kohde, numero) {
+  avaaNahtavyys(kohde, numero, { henkilolinkit = null } = {}) {
     const dialogi = document.getElementById('nahtavyys-dialog');
     if (!dialogi) return;
+    /*
+     * Nähtävyystekstissä mainittu henkilö linkitetään omaan juttuunsa
+     * (omistajan tilaus 10.8.2026, pilotti: Engel Helsingissä).
+     * Linkit tulevat kaupungin mukaan (arrivalShownFor on kaupunki,
+     * jonka kartalta juttu avattiin); henkilöjuttu itse avataan
+     * tyhjällä listalla, ettei nimi linkitä itseensä.
+     */
+    const linkit = henkilolinkit ?? (HENKILOLINKIT[this.arrivalShownFor] ?? []);
     /*
      * Sulku taustaa napauttamalla (omistajan toive 8.8.2026). Kortti
      * täyttää dialogin tarkalleen, joten dialogiin itseensä osuva
@@ -129054,7 +129145,7 @@ class UI {
     const lainauksenPaikka = kohde.lainaus ? Math.ceil(kappaleet.length / 2) : -1;
 
     kappaleet.forEach((kappale, i) => {
-      sisalto.appendChild(this.nahtavyysKappale(kappale));
+      sisalto.appendChild(this.nahtavyysKappale(kappale, linkit));
       if (i + 1 === lainauksenPaikka) {
         const lohko = html('blockquote', 'nahtavyys-lainaus');
         lohko.appendChild(html('p', 'nahtavyys-lainaus-teksti', kohde.lainaus.teksti));
@@ -129107,8 +129198,40 @@ class UI {
    * ensimmäisessä versiossa vuodelta. Kaksinumeroisia ei korosteta
    * lainkaan — ne ovat lähes aina lukumääriä.
    */
-  nahtavyysKappale(teksti) {
+  nahtavyysKappale(teksti, henkilot = []) {
     const p = html('p', 'nahtavyys-kappale');
+    /*
+     * Henkilölinkit ensin: kappale jaetaan nimiosumien kohdalta, nimet
+     * muuttuvat napeiksi jotka avaavat henkilön oman jutun
+     * (js/packs/henkilot.js), ja muut osat saavat vuosikorostuksen
+     * entiseen tapaan. Nappi eikä <a>, koska kohde ei ole osoite vaan
+     * saman dialogin sisältö — ja tekstisolmupohjainen jako pitää
+     * saman turvatakuun kuin vuosikorostus: aineiston merkit eivät
+     * voi muuttua merkkaukseksi.
+     */
+    let loppu = teksti;
+    for (;;) {
+      let eka = null;
+      for (const h of henkilot) {
+        const osuma = loppu.match(h.kuvio);
+        if (osuma && (!eka || osuma.index < eka.osuma.index)) eka = { h, osuma };
+      }
+      if (!eka) break;
+      this.vuosikorosta(p, loppu.slice(0, eka.osuma.index));
+      const nappi = html('button', 'henkilo-linkki', eka.osuma[0]);
+      nappi.type = 'button';
+      const henkilo = HENKILOT[eka.h.id];
+      nappi.addEventListener('click', () => this.avaaNahtavyys(henkilo, null, { henkilolinkit: [] }));
+      p.appendChild(nappi);
+      loppu = loppu.slice(eka.osuma.index + eka.osuma[0].length);
+    }
+    this.vuosikorosta(p, loppu);
+    return p;
+  }
+
+  /** Lisää tekstin kappaleeseen vuosiluvut korostettuina (ks. yllä). */
+  vuosikorosta(p, teksti) {
+    if (!teksti) return;
     const jakso = '(?:\\s?[–-]\\s?\\d{2,4})?';
     const kuvio = new RegExp(
       `\\b\\d{4}${jakso}(?:-luvu\\w*)?(?:\\s(?:eaa\\.|jaa\\.))?`
@@ -129131,7 +129254,6 @@ class UI {
       kohta = osuma.index + osuma[0].length;
     }
     if (kohta < teksti.length) p.appendChild(document.createTextNode(teksti.slice(kohta)));
-    return p;
   }
 
   /** Yksi nähtävyysjutun kuva selitteineen ja lähteineen. */
@@ -133111,6 +133233,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 479, teksti: 'Engel sai oman jutun — nimi Helsingin teksteissä on linkki' },
   { v: 478, teksti: 'Pysähdyksessä yksi tehtävä: pulma korvaa kohtaamisvisan' },
   { v: 477, teksti: 'Nähtävyysjutut Lissaboniin, Barcelonaan, Granadaan' },
   { v: 476, teksti: 'Kohdekarttoihin mittakaavajana' },
@@ -133673,7 +133796,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.478';
+const APP_VERSION = '2026-08-09.479';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

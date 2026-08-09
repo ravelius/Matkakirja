@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 479, teksti: 'Engel sai oman jutun — nimi Helsingin teksteissä on linkki' },
   { v: 478, teksti: 'Pysähdyksessä yksi tehtävä: pulma korvaa kohtaamisvisan' },
   { v: 477, teksti: 'Nähtävyysjutut Lissaboniin, Barcelonaan, Granadaan' },
   { v: 476, teksti: 'Kohdekarttoihin mittakaavajana' },
