@@ -8538,6 +8538,32 @@ body.vertailu-tila .pawns { display: none; }
   border-bottom-color: #16130f;
 }
 
+/*
+ * Kapealla ruudulla keskitetty päiväys ja oikean reunan liitelinkki
+ * osuivat päällekkäin (omistajan havainto 9.8.2026, Ateena
+ * iPhonella). Kun linkki on rivillä, päiväys siirtyy vasempaan
+ * reunaan ja maan nimi jää pois — sama maa lukee linkissä heti
+ * vieressä ("KREIKKA-LIITE"), joten tieto ei katoa. Ilman linkkiä
+ * rivi pysyy keskitettynä entiseen tapaan.
+ */
+@media (max-width: 699px) {
+  .lehti-alarivi:has(button.maa-linkki:not([hidden])) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  .lehti-alarivi:has(button.maa-linkki:not([hidden])) .pvm-maa { display: none; }
+
+  .lehti-alarivi:has(button.maa-linkki:not([hidden])) button.maa-linkki {
+    position: static;
+    transform: none;
+    flex: none;
+  }
+}
+
 .maakartta-kehys {
   float: right;
   width: min(58%, 340px);

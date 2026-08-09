@@ -7360,10 +7360,16 @@ export class UI {
     }
     this.arrivalLehtiYla.hidden = !lehti;
     // Päiväysrivi kuin lehden nimiön alla: maa ja monesko matkapäivä.
+    // Maan nimi on omassa spanissaan, koska kapealla ruudulla se
+    // väistyy liitelinkin tieltä (linkki peitti päiväyksen iPhonella,
+    // omistajan havainto 9.8.2026) — linkissä lukee sama maa, joten
+    // tieto ei katoa. CSS: .pvm-maa.
     const maanNimi = this.arrivalMaaTiedot?.nimi;
-    this.arrivalLehtiPvm.textContent = lehti
-      ? [maanNimi, `${this.game.dayCount()}. matkapäivä`].filter(Boolean).join(' · ')
-      : '';
+    this.arrivalLehtiPvm.replaceChildren();
+    if (lehti) {
+      if (maanNimi) this.arrivalLehtiPvm.appendChild(html('span', 'pvm-maa', `${maanNimi} · `));
+      this.arrivalLehtiPvm.appendChild(document.createTextNode(`${this.game.dayCount()}. matkapäivä`));
+    }
     this.arrivalLehtiAla.hidden = !lehti;
     this.naytaLehtiSaa(lehti ? cityId : null);
     this.arrivalLiuskat.replaceChildren();
@@ -7433,6 +7439,19 @@ export class UI {
     this.arrivalKaupunkiKartta.hidden = !karttaEtusivulla;
     this.arrivalKaupunkiKartta.replaceChildren();
     if (karttaEtusivulla) this.piirraKaupunkiKartta(this.arrivalKaupunkiKartta);
+
+    /*
+     * Kaupunkilehden radiorivi asuu palstojen ulkopuolella kohdekartan
+     * yllä (omistajan taitto-ohje 9.8.2026: "radio napin voisi siirtää
+     * ennen kaupunki kartalla kohtaan"), joten se ei enää peity
+     * palstojen mukana — sivukohtainen näkyvyys ratkaistaan tässä.
+     * Sisällön täyttää paivitaMediarivit ennen tätä; maalehdessä rivi
+     * ei näy, koska siellä radio on maaosaston omalla rivillä.
+     */
+    if (this.arrivalMediaKaupunki) {
+      this.arrivalMediaKaupunki.hidden = this.tutkiTila === 'maa' || !etusivu
+        || !this.arrivalMediaKaupunki.childElementCount;
+    }
 
     // Etusivu ei ole aihesivu, joten aiheiden numerointi alkaa vasta
     // sivulta 1: sivu 1 on ensimmäinen aihe, ei toinen.

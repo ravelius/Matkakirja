@@ -8546,6 +8546,32 @@ body.vertailu-tila .pawns { display: none; }
   border-bottom-color: #16130f;
 }
 
+/*
+ * Kapealla ruudulla keskitetty päiväys ja oikean reunan liitelinkki
+ * osuivat päällekkäin (omistajan havainto 9.8.2026, Ateena
+ * iPhonella). Kun linkki on rivillä, päiväys siirtyy vasempaan
+ * reunaan ja maan nimi jää pois — sama maa lukee linkissä heti
+ * vieressä ("KREIKKA-LIITE"), joten tieto ei katoa. Ilman linkkiä
+ * rivi pysyy keskitettynä entiseen tapaan.
+ */
+@media (max-width: 699px) {
+  .lehti-alarivi:has(button.maa-linkki:not([hidden])) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  .lehti-alarivi:has(button.maa-linkki:not([hidden])) .pvm-maa { display: none; }
+
+  .lehti-alarivi:has(button.maa-linkki:not([hidden])) button.maa-linkki {
+    position: static;
+    transform: none;
+    flex: none;
+  }
+}
+
 .maakartta-kehys {
   float: right;
   width: min(58%, 340px);
@@ -9787,14 +9813,6 @@ body.maatiedot-tila .board-hint {
            graafin; ilman verkkoa rivillä lukee kuukausinormaali. -->
       <button id="arrival-saa" class="lehti-saa" type="button" hidden
               title="Koko vuoden sää"></button>
-      <!-- Kaupunkilehden oma mediarivi: maan radio ja tv. Sama sisältö
-           kuin maaosaston rivillä, mutta oma elementtinsä, koska
-           lehdet ovat v350:stä alkaen eri sivuja eikä yhtä elementtiä
-           voi näyttää kahdessa paikassa yhtä aikaa (omistajan toive
-           8.8.2026: "radio- ja videonapit näkyviin kumpaankin
-           lehteen"). Piilossa silloin, kun maaosasto on samalla
-           sivulla — ks. paivitaMediarivit. -->
-      <div id="arrival-media-kaupunki" class="maa-media" hidden></div>
       <!-- Kaupungin kuva: hento laskuri ja selailunuolet houkuttavat
            selaamaan galleriaa avaamatta suurennosta (omistajan toive). -->
       <div id="arrival-kuvakotelo" class="arrival-kuvakotelo" hidden>
@@ -9838,6 +9856,17 @@ body.maatiedot-tila .board-hint {
       </div>
      </div>
     </div>
+    <!-- Kaupunkilehden oma mediarivi: maan radio ja tv. Sama sisältö
+         kuin maaosaston rivillä, mutta oma elementtinsä, koska
+         lehdet ovat v350:stä alkaen eri sivuja eikä yhtä elementtiä
+         voi näyttää kahdessa paikassa yhtä aikaa (omistajan toive
+         8.8.2026: "radio- ja videonapit näkyviin kumpaankin
+         lehteen"). Paikka on etusivun lopussa kohdekartan yllä
+         (omistajan taitto-ohje 9.8.2026: "radio napin voisi siirtää
+         ennen kaupunki kartalla kohtaan"); palstojen ulkopuolella
+         asuvan rivin sivukohtainen näkyvyys ratkaistaan
+         naytaTutkiSivussa, sisältö paivitaMediarivitissä. -->
+    <div id="arrival-media-kaupunki" class="maa-media" hidden></div>
     <!-- Kaupungin kohdekartta lehden etusivulla (omistajan tarkennus
          7.8.2026: "kartta pitäisi olla jo ihan ensimmäisellä
          sivulla"). Piirretään vain kaupungeille, joille kartta on
@@ -116216,10 +116245,16 @@ class UI {
     }
     this.arrivalLehtiYla.hidden = !lehti;
     // Päiväysrivi kuin lehden nimiön alla: maa ja monesko matkapäivä.
+    // Maan nimi on omassa spanissaan, koska kapealla ruudulla se
+    // väistyy liitelinkin tieltä (linkki peitti päiväyksen iPhonella,
+    // omistajan havainto 9.8.2026) — linkissä lukee sama maa, joten
+    // tieto ei katoa. CSS: .pvm-maa.
     const maanNimi = this.arrivalMaaTiedot?.nimi;
-    this.arrivalLehtiPvm.textContent = lehti
-      ? [maanNimi, `${this.game.dayCount()}. matkapäivä`].filter(Boolean).join(' · ')
-      : '';
+    this.arrivalLehtiPvm.replaceChildren();
+    if (lehti) {
+      if (maanNimi) this.arrivalLehtiPvm.appendChild(html('span', 'pvm-maa', `${maanNimi} · `));
+      this.arrivalLehtiPvm.appendChild(document.createTextNode(`${this.game.dayCount()}. matkapäivä`));
+    }
     this.arrivalLehtiAla.hidden = !lehti;
     this.naytaLehtiSaa(lehti ? cityId : null);
     this.arrivalLiuskat.replaceChildren();
@@ -116289,6 +116324,19 @@ class UI {
     this.arrivalKaupunkiKartta.hidden = !karttaEtusivulla;
     this.arrivalKaupunkiKartta.replaceChildren();
     if (karttaEtusivulla) this.piirraKaupunkiKartta(this.arrivalKaupunkiKartta);
+
+    /*
+     * Kaupunkilehden radiorivi asuu palstojen ulkopuolella kohdekartan
+     * yllä (omistajan taitto-ohje 9.8.2026: "radio napin voisi siirtää
+     * ennen kaupunki kartalla kohtaan"), joten se ei enää peity
+     * palstojen mukana — sivukohtainen näkyvyys ratkaistaan tässä.
+     * Sisällön täyttää paivitaMediarivit ennen tätä; maalehdessä rivi
+     * ei näy, koska siellä radio on maaosaston omalla rivillä.
+     */
+    if (this.arrivalMediaKaupunki) {
+      this.arrivalMediaKaupunki.hidden = this.tutkiTila === 'maa' || !etusivu
+        || !this.arrivalMediaKaupunki.childElementCount;
+    }
 
     // Etusivu ei ole aihesivu, joten aiheiden numerointi alkaa vasta
     // sivulta 1: sivu 1 on ensimmäinen aihe, ei toinen.
@@ -121482,6 +121530,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 422, teksti: 'Radio kartan ylle, liitelinkki pois päiväyksen päältä' },
   { v: 421, teksti: 'Kohdekartta Ateenaan, Amsterdamiin ja Dubliniin' },
   { v: 420, teksti: 'Valokuvakysymyksen kuvat käyty läpi yksi kerrallaan' },
   { v: 419, teksti: 'Neljä kaupunkia yhden kertojan malliin äänineen' },
@@ -121983,7 +122032,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.421';
+const APP_VERSION = '2026-08-09.422';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
