@@ -1,0 +1,27 @@
+# Ajaa testit jokaiselle pull requestille, jotta punainen näkyy PR:ssä
+# ENNEN mergeä eikä vasta mainin julkaisuajossa (9.8.2026: Tromssan
+# rikkoma testi ehti mainiin ja kaatoi neljä julkaisuajoa, koska
+# testejä ei ajettu PR-vaiheessa koneellisesti).
+#
+# Käyttöönotto pakolliseksi portiksi (omistajan yksi klikkaus):
+# Settings → Branches → Branch protection rule (main) →
+# Require status checks to pass → valitse "Testit / testit".
+# Ilman sitäkin tulos näkyy PR:ssä ja mergeävä sessio tarkistaa sen.
+
+name: Testit
+
+on:
+  pull_request:
+
+jobs:
+  testit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Testit
+        run: npm test
+      - name: Kaksoisavaimet
+        run: node tools/tarkista-kaksoisavaimet.mjs

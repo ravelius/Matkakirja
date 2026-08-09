@@ -108,16 +108,17 @@ tehtävää ja kuluttamaan turhaan. Säännöt kaikille:
 
 1. Yksi looginen kokonaisuus per PR; squash-merge; commit-otsikkoon
    `(vNNN)` ja PR-numero.
-2. `git fetch origin main` JUURI ennen versionumeron valintaa —
-   sessiot julkaisevat rinnakkain ja numero on voinut kasvaa.
-   Jos toinen PR ehti silti ottaa saman numeron ennen mergeäsi,
-   nosta omasi seuraavaan vapaaseen ja päivitä CACHE, APP_VERSION
-   ja muutokset.js-rivi ennen mergeä (malli: Sonnetin v351→v352).
-3. Kaava: sw.js `CACHE` + js/main.js `APP_VERSION` samaan versioon;
-   rivi js/muutokset.js:ään (≤60 merkkiä, ei loppupistettä, uusin
-   ylin); `node --test tests/*.test.mjs`;
+2. VERSIONOSTO TYÖKALULLA, EI KÄSIN (9.8.2026 illasta alkaen):
+   `node tools/uusi-versio.mjs "Muutoslokirivi"` — se fetchaa mainin
+   ja valitsee seuraavan vapaan numeron atomisesti (lukee sekä
+   CACHE:n että muutoslokin kärjen), joten numerotuplat eivät ole
+   mahdollisia. Aja se viimeisenä ennen buildia. Jos merge viivästyy
+   ja main ehtii liikkua, aja työkalu uudelleen (se huomaa tuplan).
+3. Kaava työkalun jälkeen: `node --test tests/*.test.mjs` — LUE
+   "# pass"- ja "# fail" -rivit, älä katkaistua häntää;
    `node tools/tarkista-kaksoisavaimet.mjs`;
-   `node tools/build-standalone.mjs`.
+   `node tools/build-standalone.mjs`. PR:n Testit-tarkistuksen on
+   oltava vihreä ennen mergeä (.github/workflows/testit.yml).
 4. Pelkkä docs-muutos EI nosta versiota (välimuistia ei rasiteta).
 5. Mergen jälkeen oma haara nollataan mainiin
    (`git checkout -B <haara> origin/main` + force-with-lease).

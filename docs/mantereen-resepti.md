@@ -78,9 +78,14 @@ kuka sen tekee. Voimassa olevat roolit: docs/roolitus.md.
 5. **Generointi vasta hyväksynnän jälkeen** (luennat, aarrekuvat):
    tekstit ja tyylit omistajalle arvioon ennen kuin ääni- tai
    kuvageneraattori käynnistetään.
-6. **Kehitettävää harkintaan:** (a) versionoston pieni työkalu, joka
-   fetchaa ja bumppaa atomisesti → numerotuplat poistuvat; (b) CI
-   required check ennen mergeä → punainen main ei pääse syntymään;
-   (c) pienten erien niputus isommiksi, kun julkaisijoita on monta
-   (rebase-kitka); (d) tilannetaulun automaattisempi päivitys —
-   käsin ylläpidetty taulu laahaa julkaisutahdin perässä.
+6. **Kehityskohteiden tilanne (toteutettu 9.8. illalla):**
+   (a) TEHTY — `node tools/uusi-versio.mjs "Muutosrivi"` fetchaa
+   mainin ja valitsee numeron atomisesti; TÄMÄ ON NYT JULKAISUKAAVAN
+   VERSIONOSTOASKEL, käsin ei enää numeroida. (b) TEHTY osittain —
+   .github/workflows/testit.yml ajaa testit joka PR:lle; pakolliseksi
+   portiksi omistaja kytkee sen branch protectionista (ohje
+   työnkulkutiedostossa). (c) KÄYTÄNTÖ — pienet muutokset niputetaan
+   isompiin eriin kun julkaisijoita on monta. (d) KATETTU — työhuoneen
+   etusivu näyttää jo kymmenen tuoreinta julkaisua muutoslokista
+   automaattisesti; roolikohtainen tilannetaulu pysyy käsin
+   kirjoitettuna, koska se on tulkintaa eikä dataa.
