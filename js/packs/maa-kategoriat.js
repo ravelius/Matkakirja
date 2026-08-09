@@ -8102,8 +8102,8 @@ export const MAA_KATEGORIAT = {
       id: 'vuoret',
       nimi: 'Vuoret',
       johdanto: 'Sveitsissä vuori ei ole este vaan työmaa: sen ali porataan juna, '
-        + 'sen päällä virtaa jäätä kuin hidasta jokea, ja kylien yläpuolelle '
-        + 'muurataan kiviä lumen tielle.',
+        + 'sen päällä virtaa jäätä kuin hidasta jokea, ja sen sisään '
+        + 'louhittiin asema kolmen kilometrin korkeuteen.',
       nostot: [
         {
           otsikko: 'Juna kulkee vuoren alitse',
@@ -8142,33 +8142,35 @@ export const MAA_KATEGORIAT = {
           wiki: 'Aletschin jäätikkö',
         },
         {
-          otsikko: 'Kivikiila vyöryn tiellä',
-          aika: 'Vuosisatoja',
-          tiedosto: 'Obergesteln 05.JPG',
-          teksti: 'Vuoristokylissä lumivyöry on vanha vaara, ja siihen on '
-            + 'vastattu rakentamalla. Rinteeseen talon yläpuolelle muurataan '
-            + 'kiilan muotoinen kivimuuri, joka halkaisee vyöryn kahtia ja '
-            + 'ohjaa lumen talon ohi molemmin puolin. Uudemmissa kohteissa '
-            + 'käytetään teräsaitoja, jotka pitävät lumen paikallaan jo '
-            + 'rinteen yläosassa. Unesco otti lumivyöryvaaran hallinnan '
-            + 'aineettoman kulttuuriperinnön luetteloon vuonna 2018 — kyse on '
-            + 'tiedosta, joka siirtyy sukupolvelta toiselle.',
-          selite: 'Kiviin muurattu kiilan muotoinen suojamuuri rinteessä '
-            + 'Obergestelnin kylän yläpuolella. Kärki osoittaa ylärinteeseen, '
-            + 'ja takana kasvaa kuusimetsää.',
-          lahde: 'Paebi, Wikimedia Commons (CC BY-SA 4.0)',
+          otsikko: 'Asema louhittiin vuoren sisään',
+          aika: '1912',
+          tiedosto: '2008-07-21 Jungfraujoch railway station - 1.jpg',
+          teksti: 'Jungfraujochin rautatieasema on Euroopan korkein: se on 3 454 '
+            + 'metrin korkeudessa, eikä sinne noustu rakentamalla vaan '
+            + 'louhimalla. Rata kulkee seitsemän kilometriä tunnelia Eigerin '
+            + 'ja Mönchin vuorten sisällä, ja työ kesti kuusitoista vuotta — '
+            + 'asema avattiin 1912. Matkalla on pysäkkejä, joilla juna '
+            + 'seisahtuu ja matkustajat katsovat jäätikölle vuoreen '
+            + 'hakatuista ikkunoista. Ylhäällä ilma on ohutta, ja portaat '
+            + 'tuntuvat raskaammilta kuin alhaalla.',
+          selite: 'Junalaituri vuoren sisällä louhitussa asemahallissa. Ruskea '
+            + 'vaunu seisoo raiteella, katossa kulkee valoputkia ja seinät '
+            + 'ovat paljasta kalliota.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jungfraubahn',
         },
       ],
       tehtava: {
-        kysymys: 'Kuinka pitkä Gotthardin pohjatunneli on?',
+        kysymys: 'Kuinka korkealla Jungfraujochin rautatieasema on?',
         vaihtoehdot: [
-          '17 kilometriä',
-          '57 kilometriä',
-          '157 kilometriä',
-          '7 kilometriä',
+          '454 metrissä',
+          '1 454 metrissä',
+          '3 454 metrissä',
+          '5 454 metrissä',
         ],
-        oikea: 1,
-        fakta: 'Louhittua kiveä kertyi viiden Kheopsin pyramidin verran.',
+        oikea: 2,
+        fakta: 'Sinne ei noustu rakentamalla vaan louhimalla seitsemän '
+          + 'kilometriä tunnelia.',
       },
     },
     {
@@ -8249,27 +8251,26 @@ export const MAA_KATEGORIAT = {
     {
       id: 'ruoka',
       nimi: 'Ruoka',
-      johdanto: 'Sveitsin ruoka tulee vuorilta: juusto sulatetaan yhteiseen pataan, '
-        + 'lehmät kävelevät kesän jälkeen alas kukkaseppeleissä, ja suklaasta '
-        + 'tehtiin sileää vahingossa.',
+      johdanto: 'Sveitsin ruoka tulee vuorilta ja pellolta: perunaa raastetaan '
+        + 'pannulle kakuksi, lehmät kävelevät kesän jälkeen alas '
+        + 'kukkaseppeleissä, ja suklaasta tehtiin sileää vahingossa.',
       nostot: [
         {
-          otsikko: 'Pata, jota ei saa jättää',
-          aika: '1930-luku',
-          tiedosto: 'Full cheese fondue set - in Switzerland.JPG',
-          teksti: 'Fonduessa juusto sulatetaan valkoviinin kanssa savipataan, '
-            + 'caqueloniin, ja pata jää keskelle pöytää liekin päälle. '
-            + 'Jokainen kastaa leipäpalan pitkällä haarukalla ja pyörittää '
-            + 'sitä pohjaa myöten, jotta juusto ei pala kiinni. Säännöt ovat '
-            + 'leikkisiä mutta tosissaan: jos leipä putoaa pataan, siitä '
-            + 'seuraa pantti. Ruoka oli pitkään vuoristokylien talviruokaa, '
-            + 'ja siitä tehtiin koko maan kansallisruoka 1930-luvulla '
-            + 'juustoalan kampanjoilla.',
-          selite: 'Fonduepata liekin päällä pöydässä. Vieressä on korillinen '
-            + 'leipäkuutioita, lautasellinen suolakurkkuja ja pikkusipuleita '
-            + 'sekä pitkävartinen haarukka.',
-          lahde: 'EquatorialSky, Wikimedia Commons (public domain)',
-          wiki: 'Fondue',
+          otsikko: 'Peruna paistetaan pannun kokoiseksi kakuksi',
+          aika: 'Aamiaisella',
+          tiedosto: 'Rösti in der Pfanne.jpg',
+          teksti: 'Rösti tehdään raastetusta perunasta, joka painetaan pannulle '
+            + 'kakuksi ja paistetaan voissa kummaltakin puolelta rapeaksi. '
+            + 'Alun perin se oli Bernin seudun maanviljelijöiden aamiaista, '
+            + 'ja sitä syötiin ennen töihin lähtöä. Ruoka on niin '
+            + 'tunnusomainen, että saksan- ja ranskankielisen Sveitsin '
+            + 'välistä rajaa sanotaan leikillään Röstigrabeniksi, '
+            + 'röstihaudaksi: sen molemmin puolin äänestetään eri tavalla ja '
+            + 'puhutaan eri kieltä, ja perunakakku jäi rajan nimeksi.',
+          selite: 'Kullanruskea röstikakko mustassa valurautapannussa kaasulieden '
+            + 'päällä. Pinta on rapea ja raastetut perunasuikaleet erottuvat '
+            + 'toisistaan.',
+          lahde: 'Poupou l\'quourouce, Wikimedia Commons (CC BY 4.0)',
         },
         {
           otsikko: 'Lehmät tulevat alas kukissa',
@@ -8569,27 +8570,27 @@ export const MAA_KATEGORIAT = {
     {
       id: 'arki',
       nimi: 'Arki',
-      johdanto: 'Norjalaisessa arjessa juusto on karamellinruskeaa, sukset ovat '
-        + 'lapsen ensimmäinen liikenneväline ja katolla kasvaa ruoho, joka '
-        + 'pitää sateen ulkona.',
+      johdanto: 'Norjalaisessa arjessa eväsleipä kääritään paperiin jo aamulla, '
+        + 'sukset ovat lapsen ensimmäinen liikenneväline ja katolla kasvaa '
+        + 'ruoho, joka pitää sateen ulkona.',
       nostot: [
         {
-          otsikko: 'Juusto, joka maistuu karamellilta',
-          aika: '1863',
-          tiedosto: 'Brown cheese sandwiches and coffee..jpg',
-          teksti: 'Brunost ei ole tavallista juustoa vaan keitettyä heraa. Hera '
-            + 'on juustonteon sivutuote, ja kun sitä keitetään tunteja, '
-            + 'maitosokeri ruskistuu karamelliksi ja massa muuttuu ruskeaksi '
-            + 'ja makeaksi. Kertomuksen mukaan karjakko Anne Hov keksi 1863 '
-            + 'lisätä joukkoon kermaa, jolloin juustosta tuli rasvaisempaa ja '
-            + 'arvokkaampaa — ja koko laakso rikastui. Juusto leikataan '
-            + 'ohuiksi lastuiksi juustohöylällä, joka on sekin norjalainen '
-            + 'keksintö vuodelta 1925.',
-          selite: 'Kaksi voileipää, joiden päällä on paksuja ruskean juuston '
-            + 'lastuja, ja vieressä sininen kahvimuki. Juusto on väriltään '
-            + 'vaalean karamellinruskeaa.',
-          lahde: 'Kristian Bjornard, Wikimedia Commons (CC BY-SA 2.0)',
-          wiki: 'Brunost',
+          otsikko: 'Eväsleipä kääritään paperiin',
+          aika: 'Joka aamu',
+          tiedosto: 'Sandwich with egg.jpg',
+          teksti: 'Matpakke on norjalainen eväspaketti: muutama avoin voileipä, '
+            + 'jotka kääritään voipaperiin ja otetaan mukaan kouluun tai '
+            + 'töihin. Viipaleiden väliin pannaan ohut paperi, jottei '
+            + 'päällinen tartu seuraavaan leipään — sitä varten on oma '
+            + 'tuotteensa, mellomleggspapir. Tapa syntyi 1900-luvun alussa, '
+            + 'kun kouluille haluttiin halpa ja terveellinen ruokailu, eikä '
+            + 'koulussa ole vieläkään yleensä tarjolla lämmintä ruokaa. '
+            + 'Päällisenä on tavallisimmin juustoa, maksamakkaraa tai '
+            + 'kananmunaa.',
+          selite: 'Avoin voileipä keitetyn kananmunan viipaleilla voipaperin '
+            + 'päällä. Paperi on rypistynyt auki, ja leivän alla näkyy toinen '
+            + 'paperiarkki.',
+          lahde: 'Kristin, Wikimedia Commons (CC BY 2.0)',
         },
         {
           otsikko: 'Mäki, jossa on hypätty yli sata vuotta',
@@ -8628,15 +8629,15 @@ export const MAA_KATEGORIAT = {
         },
       ],
       tehtava: {
-        kysymys: 'Mistä ruskea norjalainen juusto keitetään?',
+        kysymys: 'Minä vuonna Holmenkollenissa hypättiin ensimmäisen kerran?',
         vaihtoehdot: [
-          'Kermasta',
-          'Juustonteon herasta',
-          'Hapatetusta piimästä',
-          'Suolatusta voista',
+          '1792',
+          '1892',
+          '1932',
+          '1992',
         ],
         oikea: 1,
-        fakta: 'Keittäessä maitosokeri ruskistuu karamelliksi.',
+        fakta: 'Mäki on rakennettu sen jälkeen uudelleen kahdeksantoista kertaa.',
       },
     },
     {
@@ -8895,27 +8896,26 @@ export const MAA_KATEGORIAT = {
     {
       id: 'ruoka',
       nimi: 'Ruoka',
-      johdanto: 'Tanskalainen ruoka on kadulta ja lounaspöydästä: voileipä jota '
-        + 'syödään veitsellä ja haarukalla, makkarakärry kadunkulmassa ja '
-        + 'leivos, joka ei ole sieltä mistä sen nimi kertoo.',
+      johdanto: 'Tanskalainen ruoka on arkista ja kadulta: pyörylöitä, jotka '
+        + 'jokainen perhe tekee omalla tavallaan, makkarakärry kadunkulmassa '
+        + 'ja leivos, joka ei ole sieltä mistä sen nimi kertoo.',
       nostot: [
         {
-          otsikko: 'Voileipä syödään haarukalla',
-          aika: 'Lounasaikaan',
-          tiedosto: 'Smørrebrød 2.jpg',
-          teksti: 'Smørrebrød on avoin voileipä tummalla ruisleivällä, ja se on '
-            + 'lounas eikä välipala: leipä syödään veitsellä ja haarukalla '
-            + 'lautaselta. Päällyste ladotaan huolella niin, että leipä '
-            + 'peittyy kokonaan — silakkaa, paistettua kalaa, maksapasteijaa, '
-            + 'katkarapuja tai rullamakkaraa kurkun ja sipulin kanssa. '
-            + 'Järjestykselläkin on sääntönsä: kala syödään ensin, sitten '
-            + 'liha ja lopuksi juusto. Ravintoloissa lista voi olla pitkä '
-            + 'kuin kirja.',
-          selite: 'Avoin voileipä pahvilautasella, jonka reunassa kiertää Tanskan '
-            + 'lippuja. Päällä on rullamakkaraa, kurkkuviipaleita, tomaattia '
-            + 'ja sipulirenkaita.',
-          lahde: 'Nillerdk, Wikimedia Commons (CC BY 3.0)',
-          wiki: 'Smørrebrød',
+          otsikko: 'Pyörylät, joita jokainen tekee omalla tavallaan',
+          aika: 'Arkena',
+          tiedosto: 'Frikadeller, kartoffelsalat, spejlæg og kaffe (6318132687).jpg',
+          teksti: 'Frikadelli on tanskalaisen arkiruoan perusta: jauhelihasta, '
+            + 'munasta ja korppujauhosta muotoillaan soikea pyörylä ja '
+            + 'paistetaan pannulla voissa litteäksi — ei siis pyöreäksi '
+            + 'lihapullaksi vaan lättänäksi. Lisäkkeeksi tulee perunaa, '
+            + 'ruskeaa kastiketta, punakaalia tai perunasalaattia, ja kylmänä '
+            + 'frikadelli päätyy leivän päälle. Reseptistä ei ole yhtä oikeaa '
+            + 'versiota: jokainen perhe tekee omansa, ja siitä kiistellään '
+            + 'sukujuhlissa hyväntahtoisesti.',
+          selite: 'Sinisellä lautasella kaksi ruskistunutta frikadellia, '
+            + 'perunasalaattia ja paistettu kananmuna. Vieressä on kahvikuppi '
+            + 'ja haarukka.',
+          lahde: 'cyclonebill, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           otsikko: 'Makkarakärry kadunkulmassa',
@@ -11796,9 +11796,9 @@ export const MAA_KATEGORIAT = {
     {
       id: 'tavat',
       nimi: 'Tavat',
-      johdanto: 'Liettuassa tavat kertovat sitkeydestä: kukkula, joka nousi '
-        + 'kolmesti uudelleen, kaupunginosa jolla on oma perustuslaki, ja '
-        + 'peli jota katsotaan kuin juhlapyhää.',
+      johdanto: 'Liettuassa tavat kertovat sitkeydestä ja juhlasta: kukkula, joka '
+        + 'nousi kolmesti uudelleen, kakku joka paistetaan avotulella '
+        + 'pyörittäen, ja peli jota katsotaan kuin juhlapyhää.',
       nostot: [
         {
           otsikko: 'Kukkula, jolle jokainen tuo ristin',
@@ -11819,20 +11819,21 @@ export const MAA_KATEGORIAT = {
           wiki: 'Ristien kukkula',
         },
         {
-          otsikko: 'Kaupunginosa, jolla on oma perustuslaki',
-          aika: '1997',
-          tiedosto: 'The Angel of Užupis Vilnius (5993391627).jpg',
-          teksti: 'Vilnan Užupis oli pitkään rapistunut kortteli joen takana, '
-            + 'kunnes sinne muuttaneet taiteilijat julistivat sen 1. '
-            + 'huhtikuuta 1997 omaksi tasavallakseen. Sillä on lippu, '
-            + 'presidentti ja perustuslaki, joka on kiinnitetty seinään '
-            + 'peililevyinä kymmenillä kielillä. Pykälät ovat leikkisiä mutta '
-            + 'lämpimiä: jokaisella on oikeus olla onnellinen, jokaisella on '
-            + 'oikeus olla onneton, ja koiralla on oikeus olla koira. Torilla '
-            + 'seisoo enkelipatsas vuodesta 2002.',
-          selite: 'Enkelipatsas seisoo korkean pylvään päässä pienellä torilla. '
-            + 'Ympärillä on matalia vanhoja taloja ja mukulakivetys.',
-          lahde: 'FaceMePLS, Wikimedia Commons (CC BY 2.0)',
+          otsikko: 'Kakku paistetaan avotulella pyörittäen',
+          aika: 'Häissä',
+          tiedosto: 'Šakotis display at Kaunas Central Market (Urmas) 2025.jpg',
+          teksti: 'Šakotis on juhlakakku, jota ei paisteta uunissa vaan avotulen '
+            + 'päällä pyörivän vartaan varassa. Ohutta taikinaa valutetaan '
+            + 'vartaalle kerros kerrokselta, ja joka kerroksesta jää '
+            + 'roikkumaan piikkejä — siitä nimi, joka tarkoittaa oksaista. '
+            + 'Valmis kakku voi olla metrin korkuinen ja painaa kymmeniä '
+            + 'kiloja. Sitä tarjotaan häissä ja isoissa juhlissa, ja '
+            + 'leikkaaminen on oma taitonsa: kakku sahataan poikittain '
+            + 'renkaiksi, jotta jokaiseen palaan tulee piikkejä.',
+          selite: 'Šakotis-kakkuja myyntipöydällä torilla. Vaaleat kartiomaiset '
+            + 'kakut ovat täynnä ulos työntyviä piikkejä ja ne on '
+            + 'käärittypakkauksiin.',
+          lahde: 'Bdx, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Peli, jota katsotaan kuin juhlapyhää',
