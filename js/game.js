@@ -3,6 +3,7 @@
 import { FLIGHT_PRICE, buildBoard, findMoves, posKey, reachableCities } from './rules.js';
 import { createTokenPile } from './tokens.js';
 import { packById, sourceList } from './pack.js';
+import { TARINAKAARI, KAARI_LAUDAT } from './packs/tarinakaari.js';
 import { laattamantereet, linssiKaupungista, myonna, tarkistaKynnys } from './linssit/omistus.js';
 
 export const START_MONEY = 300;
@@ -200,6 +201,11 @@ export class Game {
     this.recordNoted = false;
     this.recordMark = null;
     this.usedQuestions = new Set();
+    /*
+     * Tarinakaaren käytetyt kohtaamiset (pack:city). Ei tallenneta:
+     * uusi istunto saa kohtaamisen uudelleen, kuten UI:n tervehdykset.
+     */
+    this.kaariKaytetty = new Set();
     this.lastPath = null;
     this.winner = null;
     this.turnCount = 1;
@@ -1021,6 +1027,17 @@ export class Game {
   }
 
   /**
+   * Tarinakaaren kohde tälle kaupungille, jos kaari on tällä laudalla
+   * käytössä eikä kohtaamista ole vielä käytetty tässä istunnossa.
+   */
+  kaariTarina(cityId) {
+    if (!KAARI_LAUDAT.has(this.pack.id)) return null;
+    if (this.kaariKaytetty.has(`${this.pack.id}:${cityId}`)) return null;
+    const kohde = TARINAKAARI[cityId];
+    return kohde?.kysymys ? kohde : null;
+  }
+
+  /**
    * Avaa pysähdyksen: monivalinta, isoisän väittämä, karttakysymys tai
    * tapahtumakortti. Oikea vastaus kääntää laatan ilmaiseksi.
    * `hard: true` arpoo vaikean kysymyksen, josta oikein vastattaessa saa
@@ -1047,7 +1064,15 @@ export class Game {
       return { ok: false, error: 'Täällä ei ole vaikeita kysymyksiä' };
     }
 
-    const muoto = hard ? 'quiz' : (form ?? this.pickForm(city.id));
+    /*
+     * Tarinakaari (omistajan tilaus 9.8.2026: paketti suoraan peliin):
+     * kaupungin ensimmäinen aarrepysähdys on KOHTAAMINEN, jossa
+     * henkilö esittää isoisän jättämän kysymyksen. Pari on kirjoitettu
+     * yhteen, joten muoto ei arvo korttia ohi eikä kysymystä arvota
+     * pankista — kaaren jälkeen kaupunki palaa tavalliseen arvontaan.
+     */
+    const kaari = hard ? null : this.kaariTarina(city.id);
+    const muoto = (hard || kaari) ? 'quiz' : (form ?? this.pickForm(city.id));
     this.lastForm = muoto;
     if (muoto === 'claim') return this.openClaim(city);
     if (muoto === 'photo') return this.openPhotoQuestion(city);
@@ -1055,11 +1080,23 @@ export class Game {
     if (muoto === 'event') return this.openEvent(city);
 
     const difficulty = hard ? 'hard' : this.player.quizLevel;
-    const question = this.pickQuestion(city.id, difficulty);
+    let question;
+    if (kaari) {
+      this.kaariKaytetty.add(`${this.pack.id}:${city.id}`);
+      question = {
+        q: kaari.kysymys.q,
+        options: kaari.kysymys.vaihtoehdot,
+        correct: kaari.kysymys.oikea,
+        fact: kaari.kysymys.fakta,
+      };
+    } else {
+      question = this.pickQuestion(city.id, difficulty);
+    }
     const order = this.shuffledOrder(question.options.length);
     this.quiz = {
       cityId: city.id,
       hard,
+      kaari: Boolean(kaari),
       frame: this.pickAsker(city),
       question: question.q,
       fact: question.fact,
