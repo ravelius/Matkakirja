@@ -3158,4 +3158,690 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  lissabon: {
+    'Glórian köysirata': {
+      aika: '1885',
+      teksti: 'Osa Lissabonin kaduista nousee niin jyrkkinä mäkinä, että '
+          + 'niitä olisi työlästä kiivetä jalan. Siksi kaupunkiin '
+          + 'rakennettiin hassunhauska kulkuneuvo, joka on osittain '
+          + 'raitiovaunu ja osittain hissi - Glórian köysirata. Se '
+          + 'avattiin vuonna 1885, ja se vie matkustajat '
+          + 'Restauradoresin aukiolta ylös Bairro Alton kaupunginosaan.'
+        + '\n\n'
+        + 'Matka on lyhyt, vain 275 metriä, mutta rinne on niin '
+          + 'jyrkkä - lähes 18 astetta - että matkaan kuluu silti pari '
+          + 'minuuttia. Aluksi pieniä vaunuja liikutti veden '
+          + 'painovoima, sitten höyry, ja lopulta 1910-luvulla rata sai '
+          + 'sähkömoottorit.'
+        + '\n\n'
+        + 'Radan suunnitteli insinööri Raoul Mesnier du Ponsard, ja '
+          + 'saksalaisessa tehtaassa rakennettuihin keltaisiin '
+          + 'vaunuihin mahtuu kerralla 42 matkustajaa ja kuljettaja. '
+          + 'Rata on säilynyt niin hyvin alkuperäisessä asussaan, että '
+          + 'siitä tehtiin Portugalin kansallinen muistomerkki vuonna '
+          + '2002.',
+      kuvat: [
+        {
+          tiedosto: 'Elevador da Glória, Lisbon, 20250604 1603 9346.jpg',
+          selite: 'Keltainen Glórian köysiraitiovaunu (Elevador da Glória) '
+            + 'laskeutuu kapeaa mäkikujaa Lissabonin Bairro Alton '
+            + 'kaupunginosassa aurinkoisessa säässä.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Rossio: {
+      aika: '1755–1874',
+      teksti: 'Rossio on yksi Lissabonin vanhimmista aukioista - täällä '
+          + 'on kokoonnuttu jo keskiajalta asti. Nimi "rossio" '
+          + 'tarkoittaa suunnilleen "yhteismaata", ja aikoinaan '
+          + 'aukiolla pidettiin jopa hevosmarkkinoita. Noin vuonna 1450 '
+          + 'aukion laidalle nousi komea palatsi, josta tuli myöhemmin '
+          + 'pelätyn inkvisition päämaja - ja aukiolla poltettiin '
+          + 'ihmisiä roviolla jo vuonna 1540.'
+        + '\n\n'
+        + 'Vuoden 1755 valtava maanjäristys tuhosi lähes kaiken '
+          + 'Rossion ympäriltä. Aukio rakennettiin uudelleen kauniiseen '
+          + 'pombalilaiseen tyyliin, ja sen keskelle pystytettiin '
+          + 'vuonna 1874 korkea pylväs, jonka huipulla seisoo kuningas '
+          + 'Pedro IV:n patsas.'
+        + '\n\n'
+        + 'Aukion laidalla kohoaa 1840-luvulla rakennettu '
+          + 'kansallisteatteri, ja aivan vieressä sijaitsee vuosina '
+          + '1886-1887 valmistunut rautatieasema, jonka sisäänkäynnit '
+          + 'on koristeltu näyttävillä hevosenkengän muotoisilla '
+          + 'kaarilla.',
+      kuvat: [
+        {
+          tiedosto: 'Rossio - Praca Dom Pedro IV.JPG',
+          selite: 'Ilmakuva Rossion aukiosta (Praça Dom Pedro IV): keskellä '
+            + 'Dom Pedro IV:n pylväspatsas ja suihkulähde, aaltokuvioinen '
+            + 'kivilattia edessä ja Kansallisteatteri D. Maria II '
+            + 'vaaleankeltaisine julkisivuineen taustalla, kirkas sininen '
+            + 'taivas.',
+          lahde: 'Szilas, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Rossio Lissabon September 2014.jpg',
+          selite: 'Läheiskuva Rossion pylväspatsaasta alhaalta ylöspäin '
+            + 'kuvattuna kirkkaan sinistä taivasta vasten, '
+            + 'Kansallisteatteri D. Maria II erottuu patsaan takana.',
+          lahde: 'Felix König, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'São Jorgen linna': {
+      aika: '1147',
+      teksti: 'São Jorgen linna kohoaa Lissabonin korkeimmalla '
+          + 'kukkulalla, ja paikalla on linnoituksia ollut jo yli 2000 '
+          + 'vuotta. Nykyinen linna sai nimensä ja merkityksensä vuonna '
+          + '1147, kun kristityt joukot valtasivat sen maureilta pitkän '
+          + 'piirityksen jälkeen.'
+        + '\n\n'
+        + 'Legendan mukaan ritari nimeltä Martim Moniz uhrasi '
+          + 'henkensä pitämällä linnan porttia auki omalla ruumiillaan, '
+          + 'jotta kristittyjen sotilaat pääsivät sisään. Myöhemmin '
+          + 'linnaa käytettiin sekä kuninkaiden palatsina että '
+          + 'Portugalin tärkeimpien asiakirjojen arkistona.'
+        + '\n\n'
+        + 'Vuoden 1755 maanjäristys vaurioitti linnaa pahoin, ja se '
+          + 'kunnostettiin nykyiseen kuntoonsa vasta 1930-luvulla. '
+          + 'Yhdestä torneista, "Odysseuksen tornista", löytyy '
+          + 'erikoinen kamera obscura -laite, jonka avulla voi katsella '
+          + 'koko kaupunkia kuin taikapeilistä.',
+      kuvat: [
+        {
+          tiedosto: 'Lisbon Castelo de São Jorge BW 2018-10-03 11-13-09.jpg',
+          selite: 'São Jorgen linnan sisäänkäyntitorni, hammastettu muuri ja '
+            + 'kaarisilta kirkkaan sinistä taivasta vasten; sillalla '
+            + 'muutama kävijä, ei ruuhkaa.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Castelo de São Jorge, Lisbon, 20250604 1706 9397.jpg',
+          selite: 'Läheiskuva linnan tornista, jonka huipulla liehuu '
+            + 'Portugalin lippu; kivinen polku ja oliivipuita johtavat '
+            + 'kohti porttia kirkkaassa auringossa.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tuomiokirkko: {
+      aika: '1147',
+      teksti: 'Lissabonin tuomiokirkko, jota paikalliset kutsuvat '
+          + 'lyhyesti nimellä Sé, on kaupungin vanhin kirkko. Sen '
+          + 'rakentaminen aloitettiin heti vuonna 1147, kun kaupunki '
+          + 'oli vasta vallattu maureilta - kirkko nousi suoraan '
+          + 'entisen suuren moskeijan paikalle.'
+        + '\n\n'
+        + 'Kirkko muistuttaa hieman pientä linnoitusta: sen paksut '
+          + 'kivimuurit, hammastetut muurinharjat ja tornit kertovat '
+          + 'ajasta, jolloin Lissabonia piti puolustaa hyökkääjiltä. '
+          + 'Vuosisatojen varrella kirkkoon on lisätty osia monessa eri '
+          + 'tyylissä, joten siellä näkyy sekä romaniikkaa, goottia '
+          + 'että myöhempiä koristeellisempia tyylejä.'
+        + '\n\n'
+        + 'Kirkko selvisi hengissä vuoden 1755 suuresta '
+          + 'maanjäristyksestä, vaikka moni muu Lissabonin rakennus '
+          + 'tuhoutui. Lattian alta on kaivettu esiin roomalaisten ja '
+          + 'visigoottien jättämiä muinaisjäännöksiä, ja alttarilla '
+          + 'säilytetään pyhän Vincentin, Lissabonin '
+          + 'suojeluspyhimyksen, pyhäinjäännöksiä.',
+      kuvat: [
+        {
+          tiedosto: 'Sé de Lisboa • Santa Maria Maior de Lisboa • Lisbon Cathedral (50661841878).jpg',
+          selite: 'Lissabonin tuomiokirkon (Sé) kaksoistornit ja pyöreä '
+            + 'ruusuikkuna alhaalta ylöspäin kuvattuna kirkkaan sinistä '
+            + 'taivasta vasten.',
+          lahde: 'Sonse, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kauppatori: {
+      aika: '1755–1775',
+      teksti: 'Kauppatori eli Praça do Comércio on yksi Euroopan '
+          + 'suurimmista aukioista - se on lähes neliön muotoinen ja '
+          + 'mittaa 175 kertaa 175 metriä. Paikalliset kutsuvat sitä '
+          + 'myös nimellä Terreiro do Paço, "palatsin piha", sillä '
+          + 'täällä sijaitsi ennen kuninkaallinen Ribeiran palatsi, '
+          + 'jonka kirjastossa oli yli 200 000 kirjaa.'
+        + '\n\n'
+        + 'Vuoden 1755 maanjäristys ja sitä seurannut hyökyaalto '
+          + 'tuhosivat palatsin täysin. Tilalle rakennettiin avara, '
+          + 'jokea vasten avautuva aukio, ja vuonna 1775 sen keskelle '
+          + 'pystytettiin komea ratsastajapatsas kuningas Joosef I:stä.'
+        + '\n\n'
+        + 'Aukion läpi kulkee kaupungin pääkatu vuosina 1873-1875 '
+          + 'valmistuneen suuren riemukaaren ali. Aukiolla on nähty '
+          + 'myös synkkiä hetkiä: vuonna 1908 kuningas Kaarle I '
+          + 'murhattiin täällä. Yhä tänäänkin aukion laidalla toimii '
+          + 'kahvila nimeltä Martinho da Arcada, joka on avannut ovensa '
+          + 'jo vuonna 1782.',
+      kuvat: [
+        {
+          tiedosto: 'Lissabon - Praça do Comércio - King Joseph Statue.jpg',
+          selite: 'Kuningas Joosef I:n ratsastajapatsas Kauppatorilla (Praça '
+            + 'do Comércio), ympärillä keltaiset pylväikkörakennukset ja '
+            + 'punaiset raitiovaunut, kirkas sininen taivas.',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Lisbon Praça do Comércio BW 2018-10-08 17-40-44.jpg',
+          selite: 'Rua Augustan riemukaari Kauppatorin pohjoislaidalla, '
+            + 'koristeltu patsain ja kirjoituksin, kirkas sininen taivas '
+            + 'ja muutama ohikulkija.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kansallispanteoni: {
+      aika: '1681–1966',
+      teksti: 'Kansallispanteoni on komea kupolikirkko Lissabonin Alfaman '
+          + 'kaupunginosassa. Se on Portugalin tärkeimpien henkilöiden '
+          + 'viimeinen lepopaikka - täältä löytyvät muun muassa '
+          + 'runoilija Luís de Camõesin ja kuuluisan fado-laulajan '
+          + 'Amália Rodriguesin haudat sekä jalkapallotähti Eusébion '
+          + 'muistomerkki.'
+        + '\n\n'
+        + 'Rakennus oli alun perin Pyhän Engrácian kirkko, ja sen '
+          + 'rakentaminen aloitettiin vuonna 1681. Työ kesti niin '
+          + 'uskomattoman kauan - peräti 285 vuotta! - että '
+          + 'portugalilaiset alkoivat käyttää sanontaa "Pyhän Engrácian '
+          + 'työmaa" tarkoittamaan mitä tahansa hanketta, joka ei tunnu '
+          + 'koskaan valmistuvan.'
+        + '\n\n'
+        + 'Rakennus valmistui lopulta vasta vuonna 1966, ja pian sen '
+          + 'jälkeen siitä tehtiin kansallispanteoni, jonne haudataan '
+          + 'maan merkkihenkilöitä. Kupolin huipulle voi kiivetä '
+          + 'katsomaan upeaa näkymää yli koko Lissabonin kattojen.',
+      kuvat: [
+        {
+          tiedosto: 'Panteão Nacional, Lisboa, Portugal (55075210304).jpg',
+          selite: 'Ilmakuva Kansallispanteonin (Panteão Nacional) valkoisesta '
+            + 'kupolikirkosta, taustalla Tagus-joki ja Alfaman '
+            + 'punakattoiset talot kirkkaassa kesäauringossa.',
+          lahde: 'Pom\', Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  barcelona: {
+    'Sagrada Família': {
+      aika: '1882–',
+      teksti: 'Sagrada Família on Barcelonan valtava, yhä keskeneräinen '
+          + 'kirkko, jota nerokas arkkitehti Antoni Gaudí alkoi '
+          + 'suunnitella 1880-luvulla. Rakennustyöt käynnistyivät '
+          + 'vuonna 1882, ja Gaudí otti hankkeen johtoonsa jo '
+          + 'seuraavana vuonna. Hän omisti kirkolle lopun elämästään, '
+          + 'mutta kun hän kuoli vuonna 1926, rakennuksesta oli '
+          + 'valmiina vasta pieni osa.'
+        + '\n\n'
+        + 'Kirkkoon on suunniteltu peräti 18 tornia, ja korkein '
+          + 'niistä kohoaa yli 172 metriin – tämä tekee Sagrada '
+          + 'Famíliasta maailman korkeimman kirkkorakennuksen. Sisällä '
+          + 'valtavat kivipilarit haarautuvat katossa kuin puiden '
+          + 'oksat, ja kirkon eri julkisivut kertovat Jeesuksen '
+          + 'elämästä aivan eri tavoin: toinen riemuiten ja '
+          + 'koristeellisesti, toinen karun pelkistetysti.'
+        + '\n\n'
+        + 'Kirkkoa rahoitetaan yhä pelkillä pääsylippu- ja '
+          + 'lahjoitusrahoilla, ei lainkaan valtion tuella, ja '
+          + 'rakentaminen on jatkunut jo yli 140 vuotta. Silti Sagrada '
+          + 'Família houkuttelee vuosittain noin 5 miljoonaa kävijää '
+          + 'ihailemaan tätä keskeneräistä mestariteosta, jonka '
+          + 'arvioidaan valmistuvan vasta lähivuosina.',
+      lainaus: {
+        teksti: 'Taidehistoriasta tuskin löytyy toista kirkkoa, joka olisi '
+          + 'tämän kaltainen.',
+        lahde: 'Taidekriitikko Rainer Zerbst',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Sagrada Familia 8-12-21 (1).jpg',
+          selite: 'Sagrada Família -basilika iltapäivän auringossa, edessä '
+            + 'Gaudín puiston lampi ja puut, tornien huipulla näkyy vielä '
+            + 'pieniä rakennusnostureita.',
+          lahde: 'Canaan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Casa Batlló': {
+      aika: '1904–1906',
+      teksti: 'Casa Batlló on yksi Barcelonan tunnetuimmista taloista, ja '
+          + 'senkin takana on Antoni Gaudí. Talo oli rakennettu jo '
+          + 'vuonna 1877, mutta Gaudí muutti sen lähes '
+          + 'tunnistamattomaksi vuosina 1904–1906 varakkaan tehtailijan '
+          + 'tilauksesta. Lopputulos ei muistuttanut enää mitään '
+          + 'tavallista kerrostaloa.'
+        + '\n\n'
+        + 'Talon julkisivu on kuin mosaiikki lasista ja keramiikasta, '
+          + 'ja sen värit vaihtuvat kultaisen oranssista syvän siniseen '
+          + '– moni on verrannut sitä taidemaalari Monet\'n '
+          + 'lammikkomaisemiin. Vielä hurjempi on katto: sen pyöreät, '
+          + 'värikylläiset kattotiilet muistuttavat lohikäärmeen '
+          + 'selkäpiitä, ja katolla kohoava risti näyttää ritarin '
+          + 'keihäältä, joka on iskeytynyt lohikäärmeen selkään.'
+        + '\n\n'
+        + 'Sisällä taloa kannattelee kymmeniä kaarevia puupalkkeja, '
+          + 'jotka näyttävät valtavan eläimen kylkiluilta, ja keskellä '
+          + 'rakennusta on siniseksi laatoitettu valokuilu, joka tuo '
+          + 'päivänvaloa aina alimpiin kerroksiin asti. Talon '
+          + 'lempinimikin, \'Luiden talo\', kertoo sen erikoisesta, '
+          + 'melkein elävältä tuntuvasta muodosta. Nykyään talossa voi '
+          + 'vierailla museona, ja se on ollut Unescon '
+          + 'maailmanperintökohde vuodesta 2005.',
+      kuvat: [
+        {
+          tiedosto: 'Gaudi\'s Casa Batllo, Barcelona, Spain (IMG 5380a).jpg',
+          selite: 'Casa Batllón luumaisin parvekkein ja värikkäin '
+            + 'mosaiikkilaatoin koristeltu julkisivu selkeässä '
+            + 'päivänvalossa.',
+          lahde: 'Frank K., Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Casa Batlló 01.jpg',
+          selite: 'Casa Batllón kuuluisa lohikäärmeen selkää muistuttava '
+            + 'kattoharja mosaiikkilaatoin sinistä taivasta vasten.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Arc de Triomf': {
+      aika: '1888',
+      teksti: 'Arc de Triomf ei ole Pariisin kuuluisan Riemukaaren '
+          + 'pikkuveli, vaan aivan oma, punaisesta tiilestä muurattu '
+          + 'porttinsa Barcelonassa. Arkkitehti Josep Vilaseca '
+          + 'suunnitteli sen vuonna 1888 pidetyn maailmannäyttelyn '
+          + 'pääsisäänkäynniksi, ja kaari otettiin käyttöön juuri ennen '
+          + 'näyttelyn avajaisia.'
+        + '\n\n'
+        + 'Kaari on lähes 30 metriä korkea ja melkein yhtä leveä, ja '
+          + 'se on koristeltu näyttävillä kivireliefeillä. Etusivun '
+          + 'veistos esittää Barcelonan toivottamassa maailman kansoja '
+          + 'tervetulleiksi, ja kaaren molemmilla pilareilla kohoaa '
+          + 'kivestä veistettyjä lepakoita, jotka olivat aikoinaan '
+          + 'kuningas Jaume I:n vaakunaeläimiä.'
+        + '\n\n'
+        + 'Kaaren yläreunaa kiertää laakeriseppele, johon on '
+          + 'kaiverrettu peräti 49 silloisen espanjalaisen maakunnan '
+          + 'vaakunat. Toisin kuin monet muut riemukaaret, tätä ei '
+          + 'rakennettu muistuttamaan sodasta tai voitosta, vaan se oli '
+          + 'iloinen tervetulotoivotus näyttelyvieraille.',
+      kuvat: [
+        {
+          tiedosto: 'Barcelona Arc de Triomf.jpg',
+          selite: 'Arc de Triomf -riemukaari varhaisaamun kultaisessa '
+            + 'valossa, tyhjä palmureunustainen promenadi johtaa suoraan '
+            + 'sen läpi.',
+          lahde: 'Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Musiikkipalatsi: {
+      aika: '1905–1908',
+      teksti: 'Palau de la Música Catalana eli Musiikkipalatsi on '
+          + 'Barcelonan konserttitalo, jonka arkkitehti Lluís Domènech '
+          + 'i Montaner suunnitteli 1900-luvun alussa. Rakennus '
+          + 'valmistui vuosina 1905–1908, ja se avattiin yleisölle '
+          + 'helmikuussa vuonna 1908.'
+        + '\n\n'
+        + 'Konserttisalin katossa roikkuu jättimäinen, ylösalaisin '
+          + 'oleva lasimaalattu kupoli, joka hehkuu kullan- ja '
+          + 'sinisenvärisenä päivänvalon osuessa siihen. Salin seinillä '
+          + 'on 18 muusaa esittävää veistosta, joiden alaosa on '
+          + 'koristeltu värikkäällä mosaiikilla, ja katossa liitää '
+          + 'siivekkäitä hevosia antiikin Pegasos-tarun hengessä.'
+        + '\n\n'
+        + 'Rakennuksen julkisivu on täynnä värikkäitä laattoja, '
+          + 'punatiiltä ja rautakoristeita, ja konserttisaliin mahtuu '
+          + 'jopa noin 2 200 kuulijaa. Musiikkipalatsi on ollut Unescon '
+          + 'maailmanperintökohde vuodesta 1997, ja siellä vierailee '
+          + 'vuosittain yli puoli miljoonaa ihmistä.',
+      lainaus: {
+        teksti: 'Tämä on yksi maailman kauneimmista konserttisaleista – '
+          + 'ilman liioittelua.',
+        lahde: 'Arkkitehti David Mackay',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Palau de la Música Catalana-8.jpg',
+          selite: 'Palau de la Música Catalanan koristeellinen kulmatorni '
+            + 'pylväineen, patsaineen ja mosaiikkikupolein aurinkoisena '
+            + 'päivänä.',
+          lahde: 'bep, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Palau de la Música Catalana-Palace of Catalan Music (Image 2).jpg',
+          selite: 'Palau de la Música Catalanan konserttisalin sisätila, jota '
+            + 'hallitsee kuuluisa käänteinen lasimosaiikkinen '
+            + 'kattoikkuna.',
+          lahde: 'Tudoi61, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Boquerian kauppahalli': {
+      aika: '1840–1853',
+      teksti: 'Boquerian kauppahalli on yksi Euroopan vanhimmista ja '
+          + 'vilkkaimmista toreista, ja sen juuret ulottuvat todella '
+          + 'kauas: jo vuonna 1217 kaupunginportin lähellä myytiin '
+          + 'lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli '
+          + 'lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja.'
+        + '\n\n'
+        + 'Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se '
+          + 'avattiin virallisesti vuonna 1853. Myöhemmin halliin '
+          + 'rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan '
+          + 'päälle nostettiin näyttävä metallikatto, joka suojaa '
+          + 'myyjiä ja ostajia edelleen tänäkin päivänä.'
+        + '\n\n'
+        + 'Torin nimi Boqueria juontuu luultavasti katalaanin sanasta '
+          + '\'boc\', joka tarkoittaa vuohta – ennen vanhaan siellä '
+          + 'nimittäin myytiin paljon vuohenlihaa. Nykyään hallin sadat '
+          + 'myyntikojut pursuavat tuoreita hedelmiä, kaloja, lihaa ja '
+          + 'herkullisia makeisia, ja se on yksi Barcelonan '
+          + 'suosituimmista käyntikohteista niin paikallisille kuin '
+          + 'matkailijoillekin.',
+      kuvat: [
+        {
+          tiedosto: 'Mercat de la Boqueria 01.jpg',
+          selite: 'Boquerian kauppahallin rautainen ja lasimaalauksin '
+            + 'koristeltu sisäänkäyntiportti kyltteineen iltapäivän '
+            + 'valossa, katu täynnä kävelijöitä.',
+          lahde: 'Nicholas Gemini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kolumbuksen patsas': {
+      aika: '1882–1888',
+      teksti: 'Kolumbuksen patsas kohoaa Barcelonan satamassa siinä, '
+          + 'missä La Rambla -katu päättyy mereen. Se rakennettiin '
+          + 'vuosina 1882–1888 suurta maailmannäyttelyä varten, joka '
+          + 'järjestettiin Barcelonassa vuonna 1888, ja arkkitehti '
+          + 'Gaietà Buigas voitti kilpailun patsaan suunnittelusta.'
+        + '\n\n'
+        + 'Koko monumentti on 60 metriä korkea – lähes kahdenkymmenen '
+          + 'kerroksisen talon mittainen! Huipulla seisoo 7,2 metrin '
+          + 'korkuinen pronssinen Kolumbus-patsas, joka osoittaa '
+          + 'kädellään kohti merta ja pitää toisessa kädessä '
+          + 'karttakääröä. Pylvästä koristavat muun muassa siivekkäät '
+          + 'voitonjumalattaret ja mytologiset griipit.'
+        + '\n\n'
+        + 'Hauska yksityiskohta: monet luulevat Kolumbuksen '
+          + 'osoittavan kohti Amerikkaa, mutta todellisuudessa sormi '
+          + 'näyttää suuntaan, joka vie kartalla Pohjois-Afrikkaan '
+          + 'asti. Todennäköisin selitys on, että patsas haluttiin '
+          + 'yksinkertaisesti kääntää kohti avomerta korostamaan '
+          + 'Kolumbuksen mainetta merenkulkijana. Pylvään sisällä on '
+          + 'jopa pieni hissi, jolla pääsee näköalatasanteelle aivan '
+          + 'patsaan jalustan alle.',
+      kuvat: [
+        {
+          tiedosto: 'Mirador de Colom - panoramio.jpg',
+          selite: 'Kolumbuksen patsas pylväineen suoraan edestä kuvattuna '
+            + 'kirkkaassa auringonpaisteessa, ympärillä palmureunustainen '
+            + 'promenadi ja koristelyhdyt.',
+          lahde: 'Mister No, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  granada: {
+    'Sacromonten luolat': {
+      aika: '1500-luku',
+      teksti: 'Granadan itälaidalla kohoaa Sacromonten kukkula, jonka '
+          + 'rinteisiin on kaiverrettu satoja luolakoteja jo '
+          + '1500-luvulta lähtien. Ensin luoliin piiloutuivat ihmiset, '
+          + 'jotka oli karkotettu kaupungista, mutta pian niistä tuli '
+          + 'koti romanikansalle eli gitaneille, jotka asettuivat '
+          + 'Granadaan sen jälkeen kun kaupunki oli vuonna 1492 '
+          + 'vallattu takaisin kristityille. Jokainen luola on '
+          + 'erimuotoinen, sillä se on louhittu suoraan kukkulan '
+          + 'kallioon - ovena toimii usein pyöreä, valkoiseksi kalkittu '
+          + 'kaariaukko.'
+        + '\n\n'
+        + 'Lähellä sijaitsevassa rotkossa, jota kutsutaan Mustien '
+          + 'rotkoksi, kerrotaan tarina vapautetuista orjista, jotka '
+          + 'etsivät sotien jälkeen kätkettyä arabikultaa '
+          + 'oliivilehdosta - aivan kuin suoraan aarrejahdista! '
+          + 'Luolakylässä syntyi myös oma tanssiperinne, zambra, joka '
+          + 'juontuu romanien häärituaaleista ja jota tanssittiin '
+          + 'luolien sisällä soihtujen valossa.'
+        + '\n\n'
+        + 'Nykyään yksitoista vanhaa luolaa on avattu yleisölle '
+          + 'Sacromonten luolamuseona, joka avattiin vuonna 2002. '
+          + 'Siellä pääsee näkemään, millaisia ammatteja luolien '
+          + 'asukkailla oli ja miten flamenco syntyi juuri näillä main.',
+      kuvat: [
+        {
+          tiedosto: 'AA SACROMONTE HOUSES 2016.jpg',
+          selite: 'Kapea mukulakivinen katu Sacromontessa: valkoiseksi '
+            + 'kalkittuja luolataloja, punatiilinen kaariovi ja portaikko '
+            + 'iltapäivän kultaisessa valossa.',
+          lahde: 'Øyvind Holmstad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Albaicínin näköalapaikka': {
+      aika: '1000-luku–1400-luku',
+      teksti: 'Alhambraa vastapäätä, joen toisella puolella, kohoaa '
+          + 'Albaicín - Granadan vanha kaupunginosa, jonka '
+          + 'mutkittelevat kujat ovat säilyneet lähes ennallaan '
+          + '1200–1400-luvuilta asti. Alueen juuret ulottuvat vielä '
+          + 'kauemmas: jo 1000-luvulla täällä seisoi Zawi ben Zirin '
+          + 'rakennuttama linnoitus, jota ympäröi lähes 75 hehtaarin '
+          + 'kokoinen muuri.'
+        + '\n\n'
+        + 'Kukkulan laella sijaitsee Mirador de San Nicolás, '
+          + 'näköalapaikka josta avautuu Granadan kuuluisin maisema: '
+          + 'koko Alhambra levittäytyy katsojan eteen laakson toisella '
+          + 'puolella, lumihuippuinen Sierra Nevada taustalla. Kujien '
+          + 'varsilla on yhä kymmeniä satojenkin vuosien takaisia '
+          + 'maanalaisia vesisäiliöitä - yksi niistä, 1000-luvulla '
+          + 'rakennettu Aljibe del Rey, veti mahtavat 300 kuutiometriä '
+          + 'vettä.'
+        + '\n\n'
+        + 'Vuonna 1994 Unesco liitti Albaicínin '
+          + 'maailmanperintöluetteloon osana Alhambran ja Generalifen '
+          + 'kokonaisuutta. Kaupunginosan nimen alkuperästä kiistellään '
+          + 'yhä: jotkut tutkijat arvelevat sen tarkoittavan haukkojen '
+          + 'kaupunginosaa, toiset taas kalkinlevittäjien asuinaluetta.',
+      kuvat: [
+        {
+          tiedosto: 'Granada - View from Mirador de San Nicolás - 01.jpg',
+          selite: 'Alhambran linnoitus kukkulalla auringonlaskun kultaisessa '
+            + 'valossa, kuvattuna Albaicínin Mirador de San Nicolásin '
+            + 'näköalapaikalta sypressien välistä.',
+          lahde: 'Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'AA SPECTATORS AT PLAZA MIRADOR IN GRANADA 2016.jpg',
+          selite: 'Ihmisiä istumassa Mirador de San Nicolásin vanhalla tiili- '
+            + 'ja kivimuurilla iltavalossa katselemassa auringonlaskua '
+            + 'Albaicínin kujalla.',
+          lahde: 'Øyvind Holmstad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Generalife: {
+      aika: '1273–1319',
+      teksti: 'Alhambran vieressä, hieman korkeammalla kukkulalla, '
+          + 'sijaitsee Generalife - Granadan emiirien kesäpalatsi ja '
+          + 'maatila, jonne hallitsijat pakenivat kaupungin kuumuutta. '
+          + 'Sen rakentaminen alkoi 1200-luvun lopulla emiiri Muhammad '
+          + 'II:n aikana, ja emiiri Ismail I laajensi palatsia vuonna '
+          + '1319. Alueella kasvatettiin myös hedelmiä ja vihanneksia '
+          + 'hallitsijan pöytään, joten Generalife ei ollut pelkkä '
+          + 'huvipuutarha vaan myös oikea maatila.'
+        + '\n\n'
+        + 'Palatsin sydän on Acequia-piha, lähes 49 metriä pitkä '
+          + 'puutarha, jonka keskellä solisee vesikanava reunasta '
+          + 'reunaan. Vesi tuotiin paikalle kuutta kilometriä pitkää '
+          + 'kanavaa pitkin Darro-joesta asti, ja se piti puutarhan '
+          + 'vihreänä keskellä Andalusian helleaikoja. Aikalaiset '
+          + 'kertoivat pihan suihkulähteiden olleen niin voimakkaita, '
+          + 'että vesi lensi korkealle ilmaan.'
+        + '\n\n'
+        + 'Vuonna 1958 Generalifessa syttyi tulipalo, mutta se toi '
+          + 'mukanaan yllätyksen: palon jäljiltä tehdyissä kaivauksissa '
+          + 'löytyi 70 senttimetrin syvyydestä alkuperäisiä, satoja '
+          + 'vuosia unohduksissa olleita nasridiajan kivettyjä polkuja. '
+          + 'Generalife liitettiin Unescon maailmanperintöluetteloon '
+          + 'vuonna 1984.',
+      lainaus: {
+        teksti: 'Vesi suihkusi lähes kymmenen metrin korkeuteen ilmaan.',
+        lahde: 'venetsialainen matkustaja Andrea Navagero, joka näki '
+          + 'Generalifen puutarhat 1520-luvulla',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Granada - Generalife - Patio de la Acequia - 1.jpg',
+          selite: 'Generalifen puutarhan Patio de la Acequia: pitkä vesiallas '
+            + 'ja suihkulähteiden vesisuihkut johtavat kesäpalatsin '
+            + 'rakennukselle, kukkapenkit ja pensasaidat molemmin puolin.',
+          lahde: 'Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Granadan katedraali': {
+      aika: '1523–1704',
+      teksti: 'Kun Granada oli vallattu takaisin kristityille vuonna '
+          + '1492, kaupungin suurimman moskeijan paikalle alettiin '
+          + 'vuosikymmeniä myöhemmin rakentaa valtava katedraali. '
+          + 'Perustustyöt aloitti arkkitehti Enrique Egas vuonna 1518, '
+          + 'mutta varsinainen rakentaminen pääsi vauhtiin vasta vuonna '
+          + '1523 - ja kesti siitä peräti 181 vuotta, aina jouluaattoon '
+          + '1704 asti, jolloin viimeiset kivet muurattiin paikoilleen. '
+          + 'Vuonna 1529 työt otti vastuulleen Diego de Siloé, joka '
+          + 'muutti suunnitelman renessanssityyliin ja lisäsi kirkkoon '
+          + 'viisi holvikäytävää sekä epätavallisen pyöreän '
+          + 'pääkappelin.'
+        + '\n\n'
+        + 'Katedraalin sisällä soi kaksi 1700-luvulla rakennettua '
+          + 'urkua, jotka näyttävät koristeiltaan lähes identtisiltä '
+          + 'mutta kuulostavat aivan erilaisilta. Kirkosta löytyy myös '
+          + 'kuuluisien maalarien El Grecon ja Jusepe de Riberan '
+          + 'teoksia sekä kuvanveistäjä Alonso Canon veistämät Aatamin '
+          + 'ja Eevan rintakuvat.'
+        + '\n\n'
+        + 'Alun perin katedraaliin suunniteltiin kaksi jättimäistä, '
+          + '81 metriä korkeaa tornia, mutta rahat loppuivat kesken '
+          + 'eikä niitä koskaan saatu valmiiksi. Yksi tornikin on nyt '
+          + 'kunnostettu, ja siitä avautuu jälleen näköala kaupungin '
+          + 'ylle.',
+      kuvat: [
+        {
+          tiedosto: 'Facade of the Cathedral of Granada (3).JPG',
+          selite: 'Granadan katedraalin valkoinen barokkijulkisivu Plaza de '
+            + 'las Pasiegasilla kirkkaassa auringonvalossa, ihmisiä '
+            + 'portailla ja aukiolla edessä.',
+          lahde: 'Jbribeiro1, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Alhambra: {
+      aika: '1238–1391',
+      teksti: 'Punertavalle kukkulalle Granadan laitaan alkoi vuonna 1238 '
+          + 'nousta linnoituskaupunki, jonka arabiankielinen nimi '
+          + 'Alhambra tarkoittaa suunnilleen punaista. Nimi juontuu '
+          + 'paikallisesta savesta, jossa on niin paljon rautaa, että '
+          + 'muurit hehkuvat punertavina auringonlaskussa. Rakentamisen '
+          + 'aloitti Nasridien suvun perustaja Muhammad I, ja '
+          + '1300-luvulla hallitsijat Yusuf I ja Muhammad V laajensivat '
+          + 'linnoituksesta kokonaisen pikkukaupungin, jossa oli '
+          + 'moskeijoita, kylpylöitä, työpajoja ja jopa oma '
+          + 'vesijohtoverkosto.'
+        + '\n\n'
+        + 'Alhambra on valtava - sen alueelle mahtuisi lähes '
+          + 'kaksikymmentä jalkapallokenttää - ja sisällä on ainakin '
+          + 'kuusi eri palatsia. Kuuluisin niistä on Leijonien palatsi, '
+          + 'jonka pihalla marmoriset leijonapatsaat kannattelevat '
+          + 'suihkulähdettä. Seinät oli alun perin maalattu kirkkaan '
+          + 'punaisiksi, sinisiksi ja kultaisiksi, vaikka ne näyttävät '
+          + 'nykyään lähes värittömiltä.'
+        + '\n\n'
+        + 'Vuonna 1492, samana vuonna kun Granada antautui '
+          + 'kristityille, Kristoffer Kolumbus esitteli Alhambran '
+          + 'saleissa suunnitelmansa purjehtia valtameren yli. '
+          + 'Kuningatar Isabella ja kuningas Ferdinand hyväksyivät '
+          + 'retkikunnan huhtikuun 17. päivä - vain kuukausia ennen '
+          + 'kuin Kolumbus lähti kohti Amerikkaa.',
+      lainaus: {
+        teksti: 'Eikä ole voittajaa paitsi Jumala.',
+        lahde: 'Nasridien suvun tunnuslause, kaiverrettuna satoihin '
+          + 'kertoihin Alhambran seinille',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Granada - Alhambra - Palacios nazaríes - Patio de los Leones - 1.jpg',
+          selite: 'Alhambran Leijonien pihan (Patio de los Leones) '
+            + 'koristeelliset nasridipilarit ja kaariholvit, joiden läpi '
+            + 'näkyy paviljonki ja sypressejä kirkkaassa päivänvalossa.',
+          lahde: 'Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Fountain patio de los Leones Alhambra Granada Spain.jpg',
+          selite: 'Alhambran Leijonien pihan keskellä oleva kuuluisa '
+            + 'marmorinen suihkulähde, jota kannattelee kaksitoista '
+            + 'kivileijonaa.',
+          lahde: 'Jebulon, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manuel de Fallan talo': {
+      aika: '1921–1939',
+      teksti: 'Aivan Alhambran kupeessa seisoo vaatimaton huvila, josta '
+          + 'avautuu näkymä koko Granadaan. Siellä asui vuosina '
+          + '1921–1939 säveltäjä Manuel de Falla, yksi Espanjan '
+          + 'tunnetuimmista muusikoista - ja juuri tässä talossa hän '
+          + 'sävelsi osan kuuluisimmista teoksistaan.'
+        + '\n\n'
+        + 'Vuonna 1922 Falla järjesti Concurso de Cante Jondo '
+          + '-nimisen laulukilpailun, joka nosti Andalusian perinteisen '
+          + 'flamencolaulun suuren yleisön tietoisuuteen. Falla asui '
+          + 'talossa koko tämän luovan kautensa ajan, kunnes Espanjan '
+          + 'sisällissota pakotti hänet lähtemään maasta vuonna 1939 - '
+          + 'hän ei koskaan palannut Granadaan.'
+        + '\n\n'
+        + 'Fallan lähdön jälkeen hänen huvilansa säilytettiin '
+          + 'sellaisena kuin hän sen jätti, ja siitä tehtiin museo, '
+          + 'joka kertoo säveltäjän elämästä ja työstä. 1970-luvulla '
+          + 'talon viereen rakennettiin konserttitalo, Auditorio Manuel '
+          + 'de Falla, jonka avajaiskonsertissa soitettiin tietenkin '
+          + 'juuri Fallan omaa musiikkia.',
+      kuvat: [
+        {
+          tiedosto: 'House of Manuel de Falla in Granada.jpg',
+          selite: 'Manuel de Fallan valkoiseksi kalkittu Carmen-talo '
+            + 'Alhambran kupeessa: sininen puuovi, siniset '
+            + 'ikkunanpuitteet ja seinällä museokyltti \'Museo Manuel de '
+            + 'Falla\'.',
+          lahde: 'Agracier, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Granada, Casa-Museo de Manuel de Falla (4).jpg',
+          selite: 'Talon seinällä oleva sinivalkoinen kaakelilaatta, jossa '
+            + 'lukee espanjaksi \'En esta casa vivió Manuel de Falla\' '
+            + '(Tässä talossa asui Manuel de Falla).',
+          lahde: 'Palickap, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
