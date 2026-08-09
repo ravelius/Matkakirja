@@ -589,6 +589,18 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
     meri: true,
   },
+  dubai: {
+    // Khor Dubain suu: Bur Dubai etelärannalla, Deira pohjoisrannalla,
+    // Al Shindaghan niemi lännessä. Vain vanha kaupunki — kaikki kuusi
+    // kohdetta mahtuvat noin kahden kilometrin ruutuun, koska
+    // helmenpyyntikylän mittakaava on juuri se.
+    //
+    // TORNIT JÄÄVÄT TAHALLAAN ULKOPUOLELLE. Burj Khalifa on 7,7 km
+    // lounaassa ja Burj al Arab 14 km lännessä; kumpikin vaatisi
+    // kymmenen kilometrin rajauksen, jolloin lahdelma kutistuisi
+    // viivaksi eikä vanhasta kaupungista erottuisi mitään.
+    rajat: { pohjoinen: 25.276, etela: 25.256, lansi: 55.284, ita: 55.312 },
+  },
 };
 
 /*

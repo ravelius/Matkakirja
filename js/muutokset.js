@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 467, teksti: 'Dubain lehteen vanhan kaupungin kohdekartta' },
   { v: 466, teksti: 'Tromssa sai oman lehtensä' },
   { v: 465, teksti: 'Dubai sai oman lehtensä' },
   { v: 464, teksti: 'Joka maalehdessä on nyt omia aihesivuja' },

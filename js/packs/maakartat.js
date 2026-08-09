@@ -3901,6 +3901,81 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Privozin tori', lat: 46.4699, lon: 30.7368 },
     ],
   },
+  dubai: {
+    polku: 'assets/kartat/dubai-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 25.276, etela: 25.256, lansi: 55.284, ita: 55.312 },
+    esittely: 'Dubai kasvoi lahdelman ympärille. Khor Dubai ei ole '
+      + 'joki vaan kapea suolaisen veden lahti, joka työntyy '
+      + 'Persianlahdesta noin neljätoista kilometriä sisämaahan. Se '
+      + 'on luonnonsatama: avomereltä pääsee tyyneen veteen, jossa ei '
+      + 'ole aallokkoa, ja lasti voidaan purkaa suoraan rannalle. '
+      + 'Lahden etelärannalle syntyi Bur Dubai ja pohjoisrannalle '
+      + 'Deira, eikä niiden välillä ollut pitkään aikaan yhtään '
+      + 'siltaa — toiselle puolelle mentiin veneellä. 1870-luvulla '
+      + 'Dubai oli muutaman tuhannen asukkaan kylä, joka eli kahdesta '
+      + 'asiasta: kaupasta ja helmistä. Kesäisin miehet purjehtivat '
+      + 'matalikoille ja sukelsivat simpukoiden perään ilman mitään '
+      + 'happilaitteita, pelkkä nenäpuristin nenässä ja kivi jalassa. '
+      + 'Helmenpyynti oli kaupungin tärkein elinkeino 1930-luvulle '
+      + 'asti. Vanhin yhä pystyssä oleva rakennus on Al Fahidin '
+      + 'linnoitus vuodelta 1787.\n\nKartalla on vain vanha kaupunki, '
+      + 'noin kolmen kilometrin levyinen pala. Lahti kaartaa kuvan '
+      + 'halki isona koukkuna: se tulee sisään ylhäältä, kiertää '
+      + 'vasemmalla niemen ympäri ja jatkaa oikealle. Niemi on Al '
+      + 'Shindagha, ja sen takana kartan ulkopuolella aukeaa avomeri. '
+      + 'Kapeimmillaan lahti on tässä kohdassa vain parisataa metriä '
+      + 'leveä, ja juuri siitä pikkuveneet eli abrat kulkevat '
+      + 'rannalta toiselle. Lahden eteläreuna on piirtynyt '
+      + 'sahalaitaiseksi: ranta ei ole siellä suora vaan porrastettu '
+      + 'pieniksi ulokkeiksi, joiden väliin veneet mahtuvat. '
+      + 'Etelässä on Bur Dubai, '
+      + 'pohjoisessa Deira, ja molemmilla puolilla katuverkko '
+      + 'muuttuu rannan lähellä tiheäksi kujien seitiksi — siellä '
+      + 'ovat suukit eli kauppakujat. Dubain kuuluisat pilvenpiirtäjät '
+      + 'eivät näy kartalla lainkaan: Burj Khalifa on kahdeksan '
+      + 'kilometriä lounaassa, kaukana tämän kuvan ulkopuolella. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään, kuten Odessassa.
+       *
+       * VAIN YHDELLÄ ON PAIKAN OMA WIKI, ja se on tarkistettu tulos
+       * eikä laiskuutta: fi.wikipediassa ei ole artikkelia Al
+       * Fahidista, Bastakiasta, Khor Dubaista, Bur Dubaista eikä
+       * kultasuukista. Koko vanhasta kaupungista on vain
+       * `Dubain museo`. ANSA: `Deira` on fi.wikipediassa
+       * anglosaksinen kuningaskunta Pohjois-Englannissa — älä linkitä
+       * sitä. Lähin oikea maamerkkiartikkeli on `Deiran kellotorni`,
+       * mutta se on kolme kilometriä idässä rajauksen ulkopuolella ja
+       * 1960-luvulta, eli väärältä vuosisadalta tähän karttaan.
+       *
+       * Dhow-sataman `Dhow` on tietoinen poikkeus taloa sääntöön
+       * "wiki on artikkeli juuri tästä paikasta": se selittää sanan,
+       * joka on kohteen omassa nimessä, eikä vie lasta muualle.
+       * Helmenpyynnistä ja basaareista ON fi-artikkelit, mutta niitä
+       * EI liitetty Al Shindaghaan ja kultasuukiin — nimi ja artikkeli
+       * eivät vastaisi toisiaan, ja lue lisää veisi paikan sijaan
+       * aiheeseen. Helmenpyynti kerrotaan esittelyssä.
+       *
+       * Al Shindaghan piste on Shindaghan museokorttelissa eikä
+       * Sheikh Saeedin talossa (25.2679 / 55.2901), vaikka talo on
+       * niemen tunnetuin rakennus: talon koordinaatti osuu pelin
+       * omalla karttapiste()-funktiolla veteen, koska ranta kaartaa
+       * juuri siinä. Tarkistettu pikselistä.
+       *
+       * Dhow-satama on samasta syystä siirretty laiturin maapuolelle
+       * (25.2671 / 55.3056). Aineiston mukainen laituripiste
+       * 25.2664 / 55.3058 jäi noin 50 metriä veden puolelle.
+       */
+      { nimi: 'Kultasuuk', lat: 25.2701, lon: 55.2982 },
+      { nimi: 'Dhow-satama', lat: 25.2671, lon: 55.3056, wiki: 'Dhow' },
+      { nimi: 'Al Shindagha', lat: 25.2665, lon: 55.289 },
+      { nimi: 'Abra-laiturit', lat: 25.265, lon: 55.2953 },
+      { nimi: 'Bastakian kaupunginosa', lat: 25.2639, lon: 55.3 },
+      { nimi: 'Al Fahidin linnoitus', lat: 25.2632, lon: 55.2972, wiki: 'Dubain museo' },
+    ],
+  },
 };
 
 /*
