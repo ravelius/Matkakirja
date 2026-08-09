@@ -315,18 +315,59 @@
           b.append(el('b', null, teksti));
           return b;
         };
+        /* Luennat generoitu 9.8. (omistajan hyväksyntä: "Tekstit
+         * hyvät. Tee ja generoi"). Soittolista soittaa kaikki osat
+         * järjestyksessä — autokuuntelua varten. */
+        const soittimet = [];
+        let ketjussa = false;
+        const pysayta = () => {
+          ketjussa = false;
+          for (const a of soittimet) { a.pause(); a.onended = null; }
+        };
+        const soitaAlkaen = (i) => {
+          if (i >= soittimet.length) { ketjussa = false; return; }
+          ketjussa = true;
+          for (const a of soittimet) { if (a !== soittimet[i]) a.pause(); }
+          const a = soittimet[i];
+          a.onended = () => { if (ketjussa) soitaAlkaen(i + 1); };
+          a.scrollIntoView({ block: 'center', behavior: 'smooth' });
+          a.play().catch(() => {});
+        };
+        const aaniRivi = (tunnus, id) => {
+          const rivi = el('div', 'todo-aani');
+          const soitin = document.createElement('audio');
+          soitin.controls = true;
+          soitin.preload = 'none';
+          soitin.src = `assets/audio/puhe-kaari-${tunnus}-${id}.mp3`;
+          soittimet.push(soitin);
+          rivi.appendChild(soitin);
+          return rivi;
+        };
         const johdanto = el('div', 'kortti');
         johdanto.append(el('h3', '', 'Mikä muuttui'));
         johdanto.append(el('p', '', KAARI_PAKETIT.johdanto));
+        const ohjain = el('div', 'todo-aani');
+        const soitaNappi = document.createElement('button');
+        soitaNappi.type = 'button';
+        soitaNappi.textContent = `▶ Soita kaikki peräkkäin (${KAARI_PAKETIT.kohteet.length * 3} pätkää)`;
+        soitaNappi.addEventListener('click', () => soitaAlkaen(0));
+        const pysaytaNappi = document.createElement('button');
+        pysaytaNappi.type = 'button';
+        pysaytaNappi.textContent = '⏸ Pysäytä';
+        pysaytaNappi.addEventListener('click', pysayta);
+        ohjain.append(soitaNappi, pysaytaNappi);
+        johdanto.append(ohjain);
         return [johdanto, ...KAARI_PAKETIT.kohteet.map((m) => {
           const k = el('div', 'kortti');
           k.append(el('h3', '', m.otsikko));
           k.append(nimio('Matkakirja: saapuminen (isoisän ääni, 1873)'));
           k.append(el('p', '', m.saapuminen));
+          k.append(aaniRivi('saapuminen', m.id));
           k.append(nimio('Henkilö (suunnittelumuistio)'));
           k.append(el('p', 'pieni', m.henkilo));
           k.append(nimio('Kohtaaminen'));
           k.append(el('p', '', m.kohtaaminen));
+          k.append(aaniRivi('kohtaaminen', m.id));
           /* Suoja julkaisuikkunaa vastaan: jos data ja sivu ovat eri
            * versiota (verkko-ensin voi hetken antaa ristiparin),
            * puuttuva kysymys ei saa kaataa koko osiota tyhjäksi. */
@@ -342,6 +383,7 @@
           }
           k.append(nimio('Aarre — päättyy henkilön avoimeen vihjeeseen'));
           k.append(el('p', '', m.aarre));
+          k.append(aaniRivi('aarre', m.id));
           return k;
         })];
       },

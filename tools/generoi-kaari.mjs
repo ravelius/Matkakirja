@@ -30,14 +30,14 @@ if (!avain) {
   process.exit(1);
 }
 
-/* Luentakenttä per osa; jos luenta*-kenttää ei ole, käytetään
- * tekstikenttää sellaisenaan. */
+/* Paketin v2 osat: saapuminen (isoisä), kohtaaminen (henkilö) ja
+ * aarre (henkilö + nuoren herran mietintö). Kysymystä ei lueta —
+ * se on pelaajan interaktiivinen visa. Jos luenta*-kenttää ei ole,
+ * käytetään tekstikenttää sellaisenaan. */
 const OSAT = [
   ['saapuminen', 'saapumisLuenta', 'saapuminen'],
-  ['tervehdys', 'tervehdysLuenta', 'tervehdys'],
-  ['visa', 'visaLuenta', 'visa'],
+  ['kohtaaminen', 'kohtaamisLuenta', 'kohtaaminen'],
   ['aarre', 'aarreLuenta', 'aarre'],
-  ['vihje', 'vihjeLuenta', 'vihje'],
 ];
 
 const pyydetyt = process.argv.slice(2);
