@@ -836,11 +836,20 @@ export const KAARI_PAKETIT = {
     {
       id: 'sarajevo',
       otsikko: 'Sarajevo — kaivo joka kutsuu takaisin',
+      /*
+       * QA-korjaus 9.8.2026 (Sonnet 1): torilla EI ollut kaivoa 1873 —
+       * vanha Sebilj paloi 1852 ja nykyinen rakennettiin vasta 1891.
+       * Isoisä kuulee siksi PALANEEN kaivon tarinan sepältä; nykyhetken
+       * kohtaaminen, visa ja aarre koskevat torilla tänään seisovaa
+       * kaivoa, joten ne pysyvät ennallaan.
+       */
       saapuminen: 'Basaarin kujat soivat: sepät takoivat kuparia, ja jokainen '
-        + 'vasara löi omaa tahtiaan. Torin keskellä puinen kaivo '
-        + 'tarjosi vettä, ja vanha seppä sanoi: joka tästä juo, palaa '
-        + 'vielä kaupunkiin. Join. Kupissa, jonka hän ojensi, oli '
-        + 'pohjassa kaksi kaiverrettua kirjainta, jotka tunnen: H. F.',
+        + 'vasara löi omaa tahtiaan. Vanha seppä kertoi torin '
+        + 'kaivosta, joka oli palanut ennen hänen aikaansa: joka siitä '
+        + 'joi, palasi vielä kaupunkiin. Kaivoa ei enää ole, sanoin. '
+        + 'Tarina ei palanut, seppä vastasi ja ojensi kupin vettä. '
+        + 'Kupin pohjassa oli kaksi kaiverrettua kirjainta, jotka '
+        + 'tunnen: H. F.',
       henkilo: 'Kupariseppä Emir takoo kannuja ja kuppeja kujalla, jolla '
         + 'hänen sukunsa paja on soinut kolmesataa vuotta.',
       kohtaaminen: 'Pajan ovella Emir kääntelee kuparilevyä pihdeissään. '
