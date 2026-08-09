@@ -14587,6 +14587,11 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Emiraatit Google Arts & Culturessa',
+              tiedosto: 'Dubai Museum and Al Fahidi Fort.jpg',
+              selite: 'Al Fahidin linnoitus Dubaissa. Paksut savitiiliset muurit '
+                + 'ja pyöreä kulmatorni, ja rakennuksen edessä kulkee '
+                + 'nykyaikainen katu.',
+              lahde: 'Kimon Berlin, Wikimedia Commons (CC BY-SA 2.0)',
               teksti: 'Museoiden esineitä ja valokuvia samassa näkymässä: '
                 + 'helmenkalastuksen välineitä, vanhoja karttoja ja '
                 + 'kaupunkikuvia ajalta ennen pilvenpiirtäjiä. Kuvia voi '
@@ -14595,6 +14600,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Sharjah Art Foundation — näyttelyt verkossa',
+              tiedosto: 'Section of Al Mureijah Square, a part of the Sharjah Art Foundation.jpg',
+              selite: 'Sharjahin taidesäätiön piha auringonlaskussa. Valkoisia '
+                + 'matalia rakennuksia, holvikaaria ja keskellä vanha '
+                + 'tuulitorni.',
+              lahde: 'M.Ahmadani, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Sharjahin taidesäätiön sivuilla on näyttelyitä, videoita '
                 + 'ja kokonaisia näyttelyluetteloita luettavaksi. Painopiste '
                 + 'on Lähi-idän ja Pohjois-Afrikan nykytaiteessa.',
@@ -14615,6 +14625,11 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Mohammed bin Rashid -avaruuskeskus',
+              tiedosto: 'Emirates Mars Mission mockup at IAC 2021 01 (cropped).jpg',
+              selite: 'Hope-luotaimen täysikokoinen malli näyttelyssä Dubaissa. '
+                + 'Mustan rungon kyljessä on aurinkopaneeli ja päällä '
+                + 'lautasantenni.',
+              lahde: 'BugWarp, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Keskus rakensi Hope-luotaimen, joka lähti Marsin '
                 + 'kiertoradalle 2020, ja julkaisee sen ottamia kuvia. '
                 + 'Sivuilta löytyy myös satelliittikuvia Emiraateista ja '
@@ -14623,6 +14638,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Emirates Nature-WWF — aavikon eläimet',
+              tiedosto: 'Arabian oryx (oryx leucoryx).jpg',
+              selite: 'Arabianoryks seisoo hiekkadyynillä Dubain '
+                + 'aavikkosuojelualueella. Valkoinen turkki, tummat jalat ja '
+                + 'kaksi pitkää suoraa sarvea.',
+              lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 3.0)',
               teksti: 'Mitä aavikolla oikeasti elää: arabiangaselli, hiekkakissa, '
                 + 'haukat ja merikilpikonnat. Sivuilla on retkiä, '
                 + 'seurantahankkeita ja ohjeita siitä, miten aavikolla '
@@ -14631,6 +14651,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Dubai Frame — kehys, josta katsoo kahteen aikaan',
+              tiedosto: '190410 Dubai Frame.jpg',
+              selite: 'Dubai Frame ylhäältä nähtynä: suorakulmainen kultainen '
+                + 'kehys nousee puiston keskeltä, ja sen läpi näkyy vanhan '
+                + 'kaupungin matalia taloja.',
+              lahde: 'Rennboot, Wikimedia Commons (CC BY 3.0)',
               teksti: 'Sadanviidenkymmenen metrin korkuinen kehys keskellä '
                 + 'kaupunkia: toiselta puolelta näkyy vanha Dubai ja toiselta '
                 + 'uusi. Sivuilla on kuvia molemmista suunnista ja tietoa '
