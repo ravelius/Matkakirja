@@ -1547,6 +1547,129 @@ export const MAAKARTAT = {
  * vasemmalle puolelle, kun oikealla olisi ahdasta.
  */
 export const KAUPUNKIKARTAT = {
+  istanbul: {
+    polku: 'assets/kartat/istanbul-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 41.0335, etela: 40.9975, lansi: 28.958, ita: 29.024 },
+    esittely: 'Istanbul seisoo kahden meren välisessä kapeikossa. '
+      + 'Bosporinsalmi yhdistää Mustanmeren ja Marmaranmeren ja '
+      + 'erottaa samalla Euroopan Aasiasta, joten kaupunki on kahdessa '
+      + 'maanosassa yhtä aikaa. Kreikkalaiset merenkulkijat perustivat '
+      + 'tänne Byzantionin noin 2 700 vuotta sitten, ja paikka '
+      + 'valittiin veden takia: salmen länsipuolelle työntyy niemi, '
+      + 'jolla on vettä kolmella sivulla, ja niemen pohjoispuolella on '
+      + 'syvä, tyyni lahti. Lahti on Kultainen sarvi, luonnonsatama, '
+      + 'jonne laivat pääsevät myrskyltä suojaan. Vanhakaupunki '
+      + 'rakennettiin juuri sille niemelle.\n\nKartalla niemi on '
+      + 'vasemmalla alhaalla. Sen pohjoispuolella kaartaa Kultainen '
+      + 'sarvi, jonka yli vie Galatan silta, pituudeltaan noin puoli '
+      + 'kilometriä. Lahden takana kohoaa mäki ja sen laella Galatan '
+      + 'torni. Oikealla levittäytyy Bosporinsalmi: kartan kohdalla se '
+      + 'on noin kaksi kilometriä leveä, ja sen takana alkaa Aasian '
+      + 'puoli, jonne pääsee lautalla Üsküdariin. Vedessä näkyy pieni '
+      + 'valkoinen täplä, luodolle rakennettu Neitsyttorni. Salmen ali '
+      + 'kulkee vuodesta 2013 myös junatunneli. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Suuresta basaarista ei ole suomenkielistä artikkelia; se jää
+       * merkiksi. Sen katetut kujat piirtyvät kartalle tunnistettavana
+       * ruudukkona, joten piste osuu johonkin mikä oikeasti näkyy.
+       *
+       * Topkapın koordinaatti on PALATSIN KESKIPISTE eikä pääportti.
+       * Portti olisi 9,5 prosenttiyksikköä Hagia Sofiasta eli numerot
+       * menisivät päällekkäin; keskipiste on 13,4 ja osuu puutarhoihin,
+       * jotka näkyvät kartalla. Älä siirrä sitä alaspäin.
+       *
+       * Yerebatan ja hippodromin obeliski ovat lehden nostoja ja
+       * rajauksen sisällä, mutta 3,2 ja 2,7 prosenttiyksikön päässä
+       * Hagia Sofiasta ja Sinisestä moskeijasta — kirjaimellisesti
+       * naapuritontteja, joten ne eivät voi olla omia numeroitaan.
+       */
+      { nimi: 'Suuri basaari', lat: 41.011, lon: 28.9683 },
+      { nimi: 'Sininen moskeija', lat: 41.0054, lon: 28.9768, wiki: 'Sulttaani Ahmedin moskeija' },
+      { nimi: 'Hagia Sofia', lat: 41.0085, lon: 28.98, wiki: 'Hagia Sofia' },
+      { nimi: 'Topkapın palatsi', lat: 41.0128, lon: 28.984, wiki: 'Topkapın palatsi' },
+      { nimi: 'Galatan torni', lat: 41.0256, lon: 28.9742, wiki: 'Galatan torni' },
+      { nimi: 'Üsküdar', lat: 41.0254, lon: 29.0156, wiki: 'Üsküdar' },
+    ],
+  },
+  edinburgh: {
+    polku: 'assets/kartat/edinburgh-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
+    esittely: 'Edinburgh seisoo sammuneen tulivuoren päällä. Kallio '
+      + 'jähmettyi noin 350 miljoonaa vuotta sitten niin kovaksi, '
+      + 'ettei jäätikkö jaksanut kuluttaa sitä: jää kiersi kallion ja '
+      + 'kaivoi maan sen molemmilta puolilta, mutta taakse jäi pitkä '
+      + 'loiva rinne. Kallion laelle rakennettiin linna ja rinteelle '
+      + 'kaupunki, kapealle harjanteelle, jonne pääsi vain yhtä '
+      + 'tietä.\n\nKartalla näkyy kaksi kaupunkia vierekkäin. '
+      + 'Alaosassa kulkee vanhankaupungin harjanne: yksi katu linnalta '
+      + 'Holyroodin palatsille, vajaat kaksi kilometriä, ja sen '
+      + 'molemmin puolin kapeita kujia kuin kalanruotoja. Yläosassa on '
+      + 'Uusikaupunki, jonka suorat kadut ja aukiot muodostavat '
+      + 'ruudukon. Sitä alettiin rakentaa vuonna 1767, kun vanha '
+      + 'harjanne oli tullut täyteen. Kaupunkien välissä on vihreä '
+      + 'notko. Siellä oli ennen tekojärvi nimeltä Nor Loch; se '
+      + 'laskettiin kuiviin 1700-luvun lopulla, ja nyt notkossa on '
+      + 'puisto ja rautatie. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Charlotte Squaresta ei ole suomenkielistä artikkelia, joten se
+       * jää pelkäksi merkiksi. Se on silti listalla, koska se on ainoa
+       * piste Uudenkaupungin ruutukaavan puolella — ilman sitä kartan
+       * juoni jäisi kertomatta selitelistassa.
+       */
+      { nimi: 'Charlotte Square', lat: 55.9514, lon: -3.2086 },
+      { nimi: 'Edinburghin linna', lat: 55.9487, lon: -3.2004, wiki: 'Edinburghin linna' },
+      { nimi: 'St Gilesin katedraali', lat: 55.9495, lon: -3.1909, wiki: 'St Gilesin katedraali' },
+      { nimi: 'Greyfriars Bobby', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby' },
+      { nimi: 'Calton Hill', lat: 55.9553, lon: -3.1828, wiki: 'Calton Hill' },
+      { nimi: 'Holyroodin palatsi', lat: 55.9527, lon: -3.1716, wiki: 'Holyroodin palatsi' },
+    ],
+  },
+  marseille: {
+    polku: 'assets/kartat/marseille-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
+    esittely: 'Marseille on rakennettu valkoisten kalkkikivikukkuloiden '
+      + 'muodostamaan kulhoon, joka aukeaa länteen merelle. Kulhon '
+      + 'pohjassa on kapea luonnonpoukama, noin kilometrin mittainen '
+      + 'halkeama rannassa. Poukama on suojassa mistraalilta, '
+      + 'kylmältä tuulelta, joka syöksyy tänne luoteesta. Juuri siksi '
+      + 'kreikkalaiset purjehtijat pysähtyivät tähän noin 600 eaa. ja '
+      + 'perustivat Massalian. Makeaa vettä kukkuloilla ei sen sijaan '
+      + 'ollut juuri lainkaan: lopulta se tuotiin 80 kilometrin päästä '
+      + 'kanavaa pitkin, ja kanava valmistui vuonna 1849.\n\nKartan '
+      + 'keskellä on tuo poukama, Vanhasatama. Vesiallas on noin 900 '
+      + 'metriä pitkä ja 400 metriä leveä, ja sitä reunustaa laituri '
+      + 'kolmelta sivulta. Nykyään siinä on huviveneitä, ei '
+      + 'rahtilaivoja: isot laivat siirtyivät pohjoisempiin '
+      + 'satama-altaisiin 1800-luvun puolivälissä. Pohjoispuolella '
+      + 'kohoaa kukkulalle vanha kaupunginosa Le Panier, ja etelässä '
+      + 'nousee 149 metriä korkea kalliokieleke, jonka laella on '
+      + 'Notre-Dame de la Garde. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Saint-Victorin kirkosta ja Saint-Charlesin asemasta ei ole
+       * suomenkielisiä artikkeleita; molemmat jäävät merkeiksi.
+       *
+       * Vanhasataman koordinaatti on ALTAAN KESKELTÄ eikä laiturilta:
+       * piste kuuluu veden päälle, koska juuri allas on kaupungin syy
+       * olla olemassa. Se näkyy nyt vetenä — ennen merentäyttöä se
+       * piirtyi ontoksi suorakaiteeksi.
+       */
+      { nimi: 'MuCEM', lat: 43.2967, lon: 5.361, wiki: 'MuCEM' },
+      { nimi: 'Marseillen katedraali', lat: 43.2998, lon: 5.3649, wiki: 'Marseillen katedraali' },
+      { nimi: 'Saint-Victorin kirkko', lat: 43.2903, lon: 5.3656 },
+      { nimi: 'Vanhasatama', lat: 43.2946, lon: 5.3693, wiki: 'Marseillen vanha satama' },
+      { nimi: 'Notre-Dame de la Garde', lat: 43.2839, lon: 5.3712, wiki: 'Notre-Dame de la Garde' },
+      { nimi: 'Saint-Charlesin asema', lat: 43.3032, lon: 5.3816 },
+    ],
+  },
   helsinki: {
     polku: 'assets/kartat/helsinki-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
