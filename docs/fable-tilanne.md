@@ -18,9 +18,15 @@ ENSIN, sitten `CLAUDE.md`, `docs/roolitus.md`, `docs/isoisan-raamattu.md`,
   tv-/videostriimiselvitystä.** Radio, uutisotsikot ja käännös jäävät
   ennalleen. Jos "maan tunnelmaa" halutaan lisää, ainoa hyväksytty tapa
   on Commonsin vapaat (PD/CC) tunnelmavideot.
-- **HUOM PR #599 (Opus 1):** siihen on niputettu Kreikan tv-nappi, joka
-  on nyt kielletty. Ennen mergeä tv-osa on RIISUTTAVA PR:stä — vain
-  Turkin/Irlannin maalehden aihesivut jäävät.
+- **VAARA — PR #599 (Opus 1) EI SAA MERGEYTYÄ SELLAISENAAN.** Opus 1:n
+  rebase säilytti tv-koodin konfliktinratkaisussa: sen haaralla
+  `TV_KANAVAT` on DEU/ESP/CHE/EST/GRC ja haeTallenne viisi lähdettä.
+  Jos #599 mergetään, se PALAUTTAA KOKO v434:ssä poistetun tv-koodin.
+  Oikea tapa: **sulje #599 tai rakenna sen sisältö uudelleen puhtaana
+  v434-mainin päälle** — pidä VAIN maalehden aihesivut (TUR/IRL/PRT/HUN)
+  ja Helsingin/Suomen siirto; ÄLÄ ota mukaan mitään tv:tä
+  (uutislahteet.js/uutiset.js/ui.js/css otetaan mainista sellaisenaan).
+  Opus 1:lle on jo lähetetty ohje riisua tv; varmista se ennen mergeä.
 - **Tiimi (raportoivat vain Fablelle triggereillä; persistent_session_id):**
   - Opus 1 (lehdet/rakenne): `session_01AEN2as7TAggi2SX3w3DqWV`
   - Opus 2 (kartat): `session_017kajFQA5rFWByGvVLXc9Df`
