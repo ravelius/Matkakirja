@@ -4691,16 +4691,15 @@ export class UI {
     const skaala = laatikko?.width && vb?.[2] ? laatikko.width / Number(vb[2]) : (this.zoomSkaala || 1);
     if (!Number.isFinite(skaala) || skaala <= 0) return;
     /*
-     * Kirjasinkoko on 13 näyttöpikseliä, MUTTA kilpi ei saa kasvaa
-     * maataan suuremmaksi: uloszoomatussa Euroopassa vakiokokoinen
-     * kilpi peitti koko Tšekin ja naapurikaupungit (omistajan
-     * havainto 8.8.2026). Katto johdetaan maan leveydestä ja nimen
-     * pituudesta — kaukaa kilpi kutistuu kartan mukana, läheltä se
-     * pysyy lukukokoisena. Osumapinta pysyy silti aina ≥44 px.
+     * Kirjasinkoko on SAMA kuin kaupunkien nimillä (omistajan sääntö
+     * 9.8.2026: "napin teksti ei saisi ylittää kaupungin nimen kokoa
+     * vaan pitäisi olla aina saman kokoinen sen kanssa"). Kaupungin
+     * nimi on 18 laudan yksikköä (mapart.js KAUPUNGIN_NIMI_YKSIKKOA),
+     * joten kilpi skaalautuu zoomissa täsmälleen nimien mukana —
+     * aiemmat näyttöpikselilaskelmat poistuivat. Vain osumapinta
+     * lasketaan yhä skaalasta, jotta sormi osuu kaukaakin.
      */
-    const haluttu = 13 / skaala;
-    const kattoK = (k.maa.leveys * 1.05) / (k.maa.nimi.length * 0.62 + 3.15);
-    const kirjasin = Math.min(haluttu, kattoK);
+    const kirjasin = 18;
     k.nimi.setAttribute('font-size', kirjasin.toFixed(1));
     // Nimen leveys mitataan, ei arvata — mutta vasta kirjasinkoon
     // asettamisen jälkeen, jotta mitta vastaa lopullista piirtoa.
@@ -4720,14 +4719,14 @@ export class UI {
     k.tausta.setAttribute('width', leveysKaikki.toFixed(1));
     k.tausta.setAttribute('height', korkeus.toFixed(1));
     k.tausta.setAttribute('rx', (korkeus / 2).toFixed(1));
-    k.tausta.setAttribute('stroke-width', (1.2 / skaala).toFixed(2));
+    k.tausta.setAttribute('stroke-width', '1.4');
     k.nimi.setAttribute('x', (x0 + pehmusteX + leveys / 2).toFixed(1));
     k.nimi.setAttribute('y', cy.toFixed(1));
     const iX = x0 + pehmusteX + leveys + valiX + r;
     k.keha.setAttribute('cx', iX.toFixed(1));
     k.keha.setAttribute('cy', cy.toFixed(1));
     k.keha.setAttribute('r', r.toFixed(1));
-    k.keha.setAttribute('stroke-width', (1.2 / skaala).toFixed(2));
+    k.keha.setAttribute('stroke-width', '1.4');
     k.kirjain.setAttribute('x', iX.toFixed(1));
     k.kirjain.setAttribute('y', cy.toFixed(1));
     k.kirjain.setAttribute('font-size', (r * 1.3).toFixed(1));
