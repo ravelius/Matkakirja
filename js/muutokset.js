@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 453, teksti: 'Minitehtävä joka maalehden aihesivulle' },
   { v: 452, teksti: 'Nuori herra huudahtaa kun aarre paljastuu' },
   { v: 451, teksti: 'Aarteen paljastus näyttää nyt oikean valokuvan' },
   { v: 450, teksti: 'Maakartat Kuwaitille, Qatarille, Emiraateille, Omanille' },
