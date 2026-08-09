@@ -479,6 +479,111 @@ const KAUPUNGIT = {
     // 98,5 %:n kohdalle eli käytännössä ulos.
     rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
   },
+  kiova: {
+    // Kaksikerroksinen kaupunki, ei joki: Kiovan maamerkit ovat jonossa
+    // pohjoisesta etelään pitkin Dneprin törmää, joten kuva on pysty.
+    // Ylhäällä Podilin ruudukko rannassa, keskellä rinne, alhaalla
+    // yläkaupunki ja Hreštšatyk.
+    //
+    // DNEPR PIIRTYY PALJAINA RANTAVIIVOINA eikä täyttönä. Se on relaatio
+    // 66398, jonka ulkorengas on 3,50e-3 ast² eli 2,9-kertainen tähän
+    // rajaukseen — kokoaKerrokset() täyttää vain alle 0,3:n renkaat.
+    // Rajan alle pääsisi vasta noin kymmenkertaisella laatikolla, joten
+    // tätä ei korjata rajausta muuttamalla. Sama ilmiö kuin Budapestin
+    // Tonavassa, joka on jo julkaistu. Siksi jokea on kuvassa vain
+    // oikeassa yläkulmassa noin 15 % — leveämmällä rajauksella (kokeiltu
+    // 3,5 ja 4,4 km) rinnakkaisia rantanauhoja tuli viisi ja kuva hajosi.
+    //
+    // TÄMÄ ON ERÄN HEIKOIN KARTTA, ja se sanotaan tässä ääneen. Oikean
+    // laidan joki lukee kolmena vaaleana nauhana eikä vetenä, koska
+    // niiden välissä on paperia ja ympärillä tyhjää. Vertailukohta on
+    // julkaistu Budapest, jossa Tonava piirtyy täsmälleen samoin mutta
+    // lukee jokena, koska molemmilla rannoilla on tiheä kaupunki.
+    // Kokeiltu myös rajauksen siirtoa länteen (30.493–30.533): silloin
+    // Podilin ruudukko katosi lähes kokonaan ja kuva oli selvästi
+    // huonompi. Esittelyteksti selittää nauhat lapselle. Oikea korjaus
+    // olisi työkalussa: isojen jokirelaatioiden täyttö.
+    //
+    // EI meri-lippua: rajauksessa on nolla natural=coastline-polkua.
+    //
+    // EI KAINALOA, ja se on mitattu. Arsenalna (1,3 km), luolaluostari
+    // (3,1 km) ja Ukrainan äiti (4,1 km) jäävät kaikki kaakkoon, eli
+    // kainalosääntö osoittaisi kainaloon. Ruutu 50.425–50.438 /
+    // 30.549–30.567 ajettiin: 222 elementtiä ja lähes tyhjä paperi.
+    // Lavran kujat ovat footway ja patsas seisoo museopuistossa.
+    rajat: { pohjoinen: 50.47, etela: 50.44, lansi: 30.499, ita: 30.539 },
+  },
+  pietari: {
+    // Kanavakaaret ovat kuvan juoni: Moika, Gribojedovin kanava ja
+    // Fontanka piirtyvät kolmena sisäkkäisenä kaarena, ja Nevski
+    // prospekt lävistää ne suorana. Eteläraja on valittu
+    // Mariinski-teatterin mukaan (87,6 %).
+    //
+    // NEVA KÄYTTÄYTYY KAHDELLA TAVALLA, ja se on rajausta sitova.
+    // Bolšaja Neva (relaatio 1114249, rengas 4,455e-4) ja Malaja Neva
+    // (72500, 2,339e-4) mahtuvat 0,3:n rajan alle ja TÄYTTYVÄT oikein.
+    // Pääuoma «Нева» (2599821, rengas 5,168e-3) ei mahdu ja piirtyy
+    // kahtena rantaviivana; Talvipalatsin kohdalla väliin jää 690 metriä
+    // paperia. Sitä ei saa korjatuksi rajauksella.
+    // ÄLÄ KAVENNA: jos laatikon ala painuu alle 1,485e-3 ast², myös
+    // Bolšaja Neva kaatuu viivoiksi. Nyt ala on 2,079e-3.
+    //
+    // EI meri-lippua: nolla rantaviivapolkua, Suomenlahti on 5 km länteen.
+    //
+    // EI KAINALOA. Smolnan katedraali on lehden kansikuva ja 2,9 km
+    // itään, joten kainalosääntö osoittaisi kainaloon. Ruutu
+    // 59.944–59.953 / 30.385–30.406 ajettiin: 242 elementtiä, Nevan
+    // mutka ja pari katua, itse katedraali on rakennus jota ei piirretä.
+    // Lisäksi Pietarissa ei ole tyhjää nurkkaa mihin ruutu sopisi.
+    rajat: { pohjoinen: 59.9545, etela: 59.9215, lansi: 30.284, ita: 30.347 },
+  },
+  moskova: {
+    // TÄMÄ RAJAUS ON TAHALLAAN ISOMPI KUIN PITÄISI, ja syy on mitattu.
+    // Moskova-joki on relaatio 222973, jonka ulkorengas on 4,703e-4 ast².
+    // Tiukemmalla 2,94 × 3,01 km:n rajauksella suhde laatikkoon oli
+    // 0,371 eli yli 0,3 — joki hajosi kahdeksi rantanauhaksi, joiden
+    // välissä oli paperia. Tällä 3,26 × 3,45 km:n rajauksella suhde on
+    // 0,292 ja joki piirtyy yhtenäisenä täytettynä nauhana.
+    // ÄLÄ PIENENNÄ RAJAUSTA. Isompi on tässä parempi kartta.
+    //
+    // Kremlin ympäri kiertävä vesijuova EI ole vallihauta vaan
+    // Neglinnaja-joki, joka on OSM:ssä tunnel=culvert mutta piirtyy
+    // avoimena kahtena haarana (läntinen Aleksanterin puutarhan
+    // kohdalla, itäinen Kremlin itämuurin ohi Zarjadjeen eli vanhan
+    // Alevizin vallihaudan reittiä). Jätetty tahallaan, sama ratkaisu
+    // kuin Granadan Darrolla — se selittää Kremlin muodon.
+    //
+    // EI meri-lippua: nolla rantaviivapolkua.
+    //
+    // EI KAINALOA. Majakovskaja (1,4 km) on maanalainen metroasema,
+    // yliopisto (8 km) ja VDNH (9 km) ovat liian kaukana ja puiston
+    // keskellä. Kaikki kolme ovat lehden juttuja, ei kartan kohteita.
+    rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
+  },
+  odessa: {
+    // Kolmiosainen kuva: oikea kolmannes merta, yläreunassa satama
+    // sormimaisine laitureineen ja aallonmurtaja majakkoineen, vasen
+    // kaksi kolmannesta yhtenäistä ruutukaavaa. 3,99 km on sääntörajalla,
+    // mutta Odessan korttelit ovat pieniä ja kestävät sen — sama
+    // perustelu kuin Barcelonassa.
+    //
+    // ITÄRAJA 30.776 EI OLE SATTUMA. Ensimmäinen rajaus päättyi
+    // 30.762:een, ja silloin meri: true jätti itäreunaan ison
+    // täyttämättömän paperikiilan (x 78–100 %, y 22–50 %): rantaviiva
+    // poistui laatikosta ja palasi samalta reunalta, eli täsmälleen
+    // merenTaytto()-kommentin tunnettu puute. Kun raja vietiin
+    // avomerelle, rantaviiva kulkee kuvan halki yhtenä pätkänä ja täyttö
+    // onnistuu. ÄLÄ KAVENNA ITÄRAJAA.
+    //
+    // meri: true eikä 'maa': maata on vain lännessä, joten tavallinen
+    // vesipuolen täyttö osuu oikein. 'maa' ajettiin ja tuottaa lähes
+    // saman kuvan, mutta se on Istanbulin sääntö (maata veden molemmin
+    // puolin) eikä sitä pidä käyttää ilman sitä syytä. Ilman lippua
+    // satama piirtyy nurinpäin: altaat täyttyvät ja laiturit jäävät
+    // paperiksi. Pinta-alavaroitusta ei tule.
+    rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
+    meri: true,
+  },
 };
 
 /*
