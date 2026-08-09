@@ -49,8 +49,7 @@ export const TILANNE = {
         + '(Turkki, Irlanti, Portugali, Unkari). Fablen päätös 9.8.: '
         + 'vanhojen maalehtien aihesivut ilman minitehtävää (DEU 6/6, '
         + 'GBR 7/8, ESP 4/5, ITA 4/5, SWE 5/6) täydennetään samalla '
-        + 'säännöllä — koneisto on nyt kovennettu. Kreikan tv-tallenne '
-        + 'erikseen (ks. mediarivi).',
+        + 'säännöllä — koneisto on nyt kovennettu.',
     },
     {
       tekija: 'Opus 2',
@@ -237,23 +236,11 @@ export const TESTATTAVAA = [
       + 'ennen.',
   },
   {
-    otsikko: 'Espanjan tv-nappi (v360) — iPad-testi OK 8.8.',
-    ohje: 'Espanjan maalehdessä tv-napissa kaksi valintaa: Sää '
-      + 'tänään (38 s) ja Uutiset neljässä minuutissa. Omistaja '
-      + 'varmisti toimivuuden iPadilla 8.8.',
-  },
-  {
     otsikko: 'Berliinin nähtävyysjutut — PILOTTI (v358)',
     ohje: 'Avaa Berliinin kaupunkikartta ja napauta numeroympyröitä: '
       + 'kuusi kohdetta sai omat jutut kuvineen ja lainauksineen '
       + '(mm. Reaganin muurinpuhe). Tämä on Sonnetin pilotti — '
       + 'katso jälki ja päätä, jatketaanko muihin kaupunkeihin.',
-  },
-  {
-    otsikko: 'Radio ja tv molemmissa lehdissä (v357)',
-    ohje: 'Avaa mikä tahansa kaupunki- ja maalehti: radio- ja '
-      + 'videonapit näkyvät nyt kummassakin, ja viimeiset '
-      + 'live-lähetykset on korvattu tallenteilla tai poistettu.',
   },
   {
     otsikko: 'Työhuone uusiksi (v356)',

@@ -35,39 +35,6 @@ const SALLITUT = [
   // Saksan uutislähde (Berliinin lehti, 7.8.2026): tagesschaun syöte
   // ja artikkelisivut ovat samalla isäntänimellä.
   'https://www.tagesschau.de/',
-  // Tv-kanavan live-sivu: siitä luetaan kulloisenkin suoran
-  // lähetyksen tunniste, koska YouTuben kanavaupotus on epävakaa
-  // etenkin iPadilla (5.8.2026).
-  'https://www.youtube.com/@',
-];
-
-/*
- * OHJAUKSEN SELVITYS (8.8.2026) — eri asia kuin yllä oleva välitys.
- *
- * Espanjan tv-tallenne haetaan osoitteesta
- * `ztnr.rtve.es/ztnr/<id>.mp4`, joka ohjaa oikean mediapalvelimen
- * tiedostoon. Ohjaus osoittaa `http://`-osoitteeseen, vaikka pyyntö
- * tehdään https:llä — ja peli tarjoillaan https:llä, joten selaimelle
- * se on sekasisältöä. Chrome ja Firefox nostaisivat pyynnön itse
- * https:ään, mutta iOS:n Safari on epävarmin, eikä sitä voi todentaa
- * kehitysympäristöstä.
- *
- * Tämä reitti poistaa koko kysymyksen: worker kysyy ohjauksen
- * palvelimen puolella ja palauttaa lopullisen osoitteen https:nä.
- * Selain saa valmiiksi turvallisen osoitteen eikä sekasisältöä synny.
- *
- * VIDEOTA EI VÄLITETÄ TÄMÄN KAUTTA, vain osoite. Tavut kulkevat
- * suoraan RTVE:n palvelimelta selaimeen, joten worker ei joudu
- * pullonkaulaksi.
- *
- * Ohjausta seurataan VAIN yksi askel. Ketjun toinen askel lisää
- * osoitteeseen aikarajallisen download-tokenin, ja jos se haettaisiin
- * tässä, token ehtisi vanhentua ennen kuin pelaaja painaa play.
- * Selain hakee sen itse tuoreena.
- */
-const OHJAUS_SALLITUT = [
-  // Espanjan uutistallenteet (Madridin lehti, 8.8.2026).
-  'https://ztnr.rtve.es/ztnr/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei
@@ -77,32 +44,6 @@ const VALIMUISTI_S = 600;
 export default {
   async fetch(pyynto) {
     const kysely = new URL(pyynto.url).searchParams;
-
-    // Ohjauksen selvitys omalla parametrillaan: palauttaa osoitteen
-    // JSONina, ei sisältöä.
-    const ohjaus = kysely.get('ohjaus');
-    if (ohjaus) {
-      if (!OHJAUS_SALLITUT.some((alku) => ohjaus.startsWith(alku))) {
-        return new Response('Osoite ei ole sallittujen listalla', { status: 403 });
-      }
-      const alkuvastaus = await fetch(ohjaus, {
-        method: 'HEAD',
-        redirect: 'manual',
-        headers: { 'user-agent': 'matkakirja-uutisvalitys/1.0' },
-      });
-      const kohde = alkuvastaus.headers.get('location');
-      if (!kohde) return new Response('Ohjausta ei saatu', { status: 502 });
-      return new Response(JSON.stringify({ url: kohde.replace(/^http:\/\//, 'https://') }), {
-        headers: {
-          'content-type': 'application/json; charset=utf-8',
-          'access-control-allow-origin': '*',
-          // Lyhyt välimuisti: tallenne vaihtuu päivittäin, ja osoite
-          // saa vanhentua nopeasti — toisin kuin syötteet, tämä on
-          // yhden napinpainalluksen tieto.
-          'cache-control': 'public, max-age=60',
-        },
-      });
-    }
 
     const url = kysely.get('url');
     if (!SALLITUT.some((alku) => url?.startsWith(alku))) {

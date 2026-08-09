@@ -1,18 +1,5 @@
 # Uutisvälityksen käyttöönotto (omistajalle, n. 5 min)
 
-> **Päivitys 8.8.2026 (ohjauksen selvitys):** workeriin tuli toinen
-> reitti, `?ohjaus=<osoite>`. Se ei välitä sisältöä vaan kysyy
-> ohjauksen palvelimen puolella ja palauttaa lopullisen osoitteen
-> JSONina https-muodossa. Tarve: Espanjan tv-tallenne ohjaa
-> `http://`-osoitteeseen, ja https:llä tarjoiltavassa pelissä se olisi
-> sekasisältöä. Reitillä on oma sallittujen listansa
-> (`OHJAUS_SALLITUT`), jossa on toistaiseksi vain `ztnr.rtve.es`.
-> Julkaisu tulee itsestään main-pushista. **Reitti on tehty valmiiksi,
-> mutta Espanjan tv-nappia ei vielä ole** — syy on kirjattu
-> `js/packs/uutislahteet.js`:ään (RTVE:n mediapalvelin vastaa
-> toistuvissa kokeissa `410 Gone`, eikä sitä voi todentaa
-> kehitysympäristöstä).
-
 > **Päivitys 7.8.2026 (automaattijulkaisu):** repo on kytketty
 > Cloudflaren Git-integraatioon (Workers Builds), ja repossa on nyt
 > `wrangler.jsonc`, joka kertoo sille workerin sisääntulopisteen.
@@ -48,15 +35,7 @@
 > (`https://www.youm7.com/`) Kairon lehteä varten. Julkaise worker
 > kerran uudelleen: **Edit code → liitä tuore `worker.js` → Deploy.**
 > Siihen asti Kairon lehti näkyy ilman uutisosiota — mikään ei mene
-> rikki. (Sama julkaisu tuo myös v290:n youtube-etuliitteen, jos se
-> jäi tekemättä.)
-
-> **Päivitys 2 (v290):** workerin sallittuihin lisättiin tv-kanavan
-> live-sivu (`https://www.youtube.com/@`), josta luetaan suoran
-> lähetyksen tunniste — YouTuben kanavaupotus oli epävakaa iPadilla.
-> Julkaise worker kerran uudelleen: **Edit code → liitä tuore
-> `worker.js` → Deploy.** Siihen asti tv käyttää vanhaa upotusta,
-> joka toimii selaimissa muttei välttämättä iPadilla.
+> rikki.
 
 > **Päivitys 5.8.2026 (v280):** worker hakee nyt myös uutisten
 > artikkelisivut, jotta popupissa näkyy koko leipäteksti. Jos otit

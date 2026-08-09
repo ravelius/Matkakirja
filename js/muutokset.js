@@ -13,12 +13,12 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 434, teksti: 'Lehden mediarivillä nyt vain paikallisradio' },
   { v: 433, teksti: 'Kohdekartat Kiovaan, Pietariin, Moskovaan, Odessaan' },
   { v: 433, teksti: 'Kaikilla 31 kaupunkilehdellä on nyt kohdekartta' },
   { v: 432, teksti: 'Kohdekartat Sofiaan, Bukarestiin ja Sarajevoon' },
   { v: 431, teksti: 'Helsingille nähtävyysjutut, Suomenlinna mukana' },
   { v: 430, teksti: 'Kohdekartat Roomaan, Krakovaan, Varsovaan, Tallinnaan' },
-  { v: 429, teksti: 'TV-napit Sveitsille (SRF) ja Virolle (ERR)' },
   { v: 428, teksti: 'Kohdekartat Lissaboniin, Barcelonaan ja Granadaan' },
   { v: 427, teksti: 'Kohdekartat Istanbuliin, Marseilleen, Edinburghiin' },
   { v: 427, teksti: 'Istanbulin kartalla näkyy kaksi maanosaa' },
@@ -109,11 +109,9 @@ export const MUUTOKSET = [
   { v: 362, teksti: 'Kaupunkikartat vaaleiksi: kohteet nousevat esiin' },
   { v: 362, teksti: 'Kohteen nimi näkyy hiiren alla työpöydällä' },
   { v: 361, teksti: 'Menovinkit kahdeksalle uudelle maalle' },
-  { v: 360, teksti: 'Espanjaan tv-nappi: sää ja uutiset neljässä minuutissa' },
   { v: 359, teksti: 'Venetsian laguuni näkyviin: kartta ei ole enää kuiva' },
   { v: 358, teksti: 'Berliinin nähtävyyksille omat jutut kuvineen' },
   { v: 357, teksti: 'Radio ja tv näkyvät nyt kummassakin lehdessä' },
-  { v: 357, teksti: 'Viimeiset tv-livet pois: tilalle tulee tallenteita' },
   { v: 356, teksti: 'Työhuone uudeksi: 5 välilehteä, Testaa ja tilanne yhteen' },
   { v: 355, teksti: 'Ruotsille korkokartta: Kiirunasta Malmöhön' },
   { v: 355, teksti: 'Tukholman kohdekartta, ja vesi näkyy vihdoin' },
