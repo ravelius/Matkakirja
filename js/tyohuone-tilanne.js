@@ -32,17 +32,16 @@ export const TILANNE = {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Vaihe B erä 2 tehty: seitsemän aihesivua siirretty '
-        + 'kaupungeilta maalehtiin (Tallinna→Viro, Istanbul→Turkki, '
-        + 'Dublin→Irlanti, Lissabon→Portugali, Budapest→Unkari, '
-        + 'Sarajevo→Bosnia, Sofia→Bulgaria). Viro, Bosnia ja Bulgaria '
-        + 'saivat ensimmäisen aihesivunsa.',
-      seuraavaksi: 'PR #630 odottaa uudelleennumerointia '
-        + '(versiotörmäys v437) ja mergeä. Sitten erä 3: Bukarest, '
-        + 'Krakova, Varsova, Kiova, Odessa, Pietari, Moskova. Lisäksi '
-        + 'jonossa: Lontoon haamusisällön siivous maakartat.js:stä, '
-        + 'menovinkkiruudun irrotus, minitehtävät, Tromssa + '
-        + 'aluelehdet, valokuvarajatapaukset.',
+      tehtava: 'Vaihe B lähes valmis (v440): 24/27 siirtoa tehty, 22 '
+        + 'kaupunkia kolmessa ruudussa, kahdeksan maata sai '
+        + 'ensimmäisen aihesivunsa, Lontoon haamusisältö poistettu.',
+      seuraavaksi: 'Järjestys: Helsinki/Suomi-sisältökorjaus (Suomen '
+        + 'kansi, Sibelius-siirto, Linnanmäki, menovinkit) + Suomen '
+        + 'maalehden täydennys → Granada/Rooma/Pariisi omina sivuina '
+        + '(päätös: mitään ei pudoteta) → Lontoo → linkki- ja '
+        + 'duplikaattisiivous → minitehtävät (31) → seitsemän '
+        + 'aihesivuttoman maan sivut → Tromssa + aluelehdet + '
+        + 'valokuvarajatapaukset.',
     },
     {
       tekija: 'Opus 2',
@@ -54,9 +53,11 @@ export const TILANNE = {
         + 'Suomenlinna-kainalo oikeaan alanurkkaan (v439). Lähi-idän '
         + 'selvitysmuistio valmis (maakartat tarvitsevat ensin '
         + 'lautageometrian middleeast-countries.js).',
-      seuraavaksi: 'nimiVasen-kommenttikorjaus seuraavan erän '
-        + 'kyljessä. Euroopan jonon tyhjennyttyä lupa aloittaa '
-        + 'middleeast-countries.js ja Dubain kaupunkikarttapilotti.',
+      seuraavaksi: 'Eurooppa valmis karttapuolelta (31/31 + 29/29, '
+        + 'nimiVasen-kommentti korjattu #637). Nyt: Lähi-idän '
+        + 'lautageometria middleeast-countries.js pilottina — '
+        + 'kuvakaappaus Fablelle ennen maakarttoja. Erikoiskohteet '
+        + '(Jerusalem, Petra ym.) ilman maa-attribuutiota.',
     },
     {
       tekija: 'Sonnet 1',
@@ -67,10 +68,10 @@ export const TILANNE = {
         + 'todennettu, testit puhtaat. Löydökset jaettu: Lontoon '
         + 'haamusisältö (Opus 1), nimiVasen-kommentti (Opus 2), '
         + 'lisenssitarkistimen sokea piste kirjattu.',
-      seuraavaksi: 'Kierros 2: yhdeksän epäillyn menovinkkilinkin '
-        + 'selainpistokoe, korjattavien kuvaduplikaattien lista '
-        + '(vain 3× ja saman tiedoston sisäiset) ja siirtoerien '
-        + 'kenttien regressiotarkistus.',
+      seuraavaksi: 'Kierros 2 lähes valmis: linkeistä vain kaksi '
+        + 'aidosti rikki (vaihto Opus 1:llä), duplikaattilista '
+        + 'toimitettu. Jäljellä siirtoerien kenttien '
+        + 'regressiotarkistus (#630 nyt mainissa).',
     },
     {
       tekija: 'Sonnet 2',

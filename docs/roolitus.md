@@ -125,34 +125,27 @@ tehtävää ja kuluttamaan turhaan. Säännöt kaikille:
    riville; silmätarkistus 480 px; Playwright-kaappaukset ja niiden
    KATSOMINEN.
 
-## Työjono (tilanne 8.8.2026 — päivitä isojen erien valmistuessa)
+## Työjono (tilanne 9.8.2026 ilta — päivitä isojen erien valmistuessa)
 
-**OMISTAJAN PRIORITEETTI 8.8.2026: Eurooppa tehdään ensin loppuun,
-sitten omistaja testaa sen itse. Afrikka ja muut maanosat alkavat
-vasta testauksen jälkeen.**
+**OMISTAJAN PRIORITEETTI 9.8.2026: Eurooppa valmiiksi kaikilta osin,
+sen jälkeen SUORAAN Lähi-idän kaupunki- ja maalehdet — ei erillistä
+testiporttia välissä. Matkakirjan tarinapuoli on parkissa. Omistaja
+delegoi 9.8. päätökset ja tehtävänjaon Fablelle.**
 
-- **Opus:** erä 2 (menovinkit + kuvakaappaukset) → haaran kolmen
-  commitin julkaisu (lehtijako, nähtävyystekstit, Maiden tiedot) →
-  lehtikaupungit Venetsia, Madrid, Tukholma, Berliini uudella
-  kaupunki/maa-jaolla → muut Euroopan maa- ja kaupunkilehdet.
-- **Fable:** Euroopan tarinapuoli on tekstien osalta valmis (41
-  merkintää, vihjeet, kohtaamiset). Jäljellä: kohtaamisluennat
-  neljälle Euroopan lehtikaupunkihahmolle (Elsa, Rosa, Matteo,
-  Otto) + Farukille (Kairo kuuluu lehtikuusikkoon) — vaatii
-  omistajan avaimen JA naisäänet: tilin suomiäänet ovat kaikki
-  miehiä, joten Elsalle ja Rosalle tarvitaan 1–2 naisääntä lisää
-  ElevenLabs-kirjastosta (omistajan toimi) tai monikielinen
-  äänikoe. Testauksen jälkeen: Afrikan kaupunkijako + merkinnät.
-- **Sonnet:** QA-kierros jokaisen ison erän jälkeen; iso
-  loppu-QA koko Euroopalle ennen omistajan testiä; raportit
-  Fablelle.
-- **Omistajan päätökset 8.8.2026:** Lontoon 5 sivua jää; muut
-  kaupungit lyhyemmiksi tarveharkinnalla, mieluummin useampi sivu
-  kuin yksi pitkä; live-lähetyksistä luovutaan kokonaan — tilalle
-  uutistallenteita Saksan malliin, tai nappi pois; radio- ja
-  videonapit näkyviin sekä kaupunki- että maalehteen;
-  luentaäänissä otetaan englanninkieliset äänet käyttöön (suomea
-  monikielisesti) — valinta työhuoneen ääninäytteistä.
-- **Omistajalta odottaa yhä päätöstä:** sateenvarjoseuraajan
-  paljastuksen suunta (ehdotus työhuoneen Kehitys-sivulla) ja
-  kertoja-/hahmoäänten valinta näytteiden kuuntelun jälkeen.
+Ajantasainen tilannetaulu on `js/tyohuone-tilanne.js` (työhuoneen
+etusivu) ja Fablen jono `docs/fable-tilanne.md`. Tiivistetysti:
+
+- **Opus 1:** vaihe B loppuun (Helsinki/Suomi-sisältökorjaus ensin,
+  sitten Granada/Rooma/Pariisi omina sivuina, Lontoo viimeisenä) →
+  linkki-/duplikaattisiivous → minitehtävät → seitsemän
+  aihesivuttoman maan sivut (CHE/NOR/DNK/ISL/LVA/LTU/HRV) →
+  Tromssa + aluelehdet + valokuvarajatapaukset. Myöhemmin Lähi-idän
+  kaupunkilehdet (Dubai ensin).
+- **Opus 2:** karttapuolen Eurooppa valmis (31/31 + 29/29). Nyt:
+  Lähi-idän lautageometria `middleeast-countries.js` pilottina,
+  maakartat vasta Fablen hyväksynnän jälkeen. Erikoiskohteet
+  (Jerusalem ym.) ilman maa-attribuutiota — esitystapa Fablella.
+- **Sonnet 1:** QA-kierrokset Fablen tehtävänannoilla, read-only.
+- **Sonnet 2:** nähtävyysjutut Opus 2:n karttojen tahdissa.
+- **Fable:** koordinaatio, nähtävyyskuvien laatupassi erissä,
+  pulmien laatuloikka, maasto-tekstit.js:n duplikaattikorjaukset.
