@@ -352,6 +352,48 @@ export const MAA_KATEGORIAT = {
           lahde: 'Djehouty, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Kleopatran neulat',
         },
+        {
+          otsikko: 'Paviljonki, joka puretaan syksyllä',
+          aika: '2000',
+          tiedosto: 'Serpentine Pavilion 2016 I (27776972542).jpg',
+          teksti: 'Kensington Gardensissa nousee joka kesä uusi paviljonki. '
+            + 'Serpentine-galleria on tilannut sellaisen vuodesta 2000 '
+            + 'lähtien, ja säännöt ovat tiukat: arkkitehti ei saa olla '
+            + 'aiemmin saanut valmiiksi yhtään rakennusta Englannissa, ja '
+            + 'paviljongin on valmistuttava puolessa vuodessa. Syksyllä se '
+            + 'puretaan pois. Vuonna 2016 tanskalaisen Bjarke Ingelsin ryhmä '
+            + 'latoi nurmikolle 1 802 lasikuitulaatikkoa, jotka aukeavat '
+            + 'suorasta seinästä kaartuvaksi tilaksi. Sisällä oli kahvila, '
+            + 'iltaisin esityksiä, eikä pääsy maksanut mitään.',
+          selite: 'Bjarke Ingelsin ryhmän suunnittelema paviljonki kesäkuussa '
+            + '2016. Päällekkäin ladotut lasikuitulaatikot kiertyvät auki '
+            + 'niin, että suorasta seinästä tulee kolmiulotteinen tila. '
+            + 'Rakennelma seisoi gallerian nurmikolla kesäkuusta lokakuuhun.',
+          lahde: 'Images George Rex, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Bjarke Ingels',
+        },
+        {
+          otsikko: 'Guernica maksoi parin saappaita',
+          aika: '1938',
+          tiedosto: 'Tree of Life, Whitechapel Gallery (8132640664).jpg',
+          teksti: 'Whitechapelin galleria avattiin vuonna 1901, jotta itäisen '
+            + 'Lontoon työläiset pääsisivät näkemään taidetta. Vuonna 1938 '
+            + 'siellä oli esillä Picasson Guernica, joka kiersi Britanniaa '
+            + 'keräämässä apua Espanjan sisällissodan uhreille — Lontoon '
+            + 'jälkeen se nähtiin Leedsissä, Liverpoolissa ja Manchesterissa. '
+            + 'Pääsymaksuksi kelpasi pari kunnollisia saappaita, jotka '
+            + 'lähetettiin Espanjan sisällissodan tasavaltalaisille. Kahdessa '
+            + 'viikossa maalauksen eteen kertyi satoja saapaspareja ja '
+            + 'galleriaan yli 15 000 kävijää. Talo näyttää yhä nykytaidetta, '
+            + 'ja sisään pääsee ilmaiseksi.',
+          selite: 'Whitechapelin gallerian julkisivu lokakuussa 2012. Yläosaa '
+            + 'peittävät Rachel Whitereadin kullatut pronssilehdet, jotka '
+            + 'paljastettiin samana kesänä. Oikealla on entinen Passmore '
+            + 'Edwards -kirjasto, joka liitettiin galleriaan vuonna 2009, ja '
+            + 'sen alla Aldgate Eastin metroaseman sisäänkäynti.',
+          lahde: 'John Lord, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Rachel Whiteread',
+        },
       ],
     },
     {
@@ -1245,6 +1287,156 @@ export const MAA_KATEGORIAT = {
           wiki: 'Roger Bannister',
         },
       ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Lontoon luonto ei ole kaupungin ulkopuolella vaan sen sisällä: '
+        + 'joki nousee ja laskee kahdesti vuorokaudessa, puistoissa karjuvat '
+        + 'hirvet ja kirkuvat papukaijat, ja sää on kerran ollut kaupungin '
+        + 'vaarallisin vihollinen.',
+      nostot: [
+        {
+          otsikko: 'Joki, joka laskee joka päivä',
+          aika: 'Kahdesti päivässä',
+          tiedosto: 'Mudlarks by Millennium Bridge.jpg',
+          teksti: 'Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee '
+            + 'ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan '
+            + 'noin seitsemän metriä. Laskuveden aikaan kivinen ranta '
+            + 'paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan '
+            + 'portaita pitkin etsimään savipiippuja ja astiansirpaleita. '
+            + 'Etsijöitä sanotaan mudlarkeiksi. Ranta ei silti ole vapaata '
+            + 'riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia '
+            + 'oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se '
+            + 'avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. '
+            + 'Yli kolmesataa vuotta vanhat löydöt on ilmoitettava Lontoon '
+            + 'museolle.',
+          selite: 'Thamesin kivinen ranta paljastuu laskuveden aikaan '
+            + 'Millennium-sillan vieressä. Rannalla liikkuu kymmenkunta '
+            + 'ihmistä, mudasta törröttää vanhojen laitureiden tummuneita '
+            + 'puupaaluja, ja takana kohoaa tiilinen varastotalo, jonka '
+            + 'alakerrassa on The Samuel Pepys -pubi.',
+          lahde: 'Tim Sheerman-Chase, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Thames',
+        },
+        {
+          otsikko: 'Kuninkaan joutsenet lasketaan',
+          aika: 'Heinäkuussa',
+          tiedosto: 'Swan Upping.jpg',
+          teksti: 'Britannian hallitsija omistaa kaikki merkitsemättömät '
+            + 'kyhmyjoutsenet avovesillä, ja tapa juontuu 1100-luvulta. '
+            + 'Heinäkuun kolmannella viikolla soutuveneet nousevat viiden '
+            + 'päivän ajan Thamesia Sunburysta Abingdoniin. Veneet '
+            + 'piirittävät joutsenperheen, poikaset nostetaan veneeseen, '
+            + 'punnitaan, mitataan ja tarkastetaan vammojen varalta, ja '
+            + 'jalkaan pannaan kevyt rengas. Kruunun laskijat pukeutuvat '
+            + 'punaiseen. Osan joutsenista omistavat yhä kaksi Cityn vanhaa '
+            + 'ammattikuntaa, viininmyyjät ja värjärit; ennen linnut '
+            + 'merkittiin lovilla nokkaan, nykyään renkailla.',
+          selite: 'Joutsenten laskijoita veneissään Thamesilla Abingdonissa '
+            + 'heinäkuussa 2006. Lippujen joutsenvaakunat kertovat, kenen '
+            + 'miehistöstä on kyse, ja kaksi joutsenta ui veneen kylkeen '
+            + 'ajettuna; rantapenkereellä seisoo katselijoita kaiteen takana.',
+          lahde: 'Philip Allfrey, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kyhmyjoutsen',
+        },
+        {
+          otsikko: 'Kuusisataa hirveä aidan sisällä',
+          aika: '1637',
+          tiedosto: 'Red deer stag roaring in Richmond Park - geograph.org.uk - 3711560.jpg',
+          teksti: 'Richmond Park on Lontoon kuninkaallisista puistoista suurin, '
+            + 'ja sen kolmentoista kilometrin tiiliaidan sisällä kulkee '
+            + 'vapaana noin 630 saksanhirveä ja kuusipeuraa. Kuningas Kaarle '
+            + 'I aitasi alueen hirvenmetsästystä varten vuonna 1637. '
+            + 'Syys-lokakuussa urokset karjuvat kiima-aikaan. Marraskuussa ja '
+            + 'helmikuussa laumasta kaadetaan noin kaksisataa eläintä, jotta '
+            + 'laidun riittää lopuille. Vuosina 1867 ja 1876 puistosta '
+            + 'lähetettiin kuusipeuroja laivalla Uuteen-Seelantiin, ja ne '
+            + 'olivat maan ensimmäiset kuusipeurat.',
+          selite: 'Karjuva saksanhirviuros Richmond Parkissa lokakuussa 2013. '
+            + 'Sarvet ovat täysikasvuiset ja monihaaraiset, eläin seisoo '
+            + 'kuivan heinikon reunassa, ja sen takana kasvaa laaja '
+            + 'sananjalkakenttä.',
+          lahde: 'Russel Wills, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Isokauris',
+        },
+        {
+          otsikko: 'Papukaijat oppivat kämmenelle',
+          aika: '1969',
+          tiedosto: 'Hyde Park feral parakeets (02).jpg',
+          teksti: 'Lontoon puistoissa lentää kirkkaanvihreitä kauluskaijoja, '
+            + 'joiden kotiseutu on Intiassa ja trooppisessa Afrikassa. '
+            + 'Villiintynyt kanta alkoi lisääntyä pysyvästi vuonna 1969 '
+            + 'Croydonissa, ja nyt lintuja on kymmeniätuhansia: vuoden 2012 '
+            + 'yöpymispuiden laskennassa niitä kertyi Lontoossa noin 32 000. '
+            + 'Talvi ei niitä kaada, sillä laji elää luonnossa myös Himalajan '
+            + 'lumisilla alarinteillä parintuhannen metrin korkeudessa. Hyde '
+            + 'Parkissa ja Kensington Gardensissa ne ovat oppineet lentämään '
+            + 'suoraan avoimelle kämmenelle, jos siinä on siemeniä.',
+          selite: 'Kauluskaija syö auringonkukansiemeniä ihmisen kämmeneltä Hyde '
+            + 'Parkissa marraskuussa 2020. Taustan nurmella odottaa epätarkka '
+            + 'pulujoukko, joka jakaa linnun kanssa saman ruokapaikan.',
+          lahde: 'Isochrone (Berrely), Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Kauluskaija',
+        },
+        {
+          otsikko: 'Sumu, joka ei ollutkaan sumua',
+          aika: '1952',
+          tiedosto: 'A London Fog, drawn by Duncan - ILN 1847.jpg',
+          teksti: 'Lontoon kuuluisa sumu oli kivihiilen savua, ja 1800-luvulla '
+            + 'soihtupojat opastivat kulkijoita savuisilla kaduilla. Pahin '
+            + 'savusumu alkoi 5. joulukuuta 1952, kun korkeapaine painoi '
+            + 'savun kadun tasalle ja tuuli tyyntyi. Viisi päivää kestäneen '
+            + 'sumun aikana näkyvyys putosi paikoin noin kolmeenkymmeneen '
+            + 'senttiin, konsertteja ja elokuvanäytöksiä peruttiin, ja kaikki '
+            + 'joukkoliikenne metroa lukuun ottamatta pysähtyi. Kuolleita '
+            + 'arvioitiin ensin neljätuhatta, myöhemmissä laskelmissa 10 '
+            + '000-12 000. Neljä vuotta myöhemmin säädettiin laki, jonka '
+            + 'nojalla kaupunginosia voitiin määrätä savuttomiksi.',
+          selite: 'Lontoolaista sumua The Illustrated London News -lehden '
+            + 'puukaiverruksessa 2. tammikuuta 1847, siis yli vuosisata ennen '
+            + 'vuoden 1952 savusumua. Kaksi poikaa kantaa palavaa soihtua ja '
+            + 'opastaa kulkijoita, oikealla silinteripäinen herra taluttaa '
+            + 'naista, ja takana häämöttävät hevonen, vaunut ja palava '
+            + 'kaasulyhty.',
+          lahde: 'Henry Linton (kaiverrus, piirros Duncan), Wikimedia Commons (PD)',
+          wiki: 'Lontoon suuri savusumu',
+        },
+        {
+          otsikko: 'Markkinat jäätyneellä joella',
+          aika: '1814',
+          tiedosto: 'Frost Fair on the River Thames (1814).jpg',
+          teksti: 'Ennen Thames jäätyi. Vuosien 1400 ja 1831 välillä joki '
+            + 'jähmettyi Lontoon kohdalla 24 talvena, ja jäälle nousi '
+            + 'telttakylä: keilapelejä, veneenmuotoisia keinuja ja '
+            + 'painokoneita, jotka myivät muistoksi jäällä painettuja '
+            + 'säkeitä. Viimeiset markkinat alkoivat 1. helmikuuta 1814 ja '
+            + 'kestivät neljä päivää, ja norsu talutettiin joen yli '
+            + 'Blackfriarsin sillan alapuolelta. Sitten purettiin vanha '
+            + 'Lontoon silta, jonka yhdeksäntoista pilaria olivat padonneet '
+            + 'virran hitaaksi. Nyt joki juoksee liian nopeasti jäätyäkseen.',
+          selite: 'Vuoden 1814 jäämarkkinat käsin väritetyssä puupiirroksessa, '
+            + 'jonka näkymä otettiin Banksidelta 4. helmikuuta. Jäälle on '
+            + 'pystytetty telttarivi, keilapeli ja veneenmuotoiset keinut; '
+            + 'taustalla erottuvat Pyhän Paavalin kupoli, Monument-pylväs ja '
+            + 'Lontoon silta.',
+          lahde: 'George Thompson (kustantaja), Wikimedia Commons (PD)',
+          wiki: 'Pieni jääkausi',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Ketkä kuninkaan lisäksi omistavat osan Thamesin joutsenista?',
+        vaihtoehdot: [
+          'Kalastajat ja veneenrakentajat',
+          'Viininmyyjät ja värjärit',
+          'Leipurit ja panimomestarit',
+          'Sepät ja satulantekijät',
+        ],
+        oikea: 1,
+        fakta: 'Viininmyyjien ja värjärien ammattikunnat ovat omistaneet osan '
+          + 'linnuista satojen vuosien ajan; kruunun laskijat tunnistaa '
+          + 'punaisesta asusta.',
+      },
     },
     {
       id: 'menovinkit',
@@ -2420,6 +2612,63 @@ export const MAA_KATEGORIAT = {
       ],
     },
     {
+      id: 'keittio',
+      nimi: 'Keittiö',
+      johdanto: 'Rooman omat ruoat ovat lähtöisin köyhistä keittiöistä: muutama '
+        + 'aine, kuuma pannu tai kiehuva öljy — ja tiukka sääntö siitä, mitä '
+        + 'niihin ei panna.',
+      nostot: [
+        {
+          otsikko: 'Carbonarassa ei ole kermaa',
+          aika: '1954',
+          tiedosto: 'Autentica Carbonara.jpg',
+          teksti: 'Roomalaisessa carbonarassa on vain neljä ainesta: '
+            + 'munankeltuainen, pecorino-juusto, pippuri ja guanciale eli '
+            + 'suolattu posken liha. Kermaa ei ole — sen lisääminen on '
+            + 'roomalaiselle sama kuin ketsuppi kalakeitossa. Kastiketta ei '
+            + 'myöskään keitetä: pannu otetaan liedeltä, ja kuuma pasta '
+            + 'hyydyttää keltuaisen sopivan paksuksi. Ruoka on yllättävän '
+            + 'nuori. Ensimmäinen Italiassa painettu ohje ilmestyi vasta '
+            + 'vuonna 1954, ja siinä oli mukana valkosipulia ja sveitsiläistä '
+            + 'gruyère-juustoa.',
+          selite: 'Lautasellinen carbonaraa läheltä. Spagetit kiiltävät '
+            + 'keltuaiskastikkeesta, seassa on ruskeiksi paistettuja '
+            + 'guanciale-kuutioita ja päällä rouhittua mustapippuria.',
+          lahde: 'Andysun60, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Carbonara',
+        },
+        {
+          otsikko: 'Supplì soi kuin puhelin',
+          aika: '1847',
+          tiedosto: 'Supplì al telefono.jpg',
+          teksti: 'Supplì on soikea riisikroketti: tomaattista risottoa, '
+            + 'mozzarellan pala keskellä, korppujauhoa ympärillä ja kiehuvaa '
+            + 'öljyä. Kun kuuman supplìn katkaisee kahtia, sulanut juusto '
+            + 'venyy puolikkaiden väliin pitkäksi langaksi. Se muistutti '
+            + 'roomalaisia vanhan puhelimen johdosta, ja siitä tuli nimi '
+            + 'supplì al telefono. Sana supplì itsessään on väännös ranskan '
+            + 'sanasta surprise, yllätys, ja roomalaiselta ruokalistalta se '
+            + 'löytyy jo vuodelta 1847.',
+          selite: 'Kaksi kullanruskeaa supplìta valkoisella lautasella. Kuori on '
+            + 'karkeaa korppujauhoa, ja vieressä on salaatinlehtiä sekä '
+            + 'tilkka tomaattikastiketta.',
+          lahde: 'Krista, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä supplì sai lisänimen al telefono?',
+        vaihtoehdot: [
+          'Myyntikoju puhelinkopilla',
+          'Juusto venyy kuin johto',
+          'Ensimmäinen puhelintilaus',
+          'Vanhan luurin muoto',
+        ],
+        oikea: 1,
+        fakta: 'Kahtia katkaistusta supplìsta mozzarella venyy pitkäksi '
+          + 'langaksi, joka muistutti roomalaisia vanhan puhelimen johdosta.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Italia on digitoinut sen, mihin museoissa on jono: Sikstuksen '
@@ -3024,6 +3273,64 @@ export const MAA_KATEGORIAT = {
           wiki: 'Oliiviöljy',
         },
       ],
+    },
+    {
+      id: 'herkut',
+      nimi: 'Herkut',
+      johdanto: 'Granadassa ruokaa ei tarvitse tilata baaritiskillä, ja kaupungin '
+        + 'kuuluisin leivos on kotoisin sotaleiristä ja nimetty paavin '
+        + 'mukaan.',
+      nostot: [
+        {
+          otsikko: 'Tapas kuuluu hintaan',
+          aika: 'Nykyisin',
+          tiedosto: 'Cerveza y pulpo seco motrileño.jpg',
+          teksti: 'Granadassa juoman mukana tulee tapas ilman eri maksua. Annosta '
+            + 'ei saa valita: se on baarin valinta eikä asiakkaan, ja se '
+            + 'vaihtuu joka kierroksella — monessa paikassa annokset myös '
+            + 'kasvavat, mitä pitempään istut. Muualla Espanjassa ilmainen '
+            + 'tapas on jo harvinaisuus, ja granadalaiset puolustavat omaansa '
+            + 'kiivaasti. Ruokalistaa ei siis kannata pyytää: illan syö '
+            + 'helpoiten kävelemällä baarista toiseen ja katsomalla, mitä '
+            + 'eteen tuodaan.',
+          selite: 'Olut ja tapas Granadan seudulla. Valkoisella lautasella on '
+            + 'kuivattua mustekalaa suikaleina salaatinlehtien päällä, '
+            + 'vieressä lasillinen olutta puisella baaritiskillä.',
+          lahde: 'Arkangel, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Leivos kaupungista, joka rakennettiin piiritystä varten',
+          aika: '1491',
+          tiedosto: 'Granada - Pionono.jpg',
+          teksti: 'Granadan vieressä on Santa Fen pikkukaupunki, jonka Kastilian '
+            + 'ja Aragonian hallitsijat rakennuttivat vuonna 1491 '
+            + 'sotaleiriksi Granadan piiritystä varten: suorakulmainen '
+            + 'ruudukko, kaksi katua ristissä ja neljä porttia. Siellä '
+            + 'allekirjoitettiin huhtikuussa 1492 sopimus, jolla Kristoffer '
+            + 'Kolumbus sai luvan lähteä merelle. Nykyään Santa Fe tunnetaan '
+            + 'aivan muusta: sieltä on kotoisin pionono, pieni siirappiin '
+            + 'kastettu leivos. Sen keksijäksi kerrotaan leipuri Ceferino '
+            + 'Isla, ja nimi tulee paavi Pius IX:stä — italiaksi Pío Nono, '
+            + 'siitä pionono.',
+          selite: 'Pionono kämmenellä paperivuoassa: pieni siirappiin kastettu '
+            + 'kääretorttu, jonka päällä on ruskistettua kermaa, ja mukana '
+            + 'muovilusikka. Koko on parin suupalan luokkaa.',
+          lahde: 'GrandCelinien, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kristoffer Kolumbus',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kenen mukaan pionono-leivos on saanut nimensä?',
+        vaihtoehdot: [
+          'Sen keksineen leipurin mukaan',
+          'Paavi Pius IX:n mukaan',
+          'Santa Fen kirkon mukaan',
+          'Kuningatar Isabellan mukaan',
+        ],
+        oikea: 1,
+        fakta: 'Leipuri Ceferino Isla nimesi leivoksen paavi Pius IX:n mukaan, '
+          + 'jota sanottiin italiaksi Pío Nonoksi — se lukee leivosnostossa.',
+      },
     },
     {
       id: 'menovinkit',
@@ -5230,6 +5537,65 @@ export const MAA_KATEGORIAT = {
         oikea: 1,
         fakta: 'Kuution kylkeen leimataan luku 72, joka kertoo öljyn osuuden '
           + 'prosentteina — vastaus löytyi saippuanostosta.',
+      },
+    },
+    {
+      id: 'tavat',
+      nimi: 'Tavat',
+      johdanto: 'Leipä, josta kilpaillaan sokkona, ja kirjakauppa, joka mahtuu '
+        + 'kokonaan yhteen peltilaatikkoon joen kaiteella.',
+      nostot: [
+        {
+          otsikko: 'Patongista kilpaillaan joka vuosi',
+          aika: '1994',
+          tiedosto: 'Baguette 001.jpg',
+          teksti: 'Ranskan laki määrää, mitä perinteisessä patongissa saa olla: '
+            + 'käytännössä vain vehnäjauhoa, vettä, suolaa ja hiivaa, eikä '
+            + 'taikinaa saa missään vaiheessa pakastaa. Pariisin kaupunki on '
+            + 'järjestänyt vuodesta 1994 kilpailun, jossa leivän pitää olla '
+            + '55–65 senttiä pitkä ja painaa 250–300 grammaa. Leivät '
+            + 'numeroidaan, jottei raati tiedä kenen leipää maistaa, ja '
+            + 'raadissa istuu kuusi arvottua tavallista pariisilaista. '
+            + 'Voittaja saa 4 000 euroa ja toimittaa vuoden ajan '
+            + 'presidentinpalatsin leivät.',
+          selite: 'Vastapaistettuja patonkeja pellillä. Kuori on ruskea ja '
+            + 'halkeillut pitkittäin, ja juuri se viilto on leipurin oma '
+            + 'käsiala — jokainen tekee sen omalla tavallaan.',
+          lahde: 'N i c o l a, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Patonki',
+        },
+        {
+          otsikko: 'Seinen vihreät kirjalaatikot',
+          aika: '2024',
+          tiedosto: 'Paris 75005 Quai de Montebello Bouquinistes 20071014.jpg',
+          teksti: 'Seinen kaiteisiin on pultattu vihreitä peltilaatikoita, joissa '
+            + 'myydään käytettyjä kirjoja. Kauppiaita on runsaat kaksisataa '
+            + 'ja laatikoita lähes yhdeksänsataa kolmen kilometrin matkalla. '
+            + 'Kaupunki päättää säännöt: yksi myyjä saa kahdeksan metriä '
+            + 'kaidetta ja enintään neljä laatikkoa, ne on avattava vähintään '
+            + 'neljänä päivänä viikossa, ja maali on aina sama vaunuvihreä '
+            + 'kuin ensimmäisen metron kylteissä. Kesällä 2024 laatikot piti '
+            + 'purkaa olympialaisten avajaisten tieltä, mutta päätös '
+            + 'peruttiin ja ne saivat jäädä.',
+          selite: 'Avattu bouquiniste-koju Quai de Montebellella. Vanhoja lehtien '
+            + 'kansia ja painokuvia riippuu pyykkipojilla rivissä, alarivissä '
+            + 'on Le Petit Journal -lehden kuvitettuja etusivuja, ja edessä '
+            + 'odottaa myyjän puinen kokoontaittuva tuoli.',
+          lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta metriä joen kaidetta yksi kirjamyyjä saa?',
+        vaihtoehdot: [
+          'viisi metriä',
+          'kahdeksan metriä',
+          'kaksitoista metriä',
+          'kaksikymmentä metriä',
+        ],
+        oikea: 1,
+        fakta: 'Kaupunki jakaa Seinen kaiteet tarkoilla mitoilla: yhdelle '
+          + 'kirjamyyjälle kuuluu kahdeksan metriä kaidetta, ja laatikot on '
+          + 'avattava vähintään neljänä päivänä viikossa.',
       },
     },
     {
