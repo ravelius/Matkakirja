@@ -203,7 +203,7 @@
     } from './js/tyohuone-data.js';
     import {
       KEHITYS_KAARI, AANINAYTTEET, MANTERE_KOKEILUT, LYHYT_KOKEILUT, UUDET_VALIT,
-      VISA_AARRE_KOKEILUT, KAARI_KAUPUNGIT,
+      VISA_AARRE_KOKEILUT, KAARI_KAUPUNGIT, KAARI_PAKETIT,
     } from './js/tyohuone-kehitys-data.js';
     import { TILANNE, TESTATTAVAA } from './js/tyohuone-tilanne.js';
     import { KOHTAAMISET } from './js/packs/kohtaamiset.js';
@@ -311,10 +311,16 @@
     /* ------------------------------------------------------------------ *
      * KEHITYS (omistajan tilaus 8.8.2026: "kokeillaan ja kuuntelen").
      *
-     * Neljä osiota, sama haitari-tapa kuin Suunnitelma/Käsikirja-
-     * välilehdillä: <details> rakentaa sisällön vasta ensimmäisellä
-     * avauksella, joten 41 kaupungin äänet ja tekstit eivät paina
-     * välilehden ensilatausta. Iso kaari ja ääninäytteet tulevat
+     * Valikkorakenne (omistajan toive 9.8.2026): uusin kokeilu on
+     * aina oma osionsa YLIMPÄNÄ, ja vanhat kokeilut on koottu yhteen
+     * suljettuun "Vanhat kokeilut" -valikkoon, jotta uusin löytyy
+     * heti. Kun seuraava kokeilu valmistuu, ylin osio siirretään
+     * vanhojen joukkoon ja uusi nostetaan tilalle.
+     *
+     * Sama haitari-tapa kuin Suunnitelma/Käsikirja-välilehdillä:
+     * <details> rakentaa sisällön vasta ensimmäisellä avauksella,
+     * joten 41 kaupungin äänet ja tekstit eivät paina välilehden
+     * ensilatausta. Iso kaari ja ääninäytteet tulevat
      * js/tyohuone-kehitys-data.js:stä (Fable kirjoittaa); Euroopan
      * tekstit ja äänet luetaan suoraan paketeista (EUROPE_SAAPUMISET,
      * KOHTAAMISET, VIHJETEKSTIT) — sama data kuin pelissä, ei kopiota.
@@ -337,7 +343,39 @@
       (PACKS.find((p) => p.id === 'europe')?.cities ?? []).map((c) => [c.id, c.name]),
     );
 
-    haitari($('kehitys'), [
+    const uusinKokeilu = {
+      otsikko: 'Koko paketti: 5 kaupunkia ja henkilöt (9.8.)',
+      maara: `${KAARI_PAKETIT.kohteet.length} kaupunkia`,
+      rakenna: () => {
+        const nimio = (teksti) => {
+          const b = el('p', 'pieni');
+          b.append(el('b', null, teksti));
+          return b;
+        };
+        const johdanto = el('div', 'kortti');
+        johdanto.append(el('h3', '', 'Miksi nämä ovat olemassa'));
+        johdanto.append(el('p', '', KAARI_PAKETIT.johdanto));
+        return [johdanto, ...KAARI_PAKETIT.kohteet.map((m) => {
+          const k = el('div', 'kortti');
+          k.append(el('h3', '', m.otsikko));
+          k.append(nimio('Saapuminen (isoisän ääni, 1873)'));
+          k.append(el('p', '', m.saapuminen));
+          k.append(nimio('Henkilö (suunnittelumuistio)'));
+          k.append(el('p', 'pieni', m.henkilo));
+          k.append(nimio('Kohtaaminen'));
+          k.append(el('p', '', m.tervehdys));
+          k.append(nimio('Kohtaaminen tietovisassa'));
+          k.append(el('p', '', m.visa));
+          k.append(nimio('Aarteen paljastuminen'));
+          k.append(el('p', '', m.aarre));
+          k.append(nimio('Henkilön vihje aarteen jälkeen — cliffhanger'));
+          k.append(el('p', '', m.vihje));
+          return k;
+        })];
+      },
+    };
+
+    const vanhatKokeilut = [
       {
         otsikko: 'Iso kaari',
         maara: `${KEHITYS_KAARI.length} jaksoa`,
@@ -563,7 +601,26 @@
           return kortit;
         },
       },
-    ]);
+    ];
+
+    /* Vanhat kokeilut yhden suljetun valikon taakse; sisällä sama
+     * haitari, jossa yksi osio on auki kerrallaan. */
+    const vanhatValikko = el('details', 'osio');
+    {
+      const s = el('summary', '', 'Vanhat kokeilut');
+      s.append(el('small', '', ` ${vanhatKokeilut.length} osiota`));
+      vanhatValikko.append(s);
+      const sisus = el('div', 'sisus');
+      vanhatValikko.append(sisus);
+      let rakennettu = false;
+      vanhatValikko.addEventListener('toggle', () => {
+        if (vanhatValikko.open && !rakennettu) {
+          sisus.append(...haitariOsat(vanhatKokeilut));
+          rakennettu = true;
+        }
+      });
+    }
+    $('kehitys').replaceChildren(...haitariOsat([uusinKokeilu]), vanhatValikko);
 
     const napit = [...document.querySelectorAll('#valilehdet button')];
     /* Vanhat kirjanmerkit eivät saa hajota nimien muuttuessa. */
@@ -1232,7 +1289,7 @@
      * työhuoneessa Juoni-välilehti oli neljä listaa allekkain, ja
      * puhelimella niitä vieritti minuutin.
      */
-    function haitari(kohde, osiot) {
+    function haitariOsat(osiot) {
       const ulos = osiot.map(({ otsikko, maara, rakenna }) => {
         const d = el('details', 'osio');
         const s = el('summary', '', otsikko);
@@ -1249,7 +1306,11 @@
         });
         return d;
       });
-      kohde.replaceChildren(...ulos);
+      return ulos;
+    }
+
+    function haitari(kohde, osiot) {
+      kohde.replaceChildren(...haitariOsat(osiot));
     }
 
     const korttiLista = (rivit) => rivit.map(({ otsikko, meta, teksti }) => {

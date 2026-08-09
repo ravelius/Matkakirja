@@ -49,10 +49,21 @@ ENSIN, sitten `CLAUDE.md`, `docs/roolitus.md`, `docs/isoisan-raamattu.md`,
   `Claude-Session: https://claude.ai/code/session_01R1jVv12E56gbU5qtH5xGaG`
   (Fablen sessio-ID — sama sessio clearin yli).
 
-## SEURAAVA ISO TEHTÄVÄ — 5 kaupunkia, KOKO tekstipaketti (omistajan tilaus)
+## ISO TEHTÄVÄ TEHTY 9.8. — 5 kaupunkia, KOKO tekstipaketti
 
-Tee viisi kaupunkia isoisä-kaarena työhuoneeseen, mutta nyt **koko
-tekstipaketti kerralla suunniteltuna**. Yhdelle kaupungille kuuluu:
+**TILA: valmis ja työhuoneessa (KAARI_PAKETIT,
+js/tyohuone-kehitys-data.js; Kehitys-välilehden ylin osio "Koko
+paketti: 5 kaupunkia ja henkilöt"). Odottaa omistajan lukua — ääniä
+EI generoitu. Henkilöt: Tomáš (Praha, lyhdynsytyttäjä), Emine
+(Istanbul, vedenvartija), Anton (Wien, suntio), Lucia (Venetsia,
+naamiontekijä), Márta (Budapest, kylpymestari). Viisi vihjettä
+kietoutuvat meta-arvoitukseen: joku pitää isoisän jälkiä yllä
+nykyaikana. Valikkorakenne toteutettu: uusin kokeilu ylimpänä,
+vanhat kootussa "Vanhat kokeilut" -valikossa.**
+
+Alkuperäinen tilaus: viisi kaupunkia isoisä-kaarena työhuoneeseen,
+**koko tekstipaketti kerralla suunniteltuna**. Yhdelle kaupungille
+kuuluu:
 
 1. **Saapuminen** — isoisä (Horatio) äänessä, jännittävä/pelottava
    (mutta "askeleet sumussa kyllä, vaara ei").
