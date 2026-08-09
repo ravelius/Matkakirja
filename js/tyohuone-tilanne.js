@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '9.8.2026 (myöhäisilta)',
+  paivitetty: '9.8.2026 (yö)',
   tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
     + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
     + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
@@ -20,48 +20,50 @@ export const TILANNE = {
     {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
-      tila: 'tyossa',
-      tehtava: 'Tarinakaaren kaikki 41 kohdetta kirjoitettu — luennat '
-        + 'generoituvat parhaillaan. Aarrekuvat generoidaan uusiksi '
-        + 'omistajan palautteen mukaan: aarre nousee mustasta, kortti '
-        + 'ilman vanhaa laattakuvaa ja kehyksiä.',
-      seuraavaksi: 'Aarrekuvien v2 julkaisu näytteineen ja tarinakaaren '
-        + 'luentapaketin vienti työhuoneeseen.',
+      tila: 'valmis',
+      tehtava: 'TARINAKAARI ON PELISSÄ (v460): saapumiskortti lukee '
+        + 'kaaren merkinnän, ensimmäinen aarrevisa on kohtaaminen '
+        + 'pariutettuine kysymyksineen ja paljastus päättyy vihjeeseen '
+        + '— 41 kohdetta, 123 luentaa. Aarrekuvat nousevat mustasta '
+        + '(v459); vaalea vertailuversio näytetty, musta valittiin.',
+      seuraavaksi: 'Sonnet 1:n faktatarkistuksen korjaukset kaaren '
+        + 'kysymyksiin, kun raportti tulee. Pääaarteiden kuvat jos '
+        + 'omistaja tilaa.',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Sveitsi ja Norja saivat aihesivut (v456). Samalla '
-        + 'löytyi ja korjattiin oma työkaluvika: kolme galleriaa oli '
-        + 'rikkoutunut siirroissa — palautettu, ja kaikki 28 sivua '
-        + 'auditoitu kenttä kentältä puhtaiksi.',
-      seuraavaksi: 'Tanska, Islanti, Latvia, Liettua, Kroatia kahdessa '
-        + 'erässä → Dubain lehti → Tromssa + aluelehdet + '
+      tehtava: 'Sveitsi+Norja (v456) ja Tanska+Islanti (v461) saivat '
+        + 'aihesivut; siirtoerien galleria-vika löytyi ja korjattiin, '
+        + 'kaikki 28 sivua auditoitu puhtaiksi.',
+      seuraavaksi: 'Latvia, Liettua ja Kroatia (kohdan f viimeinen '
+        + 'erä) → Dubain lehti → Tromssa + aluelehdet + '
         + 'valokuvarajatapaukset + kuvaduplikaattilista '
         + '(docs/kuvaduplikaatit.md, 17 vaihtoa).',
     },
     {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
-      tila: 'valmis',
-      tehtava: 'LÄHI-IDÄN MAAKARTAT VALMIIT (v457): kaikilla laudan '
-        + 'mailla on kartta. Eurooppa oli valmis jo aiemmin (31/31 + '
-        + '29/29).',
-      seuraavaksi: 'Pieni erä: Irakin wiki-linkki Eufratiin + '
-        + 'käyttämättömän mallitiedoston siivous. Sitten odottaa Opus '
-        + '1:n Dubai-lehteä (kaupunkikartta) ja Lähi-idän maalehtiä '
-        + '(kytkentä).',
+      tila: 'odottaa',
+      tehtava: 'Lähi-idän maakartat valmiit (v457), Irakin linkki '
+        + 'Eufratiin (v458) ja mallitiedoston kommentti oikeaksi '
+        + '(v462). Tarkisti myös Fablen siivousoletuksen ja esti '
+        + 'kymmenen maastokohteen tekstien katoamisen.',
+      seuraavaksi: 'Odottaa Opus 1:n Dubai-lehteä (kohdekartta) ja '
+        + 'Lähi-idän maalehtiä (laudan kytkentä). Fable herättää '
+        + 'triggerillä.',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA + työhuone',
-      tila: 'valmis',
-      tehtava: 'Tuplakuvien luokittelu valmis: 17 aitoa vaihdettavaa '
-        + '(lista docs/kuvaduplikaatit.md, tekijäksi Opus 1), Las '
-        + 'Meninas ja Gizan pyramidit jäävät perustellusti.',
-      seuraavaksi: 'Seuraa Sonnet 2:n nähtävyysjuttuja oma-'
-        + 'aloitteisesti; uusi QA-kierros kun isot erät ovat mainissa.',
+      tila: 'tyossa',
+      tehtava: 'Tuplakuvien luokittelu valmis (17 vaihdettavaa, lista '
+        + 'docs/kuvaduplikaatit.md). Nyt työn alla: tarinakaaren 30 '
+        + 'uuden kohteen visakysymysten ja faktojen riippumaton '
+        + 'faktatarkistus + anakronismit vuoteen 1873.',
+      seuraavaksi: 'Faktatarkistusraportti Fablelle — Fable korjaa '
+        + 'löydökset suoraan peliin.',
     },
     {
       tekija: 'Sonnet 2',
@@ -90,28 +92,24 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
-    otsikko: 'Aarrekuvat satukirjatyyliin (v455)',
-    ohje: 'Pelaa millä tahansa mantereella ja vastaa visaan oikein: '
-      + 'paljastuskortissa on nyt AI-piirretty aarre yhtenäisessä '
-      + 'tyylissä — guassi, pergamentti ja kynttilänvalo. 21 kuvaa, '
-      + 'kolme per manner.',
+    otsikko: 'Tarinakaari pelissä (v460)',
+    ohje: 'Pelaa Eurooppaa: saapumiskortti lukee isoisän merkinnän, '
+      + 'kaupungin ensimmäinen aarrevisa on kohtaaminen jonka henkilö '
+      + 'esittää isoisän kysymyksen, ja aarteen paljastus päättyy auki '
+      + 'jäävään vihjeeseen — kaikki luettuna ääneen. 41 kohdetta.',
   },
   {
-    otsikko: 'Tarinakaaren erä 1 työhuoneessa (11 kaupunkia)',
-    ohje: 'Työhuone → Kehitys: hyväksymälläsi mallilla nyt myös '
-      + 'Lontoo, Pariisi, Berliini, Rooma, Madrid ja Ateena — '
-      + 'jokaisella saapuminen, kohtaaminen kysymyksineen ja aarre, '
-      + 'kaikki kuunneltavissa. Loput Euroopan kohteet tulevat erissä.',
+    otsikko: 'Aarre nousee mustasta (v459)',
+    ohje: 'Vastaa aarrevisaan oikein millä tahansa mantereella: '
+      + 'AI-piirretty aarre nousee pimeästä ilman kehyksiä, huudahdus '
+      + 'yllä ja nimi arvoineen alla. Vaalea vertailuversio näytettiin '
+      + '— musta valittiin.',
   },
   {
-    otsikko: 'Huudahdus paljastushetkellä (v452)',
-    ohje: 'Vastaa visaan oikein: nuori herra huudahtaa juuri kun '
-      + 'aarre kääntyy esiin, ja huudahdus kasvaa aarteen arvon '
-      + 'mukana. Sama satunnaisvaihtelu joka laudalla.',
-  },
-  {
-    otsikko: 'Minitehtävä joka aihesivulla (v454)',
-    ohje: 'Avaa minkä tahansa maalehden aihesivu: lopussa on nyt '
-      + 'aina pieni tehtävä. Uusia tuli 31, yhteensä 134.',
+    otsikko: 'Uudet aihesivut: CHE, NOR, DNK, ISL (v456, v461)',
+    ohje: 'Avaa Sveitsin, Norjan, Tanskan tai Islannin maalehti: '
+      + 'kolme aihesivua ja yhdeksän juttua kullakin, minitehtävät '
+      + 'mukana. Latvia, Liettua ja Kroatia tulossa.',
   },
 ];
+
