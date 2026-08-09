@@ -70,7 +70,7 @@ import { radioMaalle } from './packs/radiot.js';
 import { EUROPE_KULTTUURI } from './packs/europe-kulttuuri.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
-import { MAAKARTAT, KAUPUNKIKARTAT, karttapiste } from './packs/maakartat.js';
+import { MAAKARTAT, KAUPUNKIKARTAT, karttapiste, mittakaava } from './packs/maakartat.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
@@ -8606,6 +8606,25 @@ export class UI {
     if (kartta.polku) kuva.src = kartta.polku;
     else asetaKuva(kuva, valokuvaUrl(kartta.tiedosto, 1000), valokuvaVara(kartta.tiedosto, 1000));
     kotelo.appendChild(kuva);
+    /*
+     * Mittakaavajana kartan vasempaan alakulmaan (omistajan toive
+     * 9.8.2026). Pituus ja teksti tulevat rajauksesta
+     * (maakartat.js:n mittakaava), joten uusi kaupunki saa janan
+     * ilman että tähän kosketaan.
+     *
+     * Leveys on prosentteina kuvan leveydestä eikä pikseleinä: kuva
+     * skaalautuu puhelimesta työpöytään, ja pikselimitta valehtelisi
+     * heti ensimmäisellä kokomuutoksella. Prosentti pitää janan
+     * oikeana joka leveydellä.
+     */
+    const jana = mittakaava(kartta);
+    if (jana) {
+      const mitta = html('div', 'kartta-mittajana');
+      mitta.style.width = `${jana.osuus.toFixed(2)}%`;
+      mitta.appendChild(html('span', 'kartta-mittajana-teksti', jana.teksti));
+      mitta.setAttribute('aria-label', `Mittakaava: janan pituus vastaa ${jana.teksti}`);
+      kotelo.appendChild(mitta);
+    }
     const selitteet = html('div', 'kartta-selitteet');
     /*
      * Nähtävyysjuttu voi asua joko suoraan kartan kohdeoliossa
