@@ -925,8 +925,6 @@ const ALOITUS_ZOOM_MS = 3600;
 // samaa kaarta. Jos muutat toisen, muuta myös toinen.
 const ZOOM_PEHMENNYS = 'cubic-bezier(0.68, 0, 0.3, 1)';
 // Hiljainen hetki ennen zoomausta, jotta moottoriääni erottuu.
-// Tutki-sivun ylä- ja alareunan kaista, joka vierittää päähän.
-const TUTKI_KAISTA_PX = 64;
 // Lehden minitehtävän palkkio: pienempi kuin kulttuurivisan, koska
 // vastaus lukee samalla sivulla.
 const MINITEHTAVA_PALKKIO = 10;
@@ -7359,6 +7357,13 @@ export class UI {
     const sivuja = this.tutkiSivuja();
     const i = Math.min(Math.max(indeksi, 0), sivuja - 1);
     this.tutkiSivu = i;
+    /*
+     * Väkäsen näkyvyys lasketaan vasta kun sivun sisältö on
+     * asettunut: ilman tätä nappi jäi piiloon lehteä avattaessa,
+     * koska tila oli laskettu edellisen (lyhyen) sisällön mukaan
+     * eikä mikään vieritys ollut vielä päivittänyt sitä.
+     */
+    setTimeout(() => this.tutkiVakanen?.(), 120);
     const etusivu = i === 0;
     if (this.arrivalPalstat) this.arrivalPalstat.hidden = !etusivu;
     /*
@@ -7740,48 +7745,31 @@ export class UI {
      * ollaan. Se on pelkkä vihje: napautuksen ottaa vastaan alakaista,
      * ei väkänen itse (pointer-events: none).
      */
+    /*
+     * Väkänen on nyt ITSE nappi (omistajan päätös 9.8.2026:
+     * "ota alareunan napautus pois. Sen sijaan kevyt kelluva nuoli
+     * väkänen alaspäin jolla pääsisi sivun loppuun") — napautuskaista
+     * poistui kokonaan, koska iPadilla vierityksen pysäyttävä sormi
+     * laukaisi sen yhä 350 ms:n vahdista huolimatta.
+     */
     const vakanen = html('button', 'tutki-pohjaan');
     vakanen.type = 'button';
-    vakanen.tabIndex = -1;
-    vakanen.setAttribute('aria-hidden', 'true');
-    vakanen.innerHTML = '<svg viewBox="0 0 24 24"><path d="M6 9 L12 15 L18 9" fill="none"'
+    vakanen.setAttribute('aria-label', 'Vieritä sivun loppuun');
+    vakanen.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9 L12 15 L18 9" fill="none"'
       + ' stroke="currentColor" stroke-width="2" stroke-linecap="round"'
       + ' stroke-linejoin="round"/></svg>';
     this.arrivalDialog.appendChild(vakanen);
-    /*
-     * Vierityksen aikaleima kaistanapautuksen vahdiksi. iPadilla
-     * momentum-vierityksen pysäyttävä sormi tuottaa click-tapahtuman,
-     * ja ylöspäin rullatessa se osui alakaistaan — sivu vieritti
-     * itsensä takaisin pohjaan ja "vieritys loppui muutaman sentin
-     * jälkeen" (omistajan havainto 8.8.2026, toistui loputtomasti).
-     * Kaista tottelee vain napautusta, jota EI edeltänyt tuore
-     * vieritys.
-     */
-    let viimeVieritys = 0;
+    vakanen.addEventListener('click', (e) => {
+      e.stopPropagation();
+      kortti.scrollTo({ top: kortti.scrollHeight, behavior: this.reducedMotion ? 'auto' : 'smooth' });
+    });
     const paivitaVakanen = () => {
       const pohjassa = kortti.scrollTop + kortti.clientHeight >= kortti.scrollHeight - 8;
       vakanen.hidden = pohjassa || kortti.scrollHeight <= kortti.clientHeight + 8;
     };
-    kortti.addEventListener('scroll', () => {
-      viimeVieritys = Date.now();
-      paivitaVakanen();
-    }, { passive: true });
+    kortti.addEventListener('scroll', paivitaVakanen, { passive: true });
     this.arrivalDialog.addEventListener('close', () => { vakanen.hidden = true; });
     this.tutkiVakanen = paivitaVakanen;
-
-    kortti.addEventListener('click', (e) => {
-      if (!this.arrivalDialog.open) return;
-      if (e.target.closest('button, a, img, .tutki-nuoli')) return;
-      if (Date.now() - viimeVieritys < 350) return;
-      const laatikko = kortti.getBoundingClientRect();
-      const yla = e.clientY - laatikko.top;
-      const ala = laatikko.bottom - e.clientY;
-      const kaista = Math.min(TUTKI_KAISTA_PX, laatikko.height * 0.12);
-      if (yla > kaista && ala > kaista) return;
-      const kohde = yla <= kaista ? 0 : kortti.scrollHeight;
-      kortti.scrollTo({ top: kohde, behavior: this.reducedMotion ? 'auto' : 'smooth' });
-      setTimeout(paivitaVakanen, 400);
-    });
     paivitaVakanen();
   }
 

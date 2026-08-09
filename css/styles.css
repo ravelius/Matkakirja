@@ -2270,6 +2270,20 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px dashed rgba(70, 51, 31, 0.35);
+  /* Etsi kätkö putoaa omalle täysleveälle rivilleen (alla). */
+  flex-wrap: wrap;
+}
+
+/*
+ * Etsi kätkö kaikkien nappien alle koko leveänä ja matalana
+ * (omistajan toive 9.8.2026). Järjestys käännetään orderilla —
+ * DOMissa nappi pysyy ensimmäisenä, jotta Enter valitsee sen yhä.
+ */
+.dialog:not(.lehti) .arrival-card .dialog-actions #arrival-yes {
+  order: 2;
+  flex: 1 1 100%;
+  min-height: 0;
+  padding: 0.45rem 0.8rem;
 }
 
 /*
@@ -7123,9 +7137,10 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   }
 
   /*
-   * Väkänen alareunaan: vihje siitä, että sieltä painamalla sivu
-   * vierittyy pohjaan (omistajan toive). Sama hillitty ilme kuin
-   * lennon ohitusnuolella — se ei saa kilpailla tekstin kanssa.
+   * Kelluva väkänen alareunassa on ITSE nappi, joka vierittää sivun
+   * loppuun (omistajan päätös 9.8.2026 — napautuskaista poistui,
+   * koska se laukesi iPadilla kesken vierityksen). Hillitty ilme:
+   * se ei saa kilpailla tekstin kanssa.
    */
   .dialog.arkki .tutki-pohjaan {
     position: fixed;
@@ -7133,16 +7148,21 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
      * (nuolet + sivunumero, v301). */
     right: 0.55rem;
     bottom: calc(env(safe-area-inset-bottom, 0px) + 0.35rem);
-    width: 1.9rem;
-    height: 1.9rem;
-    padding: 0;
+    width: 2.2rem;
+    height: 2.2rem;
+    min-height: 0;
+    padding: 0.15rem;
     border: 0;
-    background: none;
+    border-radius: 50%;
+    background: rgba(246, 231, 198, 0.75);
     color: var(--ink, #46331f);
-    opacity: 0.34;
+    opacity: 0.55;
     z-index: 5;
-    pointer-events: none;
+    cursor: pointer;
   }
+
+  .dialog.arkki .tutki-pohjaan:hover,
+  .dialog.arkki .tutki-pohjaan:focus-visible { opacity: 0.9; }
 
   .dialog.arkki .tutki-pohjaan svg { width: 100%; height: 100%; display: block; }
   /* Pohjassa väkänen on turha: se osoittaisi sinne missä jo ollaan. */

@@ -2278,6 +2278,20 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px dashed rgba(70, 51, 31, 0.35);
+  /* Etsi kätkö putoaa omalle täysleveälle rivilleen (alla). */
+  flex-wrap: wrap;
+}
+
+/*
+ * Etsi kätkö kaikkien nappien alle koko leveänä ja matalana
+ * (omistajan toive 9.8.2026). Järjestys käännetään orderilla —
+ * DOMissa nappi pysyy ensimmäisenä, jotta Enter valitsee sen yhä.
+ */
+.dialog:not(.lehti) .arrival-card .dialog-actions #arrival-yes {
+  order: 2;
+  flex: 1 1 100%;
+  min-height: 0;
+  padding: 0.45rem 0.8rem;
 }
 
 /*
@@ -7131,9 +7145,10 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   }
 
   /*
-   * Väkänen alareunaan: vihje siitä, että sieltä painamalla sivu
-   * vierittyy pohjaan (omistajan toive). Sama hillitty ilme kuin
-   * lennon ohitusnuolella — se ei saa kilpailla tekstin kanssa.
+   * Kelluva väkänen alareunassa on ITSE nappi, joka vierittää sivun
+   * loppuun (omistajan päätös 9.8.2026 — napautuskaista poistui,
+   * koska se laukesi iPadilla kesken vierityksen). Hillitty ilme:
+   * se ei saa kilpailla tekstin kanssa.
    */
   .dialog.arkki .tutki-pohjaan {
     position: fixed;
@@ -7141,16 +7156,21 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
      * (nuolet + sivunumero, v301). */
     right: 0.55rem;
     bottom: calc(env(safe-area-inset-bottom, 0px) + 0.35rem);
-    width: 1.9rem;
-    height: 1.9rem;
-    padding: 0;
+    width: 2.2rem;
+    height: 2.2rem;
+    min-height: 0;
+    padding: 0.15rem;
     border: 0;
-    background: none;
+    border-radius: 50%;
+    background: rgba(246, 231, 198, 0.75);
     color: var(--ink, #46331f);
-    opacity: 0.34;
+    opacity: 0.55;
     z-index: 5;
-    pointer-events: none;
+    cursor: pointer;
   }
+
+  .dialog.arkki .tutki-pohjaan:hover,
+  .dialog.arkki .tutki-pohjaan:focus-visible { opacity: 0.9; }
 
   .dialog.arkki .tutki-pohjaan svg { width: 100%; height: 100%; display: block; }
   /* Pohjassa väkänen on turha: se osoittaisi sinne missä jo ollaan. */
@@ -109397,8 +109417,6 @@ const ALOITUS_ZOOM_MS = 3600;
 // samaa kaarta. Jos muutat toisen, muuta myös toinen.
 const ZOOM_PEHMENNYS = 'cubic-bezier(0.68, 0, 0.3, 1)';
 // Hiljainen hetki ennen zoomausta, jotta moottoriääni erottuu.
-// Tutki-sivun ylä- ja alareunan kaista, joka vierittää päähän.
-const TUTKI_KAISTA_PX = 64;
 // Lehden minitehtävän palkkio: pienempi kuin kulttuurivisan, koska
 // vastaus lukee samalla sivulla.
 const MINITEHTAVA_PALKKIO = 10;
@@ -115830,6 +115848,13 @@ class UI {
     const sivuja = this.tutkiSivuja();
     const i = Math.min(Math.max(indeksi, 0), sivuja - 1);
     this.tutkiSivu = i;
+    /*
+     * Väkäsen näkyvyys lasketaan vasta kun sivun sisältö on
+     * asettunut: ilman tätä nappi jäi piiloon lehteä avattaessa,
+     * koska tila oli laskettu edellisen (lyhyen) sisällön mukaan
+     * eikä mikään vieritys ollut vielä päivittänyt sitä.
+     */
+    setTimeout(() => this.tutkiVakanen?.(), 120);
     const etusivu = i === 0;
     if (this.arrivalPalstat) this.arrivalPalstat.hidden = !etusivu;
     /*
@@ -116211,48 +116236,31 @@ class UI {
      * ollaan. Se on pelkkä vihje: napautuksen ottaa vastaan alakaista,
      * ei väkänen itse (pointer-events: none).
      */
+    /*
+     * Väkänen on nyt ITSE nappi (omistajan päätös 9.8.2026:
+     * "ota alareunan napautus pois. Sen sijaan kevyt kelluva nuoli
+     * väkänen alaspäin jolla pääsisi sivun loppuun") — napautuskaista
+     * poistui kokonaan, koska iPadilla vierityksen pysäyttävä sormi
+     * laukaisi sen yhä 350 ms:n vahdista huolimatta.
+     */
     const vakanen = html('button', 'tutki-pohjaan');
     vakanen.type = 'button';
-    vakanen.tabIndex = -1;
-    vakanen.setAttribute('aria-hidden', 'true');
-    vakanen.innerHTML = '<svg viewBox="0 0 24 24"><path d="M6 9 L12 15 L18 9" fill="none"'
+    vakanen.setAttribute('aria-label', 'Vieritä sivun loppuun');
+    vakanen.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9 L12 15 L18 9" fill="none"'
       + ' stroke="currentColor" stroke-width="2" stroke-linecap="round"'
       + ' stroke-linejoin="round"/></svg>';
     this.arrivalDialog.appendChild(vakanen);
-    /*
-     * Vierityksen aikaleima kaistanapautuksen vahdiksi. iPadilla
-     * momentum-vierityksen pysäyttävä sormi tuottaa click-tapahtuman,
-     * ja ylöspäin rullatessa se osui alakaistaan — sivu vieritti
-     * itsensä takaisin pohjaan ja "vieritys loppui muutaman sentin
-     * jälkeen" (omistajan havainto 8.8.2026, toistui loputtomasti).
-     * Kaista tottelee vain napautusta, jota EI edeltänyt tuore
-     * vieritys.
-     */
-    let viimeVieritys = 0;
+    vakanen.addEventListener('click', (e) => {
+      e.stopPropagation();
+      kortti.scrollTo({ top: kortti.scrollHeight, behavior: this.reducedMotion ? 'auto' : 'smooth' });
+    });
     const paivitaVakanen = () => {
       const pohjassa = kortti.scrollTop + kortti.clientHeight >= kortti.scrollHeight - 8;
       vakanen.hidden = pohjassa || kortti.scrollHeight <= kortti.clientHeight + 8;
     };
-    kortti.addEventListener('scroll', () => {
-      viimeVieritys = Date.now();
-      paivitaVakanen();
-    }, { passive: true });
+    kortti.addEventListener('scroll', paivitaVakanen, { passive: true });
     this.arrivalDialog.addEventListener('close', () => { vakanen.hidden = true; });
     this.tutkiVakanen = paivitaVakanen;
-
-    kortti.addEventListener('click', (e) => {
-      if (!this.arrivalDialog.open) return;
-      if (e.target.closest('button, a, img, .tutki-nuoli')) return;
-      if (Date.now() - viimeVieritys < 350) return;
-      const laatikko = kortti.getBoundingClientRect();
-      const yla = e.clientY - laatikko.top;
-      const ala = laatikko.bottom - e.clientY;
-      const kaista = Math.min(TUTKI_KAISTA_PX, laatikko.height * 0.12);
-      if (yla > kaista && ala > kaista) return;
-      const kohde = yla <= kaista ? 0 : kortti.scrollHeight;
-      kortti.scrollTo({ top: kohde, behavior: this.reducedMotion ? 'auto' : 'smooth' });
-      setTimeout(paivitaVakanen, 400);
-    });
     paivitaVakanen();
   }
 
@@ -121034,6 +121042,8 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 413, teksti: 'Napautuskaista pois: väkänen vierittää sivun loppuun' },
+  { v: 413, teksti: 'Etsi kätkö omalle riville koko leveänä ja matalana' },
   { v: 412, teksti: 'Maan nimikilpi aina kaupunkinimien kokoinen' },
   { v: 411, teksti: 'Tšekille, Itävallalle ja kolmelle muulle maalle aihesivut' },
   { v: 411, teksti: 'Toisen maan lehti ei enää luule tehtävää ratkaistuksi' },
@@ -121523,7 +121533,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.412';
+const APP_VERSION = '2026-08-09.413';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
