@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '9.8.2026 (ilta)',
+  paivitetty: '9.8.2026 (myöhäisilta)',
   tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
     + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
     + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
@@ -21,44 +21,47 @@ export const TILANNE = {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
       tila: 'tyossa',
-      tehtava: 'Aarrekuvat AI-generoitu yhtenäiseen satukirjatyyliin, '
-        + 'kaikki 21 manneraarretta pelissä (v455). Tarinakaaren erä 1 '
-        + 'työhuoneessa: 11 kaupunkia teksteineen ja luentoineen.',
-      seuraavaksi: 'Tarinakaaren erät 2–6: loput 30 Euroopan kohdetta '
-        + 'samalla mallilla (tekstit + luennat + työhuone).',
+      tehtava: 'Tarinakaaren kaikki 41 kohdetta kirjoitettu — luennat '
+        + 'generoituvat parhaillaan. Aarrekuvat generoidaan uusiksi '
+        + 'omistajan palautteen mukaan: aarre nousee mustasta, kortti '
+        + 'ilman vanhaa laattakuvaa ja kehyksiä.',
+      seuraavaksi: 'Aarrekuvien v2 julkaisu näytteineen ja tarinakaaren '
+        + 'luentapaketin vienti työhuoneeseen.',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Vaihe B valmis: kaikki 27 kaupunkisiirtoa tehty ja QA '
-        + 'todensi ne riippumattomasti. Minitehtäväjono tyhjä (v454) — '
-        + 'joka maalehden aihesivulla on nyt minitehtävä, yhteensä 134.',
-      seuraavaksi: 'Seitsemän aihesivuttoman maan sivut (Sveitsi, '
-        + 'Norja, Tanska, Islanti, Latvia, Liettua, Kroatia) → Dubain '
-        + 'lehti → Tromssa + aluelehdet + valokuvarajatapaukset + '
-        + 'hitaan cimec-linkin vaihto.',
+      tehtava: 'Sveitsi ja Norja saivat aihesivut (v456). Samalla '
+        + 'löytyi ja korjattiin oma työkaluvika: kolme galleriaa oli '
+        + 'rikkoutunut siirroissa — palautettu, ja kaikki 28 sivua '
+        + 'auditoitu kenttä kentältä puhtaiksi.',
+      seuraavaksi: 'Tanska, Islanti, Latvia, Liettua, Kroatia kahdessa '
+        + 'erässä → Dubain lehti → Tromssa + aluelehdet + '
+        + 'valokuvarajatapaukset + kuvaduplikaattilista '
+        + '(docs/kuvaduplikaatit.md, 17 vaihtoa).',
     },
     {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
-      tila: 'tyossa',
-      tehtava: 'Eurooppa valmis (kohdekartat 31/31, maakartat 29/29). '
-        + 'Lähi-idän lauta pelattavana ja maakartat 10/12: uusimpina '
-        + 'Saudi-Arabia, Jemen, Kypros ja Syyria (v453).',
-      seuraavaksi: 'Viimeinen erä: Irakin ja Iranin maakartat. Sitten '
-        + 'Lähi-itä odottaa maalehtiä (Opus 1) ennen kytkentää.',
+      tila: 'valmis',
+      tehtava: 'LÄHI-IDÄN MAAKARTAT VALMIIT (v457): kaikilla laudan '
+        + 'mailla on kartta. Eurooppa oli valmis jo aiemmin (31/31 + '
+        + '29/29).',
+      seuraavaksi: 'Pieni erä: Irakin wiki-linkki Eufratiin + '
+        + 'käyttämättömän mallitiedoston siivous. Sitten odottaa Opus '
+        + '1:n Dubai-lehteä (kaupunkikartta) ja Lähi-idän maalehtiä '
+        + '(kytkentä).',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA + työhuone',
-      tila: 'tyossa',
-      tehtava: 'Kierros 2 valmis puhtain tuloksin: siirtoerien kentät, '
-        + 'karttamatematiikka ja linkit todennettu, PR #644 tarkistettu. '
-        + 'Verkkolöydökset merkitään jatkossa epävarmoiksi (hiekkalaatikon '
-        + 'verkko vääristää).',
-      seuraavaksi: '26 mahdollisen tuplakuvan luokittelu: aito tupla '
-        + 'vai sama kohde eri kuvakulmasta.',
+      tila: 'valmis',
+      tehtava: 'Tuplakuvien luokittelu valmis: 17 aitoa vaihdettavaa '
+        + '(lista docs/kuvaduplikaatit.md, tekijäksi Opus 1), Las '
+        + 'Meninas ja Gizan pyramidit jäävät perustellusti.',
+      seuraavaksi: 'Seuraa Sonnet 2:n nähtävyysjuttuja oma-'
+        + 'aloitteisesti; uusi QA-kierros kun isot erät ovat mainissa.',
     },
     {
       tekija: 'Sonnet 2',
