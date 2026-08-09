@@ -1,0 +1,114 @@
+/*
+ * Aarrekuvien AI-generointi (omistajan päätös 9.8.2026: yhtenäinen
+ * tyyli ja tausta, Commons-valokuvat eivät toimi sellaisinaan).
+ *
+ * Käyttö:  NODE_USE_ENV_PROXY=1 GOOGLE_API_KEY=... node tools/generoi-aarrekuvat.mjs [avain …]
+ * Ilman argumentteja generoi kaikki. Avaimet: europe-ruby, africa-topaz …
+ * Malli: Imagen 3 Gemini API:n kautta; vaihdettavissa AARRE_MALLI-
+ * ympäristömuuttujalla. Ulos: assets/aarteet/aarre-<avain>.png
+ * (1024×1024 — pienennys ~640 px:iin tehdään erillisenä vaiheena
+ * ennen peliin kytkemistä, ks. tools/aarrekuvat-promptit.md).
+ *
+ * API-avainta EI koskaan repoon eikä lokiin.
+ */
+
+import { writeFileSync, mkdirSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const MALLI = process.env.AARRE_MALLI ?? 'imagen-3.0-generate-002';
+
+const avain = process.env.GOOGLE_API_KEY;
+if (!avain) {
+  console.error('GOOGLE_API_KEY puuttuu ympäristöstä — kuvia ei voi generoida.');
+  process.exit(1);
+}
+
+/*
+ * Yhtenäinen tyyli joka promptin ympärille: lasten seikkailukirjan
+ * guassikuvitus pergamenttitaustalla, lämmin kynttilänvalo — sama
+ * paperimaailma kuin pelin arkeissa.
+ */
+const TYYLI = (esine) => `Vintage children's adventure book illustration of ${esine}, `
+  + 'painted in warm gouache with fine ink outlines. The object sits '
+  + 'centered on aged parchment paper background with soft vignette '
+  + 'edges, lit warmly from the upper left like candlelight. Rich '
+  + 'detail on the object, plain background, no text, no people, '
+  + 'no borders. Muted antique palette with one strong accent color '
+  + 'from the object itself.';
+
+const KUVAT = [
+  // Eurooppa
+  ['europe-ruby', 'a magnificent royal crown of gold covered in pearls, table-cut gems and colorful enamel figures'],
+  ['europe-emerald', "a knight's medieval longsword with silver pommel and worn leather-wrapped grip, lying diagonally on cloth"],
+  ['europe-topaz', 'a cluster of glowing baltic amber pieces, one with a tiny ancient insect trapped inside, light passing through'],
+  // Afrikka
+  ['africa-ruby', 'a large rough uncut diamond crystal, glassy and angular, resting on dark stone'],
+  ['africa-emerald', 'a heavy natural gold nugget with pitted gleaming surface'],
+  ['africa-topaz', 'a small pile of glossy spotted cowrie shells, once used as money'],
+  // Lähi-itä
+  ['middleeast-ruby', 'an ornate antique brass oil lamp with curved spout and looped handle, like from an old tale'],
+  ['middleeast-emerald', 'translucent golden frankincense resin chunks in a small brass bowl with a faint wisp of smoke'],
+  ['middleeast-topaz', 'a small linen pouch spilling deep red saffron threads'],
+  // Aasia
+  ['asia-ruby', 'a single large lustrous white pearl resting on a dark mother-of-pearl oyster shell'],
+  ['asia-emerald', 'a rolled bolt of imperial yellow silk with a woven dragon pattern, partly unrolled'],
+  ['asia-topaz', 'a delicate blue-and-white Chinese porcelain cup with painted figures'],
+  // Pohjois-Amerikka
+  ['northamerica-ruby', 'a gold nugget beside a battered tin gold-panning dish with river sand'],
+  ['northamerica-emerald', 'a raw turquoise stone with golden-brown matrix veins'],
+  ['northamerica-topaz', 'a burlap sack spilling brown cacao beans'],
+  // Etelä-Amerikka
+  ['southamerica-ruby', 'a small pre-Columbian hammered gold votive figurine with a headdress'],
+  ['southamerica-emerald', 'a vivid green emerald crystal embedded in white host rock'],
+  ['southamerica-topaz', 'an irregular hand-struck Spanish colonial silver coin with a cross and shield design'],
+  // Oseania
+  ['oceania-ruby', 'a precious opal with rainbow fire flashing across its surface, set in rough sandstone'],
+  ['oceania-emerald', 'a polished paua abalone shell shimmering blue and green'],
+  ['oceania-topaz', 'long strings of tiny white shell beads coiled like rope, Pacific island shell money'],
+];
+
+const pyydetyt = process.argv.slice(2);
+const jono = KUVAT.filter(([k]) => !pyydetyt.length || pyydetyt.includes(k));
+if (!jono.length) {
+  console.error('Ei kohteita. Tunnetut:', KUVAT.map(([k]) => k).join(', '));
+  process.exit(1);
+}
+
+mkdirSync(resolve(JUURI, 'assets/aarteet'), { recursive: true });
+
+async function generoi(tunnus, esine) {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MALLI}:predict?key=${avain}`;
+  const vastaus = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      instances: [{ prompt: TYYLI(esine) }],
+      parameters: { sampleCount: 1, aspectRatio: '1:1', personGeneration: 'dont_allow' },
+    }),
+    signal: AbortSignal.timeout(120000),
+  });
+  if (!vastaus.ok) {
+    const virhe = (await vastaus.text()).slice(0, 300).replace(new RegExp(avain, 'g'), '***');
+    console.error(`${tunnus}: HTTP ${vastaus.status}: ${virhe}`);
+    return false;
+  }
+  const data = await vastaus.json();
+  const b64 = data.predictions?.[0]?.bytesBase64Encoded;
+  if (!b64) {
+    console.error(`${tunnus}: vastauksessa ei kuvaa (${JSON.stringify(Object.keys(data)).slice(0, 120)})`);
+    return false;
+  }
+  const polku = resolve(JUURI, `assets/aarteet/aarre-${tunnus}.png`);
+  writeFileSync(polku, Buffer.from(b64, 'base64'));
+  console.log(`${tunnus}: ${(Buffer.from(b64, 'base64').length / 1024).toFixed(0)} kt → ${polku}`);
+  return true;
+}
+
+let onnistui = 0;
+for (const [tunnus, esine] of jono) {
+  if (await generoi(tunnus, esine)) onnistui++;
+  await new Promise((r) => setTimeout(r, 2000));
+}
+console.log(`Valmis: ${onnistui}/${jono.length}.`);
