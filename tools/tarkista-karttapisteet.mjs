@@ -49,8 +49,9 @@
  *  - Lontoon silmä ja Venetsian Arsenaali olivat oikeasti rannan
  *    väärällä puolella, ja niiden pisteet siirrettiin.
  *
- * Nykyisin jäljellä olevat osumat ovat kaikki oikeita: neljä siltaa,
- * majakka aallonmurtajalla, Marseillen satama-allas ja Dubain
+ * Nykyisin jäljellä olevat osumat ovat kaikki oikeita: viisi siltaa
+ * (Rialto, Ha'penny, Ketjusilta, Latinalaissilta, Tromssan silta),
+ * Odessan majakka aallonmurtajalla, Marseillen satama-allas ja Dubain
  * abra-laiturit rantaviivalla.
  *
  * PNG puretaan tässä itse (zlib + suodatinrivit) eikä selaimella:
