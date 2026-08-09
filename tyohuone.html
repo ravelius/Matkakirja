@@ -307,7 +307,7 @@
      * kirjoittaa). Vanhat kokeilut siivottu 9.8.2026 — git-historiassa.
      * ------------------------------------------------------------------ */
     const uusinKokeilu = {
-      otsikko: 'Koko paketti: 5 kaupunkia ja henkilöt (9.8.)',
+      otsikko: 'Paketti v2: kohtaaminen ja kysymys yhdessä (9.8. ilta)',
       maara: `${KAARI_PAKETIT.kohteet.length} kaupunkia`,
       rakenna: () => {
         const nimio = (teksti) => {
@@ -316,23 +316,27 @@
           return b;
         };
         const johdanto = el('div', 'kortti');
-        johdanto.append(el('h3', '', 'Miksi nämä ovat olemassa'));
+        johdanto.append(el('h3', '', 'Mikä muuttui'));
         johdanto.append(el('p', '', KAARI_PAKETIT.johdanto));
         return [johdanto, ...KAARI_PAKETIT.kohteet.map((m) => {
           const k = el('div', 'kortti');
           k.append(el('h3', '', m.otsikko));
-          k.append(nimio('Saapuminen (isoisän ääni, 1873)'));
+          k.append(nimio('Matkakirja: saapuminen (isoisän ääni, 1873)'));
           k.append(el('p', '', m.saapuminen));
           k.append(nimio('Henkilö (suunnittelumuistio)'));
           k.append(el('p', 'pieni', m.henkilo));
           k.append(nimio('Kohtaaminen'));
-          k.append(el('p', '', m.tervehdys));
-          k.append(nimio('Kohtaaminen tietovisassa'));
-          k.append(el('p', '', m.visa));
-          k.append(nimio('Aarteen paljastuminen'));
+          k.append(el('p', '', m.kohtaaminen));
+          k.append(nimio('Kysymys (pari kohtaamiselle)'));
+          k.append(el('p', '', m.kysymys.q));
+          const lista = el('ul', 'pieni');
+          m.kysymys.vaihtoehdot.forEach((v, i) => {
+            lista.append(el('li', '', i === m.kysymys.oikea ? `✓ ${v}` : v));
+          });
+          k.append(lista);
+          k.append(el('p', 'pieni', `Fakta: ${m.kysymys.fakta}`));
+          k.append(nimio('Aarre — päättyy henkilön avoimeen vihjeeseen'));
           k.append(el('p', '', m.aarre));
-          k.append(nimio('Henkilön vihje aarteen jälkeen — cliffhanger'));
-          k.append(el('p', '', m.vihje));
           return k;
         })];
       },
