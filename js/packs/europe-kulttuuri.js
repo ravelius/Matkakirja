@@ -205,52 +205,6 @@ export const EUROPE_KULTTUURI = {
   },
 
   dubrovnik: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Klapa lauletaan ilman soittimia',
-        tiedosto: 'Klapa Cambi, Orebić.2012.JPG',
-        teksti: 'Klapa on dalmatialainen mieskuorolaulu ilman soittimia: '
-          + 'viidestä kymmeneen laulajaa seisoo tiiviissä puolikaaressa '
-          + 'ja sovittaa äänet toisiinsa. Perinne syntyi kirkoissa ja '
-          + 'satamissa, ja Unesco suojeli sen 2012.',
-        selite: 'Klapa-yhtye laulamassa Orebićissä. Laulajat asettuvat '
-          + 'lähelle toisiaan, jotta kukin kuulee muut ilman '
-          + 'vahvistusta.',
-        lahde: 'Quahadi, Añtó, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Klapa',
-        musiikki: 'https://music.apple.com/fi/search?term=klapa',
-        musiikkiNimi: 'Klapa-lauluja Apple Musicissa',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Euroopan vanhin apteekki',
-        tiedosto: 'Old pharmacy in the Franciscan Monastery in Dubrovnik 01.jpg',
-        teksti: 'Fransiskaaniluostarin apteekki avattiin vuonna 1317 ja '
-          + 'palvelee yhä asiakkaita — se on Euroopan vanhin '
-          + 'yhtäjaksoisesti toiminut apteekki. Munkit valmistivat '
-          + 'voiteita yrteistä, ja osa resepteistä on yhä käytössä.',
-        selite: 'Vanhan apteekin purkkeja luostarin museossa. '
-          + 'Fajanssiruukuissa säilytettiin yrttejä ja voiteita; '
-          + 'jokaisen kyljessä lukee sisältö latinaksi.',
-        lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Dubrovnik',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Suola teki kaupungista rikkaan',
-        tiedosto: 'Salt pans Ston (4065531015).jpg',
-        teksti: 'Stonin suola-altaat ovat toimineet 1300-luvulta asti, ja '
-          + 'suola oli Dubrovnikin tasavallan tärkein tulonlähde. Sitä '
-          + 'suojaamaan rakennettiin viiden kilometrin muuri — Euroopan '
-          + 'pisin linnoitusmuuri Kiinan muurin jälkeen. Suola kerätään '
-          + 'yhä käsin puulastoilla.',
-        selite: 'Stonin suola-altaat. Merivesi johdetaan matalille '
-          + 'kentille ja haihdutetaan auringossa; jäljelle jää suola.',
-        lahde: 'Tony Hisgett, Wikimedia Commons (CC BY 2.0)',
-        wiki: 'Ston',
-      },
-    ],
     kysymys: {
       q: 'Millä Dubrovnikin tasavalta pysyi vuosisatoja itsenäisenä?',
       options: [
@@ -741,58 +695,6 @@ export const EUROPE_KULTTUURI = {
   },
 
   riika: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kaapissa on 268 815 lappua',
-        tiedosto: 'Dainu skapja oriģināls LNB.jpg',
-        teksti: 'Daina on nelisäkeinen latvialainen kansanlaulu. Krišjānis '
-                  + 'Barons keräsi niitä ja järjesti ne itse piirtämäänsä '
-                  + 'kaappiin: 160 senttiä korkea, 70 laatikkoa, jokaisessa 20 '
-                  + 'lokeroa. Lappuja on 268 815, kukin 3 × 11 senttiä. Unesco '
-                  + 'liitti kaapin maailman muisti -rekisteriin 2001.',
-        selite: 'Dainakaapin alkuperäiskappale Latvian '
-                  + 'kansalliskirjastossa. Laatikot on vedetty auki, ja '
-                  + 'lokeroissa näkyvät pystyyn ladotut paperilaput, joihin '
-                  + 'laulut on kirjoitettu käsin.',
-        lahde: 'Savannah Rivka, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Daina',
-        musiikki: 'https://music.apple.com/fi/search?term=latvian%20folk%20songs',
-        musiikkiNimi: 'Latvialaisia kansanlauluja Apple Musicissa',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Ruispohja, porkkanaa ja kuminaa',
-        tiedosto: 'Sklandrausis (10890919013).jpg',
-        teksti: 'Sklandrausis on kämmenen kokoinen avoin piirakka, jonka '
-                  + 'pohja on ruistaikinaa ja täyte perunaa ja porkkanaa '
-                  + 'kuminan kanssa. Se on kotoisin Kuurinmaalta Latvian '
-                  + 'länsiosasta, jossa asui liiviläisiä, ja sitä leivottiin '
-                  + 'ennen juhlapyhiksi. EU myönsi sille aidon perinteisen '
-                  + 'tuotteen merkin vuonna 2013.',
-        selite: 'Sklandrauši-piirakoita rivissä. Reunat nostetaan sormin '
-                  + 'pystyyn ja täyte jää näkyviin: alla vaalea perunakerros, '
-                  + 'päällä oranssi porkkanakerros.',
-        lahde: 'Liga Eglite, Wikimedia Commons (CC BY 2.0)',
-        wiki: 'Kuurinmaa',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Torikatot olivat ilmalaivojen halleja',
-        tiedosto: 'German zeppelin hangars, now Riga Central Market (23074882114).jpg',
-        teksti: 'Riian keskustorin viisi hallia rakennettiin 1924–1930 '
-                  + 'saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. '
-                  + 'Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. '
-                  + 'Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — '
-                  + 'se on yhä Euroopan suurimpia.',
-        selite: 'Lihahallin sisäkatto Riian keskustorilla. Teräsristikko '
-                  + 'kaartuu toistakymmentä metriä pään yläpuolelle. Se tehtiin '
-                  + 'alun perin kannattamaan ilmalaivan seinämiä, ei '
-                  + 'kalatiskejä.',
-        lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
-        wiki: 'Riian keskustori',
-      },
-    ],
     kysymys: {
       q: 'Mistä Riian keskustorin hallit on tehty?',
       options: [
@@ -809,58 +711,6 @@ export const EUROPE_KULTTUURI = {
   },
 
   vilna: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Sutartinė soi tahallaan riitasointuisena',
-        tiedosto: 'Sutartinės.jpg',
-        teksti: 'Sutartinė on liettualainen moniääninen laulu, jota esittää '
-                  + 'kaksi, kolme tai neljä naista. Äänet kulkevat sekunnin '
-                  + 'päässä toisistaan — siis niin lähellä, että sointi hankaa '
-                  + 'korvaa tahallaan. Laji on kotoisin Aukštaitijasta, ja '
-                  + 'Unesco otti sen ihmiskunnan perintöluetteloon vuonna 2010.',
-        selite: 'Kaksi laulajaa esittää sutartinėtä. Laulajat seisovat '
-                  + 'vastakkain ja liikkuvat askel kerrallaan: laululla on '
-                  + 'usein oma yksinkertainen koreografiansa.',
-        lahde: 'Bcecilija, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Liettua',
-        musiikki: 'https://music.apple.com/fi/search?term=sutartines',
-        musiikkiNimi: 'Sutartinės-lauluja Apple Musicissa',
-        musiikkiNayte: 'https://archive.org/download/EDIS-SRP-0197-03/EDIS-SRP-0197-03.mp3',
-        musiikkiNayteNimi: 'Liettualainen kansanlaulu kanteleilla — CC0',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kirkkaanpinkki keitto ja kuumat perunat',
-        tiedosto: 'Lithuanian cold beetroot soup, 11 April 2018.png',
-        teksti: 'Šaltibarščiai on kylmä keitto, jossa on punajuurta, '
-                  + 'kefiiriä, kurkkua, tilliä ja keitetty muna. Kefiiri värjää '
-                  + 'sen kirkkaanpinkiksi. Keitto tarjotaan jääkylmänä, mutta '
-                  + 'vieressä on aina lautasellinen höyryäviä keitettyjä '
-                  + 'perunoita — niitä syödään vuorotellen keiton kanssa.',
-        selite: 'Šaltibarščiai-annos: pinkki keitto kulhossa, päällä '
-                  + 'munanpuolikas ja tilliä, vieressä keitettyjä perunoita '
-                  + 'omalla lautasellaan.',
-        lahde: 'Ke an, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Borssi',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Tasavalta, jonka perustuslaissa on 41 pykälää',
-        tiedosto: 'Uzupis Constitution - panoramio.jpg',
-        teksti: 'Užupis on Vilnian kaupunginosa joen toisella puolen. '
-                  + 'Taiteilijat julistivat sen omaksi tasavallakseen '
-                  + 'aprillipäivänä, ja sillä on presidentti, lippu ja '
-                  + 'perustuslaki, jossa on 41 pykälää. Ne on kiinnitetty kadun '
-                  + 'seinään kiiltäville metallilaatoille, yksi laatta kutakin '
-                  + 'kieltä kohti.',
-        selite: 'Užupisin perustuslakilaatta englanniksi Paupion kadulla. '
-                  + 'Pykälä 12 kuuluu: "Koiralla on oikeus olla koira." Pykälä '
-                  + '16: "Jokaisella on oikeus olla onnellinen."',
-        lahde: 'AwOiSoAk KaOsIoWa, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Užupis',
-      },
-    ],
     kysymys: {
       q: 'Mitä Užupisin perustuslaki lupaa koiralle?',
       options: [
@@ -953,64 +803,6 @@ export const EUROPE_KULTTUURI = {
   },
 
   oslo: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Vuorenkuninkaan luolassa',
-        tiedosto: 'Anders Beer Wilse - Edvard Grieg - NMK.2006.5769 - National Museum of Art, Architecture and Design.jpg',
-        teksti: 'Henrik Ibsenin näytelmä Peer Gynt sai ensi-iltansa '
-                  + 'Christianiassa 24. helmikuuta 1876, ja musiikin siihen '
-                  + 'sävelsi Edvard Grieg. Kuuluisin kohta on Vuorenkuninkaan '
-                  + 'luolassa: sama lyhyt sävelkulku toistuu yhä uudestaan ja '
-                  + 'kiihtyy loppua kohti niin, että soittajilla on työ pysyä '
-                  + 'mukana. Grieg kirjoitti näytelmään 26 musiikkinumeroa.',
-        selite: 'Edvard Grieg (1843–1907) valokuvaaja Anders Beer Wilsen '
-                  + 'kuvaamana vuonna 1903. Grieg oli kotoisin Bergenistä, '
-                  + 'mutta hänen tunnetuin teoksensa kuultiin ensi kerran '
-                  + 'Oslossa.',
-        lahde: 'Wikimedia Commons (PD)',
-        wiki: 'Peer Gynt',
-        musiikki: 'https://music.apple.com/fi/search?term=Grieg%20Peer%20Gynt',
-        musiikkiNimi: 'Griegin Peer Gynt Apple Musicissa',
-        musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/8/84/Hall_of_the_Mountain_King_%28ISRC_USUAN1200072%29.mp3',
-        musiikkiNayteNimi: 'Grieg: Vuorenkuninkaan luolassa — Kevin MacLeod, CC BY',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Ruskea juusto keitetään herasta',
-        tiedosto: 'Brunost - Brown cheese.jpg',
-        teksti: 'Brunost tehdään herasta, joka jää juustonvalmistuksesta '
-                  + 'yli. Sitä keitetään tuntikausia, kunnes maitosokeri '
-                  + 'ruskistuu ja massa muuttuu makeaksi. Anne Hov lisäsi '
-                  + 'joukkoon kermaa vuonna 1863 Gudbrandsdalenissa, ja siitä '
-                  + 'syntyi maan tunnetuin juusto. Leivän päälle se leikataan '
-                  + 'juustohöylällä — myös se on norjalainen keksintö, vuodelta '
-                  + '1925.',
-        selite: 'Palanen brunostia leikattuna. Väri ei tule väriaineesta '
-                  + 'vaan kuumennuksesta: maitosokeri karamellisoituu samalla '
-                  + 'tavalla kuin sokeri pannulla.',
-        lahde: 'color line, Wikimedia Commons (CC BY 2.0)',
-        wiki: 'Gudbrandsdalsost',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Puisto, jonka teki yksi mies',
-        tiedosto: 'Gustav Vigeland - Monolith. Oslo Frogner Park, 1999.jpeg',
-        teksti: 'Frognerin puistossa on yli 200 veistosta, ja ne kaikki '
-                  + 'ovat saman taiteilijan käsialaa: Gustav Vigeland '
-                  + 'suunnitteli myös puiston sillat, portit ja lyhdyt. '
-                  + 'Keskellä kohoaa Monoliitti, 14 metriä korkea pylväs, johon '
-                  + 'on veistetty 121 ihmishahmoa. Kolme kivenhakkaajaa työsti '
-                  + 'sitä yhdestä graniittilohkareesta neljätoista vuotta. '
-                  + 'Puistoon pääsee maksutta mihin aikaan tahansa.',
-        selite: 'Monoliitti Frognerin puistossa. Graniittilohkare tuotiin '
-                  + 'Halden lähistöltä 1920-luvulla, ja veistotyö kesti '
-                  + 'vuodesta 1929 vuoteen 1943. Vigeland teki savimallin, '
-                  + 'kivenhakkaajat siirsivät sen kiveen.',
-        lahde: 'The original uploader was DIMSFIKAS at Greek Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Vigelandin puisto',
-      },
-    ],
     kysymys: {
       q: 'Kuinka moni taiteilija teki Frognerin puiston yli 200 veistosta?',
       options: [
@@ -1027,63 +819,6 @@ export const EUROPE_KULTTUURI = {
   },
 
   kobenhavn: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Sinfonia, jossa on kaksi patarumpalia',
-        tiedosto: 'Carl Nielsen c. 1908.jpg',
-        teksti: 'Carl Nielsen soitti kuninkaallisen teatterin orkesterissa '
-                  + 'toista viulua kuusitoista vuotta ja sävelsi samaan aikaan '
-                  + 'kaksi ensimmäistä sinfoniaansa. Kaikkiaan sinfonioita '
-                  + 'syntyi kuusi. Neljännessä, nimeltään Sammumaton, on kaksi '
-                  + 'patarumpalia lavan eri laidoilla, ja lopussa ne käyvät '
-                  + 'keskenään kaksintaistelun. Nielsen kirjoitti myös satoja '
-                  + 'lauluja, joita tanskalaiset laulavat yhdessä koulussa ja '
-                  + 'juhlissa.',
-        selite: 'Carl Nielsen (1865–1931) noin vuonna 1908. Hän kasvoi '
-                  + 'köyhässä perheessä Fynin saarella ja soitti nuorena '
-                  + 'sotilassoittokunnassa, ennen kuin pääsi opiskelemaan '
-                  + 'Kööpenhaminaan.',
-        lahde: 'Wikimedia Commons (PD)',
-        wiki: 'Carl Nielsen',
-        musiikki: 'https://music.apple.com/fi/search?term=Carl%20Nielsen',
-        musiikkiNimi: 'Carl Nielsen Apple Musicissa',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Voileipä syödään haarukalla',
-        tiedosto: 'Smørrebrød in Copenhagen 01.jpg',
-        teksti: 'Smørrebrød on avoin voileipä tummalla ruisleivällä, ja se '
-                  + 'syödään veitsellä ja haarukalla. Järjestyskin on tarkka: '
-                  + 'ensin kala, sitten liha, viimeisenä juusto — eikä '
-                  + 'päällisiä sekoiteta keskenään. Vanhoissa '
-                  + 'lounasravintoloissa listalla voi olla yli kaksikymmentä '
-                  + 'eri leipää, ja jokaisella on oma nimensä ja vakiintunut '
-                  + 'kuormansa.',
-        selite: 'Kaksi smørrebrødiä kööpenhaminalaisella lautasella. '
-                  + 'Pohjalla on tumma ruisleipä, jonka päälle levitetään voi — '
-                  + 'juuri siitä nimi tulee: smør on voi ja brød leipä.',
-        lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
-        wiki: 'Smørrebrød',
-      },
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Pyöriä enemmän kuin autoja',
-        tiedosto: 'Cyclists at red 2.jpg',
-        teksti: 'Kööpenhaminassa on noin 385 kilometriä autoliikenteestä '
-                  + 'erotettuja pyöräteitä, ja niitä pitkin ajetaan joka '
-                  + 'säällä. Kaupungin oman laskennan mukaan noin puolet '
-                  + 'kaikista työ- ja koulumatkoista tehdään pyörällä. '
-                  + 'Risteyksissä pyörillä on omat liikennevalonsa, ja talvella '
-                  + 'pyörätiet aurataan ensimmäisten teiden joukossa.',
-        selite: 'Pyöräilijöitä odottamassa vihreää valoa Kööpenhaminassa. '
-                  + 'Pyöräkaista on korotettu ajoradan ja jalkakäytävän väliin '
-                  + 'omalle tasolleen, joten pyörä ei kulje autojen eikä '
-                  + 'kävelijöiden seassa.',
-        lahde: 'heb@Wikimedia Commons (mail), Wikimedia Commons (CC BY-SA 3.0)',
-        wiki: 'Pyöräily',
-      },
-    ],
     kysymys: {
       q: 'Kuinka suuri osa Kööpenhaminan työ- ja koulumatkoista tehdään '
            + 'pyörällä?',

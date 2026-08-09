@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 481, teksti: 'Viisi viimeistä Euroopan kaupunkia sai lehtensä' },
   { v: 480, teksti: 'Kaupunkikarttojen vedet: saaret ja suihkulähteet' },
   { v: 479, teksti: 'Engel sai oman jutun — nimi Helsingin teksteissä on linkki' },
   { v: 478, teksti: 'Pysähdyksessä yksi tehtävä: pulma korvaa kohtaamisvisan' },
