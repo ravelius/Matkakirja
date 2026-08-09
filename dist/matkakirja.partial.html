@@ -11309,8 +11309,66 @@ async function rtveOsoite(id) {
   }
 }
 
+/*
+ * ERR (Viro) ja SRF (Sveitsi) ovat omat muotonsa, jotka eivät sovi
+ * channels/items-malliin, joten niillä on omat hakijat. Molemmat
+ * palauttavat suoraan tuoreimman lähetyksen {url, pvm}. Tulos
+ * muistetaan sen sijaan että lista muistettaisiin, koska kummallakin
+ * on vain yksi valinta (tuorein uutislähetys).
+ */
+async function haeErr(api) {
+  const muisti = tallenneMuisti.get(api);
+  if (muisti && Date.now() - muisti.aika < TALLENNE_MUISTI_MS) return muisti.tulos;
+  try {
+    const vastaus = await fetch(api, { signal: AbortSignal.timeout(10000) });
+    if (!vastaus.ok) return null;
+    const data = await vastaus.json();
+    const media = data?.data?.mainContent?.medias?.[0];
+    const tiedosto = media?.src?.file;
+    if (!tiedosto) return null;
+    // API antaa protokollattoman //vod.err.ee/…-osoitteen.
+    const url = tiedosto.startsWith('//') ? `https:${tiedosto}` : tiedosto;
+    const tulos = { url, pvm: media?.date ?? null };
+    tallenneMuisti.set(api, { aika: Date.now(), tulos });
+    return tulos;
+  } catch {
+    return null;
+  }
+}
+
+async function haeSrf(api) {
+  const muisti = tallenneMuisti.get(api);
+  if (muisti && Date.now() - muisti.aika < TALLENNE_MUISTI_MS) return muisti.tulos;
+  try {
+    const vastaus = await fetch(api, { signal: AbortSignal.timeout(10000) });
+    if (!vastaus.ok) return null;
+    const data = await vastaus.json();
+    const jakso = data?.data?.data?.[0];
+    if (!jakso?.urn) return null;
+    const kompApi = 'https://il.srgssr.ch/integrationlayer/2.1/mediaComposition/byUrn/'
+      + `${encodeURIComponent(jakso.urn)}?onlyChapters=true`;
+    const komp = await fetch(kompApi, { signal: AbortSignal.timeout(10000) });
+    if (!komp.ok) return null;
+    const kdata = await komp.json();
+    const resurssit = kdata?.chapterList?.[0]?.resourceList ?? [];
+    // Progressiivinen H264-mp4 (ei HLS); ensimmäinen on paras laatu.
+    const mp4 = resurssit.find((r) => r.protocol === 'HTTP' && r.encoding === 'H264');
+    if (!mp4?.url) return null;
+    // Osoite tulee http:nä; https toimii suoraan (mitattu 9.8.2026).
+    const url = mp4.url.replace(/^http:\/\//, 'https://');
+    const tulos = { url, pvm: jakso.date ?? null };
+    tallenneMuisti.set(api, { aika: Date.now(), tulos });
+    return tulos;
+  } catch {
+    return null;
+  }
+}
+
 async function haeTallenne(api, kanava) {
-  if (!api || !kanava) return null;
+  if (!api) return null;
+  if (api.includes('services.err.ee')) return haeErr(api);
+  if (api.includes('srf.ch')) return haeSrf(api);
+  if (!kanava) return null;
   const vanha = tallenneMuisti.get(api);
   let kanavat = vanha && Date.now() - vanha.aika < TALLENNE_MUISTI_MS ? vanha.kanavat : null;
   const rtve = api.includes(RTVE_LISTA);
@@ -51886,6 +51944,50 @@ const TV_KANAVAT = {
       valinnat: [
         { nappi: 'Sää tänään', kanava: 'el tiempo' },
         { nappi: 'Uutiset neljässä minuutissa', kanava: "en 4'|cuatro minutos" },
+      ],
+    },
+  },
+  /*
+   * SVEITSI — SRF Tagesschau (kartoitettu ja mitattu 9.8.2026).
+   *
+   * Kolmas maa Saksan ja Espanjan jälkeen, ja samasta syystä: lähetys
+   * saadaan oikeana mp4-tiedostona, ei upotuksena. Reitti on julkinen
+   * eikä vaadi avainta:
+   *   1. videos-by-show-id (CORS *) listaa tuoreimmat Tagesschau-jaksot
+   *      → poimitaan uusimman urn.
+   *   2. SRG:n integration layer mediaComposition byUrn (CORS *) antaa
+   *      resourceList-taulussa suoran progressiivisen H264-mp4:n
+   *      (protocol HTTP). Osoite tulee http:nä, mutta pelkkä skeeman
+   *      vaihto https:ksi tuottaa 206:n ja oikeat ftyp-tavut (mitattu),
+   *      joten workeria ei tarvita kuten RTVE:llä. Ks. haeTallenne
+   *      (js/uutiset.js) SRF-haara.
+   */
+  CHE: {
+    nimi: 'SRF',
+    tallenteet: {
+      api: 'https://www.srf.ch/play/v3/api/srf/production/videos-by-show-id?showId=ff969c14-c5a7-44ab-ab72-14d4c9e427a9&pageSize=1',
+      valinnat: [
+        { nappi: 'Tagesschau', kanava: 'srf' },
+      ],
+    },
+  },
+  /*
+   * VIRO — ERR Aktuaalne kaamera (kartoitettu ja mitattu 9.8.2026).
+   *
+   * Puhtain löytö: ERR:n oma julkinen Jupiter-rajapinta antaa yhdellä
+   * haulla suoran mp4:n. getContentPageData-vastauksen mainContent on
+   * sarjan tuorein jakso, ja medias[0].src.file on suora
+   * //vod.err.ee/file/…​.mp4 (CORS *, ftyp isom/h264, ei tokenia — API
+   * kertoo itse drm:false, geoBlock:false). Skeema lisätään
+   * (//→https:) haeTallenteessa. Kanava-kenttää ei tarvita: lähde on
+   * yksi sarja.
+   */
+  EST: {
+    nimi: 'ERR',
+    tallenteet: {
+      api: 'https://services.err.ee/api/v2/vodContent/getContentPageData?contentId=1038278',
+      valinnat: [
+        { nappi: 'Aktuaalne kaamera', kanava: 'err' },
       ],
     },
   },
@@ -122786,6 +122888,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 429, teksti: 'TV-napit Sveitsille (SRF) ja Virolle (ERR)' },
   { v: 428, teksti: 'Kohdekartat Lissaboniin, Barcelonaan ja Granadaan' },
   { v: 427, teksti: 'Kohdekartat Istanbuliin, Marseilleen, Edinburghiin' },
   { v: 427, teksti: 'Istanbulin kartalla näkyy kaksi maanosaa' },
@@ -123297,7 +123400,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.428';
+const APP_VERSION = '2026-08-09.429';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
