@@ -8194,12 +8194,11 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 .uutinen-rivi-teksti { display: block; min-width: 0; }
 
 /*
- * Mediarivi: maan radio ja tv-nappi vierekkäin. Lehtitaitossa rivi
- * istuu uutisten alla oikeassa palstassa, jossa on tilaa.
+ * Mediarivi: maan paikallisradio. Lehtitaitossa rivi istuu uutisten
+ * alla oikeassa palstassa, jossa on tilaa. Ruudukko on kaksipalstainen
+ * ja pitkä asemannimi lyhenee kolmella pisteellä sen sijaan että rivi
+ * kiertyisi.
  */
-/* Radio ja tv AINA vierekkäin (omistajan toive): tasalevyinen
- * kaksipalstainen ruudukko, ja pitkä asemannimi lyhenee kolmella
- * pisteellä sen sijaan että rivi kiertyisi. */
 .maa-media {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -35268,54 +35267,6 @@ const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
-    {
-      id: 'arki',
-      nimi: 'Arki ja vapaa-aika',
-      johdanto: 'Kaupunki, jossa tuntemattomat istuvat vieretysten löylyissä ja '
-        + 'huvipuiston tuotto menee lastensuojeluun.',
-      tehtava: {
-        kysymys: 'Kuinka monta kertaa Linnanmäen Vuoristoradan rataa kierretään '
-          + 'yhden kesän aikana?',
-        vaihtoehdot: ['Noin 4 700 kertaa', 'Noin 47 000 kertaa', 'Noin 170 000 kertaa', 'Noin 700 000 kertaa'],
-        oikea: 1,
-        fakta: 'Linnanmäen puinen Vuoristorata tekee yhden kesän aikana noin 47 '
-          + '000 kierrosta.',
-      },
-      nostot: [
-        {
-          otsikko: 'Kolme miljoonaa saunaa',
-          tiedosto: 'Kotiharjun yleinen sauna (Kotiharju public sauna in Helsinki) Helsingin Torkkelinmäellä Kalliossa 01.jpg',
-          teksti: 'Suomessa on noin kolme miljoonaa saunaa ja 5,6 miljoonaa '
-            + 'asukasta — löylyt kuuluvat kerrostaloasuntoonkin. Unesco '
-            + 'lisäsi suomalaisen saunomisen ihmiskunnan aineettoman '
-            + 'kulttuuriperinnön luetteloon vuonna 2020. Helsingin Kalliossa '
-            + 'on yhä yleisiä saunoja, joihin ostetaan lippu kuin elokuviin '
-            + 'ja joissa istutaan vieretysten tuntemattomien kanssa. Löylyn '
-            + 'jälkeen mennään kadulle jäähtymään pyyhe päällä, kesät talvet.',
-          selite: 'Kotiharjun sauna Torkkelinmäellä Kalliossa. Se avattiin 1928 '
-            + 'ja on Helsingin viimeinen alkuperäisessä käytössä säilynyt '
-            + 'puulämmitteinen yleinen sauna.',
-          lahde: 'Paasikivi, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Kotiharjun sauna',
-        },
-        {
-          otsikko: 'Vuoristoradan takana seisoo jarrumestari',
-          tiedosto: 'Linnanmäki Vuoristorata.jpg',
-          teksti: 'Linnanmäen huvipuisto avattiin 1950 vanhalle vesitornimäelle, '
-            + 'ja puinen Vuoristorata seuraavana kesänä 13. heinäkuuta 1951. '
-            + 'Se on yksi maailman harvoista radoista, joilla junan vauhtia '
-            + 'hidastetaan käsin: jarrumestari seisoo junan takaosassa koko '
-            + 'matkan ja hoitaa jarrutuksen. Kesässä rataa kierretään noin 47 '
-            + '000 kertaa. Huvipuiston omistaa Lasten Päivän Säätiö, ja '
-            + 'tuotto jaetaan kuudelle lastensuojelujärjestölle.',
-          selite: 'Vuoristoradan sininen juna kiipeää ylös täydessä lastissa. '
-            + 'Kiskojen alusta, pylväät ja kaiteet ovat puuta, kuten radan '
-            + 'valmistuessa 1951.',
-          lahde: 'Oona Räisänen, Wikimedia Commons (CC BY-SA 3.0)',
-          wiki: 'Vuoristorata (Linnanmäki)',
-        },
-      ],
-    },
   ],
   tallinna: [
     {
@@ -42505,6 +42456,389 @@ const MAA_KATEGORIAT = {
   ],
   PRT: [
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Pieni maa Euroopan lounaisnurkassa lähti 1400-luvulla merelle ja '
+        + 'piirsi sata vuotta myöhemmin maailmankarttaa uusiksi. Näissä '
+        + 'neljässä jutussa on laiva, reitti, ympyrä ja viiva.',
+      nostot: [
+        {
+          otsikko: 'Laiva, joka kulki vastatuuleen',
+          aika: '1400-luku',
+          tiedosto: 'Portuguese Caravel.jpg',
+          teksti: 'Karavelli oli pieni ja kevyt purjelaiva, jonka avulla '
+            + 'merenkulkijat pääsivät etenemään Afrikan rannikkoa etelään. '
+            + 'Sen salaisuus oli purje: kolmikulmainen latinalaispurje '
+            + 'kääntyy niin, että laiva voi purjehtia vinosti tuulta vasten '
+            + 'eikä vain myötätuuleen. Karavelli oli myös matalakulkuinen, '
+            + 'joten sillä uskalsi mennä lähelle rantaa ja jokisuihin. '
+            + 'Miehistöä oli vain parikymmentä. Purjeisiin maalattiin usein '
+            + 'punainen risti, Kristuksen ritarikunnan merkki, joka rahoitti '
+            + 'retkiä.',
+          selite: 'Karavellin pienoismalli museossa. Kahdessa mastossa on suuret '
+            + 'kolmikulmaiset purjeet, joihin on maalattu punainen risti. '
+            + 'Runko on tumma ja kapea, kansi kapea ja avoin. Taustalla on '
+            + 'suurennettu vanha merikartta.',
+          lahde: 'PHGCOM, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Meritie Intiaan aukesi',
+          aika: '1498',
+          tiedosto: 'Lisboa-Museu Nacional de Arte Antiga-Retrato dito de Vasco da Gama-20140917.jpg',
+          teksti: 'Vasco da Gama lähti heinäkuussa 1497 neljällä laivalla '
+            + 'etsimään merireittiä Intiaan. Retkikunta kiersi Afrikan '
+            + 'eteläkärjen ja saapui Calicutiin Intian länsirannikolle '
+            + 'toukokuussa 1498. Matka oli pisin siihen mennessä purjehdittu: '
+            + 'laivat olivat poissa yli kaksi vuotta, ja takaisin palasi '
+            + 'kaksi laivaa neljästä. Reitti mullisti kaupan, koska mausteita '
+            + 'ei enää tarvinnut kuljettaa maitse. Merimiehet sairastuivat '
+            + 'keripukkiin, jonka syytä ei vielä tunnettu.',
+          selite: 'Vanha muotokuva Vasco da Gamasta. Parrakas mies istuu tummassa '
+            + 'turkisreunaisessa viitassa ja mustassa lakissa. Rinnassa on '
+            + 'punainen ritarikunnan risti, ja käsissä hän pitelee paperia ja '
+            + 'lukulasia. Tausta on tummanvihreä.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+          wiki: 'Vasco da Gama',
+        },
+        {
+          otsikko: 'Viisi lähti, yksi tuli takaisin',
+          aika: '1522',
+          tiedosto: 'Nao Victoria.jpg',
+          teksti: 'Fernão de Magalhães oli portugalilainen kapteeni, joka '
+            + 'purjehti Espanjan kuninkaan palveluksessa. Vuonna 1519 hän '
+            + 'lähti viidellä laivalla ja noin 270 miehellä etsimään '
+            + 'länsireittiä mausteiden luo. Retkikunta löysi eteläisen salmen '
+            + 'Amerikan kärjestä ja ylitti Tyynenmeren, mutta Magalhães itse '
+            + 'kuoli Filippiineillä 1521. Espanjaan palasi syyskuussa 1522 '
+            + 'yksi ainoa laiva, Victoria, ja siinä 18 miestä. He olivat '
+            + 'ensimmäiset, jotka kiersivät maapallon ympäri.',
+          selite: 'Victorian nykyaikainen jäljennös laiturissa. Aluksessa on '
+            + 'kolme mastoa, korkea musta runko ja korit mastojen '
+            + 'puolivälissä. Kannella liehuu useita lippuja, ja taustalla '
+            + 'näkyy nykyaikaisen sataman rakennuksia.',
+          lahde: 'Gnsin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kartalle vedettiin viiva',
+          aika: '1494',
+          tiedosto: 'Cantino planisphere (1502).jpg',
+          teksti: 'Vuonna 1494 Portugali ja Espanja sopivat Tordesillasin '
+            + 'kaupungissa, miten ne jakavat löytämänsä maailman. Kartalle '
+            + 'vedettiin rajaviiva Atlantin poikki: viivan itäpuoli kuului '
+            + 'Portugalille ja länsipuoli Espanjalle. Kumpikaan ei tiennyt, '
+            + 'mitä viivan takana oikeasti oli. Kuusi vuotta myöhemmin '
+            + 'portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja '
+            + 'Brasilia sattui jäämään viivan itäpuolelle. Siksi siellä '
+            + 'puhutaan yhä portugalia eikä espanjaa.',
+          selite: 'Vuoden 1502 maailmankartta pergamentille piirrettynä. Kartta '
+            + 'on hyvin leveä ja matala, ja siinä näkyvät Afrikan ja '
+            + 'Etelä-Amerikan rannikot vihreinä ja ruskeina. Sinne tänne on '
+            + 'maalattu kompassiruusuja, ja pystysuora viiva jakaa Atlantin '
+            + 'kahtia.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Brasiliassa puhutaan portugalia eikä espanjaa?',
+        vaihtoehdot: [
+          'Rajaviiva jätti sen itäpuolelle',
+          'Espanja myi sen pois',
+          'Siellä ei asunut ketään',
+          'Sopimus tehtiin vasta myöhemmin',
+        ],
+        oikea: 0,
+        fakta: 'Sopimus tehtiin 1494, eikä kumpikaan tiennyt, mitä viivan takana '
+          + 'oli.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Maa on kapea mutta sen luonto ei: mannermaalla kasvaa puu jonka '
+        + 'kuori uusiutuu, ja kaukana valtamerellä on saaria, joilla on omat '
+        + 'metsänsä, valaansa ja lintukalliot.',
+      nostot: [
+        {
+          otsikko: 'Puu, jonka kuori otetaan mutta joka jää pystyyn',
+          aika: 'Kesäisin',
+          tiedosto: '09-06-2017 Harvested cork, Foz do Ribeiro, São Bartolomeu de Messines (1).JPG',
+          teksti: 'Korkkitammen paksu kuori voidaan irrottaa ilman että puu '
+            + 'kuolee. Kuori kuoritaan kirveellä käsin, ei koneella, koska '
+            + 'rungon alla oleva kerros ei saa vaurioitua. Ensimmäisen kerran '
+            + 'puu kuoritaan noin 25 vuoden ikäisenä, ja sen jälkeen aina '
+            + 'yhdeksän vuoden välein. Runkoon maalataan numero, joka kertoo '
+            + 'kuorintavuoden. Sama puu voi antaa kuorta parinsadan vuoden '
+            + 'ajan. Maassa on maailman suurimmat korkkitammimetsät, ja '
+            + 'niistä tulee noin puolet koko maailman korkista.',
+          selite: 'Kuorittua korkkia pinossa pellon laidalla. Kaarevat '
+            + 'kuorenpalat on ladottu päällekkäin niin, että niiden ruskea '
+            + 'sisäpinta osoittaa katsojaan. Pino on korkeampi kuin ihminen, '
+            + 'ja takana kasvaa harva eukalyptusmetsä.',
+          lahde: 'Kolforn, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Metsä, joka juo pilvestä',
+          aika: 'Miljoonia vuosia',
+          tiedosto: 'Fanal (Madeira, Portugal), Lorbeerwald -- 2025 -- 1532.jpg',
+          teksti: 'Madeiran saarella kasvaa laurimetsää, joka on jäänne metsästä, '
+            + 'joka peitti Etelä-Eurooppaa miljoonia vuosia sitten. '
+            + 'Manterella se hävisi ilmaston kylmetessä, mutta saarella se '
+            + 'jäi henkiin. Metsä saa suuren osan vedestään sumusta: pilvi '
+            + 'ajautuu vuorenrinnettä ylös, ja lehdet keräävät siitä '
+            + 'pisaroita, jotka tippuvat maahan. Vettä johdetaan kapeissa '
+            + 'kivikourujen kaltaisissa kanavissa eli levadoissa kylille ja '
+            + 'pelloille. Kanavia on tuhansia kilometrejä.',
+          selite: 'Laurimetsää Madeiran Fanalin ylängöllä. Kolme paksurunkoista '
+            + 'puuta seisoo lyhyeksi syödyllä nurmella, ja niiden oksat ovat '
+            + 'kiertyneet leveiksi latvoiksi. Sakea sumu peittää kaiken '
+            + 'taustalla, ja puut erottuvat harmaina siluetteina.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sukeltaja, joka menee kilometrin syvyyteen',
+          aika: 'Vuodesta 1984',
+          tiedosto: 'Sperm whale (Physeter macrocephalus), São Miguel Island, Azores, Portugal (PPL1-Corrected).jpg',
+          teksti: 'Azorien saarilla keskellä Atlanttia pyydettiin kaskelotteja '
+            + 'avoveneistä vielä 1980-luvulle asti. Pyynti loppui vuonna '
+            + '1984, ja samat kylät elävät nyt valaiden katselusta. '
+            + 'Kaskelotti sukeltaa mustekalan perässä yli kilometrin '
+            + 'syvyyteen ja voi olla pinnan alla lähes tunnin. Sen pää on '
+            + 'valtava, ja siinä on aivot, jotka painavat enemmän kuin '
+            + 'minkään muun eläimen. Saarten ympärillä on syvää vettä aivan '
+            + 'rannan tuntumassa, joten valaita voi nähdä lyhyen veneretken '
+            + 'päässä.',
+          selite: 'Kaskelotti pinnalla avomerellä. Vedestä erottuu leveä harmaa '
+            + 'selkä ja sen takaosassa matala kolmiomainen evä. Ympärillä on '
+            + 'tummansinistä aallokkoa ja valkoista vaahtoa, ja horisontissa '
+            + 'taivas on vaalea.',
+          lahde: 'Jules Verne Times Two, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Saari, jolla linnut saavat olla rauhassa',
+          aika: '1981',
+          tiedosto: 'Berlenga Island - Portugal ^explore - Flickr - Carlos Eduardo Joos.jpg',
+          teksti: 'Kymmenkunta kilometriä rannikolta on pieni graniittisaari, '
+            + 'joka julistettiin luonnonsuojelualueeksi vuonna 1981. Saarella '
+            + 'pesii merilintuja, muun muassa liejuliitäjiä, jotka tulevat '
+            + 'pesäkoloilleen vasta pimeän tultua. Kävijämäärää rajoitetaan '
+            + 'päivittäisellä kiintiöllä, ja osaan saarta ei saa mennä '
+            + 'lainkaan pesimäaikaan. Saarella on myös 1600-luvun linnake, '
+            + 'joka on rakennettu omalle luodolleen ja jonne pääsee kapeaa '
+            + 'kivipengertä pitkin.',
+          selite: 'Näkymä saaren kalliolta merelle. Etualalla laskeutuu '
+            + 'ruskeankeltainen rinne, ja sen alla avautuu lahti, jossa on '
+            + 'kymmeniä pieniä veneitä kirkkaan turkoosin veden päällä. '
+            + 'Oikealla työntyy mereen kallioinen niemi, ja taustalla on '
+            + 'tyyni ulappa.',
+          lahde: 'Carlos Eduardo Joos, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Madeiran laurimetsän puut saavat suuren osan vedestään?',
+        vaihtoehdot: [
+          'Sateesta',
+          'Sumusta',
+          'Lumesta',
+          'Joesta',
+        ],
+        oikea: 1,
+        fakta: 'Pilvi ajautuu rinnettä ylös, ja lehdet keräävät siitä pisaroita '
+          + 'maahan.',
+      },
+    },
+    {
+      id: 'kasityo',
+      nimi: 'Käsityö',
+      johdanto: 'Neljä käsityötä, jotka kaikki ovat julkisia: katu jolla kävellään, '
+        + 'savikukko jota myydään joka torilla, vene joka on maalattu kuin '
+        + 'sarjakuva, ja rautatieasema jonka seinät kertovat tarinaa.',
+      nostot: [
+        {
+          otsikko: 'Katukivet ladotaan aalloiksi',
+          aika: '1848',
+          tiedosto: 'Calçada da Praça do Rossio.jpg',
+          teksti: 'Kävelykadut ja aukiot päällystetään pienillä kivinupeilla, '
+            + 'jotka ladotaan käsin hiekkaan ja kopautetaan paikoilleen '
+            + 'vasaralla. Kivet ovat kahta lajia: mustaa basalttia ja '
+            + 'valkoista kalkkikiveä, ja niistä syntyy kuvio. Kuuluisin kuvio '
+            + 'on aaltokuvio, joka ladottiin Lissabonin isolle aukiolle '
+            + 'vuonna 1848. Sama aalto lähti siirtolaisten mukana maailmalle, '
+            + 'ja se ladottiin myöhemmin myös Rio de Janeiron rantakadulle. '
+            + 'Työ on hidasta: taitava latoja saa päivässä muutaman '
+            + 'neliömetrin.',
+          selite: 'Aukio, joka on päällystetty mustavalkoisin kivinupein. Kuvio '
+            + 'aaltoilee leveinä kaarina koko kuvan poikki. Taustalla on '
+            + 'suihkulähde ja vaalea klassinen rakennus pylväineen, ja '
+            + 'reunassa kulkee katu autoineen.',
+          lahde: 'Roede, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kukko, joka lauloi todistajana',
+          aika: 'Keskiaika',
+          tiedosto: 'Galo de Barcelos.jpg',
+          teksti: 'Barcelosin kaupungin savikukko on koko maan tunnetuin '
+            + 'matkamuisto. Sen takana on vanha tarina: pyhiinvaeltajaa '
+            + 'syytettiin varkaudesta, ja tuomari istui juuri päivällisellä. '
+            + 'Mies sanoi, että todiste hänen syyttömyydestään on siinä, että '
+            + 'pöydällä oleva paistettu kukko nousee laulamaan. Tarinan '
+            + 'mukaan kukko nousi. Kukkoja maalataan yhä käsin: pohja on '
+            + 'musta, harja ja sydämet punaisia, ja kuviot tehdään valkoisin '
+            + 'pistein. Kaksi kukkoa ei ole koskaan aivan samanlainen.',
+          selite: 'Maalattu savikukko valkoista taustaa vasten. Kukon vartalo on '
+            + 'kiiltävän musta, harja ja heltta kirkkaanpunaiset ja nokka '
+            + 'keltainen. Kylkeen ja siipeen on maalattu punaisia sydämiä '
+            + 'sekä valkoisia ja keltaisia pisterivejä. Jalusta on sininen.',
+          lahde: 'Perttu Torvinen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vene, jonka keula on maalattu',
+          aika: '1800-luku',
+          tiedosto: 'Nt-Aveiro-Moliceiros.jpg',
+          teksti: 'Aveiron matalassa merenlahdessa liikkuu litteäpohjaisia '
+            + 'veneitä, joiden keula ja perä nousevat korkealle kaarelle. '
+            + 'Niillä kerättiin merilevää, jota levitettiin pelloille '
+            + 'lannoitteeksi. Vene on pitkä ja kapea, ja sen pohja on '
+            + 'tarkoituksella litteä, koska lahti on paikoin vain metrin '
+            + 'syvyinen. Keulaan ja perään maalataan kuvia: pyhimyksiä, '
+            + 'kalastajia ja pilailevia kohtauksia, joihin kuuluu aina lyhyt '
+            + 'teksti. Nykyään veneet kuljettavat matkailijoita, mutta '
+            + 'maalaukset uusitaan yhä.',
+          selite: 'Rivi kapeita veneitä kanavan rannassa. Veneiden keula ja perä '
+            + 'kaartuvat korkealle, ja niihin on maalattu kirkkaita kuvioita. '
+            + 'Rannalla kasvaa palmuja ja poppeleita, ja etualalla kulkee '
+            + 'valkoinen betonikaide.',
+          lahde: 'Nuno Tavares, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Asemahalli laatoista',
+          aika: '1916',
+          tiedosto: 'Exploring the Azulejo-Adorned Grand Hall of São Bento Station (55248917165).jpg',
+          teksti: 'Porton päärautatieaseman odotushalli on päällystetty '
+            + 'sinivalkoisin seinälaatoin. Niitä on noin '
+            + 'kaksikymmentätuhatta, ja ne muodostavat suuria kuvakenttiä, '
+            + 'joissa esitetään maan historian tapahtumia ja maaseudun töitä. '
+            + 'Kuvat maalasi Jorge Colaço, ja työ vei yksitoista vuotta. '
+            + 'Halli valmistui vuonna 1916. Asema rakennettiin vanhan '
+            + 'luostarin paikalle, ja siitä se sai nimensä. Sininen väri '
+            + 'tulee kobolttioksidista, joka kestää polttoa kirkkaana.',
+          selite: 'Rautatieaseman odotushalli. Seinien yläosa on peitetty '
+            + 'sinivalkoisilla laattakuvilla, joissa näkyy ihmisiä ja '
+            + 'hevosia. Kattolista on valkoista kipsikoristelua ja katto '
+            + 'keltainen. Oikealla on suuri kaari-ikkuna, kello ja sininen '
+            + 'aikataulunäyttö, ja hallissa liikkuu matkustajia.',
+          lahde: 'Michael Gaylard, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Aveiron litteäpohjaisilla veneillä alun perin kerättiin?',
+        vaihtoehdot: [
+          'Kalaverkkoja',
+          'Suolaa',
+          'Merilevää',
+          'Simpukoita',
+        ],
+        oikea: 2,
+        fakta: 'Saalis levitettiin pelloille lannoitteeksi, eikä venettä '
+          + 'käytetty kalastukseen.',
+      },
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Neljä lajia, joista yksi on maailman suurin aalto, yksi pelataan '
+        + 'rullaluistimilla, yksi täyttää maan suurimman stadionin ja yksi '
+        + 'kiertää koko maan pyörällä.',
+      nostot: [
+        {
+          otsikko: 'Aalto, jonka pohja on kuilu',
+          aika: '2011',
+          tiedosto: 'Mysovskiy Sergey surfing Nazare.jpg',
+          teksti: 'Nazarén kylän pohjoisella rannalla nousee talvisin maailman '
+            + 'suurimpia surffattuja aaltoja. Syy on meren pohjassa: rannan '
+            + 'edessä on merenalainen kanjoni, joka on satoja kilometrejä '
+            + 'pitkä ja syvimmillään kilometrejä syvä. Kanjoni ohjaa avomeren '
+            + 'maininkia kapenevaan uomaan, ja kun syvä vesi loppuu äkisti, '
+            + 'aallon energia purkautuu ylöspäin. Rannalta katsottuna aalto '
+            + 'voi nousta yli kahdenkymmenen metrin korkeuteen. Surffaaja '
+            + 'hinataan aaltoon vesijetillä, koska omin voimin ei ehdi.',
+          selite: 'Valtava murtuva aalto merellä. Vasemmalla vaahtopää kaatuu jo '
+            + 'alas, ja aallon vihertävällä seinämällä laskee pieni '
+            + 'surffaaja. Kauempana vedessä on kaksi muuta ihmistä. Kuva on '
+            + 'otettu kaukaa, ja aalto täyttää kuvan koko leveyden.',
+          lahde: 'Alohamansurfer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maila, pallo ja rullaluistimet',
+          aika: '1947',
+          tiedosto: 'HoqueiPatinsJuniores GDSesimbra-SLBenfica 27-03-2011.jpg',
+          teksti: 'Rullakiekko on laji, jossa viisi pelaajaa joukkueessa liikkuu '
+            + 'nelipyöräisillä rullaluistimilla ja lyö kovaa palloa '
+            + 'kaarevalla mailalla. Peliaika on kaksi kertaa 25 minuuttia. '
+            + 'Laji on täällä paljon suositumpi kuin useimmissa maissa: '
+            + 'seuroja on satoja, otteluita näytetään televisiossa ja '
+            + 'maajoukkue on voittanut maailmanmestaruuden toistakymmentä '
+            + 'kertaa, ensimmäisen kerran vuonna 1947. Halleja rakennettiin '
+            + 'pikkukaupunkeihin samaan aikaan kuin muualla rakennettiin '
+            + 'jalkapallostadioneita.',
+          selite: 'Rullakiekko-ottelu sisähallissa. Puulattialla pelaa kaksi '
+            + 'joukkuetta, punapaitaiset ja valkopaitaiset, kaikilla '
+            + 'rullaluistimet ja lyhyt kaareva maila. Kentän reunalla on '
+            + 'matala laita ja mainoksia, katsomossa istuu ihmisiä ja '
+            + 'etualalla seisoo yleisöä.',
+          lahde: 'JozeSlb, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kotka kiertää stadionin',
+          aika: '1904',
+          tiedosto: 'Benfica vs Olhanense before match.jpg',
+          teksti: 'Maan suurimmalla jalkapalloseuralla on tapa, jota ei ole '
+            + 'monella muulla: ennen ottelua elävä kotka päästetään lentoon '
+            + 'ja se kiertää stadionin yleisön yllä ennen kuin palaa '
+            + 'hoitajansa käsivarrelle. Kotka on ollut seuran tunnuksessa sen '
+            + 'perustamisesta 1904 lähtien, ja jokaisella linnulla on oma '
+            + 'nimi. Seuran kotistadion on maan suurin, ja sinne mahtuu yli '
+            + '64 000 katsojaa. Kannattajakirjoja on niin paljon, että seura '
+            + 'on ollut jäsenmäärältään maailman suurimpia.',
+          selite: 'Jalkapallostadion ylhäältä kuvattuna ennen ottelua. Nurmen '
+            + 'laitaan on maalattu suuri pyöreä seuratunnus, jossa on kotka. '
+            + 'Kentällä kastelusuuttimet ovat päällä ja muutama pelaaja '
+            + 'lämmittelee. Katsomo on täynnä punapaitaista yleisöä.',
+          lahde: 'Pedro Marques, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kierros koko maan ympäri',
+          aika: '1927',
+          tiedosto: 'Peloton in the Volta a Portugal (1223616863).jpg',
+          teksti: 'Maan ympäri ajettava monipäiväinen pyöräilykilpailu ajettiin '
+            + 'ensimmäisen kerran vuonna 1927, mikä tekee siitä yhden '
+            + 'Euroopan vanhimmista. Ensimmäisellä kerralla matkaa oli noin 1 '
+            + '500 kilometriä ja se ajettiin viidessä pitkässä osuudessa, '
+            + 'joista yksi oli yli 400 kilometrin mittainen. Nykyään osuuksia '
+            + 'on toistakymmentä ja ne ovat lyhyempiä. Kilpailu ajetaan '
+            + 'elokuussa, ja kuumimmilla vuorenrinteillä lämpötila nousee yli '
+            + 'kolmenkymmenen asteen. Jokaisella joukkueella on huoltoauto '
+            + 'mukana.',
+          selite: 'Pyöräilijöiden pääjoukko maantiellä. Kymmenet ajajat ajavat '
+            + 'tiiviissä ryhmässä värikkäissä asuissa ja kypärissä. Tien '
+            + 'oikealla puolella nousee kuiva rinne, jolla kasvaa mäntyjä ja '
+            + 'matalaa pensaikkoa, ja taivas on pilvetön.',
+          lahde: 'Miguel Vieira, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä tekee Nazarén rannan aalloista niin suuria?',
+        vaihtoehdot: [
+          'Vuorovesi',
+          'Rannikon jyrkkä kaari',
+          'Merenalainen kanjoni',
+          'Kova pohjatuuli',
+        ],
+        oikea: 2,
+        fakta: 'Kuilu ohjaa maininkia kapenevaan uomaan, ja energia purkautuu '
+          + 'ylöspäin.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Portugalin parhaat paikat ovat verkossa ja ilmaisia: zoomattava '
@@ -44004,6 +44338,61 @@ const MAA_KATEGORIAT = {
   ],
   FIN: [
     {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Maa, jossa tuntemattomat istuvat vieretysten löylyissä ja jossa '
+        + 'huvipuiston tuotto menee lastensuojeluun.',
+      nostot: [
+        {
+          otsikko: 'Kolme miljoonaa saunaa',
+          aika: '2020',
+          tiedosto: 'Kotiharjun yleinen sauna (Kotiharju public sauna in Helsinki) Helsingin Torkkelinmäellä Kalliossa 01.jpg',
+          teksti: 'Suomessa on noin kolme miljoonaa saunaa ja 5,6 miljoonaa '
+            + 'asukasta — löylyt kuuluvat kerrostaloasuntoonkin. Unesco '
+            + 'lisäsi suomalaisen saunomisen ihmiskunnan aineettoman '
+            + 'kulttuuriperinnön luetteloon vuonna 2020. Helsingin Kalliossa '
+            + 'on yhä yleisiä saunoja, joihin ostetaan lippu kuin elokuviin '
+            + 'ja joissa istutaan vieretysten tuntemattomien kanssa. Löylyn '
+            + 'jälkeen mennään kadulle jäähtymään pyyhe päällä, kesät talvet.',
+          selite: 'Kotiharjun sauna Torkkelinmäellä Kalliossa. Se avattiin 1928 '
+            + 'ja on Helsingin viimeinen alkuperäisessä käytössä säilynyt '
+            + 'puulämmitteinen yleinen sauna.',
+          lahde: 'Paasikivi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kotiharjun sauna',
+        },
+        {
+          otsikko: 'Vuoristoradan takana seisoo jarrumestari',
+          aika: '1951',
+          tiedosto: 'Linnanmäki Vuoristorata.jpg',
+          teksti: 'Linnanmäen huvipuisto avattiin 1950 vanhalle vesitornimäelle, '
+            + 'ja puinen Vuoristorata seuraavana kesänä 13. heinäkuuta 1951. '
+            + 'Se on yksi maailman harvoista radoista, joilla junan vauhtia '
+            + 'hidastetaan käsin: jarrumestari seisoo junan takaosassa koko '
+            + 'matkan ja hoitaa jarrutuksen. Kesässä rataa kierretään noin 47 '
+            + '000 kertaa. Huvipuiston omistaa Lasten Päivän Säätiö, ja '
+            + 'tuotto jaetaan kuudelle lastensuojelujärjestölle.',
+          selite: 'Vuoristoradan sininen juna kiipeää ylös täydessä lastissa. '
+            + 'Kiskojen alusta, pylväät ja kaiteet ovat puuta, kuten radan '
+            + 'valmistuessa 1951.',
+          lahde: 'Oona Räisänen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Vuoristorata (Linnanmäki)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta kertaa Linnanmäen Vuoristoradan rataa kierretään '
+          + 'yhden kesän aikana?',
+        vaihtoehdot: [
+          'Noin 4 700 kertaa',
+          'Noin 47 000 kertaa',
+          'Noin 170 000 kertaa',
+          'Noin 700 000 kertaa',
+        ],
+        oikea: 1,
+        fakta: 'Linnanmäen puinen Vuoristorata tekee yhden kesän aikana noin 47 '
+          + '000 kierrosta.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Suomen arkistot ja kokoelmat ovat verkossa poikkeuksellisen '
@@ -44632,6 +45021,397 @@ const MAA_KATEGORIAT = {
   ],
   IRL: [
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Irlannin historia alkaa hautakummusta, joka on pyramideja '
+        + 'vanhempi, ja jatkuu munkkien kalliosaarelle, laivastoa johtaneen '
+        + 'naisen käyntiin hovissa ja satoon, joka ei noussut maasta.',
+      nostot: [
+        {
+          otsikko: 'Aurinko käy sisällä kerran vuodessa',
+          aika: '3200 eaa',
+          tiedosto: 'Entrance to Newgrange passage tomb.jpg',
+          teksti: 'Boynen laaksossa on ruohon peittämä kumpu, jonka sisään johtaa '
+            + 'yli 18 metriä pitkä käytävä. Se rakennettiin noin 3200 vuotta '
+            + 'ennen ajanlaskun alkua, eli se on vanhempi kuin Egyptin '
+            + 'pyramidit ja Stonehenge. Sisäänkäynnin yläpuolella on aukko, '
+            + 'jota kutsutaan kattolaatikoksi. Talvipäivänseisauksen aamuna '
+            + 'nouseva aurinko osuu juuri siihen, ja valo kulkee käytävää '
+            + 'pitkin kammioon noin seitsemäntoista minuuttia. Muina päivinä '
+            + 'kammio on pimeä. Katsojat arvotaan sisään, koska tilaa on vain '
+            + 'parillekymmenelle.',
+          selite: 'Newgrangen hautakummun sisäänkäynti. Tummasta kivestä ladotun '
+            + 'muurin keskellä on valkoisesta kvartsista tehty pinta, ja sen '
+            + 'alla aukeaa matala oviaukko. Oven yläpuolella on kapea '
+            + 'suorakaiteen muotoinen aukko. Etualalla makaa suuri kivi, '
+            + 'johon on hakattu kolmoiskierteitä ja spiraaleja.',
+          lahde: 'jemartin03, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Newgrange',
+        },
+        {
+          otsikko: 'Luostari kalliolla keskellä merta',
+          aika: '600-luku',
+          tiedosto: 'Beehive huts in the monastic site on Skellig Michael.jpg',
+          teksti: 'Kaksitoista kilometriä Kerryn rannikolta nousee merestä jyrkkä '
+            + 'kallio, Skellig Michael. Sen laelle munkit rakensivat '
+            + 'luostarin joskus 500- tai 600-luvulla. Ylös noustaan yli '
+            + 'kuudensadan kiviportaan matka. Asumukset ovat mehiläispesän '
+            + 'muotoisia: kivet on ladottu ilman laastia niin, että jokainen '
+            + 'kerros työntyy hieman edellisen sisäpuolelle, ja katto '
+            + 'sulkeutuu lopulta itsestään. Rakennukset ovat pysyneet kuivina '
+            + 'yli tuhat vuotta. Munkit elivät kalalla, linnunmunilla ja '
+            + 'sadevedellä, ja luostarista luovuttiin 1100-luvulla.',
+          selite: 'Skellig Michaelin luostarin kivimajoja. Litteistä '
+            + 'liuskekivistä ladotut majat kaartuvat kartion muotoisiksi, ja '
+            + 'jokaisessa on matala tumma oviaukko. Kivet on aseteltu ilman '
+            + 'laastia. Oikealla seisoo muutama kävijä kiviterassilla, ja '
+            + 'taustalla on harmaa taivas.',
+          lahde: 'Ecmc23, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksi valtiatarta, yksi yhteinen kieli',
+          aika: '1593',
+          tiedosto: 'The meeting of Grace O\'Malley and Queen Elizabeth I.jpg',
+          teksti: 'Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin '
+            + 'rannikolla. Hän peri isältään merenkulkusuvun ja piti '
+            + 'hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi '
+            + 'kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen '
+            + 'tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli '
+            + 'vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu '
+            + 'käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei '
+            + 'tunnustanut Elisabetia Irlannin kuningattareksi. Poika '
+            + 'päästettiin silti vapaaksi.',
+          selite: 'Vanha kaiverrus Gráinne Ní Mháillen ja Elisabet I:n '
+            + 'tapaamisesta. Vasemmalla seisoo pitkään viittaan pukeutunut '
+            + 'Gráinne, oikealla istuu kuningatar leveässä hameessa ja '
+            + 'kaulusröyhelössä. Heidän välissään on koristeltu takka, ja '
+            + 'taustalla seisoo hoviväkeä röyhelökauluksissa.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Sato, joka mustui maahan',
+          aika: '1845',
+          tiedosto: 'Famine sculpture in front of the International Financial Services Centre Dublin 2006.jpg',
+          teksti: 'Vuonna 1845 Irlannin perunasatoon iski sienitauti, joka '
+            + 'mustensi mukulat maahan. Peruna oli miljoonien ihmisten '
+            + 'pääasiallinen ruoka, ja sato epäonnistui useana vuonna '
+            + 'peräkkäin. Nälänhädän aikana maasta lähti valtavasti ihmisiä '
+            + 'laivoilla Amerikkaan ja Britanniaan. Ennen katoa Irlannissa '
+            + 'asui runsaat kahdeksan miljoonaa ihmistä, ja vuosikymmenen '
+            + 'kuluttua enää noin kuusi ja puoli miljoonaa. Muutto jatkui '
+            + 'vuosikymmeniä, eikä väkiluku ole vieläkään noussut takaisin '
+            + 'vuoden 1841 tasolle.',
+          selite: 'Nälänhädän muistomerkki Dublinin jokirannassa. Pronssiset '
+            + 'ihmishahmot kävelevät jonossa laihoina ja repaleisissa '
+            + 'vaatteissa, käsissään mytyt ja lapsi. Vasemmalla kulkee laiha '
+            + 'koira. Taustalla kohoaa nykyaikainen lasijulkisivuinen '
+            + 'toimistotalo ja rivi puita, ja katu on märkä.',
+          lahde: 'Kaihsu Tai, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka kauan aurinko valaisee Newgrangen kammiota '
+          + 'talvipäivänseisauksena?',
+        vaihtoehdot: [
+          'Noin 17 minuuttia',
+          'Koko päivän ajan',
+          'Noin kaksi tuntia',
+          'Vain hetken sekunteja',
+        ],
+        oikea: 0,
+        fakta: 'Valo pääsee sisään sisäänkäynnin yläpuolella olevasta '
+          + 'kattolaatikosta.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Irlannin maaperä kertoo neljä eri tarinaa: jäähtynyt laava, paljas '
+        + 'kalkkikivi, tuhansien vuosien sammal ja meren jyrkänne, jonka '
+        + 'rinteeseen lintu kaivaa kolon.',
+      nostot: [
+        {
+          otsikko: 'Pylväät, jotka laava latoi',
+          aika: '60 milj. vuotta sitten',
+          tiedosto: 'County Antrim - Giant\'s Causeway - Tops of Basalt Columns - geograph.org.uk - 3987884.jpg',
+          teksti: 'Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka '
+            + 'nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun '
+            + 'paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava '
+            + 'kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — '
+            + 'siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on '
+            + 'kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha '
+            + 'tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill '
+            + 'rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen '
+            + 'jättiläisen kanssa.',
+          selite: 'Kivipylväiden yläpäät ylhäältä katsottuna. Harmaanruskeat '
+            + 'kivipinnat ovat monikulmioita, useimmat kuusikulmaisia, ja '
+            + 'niiden saumoissa kasvaa vihreää ruohoa ja sammalta.',
+          lahde: 'Suzanne Mischyshyn, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kivikko, jossa kasvit tapaavat',
+          aika: 'Jääkauden jäljiltä',
+          tiedosto: 'Limestone pavement, The Burren - geograph.org.uk - 6121843.jpg',
+          teksti: 'Clarein kreivikunnassa on alue, jossa ei näy juuri lainkaan '
+            + 'multaa: pelkkää harmaata kalkkikiveä laattoina niin kauas kuin '
+            + 'silmä kantaa. Jäätikkö kaapi maan pois, ja sade on liuottanut '
+            + 'kiveen syviä rakoja. Raot toimivat kuin kasvihuoneet, koska ne '
+            + 'pitävät lämmön ja kosteuden. Niissä kasvaa rinnakkain lajeja, '
+            + 'jotka eivät muualla tapaa toisiaan: arktisia kasveja '
+            + 'pohjoisesta ja Välimeren kasveja etelästä. Kevät on runsain '
+            + 'aika. Alueen nimi Boireann tarkoittaa kivistä paikkaa.',
+          selite: 'Kalkkikivitasanko Burrenissa. Vaaleanharmaat kivilaatat '
+            + 'peittävät maan, ja niiden välissä kulkee syviä suoria rakoja, '
+            + 'joista nousee vihreitä kasveja. Kaukana takana näkyy vihreitä '
+            + 'peltoja, kiviaita ja yksittäisiä puita.',
+          lahde: 'Gareth James, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Metri tuhannessa vuodessa',
+          aika: 'Vuosituhansia',
+          tiedosto: 'Cutting turf in Carna.jpg',
+          teksti: 'Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska '
+            + 'vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat '
+            + 'kerroksiksi, ja tuhannessa vuodessa syntyy noin metri '
+            + 'turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se '
+            + 'leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn '
+            + 'kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, '
+            + 'ja soista on löytynyt puisia teitä, voita puuastioissa ja '
+            + 'kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä '
+            + 'ja niitä on jäljellä vain murto-osa.',
+          selite: 'Turvesuo, jolta on leikattu turvetta. Tummanruskeat turvepalat '
+            + 'on pinottu riveihin kuivumaan, ja niiden keskellä kulkee '
+            + 'vedellä täyttynyt leikkuuoja. Taustalla aukeaa matala '
+            + 'suomaisema ja pilvinen taivas.',
+          lahde: 'Kevin Scannell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nokka vaihtaa väriä talveksi',
+          aika: 'Huhti–elokuu',
+          tiedosto: 'PuffinSaltee.jpg',
+          teksti: 'Lunni viettää talven ulapalla ja tulee maihin vain pesimään. '
+            + 'Irlannin saarilla, kuten Saltee-saarilla Wexfordin edustalla, '
+            + 'se kaivaa ruohoiseen rinteeseen jopa metrin syvyisen kolon tai '
+            + 'ottaa käyttöön kaniinin vanhan pesäkolon. Poikasia on yksi. '
+            + 'Lunnin nokka on värikäs vain kesällä: talveksi värilliset '
+            + 'levyt irtoavat ja nokka kapenee harmaaksi. Kalastaessaan lunni '
+            + 'voi kantaa nokassaan monta kalaa kerralla, koska kielessä ja '
+            + 'suulaessa on piikkejä, jotka pitävät saaliin paikallaan.',
+          selite: 'Lunni seisoo vihreässä kasvillisuudessa kallionkielekkeellä. '
+            + 'Selkä ja siivet ovat mustat, rinta valkoinen, ja korkea '
+            + 'kolmiomainen nokka on juovitettu oranssilla ja harmaalla. '
+            + 'Takana kohoaa ruskeankeltainen kallioseinä.',
+          lahde: 'Wildlife Ireland photos, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi rannikon kivipylväistä tuli useimmiten kuusikulmaisia?',
+        vaihtoehdot: [
+          'Meri hioi ne muotoonsa',
+          'Jäähtyvä laava halkeili',
+          'Ihmiset veistivät ne',
+          'Jäätikkö puristi ne',
+        ],
+        oikea: 1,
+        fakta: 'Halkeamat etsivät lyhimmän reitin, ja siitä syntyy kuusikulmio.',
+      },
+    },
+    {
+      id: 'kasityo',
+      nimi: 'Käsityö',
+      johdanto: 'Neljä irlantilaista käsityötä: villapaita, jonka kuvioista '
+        + 'kerrotaan tarinaa, sormus jossa on kolme merkkiä, pitsi joka '
+        + 'levisi nälän aikana, ja vene jonka runko on kangasta.',
+      nostot: [
+        {
+          otsikko: 'Kuvio, jonka tarina on nuorempi kuin paita',
+          aika: '1900-luku',
+          tiedosto: 'Honeycomb stitch on Aran Sweater.jpg',
+          teksti: 'Aransaarten villapaidat neulotaan paksusta langasta koholla '
+            + 'olevin kuvioin: palmikoita, vinoneliöitä ja hunajakennoa. '
+            + 'Kuviot tekevät neuleesta paksumman ja lämpimämmän. Usein '
+            + 'kerrotaan, että jokaisella suvulla oli oma kuvionsa, jotta '
+            + 'hukkunut kalastaja voitiin tunnistaa. Tarina on kaunis mutta '
+            + 'nuori: se levisi vasta 1900-luvulla näytelmän ja matkailun '
+            + 'mukana. Paidat itsekin ovat luultua nuorempia, sillä vanhimmat '
+            + 'tunnetut ovat 1900-luvun alusta eivätkä vuosisatojen takaa.',
+          selite: 'Lähikuva aranneuleen pinnasta. Luonnonvalkoisesta '
+            + 'villalangasta on neulottu kuvio, jossa toistuvat vinoneliöt, '
+            + 'ja sen molemmin puolin kulkee kapeampia palmikoita. Neule on '
+            + 'paksua ja selvästi kohokuvioista.',
+          lahde: 'Ww2censor, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kolme merkkiä yhdessä sormuksessa',
+          aika: '1700-luku',
+          tiedosto: 'Sterling silver Claddagh ring.jpg',
+          teksti: 'Claddagh oli kalastajakylä Galwayn kaupungin laidalla, ja '
+            + 'siitä on saanut nimensä sormus, jossa on kolme merkkiä: kaksi '
+            + 'kättä, sydän ja kruunu. Kädet tarkoittavat ystävyyttä, sydän '
+            + 'rakkautta ja kruunu uskollisuutta. Sormusta luetaan myös '
+            + 'siitä, miten sitä pidetään. Oikeassa kädessä sydämen kärki '
+            + 'ulospäin kertoo, ettei kantaja ole varattu, ja kärki '
+            + 'sisäänpäin kertoo päinvastaista. Vasemmassa kädessä kärki '
+            + 'sisäänpäin tarkoittaa avioliittoa. Vanhimmat säilyneet '
+            + 'sormukset ovat 1700-luvulta.',
+          selite: 'Hopeinen claddagh-sormus lähikuvassa. Sormuksen päässä kaksi '
+            + 'kättä pitelee sydäntä, ja sydämen yläpuolella on pieni kruunu. '
+            + 'Pinta on kiillotettu, ja kuviot erottuvat tummina '
+            + 'syvennyksinä.',
+          lahde: 'Night of the Ed, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Pitsi, jota ei kudota vaan leikataan',
+          aika: '1846',
+          tiedosto: 'Women making Carrickmacross lace.jpg',
+          teksti: 'Carrickmacrossin pitsi ei ole kudottua vaan ommeltua. Ohut '
+            + 'palttina kiinnitetään harsokankaan päälle, kuvio ommellaan '
+            + 'reunoja pitkin kiinni ja ylimääräinen kangas leikataan '
+            + 'varovasti pois. Tekniikka tuli Irlantiin 1820-luvulla, mutta '
+            + 'se levisi laajalle vasta nälänhädän aikana, kun pitsikouluja '
+            + 'perustettiin antamaan naisille ansiota. Työ oli hidasta ja '
+            + 'tarkkaa, ja hyvästä kauluksesta sai enemmän kuin viikon '
+            + 'päiväpalkan. Pitsiä tehdään kaupungissa yhä, ja sitä on '
+            + 'käytetty muun muassa kuninkaallisissa hääpuvuissa.',
+          selite: 'Vanha stereokortti, jossa sama valokuva on rinnakkain kahtena. '
+            + 'Kuvassa kaksi naista istuu pöydän ääressä olkikattoisen '
+            + 'valkoiseksi kalkitun mökin edustalla ja ompelee pitsiä '
+            + 'valkoisen kankaan päällä. Kuva on ruskeansävyinen.',
+          lahde: 'Carleton H. Graves, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Vene, joka nousee aallon mukana',
+          aika: 'Vuosisatoja',
+          tiedosto: 'Currach.3.jpg',
+          teksti: 'Currach on vene, jonka runko rakennetaan ohuista puuriuloista '
+            + 'ristikoksi ja päällystetään sitten kankaalla. Ennen käytettiin '
+            + 'härän vuotaa, nykyään tervattua purjekangasta. Valmis vene on '
+            + 'niin kevyt, että kaksi ihmistä kantaa sen ylösalaisin päänsä '
+            + 'päällä rantaan. Kevyt runko nousee aallon mukana sen sijaan '
+            + 'että puskisi sen läpi, ja siksi currach kestää Atlantin '
+            + 'aallokkoa yllättävän hyvin. Airot ovat kapeat ja lähes '
+            + 'lavattomat, jottei tuuli tartu niihin. Veneitä säilytetään '
+            + 'ylösalaisin, ettei sade jää sisään.',
+          selite: 'Viisi currach-venettä laiturilla ylösalaisin. Rungot ovat '
+            + 'mustaksi tervattuja, kapeita ja kärjestä suippoja. Veneiden '
+            + 'alla on puiset tuet, ja etualalla lojuu sinisiä ja punaisia '
+            + 'kalaverkkoja ja köysiä.',
+          lahde: 'Erik Christensen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä currach-veneen runko päällystetään nykyään?',
+        vaihtoehdot: [
+          'Ohuella pellillä',
+          'Tervatulla kankaalla',
+          'Koivun tuohella',
+          'Tiiviillä lasikuidulla',
+        ],
+        oikea: 1,
+        fakta: 'Ennen käytettiin härän vuotaa, ja kevyt runko nousee aallon '
+          + 'mukana.',
+      },
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Irlannin omat pelit ovat vanhempia kuin useimmat säännöt. Mukana '
+        + 'on puinen maila, kova pallo, hiekkaranta jolle rata merkitään '
+        + 'vasta veden vetäydyttyä, ja seuroja toisella puolella maailmaa.',
+      nostot: [
+        {
+          otsikko: 'Euroopan vanhin kenttäpeli',
+          aika: '1887',
+          tiedosto: 'Pat Madden\'s 1887 All-Ireland Hurley.jpg',
+          teksti: 'Hurlingissa lyödään kovaa nahkapalloa puisella mailalla. '
+            + 'Mailaa sanotaan nimellä camán ja palloa nimellä sliotar. '
+            + 'Palloa saa kuljettaa mailan lavalla tasapainottaen, lyödä '
+            + 'ilmasta ja ottaa käteen enintään neljäksi askeleeksi. Lyönti '
+            + 'kantaa yli kahdeksankymmentä metriä, ja pallo lentää yli sadan '
+            + 'kilometrin tuntinopeudella. Peliä pidetään Euroopan vanhimpana '
+            + 'kenttäpelinä, ja siitä on maininta jo keskiajan laeissa, '
+            + 'joissa sitä yritettiin kieltää. Ensimmäinen koko saaren '
+            + 'mestaruusottelu pelattiin vuonna 1887.',
+          selite: 'Museovitriini, jossa on esillä vuoden 1887 mestaruusottelussa '
+            + 'käytetty hurling-maila. Maila on tummunutta puuta ja sen lapa '
+            + 'on leveä ja litteä. Vitriinin pohjalla on kaksi vanhaa '
+            + 'nahkapalloa, ja taustalla on mustavalkoisia joukkuekuvia ja '
+            + 'selostekylttejä.',
+          lahde: 'Lár na Páirce, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Sama peli, oma nimi',
+          aika: '1904',
+          tiedosto: 'Camogie.jpg',
+          teksti: 'Camogie on hurlingin naisten laji. Ensimmäinen ottelu '
+            + 'pelattiin vuonna 1904, ja nimi tulee sanasta camóg, '
+            + 'koukkupäinen maila. Säännöt ovat lähes samat kuin hurlingissa, '
+            + 'mutta muutama ero on jäänyt matkalle: maalivahdilla on sama '
+            + 'paita kuin joukkuetovereilla, ja peliaika on ollut lyhyempi. '
+            + 'Kypärä kasvosuojineen tuli pakolliseksi kaikille pelaajille '
+            + 'vasta 2010-luvulla. Lajia pelataan seuroissa ympäri maata, ja '
+            + 'loppuottelut pelataan samalla kentällä kuin miesten.',
+          selite: 'Kaksi camogie-pelaajaa juoksee pallon perässä. Molemmilla on '
+            + 'kypärä kasvoristikkoineen ja kädessä koukkupäinen puumaila. '
+            + 'Toisella on vihreävalkoinen ja toisella sinivalkoinen asu. '
+            + 'Taustalla näkyy katsomon reunaa ja hämärä yleisö.',
+          lahde: 'MaxPride, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Rata, joka on meren pohja',
+          aika: '1868',
+          tiedosto: 'Last race at Laytown, Co. Meath - geograph.org.uk - 959203.jpg',
+          teksti: 'Laytownissa Meathin kreivikunnassa ajetaan laukkakilpailut '
+            + 'hiekkarannalla. Kilpailua on järjestetty vuodesta 1868, ja se '
+            + 'on Euroopan ainoa virallinen kilparata, joka on samalla meren '
+            + 'pohja. Aikataulu ei riipu kellosta vaan siitä, milloin '
+            + 'vuorovesi on matalimmillaan: rata voidaan merkitä vasta kun '
+            + 'vesi on vetäytynyt, ja kaikki on purettava ennen kuin se '
+            + 'palaa. Varsinaista katsomoa ei ole, vaan yleisö seisoo '
+            + 'rannalla aitojen takana. Tallialueena toimii yhden päivän ajan '
+            + 'läheinen pelto.',
+          selite: 'Laukkakilpailu Laytownin rannalla. Hevoset juoksevat märällä '
+            + 'hiekalla, ja niiden vieressä kulkee valkoinen köysiaita. '
+            + 'Vasemmalla yleisö seisoo matalan pajuaidan takana, ja rannalla '
+            + 'on pakettiautoja ja nostolava. Taivas on pilvinen ja takana '
+            + 'siintää meri.',
+          lahde: 'Kieran Campbell, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Peli lähti laivoilla mukaan',
+          aika: '1884',
+          tiedosto: 'Detroit Wolfetones v. Cleveland St. Jarlath\'s (2009-07-10 in Saline) 08.JPG',
+          teksti: 'Gaelilaiset pelit järjestettiin yhdeksi liitoksi vuonna 1884, '
+            + 'ja ne lähtivät maailmalle siirtolaisten mukana. Missä tahansa '
+            + 'asui tarpeeksi irlantilaisia, perustettiin seura: New Yorkiin, '
+            + 'Lontooseen, Buenos Airesiin, Sydneyyn. Nykyään seuroja on '
+            + 'kymmenissä maissa, myös sellaisissa, joissa irlantilaisia on '
+            + 'vähän, ja pelaajat ovat paikallisia. Ottelut pelataan usein '
+            + 'lainatulla kentällä, jonka viivat on maalattu aivan toista '
+            + 'lajia varten, ja maalitolpat pystytetään vain ottelun ajaksi.',
+          selite: 'Gaelilaisen jalkapallon ottelu Yhdysvalloissa. Keltapaitainen '
+            + 'pelaaja juoksee pallon kanssa nurmikentällä, jonka poikki '
+            + 'kulkevat amerikkalaisen jalkapallon valkoiset jaardiviivat ja '
+            + 'suuri numero. Oikealla alhaalla seisoo toinen pelaaja '
+            + 'valkoisessa paidassa, ja taustalla on verkkoaita ja '
+            + 'ruohorinne.',
+          lahde: 'Michael Barera, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä ratkaisee Laytownin kilpailujen aikataulun?',
+        vaihtoehdot: [
+          'Kellonaika',
+          'Vuorovesi',
+          'Arpajaiset',
+          'Tuulen suunta',
+        ],
+        oikea: 1,
+        fakta: 'Rata merkitään vasta kun vesi on vetäytynyt, ja se puretaan '
+          + 'ennen paluuta.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Irlanti on avannut arkistonsa: koululaisten keräämät tarinat '
@@ -45198,6 +45978,392 @@ const MAA_KATEGORIAT = {
   ],
   HUN: [
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Neljä käännekohtaa: ratsujoukko tulee vuorten yli, kruunu saa '
+        + 'kallistuneen ristin, kellot alkavat soida keskipäivällä, ja '
+        + 'lipusta leikataan reikä.',
+      nostot: [
+        {
+          otsikko: 'Seitsemän heimoa tuli vuorten yli',
+          aika: '895',
+          tiedosto: 'Képes krónika - 21.oldal - A magyarok bejövetele Pannóniába, Előd és Álmos vezér.jpg',
+          teksti: 'Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka '
+            + 'eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa '
+            + 'ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen '
+            + 'tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa '
+            + 'hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä '
+            + 'honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, '
+            + 'sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta '
+            + 'satoja vuosia myöhemmin, kuvitettuun kronikkaan.',
+          selite: 'Sivu keskiaikaisesta kuvitetusta kronikasta. Ylälaidan kuvassa '
+            + 'ratsastajia ja jalkaväkeä kulkee kivisen solan läpi kohti '
+            + 'linnaa; tausta on kullattu. Alla on kaksi koristeltua '
+            + 'alkukirjainta, joiden sisällä seisoo kruunattu hahmo, ja '
+            + 'kahdessa palstassa on latinankielistä tekstiä. Reunuksessa '
+            + 'kiertää kukkakoriste.',
+          lahde: 'Márk Kálti, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kruunu, jonka risti on vinossa',
+          aika: '1000',
+          tiedosto: 'A Szent Korona elölről 2.jpg',
+          teksti: 'Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty '
+            + 'Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty '
+            + 'yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja '
+            + 'reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, '
+            + 'ja arvellaan että se vääntyi, kun kruunua tungettiin liian '
+            + 'pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli '
+            + 'erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, '
+            + 'ellei häntä kruunattu juuri tällä esineellä.',
+          selite: 'Unkarin pyhä kruunu mustaa taustaa vasten. Kullattu vanne on '
+            + 'koristeltu helmiriveillä, punaisilla ja sinisillä kivillä sekä '
+            + 'pienillä emalikuvilla, joissa on ihmishahmoja. Vanteen yli '
+            + 'kaartuu kaksi kultaista kaarta, ja niiden risteyksessä on '
+            + 'pieni risti, joka nojaa vinoon. Reunoilta riippuu ohuita '
+            + 'ketjuja.',
+          lahde: 'Tolfavi, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kellot, jotka jäivät soimaan',
+          aika: '1456',
+          tiedosto: 'Verteidigung der Burg von Belgrad durch Johann Hunyadi 1456.jpg',
+          teksti: 'Kesällä 1456 osmanien armeija piiritti Nándorfehérvárin '
+            + 'linnoitusta, nykyistä Belgradia. Paavi oli jo aiemmin '
+            + 'määrännyt, että kirkonkellojen tuli soida keskipäivällä, jotta '
+            + 'koko kristikunta muistaisi rukoilla puolustajien puolesta. '
+            + 'Heinäkuun 22. päivänä János Hunyadin joukot ja niiden mukaan '
+            + 'lähteneet talonpojat saivat piirityksen murrettua. Kellojen '
+            + 'soitto ei loppunut voittoon vaan jäi voimaan sen muistoksi, ja '
+            + 'siksi monessa maassa kirkonkellot soivat yhä puolenpäivän '
+            + 'aikaan.',
+          selite: 'Maalaus linnoituksen puolustuksesta. Etualalla ratsumiehet ja '
+            + 'jalkaväki taistelevat linnanmuurin edustalla, ja keskellä '
+            + 'kohoaa valkoisella hevosella istuva ratsastaja. Ilmassa liehuu '
+            + 'useita lippuja, muun muassa valkoinen lippu punaisella '
+            + 'ristillä. Taustalla nousee vaalea linnoitus savun keskeltä.',
+          lahde: 'Anton Bogner, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Lipusta leikattiin keskusta pois',
+          aika: '1956',
+          tiedosto: 'Color flag of 1956.jpg',
+          teksti: 'Lokakuussa 1956 Budapestin kaduille nousi kansannousu maata '
+            + 'hallinnutta neuvostojärjestelmää vastaan. Mielenosoittajat '
+            + 'ottivat tunnuksekseen maan lipun, jonka keskeltä oli leikattu '
+            + 'vaakuna pois: jäljelle jäi puna-valko-vihreä lippu ja siinä '
+            + 'reikä. Nousu kesti runsaat kaksi viikkoa, ja se kukistettiin '
+            + 'marraskuun alussa. Noin kaksisataatuhatta ihmistä pakeni '
+            + 'maasta. Reikälippu on yhä maan kansallispäivän tunnus, ja sitä '
+            + 'nostetaan salkoon joka lokakuu.',
+          selite: 'Vanha valokuva, johon on jälkikäteen väritetty lippu. Talon '
+            + 'seinästä työntyvässä tangossa riippuu puna-valko-vihreä lippu, '
+            + 'jonka keskeltä on revitty pyöreähkö reikä. Ympäröivä '
+            + 'katunäkymä on mustavalkoinen: parvekkeita, seiniä ja kaksi '
+            + 'kilpeä, joissa lukee SZABÓ ja CIPÉSZ.',
+          lahde: 'Pesti Srác2, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi kirkonkellot soivat monessa maassa keskipäivällä?',
+        vaihtoehdot: [
+          'Vuoden 1456 voiton muistoksi',
+          'Kuninkaan kruunajaisten takia',
+          'Uudenvuoden perinteenä',
+          'Kirkolliskokouksen päätöksellä',
+        ],
+        oikea: 0,
+        fakta: 'Paavi määräsi soiton jo piirityksen aikana, ja tapa jäi voimaan '
+          + 'sen jälkeen.',
+      },
+    },
+    {
+      id: 'keksinnot',
+      nimi: 'Keksinnöt',
+      johdanto: 'Neljä keksintöä, joista jokainen alkoi hankalasta arkiongelmasta: '
+        + 'muste tahri, sähkö ei kulkenut kauas, vitamiinia ei saatu talteen '
+        + 'ja mikroskoopin kuva oli sumea.',
+      nostot: [
+        {
+          otsikko: 'Kynä, joka ei vuotanut lentokoneessa',
+          aika: '1938',
+          tiedosto: 'Ballpoint pen patent 2390636 june1943.jpg',
+          teksti: 'Sanomalehtitoimittaja László Bíró huomasi, että painomuste '
+            + 'kuivuu paperilla paljon nopeammin kuin täytekynän muste. Se '
+            + 'oli kuitenkin liian paksua valumaan kynänkärjestä. Veljensä '
+            + 'kanssa hän ratkaisi ongelman pienellä kuulalla: kuula pyörii '
+            + 'kärjessä ja kuljettaa mukanaan ohuen kerroksen paksua '
+            + 'mustetta. Ensimmäinen patentti tehtiin vuonna 1938. Kynästä '
+            + 'tuli suosittu lentäjien keskuudessa, koska se ei vuotanut '
+            + 'korkealla, missä ilmanpaine on matala.',
+          selite: 'Patenttihakemuksen piirroslehti. Kaksi viivapiirrosta esittää '
+            + 'kynää: vasemmalla se on halkaistuna, niin että sisällä oleva '
+            + 'mustesäiliö ja kärki näkyvät, oikealla kokonaisena. '
+            + 'Ylälaidassa lukee keksijän nimi ja päiväys, alalaidassa on '
+            + 'käsin kirjoitettu allekirjoitus.',
+          lahde: 'László ja György Bíró, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Laite, joka vei sähkön kauas',
+          aika: '1885',
+          tiedosto: 'Trafo1885.jpg',
+          teksti: 'Sähkön kuljettaminen kauas oli 1880-luvulla vaikeaa: matalalla '
+            + 'jännitteellä teho hupeni johtoihin. Kolme insinööriä Ganzin '
+            + 'tehtaalla — Ottó Bláthy, Miksa Déri ja Károly Zipernowsky — '
+            + 'rakensi vuonna 1885 laitteen, jossa rautasydän on suljettu '
+            + 'renkaaksi ja käämit sen ympärillä. Näin jännite saatiin '
+            + 'nostettua siirtoa varten ja laskettua taas käyttöpaikalla. He '
+            + 'antoivat laitteelle myös nimen, joka on yhä käytössä: '
+            + 'muuntaja. Bláthy kehitti lisäksi sähkömittarin.',
+          selite: 'Vanha kaiverrus varhaisesta muuntajasta. Laite on soikea ja '
+            + 'renkaan muotoinen, ja sen päällä on kaareva kantokahva. '
+            + 'Alaosassa ja kyljessä on liitinrimat, joissa on neliömäisiä '
+            + 'ruuviliittimiä, ja niistä lähtee paksuja johtimia.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kilokaupalla vitamiinia',
+          aika: '1932',
+          tiedosto: 'Szeged-paprika1.jpg',
+          teksti: 'Albert Szent-Györgyi tutki ainetta, joka esti hedelmien '
+            + 'ruskettumisen. Ainetta oli vaikea saada tarpeeksi '
+            + 'tutkittavaksi: lisämunuaisista ja appelsiineista sitä irtosi '
+            + 'vain hitusia. Ratkaisu tuli kotiseudulta. Szegedin seudun '
+            + 'paprikassa ainetta oli poikkeuksellisen paljon, ja siitä sitä '
+            + 'saatiin talteen kiloittain. Aine osoittautui C-vitamiiniksi, '
+            + 'ja Szent-Györgyi sai työstään Nobelin palkinnon vuonna 1937. '
+            + 'Tarinan mukaan idea syntyi illallispöydässä.',
+          selite: 'Kirkkaanpunaisia paprikoita kuivumassa. Tuhannet pitkulaiset '
+            + 'palot peittävät vaalean maan lähes kokonaan, osa yksittäin ja '
+            + 'osa naruun pujotettuina riveiksi. Aurinko paistaa viistosti ja '
+            + 'jättää paloista pitkiä varjoja.',
+          lahde: 'Zsolt Váradi, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kuva, jossa on syvyys',
+          aika: '1947',
+          tiedosto: 'Visa Dove Hologram Rainbow.jpg',
+          teksti: 'Dénes Gábor yritti parantaa elektronimikroskoopin sumeaa kuvaa '
+            + 'ja keksi vuonna 1947 menetelmän, jossa talteen otetaan valon '
+            + 'kirkkauden lisäksi se, missä vaiheessa aalto saapuu. Kun '
+            + 'tallenne valaistaan uudelleen, syntyy kuva, jolla on syvyys: '
+            + 'sitä voi katsoa hieman eri suunnista ja nähdä kohteen '
+            + 'kääntyvän. Keksintö jäi aluksi käyttämättä, koska tarpeeksi '
+            + 'tasaista valoa ei ollut. Laserin keksiminen 1960-luvulla '
+            + 'muutti asian, ja Gábor sai Nobelin palkinnon 1971.',
+          selite: 'Lähikuva maksukortin pintaan painetusta hologrammista. Lentävä '
+            + 'kyyhkynen hohtaa sateenkaaren väreissä tummaa taustaa vasten, '
+            + 'ja siivet erottuvat sinisenä ja vihreänä, vartalo keltaisena. '
+            + 'Alalaidassa näkyy kohokuvioisia numeroita.',
+          lahde: 'Dominic Alves, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä kasviksesta C-vitamiinia saatiin eristettyä kiloittain?',
+        vaihtoehdot: [
+          'Perunasta',
+          'Paprikasta',
+          'Sipulista',
+          'Porkkanasta',
+        ],
+        oikea: 1,
+        fakta: 'Lisämunuaisista ja appelsiineista ainetta irtosi vain hitusia '
+          + 'kerrallaan.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Maassa ei ole merta eikä korkeita vuoria, mutta on Euroopan laajin '
+        + 'luonnonniitty, matala järvi joka lämpenee nopeasti, luolasto rajan '
+        + 'ali ja hyönteinen joka elää yhden illan.',
+      nostot: [
+        {
+          otsikko: 'Tasanko, jolla näkee kangastuksia',
+          aika: '1973',
+          tiedosto: 'Racka 4.jpg',
+          teksti: 'Hortobágy on laaja tasanko, jolla ei kasva juuri puita, vaan '
+            + 'pelkkää heinää ja suolaista niittyä. Se on Euroopan laajin '
+            + 'yhtenäinen luonnonniitty, ja siitä tehtiin maan ensimmäinen '
+            + 'kansallispuisto vuonna 1973. Kuumina päivinä tasangolla näkyy '
+            + 'kangastuksia: ilma väreilee ja kaukainen kaivo tai lauma '
+            + 'näyttää kelluvan irti maasta. Alueella laidunnetaan vanhoja '
+            + 'kotieläinrotuja, muun muassa harmaata nautaa ja '
+            + 'kierteissarvista racka-lammasta, joita ilman niitty kasvaisi '
+            + 'umpeen.',
+          selite: 'Lammaslauma laiduntaa Hortobágyn tasangolla. Kymmenet '
+            + 'paksuvillaiset lampaat syövät matalaa heinää tiiviissä '
+            + 'rivissä. Takana kasvaa korkeampi ruohovyöhyke, kaukana '
+            + 'horisontissa näkyy matala puurivi, ja taivaalla on hajanaisia '
+            + 'poutapilviä.',
+          lahde: 'Nl74, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Järvi, joka lämpenee nopeasti',
+          aika: 'Kesäisin',
+          tiedosto: 'HUNGARY-Lake Balaton Region.jpg',
+          teksti: 'Balaton on Keski-Euroopan suurin järvi, pinta-alaltaan lähes '
+            + 'kuusisataa neliökilometriä. Erikoista siinä on mataluus: '
+            + 'keskisyvyys on vain runsaat kolme metriä, ja eteläreunalla voi '
+            + 'kahlata satoja metrejä ennen kuin vesi ylettyy hartioihin. '
+            + 'Matala vesi lämpenee nopeasti, joten järvi on kesällä '
+            + 'lämpimämpi kuin useimmat Euroopan järvet. Samasta syystä se '
+            + 'myös jäätyy talvella lähes joka vuosi. Rannat ovat '
+            + 'purjehdusaluetta, sillä moottoriveneily on järvellä kielletty.',
+          selite: 'Näkymä Balatonin yli. Vesi on etualalla vihertävää ja '
+            + 'kauempana syvän sinistä, ja siinä liikkuu useita pieniä '
+            + 'valkoisia purjeveneitä. Vastarannalla erottuu matalia '
+            + 'kukkuloita ja taloja, ja taivaalla kohoaa suuria kumpupilviä.',
+          lahde: 'DavidivardiIL, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Luolasto jatkuu rajan toiselle puolelle',
+          aika: 'Vuosimiljoonia',
+          tiedosto: 'Baradla-barlang "Karácsonyfa" cseppkő.jpg',
+          teksti: 'Aggtelekin kalkkikivialueella maan alla kulkee luolasto, jonka '
+            + 'käytäviä on mitattu noin 25 kilometriä. Luolasto ei pysähdy '
+            + 'valtakunnan rajalle, vaan jatkuu Slovakian puolelle, ja sitä '
+            + 'hoidetaan yhtenä kokonaisuutena kahden maan kesken. Tippukivet '
+            + 'kasvavat, kun kalkkipitoinen vesi tihkuu katosta ja jättää '
+            + 'joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, '
+            + 'luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin '
+            + 'hyvä kaiku, että siellä pidetään konsertteja.',
+          selite: 'Suuri tippukivimuodostuma luolassa. Vaaleanruskea kivipylväs '
+            + 'kohoaa lattialta kohti kattoa ja kapenee ylöspäin teräväksi '
+            + 'kärjeksi. Pinta on kauttaaltaan kuhmuinen ja valuva, ja '
+            + 'kohdevalo tekee siitä kellertävän tummaa taustaa vasten.',
+          lahde: 'NukaWarrior, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Joki kukkii kesäkuussa',
+          aika: 'Kesäkuu',
+          tiedosto: 'Kérészek tánca, Tiszainoka 2011. június 13.JPG',
+          teksti: 'Tiszajoessa elää Euroopan suurin päivänkorento. Toukka '
+            + 'kaivautuu joen savipenkkaan ja elää siellä kolme vuotta. '
+            + 'Sitten muutamana kesäkuun iltana kaikki nousevat pintaan yhtä '
+            + 'aikaa, kuoriutuvat aikuisiksi ja lentävät. Aikuisella ei ole '
+            + 'edes toimivaa suuta, sillä se ei ehdi syödä: se elää vain '
+            + 'muutaman tunnin, parittelee ja kuolee. Vedenpinta täyttyy '
+            + 'silloin siivistä niin, että ilmiötä kutsutaan joen kukinnaksi. '
+            + 'Ilmiö on palannut sen jälkeen, kun joen vedenlaatu parani.',
+          selite: 'Päivänkorentoja joen pinnalla iltavalossa. Useita hyönteisiä '
+            + 'lepää vedenkalvon päällä siivet pystyssä, ja jokainen jättää '
+            + 'ympärilleen pienen renkaan. Vesi kimaltaa vastavalossa '
+            + 'hopeisena ja tummansinisenä.',
+          lahde: 'Andor Derzsi Elekes, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka kauan Tiszajoen aikuinen päivänkorento elää?',
+        vaihtoehdot: [
+          'Yhden kesän',
+          'Vain muutaman tunnin',
+          'Kolme viikkoa vedessä',
+          'Koko talven yli',
+        ],
+        oikea: 1,
+        fakta: 'Toukkana se on ollut joen savipenkassa kolme vuotta ennen '
+          + 'nousuaan.',
+      },
+    },
+    {
+      id: 'kieli',
+      nimi: 'Kieli',
+      johdanto: 'Unkari kuulostaa naapureiden korvaan oudolta, eikä syyttä: sen '
+        + 'lähimmät sukulaiset ovat kaukana pohjoisessa ja idässä. Neljä '
+        + 'juttua kielestä, jota puhuu noin 13 miljoonaa ihmistä.',
+      nostot: [
+        {
+          otsikko: 'Sukulaisia kaukaa pohjoisesta',
+          aika: 'Tuhansia vuosia',
+          tiedosto: 'Uralic languages at early 20th century.png',
+          teksti: 'Unkari ei kuulu indoeurooppalaisiin kieliin kuten sen '
+            + 'naapurit, vaan uralilaisiin kieliin. Samaan joukkoon kuuluvat '
+            + 'suomi, viro ja saame sekä joukko pienempiä kieliä Uralin '
+            + 'molemmin puolin. Sukulaisuus on kaukainen: unkarilainen ja '
+            + 'suomalainen eivät ymmärrä toisiaan lainkaan. Yhteiset sanat '
+            + 'näkyvät silti vanhimmissa sanoissa: kéz on käsi, vér on veri, '
+            + 'hal on kala, méz on mesi ja szem on silmä. Erot syntyivät, kun '
+            + 'kansat erosivat toisistaan tuhansia vuosia sitten.',
+          selite: 'Kielikartta Pohjois-Euroopasta ja Venäjältä. Eri kieliryhmien '
+            + 'alueet on väritetty: unkari vihreänä lounaassa, '
+            + 'itämerensuomalaiset kielet oransseina Itämeren '
+            + 'pohjoispuolella, saame punaisena ja useita ryhmiä idempänä. '
+            + 'Meret ovat vaaleansinisiä ja nimet mustalla tekstillä.',
+          lahde: 'Timo Rantanen ym., Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Neljäkymmentäneljä kirjainta',
+          aika: 'Nykyaakkoset',
+          tiedosto: 'Generic Hungarian keyboard layout (ISO 105, with ISO Enter).png',
+          teksti: 'Unkarin aakkosissa on 44 kirjainta, koska mukaan lasketaan '
+            + 'myös kirjainyhdistelmät, jotka tarkoittavat yhtä äännettä: cs, '
+            + 'gy, ly, ny, sz, ty, zs ja dz. Pisin niistä on dzs, kolme '
+            + 'merkkiä yhtä äännettä kohti. Vokaaleja on paljon, ja '
+            + 'pituudella on merkitystä samaan tapaan kuin suomessa. Kaksi '
+            + 'kirjainta on sellaisia, joita ei ole juuri missään muualla: ő '
+            + 'ja ű, joissa on kaksi vinoa viivaa. Näppäimistössä niille on '
+            + 'omat näppäimet.',
+          selite: 'Piirros unkarilaisesta näppäimistöasettelusta. Näppäimet on '
+            + 'esitetty valkoisina neliöinä mustin reunuksin, ja '
+            + 'kirjainrivien oikeassa laidassa on omat näppäimet kirjaimille, '
+            + 'joissa on pisteitä ja vinoja viivoja. Alarivillä on välilyönti '
+            + 'ja toimintonäppäimiä.',
+          lahde: 'Rev-san, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vanhin lause omalla kielellä',
+          aika: '1195',
+          tiedosto: 'Halotti beszéd.jpg',
+          teksti: 'Vanhin säilynyt yhtenäinen unkarinkielinen teksti on '
+            + 'hautajaispuhe, joka on kirjoitettu erään latinankielisen '
+            + 'käsikirjoituksen sivulle noin vuonna 1195. Se on 32 riviä '
+            + 'pitkä ja alkaa sanoilla, jotka tarkoittavat suunnilleen: '
+            + 'näettehän, veljet, omin silmin, mitä olemme. Teksti on '
+            + 'merkittävä siksi, että se on kirjoitettu kansan omalla '
+            + 'kielellä aikana, jolloin kirkon ja hallinnon kieli oli latina. '
+            + 'Sen jälkeen kesti vielä satoja vuosia, ennen kuin kirjoja '
+            + 'alettiin painaa unkariksi.',
+          selite: 'Käsikirjoitussivu pergamentille. Teksti on kirjoitettu tiheinä '
+            + 'ruskeina riveinä, ja rivien alkuun on maalattu suurempia '
+            + 'punaisia alkukirjaimia. Sivun reunat ovat kellastuneet ja '
+            + 'hieman kuluneet, ja alalaidassa on lisää punaista tekstiä.',
+          lahde: 'Tgr, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kirjaimet, jotka veistettiin puuhun',
+          aika: 'Keskiaika',
+          tiedosto: 'City limit sign with rovas script, Lacházi út, 2018 Ráckeve.jpg',
+          teksti: 'Ennen latinalaisia kirjaimia unkaria kirjoitettiin omalla '
+            + 'merkistöllä, jota kutsutaan nimellä rovásírás. Merkit ovat '
+            + 'suoraviivaisia ja kulmikkaita, koska ne veistettiin puuhun tai '
+            + 'kaiverrettiin kiveen, eikä kaarevia viivoja saanut helposti '
+            + 'tehtyä. Tekstiä luetaan oikealta vasemmalle. Kirjoitustapa jäi '
+            + 'pois käytöstä keskiajalla, mutta se ei unohtunut: viime '
+            + 'vuosikymmeninä useisiin kyliin ja kaupunkeihin on pystytetty '
+            + 'tienvarsipylväs, jossa paikan nimi on kaiverrettu vanhoin '
+            + 'merkein.',
+          selite: 'Tienvarsi kesällä. Pystyyn on pystytetty veistetty puupylväs, '
+            + 'jonka kylkeen on kaiverrettu allekkain kulmikkaita merkkejä ja '
+            + 'jonka päässä on pieni katos. Pylvään takana on tavallinen '
+            + 'valkoinen paikannimikilpi, jossa lukee Ráckeve, ja ympärillä '
+            + 'kasvaa puita ja pensaita.',
+          lahde: 'Globetrotter19, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin kielikuntaan unkari kuuluu?',
+        vaihtoehdot: [
+          'Slaavilaisiin kieliin',
+          'Uralilaisiin kieliin',
+          'Germaanisiin kieliin',
+          'Romaanisiin kieliin',
+        ],
+        oikea: 1,
+        fakta: 'Samaan joukkoon kuuluvat myös suomi, viro ja saame.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Unkari on avannut oman muistinsa: kaksisataatuhatta valokuvaa '
@@ -45343,6 +46509,422 @@ const MAA_KATEGORIAT = {
     },
   ],
   TUR: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Turkin vanhimmat tarinat ovat kiven ja saven varassa: pystyyn '
+        + 'nostettu pylväs, savitaulu, yhdeksän kaupunkia päällekkäin ja '
+        + 'liitutaulu, jonka ääressä koko maa opetteli kirjoittamaan '
+        + 'uudestaan.',
+      nostot: [
+        {
+          otsikko: 'Pylväät nostettiin ennen kyliä',
+          aika: '9500 eaa',
+          tiedosto: 'Göbekli Tepe Pilar Arm and Fox.JPG',
+          teksti: 'Kaakkois-Turkissa on kukkula, jonka laelle metsästäjät ja '
+            + 'keräilijät pystyttivät jättiläismäisiä kivipylväitä noin 9500 '
+            + 'vuotta ennen ajanlaskun alkua. Se on yli kuusituhatta vuotta '
+            + 'ennen Egyptin pyramideja. Pylväät ovat T:n muotoisia, '
+            + 'korkeimmat noin viisi ja puoli metriä, ja niiden kylkiin on '
+            + 'veistetty kettuja, käärmeitä, kurkia ja villisikoja. '
+            + 'Rakentajat eivät vielä osanneet polttaa savesta ruukkuja '
+            + 'eivätkä viljelleet peltoa. Kukkulaa luultiin pitkään '
+            + 'keskiaikaiseksi hautausmaaksi, ja kunnolliset kaivaukset '
+            + 'alkoivat vasta vuonna 1995.',
+          selite: 'Göbekli Tepen pylväs pystytettynä kaivausalueella. Vaalea '
+            + 'kivipaasi on T:n muotoinen: leveä poikkikivi lepää kapean '
+            + 'rungon päällä. Runkoon on veistetty matalana kuviona '
+            + 'pitkäselkäinen eläin, jolla on iso häntä. Pylvästä tukevat '
+            + 'vinot puu- ja teräsorret, ja ympärillä on kuivakiviseinää ja '
+            + 'kellastunutta ruohoa.',
+          lahde: 'Guérin Nicolas, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Göbekli Tepe',
+        },
+        {
+          otsikko: 'Kaksi suurvaltaa kirjoitti sodan loppuun',
+          aika: 'n. 1259 eaa',
+          tiedosto: 'Treaty of Kadesh.jpg',
+          teksti: 'Hattusa oli heettiläisten pääkaupunki Keski-Anatoliassa. '
+            + 'Sieltä johdettiin valtakuntaa, joka taisteli Egyptiä vastaan '
+            + 'Kadeshissa ja teki taistelun jälkeen sopimuksen, jota pidetään '
+            + 'maailman vanhimpana säilyneenä rauhansopimuksena. Erikoisinta '
+            + 'on, että siitä on tallella molempien osapuolten oma versio: '
+            + 'egyptiläinen hakattuna temppelin seinään ja heettiläinen '
+            + 'poltettuun savitauluun. Savitaulu löytyi Hattusan raunioista '
+            + 'vuonna 1906, ja se on kirjoitettu akkadiksi, ajan '
+            + 'yleiskielellä. Suurennettu jäljennös sopimuksesta on esillä '
+            + 'YK:n päämajassa New Yorkissa.',
+          selite: 'Kadeshin sopimuksen savitaulu museovitriinissä. '
+            + 'Ruskeankeltainen taulu on tiheässä nuolenpääkirjoituksessa ja '
+            + 'halkeillut moneen kohtaan. Se seisoo kirkkaassa '
+            + 'muovitelineessä, jonka alaosassa on pienempi palanen samaa '
+            + 'taulua. Tausta on tummanpunainen.',
+          lahde: 'Iocanus, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Yhdeksän kaupunkia päällekkäin',
+          aika: '1873',
+          tiedosto: 'Legendary walls of Troy (8708672267).jpg',
+          teksti: 'Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes '
+            + 'Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. '
+            + 'Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki '
+            + 'tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi '
+            + 'kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset '
+            + '1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 '
+            + 'hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi '
+            + '— mutta esineet olivat yli tuhat vuotta vanhempia kuin '
+            + 'kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota '
+            + 'etsi.',
+          selite: 'Troijan kaivausalue. Etualalla kulkee matala muuri isoista '
+            + 'lohkotuista kivistä, sen takana nousee toinen muurin jäänne. '
+            + 'Polulla seisoo pieni ryhmä kävijöitä, oikealla on puinen kaide '
+            + 'ja portaat, ja taivas on pilvetön.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Troija',
+        },
+        {
+          otsikko: 'Presidentti opetti liitutaululla',
+          aika: '1928',
+          tiedosto: 'Mustafa Kemal harf devriminde.jpg',
+          teksti: 'Turkkia oli kirjoitettu arabialaisin kirjaimin lähes tuhat '
+            + 'vuotta, mutta ne sopivat huonosti turkin kielen vokaaleihin. '
+            + 'Marraskuussa 1928 säädettiin laki, jolla siirryttiin '
+            + 'latinalaisiin kirjaimiin. Uudessa aakkostossa on 29 kirjainta: '
+            + 'mukaan otettiin ç, ğ, ı, ö, ş ja ü, ja pois jäivät q, w ja x. '
+            + 'Mustafa Kemal Atatürk kiersi maata liitutaulun kanssa ja '
+            + 'opetti kirjaimia toreilla ja kylissä. Samana syksynä hänelle '
+            + 'annettiin nimitys başöğretmen, pääopettaja. Koko maa opetteli '
+            + 'lukemaan uudestaan muutamassa vuodessa.',
+          selite: 'Mustafa Kemal Atatürk opettaa uusia kirjaimia ulkosalla. Hän '
+            + 'seisoo tummassa puvussa liitutaulun vieressä ja osoittaa '
+            + 'sormellaan taululle kirjoitettuja kirjaimia. Taustalla riippuu '
+            + 'useita lippuja, joissa on puolikuu ja tähti, ja oikealla '
+            + 'seisoo joukko miehiä, yksi heistä univormussa. Kuva on '
+            + 'mustavalkoinen.',
+          lahde: 'Turkin tasavallan presidentin kanslia, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Montako kirjainta on Turkin vuoden 1928 aakkostossa?',
+        vaihtoehdot: [
+          '24',
+          '26',
+          '29',
+          '33',
+        ],
+        oikea: 2,
+        fakta: 'Mukaan otettiin ç, ğ, ı, ö, ş ja ü, ja pois jäivät q, w ja x.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Turkin luonto on tehty tulivuoren tuhkasta, kuumasta lähdevedestä '
+        + 'ja suolasta. Sen asukkaisiin kuuluu kissa, joka menee veteen, ja '
+        + 'lintuparvi, joka pesii melkein kuivalla järvellä.',
+      nostot: [
+        {
+          otsikko: 'Keijujen savupiiput',
+          aika: '1963',
+          tiedosto: 'Göreme Valley in Cappadocia edit1.jpg',
+          teksti: 'Kappadokian maaperä on tulivuorten tuhkaa, joka on painunut '
+            + 'pehmeäksi kiveksi. Sade ja tuuli syövät sitä helposti, mutta '
+            + 'siellä missä pehmeän kiven päällä on kovempi lohkare, kiveä '
+            + 'jää jäljelle kapeaksi torniksi. Näitä torneja kutsutaan '
+            + 'turkiksi nimellä peribacaları, keijujen savupiiput. Pehmeään '
+            + 'kiveen on ollut helppo kaivaa: alueella on satoja kallioon '
+            + 'hakattuja asuntoja ja kirkkoja sekä kokonaisia maanalaisia '
+            + 'kaupunkeja. Derinkuyun maanalainen kaupunki laskeutuu '
+            + 'kahdeksassa kerroksessa noin 85 metrin syvyyteen. Se '
+            + 'löydettiin uudestaan vuonna 1963, kun talon seinän takaa '
+            + 'paljastui käytävä.',
+          selite: 'Näkymä Göremen laaksoon Kappadokiassa. Etualalla kohoaa '
+            + 'vaaleanharmaita kivikartioita, joiden kärjessä on tummempi '
+            + 'lohkare. Takana rinteessä on kaupunki, jonka vaaleat talot on '
+            + 'rakennettu kiinni kallioon, ja kallioseinissä näkyy tummia '
+            + 'oviaukkoja ja ikkunoita.',
+          lahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kappadokia',
+        },
+        {
+          otsikko: 'Puuvillalinna kasvaa vedestä',
+          aika: '190 eaa',
+          tiedosto: 'The travertine terraces of Pamukkale 4.jpg',
+          teksti: 'Lounais-Turkissa maasta purkautuu lämmintä vettä, jossa on '
+            + 'liuenneena kalkkia. Kun vesi valuu rinnettä alas ja jäähtyy, '
+            + 'kalkki jää kiinni kiveen ja kovettuu travertiiniksi. '
+            + 'Vuosituhansien aikana rinteeseen on kasvanut portaikko '
+            + 'valkoisia altaita, joissa seisoo lämmintä sinertävää vettä. '
+            + 'Turkiksi paikan nimi on Pamukkale, puuvillalinna. Rinteen '
+            + 'päälle perustettiin noin vuonna 190 eaa. kaupunki Hierapolis, '
+            + 'jonne tultiin kylpemään terveyden vuoksi. Nykyään altailla saa '
+            + 'kävellä vain paljain jaloin, ettei valkoinen pinta likaannu.',
+          selite: 'Pamukkalen travertiinirinne. Laaja valkoinen kivipinta '
+            + 'laskeutuu portaittain, ja siihen on jäänyt kaksi '
+            + 'vaaleansinistä allasta. Rinteen reunalla erottuu pieniä '
+            + 'ihmishahmoja vastavalossa. Takana avautuu utuinen tasanko ja '
+            + 'matala vuorijono.',
+          lahde: 'Slyronit, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pamukkale',
+        },
+        {
+          otsikko: 'Kissa, joka menee veteen',
+          aika: '1955',
+          tiedosto: 'Turkish Van.jpg',
+          teksti: 'Vanjärven seudulla Itä-Turkissa elää kissarotu, joka poikkeaa '
+            + 'useimmista kissoista yhdessä asiassa: se ui mielellään. '
+            + 'Van-kissan turkki on lähes kokonaan valkoinen, ja väriä on '
+            + 'vain päässä ja hännässä. Monella yksilöllä silmät ovat '
+            + 'eriväriset, toinen sininen ja toinen kullanruskea. Kaksi '
+            + 'brittiläistä tutkijaa toi rodun Eurooppaan vuonna 1955. '
+            + 'Kissojen kotijärvi on Turkin suurin järvi, mutta sen vesi on '
+            + 'niin emäksistä, että siinä elää vain yksi kalalaji, '
+            + 'helmisärki, joka nousee keväisin jokiin kutemaan.',
+          selite: 'Van-kissa makaa puun paksulla oksalla. Turkki on '
+            + 'kermanvalkoinen, mutta korvien välissä ja hännässä on '
+            + 'vaaleanruskeaa väriä. Kissa nojaa etutassuihinsa ja katsoo '
+            + 'alaviistoon; taustalla on tumma puunrunko ja sumeaa vihreää.',
+          lahde: 'Helen Filatova, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Van-kissa',
+        },
+        {
+          otsikko: 'Parvi pesii suolan päällä',
+          aika: 'Kesäisin',
+          tiedosto: 'Flamingolar sabah.jpg',
+          teksti: 'Keski-Anatoliassa on Turkin toiseksi suurin järvi, Tuz Gölü '
+            + 'eli Suolajärvi. Se on hyvin matala, ja kesän kuivuessa järven '
+            + 'pinnalle jää paksu valkoinen suolakuori. Juuri matala ja '
+            + 'suolainen vesi tekee siitä hyvän pesimäpaikan, koska maapedot '
+            + 'eivät pääse pesille: se on Turkin tärkein flamingoalue, ja '
+            + 'hyvänä kesänä siellä kuoriutuu kymmeniätuhansia poikasia. '
+            + 'Aikuisen flamingon vaaleanpunainen väri tulee ravinnosta, '
+            + 'pikkuäyriäisistä ja levistä, joita lintu siivilöi vedestä '
+            + 'nokallaan. Poikaset ovat ensin harmaita.',
+          selite: 'Flamingoparvi matalassa vedessä Tuz Gölüllä. Osa linnuista '
+            + 'seisoo pitkillä punaisilla jaloilla, osa on juuri noussut '
+            + 'lentoon ja levittänyt siivet, joissa on mustaa ja voimakkaan '
+            + 'punaista. Vesi heijastaa lintujen hahmot, ja taustalla '
+            + 'häämöttää sinertävä vuorenrinne.',
+          lahde: 'Mustafa Tor, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä on van-kissalle tyypillistä, toisin kuin useimmille '
+          + 'kissoille?',
+        vaihtoehdot: [
+          'Se ui mielellään',
+          'Se ei kiipeä puihin',
+          'Se on aina musta',
+          'Se nukkuu päivät',
+        ],
+        oikea: 0,
+        fakta: 'Monella van-kissalla on lisäksi eriväriset silmät, toinen '
+          + 'sininen ja toinen kullanruskea.',
+      },
+    },
+    {
+      id: 'kasityo',
+      nimi: 'Käsityö',
+      johdanto: 'Neljä turkkilaista käsityötä: solmu, jota lasketaan '
+        + 'neliödesimetreittäin, laatta, jonka punainen väri jää koholle, '
+        + 'kuvio joka maalataan veden pinnalle, ja nukke, jonka läpi valo '
+        + 'näkyy.',
+      nostot: [
+        {
+          otsikko: 'Solmu kiertää kaksi lankaa',
+          aika: '1200-luvulta',
+          tiedosto: 'Woman Weaves Carpets - Goreme - Cappadocia - Turkey (5760994299).jpg',
+          teksti: 'Turkkilainen matto solmitaan pystyyn pingotettujen '
+            + 'loimilankojen ympärille. Solmu on kaksinkertainen: lanka '
+            + 'kiertää kahden loimen ympäri ja tulee ulos niiden välistä. '
+            + 'Persialainen solmu kiertää vain yhtä loimea, joten '
+            + 'turkkilainen solmu on tukevampi mutta karkeampi. Solmuja '
+            + 'lasketaan neliödesimetreittäin, ja tiheässä matossa niitä on '
+            + 'useita tuhansia. Iso matto vie kutojalta kuukausia. Kilim on '
+            + 'eri asia: siinä ei ole solmuja lainkaan, vaan kuvio syntyy '
+            + 'pelkästä kudonnasta, eikä kilimissä siksi ole nukkaa.',
+          selite: 'Kutoja työssään mattokaupan edessä. Nainen istuu jalat '
+            + 'ristissä tyynyllä suuren pystykangaspuun ääressä; pingotetut '
+            + 'loimilangat kulkevat ylhäältä alas, ja niiden yläosaan on jo '
+            + 'kudottu kuviollista mattoa. Seinillä ja lattialla on kymmeniä '
+            + 'punaisia ja sinisiä mattoja ja kilimejä.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Punainen nousee pinnasta',
+          aika: '1500-luku',
+          tiedosto: 'Tile - Google Art Project (471020).jpg',
+          teksti: 'Iznikin kaupungissa Luoteis-Turkissa tehtiin 1500-luvulla '
+            + 'laattoja, joita vietiin moskeijoihin ja palatseihin ympäri '
+            + 'valtakuntaa. Laatan pohja on valkoinen, ja kuviot maalataan '
+            + 'lasitteen alle, jolloin väri ei kulu pois. Vaikeinta oli '
+            + 'punainen. Vuosisadan puolivälissä keksittiin sekoittaa maaliin '
+            + 'rautapitoista savea, ja tulos oli kirkas punainen, joka jäi '
+            + 'hieman koholle pinnasta — sen voi tuntea sormella. Kuvioissa '
+            + 'toistuvat tulppaanit, neilikat ja kaarevat lehdet. Kaupungin '
+            + 'vanha nimi on Nikaia.',
+          selite: 'Iznikin laatta. Valkoiselle pohjalle on maalattu maljakko, '
+            + 'josta nousee sinisiä tulppaaneja, punaisia neilikoita ja '
+            + 'pitkiä vihreitä lehtiä. Ylälaidassa kulkee punainen aaltonauha '
+            + 'ja alalaidassa tumma vyöhyke, jossa on valkoisia terälehden '
+            + 'muotoisia kuvioita.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Maalaus tehdään veden pinnalle',
+          aika: '1400-luvulta',
+          tiedosto: 'Marbling Brace.jpg',
+          teksti: 'Ebrussa maalataan veden pinnalle. Veteen sekoitetaan kasvista '
+            + 'saatua kitrettä, joka tekee siitä sitkeää, niin että väri jää '
+            + 'kellumaan pinnalle eikä sekoitu veteen. Värit pudotellaan '
+            + 'pinnalle siveltimellä, jonka varsi on ruusunoksaa ja harjas '
+            + 'hevosenjouhta, ja kuviota ohjataan ohuella piikillä. Kun kuvio '
+            + 'on valmis, paperi lasketaan varovasti veden päälle ja '
+            + 'nostetaan pois: kuvio siirtyy paperiin kerralla. Samaa kuviota '
+            + 'ei voi tehdä kahdesti. Nimi tulee todennäköisesti persian '
+            + 'pilveä tarkoittavasta sanasta.',
+          selite: 'Ebru-tekniikalla kuvioituja kirjanmerkkejä vihreällä '
+            + 'kankaalla. Kapeissa paperisuikaleissa aaltoilee punaista, '
+            + 'sinistä ja violettia marmorikuviota, eikä kahta samanlaista '
+            + 'ole. Suikaleiden päihin on solmittu tupsuja ja pieniä helmiä.',
+          lahde: 'İzgi Örs, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nukke, jonka läpi valo näkyy',
+          aika: '1600-luvulta',
+          tiedosto: 'Karagoz transformed into a frog, Karagoz, Turkey - Museu do Oriente - Lisbon, Portugal - DSC06821.JPG',
+          teksti: 'Karagöz on varjoteatteria. Nuket leikataan kamelin nahasta, '
+            + 'joka ohennetaan ja käsitellään öljyllä niin ohueksi, että valo '
+            + 'pääsee sen läpi. Nukke maalataan väreillä, ja kun sitä '
+            + 'pidetään lampun ja valkoisen kankaan välissä, katsojat näkevät '
+            + 'kankaalla värillisen kuvan. Nuket ovat noin 35 senttiä '
+            + 'korkeita, ja niveliä on hartioissa ja vyötäröllä. Päähenkilöt '
+            + 'ovat suorapuheinen Karagöz ja oppinut Hacivat, jotka '
+            + 'ymmärtävät toisensa aina väärin. Yksi nukettaja puhuu kaikki '
+            + 'roolit eri äänillä.',
+          selite: 'Karagöz-nukke, joka on muutettu sammakoksi. Läpikuultavaan '
+            + 'nahkaan on maalattu vihreä sammakon ruumis takajalkoineen, ja '
+            + 'siitä nousee ihmisen pää sivulta katsottuna: iso nenä, parta '
+            + 'ja puna-vihreä suippolakki. Ääriviivat on merkitty valkoisin '
+            + 'katkoviivoin, ja hartian kohdalla näkyy pyöreä nivelen '
+            + 'kiinnike.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Karagöz-varjoteatterin nuket leikataan?',
+        vaihtoehdot: [
+          'Ohuesta puulevystä',
+          'Kamelin nahasta',
+          'Paksusta pahvista',
+          'Lampaanvillasta',
+        ],
+        oikea: 1,
+        fakta: 'Materiaali ohennetaan ja öljytään, jotta lampun valo pääsee sen '
+          + 'läpi kankaalle.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Turkin soittimet jakautuvat maan mukaan: pitkävartinen kielisoitin '
+        + 'kylistä, ruokohuilu dervissiluostarista, rummun ja torven pari '
+        + 'ulkoilmaan ja kolmikielinen jouhisoitin Mustanmeren rannalta.',
+      nostot: [
+        {
+          otsikko: 'Sama soitin neljässä koossa',
+          aika: '1500-luvulta',
+          tiedosto: 'Cura cogur baglama divan saz.jpg',
+          teksti: 'Bağlama eli saz on pitkävartinen kielisoitin, jonka runko on '
+            + 'kaiverrettu yhdestä puukappaleesta päärynän muotoiseksi. Samaa '
+            + 'soitinta tehdään useassa koossa: pienin on cura, sitten çöğür, '
+            + 'sitten bağlama ja suurin divan sazı. Kieliä on kuusi tai '
+            + 'seitsemän, ja ne on ryhmitelty kolmeen pariin. Erikoisimmat '
+            + 'ovat nauhat: ne on sidottu kaulaan langalla, joten niitä voi '
+            + 'siirtää. Siksi soittimella saa myös sävelet, jotka jäävät '
+            + 'pianon koskettimien väliin. Sazia soittavat aşıkit, '
+            + 'laulaja-runoilijat, jotka kiersivät kylästä kylään.',
+          selite: 'Neljä saz-perheen soitinta nojaa seinään pienimmästä '
+            + 'suurimpaan. Jokaisessa on päärynän muotoinen puinen runko ja '
+            + 'pitkä kapea kaula, jonka päässä ovat viritystapit. Kolmen '
+            + 'soittimen kansi on vaalea ja yhden tummanruskea. Alla on '
+            + 'lankkulattia ja takana karkeaksi veistetty puupalkki.',
+          lahde: 'Sven Kraus, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tanssi, joka on rukous',
+          aika: '1273',
+          tiedosto: 'Mevlevi Dervishes Perform... (469777809).jpg',
+          teksti: 'Konyassa kuoli vuonna 1273 runoilija Mevlana Celaleddin Rumi. '
+            + 'Hänen seuraajansa perustivat mevlevi-veljeskunnan, joka '
+            + 'tunnetaan pyörivistä dervisseistä. Sema-seremoniassa dervissi '
+            + 'pyörii paikallaan pitkä valkoinen hame levällään. Puku on '
+            + 'vertauskuvallinen: korkea huopalakki muistuttaa hautakiveä ja '
+            + 'valkoinen hame käärinliinaa. Oikea kämmen käännetään ylös '
+            + 'taivasta kohti ja vasen alas maata kohti, ikään kuin saatu '
+            + 'annettaisiin eteenpäin. Musiikin johtaa ney, ruokohuilu, jonka '
+            + 'ääni on tarkoituksella hengittävä.',
+          selite: 'Pyörivä dervissi lavalla. Valkoinen hame on levinnyt '
+            + 'pyörimisen voimasta leveäksi kellon muotoiseksi, kädet ovat '
+            + 'sivuille ojennettuina ja päässä on korkea lakki. Koko kuva on '
+            + 'voimakkaan sinisen lavavalon värjäämä, ja taustalla erottuu '
+            + 'hämärä yleisö ja puiden oksia.',
+          lahde: 'Kıvanç, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Pari, joka kuuluu kauas',
+          aika: 'Kevätjuhlassa',
+          tiedosto: '2013 Ahırkapı Hıdırellez Şenlikleri Davul-zurna.jpg',
+          teksti: 'Davul on iso kaksipäinen rumpu, jota kannetaan olalla. Sitä '
+            + 'lyödään kahdella eri välineellä: toisella puolella painavalla '
+            + 'nuijalla, joka antaa matalan jysähdyksen, ja toisella puolella '
+            + 'ohuella vitsalla, joka antaa napsahduksen. Zurna on puinen '
+            + 'torvi, jossa on kaksoislehdykkä ja hyvin läpitunkeva ääni. '
+            + 'Yhdessä ne kuuluvat kauas ulkoilmaan, ja siksi pari soittaa '
+            + 'häissä, painiotteluissa ja kevätjuhlissa. Zurnan soittaja '
+            + 'hengittää nenän kautta samalla kun puhaltaa, jolloin ääni ei '
+            + 'katkea lainkaan.',
+          selite: 'Davul-zurna-pari soittaa keskellä väkijoukkoa illalla. '
+            + 'Oikealla mies puhaltaa tummaa puista zurnaa, vasemmalla toinen '
+            + 'soittaja pitelee soitintaan. Ympärillä ihmiset tanssivat kädet '
+            + 'ylhäällä, ja salamavalo erottaa etualan kirkkaana tummasta '
+            + 'taustasta.',
+          lahde: 'Hamdi Gümüş, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Rivissä, olat tärisemässä',
+          aika: 'Postikortti n. 1910',
+          tiedosto: 'Trebizonde Horon.jpg',
+          teksti: 'Mustanmeren rannikolla tanssitaan horonia. Tanssijat asettuvat '
+            + 'riviin tai piiriin, tarttuvat toisiaan käsistä tai olkapäistä '
+            + 'ja liikkuvat yhtenä nopeasti tärisevänä ketjuna. Tanssin '
+            + 'säestää kemençe, kapea kolmikielinen jouhisoitin, jota '
+            + 'pidetään pystyssä ja soitetaan jousella. Ääni on kimeä ja '
+            + 'tahti niin tiheä, ettei siihen ehdi kuin harjaantunut jalka. '
+            + 'Kalastajakylissä kerrotaan, että tärinä on opittu sardellilta, '
+            + 'joka pyristelee verkosta nostettuna. Sardelli on rannikon '
+            + 'tärkein kala.',
+          selite: 'Vanha värillinen postikortti Trabzonista, otsikkona Salut de '
+            + 'Trebizonde. Aukiolla seisoo suuri väkijoukko laajassa '
+            + 'piirissä, ja keskellä on kaksi soittajaa, joista toisella on '
+            + 'iso rumpu. Piirin etureunassa rivi miehiä on kumartunut syvään '
+            + 'eteenpäin tanssiliikkeessä.',
+          lahde: 'Osman Nuri, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten bağlaman nauhat on kiinnitetty soittimen kaulaan?',
+        vaihtoehdot: [
+          'Liimattu paikalleen',
+          'Sidottu langalla',
+          'Naulattu kiinni',
+          'Kaiverrettu puuhun',
+        ],
+        oikea: 1,
+        fakta: 'Siirrettävillä nauhoilla saa myös ne sävelet, jotka jäävät '
+          + 'pianon koskettimien väliin.',
+      },
+    },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
@@ -123122,6 +124704,8 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 435, teksti: 'Helsingin arkisivu siirtyi Suomen maalehteen' },
+  { v: 435, teksti: 'Turkki, Irlanti, Portugali ja Unkari saivat maalehden' },
   { v: 434, teksti: 'Lehden mediarivillä nyt vain paikallisradio' },
   { v: 433, teksti: 'Kohdekartat Kiovaan, Pietariin, Moskovaan, Odessaan' },
   { v: 433, teksti: 'Kaikilla 31 kaupunkilehdellä on nyt kohdekartta' },
@@ -123637,7 +125221,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.434';
+const APP_VERSION = '2026-08-09.435';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
