@@ -4442,53 +4442,6 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
     {
-      id: 'taide',
-      nimi: 'Taide',
-      johdanto: 'Kaksi maailmankuulua teosta muutaman korttelin päässä toisistaan — '
-        + 'molemmat vietiin sodassa pois ja saatiin takaisin.',
-      tehtava: {
-        kysymys: 'Mistä puusta Wit Stwosz veisti alttarin hahmot?',
-        vaihtoehdot: ['Tammen rungosta', 'Lehmuksen rungosta', 'Saarnen rungosta', 'Pyökin rungosta'],
-        oikea: 1,
-        fakta: 'Jokainen 2,7 metriä pitkä hahmo veistettiin yhdestä ainoasta '
-          + 'lehmuksen rungosta.',
-      },
-      nostot: [
-        {
-          otsikko: 'Alttari, johon veistettiin kaupunkilaisten kasvot',
-          tiedosto: 'I10 056 Krakauer Hochaltar, Mittelteil.jpg',
-          teksti: 'Wit Stwosz veisti Mariankirkon alttarin vuosina 1477–1489: '
-            + 'työtä riitti kahdeksitoista vuodeksi. Avattuna alttari on 13 '
-            + 'metriä korkea ja 11 metriä leveä, ja hahmot ovat 2,7 metriä '
-            + 'pitkiä — jokainen veistetty yhdestä lehmuksen rungosta. Kasvot '
-            + 'Stwosz otti krakovalaisilta, ja hän teki työnsä niin tarkasti, '
-            + 'että hahmoista erottuvat vääntyneet sormet, pullistuneet '
-            + 'suonet ja ihotautien jäljet.',
-          selite: 'Alttarin keskiosa avattuna: kullattuihin viittoihin puetut '
-            + 'apostolit seisovat piirissä, ja heidän yläpuolellaan Maria '
-            + 'nousee taivaaseen kultaisen säteikön keskellä.',
-          lahde: 'Falk2, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Veit Stoss',
-        },
-        {
-          otsikko: 'Kärppä, joka on sanaleikki',
-          tiedosto: 'Lady with an Ermine - Leonardo da Vinci - Google Art Project.jpg',
-          teksti: 'Leonardo da Vinci maalasi noin vuonna 1490 Milanossa nuoren '
-            + 'Cecilia Galleranin, joka pitää sylissään valkoista kärppää. '
-            + 'Eläin ei ole sattumaa: kärppää tarkoittava kreikan sana galê '
-            + 'muistuttaa Galleranin nimeä, ja kärppä oli myös herttua '
-            + 'Ludovico Sforzan oma tunnus. Ruhtinas Czartoryski osti taulun '
-            + 'Italiasta vuonna 1798, ja Krakovaan se tuotiin 1876. Se on '
-            + 'ainoa Leonardo Puolassa.',
-          selite: 'Cecilia Gallerani kääntyneenä sivuttain tummaa taustaa vasten, '
-            + 'valkoinen kärppä sylissä ja mustat helmet kaulassa. '
-            + 'Pähkinäpuulevylle maalattu taulu on vain 55 senttiä korkea.',
-          lahde: 'Leonardo da Vinci, Wikimedia Commons (PD)',
-          wiki: 'Nainen ja kärppä',
-        },
-      ],
-    },
-    {
       id: 'arki',
       nimi: 'Arki ja tavat',
       johdanto: 'Rinkeli, joka keitetään ennen paistamista, ja joulukuinen '
@@ -4627,54 +4580,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kellotaulu erottuu tummaa myrskypilveä vasten.',
           lahde: 'Adrian Grycuk, Wikimedia Commons (CC BY-SA 3.0 pl)',
           wiki: 'Varsovan linna',
-        },
-      ],
-    },
-    {
-      id: 'luonto',
-      nimi: 'Luonto',
-      johdanto: 'Varsovan halki virtaa patoamaton joki, ja kaupungin luoteisrajalta '
-        + 'alkaa metsä, jossa kävelee hirviä.',
-      tehtava: {
-        kysymys: 'Mikä eläin tuotiin takaisin Kampinosin metsään vuonna 1951?',
-        vaihtoehdot: ['Susi', 'Ilves', 'Hirvi', 'Majava'],
-        oikea: 2,
-        fakta: 'Hirvet katosivat Kampinosista kokonaan, ja ne tuotiin takaisin '
-          + 'vuonna 1951 — nyt hirvi on puiston tunnus.',
-      },
-      nostot: [
-        {
-          otsikko: 'Kaupungin läpi virtaa villi joki',
-          tiedosto: 'POL Warszawa plaza 23.JPG',
-          teksti: 'Veiksel kulkee Varsovan halki patoamattomana, ja itäranta on '
-            + 'jätetty lähes luonnontilaan: hiekkasärkkiä, pajukkoa ja '
-            + 'majavia keskellä lähes kahden miljoonan asukkaan kaupunkia. '
-            + 'Ranta kuuluu EU:n Natura 2000 -suojeluverkostoon, koska joen '
-            + 'hiekkasaaret ovat lintujen pesimäpaikkoja. Kesäisin '
-            + 'kaupunkilaiset makaavat samoilla hiekoilla, ja vastarannalla '
-            + 'näkyy lasitorneja.',
-          selite: 'Veikselin kaupunkiranta sillan kupeessa. Leveällä '
-            + 'hiekkarannalla on ihmisiä, sillan yli kulkee liikennettä ja '
-            + 'etualalla joki virtaa harmaanruskeana.',
-          lahde: 'Tadeusz Rudzki, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Veiksel',
-        },
-        {
-          otsikko: 'Metsä alkaa kaupungin rajalta',
-          tiedosto: 'Poland Kampinos Alces alces 1.jpg',
-          teksti: 'Varsovan luoteisrajalta alkaa Kampinosin kansallispuisto: 385 '
-            + 'neliökilometriä hiekkadyynejä ja soita vuorottelevina '
-            + 'raitoina. Dyynejä pidetään Euroopan parhaiten säilyneenä '
-            + 'sisämaadyynialueena, ja kesällä ne käyttäytyvät kuin autiomaa: '
-            + 'päivällä hiekka kuumenee, yöllä maahan tulee halla. Hirvet '
-            + 'katosivat metsästä kokonaan, mutta ne tuotiin takaisin vuonna '
-            + '1951, ja nyt hirvi on puiston tunnus. Ilves palasi 1993 ja '
-            + 'susi 2013.',
-          selite: 'Hirvi seisoo Kampinosin niityllä ja katsoo suoraan kameraan. '
-            + 'Sarvia ei ole, korvat ovat pystyssä, ja takana näkyy lehdetön '
-            + 'metsänreuna.',
-          lahde: 'Wojsyl, Wikimedia Commons (CC BY-SA 2.5)',
-          wiki: 'Hirvi',
         },
       ],
     },
@@ -5162,54 +5067,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
-    {
-      id: 'ruoka',
-      nimi: 'Ruoka',
-      johdanto: 'Kaupungin kaksi kuuluisinta herkkua: keitto, jonka Unesco otti '
-        + 'suojeluun, ja kakku, jonka syntytarinasta ei olla yksimielisiä.',
-      tehtava: {
-        kysymys: 'Mikä kuvio on Kiovan kakun rasian kannessa?',
-        vaihtoehdot: ['Kastanjanoksa', 'Kullattu kupoli', 'Pääskynen', 'Punajuuri'],
-        oikea: 0,
-        fakta: 'Kakkurasian kannessa on kastanjanoksa, joka on Kiovan oma '
-          + 'tunnus.',
-      },
-      nostot: [
-        {
-          otsikko: 'Borssi sai kiireellisen suojelun',
-          tiedosto: 'Ukrainian borscht.jpg',
-          teksti: 'Borssi on punajuuresta keitetty hapan keitto, jonka päälle '
-            + 'tulee lusikallinen smetanaa ja viereen valkosipulisämpylä. '
-            + 'Unesco otti ukrainalaisen borssinkeiton kulttuurin '
-            + 'kiireellistä suojelua vaativien luetteloon heinäkuussa 2022. '
-            + 'Samalla se muistutti, että borssia keitetään monessa maassa '
-            + 'eikä merkintä tee siitä kenenkään yksinomaista omaisuutta.',
-          selite: 'Ukrainalainen borssi lautasella. Punajuuri antaa värin, '
-            + 'smetana kelluu keskellä ja päälle on ripoteltu tilliä ja '
-            + 'persiljaa.',
-          lahde: 'Nillerdk, Wikimedia Commons (CC BY 3.0)',
-          wiki: 'Borssi',
-        },
-        {
-          otsikko: 'Kakku, jonka keksijästä kiistellään',
-          tiedosto: 'Kiev cake slice.JPG',
-          teksti: 'Kiovan kakkua on tehty samassa tehtaassa vuodesta 1956, ja '
-            + 'siitä, miten se keksittiin, kerrotaan monta tarinaa. Yhden '
-            + 'mukaan valkuaiset unohtuivat yöksi kylmiön ulkopuolelle, ja '
-            + 'aamulla mestari Kostjantyn Petrenko ja 17-vuotias apulainen '
-            + 'Nadija Tšornohor peittivät kovettuneet levyt voikreemillä ja '
-            + 'kukkakuvioilla. Tehdas itse sanoo, että resepti kehitettiin '
-            + 'tarkoituksella, kun Intiasta saapui suuri lasti '
-            + 'cashewpähkinöitä. Rasian kannessa on kastanjanoksa, Kiovan oma '
-            + 'tunnus.',
-          selite: 'Pala Kiovan kakkua lautasella. Sivusta erottuvat kerrokset: '
-            + 'vaaleaa pähkinäistä marenkia, välissä kreemiä, ja päällä '
-            + 'ruskea kuorrutus ja pieniä vaaleanpunaisia ja sinisiä kukkia.',
-          lahde: 'Mrnotwo, Wikimedia Commons (PD)',
-          wiki: 'Kiovan kakku',
-        },
-      ],
-    },
   ],
   pietari: [
     {
@@ -5344,60 +5201,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Rantakadun palatsirivi on valaistu ja taivas täynnä '
             + 'ilotulitusta.',
           lahde: 'Spbkinoforum, Wikimedia Commons (CC BY 3.0)',
-        },
-      ],
-    },
-    {
-      id: 'taide',
-      nimi: 'Taide ja teatteri',
-      johdanto: 'Kirkko, joka rakennettiin yhden kadunpätkän ympärille, ja baletti, '
-        + 'joka sai ensi-illassaan tylyt arviot ja valloitti sitten maailman.',
-      tehtava: {
-        kysymys: 'Mikä Gribojedovin kanavan rantakadulla oli, ennen kuin '
-          + 'Verikirkko rakennettiin?',
-        vaihtoehdot: ['Kaupungin suurin tori', 'Keisarin kesäpalatsin puisto', 'Palaneen puukirkon rauniot', 'Aleksanteri II:n surmapaikka'],
-        oikea: 3,
-        fakta: 'Surmapaikan piti jäädä kirkon seinien sisäpuolelle, ja sen '
-          + 'päällä on katos, jonka alla näkyy vanha katukivetys.',
-      },
-      nostot: [
-        {
-          otsikko: 'Kirkko rakennettiin kadun ympärille',
-          tiedosto: 'Church of Our Savior on Spilled Blood (St. Petersburg, 2003).jpg',
-          teksti: 'Maaliskuussa 1881 keisari Aleksanteri II haavoittui '
-            + 'kuolettavasti pommi-iskussa Gribojedovin kanavan rantakadulla. '
-            + 'Hänen poikansa määräsi, että surmapaikan on jäätävä '
-            + 'muistokirkon seinien sisäpuolelle, joten kirkon perällä on '
-            + 'katos, jonka alla näkyy yhä vanhan kadun mukulakivi. Kirkkoa '
-            + 'rakennettiin 24 vuotta. Seiniä ja kattoja peittää yli 7 000 '
-            + 'neliömetriä mosaiikkia, ja valaistus oli alusta asti '
-            + 'sähköinen: hehkulamppuja oli 1 689.',
-          selite: 'Verikirkon yläosa läheltä. Kolme sipulikupolia, jokainen eri '
-            + 'värinen ja eri tavalla kuvioitu, ja niiden alla kaari, jonka '
-            + 'mosaiikissa on ihmishahmoja kultapohjalla.',
-          lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Kristuksen ylösnousemuksen katedraali',
-        },
-        {
-          otsikko: 'Pähkinänsärkijä tyrmättiin ensi-illassa',
-          tiedosto: 'Vzevolozhsky\'s costume sketch for Nutcracker.jpg',
-          teksti: 'Pähkinänsärkijä tanssittiin ensimmäisen kerran '
-            + 'Mariinski-teatterissa 18. joulukuuta 1892, samana iltana '
-            + 'Tšaikovskin oopperan Iolantan kanssa. Lasten roolit esittivät '
-            + 'oikeat lapset, keisarillisen balettikoulun oppilaat. Arviot '
-            + 'olivat tylyjä: taistelukohtausta sanottiin sekavaksi ja '
-            + 'balerinan omaa vuoroa sai odottaa lähes keskiyöhön. Koreografi '
-            + 'Petipa oli pyytänyt Sokerihaltijattaren tanssiin musiikkia, '
-            + 'joka kuulostaisi suihkulähteen pisaroilta — siihen Tšaikovski '
-            + 'valitsi celestan.',
-          selite: 'Keisarillisten teattereiden johtajan Ivan Vsevolozhskin '
-            + 'pukuluonnos Pähkinänsärkijään: tanssija sinikultaisessa asussa '
-            + 'soittaa huilua, hameen reunassa on tupsuja ja päässä pitkä '
-            + 'raidallinen torvi.',
-          lahde: 'Иван Александрович Всеволожский, Wikimedia Commons (PD)',
-          wiki: 'Pähkinänsärkijä',
-          musiikki: 'https://music.apple.com/fi/search?term=tchaikovsky%20nutcracker',
-          musiikkiNimi: 'Tšaikovskin Pähkinänsärkijä Apple Musicissa',
         },
       ],
     },
@@ -5536,57 +5339,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seisoo ulkona takit päällä.',
           lahde: 'Avsolov, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Maslenitsa',
-        },
-      ],
-    },
-    {
-      id: 'tiede',
-      nimi: 'Tiede ja keksinnöt',
-      johdanto: 'Kaksi sekarotuista koiraa palasi kiertoradalta elävinä, ja '
-        + 'moskovalaisessa laskentakeskuksessa syntyi peli, jota pelataan '
-        + 'yhä.',
-      tehtava: {
-        kysymys: 'Missä Belka ja Strelka ovat nykyään esillä täytettyinä?',
-        vaihtoehdot: ['Kremlin asehuoneessa', 'Kosmonautiikan museossa', 'Yliopiston kirjastossa', 'Bolshoin lämpiössä'],
-        oikea: 1,
-        fakta: 'Molemmat koirat ovat yhä nähtävissä täytettyinä Moskovan '
-          + 'kosmonautiikan museossa.',
-      },
-      nostot: [
-        {
-          otsikko: 'Kaksi koiraa palasi kiertoradalta',
-          tiedosto: 'Belka (2011).JPG',
-          teksti: 'Belka ja Strelka lähtivät kiertoradalle 19. elokuuta 1960. '
-            + 'Kapselissa oli mukana 40 hiirtä, kaksi rottaa, kasveja ja '
-            + 'televisiokamera, joka kuvasi koiria lennon ajan. Runsaan '
-            + 'vuorokauden kuluttua kapseli laskeutui, ja kaikki eläimet '
-            + 'olivat elossa — ensimmäisinä maailmassa. Vuotta myöhemmin '
-            + 'Strelka sai pentuja, ja yksi niistä lähetettiin lahjaksi '
-            + 'Yhdysvaltain presidentin perheelle. Molemmat koirat ovat yhä '
-            + 'esillä täytettyinä Moskovan kosmonautiikan museossa.',
-          selite: 'Belka museon vitriinissä. Pieni vaaleaturkkinen sekarotuinen '
-            + 'istuu tummalla alustalla korvat pystyssä; koira on täytetty, '
-            + 'ja lasin takana näkyy muita esineitä.',
-          lahde: 'Armael, Wikimedia Commons (CC0)',
-          wiki: 'Korabl-Sputnik 2',
-        },
-        {
-          otsikko: 'Tetris syntyi hakasulkeista',
-          tiedosto: 'Alexey Pajitnov GDC 2024 (cropped).jpg',
-          teksti: 'Aleksei Pažitnov teki Tetriksen kesäkuussa 1984 työpaikallaan '
-            + 'Neuvostoliiton tiedeakatemian laskentakeskuksessa Moskovassa. '
-            + 'Käytössä ollut Elektronika 60 -tietokone ei osannut piirtää '
-            + 'kuvia, joten palikat koottiin hakasulkumerkeistä. Nimi tulee '
-            + 'kreikan sanasta tetra eli neljä — jokaisessa palikassa on '
-            + 'neljä ruutua — ja tenniksestä, Pažitnovin lempilajista. Peli '
-            + 'levisi Moskovassa levykkeeltä toiselle ilmaiseksi, ja '
-            + 'IBM-koneelle sitä oli kääntämässä 16-vuotias koululainen Vadim '
-            + 'Gerasimov.',
-          selite: 'Aleksei Pažitnov pelintekijöiden kokouksessa vuonna 2024. '
-            + 'Harmaapartainen mies hymyilee, ja hänen takkinsa rinnassa on '
-            + 'Tetriksen logo.',
-          lahde: 'Official GDC, Wikimedia Commons (CC BY 2.0)',
-          wiki: 'Tetris',
         },
       ],
     },
@@ -5809,59 +5561,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'minuutin ajan. Lisukkeeksi tulee sinappia ja leipää.',
           lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Mititei',
-        },
-      ],
-    },
-    {
-      id: 'musiikki',
-      nimi: 'Musiikki',
-      johdanto: 'Samasta bukarestilaisesta suvusta tuli sekä Pariisin '
-        + 'maailmannäyttelyn panhuilisti että viulisti, jonka koulutyötä '
-        + 'soitetaan yhä ympäri maailman.',
-      tehtava: {
-        kysymys: 'Miten lăutar-soittajat oppivat sävelmänsä?',
-        vaihtoehdot: ['Korvakuulolta ilman nuotteja', 'Kirkon vanhoista nuoteista', 'Konservatorion oppikirjoista', 'Painetuista nuottivihkoista'],
-        oikea: 0,
-        fakta: 'Lăutar-soittajat oppivat sävelmänsä korvakuulolta ilman '
-          + 'nuotteja.',
-      },
-      nostot: [
-        {
-          otsikko: 'Soittajasuku maailmannäyttelyssä',
-          tiedosto: 'P. Nadar - Exposition universelle de Paris. Section roumaine - Bande de Dinicu.jpg',
-          teksti: 'Lăutar on romanialainen ammattisoittaja: hän soittaa häissä, '
-            + 'kastajaisissa ja hautajaisissa, ja sävelmät opitaan '
-            + 'korvakuulolta ilman nuotteja. Suurin osa lăutareista on ollut '
-            + 'romaneja, ja Valakiassa moni soitti orjana — orjuus '
-            + 'lakkautettiin vasta vuonna 1856. Bukarestilaisen Angheluș '
-            + 'Dinicun soittokunta vei tämän musiikin Pariisin '
-            + 'maailmannäyttelyyn vuonna 1889 ja voitti siellä kesäkuussa '
-            + 'soittajien kilpailun kultamitalin.',
-          selite: 'Dinicun soittokunta Pariisin maailmannäyttelyssä 1889, Paul '
-            + 'Nadarin kuvaamana. Eturivissä soitetaan naita eli panhuilua ja '
-            + 'näppäiltävää cobzaa, takana viuluja ja kontrabassoa.',
-          lahde: 'Paul Nadar, Wikimedia Commons (PD)',
-          wiki: 'Panhuilu',
-          musiikki: 'https://music.apple.com/fi/search?term=lautari%20romania',
-          musiikkiNimi: 'Romanialaista lăutari-musiikkia Apple Musicissa',
-        },
-        {
-          otsikko: 'Hora staccato oli koulutyö',
-          tiedosto: 'Grigoras Dinicu 02.jpg',
-          teksti: 'Angheluș Dinicun tyttärenpoika Grigoraș syntyi Bukarestissa '
-            + 'vuonna 1889 — samana vuonna, jona isoisä soitti Pariisissa. '
-            + 'Hän opiskeli kaupungin konservatoriossa ja kirjoitti vuonna '
-            + '1906 päättötyökseen Hora staccaton: parin minuutin kappaleen, '
-            + 'jossa jousi napsuttaa kieltä niin tiheästi, että sävelet '
-            + 'putoavat kuin rakeet. Wienin konservatorion stipendi jäi '
-            + 'käyttämättä, koska romania ei päästetty lähtemään. Kappaleesta '
-            + 'tuli viulistien näytösnumero kaikkialla maailmassa.',
-          selite: 'Grigoraș Dinicu soittamassa viulua. Silmät ovat kiinni, jousi '
-            + 'on kielillä ja vasemman käden sormessa on leveä sormus.',
-          lahde: 'Wikimedia Commons (PD)',
-          wiki: 'Viulu',
-          musiikki: 'https://music.apple.com/fi/search?term=dinicu%20hora%20staccato',
-          musiikkiNimi: 'Hora staccato Apple Musicissa',
         },
       ],
     },
@@ -6139,64 +5838,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valkoista patsasta ja edessä rivi vanhanmallisia katulyhtyjä.',
           lahde: 'Assedo, Wikimedia Commons (PD)',
           wiki: 'Odessan kansallinen akateeminen ooppera- ja balettiteatteri',
-        },
-      ],
-    },
-    {
-      id: 'musiikki',
-      nimi: 'Musiikki',
-      johdanto: 'Odessassa syntyi yksi Neuvostoliiton ensimmäisistä '
-        + 'jazzorkestereista — ja koulu, joka lähetti maailmalle viulisteja '
-        + 'toisensa jälkeen.',
-      tehtava: {
-        kysymys: 'Missä työssä Leonid Utjosov aloitti uransa?',
-        vaihtoehdot: ['Viulistina oopperan orkesterissa', 'Kalakauppiaana Privozin torilla', 'Sirkusakrobaattina', 'Radion kuuluttajana'],
-        oikea: 2,
-        fakta: 'Utjosov aloitti sirkusakrobaattina ja perusti vasta 1920-luvulla '
-          + 'oman jazzorkesterinsa.',
-      },
-      nostot: [
-        {
-          otsikko: 'Odessan ääni',
-          tiedosto: 'Leonid Utesov 1934.jpg',
-          teksti: 'Leonid Utjosov syntyi Odessassa 1895 nimellä Lazar Vaisbein. '
-            + 'Hän aloitti uransa sirkusakrobaattina ja perusti 1920-luvulla '
-            + 'yhden Neuvostoliiton ensimmäisistä jazzorkestereista. '
-            + 'Ohjelmistossa olivat satamakortteleiden laulut ja odessalainen '
-            + 'sanailu — laulun ja vitsin väliä hän ei erotellut lainkaan. '
-            + 'Vuonna 1965 hänestä tuli ensimmäinen kevyen musiikin laulaja, '
-            + 'joka sai Neuvostoliiton kansantaiteilijan arvon. '
-            + 'Kaupunginpuistossa hän istuu nykyään pronssisena penkillä, ja '
-            + 'viereen on jätetty tilaa.',
-          selite: 'Leonid Utjosov vuonna 1934, jolloin hänen '
-            + 'Thea-Jazz-orkesterinsa oli maan tunnetuin. Laulun ja vitsin '
-            + 'väliä hän ei erotellut lainkaan.',
-          lahde: 'Wikimedia Commons (PD)',
-          wiki: 'Jazz',
-          musiikki: 'https://music.apple.com/fi/search?term=leonid%20utesov',
-          musiikkiNimi: 'Leonid Utjosov Apple Musicissa',
-          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Der_Terk_in_America.mp3',
-          musiikkiNayteNimi: 'Klezmeria: Der Terk in America — PD',
-        },
-        {
-          otsikko: 'Neljävuotiaita otettiin viulutunnille',
-          tiedosto: 'David Oistrach 1953.jpg',
-          teksti: 'Pjotr Stoljarski soitti Odessan oopperan orkesterissa ja '
-            + 'opetti lapsille viulua neljävuotiaista alkaen. Hänen '
-            + 'aloitteestaan kaupunkiin perustettiin vuonna 1933 koulu, jossa '
-            + 'erityisen lahjakkaat lapset saivat opiskella musiikkia '
-            + 'päätoimisesti — ensimmäinen sellainen koko Neuvostoliitossa. '
-            + 'Sieltä lähtivät maailmalle muun muassa David Oistrah ja Nathan '
-            + 'Milstein. Brysselin suuressa viulukilpailussa 1937 voiton vei '
-            + 'Oistrah, ja palkintosijoille ylsi muitakin saman opettajan '
-            + 'oppilaita.',
-          selite: 'David Oistrah viulu ja jousi käsissään vuonna 1953. Hän '
-            + 'aloitti Stoljarskin oppilaana viisivuotiaana ja esiintyi '
-            + 'ensimmäisen kerran yleisölle kuusivuotiaana.',
-          lahde: 'Главархив Москвы, Wikimedia Commons (CC BY 4.0)',
-          wiki: 'David Oistrah',
-          musiikki: 'https://music.apple.com/fi/search?term=david%20oistrakh',
-          musiikkiNimi: 'David Oistrahin levytyksiä Apple Musicissa',
         },
       ],
     },

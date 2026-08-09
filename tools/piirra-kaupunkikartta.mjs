@@ -201,8 +201,13 @@ const KAUPUNGIT = {
       {
         // Rajaus mitattu OSM:n rantaviivoista: eteläreuna 60.1368 on
         // valittu niin, ettei Kustaanmiekan kärki katkea.
+        // Ruutu on KIINNI OIKEASSA ALANURKASSA (omistajan palaute
+        // 9.8.2026: "nyt se on turhaan irti oikeasta reunasta").
+        // Marginaali on 2 % kummallakin sivulla, sama kuin Budapestin
+        // kainalossa — täysin reunaan asti vietynä ruudun oma
+        // reunaviiva jäisi puoliksi kuvan ulkopuolelle.
         rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
-        x: 66, y: 68, leveys: 22, suunta: '3 km kaakkoon', meri: true,
+        x: 76, y: 69.15, leveys: 22, suunta: '3 km kaakkoon', meri: true,
       },
     ],
   },
@@ -705,6 +710,55 @@ function renkaanAla(rengas) {
   return Math.abs(a / 2);
 }
 
+const lonLeikkaus = (a, b, lon) => ({
+  lon, lat: a.lat + ((b.lat - a.lat) * (lon - a.lon)) / (b.lon - a.lon),
+});
+const latLeikkaus = (a, b, lat) => ({
+  lat, lon: a.lon + ((b.lon - a.lon) * (lat - a.lat)) / (b.lat - a.lat),
+});
+
+/*
+ * Leikkaa monikulmion rajauslaatikkoon (Sutherland–Hodgman; laatikko on
+ * kupera, joten algoritmi riittää sellaisenaan).
+ *
+ * Tämä on isojen jokien täyttökorjauksen ydin. Ennen vesirelaatio
+ * hylättiin, jos sen KOKO renkaan ala ylitti 0,3 × laatikko — ja joen
+ * rengas on aina valtava, koska se jatkuu kymmeniä kilometrejä kuvan
+ * ulkopuolelle molempiin suuntiin. Laatikon sisällä samasta joesta on
+ * kuitenkin vain kapea nauha. Kun mitataan LEIKATTU ala, joki ja
+ * ympäröivä vesistö erottuvat toisistaan: Venetsian laguuni peittää
+ * laatikosta lähes kaiken, Dnepr vain kolmanneksen.
+ *
+ * Jakolaskut eivät jaa nollalla: leikkausfunktiota kutsutaan vain kun
+ * janan päät ovat reunan eri puolilla, jolloin kyseinen koordinaatti
+ * eroaa väistämättä.
+ */
+function leikkaaLaatikkoon(rengas, r) {
+  const reunat = [
+    [(p) => p.lon >= r.lansi, (a, b) => lonLeikkaus(a, b, r.lansi)],
+    [(p) => p.lon <= r.ita, (a, b) => lonLeikkaus(a, b, r.ita)],
+    [(p) => p.lat >= r.etela, (a, b) => latLeikkaus(a, b, r.etela)],
+    [(p) => p.lat <= r.pohjoinen, (a, b) => latLeikkaus(a, b, r.pohjoinen)],
+  ];
+  let ulos = rengas;
+  for (const [sisalla, leikkaa] of reunat) {
+    const sisaan = ulos;
+    ulos = [];
+    for (let i = 0; i < sisaan.length; i += 1) {
+      const a = sisaan[(i + sisaan.length - 1) % sisaan.length];
+      const b = sisaan[i];
+      if (sisalla(b)) {
+        if (!sisalla(a)) ulos.push(leikkaa(a, b));
+        ulos.push(b);
+      } else if (sisalla(a)) {
+        ulos.push(leikkaa(a, b));
+      }
+    }
+    if (ulos.length < 3) return [];
+  }
+  return ulos;
+}
+
 /**
  * Ketjuttaa polkujoukon renkaiksi päätepisteitä yhdistellen. Polun
  * suunnalla ei ole väliä, joten polkuja saa kääntää — käytetään
@@ -998,14 +1052,33 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
       for (const rengas of ketjuta(ulko)) {
         if (rengas.length < 4) continue;
         /*
-         * VAIN PIENET ALTAAT TÄYTETÄÄN. Iso vesirelaatio on
-         * ympäröivä vesistö, jonka SISÄLLÄ kartta on — ja koska
-         * työkalulla ei ole maa-alueita, täyttö peittäisi kaupungin.
-         * Venetsiassa kävi juuri niin: laguuni on yksi relaatio, ja
-         * täytettynä koko kuva muuttui vedeksi. Marseillen
-         * Vanhasatama on 3 % rajauksesta ja täyttyy oikein.
+         * MITTA ON LEIKATTU ALA, EI KOKO RENKAAN ALA (Fablen hyväksymä
+         * korjaus 9.8.2026). Vanha sääntö vertasi renkaan koko alaa
+         * laatikkoon, ja koska joen rengas jatkuu kymmeniä kilometrejä
+         * kuvan ulkopuolelle, jokainen iso joki ylitti rajan ja putosi
+         * paljaiksi rantaviivoiksi: Kiovan Dnepr 2,9-kertainen,
+         * Pietarin Neva 2,5-kertainen, Budapestin Tonava samoin. Kuvaan
+         * jäi kaksi viivaa ja niiden väliin paperia.
+         *
+         * Laatikkoon leikattuna joki on kapea nauha ja ympäröivä
+         * vesistö peittää lähes koko ruudun, joten sama mitta erottaa
+         * ne. Raja on 0,5: sen yli menevä vesi on vesistö, jonka
+         * SISÄLLÄ kartta on, eikä sitä saa täyttää — työkalulla ei ole
+         * maa-alueita, joten täyttö peittäisi kaupungin. Venetsian
+         * laguuni on juuri se tapaus.
+         *
+         * LEIKKAUSTA KÄYTETÄÄN VAIN MITTAAMISEEN, ei piirtoon. Kokeiltu
+         * 9.8.2026: leikatun renkaan piirtäminen muuttaa kuvaa, koska
+         * vesimonikulmiolla on rantaviivan väristä stroke — leikatun
+         * reunan kohdalle ilmestyy tekoranta pitkin kuvan laitaa.
+         * Venetsiassa se näkyi 301 pikselin erona oikeassa
+         * alanurkassa. Alkuperäinen rengas piirtyy oikein, koska SVG
+         * rajaa sen näkymättömän osan pois ilman reunaviivaa.
          */
-        if (renkaanAla(rengas) > laatikonAla * 0.3) {
+        const nakyva = renkaanAla(leikkaaLaatikkoon(rengas, rajat)) / laatikonAla;
+        if (nakyva > 0.5) {
+          console.log(`  vesirelaatio peittäisi ${Math.round(nakyva * 100)} % —`
+            + ' piirretään rantaviivana');
           for (const geom of ulko) kerrokset.joet.push(`<polyline points="${pisteet(geom)}"/>`);
           break;
         }

@@ -1867,10 +1867,10 @@ export const NAHTAVYYSJUTUT = {
           + 'noin puoli miljoonaa vierailijaa joka vuosi.',
       kuvat: [
         {
-          tiedosto: 'Temppeliaukio Church 07.jpg',
-          selite: 'Temppeliaukion kirkon ulkonäkymä kalliosta nousevine '
-            + 'kupariholveineen.',
-          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Lascar Temppeliaukio Church (4548628589).jpg',
+          selite: 'Kirkkosali kallioseinineen kuparikupolin ja '
+            + 'valokehän alla.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -1900,10 +1900,10 @@ export const NAHTAVYYSJUTUT = {
       },
       kuvat: [
         {
-          tiedosto: 'Helsinki Central railway station in Finland, 2021 July.jpg',
-          selite: 'Näkymä Asema-aukiolta kohti päärautatieasemaa ja sen '
-            + 'kellotornia.',
-          lahde: 'Anne Pietarinen, Wikimedia Commons (CC BY 4.0)',
+          tiedosto: 'Estación central de FF.CC. de Helsinki, Finlandia, 2012-08-14, DD 08.JPG',
+          selite: 'Aseman graniittijulkisivu ja pääsisäänkäynnin suuri '
+            + 'kaari-ikkuna kesäpäivänä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -1929,10 +1929,10 @@ export const NAHTAVYYSJUTUT = {
           + 'jääkiekkomaajoukkueen MM-kultaa.',
       kuvat: [
         {
-          tiedosto: 'Kaisaniemenpuiston hiekkateiden risteys.jpg',
-          selite: 'Kaisaniemen puiston hiekkapolkuja ja kasvitieteellisen '
-            + 'puutarhan kasvihuone taustalla.',
-          lahde: 'Hagiksenfriidu, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Pond in Kaisaniemi Park - Marit Henriksson.jpg',
+          selite: 'Kasvitieteellisen puutarhan lampi ilta-auringossa, '
+            + 'kaupungin talot kuvastuvat veteen.',
+          lahde: 'Marit Henriksson, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -1985,10 +1985,10 @@ export const NAHTAVYYSJUTUT = {
           + 'sen punatiilistä ulkoasua ja kultaisia kupoleita.',
       kuvat: [
         {
-          tiedosto: 'Front of Uspenski Cathedral In Helsinki.jpg',
-          selite: 'Uspenskin katedraalin punatiilinen julkisivu ja kultaiset '
-            + 'kupolit.',
-          lahde: 'John Samuel, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Uspenski Cathedral gilded domes 01.jpg',
+          selite: 'Katedraalin kultaiset sipulikupolit ja punatiiliset '
+            + 'tornit sinitaivasta vasten.',
+          lahde: 'Sinikka Halme, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -2013,10 +2013,10 @@ export const NAHTAVYYSJUTUT = {
           + 'suurimmista urkuinstrumenteista.',
       kuvat: [
         {
-          tiedosto: 'Johanneksen kirkko puisto 210309.jpg',
-          selite: 'Johanneksenkirkon kaksoistornit ja punatiilinen julkisivu '
-            + 'Ullanlinnassa.',
-          lahde: 'DreferComm, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Johanneksenkirkko Helsinki 2006-08-15.jpg',
+          selite: 'Johanneksenkirkon kaksoistornit ja punatiilinen '
+            + 'julkisivu kesäauringossa.',
+          lahde: 'KFP, Wikimedia Commons (PD)',
         },
       ],
       lahde: 'Wikipedia',
@@ -2042,9 +2042,10 @@ export const NAHTAVYYSJUTUT = {
           + 'noin 900 ihmistä.',
       kuvat: [
         {
-          tiedosto: 'Suomenlinna from northeast.JPG',
-          selite: 'Näkymä Suomenlinnan saarille ja bastioneille koillisesta.',
-          lahde: 'MKFI, Wikimedia Commons (PD)',
+          tiedosto: 'Kuninkaanportti Kustaanmiekka Suomenlinna 2022-09-17 01.jpg',
+          selite: 'Kuninkaanportti Kustaanmiekan nurmivallien välissä — '
+            + 'linnoituksen juhlava pääportti mereltä.',
+          lahde: 'Leonhard Lenz, Wikimedia Commons (CC0)',
         },
       ],
       lahde: 'Wikipedia',
