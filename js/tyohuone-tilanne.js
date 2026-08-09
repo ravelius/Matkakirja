@@ -103,13 +103,12 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
-    otsikko: 'Koko paketti: 5 kaupunkia ja henkilöt (työhuone)',
-    ohje: 'Työhuone → Kehitys: Praha, Istanbul, Wien, Venetsia ja '
-      + 'Budapest koko kaarena — saapuminen (isoisän ääni), '
-      + 'kohtaaminen nimetyn henkilön kanssa, visa, aarre ja '
-      + 'henkilön vihje vasta aarteen jälkeen (cliffhanger). Lue ja '
-      + 'kerro, mitkä osat luetaan ääneen. Vanhat kokeilut on '
-      + 'siivottu pois — ne ovat git-historiassa.',
+    otsikko: 'Paketti v2: kohtaaminen ja kysymys yhdessä (työhuone)',
+    ohje: 'Työhuone → Kehitys: palautteesi mukaan tiivistetty kolmeen '
+      + 'osaan — saapuminen ennallaan, kohtaaminen jonka päättää '
+      + 'OIKEA kysymys vaihtoehtoineen (parin sopivuuden näkee '
+      + 'suoraan), ja aarre jonka lopettaa henkilön avoin vihje. '
+      + 'Lue ja kerro kelpaako rakenne ja mitkä osat luetaan ääneen.',
   },
   {
     otsikko: 'Suomenlinna ja isot joet kartoilla (v438–v439)',
