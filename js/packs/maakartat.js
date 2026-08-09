@@ -1535,6 +1535,300 @@ export const MAAKARTAT = {
       wiki: 'Kiži',
     },
   },
+  /*
+   * Tästä alkaa Lähi-idän lauta. Turkki ja Egypti ovat jo yllä
+   * (Euroopan ja Afrikan laudoilta) ja kelpaavat sellaisenaan: niiden
+   * kaupunkilistat kattavat myös Lähi-idän laudan kaupungit.
+   */
+  ARE: {
+    /*
+     * Moduulin oma image1, ja tiedostosivu ilmoittaa samat rajat itse
+     * ("Equirectangular projection, N/S stretching 109 %"). Tarkistin
+     * luvut Module:Location map/data/United Arab Emirates -sivulta.
+     *
+     * VAIHTOEHTOJA EI OLE: Commonsin `Relief location maps of the
+     * United Arab Emirates` sisältää vain tämän tiedoston ja
+     * `Relief maps of the United Arab Emirates` on tyhjä (9.8.2026).
+     * 1228 px riittää lehden noin 680 fyysiselle pikselille.
+     *
+     * Rajaus vetää mukaan koko maan: läntinen kärki on noin 51,6°
+     * (raja 51,4) ja itärannikko 56,4° (raja 56,6). Pohjoisreunassa
+     * näkyy Omanille kuuluva Musandam — se selittää lapselle, miksi
+     * maa loppuu kesken ennen Hormuzinsalmea.
+     *
+     * Tässä karttaperheessä maata EI ole sävytetty naapureista
+     * erottuvaksi; muoto luetaan rajaviivasta. Sama koskee Omania.
+     */
+    tiedosto: 'United Arab Emirates relief location map.jpg',
+    lahde: 'NordNordWest ja Uwe Dedering, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 26.5, etela: 22.4, lansi: 51.4, ita: 56.6 },
+    /*
+     * Kolme rannikkokaupunkia Persianlahdella, Fujaira vuorten
+     * toisella puolella Omaninlahdella — siitä näkee, että maa ulottuu
+     * kahdelle merelle — ja Al-Ain keitaana sisämaassa. Liwa on mukana
+     * kuudentena, koska ilman sitä kartan koko eteläpuolisko jäisi
+     * tyhjäksi; se on myös noston dyynin naapuri. Liwa ei ole kaupunki
+     * vaan noin 50 kylän keidas, ja koordinaatti on Mezaira'an.
+     */
+    kaupungit: [
+      { nimi: 'Abu Dhabi', lat: 24.45, lon: 54.3833, paa: true },
+      { nimi: 'Dubai', lat: 25.25, lon: 55.2833 },
+      { nimi: 'Ras al-Khaima', lat: 25.7667, lon: 55.95 },
+      { nimi: 'Fujaira', lat: 25.1333, lon: 56.3333 },
+      { nimi: 'Al-Ain', lat: 24.2, lon: 55.7667 },
+      { nimi: 'Liwa', lat: 23.1323, lon: 53.7966 },
+    ],
+    nosto: {
+      otsikko: 'Hiekkavuori, jota autot yrittävät kiivetä',
+      tiedosto: 'Moreeb001.jpg',
+      /*
+       * DYYNIN KORKEUTTA EI ANNETA LUKUNA, ja se on tietoinen valinta.
+       * Wikipedia ja festivaalin järjestäjä toistavat lukua 300 metriä
+       * ja 50 asteen rinnettä, mutta SRTM-30m-korkeusprofiili dyynin
+       * poikki antaa tasangoksi 87–95 m ja harjaksi 190–201 m eli noin
+       * 100–115 metrin korkeuseron. Lähteet ovat siis ristiriidassa,
+       * eikä lastenlehteen kuulu kiistanalainen täsmäluku. Älä lisää
+       * 300:aa takaisin.
+       */
+      teksti: 'Arabiemiraattien eteläosa on Rub al-Khalia eli Tyhjää '
+        + 'neljännestä, maailman suurinta yhtenäistä hiekka-aavikkoa: '
+        + 'noin 650 000 neliökilometriä, lähes kaksi Suomea. Hiekka on '
+        + 'ruosteenpunaista, koska jyvissä on rautaa. Aavikon '
+        + 'pohjoisreunalla kaartuu Liwan keidas — noin viisikymmentä '
+        + 'kylää sadan kilometrin matkalla, taatelipalmujen varjossa. '
+        + 'Ne ovat Arabiemiraattien eteläisimmät asutut paikat, ja '
+        + 'niiden takana alkaa pelkkä hiekka. Keitaasta 25 kilometriä '
+        + 'etelään kohoaa Moreebin dyyni, korkea hiekkaseinämä keskellä '
+        + 'tasankoa. Hiekka on niin pehmeää, ettei siinä pitäisi pystyä '
+        + 'ajamaan ylöspäin. Silti sitä yritetään: vuodesta 2004 alkaen '
+        + 'talvinen festivaali on tuonut rinteen juurelle '
+        + 'moottoripyöriä ja erikoisrakennettuja maastureita, jotka '
+        + 'lähtevät täydellä kaasulla suoraan ylös. Harva pääsee '
+        + 'huipulle asti — pehmeä hiekka syö vauhdin, ja auto valuu '
+        + 'takaisin alas. Kuvan suorat urat rinteessä ovat renkaiden '
+        + 'jälkiä.',
+      selite: 'Moreebin dyyni Liwan eteläpuolella. Hiekkaseinämän yli '
+        + 'nousee kolme suoraa uraa — kilpa-ajojen jälkiä. Alhaalla '
+        + 'näkyy kisa-alueen aita, valonheitinmastot ja tasainen '
+        + 'lähtökenttä.',
+      lahde: 'Nepenthes, Wikimedia Commons (CC BY-SA 3.0)',
+      // Liwasta ja Moreebista ei ole fi-artikkelia; aavikko on lähin
+      // oikea kohde eikä "melkein oikea".
+      wiki: 'Rub al-Khali',
+    },
+  },
+  OMN: {
+    /*
+     * Moduulin oma image1, ja tiedostosivu ilmoittaa samat rajat itse
+     * ("Equirectangular projection, N/S stretching 107 %"). Tarkistin
+     * luvut Module:Location map/data/Oman -sivulta.
+     *
+     * MUSANDAM MAHTUU: eksklaavin pohjoiskärki on noin 26,4° ja kartan
+     * yläraja 26,6°, joten Hormuzinsalmen suulla oleva erillinen pala
+     * Omania näkyy kokonaan — Khasab osuu 4,1 %:n korkeudelle. Se on
+     * tälle maalle olennaista, ja siksi myös nosto kertoo siitä.
+     *
+     * ÄLÄ VAIHDA `Oman location map Topographic.png`:hen, vaikka se on
+     * 3039 px ja rajat ovat samat: sen lisenssi on pelkkä GFDL-1.2/1.3
+     * (migration=not-eligible), ei PD eikä CC.
+     *
+     * Kuvasuhde on pysty (1537 × 2000), joten lehden 340 px:n
+     * leveydellä kartta on noin 440 px korkea — samaa luokkaa kuin
+     * Italia. Vasen puolisko on Saudi-Arabian aavikkoa; se on tämän
+     * rajauksen hinta, muuta rajausta ei ole tarjolla.
+     */
+    tiedosto: 'Oman relief location map.jpg',
+    lahde: 'Carport, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 26.6, etela: 16.5, lansi: 51.8, ita: 60.1 },
+    /*
+     * Laudan kohteet Masqat ja Salalah ovat kartan vastakkaisissa
+     * päissä (29,6 % ja 94,9 %) — jo se kertoo, miten pitkä maa on.
+     * Väliin tarvittiin Duqm, muuten 40 % kartasta olisi tyhjää.
+     * Khasab on mukana Musandamin takia, Nizwa näyttää sisämaan
+     * vuorten juuren ja Sur Arabian itäisimmän kärjen.
+     */
+    kaupungit: [
+      { nimi: 'Masqat', lat: 23.6086, lon: 58.5919, paa: true },
+      { nimi: 'Khasab', lat: 26.184, lon: 56.2478 },
+      { nimi: 'Nizwa', lat: 22.9333, lon: 57.5315 },
+      { nimi: 'Sur', lat: 22.571, lon: 59.526 },
+      { nimi: 'Duqm', lat: 19.6617, lon: 57.7047 },
+      { nimi: 'Salalah', lat: 17.0167, lon: 54.0833 },
+    ],
+    // Kartta herättää heti kysymyksen: miksi ylhäällä on erillinen
+    // pala? Nosto vastaa siihen.
+    nosto: {
+      otsikko: 'Vuonot, joihin vuoret vajoavat',
+      tiedosto: 'Khor Ash Sham (cropped esVoy).jpg',
+      teksti: 'Kartan yläreunassa on erillinen pala Omania: '
+        + 'Musandamin niemimaa. Sinne ei pääse omasta maasta kulkematta '
+        + 'Arabiemiraattien läpi. Maakunta on noin 1 800 '
+        + 'neliökilometriä ja siellä asuu vajaat 50 000 ihmistä, mutta '
+        + 'sen kärki vartioi Hormuzinsalmea, josta kulkee suuri osa '
+        + 'maailman öljylaivoista. Rannikko näyttää vuonoilta, vaikka '
+        + 'jäätikkö ei ole niitä koskaan kaivanut. Syy on maan alla: '
+        + 'Arabian mannerlaatta työntyy Euraasian laatan alle, ja '
+        + 'niemimaan pohjoiskärki painuu noin kuusi millimetriä '
+        + 'vuodessa. Vuosituhansien mittaan meri on täyttänyt vanhat '
+        + 'laaksot, ja vuoret jatkuvat suoraan veden alle — korkein '
+        + 'huippu Jabal Harim yltää 2 087 metriin, ja moneen kylään '
+        + 'pääsee yhä vain veneellä. Pohjoisimmassa Kumzarin kylässä '
+        + 'puhutaan omaa kieltä, joka on sukua persialle. Yhdessä '
+        + 'poukamassa on pikkuruinen Telegraph Island, jonne britit '
+        + 'rakensivat vuonna 1864 lennätinaseman — kuumuus oli niin '
+        + 'sietämätöntä, että asema hylättiin runsaassa kymmenessä '
+        + 'vuodessa.',
+      selite: 'Matkustajia kuljettava dhow-vene Khor Ash Shamin '
+        + 'poukamassa Musandamissa, Omanin lippu perässä. Paljaat '
+        + 'kalliot laskeutuvat suoraan veteen ilman rantakaistaletta, '
+        + 'ja takana häämöttää poukaman jatko niemi niemeltä.',
+      lahde: 'Robert Haandrikman, Wikimedia Commons (CC BY 2.0)',
+      wiki: 'Musandamin niemimaa',
+    },
+  },
+  KWT: {
+    /*
+     * Sijaintikarttaperheessä EI OLE Kuwaitista relief-versiota
+     * (etsitty 9.8.2026), eikä `Module:Location map/data/Kuwait`
+     * määrittele `image1`:tä lainkaan — tarkistin moduulin itse.
+     * Tämä on Tschubbyn SRTM3-kartta, jonka tiedostosivu ilmoittaa
+     * itse "Grenzen: Kuwait adm location map.svg", ja juuri se
+     * tiedosto on moduulin `image`, jonka rajat ovat alla. Rajat ovat
+     * siis yhden hypyn takana kuten Unkarilla ja Tanskalla; tarkistin
+     * ketjun molemmista päistä.
+     *
+     * Ketju varmistettiin myös laskemalla: kuva on 1601 × 1382 px eli
+     * 667 px/° pitkittäin ja 768 px/° leveyspiireittäin. Suhde 1,151
+     * vastaa tasaväliprojektiota leveyspiirillä 29,3° (1/cos = 1,147)
+     * 0,4 %:n tarkkuudella.
+     *
+     * Vaihtoehto `Kuwait Physiography.jpg` (CIA, PD) HYLÄTTY: se on
+     * Lambert Conformal Conic -projektiossa, jolloin prosenttiasemointi
+     * ei toimi lainkaan, ja kuvassa on valmiina englanninkieliset
+     * nimet, punainen tieverkko ja legenda.
+     *
+     * Merialueilla ei ole yhtään viivaa. Katsottu 680 px:ssä.
+     */
+    tiedosto: 'Reliefkarte Kuwait.png',
+    lahde: 'Tschubby, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 30.2, etela: 28.4, lansi: 46.4, ita: 48.8 },
+    /*
+     * Viisi pistettä, ei kuutta: AL JAHRA ON TAHALLAAN POIS. Se on
+     * maan kolmanneksi suurin kaupunki mutta käytännössä samalla
+     * leveyspiirillä pääkaupungin kanssa (29,35° vs. 29,37°). Koska
+     * nimi aukeaa itään aina kun x on alle 60 %, "Al Jahra" törmäisi
+     * suoraan "Kuwait"-nimeen — kokeiltu selaimessa 680 px:n
+     * leveydellä. Läntisempää korvaajaa ei ole: Kuwaitin autiomaan
+     * puolella ei ole paikkaa, jolla olisi Wikipedia-artikkeli.
+     *
+     * Loput näyttävät maan koko pituuden, ja kartalta näkee että
+     * kaikki asutus on kapealla rantakaistalla ja lännessä on hiekkaa.
+     */
+    kaupungit: [
+      { nimi: 'Kuwait', lat: 29.37, lon: 47.978, paa: true },
+      { nimi: 'Failaka', lat: 29.433, lon: 48.333 },
+      { nimi: 'Bubiyan', lat: 29.783, lon: 48.183 },
+      { nimi: 'Al Ahmadi', lat: 29.083, lon: 48.083 },
+      { nimi: 'Al Wafra', lat: 28.639, lon: 47.931 },
+    ],
+    nosto: {
+      otsikko: 'Saari, jonka Aleksanteri nimesi Ikarokseksi',
+      tiedosto: 'Antiquities of Failaka island 02.JPG',
+      teksti: 'Kuwaitinlahden suulla, 20 kilometrin päässä '
+        + 'pääkaupungista, on Failakan saari: 12 kilometriä pitkä ja '
+        + 'kuusi leveä, litteä kuin pöytä. Sen hiekan alta on kaivettu '
+        + 'esiin kolme eri aikaa. Vanhin on pronssikautinen kylä noin '
+        + 'vuodelta 2000 eaa. Savenpalasesta löytyi kaiverrus, jossa '
+        + 'mainitaan jumala Inzakin temppeli — merkki siitä, että '
+        + 'saari kuului Dilmunin kauppamaailmaan. Sitten tulivat '
+        + 'kreikkalaiset. Aleksanteri Suuri antoi saarelle nimen '
+        + 'Ikaros, koska se muistutti kooltaan ja muodoltaan '
+        + 'samannimistä Egeanmeren saarta, ja vuosina 300–200 eaa. '
+        + 'rannalle nousi kreikkalainen siirtokunta. Kivistä on luettu '
+        + 'jopa Susan käskynhaltijan määräys siirtää Artemiin temppeli '
+        + 'ja perustaa gymnasion. Saaren keskellä on lisäksi kirkon '
+        + 'rauniot, ehkä 600-luvulta. Nuorin kerros on tyhjä kylä: '
+        + 'ennen vuotta 1990 Failakalla asui noin 5 800 ihmistä, mutta '
+        + 'Irakin miehityksen jälkeen vain harvat palasivat. Juomavesi '
+        + 'tulee saarelle yhä mantereelta merenalaista putkea pitkin.',
+      selite: 'Kaivausaluetta Failakan länsipäässä: kivimuurien '
+        + 'rajaamia huoneita ja kynnyksiä, ja aivan takana '
+        + 'Persianlahti.',
+      lahde: 'Bo hessin, Wikimedia Commons (CC BY-SA 3.0)',
+      wiki: 'Failaka',
+    },
+  },
+  QAT: {
+    /*
+     * Moduulin oma image1, ja rajat on dokumentoitu kahdesti:
+     * `Module:Location map/data/Qatar` (tarkistettu) ja tiedostosivun
+     * oma "Grenzen"-rivi. Kuvasuhde varmistaa saman: 1460 × 1400 px
+     * antaa suhteen 1,110, ja tasaväliprojektio leveyspiirillä 25,35°
+     * vaatii 1,106.
+     *
+     * MERIALUEIDEN VIIVAT OVAT TÄMÄN KARTAN TUNNETTU VIKA, ja se
+     * hyväksyttiin tietoisesti. Kaakkoisnurkassa kelluu Qatarin ja
+     * Arabiemiraattien meriraja, jonka päässä on pieni silmukka; se
+     * näyttää lapsen silmään pikemminkin naarmulta kuin rajalta.
+     * Juuri tällainen viiva hylkäsi Kreikan vaihtoehtoisen kartan —
+     * täällä hylkäys ei ole mahdollinen, koska muuta relief-karttaa ei
+     * ole olemassa. `Qatar rel95.jpg` (CIA, PD) on Lambert Conformal
+     * Conic -projektiossa, joten prosenttiasemointi ei toimisi sillä
+     * lainkaan, ja se on täynnä nimiä ja teitä. Katsottu 680 px:ssä
+     * eli lehden omassa koossa: virhe näkyy mutta on pieni ja meressä.
+     * Jos Commonsiin joskus ilmestyy siisti Qatarin korkokartta,
+     * tämän saa vaihtaa.
+     */
+    tiedosto: 'Reliefkarte Katar.png',
+    lahde: 'Tschubby, Wikimedia Commons (CC BY-SA 3.0)',
+    rajat: { pohjoinen: 26.3, etela: 24.4, lansi: 50.3, ita: 52.5 },
+    /*
+     * Kuusi pistettä kiertää koko niemimaan: pohjoiskärki, koillis-
+     * rannikko, pääkaupunki idässä, länsirannan öljykaupunki, etelän
+     * satama ja lounaan ainoa maarajanylityspaikka Saudi-Arabiaan.
+     * Niistä näkee, että maa on peukalon muotoinen niemi ja että
+     * kaikki suuri on itärannalla.
+     *
+     * Al Wakra (25,18 / 51,61) jätettiin pois: se on vain nelisen
+     * prosenttiyksikköä Dohasta ja nimet menisivät päällekkäin.
+     */
+    kaupungit: [
+      { nimi: 'Doha', lat: 25.287, lon: 51.533, paa: true },
+      { nimi: 'Al Ruwais', lat: 26.133, lon: 51.217 },
+      { nimi: 'Al Khor', lat: 25.684, lon: 51.506 },
+      { nimi: 'Dukhan', lat: 25.419, lon: 50.792 },
+      { nimi: 'Mesaieed', lat: 24.98, lon: 51.55 },
+      { nimi: 'Abu Samra', lat: 24.75, lon: 50.852 },
+    ],
+    nosto: {
+      otsikko: 'Helmikaupunki, jonka hiekka nieli',
+      teksti: 'Qatarin luoteisrannikolla, 85 kilometrin päässä '
+        + 'Dohasta, on al-Zubarah. Vuonna 1766 sinne muutti '
+        + 'kauppiassukuja Kuwaitista, ja rannalle nousi muurien '
+        + 'ympäröimä helmikaupunki. Sen satamasta lähdettiin '
+        + 'helmisimpukoiden pyyntiin ja purjehdittiin Intiaan asti, ja '
+        + 'parhaimmillaan siellä asui ehkä 6 000–9 000 ihmistä. Osa '
+        + 'suvuista lähti myöhemmin valloittamaan Bahrainia, ja '
+        + 'kaupungin merkitys alkoi hiipua. Vuonna 1811 Masqatin '
+        + 'sulttaanille uskolliset joukot tuhosivat sen, ja kivitalot '
+        + 'sortuivat. Raunioille jäi vielä kalastajia ja '
+        + 'helmenpyytäjiä, mutta 1900-luvun alkuun mennessä paikka oli '
+        + 'tyhjä. Sitten tuuli teki työnsä ja hiekka peitti kadut, '
+        + 'muurit ja kynnykset. Se osoittautui hyväksi säilöjäksi: kun '
+        + 'arkeologit alkoivat kaivaa, alta paljastui kokonainen '
+        + 'kaupunkipohja — huoneet, kujat ja kaupunginmuuri melkein '
+        + 'siinä asennossa kuin ne jäivät. Raunioiden vieressä seisoo '
+        + 'vuonna 1938 rakennettu linnoitus. Al-Zubarah on Qatarin '
+        + 'ainoa Unescon maailmanperintökohde; listalle se pääsi '
+        + 'vuonna 2013.',
+      tiedosto: 'Ruins in Zubarah on a cloudy day.jpg',
+      selite: 'Kaivettuja talonseiniä al-Zubarahin rauniokaupungissa. '
+        + 'Vasemmalla siintää Persianlahti, ja aavikon yli työntyy '
+        + 'sadekuuron tumma rintama.',
+      lahde: 'Alex Sergeev, Wikimedia Commons (CC BY-SA 3.0)',
+      wiki: 'Al-Zubarah',
+    },
+  },
 };
 
 /*

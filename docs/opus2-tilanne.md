@@ -114,10 +114,15 @@ Tärkeimmät:
 - **Kartta renderöityy puhelimessa n. 360 CSS-pikselin levyisenä.**
   1600 px:n kuvaan leivottu teksti kutistuu 0,22-kertaiseksi — mitoita
   sen mukaan (kainalon suuntateksti on `W/35`, ei `W/80`).
-- **`nimiVasen`-kenttää ei ole eikä tarvita.** maakartat.js:n kommentti
-  lupasi sitä turhaan ja harhautti useaa sessiota ehdottamaan sitä;
-  kommentti korjattiin 9.8.2026 (Sonnet 1:n QA-löytö). Kartalla näkyy
-  vain numero ja nimet ovat selitelistassa, ja tooltip on tarkoituksella
-  keskitetty (css/styles.css:8833). Älä ehdota kenttää uudestaan.
+- **`nimiVasen` ja `.nimi-vasen` ovat ERI ASIA — älä sekoita niitä.**
+  *Kaupunkikartoissa* (KAUPUNKIKARTAT) ei ole `nimiVasen`-kenttää
+  eikä tarvitakaan: kartalla näkyy vain numero, nimet ovat
+  selitelistassa, ja tooltip on tarkoituksella keskitetty
+  (css/styles.css:8833). maakartat.js:n kommentti lupasi kenttää
+  turhaan ja harhautti useaa sessiota; korjattu 9.8.2026 (Sonnet 1:n
+  QA-löytö). *Maakartoissa* (MAAKARTAT) sen sijaan ON toimiva
+  automatiikka: ui.js lisää luokan `.nimi-vasen`, kun kaupungin
+  x > 60 %, jolloin nimi aukeaa pisteestä vasemmalle eikä leikkaudu
+  itäreunassa. Siihen ei tarvitse eikä pidä koskea datassa.
 - **Projektiot:** Venäjän maakartta on LAEA, Norja ja Suomi kartiollisia,
   Kroatia ja Bosnia Mercatoria. Nämä ovat mitattuja, älä "paranna".
