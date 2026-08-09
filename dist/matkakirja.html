@@ -48015,6 +48015,63 @@ const MAAKARTAT = {
  * vasemmalle puolelle, kun oikealla olisi ahdasta.
  */
 const KAUPUNKIKARTAT = {
+  helsinki: {
+    polku: 'assets/kartat/helsinki-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 60.184, etela: 60.1545, lansi: 24.916, ita: 24.9835 },
+    /*
+     * Kainalokartta Suomenlinnasta. Se on lehden historiaosion
+     * pääkohde eikä mahdu mihinkään järkevään päärajaukseen — 3 km
+     * kaakkoon. Ruutu on sijoitettu kuvan kaakkoiskulman avomerelle,
+     * eli se peittää samalla sen alueen, jossa muuten olisi vähiten
+     * katsottavaa, ja se on oikea suunta.
+     */
+    kainalot: [
+      { rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
+        x: 66, y: 68, leveys: 22, korkeus: 28.85 },
+    ],
+    esittely: 'Helsinki ei ole aina ollut tässä. Kustaa Vaasa perusti '
+      + 'sen vuonna 1550 Vantaanjoen suulle Tallinnan kilpailijaksi, '
+      + 'mutta satama oli matala, ja vuonna 1640 koko kaupunki '
+      + 'siirrettiin runsaat viisi kilometriä etelämmäs Vironniemen '
+      + 'kärkeen. Niemellä on merta kolmella sivulla, ja edustalla on '
+      + 'saaria ja matalikkoja, joiden välistä laiva pääsee vain '
+      + 'kapeita väyliä pitkin. Siksi Ruotsi alkoi 1748 rakentaa '
+      + 'väylän suulle merilinnoitusta. Kun Venäjän keisari valitsi '
+      + 'Helsingin pääkaupungiksi vuonna 1812, linnoitus oli jo '
+      + 'valmiina.\n\nKartalla niemi näkyy kokonaan. Idässä työntyy '
+      + 'mereen Katajanokka, joka oli ennen kiinni mantereessa; nyt '
+      + 'sen erottaa kaivettu kanava, jonka yli kulkee neljä siltaa. '
+      + 'Väliin jää Eteläsatama, jonka perukassa on Kauppatori. '
+      + 'Ylhäällä oleva lahti on Töölönlahti — se näyttää järveltä, '
+      + 'mutta on merenlahti, jonka rautatiepenger sulkee: veden ainoa '
+      + 'tie mereen kulkee penkereen ali kapeana väylänä. Penkereeltä '
+      + 'etelään levittäytyy kartan levein raita, ratapiha, joka '
+      + 'päättyy päärautatieasemaan. Rata loppuu siihen: junat '
+      + 'peruuttavat ulos. Oikeassa alanurkassa on oma pieni kartta '
+      + 'Suomenlinnasta. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Lännestä itään ja lopuksi etelään. Kauppatori jätettiin pois
+       * vaikka se mahtuisi: se olisi kasannut kolmannen numeron
+       * Senaatintorin ja Katajanokan väliin. Se mainitaan esittelyssä
+       * nimeltä, ja silakkamarkkinat ovat lehdessä omana nostonaan.
+       *
+       * Kallion kirkko jää 22 metriä pohjoisrajan ulkopuolelle. Rajaa
+       * ei nostettu, koska 60,187 olisi vaatinut 4,3 km leveän kuvan
+       * ja työntänyt niemen kärjen alalaitaan.
+       */
+      { nimi: 'Temppeliaukion kirkko', lat: 60.1731, lon: 24.9253, wiki: 'Temppeliaukion kirkko' },
+      { nimi: 'Päärautatieasema', lat: 60.1719, lon: 24.9414, wiki: 'Helsingin päärautatieasema' },
+      { nimi: 'Kaisaniemen puisto', lat: 60.1747, lon: 24.9458, wiki: 'Kaisaniemen puisto' },
+      { nimi: 'Tuomiokirkko', lat: 60.1703, lon: 24.9522, wiki: 'Helsingin tuomiokirkko' },
+      { nimi: 'Uspenskin katedraali', lat: 60.1683, lon: 24.96, wiki: 'Uspenskin katedraali' },
+      { nimi: 'Johanneksenkirkko', lat: 60.1618, lon: 24.9447, wiki: 'Johanneksenkirkko (Helsinki)' },
+      // Kainalossa oikeassa alanurkassa.
+      { nimi: 'Suomenlinna', lat: 60.1472, lon: 24.9864, wiki: 'Suomenlinna' },
+    ],
+  },
   ateena: {
     polku: 'assets/kartat/ateena-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -48184,6 +48241,17 @@ const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/budapest-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+    /*
+     * Kainalokartta Sankarien aukiosta. Se on lehden kansikuva mutta
+     * 3 km koilliseen, ja päärajaukseen ottaminen olisi työntänyt
+     * Tonavan kuvan laitaan. Ruutu on oikeassa ylänurkassa, jossa ei
+     * ole numeroituja kohteita, ja se näyttää samalla Városligetin.
+     * Korkeus on työkalun laskema; älä muuta sitä käsin.
+     */
+    kainalot: [
+      { rajat: { pohjoinen: 47.5215, etela: 47.5095, lansi: 19.07, ita: 19.092 },
+        x: 70, y: 3, leveys: 28, korkeus: 30.56 },
+    ],
     esittely: 'Budapest seisoo siinä, missä Budan kalkkikivikukkulat '
       + 'loppuvat ja Unkarin suuri tasanko alkaa. Raja kulkee Tonavaa '
       + 'pitkin: läntisellä rannalla maa nousee jyrkästi, itäisellä se '
@@ -48214,6 +48282,8 @@ const KAUPUNKIKARTAT = {
       { nimi: 'Gellértinvuori', lat: 47.4869, lon: 19.0446, wiki: 'Gellértinvuori' },
       { nimi: 'Pyhän Tapanin kirkko', lat: 47.5008, lon: 19.054, wiki: 'Pyhän Tapanin kirkko (Budapest)' },
       { nimi: 'Suuri kauppahalli', lat: 47.4866, lon: 19.059 },
+      // Kainalossa oikeassa ylänurkassa.
+      { nimi: 'Sankarien aukio', lat: 47.5153, lon: 19.0781, wiki: 'Sankarien aukio (Budapest)' },
     ],
   },
   praha: {
@@ -48258,6 +48328,18 @@ const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/wien-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 48.22, etela: 48.188, lansi: 16.34, ita: 16.404 },
+    /*
+     * Kainalokartta Schönbrunnista. Palatsi on lehden kansikuva mutta
+     * 4 km lounaaseen, ja päärajaukseen ottaminen olisi vaatinut 7,2
+     * km leveän kuvan — Ring, koko kuvan juoni, olisi kutistunut
+     * täpläksi. Ruutu on vasemmassa alanurkassa, jossa ei ole yhtään
+     * numeroitua kohdetta. Korkeus on työkalun laskema; älä muuta sitä
+     * käsin, tai numero irtoaa kartasta.
+     */
+    kainalot: [
+      { rajat: { pohjoinen: 48.191, etela: 48.178, lansi: 16.303, ita: 16.325 },
+        x: 2, y: 56, leveys: 30, korkeus: 35.44 },
+    ],
     esittely: 'Wien seisoo kohdassa, jossa Tonava tulee ulos vuorten '
       + 'välistä. Lännessä nousee Wienerwald, Alppien viimeinen '
       + 'kukkulaselänne, ja idässä alkaa tasainen lakeus, joka jatkuu '
@@ -48293,6 +48375,9 @@ const KAUPUNKIKARTAT = {
       { nimi: 'Stephansdom', lat: 48.2085, lon: 16.3731, wiki: 'Stephansdom' },
       { nimi: 'Belvedere', lat: 48.1915, lon: 16.3809, wiki: 'Belvedere' },
       { nimi: 'Jättiratas', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
+      // Kainalossa. Koordinaatti on päärajauksen ulkopuolella, ja
+      // karttapiste() sijoittaa sen minikarttaan sen perusteella.
+      { nimi: 'Schönbrunn', lat: 48.1845, lon: 16.3119, wiki: 'Schönbrunnin linna' },
     ],
   },
   kairo: {
@@ -49017,14 +49102,46 @@ function laeaPiste(laea, lat, lon) {
   };
 }
 
-/** Pisteen paikka kuvassa prosentteina (left/top). */
-function karttapiste(kartta, lat, lon) {
-  if (kartta.projektio === 'laea') return laeaPiste(kartta.laea, lat, lon);
-  const { pohjoinen, etela, lansi, ita } = kartta.rajat;
+/** Suora prosenttiosuus rajoista — tasavälisen kartan perustapaus. */
+function suoraPiste(rajat, lat, lon) {
+  const { pohjoinen, etela, lansi, ita } = rajat;
   return {
     x: ((lon - lansi) / (ita - lansi)) * 100,
     y: ((pohjoinen - lat) / (pohjoinen - etela)) * 100,
   };
+}
+
+/**
+ * Pisteen paikka kuvassa prosentteina (left/top).
+ *
+ * KAINALOKARTAT (omistajan ratkaisu 9.8.2026). Kun lehdessä mainittu
+ * kohde on kilometrien päässä keskustasta, sitä ei oteta päärajaukseen
+ * — se levittäisi kuvan katupuuroksi — vaan piirretään omana pienenä
+ * minikarttana pääkuvan tyhjään kulmaan. Kainalon kohde numeroidaan
+ * samaan sarjaan, ja tämä funktio sijoittaa sen: ensin paikka kainalon
+ * omassa rajauksessa, sitten se skaalataan kainaloruutuun pääkuvassa.
+ *
+ * Kainalo tunnistetaan KOHTEEN OMISTA KOORDINAATEISTA eikä erillisestä
+ * kentästä. Se pitää datan yksinkertaisena (kohde on pelkkä lat/lon
+ * kuten muutkin) eikä vaadi muutosta piirtokoodiin — piste on siksi
+ * napautettava aivan kuten pääkartan pisteet. Ehto toimii, koska
+ * kainalon rajaus on aina päärajauksen ULKOPUOLELLA; jos joku joskus
+ * asettaa ne päällekkäin, kainalo voittaa ja piste menee väärään
+ * paikkaan. Älä siis tee päällekkäistä kainaloa.
+ */
+function karttapiste(kartta, lat, lon) {
+  if (kartta.projektio === 'laea') return laeaPiste(kartta.laea, lat, lon);
+  for (const kainalo of kartta.kainalot ?? []) {
+    const r = kainalo.rajat;
+    if (lat <= r.pohjoinen && lat >= r.etela && lon >= r.lansi && lon <= r.ita) {
+      const sisa = suoraPiste(r, lat, lon);
+      return {
+        x: kainalo.x + (sisa.x / 100) * kainalo.leveys,
+        y: kainalo.y + (sisa.y / 100) * kainalo.korkeus,
+      };
+    }
+  }
+  return suoraPiste(kartta.rajat, lat, lon);
 }
 
 // ===== js/packs/nahtavyysjutut.js =====
@@ -121560,6 +121677,9 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 424, teksti: 'Helsingille kohdekartta ja Suomenlinna kainaloon' },
+  { v: 424, teksti: 'Kaukokohteet takaisin kartoille pikkukarttana' },
+  { v: 424, teksti: 'Meri piirtyy vetenä eikä pelkkänä rantaviivana' },
   { v: 423, teksti: 'Poistu-nappi himmeämmäksi, suuntanapit keskitetty' },
   { v: 422, teksti: 'Radio kartan ylle, liitelinkki pois päiväyksen päältä' },
   { v: 421, teksti: 'Kohdekartta Ateenaan, Amsterdamiin ja Dubliniin' },
@@ -122063,7 +122183,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.423';
+const APP_VERSION = '2026-08-09.424';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
