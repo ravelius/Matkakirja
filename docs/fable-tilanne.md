@@ -33,6 +33,20 @@ käytä aikaa lautojen kaupunkisijaintien uudelleentarkistuksiin
 (esim. piste-monikulmiossa-ajot); tarkista vain UUSI data jota
 peliin tuodaan, ei olemassa olevaa lautaa.
 
+## ODOTTAA KONTIN KIERRÄTYSTÄ: aarrekuvien AI-generointi
+
+Omistaja lisäsi GOOGLE_API_KEY:n ympäristömuuttujiin 9.8. illalla —
+se näkyy vasta kun kontti käynnistyy uudelleen. HETI kun
+`echo $GOOGLE_API_KEY` tuottaa arvon: aja
+`NODE_USE_ENV_PROXY=1 node tools/generoi-aarrekuvat.mjs` (21 kuvaa,
+Imagen 3, yhtenäinen tyyliprompti), katso jokainen kuva silmin,
+pienennä ~640 px:iin (PIL ei ole kontissa — käytä Chromium-canvasta
+Playwrightilla), vaihda pakettien kuva-kentät paikallisiin
+(`assets/aarteet/aarre-<lauta>-<taso>.png`), poista kuvaLahde-rivit
+(AI-kuva ei tarvitse Commons-lähderiviä), lisää tiedostot sw.js:n
+SHELL-listaan ja julkaise versionostolla. Suunnitelma ja promptit:
+tools/aarrekuvat-promptit.md ja tools/generoi-aarrekuvat.mjs.
+
 ## Julkaisumekaniikka (törmäyksiä tulee jatkuvasti)
 
 - Main on **v436** (`matkakirja-2026-08-09.436`). Versiot `2026-08-09.NNN`.
