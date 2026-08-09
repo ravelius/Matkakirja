@@ -101,6 +101,7 @@ const MODULES = [
   'js/packs/europe-puzzles.js',
   'js/packs/europe.js',
   'js/packs/middleeast.js',
+  'js/packs/middleeast-countries.js',
   'js/packs/asia-questions.js',
   'js/packs/asia.js',
   'js/packs/oceania-questions.js',

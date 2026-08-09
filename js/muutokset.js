@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 444, teksti: 'Lähi-idän maiden rajat valmiina lautaa varten' },
   { v: 443, teksti: 'Suomen lehti kuntoon: Sävel-sivu ja omat menovinkit' },
   { v: 442, teksti: 'Lontoon nähtävyyskuvia paremmiksi: leijona, silmä, silta' },
   { v: 441, teksti: 'Lehdet ja popupit aukeavat aina alusta' },
