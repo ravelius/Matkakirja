@@ -6,8 +6,11 @@
       "Agent",
       "Task",
       "mcp__Claude_Code_Remote",
+      "mcp__Claude_Code_Remote__*",
       "mcp__claude-code-remote",
-      "mcp__github"
+      "mcp__claude-code-remote__*",
+      "mcp__github",
+      "mcp__github__*"
     ]
   }
 }
