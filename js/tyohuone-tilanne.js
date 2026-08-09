@@ -54,13 +54,15 @@ export const TILANNE = {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
       tila: 'tyossa',
-      tehtava: 'Loppukiri: maakartat + introt. Mainissa erät 1–3 '
-        + '(v374, v391: 12 maata Islannista Turkkiin, nostot mm. '
-        + 'Jökulsárlón, Metéora, Nemrut). Erä 4 käynnissä: ROU, '
-        + 'BGR, HRV, BIH, UKR ja RUS — Venäjä sai luvan '
-        + 'laea-projektiohaaraan (ainoa tapa saada Euroopan '
-        + 'viimeinen maakartta, data pysyy rehellisenä).',
-      seuraavaksi: 'Erä 4 = koko Eurooppa kartoitettu.',
+      tehtava: 'MAAKARTAT VALMIIT: koko Eurooppa kartoitettu '
+        + '(v374–v395, Venäjä laea-haaralla). Uusi tehtävä 9.8.: '
+        + 'kaupunkikartat kaikille lehtikaupungeille (omistajan '
+        + 'havainto: "kaupunkilehdistä puuttuu kartat").',
+      seuraavaksi: 'Kohdekartat 12 julkaistulle lehtikaupungille '
+        + '(Praha, Wien, Ateena, Amsterdam, Istanbul, Dublin, '
+        + 'Edinburgh, Marseille, Lissabon, Barcelona, Granada, '
+        + 'Budapest) 3–4 kaupungin erissä, Overpass-tauot välissä. '
+        + 'Sonnet 2 kirjoittaa nähtävyysjutut perään.',
     },
     {
       tekija: 'Sonnet 1',
@@ -91,6 +93,9 @@ export const TILANNE = {
     },
   ],
   odottaaPaatosta: [
+    'Isoisän ääni ja visa/aarre-kaari: pilotti pelissä (v408, '
+      + 'Edinburgh ja Pietari) — omistaja: "kaipaavat vielä '
+      + 'työstöä, palataan myöhemmin". Euroopan laajennus odottaa.',
     'Kertoja- ja hahmoäänten valinta (kuuntele Kehitys-välilehden '
       + 'näytteet)',
     'Sateenvarjomiehen henkilöllisyys (ehdotus Kehitys-välilehden '
