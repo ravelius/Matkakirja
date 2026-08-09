@@ -86,20 +86,41 @@ const KAUPUNGIT = {
     // Ring on kuvan pääpiirre: purettu kaupunginmuuri jätti soikean
     // kehäkadun, jonka sisäpuolella katuverkko on sokkelo ja
     // ulkopuolella suoraviivainen. Koillisessa kaartaa Donaukanal ja
-    // sen takana on Praterin vihreä. Schönbrunn jätettiin
-    // ulkopuolelle: se on 4,3 km lounaaseen, ja mukaan ottaminen
-    // vaatisi 7,2 km leveän rajauksen — sama päätös kuin Kairon
-    // pyramidien kanssa.
+    // sen takana on Praterin vihreä.
+    //
+    // Schönbrunn on 4,3 km lounaaseen, ja päärajaukseen ottaminen
+    // vaatisi 7,2 km leveän kuvan — silloin Ring, koko kuvan juoni,
+    // kutistuisi täpläksi. Se palasi siksi KAINALOKARTTANA vasempaan
+    // alanurkkaan, jossa ei ole yhtään numeroitua kohdetta.
+    // Karl-Marx-Hof (4,3 km pohjoiseen) jää yhä ulkopuolelle: se on
+    // lehden arkisivun nosto eikä kartan kohde.
     rajat: { pohjoinen: 48.22, etela: 48.188, lansi: 16.34, ita: 16.404 },
+    kainalot: [
+      {
+        rajat: { pohjoinen: 48.191, etela: 48.178, lansi: 16.303, ita: 16.325 },
+        x: 2, y: 56, leveys: 30, suunta: '4 km lounaaseen',
+      },
+    ],
   },
   budapest: {
     // Kaksi kaupunkia yhdessä kuvassa: Budan kukkula lännessä, Pestin
     // tasanko idässä, ja Tonava vinosti niiden välissä (joen keskilinja
     // x 37 % ylhäällä, x 64 % alhaalla). Margitin sillalta
-    // Vapaudensillalle eli neljä siltaa. Sankarien aukio ja
-    // Széchenyin kylpylä jäävät ulos: ne ovat 3 km koilliseen, ja
-    // mukaan ottaminen olisi työntänyt joen kuvan laitaan.
+    // Vapaudensillalle eli neljä siltaa.
+    //
+    // Sankarien aukio on lehden kansikuva mutta 3 km koilliseen, ja
+    // päärajaukseen ottaminen olisi työntänyt Tonavan kuvan laitaan —
+    // eli hukannut sen, mitä kartta on tekemässä. Se palasi
+    // KAINALOKARTTANA oikeaan ylänurkkaan, jossa ei ole numeroituja
+    // kohteita. Kainalo ottaa mukaan myös Városligetin ja Széchenyin
+    // kylpylän, eli lehden kolmas koillinen kohde näkyy sekin.
     rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+    kainalot: [
+      {
+        rajat: { pohjoinen: 47.5215, etela: 47.5095, lansi: 19.07, ita: 19.092 },
+        x: 70, y: 3, leveys: 28, suunta: '3 km koilliseen',
+      },
+    ],
   },
   pariisi: {
     // Eiffel-tornilta Notre-Damelle ja Montmartren laelle. Molemmat
@@ -238,19 +259,47 @@ async function haeOverpass(rajat) {
   return (await vastaus.json()).elements ?? [];
 }
 
-function piirra(kaupunki, elementit) {
-  const { rajat } = KAUPUNGIT[kaupunki];
-  const leveysAste = rajat.ita - rajat.lansi;
-  const korkeusAste = rajat.pohjoinen - rajat.etela;
-  const W = 1600;
-  // Leveyspiirin venytys keskileveydellä — sama tasavälinen projektio
-  // kuin sijaintikartoissa, joten prosenttiasemointi pysyy suorana.
-  const venytys = 1 / Math.cos(((rajat.pohjoinen + rajat.etela) / 2) * (Math.PI / 180));
-  const H = Math.round((W * (korkeusAste * venytys)) / leveysAste);
-  const x = (lon) => (((lon - rajat.lansi) / leveysAste) * W).toFixed(1);
-  const y = (lat) => (((rajat.pohjoinen - lat) / korkeusAste) * H).toFixed(1);
-  const pisteet = (geom) => geom.map((p) => `${x(p.lon)},${y(p.lat)}`).join(' ');
+/*
+ * Overpass on julkinen ja ruuhkainen: se vastaa 429:llä liian tiheään
+ * ajettuun kyselyyn ja 504:llä silloin kun se on itse kuormittunut.
+ * Kumpikin on ohimenevä, mutta ilman uusintaa ne kaatavat koko ajon —
+ * ja koska aineisto haetaan ennen piirtoa, hukkaan menee myös se
+ * minuutti, jonka kysely ehti kestää. Kolme yritystä kasvavalla
+ * odotuksella riitti kaikkiin tässä kohdattuihin katkoihin.
+ */
+async function haeOverpassSitkeasti(rajat, yrityksia = 3) {
+  for (let i = 1; ; i++) {
+    try {
+      return await haeOverpass(rajat);
+    } catch (virhe) {
+      if (i >= yrityksia) throw virhe;
+      const odotus = 15000 * i;
+      console.log(`  ${virhe.message} — uusi yritys ${odotus / 1000} s kuluttua…`);
+      await new Promise((r) => setTimeout(r, odotus));
+    }
+  }
+}
 
+/**
+ * Rajauksen kuvasuhde: leveys yhtä korkeusyksikköä kohden.
+ *
+ * Leveyspiirin venytys keskileveydellä — sama tasavälinen projektio
+ * kuin sijaintikartoissa, joten prosenttiasemointi pysyy suorana.
+ */
+function kuvasuhde(rajat) {
+  const venytys = 1 / Math.cos(((rajat.pohjoinen + rajat.etela) / 2) * (Math.PI / 180));
+  return (rajat.ita - rajat.lansi) / ((rajat.pohjoinen - rajat.etela) * venytys);
+}
+
+/**
+ * Kokoaa piirtokerrokset elementeistä annetulla koordinaattimuunnoksella.
+ *
+ * Muunnos on parametri, koska sama koodi piirtää sekä pääkartan että
+ * kainalokartat — kainalossa vain x ja y osoittavat pieneen ruutuun
+ * pääkuvan sisällä.
+ */
+function kokoaKerrokset(elementit, x, y) {
+  const pisteet = (geom) => geom.map((p) => `${x(p.lon)},${y(p.lat)}`).join(' ');
   const kerrokset = { puistot: [], vedet: [], joet: [], radat: [], kadut: KADUT.map(() => []) };
   for (const e of elementit) {
     /*
@@ -303,21 +352,112 @@ function piirra(kaupunki, elementit) {
       kerrokset.puistot.push(`<polygon points="${pisteet(e.geometry)}"/>`);
     }
   }
+  return kerrokset;
+}
 
-  const katuryhmat = KADUT.map((k, i) => `<g fill="none" stroke="${k.vari}" stroke-width="${k.leveys}"
+/**
+ * Kerrokset SVG-ryhmiksi. `mitta` skaalaa viivanleveydet: kainalossa
+ * on pienempi mittakaava, joten samat pikselileveydet tekisivät siitä
+ * mustan mötkön.
+ */
+function kerrosKuvaus(kerrokset, mitta = 1) {
+  const v = (n) => (n * mitta).toFixed(2);
+  const katuryhmat = KADUT.map((k, i) => `<g fill="none" stroke="${k.vari}" stroke-width="${v(k.leveys)}"
     stroke-linecap="round" stroke-linejoin="round">${kerrokset.kadut[i].join('')}</g>`).join('\n');
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
-  <rect width="${W}" height="${H}" fill="${PAPERI}"/>
+  return `
   <g fill="${PUISTO}" stroke="none">${kerrokset.puistot.join('')}</g>
   <!-- Joen reunaviiva: leveämpi tumma veto alle, vesi päälle — jokeen
        tulee sama ohut ranta kuin vesialtaiden stroke-reunaan. -->
-  <g fill="none" stroke="${VESIREUNA}" stroke-width="16.4" stroke-linecap="round"
+  <g fill="none" stroke="${VESIREUNA}" stroke-width="${v(16.4)}" stroke-linecap="round"
      stroke-linejoin="round" opacity="0.55">${kerrokset.joet.join('')}</g>
-  <g fill="none" stroke="${VESI}" stroke-width="14" stroke-linecap="round"
+  <g fill="none" stroke="${VESI}" stroke-width="${v(14)}" stroke-linecap="round"
      stroke-linejoin="round">${kerrokset.joet.join('')}</g>
-  <g fill="${VESI}" stroke="${VESIREUNA}" stroke-width="1.4">${kerrokset.vedet.join('')}</g>
-  <g fill="none" stroke="${RATA}" stroke-width="1.4" stroke-dasharray="7 5">${kerrokset.radat.join('')}</g>
-  ${katuryhmat}
+  <g fill="${VESI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.vedet.join('')}</g>
+  <g fill="none" stroke="${RATA}" stroke-width="${v(1.4)}" stroke-dasharray="${v(7)} ${v(5)}">${kerrokset.radat.join('')}</g>
+  ${katuryhmat}`;
+}
+
+/*
+ * KAINALOKARTTA (omistajan ratkaisu 9.8.2026: "Liian laajoissa
+ * kartoissa voisi tehdä pienen kainalon kartan siihen kohtaa missä ei
+ * ole tärkeää ja laittaa minikartan kaukokohteen kera siihen").
+ *
+ * Ongelma oli tämä: kun lehdessä mainittu kohde on 4 km keskustasta,
+ * sen mukaan ottaminen levittää rajauksen katupuuroksi ja työntää
+ * kaupungin oman juonen — joen, rannan, kanavakehän — kuvan laitaan.
+ * Wienin Schönbrunn ja Budapestin Sankarien aukio jäivät tästä syystä
+ * ensin kokonaan pois.
+ *
+ * Kainalo on oma tiukka rajaus kaukokohteen ympäriltä, piirrettynä
+ * pääkuvan tyhjään kulmaan omine kehyksineen. Kohde numeroidaan samaan
+ * sarjaan pääkartan kanssa, ja koska karttapiste() osaa sijoittaa sen
+ * (ks. maakartat.js), se on pelissä napautettava kuten muutkin.
+ *
+ * Sijainti (x, y, leveys) annetaan prosentteina pääkuvasta. KORKEUTTA
+ * EI ANNETA vaan se lasketaan kainalon omasta kuvasuhteesta — muuten
+ * minikartta venyisi ja sen kadut valehtelisivat.
+ */
+function piirraKainalo(kainalo, elementit, W, H) {
+  const x0 = (kainalo.x / 100) * W;
+  const y0 = (kainalo.y / 100) * H;
+  const w = (kainalo.leveys / 100) * W;
+  const h = w / kuvasuhde(kainalo.rajat);
+  const r = kainalo.rajat;
+  const x = (lon) => (x0 + ((lon - r.lansi) / (r.ita - r.lansi)) * w).toFixed(1);
+  const y = (lat) => (y0 + ((r.pohjoinen - lat) / (r.pohjoinen - r.etela)) * h).toFixed(1);
+  // Viivat kainalon mittakaavaan: sama suhde kuin ruudun leveys
+  // pääkuvan leveyteen, pohjalla 0,45 jottei kaikki katoa.
+  const mitta = Math.max(0.45, w / W);
+  const kerrokset = kokoaKerrokset(elementit, x, y);
+  const tunnus = `kainalo${Math.round(x0)}_${Math.round(y0)}`;
+  /*
+   * Suuntamerkinnän koko on mitattu eikä arvattu. Lehti näyttää kuvan
+   * palstan levyisenä, eli puhelimessa noin 360 CSS-pikselinä, joten
+   * 1600 pikselin kuva kutistuu suhteessa 0,22. Ensimmäinen versio
+   * käytti kokoa W/80 = 20 px, mikä on ruudulla 4,5 px — se ei ole
+   * pieni vaan näkymätön. W/35 antaa noin 10 CSS-pikseliä, joka on
+   * luettavissa. Siksi myös teksti pidetään lyhyenä ("4 km
+   * lounaaseen"): kohteen nimi on joka tapauksessa kartan alla
+   * selitelistassa, jossa se on aina luettava.
+   */
+  const koko = Math.round(W / 35);
+  /*
+   * Teksti ruudun ylle, paitsi jos ruutu on liian lähellä ylälaitaa —
+   * silloin se leikkautuisi kuvan reunaan. Budapestissa kävi juuri
+   * niin: kainalo on 3 %:n korkeudella, ja "3 km koilliseen" jäi
+   * puoliksi kuvan ulkopuolelle. Alapuolella tilaa on aina, koska
+   * ruutu ei ulotu kuvan alareunaan asti.
+   */
+  const ylla = y0 > koko * 1.4;
+  const tekstiY = ylla ? y0 - 12 : y0 + h + koko;
+  const teksti = kainalo.suunta
+    ? `<text x="${(x0 + w / 2).toFixed(1)}" y="${tekstiY.toFixed(1)}" text-anchor="middle"
+        font-family="Georgia, serif" font-size="${koko}" fill="#8a7654">${kainalo.suunta}</text>`
+    : '';
+  return `
+  <clipPath id="${tunnus}"><rect x="${x0.toFixed(1)}" y="${y0.toFixed(1)}"
+    width="${w.toFixed(1)}" height="${h.toFixed(1)}" rx="6"/></clipPath>
+  <rect x="${x0.toFixed(1)}" y="${y0.toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}"
+    rx="6" fill="${PAPERI}"/>
+  <g clip-path="url(#${tunnus})">${kerrosKuvaus(kerrokset, mitta)}</g>
+  <rect x="${x0.toFixed(1)}" y="${y0.toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}"
+    rx="6" fill="none" stroke="${VESIREUNA}" stroke-width="2.5"/>
+  ${teksti}`;
+}
+
+function piirra(kaupunki, elementit, kainaloAineistot = []) {
+  const { rajat, kainalot = [] } = KAUPUNGIT[kaupunki];
+  const W = 1600;
+  const H = Math.round(W / kuvasuhde(rajat));
+  const x = (lon) => (((lon - rajat.lansi) / (rajat.ita - rajat.lansi)) * W).toFixed(1);
+  const y = (lat) => (((rajat.pohjoinen - lat) / (rajat.pohjoinen - rajat.etela)) * H).toFixed(1);
+  const kerrokset = kokoaKerrokset(elementit, x, y);
+  const kainaloKuvat = kainalot
+    .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H)).join('\n');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
+  <rect width="${W}" height="${H}" fill="${PAPERI}"/>
+  ${kerrosKuvaus(kerrokset)}
+  ${kainaloKuvat}
 </svg>`;
 }
 
@@ -327,9 +467,22 @@ if (!KAUPUNGIT[kaupunki]) {
   process.exit(1);
 }
 console.log('Haetaan OpenStreetMap-aineisto (Overpass)…');
-const elementit = await haeOverpass(KAUPUNGIT[kaupunki].rajat);
+const elementit = await haeOverpassSitkeasti(KAUPUNGIT[kaupunki].rajat);
 console.log(`${elementit.length} elementtiä.`);
-const svg = piirra(kaupunki, elementit);
+/*
+ * Kainalot haetaan omina kyselyinään ja TAUON TAKAA: Overpass
+ * rate-limittaa peräkkäiset ajot, ja kolmen kaupungin erässä se
+ * kaatoi ajon kerran jo ilman kainaloita.
+ */
+const kainaloAineistot = [];
+for (const [i, kainalo] of (KAUPUNGIT[kaupunki].kainalot ?? []).entries()) {
+  await new Promise((r) => setTimeout(r, 4000));
+  console.log(`Haetaan kainalo ${i + 1}…`);
+  const osat = await haeOverpassSitkeasti(kainalo.rajat);
+  console.log(`  ${osat.length} elementtiä.`);
+  kainaloAineistot.push(osat);
+}
+const svg = piirra(kaupunki, elementit, kainaloAineistot);
 mkdirSync(resolve(JUURI, 'assets/kartat'), { recursive: true });
 const svgPolku = resolve(JUURI, `assets/kartat/${kaupunki}-keskusta.svg`);
 writeFileSync(svgPolku, svg);
@@ -371,3 +524,19 @@ console.log('KAUPUNKIKARTAT-rivit:');
 console.log(`    polku: 'assets/kartat/${kaupunki}-keskusta.png',`);
 console.log(`    lahde: '© OpenStreetMap-tekijät (ODbL)',`);
 console.log(`    rajat: { pohjoinen: ${rajat.pohjoinen}, etela: ${rajat.etela}, lansi: ${rajat.lansi}, ita: ${rajat.ita} },`);
+/*
+ * Kainalon KORKEUS lasketaan tässä eikä kirjoiteta käsin: peli tarvitsee
+ * sen asemoidakseen kainalon kohteet, ja jos luku poikkeaisi piirretystä,
+ * numero osuisi eri kohtaan kuin kartta. Yksi laskenta, kaksi käyttäjää.
+ */
+const kainalot = KAUPUNGIT[kaupunki].kainalot ?? [];
+if (kainalot.length) {
+  console.log('    kainalot: [');
+  for (const k of kainalot) {
+    const korkeus = +((k.leveys * kuvasuhde(rajat)) / kuvasuhde(k.rajat)).toFixed(2);
+    console.log(`      { rajat: { pohjoinen: ${k.rajat.pohjoinen}, etela: ${k.rajat.etela},`
+      + ` lansi: ${k.rajat.lansi}, ita: ${k.rajat.ita} },`);
+    console.log(`        x: ${k.x}, y: ${k.y}, leveys: ${k.leveys}, korkeus: ${korkeus} },`);
+  }
+  console.log('    ],');
+}

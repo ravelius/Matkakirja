@@ -1716,6 +1716,17 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/budapest-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+    /*
+     * Kainalokartta Sankarien aukiosta. Se on lehden kansikuva mutta
+     * 3 km koilliseen, ja päärajaukseen ottaminen olisi työntänyt
+     * Tonavan kuvan laitaan. Ruutu on oikeassa ylänurkassa, jossa ei
+     * ole numeroituja kohteita, ja se näyttää samalla Városligetin.
+     * Korkeus on työkalun laskema; älä muuta sitä käsin.
+     */
+    kainalot: [
+      { rajat: { pohjoinen: 47.5215, etela: 47.5095, lansi: 19.07, ita: 19.092 },
+        x: 70, y: 3, leveys: 28, korkeus: 30.56 },
+    ],
     esittely: 'Budapest seisoo siinä, missä Budan kalkkikivikukkulat '
       + 'loppuvat ja Unkarin suuri tasanko alkaa. Raja kulkee Tonavaa '
       + 'pitkin: läntisellä rannalla maa nousee jyrkästi, itäisellä se '
@@ -1746,6 +1757,8 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Gellértinvuori', lat: 47.4869, lon: 19.0446, wiki: 'Gellértinvuori' },
       { nimi: 'Pyhän Tapanin kirkko', lat: 47.5008, lon: 19.054, wiki: 'Pyhän Tapanin kirkko (Budapest)' },
       { nimi: 'Suuri kauppahalli', lat: 47.4866, lon: 19.059 },
+      // Kainalossa oikeassa ylänurkassa.
+      { nimi: 'Sankarien aukio', lat: 47.5153, lon: 19.0781, wiki: 'Sankarien aukio (Budapest)' },
     ],
   },
   praha: {
@@ -1790,6 +1803,18 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/wien-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 48.22, etela: 48.188, lansi: 16.34, ita: 16.404 },
+    /*
+     * Kainalokartta Schönbrunnista. Palatsi on lehden kansikuva mutta
+     * 4 km lounaaseen, ja päärajaukseen ottaminen olisi vaatinut 7,2
+     * km leveän kuvan — Ring, koko kuvan juoni, olisi kutistunut
+     * täpläksi. Ruutu on vasemmassa alanurkassa, jossa ei ole yhtään
+     * numeroitua kohdetta. Korkeus on työkalun laskema; älä muuta sitä
+     * käsin, tai numero irtoaa kartasta.
+     */
+    kainalot: [
+      { rajat: { pohjoinen: 48.191, etela: 48.178, lansi: 16.303, ita: 16.325 },
+        x: 2, y: 56, leveys: 30, korkeus: 35.44 },
+    ],
     esittely: 'Wien seisoo kohdassa, jossa Tonava tulee ulos vuorten '
       + 'välistä. Lännessä nousee Wienerwald, Alppien viimeinen '
       + 'kukkulaselänne, ja idässä alkaa tasainen lakeus, joka jatkuu '
@@ -1825,6 +1850,9 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Stephansdom', lat: 48.2085, lon: 16.3731, wiki: 'Stephansdom' },
       { nimi: 'Belvedere', lat: 48.1915, lon: 16.3809, wiki: 'Belvedere' },
       { nimi: 'Jättiratas', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
+      // Kainalossa. Koordinaatti on päärajauksen ulkopuolella, ja
+      // karttapiste() sijoittaa sen minikarttaan sen perusteella.
+      { nimi: 'Schönbrunn', lat: 48.1845, lon: 16.3119, wiki: 'Schönbrunnin linna' },
     ],
   },
   kairo: {
@@ -2549,12 +2577,44 @@ function laeaPiste(laea, lat, lon) {
   };
 }
 
-/** Pisteen paikka kuvassa prosentteina (left/top). */
-export function karttapiste(kartta, lat, lon) {
-  if (kartta.projektio === 'laea') return laeaPiste(kartta.laea, lat, lon);
-  const { pohjoinen, etela, lansi, ita } = kartta.rajat;
+/** Suora prosenttiosuus rajoista — tasavälisen kartan perustapaus. */
+function suoraPiste(rajat, lat, lon) {
+  const { pohjoinen, etela, lansi, ita } = rajat;
   return {
     x: ((lon - lansi) / (ita - lansi)) * 100,
     y: ((pohjoinen - lat) / (pohjoinen - etela)) * 100,
   };
+}
+
+/**
+ * Pisteen paikka kuvassa prosentteina (left/top).
+ *
+ * KAINALOKARTAT (omistajan ratkaisu 9.8.2026). Kun lehdessä mainittu
+ * kohde on kilometrien päässä keskustasta, sitä ei oteta päärajaukseen
+ * — se levittäisi kuvan katupuuroksi — vaan piirretään omana pienenä
+ * minikarttana pääkuvan tyhjään kulmaan. Kainalon kohde numeroidaan
+ * samaan sarjaan, ja tämä funktio sijoittaa sen: ensin paikka kainalon
+ * omassa rajauksessa, sitten se skaalataan kainaloruutuun pääkuvassa.
+ *
+ * Kainalo tunnistetaan KOHTEEN OMISTA KOORDINAATEISTA eikä erillisestä
+ * kentästä. Se pitää datan yksinkertaisena (kohde on pelkkä lat/lon
+ * kuten muutkin) eikä vaadi muutosta piirtokoodiin — piste on siksi
+ * napautettava aivan kuten pääkartan pisteet. Ehto toimii, koska
+ * kainalon rajaus on aina päärajauksen ULKOPUOLELLA; jos joku joskus
+ * asettaa ne päällekkäin, kainalo voittaa ja piste menee väärään
+ * paikkaan. Älä siis tee päällekkäistä kainaloa.
+ */
+export function karttapiste(kartta, lat, lon) {
+  if (kartta.projektio === 'laea') return laeaPiste(kartta.laea, lat, lon);
+  for (const kainalo of kartta.kainalot ?? []) {
+    const r = kainalo.rajat;
+    if (lat <= r.pohjoinen && lat >= r.etela && lon >= r.lansi && lon <= r.ita) {
+      const sisa = suoraPiste(r, lat, lon);
+      return {
+        x: kainalo.x + (sisa.x / 100) * kainalo.leveys,
+        y: kainalo.y + (sisa.y / 100) * kainalo.korkeus,
+      };
+    }
+  }
+  return suoraPiste(kartta.rajat, lat, lon);
 }
