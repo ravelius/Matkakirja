@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 435, teksti: 'Helsingin arkisivu siirtyi Suomen maalehteen' },
+  { v: 435, teksti: 'Turkki, Irlanti, Portugali ja Unkari saivat maalehden' },
   { v: 434, teksti: 'Lehden mediarivillä nyt vain paikallisradio' },
   { v: 433, teksti: 'Kohdekartat Kiovaan, Pietariin, Moskovaan, Odessaan' },
   { v: 433, teksti: 'Kaikilla 31 kaupunkilehdellä on nyt kohdekartta' },

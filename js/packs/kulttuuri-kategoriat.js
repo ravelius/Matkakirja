@@ -5083,54 +5083,6 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
-    {
-      id: 'arki',
-      nimi: 'Arki ja vapaa-aika',
-      johdanto: 'Kaupunki, jossa tuntemattomat istuvat vieretysten löylyissä ja '
-        + 'huvipuiston tuotto menee lastensuojeluun.',
-      tehtava: {
-        kysymys: 'Kuinka monta kertaa Linnanmäen Vuoristoradan rataa kierretään '
-          + 'yhden kesän aikana?',
-        vaihtoehdot: ['Noin 4 700 kertaa', 'Noin 47 000 kertaa', 'Noin 170 000 kertaa', 'Noin 700 000 kertaa'],
-        oikea: 1,
-        fakta: 'Linnanmäen puinen Vuoristorata tekee yhden kesän aikana noin 47 '
-          + '000 kierrosta.',
-      },
-      nostot: [
-        {
-          otsikko: 'Kolme miljoonaa saunaa',
-          tiedosto: 'Kotiharjun yleinen sauna (Kotiharju public sauna in Helsinki) Helsingin Torkkelinmäellä Kalliossa 01.jpg',
-          teksti: 'Suomessa on noin kolme miljoonaa saunaa ja 5,6 miljoonaa '
-            + 'asukasta — löylyt kuuluvat kerrostaloasuntoonkin. Unesco '
-            + 'lisäsi suomalaisen saunomisen ihmiskunnan aineettoman '
-            + 'kulttuuriperinnön luetteloon vuonna 2020. Helsingin Kalliossa '
-            + 'on yhä yleisiä saunoja, joihin ostetaan lippu kuin elokuviin '
-            + 'ja joissa istutaan vieretysten tuntemattomien kanssa. Löylyn '
-            + 'jälkeen mennään kadulle jäähtymään pyyhe päällä, kesät talvet.',
-          selite: 'Kotiharjun sauna Torkkelinmäellä Kalliossa. Se avattiin 1928 '
-            + 'ja on Helsingin viimeinen alkuperäisessä käytössä säilynyt '
-            + 'puulämmitteinen yleinen sauna.',
-          lahde: 'Paasikivi, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Kotiharjun sauna',
-        },
-        {
-          otsikko: 'Vuoristoradan takana seisoo jarrumestari',
-          tiedosto: 'Linnanmäki Vuoristorata.jpg',
-          teksti: 'Linnanmäen huvipuisto avattiin 1950 vanhalle vesitornimäelle, '
-            + 'ja puinen Vuoristorata seuraavana kesänä 13. heinäkuuta 1951. '
-            + 'Se on yksi maailman harvoista radoista, joilla junan vauhtia '
-            + 'hidastetaan käsin: jarrumestari seisoo junan takaosassa koko '
-            + 'matkan ja hoitaa jarrutuksen. Kesässä rataa kierretään noin 47 '
-            + '000 kertaa. Huvipuiston omistaa Lasten Päivän Säätiö, ja '
-            + 'tuotto jaetaan kuudelle lastensuojelujärjestölle.',
-          selite: 'Vuoristoradan sininen juna kiipeää ylös täydessä lastissa. '
-            + 'Kiskojen alusta, pylväät ja kaiteet ovat puuta, kuten radan '
-            + 'valmistuessa 1951.',
-          lahde: 'Oona Räisänen, Wikimedia Commons (CC BY-SA 3.0)',
-          wiki: 'Vuoristorata (Linnanmäki)',
-        },
-      ],
-    },
   ],
   tallinna: [
     {
