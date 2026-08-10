@@ -53,6 +53,20 @@ export const TARINAKAARI = Object.fromEntries(
     .map((kohde) => [kohde.id, { ...kohde, nimi: kutsumanimi(kohde) }]),
 );
 
+/**
+ * Saako osan ('saapuminen' | 'kohtaaminen' | 'aarre') luennan soittaa.
+ *
+ * Kohteen mykistetyt-lista kertoo osat, joiden TEKSTI on uudistettu
+ * mutta luentaa ei ole vielä generoitu uusiksi (omistajan linjaus
+ * 10.8.2026: tekstit heti peliin, äänet myöhemmässä erässä). Vanha
+ * ääni eri sanoilla olisi pahempi kuin hiljaisuus — ruututeksti =
+ * luenta -sääntö palautuu, kun generointierä ajetaan ja listat
+ * tyhjennetään.
+ */
+export function kaariLuentaSoi(kohde, osa) {
+  return !!kohde && !(kohde.mykistetyt ?? []).includes(osa);
+}
+
 /*
  * Kaari koskee Euroopan lautaa ja maailmankarttaa, jolla samat
  * kaupungit ovat samoilla tunnuksilla. Muiden lautojen samannimiset

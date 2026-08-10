@@ -47,7 +47,7 @@ import {
 import { AFRICA_SAAPUMISET } from './packs/africa-saapumiset.js';
 import { AFRICA_KULTTUURI, KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
 import { EUROPE_SAAPUMISET } from './packs/europe-saapumiset.js';
-import { TARINAKAARI, KAARI_LAUDAT } from './packs/tarinakaari.js';
+import { TARINAKAARI, KAARI_LAUDAT, kaariLuentaSoi } from './packs/tarinakaari.js';
 import { ASIA_SAAPUMISET } from './packs/asia-saapumiset.js';
 import { NORTHAMERICA_SAAPUMISET } from './packs/northamerica-saapumiset.js';
 import { SOUTHAMERICA_SAAPUMISET } from './packs/southamerica-saapumiset.js';
@@ -5948,8 +5948,10 @@ export class UI {
         // Kaiutin ja luenta vain kaupungeille, joille luenta on generoitu.
         // Ilman tätä nappi näkyi kaikilla ja tuotti hiljaisuutta.
         // Kaaren kohteilla luenta on aina: puhe-kaari-saapuminen-<id>.mp3.
+        // Mykistetty osa (teksti uudistettu, luentaa ei vielä generoitu)
+        // käyttäytyy kuin luentaa ei olisi — kaiutinnappikin piiloutuu.
         const saapumisLauta = kaariMerkinta
-          ? 'kaari'
+          ? (kaariLuentaSoi(kaariMerkinta, 'saapuminen') ? 'kaari' : null)
           : luentaLauta(SAAPUMISLUENNAT, saapuminen.packId, saapuminen.cityId);
         this.diaryFullUrl = saapumisLauta
           ? `assets/audio/puhe-${saapumisLauta}-saapuminen-${saapuminen.cityId}.mp3`
@@ -12003,7 +12005,7 @@ export class UI {
         // lukee kehyksen ja hahmo repliikkinsä omalla äänellään —
         // playDiaryVoice hiljentää musiikin puheen ajaksi.
         // Tarinakaaren kohtaamisella on oma luentansa joka kohteelle.
-        if (kaariTarina && kertojaTila() !== 'ei') {
+        if (kaariTarina && kaariLuentaSoi(kaariTarina, 'kohtaaminen') && kertojaTila() !== 'ei') {
           this.playDiaryVoice(
             `assets/audio/puhe-kaari-kohtaaminen-${quiz.cityId}.mp3`,
             { viive: 300 },
@@ -12121,7 +12123,8 @@ export class UI {
             katko.onerror = () => katko.remove();
             body.appendChild(katko);
             body.appendChild(html('span', 'kohtaaminen-repliikki', kaariAarre));
-            if (this.aarreLuentaFor !== quiz && kertojaTila() !== 'ei') {
+            if (this.aarreLuentaFor !== quiz && kaariLuentaSoi(TARINAKAARI[quiz.cityId], 'aarre')
+              && kertojaTila() !== 'ei') {
               this.aarreLuentaFor = quiz;
               this.playDiaryVoice(
                 `assets/audio/puhe-kaari-aarre-${quiz.cityId}.mp3`,
@@ -12491,7 +12494,7 @@ export class UI {
     let luenta = null;
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
-      if (kertojaTila() !== 'ei') {
+      if (kaariLuentaSoi(kaari, 'aarre') && kertojaTila() !== 'ei') {
         luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 }) ?? null;
       }
     }
