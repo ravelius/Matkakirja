@@ -1,3 +1,67 @@
+# Opus 1 → Fable: ERÄ D MAALISSA (v526 + v527), aloitan duplikaatit (10.8.2026)
+
+Molemmat mainissa: **v526** (Bahrainin lautageometria, #767) ja **v527**
+(Bahrainin aihesivut, #768). Bahrainin maalehdessä on nyt kolme sivua —
+tarkistettu selaimessa, ei vain datasta.
+
+## Erä D kokonaisuudessaan
+
+| Maa | Versio | Sisältö |
+|---|---|---|
+| Saudi-Arabia | v515, korjattu v520 | kalliot, vuoret, meri |
+| Bahrain | v526 geometria + v527 sivut | helmet, muinaisuus |
+
+Päätöksesi toteutettiin sellaisenaan: Manamaa ei lisätty,
+`minCityDistance`a ei laskettu, Dohaa ei siirretty, korkokarttaa ei tehty.
+
+## Tarkastus ennen mergeä kannatti enemmän kuin jälkikäteen
+
+Bahrainissa ajoin sen ENNEN liittämistä, ja saalis oli isompi kuin
+Saudi-Arabiassa jälkikäteen:
+
+- **kuvat:** virhe viidessä kuudesta selitteestä. Vakavin oli Qal'at
+  al-Bahrain, jonka selite väitti etualalle kaivettuja kivijalkoja,
+  joita kuvassa ei ole. Elämänpuun juurella on kolme ihmistä, ei kahta.
+- **faktat:** neljä virhettä. Pahin oli "vuonna 1930 noin
+  kolmekymmentätuhatta sukeltajaa" — lähdettä ei löydy, ja Bahrainin
+  väkiluku oli 1941 noin 90 000, joten luku olisi tarkoittanut
+  kolmasosaa koko väestöstä. Se oli peräisin Wikipediasta.
+- **kieli:** mm. otsikko "Helmi, joka kasvatettiin purkissa" oli
+  ristiriidassa oman tekstinsä kanssa — siemen istutettiin simpukkaan.
+
+Vakavimmat tarkistin itse ennen korjaamista.
+
+## Julkaisusääntö 5 huomioitu
+
+`js/main.js` ei ole generoitu tiedosto. Korjasin oman
+uudelleenpohjausskriptini, joka olisi tehnyt täsmälleen sen virheen,
+jonka v524 teki: se otti koko tiedoston `--ours`-valinnalla. Nyt
+main.js ratkaistaan erikseen niin, että sisältö tulee mainista ja
+APP_VERSION kirjoittuu uudelleen `uusi-versio.mjs`:llä.
+
+## Seuraava: 13 kuvaduplikaattia
+
+Luin Sonnet 1:n taulukon haarasta `claude/matkakirja-game-dev-la16ae`.
+Aloitan sen mukaisesti:
+
+- **12 luokan b tapausta vaihdetaan.** Ne ovat kaikki samaa muotoa:
+  sama kuva sekä `nahtavyysjutut.js`:ssä että
+  `kulttuuri-kategoriat.js`/`europe-valokuvat.js`/`maa-kategoriat.js`:ssä.
+  Vaihdan **nähtävyysjuttupuolen**, koska duplikaatit syntyivät siellä
+  (erät v495–v508) ja vanhempi esiintymä on lehden vakiintunut kuva.
+- **1 luokan c rajatapaus (Parthenon)** on sidottu isoisän luonnokseen
+  `europe-puzzles.js`:ssä. Vaihdan siitä vain nähtävyysjuttupuolen ja
+  kirjaan perustelun `docs/kuvaduplikaatit.md`:hen.
+- Jokainen korvaava kuva: oikea maa, sallittu lisenssi, ≥ 1200 px,
+  **katsottu silmällä**, lähde API:sta, ei uusia duplikaatteja.
+- Tarkastus eri silmin ennen mergeä, kuten vakioitu.
+
+Erä on iso, joten teen sen **useammassa PR:ssä kaupungeittain** enkä
+yhtenä möhkäleenä — jos jokin korvaaja osoittautuu huonoksi, se ei
+jumita muita.
+
+---
+
 # Opus 1 → Fable: Bahrainin lautageometria PILOTTINA, odotan kuittausta (10.8.2026)
 
 Haara `claude/bahrain-lauta`. **Versionostoa ei ole tehty** — kuten

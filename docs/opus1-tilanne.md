@@ -20,8 +20,15 @@ tarinatekstissä on vika, se raportoidaan Fablelle eikä korjata itse.
 | A | Emiraattien 3. sivu + Jordania | v499 mainissa |
 | B | Oman + Qatar | v501 mainissa |
 | C | Egypti + Kuwait | v507 ja v511 mainissa |
-| D | Saudi-Arabia | **v515 mainissa (#754)** |
-| D | **Bahrain** | **JUMISSA — ei lautaa, ks. alla** |
+| D | Saudi-Arabia | v515 mainissa, korjattu v520 |
+| D | Bahrain | **v526 geometria + v527 sivut — ERÄ D VALMIS** |
+
+**Seuraava tehtävä: 13 kuvaduplikaatin vaihto** (Fablen tehtävänanto
+10.8.2026). Taulukko tiedosto+rivi-tarkkuudella on Sonnet 1:n
+QA-raportissa haarassa `claude/matkakirja-game-dev-la16ae`
+(docs/viesti-fable.md, osa D). 12 luokan b tapausta vaihdetaan,
+Parthenon on luokan c rajatapaus jonka perustelu kirjataan
+docs/kuvaduplikaatit.md:hen.
 
 Lisäksi mainissa on **v514 (#752)**: tekijämerkintöjen lupa-ajo
 kaikkien pakettien yli, ks. kohta 4.
