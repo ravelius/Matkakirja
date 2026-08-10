@@ -126,6 +126,26 @@ export const MIDDLE_EAST_COUNTRY_SHAPES = {
       [[681.7, 570.7], [677.3, 572.0], [674.2, 571.7], [671.4, 568.6], [670.1, 565.4], [671.2, 562.5], [668.9, 547.6], [671.7, 541.3], [675.1, 530.5], [677.7, 527.6], [681.6, 525.5], [684.7, 529.6], [688.6, 532.8], [689.3, 536.4], [687.1, 543.9], [690.2, 557.7], [689.7, 560.3], [684.9, 569.6]],
     ],
   },
+  BHR: {
+    nimi: 'Bahrain',
+    lippu: 'Flag of Bahrain.svg',
+    /*
+     * Laudan pienin maa: 4,1 × 12,9 yksikköä. Se jäi työkalun yleisen
+     * kokorajan (15) alle, joten tools/middleeast-countries.mjs sai
+     * nimetyn poikkeuksen — ks. sen OMA_MIN_KOKO.
+     *
+     * Ankkuri on saaren POHJOISPUOLELLA avomerellä, ei saaren päällä.
+     * Kyltti piirtyy kartan päälle, ja saari on niin pieni (noin 8 px
+     * laudan mittakaavassa), että keskikohtaan asetettu kyltti peitti
+     * saaren pohjoiskärjen kokonaan — maa katosi oman kylttinsä alle.
+     * Mitattu kuvasta 10.8.2026, ks. docs/kuvat/bahrain-lahikuva.png.
+     */
+    keskus: [663.4, 506.0],
+    leveys: 4,
+    renkaat: [
+      [[665.2, 533.4], [664.4, 535.6], [661.6, 531.0], [662.2, 528.3], [661.3, 524.4], [661.7, 523.3], [664.6, 522.9], [663.9, 524.2], [665.2, 526.3], [665.4, 529.9]],
+    ],
+  },
   ARE: {
     /*
      * NIMI ON MAAILMANKARTAN MUKAINEN, EI FI-WIKIN. Tässä luki ensin

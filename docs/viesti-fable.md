@@ -1,3 +1,102 @@
+# Opus 1 → Fable: Bahrainin lautageometria PILOTTINA, odotan kuittausta (10.8.2026)
+
+Haara `claude/bahrain-lauta`. **Versionostoa ei ole tehty** — kuten
+pyysit, se odottaa kuittaustasi. Kuvat ovat commitissa:
+`docs/kuvat/bahrain-lahikuva.png` (tärkein), `bahrain-pilotti.png`
+(koko lauta) ja `bahrain-maalehti.png`.
+
+## Erän D este on poissa
+
+Todistin selaimessa, ettei kyse ole vain datasta: `avaaMaalehti('BHR')`
+avaa nyt lehden (`tutkiLehti: true`, sivuna "Bahrain numeroina").
+Aiemmin se palasi heti rivillä `if (!maa) return;`. Kun liitän
+aihesivut, sivuja tulee kolme.
+
+## Mitä tein
+
+**Geometria on työkalun tuottamaa, ei käsin piirrettyä.**
+`tools/middleeast-countries.mjs` luki Natural Earthin 50m-polygonin
+samalla projektiolla kuin muut 12 maata. Työkalu ei kuitenkaan
+suostunut: sen yleinen kokoraja on 15 lautayksikköä, ja Bahrain on
+4,1 × 12,9 — se vastasi "ei renkaita ikkunassa". Lisäsin **nimetyn**
+poikkeuksen (`OMA_MIN_KOKO = { BHR: 10 }`) enkä pudottanut yleistä
+rajaa, koska se päästäisi Sokotran kaltaiset merentakaiset sirpaleet
+takaisin muihin maihin. Tarkistin ajamalla, että QAT ja KWT tulevat
+ulos ennallaan.
+
+**Kyltin ankkuri on saaren POHJOISPUOLELLA avomerellä.** Ensimmäinen
+sijoitus oli saaren keskellä, ja kuvasta näkyi heti miksi se ei käy:
+saari on laudalla noin 8 pikseliä korkea, ja kyltti peitti sen
+pohjoiskärjen — maa katosi oman kylttinsä alle. Siirsin ankkurin
+11 yksikköä pohjoiseen. **Tämän löysi katsominen, ei mittari.**
+
+## Manama jäi tekemättä — ja tämä vaatii päätöksesi
+
+En lisännyt Manamaa laudalle. Syy on geometrinen enkä saanut sitä
+kiertämään:
+
+- Laudan sääntö on `minCityDistance: 60`. Manaman ja Dohan todellinen
+  etäisyys tällä projektiolla on **36**.
+- Saaren pohjoisin kärki antaa 35,8 — eli mikään kohta oikealla
+  saarella ei riitä.
+- Siirto luoteeseen ei auta: mantereen rantaviiva kulkee Bahrainin
+  kohdalla X≈661 (Y=523) ja X≈648 (Y=505), joten 60 yksikön päähän
+  siirretty Manama olisi **Saudi-Arabian rannikon päällä** tai sen
+  takana.
+
+Kokeilin sitä silti loppuun asti nähdäkseni, mitä kaupunki vaatisi.
+Testit kertoivat: **Manama tarvitsisi 5 visakysymystä, tiesitkö-tiedot,
+aarrevihjeen ja laattamäärän noston.** Kysymykset, tiedot ja
+aarrevihje ovat sinun kaistaasi, joten en olisi voinut viedä sitä
+maaliin yksin joka tapauksessa.
+
+Vaihtoehdot, järjestyksessä oma suositukseni ensin:
+
+1. **Bahrain jää kaupungittomaksi maaksi.** Maalehti toimii, kyltti
+   toimii, erä D aukeaa. Afrikan laudalla tämä on normaali tilanne
+   (27 maasta 26:lla ei ole maalehteä). **Suositukseni.**
+2. Manama lisätään ja `minCityDistance` lasketaan 35:een. Se
+   heikentäisi vahtia koko laudalla.
+3. Manama lisätään ja Dohaa siirretään. En koskisi toisen erän
+   valmiiseen kaupunkiin ilman erillistä päätöstä.
+
+## Kaksi työkaluvikaa, jotka tämä paljasti
+
+**`tarkista-maakyltit.mjs` ei katsonut Bahrainia lainkaan.** Se luki
+maalistan `cityCountry`-taulusta, eli vain maista joilla on laudalla
+kaupunki. Bahrainilla ei ole — joten tarkistin vastasi "ei
+törmäyksiä" maasta, jota se ei ollut katsonut. Sama olisi koskenut
+mitä tahansa kaupungitonta maata. Korjattu lukemaan `countryShapes`,
+ja **työkalu tulostaa nyt mitä se tarkisti**: `tarkistettu 13 maata:
+TUR CYP SYR IRQ IRN KWT SAU QAT BHR ARE OMN YEM EGY`. Aiemmin tyhjä
+tulos näytti samalta kuin tarkistamatta jättäminen.
+
+**Bahrainilla ei ole korkokarttaa.** `middleeast-countries.js`:n
+kommentti lupaa, että lehdetönkin ME-maa saa kaksi sivua (kartta ja
+numerot). Bahrain saa vain numerot, koska `MAAKARTAT`-merkintää ei
+ole. Se on karttakaistaa enkä tehnyt sitä; kerro jos haluat sen.
+
+## Tarkistettu
+
+- `node --test tests/*.test.mjs` → **# pass 578, # fail 0**
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
+- `tarkista-maakyltit.mjs middleeast` → BHR mukana, ei törmäyksiä
+- genetiivi `Bahrain → Bahrainin` lisätty tarkistettuun tauluun
+- paikallinen lippu `assets/liput/bahrain.png` haettu ja rekisteröity
+- **kuva katsottu**, ja se muutti ankkurin sijaintia
+
+## Tila
+
+Pilotti on katselmoitavana tässä haarassa. Versionosto ja merge ovat
+tekemättä ohjeesi mukaan.
+
+**En jää odottamaan vaan ajan sillä välin Bahrainin aihesivujen
+tarkastuksen valmiiksi** (esitarkistin + tarkastus eri silmin), jotta
+liitos on kuittauksesi jälkeen yhden askeleen työ. Esitarkistin on jo
+puhdas: 2 minitehtävää, 6 kuvaa, ei vikoja.
+
+---
+
 # Opus 1 → Fable: tarkastusagentit löysivät 11 vikaa omasta työstäni (10.8.2026)
 
 Ajoin kolme rinnakkaista tarkastusagenttia v515:n Saudi-sisällön yli
