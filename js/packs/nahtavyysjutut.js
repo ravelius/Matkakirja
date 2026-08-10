@@ -7010,5 +7010,284 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  dubrovnik: {
+    'Minčetan torni': {
+      aika: '1463–1464',
+      teksti: 'Minčetan torni ei ollut alun perin kovin vaikuttava: '
+          + 'vuonna 1319 samalla paikalla seisoi vaatimaton '
+          + 'nelikulmainen linnoitus, joka sai nimensä sen maat '
+          + 'omistaneelta Menčetićin suvulta. Kaikki muuttui '
+          + '1400-luvulla, kun Osmanien valtakunta alkoi uhata '
+          + 'Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia '
+          + 'insinöörejä, ja he suunnittelivat yhdessä paikallisen '
+          + 'rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden '
+          + 'muodon.'
+        + '\n\n'
+        + 'Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, '
+          + 'ja korkean, pyöreän tornin lopullisen piirustuksen teki '
+          + 'kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna '
+          + '1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! '
+          + 'Muurien sisään rakennettiin suojattuja ampuma-aukkoja, '
+          + 'joista tykit osoittivat kaupungin ulkopuolelle.'
+        + '\n\n'
+        + 'Minčetan torni kohoaa Dubrovnikin korkeimmalla kukkulalla, '
+          + 'ja siitä tuli kaupungin voittamattomuuden symboli - vielä '
+          + '1800-luvun alun sodissakin viholliset ampuivat tornia '
+          + 'tykeillä, mutta se pysyi pystyssä. Tornin alta on löydetty '
+          + 'myös yli 500 vuotta vanha tykkivalimo, jossa metallia '
+          + 'sulatettiin kanuunoiksi; nykyään paikka toimii pienenä '
+          + 'museona.',
+      kuvat: [
+        {
+          tiedosto: 'Dusk Carresed the Tower Fondly (27368304931).jpg',
+          selite: 'Minčetan pyöreä puolustustorni kaupunginmuurin päällä '
+            + 'lämpimässä ilta-auringossa, taivaalla ohut '
+            + 'suihkuvanajuova.',
+          lahde: 'Los Paseos, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Minceta Fortress, Dubrovnik, 16th century (2) (30113651035).jpg',
+          selite: 'Minčetan torni alhaalta viistosti kuvattuna, harmaa '
+            + 'hammastettu muuri kirkasta sinistä taivasta vasten.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Ludwig Hans Fischer Dubrovnik Minčeta-Festung.jpg',
+          selite: 'Itävaltalaisen taidemaalari Ludwig Hans Fischerin '
+            + 'akvarelli Minčetan tornista kukkivan puutarhan takaa, '
+            + 'maalattu ennen vuotta 1915.',
+          lahde: 'Ludwig Hans Fischer, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pilen portti': {
+      aika: '1471–1628',
+      teksti: 'Pilen portti on Dubrovnikin vanhankaupungin näyttävin '
+          + 'sisäänkäynti, ja se avautuu lännestä saapuvalle tielle. '
+          + 'Portti ei ole vain yksi ovi vaan kokonainen '
+          + 'puolustusjärjestelmä: kaksi erillistä porttia ja niiden '
+          + 'välissä silta kuivan vallihaudan yli. Alun perin silta oli '
+          + 'puinen nostosilta, joka vedettiin joka ilta ylös - kukaan '
+          + 'ei päässyt sisään eikä ulos ennen aamua.'
+        + '\n\n'
+        + 'Sisäportille johtava kivisilta suunniteltiin vuonna 1471, '
+          + 'ja ulompi portti valmistui vasta paljon myöhemmin, vuonna '
+          + '1628. Porttien yllä katselee kiveen veistetty pyhä '
+          + 'Blasius, Dubrovnikin suojeluspyhimys, sylissään '
+          + 'pienoismalli koko kaupungista - ikään kuin hän vartioisi '
+          + 'sitä käsissään.'
+        + '\n\n'
+        + 'Vuonna 1806 ranskalaiset joukot valtasivat Dubrovnikin, ja '
+          + 'pian sen jälkeen yli 400 vuotta itsenäisenä pysynyt '
+          + 'tasavalta lakkasi olemasta. Nykyään portin sisäpuolelta '
+          + 'pääsee kiipeämään suoraan kaupunginmuurille - Pilen portti '
+          + 'on yksi vain kolmesta paikasta koko muurilla, josta '
+          + 'muurikävelyn voi aloittaa.',
+      kuvat: [
+        {
+          tiedosto: 'Dubrovnik Pile (33547873443).jpg',
+          selite: 'Pilen portti ja sen edessä oleva kivinen silta '
+            + 'aurinkoisena päivänä, Kroatian lippu liehuu tornissa ja '
+            + 'pieni ihmisjoukko kävelee sillalla.',
+          lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'ETH-BIB-Dobrovnik, Pile-Tor-Dia 247-09508.tif',
+          selite: 'Käsin väritetty valokuva Pilen portista vuodelta 1936, '
+            + 'hienoihin takkeihin pukeutuneita ihmisiä seisoo portin '
+            + 'edustalla.',
+          lahde: 'Leo Wehrli, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sponzan palatsi': {
+      aika: '1516–1522',
+      teksti: 'Sponzan palatsi rakennettiin vuosina 1516–1522 arkkitehti '
+          + 'Paskoje Miličevićin suunnitelmien mukaan, ja se yhdistelee '
+          + 'kahta tyyliä: osa rakennuksesta on goottilaista, osa '
+          + 'renessanssia. Nimi \'Sponza\' tulee latinan sanasta, joka '
+          + 'tarkoittaa paikkaa, johon sadevesi kerääntyy - katoilta '
+          + 'valuva vesi kerääntyi juuri tämän talon pihalle.'
+        + '\n\n'
+        + 'Palatsissa toimi melkein kaikki, mitä kaupungin '
+          + 'talouselämä tarvitsi: tulli, tavaravarasto, rahapaja, '
+          + 'asevarasto ja pankki, kaikki saman katon alla! Sisäpihan '
+          + 'holvikäytävässä kauppiaat punnitsivat tavaransa julkisesti '
+          + 'niin, ettei kukaan voinut huijata - seinään oli hakattu '
+          + 'latinankielinen muistutus rehellisyydestä.'
+        + '\n\n'
+        + 'Kun valtava maanjäristys tuhosi suuren osan Dubrovnikista '
+          + 'vuonna 1667, Sponzan palatsi selvisi lähes '
+          + 'vahingoittumattomana. Nykyään rakennuksessa säilytetään '
+          + 'kaupungin arkistoa, jonka vanhimmat asiakirjat ovat '
+          + 'peräisin jo 1000-luvulta - hyllyillä lepää yhteensä noin '
+          + '100 000 käsin kirjoitettua asiakirjaa.',
+      lainaus: {
+        teksti: 'Meidän vaakamme eivät salli petosta. Kun punnitsen '
+          + 'tavaroita, Jumala punnitsee kanssani.',
+        lahde: 'Latinankielinen kirjoitus Sponzan palatsin pihakäytävässä',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Sponza Palace, Dubrovnik, 16th century (1) (29859239440).jpg',
+          selite: 'Sponzan palatsin renessanssijulkisivu holvikaarineen, '
+            + 'goottilaisine kaksoisikkunoineen ja kellotorneineen.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Paleis Sponza te Dubrovnik Ragusa. Palazzo Sponza. (serietitel), RP-F-1919-182.jpg',
+          selite: 'Vanha valokuva Sponzan palatsista noin vuosilta 1890–1900, '
+            + 'muutama ohikulkija seisoo aukiolla arkadikäytävän edessä.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Vanhasatama: {
+      aika: '1100-luku–1873',
+      teksti: 'Vanhasatama oli Dubrovnikin sydän jo kauan ennen kuin '
+          + 'nykyistä kaupunkia rakennettiin - satama-alueelta on '
+          + 'löytynyt yli 2000 vuotta vanhoja kolikoita ja muita '
+          + 'jäänteitä ajalta ennen Rooman valtakuntaakin. Myöhemmin '
+          + 'satamasta lähti liikkeelle Dubrovnikin tasavallan mahtava '
+          + 'kauppalaivasto, joka teki pienestä kaupunkivaltiosta yhden '
+          + 'Adrianmeren rikkaimmista.'
+        + '\n\n'
+        + 'Sataman reunalla kohoaa kolme valtavaa kiviholvia - alun '
+          + 'perin niitä oli neljä, mutta yksi muurattiin myöhemmin '
+          + 'umpeen. Holvien takana sijaitsi telakka, jossa tasavallan '
+          + 'laivat rakennettiin ja korjattiin jo 1100-luvulta lähtien. '
+          + 'Sataman suulla vartioi Pyhän Johanneksen linnake, joka '
+          + 'esti vihollislaivoja pääsemästä sisään; nykyään linnakkeen '
+          + 'sisällä on akvaario.'
+        + '\n\n'
+        + 'Satamaa suojasi myös kaksi kivistä aallonmurtajaa: Kaše '
+          + 'vuodelta 1485 ja Porporela, joka valmistui vuonna 1873 - '
+          + 'täsmälleen samana vuonna, kun isoisän matkapäiväkirja '
+          + 'alkaa! Vaaran uhatessa sataman suun saattoi vielä sulkea '
+          + 'raskailla ketjuilla, jotka vedettiin linnakkeen ja '
+          + 'aallonmurtajan väliin.',
+      kuvat: [
+        {
+          tiedosto: '31.12.16 Dubrovnik 3 Around Sunset 40 (31635072250).jpg',
+          selite: 'Vanhasatama iltavalossa ylhäältä kuvattuna: satama-allas '
+            + 'veneineen, Lovrijenacin niemi vasemmalla ja punakattoinen '
+            + 'vanhakaupunki taustalla.',
+          lahde: 'Donald Judge, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Croatia-01870 - Old Port (10091210236).jpg',
+          selite: 'Vanhasataman veneitä ja vanhan telakkarakennuksen '
+            + 'holvikaaria aurinkoisena päivänä, matkustajia ja veneitä '
+            + 'rannassa.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lovrijenacin linnake': {
+      aika: '1301',
+      teksti: 'Tarinan mukaan Dubrovnikin asukkaat rakensivat '
+          + 'Lovrijenacin linnakkeen vain kolmessa kuukaudessa, kun he '
+          + 'kuulivat Venetsian aikovan pystyttää oman linnoituksensa '
+          + 'samalle kalliolle kaupungin länsipuolelle. Kun '
+          + 'venetsialaiset laivat lopulta saapuivat tuomaan '
+          + 'rakennustarvikkeita, linnake seisoi jo valmiina - ja '
+          + 'laivat käännytettiin takaisin merelle. Ensimmäinen '
+          + 'kirjallinen maininta linnakkeesta on vuodelta 1301.'
+        + '\n\n'
+        + 'Linnake kohoaa 37 metrin korkeudessa meren yllä, ja sen '
+          + 'pohjapiirros on kolmion muotoinen. Merta kohti osoittavat '
+          + 'muurit ovat lähes 12 metriä paksut, mutta kaupunkiin päin '
+          + 'katsovat seinät vain noin 60 senttimetriä - '
+          + 'dubrovnikilaiset luottivat siihen, ettei heidän oma '
+          + 'kaupunkinsa koskaan hyökkäisi omaa linnakettaan vastaan. '
+          + 'Linnaketta puolusti kymmenen suurta tykkiä, joista '
+          + 'suurinta kutsuttiin nimellä \'Gušter\', eli Lisko.'
+        + '\n\n'
+        + 'Portin yläpuolella on yhä luettavissa latinankielinen '
+          + 'lause, joka kertoi koko Dubrovnikin tasavallan '
+          + 'tärkeimmästä arvosta. Nykyään linnakkeen sisäpihalla '
+          + 'esitetään kesäisin näytelmiä, ja se on yksi Dubrovnikin '
+          + 'kesäfestivaalin kuuluisimmista näyttämöistä.',
+      lainaus: {
+        teksti: 'Vapautta ei myydä kaikella maailman kullalla.',
+        lahde: 'Latinankielinen kirjoitus Lovrijenacin linnakkeen portin '
+          + 'yllä (\'Non bene pro toto libertas venditur auro\')',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Croatia-01664 - Fortress Lovrijenac (10088562716).jpg',
+          selite: 'Lovrijenacin linnake jyrkän kallion päällä, kirkas sininen '
+            + 'taivas ja meri ympärillä, ei muita rakennuksia näkyvissä.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Bokar Fortress and the Old Town of Dubrovnik, Croatia (48613181692).jpg',
+          selite: 'Ilmakuva Lovrijenacin linnakkeesta merelle työntyvällä '
+            + 'niemellä, taustalla vanhankaupungin muurit ja punaiset '
+            + 'katot.',
+          lahde: 'Dronepicr, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'ETH-BIB-Dobrovnik, Fort Lovrijenac vom Hôtel Impérial-Dia 247-09506.tif',
+          selite: 'Käsin väritetty valokuva Lovrijenacin linnakkeesta '
+            + 'vuodelta 1936, kuvattu Hotel Imperialista käsin, alla '
+            + 'punakattoisia taloja.',
+          lahde: 'Leo Wehrli, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dubrovnikin katedraali': {
+      aika: '1671–1713',
+      teksti: 'Tarinan mukaan Englannin kuningas Rikhard Leijonamieli '
+          + 'haaksirikkoutui lähellä Lokrumin saarta vuonna 1192 '
+          + 'palatessaan ristiretkeltä. Pelastuttuaan hengissä hän '
+          + 'lupasi rakentaa kirkon kiitokseksi - ja rahoitti osan '
+          + 'Dubrovnikiin nousseesta ensimmäisestä kirkosta.'
+        + '\n\n'
+        + 'Tuo vanha kirkko vaurioitui pahasti vuoden 1667 valtavassa '
+          + 'maanjäristyksessä, joka mullisti koko kaupungin. '
+          + 'Dubrovnikilaiset eivät kuitenkaan luovuttaneet: uuden '
+          + 'katedraalin rakentaminen alkoi vuonna 1671 ja kesti peräti '
+          + '42 vuotta, kunnes se valmistui vuonna 1713. Roomalainen '
+          + 'arkkitehti Andrea Buffalini suunnitteli komean, '
+          + 'kupolikattoisen rakennuksen, joka on 41 metriä pitkä.'
+        + '\n\n'
+        + 'Katedraalin aarrekammiossa säilytetään 182 '
+          + 'pyhäinjäännöslipasta, joista osa sisältää kaupungin '
+          + 'suojeluspyhimyksen, pyhän Blasiuksen, jäännöksiä. '
+          + 'Pääalttarin yllä riippuu myös kuuluisan italialaismaalari '
+          + 'Tizianon maalaama taulu. Katedraali on selvinnyt '
+          + 'vuosisatojen varrella sekä maanjäristyksistä että sodista '
+          + 'ja seisoo yhä ylpeänä keskellä vanhaakaupunkia.',
+      kuvat: [
+        {
+          tiedosto: 'Façana de la catedral de Dubrovnik.JPG',
+          selite: 'Dubrovnikin katedraalin barokkijulkisivu pylväineen ja '
+            + 'patsaineen kirkkaan sinistä taivasta vasten, kupoli '
+            + 'siintää yläkulmassa.',
+          lahde: 'Joanbanjo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Cathedral of the Assumption, Dubrovnik, 1713 (1) (29933670232).jpg',
+          selite: 'Katedraalin kupoli ja sivujulkisivu patsaineen viistosta '
+            + 'alakulmasta kuvattuna.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Ragusa. Duomo LCCN2017660935.jpg',
+          selite: 'Väritetty 1890-luvun photochrom-valokuva Dubrovnikin '
+            + '(silloisen Ragusan) tuomiokirkosta, kuvattu viistosti '
+            + 'ylhäältä portaineen ja kupoleineen.',
+          lahde: 'Photoglob Co., Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
   PLACEHOLDER_ERA12
 };
