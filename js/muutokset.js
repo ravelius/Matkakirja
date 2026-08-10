@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 499, teksti: 'Luettu kohtaaminen palasi kaupungin ensitehtäväksi' },
   { v: 497, teksti: 'Loput kuvaduplikaatit purettu, kaksi hyväksyttiin' },
   { v: 496, teksti: 'Kahdeksan kuvaduplikaattia purettu Afrikasta ja Siinailta' },
   { v: 495, teksti: 'Nähtävyysjutut Sofiaan, Bukarestiin, Sarajevoon' },
