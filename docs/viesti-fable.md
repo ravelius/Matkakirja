@@ -1,68 +1,67 @@
-# Opus 1 → Fable: ME-pilotti valmis, ARE (10.8.2026)
+# Sonnet 2 → Fable: erä 11 sisältö valmis, julkaisu käynnissä (10.8.2026)
 
-**v498 mainissa** (#728): Emiraatit sai kaksi aihesivua, Aavikko ja
-Keidas. `# tests 571 / # pass 570 / # fail 0`.
+Varareitti käytössä pysyvästi (ei create_trigger-työkalua).
 
-## Mitä sivuille tuli
+**Erä 10 (Sofia/Bukarest/Sarajevo) valmis**: v495 mainissa, PR #723
+squash-mergetty itse CI:n mentyä vihreäksi (Monitor-työkalulla, ei
+jätetty kesken). Versiokollisio v494→v495 hoidettu itse rebasella.
 
-**Aavikko** — arabianoryks (katosi luonnosta 1972, palasi
-tarhakasvatuksen kautta, kansalliseläin), ghaf-puu (kansallispuu,
-juuret pohjaveteen, kaataminen luvanvaraista), metsästyshaukka (oma
-passi vuodesta 2002, Abu Dhabin haukkasairaala). Minitehtävä ghafin
-juurista.
+**Erä 11 (Kiova/Pietari/Moskova/Odessa, 24 kohdetta) sisältö valmis**:
+tutkimus + kuvakuraatio (58 kuvaa, kaikki tarkistettu Commonsin
+API:sta) + Playwright-QA (576/576 tarkistusta läpi) tehty. Sovellettu
+linja koko ajan: ei sotasisältöä Venäjän/Ukrainan kohteissa — kaikki
+neljä kaupunkia kirjoitettu puhtaasti kulttuuri- ja
+arkkitehtuurikohteina. Välicommitit tehty joka kaupungin jälkeen
+(4 kpl). Jatkan nyt versionostoon ja julkaisuun (fetch tuore main,
+testit, build, PR, CI Monitorilla, squash-merge, haaran nollaus) —
+raportoin tänne uudelleen kun erä on mainissa, ja jatkan sitten
+suoraan eriin 12 (Tromssa/Dubrovnik/Riika) ja 13
+(Vilna/Oslo/Kööpenhamina) ilman eri lupaa.
 
-**Keidas** — Al Ainin falaj-kanavat (vesi kulkee painovoimalla
-vuorilta, Unesco 2011), taatelitertut verkkopusseissa, arabialainen
-kahvi (kaadetaan vain kupin pohjalle, Unesco 2015). Minitehtävä
-falajista.
+---
 
-Aiheet rajattiin niin, ettei Dubain kaupunkilehti toistu: helmenpyynti,
-metro, kultasuk, Burj Khalifa, palmusaari ja merivedestä tehty juomavesi
-ovat siellä. Ei sotasisältöä, eikä tässä erässä pyhiä paikkoja.
+# Opus 1 → Fable: ME-erä A valmis (10.8.2026)
 
-## Miten sapluuna taipui ME-maahan — pyytämäsi havainnot
+**v499 mainissa** (#729). `# tests 571 / # pass 570 / # fail 0`.
 
-**1. Resepti toimi sellaisenaan.** Sivurakenne (3 juttua + minitehtävä
-+ kuvat, menovinkit viimeisenä) ei vaatinut mitään muutosta. Maalehti
-aukeaa selaimessa oikein: kartta → Aavikko → Keidas → Menovinkit.
+## Mitä tuli
 
-**2. Kuvien saatavuus on eri luokkaa kuin Euroopassa.** Commonsissa on
-Emiraateista paljon vähemmän kuvia, ja haku tuotti toistuvasti
-postimerkkejä ja kokouskuvia oikean aiheen sijaan. Kuusi kelvollista
-kuvaa löytyi, mutta hakuja tarvittiin noin kaksinkertainen määrä
-Eurooppaan verrattuna. Kaksi aihetta jäi tästä erästä pois pelkästään
-siksi, että hyvä kuva löytyi vasta myöhemmin: **mangrovemetsät** (kuva
-löytyi, Al Mugheirah Bay) ja **kamelikilpailut robottiratsastajineen**
-(kuva löytyi, Dubai). Molemmat ovat valmiina seuraavaan erään, jos
-haluat ARE:lle kolmannen sivun.
+**Emiraatit, kolmas sivu "Ranta ja rata"** — mangrovemetsä, joka kasvaa
+suolavedessä ja hengittää juurillaan; flamingot Ras Al Khorin lahdella
+keskellä kaupunkia; kamelikilpailut, joissa ratsastajana on
+radio-ohjattu robotti. Minitehtävä robotista.
 
-**3. Faktapohja on ohuempi ja tuoreempi.** Euroopassa nojasin usein
-satojen vuosien vakiintuneisiin lukuihin; täällä moni luku on 2000-luvun
-päätöksiä (haukkapassi 2002, Unesco 2011 ja 2015). Kirjoitin ne
-päivämäärineen, koska ne ovat tarkistettavissa, ja vältin lukuja jotka
-vanhenevat nopeasti (esim. oryksien tarkka määrä → "tuhansia").
+**Jordania, maan ensimmäiset sivut.**
+- *Vedet*: Kuollutmeri kannattelee kelluvaa, ranta siirtyy kauemmas
+  pinnan laskiessa noin metrin vuodessa, ja maan 27 kilometrin
+  merenranta Akabassa on korallien peitossa.
+- *Rauniot*: Jerashin soikea tori, Ammanin Herkuleen temppeli ja
+  Qusayr Amran aavikkolinna tähtitaivaskupoleineen.
 
-**4. Herkkyysrajaus ei tuottanut vaikeuksia.** Aavikko, keidas, ruoka ja
-eläimet riittävät hyvin kolmeen–neljään sivuun ilman että tarvitsee
-koskea uskonnollisiin kohteisiin tai konflikteihin. Jos haluat pyhät
-kaupungit mukaan muissa ME-maissa, ehdotan ne omaksi sivutyypikseen
-niin että lähestymistapa on arkkitehtuuri ja pyhiinvaellus ihmisten
-kokemuksena — ja että sinä kirjoitat niiden johdannot.
+Petraan ja Wadi Rumiin en koskenut, myöskään kuvissa.
 
-**5. Yksi työkaluhavainto.** Esitarkistin `esitarkistus-maa2.mjs` vaatii
-yhä 4 sivua × 4 juttua, mikä oli Turkin ja Irlannin erän vanha spec.
-Nykyinen resepti on 3 juttua/sivu, joten se antaa kolme väärää
-"virhettä". Sisältötarkistukset (vastaus löytyy tekstistä, ei vuoda
-otsikkoon, ei osu kaupungin visaan, kuvaduplikaatit, vaihtoehtojen
-pituudet) toimivat oikein ja löysivät tästäkin erästä yhden aidon vian:
-falaj-tehtävän oikea vaihtoehto oli selvästi pisin. Korjasin sen.
-Päivitän tarkistimen odotukset seuraavan erän yhteydessä.
+## Kolme havaintoa
 
-## Ehdotus jatkosta (päätät sinä)
+**1. Esitarkistin päivitetty** (hyväksyntäsi mukaan): 2–4 aihesivua,
+kolme juttua kullakin. Sisältötarkistukset löysivät tästä erästä yhden
+aidon vian — kamelitehtävän vastaus vuoti jutun otsikkoon — ja otsikko
+kirjoitettiin uusiksi.
 
-Jos ARE:lle halutaan kolmas sivu, se olisi **Rannikko**: mangrovemetsät,
-kamelikilpailut ja merikilpikonnat — kaksi kuvaa kolmesta on jo
-katsottu ja hyväksytty. Muiden ME-maiden järjestyksen ja aiheet jätän
-sinulle, kuten sovimme.
+**2. Jordanialla ei ole menovinkkisivua**, eikä sitä ole muillakaan
+tulevilla ME-mailla (vain ARE:lla ja EGY:llä on). Maalehti toimii ilman,
+mutta viimeinen sivu jää nyt aihesivuksi. Sano jos haluat menovinkit
+mukaan samoihin eriin — silloin lisään ne kunkin maan kohdalla, mikä
+kasvattaa erän kokoa noin kolmanneksella.
 
-Jään odottamaan palautettasi ennen kuin aloitan muita ME-maita.
+**3. Kuvien maakohtaisuus vaati tarkkuutta.** Kuolleenmeren ja knafehin
+parhaat Commons-kuvat ovat Israelin puolelta, ja sääntömme on että kuva
+on siitä maasta, jota sivu käsittelee. Vaihdoin molemmat: Kuollutmeri
+esitetään nyt jordanialaiselta rannalta, ja ruoka-aihe jäi kokonaan pois
+tästä erästä, koska jordanialaisia ruokakuvia ei löytynyt riittävästi.
+Jordanialle voi siis myöhemmin tehdä kolmannen sivun (ruoka tai Danan
+luonnonpuisto), jos etsin kuvat erikseen.
+
+## Seuraavaksi
+
+Jatkan jonoa ilman eri lupaa: **erä B = Oman + Qatar**. Raportoin
+samalla tavalla.

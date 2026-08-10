@@ -15247,4 +15247,282 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  OMN: [
+    {
+      id: 'vuoret',
+      nimi: 'Vuoret',
+      johdanto: 'Omanin pohjoisosassa nousee kivinen vuoristo, jonka rinteille on '
+        + 'rakennettu kyliä paikkoihin, joihin ei näyttäisi mahtuvan mitään. '
+        + 'Etelässä maasto laskee tasangoksi, jolla kasvaa puu, jonka '
+        + 'pihkasta tuli aikanaan kauppatavaraa.',
+      nostot: [
+        {
+          otsikko: 'Kanjoni, jonka pohjaa ei näe ylhäältä',
+          tiedosto: 'Canyon at Jebel Shams, Oman.jpg',
+          teksti: 'Jebel Shams on Omanin korkein vuori, noin kolme kilometriä '
+            + 'merenpinnan yläpuolella. Sen kyljessä ammottaa Wadi Nakhrin '
+            + 'rotko, jota sanotaan Arabian Grand Canyoniksi: seinämät '
+            + 'putoavat yli kilometrin syvyyteen, eikä pohjaa erota reunalta '
+            + 'katsottuna. Rotkon seinämään on hakattu vanha polku, jota '
+            + 'pitkin kuljettiin ennen kylien välillä. Ylhäällä on niin '
+            + 'viileää, että talviaamuina kiviin tulee huurretta — sama '
+            + 'vuori, jonka juurella on aavikko.',
+          selite: 'Jebel Shamsin rotko aamuvalossa. Kalliokerrokset laskeutuvat '
+            + 'portaittain syvyyteen, ja kaukana häämöttävät siniset '
+            + 'vuorenharjanteet.',
+          lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kylät kasvavat kalliolle portaissa',
+          tiedosto: 'Step Gardens of Jebel Akhdar - Oman.jpg',
+          teksti: 'Jebel Akhdar tarkoittaa vihreää vuorta. Kahden ja puolen '
+            + 'kilometrin korkeudessa on viileämpää kuin rannikolla, ja '
+            + 'rinteille on rakennettu kapeita terassipeltoja kivimuurien '
+            + 'varaan. Niissä kasvaa granaattiomenaa, aprikoosia, '
+            + 'viinirypälettä ja ennen kaikkea ruusuja: kukat poimitaan '
+            + 'huhtikuun aamuina ja niistä tislataan ruusuvettä. Vesi tuodaan '
+            + 'pelloille kanavia pitkin lähteestä, ja jokainen terassi saa '
+            + 'vuorollaan oman osuutensa.',
+          selite: 'Kyliä Jebel Akhdarin rinteellä. Terassipellot kiertävät '
+            + 'kalliota kapeina vihreinä kaistoina, ja talot on rakennettu '
+            + 'jyrkänteen reunalle.',
+          lahde: 'Ketan Mehta, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Puu, jonka hartsi oli kullan arvoista',
+          tiedosto: 'Frankincense.JPG',
+          teksti: 'Etelässä Dhofarin kuivilla tasangoilla kasvaa suitsukepuu. Kun '
+            + 'sen runkoon tehdään viilto, haavasta valuu vaaleaa pihkaa, '
+            + 'joka kovettuu ilmassa jyviksi. Jyviä poltetaan hiilellä, ja '
+            + 'niistä nousee tuoksuva savu. Suitsuketta kuljetettiin täältä '
+            + 'kamelikaravaaneilla ja laivoilla halki muinaisen maailman, ja '
+            + 'se oli aikanaan yhtä kallista kuin kulta. Vanhat '
+            + 'karavaanireitit ja satamat kuuluvat Unescon '
+            + 'maailmanperintöluetteloon.',
+          selite: 'Kasa suitsukehartsia Dhofarista. Vaaleankeltaiset jyvät ovat '
+            + 'läpikuultavia ja epätasaisen muotoisia, kuin kovettuneita pisaroita.',
+          lahde: 'Gaius Cornelius, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Jebel Akhdarin rinteillä kasvaa ruusuja ja hedelmäpuita?',
+        vaihtoehdot: [
+          'Vuorella sataa lunta talvisin',
+          'Korkealla on viileämpää kuin rannikolla',
+          'Maa on siellä poikkeuksellisen mustaa',
+          'Kasvit kastellaan merivedellä',
+        ],
+        oikea: 1,
+        fakta: 'Ruusuista tislataan ruusuvettä, jota käytetään ruoassa ja '
+          + 'hajusteena.',
+      },
+    },
+    {
+      id: 'meri',
+      nimi: 'Meri',
+      johdanto: 'Oman on merenkulkijoiden maa. Rannikolta purjehdittiin Intiaan ja '
+        + 'Itä-Afrikkaan kauan ennen höyrylaivoja, ja samoille rannoille '
+        + 'tulee yhä kilpikonnia munimaan.',
+      nostot: [
+        {
+          otsikko: 'Laiva rakennetaan ilman piirustuksia',
+          tiedosto: 'Oman, Sur, Dhow shipyard.jpg',
+          teksti: 'Surin kaupungissa on yhä telakoita, joilla tehdään puisia '
+            + 'dhow-purjelaivoja. Rungon muoto on mestarin päässä eikä '
+            + 'paperilla: lankut taivutetaan ja sovitetaan silmämääräisesti, '
+            + 'ja työ etenee kylki kerrallaan. Ennen lankut sidottiin yhteen '
+            + 'kookoskuidusta punotulla köydellä ilman nauloja, mikä teki '
+            + 'rungosta joustavan. Valmiilla laivoilla purjehdittiin '
+            + 'taatelilastissa Intiaan ja Sansibariin ja palattiin mausteiden '
+            + 'kanssa. Nykyään moni dhow tehdään matkailukäyttöön.',
+          selite: 'Puinen dhow rakenteilla telakalla Surissa. Runko seisoo tukien '
+            + 'varassa, kylki on vielä auki ja ympärillä on tikapuita ja '
+            + 'telineitä.',
+          lahde: 'Dr. Thomas Liptak, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Poikaset kaivautuvat hiekasta yöllä',
+          tiedosto: 'Green trurtle at ras al jinz oman hatchling.JPG',
+          teksti: 'Ras al Jinzin ranta Omanin itäkärjessä on yksi maailman '
+            + 'tärkeimmistä vihreän merikilpikonnan munimispaikoista. Naaras '
+            + 'nousee rannalle yöllä, kaivaa takaräpylöillään kuopan ja munii '
+            + 'siihen noin sata munaa. Poikaset kuoriutuvat parin kuukauden '
+            + 'kuluttua ja kaivautuvat esiin pimeässä. Ne suunnistavat '
+            + 'merelle valon mukaan: meren puoli on aina vaaleampi kuin '
+            + 'dyynien puoli. Ranta on suojelualuetta, ja vierailijat '
+            + 'kulkevat siellä oppaan kanssa ilman taskulamppuja.',
+          selite: 'Vihreän merikilpikonnan poikanen ryömii hiekalla kohti merta. '
+            + 'Räpylät ovat jättäneet hiekkaan kaksi rinnakkaista jälkeä.',
+          lahde: 'F igy, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Vuonot, joita sanotaan Arabian Norjaksi',
+          tiedosto: 'Dhow trip in the fjords of Musandam, Oman (36208084624).jpg',
+          teksti: 'Omanin pohjoisin osa, Musandamin niemimaa, on erillään muusta '
+            + 'maasta. Sinne vuoristo laskeutuu suoraan mereen ja jättää '
+            + 'väliinsä kapeita lahtia, jotka näyttävät vuonoilta — siksi '
+            + 'paikkaa sanotaan Arabian Norjaksi. Todellisuudessa ne eivät '
+            + 'ole jäätikön uurtamia vaan syntyivät, kun maankuori painui '
+            + 'hitaasti alas ja meri täytti laaksot. Kylien väliä kuljetaan '
+            + 'yhä veneellä, koska teitä ei kaikkialle ole, ja delfiinit '
+            + 'seuraavat usein veneitä lahdelta toiselle.',
+          selite: 'Musandamin vuono Omanissa. Paljaat vuoret laskeutuvat mereen '
+            + 'molemmin puolin, ja keskellä sinistä vettä kulkee yksinäinen '
+            + 'puuvene.',
+          lahde: 'Robert Haandrikman, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä ohjaa kuoriutuneen kilpikonnanpoikasen kohti merta?',
+        vaihtoehdot: [
+          'Emo kantaa sen rantaveteen',
+          'Aaltojen ääni hiekan läpi',
+          'Meren puolen vaalea valo',
+          'Tuulen suunta rannalla',
+        ],
+        oikea: 2,
+        fakta: 'Siksi rantojen valot pidetään sammuksissa munimisaikaan: kirkas '
+          + 'lamppu johtaisi poikaset väärään suuntaan.',
+      },
+    },
+  ],
+  QAT: [
+    {
+      id: 'aavikko',
+      nimi: 'Aavikko',
+      johdanto: 'Qatar on niemimaa, jonka pinta-alasta lähes kaikki on matalaa '
+        + 'kivikkoa ja hiekkaa. Se ei tarkoita tasaista: tuuli on veistänyt '
+        + 'kallioita, ja meri työntyy paikoin syvälle maalle asti.',
+      nostot: [
+        {
+          otsikko: 'Meri työntyy dyynien väliin',
+          tiedosto: 'Khor Al Adaid Inland Sea and desert in Katar.jpg',
+          teksti: 'Maan eteläkärjessä meri ulottuu kapeaa uomaa pitkin syvälle '
+            + 'autiomaahan. Paikkaa sanotaan sisämereksi, Khor Al Adaidiksi, '
+            + 'ja sinne pääsee vain hiekan halki. Vuorovesi täyttää ja '
+            + 'tyhjentää altaan kahdesti vuorokaudessa, joten rantaviiva '
+            + 'siirtyy päivän mittaan satoja metrejä. Matalassa suolaisessa '
+            + 'vedessä elää rapuja ja pieniä kaloja, ja talvella lahdella '
+            + 'lepää muuttolintuja matkallaan etelään. Alue on '
+            + 'luonnonsuojelualuetta, jonne mennään oppaan kanssa.',
+          selite: 'Khor Al Adaidin sisämeri. Hiekkadyynit laskeutuvat suoraan '
+            + 'siniseen veteen, ja tasaisella rannalla näkyy renkaanjälkiä.',
+          lahde: 'Flashpacker Travelguide, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kalliot seisovat jalan varassa',
+          tiedosto: 'Zekreet Peninsula - Rock formation 01.jpg',
+          teksti: 'Zekreetin niemimaalla länsirannikolla seisoo outoja '
+            + 'kalkkikivipaaseja: leveä hattu ohuen jalan päällä. Ne ovat '
+            + 'syntyneet tuulesta. Hiekanjyvät lentävät lähellä maanpintaa, '
+            + 'joten ne hiovat kiveä eniten alaosasta, ja pehmeämpi kivi '
+            + 'kuluu kovempaa nopeammin. Lopputulos näyttää sieneltä. Sama '
+            + 'tuuli siirtää dyynejä hitaasti paikasta toiseen, ja '
+            + 'autiomaassa erottuu paikoin vanhoja rantaviivoja ajalta, '
+            + 'jolloin meri ulottui kauemmas.',
+          selite: 'Sienen muotoinen kalkkikivipaasi Zekreetissä. Leveä yläosa '
+            + 'lepää kapean jalan päällä, ja ympärillä on vaaleaa soraa.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Vanha kauppakaupunki jäi hiekan alle',
+          tiedosto: 'Qatar - Al Zubarah Fort 02.jpg',
+          teksti: 'Luoteisrannikolla oli 1700-luvulla Al Zubarah, vilkas satama- '
+            + 'ja helmenpyyntikaupunki, jossa asui tuhansia ihmisiä. Kaupunki '
+            + 'hiljeni 1800-luvulla, ja hiekka peitti sen kadut, talot ja '
+            + 'muurit. Juuri siksi se on säilynyt: paikka on Qatarin '
+            + 'ensimmäinen Unescon maailmanperintökohde, ja kaivauksissa on '
+            + 'paljastunut kokonaisia korttelipohjia. Rannalla seisoo '
+            + '1930-luvulla rakennettu linnake, jonka kulmatorneista näkee '
+            + 'kauas merelle.',
+          selite: 'Al Zubarahin linnake autiomaassa. Vaalea nelikulmainen '
+            + 'rakennus, jonka kolmessa kulmassa on pyöreä torni ja '
+            + 'neljännessä kulmikas.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Zekreetin kalliot ovat sienen muotoisia?',
+        vaihtoehdot: [
+          'Tuuli kuluttaa alaosaa nopeammin',
+          'Ne on veistetty työkaluilla',
+          'Sade on liuottanut kiven päältä',
+          'Meri peitti ne aikoinaan kokonaan',
+        ],
+        oikea: 0,
+        fakta: 'Hiekka lentää tuulessa lähellä maanpintaa, joten se hioo '
+          + 'kalliota eniten alhaalta.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Dohassa vanha ja uusi ovat vierekkäin: savesta ja kivestä muurattu '
+        + 'kauppakuja, ja sen takana museoita, joiden muodot on lainattu '
+        + 'aivan muualta kuin aiemmilta rakennuksilta.',
+      nostot: [
+        {
+          otsikko: 'Museo koottiin kiekoista',
+          tiedosto: 'National Museum of Qatar.jpg',
+          teksti: 'Qatarin kansallismuseo avattiin Dohassa vuonna 2019. Sen muoto '
+            + 'on lainattu aavikkoruususta: se on kiekkomainen kide, joka '
+            + 'syntyy hiekkaan, kun suolainen vesi haihtuu ja jättää '
+            + 'jälkeensä ohuita levyjä. Museo on rakennettu sadoista '
+            + 'betonikiekoista, jotka nojaavat toisiinsa eri kulmissa, eikä '
+            + 'samanlaista kiekkoa ole kahta. Rakennuksen sisällä kiertää '
+            + 'puolentoista kilometrin mittainen reitti, ja sen keskellä '
+            + 'seisoo vanha emiirin palatsi, jonka ympärille museo on '
+            + 'rakennettu.',
+          selite: 'Qatarin kansallismuseo portinholvista katsottuna. Vaaleat '
+            + 'kiekot lomittuvat toistensa päälle kuin kaatuneet levyt.',
+          lahde: 'CallMeBarcode, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kauppakuja muurattiin uudelleen entiselleen',
+          tiedosto: 'Souq Waqif, Doha, Catar, 2013-08-05, DD 107.JPG',
+          teksti: 'Souq Waqif tarkoittaa seisovaa toria. Paikalla on käyty '
+            + 'kauppaa yli sata vuotta: beduiinit toivat sinne villaa ja '
+            + 'karjaa ja saivat vastineeksi tavaraa satamasta. Vanhat '
+            + 'rakennukset olivat jo rapistuneet, ja 2000-luvun alussa ne '
+            + 'purettiin ja muurattiin uudelleen vanhoilla menetelmillä — '
+            + 'savi- ja kivimuuria, kattopalkkeina mangrovepuun runkoja. '
+            + 'Kujilla myydään mausteita, kankaita ja lintuja, ja illalla '
+            + 'tori täyttyy ihmisistä, kun päivän kuumin aika on ohi.',
+          selite: 'Kapea kuja Souq Waqifissa. Molemmin puolin nousee kivimuuri, '
+            + 'josta työntyy esiin puisten kattopalkkien päitä, ja '
+            + 'ikkunanpielet on maalattu sinisiksi.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Islamilaisen taiteen museo seisoo omalla saarellaan',
+          tiedosto: 'Museum of Islamic Art in Doha (3820043632).jpg',
+          teksti: 'Dohan lahdelle on tehty pieni tekosaari, jotta museon '
+            + 'ympärille ei koskaan rakennettaisi mitään sen viereen. Sillä '
+            + 'seisoo Islamilaisen taiteen museo, jonka suunnitteli '
+            + '91-vuotias arkkitehti I. M. Pei. Hän kiersi ensin kuukausia '
+            + 'katsomassa vanhoja rakennuksia ja otti lopulta mallia erään '
+            + 'kairolaisen moskeijan suihkulähteestä: rakennus kapenee '
+            + 'ylöspäin portaittain, ja ylimmässä kerroksessa on ikkuna, '
+            + 'josta näkyy merelle. Kokoelmassa on esineitä tuhannen vuoden '
+            + 'ajalta.',
+          selite: 'Islamilaisen taiteen museo Dohassa. Vaalea kivirakennus nousee '
+            + 'portaittaisina laatikoina veden äärellä, ja edessä kasvaa '
+            + 'palmurivi.',
+          lahde: 'Mohamed Nanabhay, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Qatarin kansallismuseon muoto on lainattu?',
+        vaihtoehdot: [
+          'Purjelaivan kolmiopurjeesta',
+          'Taatelipalmun riippuvista lehdistä',
+          'Aavikkoruususta eli kiteestä',
+          'Vanhan linnakkeen torneista',
+        ],
+        oikea: 2,
+        fakta: 'Aavikkoruusu syntyy, kun suolainen vesi haihtuu hiekassa ja '
+          + 'jättää jälkeensä levymäisiä kiteitä.',
+      },
+    },
+  ],
 };
