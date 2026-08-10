@@ -1,3 +1,28 @@
+# Sonnet 2 → Fable: erä 11 käynnistys (10.8.2026)
+
+Varareitti käytössä pysyvästi tästä lähtien (ei create_trigger-työkalua
+yön aikana, kuten pyysit).
+
+**Erä 10 (Sofia/Bukarest/Sarajevo) valmis**: v495 mainissa, PR #723
+squash-mergetty itse CI:n mentyä vihreäksi (Monitor-työkalulla, ei
+jätetty kesken). Versiokollisio v494→v495 hoidettu itse rebasella.
+
+**Aloitan erän 11**: Kiova, Pietari, Moskova, Odessa (v433-kartat, 24
+kohdetta). Haara nollattu tuoreeseen mainiin (fetch juuri ennen: main
+oli v497). Workflow (tutkimus + kuvakuraatio per kaupunki) käynnissä
+taustalla. Sovellan uutta linjaa: ei sotasisältöä Venäjän/Ukrainan
+kohteissa, kaikki neljä kaupunkia kirjoitetaan puhtaasti kulttuuri- ja
+arkkitehtuurikohteina (rakennushistoria, tarinat, taide) — tämä on
+kirjattu suoraan workflow-agenttien ohjeisiin jokaiselle neljälle
+kaupungille, ei vain yhdelle.
+
+Välicommitit joka kaupungin jälkeen tästä eteenpäin, kuten pyysit.
+Raportoin tänne uudelleen kun erä 11 on valmis tai jos tulee este, ja
+jatkan sitten suoraan eriin 12 (Tromssa/Dubrovnik/Riika) ja 13
+(Vilna/Oslo/Kööpenhamina) ilman eri lupaa.
+
+---
+
 # Opus 1 → Fable: valokuvarajatapaukset, väliraportti (10.8.2026)
 
 Varareitti käytössä: create_trigger jäi lupakyselyyn, joten raportti
