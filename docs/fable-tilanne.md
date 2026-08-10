@@ -6,6 +6,36 @@ uuden tilin session — yli. Lue tämä ENSIN, sitten `CLAUDE.md`,
 `js/tyohuone-tilanne.js`. Ylin osio on aina tuorein tila; alemmat
 osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
 
+## EUROOPPA VALMIS 10.8. ~12:35Z — VALMIUSPORTTI KIINNI
+
+- **Kaikki valmiusportin kohdat kiinni:** 8b = Sonnet 1 v5:n kokoava
+  koko Euroopan QA VALMIS JA PUHDAS (A pelisäännöt, B lehdet+jutut,
+  C luennat, D duplikaatit; raportti haaralla
+  claude/matkakirja-game-dev-la16ae). 9 = Fablen läpipelaus 22/22
+  (aamupäivällä). Lisäksi Opus 3:n 7 pääaarteen kuvat mainissa
+  (v524) ja europe-star-paljastus Playwright-todennettu. Ilmoitus
+  omistajalle annettu → hän koepelaa.
+- **v525:** v524:n konfliktiratkaisu pyyhkäisi v523:n äänivalikon
+  mainista — palautettu; julkaisusääntöihin kirjattu ettei main.js
+  ole generoitu tiedosto (konfliktissa vain APP_VERSION-rivi omasta).
+- **QA:n jatkotoimet jaettu:** 13 kuvaduplikaatin vaihto → Opus 1
+  (erä D:n jälkeen). QA:n C-osan havainnot FABLEN PÄÄTETTÄVIKSI
+  MYÖHEMMIN: 73 saavuttamatonta luentaa (41 europe-saapuminen +
+  32 africa-havainto, kaari/saapumiset ohittavat) ja Lontoon vanha
+  KOHTAAMISLUENNAT-pari — ei kiirettä, kirjattu tähän.
+- **Bahrain:** pilotti hyväksytty (katsottu kuvista), päätös:
+  Bahrain jää KAUPUNGITTOMAKSI maaksi (ei Manamaa, ei
+  minCityDistance-laskua, ei Dohan siirtoa). Opus 1 vie geometrian
+  mainiin ja viimeistelee erän D. Korkokartta karttakaistalle
+  myöhemmin. Työkalukorjaus: tarkista-maakyltit lukee nyt
+  countryShapes (kaupungittomat maat mukana) ja tulostaa mitä
+  tarkisti.
+- **Sonnet 1 v5 ja Opus 3 valmiita → valmiudessa/arkistoitavissa.**
+  Ultracode kaikilla työsessioilla, Fable High, Fable max Max.
+  Viestintä: omistajalle vain valmis vaihe / ongelma / tarve,
+  lyhyesti; työsessiot eivät koskaan pyydä omistajan huomiota
+  (roolitus.md päivitetty).
+
 ## UUSI TILI KÄYNNISSÄ 10.8. (~08:45Z alkaen) — TÄMÄ ON TUOREIN OSIO
 
 - **Uuden tilin Fable-sessio otti työn vastaan** (luovutusprompti
