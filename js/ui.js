@@ -6965,7 +6965,38 @@ export class UI {
       kotelo.appendChild(laskuri);
     }
     nayta();
-    kortti.addEventListener('click', () => this.suljeKulttuuriKuva());
+    /*
+     * Pyyhkäisy selaa sarjaa kuten lehden kuvakotelossa (omistajan
+     * toive 10.8.2026). Veto ei saa sulkea katselinta: selain laukoo
+     * clickin myös raahauksen päätteeksi, joten pyyhkäisyn ja
+     * liikkuneen vedon jälkeinen click ohitetaan lipulla.
+     */
+    let veto = null;
+    let ohitaSulku = false;
+    // Lippu nollataan eleen ALUSSA: kosketusnäytöllä pyyhkäisy ei
+    // tuota clickiä lainkaan, joten pelkkä click-puolen nollaus jätti
+    // lipun päälle ja nielaisi pyyhkäisyä seuraavan sulkunapautuksen.
+    kortti.addEventListener('pointerdown', (e) => { veto = { x: e.clientX, y: e.clientY }; ohitaSulku = false; });
+    kortti.addEventListener('pointercancel', () => { veto = null; });
+    kortti.addEventListener('pointerup', (e) => {
+      const alku = veto;
+      veto = null;
+      if (!alku) return;
+      const dx = e.clientX - alku.x;
+      const dy = e.clientY - alku.y;
+      if (lista && Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+        indeksi = (indeksi + (dx < 0 ? 1 : -1) + lista.length) % lista.length;
+        sfx.play('paper');
+        nayta();
+        ohitaSulku = true;
+      } else if (Math.hypot(dx, dy) > 10) {
+        ohitaSulku = true;
+      }
+    });
+    kortti.addEventListener('click', () => {
+      if (ohitaSulku) { ohitaSulku = false; return; }
+      this.suljeKulttuuriKuva();
+    });
     /*
      * Suurennos liitetään PÄÄLLIMMÄISEEN avoimeen dialogiin. Modaali
      * (showModal) elää selaimen top layer -kerroksessa, joka peittää
@@ -8983,6 +9014,10 @@ export class UI {
         kehys.classList.add(uusi.naturalWidth >= uusi.naturalHeight ? 'kuva-vaaka' : 'kuva-pysty');
       });
       this.varustaNostonKuva(uusi, kuva, 900);
+      // Suurennos aukeaa koko sarjana (omistajan toive 10.8.2026:
+      // "täysikoon kuvakaruselli samanlaiseksi kuin lehtisivulla") —
+      // galleriaTila antaa katselimelle nuolet, laskurin ja selauksen.
+      uusi.galleriaTila = { teokset: kuvat, kohdalla: kohta };
       if (el) el.replaceWith(uusi); else ikkuna.prepend(uusi);
       el = uusi;
       teksti.replaceChildren();
