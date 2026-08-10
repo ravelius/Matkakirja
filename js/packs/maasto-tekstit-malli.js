@@ -92,12 +92,12 @@ export const MAASTO_TEKSTIT_MALLI = {
           linkki: 'https://www.gutenberg.org/ebooks/3284',
         },
         {
-          tiedosto: 'Jules Leclercq- Aux sources du Nil-1913-chutes Ripon.jpg',
-          selite: 'Ripon Falls, jonka Speke nimesi Lontoon maantieteellisen '
-            + 'seuran puheenjohtajan mukaan. Kuva on vuodelta 1913. '
-            + 'Putouksia ei enää ole: Owen Fallsin pato nosti veden niiden '
-            + 'ylle vuonna 1954.',
-          lahde: 'Wikimedia Commons (PD)',
+          tiedosto: 'Le Tour du monde-09-p365.jpg',
+          lahde: 'Alexandre de Bar, Wikimedia Commons (PD)',
+          selite: 'Ripon Falls 1860-luvun matkakirjan puupiirroksessa: Niili '
+            + 'syöksyy Victoriajärvestä kalliokynnyksen yli. Putouksia ei '
+            + 'enää ole, sillä Owen Fallsin pato nosti veden niiden ylle '
+            + 'vuonna 1954.',
         },
         {
           teksti: 'Kotona väitettä ei uskottu. Richard Burton, Speken oma '

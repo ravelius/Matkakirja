@@ -252,10 +252,11 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ricardo Liberato, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
-          tiedosto: 'Muhammad Ali Mosque 1.jpg',
-          selite: 'Muhammad Alin alabasterimoskeija linnoituskukkulalla '
-            + 'hallitsee kaupungin siluettia.',
-          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Cairo Citadel P1020127.jpg',
+          lahde: 'Nikolay Chakrakchiev, Wikimedia Commons (CC BY 3.0)',
+          selite: 'Näkymä Kairon linnoitukselta kaupungin ylle. Etualalla '
+            + 'kohoavat Sulttaani Hassanin ja al-Rifa\'in moskeijoiden '
+            + 'minareetit, taustalla keskustan tornit.',
         },
         {
           tiedosto: 'Khan el-Khalili, Cairo Egypt - panoramio (7).jpg',
@@ -982,11 +983,11 @@ export const KULTTUURI_KATEGORIAT = {
         + 'kadunkulmassa.',
       kansikuvat: [
         {
-          tiedosto: 'Brandenburger Tor abends.jpg',
-          selite: 'Brandenburgin portti iltavalossa. Portin päällä ajaa '
-            + 'voitonjumalatar nelivaljakollaan — Napoleon vei sen '
-            + 'sotasaaliiksi Pariisiin 1806, mutta se haettiin takaisin.',
-          lahde: 'Thomas Wolf (foto-tw.de), Wikimedia Commons (CC BY-SA 3.0 DE)',
+          tiedosto: 'Berliner Dom BW 5.jpg',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 3.0)',
+          selite: 'Berliinin tuomiokirkko Museosaarella. Vihertävä kuparikupoli '
+            + 'nousee kivijulkisivun yllä, ja oikealla erottuu '
+            + 'televisiotorni.',
         },
         {
           tiedosto: 'Fernsehturm, Berlín, Alemania, 2016-04-22, DD 40-42 HDR.jpg',
@@ -2165,11 +2166,11 @@ export const KULTTUURI_KATEGORIAT = {
         + 'kadunkulmassa oma kissa.',
       kansikuvat: [
         {
-          tiedosto: 'Hagia Sophia Mars 2013.jpg',
-          selite: 'Hagia Sofia kevätaamuna. Harmaa kupoli on lähes 1500 vuotta '
-            + 'vanha, mutta neljä ohutta minareettia nousivat sen ympärille '
-            + 'vasta osmanien aikana.',
-          lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Istanbul Basilica Cistern 2009.JPG',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+          selite: 'Yerebatanin vesisäiliö kaupungin alla. Pylväsrivit katoavat '
+            + 'hämärään, vesi peilaa holvit, ja valaistus värjää kiven '
+            + 'punaiseksi.',
         },
         {
           tiedosto: 'Ortaköy Mosque and Bosphorus Bridge, Istanbul 2008.jpg',
