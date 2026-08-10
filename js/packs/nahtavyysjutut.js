@@ -6770,4 +6770,245 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  tromssa: {
+    Polaarimuseo: {
+      aika: '1837 (rakennus) / 1978 (museo)',
+      teksti: 'Polaarimuseo on hämmentävän vanhassa talossa: se toimii '
+          + 'vuonna 1837 rakennetussa laiturimakasiinissa, jonne '
+          + 'aikoinaan varastoitiin turkiksia ja muita tavaroita. Talon '
+          + 'paksut hirsiseinät ovat nähneet satamassa satojen vuosien '
+          + 'ajan hylkeenpyytäjien ja karhumiesten laivoja.'
+        + '\n\n'
+        + 'Museo kertoo, miten Tromssasta tuli 1800-luvun '
+          + 'puolivälissä pohjoisen jäämeren pyynnin pääkaupunki - jo '
+          + 'vuoden 1850 tienoilla kaupunki ohitti tärkeydessä aiemman '
+          + 'keskuksen Hammerfestin. Täältä lähtivät liikkeelle myös '
+          + 'kuuluisat retkeilijät: museo muistaa erityisesti Fridtjof '
+          + 'Nansenia ja Roald Amundsenia, joiden matkat pohjoisnavalle '
+          + 'ja Etelämantereelle saivat alkunsa juuri Tromssan '
+          + 'satamasta.'
+        + '\n\n'
+        + 'Näyttelyissä pääsee tutustumaan hylkeenpyyntiin, '
+          + 'talvehtimiseen jäissä ja Huippuvuorten historiaan - '
+          + 'aiheita, joita isoisän 1873 päiväkirjassa varmasti '
+          + 'sivuttaisiin, sillä juuri tuohon aikaan Tromssa oli '
+          + 'vilkkaimmillaan pyyntilaivaston lähtösatamana.',
+      kuvat: [
+        {
+          tiedosto: 'Polar Museum (52602951465).jpg',
+          selite: 'Punainen puinen Polarmuseet-rakennus kirkkaan sinisen '
+            + 'taivaan alla, etualalla vanhan veneen keula.',
+          lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Polar Museum.jpg',
+          selite: 'Lumipeitteinen Polarmuseet-rakennus aurinkoisena '
+            + 'talvipäivänä, katolla ja seinustalla paksu lumikerros.',
+          lahde: 'Illustratedjc, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tromssan silta': {
+      aika: '1960',
+      teksti: 'Tromssan silta on jättimäinen betoninen kaari, joka '
+          + 'yhdistää Tromsøyan saaren mantereeseen yli Tromsøysundetin '
+          + 'salmen. Se on peräti 1036 metriä pitkä - siinä on 58 '
+          + 'erillistä siltakaarta peräkkäin! Sillan pisin yksittäinen '
+          + 'jänneväli on 80 metriä, ja laivat mahtuvat kulkemaan sen '
+          + 'alta jopa 38 metrin korkeudessa.'
+        + '\n\n'
+        + 'Sillan rakentaminen alkoi vuonna 1958, ja se avattiin '
+          + 'liikenteelle 3. heinäkuuta 1960. Valmistuessaan se oli '
+          + 'koko Pohjois-Euroopan pisin silta - ja samalla ensimmäinen '
+          + 'ulokerakenteinen (konsoli-) silta koko Norjassa! Ennen '
+          + 'siltaa saarelle pääsi vain lautalla, joten silta muutti '
+          + 'koko kaupungin elämän ja kasvun.'
+        + '\n\n'
+        + 'Nykyään silta on niin arvokas rakennelma, että Norjan '
+          + 'muinaismuistoviranomaiset suojelivat sen vuonna 2000 - '
+          + 'vaikka se onkin paljon nuorempi kuin useimmat suojellut '
+          + 'kohteet.',
+      kuvat: [
+        {
+          tiedosto: 'Tromsøsund bridge.jpg',
+          selite: 'Tromssan silta kaartuu salmen yli kultaisessa iltavalossa, '
+            + 'sillan pilarit heijastuvat tyyneen veteen.',
+          lahde: 'Lars Tiede, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Tromso - 02a.jpg',
+          selite: 'Tromssan silta kirkkaan sinisen taivaan alla kesäpäivänä, '
+            + 'vuoret ja laivoja taustalla.',
+          lahde: 'Jojo, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tromssan tuomiokirkko': {
+      aika: '1861',
+      teksti: 'Tromssan tuomiokirkko on kokonaan puusta rakennettu '
+          + 'keltainen kirkko, joka valmistui vuonna 1861 arkkitehti '
+          + 'Christian Heinrich Groschin piirustusten mukaan. Se on '
+          + 'ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu '
+          + 'puusta - ja sen sisään mahtuu yli 600 kirkkovierasta!'
+        + '\n\n'
+        + 'Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: '
+          + 'kuningas Håkon IV rakennutti tänne kappelin jo vuonna '
+          + '1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta '
+          + 'kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui '
+          + 'vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää '
+          + 'vielä 1880-luvulla.'
+        + '\n\n'
+        + 'Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta '
+          + 'reilut kymmenen vuotta vanha - täysin uusi nähtävyys '
+          + 'pienessä puukaupungissa! Kirkkoa pidetään todennäköisesti '
+          + 'maailman pohjoisimpana protestanttisena tuomiokirkkona, '
+          + 'sillä Tromssa sijaitsee lähes 69 leveysasteen kohdalla.',
+      kuvat: [
+        {
+          tiedosto: 'TromsoDomkirkeFraRWithsPlass.JPG',
+          selite: 'Tromssan puinen tuomiokirkko vinosti sivulta kuvattuna '
+            + 'aurinkoisena päivänä, ohikulkijoita kirkon edustalla.',
+          lahde: 'Osopolar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'NOR-2016-Tromsø-Tromsø Cathedral.jpg',
+          selite: 'Tromssan tuomiokirkon julkisivu suoraan edestä, torni '
+            + 'kellolla ja vihreällä huipulla kohoaa pilvistä taivasta '
+            + 'vasten.',
+          lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tromsø - no-nb digifoto 20160303 00124 bldsa L KK0091 (cropped).jpg',
+          selite: 'Vanha mustavalkoinen valokuva 1800-luvun lopulta: Tromssan '
+            + 'kaupunki rannasta kuvattuna, tuomiokirkon torni erottuu '
+            + 'keskellä kattojen joukosta.',
+          lahde: 'Knud Knudsen, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Jäämerenkatedraali: {
+      aika: '1965',
+      teksti: 'Jäämerenkatedraali (norjaksi Ishavskatedralen) on Tromssan '
+          + 'tunnetuin rakennus, mutta se ei ole isoisän aikaan '
+          + 'liittyvä nähtävyys - se rakennettiin vasta paljon '
+          + 'myöhemmin, vuosina 1964-1965. Rakennustyöt alkoivat 1. '
+          + 'huhtikuuta 1964, ja kirkko vihittiin käyttöön 19. '
+          + 'marraskuuta 1965.'
+        + '\n\n'
+        + 'Arkkitehti Jan Inge Hovig suunnitteli kirkolle '
+          + 'omalaatuisen muodon: sen terävät, taivasta kohti nousevat '
+          + 'harjat muistuttavat läheisen Håja-saaren kaksoishuippuja. '
+          + 'Rakennus on tehty valetusta, alumiinipäällysteisestä '
+          + 'betonista, mikä oli 1960-luvulla hyvin moderni ratkaus.'
+        + '\n\n'
+        + 'Itäpäädyssä on vuonna 1972 valmistunut suurikokoinen '
+          + 'lasimosaiikki \'Kristuksen paluu\', taiteilija Victor '
+          + 'Sparren käsialaa. Kirkossa on tilaa noin 600 hengelle, ja '
+          + 'siellä soi nykyään komea urku, jossa on 42 äänikertaa ja '
+          + 'lähes 3000 pilliä.',
+      kuvat: [
+        {
+          tiedosto: 'NOR-2016-Tromsø-Arctic Cathedral (Ishavskatedralen) 01 front.jpg',
+          selite: 'Jäämerenkatedraali edestä kuvattuna aurinkoisena päivänä, '
+            + 'kirkas sininen taivas ja vihreä nurmi ympärillä.',
+          lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Arctic Cathedral Midnight Sun.JPG',
+          selite: 'Jäämerenkatedraali sivulta kuvattuna '
+            + 'auringonlaskun/keskiyön auringon oranssissa valossa, rivat '
+            + 'kimmeltävät.',
+          lahde: 'Molde20, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Arctic Cathedral in Tromsoe.jpg',
+          selite: 'Jäämerenkatedraali iltavalossa tummaa vuorenrinnettä '
+            + 'vasten, pieniä norjalaistaloja edustalla.',
+          lahde: 'Henrik, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Polaria: {
+      aika: '1998',
+      teksti: 'Polaria on maailman pohjoisin akvaario, ja se avattiin '
+          + 'Tromssan rantaan toukokuussa 1998. Rakennuksen muoto ei '
+          + 'ole sattumaa: se on suunniteltu näyttämään jäälautoilta, '
+          + 'jotka meri on työntänyt rantaan - aivan kuin arktisella '
+          + 'merellä oikeasti tapahtuu myrskyjen aikana.'
+        + '\n\n'
+        + 'Akvaarion tähtiä ovat koulutetut partahylkeet, joita voi '
+          + 'katsella altaan reunalta tai kävellä niiden \'alla\' '
+          + 'läpinäkyvässä tunnelissa altaan pohjan alla. Muissa '
+          + 'näyttelyissä pääsee tutustumaan Norjan rannikon kaloihin '
+          + 'ja eläimiin, ja viisiruutuisessa '
+          + 'panoraamaelokuvateatterissa voi kokea arktisen luonnon '
+          + 'aivan uudella tavalla.'
+        + '\n\n'
+        + 'Polarian pihapiirissä on myös oma pieni museo, jossa '
+          + 'säilytetään Polstjerna-nimistä vanhaa hylkeenpyyntialusta '
+          + '- todiste siitä, että Tromssa oli isoisänkin aikaan tärkeä '
+          + 'pyyntikaupunki.',
+      kuvat: [
+        {
+          tiedosto: 'Polaria museum, Tromsø, Norway.jpg',
+          selite: 'Polarian jääpaanmuotoiset vinot seinäelementit kultaisessa '
+            + 'iltavalossa, ikkunoista loistaa lämmin valo.',
+          lahde: 'Jeroen Komen, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Polaria winter.jpg',
+          selite: 'Polaria talvi-iltana lumisateessa, ikkunat hehkuvat '
+            + 'keltaisina lumihiutaleiden keskellä.',
+          lahde: 'Lee Dyer, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fjellheisenin köysirata': {
+      aika: '1961',
+      teksti: 'Fjellheisen on köysirata, joka nostaa matkustajat Tromssan '
+          + 'laidalta ylös Storsteinen-vuorelle, 420 metrin korkeuteen '
+          + 'merenpinnasta. Matka kestää vain neljä minuuttia, mutta '
+          + 'näkymä ylhäältä palkitsee: koko kaupunki, saaret ja vuonot '
+          + 'avautuvat jalkojen alle.'
+        + '\n\n'
+        + 'Köysirata rakennettiin laivayhtiö Brødrene Jakobsens '
+          + 'Rederin toimesta, ja se avattiin yleisölle 22. helmikuuta '
+          + '1961 - siis lähes sata vuotta isoisän matkan jälkeen. '
+          + 'Ylhäällä on Fjellstua-niminen ravintola, ja monet jatkavat '
+          + 'matkaa jalan vielä korkeammalle, Tromsdalstindenin '
+          + 'huipulle (1238 metriä).'
+        + '\n\n'
+        + 'Kesäisin ylhäältä näkee yötöntä yötä eli keskiyön '
+          + 'aurinkoa, ja talvella paikka on yksi parhaista revontulien '
+          + 'katselupaikoista koko kaupungissa.',
+      kuvat: [
+        {
+          tiedosto: 'Fjellheisen, Tromsø 2019.jpg',
+          selite: 'Fjellheisenin yläasema näköalatasanteineen, ihmisiä '
+            + 'kaiteella katsomassa Tromssan kaupunkia ja siltaa '
+            + 'alhaalla.',
+          lahde: 'Olivier Bruchez, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Fjellheisen view Tromsø 02.jpg',
+          selite: 'Fjellheisenin yläasema ja ravintolarakennus, taustalla '
+            + 'lumihuippuiset vuoret ja vuono.',
+          lahde: 'weisserstier, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Tromsø Cable cars Fjellheisen 06.jpg',
+          selite: 'Punainen köysiratakoppi matkalla ylös vihreää '
+            + 'vuorenrinnettä pitkin, pilvinen sininen taivas taustalla.',
+          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  PLACEHOLDER_ERA12
 };
