@@ -276,7 +276,10 @@ export const SOUTHAMERICA = {
     // Smaragdin tilalla on Kolumbian oma jalokivi ja topaasin tilalla
     // Andien hopea, jonka takia koko manner aikanaan valloitettiin.
     types: themedTokenTypes({
-      star: { name: 'El Doradon aarre' },
+      star: {
+        name: 'El Doradon aarre',
+        kuva: 'assets/aarteet/aarre-southamerica-star.jpg',
+      },
       ruby: {
         name: 'Inkojen kultafiguuri', color: '#e0b02a',
         kuva: 'assets/aarteet/aarre-southamerica-ruby.jpg',

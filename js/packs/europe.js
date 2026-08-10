@@ -589,7 +589,10 @@ export const EUROPE = {
   tokens: {
     // Meripihka on Itämeren oma jalokivi: fossiloitunutta puuhartsia.
     types: themedTokenTypes({
-      star: { name: 'Meripihkahuoneen aarre' },
+      star: {
+        name: 'Meripihkahuoneen aarre',
+        kuva: 'assets/aarteet/aarre-europe-star.jpg',
+      },
       ruby: {
         name: 'Kruununjalokivi', color: '#b0304a',
         kuva: 'assets/aarteet/aarre-europe-ruby.jpg',

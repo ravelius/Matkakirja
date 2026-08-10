@@ -264,7 +264,10 @@ export const OCEANIA = {
     // Topaasin tilalla opaali: Coober Pedy tuottaa valtaosan maailman
     // jalo-opaaleista, ja kaivoskaupungissa asutaan maan alla helteen takia.
     types: themedTokenTypes({
-      star: { name: 'Eteläristin helmi' },
+      star: {
+        name: 'Eteläristin helmi',
+        kuva: 'assets/aarteet/aarre-oceania-star.jpg',
+      },
       ruby: {
         name: 'Opaali', color: '#7fb7c9',
         kuva: 'assets/aarteet/aarre-oceania-ruby.jpg',

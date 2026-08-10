@@ -79,6 +79,19 @@ const KUVAT = [
   ['oceania-ruby', 'a precious opal with rainbow fire flashing across its surface, set in rough sandstone'],
   ['oceania-emerald', 'a polished paua abalone shell shimmering blue and green'],
   ['oceania-topaz', 'long strings of tiny white shell beads coiled like rope, Pacific island shell money'],
+  /*
+   * Pääaarteet (tähtilaatat, promptit 22–28). Nämä ovat kunkin laudan
+   * tarinan päämäärä, joten esine on kuvattu hivenen tarkemmin kuin
+   * jalokivilaatoissa. Tumma esine (Eteläristin helmi) tarvitsee
+   * erikseen kiillon ja värisävyt, jottei se katoa mustaan taustaan.
+   */
+  ['europe-star', 'a thick slab of glowing honey-colored amber carved in deep relief with baroque scrollwork and shell ornaments, a broken fragment of a lost amber wall with chipped uneven edges, not a framed picture'],
+  ['africa-star', 'a carved soapstone bird with folded wings perched on top of a tall weathered stone column, ancient African stonework'],
+  ['middleeast-star', 'an overflowing bronze chest spilling gold jewelry, coins and lumps of incense resin'],
+  ['asia-star', 'a carved deep-green jade imperial seal, a square block with a coiled dragon handle on top'],
+  ['northamerica-star', 'an Aztec ornament of gold inlaid with turquoise mosaic, a double-headed serpent pectoral'],
+  ['southamerica-star', 'a small golden raft carrying tiny golden figures around a central chieftain, pre-Columbian Muisca goldwork, no fire and no torches anywhere'],
+  ['oceania-star', 'a giant dark pearl resting in an open black-lipped oyster shell, peacock-green and violet iridescence gleaming across its smooth polished surface, no fire and no flames anywhere'],
 ];
 
 const pyydetyt = process.argv.slice(2);
