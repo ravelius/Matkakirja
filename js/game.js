@@ -1071,14 +1071,17 @@ export class Game {
     /*
      * Tarinakaari (omistajan tilaus 9.8.2026: paketti suoraan peliin):
      * kohtaaminen, jossa henkilö esittää isoisän jättämän kysymyksen.
-     * Muoto arvotaan silti normaalisti (omistajan linjaus 10.8.2026:
-     * muodot vaihtelevat, kaari ei saa pakottaa joka kaupungin
-     * ensimmäistä tehtävää visaksi) — kaaren kysymys käytetään sillä
-     * kerralla, kun arvonta osuu visaan, ja sen jälkeen kaupunki
-     * palaa tavalliseen kysymyspankkiin.
+     * Kohtaaminen on kaupungin ENSIMMÄINEN tehtävä (paitsi
+     * pulmakaupungeissa, joissa pulma korvasi sen jo yllä), koska se
+     * on ainoa ääneen luettu tehtävämuoto — vapaalla arvonnalla
+     * ensimmäinen pysähdys jäi usein mykäksi (omistajan havainto
+     * 10.8.2026 aamulla: "ei tule lukijan ääntä kun painan Etsi
+     * kätkö"). Muotojen vaihtelu jatkuu kohtaamisen jälkeisillä
+     * pysähdyksillä. Nimetty muu muoto tai vaikea kysymys ohittaa
+     * kaaren kuluttamatta sitä.
      */
-    const muoto = hard ? 'quiz' : (form ?? this.pickForm(city.id));
-    const kaari = (hard || muoto !== 'quiz') ? null : this.kaariTarina(city.id);
+    const kaari = (hard || (form && form !== 'quiz')) ? null : this.kaariTarina(city.id);
+    const muoto = (hard || kaari) ? 'quiz' : (form ?? this.pickForm(city.id));
     this.lastForm = muoto;
     if (muoto === 'claim') return this.openClaim(city);
     if (muoto === 'photo') return this.openPhotoQuestion(city);

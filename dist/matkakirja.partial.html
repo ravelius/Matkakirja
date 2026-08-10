@@ -9257,47 +9257,12 @@ body.vertailu-tila .pawns { display: none; }
 
 /*
  * Useamman kuvan karuselli (omistajan palaute 10.8.2026: lisäkuvat
- * karuselliin, ei peräkkäin — sivu venyi liian pitkäksi). Nuolet ja
- * laskuri kelluvat kuvan päällä samalla pergamenttipillerityylillä
- * kuin lehden sivunumero, joten ne eivät kasvata kehyksen mittaa.
+ * karuselliin, ei peräkkäin). Selaus näyttää ja toimii kuten lehden
+ * kuvakotelossa: nuolet ja laskuri tulevat .arrival-kuva-nuoli- ja
+ * .arrival-kuva-laskuri-luokista, pyyhkäisy vaihtaa kuvaa (ui.js).
+ * Ikkuna tarvitsee vain ankkurin nuolille ja pilleille.
  */
 .karuselli-ikkuna { position: relative; }
-
-.karuselli-nuoli {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.7rem;
-  height: 1.7rem;
-  min-height: 0;
-  padding: 0 0 0.15rem;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(246, 231, 198, 0.82);
-  color: rgba(70, 51, 31, 0.72);
-  font-size: 1.25rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.karuselli-nuoli:hover,
-.karuselli-nuoli:focus-visible { color: rgba(70, 51, 31, 0.98); }
-
-.karuselli-nuoli.vasen { left: 0.35rem; }
-.karuselli-nuoli.oikea { right: 0.35rem; }
-
-.karuselli-laskuri {
-  position: absolute;
-  right: 0.35rem;
-  bottom: 0.35rem;
-  padding: 0.08rem 0.45rem;
-  border-radius: 999px;
-  background: rgba(246, 231, 198, 0.82);
-  color: rgba(70, 51, 31, 0.8);
-  font-family: var(--font-type);
-  font-size: 0.68rem;
-}
 
 /* Henkilölinkki nähtävyystekstissä: nimi näyttää lehden linkiltä
  * (sama muste, pisteviiva-alleviivaus) mutta on nappi, joka avaa
@@ -9638,6 +9603,74 @@ body.maatiedot-tila .board-hint {
   flex: 1 1 100%;
   min-height: 0;
   padding: 0.45rem 0.8rem;
+}
+
+/* ── NÄHTÄVYYSPOPUPIN HAMPURILAISVALIKKO ──────────────────────────────
+ *
+ * Omistajan toive 10.8.2026: popupista pääsee suoraan saman kaupungin
+ * muihin nähtävyyksiin. Nappi istuu kortin oikeassa yläkulmassa ja
+ * valikko laskeutuu sen alle; rivit käyttävät kartan selitelistan
+ * numeropallukkaa, joten numerot täsmäävät karttaan.
+ */
+.nahtavyys-valikko-nappi {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.6rem;
+  z-index: 6;
+  width: 2.1rem;
+  height: 2.1rem;
+  min-height: 0;
+  padding: 0;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 6px;
+  background: rgba(246, 231, 198, 0.9);
+  color: rgba(70, 51, 31, 0.85);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.nahtavyys-valikko-nappi:hover,
+.nahtavyys-valikko-nappi[aria-expanded="true"] { color: rgba(70, 51, 31, 1); background: rgba(246, 231, 198, 1); }
+
+.nahtavyys-valikko {
+  position: absolute;
+  top: 2.9rem;
+  right: 0.6rem;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  max-width: min(80%, 20rem);
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 0.3rem;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 8px;
+  background: #f5f0e2;
+  box-shadow: 0 8px 24px rgba(20, 14, 6, 0.35);
+}
+
+.nahtavyys-valikko-rivi {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 0;
+  padding: 0.45rem 0.6rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: rgba(70, 51, 31, 0.92);
+  font: inherit;
+  font-size: 0.92rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nahtavyys-valikko-rivi:hover { background: rgba(70, 51, 31, 0.08); }
+
+.nahtavyys-valikko-rivi.nykyinen {
+  background: rgba(70, 51, 31, 0.12);
+  font-weight: 600;
 }
 
 </style>
@@ -10041,6 +10074,10 @@ body.maatiedot-tila .board-hint {
   -->
   <dialog id="nahtavyys-dialog" class="dialog arkki nahtavyys-arkki">
    <div class="dialog-card nahtavyys-kortti" tabindex="-1" autofocus>
+    <!-- Hampurilainen: saman kaupungin muut nähtävyydet ilman että
+         popupia tarvitsee sulkea (omistajan toive 10.8.2026). -->
+    <button id="nahtavyys-valikko-nappi" class="nahtavyys-valikko-nappi" type="button" aria-label="Kaupungin nähtävyydet" aria-expanded="false" hidden>☰</button>
+    <div id="nahtavyys-valikko" class="nahtavyys-valikko" hidden></div>
     <p id="nahtavyys-aika" class="nahtavyys-aika" hidden></p>
     <h2 id="nahtavyys-otsikko"></h2>
     <div id="nahtavyys-sisalto" class="nahtavyys-sisalto"></div>
@@ -122455,14 +122492,17 @@ class Game {
     /*
      * Tarinakaari (omistajan tilaus 9.8.2026: paketti suoraan peliin):
      * kohtaaminen, jossa henkilö esittää isoisän jättämän kysymyksen.
-     * Muoto arvotaan silti normaalisti (omistajan linjaus 10.8.2026:
-     * muodot vaihtelevat, kaari ei saa pakottaa joka kaupungin
-     * ensimmäistä tehtävää visaksi) — kaaren kysymys käytetään sillä
-     * kerralla, kun arvonta osuu visaan, ja sen jälkeen kaupunki
-     * palaa tavalliseen kysymyspankkiin.
+     * Kohtaaminen on kaupungin ENSIMMÄINEN tehtävä (paitsi
+     * pulmakaupungeissa, joissa pulma korvasi sen jo yllä), koska se
+     * on ainoa ääneen luettu tehtävämuoto — vapaalla arvonnalla
+     * ensimmäinen pysähdys jäi usein mykäksi (omistajan havainto
+     * 10.8.2026 aamulla: "ei tule lukijan ääntä kun painan Etsi
+     * kätkö"). Muotojen vaihtelu jatkuu kohtaamisen jälkeisillä
+     * pysähdyksillä. Nimetty muu muoto tai vaikea kysymys ohittaa
+     * kaaren kuluttamatta sitä.
      */
-    const muoto = hard ? 'quiz' : (form ?? this.pickForm(city.id));
-    const kaari = (hard || muoto !== 'quiz') ? null : this.kaariTarina(city.id);
+    const kaari = (hard || (form && form !== 'quiz')) ? null : this.kaariTarina(city.id);
+    const muoto = (hard || kaari) ? 'quiz' : (form ?? this.pickForm(city.id));
     this.lastForm = muoto;
     if (muoto === 'claim') return this.openClaim(city);
     if (muoto === 'photo') return this.openPhotoQuestion(city);
@@ -132373,6 +132413,7 @@ class UI {
       });
     }
     document.getElementById('nahtavyys-otsikko').textContent = kohde.nimi;
+    this.taytaNahtavyysValikko(kohde);
     const aika = document.getElementById('nahtavyys-aika');
     aika.textContent = [numero ? `Kohde ${numero}` : null, kohde.aika]
       .filter(Boolean).join(' · ');
@@ -132506,6 +132547,59 @@ class UI {
     if (kohta < teksti.length) p.appendChild(document.createTextNode(teksti.slice(kohta)));
   }
 
+  /**
+   * Hampurilaisvalikko nähtävyyspopupiin (omistajan toive 10.8.2026):
+   * saman kaupungin muihin nähtävyyksiin pääsee suoraan, ilman että
+   * popup pitää sulkea ja kohde etsiä kartalta uudestaan. Lista tulee
+   * kaupunkikartan kohteista samalla säännöllä kuin kartan pisteet:
+   * oma juttu voittaa wikin, ja ilman kumpaakaan kohde jää pois.
+   * Valikko toimii myös henkilöjutussa (esim. Engel) — se vie
+   * takaisin kaupungin nähtävyyksiin.
+   */
+  taytaNahtavyysValikko(nykyinen) {
+    const nappi = document.getElementById('nahtavyys-valikko-nappi');
+    const valikko = document.getElementById('nahtavyys-valikko');
+    if (!nappi || !valikko) return;
+    const sulje = () => {
+      valikko.hidden = true;
+      nappi.setAttribute('aria-expanded', 'false');
+    };
+    if (!nappi.dataset.kytketty) {
+      nappi.dataset.kytketty = '1';
+      nappi.addEventListener('click', () => {
+        valikko.hidden = !valikko.hidden;
+        nappi.setAttribute('aria-expanded', String(!valikko.hidden));
+      });
+      // Valikko sulkeutuu, kun napautus osuu sen ulkopuolelle.
+      document.getElementById('nahtavyys-dialog').addEventListener('click', (e) => {
+        if (!valikko.hidden && !valikko.contains(e.target) && e.target !== nappi) sulje();
+      });
+    }
+    sulje();
+    const kartta = KAUPUNKIKARTAT[this.arrivalShownFor];
+    valikko.replaceChildren();
+    const kohteet = (kartta?.kohteet ?? []).map((raaka, i) => {
+      const juttu = NAHTAVYYSJUTUT[this.arrivalShownFor]?.[raaka.nimi];
+      const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
+      return { k, numero: String(i + 1) };
+    }).filter(({ k }) => k.teksti || k.wiki);
+    nappi.hidden = kohteet.length < 2;
+    if (nappi.hidden) return;
+    for (const { k, numero } of kohteet) {
+      const rivi = html('button', 'nahtavyys-valikko-rivi');
+      rivi.type = 'button';
+      rivi.appendChild(html('span', 'kartta-selite-numero', numero));
+      rivi.appendChild(document.createTextNode(k.nimi));
+      if (k.nimi === nykyinen.nimi) rivi.classList.add('nykyinen');
+      rivi.addEventListener('click', () => {
+        sulje();
+        if (k.teksti) this.avaaNahtavyys(k, numero);
+        else this.openWikiArticle(k.wiki, k.nimi);
+      });
+      valikko.appendChild(rivi);
+    }
+  }
+
   /** Yksi nähtävyysjutun kuva selitteineen ja lähteineen. */
   nahtavyydenKuva(kuva) {
     const kehys = html('figure', 'nahtavyys-kuvakehys');
@@ -132575,17 +132669,37 @@ class UI {
       laskuri.textContent = `${kohta + 1}/${kuvat.length}`;
     };
 
+    /*
+     * Selaus on sama kuin lehden kuvakotelossa (omistajan toive
+     * 10.8.2026): kuvan laidat ovat hentoja nuolialueita, laskuri on
+     * tumma pilleri kulmassa, ja vaakapyyhkäisy vaihtaa kuvaa. Samat
+     * CSS-luokat kuin lehdessä, joten ulkoasu pysyy yhtenä.
+     */
     const nuoli = (luokka, merkki, siirto, nimi) => {
-      const nappi = html('button', `karuselli-nuoli ${luokka}`, merkki);
+      const nappi = html('button', `arrival-kuva-nuoli ${luokka}`, merkki);
       nappi.type = 'button';
       nappi.setAttribute('aria-label', nimi);
-      nappi.addEventListener('click', () => nayta(kohta + siirto));
+      nappi.addEventListener('click', (e) => { e.stopPropagation(); nayta(kohta + siirto); });
       return nappi;
     };
-    ikkuna.appendChild(nuoli('vasen', '‹', -1, 'Edellinen kuva'));
-    ikkuna.appendChild(nuoli('oikea', '›', 1, 'Seuraava kuva'));
-    const laskuri = html('span', 'karuselli-laskuri');
+    ikkuna.appendChild(nuoli('edellinen', '‹', -1, 'Edellinen kuva'));
+    ikkuna.appendChild(nuoli('seuraava', '›', 1, 'Seuraava kuva'));
+    const laskuri = html('span', 'arrival-kuva-laskuri');
     ikkuna.appendChild(laskuri);
+    // Pyyhkäisy: vaakaveto vaihtaa kuvaa. Kynnys erottaa vedon
+    // napautuksesta (suurennos) ja pystyvieritys jää selaimelle.
+    let veto = null;
+    ikkuna.addEventListener('pointerdown', (e) => { veto = { x: e.clientX, y: e.clientY }; });
+    ikkuna.addEventListener('pointercancel', () => { veto = null; });
+    ikkuna.addEventListener('pointerup', (e) => {
+      const alku = veto;
+      veto = null;
+      if (!alku) return;
+      const dx = e.clientX - alku.x;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(e.clientY - alku.y)) {
+        nayta(kohta + (dx < 0 ? 1 : -1));
+      }
+    });
 
     kehys.appendChild(ikkuna);
     kehys.appendChild(teksti);
@@ -136483,6 +136597,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 500, teksti: 'Kohtaaminen ensitehtäväksi, nähtävyyksiin valikko' },
   { v: 499, teksti: 'Emiraateille kolmas sivu ja Jordanialle kaksi' },
   { v: 498, teksti: 'Emiraatit sai kaksi aihesivua: Aavikko ja Keidas' },
   { v: 497, teksti: 'Loput kuvaduplikaatit purettu, kaksi hyväksyttiin' },
@@ -137066,7 +137181,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.499';
+const APP_VERSION = '2026-08-09.500';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

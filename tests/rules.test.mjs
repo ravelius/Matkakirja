@@ -2663,6 +2663,33 @@ test('tarinakaari ei pakota muotoa: lippukysymys ohittaa kaaren, visa käyttää
   assert.equal(game.quiz.question, TARINAKAARI[kaupunki].kysymys.q);
 });
 
+/*
+ * Omistajan havainto 10.8.2026 aamulla: "ei tule lukijan ääntä kun
+ * painan Etsi kätkö". Kohtaaminen on ainoa luettu tehtävämuoto, joten
+ * pulmattoman kaarikaupungin ENSIMMÄISEN tehtävän (oletuskutsu ilman
+ * muotoa) on oltava kohtaamisvisa — vapaa arvonta jätti pysähdyksen
+ * usein mykäksi. Vaihtelu jatkuu kohtaamisen jälkeen.
+ */
+test('pulmattoman kaarikaupungin ensimmäinen tehtävä on luettu kohtaaminen', () => {
+  const pack = packById('europe');
+  const kaupunki = pack.cities.find(
+    (c) => TARINAKAARI[c.id]?.kysymys && !(pack.puzzles ?? []).some((p) => p.city === c.id),
+  )?.id;
+  assert.ok(kaupunki, 'Euroopassa on pulmaton kaarikaupunki');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: pack.cities[0].id }],
+    pack,
+    seed: 409,
+  });
+  game.player.pos = { type: 'city', city: kaupunki };
+  game.tokens.set(kaupunki, 'ruby');
+  game.phase = 'action';
+
+  assert.ok(game.actionQuiz().ok);
+  assert.equal(game.quiz.kaari, true, 'oletuskutsun on avattava kohtaaminen');
+  assert.equal(game.quiz.question, TARINAKAARI[kaupunki].kysymys.q);
+});
+
 test('pulmassa on apukeinot: vihje ja 50:50', () => {
   const puzzle = packById('africa').puzzles[0];
   const game = puzzleGame(406, puzzle.city);
