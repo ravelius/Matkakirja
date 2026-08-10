@@ -357,6 +357,12 @@ Kiova, Jerusalem, Isfahan. Foggien sukusyvyys on hieno harvana —
 ei uusia esiintymiä ilman budjettipäätöstä (Fable maxin kirjaus
 11.8.2026).
 
+**Kommellus on oma polttoaineluokkansa (Maxin kirjaus, riman
+erä 1, 10.8.2026):** jokaisessa kirjoituserässä vähintään yksi
+oikea kommellus — jokin menee herroilta konkreettisesti pieleen ja
+siitä seuraa jotain. Itseironia-budjetti (1/erä) koskee jatkossa
+vain suoraa itsensä pilkkaa; kommellus ei kuluta sitä.
+
 **ME-kiintiöt:** "suvun kirja todistaa" enintään 2; valvottu yö
 enintään 2; lyhdynsytyttäjä-ammatti 0 (Euroopassa jo 2);
 "punnitsee kädessään" -ele enintään 2; sävelpaino arvoitus + lämpö
