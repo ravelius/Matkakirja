@@ -9782,6 +9782,106 @@ body.maatiedot-tila .board-hint {
 .nahtavyys-valikko-nappi:hover,
 .nahtavyys-valikko-nappi[aria-expanded="true"] { color: rgba(70, 51, 31, 1); background: rgba(246, 231, 198, 1); }
 
+/*
+ * EDELLINEN/SEURAAVA NÄHTÄVYYS (omistajan toive 10.8.2026).
+ *
+ * Nuolet ovat kortin sisaruksia dialogissa eivätkä sen lapsia, joten
+ * ne pysyvät ruudulla myös silloin kun pitkä juttu rullaa kortin
+ * sisällä — sama syy, jonka takia ne on asemoitava dialogia vasten.
+ * Avoin modaali on `position: fixed`, joten se kelpaa sellaisenaan
+ * absoluuttisen asemoinnin ankkuriksi.
+ *
+ * Ulkoasu lainataan hampurilaisnapista (sama pergamentti, sama reunus)
+ * eikä kuvakarusellin hennoista laitanuolista: nämä ovat popupin
+ * reunalla eivätkä kuvan päällä, ja kortin oma tausta on vaalea.
+ *
+ * Kapealla ruudulla nuolet ovat kortin päällä (dialogi on 90vw, joten
+ * sivuille jää vain muutama pikseli). Leveällä ne siirtyvät kortin
+ * ULKOPUOLELLE taustan päälle, jolloin ne eivät peitä tekstiä: raja
+ * 760px on ensimmäinen, jolla dialogi on jo 640px leveä ja marginaalia
+ * jää 60px eli enemmän kuin nuolen 3,1rem.
+ */
+.dialog.nahtavyys-arkki .nahtavyys-nuoli {
+  position: absolute;
+  top: 50%;
+  z-index: 8;
+  width: 2.4rem;
+  height: 2.4rem;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 999px;
+  background: rgba(246, 231, 198, 0.92);
+  color: rgba(70, 51, 31, 0.85);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dialog.nahtavyys-arkki .nahtavyys-nuoli:hover {
+  color: rgba(70, 51, 31, 1);
+  background: rgba(246, 231, 198, 1);
+}
+
+/*
+ * Kapealla ruudulla nuoli RATSASTAA kortin reunalla: puolet napista on
+ * taustan päällä, puolet kortin omassa sivupehmusteessa. Näin se on
+ * sormelle riittävän iso peittämättä yhtään kirjainta.
+ *
+ * Mitat eivät ole makuasia. Dialogi on 90vw, joten sivuun jää noin
+ * 5vw (≈19px 390px:n puhelimella) ja kortin pehmuste on 1.15rem
+ * (≈18px). Napin puolikas on 1rem (16px), joten se mahtuu molempiin
+ * ilman että teksti jää alle. Jos kortin pehmustetta joskus
+ * kavennetaan, tämä siirto on laskettava uudestaan.
+ */
+.dialog.nahtavyys-arkki .nahtavyys-nuoli {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.15rem;
+}
+
+.dialog.nahtavyys-arkki .nahtavyys-nuoli.edellinen { left: -1rem; }
+.dialog.nahtavyys-arkki .nahtavyys-nuoli.seuraava { right: -1rem; }
+
+/* Piilotus on kumottava nimenomaisesti: dialogin yleinen nappisääntö
+   asettaa displayn, ja pelkkä [hidden] häviäisi sille kaskadissa. */
+.dialog.nahtavyys-arkki .nahtavyys-nuoli[hidden],
+.dialog.nahtavyys-arkki .nahtavyys-laskuri[hidden] { display: none; }
+
+/*
+ * Laskuri hampurilaisnapin VIEREEN eikä vastakkaiseen kulmaan: vasen
+ * yläkulma on vuosiluku- ja kohdenumerorivin (`.nahtavyys-aika`) oma
+ * paikka, ja pilleri jäi sen päälle. Oikeassa yläkulmassa on tilaa,
+ * koska aikarivi on lyhyt ja vasempaan tasattu. 3.1rem on napin leveys
+ * (2.1) + sen oma reunaetäisyys (0.6) + rako.
+ */
+.dialog.nahtavyys-arkki .nahtavyys-laskuri {
+  top: 0.75rem;
+  right: 3.1rem;
+  bottom: auto;
+  left: auto;
+  z-index: 8;
+}
+
+/*
+ * Leveällä ruudulla nuolet siirtyvät kokonaan kortin ulkopuolelle
+ * taustan päälle ja kasvavat. Raja 760px on ensimmäinen, jolla
+ * dialogi on jo täydet 640px ja sivuun jää 60px eli enemmän kuin
+ * nuolen 3.1rem.
+ */
+@media (min-width: 760px) {
+  .dialog.nahtavyys-arkki .nahtavyys-nuoli {
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.35rem;
+  }
+
+  .dialog.nahtavyys-arkki .nahtavyys-nuoli.edellinen { left: -3.1rem; }
+  .dialog.nahtavyys-arkki .nahtavyys-nuoli.seuraava { right: -3.1rem; }
+}
+
 .nahtavyys-valikko {
   position: absolute;
   top: 2.9rem;
@@ -10263,6 +10363,12 @@ body.maatiedot-tila .board-hint {
       <button class="primary" value="close">Sulje</button>
     </form>
    </div>
+   <!-- Edellinen/seuraava nähtävyys ilman popupin sulkemista (omistajan
+        toive 10.8.2026). Kortin SISARUKSIA eikä sen lapsia, jotta ne
+        pysyvät paikallaan kun pitkä juttu rullaa kortin sisällä. -->
+   <button id="nahtavyys-edellinen" class="nahtavyys-nuoli edellinen" type="button" aria-label="Edellinen nähtävyys" hidden>‹</button>
+   <button id="nahtavyys-seuraava" class="nahtavyys-nuoli seuraava" type="button" aria-label="Seuraava nähtävyys" hidden>›</button>
+   <span id="nahtavyys-laskuri" class="arrival-kuva-laskuri nahtavyys-laskuri" hidden></span>
   </dialog>
 
   <!-- Tapahtumakortti: kysymyksen sijaan tapahtuu jotain -->
@@ -137213,6 +137319,7 @@ class UI {
     }
     document.getElementById('nahtavyys-otsikko').textContent = kohde.nimi;
     this.taytaNahtavyysValikko(kohde);
+    this.varustaNahtavyysSelaus(kohde);
     const aika = document.getElementById('nahtavyys-aika');
     aika.textContent = [numero ? `Kohde ${numero}` : null, kohde.aika]
       .filter(Boolean).join(' · ');
@@ -137347,6 +137454,110 @@ class UI {
   }
 
   /**
+   * Edellinen/seuraava nähtävyys ilman popupin sulkemista (omistajan
+   * toive 10.8.2026: *"nähtävyyksiä olisi kiva voida liikkua
+   * edestakaisin nuolinäppäimillä"*, kaappaus Sponza-palatsista).
+   *
+   * Kolme reittiä samaan siirtoon, koska omistaja pelaa iPhonella ja
+   * iPadilla: vaakapyyhkäisy kortin päällä, nuolinapit popupin
+   * reunoilla ja näppäimistön nuolet. Laskuri kertoo kohdan kuten
+   * lehden kuvakaruselleissa, ja reunoilta kierretään ympäri samalla
+   * modulo-säännöllä kuin `arrivalKuvat`- ja karuselliselauksessa.
+   *
+   * Selattava lista on kaupungin OMAT jutut, joissa on kuva. Pelkkä
+   * wiki-kohde jää pois, koska se avaa eri ikkunan — nuoli veisi
+   * silloin ulos popupista, ei sen sisällä eteenpäin. Henkilöjutussa
+   * (esim. Engel) selaus piilotetaan kokonaan: henkilö ei ole kartan
+   * kohde eikä siis kuulu mihinkään kohtaan listaa. Hampurilaisvalikko
+   * jää ainoaksi tieksi wiki-kohteisiin, kuten ennenkin.
+   */
+  varustaNahtavyysSelaus(kohde) {
+    const dialogi = document.getElementById('nahtavyys-dialog');
+    const edellinen = document.getElementById('nahtavyys-edellinen');
+    const seuraava = document.getElementById('nahtavyys-seuraava');
+    const laskuri = document.getElementById('nahtavyys-laskuri');
+    if (!dialogi || !edellinen || !seuraava || !laskuri) return;
+
+    const lista = this.nahtavyysKohteet()
+      .filter(({ k }) => k.teksti && (k.kuvat?.length ?? 0) > 0);
+    const kohdalla = lista.findIndex(({ k }) => k.nimi === kohde.nimi);
+    // Alle kaksi selattavaa (tai kohde listan ulkopuolelta): ei nuolia,
+    // ei laskuria — popup näyttää täsmälleen samalta kuin ennen.
+    const selattava = kohdalla >= 0 && lista.length > 1;
+    this.nahtavyysSelaus = selattava ? { lista, kohdalla } : null;
+    for (const el of [edellinen, seuraava, laskuri]) el.hidden = !selattava;
+    if (!selattava) return;
+    laskuri.textContent = `${kohdalla + 1}/${lista.length}`;
+
+    if (!dialogi.dataset.selausKytketty) {
+      dialogi.dataset.selausKytketty = '1';
+      const siirry = (suunta) => {
+        const tila = this.nahtavyysSelaus;
+        if (!tila) return false;
+        const i = (tila.kohdalla + suunta + tila.lista.length) % tila.lista.length;
+        const { k, numero } = tila.lista[i];
+        sfx.play('paper');
+        this.avaaNahtavyys(k, numero);
+        return true;
+      };
+      edellinen.addEventListener('click', (e) => { e.stopPropagation(); siirry(-1); });
+      seuraava.addEventListener('click', (e) => { e.stopPropagation(); siirry(1); });
+      /*
+       * Näppäimet kuunnellaan dialogilla eikä documentilla, jotta
+       * kuvasuurennoksen oma kaappausvaiheen kuuntelija ehtii ensin:
+       * kun suurennos on auki, nuolet selaavat sen kuvia eivätkä
+       * vaihda nähtävyyttä alta pois.
+       */
+      dialogi.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        if (!siirry(e.key === 'ArrowRight' ? 1 : -1)) return;
+        e.preventDefault();
+        e.stopPropagation();
+      });
+      /*
+       * Pyyhkäisy vain kortin tyhjällä alueella. Kuvakehys ja karuselli
+       * käyttävät vaakavedon jo omaan kuvaselaukseensa, ja valikko on
+       * oma pintansa — niiltä alkava veto ei saa vaihtaa nähtävyyttä.
+       * Kynnys ja suhde ovat samat kuin karusellissa, jotta ele tuntuu
+       * samalta koko pelissä.
+       */
+      const kortti = dialogi.querySelector('.nahtavyys-kortti');
+      let veto = null;
+      kortti?.addEventListener('pointerdown', (e) => {
+        veto = e.target.closest('.nahtavyys-kuvakehys, .nahtavyys-valikko, .nahtavyys-valikko-nappi')
+          ? null : { x: e.clientX, y: e.clientY };
+      });
+      kortti?.addEventListener('pointercancel', () => { veto = null; });
+      kortti?.addEventListener('pointerup', (e) => {
+        const alku = veto;
+        veto = null;
+        if (!alku || this.kulttuuriKuvaEl) return;
+        const dx = e.clientX - alku.x;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(e.clientY - alku.y)) {
+          siirry(dx < 0 ? 1 : -1);
+        }
+      });
+    }
+  }
+
+  /**
+   * Avoimen kaupungin nähtävyydet kartan järjestyksessä, numeroituina.
+   *
+   * Yhteinen lähde hampurilaisvalikolle ja nuoliselaukselle, jotta
+   * niiden järjestys ja numerointi eivät voi erkaantua. Sääntö on sama
+   * kuin kartan pisteillä: oma juttu voittaa wikin. Suodatus jätetään
+   * kutsujalle — valikkoon kelpaa myös pelkkä wiki-kohde, selaukseen ei.
+   */
+  nahtavyysKohteet() {
+    const kaupunki = this.arrivalShownFor;
+    return (KAUPUNKIKARTAT[kaupunki]?.kohteet ?? []).map((raaka, i) => {
+      const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
+      const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
+      return { k, numero: String(i + 1) };
+    });
+  }
+
+  /**
    * Hampurilaisvalikko nähtävyyspopupiin (omistajan toive 10.8.2026):
    * saman kaupungin muihin nähtävyyksiin pääsee suoraan, ilman että
    * popup pitää sulkea ja kohde etsiä kartalta uudestaan. Lista tulee
@@ -137375,13 +137586,8 @@ class UI {
       });
     }
     sulje();
-    const kartta = KAUPUNKIKARTAT[this.arrivalShownFor];
     valikko.replaceChildren();
-    const kohteet = (kartta?.kohteet ?? []).map((raaka, i) => {
-      const juttu = NAHTAVYYSJUTUT[this.arrivalShownFor]?.[raaka.nimi];
-      const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
-      return { k, numero: String(i + 1) };
-    }).filter(({ k }) => k.teksti || k.wiki);
+    const kohteet = this.nahtavyysKohteet().filter(({ k }) => k.teksti || k.wiki);
     nappi.hidden = kohteet.length < 2;
     if (nappi.hidden) return;
     for (const { k, numero } of kohteet) {
@@ -141658,6 +141864,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 547, teksti: 'Nähtävyyksien selaus popupissa: nuolet, pyyhkäisy, laskuri' },
   { v: 546, teksti: 'ME:n neljä saapumista uusiksi, visaspoileri pois' },
   { v: 545, teksti: '23 luentaa uusille teksteille, ME-viimeistely, äänipolku' },
   { v: 544, teksti: 'Pääjoet pohjakartalle järvien tyylillä' },
@@ -142288,7 +142495,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.546';
+const APP_VERSION = '2026-08-09.547';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

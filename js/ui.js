@@ -9011,6 +9011,7 @@ export class UI {
     }
     document.getElementById('nahtavyys-otsikko').textContent = kohde.nimi;
     this.taytaNahtavyysValikko(kohde);
+    this.varustaNahtavyysSelaus(kohde);
     const aika = document.getElementById('nahtavyys-aika');
     aika.textContent = [numero ? `Kohde ${numero}` : null, kohde.aika]
       .filter(Boolean).join(' · ');
@@ -9145,6 +9146,110 @@ export class UI {
   }
 
   /**
+   * Edellinen/seuraava nähtävyys ilman popupin sulkemista (omistajan
+   * toive 10.8.2026: *"nähtävyyksiä olisi kiva voida liikkua
+   * edestakaisin nuolinäppäimillä"*, kaappaus Sponza-palatsista).
+   *
+   * Kolme reittiä samaan siirtoon, koska omistaja pelaa iPhonella ja
+   * iPadilla: vaakapyyhkäisy kortin päällä, nuolinapit popupin
+   * reunoilla ja näppäimistön nuolet. Laskuri kertoo kohdan kuten
+   * lehden kuvakaruselleissa, ja reunoilta kierretään ympäri samalla
+   * modulo-säännöllä kuin `arrivalKuvat`- ja karuselliselauksessa.
+   *
+   * Selattava lista on kaupungin OMAT jutut, joissa on kuva. Pelkkä
+   * wiki-kohde jää pois, koska se avaa eri ikkunan — nuoli veisi
+   * silloin ulos popupista, ei sen sisällä eteenpäin. Henkilöjutussa
+   * (esim. Engel) selaus piilotetaan kokonaan: henkilö ei ole kartan
+   * kohde eikä siis kuulu mihinkään kohtaan listaa. Hampurilaisvalikko
+   * jää ainoaksi tieksi wiki-kohteisiin, kuten ennenkin.
+   */
+  varustaNahtavyysSelaus(kohde) {
+    const dialogi = document.getElementById('nahtavyys-dialog');
+    const edellinen = document.getElementById('nahtavyys-edellinen');
+    const seuraava = document.getElementById('nahtavyys-seuraava');
+    const laskuri = document.getElementById('nahtavyys-laskuri');
+    if (!dialogi || !edellinen || !seuraava || !laskuri) return;
+
+    const lista = this.nahtavyysKohteet()
+      .filter(({ k }) => k.teksti && (k.kuvat?.length ?? 0) > 0);
+    const kohdalla = lista.findIndex(({ k }) => k.nimi === kohde.nimi);
+    // Alle kaksi selattavaa (tai kohde listan ulkopuolelta): ei nuolia,
+    // ei laskuria — popup näyttää täsmälleen samalta kuin ennen.
+    const selattava = kohdalla >= 0 && lista.length > 1;
+    this.nahtavyysSelaus = selattava ? { lista, kohdalla } : null;
+    for (const el of [edellinen, seuraava, laskuri]) el.hidden = !selattava;
+    if (!selattava) return;
+    laskuri.textContent = `${kohdalla + 1}/${lista.length}`;
+
+    if (!dialogi.dataset.selausKytketty) {
+      dialogi.dataset.selausKytketty = '1';
+      const siirry = (suunta) => {
+        const tila = this.nahtavyysSelaus;
+        if (!tila) return false;
+        const i = (tila.kohdalla + suunta + tila.lista.length) % tila.lista.length;
+        const { k, numero } = tila.lista[i];
+        sfx.play('paper');
+        this.avaaNahtavyys(k, numero);
+        return true;
+      };
+      edellinen.addEventListener('click', (e) => { e.stopPropagation(); siirry(-1); });
+      seuraava.addEventListener('click', (e) => { e.stopPropagation(); siirry(1); });
+      /*
+       * Näppäimet kuunnellaan dialogilla eikä documentilla, jotta
+       * kuvasuurennoksen oma kaappausvaiheen kuuntelija ehtii ensin:
+       * kun suurennos on auki, nuolet selaavat sen kuvia eivätkä
+       * vaihda nähtävyyttä alta pois.
+       */
+      dialogi.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        if (!siirry(e.key === 'ArrowRight' ? 1 : -1)) return;
+        e.preventDefault();
+        e.stopPropagation();
+      });
+      /*
+       * Pyyhkäisy vain kortin tyhjällä alueella. Kuvakehys ja karuselli
+       * käyttävät vaakavedon jo omaan kuvaselaukseensa, ja valikko on
+       * oma pintansa — niiltä alkava veto ei saa vaihtaa nähtävyyttä.
+       * Kynnys ja suhde ovat samat kuin karusellissa, jotta ele tuntuu
+       * samalta koko pelissä.
+       */
+      const kortti = dialogi.querySelector('.nahtavyys-kortti');
+      let veto = null;
+      kortti?.addEventListener('pointerdown', (e) => {
+        veto = e.target.closest('.nahtavyys-kuvakehys, .nahtavyys-valikko, .nahtavyys-valikko-nappi')
+          ? null : { x: e.clientX, y: e.clientY };
+      });
+      kortti?.addEventListener('pointercancel', () => { veto = null; });
+      kortti?.addEventListener('pointerup', (e) => {
+        const alku = veto;
+        veto = null;
+        if (!alku || this.kulttuuriKuvaEl) return;
+        const dx = e.clientX - alku.x;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(e.clientY - alku.y)) {
+          siirry(dx < 0 ? 1 : -1);
+        }
+      });
+    }
+  }
+
+  /**
+   * Avoimen kaupungin nähtävyydet kartan järjestyksessä, numeroituina.
+   *
+   * Yhteinen lähde hampurilaisvalikolle ja nuoliselaukselle, jotta
+   * niiden järjestys ja numerointi eivät voi erkaantua. Sääntö on sama
+   * kuin kartan pisteillä: oma juttu voittaa wikin. Suodatus jätetään
+   * kutsujalle — valikkoon kelpaa myös pelkkä wiki-kohde, selaukseen ei.
+   */
+  nahtavyysKohteet() {
+    const kaupunki = this.arrivalShownFor;
+    return (KAUPUNKIKARTAT[kaupunki]?.kohteet ?? []).map((raaka, i) => {
+      const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
+      const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
+      return { k, numero: String(i + 1) };
+    });
+  }
+
+  /**
    * Hampurilaisvalikko nähtävyyspopupiin (omistajan toive 10.8.2026):
    * saman kaupungin muihin nähtävyyksiin pääsee suoraan, ilman että
    * popup pitää sulkea ja kohde etsiä kartalta uudestaan. Lista tulee
@@ -9173,13 +9278,8 @@ export class UI {
       });
     }
     sulje();
-    const kartta = KAUPUNKIKARTAT[this.arrivalShownFor];
     valikko.replaceChildren();
-    const kohteet = (kartta?.kohteet ?? []).map((raaka, i) => {
-      const juttu = NAHTAVYYSJUTUT[this.arrivalShownFor]?.[raaka.nimi];
-      const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
-      return { k, numero: String(i + 1) };
-    }).filter(({ k }) => k.teksti || k.wiki);
+    const kohteet = this.nahtavyysKohteet().filter(({ k }) => k.teksti || k.wiki);
     nappi.hidden = kohteet.length < 2;
     if (nappi.hidden) return;
     for (const { k, numero } of kohteet) {
