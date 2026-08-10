@@ -120087,8 +120087,11 @@ class Sound {
       src.buffer = jet;
       src.loop = true; // lyhyempikin äänite kantaa koko kohtauksen yli
       const g = ctx.createGain();
-      g.gain.setValueAtTime(0.0001, t0);
-      g.gain.exponentialRampToValueAtTime(Math.min(1, 0.7 * asetus.voima), t0 + 0.9);
+      // Kevyt sisäänfeidaus (omistajan palaute 10.8.2026): moottori
+      // nousee kuuluviin ~2 sekunnissa samalla kun edellisen näkymän
+      // äänet häipyvät, eikä pamahda päälle kalvon kanssa yhtä aikaa.
+      g.gain.setValueAtTime(0.0001, t0 + 0.15);
+      g.gain.exponentialRampToValueAtTime(Math.min(1, 0.7 * asetus.voima), t0 + 2.1);
       // Ei ajastettua loppua: moottori soi, kunnes stopFlight häivyttää
       // sen — kalvo on auki niin kauan kuin pelaaja viipyy koneessa.
       src.connect(g).connect(this.bus);
@@ -120124,10 +120127,11 @@ class Sound {
     depth.gain.value = 0.65;
     lfo.connect(lfoGain).connect(depth.gain);
 
-    // Nousee lentoon ja jää soimaan; stopFlight häivyttää.
+    // Nousee lentoon ja jää soimaan; stopFlight häivyttää. Sisääntulo
+    // pehmennetty samaan tapaan kuin äänitetyssä moottorissa.
     const g = ctx.createGain();
-    g.gain.setValueAtTime(0.0001, t0);
-    g.gain.exponentialRampToValueAtTime(0.075, t0 + 0.5);
+    g.gain.setValueAtTime(0.0001, t0 + 0.15);
+    g.gain.exponentialRampToValueAtTime(0.075, t0 + 1.6);
 
     // Moottorin virtausääni potkurin alle: kohinaa kaistanpäästön läpi,
     // taajuus nousee lähdössä ja laskee laskeutuessa. Tämä tekee lennosta
@@ -120142,8 +120146,8 @@ class Sound {
     vf.frequency.exponentialRampToValueAtTime(1600, t0 + kesto * 0.4);
     vf.frequency.exponentialRampToValueAtTime(500, t0 + kesto);
     const vg = ctx.createGain();
-    vg.gain.setValueAtTime(0.0001, t0);
-    vg.gain.exponentialRampToValueAtTime(0.055, t0 + 0.7);
+    vg.gain.setValueAtTime(0.0001, t0 + 0.15);
+    vg.gain.exponentialRampToValueAtTime(0.055, t0 + 1.8);
 
     // Matala jyrinä pohjalle.
     const runko = ctx.createBufferSource();
@@ -120153,8 +120157,8 @@ class Sound {
     rf.type = 'lowpass';
     rf.frequency.value = 180;
     const rg = ctx.createGain();
-    rg.gain.setValueAtTime(0.0001, t0);
-    rg.gain.exponentialRampToValueAtTime(0.06, t0 + 0.6);
+    rg.gain.setValueAtTime(0.0001, t0 + 0.15);
+    rg.gain.exponentialRampToValueAtTime(0.06, t0 + 1.7);
 
     osc.connect(lp).connect(depth).connect(g).connect(this.bus);
     virtaus.connect(vf).connect(vg).connect(this.bus);
@@ -134095,6 +134099,31 @@ class UI {
       this.suljeKulttuuriKuva();
     });
     /*
+     * Nuolinäppäimet selaavat ja Esc sulkee — samat näppäimet joka
+     * paikassa, jossa tämä katselin avautuu (lehti, galleriat,
+     * nähtävyysjutut). Kuuntelija on documentissa kaappausvaiheessa,
+     * jotta se voittaa alla olevan dialogin oman sivuselauksen: ilman
+     * sitä nuoli olisi kääntänyt lehteä katselimen takana. Puretaan
+     * suljeKulttuuriKuvassa.
+     */
+    const nappaimet = (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        if (lista) {
+          indeksi = (indeksi + (e.key === 'ArrowRight' ? 1 : -1) + lista.length) % lista.length;
+          sfx.play('paper');
+          nayta();
+        }
+        e.preventDefault();
+        e.stopPropagation();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        this.suljeKulttuuriKuva();
+      }
+    };
+    document.addEventListener('keydown', nappaimet, { capture: true });
+    this.kulttuuriKuvaNappaimet = nappaimet;
+    /*
      * Suurennos liitetään PÄÄLLIMMÄISEEN avoimeen dialogiin. Modaali
      * (showModal) elää selaimen top layer -kerroksessa, joka peittää
      * kaiken ulkopuolisen z-indexistä riippumatta — kun kuvaa
@@ -134115,6 +134144,10 @@ class UI {
     this.kulttuuriKuvaEl = null;
     this.kulttuuriHuntuEl?.remove();
     this.kulttuuriHuntuEl = null;
+    if (this.kulttuuriKuvaNappaimet) {
+      document.removeEventListener('keydown', this.kulttuuriKuvaNappaimet, { capture: true });
+      this.kulttuuriKuvaNappaimet = null;
+    }
   }
 
   /*
@@ -137168,9 +137201,30 @@ class UI {
     const vanha = this.introVoice;
     this.introVoice = null;
     if (!vanha) return;
-    vanha.pause();
-    vanha.removeAttribute('src');
-    this.vapautaPuhuja(vanha);
+    this.haivytaAani(vanha);
+  }
+
+  /**
+   * Häivyttää HTMLAudio-äänen pehmeästi ja siivoaa sen perässä.
+   * Aiemmin intro-puhe katkesi kuin veitsellä, kun matka alkoi
+   * (omistajan palaute 10.8.2026: edellisen näkymän äänten pitää
+   * feidautua ulos samalla kun lennon ääni feidautuu sisään).
+   */
+  haivytaAani(audio, kesto = 600) {
+    const alkuVoima = audio.volume;
+    const t0 = performance.now();
+    const askel = () => {
+      const osuus = (performance.now() - t0) / kesto;
+      if (osuus >= 1 || audio.paused) {
+        audio.pause();
+        audio.removeAttribute('src');
+        this.vapautaPuhuja(audio);
+        return;
+      }
+      audio.volume = alkuVoima * (1 - osuus);
+      setTimeout(askel, 40);
+    };
+    askel();
   }
 
   /**
@@ -139845,11 +139899,21 @@ class UI {
     }
     // Lähtöasento ennen animaation alkua, ettei kone välähdä origossa.
     kone.style.transform = koneRuudut[0].transform;
+    /*
+     * Liike alkaa vasta, kun kalvon ensimmäinen maalaus on valmis:
+     * ison SVG:n asettelu, fonttien nouto ja moottoriäänen käynnistys
+     * osuivat samaan ruutuun animaation alun kanssa, ja kone nykäisi
+     * lähdössä (omistajan havainto 10.8.2026). Kaksi ruudunpäivitystä
+     * päästää maalauksen ohi, ja pieni delay on lisäksi tarkoituksella:
+     * kone seisoo hetken lähtöpisteessään ennen nousua. Napautus
+     * ohittaa myös viivästetyn animaation (finish vie loppuun).
+     */
+    await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
     const koneAnim = kone.animate(koneRuudut, {
-      duration: lennonKesto, easing: 'linear', fill: 'forwards',
+      duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
     });
     const reittiAnim = reitti.animate(reittiRuudut, {
-      duration: lennonKesto, easing: 'linear', fill: 'forwards',
+      duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
     });
     lentoAnimaatiot.push(koneAnim, reittiAnim);
     await Promise.all([koneAnim.finished, reittiAnim.finished]).catch(() => {
@@ -140117,6 +140181,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 513, teksti: 'Kuvakatselimen näppäimet, lennon pehmeä lähtö ja äänifadet' },
   { v: 512, teksti: 'Kohderyhmä täsmennetty: 13+ seikkailupeli, ei lastenpeli' },
   { v: 511, teksti: 'Kuwait sai lintujen ja aavikon aihesivut' },
   { v: 510, teksti: 'Tallennetun pelin palautus korjattu: Tutki toimii taas' },
@@ -140713,7 +140778,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.512';
+const APP_VERSION = '2026-08-09.513';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

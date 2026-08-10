@@ -20,6 +20,35 @@ tunnelmaa — ja silloinkin sen on oltava tosi (tarina.md:n sääntö).
 Kaikki opettava kuuluu lehteen. Tämä lyhentää merkinnät ja vapauttaa ne
 tarinalle.
 
+## Imu aikuiselle (omistajan linjaus 10.8.2026 — sitova uusissa teksteissä)
+
+Peli on 13 vuotta täyttäneiden ja aikuisten seikkailupeli. Omistajan
+palaute: Euroopan matkakirjatekstit ovat "vielä vähän turhan pliisuja"
+— **Lähi-idästä alkaen merkinnät kirjoitetaan jännittävämmiksi ja
+hurjemmiksi, niin että pelissä on oikeasti imua aikuiselle.**
+Tarvittaessa teksteistä tehdään myöhemmin erillinen lastenversio;
+sitä EI tehdä nyt eikä sen varaan kirjoiteta.
+
+Mitä tämä tarkoittaa käytännössä:
+
+- **Vaara saa tuntua todelliselta.** Vanha mitta "askeleet sumussa
+  kyllä, vaara ei" oli lastenpelivaiheen raja ja väistyy uusissa
+  teksteissä. Hiekkamyrsky saa nielaista karavaanin jäljet, kaivo
+  saa olla kuiva, yö saa yllättää väärässä paikassa, ja Horatio saa
+  pelätä henkensä edestä — ja kirjoittaa siitä.
+- **Jännitteen lähteet:** luonto ja sen mittakaava, jano ja aika,
+  pimeys, korkeus, syvyys, eksyminen, kilpajuoksu, se että joku on
+  ehtinyt ensin. EI väkivaltaa, ei graafista kärsimystä, ei
+  ihmisryhmien välistä uhkaa — jännite tulee maailmasta ja
+  kilpajuoksusta, ei ihmisten pahuudesta.
+- **Kunnioitussäännöt eivät hellitä:** piikki osoittaa yhä Foggiin
+  ja hänen vanhaan maailmaansa; paikalliset ovat edelleen niitä,
+  jotka pelastavat, tietävät ja osaavat. Ei sotasisältöä -linja
+  pysyy (ml. Lähi-idän erityisherkkyydet).
+- **Euroopan valmiita merkintöjä ei kirjoiteta uusiksi** tämän
+  linjauksen takia ilman omistajan erillistä tilausta — linjaus
+  koskee uusia lautoja ja uusia tekstejä.
+
 ## Isoisä: Horatio Fogg
 
 Reginaldin isoisä saa nimen: **Horatio Fogg**, nimikirjaimet **H.F.**
@@ -69,8 +98,11 @@ ja aina yhden laivavuoron myöhässä.
 **Grimshaw ei ole koskaan vaarallinen.** Hän on kilpailija, ei rosvo:
 mahtipontinen, pikkumainen, hieman surkuhupaisa. Jännitys tulee
 kilpajuoksusta ja siitä, ettei koskaan tiedä, kuinka lähellä hän on —
-ei uhasta. Tämä on pelin dekkarin tärkein mitta: *askeleet
-sumussa kyllä, vaara ei.*
+ei uhasta. Euroopan laudan mitta oli *askeleet sumussa kyllä, vaara
+ei* — uusissa teksteissä sen korvaa "Imu aikuiselle" -osion linjaus
+(10.8.2026): vaara saa tuntua, mutta se tulee maailmasta ja
+kilpajuoksusta, ei ihmisten pahuudesta. Grimshaw itse pysyy
+kilpailijana, ei roistona.
 
 Horation sävy Grimshawista kehittyy: ensin huvittunut, sitten
 varovainen, ja myöhäisissä merkinnöissä melkein haikea — *"Ilman herra
@@ -316,7 +348,10 @@ vanhaan maailmaansa, ei koskaan maihin tai ihmisiin.
   ihmetys, kunnioitus ja lämpö; jännitys korkeintaan kahdesti.
 - **Lähi-itä — Sheban aarre.** Motiivilanka: suitsukkeen tuoksu ja
   tähdet — karavaanireittien suunnistus. Horatio mittaa öitä, ei
-  päiviä. Sävelpaino: arvoitus ja lämpö (teelasit, kauppiaat).
+  päiviä. Sävelpaino: arvoitus ja lämpö (teelasit, kauppiaat) —
+  JA "Imu aikuiselle" -linjauksen mukainen todellinen jännite:
+  aavikko on kaunis ja tappava, ja Horatio tietää sen. Tämä on
+  ensimmäinen lauta, jonka merkinnät kirjoitetaan uudella mitalla.
 - **Aasia (ei omaa lautaa — kaupungit maailmankartalla) — keisarin
   jadesinetti.** Motiivilanka: sinetin jälki vahassa ja paperissa —
   asiakirja, johon isoisä ei koskaan saanut leimaa. Sävelpaino:
