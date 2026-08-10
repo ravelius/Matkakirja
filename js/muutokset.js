@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 552, teksti: 'Euroopan saapumiset uusiksi: kommellukset ja persoonat' },
   { v: 551, teksti: 'Vuorikohteille kuratoidut kuvagalleriat, erä 1 (21/52)' },
   { v: 550, teksti: 'Numeroina-sivulle yleisluonnehdinta ja käyrien rytmi' },
   { v: 549, teksti: 'Äänipolun kaskadikorjaus, suurennoksen nuolet, esikuuntelut' },
