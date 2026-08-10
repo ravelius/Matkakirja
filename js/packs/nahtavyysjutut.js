@@ -8042,5 +8042,262 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
-  PLACEHOLDER_ERA13
+  kobenhavn: {
+    'Pieni merenneito': {
+      aika: '1913',
+      teksti: 'Pieni merenneito -patsas istuu kalliolla Langelinien '
+          + 'rannassa Kööpenhaminassa. Se on valettu pronssista, vain '
+          + '1,25 metriä korkea ja painaa 175 kiloa. Panimomiljonääri '
+          + 'Carl Jacobsen tilasi patsaan innostuttuaan baletista, joka '
+          + 'kertoi H. C. Andersenin sadun pienestä merenneidosta. '
+          + 'Kuvanveistäjä Edvard Eriksen sai tilauksen vuonna 1909, ja '
+          + 'patsas paljastettiin 23. elokuuta 1913.'
+        + '\n\n'
+        + 'Hauska yksityiskohta liittyy patsaan malliin: baleriina, '
+          + 'jonka tanssi oli koko idean innoittaja, ei halunnut '
+          + 'poseerata patsasta varten, joten Eriksen käytti mallina '
+          + 'omaa vaimoaan Eline Eriksenia.'
+        + '\n\n'
+        + 'Pieni merenneito on kokenut yllättävän kovaa kohtelua '
+          + 'vuosien varrella. Pää on sahattu irti kahdesti, vuosina '
+          + '1964 ja 1998, käsi katkaistiin 1984 ja koko patsas jopa '
+          + 'räjäytettiin veteen vuonna 2003. Siitä huolimatta se on '
+          + 'aina nostettu takaisin paikalleen, ja sen kopioita on '
+          + 'pystytetty yli kolmeentoista kaupunkiin ympäri maailmaa.',
+      kuvat: [
+        {
+          tiedosto: 'The Little Mermaid - 4668118032.jpg',
+          selite: 'Aurinkoisena kesäpäivänä matkailijat kokoontuvat '
+            + 'rantakivillä ihailemaan pronssista Pientä merenneitoa '
+            + 'kiven päällä meren äärellä.',
+          lahde: 'Andrea Lai, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-26.jpg',
+          selite: 'Läheltä kuvattu pronssinen Pieni merenneito -patsas '
+            + 'kivellä, ilta-auringon kultaisessa valossa meren edessä.',
+          lahde: 'Richardmaackphotography, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: '1913-Edvard Eriksen-Den lillie Havfrue.jpg',
+          selite: 'Vanha sepiansävyinen postikorttivalokuva Pienestä '
+            + 'merenneidosta pian patsaan paljastamisen jälkeen vuonna '
+            + '1913, satamalaivat taustalla.',
+          lahde: 'Tuntematon (postikorttikustantajien kokoelma), Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Amalienborg: {
+      aika: '1750–1760',
+      teksti: 'Amalienborg on Tanskan kuninkaallisen perheen koti '
+          + 'Kööpenhaminassa. Se muodostuu neljästä samanlaisesta '
+          + 'rokokopalatsista, jotka rakennettiin kahdeksankulmaisen '
+          + 'aukion ympärille vuosina 1750–1760 arkkitehti Nicolai '
+          + 'Eigtvedin suunnitelmien mukaan. Aukion keskellä on '
+          + 'kuningas Fredrik V:n ratsastajapatsas, jonka kuvanveistäjä '
+          + 'Jacques Saly paljasti vuonna 1771.'
+        + '\n\n'
+        + 'Palatsit rakennettiin alun perin neljälle rikkaalle '
+          + 'aatelissuvulle. Kaikki muuttui, kun Christiansborgin linna '
+          + 'tuhoutui tulipalossa vuonna 1794 - kuningasperhe osti '
+          + 'tyhjät palatsit ja muutti Amalienborgiin, ja siellä se '
+          + 'asuu yhä tänäkin päivänä.'
+        + '\n\n'
+        + 'Joka päivä keskipäivällä turistit kerääntyvät katsomaan, '
+          + 'kun kuninkaalliset henkivartijat marssivat '
+          + 'scharlakaninpunaisissa univormuissaan ja karvalakeissaan '
+          + 'aukiolle vaihtamaan vartiota. Amalienborg on nähnyt myös '
+          + 'vakavampia hetkiä: 9. huhtikuuta 1940 sen pihalla käytiin '
+          + 'tunnin mittainen tulitaistelu tanskalaisten '
+          + 'henkivartijoiden ja hyökkäävien saksalaisjoukkojen '
+          + 'välillä.',
+      kuvat: [
+        {
+          tiedosto: 'Denmark 0104 - Amalienborg Palace (3990546376).jpg',
+          selite: 'Amalienborgin palatsiaukio aamuvalossa: Fredrik V:n '
+            + 'ratsastajapatsas keskellä ja kaksi symmetristä '
+            + 'palatsisiipeä sivuilla, kirkas sininen taivas.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Vagtparade på Amalienborg Plads, 1896-1912.jpg',
+          selite: 'Vanha stereokuvakortti (n. 1896–1912) kaartin paraatista '
+            + 'Amalienborgin aukiolla, palatsi ja ratsastajapatsas '
+            + 'taustalla.',
+          lahde: 'Peter Alstrup, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Rundetårn: {
+      aika: '1637–1642',
+      teksti: 'Rundetårn eli Pyöreä torni kohoaa Kööpenhaminan '
+          + 'keskustassa 34,8 metrin korkeuteen. Kuningas Christian IV '
+          + 'halusi kaupunkiin tähtitornin, ja peruskivi muurattiin 7. '
+          + 'heinäkuuta 1637; torni valmistui vuonna 1642.'
+        + '\n\n'
+        + 'Tornissa ei ole lainkaan tavallisia portaita! Sisällä '
+          + 'kiertyy 210 metriä pitkä loiva spiraalikäytävä, jota '
+          + 'pitkin hevoset ja kärryt pääsivät kuljettamaan kirjoja ja '
+          + 'raskaita tähtitieteen laitteita aina huipulle asti.'
+        + '\n\n'
+        + 'Spiraali on nähnyt monta hurjaa temppua. Vuonna 1716 '
+          + 'Venäjän tsaari Pietari Suuri ratsasti sitä pitkin '
+          + 'hevosella huipulle asti, vuonna 1902 siellä ajettiin '
+          + 'ensimmäistä kertaa autolla, ja vuonna 1989 eräs mies ajoi '
+          + 'koko matkan yksipyöräisellä vain 1 minuutissa 48,7 '
+          + 'sekunnissa - ennätys, joka on yhä voimassa.',
+      kuvat: [
+        {
+          tiedosto: 'Kopenhagen (DK), Runder Turm -- 2017 -- 1633.jpg',
+          selite: 'Rundetårnin tiilinen pyöreä torni kuvattuna alhaalta '
+            + 'ylöspäin kirkasta sinistä taivasta vasten, tornin '
+            + 'kruunukoriste ja tiiliverhous selvästi näkyvissä.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Peter Tom-Petersen - Parti fra gården ved Regensen med udsigt til Rundetårn - 1888.png',
+          selite: 'Taidemaalari Peter Tom-Petersenin vuonna 1888 maalaama '
+            + 'näkymä Regensenin pihalta puiden lomasta kohti '
+            + 'Rundetårnia.',
+          lahde: 'Peter Tom-Petersen, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Nyhavn: {
+      aika: '1670–1675',
+      teksti: 'Nyhavn eli "uusi satama" on 450 metriä pitkä kanava '
+          + 'Kööpenhaminan keskustassa. Kuningas Christian V rakennutti '
+          + 'sen vuosina 1670–1675, ja työn tekivät tanskalaiset '
+          + 'sotilaat sekä Tanskan ja Ruotsin sodassa vangiksi jääneet '
+          + 'ruotsalaiset sotavangit. Kanavan piti tuoda laivat suoraan '
+          + 'merenlahdelta kaupungin Kongens Nytorv -torille asti.'
+        + '\n\n'
+        + 'Ennen vanhaan Nyhavn oli meluisa ja vähän vaarallinenkin '
+          + 'satamakortteli täynnä merimiehiä ja krouveja - aivan '
+          + 'toisenlainen paikka kuin nykyinen värikäs turistikatu. '
+          + 'Vanhin talo, numero 9, on peräisin jo vuodelta 1681. '
+          + 'Satukirjailija H. C. Andersen asui Nyhavnin varrella eri '
+          + 'osoitteissa yhteensä 18 vuoden ajan.'
+        + '\n\n'
+        + '1960-luvulla kanava oli päässyt rappiolle, mutta '
+          + 'kaupunkilaiset päättivät pelastaa sen. Laiturialue '
+          + 'kivettiin jalankulkijoille vuonna 1980, ja nykyään '
+          + 'Nyhavnin kirkkaanväriset talot ja vanhat purjelaivat ovat '
+          + 'yksi koko Kööpenhaminan tunnetuimmista näkymistä.',
+      kuvat: [
+        {
+          tiedosto: 'Nyhavn houses and boats.jpg',
+          selite: 'Nyhavnin kanavan värikkäät talot ja perinteiset puiset '
+            + 'purjeveneet auringonpaisteessa, lokki lentää taivaalla.',
+          lahde: 'OleNeitzel, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Classic Nyhavn I (7530252984).jpg',
+          selite: 'Ylhäältä kuvattu näkymä Nyhavnin kanavalle kirkkaassa '
+            + 'sinisessä taivaassa, koko kirjava talorivistö ja '
+            + 'purjeveneet näkyvissä.',
+          lahde: 'Karen Mardahl, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Nyhavn, København, 1896-1912.jpg',
+          selite: 'Vanha stereokuvakortti (n. 1896–1912) Nyhavnin kanavasta '
+            + 'täynnä vanhoja purjelaivoja ja rantakatua reunustavia '
+            + 'taloja.',
+          lahde: 'Peter Alstrup, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Christiansborgin linna': {
+      aika: '1907–1928',
+      teksti: 'Christiansborgin linna seisoo Slotsholmenin saarella '
+          + 'paikalla, jossa piispa Absalon rakensi Kööpenhaminan '
+          + 'ensimmäisen linnan jo vuonna 1167. Sen jälkeen paikalle on '
+          + 'noussut linna toisensa perään - kahdesti aiempi rakennus '
+          + 'on tuhoutunut kokonaan tulipalossa, vuosina 1794 ja 1884.'
+        + '\n\n'
+        + 'Nykyinen, jo kolmas Christiansborg valmistui vuosina '
+          + '1907–1928. Se on rakennettu uusbarokkityyliin '
+          + 'raudoitetusta betonista, ja sen torni kohoaa 106 metrin '
+          + 'korkeuteen - se on Kööpenhaminan korkein rakennus.'
+        + '\n\n'
+        + 'Christiansborg on maailmanlaajuisestikin harvinainen: se '
+          + 'on ainoa rakennus, jossa toimivat samaan aikaan kaikki '
+          + 'kolme valtiovallan haaraa - Tanskan parlamentti, '
+          + 'pääministerin toimisto ja korkein oikeus. Linnan alta '
+          + 'löytyy myös yli 800 vuotta vanhat Absalonin linnan '
+          + 'rauniot, joissa voi käydä yhä tänäkin päivänä.',
+      kuvat: [
+        {
+          tiedosto: 'Christiansborg Slot from west Copenhagen Denmark.jpg',
+          selite: 'Christiansborgin linna suoraan edestä kuvattuna, '
+            + 'kultaisessa illan valossa dramaattisten pilvien alla, '
+            + 'ratsastajapatsas edustalla.',
+          lahde: 'Jebulon, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: '2018 - Christiansborg from the Marble Bridge.jpg',
+          selite: 'Näkymä Marmorisillalta linnan kahden porttiholvin läpi '
+            + 'kohti valaistua tornia hämärän sinisellä taivaalla.',
+          lahde: 'Moahim, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Christiansborg Palace before 1873 by Budtz Müller.jpg',
+          selite: 'Vanha stereokuvakortti vanhasta Christiansborgin linnasta '
+            + 'Christiansborgin aukiolta kuvattuna, sellaisena kuin se '
+            + 'näytti ennen vuotta 1873.',
+          lahde: 'Bertel Christian Budtz Müller, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tivoli: {
+      aika: '1843',
+      teksti: 'Tivoli avasi Kööpenhaminan keskustassa 15. elokuuta 1843. '
+          + 'Se on maailman toiseksi vanhin yhä toimiva huvipuisto - '
+          + 'vanhempi on vain toinen tanskalainen puisto, '
+          + 'Dyrehavsbakken. Puiston perusti Georg Carstensen, joka '
+          + 'otti mallia Pariisin Tivoli-puutarhasta ja Lontoon '
+          + 'Vauxhall Gardensista.'
+        + '\n\n'
+        + 'Puiston puinen vuoristorata Rutschebanen on rakennettu jo '
+          + 'vuonna 1914, ja se pyörii yhä - se on yksi maailman '
+          + 'vanhimmista toimivista vuoristoradoista. Toisen '
+          + 'maailmansodan aikana natsimieliset tuhosivat osan '
+          + 'Tivolista vuonna 1943, mutta puisto avattiin uudelleen jo '
+          + 'muutaman viikon päästä. Kesäkuussa 1944 pommitusten '
+          + 'jälkeen Rutschebanenkin oli taas käynnissä vain 25 '
+          + 'päivässä.'
+        + '\n\n'
+        + 'Tivolin vaikutus ulottuu kauas: Walt Disney vieraili '
+          + 'puistossa ja sai siitä inspiraatiota omaan '
+          + 'Disneylandiinsa. Nykyään Tivolissa käy vuosittain '
+          + 'miljoonia vierailijoita - vuonna 2024 peräti 4,25 '
+          + 'miljoonaa.',
+      lainaus: {
+        teksti: 'Tivoli ei tule koskaan valmiiksi.',
+        lahde: 'Georg Carstensen, Tivolin perustaja, 1844',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Tivoli Copenhagen Main Entrance.jpg',
+          selite: 'Tivolin pääsisäänkäynnin kolme rakennusta kultaisessa '
+            + 'illan valossa, ihmisiä kävelemässä kadulla portin edessä.',
+          lahde: 'Sissew, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'The Tivoli park entrance, Copenhagen, Denmark-LCCN2001697993.jpg',
+          selite: 'Värillinen aikalaisvalokuva (photochrom, n. 1890–1900) '
+            + 'Tivolin sisäänkäynnistä: hevosvetoinen omnibussi, '
+            + 'aikalaispukuisia kävelijöitä ja Tanskan lippu portin '
+            + 'päällä.',
+          lahde: 'Photochrom Print Collection, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
