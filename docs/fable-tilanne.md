@@ -392,3 +392,26 @@ kaaren aarreluenta kattaa paljastuksen äänen kaarilaudoilla.
   käyntiin. Opus 2 siististi valmiudessa (Tallinna+Riika tehty).
 - Valmiuslista: auki 7 (erät 11–13), 8b (kokoava QA), 9 (läpipelaus
   + ilmoitus).
+
+### Yövahtikierros 7 (klo ~6.25): Opus 1:n Eurooppa valmis
+
+- **Git-raportointi toimii:** Opus 1:n ja Opus 2:n raportit luettu
+  haaroilta. Opus 1: EUROOPPA OSALTAAN VALMIS (v494/v496/v497 — 12
+  valokuvarajatapausta, 16/17 duplikaattia vaihdettu, 2 hyväksytty
+  Fablen päätöksellä; testit 570/0). Opus 2: kujabugin juurisyy oli
+  oma KADUT-taulubugi (service-tiet vuotivat kaikkiin kaupunkeihin),
+  todistettu nelinkertaisella pikselivertailulla (0,00 % / 0,20 %) —
+  Tallinnan JA Riian muurit mainissa (v493).
+- **Sonnet 2:n kontti jäi käynnistymättä** (PENDING 55 min ilman
+  aktiviteettia kierrätyksen jälkeen) → kierrätetty uudelleen ja erä
+  11 käynnistetty tuoreella triggerillä. Erä 11:stä ei menetetty
+  työtä (ei ehtinyt alkaa).
+- **Opus 1 aloittaa ME-aihesivut:** ARE-pilotti ensin, palaute ennen
+  muita maita (omistajan linjaus: Euroopan jälkeen suoraan Lähi-itä).
+- Huomio: orpo haara claude/zoom-synkka ilmestyi (9 pv vanhoja
+  committeja, ei yhteistä pohjaa mainin kanssa) — ei kosketa, mainitaan
+  aamuraportissa omistajalle.
+- Valmiuslista: auki 7 (erät 11–13), 8b (kokoava QA), 9 (läpipelaus).
+  Ydinpeli + lehdet + kartat + luennat ovat valmiit ja QA:ttu;
+  aamuraportti kertoo tarkan tilanteen vaikka jutturerät olisivat
+  vielä kesken.

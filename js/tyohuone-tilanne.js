@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '10.8.2026 (yövahti klo 5.30)',
+  paivitetty: '10.8.2026 (yövahti klo 6.30)',
   tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
     + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
     + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
@@ -34,12 +34,12 @@ export const TILANNE = {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Menovinkkisivujen kuvat valmiit (v486–v492): 58 '
-        + 'kuvaa 15 maalle, 245/246 riviä kuvitettu. Aiemmin lehdet '
-        + 'täyteen (v481) ja orpoauditointi (v483).',
-      seuraavaksi: 'Neljä duplikaattirajatapausta Fablen päätöksen '
-        + 'mukaan (v494 ja v496 jo mainissa) — sitten Eurooppa on '
-        + 'Opus 1:n osalta valmis. Seuraavana ME-aihesivut.',
+      tehtava: 'EUROOPPA VALMIS OSALTAAN: lehdet (v481), '
+        + 'orpoauditointi (v483), menovinkkikuvat (v486–v492), '
+        + 'valokuvarajatapaukset (v494) ja kuvaduplikaatit '
+        + '(v496–v497, 16/17 vaihdettu, 2 hyväksytty).',
+      seuraavaksi: 'Lähi-idän maiden aihesivut alkavat: ARE-pilotti '
+        + 'ensin, Fablen palaute ennen muita maita.',
     },
     {
       tekija: 'Opus 2',
