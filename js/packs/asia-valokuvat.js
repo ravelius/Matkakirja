@@ -1551,12 +1551,12 @@ export const ASIA_VALOKUVAT = {
       },
     ],
     uusi: {
-      tiedosto: 'Katharinenkloster Sinai BW 2.jpg',
+      tiedosto: 'Saint Catherine\'s Monastery, Mount Sinai morning.jpg',
       vuosi: '2010',
-      lahde: 'Berthold Werner, Commons (CC BY-SA 3.0)',
-      selite: 'Pyhän Katariinan luostari nykyään ylhäältä nähtynä. Muurien '
-        + 'sisällä kasvaa yhä puutarha ja sypressejä, ja se on koko laakson '
-        + 'ainoa vihreä kohta.',
+      lahde: 'Abraham, Commons (CC BY-SA 4.0)',
+      selite: 'Pyhän Katariinan luostari Siinain vuorten juurella aamuvalossa. '
+        + 'Muurien sisällä on kirkko ja kellotorni, ja ympärillä kohoaa '
+        + 'paljas kalliorinne.',
     },
   },
   tabriz: {

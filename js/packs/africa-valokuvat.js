@@ -56,12 +56,11 @@ export const AFRICA_VALOKUVAT = {
           + 'paikallisia asukkaita raunioiden keskellä.',
       },
       {
-        tiedosto: 'Khan el-Khalili 2019.jpg',
-        vuosi: '2019',
-        lahde: 'Mohammed Moussa, Commons (CC BY-SA 4.0)',
-        selite: 'Khan el-Khalili on Kairon vanhan keskustan basaari, jonka juuret '
-          + 'ovat mamelukkien ajassa. Kujilla tingitään yhä, ja teetä '
-          + 'tarjotaan kaupanteon lomassa.',
+        tiedosto: 'El Cairo, Khan al-Khalili 1999 03.jpg',
+        vuosi: '1999',
+        lahde: 'LBM1948, Commons (CC BY-SA 4.0)',
+        selite: 'Hajuvesikaupan ikkuna Khan el-Khalilin basaarissa. Lasihyllyillä '
+          + 'on satoja koristeltuja pulloja, joissa myydään tuoksuöljyjä.',
       },
     ],
     tiedosto: 'Kairo, marchands ambulants LCCN2017657437.jpg',
@@ -360,11 +359,11 @@ export const AFRICA_VALOKUVAT = {
       + 'historian vartiopaikka. Isoisän aikaan sen muurit olivat jo '
       + 'rapistumassa.',
     uusi: {
-      tiedosto: 'Porte du non-retour au Benin.jpg',
-      lahde: 'Commons (CC0)',
-      selite: 'Ouidahin rannalla seisoo nykyään Paluuttomuuden portti — '
-      + 'muistomerkki niille, jotka vietiin täältä laivoihin eivätkä '
-      + 'koskaan palanneet.',
+      tiedosto: 'Benin UNESCO à la Porte du non-retour à Ouidah.jpg',
+      lahde: 'Rachad Sanoussi, Commons (CC BY-SA 4.0)',
+      selite: 'Muistomerkin kivilaatta Ouidahin rannalla. Siihen on kaiverrettu '
+        + 'portin nimi ranskaksi sekä Beninin ja Unescon tunnukset; portti '
+        + 'pystytettiin 1995.',
     },
   },
   kano: {
@@ -530,11 +529,11 @@ export const AFRICA_VALOKUVAT = {
       + 'louhivat kuoppaa käsin, köysiradat kuljettivat maata ylös. '
       + 'Kuopasta kasvoi lopulta Iso Reikä.',
     uusi: {
-      tiedosto: 'Big Hole Kimberley.jpg',
-      lahde: 'Rudolph Botha, Commons (CC BY-SA 3.0)',
-      selite: 'Käsin kaivettu kuoppa on nykyään Iso Reikä: puoli kilometriä '
-      + 'leveä ja pohjalla vihreä järvi. Se on suurimpia ihmisen '
-      + 'lapiolla kaivamia kuoppia maailmassa.',
+      tiedosto: 'Big Hole, Kimberley, Northern Cape, South Africa (20512571296).jpg',
+      lahde: 'South African Tourism, Commons (CC BY 2.0)',
+      selite: 'Kimberleyn Iso kuoppa kaupungin laidalla. Kaivos on kaivettu '
+        + 'käsin, ja pohjalla on nyt tummansininen järvi; reunalla näkyy '
+        + 'nykyinen kaupunki.',
     },
   },
   madagaskar: {
@@ -945,12 +944,12 @@ export const AFRICA_VALOKUVAT = {
   namib: {
     lisat: [
       {
-        tiedosto: '006 Dune 45 in Sossusvlei at sunrise Photo by Giles Laurent.jpg',
-        vuosi: '2025',
-        lahde: 'Giles Laurent, Commons (CC BY-SA 4.0)',
-        selite: 'Sossusvlein dyyni auringonnousussa. Hiekan punaoranssi väri '
-          + 'tulee raudasta, joka on hapettunut hitaasti vuosimiljoonien '
-          + 'aikana.',
+        tiedosto: 'Sossusvlei Dune Namib Desert Namibia Luca Galuzzi 2004.JPG',
+        vuosi: '2004',
+        lahde: 'Luca Galuzzi, Commons (CC BY-SA 2.5)',
+        selite: 'Dyynin harja Sossusvleissä. Valo jakaa rinteen kahtia: toinen '
+          + 'puoli hehkuu oranssina, toinen jää varjoon, ja harjalla kulkee '
+          + 'pieni ihmisjono.',
       },
       {
         tiedosto: 'Men walking on top of a sand dune in Sossusvlei during a wind storm.jpg',
@@ -1080,10 +1079,11 @@ export const AFRICA_VALOKUVAT = {
     selite: 'Rautatien rakentajia Nairobissa 1903 — kaupunki oli tuolloin '
       + 'vasta muutaman vuoden ikäinen ratatyöläisten leiri.',
     uusi: {
-      tiedosto: 'A giraffe with a beautiful background of Nairobi City Skyline.jpg',
+      tiedosto: 'A giraffe the tallest animal in Kenya at Nairobi National Park with a background of Britam Tower the tallest building in Kenya.jpg',
       lahde: 'Alexmbogo, Commons (CC BY-SA 4.0)',
-      selite: 'Sama kaupunki sata vuotta myöhemmin: kirahvi laiduntaa '
-        + 'kansallispuistossa keskustan tornien katseen alla.',
+      selite: 'Masaikirahvi kävelee Nairobin kansallispuiston ruohikossa. '
+        + 'Taustalla häämöttävät kaupungin tornitalot — puisto alkaa heti '
+        + 'keskustan laidalta.',
     },
   },
   /*
@@ -1224,11 +1224,10 @@ export const AFRICA_VALOKUVAT = {
       + 'saatavilla — maja seisoo kuvassa samanlaisena kuin isoisän '
       + 'aikaan.',
     uusi: {
-      tiedosto: 'Assekrem Peaks at Sunset — Hoggar Mountains, Tamanrasset.jpg',
+      tiedosto: 'Sunrise Over the Assekrem Peaks — Hoggar Mountains, Algeria.jpg',
       lahde: 'Rachid Hamatou, Commons (CC BY-SA 4.0)',
-      selite: 'Ahaggarin kivipiikit auringonlaskussa. Huiput ovat vanhojen '
-        + 'tulivuorten sisuksia, joiden ympäriltä pehmeämpi kivi on '
-        + 'kulunut pois.',
+      selite: 'Auringonnousu Ahaggarin vuorilla. Kivipiikit nousevat autiomaan '
+        + 'yllä, ja etualalla kulkee kivinen polku kohti näköalapaikkaa.',
     },
   },
   mosambik: {
@@ -1257,11 +1256,11 @@ export const AFRICA_VALOKUVAT = {
       + 'kuva saarelta. Sama linnoitus vartioi satamaa isoisän aikaan ja '
       + 'vartioi yhä.',
     uusi: {
-      tiedosto: 'Ilha de Mocambique.jpg',
+      tiedosto: 'Forte de São Sebastião - Igreja.jpg',
       lahde: 'Stig Nygaard, Commons (CC BY 2.0)',
-      selite: 'Mosambikin saari nykyään: linnoituksen muurit, valkoinen '
-        + 'hiekka ja dhow-purje. Koko saari on Unescon '
-        + 'maailmanperintökohde.',
+      selite: 'São Sebastiãon linnoituksen sisäpiha Mosambikin saarella. '
+        + 'Valkoiseksi kalkittu kirkko seisoo muurien sisällä, ja takana '
+        + 'avautuu Intian valtameri.',
     },
   },
   viktoria: {
