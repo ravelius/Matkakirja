@@ -1934,6 +1934,20 @@ export class UI {
     this.quizAloita = document.getElementById('quiz-aloita');
     this.quizAloita.addEventListener('click', () => {
       this.quizAloita.hidden = true;
+      /*
+       * Kesken soiva kohtaamisluenta feidataan pois (omistajan
+       * palaute 10.8.2026: "jos jatkaa eteenpäin ennen kuin teksti
+       * loppuu, kertojan ääni vielä jatkuu taustalla") — kysymykset
+       * saa lukea rauhassa. Siivousversio, ei pelkkä pause: tähän
+       * luentaan ei palata, ja puhujan rooli on vapautettava tai
+       * tausta jää väistöön.
+       */
+      const luenta = this.diaryVoice;
+      if (luenta) {
+        this.diaryVoice = null;
+        this.luentaTauolla = null;
+        this.haivytaJaSiivoa(luenta);
+      }
       sfx.play('paper');
       const jatka = this.jatkaKysymykseen;
       this.jatkaKysymykseen = null;
@@ -3513,9 +3527,6 @@ export class UI {
     this.svg.style.alignSelf = 'flex-start';
     this.viewBoxSize = { vw: nakyvaYks, vh: korkeusYks };
     this.zoomSkaala = skaala;
-    // Maan "i" -napin osumapinta on SVG-yksiköissä: se on mitoitettava
-    // uudestaan aina kun skaala muuttuu, tai se kutistuu loitonnettaessa.
-    this.paivitaMaaIOsuma();
     this.zoomYlaReuna = ylaReuna;
     this.panJakso = this.kiertava() ? jakso : 0;
     this.panVara = this.kiertava() ? 0 : Math.max(0, leveys - paneW);
@@ -4269,6 +4280,8 @@ export class UI {
     // Linssin selitekortti väistää päiväkirjaa: se saa oman nurkkansa
     // vasta kun päiväkirjan nurkka on tiedossa.
     this.sijoitaLinssiSelite();
+    // Maapilleri on kortin peilikuva — puoli tarkistetaan samalla.
+    this.paivitaMaaPilleriPuoli();
   }
 
   /** Kartan koordinaatit kartta-alueen pikseleiksi. */
@@ -4763,16 +4776,12 @@ export class UI {
     drawPaperOverlay(svg, this.game.pack.map);
 
     /*
-     * Maakyltti kaupunkien PÄÄLLE (ks. countryNameLayer yllä). Kyltti
-     * näkyy vain siinä maassa, jossa pelaaja juuri on, ja katoaa heti
-     * kun hän siirtyy rajan yli — se ei siis peitä karttaa pysyvästi,
-     * ja sen alle jäävä kaupunki on se, jonka nimen pelaaja näkee
-     * muutenkin saapumiskortissa.
-     *
-     * Nappulat ja laatat jäävät tarkoituksella kyltin päälle: ne
-     * kertovat, missä pelaaja on ja mitä on jo löydetty, eikä kyltti
-     * saa piilottaa niitä. Kyltin ankkureita siirrettiin samassa
-     * erässä niin, että päällekkäisyys nappulan kanssa on harvinaista.
+     * countryNameLayer jää maatiedot-tilan käyttöön; perustilassa se
+     * on TYHJÄ. Maan nimikilpi muutti kartalta kartan kehykselle
+     * (paivitaMaaPilleri, Fable maxin analyysi 10.8.2026): kartalle
+     * piirretty kyltti peitti kaupunkeja ja nappulaa joka zoomilla,
+     * koska sen geometria on kiinteä laudan yksiköissä. Kerros
+     * pidetään yhä kaupunkien päällä maatiedot-tilaa varten.
      */
     root.appendChild(this.countryNameLayer);
 
@@ -4785,8 +4794,10 @@ export class UI {
 
   /**
    * Korostaa maan, jossa pelaaja on: alue sävytetään aavistuksen
-   * tummemmaksi ja maan nimi kirjoitetaan hennosti kaunokirjoituksella
-   * keskelle. Reitillä (kaupunkien välissä) edellinen korostus jää
+   * tummemmaksi ja rajattu punamullanvärisellä ääriviivalla — samalla
+   * värillä, jolla 1800-luvun atlakset piirsivät valtionrajat. Maan
+   * nimi näkyy kartan kehyksen pillerissä (paivitaMaaPilleri), ei
+   * kartalla. Reitillä (kaupunkien välissä) edellinen korostus jää
    * näkyviin, kunnes seuraava kaupunki vaihtaa maata — kartta ei vilku.
    */
   drawCountryBorders() {
@@ -4801,126 +4812,62 @@ export class UI {
     this.countryLayer.textContent = '';
     this.countryNameLayer.textContent = '';
     const maa = map.countryShapes?.[iso];
+    this.paivitaMaaPilleri(maa, iso);
     if (!maa) return;
     const d = maa.renkaat
       .map((r) => `M${r.map(([x, y]) => `${x},${y}`).join(' L')}Z`)
       .join(' ');
     el('path', { d, class: 'country-tint' }, this.countryLayer);
-    this.piirraMaaKilpi(maa, iso);
+    // Ääriviiva countryLayeriin, jolloin maa-rajaus-clip katkaisee sen
+    // tyyliteltyyn rantaan — merelle ei valu mitään.
+    el('path', { d, class: 'country-korostus' }, this.countryLayer);
   }
 
   /**
-   * Maan nimikilpi: nimi ja i-merkki YHTENÄ nappina valitun maan
-   * keskellä.
-   *
-   * Omistajan tarkennus 8.8.2026 illalla: *"maan nimi näkyy välillä
-   * huonosti ja tuo i hyppää oudosti. Valittuna maan nimi voisi näkyä
-   * omana boksinaan jossa samassa i-merkki, eli yksi yhteinen nappi
-   * jossa nimi ja i symboli, mutta aina vain sen maan kohdalla joka
-   * on valittuna."*
-   *
-   * Aiempi muoto oli haalea kaunokirjoitusnimi + erillinen i-ympyrä,
-   * jonka paikka mitattiin nimen leveydestä — siksi se "hyppäsi", kun
-   * mittaus ehti valmistua eri aikaan kuin piirto. Kilpi on yksi
-   * ryhmä, jonka kaikki mitat lasketaan samalla kertaa skaalasta.
+   * Maan nimi + ⓘ kiinteänä pillerinä kartan KEHYKSELLÄ, ei kartalla
+   * (Fable maxin speksi 10.8.2026, omistajan tilaus "tee fablen
+   * ehdotus"). HTML-nappi map-panen yläreunassa: ei skaalaudu
+   * zoomissa, ei liiku panoroinnissa eikä voi koskaan peittää
+   * kaupunkia, nimeä tai nappulaa — ja kosketuskohde on aina täydet
+   * 44 px ilman skaalalaskentaa. Puoli valitaan matkapäiväkirjakortin
+   * peilikuvana (paivitaMaaPilleriPuoli), jottei pilleri jää kortin
+   * alle. maa = null piilottaa pillerin (lauta ilman muotoja,
+   * pelin alku).
    */
-  piirraMaaKilpi(maa, iso) {
-    const nappi = el('g', {
-      class: 'maa-kilpi',
-      role: 'button',
-      tabindex: '0',
-      'aria-label': `${maa.nimi}: avaa maan lehti`,
-    }, this.countryNameLayer);
-    const tausta = el('rect', { class: 'maa-kilpi-tausta' }, nappi);
-    const nimi = el('text', {
-      class: 'maa-kilpi-nimi', 'text-anchor': 'middle', 'dominant-baseline': 'central',
-    }, nappi);
-    nimi.textContent = maa.nimi;
-    const keha = el('circle', { class: 'maa-i-kehä' }, nappi);
-    const kirjain = el('text', {
-      class: 'maa-i-kirjain', 'text-anchor': 'middle', 'dominant-baseline': 'central',
-    }, nappi);
-    kirjain.textContent = 'i';
-    // Läpinäkyvä osumapinta koko kilven yli — sormelle vähintään 44 px.
-    const osuma = el('rect', { class: 'maa-i-osuma' }, nappi);
-    this.maaKilpi = { tausta, nimi, keha, kirjain, osuma, maa };
-    this.paivitaMaaIOsuma();
-    const avaa = (e) => {
-      // Napautus ei saa vuotaa kartalle: kartta zoomaisi tai
-      // päiväkirja kutistuisi saman eleen päälle.
-      e.stopPropagation();
-      e.preventDefault();
-      this.avaaMaalehti(iso);
-    };
-    nappi.addEventListener('click', avaa);
-    nappi.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') avaa(e); });
+  paivitaMaaPilleri(maa, iso) {
+    let nappi = this.maaPilleri;
+    if (!maa) {
+      if (nappi) nappi.hidden = true;
+      return;
+    }
+    if (!nappi || !nappi.isConnected) {
+      nappi = document.createElement('button');
+      nappi.type = 'button';
+      nappi.className = 'maa-pilleri';
+      nappi.appendChild(html('span', 'maa-pilleri-nimi', ''));
+      nappi.appendChild(html('span', 'maa-pilleri-i', 'i'));
+      nappi.addEventListener('click', () => {
+        if (this.maaPilleriIso) this.avaaMaalehti(this.maaPilleriIso);
+      });
+      this.mapPane.appendChild(nappi);
+      this.maaPilleri = nappi;
+    }
+    this.maaPilleriIso = iso;
+    nappi.querySelector('.maa-pilleri-nimi').textContent = maa.nimi;
+    nappi.setAttribute('aria-label', `${maa.nimi}: avaa maan lehti`);
+    nappi.hidden = false;
+    this.paivitaMaaPilleriPuoli();
   }
 
   /**
-   * Kilven mitat nykyiseen kartan skaalaan.
-   *
-   * Mitat ovat SVG-yksiköissä, joten NÄYTTÖkoko riippuu siitä, kuinka
-   * pieneksi kartta on kutistettu. Siksi kaikki lasketaan
-   * tavoitepikseleistä taaksepäin (teksti ~13 px, osumapinta ≥44 px)
-   * ja päivitetään joka zoomilla. Skaala luetaan suoraan DOMista
-   * (leveys / viewBoxin leveys) eikä this.zoomSkaalasta: se ei ole
-   * asetettu kaikilla laudoilla, ja väärä oletus 1 kutisti aiemman
-   * i-napin yhdentoista pikselin ympyräksi.
+   * Pillerin puoli on päiväkirjakortin peilikuva: kortti vasemmalla →
+   * pilleri oikealla (kirjanappia väistäen), kortti oikealla →
+   * pilleri vasemmalla. Kutsutaan myös placeFactCardista, jotta puoli
+   * seuraa korttia ruudun kääntyessä.
    */
-  paivitaMaaIOsuma() {
-    const k = this.maaKilpi;
-    if (!k) return;
-    const laatikko = this.svg?.getBoundingClientRect?.();
-    const vb = this.svg?.getAttribute?.('viewBox')?.split(/\s+/);
-    const skaala = laatikko?.width && vb?.[2] ? laatikko.width / Number(vb[2]) : (this.zoomSkaala || 1);
-    if (!Number.isFinite(skaala) || skaala <= 0) return;
-    /*
-     * Kirjasinkoko on SAMA kuin kaupunkien nimillä (omistajan sääntö
-     * 9.8.2026: "napin teksti ei saisi ylittää kaupungin nimen kokoa
-     * vaan pitäisi olla aina saman kokoinen sen kanssa"). Kaupungin
-     * nimi on 18 laudan yksikköä (mapart.js KAUPUNGIN_NIMI_YKSIKKOA),
-     * joten kilpi skaalautuu zoomissa täsmälleen nimien mukana —
-     * aiemmat näyttöpikselilaskelmat poistuivat. Vain osumapinta
-     * lasketaan yhä skaalasta, jotta sormi osuu kaukaakin.
-     */
-    const kirjasin = 18;
-    k.nimi.setAttribute('font-size', kirjasin.toFixed(1));
-    // Nimen leveys mitataan, ei arvata — mutta vasta kirjasinkoon
-    // asettamisen jälkeen, jotta mitta vastaa lopullista piirtoa.
-    let leveys = 0;
-    try { leveys = k.nimi.getComputedTextLength?.() ?? 0; } catch { leveys = 0; }
-    if (!leveys) leveys = k.maa.nimi.length * kirjasin * 0.62;
-    const r = kirjasin * 0.55;
-    const valiX = kirjasin * 0.55;
-    const pehmusteX = kirjasin * 0.75;
-    const korkeus = kirjasin * 1.9;
-    const leveysKaikki = pehmusteX + leveys + valiX + 2 * r + pehmusteX;
-    const [cx, cy] = k.maa.keskus;
-    const x0 = cx - leveysKaikki / 2;
-    const y0 = cy - korkeus / 2;
-    k.tausta.setAttribute('x', x0.toFixed(1));
-    k.tausta.setAttribute('y', y0.toFixed(1));
-    k.tausta.setAttribute('width', leveysKaikki.toFixed(1));
-    k.tausta.setAttribute('height', korkeus.toFixed(1));
-    k.tausta.setAttribute('rx', (korkeus / 2).toFixed(1));
-    k.tausta.setAttribute('stroke-width', '1.4');
-    k.nimi.setAttribute('x', (x0 + pehmusteX + leveys / 2).toFixed(1));
-    k.nimi.setAttribute('y', cy.toFixed(1));
-    const iX = x0 + pehmusteX + leveys + valiX + r;
-    k.keha.setAttribute('cx', iX.toFixed(1));
-    k.keha.setAttribute('cy', cy.toFixed(1));
-    k.keha.setAttribute('r', r.toFixed(1));
-    k.keha.setAttribute('stroke-width', '1.4');
-    k.kirjain.setAttribute('x', iX.toFixed(1));
-    k.kirjain.setAttribute('y', cy.toFixed(1));
-    k.kirjain.setAttribute('font-size', (r * 1.3).toFixed(1));
-    // Osumapinta: koko kilpi, mutta vähintään 44 px joka suuntaan.
-    const osumaK = Math.max(korkeus, 44 / skaala);
-    const osumaL = Math.max(leveysKaikki, 44 / skaala);
-    k.osuma.setAttribute('x', (cx - osumaL / 2).toFixed(1));
-    k.osuma.setAttribute('y', (cy - osumaK / 2).toFixed(1));
-    k.osuma.setAttribute('width', osumaL.toFixed(1));
-    k.osuma.setAttribute('height', osumaK.toFixed(1));
+  paivitaMaaPilleriPuoli() {
+    if (!this.maaPilleri) return;
+    this.maaPilleri.dataset.side = this.factCard?.dataset.corner === 'tl' ? 'oikea' : 'vasen';
   }
 
   /** Kartalla näkyvät vain käännetyt laatat omina kuvakkeinaan. */
@@ -10272,16 +10219,24 @@ export class UI {
     const vanha = this.introVoice;
     this.introVoice = null;
     if (!vanha) return;
-    this.haivytaAani(vanha);
+    this.haivytaJaSiivoa(vanha);
   }
 
   /**
-   * Häivyttää HTMLAudio-äänen pehmeästi ja siivoaa sen perässä.
+   * Häivyttää HTMLAudio-äänen pehmeästi ja siivoaa sen perässä —
+   * myös puhujan rooli vapautuu, jotta tausta palaa täyteen voimaan.
    * Aiemmin intro-puhe katkesi kuin veitsellä, kun matka alkoi
    * (omistajan palaute 10.8.2026: edellisen näkymän äänten pitää
    * feidautua ulos samalla kun lennon ääni feidautuu sisään).
+   *
+   * HUOM nimestä: tämä EI saa olla haivytaAani — luokassa on
+   * saman niminen luentojen häivytys (pause ilman siivousta, koska
+   * kaiutinnappi voi jatkaa samasta kohdasta), ja JavaScriptissä
+   * myöhempi metodi ylikirjoittaa aiemman äänettömästi. Juuri niin
+   * kävikin (löytyi 10.8.2026): stopIntroVoice sai pause-version,
+   * puhujan rooli jäi vapauttamatta ja tausta jäi väistöön.
    */
-  haivytaAani(audio, kesto = 600) {
+  haivytaJaSiivoa(audio, kesto = 600) {
     const alkuVoima = audio.volume;
     const t0 = performance.now();
     const askel = () => {

@@ -3755,64 +3755,88 @@ body.radio-tila .board-hint {
   stroke-linejoin: round;
   opacity: 0.22;
 }
-/* Maa, jossa pelaaja on: alue aavistuksen tummempana ja nimi hennosti
- * kaunokirjoituksella keskellä — sama käsiala kuin lentokalvon
- * reunamerkinnöissä. */
+/* Maa, jossa pelaaja on: alue aavistuksen tummempana ja rajattuna
+ * punamullanvärisellä ääriviivalla — väri, jolla 1800-luvun atlakset
+ * piirsivät valtionrajat. Maan nimi ei ole kartalla vaan kehyksen
+ * pillerissä (.maa-pilleri). */
 .country-tint {
   fill: rgba(90, 70, 40, 0.13);
   stroke: none;
 }
-/*
- * Maan nimikilpi: nimi ja i yhtenä nappina valitun maan keskellä
- * (omistajan tarkennus 8.8.2026: "yksi yhteinen nappi jossa nimi ja
- * i symboli, mutta aina vain sen maan kohdalla joka on valittuna").
- * Korvasi haalean kaunokirjoitusnimen + irrallisen i-ympyrän, jotka
- * näkyivät välillä huonosti ja hyppivät erilleen.
- */
-.maa-kilpi { cursor: pointer; }
 
-.maa-kilpi-tausta {
-  fill: rgba(245, 231, 200, 0.94);
-  stroke: rgba(70, 51, 31, 0.65);
+.country-korostus {
+  fill: none;
+  stroke: rgba(150, 60, 45, 0.45);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }
 
-.maa-kilpi-nimi {
-  fill: rgba(70, 51, 31, 0.92);
+/*
+ * Maan nimi + ⓘ kiinteänä pillerinä kartan kehyksellä (Fable maxin
+ * speksi 10.8.2026): map-panen lapsi kuten #maalehti-nappi ja
+ * zoominapit, joten se ei skaalaudu zoomissa, ei liiku panoroinnissa
+ * eikä voi peittää kaupunkia tai nappulaa — ja kosketuskohde on aina
+ * täydet 44 px. Ulkoasu on entisen kilven: pergamenttitäyttö,
+ * musteviiva, versaali ja ⓘ-kehä, jotta se lukee "samana kylttinä,
+ * joka muutti kartan reunalle". Puoli (data-side) on päiväkirjakortin
+ * peilikuva, kirjanappia väistäen.
+ */
+.maa-pilleri {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.5rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  min-height: 44px;
+  padding: 0.15rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(70, 51, 31, 0.65);
+  background: rgba(245, 231, 200, 0.94);
+  color: rgba(70, 51, 31, 0.92);
   font-family: var(--font-type);
+  font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  pointer-events: none;
+  cursor: pointer;
 }
 
-.maa-i-kehä {
-  fill: rgba(245, 231, 200, 0.92);
-  stroke: rgba(70, 51, 31, 0.75);
-  stroke-width: 1.4;
-}
+.maa-pilleri[data-side='oikea'] { left: auto; right: 3.2rem; }
 
-.maa-i-kirjain {
-  fill: rgba(70, 51, 31, 0.9);
+.maa-pilleri[hidden] { display: none; }
+
+.maa-pilleri-nimi { pointer-events: none; }
+
+.maa-pilleri-i {
+  display: inline-grid;
+  place-items: center;
+  width: 1.3em;
+  height: 1.3em;
+  border: 1px solid rgba(70, 51, 31, 0.75);
+  border-radius: 50%;
   font-family: var(--font-kauno);
   font-style: italic;
+  font-size: 0.95em;
   pointer-events: none;
 }
 
-/* Läpinäkyvä osumapinta: kilpi näyttää sirolta, mutta osuu sormella. */
-.maa-i-osuma { fill: transparent; }
+.maa-pilleri:hover,
+.maa-pilleri:focus-visible { border-color: var(--map-ink); }
 
-.maa-kilpi:hover .maa-i-kehä,
-.maa-kilpi:focus-visible .maa-i-kehä {
-  fill: var(--map-ink);
-  stroke: var(--map-ink);
+.maa-pilleri:hover .maa-pilleri-i,
+.maa-pilleri:focus-visible .maa-pilleri-i {
+  background: var(--map-ink);
+  border-color: var(--map-ink);
+  color: rgba(245, 231, 200, 0.95);
 }
 
-.maa-kilpi:hover .maa-i-kirjain,
-.maa-kilpi:focus-visible .maa-i-kirjain { fill: rgba(245, 231, 200, 0.95); }
-
-.maa-kilpi:hover .maa-kilpi-tausta,
-.maa-kilpi:focus-visible .maa-kilpi-tausta { stroke: var(--map-ink); }
-
-.maa-kilpi:focus-visible { outline: none; }
+/* Vertailu-, maatiedot- ja radiotila omistavat kartan itse — pilleri
+ * pois tieltä samoin kuin päiväkirjakortti ja toimintonapit. */
+body.vertailu-tila .maa-pilleri,
+body.maatiedot-tila .maa-pilleri,
+body.radio-tila .maa-pilleri { display: none; }
 
 .wave { fill: none; stroke: var(--sea-ink); stroke-width: 2; opacity: 0.45; stroke-linecap: round; }
 
