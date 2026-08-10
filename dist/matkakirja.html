@@ -9262,47 +9262,12 @@ body.vertailu-tila .pawns { display: none; }
 
 /*
  * Useamman kuvan karuselli (omistajan palaute 10.8.2026: lisäkuvat
- * karuselliin, ei peräkkäin — sivu venyi liian pitkäksi). Nuolet ja
- * laskuri kelluvat kuvan päällä samalla pergamenttipillerityylillä
- * kuin lehden sivunumero, joten ne eivät kasvata kehyksen mittaa.
+ * karuselliin, ei peräkkäin). Selaus näyttää ja toimii kuten lehden
+ * kuvakotelossa: nuolet ja laskuri tulevat .arrival-kuva-nuoli- ja
+ * .arrival-kuva-laskuri-luokista, pyyhkäisy vaihtaa kuvaa (ui.js).
+ * Ikkuna tarvitsee vain ankkurin nuolille ja pilleille.
  */
 .karuselli-ikkuna { position: relative; }
-
-.karuselli-nuoli {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.7rem;
-  height: 1.7rem;
-  min-height: 0;
-  padding: 0 0 0.15rem;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(246, 231, 198, 0.82);
-  color: rgba(70, 51, 31, 0.72);
-  font-size: 1.25rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.karuselli-nuoli:hover,
-.karuselli-nuoli:focus-visible { color: rgba(70, 51, 31, 0.98); }
-
-.karuselli-nuoli.vasen { left: 0.35rem; }
-.karuselli-nuoli.oikea { right: 0.35rem; }
-
-.karuselli-laskuri {
-  position: absolute;
-  right: 0.35rem;
-  bottom: 0.35rem;
-  padding: 0.08rem 0.45rem;
-  border-radius: 999px;
-  background: rgba(246, 231, 198, 0.82);
-  color: rgba(70, 51, 31, 0.8);
-  font-family: var(--font-type);
-  font-size: 0.68rem;
-}
 
 /* Henkilölinkki nähtävyystekstissä: nimi näyttää lehden linkiltä
  * (sama muste, pisteviiva-alleviivaus) mutta on nappi, joka avaa
@@ -9643,6 +9608,74 @@ body.maatiedot-tila .board-hint {
   flex: 1 1 100%;
   min-height: 0;
   padding: 0.45rem 0.8rem;
+}
+
+/* ── NÄHTÄVYYSPOPUPIN HAMPURILAISVALIKKO ──────────────────────────────
+ *
+ * Omistajan toive 10.8.2026: popupista pääsee suoraan saman kaupungin
+ * muihin nähtävyyksiin. Nappi istuu kortin oikeassa yläkulmassa ja
+ * valikko laskeutuu sen alle; rivit käyttävät kartan selitelistan
+ * numeropallukkaa, joten numerot täsmäävät karttaan.
+ */
+.nahtavyys-valikko-nappi {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.6rem;
+  z-index: 6;
+  width: 2.1rem;
+  height: 2.1rem;
+  min-height: 0;
+  padding: 0;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 6px;
+  background: rgba(246, 231, 198, 0.9);
+  color: rgba(70, 51, 31, 0.85);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.nahtavyys-valikko-nappi:hover,
+.nahtavyys-valikko-nappi[aria-expanded="true"] { color: rgba(70, 51, 31, 1); background: rgba(246, 231, 198, 1); }
+
+.nahtavyys-valikko {
+  position: absolute;
+  top: 2.9rem;
+  right: 0.6rem;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  max-width: min(80%, 20rem);
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 0.3rem;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 8px;
+  background: #f5f0e2;
+  box-shadow: 0 8px 24px rgba(20, 14, 6, 0.35);
+}
+
+.nahtavyys-valikko-rivi {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 0;
+  padding: 0.45rem 0.6rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: rgba(70, 51, 31, 0.92);
+  font: inherit;
+  font-size: 0.92rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nahtavyys-valikko-rivi:hover { background: rgba(70, 51, 31, 0.08); }
+
+.nahtavyys-valikko-rivi.nykyinen {
+  background: rgba(70, 51, 31, 0.12);
+  font-weight: 600;
 }
 
 </style>
@@ -10047,6 +10080,10 @@ body.maatiedot-tila .board-hint {
   -->
   <dialog id="nahtavyys-dialog" class="dialog arkki nahtavyys-arkki">
    <div class="dialog-card nahtavyys-kortti" tabindex="-1" autofocus>
+    <!-- Hampurilainen: saman kaupungin muut nähtävyydet ilman että
+         popupia tarvitsee sulkea (omistajan toive 10.8.2026). -->
+    <button id="nahtavyys-valikko-nappi" class="nahtavyys-valikko-nappi" type="button" aria-label="Kaupungin nähtävyydet" aria-expanded="false" hidden>☰</button>
+    <div id="nahtavyys-valikko" class="nahtavyys-valikko" hidden></div>
     <p id="nahtavyys-aika" class="nahtavyys-aika" hidden></p>
     <h2 id="nahtavyys-otsikko"></h2>
     <div id="nahtavyys-sisalto" class="nahtavyys-sisalto"></div>
@@ -51326,6 +51363,218 @@ const MAA_KATEGORIAT = {
   ],
   ARE: [
     {
+      id: 'aavikko',
+      nimi: 'Aavikko',
+      johdanto: 'Emiraateista suurin osa on hiekkaa ja kiviaavikkoa. Se ei ole '
+        + 'tyhjä: siellä elää eläimiä, jotka tulevat toimeen vähällä vedellä, '
+        + 'ja puu, joka pysyy vihreänä silloinkin kun sadetta ei ole tullut '
+        + 'kuukausiin.',
+      nostot: [
+        {
+          otsikko: 'Valkoinen antilooppi katosi ja palasi',
+          tiedosto: 'The Arabian Oryx or White Oryx.jpg',
+          teksti: 'Arabianoryks on Emiraattien kansalliseläin. Se on kookas '
+            + 'valkoinen antilooppi, jolla on kaksi pitkää lähes suoraa '
+            + 'sarvea ja tummat jalat. Metsästys vei lajin luonnosta '
+            + 'kokonaan: viimeinen villi oryks nähtiin vuonna 1972. Sitä '
+            + 'ennen oli ehditty ottaa muutamia yksilöitä talteen '
+            + 'eläintarhoihin, ja niiden jälkeläisiä alettiin päästää '
+            + 'takaisin aavikolle 1980-luvulla. Nykyään niitä elää vapaana '
+            + 'tuhansia. Oryks kestää kuumuutta hyvin ja saa suuren osan '
+            + 'vedestään kasveista, joten se tulee toimeen viikkoja juomatta.',
+          selite: 'Arabianoryks kävelee kuivalla ruohikolla. Turkki on lähes '
+            + 'valkoinen, jalat tummat ja kaksi pitkää sarvea nousevat '
+            + 'suorina taaksepäin.',
+          lahde: 'Zoozkyn, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Arabianoryks',
+        },
+        {
+          otsikko: 'Puu, joka juo kymmenien metrien syvyydestä',
+          tiedosto: 'The Ghaf.jpg',
+          teksti: 'Ghaf on Emiraattien kansallispuu. Se näyttää pieneltä ja '
+            + 'riippuvaoksaiselta, mutta sen juuret yltävät kymmenien metrien '
+            + 'syvyyteen pohjaveteen asti, joten puu pysyy vihreänä ympäri '
+            + 'vuoden. Karjanhoitajat ovat pysähtyneet sen varjoon '
+            + 'vuosisatoja, ja kamelit ja vuohet syövät sen lehtiä. Puun '
+            + 'kaataminen ilman lupaa on kielletty, ja koulut istuttavat '
+            + 'ghafin taimia joka vuosi. Aavikolla yksinään seisova ghaf '
+            + 'näkyy kauas, ja sen alle kerääntyy varjoa hakevia eläimiä.',
+          selite: 'Ghaf-puu, jonka ohuet oksat riippuvat alaspäin kuin verho. '
+            + 'Lehvästö on harmaanvihreä ja rungot haarautuvat matalalta.',
+          lahde: 'Mathurrajat2109, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Haukalla on oma passi',
+          tiedosto: 'The Falcon - The National Bird of the UAE (2).jpg',
+          teksti: 'Haukka on Emiraattien kansallislintu, ja haukkojen kanssa '
+            + 'liikkuminen on vanha beduiinitapa, joka on Unescon aineettoman '
+            + 'kulttuuriperinnön luettelossa. Linnun päässä pidetään pehmeää '
+            + 'nahkahuppua, joka rauhoittaa sen matkan ajaksi. Vuodesta 2002 '
+            + 'emiraattilaiset haukat ovat saaneet oman passin: siinä on '
+            + 'linnun tunnistetiedot, ja sen kanssa lintu pääsee '
+            + 'lentokoneeseen omalle istuimelle. Abu Dhabissa toimii maailman '
+            + 'suurin haukkasairaala, jossa hoidetaan tuhansia lintuja '
+            + 'vuodessa.',
+          selite: 'Haukka nahkahupussa istuu orrella. Huppu on koristeltu '
+            + 'vihreällä ja punaisella, ja taustalla erottuu valkoiseen '
+            + 'pukuun pukeutunut ihminen.',
+          lahde: 'Delta.jpg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten ghaf-puu pärjää aavikolla ilman sadetta?',
+        vaihtoehdot: [
+          'Se kerää kastetta lehtiinsä',
+          'Sen juuret yltävät syvälle pohjaveteen',
+          'Se pudottaa lehtensä kuivaksi ajaksi',
+          'Sitä kastellaan letkulla',
+        ],
+        oikea: 1,
+        fakta: 'Ghaf on Emiraattien kansallispuu, ja sen kaataminen ilman lupaa '
+          + 'on kielletty.',
+      },
+    },
+    {
+      id: 'keidas',
+      nimi: 'Keidas',
+      johdanto: 'Ennen öljyä ja pilvenpiirtäjiä elämä nojasi keitaisiin. Al Ainissa '
+        + 'vesi on johdettu vuorilta palmutarhoihin kanavia pitkin jo '
+        + 'tuhansia vuosia, ja sama järjestelmä toimii yhä.',
+      nostot: [
+        {
+          otsikko: 'Vesi johdetaan vuorilta kanavia pitkin',
+          tiedosto: 'Al-Ain Oasis (5).jpg',
+          teksti: 'Al Ainin keitaalla kasvaa yli satatuhatta taatelipalmua, ja ne '
+            + 'saavat vetensä falaj-kanavista. Falaj alkaa vuoren juurelta '
+            + 'pohjavedestä ja kulkee keitaalle loivasti laskevaa uomaa '
+            + 'pitkin, osa maan alla ja osa avoimena kourua myöten. Vettä ei '
+            + 'siis pumpata: se liikkuu painovoiman avulla koko matkan. '
+            + 'Jokaisella tarhalla on oma vuoronsa, ja vuorot on jaettu '
+            + 'kellon mukaan. Vanhimmat kanavat ovat tuhansia vuosia vanhoja, '
+            + 'ja Unesco otti alueen maailmanperintöluetteloon vuonna 2011.',
+          selite: 'Kivetty polku kulkee keitaalla palmurivien välissä. Molemmin '
+            + 'puolin on matala hiekanvärinen muuri, jonka takana kasvaa '
+            + 'taatelipalmuja.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+        {
+          otsikko: 'Taatelitertut suojataan verkkopusseilla',
+          tiedosto: 'Ripe Dates in the Al Ain Oasis.jpg',
+          teksti: 'Taatelipalmu on keitaan tärkein puu. Yksi palmu voi tuottaa '
+            + 'satakunta kiloa taateleita vuodessa, ja lajikkeita on '
+            + 'kymmeniä: toiset syödään tuoreina rapeina, toiset kuivataan '
+            + 'pehmeiksi. Loppukesästä tertut kypsyvät korkealla latvassa, ja '
+            + 'ne kääritään verkkopusseihin, jotta linnut ja hyönteiset eivät '
+            + 'ehdi ensin. Sato kerätään kiipeämällä puuhun. Taateleita '
+            + 'tarjotaan vieraalle kahvin kanssa, ja niitä syödään myös '
+            + 'paaston päätteeksi.',
+          selite: 'Kypsyviä taateliterttuja palmun latvassa. Tertut on kääritty '
+            + 'vaaleisiin verkkopusseihin, ja niiden takana näkyy palmun '
+            + 'lehtiä.',
+          lahde: 'Slywire, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kahvi kaadetaan kupin pohjalle',
+          tiedosto: 'Arabic coffee with dates.jpg',
+          teksti: 'Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja '
+            + 'maustetaan kardemummalla, joskus myös sahramilla. Se keitetään '
+            + 'kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja '
+            + 'kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — '
+            + 'jotta kuppi pysyy kädessä kuumana vain hetken ja jotta '
+            + 'tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä '
+            + 'kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä '
+            + 'tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman '
+            + 'kulttuuriperinnön luetteloon vuonna 2015.',
+          selite: 'Kiiltävä dallah-kahvikannu pöydällä. Edessä on valkoinen '
+            + 'kuppi, jonka pohjalla on vaaleaa kahvia, ja lautasella kaksi '
+            + 'taatelia.',
+          lahde: 'Slywire, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä saa veden liikkumaan falaj-kanavassa keitaalle?',
+        vaihtoehdot: [
+          'Tuuli työntää sitä eteenpäin',
+          'Kamelit vetävät ämpäreitä vuorotellen',
+          'Painovoima: kanava laskee alaspäin',
+          'Sähköpumput vuoren juurella',
+        ],
+        oikea: 2,
+        fakta: 'Al Ainin keidasalueet ja niiden kanavat otettiin Unescon '
+          + 'maailmanperintöluetteloon vuonna 2011.',
+      },
+    },
+    {
+      id: 'ranta',
+      nimi: 'Ranta ja rata',
+      johdanto: 'Emiraattien rannikko ei ole pelkkää hiekkaa: matalikoilla kasvaa '
+        + 'metsää, joka juurtuu suolaveteen, ja lahdilla seisoo tuhansia '
+        + 'vaaleanpunaisia lintuja. Aavikon puolella juostaan kilpaa '
+        + 'kameleilla.',
+      nostot: [
+        {
+          otsikko: 'Metsä, joka kasvaa suolavedessä',
+          tiedosto: 'Al Marfa Mangrove at Al Mugheirah Bay - Abu Dhabi.jpg',
+          teksti: 'Emiraattien matalilla rannoilla kasvaa mangrovemetsää. '
+            + 'Harmaamangrove on ainoa puu, joka kestää täällä suolaista '
+            + 'vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen '
+            + 'juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu '
+            + 'saa happea vuoroveden alla. Mangrovikot ovat kalojen '
+            + 'kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa '
+            + 'myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu '
+            + 'Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta '
+            + 'metsää voi katsella.',
+          selite: 'Mangrovemetsää Abu Dhabin rannikolla ylhäältä nähtynä. '
+            + 'Tummanvihreät pensaat kasvavat kirkkaan matalan veden '
+            + 'keskellä, ja niiden läpi mutkittelee uoma.',
+          lahde: 'Josephyousry, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Flamingot seisovat kaupungin laidalla',
+          tiedosto: 'Flamingos Ras Al Khor Dubai.jpg',
+          teksti: 'Dubain keskustan kupeessa on Ras Al Khorin lintusuojelualue, '
+            + 'matala suolainen lahti pilvenpiirtäjien varjossa. Sinne '
+            + 'kerääntyy talvisin tuhansia flamingoja. Ne syövät päänsä '
+            + 'veteen käännettynä ja siivilöivät mudasta pieniä eläimiä ja '
+            + 'leviä, ja juuri niistä tulee höyhenten vaaleanpunainen väri: '
+            + 'poikaset ovat harmaita. Rannalle on rakennettu kolme '
+            + 'katselukojua, joissa on kiikarit, eikä lahdelle saa mennä '
+            + 'muualta.',
+          selite: 'Flamingoparvi matalassa vedessä. Linnut nukkuvat kaula '
+            + 'kaarella selän päällä, ja siipien alta pilkottaa '
+            + 'vaaleanpunaista.',
+          lahde: 'Missnarjesss, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kilpakameli juoksee ilman ihmistä',
+          tiedosto: 'CAMEL RACE in DUBAI.jpg',
+          teksti: 'Kamelikilpailut ovat vanha ajanviete, ja radat ovat pitkiä: '
+            + 'matka voi olla kuudesta kymmeneen kilometriä. Kilpakameli '
+            + 'juoksee noin neljääkymmentä kilometriä tunnissa. Nykyään '
+            + 'ratsastajana on pieni robotti, joka on kiinnitetty satulaan ja '
+            + 'jota ohjataan radiolla. Omistajat ajavat radan viertä autoissa '
+            + 'ja seuraavat kamelia ikkunasta. Talvikaudella kilpailuja on '
+            + 'lähes joka viikonloppu, ja voittajat ovat kylissä kuuluisia.',
+          selite: 'Kaksi kilpakamelia juoksee hiekkaradalla. Selässä on pienet '
+            + 'laitteet satuloissa, ja radan reunalla liehuu Emiraattien '
+            + 'lippuja.',
+          lahde: 'Tmsprophoto.photography, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka ohjaa kamelia nykyään kilpailuradalla?',
+        vaihtoehdot: [
+          'Pieni robotti kamelin selässä',
+          'Kukaan, kamelit juoksevat vapaina',
+          'Valmentaja polkupyörällä vieressä',
+          'Ratsastaja perässä toisella kamelilla',
+        ],
+        oikea: 0,
+        fakta: 'Omistajat ajavat radan viertä autoissa ja käyttävät robotin '
+          + 'ohjaimia ikkunasta.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Emiraateissa museot ovat uusia ja verkossa hyvin esillä: '
@@ -51415,6 +51664,150 @@ const MAA_KATEGORIAT = {
           ],
         },
       ],
+    },
+  ],
+  /*
+   * Jordania: ensimmäinen ME-maa, jolla ei ole vielä menovinkkisivua.
+   * Aihesivut tulevat tähän; menovinkit lisätään omana eränään.
+   */
+  JOR: [
+    {
+      id: 'vedet',
+      nimi: 'Vedet',
+      johdanto: 'Jordaniassa on kaksi hyvin erilaista rantaa. Toinen on maailman '
+        + 'alin kohta, jonka vesi on niin suolaista ettei siinä elä kala. '
+        + 'Toinen on kapea kaistale Punaistamerta, jossa kasvaa koralleja.',
+      nostot: [
+        {
+          otsikko: 'Vesi kannattelee ihmistä kuin patja',
+          tiedosto: 'Dead Sea, Jordan 02.jpg',
+          teksti: 'Kuolleeseenmereen laskee vettä Jordanjoesta, mutta siitä ei '
+            + 'lähde vettä minnekään: se haihtuu auringossa ja jättää suolan '
+            + 'jälkeensä. Siksi vedessä on suolaa lähes kymmenen kertaa niin '
+            + 'paljon kuin valtameressä. Suola tekee vedestä painavaa, ja '
+            + 'painava vesi kannattelee kelluvaa ihmistä helposti. Uiminen on '
+            + 'kömpelöä, koska jalat nousevat itsestään pintaan, eikä vettä '
+            + 'saa roiskia silmiin. Kalat eivät tule toimeen tällaisessa '
+            + 'vedessä, ja siitä nimi.',
+          selite: 'Kuolleenmeren rantakalliota Jordanin puolella. Kiveen on '
+            + 'kuivunut paksu valkoinen suolakuori, ja alla vesi on '
+            + 'vaaleanvihreää.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kuollutmeri',
+        },
+        {
+          otsikko: 'Ranta siirtyy kauemmas joka vuosi',
+          tiedosto: 'Dead Sea, Jordanian Shore.jpg',
+          teksti: 'Kuolleenmeren pinta laskee noin metrin vuodessa. Syy on '
+            + 'yksinkertainen: Jordanjoen vettä otetaan matkan varrella '
+            + 'kasteluun ja juomavedeksi, joten mereen tulee paljon vähemmän '
+            + 'vettä kuin ennen. Vanhoja rantaviivoja näkyy rinteessä '
+            + 'raitoina, ja hotellien uimarannat ovat siirtyneet vuosi '
+            + 'vuodelta kauemmas. Kuivuneelle pohjalle syntyy myös kuoppia, '
+            + 'kun suolakerros liukenee maan alla. Jordania ja naapurimaat '
+            + 'ovat suunnitelleet veden johtamista Punaisestamerestä asti.',
+          selite: 'Kuolleenmeren jordanialainen ranta. Tyyni vesi peilaa autiota '
+            + 'vuorenrinnettä, ja rantaviivassa erottuu valkoinen suolajuova.',
+          lahde: 'Alexandermcnabb, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maan kapein merenranta on korallien peitossa',
+          tiedosto: 'South Beach, Aqaba, Jordan.jpg',
+          teksti: 'Jordanian ainoa merenranta on Akabanlahdella, ja sitä on vain '
+            + 'noin kaksikymmentäseitsemän kilometriä. Lyhyt ranta on silti '
+            + 'tärkeä: Punaisenmeren pohjoiskärjessä vesi on lämmintä ja '
+            + 'kirkasta, ja rannan tuntumassa kasvaa koralliriuttoja, joita '
+            + 'voi katsella pelkillä uimalaseilla. Riutoilla elää satoja '
+            + 'kalalajeja. Osa rannasta on merisuojelualuetta, jossa '
+            + 'ankkurointi on kielletty, ettei ankkuri riko koralleja. Akaban '
+            + 'satama on samalla maan ainoa portti merelle.',
+          selite: 'Akaban eteläinen uimaranta. Hiekan yllä on rivi varjoja '
+            + 'antavia katoksia, edessä sininen meri ja vastarannalla korkeat '
+            + 'vuoret.',
+          lahde: 'Gerda Arendt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Kuolleessameressä kelluu ilman ponnistelua?',
+        vaihtoehdot: [
+          'Vesi on tavallista lämpimämpää',
+          'Suola tekee vedestä raskaampaa',
+          'Pohja on aivan pinnan lähellä',
+          'Meressä on voimakas pohjavirta',
+        ],
+        oikea: 1,
+        fakta: 'Kuolleenmeren pinta on yli neljäsataa metriä merenpinnan '
+          + 'alapuolella — maapallon alin kuiva kohta.',
+      },
+    },
+    {
+      id: 'rauniot',
+      nimi: 'Rauniot',
+      johdanto: 'Jordanian läpi on kuljettu aina: karavaanit, roomalaiset legioonat '
+        + 'ja pyhiinvaeltajat. Matkan varrelle jäi kaupunkeja ja linnoja, '
+        + 'joita seisoo yhä pystyssä keskellä maisemaa.',
+      nostot: [
+        {
+          otsikko: 'Kaupungin tori tehtiin pyöreähköksi',
+          tiedosto: 'Colonnade Around the Oval Plaza at Jerash (5596019225).jpg',
+          teksti: 'Jerash oli roomalaisajan vauras kaupunki, ja sen keskellä on '
+            + 'epätavallinen tori: se ei ole neliö vaan soikea. Muoto syntyi '
+            + 'siitä, että vanha pyhäkköalue ja uusi pylväskatu piti sovittaa '
+            + 'yhteen, ja tori venytettiin niiden väliin. Toria kiertää lähes '
+            + 'seitsemänkymmentä pylvästä, ja kivetys on yhä alkuperäinen: '
+            + 'kivet on ladottu kaareviin riveihin torin muodon mukaan. '
+            + 'Kaupunki tyhjeni maanjäristyksen jälkeen ja peittyi hiekkaan, '
+            + 'mistä syystä se on säilynyt näin hyvin.',
+          selite: 'Jerashin soikea tori. Kivetty aukio kaartuu laajana, ja sitä '
+            + 'reunustaa rivi pystyssä olevia kivipylväitä.',
+          lahde: 'Institute for the Study of the Ancient World, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Pääkaupungin kukkulalla seisoo kuusi pylvästä',
+          tiedosto: 'Temple of Hercules - Amman citadel.jpg',
+          teksti: 'Ammanin keskellä kohoaa kukkula, jolla on asuttu tuhansia '
+            + 'vuosia. Sen laella on Herkuleen temppelin jäänteet: muutama '
+            + 'valtava pylväs, jotka on nostettu takaisin pystyyn. Temppeli '
+            + 'jäi aikanaan kesken, eikä sitä ilmeisesti koskaan saatu '
+            + 'valmiiksi. Samalta kukkulalta on löytynyt myös jättimäisen '
+            + 'kivikäden palasia, joten patsas on ollut valtava. Kukkulalla '
+            + 'on lisäksi umaijadien palatsin kupolisali ja bysanttilaisen '
+            + 'kirkon pohja — kolme aikakautta muutaman sadan metrin '
+            + 'matkalla.',
+          selite: 'Herkuleen temppelin pylväät Ammanin kukkulalla. Kolme korkeaa '
+            + 'pylvästä seisoo yhä kannattaen palkkia, ja ympärillä on '
+            + 'kaatuneita pylväänosia.',
+          lahde: 'AliAbuRas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Aavikkolinnan katossa on tähtitaivas',
+          tiedosto: 'Qasr Amra (also Quseir Amra), Jordan.jpg',
+          teksti: 'Itäisellä aavikolla on rivi pieniä linnoja, joita kalifien '
+            + 'hovi käytti levähdyspaikkoina ja kylpylöinä 700-luvulla. '
+            + 'Tunnetuin on Qusayr Amra, jonka seinät ja holvit on maalattu '
+            + 'täyteen kuvia: metsästystä, työmiehiä, soittajia ja eläimiä. '
+            + 'Kylpyhuoneen kupoliin on maalattu tähtitaivas tähtikuvioineen '
+            + '— se on vanhimpia säilyneitä yrityksiä kuvata taivas pyöreälle '
+            + 'pinnalle. Linna on Unescon maailmanperintökohde, ja sen '
+            + 'vieressä on yhä vanha kaivo.',
+          selite: 'Qusayr Amran hiekankivinen aavikkolinna. Matalassa '
+            + 'rakennuksessa on kolme tynnyriholvia ja pyöreä kupoli, '
+            + 'ympärillä pelkkää kuivaa maata.',
+          lahde: 'Paul Mannix, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä muotoinen on Jerashin kuuluisin tori?',
+        vaihtoehdot: [
+          'Soikea',
+          'Kolmion muotoinen',
+          'Täysin pyöreä',
+          'Neliö, jossa on kulmatornit',
+        ],
+        oikea: 0,
+        fakta: 'Toria kiertää lähes seitsemänkymmentä pylvästä, ja sen kivetys '
+          + 'on yhä alkuperäinen.',
+      },
     },
   ],
 };
@@ -132026,6 +132419,7 @@ class UI {
       });
     }
     document.getElementById('nahtavyys-otsikko').textContent = kohde.nimi;
+    this.taytaNahtavyysValikko(kohde);
     const aika = document.getElementById('nahtavyys-aika');
     aika.textContent = [numero ? `Kohde ${numero}` : null, kohde.aika]
       .filter(Boolean).join(' · ');
@@ -132159,6 +132553,59 @@ class UI {
     if (kohta < teksti.length) p.appendChild(document.createTextNode(teksti.slice(kohta)));
   }
 
+  /**
+   * Hampurilaisvalikko nähtävyyspopupiin (omistajan toive 10.8.2026):
+   * saman kaupungin muihin nähtävyyksiin pääsee suoraan, ilman että
+   * popup pitää sulkea ja kohde etsiä kartalta uudestaan. Lista tulee
+   * kaupunkikartan kohteista samalla säännöllä kuin kartan pisteet:
+   * oma juttu voittaa wikin, ja ilman kumpaakaan kohde jää pois.
+   * Valikko toimii myös henkilöjutussa (esim. Engel) — se vie
+   * takaisin kaupungin nähtävyyksiin.
+   */
+  taytaNahtavyysValikko(nykyinen) {
+    const nappi = document.getElementById('nahtavyys-valikko-nappi');
+    const valikko = document.getElementById('nahtavyys-valikko');
+    if (!nappi || !valikko) return;
+    const sulje = () => {
+      valikko.hidden = true;
+      nappi.setAttribute('aria-expanded', 'false');
+    };
+    if (!nappi.dataset.kytketty) {
+      nappi.dataset.kytketty = '1';
+      nappi.addEventListener('click', () => {
+        valikko.hidden = !valikko.hidden;
+        nappi.setAttribute('aria-expanded', String(!valikko.hidden));
+      });
+      // Valikko sulkeutuu, kun napautus osuu sen ulkopuolelle.
+      document.getElementById('nahtavyys-dialog').addEventListener('click', (e) => {
+        if (!valikko.hidden && !valikko.contains(e.target) && e.target !== nappi) sulje();
+      });
+    }
+    sulje();
+    const kartta = KAUPUNKIKARTAT[this.arrivalShownFor];
+    valikko.replaceChildren();
+    const kohteet = (kartta?.kohteet ?? []).map((raaka, i) => {
+      const juttu = NAHTAVYYSJUTUT[this.arrivalShownFor]?.[raaka.nimi];
+      const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
+      return { k, numero: String(i + 1) };
+    }).filter(({ k }) => k.teksti || k.wiki);
+    nappi.hidden = kohteet.length < 2;
+    if (nappi.hidden) return;
+    for (const { k, numero } of kohteet) {
+      const rivi = html('button', 'nahtavyys-valikko-rivi');
+      rivi.type = 'button';
+      rivi.appendChild(html('span', 'kartta-selite-numero', numero));
+      rivi.appendChild(document.createTextNode(k.nimi));
+      if (k.nimi === nykyinen.nimi) rivi.classList.add('nykyinen');
+      rivi.addEventListener('click', () => {
+        sulje();
+        if (k.teksti) this.avaaNahtavyys(k, numero);
+        else this.openWikiArticle(k.wiki, k.nimi);
+      });
+      valikko.appendChild(rivi);
+    }
+  }
+
   /** Yksi nähtävyysjutun kuva selitteineen ja lähteineen. */
   nahtavyydenKuva(kuva) {
     const kehys = html('figure', 'nahtavyys-kuvakehys');
@@ -132228,17 +132675,37 @@ class UI {
       laskuri.textContent = `${kohta + 1}/${kuvat.length}`;
     };
 
+    /*
+     * Selaus on sama kuin lehden kuvakotelossa (omistajan toive
+     * 10.8.2026): kuvan laidat ovat hentoja nuolialueita, laskuri on
+     * tumma pilleri kulmassa, ja vaakapyyhkäisy vaihtaa kuvaa. Samat
+     * CSS-luokat kuin lehdessä, joten ulkoasu pysyy yhtenä.
+     */
     const nuoli = (luokka, merkki, siirto, nimi) => {
-      const nappi = html('button', `karuselli-nuoli ${luokka}`, merkki);
+      const nappi = html('button', `arrival-kuva-nuoli ${luokka}`, merkki);
       nappi.type = 'button';
       nappi.setAttribute('aria-label', nimi);
-      nappi.addEventListener('click', () => nayta(kohta + siirto));
+      nappi.addEventListener('click', (e) => { e.stopPropagation(); nayta(kohta + siirto); });
       return nappi;
     };
-    ikkuna.appendChild(nuoli('vasen', '‹', -1, 'Edellinen kuva'));
-    ikkuna.appendChild(nuoli('oikea', '›', 1, 'Seuraava kuva'));
-    const laskuri = html('span', 'karuselli-laskuri');
+    ikkuna.appendChild(nuoli('edellinen', '‹', -1, 'Edellinen kuva'));
+    ikkuna.appendChild(nuoli('seuraava', '›', 1, 'Seuraava kuva'));
+    const laskuri = html('span', 'arrival-kuva-laskuri');
     ikkuna.appendChild(laskuri);
+    // Pyyhkäisy: vaakaveto vaihtaa kuvaa. Kynnys erottaa vedon
+    // napautuksesta (suurennos) ja pystyvieritys jää selaimelle.
+    let veto = null;
+    ikkuna.addEventListener('pointerdown', (e) => { veto = { x: e.clientX, y: e.clientY }; });
+    ikkuna.addEventListener('pointercancel', () => { veto = null; });
+    ikkuna.addEventListener('pointerup', (e) => {
+      const alku = veto;
+      veto = null;
+      if (!alku) return;
+      const dx = e.clientX - alku.x;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(e.clientY - alku.y)) {
+        nayta(kohta + (dx < 0 ? 1 : -1));
+      }
+    });
 
     kehys.appendChild(ikkuna);
     kehys.appendChild(teksti);
@@ -136136,7 +136603,9 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
-  { v: 499, teksti: 'Luettu kohtaaminen palasi kaupungin ensitehtäväksi' },
+  { v: 500, teksti: 'Kohtaaminen ensitehtäväksi, nähtävyyksiin valikko' },
+  { v: 499, teksti: 'Emiraateille kolmas sivu ja Jordanialle kaksi' },
+  { v: 498, teksti: 'Emiraatit sai kaksi aihesivua: Aavikko ja Keidas' },
   { v: 497, teksti: 'Loput kuvaduplikaatit purettu, kaksi hyväksyttiin' },
   { v: 496, teksti: 'Kahdeksan kuvaduplikaattia purettu Afrikasta ja Siinailta' },
   { v: 495, teksti: 'Nähtävyysjutut Sofiaan, Bukarestiin, Sarajevoon' },
@@ -136718,7 +137187,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.499';
+const APP_VERSION = '2026-08-09.500';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

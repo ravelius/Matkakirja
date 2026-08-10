@@ -1,80 +1,68 @@
-# Opus 1 → Fable: valokuvarajatapaukset, väliraportti (10.8.2026)
+# Opus 1 → Fable: ME-pilotti valmis, ARE (10.8.2026)
 
-Varareitti käytössä: create_trigger jäi lupakyselyyn, joten raportti
-tulee tätä kautta niin kuin sovimme.
+**v498 mainissa** (#728): Emiraatit sai kaksi aihesivua, Aavikko ja
+Keidas. `# tests 571 / # pass 570 / # fail 0`.
 
-## Mainissa nyt
+## Mitä sivuille tuli
 
-- **v494** — kaksitoista valokuvakysymystä sai tunnistettavan kuvan (#722)
-- **v496** — kahdeksan kuvaduplikaattia purettu (#724)
+**Aavikko** — arabianoryks (katosi luonnosta 1972, palasi
+tarhakasvatuksen kautta, kansalliseläin), ghaf-puu (kansallispuu,
+juuret pohjaveteen, kaataminen luvanvaraista), metsästyshaukka (oma
+passi vuodesta 2002, Abu Dhabin haukkasairaala). Minitehtävä ghafin
+juurista.
 
-Testit mainissa: `# tests 571 / # pass 570 / # fail 0`.
+**Keidas** — Al Ainin falaj-kanavat (vesi kulkee painovoimalla
+vuorilta, Unesco 2011), taatelitertut verkkopusseissa, arabialainen
+kahvi (kaadetaan vain kupin pohjalle, Unesco 2015). Minitehtävä
+falajista.
 
-## 1. Valokuvarajatapaukset
+Aiheet rajattiin niin, ettei Dubain kaupunkilehti toistu: helmenpyynti,
+metro, kultasuk, Burj Khalifa, palmusaari ja merivedestä tehty juomavesi
+ovat siellä. Ei sotasisältöä, eikä tässä erässä pyhiä paikkoja.
 
-Valmista listaa ~50 rajatapauksesta ei ollut missään, joten kävin läpi
-**kaikki 41 Euroopan nykykuvaa** katsomalla ne 480 pikselin kokoisina.
-Valokuvakysymys näyttää nykykuvan ja kysyy "mikä paikka tämä on", joten
-kriteeri on: näkyykö kuvassa jotain, mistä paikan voi tunnistaa.
+## Miten sapluuna taipui ME-maahan — pyytämäsi havainnot
 
-Kaksitoista ei kelvannut, neljässä luokassa:
+**1. Resepti toimi sellaisenaan.** Sivurakenne (3 juttua + minitehtävä
++ kuvat, menovinkit viimeisenä) ei vaatinut mitään muutosta. Maalehti
+aukeaa selaimessa oikein: kartta → Aavikko → Keidas → Menovinkit.
 
-- **geneerinen näkymä** — Krakovan satunnaiset julkisivut, Tallinnan
-  puistolampi, Lapin maantiesilta, Berliinin Potsdamer Platz,
-  Marseillen venesatama
-- **kuva otettu siitä kohteesta, jota kysytään** (kohde ei siis näy) —
-  Edinburghin linna, Reykjavíkin Hallgrímskirkja
-- **laaja panoraama, jossa kohde jää pisteeksi** — Istanbulin Kultainen
-  sarvi, Alppien Rhône-jäätikkö, Sarajevon ilmakuva
-- **muu** — Knossos ilman punaisia pylväitä ja härkäfreskoa, Rooman
-  Colosseum mustavalkoisena (nykykuvan pitää olla värikuva)
+**2. Kuvien saatavuus on eri luokkaa kuin Euroopassa.** Commonsissa on
+Emiraateista paljon vähemmän kuvia, ja haku tuotti toistuvasti
+postimerkkejä ja kokouskuvia oikean aiheen sijaan. Kuusi kelvollista
+kuvaa löytyi, mutta hakuja tarvittiin noin kaksinkertainen määrä
+Eurooppaan verrattuna. Kaksi aihetta jäi tästä erästä pois pelkästään
+siksi, että hyvä kuva löytyi vasta myöhemmin: **mangrovemetsät** (kuva
+löytyi, Al Mugheirah Bay) ja **kamelikilpailut robottiratsastajineen**
+(kuva löytyi, Dubai). Molemmat ovat valmiina seuraavaan erään, jos
+haluat ARE:lle kolmannen sivun.
 
-Tilalle: Notre-Dame de la Garde, Sukiennice, Sebilj, Hallgrímskirkja,
-Knossoksen pohjoinen sisäänkäynti, Edinburghin linna kalliolla,
-televisiotorni, Matterhorn, Tallinnan vanhankaupungin talot,
-Pallastunturit, Galatan torni ja Colosseum värikuvana.
+**3. Faktapohja on ohuempi ja tuoreempi.** Euroopassa nojasin usein
+satojen vuosien vakiintuneisiin lukuihin; täällä moni luku on 2000-luvun
+päätöksiä (haukkapassi 2002, Unesco 2011 ja 2015). Kirjoitin ne
+päivämäärineen, koska ne ovat tarkistettavissa, ja vältin lukuja jotka
+vanhenevat nopeasti (esim. oryksien tarkka määrä → "tuhansia").
 
-Loput 29 Euroopan nykykuvaa kelpasivat sellaisenaan.
+**4. Herkkyysrajaus ei tuottanut vaikeuksia.** Aavikko, keidas, ruoka ja
+eläimet riittävät hyvin kolmeen–neljään sivuun ilman että tarvitsee
+koskea uskonnollisiin kohteisiin tai konflikteihin. Jos haluat pyhät
+kaupungit mukaan muissa ME-maissa, ehdotan ne omaksi sivutyypikseen
+niin että lähestymistapa on arkkitehtuuri ja pyhiinvaellus ihmisten
+kokemuksena — ja että sinä kirjoitat niiden johdannot.
 
-## 2. Kuvaduplikaatit
+**5. Yksi työkaluhavainto.** Esitarkistin `esitarkistus-maa2.mjs` vaatii
+yhä 4 sivua × 4 juttua, mikä oli Turkin ja Irlannin erän vanha spec.
+Nykyinen resepti on 3 juttua/sivu, joten se antaa kolme väärää
+"virhettä". Sisältötarkistukset (vastaus löytyy tekstistä, ei vuoda
+otsikkoon, ei osu kaupungin visaan, kuvaduplikaatit, vaihtoehtojen
+pituudet) toimivat oikein ja löysivät tästäkin erästä yhden aidon vian:
+falaj-tehtävän oikea vaihtoehto oli selvästi pisin. Korjasin sen.
+Päivitän tarkistimen odotukset seuraavan erän yhteydessä.
 
-Tein tarkistimen, joka lukee **kaikki paketit tekstitasolla** — aiempi
-luki vain kolme pakettia, ja siksi se ei nähnyt esimerkiksi
-menovinkkilistojen kuvia. Tilanne:
+## Ehdotus jatkosta (päätät sinä)
 
-- ennen erää **23** päällekkäisyyttä, nyt **15**
-- listan 17:stä tehty kahdeksan: #1 Assekrem, #2 Benin, #4 Sossusvlei,
-  #5 Big Hole, #6 Ilha de Moçambique, #7 kirahvi, #8 Khan el-Khalili,
-  #9 Pyhän Katariinan luostari
+Jos ARE:lle halutaan kolmas sivu, se olisi **Rannikko**: mangrovemetsät,
+kamelikilpailut ja merikilpikonnat — kaksi kuvaa kolmesta on jo
+katsottu ja hyväksytty. Muiden ME-maiden järjestyksen ja aiheet jätän
+sinulle, kuten sovimme.
 
-**Jäljellä listasta yhdeksän**: #10 härkähyppy-fresko, #11 brunost,
-#12 Rossion kivetys, #13 Széchényin shakki, #14 Arsenalnan liukuportaat,
-#15 Eremitaasin kissa, #16 Muhammad Alin moskeija, #17 Brandenburgin
-portti — sekä #3 Tšadjärven kalastaja, jolle Commonsissa on vain sama
-kuva kahtena versiona (suoristettu ja alkuperäinen). Se tarvitsee
-aidosti eri kuvan, ja ehdotan sitä omaksi pieneksi hauksi.
-
-## Päätettävää sinulle
-
-Listan ulkopuolelta löytyi **neljä päällekkäisyyttä**, jotka eivät ole
-kuvaduplikaatit.md:ssä:
-
-1. `Hagia Sophia Mars 2013.jpg` — kulttuuri-kategoriat / nähtävyysjutut
-2. `Casa Batlló 01.jpg` — kulttuuri-kategoriat / nähtävyysjutut
-3. `Rio Javaés.jpg` — maasto-tekstit / southamerica-valokuvat
-4. `Jules Leclercq- Aux sources du Nil-1913-chutes Ripon.jpg` —
-   africa-valokuvat / maasto-tekstit-malli
-
-Kaksi ensimmäistä ovat täsmälleen samaa luokkaa kuin listan #16 ja #17
-(kaupunkilehden kansi ↔ nähtävyysjuttu) ja syntyivät ilmeisesti listan
-laatimisen jälkeen. Kaksi jälkimmäistä osuvat maastotekstipaketteihin,
-joista sinulla on oma linjaus. En koskenut näihin, koska lista on sinun
-päätöksesi — sano, otanko ne mukaan seuraavaan erään.
-
-## Muuta
-
-Kysyit menovinkkien 245/246:sta: se yksi rivi on **tietoinen valinta**.
-Dubain Museum of the Future -rivi jäi ilman kuvaa, koska rakennuksen
-julkisivusta ei ole Commonsissa vapaata valokuvaa (löytyneet olivat
-GODL-India tai sisätiloista). Listamallissa kuva on vapaaehtoinen
-nimenomaan siksi, ettei hyvä osoite putoa listalta kuvan puutteen takia.
+Jään odottamaan palautettasi ennen kuin aloitan muita ME-maita.

@@ -14800,6 +14800,218 @@ export const MAA_KATEGORIAT = {
   ],
   ARE: [
     {
+      id: 'aavikko',
+      nimi: 'Aavikko',
+      johdanto: 'Emiraateista suurin osa on hiekkaa ja kiviaavikkoa. Se ei ole '
+        + 'tyhjä: siellä elää eläimiä, jotka tulevat toimeen vähällä vedellä, '
+        + 'ja puu, joka pysyy vihreänä silloinkin kun sadetta ei ole tullut '
+        + 'kuukausiin.',
+      nostot: [
+        {
+          otsikko: 'Valkoinen antilooppi katosi ja palasi',
+          tiedosto: 'The Arabian Oryx or White Oryx.jpg',
+          teksti: 'Arabianoryks on Emiraattien kansalliseläin. Se on kookas '
+            + 'valkoinen antilooppi, jolla on kaksi pitkää lähes suoraa '
+            + 'sarvea ja tummat jalat. Metsästys vei lajin luonnosta '
+            + 'kokonaan: viimeinen villi oryks nähtiin vuonna 1972. Sitä '
+            + 'ennen oli ehditty ottaa muutamia yksilöitä talteen '
+            + 'eläintarhoihin, ja niiden jälkeläisiä alettiin päästää '
+            + 'takaisin aavikolle 1980-luvulla. Nykyään niitä elää vapaana '
+            + 'tuhansia. Oryks kestää kuumuutta hyvin ja saa suuren osan '
+            + 'vedestään kasveista, joten se tulee toimeen viikkoja juomatta.',
+          selite: 'Arabianoryks kävelee kuivalla ruohikolla. Turkki on lähes '
+            + 'valkoinen, jalat tummat ja kaksi pitkää sarvea nousevat '
+            + 'suorina taaksepäin.',
+          lahde: 'Zoozkyn, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Arabianoryks',
+        },
+        {
+          otsikko: 'Puu, joka juo kymmenien metrien syvyydestä',
+          tiedosto: 'The Ghaf.jpg',
+          teksti: 'Ghaf on Emiraattien kansallispuu. Se näyttää pieneltä ja '
+            + 'riippuvaoksaiselta, mutta sen juuret yltävät kymmenien metrien '
+            + 'syvyyteen pohjaveteen asti, joten puu pysyy vihreänä ympäri '
+            + 'vuoden. Karjanhoitajat ovat pysähtyneet sen varjoon '
+            + 'vuosisatoja, ja kamelit ja vuohet syövät sen lehtiä. Puun '
+            + 'kaataminen ilman lupaa on kielletty, ja koulut istuttavat '
+            + 'ghafin taimia joka vuosi. Aavikolla yksinään seisova ghaf '
+            + 'näkyy kauas, ja sen alle kerääntyy varjoa hakevia eläimiä.',
+          selite: 'Ghaf-puu, jonka ohuet oksat riippuvat alaspäin kuin verho. '
+            + 'Lehvästö on harmaanvihreä ja rungot haarautuvat matalalta.',
+          lahde: 'Mathurrajat2109, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Haukalla on oma passi',
+          tiedosto: 'The Falcon - The National Bird of the UAE (2).jpg',
+          teksti: 'Haukka on Emiraattien kansallislintu, ja haukkojen kanssa '
+            + 'liikkuminen on vanha beduiinitapa, joka on Unescon aineettoman '
+            + 'kulttuuriperinnön luettelossa. Linnun päässä pidetään pehmeää '
+            + 'nahkahuppua, joka rauhoittaa sen matkan ajaksi. Vuodesta 2002 '
+            + 'emiraattilaiset haukat ovat saaneet oman passin: siinä on '
+            + 'linnun tunnistetiedot, ja sen kanssa lintu pääsee '
+            + 'lentokoneeseen omalle istuimelle. Abu Dhabissa toimii maailman '
+            + 'suurin haukkasairaala, jossa hoidetaan tuhansia lintuja '
+            + 'vuodessa.',
+          selite: 'Haukka nahkahupussa istuu orrella. Huppu on koristeltu '
+            + 'vihreällä ja punaisella, ja taustalla erottuu valkoiseen '
+            + 'pukuun pukeutunut ihminen.',
+          lahde: 'Delta.jpg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten ghaf-puu pärjää aavikolla ilman sadetta?',
+        vaihtoehdot: [
+          'Se kerää kastetta lehtiinsä',
+          'Sen juuret yltävät syvälle pohjaveteen',
+          'Se pudottaa lehtensä kuivaksi ajaksi',
+          'Sitä kastellaan letkulla',
+        ],
+        oikea: 1,
+        fakta: 'Ghaf on Emiraattien kansallispuu, ja sen kaataminen ilman lupaa '
+          + 'on kielletty.',
+      },
+    },
+    {
+      id: 'keidas',
+      nimi: 'Keidas',
+      johdanto: 'Ennen öljyä ja pilvenpiirtäjiä elämä nojasi keitaisiin. Al Ainissa '
+        + 'vesi on johdettu vuorilta palmutarhoihin kanavia pitkin jo '
+        + 'tuhansia vuosia, ja sama järjestelmä toimii yhä.',
+      nostot: [
+        {
+          otsikko: 'Vesi johdetaan vuorilta kanavia pitkin',
+          tiedosto: 'Al-Ain Oasis (5).jpg',
+          teksti: 'Al Ainin keitaalla kasvaa yli satatuhatta taatelipalmua, ja ne '
+            + 'saavat vetensä falaj-kanavista. Falaj alkaa vuoren juurelta '
+            + 'pohjavedestä ja kulkee keitaalle loivasti laskevaa uomaa '
+            + 'pitkin, osa maan alla ja osa avoimena kourua myöten. Vettä ei '
+            + 'siis pumpata: se liikkuu painovoiman avulla koko matkan. '
+            + 'Jokaisella tarhalla on oma vuoronsa, ja vuorot on jaettu '
+            + 'kellon mukaan. Vanhimmat kanavat ovat tuhansia vuosia vanhoja, '
+            + 'ja Unesco otti alueen maailmanperintöluetteloon vuonna 2011.',
+          selite: 'Kivetty polku kulkee keitaalla palmurivien välissä. Molemmin '
+            + 'puolin on matala hiekanvärinen muuri, jonka takana kasvaa '
+            + 'taatelipalmuja.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+        {
+          otsikko: 'Taatelitertut suojataan verkkopusseilla',
+          tiedosto: 'Ripe Dates in the Al Ain Oasis.jpg',
+          teksti: 'Taatelipalmu on keitaan tärkein puu. Yksi palmu voi tuottaa '
+            + 'satakunta kiloa taateleita vuodessa, ja lajikkeita on '
+            + 'kymmeniä: toiset syödään tuoreina rapeina, toiset kuivataan '
+            + 'pehmeiksi. Loppukesästä tertut kypsyvät korkealla latvassa, ja '
+            + 'ne kääritään verkkopusseihin, jotta linnut ja hyönteiset eivät '
+            + 'ehdi ensin. Sato kerätään kiipeämällä puuhun. Taateleita '
+            + 'tarjotaan vieraalle kahvin kanssa, ja niitä syödään myös '
+            + 'paaston päätteeksi.',
+          selite: 'Kypsyviä taateliterttuja palmun latvassa. Tertut on kääritty '
+            + 'vaaleisiin verkkopusseihin, ja niiden takana näkyy palmun '
+            + 'lehtiä.',
+          lahde: 'Slywire, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kahvi kaadetaan kupin pohjalle',
+          tiedosto: 'Arabic coffee with dates.jpg',
+          teksti: 'Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja '
+            + 'maustetaan kardemummalla, joskus myös sahramilla. Se keitetään '
+            + 'kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja '
+            + 'kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — '
+            + 'jotta kuppi pysyy kädessä kuumana vain hetken ja jotta '
+            + 'tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä '
+            + 'kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä '
+            + 'tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman '
+            + 'kulttuuriperinnön luetteloon vuonna 2015.',
+          selite: 'Kiiltävä dallah-kahvikannu pöydällä. Edessä on valkoinen '
+            + 'kuppi, jonka pohjalla on vaaleaa kahvia, ja lautasella kaksi '
+            + 'taatelia.',
+          lahde: 'Slywire, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä saa veden liikkumaan falaj-kanavassa keitaalle?',
+        vaihtoehdot: [
+          'Tuuli työntää sitä eteenpäin',
+          'Kamelit vetävät ämpäreitä vuorotellen',
+          'Painovoima: kanava laskee alaspäin',
+          'Sähköpumput vuoren juurella',
+        ],
+        oikea: 2,
+        fakta: 'Al Ainin keidasalueet ja niiden kanavat otettiin Unescon '
+          + 'maailmanperintöluetteloon vuonna 2011.',
+      },
+    },
+    {
+      id: 'ranta',
+      nimi: 'Ranta ja rata',
+      johdanto: 'Emiraattien rannikko ei ole pelkkää hiekkaa: matalikoilla kasvaa '
+        + 'metsää, joka juurtuu suolaveteen, ja lahdilla seisoo tuhansia '
+        + 'vaaleanpunaisia lintuja. Aavikon puolella juostaan kilpaa '
+        + 'kameleilla.',
+      nostot: [
+        {
+          otsikko: 'Metsä, joka kasvaa suolavedessä',
+          tiedosto: 'Al Marfa Mangrove at Al Mugheirah Bay - Abu Dhabi.jpg',
+          teksti: 'Emiraattien matalilla rannoilla kasvaa mangrovemetsää. '
+            + 'Harmaamangrove on ainoa puu, joka kestää täällä suolaista '
+            + 'vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen '
+            + 'juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu '
+            + 'saa happea vuoroveden alla. Mangrovikot ovat kalojen '
+            + 'kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa '
+            + 'myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu '
+            + 'Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta '
+            + 'metsää voi katsella.',
+          selite: 'Mangrovemetsää Abu Dhabin rannikolla ylhäältä nähtynä. '
+            + 'Tummanvihreät pensaat kasvavat kirkkaan matalan veden '
+            + 'keskellä, ja niiden läpi mutkittelee uoma.',
+          lahde: 'Josephyousry, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Flamingot seisovat kaupungin laidalla',
+          tiedosto: 'Flamingos Ras Al Khor Dubai.jpg',
+          teksti: 'Dubain keskustan kupeessa on Ras Al Khorin lintusuojelualue, '
+            + 'matala suolainen lahti pilvenpiirtäjien varjossa. Sinne '
+            + 'kerääntyy talvisin tuhansia flamingoja. Ne syövät päänsä '
+            + 'veteen käännettynä ja siivilöivät mudasta pieniä eläimiä ja '
+            + 'leviä, ja juuri niistä tulee höyhenten vaaleanpunainen väri: '
+            + 'poikaset ovat harmaita. Rannalle on rakennettu kolme '
+            + 'katselukojua, joissa on kiikarit, eikä lahdelle saa mennä '
+            + 'muualta.',
+          selite: 'Flamingoparvi matalassa vedessä. Linnut nukkuvat kaula '
+            + 'kaarella selän päällä, ja siipien alta pilkottaa '
+            + 'vaaleanpunaista.',
+          lahde: 'Missnarjesss, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kilpakameli juoksee ilman ihmistä',
+          tiedosto: 'CAMEL RACE in DUBAI.jpg',
+          teksti: 'Kamelikilpailut ovat vanha ajanviete, ja radat ovat pitkiä: '
+            + 'matka voi olla kuudesta kymmeneen kilometriä. Kilpakameli '
+            + 'juoksee noin neljääkymmentä kilometriä tunnissa. Nykyään '
+            + 'ratsastajana on pieni robotti, joka on kiinnitetty satulaan ja '
+            + 'jota ohjataan radiolla. Omistajat ajavat radan viertä autoissa '
+            + 'ja seuraavat kamelia ikkunasta. Talvikaudella kilpailuja on '
+            + 'lähes joka viikonloppu, ja voittajat ovat kylissä kuuluisia.',
+          selite: 'Kaksi kilpakamelia juoksee hiekkaradalla. Selässä on pienet '
+            + 'laitteet satuloissa, ja radan reunalla liehuu Emiraattien '
+            + 'lippuja.',
+          lahde: 'Tmsprophoto.photography, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka ohjaa kamelia nykyään kilpailuradalla?',
+        vaihtoehdot: [
+          'Pieni robotti kamelin selässä',
+          'Kukaan, kamelit juoksevat vapaina',
+          'Valmentaja polkupyörällä vieressä',
+          'Ratsastaja perässä toisella kamelilla',
+        ],
+        oikea: 0,
+        fakta: 'Omistajat ajavat radan viertä autoissa ja käyttävät robotin '
+          + 'ohjaimia ikkunasta.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Emiraateissa museot ovat uusia ja verkossa hyvin esillä: '
@@ -14889,6 +15101,150 @@ export const MAA_KATEGORIAT = {
           ],
         },
       ],
+    },
+  ],
+  /*
+   * Jordania: ensimmäinen ME-maa, jolla ei ole vielä menovinkkisivua.
+   * Aihesivut tulevat tähän; menovinkit lisätään omana eränään.
+   */
+  JOR: [
+    {
+      id: 'vedet',
+      nimi: 'Vedet',
+      johdanto: 'Jordaniassa on kaksi hyvin erilaista rantaa. Toinen on maailman '
+        + 'alin kohta, jonka vesi on niin suolaista ettei siinä elä kala. '
+        + 'Toinen on kapea kaistale Punaistamerta, jossa kasvaa koralleja.',
+      nostot: [
+        {
+          otsikko: 'Vesi kannattelee ihmistä kuin patja',
+          tiedosto: 'Dead Sea, Jordan 02.jpg',
+          teksti: 'Kuolleeseenmereen laskee vettä Jordanjoesta, mutta siitä ei '
+            + 'lähde vettä minnekään: se haihtuu auringossa ja jättää suolan '
+            + 'jälkeensä. Siksi vedessä on suolaa lähes kymmenen kertaa niin '
+            + 'paljon kuin valtameressä. Suola tekee vedestä painavaa, ja '
+            + 'painava vesi kannattelee kelluvaa ihmistä helposti. Uiminen on '
+            + 'kömpelöä, koska jalat nousevat itsestään pintaan, eikä vettä '
+            + 'saa roiskia silmiin. Kalat eivät tule toimeen tällaisessa '
+            + 'vedessä, ja siitä nimi.',
+          selite: 'Kuolleenmeren rantakalliota Jordanin puolella. Kiveen on '
+            + 'kuivunut paksu valkoinen suolakuori, ja alla vesi on '
+            + 'vaaleanvihreää.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kuollutmeri',
+        },
+        {
+          otsikko: 'Ranta siirtyy kauemmas joka vuosi',
+          tiedosto: 'Dead Sea, Jordanian Shore.jpg',
+          teksti: 'Kuolleenmeren pinta laskee noin metrin vuodessa. Syy on '
+            + 'yksinkertainen: Jordanjoen vettä otetaan matkan varrella '
+            + 'kasteluun ja juomavedeksi, joten mereen tulee paljon vähemmän '
+            + 'vettä kuin ennen. Vanhoja rantaviivoja näkyy rinteessä '
+            + 'raitoina, ja hotellien uimarannat ovat siirtyneet vuosi '
+            + 'vuodelta kauemmas. Kuivuneelle pohjalle syntyy myös kuoppia, '
+            + 'kun suolakerros liukenee maan alla. Jordania ja naapurimaat '
+            + 'ovat suunnitelleet veden johtamista Punaisestamerestä asti.',
+          selite: 'Kuolleenmeren jordanialainen ranta. Tyyni vesi peilaa autiota '
+            + 'vuorenrinnettä, ja rantaviivassa erottuu valkoinen suolajuova.',
+          lahde: 'Alexandermcnabb, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maan kapein merenranta on korallien peitossa',
+          tiedosto: 'South Beach, Aqaba, Jordan.jpg',
+          teksti: 'Jordanian ainoa merenranta on Akabanlahdella, ja sitä on vain '
+            + 'noin kaksikymmentäseitsemän kilometriä. Lyhyt ranta on silti '
+            + 'tärkeä: Punaisenmeren pohjoiskärjessä vesi on lämmintä ja '
+            + 'kirkasta, ja rannan tuntumassa kasvaa koralliriuttoja, joita '
+            + 'voi katsella pelkillä uimalaseilla. Riutoilla elää satoja '
+            + 'kalalajeja. Osa rannasta on merisuojelualuetta, jossa '
+            + 'ankkurointi on kielletty, ettei ankkuri riko koralleja. Akaban '
+            + 'satama on samalla maan ainoa portti merelle.',
+          selite: 'Akaban eteläinen uimaranta. Hiekan yllä on rivi varjoja '
+            + 'antavia katoksia, edessä sininen meri ja vastarannalla korkeat '
+            + 'vuoret.',
+          lahde: 'Gerda Arendt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Kuolleessameressä kelluu ilman ponnistelua?',
+        vaihtoehdot: [
+          'Vesi on tavallista lämpimämpää',
+          'Suola tekee vedestä raskaampaa',
+          'Pohja on aivan pinnan lähellä',
+          'Meressä on voimakas pohjavirta',
+        ],
+        oikea: 1,
+        fakta: 'Kuolleenmeren pinta on yli neljäsataa metriä merenpinnan '
+          + 'alapuolella — maapallon alin kuiva kohta.',
+      },
+    },
+    {
+      id: 'rauniot',
+      nimi: 'Rauniot',
+      johdanto: 'Jordanian läpi on kuljettu aina: karavaanit, roomalaiset legioonat '
+        + 'ja pyhiinvaeltajat. Matkan varrelle jäi kaupunkeja ja linnoja, '
+        + 'joita seisoo yhä pystyssä keskellä maisemaa.',
+      nostot: [
+        {
+          otsikko: 'Kaupungin tori tehtiin pyöreähköksi',
+          tiedosto: 'Colonnade Around the Oval Plaza at Jerash (5596019225).jpg',
+          teksti: 'Jerash oli roomalaisajan vauras kaupunki, ja sen keskellä on '
+            + 'epätavallinen tori: se ei ole neliö vaan soikea. Muoto syntyi '
+            + 'siitä, että vanha pyhäkköalue ja uusi pylväskatu piti sovittaa '
+            + 'yhteen, ja tori venytettiin niiden väliin. Toria kiertää lähes '
+            + 'seitsemänkymmentä pylvästä, ja kivetys on yhä alkuperäinen: '
+            + 'kivet on ladottu kaareviin riveihin torin muodon mukaan. '
+            + 'Kaupunki tyhjeni maanjäristyksen jälkeen ja peittyi hiekkaan, '
+            + 'mistä syystä se on säilynyt näin hyvin.',
+          selite: 'Jerashin soikea tori. Kivetty aukio kaartuu laajana, ja sitä '
+            + 'reunustaa rivi pystyssä olevia kivipylväitä.',
+          lahde: 'Institute for the Study of the Ancient World, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Pääkaupungin kukkulalla seisoo kuusi pylvästä',
+          tiedosto: 'Temple of Hercules - Amman citadel.jpg',
+          teksti: 'Ammanin keskellä kohoaa kukkula, jolla on asuttu tuhansia '
+            + 'vuosia. Sen laella on Herkuleen temppelin jäänteet: muutama '
+            + 'valtava pylväs, jotka on nostettu takaisin pystyyn. Temppeli '
+            + 'jäi aikanaan kesken, eikä sitä ilmeisesti koskaan saatu '
+            + 'valmiiksi. Samalta kukkulalta on löytynyt myös jättimäisen '
+            + 'kivikäden palasia, joten patsas on ollut valtava. Kukkulalla '
+            + 'on lisäksi umaijadien palatsin kupolisali ja bysanttilaisen '
+            + 'kirkon pohja — kolme aikakautta muutaman sadan metrin '
+            + 'matkalla.',
+          selite: 'Herkuleen temppelin pylväät Ammanin kukkulalla. Kolme korkeaa '
+            + 'pylvästä seisoo yhä kannattaen palkkia, ja ympärillä on '
+            + 'kaatuneita pylväänosia.',
+          lahde: 'AliAbuRas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Aavikkolinnan katossa on tähtitaivas',
+          tiedosto: 'Qasr Amra (also Quseir Amra), Jordan.jpg',
+          teksti: 'Itäisellä aavikolla on rivi pieniä linnoja, joita kalifien '
+            + 'hovi käytti levähdyspaikkoina ja kylpylöinä 700-luvulla. '
+            + 'Tunnetuin on Qusayr Amra, jonka seinät ja holvit on maalattu '
+            + 'täyteen kuvia: metsästystä, työmiehiä, soittajia ja eläimiä. '
+            + 'Kylpyhuoneen kupoliin on maalattu tähtitaivas tähtikuvioineen '
+            + '— se on vanhimpia säilyneitä yrityksiä kuvata taivas pyöreälle '
+            + 'pinnalle. Linna on Unescon maailmanperintökohde, ja sen '
+            + 'vieressä on yhä vanha kaivo.',
+          selite: 'Qusayr Amran hiekankivinen aavikkolinna. Matalassa '
+            + 'rakennuksessa on kolme tynnyriholvia ja pyöreä kupoli, '
+            + 'ympärillä pelkkää kuivaa maata.',
+          lahde: 'Paul Mannix, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä muotoinen on Jerashin kuuluisin tori?',
+        vaihtoehdot: [
+          'Soikea',
+          'Kolmion muotoinen',
+          'Täysin pyöreä',
+          'Neliö, jossa on kulmatornit',
+        ],
+        oikea: 0,
+        fakta: 'Toria kiertää lähes seitsemänkymmentä pylvästä, ja sen kivetys '
+          + 'on yhä alkuperäinen.',
+      },
     },
   ],
 };
