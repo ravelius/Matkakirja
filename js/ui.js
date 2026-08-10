@@ -10762,8 +10762,10 @@ export class UI {
        * laukussa ja valikossa on sama kuva samasta esineestä. Jos
        * moduulia ei ole vielä ladattu, varalla on laattatyypin kuvake.
        */
+      // Varustekuva (10.8.2026) samalla pyöreällä rajauksella kuin
+      // aarteet; viivaikoni jää varasoluksi jos kuva ei lataudu.
       rivi(
-        linssi?.ikoni ? viivaIkoniSvg(linssi.ikoni, 44) : tokenIconSvg('linssi', 44),
+        aarreIkoni({ kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: linssi?.nimi ?? 'Varuste' }, 'linssi', 44),
         linssi?.nimi ?? game.tokenTypes.linssi?.name ?? 'Varuste',
       );
     }
@@ -12474,7 +12476,16 @@ export class UI {
 
   async playTokenReveal(type) {
     const token = this.game.aarreTyyppi(type, this.game.quiz?.cityId);
-    const onKuva = Boolean(token.kuva);
+    /*
+     * Varustekuva (omistajan tilaus 10.8.2026: "tee varusteet kuviksi
+     * samoin kuin aarteet"): löytynyt linssi nousee mustasta omalla
+     * toimintakuvallaan kuten aarteet. Tunnus on jo tapahtumajonossa
+     * (revealToken kirjoitti sen); tyhjä kotelo jää kääntyväksi
+     * laataksi, koska sillä ei ole varustetta näytettävänä.
+     */
+    const linssiTunnus = type === 'linssi'
+      ? (this.game.events?.find((e) => e.linssi)?.linssi ?? null) : null;
+    const onKuva = Boolean(token.kuva) || Boolean(linssiTunnus);
     const overlay = html('div', `reveal-overlay${onKuva ? ' kuvallinen' : ''}`);
     const scene = html('div', 'reveal-scene');
 
@@ -12485,7 +12496,8 @@ export class UI {
       aarrekuva = document.createElement('img');
       aarrekuva.className = 'reveal-aarrekuva';
       aarrekuva.alt = token.name;
-      const [osoite, vara] = aarrekuvanOsoitteet(token.kuva);
+      const [osoite, vara] = aarrekuvanOsoitteet(linssiTunnus
+        ? `assets/varusteet/varuste-${linssiTunnus}.jpg` : token.kuva);
       // Puuttuva tiedosto (yhden tiedoston versio levyltä) ei saa
       // jättää rikkinäistä kuvaketta — kortti jatkaa tekstillä.
       asetaKuva(aarrekuva, osoite, vara, () => aarrekuva.remove());
@@ -13267,13 +13279,19 @@ export class UI {
     await this.wait(this.reducedMotion ? 0 : 260);
   }
 
-  buildToast({ kind, text, sub, icon, token, city }) {
+  buildToast({ kind, text, sub, icon, token, city, linssi }) {
     const box = html('div', `event-toast ${kind === 'robber' ? 'bad' : kind}`);
     // Ikoni voi olla viivaikonin nimi tai suora merkki — kuplat piirretään
     // samalla kynällä kuin napit aina kun ikoni sarjasta löytyy.
     const kuva = viivaIkoni(icon);
     if (kuva) kuva.classList.add('toast-icon');
-    if (token) box.appendChild(aarreIkoni(this.game.aarreTyyppi(token, city), token, kind === 'die' ? 30 : 34));
+    if (token) {
+      // Linssilöydön kupla näyttää varusteen oman kuvan (10.8.2026).
+      const tiedot = linssi
+        ? { kuva: `assets/varusteet/varuste-${linssi}.jpg`, name: text }
+        : this.game.aarreTyyppi(token, city);
+      box.appendChild(aarreIkoni(tiedot, token, kind === 'die' ? 30 : 34));
+    }
     else box.appendChild(kuva ?? html('span', 'toast-icon', icon ?? '•'));
     const body = html('div');
     body.appendChild(html('span', 'toast-text', text));

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.540';
+const CACHE = 'matkakirja-2026-08-09.541';
 const SHELL = [
   './',
   './index.html',
@@ -131,6 +131,12 @@ const SHELL = [
   // selaillaan eniten.
   './assets/linssit/yokartta.jpg',
   './assets/linssit/topografia.webp',
+  // Varustekuvat (linssien toimintakuvat, 10.8.2026).
+  './assets/varusteet/varuste-topografia.jpg',
+  './assets/varusteet/varuste-vesistot.jpg',
+  './assets/varusteet/varuste-vertailu.jpg',
+  './assets/varusteet/varuste-maatiedot.jpg',
+  './assets/varusteet/varuste-radio.jpg',
   // Aarrelöydön huudahdukset ääneen (sama repliikki kuin kortilla).
   './assets/audio/huudahdus-300-1.mp3',
   './assets/audio/huudahdus-300-2.mp3',
