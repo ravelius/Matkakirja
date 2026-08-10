@@ -20,9 +20,12 @@ import { fileURLToPath } from 'node:url';
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const MALLI = process.env.AARRE_MALLI ?? 'gemini-3-pro-image';
 
-const avain = process.env.GOOGLE_API_KEY;
+// Ympäristössä avain on kirjoitusvirheellisellä nimellä GOOGLW_API_KEY
+// (omistajan huomio 10.8.2026) — luetaan molemmat, ettei generointi
+// kaadu nimen kirjoitusasuun.
+const avain = process.env.GOOGLE_API_KEY ?? process.env.GOOGLW_API_KEY;
 if (!avain) {
-  console.error('GOOGLE_API_KEY puuttuu ympäristöstä — kuvia ei voi generoida.');
+  console.error('GOOGLE_API_KEY (tai GOOGLW_API_KEY) puuttuu ympäristöstä — kuvia ei voi generoida.');
   process.exit(1);
 }
 

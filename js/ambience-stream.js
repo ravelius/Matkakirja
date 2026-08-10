@@ -198,6 +198,31 @@ function haivyta(audio, kohde, done, kesto = HAIVYTYS_MS) {
   // Uusi häivytys keskeyttää saman äänen edellisen, etteivät kaksi
   // silmukkaa vedä voimakkuutta eri suuntiin.
   const oma = (audio.haivytysId = (audio.haivytysId ?? 0) + 1);
+  /*
+   * Web Audio -reitillä häivytys ajastetaan ÄÄNISÄIKEELLE gain-
+   * ramppina. rAF-askellus jäätyy, kun pääsäie on varattu — juuri
+   * lentokalvon rakentamisen aikana — ja aikaan sidottu askel hyppäsi
+   * jäätymisen jälkeen suoraan loppuarvoon (omistajan havainto
+   * 10.8.2026: lähtöaulan ääni leikkautui äkillisesti kaupunkia
+   * klikatessa; mitattu ~5 s pääsäiejumi). Ramppi soi tasaisesti
+   * pääsäikeestä riippumatta; done-kutsu saa myöhästyä, koska se vain
+   * vapauttaa solmut äänen jo vaiettua.
+   */
+  const ctx = sfx.ctx;
+  if (audio.aaniVahvistin && ctx) {
+    try {
+      const gain = audio.aaniVahvistin.gain;
+      gain.cancelScheduledValues(ctx.currentTime);
+      gain.setValueAtTime(Math.max(0, lueTaso(audio)), ctx.currentTime);
+      gain.linearRampToValueAtTime(Math.max(0, kohde), ctx.currentTime + kesto / 1000);
+      setTimeout(() => {
+        if (audio.haivytysId === oma) done?.();
+      }, kesto + 60);
+      return;
+    } catch {
+      /* konteksti kiinni tms. — pudotaan rAF-reitille */
+    }
+  }
   const alku = lueTaso(audio);
   const t0 = performance.now();
   const askel = (nyt) => {

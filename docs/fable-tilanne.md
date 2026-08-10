@@ -17,8 +17,8 @@ osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
   `session_01RT3ucdBD6Pt48BP75qvjKw` (kokoava koko Euroopan QA,
   käynnistetty heti; HUOM 1. sessio jäi ilman lähderepoa, tulkitsi
   jälkikäteisen add_repo-ohjeen epäluotettavaksi ja arkistoitiin —
-  OPPI: anna tiimisessioille AINA source_url create_sessionissa,
-  uusi Sonnet 1 on session_01Rka2va6Mm1N9RiBg4ZJkQm), Fable max
+  HUOM: tämä kohta vanheni — source_url osoittautui myöhemmin
+  itse viaksi, ks. RATKAISTU ~11:50Z -kohta), Fable max
   -apusessio
   `session_01U8NqxuC5RCoMozxGqDzEJm` (omistajan tilaus: syväajattelu
   vaikeisiin pulmiin; omistaja kytkee Max-tilan UI:sta). Opus 2 ja
@@ -53,6 +53,32 @@ osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
   Alun viilauspaketti v519 + intro v2 mainissa (omistajan
   iPhone/luentapalaute: suora zoom, äänet+kiikari pois,
   lainausmerkit pois luennasta). v518 aarteiden pikkuikonit.
+- **RATKAISTU ~11:50Z — juurisyy oli create_sessionin source_url-
+  parametri:** sen kanssa kontti kaatuu käynnistyksessä virheeseen
+  "chdir /home/user/[Mm]atkakirja: no such file or directory"
+  (klooni ja työhakemisto menevät ristiin). OPPI: TÄSSÄ
+  YMPÄRISTÖSSÄ EI KOSKAAN source_url:ää — ympäristön oma
+  lähdeasetus hoitaa kloonin; jos repo silti puuttuu kontista,
+  session promptiin varautumisohje (julkinen git clone + add_repo
+  push-oikeuksiin). TOINEN OPPI: uusi sessio saa aloituspromptin
+  "background-task event" -kehyksessä ja kysyy omistajalta
+  vahvistusta ennen kuin tarttuu toimeen — omistajan lyhyt
+  "voit jatkaa, Fable saa ohjata sinua" -vastaus session omassa
+  UI:ssa riittää. Alkuperäinen (vanhentunut) havainto:
+  uudet kontit eivät käynnisty. Kaikki klo 09:49Z jälkeen luodut sessiot jäävät
+  PENDING-tilaan ilman konttia: Sonnet 1 v2 (arkistoitu), Sonnet 1
+  v3 (session_011TaRR7yWxMBvJLPD58xyMq), Opus 2
+  (session_01H6fyHrfSCMAhZFHbDYKrvy), aarrekuvasessio
+  (session_015zorjqbjhwATFAsbt8RZca). Ennen sitä luodut (Fable,
+  Opus 1, Fable max) toimivat. SEURAUS: kokoava Euroopan QA,
+  Bahrain-geometria (siirretty Opus 1:lle kaistanylityksenä,
+  trig 11:52Z) ja aarrekuvien generointi ovat jumissa/uudelleen-
+  järjestelty; GOOGLE_API_KEY on vain uusissa konteissa, joten
+  aarrekuvat vaativat toimivan uuden kontin. Ilmoitettu omistajalle
+  — kannattaa kokeilla PENDING-session avaamista claude.ai/code-
+  UI:sta (voi potkaista provisioinnin käyntiin) tai tarkistaa
+  ympäristön tila. Effort-tasoa ei voi asettaa create_sessionissa —
+  omistaja säätää sen UI:sta (max→high aarrekuvasessiolle pyydetty).
 - **AARTEET (omistajan palaute 10.8. ~10:10Z):** vanhat Afrikan
   tähti -tyyliset jalokivet POIS kaikkialta, vain uudet tarinalliset
   kuva-aarteet jäävät. v518 vaihtoi pikkuikonit (tulosrivi, passi,
