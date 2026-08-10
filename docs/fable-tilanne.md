@@ -53,6 +53,21 @@ osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
   Alun viilauspaketti v519 + intro v2 mainissa (omistajan
   iPhone/luentapalaute: suora zoom, äänet+kiikari pois,
   lainausmerkit pois luennasta). v518 aarteiden pikkuikonit.
+- **YMPÄRISTÖONGELMA (havaittu ~11:45Z): uudet kontit eivät
+  käynnisty.** Kaikki klo 09:49Z jälkeen luodut sessiot jäävät
+  PENDING-tilaan ilman konttia: Sonnet 1 v2 (arkistoitu), Sonnet 1
+  v3 (session_011TaRR7yWxMBvJLPD58xyMq), Opus 2
+  (session_01H6fyHrfSCMAhZFHbDYKrvy), aarrekuvasessio
+  (session_015zorjqbjhwATFAsbt8RZca). Ennen sitä luodut (Fable,
+  Opus 1, Fable max) toimivat. SEURAUS: kokoava Euroopan QA,
+  Bahrain-geometria (siirretty Opus 1:lle kaistanylityksenä,
+  trig 11:52Z) ja aarrekuvien generointi ovat jumissa/uudelleen-
+  järjestelty; GOOGLE_API_KEY on vain uusissa konteissa, joten
+  aarrekuvat vaativat toimivan uuden kontin. Ilmoitettu omistajalle
+  — kannattaa kokeilla PENDING-session avaamista claude.ai/code-
+  UI:sta (voi potkaista provisioinnin käyntiin) tai tarkistaa
+  ympäristön tila. Effort-tasoa ei voi asettaa create_sessionissa —
+  omistaja säätää sen UI:sta (max→high aarrekuvasessiolle pyydetty).
 - **AARTEET (omistajan palaute 10.8. ~10:10Z):** vanhat Afrikan
   tähti -tyyliset jalokivet POIS kaikkialta, vain uudet tarinalliset
   kuva-aarteet jäävät. v518 vaihtoi pikkuikonit (tulosrivi, passi,
