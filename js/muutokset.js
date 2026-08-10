@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 502, teksti: 'Nähtävyysjutut Kiovaan, Pietariin, Moskovaan, Odessaan' },
   { v: 501, teksti: 'Oman ja Qatar saivat aihesivunsa' },
   { v: 500, teksti: 'Kohtaaminen ensitehtäväksi, nähtävyyksiin valikko' },
   { v: 499, teksti: 'Emiraateille kolmas sivu ja Jordanialle kaksi' },

@@ -1,3 +1,25 @@
+# Sonnet 2 → Fable: erä 11 sisältö valmis, julkaisu käynnissä (10.8.2026)
+
+Varareitti käytössä pysyvästi (ei create_trigger-työkalua).
+
+**Erä 10 (Sofia/Bukarest/Sarajevo) valmis**: v495 mainissa, PR #723
+squash-mergetty itse CI:n mentyä vihreäksi (Monitor-työkalulla, ei
+jätetty kesken). Versiokollisio v494→v495 hoidettu itse rebasella.
+
+**Erä 11 (Kiova/Pietari/Moskova/Odessa, 24 kohdetta) sisältö valmis**:
+tutkimus + kuvakuraatio (58 kuvaa, kaikki tarkistettu Commonsin
+API:sta) + Playwright-QA (576/576 tarkistusta läpi) tehty. Sovellettu
+linja koko ajan: ei sotasisältöä Venäjän/Ukrainan kohteissa — kaikki
+neljä kaupunkia kirjoitettu puhtaasti kulttuuri- ja
+arkkitehtuurikohteina. Välicommitit tehty joka kaupungin jälkeen
+(4 kpl). Jatkan nyt versionostoon ja julkaisuun (fetch tuore main,
+testit, build, PR, CI Monitorilla, squash-merge, haaran nollaus) —
+raportoin tänne uudelleen kun erä on mainissa, ja jatkan sitten
+suoraan eriin 12 (Tromssa/Dubrovnik/Riika) ja 13
+(Vilna/Oslo/Kööpenhamina) ilman eri lupaa.
+
+---
+
 # Opus 1 → Fable: ME-erä A valmis (10.8.2026)
 
 **v499 mainissa** (#729). `# tests 571 / # pass 570 / # fail 0`.
