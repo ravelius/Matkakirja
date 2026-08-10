@@ -8697,14 +8697,14 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Kon-Tiki-museo — Heyerdahlin retkikunnat',
-              tiedosto: 'Kon-Tiki raft, side view.jpg',
+              tiedosto: 'Kon-Tiki Museum, Oslo, Norway - panoramio.jpg',
               teksti: 'Kon-Tiki lähti Perun Callaosta 28. huhtikuuta 1947. Lautta '
                 + 'oli sidottu balsapuun rungoista, kippari oli 33-vuotias '
                 + 'Thor Heyerdahl, ja mukana oli viisi miestä ja papukaija.',
-              selite: 'Kon-Tiki-lautta museossa: paksut balsapuurungot on sidottu '
-                + 'köysillä yhteen, päällä on bambumaja ja purje, ja vieressä '
-                + 'liehuu Norjan lippu.',
-              lahde: 'Wikipek, Wikimedia Commons (CC0)',
+              selite: 'Ruokovene Ra II Kon-Tiki-museossa Oslossa. Kaislakimpuista '
+                + 'sidottu runko kaartuu ylös keulassa, ja purjeessa on suuri '
+                + 'aurinko.',
+              lahde: 'Николай Максимович, Wikimedia Commons (CC BY 3.0)',
               linkki: 'https://www.kon-tiki.no/en/heyerdahls-expeditions',
             },
           ],
@@ -9002,13 +9002,13 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'The Complete Andersen — kaikki sadut verkossa',
-              tiedosto: 'Hans Christian Andersen by Thora Hallager 1869.jpg',
+              tiedosto: 'Hans Christian Andersen - paper cut, 1874.jpg',
               teksti: 'H.C. Andersen kirjoitti paljon muutakin kuin Pienen '
                 + 'merenneidon ja Ruman ankanpoikasen.',
-              selite: 'Thora Hallagerin valokuva vuodelta 1869: H.C. Andersen '
-                + 'istuu sivuttain kameraan, terävä profiili, rusetti '
-                + 'kaulassa ja samettikaulus takissa.',
-              lahde: 'Thora Hallager, Wikimedia Commons (public domain)',
+              selite: 'H.C. Andersenin saksilla leikkaama paperikuva vuodelta '
+                + '1874: mustavalkoinen kuvio täynnä pieniä hahmoja, '
+                + 'tanssijoita ja kasvoja.',
+              lahde: 'Hans Christian Andersen, Wikimedia Commons (public domain)',
               linkki: 'https://andersen.sdu.dk/vaerk/hersholt/',
             },
           ],
@@ -11463,6 +11463,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Eesti regilaulude andmebaas — 92 134 kansanlaulua',
+              tiedosto: 'Monument of Singing Mother Hilana Taarka, Obinitsa village Setomaa region, Estonia.jpg',
+              selite: 'Laulava äiti -patsas Obinitsan kylässä Setomaalla. '
+                + 'Graniittinen naishahmo seisoo kansanpuvussa nurmella '
+                + 'koivujen edessä.',
+              lahde: 'Klarqa, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Viron kirjallisuusmuseon kansanrunousarkisto on koonnut '
                 + 'tietokantaan 92 134 regilaulua eli vanhaa '
                 + 'kalevalamittaista laulua. Jokaisesta näkyy, kuka lauloi ja '
@@ -11718,6 +11723,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Periodika — latvialaiset lehdet vuodesta 1822',
+              tiedosto: 'Latweeschu Awises 1824.jpg',
+              selite: 'Latweeschu Awises -lehden kansilehti vuodelta 1824. '
+                + 'Koristekehyksen sisällä on vanhaa fraktuuraa ja pieni '
+                + 'kaksikasvoinen vinjetti.',
+              lahde: 'tuntematon tekijä, Wikimedia Commons (public domain)',
               teksti: 'Latvian kansalliskirjasto on skannannut noin 3 000 lehteä '
                 + 'ja yli kolme miljoonaa sivua. Vanhin niistä, Latweeschu '
                 + 'Awises, alkoi ilmestyä Jelgavassa vuonna 1822.',
@@ -11982,6 +11992,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Sutartinės — 1820 laulua nuotteineen ja äänineen',
+              tiedosto: 'Dainu svente 1937 dalyviai Kaunas.jpg',
+              selite: 'Laulujuhlan kulkue Kaunasissa vuonna 1937. Kansanpukuisia '
+                + 'laulajia kävelee rivissä kaupungin kadulla vanhojen '
+                + 'talojen ohi.',
+              lahde: 'tuntematon kuvaaja, Wikimedia Commons (public domain)',
               teksti: 'Sutartinė on liettualainen laulutapa, jossa kaksi tai '
                 + 'kolme melodiaa kulkee yhtä aikaa päällekkäin. Zenonas '
                 + 'Slaviūnasin kokoelma on verkossa kokonaan, monessa '
@@ -11995,16 +12010,15 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Gedimino pilies bokštas — 360 asteen kierros torniin',
-              tiedosto: 'Gedimino pilis by Augustas Didzgalvis.jpg',
+              tiedosto: 'Gediminas\' Tower in Vilnius in winter in 2022.jpg',
               teksti: 'Gediminaksen torni on ainoa jäljellä oleva osa Vilnan '
                 + 'ylälinnasta. Kierros vie tornin sisään ja '
                 + 'näköalatasanteelle, ja mukana on 3D-esineitä ja animoitu '
                 + 'basiliskitaru.',
-              selite: 'Ilmakuva Gediminaksen tornista: punatiilinen '
-                + 'kahdeksankulmainen torni vihreän kukkulan laella, '
-                + 'lipputanko katolla ja alhaalla kaupunki ja mutkitteleva '
-                + 'joki.',
-              lahde: 'Augustas Didžgalvis (BigHead), Wikimedia Commons (CC BY-SA 4.0)',
+              selite: 'Gediminaksen torni talvella. Punatiilinen torni valaistuna '
+                + 'lumisen kukkulan laella, katolla Liettuan lippu ja ilmassa '
+                + 'sumua.',
+              lahde: 'Pofka, Wikimedia Commons (CC BY-SA 4.0)',
               linkki: 'https://lnm.lt/360pilis/en',
             },
             {
@@ -12540,6 +12554,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Filmhíradók Online — unkarilaiset uutisfilmit',
+              tiedosto: 'Uránia mozi, Budapest.jpg',
+              selite: 'Uránian elokuvateatteri Budapestissa. Julkisivussa on '
+                + 'kaarikäytäviä ja koristeltuja ikkunoita, ja alhaalla rivi '
+                + 'punaisia ovia.',
+              lahde: 'Varius, Wikimedia Commons (CC BY-SA 3.0)',
               teksti: 'Ennen televisiota uutiset katsottiin elokuvateatterissa. '
                 + 'Tänne on digitoitu unkarilaisia uutisfilmejä 1910-luvulta '
                 + '1940-luvulle, ja niitä voi selata aiheen, henkilön tai '
@@ -14457,6 +14476,11 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Bosnian kansallisgalleria — kokoelma zoomattavana',
+              tiedosto: 'Umjetnička Galerija Bosne i Hercegovine.png',
+              selite: 'Bosnia ja Hertsegovinan kansallisgallerian valkoinen '
+                + 'rakennus Sarajevossa. Katolla on tumma kupoli ja seinällä '
+                + 'näyttelyn banderolli.',
+              lahde: 'Akir-toj, Wikimedia Commons (CC0)',
               teksti: 'Sarajevon kansallisgalleria on vienyt teoksensa Google '
                 + 'Arts & Culture -palveluun: 139 Ferdinand Hodlerin työtä, '
                 + 'Đoko Mazalićin maalauksia ja satakunta piirustusta, joita '
@@ -14508,6 +14532,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Stećci-maailmanperintökohteet — virallinen kuvagalleria',
+              tiedosto: 'Stecci necropolis in Bijambare - general view.jpg',
+              selite: 'Stećci-hautakiviä nurmikentällä metsän reunassa. '
+                + 'Kymmenkunta järeää kivipaatta lepää ruohikossa kuusten '
+                + 'varjossa.',
+              lahde: 'Bosancica by MK, Wikimedia Commons (CC BY 4.0)',
               teksti: 'Unescon maailmanperintöluetteloon kuuluvien '
                 + 'hautakiviniittyjen oma kuvagalleria. Kymmeniä valokuvia '
                 + 'Bosnian kalmistoista Bijačasta Boljuniin, paikka paikalta.',
@@ -14533,6 +14562,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Sarajevon kirjaston digitoidut kuvat',
+              tiedosto: 'Vijecnica (41626036484).jpg',
+              selite: 'Vijećnica eli Sarajevon kaupungintalo ja kirjasto joen '
+                + 'rannalla. Raidallinen julkisivu heijastuu veteen, ja '
+                + 'edessä kaartuu kivisilta.',
+              lahde: 'Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY 2.0)',
               teksti: 'Kaupunginkirjasto on skannannut vanhaa Sarajevoa: 70 '
                 + 'postikorttia, katukuvia, panoraamoja ja vuorimaisemia. '
                 + 'Samasta kokoelmasta löytyy myös kaupungin karttoja '
