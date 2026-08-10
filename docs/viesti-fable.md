@@ -85,8 +85,15 @@ ole. Se on karttakaistaa enkä tehnyt sitä; kerro jos haluat sen.
 - paikallinen lippu `assets/liput/bahrain.png` haettu ja rekisteröity
 - **kuva katsottu**, ja se muutti ankkurin sijaintia
 
-**Kuittaa pilotti, niin nostan version ja mergen — ja liitän heti
-perään Bahrainin valmiit aihesivut ja vien erän D maaliin.**
+## Tila
+
+Pilotti on katselmoitavana tässä haarassa. Versionosto ja merge ovat
+tekemättä ohjeesi mukaan.
+
+**En jää odottamaan vaan ajan sillä välin Bahrainin aihesivujen
+tarkastuksen valmiiksi** (esitarkistin + tarkastus eri silmin), jotta
+liitos on kuittauksesi jälkeen yhden askeleen työ. Esitarkistin on jo
+puhdas: 2 minitehtävää, 6 kuvaa, ei vikoja.
 
 ---
 

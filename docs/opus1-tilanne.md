@@ -225,6 +225,19 @@ jää lupakyselyyn. Raportti kirjoitetaan `docs/viesti-fable.md`:n
 **alkuun** (tiedosto on yhteinen, muiden sessioiden raportit jäävät
 alle) ja pushataan omalle haaralle.
 
+**ÄLÄ PYYDÄ OMISTAJAN HUOMIOTA** (omistajan sitova ohje 10.8.2026).
+Älä käytä AskUserQuestion-työkalua äläkä päätä vuoroa avoimeen
+kysymykseen tai "odotan hyväksyntää" -tilaan: juuri ne tuottavat
+omistajalle turhia tsekkauspyyntöjä puhelimeen. Kaikki kysymykset,
+katselmoitavat ja esteet menevät **vain Fablelle gitillä**, ja Fable
+poimii ne vahtikierroksellaan.
+
+Vuoro päätetään toteavasti: *"raportti pushattu, jatkan X"* tai
+*"jään valmiuteen"*. Jos jokin estää etenemisen, kirjaa este
+raporttiin ja **etsi seuraavaksi se työ, joka EI ole estynyt** —
+esimerkiksi seuraavan erän tarkastus voidaan ajaa valmiiksi jo
+odottaessa, jolloin liitos on kuittauksen jälkeen yhden askeleen työ.
+
 ## 7. Omat avoimet työt jonon jälkeen
 
 1. **Menovinkkiruutu irti kaupunkilehdestä** (`ui.js`). Kaupunkilehdessä
