@@ -68,6 +68,7 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 | Opus 2 | session_01H6fyHrfSCMAhZFHbDYKrvy | 10.8.2026 (1. tehtävä: Bahrain-geometria) |
 | Sonnet 1 | session_011TaRR7yWxMBvJLPD58xyMq | 10.8.2026 (3. yritys; 1. jäi ilman repoa, 2. jumittui PENDING-tilaan) |
 | Sonnet 2 | — (perustetaan kun ME-jono aukeaa) | 10.8.2026 |
+| Opus 3 (aarrekuvat, kertaluontoinen) | session_015zorjqbjhwATFAsbt8RZca | 10.8.2026 (effort High omistajan säätämänä) |
 
 Vanhan tilin sessiot (8.8.2026 taulukko) ovat arkistoituja eivätkä
 tee enää työtä. **Fable max** on omistajan 10.8.2026 tilaama
