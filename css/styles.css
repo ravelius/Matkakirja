@@ -9669,3 +9669,32 @@ body.maatiedot-tila .board-hint {
   background: rgba(70, 51, 31, 0.12);
   font-weight: 600;
 }
+
+/* ── VALOKUVAPULMA ─────────────────────────────────────────────────────
+ *
+ * Omistajan tilaus 10.8.2026 (sanasto docs/mantereen-resepti.md):
+ * pulman vaihtoehdot ovat oikeita valokuvia. Kuva täyttää napin
+ * yläosan, kirjain ja nimi jäävät riviksi alle. Kuvakoko on
+ * rajattu, jotta kolme vaihtoehtoa mahtuu puhelimen ruudulle
+ * yhdellä vierityksellä.
+ */
+.quiz-option.kuvallinen {
+  flex-wrap: wrap;
+  padding-top: 0.55rem;
+}
+
+.quiz-option-kuva {
+  width: 100%;
+  height: clamp(5.2rem, 18vh, 8.5rem);
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(70, 51, 31, 0.3);
+}
+
+.quiz-kuvalahteet {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-type);
+  font-size: 0.62rem;
+  letter-spacing: 0.03em;
+  color: rgba(70, 51, 31, 0.55);
+}

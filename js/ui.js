@@ -11484,6 +11484,23 @@ export class UI {
       this.optionButtons = data.options.map((text, i) => {
         const btn = html('button', 'quiz-option');
         btn.style.setProperty('--i', String(i));
+        /*
+         * Valokuvapulma (omistajan tilaus 10.8.2026): vaihtoehto on
+         * oikea valokuva piirroksen sijaan. Kuva peilin kautta kuten
+         * muutkin; latausvirhe pudottaa kuvan mutta jättää nimen,
+         * joten pulmaan voi silti vastata.
+         */
+        const kuva = data.kuvat?.[i];
+        if (kuva) {
+          btn.classList.add('kuvallinen');
+          const img = document.createElement('img');
+          img.className = 'quiz-option-kuva';
+          img.alt = kuva.selite ?? '';
+          img.draggable = false;
+          img.addEventListener('error', () => { img.hidden = true; });
+          asetaKuva(img, valokuvaUrl(kuva.tiedosto, 560), valokuvaVara(kuva.tiedosto, 560));
+          btn.appendChild(img);
+        }
         btn.appendChild(html('span', 'letter', LETTERS[i]));
         btn.appendChild(html('span', 'text', text));
         btn.addEventListener('click', () => {
@@ -11493,6 +11510,11 @@ export class UI {
       });
       this.quizOptions.textContent = '';
       for (const btn of this.optionButtons) this.quizOptions.appendChild(btn);
+      // CC-lisenssi vaatii tekijämaininnan: yksi hiljainen rivi
+      // vaihtoehtojen alla, sama kaikille kolmelle kuvalle.
+      if (data.kuvaLahteet) {
+        this.quizOptions.appendChild(html('p', 'quiz-kuvalahteet', data.kuvaLahteet));
+      }
     }
 
     const answered = data.chosen !== null;
