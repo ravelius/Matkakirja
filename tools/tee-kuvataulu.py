@@ -13,6 +13,7 @@ ja ruudun yläreunassa on ehdokkaan numero, jotta valinnat voi merkitä.
 Taulut kirjoitetaan tools/vuorikuva-taulut/ ja ne ovat väliaikaisia:
 kansio on .gitignoressa eikä sitä viedä repoon.
 """
+import hashlib
 import json
 import os
 import sys
@@ -37,6 +38,18 @@ def thumb_url(t, leveys=RUUTU):
     if not osoite:
         return None
     return osoite.replace("/800px-", f"/{leveys}px-")
+
+
+def valimuistinimi(tiedosto):
+    """Välimuistin tiedostonimi Commonsin tiedostonimestä.
+
+    EI ehdokkaan järjestysnumeroa. Numero vaihtuu, kun ehdokaslista
+    haetaan uudelleen — ja silloin välimuistista tuli väärä kuva
+    väärällä nimilapulla. Se ehti kerran sotkea Kaukasuksen taulun:
+    kolme ruutua oli edellisen haun kuvia. Tiivisteavain ei voi mennä
+    väärin, koska se on kuvan oma nimi.
+    """
+    return f"{hashlib.sha1(tiedosto.encode('utf-8')).hexdigest()[:16]}.jpg"
 
 
 def lataa(osoite, polku):
@@ -87,7 +100,7 @@ def main():
         osoite = thumb_url(t)
         if not osoite:
             continue
-        polku = os.path.join(VALIMUISTI, f"{avain}-{numero}.jpg")
+        polku = os.path.join(VALIMUISTI, valimuistinimi(t["tiedosto"]))
         try:
             lataa(osoite, polku)
             with Image.open(polku) as kuva:

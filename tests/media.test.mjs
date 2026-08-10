@@ -315,6 +315,103 @@ test('tiedostonimiä ei ole katkaistu kahdelle riville', () => {
     + 'riville, vaikka rivi venyisi pitkäksi');
 });
 
+/*
+ * KAKSI ERI KUVAA EI SAA PÄÄTYÄ SAMAAN PEILIPOLKUUN.
+ *
+ * Nimiseula pudottaa kaiken a-z0-9:n ulkopuolisen, joten kokonaan
+ * arabialainen, kyrillinen tai kiinalainen tiedostonimi kutistui
+ * tyhjäksi ja koko joukko kuvia haki samaa osoitetta `kuvat/.jpg`.
+ * Ämpärissä ne kirjoittuivat toistensa päälle, ja pelaaja sai VÄÄRÄN
+ * KUVAN — ei rikkinäistä ruutua, joka olisi huomattu, vaan kelvollisen
+ * valokuvan väärästä paikasta. Vika oli hiljaa pelissä 21 kuvan
+ * kohdalla (mitattu 10.8.2026), eikä sitä nähnyt diffistä eikä
+ * kuvakaappauksesta.
+ *
+ * Testi lukee nimet lähdetekstistä samalla kuviolla kuin peilaustyökalu
+ * ja vaatii, että eri nimistä tulee eri polku.
+ */
+/*
+ * TUNNETUT TÖRMÄYKSET, JOITA EI OLE VIELÄ KORJATTU.
+ *
+ * Nämä kolme luokkaa ovat samaa vikaa kuin yllä, mutta niiden korjaus
+ * VAIHTAISI JO PEILATTUJEN tiedostojen nimet, ja jokainen nimenvaihto
+ * tarkoittaa 404:ää siihen asti kunnes peili ajetaan uudelleen. Se on
+ * Fablen päätös, ei tämän erän — ks. docs/viesti-fable.md.
+ *
+ *   1. 90 merkin katkaisu: kaksi pitkää nimeä on samanlainen 90
+ *      merkkiin asti (sama teos, eri sivu).
+ *   2. Latinalainen häntä: kiinalainen ja venäläinen nimi, joiden
+ *      ainoa latinalainen osa on "- panoramio".
+ *   3. Pelkkä kirjainkoko: "Potemkin stairs" ja "Potemkin Stairs" ovat
+ *      Commonsissa kaksi eri tiedostoa.
+ *
+ * Lista on tahallaan tarkka eikä kuvio: sen kuuluu kutistua, ei kasvaa,
+ * ja uusi törmäys kaataa testin vaikka se olisi samaa luokkaa.
+ */
+const TUNNETUT_TORMAYKSET = new Set([
+  'kuvat/the-persian-problem-an-examination-of-the-rival-positions-of-russia-and-great-britain-in-p.jpg',
+  'kuvat/klejnoty-miasta-krakowa---dwadziescia-cztery-widokow-w-chromolitografiach-podlug-oryginaln.jpg',
+  'kuvat/panoramio.jpg',
+  'kuvat/potemkin-stairs-odessa.jpg',
+]);
+
+/*
+ * KAKSI ERI KUVAA EI SAA PÄÄTYÄ SAMAAN PEILIPOLKUUN.
+ *
+ * Nimiseula pudottaa kaiken a-z0-9:n ulkopuolisen, joten kokonaan
+ * arabialainen, kyrillinen tai kiinalainen tiedostonimi kutistui
+ * tyhjäksi ja koko joukko kuvia haki samaa osoitetta `kuvat/.jpg`.
+ * Ämpärissä ne kirjoittuivat toistensa päälle, ja pelaaja sai VÄÄRÄN
+ * KUVAN — ei rikkinäistä ruutua, joka olisi huomattu, vaan kelvollisen
+ * valokuvan väärästä paikasta. Vika oli hiljaa pelissä 21 kuvan
+ * kohdalla (mitattu 10.8.2026), eikä sitä nähnyt diffistä eikä
+ * kuvakaappauksesta.
+ *
+ * Testi lukee nimet lähdetekstistä samalla kuviolla kuin peilaustyökalu
+ * ja vaatii, että eri nimistä tulee eri polku.
+ */
+test('jokainen kuvatiedosto saa oman peilipolkunsa', () => {
+  const kansio = join(JUURI, 'js/packs');
+  const polut = new Map();
+  const tormaykset = [];
+  for (const nimi of readdirSync(kansio).filter((f) => f.endsWith('.js'))) {
+    const teksti = readFileSync(join(kansio, nimi), 'utf8');
+    for (const osuma of teksti.matchAll(/^\s*tiedosto:\s*'((?:[^'\\]|\\.)*)'/gm)) {
+      const tiedosto = osuma[1].replace(/\\'/g, "'");
+      const polku = peiliKuvaPolku(tiedosto, 'kuvat');
+      const aiempi = polut.get(polku);
+      if (aiempi && aiempi !== tiedosto && !TUNNETUT_TORMAYKSET.has(polku)) {
+        tormaykset.push(`${polku} ← ${aiempi} JA ${tiedosto}`);
+      }
+      polut.set(polku, tiedosto);
+    }
+  }
+  assert.deepEqual(tormaykset, [],
+    'nämä kuvat hakevat peilistä samaa tiedostoa — ämpärissä ne menevät '
+    + 'toistensa päälle ja pelaaja näkee väärän kuvan');
+});
+
+test('tunnettujen törmäysten lista ei kasva eikä vanhene', () => {
+  const kansio = join(JUURI, 'js/packs');
+  const polut = new Map();
+  const yha = new Set();
+  for (const nimi of readdirSync(kansio).filter((f) => f.endsWith('.js'))) {
+    const teksti = readFileSync(join(kansio, nimi), 'utf8');
+    for (const osuma of teksti.matchAll(/^\s*tiedosto:\s*'((?:[^'\\]|\\.)*)'/gm)) {
+      const tiedosto = osuma[1].replace(/\\'/g, "'");
+      const polku = peiliKuvaPolku(tiedosto, 'kuvat');
+      const aiempi = polut.get(polku);
+      if (aiempi && aiempi !== tiedosto) yha.add(polku);
+      polut.set(polku, tiedosto);
+    }
+  }
+  // Korjattu törmäys pitää poistaa listalta, tai lista alkaa suojella
+  // vikoja, joita ei enää ole.
+  const turhat = [...TUNNETUT_TORMAYKSET].filter((p) => !yha.has(p));
+  assert.deepEqual(turhat, [],
+    'nämä törmäykset on korjattu — poista ne TUNNETUT_TORMAYKSET-listalta');
+});
+
 // --- vertailu peilaustyökaluun ja manifestiin --------------------------------
 
 const JUURI = new URL('..', import.meta.url).pathname;
@@ -409,4 +506,29 @@ test('katkaisija erottaa kuvat ja äänet polusta, ei palvelimesta', () => {
   assert.doesNotMatch(PEILI_JUURI, /github\.io/,
     'peili palasi Pagesiin, jonka kokoraja tuli vastaan');
   assert.doesNotMatch(AANI_JUURI, /github\.io/);
+});
+
+/*
+ * Ei-latinalainen tiedostonimi peilissä.
+ *
+ * Seula pudottaa kaiken a-z0-9:n ulkopuolisen, ja kokonaan kyrillinen
+ * nimi kutistui tyhjäksi: peili haki kaikkia sellaisia osoitteesta
+ * `kuvat/.jpg`. Vuorikuvissa niitä on useita, joten yksi olisi
+ * korvannut ämpärissä kaikki muut.
+ */
+test('kokonaan ei-latinalainen tiedostonimi saa oman peilinimensä', () => {
+  const a = peiliKuvaPolku('Утро в горах Кавказа.jpg', 'kuvat');
+  const b = peiliKuvaPolku('Селение Ний.jpg', 'kuvat');
+  assert.notEqual(a, b, 'kaksi eri kyrillistä nimeä osui samaan peilipolkuun');
+  for (const polku of [a, b]) {
+    assert.match(polku, /^kuvat\/[a-z0-9._-]+\.jpg$/, `kelvoton peilipolku: ${polku}`);
+    assert.doesNotMatch(polku, /^kuvat\/\./, `tyhjä nimi: ${polku}`);
+  }
+  // Sama nimi antaa aina saman polun, tai jo peilattu tiedosto katoaisi.
+  assert.equal(peiliKuvaPolku('Утро в горах Кавказа.jpg', 'kuvat'), a);
+});
+
+test('latinalaiset peilinimet eivät muutu tiivistekorjauksesta', () => {
+  assert.equal(peiliKuvaPolku('View of Stepantsminda.jpg', 'kuvat'),
+    'kuvat/view-of-stepantsminda.jpg');
 });

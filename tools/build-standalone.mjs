@@ -122,6 +122,7 @@ const MODULES = [
   'js/packs/maasto-vedet.js',
   'js/packs/maasto-korkeus.js',
   'js/packs/maasto-nimet-vuoret.js',
+  'js/packs/vuori-valokuvat.js',
   'js/packs/maasto-nimet-vedet.js',
   'js/packs/maailmankartta-syvyys.js',
   'js/packs/maasto-tekstit-malli.js',

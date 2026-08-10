@@ -56,7 +56,44 @@ export function turvanimi(teksti, pate) {
     .replace(/^-+|-+$/g, '')
     .toLowerCase()
     .slice(0, 90);
-  return pate ? `${puhdas}.${pate}` : puhdas;
+  /*
+   * KOKONAAN EI-LATINALAINEN NIMI EI SAA KADOTA.
+   *
+   * Seula pudottaa kaiken a-z0-9:n ulkopuolisen, joten kyrillinen,
+   * kreikkalainen, japanilainen tai arabialainen tiedostonimi kutistui
+   * tyhjäksi tai pelkäksi välimerkiksi — ja peli haki niitä KAIKKIA
+   * samasta osoitteesta. Ämpärissä on tälläkin hetkellä tiedostot
+   * `kuvat/.jpg` ja `kuvat/..jpg`, eli oikeita kuvia on jo mennyt
+   * toistensa päälle (mitattu 10.8.2026: molemmat vastaavat 200:lla ja
+   * ovat kelvollisia JPEG-kuvia — väärä kuva latautuu siis huomaamatta).
+   *
+   * Ehto on "yksikään kirjain tai numero ei jäänyt jäljelle" eikä
+   * pelkkä tyhjä: nimestä "Тебердинский заповедник. Вид…" jäi piste,
+   * joka kelpasi nimeksi mutta ei erottanut mitään.
+   *
+   * Tiiviste lasketaan ALKUPERÄISESTÄ nimestä, joten se on eri
+   * jokaiselle tiedostolle ja aina sama samalle tiedostolle.
+   * Latinalaiset nimet eivät muutu tästä lainkaan, joten jo peilatut
+   * tiedostot pysyvät paikallaan.
+   */
+  const nimi = /[a-z0-9]/.test(puhdas) ? puhdas : `kuva-${tiiviste(teksti)}`;
+  return pate ? `${nimi}.${pate}` : nimi;
+}
+
+/**
+ * Lyhyt vakaa tiiviste merkkijonosta (FNV-1a, 32 bittiä).
+ *
+ * Omatekoinen eikä crypto.subtle: nimi tarvitaan synkronisesti sekä
+ * pelissä että peilaustyökalussa, ja tiivisteeltä vaaditaan tässä vain
+ * se, että eri nimet eivät osu yhteen — ei salausominaisuuksia.
+ */
+function tiiviste(teksti) {
+  let luku = 0x811c9dc5;
+  for (let i = 0; i < teksti.length; i += 1) {
+    luku ^= teksti.charCodeAt(i);
+    luku = Math.imul(luku, 0x01000193) >>> 0;
+  }
+  return luku.toString(36);
 }
 
 /** Commons-tiedostonimestä peilin polku. Kansio on 'kuvat' tai 'liput'. */
