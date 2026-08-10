@@ -21,3 +21,10 @@ assets/kartat/*.svg
 
 node_modules/
 .DS_Store
+
+# Vuorikuvien työaineisto: Commonsin ehdokaslistat ja niistä ladotut
+# silmätarkistustaulut. Raaka-ainetta, ei pelin aineistoa — valmiit
+# valinnat menevät js/packs/vuori-valokuvat.js:ään
+# (tools/hae-vuorikuvat.mjs, tools/tee-kuvataulu.py).
+tools/vuorikuva-aineisto/
+tools/vuorikuva-taulut/
