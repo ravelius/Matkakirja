@@ -39,6 +39,25 @@ osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
   8b (Sonnet 1:n kokoava QA, käynnissä) ja 9 (Fablen läpipelaus,
   käynnissä). Ilmoitus omistajalle vasta kun molemmat kiinni.
   Omistaja aikoo koepelata Euroopan ja antaa palautetta.
+- **AARTEET (omistajan palaute 10.8. ~10:10Z):** vanhat Afrikan
+  tähti -tyyliset jalokivet POIS kaikkialta, vain uudet tarinalliset
+  kuva-aarteet jäävät. v518 vaihtoi pikkuikonit (tulosrivi, passi,
+  laudan käännetyt laatat, tapahtumakuplat) aarrekuviksi
+  (aarreIkoni-apuri + SVG image laudalla; piirrosikoni varasoluna).
+  KESKEN: maailmankartan, Suomen ja Istanbulin jalokivillä ei ole
+  kuvia lainkaan, ja pääaarteiden kuvat (tools/aarrekuvat-promptit.md
+  kohdat 22–31: mm. Magellanin kompassi, Sulttaanin timantti, Lapin
+  kulta) ovat generoimatta — yhteensä 19 kuvaa. Generointi vaatii
+  GOOGLE_API_KEYn ympäristöön (tools/generoi-aarrekuvat.mjs,
+  gemini-3-pro-image; pienennys 640 px + silmätarkistus + kytkentä
+  kuten v455). Pyydetty omistajalta.
+- **Avausluennat UUSITTU (v516):** ELEVEN_API_KEY löytyi ympäristöstä
+  — intro-puhe.mp3 ja puhe-lento-alku.mp3 generoitu v3-tunnetagein,
+  tekstit vaihdettu (lentorepliikki A + intro-draamalisä). Uusi
+  tools/generoi-avaus.mjs mittaa hännän hiljaisuuden dekoodaamalla
+  ja lisää 0,7 s hiljaisuutta (giljotiinikatkaisu ei naksahda; EI
+  loppufeidausta puheeseen — omistajan ohje). Sama tekniikka
+  kannattaa periä tools/generoi-luennat.mjs:ään ME-luentoja varten.
 - **Omistajan testipalaute 10.8. (~09:15Z→) ja Fablen jono:**
   1) Avauslennon teksti + pelin aloitusteksti uusiksi/viilattaviksi,
   ehdokkaat annettu omistajalle — tekstin vaihto vaatii luennan

@@ -4368,6 +4368,15 @@ body[data-pack='istanbul'] .gem-topaz { fill: #3aaea6; }
 body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
 
 .token-icon { display: inline-block; vertical-align: -0.22em; }
+/* Tarinallinen aarrekuva pikkuikonina: pyöreä rajaus ja kevyt
+ * pergamenttireunus, jotta kuva istuu samaan riviin piirrosikonien
+ * kanssa (vanhat jalokivi-ikonit poistuivat 10.8.2026). */
+.aarre-ikoni {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1.5px rgba(94, 74, 47, 0.55);
+  background: #1a1611;
+}
 
 .map-title {
   fill: var(--map-ink);
