@@ -158,12 +158,21 @@ const KAIKKI_VALOKUVAT = {
 };
 const KAIKKI_MAATIEDOT = { ...AFRICA_MAATIEDOT, ...EUROPE_MAATIEDOT, ...ASIA_MAATIEDOT };
 
+/*
+ * HUOM: avain puuttuvalta laudalta ei kaada mitään — sisältö vain
+ * katoaa hiljaa. Siksi myös avauslauta maailma on joka taulussa,
+ * vaikka se tänään tarvitsee tauluista vain vähän: yhden laudan
+ * pelissä (v529) matka alkaa maailma-laudan lennolla ja jatkuu
+ * maailmankartalla, ja puuttuva avain jäisi huomaamatta kunnes
+ * jokin sisältö vain "ei näy".
+ */
 const SAAPUMISTEKSTIT = {
   africa: AFRICA_SAAPUMISET,
   europe: EUROPE_SAAPUMISET,
   // Aasian teksteillä ei ole omaa lautaa: kaupungit ovat vain
   // yhdistetyillä laudoilla, joten ne tulevat mukaan vain tänne.
   maailmankartta: KAIKKI_SAAPUMISET,
+  maailma: KAIKKI_SAAPUMISET,
 };
 
 // Kaupungin elämää -nostot laudoittain.
@@ -171,6 +180,7 @@ const KULTTUURIT = {
   africa: AFRICA_KULTTUURI,
   europe: EUROPE_KULTTUURI,
   maailmankartta: KAIKKI_KULTTUURI,
+  maailma: KAIKKI_KULTTUURI,
 };
 
 // Vanhat valokuvat muistikirjan kylkeen laudoittain.
@@ -178,11 +188,13 @@ const VALOKUVAT = {
   africa: AFRICA_VALOKUVAT,
   europe: EUROPE_VALOKUVAT,
   maailmankartta: KAIKKI_VALOKUVAT,
+  maailma: KAIKKI_VALOKUVAT,
 };
 // Kaupungissa nauhoitettu puhenäyte: kieli kuuluviin omasta napistaan.
 const KIELET = {
   europe: EUROPE_KIELET,
   maailmankartta: EUROPE_KIELET,
+  maailma: EUROPE_KIELET,
 };
 
 // Maiden tunnusluvut laudoittain.
@@ -190,6 +202,7 @@ const MAATIEDOT = {
   africa: AFRICA_MAATIEDOT,
   europe: EUROPE_MAATIEDOT,
   maailmankartta: KAIKKI_MAATIEDOT,
+  maailma: KAIKKI_MAATIEDOT,
 };
 
 /*
@@ -2019,20 +2032,18 @@ export class UI {
      * Maiden lehdet -nappi (omistajan havainto 8.8.2026: *"Kartalta
      * pitäisi päästä myös"*).
      *
-     * Sama kartan tila kuin Maiden tiedot -varusteella, mutta ilman
-     * varustetta: maalehti on hakuteos, ja hakuteokseen pitää päästä
-     * käsiksi ensimmäisestä pelihetkestä alkaen. Varuste jää
-     * ennalleen — omistaja päättää myöhemmin, mikä siitä tulee
-     * (docs/tutki-aiheet.md).
+     * Nappi on Maiden tiedot -varusteen pikakatkaisin kartalla: se
+     * näkyy vain varusteen ollessa päällä (paivitaMaalehtiNappi) ja
+     * painallus sammuttaa varusteen. Varusteeton hakuteosreitti
+     * poistui (omistajan tarkennus 10.8.2026 ilta) — maiden vapaa
+     * selailu vaatii varusteen, nykyisen maan pilleri toimii aina.
      */
     const maaNappi = document.getElementById('maalehti-nappi');
     if (maaNappi) {
       maaNappi.addEventListener('click', (e) => {
         e.stopPropagation();
-        this.maaNappiPaalla = !this.maaNappiPaalla;
         sfx.play('paper');
-        this.tahdistaMaatiedot(this.maatiedotHalutaan());
-        this.paivitaMaalehtiNappi();
+        this.valitseLinssi(this.linssiValittu === 'maatiedot' ? null : 'maatiedot');
       });
     }
 
@@ -3343,7 +3354,10 @@ export class UI {
    * varusteen vaihto sammuttaisi napilla avatun tilan.
    */
   maatiedotHalutaan() {
-    return Boolean(this.maaNappiPaalla) || this.linssiValittu === 'maatiedot';
+    // Vain varusteesta (omistajan tarkennus 10.8.2026 ilta: "maiden
+    // tietojen vapaasta katsomisesta missä tahansa sijainnissa pitää
+    // tehdä oma varuste") — varusteeton ohituspolku poistui.
+    return this.linssiValittu === 'maatiedot';
   }
 
   /** Napin ulkoasu ja näkyvyys: vain laudoilla, joilla on maiden rajat. */
@@ -3351,10 +3365,12 @@ export class UI {
     const nappi = document.getElementById('maalehti-nappi');
     if (!nappi) return;
     const rajat = Boolean(this.game?.pack?.map?.countryShapes);
-    // Maiden tiedot on löydettävä varuste (omistajan päätös
-    // 10.8.2026): kirjanappi ja pillerin ⓘ ilmestyvät vasta, kun
-    // varuste on laukussa.
-    nappi.hidden = !rajat || this.avausNakymassa() || !this.maatiedotVarusteOmistettu();
+    // Nappi näkyy vasta kun Maiden tiedot on KYTKETTY PÄÄLLE
+    // päävalikosta (omistajan tarkennus 10.8.2026 ilta: "pitäisi olla
+    // oletuksena poissa näkyvistä. se tulisi vain jos kyseinen varuste
+    // kytketään päälle") — pelkkä omistus ei riitä. Kartalla nappi
+    // toimii varusteen pikakatkaisijana.
+    nappi.hidden = !rajat || this.avausNakymassa() || !this.maatiedotHalutaan();
     nappi.setAttribute('aria-pressed', String(this.maatiedotHalutaan()));
     // Pillerin väistöt päivittyvät kirjanapin mukana.
     this.paivitaMaaPilleriPuoli();
@@ -4888,17 +4904,6 @@ export class UI {
     }
     nappi.hidden = false;
     this.paivitaMaaPilleriPuoli();
-  }
-
-  /**
-   * Minkä tahansa maan selailu (kirjanappi + maatiedot-tila) ja
-   * vertailu ovat löydettäviä varusteita (omistajan päätös
-   * 10.8.2026) — NYKYISEN maan pilleri sen sijaan on aina käytössä.
-   */
-  maatiedotVarusteOmistettu() {
-    const omat = this.linssiTuki?.omistus?.omistetut?.(this.game, this.game.player)
-      ?? new Set(this.game.player?.linssit ?? []);
-    return omat.has('maatiedot');
   }
 
   /**
@@ -7609,13 +7614,25 @@ export class UI {
   }
 
   /**
+   * Ensimmäinen selattava sivu. Kaupunkilehdessä se on kansi (0),
+   * maalehdessä ensimmäinen sisältösivu (1): maalehdellä ei ole
+   * kantta, ja ilman alarajaa taaksepäin selaus päätyi tyhjälle
+   * nimiösivulle (omistajan havainto 10.8.2026 ilta: "mailla on myös
+   * tällaiset oudot etusivut"). Sivunumerointi alkaa samasta rajasta,
+   * joten maalehti näyttää 1/8 eikä 2/9.
+   */
+  tutkiEkaSivu() {
+    return this.tutkiTila === 'maa' ? 1 : 0;
+  }
+
+  /**
    * Näyttää yhden sivun. Etusivulla (0) ovat kaupunki- ja maapalstat sekä
    * kulttuurivisa; aihesivuilla vain aihe, jotta luettava alkaa heti
    * otsikosta.
    */
   naytaTutkiSivu(indeksi, { heti = false, suunta = 0 } = {}) {
     const sivuja = this.tutkiSivuja();
-    const i = Math.min(Math.max(indeksi, 0), sivuja - 1);
+    const i = Math.min(Math.max(indeksi, this.tutkiEkaSivu()), sivuja - 1);
     this.tutkiSivu = i;
     /*
      * Väkäsen näkyvyys lasketaan vasta kun sivun sisältö on
@@ -7786,6 +7803,43 @@ export class UI {
     this.arrivalLehtiYla.hidden = false;
     this.arrivalCity.textContent = otsikko;
     this.arrivalLehtiPvm.textContent = 'Maan oma lehti';
+    /*
+     * Maaosasto täytetään SEN maan tiedoilla, jonka lehti avataan.
+     * openArrival täyttää osaston pelaajan oman maan mukaan, ja
+     * Maiden tiedot -varusteella avattu vieraan maan lehti näyttäisi
+     * muuten edellisen maan luvut, uutiset ja esittelyn (kartan
+     * vasen palsta oli pahimmillaan kokonaan tyhjä — omistajan
+     * havainto 10.8.2026 ilta).
+     */
+    this.arrivalMaaTiedot = maa;
+    this.arrivalMaaNimi.textContent = otsikko;
+    this.arrivalMaaIntro.textContent = '';
+    this.arrivalMaaWiki.hidden = true;
+    this.arrivalMaaLippu.hidden = true;
+    if (maa.lippu) {
+      this.arrivalMaaLippu.alt = `${otsikko} — lippu`;
+      asetaKuva(this.arrivalMaaLippu, lippuUrl(maa.lippu, 96), lippuVara(maa.lippu, 96));
+    } else {
+      this.arrivalMaaLippu.removeAttribute('src');
+    }
+    this.arrivalMaaKartta.textContent = '';
+    const minikartta = this.piirraMaakartta(iso, null);
+    if (minikartta) this.arrivalMaaKartta.appendChild(minikartta);
+    this.naytaMaaTunnusluvut(iso);
+    // Uutisten dialogivartija vertaa arrivalShownForiin — se osoittaa
+    // yhä viimeksi avattuun kaupunkiin, joten se kelpaa tässä avaimeksi.
+    this.naytaMaaUutiset(iso, this.arrivalShownFor);
+    const maanAvain = maa.wiki ?? maa.nimi;
+    const omaMaaIntro = ARTIKKELIT[maanAvain]?.intro;
+    if (omaMaaIntro) {
+      this.arrivalMaaIntro.textContent = omaMaaIntro;
+    } else {
+      cachedSummary(maanAvain).then((summary) => {
+        // Lehti on voitu sulkea tai vaihtaa toiseen maahan haun aikana.
+        if (!this.arrivalDialog.open || this.tutkiMaaLehti !== iso) return;
+        if (summary?.extract) this.arrivalMaaIntro.textContent = shortIntro(summary.extract);
+      });
+    }
     this.arrivalLehtiAla.hidden = false;
     this.naytaLehtiSaa(null);
     if (!this.arrivalDialog.open) this.arrivalDialog.showModal();
@@ -7803,7 +7857,7 @@ export class UI {
   vaihdaTutkiSivu(suunta) {
     const sivuja = this.tutkiSivuja();
     const uusi = (this.tutkiSivu ?? 0) + suunta;
-    if (uusi < 0 || uusi >= sivuja) return false;
+    if (uusi < this.tutkiEkaSivu() || uusi >= sivuja) return false;
     sfx.play('paper');
     this.naytaTutkiSivu(uusi, { suunta });
     return true;
@@ -7839,11 +7893,14 @@ export class UI {
     const edellinen = navi.querySelector('.edellinen');
     const seuraava = navi.querySelector('.seuraava');
     const numero = navi.querySelector('.tutki-sivunumero');
+    // Numerointi alkaa ensimmäisestä selattavasta sivusta: maalehden
+    // kannettomuus ei saa näkyä lukijalle tyhjänä sivuna 1/9.
+    const eka = this.tutkiEkaSivu();
     // Yhden sivun kaupungissa ei ole mitään selattavaa: koko navi pois.
-    navi.hidden = sivuja < 2;
-    edellinen.hidden = this.tutkiSivu <= 0;
+    navi.hidden = sivuja - eka < 2;
+    edellinen.hidden = this.tutkiSivu <= eka;
     seuraava.hidden = this.tutkiSivu >= sivuja - 1;
-    numero.textContent = `${(this.tutkiSivu ?? 0) + 1} / ${sivuja}`;
+    numero.textContent = `${(this.tutkiSivu ?? 0) - eka + 1} / ${sivuja - eka}`;
     this.paivitaTutkiAlapalkki();
   }
 
@@ -7959,7 +8016,9 @@ export class UI {
     const seuraava = palkki.querySelector('.seuraava');
     edellinen.querySelector('.alanappi-aihe').textContent = sivunNimi(nyt - 1);
     seuraava.querySelector('.alanappi-aihe').textContent = sivunNimi(nyt + 1);
-    edellinen.hidden = nyt <= 0;
+    // Maalehdessä taakse ei pääse sivulle 0 (tyhjä nimiösivu, ks.
+    // tutkiEkaSivu) — nappi pois kun ollaan ensimmäisellä oikealla.
+    edellinen.hidden = nyt <= this.tutkiEkaSivu();
     seuraava.hidden = viimeisella;
     /*
      * Valikko vain maalehdessä (omistajan päätös 8.8.2026:
@@ -7970,8 +8029,8 @@ export class UI {
      * ja kartan Maiden lehdet -nappi, ja viiden sivun lehdessä valikko
      * on enemmän nappi kuin oikotie.
      */
-    palkki.querySelector('.sisallysnappi').hidden = !maalehti || sivuja < 3;
-    palkki.hidden = sivuja < 2;
+    palkki.querySelector('.sisallysnappi').hidden = !maalehti || sivuja - this.tutkiEkaSivu() < 3;
+    palkki.hidden = sivuja - this.tutkiEkaSivu() < 2;
   }
 
   /**
