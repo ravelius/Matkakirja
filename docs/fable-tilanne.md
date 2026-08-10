@@ -6,6 +6,17 @@ uuden tilin session — yli. Lue tämä ENSIN, sitten `CLAUDE.md`,
 `js/tyohuone-tilanne.js`. Ylin osio on aina tuorein tila; alemmat
 osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
 
+## TILINVAIHTO TEHTY 10.8. (~08:45Z)
+
+- Omistaja käynnisti vaihdon. Vanhan tilin **yövahti-cron on
+  poistettu** (trig_01XuRjdzwJ9VGjzFjCBj5XYN, delete_trigger);
+  muut ajastimet olivat kertalaukaisuja ja jo sammuneet.
+- **Luovutusprompti uuden tilin Fable-sessiolle:
+  `docs/luovutusprompti.md`** — annettu omistajalle myös chatissa.
+- Vanhan tilin sessiot (Fable + 4 tiimisessiota) jäävät
+  arkistoitaviksi; ne eivät tee enää työtä ilman omistajan erillistä
+  pyyntöä. Uusi tili perustaa tiimin luovutusdokumenttien pohjalta.
+
 ## TILINVAIHTO VALMISTELUSSA (omistaja 10.8. ilta)
 
 - Omistaja siirtää pelin kehityksen **kokonaan toiselle tilille**,
