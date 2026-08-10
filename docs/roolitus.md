@@ -77,7 +77,9 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |
 | Sonnet 1 | session_0184WdPeGzjAbnuXjWvquN8Q | 10.8.2026 (5. yritys; aiemmat kaatuivat source_url-vikaan, ks. fable-tilanne) |
 | Sonnet 2 | — (perustetaan kun ME-jono aukeaa) | 10.8.2026 |
-| Opus 3 (aarrekuvat, kertaluontoinen) | session_01Y5z9zVVcDYicvA8X7up1Jo | 10.8.2026 (3. yritys; effort High omistajan säätämänä) |
+| Opus 3 (aarrekuvat) | — (valmis ja arkistoitu: 7 pääaarteen kuvat mainissa v524) | 10.8.2026 |
+| Opus 4 (varustekuvat) | — (valmis ja arkistoitu: 5 varustekuvaa mainissa v541) | 10.8.2026 |
+| Opus 5 (vuorigalleriat + kuvatyöt) | session_015EzqrmmDkMCBzenZ5Ud5Mq | 10.8.2026 (52/52 valmis v555; jatkaa peiliajolla ja kuvaerillä) |
 
 Vanhan tilin sessiot (8.8.2026 taulukko) ovat arkistoituja eivätkä
 tee enää työtä. **Fable max** on omistajan 10.8.2026 tilaama

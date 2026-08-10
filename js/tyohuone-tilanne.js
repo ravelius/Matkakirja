@@ -10,78 +10,76 @@
  */
 
 export const TILANNE = {
-  paivitetty: '10.8.2026 (aamupäivä klo 11.30) — TIIMI LUOVUTUSKUNNOSSA',
-  tavoite: 'TILINVAIHTO VALMISTELTU (omistajan ohje 10.8.): kaikki '
-    + 'sessiot ajoivat urakkansa pysähdyskohtaan ja kirjasivat '
-    + 'jatkokohdan omaan tilannedokumenttiinsa (docs/*-tilanne.md). '
-    + 'Euroopan sisältö on valmis (nähtävyysjutut 34 kaupungissa, '
-    + 'erät 1–13); auki enää kokoava QA + läpipelaus. ME eteni '
-    + 'erään C asti (ARE, Jordania, Oman, Qatar, Egypti, Kuwait).',
+  paivitetty: '11.8.2026 (yö klo 03 Suomen aikaa) — YÖAJO KÄYNNISSÄ',
+  tavoite: 'Yöajo: Euroopan matkakirjatekstit hiotaan uuteen rimaan '
+    + 'erissä (kommellukset, tosihuomiot, mittaajan persoona), '
+    + 'vuorigalleriat valmistuivat (52/52), ME-kaupunkilehdet '
+    + 'etenevät. Luentojen generoinnit odottavat omistajan lupaa '
+    + 'aamulla; ME-generointi odottaa Euroopan valmistumista.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
-      tila: 'valmis',
-      tehtava: 'Aamupäivän korjaukset: valokuvapulma-pilotti (v503), '
-        + 'popupille rako ja täysikoon kuviin lehden selaus (v505), '
-        + 'ja iso pelisääntökorjaus (v506): kohtaaminen on nyt '
-        + 'ensimmäinen tehtävä JOKA kaupungissa — myös ilman laattaa '
-        + '— nappi nimeää henkilön (Tapaa Nikos) ja lehteä pääsee '
-        + 'aina lukemaan. Testattu 41/41 kaupunkia.',
-      seuraavaksi: 'Kun erä 13 on mainissa: kokoava QA + läpipelaus '
-        + '+ ilmoitus omistajalle Euroopan valmiudesta. Työhuoneen '
-        + 'Pelit-välilehdellä odottaa pelikatalogi valintoja varten.',
+      tila: 'tyossa',
+      tehtava: 'Yön julkaisusykli: v551+v555 vuorigalleriat (52 '
+        + 'kohdetta, 324 kuvaa), v552+v556 saapumiset uusiksi (19 '
+        + 'kohdetta tähän mennessä), v553 maastoartikkelit i-ikkunaan, '
+        + 'v554 ME:n Isfahan-korjaukset. Tromssan otsikkovuoto '
+        + 'korjattu (otsikko paljasti visan vastauksen).',
+      seuraavaksi: 'Vahtikierrokset yön yli ~75 min välein. Aamuksi '
+        + 'omistajalle: aloituskaupunkipäätös (BA→Lima), lupa Euroopan '
+        + 'luentojen generointiin (26 mykistettyä luentaa jonossa).',
+    },
+    {
+      tekija: 'Fable max',
+      rooli: 'syväajattelu (apusessio)',
+      tila: 'tyossa',
+      tehtava: 'Riman erät 1–3 valmiit ja mainissa: 19 saapumista '
+        + 'uusiksi + 7 Reginald-mietintöä. Löysi ja korjasi Tromssan '
+        + 'otsikkovuodon, tarkisti loput 40 otsikkoa (puhtaat).',
+      seuraavaksi: 'Erä 4 käynnissä: isompi käsittely Sarajevo, '
+        + 'Kiova, Bukarest, Praha; kevyt silaus Amsterdam, Krakova, '
+        + 'Kööpenhamina, Berliini, Helsinki. Erä 5 päättää Euroopan.',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Lähi-itä etenee erä kerrallaan: ARE 3 sivua + '
-        + 'Jordania (v499), Oman + Qatar (v501). Esitarkistin nappasi '
-        + 'kolme vastausvuotoa ennen julkaisua.',
-      seuraavaksi: 'ME-erä C työn alla: Egypti + Kuwait. Sitten '
-        + 'Saudi-Arabia (ilman pyhiä kaupunkeja) + Bahrain.',
+      tehtava: 'ME-kaupunkilehdet: Isfahan-korjauserä mainissa '
+        + '(v554), Iranin lehteen historia- ja rakennukset-aiheet '
+        + 'työn alla, ME-laudan erikoiskohteille maatunnukset.',
+      seuraavaksi: 'ME-lehtien loput erät; lehtien esilataus jonossa.',
     },
     {
-      tekija: 'Opus 2',
-      rooli: 'kartat + introt',
+      tekija: 'Opus 5',
+      rooli: 'vuorigalleriat + kuvatyöt',
       tila: 'tyossa',
-      tehtava: 'Karttapuoli valmis: kuusi uutta kohdekarttaa '
-        + '(v482–v485) ja päälle Tallinnan ja Riian muurit + '
-        + 'kujabugin korjaus (v493) — bugi löytyi omasta '
-        + 'koeajodiffistä ja korjattiin ymmärtäen, ei arvaten.',
-      seuraavaksi: 'Valmiudessa. Lähi-idän maakartat kun Eurooppa '
-        + 'on kuitattu valmiiksi (ME-maakyltit on jo tarkistettu).',
+      tehtava: 'Vuorigalleriaurakka VALMIS: 52/52 kohdetta, 324 '
+        + 'käsin kuratoitua Commons-kuvaa (v551 + v555). '
+        + 'Silmätarkistus hylkäsi mm. väärät vuoret, vesileimat ja '
+        + 'GFDL-lisenssit; tekijätarkistin vertaa Commonsin kenttään.',
+      seuraavaksi: 'Peiliajo: 324 uutta kuvaa + 15 nimenvaihtoa '
+        + 'peiliin. Sen jälkeen perhekuvien kuratointierä '
+        + 'numeroina-sivulle.',
     },
     {
       tekija: 'Sonnet 1',
-      rooli: 'QA + työhuone',
-      tila: 'tyossa',
-      tehtava: 'Neljäs puhdas QA-kierros putkeen: 8 uutta lehteä '
-        + '(rakenne, minitehtävät 8/8 samalla sivulla, 72/72 kuvaa '
-        + 'curlilla), v478-pelisääntö ja v479 Engel — ei löydöksiä.',
-      seuraavaksi: 'Valmiudessa. Kokoava koko Euroopan QA ennen '
-        + 'omistajan ilmoitusta, kun nähtävyysjuttuerät ovat '
-        + 'mainissa.',
-    },
-    {
-      tekija: 'Sonnet 2',
-      rooli: 'nähtävyysjutut',
-      tila: 'tyossa',
-      tehtava: 'Erät 9–12 mainissa (v488, v495, v502, v504): '
-        + 'nähtävyysjuttuja on nyt 31 kaupungissa, mukana Kiova, '
-        + 'Pietari, Moskova, Odessa, Tromssa, Dubrovnik ja Riika.',
-      seuraavaksi: 'Erä 13 työn alla: Vilna, Oslo, Kööpenhamina — '
-        + 'Euroopan viimeinen erä.',
+      rooli: 'QA',
+      tila: 'odottaa',
+      tehtava: 'ME-kokonaisristiriitatarkistus valmis: 13/28 '
+        + 'Isfahan-sääntö-spoileria löydetty ja kaikki käsitelty '
+        + 'v554:ssä.',
+      seuraavaksi: 'Euroopan Isfahan-sääntötarkistus käynnistyy '
+        + 'automaattisesti 00:30Z (03:30 Suomen aikaa).',
     },
   ],
   odottaaPaatosta: [
-    'Isoisän ääni pelissä: pilotti (v408, Edinburgh ja Pietari) — '
-      + '"kaipaavat vielä työstöä, palataan myöhemmin".',
-    'Pääaarteiden (tähtilaattojen) AI-kuvat: promptit valmiina, '
-      + 'generoidaan jos haluat myös ne kuvitettuina.',
-    'Lähi-idän tarinakaaritekstit (28 kohdetta) työhuoneessa '
-      + 'luettavina — luennat generoidaan kun sanot "generoi".',
+    'Aloituskaupunkiarvio: 17/19 pidetään, LA→Chicago selvä, '
+      + 'BA→Lima harkinnainen — päätös omistajalla.',
+    'Euroopan uusien luentojen generointi: 26 mykistettyä luentaa '
+      + 'odottaa lupaa (tekstit pelissä, vanhat äänet eivät soi '
+      + 'väärän tekstin päällä).',
+    'Afrikan jakotauluehdotus (P1–P5) omistajalla luettavana.',
   ],
 };
 
@@ -92,6 +90,22 @@ export const TILANNE = {
  * siivotaan pois kun ne on katsottu tai ne vanhenevat.
  */
 export const TESTATTAVAA = [
+  {
+    otsikko: 'Vuorten kuvagalleriat kaikkialla (v551 + v555)',
+    ohje: 'Zoomaa kartalla mille tahansa vuoristolle (esim. Kaukasus, '
+      + 'Himalaja, Atlas) ja avaa i-napista Lue lisää: jokaisella '
+      + '52 vuorikohteella on nyt käsin kuratoitu kuvakaruselli, '
+      + 'yhteensä 324 Commons-valokuvaa suomenkielisin selittein.',
+  },
+  {
+    otsikko: 'Matkakirjan saapumiset uudella rimalla (v552 + v556)',
+    ohje: 'Saavu Istanbuliin, Lontooseen, Pietariin tai Madridiin: '
+      + 'isoisän merkinnät ovat nyt kommelluksia, tosihuomioita ja '
+      + 'mittaajan persoonaa — mm. Bradshaw\'n käsittämätön '
+      + 'aikataulukirja ja kolmentoista lyönnin varmistus kahtena '
+      + 'yönä. Uusitut tekstit ovat toistaiseksi ilman luentaa '
+      + '(generointi odottaa lupaa), vanha ääni ei soi niiden päällä.',
+  },
   {
     otsikko: 'Kohtaaminen joka kaupungissa + Tapaa X -nappi (v506)',
     ohje: 'Avaa mikä tahansa Euroopan kaupunki ja paina Tutki: '
