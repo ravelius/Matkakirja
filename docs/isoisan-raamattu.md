@@ -352,6 +352,11 @@ budjettipäätöstä. Vuosisataisten järjestelyjen kirjanpito Euroopassa:
 yksi perittynä tapana (Prahan liekki), kaksi Horation pientä pyyntöä
 (Pietarin avoin sivu, Edinburghin öljyäminen) — täynnä.
 
+**"Isoisäni merkki" -laite (Horation isoisän jäljet), käytössä 3:**
+Kiova, Jerusalem, Isfahan. Foggien sukusyvyys on hieno harvana —
+ei uusia esiintymiä ilman budjettipäätöstä (Fable maxin kirjaus
+11.8.2026).
+
 **ME-kiintiöt:** "suvun kirja todistaa" enintään 2; valvottu yö
 enintään 2; lyhdynsytyttäjä-ammatti 0 (Euroopassa jo 2);
 "punnitsee kädessään" -ele enintään 2; sävelpaino arvoitus + lämpö

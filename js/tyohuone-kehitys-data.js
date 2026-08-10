@@ -1720,13 +1720,14 @@ export const KAARI_PAKETIT = {
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Ankara — vuohien valkoinen kulta',
-      saapuminen: 'Ylängön ilta oli viileä, ja markkinoilla punnittiin villaa, '
-        + 'joka hohti kuin silkki. Angoravuohen villaa, sanoi kauppias, '
-        + 'eikä sitä saa mistään muualta kuin näiltä ylängöiltä. Yhden '
-        + 'paalin päällä oli sinetti, jota kukaan ei tunnistanut — '
-        + 'paitsi että vahassa oli barometrin kuva, ja paali oli '
-        + 'maksettu kolmekymmentä vuotta sitten. Noutajaa odotettiin '
-        + 'yhä.',
+      saapuminen: 'Ylängön ilta oli viileä, ja markkinoilla punnittiin '
+        + 'villaa, joka hohti kuin silkki — angoravuohen villaa, jota ei '
+        + 'saa mistään muualta maailmasta. Yhden paalin päällä oli '
+        + 'sinetti, jota kukaan ei tunnistanut. Minä tunnistin: vahaan '
+        + 'oli painettu barometrin kuva. Kauppias sanoi, että paali on '
+        + 'maksettu ja sinetöity kolmekymmentä vuotta sitten. Laskin '
+        + 'vuodet kahdesti. Kolmekymmentä vuotta sitten minä olin poika, '
+        + 'eikä minulla ollut barometria.',
       henkilo: 'Villankehrääjä Elif kehrää mohairia samalla värttinällä kuin '
         + 'äitinsä ja tämän äiti, ja tuntee jokaisen paalin tarinan.',
       kohtaaminen: 'Markkinakatoksen alla Elif punnitsee lankavyyhtiä. '
@@ -1958,12 +1959,15 @@ export const KAARI_PAKETIT = {
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Isfahan — puoli maailmaa yhdellä torilla',
-      saapuminen: 'Suuri tori aukeni edessäni niin avarana, että toinen pää '
-        + 'häipyi iltausvaan. Täällä sanotaan: Isfahan on puoli '
-        + 'maailmaa. Sillan holveissa istuttiin laulamassa, ja laulu '
-        + 'kiersi kaaresta kaareen. Yhden holvin kiveen oli piirretty '
-        + 'pieni ympyrä ja sen sisään viiva — merkki, jonka isoisäni '
-        + 'teki karttoihinsa aina sinne, minne aikoi palata.',
+      saapuminen: 'Sillan holveissa laulettiin iltaa vastaan, ja laulu '
+        + 'kiersi kaaresta kaareen kuin ei tahtoisi loppua. Tori aukeni '
+        + 'niin avarana, että sen toinen pää häipyi usvaan — tästä '
+        + 'kaupungista on sanonta, jonka ymmärtää vasta täällä '
+        + 'seisoessaan, enkä kirjoita sitä tähän. Yhden holvin kiveen '
+        + 'oli piirretty pieni ympyrä ja sen sisään viiva. Tunsin '
+        + 'merkin: isoisäni piirsi saman karttoihinsa sinne, minne aikoi '
+        + 'palata. Lauloin holviin puolikkaan säkeen ja jäin '
+        + 'kuuntelemaan. Kaiku lauloi sen loppuun.',
       henkilo: 'Sillanvartija Farhad tuntee Khajun sillan kolmekymmentäkolme '
         + 'holvia ja tietää, missä holvissa laulu kaikuu kauneimmin.',
       kohtaaminen: 'Farhad koputtaa holvin kylkeä. "Merkin tekijä istui tässä '
@@ -2409,12 +2413,14 @@ export const KAARI_PAKETIT = {
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Nikosia — saari joka antoi nimen kuparille',
-      saapuminen: 'Muurit kiersivät kaupungin täydellisenä tähtenä — laskin '
-        + 'vallisakarat: yksitoista. Sepänkujalla vasarat kalkuttivat '
-        + 'kuparia, ja vanhin sepistä näytti minulle harkon, jossa oli '
-        + 'lyötynä merkki härän taljan muotoon. Tällaisina harkkoina '
-        + 'saaremme kupari kulki maailmalle jo ennen kreikkalaisia, hän '
-        + 'sanoi. Tämä harkko odottaa hakijaansa kauempaa kuin muistan.',
+      saapuminen: 'Muurit kiersivät kaupungin täydellisenä tähtenä, ja '
+        + 'kävelin kehän ympäri laskien vallisakarat: yksitoista, kaikki '
+        + 'kirjassani ennen kuin astuin porteista sisään. Sepänkujalla '
+        + 'vasarat kalkuttivat kuparia niin monessa tahdissa, että kuja '
+        + 'soi kuin soittokunta. Vanhin sepistä nosti liinan alta '
+        + 'harkon, jossa oli härän taljan muotoinen merkki — vanhempaa '
+        + 'työtä kuin paja, vanhempaa kuin muurit. Kysyin, paljonko hän '
+        + 'tahtoo siitä. Väärä kysymys, seppä sanoi, ja peitti harkon.',
       henkilo: 'Kaivosmiehen jälkeläinen Andreas takoo kuparia kujalla, '
         + 'jolla saaren punainen metalli on soinut aina.',
       kohtaaminen: 'Andreas kääntää harkkoa pihdeissä. "Harkon jätti '
@@ -2529,14 +2535,15 @@ export const KAARI_PAKETIT = {
       lauta: 'middleeast',
       luennat: false,
       otsikko: 'Riad — savilinnojen kaupunki',
-      saapuminen: 'Aavikon keskeltä nousi kaupunki, jonka muurit ja tornit oli '
-        + 'rakennettu auringossa kuivatusta savesta. Keskipäivän '
-        + 'helteellä talojen sisällä oli viileää kuin kaivossa, ja '
-        + 'illalla seinät hehkuivat päivän keräämää lämpöä. '
-        + 'Kaivonkaivaja näytti minulle kaivon, jonka pohjalta oli '
-        + 'hänen isänsä aikana nostettu vieras työkalu: pieni '
-        + 'messinkinen luoti mittanauhoineen. Kukaan kaupungissa ei '
-        + 'mitannut sellaisella.',
+      saapuminen: 'Astuin keskipäivän helteestä savitalon sisään, ja '
+        + 'lämpömittarini putosi kymmenen astetta ovella — kirjasin '
+        + 'lukeman kahdesti. Aavikon kaupunki on rakennettu auringossa '
+        + 'kuivatusta savesta, ja savi tekee tempun, johon tiili ei '
+        + 'pysty: pitää päivän ulkona ja yön lämpimänä. Kaivolla '
+        + 'kaivonkaivaja näytti, mitä hänen isänsä oli nostanut '
+        + 'pohjasta: pienen messinkiluodin mittanauhoineen. Hän ojensi '
+        + 'sen minulle kämmenellään ja katsoi tarkasti, kummalla kädellä '
+        + 'tartuin siihen.',
       henkilo: 'Kaivonkaivaja Abdullah löytää veden aavikon alta merkeistä, '
         + 'jotka hänen sukunsa on oppinut lukemaan hiekasta ja '
         + 'kasveista.',

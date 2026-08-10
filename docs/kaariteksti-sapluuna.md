@@ -227,6 +227,13 @@ lause.
    ei luettelo. Se on kysymyksen palkinto.
 5. Vaihtoehtoja ei lueta ääneen → kysymyksiä saa korjata ilmaiseksi
    milloin vain.
+6. **Kokemus saa opettaa vastauksen — sanatarkka vastausrivi ei
+   saa esiintyä tekstissä.** Damaskoksen kutoja kääntää pakkaa
+   valossa ja tarkkaavainen lukija palkitaan visassa: se on tämän
+   pelin hyve. Mutta jos vastaus lukee tekstissä sanasta sanaan
+   (Isfahanin "puoli maailmaa" -sanonta ennen sen kysymistä), visa
+   mittaa vain lähimuistia. Raja kulkee siinä. (Fable maxin
+   ME-läpikäynnistä 11.8.2026.)
 
 ---
 
