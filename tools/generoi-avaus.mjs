@@ -45,11 +45,14 @@ const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
 const STABILITY = 0.5;
 const LOPPUTAUKO = ' <break time="1.0s" />';
 
-/** Ruututekstit (näiden on oltava samat kuin pelidatassa). */
-export const INTRO_RUUTU = 'Vintiltä löytyi isoisän kulunut matkakirja: '
-  + '"Maailman ympäri kahdeksassakymmenessä päivässä".\n\n'
-  + 'Viimeinen sivu oli revitty kesken lauseen: "…voinut uskoa, siellä '
-  + 'olikin…" Mitä hän löysi? Ja kuka repii kirjasta juuri sen sivun?\n\n'
+/** Ruututekstit (näiden on oltava samat kuin pelidatassa).
+ * V2 10.8.2026: lainausmerkit pois (ne tuottivat luentaan taukoja) ja
+ * revitty sitaatti "…voinut uskoa…" pois (hidas kuunnella) — revitty
+ * sivu kerrotaan toteamuksena, mysteeri säilyy. */
+export const INTRO_RUUTU = 'Vintiltä löytyi isoisän kulunut matkakirja — '
+  + 'Maailman ympäri kahdeksassakymmenessä päivässä.\n\n'
+  + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi? '
+  + 'Ja kuka repii kirjasta juuri sen sivun?\n\n'
   + 'Juoksin kentälle kirja kädessäni:\n\n'
   + 'mistä aloitan?';
 export const LENTO_RUUTU = 'Huh — ehdin! Kone nousee, ja isoisän kirja '
@@ -60,12 +63,12 @@ export const LENTO_RUUTU = 'Huh — ehdin! Kone nousee, ja isoisän kirja '
 const TYOT = [
   {
     tiedosto: 'assets/audio/intro-puhe.mp3',
-    luenta: '[curious] Vintiltä löytyi isoisän kulunut matkakirja… '
-      + '"Maailman ympäri kahdeksassakymmenessä päivässä". [short pause] '
-      + '[whispers] Viimeinen sivu oli revitty kesken lauseen: "…voinut '
-      + 'uskoa, siellä olikin…" [curious] Mitä hän löysi? Ja kuka repii '
-      + 'kirjasta juuri sen sivun? [excited] Juoksin kentälle kirja '
-      + 'kädessäni: mistä aloitan? [long pause]',
+    luenta: '[curious] Vintiltä löytyi isoisän kulunut matkakirja — '
+      + 'Maailman ympäri kahdeksassakymmenessä päivässä. '
+      + '[whispers] Viimeinen sivu on revitty irti kesken lauseen. '
+      + '[curious] Mitä hän löysi? Ja kuka repii kirjasta juuri sen '
+      + 'sivun? [excited] Juoksin kentälle kirja kädessäni: mistä '
+      + 'aloitan? [long pause]',
   },
   {
     tiedosto: 'assets/audio/puhe-lento-alku.mp3',
@@ -115,7 +118,12 @@ function hiljaisuus(sr) {
   return Buffer.concat(osat);
 }
 
-for (const tyo of TYOT) {
+// Valinnainen suodatin: node tools/generoi-avaus.mjs intro — generoi
+// vain tiedostot, joiden polku sisältää annetun sanan.
+const vain = process.argv.slice(2);
+const tyot = TYOT.filter((t) => !vain.length || vain.some((v) => t.tiedosto.includes(v)));
+
+for (const tyo of tyot) {
   console.log(`${tyo.tiedosto}: generoidaan (${tyo.luenta.length} merkkiä)…`);
   const vastaus = await fetch(
     'https://api.elevenlabs.io/v1/text-to-dialogue?output_format=mp3_44100_128',

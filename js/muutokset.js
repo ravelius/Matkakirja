@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 519, teksti: 'Alun viilaus: suora zoom, äänet ja kiikari pois, intro v2' },
   { v: 518, teksti: 'Aarteiden pikkuikonit uusiksi kuviksi, jalokivet pois' },
   { v: 517, teksti: 'Esc ja nuolet yhtenäisiksi kaikissa suurennospopupeissa' },
   { v: 516, teksti: 'Avausteksti ja lennon repliikki uusiksi, luennat v3-tagein' },

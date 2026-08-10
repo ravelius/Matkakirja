@@ -825,10 +825,10 @@ const INTRO_FONT_MIN = 0.72;
 // pyynnöstä 4.8.2026; draamaviilaus omistajan hyväksynnällä
 // 10.8.2026. Teksti ja luenta (intro-puhe.mp3) pidetään samana —
 // muutos vain tools/generoi-avaus.mjs:n kautta.
-const INTRO_TEXT = 'Vintiltä löytyi isoisän kulunut matkakirja: '
-  + '"Maailman ympäri kahdeksassakymmenessä päivässä".\n\n'
-  + 'Viimeinen sivu oli revitty kesken lauseen: "…voinut uskoa, siellä '
-  + 'olikin…" Mitä hän löysi? Ja kuka repii kirjasta juuri sen sivun?\n\n'
+const INTRO_TEXT = 'Vintiltä löytyi isoisän kulunut matkakirja — '
+  + 'Maailman ympäri kahdeksassakymmenessä päivässä.\n\n'
+  + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi? '
+  + 'Ja kuka repii kirjasta juuri sen sivun?\n\n'
   + 'Juoksin kentälle kirja kädessäni:\n\n'
   + 'mistä aloitan?';
 /*
@@ -3653,12 +3653,23 @@ export class UI {
     // Renkaat piirretään uudelleen, jotta napautus valitsee kaupungin
     // eikä enää zoomaa.
     this.drawTargets();
-    // Alkuasento heti: muuten kartta näyttäisi hyppäävän lähikuvaan jo
-    // ennen kuin liuku ehtii alkaa hiljaisen hetken jälkeen.
-    this.asetaZoomAlku(fokus, sx, sy, yleisSkaala);
-    this.zoomAanellaJaViiveella(
-      () => this.kaynnistaZoomLiuku(ALOITUS_ZOOM_MS), ALOITUS_ZOOM_MS,
-    );
+    /*
+     * SUORAAN LÄHIKUVAAN (omistajan päätös 10.8.2026, iPhone-palaute):
+     * ei liukua, ei zoomausääntä eikä kiikaria — kartta vaihtuu heti
+     * vieritettävään lähikuvaan. fitViewBox on jo asettanut näkymän;
+     * tässä siivotaan liu'un varaan jääneet tilat. Liu'un koneisto
+     * (asetaZoomAlku, zoomAanellaJaViiveella, kaynnistaZoomLiuku) jää
+     * paikalleen mutta kutsumatta, jos animaatioon halutaan palata.
+     * sx/sy/yleisSkaala jäävät laskennasta käyttämättä samasta syystä.
+     */
+    void sx; void sy; void yleisSkaala;
+    this.stopIntroVoice();
+    this.stopDiaryVoice();
+    this.svg.style.transition = '';
+    this.tyonnaAvausteksti(0);
+    this.asetaPan(this.panX, this.panY);
+    document.body.classList.remove('manner-odottaa');
+    this.taydennaTaide?.({ heti: true });
   }
 
   /**
@@ -3757,12 +3768,8 @@ export class UI {
     this.korttiAjastin = setTimeout(() => {
       if (!this.dead) document.body.classList.remove('manner-odottaa');
     }, kesto);
-    // Kiikari kuuluu toistaiseksi vain maailmankarttaan (omistajan
-    // toive koski etusivua).
-    if (!this.aloitusZoom) return;
-    this.kiikariAjastin = setTimeout(() => {
-      if (!this.dead) document.body.classList.add('kiikari-paalla');
-    }, kesto);
+    // Kiikariefekti poistettiin kartasta kokonaan (omistajan päätös
+    // 10.8.2026) — 'kiikari-paalla' ei enää syty mistään.
   }
 
   /**
@@ -5413,7 +5420,8 @@ export class UI {
   async doPickStart(city) {
     const { game } = this;
     const portti = (city.links ?? []).length > 0;
-    sfx.play(portti ? 'flight' : 'paper');
+    // Ei ääniefektiä lähtövalinnassa (omistajan päätös 10.8.2026):
+    // moottoriääni feidautuu sisään vasta lentokalvolla.
     // Pelin avaus on se filmihetki: avausteksti häipyy ja lento piirtyy
     // kalvona kartan päälle ennen kuin mantereen kartta aukeaa.
     const lontoo = game.board.cityById.get('lontoo');
