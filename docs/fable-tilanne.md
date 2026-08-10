@@ -1,8 +1,77 @@
-# Fablen tilannekuva — jatka tästä /clearin jälkeen
+# Fablen tilannekuva — jatka tästä /clearin tai TILINVAIHDON jälkeen
 
-*Käsittelykuva, jotta työ jatkuu kontekstin nollauksen yli. Lue tämä
-ENSIN, sitten `CLAUDE.md`, `docs/roolitus.md`, `docs/isoisan-raamattu.md`,
-`docs/kaari-luonnos.md` ja `js/tyohuone-tilanne.js`.*
+*Käsittelykuva, jotta työ jatkuu kontekstin nollauksen — tai kokonaan
+uuden tilin session — yli. Lue tämä ENSIN, sitten `CLAUDE.md`,
+`docs/roolitus.md`, `docs/isoisan-raamattu.md` ja
+`js/tyohuone-tilanne.js`. Ylin osio on aina tuorein tila; alemmat
+osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
+
+## TILINVAIHTO VALMISTELUSSA (omistaja 10.8. ilta)
+
+- Omistaja siirtää pelin kehityksen **kokonaan toiselle tilille**,
+  koska tämän tilin viikkorajat tulevat vastaan. Fable pyydettiin
+  kirjaamaan KAIKKI vaiheet tähän tiedostoon niin, että uusi sessio
+  jatkaa suoraan. **Päivitä tätä tiedostoa jokaisen merkittävän
+  vaiheen jälkeen** — tämä on luovutusdokumentti.
+- Omistaja pyytää erillisen luovutuspromptin vasta vaihdon hetkellä
+  — sitä EI kirjoiteta vielä, mutta tämän tiedoston on kelvattava
+  sen rungoksi milloin tahansa.
+- Uudella tilillä sessio-ID:t, triggerit ja kontit ovat UUSIA:
+  vanhat tiimisessiot (alla) eivät siirry. Uusi Fable perustaa
+  tiimin tarvittaessa uudelleen create_sessionilla ja antaa erät
+  tästä tiedostosta. Yövahti-cron (trig_01XuRjdzwJ9VGjzFjCBj5XYN)
+  on sidottu TÄHÄN sessioon — vanha tili sammuttaa sen vaihdossa
+  (delete_trigger) tai se jää kuolleeksi.
+- **Omistaja salli subagenttien (Agent-työkalu) käytön** nopeuttamaan
+  työtä 10.8. illalla — rinnakkaista tutkimista ja tarkistuksia saa
+  delegoida agenteille vapaasti.
+
+## TILANNE NYT (10.8. ilta, main = v506)
+
+- **Main: v506** (`2026-08-09.506`). Illan julkaisut: v503
+  valokuvapulma (Ateena-pilotti), #735 työhuoneen Pelit-välilehti,
+  v504 nähtävyysjuttuerä 12 (Sonnet 2), v505 popupin alarako +
+  täysikoon kuvakatselimen lehtiselaus, v506 kohtaaminen ensin
+  joka kaupungissa (ks. pelisääntö alla).
+- **PELISÄÄNTÖ v506 (korvaa v478/v499-kirjaukset alempana):**
+  tarinakaaren kohtaaminen on kaupungin ENSIMMÄINEN tehtävä JOKA
+  kaupungissa — myös laatattomissa ja pulmakaupungeissa. Laatatön
+  kohtaaminen palkitsee kuten tutkiminen (quiz.explore); pulma
+  tulee kohtaamisen jälkeisellä pysähdyksellä; botti ei kuluta
+  kaarta (kaariKaytetty on yhteinen eikä tallennu — kohtaamiset
+  ovat istuntokohtaisia, tarkoituksella). Saapumiskortin nappi
+  nimeää henkilön ("Tapaa Nikos"): kutsumanimi johdetaan
+  henkilökuvauksesta (tarinakaari.js kutsumanimi()), jerusalem ja
+  mekka saivat nimen käsin dataan. Tutki-nappi näkyy kaupungissa
+  AINA (lehti luettavissa tehtävien jälkeenkin); kortin
+  tehtävänappi piiloutuu kun game.tehtavaTarjolla() on false.
+- **Valmiusportti (ilmoitus omistajalle vasta kun kaikki kiinni):**
+  auki enää kohta 7 osalta erä 13 (Vilna/Oslo/Kööpenhamina —
+  Sonnet 2 tekee, jatkaa ilman eri lupaa), kohta 8b (Sonnet 1:n
+  kokoava koko Euroopan QA) ja kohta 9 (Fablen läpipelaus +
+  YKSI ilmoitus). Erä 12 (Tromssa/Dubrovnik/Riika) tuli mainiin
+  v504:nä.
+- **Tiimin tila:** Opus 1 tekee ME-eriä (A: ARE+Jordania mainissa;
+  B: Oman+Qatar mainissa v501; jatkaa C: Egypti+Kuwait → D:
+  Saudi-Arabia ILMAN pyhiä kaupunkeja + Bahrain). Opus 2
+  valmiudessa (seuraava iso erä: ME-maakartat kun Eurooppa
+  kuitattu). Sonnet 1 valmiudessa odottamassa kokoavaa QA:ta.
+  Sonnet 2 erässä 13. Raportointi VAIN gitillä
+  (docs/viesti-fable.md omalle haaralle + push) — create_trigger
+  jumittaa konteissa UUID-alias-lupakyselyyn, settings-korjaus
+  #719 ei auttanut.
+- **Omistajan viimeisimmät palautteet hoidettu:** Zeuksen temppelin
+  popup-hienosäädöt (v505) ja Ateenan kohtaamis-/luenta-/
+  lehtilukko-viat (v506, testattu 41/41 kaupunkia + Playwright).
+- **Odottaa omistajaa:** pelikatalogin 8 ehdotuksesta valinta
+  (suositus: paripeli + karttapulma; js/tyohuone-pelit.js),
+  valokuvapulman monistuslupa, zoom-synkka-haaran poisto
+  GitHub-UI:sta, branch protection -klikkaus, GOOGLE_API_KEY:n
+  kierrätys, ME-luentojen "generoi"-käsky.
+- **Parkissa:** Aasian kaaritekstit, pääaarteiden AI-kuvat,
+  isoisän ääni -pilotti, pulmaluennat (EI tehdä — variantit
+  rikkovat tekstivastaavuuden), pyhät kaupungit (oma sivutyyppi,
+  johdannot kirjoittaa FABLE).
 
 ## Kuka olen ja tiimi
 
@@ -285,13 +354,12 @@ Sonnet 1:n loppu-QA ajettu):
 6. [x] Kohdekartat kaikille lehtikaupungeille (v482, v484, v485 —
        Tromssa, Dubrovnik, Riika, Vilna, Oslo, Kööpenhamina) +
        vesikorjaukset (v480).
-7. [ ] Nähtävyysjutut kohdekartallisiin kaupunkeihin: erä 9 (Rooma,
-       Krakova, Varsova, Tallinna — työn alla), erä 10 (Sofia,
-       Bukarest, Sarajevo), erä 11 (Kiova, Pietari, Moskova, Odessa)
-       — Sonnet 2. LISÄYS kierroksella 3: erät 12–13 kuudelle
-       uudelle karttakaupungille (Tromssa, Dubrovnik, Riika, Vilna,
-       Oslo, Kööpenhamina) — "kaikilta osin" kattaa nämäkin;
-       kohteet avautuvat wiki-varapolulla siihen asti.
+7. [ ] Nähtävyysjutut kohdekartallisiin kaupunkeihin: erät 9–12
+       MAINISSA (9: Rooma/Krakova/Varsova/Tallinna v488; 10:
+       Sofia/Bukarest/Sarajevo v495; 11: Kiova/Pietari/Moskova/
+       Odessa v502; 12: Tromssa/Dubrovnik/Riika v504). Auki enää
+       erä 13 (Vilna, Oslo, Kööpenhamina) — Sonnet 2 työn alla,
+       jatkaa ilman eri lupaa.
 8. [ ] Sonnet 1:n kokoava QA-kierros koko Euroopalle (peli + lehdet +
        luennat) kun 3–7 ovat mainissa.
 9. [ ] Fablen oma läpipelaus Playwrightilla + ilmoitus omistajalle.
@@ -440,3 +508,43 @@ ja karsittu scratchpadiin aiemmin (dor/ion/cor-sarjat) — lisenssit
 varmistetaan, kuvat peiliin, quiz-vaihtoehtoihin kuvatuki, testit,
 Playwright, julkaisu. Monistus muihin pulmiin omistajan hyväksynnän
 jälkeen.
+
+## Iltakierros 10.8. — vaiheet kirjattu tilinvaihtoa varten
+
+- **v503 valokuvapulma mainissa** (#734): Ateenan pylväspulman
+  vaihtoehdot oikeina kuvina (4. kuva karyatidi-harhautus, ei
+  koskaan oikea). Tekniikka: generate palauttaa options + kuvat
+  rinnakkain, openPuzzle sekoittaa samalla orderilla, ui syncOptions
+  lisää .kuvallinen-nappiin img:n, .quiz-kuvalahteet CC-rivi.
+- **#735 Pelit-välilehti työhuoneeseen:** js/tyohuone-pelit.js =
+  tutki kätkö -pelien katalogi (12 nykyistä + 8 ehdotusta
+  tarinasynkkoineen). Kattonimi "tutki kätkö -pelit" = kaikki mitä
+  Etsi kätkö -napin takaa voi paljastua. Suositus omistajalle
+  annettu: aloituspari paripeli + karttapulma. HUOM nimikollisio:
+  tyohuone.html importtaa `PELIT as KATKOPELIT`.
+- **v505** (#737): nähtävyyspopup irti alareunasta (0,6 rem rako,
+  korvaa 8.8. pohja-ankkurin) + täysikoon kuvakatselimeen lehden
+  selaus (galleriaTila karusellista, pyyhkäisy, ohitaSulku-lipun
+  nollaus eleen alussa — kosketuksella pyyhkäisy ei tuota clickiä).
+- **v506** (#738): kohtaaminen ensin joka kaupungissa — ks. TILANNE
+  NYT. Juurisyy omistajan Ateena-raporttiin: kaari vaati laatan
+  (tokenHere), laatattomat putosivat vanhaan kertatutkimiseen; ja
+  Tutki-nappi katosi tehtävien mukana → lehteen ei päässyt.
+  Muutetut: game.js actionQuiz (kaari ennen pulmaa, explore-lippu),
+  tehtavaTarjolla() uusi apuri, travelModes; ui.js renderTravelChoice
+  (Tutki aina), openArrival (Tapaa X + piilotus),
+  paivitaTutkiAlapalkki; tarinakaari.js kutsumanimi();
+  tyohuone-kehitys-data.js (nimi: Elias/Bilal). +6 testiä
+  (rules.test.mjs), yht. 576.
+- **Testireseptit scratchpadissa** (eivät säily tilinvaihdossa —
+  reseptit myös docs/mantereen-resepti.md:ssä): Playwright-ajossa
+  ?lauta=europe MYKISTÄÄ äänet tarkoituksella → ohitus
+  `(await import('/js/sound.js')).sfx.enabled = true`; luennat
+  todennetaan Audio-konstruktorin instrumentoinnilla; quiz
+  suljetaan #quiz-continue-napilla (näkyy vasta paljastuksen
+  kirjoituttua; painallus voi osua doActionin busy-ikkunaan →
+  paina uudelleen); vuoro voi päättyä tapahtumakorttiin
+  (#event-ok kuitattava).
+- Sonnet 2:n erä 12 tuli mainiin v504:nä kesken Fablen julkaisun
+  (versiokollisio nro 5 — ratkaisu kuten aina: merge origin/main +
+  uusi-versio uudelleen).
