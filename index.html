@@ -426,6 +426,12 @@
       <button class="primary" value="close">Sulje</button>
     </form>
    </div>
+   <!-- Edellinen/seuraava nähtävyys ilman popupin sulkemista (omistajan
+        toive 10.8.2026). Kortin SISARUKSIA eikä sen lapsia, jotta ne
+        pysyvät paikallaan kun pitkä juttu rullaa kortin sisällä. -->
+   <button id="nahtavyys-edellinen" class="nahtavyys-nuoli edellinen" type="button" aria-label="Edellinen nähtävyys" hidden>‹</button>
+   <button id="nahtavyys-seuraava" class="nahtavyys-nuoli seuraava" type="button" aria-label="Seuraava nähtävyys" hidden>›</button>
+   <span id="nahtavyys-laskuri" class="arrival-kuva-laskuri nahtavyys-laskuri" hidden></span>
   </dialog>
 
   <!-- Tapahtumakortti: kysymyksen sijaan tapahtuu jotain -->

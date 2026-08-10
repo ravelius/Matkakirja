@@ -1,3 +1,113 @@
+# Opus 1 → Fable: nähtävyyksien selaus popupissa valmis, haaralla `claude/nahtavyysselaus` (10.8.2026)
+
+Omistajan toive toteutettu: nähtävyyspopupista pääsee saman kaupungin
+edelliseen ja seuraavaan nähtävyyteen sulkematta popupia. **Haara
+vaihtui** (työnseurantasääntö): pohja on v543-main, työhaara on
+`claude/nahtavyysselaus`. **Ei versionostoa eikä buildia** — sinä
+poimit ja julkaiset, joten versionumero on sinun.
+
+## Kolme reittiä samaan siirtoon
+
+1. **Pyyhkäisy** kortin päällä (tärkein: omistaja pelaa iPhonella).
+2. **Nuolinapit** popupin reunoilla.
+3. **Näppäimistön nuolet** vasen/oikea.
+
+Laskuri "1/6" on popupin oikeassa yläkulmassa hampurilaisnapin
+vieressä, samaa pilleriä kuin lehden kuvakaruselleissa. Reunoilta
+**kierretään ympäri** — sama modulo-sääntö kuin `arrivalKuvat`- ja
+karuselliselauksessa, kuten pyysit.
+
+## Yksi tarkennus tehtävänantoon
+
+Puhuit "nähtävyyden/menovinkin kuva-popupista" ja lehden vinkkilistasta.
+Tarkistin koodin: **menovinkkilistalla ei ole popupia lainkaan** —
+`piirraVinkkilista` tekee rivejä, joissa on pikkukuva ja ulkoinen linkki
+(`target="_blank"`), eikä vinkin kuva avaa suurennosta. Popup, jonka
+omistaja kuvakaappasi (Sponza-palatsi), on **kaupunkikartan
+nähtävyysjuttu** (`avaaNahtavyys`, `nahtavyys-dialog`). Toteutin
+selauksen siihen. Jos menovinkkeihin halutaan sama, se on eri työ ja
+vaatii ensin päätöksen siitä, mitä vinkin napautus ylipäätään avaa.
+
+## Mitä listaa selataan
+
+Kaupungin **omat jutut, joissa on kuva** — kuten pyysit. Pelkkä
+wiki-kohde jää pois, koska se avaa eri ikkunan: nuoli veisi silloin ulos
+popupista eikä sen sisällä eteenpäin. Hampurilaisvalikko jää ainoaksi
+tieksi wiki-kohteisiin, kuten ennenkin.
+
+Huomio datasta: **kaikilla 224 nähtävyysjutulla on kuvia**, joten
+ehdot "on oma juttu" ja "on kuvia" osuvat tällä hetkellä yksiin.
+Suodatin tarkistaa silti molemmat, jotta kuvaton juttu ei myöhemmin
+livahda selaukseen.
+
+Henkilöjutuissa (esim. Engel) selaus **piilotetaan kokonaan**: henkilö
+ei ole kartan kohde eikä kuulu mihinkään kohtaan listaa. Samoin jos
+kaupungissa on vain yksi selattava kohde — silloin popup näyttää
+täsmälleen samalta kuin ennen.
+
+## Kaksi asiaa, jotka rakensin väärin ensin
+
+**1. Nuolet peittivät leipätekstin puhelimella.** Ensimmäinen versio
+asetti napit kortin sisäreunaan, ja kuvakaappauksesta näkyi, että ‹
+peitti sanan "paikallisen" alkukirjaimet. Korjattu niin, että nappi
+**ratsastaa kortin reunalla**: puolet on taustan päällä, puolet kortin
+omassa sivupehmusteessa. Mitat eivät ole makuasia, ja kirjoitin
+laskelman kommenttiin: dialogi on 90vw (sivuun jää ≈19px), kortin
+pehmuste on 1.15rem (≈18px), napin puolikas 1rem (16px) — mahtuu
+molempiin. Jos pehmustetta joskus kavennetaan, siirto on laskettava
+uudestaan.
+
+**2. Laskuri meni vuosilukurivin päälle.** Sijoitin pillerin ensin
+vasempaan yläkulmaan hampurilaisnapin peilikuvaksi, mutta siellä on jo
+`.nahtavyys-aika` ("KOHDE 1 · 1463–1464"). Siirretty oikeaan yläkulmaan
+napin viereen.
+
+Molemmat löytyivät vasta kuvakaappauksesta — koodi näytti oikealta.
+
+## Todistus selaimessa, ei vain koodilukemalla
+
+Ajoin Playwrightilla iPhone-kokoisella ikkunalla (390×844, kosketus
+päällä) 13 väitettä, kaikki läpi:
+
+- popup aukeaa, laskuri "1/6", nuolet näkyvät
+- nuoli oikealle vaihtaa kohteen ja **popup pysyy auki**
+- nuoli vasemmalle palaa
+- kierto ensimmäisestä viimeiseen (1/6 → 6/6)
+- seuraava- ja edellinen-nappi **kosketuksella** (`tap`)
+- pyyhkäisy vasemmalle = seuraava, oikealle = edellinen
+- **kuvan päältä alkava pyyhkäisy EI vaihda nähtävyyttä** — kuvakehys
+  ja karuselli käyttävät vaakavedon jo omaan kuvaselaukseensa
+- **kuvasuurennos syö nuolen**: kun suurennos on auki, nuolet selaavat
+  sen kuvia eivätkä vaihda nähtävyyttä alta pois
+
+Kaksi viimeistä olivat ne, jotka olisivat rikkoneet olemassa olevaa
+toimintaa, joten ne testattiin nimenomaisesti. Näppäinkuuntelija on
+dialogilla eikä documentilla juuri siksi, että suurennoksen oma
+kaappausvaiheen kuuntelija ehtii ensin.
+
+Kuvakaappaukset committissa: `docs/kuvat/nahtavyysselaus-puhelin.png`
+ja `docs/kuvat/nahtavyysselaus-tyopoyta.png`. (Kuvat eivät lataudu
+kaappauksissa — hiekkalaatikosta ei pääse Commonsiin. Ei liity
+muutokseen.)
+
+## Rajat, joita noudatin
+
+- **Ei tarinatekstimuutoksia.** Muutokset ovat `js/ui.js`, `index.html`
+  ja `css/styles.css`; dataa ei koskettu.
+- **Popupin muu ulkoasu ennallaan.** Ainoat uudet elementit ovat kaksi
+  nappia ja laskuripilleri, ja ne piiloutuvat kokonaan kun selattavaa
+  ei ole.
+- `node --test tests/*.test.mjs` → **# pass 543, # fail 0**, 1 skip.
+- Ei mergeä mainiin, ei versionostoa.
+
+Sivutuote: hampurilaisvalikko ja selaus käyttävät nyt samaa
+`nahtavyysKohteet()`-apufunktiota, jotta niiden järjestys ja numerointi
+eivät voi erkaantua. Valikon oma suodatus säilyi ennallaan.
+
+Jään valmiuteen.
+
+---
+
 # Opus 1 → Fable: 13 kuvaduplikaattia vaihdettu (v539) — molemmat tilaukset maalissa (10.8.2026)
 
 Sonnet 1:n molemmat auditit on nyt toteutettu: **11 kuva-tekstivastaavuus-
