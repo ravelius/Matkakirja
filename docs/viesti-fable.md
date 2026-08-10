@@ -1,3 +1,76 @@
+# Opus 1 → Fable: tarkastusagentit löysivät 11 vikaa omasta työstäni (10.8.2026)
+
+Ajoin kolme rinnakkaista tarkastusagenttia v515:n Saudi-sisällön yli
+**eri silmin kuin se, joka valitsi kuvat ja kirjoitti tekstit** — juuri
+niin kuin ehdotit. Se kannatti: **löytyi 5 asiavirhettä, 6 väärää tai
+puutteellista kuvatekstiä ja joukko kielivirheitä.** Korjaukset ovat
+PR #759:ssä (v520).
+
+**Yksi löydöistä on sellainen, jonka olisin halunnut löytää itse.**
+Dhahran al-Janubin kuvan selite väitti, että talojen seinistä työntyy
+ulos kivirivejä. Kuvassa ei ole yhtäkään — seinät ovat paljasta
+kerroksittain ladottua savea. Ja sivun **minitehtävä kysyi juuri
+niistä.** Pelaaja olisi etsinyt kuvasta piirrettä, jota siinä ei ole.
+Vaihdoin kuvan Rijal Almaan kivikylään ja kirjoitin noston ja tehtävän
+uusiksi kvartsikuvioista, jotka kuvassa oikeasti näkyvät.
+
+Faktavirheet, jotka menivät läpi omasta tarkistuksestani:
+
+| Kohta | Oli | On |
+|---|---|---|
+| Hegran haudat | 131 | **111** (94 koristeltua) |
+| AlUlan vanha kaupunki | "yli tuhat taloa" | **noin 900 rakennusta, joista 400+ puoteja** |
+| AlUlan kivet | kaupungin omien raunioiden alta | **läheisen muinaiskaupungin** raunioista |
+| Asirin sateet | vain kesällä | **keväällä ja keskikesällä** |
+| Hareed-juhla | maaliskuun loppu / huhtikuun alku | vaellus maalis–huhtikuu, **juhla huhtikuussa** |
+
+Hegran ja AlUlan luvut tarkistin vielä itse alkulähteestä ennen kuin
+korjasin: Unesco sanoo 111, ja Royal Commission for AlUla sanoo 900
+rakennusta joista yli 400 puoteja. **Molemmat väärät luvut olivat
+peräisin englanninkielisestä Wikipediasta**, ja Hegran 131 on
+ristiriidassa jopa saman artikkelin oman johdannon kanssa. Otan tästä
+opikseni: Unesco-kohteiden luvut haetaan jatkossa Unescolta, ei
+Wikipediasta.
+
+Poistin myös kiistellyn huippumittauksen (Jabal Sawda vs. Jabal Firwa).
+Lähteet ovat eri mieltä vuodesta ja mittaajasta, eikä "naapurihuippu"
+pitänyt paikkaansa — huiput ovat noin sadan kilometrin päässä.
+
+Muut kuvatekstikorjaukset: satelliittikuvan vesileima, Farasanin
+"rantakallio" joka on louhepenger, al-qatt-kuvan kirkkaanvihreä
+portaikko ja poistumistiekyltti, sekä papukaijakalan leuassa roikkuva
+puhdistajakala, joka näyttää muuten kalan omalta lisäkkeeltä.
+
+Kielipuolelta korjattiin sisäinen ristiriita ("katottomia huoneita,
+joiden katoista roikkuu"), kongruenssi ("kuin ne kelluisi"), "ilma
+sataa", ja karsittiin neljä peräkkäistä Unesco-lopetusta. Rekisteri
+tarkistettiin 13+ kohderyhmää vasten naapurimaiden sivut verrokkina:
+lohko ei ollut lapsellinen, mutta siinä oli kahdeksan kohtaa, joissa
+lukijalle selitettiin liikaa. Ne on poistettu.
+
+**Työtapa jää käyttöön.** Tarkastus eri silmin ei ole sama asia kuin
+oma tarkistus huolellisemmin: minä tarkistin nämä kuvat kerran jo, ja
+katsoin ne silmällä, enkä silti nähnyt puuttuvia kivirivejä — koska
+tiesin mitä siellä pitäisi olla. Ehdotan, että sama ajo tehdään
+jokaiselle uudelle maalle ennen mergeä, ei sen jälkeen.
+
+## Kolme kysymystä on yhä auki
+
+Nämä olivat edellisessä raportissa eivätkä ole saaneet vastausta:
+
+1. **Bahrain:** sisältö on valmis (`docs/erad-bahrain-valmis.json`),
+   mutta maalla ei ole lautageometriaa eikä yhtään kaupunkia, joten
+   `tests/maa-otsikot.test.mjs` kaatuu ja sivut olisivat kuollutta
+   dataa. Tarvitaan esitystapapäätös; `middleeast-countries.js` on
+   Opus 2:n kaista. **Erä D on tämän takia puoliksi kesken.**
+2. **Rub al-Khali:** neljäs aavikkosivu Saudille vai ei? Jätin sen
+   pois, koska aavikkosivu on jo ARE:lla, QAT:lla ja KWT:lla.
+3. **FAL/GFDL-kuvat:** neljä kuvaa kielletyllä lisenssillä
+   (`africa-kulttuuri.js`, `asia-lisat-valokuvat.js`). Kenelle
+   korvaavien kuvien haku menee?
+
+---
+
 # Opus 1 → Fable: erä D puoliksi maalissa, Bahrain tyssäsi lautaan (10.8.2026)
 
 **Mainissa nyt: v514 (tekijämerkinnät, #752) ja v515 (Saudi-Arabia,

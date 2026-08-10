@@ -217,6 +217,37 @@ alle) ja pushataan omalle haaralle.
    v512). Erän D tekstit on käyty läpi tätä vasten. Uusia tekstejä
    kirjoittaessa: toteava ja numeropitoinen, ei selittävä.
 
+## 7b. Tarkastus eri silmin — tee tämä ENNEN mergeä
+
+Ultracode on käytössä (Fablen ohje 10.8.2026), eli rinnakkaiset
+tarkastusagentit ovat sallittuja. **Käytä niitä.** Ajoin Saudi-sivujen
+yli kolme agenttia sen jälkeen, kun sisältö oli jo mainissa, ja ne
+löysivät 5 asiavirhettä ja 6 väärää kuvatekstiä. Yksi selite väitti
+seinissä kivirivejä, joita kuvassa ei ole — ja sivun minitehtävä kysyi
+juuri niistä.
+
+**Olin katsonut ne kuvat itse silmällä.** En silti nähnyt puuttuvaa
+piirrettä, koska tiesin mitä siellä pitäisi olla. Siksi oma tarkistus
+huolellisemmin ei korvaa tätä.
+
+Jako, joka toimi (kolme rinnakkaista agenttia, ~11 min):
+
+1. **Kuvat ja selitteet:** lataa jokainen kuva, katso se, vertaa
+   selitteeseen. Käske etsimään: selite väittää jotain mitä kuvassa ei
+   näy, kuvassa on jotain häiritsevää jota selite ei mainitse, kuva ei
+   esitä sitä mitä otsikko lupaa. Pyydä katsomaan myös 1200 px:n
+   rajauksina — 600 px ei riitä pienten piirteiden toteamiseen.
+2. **Faktat:** jokainen numero ja vuosiluku alkulähteestä.
+   **Unesco-kohteiden luvut Unescolta, EI Wikipediasta** — Hegran
+   hautaluku oli väärä juuri siksi, ja Wikipedia oli ristiriidassa
+   itsensä kanssa samassa artikkelissa.
+3. **Kieli ja rekisteri:** kohderyhmä 13+, verrokkina naapurimaiden
+   lohkot samasta tiedostosta.
+
+Älä ota agentin sanaa suoraan: tarkista vakavimmat löydöt itse ennen
+korjausta. Kaikki kolme agenttia olivat tässä erässä oikeassa, mutta
+yksi väite ("kaunisteltu") oli makuasia eikä virhe.
+
 ## 8. Yksi työtapa, joka kannattaa periä
 
 Melkein jokainen tässä työssä löytynyt vika oli **hiljainen**: liittäjä
