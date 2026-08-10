@@ -437,12 +437,26 @@ export class Game {
     if (edges.some((e) => e.type === 'land')) modes.push('land');
     if (edges.some((e) => e.type === 'sea') && player.money >= SEA_FARE) modes.push('sea');
     if (this.airportDestinations(player).length) modes.push('fly');
-    // Tutki paikka: laatan lisäksi myös näkemätön pulma tai kertaalleen
-    // tutkimaton kaupunki — mikään niistä ei aukea itsestään, vaan napista.
-    if (this.tokens.has(city.id) || this.pendingPuzzle(player) || this.canExplore(city)) {
-      modes.push('stay');
-    }
+    // Tutki paikka: tehtävä ei koskaan aukea itsestään, vaan napista.
+    if (this.tehtavaTarjolla(player)) modes.push('stay');
     return modes;
+  }
+
+  /**
+   * Onko nykyisessä kaupungissa vielä tehtävä Etsi kätkö -napille:
+   * laatta, käyttämätön kohtaaminen, näkemätön pulma tai kertaalleen
+   * tutkimaton kaupunki. Sama ehto avaa Tutki paikka -tilan
+   * (travelModes: stay) ja näyttää saapumiskortin tehtävänapin
+   * (ui.js) — lehteä voi lukea silloinkin, kun tehtävät on tehty.
+   * Botille kohtaaminen ei ole peruste jäädä: se ei kuluta kaarta.
+   */
+  tehtavaTarjolla(player = this.player) {
+    const city = this.cityOf(player);
+    if (!city) return false;
+    return Boolean(this.tokens.has(city.id)
+      || this.pendingPuzzle(player)
+      || (!player.isBot && this.kaariTarina(city.id))
+      || this.canExplore(city));
   }
 
   /** Mitä nykyinen pelaaja voi tehdä juuri nyt. */
@@ -1048,19 +1062,34 @@ export class Game {
     if (this.phase !== 'offer' && this.phase !== 'action') {
       return { ok: false, error: 'Väärä vaihe' };
     }
-    // Isoisän pulma on pysähdyksen AINOA tehtävä silloin kun se on
-    // näkemättä (omistajan linjaus 10.8.2026: "Pulma korvaa
-    // kohtaamisvisan. Aina on siis vain yksi tehtävä, joko visa, pulma,
-    // tai joku muu"). Laatallisessa kaupungissa pulma siis kääntää
-    // laatan kuten visa; laatattomassa se on entiseen tapaan pelkkä
-    // kokemuspistepysähdys. Nimetty muoto tai vaikea kysymys ohittaa
-    // pulman.
-    if (!hard && form === null && this.pendingPuzzle()) return this.openPuzzle();
+    /*
+     * Tarinakaari (omistajan tilaus 9.8.2026: paketti suoraan peliin):
+     * kohtaaminen, jossa henkilö esittää isoisän jättämän kysymyksen.
+     * Kohtaaminen on kaupungin ENSIMMÄINEN tehtävä JOKA kaupungissa —
+     * myös laatattomissa ja pulmakaupungeissa (omistajan palaute
+     * 10.8.2026 illalla Ateenasta: pulma ja kevyt kertatutkiminen
+     * ohittivat kohtaamisen, jolloin henkilö ja kertojan luenta jäivät
+     * kokonaan pois: "pitäisi tulla se henkilö ja alkaa kertojan ääni
+     * kuulua"). Kohtaaminen on ainoa ääneen luettu tehtävämuoto.
+     * Nimetty muu muoto tai vaikea kysymys ohittaa kaaren kuluttamatta
+     * sitä, eikä botti kuluta kohtaamista — kaariKaytetty on pelaajien
+     * yhteinen, ja tarina kuuluu ihmiselle.
+     */
+    const nykyinen = this.cityOf();
+    const kaari = (hard || (form && form !== 'quiz') || this.player.isBot || !nykyinen)
+      ? null : this.kaariTarina(nykyinen.id);
+
+    // Isoisän pulma on kohtaamisen jälkeen pysähdyksen ainoa tehtävä
+    // (omistajan linjaus 10.8.2026: "Aina on siis vain yksi tehtävä,
+    // joko visa, pulma, tai joku muu"). Laatallisessa kaupungissa
+    // pulma kääntää laatan kuten visa; laatattomassa se on entiseen
+    // tapaan pelkkä kokemuspistepysähdys. Nimetty muoto tai vaikea
+    // kysymys ohittaa pulman.
+    if (!kaari && !hard && form === null && this.pendingPuzzle()) return this.openPuzzle();
 
     const city = this.tokenHere();
-    if (!city) {
+    if (!city && !kaari) {
       // Ilman laattaa kaupunkia voi silti tutkia kerran pelissä.
-      const nykyinen = this.cityOf();
       if (!hard && nykyinen && this.canExplore(nykyinen)) return this.openExplore(nykyinen);
       return { ok: false, error: 'Täällä ei ole laattaa' };
     }
@@ -1068,19 +1097,6 @@ export class Game {
       return { ok: false, error: 'Täällä ei ole vaikeita kysymyksiä' };
     }
 
-    /*
-     * Tarinakaari (omistajan tilaus 9.8.2026: paketti suoraan peliin):
-     * kohtaaminen, jossa henkilö esittää isoisän jättämän kysymyksen.
-     * Kohtaaminen on kaupungin ENSIMMÄINEN tehtävä (paitsi
-     * pulmakaupungeissa, joissa pulma korvasi sen jo yllä), koska se
-     * on ainoa ääneen luettu tehtävämuoto — vapaalla arvonnalla
-     * ensimmäinen pysähdys jäi usein mykäksi (omistajan havainto
-     * 10.8.2026 aamulla: "ei tule lukijan ääntä kun painan Etsi
-     * kätkö"). Muotojen vaihtelu jatkuu kohtaamisen jälkeisillä
-     * pysähdyksillä. Nimetty muu muoto tai vaikea kysymys ohittaa
-     * kaaren kuluttamatta sitä.
-     */
-    const kaari = (hard || (form && form !== 'quiz')) ? null : this.kaariTarina(city.id);
     const muoto = (hard || kaari) ? 'quiz' : (form ?? this.pickForm(city.id));
     this.lastForm = muoto;
     if (muoto === 'claim') return this.openClaim(city);
@@ -1091,7 +1107,7 @@ export class Game {
     const difficulty = hard ? 'hard' : this.player.quizLevel;
     let question;
     if (kaari) {
-      this.kaariKaytetty.add(`${this.pack.id}:${city.id}`);
+      this.kaariKaytetty.add(`${this.pack.id}:${nykyinen.id}`);
       question = {
         q: kaari.kysymys.q,
         options: kaari.kysymys.vaihtoehdot,
@@ -1103,10 +1119,15 @@ export class Game {
     }
     const order = this.shuffledOrder(question.options.length);
     this.quiz = {
-      cityId: city.id,
+      cityId: (city ?? nykyinen).id,
       hard,
       kaari: Boolean(kaari),
-      frame: this.pickAsker(city),
+      // Laatattomassa kaupungissa kohtaaminen palkitsee kuten
+      // tutkiminen: löytöpalkkio ja kokemuspisteet, laattaa ei ole.
+      // Lippu ohjaa answerQuizin explore-haaraan; kertatutkimista
+      // (canExplore) kohtaaminen ei kuluta.
+      explore: Boolean(kaari && !city),
+      frame: this.pickAsker(city ?? nykyinen),
       question: question.q,
       fact: question.fact,
       source: sourceList(question.source),
