@@ -6,6 +6,55 @@ uuden tilin session — yli. Lue tämä ENSIN, sitten `CLAUDE.md`,
 `js/tyohuone-tilanne.js`. Ylin osio on aina tuorein tila; alemmat
 osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
 
+## ILTA 10.8. ~16:45–18:15Z (v538–v543) + TYÖN SEURANTA
+
+- **v538:** maapilleri chipin mittoihin ilman ⓘ:tä, aina näkyvä,
+  lippu nimen perässä; huudahdukset samoin sanoin luettuna ja
+  kirjoitettuna (15 tiedostoa, RMS-leikkuri tools/generoi-hihkaisut).
+- **v539+v541:** Opus 1:n kuvatyöt + varustekuvat (viisi
+  suurennuslasiaihiota; radiokuvan uusinta jonossa). **v540:** kuusi
+  latteinta saapumista uusiksi (Maxin erä: Ateena, Sisilia, Varsova,
+  Riika, Vilna, Oslo — maku ja tunto aistikiertoon) + kuusi uutta
+  mykistystä → generointijono nyt 23 luentaa.
+- **v542:** maalehti kuntoon omistajan kolmesta iltahavainnosta:
+  (a) tutkiEkaSivu — maalehti alkaa sisältösivusta, numerointi 1/8,
+  taakse ei pääse tyhjälle kannelle; (b) avaaMaalehti täyttää
+  maaosaston (tunnusluvut, lippu, minikartta, uutiset, esittely)
+  AVATTAVAN maan mukaan — aiemmin täyttyi vain openArrivalissa →
+  sivulatauksen jälkeen tyhjä, vieraalla maalla väärä; (c)
+  kirjanappi näkyy vain kun maatiedot-varuste on PÄÄLLÄ (valittu
+  päävalikosta), toimii pikakatkaisimena; varusteeton ohituspolku
+  (maaNappiPaalla) poistui; svg display:block korjasi ikonin
+  keskityksen. Lautataulut (SAAPUMISTEKSTIT ym.) saivat varalta
+  maailma-avaimet.
+- **v543 — Maxin tuplaraportti sisään:** 23 kysymyksen väärät
+  vaihtoehdot uusiksi (oikeat ennallaan — varmistettu skriptillä;
+  pituusvinouma 65 % → 39 %/39 %); ME:n 6 ⚑-kaanonkorjausta
+  (Dubai, Masqat, Kuwait, Kapadokia, Nikosia, Teheran) + 4
+  beat/teemamuunnosta (Luxor, Mosul: VANHA jälki; Ankara; Sanaa) =
+  15 tekstiä ilmaisina (ME:llä ei luentoja); UUSI VAHTI
+  tools/tarkista-vaihtoehdot.mjs julkaisukaavaan (raja: oikea pisin
+  ≤40 %/lauta, suhde <1,4); docs/kaariteksti-sapluuna.md (Maxin
+  pysyvä ohje, toimitettu omistajalle luettavaksi); ME-jakotaulu
+  kaanonisoitu raamattuun (erät A–D). Odessan yksi väärä pidennetty
+  toimituksellisesti rajan alittamiseksi.
+- **TYÖN SEURANTA (roolitus.md):** checkpoint-commitit ~30 min,
+  raporttihaara ei vaihdu ilmoittamatta, Fablen git-Monitor
+  (ls-remote 5 min välein; HUOM: persistent-lippu ei pidä — vahti
+  aikakatkeaa ~30 min ja on viritettävä uudelleen joka
+  heräämisellä!) + list_sessions joka kierroksella. Triggerit:
+  create_trigger + AINA fire_trigger heti perään.
+- **TIIMI TÖISSÄ (annettu 18:09Z):** Max = jakotaulun loput ilmaiset
+  ME-muutokset (Mekka hiljainen, Jerusalem vartijan salaisuus,
+  1873-ankkurit Bagdad+Teheran, Salalahin suitsuke); Sonnet 1 =
+  23 uuden vaihtoehtosarjan faktatarkistus (väärä ei saa olla
+  puolitosi); Opus 1 = nähtävyyspopupin edestakainen selaus
+  (nuolet + pyyhkäisy + laskuri, iPad ensin) omalle haaralleen.
+- **GENEROINTIJONO (odottaa omistajan lupaa):** 23 luentaa
+  mykistetyt-kenttien mukaan; ME-luennat vasta kun Maxin loputkin
+  jakotaulumuutokset ovat sisässä (kaikki ME-korjaukset ilmaisia
+  siihen asti).
+
 ## TEKSTIERÄ TOTEUTETTU ~16:30Z (v536) — LUENNAT MYKISTETTY
 
 - **Fable maxin kaariauditti + omat kuusi vietiin dataan yhtenä

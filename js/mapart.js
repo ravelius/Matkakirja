@@ -522,7 +522,7 @@ export function drawLand(svg, map) {
  * koneen kirjoittamassa js/packs/maailmankartta.js:ssä: sinne lisätty
  * kenttä katoaisi seuraavassa koostajan ajossa.
  */
-export function drawMaasto(svg, map, varjostus = null) {
+export function drawMaasto(svg, map, varjostus = null, nimet = null) {
   const maasto = map?.maasto;
   if (!maasto) return;
   const g = el('g', { class: 'maasto' }, svg);
@@ -563,25 +563,55 @@ export function drawMaasto(svg, map, varjostus = null) {
   }
 
   /*
-   * Järvet vyöhykkeiden päälle: järvi on vettä maan sisällä.
+   * VAIN PÄÄJOET POHJAKARTALLA — JÄRVEN TYYLIIN.
+   *
+   * Historia kahdessa päätöksessä. 4.8.2026: "Ota joet pois kokonaan.
+   * Täytyy tehdä niistä vaikka oma linssi... Nykyinen on liian
+   * sekava" — kaikki 169 jokea poistuivat pohjakartalta ja
+   * vesistölinssi sai ne itselleen. 10.8.2026: "Kokeile lisätä
+   * merkittävimmät joet kartalle samalla tavalla ja värillä kuin
+   * järvet" — takaisin tulevat VAIN tärkeysluokan 1 pääjoet
+   * (kahdeksan: Jangtse, Volga, Mississippi, Tonava, Niili, Ganges,
+   * Amazon, Kongo). Sekavuus tuli määrästä, ei joista.
+   *
+   * "Samalla tavalla kuin järvet" on tässä kirjaimellista: uoma on
+   * paperia (.iso-jarvi-täyttö viivana) ja reunat meren mustetta
+   * puolella peitolla (.iso-jarvi-reunan arvot). Leveämpi
+   * reunaveto alle, paperiveto päälle — näkyviin jää järven
+   * reunaviivan levyinen kaistale kummallakin rannalla, eikä
+   * suodattimia tarvita (iOS-sääntö).
+   *
+   * Tärkeys tulee nimiaineistosta (maailmankartta-nimet.js) samalla
+   * avaimella kuin vesistölinssissä: avain === joen nimi. Ilman
+   * nimet-argumenttia jokia ei piirretä — lauta ilman nimiaineistoa
+   * toimii kuten ennenkin. Loput joet (tärkeys 2–3) ovat edelleen
+   * vain vesistölinssin.
+   */
+  const paajoet = new Set(
+    (nimet?.joet ?? []).filter((j) => j.tarkeys === 1).map((j) => j.avain),
+  );
+  if (paajoet.size) {
+    const joet = el('g', { class: 'iso-joet' }, g);
+    for (const joki of maasto.joet ?? []) {
+      if (!paajoet.has(joki.nimi)) continue;
+      const pisteet = joki.pisteet ?? [];
+      if (pisteet.length < 2) continue;
+      const d = smoothOpenPath(kasinPiirretty(pisteet));
+      el('path', { d, class: 'iso-joki-reuna' }, joet);
+      el('path', { d, class: 'iso-joki' }, joet);
+    }
+  }
+
+  /*
+   * Järvet vyöhykkeiden ja jokien päälle: järvi on vettä maan sisällä,
+   * ja joki laskee järveen — järven reunaviivan kuuluu peittää
+   * jokisuun pää, ei toisinpäin.
    *
    * Täyttö on paperia eikä väriä (ks. .iso-jarvi), joten järvi erottuu
    * vain siitä että maan sävy loppuu. Sävytön reunaviiva on siksi
    * pakollinen eikä koriste: ilman sitä järven raja katoaa vaaleimman
    * ylängön kohdalla kokonaan. Sama d molemmille, jotta viiva osuu
    * täytön reunaan tarkalleen.
-   */
-  /*
-   * ISOT JÄRVET PIIRRETÄÄN, JOET EIVÄT.
-   *
-   * Omistajan tarkennus: "Isot järvet saisi näkyä kartalla, vain joet
-   * pois." Järvi on paikka kuten vuoristokin — se on kartalla siellä
-   * missä se on eikä liiku silmissä. Joki on viiva, joka kulkee koko
-   * mantereen halki ja risteää kaiken kanssa; juuri se teki kartasta
-   * sekavan.
-   *
-   * Täyttö on paperia eikä väriä (.iso-jarvi), joten järvi erottuu
-   * ääriviivastaan eikä sävystään — sama sääntö kuin merellä.
    */
   for (const jarvi of maasto.jarvet ?? []) {
     const rengas = jarvi.rengas ?? jarvi;
@@ -590,24 +620,6 @@ export function drawMaasto(svg, map, varjostus = null) {
     el('path', { d, class: 'iso-jarvi' }, g);
     el('path', { d, class: 'iso-jarvi-reuna' }, g);
   }
-
-  /*
-   * JOET EIVÄT OLE ENÄÄ POHJAKARTALLA.
-   *
-   * Omistajan päätös 4.8.2026: "Ota joet pois kokonaan. Täytyy tehdä
-   * niistä vaikka oma linssi, missä näkyisi vain pelkät joet ja järvet.
-   * Nykyinen on liian sekava."
-   *
-   * Päätös on hyvä ja se ratkaisee kerralla koko sen sarjan, joka
-   * alkoi v246:sta: vesi maalla, maan sävy zoomin mukaan, viileä
-   * välke, tökkivä vieritys. Kaikki johtuivat siitä, että vesi
-   * piirrettiin maan päälle samalle kartalle, jolla luetaan
-   * kaupunkeja ja reittejä. Oma linssi antaa vesistöille oman
-   * ruudun, jossa ne saavat olla niin selkeitä kuin haluavat.
-   *
-   * Aineisto (map.maasto.joet ja .jarvet) jää paikalleen linssiä
-   * varten; vain piirto pohjakartalta on poissa.
-   */
 }
 
 // --- maastonimet ------------------------------------------------------------
