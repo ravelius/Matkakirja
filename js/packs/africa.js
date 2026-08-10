@@ -282,7 +282,7 @@ export const AFRICA = {
       },
     }),
     // 37 laattakaupunkia seitsemän uuden paikan jälkeen (omistajan laajennus).
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 11 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 9, empty: 11 },
   },
 
   questions: AFRICA_QUESTIONS,

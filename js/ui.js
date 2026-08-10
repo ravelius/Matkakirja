@@ -1067,22 +1067,23 @@ function aarrekuvanOsoitteet(kuva) {
 }
 
 /*
- * Aarteen pikkuikoni: laudan tarinallinen aarrekuva pyöreäksi
- * rajattuna aina, kun laattatyypillä on kuva (omistajan päätös
- * 10.8.2026: vanhat Afrikan tähti -tyyliset jalokivi-ikonit pois
- * kaikkialta). Piirrosikoni jää varasoluksi laatoille, joilla ei ole
- * kuvaa (kenkä, rosvo, linssi) ja laudoille ilman aarrekuvia
- * (maailmankartta, Suomi, Istanbul) — sekä tilanteeseen, jossa kuva
- * ei lataudu.
+ * Aarteen pikkuikoni: tarinallinen aarrekuva pyöreäksi rajattuna
+ * aina, kun laattatyypillä on kuva (omistajan päätös 10.8.2026:
+ * vanhat Afrikan tähti -tyyliset jalokivi-ikonit pois kaikkialta).
+ * token on VALMIIKSI RATKAISTU näyttötieto (game.aarreTyyppi /
+ * aarreMantereella) — maailmankartalla se on löytömantereen aarre.
+ * Piirrosikoni jää varasoluksi laatoille, joilla ei ole kuvaa
+ * (kenkä, rosvo, linssi; Suomi ja Istanbul) — sekä tilanteeseen,
+ * jossa kuva ei lataudu.
  */
-function aarreIkoni(tokenTypes, type, size) {
-  const kuva = tokenTypes?.[type]?.kuva;
+function aarreIkoni(token, type, size) {
+  const kuva = token?.kuva;
   if (!kuva) return tokenIconSvg(type, size);
   const img = document.createElement('img');
   img.className = 'token-icon aarre-ikoni';
   img.width = size;
   img.height = size;
-  img.alt = tokenTypes[type].name ?? '';
+  img.alt = token.name ?? '';
   const [osoite, vara] = aarrekuvanOsoitteet(kuva);
   asetaKuva(img, osoite, vara, () => img.replaceWith(tokenIconSvg(type, size)));
   return img;
@@ -2089,14 +2090,23 @@ export class UI {
    * Aarteiden kuvat lämpimiksi ennen ensimmäistä paljastusta:
    * paljastuskortti on ruudulla vain pari sekuntia, eikä kylmä lataus
    * ehtisi siihen ikkunaan. Neljä pientä kuvaa per lauta (kolme
-   * jalokiveä ja pääaarre) — halpa hinta siitä, että aarre NÄKYY.
+   * jalokiveä ja pääaarre) — maailmankartalla mannerkohtaiset tyypit
+   * eli 7 × 4 pientä kuvaa. Halpa hinta siitä, että aarre NÄKYY.
    */
   esilataaAarrekuvat() {
-    for (const type of Object.values(this.game.tokenTypes ?? {})) {
-      if (!type.kuva) continue;
-      const kuva = new Image();
-      const [osoite, vara] = aarrekuvanOsoitteet(type.kuva);
-      asetaKuva(kuva, osoite, vara);
+    const ryhmat = [
+      this.game.tokenTypes ?? {},
+      ...Object.values(this.game.pack?.tokens?.mannerTypes ?? {}),
+    ];
+    const nahdyt = new Set();
+    for (const tyypit of ryhmat) {
+      for (const type of Object.values(tyypit)) {
+        if (!type.kuva || nahdyt.has(type.kuva)) continue;
+        nahdyt.add(type.kuva);
+        const kuva = new Image();
+        const [osoite, vara] = aarrekuvanOsoitteet(type.kuva);
+        asetaKuva(kuva, osoite, vara);
+      }
     }
   }
 
@@ -4933,7 +4943,7 @@ export class UI {
        * varasoluksi laatoille ja laudoille ilman kuvaa. clip-path
        * rajaa kuvan laattakiekon sisään, slice täyttää ympyrän.
        */
-      const kuva = game.tokenTypes[type]?.kuva;
+      const kuva = game.aarreTyyppi(type, cityId)?.kuva;
       if (kuva && kuva.startsWith('assets/')) {
         const im = el('image', {
           x: -15, y: -15, width: 30, height: 30,
@@ -10678,15 +10688,30 @@ export class UI {
 
     // Isommat kuvat ja selite alla — tavarat kuin matkamuistohyllyllä
     // (omistajan toive).
-    if (p.hasStar) rivi(tokenIconSvg('star', 44), game.pack.tokens.types.star.name);
+    if (p.hasStar) {
+      const tahti = game.aarreTyyppi('star', game.world?.starCity);
+      rivi(aarreIkoni(tahti, 'star', 44), tahti.name);
+    }
     if (p.horseshoes) rivi(tokenIconSvg('horseshoe', 44), `Hevosenkenkiä ${p.horseshoes}`);
 
-    // Jalokivet tyypeittäin: sama laji voi toistua monelta laudalta.
-    const gems = p.finds.filter((t) => (game.tokenTypes[t]?.value ?? 0) > 0);
+    /*
+     * Jalokivet tyypeittäin JA mantereittain: maailmankartalla sama
+     * laji on eri mantereilla eri aarre (findManner kulkee finds-
+     * listan rinnalla; vanhan tallennuksen löydöillä manner on null
+     * ja laudan oma tyyppi kelpaa).
+     */
     const counts = new Map();
-    for (const type of gems) counts.set(type, (counts.get(type) ?? 0) + 1);
-    for (const [type, n] of counts) {
-      rivi(aarreIkoni(game.tokenTypes, type, 44), `${game.tokenTypes[type].name}${n > 1 ? ` ×${n}` : ''}`);
+    p.finds.forEach((type, i) => {
+      if ((game.tokenTypes[type]?.value ?? 0) <= 0) return;
+      const manner = p.findManner?.[i] ?? null;
+      const avain = `${type}:${manner ?? ''}`;
+      const rivit = counts.get(avain) ?? { type, manner, n: 0 };
+      rivit.n++;
+      counts.set(avain, rivit);
+    });
+    for (const { type, manner, n } of counts.values()) {
+      const token = game.aarreMantereella(type, manner);
+      rivi(aarreIkoni(token, type, 44), `${token.name}${n > 1 ? ` ×${n}` : ''}`);
     }
 
     /*
@@ -12052,13 +12077,13 @@ export class UI {
         const verdict = quiz.timedOut ? 'Aika loppui!' : quiz.right ? 'Oikein!' : 'Väärin.';
         this.quizResult.appendChild(html('strong', 'quiz-verdict', verdict));
       } else {
-        const found = quiz.found ? game.tokenTypes[quiz.found] : null;
+        const found = quiz.found ? game.aarreTyyppi(quiz.found, quiz.cityId) : null;
         const body = html('div');
         if (quiz.gate && quiz.right) {
           body.appendChild(html('strong', '', `◈ Portti aukeaa — ${quiz.gate.label}!`));
           body.appendChild(html('span', 'muted', 'Tieto avasi tien: matka jatkuu ilmaiseksi.'));
         } else if (quiz.right && found) {
-          this.quizResult.appendChild(aarreIkoni(game.tokenTypes, quiz.found, 24));
+          this.quizResult.appendChild(aarreIkoni(found, quiz.found, 24));
           body.appendChild(html('strong', '', `Löysit: ${found.name}`));
         } else if (quiz.right && quiz.explore) {
           /*
@@ -12389,10 +12414,12 @@ export class UI {
    * kehyksiä ja tekstit sen ympärille (omistajan palaute 9.8.2026 —
    * vanha kääntyvä laattakuva oli kuvan rinnalla sekava). Kuvattomat
    * laatat (kenkä, rosvo, tyhjä, linssi) ja aarrekuvattomat laudat
-   * (maailmankartta, Suomi, Istanbul) kääntyvät entiseen tapaan.
+   * (Suomi, Istanbul) kääntyvät entiseen tapaan. Maailmankartalla
+   * aarre on löytömantereen aarre (aarreTyyppi; kaupunki on visan
+   * kaupunki, sillä paljastus tulee aina visan voitosta).
    */
   async playTokenReveal(type) {
-    const token = this.game.tokenTypes[type];
+    const token = this.game.aarreTyyppi(type, this.game.quiz?.cityId);
     const onKuva = Boolean(token.kuva);
     const overlay = html('div', `reveal-overlay${onKuva ? ' kuvallinen' : ''}`);
     const scene = html('div', 'reveal-scene');
@@ -13138,13 +13165,13 @@ export class UI {
     await this.wait(this.reducedMotion ? 0 : 260);
   }
 
-  buildToast({ kind, text, sub, icon, token }) {
+  buildToast({ kind, text, sub, icon, token, city }) {
     const box = html('div', `event-toast ${kind === 'robber' ? 'bad' : kind}`);
     // Ikoni voi olla viivaikonin nimi tai suora merkki — kuplat piirretään
     // samalla kynällä kuin napit aina kun ikoni sarjasta löytyy.
     const kuva = viivaIkoni(icon);
     if (kuva) kuva.classList.add('toast-icon');
-    if (token) box.appendChild(aarreIkoni(this.game.tokenTypes, token, kind === 'die' ? 30 : 34));
+    if (token) box.appendChild(aarreIkoni(this.game.aarreTyyppi(token, city), token, kind === 'die' ? 30 : 34));
     else box.appendChild(kuva ?? html('span', 'toast-icon', icon ?? '•'));
     const body = html('div');
     body.appendChild(html('span', 'toast-text', text));

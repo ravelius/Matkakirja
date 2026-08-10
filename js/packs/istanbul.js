@@ -143,7 +143,7 @@ export const ISTANBUL = {
       star: { name: 'Sulttaanin timantti' },
       topaz: { name: 'Turkoosi', color: '#3aaea6' },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 2, ruby: 2, emerald: 3, topaz: 3, empty: 2 },
+    counts: { star: 1, horseshoe: 2, robber: 2, ruby: 2, emerald: 4, topaz: 4, empty: 2 },
   },
 
   questions: ISTANBUL_QUESTIONS,

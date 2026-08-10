@@ -233,7 +233,7 @@ export const MIDDLE_EAST = {
         kuva: 'assets/aarteet/aarre-middleeast-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 3, emerald: 4, topaz: 6, empty: 7 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 7 },
   },
 
   questions: MIDDLEEAST_QUESTIONS,

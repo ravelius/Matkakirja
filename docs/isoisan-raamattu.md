@@ -78,6 +78,26 @@ tunnistetaan:
   tarinan tunneydin, ja luennoissa juuri nämä kohdat luetaan
   lämpimimmin.
 
+### Varallisuus ja jälkien mittakaava (kaanon 10.8.2026, omistajan linjaus)
+
+Horatio **ei ollut rikas**. Kartanpiirtäjän palkka ja pieni eroraha —
+matka tehtiin säästöillä, ja moni yösija maksettiin taidolla: kartta
+kylänvanhimmalle, oikaistu rajariita, korjattu vesiränni. Tästä
+seuraa sitova mittakaavasääntö uusiin teksteihin (Euroopan valmiita
+korjataan vain omistajan tilauksesta):
+
+- Horation jäljet ovat **pieniä tekoja ja ihmissuhteita**: rivi
+  vieraan vihkoon, korjattu juotos, nimi viimeisellä sivulla. Ne
+  kestävät, koska joku piti niistä kiinni — ei siksi, että niistä
+  olisi maksettu.
+- Horatio **ei perusta eikä rahoita mitään**: ei tilattuja
+  kirjaussarjoja, ei säätiöitä, ei palkattuja vartijoita. Jos suku
+  jatkaa jotain vuosikymmeniä, syy on suvun oma tapa — Horatio
+  enintään aloitti rivin tai jätti kysymyksen.
+- Mahtipontisuus on motiivibudjetin kallein rivi: "vuosisadan
+  mittainen järjestely" rahalla ostettuna on kielletty; perittynä
+  tapana sitä käytetään korkeintaan kerran laudalla.
+
 **Horation jälki maailmassa: tähtäinristi.** Horatio merkitsi
 kulkemiaan paikkoja pienellä liidulla piirretyllä tähtäinristillä
 (ympyrä ja risti) — *"että löytäisin takaisin, tai että joku löytäisi

@@ -289,7 +289,7 @@ export const NORTHAMERICA = {
         kuva: 'assets/aarteet/aarre-northamerica-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 12 },
   },
 
   questions: NORTHAMERICA_QUESTIONS,

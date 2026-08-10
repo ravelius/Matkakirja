@@ -6,6 +6,34 @@ uuden tilin session — yli. Lue tämä ENSIN, sitten `CLAUDE.md`,
 `js/tyohuone-tilanne.js`. Ylin osio on aina tuorein tila; alemmat
 osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
 
+## LAATAT KAIKKIALLE + MANTEREIDEN AARTEET 10.8. ~13:20Z (v528)
+
+- **Juurisyy omistajan "vanhat aarteet näkyvät yhä" -havaintoon:**
+  oletuslauta on maailmankartta, jonka tokens.types oli yleinen
+  (themedTokenTypes({})) — v524 kattoi vain seitsemän mannerlautaa.
+  EI johtunut keskeneräisestä taustasessiosta.
+- **v528:** (1) jokainen kaupunki saa laatan, myös aloituskaupungit
+  (lisälaatat jalokiviä — ei uusia tyhjiä/rosvoja/tähtiä); tähti ei
+  koskaan aloituskaupunkiin (vihjetekstit + latistus, vaihto
+  jaaLaatat-lopussa). (2) maailmankartalle mannerkohtaiset aarteet:
+  pack.tokens.mannerTypes + game.aarreTyyppi/aarreMantereella;
+  reveal, toast, quizResult, kartta, passi ja esilataus käyttävät
+  niitä; p.findManner kirjaa löytömantereen (fromJSON täydentää
+  vanhat null-mantereiksi listan alkuun). Playwright-todennettu
+  maailmankartalla (Ateena-start → Meripihka kuvineen) ja Euroopassa.
+- **Vanha tallennus:** aloituskaupungit jäävät siinä laatattomiksi
+  (enterWorld ajetaan vain uusille maailmoille) — ei kaadu; uusi
+  peli korjaa. Kannattaa mainita omistajalle: aloita uusi peli.
+- **Kaanon (raamattuun kirjattu):** Horatio EI ollut rikas; jäljet
+  pieniä tekoja, ei rahoitettuja instituutioita; "sata vuotta
+  maksettuna" -motiivi kielletty. Omistajan huomio Sofian
+  Nadia-tekstistä → MAHTIPONTISUUSPASSI Euroopan kaariteksteihin
+  Fablen työjonossa (ehdotukset omistajalle ennen luentojen
+  uusintageneroitia; tekstit+luennat pareina).
+- **Uusi toive jonoon:** nähtävyysartikkeleita pitäisi voida selata
+  edestakaisin nuolinäppäimillä (Sponza-kuvakaappaus) → osaksi
+  popup-yhtenäistämisen eriä 2-3 (kuvakatselin-moduuli).
+
 ## EUROOPPA VALMIS 10.8. ~12:35Z — VALMIUSPORTTI KIINNI
 
 - **Kaikki valmiusportin kohdat kiinni:** 8b = Sonnet 1 v5:n kokoava

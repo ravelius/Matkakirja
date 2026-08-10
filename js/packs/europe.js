@@ -606,7 +606,7 @@ export const EUROPE = {
         kuva: 'assets/aarteet/aarre-europe-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 12 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 10, empty: 12 },
   },
 
   questions: EUROPE_QUESTIONS,
