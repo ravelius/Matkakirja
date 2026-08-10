@@ -123,10 +123,17 @@ test('jokainen luennan lopetus vapauttaa myös puhujan', () => {
     return ui.slice(alku, ui.indexOf('\n  }\n', alku));
   };
 
+  /*
+   * v513: stopIntroVoice ei pysäytä ääntä itse vaan delegoi
+   * haivytaAanille (pehmeä ulosfeidaus, omistajan toive). Vapautus
+   * saa siis tulla myös välillisesti — mutta silloin välikäden on
+   * itse vapautettava, ja se tarkistetaan tässä samalla.
+   */
+  const vapauttaa = (teksti) => /vapautaPuhuja\(/.test(teksti)
+    || (/haivytaAani\(/.test(teksti) && /vapautaPuhuja\(/.test(runko('haivytaAani')));
   for (const nimi of ['stopIntroVoice', 'stopDiaryVoice', 'haivytaLuenta']) {
-    assert.match(
-      runko(nimi),
-      /vapautaPuhuja\(/,
+    assert.ok(
+      vapauttaa(runko(nimi)),
       `${nimi}: luenta pysäytetään vapauttamatta puhujaa — tausta jää pysyvästi väistöön`,
     );
   }

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 513, teksti: 'Kuvakatselimen näppäimet, lennon pehmeä lähtö ja äänifadet' },
   { v: 512, teksti: 'Kohderyhmä täsmennetty: 13+ seikkailupeli, ei lastenpeli' },
   { v: 511, teksti: 'Kuwait sai lintujen ja aavikon aihesivut' },
   { v: 510, teksti: 'Tallennetun pelin palautus korjattu: Tutki toimii taas' },

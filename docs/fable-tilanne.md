@@ -35,6 +35,30 @@ osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
   8b (Sonnet 1:n kokoava QA, käynnissä) ja 9 (Fablen läpipelaus,
   käynnissä). Ilmoitus omistajalle vasta kun molemmat kiinni.
   Omistaja aikoo koepelata Euroopan ja antaa palautetta.
+- **Omistajan testipalaute 10.8. (~09:15Z→) ja Fablen jono:**
+  1) Avauslennon teksti + pelin aloitusteksti uusiksi/viilattaviksi,
+  ehdokkaat annettu omistajalle — tekstin vaihto vaatii luennan
+  uusintageneroinnin (ELEVEN_API_KEY omistajalta, generointi vasta
+  tekstivalinnan jälkeen; myös intro-puheen intonaatiot uusitaan
+  samalla v3-tageilla). 2) TEHTY v513: lentoanimaation lähtönykäys
+  (kaksi rAF:ää + 180 ms delay ennen liikettä), intro-puheen
+  ulosfeidaus (haivytaAani), moottoriäänen pehmeä sisäänfeidaus,
+  kuvakatselimen nuolinäppäimet+Esc (naytaKulttuuriKuva,
+  document-tason kaappaava kuuntelija — sama katselin palvelee
+  lehteä, gallerioita ja nähtävyysjuttuja). 3) ElevenLabs v3
+  -ilmaisukeinot tutkittu (tagilista, stability 0.0/0.5/1.0,
+  text-to-dialogue 2000 merkkiä, ei SSML-breakia v3:ssa; raportti
+  Fablen muistissa — ydin: tagit englanniksi suomitekstissä,
+  1–3 tagia/kappale, alle 250 merkin luennat epävakaita).
+  4) UI-duplikaattien kartoitus käynnissä agentilla (popupit,
+  pyyhkäisyt, näppäimistö) — yhtenäistämissuositukset tulossa.
+  5) **UUSI KAANONLINJAUS kirjattu isoisan-raamattu.md:hen ("Imu
+  aikuiselle"):** ME:stä alkaen matkakirjatekstit jännittävämmiksi
+  ja hurjemmiksi aikuisen imulla; "askeleet sumussa kyllä, vaara ei"
+  väistyy uusissa teksteissä; lastenversio erikseen myöhemmin. →
+  FABLEN ISO TYÖ JONOSSA: Lähi-idän laudan (~29 kaupunkia)
+  matkakirjatekstit uudella mitalla (kaupunkijakotaulu raamattuun
+  ENNEN kirjoittamista, kuten Euroopassa).
 - **Skaalauslupa (omistaja 10.8. ~08:52Z):** Fable saa perustaa
   useampia Opus/Sonnet-sessioita oman harkinnan mukaan. Kaksi Max 20
   -tilausta vuorottelevat: kun tämän tilin viikkoraja täyttyy,

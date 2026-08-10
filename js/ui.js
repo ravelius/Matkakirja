@@ -7060,6 +7060,31 @@ export class UI {
       this.suljeKulttuuriKuva();
     });
     /*
+     * Nuolinäppäimet selaavat ja Esc sulkee — samat näppäimet joka
+     * paikassa, jossa tämä katselin avautuu (lehti, galleriat,
+     * nähtävyysjutut). Kuuntelija on documentissa kaappausvaiheessa,
+     * jotta se voittaa alla olevan dialogin oman sivuselauksen: ilman
+     * sitä nuoli olisi kääntänyt lehteä katselimen takana. Puretaan
+     * suljeKulttuuriKuvassa.
+     */
+    const nappaimet = (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        if (lista) {
+          indeksi = (indeksi + (e.key === 'ArrowRight' ? 1 : -1) + lista.length) % lista.length;
+          sfx.play('paper');
+          nayta();
+        }
+        e.preventDefault();
+        e.stopPropagation();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        this.suljeKulttuuriKuva();
+      }
+    };
+    document.addEventListener('keydown', nappaimet, { capture: true });
+    this.kulttuuriKuvaNappaimet = nappaimet;
+    /*
      * Suurennos liitetään PÄÄLLIMMÄISEEN avoimeen dialogiin. Modaali
      * (showModal) elää selaimen top layer -kerroksessa, joka peittää
      * kaiken ulkopuolisen z-indexistä riippumatta — kun kuvaa
@@ -7080,6 +7105,10 @@ export class UI {
     this.kulttuuriKuvaEl = null;
     this.kulttuuriHuntuEl?.remove();
     this.kulttuuriHuntuEl = null;
+    if (this.kulttuuriKuvaNappaimet) {
+      document.removeEventListener('keydown', this.kulttuuriKuvaNappaimet, { capture: true });
+      this.kulttuuriKuvaNappaimet = null;
+    }
   }
 
   /*
@@ -10134,9 +10163,30 @@ export class UI {
     const vanha = this.introVoice;
     this.introVoice = null;
     if (!vanha) return;
-    vanha.pause();
-    vanha.removeAttribute('src');
-    this.vapautaPuhuja(vanha);
+    this.haivytaAani(vanha);
+  }
+
+  /**
+   * Häivyttää HTMLAudio-äänen pehmeästi ja siivoaa sen perässä.
+   * Aiemmin intro-puhe katkesi kuin veitsellä, kun matka alkoi
+   * (omistajan palaute 10.8.2026: edellisen näkymän äänten pitää
+   * feidautua ulos samalla kun lennon ääni feidautuu sisään).
+   */
+  haivytaAani(audio, kesto = 600) {
+    const alkuVoima = audio.volume;
+    const t0 = performance.now();
+    const askel = () => {
+      const osuus = (performance.now() - t0) / kesto;
+      if (osuus >= 1 || audio.paused) {
+        audio.pause();
+        audio.removeAttribute('src');
+        this.vapautaPuhuja(audio);
+        return;
+      }
+      audio.volume = alkuVoima * (1 - osuus);
+      setTimeout(askel, 40);
+    };
+    askel();
   }
 
   /**
@@ -12812,11 +12862,21 @@ export class UI {
     }
     // Lähtöasento ennen animaation alkua, ettei kone välähdä origossa.
     kone.style.transform = koneRuudut[0].transform;
+    /*
+     * Liike alkaa vasta, kun kalvon ensimmäinen maalaus on valmis:
+     * ison SVG:n asettelu, fonttien nouto ja moottoriäänen käynnistys
+     * osuivat samaan ruutuun animaation alun kanssa, ja kone nykäisi
+     * lähdössä (omistajan havainto 10.8.2026). Kaksi ruudunpäivitystä
+     * päästää maalauksen ohi, ja pieni delay on lisäksi tarkoituksella:
+     * kone seisoo hetken lähtöpisteessään ennen nousua. Napautus
+     * ohittaa myös viivästetyn animaation (finish vie loppuun).
+     */
+    await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
     const koneAnim = kone.animate(koneRuudut, {
-      duration: lennonKesto, easing: 'linear', fill: 'forwards',
+      duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
     });
     const reittiAnim = reitti.animate(reittiRuudut, {
-      duration: lennonKesto, easing: 'linear', fill: 'forwards',
+      duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
     });
     lentoAnimaatiot.push(koneAnim, reittiAnim);
     await Promise.all([koneAnim.finished, reittiAnim.finished]).catch(() => {

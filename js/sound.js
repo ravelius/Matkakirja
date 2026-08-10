@@ -331,8 +331,11 @@ class Sound {
       src.buffer = jet;
       src.loop = true; // lyhyempikin äänite kantaa koko kohtauksen yli
       const g = ctx.createGain();
-      g.gain.setValueAtTime(0.0001, t0);
-      g.gain.exponentialRampToValueAtTime(Math.min(1, 0.7 * asetus.voima), t0 + 0.9);
+      // Kevyt sisäänfeidaus (omistajan palaute 10.8.2026): moottori
+      // nousee kuuluviin ~2 sekunnissa samalla kun edellisen näkymän
+      // äänet häipyvät, eikä pamahda päälle kalvon kanssa yhtä aikaa.
+      g.gain.setValueAtTime(0.0001, t0 + 0.15);
+      g.gain.exponentialRampToValueAtTime(Math.min(1, 0.7 * asetus.voima), t0 + 2.1);
       // Ei ajastettua loppua: moottori soi, kunnes stopFlight häivyttää
       // sen — kalvo on auki niin kauan kuin pelaaja viipyy koneessa.
       src.connect(g).connect(this.bus);
@@ -368,10 +371,11 @@ class Sound {
     depth.gain.value = 0.65;
     lfo.connect(lfoGain).connect(depth.gain);
 
-    // Nousee lentoon ja jää soimaan; stopFlight häivyttää.
+    // Nousee lentoon ja jää soimaan; stopFlight häivyttää. Sisääntulo
+    // pehmennetty samaan tapaan kuin äänitetyssä moottorissa.
     const g = ctx.createGain();
-    g.gain.setValueAtTime(0.0001, t0);
-    g.gain.exponentialRampToValueAtTime(0.075, t0 + 0.5);
+    g.gain.setValueAtTime(0.0001, t0 + 0.15);
+    g.gain.exponentialRampToValueAtTime(0.075, t0 + 1.6);
 
     // Moottorin virtausääni potkurin alle: kohinaa kaistanpäästön läpi,
     // taajuus nousee lähdössä ja laskee laskeutuessa. Tämä tekee lennosta
@@ -386,8 +390,8 @@ class Sound {
     vf.frequency.exponentialRampToValueAtTime(1600, t0 + kesto * 0.4);
     vf.frequency.exponentialRampToValueAtTime(500, t0 + kesto);
     const vg = ctx.createGain();
-    vg.gain.setValueAtTime(0.0001, t0);
-    vg.gain.exponentialRampToValueAtTime(0.055, t0 + 0.7);
+    vg.gain.setValueAtTime(0.0001, t0 + 0.15);
+    vg.gain.exponentialRampToValueAtTime(0.055, t0 + 1.8);
 
     // Matala jyrinä pohjalle.
     const runko = ctx.createBufferSource();
@@ -397,8 +401,8 @@ class Sound {
     rf.type = 'lowpass';
     rf.frequency.value = 180;
     const rg = ctx.createGain();
-    rg.gain.setValueAtTime(0.0001, t0);
-    rg.gain.exponentialRampToValueAtTime(0.06, t0 + 0.6);
+    rg.gain.setValueAtTime(0.0001, t0 + 0.15);
+    rg.gain.exponentialRampToValueAtTime(0.06, t0 + 1.7);
 
     osc.connect(lp).connect(depth).connect(g).connect(this.bus);
     virtaus.connect(vf).connect(vg).connect(this.bus);
