@@ -316,7 +316,7 @@ export const MAAKARTAT = {
     /*
      * Nosto tarttuu introon kohdasta "vauraus rakennettiin raudasta".
      * Rautaa ei näytä mikään Ruotsin sivu, ja tämä on siitä se tarina,
-     * jota lapsi ei usko ennen kuin näkee kuvan: kokonainen kaupunki
+     * jota pelaaja ei usko ennen kuin näkee kuvan: kokonainen kaupunki
      * siirretään pois oman kaivoksensa alta.
      * Kuva silmätarkistettu 480 px:ssä 8.8.2026.
      */
@@ -844,7 +844,7 @@ export const MAAKARTAT = {
     /*
      * Laudan Lappi-kohde on tässä Rovaniemi: se istuu napapiirillä eli
      * kartan opettavaisimmalla näkymättömällä viivalla, ja se on se
-     * Lapin paikka, jonka suomalainen lapsi tuntee.
+     * Lapin paikka, jonka suomalainen pelaaja tuntee.
      */
     kaupungit: [
       { nimi: 'Helsinki', lat: 60.171, lon: 24.938, paa: true },
@@ -855,7 +855,7 @@ export const MAAKARTAT = {
       { nimi: 'Rovaniemi', lat: 66.5, lon: 25.733 },
     ],
     /*
-     * Suomalainen lapsi tietää maastaan paljon, joten nosto on
+     * Suomalainen pelaaja tietää maastaan paljon, joten nosto on
      * valittava niin, että se yllättää hänetkin. Merenkurkun
      * maankohoaminen olisi ollut ilmeinen valinta, mutta se on jo
      * Suomi-laudan kysymyksissä — tämä ei ole missään.
@@ -1208,7 +1208,7 @@ export const MAAKARTAT = {
     /*
      * Kuusi pistettä kartan kulmiin ja Budapest keskelle. Balaton jää
      * tarkoituksella merkitsemättä: se on kartalla iso sininen juova,
-     * jonka lapsi löytää itse, eikä yksikään sen rantakaupunki ole
+     * jonka pelaaja löytää itse, eikä yksikään sen rantakaupunki ole
      * tunnettu.
      */
     kaupungit: [
@@ -2009,7 +2009,7 @@ export const MAAKARTAT = {
        * Arabian niemimaasta ja 232 km Afrikan sarvesta, fi.wikipedia
        * noin 300 ja noin 240. Koska wiki-linkki osoittaa juuri
        * fi-artikkeliin, täsmäluku olisi ristiriidassa sen kanssa,
-       * jonka lapsi näkee klikatessaan. Suunta on molempien mukaan
+       * jonka lukija näkee klikatessaan. Suunta on molempien mukaan
        * sama, ja se riittää.
        */
       teksti: 'Jemenille kuuluu Sokotran saari, joka on kaukana '
@@ -2286,7 +2286,7 @@ export const MAAKARTAT = {
        * (9.8.2026), sama linja kuin Syyrian Hama/Orontes-ratkaisussa.
        * Aiheen tarkka osuma olisi `Etelä-Irakin Ahwar` (Unescon kohde
        * 2016), mutta sen kolmannessa kappaleessa on lause Saddam
-       * Husseinin kostosta suoarabeille. Lasten pelissä ei ole sorto-
+       * Husseinin kostosta suoarabeille. Tässä pelissä ei ole sorto-
        * eikä sotamainintoja edes yhden lauseen verran silloin, kun
        * neutraali vaihtoehto on olemassa. `Eufrat` on neutraali ja
        * aiheen vieressä: juuri sen ja Tigriksen leviäminen tekee nämä

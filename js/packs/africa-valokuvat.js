@@ -1096,7 +1096,7 @@ export const AFRICA_VALOKUVAT = {
    *
    * Ali Dinarista on olemassa vain yksi valokuva, brittiarmeijan
    * ottama hänen kuolemansa jälkeen taistelukentällä. Sitä ei panna
-   * lastenpelin korttiin. Tilalla on Jebel Marra, sama vuori josta
+   * pelin korttiin. Tilalla on Jebel Marra, sama vuori josta
    * päiväkirjamerkintä kertoo.
    */
   darfur: {

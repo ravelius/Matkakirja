@@ -8,7 +8,7 @@ näitä viittä pilaria muutetaan vain yhteisellä päätöksellä.
 
 ## Miksi tämä peli on olemassa
 
-Edistämme aikuisten ja lasten tietoa eri maiden elinoloista, kulttuurista,
+Edistämme nuorten ja aikuisten tietoa eri maiden elinoloista, kulttuurista,
 maantieteestä, geopolitiikasta ja poliittisesta tilanteesta — ja ylipäätään
 ymmärrystä siitä, että maailma on suurempi kuin oma ympäristö. Väline on
 koukuttava ja mielenkiintoinen peli, jonka kanssa pidetään hauskaa; oppiminen
@@ -62,10 +62,14 @@ kummasteluna:
 
 ### 4. Ikäsopivuus
 
-Sisältö sopii lapsille. Vaikeita aiheita — sotaa, köyhyyttä, sortoa — ei
-kaunistella eikä kauhistella: ne käsitellään ikätasoisesti, tarvittaessa vain
-vaikeammilla kysymystasoilla. Yhtään sisältöä ei lisätä pelottelemaan eikä
-järkyttämään.
+Peli on suunnattu 13 vuotta täyttäneille ja aikuisille — se on
+seikkailupeli, jossa samalla oppii, ei lastenpeli — ja tulevaisuudessa
+se sovitetaan myös koulukäyttöön (13+). Sisältö sopii tälle yleisölle:
+vaikeita aiheita — sotaa, köyhyyttä, sortoa — ei kaunistella eikä
+kauhistella, vaan ne käsitellään ikätasoisesti, tarvittaessa vain
+vaikeammilla kysymystasoilla. Yhtään sisältöä ei lisätä pelottelemaan
+eikä järkyttämään. (Kohderyhmä täsmennetty omistajan päätöksellä
+10.8.2026.)
 
 ### 5. Avoimuus
 
@@ -95,6 +99,7 @@ Lauta hyväksytään, kun molemmat puolet ovat kunnossa:
 - ovatko faktat tarkistettuja ja lähteet kerrottu?
 - kuvataanko alue kunnioittavasti ja monipuolisesti — myös arkea?
 - ovatko kiistanalaiset asiat toteavasti ja tasapuolisesti esitettyjä?
-- sopiiko sisältö lapsille ja onko vaikeustasoja käytetty oikein?
+- sopiiko sisältö pelin yleisölle (13+) ja onko vaikeustasoja käytetty
+  oikein?
 
 Sama lista pienemmässä koossa koskee yksittäistä kysymystä tai kaupunkia.

@@ -3,7 +3,7 @@
  *
  * Aluksi (v331) palsta näytti Wikimedia Commonsin päivän kuvan, mutta
  * sen valitsee Commonsin yhteisö eikä se ole aina valokuva eikä
- * lapsille sopiva: omistajan iPadille osui kansainvälisen olutpäivän
+ * pelin yleisölle sopiva: omistajan iPadille osui kansainvälisen olutpäivän
  * elokuvajuliste (7.8.2026: "Pitäisikö tämän liittyä valokuvaukseen
  * vai miksi täällä on tällainen?"). Siksi kuvat valitaan nyt käsin:
  * kuuluisia, tarkistettuja valokuvia maailmalta, ja palsta vaihtuu

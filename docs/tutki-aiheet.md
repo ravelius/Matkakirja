@@ -260,8 +260,8 @@ virkkeellä kaupungin luonteesta) ja:
 
 5 aihetta × 4 nostoa vakioaiheista (historia, ruoka, kuvataide,
 musiikki, luonto, tiede — valitse maalle osuvimmat 5). Tekstit
-440–660 merkkiä, konkreettisia tarinoita eikä yleiskuvausta; lapsille
-kiinnostavat yksityiskohdat edellä (Ever Given -tyyliin). Yhteen
+440–660 merkkiä, konkreettisia tarinoita eikä yleiskuvausta; lukijaa
+koukuttavat yksityiskohdat edellä (Ever Given -tyyliin). Yhteen
 aiheeseen `tehtava`, jonka vastaus LÖYTYY saman sivun tekstistä.
 
 ### 2b. Sisältölähteitä nostoihin (lisätty v301)

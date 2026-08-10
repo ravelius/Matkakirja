@@ -63,7 +63,9 @@ täsmällisen historian, `git log -p -- js/muutokset.js`.
 
 ## Lukittu sisältömalli (EI POIKKEAMIA)
 
-- 2–3 lyhyttä kappaletta per kohde, suunnattu n. 8–12-vuotiaille.
+- 2–3 lyhyttä kappaletta per kohde, suunnattu pelin yleisölle eli
+  13 vuotta täyttäneille ja aikuisille (omistajan täsmennys
+  10.8.2026 — EI lastenpeli): selkeää, elävää yleiskieltä.
   OMA tiivis suomenkielinen kooste englanninkielisen Wikipedian
   faktoista — ei käännös, ei mukailtu lauserakenne. Konkreettisia
   yksityiskohtia (numeroita, tapahtumia, kuriositeetteja), ei
@@ -223,7 +225,7 @@ Kiova, Pietari, Moskova, Odessa kirjoitettiin PUHTAASTI kulttuuri- ja
 arkkitehtuurikohteina. Ei mainintaa Venäjän/Ukrainan sodasta (2014
 tai 2022 alkaen) tai muusta ajankohtaisesta konfliktista. Vanhempi
 historia (1800-luvun sodat, II maailmansota, keskiajan piiritykset)
-on OK normaalina historiatietona lapsille sopivalla, ei-graafisella
+on OK normaalina historiatietona pelin yleisölle (13+) sopivalla, ei-graafisella
 tavalla — tätä on käytetty muissakin kaupungeissa (esim. Varsovan/
 Sarajevon II maailmansodan tuho, mainittu lyhyesti). Erikoistapaukset:
 Kiovan Itsenäisyyden aukio (Maidan) kirjoitettu 1700-luvulta alkavasta

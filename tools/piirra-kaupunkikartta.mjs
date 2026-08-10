@@ -369,7 +369,7 @@ const KAUPUNGIT = {
   varsova: {
     // Veiksel tulee ylhäältä ja poistuu oikeasta alanurkasta vinona
     // nauhana. Itäranta (Praga) on mukana kapeana kaistana tahallaan:
-    // ilman sitä joki olisi kuvan reuna eikä joki, ja lapsi näkee nyt
+    // ilman sitä joki olisi kuvan reuna eikä joki, ja pelaaja näkee nyt
     // että kaupunki on veden molemmin puolin.
     //
     // Rajaus on lähes neliö, koska Varsovan maamerkit ovat jonossa
@@ -405,7 +405,7 @@ const KAUPUNGIT = {
     // vanha kaupunki Tivolista Rundetårniin, oikealla Christianshavn
     // ja Amager. Pohjoisreuna on valittu niin, että Pieni merenneito
     // mahtuu mukaan — se on 1,5 km keskustasta pohjoiseen, ja ilman
-    // sitä kartalta puuttuisi se, mitä lapsi ensimmäisenä etsii.
+    // sitä kartalta puuttuisi se, mitä pelaaja ensimmäisenä etsii.
     //
     // meri: 'maa' eikä true — koeajo tavallisella täytöllä varoitti
     // meren peittävän 113 % rajauksesta eli valinneen väärän puolen.

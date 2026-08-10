@@ -1,6 +1,8 @@
 # Matkakirja ja unohdettu aarre
 
-Suomenkielinen lasten seikkailupeli: nuori herra Fogg matkustaa
+Suomenkielinen seikkailupeli, jossa samalla oppii (kohderyhmä
+13 vuotta täyttäneet ja aikuiset — EI lastenpeli): nuori herra
+Fogg matkustaa
 isoisänsä vuoden 1873 matkapäiväkirjan jäljillä ja etsii Aarnin
 luettelon unohdettuja aarteita. Selainpeli ilman build-vaihetta
 (ES-moduulit, service worker, yhden tiedoston versio dist/-kansiossa).

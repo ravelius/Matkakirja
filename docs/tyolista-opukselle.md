@@ -419,7 +419,7 @@ Tason osat kaupunkia kohti:
       Keaton, Harold Lloydin kellonviisari). Uudempien elokuvien
       julisteet ja stillit ovat tekijänoikeuden alla — ei niitä.
     - **Nigeria / Nollywood:** määrältään maailman toiseksi suurin
-      elokuvateollisuus — hieno, yllättävä juttu lapsille. Kuvitus
+      elokuvateollisuus — hieno, yllättävä juttu lukijalle. Kuvitus
       on hankalin osa: julisteet eivät ole vapaita, joten kuvat
       haetaan Commonsista CC-lisensseillä (esim. kuvauspaikat,
       näyttelijät festivaaleilla) ja tarkistetaan kuten aina.
@@ -1185,7 +1185,7 @@ kolme erillistä sotkua:
 2. **Nimien sijoitus.** Nimet on laskettu laudan koordinaatteihin
    (`tools/nimien-paikat.mjs`). Kahtena näkyvä nimi olisi vaatinut
    sijoituksen laskemisen uudestaan joka kopiolle.
-3. **Nappulan löytäminen.** Lapsi puhelimella ei saa eksyä. Kun
+3. **Nappulan löytäminen.** Pelaaja puhelimella ei saa eksyä. Kun
    maailmaa on ruudulla enintään yksi, "missä minä olen" on aina
    yksikäsitteinen kysymys.
 
@@ -1548,7 +1548,7 @@ nosti kahdeksan, joista kolme oli oikeita virheitä:
 - **darfur** — nykyaikainen muotokuva vanhana valokuvana. Vaihdettu
   Jebel Marran kuvaan 1961, samaan vuoreen josta päiväkirja kertoo.
   (Ali Dinarista on olemassa vain yksi valokuva, brittiarmeijan ottama
-  hänen kuolemansa jälkeen. Sitä ei panna lastenpelin korttiin.)
+  hänen kuolemansa jälkeen. Sitä ei panna pelin korttiin.)
 - **murzuk** — kuvana oli sodanjälkeinen postimerkki. Vaihdettu
   vuoden 1891 kuvalaattaan, ja kuvatekstissä sanotaan että se on piirros.
 - **kumasi** — kuva oli aito vuodelta 1900, mutta kuvateksti kertoi
@@ -5961,7 +5961,7 @@ Kypros → Kyproksen).
 houkuttaa: vierasnimet eivät noudata sitä. Itävalta → Itävallan mutta
 Malta → **Maltan**, ja Sri Lanka → **Sri Lankan** vaikka lanka → langan.
 Yksikin liian ahne sääntö tuottaisi kirjoitusvirheen otsikkoon, jonka
-lapsi lukee joka sivunkäännöksellä. Siksi poikkeukset luetellaan.
+pelaaja lukee joka sivunkäännöksellä. Siksi poikkeukset luetellaan.
 
 Aiheen nimi pienenee otsikossa ("Egyptin historia"), koska vakioaiheet
 ovat yleisnimiä. Ruudulla otsikko on versaalilla, mutta DOM:iin jää

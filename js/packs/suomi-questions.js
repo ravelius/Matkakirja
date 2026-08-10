@@ -1,6 +1,6 @@
 // Suomi-laudan kysymykset ja Tiesitkö että -tiedot.
 //
-// level: 1 = helppo (lapsille), 2 = perus (oletus), 3 = vaikea (bonus).
+// level: 1 = helppo, 2 = perus (oletus), 3 = vaikea (bonus).
 // Vihje ei saa sisältää oikeaa vastausta — testit valvovat tätä.
 
 export const SUOMI_QUESTIONS = {

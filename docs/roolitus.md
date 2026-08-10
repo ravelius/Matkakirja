@@ -62,11 +62,17 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 
 | Rooli | Sessio-id | Kirjattu |
 | --- | --- | --- |
-| Fable | session_01R1jVv12E56gbU5qtH5xGaG | 8.8.2026 |
-| Opus 1 | session_01AEN2as7TAggi2SX3w3DqWV | 8.8.2026 |
-| Opus 2 | session_017kajFQA5rFWByGvVLXc9Df | 8.8.2026 |
-| Sonnet 1 | session_01MAirFte9MpE1HnVRpCj2Mb | 8.8.2026 |
-| Sonnet 2 | session_01RQtKAgCVRDZzMGRKYJLoWS | 8.8.2026 |
+| Fable | session_01BPysCfxscsVyzAEYmb88Zr | 10.8.2026 (uusi tili) |
+| Fable max (apusessio) | session_01U8NqxuC5RCoMozxGqDzEJm | 10.8.2026 |
+| Opus 1 | session_01LrZTPX64MWBxukCQ7p7NBJ | 10.8.2026 (uusi tili) |
+| Opus 2 | — (perustetaan kun karttajono aukeaa) | 10.8.2026 |
+| Sonnet 1 | session_01RT3ucdBD6Pt48BP75qvjKw | 10.8.2026 (uusi tili) |
+| Sonnet 2 | — (perustetaan kun ME-jono aukeaa) | 10.8.2026 |
+
+Vanhan tilin sessiot (8.8.2026 taulukko) ovat arkistoituja eivätkä
+tee enää työtä. **Fable max** on omistajan 10.8.2026 tilaama
+syväajattelun apusessio (sama malli, Max-ajattelutila): Fable
+lähettää sille yksittäisiä vaikeita pulmia, se ei julkaise itse.
 
 Kaistajako, kun sessioita on viisi: **Opus 1** — lehtisisällöt
 (maa-kategoriat.js, menovinkit), UI ja rakenne (radionapit
