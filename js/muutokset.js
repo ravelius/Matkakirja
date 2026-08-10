@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 504, teksti: 'Nähtävyysjutut Tromssaan, Dubrovnikiin, Riikaan' },
   { v: 503, teksti: 'Valokuvapulma: pylväspulman vaihtoehdot oikeina kuvina' },
   { v: 502, teksti: 'Nähtävyysjutut Kiovaan, Pietariin, Moskovaan, Odessaan' },
   { v: 501, teksti: 'Oman ja Qatar saivat aihesivunsa' },
