@@ -2963,12 +2963,25 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 
 /* Tavarat matkamuistoina: isompi kuva ja selite sen alla, rivit
  * täyttyvät vasemmalta oikealle (omistajan toive). */
+/*
+ * Tumma tarjotin tavaroiden alle (omistajan toive 10.8.2026:
+ * "tavaroille pitää tehdä tumma tausta") — aarrekuvat on piirretty
+ * mustalle pohjalle, ja vaalealla paperilla ne jäivät irrallisiksi
+ * mustiksi kiekoiksi. Tumma samettitausta sulattaa kuvien pohjan
+ * ja lukee laukun vuorina; selitteet vaalenevat sen päällä.
+ */
 #passport-finds {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.8rem 1.1rem;
   align-items: flex-start;
+  background: radial-gradient(circle at 30% 20%, #241a10, #140e07);
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.55);
 }
+
+#passport-finds .find-text { color: #e4d2ac; }
 
 #passport-finds .find {
   flex-direction: column;
@@ -7421,9 +7434,17 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 .reveal-isoisa {
   margin: 0.5rem 0 0.1rem;
   font-style: italic;
-  font-size: 0.92rem;
-  line-height: 1.45;
+  font-size: 1rem;
+  line-height: 1.5;
   max-width: 26rem;
+  /*
+   * Oma vaalea väri: teksti elää mustan paljastuskalvon päällä, ja
+   * perityllä musteella se jäi hämäräksi (omistajan havainto
+   * 10.8.2026: "teksti näkyy huonosti"). Sama sävyperhe kuin
+   * arvorivillä mutta vaaleampi, koska tämä on pitkä luettava.
+   */
+  color: #eedeba;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
 }
 
 .reveal-isoisa-nimio {
@@ -8903,9 +8924,58 @@ body.vertailu-tila .pawns { display: none; }
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+/*
+ * Menovinkkisivun taitto (omistajan palaute 10.8.2026: "liian
+ * listamainen... yksi iso kuva ja alustusteksti isommalla, listaa
+ * voisi kaventaa"): johdanto on ingressi, avauskuva täyttää palstan
+ * ja lista kapenee luettavaksi kaistaksi — sivu ei ole enää
+ * tasapaksu pötkö.
+ */
+.vinkkisivu .johdanto {
+  font-size: 1.16rem;
+  line-height: 1.6;
+  max-width: 40rem;
+}
+
+.vinkki-hero {
+  margin: 0.9rem 0 1.2rem;
+}
+
+.vinkki-hero img {
+  display: block;
+  width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(40, 28, 12, 0.25);
+}
+
+.vinkki-hero .lahde {
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.vinkkisivu .vinkkilista,
+.vinkkisivu .vinkki-ryhma {
+  max-width: 40rem;
+}
+
 /* Ajankohta noston otsikkorivillä: pieni konekirjoitusleima. */
 .nosto-aika {
   margin-left: auto;
+}
+
+/*
+ * Kun rivillä on myös musiikkinappi, oikean reunan tyhjä tila kuuluu
+ * VAIN ensimmäiselle oikean ryhmän jäsenelle: kaksi auto-marginaalia
+ * jakoivat tilan ja Apple Music -pilleri kellui keskellä riviä
+ * (omistajan havainto 10.8.2026: "siirrä apple music painike oikeaan
+ * reunaan vuosiluvun viereen"). Sisarussääntö vie vuosileimalta
+ * auton, jolloin nappi ja leima istuvat vierekkäin oikealla.
+ */
+.kulttuuri-musiikkilinkki ~ .nosto-aika,
+.kulttuuri-musiikkinayte ~ .nosto-aika {
+  margin-left: 0.45rem;
   padding: 0.1rem 0.4rem;
   border: 1px solid rgba(70, 51, 31, 0.45);
   border-radius: 3px;

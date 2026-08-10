@@ -698,7 +698,9 @@ import {
   playPlaceAmbience, startQuizMusic, stopPlaceStream, stopQuizMusic,
   vaimennaTausta, palautaTausta, puheAlkoi, puheLoppui,
 } from './ambience-stream.js';
-import { puheVoima, jaaAlku, kertojaTila } from './aani-ehdokkaat.js';
+import {
+  puheVoima, jaaAlku, kertojaTila, HUUDAHDUKSET,
+} from './aani-ehdokkaat.js';
 import { BoardDie } from './die.js';
 import {
   el,
@@ -1035,31 +1037,6 @@ const REVEAL_SUB = {
  * mukana — pikkulöytö kuitataan, suurlöytö vie sanat. Arvotaan joka
  * kerta, jotta toisto ei kulu.
  */
-const HUUDAHDUKSET = {
-  300: [
-    'Hei — löytyi sittenkin!',
-    'Pieni, mutta aito!',
-    'Kelpaa tämäkin!',
-    'Taskuun ja eteenpäin!',
-  ],
-  600: [
-    'Mahtavaa!',
-    'Sepä vasta löytö!',
-    'Isoisä olisi hykerrellyt!',
-    'Tämä merkitään päiväkirjaan!',
-  ],
-  1000: [
-    'Uskomatonta!',
-    'Jes! Katsokaa nyt tätä!',
-    'Sydän hakkaa — mikä löytö!',
-    'Juuri tällaisesta isoisä kirjoitti!',
-  ],
-  star: [
-    'Se on totta... se on oikeasti totta!',
-    'Aarni oli oikeassa — se on olemassa!',
-    'Isoisä... minä löysin sen.',
-  ],
-};
 
 /**
  * Arvo huudahdus laattatyypin mukaan; muille kuin aarteille ei
@@ -4090,6 +4067,19 @@ export class UI {
         if (nipistys) return;
         if (this.avausNakymassa() || this.radioPaalla()) return;
         e.preventDefault();
+        /*
+         * Läppärin kahden sormen vieritys EI zoomaa (omistajan toive
+         * 10.8.2026: "voisiko sen vaihtaa nipistyseleeseen") —
+         * trackpadin nipistys tulee selaimissa ctrl+rullana, ja
+         * vieritys pieninä jatkuvina pikselideltoina usein
+         * vaaka-akselin kera. Hiiren rullan naksu on rividelta
+         * (deltaMode ≠ 0) tai iso pystydelta ilman vaakaa — se
+         * zoomaa yhä, kuten alkuperäinen toive vaati.
+         */
+        const nipistysEle = e.ctrlKey || e.metaKey;
+        const rullanNaksu = e.deltaMode !== 0
+          || (Math.abs(e.deltaY) >= 50 && e.deltaX === 0);
+        if (!nipistysEle && !rullanNaksu) return;
         const nyt = performance.now();
         if (nyt - (this.rullanHetki ?? 0) < RULLAN_VALI_MS) return;
         const suunta = e.deltaY < 0 ? 1 : -1;
@@ -8740,6 +8730,30 @@ export class UI {
      * museosta eikä puuttuva kuva saa karsia hyvää kohdetta.
      */
     if (kategoria.lista) {
+      /*
+       * Taitto pois tasapaksusta pötköstä (omistajan palaute
+       * 10.8.2026: "voisi olla vaikka yksi iso kuva ja alustusteksti
+       * isommalla, listaa voisi myös kaventaa"): johdanto nousee
+       * ingressiksi (vinkkisivu-luokka kasvattaa sen CSS:ssä) ja
+       * ryhmien ensimmäisen kuvallisen kohteen kuva nostetaan sivun
+       * avauskuvaksi täyteen leveyteen. Kohde jää silti listaan —
+       * hero on taittoa, ei uusi sisältöpaikka.
+       */
+      kohde.classList.add('vinkkisivu');
+      const eka = (kategoria.lista ?? [])
+        .flatMap((r) => r.kohteet ?? [])
+        .find((k) => k.tiedosto);
+      if (eka) {
+        const hero = html('figure', 'vinkki-hero');
+        const kuva = document.createElement('img');
+        kuva.alt = eka.selite ?? eka.nimi ?? '';
+        kuva.decoding = 'async';
+        asetaKuva(kuva, valokuvaUrl(eka.tiedosto, 1200), valokuvaVara(eka.tiedosto, 1200), () => hero.remove());
+        hero.appendChild(kuva);
+        if (eka.lahde) hero.appendChild(html('figcaption', 'lahde', eka.lahde));
+        // Hero johdannon perään, ennen ryhmiä.
+        kohde.appendChild(hero);
+      }
       this.piirraVinkkilista(kohde, kategoria.lista);
       if (kategoria.tehtava) this.piirraMinitehtava(kohde, kategoria);
       return;
@@ -9612,7 +9626,17 @@ export class UI {
      * soi Applen 30 sekunnin esikuunteluna. Vapaa näyte voittaa aina:
      * jos nostolla on musiikkiNayte, esikuuntelunappia ei näytetä.
      */
-    if (nosto.esikuuntelu && !nosto.musiikkiNayte) {
+    /*
+     * Soittonappi myös pelkälle Apple Music -linkille (omistajan
+     * kysymys 10.8.2026: "saako linkin avaamaan ja toistamaan myös
+     * itse kappaleen suoraan?"). Koko kappaleen toisto sivulla
+     * vaatisi MusicKitin ja kehittäjäavaimen — sen sijaan Applen
+     * 30 sekunnin esikatselu soi suoraan: kappale-id poimitaan
+     * linkistä ja osoite haetaan avoimesta iTunes-rajapinnasta.
+     * Linkki itse vie edelleen Apple Musiciin, jossa tilaaja saa
+     * koko kappaleen.
+     */
+    if ((nosto.esikuuntelu || nosto.musiikki) && !nosto.musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = 'Esikuuntelu Apple Musicista (30 s)';
@@ -9638,20 +9662,44 @@ export class UI {
    */
   async esikuunteluNapista(nosto, nappi) {
     this.esikuuntelut ??= new Map();
-    let url = this.esikuuntelut.get(nosto.esikuuntelu) ?? null;
+    const avain = nosto.esikuuntelu ?? nosto.musiikki;
+    let url = this.esikuuntelut.get(avain) ?? null;
     if (!url) {
       const teksti = nappi.querySelector('span');
       const alku = teksti.textContent;
       teksti.textContent = 'Haetaan…';
       nappi.disabled = true;
       try {
+        /*
+         * Ilman hakutermiä esikatselu johdetaan Apple Music
+         * -linkistä: kappaleen id on ?i=-parametrissa (albumilinkit)
+         * tai polun lopussa (song-linkit), ja lookup-rajapinta antaa
+         * sille previewUrlin. Albumin id:llä entity=song poimii
+         * albumin ensimmäisen kappaleen. Termihaku jää varapoluksi
+         * nimellä, jos linkistä ei irtoa id:tä.
+         */
         const haku = new URL('https://itunes.apple.com/search');
-        haku.searchParams.set('term', nosto.esikuuntelu);
-        haku.searchParams.set('entity', 'song');
-        haku.searchParams.set('limit', '1');
+        if (!nosto.esikuuntelu && nosto.musiikki) {
+          const id = nosto.musiikki.match(/[?&]i=(\d+)/)?.[1]
+            ?? nosto.musiikki.match(/\/(?:song|album)\/[^/]+\/(?:id)?(\d+)/)?.[1];
+          if (id) {
+            haku.href = 'https://itunes.apple.com/lookup';
+            haku.searchParams.set('id', id);
+            haku.searchParams.set('entity', 'song');
+            haku.searchParams.set('limit', '1');
+          } else {
+            haku.searchParams.set('term', nosto.musiikkiNimi ?? nosto.otsikko ?? '');
+            haku.searchParams.set('entity', 'song');
+            haku.searchParams.set('limit', '1');
+          }
+        } else {
+          haku.searchParams.set('term', nosto.esikuuntelu);
+          haku.searchParams.set('entity', 'song');
+          haku.searchParams.set('limit', '1');
+        }
         haku.searchParams.set('country', 'fi');
         const vastaus = await fetch(haku, { signal: AbortSignal.timeout(10000) });
-        url = (await vastaus.json()).results?.[0]?.previewUrl ?? null;
+        url = (await vastaus.json()).results?.find((r) => r.previewUrl)?.previewUrl ?? null;
       } catch {
         url = null;
       }
@@ -9664,7 +9712,7 @@ export class UI {
         setTimeout(() => { teksti.textContent = alku; }, 2500);
         return;
       }
-      this.esikuuntelut.set(nosto.esikuuntelu, url);
+      this.esikuuntelut.set(avain, url);
     }
     this.kulttuuriAaniNapista({ aani: url, otsikko: nosto.otsikko }, nappi);
   }
@@ -9930,9 +9978,38 @@ export class UI {
     };
     prev.addEventListener('click', (e) => { e.stopPropagation(); siirry(-1); });
     next.addEventListener('click', (e) => { e.stopPropagation(); siirry(1); });
-    close.addEventListener('click', () => overlay.remove());
+    /*
+     * Sama näppäinsopimus kuin muissa suurennoksissa (ks.
+     * rekisteroiSuurennosNappaimet): nuolet selaavat, Esc sulkee vain
+     * suurennoksen. Tämä katselin oli ainoa ilman näppäimiä
+     * (omistajan havainto 10.8.2026: "nuolinäppäin selailu ei
+     * toimi") — kuuntelija on documentissa kaappausvaiheessa, jotta
+     * se voittaa alla olevan lehden sivunkäännön, ja purkautuu
+     * suurennoksen sulkeutuessa mitä reittiä tahansa.
+     */
+    const nappaimet = (e) => {
+      if (!overlay.isConnected) {
+        document.removeEventListener('keydown', nappaimet, { capture: true });
+        return;
+      }
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        siirry(e.key === 'ArrowRight' ? 1 : -1);
+        e.preventDefault();
+        e.stopPropagation();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        sulje();
+      }
+    };
+    const sulje = () => {
+      overlay.remove();
+      document.removeEventListener('keydown', nappaimet, { capture: true });
+    };
+    document.addEventListener('keydown', nappaimet, { capture: true });
+    close.addEventListener('click', sulje);
     overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) overlay.remove();
+      if (e.target === overlay) sulje();
     });
     // Pyyhkäisy vaihtaa kuvaa sormella.
     let alkuX = null;
@@ -12276,7 +12353,9 @@ export class UI {
           body.appendChild(html('strong', '', `◈ Portti aukeaa — ${quiz.gate.label}!`));
           body.appendChild(html('span', 'muted', 'Tieto avasi tien: matka jatkuu ilmaiseksi.'));
         } else if (quiz.right && found) {
-          this.quizResult.appendChild(aarreIkoni(found, quiz.found, 24));
+          // Iso kuva (omistajan toive 10.8.2026: "kuva saisi olla
+          // isommalla") — aarre on rivin pääasia, ei kuvake.
+          this.quizResult.appendChild(aarreIkoni(found, quiz.found, 56));
           body.appendChild(html('strong', '', `Löysit: ${found.name}`));
         } else if (quiz.right && quiz.explore) {
           /*
@@ -12706,7 +12785,10 @@ export class UI {
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
       if (kaariLuentaSoi(kaari, 'aarre') && kertojaTila() !== 'ei') {
-        luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 2600 : 900 }) ?? null;
+        // Viive hihkaisun jälkeen: 2600 ms alkoi hieman ennen kuin
+        // hihkaisu ehti laskeutua (omistajan havainto 10.8.2026) —
+        // 3400 ms antaa huudahduksen soida loppuun ja hengähtää.
+        luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 3400 : 900 }) ?? null;
       }
     }
     /*

@@ -14,6 +14,39 @@ import { PACKS } from './pack.js';
 const AVAIN = 'matkakirja-aanivalinnat';
 
 
+/*
+ * Nuoren herran huudahdukset aarteen paljastukseen — sama repliikki
+ * kirjoitettuna ja luettuna (tiedostot assets/audio/huudahdus-
+ * <avain>-<n>.mp3, generointi tools/generoi-hihkaisut.mjs).
+ * Asuu täällä eikä ui.js:ssä, jotta työhuoneen äänistudio saa
+ * saman listan ilman koko pelin tuontia.
+ */
+export const HUUDAHDUKSET = {
+  300: [
+    'Hei — löytyi sittenkin!',
+    'Pieni, mutta aito!',
+    'Kelpaa tämäkin!',
+    'Taskuun ja eteenpäin!',
+  ],
+  600: [
+    'Mahtavaa!',
+    'Sepä vasta löytö!',
+    'Isoisä olisi hykerrellyt!',
+    'Tämä merkitään päiväkirjaan!',
+  ],
+  1000: [
+    'Uskomatonta!',
+    'Jes! Katsokaa nyt tätä!',
+    'Sydän hakkaa — mikä löytö!',
+    'Juuri tällaisesta isoisä kirjoitti!',
+  ],
+  star: [
+    'Se on totta... se on oikeasti totta!',
+    'Aarni oli oikeassa — se on olemassa!',
+    'Isoisä... minä löysin sen.',
+  ],
+};
+
 // Tyyppiehdokkaat: käyvät kaikille saman maiseman kaupungeille.
 export const TYYPPI_EHDOKKAAT = {
   // Lentoasema on etusivun oma maisema (omistajan toive 10.8.2026:
@@ -32,7 +65,7 @@ export const TYYPPI_EHDOKKAAT = {
   // äänite, jossa on moottorin lisäksi matkustajien puheensorinaa ja
   // kuulutus (omistajan toive: "pitäisi löytää puheääntä taustalle").
   lentokone: [
-    { url: 'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=2.9', nimi: 'Matkustamo, puheensorinaa ja kuulutus — drewhalasz, CC0' },
+    { url: 'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=3.6', nimi: 'Matkustamo, puheensorinaa ja kuulutus — drewhalasz, CC0' },
     { url: 'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.3', nimi: 'Matkustamo lennolla, A330 — FillSoko, CC0' },
     { url: 'https://cdn.freesound.org/previews/245/245691_2047664-lq.mp3#voima=0.22', nimi: 'Matkustamon tasainen humina — TicAshfield, CC0' },
   ],
@@ -523,7 +556,7 @@ const OLETUSKORIT = {
     'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6',
   ],
   lentokone: [
-    'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=2.9',
+    'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=3.6',
   ],
   basaari: [
     'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55',

@@ -374,7 +374,28 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
   // Soitto ja onnistumisen käsittely ovat omassa funktiossaan, jotta
   // varareitti käy täsmälleen saman polun: ilman sitä äänite jäisi
   // vaihdon jälkeen soimaan nollavoimakkuudella.
-  const soi = () => audio.play().then(() => {
+  /*
+   * YRITYSLASKURI KATKAISEE KASKADIN. Kun varareitti vaihtaa srcin
+   * kesken latauksen, VANHA play()-lupaus hylkääntyy AbortErrorilla
+   * — ja ilman laskuria se kutsui pettiä uudelleen, joka poltti
+   * seuraavankin portaan ja päätyi varalle-polkuun, vaikka uusi
+   * lähde olisi toiminut (mitattu 10.8.2026: etusivu mykistyi
+   * pysyvästi aina kun ensilataus kesti yli vahdin 6 sekuntia —
+   * hitaalla yhteydellä joka kerta). Vanhentuneen yrityksen hylkäys
+   * ohitetaan; nykyisen yrityksen AbortError jää vahdin varaan.
+   */
+  const soi = () => {
+    const yritys = (audio.soiYritys = (audio.soiYritys ?? 0) + 1);
+    return audio.play().then(() => {
+      if (audio.soiYritys !== yritys) return;
+      onnistui();
+    }).catch((syy) => {
+      if (audio.soiYritys !== yritys) return;
+      if (syy?.name === 'AbortError') return;
+      petti();
+    });
+  };
+  const onnistui = () => {
     if (nykyinen !== oma) {
       // Kaupunki ehti vaihtua kesken latauksen: tämä soitin ei ehtinyt
       // koskaan kuuluviin eikä sitä enää tarvita.
@@ -396,7 +417,7 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     sfx.setAmbience(null); // synteesi väistyy, kun oikea äänite soi
     haivyta(audio, taso(oma), null, nouse);
     vahdiSilmukka(oma, audio);
-  }).catch(petti);
+  };
   /*
    * VAHTIAJASTIN: peilin 404 voi jäädä pelkäksi stalled-tapahtumaksi
    * ilman erroria (mitattu 10.8.2026: peilistä puuttunut
@@ -404,12 +425,19 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
    * jäi hiljaiseksi). Jos ääni ei ole soittokunnossa kohtuuajassa
    * eikä virhettäkään ole tullut, mennään samaan petti-polkuun kuin
    * error-tapahtumasta.
+   *
+   * Raja on readyState < 2 (ei edes nykyhetken dataa), EI < 3:
+   * hitaalla yhteydellä metadata ja ensimmäiset paketit tulevat
+   * nopeasti mutta puskuri täyttyy hitaasti, ja <3-ehto tulkitsi
+   * elävän mutta hitaan latauksen kuolleeksi — juuri se laukaisi
+   * kaskadin, joka mykisti etusivun (10.8.2026). Aidosti kuollut
+   * peililataus jää tilaan 0 ja vahti toimii kuten ennenkin.
    */
   let vahti = null;
   const viritaVahti = () => {
     clearTimeout(vahti);
     vahti = setTimeout(() => {
-      if (audio.readyState < 3 && nykyinen === oma) petti();
+      if (audio.readyState < 2 && nykyinen === oma) petti();
     }, 6000);
   };
   audio.addEventListener('canplay', () => clearTimeout(vahti));

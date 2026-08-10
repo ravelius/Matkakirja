@@ -591,12 +591,40 @@ export function drawMaasto(svg, map, varjostus = null, nimet = null) {
     (nimet?.joet ?? []).filter((j) => j.tarkeys === 1).map((j) => j.avain),
   );
   if (paajoet.size) {
+    /*
+     * Päiden jatke: keskilinja-aineisto päättyy omaan rantaviivaansa,
+     * joka ei osu käsin piirrettyyn rantaan — joki jäi töpöksi ennen
+     * merta ja suisto näytti kököltä (omistajan havainto 10.8.2026).
+     * Viimeistä suuntaa jatketaan vähän molemmista päistä: suulla
+     * nauha ylettyy veteen asti, ja latvassa lyhyt jatke uppoaa
+     * maastoon huomaamatta.
+     */
+    const JATKE = 14;
+    const jatkaPaita = (pisteet) => {
+      const jatke = (mista, mihin) => {
+        const dx = mihin[0] - mista[0];
+        const dy = mihin[1] - mista[1];
+        const pituus = Math.hypot(dx, dy) || 1;
+        return [mihin[0] + (dx / pituus) * JATKE, mihin[1] + (dy / pituus) * JATKE];
+      };
+      return [
+        jatke(pisteet[1], pisteet[0]),
+        ...pisteet,
+        jatke(pisteet[pisteet.length - 2], pisteet[pisteet.length - 1]),
+      ];
+    };
     const joet = el('g', { class: 'iso-joet' }, g);
     for (const joki of maasto.joet ?? []) {
       if (!paajoet.has(joki.nimi)) continue;
       const pisteet = joki.pisteet ?? [];
       if (pisteet.length < 2) continue;
-      const d = smoothOpenPath(kasinPiirretty(pisteet));
+      /*
+       * EI kasinPiirretty-huojuntaa: keskilinjassa on jo luonnollinen
+       * mutkittelu, ja lisätty jitter teki lähizoomilla teräviä
+       * sahalaitoja (sama omistajan havainto). Pelkkä pehmennys
+       * riittää — joki on maiseman piirre, ei ääriviiva.
+       */
+      const d = smoothOpenPath(jatkaPaita(pisteet));
       el('path', { d, class: 'iso-joki-reuna' }, joet);
       el('path', { d, class: 'iso-joki' }, joet);
     }
