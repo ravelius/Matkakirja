@@ -84,12 +84,17 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'istanbul',
+      mykistetyt: ['saapuminen', 'aarre'],
       otsikko: 'Istanbul — upotettu palatsi',
-      saapuminen: 'Laskin kahdeksankymmentä porrasta pimeään, ja kaupungin '
-        + 'äänet sammuivat yksi kerrallaan. Alhaalla seisoi pylväsmetsä '
-        + 'mustassa vedessä, ja yhden pylvään alla lepäsi kivinen kasvo '
-        + 'ylösalaisin. Sammutin lyhtyni kokeeksi — ja veden ylle jäi '
-        + 'palamaan toinen valo, joka ei ollut minun.',
+      saapuminen: 'Laskin kahdeksankymmentä porrasta pimeään, ja kaupungin äänet '
+        + 'sammuivat yksi kerrallaan. Alhaalla seisoi pylväsmetsä '
+        + 'mustassa vedessä — laskin pylväitä, kunnes lyhty vapisi '
+        + 'kädessäni: niitä on satoja, ja säiliöön mahtuisi kaupungin '
+        + 'vesivuosi. Vuosisatojen ajan kaupunki eli tämän päällä '
+        + 'tietämättä siitä mitään; taloihin nostettiin vettä '
+        + 'lattianraoista, eikä kukaan kysynyt mistä. Yhden pylvään alla '
+        + 'lepäsi kivinen kasvo ylösalaisin. Sammutin lyhtyni kokeeksi — '
+        + 'ja veden ylle jäi palamaan toinen valo, joka ei ollut minun.',
       henkilo: 'Vedenvartija Emine mittaa säiliön vettä, kuten sukunsa '
         + 'sulttaanien ajoista — ja tuntee molemmat kivikasvot.',
       kohtaaminen: 'Portaiden alla vedenvartija Emine nostaa lyhtyään. "Kirjasi '
@@ -111,8 +116,11 @@ export const KAARI_PAKETIT = {
           + 'makaa kyljellään samasta syystä.',
       },
       aarre: 'Kun kätkö nousi vedestä, Emine sanoi hiljaa: "Isoisoäitini '
-        + 'kirjoitti kirjaan, kumpi kasvoista on vartija ja kumpi vanki '
-        + '— joku on leikannut sen sivun irti."',
+        + 'kirjoitti kirjaan, kumpi kasvoista on vartija ja kumpi vanki — '
+        + 'joku on leikannut sen sivun irti." Karttasovellukseni ei '
+        + 'tiennyt säiliöstä mitään — sen mukaan seisoimme keskellä '
+        + 'katua. Isoisän kartta ei tiennyt myöskään. Ensimmäistä kertaa '
+        + 'ne olivat samaa mieltä.',
     },
     {
       id: 'wien',
@@ -192,12 +200,18 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'budapest',
+      mykistetyt: ['saapuminen'],
       otsikko: 'Budapest — hengittävä labyrintti',
-      saapuminen: 'Linnan alla aukeaa labyrintti, jonka seinät hikoilevat '
-        + 'lämmintä vettä, kuin vuori hengittäisi. Vein kynttilän '
-        + 'syvimpään käytävään ja löysin seinästä liidulla piirretyn '
-        + 'tähtäinristin — oman merkkini, vaikken ollut käynyt täällä '
-        + 'eläissäni. Viiva oli terävä, kuin tänään piirretty.',
+      saapuminen: 'Saavuin kaupunkiin, jota ei vielä viime vuonna ollut olemassa: '
+        + 'Buda, Pest ja Óbuda päättivät tänä vuonna olla yhtä, ja '
+        + 'sillalla väiteltiin yhä siitä, minkä nimisen kaupungin '
+        + 'keskellä sillan keskikohta on. Kirjasin nimen karttaani '
+        + 'lyijykynällä, varmuuden vuoksi. Linnan alla aukeaa labyrintti, '
+        + 'jonka seinät hikoilevat lämmintä vettä, kuin vuori '
+        + 'hengittäisi. Vein kynttilän syvimpään käytävään ja löysin '
+        + 'seinästä liidulla piirretyn tähtäinristin — oman merkkini, '
+        + 'vaikken ollut käynyt täällä eläissäni. Viiva oli terävä, kuin '
+        + 'tänään piirretty.',
       henkilo: 'Kylpymestari Márta on kylpylän vanhin kylvettäjä; hänen '
         + 'isoisoäitinsä opetti Horatiolle lämpimän seinän säännön.',
       kohtaaminen: 'Kylpylän ovella kylpymestari Márta koskettaa kirjan kantta '
@@ -224,13 +238,16 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lontoo',
+      mykistetyt: ['saapuminen'],
       otsikko: 'Lontoo — laskuveden kello',
-      saapuminen: 'Sumu nousi joesta niin sakeana, että kadut sammuivat yksi '
-        + 'kerrallaan. Silloin kello löi — mutta ääni ei tullut '
-        + 'tornista, vaan joen puolelta, laskuveden paljastamalta '
-        + 'liejulta. Menin rantaan ja löysin liejuun puoliksi '
-        + 'hautautuneen taskukellon, jonka viisarit seisoivat. Sinä, '
-        + 'joka tätä luet: kello käy taas. Kuuntele.',
+      saapuminen: 'Aloitin matkani ostamalla Bradshaw\'n aikataulukirjan, ja '
+        + 'myönnän suoraan: kolme sivua luettuani ymmärsin vähemmän kuin '
+        + 'ennen ensimmäistä. Sumu nousi joesta niin sakeana, että kadut '
+        + 'sammuivat yksi kerrallaan, ja junani jäi odottamaan sitä — '
+        + 'aikataulukirja ei tuntenut sumua. Kävelin odottaessani '
+        + 'rantaan, jonka laskuvesi oli paljastanut, ja löysin liejusta '
+        + 'puoliksi hautautuneen taskukellon, jonka viisarit seisoivat. '
+        + 'Sinä, joka tätä luet: kello käy taas. Kuuntele.',
       henkilo: 'Jokilöytäjä Ned etsii laskuveden liejusta joen pudottamia '
         + 'esineitä, kuten hänen sukunsa on etsinyt sata vuotta.',
       kohtaaminen: 'Rannalla jokilöytäjä Ned punnitsee taskukelloa kädessään. '
@@ -399,12 +416,15 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'madrid',
+      mykistetyt: ['saapuminen'],
       otsikko: 'Madrid — kolmastoista lyönti',
       saapuminen: 'Puerta del Solin kello löi keskiyön, ja laskin lyönnit '
-        + 'vanhasta tottumuksesta. Niitä oli kolmetoista. Aukiolla '
-        + 'kukaan muu ei ollut kuulevinaan — mutta tornin ikkunassa '
-        + 'paloi valo, ja varjo kumartui koneiston ylle kuin anteeksi '
-        + 'pyytäen.',
+        + 'vanhasta tottumuksesta. Niitä oli kolmetoista. Päätin '
+        + 'laskeneeni väärin ja palasin seuraavana yönä kynä ja vihko '
+        + 'valmiina: kolmetoista, uudelleen, ja nyt se oli kirjattu. '
+        + 'Aukiolla kukaan muu ei ollut kuulevinaan — mutta tornin '
+        + 'ikkunassa paloi valo, ja varjo kumartui koneiston ylle kuin '
+        + 'anteeksi pyytäen.',
       henkilo: 'Kellomestari Pilar hoitaa Puerta del Solin kelloa, jonka '
         + 'mukaan koko Espanja laskee uudenvuoden rypäleensä.',
       kohtaaminen: 'Tornissa Pilar valvoo koneiston vieressä. "Kello ei lyö '
@@ -851,6 +871,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'alpit',
+      mykistetyt: ['aarre'],
       otsikko: 'Alpit — koira joka muisti hajun',
       saapuminen: 'Solassa lumi ulottui heinäkuussa polviin, ja luostarin '
         + 'koirat juoksivat edellä varmoin askelin. Yksi niistä '
@@ -883,7 +904,10 @@ export const KAARI_PAKETIT = {
       },
       aarre: 'Koira kaivoi kätkön esiin kiviröykkiön juurelta. Anselm '
         + 'silitti sen päätä ja sanoi hitaasti: "Se ei kaivanut hajun '
-        + 'takia. Röykkiön kivet on ladottu uudelleen — tänä kesänä."',
+        + 'takia. Röykkiön kivet on ladottu uudelleen — tänä kesänä." '
+        + 'Laskin paluumatkalla solan askelmat. Huomasin sen vasta '
+        + 'puolivälissä — ja laskin silti loppuun asti. Isoisä olisi '
+        + 'merkinnyt luvun muistiin. Minä merkitsin.',
     },
     {
       id: 'sisilia',
@@ -1045,14 +1069,18 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'sofia',
+      mykistetyt: ['saapuminen'],
       kuva: 'assets/kohtaamiset/kohtaaminen-sofia.jpg',
       otsikko: 'Sofia — lähde joka kirjattiin sata vuotta',
       saapuminen: 'Keskellä kaupunkia maa hönkäisi lämmintä: lähde kumpusi '
         + 'kuumana kivialtaaseen, ja ihmiset jonottivat kannuineen '
-        + 'höyryssä. Altaan reunalla istui mies, joka ei täyttänyt '
-        + 'kannua — hän piti kädessään lämpömittaria ja kirjoitti '
-        + 'lukemia vihkoon. Kun lähestyin, hän oli poissa. Vihko jäi. '
-        + 'Viimeisellä sivulla luki minun nimeni.',
+        + 'höyryssä. Join kupillisen — vesi oli lämpimämpää kuin '
+        + 'aamuteeni, ja kirjasin molempien lämmöt vertailun vuoksi. '
+        + 'Altaan reunalla istui mies, joka ei täyttänyt kannua: hän piti '
+        + 'kädessään lämpömittaria ja kirjoitti lukemia vihkoon. '
+        + 'Nyökkäsimme toisillemme niin kuin mittaajat nyökkäävät. Kun '
+        + 'lähestyin, hän oli poissa. Vihko jäi. Viimeisellä sivulla luki '
+        + 'minun nimeni.',
       henkilo: 'Lähteenvartija Nadia täyttää kaupunkilaisten kannut kuumasta '
         + 'lähteestä ja tuntee jokaisen suonen kaupungin alla.',
       kohtaaminen: 'Höyryn keskellä Nadia laskee kauhansa. "Sukuni on '
@@ -1251,13 +1279,16 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'pietari',
+      mykistetyt: ['saapuminen'],
       otsikko: 'Pietari — silta joka odotti laivaa',
-      saapuminen: 'Yö ei tullut. Kello löi kaksitoista, ja taivas hehkui yhä '
-        + 'kuin iltarusko olisi unohtunut paikalleen. Joen sillat '
-        + 'nousivat pystyyn päästämään laivat läpi, ja rannalla mies '
-        + 'nosti hattuaan jokaiselle laivalle — mutta piti kirjaa vain '
-        + 'yhdestä. Kun sillat laskettiin, mies oli poissa. Kirja jäi '
-        + 'kaiteelle, avattuna sivulta, jolla luki: odotamme vielä.',
+      saapuminen: 'Yö ei tullut. Kello löi kaksitoista, taivas hehkui yhä, ja '
+        + 'joen sillat nousivat pystyyn päästämään laivat läpi — minun '
+        + 'ollessani väärällä rannalla, sillä olin luottanut kelloon '
+        + 'kaupungissa, jossa valo ei kerro mitään. Vietin yön '
+        + 'rantakivellä ja laskin ohi lipuvat laivat: neljäkymmentäkaksi. '
+        + 'Vieressäni mies nosti hattuaan jokaiselle, mutta piti kirjaa '
+        + 'vain yhdestä. Kun sillat laskettiin, mies oli poissa. Kirja '
+        + 'jäi kaiteelle, avattuna sivulta, jolla luki: odotamme vielä.',
       henkilo: 'Sillanhoitaja Dmitri nostaa joen sillan joka yö ja laskee '
         + 'sen aamuksi, kuten hänen sukunsa on tehnyt siltojen alusta '
         + 'asti.',
@@ -1610,6 +1641,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lappi',
+      mykistetyt: ['aarre'],
       otsikko: 'Lappi — tuli joka juoksi taivaalla',
       saapuminen: 'Taivas syttyi. Vihreä liekki juoksi taivaanrannasta toiseen '
         + 'ja kaartui pääni ylle kuin joki, joka olisi noussut '
@@ -1639,20 +1671,27 @@ export const KAARI_PAKETIT = {
           + 'selittää valot auringon hiukkasilla — mutta nimi revontulet '
           + 'jäi ketulta.',
       },
-      aarre: 'Jälkien päässä, kinoksen alla, odotti tuohikääre. Aslak '
-        + 'katsoi taivaalle ja takaisin: "Jäljet päättyvät tähän — '
-        + 'mutta katso: toiset alkavat tästä. Joku on hiihtänyt täältä '
-        + 'pois. Eilen."',
+      aarre: 'Jälkien päässä, kinoksen alla, odotti tuohikääre. Aslak katsoi '
+        + 'taivaalle ja takaisin: "Jäljet päättyvät tähän — mutta katso: '
+        + 'toiset alkavat tästä. Joku on hiihtänyt täältä pois. Eilen." '
+        + 'Nuotiolla Aslak kysyi, miksi kirjoitan kaiken ylös. Näytin '
+        + 'hänelle isoisän sivua ja omaani. Hän katsoi molempia kauan ja '
+        + 'sanoi: sama käsiala. Ei ole, sanoin. Hän hymyili niin kuin '
+        + 'hymyillään lapselle.',
     },
     {
       id: 'tromssa',
-      otsikko: 'Tromssa — lyhty joka paloi keskiyön auringossa',
-      saapuminen: 'Aurinko ei laskenut. Se vieri pohjoisen taivaanrannan yli '
-        + 'kuin kultakolikko, joka ei suostu putoamaan, ja satama eli '
-        + 'keskellä yötä: kalastajat lastasivat, lokit kirkuivat. Vain '
-        + 'yksi vene lepäsi liikkumatta, ja sen mastossa paloi lyhty. '
-        + 'Kysyin, miksi lyhty palaa, kun yötä ei ole. Se ei pala '
-        + 'pimeän takia, sanoi satamavahti. Se palaa merkiksi.',
+      mykistetyt: ['saapuminen'],
+      otsikko: 'Tromssa — lyhty joka paloi yöttömässä yössä',
+      saapuminen: 'Aurinko ei laskenut. Se vieri pohjoisen taivaanrannan yli kuin '
+        + 'kultakolikko, joka ei suostu putoamaan, ja minä valvoin '
+        + 'kannella mittaamassa, kuinka alas se suostuu: kämmenen '
+        + 'leveyden meren yläpuolelle, ei alemmas. Satama eli keskellä '
+        + 'yötä — kalastajat lastasivat, lokit kirkuivat, eikä kukaan '
+        + 'toivottanut hyvää yötä, koska yötä ei tullut. Vain yksi vene '
+        + 'lepäsi liikkumatta, ja sen mastossa paloi lyhty. Kysyin, miksi '
+        + 'lyhty palaa, kun yötä ei ole. Se ei pala pimeän takia, sanoi '
+        + 'satamavahti. Se palaa merkiksi.',
       henkilo: 'Satamavahti Ingrid pitää keskiyön auringon aikaan kirjaa '
         + 'saapuvista laivoista, koska yö ei sitä tee.',
       kohtaaminen: 'Laiturin päässä Ingrid sulkee lokikirjansa. "Lyhtyvene on '
@@ -1689,14 +1728,16 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'islanti',
+      mykistetyt: ['saapuminen'],
       otsikko: 'Islanti — lähde joka nimesi kaikki muut',
-      saapuminen: 'Maa hengitti höyryä. Laakson lähde kokosi voimansa hitaasti, '
-        + 'kohisi — ja syöksi kiehuvan patsaan taivaalle niin '
-        + 'korkealle, että jäin sanattomaksi. Oppaani sanoi, että '
-        + 'kaikki maailman purkautuvat lähteet on nimetty tämän yhden '
-        + 'mukaan. Lähteen reunakivessä oli kaiverrus, puoliksi kalkin '
-        + 'peitossa: nuoli ja sana, jota en ymmärtänyt. Opas ymmärsi. '
-        + 'Hän vaikeni loppumatkan.',
+      saapuminen: 'Maa hengitti höyryä. Kellotin lähteen: se kokosi voimansa, '
+        + 'kohisi ja syöksi kiehuvan patsaan niin korkealle, että niskani '
+        + 'naksahti katsoessa — ja vaikeni taas. Merkitsin väliaikoja '
+        + 'vihkooni, kunnes oppaani naurahti: lähde ei lue kelloa, herra. '
+        + 'Hän sanoi, että kaikki maailman purkautuvat lähteet on nimetty '
+        + 'tämän yhden mukaan. Reunakivessä oli kaiverrus, puoliksi '
+        + 'kalkin peitossa: nuoli ja sana, jota en ymmärtänyt. Opas '
+        + 'ymmärsi. Hän vaikeni loppumatkan.',
       henkilo: 'Tilallinen Björk asuu lähdelaakson talossa, jonka suku on '
         + 'opastanut matkalaisia kuumille lähteille kuusi polvea.',
       kohtaaminen: 'Tuvan ovella Björk ojentaa villapeiton harteilleni. '
