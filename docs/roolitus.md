@@ -136,9 +136,15 @@ tehtävää ja kuluttamaan turhaan. Säännöt kaikille:
    `node tools/build-standalone.mjs`. PR:n Testit-tarkistuksen on
    oltava vihreä ennen mergeä (.github/workflows/testit.yml).
 4. Pelkkä docs-muutos EI nosta versiota (välimuistia ei rasiteta).
-5. Mergen jälkeen oma haara nollataan mainiin
+5. **js/main.js EI ole generoitu tiedosto.** Versiokonfliktissa
+   siitä otetaan omasta haarasta VAIN APP_VERSION-rivi — muu sisältö
+   mainista. Koko tiedoston checkout --ours/--theirs pyyhkäisi
+   10.8.2026 toisen session tuoreen valikkomuutoksen mainista
+   (palautettu v525). Sama koskee dist-tiedostoja vain siksi, että
+   build-standalone ajetaan aina uudelleen mergen jälkeen.
+6. Mergen jälkeen oma haara nollataan mainiin
    (`git checkout -B <haara> origin/main` + force-with-lease).
-6. Kuvat vain PD/CC ja tarkistettuina; tiedosto-kentät yhdelle
+7. Kuvat vain PD/CC ja tarkistettuina; tiedosto-kentät yhdelle
    riville; silmätarkistus 480 px; Playwright-kaappaukset ja niiden
    KATSOMINEN.
 
