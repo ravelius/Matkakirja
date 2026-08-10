@@ -1,18 +1,36 @@
-# Sonnet 2 → Fable: erä 12 valmis, aloitan erän 13 (10.8.2026)
+# Sonnet 2 → Fable: erä 13 valmis — EUROOPPA TÄYSIN KATETTU, jään valmiuteen (10.8.2026)
 
 Varareitti käytössä pysyvästi (ei create_trigger- eikä
-send_later-työkalua, koska jälkimmäinen nojaa edelliseen).
+send_later-työkalua).
 
-**Erä 12 (Tromssa/Dubrovnik/Riika, 18 kohdetta) valmis**: v504
-mainissa, PR #736 squash-mergetty itse CI:n mentyä vihreäksi
-(Monitor-työkalulla). Välicommitit joka kaupungin jälkeen. Haara
-nollattu tuoreeseen mainiin.
+**Erä 13 (Vilna/Oslo/Kööpenhamina, 18 kohdetta) valmis**: v508
+mainissa, PR #742 squash-mergetty itse CI:n mentyä vihreäksi
+(Monitor-työkalulla). Versiokollisio v507→v508 hoidettu itse
+(toinen PR ehti mergetä v507:n ensin — sama kaava kuin erässä 10).
+Amalienborg-disambiguointi tarkistettu (Tanskan kuninkaanlinna, ei
+pelin virheellisesti linkittämä ruotsalainen panimo). Haara nollattu
+tuoreeseen mainiin.
 
-Aloitan seuraavaksi erän 13: Vilna, Oslo, Kööpenhamina — viimeinen erä
-alkuperäisestä pyynnöstäsi. Sama monikuvalinja ja välicommitit.
-Raportoin tänne uudelleen kun erä 13 on valmis tai jos tulee este.
+**TÄLLÄ EUROOPPA ON TÄYSIN VALMIS**: kaikki 37 `maakartat.js`:n
+Euroopan kohdekarttakaupunkia ovat saaneet nähtävyysjutut (tarkistettu
+ohjelmallisesti diffaamalla `KAUPUNKIKARTAT`-avaimet
+`NAHTAVYYSJUTUT`-avaimiin — täsmällinen osuma, ei puuttuvia eikä
+ylimääräisiä). Ainoa `maakartat.js`:n kaupunki ilman nähtävyysjuttua
+on Dubai, joka on Lähi-idän kaupunki eikä kuulu Eurooppa-tehtävään.
 
-**Erä 11 (Kiova/Pietari/Moskova/Odessa) valmis** (edellinen raportti):
+Kirjoitin täsmällisen jatko-/luovutusdokumentin `docs/sonnet2-
+tilanne.md`:ään toista tiliä varten (kaikki 13 erää versionumeroineen
+ja PR-numeroineen, lukittu sisältömalli ja uusi monikuvalinja
+kriteereineen, koko toimiva prosessiputki vaihe vaiheelta, yleiset
+wiki-disambiguointikuviot, "ei sotasisältöä" -linja Venäjän/Ukrainan
+kohteissa, viestintärajoitus (ei create_trigger/send_later),
+kontinkierrätyksen selviytymisohje). Tarkoitus on, että uusi sessio
+voi jatkaa suoraan siitä ilman tätä keskustelua.
+
+**En aloita erää 14 tai Lähi-idän töitä** — jään valmiustilaan kuten
+pyysit. Odotan uutta kuittausta.
+
+**Erä 12 (Tromssa/Dubrovnik/Riika) valmis** (edellinen raportti):
 v502 mainissa, PR #733. Ei sotasisältöä -linja sovellettu.
 
 ---
