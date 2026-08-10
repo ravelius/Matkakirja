@@ -1,4 +1,4 @@
-# Opus 1:n tilanne (päivitetty 10.8.2026, tilinvaihtoa varten)
+# Opus 1:n tilanne (päivitetty 10.8.2026, erän D jälkeen)
 
 Tämä on **luovutuspaperi**: seuraava Opus-sessio toisella tilillä voi
 jatkaa suoraan tästä ilman edellisen session kontekstia. Voimassa olevat
@@ -19,25 +19,38 @@ tarinatekstissä on vika, se raportoidaan Fablelle eikä korjata itse.
 |-----|---------|------|
 | A | Emiraattien 3. sivu + Jordania | v499 mainissa |
 | B | Oman + Qatar | v501 mainissa |
-| C | Egypti + Kuwait | v507 mainissa; Kuwait v511 = **PR #745** |
-| D | **Saudi-Arabia + Bahrain** | **ei aloitettu — tästä jatketaan** |
+| C | Egypti + Kuwait | v507 ja v511 mainissa |
+| D | Saudi-Arabia | **v515 mainissa (#754)** |
+| D | **Bahrain** | **JUMISSA — ei lautaa, ks. alla** |
 
-Kuwaitin PR #745 (`claude/country-name-page-titles-1uegdu`) odotti CI:tä
-tätä kirjoitettaessa. **Tarkista ensimmäisenä, onko se mainissa.** Jos
-se on auki eikä siinä ole punaista, mergeä se squashina; jos siinä on
-versiotörmäys, kaava on kohdassa 6. Versionumero vaihtui kahdesti
-kesken erän (v510 meni kahdesti toiselle sessiolle), joten älä luota
-numeroon vaan katso `js/muutokset.js`:n ylin rivi.
+Lisäksi mainissa on **v514 (#752)**: tekijämerkintöjen lupa-ajo
+kaikkien pakettien yli, ks. kohta 4.
 
-## 2. Erä D: mitä on jo tehty, mitä puuttuu
+## 2. Erä D: Saudi valmis, Bahrain odottaa päätöstä
 
-Erä D:tä **ei ole aloitettu** — omistajan ohje oli jäädä valmiuteen
-tilinvaihdon ajaksi. Taustatutkimus oli käynnissä sulkuhetkellä, ja sen
-tulokset ovat vain edellisen session kontossa, eli **ne on tehtävä
-uudestaan.** Se ei ole iso työ: agenttiajo kartoittaa aiheet ja
-tarkistaa faktat noin puolessa tunnissa.
+**Saudi-Arabia (v515)** sai kolme sivua: `kalliot` (Hegra, Jubbahin
+kalliopiirrokset, AlUlan vanha kaupunki), `vuoret` (Asirin vuoristo,
+savitornitalot, al-qatt al-asiri) ja `meri` (Farasanin saaristo,
+korallikivi, papukaijakala ja hareed-juhla). Rub al-Khali jätettiin
+tietoisesti pois: aavikkosivu on jo ARE:lla, QAT:lla ja KWT:lla.
+Fablelta on kysytty, halutaanko se silti.
 
-Fablen antamat rajaukset erälle D, sitovina:
+**Bahrain on valmis mutta liittämättä.** Syy ei ole sisällössä:
+
+- Bahrainilla ei ole maamuotoa yhdelläkään laudalla
+  (`middleeast-countries.js` 12 maata, `maailmankartta.js` 84 maata),
+  eikä laudalla ole yhtään Bahrainin kaupunkia.
+- `avaaMaalehti('BHR')` palaa heti rivillä `if (!maa) return;`.
+- `tests/maa-otsikot.test.mjs` kaatuu liittämisen jälkeen:
+  *"BHR: maalla on aihesivuja mutta ei nimeä millään laudalla"*.
+
+Valmis sisältö on **`docs/erad-bahrain-valmis.json`** (kaksi sivua,
+kuusi juttua, kuvat katsottu, lähteet Commonsin API:sta). Se liitetään
+sellaisenaan heti kun Fable päättää esitystavan ja BHR saa
+lautageometrian — se tiedosto on Opus 2:n kaistaa, älä koske siihen
+itse. **Älä aloita erää E ennen kuin Fable on vastannut tähän.**
+
+Fablen antamat rajaukset erälle D, sitovina (yhä voimassa):
 
 - **Saudi-Arabia: EI Mekkaa eikä Medinaa eikä pyhiinvaellusta.** Pyhät
   kaupungit tulevat myöhemmin omana sivutyyppinään, ja **Fable
@@ -103,10 +116,25 @@ luettava eikä pelkkä virhelista: loppuun jää tahallisia eroja
 jää noin 20 riviä kolmesta tuhannesta kuvasta, ja keksitty nimi erottuu
 siitä heti.
 
-**Avoin ehdotus Fablelle:** muidenkin sessioiden kirjoittamissa
-paketeissa on käsin kirjoitettuja lähdemerkintöjä. Ehdotin, että ne
-ajetaan saman työkalun läpi, mutta **en koskenut niihin ilman lupaa.**
-Jos Fable antaa luvan, ajo on nopea.
+**Lupa-ajo on tehty (v514, #752).** Omistaja antoi 10.8. luvan ajaa
+tarkistin kaikkien pakettien yli. Tulos ja se, mitä siitä opittiin:
+
+- **32 kuvaa `europe-valokuvat.js`:ssä oli kokonaan ilman tekijää** —
+  koko merkintä oli `lahde: 'CC BY-SA 4.0'`. Nämä olivat pahin löydös,
+  eivät väärät nimet.
+- `lisaa-tekijat.mjs`:n tunnistus katsoi vain merkinnän ALKUA, ja
+  paketeissa on **kolme eri kenttäjärjestystä** (tekijä alussa,
+  suluissa tai lopussa). Sääntö meni väärin molempiin suuntiin: se
+  ohitti tekijättömät JA olisi kirjoittanut nimen toiseen kertaan 155
+  merkintään, jos työkalu olisi ajettu sellaisenaan `--kirjoita`.
+  Korjattu: järjestystä ei enää katsota lainkaan.
+- **Aja aina kuivaharjoitus ja LASKE rivit ennen `--kirjoita`.** Tuo
+  155 olisi mennyt läpi hiljaa.
+
+Jäljelle jää kaksi asiaa, jotka ovat Fablella eivätkä tällä kaistalla:
+neljä kuvaa kielletyllä lisenssillä (FAL/GFDL, `africa-kulttuuri.js`
+ja `asia-lisat-valokuvat.js`) ja 383 PD/CC0-kuvaa ilman tekijää (ei
+rikkomus).
 
 ## 5. Työkalut ja se, mitä niistä katosi
 
@@ -149,6 +177,32 @@ tekivät, tärkeysjärjestyksessä:
    `/opt/pw-browsers/chromium`. Noden fetch tarvitsee
    `NODE_USE_ENV_PROXY=1`.
 
+## 5b. ÄLÄ aja tools/fetch-photos.mjs kevyesti
+
+Se ei hae vain uusia kuvia. Se lukee **kaikki** `tiedosto:`-viittaukset
+js/packs-kansiosta ja hakee jokaisen, jota ei vielä ole paikallisesti.
+Paikallisia kopioita on 147, mutta viittauksia noin 3 000 — eli ajo
+lataa reiluun tuntiin noin 2 900 kuvaa ja paisuttaa repon. Ajoin sen
+kerran vahingossa neljän kuvan vaihdon yhteydessä ja jouduin
+keskeyttämään sen 1 100 tiedoston kohdalla ja siivoamaan
+`git clean -fd assets/valokuvat/`.
+
+Kun vaihdat yksittäisen kuvan, jolla on paikallinen kopio:
+
+1. hae uusi kuva käsin `Special:FilePath/<nimi>?width=1000`
+   kansioon `assets/valokuvat/` työkalun nimeämissäännöllä
+   (pienet kirjaimet, ei-kirjaimet viivoiksi, enintään 60 merkkiä),
+2. `git rm` vanha tiedosto,
+3. vaihda sen rivi `js/packs/valokuvat-paikalliset.js`:ssä.
+
+Tiedostossa lukee "Älä muokkaa käsin", ja se pitää paikkansa koko
+tiedoston uudelleengeneroinnista — kahden rivin vaihto on silti
+turvallisempi kuin 2 900 kuvan lataus.
+
+**Paikallinen kopio on osa lisenssiä.** Jos kuvan lisenssi on
+kielletty, pelkkä viittauksen vaihto ei riitä: repo levittää yhä
+tiedostoa `assets/valokuvat`-kansiosta. Poista myös tiedosto.
+
 ## 6. Julkaisukaava
 
     git fetch origin main            # VASTA tämän jälkeen versionumero
@@ -180,12 +234,46 @@ alle) ja pushataan omalle haaralle.
 2. **Yksi menovinkkirivi ilman kuvaa** (245/246). Tietoinen valinta:
    riville ei löytynyt kuvaa, joka olisi ollut oikeasta maasta ja
    vapaalla lisenssillä.
-3. **Kuvaduplikaatteja on 13** (`node /tmp/dup-kaikki.mjs` -tyylinen
-   ajo kertoo tuoreen luvun). Omat on purettu; loput ovat syntyneet
-   nähtävyysjuttuerissä, mm. `Baščaršija.jpg` ja Latin Bridge
-   (Sarajevo). Nämä on raportoitu Fablelle, ei omalla kaistalla.
-   Hyväksytyt duplikaatit ja niiden perustelut ovat
-   docs/kuvaduplikaatit.md:ssä.
+3. **Kuvaduplikaatteja on 17** (10.8.2026 mitattu; oli 13). Omat on
+   purettu; loput ovat syntyneet nähtävyysjuttuerissä, mm.
+   `Baščaršija.jpg`, Latin Bridge, Gedimino pilis ja Vilnan yliopisto.
+   Nämä on raportoitu Fablelle, ei omalla kaistalla. Hyväksytyt
+   duplikaatit ja perustelut ovat docs/kuvaduplikaatit.md:ssä.
+4. **Kohderyhmä on 13+ eikä lapset** (omistajan päätös 10.8.2026,
+   v512). Erän D tekstit on käyty läpi tätä vasten. Uusia tekstejä
+   kirjoittaessa: toteava ja numeropitoinen, ei selittävä.
+
+## 7b. Tarkastus eri silmin — tee tämä ENNEN mergeä
+
+Ultracode on käytössä, ja **Fable on hyväksynyt tämän vakiotyötavaksi
+10.8.2026: sama ajo tehdään jokaiselle uudelle maalle ENNEN mergeä.**
+Se ei ole valinnainen laadunparannus vaan osa julkaisukaavaa. Ajoin Saudi-sivujen
+yli kolme agenttia sen jälkeen, kun sisältö oli jo mainissa, ja ne
+löysivät 5 asiavirhettä ja 6 väärää kuvatekstiä. Yksi selite väitti
+seinissä kivirivejä, joita kuvassa ei ole — ja sivun minitehtävä kysyi
+juuri niistä.
+
+**Olin katsonut ne kuvat itse silmällä.** En silti nähnyt puuttuvaa
+piirrettä, koska tiesin mitä siellä pitäisi olla. Siksi oma tarkistus
+huolellisemmin ei korvaa tätä.
+
+Jako, joka toimi (kolme rinnakkaista agenttia, ~11 min):
+
+1. **Kuvat ja selitteet:** lataa jokainen kuva, katso se, vertaa
+   selitteeseen. Käske etsimään: selite väittää jotain mitä kuvassa ei
+   näy, kuvassa on jotain häiritsevää jota selite ei mainitse, kuva ei
+   esitä sitä mitä otsikko lupaa. Pyydä katsomaan myös 1200 px:n
+   rajauksina — 600 px ei riitä pienten piirteiden toteamiseen.
+2. **Faktat:** jokainen numero ja vuosiluku alkulähteestä.
+   **Unesco-kohteiden luvut Unescolta, EI Wikipediasta** — Hegran
+   hautaluku oli väärä juuri siksi, ja Wikipedia oli ristiriidassa
+   itsensä kanssa samassa artikkelissa.
+3. **Kieli ja rekisteri:** kohderyhmä 13+, verrokkina naapurimaiden
+   lohkot samasta tiedostosta.
+
+Älä ota agentin sanaa suoraan: tarkista vakavimmat löydöt itse ennen
+korjausta. Kaikki kolme agenttia olivat tässä erässä oikeassa, mutta
+yksi väite ("kaunisteltu") oli makuasia eikä virhe.
 
 ## 8. Yksi työtapa, joka kannattaa periä
 
