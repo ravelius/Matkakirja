@@ -17,8 +17,8 @@ osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
   `session_01RT3ucdBD6Pt48BP75qvjKw` (kokoava koko Euroopan QA,
   käynnistetty heti; HUOM 1. sessio jäi ilman lähderepoa, tulkitsi
   jälkikäteisen add_repo-ohjeen epäluotettavaksi ja arkistoitiin —
-  OPPI: anna tiimisessioille AINA source_url create_sessionissa,
-  uusi Sonnet 1 on session_01Rka2va6Mm1N9RiBg4ZJkQm), Fable max
+  HUOM: tämä kohta vanheni — source_url osoittautui myöhemmin
+  itse viaksi, ks. RATKAISTU ~11:50Z -kohta), Fable max
   -apusessio
   `session_01U8NqxuC5RCoMozxGqDzEJm` (omistajan tilaus: syväajattelu
   vaikeisiin pulmiin; omistaja kytkee Max-tilan UI:sta). Opus 2 ja
