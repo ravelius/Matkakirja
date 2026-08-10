@@ -89,3 +89,15 @@ kuka sen tekee. Voimassa olevat roolit: docs/roolitus.md.
    etusivu näyttää jo kymmenen tuoreinta julkaisua muutoslokista
    automaattisesti; roolikohtainen tilannetaulu pysyy käsin
    kirjoitettuna, koska se on tulkintaa eikä dataa.
+
+## Sanasto: valokuvapulma (nimetty 10.8.2026)
+
+**Valokuvapulma** = isoisän pulma, jossa vastausvaihtoehdot ovat
+OIKEITA VALOKUVIA piirrosten sijaan: kysymys nojaa isoisän
+luonnokseen tai merkintään, ja pelaaja valitsee valokuvista sen,
+joka vastaa luonnosta. Eri asia kuin *valokuvakysymys* ("mikä
+paikka tämä on" -muoto). Kuvat kuratoidaan Commonsista samalla
+lisenssi- ja silmätarkistuskurilla kuin muutkin kuvat, ja ne
+kulkevat peilin kautta. Pilotti: Ateenan pylväspulma (Fable tekee
+ensimmäisen kierroksen; monistus muihin pulmiin vasta hyväksytyn
+mallin jälkeen).
