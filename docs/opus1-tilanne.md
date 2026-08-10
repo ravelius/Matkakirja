@@ -177,6 +177,32 @@ tekivät, tärkeysjärjestyksessä:
    `/opt/pw-browsers/chromium`. Noden fetch tarvitsee
    `NODE_USE_ENV_PROXY=1`.
 
+## 5b. ÄLÄ aja tools/fetch-photos.mjs kevyesti
+
+Se ei hae vain uusia kuvia. Se lukee **kaikki** `tiedosto:`-viittaukset
+js/packs-kansiosta ja hakee jokaisen, jota ei vielä ole paikallisesti.
+Paikallisia kopioita on 147, mutta viittauksia noin 3 000 — eli ajo
+lataa reiluun tuntiin noin 2 900 kuvaa ja paisuttaa repon. Ajoin sen
+kerran vahingossa neljän kuvan vaihdon yhteydessä ja jouduin
+keskeyttämään sen 1 100 tiedoston kohdalla ja siivoamaan
+`git clean -fd assets/valokuvat/`.
+
+Kun vaihdat yksittäisen kuvan, jolla on paikallinen kopio:
+
+1. hae uusi kuva käsin `Special:FilePath/<nimi>?width=1000`
+   kansioon `assets/valokuvat/` työkalun nimeämissäännöllä
+   (pienet kirjaimet, ei-kirjaimet viivoiksi, enintään 60 merkkiä),
+2. `git rm` vanha tiedosto,
+3. vaihda sen rivi `js/packs/valokuvat-paikalliset.js`:ssä.
+
+Tiedostossa lukee "Älä muokkaa käsin", ja se pitää paikkansa koko
+tiedoston uudelleengeneroinnista — kahden rivin vaihto on silti
+turvallisempi kuin 2 900 kuvan lataus.
+
+**Paikallinen kopio on osa lisenssiä.** Jos kuvan lisenssi on
+kielletty, pelkkä viittauksen vaihto ei riitä: repo levittää yhä
+tiedostoa `assets/valokuvat`-kansiosta. Poista myös tiedosto.
+
 ## 6. Julkaisukaava
 
     git fetch origin main            # VASTA tämän jälkeen versionumero
@@ -219,8 +245,9 @@ alle) ja pushataan omalle haaralle.
 
 ## 7b. Tarkastus eri silmin — tee tämä ENNEN mergeä
 
-Ultracode on käytössä (Fablen ohje 10.8.2026), eli rinnakkaiset
-tarkastusagentit ovat sallittuja. **Käytä niitä.** Ajoin Saudi-sivujen
+Ultracode on käytössä, ja **Fable on hyväksynyt tämän vakiotyötavaksi
+10.8.2026: sama ajo tehdään jokaiselle uudelle maalle ENNEN mergeä.**
+Se ei ole valinnainen laadunparannus vaan osa julkaisukaavaa. Ajoin Saudi-sivujen
 yli kolme agenttia sen jälkeen, kun sisältö oli jo mainissa, ja ne
 löysivät 5 asiavirhettä ja 6 väärää kuvatekstiä. Yksi selite väitti
 seinissä kivirivejä, joita kuvassa ei ole — ja sivun minitehtävä kysyi
