@@ -53,18 +53,10 @@ const AFRICA_CITIES = [
     id: 'tanger', name: 'Tanger', wiki: 'Tanger', ambience: 'basaari', x: 189, y: 52, start: true, airport: true,
     // Gibraltarin salmen yli Espanjaan: lyhin hyppy Afrikasta Eurooppaan.
     // Tanger on myös maailmankartalla, joten sinne pääsee takaisin.
-    links: [
-      { pack: 'europe', city: 'madrid', label: 'Euroopan lauta' },
-      { pack: 'maailma', city: 'tanger', label: 'Maailma-lauta' },
-    ],
   },
   {
     id: 'kairo', name: 'Kairo', wiki: 'Kairo', ambience: 'basaari', x: 683, y: 125, start: true, airport: true,
     // Sama kaupunki on myös Lähi-idän laudalla: vaelluksessa tästä jatketaan.
-    links: [
-      { pack: 'middleeast', city: 'kairo', label: 'Lähi-idän lauta' },
-      { pack: 'maailma', city: 'kairo', label: 'Maailma-lauta' },
-    ],
   },
 
   // Karthago täyttää pohjoisrannikon pitkän välin (omistajan laajennus).
@@ -83,7 +75,6 @@ const AFRICA_CITIES = [
   {
     id: 'dakar', name: 'Dakar', wiki: 'Dakar', ambience: 'meri', x: 45, y: 318, airport: true, la: 'start', lx: 16, ly: 5,
     // Etelä-Atlantin ylitys Dakarista Brasiliaan on vanha postilentoreitti.
-    links: [{ pack: 'southamerica', city: 'joaopessoa', label: 'Etelä-Amerikan lauta' }],
   },
   { id: 'sierraleone', name: 'Sierra Leone', wiki: 'Sierra Leone', ambience: 'sademetsa', x: 95, y: 392, la: 'start', lx: 16, ly: 5 },
   { id: 'kappalmas', name: 'Kap Palmas', wiki: 'Cape Palmas', ambience: 'meri', x: 174, y: 440, la: 'end', lx: -16, ly: 5 },
@@ -104,7 +95,6 @@ const AFRICA_CITIES = [
   { id: 'sthelena', name: 'St. Helena', wiki: 'Saint Helena', ambience: 'meri', x: 205, y: 672 },
   {
     id: 'kapkaupunki', name: 'Kapkaupunki', wiki: 'Kapkaupunki', ambience: 'meri', x: 525, y: 915, start: true, airport: true, la: 'end', lx: -22, ly: 6,
-    links: [{ pack: 'maailma', city: 'kapkaupunki', label: 'Maailma-lauta' }],
   },
   // Viktorian putoukset Zambezilla (omistajan laajennus).
   { id: 'viktorianputoukset', name: 'Viktorian putoukset', wiki: 'Victorian putoukset', ambience: 'sademetsa', x: 600, y: 700, la: 'start', lx: 16, ly: 5 },

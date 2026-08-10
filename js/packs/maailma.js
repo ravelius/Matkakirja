@@ -137,7 +137,6 @@ const WORLD_CITIES = [
      */
     links: [
       { pack: 'maailmankartta', city: 'lontoo', label: 'Koko maailma' },
-      { pack: 'europe', city: 'lontoo', label: 'Eurooppa erikseen' },
     ] },
   {
     id: 'newyork', name: 'New York', x: 359, y: 293.2, start: true, airport: true,
@@ -154,7 +153,6 @@ const WORLD_CITIES = [
      */
     links: [
       { pack: 'maailmankartta', city: 'newyork', label: 'Koko maailma' },
-      { pack: 'northamerica', city: 'newyork', label: 'Pohjois-Amerikan lauta' },
     ],
   },
 
@@ -163,8 +161,6 @@ const WORLD_CITIES = [
     // Kairosta laskeudutaan tarkemmille laudoille.
     links: [
       { pack: 'maailmankartta', city: 'kairo', label: 'Koko maailma' },
-      { pack: 'africa', city: 'kairo', label: 'Afrikka erikseen' },
-      { pack: 'middleeast', city: 'kairo', label: 'Lähi-itä erikseen' },
     ],
   },
   {
@@ -172,64 +168,54 @@ const WORLD_CITIES = [
     // Sama kaupunki on myös Etelä-Amerikan laudalla.
     links: [
       { pack: 'maailmankartta', city: 'rio', label: 'Koko maailma' },
-      { pack: 'southamerica', city: 'rio', label: 'Etelä-Amerikan lauta' },
     ],
   },
   {
     id: 'mumbai', name: 'Mumbai', x: 871.5, y: 353.5, airport: true, la: 'start', lx: 16, ly: 5,
     links: [
       { pack: 'maailmankartta', city: 'mumbai', label: 'Koko maailma' },
-      { pack: 'asia', city: 'mumbai', label: 'Aasia erikseen' },
-      { pack: 'middleeast', city: 'dubai', label: 'Lähi-itä erikseen' },
     ],
   },
   {
     id: 'peking', name: 'Peking', x: 959.8, y: 286.6, airport: true, la: 'end', lx: -16, ly: 5,
     links: [
       { pack: 'maailmankartta', city: 'peking', label: 'Koko maailma' },
-      { pack: 'asia', city: 'peking', label: 'Aasia erikseen' },
     ],
   },
   {
     id: 'sydney', name: 'Sydney', x: 1051.9, y: 527.7, airport: true, la: 'end', lx: -16, ly: -10,
     links: [
       { pack: 'maailmankartta', city: 'sydney', label: 'Koko maailma' },
-      { pack: 'oceania', city: 'sydney', label: 'Oseanian lauta' },
     ],
   },
   {
     id: 'moskova', name: 'Moskova', x: 806.6, y: 248.6, airport: true, la: 'start', lx: 16, ly: 5,
     links: [
       { pack: 'maailmankartta', city: 'moskova', label: 'Koko maailma' },
-      { pack: 'europe', city: 'moskova', label: 'Eurooppa erikseen' },
     ],
   },
   {
     id: 'tokio', name: 'Tokio', x: 1029.6, y: 279.5, airport: true, la: 'start', lx: 18, ly: 5,
     links: [
       { pack: 'maailmankartta', city: 'tokio', label: 'Koko maailma' },
-      { pack: 'asia', city: 'tokio', label: 'Aasia erikseen' },
     ],
   },
   {
     id: 'singapore', name: 'Singapore', x: 948.4, y: 402.6, airport: true, la: 'start', lx: 18, ly: -12,
     links: [
       { pack: 'maailmankartta', city: 'singapore', label: 'Koko maailma' },
-      { pack: 'asia', city: 'singapore', label: 'Aasia erikseen' },
     ],
   },
   {
     id: 'kapkaupunki', name: 'Kapkaupunki', x: 750.3, y: 483, airport: true, la: 'end', lx: -18, ly: 10,
     links: [
       { pack: 'maailmankartta', city: 'kapkaupunki', label: 'Koko maailma' },
-      { pack: 'africa', city: 'kapkaupunki', label: 'Afrikka erikseen' },
     ],
   },
   {
     id: 'losangeles', name: 'Los Angeles', x: 286.5, y: 322.3, airport: true, la: 'end', lx: -16, ly: 12,
     links: [
       { pack: 'maailmankartta', city: 'losangeles', label: 'Koko maailma' },
-      { pack: 'northamerica', city: 'losangeles', label: 'Pohjois-Amerikan lauta' },
     ],
   },
   {
@@ -240,7 +226,6 @@ const WORLD_CITIES = [
     // Etelä-Euroopan portti: Eurooppaan pääsee myös Välimeren suunnasta.
     links: [
       { pack: 'maailmankartta', city: 'ateena', label: 'Koko maailma' },
-      { pack: 'europe', city: 'ateena', label: 'Eurooppa erikseen' },
     ],
   },
   {
@@ -251,7 +236,6 @@ const WORLD_CITIES = [
     id: 'tanger', name: 'Tanger', x: 679.8, y: 278.7, airport: true, la: 'end', lx: -16, ly: 10,
     links: [
       { pack: 'maailmankartta', city: 'tanger', label: 'Koko maailma' },
-      { pack: 'africa', city: 'tanger', label: 'Afrikka erikseen' },
     ],
   },
 ];

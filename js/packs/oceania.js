@@ -119,7 +119,6 @@ const OC_CITIES = [
     id: 'sydney', name: 'Sydney', wiki: 'Sydney', ambience: 'kaupunki', x: 568, y: 639, start: true, airport: true,
     la: 'start', lx: 18, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
-    links: [{ pack: 'maailma', city: 'sydney', label: 'Maailma-lauta' }],
   },
   {
     id: 'perth', name: 'Perth', wiki: 'Perth (Länsi-Australia)', ambience: 'kaupunki', x: 123, y: 650, start: true, airport: true,
@@ -158,7 +157,6 @@ const OC_CITIES = [
   {
     id: 'bali', name: 'Bali', wiki: 'Bali', ambience: 'sademetsa', x: 29, y: 306, airport: true, la: 'middle', lx: 0, ly: 28,
     // Indonesian saariketju jatkuu lännessä Aasian laudalle.
-    links: [{ pack: 'asia', city: 'jakarta', label: 'Aasian lauta' }],
   },
 ];
 

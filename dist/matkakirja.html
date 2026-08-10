@@ -12397,7 +12397,6 @@ const WORLD_CITIES = [
      */
     links: [
       { pack: 'maailmankartta', city: 'lontoo', label: 'Koko maailma' },
-      { pack: 'europe', city: 'lontoo', label: 'Eurooppa erikseen' },
     ] },
   {
     id: 'newyork', name: 'New York', x: 359, y: 293.2, start: true, airport: true,
@@ -12414,7 +12413,6 @@ const WORLD_CITIES = [
      */
     links: [
       { pack: 'maailmankartta', city: 'newyork', label: 'Koko maailma' },
-      { pack: 'northamerica', city: 'newyork', label: 'Pohjois-Amerikan lauta' },
     ],
   },
 
@@ -12423,8 +12421,6 @@ const WORLD_CITIES = [
     // Kairosta laskeudutaan tarkemmille laudoille.
     links: [
       { pack: 'maailmankartta', city: 'kairo', label: 'Koko maailma' },
-      { pack: 'africa', city: 'kairo', label: 'Afrikka erikseen' },
-      { pack: 'middleeast', city: 'kairo', label: 'Lähi-itä erikseen' },
     ],
   },
   {
@@ -12432,64 +12428,54 @@ const WORLD_CITIES = [
     // Sama kaupunki on myös Etelä-Amerikan laudalla.
     links: [
       { pack: 'maailmankartta', city: 'rio', label: 'Koko maailma' },
-      { pack: 'southamerica', city: 'rio', label: 'Etelä-Amerikan lauta' },
     ],
   },
   {
     id: 'mumbai', name: 'Mumbai', x: 871.5, y: 353.5, airport: true, la: 'start', lx: 16, ly: 5,
     links: [
       { pack: 'maailmankartta', city: 'mumbai', label: 'Koko maailma' },
-      { pack: 'asia', city: 'mumbai', label: 'Aasia erikseen' },
-      { pack: 'middleeast', city: 'dubai', label: 'Lähi-itä erikseen' },
     ],
   },
   {
     id: 'peking', name: 'Peking', x: 959.8, y: 286.6, airport: true, la: 'end', lx: -16, ly: 5,
     links: [
       { pack: 'maailmankartta', city: 'peking', label: 'Koko maailma' },
-      { pack: 'asia', city: 'peking', label: 'Aasia erikseen' },
     ],
   },
   {
     id: 'sydney', name: 'Sydney', x: 1051.9, y: 527.7, airport: true, la: 'end', lx: -16, ly: -10,
     links: [
       { pack: 'maailmankartta', city: 'sydney', label: 'Koko maailma' },
-      { pack: 'oceania', city: 'sydney', label: 'Oseanian lauta' },
     ],
   },
   {
     id: 'moskova', name: 'Moskova', x: 806.6, y: 248.6, airport: true, la: 'start', lx: 16, ly: 5,
     links: [
       { pack: 'maailmankartta', city: 'moskova', label: 'Koko maailma' },
-      { pack: 'europe', city: 'moskova', label: 'Eurooppa erikseen' },
     ],
   },
   {
     id: 'tokio', name: 'Tokio', x: 1029.6, y: 279.5, airport: true, la: 'start', lx: 18, ly: 5,
     links: [
       { pack: 'maailmankartta', city: 'tokio', label: 'Koko maailma' },
-      { pack: 'asia', city: 'tokio', label: 'Aasia erikseen' },
     ],
   },
   {
     id: 'singapore', name: 'Singapore', x: 948.4, y: 402.6, airport: true, la: 'start', lx: 18, ly: -12,
     links: [
       { pack: 'maailmankartta', city: 'singapore', label: 'Koko maailma' },
-      { pack: 'asia', city: 'singapore', label: 'Aasia erikseen' },
     ],
   },
   {
     id: 'kapkaupunki', name: 'Kapkaupunki', x: 750.3, y: 483, airport: true, la: 'end', lx: -18, ly: 10,
     links: [
       { pack: 'maailmankartta', city: 'kapkaupunki', label: 'Koko maailma' },
-      { pack: 'africa', city: 'kapkaupunki', label: 'Afrikka erikseen' },
     ],
   },
   {
     id: 'losangeles', name: 'Los Angeles', x: 286.5, y: 322.3, airport: true, la: 'end', lx: -16, ly: 12,
     links: [
       { pack: 'maailmankartta', city: 'losangeles', label: 'Koko maailma' },
-      { pack: 'northamerica', city: 'losangeles', label: 'Pohjois-Amerikan lauta' },
     ],
   },
   {
@@ -12500,7 +12486,6 @@ const WORLD_CITIES = [
     // Etelä-Euroopan portti: Eurooppaan pääsee myös Välimeren suunnasta.
     links: [
       { pack: 'maailmankartta', city: 'ateena', label: 'Koko maailma' },
-      { pack: 'europe', city: 'ateena', label: 'Eurooppa erikseen' },
     ],
   },
   {
@@ -12511,7 +12496,6 @@ const WORLD_CITIES = [
     id: 'tanger', name: 'Tanger', x: 679.8, y: 278.7, airport: true, la: 'end', lx: -16, ly: 10,
     links: [
       { pack: 'maailmankartta', city: 'tanger', label: 'Koko maailma' },
-      { pack: 'africa', city: 'tanger', label: 'Afrikka erikseen' },
     ],
   },
 ];
@@ -78035,18 +78019,10 @@ const AFRICA_CITIES = [
     id: 'tanger', name: 'Tanger', wiki: 'Tanger', ambience: 'basaari', x: 189, y: 52, start: true, airport: true,
     // Gibraltarin salmen yli Espanjaan: lyhin hyppy Afrikasta Eurooppaan.
     // Tanger on myös maailmankartalla, joten sinne pääsee takaisin.
-    links: [
-      { pack: 'europe', city: 'madrid', label: 'Euroopan lauta' },
-      { pack: 'maailma', city: 'tanger', label: 'Maailma-lauta' },
-    ],
   },
   {
     id: 'kairo', name: 'Kairo', wiki: 'Kairo', ambience: 'basaari', x: 683, y: 125, start: true, airport: true,
     // Sama kaupunki on myös Lähi-idän laudalla: vaelluksessa tästä jatketaan.
-    links: [
-      { pack: 'middleeast', city: 'kairo', label: 'Lähi-idän lauta' },
-      { pack: 'maailma', city: 'kairo', label: 'Maailma-lauta' },
-    ],
   },
 
   // Karthago täyttää pohjoisrannikon pitkän välin (omistajan laajennus).
@@ -78065,7 +78041,6 @@ const AFRICA_CITIES = [
   {
     id: 'dakar', name: 'Dakar', wiki: 'Dakar', ambience: 'meri', x: 45, y: 318, airport: true, la: 'start', lx: 16, ly: 5,
     // Etelä-Atlantin ylitys Dakarista Brasiliaan on vanha postilentoreitti.
-    links: [{ pack: 'southamerica', city: 'joaopessoa', label: 'Etelä-Amerikan lauta' }],
   },
   { id: 'sierraleone', name: 'Sierra Leone', wiki: 'Sierra Leone', ambience: 'sademetsa', x: 95, y: 392, la: 'start', lx: 16, ly: 5 },
   { id: 'kappalmas', name: 'Kap Palmas', wiki: 'Cape Palmas', ambience: 'meri', x: 174, y: 440, la: 'end', lx: -16, ly: 5 },
@@ -78086,7 +78061,6 @@ const AFRICA_CITIES = [
   { id: 'sthelena', name: 'St. Helena', wiki: 'Saint Helena', ambience: 'meri', x: 205, y: 672 },
   {
     id: 'kapkaupunki', name: 'Kapkaupunki', wiki: 'Kapkaupunki', ambience: 'meri', x: 525, y: 915, start: true, airport: true, la: 'end', lx: -22, ly: 6,
-    links: [{ pack: 'maailma', city: 'kapkaupunki', label: 'Maailma-lauta' }],
   },
   // Viktorian putoukset Zambezilla (omistajan laajennus).
   { id: 'viktorianputoukset', name: 'Viktorian putoukset', wiki: 'Victorian putoukset', ambience: 'sademetsa', x: 600, y: 700, la: 'start', lx: 16, ly: 5 },
@@ -85735,15 +85709,10 @@ const EU_MAP = {
 const EU_CITIES = [
   {
     id: 'lontoo', name: 'Lontoo', wiki: 'Lontoo', ambience: 'kaupunki', x: 209, y: 539, start: true, airport: true,
-    links: [{ pack: 'maailma', city: 'lontoo', label: 'Maailma-lauta' }],
   },
   {
     id: 'istanbul', name: 'Istanbul', wiki: 'Istanbul', ambience: 'basaari', x: 766, y: 815, start: true, airport: true,
     // Sama kaupunki on myös Lähi-idän laudalla ja sillä on oma kaupunkilautansa.
-    links: [
-      { pack: 'middleeast', city: 'istanbul', label: 'Lähi-idän lauta' },
-      { pack: 'istanbul', city: 'lentoasema', label: 'Istanbulin kaupunkilauta' },
-    ],
   },
   { id: 'dublin', name: 'Dublin', wiki: 'Dublin', ambience: 'kaupunki', x: 91, y: 490, la: 'end', lx: -16, ly: 5 },
   { id: 'edinburgh', name: 'Edinburgh', wiki: 'Edinburgh', ambience: 'kaupunki', x: 150, y: 422, la: 'end', lx: -16, ly: 5 },
@@ -85753,7 +85722,6 @@ const EU_CITIES = [
   {
     id: 'madrid', name: 'Madrid', wiki: 'Madrid', ambience: 'kaupunki', x: 140, y: 831, airport: true,
     // Gibraltarin salmen yli Afrikkaan.
-    links: [{ pack: 'africa', city: 'tanger', label: 'Afrikan lauta' }],
   },
   { id: 'barcelona', name: 'Barcelona', wiki: 'Barcelona', ambience: 'satama', x: 244, y: 800, la: 'start', lx: 16, ly: 5 },
   { id: 'granada', name: 'Granada', ambience: 'kaupunki', wiki: 'Granada', x: 142, y: 916, la: 'end', lx: -16, ly: 5 },
@@ -85771,7 +85739,6 @@ const EU_CITIES = [
   { id: 'sisilia', name: 'Sisilia', wiki: 'Sisilia', ambience: 'meri', x: 468, y: 891, la: 'end', lx: -16, ly: 5 },
   {
     id: 'ateena', name: 'Ateena', wiki: 'Ateena', ambience: 'kaupunki', x: 667, y: 895, start: true, airport: true, la: 'end', lx: -16, ly: 5,
-    links: [{ pack: 'maailma', city: 'ateena', label: 'Maailma-lauta' }],
   },
   { id: 'kreeta', name: 'Kreeta', wiki: 'Kreeta', ambience: 'meri', x: 695, y: 964, la: 'middle', lx: 0, ly: 26 },
   // Nimi alapuolelle: Sarajevo on nyt suoraan yläpuolella.
@@ -85791,7 +85758,6 @@ const EU_CITIES = [
   {
     id: 'moskova', name: 'Moskova', wiki: 'Moskova', ambience: 'kaupunki', x: 934, y: 427, start: true, airport: true, la: 'end', lx: -16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla, josta Siperian rata jatkuu itään.
-    links: [{ pack: 'maailma', city: 'moskova', label: 'Maailma-lauta' }],
   },
   // 'Pietari' on fi-wikissä täsmennyssivu (apostoli, kaupunki, etunimi):
   // ilman tarkennetta Lue lisää, kuvat ja peilaus jäivät tyhjiksi.
@@ -85799,7 +85765,6 @@ const EU_CITIES = [
   {
     id: 'helsinki', name: 'Helsinki', wiki: 'Helsinki', ambience: 'metsa', x: 688, y: 303, airport: true, la: 'end', lx: -16, ly: -12,
     // Suomen oma lauta avautuu Helsingistä.
-    links: [{ pack: 'suomi', city: 'helsinki', label: 'Suomen lauta' }],
   },
   { id: 'tallinna', name: 'Tallinna', wiki: 'Tallinna', ambience: 'kaupunki', x: 684, y: 374, la: 'start', lx: 14, ly: 12 },
   { id: 'riika', name: 'Riika', wiki: 'Riika', ambience: 'kaupunki', x: 648, y: 434, la: 'end', lx: -14, ly: 14 },
@@ -85807,7 +85772,6 @@ const EU_CITIES = [
   {
     id: 'tukholma', name: 'Tukholma', wiki: 'Tukholma', ambience: 'satama', x: 558, y: 333, airport: true, la: 'end', lx: -16, ly: 5,
     // Ruotsinlaiva Ahvenanmaalle — Suomen laudalle.
-    links: [{ pack: 'suomi', city: 'maarianhamina', label: 'Suomen lauta (laiva Ahvenanmaalle)' }],
   },
   { id: 'oslo', name: 'Oslo', wiki: 'Oslo', ambience: 'metsa', x: 418, y: 318, la: 'end', lx: -16, ly: 5 },
   { id: 'kobenhavn', name: 'Kööpenhamina', wiki: 'Kööpenhamina', ambience: 'satama', x: 452, y: 429, la: 'start', lx: 16, ly: 5 },
@@ -86159,18 +86123,10 @@ const ME_CITIES = [
   {
     id: 'istanbul', name: 'Istanbul', wiki: 'Istanbul', ambience: 'basaari', x: 125, y: 88, start: true, airport: true,
     // Vaelluksessa Istanbulista voi laskeutua kaupunkitason laudalle.
-    links: [
-      { pack: 'istanbul', city: 'lentoasema', label: 'Istanbulin kaupunkilauta' },
-      { pack: 'europe', city: 'istanbul', label: 'Euroopan lauta' },
-    ],
   },
   {
     id: 'kairo', name: 'Kairo', wiki: 'Kairo', ambience: 'basaari', x: 181, y: 410, start: true, airport: true,
     // Sama kaupunki on myös Afrikan laudalla.
-    links: [
-      { pack: 'africa', city: 'kairo', label: 'Afrikan lauta' },
-      { pack: 'maailma', city: 'kairo', label: 'Maailma-lauta' },
-    ],
   },
 
   { id: 'izmir', name: 'Izmir', wiki: 'İzmir', ambience: 'satama', x: 78, y: 164, la: 'start', lx: 16, ly: 5 },
@@ -86194,7 +86150,6 @@ const ME_CITIES = [
   {
     id: 'dubai', name: 'Dubai', wiki: 'Dubai', ambience: 'satama', x: 782, y: 565, start: true, airport: true, la: 'middle', lx: 0, ly: 26,
     // Persianlahden vaihtoasema: täältä lähtee pitkä lento itään.
-    links: [{ pack: 'maailma', city: 'mumbai', label: 'Maailma-lauta' }],
   },
   { id: 'doha', name: 'Doha', wiki: 'Doha', ambience: 'satama', x: 688, y: 550, la: 'middle', lx: 0, ly: 26 },
   { id: 'kuwait', name: 'Kuwait', wiki: 'Kuwait (kaupunki)', ambience: 'satama', x: 600, y: 430, la: 'end', lx: -16, ly: 5 },
@@ -86204,7 +86159,6 @@ const ME_CITIES = [
   {
     id: 'teheran', name: 'Teheran', wiki: 'Teheran', ambience: 'kaupunki', x: 685, y: 244, airport: true, la: 'start', lx: 16, ly: 5,
     // Sama kaupunki on myös Aasian laudalla.
-    links: [{ pack: 'asia', city: 'teheran', label: 'Aasian lauta' }],
   },
   { id: 'isfahan', name: 'Isfahan', wiki: 'Isfahan', ambience: 'basaari', x: 692, y: 334, la: 'start', lx: 16, ly: 5 },
   { id: 'persepolis', name: 'Persepolis', wiki: 'Persepolis', ambience: 'aavikko', x: 722, y: 414, la: 'start', lx: 16, ly: 5 },
@@ -89029,12 +88983,10 @@ const AS_CITIES = [
     id: 'teheran', name: 'Teheran', wiki: 'Teheran', ambience: 'kaupunki', x: 237, y: 346, start: true, airport: true,
     la: 'start', lx: 16, ly: 5,
     // Sama kaupunki on myös Lähi-idän laudalla.
-    links: [{ pack: 'middleeast', city: 'teheran', label: 'Lähi-idän lauta' }],
   },
   {
     id: 'tokio', name: 'Tokio', wiki: 'Tokio', ambience: 'kaupunki', x: 930, y: 422, start: true, airport: true,
     la: 'start', lx: 18, ly: 5,
-    links: [{ pack: 'maailma', city: 'tokio', label: 'Maailma-lauta' }],
   },
 
   { id: 'jekaterinburg', name: 'Jekaterinburg', wiki: 'Jekaterinburg', ambience: 'kaupunki', x: 406, y: 198, la: 'start', lx: 16, ly: 5 },
@@ -89050,7 +89002,6 @@ const AS_CITIES = [
   {
     id: 'peking', name: 'Peking', wiki: 'Peking', ambience: 'kaupunki', x: 740, y: 429, start: true, airport: true, la: 'end', lx: -16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
-    links: [{ pack: 'maailma', city: 'peking', label: 'Maailma-lauta' }],
   },
   { id: 'soul', name: 'Soul', wiki: 'Soul (kaupunki)', ambience: 'kaupunki', x: 826, y: 436, la: 'start', lx: 16, ly: 5 },
   { id: 'xian', name: 'Xi’an', wiki: 'Xi’an', ambience: 'kaupunki', x: 684, y: 491, la: 'end', lx: -16, ly: 5 },
@@ -89063,14 +89014,12 @@ const AS_CITIES = [
   { id: 'yangon', name: 'Yangon', wiki: 'Yangon', ambience: 'basaari', x: 559, y: 671, la: 'end', lx: -16, ly: 5 },
   {
     id: 'singapore', name: 'Singapore', wiki: 'Singapore', ambience: 'satama', x: 634, y: 851, start: true, airport: true, la: 'middle', lx: 0, ly: 30,
-    links: [{ pack: 'maailma', city: 'singapore', label: 'Maailma-lauta' }],
   },
   { id: 'sumatra', name: 'Sumatra', wiki: 'Sumatra', ambience: 'sademetsa', x: 562, y: 817, la: 'start', lx: 16, ly: 5 },
   { id: 'borneo', name: 'Borneo', wiki: 'Borneo', ambience: 'sademetsa', x: 718, y: 852, la: 'start', lx: 16, ly: 5 },
   {
     id: 'jakarta', name: 'Jakarta', wiki: 'Jakarta', ambience: 'kaupunki', x: 679, y: 958, airport: true, la: 'end', lx: -16, ly: 5,
     // Indonesian saariketju jatkuu idässä Oseanian laudalle.
-    links: [{ pack: 'oceania', city: 'bali', label: 'Oseanian lauta' }],
   },
   { id: 'lhasa', name: 'Lhasa', wiki: 'Lhasa', ambience: 'vuoristo', x: 535, y: 519, la: 'start', lx: 16, ly: 5 },
   { id: 'kathmandu', name: 'Kathmandu', wiki: 'Kathmandu', ambience: 'vuoristo', x: 468, y: 545, la: 'middle', lx: 0, ly: 24 },
@@ -89079,7 +89028,6 @@ const AS_CITIES = [
   {
     id: 'mumbai', name: 'Mumbai', wiki: 'Mumbai', ambience: 'kaupunki', x: 331, y: 591, start: true, airport: true, la: 'end', lx: -16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
-    links: [{ pack: 'maailma', city: 'mumbai', label: 'Maailma-lauta' }],
   },
   { id: 'chennai', name: 'Chennai', wiki: 'Chennai', ambience: 'meri', x: 381, y: 674, la: 'end', lx: -16, ly: 5 },
   { id: 'colombo', name: 'Colombo', wiki: 'Colombo', ambience: 'satama', x: 368, y: 742, la: 'middle', lx: 0, ly: 28 },
@@ -91424,7 +91372,6 @@ const OC_CITIES = [
     id: 'sydney', name: 'Sydney', wiki: 'Sydney', ambience: 'kaupunki', x: 568, y: 639, start: true, airport: true,
     la: 'start', lx: 18, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
-    links: [{ pack: 'maailma', city: 'sydney', label: 'Maailma-lauta' }],
   },
   {
     id: 'perth', name: 'Perth', wiki: 'Perth (Länsi-Australia)', ambience: 'kaupunki', x: 123, y: 650, start: true, airport: true,
@@ -91463,7 +91410,6 @@ const OC_CITIES = [
   {
     id: 'bali', name: 'Bali', wiki: 'Bali', ambience: 'sademetsa', x: 29, y: 306, airport: true, la: 'middle', lx: 0, ly: 28,
     // Indonesian saariketju jatkuu lännessä Aasian laudalle.
-    links: [{ pack: 'asia', city: 'jakarta', label: 'Aasian lauta' }],
   },
 ];
 
@@ -94095,7 +94041,6 @@ const NA_CITIES = [
     id: 'newyork', name: 'New York', wiki: 'New York', ambience: 'kaupunki', x: 818, y: 507, start: true, airport: true,
     la: 'start', lx: 16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
-    links: [{ pack: 'maailma', city: 'newyork', label: 'Maailma-lauta' }],
   },
   {
     id: 'sanfrancisco', name: 'San Francisco', wiki: 'San Francisco', ambience: 'satama', x: 420, y: 546, start: true, airport: true,
@@ -94126,7 +94071,6 @@ const NA_CITIES = [
   { id: 'grandcanyon', name: 'Grand Canyon', wiki: 'Grand Canyon', ambience: 'aavikko', x: 502, y: 583, la: 'middle', lx: 0, ly: -22 },
   {
     id: 'losangeles', name: 'Los Angeles', wiki: 'Los Angeles', ambience: 'kaupunki', x: 445, y: 594, start: true, airport: true, la: 'end', lx: -16, ly: 5,
-    links: [{ pack: 'maailma', city: 'losangeles', label: 'Maailma-lauta' }],
   },
   { id: 'hawaii', name: 'Havaiji', wiki: 'Havaiji', ambience: 'meri', x: 185, y: 628, la: 'middle', lx: 0, ly: 34 },
   { id: 'houston', name: 'Houston', wiki: 'Houston', ambience: 'kaupunki', x: 651, y: 657, la: 'end', lx: -16, ly: 5 },
@@ -94142,7 +94086,6 @@ const NA_CITIES = [
   {
     id: 'panama', name: 'Panama', wiki: 'Panama (kaupunki)', ambience: 'satama', x: 857, y: 871, airport: true, la: 'start', lx: 16, ly: 5,
     // Sama kaupunki on myös Etelä-Amerikan laudalla: kannas yhdistää mantereet.
-    links: [{ pack: 'southamerica', city: 'panama', label: 'Etelä-Amerikan lauta' }],
   },
 ];
 
@@ -96784,7 +96727,6 @@ const SA_CITIES = [
     id: 'panama', name: 'Panama', wiki: 'Panama (kaupunki)', ambience: 'satama', x: 236, y: 98, start: true, airport: true,
     la: 'end', lx: -16, ly: 5,
     // Sama kaupunki on myös Pohjois-Amerikan laudalla: kannas yhdistää mantereet.
-    links: [{ pack: 'northamerica', city: 'panama', label: 'Pohjois-Amerikan lauta' }],
   },
   {
     id: 'buenosaires', name: 'Buenos Aires', wiki: 'Buenos Aires', ambience: 'kaupunki', x: 554, y: 681, start: true, airport: true,
@@ -96806,7 +96748,6 @@ const SA_CITIES = [
     la: 'start', lx: 16, ly: 5,
     // Etelä-Atlantin postilentoreitti Dakariin: Brasilian itäkärki on
     // Afrikkaa lähinnä oleva kohta koko Amerikassa.
-    links: [{ pack: 'africa', city: 'dakar', label: 'Afrikan lauta' }],
   },
   { id: 'salvador', name: 'Salvador', wiki: 'Salvador (Brasilia)', ambience: 'kaupunki', x: 815, y: 411, la: 'start', lx: 16, ly: 5 },
   { id: 'iquitos', name: 'Iquitos', wiki: 'Iquitos', ambience: 'sademetsa', x: 351, y: 273, la: 'end', lx: -16, ly: 5 },
@@ -96821,7 +96762,6 @@ const SA_CITIES = [
     id: 'rio', name: 'Rio de Janeiro', wiki: 'Rio de Janeiro', ambience: 'kaupunki', x: 738, y: 533, start: true, airport: true,
     la: 'start', lx: 16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
-    links: [{ pack: 'maailma', city: 'rio', label: 'Maailma-lauta' }],
   },
   { id: 'saopaulo', name: 'São Paulo', wiki: 'São Paulo', ambience: 'kaupunki', x: 682, y: 525, la: 'end', lx: -6, ly: 20 },
   { id: 'iguazu', name: 'Iguazú', wiki: 'Iguassun putoukset', ambience: 'sademetsa', x: 603, y: 561, la: 'start', lx: 16, ly: 5 },
@@ -99928,7 +99868,7 @@ const OUTLINES = [
 ];
 
 const CITIES = [
-  {"id":"lontoo","name":"Lontoo","wiki":"Lontoo","ambience":"kaupunki","x":5829.5,"y":1324.1,"start":true,"airport":true,"links":[{"pack":"maailma","city":"lontoo","label":"Valitse toinen lauta"}],"la":"end","lx":-20,"ly":5},
+  {"id":"lontoo","name":"Lontoo","wiki":"Lontoo","ambience":"kaupunki","x":5829.5,"y":1324.1,"start":true,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"istanbul","name":"Istanbul","wiki":"Istanbul","ambience":"basaari","x":6796.5,"y":1763,"start":true,"airport":true,"la":"start","lx":17,"ly":-16},
   {"id":"dublin","name":"Dublin","wiki":"Dublin","ambience":"kaupunki","x":5624.7,"y":1240.6,"la":"start","lx":20,"ly":5},
   {"id":"edinburgh","name":"Edinburgh","wiki":"Edinburgh","ambience":"kaupunki","x":5727.1,"y":1121.3,"la":"start","lx":20,"ly":5},
@@ -99949,7 +99889,7 @@ const CITIES = [
   {"id":"venetsia","name":"Venetsia","wiki":"Venetsia","ambience":"satama","x":6248.4,"y":1582.8,"la":"start","lx":20,"ly":5},
   {"id":"rooma","name":"Rooma","wiki":"Rooma","ambience":"kaupunki","x":6249.7,"y":1728.1,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"sisilia","name":"Sisilia","wiki":"Sisilia","ambience":"meri","x":6279.2,"y":1876.1,"la":"end","lx":-20,"ly":5},
-  {"id":"ateena","name":"Ateena","wiki":"Ateena","ambience":"kaupunki","x":6624.7,"y":1882,"start":true,"airport":true,"links":[{"pack":"maailma","city":"ateena","label":"Valitse toinen lauta"}],"la":"end","lx":-17,"ly":-16},
+  {"id":"ateena","name":"Ateena","wiki":"Ateena","ambience":"kaupunki","x":6624.7,"y":1882,"start":true,"airport":true,"la":"end","lx":-17,"ly":-16},
   {"id":"kreeta","name":"Kreeta","wiki":"Kreeta","ambience":"meri","x":6676.8,"y":1984.3,"la":"start","lx":20,"ly":5},
   {"id":"dubrovnik","name":"Dubrovnik","wiki":"Dubrovnik","ambience":"satama","x":6438.9,"y":1694.6,"la":"start","lx":20,"ly":5},
   {"id":"sarajevo","name":"Sarajevo","wiki":"Sarajevo","ambience":"basaari","x":6440.6,"y":1601.6,"la":"start","lx":20,"ly":5},
@@ -99957,7 +99897,7 @@ const CITIES = [
   {"id":"bukarest","name":"Bukarest","wiki":"Bukarest","ambience":"kaupunki","x":6702.8,"y":1625.1,"la":"start","lx":20,"ly":5},
   {"id":"kiova","name":"Kiova","wiki":"Kiova","ambience":"kaupunki","x":6850.3,"y":1370.9,"la":"start","lx":20,"ly":5},
   {"id":"odessa","name":"Odessa","wiki":"Odessa","ambience":"satama","x":6855.6,"y":1536.9,"la":"start","lx":20,"ly":5},
-  {"id":"moskova","name":"Moskova","wiki":"Moskova","ambience":"kaupunki","x":7088.2,"y":1130.2,"start":true,"airport":true,"links":[{"pack":"maailma","city":"moskova","label":"Valitse toinen lauta"}],"la":"start","lx":20,"ly":5},
+  {"id":"moskova","name":"Moskova","wiki":"Moskova","ambience":"kaupunki","x":7088.2,"y":1130.2,"start":true,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"pietari","name":"Pietari","wiki":"Pietari (kaupunki)","ambience":"kaupunki","x":6843.4,"y":928.4,"la":"start","lx":20,"ly":5},
   {"id":"helsinki","name":"Helsinki","wiki":"Helsinki","ambience":"metsa","x":6661.1,"y":901.8,"airport":true,"la":"start","lx":17,"ly":-16},
   {"id":"tallinna","name":"Tallinna","wiki":"Tallinna","ambience":"kaupunki","x":6654.2,"y":1034.5,"la":"start","lx":20,"ly":5},
@@ -99969,8 +99909,8 @@ const CITIES = [
   {"id":"lappi","name":"Lappi","wiki":"Lapin maakunta","ambience":"pohjoinen","x":6690.6,"y":584.6,"la":"start","lx":20,"ly":5},
   {"id":"tromssa","name":"Tromssa","wiki":"Tromssa","ambience":"pohjoinen","x":6468.4,"y":412.6,"la":"start","lx":20,"ly":5},
   {"id":"islanti","name":"Islanti","wiki":"Islanti","ambience":"pohjoinen","x":5574.3,"y":399.1,"la":"middle","lx":0,"ly":-24},
-  {"id":"tanger","name":"Tanger","wiki":"Tanger","ambience":"basaari","x":5643.1,"y":1964.6,"start":true,"airport":true,"links":[{"pack":"maailma","city":"tanger","label":"Valitse toinen lauta"}],"la":"end","lx":-20,"ly":5},
-  {"id":"kairo","name":"Kairo","wiki":"Kairo","ambience":"basaari","x":6874.2,"y":2180.9,"start":true,"airport":true,"links":[{"pack":"maailma","city":"kairo","label":"Valitse toinen lauta"}],"la":"start","lx":20,"ly":5},
+  {"id":"tanger","name":"Tanger","wiki":"Tanger","ambience":"basaari","x":5643.1,"y":1964.6,"start":true,"airport":true,"la":"end","lx":-20,"ly":5},
+  {"id":"kairo","name":"Kairo","wiki":"Kairo","ambience":"basaari","x":6874.2,"y":2180.9,"start":true,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"karthago","name":"Karthago","wiki":"Karthago","ambience":"meri","x":6108.1,"y":1921.9,"la":"start","lx":20,"ly":5},
   {"id":"tripoli","name":"Tripoli","wiki":"Tripoli","ambience":"basaari","x":6274.2,"y":2074.8,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"murzuk","name":"Murzuk","wiki":"Murzuk","ambience":"aavikko","x":6351.7,"y":2384.8,"la":"start","lx":17,"ly":-16},
@@ -99993,7 +99933,7 @@ const CITIES = [
   {"id":"angola","name":"Angola","wiki":"Angola","ambience":"savanni","x":6366.7,"y":3613.4,"la":"start","lx":20,"ly":5},
   {"id":"namib","name":"Namib","wiki":"Namib","ambience":"aavikko","x":6354.2,"y":4012.8,"la":"start","lx":20,"ly":5},
   {"id":"sthelena","name":"St. Helena","wiki":"Saint Helena","ambience":"meri","x":5679.2,"y":3673,"la":"start","lx":20,"ly":5},
-  {"id":"kapkaupunki","name":"Kapkaupunki","wiki":"Kapkaupunki","ambience":"meri","x":6479.2,"y":4360.1,"start":true,"airport":true,"links":[{"pack":"maailma","city":"kapkaupunki","label":"Valitse toinen lauta"}],"la":"start","lx":20,"ly":5},
+  {"id":"kapkaupunki","name":"Kapkaupunki","wiki":"Kapkaupunki","ambience":"meri","x":6479.2,"y":4360.1,"start":true,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"viktorianputoukset","name":"Viktorian putoukset","wiki":"Victorian putoukset","ambience":"sademetsa","x":6666.7,"y":3749.3,"la":"start","lx":20,"ly":5},
   {"id":"kimberley","name":"Kimberley","wiki":"Kimberley (Etelä-Afrikka)","ambience":"savanni","x":6659.2,"y":4195.6,"la":"start","lx":20,"ly":5},
   {"id":"mosambik","name":"Mosambik","wiki":"Mosambikin saari","ambience":"meri","x":6986.2,"y":3871.2,"la":"end","lx":-20,"ly":5},
@@ -100035,7 +99975,7 @@ const CITIES = [
   {"id":"teheran","name":"Teheran","wiki":"Teheran","ambience":"kaupunki","x":7546.7,"y":1968.9,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"isfahan","name":"Isfahan","wiki":"Isfahan","ambience":"basaari","x":7556,"y":2083.8,"la":"start","lx":20,"ly":5},
   {"id":"persepolis","name":"Persepolis","wiki":"Persepolis","ambience":"aavikko","x":7596,"y":2183.9,"la":"start","lx":20,"ly":5},
-  {"id":"tokio","name":"Tokio","wiki":"Tokio","ambience":"kaupunki","x":10490,"y":1968.9,"start":true,"airport":true,"links":[{"pack":"maailma","city":"tokio","label":"Valitse toinen lauta"}],"la":"start","lx":20,"ly":5},
+  {"id":"tokio","name":"Tokio","wiki":"Tokio","ambience":"kaupunki","x":10490,"y":1968.9,"start":true,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"jekaterinburg","name":"Jekaterinburg","wiki":"Jekaterinburg","ambience":"kaupunki","x":7853.3,"y":1081.3,"la":"start","lx":20,"ly":5},
   {"id":"astana","name":"Astana","wiki":"Astana","ambience":"savanni","x":8213.3,"y":1337.6,"la":"start","lx":20,"ly":5},
   {"id":"novosibirsk","name":"Novosibirsk","wiki":"Novosibirsk","ambience":"pohjoinen","x":8596.7,"y":1165.8,"la":"middle","lx":0,"ly":-24},
@@ -100046,7 +99986,7 @@ const CITIES = [
   {"id":"sahalin","name":"Sahalin","wiki":"Sahalin","ambience":"meri","x":10590,"y":1390.2,"la":"start","lx":20,"ly":5},
   {"id":"vladivostok","name":"Vladivostok","wiki":"Vladivostok","ambience":"satama","x":10216.7,"y":1667.2,"la":"start","lx":20,"ly":5},
   {"id":"ulanbator","name":"Ulan Bator","wiki":"Ulan Bator","ambience":"savanni","x":9396.7,"y":1522.7,"la":"start","lx":20,"ly":5},
-  {"id":"peking","name":"Peking","wiki":"Peking","ambience":"kaupunki","x":9713.3,"y":1806.8,"start":true,"airport":true,"links":[{"pack":"maailma","city":"peking","label":"Valitse toinen lauta"}],"la":"end","lx":-20,"ly":5},
+  {"id":"peking","name":"Peking","wiki":"Peking","ambience":"kaupunki","x":9713.3,"y":1806.8,"start":true,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"soul","name":"Soul","wiki":"Soul (kaupunki)","ambience":"kaupunki","x":10066.7,"y":1896.3,"la":"middle","lx":0,"ly":32},
   {"id":"xian","name":"Xi’an","wiki":"Xi’an","ambience":"kaupunki","x":9463.3,"y":2021.8,"la":"middle","lx":0,"ly":-24},
   {"id":"shanghai","name":"Shanghai","wiki":"Shanghai","ambience":"satama","x":9853.3,"y":2122.2,"airport":true,"la":"start","lx":17,"ly":26},
@@ -100056,7 +99996,7 @@ const CITIES = [
   {"id":"hanoi","name":"Hanoi","wiki":"Hanoi","ambience":"kaupunki","x":9360,"y":2501.2,"la":"middle","lx":0,"ly":-24},
   {"id":"bangkok","name":"Bangkok","wiki":"Bangkok","ambience":"basaari","x":9183.3,"y":2748.6,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"yangon","name":"Yangon","wiki":"Yangon","ambience":"basaari","x":9040,"y":2646.3,"la":"start","lx":20,"ly":5},
-  {"id":"singapore","name":"Singapore","wiki":"Singapore","ambience":"satama","x":9286.7,"y":3151.5,"start":true,"airport":true,"links":[{"pack":"maailma","city":"singapore","label":"Valitse toinen lauta"}],"la":"start","lx":17,"ly":-16},
+  {"id":"singapore","name":"Singapore","wiki":"Singapore","ambience":"satama","x":9286.7,"y":3151.5,"start":true,"airport":true,"la":"start","lx":17,"ly":-16},
   {"id":"sumatra","name":"Sumatra","wiki":"Sumatra","ambience":"sademetsa","x":9086.7,"y":3071.4,"la":"end","lx":-20,"ly":5},
   {"id":"borneo","name":"Borneo","wiki":"Borneo","ambience":"sademetsa","x":9510,"y":3159.8,"la":"start","lx":20,"ly":5},
   {"id":"jakarta","name":"Jakarta","wiki":"Jakarta","ambience":"kaupunki","x":9400,"y":3425.1,"airport":true,"la":"start","lx":20,"ly":5},
@@ -100064,14 +100004,14 @@ const CITIES = [
   {"id":"kathmandu","name":"Kathmandu","wiki":"Kathmandu","ambience":"vuoristo","x":8666.7,"y":2285.8,"la":"start","lx":20,"ly":5},
   {"id":"delhi","name":"Delhi","wiki":"Delhi","ambience":"basaari","x":8383.3,"y":2231.8,"airport":true,"la":"middle","lx":0,"ly":-24},
   {"id":"kolkata","name":"Kolkata","wiki":"Kalkutta","ambience":"basaari","x":8780,"y":2445.3,"la":"start","lx":20,"ly":5},
-  {"id":"mumbai","name":"Mumbai","wiki":"Mumbai","ambience":"kaupunki","x":8263.3,"y":2567.1,"start":true,"airport":true,"links":[{"pack":"maailma","city":"mumbai","label":"Valitse toinen lauta"}],"la":"start","lx":20,"ly":5},
+  {"id":"mumbai","name":"Mumbai","wiki":"Mumbai","ambience":"kaupunki","x":8263.3,"y":2567.1,"start":true,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"chennai","name":"Chennai","wiki":"Chennai","ambience":"meri","x":8496.7,"y":2762.2,"la":"start","lx":20,"ly":5},
   {"id":"colombo","name":"Colombo","wiki":"Colombo","ambience":"satama","x":8516.7,"y":2961,"la":"start","lx":20,"ly":5},
   {"id":"karachi","name":"Karachi","wiki":"Karachi","ambience":"satama","x":8070,"y":2360.7,"la":"end","lx":-20,"ly":5},
   {"id":"kabul","name":"Kabul","wiki":"Kabul","ambience":"vuoristo","x":8140,"y":2014.3,"la":"start","lx":20,"ly":5},
   {"id":"samarkand","name":"Samarkand","wiki":"Samarkand","ambience":"basaari","x":8063.3,"y":1814.7,"la":"start","lx":17,"ly":-16},
   {"id":"kashgar","name":"Kašgar","wiki":"Kašgar","ambience":"basaari","x":8363.3,"y":1822.5,"la":"middle","lx":0,"ly":-24},
-  {"id":"newyork","name":"New York","wiki":"New York","ambience":"kaupunki","x":3360,"y":1767.4,"start":true,"airport":true,"links":[{"pack":"maailma","city":"newyork","label":"Valitse toinen lauta"}],"la":"end","lx":-20,"ly":5},
+  {"id":"newyork","name":"New York","wiki":"New York","ambience":"kaupunki","x":3360,"y":1767.4,"start":true,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"sanfrancisco","name":"San Francisco","wiki":"San Francisco","ambience":"satama","x":1760,"y":1884.7,"start":true,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"nome","name":"Nome","wiki":"Nome","ambience":"pohjoinen","x":346.7,"y":687.8,"la":"end","lx":-20,"ly":5},
   {"id":"anchorage","name":"Anchorage","wiki":"Anchorage","ambience":"pohjoinen","x":836.7,"y":865.4,"airport":true,"la":"middle","lx":0,"ly":-24},
@@ -100095,7 +100035,7 @@ const CITIES = [
   {"id":"denver","name":"Denver","wiki":"Denver","ambience":"vuoristo","x":2333.3,"y":1814.7,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"santafe","name":"Santa Fe","wiki":"Santa Fe (New Mexico)","ambience":"ylanko","x":2293.3,"y":2010.5,"la":"start","lx":20,"ly":5},
   {"id":"grandcanyon","name":"Grand Canyon","wiki":"Grand Canyon","ambience":"aavikko","x":2096.7,"y":1953.7,"la":"middle","lx":0,"ly":-24},
-  {"id":"losangeles","name":"Los Angeles","wiki":"Los Angeles","ambience":"kaupunki","x":1893.3,"y":2025.5,"start":true,"airport":true,"links":[{"pack":"maailma","city":"losangeles","label":"Valitse toinen lauta"}],"la":"start","lx":17,"ly":26},
+  {"id":"losangeles","name":"Los Angeles","wiki":"Los Angeles","ambience":"kaupunki","x":1893.3,"y":2025.5,"start":true,"airport":true,"la":"start","lx":17,"ly":26},
   {"id":"hawaii","name":"Havaiji","wiki":"Havaiji","ambience":"meri","x":623.3,"y":2536,"la":"end","lx":-20,"ly":5},
   {"id":"houston","name":"Houston","wiki":"Houston","ambience":"kaupunki","x":2651,"y":2178,"la":"end","lx":-20,"ly":5},
   {"id":"neworleans","name":"New Orleans","wiki":"New Orleans","ambience":"satama","x":2819.8,"y":2171.9,"airport":true,"la":"end","lx":-20,"ly":5},
@@ -100129,7 +100069,7 @@ const CITIES = [
   {"id":"lima","name":"Lima","wiki":"Lima","ambience":"kaupunki","x":3280,"y":3626.9,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"santacruz","name":"Santa Cruz","wiki":"Santa Cruz de la Sierra","ambience":"kaupunki","x":3727.3,"y":3810.3,"la":"start","lx":20,"ly":5},
   {"id":"campogrande","name":"Campo Grande","wiki":"Campo Grande","ambience":"savanni","x":4012.7,"y":3902.6,"la":"end","lx":-20,"ly":5},
-  {"id":"rio","name":"Rio de Janeiro","wiki":"Rio de Janeiro","ambience":"kaupunki","x":4386.7,"y":3981.2,"start":true,"airport":true,"links":[{"pack":"maailma","city":"rio","label":"Valitse toinen lauta"}],"la":"start","lx":20,"ly":5},
+  {"id":"rio","name":"Rio de Janeiro","wiki":"Rio de Janeiro","ambience":"kaupunki","x":4386.7,"y":3981.2,"start":true,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"saopaulo","name":"São Paulo","wiki":"São Paulo","ambience":"kaupunki","x":4230,"y":3977.6,"la":"middle","lx":0,"ly":-24},
   {"id":"iguazu","name":"Iguazú","wiki":"Iguassun putoukset","ambience":"sademetsa","x":4018.7,"y":4086.8,"la":"start","lx":20,"ly":5},
   {"id":"portoalegre","name":"Porto Alegre","wiki":"Porto Alegre","ambience":"satama","x":4113.3,"y":4234.8,"la":"start","lx":20,"ly":5},
@@ -100144,7 +100084,7 @@ const CITIES = [
   {"id":"falkland","name":"Falkland","wiki":"Falklandinsaaret","ambience":"meri","x":3863.9,"y":5115.5,"la":"start","lx":20,"ly":5},
   {"id":"puntaarenas","name":"Punta Arenas","wiki":"Punta Arenas","ambience":"satama","x":3453.3,"y":5143.2,"la":"start","lx":20,"ly":5},
   {"id":"caphorn","name":"Kap Horn","wiki":"Kap Horn","ambience":"meri","x":3591.7,"y":5299.2,"la":"start","lx":20,"ly":5},
-  {"id":"sydney","name":"Sydney","wiki":"Sydney","ambience":"kaupunki","x":10866.7,"y":4375,"start":true,"airport":true,"links":[{"pack":"maailma","city":"sydney","label":"Valitse toinen lauta"}],"la":"start","lx":17,"ly":-16},
+  {"id":"sydney","name":"Sydney","wiki":"Sydney","ambience":"kaupunki","x":10866.7,"y":4375,"start":true,"airport":true,"la":"start","lx":17,"ly":-16},
   {"id":"perth","name":"Perth","wiki":"Perth (Länsi-Australia)","ambience":"kaupunki","x":9710,"y":4308.1,"start":true,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"melbourne","name":"Melbourne","wiki":"Melbourne","ambience":"kaupunki","x":10666.7,"y":4519,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"brisbane","name":"Brisbane","wiki":"Brisbane","ambience":"kaupunki","x":10920,"y":4148,"airport":true,"la":"start","lx":17,"ly":26},
@@ -118741,25 +118681,29 @@ const TOPOGRAFIA_KUVA = {
 // kaupungit, reitit, laatat, kysymykset ja teema. Uusi lauta lisätään
 // tekemällä js/packs/-hakemistoon vastaava tiedosto ja listaamalla se tässä.
 
+/*
+ * PELI on yksi lauta: maailmankartta (omistajan päätös 10.8.2026 —
+ * "peli kehitettiin alunperin eri maanosien ympärille, mutta
+ * myöhemmin kaikki yhdistettiin yhdeksi laudaksi; muut laudat
+ * kannattaa poistaa"). Kaikki laudanvaihtoportit on poistettu
+ * pakkojen links-kentistä; ainoa portti on aloitusnäytön (maailma)
+ * kaupungeista maailmankartalle.
+ *
+ * Maanosapakat ovat listassa enää kahdesta syystä: ne ovat
+ * maailmankartan DATAN lähde (kaupungit, kysymykset, aarteet
+ * kootaan niistä), ja työhuoneen/työkalujen katselutila
+ * (?lauta=europe) piirtää niiden kartat. Peli ei voi päätyä niille.
+ * Suomen ja Istanbulin koelaudat poistettiin rekisteristä kokonaan;
+ * tiedostot jäävät repoon mahdollista myöhempää käyttöä varten.
+ *
+ * js/packs/vanhamaailma.js jää repoon: se on yhä tools/-työkalujen
+ * lähde maatunnuksille, mutta peli ei enää lataa sitä.
+ */
 const PACKS = [
   MAAILMA,
-  /*
-   * Maailmankartta KORVASI vanhan maailman (omistajan päätös 3.8.2026).
-   *
-   * Se on sama kartta laajempana: kaikki 143 vanhan maailman kaupunkia,
-   * kaikki 222 reittiä ja samat askelmäärät ovat mukana sellaisinaan, ja
-   * lisäksi Amerikat ja Oseania. Siksi vaihto oli turvallinen — kesken
-   * jäänyt peli siirtyy laudalta toiselle kaupunkitunnuksillaan
-   * (js/main.js loadGame).
-   *
-   * js/packs/vanhamaailma.js jää repoon: se on yhä tools/-työkalujen
-   * lähde maatunnuksille, mutta peli ei enää lataa sitä.
-   */
   MAAILMANKARTTA,
-  // Maanosalaudat jäävät rinnalle: niillä on kullakin oma aarteensa,
-  // kun yhdistetyllä on toistaiseksi yksi.
+  // Vain katselutilaan ja työkaluille — ei pelattavissa:
   AFRICA, EUROPE, ASIA, OCEANIA, NORTHAMERICA, SOUTHAMERICA, MIDDLE_EAST,
-  SUOMI, ISTANBUL,
 ];
 
 function packById(id) {
@@ -140883,6 +140827,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 529, teksti: 'Peli on yksi lauta: laudanvaihtoportit ja koelaudat pois' },
   { v: 528, teksti: 'Laatta joka kaupunkiin, maailmankartalle mantereiden aarteet' },
   { v: 527, teksti: 'Bahrainille helmien ja muinaisuuden aihesivut' },
   { v: 526, teksti: 'Bahrain Lähi-idän laudalle omana maanaan' },
@@ -141495,7 +141440,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.528';
+const APP_VERSION = '2026-08-09.529';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

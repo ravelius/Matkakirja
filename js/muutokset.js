@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 529, teksti: 'Peli on yksi lauta: laudanvaihtoportit ja koelaudat pois' },
   { v: 528, teksti: 'Laatta joka kaupunkiin, maailmankartalle mantereiden aarteet' },
   { v: 527, teksti: 'Bahrainille helmien ja muinaisuuden aihesivut' },
   { v: 526, teksti: 'Bahrain Lähi-idän laudalle omana maanaan' },

@@ -128,12 +128,10 @@ const AS_CITIES = [
     id: 'teheran', name: 'Teheran', wiki: 'Teheran', ambience: 'kaupunki', x: 237, y: 346, start: true, airport: true,
     la: 'start', lx: 16, ly: 5,
     // Sama kaupunki on myös Lähi-idän laudalla.
-    links: [{ pack: 'middleeast', city: 'teheran', label: 'Lähi-idän lauta' }],
   },
   {
     id: 'tokio', name: 'Tokio', wiki: 'Tokio', ambience: 'kaupunki', x: 930, y: 422, start: true, airport: true,
     la: 'start', lx: 18, ly: 5,
-    links: [{ pack: 'maailma', city: 'tokio', label: 'Maailma-lauta' }],
   },
 
   { id: 'jekaterinburg', name: 'Jekaterinburg', wiki: 'Jekaterinburg', ambience: 'kaupunki', x: 406, y: 198, la: 'start', lx: 16, ly: 5 },
@@ -149,7 +147,6 @@ const AS_CITIES = [
   {
     id: 'peking', name: 'Peking', wiki: 'Peking', ambience: 'kaupunki', x: 740, y: 429, start: true, airport: true, la: 'end', lx: -16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
-    links: [{ pack: 'maailma', city: 'peking', label: 'Maailma-lauta' }],
   },
   { id: 'soul', name: 'Soul', wiki: 'Soul (kaupunki)', ambience: 'kaupunki', x: 826, y: 436, la: 'start', lx: 16, ly: 5 },
   { id: 'xian', name: 'Xi’an', wiki: 'Xi’an', ambience: 'kaupunki', x: 684, y: 491, la: 'end', lx: -16, ly: 5 },
@@ -162,14 +159,12 @@ const AS_CITIES = [
   { id: 'yangon', name: 'Yangon', wiki: 'Yangon', ambience: 'basaari', x: 559, y: 671, la: 'end', lx: -16, ly: 5 },
   {
     id: 'singapore', name: 'Singapore', wiki: 'Singapore', ambience: 'satama', x: 634, y: 851, start: true, airport: true, la: 'middle', lx: 0, ly: 30,
-    links: [{ pack: 'maailma', city: 'singapore', label: 'Maailma-lauta' }],
   },
   { id: 'sumatra', name: 'Sumatra', wiki: 'Sumatra', ambience: 'sademetsa', x: 562, y: 817, la: 'start', lx: 16, ly: 5 },
   { id: 'borneo', name: 'Borneo', wiki: 'Borneo', ambience: 'sademetsa', x: 718, y: 852, la: 'start', lx: 16, ly: 5 },
   {
     id: 'jakarta', name: 'Jakarta', wiki: 'Jakarta', ambience: 'kaupunki', x: 679, y: 958, airport: true, la: 'end', lx: -16, ly: 5,
     // Indonesian saariketju jatkuu idässä Oseanian laudalle.
-    links: [{ pack: 'oceania', city: 'bali', label: 'Oseanian lauta' }],
   },
   { id: 'lhasa', name: 'Lhasa', wiki: 'Lhasa', ambience: 'vuoristo', x: 535, y: 519, la: 'start', lx: 16, ly: 5 },
   { id: 'kathmandu', name: 'Kathmandu', wiki: 'Kathmandu', ambience: 'vuoristo', x: 468, y: 545, la: 'middle', lx: 0, ly: 24 },
@@ -178,7 +173,6 @@ const AS_CITIES = [
   {
     id: 'mumbai', name: 'Mumbai', wiki: 'Mumbai', ambience: 'kaupunki', x: 331, y: 591, start: true, airport: true, la: 'end', lx: -16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
-    links: [{ pack: 'maailma', city: 'mumbai', label: 'Maailma-lauta' }],
   },
   { id: 'chennai', name: 'Chennai', wiki: 'Chennai', ambience: 'meri', x: 381, y: 674, la: 'end', lx: -16, ly: 5 },
   { id: 'colombo', name: 'Colombo', wiki: 'Colombo', ambience: 'satama', x: 368, y: 742, la: 'middle', lx: 0, ly: 28 },
