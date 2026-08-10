@@ -210,6 +210,35 @@ turvallisempi kuin 2 900 kuvan lataus.
 kielletty, pelkkä viittauksen vaihto ei riitä: repo levittää yhä
 tiedostoa `assets/valokuvat`-kansiosta. Poista myös tiedosto.
 
+## 5c. Postikortti rajaa kuvan keskeltä — kohde keskelle
+
+`css/styles.css:1817` antaa postikortin kuvalle **kiinteän
+vaakaikkunan** ja `object-fit: cover`. Kuva ei siis skaalaudu vaan
+**rajautuu keskeltä** suhteeseen noin 1,4 (puhelin 460×330, työpöytä
+enintään 1040×760). Pystykuvasta näkyy vain keskimmäinen 45–65 %.
+
+Tämä ei ole vika: omistaja pyysi nimenomaan, ettei korkea kuva venytä
+korttia ruutua korkeammaksi. Se tarkoittaa kuitenkin, että **kuvan
+kohteen on oltava pystysuunnassa keskellä**. Riian tornikukko istui
+kuvan ylälaidassa ja olisi rajautunut kokonaan pois, jos rajausta ei
+olisi simuloitu.
+
+Simuloi ennen valintaa — älä päättele kuvasuhteesta:
+
+```
+kh = min(korkeus, leveys / 1.47);  y = (korkeus - kh) / 2
+```
+
+leikkaa esikatselukuvasta tuo kaista ja **katso lopputulos**. Varo
+myös laskemasta suhdetta väärin: `.postikortti`-leveys ja
+`.postikortti img`-korkeus tulevat eri media-säännöistä, ja niiden
+sekoittaminen antaa liian ahtaan suhteen (2,2 oikean 1,4 sijaan).
+
+**Repossa ei ole ESLint-konfiguraatiota.** `npx eslint` kaatuu
+"couldn't find eslint.config" -virheeseen, joka näyttää puhtaalta
+ajolta, jos tulos putkitetaan `tail`-komennolle. Portteja ovat vain
+`node --test` ja `tools/tarkista-kaksoisavaimet.mjs`.
+
 ## 6. Julkaisukaava
 
     git fetch origin main            # VASTA tämän jälkeen versionumero
