@@ -1,3 +1,120 @@
+# Opus 1 → Fable: ME-lehdet käynnissä — cityCountry korjattu + Iran aloitettu (10.8.2026)
+
+Haara: **`claude/opus1-me-lehdet`**, pohja v554-main. Ei PR:ää, kuten
+pyysit. Kaksi checkpoint-committia. **Kaksi asiaa vaatii päätöksesi
+ennen kuin jatkan** — ne ovat heti alla.
+
+## 1. PÄÄTÖSTÄ VAATIVA: tilauksesi kumoaa oman kaanonpäätöksesi
+
+`middleeast-countries.js`:n otsikkokommentissa luki sanatarkasti:
+
+> KUUSI LAUDAN KOHDETTA PUUTTUU TAHALLAAN kaupunki-maa-taulusta:
+> Jerusalem, Petra, Siinai, Rub al-Khali, Persepolis ja Kappadokia.
+> Ne eivät ole kaupunkeja vaan erikoiskohteita, eivätkä ne saa
+> maa-attribuutiota (**Fablen kaanonpäätös 9.8.2026**) — isoisän
+> päiväkirja puhuu paikasta itsestään eikä valtiosta. Esitystapa on
+> Fablen pöydällä. **ÄLÄ lisää niitä tauluun ilman Fablen päätöstä.**
+
+Tehtävänantosi puhui *puuttuvasta merkinnästä* eli näytti pitävän
+tätä huolimattomuutena, ei päätöksen perumisena. **Tein muutoksen**,
+koska tilaus tulee samalta taholta joka säännön asetti ja käytännön
+peruste on vahva: maailmankartalla näillä viidellä on ollut sama
+maatunnus koko ajan, joten laudat olivat keskenään ristiriidassa.
+Päivitin myös otsikkokommentin, ettei tiedosto ole itsensä kanssa
+ristiriidassa. **Jos kaanonpäätös oli tarkoitus pitää voimassa,
+tämä commit on peruttava** — se on erillinen ja helppo kumota.
+
+**Jerusalem jätettiin ennalleen**, kuten ohjeistit. Perustelu ei ole
+mielipide: sitä ei ole kummallakaan laudalla, eikä laudalla ole
+ISR- tai PSE-muotoa lainkaan. Tunnuksen antaminen olisi kannanotto.
+
+Petra osoittaa nyt Jordaniaan, jolla ei ole muotoa tällä laudalla.
+Tarkistin ettei se riko mitään: maan aihesivut haetaan
+ISO-tunnuksella, ja saapumiskortin minikartta ohittaa muodottoman maan
+omalla vartijallaan (`js/ui.js` piirraMaakartta).
+
+## 2. Mittaukseni poikkeaa tehtävänannosta yhdessä kohdassa
+
+Mittasin kattavuuden itse `maa-kategoriat.js`:stä enkä luottanut
+listaan. **Jordania ei puutu** — sillä on jo kaksi aihetta (vedet,
+rauniot). Petralta puuttui vain cityCountry-rivi, joka on nyt lisätty,
+joten Jordanian lehti aukeaa Petrassa ilman uutta sisältöä.
+
+Oikea puutelista on siis **viisi maata, ei kuusi**: IRN, IRQ, SYR,
+YEM, CYP.
+
+Sivuhavainto: nykyisistä ME-maista useimmilla on vain 2–4 aihetta
+(KWT 2, SAU 3, QAT 2, BHR 2, OMN 2, ARE 4), eli alle tilaamasi 5–6:n
+mitan. Jos mitta on tarkoitus nostaa myös niille, se on oma erillinen
+työnsä.
+
+## 3. Iran: kaksi aihetta valmiina, neljä kesken
+
+**IRN historia** (4 nostoa): Apadanan lahjakulkue-reliefi, Kyroksen
+sylinteri, Kserkseen kalliohauta Naqsh-e Rostamissa, Meybodin
+karavaaniseraabi.
+**IRN rakennukset** (4 nostoa): Naqsh-e Jahanin aukio, Si-o-se-polin
+silta, Yazdin tuulitornit, Sheikh Lotfollahin kupoli.
+
+Kuvat ja lisenssit (kaikki katsottu silmin, tekijät Commonsin API:sta):
+
+| kuva | tekijä | lisenssi |
+|---|---|---|
+| Persepolis stairs of the Apadana relief | Phillip Maiwald (Nikopol) | CC BY-SA 3.0 |
+| Cyrus Cylinder – British Museum | Joyofmuseums | CC BY-SA 4.0 |
+| Xerxes tomb at Naqsh-e Rostam | dynamosquito | CC BY-SA 2.0 |
+| Courtyard of a silk road caravanserail at Meybod | dynamosquito | CC BY-SA 2.0 |
+| Naghshe Jahan Square Isfahan modified | Arad | CC BY-SA 3.0 |
+| Si-o-se-Pol | Reza Haji-pour | CC BY 3.0 |
+| Shish Badgiri, Yazd (DD 01) | Diego Delso | CC BY-SA 4.0 |
+| Isfahan Lotfollah mosque ceiling | Phillip Maiwald (Nikopol) | CC BY-SA 3.0 |
+
+**Kolme kuvaa oli GFDL-kategoriassa** — tarkistin kunkin
+lisenssiwikitekstin: kaikki kolme ovat monilisensoituja
+(`{{self|GFDL|cc-by-sa-3.0…}}`), joten käytämme CC BY-SA 3.0:aa ja
+GFDL-kielto ei esty.
+
+**Yksi ehdokas hylättiin silmätarkistuksessa:** Naqsh-e Rostamin kuvaan
+`Ka'ba-ye Zartosht and Achaemenid Tombs …` on poltettu valokuvaajan
+vesileima ("JULIA MAUDLIN | PHOTO") koko alareunan levyiseksi. Tilalle
+Kserkseen haudan julkisivu.
+
+Toinenkin karsinta tehtiin, ja se liittyy rajaukseesi: Naqsh-e
+Rostamin **tunnetuimmat** reliefit esittävät Shapur I:n voittoa
+roomalaisista keisareista ja Bahram II:n ratsastustaistelua. Ne ovat
+sotasisältöä, joten jätin ne pois, vaikka ne olisivat kuvina hyviä.
+Sama linja koski koko erää: aiheet ovat historiaa, arkkitehtuuria,
+ruokaa, käsityötä ja luontoa.
+
+**Minitehtäväsäännöistä kaksi rikkoutui ensimmäisessä versiossani** ja
+korjattiin: historian otsikko "Kansat kantavat lahjansa" vuoti
+vastauksen, ja rakennusten oikea vaihtoehto oli kahdeksan merkkiä
+pisin. Molemmat ajettiin läpi tarkistimella, joka lukee myös
+ainutkertaisuuden koko pelistä.
+
+## Mitä on vielä tekemättä
+
+- **IRN**: puutarhat, ruoka, käsityö (+ mahdollinen runous). Kuvaehdokkaat
+  on jo haettu ja lisenssitarkistettu puutarhoille (Finin puutarha,
+  Eramin puutarha, qanat Shahdadissa, Chehel Sotoun) — ne odottavat
+  vain silmätarkistusta ja tekstejä.
+- **IRQ, SYR, YEM, CYP**: aloittamatta.
+
+Työ jäi kesken kontekstibudjettiin, ei esteeseen. En halunnut kirjoittaa
+kuvatekstejä kuvista joita en ole katsonut — se on se sääntö, joka on
+tässä erässä jo kerran pelastanut (vesileima).
+
+## Portit
+
+- `node --test tests/*.test.mjs` → **552 pass, 0 fail**, 1 skip
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
+- `node tools/tarkista-maakyltit.mjs` → 13 maata kunnossa
+- Ei uusia kuvaduplikaatteja: jokainen 8 kuvasta esiintyy pelissä kerran
+- Genetiivit: Iranin, Irakin, Syyrian, Jemenin syntyvät säännöstä;
+  Kypros → Kyproksen on jo `MAAN_GENETIIVIT`-taulussa. Ei muutoksia.
+
+---
+
 # Opus 5 → Fable: vuorikohteiden kuvakarusellit
 
 Haara: `claude/opus5-vuorikuvat`. Työ ei koske mainiin eikä nosta

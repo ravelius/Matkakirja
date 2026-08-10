@@ -15253,6 +15253,198 @@ export const MAA_KATEGORIAT = {
    * Jordania: ensimmäinen ME-maa, jolla ei ole vielä menovinkkisivua.
    * Aihesivut tulevat tähän; menovinkit lisätään omana eränään.
    */
+  IRN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Iranin ylängöllä on kirjoitettu, veistetty ja rakennettu '
+          + 'yhtäjaksoisesti kolmetuhatta vuotta. Kuivuus on säilyttänyt '
+          + 'jäljet: kivi ei rapaudu, savi ei liukene, ja hallitsijan käsky '
+          + 'seisoo yhä siinä mihin se hakattiin.',
+      nostot: [
+        {
+          otsikko: 'Kolmekymmentä kansaa portaissa',
+          tiedosto: 'Persepolis stairs of the Apadana relief.jpg',
+          teksti: 'Persepoliksen suurin sali on Apadana, ja sinne noustaan kahta '
+              + 'portaikkoa. Portaiden kylkeen on veistetty kulkue, jossa '
+              + 'valtakunnan kansat tuovat lahjojaan kuninkaalle. Ryhmiä on '
+              + 'kolmisenkymmentä, ja jokainen tunnistetaan asusta: kuka tuo '
+              + 'maljan, kuka kankaan, kuka johtaa kamelia tai vuohta. Kaksi '
+              + 'tutkijaa on käyttänyt näitä rivejä kuin luetteloa siitä, mitä '
+              + 'valtakunnassa valmistettiin. Rakennustyö alkoi noin vuonna 518 '
+              + 'eaa. Dareios I:n käskystä, ja sitä jatkettiin sukupolvien ajan. '
+              + 'Persepolis otettiin maailmanperintöluetteloon vuonna 1979.',
+          selite: 'Kivireliefi läheltä: kolme partaista miestä korkeissa '
+              + 'laskostetuissa hatuissa kulkee oikealle. Ensimmäinen kantaa '
+              + 'kämmenellään matalaa maljaa, toinen korvallista ruukkua ja '
+              + 'pienempää astiaa. Kiven pinta on sinertävän harmaa ja hiottu '
+              + 'sileäksi.',
+          lahde: 'Phillip Maiwald (Nikopol), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Savisylinteri, joka luetaan yhä',
+          tiedosto: 'Cyrus Cylinder - British Museum - Joy of Museums.jpg',
+          teksti: 'Kyroksen sylinteri on noin 23 senttimetriä pitkä savikappale, '
+              + 'johon on painettu nuolenpääkirjoitusta akkadin kielellä. Se '
+              + 'tehtiin sen jälkeen kun Kyros II valloitti Babylonin vuonna 539 '
+              + 'eaa., ja siihen kirjattiin kuninkaan käskyjä: temppelit korjataan '
+              + 'ja pois viedyt jumalankuvat palautetaan koteihinsa. Sylinteri '
+              + 'kaivettiin esiin Babylonin raunioista vuonna 1879, ja se on '
+              + 'nykyään British Museumissa. Sitä on toisinaan kutsuttu maailman '
+              + 'ensimmäiseksi ihmisoikeusjulistukseksi. Museo itse ei allekirjoita '
+              + 'nimitystä: teksti noudattaa vanhaa mesopotamialaista perinnettä, '
+              + 'jossa uusi hallitsija ilmoittaa korjaavansa edeltäjänsä '
+              + 'laiminlyönnit.',
+          selite: 'Tynnyrin muotoinen vaaleanruskea savikappale museon vitriinissä. '
+              + 'Koko pinta on täynnä tiheitä vaakarivejä nuolenpääkirjoitusta, ja '
+              + 'kappaleen keskellä kulkee halkeama. Alareunasta on lohjennut pala '
+              + 'pois.',
+          lahde: 'Joyofmuseums, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Hauta kallion seinässä',
+          tiedosto: 'Xerxes tomb at Naqsh-e Rostam (4615488322).jpg',
+          teksti: 'Naqsh-e Rostamin kalliojyrkänteeseen on veistetty neljä '
+              + 'kuninkaanhautaa ristin muotoisine julkisivuineen. Ne ovat '
+              + 'akhaimenidihallitsijoiden viimeisiä leposijoja noin 2 500 vuoden '
+              + 'takaa; tämä liitetään Kserkses I:een. Julkisivu on veistetty '
+              + 'näyttämään palatsin edustalta: keskellä on pylväikkö ja sen '
+              + 'keskellä ovi, joka johtaa kallion sisään hautakammioon. Ylimmässä '
+              + 'kentässä kuningas seisoo korokkeella, jota valtakunnan kansat '
+              + 'kannattelevat käsivarsillaan. Haudat on hakattu korkealle maasta, '
+              + 'eikä niihin pääse ilman telineitä — juuri siksi niiden sisältö '
+              + 'ryöstettiin vasta myöhemmin.',
+          selite: 'Vaaleaan kallioseinään veistetty ristinmuotoinen julkisivu. '
+              + 'Keskellä on pieni tumma oviaukko pylväiden välissä, sen '
+              + 'yläpuolella kaksi riviä pieniä hahmoja kannattelemassa '
+              + 'korokerakennelmaa. Kallio kohoaa julkisivun ympärillä karkeana ja '
+              + 'halkeilleena.',
+          lahde: 'dynamosquito, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Yöpaikka päivämatkan päässä',
+          tiedosto: 'Courtyard of a silk road caravanserail at Meybod.jpg',
+          teksti: 'Silkkitie ei ollut yksi tie vaan verkosto, ja sen varrelle '
+              + 'rakennettiin karavaaniseraabeja noin päivämatkan välein. Talo on '
+              + 'aina samaa kaavaa: umpinainen tiilimuuri, yksi portti, ja sen '
+              + 'sisällä neliön muotoinen piha holvikaarien ympäröimänä. Kaaren '
+              + 'takana oli koppi kauppiaalle, pihalla tilaa eläimille ja keskellä '
+              + 'vesisäiliö. Meybodin seraabi Yazdin maakunnassa on 1600-luvulta. '
+              + 'Iranissa tällaisia taloja on satoja, ja vuonna 2023 niistä 54 '
+              + 'otettiin yhdessä maailmanperintöluetteloon.',
+          selite: 'Karavaaniseraabin sisäpiha kirkkaassa auringossa. Vaaleasta '
+              + 'tiilestä muurattu kaaririvi kiertää pihaa joka sivulta, ja '
+              + 'keskellä seisoo matala pyöreä tiilirakennelma, jonka kyljessä on '
+              + 'kaareva oviaukko. Piha on tyhjä ja kivetty.',
+          lahde: 'dynamosquito, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Apadanan portaiden reliefissä kansat tekevät?',
+        vaihtoehdot: [
+          'Tuovat lahjoja kuninkaalle',
+          'Rakentavat palatsia',
+          'Kyntävät peltoa',
+          'Odottavat vuoroaan tuomarin luo',
+        ],
+        oikea: 0,
+        fakta: 'Asut ja lahjat erottavat ryhmät toisistaan, joten reliefi toimii '
+            + 'samalla luettelona valtakunnan kansoista.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Kuivassa ja kuumassa maassa rakentaminen on vastaus kahteen '
+          + 'kysymykseen: mistä saadaan varjo ja mistä viileä ilma. Iranilaiset '
+          + 'vastaukset — paksu tiili, holvi, tuulitorni ja allas — ovat '
+          + 'pysyneet samoina vuosisatoja.',
+      nostot: [
+        {
+          otsikko: 'Aukio, joka on suurempi kuin näyttää',
+          tiedosto: 'Naghshe Jahan Square Isfahan modified.jpg',
+          teksti: 'Isfahanin Naqsh-e Jahan on suorakaiteen muotoinen aukio, jota '
+              + 'kiertää kaksikerroksinen kaaririvi. Se rakennettiin 1600-luvun '
+              + 'alussa, ja sen neljälle sivulle avautuu neljä eri asiaa: moskeija, '
+              + 'toinen pienempi moskeija, palatsi ja basaarin portti. Aukio on '
+              + 'noin 160 metriä leveä ja 500 metriä pitkä, eli reilusti suurempi '
+              + 'kuin useimmat Euroopan torit. Alun perin sillä pelattiin poolo, ja '
+              + 'maalitolpat seisovat yhä paikoillaan päädyissä. Aukio otettiin '
+              + 'maailmanperintöluetteloon vuonna 1979.',
+          selite: 'Näkymä holvikaaren alta yli suuren suorakaiteen muotoisen aukion. '
+              + 'Keskellä on nurmikkoa, puurivejä ja suihkulähdealtaita, päädyssä '
+              + 'siniset kupolit ja kaksi minareettia. Oikealla kohoaa '
+              + 'monikerroksinen palatsi, jonka ylin kerros on avoin pylväikkö.',
+          lahde: 'Arad, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Silta, joka on myös pato ja oleskelupaikka',
+          tiedosto: 'Si-o-se-Pol.jpg',
+          teksti: 'Si-o-se-pol tarkoittaa kolmenkymmenenkolmen kaaren siltaa, ja se '
+              + 'ylittää Zayandeh-joen Isfahanissa. Silta valmistui vuonna 1602, ja '
+              + 'se on noin 300 metriä pitkä. Rakennelma tekee kolme asiaa yhtä '
+              + 'aikaa: kannattaa tietä, säätelee veden juoksua patona ja tarjoaa '
+              + 'kulkijalle varjoisan käytävän. Ylempi kerros on holvikäytävä, '
+              + 'jonka ikkuna-aukoista näkee joelle, ja alempi kerros johtaa veden '
+              + 'läpi. Iltaisin sillan kaaret valaistaan, ja isfahanilaiset istuvat '
+              + 'käytävissä juttelemassa.',
+          selite: 'Pitkä tiilisilta hämärän aikaan, kaaret valaistuina keltaisiksi. '
+              + 'Kaksi kerrosta kaaria jatkuu kuvan syvyyteen niin pitkälle kuin '
+              + 'näkee, ja koko rakennelma heijastuu tyynestä vedestä lähes '
+              + 'peilikuvana. Taivas on tummansininen.',
+          lahde: 'Reza Haji-pour, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Torni, joka jäähdyttää ilman koneetta',
+          tiedosto: 'Shish Badgiri, Yazd, Irán, 2016-09-21, DD 01.jpg',
+          teksti: 'Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on '
+              + 'savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja '
+              + 'sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman '
+              + 'viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin '
+              + 'ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös '
+              + 'tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen '
+              + 'vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin '
+              + 'vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.',
+          selite: 'Savenvärinen kujanäkymä Yazdissa: kaksi kahdeksankulmaista '
+              + 'tuulitornia kohoaa matalien kupolikattojen takaa, ja tornien '
+              + 'kyljissä on pystysuoria aukkoja. Etualalla on paksut savimuurit, '
+              + 'sininen ovi ja pari metallista sinkkiä maassa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kupoli, jossa kuvio ei toistu',
+          tiedosto: 'Isfahan Lotfollah mosque ceiling.jpg',
+          teksti: 'Sheikh Lotfollahin moskeija seisoo Naqsh-e Jahanin itälaidalla, ja '
+              + 'sen kupoli on pinnoitettu laatoilla sisältä kokonaan. Kuvio on '
+              + 'riikinkukon pyrstöä muistuttava verkko vinoneliöitä, jotka '
+              + 'pienenevät kupolin laelle päin. Se ei ole yksi kuvio monistettuna: '
+              + 'jokainen kehä on omanlaisensa, koska laatan on kavennuttava sitä '
+              + 'mukaa kuin kupoli kaartuu sisäänpäin. Rakennus valmistui '
+              + '1610-luvulla, eikä siinä ole minareettia eikä pihaa — se '
+              + 'rakennettiin hovin omaksi rukoushuoneeksi eikä suurta väkijoukkoa '
+              + 'varten.',
+          selite: 'Kupolin sisäpinta suoraan alhaalta kuvattuna. Okrankeltaiselle '
+              + 'pohjalle on ladottu tummansinisiä ja valkoisia vinoneliöitä, '
+              + 'joiden sisällä kiertää hienoa kasviornamenttia. Kehät pienenevät '
+              + 'keskustaa kohti, jossa kuvio tiivistyy auringonsäteikön '
+              + 'näköiseksi.',
+          lahde: 'Phillip Maiwald (Nikopol), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten tuulitorni viilentää talon?',
+        vaihtoehdot: [
+          'Johtaa viileän tuulen alas',
+          'Varjostaa katon auringolta',
+          'Kerää sadeveden seiniin',
+          'Puhaltaa keittiön savun pois katolta',
+        ],
+        oikea: 0,
+        fakta: 'Lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu '
+            + 'myös silloin kun ei tuule.',
+      },
+    },
+  ],
   JOR: [
     {
       id: 'vedet',
