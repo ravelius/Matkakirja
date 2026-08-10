@@ -429,3 +429,14 @@ kaaren aarreluenta kattaa paljastuksen äänen kaarilaudoilla.
   poistopushin, GitHub-työkaluissa ei poistoa → omistaja poistaa
   itse UI:sta (kerrottu).
 - Ei jumeja. Kaikki kontit kierrätetty yön aikana vähintään kerran.
+
+## Valokuvapulma tilattu (omistaja 10.8. aamu)
+
+Omistaja tarkensi "uudet pelit" -pyyntönsä: se on parkissa ollut
+pulmien laatuloikka. NIMI SOVITTU: **valokuvapulma** (vaihtoehdot
+oikeita valokuvia, ks. docs/mantereen-resepti.md sanasto). Fable
+tekee Ateenan pylväspulmasta pilotin HETI: pylväskuvat on jo haettu
+ja karsittu scratchpadiin aiemmin (dor/ion/cor-sarjat) — lisenssit
+varmistetaan, kuvat peiliin, quiz-vaihtoehtoihin kuvatuki, testit,
+Playwright, julkaisu. Monistus muihin pulmiin omistajan hyväksynnän
+jälkeen.

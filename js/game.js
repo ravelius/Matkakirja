@@ -1463,6 +1463,9 @@ export class Game {
     const sketch = arvottu?.sketch ?? puzzle.sketch ?? null;
     const options = arvottu?.options ?? puzzle.options;
     const correct = arvottu?.correct ?? puzzle.correct;
+    // Valokuvapulma: vaihtoehdoilla on oikeat valokuvat (rinnakkainen
+    // taulukko), jotka sekoitetaan samalla järjestyksellä kuin tekstit.
+    const kuvat = arvottu?.kuvat ?? puzzle.kuvat ?? null;
 
     const order = this.shuffledOrder(options.length);
     this.quiz = {
@@ -1480,6 +1483,8 @@ export class Game {
       fact: puzzle.fact,
       source: sourceList(puzzle.source),
       options: order.map((i) => options[i]),
+      kuvat: kuvat ? order.map((i) => kuvat[i]) : null,
+      kuvaLahteet: kuvat ? (puzzle.kuvaLahteet ?? null) : null,
       correct: order.indexOf(correct),
       hint: arvottu?.hint ?? puzzle.hint ?? null,
       hintShown: false,

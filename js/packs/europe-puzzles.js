@@ -102,43 +102,71 @@ const piirraPaa = (x, y, tyyli, p) => {
   }
 };
 
+/*
+ * VALOKUVAPULMA (omistajan tilaus 10.8.2026, sanasto
+ * docs/mantereen-resepti.md): vastausvaihtoehdot ovat oikeita
+ * valokuvia piirrosten sijaan. Isoisä piirsi luonnoksen yhdestä
+ * pylväänpäästä; pelaaja etsii valokuvista sen, jossa on sama pää.
+ * Kaikki kolme kuvaa ovat Ateenan omia pylväitä (Erekhtheionin pää
+ * kuvattuna British Museumissa) — tarkistettu Commonsista ja
+ * katsottu silmin, kulkevat peilin kautta kuten muutkin kuvat.
+ */
+const PYLVASKUVAT = [
+  {
+    tyyli: 'doorilainen',
+    tiedosto: 'Parthenon (30276156187).jpg',
+    nimi: 'Parthenonin pylväikkö',
+    lahde: 'Phanatic (CC BY-SA 2.0)',
+  },
+  {
+    tyyli: 'joonialainen',
+    tiedosto: 'Ionic capital from the Erechtheum at the British Museum.jpg',
+    nimi: 'Erekhtheionin pylväänpää',
+    lahde: 'Yair Haklai (CC BY-SA 4.0)',
+  },
+  {
+    tyyli: 'korinttilainen',
+    tiedosto: 'A Corinthian capital (Temple of Olympian Zeus) on August 10, 2022.jpg',
+    nimi: 'Olympieionin pylväs',
+    lahde: 'George E. Koronaios (CC BY-SA 4.0)',
+  },
+  {
+    /*
+     * Neljäs vaihtoehto on harhautus kuten vanhan version
+     * "roomalainen": karyatidi on Erekhtheionin pylväs, joka on
+     * kokonainen naishahmo — se ei ole koskaan oikea vastaus, koska
+     * luonnos näyttää aina yhden kolmesta pylväsjärjestelmästä.
+     */
+    tyyli: 'karyatidi',
+    tiedosto: 'Caryatid - Flickr - George M. Groutas.jpg',
+    nimi: 'Erekhtheionin karyatidi',
+    lahde: 'George M. Groutas (CC BY 2.0)',
+  },
+];
+
 function arvoPylvaat(rng) {
-  const jarjestys = sekoita(rng, PYLVAAT);
   const kysytty = poimi(rng, PYLVAAT);
-  const options = sekoita(rng, [...PYLVAAT, 'roomalainen']);
+  const jarjestys = sekoita(rng, PYLVASKUVAT);
   return {
-    sketch: { jarjestys, kysytty },
-    options,
-    correct: options.indexOf(kysytty),
+    sketch: { kysytty },
+    options: jarjestys.map((k) => k.nimi),
+    kuvat: jarjestys.map((k) => ({ tiedosto: k.tiedosto, selite: k.nimi })),
+    correct: jarjestys.findIndex((k) => k.tyyli === kysytty),
   };
 }
 
+/*
+ * Valokuvapulman luonnos: YKSI pylväänpää isona, ilman nimeä — pelaaja
+ * vertaa piirrosta vaihtoehtojen valokuviin. Vanha neljän pylvään
+ * nimilappuversio poistui, kun vaihtoehdot muuttuivat valokuviksi
+ * (omistajan tilaus 10.8.2026).
+ */
 const piirraPylvaat = (svg, data) => {
-  const jarjestys = data?.jarjestys ?? PYLVAAT;
   const kysytty = data?.kysytty ?? PYLVAAT[1];
-  /*
-   * Nimet ovat pitkiä ("korinttilainen" on neljätoista merkkiä), ja
-   * yksi rivi ei riitä millään järkevällä välillä: 82 pikselin väli
-   * korjattiin jo kerran (v263), mutta omistajan iPadilla nimet
-   * valuivat silti yhteen (havainto 9.8.2026). Nimet ladotaan nyt
-   * KAHDELLE VUORORIVILLE — vierekkäiset nimet eivät ole samalla
-   * rivillä, joten ne eivät voi osua toisiinsa fontista riippumatta.
-   */
-  const VALI = 82;
-  const ALKU = 52;
-  svg.setAttribute('viewBox', '0 0 360 170');
-  text(180, 16, 'PYLVÄIDEN PÄÄT — NIMET ALLA', svg, 11);
-  jarjestys.forEach((tyyli, i) => {
-    const x = ALKU + i * VALI;
-    piirraPaa(x, 46, tyyli, svg);
-    text(x, 108 + (i % 2) * 15, tyyli, svg, 9);
-  });
-  // Neljäs: sama tyyli kuin kysytty, mutta nimen tilalla kysymysmerkki.
-  const viiva = ALKU + 2 * VALI + VALI / 2;
-  ink(`M${viiva},24 L${viiva},128`, svg);
-  piirraPaa(viiva + 34, 46, kysytty, svg);
-  text(viiva + 34, 112, '?', svg, 15);
-  text(180, 152, 'Mikä on neljännen pylvään nimi?', svg, 11);
+  svg.setAttribute('viewBox', '0 0 200 120');
+  text(100, 16, 'ISOISÄN LUONNOS', svg, 11);
+  piirraPaa(100, 44, kysytty, svg);
+  text(100, 112, 'Mikä valokuvista näyttää saman pään?', svg, 9);
 };
 
 // --- 3. Suola-altaat --------------------------------------------------------
@@ -351,9 +379,10 @@ export const EUROPE_PUZZLES = [
     generate: GENERATORS.pylvaat,
     city: 'ateena',
     title: 'Pylväiden päät',
-    selite: 'Piirroksessa: neljä pylvästä ylhäältä. Kolmen nimi lukee alla, neljännen kohdalla on kysymysmerkki — sen pää on samanlainen kuin jollakin nimetyistä.',
-    hint: 'Vertaa neljännen pylvään päätä kolmeen ensimmäiseen: koruton laatta, kaksi kiehkuraa vai lehtikimppu?',
-    q: 'Piirsin muistiin kolme pylväänpäätä ja kirjoitin nimet alle. Neljännen kohdalla muste loppui — mutta pää ehti piirtyä.',
+    selite: 'Piirroksessa: isoisän luonnos yhdestä pylväänpäästä. Vaihtoehdot ovat oikeita valokuvia — valitse se, jossa on samanlainen pää.',
+    hint: 'Katso pään muotoa: koruton laatta, kaksi kiehkuraa vai kokonainen lehtikimppu? Etsi sama muoto valokuvista.',
+    q: 'Piirsin luonnoskirjaani yhden pylväänpään, mutta unohdin kirjoittaa mistä temppelistä se oli. Etsi valokuvista pylväs, jolla on samanlainen pää.',
+    kuvaLahteet: 'Valokuvat: Phanatic (CC BY-SA 2.0), Yair Haklai (CC BY-SA 4.0), George E. Koronaios (CC BY-SA 4.0) ja George M. Groutas (CC BY 2.0), Wikimedia Commons.',
     fact: 'Kreikkalaisia pylväitä on kolmea päätyyliä. Doorilainen on koruton ja jykevä — sellaisia ovat Parthenonin pylväät. Joonialaisessa on kaksi kiehkuraa eli voluuttaa, ja korinttilaisessa akantuksen lehtiä. Roomalaiset lainasivat kaikki kolme ja pitivät korinttilaisesta eniten, koska se oli komein.',
     source: 'Antiikin arkkitehtuurin pylväsjärjestelmät',
   },
