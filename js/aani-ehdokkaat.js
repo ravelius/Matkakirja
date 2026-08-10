@@ -16,6 +16,13 @@ const AVAIN = 'matkakirja-aanivalinnat';
 
 // Tyyppiehdokkaat: käyvät kaikille saman maiseman kaupungeille.
 export const TYYPPI_EHDOKKAAT = {
+  // Lentoasema on etusivun oma maisema (omistajan toive 10.8.2026:
+  // Lontoon lentokentän lähtöaulan häly ainoaksi taustaääneksi).
+  lentoasema: [
+    { url: 'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6', nimi: 'Gatwickin lähtöaula aamulla (Lontoo) — soundandmelodies, CC0' },
+    { url: 'https://cdn.freesound.org/previews/731/731247_10924423-lq.mp3#voima=0.6', nimi: 'Gatwickin lähtöaula iltapäivällä (Lontoo) — soundandmelodies, CC0' },
+    { url: 'https://cdn.freesound.org/previews/340/340276_2669559-lq.mp3#voima=0.6', nimi: 'Gatwickin odotusaula ja kuulutus (Lontoo) — andriiperevodchyk, CC0' },
+  ],
   basaari: [
     { url: 'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23', nimi: 'Basaarin hälinä (Khan el-Khalili) — 3bagbrew, CC0' },
     { url: 'https://cdn.freesound.org/previews/677/677253_9756914-lq.mp3#voima=0.47', nimi: 'Ouakamin piha illalla (Dakar) — LaureC, CC0' },
@@ -408,6 +415,22 @@ for (const pack of PACKS) {
   }
 }
 
+// Etusivun lähtöaula: oma virtuaalipaikka lentoasema-korille
+// (etusivun taustaääni vaihtui satamasta lähtöaulaan 10.8.2026).
+{
+  const kentta = KAUPUNGIT_TYYPEITTAIN.lentoasema ??= [];
+  if (!kentta.some((l) => l.lauta === 'maailma')) {
+    const maailma = PACKS.find((p) => p.id === 'maailma');
+    const paikat = ['Etusivun lähtöaula'];
+    kentta.unshift({
+      lauta: 'maailma',
+      maanosa: maailma?.boardLabel ?? 'Maailma',
+      kaupungit: paikat,
+      maat: [{ nimi: null, kaupungit: paikat }],
+    });
+  }
+}
+
 // Virtuaalipaikat kuuluvat Maailma-laudalle: etusivun satama ja
 // maailmankartan merimatkat saavat meri-äänensä sen korista. Muilla
 // laudoilla merimatka käyttää oman maanosansa koria.
@@ -466,6 +489,9 @@ const TYYPPIKORI_AVAIN = 'matkakirja-tyyppivalinnat';
 // näin sama arvonta soi myös kotivalikon sovelluksessa. Uusi maanosa
 // perii nämä, kunnes omistaja rastii sille omat äänensä.
 const OLETUSKORIT = {
+  lentoasema: [
+    'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6',
+  ],
   basaari: [
     'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55',
     'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23',

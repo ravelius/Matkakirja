@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 521, teksti: 'Intro v3, lähtöaulan ambienssi, pehmeämpi moottori ja zoomit' },
   { v: 520, teksti: 'Saudi-Arabian sivujen faktat ja kuvatekstit korjattu' },
   { v: 519, teksti: 'Alun viilaus: suora zoom, äänet ja kiikari pois, intro v2' },
   { v: 518, teksti: 'Aarteiden pikkuikonit uusiksi kuviksi, jalokivet pois' },

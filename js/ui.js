@@ -829,8 +829,11 @@ const INTRO_TEXT = 'Vintiltä löytyi isoisän kulunut matkakirja — '
   + 'Maailman ympäri kahdeksassakymmenessä päivässä.\n\n'
   + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi? '
   + 'Ja kuka repii kirjasta juuri sen sivun?\n\n'
-  + 'Juoksin kentälle kirja kädessäni:\n\n'
-  + 'mistä aloitan?';
+  + 'minne lennän ensin?';
+// Kirjan nimi kursivoidaan VAIN ruudulla (renderIntro) — luentaan
+// kursiivi ei vaikuta. Nimen on esiinnyttävä INTRO_TEXTissä juuri
+// tässä muodossa, jotta kursiivijako osuu.
+const INTRO_KIRJAN_NIMI = 'Maailman ympäri kahdeksassakymmenessä päivässä';
 /*
  * Mantereiden lähikuva puhelimella. Ilme hiotaan ensin Euroopalla
  * (omistajan päätös); muut laudat lisätään tähän settiin sitä mukaa kuin
@@ -899,6 +902,10 @@ const SAAPUMIS_OSUUS = 0.43;
  * Eurooppa siinä mielessä kuin omistaja sen tarkoitti.
  */
 const SAAPUMIS_LEVEIN = 1500;
+// Puhelimen kapealla ruudulla saapuminen saa olla pykälän lähempänä
+// (omistajan iPhone-palaute 10.8.2026): 1400 yksikön näkymä on
+// kapealla ruudulla liian laaja.
+const SAAPUMIS_LEVEIN_KAPEA = 1000;
 const MANNER_ZOOM_VIIVE = 1400; // kokonäkymä näkyy tämän verran ennen zoomausta
 // Kuinka suuri osa ruudusta varataan laudan eteläpuolelle, jotta
 // alarivin nappien alle jäävät kaupungit saa panoroitua näkyviin.
@@ -2603,7 +2610,8 @@ export class UI {
    */
   saapumisPorras() {
     const leveys = this.contentBox?.w ?? 1000;
-    const tavoite = Math.min(leveys * SAAPUMIS_OSUUS, SAAPUMIS_LEVEIN);
+    const kapea = (this.mapPane?.clientWidth ?? window.innerWidth) < 700;
+    const tavoite = Math.min(leveys * SAAPUMIS_OSUUS, kapea ? SAAPUMIS_LEVEIN_KAPEA : SAAPUMIS_LEVEIN);
     const tasot = this.zoomiTasot();
     let paras = 1;
     for (let i = 1; i < tasot.length; i++) {
@@ -5439,11 +5447,13 @@ export class UI {
         // Avauslennon repliikki on lukittu ja luettu ääneen: puhe alkaa
         // pienellä viiveellä, kun moottori on jo ehtinyt nousta esiin.
         this.lentoPuheAjastin = setTimeout(() => {
-          // Lentorepliikin lukee vain pitkä kertoja.
+          // Lentorepliikin lukee vain pitkä kertoja. Kertoja aloittaa
+          // vasta kun moottori on ehtinyt nousta kuuluviin (omistajan
+          // toive 10.8.2026: reilu sekunti myöhemmin kuin ennen).
           if (!this.dead && kertojaTila() === 'pitka') {
             this.playDiaryVoice('assets/audio/puhe-lento-alku.mp3');
           }
-        }, 1400);
+        }, 2800);
       }
       await this.animateFlight(
         'Lontoo', city.name, line,
@@ -6116,7 +6126,9 @@ export class UI {
     // korista ääni arvotaan.
     const lauta = game.pack?.id;
     if (game.phase === 'pickstart') {
-      playPlaceAmbience('etusivu', 'meri', lauta);
+      // Etusivun ainoa taustaääni on Lontoon lentokentän lähtöaulan
+      // häly (omistajan toive 10.8.2026) — satama-ambienssi väistyi.
+      playPlaceAmbience('etusivu', 'lentoasema', lauta);
       return;
     }
     const pos = game.player.pos;
@@ -9843,9 +9855,38 @@ export class UI {
       varaus.textContent = lopetus;
       this.introLopetus.appendChild(varaus);
     }
-    this.typeText(this.introRunko, runko, 'intro', () => {
-      if (lopetus) this.typeText(this.introLopetus, lopetus, 'intro-loppu', null, INTRO_TYPE_MS);
-    }, INTRO_TYPE_MS);
+    /*
+     * Kirjan nimi kursiiviin (omistajan toive 10.8.2026, vain ruudulla):
+     * runko jaetaan paloihin nimen kohdalta ja palat kirjoitetaan
+     * peräkkäin omiin elementteihinsä (span / i). Jokainen pala varaa
+     * tilansa pending-varjolla heti, jotta fitIntro mittaa koko
+     * tekstin ennen kirjoituksen alkua — sama syy kuin lopetuksella.
+     */
+    this.introRunko.textContent = '';
+    const kohta = runko.indexOf(INTRO_KIRJAN_NIMI);
+    const palat = (kohta < 0
+      ? [{ teksti: runko, kursiivi: false }]
+      : [
+        { teksti: runko.slice(0, kohta), kursiivi: false },
+        { teksti: INTRO_KIRJAN_NIMI, kursiivi: true },
+        { teksti: runko.slice(kohta + INTRO_KIRJAN_NIMI.length), kursiivi: false },
+      ]).filter((pala) => pala.teksti);
+    const palaElementit = palat.map((pala) => {
+      const elementti = html(pala.kursiivi ? 'i' : 'span', 'intro-pala');
+      const varaus = html('span', 'pending');
+      varaus.textContent = pala.teksti;
+      elementti.appendChild(varaus);
+      this.introRunko.appendChild(elementti);
+      return elementti;
+    });
+    const kirjoitaPala = (i) => {
+      if (i >= palat.length) {
+        if (lopetus) this.typeText(this.introLopetus, lopetus, 'intro-loppu', null, INTRO_TYPE_MS);
+        return;
+      }
+      this.typeText(palaElementit[i], palat[i].teksti, 'intro', () => kirjoitaPala(i + 1), INTRO_TYPE_MS);
+    };
+    kirjoitaPala(0);
     // Koko teksti on jo paikallaan, joten koon voi sovittaa heti — sen
     // jälkeen mikään ei enää liiku kirjoituksen aikana.
     this.fitIntro();

@@ -53,8 +53,7 @@ export const INTRO_RUUTU = 'Vintiltä löytyi isoisän kulunut matkakirja — '
   + 'Maailman ympäri kahdeksassakymmenessä päivässä.\n\n'
   + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi? '
   + 'Ja kuka repii kirjasta juuri sen sivun?\n\n'
-  + 'Juoksin kentälle kirja kädessäni:\n\n'
-  + 'mistä aloitan?';
+  + 'minne lennän ensin?';
 export const LENTO_RUUTU = 'Huh — ehdin! Kone nousee, ja isoisän kirja '
   + 'aukeaa sylissäni kuin se olisi odottanut tätä hetkeä. Revitty sivu '
   + 'ei kerro, mitä hän löysi — joten menen katsomaan itse.';
@@ -67,8 +66,7 @@ const TYOT = [
       + 'Maailman ympäri kahdeksassakymmenessä päivässä. '
       + '[whispers] Viimeinen sivu on revitty irti kesken lauseen. '
       + '[curious] Mitä hän löysi? Ja kuka repii kirjasta juuri sen '
-      + 'sivun? [excited] Juoksin kentälle kirja kädessäni: mistä '
-      + 'aloitan? [long pause]',
+      + 'sivun? [excited] Minne lennän ensin? [long pause]',
   },
   {
     tiedosto: 'assets/audio/puhe-lento-alku.mp3',
