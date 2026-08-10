@@ -28,6 +28,7 @@
       <button data-tab="tilanne">Tilanne</button>
       <button data-tab="testaa">Testaa</button>
       <button data-tab="kehitys">Kehitys</button>
+      <button data-tab="pelit">Pelit</button>
       <button data-tab="kaupungit">Kaupungit</button>
       <button data-tab="studio">Studio</button>
     </nav>
@@ -102,6 +103,13 @@
       <p>Omistajan luettavaksi: uusin kokeilu. Vanhat kokeilut on siivottu
          pois (9.8.2026) — ne löytyvät tarvittaessa git-historiasta.</p>
       <div id="kehitys"></div>
+    </section>
+
+    <!-- PELIT: tutki kätkö -pelien katalogi (omistajan tilaus 10.8.2026:
+         "tekisit työhuoneeseen oman sivun näistä pelivaihtoehdoista").
+         Fable päivittää; kehitysjärjestys valitaan yhdessä. -->
+    <section id="tab-pelit" hidden>
+      <div id="pelit"></div>
     </section>
 
     <!-- KAUPUNGIT: yksi kaupunki kerrallaan, kaikki siitä -->
@@ -202,6 +210,7 @@
     } from './js/tyohuone-data.js';
     import { KAARI_PAKETIT } from './js/tyohuone-kehitys-data.js';
     import { TILANNE, TESTATTAVAA } from './js/tyohuone-tilanne.js';
+    import { PELIT as KATKOPELIT } from './js/tyohuone-pelit.js';
 
     const $ = (id) => document.getElementById(id);
     const el = (tagi, luokka, teksti) => {
@@ -402,12 +411,42 @@
     const VANHAT = {
       etusivu: 'tilanne', maanosat: 'testaa', aanet: 'studio', tekstit: 'kaupungit',
       kuvat: 'kaupungit', juoni: 'tilanne', lasit: 'tilanne',
-      pelit: 'tilanne', brandi: 'tilanne', tarina: 'tilanne',
+      // HUOM: vanha pelit→tilanne-ohjaus poistui 10.8.2026, kun Pelit
+      // palasi omana välilehtenä (tutki kätkö -pelien katalogi).
+      brandi: 'tilanne', tarina: 'tilanne',
       lahteet: 'tilanne', moottorit: 'tilanne',
       // Välilehdet poistuivat 8.8.2026 työhuoneen uudistuksessa (5
       // välilehteä 7:n sijaan): sisältö siirtyi Tilanteeseen tai Testaan.
       todo: 'tilanne', kartat: 'testaa', suunnitelma: 'tilanne', kasikirja: 'tilanne',
     };
+    /* ------------------------------------------------------------------
+     * PELIT: tutki kätkö -pelien katalogi js/tyohuone-pelit.js:stä.
+     * ------------------------------------------------------------------ */
+    {
+      const kohde = document.getElementById('pelit');
+      const otsikko = el('h2', null, 'Tutki kätkö -pelit');
+      kohde.append(otsikko, el('p', 'pieni', `Päivitetty ${KATKOPELIT.paivitetty} · Fable ylläpitää`));
+      kohde.append(el('p', null, KATKOPELIT.johdanto));
+      kohde.append(el('h3', null, 'Periaatteet'));
+      const plista = el('ul');
+      for (const p of KATKOPELIT.periaatteet) plista.append(el('li', null, p));
+      kohde.append(plista);
+      const kortti = (peli, uusi) => {
+        const k = el('div', 'kortti');
+        const ots = el('p', null);
+        ots.append(el('b', null, peli.nimi));
+        if (peli.tila) ots.append(el('span', 'pieni', ` — ${peli.tila}`));
+        k.append(ots, el('p', 'pieni', peli.kuvaus));
+        k.append(el('p', 'pieni', `Tarinasynkka: ${peli.synkka ?? peli.sopii}`));
+        return k;
+      };
+      kohde.append(el('h3', null, `Pelissä nyt (${KATKOPELIT.nykyiset.length})`));
+      for (const p of KATKOPELIT.nykyiset) kohde.append(kortti(p));
+      kohde.append(el('h3', null, `Ehdotukset — valitaan yhdessä (${KATKOPELIT.ehdotukset.length})`));
+      kohde.append(el('p', 'pieni', 'Näitä EI ole vielä päätetty. Jokaisessa on mietitty valmiiksi, mihin tarinoihin tyyppi istuu; valitut pilotoidaan yhdessä kaupungissa ennen monistusta.'));
+      for (const p of KATKOPELIT.ehdotukset) kohde.append(kortti(p));
+    }
+
     function nayta(tab) {
       const kohde = VANHAT[tab] ?? tab;
       const loytyi = napit.some((n) => n.dataset.tab === kohde) ? kohde : 'tilanne';
