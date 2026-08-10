@@ -197,6 +197,246 @@ export const VUORIKUVAT = {
     },
   ],
 
+  hindukush: [
+    {
+      tiedosto: 'Tirich Mir and Falakser Peaks (Aerial).jpg',
+      selite: 'Tirich Mir (vasemmalla takana), Falaksar ja Istor-o-Nal '
+        + 'ilmasta. Tirich Mir on Hindukushin korkein huippu, 7 708 metriä, '
+        + 'ja se näkyy selkeällä säällä Chitralin kaupunkiin asti.',
+      lahde: 'Khankayani512, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Hindukush Mountains near Chitral.jpg',
+      selite: 'Hindukush Bumburetin laaksosta Chitralin piirikunnassa. '
+        + 'Laakso on yksi kolmesta Kalash-laaksosta, joissa asuu oma '
+        + 'kansansa omine tapoineen.',
+      lahde: 'Zeeshan-ul-hassan Usmani, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'NO-NB BLDSA GM2b101n.jpg',
+      selite: 'Näkymä Dorahin solasta alas Chitralin puolelle vuonna 1929. '
+        + 'Sola on 4 400 metrissä, ja se oli pitkään yksi harvoista '
+        + 'kulkukelpoisista teistä Afganistanin ja Brittiläisen Intian '
+        + 'välillä.',
+      lahde: 'Georg Morgenstierne, Wikimedia Commons (PD)',
+    },
+    {
+      tiedosto: 'Hindukush Mountains Range.jpg',
+      selite: 'Lumen täyttämä kattilalaakso Hindukushissa. Rinteiden juovat '
+        + 'ovat lumivyöryjen uria: ne pysyvät puuttomina, koska vyöry '
+        + 'toistuu joka talvi samassa kohdassa.',
+      lahde: 'Zeeshan-ul-hassan Usmani, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Buildings in Panjshir Province, Afghanistan.JPG',
+      selite: 'Taloryhmä kalliolla joen toisella puolella Panjshirin '
+        + 'laaksossa Afganistanissa. Laakso on Hindukushin sisällä oleva '
+        + 'käytävä, jonne pääsee käytännössä vain yhtä kapeaa solaa pitkin.',
+      lahde: 'Teddy Wade, U.S. Army, Wikimedia Commons (PD)',
+    },
+    {
+      tiedosto: 'Kiss Of Peaks.jpg',
+      selite: 'Kohta, jossa kolme suurta vuoristoa kohtaa Gilgit-'
+        + 'Baltistanissa: oikealla Himalaja, keskellä Karakoram ja '
+        + 'vasemmalla Hindukush.',
+      lahde: 'Drroomanulhaq, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Branches of the Kunar River meet in Kunar Province.jpg',
+      selite: 'Kunarjoen haarat yhtyvät helikopterista nähtynä. Joki tuo '
+        + 'Hindukushin sulamisvedet alas Kabuljokeen ja edelleen Indukseen.',
+      lahde: 'Teddy Wade, U.S. Army, Wikimedia Commons (PD)',
+    },
+  ],
+
+  pamir: [
+    {
+      tiedosto: 'Lake Karakul.jpg',
+      selite: 'Karakul-järvi kaakosta nähtynä Vuoristo-Badahšanissa. Järvi '
+        + 'on syntynyt meteoriitin törmäyskuoppaan lähes 4 000 metrin '
+        + 'korkeuteen, ja sen vesi on suolaista.',
+      lahde: 'Benoît Vicart, Wikimedia Commons (CC0)',
+    },
+    {
+      tiedosto: 'Ak-Baital Pass.jpg',
+      selite: 'Ak-Baitalin sola (4 655 m) Pamirin valtatiellä. Se on koko '
+        + 'entisen Neuvostoliiton korkein autotie, ja kyltti kertoo '
+        + 'korkeuden metreinä.',
+      lahde: 'Benoît Vicart, Wikimedia Commons (CC0)',
+    },
+    {
+      tiedosto: 'Timeless..... (21534381075).jpg',
+      selite: 'Aamuaurinko osuu rotkon seinään Pamirin solmun reunalla. '
+        + 'Joki on leikannut uomansa suoraan kallioon, eikä laaksoon mahdu '
+        + 'muuta kuin vesi.',
+      lahde: 'lensnmatter, Wikimedia Commons (CC BY 2.0)',
+    },
+    {
+      tiedosto: 'Cheval Sarhad-e Broghil.jpg',
+      selite: 'Hevonen laitumella Sarhad-e Broghilissa Wakhanin käytävässä '
+        + 'Afganistanissa. Käytävä on kapea kaistale, joka erotti aikoinaan '
+        + 'Venäjän ja Brittiläisen Intian toisistaan.',
+      lahde: 'Benoît Vicart, Wikimedia Commons (CC0)',
+    },
+    {
+      tiedosto: 'Jizew valley river and bridge.jpg',
+      selite: 'Riippusilta joen yli Jizewin laaksossa Tadžikistanissa. '
+        + 'Laaksoon ei tule tietä, joten kylään kuljetaan polkua pitkin ja '
+        + 'tavarat kannetaan.',
+      lahde: 'Vicartb, Wikimedia Commons (CC0)',
+    },
+    {
+      tiedosto: 'Pamir001.JPG',
+      selite: 'Pamirin lumihuiput vihreän ylängön takana. Ylätasanko on '
+        + 'itsessään yli 3 500 metrissä, joten huiput näyttävät matalammilta '
+        + 'kuin ovat.',
+      lahde: 'BorisMir, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Panj river landscape.jpg',
+      selite: 'Panjjoen laakso Pamirin valtatien varrella. Joki on '
+        + 'Tadžikistanin ja Afganistanin raja, ja molemmilla rannoilla '
+        + 'kulkee oma polkunsa.',
+      lahde: 'Benoît Vicart, Wikimedia Commons (CC0)',
+    },
+  ],
+
+  tienshan: [
+    {
+      tiedosto: 'Tian Shan in Kyrgyzstan 02.jpg',
+      selite: 'Karjaa Tienšanin laitumilla Karakolin lähellä Kirgisiassa. '
+        + 'Takana nousevat lumihuiput: laidun on syksyllä kuivaa ruskeaa, '
+        + 'vaikka jää alkaa muutaman kilometrin päästä.',
+      lahde: 'Bgag, Wikimedia Commons (CC0)',
+    },
+    {
+      tiedosto: 'Bayanbulak grassland.jpg',
+      selite: 'Bayanbulakin aro Tienšanin sisällä. Joki mutkittelee '
+        + 'tasangolla niin loivasti, että se kääntyy silmukoille — vuoret '
+        + 'pidättävät veden ylängölle sen sijaan että päästäisivät sen alas.',
+      lahde: 'Srr, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Panorama of the Too Ashuu Pass, Kyrgyz Alatau, Kyrgyzstan 02.jpg',
+      selite: 'Too-Ašuun sola Kirgisian Alataussa. Solan yli kulkee '
+        + 'Biškekin ja Oshin välinen tie, ja lumi säilyy varjopuolella '
+        + 'pitkälle kesään.',
+      lahde: 'Vilya Shoni, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Kol-Tor flowers 22.jpg',
+      selite: 'Kol-Torin järvi 2 733 metrin korkeudessa. Vesi saa värinsä '
+        + 'jäätikön hiomasta kivijauheesta, joka jää veteen leijumaan.',
+      lahde: 'Guliaim Aiylchy, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Glacier - panoramio - Michael Karavanov.jpg',
+      selite: 'Jäätikkö Tienšanissa. Vuoristossa on tuhansia jäätiköitä, ja '
+        + 'niiden sulamisvesi on Keski-Aasian kuivien tasankojen tärkein '
+        + 'vesivarasto.',
+      lahde: 'Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Работа гляциологов на леднике Абрамова (Тянь-Шань) - 1.jpg',
+      selite: 'Jäätikkötutkijoita Abramovin jäätiköllä vuonna 1976. Tuuli on '
+        + 'kasannut lumesta terävän harjanteen, jonka reunalla mies seisoo '
+        + 'mittaamassa.',
+      lahde: 'Aleksei Aleksandrovitš Vasiljev, Wikimedia Commons (CC BY 4.0)',
+    },
+    {
+      tiedosto: 'Teil des zentralen Tian-Schan.jpg',
+      selite: 'Keskisen Tienšanin panoraama Gottfried Merzbacherin '
+        + 'tutkimusretken julkaisusta. Piirros on tehty juuri niiltä '
+        + 'vuosilta, jolloin eurooppalaiset kartoittivat vuoristoa '
+        + 'ensimmäisen kerran.',
+      lahde: 'Gottfried Merzbacher, Wikimedia Commons (PD)',
+    },
+  ],
+
+  ural: [
+    {
+      tiedosto: 'Приполярный Урал, оз. Падежа-ты, вид с хребта Юаснырд.jpg',
+      selite: 'Padeža-ty-järvi Napapiirin Uralilla Juasnyrdin harjanteelta '
+        + 'nähtynä. Kesäkuussakin rinteillä on lumilaikkuja, ja järvien '
+        + 'ympärillä on pelkkää tundraa.',
+      lahde: 'RDA-Inta, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Отроги горы Тельпосиз на Северном Урале, национальный парк "Югыд ва".jpg',
+      selite: 'Telposizin rinteet Pohjois-Uralilla Jugyd va -kansallispuistossa. '
+        + 'Puisto on Euroopan laajin koskematon metsäalue.',
+      lahde: 'Natalia Beshkareva, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Гора Большой Нургуш.jpg',
+      selite: 'Suuri Nurgušin vuori Zjuratkulin kansallispuistossa Etelä-'
+        + 'Uralilla. Laki on puurajan yläpuolella kivikkoa, vaikka vuori on '
+        + 'vain runsaan kilometrin korkuinen.',
+      lahde: 'Ljvty, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Нургуш со склонов Зюраткуля - panoramio.jpg',
+      selite: 'Nurguš Zjuratkulin rinteiltä. Uralin selänteet ovat kuluneet '
+        + 'matalaksi: vuoristo on yksi maailman vanhimmista, ja sen huiput '
+        + 'ovat pyöreitä eivätkä teräviä.',
+      lahde: 'Quarkgluonplasma, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Russia (28686712760).jpg',
+      selite: 'Ilta Uralin selänteiden yllä. Vuorijono on Euroopan ja Aasian '
+        + 'raja, ja sen yli päästään monesta kohdasta ilman solaa — juuri '
+        + 'siksi se ei ole koskaan pysäyttänyt liikennettä kuten Alpit.',
+      lahde: 'Pavel Marianov, Wikimedia Commons (CC BY 2.0)',
+    },
+  ],
+
+  zagros: [
+    {
+      tiedosto: 'اورامان.jpg',
+      selite: 'Hawramanin kylä Zagrosin rinteessä Iranin Kurdistanissa. '
+        + 'Talot on porrastettu niin, että alemman katto on ylemmän piha — '
+        + 'jyrkässä rinteessä ei ole muuta tasaista maata.',
+      lahde: 'Salar.arkan, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'RAI 40-12 Sepid Dasht 1.jpg',
+      selite: 'Paikallisjuna Zagrosin rotkossa Sepid Dashtin kohdalla. '
+        + 'Iranin poikittaisrautatie kiipeää vuoriston yli sadoilla silloilla '
+        + 'ja tunneleilla — se oli 1930-luvun suurimpia rakennushankkeita.',
+      lahde: 'Kabelleger / David Gubler, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Oshtoran kuhj.jpg',
+      selite: 'Oshtorankuhin jyrkät seinämät Lorestanin maakunnassa. '
+        + 'Zagrosin poimuvuoret ovat syntyneet Arabian ja Euraasian '
+        + 'mannerlaattojen törmäyksessä, ja kerrokset näkyvät rinteissä '
+        + 'raitoina.',
+      lahde: 'ninara, Wikimedia Commons (CC BY 2.0)',
+    },
+    {
+      tiedosto: 'Gezicht op de rivier de Daliki en bergen in Perzië Daliki rivier Shiraz-Buchire (titel op object), RP-F-F01048-T.jpg',
+      selite: 'Dalakijoki ja Zagrosin vuoret 1880-luvulla otetussa vedoksessa. '
+        + 'Kuva on matka-albumista Shirazin ja Bushehrin väliseltä '
+        + 'karavaanitieltä — juuri sitä reittiä isoisän aikalaiset kulkivat '
+        + 'Persian halki.',
+      lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+    },
+    {
+      tiedosto: 'ETH-BIB-Gebirge vor Chorrenabad-Persienflug 1924-1925-LBS MH02-02-0064-AL-FL.tif',
+      selite: 'Lorestanin vuoristo neljän kilometrin korkeudesta vuonna 1925. '
+        + 'Kuva on Walter Mittelholzerin Persian-lennolta, yhdeltä '
+        + 'ensimmäisistä kerroista kun vuoristo nähtiin ylhäältä.',
+      lahde: 'Walter Mittelholzer, Wikimedia Commons (PD)',
+    },
+    {
+      tiedosto: 'Butin&Chema.jpg',
+      selite: 'Butinin ja Pendron huiput Misakin vuorelta nähtynä. Zagrosin '
+        + 'pohjoisosassa lumi pysyy huipuilla pitkälle kevääseen, vaikka '
+        + 'laaksoissa on jo lämmintä.',
+      lahde: 'Khoshhat, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  ],
+
   kaukasus: [
     {
       tiedosto: 'Селение Ний.jpg',

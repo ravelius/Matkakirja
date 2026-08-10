@@ -72,7 +72,11 @@ const KATEGORIA = {
   'kapmaan-taittovuoret': 'Cape Fold Belt',
   sarawat: 'Sarawat Mountains',
   verhojansk: 'Verkhoyansk Range',
-  'tiibetin-ylatasanko': 'Tibetan Plateau',
+  /*
+   * Tiibetin ylätasangon oma kategoria on satelliittikuvia ja yhden
+   * pyöräretken 360-panoraamoja; maisemat ovat Landscapes of Tibetissä.
+   */
+  'tiibetin-ylatasanko': 'Landscapes of Tibet',
   'annamin-ylanko': 'Annamite Range',
   rannikkovuoret: 'Coast Mountains',
   'alaskan-vuoristo': 'Alaska Range',
@@ -89,6 +93,15 @@ const POIS_ALIKATEGORIA = [
   'people', 'person', 'portrait', 'fauna', 'flora', 'plants', 'animals',
   'insects', 'birds', 'fungi', 'geolog', 'cross-section', 'stamp',
   'coin', 'logo', 'sign', 'symbol', 'book', 'document', 'letter',
+  /*
+   * Mineraalinäytteet ja museokokoelmat. Uralin kategoriapuu on
+   * käytännössä mineralogian kokoelma: yhdeksästä ensimmäisestä
+   * ehdokkaasta kuusi oli kiviä samettitaustalla ja yksi kuorolaulajia
+   * (silmätarkistus 10.8.2026). Vuoristo kyllä tunnetaan malmeistaan,
+   * mutta pelaaja avaa ikkunan nähdäkseen vuoret.
+   */
+  'mineral', 'crystal', 'gemstone', 'specimen', 'museum', 'collection',
+  'jewell', 'jewel', 'ore of', 'mining',
 ];
 
 /*
@@ -113,6 +126,15 @@ const POIS = [
    */
   'albumblad', 'bestanddeelnr', 'album page', 'fotoalbum',
   'scrapbook', 'contact sheet', 'plate ', 'folio',
+  // Mineraalinäytteet myös tiedostonimen perusteella, ks. yllä.
+  'mineral', 'crystal', 'cuprite', 'provenance', 'museum', 'jewellery',
+  /*
+   * Satelliittikuvat (MODIS) ja panoramion 360-asteen kierrot. Nämä
+   * täyttivät Tiibetin ylätasangon ehdokaslistan kokonaan: yhdeksästä
+   * ensimmäisestä kaksi oli satelliittikuvaa ja seitsemän saman
+   * pyöräretken venytettyjä panoraamoja.
+   */
+  'modis', '360 - panoramio', 'panorama 360',
 ];
 
 /** Kelpaako tiedosto galleriaan? */
@@ -121,6 +143,14 @@ export function kelpaaKuva(nimi) {
   // SVG on käytännössä aina kartta, lippu, vaakuna tai kaavio.
   if (/\.svg$/.test(matala)) return false;
   if (!/\.(jpe?g|png|tiff?)$/.test(matala)) return false;
+  /*
+   * Karttalehtien sarjatunnus, esim. "NJ-43-15 Shimshal, Pakistan.jpg"
+   * ja "NK-44-05 Sha-Tu-A-Man-Tai China.jpg". Nämä ovat skannattuja
+   * topografisia karttalehtiä (Joint Operations Graphic), eikä
+   * tiedostonimessä lue sanaa "map" — pelkkä sanalista ei siis
+   * pysäytä niitä.
+   */
+  if (/^[a-z]{2}-\d{2}-\d{2}\b/.test(matala)) return false;
   return !POIS.some((sana) => matala.includes(sana));
 }
 
