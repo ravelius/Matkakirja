@@ -7801,5 +7801,246 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  oslo: {
+    Kuninkaanlinna: {
+      aika: '1825–1849',
+      teksti: 'Oslon kuninkaanlinna on Norjan kuninkaan koti, ja se '
+          + 'seisoo ylhäällä mäellä Karl Johans gaten päässä. '
+          + 'Vaaleankeltainen palatsi on rakennettu tyylikkääseen, '
+          + 'pylväitä täynnä olevaan asuun, ja sitä ympäröi iso puisto, '
+          + 'jossa kuka tahansa saa kävellä.'
+        + '\n\n'
+        + 'Rakentaminen alkoi vuonna 1825, kun kuningas Kaarle Juhana '
+          + 'laski juhlallisesti peruskiven. Työ kesti kauan – palatsi '
+          + 'valmistui vasta vuonna 1849, viisi vuotta sen jälkeen kun '
+          + 'kuningas itse oli jo kuollut eikä ehtinyt koskaan asua '
+          + 'siellä. Palatsissa on peräti 173 huonetta, ja sen '
+          + 'suunnitteli tanskalainen arkkitehti Hans Linstow.'
+        + '\n\n'
+        + 'Vartijat marssivat palatsin edustalla joka päivä, ja '
+          + 'vahdinvaihtoa on suosittua käydä katsomassa. Vasta vuonna '
+          + '2002 tavalliset ihmiset pääsivät ensimmäistä kertaa '
+          + 'kiertämään palatsin sisätiloja kesäisin. Vanhoista '
+          + 'talleista tehtiin vuonna 2017 taidenäyttelytila, jossa '
+          + 'esitellään kuningatar Sonjan taidekokoelmaa.',
+      kuvat: [
+        {
+          tiedosto: '00 7737 Royal Palace, Oslo.jpg',
+          selite: 'Kuninkaanlinna kirkkaana kesäpäivänä suoraan edestä '
+            + 'kuvattuna, ratsastajapatsas ja pylväikkö sekä '
+            + 'vierailijoita puistoaukiolla.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Slottet i Oslo 1.jpg',
+          selite: 'Kuninkaanlinna symmetrisestä etunäkymästä '
+            + 'puistokäytävältä, pilvenhattaroita sinisellä '
+            + 'kesätaivaalla.',
+          lahde: 'Andreas Haldorsen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Oslo Royal Palace 1890.jpg',
+          selite: 'Kuninkaanlinna vuonna 1890 valokuvaaja Axel Lindahlin '
+            + 'kuvaamana; puisto on vielä nuori ja puut pieniä.',
+          lahde: 'Axel Lindahl, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Karl Johans gate': {
+      aika: '1840–1866',
+      teksti: 'Karl Johans gate on Oslon vilkkain katu, joka kulkee '
+          + 'rautatieasemalta suoraan kuninkaanlinnalle asti. Katu '
+          + 'syntyi, kun vanhoja kaupungin kujia yhdisteltiin ja '
+          + '1840-luvulla rakennettiin uusi, leveä katuosuus '
+          + 'kuninkaanlinnan suuntaan.'
+        + '\n\n'
+        + 'Katu sai nykyisen nimensä vuonna 1852, kun kuningas Kaarle '
+          + 'Juhana oli juuri kuollut ja häntä haluttiin muistaa. '
+          + 'Palatsin edustalle pystytettiin vuonna 1875 pronssinen '
+          + 'ratsastajapatsas kuninkaasta, ja se seisoo siellä yhä. Kun '
+          + 'Norjan parlamenttitalo, Storting, avattiin kadun varrella '
+          + 'vuonna 1866, kaksi erillistä katua yhdistyi lopulta '
+          + 'yhdeksi pitkäksi Karl Johans gateksi.'
+        + '\n\n'
+        + 'Toukokuun 17. päivänä, Norjan perustuslakipäivänä, katu '
+          + 'täyttyy lippuja heiluttavista lapsista ja marssijoista. '
+          + 'Joulun alla kadulla on värikkäät markkinat, joilla myydään '
+          + 'kuumaa glögiä ja käsitöitä.',
+      kuvat: [
+        {
+          tiedosto: 'Karl Johans gate, Oslo - Royal Palace, Oslo - perspective.jpg',
+          selite: 'Karl Johans gate kesäisenä päivänä; puukujan reunustama '
+            + 'katu johtaa suoraan kohti kuninkaanlinnaa kadun päässä.',
+          lahde: 'Philippe Salgarolo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Karl Johans gate abt 1890.jpg',
+          selite: 'Karl Johans gate noin vuonna 1890; hevosvetoinen '
+            + 'raitiovaunu kadulla ja kuninkaanlinna näkyvissä kadun '
+            + 'päässä.',
+          lahde: 'Axel Lindahl, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Oslon tuomiokirkko': {
+      aika: '1694–1697',
+      teksti: 'Oslon tuomiokirkko on kaupungin pääkirkko, mutta se on jo '
+          + 'kolmas kirkko, joka on kantanut tätä tehtävää. '
+          + 'Ensimmäinen, keskiaikainen Hallvardin katedraali, jäi '
+          + 'liian kauas uudesta kaupungista, kun kuningas Kristian IV '
+          + 'siirsi koko Oslon lähemmäs Akershusin linnoitusta suuren '
+          + 'tulipalon jälkeen vuonna 1624.'
+        + '\n\n'
+        + 'Toinen kirkko paloi vain 50 vuoden käytön jälkeen, joten '
+          + 'uuden peruskivi muurattiin vuonna 1694. Kirkko vihittiin '
+          + 'käyttöön marraskuussa 1697, ja se on seissyt Stortorvetin '
+          + 'torin laidalla siitä asti. Kirkon ovet ovat pronssia, ja '
+          + 'ikkunoissa on taiteilija Emanuel Vigelandin suunnittelemia '
+          + 'lasimaalauksia.'
+        + '\n\n'
+        + 'Kirkossa on vietetty kuuluisia kuninkaallisia häitä: '
+          + 'kuningas Harald ja kuningatar Sonja vihittiin siellä '
+          + 'vuonna 1968, ja kruununprinssi Haakon meni naimisiin '
+          + 'Mette-Maritin kanssa vuonna 2001. Vuosina 2006–2010 kirkko '
+          + 'oli kokonaan kiinni suuren remontin ajan, ja tornissa soi '
+          + 'nykyään 48 kellon kellopeli.',
+      kuvat: [
+        {
+          tiedosto: 'Oslo Domkirke 1880s.jpeg',
+          selite: 'Oslon tuomiokirkko 1880-luvulla; laaja näkymä koko '
+            + 'kirkkorakennuksesta puiden ja aukion keskellä.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Oslo Domkirke 20180729.jpg',
+          selite: 'Oslon tuomiokirkon torni alhaalta kuvattuna kirkkaan '
+            + 'sinistä kesätaivasta vasten.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupungintalo: {
+      aika: '1931–1950',
+      teksti: 'Oslon punatiilinen kaupungintalo on kaupungin hallinnon '
+          + 'koti, ja siinä on kaksi neliömäistä tornia, jotka näkyvät '
+          + 'pitkälle satamaan. Rakennus on 66 metriä korkea, ja sitä '
+          + 'rakennettiin arkkitehtien Arnstein Arnebergin ja Magnus '
+          + 'Poulssonin suunnitelmien mukaan vuosina 1931–1950.'
+        + '\n\n'
+        + 'Rakentaminen keskeytyi kesken toisen maailmansodan, joten '
+          + 'talo valmistui lopulta vasta vuonna 1950 – juuri sopivasti '
+          + 'Oslon 900-vuotisjuhliin. Sisällä seiniä koristavat isot '
+          + 'maalaukset, jotka kertovat Norjan historiasta ja '
+          + 'miehityksen ajasta; niitä maalasi kahdeksan taiteilijaa, '
+          + 'ja lisäksi 17 kuvanveistäjää teki patsaita.'
+        + '\n\n'
+        + 'Joka vuosi 10. joulukuuta salissa jaetaan Nobelin '
+          + 'rauhanpalkinto, ja marmoripintainen juhlasali on 31 metriä '
+          + 'pitkä. Kansanäänestyksessä norjalaiset valitsivat '
+          + 'kaupungintalon kerran jopa "vuosisadan rakennukseksi".',
+      kuvat: [
+        {
+          tiedosto: 'Oslo Rådhus - Oslo City Hall - Oslo, Norway 2020-09-16.jpg',
+          selite: 'Oslon kaupungintalo edestä kuvattuna, patsaat aukion '
+            + 'edessä ja kirkas syystaivas.',
+          lahde: 'Ryan Hodnett, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Oslo Rådhus - no-nb digifoto 20150218 00063 NB MIT FNR 17150.jpg',
+          selite: 'Oslon kaupungintalo 1950-luvulla; aikakauden autoja '
+            + 'aukiolla rakennuksen edessä.',
+          lahde: 'Jac Brun, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Akershusin linnoitus': {
+      aika: '1290-luku',
+      teksti: 'Akershusin linnoitus kohoaa kalliolla Oslon rannalla, ja '
+          + 'se on vartioinut kaupunkia jo yli 700 vuotta. Kuningas '
+          + 'Haakon V käski rakentaa sen 1290-luvun lopulla, sen '
+          + 'jälkeen kun kaupunki oli osoittautunut liian helposti '
+          + 'hyökättäväksi vuonna 1287.'
+        + '\n\n'
+        + 'Linnoitusta on piiritetty monta kertaa – ruotsalaiset '
+          + 'yrittivät vuonna 1308 ja Kaarle Knuutinpoika vuosina '
+          + '1449–1450 – mutta mikään vieras armeija ei ole koskaan '
+          + 'onnistunut valtaamaan sitä taistelemalla. Kuningas '
+          + 'Kristian IV muutti vanhan linnan 1600-luvulla hienoksi '
+          + 'renessanssipalatsiksi.'
+        + '\n\n'
+        + 'Toisen maailmansodan aikana saksalaiset miehittivät '
+          + 'linnoituksen ja teloittivat siellä vankeja, mutta Norjan '
+          + 'vastarintaliike vapautti sen 11. toukokuuta 1945. Sodan '
+          + 'jälkeen linnoituksessa teloitettiin myös maanpettureita, '
+          + 'kuten Vidkun Quisling. Nykyään linnoituksessa on Norjan '
+          + 'kuninkaallinen hautaholvi ja sotilaiden toimistoja.',
+      kuvat: [
+        {
+          tiedosto: 'Akershus Festning from the fjord.jpg',
+          selite: 'Akershusin linnoitus vuonon toiselta puolelta katsottuna, '
+            + 'purjevene edustalla kirkkaana kesäpäivänä.',
+          lahde: 'GuoJunjun, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Castle of Aggerhus (JW Edy plate 53).jpg',
+          selite: 'Akershusin linnoitus vuoden 1820 käsivärjätyssä '
+            + 'kaiverruksessa, purjelaivoja vuonolla edustalla.',
+          lahde: 'John William Edy, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Oslo, Akershus Castle (5).JPG',
+          selite: 'Akershusin linnoituksen porrastettu tiilinen päätykolmio '
+            + 'alhaalta kuvattuna lämpimässä iltapäivänvalossa.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Oopperatalo: {
+      aika: '2007–2008',
+      teksti: 'Oslon oopperatalo näyttää siltä kuin valtava valkoinen '
+          + 'jäävuori olisi noussut merestä keskelle kaupunkia. '
+          + 'Rakennuksen suunnitteli arkkitehtitoimisto Snøhetta, ja '
+          + 'sen kalteville pinnoille käytettiin valkoista Carraran '
+          + 'marmoria ja graniittia.'
+        + '\n\n'
+        + 'Talo avattiin huhtikuun 12. päivä 2008, ja siellä on '
+          + 'peräti 1 100 huonetta yhteensä 49 000 neliömetrin alalla. '
+          + 'Suurimpaan saliin mahtuu 1 364 katsojaa kuuntelemaan '
+          + 'oopperaa tai balettia.'
+        + '\n\n'
+        + 'Kattokaltevuudet ulottuvat maahan asti, joten kuka tahansa '
+          + 'voi kävellä katolle ihailemaan näkymää vuonolle. Rakennus '
+          + 'valmistui etuajassa ja jopa 300 miljoonaa kruunua alle '
+          + 'budjetin, ja ensimmäisenä vuonna sitä kävi katsomassa 1,3 '
+          + 'miljoonaa ihmistä.',
+      kuvat: [
+        {
+          tiedosto: 'Oslo Opera house (2015).jpg',
+          selite: 'Oslon oopperatalo vuonon rannalla kirkkaana päivänä; '
+            + 'valkoinen marmoripinta ja lasijulkisivu erottuvat '
+            + 'selvästi.',
+          lahde: 'Beata May, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Oslo Opera House at sunset 4.jpg',
+          selite: 'Oslon oopperatalo auringonlaskun aikaan; lasijulkisivu '
+            + 'hohtaa kultaisena ja kuvastuu tyyneen veteen.',
+          lahde: 'Nurtenge, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '2025-09-26-Operahuset-Oslo-1.jpg',
+          selite: 'Oopperatalon viistolla marmorikatolla kävellään; taustalla '
+            + 'rakennuksen alumiininen kuutio ja kirkas sininen taivas.',
+          lahde: 'Gunnar Klack, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
   PLACEHOLDER_ERA13
 };
