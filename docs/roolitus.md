@@ -58,6 +58,15 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 - Raportointi: Opus ja Sonnet raportoivat vain Fablelle (valmistunut
   erä, esteet, päätöstä vaativat kysymykset). Fable raportoi
   omistajalle.
+- **EI HUOMIONPYYNTÖJÄ OMISTAJALLE (omistajan sitova ohje
+  10.8.2026):** työsessiot eivät koskaan käytä AskUserQuestion-
+  työkalua eivätkä päätä vuoroaan avoimeen kysymykseen tai
+  hyväksynnän odotukseen — ne tuottavat omistajalle turhia
+  "waiting for your input" -ilmoituksia. Vuoro päätetään aina
+  toteavasti ("raportti pushattu, jään valmiuteen"); esteet
+  kirjataan raporttiin, Fable poimii ne vahtikierroksella. Myös
+  Fable raportoi omistajalle vain: valmis vaihe / selkeä ongelma /
+  tarvitsee omistajalta jotain — lyhyesti.
 - Nykyiset sessiot (päivitä taulukko, kun sessiot vaihtuvat):
 
 | Rooli | Sessio-id | Kirjattu |
