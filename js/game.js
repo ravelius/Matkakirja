@@ -1064,6 +1064,9 @@ export class Game {
     if (!KAARI_LAUDAT.has(this.pack.id)) return null;
     const kohde = TARINAKAARI[cityId];
     if (!kohde?.kysymys) return null;
+    // ??= turvaa myös polut, jotka ohittavat konstruktorin (fromJSON
+    // alustaa kentän itse, mutta kaatunut Tutki-nappi ei saa toistua).
+    this.kaariYritykset ??= new Map();
     const tila = this.kaariYritykset.get(`${this.pack.id}:${cityId}`)
       ?? { yritykset: 0, onnistui: false };
     return { kohde, yritykset: tila.yritykset, onnistui: tila.onnistui };
@@ -2181,6 +2184,15 @@ export class Game {
     game.kulttuuriVastatut = new Set(data.kulttuuriVastatut ?? []);
     game.minitehtavatVastatut = new Set(data.minitehtavatVastatut ?? []);
     game.explored = new Set(data.explored ?? []);
+    /*
+     * Istuntokohtaiset kentät on silti ALUSTETTAVA: fromJSON ohittaa
+     * konstruktorin (Object.create), joten "ei tallenneta" ei saa
+     * tarkoittaa "ei ole olemassa". Ilman tätä palautetun pelin
+     * jokainen kaarikaupungin tutkiminen kaatui TypeErroriin ja
+     * Tutki-nappi mykistyi (omistajan löytö 10.8.2026 Ateenassa).
+     */
+    game.kaariYritykset = new Map();
+    game.puzzlePrevPhase = null;
     // Vanha tallennus ei tunne aikaa: se jatkuu päivästä 1 eikä ole nähnyt
     // yhtään isoisän aikataulurivistä.
     game.scheduleNote = data.scheduleNote ?? null;
