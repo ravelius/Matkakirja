@@ -7874,6 +7874,31 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   color: rgba(58, 42, 22, 0.95);
 }
 
+/*
+ * Aloita peli -nappi kohtaamisen tervehdyksen alla: peli (kysymys,
+ * vaihtoehdot, tiimalasi) käynnistyy vasta painalluksesta, joten
+ * kertojan luenta saa loppua rauhassa (omistajan toive 10.8.2026).
+ */
+.quiz-aloita {
+  display: block;
+  margin: 0.2rem auto 0.8rem;
+}
+
+/*
+ * Loppuun pelattu kohtaaminen: tehtävänappi jää harmaana näkyviin
+ * kertomaan tilanteen ("Tapaa Nikos" onnistumisen jälkeen, "Nikos ei
+ * tavattavissa" kahden epäonnistumisen jälkeen) — omistajan sääntö
+ * 10.8.2026. Ei varjoa eikä hover-eleitä: nappi on tila, ei kutsu.
+ */
+#arrival-yes.tehtava-pois,
+#arrival-yes.tehtava-pois:hover {
+  opacity: 0.55;
+  filter: grayscale(1);
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
 .quiz-result .kohtaaminen-repliikki {
   display: block;
   margin-top: 0.3rem;

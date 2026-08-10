@@ -94,6 +94,7 @@ export const XP_STAR = 100;
 export const XP_PUZZLE = 25; // isoisän luonnoskirjan pulma ratkaistu
 export const XP_EXPLORE = 15; // kaupungin tutkiminen ilman laattaa
 export const EXPLORE_REWARD = 50; // löytöpalkkio oikeasta tutkimisvastauksesta
+export const KAARI_YRITYKSET = 2; // kohtaamista saa yrittää näin monta kertaa
 
 // Kysymyksen vaikeustaso: 1 = helppo, 2 = perus (oletus), 3 = vaikea.
 export function questionLevel(question) {
@@ -202,10 +203,11 @@ export class Game {
     this.recordMark = null;
     this.usedQuestions = new Set();
     /*
-     * Tarinakaaren käytetyt kohtaamiset (pack:city). Ei tallenneta:
-     * uusi istunto saa kohtaamisen uudelleen, kuten UI:n tervehdykset.
+     * Tarinakaaren kohtaamisten yritykset (pack:city →
+     * {yritykset, onnistui}). Ei tallenneta: uusi istunto saa
+     * kohtaamiset uudelleen, kuten UI:n tervehdykset.
      */
-    this.kaariKaytetty = new Set();
+    this.kaariYritykset = new Map();
     this.lastPath = null;
     this.winner = null;
     this.turnCount = 1;
@@ -954,6 +956,14 @@ export class Game {
    */
   canExplore(city) {
     if (!city || this.tokens.has(city.id)) return false;
+    /*
+     * Kaarikaupungeissa kertatutkiminen POISTUI (omistajan päätös
+     * 10.8.2026: kohtaamisen rinnalla vanha kevyt kysymys oli "kaksi
+     * juttua päällekkäin"). Kohtaaminen uusintayrityksineen on näiden
+     * kaupunkien ainoa laataton tehtävä; kaarettomat laudat (Afrikka,
+     * Aasia…) pitävät kertatutkimisen ennallaan.
+     */
+    if (KAARI_LAUDAT.has(this.pack.id) && TARINAKAARI[city.id]?.kysymys) return false;
     if (this.explored.has(`${this.pack.id}:${city.id}`)) return false;
     const omat = this.pack.questions[city.id] ?? [];
     const yleiset = this.pack.questions.general ?? [];
@@ -1041,14 +1051,29 @@ export class Game {
   }
 
   /**
-   * Tarinakaaren kohde tälle kaupungille, jos kaari on tällä laudalla
-   * käytössä eikä kohtaamista ole vielä käytetty tässä istunnossa.
+   * Kohtaamisen tila tässä kaupungissa (omistajan sääntö 10.8.2026):
+   * epäonnistuneen kohtaamisen saa yrittää uudelleen KERRAN
+   * ("viimeinen mahdollisuus tavata"); toisen epäonnistumisen jälkeen
+   * henkilö ei ole tavattavissa, ja onnistumisen jälkeen kohtaamista
+   * ei pelata uudelleen. Yritys kirjataan avattaessa, ettei kesken
+   * jätetty kohtaaminen anna ilmaista uusintaa. Ei tallenneta: uusi
+   * istunto saa kohtaamiset uudelleen, kuten UI:n tervehdykset.
+   * Palauttaa null, jos kaupungilla ei ole kaarta tällä laudalla.
    */
-  kaariTarina(cityId) {
+  kaariTilanne(cityId) {
     if (!KAARI_LAUDAT.has(this.pack.id)) return null;
-    if (this.kaariKaytetty.has(`${this.pack.id}:${cityId}`)) return null;
     const kohde = TARINAKAARI[cityId];
-    return kohde?.kysymys ? kohde : null;
+    if (!kohde?.kysymys) return null;
+    const tila = this.kaariYritykset.get(`${this.pack.id}:${cityId}`)
+      ?? { yritykset: 0, onnistui: false };
+    return { kohde, yritykset: tila.yritykset, onnistui: tila.onnistui };
+  }
+
+  /** Tarinakaaren kohde, jos kohtaaminen on vielä pelattavissa. */
+  kaariTarina(cityId) {
+    const tila = this.kaariTilanne(cityId);
+    return tila && !tila.onnistui && tila.yritykset < KAARI_YRITYKSET
+      ? tila.kohde : null;
   }
 
   /**
@@ -1107,7 +1132,12 @@ export class Game {
     const difficulty = hard ? 'hard' : this.player.quizLevel;
     let question;
     if (kaari) {
-      this.kaariKaytetty.add(`${this.pack.id}:${nykyinen.id}`);
+      // Yritys kirjataan avattaessa — kesken jätetty kohtaaminen on
+      // käytetty yritys, ei ilmainen kurkistus kysymykseen.
+      const avain = `${this.pack.id}:${nykyinen.id}`;
+      const tila = this.kaariYritykset.get(avain) ?? { yritykset: 0, onnistui: false };
+      tila.yritykset += 1;
+      this.kaariYritykset.set(avain, tila);
       question = {
         q: kaari.kysymys.q,
         options: kaari.kysymys.vaihtoehdot,
@@ -1532,6 +1562,15 @@ export class Game {
     this.quiz.chosen = index;
     this.quiz.right = index === this.quiz.correct;
     this.countAnswer(p, this.quiz.right);
+
+    // Onnistunut kohtaaminen merkitään: sitä ei pelata uudelleen
+    // (nappi harmaantuu — omistajan sääntö 10.8.2026).
+    if (this.quiz.kaari && this.quiz.right) {
+      const avain = `${this.pack.id}:${this.quiz.cityId}`;
+      const tila = this.kaariYritykset.get(avain) ?? { yritykset: 1, onnistui: false };
+      tila.onnistui = true;
+      this.kaariYritykset.set(avain, tila);
+    }
 
     // Pulma: oikeasta kokemuspisteitä, väärästä ei rangaistusta.
     // Laatallisessa kaupungissa pulma on pysähdyksen ainoa tehtävä,

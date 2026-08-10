@@ -2653,7 +2653,7 @@ test('tarinakaari ei pakota muotoa: lippukysymys ohittaa kaaren, visa käyttää
   // (omistajan linjaus 10.8.2026: muodot vaihtelevat, kaari ei pakota).
   assert.ok(game.actionQuiz({ form: 'flag' }).ok);
   assert.equal(game.quiz.kind, 'flag');
-  assert.equal(game.kaariKaytetty.size, 0, 'lippukysymys ei saa kuluttaa kaarta');
+  assert.equal(game.kaariYritykset.size, 0, 'lippukysymys ei saa kuluttaa kaarta');
   game.quiz = null;
   game.phase = 'action';
 
@@ -2749,8 +2749,10 @@ test('laatattomassa kaarikaupungissa kohtaaminen tulee silti ja palkitsee kuten 
   assert.ok(!game.quiz.found, 'laattaa ei ole eikä tule');
   game.closeQuiz();
 
-  // Kertatutkiminen ei kulunut kohtaamiseen: kevyt kysymys odottaa yhä.
-  assert.ok(game.canExplore(game.board.cityById.get(kaupunki)), 'kohtaaminen ei kuluta kertatutkimista');
+  // Kertatutkiminen POISTUI kaarikaupungeista (omistajan päätös
+  // 10.8.2026): kohtaaminen on laatattoman kaupungin ainoa tehtävä.
+  assert.equal(game.canExplore(game.board.cityById.get(kaupunki)), false,
+    'kaarikaupungissa ei ole kertatutkimista');
 });
 
 test('botti ei kuluta yhteistä kohtaamista', () => {
@@ -2767,7 +2769,7 @@ test('botti ei kuluta yhteistä kohtaamista', () => {
 
   assert.ok(game.actionQuiz().ok);
   assert.ok(!game.quiz.kaari, 'botti ei saa kohtaamista');
-  assert.equal(game.kaariKaytetty.size, 0, 'kaari säästyy ihmiselle');
+  assert.equal(game.kaariYritykset.size, 0, 'kaari säästyy ihmiselle');
 });
 
 test('jokaisella kaaren kohteella on kutsumanimi Tapaa-nappia varten', () => {
@@ -2796,21 +2798,60 @@ test('tehtävät loppuvat aikanaan: tehtavaTarjolla sammuu kun kaikki on tehty',
 
   assert.ok(game.tehtavaTarjolla(), 'kohtaaminen odottaa');
   game.actionQuiz();
+  assert.equal(game.quiz.kaari, true);
   game.answerQuiz((game.quiz.correct + 1) % game.quiz.options.length);
   game.closeQuiz();
 
+  // Epäonnistumisen jälkeen saa YHDEN uusintayrityksen (omistajan
+  // sääntö 10.8.2026: "viimeinen mahdollisuus tavata").
   game.player.pos = { type: 'city', city: kaupunki };
   game.phase = 'action';
-  assert.ok(game.tehtavaTarjolla(), 'kertatutkiminen odottaa vielä');
+  const tila1 = game.kaariTilanne(kaupunki);
+  assert.equal(tila1.yritykset, 1);
+  assert.equal(tila1.onnistui, false);
+  assert.ok(game.tehtavaTarjolla(), 'uusintayritys odottaa');
   game.actionQuiz();
+  assert.equal(game.quiz.kaari, true, 'uusintayritys on sama kohtaaminen');
   game.answerQuiz((game.quiz.correct + 1) % game.quiz.options.length);
   game.closeQuiz();
 
+  // Toisen epäonnistumisen jälkeen kolmatta ei tule, eikä vanhaa
+  // kertatutkimista ole (poistettu kaarikaupungeista 10.8.2026).
   game.player.pos = { type: 'city', city: kaupunki };
   game.phase = 'action';
+  const tila2 = game.kaariTilanne(kaupunki);
+  assert.equal(tila2.yritykset, 2);
+  assert.equal(tila2.onnistui, false);
+  assert.equal(game.kaariTarina(kaupunki), null, 'henkilö ei ole enää tavattavissa');
   assert.equal(game.tehtavaTarjolla(), false, 'kaikki tehtävät on tehty');
   // Tutki-nappi jää silti käyttöön UI:ssa: lehteä voi lukea aina
   // (omistajan löytö 10.8.2026 — kortti ei saa kadota tehtävien mukana).
+});
+
+test('onnistunut kohtaaminen sulkee kohtaamisen: nappi harmaantuu eikä uusintaa tule', () => {
+  const pack = packById('europe');
+  const kaupunki = pack.cities.find(
+    (c) => TARINAKAARI[c.id]?.kysymys && !(pack.puzzles ?? []).some((p) => p.city === c.id),
+  )?.id;
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: pack.cities[0].id }],
+    pack,
+    seed: 416,
+  });
+  game.player.pos = { type: 'city', city: kaupunki };
+  game.tokens.delete(kaupunki);
+  game.phase = 'action';
+
+  game.actionQuiz();
+  game.answerQuiz(game.quiz.correct);
+  game.closeQuiz();
+
+  game.player.pos = { type: 'city', city: kaupunki };
+  game.phase = 'action';
+  const tila = game.kaariTilanne(kaupunki);
+  assert.equal(tila.onnistui, true, 'onnistuminen kirjattiin');
+  assert.equal(game.kaariTarina(kaupunki), null, 'onnistunutta kohtaamista ei pelata uudelleen');
+  assert.equal(game.tehtavaTarjolla(), false, 'laatattomassa ei jää muuta tehtävää');
 });
 
 test('pulmassa on apukeinot: vihje ja 50:50', () => {
