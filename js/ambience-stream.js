@@ -368,13 +368,31 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     haivyta(audio, taso(oma), null, nouse);
     vahdiSilmukka(oma, audio);
   }).catch(petti);
+  /*
+   * VAHTIAJASTIN: peilin 404 voi jäädä pelkäksi stalled-tapahtumaksi
+   * ilman erroria (mitattu 10.8.2026: peilistä puuttunut
+   * matkustamoäänite ei koskaan lauennut varareittiä ja avauslento
+   * jäi hiljaiseksi). Jos ääni ei ole soittokunnossa kohtuuajassa
+   * eikä virhettäkään ole tullut, mennään samaan petti-polkuun kuin
+   * error-tapahtumasta.
+   */
+  let vahti = null;
+  const viritaVahti = () => {
+    clearTimeout(vahti);
+    vahti = setTimeout(() => {
+      if (audio.readyState < 3 && nykyinen === oma) petti();
+    }, 6000);
+  };
+  audio.addEventListener('canplay', () => clearTimeout(vahti));
   const petti = () => {
+    clearTimeout(vahti);
     if (!varareittiKokeiltu && onPeilista(audio.getAttribute('src'))) {
       varareittiKokeiltu = true;
       peiliPetti('aanet');
       if (nykyinen !== oma) return;
       audio.src = oma.osoite;
       audio.load();
+      viritaVahti();
       soi();
       return;
     }
@@ -396,6 +414,7 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     varalle();
   };
   audio.addEventListener('error', petti);
+  viritaVahti();
   soi();
   return audio;
 }
