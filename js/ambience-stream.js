@@ -228,9 +228,19 @@ function haivyta(audio, kohde, done, kesto = HAIVYTYS_MS) {
     }
   }
   const alku = lueTaso(audio);
-  const t0 = performance.now();
+  /*
+   * Kello käynnistyy vasta ENSIMMÄISESTÄ ruudusta, ei kutsuhetkestä.
+   * Lentokalvon rakentaminen jumittaa pääsäikeen sekunneiksi heti
+   * häivytyskutsun jälkeen; kutsuhetken kellolla ensimmäinen ruutu
+   * tuli vasta jumin jälkeen ja t oli jo ≥ 1 — etusivun ääni katkesi
+   * kuin veitsellä (omistajan havainto 10.8.2026). Ruudusta alkava
+   * kello soittaa jumin ajan tasaista ääntä ja häivyttää vasta kun
+   * säie taas elää — pehmeä ristivaihto ilman Web Audio -reititystä.
+   */
+  let t0 = null;
   const askel = (nyt) => {
     if (audio.haivytysId !== oma) return;
+    if (t0 === null) t0 = nyt;
     // rAF:n aikaleima voi olla ennen t0:aa — ilman alarajaa volume
     // painui negatiiviseksi ja koko ääniketju kaatui poikkeukseen.
     const t = Math.min(1, Math.max(0, (nyt - t0) / kesto));
@@ -372,26 +382,17 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
       return;
     }
     /*
-     * REITITYS JÄLKIKÄTEEN. Ensimmäisen eleen soitin (etusivu) syntyy
-     * usein ennen kuin kontekstin resume() on ehtinyt valmiiksi:
-     * liitaKompressori näkee suspended-tilan ja soitin jää pelkän
-     * volumen varaan. Silloin sen häivytys askeltaa pääsäikeessä —
-     * ja lentokalvon rakentamisen jumi jäädytti askelluksen, jolloin
-     * etusivun ääni katkesi kuin veitsellä lennon alkaessa (omistajan
-     * havainto 10.8.2026, sama juurisyy kuin v531:n leikkaus mutta
-     * volume-polulla). play() on ratkennut = ele on käsitelty ja
-     * konteksti tyypillisesti käynnissä, joten reititys onnistuu nyt:
-     * taso siirtyy vahvistimeen ja kaikki häivytykset ajastuvat
-     * äänisäikeelle, jota jumi ei pysäytä.
+     * TÄSSÄ EI REITITETÄ JÄLKIKÄTEEN. v545 kokeili liittää
+     * kompressorin tässä kohdassa (soittimiin, jotka syntyivät ennen
+     * kontekstin resumea), ja etusivun ääni katosi iPhonella kokonaan
+     * (omistajan havainto 10.8.2026 ilta): jo soivan elementin
+     * reititys Web Audioon on juuri se hiljaisuusansa, josta
+     * liitaKompressorin oma kommentti varoittaa — elementti lakkaa
+     * soimasta suoraan, eikä iOS:n graafi välttämättä soi tilalle.
+     * Volume-polun soitin jää siis volume-poluksi; sen
+     * jumituksenkesto hoidetaan häivytyksessä (ks. haivyta: rAF-kello
+     * käynnistyy vasta ensimmäisestä ruudusta).
      */
-    if (!audio.aaniVahvistin && !oma.ilmanKompressoria) {
-      const vahvistin = liitaKompressori(audio);
-      if (vahvistin) {
-        vahvistin.gain.value = audio.volume;
-        audio.volume = 1;
-        audio.aaniVahvistin = vahvistin;
-      }
-    }
     sfx.setAmbience(null); // synteesi väistyy, kun oikea äänite soi
     haivyta(audio, taso(oma), null, nouse);
     vahdiSilmukka(oma, audio);

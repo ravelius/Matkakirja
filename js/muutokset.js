@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 548, teksti: 'Etusivun ääni takaisin: reitityskokeilu peruttu' },
   { v: 547, teksti: 'Nähtävyyksien selaus popupissa: nuolet, pyyhkäisy, laskuri' },
   { v: 546, teksti: 'ME:n neljä saapumista uusiksi, visaspoileri pois' },
   { v: 545, teksti: '23 luentaa uusille teksteille, ME-viimeistely, äänipolku' },
