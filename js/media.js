@@ -67,16 +67,23 @@ export function turvanimi(teksti, pate) {
    * toistensa päälle (mitattu 10.8.2026: molemmat vastaavat 200:lla ja
    * ovat kelvollisia JPEG-kuvia — väärä kuva latautuu siis huomaamatta).
    *
-   * Ehto on "yksikään kirjain tai numero ei jäänyt jäljelle" eikä
-   * pelkkä tyhjä: nimestä "Тебердинский заповедник. Вид…" jäi piste,
-   * joka kelpasi nimeksi mutta ei erottanut mitään.
+   * Ehto on "yksikään KIRJAIN ei jäänyt jäljelle" eikä pelkkä tyhjä.
+   * Kaksi askelta opetti sen:
+   *   1. Nimestä "Тебердинский заповедник. Вид…" jäi piste, joka kelpasi
+   *      nimeksi mutta ei erottanut mitään.
+   *   2. Kiinalaisista nimistä "…玉珠峰雪山 02.jpg" ja "…昆仑山 02.jpg"
+   *      jäi pelkkä "02" — kaksi eri vuorikuvaa ja yksi ruokakuva
+   *      hakivat kaikki osoitetta `kuvat/02.jpg`.
+   * Pelkän numeron jättävä nimi on siis yhtä hyödytön kuin tyhjä.
+   * Kirjaimen sisältävät nimet eivät muutu, joten jo peilatut
+   * tiedostot pysyvät paikallaan.
    *
    * Tiiviste lasketaan ALKUPERÄISESTÄ nimestä, joten se on eri
    * jokaiselle tiedostolle ja aina sama samalle tiedostolle.
    * Latinalaiset nimet eivät muutu tästä lainkaan, joten jo peilatut
    * tiedostot pysyvät paikallaan.
    */
-  const nimi = /[a-z0-9]/.test(puhdas) ? puhdas : `kuva-${tiiviste(teksti)}`;
+  const nimi = /[a-z]/.test(puhdas) ? puhdas : `kuva-${tiiviste(teksti)}`;
   return pate ? `${nimi}.${pate}` : nimi;
 }
 

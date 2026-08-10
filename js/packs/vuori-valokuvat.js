@@ -424,6 +424,157 @@ export const VUORIKUVAT = {
     },
   ],
 
+  apenniinit: [
+    {
+      tiedosto: 'Gran sasso visto da Rocca Calascio.jpg',
+      selite: 'Rocca Calascion linnanraunio ja sen takana Gran Sasso '
+        + 'talvi-illassa. Linna vartioi 1200-luvulta lähtien lammaslaumojen '
+        + 'vaellusreittiä ylängöltä rannikolle.',
+      lahde: 'Rabih omeiri, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Panorama Gran Sasso 2017.jpg',
+      selite: 'Gran Sasso Campo Imperatoren ylängöltä maaliskuussa. Corno '
+        + 'Grande (2 912 m) on Apenniinien korkein huippu, ja sen rinteellä '
+        + 'on Euroopan eteläisin jäätikkö.',
+      lahde: 'kallerna, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Lago di Pietranzoni - vista corno grande.jpg',
+      selite: 'Pietranzonin lampi ja Corno Grande sen takana. Ylänkö on '
+        + 'karstimaata: sadevesi katoaa kallioon, ja lampia on vain siellä '
+        + 'missä pohja on tiivis.',
+      lahde: 'Rabih omeiri, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Campo Imperatore with il Corno Grande in the background - Gran Sasso.jpg',
+      selite: 'Campo Imperatoren ylätasanko keväällä. Tasankoa on kutsuttu '
+        + '"Italian pikku-Tiibetiksi": se on parikymmentä kilometriä pitkä, '
+        + 'lähes puuton ja tyhjä.',
+      lahde: 'Bouke ten Cate, Wikimedia Commons (CC BY 4.0)',
+    },
+    {
+      tiedosto: 'Parco Nazionale del Gran Sasso e Monti della Laga, Campo Imperatore, Cavalli si abbeverano al Laghetto Pietranzoni.jpg',
+      selite: 'Hevoset juovat Pietranzonin lammella. Campo Imperatorella '
+        + 'laiduntaa yhä vapaana kulkevia hevosia ja lampaita, kuten '
+        + 'vuosisatoja aiemmin.',
+      lahde: 'Laura Bertonazzi, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Parco Nazionale del Gran Sasso e Monti della Laga, Campo Imperatore, Cavalli al Laghetto Pietranzoni.jpg',
+      selite: 'Hevoslauma sumun laskeutuessa Campo Imperatorelle. Ylängön sää '
+        + 'vaihtuu nopeasti, koska se on korkealla mutta lähellä merta.',
+      lahde: 'Laura Bertonazzi, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Galactic Arc on Pietranzoni Lake.jpg',
+      selite: 'Linnunrata Pietranzonin lammen yllä kesäyönä. Ylängöllä ei ole '
+        + 'asutusta eikä valoja, joten tähtitaivas näkyy kuten ennen '
+        + 'sähkövalon aikaa.',
+      lahde: 'Alessandro Ziantoni, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  ],
+
+  kamtshatka: [
+    {
+      tiedosto: 'Курильское озеро 347.jpg',
+      selite: 'Kurilskoje-järvi ja Iljinskin tulivuori Kamtšatkan '
+        + 'eteläosassa. Kartio on lähes täydellisen symmetrinen, koska se on '
+        + 'rakentunut kerroksittain samasta aukosta.',
+      lahde: 'Olga Kostjutšenko, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Three Volcanoes-ElizovskyDistrict-Russia.jpg',
+      selite: 'Kolme tulivuorta Jelizovon piirissä. Etualan musta hiekka on '
+        + 'purkausten tuhkaa, ja lammikot ovat sulaneen lumen jättämiä.',
+      lahde: 'Kozintsev, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Корякский, Авачинский, Козельский.jpg',
+      selite: 'Korjakski, Avatšinski ja Kozelski peilautuvat tyyneen veteen. '
+        + 'Nämä kolme kohoavat Petropavlovskin kaupungin takana, ja '
+        + 'Avatšinski on yksi niemimaan aktiivisimmista.',
+      lahde: 'Kozintsev, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Долина гейзеров (2018).jpg',
+      selite: 'Geysirien laakso Kronotskin luonnonpuistossa. Laakso '
+        + 'löydettiin vasta 1941, ja se on Islannin ulkopuolella maailman '
+        + 'suurimpia geysiralueita.',
+      lahde: 'Malupasic, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Кальдера Узона.jpg',
+      selite: 'Uzonin kaldera: kymmenen kilometrin levyinen romahtanut '
+        + 'tulivuoren huippu, jonka pohjalla on kiehuvia lampia ja '
+        + 'väripintaisia savikenttiä.',
+      lahde: 'Rost.galis, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Термальное поле на Узоне.jpg',
+      selite: 'Uzonin terminen kenttä ylhäältä. Värit tulevat rikistä, '
+        + 'raudasta ja bakteereista, jotka elävät kiehuvassa vedessä.',
+      lahde: 'Rost.galis, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Озеро Банное на Узоне.jpg',
+      selite: 'Bannoje-järvi Uzonin kalderassa. Järven pohjalla on sulaa '
+        + 'rikkiä, ja vesi on happamampaa kuin etikka.',
+      lahde: 'Rost.galis, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Туристы изучают следы вулканической активности.jpg',
+      selite: 'Retkeilijöitä höyryävällä kentällä Kronotskin '
+        + 'luonnonpuistossa. Puistoon pääsee vain helikopterilla ja '
+        + 'saattajan kanssa.',
+      lahde: 'Rost.galis, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  ],
+
+  pyreneet: [
+    {
+      tiedosto: 'Panoramic view of the mountain.jpg',
+      selite: 'Ordesan laakso Monte Perdidon kansallispuistossa. Laakso on '
+        + 'jäätikön kaivertama U-muotoinen uoma, jonka seinät nousevat '
+        + 'tuhannen metrin kalkkikiviportaina.',
+      lahde: 'Raquelalcaine, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Ordesa desde Calcilarruego - panoramio.jpg',
+      selite: 'Ordesan laakso Calcilarruegon kalliolta nähtynä. Reunapolku '
+        + 'kulkee jyrkänteen päällä, ja laakson pohja on lähes kilometrin '
+        + 'alempana.',
+      lahde: 'Pintafontes Senapeli, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Chorreando.jpg',
+      selite: 'Lumipeitteinen huippu Ordesan laakson yläpuolella maaliskuussa. '
+        + 'Pyreneet ovat kapea muuri Ranskan ja Espanjan välissä, ja lumi '
+        + 'sulkee sen solat talveksi.',
+      lahde: 'Patisalva, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Parque nacional de Ordesa y Monte Perdido, Huesca, España, 2015-01-07, DD 01.JPG',
+      selite: 'Monte Perdidon massiivi talvella Huescan maakunnassa. Monte '
+        + 'Perdido on Euroopan korkein kalkkikivivuori, 3 355 metriä.',
+      lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Parque nacional de Ordesa y Monte Perdido, Huesca, España, 2015-01-07, DD 02.JPG',
+      selite: 'Kalkkikiviseinä ja sen alla metsäinen rinne. Vaakasuorat '
+        + 'kerrokset ovat merenpohjan kalkkia, jonka mannerlaattojen törmäys '
+        + 'nosti pystyyn.',
+      lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Desde el valle de Ordesa.jpg',
+      selite: 'Syksyn värit Ordesan laaksossa. Puisto on Espanjan '
+        + 'vanhimpia — perustettu 1918 — ja kuuluu Unescon '
+        + 'maailmanperintöluetteloon.',
+      lahde: 'Javier Ripoll, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  ],
+
   karpaatit: [
     {
       tiedosto: 'Скелі Свидовець.jpg',

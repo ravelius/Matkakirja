@@ -3,8 +3,12 @@
 Haara: `claude/opus5-vuorikuvat`. Työ ei koske mainiin eikä nosta
 versiota — poimi ja julkaise sinä.
 
-**Tilanne 10.8.2026 ilta: mekanismi valmis, Kaukasus kuratoitu
-(pilotti 10/10 kuvaa). Loput 51 kohdetta työn alla.**
+**Tilanne 10.8.2026 ilta: mekanismi valmis ja käytössä.
+21/52 kohdetta kuratoitu, 146 kuvaa. Loput 31 kesken — lista alla.**
+
+Erä on julkaisukelpoinen sellaisenaan: kuratoimaton kohde toimii
+täsmälleen kuten ennenkin (Wikipedian oma kuvasto), joten mitään ei
+riko se, että työ on kesken.
 
 ## Tehtävä
 
@@ -68,11 +72,25 @@ kirjainta tai numeroa, saa perään tiivisteen alkuperäisestä nimestä
 (`kuva-19cxnn5.jpg`). Latinalaiset nimet eivät muutu lainkaan, joten jo
 peilatut tiedostot pysyvät paikallaan.
 
+Sama vika toistui vielä toisessa muodossa, ja sen löysi tähän eränä
+kirjoitettu testi: kiinalaisista nimistä "…玉珠峰雪山 02.jpg" ja
+"…昆仑山 02.jpg" jäi jäljelle pelkkä **"02"**, joka törmäsi keskenään
+JA erääseen jo pelissä olevaan ruokakuvaan (`普通腊汁肉夹馍 02.jpg`).
+Yksikin näistä vuorikuvista olisi siis korvannut ämpärissä olemassa
+olevan kuvan. Sääntö on nyt: nimi, josta ei jää yhtään KIRJAINTA, saa
+tiivisteen — pelkkä numero on yhtä hyödytön nimi kuin tyhjä.
+
 **Sinulle jää kaksi asiaa:**
 
 1. **Peili on ajettava uudelleen** (`tools/peilaa-media.mjs`), jotta ne
    21 kuvaa ilmestyvät omilla nimillään. Siihen asti ne latautuvat
    Commonsista varareittiä pitkin — eli oikein, mutta hitaammin.
+   Nimi vaihtuu kaikkiaan **15 tiedostolla**, joista 8 on tämän erän
+   omia. Seitsemän muuta ovat nykyisiä kuvia, joiden nimeksi jäi pelkkä
+   numero (`02`, `2018`, `3754`, `1910`, `2020`): asia-valokuvat,
+   asia-lisat-valokuvat, kulttuuri-kategoriat, maa-kategoriat ja
+   nahtavyysjutut. Ne näkyvät pelissä oikein koko ajan — vain hakupolku
+   vaihtuu.
 2. **Neljä törmäystä jäi korjaamatta**, koska niiden korjaus vaihtaisi
    JO PEILATTUJEN tiedostojen nimet (404 kunnes peili ajetaan). Ne ovat
    tests/media.test.mjs:n `TUNNETUT_TORMAYKSET`-listalla, ja uusi
@@ -98,12 +116,59 @@ peilatut tiedostot pysyvät paikallaan.
 Testit vihreinä: 552 pass, 0 fail. **Versiota ei ole nostettu eikä
 buildia ajettu** — ne kuuluvat sinulle.
 
-## Muistiinpanot Fablelle
+## Valmiit kohteet (21)
 
-- Kuusi kohdetta jäi ilman ehdokkaita ja vaatii käsin valitun
-  Commons-kategorian: altai, kamtshatka, etiopian-ylangot,
-  madagaskarin-ylanko, brasilian-ylanko (ei kategoriaa lainkaan) ja
-  guyanan-ylanko (vain 6). Korjaan ne KATEGORIA-listaan työn edetessä.
-- Silmätarkistuksessa on jo hylätty mm. Hammond-diakuvat, joiden oma
-  kuvaus sanoo sijainnin olevan tuntematon — ne eivät täytä sääntöä
-  "kuvan pitää esittää juuri sitä vuoristoa".
+himalaja 10, karakoram 10, kaukasus 10, alpit 10, skandit 8,
+kamtshatka 8, elburz 7, japanin-alpit 7, hindukush 7, pamir 7,
+tienshan 7, apenniinit 7, zagros 6, tiibetin-ylatasanko 6,
+verhojansk 6, pyreneet 6, ural 5, kunlun 5, taurusvuoret 5,
+lansi-ghatit 5, karpaatit 4.
+
+Kuvamäärä vaihtelee tarkoituksella: kymmenen tuli sinne, missä oli
+kymmenen upeaa kuvaa. Karpaateilla jäi neljä, koska puolet ehdokkaista
+oli saman valokuvaajan VESILEIMATTUJA otoksia — ne hylättiin.
+
+## Kesken (31)
+
+altai, annamin-ylanko, sarawat, dinaariset-alpit, balkanvuoret,
+atlas, etiopian-ylangot, drakensberg, ruwenzori, kilimanjaro,
+kenia-vuori, ahaggar, tibesti, kamerunvuori, kapmaan-taittovuoret,
+madagaskarin-ylanko, kalliovuoret, sierra-nevada, appalakit,
+sierra-madre-occidental, sierra-madre-oriental, alaskan-vuoristo,
+kaskadit, rannikkovuoret, andit, guyanan-ylanko, brasilian-ylanko,
+kaakkois-australian-ylangot, suuri-vedenjakajavuoristo,
+uuden-seelannin-alpit, uuden-guinean-ylangot.
+
+Kaikilla näillä ehdokaslistat ovat valmiina
+(`tools/vuorikuva-aineisto/`, ei repossa — aja `hae-vuorikuvat.mjs`).
+Jatko on mekaanista: taulu → silmätarkistus → merkintä pakettiin.
+
+## Mitä silmätarkistus on hylännyt
+
+Nämä eivät ole teoriaa — jokainen näistä oli automaattiseulan
+läpäissyt, oikein lisensoitu ehdokas, ja vain katsominen paljasti sen:
+
+- **Vesileimat.** Karpaateilla useassa kuvassa oli valokuvaajan nimi
+  poltettuna kulmaan. Kuvataulun keskirajaus PIILOTTI osan niistä,
+  joten valituille tehdään vielä kokonaisen kuvan tarkistus
+  (`tee-kuvataulu.py --koko`).
+- **Väärä vuori.** Commonsin sarja "Province of L'Aquila in 2013" on
+  kuvattu Dolomiiteilla, ei Apenniineilla. Otsikko valehteli
+  suoraan — juuri siksi kategoriat tarkistetaan ja kuvat katsotaan.
+- **Tuntematon paikka.** Hammondin diakuvien oma kuvaus sanoo, ettei
+  kuvauspaikkaa tiedetä. Sellainen ei voi esittää "juuri sitä
+  vuoristoa".
+- **Ei vuorta lainkaan.** Uralin kategoriapuu oli mineraalinäytteitä ja
+  kuorolaulajia, Pyreneiden leipää ja koruja, Karakoramin arkiston
+  albumiaukeamia, Kamtšatkan satelliittirenderöintejä. Nämä kaikki on
+  nyt seulottu koneella, mutta ne löytyivät silmällä.
+
+## Kategoriat, jotka piti valita käsin
+
+Wikidatan P373 osoitti tyhjään tai väärään paikkaan yhdeksällä
+kohteella. Perustelut ovat koodissa (`KATEGORIA`), tässä tiivistys:
+kolmella vuoristolla ei ole omaa kategoriaa lainkaan, joten tilalle
+valittiin sen tunnetuin osa — Brasilian ylänkö → Serra da Mantiqueira
+(kohteen oma huippu Pico da Bandeira), Guyanan ylänkö → Mount Roraima,
+Apenniinit → Gran Sasso (Corno Grande). Nämä kolme kannattaa katsoa
+läpi: valinta on tulkinta, ei tosiasia.

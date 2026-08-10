@@ -66,13 +66,13 @@ const KATEGORIA = {
    * sääntö on, ettei hakutuloksen otsikkoon saa luottaa. Gran Sasso on
    * Apenniinien ydin ja kohteen oman huipun (Corno Grande) koti.
    */
-  apenniinit: "Gran Sasso d'Italia",
+  apenniinit: 'Gran Sasso e Monti della Laga National Park',
   /*
    * Pyreneiden kategoriassa on leipää, koruja ja karttalehtiä — nimi on
    * myös tuotenimi. Ordesa y Monte Perdido on vuoriston tunnetuin
    * kansallispuisto ja sisältää Monte Perdidon.
    */
-  pyreneet: 'Ordesa y Monte Perdido National Park',
+  pyreneet: 'Parque Nacional de Ordesa y Monte Perdido',
   'etiopian-ylangot': 'Simien Mountains',
   // Brasilian ylängöllä ei ole omaa kategoriaa; Mantiqueira on sen
   // eteläinen reunavuoristo (Pico da Bandeira, kohteen oma huippu).
@@ -80,7 +80,7 @@ const KATEGORIA = {
   // Guyanan ylänkö = tepui-tasavuoret; Roraima on niistä tunnetuin.
   'guyanan-ylanko': 'Mount Roraima',
   'madagaskarin-ylanko': 'Mountains of Madagascar',
-  kamtshatka: 'Volcanoes in Kamchatka',
+  kamtshatka: 'Kronotsky Nature Reserve',
   'kaakkois-australian-ylangot': 'Australian Alps',
   'uuden-guinean-ylangot': 'Mountains of Papua New Guinea',
   'kapmaan-taittovuoret': 'Cape Fold Belt',
@@ -165,6 +165,9 @@ export function kelpaaKuva(nimi) {
    * pysäytä niitä.
    */
   if (/^[a-z]{2}-\d{2}-\d{2}\b/.test(matala)) return false;
+  // Espanjan kansallisen topografisen kartaston lehdet, esim.
+  // "MTN25-0146c3-2006-Valle de Bujaruelo.jpg".
+  if (/^mtn\d+-/.test(matala)) return false;
   return !POIS.some((sana) => matala.includes(sana));
 }
 
