@@ -15,7 +15,11 @@ osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
   `session_01LrZTPX64MWBxukCQ7p7NBJ` (ME-erä D + tekijätarkistimen
   ajo kaikille paketeille, lupa myönnetty), Sonnet 1
   `session_01RT3ucdBD6Pt48BP75qvjKw` (kokoava koko Euroopan QA,
-  käynnistetty heti), Fable max -apusessio
+  käynnistetty heti; HUOM 1. sessio jäi ilman lähderepoa, tulkitsi
+  jälkikäteisen add_repo-ohjeen epäluotettavaksi ja arkistoitiin —
+  OPPI: anna tiimisessioille AINA source_url create_sessionissa,
+  uusi Sonnet 1 on session_01Rka2va6Mm1N9RiBg4ZJkQm), Fable max
+  -apusessio
   `session_01U8NqxuC5RCoMozxGqDzEJm` (omistajan tilaus: syväajattelu
   vaikeisiin pulmiin; omistaja kytkee Max-tilan UI:sta). Opus 2 ja
   Sonnet 2 perustetaan vasta kun niiden jonot aukeavat (ME-kohdekartat

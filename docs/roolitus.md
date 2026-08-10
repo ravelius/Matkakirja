@@ -66,7 +66,7 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 | Fable max (apusessio) | session_01U8NqxuC5RCoMozxGqDzEJm | 10.8.2026 |
 | Opus 1 | session_01LrZTPX64MWBxukCQ7p7NBJ | 10.8.2026 (uusi tili) |
 | Opus 2 | — (perustetaan kun karttajono aukeaa) | 10.8.2026 |
-| Sonnet 1 | session_01RT3ucdBD6Pt48BP75qvjKw | 10.8.2026 (uusi tili) |
+| Sonnet 1 | session_01Rka2va6Mm1N9RiBg4ZJkQm | 10.8.2026 (2. yritys; 1. jäi ilman repoa ja arkistoitiin) |
 | Sonnet 2 | — (perustetaan kun ME-jono aukeaa) | 10.8.2026 |
 
 Vanhan tilin sessiot (8.8.2026 taulukko) ovat arkistoituja eivätkä
