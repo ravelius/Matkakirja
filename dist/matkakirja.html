@@ -78079,7 +78079,10 @@ const AFRICA = {
      * ja pääaarre on nyt oikea esine oikeine tarinoineen.
      */
     types: themedTokenTypes({
-      star: { name: 'Suuren Zimbabwen kivilintu' },
+      star: {
+        name: 'Suuren Zimbabwen kivilintu',
+        kuva: 'assets/aarteet/aarre-africa-star.jpg',
+      },
       ruby: {
         name: 'Kimberleyn timantti', color: '#bcd6e8',
         kuva: 'assets/aarteet/aarre-africa-ruby.jpg',
@@ -85817,7 +85820,10 @@ const EUROPE = {
   tokens: {
     // Meripihka on Itämeren oma jalokivi: fossiloitunutta puuhartsia.
     types: themedTokenTypes({
-      star: { name: 'Meripihkahuoneen aarre' },
+      star: {
+        name: 'Meripihkahuoneen aarre',
+        kuva: 'assets/aarteet/aarre-europe-star.jpg',
+      },
       ruby: {
         name: 'Kruununjalokivi', color: '#b0304a',
         kuva: 'assets/aarteet/aarre-europe-ruby.jpg',
@@ -86150,7 +86156,10 @@ const MIDDLE_EAST = {
   tokens: {
     // Turkoosi on saanut nimensä Turkista, jonka kautta kivi kulki Eurooppaan.
     types: themedTokenTypes({
-      star: { name: 'Sheban kuningattaren aarre' },
+      star: {
+        name: 'Sheban kuningattaren aarre',
+        kuva: 'assets/aarteet/aarre-middleeast-star.jpg',
+      },
       ruby: {
         name: 'Messinkilamppu', color: '#c88f2b',
         kuva: 'assets/aarteet/aarre-middleeast-ruby.jpg',
@@ -89005,7 +89014,10 @@ const ASIA = {
     // Topaasin tilalla jade: Kiinassa sitä on arvostettu kultaa enemmän
     // tuhansien vuosien ajan.
     types: themedTokenTypes({
-      star: { name: 'Keisarin jadesinetti' },
+      star: {
+        name: 'Keisarin jadesinetti',
+        kuva: 'assets/aarteet/aarre-asia-star.jpg',
+      },
       ruby: {
         name: 'Sukeltajan helmi', color: '#e8e4da',
         kuva: 'assets/aarteet/aarre-asia-ruby.jpg',
@@ -91371,7 +91383,10 @@ const OCEANIA = {
     // Topaasin tilalla opaali: Coober Pedy tuottaa valtaosan maailman
     // jalo-opaaleista, ja kaivoskaupungissa asutaan maan alla helteen takia.
     types: themedTokenTypes({
-      star: { name: 'Eteläristin helmi' },
+      star: {
+        name: 'Eteläristin helmi',
+        kuva: 'assets/aarteet/aarre-oceania-star.jpg',
+      },
       ruby: {
         name: 'Opaali', color: '#7fb7c9',
         kuva: 'assets/aarteet/aarre-oceania-ruby.jpg',
@@ -94057,7 +94072,10 @@ const NORTHAMERICA = {
     // Topaasin tilalla Klondiken kulta: kultaryntäys veti 1890-luvulla
     // kymmeniätuhansia onnenonkijoita Yukonin jokilaaksoon.
     types: themedTokenTypes({
-      star: { name: 'Montezuman aarre' },
+      star: {
+        name: 'Montezuman aarre',
+        kuva: 'assets/aarteet/aarre-northamerica-star.jpg',
+      },
       ruby: {
         name: 'Kultaryntäyksen hippu', color: '#e0b02a',
         kuva: 'assets/aarteet/aarre-northamerica-ruby.jpg',
@@ -96757,7 +96775,10 @@ const SOUTHAMERICA = {
     // Smaragdin tilalla on Kolumbian oma jalokivi ja topaasin tilalla
     // Andien hopea, jonka takia koko manner aikanaan valloitettiin.
     types: themedTokenTypes({
-      star: { name: 'El Doradon aarre' },
+      star: {
+        name: 'El Doradon aarre',
+        kuva: 'assets/aarteet/aarre-southamerica-star.jpg',
+      },
       ruby: {
         name: 'Inkojen kultafiguuri', color: '#e0b02a',
         kuva: 'assets/aarteet/aarre-southamerica-ruby.jpg',
@@ -128413,7 +128434,7 @@ function aarrekuvanOsoitteet(kuva) {
  * rajattuna aina, kun laattatyypillä on kuva (omistajan päätös
  * 10.8.2026: vanhat Afrikan tähti -tyyliset jalokivi-ikonit pois
  * kaikkialta). Piirrosikoni jää varasoluksi laatoille, joilla ei ole
- * kuvaa (tähti, kenkä, rosvo, linssi) ja laudoille ilman aarrekuvia
+ * kuvaa (kenkä, rosvo, linssi) ja laudoille ilman aarrekuvia
  * (maailmankartta, Suomi, Istanbul) — sekä tilanteeseen, jossa kuva
  * ei lataudu.
  */
@@ -129430,8 +129451,8 @@ class UI {
   /*
    * Aarteiden kuvat lämpimiksi ennen ensimmäistä paljastusta:
    * paljastuskortti on ruudulla vain pari sekuntia, eikä kylmä lataus
-   * ehtisi siihen ikkunaan. Kolme pientä kuvaa per lauta — halpa hinta
-   * siitä, että aarre NÄKYY.
+   * ehtisi siihen ikkunaan. Neljä pientä kuvaa per lauta (kolme
+   * jalokiveä ja pääaarre) — halpa hinta siitä, että aarre NÄKYY.
    */
   esilataaAarrekuvat() {
     for (const type of Object.values(this.game.tokenTypes ?? {})) {
@@ -139724,11 +139745,11 @@ class UI {
 
   /**
    * Aarteen paljastus ruudun keskellä. Aarre, jolla on oma AI-kuva
-   * (ruby/emerald/topaz), NOUSEE MUSTASTA: kuva keskelle ilman
+   * (star/ruby/emerald/topaz), NOUSEE MUSTASTA: kuva keskelle ilman
    * kehyksiä ja tekstit sen ympärille (omistajan palaute 9.8.2026 —
    * vanha kääntyvä laattakuva oli kuvan rinnalla sekava). Kuvattomat
-   * laatat (tähti, kenkä, rosvo, tyhjä, linssi) kääntyvät entiseen
-   * tapaan.
+   * laatat (kenkä, rosvo, tyhjä, linssi) ja aarrekuvattomat laudat
+   * (maailmankartta, Suomi, Istanbul) kääntyvät entiseen tapaan.
    */
   async playTokenReveal(type) {
     const token = this.game.tokenTypes[type];
@@ -140582,6 +140603,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 524, teksti: 'Unohdetuille aarteille omat kuvat seitsemälle laudalle' },
   { v: 523, teksti: 'Alun hionta: aulafeidi, äänivalikko 3 tilaan, ohjerivi' },
   { v: 522, teksti: 'Neljä kiellettyä lisenssiä vaihdettu sallittuihin kuviin' },
   { v: 521, teksti: 'Intro v3, lähtöaulan ambienssi, pehmeämpi moottori ja zoomit' },
@@ -141189,7 +141211,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.523';
+const APP_VERSION = '2026-08-09.524';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

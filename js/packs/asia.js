@@ -299,7 +299,10 @@ export const ASIA = {
     // Topaasin tilalla jade: Kiinassa sitä on arvostettu kultaa enemmän
     // tuhansien vuosien ajan.
     types: themedTokenTypes({
-      star: { name: 'Keisarin jadesinetti' },
+      star: {
+        name: 'Keisarin jadesinetti',
+        kuva: 'assets/aarteet/aarre-asia-star.jpg',
+      },
       ruby: {
         name: 'Sukeltajan helmi', color: '#e8e4da',
         kuva: 'assets/aarteet/aarre-asia-ruby.jpg',

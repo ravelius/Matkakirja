@@ -1071,7 +1071,7 @@ function aarrekuvanOsoitteet(kuva) {
  * rajattuna aina, kun laattatyypillä on kuva (omistajan päätös
  * 10.8.2026: vanhat Afrikan tähti -tyyliset jalokivi-ikonit pois
  * kaikkialta). Piirrosikoni jää varasoluksi laatoille, joilla ei ole
- * kuvaa (tähti, kenkä, rosvo, linssi) ja laudoille ilman aarrekuvia
+ * kuvaa (kenkä, rosvo, linssi) ja laudoille ilman aarrekuvia
  * (maailmankartta, Suomi, Istanbul) — sekä tilanteeseen, jossa kuva
  * ei lataudu.
  */
@@ -2088,8 +2088,8 @@ export class UI {
   /*
    * Aarteiden kuvat lämpimiksi ennen ensimmäistä paljastusta:
    * paljastuskortti on ruudulla vain pari sekuntia, eikä kylmä lataus
-   * ehtisi siihen ikkunaan. Kolme pientä kuvaa per lauta — halpa hinta
-   * siitä, että aarre NÄKYY.
+   * ehtisi siihen ikkunaan. Neljä pientä kuvaa per lauta (kolme
+   * jalokiveä ja pääaarre) — halpa hinta siitä, että aarre NÄKYY.
    */
   esilataaAarrekuvat() {
     for (const type of Object.values(this.game.tokenTypes ?? {})) {
@@ -12385,11 +12385,11 @@ export class UI {
 
   /**
    * Aarteen paljastus ruudun keskellä. Aarre, jolla on oma AI-kuva
-   * (ruby/emerald/topaz), NOUSEE MUSTASTA: kuva keskelle ilman
+   * (star/ruby/emerald/topaz), NOUSEE MUSTASTA: kuva keskelle ilman
    * kehyksiä ja tekstit sen ympärille (omistajan palaute 9.8.2026 —
    * vanha kääntyvä laattakuva oli kuvan rinnalla sekava). Kuvattomat
-   * laatat (tähti, kenkä, rosvo, tyhjä, linssi) kääntyvät entiseen
-   * tapaan.
+   * laatat (kenkä, rosvo, tyhjä, linssi) ja aarrekuvattomat laudat
+   * (maailmankartta, Suomi, Istanbul) kääntyvät entiseen tapaan.
    */
   async playTokenReveal(type) {
     const token = this.game.tokenTypes[type];

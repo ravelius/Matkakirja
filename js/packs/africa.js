@@ -264,7 +264,10 @@ export const AFRICA = {
      * ja pääaarre on nyt oikea esine oikeine tarinoineen.
      */
     types: themedTokenTypes({
-      star: { name: 'Suuren Zimbabwen kivilintu' },
+      star: {
+        name: 'Suuren Zimbabwen kivilintu',
+        kuva: 'assets/aarteet/aarre-africa-star.jpg',
+      },
       ruby: {
         name: 'Kimberleyn timantti', color: '#bcd6e8',
         kuva: 'assets/aarteet/aarre-africa-ruby.jpg',
