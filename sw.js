@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.536';
+const CACHE = 'matkakirja-2026-08-09.537';
 const SHELL = [
   './',
   './index.html',
@@ -131,6 +131,10 @@ const SHELL = [
   // selaillaan eniten.
   './assets/linssit/yokartta.jpg',
   './assets/linssit/topografia.webp',
+  // Aarrelöydön hihkaisut (nuoren herran reaktiot, 10.8.2026).
+  './assets/audio/hihkaisu-riemu.mp3',
+  './assets/audio/hihkaisu-hammastys.mp3',
+  './assets/audio/hihkaisu-hykertely.mp3',
   // Kohtaamiskuvat (kohtaamiskortti + kätkötulos, pilotti 10.8.2026).
   './assets/kohtaamiset/kohtaaminen-ateena.jpg',
   './assets/kohtaamiset/kohtaaminen-sofia.jpg',
