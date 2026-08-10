@@ -1896,6 +1896,16 @@ export class UI {
     this.quizContinue.addEventListener('click', () => this.doAction(() => (
       this.game.phase === 'duel' ? this.game.closeDuel() : this.game.closeQuiz()
     )));
+    // Aloita peli: kohtaamisen kysymys ja tiimalasi vasta painalluksesta
+    // (omistajan toive 10.8.2026 — luenta ei saa syödä vastausaikaa).
+    this.quizAloita = document.getElementById('quiz-aloita');
+    this.quizAloita.addEventListener('click', () => {
+      this.quizAloita.hidden = true;
+      sfx.play('paper');
+      const jatka = this.jatkaKysymykseen;
+      this.jatkaKysymykseen = null;
+      jatka?.();
+    });
 
     // Lappu sulkeutuu myös taustaa — siis karttaa — napauttamalla, ettei
     // sulkunappia tarvitse etsiä; tietovisassa sellaista ei edes ole.
@@ -6225,6 +6235,52 @@ export class UI {
    * valinta, avataanko aarre. Kieltävä vastaus päättää vuoron, jolloin
    * seuraava nopanheitto alkaa tavalliseen tapaan.
    */
+  /**
+   * Saapumiskortin tehtävänapin tila (omistajan säännöt 10.8.2026):
+   * kohtaaminen odottamassa → "Tapaa Nikos"; ensimmäinen yritys
+   * epäonnistui → "Viimeinen mahdollisuus tavata"; sen jälkeen pulma
+   * tai laatta → "Etsi kätkö"; kaarikaupungissa jonka tehtävät ovat
+   * lopussa nappi jää HARMAANA näkyviin — onnistumisen jälkeen omalla
+   * tekstillään, kahden epäonnistumisen jälkeen "X ei tavattavissa".
+   * Kaarettomalla laudalla (Afrikka, Aasia…) käytös on ennallaan:
+   * nappi piiloon kun tehtävää ei ole. null = nappi piiloon.
+   */
+  tehtavaNapinTila(city) {
+    const { game } = this;
+    const kaari = game.kaariTilanne?.(city.id);
+    const tapaa = KOHTAAMISET[city.id]?.nappi
+      ?? (kaari?.kohde?.nimi ? `Tapaa ${kaari.kohde.nimi}` : 'Etsi kätkö');
+    // Kohtaaminen on kaupungin ensimmäinen tehtävä (game.actionQuiz),
+    // joten sen tila ratkaisee napin kunnes se on pelattu loppuun.
+    if (kaari && game.kaariTarina(city.id)) {
+      return {
+        teksti: kaari.yritykset > 0 ? 'Viimeinen mahdollisuus tavata' : tapaa,
+        pois: false,
+      };
+    }
+    if (game.pendingPuzzle?.() || game.tokenHere?.()) {
+      return { teksti: 'Etsi kätkö', pois: false };
+    }
+    if (kaari) {
+      return kaari.onnistui
+        ? { teksti: tapaa, pois: true }
+        : { teksti: `${kaari.kohde.nimi ?? 'Henkilö'} ei tavattavissa`, pois: true };
+    }
+    return game.tehtavaTarjolla?.() ? { teksti: tapaa, pois: false } : null;
+  }
+
+  /** Asettaa tehtävänapin tekstin, harmauden ja näkyvyyden kortille. */
+  paivitaTehtavaNappi(city) {
+    const nappi = document.getElementById('arrival-yes');
+    if (!nappi || !city) return;
+    const tila = this.tehtavaNapinTila(city);
+    nappi.hidden = !tila;
+    if (!tila) return;
+    nappi.textContent = tila.teksti;
+    nappi.disabled = tila.pois;
+    nappi.classList.toggle('tehtava-pois', tila.pois);
+  }
+
   openArrival(city) {
     if (this.arrivalShownFor === city.id && this.arrivalDialog.open) return;
     this.arrivalShownFor = city.id;
@@ -6239,20 +6295,7 @@ export class UI {
     // Wikipedian tiivistelmästä; kunnes haku valmistuu — tai jos paikalla
     // ei ole artikkelia — kortissa lukee isoisän vakiorivi.
     this.arrivalCity.textContent = city.name;
-    // Kohtaamiskaupungissa nappi kutsuu hahmon luo, ei kätkön:
-    // aarretehtävä aukeaa tarinallisen kohtaamisen kautta. Kun
-    // tarinakaaren kohtaaminen odottaa, nappi nimeää henkilön
-    // ("Tapaa Nikos") — omistajan toive 10.8.2026: "pitäisi oikeasti
-    // olla tapaa joku henkilö -nappi". Kaaren käytyä teksti palaa
-    // kätköksi, koska seuraava tehtävä on taas tavallinen.
-    const kaariNappi = this.game.kaariTarina?.(city.id);
-    const tehtavaNappi = document.getElementById('arrival-yes');
-    tehtavaNappi.textContent = KOHTAAMISET[city.id]?.nappi
-      ?? (kaariNappi?.nimi ? `Tapaa ${kaariNappi.nimi}` : 'Etsi kätkö');
-    // Ilman tehtävää nappi on piilossa jo kortilla (ei vasta lehdessä,
-    // ks. paivitaTutkiAlapalkki): kortti jää luettavaksi ja Poistu
-    // palauttaa kartalle.
-    tehtavaNappi.hidden = !this.game.tehtavaTarjolla?.();
+    this.paivitaTehtavaNappi(city);
     this.arrivalImage.hidden = true;
     this.arrivalImage.removeAttribute('src');
     this.arrivalKuvakotelo.hidden = true;
@@ -7730,14 +7773,17 @@ export class UI {
      * ei tarvitse etsiä miltään tietyltä sivulta.
      */
     /*
-     * Tehtävänappi piiloon myös silloin, kun kaupungissa ei ole enää
-     * tehtävää (laatta käännetty, kohtaaminen ja pulma nähty,
-     * kertatutkiminen käytetty): kortti ja lehti jäävät luettaviksi,
-     * ja Poistu palauttaa kartalle. Ennen nappi olisi avannut
-     * virheilmoituksen — ja koko kortti oli saavuttamattomissa
-     * (omistajan löytö 10.8.2026).
+     * Tehtävänapin tila lasketaan keskitetysti (tehtavaNapinTila):
+     * kohtaamisen vaiheet, pulma/laatta ja harmaa loppuasento.
+     * Maalehdellä nappia ei ole lainkaan.
      */
-    kyllä.hidden = maalehti || !this.game.tehtavaTarjolla?.();
+    if (maalehti) {
+      kyllä.hidden = true;
+    } else {
+      const kaupunki = this.game.board?.cityById?.get(this.arrivalShownFor) ?? null;
+      if (kaupunki) this.paivitaTehtavaNappi(kaupunki);
+      else kyllä.hidden = true;
+    }
     ei.textContent = maalehti || viimeisella ? 'Poistu' : 'Poistu lehdestä';
 
     /*
@@ -11730,6 +11776,9 @@ export class UI {
     if (this.typedQuizFor !== quiz) {
       this.typedQuizFor = quiz;
       this.quizStage = 0;
+      // Edellisen kysymyksen mahdollinen aloitusportti pois.
+      this.quizAloita.hidden = true;
+      this.jatkaKysymykseen = null;
       sfx.play('quizOpen');
       startQuizMusic(this.game.pack.id);
       this.quizQuestion.textContent = '';
@@ -11780,7 +11829,19 @@ export class UI {
           );
         }
         this.typeText(this.quizKohtaaminen, tervehdys, 'quiz', () => {
-          this.typeTimers.quiz = setTimeout(kysymys, QUIZ_PAUSE_MS);
+          /*
+           * Peli alkaa vasta Aloita peli -napista (omistajan toive
+           * 10.8.2026): kertojan luenta saa loppua rauhassa, kysymys
+           * ja vaihtoehdot tulevat esiin painalluksesta, ja tiimalasi
+           * käynnistyy vasta niiden myötä (esilla-ehto alla). Botille
+           * porttia ei jätetä — se vastaa suoraan pelitilaan.
+           */
+          if (this.game.player.isBot) {
+            this.typeTimers.quiz = setTimeout(kysymys, QUIZ_PAUSE_MS);
+            return;
+          }
+          this.jatkaKysymykseen = kysymys;
+          this.quizAloita.hidden = false;
         }, QUIZ_TYPE_MS);
       };
       this.typeText(this.quizCity, otsikko, 'quiz', () => {
@@ -11851,7 +11912,26 @@ export class UI {
           this.quizResult.appendChild(tokenIconSvg(quiz.found, 24));
           body.appendChild(html('strong', '', `Löysit: ${found.name}`));
         } else if (quiz.right && quiz.explore) {
-          body.appendChild(html('strong', '', `Oikein! Löytöpalkkio +${EXPLORE_REWARD} puntaa.`));
+          /*
+           * Laatattoman kohtaamisen voitto on AARRE eikä pelkkä
+           * rahapalkkio (omistajan palaute 10.8.2026 Ateenasta):
+           * kaaren aarreteksti sulkee tarinan ja kertoja lukee sen —
+           * sama pari kuin laatan paljastuksessa (playTokenReveal).
+           */
+          const kaariAarre = quiz.kaari ? TARINAKAARI[quiz.cityId]?.aarre : null;
+          body.appendChild(html('strong', '', kaariAarre
+            ? `Kätkö löytyi! +${EXPLORE_REWARD} puntaa.`
+            : `Oikein! Löytöpalkkio +${EXPLORE_REWARD} puntaa.`));
+          if (kaariAarre) {
+            body.appendChild(html('span', 'kohtaaminen-repliikki', kaariAarre));
+            if (this.aarreLuentaFor !== quiz && kertojaTila() !== 'ei') {
+              this.aarreLuentaFor = quiz;
+              this.playDiaryVoice(
+                `assets/audio/puhe-kaari-aarre-${quiz.cityId}.mp3`,
+                { viive: 600 },
+              );
+            }
+          }
         } else if (quiz.right) {
           body.appendChild(html('strong', '', 'Oikein!'));
         } else {

@@ -549,6 +549,35 @@ jälkeen.
   (versiokollisio nro 5 — ratkaisu kuten aina: merge origin/main +
   uusi-versio uudelleen).
 
+### v507 (10.8. aamupäivä): kohtaamisen v2-säännöt
+
+Omistajan testipalaute Ateenasta (laatatön kohtaaminen antoi vain
+rahapalkinnon; lehteen ilmestyi vanha kertatutkimis-"Etsi kätkö";
++ uudet napin ja ajastuksen säännöt). Toteutettu:
+
+- **Aarre laatattomasta kohtaamisesta:** oikea vastaus →
+  "Kätkö löytyi! +50 puntaa." + kaaren aarreteksti + aarreluenta
+  (ui.js quiz-result explore+kaari-haara; playDiaryVoice
+  puhe-kaari-aarre). Laatallisessa reveal-polku ennallaan.
+- **Kertatutkiminen POISTETTU kaarikaupungeista** (canExplore
+  palauttaa false jos TARINAKAARI-kysymys on olemassa kaarilaudalla)
+  — kaarettomat laudat (Afrikka, Aasia…) ennallaan.
+- **Kohtaamisen uusintayritys:** kaariYritykset-Map (pack:city →
+  {yritykset, onnistui}; KAARI_YRITYKSET=2; yritys kirjataan
+  AVATTAESSA, onnistuminen vastattaessa; ei tallenneta).
+  Nappitilat (ui.js tehtavaNapinTila + paivitaTehtavaNappi):
+  odottaa → "Tapaa Nikos"; 1 epäonnistuminen → "Viimeinen
+  mahdollisuus tavata"; pulma/laatta → "Etsi kätkö"; onnistui →
+  HARMAA sama teksti (disabled + .tehtava-pois); 2 epäonnistumista
+  → HARMAA "X ei tavattavissa". Kaariton lauta: piilotus kuten
+  v506.
+- **Aloita peli -portti (#quiz-aloita):** kohtaamisen tervehdyksen
+  jälkeen kysymys, vaihtoehdot ja tiimalasi tulevat vasta napista —
+  kertojan luenta ei syö vastausaikaa. Botti ohittaa portin.
+- Testit 577/0 (uusintayritys- ja onnistumistestit); Playwright:
+  Ateena (portti+aarre+pulma toisena), Amsterdam (harmaa
+  onnistuminen), Dublin (viimeinen mahdollisuus → ei tavattavissa).
+
 ### Vahtikierros klo 06:40Z (9.40): ei jumeja, ei jaettavaa
 
 - Raportit luettu haaroilta: Sonnet 2 erä 12 valmis → erä 13 työn

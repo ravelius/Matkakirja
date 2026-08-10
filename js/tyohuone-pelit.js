@@ -45,11 +45,14 @@ export const PELIT = {
       nimi: 'Kohtaamisvisa (tarinakaari)',
       tila: 'pelissä, luettu ääneen',
       kuvaus: 'Kaupungin ensimmäinen peli joka kaupungissa: tarinan '
-        + 'henkilö tervehtii ja esittää isoisän jättämän kysymyksen. '
-        + 'Kysymys ja henkilö on kirjoitettu käsin joka kaupungille, '
-        + 'ja kohtaaminen ja aarrevihje luetaan ääneen. Laatattomassa '
-        + 'kaupungissa kohtaaminen palkitsee kuten tutkiminen '
-        + '(löytöpalkkio), laatallisessa oikea vastaus kääntää laatan.',
+        + 'henkilö tervehtii, kertoja lukee kohtaamisen, ja peli '
+        + 'alkaa vasta Aloita peli -napista — tiimalasi ei kulu '
+        + 'luennan aikana. Oikeasta vastauksesta laatta kääntyy; '
+        + 'laatattomassa kaupungissa kätkö löytyy silti (aarreteksti '
+        + 'luetaan ja löytöpalkkio maksetaan). Epäonnistumisen saa '
+        + 'yrittää uudelleen kerran ("Viimeinen mahdollisuus '
+        + 'tavata"); toisen jälkeen henkilö ei ole tavattavissa, ja '
+        + 'onnistumisen jälkeen nappi harmaantuu.',
       synkka: 'Täysi — per kaupunki käsin kirjoitettu pari.',
     },
     {
@@ -133,9 +136,12 @@ export const PELIT = {
     },
     {
       nimi: 'Tutkiminen ilman laattaa',
-      tila: 'pelissä',
+      tila: 'pelissä vain kaarettomilla laudoilla (Afrikka, Aasia…)',
       kuvaus: 'Laatattomassa kaupungissa paikkaa voi tutkia kerran: '
-        + 'kevyt kysymys, löytöpalkkio oikeasta.',
+        + 'kevyt kysymys, löytöpalkkio oikeasta. POISTETTU '
+        + 'kaarikaupungeista 10.8. (omistajan päätös: kohtaamisen '
+        + 'rinnalla vanha kevyt kysymys oli kaksi juttua päällekkäin) '
+        + '— Euroopassa laataton tehtävä on aina kohtaaminen.',
       synkka: 'Kaupungin kysymyspankki.',
     },
   ],
