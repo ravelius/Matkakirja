@@ -43,6 +43,10 @@ on:
       # Kaikki peilattava on määritelty paketeissa: kuvien ja äänten
       # osoitteet ovat korttien tiedoissa.
       - 'js/packs/**'
+      # Äänimaisemien korit asuvat pakettien ulkopuolella — uusi ääni
+      # jäi peilaamatta, kun tämä polku puuttui (löytyi 10.8.2026:
+      # matkustamoäänite soi vain varareitin kautta).
+      - 'js/aani-ehdokkaat.js'
       # Työkalu päättää mitä ja miten peilataan.
       - 'tools/peilaa-media.mjs'
       - 'tools/leikkaa-mp3.mjs'
