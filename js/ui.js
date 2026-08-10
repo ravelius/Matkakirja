@@ -829,7 +829,7 @@ const INTRO_TEXT = 'Vintiltä löytyi isoisän kulunut matkakirja — '
   + 'Maailman ympäri kahdeksassakymmenessä päivässä.\n\n'
   + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi? '
   + 'Ja kuka repii kirjasta juuri sen sivun?\n\n'
-  + 'minne lennän ensin?';
+  + 'Valitse kohde kartalta.';
 // Kirjan nimi kursivoidaan VAIN ruudulla (renderIntro) — luentaan
 // kursiivi ei vaikuta. Nimen on esiinnyttävä INTRO_TEXTissä juuri
 // tässä muodossa, jotta kursiivijako osuu.
@@ -904,8 +904,9 @@ const SAAPUMIS_OSUUS = 0.43;
 const SAAPUMIS_LEVEIN = 1500;
 // Puhelimen kapealla ruudulla saapuminen saa olla pykälän lähempänä
 // (omistajan iPhone-palaute 10.8.2026): 1400 yksikön näkymä on
-// kapealla ruudulla liian laaja.
-const SAAPUMIS_LEVEIN_KAPEA = 1000;
+// kapealla ruudulla liian laaja (650: omistajan tarkennus 10.8.
+// illalla — vielä pykälä lähemmäs).
+const SAAPUMIS_LEVEIN_KAPEA = 650;
 const MANNER_ZOOM_VIIVE = 1400; // kokonäkymä näkyy tämän verran ennen zoomausta
 // Kuinka suuri osa ruudusta varataan laudan eteläpuolelle, jotta
 // alarivin nappien alle jäävät kaupungit saa panoroitua näkyviin.
@@ -5449,11 +5450,12 @@ export class UI {
         this.lentoPuheAjastin = setTimeout(() => {
           // Lentorepliikin lukee vain pitkä kertoja. Kertoja aloittaa
           // vasta kun moottori on ehtinyt nousta kuuluviin (omistajan
-          // toive 10.8.2026: reilu sekunti myöhemmin kuin ennen).
+          // toive 10.8.2026, tarkennus samana iltana: 4,2 s kohdalla,
+          // kun moottori on jo noussut rauhassa kuuluviin).
           if (!this.dead && kertojaTila() === 'pitka') {
             this.playDiaryVoice('assets/audio/puhe-lento-alku.mp3');
           }
-        }, 2800);
+        }, 4200);
       }
       await this.animateFlight(
         'Lontoo', city.name, line,

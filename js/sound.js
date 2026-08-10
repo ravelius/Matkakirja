@@ -332,14 +332,14 @@ class Sound {
       src.loop = true; // lyhyempikin äänite kantaa koko kohtauksen yli
       const g = ctx.createGain();
       // Kevyt sisäänfeidaus (omistajan palaute 10.8.2026): moottori
-      // nousee kuuluviin ~3,5 sekunnissa samalla kun edellisen näkymän
+      // nousee kuuluviin ~5 sekunnissa samalla kun edellisen näkymän
       // äänet häipyvät, eikä pamahda päälle kalvon kanssa yhtä aikaa.
       // HUOM: gain on asetettava hiljaiseksi HETI (t0) — pelkkä
       // t0+0.15-ajastus jätti oletusarvon 1.0 soimaan 150 ms täysillä
       // ennen häivytystä (omistajan bugiraportti 10.8.2026).
       g.gain.setValueAtTime(0.0001, t0);
       g.gain.setValueAtTime(0.0001, t0 + 0.15);
-      g.gain.exponentialRampToValueAtTime(Math.min(1, 0.7 * asetus.voima), t0 + 3.4);
+      g.gain.exponentialRampToValueAtTime(Math.min(1, 0.7 * asetus.voima), t0 + 5.2);
       // Ei ajastettua loppua: moottori soi, kunnes stopFlight häivyttää
       // sen — kalvo on auki niin kauan kuin pelaaja viipyy koneessa.
       src.connect(g).connect(this.bus);
@@ -380,7 +380,7 @@ class Sound {
     const g = ctx.createGain();
     g.gain.setValueAtTime(0.0001, t0);
     g.gain.setValueAtTime(0.0001, t0 + 0.15);
-    g.gain.exponentialRampToValueAtTime(0.075, t0 + 2.6);
+    g.gain.exponentialRampToValueAtTime(0.075, t0 + 3.8);
 
     // Moottorin virtausääni potkurin alle: kohinaa kaistanpäästön läpi,
     // taajuus nousee lähdössä ja laskee laskeutuessa. Tämä tekee lennosta
@@ -397,7 +397,7 @@ class Sound {
     const vg = ctx.createGain();
     vg.gain.setValueAtTime(0.0001, t0);
     vg.gain.setValueAtTime(0.0001, t0 + 0.15);
-    vg.gain.exponentialRampToValueAtTime(0.055, t0 + 2.8);
+    vg.gain.exponentialRampToValueAtTime(0.055, t0 + 4.0);
 
     // Matala jyrinä pohjalle.
     const runko = ctx.createBufferSource();
@@ -409,7 +409,7 @@ class Sound {
     const rg = ctx.createGain();
     rg.gain.setValueAtTime(0.0001, t0);
     rg.gain.setValueAtTime(0.0001, t0 + 0.15);
-    rg.gain.exponentialRampToValueAtTime(0.06, t0 + 2.7);
+    rg.gain.exponentialRampToValueAtTime(0.06, t0 + 3.9);
 
     osc.connect(lp).connect(depth).connect(g).connect(this.bus);
     virtaus.connect(vf).connect(vg).connect(this.bus);

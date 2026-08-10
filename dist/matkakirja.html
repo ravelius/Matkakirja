@@ -120353,14 +120353,14 @@ class Sound {
       src.loop = true; // lyhyempikin äänite kantaa koko kohtauksen yli
       const g = ctx.createGain();
       // Kevyt sisäänfeidaus (omistajan palaute 10.8.2026): moottori
-      // nousee kuuluviin ~3,5 sekunnissa samalla kun edellisen näkymän
+      // nousee kuuluviin ~5 sekunnissa samalla kun edellisen näkymän
       // äänet häipyvät, eikä pamahda päälle kalvon kanssa yhtä aikaa.
       // HUOM: gain on asetettava hiljaiseksi HETI (t0) — pelkkä
       // t0+0.15-ajastus jätti oletusarvon 1.0 soimaan 150 ms täysillä
       // ennen häivytystä (omistajan bugiraportti 10.8.2026).
       g.gain.setValueAtTime(0.0001, t0);
       g.gain.setValueAtTime(0.0001, t0 + 0.15);
-      g.gain.exponentialRampToValueAtTime(Math.min(1, 0.7 * asetus.voima), t0 + 3.4);
+      g.gain.exponentialRampToValueAtTime(Math.min(1, 0.7 * asetus.voima), t0 + 5.2);
       // Ei ajastettua loppua: moottori soi, kunnes stopFlight häivyttää
       // sen — kalvo on auki niin kauan kuin pelaaja viipyy koneessa.
       src.connect(g).connect(this.bus);
@@ -120401,7 +120401,7 @@ class Sound {
     const g = ctx.createGain();
     g.gain.setValueAtTime(0.0001, t0);
     g.gain.setValueAtTime(0.0001, t0 + 0.15);
-    g.gain.exponentialRampToValueAtTime(0.075, t0 + 2.6);
+    g.gain.exponentialRampToValueAtTime(0.075, t0 + 3.8);
 
     // Moottorin virtausääni potkurin alle: kohinaa kaistanpäästön läpi,
     // taajuus nousee lähdössä ja laskee laskeutuessa. Tämä tekee lennosta
@@ -120418,7 +120418,7 @@ class Sound {
     const vg = ctx.createGain();
     vg.gain.setValueAtTime(0.0001, t0);
     vg.gain.setValueAtTime(0.0001, t0 + 0.15);
-    vg.gain.exponentialRampToValueAtTime(0.055, t0 + 2.8);
+    vg.gain.exponentialRampToValueAtTime(0.055, t0 + 4.0);
 
     // Matala jyrinä pohjalle.
     const runko = ctx.createBufferSource();
@@ -120430,7 +120430,7 @@ class Sound {
     const rg = ctx.createGain();
     rg.gain.setValueAtTime(0.0001, t0);
     rg.gain.setValueAtTime(0.0001, t0 + 0.15);
-    rg.gain.exponentialRampToValueAtTime(0.06, t0 + 2.7);
+    rg.gain.exponentialRampToValueAtTime(0.06, t0 + 3.9);
 
     osc.connect(lp).connect(depth).connect(g).connect(this.bus);
     virtaus.connect(vf).connect(vg).connect(this.bus);
@@ -121413,6 +121413,31 @@ function haivyta(audio, kohde, done, kesto = HAIVYTYS_MS) {
   // Uusi häivytys keskeyttää saman äänen edellisen, etteivät kaksi
   // silmukkaa vedä voimakkuutta eri suuntiin.
   const oma = (audio.haivytysId = (audio.haivytysId ?? 0) + 1);
+  /*
+   * Web Audio -reitillä häivytys ajastetaan ÄÄNISÄIKEELLE gain-
+   * ramppina. rAF-askellus jäätyy, kun pääsäie on varattu — juuri
+   * lentokalvon rakentamisen aikana — ja aikaan sidottu askel hyppäsi
+   * jäätymisen jälkeen suoraan loppuarvoon (omistajan havainto
+   * 10.8.2026: lähtöaulan ääni leikkautui äkillisesti kaupunkia
+   * klikatessa; mitattu ~5 s pääsäiejumi). Ramppi soi tasaisesti
+   * pääsäikeestä riippumatta; done-kutsu saa myöhästyä, koska se vain
+   * vapauttaa solmut äänen jo vaiettua.
+   */
+  const ctx = sfx.ctx;
+  if (audio.aaniVahvistin && ctx) {
+    try {
+      const gain = audio.aaniVahvistin.gain;
+      gain.cancelScheduledValues(ctx.currentTime);
+      gain.setValueAtTime(Math.max(0, lueTaso(audio)), ctx.currentTime);
+      gain.linearRampToValueAtTime(Math.max(0, kohde), ctx.currentTime + kesto / 1000);
+      setTimeout(() => {
+        if (audio.haivytysId === oma) done?.();
+      }, kesto + 60);
+      return;
+    } catch {
+      /* konteksti kiinni tms. — pudotaan rAF-reitille */
+    }
+  }
   const alku = lueTaso(audio);
   const t0 = performance.now();
   const askel = (nyt) => {
@@ -128141,7 +128166,7 @@ const INTRO_TEXT = 'Vintiltä löytyi isoisän kulunut matkakirja — '
   + 'Maailman ympäri kahdeksassakymmenessä päivässä.\n\n'
   + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi? '
   + 'Ja kuka repii kirjasta juuri sen sivun?\n\n'
-  + 'minne lennän ensin?';
+  + 'Valitse kohde kartalta.';
 // Kirjan nimi kursivoidaan VAIN ruudulla (renderIntro) — luentaan
 // kursiivi ei vaikuta. Nimen on esiinnyttävä INTRO_TEXTissä juuri
 // tässä muodossa, jotta kursiivijako osuu.
@@ -128216,8 +128241,9 @@ const SAAPUMIS_OSUUS = 0.43;
 const SAAPUMIS_LEVEIN = 1500;
 // Puhelimen kapealla ruudulla saapuminen saa olla pykälän lähempänä
 // (omistajan iPhone-palaute 10.8.2026): 1400 yksikön näkymä on
-// kapealla ruudulla liian laaja.
-const SAAPUMIS_LEVEIN_KAPEA = 1000;
+// kapealla ruudulla liian laaja (650: omistajan tarkennus 10.8.
+// illalla — vielä pykälä lähemmäs).
+const SAAPUMIS_LEVEIN_KAPEA = 650;
 const MANNER_ZOOM_VIIVE = 1400; // kokonäkymä näkyy tämän verran ennen zoomausta
 // Kuinka suuri osa ruudusta varataan laudan eteläpuolelle, jotta
 // alarivin nappien alle jäävät kaupungit saa panoroitua näkyviin.
@@ -132761,11 +132787,12 @@ class UI {
         this.lentoPuheAjastin = setTimeout(() => {
           // Lentorepliikin lukee vain pitkä kertoja. Kertoja aloittaa
           // vasta kun moottori on ehtinyt nousta kuuluviin (omistajan
-          // toive 10.8.2026: reilu sekunti myöhemmin kuin ennen).
+          // toive 10.8.2026, tarkennus samana iltana: 4,2 s kohdalla,
+          // kun moottori on jo noussut rauhassa kuuluviin).
           if (!this.dead && kertojaTila() === 'pitka') {
             this.playDiaryVoice('assets/audio/puhe-lento-alku.mp3');
           }
-        }, 2800);
+        }, 4200);
       }
       await this.animateFlight(
         'Lontoo', city.name, line,
@@ -140550,6 +140577,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 523, teksti: 'Alun hionta: aulafeidi, äänivalikko 3 tilaan, ohjerivi' },
   { v: 521, teksti: 'Intro v3, lähtöaulan ambienssi, pehmeämpi moottori ja zoomit' },
   { v: 520, teksti: 'Saudi-Arabian sivujen faktat ja kuvatekstit korjattu' },
   { v: 519, teksti: 'Alun viilaus: suora zoom, äänet ja kiikari pois, intro v2' },
@@ -141155,7 +141183,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.521';
+const APP_VERSION = '2026-08-09.523';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -141292,32 +141320,28 @@ function startGame() {
 
 // --- äänet ------------------------------------------------------------------
 
-// Kertojavalikko yläpalkissa (omistajan toive): mykistys, ei kertojaa,
-// lyhyt kertoja (vain nuoren herran osuus) ja pitkä kertoja. Pelkät
-// kuvakkeet ja täppä — kirja kertoo lukijasta, kaaret puheen määrästä.
-// Mykistys on sound.js:n enabled-tila (muistetaan käyntien yli),
-// kertojan tila oma talletuksensa (aani-ehdokkaat.js).
+// Kertojavalikko yläpalkissa. Kolme tilaa (omistajan tiivistys
+// 10.8.2026: lyhyt kertoja pois, järjestys käännettiin): kaikki
+// äänet, äänet ilman kertojaa, äänet pois. Pelkät kuvakkeet ja
+// täppä. Mykistys on sound.js:n enabled-tila (muistetaan käyntien
+// yli), kertojan tila oma talletuksensa (aani-ehdokkaat.js) —
+// vanha talletettu 'lyhyt' luetaan pitkänä.
 const KERTOJA_KIRJA = '<path d="M4.5 11c2.3-1.1 4.6-1.1 7.5 0 2.9-1.1 5.2-1.1 7.5 0v8.2c-2.3-1.1-4.6-1.1-7.5 0-2.9-1.1-5.2-1.1-7.5 0z"/><path d="M12 11v8.2"/>';
 const KERTOJA_TILAT = [
   {
-    tila: 'mykistys',
-    seloste: 'Mykistä kaikki äänet',
-    ikoni: '<path d="M4.5 9.4h2.8l4.2-3.4v12l-4.2-3.4H4.5z"/><path d="M15.4 9.6l4.8 4.8M20.2 9.6l-4.8 4.8"/>',
+    tila: 'pitka',
+    seloste: 'Kaikki äänet — kertoja lukee merkinnät ja avaustekstit',
+    ikoni: `${KERTOJA_KIRJA}<path d="M10.2 6.8a2.9 2.9 0 0 1 3.6 0"/><path d="M8.6 4.2a5.6 5.6 0 0 1 6.8 0"/>`,
   },
   {
     tila: 'ei',
-    seloste: 'Ei kertojaa — muut äänet soivat, kaiutinnappi lukee pyydettäessä',
+    seloste: 'Äänet ilman kertojaa — kaiutinnappi lukee pyydettäessä',
     ikoni: `${KERTOJA_KIRJA}<path d="M5.4 5.4l13.2 13.2"/>`,
   },
   {
-    tila: 'lyhyt',
-    seloste: 'Lyhyt kertoja — vain nuoren herran osuus matkakirjasta',
-    ikoni: `${KERTOJA_KIRJA}<path d="M10.2 6.8a2.9 2.9 0 0 1 3.6 0"/>`,
-  },
-  {
-    tila: 'pitka',
-    seloste: 'Pitkä kertoja — koko merkintä ja avaustekstit',
-    ikoni: `${KERTOJA_KIRJA}<path d="M10.2 6.8a2.9 2.9 0 0 1 3.6 0"/><path d="M8.6 4.2a5.6 5.6 0 0 1 6.8 0"/>`,
+    tila: 'mykistys',
+    seloste: 'Äänet pois',
+    ikoni: '<path d="M4.5 9.4h2.8l4.2-3.4v12l-4.2-3.4H4.5z"/><path d="M15.4 9.6l4.8 4.8M20.2 9.6l-4.8 4.8"/>',
   },
 ];
 /*
@@ -141327,7 +141351,13 @@ const KERTOJA_TILAT = [
  */
 const kertojaValikko = document.getElementById('kertoja-valikko');
 const svg = (piirto) => `<svg viewBox="0 0 24 24">${piirto}</svg>`;
-const nykyinenKertoja = () => (sfx.enabled ? kertojaTila() : 'mykistys');
+const nykyinenKertoja = () => {
+  if (!sfx.enabled) return 'mykistys';
+  const tila = kertojaTila();
+  // Poistunut 'lyhyt'-tila (10.8.2026) luetaan pitkänä, jotta vanha
+  // laitteelle talletettu valinta ei jätä valikkoa täpättömäksi.
+  return tila === 'lyhyt' ? 'pitka' : tila;
+};
 
 const naytaKertoja = () => {
   const nyt = nykyinenKertoja();
