@@ -155,6 +155,48 @@ export function tulkitseKaupungistuminen(sarja) {
   return `Joka toinen asui kaupungissa ensi kertaa vuonna ${sarja.alku + ylitys} — nyt ${kymmenesta} kymmenestä.`;
 }
 
+/*
+ * Sivun avaava yleisluonnehdinta (omistajan palaute 10.8.2026:
+ * "voisi olla alussa tekstimuotoinen yleisluonnehdinta"). Kootaan
+ * datasta 2–3 virkettä, jotka piirtävät maan yhdellä silmäyksellä —
+ * eri sanoin kuin käyrien omat tulkintarivit, ettei sivu toista
+ * itseään. Sävy sama kuin tulkinnoissa: havainto, ei arvio.
+ */
+export function yleisluonnehdinta(maa, suomi, omaSivuOnSuomen) {
+  const virkkeet = [];
+  const nyt = maa.vakiluku
+    ? arvoVuonna(maa.vakiluku, maa.vakiluku.ennusteAlku - 1) : null;
+  const osuudet = maa.pyramidi ? ikaosuudet(maa.pyramidi) : null;
+  if (nyt) {
+    let ika = '';
+    if (osuudet) {
+      if (osuudet.lapset >= 0.3) ika = ', ja sen väestö on nuorta';
+      else if (osuudet.isovanhemmat > osuudet.lapset) ika = ', ja sen väestö harmaantuu';
+    }
+    virkkeet.push(`Tämä on ${muotoileVaki(nyt)} asukkaan maa${ika}.`);
+  }
+  const bkt = tuorein(maa.bkt);
+  const suomiBkt = tuorein(suomi?.bkt);
+  if (bkt && suomiBkt && !omaSivuOnSuomen) {
+    const suhde = bkt.arvo / suomiBkt.arvo;
+    if (suhde >= 1.2) virkkeet.push('Elintaso on Suomea korkeampi');
+    else if (suhde >= 0.85) virkkeet.push('Elintaso on samaa luokkaa kuin Suomessa');
+    else if (suhde >= 0.45) virkkeet.push('Elintaso jää Suomesta selvästi');
+    else virkkeet.push('Elintaso on murto-osa Suomen tasosta');
+    const kaup = tuorein(maa.kaupungistuminen);
+    if (kaup) {
+      virkkeet[virkkeet.length - 1] += `, ja kaupungeissa asuu ${Math.round(kaup.arvo / 10)} kymmenestä.`;
+    } else {
+      virkkeet[virkkeet.length - 1] += '.';
+    }
+  }
+  const elinika = tuorein(maa.elinika);
+  if (elinika) {
+    virkkeet.push(`Täällä syntyvä lapsi elää keskimäärin ${Math.round(elinika.arvo)}-vuotiaaksi.`);
+  }
+  return virkkeet.length ? virkkeet.join(' ') : null;
+}
+
 export function tulkitseCo2(co2, suomiCo2) {
   const nyt = tuorein(co2);
   if (!nyt) return null;
@@ -232,9 +274,15 @@ function somaYlaraja(suurin) {
  */
 function piirraKayra({
   seloste, sarja, suomi, toinen = null, lisat = [], jakaja = 1,
-  ennusteAlku = null, silloin = null, katto = null,
+  ennusteAlku = null, silloin = null, katto = null, korkeus = K,
 }) {
-  const svg = svgPohja(seloste);
+  /*
+   * Valinnainen matalampi kehys (omistajan palaute 10.8.2026: "osa
+   * voisi olla pienempiä niin sivuun saisi rytmiä") — pohjaviivan
+   * etäisyys alareunasta pysyy vakiona, vain piirtoalue madaltuu.
+   */
+  const ala = korkeus - (K - ALA);
+  const svg = svgPohja(seloste, korkeus);
   const sarjat = [sarja, suomi, toinen, ...lisat.map((l) => l.sarja)].filter(Boolean);
   const alku = Math.min(...sarjat.map((s) => s.alku));
   const loppu = Math.max(...sarjat.map((s) => s.alku + s.arvot.length)) - 1;
@@ -246,7 +294,7 @@ function piirraKayra({
   // apuviivan merkityksellisenä: 50 on "joka toinen".
   const ylaraja = katto ?? somaYlaraja(suurin / jakaja) * jakaja;
   const x = (vuosi) => VASEN + ((vuosi - alku) / (loppu - alku)) * (OIKEA - VASEN);
-  const y = (arvo) => ALA - (arvo / ylaraja) * (ALA - YLA);
+  const y = (arvo) => ala - (arvo / ylaraja) * (ala - YLA);
 
   // Vaaka-apuviivat ja asteikko vasempaan reunaan (nolla on pohjaviiva).
   for (const osa of [0.5, 1]) {
@@ -263,9 +311,9 @@ function piirraKayra({
   const askel = jana >= 90 ? 25 : jana >= 50 ? 20 : 10;
   for (let vuosi = Math.ceil(alku / askel) * askel; vuosi <= loppu; vuosi += askel) {
     el(svg, 'text', {
-      class: 'maakayra-akseli', x: x(vuosi), y: ALA + 11, 'text-anchor': 'middle',
+      class: 'maakayra-akseli', x: x(vuosi), y: ala + 11, 'text-anchor': 'middle',
     }, `${vuosi}`);
-    el(svg, 'line', { class: 'maakayra-apuviiva', x1: x(vuosi), y1: ALA, x2: x(vuosi), y2: ALA + 2.5 });
+    el(svg, 'line', { class: 'maakayra-apuviiva', x1: x(vuosi), y1: ala, x2: x(vuosi), y2: ala + 2.5 });
   }
 
   /*
@@ -339,7 +387,7 @@ function piirraKayra({
     }, `${silloin.vuosi}`);
   }
 
-  el(svg, 'line', { class: 'maakayra-pohjaviiva', x1: VASEN, y1: ALA, x2: OIKEA, y2: ALA });
+  el(svg, 'line', { class: 'maakayra-pohjaviiva', x1: VASEN, y1: ala, x2: OIKEA, y2: ala });
   return svg;
 }
 
@@ -482,6 +530,15 @@ export function piirraMaaNumerot(kohde, iso, data, { demokratia = null } = {}) {
   const kaveri = null;
   const vertailu = omaSivuOnSuomen ? null : suomi;
 
+  // Yleisluonnehdinta ensin isolla (omistajan palaute 10.8.2026),
+  // sitten vanha metarivi pienempänä lukuohjeena.
+  const luonne = yleisluonnehdinta(maa, suomi, omaSivuOnSuomen);
+  if (luonne) {
+    const ingressi = document.createElement('p');
+    ingressi.className = 'numeroina-ingressi';
+    ingressi.textContent = luonne;
+    kohde.appendChild(ingressi);
+  }
   const johdanto = document.createElement('p');
   johdanto.className = 'johdanto';
   johdanto.textContent = omaSivuOnSuomen
@@ -550,6 +607,7 @@ export function piirraMaaNumerot(kohde, iso, data, { demokratia = null } = {}) {
         sarja: maa.elinika,
         suomi: vertailu?.elinika,
         toinen: kaveri?.elinika,
+        korkeus: 106,
       }),
       tulkitseElinika(maa.elinika));
   }
@@ -562,6 +620,7 @@ export function piirraMaaNumerot(kohde, iso, data, { demokratia = null } = {}) {
         suomi: vertailu?.kaupungistuminen,
         toinen: kaveri?.kaupungistuminen,
         katto: 100,
+        korkeus: 106,
       }),
       tulkitseKaupungistuminen(maa.kaupungistuminen));
   }
@@ -573,6 +632,7 @@ export function piirraMaaNumerot(kohde, iso, data, { demokratia = null } = {}) {
         sarja: maa.co2,
         suomi: vertailu?.co2,
         toinen: kaveri?.co2,
+        korkeus: 106,
       }),
       tulkitseCo2(maa.co2, suomi?.co2));
   }

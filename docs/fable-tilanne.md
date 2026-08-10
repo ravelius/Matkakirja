@@ -6,6 +6,40 @@ uuden tilin session — yli. Lue tämä ENSIN, sitten `CLAUDE.md`,
 `js/tyohuone-tilanne.js`. Ylin osio on aina tuorein tila; alemmat
 osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
 
+## MYÖHÄISILTA 10.8. ~18:15–20:30Z (v544–v550) — PIKASYKLIT
+
+- **v544 pääjoet** (tärkeys 1 järvityylillä pohjakartalle), **v545
+  luentaerä** (23 luentaa + luenta-kentät tageineen + mykistysten
+  purku; ME-erä 2; Sonnetin 2 faktakorjausta; kuulutus lennon
+  alkuun — lentomatka vakiopaikaksi), **v546 ME-saapumiset** (Maxin
+  4 uusintaa + Isfahan-visaspoileri pois; sapluunan kysymyssääntö 6;
+  ME LUKUKUNNOSSA työhuoneessa), **v547 nähtävyysselaus** (Opus 1,
+  poimittu claude/nahtavyysselaus-haaralta), **v548+v549 äänisarja**:
+  etusivun mykistys — juurisyy oli varareitin AbortError-kaskadi
+  (yrityslaskuri + vahti readyState<2) ja v545:n reitityskokeilu
+  (peruttu; volume-häivytyksen rAF-kello alkaa 1. ruudusta =
+  jumiturva). v549 myös: lightbox-nuolet (openLightbox oli ainoa
+  ilman), nipistyszoomi läppärille, Apple Music -esikatselut (id
+  linkistä, iTunes lookup), menovinkkitaitto, tavaroiden tumma
+  tarjotin, huudahdukset studioon (HUUDAHDUKSET →
+  aani-ehdokkaat.js). **v550 numeroina-taitto** (yleisluonnehdinta
+  datasta, käyrät 106/150 rytmiin).
+- **ME-GENEROINTI VALMIS ODOTTAMAAN LUPAA**: 84 luentatagia
+  (docs/me-luentatagit.md Maxin haaralla, sanavastaavuus varmistettu
+  skriptillä) odottavat Isfahan-korjausten vientiä → sitten luenta-
+  kentät dataan → OMISTAJAN LUPA → generointi (iso erä).
+- **Afrikan jakotauluehdotus** omistajalla luettavana (P1–P5
+  päätöskohdat). **Aloituskaupunkiarvio** Maxilla jonossa.
+- **UUSI RIMA Euroopan saapumisiin** (omistaja 20:10Z): pois
+  epämääräiset pienen vaaran väreet; tilalle kommellukset, oikeat
+  vaaratilanteet, hämmästyttävät tosihuomiot. Pariisi ensin. Maxin
+  jono: Isfahan-korjaukset → aloituskaupungit → Eurooppa-kierros 2.
+- **Sonnet**: Euroopan Isfahan-sääntötarkistus käynnissä. **Opus 1**:
+  lehtien esilataus (claude/lehtien-esilataus). **Opus 5**:
+  vuorikuvat (claude/opus5-vuorikuvat, tasaisia wip-committeja).
+- Jonossa omat: perhekuvien kuratointierä numeroina-sivulle
+  (kuvatiimille kun Opus 5 valmistuu), lisätilastojen harkinta.
+
 ## ILTA 10.8. ~16:45–18:15Z (v538–v543) + TYÖN SEURANTA
 
 - **v538:** maapilleri chipin mittoihin ilman ⓘ:tä, aina näkyvä,
