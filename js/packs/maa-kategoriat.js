@@ -2378,7 +2378,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Käsin ommeltu tyyny khayamiyan kadulla: punaiselle kankaalle '
             + 'on kiinnitetty vaalea koukeroinen kuvio, ja ympärillä on '
             + 'pinoja muita kankaita.',
-          lahde: 'Mo Hany Afife, Wikimedia Commons (CC BY 4.0)',
+          lahde: 'Mo Hany.Afife, Wikimedia Commons (Public domain)',
         },
         {
           otsikko: 'Kylästä tuli savenvalajien kylä',
@@ -4984,7 +4984,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Takkutukkainen Jörö-Jukka norjalaisen painoksen '
             + 'sivulla 1862 — sama kirja levisi kielestä toiseen '
             + 'ympäri maailman.',
-          lahde: 'Heinrich Hoffmann / Nasjonalbiblioteket, Wikimedia Commons (Public domain)',
+          lahde: 'Heinrich Hoffmann / Nasjonalbiblioteket, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Jörö-Jukka',
         },
       ],

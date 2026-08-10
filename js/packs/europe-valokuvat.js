@@ -292,7 +292,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2015',
 
-        lahde: 'CC BY-SA 2.0',
+        lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
 
         selite: 'Hveririn geoterminen alue Námafjallin juurella '
 
@@ -308,7 +308,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2022',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Olga Ernst, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Almannagjá Þingvellirin kansallispuistossa. Kalliojyrkänne '
 
@@ -322,7 +322,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2014',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Lögberg eli Lakikallio Þingvellirissä. Täällä lainlausuja '
 
@@ -480,7 +480,7 @@ export const EUROPE_VALOKUVAT = {
 
         tiedosto: 'Knossos fresco of dolphins in queen\'s palace.JPG',
         vuosi: 'noin 1600–1450 eaa. (kuvattu 2015)',
-        lahde: 'Commons (CC BY-SA 3.0)',
+        lahde: 'Paginazero, Commons (CC BY-SA 3.0)',
         selite: 'Delfiinifresko Knossoksen palatsin kuningattaren huoneessa. '
           + 'Siniset delfiinit ui pienten kalojen seassa, ja alareunassa '
           + 'kiertää kiehkurakuvio.',
@@ -740,7 +740,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2021',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'B.Hawkins.Cornwall, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Aamusumu nielaisee Tower Bridgen tornit Thamesin yllä. Sillan '
 
@@ -772,7 +772,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2012',
 
-        lahde: 'CC BY-SA 3.0',
+        lahde: 'mattbuck (category), Wikimedia Commons (CC BY-SA 3.0)',
 
         selite: 'Baker Streetin Circle- ja Hammersmith & City -laiturit. Asema '
 
@@ -808,7 +808,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2025',
 
-        lahde: 'CC BY-SA 2.0',
+        lahde: 'Iain Lees, Wikimedia Commons (CC BY-SA 2.0)',
 
         selite: 'Advocate\'s Close, yksi vanhankaupungin kapeista kujista. '
 
@@ -824,7 +824,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2011',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Reinhold Möller, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Näkymä Arthur\'s Seatin laelta koilliseen. Sammuneen tulivuoren '
 
@@ -838,7 +838,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2011',
 
-        lahde: 'CC BY-SA 2.0',
+        lahde: 'Alan Findlay, Wikimedia Commons (CC BY-SA 2.0)',
 
         selite: 'Kello yhden tykki laukeaa Edinburghin linnan muurilta. '
 
@@ -858,7 +858,7 @@ export const EUROPE_VALOKUVAT = {
               + 'Hill. Puistolaakso oli aiemmin Nor Loch -järvi.',
     uusi: {
       tiedosto: 'Castle, City of Edinburgh (IMG 20190628 180330).jpg',
-      lahde: 'Matti Blume, Commons (CC BY-SA 2.0+)',
+      lahde: 'Matti Blume, Commons (CC BY-SA 4.0)',
       selite: 'Edinburghin linna jyrkän kalliojyrkänteen päällä. Alla ovat '
         + 'Princes Street Gardensin puistot, joissa kaupunkilaiset istuvat '
         + 'kesäiltana.',
@@ -875,7 +875,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2015',
 
-        lahde: 'CC BY 2.0',
+        lahde: 'Robert Linsdell, Wikimedia Commons (CC BY 2.0)',
 
         selite: 'Ha\'penny Bridge kaartuu Liffeyn yli keskellä Dublinia. Se on '
 
@@ -891,7 +891,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2011',
 
-        lahde: 'CC BY 2.0',
+        lahde: 'Leandro Neumann Ciuffo, Wikimedia Commons (CC BY 2.0)',
 
         selite: 'Dublinilaisia ovia eri väreissä. Georgian ajan talorivit ovat '
 
@@ -907,7 +907,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2013',
 
-        lahde: 'CC BY 3.0',
+        lahde: 'Maurizio Ceol, Wikimedia Commons (CC BY 3.0)',
 
         selite: 'Oliver St John Gogartyn pubi Dublinin Temple Barissa, yksi '
 
@@ -937,7 +937,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2010',
 
-        lahde: 'CC BY 2.0',
+        lahde: 'John Flanagan, Wikimedia Commons (CC BY 2.0)',
 
         selite: 'O\'Connell Street ja sen keskellä Spire, teräsneula, joka '
 
@@ -2205,7 +2205,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2010',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Näkymä Eteläsatamasta Kauppatorille ja Tuomiokirkolle. Juuri '
 
@@ -2221,7 +2221,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2018',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Halt tone, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Kauppatori silakkamarkkinoiden aikaan. Markkinat tuovat '
 
@@ -2235,7 +2235,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2022',
 
-        lahde: 'CC BY 4.0',
+        lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
 
         selite: 'Neljä raitiovaunua peräkkäin Mannerheimintien suoralla, '
 
@@ -2272,7 +2272,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2015',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Näkymä Slussenista Gamla stanin ja Riddarholmenin yli, '
 
@@ -2288,7 +2288,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2015',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Øyvind Holmstad, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Mårten Trotzigs gränd Gamla stanissa on Tukholman kapein kuja: '
 
@@ -2302,7 +2302,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2025',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'ArildV, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Saaristolaivoja Strömkajenilla aivan keskustan rannassa. Täältä '
 
@@ -2316,7 +2316,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2019',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Kritzolina, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Kanelipulla Tukholmassa. Iltapäivän kahvihetkeä sanotaan '
 
@@ -2351,7 +2351,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2005',
 
-        lahde: 'CC BY-SA 3.0',
+        lahde: 'Hofi0006, Wikimedia Commons (CC BY-SA 3.0)',
 
         selite: 'Oslo vuonolta katsottuna, keskellä kaupungintalon kaksi tornia. '
 
@@ -2365,7 +2365,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2016',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Karl Johans gate, Oslon pääkatu. Katu vie suorana '
 
@@ -2379,7 +2379,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2014',
 
-        lahde: 'CC BY 2.0',
+        lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
 
         selite: 'Det kongelige slott eli kuninkaanlinna Karl Johans gaten '
 
@@ -2427,7 +2427,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2014',
 
-        lahde: 'CC BY 2.0',
+        lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
 
         selite: 'Pyöräilijöitä Holmens Kanalilla Kööpenhaminassa. Pyörillä on '
 
@@ -2441,7 +2441,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2022',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Nyhavnin kanava ja sen värilliset talorivit. Laiturissa makaa '
 
@@ -2457,7 +2457,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2012',
 
-        lahde: 'CC BY 2.0',
+        lahde: 'Johan Wessman / News Oresund, Wikimedia Commons (CC BY 2.0)',
 
         selite: 'Pølsevogn eli makkaravaunu Kongens Nytorvilla. Tanskalainen '
 
@@ -2485,7 +2485,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2018',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Tivoli nykyään. Vuonna 1843 avattu huvipuisto toimii yhä '
 
@@ -2521,7 +2521,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2017',
 
-        lahde: 'CC BY 2.0',
+        lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
 
         selite: 'Inarijärvi heinäkuussa. Järvi on Suomen kolmanneksi suurin ja '
 
@@ -2535,7 +2535,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2021',
 
-        lahde: 'CC BY-SA 3.0',
+        lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
 
         selite: 'Inarintie eli valtatie 4 kulkee Inarin kylän läpi. Rautatietä '
 
@@ -2549,7 +2549,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2021',
 
-        lahde: 'CC BY 2.0',
+        lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
 
         selite: 'Kevään ensimmäinen keskiyön aurinko Utsjoella 17. toukokuuta '
 
@@ -2586,7 +2586,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2019',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Tromssan silta kaartuu salmen yli mantereen ja Tromsøyan saaren '
 
@@ -2600,7 +2600,7 @@ export const EUROPE_VALOKUVAT = {
 
         vuosi: '2016',
 
-        lahde: 'CC BY-SA 4.0',
+        lahde: 'Andrew Shiva / Wikipedia, Wikimedia Commons (CC BY-SA 4.0)',
 
         selite: 'Tromssan tuomiokirkko valmistui 1861 ja on rakennettu puusta. '
 

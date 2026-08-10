@@ -35,13 +35,41 @@ const hae = (url) => JSON.parse(execFileSync('curl',
 /** Vaatiiko lisenssi tekijän nimeämisen? */
 const vaatiiTekijan = (lisenssi) => /CC BY/i.test(lisenssi);
 
-/** Onko lähdemerkinnässä jo tekijä? Tunnistetaan siitä, ettei se ala arkiston nimellä. */
+const ARKISTOT = /^(Wikimedia Commons|Commons|Library of Congress|BnF|BnF Gallica|Bundesarchiv|Rijksmuseum|Nationaal Archief|archive\.org|Freesound|radio aporee)$/i;
+const LISENSSI = /^(cc[ -]?(by|0)|public domain|pd|no restrictions|ogl|fal|gfdl|free art licen[cs]e|attribution)\b/i;
+const OIKEUSLAUSE = /^(ei\s|no known|kein)/i;
+
+/*
+ * Onko lähdemerkinnässä jo tekijä?
+ *
+ * VANHA SÄÄNTÖ KATSOI VAIN ALKUA: "ei ala arkiston nimellä" ⇒ tekijä on.
+ * Se meni väärin molempiin suuntiin, koska paketeissa on kolme eri
+ * kenttäjärjestystä eikä yhtä:
+ *
+ *   1. 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)'   tekijä alussa
+ *   2. 'CC BY-SA 3.0 (Wolfgang Moroder, Commons)'        tekijä suluissa
+ *   3. 'Wikimedia Commons (CC BY 2.0), James St. John'   tekijä lopussa
+ *   4. 'CC BY-SA 4.0'                                    ei tekijää
+ *
+ * Vanha sääntö piti muotoa 4 tekijänä (europe-valokuvat.js, 31 kuvaa),
+ * eli juuri ne jäivät joka ajolla korjaamatta. Ja se piti muotoja 2 ja 3
+ * tekijättöminä — jos ne olisi "täydennetty", nimi olisi kirjoitettu
+ * merkintään toiseen kertaan 155 kuvaan.
+ *
+ * Siksi järjestystä ei enää katsota lainkaan. Merkintä pilkotaan osiin
+ * sulkeiden ja pilkkujen kohdalta, ja osista pudotetaan arkistojen
+ * nimet, lisenssitunnukset ja oikeuslauseet. Jos mitään jää jäljelle,
+ * se on tekijä — oli se missä kohtaa tahansa.
+ */
 function onJoTekija(lahde) {
-  const alku = lahde.split('(')[0].trim().replace(/,$/, '');
-  if (!alku) return false;
-  const arkistot = /^(Wikimedia Commons|Commons|Library of Congress|BnF|BnF Gallica|Bundesarchiv|Rijksmuseum|Nationaal Archief|archive\.org|Freesound|radio aporee)$/i;
-  return !arkistot.test(alku);
+  return lahde
+    .split(/[(),]|\s+\/\s+/)
+    .map((osa) => osa.trim())
+    .some((osa) => osa && !ARKISTOT.test(osa) && !LISENSSI.test(osa) && !OIKEUSLAUSE.test(osa));
 }
+
+/** Merkintä, jossa ei ole muuta kuin lisenssitunnus. */
+const PELKKA_LISENSSI = (lahde) => LISENSSI.test(lahde.trim()) && !/[(),]/.test(lahde);
 
 /**
  * Commonsin Artist-kentästä pelkkä nimi.
@@ -246,7 +274,15 @@ for (const [f, alkuperainen] of paketit) {
       ristiriidat.push([p.tiedosto, p.lahde, commons]);
     }
     if (!tekija) { ilmanTekijaa.push(p.tiedosto); continue; }
-    const uusi = `${tekija}, ${p.lahde}`;
+    /*
+     * Kun merkinnässä oli VAIN lisenssi, tekijän eteen liittäminen
+     * tuottaisi "Diego Delso, CC BY-SA 4.0" — nimi olisi paikallaan
+     * mutta alusta puuttuisi ja muoto poikkeaisi muista. Silloin
+     * merkintä kirjoitetaan kokonaan vakiomuotoon.
+     */
+    const uusi = PELKKA_LISENSSI(p.lahde)
+      ? `${tekija}, Wikimedia Commons (${p.lahde.trim()})`
+      : `${tekija}, ${p.lahde}`;
     // Sama lainausmerkki takaisin kuin alkuperäisessä.
     const q = p.lainaus ?? "'";
     const sisus = uusi.replace(new RegExp(q, 'g'), `\\${q}`);
