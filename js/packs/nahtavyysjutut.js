@@ -7539,4 +7539,267 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  vilna: {
+    'Gediminaksen torni': {
+      aika: '1409',
+      teksti: 'Legenda kertoo, että suurruhtinas Gediminas näki noin '
+          + 'vuonna 1323 metsästysretkellä unta rautaisesta sudesta, '
+          + 'joka ulvoi kukkulan laella niin kovaa kuin sata sutta '
+          + 'yhdessä. Hovin tietäjä Lizdeika selitti unen tarkoittavan, '
+          + 'että juuri sille kukkulalle pitäisi rakentaa mahtava '
+          + 'linnoituskaupunki. Näin sai alkunsa Vilna.'
+        + '\n\n'
+        + 'Ensin kukkulalle nousi puulinnoitus, mutta vuonna 1409 '
+          + 'suurruhtinas Vytautas rakennutti tilalle punatiilisen '
+          + 'linnan. Vuosisatojen saatossa suurin osa linnasta romahti '
+          + 'tai purettiin, ja jäljelle jäi vain yksi kolmikerroksinen '
+          + 'torni. Se, mitä tornista näkyy tänään, on suurelta osin '
+          + 'vuonna 1933 tehdyn jälleenrakennuksen näköinen.'
+        + '\n\n'
+        + 'Torni on tärkeä koko Liettualle: kun maa alkoi irrottautua '
+          + 'Neuvostoliitosta, kansallislippu nostettiin torniin '
+          + 'lokakuun 7. päivänä 1988. Nykyään tornissa on museo '
+          + 'vanhoine aseineen ja linnan pienoismalleineen, ja hississä '
+          + 'pääsee ylös ihailemaan koko Vilnan kattojen merta.',
+      kuvat: [
+        {
+          tiedosto: 'Gedimino pilis by Augustas Didzgalvis.jpg',
+          selite: 'Ilmakuva Gediminaksen tornista kukkulallaan iltapäivän '
+            + 'kultaisessa valossa, Neris-joki ja Vilnan kaupunki '
+            + 'taustalla.',
+          lahde: 'BigHead, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Gedimino kalnas 139.jpg',
+          selite: 'Ilmakuva Gediminaksen tornista auringonlaskun aikaan, '
+            + 'alapuolella alalinnan raunioita ja valaistu '
+            + 'tuomiokirkonaukio.',
+          lahde: 'Gytis Grižas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'View of Vilnius Upper Castle with remaining Gediminas Tower.jpg',
+          selite: '1861 puupiirros Vilnan linnanmäestä: Gediminaksen torni ja '
+            + 'alalinnan rauniot kukkulalla, kaupunki ja joki '
+            + 'alapuolella.',
+          lahde: 'Julian Cegliński, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vilnan tuomiokirkko': {
+      aika: '1783',
+      teksti: 'Vilnan tuomiokirkko näyttää ulkoa kreikkalaiselta '
+          + 'temppeliltä pylväineen, mutta sen alla piileskelee yli 700 '
+          + 'vuoden historia. Paikalla on seissyt kirkko jo '
+          + '1200-luvulta lähtien, ja arkeologit ovat löytäneet maan '
+          + 'alta jopa vanhan pakanatemppelin jäänteitä. Nykyinen '
+          + 'valkoinen kirkko sai lopullisen muotonsa vuonna 1783, kun '
+          + 'se rakennettiin uudelleen aiempien tulipalojen tuhottua '
+          + 'edelliset kirkot.'
+        + '\n\n'
+        + 'Katolla seisoo kolme kivipatsasta, ja keskimmäisen, Pyhän '
+          + 'Helenan, käsissä kohoaa yhdeksän metriä korkea kultainen '
+          + 'risti. Neuvostoaikana patsaat purettiin katolta vuonna '
+          + '1950, koska uskonto ei silloin ollut suosiossa – ne '
+          + 'nostettiin takaisin paikoilleen vasta vuonna 1997.'
+        + '\n\n'
+        + 'Kirkon alla olevissa holvihaudoissa lepää muun muassa '
+          + 'suurruhtinas Vytautas ja kaunis Barbara Radvila, jonka '
+          + 'salainen avioliitto kuninkaan kanssa on yksi Liettuan '
+          + 'tunnetuimmista rakkaustarinoista. Neuvostoaikana koko '
+          + 'kirkosta tehtiin varasto, ja messut pääsivät alkamaan '
+          + 'uudelleen vasta vuonna 1988.',
+      kuvat: [
+        {
+          tiedosto: 'Vilnius (Wilno) - cathedral.jpg',
+          selite: 'Vilnan tuomiokirkko ja sen erillinen kellotorni '
+            + 'tuomiokirkonaukiolla kirkkaan sinisen taivaan alla.',
+          lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Vilnius Landmarks 162.jpg',
+          selite: 'Tuomiokirkonaukio auringonpaisteessa: kellotorni, '
+            + 'tuomiokirkko ja suurruhtinas Gediminaksen '
+            + 'ratsastajapatsas.',
+          lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vilnius Cathedral in the 19th c.jpg',
+          selite: '1800-luvun puupiirros Vilnan tuomiokirkosta ja '
+            + 'kellotornista.',
+          lahde: 'Baranowski, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Annan kirkko': {
+      aika: '1495–1500',
+      teksti: 'Pyhän Annan kirkko näyttää punaisesta pitsistä muuratulta '
+          + 'satulinnalta. Sen tornit ja huiput on muurattu peräti 33 '
+          + 'erilaisesta poltetusta tiilestä, jotka valettiin juuri '
+          + 'tätä kirkkoa varten omiin erikoismuotoihinsa. Nykyinen '
+          + 'kirkko valmistui vuosien 1495 ja 1500 välillä, kun '
+          + 'edellinen puukirkko oli tuhoutunut tulipalossa.'
+        + '\n\n'
+        + 'Kirkon tarina liittyy suurruhtinas Vytautaan: hän '
+          + 'rakennutti alun perin puisen kirkon vaimolleen Annalle, '
+          + 'mutta se paloi vuonna 1419. Uusi tiilikirkko rakennettiin '
+          + 'kestämään paremmin, ja se on pysynyt lähes muuttumattomana '
+          + 'jo yli 500 vuotta.'
+        + '\n\n'
+        + 'Tarinan mukaan keisari Napoleon ihastui kirkkoon niin '
+          + 'kovasti Vilnaan saapuessaan vuonna 1812, että hän olisi '
+          + 'halunnut nostaa koko rakennuksen kämmenelleen ja kantaa '
+          + 'sen mukanaan Pariisiin. Kirkko jäi kuitenkin paikalleen, '
+          + 'ja siellä pidetään messuja edelleen tänäkin päivänä.',
+      kuvat: [
+        {
+          tiedosto: 'Vilnius, St Anne and St Francis.jpg',
+          selite: 'Pyhän Annan punatiilikirkko ja sen takana kohoava Pyhän '
+            + 'Fransiskuksen (bernhardiinien) kirkko kirkkaana '
+            + 'kesäpäivänä.',
+          lahde: 'Syrio, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'St. Anne\'s Church Exterior 3, Vilnius, Lithuania - Diliff.jpg',
+          selite: 'Pyhän Annan kirkon punatiilinen goottilainen julkisivu '
+            + 'läheltä, terävät tornit kohoavat siniselle taivaalle.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vilnan yliopisto': {
+      aika: '1579',
+      teksti: 'Vilnan yliopisto on yksi Itä-Euroopan vanhimmista '
+          + 'yliopistoista: kuningas Stefan Batory perusti sen '
+          + 'huhtikuun 1. päivänä 1579, ja paavi vahvisti sen '
+          + 'viralliseksi yliopistoksi samana vuonna. Ensimmäisenä '
+          + 'lukuvuonna opiskelijoita oli 160, mutta jo seitsemän '
+          + 'vuotta myöhemmin heitä oli lähes 700.'
+        + '\n\n'
+        + 'Yliopiston kirjasto perustettiin jo vuonna 1570, ja siellä '
+          + 'on nykyään yli viisi miljoonaa kirjaa ja käsikirjoitusta. '
+          + 'Pihapiiriin rakennettiin vuonna 1753 tähtitorni, joka oli '
+          + 'tuolloin vasta neljäs koko Euroopassa – sieltä '
+          + 'tähtitieteilijät tarkkailivat taivasta aikansa parhailla '
+          + 'kaukoputkilla.'
+        + '\n\n'
+        + 'Yliopiston tunnuslause \'Hinc itur ad astra\' tarkoittaa '
+          + '\'täältä tie vie tähtiin\', ja se sopii hyvin paikkaan, '
+          + 'josta on valmistunut esimerkiksi kirjailija Czesław '
+          + 'Miłosz, joka voitti myöhemmin Nobelin '
+          + 'kirjallisuuspalkinnon. Tsaarin hallitus sulki yliopiston '
+          + 'kokonaan vuonna 1832, mutta se avattiin myöhemmin '
+          + 'uudelleen ja toimii tänään yli 23 000 opiskelijan kotina.',
+      lainaus: {
+        teksti: 'Hinc itur ad astra – täältä tie vie tähtiin.',
+        lahde: 'Vilnan yliopiston tunnuslause',
+      },
+      kuvat: [
+        {
+          tiedosto: 'The Grand Courtyard of Vilnius University.jpg',
+          selite: 'Yliopiston Iso piha aamuauringossa, taustalla Pyhän '
+            + 'Johanneksen kirkon kellotorni ja punaiset kukat edessä.',
+          lahde: 'Vilnius University, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vilnius University Great Courtyard 1, Vilnius, Lithuania - Diliff.jpg',
+          selite: 'Yliopiston Ison pihan päätyseinä: Pyhän Johanneksen kirkon '
+            + 'julkisivu ja korkea kellotorni, koko kompleksin tunnetuin '
+            + 'näkymä.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Užupis: {
+      aika: '1997',
+      teksti: 'Užupis on pieni Vilnan kaupunginosa joen toisella puolella '
+          + '– nimikin tarkoittaa suunnilleen \'joen takana\'. '
+          + 'Aprillipäivänä eli huhtikuun 1. päivänä 1997 alueen '
+          + 'taiteilijat julistivat sen leikkimielisesti omaksi '
+          + 'tasavallakseen, jolla on oma lippu, oma pieni armeija ja '
+          + 'yli 500 suurlähettilästä ympäri maailmaa.'
+        + '\n\n'
+        + 'Tasavallalla on oma perustuslaki, jossa on 41 pykälää ja '
+          + 'jotka on käännetty jo yli 40 kielelle. Yksi '
+          + 'suosikkipykälistä kuuluu: \'Koiralla on oikeus olla koira.\' '
+          + 'Toinen muistuttaa, että jokaisella on oikeus olla sekä '
+          + 'onnellinen että onneton, aivan miten itse haluaa.'
+        + '\n\n'
+        + 'Vuonna 2002 Užupikseen pystytettiin pronssinen '
+          + 'enkelipatsas, joka puhaltaa trumpettia korkean pylvään '
+          + 'huipulla – se korvasi paikalla aiemmin seisseen munan '
+          + 'muotoisen veistoksen. Nykyään Užupiksessa asuu noin 7000 '
+          + 'ihmistä, ja lähes tuhat heistä on taiteilijoita, joten '
+          + 'kadut ovat täynnä maalauksia ja outoja veistoksia.',
+      lainaus: {
+        teksti: 'Koiralla on oikeus olla koira.',
+        lahde: 'Užupiksen tasavallan perustuslaki',
+      },
+      kuvat: [
+        {
+          tiedosto: 'The Republic of Užupis (52361108997).jpg',
+          selite: 'Užupiksen sillalla oleva kyltti \'Užupio Res Publika\', joka '
+            + 'merkitsee humoristisen itsenäisen taiteilijatasavallan '
+            + 'rajaa.',
+          lahde: 'William John Gauthier, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'The Uzupis Angel (7932213486).jpg',
+          selite: 'Pronssinen enkelipatsas pylväällä Užupiksen aukiolla, '
+            + 'siivet levällään ja trumpetti kädessä, taustalla vanhoja '
+            + 'taloja.',
+          lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Vilnia, Zarečča. Вільня, Зарэчча (S. Fleury, 1896).jpg',
+          selite: '1896 valokuva Užupiksen (Zareččan) kaupunginosasta joen '
+            + 'yli kukkulalta kuvattuna, matalia puutaloja ja '
+            + 'kirkontorneja horisontissa.',
+          lahde: 'Stanisław Filibert Fleury, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Aamuportti: {
+      aika: '1503–1514',
+      teksti: 'Aamuportti on ainoa säilynyt niistä yhdeksästä portista, '
+          + 'jotka kerran kuuluivat Vilnan vanhaan kaupunginmuuriin. Se '
+          + 'rakennettiin vuosina 1503–1514 puolustamaan kaupunkia, ja '
+          + 'portin ulkoseinässä näkyy vieläkin vanhoja ampuma-aukkoja.'
+        + '\n\n'
+        + 'Kun kaupunginmuuri purettiin vuosina 1799–1805, Aamuportti '
+          + 'jätettiin pystyyn ainoana, koska sen sisällä olevaa '
+          + 'Neitsyt Marian ihmekuvaa pidettiin niin pyhänä. Vuonna '
+          + '1702 ruotsalaissotilaan luoti osui taistelun aikana '
+          + 'suoraan kuvaan – kaupunkia puolustaneet pitivät tapahtumaa '
+          + 'ihmeenä, sillä taistelu päättyi ilman suuria tappioita.'
+        + '\n\n'
+        + 'Kuva on kiehtonut myös maailman mahtimiehiä: paavi '
+          + 'Johannes Paavali II rukoili kappelissa vuonna 1993 ja '
+          + 'paavi Franciscus vuonna 2018. Nykyään portin yläkerran '
+          + 'kappelin seinät ovat täynnä satoja pieniä hopeisia ja '
+          + 'kultaisia kiitoslahjoja, joita ihmiset ovat jättäneet '
+          + 'sinne vuosisatojen aikana.',
+      kuvat: [
+        {
+          tiedosto: 'Vilnius Dawn Gate.jpg',
+          selite: 'Aamuportti kadun päässä auringonpaisteessa, kultainen '
+            + 'Neitsyt Marian kuva näkyy holvikaaren yläpuolella ja katu '
+            + 'on täynnä kulkijoita.',
+          lahde: 'Marcin Białek, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Gate of Dawn Exterior, Vilnius, Lithuania - Diliff.jpg',
+          selite: 'Aamuportin kappeli läheltä suoraan edestä: kultainen '
+            + 'aurinkokehä, kukkalaitteet parvekkeella ja sininen taivas.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  PLACEHOLDER_ERA13
 };
