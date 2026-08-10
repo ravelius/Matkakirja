@@ -549,6 +549,20 @@ jälkeen.
   (versiokollisio nro 5 — ratkaisu kuten aina: merge origin/main +
   uusi-versio uudelleen).
 
+### v510: fromJSON-sudenkuoppa (TÄRKEÄ OPPI UUSILLE KENTILLE)
+
+Omistajan "Tutki-nappi ei tee mitään" -vika: **Game.fromJSON ohittaa
+konstruktorin (Object.create)** — jokainen konstruktorissa alustettu
+UUSI kenttä on alustettava MYÖS fromJSONissa, vaikka sitä ei
+tallennettaisi ("ei tallenneta" ≠ "ei ole olemassa"). v509:n
+kaariYritykset puuttui palautetusta pelistä → travelModes ja
+openArrival kaatuivat TypeErroriin → render jäi vanhaan tilaan ja
+napit kuolivat hiljaa. Sama vika oli piilevänä jo v499:n
+kaariKaytetty-Setissä. Korjaus v510: alustus fromJSONissa + ??=
+-varmistus kaariTilanteessa + regressiotesti (tallenna→palauta→
+travelModes/actionQuiz kaarikaupungissa). Peli TALLENTUU JATKUVASTI
+— testaa uudet pelitilakentät aina myös palautuspolulla.
+
 ### v507 (10.8. aamupäivä): kohtaamisen v2-säännöt
 
 Omistajan testipalaute Ateenasta (laatatön kohtaaminen antoi vain
