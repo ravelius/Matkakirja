@@ -20,8 +20,15 @@ tarinatekstissä on vika, se raportoidaan Fablelle eikä korjata itse.
 | A | Emiraattien 3. sivu + Jordania | v499 mainissa |
 | B | Oman + Qatar | v501 mainissa |
 | C | Egypti + Kuwait | v507 ja v511 mainissa |
-| D | Saudi-Arabia | **v515 mainissa (#754)** |
-| D | **Bahrain** | **JUMISSA — ei lautaa, ks. alla** |
+| D | Saudi-Arabia | v515 mainissa, korjattu v520 |
+| D | Bahrain | **v526 geometria + v527 sivut — ERÄ D VALMIS** |
+
+**Seuraava tehtävä: 13 kuvaduplikaatin vaihto** (Fablen tehtävänanto
+10.8.2026). Taulukko tiedosto+rivi-tarkkuudella on Sonnet 1:n
+QA-raportissa haarassa `claude/matkakirja-game-dev-la16ae`
+(docs/viesti-fable.md, osa D). 12 luokan b tapausta vaihdetaan,
+Parthenon on luokan c rajatapaus jonka perustelu kirjataan
+docs/kuvaduplikaatit.md:hen.
 
 Lisäksi mainissa on **v514 (#752)**: tekijämerkintöjen lupa-ajo
 kaikkien pakettien yli, ks. kohta 4.
@@ -202,6 +209,35 @@ turvallisempi kuin 2 900 kuvan lataus.
 **Paikallinen kopio on osa lisenssiä.** Jos kuvan lisenssi on
 kielletty, pelkkä viittauksen vaihto ei riitä: repo levittää yhä
 tiedostoa `assets/valokuvat`-kansiosta. Poista myös tiedosto.
+
+## 5c. Postikortti rajaa kuvan keskeltä — kohde keskelle
+
+`css/styles.css:1817` antaa postikortin kuvalle **kiinteän
+vaakaikkunan** ja `object-fit: cover`. Kuva ei siis skaalaudu vaan
+**rajautuu keskeltä** suhteeseen noin 1,4 (puhelin 460×330, työpöytä
+enintään 1040×760). Pystykuvasta näkyy vain keskimmäinen 45–65 %.
+
+Tämä ei ole vika: omistaja pyysi nimenomaan, ettei korkea kuva venytä
+korttia ruutua korkeammaksi. Se tarkoittaa kuitenkin, että **kuvan
+kohteen on oltava pystysuunnassa keskellä**. Riian tornikukko istui
+kuvan ylälaidassa ja olisi rajautunut kokonaan pois, jos rajausta ei
+olisi simuloitu.
+
+Simuloi ennen valintaa — älä päättele kuvasuhteesta:
+
+```
+kh = min(korkeus, leveys / 1.47);  y = (korkeus - kh) / 2
+```
+
+leikkaa esikatselukuvasta tuo kaista ja **katso lopputulos**. Varo
+myös laskemasta suhdetta väärin: `.postikortti`-leveys ja
+`.postikortti img`-korkeus tulevat eri media-säännöistä, ja niiden
+sekoittaminen antaa liian ahtaan suhteen (2,2 oikean 1,4 sijaan).
+
+**Repossa ei ole ESLint-konfiguraatiota.** `npx eslint` kaatuu
+"couldn't find eslint.config" -virheeseen, joka näyttää puhtaalta
+ajolta, jos tulos putkitetaan `tail`-komennolle. Portteja ovat vain
+`node --test` ja `tools/tarkista-kaksoisavaimet.mjs`.
 
 ## 6. Julkaisukaava
 

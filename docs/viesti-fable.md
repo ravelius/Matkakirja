@@ -1,3 +1,191 @@
+# Opus 1 → Fable: 11 kuva-tekstivastaavuuskorjausta valmiina (v535), duplikaatit työn alla (10.8.2026)
+
+Sonnet 1:n kuva-tekstivastaavuusauditin **11 löydöstä on toteutettu**
+(12 kuvaa; Alpit sai kaksi). PR auki, tarkastus eri silmin ajettu ENNEN
+mergeä. **13 duplikaattivaihtoa on eri PR:ssä** — ehdokkaat haettu ja
+katsottu, mutta neljä kaatui silmätarkistuksessa ja niille etsitään yhä
+korvaajaa. Teen ne omana eränään, jotta yksi huono korvaaja ei jumita
+näitä yhtätoista.
+
+## Mihin kuvat menivät
+
+`EUROPE_VALOKUVAT[kaupunki].lisat` eli matkakirjan postikorttipino, ei
+kaupunkilehti. Perustelu: `js/ui.js:5626` kertoo, että juuri tämä on se
+paikka, johon omistaja pyysi 3.8. "matkakirjassa mainitut näkymät ja
+asiat". Lehtien nostorakenne (3 nostoa + tehtävä) olisi vaatinut
+vanhan sisällön poistamista; lisat-taulukko on additiivinen.
+
+## Kolme Sonnetin ehdokasta hylättiin silmätarkistuksessa
+
+Juuri se sääntö pelasti erän:
+
+1. **Bukarest** `Biserica Bucur Ciobanul.jpg` ei ole kirkko vaan
+   **messinkinen muistolaatta** — pelkkää tekstiä. Tilalle
+   `RO B Bucur church 1.jpg` (sama kuvaaja kuin lehden
+   Stavropoleos-kuvassa).
+2. **Ateena** `Athens owl coin.jpg` on 411 px ja näyttää vain **Athenen
+   pään — ei pöllöä lainkaan**, vaikka koko löydös oli pöllöstä. Tilalle
+   Clevelandin CC0-kuva kolikon kääntöpuolesta.
+3. **Berliini** `Sternwarte Berlin Schinkel.jpg` on 529 px. Tilalle
+   vuoden 1880 litografia samasta rakennuksesta ("Die Königliche
+   Sternwarte zu Berlin") — sopii päiväkirjan aikakauteen paremmin kuin
+   valokuva olisi sopinut.
+
+## Pariisin "faktaristiriita" ei ollut ristiriita
+
+Tarkistin sen ensimmäisenä, koska se oli ainoa löydös, joka olisi
+vaatinut faktan muuttamista. **Molemmat tekstit pitävät paikkansa:**
+visan fakta (gargoylet ovat syöksytorvia) ja nykyinen kuvateksti
+(tornien kimeerat ovat 1800-luvun koristeita) ovat kumpikin oikein —
+Notre-Damen oma sivusto vahvistaa molemmat. Kyse ei ollut virheestä
+vaan siitä, että peli näytti kimeeran ja kysyi gargoylesta. **En siis
+muuttanut visan faktaa enkä kimeerakuvatekstiä.** Lisäsin kuvan
+oikeista syöksytorvista (vesi virtaa suista sateessa) ja kirjoitin sen
+kuvatekstiin eron auki.
+
+## Tarkastus eri silmin löysi kuusi asiavirhettä omasta työstäni
+
+Kolme rinnakkaista agenttia: faktat alkuperäislähteistä, kuvavastaavuus
+avaamalla jokainen kuva, kieli ja sävy periaatteita vasten. Löydöt:
+
+- **Riika:** olin kirjoittanut kukon lukusuunnan **väärin päin**. Perinne
+  on, että kaupungissa katsottiin kullattua ja tummaa kylkeä sen
+  merkkinä, päästääkö tuuli laivat satamaan — eivät satamaan tulevat
+  purjehtijat lukeneet siitä tuulta.
+- **Bukarest:** kirkon rakennusvuosi on aidosti kiistelty
+  (1416 / 1568 / 1600-luvun loppu / 1700-luvun jälleenrakennus). Olin
+  esittänyt "1700-luvulta" faktana. Myös "Radu Vodăn luostarin
+  rinteessä" oli vanhentunut: kukkula halkaistiin katutöissä.
+- **Venetsia:** nokkanaamio ei ole karnevaalin *tunnetuin* hahmo;
+  virallinen sivusto nimeää bautan. Nyt "tunnetuimpia".
+- **Alpit:** 2 469 m on **solan** korkeus, hospitsi ilmoittaa itse
+  2 472 m. Muutin muotoon "lähes 2 500 metrin korkeudessa".
+- **Ateena:** pöllö on profiilissa, vain pää katsojaan päin.
+- **Berliini:** piirros on vuodelta 1880, joten "isoisän matkan
+  ajoilta" väitti liikaa (matka on kaanonissa 1873).
+
+Kielitarkastus löysi lisäksi kuusi varsinaista virhettä, joista kaksi
+oli minun omaa huolimattomuuttani samassa lauseessa: **kultattu** pitää
+olla *kullattu* (verbi on kullata), ja **"Kellosepän José Rodríguez
+Losadan"** — tittelimäärite ei taivu. Lisäksi *Stefaninkirkko* →
+**Stephansdom** ja *linnanvuori* → **linnavuori**, koska repo käyttää
+näitä muotoja johdonmukaisesti muualla.
+
+Kaikki 12 selitettä olivat myös naapureitaan pitempiä (218–313 merkkiä
+vs. tiedoston tyypilliset 130–200). Lyhensin ne samaan mittaluokkaan.
+
+## Yksi tekninen löydös, joka koskee kaikkia tulevia kuvavalintoja
+
+Postikortin CSS (`css/styles.css:1817`) antaa kuvalle **kiinteän
+vaakaikkunan** ja `object-fit: cover` — kuva siis **rajataan keskeltä**,
+suhteeseen noin 1,4. Pystykuvasta näkyy vain keskimmäinen 45–65 %.
+Tämä ei ole vika (omistajan toive: korkea kuva ei saa venyttää korttia),
+mutta se tarkoittaa, että **kohteen on oltava kuvan pystysuunnassa
+keskellä**. Tarkistin jokaisen 12 kuvan simuloimalla rajauksen ja
+katsomalla lopputuloksen.
+
+Ansa kirjattu docs/opus1-tilanne.md:hen.
+
+Sivuhuomio: repossa **ei ole ESLint-konfiguraatiota**, vaikka
+`npx eslint` on tapana ajaa. Komento kaatuu "couldn't find
+eslint.config" -virheeseen, joka näyttää helposti puhtaalta ajolta, jos
+tulos putkitetaan `tail`-komennolle. Portteina toimivat siis vain
+`node --test` ja `tools/tarkista-kaksoisavaimet.mjs`.
+
+## Portit
+
+- `node --test tests/*.test.mjs` → **# pass 543, # fail 0**, 1 skip.
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia.
+- Ei uusia kuvaduplikaatteja: jokainen 12 tiedostosta esiintyy pelissä
+  täsmälleen kerran (tarkistettu koko `js/packs/`-hakemistosta).
+- Lisenssit ja tekijät haettu Commonsin API:sta, ei muistista. Kaikki
+  ovat PD, CC0, CC BY tai CC BY-SA. Riian kukkokuva on
+  monilisensoitu (GFDL **tai** CC BY-SA 3.0 **tai** 2.5) — käytämme
+  CC BY-SA 3.0:aa, joten GFDL-kielto ei esty. Wikiteksti tarkistettu.
+
+## Duplikaattierän tilanne
+
+Ehdokkaat haettu kaikille 13:lle ja katsottu silmin. **Yhdeksän
+kelpaa**, neljä hylkäsin:
+
+- Voroncovin majakka: ehdokas oli lähes identtinen nykyisen kanssa —
+  ei ratkaisisi duplikaattia.
+- Gediminaksen torni: sumuinen yökuva, torni tuskin erottuu.
+- Vilnan yliopiston piha: rakennustelineiden suojaverkko kuvassa.
+- Privozin tori: etuala täynnä pysäköityjä autoja ja mainoksia.
+
+Etsin näille korvaajat ja vien duplikaatit maaliin seuraavaksi. Luokan c
+Parthenon-tapauksessa vaihdan vain nahtavyysjutut-puolen, koska
+`europe-puzzles.js:117` on toiminnallisesti sidottu isoisän luonnokseen
+(koodikommentti rivit 120–124) — perustelu kirjataan
+docs/kuvaduplikaatit.md:hen.
+
+---
+
+# Opus 1 → Fable: ERÄ D MAALISSA (v526 + v527), aloitan duplikaatit (10.8.2026)
+
+Molemmat mainissa: **v526** (Bahrainin lautageometria, #767) ja **v527**
+(Bahrainin aihesivut, #768). Bahrainin maalehdessä on nyt kolme sivua —
+tarkistettu selaimessa, ei vain datasta.
+
+## Erä D kokonaisuudessaan
+
+| Maa | Versio | Sisältö |
+|---|---|---|
+| Saudi-Arabia | v515, korjattu v520 | kalliot, vuoret, meri |
+| Bahrain | v526 geometria + v527 sivut | helmet, muinaisuus |
+
+Päätöksesi toteutettiin sellaisenaan: Manamaa ei lisätty,
+`minCityDistance`a ei laskettu, Dohaa ei siirretty, korkokarttaa ei tehty.
+
+## Tarkastus ennen mergeä kannatti enemmän kuin jälkikäteen
+
+Bahrainissa ajoin sen ENNEN liittämistä, ja saalis oli isompi kuin
+Saudi-Arabiassa jälkikäteen:
+
+- **kuvat:** virhe viidessä kuudesta selitteestä. Vakavin oli Qal'at
+  al-Bahrain, jonka selite väitti etualalle kaivettuja kivijalkoja,
+  joita kuvassa ei ole. Elämänpuun juurella on kolme ihmistä, ei kahta.
+- **faktat:** neljä virhettä. Pahin oli "vuonna 1930 noin
+  kolmekymmentätuhatta sukeltajaa" — lähdettä ei löydy, ja Bahrainin
+  väkiluku oli 1941 noin 90 000, joten luku olisi tarkoittanut
+  kolmasosaa koko väestöstä. Se oli peräisin Wikipediasta.
+- **kieli:** mm. otsikko "Helmi, joka kasvatettiin purkissa" oli
+  ristiriidassa oman tekstinsä kanssa — siemen istutettiin simpukkaan.
+
+Vakavimmat tarkistin itse ennen korjaamista.
+
+## Julkaisusääntö 5 huomioitu
+
+`js/main.js` ei ole generoitu tiedosto. Korjasin oman
+uudelleenpohjausskriptini, joka olisi tehnyt täsmälleen sen virheen,
+jonka v524 teki: se otti koko tiedoston `--ours`-valinnalla. Nyt
+main.js ratkaistaan erikseen niin, että sisältö tulee mainista ja
+APP_VERSION kirjoittuu uudelleen `uusi-versio.mjs`:llä.
+
+## Seuraava: 13 kuvaduplikaattia
+
+Luin Sonnet 1:n taulukon haarasta `claude/matkakirja-game-dev-la16ae`.
+Aloitan sen mukaisesti:
+
+- **12 luokan b tapausta vaihdetaan.** Ne ovat kaikki samaa muotoa:
+  sama kuva sekä `nahtavyysjutut.js`:ssä että
+  `kulttuuri-kategoriat.js`/`europe-valokuvat.js`/`maa-kategoriat.js`:ssä.
+  Vaihdan **nähtävyysjuttupuolen**, koska duplikaatit syntyivät siellä
+  (erät v495–v508) ja vanhempi esiintymä on lehden vakiintunut kuva.
+- **1 luokan c rajatapaus (Parthenon)** on sidottu isoisän luonnokseen
+  `europe-puzzles.js`:ssä. Vaihdan siitä vain nähtävyysjuttupuolen ja
+  kirjaan perustelun `docs/kuvaduplikaatit.md`:hen.
+- Jokainen korvaava kuva: oikea maa, sallittu lisenssi, ≥ 1200 px,
+  **katsottu silmällä**, lähde API:sta, ei uusia duplikaatteja.
+- Tarkastus eri silmin ennen mergeä, kuten vakioitu.
+
+Erä on iso, joten teen sen **useammassa PR:ssä kaupungeittain** enkä
+yhtenä möhkäleenä — jos jokin korvaaja osoittautuu huonoksi, se ei
+jumita muita.
+
+---
+
 # Opus 1 → Fable: Bahrainin lautageometria PILOTTINA, odotan kuittausta (10.8.2026)
 
 Haara `claude/bahrain-lauta`. **Versionostoa ei ole tehty** — kuten
