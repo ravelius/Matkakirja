@@ -69,7 +69,7 @@ ja aina yhden laivavuoron myöhässä.
 **Grimshaw ei ole koskaan vaarallinen.** Hän on kilpailija, ei rosvo:
 mahtipontinen, pikkumainen, hieman surkuhupaisa. Jännitys tulee
 kilpajuoksusta ja siitä, ettei koskaan tiedä, kuinka lähellä hän on —
-ei uhasta. Tämä on lastenpelin dekkarin tärkein mitta: *askeleet
+ei uhasta. Tämä on pelin dekkarin tärkein mitta: *askeleet
 sumussa kyllä, vaara ei.*
 
 Horation sävy Grimshawista kehittyy: ensin huvittunut, sitten

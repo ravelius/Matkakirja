@@ -123,7 +123,7 @@ export async function haeArtikkeli(linkki) {
 /*
  * Päivän kuva EI tule enää tästä tiedostosta: Commonsin päivän kuvan
  * haku wikitekstiriisuntoineen (v331) korvattiin omalla kuratoidulla
- * listalla, koska Commonsin valintaa ei tehdä lapsille (omistajan
+ * listalla, koska Commonsin valintaa ei tehdä pelin yleisölle (omistajan
  * havainto 7.8.2026: olutpäivän elokuvajuliste). Ks.
  * js/packs/paivan-kuvat.js.
  */

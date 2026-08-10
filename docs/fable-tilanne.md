@@ -6,6 +6,42 @@ uuden tilin session — yli. Lue tämä ENSIN, sitten `CLAUDE.md`,
 `js/tyohuone-tilanne.js`. Ylin osio on aina tuorein tila; alemmat
 osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
 
+## UUSI TILI KÄYNNISSÄ 10.8. (~08:45Z alkaen) — TÄMÄ ON TUOREIN OSIO
+
+- **Uuden tilin Fable-sessio otti työn vastaan** (luovutusprompti
+  luettu, kaikki luovutusdokumentit luettu, main v511, testit 578/0).
+  Uudet sessio-id:t ovat docs/roolitus.md:n taulukossa: Fable
+  `session_01BPysCfxscsVyzAEYmb88Zr`, Opus 1
+  `session_01LrZTPX64MWBxukCQ7p7NBJ` (ME-erä D + tekijätarkistimen
+  ajo kaikille paketeille, lupa myönnetty), Sonnet 1
+  `session_01RT3ucdBD6Pt48BP75qvjKw` (kokoava koko Euroopan QA,
+  käynnistetty heti), Fable max -apusessio
+  `session_01U8NqxuC5RCoMozxGqDzEJm` (omistajan tilaus: syväajattelu
+  vaikeisiin pulmiin; omistaja kytkee Max-tilan UI:sta). Opus 2 ja
+  Sonnet 2 perustetaan vasta kun niiden jonot aukeavat (ME-kohdekartat
+  vaativat ME-kaupunkilehtiä; nähtävyysjutut vaativat karttoja).
+- **KOHDERYHMÄPÄÄTÖS (omistaja 10.8. ~08:45Z, SITOVA):** peli EI ole
+  lastenpeli. Se on seikkailupeli, jossa samalla oppii; kohderyhmä
+  13 vuotta täyttäneet ja aikuiset, tulevaisuudessa myös koulukäyttö
+  (13+). "Lastenpeli"-sanasto siivottu repoista (CLAUDE.md,
+  periaatteet.md pilari 4, isoisan-raamattu, tutki-aiheet,
+  tyolista-opukselle, sonnet2-tilanne + koodikommentit). Sisältö- ja
+  turvarajaukset (ei sotasisältöä, ei pelottelua, pyhät kaupungit
+  omistajan päätöksellä) pysyvät ennallaan.
+- **Ultracode käytössä Opus/Sonnet-sessioilla** (omistajan päätös
+  10.8.): valtuutus lähetetty triggereinä Opus 1:lle ja Sonnet 1:lle;
+  tulevien sessioiden aloituspromptteihin sana "ultracode" mukaan.
+- **Valmiusportti:** kohta 7 KIINNI (erä 13 = v508 mainissa). Auki
+  8b (Sonnet 1:n kokoava QA, käynnissä) ja 9 (Fablen läpipelaus,
+  käynnissä). Ilmoitus omistajalle vasta kun molemmat kiinni.
+  Omistaja aikoo koepelata Euroopan ja antaa palautetta.
+- **Skaalauslupa (omistaja 10.8. ~08:52Z):** Fable saa perustaa
+  useampia Opus/Sonnet-sessioita oman harkinnan mukaan. Kaksi Max 20
+  -tilausta vuorottelevat: kun tämän tilin viikkoraja täyttyy,
+  siirrytään toiselle tilille viikon loppuun ja palataan kun raja
+  nollautuu (luovutusdokumentit pidetään siksi aina ajan tasalla).
+  Urakka jatkuu kaikkien mantereiden loppuun asti.
+
 ## TILINVAIHTO TEHTY 10.8. (~08:45Z)
 
 - Omistaja käynnisti vaihdon. Vanhan tilin **yövahti-cron on

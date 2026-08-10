@@ -12,7 +12,7 @@
  * Köppen–Geiger erottelee 30 luokkaa (Af, Am, Aw, BWh, BWk, ... EF).
  * Ero Cfa:n ja Cfb:n välillä on lämpimimmän kuukauden keskilämpötila,
  * ja se on ilmastotieteen kysymys, ei tämän pelin. Yhdeksän ryhmää on
- * se määrä, jonka lapsi voi lukea kartalta ja muistaa: sademetsä,
+ * se määrä, jonka pelaaja voi lukea kartalta ja muistaa: sademetsä,
  * savanni, aavikko, aro, välimerenilmasto, lauhkea, mannerilmasto,
  * tundra ja jää. Jokainen alkuperäisluokka on merkitty RYHMAT-taulukkoon,
  * joten karkeistuksen näkee suoraan koodista eikä sitä tarvitse arvata.

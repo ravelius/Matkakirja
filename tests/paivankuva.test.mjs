@@ -1,6 +1,6 @@
 // Päivän kuva tulee omasta kuratoidusta listasta (js/packs/
 // paivan-kuvat.js) — Commonsin päivän kuva korvattiin, koska sen
-// valintaa ei tehdä lapsille (omistajan havainto 7.8.2026). Testi
+// valintaa ei tehdä pelin yleisölle (omistajan havainto 7.8.2026). Testi
 // vahtii listan eheyttä ja päivävalinnan käytöstä: rikkinäinen rivi
 // näkyisi pelaajalle tyhjänä kuvana tai lähteettömänä palstana.
 
