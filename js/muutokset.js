@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 491, teksti: 'Venäjän, Ukrainan ja Romanian menovinkkeihin kuvat' },
   { v: 490, teksti: 'Saksan, Ranskan ja Turkin menovinkkeihin kuvat' },
   { v: 489, teksti: 'Menovinkkikuvat viidelle maalle, kolme duplikaattia pois' },
   { v: 488, teksti: 'Nähtävyysjutut Roomaan, Krakovaan, Varsovaan, Tallinnaan' },

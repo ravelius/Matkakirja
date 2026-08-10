@@ -13506,6 +13506,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Venäjän historia valokuvissa — arkisto vuodesta 1860',
+              tiedosto: 'Russian peasant girls in front of a traditional wooden house in Kirillov.jpg',
+              selite: 'Prokudin-Gorskin värivalokuva noin 1909: kolme nuorta '
+                + 'naista seisoo hirsitalon edessä kirkkaissa huiveissa ja '
+                + 'hameissa, marjalautaset käsissä.',
+              lahde: 'Sergei Prokudin-Gorskii, Wikimedia Commons (public domain)',
               teksti: 'Museoiden ja kotialbumien valokuvat vuosilta 1860–1999 '
                 + 'ovat samassa haussa. Kuvia selataan vuoden, kaupungin tai '
                 + 'aiheen mukaan, ja niistä voi koota oman näyttelyn.',
@@ -13518,6 +13523,11 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Venäjän kansalliskirjasto — virtuaalinäyttelyt',
+              tiedosto: 'Russian National Bibliotheque, Saint Petersburg.jpg',
+              selite: 'Venäjän kansalliskirjaston rakennus Pietarissa. Vaalea '
+                + 'kivijulkisivu, jossa on korkeat pylväät ja pyöreä '
+                + 'keskiosa, ja edessä leveä aukio.',
+              lahde: 'Florstein, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Pietarin kansalliskirjasto on tehnyt kymmeniä '
                 + 'verkkonäyttelyitä: keskiaikaisia käsikirjoituksia, vanhoja '
                 + 'karttoja, kaiverruksia ja 1900-luvun alun värillisiä kuvia '
@@ -13526,6 +13536,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Elektronekrasovka — digitoitu kirjasto vuodesta 1564',
+              tiedosto: 'Apostol 1564 Frontispis.jpg',
+              selite: 'Apostol-kirjan aukeama vuodelta 1564. Vasemmalla '
+                + 'puupiirros kirjoittavasta evankelistasta, oikealla '
+                + 'koristeellinen alkukirjain ja kirkkoslaavilaista tekstiä.',
+              lahde: 'Ivan Fjodorov ja Pjotr Mstislavets, Wikimedia Commons (public domain)',
               teksti: 'Moskovan Nekrasov-kirjaston digitoidut kirjat, '
                 + 'aikakauslehdet ja julisteet aukeavat suoraan selaimessa. '
                 + 'Vanhat kuvalehdet luetaan sivu kerrallaan kuin oikea nide.',
@@ -13538,6 +13553,11 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Darwin-museo — kokoelma kolmiulotteisena',
+              tiedosto: 'Darwin\'s finches in the Darwin museum in Moscow.jpg',
+              selite: 'Kuusi täytettyä darwininsirkkua rivissä museon '
+                + 'vitriinissä. Jokaisen nokka on eri muotoinen, ja linnut on '
+                + 'numeroitu yhdestä kuuteen.',
+              lahde: 'Ctac, Wikimedia Commons (CC BY 4.0)',
               teksti: 'Moskovan Darwin-museo on julkaissut noin 300 esinettä '
                 + 'kolmiulotteisina malleina. Kalloa, lintua tai kotiloa voi '
                 + 'pyörittää hiirellä ja katsoa sitä joka puolelta.',
@@ -13545,6 +13565,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Digitaalinen Kunstkamera — 1700-luvun museo uudelleen',
+              tiedosto: 'Kunstkamera SPB.jpg',
+              selite: 'Kunstkamera Nevan rannalla Pietarissa. Vaaleanvihreä '
+                + 'barokkitalo, jonka keskeltä nousee valkoinen torni, ja '
+                + 'edessä laiturissa retkiveneitä.',
+              lahde: 'Florstein, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Pietari Suuren perustama Kunstkamera oli Venäjän '
                 + 'ensimmäinen museo. Sen 1700-luvun salit on rakennettu '
                 + 'verkkoon kolmiulotteisiksi, ja niissä kuljetaan huoneesta '
@@ -13690,6 +13715,11 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'museum-digital Ukraina — 54 museon esineet samassa haussa',
+              tiedosto: 'Berezhany- (279).jpg',
+              selite: 'Ukrainalaisia kansanpukuja museon seinällä: kirjailtuja '
+                + 'paitoja, liivejä ja raidallisia esiliinoja rivissä '
+                + 'vierekkäin.',
+              lahde: 'Roman Z, Wikimedia Commons (public domain)',
               teksti: 'Yli 24 000 esinettä ukrainalaisista museoista on koottu '
                 + 'yhteen hakuun: kansanpukuja, kolikoita ja kaivauslöytöjä. '
                 + 'Kuvaseinä ja aikajana näyttävät esineitä myös ilman '
@@ -13724,6 +13754,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Ukrainan kansallinen taidemuseo — teokset zoomattavina',
+              tiedosto: 'Олександрівська вулиця, нині Грушевського фото 1910 р.jpg',
+              selite: 'Vanha postikortti Kiovasta noin 1910. Raitiovaunu kulkee '
+                + 'leveää katua, ja vasemmalla kohoaa pylväikköinen '
+                + 'museorakennus.',
+              lahde: 'tuntematon kuvaaja, Wikimedia Commons (public domain)',
               teksti: 'Kiovan vanhimman museon kokoelma on Google Arts & '
                 + 'Culturessa. Keskiaikaisia ikoneita ja ukrainalaisia '
                 + 'maalauksia voi zoomata niin lähelle, että siveltimenjäljet '
@@ -13766,6 +13801,11 @@ export const MAA_KATEGORIAT = {
           kohteet: [
             {
               nimi: 'Urban Media Archive — 21 000 valokuvaa kaupungeista',
+              tiedosto: 'Old Town (8674962314).jpg',
+              selite: 'Lvivin vanhankaupungin kattoja ylhäältä. Punaisia ja '
+                + 'harmaita peltikattoja, savupiippuja ja niiden välissä '
+                + 'kapea katu.',
+              lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
               teksti: 'Lvivin kaupunkihistorian keskuksen arkistossa on yli 21 '
                 + '000 valokuvaa, 7 000 filmiä ja videota, vanhoja karttoja '
                 + 'ja äänitettyjä muistoja. Sivusto toimii myös englanniksi.',
@@ -13773,6 +13813,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Ukrainan taidekirjasto — kirjat sivu kerrallaan',
+              tiedosto: 'Petrykivka painting workshop at the BWF 2019.jpg',
+              selite: 'Taiteilija maalaa petrykivka-tyylistä kukka- ja '
+                + 'lintukuviota telineelle. Vieressä istuu punaiseen '
+                + 'kirjailtuun paitaan pukeutunut nuori nainen.',
+              lahde: 'Mykola Swarnyk, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Ilmainen kirjasto on täynnä skannattuja taidekirjoja ja '
                 + 'vanhoja lehtiä: kansantaidetta, avantgardea, keramiikkaa '
                 + 'ja oma hyllynsä kuvitettuja lastenkirjoja ja satuja.',
@@ -13910,6 +13955,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Muzee de la sat — kylämuseot 3D-kierroksina',
+              tiedosto: 'Carusel din zona Bacăului, Muzeul Național al Satului „Dimitrie Gusti”, București.jpg',
+              selite: 'Vanha puinen karuselli kylämuseossa Bukarestissa. Maalatut '
+                + 'puuhevoset ja vaunut seisovat paikoillaan syksyisten '
+                + 'puiden alla.',
+              lahde: 'Teodor Ioan Diaconu, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Romanian maaseudun pikkumuseoista on tehty 119 '
                 + 'kolmiulotteista kierrosta. Kartalta valitaan maakunta, ja '
                 + 'sitten museon läpi kuljetaan hiirellä huone kerrallaan.',
@@ -13935,6 +13985,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Romanian aarteet Google Arts & Culturessa',
+              tiedosto: 'Pátera - Tesoro de Pietroasele (3).jpg',
+              selite: 'Pietroaselen aarteen kultainen malja 400-luvulta. Reunaa '
+                + 'kiertää rivi kohokuvioituja hahmoja, ja keskellä istuu '
+                + 'pieni kultapatsas.',
+              lahde: 'Laci3, Wikimedia Commons (CC0)',
               teksti: 'Romanian museoiden esineitä ja maalauksia samassa '
                 + 'näkymässä: kultakoruja, ikoneita, kansanpukuja ja '
                 + 'kaupunkikuvia. Kuvia voi suurentaa niin lähelle, että '
@@ -13943,6 +13998,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Peleşin linna — kokoelmat osastoittain',
+              tiedosto: 'Castle Peleş in 2009.jpg',
+              selite: 'Peleşin linna Sinaian vuorten rinteessä. Teräviä torneja, '
+                + 'ristikkopuisia päätyjä ja tummia kattoja havumetsän '
+                + 'keskellä.',
+              lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
               teksti: 'Sinaian vuoristolinnan kokoelmat on jaettu verkossa '
                 + 'osastoihin: aseet, kellot, lasimaalaukset, soittimet, '
                 + 'hopeatyöt ja huonekalut. Jokaisesta avautuu kuvasarja '
@@ -13968,6 +14028,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Galeria Portretelor — muotokuvat museon kokoelmista',
+              tiedosto: 'Museum of Art Collections - room with three anonymous 19th-century Romanian portraits.jpg',
+              selite: 'Museosali Bukarestissa: kolme 1800-luvun muotokuvaa '
+                + 'kultakehyksissä valkoisella seinällä, alla vanha lipasto '
+                + 'ja nojatuoleja.',
+              lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 4.0)',
               teksti: 'Kansallisen historiamuseon muotokuva-arkisto verkossa: '
                 + 'valokuvia, postikortteja ja litografioita ruhtinaista, '
                 + 'näyttelijöistä ja tiedemiehistä — ja tavallisista '
@@ -13992,6 +14057,11 @@ export const MAA_KATEGORIAT = {
             },
             {
               nimi: 'Wildlife Romania — pesäkamerat haukalla ja haikaroilla',
+              tiedosto: 'Cigognes Vladeni Roumanie.jpg',
+              selite: 'Kattohaikaroiden pesä sähköpylvään päässä romanialaisessa '
+                + 'kylässä. Kaksi haikaraa seisoo risupesässä, alla '
+                + 'värikkäitä taloja.',
+              lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
               teksti: 'Neljä suoraa kameraa Romanian luontoon: aavikkohaukan '
                 + 'pesä, kaksi kattohaikaran pesää ja lintujen '
                 + 'ruokintapaikka. Aavikkohaukka on maan harvinaisimpia '
