@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 555, teksti: 'Vuorikohteiden kuvagalleriat valmiit: 52/52, 324 kuvaa' },
   { v: 554, teksti: 'ME: Isfahan-säännön korjauserä työhuoneeseen' },
   { v: 553, teksti: 'Maastokohteille omat artikkelit, vinkkisivun viilaus' },
   { v: 552, teksti: 'Euroopan saapumiset uusiksi: kommellukset ja persoonat' },

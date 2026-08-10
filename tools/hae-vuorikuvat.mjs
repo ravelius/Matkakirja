@@ -60,6 +60,20 @@ const KATEGORIA = {
    */
   altai: 'Nature of the Altai Republic',
   /*
+   * Molempien Sierra Madrejen omat kategoriat olivat kaupunkien
+   * katukuvia: Occidentalin yhdeksän ensimmäistä ehdokasta oli otettu
+   * Aguascalientesin kadulta katuvalojen ja mainostaulujen keskeltä.
+   * Tilalle vuoristojen tunnetuimmat kohteet.
+   */
+  'sierra-madre-occidental': 'Copper Canyon',
+  'sierra-madre-oriental': 'Cumbres de Monterrey National Park',
+  /*
+   * Kilimanjaron oma kategoria oli yhden pyöräretken tienvarsisarjaa
+   * (silmätarkistus 10.8.2026). Kilimanjaro Region on laajempi ja
+   * sisältää itse vuoren kuvat useammalta kuvaajalta.
+   */
+  kilimanjaro: 'Kilimanjaro Region',
+  /*
    * Apenniinien oma kategoria antoi Apuaanien Alpit ja joukon
    * VÄÄRIN NIMETTYJÄ kuvia: sarja "Province of L'Aquila in 2013" on
    * kuvattu Dolomiiteilla (Alpe di Siusi, Sciliar). Juuri tästä syystä
@@ -82,7 +96,12 @@ const KATEGORIA = {
   'madagaskarin-ylanko': 'Mountains of Madagascar',
   kamtshatka: 'Kronotsky Nature Reserve',
   'kaakkois-australian-ylangot': 'Australian Alps',
-  'uuden-guinean-ylangot': 'Mountains of Papua New Guinea',
+  /*
+   * "Mountains of Papua New Guinea" antoi tulivuoria ulkosaarilta
+   * (Bagana Bougainvillella, Rabaul Uudella-Britannialla) — ne eivät ole
+   * ylänköä. New Guinea Highlands on pieni mutta oikea kategoria.
+   */
+  'uuden-guinean-ylangot': 'New Guinea Highlands',
   'kapmaan-taittovuoret': 'Cape Fold Belt',
   sarawat: 'Sarawat Mountains',
   verhojansk: 'Verkhoyansk Range',
@@ -93,7 +112,13 @@ const KATEGORIA = {
   'tiibetin-ylatasanko': 'Landscapes of Tibet',
   'annamin-ylanko': 'Annamite Range',
   rannikkovuoret: 'Coast Mountains',
-  'alaskan-vuoristo': 'Alaska Range',
+  /*
+   * Alaska Rangen oma kategoria on 1970-luvun diaskannauksia, joista
+   * puolet on otettu lentokoneen ikkunan läpi — kehys ja heijastus
+   * kuvassa. Denalin kansallispuisto on saman vuoriston ydin ja
+   * kohteen oman huipun koti.
+   */
+  'alaskan-vuoristo': 'Denali',
 };
 
 /*
@@ -149,6 +174,14 @@ const POIS = [
    * pyöräretken venytettyjä panoraamoja.
    */
   'modis', '360 - panoramio', 'panorama 360',
+  /*
+   * Avaruusaluksista otetut kuvat. Tibestin ehdokaslistasta viisi
+   * yhdeksästä oli ISS:n ja SpaceXin otoksia, joissa etualalla on
+   * aluksen aurinkopaneeli ja Tibesti näkyy 400 kilometrin päässä
+   * alhaalla. Kuvauksessa ei lue "satellite", joten aiempi seula ei
+   * pysäyttänyt niitä.
+   */
+  'iss-', 'iss0', 'spacex', 'soyuz', 'expedition ', 'cupola',
 ];
 
 /** Kelpaako tiedosto galleriaan? */
