@@ -12771,12 +12771,12 @@ const MAAILMA = {
     // Avauslennon repliikki on lukittu yhteen riviin, koska sille on
     // tuotettu lukuääni (assets/audio/puhe-lento-alku.mp3) — teksti ja
     // puhe pysyvät aina samana. Rivi jatkaa avaustekstin revittyä sivua.
-    // Lyhennetty 7.8.2026 (omistaja: "Nykyinen on liian pitkä" — taito
-    // on tehdä tarpeeksi lyhyt). Luennan tagit: [excited] alkuun,
-    // [warmly] loppuun; generointi samalla reseptillä kuin
-    // tools/generoi-luennat.mjs.
+    // Uusittu 10.8.2026 omistajan hyväksynnällä (hengästynyt alku,
+    // enemmän imua); luenta v3-tunnetagein tools/generoi-avaus.mjs:llä
+    // — teksti muutetaan vain sen kautta, jotta ruutu ja puhe pysyvät
+    // samana.
     flightFirst: [
-      'Isoisän kirja on auki sylissäni, ja koneen alla maailma vasta alkaa. Kahdeksankymmentä päivää — otetaan selvää, mihin hän ei ehtinyt.',
+      'Huh — ehdin! Kone nousee, ja isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä. Revitty sivu ei kerro, mitä hän löysi — joten menen katsomaan itse.',
     ],
     intro: 'Peli alkaa! Etsikää Magellanin kompassi — maailmanympäripurjehtijan kadonnut aarre.',
     starFound: (name, city) => `◈ ${name} löysi MAGELLANIN KOMPASSIN kaupungista ${city}!`,
@@ -128086,11 +128086,13 @@ const INTRO_FONT_MAX = 1.32;
 const INTRO_FONT_MIN = 0.72;
 // Omistajan päättämä avausteksti. ÄLÄ muokkaa ilman omistajan lupaa
 // (docs/tyolista-opukselle.md, paketti 3). Lyhennetty omistajan
-// pyynnöstä 4.8.2026: pitkää versiota ei jaksanut kuunnella.
+// pyynnöstä 4.8.2026; draamaviilaus omistajan hyväksynnällä
+// 10.8.2026. Teksti ja luenta (intro-puhe.mp3) pidetään samana —
+// muutos vain tools/generoi-avaus.mjs:n kautta.
 const INTRO_TEXT = 'Vintiltä löytyi isoisän kulunut matkakirja: '
   + '"Maailman ympäri kahdeksassakymmenessä päivässä".\n\n'
   + 'Viimeinen sivu oli revitty kesken lauseen: "…voinut uskoa, siellä '
-  + 'olikin…" Mitä hän oli löytänyt?\n\n'
+  + 'olikin…" Mitä hän löysi? Ja kuka repii kirjasta juuri sen sivun?\n\n'
   + 'Juoksin kentälle kirja kädessäni:\n\n'
   + 'mistä aloitan?';
 /*
@@ -140405,6 +140407,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 516, teksti: 'Avausteksti ja lennon repliikki uusiksi, luennat v3-tagein' },
   { v: 515, teksti: 'Saudi-Arabialle kallioiden, vuorten ja meren sivut' },
   { v: 514, teksti: 'Puuttuvat kuvien tekijämerkinnät täydennetty' },
   { v: 513, teksti: 'Kuvakatselimen näppäimet, lennon pehmeä lähtö ja äänifadet' },
@@ -141004,7 +141007,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.515';
+const APP_VERSION = '2026-08-09.516';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

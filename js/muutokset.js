@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 516, teksti: 'Avausteksti ja lennon repliikki uusiksi, luennat v3-tagein' },
   { v: 515, teksti: 'Saudi-Arabialle kallioiden, vuorten ja meren sivut' },
   { v: 514, teksti: 'Puuttuvat kuvien tekijämerkinnät täydennetty' },
   { v: 513, teksti: 'Kuvakatselimen näppäimet, lennon pehmeä lähtö ja äänifadet' },
