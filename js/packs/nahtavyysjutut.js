@@ -6509,5 +6509,265 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
-  PLACEHOLDER_ERA11
+  odessa: {
+    'Vorontsovin majakka': {
+      aika: '1862–1955',
+      teksti: 'Odessan satamansuulla seisoo punavalkoinen Vorontsovin '
+          + 'majakka, joka kohoaa lähes 30 metrin korkeuteen – yhtä '
+          + 'korkealle kuin kymmenkerroksinen talo. Nykyinen torni on '
+          + 'jo kolmas samalla paikalla: ensin siellä oli puinen '
+          + 'majakka 1800-luvun puolivälissä, sen jälkeen valurautainen '
+          + 'torni, ja lopulta vuonna 1955 valmistui torni, joka seisoo '
+          + 'paikalla vielä nykyäänkin.'
+        + '\n\n'
+        + 'Majakan huipulla palava valo näkyy merelle yli 20 '
+          + 'kilometrin päähän. Se vilkkuu aina samalla tunnuksellaan: '
+          + 'kolme pitkää välähdystä, mikä on Morse-aakkosissa kirjain '
+          + 'O – niin kuin Odessa. Sumuisina päivinä majakasta kuuluu '
+          + 'myös kova sumutorvi, joka varoittaa laivoja karikoista.'
+        + '\n\n'
+        + 'Majakka on nimetty ruhtinas Vorontsovin mukaan, joka '
+          + 'aikanaan hallitsi Odessan seutua. Se on yhdistetty rantaan '
+          + 'pitkällä kivisellä aallonmurtajalla, joka suojaa satamaa '
+          + 'myrskyiltä ja korkeilta aalloilta.',
+      kuvat: [
+        {
+          tiedosto: 'Воронцовський маяк DSC5033.jpg',
+          selite: 'Voroncovin majakka merenpuolelta kuvattuna: valkoinen '
+            + 'kivimajakka punaisine lyhtyhuoneineen kohoaa sinistä '
+            + 'taivasta ja valkoisia pilviä vasten, ympärillä avomeri.',
+          lahde: 'Konstantin Brizhnichenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vorontsov Lighthouse 2017 G1.jpg',
+          selite: 'Voroncovin majakka läheltä pystykuvassa: valkoiset '
+            + 'kiviladokset ja punainen lyhtyhuone erottuvat terävinä '
+            + 'syvänsinistä taivasta vasten.',
+          lahde: 'George Chernilevsky, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Vorontsov Lighthouse.jpg',
+          selite: '1890-luvun postikorttikuva Voroncovin majakasta: vanha '
+            + 'metallinen/kivinen majakka kivilaiturilla, ympärillä '
+            + 'soutuveneitä ajan tyylissä.',
+          lahde: 'Tuntematon, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Odessan satama': {
+      aika: '1793–1794',
+      teksti: 'Odessan satama sai alkunsa 1790-luvulla, kun upseeri José '
+          + 'de Ribas etsi parasta paikkaa uudelle satamalle '
+          + 'Mustanmeren rannalta. Rakennustyöt alkoivat vuonna 1793, '
+          + 'ja jo seuraavana vuonna ensimmäiset laivat pääsivät '
+          + 'kiinnittymään uusiin laitureihin. Siitä lähtien satama on '
+          + 'kasvanut yhdeksi Ukrainan suurimmista ja koko Mustanmeren '
+          + 'alueen vilkkaimmista satamista.'
+        + '\n\n'
+        + 'Nykyään satamassa on 46 laituripaikkaa ja 52 laituria, ja '
+          + 'sinne mahtuvat jopa valtavan kokoiset Panamax-luokan '
+          + 'rahtilaivat. Satamasta kulkee vuosittain noin 50 miljoonaa '
+          + 'tonnia tavaraa – viljaa, öljyä, kontteja ja monenlaista '
+          + 'muuta rahtia.'
+        + '\n\n'
+        + 'Satamassa on myös oma telakka laivojen korjaamiseen, '
+          + 'matkustajaterminaali ja pieni merenkulkumuseo, joka kertoo '
+          + 'Ukrainan laivaston historiasta. Parhaimmillaan satamasta '
+          + 'on lähtenyt matkalle miljoonia matkustajia vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'Вид на морской вокзал (Одесса).jpg',
+          selite: 'Odessan meriasema satamassa: korkea Hotel Odessa -torni, '
+            + 'matkustaja-alus ja purjeveneitä laiturissa kirkkaan '
+            + 'sinisen taivaan alla.',
+          lahde: 'Georgiy Dolgopskiy, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Potjomkinin portaat': {
+      aika: '1837–1841',
+      teksti: 'Odessan kuuluisin nähtävyys on jättiläismäinen kivinen '
+          + 'porrasrivistö, joka johtaa satamasta ylös kaupungin '
+          + 'keskustaan. Portaat rakennettiin vuosina 1837–1841 '
+          + 'sveitsiläisen arkkitehti Francesco Boffon suunnitelmien '
+          + 'mukaan, ja niiden rakentamista valvoi englantilainen '
+          + 'insinööri John Upton. Alun perin portaissa oli 200 '
+          + 'askelmaa, mutta ajan myötä osa niistä hautautui maan alle '
+          + '– nykyään portaissa lasketaan 192 askelmaa kymmenen '
+          + 'tasanteen välissä.'
+        + '\n\n'
+        + 'Portaissa on hauska temppu: ne on rakennettu niin, että '
+          + 'yläpää on kapeampi (12,5 metriä) ja alapää leveämpi (yli '
+          + '21 metriä). Kun seisoo alhaalla ja katsoo ylös, portaat '
+          + 'näyttävät paljon lyhyemmiltä kuin ne todellisuudessa ovat, '
+          + 'sillä tasanteet katoavat näkyvistä. Ja jos seisoo ylhäällä '
+          + 'ja katsoo alas, koko 142 metriä pitkä porrasrivistö '
+          + 'näyttää yhtenäiseltä, suoralta muurilta, koska yksittäiset '
+          + 'askelmat eivät erotu lainkaan!'
+        + '\n\n'
+        + 'Portaat tulivat maailmankuuluisiksi vuonna 1925, kun '
+          + 'ohjaaja Sergei Eisenstein kuvasi niillä kohtauksia '
+          + 'mykkäelokuvaansa Panssarilaiva Potjomkin. Elokuvan '
+          + 'ansiosta portaista tuli yksi elokuvahistorian '
+          + 'tunnetuimmista kuvauspaikoista, ja myöhemmin myös '
+          + 'portaiden oma nimi alkoi muistuttaa laivasta, josta '
+          + 'elokuva kertoo.',
+      kuvat: [
+        {
+          tiedosto: 'Potemkin Stairs, Odessa.jpg',
+          selite: 'Potjomkinin portaat alhaalta kuvattuna: koko leveä '
+            + 'rappuskäytävä nousee ylös siniseen taivaaseen, ihmisiä '
+            + 'kävelemässä portailla.',
+          lahde: 'Oleh Kushch, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Потьомкінські східці, Potemkin Stairs (11378021554).jpg',
+          selite: 'Näkymä Potjomkinin portaiden yläpäästä alas kohti satamaa '
+            + 'ja Hotel Odessa -tornia syksyisessä auringonpaisteessa, '
+            + 'puissa ruskan värejä.',
+          lahde: 'Clay Gilliland, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Potemkinstairs.jpg',
+          selite: 'Vuoden 1896 valokuva Potjomkinin portaista: portaat '
+            + 'reunustavat ajan rakennukset, portailla yksittäisiä '
+            + 'ohikulkijoita.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Odessan oopperatalo': {
+      aika: '1810–1887',
+      teksti: 'Odessan ensimmäinen oopperatalo avattiin jo vuonna 1810, '
+          + 'mutta se tuhoutui tulipalossa vuonna 1873. Sen tilalle '
+          + 'rakennettiin uusi, vieläkin komeampi talo, jonka '
+          + 'suunnittelivat itävaltalaiset arkkitehdit Ferdinand '
+          + 'Fellner ja Hermann Helmer. Uusi oopperatalo avasi ovensa '
+          + 'lokakuussa 1887, ja sen julkisivua koristavat kuuluisien '
+          + 'venäläisten kirjailijoiden ja säveltäjien, kuten Gogolin '
+          + 'ja Pushkinin, kuvapatsaat.'
+        + '\n\n'
+        + 'Talon sisällä on hevosenkengän muotoinen katsomosali, '
+          + 'jonka akustiikka on niin hyvä, että näyttelijän '
+          + 'kuiskauskin kuuluu selvästi viimeiselle riville asti. Sali '
+          + 'oli aikanaan myös tekniikan ihme: se oli ensimmäinen '
+          + 'rakennus koko Odessassa, jossa oli sähkövalot. Kesäisin '
+          + 'salia viilennettiin laskemalla jäällä täytettyjä vaunuja '
+          + 'rakennuksen alle kellariholveihin.'
+        + '\n\n'
+        + 'Katsomoon mahtuu yli 1 600 katsojaa, ja lavalla on '
+          + 'esiintynyt monia kuuluisia laulajia, muun muassa '
+          + 'mahtiäänisenä tunnettu bassolaulaja Fjodor Saljapin. '
+          + 'Rakennus koki vielä yhden tulipalon vuonna 1925, mutta se '
+          + 'korjattiin, ja oopperatalo loistaa yhä Odessan '
+          + 'keskustassa.',
+      kuvat: [
+        {
+          tiedosto: 'Odessa Opera Theatre 2016 G1.jpg',
+          selite: 'Odessan oopperatalon koko julkisivu koristepatsaineen ja '
+            + 'kupoleineen kirkkaan sinistä taivasta vasten.',
+          lahde: 'George Chernilevsky, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Odessa Opera Theatre 2016 G2.jpg',
+          selite: 'Lähikuva oopperatalon päätykolmiosta: hevospatsasryhmä, '
+            + 'pylväät ja koristeveistokset alhaalta kuvattuna kirkkaassa '
+            + 'auringonpaisteessa.',
+          lahde: 'George Chernilevsky, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Stadttheater in Odessa (BildID 15665727).jpg',
+          selite: 'Vuoden 1917 valokuva Odessan oopperatalosta kadulta '
+            + 'kuvattuna: katukiveys, katulyhdyt ja ajan asukkaita '
+            + 'kävelemässä rakennuksen editse.',
+          lahde: 'K.u.k. Kriegspressequartier, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupunginpuisto: {
+      aika: '1803',
+      teksti: 'Odessan vanhin puisto perustettiin jo vuonna 1803, kun '
+          + 'kaupungin perustajan veli Felix de Ribas raivasi alueen '
+          + 'keskelle kaupunkia. Muutaman vuoden kuluttua hänellä ei '
+          + 'enää ollut varaa hoitaa puistoa, joten hän lahjoitti sen '
+          + 'koko kaupungille vuonna 1806 – ja niin siitä tuli kaikkien '
+          + 'odessalaisten yhteinen olohuone.'
+        + '\n\n'
+        + 'Puisto on pieni, alle kaksi hehtaaria, mutta sinne mahtuu '
+          + 'paljon: vanha kesäteatterin lava, jolla orkesteri soittaa '
+          + 'kesäiltoina, pieni paviljonki, patsaita ja musiikkia '
+          + 'soittava suihkulähde. Puiston käytävät kiemurtelevat '
+          + 'vanhojen puiden alla, ja penkeillä istuskelee sekä '
+          + 'paikallisia että matkailijoita.'
+        + '\n\n'
+        + 'Puisto sijaitsee aivan Odessan vilkkaimman kadun, '
+          + 'Deribasovskajan, varrella, joten se on kätevä '
+          + 'levähdyspaikka kävelijöille. Puistoa on kunnostettu useaan '
+          + 'otteeseen, viimeksi vuonna 2007, jolloin suihkulähde ja '
+          + 'rakennukset saivat uuden ilmeen.',
+      kuvat: [
+        {
+          tiedosto: 'Odessa city garden orchestra Rotunda.JPG',
+          selite: 'Kaupunginpuiston pyöreä musiikkipaviljonki (rotunda) ja '
+            + 'suihkulähde kukkapenkkien keskellä, ihmisiä istumassa '
+            + 'penkeillä auringossa.',
+          lahde: 'HOBOPOCC, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Восени у міському саду, Одеса.jpg',
+          selite: 'Kaupunginpuiston käytävä syksyisessä kultaisessa '
+            + 'lehtimeressä, punaiset penkit rivissä käytävän varrella, '
+            + 'katulyhty edessä.',
+          lahde: 'Krasnickaja Katya, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Privozin tori': {
+      aika: '1827',
+      teksti: 'Privoz on Odessan suurin ja vanhin ruokatori, ja sen '
+          + 'tarina alkoi vuonna 1827. Aluksi kauppiaat myivät '
+          + 'tavaroitaan suoraan hevoskärryjen lavalta – nimi ”Privoz” '
+          + 'tarkoittaakin suunnilleen ”tuotu tavara”. Vuosikymmenten '
+          + 'kuluessa torista kasvoi koko kaupungin sydän, paikka jossa '
+          + 'ei vain ostettu ja myyty, vaan vaihdettiin myös kaikki '
+          + 'tuoreimmat kaupungin kuulumiset.'
+        + '\n\n'
+        + 'Tulipalo tuhosi torin, mutta se rakennettiin kokonaan '
+          + 'uudelleen 1900-luvun alussa. Vuonna 1904 torille valmistui '
+          + 'kaunis Hedelmäkäytävä, jonka kaarevat holvikäytävät ja '
+          + 'koristeelliset julkisivut tekivät siitä torin näyttävimmän '
+          + 'rakennuksen. Sitä pidetään edelleen torin ainoana '
+          + 'varsinaisena arkkitehtuurinähtävyytenä.'
+        + '\n\n'
+        + 'Privozilla myydään yhä kaikkea taivaan ja maan väliltä: '
+          + 'tuoretta kalaa ja äyriäisiä, lihaa, juustoja, hedelmiä ja '
+          + 'mausteita – ja joskus vaikka mitä yllättävää pikkutavaraa. '
+          + 'Tori on innoittanut myös kirjailijoita ja '
+          + 'elokuvantekijöitä: muun muassa vanha koomikko-elokuva '
+          + 'kaupungin kaduille karanneesta elefantista sai alkunsa '
+          + 'Privozin tarinoista.',
+      kuvat: [
+        {
+          tiedosto: 'Pryviz entrance.jpg',
+          selite: 'Privozin torin näyttävä kaarikattoinen sisäänkäynti '
+            + 'kadulta kuvattuna, PRIVOZ-kyltti julkisivussa, kirkas '
+            + 'kevätaurinko ja tyhjä katu edessä.',
+          lahde: 'Hwyrd, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'At the Privoz Market in Odessa.jpg',
+          selite: 'Privozin torin myyntipöytä täynnä värikkäitä valmisruokia '
+            + 'ja salaatteja muovirasioissa, myyjä ojentaa annosta '
+            + 'vihreällä kauhalla.',
+          lahde: 'jmv, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
