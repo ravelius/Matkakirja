@@ -156,28 +156,32 @@ function startGame() {
 
 // --- äänet ------------------------------------------------------------------
 
-// Kertojavalikko yläpalkissa. Kolme tilaa (omistajan tiivistys
-// 10.8.2026: lyhyt kertoja pois, järjestys käännettiin): kaikki
-// äänet, äänet ilman kertojaa, äänet pois. Pelkät kuvakkeet ja
-// täppä. Mykistys on sound.js:n enabled-tila (muistetaan käyntien
-// yli), kertojan tila oma talletuksensa (aani-ehdokkaat.js) —
-// vanha talletettu 'lyhyt' luetaan pitkänä.
+// Kertojavalikko yläpalkissa (omistajan toive): mykistys, ei kertojaa,
+// lyhyt kertoja (vain nuoren herran osuus) ja pitkä kertoja. Pelkät
+// kuvakkeet ja täppä — kirja kertoo lukijasta, kaaret puheen määrästä.
+// Mykistys on sound.js:n enabled-tila (muistetaan käyntien yli),
+// kertojan tila oma talletuksensa (aani-ehdokkaat.js).
 const KERTOJA_KIRJA = '<path d="M4.5 11c2.3-1.1 4.6-1.1 7.5 0 2.9-1.1 5.2-1.1 7.5 0v8.2c-2.3-1.1-4.6-1.1-7.5 0-2.9-1.1-5.2-1.1-7.5 0z"/><path d="M12 11v8.2"/>';
 const KERTOJA_TILAT = [
   {
-    tila: 'pitka',
-    seloste: 'Kaikki äänet — kertoja lukee merkinnät ja avaustekstit',
-    ikoni: `${KERTOJA_KIRJA}<path d="M10.2 6.8a2.9 2.9 0 0 1 3.6 0"/><path d="M8.6 4.2a5.6 5.6 0 0 1 6.8 0"/>`,
+    tila: 'mykistys',
+    seloste: 'Mykistä kaikki äänet',
+    ikoni: '<path d="M4.5 9.4h2.8l4.2-3.4v12l-4.2-3.4H4.5z"/><path d="M15.4 9.6l4.8 4.8M20.2 9.6l-4.8 4.8"/>',
   },
   {
     tila: 'ei',
-    seloste: 'Äänet ilman kertojaa — kaiutinnappi lukee pyydettäessä',
+    seloste: 'Ei kertojaa — muut äänet soivat, kaiutinnappi lukee pyydettäessä',
     ikoni: `${KERTOJA_KIRJA}<path d="M5.4 5.4l13.2 13.2"/>`,
   },
   {
-    tila: 'mykistys',
-    seloste: 'Äänet pois',
-    ikoni: '<path d="M4.5 9.4h2.8l4.2-3.4v12l-4.2-3.4H4.5z"/><path d="M15.4 9.6l4.8 4.8M20.2 9.6l-4.8 4.8"/>',
+    tila: 'lyhyt',
+    seloste: 'Lyhyt kertoja — vain nuoren herran osuus matkakirjasta',
+    ikoni: `${KERTOJA_KIRJA}<path d="M10.2 6.8a2.9 2.9 0 0 1 3.6 0"/>`,
+  },
+  {
+    tila: 'pitka',
+    seloste: 'Pitkä kertoja — koko merkintä ja avaustekstit',
+    ikoni: `${KERTOJA_KIRJA}<path d="M10.2 6.8a2.9 2.9 0 0 1 3.6 0"/><path d="M8.6 4.2a5.6 5.6 0 0 1 6.8 0"/>`,
   },
 ];
 /*
@@ -187,13 +191,7 @@ const KERTOJA_TILAT = [
  */
 const kertojaValikko = document.getElementById('kertoja-valikko');
 const svg = (piirto) => `<svg viewBox="0 0 24 24">${piirto}</svg>`;
-const nykyinenKertoja = () => {
-  if (!sfx.enabled) return 'mykistys';
-  const tila = kertojaTila();
-  // Poistunut 'lyhyt'-tila (10.8.2026) luetaan pitkänä, jotta vanha
-  // laitteelle talletettu valinta ei jätä valikkoa täpättömäksi.
-  return tila === 'lyhyt' ? 'pitka' : tila;
-};
+const nykyinenKertoja = () => (sfx.enabled ? kertojaTila() : 'mykistys');
 
 const naytaKertoja = () => {
   const nyt = nykyinenKertoja();
