@@ -6696,6 +6696,27 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   letter-spacing: 0.03em;
 }
 
+/*
+ * Aikalaislainaus maastoartikkelissa: sisennetty ja kursiivissa,
+ * jotta 1800-luvun ääni erottuu kertojan tekstistä yhdellä
+ * silmäyksellä. Nimiörivi pienellä kuten lähdemaininta.
+ */
+.maasto-lainaus {
+  margin: 0.9rem 0 0.9rem 0.9rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid rgba(70, 51, 31, 0.35);
+}
+
+.maasto-lainaus-teksti {
+  margin: 0 0 0.25rem;
+  font-style: italic;
+}
+
+.maasto-lainaus-nimio {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
 /* Lähdemaininta on lisenssiehto, ei koriste: se näkyy aina. */
 .wiki-source {
   margin-top: 0.7rem;
@@ -8988,14 +9009,39 @@ body.vertailu-tila .pawns { display: none; }
   box-shadow: 0 2px 10px rgba(40, 28, 12, 0.25);
 }
 
+/*
+ * Kuvateksti isolla, kreditti pienellä (omistajan palaute 10.8.2026:
+ * "Kuvan kreditit pienemmällä ja isommalla kuvateksti").
+ */
+.vinkki-hero-teksti {
+  margin-top: 0.35rem;
+}
+
+.vinkki-hero-selite {
+  display: block;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
 .vinkki-hero .lahde {
-  margin-top: 0.25rem;
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  color: rgba(70, 51, 31, 0.68);
   text-align: right;
 }
 
+/*
+ * Lista kulkee oikeassa reunassa hieman palstaa kapeampana
+ * (omistajan palaute 10.8.2026: "Kavenna linkkikirjastoa
+ * vaakasuunnassa hieman ja siirrä oikeaan reunaan") — vasempaan
+ * laitaan jäävä tyhjä kaista rytmittää sivua kuten lehden marginaali.
+ */
 .vinkkisivu .vinkkilista,
 .vinkkisivu .vinkki-ryhma {
-  max-width: 40rem;
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /* Ajankohta noston otsikkorivillä: pieni konekirjoitusleima. */
@@ -133038,14 +133084,30 @@ class UI {
   avaaMaastonimi(kohde) {
     if (!kohde?.wiki) return;
     /*
+     * Maastokohteilla on oma käsin kirjoitettu artikkeli
+     * (js/packs/maasto-tekstit.js + kymmenen kuuluisinta mallissa) ja
+     * usein omat kuvat. Laji katsotaan nimipaketista samuudella eikä
+     * avaimella, koska sama avain voi olla kahdella lajilla (Ural on
+     * sekä joki että vuoristo).
+     */
+    const laji = ['vuoret', 'joet', 'jarvet']
+      .find((l) => MAAILMANKARTAN_NIMET[l]?.includes(kohde));
+    const teksti = laji
+      ? (MAASTO_TEKSTIT[laji]?.[kohde.avain] ?? MAASTO_TEKSTIT_MALLI[laji]?.[kohde.avain])
+      : null;
+    /*
      * Vuorikohteilla on oma kuratoitu karuselli (VUORIKUVAT). Se
      * annetaan tässä valmiina listana eikä haeta otsikolla, koska
      * Wikipedia-otsikot törmäävät: Madagaskarin ylängön artikkeli on
      * "Madagaskar", ja sama otsikko on Afrikan laudan saarikohteella.
+     * Muille kelpaavat artikkelin omat kuvakappaleet — sama
+     * kenttäkolmikko tiedosto/selite/lahde.
      */
+    const kuvakappaleet = (teksti?.kappaleet ?? []).filter((k) => k.tiedosto);
     this.openWikiArticle(kohde.wiki, kohde.nimi, {
       alkuteksti: kohde.selitys,
-      galleria: vuorikuvat(kohde.avain),
+      galleria: vuorikuvat(kohde.avain) ?? (kuvakappaleet.length ? kuvakappaleet : null),
+      kappaleet: teksti?.kappaleet ?? null,
     });
   }
 
@@ -137121,6 +137183,38 @@ class UI {
   }
 
   /**
+   * Käsin kirjoitettu maastoartikkeli: tekstikappaleet ja niiden
+   * väliin aikalaislainaukset omina sitaattilohkoinaan. Kuvakappaleet
+   * ohitetaan tässä — ne kulkevat gallerian kautta (avaaMaastonimi),
+   * jossa niillä on suurennos, selaus ja lähderivi valmiina.
+   */
+  renderMaastoArtikkeli(container, kappaleet) {
+    container.textContent = '';
+    for (const kpl of kappaleet) {
+      if (kpl.teksti) {
+        container.appendChild(html('p', 'wiki-p', kpl.teksti));
+      } else if (kpl.lainaus) {
+        const lohko = html('blockquote', 'maasto-lainaus');
+        lohko.appendChild(html('p', 'maasto-lainaus-teksti', `”${kpl.lainaus}”`));
+        const nimio = html('footer', 'maasto-lainaus-nimio');
+        nimio.appendChild(document.createTextNode(`— ${kpl.kuka ?? 'tuntematon'}, `));
+        if (kpl.linkki) {
+          const a = html('a', '', kpl.teos ?? 'lähde');
+          a.href = kpl.linkki;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          nimio.appendChild(a);
+        } else {
+          nimio.appendChild(html('cite', '', kpl.teos ?? ''));
+        }
+        if (kpl.vuosi) nimio.appendChild(document.createTextNode(` (${kpl.vuosi})`));
+        lohko.appendChild(nimio);
+        container.appendChild(lohko);
+      }
+    }
+  }
+
+  /**
    * "Lue lisää": Wikipedian artikkeli paikasta. Dialogi avautuu heti,
    * tiivistelmä täyttyy kun haku valmistuu, ja koko artikkeli ladataan
    * perään samalta kieleltä. Jos haku epäonnistuu — ei yhteyttä, 404 tai
@@ -138509,7 +138603,18 @@ class UI {
         kuva.decoding = 'async';
         asetaKuva(kuva, valokuvaUrl(eka.tiedosto, 1200), valokuvaVara(eka.tiedosto, 1200), () => hero.remove());
         hero.appendChild(kuva);
-        if (eka.lahde) hero.appendChild(html('figcaption', 'lahde', eka.lahde));
+        /*
+         * Kuvateksti on lukijalle, kreditti lisenssille — omistajan
+         * palaute 10.8.2026: "Kuvan kreditit pienemmällä ja isommalla
+         * kuvateksti." Selite siis omalla rivillään leipätekstikoossa
+         * ja lähde sen alla pienellä.
+         */
+        if (eka.selite || eka.lahde) {
+          const teksti = html('figcaption', 'vinkki-hero-teksti');
+          if (eka.selite) teksti.appendChild(html('span', 'vinkki-hero-selite', eka.selite));
+          if (eka.lahde) teksti.appendChild(html('span', 'lahde', eka.lahde));
+          hero.appendChild(teksti);
+        }
         // Hero johdannon perään, ennen ryhmiä.
         kohde.appendChild(hero);
       }
@@ -139490,7 +139595,7 @@ class UI {
    *   ({ tiedosto, selite, lahde }). Kun lista on annettu, se KORVAA
    *   artikkelin oman kuvaston kokonaan — myös suurennoksessa.
    */
-  async openWikiArticle(title, label = title, { alkuteksti = null, galleria = null } = {}) {
+  async openWikiArticle(title, label = title, { alkuteksti = null, galleria = null, kappaleet = null } = {}) {
     this.wikiOpenFor = title;
     this.wikiTitle.textContent = label;
     this.wikiImage.hidden = true;
@@ -139523,10 +139628,28 @@ class UI {
       this.wikiKuvakotelo.hidden = false;
       this.paivitaWikiKuvaLaskuri();
     }
-    this.wikiExtract.textContent = alkuteksti || 'Haetaan…';
-    this.wikiSource.textContent = '';
+    /*
+     * Käsin kirjoitettu maastoartikkeli (js/packs/maasto-tekstit.js)
+     * on ruudulla heti eikä Wikipediaa haeta sen tilalle koskaan —
+     * omistajan tilaus 10.8.2026: "Vuorien artikkelit voisi
+     * kirjoittaa. Ne taitavat olla nyt suoraan wikipediasta."
+     * Verkosta haetaan enää kuva, ja sekin vain jos kuratoitua
+     * galleriaa ei ole.
+     */
+    const omat = kappaleet?.length ? kappaleet : null;
+    if (omat) {
+      this.renderMaastoArtikkeli(this.wikiExtract, omat);
+      this.wikiSource.textContent = 'Unohdetun aarteen oma artikkeli. '
+        + 'Aikalaislainaukset on luettu ja tarkistettu alkuteksteistä.';
+    } else {
+      this.wikiExtract.textContent = alkuteksti || 'Haetaan…';
+      this.wikiSource.textContent = '';
+    }
     if (!this.wikiDialog.open) this.wikiDialog.showModal();
     this.nollaaDialoginVieritys(this.wikiDialog);
+
+    // Teksti ja kuvat molemmat paketista: verkkoa ei tarvita lainkaan.
+    if (omat && this.wikiGalleria) return;
 
     const summary = await cachedSummary(title);
     // Pelaaja on voinut ehtiä sulkea dialogin tai avata toisen paikan.
@@ -139535,11 +139658,11 @@ class UI {
     if (!summary) {
       // Oma selitys on parempi kuin pahoittelu: se on jo ruudulla, ja
       // lentokoneessa se on ainoa mitä kohteesta voidaan kertoa.
-      if (!alkuteksti) this.wikiExtract.textContent = 'Tietoja ei saatu haettua. Matka jatkuu.';
+      if (!alkuteksti && !omat) this.wikiExtract.textContent = 'Tietoja ei saatu haettua. Matka jatkuu.';
       return;
     }
 
-    this.wikiTitle.textContent = summary.title || label;
+    if (!omat) this.wikiTitle.textContent = summary.title || label;
     // Kuratoitu karuselli on jo paikallaan; artikkelin kuvasto ei saa
     // tulla sen päälle.
     if (!this.wikiGalleria) {
@@ -139558,6 +139681,9 @@ class UI {
         });
       });
     }
+
+    // Maastoartikkelin teksti on jo ruudulla — vain kuva haettiin.
+    if (omat) return;
 
     // Oma artikkeli (pilottikaupungit): Wikipedia-tekstin sijaan näytetään
     // pelin tyyliin kirjoitettu lyhyempi artikkeli — Wikipedian pohjalta,
@@ -143467,6 +143593,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 553, teksti: 'Maastokohteille omat artikkelit, vinkkisivun viilaus' },
   { v: 552, teksti: 'Euroopan saapumiset uusiksi: kommellukset ja persoonat' },
   { v: 551, teksti: 'Vuorikohteille kuratoidut kuvagalleriat, erä 1 (21/52)' },
   { v: 550, teksti: 'Numeroina-sivulle yleisluonnehdinta ja käyrien rytmi' },
@@ -144103,7 +144230,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.552';
+const APP_VERSION = '2026-08-09.553';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
