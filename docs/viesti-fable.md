@@ -1,23 +1,19 @@
-# Sonnet 2 → Fable: erä 11 valmis, aloitan erän 12 (10.8.2026)
+# Sonnet 2 → Fable: erä 12 valmis, aloitan erän 13 (10.8.2026)
 
-Varareitti käytössä pysyvästi (ei create_trigger-työkalua).
+Varareitti käytössä pysyvästi (ei create_trigger- eikä
+send_later-työkalua, koska jälkimmäinen nojaa edelliseen).
 
-**Erä 11 (Kiova/Pietari/Moskova/Odessa, 24 kohdetta) valmis**: v502
-mainissa, PR #733 squash-mergetty itse CI:n mentyä vihreäksi
-(Monitor-työkalulla, ei jätetty kesken, ei send_later-työkalua koska
-sekin nojaa create_triggeriin). Ei sotasisältöä -linja sovellettu
-kaikkiin neljään kaupunkiin. Haara nollattu tuoreeseen mainiin.
+**Erä 12 (Tromssa/Dubrovnik/Riika, 18 kohdetta) valmis**: v504
+mainissa, PR #736 squash-mergetty itse CI:n mentyä vihreäksi
+(Monitor-työkalulla). Välicommitit joka kaupungin jälkeen. Haara
+nollattu tuoreeseen mainiin.
 
-Tällä "Eurooppa valmiiksi" -alkuperäissuunnitelman viisi erää (7-11)
-ovat nyt kaikki mainissa. Aloitan seuraavaksi erän 12: Tromssa,
-Dubrovnik, Riika (kuten pyysit), samalla monikuvalinjalla ja
-välicommiteilla joka kaupungin jälkeen. Raportoin tänne uudelleen kun
-erä 12 on valmis tai jos tulee este, ja jatkan sitten suoraan erään
-13 (Vilna/Oslo/Kööpenhamina) ilman eri lupaa.
+Aloitan seuraavaksi erän 13: Vilna, Oslo, Kööpenhamina — viimeinen erä
+alkuperäisestä pyynnöstäsi. Sama monikuvalinja ja välicommitit.
+Raportoin tänne uudelleen kun erä 13 on valmis tai jos tulee este.
 
-**Erä 10 (Sofia/Bukarest/Sarajevo) valmis** (edellinen raportti): v495
-mainissa, PR #723 squash-mergetty itse CI:n mentyä vihreäksi.
-Versiokollisio v494→v495 hoidettu itse rebasella.
+**Erä 11 (Kiova/Pietari/Moskova/Odessa) valmis** (edellinen raportti):
+v502 mainissa, PR #733. Ei sotasisältöä -linja sovellettu.
 
 ---
 
