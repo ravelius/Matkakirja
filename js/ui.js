@@ -7061,31 +7061,11 @@ export class UI {
       if (ohitaSulku) { ohitaSulku = false; return; }
       this.suljeKulttuuriKuva();
     });
-    /*
-     * Nuolinäppäimet selaavat ja Esc sulkee — samat näppäimet joka
-     * paikassa, jossa tämä katselin avautuu (lehti, galleriat,
-     * nähtävyysjutut). Kuuntelija on documentissa kaappausvaiheessa,
-     * jotta se voittaa alla olevan dialogin oman sivuselauksen: ilman
-     * sitä nuoli olisi kääntänyt lehteä katselimen takana. Puretaan
-     * suljeKulttuuriKuvassa.
-     */
-    const nappaimet = (e) => {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-        if (lista) {
-          indeksi = (indeksi + (e.key === 'ArrowRight' ? 1 : -1) + lista.length) % lista.length;
-          sfx.play('paper');
-          nayta();
-        }
-        e.preventDefault();
-        e.stopPropagation();
-      } else if (e.key === 'Escape') {
-        e.preventDefault();
-        e.stopPropagation();
-        this.suljeKulttuuriKuva();
-      }
-    };
-    document.addEventListener('keydown', nappaimet, { capture: true });
-    this.kulttuuriKuvaNappaimet = nappaimet;
+    this.rekisteroiSuurennosNappaimet(lista ? (suunta) => {
+      indeksi = (indeksi + suunta + lista.length) % lista.length;
+      sfx.play('paper');
+      nayta();
+    } : null);
     /*
      * Suurennos liitetään PÄÄLLIMMÄISEEN avoimeen dialogiin. Modaali
      * (showModal) elää selaimen top layer -kerroksessa, joka peittää
@@ -7100,6 +7080,31 @@ export class UI {
     const isanta = nahtavyys?.open ? nahtavyys : this.arrivalDialog;
     isanta.appendChild(kortti);
     this.kulttuuriKuvaEl = kortti;
+  }
+
+  /**
+   * Yhteinen näppäinsopimus kaikille suurennospopupeille (kuva, sää,
+   * uutinen): Esc sulkee popupin ja nuolet selaavat, jos selattavaa
+   * on — muuten nuolet vain nielaistaan, etteivät ne käännä lehteä
+   * popupin takana. Kuuntelija on documentissa kaappausvaiheessa,
+   * jotta se voittaa alla olevan dialogin oman sivuselauksen JA
+   * dialogin cancel-sulun: ennen tätä Esc uutispopupissa sulki koko
+   * Tutki-ikkunan popupin sijaan. Puretaan suljeKulttuuriKuvassa.
+   */
+  rekisteroiSuurennosNappaimet(selaa = null) {
+    const nappaimet = (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        if (selaa) selaa(e.key === 'ArrowRight' ? 1 : -1);
+        e.preventDefault();
+        e.stopPropagation();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        this.suljeKulttuuriKuva();
+      }
+    };
+    document.addEventListener('keydown', nappaimet, { capture: true });
+    this.kulttuuriKuvaNappaimet = nappaimet;
   }
 
   suljeKulttuuriKuva() {
@@ -8115,6 +8120,7 @@ export class UI {
     kortti.addEventListener('click', () => this.suljeKulttuuriKuva());
     this.arrivalDialog.appendChild(kortti);
     this.kulttuuriKuvaEl = kortti;
+    this.rekisteroiSuurennosNappaimet();
     sfx.play('paper');
   }
 
@@ -8334,6 +8340,7 @@ export class UI {
     kortti.addEventListener('click', () => this.suljeKulttuuriKuva());
     this.arrivalDialog.appendChild(kortti);
     this.kulttuuriKuvaEl = kortti;
+    this.rekisteroiSuurennosNappaimet();
   }
 
   /**
