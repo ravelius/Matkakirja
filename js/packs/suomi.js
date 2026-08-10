@@ -174,7 +174,7 @@ export const SUOMI = {
       star: { name: 'Lapin kulta' },
       topaz: { name: 'Spektroliitti', color: '#4a6fb3' },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 2, ruby: 2, emerald: 3, topaz: 4, empty: 3 },
+    counts: { star: 1, horseshoe: 2, robber: 2, ruby: 2, emerald: 4, topaz: 5, empty: 3 },
   },
 
   questions: SUOMI_QUESTIONS,

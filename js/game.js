@@ -157,6 +157,9 @@ export class Game {
       hasStar: false,
       horseshoes: 0,
       finds: [], // löydetyt laatat tyyppeinä
+      // Miltä mantereelta kukin löytö on (maailmankartta) — kulkee
+      // finds-listan rinnalla samoin indeksein, muilla laudoilla null.
+      findManner: [],
       // Tällä matkalla löydetyt linssit tunnuksina. Omistus itsessään on
       // passissa ja kestää pelin yli; tämä lista kertoo mitkä löytyivät
       // nyt, jotta lokista ja laukusta näkee matkan oman saaliin.
@@ -260,7 +263,10 @@ export class Game {
   /** Luo laudan tilan, kun sille saavutaan ensimmäistä kertaa. */
   enterWorld(pack) {
     if (this.worlds.has(pack.id)) return this.worlds.get(pack.id);
-    const tokenCities = pack.cities.filter((c) => !c.start).map((c) => c.id);
+    // Jokainen kaupunki saa laatan, myös aloituskaupungit (omistajan
+    // päätös 10.8.2026: aloituskaupungin kohtaamisesta pitää voida
+    // löytää aarre siinä missä muistakin).
+    const tokenCities = pack.cities.map((c) => c.id);
     const pile = createTokenPile(pack.tokens.counts, this.rng);
     if (pile.length !== tokenCities.length) {
       throw new Error(`Laattoja ${pile.length}, kaupunkeja ${tokenCities.length}`);
@@ -324,6 +330,24 @@ export class Game {
     for (const city of tokenCities) {
       laatat.set(city, linssikaupungit.has(city) ? 'linssi' : jaettava[i++]);
     }
+
+    /*
+     * Tähti ei kuulu aloituskaupunkiin: pelin päämaali heti
+     * lähtöruudussa olisi latistus, eikä aloituskaupungeille ole
+     * vihjetekstejä (texts.starHints kattaa vain tavalliset
+     * laattakaupungit). Jos sekoitus toi tähden aloituskaupunkiin,
+     * se vaihtaa paikkaa arvotun tavallisen kaupungin laatan kanssa.
+     */
+    const startit = new Set(pack.cities.filter((c) => c.start).map((c) => c.id));
+    const tahtiKaupunki = [...laatat].find(([, type]) => type === 'star')?.[0];
+    if (tahtiKaupunki && startit.has(tahtiKaupunki)) {
+      const vapaat = tokenCities.filter((id) => !startit.has(id) && laatat.get(id) !== 'linssi');
+      const vaihto = vapaat[Math.floor(this.rng() * vapaat.length)];
+      if (vaihto) {
+        laatat.set(tahtiKaupunki, laatat.get(vaihto));
+        laatat.set(vaihto, 'star');
+      }
+    }
     return laatat;
   }
 
@@ -362,6 +386,23 @@ export class Game {
 
   get tokenTypes() {
     return this.pack.tokens.types;
+  }
+
+  /**
+   * Laattatyypin näyttötiedot mantereen aarteistolla. Maailmankartalla
+   * laatta paljastaa sen mantereen aarteen, jolta se löytyi
+   * (pack.tokens.mannerTypes); muilla laudoilla — ja ilman manteretta —
+   * laudan oma tyyppi kelpaa sellaisenaan. Arvo ja tunniste eivät
+   * muutu, vain nimi, väri ja kuva.
+   */
+  aarreMantereella(type, manner) {
+    return (manner && this.pack.tokens.mannerTypes?.[manner]?.[type])
+      || this.tokenTypes[type];
+  }
+
+  /** Laattatyypin näyttötiedot löytökaupungin mukaan. */
+  aarreTyyppi(type, cityId) {
+    return this.aarreMantereella(type, cityId && this.pack.map?.cityManner?.[cityId]);
   }
 
   get airRoutes() {
@@ -1974,8 +2015,12 @@ export class Game {
     this.revealed.set(cityId, type);
 
     const p = this.player;
-    const token = this.tokenTypes[type];
+    const token = this.aarreTyyppi(type, cityId);
     p.finds.push(type);
+    // Mistä mantereelta laatta löytyi — passi näyttää maailmankartan
+    // löydöt oikean mantereen aarteina. Muilla laudoilla null: laudan
+    // oma tyyppi on jo oikea. Lista kulkee finds-listan rinnalla.
+    (p.findManner ??= []).push(this.pack.map?.cityManner?.[cityId] ?? null);
     const city = this.board.cityById.get(cityId);
 
     switch (type) {
@@ -1988,12 +2033,13 @@ export class Game {
         if (this.roaming) {
           p.money += STAR_PRIZE;
           this.say(p.id, `◈ ${p.name} löysi aarteen ${token.name} kaupungista ${city.name} — arvo ${STAR_PRIZE} puntaa!`);
-          this.emit('treasure', this.pack.texts.starToast, { token: type, sub: `+${STAR_PRIZE} puntaa` });
+          this.emit('treasure', this.pack.texts.starToast, { token: type, city: cityId, sub: `+${STAR_PRIZE} puntaa` });
         } else {
           this.say(p.id, this.pack.texts.starFound(p.name, city.name));
           this.say(null, this.pack.texts.starChase);
           this.emit('treasure', this.pack.texts.starToast, {
             token: type,
+            city: cityId,
             sub: `${p.name} löysi unohdetun aarteen — nyt kiire kotiin!`,
           });
         }
@@ -2003,6 +2049,7 @@ export class Game {
         this.say(p.id, `Ω ${p.name} löysi hevosenkengän kaupungista ${city.name}.`);
         this.emit('treasure', 'Hevosenkenkä', {
           token: type,
+          city: cityId,
           sub: 'Voi voittaa pelin, jos unohdettu aarre löytyy',
         });
         break;
@@ -2010,6 +2057,7 @@ export class Game {
         this.say(p.id, `☠ Ryöstäjä yllätti pelaajan ${p.name} — edessä on kaksintaistelu!`);
         this.emit('robber', 'Ryöstäjä!', {
           token: type,
+          city: cityId,
           sub: `${p.name} joutuu rosvon kaksintaisteluun`,
         });
         this.duelArmed = true;
@@ -2021,22 +2069,22 @@ export class Game {
         const tunnus = linssiKaupungista(this, cityId);
         if (!tunnus) {
           this.say(p.id, `${p.name} löysi tyhjän linssikotelon kaupungissa ${city.name}.`);
-          this.emit('treasure', 'Tyhjä kotelo', { token: 'empty', sub: 'Lasi oli jo laukussa' });
+          this.emit('treasure', 'Tyhjä kotelo', { token: 'empty', city: cityId, sub: 'Lasi oli jo laukussa' });
           break;
         }
         myonna(this, p, tunnus);
         this.say(p.id, `${token.symbol} ${p.name} löysi taikalasin kaupungista ${city.name} — maailma näyttää uuden puolensa.`);
-        this.emit('treasure', token.name, { token: type, linssi: tunnus, sub: 'Uusi linssi kartalle' });
+        this.emit('treasure', token.name, { token: type, city: cityId, linssi: tunnus, sub: 'Uusi linssi kartalle' });
         break;
       }
       case 'empty':
         this.say(p.id, `${p.name} käänsi tyhjän laatan kaupungissa ${city.name}.`);
-        this.emit('treasure', 'Tyhjä laatta', { token: type, sub: 'Isoisän merkintä oli vanhentunut' });
+        this.emit('treasure', 'Tyhjä laatta', { token: type, city: cityId, sub: 'Isoisän merkintä oli vanhentunut' });
         break;
       default:
         p.money += token.value;
         this.say(p.id, `${token.symbol} ${p.name} löysi jalokiven ${token.name} (${token.value} puntaa).`);
-        this.emit('treasure', token.name, { token: type, sub: `+${token.value} puntaa` });
+        this.emit('treasure', token.name, { token: type, city: cityId, sub: `+${token.value} puntaa` });
     }
 
     this.checkWin();
@@ -2164,8 +2212,16 @@ export class Game {
       quizAsked: 0,
       quizCorrect: 0,
       linssit: [],
+      findManner: [],
       ...p,
     }));
+    // findManner kulkee finds-listan rinnalla samoin indeksein. Vanhan
+    // tallennuksen löydöt (ajalta ennen kenttää) ovat listan alussa,
+    // joten vaje täydennetään null-mantereiksi ALKUUN — uudet löydöt
+    // osuvat silloin oikeille riveilleen.
+    for (const p of game.players) {
+      while (p.findManner.length < (p.finds?.length ?? 0)) p.findManner.unshift(null);
+    }
     game.usedQuestions = new Set(data.usedQuestions ?? []);
     game.current = data.current;
     game.phase = data.phase;

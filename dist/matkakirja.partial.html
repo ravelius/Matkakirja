@@ -12616,7 +12616,7 @@ const MAAILMA = {
   tokens: {
     types: themedTokenTypes({ star: { name: 'Magellanin kompassi' } }),
     // 12 aarrekaupunkia: laattoja on oltava täsmälleen yhtä monta.
-    counts: { star: 1, horseshoe: 2, robber: 1, ruby: 1, emerald: 2, topaz: 3, empty: 2 },
+    counts: { star: 1, horseshoe: 2, robber: 1, ruby: 1, emerald: 3, topaz: 4, empty: 2 },
   },
 
   questions: MAAILMA_QUESTIONS,
@@ -78257,7 +78257,7 @@ const AFRICA = {
       },
     }),
     // 37 laattakaupunkia seitsemän uuden paikan jälkeen (omistajan laajennus).
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 11 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 9, empty: 11 },
   },
 
   questions: AFRICA_QUESTIONS,
@@ -85997,7 +85997,7 @@ const EUROPE = {
         kuva: 'assets/aarteet/aarre-europe-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 12 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 10, empty: 12 },
   },
 
   questions: EUROPE_QUESTIONS,
@@ -86333,7 +86333,7 @@ const MIDDLE_EAST = {
         kuva: 'assets/aarteet/aarre-middleeast-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 3, emerald: 4, topaz: 6, empty: 7 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 7 },
   },
 
   questions: MIDDLEEAST_QUESTIONS,
@@ -89211,7 +89211,7 @@ const ASIA = {
         kuva: 'assets/aarteet/aarre-asia-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 10 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 7, topaz: 9, empty: 10 },
   },
 
   questions: ASIA_QUESTIONS,
@@ -91580,7 +91580,7 @@ const OCEANIA = {
         kuva: 'assets/aarteet/aarre-oceania-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 6, empty: 9 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 6, topaz: 7, empty: 9 },
   },
 
   questions: OCEANIA_QUESTIONS,
@@ -94269,7 +94269,7 @@ const NORTHAMERICA = {
         kuva: 'assets/aarteet/aarre-northamerica-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 12 },
   },
 
   questions: NORTHAMERICA_QUESTIONS,
@@ -96972,7 +96972,7 @@ const SOUTHAMERICA = {
         kuva: 'assets/aarteet/aarre-southamerica-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 12 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 12 },
   },
 
   questions: SOUTHAMERICA_QUESTIONS,
@@ -98413,7 +98413,7 @@ const SUOMI = {
       star: { name: 'Lapin kulta' },
       topaz: { name: 'Spektroliitti', color: '#4a6fb3' },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 2, ruby: 2, emerald: 3, topaz: 4, empty: 3 },
+    counts: { star: 1, horseshoe: 2, robber: 2, ruby: 2, emerald: 4, topaz: 5, empty: 3 },
   },
 
   questions: SUOMI_QUESTIONS,
@@ -99635,7 +99635,7 @@ const ISTANBUL = {
       star: { name: 'Sulttaanin timantti' },
       topaz: { name: 'Turkoosi', color: '#3aaea6' },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 2, ruby: 2, emerald: 3, topaz: 3, empty: 2 },
+    counts: { star: 1, horseshoe: 2, robber: 2, ruby: 2, emerald: 4, topaz: 4, empty: 2 },
   },
 
   questions: ISTANBUL_QUESTIONS,
@@ -100687,13 +100687,24 @@ const MAAILMANKARTTA = {
 
   tokens: {
     types: themedTokenTypes({}),
-    // Laattamäärä suhteutettu kaupunkien määrään (248).
+    /*
+     * Maailmankartalla laatta paljastaa sen mantereen aarteen, jolta
+     * se löytyi: mannerkohtaiset tyypit tulevat suoraan lähdelaudoilta
+     * (nimet, värit ja aarrekuvat mukana), ja js/game.js aarreTyyppi
+     * valitsee oikean CITY_MANNER-kentän perusteella. Yleiset tyypit
+     * yllä jäävät varasoluksi (mm. vanhat tallennukset ilman
+     * löytömannerta).
+     */
+    mannerTypes: Object.fromEntries(LAHTEET.map((p) => [p.id, p.tokens.types])),
+    // Laattamäärä = kaupunkien määrä (248): jokainen kaupunki saa
+    // laatan, myös aloituskaupungit (omistajan päätös 10.8.2026).
+    // Aloituskaupunkien 19 lisälaattaa ovat jalokiviä — ei uusia
+    // tyhjiä, rosvoja eikä tähtiä, ettei alku ala pettymyksellä.
     //
     // Seitsemän linssilaattaa on otettu tyhjistä (84 -> 77), koska
     // maailmankartalla on seitsemän lähdemannerta ja tyhjä laatta on
-    // pelin turhauttavin ruutu: se vie vuoron eikä anna mitään. Summa
-    // pysyy 229:ssä eli laattakaupunkien määrässä.
-    counts: {"star":1,"horseshoe":11,"robber":18,"ruby":30,"emerald":37,"topaz":48,"empty":77,"linssi":7},
+    // pelin turhauttavin ruutu: se vie vuoron eikä anna mitään.
+    counts: {"star":1,"horseshoe":11,"robber":18,"ruby":34,"emerald":43,"topaz":57,"empty":77,"linssi":7},
   },
 
   questions: yhdistaKysymykset(),
@@ -125364,6 +125375,9 @@ class Game {
       hasStar: false,
       horseshoes: 0,
       finds: [], // löydetyt laatat tyyppeinä
+      // Miltä mantereelta kukin löytö on (maailmankartta) — kulkee
+      // finds-listan rinnalla samoin indeksein, muilla laudoilla null.
+      findManner: [],
       // Tällä matkalla löydetyt linssit tunnuksina. Omistus itsessään on
       // passissa ja kestää pelin yli; tämä lista kertoo mitkä löytyivät
       // nyt, jotta lokista ja laukusta näkee matkan oman saaliin.
@@ -125467,7 +125481,10 @@ class Game {
   /** Luo laudan tilan, kun sille saavutaan ensimmäistä kertaa. */
   enterWorld(pack) {
     if (this.worlds.has(pack.id)) return this.worlds.get(pack.id);
-    const tokenCities = pack.cities.filter((c) => !c.start).map((c) => c.id);
+    // Jokainen kaupunki saa laatan, myös aloituskaupungit (omistajan
+    // päätös 10.8.2026: aloituskaupungin kohtaamisesta pitää voida
+    // löytää aarre siinä missä muistakin).
+    const tokenCities = pack.cities.map((c) => c.id);
     const pile = createTokenPile(pack.tokens.counts, this.rng);
     if (pile.length !== tokenCities.length) {
       throw new Error(`Laattoja ${pile.length}, kaupunkeja ${tokenCities.length}`);
@@ -125531,6 +125548,24 @@ class Game {
     for (const city of tokenCities) {
       laatat.set(city, linssikaupungit.has(city) ? 'linssi' : jaettava[i++]);
     }
+
+    /*
+     * Tähti ei kuulu aloituskaupunkiin: pelin päämaali heti
+     * lähtöruudussa olisi latistus, eikä aloituskaupungeille ole
+     * vihjetekstejä (texts.starHints kattaa vain tavalliset
+     * laattakaupungit). Jos sekoitus toi tähden aloituskaupunkiin,
+     * se vaihtaa paikkaa arvotun tavallisen kaupungin laatan kanssa.
+     */
+    const startit = new Set(pack.cities.filter((c) => c.start).map((c) => c.id));
+    const tahtiKaupunki = [...laatat].find(([, type]) => type === 'star')?.[0];
+    if (tahtiKaupunki && startit.has(tahtiKaupunki)) {
+      const vapaat = tokenCities.filter((id) => !startit.has(id) && laatat.get(id) !== 'linssi');
+      const vaihto = vapaat[Math.floor(this.rng() * vapaat.length)];
+      if (vaihto) {
+        laatat.set(tahtiKaupunki, laatat.get(vaihto));
+        laatat.set(vaihto, 'star');
+      }
+    }
     return laatat;
   }
 
@@ -125569,6 +125604,23 @@ class Game {
 
   get tokenTypes() {
     return this.pack.tokens.types;
+  }
+
+  /**
+   * Laattatyypin näyttötiedot mantereen aarteistolla. Maailmankartalla
+   * laatta paljastaa sen mantereen aarteen, jolta se löytyi
+   * (pack.tokens.mannerTypes); muilla laudoilla — ja ilman manteretta —
+   * laudan oma tyyppi kelpaa sellaisenaan. Arvo ja tunniste eivät
+   * muutu, vain nimi, väri ja kuva.
+   */
+  aarreMantereella(type, manner) {
+    return (manner && this.pack.tokens.mannerTypes?.[manner]?.[type])
+      || this.tokenTypes[type];
+  }
+
+  /** Laattatyypin näyttötiedot löytökaupungin mukaan. */
+  aarreTyyppi(type, cityId) {
+    return this.aarreMantereella(type, cityId && this.pack.map?.cityManner?.[cityId]);
   }
 
   get airRoutes() {
@@ -127181,8 +127233,12 @@ class Game {
     this.revealed.set(cityId, type);
 
     const p = this.player;
-    const token = this.tokenTypes[type];
+    const token = this.aarreTyyppi(type, cityId);
     p.finds.push(type);
+    // Mistä mantereelta laatta löytyi — passi näyttää maailmankartan
+    // löydöt oikean mantereen aarteina. Muilla laudoilla null: laudan
+    // oma tyyppi on jo oikea. Lista kulkee finds-listan rinnalla.
+    (p.findManner ??= []).push(this.pack.map?.cityManner?.[cityId] ?? null);
     const city = this.board.cityById.get(cityId);
 
     switch (type) {
@@ -127195,12 +127251,13 @@ class Game {
         if (this.roaming) {
           p.money += STAR_PRIZE;
           this.say(p.id, `◈ ${p.name} löysi aarteen ${token.name} kaupungista ${city.name} — arvo ${STAR_PRIZE} puntaa!`);
-          this.emit('treasure', this.pack.texts.starToast, { token: type, sub: `+${STAR_PRIZE} puntaa` });
+          this.emit('treasure', this.pack.texts.starToast, { token: type, city: cityId, sub: `+${STAR_PRIZE} puntaa` });
         } else {
           this.say(p.id, this.pack.texts.starFound(p.name, city.name));
           this.say(null, this.pack.texts.starChase);
           this.emit('treasure', this.pack.texts.starToast, {
             token: type,
+            city: cityId,
             sub: `${p.name} löysi unohdetun aarteen — nyt kiire kotiin!`,
           });
         }
@@ -127210,6 +127267,7 @@ class Game {
         this.say(p.id, `Ω ${p.name} löysi hevosenkengän kaupungista ${city.name}.`);
         this.emit('treasure', 'Hevosenkenkä', {
           token: type,
+          city: cityId,
           sub: 'Voi voittaa pelin, jos unohdettu aarre löytyy',
         });
         break;
@@ -127217,6 +127275,7 @@ class Game {
         this.say(p.id, `☠ Ryöstäjä yllätti pelaajan ${p.name} — edessä on kaksintaistelu!`);
         this.emit('robber', 'Ryöstäjä!', {
           token: type,
+          city: cityId,
           sub: `${p.name} joutuu rosvon kaksintaisteluun`,
         });
         this.duelArmed = true;
@@ -127228,22 +127287,22 @@ class Game {
         const tunnus = linssiKaupungista(this, cityId);
         if (!tunnus) {
           this.say(p.id, `${p.name} löysi tyhjän linssikotelon kaupungissa ${city.name}.`);
-          this.emit('treasure', 'Tyhjä kotelo', { token: 'empty', sub: 'Lasi oli jo laukussa' });
+          this.emit('treasure', 'Tyhjä kotelo', { token: 'empty', city: cityId, sub: 'Lasi oli jo laukussa' });
           break;
         }
         myonna(this, p, tunnus);
         this.say(p.id, `${token.symbol} ${p.name} löysi taikalasin kaupungista ${city.name} — maailma näyttää uuden puolensa.`);
-        this.emit('treasure', token.name, { token: type, linssi: tunnus, sub: 'Uusi linssi kartalle' });
+        this.emit('treasure', token.name, { token: type, city: cityId, linssi: tunnus, sub: 'Uusi linssi kartalle' });
         break;
       }
       case 'empty':
         this.say(p.id, `${p.name} käänsi tyhjän laatan kaupungissa ${city.name}.`);
-        this.emit('treasure', 'Tyhjä laatta', { token: type, sub: 'Isoisän merkintä oli vanhentunut' });
+        this.emit('treasure', 'Tyhjä laatta', { token: type, city: cityId, sub: 'Isoisän merkintä oli vanhentunut' });
         break;
       default:
         p.money += token.value;
         this.say(p.id, `${token.symbol} ${p.name} löysi jalokiven ${token.name} (${token.value} puntaa).`);
-        this.emit('treasure', token.name, { token: type, sub: `+${token.value} puntaa` });
+        this.emit('treasure', token.name, { token: type, city: cityId, sub: `+${token.value} puntaa` });
     }
 
     this.checkWin();
@@ -127371,8 +127430,16 @@ class Game {
       quizAsked: 0,
       quizCorrect: 0,
       linssit: [],
+      findManner: [],
       ...p,
     }));
+    // findManner kulkee finds-listan rinnalla samoin indeksein. Vanhan
+    // tallennuksen löydöt (ajalta ennen kenttää) ovat listan alussa,
+    // joten vaje täydennetään null-mantereiksi ALKUUN — uudet löydöt
+    // osuvat silloin oikeille riveilleen.
+    for (const p of game.players) {
+      while (p.findManner.length < (p.finds?.length ?? 0)) p.findManner.unshift(null);
+    }
     game.usedQuestions = new Set(data.usedQuestions ?? []);
     game.current = data.current;
     game.phase = data.phase;
@@ -128610,22 +128677,23 @@ function aarrekuvanOsoitteet(kuva) {
 }
 
 /*
- * Aarteen pikkuikoni: laudan tarinallinen aarrekuva pyöreäksi
- * rajattuna aina, kun laattatyypillä on kuva (omistajan päätös
- * 10.8.2026: vanhat Afrikan tähti -tyyliset jalokivi-ikonit pois
- * kaikkialta). Piirrosikoni jää varasoluksi laatoille, joilla ei ole
- * kuvaa (kenkä, rosvo, linssi) ja laudoille ilman aarrekuvia
- * (maailmankartta, Suomi, Istanbul) — sekä tilanteeseen, jossa kuva
- * ei lataudu.
+ * Aarteen pikkuikoni: tarinallinen aarrekuva pyöreäksi rajattuna
+ * aina, kun laattatyypillä on kuva (omistajan päätös 10.8.2026:
+ * vanhat Afrikan tähti -tyyliset jalokivi-ikonit pois kaikkialta).
+ * token on VALMIIKSI RATKAISTU näyttötieto (game.aarreTyyppi /
+ * aarreMantereella) — maailmankartalla se on löytömantereen aarre.
+ * Piirrosikoni jää varasoluksi laatoille, joilla ei ole kuvaa
+ * (kenkä, rosvo, linssi; Suomi ja Istanbul) — sekä tilanteeseen,
+ * jossa kuva ei lataudu.
  */
-function aarreIkoni(tokenTypes, type, size) {
-  const kuva = tokenTypes?.[type]?.kuva;
+function aarreIkoni(token, type, size) {
+  const kuva = token?.kuva;
   if (!kuva) return tokenIconSvg(type, size);
   const img = document.createElement('img');
   img.className = 'token-icon aarre-ikoni';
   img.width = size;
   img.height = size;
-  img.alt = tokenTypes[type].name ?? '';
+  img.alt = token.name ?? '';
   const [osoite, vara] = aarrekuvanOsoitteet(kuva);
   asetaKuva(img, osoite, vara, () => img.replaceWith(tokenIconSvg(type, size)));
   return img;
@@ -129632,14 +129700,23 @@ class UI {
    * Aarteiden kuvat lämpimiksi ennen ensimmäistä paljastusta:
    * paljastuskortti on ruudulla vain pari sekuntia, eikä kylmä lataus
    * ehtisi siihen ikkunaan. Neljä pientä kuvaa per lauta (kolme
-   * jalokiveä ja pääaarre) — halpa hinta siitä, että aarre NÄKYY.
+   * jalokiveä ja pääaarre) — maailmankartalla mannerkohtaiset tyypit
+   * eli 7 × 4 pientä kuvaa. Halpa hinta siitä, että aarre NÄKYY.
    */
   esilataaAarrekuvat() {
-    for (const type of Object.values(this.game.tokenTypes ?? {})) {
-      if (!type.kuva) continue;
-      const kuva = new Image();
-      const [osoite, vara] = aarrekuvanOsoitteet(type.kuva);
-      asetaKuva(kuva, osoite, vara);
+    const ryhmat = [
+      this.game.tokenTypes ?? {},
+      ...Object.values(this.game.pack?.tokens?.mannerTypes ?? {}),
+    ];
+    const nahdyt = new Set();
+    for (const tyypit of ryhmat) {
+      for (const type of Object.values(tyypit)) {
+        if (!type.kuva || nahdyt.has(type.kuva)) continue;
+        nahdyt.add(type.kuva);
+        const kuva = new Image();
+        const [osoite, vara] = aarrekuvanOsoitteet(type.kuva);
+        asetaKuva(kuva, osoite, vara);
+      }
     }
   }
 
@@ -132476,7 +132553,7 @@ class UI {
        * varasoluksi laatoille ja laudoille ilman kuvaa. clip-path
        * rajaa kuvan laattakiekon sisään, slice täyttää ympyrän.
        */
-      const kuva = game.tokenTypes[type]?.kuva;
+      const kuva = game.aarreTyyppi(type, cityId)?.kuva;
       if (kuva && kuva.startsWith('assets/')) {
         const im = el('image', {
           x: -15, y: -15, width: 30, height: 30,
@@ -138219,15 +138296,30 @@ class UI {
 
     // Isommat kuvat ja selite alla — tavarat kuin matkamuistohyllyllä
     // (omistajan toive).
-    if (p.hasStar) rivi(tokenIconSvg('star', 44), game.pack.tokens.types.star.name);
+    if (p.hasStar) {
+      const tahti = game.aarreTyyppi('star', game.world?.starCity);
+      rivi(aarreIkoni(tahti, 'star', 44), tahti.name);
+    }
     if (p.horseshoes) rivi(tokenIconSvg('horseshoe', 44), `Hevosenkenkiä ${p.horseshoes}`);
 
-    // Jalokivet tyypeittäin: sama laji voi toistua monelta laudalta.
-    const gems = p.finds.filter((t) => (game.tokenTypes[t]?.value ?? 0) > 0);
+    /*
+     * Jalokivet tyypeittäin JA mantereittain: maailmankartalla sama
+     * laji on eri mantereilla eri aarre (findManner kulkee finds-
+     * listan rinnalla; vanhan tallennuksen löydöillä manner on null
+     * ja laudan oma tyyppi kelpaa).
+     */
     const counts = new Map();
-    for (const type of gems) counts.set(type, (counts.get(type) ?? 0) + 1);
-    for (const [type, n] of counts) {
-      rivi(aarreIkoni(game.tokenTypes, type, 44), `${game.tokenTypes[type].name}${n > 1 ? ` ×${n}` : ''}`);
+    p.finds.forEach((type, i) => {
+      if ((game.tokenTypes[type]?.value ?? 0) <= 0) return;
+      const manner = p.findManner?.[i] ?? null;
+      const avain = `${type}:${manner ?? ''}`;
+      const rivit = counts.get(avain) ?? { type, manner, n: 0 };
+      rivit.n++;
+      counts.set(avain, rivit);
+    });
+    for (const { type, manner, n } of counts.values()) {
+      const token = game.aarreMantereella(type, manner);
+      rivi(aarreIkoni(token, type, 44), `${token.name}${n > 1 ? ` ×${n}` : ''}`);
     }
 
     /*
@@ -139592,13 +139684,13 @@ class UI {
         const verdict = quiz.timedOut ? 'Aika loppui!' : quiz.right ? 'Oikein!' : 'Väärin.';
         this.quizResult.appendChild(html('strong', 'quiz-verdict', verdict));
       } else {
-        const found = quiz.found ? game.tokenTypes[quiz.found] : null;
+        const found = quiz.found ? game.aarreTyyppi(quiz.found, quiz.cityId) : null;
         const body = html('div');
         if (quiz.gate && quiz.right) {
           body.appendChild(html('strong', '', `◈ Portti aukeaa — ${quiz.gate.label}!`));
           body.appendChild(html('span', 'muted', 'Tieto avasi tien: matka jatkuu ilmaiseksi.'));
         } else if (quiz.right && found) {
-          this.quizResult.appendChild(aarreIkoni(game.tokenTypes, quiz.found, 24));
+          this.quizResult.appendChild(aarreIkoni(found, quiz.found, 24));
           body.appendChild(html('strong', '', `Löysit: ${found.name}`));
         } else if (quiz.right && quiz.explore) {
           /*
@@ -139929,10 +140021,12 @@ class UI {
    * kehyksiä ja tekstit sen ympärille (omistajan palaute 9.8.2026 —
    * vanha kääntyvä laattakuva oli kuvan rinnalla sekava). Kuvattomat
    * laatat (kenkä, rosvo, tyhjä, linssi) ja aarrekuvattomat laudat
-   * (maailmankartta, Suomi, Istanbul) kääntyvät entiseen tapaan.
+   * (Suomi, Istanbul) kääntyvät entiseen tapaan. Maailmankartalla
+   * aarre on löytömantereen aarre (aarreTyyppi; kaupunki on visan
+   * kaupunki, sillä paljastus tulee aina visan voitosta).
    */
   async playTokenReveal(type) {
-    const token = this.game.tokenTypes[type];
+    const token = this.game.aarreTyyppi(type, this.game.quiz?.cityId);
     const onKuva = Boolean(token.kuva);
     const overlay = html('div', `reveal-overlay${onKuva ? ' kuvallinen' : ''}`);
     const scene = html('div', 'reveal-scene');
@@ -140678,13 +140772,13 @@ class UI {
     await this.wait(this.reducedMotion ? 0 : 260);
   }
 
-  buildToast({ kind, text, sub, icon, token }) {
+  buildToast({ kind, text, sub, icon, token, city }) {
     const box = html('div', `event-toast ${kind === 'robber' ? 'bad' : kind}`);
     // Ikoni voi olla viivaikonin nimi tai suora merkki — kuplat piirretään
     // samalla kynällä kuin napit aina kun ikoni sarjasta löytyy.
     const kuva = viivaIkoni(icon);
     if (kuva) kuva.classList.add('toast-icon');
-    if (token) box.appendChild(aarreIkoni(this.game.tokenTypes, token, kind === 'die' ? 30 : 34));
+    if (token) box.appendChild(aarreIkoni(this.game.aarreTyyppi(token, city), token, kind === 'die' ? 30 : 34));
     else box.appendChild(kuva ?? html('span', 'toast-icon', icon ?? '•'));
     const body = html('div');
     body.appendChild(html('span', 'toast-text', text));
@@ -140783,6 +140877,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 528, teksti: 'Laatta joka kaupunkiin, maailmankartalle mantereiden aarteet' },
   { v: 527, teksti: 'Bahrainille helmien ja muinaisuuden aihesivut' },
   { v: 526, teksti: 'Bahrain Lähi-idän laudalle omana maanaan' },
   { v: 525, teksti: 'Äänivalikko palautettu: v524 pyyhkäisi v523:n muutoksen' },
@@ -141394,7 +141489,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.527';
+const APP_VERSION = '2026-08-09.528';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

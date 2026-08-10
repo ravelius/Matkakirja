@@ -123,10 +123,11 @@ for (const pack of PACKS) {
     }
   });
 
-  test(`${pack.id}: laattoja on yhtä monta kuin laattakaupunkeja`, () => {
+  test(`${pack.id}: laattoja on yhtä monta kuin kaupunkeja`, () => {
+    // Jokainen kaupunki saa laatan, myös aloituskaupungit (omistajan
+    // päätös 10.8.2026 — js/game.js enterWorld).
     const pile = tokenPileTemplate(pack.tokens.counts);
-    const tokenCities = pack.cities.filter((c) => !c.start);
-    assert.equal(pile.length, tokenCities.length);
+    assert.equal(pile.length, pack.cities.length);
     assert.equal(pack.tokens.counts.star, 1);
     assert.ok(pack.tokens.counts.horseshoe >= 1);
     for (const type of Object.keys(pack.tokens.counts)) {
@@ -2475,6 +2476,10 @@ test('laatatonta kaupunkia voi tutkia kerran: kokemuspisteet, ei laattaa', () =>
     seed: 411,
   });
   const p = game.player;
+  // Nykyään jokaisella kaupungilla on laatta, joten laatatön tila
+  // tehdään käsin: sama tilanne kuin kaupungissa, jonka laatta on jo
+  // käännetty (tai vanhassa tallennuksessa ilman aloituslaattoja).
+  game.tokens.delete('tanger');
   assert.ok(!game.tokens.has('tanger'), 'lähtökaupungissa ei ole laattaa');
   assert.ok(game.canExplore(game.board.cityById.get('tanger')));
 

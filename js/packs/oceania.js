@@ -281,7 +281,7 @@ export const OCEANIA = {
         kuva: 'assets/aarteet/aarre-oceania-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 6, empty: 9 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 6, topaz: 7, empty: 9 },
   },
 
   questions: OCEANIA_QUESTIONS,

@@ -316,7 +316,7 @@ export const ASIA = {
         kuva: 'assets/aarteet/aarre-asia-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 5, topaz: 7, empty: 10 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 7, topaz: 9, empty: 10 },
   },
 
   questions: ASIA_QUESTIONS,

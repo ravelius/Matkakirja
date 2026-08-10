@@ -958,13 +958,24 @@ export const MAAILMANKARTTA = {
 
   tokens: {
     types: themedTokenTypes({}),
-    // Laattamäärä suhteutettu kaupunkien määrään (248).
+    /*
+     * Maailmankartalla laatta paljastaa sen mantereen aarteen, jolta
+     * se löytyi: mannerkohtaiset tyypit tulevat suoraan lähdelaudoilta
+     * (nimet, värit ja aarrekuvat mukana), ja js/game.js aarreTyyppi
+     * valitsee oikean CITY_MANNER-kentän perusteella. Yleiset tyypit
+     * yllä jäävät varasoluksi (mm. vanhat tallennukset ilman
+     * löytömannerta).
+     */
+    mannerTypes: Object.fromEntries(LAHTEET.map((p) => [p.id, p.tokens.types])),
+    // Laattamäärä = kaupunkien määrä (248): jokainen kaupunki saa
+    // laatan, myös aloituskaupungit (omistajan päätös 10.8.2026).
+    // Aloituskaupunkien 19 lisälaattaa ovat jalokiviä — ei uusia
+    // tyhjiä, rosvoja eikä tähtiä, ettei alku ala pettymyksellä.
     //
     // Seitsemän linssilaattaa on otettu tyhjistä (84 -> 77), koska
     // maailmankartalla on seitsemän lähdemannerta ja tyhjä laatta on
-    // pelin turhauttavin ruutu: se vie vuoron eikä anna mitään. Summa
-    // pysyy 229:ssä eli laattakaupunkien määrässä.
-    counts: {"star":1,"horseshoe":11,"robber":18,"ruby":30,"emerald":37,"topaz":48,"empty":77,"linssi":7},
+    // pelin turhauttavin ruutu: se vie vuoron eikä anna mitään.
+    counts: {"star":1,"horseshoe":11,"robber":18,"ruby":34,"emerald":43,"topaz":57,"empty":77,"linssi":7},
   },
 
   questions: yhdistaKysymykset(),

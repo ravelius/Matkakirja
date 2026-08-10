@@ -362,7 +362,7 @@ export const MAAILMA = {
   tokens: {
     types: themedTokenTypes({ star: { name: 'Magellanin kompassi' } }),
     // 12 aarrekaupunkia: laattoja on oltava täsmälleen yhtä monta.
-    counts: { star: 1, horseshoe: 2, robber: 1, ruby: 1, emerald: 2, topaz: 3, empty: 2 },
+    counts: { star: 1, horseshoe: 2, robber: 1, ruby: 1, emerald: 3, topaz: 4, empty: 2 },
   },
 
   questions: MAAILMA_QUESTIONS,
