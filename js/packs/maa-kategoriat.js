@@ -2284,6 +2284,152 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'elaimet',
+      nimi: 'Eläimet',
+      johdanto: 'Egyptin luonto ei ole pelkkää hiekkaa ja jokea. Taivaalla kulkee '
+        + 'syksyisin satojatuhansia lintuja, meriheinäniityllä laiduntaa iso '
+        + 'nisäkäs, ja rannikon pensaikossa elää kilpikonna, joka mahtuu '
+        + 'kämmenelle.',
+      nostot: [
+        {
+          otsikko: 'Sadattuhannet linnut kiertävät saman mutkan',
+          tiedosto: 'Ciconia ciconia at Ain Sokhna by Hatem Moushir 1.JPG',
+          teksti: 'Syksyisin Euroopan haikarat ja petolinnut lentävät Afrikkaan, '
+            + 'ja matkalla ne kaikki puristuvat samaan kapeaan kohtaan '
+            + 'Suezinlahden pohjukassa. Syy on ilmassa: liitävä lintu ei '
+            + 'jaksa räpytellä koko matkaa, vaan se nousee maan yltä kohoavan '
+            + 'lämpimän ilman mukana korkealle ja liukuu sieltä eteenpäin. '
+            + 'Avomeren yllä sellaista nousevaa ilmaa ei synny, joten linnut '
+            + 'kiertävät lahden ympäri maata pitkin. Hyvänä päivänä yhden '
+            + 'kukkulan yli voi lentää tuhansia lintuja, ja niitä lasketaan '
+            + 'joka syksy.',
+          selite: 'Kuusi kattohaikaraa liitää rivissä sinistä taivasta vasten Ain '
+            + 'Sokhnan yllä. Siivet ovat suorina, eikä yksikään lintu räpytä.',
+          lahde: 'Hatem Moushir, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Merilehmä laiduntaa meren pohjassa',
+          tiedosto: 'Dugong Marsa Alam.jpg',
+          teksti: 'Punaisenmeren matalikoilla kasvaa meriheinäniittyjä, ja niillä '
+            + 'laiduntaa dugongi. Se on nisäkäs, ei kala: sen on noustava '
+            + 'hengittämään muutaman minuutin välein. Dugongi syö meriheinää '
+            + 'kymmeniä kiloja päivässä ja jättää pohjaan pitkiä kaivettuja '
+            + 'uria kuin pieni aura. Sukeltajat tunnistavat sen kärsämäisestä '
+            + 'kuonosta ja delfiinimäisestä pyrstöstä. Laji on rauhoitettu, '
+            + 'ja Egyptissä niitä on enää vähän — siksi sukeltajia kielletään '
+            + 'koskemasta tai ajamasta eläintä takaa.',
+          selite: 'Dugongi laiduntaa meriheinäniityllä. Eläin painaa kuononsa '
+            + 'pohjaan niin että hiekka pöllyää, ja kyljessä ui '
+            + 'keltajuovainen kala.',
+          lahde: 'Julien Willem, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kilpikonna, joka mahtuu kämmenelle',
+          tiedosto: 'Testudo kleinmanni By Hatem Moushir in Alxandria 1.jpg',
+          teksti: 'Egyptinkilpikonna on pohjoisen pallonpuoliskon pienin '
+            + 'kilpikonna: aikuinen mahtuu kämmenelle, ja naaras on koirasta '
+            + 'isompi. Se elää rannikon kuivassa pensaikossa ja suolamaalla, '
+            + 'viettää kuumimman keskipäivän pensaan alla tai jyrsijän '
+            + 'kolossa ja liikkuu aamulla ja illalla. Vaalea kilpi kestää '
+            + 'auringon lämpöä ja peittää eläimen vaaleaan hiekkaan. Laji '
+            + 'osaa myös ääntää parin kutsuessa, mitä muut Välimeren '
+            + 'kilpikonnat eivät tee. Egyptissä sille sopiva maa on melkein '
+            + 'kokonaan raivattu, ja vuonna 2006 villejä yksilöitä tunnettiin '
+            + 'enää kymmenkunta Bardawilinjärven seudulta. Nykyään lajia '
+            + 'kasvatetaan tarhoissa palautettavaksi luontoon.',
+          selite: 'Viisi pientä egyptinkilpikonnaa ruohikossa ylhäältä kuvattuna. '
+            + 'Kilvet ovat vaaleanruskeita ja jokaisessa ruudussa on tummempi '
+            + 'reunus.',
+          lahde: 'Hatem Moushir, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi haikarat kiertävät avomeren eivätkä lennä suoraan yli?',
+        vaihtoehdot: [
+          'Avomeren yllä ei synny nousevaa ilmaa',
+          'Ne eivät näe rantaa tarpeeksi kauas',
+          'Suolainen ilma vahingoittaa höyheniä',
+          'Merellä on liikaa muita lintuja',
+        ],
+        oikea: 0,
+        fakta: 'Liitävä lintu säästää valtavasti voimia, kun se nousee lämpimän '
+          + 'ilman mukana korkealle ja liukuu sieltä eteenpäin.',
+      },
+    },
+    {
+      id: 'kasityot',
+      nimi: 'Käsityöt',
+      johdanto: 'Egyptissä tehdään yhä käsin sellaista, mikä muualla tulee '
+        + 'tehtaasta. Osa työstä on satoja vuosia vanhaa, osa alkoi vasta '
+        + 'neljäkymmentä vuotta sitten yhdestä koulusta.',
+      nostot: [
+        {
+          otsikko: 'Kuvat ommellaan kankaaseen käsin',
+          tiedosto: 'View from Khayamiya (Tentmakers) Street in Cairo 08.jpg',
+          teksti: 'Kairon vanhassakaupungissa on katu, jota sanotaan '
+            + 'khayamiyaksi. Nimi tulee sanasta khayma, teltta, ja juuri '
+            + 'telttoja siellä on tehty satojen vuosien ajan. Työtapa on '
+            + 'erikoinen: ompelija leikkaa kuvion värikkäästä kankaasta, '
+            + 'taittaa reunat sisään ja ompelee palan pohjakankaaseen pienin '
+            + 'pistoin, joita ei jälkeenpäin juuri erota. Kuviot ovat '
+            + 'kaarevia koukeroita, kukkia ja kirjaimia. Katu on Kairon '
+            + 'viimeinen katettu kauppakuja, ja sen työpajoissa istutaan yhä '
+            + 'matalilla penkeillä neula kädessä.',
+          selite: 'Käsin ommeltu tyyny khayamiyan kadulla: punaiselle kankaalle '
+            + 'on kiinnitetty vaalea koukeroinen kuvio, ja ympärillä on '
+            + 'pinoja muita kankaita.',
+          lahde: 'Mo Hany Afife, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Kylästä tuli savenvalajien kylä',
+          tiedosto: 'احدى ورش صناعة الخزف بقرية تونس ( الفيوم ).jpg',
+          teksti: 'Fajumin keitaalla Qarun-järven rannalla on nuori kylä '
+            + 'nimeltä Tunis. Vuonna 1984 sinne muutti sveitsiläinen '
+            + 'keraamikko Evelyne Porret. Hän oli katsellut, kuinka kylän '
+            + 'lapset leikkivät järven rantasavella, ja perusti koulun, jossa '
+            + 'jokaisella lapsella oli oma pieni työpisteensä. Lapsista tuli '
+            + 'aikuisia, ja he perustivat omia pajoja. Nyt pienessä kylässä on '
+            + 'kymmeniä työpajoja ja gallerioita, ja koulu on yhä Fajumin '
+            + 'suurin. Savi otetaan läheltä, ja astiat poltetaan uuneissa '
+            + 'kylän laidalla.',
+          selite: 'Katu Tunisin kylässä Fajumissa. Oikealla on savenvalajan '
+            + 'työpaja, jonka seinällä riippuu lautasia ja kylttejä, ja '
+            + 'edessä kasvaa agaaveja ruukuissa.',
+          lahde: 'Summering2018, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nubialaiskylissä seinät maalataan käsin',
+          tiedosto: 'Painted House, Nagaa Suhayl Gharb, AG, EGY (48026717022).jpg',
+          teksti: 'Assuanin lähellä on nubialaiskyliä, joiden asukkaat '
+            + 'joutuivat muuttamaan uuteen paikkaan, kun pato nousi ja vanhat '
+            + 'kylät jäivät Nasserjärven alle. Uusissa kylissä jatkui vanha '
+            + 'tapa: seinä maalataan kirkkaan siniseksi tai keltaiseksi ja '
+            + 'oven ympärille maalataan kuvioita käsin ilman valmista kaavaa. '
+            + 'Kuviot ovat kolmioita, ympyröitä, kukkia ja ruukkuja, ja moni '
+            + 'talo saa nimensä seinään samalla siveltimellä. Nykyään talot '
+            + 'muurataan tiilestä ja betonista, mutta kupolikatto ja maalaus '
+            + 'tehdään entiseen tapaan.',
+          selite: 'Sinivioletiksi maalattu nubialaistalon seinä. Oven yläpuolelle '
+            + 'on maalattu ruskea ratasmainen kuvio ja talon nimi sekä '
+            + 'arabialaisin että latinalaisin kirjaimin, ja oikealla riippuu '
+            + 'kirjava kangas.',
+          lahde: 'Warren LeMay, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä sana khayamiya tarkoittaa?',
+        vaihtoehdot: [
+          'Neulaa',
+          'Teltta',
+          'Kirjontakuviota',
+          'Kauppiaan katua',
+        ],
+        oikea: 1,
+        fakta: 'Kadun ompelijat tekivät alun perin juuri telttoja: suuria '
+          + 'kangasseiniä, joita pystytetään yhä juhliin ja suruajaksi.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Egyptiä on kaivettu ja kuvattu satakunta vuotta, ja iso osa siitä '
