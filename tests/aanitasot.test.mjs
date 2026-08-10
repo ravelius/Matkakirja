@@ -125,12 +125,25 @@ test('jokainen luennan lopetus vapauttaa myös puhujan', () => {
 
   /*
    * v513: stopIntroVoice ei pysäytä ääntä itse vaan delegoi
-   * haivytaAanille (pehmeä ulosfeidaus, omistajan toive). Vapautus
-   * saa siis tulla myös välillisesti — mutta silloin välikäden on
-   * itse vapautettava, ja se tarkistetaan tässä samalla.
+   * siivoavalle häivytykselle (pehmeä ulosfeidaus, omistajan toive).
+   * Vapautus saa siis tulla myös välillisesti — mutta silloin
+   * välikäden on itse vapautettava, ja se tarkistetaan tässä samalla.
+   *
+   * v530: välikäden nimi on haivytaJaSiivoa. Se oli aiemmin
+   * haivytaAani, mutta luokassa oli TOINEN saman niminen metodi
+   * (luentojen pause-häivytys ilman siivousta), ja myöhempi
+   * ylikirjoitti siivousversion äänettömästi — tämä testi katsoi
+   * ensimmäistä määrittelyä ja meni läpi, vaikka ajossa oli toinen.
+   * Siksi tässä vaaditaan myös, ettei haivytaAani-nimeä ole
+   * määritelty kahdesti.
    */
+  assert.equal(
+    [...ui.matchAll(/\n {2}haivyta\w*\(/g)].map((m) => m[0].trim()).filter((n, i, l) => l.indexOf(n) !== i).length,
+    0,
+    'kaksi saman nimistä häivytysmetodia — myöhempi ylikirjoittaa aiemman äänettömästi',
+  );
   const vapauttaa = (teksti) => /vapautaPuhuja\(/.test(teksti)
-    || (/haivytaAani\(/.test(teksti) && /vapautaPuhuja\(/.test(runko('haivytaAani')));
+    || (/haivytaJaSiivoa\(/.test(teksti) && /vapautaPuhuja\(/.test(runko('haivytaJaSiivoa')));
   for (const nimi of ['stopIntroVoice', 'stopDiaryVoice', 'haivytaLuenta']) {
     assert.ok(
       vapauttaa(runko(nimi)),
