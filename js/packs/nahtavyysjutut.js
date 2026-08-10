@@ -6261,5 +6261,253 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  moskova: {
+    'Bolšoi-teatteri': {
+      aika: '1825',
+      teksti: 'Moskovan Bolšoi-teatteri, jonka nimi tarkoittaa venäjäksi '
+          + '"suurta teatteria", avasi ovensa vuonna 1825. Sen '
+          + 'suunnitteli arkkitehti Joseph Bové, ja rakennuksen '
+          + 'pylväikön yläpuolella nelivaljakkoa ajaa jumala Apollo '
+          + 'pronssisessa vaunussa - patsaan teki kuvanveistäjä Pjotr '
+          + 'Klodt.'
+        + '\n\n'
+        + 'Teatterin historiaan mahtuu useita paloja. Edellinen, '
+          + 'vielä vanhempi teatteri tuhoutui tulipalossa jo vuonna '
+          + '1805, ja tulipalo iski uuteenkin rakennukseen vuonna 1853. '
+          + 'Arkkitehti Alberto Cavos suunnitteli katsomon uudelleen, '
+          + 'ja siitä lähtien salissa on loistanut tuttu punainen ja '
+          + 'kultainen väritys. Nykyisin saliin mahtuu noin 1740 '
+          + 'katsojaa.'
+        + '\n\n'
+        + 'Bolšoi-teatterissa on nähty monta merkittävää ensi-iltaa - '
+          + 'muun muassa Tšaikovskin baletti Joutsenlampi '
+          + 'kantaesitettiin siellä vuonna 1877. Teatterin oma '
+          + 'balettiryhmä on nykyään maailman suurin: tanssijoita on '
+          + 'yli 200.',
+      kuvat: [
+        {
+          tiedosto: 'Moscow - 2025 - Facade of Big Theatre (1).jpg',
+          selite: 'Bolšoi-teatterin klassisistinen päajulkisivu '
+            + 'pylväikköineen ja Apollonin nelivaljakkoveistoksineen '
+            + 'kirkkaana kesäpäivänä.',
+          lahde: 'Юрий Д.К., Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Bolshoy Teatr.jpg',
+          selite: '1830–1840-luvun väritetty litografia Bolšoi-teatterista '
+            + 'talvisena päivänä, hevosajoneuvoja rakennuksen edustalla.',
+          lahde: 'Jean Baptiste Arnout (Vivienin alkuperäiskuvan mukaan), Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Punainen tori': {
+      aika: '1490-luku',
+      teksti: 'Punainen tori sijaitsee aivan Kremlin muurien vierellä '
+          + 'Moskovan keskustassa. Aukio syntyi 1490-luvulla, kun '
+          + 'ruhtinas Iivana III käski purkaa alueen puutalot '
+          + 'paloturvallisuuden ja puolustuksen vuoksi. Aluksi paikkaa '
+          + 'kutsuttiin yksinkertaisesti Toriksi, sillä siellä käytiin '
+          + 'kauppaa vuosisatojen ajan.'
+        + '\n\n'
+        + 'Nimi "punainen" ei alun perin viitannut väriin: vanhalla '
+          + 'venäjän kielellä sana tarkoitti "kaunista". Vasta '
+          + 'myöhemmin samasta sanasta tuli myös punaisen värin '
+          + 'nimitys. Tori on lähes 330 metriä pitkä ja 70 metriä leveä '
+          + '- yhteensä melkein 73 000 neliömetriä.'
+        + '\n\n'
+        + 'Aukion laidalla kohoavat Pyhän Vasilin katedraalin '
+          + 'värikkäät kupolit, tummanpunainen historian museo ja '
+          + 'valtava GUM-tavaratalo. Vuosisatojen ajan torilla '
+          + 'julistettiin kuninkaallisia tiedotteita ja juhlittiin '
+          + 'tsaarien kruunajaisia.',
+      kuvat: [
+        {
+          tiedosto: 'Moscow - Red Square in May 2026.jpg',
+          selite: 'Punaisen torin laaja näkymä: Kremlin muuri, Historiallinen '
+            + 'museo ja GUM-tavaratalo aurinkoisena päivänä pilvisellä '
+            + 'mutta kirkkaalla taivaalla.',
+          lahde: 'Юрий Д.К., Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Red Square at sunset (12.07.2016).jpg',
+          selite: 'Punainen tori auringonlaskun kultaisessa valossa, Kremlin '
+            + 'torni ja Historiallinen museo hehkuvana siluettina.',
+          lahde: 'Gennady Grachev, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Krasnaya Ploshad-19v.jpg',
+          selite: 'Väritetty postikortti 1900-luvun alusta: Punainen tori, '
+            + 'Vasili-katedraali ja Spasskajan torni hevoskärryineen ja '
+            + 'ohikulkijoineen.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Vasilin katedraali': {
+      aika: '1555-1561',
+      teksti: 'Tsaari Iivana Julma käski rakentaa tämän katedraalin '
+          + 'muistoksi Kazanin kaupungin valtauksesta vuonna 1552. '
+          + 'Rakennustyöt kestivät yllättävän lyhyen ajan, vuodesta '
+          + '1555 vuoteen 1561 - vain kuusi vuotta.'
+        + '\n\n'
+        + 'Rakennuksen yhdeksän erimuotoista ja -väristä '
+          + 'sipulikupolia tekevät siitä ainutlaatuisen: mitään täysin '
+          + 'samanlaista ei ole rakennettu koskaan ennen tai jälkeen. '
+          + 'Alun perin kirkko oli nimeltään Pyhän Kolminaisuuden '
+          + 'kirkko, mutta vuonna 1588 sen kylkeen lisättiin kappeli '
+          + 'pyhän hullun, Vasili Siunatun, haudan päälle. Vähitellen '
+          + 'koko katedraali alkoi kantaa hänen nimeään.'
+        + '\n\n'
+        + 'Katedraaliin liittyy vanha legenda, jonka mukaan Iivana '
+          + 'Julma olisi sokaissut rakennuksen tekijät, Barman ja '
+          + 'Postnik Jakovlevin, jotta he eivät voisi koskaan rakentaa '
+          + 'mitään yhtä kaunista muualle. Historioitsijat pitävät '
+          + 'tarinaa kuitenkin pelkkänä legendana, sillä samat '
+          + 'rakentajat tiedetään työskennelleen myös myöhemmissä '
+          + 'rakennushankkeissa.',
+      kuvat: [
+        {
+          tiedosto: 'St. Basil\'s Cathedral at autumn sunny day.jpg',
+          selite: 'Pyhän Vasilin katedraali kokonaisuudessaan värikkäine '
+            + 'sipulikupoleineen kirkkaan sinistä taivasta vasten.',
+          lahde: 'Юрий Д.К., Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: '00 0568 Saint Basil\'s Cathedral - Moscow.jpg',
+          selite: 'Läheltä alaviistosta kuvatut Pyhän Vasilin katedraalin '
+            + 'värikkäät, kuvioidut sipulikupolit.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Saint Basil\'s Cathedral 1870.jpg',
+          selite: 'Vuoden 1870 kaiverrus Pyhän Vasilin katedraalista '
+            + 'hevosajoneuvoineen ja ohikulkijoineen edustalla.',
+          lahde: 'K. O. Brož (piirros), L. A. Serjakov (kaiverrus), Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Moskovan Kreml': {
+      aika: '1485-1495',
+      teksti: 'Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: '
+          + 'ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo '
+          + 'vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita '
+          + 'vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset '
+          + 'muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina '
+          + '1485-1495 ruhtinas Iivana III:n käskystä.'
+        + '\n\n'
+        + 'Iivana III kutsui työhön taitavia arkkitehtejä kaukaa '
+          + 'Italiasta. Pietro Antonio Solari suunnitteli uudet muurit '
+          + 'ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. '
+          + 'Solarin nimi on kaiverrettu latinaksi yhä nähtävissä '
+          + 'Spasskajan tornin porttien yläpuolella.'
+        + '\n\n'
+        + 'Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 '
+          + 'metriä korkea ja jopa 6,5 metriä paksu. Torneja on '
+          + 'kaikkiaan 20, ja korkein niistä, Troitskaja-torni, kohoaa '
+          + '80 metrin korkeuteen. Muurien sisällä seisoo vanhoja '
+          + 'katedraaleja sekä Iivana Suuren kellotorni, joka valmistui '
+          + 'vuonna 1600 ja nousee 81 metrin korkeuteen.',
+      kuvat: [
+        {
+          tiedosto: 'Moscow - 2026-3 - Kremlin at spring.jpg',
+          selite: 'Kremlin punatiiliset muurit ja tornit sekä Suuri Kremlin '
+            + 'palatsi Moskva-joen rannalta kuvattuna kirkkaana päivänä.',
+          lahde: 'Юрий Д.К., Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Cathedral square inside the Kremlin.jpg',
+          selite: 'Kremlin Katedraalitori ylhäältä kuvattuna: kultakupolisia '
+            + 'kirkkoja ja palatseja aurinkoisena päivänä.',
+          lahde: 'Pedro Szekely, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Noël Paymal Lerebours 06 Moscow.jpg',
+          selite: '1840-luvun väritetty kaiverrus Kremlin muureista ja '
+            + 'torneista Moskva-joen rannalta, soutuveneitä joella.',
+          lahde: 'Johann Hürlimann, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vapahtajan katedraali': {
+      aika: '1839-1883',
+      teksti: 'Kun Napoleonin joukot perääntyivät Moskovasta vuonna 1812, '
+          + 'tsaari Aleksanteri I halusi rakentaa valtavan katedraalin '
+          + 'kiitokseksi Venäjän pelastumisesta ja kaatuneiden '
+          + 'sotilaiden muistoksi. Peruskivi muurattiin vuonna 1839, '
+          + 'mutta katedraali valmistui vasta vuonna 1883 - '
+          + 'rakentaminen kesti yli 40 vuotta. Säveltäjä Tšaikovski '
+          + 'sävelsi juhlaan sopivan 1812-alkusoiton, joka kuultiin '
+          + 'katedraalin pihalla jo elokuussa 1882, ennen kuin koko '
+          + 'rakennus oli edes valmis.'
+        + '\n\n'
+        + 'Vuonna 1931 katedraali räjäytettiin dynamiitilla, sillä '
+          + 'sen paikalle oli tarkoitus rakentaa aivan uudenlainen '
+          + 'jättimäinen rakennus. Sitä ei koskaan saatu valmiiksi, ja '
+          + 'tyhjälle paikalle rakennettiin sen sijaan maailman suurin '
+          + 'ulkouima-allas, joka oli käytössä aina vuoteen 1994 asti.'
+        + '\n\n'
+        + '1990-luvulla katedraali päätettiin rakentaa uudelleen '
+          + 'täsmälleen alkuperäisen näköiseksi. Uusi katedraali '
+          + 'valmistui vuonna 2000, se on 103 metriä korkea ja sen '
+          + 'sisään mahtuu kerralla jopa 9500 ihmistä.',
+      lainaus: {
+        teksti: '...kiitokseksi siitä, että Venäjä pelastui tuhosta, joka '
+          + 'oli sitä uhannut.',
+        lahde: 'Tsaari Aleksanteri I:n julistus, 1812',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Moscow July 2011-34a.jpg',
+          selite: 'Vapahtajan Kristus-katedraali kultakupoleineen sinistä '
+            + 'taivasta vasten, Patriarhin silta edustalla.',
+          lahde: 'Alvesgaspar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Москва. Храм Христа Спасителя 1881 Найденов t75105.jpg',
+          selite: 'Vuoden 1881 valokuva alkuperäisestä Vapahtajan '
+            + 'katedraalista pian sen valmistumisen jälkeen, '
+            + 'rakennustyömaan jälkiä edustalla.',
+          lahde: 'Nikolai Naidjonov, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tretjakovin galleria': {
+      aika: '1856-1893',
+      teksti: 'Moskovalainen kauppias Pavel Tretjakov aloitti '
+          + 'taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä '
+          + 'maalausta. Vuosikymmenten aikana hän osti satoja teoksia '
+          + 'lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - '
+          + 'yli 1300 maalausta, satoja piirustuksia ja muutama '
+          + 'veistos.'
+        + '\n\n'
+        + 'Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa '
+          + 'Moskovan kaupungille, ja galleria avattiin yleisölle 15. '
+          + 'elokuuta 1893. Nykyään museossa on esillä yli 130 000 '
+          + 'teosta, muun muassa Andrei Rublevin kuuluisa ikoni '
+          + 'Kolminaisuus.'
+        + '\n\n'
+        + 'Museon satumaisen näköisen punatiilisen julkisivun '
+          + 'suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, '
+          + 'ja se muistuttaa suoraan venäläisestä kansantarinasta '
+          + 'poimittua linnaa. Toisen maailmansodan aikana koko '
+          + 'taidekokoelma vietiin turvaan junalla - peräti 17 vaunua '
+          + 'täynnä taidetta - kauas Siperian Novosibirskiin.',
+      kuvat: [
+        {
+          tiedosto: 'Tretyakov and his gallery.jpg',
+          selite: 'Tretjakovin galleria Pavel Tretjakovin patsaan takaa '
+            + 'kuvattuna, satumainen punatiilinen ja koristeellinen '
+            + 'julkisivu aurinkoisena päivänä.',
+          lahde: 'Andrey, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
   PLACEHOLDER_ERA11
 };
