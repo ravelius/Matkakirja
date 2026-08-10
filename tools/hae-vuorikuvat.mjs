@@ -334,6 +334,15 @@ if (import.meta.url === ajossa) {
     const nimet = await keraaTiedostot(kategoria);
     const tiedot = (await tiedostotiedot(nimet.slice(0, 300)))
       .filter((t) => vapaaLisenssi(t.lisenssi))
+    /*
+     * Satelliittikuvat KUVAUKSEN perusteella. Kamtšatkan ehdokaslista
+     * oli kahdeksantoista ensimmäisen kuvan osalta pelkkiä Copernicus
+     * Sentinel -renderöintejä, joiden tiedostonimessä lukee vain
+     * "Klyuchevskaya Sopka Volcano with lava" — sanaseula ei voi
+     * tunnistaa niitä nimestä, mutta kuvauksessa lukee aina, mistä
+     * aineistosta kuva on tehty.
+     */
+    .filter((t) => !/sentinel|copernicus|landsat|modis|satellite imagery/i.test(t.kuvaus))
       // Galleria on vaakasuuntainen, ja iso kuva näytetään 1920 pikselin
       // levyisenä: sitä pienempi venyy epäteräväksi.
       .filter((t) => t.leveys >= 1600 && t.leveys >= t.korkeus * 1.1);

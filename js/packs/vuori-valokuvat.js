@@ -353,6 +353,173 @@ export const VUORIKUVAT = {
     },
   ],
 
+  taurusvuoret: [
+    {
+      tiedosto: 'J22 319 D696, Taurusquerung.jpg',
+      selite: 'Tie kiertää Taurusvuorten yli maaliskuisessa lumessa. Vuoristo '
+        + 'erottaa Anatolian ylängön Välimeren rannikosta, ja sen solat ovat '
+        + 'olleet armeijoiden ja kauppiaiden tie tuhansia vuosia.',
+      lahde: 'Falk2, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Taurus mountains - Toros Dağları 06.jpg',
+      selite: 'Taurusvuorten lumihuiput tummien kukkuloiden takana. Kevään '
+        + 'sulamisvedet katoavat kalkkikiveen ja purkautuvat alempaa '
+        + 'lähteinä — vuoristo on täynnä luolia.',
+      lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Taurus mountains - Toros Dağları 07.jpg',
+      selite: 'Laaja laakso Taurusvuorten juurella. Ylängöllä on laidunnettu '
+        + 'kesäisin vuosisatoja: karja nousee lumen sulettua ja laskeutuu '
+        + 'takaisin syksyllä.',
+      lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Taurus mountains - Toros Dağları 04.jpg',
+      selite: 'Lumiraja Taurusvuorilla huhtikuussa. Alarinteillä on jo '
+        + 'kevät, kun harjanne on yhä valkoinen.',
+      lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Taurus mountains - Toros Dağları 13.jpg',
+      selite: 'Punamultainen rinne ja sen takana Taurusvuorten lumipeitteinen '
+        + 'harja. Maa on täällä ohutta, ja kivi tulee esiin heti pintakerroksen '
+        + 'alta.',
+      lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  ],
+
+  verhojansk: [
+    {
+      tiedosto: 'Verkhoyansk Range, Republic of Sakha (Yakutia), Russia - 2019.jpg',
+      selite: 'Verhojanskin vuoristo helmikuussa ilmasta nähtynä. Aurinko käy '
+        + 'talvella niin matalalla, että se värjää harjanteet punaisiksi '
+        + 'keskellä päivää.',
+      lahde: 'Ilja Varlamov, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Verkhoyansk Range, Republic of Sakha (Yakutia), Russia - 2-2019.jpg',
+      selite: 'Kultainen valo Verhojanskin harjanteilla. Jonon takana on '
+        + 'Ojmjakonin laakso, maailman kylmin asuttu paikka — pakkanen on '
+        + 'käynyt alle 67 asteessa.',
+      lahde: 'Ilja Varlamov, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Verkhoyansk Range, Republic of Sakha, Russia - 2019.jpg',
+      selite: 'Verhojanskin jono jatkuu horisonttiin asti. Vuoristo kaartaa '
+        + 'yli tuhat kilometriä Lenan suulta etelään eikä sen läpi kulje '
+        + 'yhtään ympärivuotista tietä.',
+      lahde: 'Ilja Varlamov, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Yakutia - DSC 6072.jpg',
+      selite: 'Lumen peittämiä selänteitä Jakutiassa. Lunta on vähän — '
+        + 'sisämaassa sataa niukasti — mutta se ei sula puoleen vuoteen.',
+      lahde: 'Ilja Varlamov, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Yakutia - DSC 6186.jpg',
+      selite: 'Iltavalo Verhojanskin harjanteilla. Rinteet ovat puuttomia: '
+        + 'ikirouta ei päästä juuria syvälle, ja metsä loppuu jo matalalla.',
+      lahde: 'Ilja Varlamov, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Yakutia - DSC 6035.jpg',
+      selite: 'Yksinäinen kukkula pakkasusvassa. Kylmä ilma valuu laaksoihin '
+        + 'ja jää sinne, joten laaksonpohja on kylmempi kuin rinteen laki.',
+      lahde: 'Ilja Varlamov, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+  ],
+
+  'lansi-ghatit': [
+    {
+      tiedosto: 'A beautiful scenic view of the western ghats during golden hour.jpg',
+      selite: 'Länsi-Ghatit sinisinä kerroksina aamu-usvan yllä. Vuoristo '
+        + 'pysäyttää lounaismonsuunin, ja sen länsirinteille sataa moninkertaisesti '
+        + 'enemmän kuin sisämaahan.',
+      lahde: 'Sreerag Santhosh, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Landscapes of Western Ghats from Mullayyanagiri Betta.jpg',
+      selite: 'Metsäisiä kukkuloita Mullayanagirin huipulta. Länsi-Ghatit on '
+        + 'yksi maailman kahdeksasta kuumimmasta monimuotoisuuskeskuksesta: '
+        + 'sen lajeista suuri osa ei elä missään muualla.',
+      lahde: 'iMahesh, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Jog Falls Karnataka India.jpg',
+      selite: 'Jogin putoukset Karnatakassa. Sharavathi-joki putoaa Ghattien '
+        + 'reunalta neljänä haarana yli kahdensadan metrin syvyyteen — '
+        + 'täysillään vain monsuunin aikaan.',
+      lahde: 'Naveen R Gowda, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Bhuibawada Ghat Hill.jpg',
+      selite: 'Bhuibawadan ghattikukkula Maharashtrassa. Ghatit ovat '
+        + 'jyrkkäreunainen porras: ylhäällä on tasankoa, alhaalla '
+        + 'rannikkokaistale, ja väliin jää lähes pystysuora rinne.',
+      lahde: 'Contributers2020, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Beauty of western ghats.jpg',
+      selite: 'Vihreä ylätasanko Länsi-Ghateilla sadekauden jälkeen. Ruoho '
+        + 'kasvaa kalliopinnan päälle ohuen maakerroksen varassa.',
+      lahde: 'Sundaram Perumal, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  ],
+
+  'japanin-alpit': [
+    {
+      tiedosto: 'Hida Mountains Panorama (53622323610).jpg',
+      selite: 'Hidan vuoret eli Pohjoiset Japanin Alpit talvella. Etualan '
+        + 'kuuset ovat huurteessa, ja harjanteen takana on yli kolmen '
+        + 'kilometrin korkuisia huippuja.',
+      lahde: 'Raita Futo, Wikimedia Commons (CC BY 2.0)',
+    },
+    {
+      tiedosto: 'Lake Kurobe01s4592.jpg',
+      selite: 'Kurobejärvi lumiseinien keskellä. Järvi on Japanin korkeimman '
+        + 'padon takana, ja sen ympäri kulkeva vuoristoreitti aukeaa vasta '
+        + 'kun lumi on aurattu käytäviksi.',
+      lahde: '663highland, Wikimedia Commons (CC BY 2.5)',
+    },
+    {
+      tiedosto: 'Morning in the Japanese Alps (51832001344).jpg',
+      selite: 'Aamu Japanin Alpeilla: harjanne nousee sumumeren yläpuolelle. '
+        + 'Nimen antoivat 1800-luvun lopulla brittiläiset insinöörit, joiden '
+        + 'mielestä vuoret muistuttivat Alppeja.',
+      lahde: 'Raita Futo, Wikimedia Commons (CC BY 2.0)',
+    },
+    {
+      tiedosto: 'Autumn in Japan Alps (52489399522).jpg',
+      selite: 'Syksyn punaista pensaikkoa Japanin Alpeilla. Ruska nousee '
+        + 'vuorilla ensin ja laskeutuu sitten viikko viikolta alemmas.',
+      lahde: 'Raita Futo, Wikimedia Commons (CC BY 2.0)',
+    },
+    {
+      tiedosto: 'Morning in the Japanese Alps (51831767043).jpg',
+      selite: 'Terävä harjanne aamuvalossa. Japanin Alpit ovat nuoret ja '
+        + 'jyrkät, ja jääkauden jäätiköt ovat kaivertaneet niihin '
+        + 'kattilalaaksoja.',
+      lahde: 'Raita Futo, Wikimedia Commons (CC BY 2.0)',
+    },
+    {
+      tiedosto: 'Autumn in Japan alps (52460317999).jpg',
+      selite: 'Syksyinen tunturikangas pilven reunalla. Puuraja jää Japanin '
+        + 'Alpeilla noin 2 500 metriin, ja sen yläpuolella kasvaa vain '
+        + 'matalaa varpua.',
+      lahde: 'Raita Futo, Wikimedia Commons (CC BY 2.0)',
+    },
+    {
+      tiedosto: 'Koumi-line Series110.jpg',
+      selite: 'Koumin radan juna vuoristoniityn laidalla. Rata on Japanin '
+        + 'korkeimmalle nouseva tavallinen rautatie, ja se kiertää Alppien '
+        + 'itäpuolta.',
+      lahde: 'MaedaAkihiko, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  ],
+
   'tiibetin-ylatasanko': [
     {
       tiedosto: 'Tibet, panorámicas (1999) 05.jpg',
