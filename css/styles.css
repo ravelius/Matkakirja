@@ -3554,15 +3554,23 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 .iso-joki {
   fill: none;
   stroke: #ecd9ae;
-  stroke-width: 2.6;
+  stroke-width: 2.2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+/*
+ * Kapea ja peittävä reuna (omistajan kalibrointipyyntö 10.8.2026:
+ * "joet näyttävät menevän pehmeämmin kuin järven reuna"). Järven
+ * reunaviiva istuu kahden täytön terävällä rajalla; joen reunaveto
+ * taas sulaa maastoon, jos se on leveä ja puoliksi läpinäkyvä.
+ * Kapeampi kaistale (0,7/puoli) ja korkeampi peitto piirtyvät
+ * samalla terävyydellä kuin järven raja.
+ */
 .iso-joki-reuna {
   fill: none;
   stroke: var(--sea-ink);
-  stroke-width: 5.4;
-  opacity: 0.5;
+  stroke-width: 3.6;
+  opacity: 0.72;
   stroke-linecap: round;
   stroke-linejoin: round;
 }

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 545, teksti: '23 luentaa uusille teksteille, ME-viimeistely, äänipolku' },
   { v: 544, teksti: 'Pääjoet pohjakartalle järvien tyylillä' },
   { v: 543, teksti: 'Maxin vaihtoehtokorjaukset, ME-kaanonkorjaukset ja sapluuna' },
   { v: 542, teksti: 'Maalehti: tyhjä etusivu pois, oikean maan tiedot, kirjanappi' },
