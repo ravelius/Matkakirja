@@ -74,3 +74,52 @@ odottaa päätöstä.
 Tarkistin: /tmp:n dup-kaikki.mjs lukee kaikki paketit tekstitasolla
 (`tiedosto:`-kentät), jolloin rakenne ei voi piilottaa duplikaattia.
 Ennen erää 23 päällekkäisyyttä, nyt 6.
+
+## Tilanne 10.8.2026 ilta (Opus 1, v536): 13 viimeistä vaihdettu
+
+Sonnet 1:n kokoava QA löysi 17 raakaduplikaattia, joista 4 oli jo
+perusteltu yllä. Loput **13 vaihdettiin nyt**. Kaikki syntyivät
+nähtävyysjuttuerissä v495–v508, joten vaihdettiin johdonmukaisesti
+**nähtävyysjuttupuoli**: vanhempi esiintymä on kaupunkilehden tai
+maalehden vakiintunut kuva, ja nähtävyysjutun karuselliin mahtuu
+luontevasti eri näkymä samasta kohteesta.
+
+| Kohde | Uusi kuva nähtävyysjutussa |
+|---|---|
+| Latinalaissilta, Sarajevo | koko silta Miljackan yli (CC0) |
+| Baščaršija | vuoden 1911 postikortti torista (PD) |
+| Privozin tori, Odessa | lihatiski hallin sisällä (PD) |
+| Kultainen portti, Kiova | portti puistikon laidalta (CC BY-SA 3.0) |
+| Odessan oopperatalo | katsomo sisältä (CC BY-SA 4.0) |
+| Voroncovin majakka | rannalta, aallonmurtajan päässä (CC BY-SA 3.0) |
+| Tromssan tuomiokirkko | puinen sisus (CC BY-SA 4.0) |
+| Mustapäiden talo, Riika | Rolandin patsas edessä (CC BY-SA 4.0) |
+| Aamuportti, Vilna | kappelin holvi sisältä (CC BY-SA 3.0) |
+| Gediminaksen torni | rinteen juurelta (CC BY 2.0) |
+| Vilnan yliopisto | pylväikköpiha (PD) |
+| Rundetårn | Christian IV:n rebus kattojen yli (CC BY-SA 3.0) |
+| Parthenon | eteläsivu iltavalossa (CC BY-SA 2.5) |
+
+**Parthenon oli luokan c rajatapaus, ja se ratkaistiin näin:** toinen
+esiintymä on `europe-puzzles.js:117` eli valokuvapulman vaihtoehto, ja
+sen koodikommentti (rivit 120–124) sitoo kuvan isoisän luonnokseen.
+Pulmakuvaa **ei siis vaihdettu** — vain nähtävyysjuttupuoli.
+
+Neljä ehdokasta kaatui silmätarkistuksessa ja korvattiin toisella:
+
+- Voroncovin majakan lähikuva oli lähes identtinen vaihdettavan kanssa.
+- Gediminaksen tornin talvikuva oli sumuinen yökuva, torni tuskin näkyi.
+- Vilnan yliopiston pihakuvassa oli rakennustelineiden suojaverkko.
+- Privozin sisäänkäyntikuvan etuala oli täynnä pysäköityjä autoja.
+
+Lisäksi ensin valittu Aamuportin katunäkymä hylättiin, koska jutussa oli
+jo lähes sama sommitelma; tilalle otettiin kappelin holvi sisältä.
+
+**Ansa, joka jäi kiinni testissä:** Commonsin tiedostonimi katkaistiin
+kahdelle riville, ja `tests/media.test.mjs` kaatui — peilaustyökalu
+poimii vain ensimmäisen palan. Pitkä nimi on pakko kirjoittaa yhdelle
+riville, vaikka rivi venyisi.
+
+Tämän jälkeen pelissä on enää **4 duplikaattia**, kaikki yllä
+perusteltuja: All Gizah Pyramids, Las Meninas, Rio Javaés ja
+Tšadjärven kalastaja.

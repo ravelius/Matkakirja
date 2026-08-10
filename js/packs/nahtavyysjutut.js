@@ -2115,9 +2115,10 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Syawwwish, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          tiedosto: 'Parthenon (30276156187).jpg',
-          selite: 'Parthenon, Athenen temppeli, on seissyt kalliolla lähes 2 500 vuotta.',
-          lahde: 'Phanatic, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: 'Parthenon from south.jpg',
+          selite: 'Parthenonin pylväsrivi iltavalossa, edessä maahan '
+            + 'aseteltuja marmorilohkareita restaurointia varten.',
+          lahde: 'Thermos, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
           tiedosto: 'Erechtheum Acropolis Athens.jpg',
@@ -5559,11 +5560,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
-          tiedosto: 'Baščaršija.jpg',
-          selite: 'Baščaršijan tori iltahämärässä sateen jäljiltä, kahvilan '
-            + 'punaiset pöydät ja Sebilj-kaivo dramaattisen pilvitaivaan '
-            + 'alla.',
-          lahde: 'Yukof, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Sarajevo Bascarsija Market Sebilj.jpg',
+          selite: 'Baščaršijan tori vuonna 1911: Sebilj-vesikioski keskellä, '
+            + 'ympärillä matalia myymälöitä, koreja ja kauppiaita '
+            + 'perinneasuissa.',
+          lahde: 'Verlag Simon Kattan, Wikimedia Commons (Public domain)',
         },
         {
           tiedosto: 'Sarajevo carsija, 1892.jpg',
@@ -5651,10 +5652,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Filip Maljković, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Latin Bridge Sarajevo summer 2010.JPG',
-          selite: 'Latinalaissilta lähempää katsottuna kirkkaana kesäpäivänä, '
-            + 'ihmisiä ylittämässä siltaa värikkäiden talojen edessä.',
-          lahde: 'BiHVolim, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Latin Bridge in Sarajevo.jpg',
+          selite: 'Latinalaissilta kokonaisuudessaan Miljackan yli: neljä '
+            + 'kivikaarta, kulkijoita sillalla ja takana rinteille noussut '
+            + 'kaupunki minareetteineen.',
+          lahde: 'Tumi-1983, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Friedrich Alois Schönn - An der lateinischen Brücke in Sarajewo - 171 - Österreichische Galerie Belvedere.jpg',
@@ -5983,11 +5985,11 @@ export const NAHTAVYYSJUTUT = {
           + 'pieni museo.',
       kuvat: [
         {
-          tiedosto: 'Golden Gate Kiev 2018 G1.jpg',
-          selite: 'Kultainen portti sivukulmasta kuvattuna kirkkaassa '
-            + 'auringonpaisteessa, puinen yläosa ja ruohopeitteinen valli '
-            + 'näkyvissä.',
-          lahde: 'George Chernilevsky, Wikimedia Commons (Public domain)',
+          tiedosto: 'Kiev Golden Gate.jpg',
+          selite: 'Kultainen portti puistikon laidalla: jälleenrakennettu '
+            + 'porttitorni kultakupolisine kirkkoineen, alla puinen käytävä '
+            + 'ja vanhaa tiilimuuria.',
+          lahde: 'Луц Фишер-Лампрехт, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Киев. Золотые ворота. Почтовая открытка 04.jpg',
@@ -6539,11 +6541,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Konstantin Brizhnichenko, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Vorontsov Lighthouse 2017 G1.jpg',
-          selite: 'Voroncovin majakka läheltä pystykuvassa: valkoiset '
-            + 'kiviladokset ja punainen lyhtyhuone erottuvat terävinä '
-            + 'syvänsinistä taivasta vasten.',
-          lahde: 'George Chernilevsky, Wikimedia Commons (Public domain)',
+          tiedosto: 'Воронцовский маяк вид с берега.JPG',
+          selite: 'Voroncovin majakka rannalta katsottuna: valkoinen torni '
+            + 'seisoo yksin aallonmurtajan päässä keskellä satamanselkää, '
+            + 'ja takana häämöttää kaupungin siluetti.',
+          lahde: 'Vamochka, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Vorontsov Lighthouse.jpg',
@@ -6666,10 +6668,11 @@ export const NAHTAVYYSJUTUT = {
           + 'keskustassa.',
       kuvat: [
         {
-          tiedosto: 'Odessa Opera Theatre 2016 G1.jpg',
-          selite: 'Odessan oopperatalon koko julkisivu koristepatsaineen ja '
-            + 'kupoleineen kirkkaan sinistä taivasta vasten.',
-          lahde: 'George Chernilevsky, Wikimedia Commons (Public domain)',
+          tiedosto: 'The auditorium of the Odessa Opera House 01.jpg',
+          selite: 'Oopperatalon katsomo ennen esitystä: punakultainen '
+            + 'esirippu, kolme parvikerrosta ja kattoa kiertävät '
+            + 'kipsiveistokset.',
+          lahde: 'OlenaMuzychenko (WMUA), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Odessa Opera Theatre 2016 G2.jpg',
@@ -6760,11 +6763,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Hwyrd, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'At the Privoz Market in Odessa.jpg',
-          selite: 'Privozin torin myyntipöytä täynnä värikkäitä valmisruokia '
-            + 'ja salaatteja muovirasioissa, myyjä ojentaa annosta '
-            + 'vihreällä kauhalla.',
-          lahde: 'jmv, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: 'OdessaPrivoz.JPG',
+          selite: 'Privozin lihatiski hallin sisällä: pitkä valkoinen tiski '
+            + 'täynnä savustettua lihaa, vaaka tiskin päässä ja kylkeen '
+            + 'maalattu torin oma ПРИВОЗ-tunnus.',
+          lahde: 'Kuldinboxru, Wikimedia Commons (Public domain)',
         },
       ],
       lahde: 'Wikipedia',
@@ -6873,11 +6876,13 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Osopolar, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'NOR-2016-Tromsø-Tromsø Cathedral.jpg',
-          selite: 'Tromssan tuomiokirkon julkisivu suoraan edestä, torni '
-            + 'kellolla ja vihreällä huipulla kohoaa pilvistä taivasta '
-            + 'vasten.',
-          lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
+          // Commonsin oma tiedostonimi on pitkä; se on pakko pitää yhdellä
+          // rivillä, jotta peilaustyökalu poimii sen kokonaan.
+          tiedosto: 'Tromsø Cathedral (domkirke) Norway interior. Pews (kirkebenker), pillars (bæresøyler), doors, sunlight, etc Wooden Gothic Revival style church 1861 Chr. H. Grosch 2019-04-04 DSC02260.jpg',
+          selite: 'Kirkon puinen sisus: maalatut penkkirivit, kantavat '
+            + 'puupilarit ja paneloidut seinät. Rakennus on puuta lattiasta '
+            + 'kattoon.',
+          lahde: 'Wolfmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tromsø - no-nb digifoto 20160303 00124 bldsa L KK0091 (cropped).jpg',
@@ -7485,10 +7490,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'House of Blackheads and St. Peter\'s Church Tower, Riga, Latvia - Diliff.jpg',
-          selite: 'Mustapäiden talo valaistuna sinisellä hämärätunnilla, '
-            + 'Pyhän Pietarin kirkon torni siintää vasemmalla taustalla.',
-          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'House of the Blackheads.jpg',
+          selite: 'Mustapäiden talo valaistuna sinisellä hämärätunnilla. '
+            + 'Aukion keskellä seisoo Rolandin patsas miekka pystyssä, ja '
+            + 'julkisivun yläosassa erottuvat kello ja vaakunat.',
+          lahde: 'Shawn M. Kent, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Riga house of the blackheads.jpg',
@@ -7563,11 +7569,11 @@ export const NAHTAVYYSJUTUT = {
           + 'pääsee ylös ihailemaan koko Vilnan kattojen merta.',
       kuvat: [
         {
-          tiedosto: 'Gedimino pilis by Augustas Didzgalvis.jpg',
-          selite: 'Ilmakuva Gediminaksen tornista kukkulallaan iltapäivän '
-            + 'kultaisessa valossa, Neris-joki ja Vilnan kaupunki '
-            + 'taustalla.',
-          lahde: 'BigHead, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Gediminas Tower (9651326233).jpg',
+          selite: 'Gediminaksen torni mäen laella, rinteen juurelta '
+            + 'kuvattuna. Punatiilisen kahdeksankulmaisen tornin huipussa '
+            + 'liehuu Liettuan lippu.',
+          lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Gedimino kalnas 139.jpg',
@@ -7704,11 +7710,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Vilnius University, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Vilnius University Great Courtyard 1, Vilnius, Lithuania - Diliff.jpg',
-          selite: 'Yliopiston Ison pihan päätyseinä: Pyhän Johanneksen kirkon '
-            + 'julkisivu ja korkea kellotorni, koko kompleksin tunnetuin '
-            + 'näkymä.',
-          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Arcade Courtyard Vilnius University1.jpg',
+          selite: 'Yliopiston pylväikköpiha: kaarikäytävä kiertää pihan '
+            + 'laitaa, ja pilarit on maalattu eri sävyihin. Yliopistolla on '
+            + 'toistakymmentä pihaa.',
+          lahde: 'Alma Pater, Wikimedia Commons (Public domain)',
         },
       ],
       lahde: 'Wikipedia',
@@ -7792,10 +7798,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Marcin Białek, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Gate of Dawn Exterior, Vilnius, Lithuania - Diliff.jpg',
-          selite: 'Aamuportin kappeli läheltä suoraan edestä: kultainen '
-            + 'aurinkokehä, kukkalaitteet parvekkeella ja sininen taivas.',
-          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Vault of the Ostra brama chapel.JPG',
+          selite: 'Kappelin holvi sisältä: valkoista stukkokoristelua '
+            + 'vaakunoineen, kullattu sädekehä ja vasemmalla Neitsyt Marian '
+            + 'kuvan kullattua kehystä.',
+          lahde: 'Alma Pater, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -8150,11 +8157,11 @@ export const NAHTAVYYSJUTUT = {
           + 'sekunnissa - ennätys, joka on yhä voimassa.',
       kuvat: [
         {
-          tiedosto: 'Kopenhagen (DK), Runder Turm -- 2017 -- 1633.jpg',
-          selite: 'Rundetårnin tiilinen pyöreä torni kuvattuna alhaalta '
-            + 'ylöspäin kirkasta sinistä taivasta vasten, tornin '
-            + 'kruunukoriste ja tiiliverhous selvästi näkyvissä.',
-          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Rundetaarn (Købmagergade).jpg',
+          selite: 'Rundetårn kattojen yli nähtynä: tiiliseinässä on '
+            + 'Christian IV:n kultainen kuvakirjoitus ja tornin laella '
+            + 'observatorion vihreä kupoli. Takana siintää Öresund.',
+          lahde: 'Orf3us, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Peter Tom-Petersen - Parti fra gården ved Regensen med udsigt til Rundetårn - 1888.png',
