@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 496, teksti: 'Kahdeksan kuvaduplikaattia purettu Afrikasta ja Siinailta' },
   { v: 495, teksti: 'Nähtävyysjutut Sofiaan, Bukarestiin, Sarajevoon' },
   { v: 494, teksti: 'Kaksitoista valokuvakysymystä sai tunnistettavan kuvan' },
   { v: 493, teksti: 'Tallinnan ja Riian muurit kartalle, kujabugi kiinni' },
