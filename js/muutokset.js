@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 531, teksti: 'Aarrekortti pysyy luennan ajan ja ruksi sulkee sen' },
   { v: 530, teksti: 'Maan nimi pilleriksi kartan kehykselle ja luennan feidaus' },
   { v: 529, teksti: 'Peli on yksi lauta: laudanvaihtoportit ja koelaudat pois' },
   { v: 528, teksti: 'Laatta joka kaupunkiin, maailmankartalle mantereiden aarteet' },

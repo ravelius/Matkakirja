@@ -10339,6 +10339,10 @@ export class UI {
          */
         console.warn('luenta ei käynnistynyt:', virhe?.name ?? virhe, url);
         if (this.diaryVoice === audio) this.diaryVoice = null;
+        // Käynnistymätön luenta ei laukaise elementin omia tapahtumia,
+        // mutta kuuntelijat (mm. aarrekortin odotus) tarvitsevat lopun
+        // signaalin — muuten ne odottaisivat varmuusrajaansa asti.
+        audio.dispatchEvent(new Event('error'));
       });
     };
     // Pieni hengähdys ennen luennan alkua (omistajan toive): kortti ehtii
@@ -10351,6 +10355,9 @@ export class UI {
     } else {
       aloita();
     }
+    // Kutsuja saa kahvan luentaan: aarrekortti pysyy esillä luennan
+    // ajan ja sen ruksi feidaa juuri tämän äänen (playTokenReveal).
+    return audio;
   }
 
   /**
@@ -12419,10 +12426,11 @@ export class UI {
      */
     const kaari = (type !== 'empty' && KAARI_LAUDAT.has(this.game.pack.id))
       ? TARINAKAARI[this.game.quiz?.cityId] : null;
+    let luenta = null;
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
       if (kertojaTila() !== 'ei') {
-        this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 });
+        luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 }) ?? null;
       }
     }
     /*
@@ -12449,11 +12457,33 @@ export class UI {
 
     // Näyttöaika kasvaa selitteen mukana: "+300 puntaa" saa vilahtaa,
     // mutta pitkä selite (esim. tyhjän laatan "merkintä oli vanhentunut")
-    // pitää ehtiä lukea. Napautus ohittaa odotuksen.
+    // pitää ehtiä lukea. Napautus tai ruksi ohittaa odotuksen.
     const seliteMs = ((REVEAL_SUB[type] ?? '').length + (kaari?.aarre?.length ?? 0)) * 45;
+    /*
+     * Ruksi kortin kulmaan ja kortti esillä koko luennan ajan
+     * (omistajan palaute 10.8.2026: "aarre häviää näkyvistä ennen
+     * kuin lukija ehtii lukea repliikkinsä loppuun"). Kortti odottaa
+     * sekä vähimmäislukuajan ETTÄ luennan lopun; ruksi tai napautus
+     * sulkee heti, ja silloin kertoja feidataan pois — muuten ääni
+     * jatkuisi tyhjän kartan päällä. Varmuusraja pitää huolen, ettei
+     * jumittunut äänen lataus jätä korttia ikuiseksi ruudulle.
+     */
+    const ruksi = html('button', 'reveal-sulje', '×');
+    ruksi.type = 'button';
+    ruksi.setAttribute('aria-label', 'Sulje paljastus');
+    overlay.appendChild(ruksi);
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });
     });
+    const luentaValmis = luenta ? Promise.race([
+      new Promise((resolve) => {
+        // pause kelpaa lopuksi siinä missä ended: se tarkoittaa, että
+        // jokin muu pysäytti luennan, eikä korttia kannata pitää auki.
+        for (const nimi of ['ended', 'error', 'pause']) luenta.addEventListener(nimi, resolve, { once: true });
+      }),
+      this.wait(30000),
+    ]) : Promise.resolve();
+    const odota = (min) => Promise.race([Promise.all([this.wait(min), luentaValmis]), napautus]);
 
     if (this.reducedMotion) {
       if (onKuva) {
@@ -12464,7 +12494,7 @@ export class UI {
       }
       caption.classList.add('shown');
       sfx.play(treasureSound(type));
-      await Promise.race([this.wait(900 + seliteMs), napautus]);
+      await odota(900 + seliteMs);
     } else if (onKuva) {
       // Kuva nousee mustasta: hidas häivytys ja kasvu, ei kääntöä.
       await this.wait(420);
@@ -12472,7 +12502,7 @@ export class UI {
       sfx.play(treasureSound(type));
       await this.wait(760);
       caption.classList.add('shown');
-      await Promise.race([this.wait(1250 + seliteMs), napautus]);
+      await odota(1250 + seliteMs);
       overlay.classList.add('leaving');
       await this.wait(300);
     } else {
@@ -12484,9 +12514,20 @@ export class UI {
       sfx.play(treasureSound(type));
       rays.classList.add('shown');
       caption.classList.add('shown');
-      await Promise.race([this.wait(1250 + seliteMs), napautus]);
+      await odota(1250 + seliteMs);
       overlay.classList.add('leaving');
       await this.wait(300);
+    }
+    /*
+     * Suljettaessa kesken luennan kertoja feidataan pois — kortti ja
+     * ääni päättyvät yhdessä. Käynnistystä odottava luenta (viive)
+     * perutaan nollaamalla diaryVoice, ja puhujan rooli vapautetaan,
+     * ettei tausta jää väistöön.
+     */
+    if (luenta) {
+      if (this.diaryVoice === luenta) this.diaryVoice = null;
+      if (!luenta.ended && !luenta.paused) this.haivytaJaSiivoa(luenta);
+      else this.vapautaPuhuja(luenta);
     }
     overlay.remove();
     // Löytö päätyy matkalaukkuun: yläreunan Laukku-nappi heilahtaa
