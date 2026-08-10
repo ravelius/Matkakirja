@@ -1059,6 +1059,28 @@ function aarrekuvanOsoitteet(kuva) {
 }
 
 /*
+ * Aarteen pikkuikoni: laudan tarinallinen aarrekuva pyöreäksi
+ * rajattuna aina, kun laattatyypillä on kuva (omistajan päätös
+ * 10.8.2026: vanhat Afrikan tähti -tyyliset jalokivi-ikonit pois
+ * kaikkialta). Piirrosikoni jää varasoluksi laatoille, joilla ei ole
+ * kuvaa (tähti, kenkä, rosvo, linssi) ja laudoille ilman aarrekuvia
+ * (maailmankartta, Suomi, Istanbul) — sekä tilanteeseen, jossa kuva
+ * ei lataudu.
+ */
+function aarreIkoni(tokenTypes, type, size) {
+  const kuva = tokenTypes?.[type]?.kuva;
+  if (!kuva) return tokenIconSvg(type, size);
+  const img = document.createElement('img');
+  img.className = 'token-icon aarre-ikoni';
+  img.width = size;
+  img.height = size;
+  img.alt = tokenTypes[type].name ?? '';
+  const [osoite, vara] = aarrekuvanOsoitteet(kuva);
+  asetaKuva(img, osoite, vara, () => img.replaceWith(tokenIconSvg(type, size)));
+  return img;
+}
+
+/*
  * Valittu linssi on laitteen katseluasetus, ei pelin tapahtuma.
  *
  * Siksi se ei kuulu pelitallennukseen vaan omaan avaimeensa kuten
@@ -4889,8 +4911,25 @@ export class UI {
         r: 16.4 + hash01(`token:r:${cityId}`) * 1.4,
         class: 'token-disc',
       }, g);
-      const icon = drawTokenIcon(g, type);
-      icon.setAttribute('transform', 'scale(0.88)');
+      /*
+       * Käännetty laatta näyttää laudan tarinallisen aarrekuvan
+       * pyöreänä (omistajan päätös 10.8.2026); piirrosikoni jää
+       * varasoluksi laatoille ja laudoille ilman kuvaa. clip-path
+       * rajaa kuvan laattakiekon sisään, slice täyttää ympyrän.
+       */
+      const kuva = game.tokenTypes[type]?.kuva;
+      if (kuva && kuva.startsWith('assets/')) {
+        const im = el('image', {
+          x: -15, y: -15, width: 30, height: 30,
+          'clip-path': 'circle(14.5px)',
+          preserveAspectRatio: 'xMidYMid slice',
+          class: 'token-aarrekuva',
+        }, g);
+        im.setAttribute('href', kuva);
+      } else {
+        const icon = drawTokenIcon(g, type);
+        icon.setAttribute('transform', 'scale(0.88)');
+      }
     }
   }
 
@@ -10596,7 +10635,7 @@ export class UI {
     const counts = new Map();
     for (const type of gems) counts.set(type, (counts.get(type) ?? 0) + 1);
     for (const [type, n] of counts) {
-      rivi(tokenIconSvg(type, 44), `${game.tokenTypes[type].name}${n > 1 ? ` ×${n}` : ''}`);
+      rivi(aarreIkoni(game.tokenTypes, type, 44), `${game.tokenTypes[type].name}${n > 1 ? ` ×${n}` : ''}`);
     }
 
     /*
@@ -11968,7 +12007,7 @@ export class UI {
           body.appendChild(html('strong', '', `◈ Portti aukeaa — ${quiz.gate.label}!`));
           body.appendChild(html('span', 'muted', 'Tieto avasi tien: matka jatkuu ilmaiseksi.'));
         } else if (quiz.right && found) {
-          this.quizResult.appendChild(tokenIconSvg(quiz.found, 24));
+          this.quizResult.appendChild(aarreIkoni(game.tokenTypes, quiz.found, 24));
           body.appendChild(html('strong', '', `Löysit: ${found.name}`));
         } else if (quiz.right && quiz.explore) {
           /*
@@ -13054,7 +13093,7 @@ export class UI {
     // samalla kynällä kuin napit aina kun ikoni sarjasta löytyy.
     const kuva = viivaIkoni(icon);
     if (kuva) kuva.classList.add('toast-icon');
-    if (token) box.appendChild(tokenIconSvg(token, kind === 'die' ? 30 : 34));
+    if (token) box.appendChild(aarreIkoni(this.game.tokenTypes, token, kind === 'die' ? 30 : 34));
     else box.appendChild(kuva ?? html('span', 'toast-icon', icon ?? '•'));
     const body = html('div');
     body.appendChild(html('span', 'toast-text', text));
