@@ -30,10 +30,27 @@ import { KAARI_PAKETIT } from '../tyohuone-kehitys-data.js';
  * aktivoituisivat maailmankartalla, jolla on samat kaupunkitunnukset,
  * ja saapumiskortti yrittäisi soittaa ääntä jota ei ole.
  */
+/*
+ * Henkilön kutsumanimi saapumiskortin nappia varten ("Tapaa Nikos",
+ * omistajan toive 10.8.2026). Kuvaukset alkavat kaavalla
+ * "<ammatti> <Nimi> <tekee>…", ja ammatti voi olla moniosainen
+ * ("Kellonvalajan jälkeläinen Vera tuntee…") — nimi on siis
+ * kuvauksen alun viimeinen isolla alkava sana. Kohde voi antaa nimen
+ * myös itse (nimi-kenttä), jos kuvaus ei noudata kaavaa.
+ */
+const kutsumanimi = (kohde) => {
+  if (kohde.nimi) return kohde.nimi;
+  const sanat = String(kohde.henkilo ?? '').split(' ').slice(0, 3)
+    .map((s) => s.replace(/[,."]/g, ''));
+  let nimi = null;
+  for (const sana of sanat) if (/^[A-ZÅÄÖ]/u.test(sana)) nimi = sana;
+  return nimi;
+};
+
 export const TARINAKAARI = Object.fromEntries(
   KAARI_PAKETIT.kohteet
     .filter((kohde) => kohde.luennat !== false)
-    .map((kohde) => [kohde.id, kohde]),
+    .map((kohde) => [kohde.id, { ...kohde, nimi: kutsumanimi(kohde) }]),
 );
 
 /*

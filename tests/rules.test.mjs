@@ -2690,6 +2690,129 @@ test('pulmattoman kaarikaupungin ensimmäinen tehtävä on luettu kohtaaminen', 
   assert.equal(game.quiz.question, TARINAKAARI[kaupunki].kysymys.q);
 });
 
+/*
+ * Omistajan palaute 10.8.2026 illalla (Ateena): "Etsi kätkö on se
+ * vanha... pitäisi tulla se henkilö ja alkaa kertojan ääni kuulua."
+ * Kohtaaminen on siis kaupungin ensimmäinen tehtävä MYÖS
+ * pulmakaupungissa ja laatattomassa kaupungissa — pulma ja
+ * kertatutkiminen tulevat vasta kohtaamisen jälkeen.
+ */
+test('kohtaaminen on ensimmäinen tehtävä myös pulmakaupungissa; pulma vasta toisella pysähdyksellä', () => {
+  const pack = packById('europe');
+  const pulmakaupunki = (pack.puzzles ?? []).find((p) => TARINAKAARI[p.city]?.kysymys)?.city;
+  assert.ok(pulmakaupunki, 'Euroopassa on pulmallinen kaarikaupunki');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: pack.cities[0].id }],
+    pack,
+    seed: 412,
+  });
+  game.player.pos = { type: 'city', city: pulmakaupunki };
+  game.tokens.set(pulmakaupunki, 'ruby');
+  game.phase = 'action';
+
+  assert.ok(game.actionQuiz().ok);
+  assert.equal(game.quiz.kaari, true, 'ensin kohtaaminen, ei pulma');
+  game.answerQuiz(game.quiz.correct);
+  assert.equal(game.quiz.found, 'ruby', 'kohtaamisen oikea vastaus kääntää laatan');
+  game.closeQuiz();
+
+  // Pulma ei kulunut kohtaamisessa: se avautuu seuraavalla pysähdyksellä.
+  game.player.pos = { type: 'city', city: pulmakaupunki };
+  game.phase = 'action';
+  assert.ok(game.pendingPuzzle(), 'pulma odottaa yhä');
+  assert.ok(game.actionQuiz().ok);
+  assert.equal(game.quiz.kind, 'puzzle', 'toinen pysähdys avaa pulman');
+});
+
+test('laatattomassa kaarikaupungissa kohtaaminen tulee silti ja palkitsee kuten tutkiminen', () => {
+  const pack = packById('europe');
+  const kaupunki = pack.cities.find(
+    (c) => TARINAKAARI[c.id]?.kysymys && !(pack.puzzles ?? []).some((p) => p.city === c.id),
+  )?.id;
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: pack.cities[0].id }],
+    pack,
+    seed: 413,
+  });
+  game.player.pos = { type: 'city', city: kaupunki };
+  game.tokens.delete(kaupunki);
+  game.phase = 'action';
+
+  // Kohtaaminen avaa Tutki paikka -tilan, vaikka laattaa ei ole.
+  assert.ok(game.travelModes().includes('stay'), 'kaarikaupunki tarjoaa tutkimista ilman laattaakin');
+  const rahaEnnen = game.player.money;
+  assert.ok(game.actionQuiz().ok);
+  assert.equal(game.quiz.kaari, true, 'kohtaaminen tulee ilman laattaakin');
+  assert.equal(game.quiz.explore, true, 'ilman laattaa kohtaaminen palkitsee kuten tutkiminen');
+  game.answerQuiz(game.quiz.correct);
+  assert.equal(game.player.money - rahaEnnen, EXPLORE_REWARD, 'oikeasta saa löytöpalkkion');
+  assert.ok(!game.quiz.found, 'laattaa ei ole eikä tule');
+  game.closeQuiz();
+
+  // Kertatutkiminen ei kulunut kohtaamiseen: kevyt kysymys odottaa yhä.
+  assert.ok(game.canExplore(game.board.cityById.get(kaupunki)), 'kohtaaminen ei kuluta kertatutkimista');
+});
+
+test('botti ei kuluta yhteistä kohtaamista', () => {
+  const pack = packById('europe');
+  const kaupunki = pack.cities.find((c) => TARINAKAARI[c.id]?.kysymys)?.id;
+  const game = new Game({
+    players: [{ name: 'Kone', color: '#0f0', isBot: true, start: pack.cities[0].id }],
+    pack,
+    seed: 414,
+  });
+  game.player.pos = { type: 'city', city: kaupunki };
+  game.tokens.set(kaupunki, 'ruby');
+  game.phase = 'action';
+
+  assert.ok(game.actionQuiz().ok);
+  assert.ok(!game.quiz.kaari, 'botti ei saa kohtaamista');
+  assert.equal(game.kaariKaytetty.size, 0, 'kaari säästyy ihmiselle');
+});
+
+test('jokaisella kaaren kohteella on kutsumanimi Tapaa-nappia varten', () => {
+  for (const [id, kohde] of Object.entries(TARINAKAARI)) {
+    assert.ok(kohde.nimi && /^[A-ZÅÄÖ]/u.test(kohde.nimi), `kohteelta ${id} puuttuu kutsumanimi`);
+    assert.ok(!kohde.nimi.includes(' '), `kohteen ${id} kutsumanimi ei ole yksi sana: ${kohde.nimi}`);
+    // Johdettu nimi ei saa olla ammatti- tai sukusana: sen on
+    // esiinnyttävä myös kohtaamisrepliikissä tai oltava annettu käsin.
+    assert.ok(kohde.henkilo.includes(kohde.nimi), `kohteen ${id} nimi ${kohde.nimi} ei ole kuvauksessa`);
+  }
+});
+
+test('tehtävät loppuvat aikanaan: tehtavaTarjolla sammuu kun kaikki on tehty', () => {
+  const pack = packById('europe');
+  const kaupunki = pack.cities.find(
+    (c) => TARINAKAARI[c.id]?.kysymys && !(pack.puzzles ?? []).some((p) => p.city === c.id),
+  )?.id;
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: pack.cities[0].id }],
+    pack,
+    seed: 415,
+  });
+  game.player.pos = { type: 'city', city: kaupunki };
+  game.tokens.delete(kaupunki);
+  game.phase = 'action';
+
+  assert.ok(game.tehtavaTarjolla(), 'kohtaaminen odottaa');
+  game.actionQuiz();
+  game.answerQuiz((game.quiz.correct + 1) % game.quiz.options.length);
+  game.closeQuiz();
+
+  game.player.pos = { type: 'city', city: kaupunki };
+  game.phase = 'action';
+  assert.ok(game.tehtavaTarjolla(), 'kertatutkiminen odottaa vielä');
+  game.actionQuiz();
+  game.answerQuiz((game.quiz.correct + 1) % game.quiz.options.length);
+  game.closeQuiz();
+
+  game.player.pos = { type: 'city', city: kaupunki };
+  game.phase = 'action';
+  assert.equal(game.tehtavaTarjolla(), false, 'kaikki tehtävät on tehty');
+  // Tutki-nappi jää silti käyttöön UI:ssa: lehteä voi lukea aina
+  // (omistajan löytö 10.8.2026 — kortti ei saa kadota tehtävien mukana).
+});
+
 test('pulmassa on apukeinot: vihje ja 50:50', () => {
   const puzzle = packById('africa').puzzles[0];
   const game = puzzleGame(406, puzzle.city);

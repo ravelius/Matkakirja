@@ -16,12 +16,15 @@ export const PELIT = {
   paivitetty: '10.8.2026',
   johdanto: 'Tutki kätkö -pelit ovat kaikki ne tehtävät, jotka voivat '
     + 'paljastua Etsi kätkö -napin takaa. Pysähdyksessä on aina '
-    + 'täsmälleen yksi peli. Kaupungin ensimmäinen peli on luettu '
-    + 'kohtaaminen (tai isoisän pulma niissä kaupungeissa, joihin '
-    + 'sellainen on tehty), ja sen jälkeen muodot vaihtelevat '
-    + 'painotetulla arvonnalla. Tälle sivulle on koottu nykyiset '
-    + 'pelityypit ja ehdotukset uusiksi — kehitysjärjestys ja uudet '
-    + 'tyypit valitaan yhdessä omistajan kanssa.',
+    + 'täsmälleen yksi peli. Kaupungin ensimmäinen peli on AINA '
+    + 'luettu kohtaaminen — myös pulmakaupungeissa ja laatattomissa '
+    + 'kaupungeissa (omistajan tarkennus 10.8. illalla: henkilön ja '
+    + 'kertojan äänen on tultava joka kaupungissa). Saapumiskortin '
+    + 'nappi nimeää henkilön ("Tapaa Nikos"). Pulma ja muut muodot '
+    + 'vaihtelevat kohtaamisen jälkeisillä pysähdyksillä painotetulla '
+    + 'arvonnalla. Tälle sivulle on koottu nykyiset pelityypit ja '
+    + 'ehdotukset uusiksi — kehitysjärjestys ja uudet tyypit valitaan '
+    + 'yhdessä omistajan kanssa.',
   periaatteet: [
     'Yksi peli per pysähdys — pelit eivät koskaan kasaudu peräkkäin.',
     'Tarinasynkka: kaupungin saapumiskertomus ja kohtaamishenkilö '
@@ -41,10 +44,12 @@ export const PELIT = {
     {
       nimi: 'Kohtaamisvisa (tarinakaari)',
       tila: 'pelissä, luettu ääneen',
-      kuvaus: 'Kaupungin ensimmäinen peli: tarinan henkilö tervehtii '
-        + 'ja esittää isoisän jättämän kysymyksen. Kysymys ja henkilö '
-        + 'on kirjoitettu käsin joka kaupungille, ja kohtaaminen ja '
-        + 'aarrevihje luetaan ääneen.',
+      kuvaus: 'Kaupungin ensimmäinen peli joka kaupungissa: tarinan '
+        + 'henkilö tervehtii ja esittää isoisän jättämän kysymyksen. '
+        + 'Kysymys ja henkilö on kirjoitettu käsin joka kaupungille, '
+        + 'ja kohtaaminen ja aarrevihje luetaan ääneen. Laatattomassa '
+        + 'kaupungissa kohtaaminen palkitsee kuten tutkiminen '
+        + '(löytöpalkkio), laatallisessa oikea vastaus kääntää laatan.',
       synkka: 'Täysi — per kaupunki käsin kirjoitettu pari.',
     },
     {
@@ -90,8 +95,9 @@ export const PELIT = {
       kuvaus: 'Luonnoskirjan tehtävä, joka ratkeaa piirroksesta: '
         + 'roomalaiset numerot, Stonin suola-altaat, geysirin kello, '
         + 'vuoroveden laiturit, kellokukko… Joka pelikerralla hieman '
-        + 'erilainen. Pulmakaupungissa pulma on pysähdyksen ainoa '
-        + 'peli ja korvaa kohtaamisvisan.',
+        + 'erilainen. Pulma on pysähdyksen ainoa peli ja tulee '
+        + 'kohtaamisen jälkeisellä pysähdyksellä; jos laatta on '
+        + 'silloin vielä kääntämättä, oikea ratkaisu kääntää sen.',
       synkka: 'Käsin tehty kaupunkia varten.',
     },
     {

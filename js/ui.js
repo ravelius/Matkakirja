@@ -5237,8 +5237,16 @@ export class UI {
         this.actionsEl.appendChild(moreBtn);
       }
 
-      if (modes.includes('stay')) {
-        const stayBtn = this.iconButton('suurennuslasi', 'Tutki', 'primary');
+      /*
+       * Tutki on kaupungissa AINA tarjolla, tehtävistä riippumatta:
+       * kortti ja lehti ovat luettavaa sisältöä. Aiemmin nappi katosi
+       * heti kun tehtävät oli käytetty, ja lehtisivulle ei päässyt
+       * enää lainkaan (omistajan löytö 10.8.2026: "kahden väärän
+       * vastauksen jälkeen ei pääse enää ollenkaan edes
+       * lehtisivulle"). Korostus kertoo, odottaako tehtävä.
+       */
+      if (game.cityOf()) {
+        const stayBtn = this.iconButton('suurennuslasi', 'Tutki', modes.includes('stay') ? 'primary' : '');
         stayBtn.addEventListener('click', () => {
           sfx.play('paper');
           // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
@@ -6232,8 +6240,19 @@ export class UI {
     // ei ole artikkelia — kortissa lukee isoisän vakiorivi.
     this.arrivalCity.textContent = city.name;
     // Kohtaamiskaupungissa nappi kutsuu hahmon luo, ei kätkön:
-    // aarretehtävä aukeaa tarinallisen kohtaamisen kautta.
-    document.getElementById('arrival-yes').textContent = KOHTAAMISET[city.id]?.nappi ?? 'Etsi kätkö';
+    // aarretehtävä aukeaa tarinallisen kohtaamisen kautta. Kun
+    // tarinakaaren kohtaaminen odottaa, nappi nimeää henkilön
+    // ("Tapaa Nikos") — omistajan toive 10.8.2026: "pitäisi oikeasti
+    // olla tapaa joku henkilö -nappi". Kaaren käytyä teksti palaa
+    // kätköksi, koska seuraava tehtävä on taas tavallinen.
+    const kaariNappi = this.game.kaariTarina?.(city.id);
+    const tehtavaNappi = document.getElementById('arrival-yes');
+    tehtavaNappi.textContent = KOHTAAMISET[city.id]?.nappi
+      ?? (kaariNappi?.nimi ? `Tapaa ${kaariNappi.nimi}` : 'Etsi kätkö');
+    // Ilman tehtävää nappi on piilossa jo kortilla (ei vasta lehdessä,
+    // ks. paivitaTutkiAlapalkki): kortti jää luettavaksi ja Poistu
+    // palauttaa kartalle.
+    tehtavaNappi.hidden = !this.game.tehtavaTarjolla?.();
     this.arrivalImage.hidden = true;
     this.arrivalImage.removeAttribute('src');
     this.arrivalKuvakotelo.hidden = true;
@@ -7710,7 +7729,15 @@ export class UI {
      * jokaisen kaupunkisivun alareunassa") — täysleveä palkki, jota
      * ei tarvitse etsiä miltään tietyltä sivulta.
      */
-    kyllä.hidden = maalehti;
+    /*
+     * Tehtävänappi piiloon myös silloin, kun kaupungissa ei ole enää
+     * tehtävää (laatta käännetty, kohtaaminen ja pulma nähty,
+     * kertatutkiminen käytetty): kortti ja lehti jäävät luettaviksi,
+     * ja Poistu palauttaa kartalle. Ennen nappi olisi avannut
+     * virheilmoituksen — ja koko kortti oli saavuttamattomissa
+     * (omistajan löytö 10.8.2026).
+     */
+    kyllä.hidden = maalehti || !this.game.tehtavaTarjolla?.();
     ei.textContent = maalehti || viimeisella ? 'Poistu' : 'Poistu lehdestä';
 
     /*

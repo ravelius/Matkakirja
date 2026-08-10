@@ -1788,6 +1788,7 @@ export const KAARI_PAKETIT = {
       id: 'jerusalem',
       lauta: 'middleeast',
       luennat: false,
+      nimi: 'Elias',
       otsikko: 'Jerusalem — portti joka on kiinni',
       saapuminen: 'Kävelin vanhan kaupungin muurin ympäri ja laskin portit: '
         + 'seitsemästä kuljettiin sisään ja ulos, kahdeksas oli '
@@ -2061,6 +2062,7 @@ export const KAARI_PAKETIT = {
       id: 'mekka',
       lauta: 'middleeast',
       luennat: false,
+      nimi: 'Bilal',
       otsikko: 'Mekka — suunta jota koko maailma katsoo',
       saapuminen: 'Jiddan satamassa laivat purkivat pyhiinvaeltajia aamusta '
         + 'iltaan, ja kaikilla oli sama määränpää, jonne minun tieni ei '
