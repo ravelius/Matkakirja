@@ -10,11 +10,13 @@
  */
 
 export const TILANNE = {
-  paivitetty: '10.8.2026 (aamupäivä klo 9.45)',
-  tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN, sitten Lähi-itä '
-    + '(omistajan tilaus 9.8.). Euroopasta auki enää nähtävyysjuttu-'
-    + 'erä 13 ja loppu-QA; ME-maiden aihesivut etenevät rinnalla. '
-    + 'Matkakirjan tarinapuoli on parkissa.',
+  paivitetty: '10.8.2026 (aamupäivä klo 11.30) — TIIMI LUOVUTUSKUNNOSSA',
+  tavoite: 'TILINVAIHTO VALMISTELTU (omistajan ohje 10.8.): kaikki '
+    + 'sessiot ajoivat urakkansa pysähdyskohtaan ja kirjasivat '
+    + 'jatkokohdan omaan tilannedokumenttiinsa (docs/*-tilanne.md). '
+    + 'Euroopan sisältö on valmis (nähtävyysjutut 34 kaupungissa, '
+    + 'erät 1–13); auki enää kokoava QA + läpipelaus. ME eteni '
+    + 'erään C asti (ARE, Jordania, Oman, Qatar, Egypti, Kuwait).',
   rivit: [
     {
       tekija: 'Fable',

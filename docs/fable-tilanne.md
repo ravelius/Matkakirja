@@ -549,6 +549,22 @@ jälkeen.
   (versiokollisio nro 5 — ratkaisu kuten aina: merge origin/main +
   uusi-versio uudelleen).
 
+### Vahtikierros klo ~08:25Z: LUOVUTUSKUNTO SAAVUTETTU
+
+- **Main: v511** (Kuwait, #745 — Opus 1 hoiti v510-versiokollision
+  itse kaavalla). Kaikki neljä sessiota ovat pysähtyneet omistajan
+  ohjeen mukaisesti ja KAIKKI luovutusdokumentit ovat mainissa:
+  opus1-tilanne.md (+ tekijämerkintöjen tarkistin), opus2-tilanne.md,
+  sonnet-tilanne.md, sonnet2-tilanne.md ja tämä tiedosto.
+- ME-erä C on siis valmis (Egypti v507 + Kuwait v511). Uuden tilin
+  jonot: kokoava koko Euroopan QA + Fablen läpipelaus (valmiusportin
+  kohdat 8b–9), Opus-tyypille ME-erä D (Saudi-Arabia ILMAN pyhiä
+  kaupunkeja + Bahrain), karttasessiolle ME-maakartat
+  (Dubai-pilotti), QA:lle 6 kuvaduplikaatin siivous.
+- Ei jumeja, ei uusia eriä, ei kierrätyksiä. Yövahti-cron
+  (trig_01XuRjdzwJ9VGjzFjCBj5XYN) jää tälle tilille — poistetaan
+  tilinvaihdon yhteydessä delete_triggerillä.
+
 ### Vahtikierros klo ~07:40Z: pysäytyskirjaukset koossa
 
 - Kaikki neljä vastasivat pysäytysohjeeseen: Sonnet 2:n
