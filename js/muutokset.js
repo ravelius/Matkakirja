@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 524, teksti: 'Unohdetuille aarteille omat kuvat seitsemälle laudalle' },
   { v: 523, teksti: 'Alun hionta: aulafeidi, äänivalikko 3 tilaan, ohjerivi' },
   { v: 522, teksti: 'Neljä kiellettyä lisenssiä vaihdettu sallittuihin kuviin' },
   { v: 521, teksti: 'Intro v3, lähtöaulan ambienssi, pehmeämpi moottori ja zoomit' },

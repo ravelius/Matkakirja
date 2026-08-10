@@ -272,7 +272,10 @@ export const NORTHAMERICA = {
     // Topaasin tilalla Klondiken kulta: kultaryntäys veti 1890-luvulla
     // kymmeniätuhansia onnenonkijoita Yukonin jokilaaksoon.
     types: themedTokenTypes({
-      star: { name: 'Montezuman aarre' },
+      star: {
+        name: 'Montezuman aarre',
+        kuva: 'assets/aarteet/aarre-northamerica-star.jpg',
+      },
       ruby: {
         name: 'Kultaryntäyksen hippu', color: '#e0b02a',
         kuva: 'assets/aarteet/aarre-northamerica-ruby.jpg',
