@@ -3347,8 +3347,8 @@ export class UI {
     // varuste on laukussa.
     nappi.hidden = !rajat || this.avausNakymassa() || !this.maatiedotVarusteOmistettu();
     nappi.setAttribute('aria-pressed', String(this.maatiedotHalutaan()));
-    // Pilleri elää samasta varusteesta — päivitys aina samassa.
-    this.paivitaMaaPilleriTila();
+    // Pillerin väistöt päivittyvät kirjanapin mukana.
+    this.paivitaMaaPilleriPuoli();
   }
 
   paivitaZoomiNapit() {
@@ -4830,15 +4830,15 @@ export class UI {
   }
 
   /**
-   * Maan nimi + ⓘ kiinteänä pillerinä kartan KEHYKSELLÄ, ei kartalla
-   * (Fable maxin speksi 10.8.2026, omistajan tilaus "tee fablen
-   * ehdotus"). HTML-nappi map-panen yläreunassa: ei skaalaudu
-   * zoomissa, ei liiku panoroinnissa eikä voi koskaan peittää
-   * kaupunkia, nimeä tai nappulaa — ja kosketuskohde on aina täydet
-   * 44 px ilman skaalalaskentaa. Puoli valitaan matkapäiväkirjakortin
-   * peilikuvana (paivitaMaaPilleriPuoli), jottei pilleri jää kortin
-   * alle. maa = null piilottaa pillerin (lauta ilman muotoja,
-   * pelin alku).
+   * Maan nimi + lippu + ⓘ kiinteänä pillerinä kartan KEHYKSELLÄ, ei
+   * kartalla (Fable maxin speksi 10.8.2026; omistajan tarkennus
+   * samana iltana: pilleri asuu AINA oikeassa reunassa ja on aina
+   * näkyvillä — nykyisen maan lehti aukeaa siitä ilman varusteita.
+   * Vain maavertailu ja minkä tahansa maan selailu (kirjanappi +
+   * maatiedot-tila) ovat löydettäviä varusteita). HTML-nappi ei
+   * skaalaudu zoomissa, ei liiku panoroinnissa eikä voi peittää
+   * kaupunkia tai nappulaa. maa = null piilottaa pillerin (lauta
+   * ilman muotoja, pelin alku).
    */
   paivitaMaaPilleri(maa, iso) {
     let nappi = this.maaPilleri;
@@ -4851,6 +4851,10 @@ export class UI {
       nappi.type = 'button';
       nappi.className = 'maa-pilleri';
       nappi.appendChild(html('span', 'maa-pilleri-nimi', ''));
+      const lippu = document.createElement('img');
+      lippu.className = 'maa-pilleri-lippu';
+      lippu.alt = '';
+      nappi.appendChild(lippu);
       nappi.appendChild(html('span', 'maa-pilleri-i', 'i'));
       nappi.addEventListener('click', () => {
         if (this.maaPilleriIso) this.avaaMaalehti(this.maaPilleriIso);
@@ -4859,19 +4863,27 @@ export class UI {
       this.maaPilleri = nappi;
     }
     this.maaPilleriIso = iso;
-    this.maaPilleriNimi = maa.nimi;
     nappi.querySelector('.maa-pilleri-nimi').textContent = maa.nimi;
+    nappi.setAttribute('aria-label', `${maa.nimi}: avaa maan lehti`);
+    // Maan lippu nimen perässä (omistajan toive 10.8.2026 ilta) —
+    // sama Commons-tiedosto kuin saapumiskortilla; puuttuva lippu
+    // tai verkko piilottaa kuvan äänettömästi.
+    const lippu = nappi.querySelector('.maa-pilleri-lippu');
+    if (maa.lippu) {
+      lippu.hidden = false;
+      asetaKuva(lippu, lippuUrl(maa.lippu, 40), lippuVara(maa.lippu, 40), () => { lippu.hidden = true; });
+    } else {
+      lippu.hidden = true;
+      lippu.removeAttribute('src');
+    }
     nappi.hidden = false;
-    this.paivitaMaaPilleriTila();
     this.paivitaMaaPilleriPuoli();
   }
 
   /**
-   * ⓘ ja maalehden avaus pilleristä vain, kun Maiden tiedot -varuste
-   * on löydetty (omistajan päätös 10.8.2026: lisätieto maista on
-   * löydettävä varuste, ei oletusnappi). Ilman varustetta pilleri on
-   * pelkkä maan nimikyltti. Sama portti sulkee kirjanapin
-   * (paivitaMaalehtiNappi).
+   * Minkä tahansa maan selailu (kirjanappi + maatiedot-tila) ja
+   * vertailu ovat löydettäviä varusteita (omistajan päätös
+   * 10.8.2026) — NYKYISEN maan pilleri sen sijaan on aina käytössä.
    */
   maatiedotVarusteOmistettu() {
     const omat = this.linssiTuki?.omistus?.omistetut?.(this.game, this.game.player)
@@ -4879,28 +4891,17 @@ export class UI {
     return omat.has('maatiedot');
   }
 
-  /** Kevyt tilapäivitys renderistä: varuste voi löytyä kesken maan. */
-  paivitaMaaPilleriTila() {
-    const nappi = this.maaPilleri;
-    if (!nappi || nappi.hidden) return;
-    const auki = this.maatiedotVarusteOmistettu();
-    nappi.disabled = !auki;
-    nappi.classList.toggle('avattava', auki);
-    const i = nappi.querySelector('.maa-pilleri-i');
-    if (i) i.hidden = !auki;
-    nappi.setAttribute('aria-label', auki
-      ? `${this.maaPilleriNimi}: avaa maan lehti` : (this.maaPilleriNimi ?? ''));
-  }
-
   /**
-   * Pillerin puoli on päiväkirjakortin peilikuva: kortti vasemmalla →
-   * pilleri oikealla (kirjanappia väistäen), kortti oikealla →
-   * pilleri vasemmalla. Kutsutaan myös placeFactCardista, jotta puoli
-   * seuraa korttia ruudun kääntyessä.
+   * Pilleri asuu aina oikeassa reunassa (omistajan tarkennus
+   * 10.8.2026 ilta): kirjanappia väistetään sivusuunnassa ja
+   * päiväkirjakorttia pystysuunnassa, jos kortti on samassa
+   * nurkassa. Kutsutaan renderistä ja placeFactCardista.
    */
   paivitaMaaPilleriPuoli() {
-    if (!this.maaPilleri) return;
-    this.maaPilleri.dataset.side = this.factCard?.dataset.corner === 'tl' ? 'oikea' : 'vasen';
+    const nappi = this.maaPilleri;
+    if (!nappi) return;
+    nappi.dataset.kirja = String(!(document.getElementById('maalehti-nappi')?.hidden ?? true));
+    nappi.dataset.kortti = String(this.factCard?.dataset.corner === 'tr');
   }
 
   /** Kartalla näkyvät vain käännetyt laatat omina kuvakkeinaan. */
@@ -11401,7 +11402,6 @@ export class UI {
     this.tahdistaMaatiedot(this.maatiedotHalutaan());
     if (this.dead) return;
     this.paivitaMaalehtiNappi();
-    this.paivitaMaaPilleriTila();
     this.paivitaLinssiNappi();
     this.paivitaLinssiTiedot();
     this.piirraLinssiSelite();

@@ -3785,15 +3785,16 @@ body.radio-tila .board-hint {
 .maa-pilleri {
   position: absolute;
   top: 0.6rem;
-  left: 0.5rem;
+  right: 0.5rem;
   z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
   /* Matala kyltti — sama mitta kuin matkakirjan supistetulla
-   * chipillä (omistajan toive 10.8.2026). Ilman varustetta pilleri
-   * ei ole nappi, joten 44 px:n osumapintaa ei tarvita; varusteen
-   * kanssa osuma-alue laajennetaan ::after-pseudolla. */
+   * chipillä (omistajan toive 10.8.2026); osuma-alue laajennetaan
+   * 44 pikseliin ::after-pseudolla. Asuu AINA oikeassa reunassa
+   * (omistajan tarkennus samana iltana); kirjanappia väistetään
+   * sivusuunnassa ja yläoikealle osuvaa päiväkirjakorttia alaspäin. */
   min-height: 1.9rem;
   padding: 0.1rem 0.75rem;
   border-radius: 999px;
@@ -3804,23 +3805,29 @@ body.radio-tila .board-hint {
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.maa-pilleri:disabled { cursor: default; }
-
-.maa-pilleri.avattava { cursor: pointer; }
-
-.maa-pilleri.avattava::after {
+.maa-pilleri::after {
   content: '';
   position: absolute;
   inset: -8px;
 }
 
-.maa-pilleri[data-side='oikea'] { left: auto; right: 3.2rem; }
+.maa-pilleri[data-kirja='true'] { right: 3.2rem; }
+
+.maa-pilleri[data-kortti='true'] { top: 3.4rem; }
 
 .maa-pilleri[hidden] { display: none; }
 
-.maa-pilleri-i[hidden] { display: none; }
+.maa-pilleri-lippu {
+  height: 0.95em;
+  width: auto;
+  border: 1px solid rgba(70, 51, 31, 0.4);
+  border-radius: 2px;
+}
+
+.maa-pilleri-lippu[hidden] { display: none; }
 
 .maa-pilleri-nimi { pointer-events: none; }
 
@@ -3837,11 +3844,11 @@ body.radio-tila .board-hint {
   pointer-events: none;
 }
 
-.maa-pilleri.avattava:hover,
-.maa-pilleri.avattava:focus-visible { border-color: var(--map-ink); }
+.maa-pilleri:hover,
+.maa-pilleri:focus-visible { border-color: var(--map-ink); }
 
-.maa-pilleri.avattava:hover .maa-pilleri-i,
-.maa-pilleri.avattava:focus-visible .maa-pilleri-i {
+.maa-pilleri:hover .maa-pilleri-i,
+.maa-pilleri:focus-visible .maa-pilleri-i {
   background: var(--map-ink);
   border-color: var(--map-ink);
   color: rgba(245, 231, 200, 0.95);

@@ -3793,15 +3793,16 @@ body.radio-tila .board-hint {
 .maa-pilleri {
   position: absolute;
   top: 0.6rem;
-  left: 0.5rem;
+  right: 0.5rem;
   z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
   /* Matala kyltti — sama mitta kuin matkakirjan supistetulla
-   * chipillä (omistajan toive 10.8.2026). Ilman varustetta pilleri
-   * ei ole nappi, joten 44 px:n osumapintaa ei tarvita; varusteen
-   * kanssa osuma-alue laajennetaan ::after-pseudolla. */
+   * chipillä (omistajan toive 10.8.2026); osuma-alue laajennetaan
+   * 44 pikseliin ::after-pseudolla. Asuu AINA oikeassa reunassa
+   * (omistajan tarkennus samana iltana); kirjanappia väistetään
+   * sivusuunnassa ja yläoikealle osuvaa päiväkirjakorttia alaspäin. */
   min-height: 1.9rem;
   padding: 0.1rem 0.75rem;
   border-radius: 999px;
@@ -3812,23 +3813,29 @@ body.radio-tila .board-hint {
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.maa-pilleri:disabled { cursor: default; }
-
-.maa-pilleri.avattava { cursor: pointer; }
-
-.maa-pilleri.avattava::after {
+.maa-pilleri::after {
   content: '';
   position: absolute;
   inset: -8px;
 }
 
-.maa-pilleri[data-side='oikea'] { left: auto; right: 3.2rem; }
+.maa-pilleri[data-kirja='true'] { right: 3.2rem; }
+
+.maa-pilleri[data-kortti='true'] { top: 3.4rem; }
 
 .maa-pilleri[hidden] { display: none; }
 
-.maa-pilleri-i[hidden] { display: none; }
+.maa-pilleri-lippu {
+  height: 0.95em;
+  width: auto;
+  border: 1px solid rgba(70, 51, 31, 0.4);
+  border-radius: 2px;
+}
+
+.maa-pilleri-lippu[hidden] { display: none; }
 
 .maa-pilleri-nimi { pointer-events: none; }
 
@@ -3845,11 +3852,11 @@ body.radio-tila .board-hint {
   pointer-events: none;
 }
 
-.maa-pilleri.avattava:hover,
-.maa-pilleri.avattava:focus-visible { border-color: var(--map-ink); }
+.maa-pilleri:hover,
+.maa-pilleri:focus-visible { border-color: var(--map-ink); }
 
-.maa-pilleri.avattava:hover .maa-pilleri-i,
-.maa-pilleri.avattava:focus-visible .maa-pilleri-i {
+.maa-pilleri:hover .maa-pilleri-i,
+.maa-pilleri:focus-visible .maa-pilleri-i {
   background: var(--map-ink);
   border-color: var(--map-ink);
   color: rgba(245, 231, 200, 0.95);
@@ -121874,13 +121881,31 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     haivyta(audio, taso(oma), null, nouse);
     vahdiSilmukka(oma, audio);
   }).catch(petti);
+  /*
+   * VAHTIAJASTIN: peilin 404 voi jäädä pelkäksi stalled-tapahtumaksi
+   * ilman erroria (mitattu 10.8.2026: peilistä puuttunut
+   * matkustamoäänite ei koskaan lauennut varareittiä ja avauslento
+   * jäi hiljaiseksi). Jos ääni ei ole soittokunnossa kohtuuajassa
+   * eikä virhettäkään ole tullut, mennään samaan petti-polkuun kuin
+   * error-tapahtumasta.
+   */
+  let vahti = null;
+  const viritaVahti = () => {
+    clearTimeout(vahti);
+    vahti = setTimeout(() => {
+      if (audio.readyState < 3 && nykyinen === oma) petti();
+    }, 6000);
+  };
+  audio.addEventListener('canplay', () => clearTimeout(vahti));
   const petti = () => {
+    clearTimeout(vahti);
     if (!varareittiKokeiltu && onPeilista(audio.getAttribute('src'))) {
       varareittiKokeiltu = true;
       peiliPetti('aanet');
       if (nykyinen !== oma) return;
       audio.src = oma.osoite;
       audio.load();
+      viritaVahti();
       soi();
       return;
     }
@@ -121902,6 +121927,7 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     varalle();
   };
   audio.addEventListener('error', petti);
+  viritaVahti();
   soi();
   return audio;
 }
@@ -131031,8 +131057,8 @@ class UI {
     // varuste on laukussa.
     nappi.hidden = !rajat || this.avausNakymassa() || !this.maatiedotVarusteOmistettu();
     nappi.setAttribute('aria-pressed', String(this.maatiedotHalutaan()));
-    // Pilleri elää samasta varusteesta — päivitys aina samassa.
-    this.paivitaMaaPilleriTila();
+    // Pillerin väistöt päivittyvät kirjanapin mukana.
+    this.paivitaMaaPilleriPuoli();
   }
 
   paivitaZoomiNapit() {
@@ -132514,15 +132540,15 @@ class UI {
   }
 
   /**
-   * Maan nimi + ⓘ kiinteänä pillerinä kartan KEHYKSELLÄ, ei kartalla
-   * (Fable maxin speksi 10.8.2026, omistajan tilaus "tee fablen
-   * ehdotus"). HTML-nappi map-panen yläreunassa: ei skaalaudu
-   * zoomissa, ei liiku panoroinnissa eikä voi koskaan peittää
-   * kaupunkia, nimeä tai nappulaa — ja kosketuskohde on aina täydet
-   * 44 px ilman skaalalaskentaa. Puoli valitaan matkapäiväkirjakortin
-   * peilikuvana (paivitaMaaPilleriPuoli), jottei pilleri jää kortin
-   * alle. maa = null piilottaa pillerin (lauta ilman muotoja,
-   * pelin alku).
+   * Maan nimi + lippu + ⓘ kiinteänä pillerinä kartan KEHYKSELLÄ, ei
+   * kartalla (Fable maxin speksi 10.8.2026; omistajan tarkennus
+   * samana iltana: pilleri asuu AINA oikeassa reunassa ja on aina
+   * näkyvillä — nykyisen maan lehti aukeaa siitä ilman varusteita.
+   * Vain maavertailu ja minkä tahansa maan selailu (kirjanappi +
+   * maatiedot-tila) ovat löydettäviä varusteita). HTML-nappi ei
+   * skaalaudu zoomissa, ei liiku panoroinnissa eikä voi peittää
+   * kaupunkia tai nappulaa. maa = null piilottaa pillerin (lauta
+   * ilman muotoja, pelin alku).
    */
   paivitaMaaPilleri(maa, iso) {
     let nappi = this.maaPilleri;
@@ -132535,6 +132561,10 @@ class UI {
       nappi.type = 'button';
       nappi.className = 'maa-pilleri';
       nappi.appendChild(html('span', 'maa-pilleri-nimi', ''));
+      const lippu = document.createElement('img');
+      lippu.className = 'maa-pilleri-lippu';
+      lippu.alt = '';
+      nappi.appendChild(lippu);
       nappi.appendChild(html('span', 'maa-pilleri-i', 'i'));
       nappi.addEventListener('click', () => {
         if (this.maaPilleriIso) this.avaaMaalehti(this.maaPilleriIso);
@@ -132543,19 +132573,27 @@ class UI {
       this.maaPilleri = nappi;
     }
     this.maaPilleriIso = iso;
-    this.maaPilleriNimi = maa.nimi;
     nappi.querySelector('.maa-pilleri-nimi').textContent = maa.nimi;
+    nappi.setAttribute('aria-label', `${maa.nimi}: avaa maan lehti`);
+    // Maan lippu nimen perässä (omistajan toive 10.8.2026 ilta) —
+    // sama Commons-tiedosto kuin saapumiskortilla; puuttuva lippu
+    // tai verkko piilottaa kuvan äänettömästi.
+    const lippu = nappi.querySelector('.maa-pilleri-lippu');
+    if (maa.lippu) {
+      lippu.hidden = false;
+      asetaKuva(lippu, lippuUrl(maa.lippu, 40), lippuVara(maa.lippu, 40), () => { lippu.hidden = true; });
+    } else {
+      lippu.hidden = true;
+      lippu.removeAttribute('src');
+    }
     nappi.hidden = false;
-    this.paivitaMaaPilleriTila();
     this.paivitaMaaPilleriPuoli();
   }
 
   /**
-   * ⓘ ja maalehden avaus pilleristä vain, kun Maiden tiedot -varuste
-   * on löydetty (omistajan päätös 10.8.2026: lisätieto maista on
-   * löydettävä varuste, ei oletusnappi). Ilman varustetta pilleri on
-   * pelkkä maan nimikyltti. Sama portti sulkee kirjanapin
-   * (paivitaMaalehtiNappi).
+   * Minkä tahansa maan selailu (kirjanappi + maatiedot-tila) ja
+   * vertailu ovat löydettäviä varusteita (omistajan päätös
+   * 10.8.2026) — NYKYISEN maan pilleri sen sijaan on aina käytössä.
    */
   maatiedotVarusteOmistettu() {
     const omat = this.linssiTuki?.omistus?.omistetut?.(this.game, this.game.player)
@@ -132563,28 +132601,17 @@ class UI {
     return omat.has('maatiedot');
   }
 
-  /** Kevyt tilapäivitys renderistä: varuste voi löytyä kesken maan. */
-  paivitaMaaPilleriTila() {
-    const nappi = this.maaPilleri;
-    if (!nappi || nappi.hidden) return;
-    const auki = this.maatiedotVarusteOmistettu();
-    nappi.disabled = !auki;
-    nappi.classList.toggle('avattava', auki);
-    const i = nappi.querySelector('.maa-pilleri-i');
-    if (i) i.hidden = !auki;
-    nappi.setAttribute('aria-label', auki
-      ? `${this.maaPilleriNimi}: avaa maan lehti` : (this.maaPilleriNimi ?? ''));
-  }
-
   /**
-   * Pillerin puoli on päiväkirjakortin peilikuva: kortti vasemmalla →
-   * pilleri oikealla (kirjanappia väistäen), kortti oikealla →
-   * pilleri vasemmalla. Kutsutaan myös placeFactCardista, jotta puoli
-   * seuraa korttia ruudun kääntyessä.
+   * Pilleri asuu aina oikeassa reunassa (omistajan tarkennus
+   * 10.8.2026 ilta): kirjanappia väistetään sivusuunnassa ja
+   * päiväkirjakorttia pystysuunnassa, jos kortti on samassa
+   * nurkassa. Kutsutaan renderistä ja placeFactCardista.
    */
   paivitaMaaPilleriPuoli() {
-    if (!this.maaPilleri) return;
-    this.maaPilleri.dataset.side = this.factCard?.dataset.corner === 'tl' ? 'oikea' : 'vasen';
+    const nappi = this.maaPilleri;
+    if (!nappi) return;
+    nappi.dataset.kirja = String(!(document.getElementById('maalehti-nappi')?.hidden ?? true));
+    nappi.dataset.kortti = String(this.factCard?.dataset.corner === 'tr');
   }
 
   /** Kartalla näkyvät vain käännetyt laatat omina kuvakkeinaan. */
@@ -139082,7 +139109,6 @@ class UI {
     this.tahdistaMaatiedot(this.maatiedotHalutaan());
     if (this.dead) return;
     this.paivitaMaalehtiNappi();
-    this.paivitaMaaPilleriTila();
     this.paivitaLinssiNappi();
     this.paivitaLinssiTiedot();
     this.piirraLinssiSelite();
@@ -141015,6 +141041,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 534, teksti: 'Maapilleri lippuineen oikealle, lennon ääni varareitille' },
   { v: 533, teksti: 'Kohtaamiskuvat kortille: Ateena, Sofia ja kätkölöytö' },
   { v: 532, teksti: 'Matkustamoääni avauslentoon, maatiedot löydettäväksi' },
   { v: 531, teksti: 'Aarrekortti pysyy luennan ajan ja ruksi sulkee sen' },
@@ -141632,7 +141659,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.533';
+const APP_VERSION = '2026-08-09.534';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
