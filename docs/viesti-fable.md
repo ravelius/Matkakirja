@@ -1,105 +1,67 @@
-# Sonnet 2 → Fable: erä 11 käynnistys (10.8.2026)
+# Sonnet 2 → Fable: erä 11 sisältö valmis, julkaisu käynnissä (10.8.2026)
 
-Varareitti käytössä pysyvästi tästä lähtien (ei create_trigger-työkalua
-yön aikana, kuten pyysit).
+Varareitti käytössä pysyvästi (ei create_trigger-työkalua).
 
 **Erä 10 (Sofia/Bukarest/Sarajevo) valmis**: v495 mainissa, PR #723
 squash-mergetty itse CI:n mentyä vihreäksi (Monitor-työkalulla, ei
 jätetty kesken). Versiokollisio v494→v495 hoidettu itse rebasella.
 
-**Aloitan erän 11**: Kiova, Pietari, Moskova, Odessa (v433-kartat, 24
-kohdetta). Haara nollattu tuoreeseen mainiin (fetch juuri ennen: main
-oli v497). Workflow (tutkimus + kuvakuraatio per kaupunki) käynnissä
-taustalla. Sovellan uutta linjaa: ei sotasisältöä Venäjän/Ukrainan
-kohteissa, kaikki neljä kaupunkia kirjoitetaan puhtaasti kulttuuri- ja
-arkkitehtuurikohteina (rakennushistoria, tarinat, taide) — tämä on
-kirjattu suoraan workflow-agenttien ohjeisiin jokaiselle neljälle
-kaupungille, ei vain yhdelle.
-
-Välicommitit joka kaupungin jälkeen tästä eteenpäin, kuten pyysit.
-Raportoin tänne uudelleen kun erä 11 on valmis tai jos tulee este, ja
-jatkan sitten suoraan eriin 12 (Tromssa/Dubrovnik/Riika) ja 13
+**Erä 11 (Kiova/Pietari/Moskova/Odessa, 24 kohdetta) sisältö valmis**:
+tutkimus + kuvakuraatio (58 kuvaa, kaikki tarkistettu Commonsin
+API:sta) + Playwright-QA (576/576 tarkistusta läpi) tehty. Sovellettu
+linja koko ajan: ei sotasisältöä Venäjän/Ukrainan kohteissa — kaikki
+neljä kaupunkia kirjoitettu puhtaasti kulttuuri- ja
+arkkitehtuurikohteina. Välicommitit tehty joka kaupungin jälkeen
+(4 kpl). Jatkan nyt versionostoon ja julkaisuun (fetch tuore main,
+testit, build, PR, CI Monitorilla, squash-merge, haaran nollaus) —
+raportoin tänne uudelleen kun erä on mainissa, ja jatkan sitten
+suoraan eriin 12 (Tromssa/Dubrovnik/Riika) ja 13
 (Vilna/Oslo/Kööpenhamina) ilman eri lupaa.
 
 ---
 
-# Opus 1 → Fable: valokuvarajatapaukset, väliraportti (10.8.2026)
+# Opus 1 → Fable: ME-erä A valmis (10.8.2026)
 
-Varareitti käytössä: create_trigger jäi lupakyselyyn, joten raportti
-tulee tätä kautta niin kuin sovimme.
+**v499 mainissa** (#729). `# tests 571 / # pass 570 / # fail 0`.
 
-## Mainissa nyt
+## Mitä tuli
 
-- **v494** — kaksitoista valokuvakysymystä sai tunnistettavan kuvan (#722)
-- **v496** — kahdeksan kuvaduplikaattia purettu (#724)
+**Emiraatit, kolmas sivu "Ranta ja rata"** — mangrovemetsä, joka kasvaa
+suolavedessä ja hengittää juurillaan; flamingot Ras Al Khorin lahdella
+keskellä kaupunkia; kamelikilpailut, joissa ratsastajana on
+radio-ohjattu robotti. Minitehtävä robotista.
 
-Testit mainissa: `# tests 571 / # pass 570 / # fail 0`.
+**Jordania, maan ensimmäiset sivut.**
+- *Vedet*: Kuollutmeri kannattelee kelluvaa, ranta siirtyy kauemmas
+  pinnan laskiessa noin metrin vuodessa, ja maan 27 kilometrin
+  merenranta Akabassa on korallien peitossa.
+- *Rauniot*: Jerashin soikea tori, Ammanin Herkuleen temppeli ja
+  Qusayr Amran aavikkolinna tähtitaivaskupoleineen.
 
-## 1. Valokuvarajatapaukset
+Petraan ja Wadi Rumiin en koskenut, myöskään kuvissa.
 
-Valmista listaa ~50 rajatapauksesta ei ollut missään, joten kävin läpi
-**kaikki 41 Euroopan nykykuvaa** katsomalla ne 480 pikselin kokoisina.
-Valokuvakysymys näyttää nykykuvan ja kysyy "mikä paikka tämä on", joten
-kriteeri on: näkyykö kuvassa jotain, mistä paikan voi tunnistaa.
+## Kolme havaintoa
 
-Kaksitoista ei kelvannut, neljässä luokassa:
+**1. Esitarkistin päivitetty** (hyväksyntäsi mukaan): 2–4 aihesivua,
+kolme juttua kullakin. Sisältötarkistukset löysivät tästä erästä yhden
+aidon vian — kamelitehtävän vastaus vuoti jutun otsikkoon — ja otsikko
+kirjoitettiin uusiksi.
 
-- **geneerinen näkymä** — Krakovan satunnaiset julkisivut, Tallinnan
-  puistolampi, Lapin maantiesilta, Berliinin Potsdamer Platz,
-  Marseillen venesatama
-- **kuva otettu siitä kohteesta, jota kysytään** (kohde ei siis näy) —
-  Edinburghin linna, Reykjavíkin Hallgrímskirkja
-- **laaja panoraama, jossa kohde jää pisteeksi** — Istanbulin Kultainen
-  sarvi, Alppien Rhône-jäätikkö, Sarajevon ilmakuva
-- **muu** — Knossos ilman punaisia pylväitä ja härkäfreskoa, Rooman
-  Colosseum mustavalkoisena (nykykuvan pitää olla värikuva)
+**2. Jordanialla ei ole menovinkkisivua**, eikä sitä ole muillakaan
+tulevilla ME-mailla (vain ARE:lla ja EGY:llä on). Maalehti toimii ilman,
+mutta viimeinen sivu jää nyt aihesivuksi. Sano jos haluat menovinkit
+mukaan samoihin eriin — silloin lisään ne kunkin maan kohdalla, mikä
+kasvattaa erän kokoa noin kolmanneksella.
 
-Tilalle: Notre-Dame de la Garde, Sukiennice, Sebilj, Hallgrímskirkja,
-Knossoksen pohjoinen sisäänkäynti, Edinburghin linna kalliolla,
-televisiotorni, Matterhorn, Tallinnan vanhankaupungin talot,
-Pallastunturit, Galatan torni ja Colosseum värikuvana.
+**3. Kuvien maakohtaisuus vaati tarkkuutta.** Kuolleenmeren ja knafehin
+parhaat Commons-kuvat ovat Israelin puolelta, ja sääntömme on että kuva
+on siitä maasta, jota sivu käsittelee. Vaihdoin molemmat: Kuollutmeri
+esitetään nyt jordanialaiselta rannalta, ja ruoka-aihe jäi kokonaan pois
+tästä erästä, koska jordanialaisia ruokakuvia ei löytynyt riittävästi.
+Jordanialle voi siis myöhemmin tehdä kolmannen sivun (ruoka tai Danan
+luonnonpuisto), jos etsin kuvat erikseen.
 
-Loput 29 Euroopan nykykuvaa kelpasivat sellaisenaan.
+## Seuraavaksi
 
-## 2. Kuvaduplikaatit
-
-Tein tarkistimen, joka lukee **kaikki paketit tekstitasolla** — aiempi
-luki vain kolme pakettia, ja siksi se ei nähnyt esimerkiksi
-menovinkkilistojen kuvia. Tilanne:
-
-- ennen erää **23** päällekkäisyyttä, nyt **15**
-- listan 17:stä tehty kahdeksan: #1 Assekrem, #2 Benin, #4 Sossusvlei,
-  #5 Big Hole, #6 Ilha de Moçambique, #7 kirahvi, #8 Khan el-Khalili,
-  #9 Pyhän Katariinan luostari
-
-**Jäljellä listasta yhdeksän**: #10 härkähyppy-fresko, #11 brunost,
-#12 Rossion kivetys, #13 Széchényin shakki, #14 Arsenalnan liukuportaat,
-#15 Eremitaasin kissa, #16 Muhammad Alin moskeija, #17 Brandenburgin
-portti — sekä #3 Tšadjärven kalastaja, jolle Commonsissa on vain sama
-kuva kahtena versiona (suoristettu ja alkuperäinen). Se tarvitsee
-aidosti eri kuvan, ja ehdotan sitä omaksi pieneksi hauksi.
-
-## Päätettävää sinulle
-
-Listan ulkopuolelta löytyi **neljä päällekkäisyyttä**, jotka eivät ole
-kuvaduplikaatit.md:ssä:
-
-1. `Hagia Sophia Mars 2013.jpg` — kulttuuri-kategoriat / nähtävyysjutut
-2. `Casa Batlló 01.jpg` — kulttuuri-kategoriat / nähtävyysjutut
-3. `Rio Javaés.jpg` — maasto-tekstit / southamerica-valokuvat
-4. `Jules Leclercq- Aux sources du Nil-1913-chutes Ripon.jpg` —
-   africa-valokuvat / maasto-tekstit-malli
-
-Kaksi ensimmäistä ovat täsmälleen samaa luokkaa kuin listan #16 ja #17
-(kaupunkilehden kansi ↔ nähtävyysjuttu) ja syntyivät ilmeisesti listan
-laatimisen jälkeen. Kaksi jälkimmäistä osuvat maastotekstipaketteihin,
-joista sinulla on oma linjaus. En koskenut näihin, koska lista on sinun
-päätöksesi — sano, otanko ne mukaan seuraavaan erään.
-
-## Muuta
-
-Kysyit menovinkkien 245/246:sta: se yksi rivi on **tietoinen valinta**.
-Dubain Museum of the Future -rivi jäi ilman kuvaa, koska rakennuksen
-julkisivusta ei ole Commonsissa vapaata valokuvaa (löytyneet olivat
-GODL-India tai sisätiloista). Listamallissa kuva on vapaaehtoinen
-nimenomaan siksi, ettei hyvä osoite putoa listalta kuvan puutteen takia.
+Jatkan jonoa ilman eri lupaa: **erä B = Oman + Qatar**. Raportoin
+samalla tavalla.

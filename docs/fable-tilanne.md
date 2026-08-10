@@ -415,3 +415,17 @@ kaaren aarreluenta kattaa paljastuksen äänen kaarilaudoilla.
   Ydinpeli + lehdet + kartat + luennat ovat valmiit ja QA:ttu;
   aamuraportti kertoo tarkan tilanteen vaikka jutturerät olisivat
   vielä kesken.
+
+### Aamukierros (klo ~8.40): v500 mainissa, ME-erä A valmis
+
+- Omistaja heräsi ja testipelasi: kolme korjausta aamupäivän aikana —
+  v499/v500 (luettu kohtaaminen ensitehtäväksi — juurisyy jäljitetty
+  äänipolku instrumentoituna; nähtävyyskaruselliin lehden selaus;
+  hampurilaisvalikko popupiin). Kaikki Playwright-tarkistettu.
+- Opus 1:n ME-erä A mainissa (v499: ARE 3. sivu + Jordanian Vedet ja
+  Rauniot) — jatkaa erään B ilman eri lupaa. Sonnet 2:n erä 11
+  workflow käynnissä. Opus 2 ja Sonnet 1 valmiudessa.
+- Orpo zoom-synkka-haara: omistaja käski poistaa; git-proxy esti
+  poistopushin, GitHub-työkaluissa ei poistoa → omistaja poistaa
+  itse UI:sta (kerrottu).
+- Ei jumeja. Kaikki kontit kierrätetty yön aikana vähintään kerran.

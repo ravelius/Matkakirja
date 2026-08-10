@@ -8735,6 +8735,7 @@ export class UI {
       });
     }
     document.getElementById('nahtavyys-otsikko').textContent = kohde.nimi;
+    this.taytaNahtavyysValikko(kohde);
     const aika = document.getElementById('nahtavyys-aika');
     aika.textContent = [numero ? `Kohde ${numero}` : null, kohde.aika]
       .filter(Boolean).join(' · ');
@@ -8868,6 +8869,59 @@ export class UI {
     if (kohta < teksti.length) p.appendChild(document.createTextNode(teksti.slice(kohta)));
   }
 
+  /**
+   * Hampurilaisvalikko nähtävyyspopupiin (omistajan toive 10.8.2026):
+   * saman kaupungin muihin nähtävyyksiin pääsee suoraan, ilman että
+   * popup pitää sulkea ja kohde etsiä kartalta uudestaan. Lista tulee
+   * kaupunkikartan kohteista samalla säännöllä kuin kartan pisteet:
+   * oma juttu voittaa wikin, ja ilman kumpaakaan kohde jää pois.
+   * Valikko toimii myös henkilöjutussa (esim. Engel) — se vie
+   * takaisin kaupungin nähtävyyksiin.
+   */
+  taytaNahtavyysValikko(nykyinen) {
+    const nappi = document.getElementById('nahtavyys-valikko-nappi');
+    const valikko = document.getElementById('nahtavyys-valikko');
+    if (!nappi || !valikko) return;
+    const sulje = () => {
+      valikko.hidden = true;
+      nappi.setAttribute('aria-expanded', 'false');
+    };
+    if (!nappi.dataset.kytketty) {
+      nappi.dataset.kytketty = '1';
+      nappi.addEventListener('click', () => {
+        valikko.hidden = !valikko.hidden;
+        nappi.setAttribute('aria-expanded', String(!valikko.hidden));
+      });
+      // Valikko sulkeutuu, kun napautus osuu sen ulkopuolelle.
+      document.getElementById('nahtavyys-dialog').addEventListener('click', (e) => {
+        if (!valikko.hidden && !valikko.contains(e.target) && e.target !== nappi) sulje();
+      });
+    }
+    sulje();
+    const kartta = KAUPUNKIKARTAT[this.arrivalShownFor];
+    valikko.replaceChildren();
+    const kohteet = (kartta?.kohteet ?? []).map((raaka, i) => {
+      const juttu = NAHTAVYYSJUTUT[this.arrivalShownFor]?.[raaka.nimi];
+      const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
+      return { k, numero: String(i + 1) };
+    }).filter(({ k }) => k.teksti || k.wiki);
+    nappi.hidden = kohteet.length < 2;
+    if (nappi.hidden) return;
+    for (const { k, numero } of kohteet) {
+      const rivi = html('button', 'nahtavyys-valikko-rivi');
+      rivi.type = 'button';
+      rivi.appendChild(html('span', 'kartta-selite-numero', numero));
+      rivi.appendChild(document.createTextNode(k.nimi));
+      if (k.nimi === nykyinen.nimi) rivi.classList.add('nykyinen');
+      rivi.addEventListener('click', () => {
+        sulje();
+        if (k.teksti) this.avaaNahtavyys(k, numero);
+        else this.openWikiArticle(k.wiki, k.nimi);
+      });
+      valikko.appendChild(rivi);
+    }
+  }
+
   /** Yksi nähtävyysjutun kuva selitteineen ja lähteineen. */
   nahtavyydenKuva(kuva) {
     const kehys = html('figure', 'nahtavyys-kuvakehys');
@@ -8937,17 +8991,37 @@ export class UI {
       laskuri.textContent = `${kohta + 1}/${kuvat.length}`;
     };
 
+    /*
+     * Selaus on sama kuin lehden kuvakotelossa (omistajan toive
+     * 10.8.2026): kuvan laidat ovat hentoja nuolialueita, laskuri on
+     * tumma pilleri kulmassa, ja vaakapyyhkäisy vaihtaa kuvaa. Samat
+     * CSS-luokat kuin lehdessä, joten ulkoasu pysyy yhtenä.
+     */
     const nuoli = (luokka, merkki, siirto, nimi) => {
-      const nappi = html('button', `karuselli-nuoli ${luokka}`, merkki);
+      const nappi = html('button', `arrival-kuva-nuoli ${luokka}`, merkki);
       nappi.type = 'button';
       nappi.setAttribute('aria-label', nimi);
-      nappi.addEventListener('click', () => nayta(kohta + siirto));
+      nappi.addEventListener('click', (e) => { e.stopPropagation(); nayta(kohta + siirto); });
       return nappi;
     };
-    ikkuna.appendChild(nuoli('vasen', '‹', -1, 'Edellinen kuva'));
-    ikkuna.appendChild(nuoli('oikea', '›', 1, 'Seuraava kuva'));
-    const laskuri = html('span', 'karuselli-laskuri');
+    ikkuna.appendChild(nuoli('edellinen', '‹', -1, 'Edellinen kuva'));
+    ikkuna.appendChild(nuoli('seuraava', '›', 1, 'Seuraava kuva'));
+    const laskuri = html('span', 'arrival-kuva-laskuri');
     ikkuna.appendChild(laskuri);
+    // Pyyhkäisy: vaakaveto vaihtaa kuvaa. Kynnys erottaa vedon
+    // napautuksesta (suurennos) ja pystyvieritys jää selaimelle.
+    let veto = null;
+    ikkuna.addEventListener('pointerdown', (e) => { veto = { x: e.clientX, y: e.clientY }; });
+    ikkuna.addEventListener('pointercancel', () => { veto = null; });
+    ikkuna.addEventListener('pointerup', (e) => {
+      const alku = veto;
+      veto = null;
+      if (!alku) return;
+      const dx = e.clientX - alku.x;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(e.clientY - alku.y)) {
+        nayta(kohta + (dx < 0 ? 1 : -1));
+      }
+    });
 
     kehys.appendChild(ikkuna);
     kehys.appendChild(teksti);

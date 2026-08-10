@@ -10,36 +10,33 @@
  */
 
 export const TILANNE = {
-  paivitetty: '10.8.2026 (yövahti klo 6.30)',
-  tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
-    + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
-    + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
-    + 'parkissa — siihen palataan myöhemmin. Tiimi työskentelee yön '
-    + 'yli; Fablen yövahti kiertää tunneittain.',
+  paivitetty: '10.8.2026 (aamu klo 8.40)',
+  tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN, sitten Lähi-itä '
+    + '(omistajan tilaus 9.8.). Euroopasta auki enää nähtävyysjuttu-'
+    + 'erät 11–13 ja loppu-QA; ME-maiden aihesivut alkoivat jo '
+    + 'rinnalla. Matkakirjan tarinapuoli on parkissa.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
       tila: 'valmis',
-      tehtava: 'Illan testipelilöydökset korjattu: kuvakaruselli + '
-        + 'vieritysvara + wikihännät (v475), yksi tehtävä per '
-        + 'pysähdys (v478) ja Engel-henkilöjuttu (v479). Omistajan '
-        + 'valmiusportti kirjattu: ilmoitus vasta kun Eurooppa on '
-        + 'kokonaan valmis (docs/fable-tilanne.md, 9 kohtaa).',
-      seuraavaksi: 'Yövahti: raporttien kuittaus, erien jako, konttien '
-        + 'kierrätys erätauoilla, jumitarkistus tunneittain. Lopuksi '
-        + 'kokoava QA + oma läpipelaus + ilmoitus omistajalle.',
+      tehtava: 'Aamun testipelikorjaukset (v499–v500): luettu '
+        + 'kohtaaminen palasi kaupungin ensitehtäväksi, nähtävyys-'
+        + 'karuselliin lehden selaus (nuolet + pyyhkäisy) ja '
+        + 'popupiin hampurilaisvalikko kaupungin muihin kohteisiin.',
+      seuraavaksi: 'Raporttien kuittaus ja erien jako; kun erät 11–13 '
+        + 'ovat mainissa: kokoava QA + läpipelaus + ilmoitus '
+        + 'omistajalle Euroopan valmiudesta.',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'EUROOPPA VALMIS OSALTAAN: lehdet (v481), '
-        + 'orpoauditointi (v483), menovinkkikuvat (v486–v492), '
-        + 'valokuvarajatapaukset (v494) ja kuvaduplikaatit '
-        + '(v496–v497, 16/17 vaihdettu, 2 hyväksytty).',
-      seuraavaksi: 'Lähi-idän maiden aihesivut alkavat: ARE-pilotti '
-        + 'ensin, Fablen palaute ennen muita maita.',
+      tehtava: 'Lähi-itä etenee: ARE sai kolme aihesivua (Aavikko, '
+        + 'Keidas, Ranta ja rata) ja Jordania kaksi (Vedet, Rauniot) '
+        + '— v498, v499. Eurooppa valmistui yöllä kokonaan.',
+      seuraavaksi: 'ME-erä B: Oman + Qatar, sitten Egypti + Kuwait ja '
+        + 'Saudi-Arabia (ilman pyhiä kaupunkeja) + Bahrain.',
     },
     {
       tekija: 'Opus 2',

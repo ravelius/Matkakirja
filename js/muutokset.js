@@ -13,6 +13,10 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 501, teksti: 'Oman ja Qatar saivat aihesivunsa' },
+  { v: 500, teksti: 'Kohtaaminen ensitehtäväksi, nähtävyyksiin valikko' },
+  { v: 499, teksti: 'Emiraateille kolmas sivu ja Jordanialle kaksi' },
+  { v: 498, teksti: 'Emiraatit sai kaksi aihesivua: Aavikko ja Keidas' },
   { v: 497, teksti: 'Loput kuvaduplikaatit purettu, kaksi hyväksyttiin' },
   { v: 496, teksti: 'Kahdeksan kuvaduplikaattia purettu Afrikasta ja Siinailta' },
   { v: 495, teksti: 'Nähtävyysjutut Sofiaan, Bukarestiin, Sarajevoon' },
