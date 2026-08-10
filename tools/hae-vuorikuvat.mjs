@@ -27,7 +27,7 @@
  */
 import { writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const arvo = (nimi, oletus) => {
@@ -50,8 +50,23 @@ const UA = 'Matkakirja/1.0 (https://github.com/ravelius/Matkakirja)';
  * käytännössä tyhjä, ja kuvat ovat naapurikategoriassa.
  */
 const KATEGORIA = {
-  'madagaskarin-ylanko': 'Highlands of Madagascar',
-  kamtshatka: 'Volcanoes of Kamchatka',
+  /*
+   * Kuusi kohdetta jäi ensimmäisellä ajolla tyhjäksi. Kategoria on
+   * haettu Commonsin kategoriahaulla ja valittu se, jossa on eniten
+   * juuri tämän vuoriston kuvia. Kolmessa kohdassa vuoristo on niin
+   * laaja, ettei sillä ole omaa kategoriaa lainkaan, ja tilalle on
+   * valittu sen tunnetuin osa — se on rehellisempi kuin koko maan
+   * kategoria, jossa on katukuvia ja lippuja.
+   */
+  altai: 'Nature of the Altai Republic',
+  'etiopian-ylangot': 'Simien Mountains',
+  // Brasilian ylängöllä ei ole omaa kategoriaa; Mantiqueira on sen
+  // eteläinen reunavuoristo (Pico da Bandeira, kohteen oma huippu).
+  'brasilian-ylanko': 'Serra da Mantiqueira',
+  // Guyanan ylänkö = tepui-tasavuoret; Roraima on niistä tunnetuin.
+  'guyanan-ylanko': 'Mount Roraima',
+  'madagaskarin-ylanko': 'Mountains of Madagascar',
+  kamtshatka: 'Volcanoes in Kamchatka',
   'kaakkois-australian-ylangot': 'Australian Alps',
   'uuden-guinean-ylangot': 'Mountains of Papua New Guinea',
   'kapmaan-taittovuoret': 'Cape Fold Belt',
@@ -89,6 +104,15 @@ const POIS = [
   'diagram', 'chart', 'graph', 'timeline', 'population', 'profile',
   'satellite', 'landsat', 'sentinel', 'nasa', 'iss0', 'astronaut',
   'poster', 'stamp', 'postmark', 'medal', 'coin',
+  /*
+   * Arkistojen albumisivut. Nationaal Archiefin ja muiden kokoelmien
+   * skannaukset ovat KOKONAISIA ALBUMIAUKEAMIA: yhdessä tiedostossa on
+   * kuusi pikkukuvaa pahvilla, eikä yksikään niistä ole vuorikuva.
+   * Karakoramin ehdokaslistasta yhdeksästä ensimmäisestä seitsemän oli
+   * tällaisia (silmätarkistus 10.8.2026).
+   */
+  'albumblad', 'bestanddeelnr', 'album page', 'fotoalbum',
+  'scrapbook', 'contact sheet', 'plate ', 'folio',
 ];
 
 /** Kelpaako tiedosto galleriaan? */
@@ -253,44 +277,53 @@ async function tiedostotiedot(tiedostot) {
 
 // --- ajo ----------------------------------------------------------------------
 
-const { VUORISTONIMET } = await import('../js/packs/maasto-nimet-vuoret.js');
-const kohteet = VUORISTONIMET.filter((v) => !vainKohde || v.avain === vainKohde);
-if (!kohteet.length) throw new Error(`tuntematon kohde: ${vainKohde}`);
-console.log(`${kohteet.length} vuorikohdetta, enintään ${MAARA} ehdokasta kussakin\n`);
+/*
+ * Ajo-osa vain suoraan ajettaessa. Seula (kelpaaKuva, vapaaLisenssi) on
+ * yhteinen tämän ja jälkisiivouksen kesken, ja ilman tätä vartiota
+ * pelkkä `import` olisi käynnistänyt koko haun.
+ */
+const ajossa = process.argv[1] ? pathToFileURL(process.argv[1]).href : null;
+if (import.meta.url === ajossa) {
 
-const kansio = join(JUURI, 'tools', 'vuorikuva-aineisto');
-if (!kuiva && !existsSync(kansio)) mkdirSync(kansio, { recursive: true });
+  const { VUORISTONIMET } = await import('../js/packs/maasto-nimet-vuoret.js');
+  const kohteet = VUORISTONIMET.filter((v) => !vainKohde || v.avain === vainKohde);
+  if (!kohteet.length) throw new Error(`tuntematon kohde: ${vainKohde}`);
+  console.log(`${kohteet.length} vuorikohdetta, enintään ${MAARA} ehdokasta kussakin\n`);
 
-const yhteenveto = [];
-for (const v of kohteet) {
-  const kategoria = KATEGORIA[v.avain] ?? await commonsKategoria(v.wiki);
-  if (!kategoria) {
-    console.log(`${v.avain.padEnd(28)} EI KATEGORIAA (wiki: ${v.wiki})`);
-    yhteenveto.push({ avain: v.avain, kategoria: null, kuvia: 0 });
-    continue;
+  const kansio = join(JUURI, 'tools', 'vuorikuva-aineisto');
+  if (!kuiva && !existsSync(kansio)) mkdirSync(kansio, { recursive: true });
+
+  const yhteenveto = [];
+  for (const v of kohteet) {
+    const kategoria = KATEGORIA[v.avain] ?? await commonsKategoria(v.wiki);
+    if (!kategoria) {
+      console.log(`${v.avain.padEnd(28)} EI KATEGORIAA (wiki: ${v.wiki})`);
+      yhteenveto.push({ avain: v.avain, kategoria: null, kuvia: 0 });
+      continue;
+    }
+    const nimet = await keraaTiedostot(kategoria);
+    const tiedot = (await tiedostotiedot(nimet.slice(0, 300)))
+      .filter((t) => vapaaLisenssi(t.lisenssi))
+      // Galleria on vaakasuuntainen, ja iso kuva näytetään 1920 pikselin
+      // levyisenä: sitä pienempi venyy epäteräväksi.
+      .filter((t) => t.leveys >= 1600 && t.leveys >= t.korkeus * 1.1);
+    // Commonsin laatuluokitellut ensin — ne katsotaan silmällä ensin.
+    tiedot.sort((a, b) => (b.laatu.length - a.laatu.length)
+      || (b.leveys * b.korkeus - a.leveys * a.korkeus));
+    const kaikki = tiedot.slice(0, MAARA);
+    const laadukkaita = kaikki.filter((t) => t.laatu.length).length;
+    yhteenveto.push({ avain: v.avain, kategoria, kuvia: kaikki.length, laadukkaita });
+    console.log(`${v.avain.padEnd(28)} ${String(kaikki.length).padStart(3)} ehdokasta `
+      + `(${laadukkaita} laatuluokiteltua)  ← ${kategoria}`);
+    if (!kuiva) {
+      writeFileSync(join(kansio, `${v.avain}.json`), `${JSON.stringify(kaikki, null, 1)}\n`);
+    }
+    await nuku(300);
   }
-  const nimet = await keraaTiedostot(kategoria);
-  const tiedot = (await tiedostotiedot(nimet.slice(0, 300)))
-    .filter((t) => vapaaLisenssi(t.lisenssi))
-    // Galleria on vaakasuuntainen, ja iso kuva näytetään 1920 pikselin
-    // levyisenä: sitä pienempi venyy epäteräväksi.
-    .filter((t) => t.leveys >= 1600 && t.leveys >= t.korkeus * 1.1);
-  // Commonsin laatuluokitellut ensin — ne katsotaan silmällä ensin.
-  tiedot.sort((a, b) => (b.laatu.length - a.laatu.length)
-    || (b.leveys * b.korkeus - a.leveys * a.korkeus));
-  const kaikki = tiedot.slice(0, MAARA);
-  const laadukkaita = kaikki.filter((t) => t.laatu.length).length;
-  yhteenveto.push({ avain: v.avain, kategoria, kuvia: kaikki.length, laadukkaita });
-  console.log(`${v.avain.padEnd(28)} ${String(kaikki.length).padStart(3)} ehdokasta `
-    + `(${laadukkaita} laatuluokiteltua)  ← ${kategoria}`);
-  if (!kuiva) {
-    writeFileSync(join(kansio, `${v.avain}.json`), `${JSON.stringify(kaikki, null, 1)}\n`);
-  }
-  await nuku(300);
+
+  const vajaat = yhteenveto.filter((x) => x.kuvia < 8);
+  console.log(`\n${yhteenveto.length} kohdetta, keskimäärin `
+    + `${(yhteenveto.reduce((a, b) => a + b.kuvia, 0) / Math.max(1, yhteenveto.length)).toFixed(1)} ehdokasta`);
+  console.log(`alle kahdeksan ehdokkaan kohteita: ${vajaat.length}`);
+  if (vajaat.length) console.log(vajaat.map((x) => `${x.avain}(${x.kuvia})`).join(' '));
 }
-
-const vajaat = yhteenveto.filter((x) => x.kuvia < 8);
-console.log(`\n${yhteenveto.length} kohdetta, keskimäärin `
-  + `${(yhteenveto.reduce((a, b) => a + b.kuvia, 0) / Math.max(1, yhteenveto.length)).toFixed(1)} ehdokasta`);
-console.log(`alle kahdeksan ehdokkaan kohteita: ${vajaat.length}`);
-if (vajaat.length) console.log(vajaat.map((x) => `${x.avain}(${x.kuvia})`).join(' '));
