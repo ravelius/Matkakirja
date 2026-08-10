@@ -100,6 +100,27 @@ jutut (Opus 1:n malli) pysyvät ennallaan. Kaistat eivät koske
 samoihin tiedostoihin; muutokset kaistajakoon sovitaan Fablen
 kautta.
 
+## Työn seuranta (10.8.2026 — omistajan kysymys "tekevätkö sessiot työtä?")
+
+Kolme päällekkäistä signaalia, jotta jumi ja joutilaisuus erottuvat
+työstä MINUUTEISSA eikä tunneissa:
+
+1. **Checkpoint-commitit.** Työsessio committaa keskeneräisenkin työn
+   omalle haaralleen vähintään ~30 minuutin välein ("wip: erä X,
+   7/13 tehty"). Hiljainen haara + väite "työn alla" ei kelpaa.
+2. **Raporttihaara ei vaihdu ilmoittamatta.** Uusi haara perustetaan
+   vain, jos vanhan raportin LOPPUUN kirjoitetaan ensin minne työ
+   siirtyy (Opus 1:n oppi 10.8.: haaranvaihto kesken erän näytti
+   kahden tunnin jumilta, vaikka työ eteni koko ajan).
+3. **Fablen jatkuva vahti.** Fable pitää git-monitoria, joka herättää
+   sen HETI kun mikä tahansa tiimihaara liikahtaa (ei odoteta
+   vahtikierrosta), ja tarkistaa joka kierroksella list_sessions-
+   tilat (post_turn_summary + updated_at): "working" yli 45 min ilman
+   committia → herätystrigger sessiolle; "review_ready" → raportti
+   luetaan ja SEURAAVA TYÖ annetaan heti, ettei sessio jää tyhjän
+   panttina valmiuteen; trigger laukaistaan aina heti fire_triggerillä
+   (ajastin viivästeli tänään ~15 min).
+
 ## Kustannuskuri (ultracode käytössä kaikilla Opus/Sonnet-sessioilla)
 
 Omistajan havainto 8.8.2026: Opus 5 lähtee herkästi paisuttamaan
