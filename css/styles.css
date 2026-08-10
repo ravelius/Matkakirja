@@ -3544,6 +3544,30 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 .iso-jarvi-reuna { fill: none; stroke: var(--sea-ink); stroke-width: 1.4; opacity: 0.5; }
 
 /*
+ * Pääjoki järven väreissä (omistajan toive 10.8.2026: "samalla
+ * tavalla ja värillä kuin järvet"). Uoma on järven paperitäyttö
+ * viivana, ja sen alla leveämpi reunaveto järven reunaviivan
+ * musteella ja peitolla: näkyviin jää 1,4 yksikön ranta kummallakin
+ * puolella — sama kuin .iso-jarvi-reuna. Täyttö ja viiva sanotaan
+ * kummallekin luokalle erikseen (ks. reunaviivattomuus-oppi yllä).
+ */
+.iso-joki {
+  fill: none;
+  stroke: #ecd9ae;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.iso-joki-reuna {
+  fill: none;
+  stroke: var(--sea-ink);
+  stroke-width: 5.4;
+  opacity: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/*
  * Joki vaaleampana kuin meren aallot (omistajan toive 4.8.2026).
  *
  * Sama sävyperhe kuin muullakin vedellä, mutta vaaleampi: joki on

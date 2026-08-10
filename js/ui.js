@@ -4440,7 +4440,15 @@ export class UI {
     // se on laudalle projisoitua aineistoa, jota on vain
     // maailmankartalla, eikä se mahdu koneen kirjoittamaan
     // maailmankartta.js:ään ilman että koostajan seuraava ajo pyyhkii sen.
-    drawMaasto(taide, pack.map, pack.id === 'maailmankartta' ? MAASTON_VARJOSTUS : null);
+    // Nimiaineisto neljäntenä: siitä drawMaasto poimii pääjoet
+    // (tärkeys 1) pohjakartalle järvien tyyliin (omistajan toive
+    // 10.8.2026). Muilla laudoilla null — ei jokia, ei maksua.
+    drawMaasto(
+      taide,
+      pack.map,
+      pack.id === 'maailmankartta' ? MAASTON_VARJOSTUS : null,
+      pack.id === 'maailmankartta' ? MAAILMANKARTAN_NIMET : null,
+    );
 
     /*
      * Linssikerros: staattisen karttakuvan päällä, kaupunkien alla.
