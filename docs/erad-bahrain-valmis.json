@@ -1,0 +1,86 @@
+{
+  "_ohje": "Bahrainin aihesivut, VALMIINA MUTTA EI KÄYTÖSSÄ.",
+  "_syy": "maa-kategoriat.js:ään lisättynä tests/maa-otsikot.test.mjs kaatuu: \"BHR: maalla on aihesivuja mutta ei nimeä millään laudalla\". Bahrainilla ei ole maamuotoa yhdelläkään laudalla (middleeast-countries.js: 12 maata, maailmankartta.js: 84 maata, ei kummassakaan BHR) eikä yhtään kaupunkia laudalla, joten avaaMaalehti(\"BHR\") palaa heti eikä sivuja pääse näkemään.",
+  "_mita_tarvitaan": "BHR:n lautageometria middleeast-countries.js:ään (Opus 2:n kaista ja pilottitiedosto) tai Fablen päätös esitystavasta. Sen jälkeen tämän tiedoston sivut liitetään sellaisenaan.",
+  "_tila": "Faktat tarkistettu, kuvat katsottu silmällä 600 px:n levyisinä, lahde-kentät haettu Commonsin API:sta, esitarkistin ajettu puhtaaksi (5 minitehtävää, 15 kuvaa).",
+  "sivut": [
+    {
+      "id": "helmet",
+      "nimi": "Helmet",
+      "johdanto": "Ennen öljyä Bahrain eli meren pohjasta nostetuista helmistä. Työ oli raskasta ja vaarallista, ja se loppui muutamassa vuodessa kun toisella puolella maailmaa keksittiin uusi tapa tehdä helmiä.",
+      "nostot": [
+        {
+          "otsikko": "Neljä kuukautta merellä",
+          "tiedosto": "Fuerte Bu Maher, Manama, Baréin, 2024-08-18, DD 32.jpg",
+          "teksti": "Suuri sukelluskausi alkoi kesäkuussa ja kesti syyskuuhun, koska vain silloin vesi oli tarpeeksi lämmintä. Laivat lähtivät Muharraqin kärjestä, ja niiden lähtöä katsottiin Bu Maherin linnakkeelta. Sukeltajalla oli nenässä luinen tai kilpikonnankuoresta tehty puristin, sormissa nahkasuojukset ja kaulassa kori. Jalkaan sidottiin kivi, jotta hän vajoaisi pohjaan nopeasti eikä joutuisi uimaan alas. Vetäjä piti köyttä ylhäällä ja nosti sukeltajan pintaan, kun tämä nykäisi. Yhdellä hengityksellä oltiin pohjassa reilu minuutti, ja sukelluksia tehtiin kymmeniä päivässä.",
+          "selite": "Pyöreä kivinen torni matalalla hiekkaniemellä, edessä vihertävän turkoosi meri. Tornin muuri on karkeaa vaaleaa kiveä, ja vasemmalla näkyy nykyisiä veneitä.",
+          "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+        },
+        {
+          "otsikko": "Talo, jonka helmet maksoivat",
+          "tiedosto": "Muharraq Bayt Siyadi 3.jpg",
+          "teksti": "Sukeltajat eivät rikastuneet, mutta helmikauppiaat rikastuivat. Muharraqiin nousi taloja, joiden seinät ovat korallikivestä ja ikkunat peitetty kipsiin veistetyillä ristikoilla — ne päästävät ilman ja valon sisään mutta pitävät auringon ulkona. Yksi näistä on Bayt Siyadi, helmikauppiaan talo. Bahrain sai vuonna 2012 maailmanperintökohteen, joka ei ole yksi rakennus vaan kokonainen reitti: seitsemäntoista rakennusta, kolme osteririuttaa merellä ja linnake, ja niitä yhdistää kolmen ja puolen kilometrin polku.",
+          "selite": "Vaaleanruskea kaksikerroksinen talo, jonka yläkerran seinä on täynnä kipsiristikkoisia ikkunoita ja punertavia koristekuvioita. Katon reunassa on hammasmainen harja, ja edessä seisoo vanha moskeijan minareetti.",
+          "lahde": "Zairon, Wikimedia Commons (CC BY-SA 4.0)"
+        },
+        {
+          "otsikko": "Helmi, joka kasvatettiin purkissa",
+          "tiedosto": "Traditional Bahrain boats.jpg",
+          "teksti": "Vuonna 1930 Bahrainissa oli noin kolmekymmentätuhatta sukeltajaa. Muutamassa vuodessa työ oli melkein lopussa. Syy oli Japanissa: siellä oli opittu istuttamaan simpukkaan pieni siemen, jonka ympärille simpukka kasvatti helmen itse. Viljelty helmi maksoi murto-osan sukelletun hinnasta, eikä ostaja nähnyt eroa. Samaan aikaan Bahrainista löytyi öljyä vuonna 1932, ja työtä oli tarjolla maalla. Puiset laivat jäivät rantaan. Bahrain kieltää yhä viljellyn helmen myynnin — maassa myytävän helmen on oltava merestä nostettu.",
+          "selite": "Kaksi puista venettä ankkurissa tyynessä vedessä. Rungot ovat ruskeaa lakattua puuta, ja takana rannalla näkyy nykyisiä valkoisia rakennuksia ja nosturi.",
+          "lahde": "Ashashyou, Wikimedia Commons (CC BY-SA 3.0)"
+        }
+      ],
+      "tehtava": {
+        "kysymys": "Miksi sukeltajan jalkaan sidottiin kivi?",
+        "vaihtoehdot": [
+          "Jotta hän vajoaisi nopeasti",
+          "Jotta hän pysyisi pohjassa",
+          "Jotta vetäjä löytäisi hänet",
+          "Jotta hän ei ajautuisi virrassa"
+        ],
+        "oikea": 0,
+        "fakta": "Kivi vedettiin heti takaisin veneeseen omalla köydellään seuraavaa sukellusta varten."
+      }
+    },
+    {
+      "id": "muinaisuus",
+      "nimi": "Muinaisuus",
+      "johdanto": "Bahrain on pieni saari, jolla on poikkeuksellisen paljon makeaa vettä. Sen takia täällä on asuttu neljätuhatta vuotta, ja vanhat sumerilaiset tarinat puhuivat saaresta paikkana, jossa vesi maistuu makealta keskellä suolaista merta.",
+      "nostot": [
+        {
+          "otsikko": "Kumpuja niin kauas kuin näkee",
+          "tiedosto": "Bahrein-site 1542 0001.jpg",
+          "teksti": "Bahrainin pohjoisosassa maa on täynnä matalia kumpuja. Ne ovat hautoja, ja niitä on kymmeniätuhansia — arviot koko saaren historian ajalta nousevat satoihintuhansiin. Vanhimmat on tehty pronssikaudella noin neljätuhatta vuotta sitten. Tavallinen kumpu on muutaman metrin korkuinen, ja sen sisällä on kivinen kammio. A'alin kylässä on suurimmat, niin sanotut kuninkaalliset kummut, jotka kohoavat talojen ja palmujen yli kuin pienet mäet. Haudoista on löytynyt ruukkuja, sinettejä, norsunluuta ja kuparia. Alue otettiin maailmanperintöluetteloon vuonna 2019.",
+          "selite": "Suuri vaalea hiekkakumpu kohoaa taatelipalmujen keskeltä. Palmut peittävät alarinteen, ja taustalla näkyy nykyisen kaupungin taloja.",
+          "lahde": "Melanie Münzner, Wikimedia Commons (CC BY-SA 1.0)"
+        },
+        {
+          "otsikko": "Mäki, jonka ihmiset rakensivat",
+          "tiedosto": "Qal'at al-Bahrain, Karbabad, Baréin, 2024-08-18, DD 67.jpg",
+          "teksti": "Qal'at al-Bahrain seisoo kahdentoista metrin korkuisen kummun päällä, eikä kumpu ole luonnon tekemä. Se on syntynyt siitä, että samalla paikalla on asuttu yhtäjaksoisesti yli neljätuhatta vuotta: kun talo hajosi, uusi rakennettiin sen päälle, kerros kerrokselta päällekkäin. Kerroksia on seitsemän. Alimmat ovat Dilmunin ajalta — Dilmun oli muinainen kauppavaltakunta, jonka pääkaupunki oli tässä. Päällimmäisenä on portugalilaisten 1500-luvulla rakentama linnoitus, joka antoi paikalle nykyisen nimen. Kummusta on kaivettu esiin vasta neljäsosa.",
+          "selite": "Vaaleasta kalkkikivestä muurattu linnoitus kirkkaassa auringossa. Muurissa on viisto tukiosa ja kulmassa pyöreä vahtitorni, ja etualalla on kaivettuja kivijalkoja.",
+          "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+        },
+        {
+          "otsikko": "Puu keskellä tyhjää",
+          "tiedosto": "Tree of Life, Bahrain - ജീവന്റെ മരം, ബഹ്റൈൻ 01.JPG",
+          "teksti": "Saaren eteläosassa, kuivalla aavikolla, kasvaa yksi ainoa suuri puu. Se on mesquitepuu, korkeutta lähes kymmenen metriä ja ikää yli neljäsataa vuotta. Lähimpään taloon on kilometrejä eikä ympärillä näy vettä missään. Miten se pärjää? Todennäköisin selitys on juuristo, joka ulottuu kymmenien metrien syvyyteen pohjaveteen asti. Puu on tullut niin kuuluisaksi, että sitä käy katsomassa noin kuusikymmentäviisituhatta ihmistä vuodessa, ja sen ympärille on rakennettu aita, ettei kukaan kaivertaisi runkoon nimeään.",
+          "selite": "Iso yksinäinen puu vaalealla kivikkoisella aavikolla. Latvus on leveä ja vihreä, alimmat oksat painuvat maahan asti vasemmalla, ja rungon juurella seisoo kaksi ihmistä.",
+          "lahde": "കാക്കര, Wikimedia Commons (CC BY-SA 3.0)"
+        }
+      ],
+      "tehtava": {
+        "kysymys": "Miksi Qal'at al-Bahrainin alla oleva mäki on korkea?",
+        "vaihtoehdot": [
+          "Talot rakennettiin päällekkäin",
+          "Tuuli kasasi hiekkaa aavikolta",
+          "Meri kasasi hiekkaa rantaan",
+          "Kumpu kaivettiin haudaksi"
+        ],
+        "oikea": 0,
+        "fakta": "Kerrokset ovat arkeologille kalenteri: mitä syvemmällä esine on, sitä vanhempi se on."
+      }
+    }
+  ]
+}
