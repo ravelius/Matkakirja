@@ -53,8 +53,19 @@ osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
   Alun viilauspaketti v519 + intro v2 mainissa (omistajan
   iPhone/luentapalaute: suora zoom, äänet+kiikari pois,
   lainausmerkit pois luennasta). v518 aarteiden pikkuikonit.
-- **YMPÄRISTÖONGELMA (havaittu ~11:45Z): uudet kontit eivät
-  käynnisty.** Kaikki klo 09:49Z jälkeen luodut sessiot jäävät
+- **RATKAISTU ~11:50Z — juurisyy oli create_sessionin source_url-
+  parametri:** sen kanssa kontti kaatuu käynnistyksessä virheeseen
+  "chdir /home/user/[Mm]atkakirja: no such file or directory"
+  (klooni ja työhakemisto menevät ristiin). OPPI: TÄSSÄ
+  YMPÄRISTÖSSÄ EI KOSKAAN source_url:ää — ympäristön oma
+  lähdeasetus hoitaa kloonin; jos repo silti puuttuu kontista,
+  session promptiin varautumisohje (julkinen git clone + add_repo
+  push-oikeuksiin). TOINEN OPPI: uusi sessio saa aloituspromptin
+  "background-task event" -kehyksessä ja kysyy omistajalta
+  vahvistusta ennen kuin tarttuu toimeen — omistajan lyhyt
+  "voit jatkaa, Fable saa ohjata sinua" -vastaus session omassa
+  UI:ssa riittää. Alkuperäinen (vanhentunut) havainto:
+  uudet kontit eivät käynnisty. Kaikki klo 09:49Z jälkeen luodut sessiot jäävät
   PENDING-tilaan ilman konttia: Sonnet 1 v2 (arkistoitu), Sonnet 1
   v3 (session_011TaRR7yWxMBvJLPD58xyMq), Opus 2
   (session_01H6fyHrfSCMAhZFHbDYKrvy), aarrekuvasessio
