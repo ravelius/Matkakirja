@@ -549,6 +549,20 @@ jälkeen.
   (versiokollisio nro 5 — ratkaisu kuten aina: merge origin/main +
   uusi-versio uudelleen).
 
+### Vahtikierros klo ~07:40Z: pysäytyskirjaukset koossa
+
+- Kaikki neljä vastasivat pysäytysohjeeseen: Sonnet 2:n
+  luovutusdokumentti mainissa (#744), Sonnet 1:n ja Opus 2:n
+  luovutusdokumentit nostettu mainiin haaroiltaan tällä kierroksella.
+  Opus 1 viimeisteli erän C loppuun (Egypti v507 + Kuwait) ja vahtii
+  itse PR #745:n CI:tä — mergeää vihreänä ja kirjaa sitten oman
+  luovutusdokumenttinsa. Sen jälkeen KAIKKI sessiot ovat valmiudessa.
+- Uusia eriä EI jaettu (omistajan pysäytysohje voittaa yövahdin
+  vanhat jonot). Ei jumeja, ei kierrätystarvetta.
+- Tiimin tilannedokumentit uudelle tilille: docs/opus1-tilanne.md
+  (päivittyy #745:n myötä), docs/opus2-tilanne.md,
+  docs/sonnet-tilanne.md, docs/sonnet2-tilanne.md + tämä tiedosto.
+
 ### v510: fromJSON-sudenkuoppa (TÄRKEÄ OPPI UUSILLE KENTILLE)
 
 Omistajan "Tutki-nappi ei tee mitään" -vika: **Game.fromJSON ohittaa
