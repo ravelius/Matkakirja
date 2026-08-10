@@ -280,8 +280,8 @@ Sonnet 1:n loppu-QA ajettu):
        osalta täysi; Opus 1 teki koko erän kerralla).
 4. [x] Orpoauditointi (v483): 164 minitehtävää koneellisesti, 0
        orpoa; 5 orpoa kulttuurivisaa korjattu (ml. evzone).
-5. [ ] Menovinkkisivujen kuvat (omistajan havainto Suomen lehdestä)
-       — Opus 1 jonossa 5 lehden jälkeen.
+5. [x] Menovinkkisivujen kuvat (v486–v492): 58 kuvaa, 245/246
+       riviä — pilotti katsottu ja hyväksytty kuvakaappauksesta.
 6. [x] Kohdekartat kaikille lehtikaupungeille (v482, v484, v485 —
        Tromssa, Dubrovnik, Riika, Vilna, Oslo, Kööpenhamina) +
        vesikorjaukset (v480).
@@ -349,3 +349,25 @@ kaaren aarreluenta kattaa paljastuksen äänen kaarilaudoilla.
   PR #708:ssa vanhalla v484-numerolla — Fable nosti v488:ksi ja
   mergeää CI:n jälkeen. Sonnet 2:lle erät 10–13 (ml. kuusi uutta
   karttakaupunkia).
+
+### Yövahtikierros 5 (klo ~4.30): juurisyy korjattu
+
+- **Trigger-jumien juurisyy löytyi ja korjattu (#719):** konttien
+  MCP-palvelin esiintyy pysyvällä UUID-aliaksella
+  (mcp__bf7c680d-...), jota nimijokerit eivät kata —
+  .claude/settings.jsoniin lisätty aliaksen sallinnat. Opus 2 ja
+  Sonnet 2 kierrätetty korjauksen jälkeen, joten uudet kontit
+  poimivat sen; jumiutuneet viestit luettu jonosta ennen kierrätystä.
+- **Opus 2:n kuittauksesta kirjattua:** Tallinnan kartta ajetaan
+  uusiksi kaupunginmuurin kanssa (annettu tehtäväksi; diff
+  selvitettävä ensin), mittakaavajana tarkistetaan lehdessä eikä
+  tiedostona (ohje työkalussa), uudet wiki-ansat: fi-wikin
+  "Amalienborg" on panimo ja "Vapaudenpatsas" New Yorkin patsas.
+  ME-maakyltit on jo tarkistettu puhtaiksi (v470-geometria).
+- **Kohta 5 kiinni:** menovinkkikuvat valmiit (v486–v492). Opus 1
+  sai jonon viimeisen Eurooppa-erän (rajatapaukset + loput
+  duplikaatit; 3/17 tehty v489:ssä).
+- **Sonnet 2** jatkaa erää 10 (Sofia, Bukarest, Sarajevo) uudessa
+  kontissa; ohjeena välicommit joka kaupungin jälkeen.
+- Valmiuslistasta auki enää: 7 (erät 10–13), 8b (kokoava koko
+  Euroopan QA), 9 (Fablen läpipelaus + ilmoitus omistajalle).

@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '10.8.2026 (yövahti klo 2.30)',
+  paivitetty: '10.8.2026 (yövahti klo 4.30)',
   tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
     + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
     + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
@@ -34,13 +34,12 @@ export const TILANNE = {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Eurooppa lehtien osalta täysi (v481) ja '
-        + 'orpoauditointi valmis (v483): 164 minitehtävää '
-        + 'tarkastettu, viisi kadonneeseen juttuun osoittanutta '
-        + 'kulttuurivisaa korjattu — mukana omistajan evzone-löydös.',
-      seuraavaksi: 'Menovinkkisivujen kuvat (pilotti Suomi) + '
-        + 'valokuvarajatapaukset ja kuvaduplikaatit → Lähi-idän '
-        + 'maiden aihesivut (ARE ensin).',
+      tehtava: 'Menovinkkisivujen kuvat valmiit (v486–v492): 58 '
+        + 'kuvaa 15 maalle, 245/246 riviä kuvitettu. Aiemmin lehdet '
+        + 'täyteen (v481) ja orpoauditointi (v483).',
+      seuraavaksi: 'Valokuvarajatapaukset + kuvaduplikaattilistan '
+        + 'loput vaihdot — jonon viimeiset Eurooppa-kohdat. Sitten '
+        + 'Lähi-idän maiden aihesivut (ARE ensin).',
     },
     {
       tekija: 'Opus 2',
@@ -50,30 +49,31 @@ export const TILANNE = {
         + 'kohdekarttaa mainissa (v482 Tromssa, v484 Dubrovnik/'
         + 'Riika/Vilna, v485 Oslo/Kööpenhamina) — jokaisessa '
         + 'mittakaavajana ja vesitarkistetut pisteet.',
-      seuraavaksi: 'Valmiudessa; raportin jälkeen kontinkierrätys. '
-        + 'Seuraava iso erä on Lähi-idän maakartat, kun Eurooppa on '
-        + 'kuitattu valmiiksi.',
+      seuraavaksi: 'Tallinnan kartta uusiksi kaupunginmuurin kanssa '
+        + '(oma löydös). Sitten valmiudessa — Lähi-idän maakartat '
+        + 'kun Eurooppa on kuitattu valmiiksi.',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA + työhuone',
       tila: 'tyossa',
-      tehtava: 'Dubai/Lähi-itä-QA valmis: puhdas tulos kaikissa '
-        + 'neljässä kohdassa. Aiemmin kaaren faktat ja '
-        + 'peli-integraatio, molemmat puhtaita.',
-      seuraavaksi: 'QA kahdeksalle uudelle lehdelle (Kreeta, Sisilia, '
-        + 'Alpit + viisi kaupunkia) sekä v478-pelisäännölle ja v479 '
-        + 'Engel-jutulle.',
+      tehtava: 'Neljäs puhdas QA-kierros putkeen: 8 uutta lehteä '
+        + '(rakenne, minitehtävät 8/8 samalla sivulla, 72/72 kuvaa '
+        + 'curlilla), v478-pelisääntö ja v479 Engel — ei löydöksiä.',
+      seuraavaksi: 'Valmiudessa. Kokoava koko Euroopan QA ennen '
+        + 'omistajan ilmoitusta, kun nähtävyysjuttuerät ovat '
+        + 'mainissa.',
     },
     {
       tekija: 'Sonnet 2',
       rooli: 'nähtävyysjutut',
       tila: 'tyossa',
-      tehtava: 'Erä 8 mainissa (v477): Lissabon, Barcelona, Granada '
-        + '— nähtävyysjuttuja on nyt 17 kaupungissa.',
-      seuraavaksi: 'Erä 9 työn alla: Rooma, Krakova, Varsova, '
-        + 'Tallinna uudella monikuvalinjalla (pääkohteille 2–3 '
-        + 'kuvaa, aikalaiskuva kun laadukas löytyy).',
+      tehtava: 'Erä 9 mainissa (v488): Rooma, Krakova, Varsova, '
+        + 'Tallinna monikuvalinjalla — nähtävyysjuttuja on nyt 21 '
+        + 'kaupungissa.',
+      seuraavaksi: 'Erä 10: Sofia, Bukarest, Sarajevo. Jonossa erät '
+        + '11–13 (Kiova/Pietari/Moskova/Odessa ja kuusi uutta '
+        + 'karttakaupunkia).',
     },
   ],
   odottaaPaatosta: [
