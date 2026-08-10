@@ -4836,7 +4836,7 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Vuodelta 1900 oleva mustavalkoinen ilmakuva '
             + 'vastavalmistuneesta Nevskin katedraalista, Niguliste '
             + 'kirkon torni ja meri taustalla.',
-          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+          lahde: 'Tuntematon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
