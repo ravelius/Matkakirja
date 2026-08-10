@@ -13,6 +13,7 @@ export const LIPUT_PAIKALLISET = new Map([
   ["Flag of Assyria.svg", 'assyria.png'],
   ["Flag of Austria.svg", 'austria.png'],
   ["Flag of Azerbaijan.svg", 'azerbaijan.png'],
+  ["Flag of Bahrain.svg", 'bahrain.png'],
   ["Flag of Bangladesh.svg", 'bangladesh.png'],
   ["Flag of Bashkortostan.svg", 'bashkortostan.png'],
   ["Flag of Bosnia and Herzegovina.svg", 'bosnia-and-herzegovina.png'],

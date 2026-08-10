@@ -38,6 +38,20 @@ const MIN_PISTEITA = 4;
 const MIN_KOKO = 15;
 
 /*
+ * Maakohtainen kokoraja. Yleinen MIN_KOKO karsii merentakaisia
+ * sirpaleita, mutta se karsii myös kokonaisia pikkuvaltioita.
+ *
+ * Bahrain on laudalla 4,1 × 12,9 yksikköä, eli `koko` on 12,9 ja jää
+ * yleisen rajan alle — työkalu vastasi sille "ei renkaita ikkunassa".
+ * Se ei silti ole sirpale vaan koko maa: pienempi kuin Qatar (21)
+ * mutta isompi kuin Omanin Musandam (9), joka piirtyy laudalle
+ * oikeutetusti. Siksi raja lasketaan nimetysti tälle maalle eikä
+ * kaikille — yleisen rajan pudottaminen päästäisi Sokotran kaltaiset
+ * palat takaisin muihin maihin.
+ */
+const OMA_MIN_KOKO = { BHR: 10 };
+
+/*
  * Laudan ulkopuoliset saaret, jotka osuvat ikkunaan mutta eivät ole
  * laudalla. Kokorajalla näitä ei saa pois: Sokotra on 30 yksikköä
  * leveä eli isompi kuin Omanin Musandam (9), joka taas on oikea ja
@@ -103,7 +117,7 @@ for (const koodi of koodit) {
     const xs = pisteet.map((p) => p[0]);
     const ys = pisteet.map((p) => p[1]);
     const koko = Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys));
-    if (koko < MIN_KOKO) continue;
+    if (koko < (OMA_MIN_KOKO[koodi] ?? MIN_KOKO)) continue;
     const kLon = ((Math.min(...xs) + Math.max(...xs)) / 2) / 25 + 24;
     const kLat = 44.1 - ((Math.min(...ys) + Math.max(...ys)) / 2) / 29.28;
     const pois = POIS.find((p) => kLon >= p.lonMin && kLon <= p.lonMax

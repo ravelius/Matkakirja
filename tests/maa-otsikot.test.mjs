@@ -38,6 +38,7 @@ const GENETIIVIT = {
   Algeria: 'Algerian',
   Angola: 'Angolan',
   Arabiemiirikunnat: 'Arabiemiirikuntien',
+  Bahrain: 'Bahrainin',
   'Bosnia ja Hertsegovina': 'Bosnia ja Hertsegovinan',
   Bulgaria: 'Bulgarian',
   Egypti: 'Egyptin',

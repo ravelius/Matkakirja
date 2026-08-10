@@ -80,7 +80,16 @@ for (const lauta of LAUDAT) {
   const tulos = await sivu.evaluate((etsiEhdotus) => {
     const { ui, game } = window.matkakirja;
     const map = game.pack.map;
-    const isot = [...new Set(Object.values(map.cityCountry ?? {}))];
+    /*
+     * Maat luetaan countryShapesista, EI cityCountrysta.
+     *
+     * Aiemmin lista tuli kaupunki→maa-taulusta, jolloin kyltiltä jäi
+     * tarkistamatta jokainen maa, jolla ei ole laudalla kaupunkia.
+     * Bahrain on juuri sellainen: sen kyltti piirtyy ja avaa maalehden
+     * Maiden tiedot -varusteessa, mutta tarkistin ohitti sen sanomatta
+     * mitään — eli vastasi "ei törmäyksiä" maasta, jota se ei katsonut.
+     */
+    const isot = Object.keys(map.countryShapes ?? {});
     const laatikko = (e) => { const b = e.getBBox(); return { x: b.x, y: b.y, w: b.width, h: b.height }; };
     const yhteinen = (a, b) => {
       const w = Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x);
@@ -164,15 +173,22 @@ for (const lauta of LAUDAT) {
       });
     }
     ui.countryNameLayer.textContent = '';
-    return ulos.sort((a, b) => (b.iPeitto - a.iPeitto) || (b.peitto - a.peitto));
+    ulos.sort((a, b) => (b.iPeitto - a.iPeitto) || (b.peitto - a.peitto));
+    return { tarkistettu: isot.filter((i) => map.countryShapes?.[i]), ulos };
   }, ehdota);
 
+  /*
+   * Tulostetaan MITÄ tarkistettiin, ei vain löydöt. "Ei törmäyksiä"
+   * näytti ennen samalta kuin "maata ei katsottu lainkaan" — ja juuri
+   * niin kävi maille, joilla ei ole laudalla kaupunkia.
+   */
   console.log(`\n=== ${lauta} ===`);
-  if (!tulos.length) {
+  console.log(`tarkistettu ${tulos.tarkistettu.length} maata: ${tulos.tarkistettu.join(' ')}`);
+  if (!tulos.ulos.length) {
     console.log('ei törmäyksiä');
   } else {
     console.log('maa                       nimi   i-nappi  merkki  peittäjät');
-    for (const t of tulos) {
+    for (const t of tulos.ulos) {
       const rivi = `${(`${t.iso} ${t.nimi}`).padEnd(24)} ${`${t.peitto}%`.padStart(6)} ${`${t.iPeitto}%`.padStart(8)}  ${t.merkki ? 'kyllä ' : 'ei    '}  ${t.syyt.join(', ')}`;
       console.log(rivi);
       if (t.ehdotus) {
