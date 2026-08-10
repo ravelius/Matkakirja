@@ -32,11 +32,11 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Medico della peste.jpg',
         vuosi: '2022',
         lahde: 'CC BY-SA 4.0 (Cristina.Paveri, Commons)',
-        selite: 'Ruttolääkärin naamio karnevaaliasussa: valkoinen '
-          + 'linnunnokka, lasilliset silmäaukot, musta hattu ja viitta. '
-          + 'Alkuperäisessä asussa nokka täytettiin yrteillä, koska '
-          + 'taudin uskottiin leviävän pahassa ilmassa. Nokkanaamio on '
-          + 'nykyään Venetsian karnevaalin tunnetuin hahmo.',
+        selite: 'Ruttolääkärin naamio ja karnevaaliasu: valkoinen '
+          + 'linnunnokka, musta hattu ja viitta. Alkuperäisessä asussa '
+          + 'nokka täytettiin yrteillä, koska taudin uskottiin leviävän '
+          + 'pahassa ilmassa. Ruttolääkäri on nykyään karnevaalin '
+          + 'tunnetuimpia hahmoja.',
       },
     ],
     tiedosto: 'Gondolas and Piazzetta di San Marco, Venice, Italy-LCCN2001701072.jpg',
@@ -362,11 +362,10 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'GreatGeysirEruption.jpg',
         vuosi: '2001',
         lahde: 'Andreas Tille, Wikimedia Commons (CC BY-SA 4.0)',
-        selite: 'Suuri Geysir purkautuu Haukadalurin laaksossa. Islannin '
-          + 'Geysir on antanut nimensä kaikille maailman geysireille, '
-          + 'mutta se on ollut enimmäkseen hiljaa 1900-luvulta lähtien ja '
-          + 'herää lähinnä maanjäristysten jälkeen. Naapurissa oleva '
-          + 'Strokkur purkautuu muutaman minuutin välein.',
+        selite: 'Suuri Geysir purkautuu Haukadalurin laaksossa. Se on '
+          + 'antanut nimensä kaikille maailman geysireille, mutta ollut '
+          + 'enimmäkseen hiljaa 1910-luvulta lähtien; tämä purkaus '
+          + 'seurasi vuoden 2000 maanjäristyksiä.',
       },
     ],
     tiedosto: 'Reykjavík. Fish drying and shark oil station. (4558216609).jpg',
@@ -426,10 +425,9 @@ export const EUROPE_VALOKUVAT = {
         vuosi: '400-luku eaa.',
         lahde: 'CC0 (Cleveland Museum of Art, Commons)',
         selite: 'Ateenan hopeatetradrakman kääntöpuoli. Pöllö seisoo '
-          + 'katsojaan päin, takana on oliivinoksa ja kuunsirppi ja '
-          + 'oikealla kirjaimet ΑΘΕ eli "ateenalaisten". Rahoja '
-          + 'kutsuttiin pöllöiksi, ja niillä maksettiin ympäri '
-          + 'Välimerta.',
+          + 'sivuttain pää katsojaan käännettynä, takanaan oliivinoksa ja '
+          + 'kuunsirppi. Rahoja kutsuttiin pöllöiksi, ja niillä maksettiin '
+          + 'ympäri Välimerta.',
       },
     ],
     tiedosto: "Athènes. L' Acropole et le Temple de Thesée LCCN2017658103.jpg",
@@ -1055,11 +1053,10 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Notre Dame Gargoyles as rain gutters.jpg',
         vuosi: '2013',
         lahde: 'David.Clay.Photography, Commons (CC BY-SA 4.0)',
-        selite: 'Notre-Damen gargoylet sateella. Vesi virtaa katolta '
-          + 'kivihahmojen suun läpi ja putoaa kauas seinästä, ettei kivi '
-          + 'kastuisi ja rapautuisi — juuri se on gargoylen tehtävä. '
-          + 'Tornien kaiteella kyyhöttävät kimeerat ovat eri asia: ne '
-          + 'ovat pelkkää koristetta eivätkä johda vettä minnekään.',
+        selite: 'Notre-Damen gargoylet sateella: vesi virtaa katolta '
+          + 'kivihahmojen suun läpi ja kauas seinästä, ettei kivi '
+          + 'rapautuisi. Juuri se on gargoylen tehtävä — tornien '
+          + 'kaiteella kyyhöttävät kimeerat taas ovat pelkkää koristetta.',
       },
     ],
     tiedosto: 'Eiffel Tower, full-view looking toward the Trocadero, Exposition Universal, 1900, Paris, France.jpg',
@@ -1185,12 +1182,11 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Puerta del Sol - Reloj.jpg',
         vuosi: '2012',
         lahde: 'Tamorlan, Commons (CC BY-SA 3.0)',
-        selite: 'Real Casa de Correosin kellotorni Puerta del Solilla. '
-          + 'Alempana on kaksi kellotaulua ja ylempänä avoin kupoli, '
-          + 'jonka alla riippuvat kellot. Kellosepän José Rodríguez '
-          + 'Losadan tekemä koneisto lahjoitettiin kaupungille vuonna '
-          + '1866, ja sen kaksitoista lyöntiä tahdittavat yhä koko '
-          + 'Espanjan uudenvuoden rypäleet.',
+        selite: 'Real Casa de Correosin kellotorni Puerta del Solilla: '
+          + 'kaksi kellotaulua ja niiden yllä avoin kupoli, jossa kellot '
+          + 'riippuvat. Kelloseppä José Rodríguez Losadan koneisto '
+          + 'lahjoitettiin kaupungille 1866, ja se lyö Espanjan '
+          + 'uudenvuoden.',
       },
     ],
     tiedosto: 'Madrid. Plaza Mayor LCCN2017660767.jpg',
@@ -1382,11 +1378,10 @@ export const EUROPE_VALOKUVAT = {
         vuosi: '1880',
         lahde: 'Trigonometrische Abteilung der Landesaufnahme, Commons (PD)',
         selite: 'Berliinin kuninkaallinen tähtitorni pohjoisesta nähtynä, '
-          + 'piirros isoisän matkan ajoilta. Kupolin alla oli kaukoputki, '
-          + 'jolla Johann Gottfried Galle löysi Neptunuksen syyskuussa '
-          + '1846 — alle asteen päästä siitä kohdasta, jonka laskutoimitus '
-          + 'oli osoittanut. Talo purettiin 1913, ja havainnot siirtyivät '
-          + 'Babelsbergiin.',
+          + 'piirros isoisän ajoilta. Kupolin alla oli kaukoputki, jolla '
+          + 'Johann Gottfried Galle löysi Neptunuksen syyskuussa 1846 — '
+          + 'alle asteen päästä siitä, mihin Le Verrier oli sen laskenut. '
+          + 'Talo purettiin 1913.',
       },
     ],
     tiedosto: 'Berlin - Potsdamer Platz - um 1900.jpg',
@@ -1451,11 +1446,11 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Gebeinkammer in den Grabgrüften des Wiender Stephansdoms.jpg',
         vuosi: '2016',
         lahde: 'Burkhard Mücke, Commons (CC BY-SA 4.0)',
-        selite: 'Luukammio Stefaninkirkon hautaholveissa. Kirkon alle '
-          + 'haudattiin vuosisatojen ajan, kunnes hautaaminen kaupungin '
-          + 'sisään kiellettiin 1783; luut koottiin myöhemmin käytävien '
-          + 'varsilla oleviin kammioihin. Holveihin pääsee yhä oppaan '
-          + 'kanssa.',
+        selite: 'Kasa irtonaisia luita Stephansdomin hautaholveissa. '
+          + 'Kirkon alle haudattiin vuosisatojen ajan, kunnes kaupungin '
+          + 'sisälle hautaaminen kiellettiin 1783. Luut koottiin '
+          + '1870-luvulla käytävien varsien kammioihin, ja holveihin '
+          + 'pääsee yhä oppaan kanssa.',
       },
     ],
     tiedosto: 'Opernring, Vienna, Austro-Hungary-LCCN2002708403.jpg',
@@ -1534,22 +1529,20 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Hospiz Grosser St. Bernhard.JPG',
         vuosi: '2009',
         lahde: 'Joris Egger, Commons (CC BY-SA 3.0)',
-        selite: 'Suuren Sankt Bernhardin hospitsi solassa 2 469 metrin '
-          + 'korkeudessa. Kivitalot seisovat tien molemmin puolin siinä '
-          + 'kohdassa, jossa solan ylittäjä tarvitsi suojan; kaniikit '
-          + 'ovat pitäneet taloa 1000-luvulta asti. Sumu laskeutuu '
-          + 'rinteille kesken kesän.',
+        selite: 'Suuren Sankt Bernhardin hospitsi samannimisessä solassa, '
+          + 'lähes 2 500 metrin korkeudessa. Talot seisovat tien molemmin '
+          + 'puolin siinä kohdassa, jossa solan ylittäjä tarvitsi suojan, '
+          + 'ja sääntökuntapapit ovat pitäneet niitä 1000-luvulta asti.',
       },
       {
         tiedosto: 'Barry der Rettungshund.jpg',
         vuosi: '2014',
         lahde: 'PraktikantinNMBE, Commons (CC BY-SA 4.0)',
         selite: 'Barry Bernin luonnontieteellisen museon vitriinissä. '
-          + 'Koira palveli hospitsissa 1800-luvun alussa, ja sen '
-          + 'ansioksi luetaan noin neljäkymmentä pelastettua. Kaulassa '
-          + 'roikkuu museon lisäämä mitali — kuuluisa konjakkitynnyri '
-          + 'taas on peräisin myöhemmästä maalauksesta, eivätkä oikeat '
-          + 'koirat kantaneet sellaista.',
+          + 'Koira palveli hospitsissa 1800-luvun alussa, ja sen ansioksi '
+          + 'luetaan yli neljäkymmentä pelastettua ihmistä. Kaulassa '
+          + 'roikkuu museon mitali; konjakkitynnyri on 1800-luvun '
+          + 'maalauksesta lähtenyt myytti.',
       },
     ],
     tiedosto: 'The Rhone Glacier, Glacier Hotel and Furka Road, Valais, Alps of, Switzerland-LCCN2001703310.jpg',
@@ -1660,11 +1653,10 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'VarbarlangFotoThalerTamas.jpg',
         vuosi: '2008',
         lahde: 'Thaler Tamas, Commons (CC BY-SA 4.0)',
-        selite: 'Käytävä Budan linnanvuoren alla. Lämpimät lähteet '
+        selite: 'Käytävä Budan linnavuoren alla. Lämpimät lähteet '
           + 'syövyttivät kallioon onkaloita, ja talojen kellarit '
-          + 'louhittiin niiden jatkoksi, kunnes vuoren alle syntyi '
-          + 'kilometrien mittainen käytävästö. Rautaportti ja yksinäinen '
-          + 'lamppu ovat nykyisen näyttelyreitin varrelta.',
+          + 'louhittiin niiden jatkoksi — vuoren alle syntyi kilometrien '
+          + 'käytävästö. Rautaportti kuuluu nykyiseen näyttelyreittiin.',
       },
     ],
     tiedosto: 'Budapest, Lánchíd a budai hídfőtől nézve, 1873-1880 között. - Fortepan 82081.jpg',
@@ -1803,11 +1795,10 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'RO B Bucur church 1.jpg',
         vuosi: '2011',
         lahde: 'CC BY-SA 3.0 ro (Andrei Stroe, Commons)',
-        selite: 'Bucurin kirkko Radu Vodăn luostarin rinteessä. Pieni '
-          + 'valkoinen kirkko avokuisteineen jää nykytalojen väliin, ja '
-          + 'pihamuurin tiilikaaressa riippuu kello. Tarina paimen '
-          + 'Bucurista, jonka mukaan kaupunki olisi saanut nimensä, on '
-          + 'vanhempi kuin talo: nykyinen rakennus on 1700-luvulta.',
+        selite: 'Bucurin kirkko jää nykytalojen väliin: pieni valkoinen '
+          + 'rakennus avokuistilla, ja pihamuurin tiilikaaressa riippuu '
+          + 'kello. Kaupungin nimen kerrotaan tulevan paimen Bucurista, '
+          + 'mutta itse rakennuksen ikää ei ole saatu ratkaistuksi.',
       },
     ],
     tiedosto: 'Postcard from the Belle Époque with the Romanian Athenaeum and its garden.jpg',
@@ -2151,11 +2142,11 @@ export const EUROPE_VALOKUVAT = {
         tiedosto: 'Latvia Riga Cathedral weather cock.jpg',
         vuosi: '2006',
         lahde: 'Wojsyl, Commons (CC BY-SA 3.0)',
-        selite: 'Tuomiokirkon kultattu kukko tornin huipussa, kultatun '
-          + 'pallon yläpuolella. Riian kirkontornit kantavat ristin '
-          + 'sijasta kukkoa, joka kääntyy tuulen mukaan — satamaan '
-          + 'tulevat purjehtijat lukivat siitä tuulen suunnan. Kullaus '
-          + 'uusitaan, kun sää on sen kuluttanut.',
+        selite: 'Tuomiokirkon kullattu kukko tornin huipulla. Riian '
+          + 'vanhimmissa kirkontorneissa on ristin sijasta kukko, joka '
+          + 'kääntyy tuulen mukaan. Toinen kylki on kullattu ja toinen '
+          + 'tumma, ja niistä kaupungissa katsottiin, päästääkö tuuli '
+          + 'laivat satamaan.',
       },
     ],
     tiedosto: 'Theatre and promenade, Riga, Russia, (i.e., Latvia)-LCCN2001697477.jpg',
