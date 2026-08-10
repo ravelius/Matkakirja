@@ -8925,6 +8925,20 @@ body.vertailu-tila .pawns { display: none; }
 }
 
 /*
+ * Numeroina-sivun avaava yleisluonnehdinta (omistajan palaute
+ * 10.8.2026): datasta koottu 2–3 virkkeen luonnehdinta isolla ennen
+ * käyriä — sivu alkaa tekstillä, ei suoraan ristikolla. Matalammat
+ * käyrät (korkeus 106) tuovat rytmin ristikkoon ilman omaa sääntöä:
+ * viewBox hoitaa mittasuhteen.
+ */
+.numeroina-ingressi {
+  font-size: 1.18rem;
+  line-height: 1.55;
+  max-width: 40rem;
+  margin: 0.2rem 0 0.35rem;
+}
+
+/*
  * Menovinkkisivun taitto (omistajan palaute 10.8.2026: "liian
  * listamainen... yksi iso kuva ja alustusteksti isommalla, listaa
  * voisi kaventaa"): johdanto on ingressi, avauskuva täyttää palstan
