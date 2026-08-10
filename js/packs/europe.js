@@ -338,15 +338,10 @@ const EU_MAP = {
 const EU_CITIES = [
   {
     id: 'lontoo', name: 'Lontoo', wiki: 'Lontoo', ambience: 'kaupunki', x: 209, y: 539, start: true, airport: true,
-    links: [{ pack: 'maailma', city: 'lontoo', label: 'Maailma-lauta' }],
   },
   {
     id: 'istanbul', name: 'Istanbul', wiki: 'Istanbul', ambience: 'basaari', x: 766, y: 815, start: true, airport: true,
     // Sama kaupunki on myös Lähi-idän laudalla ja sillä on oma kaupunkilautansa.
-    links: [
-      { pack: 'middleeast', city: 'istanbul', label: 'Lähi-idän lauta' },
-      { pack: 'istanbul', city: 'lentoasema', label: 'Istanbulin kaupunkilauta' },
-    ],
   },
   { id: 'dublin', name: 'Dublin', wiki: 'Dublin', ambience: 'kaupunki', x: 91, y: 490, la: 'end', lx: -16, ly: 5 },
   { id: 'edinburgh', name: 'Edinburgh', wiki: 'Edinburgh', ambience: 'kaupunki', x: 150, y: 422, la: 'end', lx: -16, ly: 5 },
@@ -356,7 +351,6 @@ const EU_CITIES = [
   {
     id: 'madrid', name: 'Madrid', wiki: 'Madrid', ambience: 'kaupunki', x: 140, y: 831, airport: true,
     // Gibraltarin salmen yli Afrikkaan.
-    links: [{ pack: 'africa', city: 'tanger', label: 'Afrikan lauta' }],
   },
   { id: 'barcelona', name: 'Barcelona', wiki: 'Barcelona', ambience: 'satama', x: 244, y: 800, la: 'start', lx: 16, ly: 5 },
   { id: 'granada', name: 'Granada', ambience: 'kaupunki', wiki: 'Granada', x: 142, y: 916, la: 'end', lx: -16, ly: 5 },
@@ -374,7 +368,6 @@ const EU_CITIES = [
   { id: 'sisilia', name: 'Sisilia', wiki: 'Sisilia', ambience: 'meri', x: 468, y: 891, la: 'end', lx: -16, ly: 5 },
   {
     id: 'ateena', name: 'Ateena', wiki: 'Ateena', ambience: 'kaupunki', x: 667, y: 895, start: true, airport: true, la: 'end', lx: -16, ly: 5,
-    links: [{ pack: 'maailma', city: 'ateena', label: 'Maailma-lauta' }],
   },
   { id: 'kreeta', name: 'Kreeta', wiki: 'Kreeta', ambience: 'meri', x: 695, y: 964, la: 'middle', lx: 0, ly: 26 },
   // Nimi alapuolelle: Sarajevo on nyt suoraan yläpuolella.
@@ -394,7 +387,6 @@ const EU_CITIES = [
   {
     id: 'moskova', name: 'Moskova', wiki: 'Moskova', ambience: 'kaupunki', x: 934, y: 427, start: true, airport: true, la: 'end', lx: -16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla, josta Siperian rata jatkuu itään.
-    links: [{ pack: 'maailma', city: 'moskova', label: 'Maailma-lauta' }],
   },
   // 'Pietari' on fi-wikissä täsmennyssivu (apostoli, kaupunki, etunimi):
   // ilman tarkennetta Lue lisää, kuvat ja peilaus jäivät tyhjiksi.
@@ -402,7 +394,6 @@ const EU_CITIES = [
   {
     id: 'helsinki', name: 'Helsinki', wiki: 'Helsinki', ambience: 'metsa', x: 688, y: 303, airport: true, la: 'end', lx: -16, ly: -12,
     // Suomen oma lauta avautuu Helsingistä.
-    links: [{ pack: 'suomi', city: 'helsinki', label: 'Suomen lauta' }],
   },
   { id: 'tallinna', name: 'Tallinna', wiki: 'Tallinna', ambience: 'kaupunki', x: 684, y: 374, la: 'start', lx: 14, ly: 12 },
   { id: 'riika', name: 'Riika', wiki: 'Riika', ambience: 'kaupunki', x: 648, y: 434, la: 'end', lx: -14, ly: 14 },
@@ -410,7 +401,6 @@ const EU_CITIES = [
   {
     id: 'tukholma', name: 'Tukholma', wiki: 'Tukholma', ambience: 'satama', x: 558, y: 333, airport: true, la: 'end', lx: -16, ly: 5,
     // Ruotsinlaiva Ahvenanmaalle — Suomen laudalle.
-    links: [{ pack: 'suomi', city: 'maarianhamina', label: 'Suomen lauta (laiva Ahvenanmaalle)' }],
   },
   { id: 'oslo', name: 'Oslo', wiki: 'Oslo', ambience: 'metsa', x: 418, y: 318, la: 'end', lx: -16, ly: 5 },
   { id: 'kobenhavn', name: 'Kööpenhamina', wiki: 'Kööpenhamina', ambience: 'satama', x: 452, y: 429, la: 'start', lx: 16, ly: 5 },

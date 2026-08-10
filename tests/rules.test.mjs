@@ -482,18 +482,16 @@ for (const pack of PACKS) {
     }
   });
 
-  test(`${pack.id}: porttien linkit ovat vastavuoroisia`, () => {
-    // Portista pitää päästä myös takaisin: kohdekaupungista on linkki
-    // lähtölaudalle, jottei vaeltaja jää loukkuun vieraalle laudalle.
+  test(`${pack.id}: portteja on vain aloitusnäytöllä ja ne vievät maailmankartalle`, () => {
+    // Peli on yksi lauta (omistajan päätös 10.8.2026): ainoat portit
+    // ovat aloitusnäytön (maailma) kaupungeista maailmankartalle, ja
+    // ne ovat yksisuuntaisia — peliin ei saa jäädä laudanvaihtoja.
     for (const city of pack.cities) {
       for (const link of city.links ?? []) {
-        const target = PACKS.find((p) => p.id === link.pack)
-          ?.cities.find((c) => c.id === link.city);
-        if (!target) continue; // linkkien kohteet tarkistetaan omassa testissään
-        assert.ok(
-          (target.links ?? []).some((back) => back.pack === pack.id),
-          `${pack.id}:${city.id} → ${link.pack}:${link.city} ilman paluulinkkiä`,
-        );
+        assert.equal(pack.id, 'maailma',
+          `${pack.id}:${city.id}: portti laudalla, jolla ei saa olla portteja`);
+        assert.equal(link.pack, 'maailmankartta',
+          `${pack.id}:${city.id} → ${link.pack}: portin on vietävä maailmankartalle`);
       }
     }
   });
@@ -977,33 +975,17 @@ test('rosvon voi ohittaa kolmella hevosenkengällä', () => {
   assert.equal(toinen.actionDuelBypass().ok, false);
 });
 
-test('portit yhdistävät kaikki laudat toisiinsa', () => {
-  // Porttikaupungit ovat ainoa tapa siirtyä laudalta toiselle, joten yhdenkään
-  // laudan ei saa jäädä saarekkeeksi kun uusia lautoja lisätään.
-  const linked = new Map(PACKS.map((p) => [p.id, new Set()]));
-  for (const pack of PACKS) {
-    for (const city of pack.cities) {
-      for (const link of city.links ?? []) {
-        linked.get(pack.id).add(link.pack);
-        linked.get(link.pack).add(pack.id);
-      }
-    }
+test('aloitusnäytön joka kaupungista pääsee maailmankartalle', () => {
+  // Aloitusnäyttö (maailma) on pelin ainoa portillinen lauta: jokaisella
+  // sen kaupungilla on tasan yksi portti, ja se vie maailmankartan
+  // samannimiseen kaupunkiin.
+  const maailma = packById('maailma');
+  const kohteet = new Set(packById('maailmankartta').cities.map((c) => c.id));
+  for (const city of maailma.cities) {
+    assert.equal((city.links ?? []).length, 1, `${city.id}: portteja pitää olla tasan yksi`);
+    assert.equal(city.links[0].pack, 'maailmankartta', `${city.id}: portin kohde`);
+    assert.ok(kohteet.has(city.links[0].city), `${city.id}: kohdekaupunki puuttuu maailmankartalta`);
   }
-
-  const seen = new Set([PACKS[0].id]);
-  const queue = [PACKS[0].id];
-  while (queue.length) {
-    for (const next of linked.get(queue.pop())) {
-      if (seen.has(next)) continue;
-      seen.add(next);
-      queue.push(next);
-    }
-  }
-  assert.deepEqual(
-    PACKS.map((p) => p.id).filter((id) => !seen.has(id)),
-    [],
-    'laudalle ei pääse porttikaupunkien kautta',
-  );
 });
 
 test('vaellus: yksin pelattaessa peli ei pääty ja tähti on arvokas löytö', () => {
@@ -1027,65 +1009,24 @@ test('vaellus: yksin pelattaessa peli ei pääty ja tähti on arvokas löytö', 
   assert.equal(game.winner, null);
 });
 
-test('vaellus: porttikaupungista siirrytään toiselle laudalle ja takaisin', () => {
+test('laudanvaihtoportteja ei ole pelin sisällä', () => {
+  // Peli on yksi lauta (omistajan päätös 10.8.2026): entiset
+  // porttikaupungit (Tanger, Kairo, Istanbul, Helsinki) eivät tarjoa
+  // maksullista porttia eivätkä tietoporttia millekään toiselle laudalle.
   const game = new Game({
-    players: [{ name: 'Yksin', color: '#f00', start: 'tanger' }],
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack: packById('maailma'),
     rng: mulberry32(43),
   });
+  game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'maailmankartta'));
   const p = game.player;
-
-  // Tavallisesta kaupungista ei lähde pitkää lentoa.
-  p.pos = { type: 'city', city: 'tripoli' };
-  game.phase = 'action';
-  assert.deepEqual(game.gatewayOptions(), []);
-
-  // Tanger on porttikaupunki: Gibraltarin yli Eurooppaan tai maailmankartalle.
-  p.pos = { type: 'city', city: 'tanger' };
-  assert.deepEqual(game.gatewayOptions().map((l) => l.pack), ['europe', 'maailma']);
-
-  // Kairosta pääsee Lähi-idän laudalle.
-  p.pos = { type: 'city', city: 'kairo' };
-  game.phase = 'action';
-  const options = game.gatewayOptions();
-  assert.equal(options.length, 2, 'Lähi-itään ja Maailma-laudalle');
-  assert.equal(options[0].pack, 'middleeast');
-
-  const afrikanLaatat = game.tokens.size;
-  const rahaEnnen = p.money;
-  assert.ok(game.actionGateway(0).ok);
-  assert.equal(p.money, rahaEnnen - FLIGHT_PRICE, 'pitkä lento maksaa lennon hinnan');
-  assert.equal(p.packId, 'middleeast');
-  assert.equal(game.arrivalFact?.packId, 'middleeast', 'saapuminen kirjaa havainnon laudalle');
-  assert.equal(game.arrivalFact?.cityId, 'kairo', 'havainto kertoo saapumiskaupungista');
-  assert.equal(p.pos.city, 'kairo');
-  assert.equal(game.pack.id, 'middleeast', 'aktiivinen lauta seuraa pelaajaa');
-  assert.ok(game.tokens.size > 0, 'uudella laudalla on omat laatat');
-
-  // Ilman lipun hintaa portti ei aukea.
-  game.phase = 'action';
-  p.money = 10;
-  assert.deepEqual(game.gatewayOptions(), []);
   p.money = 1000;
-
-  // Lähi-idän Istanbulista laskeudutaan kaupunkilaudalle.
-  game.phase = 'action';
-  p.pos = { type: 'city', city: 'istanbul' };
-  const cityLink = game.gatewayOptions().find((l) => l.pack === 'istanbul');
-  assert.ok(cityLink, 'Istanbulista pääsee kaupunkilaudalle');
-  game.actionGateway(cityLink.index);
-  assert.equal(p.packId, 'istanbul');
-  assert.equal(p.pos.city, 'lentoasema');
-
-  // Ja samaa reittiä takaisin; Afrikan laudan tila on tallessa.
-  game.phase = 'action';
-  game.actionGateway(0);
-  assert.equal(p.packId, 'middleeast');
-  game.phase = 'action';
-  p.pos = { type: 'city', city: 'kairo' };
-  p.money = 1000;
-  game.actionGateway(0);
-  assert.equal(p.packId, 'africa');
-  assert.equal(game.tokens.size, afrikanLaatat, 'Afrikan laatat säilyivät');
+  for (const city of ['kairo', 'tanger', 'istanbul', 'helsinki', 'lontoo']) {
+    game.phase = 'action';
+    p.pos = { type: 'city', city };
+    assert.deepEqual(game.gatewayOptions(), [], `${city}: maksullinen portti aukesi`);
+    assert.deepEqual(game.countryGateOptions(), [], `${city}: tietoportti aukesi`);
+  }
 });
 
 /**
@@ -1102,7 +1043,7 @@ function porttiIndeksi(game, kaupunki, packId) {
   return idx;
 }
 
-test('vaellus: lähtöpiste valitaan maailmankartalta ja portti vie mantereelle', () => {
+test('vaellus: lähtöpiste valitaan aloitusnäytöltä ja portti vie maailmankartalle', () => {
   const game = new Game({
     players: [{ name: 'Yksin', color: '#f00', start: null }],
     pack: packById('maailma'),
@@ -1112,11 +1053,11 @@ test('vaellus: lähtöpiste valitaan maailmankartalta ja portti vie mantereelle'
   assert.ok(game.roaming);
   assert.equal(game.actionTravel('land').ok, false, 'ennen valintaa ei matkusteta');
 
-  // Kairon portista astutaan suoraan Afrikan laudalle — ilmaiseksi.
+  // Kairon portista astutaan suoraan maailmankartalle — ilmaiseksi.
   const rahaEnnen = game.player.money;
-  assert.ok(game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'africa')).ok);
+  assert.ok(game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'maailmankartta')).ok);
   assert.equal(game.player.money, rahaEnnen, 'lähtöpisteen valinta on ilmainen');
-  assert.equal(game.player.packId, 'africa');
+  assert.equal(game.player.packId, 'maailmankartta');
   assert.deepEqual(game.player.pos, { type: 'city', city: 'kairo' });
   assert.equal(game.player.start, 'kairo');
   assert.notEqual(game.phase, 'pickstart');
@@ -1142,78 +1083,26 @@ test('vaellus: valitsematon lähtöpiste tallentuu ja palautuu', () => {
   const restored = Game.fromJSON(JSON.parse(JSON.stringify(game.toJSON())));
   assert.ok(restored);
   assert.equal(restored.phase, 'pickstart');
-  assert.ok(restored.actionPickStart('rio', porttiIndeksi(restored, 'rio', 'southamerica')).ok);
-  assert.equal(restored.player.packId, 'southamerica');
-});
-
-test('tietoportti: vaikea kysymys avaa maan laudan ilmaiseksi', () => {
-  const game = new Game({
-    players: [{ name: 'Yksin', color: '#f00', start: null }],
-    pack: packById('maailma'),
-    rng: mulberry32(71),
-  });
-  game.actionPickStart('lontoo', porttiIndeksi(game, 'lontoo', 'europe'));
-  const p = game.player;
-  p.pos = { type: 'city', city: 'helsinki' };
-  game.phase = 'action';
-
-  // Suomen lauta ei ole rahalla ostettava portti vaan tietoportti.
-  assert.deepEqual(game.gatewayOptions().map((l) => l.pack), [], 'ei maksullista porttia Suomeen');
-  const gates = game.countryGateOptions();
-  assert.equal(gates.length, 1);
-  assert.equal(gates[0].pack, 'suomi');
-
-  // Oikea vastaus avaa portin: siirtyminen on ilmainen eikä laattoja käänny.
-  const rahaEnnen = p.money;
-  const laattojaEnnen = game.tokens.size;
-  assert.ok(game.actionGateQuiz(gates[0].index).ok);
-  assert.ok(game.quiz.gate, 'kysymys on porttikysymys');
-  game.answerQuiz(game.quiz.correct);
-  assert.equal(game.tokens.size, laattojaEnnen, 'laatta ei käänny porttikysymyksestä');
-  const closed = game.closeQuiz();
-  assert.ok(closed.gated);
-  assert.equal(p.packId, 'suomi');
-  assert.deepEqual(p.pos, { type: 'city', city: 'helsinki' });
-  assert.equal(p.money, rahaEnnen, 'portti on ilmainen');
-
-  // Väärä vastaus: portti ei aukea ja vuoro päättyy (yksinpelissä sama pelaaja).
-  const toinen = new Game({
-    players: [{ name: 'Yksin', color: '#f00', start: null }],
-    pack: packById('maailma'),
-    rng: mulberry32(72),
-  });
-  toinen.actionPickStart('lontoo', porttiIndeksi(toinen, 'lontoo', 'europe'));
-  toinen.player.pos = { type: 'city', city: 'helsinki' };
-  toinen.phase = 'action';
-  toinen.actionGateQuiz(0);
-  toinen.answerQuiz((toinen.quiz.correct + 1) % 4);
-  toinen.closeQuiz();
-  assert.equal(toinen.player.packId, 'europe', 'väärällä vastauksella jäädään laudalle');
-
-  // Laatattomaan kaupunkiin saapuminen ei avaa korttia itsestään, mutta
-  // Tutki paikka odottaa alavalikossa.
-  assert.equal(game.phase, 'action', 'saapuminen ei avaa korttia laatattomassa kaupungissa');
-  assert.ok(game.travelModes().includes('stay'), 'Tutki paikka on alavalikossa');
-
-  // Suomesta pois pääsee tavallisesta portista (manner ei ole maalauta).
-  const takaisin = game.gatewayOptions();
-  assert.deepEqual(takaisin.map((l) => l.pack), ['europe']);
+  assert.ok(restored.actionPickStart('rio', porttiIndeksi(restored, 'rio', 'maailmankartta')).ok);
+  assert.equal(restored.player.packId, 'maailmankartta');
 });
 
 test('vaellus: monen laudan peli tallentuu ja palautuu', () => {
+  // Kaksi maailmaa syntyy aloitusportista: valitsin (maailma) ja
+  // maailmankartta. Tallennuksen on kannettava molemmat.
   const game = new Game({
-    players: [{ name: 'Yksin', color: '#f00', start: 'kairo' }],
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack: packById('maailma'),
     seed: 777,
   });
-  game.phase = 'action';
-  game.player.money = 1000;
-  game.actionGateway(0); // Lähi-itään
+  game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'maailmankartta'));
   const data = JSON.parse(JSON.stringify(game.toJSON()));
   const restored = Game.fromJSON(data);
 
   assert.ok(restored);
   assert.ok(restored.roaming);
-  assert.equal(restored.player.packId, 'middleeast');
+  assert.equal(restored.player.packId, 'maailmankartta');
+  assert.equal(restored.worlds.size, 2);
   assert.equal(restored.worlds.size, game.worlds.size);
   assert.equal(restored.tokens.size, game.tokens.size);
   assert.equal(restored.rng(), game.rng(), 'arvonnat jatkuvat samasta kohdasta');
@@ -1238,10 +1127,10 @@ test('kilpapelin voittaja voi jatkaa vaellusta', () => {
   assert.equal(game.winner, null);
   assert.notEqual(game.phase, 'over');
 
-  // Portit aukeavat myös jatketussa pelissä.
+  // Matka jatkuu tavallisin keinoin myös jatketussa pelissä.
   game.current = 1;
   game.phase = 'action';
-  assert.equal(game.gatewayOptions().length, 2, 'Kairossa oleva pääsee porteista');
+  assert.ok(game.travelModes().length > 0, 'voittaja voi jatkaa matkustamista');
 });
 
 test('sama kysymys ei toistu ennen kuin pakka on käyty läpi', () => {
@@ -1316,9 +1205,10 @@ test('aarretta ei voi ostaa rahalla', () => {
     ['countryGates', 'fly', 'gateways', 'quiz', 'roll', 'travel'],
   );
   assert.ok(actions.travel.includes('land'));
-  // Portit ovat käytössä myös kilpapelissä: Tangerista lennetään Espanjaan
-  // tai takaisin maailmankartalle.
-  assert.deepEqual(actions.gateways.map((l) => l.pack), ['europe', 'maailma']);
+  // Laudanvaihtoportteja ei pelissä ole (yksi lauta, omistajan päätös
+  // 10.8.2026) — porttilistat ovat tyhjät myös kilpapelissä.
+  assert.deepEqual(actions.gateways, []);
+  assert.deepEqual(actions.countryGates, []);
 });
 
 test('50:50 poistaa kaksi väärää vaihtoehtoa ja maksaa 80', () => {
@@ -1623,8 +1513,8 @@ test('saapumishavainto seuraa matkaajaa kaupungista kaupunkiin', () => {
     pack: packById('maailma'),
     rng: mulberry32(7),
   });
-  game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'africa')); // portti Afrikan laudalle
-  assert.equal(game.arrivalFact?.packId, 'africa', 'laudalle astuminen kirjaa havainnon');
+  game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'maailmankartta'));
+  assert.equal(game.arrivalFact?.packId, 'maailmankartta', 'laudalle astuminen kirjaa havainnon');
   assert.equal(game.arrivalFact?.cityId, 'kairo');
 
   // Jokaisella Afrikan kaupungilla on havaintoja, ja isoisän ääni
@@ -1708,9 +1598,9 @@ test('kokemuspisteitä kertyy uusista paikoista, ei uudelleen käynneistä', () 
   const p = game.player;
   assert.equal(p.xp, 0, 'lähtöruudussa ei vielä pisteitä');
 
-  // Lähtöpisteen valinta vie Afrikan laudalle: uusi lauta + uusi kaupunki.
-  game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'africa'));
-  assert.equal(p.packId, 'africa');
+  // Lähtöpisteen valinta vie maailmankartalle: uusi lauta + uusi kaupunki.
+  game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'maailmankartta'));
+  assert.equal(p.packId, 'maailmankartta');
   assert.equal(p.xp, XP_NEW_BOARD + XP_NEW_CITY);
   assert.ok(game.world.visited.has('kairo'));
 
@@ -1797,7 +1687,7 @@ test('kokemuspisteet, laskurit ja käydyt kaupungit säilyvät tallennuksessa', 
     pack: packById('maailma'),
     rng: mulberry32(77),
   });
-  game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'africa'));
+  game.actionPickStart('kairo', porttiIndeksi(game, 'kairo', 'maailmankartta'));
   game.countAnswer(game.player, true);
   game.countAnswer(game.player, false);
 
@@ -2533,12 +2423,12 @@ test('pulma aukeaa Tutki paikka -napista, ei itsestään: aloitus Kairoon', () =
     seed: 403,
   });
   const kairo = game.pack.cities.find((c) => c.id === 'kairo');
-  const idx = kairo.links.findIndex((l) => l.pack === 'africa');
-  assert.ok(idx >= 0, 'maailman Kairosta pitäisi olla portti Afrikkaan');
+  const idx = kairo.links.findIndex((l) => l.pack === 'maailmankartta');
+  assert.ok(idx >= 0, 'maailman Kairosta pitäisi olla portti maailmankartalle');
 
   const tulos = game.actionPickStart('kairo', idx);
   assert.ok(tulos.ok);
-  assert.equal(game.pack.id, 'africa');
+  assert.equal(game.pack.id, 'maailmankartta');
   // Mikään ei saa hypätä ruudulle heti laskeuduttua — Tutki paikka odottaa
   // alavalikossa, ja pulma aukeaa vasta siitä.
   assert.equal(game.quiz, null, 'pulma ei saa avautua itsestään');
@@ -3274,10 +3164,13 @@ test('lento muistuttaa unohdetusta aarteesta vain kun se on löytämättä', () 
   }
 });
 
-test('lauta ilman lentorepliikkejä ei kaadu', () => {
-  const pack = packById('suomi');
-  const game = new Game({ players: [{ name: 'A', color: '#f00' }], pack, seed: 5 });
-  if (!pack.texts?.flightLines && !pack.texts?.flightDefault) {
+test('lauta ilman lentorepliikkejä ei kaadu', async () => {
+  // Suomen koelauta poistettiin rekisteristä (yksi lauta, 10.8.2026),
+  // mutta tiedosto kelpaa yhä repliikittömän laudan koekappaleeksi —
+  // tuodaan suoraan, koska packById ei sitä enää tunne.
+  const { SUOMI } = await import('../js/packs/suomi.js');
+  const game = new Game({ players: [{ name: 'A', color: '#f00' }], pack: SUOMI, seed: 5 });
+  if (!SUOMI.texts?.flightLines && !SUOMI.texts?.flightDefault) {
     assert.equal(game.flightLine('helsinki'), null);
   }
 });

@@ -109,7 +109,6 @@ const NA_CITIES = [
     id: 'newyork', name: 'New York', wiki: 'New York', ambience: 'kaupunki', x: 818, y: 507, start: true, airport: true,
     la: 'start', lx: 16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
-    links: [{ pack: 'maailma', city: 'newyork', label: 'Maailma-lauta' }],
   },
   {
     id: 'sanfrancisco', name: 'San Francisco', wiki: 'San Francisco', ambience: 'satama', x: 420, y: 546, start: true, airport: true,
@@ -140,7 +139,6 @@ const NA_CITIES = [
   { id: 'grandcanyon', name: 'Grand Canyon', wiki: 'Grand Canyon', ambience: 'aavikko', x: 502, y: 583, la: 'middle', lx: 0, ly: -22 },
   {
     id: 'losangeles', name: 'Los Angeles', wiki: 'Los Angeles', ambience: 'kaupunki', x: 445, y: 594, start: true, airport: true, la: 'end', lx: -16, ly: 5,
-    links: [{ pack: 'maailma', city: 'losangeles', label: 'Maailma-lauta' }],
   },
   { id: 'hawaii', name: 'Havaiji', wiki: 'Havaiji', ambience: 'meri', x: 185, y: 628, la: 'middle', lx: 0, ly: 34 },
   { id: 'houston', name: 'Houston', wiki: 'Houston', ambience: 'kaupunki', x: 651, y: 657, la: 'end', lx: -16, ly: 5 },
@@ -156,7 +154,6 @@ const NA_CITIES = [
   {
     id: 'panama', name: 'Panama', wiki: 'Panama (kaupunki)', ambience: 'satama', x: 857, y: 871, airport: true, la: 'start', lx: 16, ly: 5,
     // Sama kaupunki on myös Etelä-Amerikan laudalla: kannas yhdistää mantereet.
-    links: [{ pack: 'southamerica', city: 'panama', label: 'Etelä-Amerikan lauta' }],
   },
 ];
 

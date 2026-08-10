@@ -6,33 +6,35 @@ import { MAAILMA } from './packs/maailma.js';
 import { AFRICA } from './packs/africa.js';
 import { MIDDLE_EAST } from './packs/middleeast.js';
 import { EUROPE } from './packs/europe.js';
-import { ISTANBUL } from './packs/istanbul.js';
 import { SOUTHAMERICA } from './packs/southamerica.js';
 import { NORTHAMERICA } from './packs/northamerica.js';
 import { ASIA } from './packs/asia.js';
 import { OCEANIA } from './packs/oceania.js';
-import { SUOMI } from './packs/suomi.js';
 import { MAAILMANKARTTA } from './packs/maailmankartta.js';
 
+/*
+ * PELI on yksi lauta: maailmankartta (omistajan päätös 10.8.2026 —
+ * "peli kehitettiin alunperin eri maanosien ympärille, mutta
+ * myöhemmin kaikki yhdistettiin yhdeksi laudaksi; muut laudat
+ * kannattaa poistaa"). Kaikki laudanvaihtoportit on poistettu
+ * pakkojen links-kentistä; ainoa portti on aloitusnäytön (maailma)
+ * kaupungeista maailmankartalle.
+ *
+ * Maanosapakat ovat listassa enää kahdesta syystä: ne ovat
+ * maailmankartan DATAN lähde (kaupungit, kysymykset, aarteet
+ * kootaan niistä), ja työhuoneen/työkalujen katselutila
+ * (?lauta=europe) piirtää niiden kartat. Peli ei voi päätyä niille.
+ * Suomen ja Istanbulin koelaudat poistettiin rekisteristä kokonaan;
+ * tiedostot jäävät repoon mahdollista myöhempää käyttöä varten.
+ *
+ * js/packs/vanhamaailma.js jää repoon: se on yhä tools/-työkalujen
+ * lähde maatunnuksille, mutta peli ei enää lataa sitä.
+ */
 export const PACKS = [
   MAAILMA,
-  /*
-   * Maailmankartta KORVASI vanhan maailman (omistajan päätös 3.8.2026).
-   *
-   * Se on sama kartta laajempana: kaikki 143 vanhan maailman kaupunkia,
-   * kaikki 222 reittiä ja samat askelmäärät ovat mukana sellaisinaan, ja
-   * lisäksi Amerikat ja Oseania. Siksi vaihto oli turvallinen — kesken
-   * jäänyt peli siirtyy laudalta toiselle kaupunkitunnuksillaan
-   * (js/main.js loadGame).
-   *
-   * js/packs/vanhamaailma.js jää repoon: se on yhä tools/-työkalujen
-   * lähde maatunnuksille, mutta peli ei enää lataa sitä.
-   */
   MAAILMANKARTTA,
-  // Maanosalaudat jäävät rinnalle: niillä on kullakin oma aarteensa,
-  // kun yhdistetyllä on toistaiseksi yksi.
+  // Vain katselutilaan ja työkaluille — ei pelattavissa:
   AFRICA, EUROPE, ASIA, OCEANIA, NORTHAMERICA, SOUTHAMERICA, MIDDLE_EAST,
-  SUOMI, ISTANBUL,
 ];
 
 export function packById(id) {

@@ -53,18 +53,10 @@ const ME_CITIES = [
   {
     id: 'istanbul', name: 'Istanbul', wiki: 'Istanbul', ambience: 'basaari', x: 125, y: 88, start: true, airport: true,
     // Vaelluksessa Istanbulista voi laskeutua kaupunkitason laudalle.
-    links: [
-      { pack: 'istanbul', city: 'lentoasema', label: 'Istanbulin kaupunkilauta' },
-      { pack: 'europe', city: 'istanbul', label: 'Euroopan lauta' },
-    ],
   },
   {
     id: 'kairo', name: 'Kairo', wiki: 'Kairo', ambience: 'basaari', x: 181, y: 410, start: true, airport: true,
     // Sama kaupunki on myös Afrikan laudalla.
-    links: [
-      { pack: 'africa', city: 'kairo', label: 'Afrikan lauta' },
-      { pack: 'maailma', city: 'kairo', label: 'Maailma-lauta' },
-    ],
   },
 
   { id: 'izmir', name: 'Izmir', wiki: 'İzmir', ambience: 'satama', x: 78, y: 164, la: 'start', lx: 16, ly: 5 },
@@ -88,7 +80,6 @@ const ME_CITIES = [
   {
     id: 'dubai', name: 'Dubai', wiki: 'Dubai', ambience: 'satama', x: 782, y: 565, start: true, airport: true, la: 'middle', lx: 0, ly: 26,
     // Persianlahden vaihtoasema: täältä lähtee pitkä lento itään.
-    links: [{ pack: 'maailma', city: 'mumbai', label: 'Maailma-lauta' }],
   },
   { id: 'doha', name: 'Doha', wiki: 'Doha', ambience: 'satama', x: 688, y: 550, la: 'middle', lx: 0, ly: 26 },
   { id: 'kuwait', name: 'Kuwait', wiki: 'Kuwait (kaupunki)', ambience: 'satama', x: 600, y: 430, la: 'end', lx: -16, ly: 5 },
@@ -98,7 +89,6 @@ const ME_CITIES = [
   {
     id: 'teheran', name: 'Teheran', wiki: 'Teheran', ambience: 'kaupunki', x: 685, y: 244, airport: true, la: 'start', lx: 16, ly: 5,
     // Sama kaupunki on myös Aasian laudalla.
-    links: [{ pack: 'asia', city: 'teheran', label: 'Aasian lauta' }],
   },
   { id: 'isfahan', name: 'Isfahan', wiki: 'Isfahan', ambience: 'basaari', x: 692, y: 334, la: 'start', lx: 16, ly: 5 },
   { id: 'persepolis', name: 'Persepolis', wiki: 'Persepolis', ambience: 'aavikko', x: 722, y: 414, la: 'start', lx: 16, ly: 5 },

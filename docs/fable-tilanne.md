@@ -6,6 +6,33 @@ uuden tilin session — yli. Lue tämä ENSIN, sitten `CLAUDE.md`,
 `js/tyohuone-tilanne.js`. Ylin osio on aina tuorein tila; alemmat
 osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
 
+## YKSI LAUTA 10.8. ~13:50Z (v529) — LAUDANVAIHDOT POIS
+
+- **Omistajan päätös:** peli kehitettiin alunperin maanosalautoina,
+  mutta nykyinen peli on yksi yhdistetty maailmankartta — "muut
+  laudat kannattaa poistaa, siitä voi tulla muutakin ongelmaa".
+- **v529 (datataso):** kaikki links-portit pois mannerlaudoilta,
+  maailmankartalta (14 "Valitse toinen lauta" -paluuporttia) ja
+  maailma-aloitusnäytön "manner erikseen" -vaihtoehdot; jäljelle jäi
+  VAIN aloitusnäyttö → maailmankartta (yksisuuntainen, testi vartioi).
+  SUOMI ja ISTANBUL pois PACKS-rekisteristä kokonaan (tiedostot
+  jäävät repoon); mannerpakat jäävät rekisteriin VAIN datalähteenä
+  ja katselutilalle (?lauta=europe toimii työkaluille — Fable maxin
+  maakylttityö ja tarkista-maakyltit tarvitsevat sen).
+- **Testit:** portti/vaellus/tietoportti-testit kirjoitettu
+  uusiksi yhden laudan mallille (543 pass; suomi/istanbul-lautojen
+  testit poistuivat rekisterin mukana). Playwright: aloitusnäytöltä
+  Ateenaan → maailmankartta, ei portteja pelissä, katselu toimii.
+- **VAIHE 2 JONOSSA (Opukselle tai itselle):** moottorin kuollut
+  koodi — gatewayOptions/actionGateway/countryGateOptions/
+  actionGateQuiz + UI:n porttinapit + scope:'country' -haarat;
+  suomi/istanbul-tiedostojen lopullinen kohtalo omistajalta.
+- **Tekstiehdotukset annettu:** docs/ehdotus-kaaritekstit.md — kuusi
+  "isoisä maksoi" -kohtaamista uusiksi eri teemoin (Sofia, Praha,
+  Vilna + Kairo, Salalah, Halab). ODOTTAA OMISTAJAN HYVÄKSYNTÄÄ;
+  sitten Euroopan kolmen luentojen uusintagenerointi + ME-editit,
+  ja koko kaariston teematarkistus (max 2 samaa teemaa).
+
 ## LAATAT KAIKKIALLE + MANTEREIDEN AARTEET 10.8. ~13:20Z (v528)
 
 - **Juurisyy omistajan "vanhat aarteet näkyvät yhä" -havaintoon:**

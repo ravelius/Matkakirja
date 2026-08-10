@@ -99,7 +99,6 @@ const SA_CITIES = [
     id: 'panama', name: 'Panama', wiki: 'Panama (kaupunki)', ambience: 'satama', x: 236, y: 98, start: true, airport: true,
     la: 'end', lx: -16, ly: 5,
     // Sama kaupunki on myös Pohjois-Amerikan laudalla: kannas yhdistää mantereet.
-    links: [{ pack: 'northamerica', city: 'panama', label: 'Pohjois-Amerikan lauta' }],
   },
   {
     id: 'buenosaires', name: 'Buenos Aires', wiki: 'Buenos Aires', ambience: 'kaupunki', x: 554, y: 681, start: true, airport: true,
@@ -121,7 +120,6 @@ const SA_CITIES = [
     la: 'start', lx: 16, ly: 5,
     // Etelä-Atlantin postilentoreitti Dakariin: Brasilian itäkärki on
     // Afrikkaa lähinnä oleva kohta koko Amerikassa.
-    links: [{ pack: 'africa', city: 'dakar', label: 'Afrikan lauta' }],
   },
   { id: 'salvador', name: 'Salvador', wiki: 'Salvador (Brasilia)', ambience: 'kaupunki', x: 815, y: 411, la: 'start', lx: 16, ly: 5 },
   { id: 'iquitos', name: 'Iquitos', wiki: 'Iquitos', ambience: 'sademetsa', x: 351, y: 273, la: 'end', lx: -16, ly: 5 },
@@ -136,7 +134,6 @@ const SA_CITIES = [
     id: 'rio', name: 'Rio de Janeiro', wiki: 'Rio de Janeiro', ambience: 'kaupunki', x: 738, y: 533, start: true, airport: true,
     la: 'start', lx: 16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
-    links: [{ pack: 'maailma', city: 'rio', label: 'Maailma-lauta' }],
   },
   { id: 'saopaulo', name: 'São Paulo', wiki: 'São Paulo', ambience: 'kaupunki', x: 682, y: 525, la: 'end', lx: -6, ly: 20 },
   { id: 'iguazu', name: 'Iguazú', wiki: 'Iguassun putoukset', ambience: 'sademetsa', x: 603, y: 561, la: 'start', lx: 16, ly: 5 },
