@@ -680,15 +680,28 @@ const OMAT_GALLERIAT = {
   ],
 };
 
+/**
+ * Kuratoitu kuvalista galleriamuotoon: Commonsin tiedostonimestä
+ * osoite, varareitti ja kuvateksti lähteineen.
+ *
+ * Sama muunnos kahdelle aineistolle: Tutki-sivun OMAT_GALLERIAT
+ * (kenttä `caption`) ja vuorikohteiden VUORIKUVAT (kentät `selite` ja
+ * `lahde`, kuten nähtävyysjutuissa).
+ */
+function kuratoituGalleria(kuvat, leveys = 1200) {
+  return kuvat.map((k) => ({
+    src: valokuvaUrl(k.tiedosto, leveys),
+    vara: valokuvaVara(k.tiedosto, leveys),
+    caption: k.selite ?? k.caption ?? null,
+    lahde: k.lahde ?? null,
+  }));
+}
+
 async function cachedGallery(title) {
   if (!wikiGalleryCache.has(title)) {
     const oma = OMAT_GALLERIAT[title];
     wikiGalleryCache.set(title, oma
-      ? Promise.resolve(oma.map((k) => ({
-        src: valokuvaUrl(k.tiedosto, 1200),
-        vara: valokuvaVara(k.tiedosto, 1200),
-        caption: k.caption,
-      })))
+      ? Promise.resolve(kuratoituGalleria(oma))
       : cachedSummary(title).then((s) => fetchImages(s)));
   }
   return wikiGalleryCache.get(title);
@@ -735,6 +748,7 @@ import {
   lahivedenVoima,
 } from './mapart.js';
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
+import { vuorikuvat } from './packs/vuori-valokuvat.js';
 import { MERISYVYYS } from './packs/maailmankartta-syvyys.js';
 import { MAASTON_VARJOSTUS } from './packs/maailmankartta-varjostus.js';
 
@@ -1705,12 +1719,18 @@ export class UI {
     // selatusta kohdasta.
     this.wikiKuvakotelo = document.getElementById('wiki-kuvakotelo');
     this.wikiKuvaLaskuri = document.getElementById('wiki-kuva-laskuri');
+    this.wikiKuvateksti = document.getElementById('wiki-kuvateksti');
     this.wikiKuvat = [];
     this.wikiKuvaKohdalla = 0;
     this.wikiKuvaPortaat = [];
+    this.wikiGalleria = null;
     this.wikiImage.addEventListener('click', () => {
       if (this.wikiOpenFor) {
-        this.openLightbox(this.wikiOpenFor, this.wikiTitle.textContent, this.wikiImage.src || null);
+        // Kuratoitu karuselli jatkuu suurennoksessa selitteineen ja
+        // lähdemerkintöineen; ilman listaa suurennos hakisi tilalle
+        // artikkelin oman kuvaston.
+        this.openLightbox(this.wikiOpenFor, this.wikiTitle.textContent,
+          this.wikiImage.src || null, this.wikiGalleria);
       }
     });
     const selaaWikiKuvaa = (askel) => {
@@ -3285,7 +3305,16 @@ export class UI {
    */
   avaaMaastonimi(kohde) {
     if (!kohde?.wiki) return;
-    this.openWikiArticle(kohde.wiki, kohde.nimi, { alkuteksti: kohde.selitys });
+    /*
+     * Vuorikohteilla on oma kuratoitu karuselli (VUORIKUVAT). Se
+     * annetaan tässä valmiina listana eikä haeta otsikolla, koska
+     * Wikipedia-otsikot törmäävät: Madagaskarin ylängön artikkeli on
+     * "Madagaskar", ja sama otsikko on Afrikan laudan saarikohteella.
+     */
+    this.openWikiArticle(kohde.wiki, kohde.nimi, {
+      alkuteksti: kohde.selitys,
+      galleria: vuorikuvat(kohde.avain),
+    });
   }
 
   /**
@@ -9727,8 +9756,11 @@ export class UI {
    *   suomenkielinen selitys: ikkunassa lukee jotain heti, ja jos
    *   yhteyttä ei ole, se jää ainoaksi tekstiksi kohteliaan
    *   virheilmoituksen sijaan.
+   * @param {Array} [asetukset.galleria] käsin kuratoidut kuvat
+   *   ({ tiedosto, selite, lahde }). Kun lista on annettu, se KORVAA
+   *   artikkelin oman kuvaston kokonaan — myös suurennoksessa.
    */
-  async openWikiArticle(title, label = title, { alkuteksti = null } = {}) {
+  async openWikiArticle(title, label = title, { alkuteksti = null, galleria = null } = {}) {
     this.wikiOpenFor = title;
     this.wikiTitle.textContent = label;
     this.wikiImage.hidden = true;
@@ -9738,7 +9770,29 @@ export class UI {
     this.wikiKuvaKohdalla = 0;
     // Edellisen artikkelin suurennusportaat eivät saa jäädä voimaan.
     this.wikiKuvaPortaat = [];
+    /*
+     * 1600 eikä 1200: Commonsin FilePath-osoitteessa ei ole
+     * `NNNpx-` -merkintää, joten suurennusportaat ei osaa kasvattaa
+     * sitä jälkikäteen (upsizeImage, js/wiki.js) — kuratoidun kuvan
+     * koko on se, joka pyydetään tässä. Lehti on iPadilla noin 700
+     * CSS-pikseliä eli tarkalla näytöllä 1400.
+     */
+    this.wikiGalleria = galleria?.length ? kuratoituGalleria(galleria, 1600) : null;
     this.paivitaWikiKuvaLaskuri();
+    /*
+     * Kuratoitu karuselli on ruudulla HETI, ennen verkkoa. Kuvat ovat
+     * paketissa, joten ne eivät tarvitse tiivistelmähakua — ja jos
+     * yhteyttä ei ole, kuvat tulevat silti peilistä tai selaimen
+     * välimuistista. Artikkelin oma kuvasto odottaisi kaksi hakua.
+     */
+    if (this.wikiGalleria) {
+      this.wikiKuvat = this.wikiGalleria;
+      this.naytaWikiKuva(this.wikiKuvat[0].src);
+      this.wikiImage.alt = label;
+      this.wikiImage.hidden = false;
+      this.wikiKuvakotelo.hidden = false;
+      this.paivitaWikiKuvaLaskuri();
+    }
     this.wikiExtract.textContent = alkuteksti || 'Haetaan…';
     this.wikiSource.textContent = '';
     if (!this.wikiDialog.open) this.wikiDialog.showModal();
@@ -9756,20 +9810,24 @@ export class UI {
     }
 
     this.wikiTitle.textContent = summary.title || label;
-    cachedImage(title).then((image) => {
-      if (!this.wikiDialog.open || this.wikiOpenFor !== title || !image) return;
-      this.naytaWikiKuva(image);
-      this.wikiImage.alt = summary.title || label;
-      this.wikiImage.hidden = false;
-      this.wikiKuvakotelo.hidden = false;
-      // Galleria taustalla: laskuri ja nuolet, kun kuvia on useampi.
-      cachedGallery(title).then((lista) => {
-        if (this.wikiOpenFor !== title || lista.length < 2) return;
-        this.wikiKuvat = lista;
-        this.wikiKuvaKohdalla = Math.max(0, lista.findIndex((k) => k.src === image));
-        this.paivitaWikiKuvaLaskuri();
+    // Kuratoitu karuselli on jo paikallaan; artikkelin kuvasto ei saa
+    // tulla sen päälle.
+    if (!this.wikiGalleria) {
+      cachedImage(title).then((image) => {
+        if (!this.wikiDialog.open || this.wikiOpenFor !== title || !image) return;
+        this.naytaWikiKuva(image);
+        this.wikiImage.alt = summary.title || label;
+        this.wikiImage.hidden = false;
+        this.wikiKuvakotelo.hidden = false;
+        // Galleria taustalla: laskuri ja nuolet, kun kuvia on useampi.
+        cachedGallery(title).then((lista) => {
+          if (this.wikiOpenFor !== title || lista.length < 2) return;
+          this.wikiKuvat = lista;
+          this.wikiKuvaKohdalla = Math.max(0, lista.findIndex((k) => k.src === image));
+          this.paivitaWikiKuvaLaskuri();
+        });
       });
-    });
+    }
 
     // Oma artikkeli (pilottikaupungit): Wikipedia-tekstin sijaan näytetään
     // pelin tyyliin kirjoitettu lyhyempi artikkeli — Wikipedian pohjalta,
@@ -9838,6 +9896,31 @@ export class UI {
       ? `${this.wikiKuvaKohdalla + 1}/${this.wikiKuvat.length}` : '';
     document.getElementById('wiki-kuva-edellinen').hidden = !monta;
     document.getElementById('wiki-kuva-seuraava').hidden = !monta;
+    this.paivitaWikiKuvateksti();
+  }
+
+  /**
+   * Kuvateksti ja lähderivi karusellin alle.
+   *
+   * Vain kuratoiduilla kuvilla. Wikipedian oma kuvasto kulkee
+   * artikkelin lisenssin alla, ja se lukee jo ikkunan lopussa
+   * ("Lähde: Wikipedia (CC BY-SA)"); Commonsista käsin poimittu kuva
+   * on oma teoksensa, jonka tekijä ja lisenssi on mainittava siinä,
+   * missä kuva näytetään. Sama kahden rivin muoto kuin
+   * nähtävyysjutuissa: selite ensin, lähde perään pienemmällä.
+   */
+  paivitaWikiKuvateksti() {
+    if (!this.wikiKuvateksti) return;
+    const kuva = this.wikiGalleria ? this.wikiKuvat[this.wikiKuvaKohdalla] : null;
+    this.wikiKuvateksti.textContent = '';
+    this.wikiKuvateksti.hidden = !kuva;
+    if (!kuva) return;
+    if (kuva.caption) {
+      this.wikiKuvateksti.appendChild(html('span', 'nahtavyys-selite', kuva.caption));
+    }
+    if (kuva.lahde) {
+      this.wikiKuvateksti.appendChild(html('span', 'nahtavyys-lahde', kuva.lahde));
+    }
   }
 
   /**
@@ -9920,7 +10003,11 @@ export class UI {
     document.getElementById('arrival-kuva-seuraava').hidden = !monta;
   }
 
-  async openLightbox(title, alt = '', aloitusSrc = null) {
+  /**
+   * @param {Array} [lista] valmis kuvalista ({ src, caption, lahde }).
+   *   Kun se on annettu, artikkelin omaa kuvastoa ei haeta lainkaan.
+   */
+  async openLightbox(title, alt = '', aloitusSrc = null, lista = null) {
     if (!title && !aloitusSrc) return;
     const parent = [this.wikiDialog, this.arrivalDialog].find((d) => d.open) ?? document.body;
     const overlay = html('div', 'lightbox');
@@ -9953,8 +10040,11 @@ export class UI {
       lataus.textContent = 'Ladataan…';
       portaat = suurennusportaat(kohde.src);
       img.src = portaat.shift();
+      // Lähde omalle rivilleen kuvatekstin alle: CC BY vaatii tekijän
+      // maininnan myös suurennoksessa, jossa kuva on isoimmillaan.
       kuvateksti.textContent = kohde.caption ?? '';
-      kuvateksti.hidden = !kohde.caption;
+      if (kohde.lahde) kuvateksti.appendChild(html('span', 'lightbox-lahde', kohde.lahde));
+      kuvateksti.hidden = !kohde.caption && !kohde.lahde;
       counter.textContent = kuvat.length > 1 ? `${kohdalla + 1} / ${kuvat.length}` : '';
       prev.hidden = next.hidden = kuvat.length < 2;
     };
@@ -10021,6 +10111,15 @@ export class UI {
       if (Math.abs(siirtyma) > 40) siirry(siirtyma < 0 ? 1 : -1);
     });
 
+    // Kuratoitu lista on jo valmiina: ei hakua, ei välivaihetta yhden
+    // kuvan galleriana.
+    if (lista?.length) {
+      kuvat = lista;
+      kohdalla = Math.max(0, lista.findIndex((k) => k.src === aloitusSrc));
+      nayta();
+      return;
+    }
+
     // Ensimmäinen kuva heti ruutuun, koko galleria kun lista on haettu.
     // Jos suurennos avattiin selatusta pikkukuvasta, aloitetaan siitä.
     const eka = aloitusSrc || (title ? await cachedImage(title) : null);
@@ -10035,11 +10134,11 @@ export class UI {
      * koko vika alkoi, ja sen kuvatekstit kertoisivat vastauksen.
      */
     if (!title) return;
-    const lista = await cachedGallery(title);
-    if (!overlay.isConnected || !lista.length) return;
+    const haettu = await cachedGallery(title);
+    if (!overlay.isConnected || !haettu.length) return;
     const nykyinen = kuvat[0]?.src ?? null;
-    kuvat = lista;
-    kohdalla = Math.max(0, lista.findIndex((k) => k.src === nykyinen));
+    kuvat = haettu;
+    kohdalla = Math.max(0, haettu.findIndex((k) => k.src === nykyinen));
     nayta();
   }
 

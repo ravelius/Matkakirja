@@ -6701,6 +6701,27 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 }
 
 /*
+ * Kuratoidun karusellikuvan teksti Lue lisää -ikkunassa: selite ja sen
+ * alla tekijä ja lisenssi. Samat luokat kuin nähtävyysjutun kuvalla
+ * (.nahtavyys-selite, .nahtavyys-lahde), joten ilme on sama molemmissa
+ * paikoissa — vain kehys on eri.
+ */
+.wiki-kuvateksti {
+  margin: 0.35rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+/* Tekijä ja lisenssi suurennoksen kuvatekstin alle, omalle rivilleen. */
+.lightbox-lahde {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.74rem;
+  opacity: 0.78;
+}
+
+/*
  * Isoisän luonnoskirjan pulma: piirros on osa korttia, ei kuvitusta sen
  * vieressä. Sama mustetyyli kuin kartan koristeissa — ohut viiva, ei väriä.
  */
