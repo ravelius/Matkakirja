@@ -415,6 +415,10 @@
   -->
   <dialog id="nahtavyys-dialog" class="dialog arkki nahtavyys-arkki">
    <div class="dialog-card nahtavyys-kortti" tabindex="-1" autofocus>
+    <!-- Hampurilainen: saman kaupungin muut nähtävyydet ilman että
+         popupia tarvitsee sulkea (omistajan toive 10.8.2026). -->
+    <button id="nahtavyys-valikko-nappi" class="nahtavyys-valikko-nappi" type="button" aria-label="Kaupungin nähtävyydet" aria-expanded="false" hidden>☰</button>
+    <div id="nahtavyys-valikko" class="nahtavyys-valikko" hidden></div>
     <p id="nahtavyys-aika" class="nahtavyys-aika" hidden></p>
     <h2 id="nahtavyys-otsikko"></h2>
     <div id="nahtavyys-sisalto" class="nahtavyys-sisalto"></div>
