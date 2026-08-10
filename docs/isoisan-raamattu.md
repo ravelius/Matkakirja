@@ -390,6 +390,78 @@ hattujen nostelun geometria. Hevospelko välähtää harvakseltaan
 (1. esiintymä: Dublinin saapuminen), itseironia yhteen saapumiseen
 per erä.
 
+## Lähi-idän kaaren jakotaulu (kaanon 10.8.2026, Fable maxin ehdotuksesta)
+
+Sitova suunnitelma ME:n 28 kohteelle. Kuusi kaanonriketta (raha /
+järjestelykäsky: Dubai, Masqat, Kuwait, Kapadokia, Nikosia, Teheran)
+ja neljä beat/teemamuunnosta (Luxor, Mosul, Ankara, Sanaa) on
+KORJATTU DATAAN v543:ssa — kaikki ilmaisina, koska ME:llä ei ole
+vielä luentoja. Damaskoksen "jätti maksun" on tavallinen työn maksu
+kankaasta, ei rike. Sävelpaino: arvoitus + lämpö. Mekan ja Medinan
+kohtaamiset käydään porteilla ja karavaaniteillä, ja niiden
+loppubeat on rauhallinen — pyhän kaupungin äärellä ei väijy ketään.
+
+Erä A — **Portit ja karavaanit** (profiilit: puhelias Bilal, äreä
+Suleiman, hämmästyvä Elias):
+
+| Kohde | Sävel | Kohtaamisteema (odotuksen syy) | Beat | Aisti / 1873 |
+|---|---|---|---|---|
+| Mekka | lämpö/hengähdys | oppaan suvun perintökysymys | hiljainen | kahvin tuoksu satamassa |
+| Medina | lämpö | vieraanvaraisuuden vastalahja kaivolla | tuore | leirisavun tuoksu |
+| Jerusalem | kunnioitus/arvoitus | vartija EI tiedä miksi piirtää — hämmästyy itse | vartijan salaisuus | — |
+| Petra | ihmetys | isoisä katsoi kalliota, ei uurnaa | tuore | — |
+| Aden | arvoitus | kysymys jätetty perässä tuleville | tuore | 1873: hiilisatama (jo tekstissä) |
+| Salalah | lämpö | oikaistu vaaka | ajaton | suitsuke eksplisiittiseksi |
+| Rub al-Khali | jännitys | jälkien lukeminen — laudan paras, ei kosketa | tuore | — |
+
+Erä B — **Joet ja kirjurit** (puhelias Karim, äreä Yusuf,
+epäuskoinen Layla, hämmästyvä Gabriel):
+
+| Kohde | Sävel | Teema | Beat | Aisti / 1873 |
+|---|---|---|---|---|
+| Kairo | arvoitus | oma mitta | tuore | 1873: Suez 2 v, Aida-ooppera 1871 |
+| Luxor | jännitys/kunnioitus | suvulle uskottu vieras salaisuus | **VANHA** (kätkön alla vanhempi tyhjä kolo) | — |
+| Siinai | hengähdys | laina ja palautus | tuore (hienovarainen) | — |
+| Bagdad | arvoitus | kirja odottaa noutajaa, joka tunnetaan vastauksesta | tuore | 1873: Midhat paššan uudistukset |
+| Mosul | arvoitus | pantti, lunastus vastauksella (pantti-teeman ainoa) | **VANHA** (kadonnut reunuskudos) | — |
+| Damaskos | arvoitus | kudotut kirjaimet, työstä maksettu | ajaton | väriaineen tuoksu |
+| Halab | lämpö | puntarilukema-kuutio | väljä tuore | laakerisaippuan tuoksu |
+
+Erä C — **Lahden satamat** (puhelias Rashid, äreä Salim, epäuskoinen
+Nasser, hämmästyvä Hamza):
+
+| Kohde | Sävel | Teema | Beat | Aisti / 1873 |
+|---|---|---|---|---|
+| Dubai | huumori/lämpö | suvun oma tarina: lipas joka ei ole meidän | ajaton | — |
+| Doha | arvoitus/lämpö | tasku purjeessa — **VANHA-beatin malli, ei kosketa** | VANHA | — |
+| Masqat | arvoitus | valojen vuorottelu on satamien oma sopimus | tuore | — |
+| Kuwait | ihmetys | suku maalaa merkkiä omasta kiitollisuudestaan | ajaton | makean veden maku |
+| Riad | arvoitus | kaivosta noussut vieras työkalu (luotikiintiö 2 täynnä Bukarestin kanssa) | tuore | kostean saven tuoksu |
+| Sanaa | ihmetys | ikkuna, jonka taloa ei ole — vartija ihmettelee itsekin | ajaton | — |
+
+Erä D — **Ylängöt ja basaarit** (puhelias Selin, äreä Andreas,
+epäuskoinen Zahra, hämmästyvä Dariush):
+
+| Kohde | Sävel | Teema | Beat | Aisti / 1873 |
+|---|---|---|---|---|
+| Ankara | arvoitus | sinetöity paali; noutamisen ehto | ajaton (merimiehen solmu ylängöllä) | villan lanoliini |
+| Izmir | huumori/lämpö | oikea hinta on vastaus | tuore | viikunan maku |
+| Kapadokia | jännitys | käytävä pelasti suvun — valoa pidetään omasta syystä | **VANHA** (lyhty ennen isoisää) | — |
+| Nikosia | arvoitus | talletus jota ei voinut torjua | ajaton | — |
+| Tabriz | arvoitus | keskeneräinen matto (teeman 2/2 Lissabonin kanssa) | esine muualla | basaarin mausteet |
+| Teheran | ihmetys | mestarien tapa: himmeä pala muistaa | ajaton | 1873: šaahi paraikaa Euroopassa |
+| Isfahan | ihmetys/lämpö | holvin laulu ja vartijan oma salaisuus | tuore | — |
+| Persepolis | ihmetys | piirretty kulkue; eläinbeat | tuore | — |
+
+**Kirjanpito tavoitetilassa:** tuore 13/28 (kiintiö ≤14), VANHA 4
+(Doha, Luxor, Mosul, Kapadokia — kullakin eri keino), ajaton 8,
+vartijan salaisuus 1, hiljainen 1, esine 1. Lämpö/hengähdys 7,
+huumori 2, jännitys 2 (Rub al-Khali, Kapadokia — kumpikin
+luonnosta). 1873-ankkurit 3 (Aden valmiina; Bagdad ja Teheran
+lisätään teksteihin). Aisti joka kolmannessa. Naapurusten
+beat-törmäykset tarkistetaan kirjoitusvaiheessa laudan
+geometriasta.
+
 ## Aarrevihjeet: matkalle, ei kaupunkeihin (7.8.2026)
 
 Omistajan linjaus: *"Aarrevihjeet voisi siirtää kaupunkien välille,
