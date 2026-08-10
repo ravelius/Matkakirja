@@ -353,6 +353,166 @@ export const VUORIKUVAT = {
     },
   ],
 
+  alpit: [
+    {
+      tiedosto: 'Tofana di Rozes parete sud Dolomiti Ampezzo.jpg',
+      selite: 'Tofana di Rozesin eteläseinä Ampezzon Dolomiiteilla. Dolomiitit '
+        + 'ovat muinaisen korallimeren kalkkikiveä, joka on kohonnut '
+        + 'pystyseiniksi kilometrien korkeuteen.',
+      lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Tofana di Rozes 5.jpg',
+      selite: 'Panoraama Averaulta: Tofana di Rozes, Cinque Torrin tornit ja '
+        + 'Nuvolau. Cinque Torri oli ensimmäisessä maailmansodassa rintamalinja, '
+        + 'ja kallioissa on yhä juoksuhautoja.',
+      lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Lac de Roy 10.jpg',
+      selite: 'Lac de Roy Haute-Savoiessa. Alppien pikkujärvet ovat jääkauden '
+        + 'jättämiä kuoppia, joihin sulamisvesi jää seisomaan.',
+      lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Steinbock 14962940265.jpg',
+      selite: 'Alppikauris Hohe Tauernin kansallispuistossa Itävallassa. Laji '
+        + 'oli 1800-luvulla metsästetty lähes sukupuuttoon: jäljellä oli '
+        + 'muutama sata eläintä, joista kaikki nykyiset polveutuvat.',
+      lahde: 'Bernd Thaller, Wikimedia Commons (CC BY-SA 3.0 AT)',
+    },
+    {
+      tiedosto: 'Lac de Montriond 06.jpg',
+      selite: 'Montriond-järvi aamun tyynessä, taustalla Roc d\'Enfer. Järvi '
+        + 'syntyi maanvyörymästä, joka tukki laakson.',
+      lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Cappella Passo Falzarego Sass Stria.jpg',
+      selite: 'Kappeli Falzaregon solassa ja sen takana Sass de Strian huippu. '
+        + 'Alppien soliin on rakennettu kappeleita niille, jotka lähtivät '
+        + 'ylitykseen tietämättä, pääsevätkö perille.',
+      lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Overview of Les Menuires and the Belleville valley.jpg',
+      selite: 'Belleville-laakso ja Les Menuires\'n hiihtokaupunki talvella. '
+        + 'Alpeilla vuoristo ei tyhjene talveksi vaan täyttyy — matkailu on '
+        + 'kääntänyt vuodenajat päinvastoin kuin muualla vuoristossa.',
+      lahde: 'DimiTalen, Wikimedia Commons (CC0)',
+    },
+    {
+      tiedosto: 'Bad Hindelang panorama view from south.jpg',
+      selite: 'Ostrachin laakso Bad Hindelangin kohdalla Baijerin Alpeilla. '
+        + 'Laaksonpohja on niittyä ja kylää, rinteet metsää — jako on sama '
+        + 'kaikkialla Alpeilla.',
+      lahde: 'Jürgen Matern, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Averau Forcella Averau Croda Negra.jpg',
+      selite: 'Croda Negra, Lagazuoi ja Falzaregon sola Averaun solasta '
+        + 'nähtynä. Hiihtoladut kulkevat samoja reittejä, joita pitkin karja '
+        + 'nousi kesälaitumille.',
+      lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: "Pointe de Nyon & Pointe d'Angolon (12).jpg",
+      selite: 'Pointe de Nyon (2 019 m) ja Pointe d\'Angolon (2 090 m) '
+        + 'Morzinen kunnassa. Polku kiertää rinnettä vinosti, koska suoraan '
+        + 'ylös ei pääse kuormaa kantaen.',
+      lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  ],
+
+  karpaatit: [
+    {
+      tiedosto: 'Скелі Свидовець.jpg',
+      selite: 'Blyznytsjan kalliot Svydovetsin ylängöllä Ukrainan '
+        + 'Karpaateilla. Harjanteen laki on puutonta niittyä, jota on '
+        + 'laidunnettu kesäisin vuosisatoja.',
+      lahde: 'Nata Mostova, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Полонина Пожижевська.jpg',
+      selite: 'Pozjyzjevskan tunturiniitty Tšornohoran harjanteella. '
+        + 'Karpaateilla tällaista laidunta kutsutaan polonynaksi, ja '
+        + 'paimenet nousevat sinne karjan kanssa juhannuksen tienoilla.',
+      lahde: 'Nata Mostova, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Брескул.jpg',
+      selite: 'Breskulin huippu Tšornohoran harjanteella talven jäljiltä. '
+        + 'Karpaatit ovat matalammat kuin Alpit, mutta yhtenäinen kaari '
+        + 'ulottuu Wienistä Romanian halki lähes 1 500 kilometriä.',
+      lahde: 'Nata Mostova, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Будинок в горах.jpg',
+      selite: 'Yksinäinen talo vuoristoniityllä usvan noustessa metsästä. '
+        + 'Karpaattien kylät ovat hajallaan rinteillä, koska laaksonpohja on '
+        + 'kapea eikä sinne mahdu peltoa kaikille.',
+      lahde: 'Anatolij Volkov, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  ],
+
+  skandit: [
+    {
+      tiedosto: 'View from a ridge between Segla and Hesten, Senja, Norway, 2014 August.jpg',
+      selite: 'Näkymä Seglan ja Hestenin väliseltä harjanteelta Senjassa. '
+        + 'Vasemmalla on Øyfjorden, oikealla Mefjorden — Skandien luoteisreuna '
+        + 'putoaa mereen jyrkkänä eikä jätä rannikkotasankoa lainkaan.',
+      lahde: 'Simo Räsänen, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Isterdalen from above Stigfossen, Rauma, Møre og Romsdal, Norway, 2025 May.jpg',
+      selite: 'Isterdalen ja Trollstigenin mutkat Stigfossenin yläpuolelta. '
+        + 'Tie nousee laakson päästä yhdellätoista neulansilmämutkalla, ja se '
+        + 'on auki vain kesäkuukaudet.',
+      lahde: 'Simo Räsänen, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Geirangerfjord from Ørnesvingen, 2013 June.jpg',
+      selite: 'Geirangervuono Ørnesvingenistä nähtynä. Vuono on jääkauden '
+        + 'kaivertama laakso, jonka meri valtasi jään sulettua — pohja on '
+        + 'paikoin syvemmällä kuin sen suulla.',
+      lahde: 'Simo Räsänen, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'View to Romsdalen from Litlefjellet, 2013 June.jpg',
+      selite: 'Romsdalen Litlefjelletin harjanteelta. Laakson seinämät ovat '
+        + 'Euroopan korkeimpia pystysuoria kalliopintoja, ja pohjalla '
+        + 'mutkittelee Rauma-joki.',
+      lahde: 'Simo Räsänen, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'From Tennfjorden towards Raftsundet, Hinnøya, Norway, 2015 September - 4.jpg',
+      selite: 'Tennfjorden ja sen takana Austvågøyan vuoret, joukossa '
+        + 'Trolltindanin ryhmä. Vuonojen välissä liikutaan yhä veneellä, '
+        + 'koska maitse kierto olisi kymmeniä kilometrejä.',
+      lahde: 'Simo Räsänen, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Djupfjorden, 2010 09.jpg',
+      selite: 'Djupfjorden Moskenesøyalla Lofooteilla syyskuussa. Tyyni vesi '
+        + 'ja jyrkät huiput ovat Lofoottien tavallinen näkymä: saaret ovat '
+        + 'käytännössä merestä nousevia vuoria.',
+      lahde: 'Simo Räsänen, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Mountain massif of Fjølhaugen at Knutevika in Senja, Troms, Norway, 2015 September.jpg',
+      selite: 'Fjølhaugenin vuorimassiivi Senjassa syksyn väreissä. Oikealla '
+        + 'oleva lahti Knutevika kuuluu Mefjordeniin.',
+      lahde: 'Simo Räsänen, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Torkilstöten Panorama Jule 2013.jpg',
+      selite: 'Helags (vasemmalla) ja Sylarna Torkilstötenistä nähtynä '
+        + 'Ruotsin puolella. Helagsilla on Skandien eteläisin jäätikkö, ja '
+        + 'sen ympärillä on pelkkää tunturikangasta.',
+      lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+  ],
+
   taurusvuoret: [
     {
       tiedosto: 'J22 319 D696, Taurusquerung.jpg',

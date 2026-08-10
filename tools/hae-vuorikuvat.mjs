@@ -59,6 +59,20 @@ const KATEGORIA = {
    * kategoria, jossa on katukuvia ja lippuja.
    */
   altai: 'Nature of the Altai Republic',
+  /*
+   * Apenniinien oma kategoria antoi Apuaanien Alpit ja joukon
+   * VÄÄRIN NIMETTYJÄ kuvia: sarja "Province of L'Aquila in 2013" on
+   * kuvattu Dolomiiteilla (Alpe di Siusi, Sciliar). Juuri tästä syystä
+   * sääntö on, ettei hakutuloksen otsikkoon saa luottaa. Gran Sasso on
+   * Apenniinien ydin ja kohteen oman huipun (Corno Grande) koti.
+   */
+  apenniinit: "Gran Sasso d'Italia",
+  /*
+   * Pyreneiden kategoriassa on leipää, koruja ja karttalehtiä — nimi on
+   * myös tuotenimi. Ordesa y Monte Perdido on vuoriston tunnetuin
+   * kansallispuisto ja sisältää Monte Perdidon.
+   */
+  pyreneet: 'Ordesa y Monte Perdido National Park',
   'etiopian-ylangot': 'Simien Mountains',
   // Brasilian ylängöllä ei ole omaa kategoriaa; Mantiqueira on sen
   // eteläinen reunavuoristo (Pico da Bandeira, kohteen oma huippu).

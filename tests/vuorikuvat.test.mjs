@@ -25,7 +25,13 @@ const AVAIMET = new Set(VUORISTONIMET.map((v) => v.avain));
  * Commons (PD)"). Sulkeissa on aina lisenssi, ja vain PD ja CC
  * kelpaavat — ND ja NC eivät.
  */
-const LAHDE = /^(.+, )?Wikimedia Commons \((PD|CC0|CC BY(-SA)? \d\.\d)\)$/;
+/*
+ * Maatunnus lisenssin perässä ("CC BY-SA 3.0 AT") on Creative Commonsin
+ * maakohtainen sovitus, ei kirjoitusvirhe: Commons merkitsee osan
+ * vanhoista kuvista niin, ja lisenssi on kopioitava sellaisena kuin se
+ * tiedostolla on.
+ */
+const LAHDE = /^(.+, )?Wikimedia Commons \((PD|CC0|CC BY(-SA)? \d\.\d( [A-Z]{2})?)\)$/;
 
 test('jokainen vuorikuvien avain on olemassa oleva maastonimi', () => {
   for (const avain of Object.keys(VUORIKUVAT)) {
