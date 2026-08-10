@@ -12445,6 +12445,30 @@ export class UI {
    * aarre on löytömantereen aarre (aarreTyyppi; kaupunki on visan
    * kaupunki, sillä paljastus tulee aina visan voitosta).
    */
+  /**
+   * Nuoren herran hihkaisu aarteen paljastushetkellä (omistajan
+   * tilaus 10.8.2026: "pitäisi kuulua se lyhyt hihkaisu jee").
+   * Kolme sävyä kierrossa (riemu, hämmästys, hykertely). Vain
+   * arvokkaille löydöille, ja ei kertojattomassa tilassa —
+   * hihkaisukin on ääninäyttelyä.
+   */
+  hihkaisuLahde(type) {
+    if (!['star', 'ruby', 'emerald', 'topaz'].includes(type)) return null;
+    if (!sfx.enabled || kertojaTila() === 'ei') return null;
+    const nimet = ['riemu', 'hammastys', 'hykertely'];
+    return `assets/audio/hihkaisu-${nimet[Math.floor(Math.random() * nimet.length)]}.mp3`;
+  }
+
+  soitaHihkaisu(lahde) {
+    const audio = new Audio(lahde);
+    audio.volume = puheVoima();
+    // Tausta väistyy hihkaisun ajaksi kuten luennoilla; merkitsePuhuja
+    // vapauttaa roolin ended/error-tapahtumista.
+    this.merkitsePuhuja(audio);
+    (this.luennat ??= new Set()).add(audio);
+    audio.play().catch(() => this.vapautaPuhuja(audio));
+  }
+
   async playTokenReveal(type) {
     const token = this.game.aarreTyyppi(type, this.game.quiz?.cityId);
     const onKuva = Boolean(token.kuva);
@@ -12491,11 +12515,14 @@ export class UI {
      */
     const kaari = (type !== 'empty' && KAARI_LAUDAT.has(this.game.pack.id))
       ? TARINAKAARI[this.game.quiz?.cityId] : null;
+    // Hihkaisu päätetään ennen luentaa: kertojan aarreteksti alkaa
+    // vasta hihkaisun jälkeen, etteivät äänet puuroudu päällekkäin.
+    const hihkaisu = this.hihkaisuLahde(type);
     let luenta = null;
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
       if (kaariLuentaSoi(kaari, 'aarre') && kertojaTila() !== 'ei') {
-        luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 }) ?? null;
+        luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 2600 : 900 }) ?? null;
       }
     }
     /*
@@ -12559,12 +12586,14 @@ export class UI {
       }
       caption.classList.add('shown');
       sfx.play(treasureSound(type));
+      if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       await odota(900 + seliteMs);
     } else if (onKuva) {
       // Kuva nousee mustasta: hidas häivytys ja kasvu, ei kääntöä.
       await this.wait(420);
       aarrekuva.classList.add('shown');
       sfx.play(treasureSound(type));
+      if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       await this.wait(760);
       caption.classList.add('shown');
       await odota(1250 + seliteMs);
@@ -12577,6 +12606,7 @@ export class UI {
       await this.wait(760);
       sfx.play('clack');
       sfx.play(treasureSound(type));
+      if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       rays.classList.add('shown');
       caption.classList.add('shown');
       await odota(1250 + seliteMs);
