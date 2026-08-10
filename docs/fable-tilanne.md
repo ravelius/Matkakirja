@@ -39,6 +39,20 @@ osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
   8b (Sonnet 1:n kokoava QA, käynnissä) ja 9 (Fablen läpipelaus,
   käynnissä). Ilmoitus omistajalle vasta kun molemmat kiinni.
   Omistaja aikoo koepelata Euroopan ja antaa palautetta.
+- **VAHTIKIERROS 2 (~10:40Z):** Sonnet 1:n 2. sessio jumittui
+  PENDING-tilaan käynnistymättä → arkistoitu, 3. yritys
+  session_011TaRR7yWxMBvJLPD58xyMq (source_url + koko tehtävänanto).
+  Opus 1 julkaisi v520:n (Saudi-faktakorjaukset; tarkastusagentit
+  eri silmin löysivät 11 vikaa — TYÖTAPA VAKIOIDAAN: sama ajo
+  jokaiselle uudelle maalle ENNEN mergeä). Fablen päätökset
+  Opus 1:lle: Bahrain odottaa geometriaa, Rub al-Khali EI
+  Saudi-sivuksi (erikoiskohde), FAL/GFDL-kuvien korvaus Opus 1:lle
+  pikkueränä. **Opus 2 perustettu** (session_01H6fyHrfSCMAhZFHbDYKrvy):
+  1. tehtävä BHR-geometria + Manama middleeast-laudalle (pilotti,
+  Fablen katselmus ennen mergeä; kohdekartta vasta lehden jälkeen).
+  Alun viilauspaketti v519 + intro v2 mainissa (omistajan
+  iPhone/luentapalaute: suora zoom, äänet+kiikari pois,
+  lainausmerkit pois luennasta). v518 aarteiden pikkuikonit.
 - **AARTEET (omistajan palaute 10.8. ~10:10Z):** vanhat Afrikan
   tähti -tyyliset jalokivet POIS kaikkialta, vain uudet tarinalliset
   kuva-aarteet jäävät. v518 vaihtoi pikkuikonit (tulosrivi, passi,
