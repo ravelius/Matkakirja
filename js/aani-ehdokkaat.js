@@ -23,6 +23,14 @@ export const TYYPPI_EHDOKKAAT = {
     { url: 'https://cdn.freesound.org/previews/731/731247_10924423-lq.mp3#voima=0.6', nimi: 'Gatwickin lähtöaula iltapäivällä (Lontoo) — soundandmelodies, CC0' },
     { url: 'https://cdn.freesound.org/previews/340/340276_2669559-lq.mp3#voima=0.6', nimi: 'Gatwickin odotusaula ja kuulutus (Lontoo) — andriiperevodchyk, CC0' },
   ],
+  // Avauslennon kalvo: äänimaisema lentokoneen sisältä (omistajan
+  // toive 10.8.2026). Voimat kalibroitu RMS-mittauksella aulan äänen
+  // tasoon: matkustamo saa olla selvästi läsnä muttei kertojan päällä.
+  lentokone: [
+    { url: 'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.07', nimi: 'Matkustamo lennolla, A330 — FillSoko, CC0' },
+    { url: 'https://cdn.freesound.org/previews/245/245691_2047664-lq.mp3#voima=0.05', nimi: 'Matkustamon tasainen humina — TicAshfield, CC0' },
+    { url: 'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=0.6', nimi: 'Matkustamo, puheensorinaa ja kuulutus — drewhalasz, CC0' },
+  ],
   basaari: [
     { url: 'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23', nimi: 'Basaarin hälinä (Khan el-Khalili) — 3bagbrew, CC0' },
     { url: 'https://cdn.freesound.org/previews/677/677253_9756914-lq.mp3#voima=0.47', nimi: 'Ouakamin piha illalla (Dakar) — LaureC, CC0' },
@@ -431,6 +439,23 @@ for (const pack of PACKS) {
   }
 }
 
+// Avauslennon matkustamo: oma virtuaalipaikka lentokone-korille
+// (kalvon taustaääni vaihtui syntetisoidusta moottorista matkustamon
+// äänimaisemaan 10.8.2026).
+{
+  const kone = KAUPUNGIT_TYYPEITTAIN.lentokone ??= [];
+  if (!kone.some((l) => l.lauta === 'maailma')) {
+    const maailma = PACKS.find((p) => p.id === 'maailma');
+    const paikat = ['Avauslennon matkustamo'];
+    kone.unshift({
+      lauta: 'maailma',
+      maanosa: maailma?.boardLabel ?? 'Maailma',
+      kaupungit: paikat,
+      maat: [{ nimi: null, kaupungit: paikat }],
+    });
+  }
+}
+
 // Virtuaalipaikat kuuluvat Maailma-laudalle: etusivun satama ja
 // maailmankartan merimatkat saavat meri-äänensä sen korista. Muilla
 // laudoilla merimatka käyttää oman maanosansa koria.
@@ -491,6 +516,9 @@ const TYYPPIKORI_AVAIN = 'matkakirja-tyyppivalinnat';
 const OLETUSKORIT = {
   lentoasema: [
     'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6',
+  ],
+  lentokone: [
+    'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.07',
   ],
   basaari: [
     'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55',

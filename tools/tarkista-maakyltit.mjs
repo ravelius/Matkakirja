@@ -15,8 +15,11 @@
  * vertailukäyttöön, eikä niitä pidä poistaa.
  *
  * Mitä tarkistetaan (virhe → exit 1):
- *   a) joka maalle: pilleri renderöityy, nimi täsmää ja
- *      napin korkeus on ≥ 44 px — sekä 1280 px:n että 390 px:n
+ *   a) joka maalle: pilleri renderöityy, nimi täsmää ja kyltti on
+ *      vähintään matkakirjachipin mittainen (≥ 28 px; ilman Maiden
+ *      tiedot -varustetta pilleri ei ole nappi, joten 44 px:n
+ *      osumapintaa ei vaadita — varusteen kanssa sen hoitaa
+ *      ::after-laajennos) — sekä 1280 px:n että 390 px:n
  *      viewportilla (kapein tuettu puhelin);
  *   b) regressiovahti: countryNameLayer pysyy perustilassa tyhjänä —
  *      mikään ei piirrä kylttiä takaisin kartalle.
@@ -93,7 +96,7 @@ for (const lauta of LAUDAT) {
         const nimi = nappi.querySelector('.maa-pilleri-nimi')?.textContent;
         if (nimi !== maa.nimi) viat.push(`${iso}: nimi "${nimi}" ≠ "${maa.nimi}"`);
         const r = nappi.getBoundingClientRect();
-        if (r.height < 44) viat.push(`${iso} ${maa.nimi}: korkeus ${r.height.toFixed(1)} px < 44 px`);
+        if (r.height < 28) viat.push(`${iso} ${maa.nimi}: korkeus ${r.height.toFixed(1)} px < 28 px`);
         if (r.width > document.documentElement.clientWidth) {
           viat.push(`${iso} ${maa.nimi}: pilleri ei mahdu ruutuun (${r.width.toFixed(0)} px)`);
         }
