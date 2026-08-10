@@ -4998,6 +4998,33 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
 
 .reveal-overlay.leaving { animation: fade-out 0.3s ease-in forwards; }
 
+/* Paljastuksen sulkuruksi: kortti pysyy esillä luennan ajan, joten
+ * kärsimättömälle tarjotaan selvä ulos-ovi (omistajan toive
+ * 10.8.2026). Koko overlay sulkee napautuksesta muutenkin — ruksi on
+ * sen näkyvä kahva. */
+.reveal-sulje {
+  position: absolute;
+  top: max(0.9rem, env(safe-area-inset-top));
+  right: 0.9rem;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 231, 200, 0.5);
+  background: rgba(26, 16, 7, 0.55);
+  color: rgba(245, 231, 200, 0.9);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.reveal-sulje:hover,
+.reveal-sulje:focus-visible {
+  background: rgba(245, 231, 200, 0.9);
+  color: rgba(26, 16, 7, 0.9);
+}
+
 @keyframes fade-in { from { opacity: 0; } }
 @keyframes fade-out { to { opacity: 0; } }
 
@@ -137915,6 +137942,10 @@ class UI {
          */
         console.warn('luenta ei käynnistynyt:', virhe?.name ?? virhe, url);
         if (this.diaryVoice === audio) this.diaryVoice = null;
+        // Käynnistymätön luenta ei laukaise elementin omia tapahtumia,
+        // mutta kuuntelijat (mm. aarrekortin odotus) tarvitsevat lopun
+        // signaalin — muuten ne odottaisivat varmuusrajaansa asti.
+        audio.dispatchEvent(new Event('error'));
       });
     };
     // Pieni hengähdys ennen luennan alkua (omistajan toive): kortti ehtii
@@ -137927,6 +137958,9 @@ class UI {
     } else {
       aloita();
     }
+    // Kutsuja saa kahvan luentaan: aarrekortti pysyy esillä luennan
+    // ajan ja sen ruksi feidaa juuri tämän äänen (playTokenReveal).
+    return audio;
   }
 
   /**
@@ -139994,10 +140028,11 @@ class UI {
      */
     const kaari = (type !== 'empty' && KAARI_LAUDAT.has(this.game.pack.id))
       ? TARINAKAARI[this.game.quiz?.cityId] : null;
+    let luenta = null;
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
       if (kertojaTila() !== 'ei') {
-        this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 });
+        luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: 900 }) ?? null;
       }
     }
     /*
@@ -140024,11 +140059,33 @@ class UI {
 
     // Näyttöaika kasvaa selitteen mukana: "+300 puntaa" saa vilahtaa,
     // mutta pitkä selite (esim. tyhjän laatan "merkintä oli vanhentunut")
-    // pitää ehtiä lukea. Napautus ohittaa odotuksen.
+    // pitää ehtiä lukea. Napautus tai ruksi ohittaa odotuksen.
     const seliteMs = ((REVEAL_SUB[type] ?? '').length + (kaari?.aarre?.length ?? 0)) * 45;
+    /*
+     * Ruksi kortin kulmaan ja kortti esillä koko luennan ajan
+     * (omistajan palaute 10.8.2026: "aarre häviää näkyvistä ennen
+     * kuin lukija ehtii lukea repliikkinsä loppuun"). Kortti odottaa
+     * sekä vähimmäislukuajan ETTÄ luennan lopun; ruksi tai napautus
+     * sulkee heti, ja silloin kertoja feidataan pois — muuten ääni
+     * jatkuisi tyhjän kartan päällä. Varmuusraja pitää huolen, ettei
+     * jumittunut äänen lataus jätä korttia ikuiseksi ruudulle.
+     */
+    const ruksi = html('button', 'reveal-sulje', '×');
+    ruksi.type = 'button';
+    ruksi.setAttribute('aria-label', 'Sulje paljastus');
+    overlay.appendChild(ruksi);
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });
     });
+    const luentaValmis = luenta ? Promise.race([
+      new Promise((resolve) => {
+        // pause kelpaa lopuksi siinä missä ended: se tarkoittaa, että
+        // jokin muu pysäytti luennan, eikä korttia kannata pitää auki.
+        for (const nimi of ['ended', 'error', 'pause']) luenta.addEventListener(nimi, resolve, { once: true });
+      }),
+      this.wait(30000),
+    ]) : Promise.resolve();
+    const odota = (min) => Promise.race([Promise.all([this.wait(min), luentaValmis]), napautus]);
 
     if (this.reducedMotion) {
       if (onKuva) {
@@ -140039,7 +140096,7 @@ class UI {
       }
       caption.classList.add('shown');
       sfx.play(treasureSound(type));
-      await Promise.race([this.wait(900 + seliteMs), napautus]);
+      await odota(900 + seliteMs);
     } else if (onKuva) {
       // Kuva nousee mustasta: hidas häivytys ja kasvu, ei kääntöä.
       await this.wait(420);
@@ -140047,7 +140104,7 @@ class UI {
       sfx.play(treasureSound(type));
       await this.wait(760);
       caption.classList.add('shown');
-      await Promise.race([this.wait(1250 + seliteMs), napautus]);
+      await odota(1250 + seliteMs);
       overlay.classList.add('leaving');
       await this.wait(300);
     } else {
@@ -140059,9 +140116,20 @@ class UI {
       sfx.play(treasureSound(type));
       rays.classList.add('shown');
       caption.classList.add('shown');
-      await Promise.race([this.wait(1250 + seliteMs), napautus]);
+      await odota(1250 + seliteMs);
       overlay.classList.add('leaving');
       await this.wait(300);
+    }
+    /*
+     * Suljettaessa kesken luennan kertoja feidataan pois — kortti ja
+     * ääni päättyvät yhdessä. Käynnistystä odottava luenta (viive)
+     * perutaan nollaamalla diaryVoice, ja puhujan rooli vapautetaan,
+     * ettei tausta jää väistöön.
+     */
+    if (luenta) {
+      if (this.diaryVoice === luenta) this.diaryVoice = null;
+      if (!luenta.ended && !luenta.paused) this.haivytaJaSiivoa(luenta);
+      else this.vapautaPuhuja(luenta);
     }
     overlay.remove();
     // Löytö päätyy matkalaukkuun: yläreunan Laukku-nappi heilahtaa
@@ -140800,6 +140868,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 531, teksti: 'Aarrekortti pysyy luennan ajan ja ruksi sulkee sen' },
   { v: 530, teksti: 'Maan nimi pilleriksi kartan kehykselle ja luennan feidaus' },
   { v: 529, teksti: 'Peli on yksi lauta: laudanvaihtoportit ja koelaudat pois' },
   { v: 528, teksti: 'Laatta joka kaupunkiin, maailmankartalle mantereiden aarteet' },
@@ -141414,7 +141483,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.530';
+const APP_VERSION = '2026-08-09.531';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
