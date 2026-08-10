@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 527, teksti: 'Bahrainille helmien ja muinaisuuden aihesivut' },
   { v: 526, teksti: 'Bahrain Lähi-idän laudalle omana maanaan' },
   { v: 525, teksti: 'Äänivalikko palautettu: v524 pyyhkäisi v523:n muutoksen' },
   { v: 524, teksti: 'Unohdetuille aarteille omat kuvat seitsemälle laudalle' },
