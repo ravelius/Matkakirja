@@ -7974,6 +7974,29 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   transform: none;
 }
 
+/* Kohtaamiskuva kelluu tekstin oikealla puolella (pilotti 10.8.2026:
+ * Ateena ja Sofia): pyöristetty muotokuva samalla pergamentilla kuin
+ * kortti itse, joten reunaton kuva sulautuu paperiin. */
+.quiz-kohtaaminen-kuva {
+  float: right;
+  width: min(34%, 130px);
+  margin: 0.1rem 0 0.5rem 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(62, 42, 22, 0.25);
+}
+
+.quiz-kohtaaminen-kuva[hidden] { display: none; }
+
+/* Kätkökuva laatattoman löydön tuloskortissa: löytö näkyy, ei vain
+ * rivi tekstiä. */
+.katko-kuva {
+  display: block;
+  width: min(55%, 170px);
+  margin: 0.55rem auto 0.35rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(62, 42, 22, 0.3);
+}
+
 .quiz-result .kohtaaminen-repliikki {
   display: block;
   margin-top: 0.3rem;

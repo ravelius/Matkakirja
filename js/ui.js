@@ -1887,6 +1887,7 @@ export class UI {
     this.quizQuestion = document.getElementById('quiz-question');
     // Kohtaamisen tervehdys kysymyksen yllä (js/packs/kohtaamiset.js).
     this.quizKohtaaminen = document.getElementById('quiz-kohtaaminen');
+    this.quizKohtaaminenKuva = document.getElementById('quiz-kohtaaminen-kuva');
     this.quizIsoisa = document.getElementById('quiz-isoisa');
     this.quizIsoisaTeksti = document.getElementById('quiz-isoisa-teksti');
     // Tervehdys luetaan kerran per kaupunki ja istunto — toistuvassa
@@ -11956,6 +11957,20 @@ export class UI {
       this.quizKohtaaminen.textContent = '';
       this.quizKohtaaminen.hidden = !tervehdys;
       /*
+       * Kohtaamiskuva tekstin oikealle puolelle, jos kohteelle on
+       * generoitu muotokuva (omistajan pilotti 10.8.2026: Ateena ja
+       * Sofia ensin). Kuva on kaaridatan kuva-kenttä; puuttuva
+       * tiedosto piilottaa kuvan äänettömästi onerror-varasolulla.
+       */
+      const kohtaamisKuva = tervehdys ? (kaariTarina?.kuva ?? null) : null;
+      if (this.quizKohtaaminenKuva) {
+        if (kohtaamisKuva) {
+          this.quizKohtaaminenKuva.src = kohtaamisKuva;
+          this.quizKohtaaminenKuva.onerror = () => { this.quizKohtaaminenKuva.hidden = true; };
+        }
+        this.quizKohtaaminenKuva.hidden = !kohtaamisKuva;
+      }
+      /*
        * Vanha isoisän sitaattilohko poistui, kun tarinakaari korvasi
        * sen (omistajan tilaus 9.8.2026): isoisän jälki kulkee nyt
        * kohtaamisen ja sen kysymyksen kautta, ei erillisenä
@@ -12094,6 +12109,17 @@ export class UI {
             ? `Kätkö löytyi! +${EXPLORE_REWARD} puntaa.`
             : `Oikein! Löytöpalkkio +${EXPLORE_REWARD} puntaa.`));
           if (kaariAarre) {
+            /*
+             * Kätkökuva laatattoman löydön tuloskorttiin (omistajan
+             * pilotti 10.8.2026): löytö NÄKYY eikä ole vain rivi
+             * tekstiä — sama henki kuin laatan paljastuskortissa.
+             */
+            const katko = document.createElement('img');
+            katko.className = 'katko-kuva';
+            katko.src = 'assets/kohtaamiset/kohtaaminen-katko.jpg';
+            katko.alt = 'Kätkö';
+            katko.onerror = () => katko.remove();
+            body.appendChild(katko);
             body.appendChild(html('span', 'kohtaaminen-repliikki', kaariAarre));
             if (this.aarreLuentaFor !== quiz && kertojaTila() !== 'ei') {
               this.aarreLuentaFor = quiz;
@@ -12158,8 +12184,9 @@ export class UI {
 
     this.quizBadge.hidden = true;
     // Kaksintaistelussa ei ole kohtaamista — edellisen visan tervehdys
-    // ei saa jäädä kortille.
+    // ja kohtaamiskuva eivät saa jäädä kortille.
     this.quizKohtaaminen.hidden = true;
+    if (this.quizKohtaaminenKuva) this.quizKohtaaminenKuva.hidden = true;
     this.quizCity.textContent = `Rosvon kaksintaistelu — ${p.name}`;
     // Kaksintaistelu ei käytä vaiheittaista paljastusta: vaihtoehdot ovat
     // heti esillä, eikä edellisen kortin piilotus saa jäädä päälle.
