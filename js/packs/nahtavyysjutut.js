@@ -5698,4 +5698,313 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  kiova: {
+    'Kontraktovan aukio': {
+      aika: '1817',
+      teksti: 'Podilin kaupunginosassa Kiovassa on ollut vilkas '
+          + 'kauppapaikka jo Kiovan-Venäjän ajoista lähtien, mutta '
+          + 'Kontraktovan aukio sai nykyisen nimensä vasta vuonna 1817, '
+          + 'kun sille valmistui Kontraktitalo eli sopimustalo. '
+          + 'Taustalla oli vuosi 1798, jolloin Venäjän keisari Paavali '
+          + 'I päätti siirtää suuret vuotuiset kauppamessut Dubnon '
+          + 'kaupungista Kiovaan – ja pian aukiosta tuli koko seudun '
+          + 'vilkkain kauppapaikka.'
+        + '\n\n'
+        + '1820-luvulla aukiolla vaihtoi omistajaa niin viljasäkkejä '
+          + 'kuin kokonaisia kartanoitakin, ja kauppiaat sopivat '
+          + 'messuilla myös palvelusväen palkkaamisesta. Iltaisin '
+          + 'aukiolla pidettiin balleja, konsertteja ja '
+          + 'teatteriesityksiä. Aukion vanhin rakennus on '
+          + 'Samson-suihkulähde vuosilta 1748–1749: arkkitehti Ivan '
+          + 'Hryhorovytš-Barski suunnitteli sen korjaamaan kaupungin '
+          + 'vesijohtoja, ja se toi podilaisille juomavettä vielä '
+          + 'pitkään sen jälkeen.'
+        + '\n\n'
+        + 'Aukio on vaihtanut nimeä moneen kertaan – se on ollut sekä '
+          + 'Aleksanterin aukio että Punainen aukio – mutta vuodesta '
+          + '1990 se on taas kantanut nimeä Kontraktova. Nykyään aukion '
+          + 'alla kulkee metro, ja kesäisin siellä järjestetään '
+          + 'konsertteja ja katufestivaaleja.',
+      kuvat: [
+        {
+          tiedosto: 'Contracts House (Kiev).jpg',
+          selite: 'Kontraktova-aukion klassistinen Kontraktovyi-talo '
+            + '(kauppahuone) pylväikköineen kirkkaassa iltapäivävalossa.',
+          lahde: 'Sergiy Klymenko, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Academy on Kontraktova square Kyiv.jpg',
+          selite: 'Vanha valokuva Kiovan mohylan akatemian rakennuksesta '
+            + 'Kontraktova-aukiolla 1900-luvun alussa, hevoskärryjä ja '
+            + 'ohikulkijoita kadulla.',
+          lahde: 'A. Mikulin, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Andreaksen kirkko': {
+      aika: '1747–1754',
+      teksti: 'Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin '
+          + 'yläpuolella, ja sen taustalla on vanha legenda. Tarinan '
+          + 'mukaan apostoli Andreas nousi tälle samalle kukkulalle jo '
+          + 'lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja '
+          + 'ennusti paikalle nousevan suuren kaupungin, jossa olisi '
+          + 'paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan '
+          + 'rakennettiin vuosina 1747–1754 kirkko, joka on saanut '
+          + 'nimensä apostolin käynnin muistoksi.'
+        + '\n\n'
+        + 'Kirkon suunnitteli italialainen arkkitehti Bartolomeo '
+          + 'Rastrelli, joka piirsi myös komeita palatseja Pietariin, '
+          + 'ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. '
+          + 'Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä '
+          + 'ansiosta se näyttää melkein leijuvan katujen yläpuolella. '
+          + 'Rakennus itse on 31,7 metriä pitkä, 20,4 metriä leveä ja '
+          + 'kohoaa 50 metrin korkeuteen, yhden kupolin ja viiden '
+          + 'hoikan tornin koristamana.'
+        + '\n\n'
+        + 'Sisällä ikonostaasin kultauksiin käytettiin peräti 1 028 '
+          + 'kultalevyä, ja koko sisustus valmistui vasta vuonna 1767 – '
+          + 'kolmisenkymmentä vuotta rakennustöiden alkamisen jälkeen. '
+          + '2010-luvulla kirkko peruskorjattiin perustuksia myöten, '
+          + 'jotta se pysyisi tukevasti pystyssä jyrkällä rinteellään '
+          + 'myös tulevaisuudessa.',
+      lainaus: {
+        teksti: 'Näettekö nämä kukkulat? Niille loistaa Jumalan armo, ja '
+          + 'tälle paikalle nousee suuri kaupunki, jossa on paljon '
+          + 'kirkkoja.',
+        lahde: 'Nestorin kronikka (Menneiden vuosien tarina), legenda '
+          + 'apostoli Andreaksesta',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Андріївська церква, липень 2020 року.jpg',
+          selite: 'Andreaksen kirkon sinivalkoinen barokkijulkisivu '
+            + 'portaineen kesäisenä päivänä, taustalla kirkas sininen '
+            + 'taivas.',
+          lahde: 'Sergei bar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'St. Andrew\'s Church, Kiev.jpg',
+          selite: 'Varhainen valokuva vuodelta 1852: näkymä Andreaksen '
+            + 'mäenalaiselta kadulta ylös kukkulalla kohoavaan Andreaksen '
+            + 'kirkkoon.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Mikaelin luostari': {
+      aika: '1108–1113',
+      teksti: 'Pyhän Mikaelin kultakupolinen luostari perustettiin '
+          + 'Kiovan-Venäjän ruhtinas Svjatopolk II:n toimesta vuosina '
+          + '1108–1113 arkkienkeli Mikaelin kunniaksi. Sen pääkirkon '
+          + 'kupoli kullattiin ehkä ensimmäisenä koko Kiovan-Venäjällä, '
+          + 'ja juuri siitä koko luostari sai lempinimensä '
+          + '”kultakupolinen”. Vuonna 1108 luostariin tuotiin myös '
+          + 'Konstantinopolista pyhän Barbaran pyhäinjäännökset, ja '
+          + 'niistä tuli niin suosittu pyhiinvaellusaarre, että '
+          + '1870-luvulla luostarissa kävi vuosittain jopa 100 000 '
+          + 'vierailijaa.'
+        + '\n\n'
+        + '1700-luvulla kirkkoa laajennettiin ukrainalaiseen '
+          + 'barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli '
+          + 'lopulta seitsemän kupolin kokonaisuus. Sisäseiniltä löytyi '
+          + 'myös upeita 1100-luvun bysanttilaisia mosaiikkeja, jotka '
+          + 'olivat vuosisatoja piilossa kalkkimaalin alla, kunnes '
+          + 'taidehistorioitsija Adrian Prahov löysi ja restauroi ne '
+          + '1880-luvulla.'
+        + '\n\n'
+        + '1930-luvulla neuvostoviranomaiset purkivat koko luostarin '
+          + 'uuden hallintokeskuksen tieltä: kultakupolit purettiin '
+          + 'keväällä 1935 ja itse kirkkorakennus räjäytettiin '
+          + 'elokuussa 1937, joskin arvokkaimmat mosaiikit ehdittiin '
+          + 'ensin siirtää talteen museoihin. Ukrainan itsenäistyttyä '
+          + 'luostari rakennettiin kokonaan uudelleen vanhojen '
+          + 'piirustusten avulla ja avattiin juhlallisesti uudestaan '
+          + 'vuonna 1999. Kaivauksissa löytyi yli 300 hautaa, ja uuteen '
+          + '48 metriä korkeaan kellotorniin asennettiin 12 kelloa, '
+          + 'joita ohjaa nykyään tietokone – ainutlaatuinen laitteisto '
+          + 'koko Ukrainassa.',
+      kuvat: [
+        {
+          tiedosto: 'St. Michael\'s Golden-Domed Monastery. Kiev, Ukraine, Eastern Europe-2.jpg',
+          selite: 'Pyhän Mikaelin kultakupolisen luostarin sinivalkoinen '
+            + 'katedraali alhaalta kuvattuna, kultaiset kupolit kirkasta '
+            + 'taivasta vasten.',
+          lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Ukraine St Michael Cathedral Postcard 1.jpg',
+          selite: 'Vanha postikortti 1890-1905-luvuilta: luostarin kellotorni '
+            + 'ja kupolit sepiavärein kuvattuina.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Saint Michael\'s Square 2025-06-30 02.jpg',
+          selite: 'Laaja näkymä koko luostarikompleksista tyhjältä aukiolta '
+            + 'kesäisenä päivänä, komeat pilvet taustalla.',
+          lahde: 'Lklundin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Sofian katedraali': {
+      aika: '1037',
+      teksti: 'Pyhän Sofian katedraali on Kiovan vanhin säilynyt '
+          + 'suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen '
+          + 'ilmeisesti vuonna 1037 samalle kentälle, jolla hänen '
+          + 'joukkonsa olivat vuotta aiemmin voittaneet aroilta '
+          + 'hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi '
+          + 'Euroopan suurimmista rakennuksista: sen keskiosa on neliö, '
+          + 'jonka sivu on 30 metriä – täsmälleen sama mitta kuin '
+          + 'Konstantinopolin Hagia Sofian pääkupolin alla olevalla '
+          + 'neliöllä. Alun perin katedraalia peitti peräti 13 kupolia.'
+        + '\n\n'
+        + 'Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun '
+          + 'mosaiikki- ja freskokokoelma: mosaiikkeja on 260 '
+          + 'neliömetriä ja freskoja peräti 3 000 neliömetriä. '
+          + 'Kahdeksan taitavaa käsityöläistä latoi kultataustaiset '
+          + 'mosaiikit niin näppärästi, ettei niiden sävyjä ole '
+          + 'onnistuttu jäljittämään nykyaikanakaan. Seinistä on '
+          + 'löydetty myös yli 7 000 keskiaikaista naarmutettua '
+          + 'piirrosta ja kirjoitusta sekä ainoa tunnettu kuva '
+          + 'urkusoittimesta koko Kiovan-Venäjän taiteessa.'
+        + '\n\n'
+        + 'Jaroslav perusti kirkkoon myös Kiovan-Venäjän ensimmäisen '
+          + 'kirjaston, jossa oli yli tuhat kirjaa, ja legenda kertoo, '
+          + 'että sen arvokkaimmat aarteet piilotettiin kerran '
+          + 'salaiseen maanalaiseen käytävään – jota ei ole koskaan '
+          + 'löydetty. Kirkon 76-metrinen kellotorni valmistui vuonna '
+          + '1699 hetmani Ivan Mazepan kustannuksella, ja siinä riippuu '
+          + '13 tonnia painava, vuonna 1705 valettu Mazepa-kello. '
+          + 'Katedraali on ollut Unescon maailmanperintökohde vuodesta '
+          + '1990.',
+      kuvat: [
+        {
+          tiedosto: '80-391-9014 Kyiv Sofia 2 RB 24.jpg',
+          selite: 'Sofian katedraali lumisena talvipäivänä kirkkaassa '
+            + 'auringonpaisteessa, paljaiden puiden kehystämänä.',
+          lahde: 'Rbrechko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'St. Sophia Cathedral, Kiev, Russia, (i.e., Ukraine)-LCCN2001697426.jpg',
+          selite: 'Värillinen photochrom-kuva 1890-1900-luvuilta: Sofian '
+            + 'katedraalin kellotorni ja Bogdan Hmelnytskyin '
+            + 'ratsastajapatsas aukiolla.',
+          lahde: 'Photochrom Print Collection, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Kyiv-Saint Sophia Cathedral-east view.jpg',
+          selite: 'Sofian katedraalin itäsivu läheltä kuvattuna, vihreät '
+            + 'kupolit ja kullatut ristit erottuvat pilvisellä taivaalla.',
+          lahde: 'Galvm, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Itsenäisyyden aukio': {
+      aika: '2001',
+      teksti: 'Kiovan keskustan suurin aukio ei ole aina näyttänyt '
+          + 'nykyiseltä eikä kantanut nykyistä nimeään. Vielä '
+          + '1700-luvulla paikalla oli matala suoalue, jota kutsuttiin '
+          + 'leikkisästi ”Vuohensuoksi”, ja lähellä sijaitsi yksi '
+          + 'keskiaikaisen Kiovan kolmesta pääportista, Ljadskin portti '
+          + '– se tuhoutui mongolien hyökätessä kaupunkiin vuonna 1240. '
+          + 'Vasta 1830-luvulla alueelle alettiin rakentaa puutaloja ja '
+          + '1850-luvulla jo kivitaloja, kun Kiovasta kasvoi '
+          + 'teollistumisen myötä yksi Venäjän keisarikunnan '
+          + 'suurimmista kaupungeista.'
+        + '\n\n'
+        + 'Aukio on vaihtanut nimeä moneen kertaan vuosikymmenten '
+          + 'varrella. Vuodesta 1991 se on kantanut nimeä Itsenäisyyden '
+          + 'aukio eli Maidan Nezalezhnosti – sana ”maidan” juontuu '
+          + 'persian kielen sanasta, joka tarkoittaa toria tai '
+          + 'kokoontumispaikkaa. Vuosina 1976–1977 aukion alle '
+          + 'rakennettiin metroasema, ja samalla paikalle valmistui '
+          + 'myös suihkulähteitä ja avaria kävelyalueita.'
+        + '\n\n'
+        + 'Aukion tunnetuin nähtävyys on 61 metriä korkea '
+          + 'Itsenäisyyspatsas, joka pystytettiin vuonna 2001. Sen '
+          + 'huipulla seisoo kultainen Berehynia, ukrainalaisen '
+          + 'tarinaperinteen suojelijatar-jumalatar, kultainen '
+          + 'marjaoksa kädessään. Aukiolla ja sen tuntumassa on myös '
+          + 'patsaita Kiovan tarunhohtoisille perustajille – '
+          + 'veljeksille Kyi, Štšek ja Horyv sekä heidän sisarelleen '
+          + 'Lybidille – samoin kuin kasakka Mamaylle ja kaupungin '
+          + 'suojeluspyhälle, arkkienkeli Mikaelille.',
+      kuvat: [
+        {
+          tiedosto: '2005-08-15 Maidan Nezalezhnosti Kiev 261.JPG',
+          selite: 'Itsenäisyyden aukio iltahämärässä valaistuna: '
+            + 'Riippumattomuuspatsaan pylväs, lasikupu ja hotelli Ukraina '
+            + 'taustalla.',
+          lahde: 'Norbert Aepli, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Modern fountain on the Independence square (8162296734).jpg',
+          selite: 'Aukion moderni voikukka-aiheinen suihkulähde päiväsaikaan, '
+            + 'taustalla pylväikköinen rakennus.',
+          lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kiovan kultainen portti': {
+      aika: '1017–1024',
+      teksti: 'Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen '
+          + 'portin vuosina 1017–1024 kaupungin muurien '
+          + 'pääsisäänkäynniksi. Portti sai nimensä ja mallinsa '
+          + 'Konstantinopolin kuuluisasta Kultaisesta portista, ja se '
+          + 'toimi lähes 500 vuoden ajan sekä puolustusrakenteena että '
+          + 'voitokkaana riemuporttina, josta ruhtinaat ratsastivat '
+          + 'kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 '
+          + 'metriä leveä, ja sen päälle rakennettiin pieni kirkko '
+          + 'suojelemaan kaupunkia taivaallisin voimin.'
+        + '\n\n'
+        + 'Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan '
+          + 'ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen '
+          + 'aikana rakennus rapistui hiljalleen lähes raunioksi: '
+          + '1970-luvulle tultaessa maan päällä oli enää näkyvissä '
+          + 'kaksi muurinpätkää, toinen noin 24 metrin ja toinen 13 '
+          + 'metrin pituinen. Puolalaisen kuningas Boleslaw I:n '
+          + 'kerrotaan legendan mukaan lyöneen miekallaan porttia '
+          + 'vuonna 1018 – kuuluisassa Jan Matejkon maalauksessa nähty '
+          + 'tarina, jota historioitsijat eivät kuitenkaan pidä '
+          + 'todellisena tapahtumana.'
+        + '\n\n'
+        + 'Kiova juhli 1500-vuotispäiväänsä vuonna 1982, ja samalla '
+          + 'viranomaiset rakennuttivat kultaisen portin kokonaan '
+          + 'uudelleen jäljellä olleiden muurinpätkien ympärille. Koska '
+          + 'mistään ei ole säilynyt yhtään aitoa kuvaa alkuperäisestä '
+          + 'portista, arkkitehdit joutuivat päättelemään sen ulkonäön '
+          + 'vanhojen kirjallisten kuvausten perusteella, joten '
+          + 'nykyinen rakennus on parhaan arvauksen mukainen jäljitelmä '
+          + 'keskiaikaisesta alkuperäisestä. Sisällä toimii nykyään '
+          + 'pieni museo.',
+      kuvat: [
+        {
+          tiedosto: 'Golden Gate Kiev 2018 G1.jpg',
+          selite: 'Kultainen portti sivukulmasta kuvattuna kirkkaassa '
+            + 'auringonpaisteessa, puinen yläosa ja ruohopeitteinen valli '
+            + 'näkyvissä.',
+          lahde: 'George Chernilevsky, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Киев. Золотые ворота. Почтовая открытка 04.jpg',
+          selite: 'Vanha postikortti vuodelta 1910: Kultaisen portin '
+            + 'keskiaikaiset rauniot suojakatoksen alla ennen 1980-luvun '
+            + 'jälleenrakennusta.',
+          lahde: 'Tuntematon kustantaja, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Золоті ворота повний вигляд.jpg',
+          selite: 'Kultaisen portin edusta ja portaat suoraan edestä '
+            + 'kuvattuna, ohikulkijoita portailla pilvisenä päivänä.',
+          lahde: 'Ольжич Мушинський, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  PLACEHOLDER_ERA11
 };
