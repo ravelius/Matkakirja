@@ -87,16 +87,16 @@ luontevasti eri näkymä samasta kohteesta.
 | Kohde | Uusi kuva nähtävyysjutussa |
 |---|---|
 | Latinalaissilta, Sarajevo | koko silta Miljackan yli (CC0) |
-| Baščaršija | vuoden 1911 postikortti torista (PD) |
-| Privozin tori, Odessa | lihatiski hallin sisällä (PD) |
+| Baščaršija | Kazandžilukin kupariseppäkuja (CC BY 2.0) |
+| Privozin tori, Odessa | torin sisäänkäynti ja ПРИВОЗ-kyltti (PD) |
 | Kultainen portti, Kiova | portti puistikon laidalta (CC BY-SA 3.0) |
 | Odessan oopperatalo | katsomo sisältä (CC BY-SA 4.0) |
-| Voroncovin majakka | rannalta, aallonmurtajan päässä (CC BY-SA 3.0) |
-| Tromssan tuomiokirkko | puinen sisus (CC BY-SA 4.0) |
+| Vorontsovin majakka | aallonmurtajan pää ja rahtisatama (CC BY-SA 3.0) |
+| Tromssan tuomiokirkko | urkuparvi ja puiset kattoristikot (CC BY-SA 4.0) |
 | Mustapäiden talo, Riika | Rolandin patsas edessä (CC BY-SA 4.0) |
 | Aamuportti, Vilna | kappelin holvi sisältä (CC BY-SA 3.0) |
 | Gediminaksen torni | rinteen juurelta (CC BY 2.0) |
-| Vilnan yliopisto | pylväikköpiha (PD) |
+| Vilnan yliopisto | piha aamuauringossa (CC BY-SA 2.0) |
 | Rundetårn | Christian IV:n rebus kattojen yli (CC BY-SA 3.0) |
 | Parthenon | eteläsivu iltavalossa (CC BY-SA 2.5) |
 
@@ -123,3 +123,36 @@ riville, vaikka rivi venyisi.
 Tämän jälkeen pelissä on enää **4 duplikaattia**, kaikki yllä
 perusteltuja: All Gizah Pyramids, Las Meninas, Rio Javaés ja
 Tšadjärven kalastaja.
+
+**Tarkastus eri silmin muutti viittä valintaa vielä tämän jälkeen.**
+Kaksi agenttia kävi läpi 13 uutta kuvaa ja kuvatekstiä:
+
+- **Privozin lihatiski hylättiin yksityisyyden takia.** Kuvassa oli
+  toistakymmentä tunnistettavaa myyjää ja asiakasta lähikuvassa, yksi
+  heistä epäedullisessa ilmeessä. PD-lisenssi ei ratkaise sitä, onko
+  oikein levittää tunnistettavia ihmisiä julkaistavassa pelituotteessa.
+  Tilalle torin sisäänkäynti ja kyltti.
+- **Vilnan yliopiston arkadipiha oli tunnistamaton.** Kuvassa näkyi vain
+  kahden pilarin juuri, ei pihaa — ja kuvateksti lupasi kiertävän
+  kaarikäytävän, jota ei näkynyt.
+- **Baščaršijan 1911-postikortti toisti jutun muita kuvia**: jutussa oli
+  jo vanha mustavalkoinen torikuva vuodelta 1892 ja Sebilj näkyi
+  ensimmäisessä kuvassa. Tilalle kupariseppäkuja, eri aihe.
+- **Tromssan sisäkuvassa ei ollut mitään, mikä tunnistaisi kirkon** —
+  ei alttaria, urkuja eikä suippokaaria, vain penkkejä ja poistumis-
+  tiekyltti. Tilalle urkuparvi kattoristikoineen.
+- **Majakan kaukokuvassa kohde vei 3–5 % ruudusta.** Tilalle kuva, jossa
+  majakka on lähempänä ja takana rahtisatama.
+
+Kuvateksteistä korjattiin lisäksi neljä asiavirhettä: Latinalaissillalla
+ei näkynyt kulkijoita, Kiovan portin näkyvä muuri on rekonstruktiota
+eikä vanhaa tiilimuuria, Rundetårnin kultainen merkki on kuva-arvoitus
+(rebus) eikä kuvakirjoitus, ja majakan nimi oli kirjoitettu
+kuvateksteissä muotoon "Voroncovin", vaikka jutun leipäteksti ja muut
+paketit käyttävät muotoa **Vorontsovin** (kolme riviä yhtenäistetty).
+
+**Viereinen havainto, ei korjattu (kuuluu erikseen päätettäväksi):**
+Vorontsovin majakan jutun leipäteksti sanoo tornin kohoavan "lähes 30
+metrin korkeuteen – yhtä korkealle kuin kymmenkerroksinen talo", mutta
+Odessan sataman oma sivusto antaa 26 m ja pelin oma
+`kulttuuri-kategoriat.js` 27 m.

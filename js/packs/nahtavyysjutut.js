@@ -2117,7 +2117,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Parthenon from south.jpg',
           selite: 'Parthenonin pylväsrivi iltavalossa, edessä maahan '
-            + 'aseteltuja marmorilohkareita restaurointia varten.',
+            + 'aseteltuja marmorilohkoja restaurointia varten.',
           lahde: 'Thermos, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
@@ -5560,11 +5560,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
-          tiedosto: 'Sarajevo Bascarsija Market Sebilj.jpg',
-          selite: 'Baščaršijan tori vuonna 1911: Sebilj-vesikioski keskellä, '
-            + 'ympärillä matalia myymälöitä, koreja ja kauppiaita '
-            + 'perinneasuissa.',
-          lahde: 'Verlag Simon Kattan, Wikimedia Commons (Public domain)',
+          tiedosto: 'Kazandziluk.jpg',
+          selite: 'Kazandžilukin kuja Baščaršijassa: kupariseppien puoteja '
+            + 'vieri vieressä, pöydillä taottuja tarjottimia, kahvipannuja '
+            + 'ja kuparimaljoja.',
+          lahde: 'Francisco Antunes, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Sarajevo carsija, 1892.jpg',
@@ -5654,8 +5654,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Latin Bridge in Sarajevo.jpg',
           selite: 'Latinalaissilta kokonaisuudessaan Miljackan yli: neljä '
-            + 'kivikaarta, kulkijoita sillalla ja takana rinteille noussut '
-            + 'kaupunki minareetteineen.',
+            + 'kivikaarta ja pilarien päällä pyöreät aukot, takana rinteille '
+            + 'noussut kaupunki ja minareetti.',
           lahde: 'Tumi-1983, Wikimedia Commons (CC0)',
         },
         {
@@ -5987,8 +5987,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Kiev Golden Gate.jpg',
           selite: 'Kultainen portti puistikon laidalla: jälleenrakennettu '
-            + 'porttitorni kultakupolisine kirkkoineen, alla puinen käytävä '
-            + 'ja vanhaa tiilimuuria.',
+            + 'porttitorni kultakupolisine kirkkoineen. Alaosan harmaa '
+            + 'betonikuori pitää sisällään portin säilyneet muurinpätkät.',
           lahde: 'Луц Фишер-Лампрехт, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -6535,21 +6535,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Воронцовський маяк DSC5033.jpg',
-          selite: 'Voroncovin majakka merenpuolelta kuvattuna: valkoinen '
+          selite: 'Vorontsovin majakka merenpuolelta kuvattuna: valkoinen '
             + 'kivimajakka punaisine lyhtyhuoneineen kohoaa sinistä '
             + 'taivasta ja valkoisia pilviä vasten, ympärillä avomeri.',
           lahde: 'Konstantin Brizhnichenko, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Воронцовский маяк вид с берега.JPG',
-          selite: 'Voroncovin majakka rannalta katsottuna: valkoinen torni '
-            + 'seisoo yksin aallonmurtajan päässä keskellä satamanselkää, '
-            + 'ja takana häämöttää kaupungin siluetti.',
-          lahde: 'Vamochka, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Воронцовський маяк та грузовий порт.jpg',
+          selite: 'Vorontsovin majakka aallonmurtajan päässä omalla pyöreällä '
+            + 'jalustallaan. Takana näkyy rahtisatama nostureineen.',
+          lahde: 'SvetlanaM85, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Vorontsov Lighthouse.jpg',
-          selite: '1890-luvun postikorttikuva Voroncovin majakasta: vanha '
+          selite: '1890-luvun postikorttikuva Vorontsovin majakasta: vanha '
             + 'metallinen/kivinen majakka kivilaiturilla, ympärillä '
             + 'soutuveneitä ajan tyylissä.',
           lahde: 'Tuntematon, Wikimedia Commons (CC BY 2.0)',
@@ -6670,8 +6669,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'The auditorium of the Odessa Opera House 01.jpg',
           selite: 'Oopperatalon katsomo ennen esitystä: punakultainen '
-            + 'esirippu, kolme parvikerrosta ja kattoa kiertävät '
-            + 'kipsiveistokset.',
+            + 'esirippu, aitiokerroksia päällekkäin salin molemmin puolin ja '
+            + 'kattoa kiertävät valkoiset kipsihahmot.',
           lahde: 'OlenaMuzychenko (WMUA), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -6763,11 +6762,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Hwyrd, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'OdessaPrivoz.JPG',
-          selite: 'Privozin lihatiski hallin sisällä: pitkä valkoinen tiski '
-            + 'täynnä savustettua lihaa, vaaka tiskin päässä ja kylkeen '
-            + 'maalattu torin oma ПРИВОЗ-tunnus.',
-          lahde: 'Kuldinboxru, Wikimedia Commons (Public domain)',
+          tiedosto: 'Privoz market in Odessa.JPG',
+          selite: 'Privozin sisäänkäynti: torin nimi ПРИВОЗ suurin kirjaimin '
+            + 'katoksen päällä ja sen alla sinivalkoisia myyntitelttoja '
+            + 'rivissä niin kauas kuin näkee.',
+          lahde: 'Garik 11, Wikimedia Commons (Public domain)',
         },
       ],
       lahde: 'Wikipedia',
@@ -6878,10 +6877,10 @@ export const NAHTAVYYSJUTUT = {
         {
           // Commonsin oma tiedostonimi on pitkä; se on pakko pitää yhdellä
           // rivillä, jotta peilaustyökalu poimii sen kokonaan.
-          tiedosto: 'Tromsø Cathedral (domkirke) Norway interior. Pews (kirkebenker), pillars (bæresøyler), doors, sunlight, etc Wooden Gothic Revival style church 1861 Chr. H. Grosch 2019-04-04 DSC02260.jpg',
-          selite: 'Kirkon puinen sisus: maalatut penkkirivit, kantavat '
-            + 'puupilarit ja paneloidut seinät. Rakennus on puuta lattiasta '
-            + 'kattoon.',
+          tiedosto: 'Tromsø Cathedral (domkirke) Norway interior. Gallery, Claus Jensen organ (orgel) 1863, chandelier (lysekrone), timber roof truss (takstoler) etc Wooden Gothic Revival style church 1861 2019-04-04 DSC02236.jpg',
+          selite: 'Kirkon sisus parven kohdalta: urkujen valkokultainen '
+            + 'julkisivu suippokaarineen, puiset kattoristikot ja '
+            + 'kruunukynttilä.',
           lahde: 'Wolfmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -7491,9 +7490,9 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'House of the Blackheads.jpg',
-          selite: 'Mustapäiden talo valaistuna sinisellä hämärätunnilla. '
-            + 'Aukion keskellä seisoo Rolandin patsas miekka pystyssä, ja '
-            + 'julkisivun yläosassa erottuvat kello ja vaakunat.',
+          selite: 'Mustapäiden talo valaistuna sinisellä hämärätunnilla, '
+            + 'edessä Roland-patsas miekka pystyssä. Julkisivun yläosassa '
+            + 'erottuvat kello ja vaakunat.',
           lahde: 'Shawn M. Kent, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -7571,7 +7570,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Gediminas Tower (9651326233).jpg',
           selite: 'Gediminaksen torni mäen laella, rinteen juurelta '
-            + 'kuvattuna. Punatiilisen kahdeksankulmaisen tornin huipussa '
+            + 'kuvattuna. Punatiilisen kahdeksankulmaisen tornin huipulla '
             + 'liehuu Liettuan lippu.',
           lahde: 'Bernt Rostad, Wikimedia Commons (CC BY 2.0)',
         },
@@ -7710,11 +7709,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Vilnius University, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Arcade Courtyard Vilnius University1.jpg',
-          selite: 'Yliopiston pylväikköpiha: kaarikäytävä kiertää pihan '
-            + 'laitaa, ja pilarit on maalattu eri sävyihin. Yliopistolla on '
-            + 'toistakymmentä pihaa.',
-          lahde: 'Alma Pater, Wikimedia Commons (Public domain)',
+          tiedosto: 'Courtyard of Vilnius University - Vilnius - Lithuania (27739333602).jpg',
+          selite: 'Yliopiston piha matalassa aamuauringossa: keltaiset ja '
+            + 'valkoiset siipirakennukset tiilikattoineen, ja oikealla '
+            + 'kohoaa Pyhän Johanneksen kirkon torni.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -7800,8 +7799,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Vault of the Ostra brama chapel.JPG',
           selite: 'Kappelin holvi sisältä: valkoista stukkokoristelua '
-            + 'vaakunoineen, kullattu sädekehä ja vasemmalla Neitsyt Marian '
-            + 'kuvan kullattua kehystä.',
+            + 'vaakunoineen ja kullattuja sädekuvioita. Vasemmalla näkyy '
+            + 'ihmekuvan kehyksen yläreuna kerubeineen.',
           lahde: 'Alma Pater, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -8158,9 +8157,9 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Rundetaarn (Købmagergade).jpg',
-          selite: 'Rundetårn kattojen yli nähtynä: tiiliseinässä on '
-            + 'Christian IV:n kultainen kuvakirjoitus ja tornin laella '
-            + 'observatorion vihreä kupoli. Takana siintää Öresund.',
+          selite: 'Rundetårn kattojen yli: tiiliseinässä Christian IV:n '
+            + 'kultainen kuva-arvoitus, laella observatorion vihreä kupoli '
+            + 'ja takana Juutinrauma.',
           lahde: 'Orf3us, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
