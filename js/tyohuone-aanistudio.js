@@ -17,7 +17,7 @@ import {
   EHDOKKAAT, kaikkiValinnat, valitseAani, valittuAani, jaaAlku,
   TYYPPI_EHDOKKAAT, TYYPPI_NIMET, KAUPUNGIT_TYYPEITTAIN,
   tyyppiKori, valitseTyyppiKori, puheVoima, asetaPuheVoima,
-  KAUPUNKI_LISTA, kaupunkiKori, valitseKaupunkiKori,
+  KAUPUNKI_LISTA, kaupunkiKori, valitseKaupunkiKori, HUUDAHDUKSET,
 } from './aani-ehdokkaat.js';
 
 export function kaynnistaAanistudio() {
@@ -716,6 +716,50 @@ export function kaynnistaAanistudio() {
     return kotelo;
   }
   
+  /*
+   * Huudahdukset kuunneltaviksi (omistajan pyyntö 10.8.2026:
+   * "saisiko huudahdukset työhuoneeseen niin kuuntelen"). Lista
+   * tulee pelin omasta HUUDAHDUKSET-taulusta, joten tekstit ja
+   * tiedostonimet eivät voi erkaantua pelistä.
+   */
+  let huudahdusSoitin = null;
+  function rakennaHuudahdusRyhma() {
+    const kotelo = ylaRyhma('Huudahdukset', 'aarrelöydön repliikit luettuina');
+    const seloste = document.createElement('p');
+    seloste.className = 'kori-seloste';
+    seloste.textContent = 'Nuoren herran hihkaisut aarteen paljastuksessa — sama '
+      + 'repliikki kirjoitettuna ja luettuna. Arvoluokka kertoo, minkä '
+      + 'löydön kohdalla repliikki voi osua.';
+    kotelo.appendChild(seloste);
+    const NIMET = { 300: 'Pieni löytö (300)', 600: 'Keskilöytö (600)', 1000: 'Arvolöytö (1000)', star: 'Pääaarre' };
+    for (const [avain, lista] of Object.entries(HUUDAHDUKSET)) {
+      const ryhmanNimi = document.createElement('p');
+      ryhmanNimi.className = 'kori-seloste';
+      ryhmanNimi.textContent = NIMET[avain] ?? avain;
+      kotelo.appendChild(ryhmanNimi);
+      lista.forEach((teksti, i) => {
+        const rivi = document.createElement('div');
+        rivi.className = 'kori-rivi';
+        const soitto = document.createElement('button');
+        soitto.type = 'button';
+        soitto.className = 'soita';
+        soitto.textContent = '▶';
+        const nimi = document.createElement('span');
+        nimi.textContent = teksti;
+        soitto.addEventListener('click', () => {
+          huudahdusSoitin?.pause();
+          huudahdusSoitin = new Audio(`assets/audio/huudahdus-${avain}-${i + 1}.mp3`);
+          huudahdusSoitin.volume = puheVoima();
+          huudahdusSoitin.play().catch(() => {});
+        });
+        rivi.appendChild(soitto);
+        rivi.appendChild(nimi);
+        kotelo.appendChild(rivi);
+      });
+    }
+    return kotelo;
+  }
+
   const rakenna = () => {
     valinnat.textContent = '';
     const tehdyt = kaikkiValinnat();
@@ -770,6 +814,7 @@ export function kaynnistaAanistudio() {
       if (paketti.puhe) {
         if (!haku || 'puhe luenta voimakkuus'.includes(haku)) {
           valinnat.appendChild(rakennaPuheRyhma());
+          valinnat.appendChild(rakennaHuudahdusRyhma());
         }
         continue;
       }

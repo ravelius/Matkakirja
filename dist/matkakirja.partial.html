@@ -2966,12 +2966,25 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 
 /* Tavarat matkamuistoina: isompi kuva ja selite sen alla, rivit
  * täyttyvät vasemmalta oikealle (omistajan toive). */
+/*
+ * Tumma tarjotin tavaroiden alle (omistajan toive 10.8.2026:
+ * "tavaroille pitää tehdä tumma tausta") — aarrekuvat on piirretty
+ * mustalle pohjalle, ja vaalealla paperilla ne jäivät irrallisiksi
+ * mustiksi kiekoiksi. Tumma samettitausta sulattaa kuvien pohjan
+ * ja lukee laukun vuorina; selitteet vaalenevat sen päällä.
+ */
 #passport-finds {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.8rem 1.1rem;
   align-items: flex-start;
+  background: radial-gradient(circle at 30% 20%, #241a10, #140e07);
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.55);
 }
+
+#passport-finds .find-text { color: #e4d2ac; }
 
 #passport-finds .find {
   flex-direction: column;
@@ -7424,9 +7437,17 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 .reveal-isoisa {
   margin: 0.5rem 0 0.1rem;
   font-style: italic;
-  font-size: 0.92rem;
-  line-height: 1.45;
+  font-size: 1rem;
+  line-height: 1.5;
   max-width: 26rem;
+  /*
+   * Oma vaalea väri: teksti elää mustan paljastuskalvon päällä, ja
+   * perityllä musteella se jäi hämäräksi (omistajan havainto
+   * 10.8.2026: "teksti näkyy huonosti"). Sama sävyperhe kuin
+   * arvorivillä mutta vaaleampi, koska tämä on pitkä luettava.
+   */
+  color: #eedeba;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
 }
 
 .reveal-isoisa-nimio {
@@ -8906,9 +8927,58 @@ body.vertailu-tila .pawns { display: none; }
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+/*
+ * Menovinkkisivun taitto (omistajan palaute 10.8.2026: "liian
+ * listamainen... yksi iso kuva ja alustusteksti isommalla, listaa
+ * voisi kaventaa"): johdanto on ingressi, avauskuva täyttää palstan
+ * ja lista kapenee luettavaksi kaistaksi — sivu ei ole enää
+ * tasapaksu pötkö.
+ */
+.vinkkisivu .johdanto {
+  font-size: 1.16rem;
+  line-height: 1.6;
+  max-width: 40rem;
+}
+
+.vinkki-hero {
+  margin: 0.9rem 0 1.2rem;
+}
+
+.vinkki-hero img {
+  display: block;
+  width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(40, 28, 12, 0.25);
+}
+
+.vinkki-hero .lahde {
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.vinkkisivu .vinkkilista,
+.vinkkisivu .vinkki-ryhma {
+  max-width: 40rem;
+}
+
 /* Ajankohta noston otsikkorivillä: pieni konekirjoitusleima. */
 .nosto-aika {
   margin-left: auto;
+}
+
+/*
+ * Kun rivillä on myös musiikkinappi, oikean reunan tyhjä tila kuuluu
+ * VAIN ensimmäiselle oikean ryhmän jäsenelle: kaksi auto-marginaalia
+ * jakoivat tilan ja Apple Music -pilleri kellui keskellä riviä
+ * (omistajan havainto 10.8.2026: "siirrä apple music painike oikeaan
+ * reunaan vuosiluvun viereen"). Sisarussääntö vie vuosileimalta
+ * auton, jolloin nappi ja leima istuvat vierekkäin oikealla.
+ */
+.kulttuuri-musiikkilinkki ~ .nosto-aika,
+.kulttuuri-musiikkinayte ~ .nosto-aika {
+  margin-left: 0.45rem;
   padding: 0.1rem 0.4rem;
   border: 1px solid rgba(70, 51, 31, 0.45);
   border-radius: 3px;
@@ -119830,6 +119900,39 @@ const LAHTEITA = LAHTEET.reduce((n, ryhma) => n + ryhma.rivit.length, 0);
 
 const AVAIN = 'matkakirja-aanivalinnat';
 
+/*
+ * Nuoren herran huudahdukset aarteen paljastukseen — sama repliikki
+ * kirjoitettuna ja luettuna (tiedostot assets/audio/huudahdus-
+ * <avain>-<n>.mp3, generointi tools/generoi-hihkaisut.mjs).
+ * Asuu täällä eikä ui.js:ssä, jotta työhuoneen äänistudio saa
+ * saman listan ilman koko pelin tuontia.
+ */
+const HUUDAHDUKSET = {
+  300: [
+    'Hei — löytyi sittenkin!',
+    'Pieni, mutta aito!',
+    'Kelpaa tämäkin!',
+    'Taskuun ja eteenpäin!',
+  ],
+  600: [
+    'Mahtavaa!',
+    'Sepä vasta löytö!',
+    'Isoisä olisi hykerrellyt!',
+    'Tämä merkitään päiväkirjaan!',
+  ],
+  1000: [
+    'Uskomatonta!',
+    'Jes! Katsokaa nyt tätä!',
+    'Sydän hakkaa — mikä löytö!',
+    'Juuri tällaisesta isoisä kirjoitti!',
+  ],
+  star: [
+    'Se on totta... se on oikeasti totta!',
+    'Aarni oli oikeassa — se on olemassa!',
+    'Isoisä... minä löysin sen.',
+  ],
+};
+
 // Tyyppiehdokkaat: käyvät kaikille saman maiseman kaupungeille.
 const TYYPPI_EHDOKKAAT = {
   // Lentoasema on etusivun oma maisema (omistajan toive 10.8.2026:
@@ -119848,7 +119951,7 @@ const TYYPPI_EHDOKKAAT = {
   // äänite, jossa on moottorin lisäksi matkustajien puheensorinaa ja
   // kuulutus (omistajan toive: "pitäisi löytää puheääntä taustalle").
   lentokone: [
-    { url: 'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=2.9', nimi: 'Matkustamo, puheensorinaa ja kuulutus — drewhalasz, CC0' },
+    { url: 'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=3.6', nimi: 'Matkustamo, puheensorinaa ja kuulutus — drewhalasz, CC0' },
     { url: 'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.3', nimi: 'Matkustamo lennolla, A330 — FillSoko, CC0' },
     { url: 'https://cdn.freesound.org/previews/245/245691_2047664-lq.mp3#voima=0.22', nimi: 'Matkustamon tasainen humina — TicAshfield, CC0' },
   ],
@@ -120338,7 +120441,7 @@ const OLETUSKORIT = {
     'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6',
   ],
   lentokone: [
-    'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=2.9',
+    'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=3.6',
   ],
   basaari: [
     'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55',
@@ -122447,7 +122550,28 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
   // Soitto ja onnistumisen käsittely ovat omassa funktiossaan, jotta
   // varareitti käy täsmälleen saman polun: ilman sitä äänite jäisi
   // vaihdon jälkeen soimaan nollavoimakkuudella.
-  const soi = () => audio.play().then(() => {
+  /*
+   * YRITYSLASKURI KATKAISEE KASKADIN. Kun varareitti vaihtaa srcin
+   * kesken latauksen, VANHA play()-lupaus hylkääntyy AbortErrorilla
+   * — ja ilman laskuria se kutsui pettiä uudelleen, joka poltti
+   * seuraavankin portaan ja päätyi varalle-polkuun, vaikka uusi
+   * lähde olisi toiminut (mitattu 10.8.2026: etusivu mykistyi
+   * pysyvästi aina kun ensilataus kesti yli vahdin 6 sekuntia —
+   * hitaalla yhteydellä joka kerta). Vanhentuneen yrityksen hylkäys
+   * ohitetaan; nykyisen yrityksen AbortError jää vahdin varaan.
+   */
+  const soi = () => {
+    const yritys = (audio.soiYritys = (audio.soiYritys ?? 0) + 1);
+    return audio.play().then(() => {
+      if (audio.soiYritys !== yritys) return;
+      onnistui();
+    }).catch((syy) => {
+      if (audio.soiYritys !== yritys) return;
+      if (syy?.name === 'AbortError') return;
+      petti();
+    });
+  };
+  const onnistui = () => {
     if (nykyinen !== oma) {
       // Kaupunki ehti vaihtua kesken latauksen: tämä soitin ei ehtinyt
       // koskaan kuuluviin eikä sitä enää tarvita.
@@ -122469,7 +122593,7 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     sfx.setAmbience(null); // synteesi väistyy, kun oikea äänite soi
     haivyta(audio, taso(oma), null, nouse);
     vahdiSilmukka(oma, audio);
-  }).catch(petti);
+  };
   /*
    * VAHTIAJASTIN: peilin 404 voi jäädä pelkäksi stalled-tapahtumaksi
    * ilman erroria (mitattu 10.8.2026: peilistä puuttunut
@@ -122477,12 +122601,19 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
    * jäi hiljaiseksi). Jos ääni ei ole soittokunnossa kohtuuajassa
    * eikä virhettäkään ole tullut, mennään samaan petti-polkuun kuin
    * error-tapahtumasta.
+   *
+   * Raja on readyState < 2 (ei edes nykyhetken dataa), EI < 3:
+   * hitaalla yhteydellä metadata ja ensimmäiset paketit tulevat
+   * nopeasti mutta puskuri täyttyy hitaasti, ja <3-ehto tulkitsi
+   * elävän mutta hitaan latauksen kuolleeksi — juuri se laukaisi
+   * kaskadin, joka mykisti etusivun (10.8.2026). Aidosti kuollut
+   * peililataus jää tilaan 0 ja vahti toimii kuten ennenkin.
    */
   let vahti = null;
   const viritaVahti = () => {
     clearTimeout(vahti);
     vahti = setTimeout(() => {
-      if (audio.readyState < 3 && nykyinen === oma) petti();
+      if (audio.readyState < 2 && nykyinen === oma) petti();
     }, 6000);
   };
   audio.addEventListener('canplay', () => clearTimeout(vahti));
@@ -123877,12 +124008,40 @@ function drawMaasto(svg, map, varjostus = null, nimet = null) {
     (nimet?.joet ?? []).filter((j) => j.tarkeys === 1).map((j) => j.avain),
   );
   if (paajoet.size) {
+    /*
+     * Päiden jatke: keskilinja-aineisto päättyy omaan rantaviivaansa,
+     * joka ei osu käsin piirrettyyn rantaan — joki jäi töpöksi ennen
+     * merta ja suisto näytti kököltä (omistajan havainto 10.8.2026).
+     * Viimeistä suuntaa jatketaan vähän molemmista päistä: suulla
+     * nauha ylettyy veteen asti, ja latvassa lyhyt jatke uppoaa
+     * maastoon huomaamatta.
+     */
+    const JATKE = 14;
+    const jatkaPaita = (pisteet) => {
+      const jatke = (mista, mihin) => {
+        const dx = mihin[0] - mista[0];
+        const dy = mihin[1] - mista[1];
+        const pituus = Math.hypot(dx, dy) || 1;
+        return [mihin[0] + (dx / pituus) * JATKE, mihin[1] + (dy / pituus) * JATKE];
+      };
+      return [
+        jatke(pisteet[1], pisteet[0]),
+        ...pisteet,
+        jatke(pisteet[pisteet.length - 2], pisteet[pisteet.length - 1]),
+      ];
+    };
     const joet = el('g', { class: 'iso-joet' }, g);
     for (const joki of maasto.joet ?? []) {
       if (!paajoet.has(joki.nimi)) continue;
       const pisteet = joki.pisteet ?? [];
       if (pisteet.length < 2) continue;
-      const d = smoothOpenPath(kasinPiirretty(pisteet));
+      /*
+       * EI kasinPiirretty-huojuntaa: keskilinjassa on jo luonnollinen
+       * mutkittelu, ja lisätty jitter teki lähizoomilla teräviä
+       * sahalaitoja (sama omistajan havainto). Pelkkä pehmennys
+       * riittää — joki on maiseman piirre, ei ääriviiva.
+       */
+      const d = smoothOpenPath(jatkaPaita(pisteet));
       el('path', { d, class: 'iso-joki-reuna' }, joet);
       el('path', { d, class: 'iso-joki' }, joet);
     }
@@ -129346,31 +129505,6 @@ const REVEAL_SUB = {
  * mukana — pikkulöytö kuitataan, suurlöytö vie sanat. Arvotaan joka
  * kerta, jotta toisto ei kulu.
  */
-const HUUDAHDUKSET = {
-  300: [
-    'Hei — löytyi sittenkin!',
-    'Pieni, mutta aito!',
-    'Kelpaa tämäkin!',
-    'Taskuun ja eteenpäin!',
-  ],
-  600: [
-    'Mahtavaa!',
-    'Sepä vasta löytö!',
-    'Isoisä olisi hykerrellyt!',
-    'Tämä merkitään päiväkirjaan!',
-  ],
-  1000: [
-    'Uskomatonta!',
-    'Jes! Katsokaa nyt tätä!',
-    'Sydän hakkaa — mikä löytö!',
-    'Juuri tällaisesta isoisä kirjoitti!',
-  ],
-  star: [
-    'Se on totta... se on oikeasti totta!',
-    'Aarni oli oikeassa — se on olemassa!',
-    'Isoisä... minä löysin sen.',
-  ],
-};
 
 /**
  * Arvo huudahdus laattatyypin mukaan; muille kuin aarteille ei
@@ -132401,6 +132535,19 @@ class UI {
         if (nipistys) return;
         if (this.avausNakymassa() || this.radioPaalla()) return;
         e.preventDefault();
+        /*
+         * Läppärin kahden sormen vieritys EI zoomaa (omistajan toive
+         * 10.8.2026: "voisiko sen vaihtaa nipistyseleeseen") —
+         * trackpadin nipistys tulee selaimissa ctrl+rullana, ja
+         * vieritys pieninä jatkuvina pikselideltoina usein
+         * vaaka-akselin kera. Hiiren rullan naksu on rividelta
+         * (deltaMode ≠ 0) tai iso pystydelta ilman vaakaa — se
+         * zoomaa yhä, kuten alkuperäinen toive vaati.
+         */
+        const nipistysEle = e.ctrlKey || e.metaKey;
+        const rullanNaksu = e.deltaMode !== 0
+          || (Math.abs(e.deltaY) >= 50 && e.deltaX === 0);
+        if (!nipistysEle && !rullanNaksu) return;
         const nyt = performance.now();
         if (nyt - (this.rullanHetki ?? 0) < RULLAN_VALI_MS) return;
         const suunta = e.deltaY < 0 ? 1 : -1;
@@ -137049,6 +137196,30 @@ class UI {
      * museosta eikä puuttuva kuva saa karsia hyvää kohdetta.
      */
     if (kategoria.lista) {
+      /*
+       * Taitto pois tasapaksusta pötköstä (omistajan palaute
+       * 10.8.2026: "voisi olla vaikka yksi iso kuva ja alustusteksti
+       * isommalla, listaa voisi myös kaventaa"): johdanto nousee
+       * ingressiksi (vinkkisivu-luokka kasvattaa sen CSS:ssä) ja
+       * ryhmien ensimmäisen kuvallisen kohteen kuva nostetaan sivun
+       * avauskuvaksi täyteen leveyteen. Kohde jää silti listaan —
+       * hero on taittoa, ei uusi sisältöpaikka.
+       */
+      kohde.classList.add('vinkkisivu');
+      const eka = (kategoria.lista ?? [])
+        .flatMap((r) => r.kohteet ?? [])
+        .find((k) => k.tiedosto);
+      if (eka) {
+        const hero = html('figure', 'vinkki-hero');
+        const kuva = document.createElement('img');
+        kuva.alt = eka.selite ?? eka.nimi ?? '';
+        kuva.decoding = 'async';
+        asetaKuva(kuva, valokuvaUrl(eka.tiedosto, 1200), valokuvaVara(eka.tiedosto, 1200), () => hero.remove());
+        hero.appendChild(kuva);
+        if (eka.lahde) hero.appendChild(html('figcaption', 'lahde', eka.lahde));
+        // Hero johdannon perään, ennen ryhmiä.
+        kohde.appendChild(hero);
+      }
       this.piirraVinkkilista(kohde, kategoria.lista);
       if (kategoria.tehtava) this.piirraMinitehtava(kohde, kategoria);
       return;
@@ -137921,7 +138092,17 @@ class UI {
      * soi Applen 30 sekunnin esikuunteluna. Vapaa näyte voittaa aina:
      * jos nostolla on musiikkiNayte, esikuuntelunappia ei näytetä.
      */
-    if (nosto.esikuuntelu && !nosto.musiikkiNayte) {
+    /*
+     * Soittonappi myös pelkälle Apple Music -linkille (omistajan
+     * kysymys 10.8.2026: "saako linkin avaamaan ja toistamaan myös
+     * itse kappaleen suoraan?"). Koko kappaleen toisto sivulla
+     * vaatisi MusicKitin ja kehittäjäavaimen — sen sijaan Applen
+     * 30 sekunnin esikatselu soi suoraan: kappale-id poimitaan
+     * linkistä ja osoite haetaan avoimesta iTunes-rajapinnasta.
+     * Linkki itse vie edelleen Apple Musiciin, jossa tilaaja saa
+     * koko kappaleen.
+     */
+    if ((nosto.esikuuntelu || nosto.musiikki) && !nosto.musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = 'Esikuuntelu Apple Musicista (30 s)';
@@ -137947,20 +138128,44 @@ class UI {
    */
   async esikuunteluNapista(nosto, nappi) {
     this.esikuuntelut ??= new Map();
-    let url = this.esikuuntelut.get(nosto.esikuuntelu) ?? null;
+    const avain = nosto.esikuuntelu ?? nosto.musiikki;
+    let url = this.esikuuntelut.get(avain) ?? null;
     if (!url) {
       const teksti = nappi.querySelector('span');
       const alku = teksti.textContent;
       teksti.textContent = 'Haetaan…';
       nappi.disabled = true;
       try {
+        /*
+         * Ilman hakutermiä esikatselu johdetaan Apple Music
+         * -linkistä: kappaleen id on ?i=-parametrissa (albumilinkit)
+         * tai polun lopussa (song-linkit), ja lookup-rajapinta antaa
+         * sille previewUrlin. Albumin id:llä entity=song poimii
+         * albumin ensimmäisen kappaleen. Termihaku jää varapoluksi
+         * nimellä, jos linkistä ei irtoa id:tä.
+         */
         const haku = new URL('https://itunes.apple.com/search');
-        haku.searchParams.set('term', nosto.esikuuntelu);
-        haku.searchParams.set('entity', 'song');
-        haku.searchParams.set('limit', '1');
+        if (!nosto.esikuuntelu && nosto.musiikki) {
+          const id = nosto.musiikki.match(/[?&]i=(\d+)/)?.[1]
+            ?? nosto.musiikki.match(/\/(?:song|album)\/[^/]+\/(?:id)?(\d+)/)?.[1];
+          if (id) {
+            haku.href = 'https://itunes.apple.com/lookup';
+            haku.searchParams.set('id', id);
+            haku.searchParams.set('entity', 'song');
+            haku.searchParams.set('limit', '1');
+          } else {
+            haku.searchParams.set('term', nosto.musiikkiNimi ?? nosto.otsikko ?? '');
+            haku.searchParams.set('entity', 'song');
+            haku.searchParams.set('limit', '1');
+          }
+        } else {
+          haku.searchParams.set('term', nosto.esikuuntelu);
+          haku.searchParams.set('entity', 'song');
+          haku.searchParams.set('limit', '1');
+        }
         haku.searchParams.set('country', 'fi');
         const vastaus = await fetch(haku, { signal: AbortSignal.timeout(10000) });
-        url = (await vastaus.json()).results?.[0]?.previewUrl ?? null;
+        url = (await vastaus.json()).results?.find((r) => r.previewUrl)?.previewUrl ?? null;
       } catch {
         url = null;
       }
@@ -137973,7 +138178,7 @@ class UI {
         setTimeout(() => { teksti.textContent = alku; }, 2500);
         return;
       }
-      this.esikuuntelut.set(nosto.esikuuntelu, url);
+      this.esikuuntelut.set(avain, url);
     }
     this.kulttuuriAaniNapista({ aani: url, otsikko: nosto.otsikko }, nappi);
   }
@@ -138239,9 +138444,38 @@ class UI {
     };
     prev.addEventListener('click', (e) => { e.stopPropagation(); siirry(-1); });
     next.addEventListener('click', (e) => { e.stopPropagation(); siirry(1); });
-    close.addEventListener('click', () => overlay.remove());
+    /*
+     * Sama näppäinsopimus kuin muissa suurennoksissa (ks.
+     * rekisteroiSuurennosNappaimet): nuolet selaavat, Esc sulkee vain
+     * suurennoksen. Tämä katselin oli ainoa ilman näppäimiä
+     * (omistajan havainto 10.8.2026: "nuolinäppäin selailu ei
+     * toimi") — kuuntelija on documentissa kaappausvaiheessa, jotta
+     * se voittaa alla olevan lehden sivunkäännön, ja purkautuu
+     * suurennoksen sulkeutuessa mitä reittiä tahansa.
+     */
+    const nappaimet = (e) => {
+      if (!overlay.isConnected) {
+        document.removeEventListener('keydown', nappaimet, { capture: true });
+        return;
+      }
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        siirry(e.key === 'ArrowRight' ? 1 : -1);
+        e.preventDefault();
+        e.stopPropagation();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        sulje();
+      }
+    };
+    const sulje = () => {
+      overlay.remove();
+      document.removeEventListener('keydown', nappaimet, { capture: true });
+    };
+    document.addEventListener('keydown', nappaimet, { capture: true });
+    close.addEventListener('click', sulje);
     overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) overlay.remove();
+      if (e.target === overlay) sulje();
     });
     // Pyyhkäisy vaihtaa kuvaa sormella.
     let alkuX = null;
@@ -140584,7 +140818,9 @@ class UI {
           body.appendChild(html('strong', '', `◈ Portti aukeaa — ${quiz.gate.label}!`));
           body.appendChild(html('span', 'muted', 'Tieto avasi tien: matka jatkuu ilmaiseksi.'));
         } else if (quiz.right && found) {
-          this.quizResult.appendChild(aarreIkoni(found, quiz.found, 24));
+          // Iso kuva (omistajan toive 10.8.2026: "kuva saisi olla
+          // isommalla") — aarre on rivin pääasia, ei kuvake.
+          this.quizResult.appendChild(aarreIkoni(found, quiz.found, 56));
           body.appendChild(html('strong', '', `Löysit: ${found.name}`));
         } else if (quiz.right && quiz.explore) {
           /*
@@ -141014,7 +141250,10 @@ class UI {
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
       if (kaariLuentaSoi(kaari, 'aarre') && kertojaTila() !== 'ei') {
-        luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 2600 : 900 }) ?? null;
+        // Viive hihkaisun jälkeen: 2600 ms alkoi hieman ennen kuin
+        // hihkaisu ehti laskeutua (omistajan havainto 10.8.2026) —
+        // 3400 ms antaa huudahduksen soida loppuun ja hengähtää.
+        luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 3400 : 900 }) ?? null;
       }
     }
     /*
@@ -141865,6 +142104,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 549, teksti: 'Äänipolun kaskadikorjaus, suurennoksen nuolet, esikuuntelut' },
   { v: 548, teksti: 'Etusivun ääni takaisin: reitityskokeilu peruttu' },
   { v: 547, teksti: 'Nähtävyyksien selaus popupissa: nuolet, pyyhkäisy, laskuri' },
   { v: 546, teksti: 'ME:n neljä saapumista uusiksi, visaspoileri pois' },
@@ -142497,7 +142737,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.548';
+const APP_VERSION = '2026-08-09.549';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
