@@ -3790,8 +3790,12 @@ body.radio-tila .board-hint {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
-  min-height: 44px;
-  padding: 0.15rem 0.85rem;
+  /* Matala kyltti — sama mitta kuin matkakirjan supistetulla
+   * chipillä (omistajan toive 10.8.2026). Ilman varustetta pilleri
+   * ei ole nappi, joten 44 px:n osumapintaa ei tarvita; varusteen
+   * kanssa osuma-alue laajennetaan ::after-pseudolla. */
+  min-height: 1.9rem;
+  padding: 0.1rem 0.75rem;
   border-radius: 999px;
   border: 1px solid rgba(70, 51, 31, 0.65);
   background: rgba(245, 231, 200, 0.94);
@@ -3800,12 +3804,23 @@ body.radio-tila .board-hint {
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  cursor: pointer;
+}
+
+.maa-pilleri:disabled { cursor: default; }
+
+.maa-pilleri.avattava { cursor: pointer; }
+
+.maa-pilleri.avattava::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
 }
 
 .maa-pilleri[data-side='oikea'] { left: auto; right: 3.2rem; }
 
 .maa-pilleri[hidden] { display: none; }
+
+.maa-pilleri-i[hidden] { display: none; }
 
 .maa-pilleri-nimi { pointer-events: none; }
 
@@ -3822,11 +3837,11 @@ body.radio-tila .board-hint {
   pointer-events: none;
 }
 
-.maa-pilleri:hover,
-.maa-pilleri:focus-visible { border-color: var(--map-ink); }
+.maa-pilleri.avattava:hover,
+.maa-pilleri.avattava:focus-visible { border-color: var(--map-ink); }
 
-.maa-pilleri:hover .maa-pilleri-i,
-.maa-pilleri:focus-visible .maa-pilleri-i {
+.maa-pilleri.avattava:hover .maa-pilleri-i,
+.maa-pilleri.avattava:focus-visible .maa-pilleri-i {
   background: var(--map-ink);
   border-color: var(--map-ink);
   color: rgba(245, 231, 200, 0.95);

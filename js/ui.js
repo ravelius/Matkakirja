@@ -3341,8 +3341,13 @@ export class UI {
     const nappi = document.getElementById('maalehti-nappi');
     if (!nappi) return;
     const rajat = Boolean(this.game?.pack?.map?.countryShapes);
-    nappi.hidden = !rajat || this.avausNakymassa();
+    // Maiden tiedot on löydettävä varuste (omistajan päätös
+    // 10.8.2026): kirjanappi ja pillerin ⓘ ilmestyvät vasta, kun
+    // varuste on laukussa.
+    nappi.hidden = !rajat || this.avausNakymassa() || !this.maatiedotVarusteOmistettu();
     nappi.setAttribute('aria-pressed', String(this.maatiedotHalutaan()));
+    // Pilleri elää samasta varusteesta — päivitys aina samassa.
+    this.paivitaMaaPilleriTila();
   }
 
   paivitaZoomiNapit() {
@@ -4853,10 +4858,37 @@ export class UI {
       this.maaPilleri = nappi;
     }
     this.maaPilleriIso = iso;
+    this.maaPilleriNimi = maa.nimi;
     nappi.querySelector('.maa-pilleri-nimi').textContent = maa.nimi;
-    nappi.setAttribute('aria-label', `${maa.nimi}: avaa maan lehti`);
     nappi.hidden = false;
+    this.paivitaMaaPilleriTila();
     this.paivitaMaaPilleriPuoli();
+  }
+
+  /**
+   * ⓘ ja maalehden avaus pilleristä vain, kun Maiden tiedot -varuste
+   * on löydetty (omistajan päätös 10.8.2026: lisätieto maista on
+   * löydettävä varuste, ei oletusnappi). Ilman varustetta pilleri on
+   * pelkkä maan nimikyltti. Sama portti sulkee kirjanapin
+   * (paivitaMaalehtiNappi).
+   */
+  maatiedotVarusteOmistettu() {
+    const omat = this.linssiTuki?.omistus?.omistetut?.(this.game, this.game.player)
+      ?? new Set(this.game.player?.linssit ?? []);
+    return omat.has('maatiedot');
+  }
+
+  /** Kevyt tilapäivitys renderistä: varuste voi löytyä kesken maan. */
+  paivitaMaaPilleriTila() {
+    const nappi = this.maaPilleri;
+    if (!nappi || nappi.hidden) return;
+    const auki = this.maatiedotVarusteOmistettu();
+    nappi.disabled = !auki;
+    nappi.classList.toggle('avattava', auki);
+    const i = nappi.querySelector('.maa-pilleri-i');
+    if (i) i.hidden = !auki;
+    nappi.setAttribute('aria-label', auki
+      ? `${this.maaPilleriNimi}: avaa maan lehti` : (this.maaPilleriNimi ?? ''));
   }
 
   /**
@@ -6069,10 +6101,12 @@ export class UI {
     // Radiotilassa radio on ainoa ääni. Kaupungin äänimaiseman sulkee
     // radio.paalle() itse; tämä estää sen palaamisen.
     if (this.radioPaalla()) return;
-    // Lennon aikana kuuluu vain moottori: kaupungin äänimaisema alkaa
-    // vasta, kun pelaaja astuu ulos koneesta (kalvon sulkeva render).
+    // Lennon aikana kuuluu matkustamon äänimaisema (omistajan toive
+    // 10.8.2026: kalvon taustaääneksi äänimaisema lentokoneen
+    // sisältä). Kaupungin maisema alkaa vasta, kun pelaaja astuu ulos
+    // koneesta (ennakoiAmbienssi ohittaa lipun kalvon lopussa).
     if (document.body.classList.contains('flight-active')) {
-      playPlaceAmbience(null, null);
+      playPlaceAmbience('lentomatka', 'lentokone', this.game.pack?.id);
       return;
     }
     if (game.phase === 'over') {
@@ -11366,6 +11400,7 @@ export class UI {
     this.tahdistaMaatiedot(this.maatiedotHalutaan());
     if (this.dead) return;
     this.paivitaMaalehtiNappi();
+    this.paivitaMaaPilleriTila();
     this.paivitaLinssiNappi();
     this.paivitaLinssiTiedot();
     this.piirraLinssiSelite();
@@ -12960,8 +12995,14 @@ export class UI {
     nuoli.addEventListener('click', () => {
       for (const a of lentoAnimaatiot) a.finish();
     });
-    // Potkurihurina koko kohtauksen ajaksi: nousee ja laskee sen mukana.
-    sfx.startFlight(lennonKesto);
+    /*
+     * Kalvon taustaääni on matkustamon äänimaisema, ei syntetisoitu
+     * moottori (omistajan toive 10.8.2026) — sen käynnistää
+     * syncAmbience flight-active-lipusta, joten tässä ei aloiteta
+     * mitään. stopFlight kalvon lopussa jää varmistukseksi vanhojen
+     * polkujen varalle.
+     */
+    this.syncAmbience();
 
     // Kone ja reittiviiva lentävät selaimen omina WAAPI-animaatioina, ei
     // rAF-silmukalla: pääsäikeessä naputtava kirjoituskone ja käynnistyvä

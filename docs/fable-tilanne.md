@@ -6,6 +6,36 @@ uuden tilin session — yli. Lue tämä ENSIN, sitten `CLAUDE.md`,
 `js/tyohuone-tilanne.js`. Ylin osio on aina tuorein tila; alemmat
 osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
 
+## ILTAPÄIVÄN PIKASYKLIT 10.8. ~14:00–15:00Z (v530–v532)
+
+- **v530:** maapilleri kartan kehykselle + punamulta-ääriviiva
+  (Fable maxin speksi, omistajan "tee fablen ehdotus");
+  kohtaamisluennan feidaus Aloita peli -napista; KORJATTU PIILEVÄ
+  VIKA: kaksi haivytaAani-metodia, myöhempi ylikirjoitti intro-äänen
+  siivousversion → puhujavuoto piti taustan väistössä (selittänee
+  myös omistajan "aloitussivun taustaääntä ei kuulu" -havainnon);
+  siivousversio on nyt haivytaJaSiivoa + tuplanimivartija testiin.
+- **v531:** aarrekortti pysyy esillä koko luennan ajan; ruksi sulkee
+  ja feidaa kertojan; 30 s varmuusraja; playDiaryVoice palauttaa
+  kahvan ja signaloi käynnistymättömän luennan error-tapahtumana.
+- **v532:** avauslennon kalvolle matkustamoäänimaisema (uusi
+  lentokone-kori, A330 CC0, RMS-kalibroitu; synteettinen moottori
+  pois kalvolta); MAIDEN TIEDOT ON LÖYDETTÄVÄ VARUSTE — pilleri
+  ilman varustetta pelkkä nimikyltti chipin korkuisena, ⓘ +
+  kirjanappi vasta maatiedot-varusteella.
+- **Ateenan "vieläkin vanha aarre"** = välimuisti (omistaja vahvisti:
+  uusi peli tuoreella koodilla toimii). Ei migraatiotarvetta.
+- **Delegoitu:** Sonnet 1 = Euroopan kuvien vastaavuusauditti
+  (teksti mainitsee asian → onko kuvissa; Bukarestin kirkko esim.);
+  Fable max = koko Euroopan kaaritekstien auditti (outoudet +
+  teematoisto + UUDET TEKSTIT ehdotuksina). Molemmat laukaistiin
+  heti fire_triggerillä (uusi käytäntö ajastinviiveen takia).
+- **JONOSSA (Fablen omat):** hihkaisuäänet aarrelöytöön (EI vielä
+  generoitu — ElevenLabs v3, lyhyet äännähdykset epävakaita, vaatii
+  huolellisen erän + hännäntarkistukset); kohtaamiskuvien UI-kytkentä
+  (Opus 3:n kuvat hyväksytty: Nikos/Nadia/kätkö); ME-tekstien
+  kaupunkijakotaulu; ehdotus-kaaritekstit.md odottaa omistajaa.
+
 ## YKSI LAUTA 10.8. ~13:50Z (v529) — LAUDANVAIHDOT POIS
 
 - **Omistajan päätös:** peli kehitettiin alunperin maanosalautoina,

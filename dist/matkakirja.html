@@ -3798,8 +3798,12 @@ body.radio-tila .board-hint {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
-  min-height: 44px;
-  padding: 0.15rem 0.85rem;
+  /* Matala kyltti — sama mitta kuin matkakirjan supistetulla
+   * chipillä (omistajan toive 10.8.2026). Ilman varustetta pilleri
+   * ei ole nappi, joten 44 px:n osumapintaa ei tarvita; varusteen
+   * kanssa osuma-alue laajennetaan ::after-pseudolla. */
+  min-height: 1.9rem;
+  padding: 0.1rem 0.75rem;
   border-radius: 999px;
   border: 1px solid rgba(70, 51, 31, 0.65);
   background: rgba(245, 231, 200, 0.94);
@@ -3808,12 +3812,23 @@ body.radio-tila .board-hint {
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  cursor: pointer;
+}
+
+.maa-pilleri:disabled { cursor: default; }
+
+.maa-pilleri.avattava { cursor: pointer; }
+
+.maa-pilleri.avattava::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
 }
 
 .maa-pilleri[data-side='oikea'] { left: auto; right: 3.2rem; }
 
 .maa-pilleri[hidden] { display: none; }
+
+.maa-pilleri-i[hidden] { display: none; }
 
 .maa-pilleri-nimi { pointer-events: none; }
 
@@ -3830,11 +3845,11 @@ body.radio-tila .board-hint {
   pointer-events: none;
 }
 
-.maa-pilleri:hover,
-.maa-pilleri:focus-visible { border-color: var(--map-ink); }
+.maa-pilleri.avattava:hover,
+.maa-pilleri.avattava:focus-visible { border-color: var(--map-ink); }
 
-.maa-pilleri:hover .maa-pilleri-i,
-.maa-pilleri:focus-visible .maa-pilleri-i {
+.maa-pilleri.avattava:hover .maa-pilleri-i,
+.maa-pilleri.avattava:focus-visible .maa-pilleri-i {
   background: var(--map-ink);
   border-color: var(--map-ink);
   color: rgba(245, 231, 200, 0.95);
@@ -119232,6 +119247,14 @@ const TYYPPI_EHDOKKAAT = {
     { url: 'https://cdn.freesound.org/previews/731/731247_10924423-lq.mp3#voima=0.6', nimi: 'Gatwickin lähtöaula iltapäivällä (Lontoo) — soundandmelodies, CC0' },
     { url: 'https://cdn.freesound.org/previews/340/340276_2669559-lq.mp3#voima=0.6', nimi: 'Gatwickin odotusaula ja kuulutus (Lontoo) — andriiperevodchyk, CC0' },
   ],
+  // Avauslennon kalvo: äänimaisema lentokoneen sisältä (omistajan
+  // toive 10.8.2026). Voimat kalibroitu RMS-mittauksella aulan äänen
+  // tasoon: matkustamo saa olla selvästi läsnä muttei kertojan päällä.
+  lentokone: [
+    { url: 'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.07', nimi: 'Matkustamo lennolla, A330 — FillSoko, CC0' },
+    { url: 'https://cdn.freesound.org/previews/245/245691_2047664-lq.mp3#voima=0.05', nimi: 'Matkustamon tasainen humina — TicAshfield, CC0' },
+    { url: 'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=0.6', nimi: 'Matkustamo, puheensorinaa ja kuulutus — drewhalasz, CC0' },
+  ],
   basaari: [
     { url: 'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23', nimi: 'Basaarin hälinä (Khan el-Khalili) — 3bagbrew, CC0' },
     { url: 'https://cdn.freesound.org/previews/677/677253_9756914-lq.mp3#voima=0.47', nimi: 'Ouakamin piha illalla (Dakar) — LaureC, CC0' },
@@ -119639,6 +119662,23 @@ for (const pack of PACKS) {
   }
 }
 
+// Avauslennon matkustamo: oma virtuaalipaikka lentokone-korille
+// (kalvon taustaääni vaihtui syntetisoidusta moottorista matkustamon
+// äänimaisemaan 10.8.2026).
+{
+  const kone = KAUPUNGIT_TYYPEITTAIN.lentokone ??= [];
+  if (!kone.some((l) => l.lauta === 'maailma')) {
+    const maailma = PACKS.find((p) => p.id === 'maailma');
+    const paikat = ['Avauslennon matkustamo'];
+    kone.unshift({
+      lauta: 'maailma',
+      maanosa: maailma?.boardLabel ?? 'Maailma',
+      kaupungit: paikat,
+      maat: [{ nimi: null, kaupungit: paikat }],
+    });
+  }
+}
+
 // Virtuaalipaikat kuuluvat Maailma-laudalle: etusivun satama ja
 // maailmankartan merimatkat saavat meri-äänensä sen korista. Muilla
 // laudoilla merimatka käyttää oman maanosansa koria.
@@ -119699,6 +119739,9 @@ const TYYPPIKORI_AVAIN = 'matkakirja-tyyppivalinnat';
 const OLETUSKORIT = {
   lentoasema: [
     'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6',
+  ],
+  lentokone: [
+    'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.07',
   ],
   basaari: [
     'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55',
@@ -130952,8 +130995,13 @@ class UI {
     const nappi = document.getElementById('maalehti-nappi');
     if (!nappi) return;
     const rajat = Boolean(this.game?.pack?.map?.countryShapes);
-    nappi.hidden = !rajat || this.avausNakymassa();
+    // Maiden tiedot on löydettävä varuste (omistajan päätös
+    // 10.8.2026): kirjanappi ja pillerin ⓘ ilmestyvät vasta, kun
+    // varuste on laukussa.
+    nappi.hidden = !rajat || this.avausNakymassa() || !this.maatiedotVarusteOmistettu();
     nappi.setAttribute('aria-pressed', String(this.maatiedotHalutaan()));
+    // Pilleri elää samasta varusteesta — päivitys aina samassa.
+    this.paivitaMaaPilleriTila();
   }
 
   paivitaZoomiNapit() {
@@ -132464,10 +132512,37 @@ class UI {
       this.maaPilleri = nappi;
     }
     this.maaPilleriIso = iso;
+    this.maaPilleriNimi = maa.nimi;
     nappi.querySelector('.maa-pilleri-nimi').textContent = maa.nimi;
-    nappi.setAttribute('aria-label', `${maa.nimi}: avaa maan lehti`);
     nappi.hidden = false;
+    this.paivitaMaaPilleriTila();
     this.paivitaMaaPilleriPuoli();
+  }
+
+  /**
+   * ⓘ ja maalehden avaus pilleristä vain, kun Maiden tiedot -varuste
+   * on löydetty (omistajan päätös 10.8.2026: lisätieto maista on
+   * löydettävä varuste, ei oletusnappi). Ilman varustetta pilleri on
+   * pelkkä maan nimikyltti. Sama portti sulkee kirjanapin
+   * (paivitaMaalehtiNappi).
+   */
+  maatiedotVarusteOmistettu() {
+    const omat = this.linssiTuki?.omistus?.omistetut?.(this.game, this.game.player)
+      ?? new Set(this.game.player?.linssit ?? []);
+    return omat.has('maatiedot');
+  }
+
+  /** Kevyt tilapäivitys renderistä: varuste voi löytyä kesken maan. */
+  paivitaMaaPilleriTila() {
+    const nappi = this.maaPilleri;
+    if (!nappi || nappi.hidden) return;
+    const auki = this.maatiedotVarusteOmistettu();
+    nappi.disabled = !auki;
+    nappi.classList.toggle('avattava', auki);
+    const i = nappi.querySelector('.maa-pilleri-i');
+    if (i) i.hidden = !auki;
+    nappi.setAttribute('aria-label', auki
+      ? `${this.maaPilleriNimi}: avaa maan lehti` : (this.maaPilleriNimi ?? ''));
   }
 
   /**
@@ -133679,10 +133754,12 @@ class UI {
     // Radiotilassa radio on ainoa ääni. Kaupungin äänimaiseman sulkee
     // radio.paalle() itse; tämä estää sen palaamisen.
     if (this.radioPaalla()) return;
-    // Lennon aikana kuuluu vain moottori: kaupungin äänimaisema alkaa
-    // vasta, kun pelaaja astuu ulos koneesta (kalvon sulkeva render).
+    // Lennon aikana kuuluu matkustamon äänimaisema (omistajan toive
+    // 10.8.2026: kalvon taustaääneksi äänimaisema lentokoneen
+    // sisältä). Kaupungin maisema alkaa vasta, kun pelaaja astuu ulos
+    // koneesta (ennakoiAmbienssi ohittaa lipun kalvon lopussa).
     if (document.body.classList.contains('flight-active')) {
-      playPlaceAmbience(null, null);
+      playPlaceAmbience('lentomatka', 'lentokone', this.game.pack?.id);
       return;
     }
     if (game.phase === 'over') {
@@ -138974,6 +139051,7 @@ class UI {
     this.tahdistaMaatiedot(this.maatiedotHalutaan());
     if (this.dead) return;
     this.paivitaMaalehtiNappi();
+    this.paivitaMaaPilleriTila();
     this.paivitaLinssiNappi();
     this.paivitaLinssiTiedot();
     this.piirraLinssiSelite();
@@ -140568,8 +140646,14 @@ class UI {
     nuoli.addEventListener('click', () => {
       for (const a of lentoAnimaatiot) a.finish();
     });
-    // Potkurihurina koko kohtauksen ajaksi: nousee ja laskee sen mukana.
-    sfx.startFlight(lennonKesto);
+    /*
+     * Kalvon taustaääni on matkustamon äänimaisema, ei syntetisoitu
+     * moottori (omistajan toive 10.8.2026) — sen käynnistää
+     * syncAmbience flight-active-lipusta, joten tässä ei aloiteta
+     * mitään. stopFlight kalvon lopussa jää varmistukseksi vanhojen
+     * polkujen varalle.
+     */
+    this.syncAmbience();
 
     // Kone ja reittiviiva lentävät selaimen omina WAAPI-animaatioina, ei
     // rAF-silmukalla: pääsäikeessä naputtava kirjoituskone ja käynnistyvä
@@ -140874,6 +140958,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 532, teksti: 'Matkustamoääni avauslentoon, maatiedot löydettäväksi' },
   { v: 531, teksti: 'Aarrekortti pysyy luennan ajan ja ruksi sulkee sen' },
   { v: 530, teksti: 'Maan nimi pilleriksi kartan kehykselle ja luennan feidaus' },
   { v: 529, teksti: 'Peli on yksi lauta: laudanvaihtoportit ja koelaudat pois' },
@@ -141489,7 +141574,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.531';
+const APP_VERSION = '2026-08-09.532';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
