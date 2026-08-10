@@ -353,6 +353,140 @@ export const VUORIKUVAT = {
     },
   ],
 
+  'tiibetin-ylatasanko': [
+    {
+      tiedosto: 'Tibet, panorámicas (1999) 05.jpg',
+      selite: 'Tiibetin ylätasanko Lalungin solassa. Teltta ja sen ympärillä '
+        + 'laiduntavat jakit ovat koko näkymän ainoa merkki ihmisestä — '
+        + 'ylätasanko on lähes puuton ja lähes tyhjä.',
+      lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Tibet, panorámicas (1999) 03.jpg',
+      selite: 'Yamdrokjärvi, yksi Tiibetin kolmesta pyhästä järvestä. Vesi on '
+        + 'suolaista eikä laske mihinkään jokeen: ylätasangolla sade jää '
+        + 'altaisiin ja haihtuu.',
+      lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Tibet, panorámicas (1999) 04.jpg',
+      selite: 'Nyenchen Kangsan jäätikkö Karon solasta nähtynä. Ylätasangon '
+        + 'jäätiköt ruokkivat Aasian suuria jokia — Induksen, Mekongin ja '
+        + 'Jangtsen latvat ovat kaikki täällä.',
+      lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: 'Landscape of Tibet1.jpg',
+      selite: 'Vihreä laakso ylätasangolla kesällä. Ruoho kasvaa vain '
+        + 'muutaman viikon, ja koko paimentolaisten vuosi on rakennettu sen '
+        + 'ympärille.',
+      lahde: 'Antoine Taveneaux, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    {
+      tiedosto: 'Nagarze, Shannan, Tibet, China - panoramio (10).jpg',
+      selite: 'Kiviröykkiö järven rannassa Nagarzessa. Matkalainen lisää '
+        + 'kiven kulkiessaan ohi — tapa on ylätasangolla vanha ja yhä '
+        + 'elävä.',
+      lahde: 'Chen Zhi, Wikimedia Commons (CC BY 3.0)',
+    },
+    {
+      tiedosto: 'Baxoi, Qamdo, Tibet, China - panoramio (1).jpg',
+      selite: 'Serpentiinitie kiemurtelee laaksoon Baxoissa Itä-Tiibetissä. '
+        + 'Ylätasangon reunalla korkeusero laaksonpohjaan on kilometrejä, '
+        + 'joten tie ei voi laskeutua suoraan.',
+      lahde: 'christiali, Wikimedia Commons (CC BY 3.0)',
+    },
+  ],
+
+  kunlun: [
+    {
+      tiedosto: '格尔木 青藏铁路与玉珠峰雪山 01.jpg',
+      selite: 'Kameleita Yuzhu-huipun edustalla Golmudin lähellä. Kunlun on '
+        + 'Taklamakanin autiomaan eteläreuna, ja Silkkitien eteläinen haara '
+        + 'kulki juuri näiden vuorten juurta.',
+      lahde: 'Liuxingy, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: '格尔木 青藏铁路与玉珠峰雪山 02.jpg',
+      selite: 'Yuzhu-huipun jäätiköt ja niiden alla kulkeva Qinghai–Tiibet-'
+        + 'rautatie. Rata nousee yli 5 000 metriin, ja se on rakennettu '
+        + 'ikiroudan päälle.',
+      lahde: 'Liuxingy, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: '格尔木 在小干沟桥之南的青藏公路上望向两侧昆仑山 02.jpg',
+      selite: 'Kunlunin kuluneet rinteet Qinghai–Tiibet-tien varrella. Sade '
+        + 'on täällä harvinaista, joten rinteitä muokkaa tuuli ja lumen '
+        + 'sulaminen — ei virtaava vesi.',
+      lahde: 'Liuxingy, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: '治多 在青藏公路沿线可可西里遥望昆仑山雪山 07.jpg',
+      selite: 'Kunlunin lumihuiput Hoh Xilin autiotasangon takaa. Väli on '
+        + 'kymmeniä kilometrejä tyhjää ylänköä, ja siksi vuoret näyttävät '
+        + 'matalilta.',
+      lahde: 'Liuxingy, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    {
+      tiedosto: '格尔木 在青藏公路纳赤台至五十三道班间望向昆仑山.jpg',
+      selite: 'Kunlun Qinghai–Tiibet-tieltä Nachitain ja 53. tienhoitoaseman '
+        + 'väliltä. Tie nousee vuoriston yli Golmudista Lhasaan.',
+      lahde: 'Liuxingy, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+  ],
+
+  elburz: [
+    {
+      tiedosto: 'CH-NB - Persien, Elburs-Gebirge (Elburz)- Landschaft - Annemarie Schwarzenbach - SLA-Schwarzenbach-A-5-06-150.jpg',
+      selite: 'Lumen peittämä Damavand 1930-luvulla. Iranin korkein huippu '
+        + '(5 610 m) on tulivuori, ja se näkyy selkeällä säällä Teheraniin '
+        + 'asti.',
+      lahde: 'Annemarie Schwarzenbach, Wikimedia Commons (PD)',
+    },
+    {
+      tiedosto: 'CH-NB - Persien, Elburs-Gebirge (Elburz)- Strassenszene - Annemarie Schwarzenbach - SLA-Schwarzenbach-A-5-04-041.jpg',
+      selite: 'Kuormatut aasit ja niiden ajaja vuoristotiellä 1930-luvun '
+        + 'alussa, taustalla auto. Kuva on juuri siitä hetkestä, kun '
+        + 'moottoriajoneuvot tulivat karavaanien rinnalle.',
+      lahde: 'Annemarie Schwarzenbach, Wikimedia Commons (PD)',
+    },
+    {
+      tiedosto: 'CH-NB - Persien, Elburs-Gebirge (Elburz)- Reiten - Annemarie Schwarzenbach - SLA-Schwarzenbach-A-5-06-193.jpg',
+      selite: 'Ratsastajia Elburzin rinteillä vuonna 1935. Ennen teitä '
+        + 'vuoriston yli kuljettiin hevosella, ja matka Kaspianmeren '
+        + 'rannalta Teheraniin kesti päiviä.',
+      lahde: 'Annemarie Schwarzenbach, Wikimedia Commons (PD)',
+    },
+    {
+      tiedosto: 'Baladeh View - panoramio.jpg',
+      selite: 'Elburzin lumiharjanne Baladehin yllä. Vuoristo on kapea muuri '
+        + 'Kaspianmeren ja Iranin ylängön välissä, ja se erottaa kaksi '
+        + 'täysin erilaista ilmastoa.',
+      lahde: 'Alireza Javaheri, Wikimedia Commons (CC BY 3.0)',
+    },
+    {
+      tiedosto: 'Mazandaran - Baladeh View from Zarde Kamar - panoramio.jpg',
+      selite: 'Baladehin kylä laakson pohjalla Zarde Kamarilta nähtynä. '
+        + 'Asutus on siellä, missä laakso levenee sen verran että peltoja '
+        + 'mahtuu.',
+      lahde: 'Alireza Javaheri, Wikimedia Commons (CC BY 3.0)',
+    },
+    {
+      tiedosto: 'Mazandaran - Royan - Galandroud - panoramio.jpg',
+      selite: 'Syksyn värit Hyrkanian metsässä Elburzin pohjoisrinteellä. '
+        + 'Kaspianmeren puoli saa sateet, ja siksi täällä kasvaa lehtimetsää '
+        + 'siinä missä etelärinne on aavikkoa.',
+      lahde: 'Alireza Javaheri, Wikimedia Commons (CC BY 3.0)',
+    },
+    {
+      tiedosto: 'Baladeh - Royan road - Bimak - panoramio.jpg',
+      selite: 'Baladehin ja Royanin välinen tie kiertää laaksoa Bimakin '
+        + 'kohdalla. Tämä on yksi harvoista teistä, jotka ylittävät Elburzin '
+        + 'Kaspianmeren rannalle.',
+      lahde: 'Alireza Javaheri, Wikimedia Commons (CC BY 3.0)',
+    },
+  ],
+
   ural: [
     {
       tiedosto: 'Приполярный Урал, оз. Падежа-ты, вид с хребта Юаснырд.jpg',
