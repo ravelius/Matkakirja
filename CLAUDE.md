@@ -16,6 +16,8 @@ luettelon unohdettuja aarteita. Selainpeli ilman build-vaihetta
   ennen kuin teet mitään.
 - docs/tarina.md ja docs/isoisan-raamattu.md — tarinan kaanon
   (sitova kaikessa sisällössä; vain Fable kirjoittaa näihin).
+- docs/kaariteksti-sapluuna.md — miten uuden laudan kaaritekstit
+  kirjoitetaan (prosessi, kiintiöt, tarkistuslistat).
 - docs/periaatteet.md — pelin periaatteet.
 - docs/tutki-aiheet.md ja docs/tyolista-opukselle.md — lehtimalli
   ja lehtityön ohjeet.

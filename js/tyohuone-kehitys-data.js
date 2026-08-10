@@ -149,9 +149,10 @@ export const KAARI_PAKETIT = {
         q: 'Miksi ruttolääkärin naamiossa on pitkä linnunnokka?',
         vaihtoehdot: [
           'Nokkaan pantiin yrttejä, joiden uskottiin suojaavan taudilta',
-          'Nokka pelotti taudin tiehensä',
-          'Lääkäri kantoi nokassa kirjeitä',
-          'Nokka auttoi hengittämään sateella',
+          'Nokka piti sairaat käden mitan päässä lääkärin kasvoista',
+          'Lääkäri kuljetti nokassa kirjeitä, joihin ei saanut koskea',
+          'Pitkä nokka auttoi hengittämään savun ja suitsutuksen '
+            + 'keskellä',
         ],
         oikea: 0,
         fakta: 'Ruttolääkärit täyttivät nokan kuivatuilla yrteillä ja '
@@ -181,9 +182,9 @@ export const KAARI_PAKETIT = {
           + 'Budapestin maanalaiset käytävät?',
         vaihtoehdot: [
           'Maan alta nousevat kuumat lähteet',
-          'Kylpylän kupariputket',
-          'Maanalainen tulivuori',
-          'Linnan suuret takat',
+          'Kylpylöiden kupariputket seinien takana',
+          'Maanalaisen tulivuoren hehkuva kivi',
+          'Linnan suuret takat ja niiden savusolat',
         ],
         oikea: 0,
         fakta: 'Budapestin alla kumpuaa yli sata kuumaa lähdettä. Sama vesi '
@@ -250,9 +251,11 @@ export const KAARI_PAKETIT = {
           + 'hirviöhahmoja. Mikä tehtävä gargoyleilla oikeasti on?',
         vaihtoehdot: [
           'Ne ovat syöksytorvia, jotka johtavat sadeveden pois seiniltä',
-          'Ne pelottivat vihollisia loitolle',
-          'Ne kantavat katon painoa',
-          'Ne ovat kuninkaiden muotokuvia',
+          'Ne pelottivat pahat henget ja viholliset loitolle kirkon '
+            + 'seiniltä',
+          'Ne kantavat holvien painoa ja johtavat sen alas perustuksiin',
+          'Ne ovat rakentajamestarien muotokuvia, jotka veistettiin '
+            + 'palkaksi',
         ],
         oikea: 0,
         fakta: 'Gargoylet ovat koristeltuja syöksytorvia: sadevesi virtaa '
@@ -434,9 +437,12 @@ export const KAARI_PAKETIT = {
         vaihtoehdot: [
           'Maalattuja kaakelilaattoja, jotka päällystävät kokonaisia '
             + 'taloja',
-          'Sinisiksi värjättyjä ikkunaluukkuja',
-          'Meren heijastuksia valkoisessa kivessä',
-          'Purjeista ommeltuja seinävaatteita',
+          'Sinisiksi maalattuja ikkunaluukkuja, jotka suljetaan päivän '
+            + 'kuumimmaksi ajaksi',
+          'Meren heijastuksia, jotka valkoiseksi kalkittu kivi kerää ja '
+            + 'toistaa',
+          'Purjekankaasta ommeltuja seinävaatteita kadonneiden laivojen '
+            + 'muistoksi',
         ],
         oikea: 0,
         fakta: 'Azulejo on tinalasitettu kaakelilaatta. Nimi tulee arabian '
@@ -469,9 +475,12 @@ export const KAARI_PAKETIT = {
         vaihtoehdot: [
           'Huonekalut nostetaan sisään ikkunoista, koska portaat ovat '
             + 'liian kapeat',
-          'Siihen ripustettiin lyhty pimeän ajaksi',
-          'Laivojen köydet kiinnitettiin siihen tulvalla',
-          'Koukusta roikotettiin kauppiaan vaakaa',
+          'Siihen ripustettiin lyhty, joka valaisi kanavan koko pimeän '
+            + 'ajan',
+          'Laivojen köydet kiinnitettiin siihen, kun tulva nosti veden '
+            + 'kaduille asti',
+          'Kauppiaan vaaka ripustettiin siihen, jotta koko katu näki '
+            + 'rehellisen punnituksen',
         ],
         oikea: 0,
         fakta: 'Kapeat talot verotettiin leveyden mukaan, joten portaista '
@@ -538,9 +547,10 @@ export const KAARI_PAKETIT = {
         vaihtoehdot: [
           'Kello yhdeltä, koska yksi laukaus on halvempi kuin '
             + 'kaksitoista',
-          'Keskipäivällä, kun aurinko on korkeimmillaan',
-          'Auringonlaskun aikaan vartion vaihtuessa',
-          'Aamukuudelta koko kaupungin herätykseksi',
+          'Keskipäivällä, jolloin aurinko seisoo korkeimmillaan etelässä',
+          'Auringonlaskun aikaan, jolloin linnan vartio vaihtuu '
+            + 'valleilla',
+          'Aamukuudelta, jotta koko kaupunki heräsi samaan aikaan',
         ],
         oikea: 0,
         fakta: 'Laivat tarvitsivat tarkan ajan kellojensa asettamiseen. '
@@ -757,9 +767,9 @@ export const KAARI_PAKETIT = {
           + 'bernhardilaiskoirat. Mistä ne tunnetaan?',
         vaihtoehdot: [
           'Ne etsivät lumeen eksyneitä ja hautautuneita kulkijoita',
-          'Ne vetivät postirekiä solan yli',
-          'Ne vartioivat luostarin aarrekammiota',
-          'Ne paimensivat vuohia jyrkänteillä',
+          'Ne vetivät postirekiä solan yli pahimmissa myrskyissä',
+          'Ne vartioivat luostarin kellareita ja aarrekammiota',
+          'Ne paimensivat luostarin vuohia kesän jyrkänteillä',
         ],
         oikea: 0,
         fakta: 'Pyhän Bernhardin solan munkit kasvattivat koiria, jotka '
@@ -832,9 +842,9 @@ export const KAARI_PAKETIT = {
           + 'Ariadnen avulla. Mikä Ariadnen keino oli?',
         vaihtoehdot: [
           'Lankakerä, jonka jälkiä pitkin pääsi takaisin ulos',
-          'Kartta sokkelon käytävistä',
-          'Soihtu, joka ei koskaan sammunut',
-          'Taikahuilu, joka nukutti hirviön',
+          'Kartta, jonka sokkelon rakentaja oli itse piirtänyt',
+          'Soihtu, jonka liekki ei sammunut sokkelon vedossa',
+          'Huilu, jonka sävel nukutti hirviön syvään uneen',
         ],
         oikea: 0,
         fakta: 'Ariadne antoi Theseukselle lankakerän: pää sidottiin ovelle '
@@ -1056,7 +1066,7 @@ export const KAARI_PAKETIT = {
           'Alhaalta näkyvät vain askelmat, ylhäältä vain tasanteet',
           'Portaat näyttävät kapenevan ylöspäin, vaikka levenevät',
           'Askelmia on eri määrä ylös ja alas kuljettaessa',
-          'Portaikko näyttää mereltä katsoen sillalta',
+          'Portaikko näyttää mereltä katsottuna kaupunkiin vievältä sillalta',
         ],
         oikea: 0,
         fakta: 'Portaikko levenee alaspäin, ja nousu on loiva: ylhäältä '
@@ -1242,9 +1252,11 @@ export const KAARI_PAKETIT = {
         vaihtoehdot: [
           'Kukko näyttää tuulen ja karkottaa vanhan uskomuksen mukaan '
             + 'pahan',
-          'Kukko on Riian perustajasuvun vaakunaeläin',
-          'Herättäjäksi, kun kellot jäätyivät talvella',
-          'Kultaajat saivat maksunsa kananmunissa',
+          'Kukko on kaupungin perustajasuvun vaakunaeläin ja '
+            + 'muistomerkki',
+          'Kukko herätti soittajat, kun tornikellot jäätyivät pakkasella',
+          'Kultaajat saivat vanhastaan palkkansa kananmunissa, ja tapa '
+            + 'jäi',
         ],
         oikea: 0,
         fakta: 'Tuuliviirikukko kertoo purjehtijoille tuulen suunnan, ja '
@@ -1283,9 +1295,9 @@ export const KAARI_PAKETIT = {
           + 'Gediminasin unesta. Mitä hän näki?',
         vaihtoehdot: [
           'Rautaisen suden, joka ulvoi sadan suden äänellä',
-          'Kultaisen kotkan tornin huipulla',
-          'Joen, joka virtasi ylämäkeen',
-          'Sata tulta kukkulan laella',
+          'Kultaisen kotkan, joka rakensi pesän tornin huipulle',
+          'Joen, joka kääntyi virtaamaan ylämäkeen kukkulalle',
+          'Sata nuotiotulta, jotka paloivat kukkulan laella',
         ],
         oikea: 0,
         fakta: 'Tietäjä selitti unen: rautasusi merkitsi mahtavaa kaupunkia '
@@ -1318,9 +1330,9 @@ export const KAARI_PAKETIT = {
           + 'Trotzigin kuja. Kuinka kapea se kapeimmillaan on?',
         vaihtoehdot: [
           'Alle metrin — noin 90 senttiä',
-          'Noin kolme metriä',
-          'Puolitoista metriä',
-          'Viisi metriä',
+          'Noin kolme metriä — kärrytien verran',
+          'Puolitoista metriä — kaksi kulkijaa rinnakkain',
+          'Viisi metriä — tavallisen kadun leveys',
         ],
         oikea: 0,
         fakta: 'Kuja kapenee 90 senttiin: kaksi vastaantulijaa mahtuu ohi '
@@ -1587,10 +1599,10 @@ export const KAARI_PAKETIT = {
           + 'vuosisatojen ajan aitoa angoravillaa sai vain näiltä '
           + 'Anatolian ylängöiltä.',
       },
-      aarre: 'Paalin sisällä, villan keskellä, odotti kätkö. Elif kääri '
-        + 'villan huolella takaisin: "Sinetti oli ehjä — mutta narut '
-        + 'oli solmittu uudelleen. Kehrääjä näkee sen yhdellä '
-        + 'silmäyksellä."',
+      aarre: 'Paalin sisällä, villan keskellä, odotti kätkö. Elif kiersi '
+        + 'narun sormelleen: "Solmu on merimiehen käsialaa — sellaista '
+        + 'ei opita ylängöllä, tuhannen mailin päässä merestä. Kuka '
+        + 'sitoi paalin, joka ei ole koskaan käynyt satamassa?"',
     },
     {
       id: 'bagdad',
@@ -1689,11 +1701,14 @@ export const KAARI_PAKETIT = {
         q: 'Dhow-kauppalaivat purjehtivat Arabiasta Intiaan ja takaisin '
           + 'ilman konetta. Mikä teki edestakaisen matkan mahdolliseksi?',
         vaihtoehdot: [
-          'Monsuunituulet, jotka puhaltavat puoli vuotta yhteen ja '
-            + 'puoli vuotta toiseen suuntaan',
-          'Airot, joita souti sata miestä',
-          'Meriväylä, jossa virta kiertää ympyrää',
-          'Purjeet, jotka kääntävät tuulen suunnan',
+          'Monsuunituulet, jotka puhaltavat puoli vuotta yhteen ja puoli '
+            + 'vuotta toiseen suuntaan',
+          'Airot ja soutajat — isoimmissa laivoissa souti sata miestä '
+            + 'vuoroissa',
+          'Meriväylä, jossa virta kulkee suurta ympyrää ja kantaa laivat '
+            + 'molempiin suuntiin',
+          'Purjeet, jotka voi kääntää niin, että laiva etenee suoraan '
+            + 'vastatuuleen',
         ],
         oikea: 0,
         fakta: 'Monsuuni puhaltaa Intian valtamerellä puoli vuotta kohti '
@@ -1719,10 +1734,12 @@ export const KAARI_PAKETIT = {
         + 'Hän ei sanonut mitä. Hän katsoi minua kuin olisin tiennyt.',
       henkilo: 'Abra-lautturi Rashid soutaa Khorin yli kymmeniä kertoja '
         + 'päivässä ja tuntee lahden pohjan paremmin kuin sen rannat.',
-      kohtaaminen: 'Rashid lepuuttaa airoja keskellä lahtea. "Isäni isä nosti '
-        + 'pohjasta lippaan ja sai ohjeen: souda tällä paikalla, kunnes '
-        + 'joku vastaa kysymykseen, joka lippaan mukana tuli. Minä olen '
-        + 'soutanut tässä koko ikäni. Vastaa."',
+      kohtaaminen: 'Rashid lepuuttaa airoja keskellä lahtea. "Isäni isä '
+        + 'nosti tästä pohjasta lippaan airon sijaan eikä avannut sitä '
+        + 'koskaan. Se ei ole meidän, hän sanoi — me vain soudamme sen '
+        + 'yli. Lipas on kulkenut veneessä siitä päivästä, ja tarina sen '
+        + 'mukana. Sinä olet ensimmäinen, joka kysyy lippaasta. Vastaa '
+        + 'sen kysymykseen."',
       kysymys: {
         q: 'Dubain vanhassa kaupungissa lahden yli kuljetaan yhä '
           + 'pienillä puuveneillä. Mikä tällainen vesibussi on nimeltään?',
@@ -1738,10 +1755,11 @@ export const KAARI_PAKETIT = {
           + 'ei vanhastaan ollut siltaa. Abrat liikennöivät yhä samoilla '
           + 'reiteillä.',
       },
-      aarre: 'Lipas nousi veneen pohjalaudan alta, kuivana ja rasvattuna. '
-        + 'Rashid souti rantaan hiljaa ja sanoi vasta laiturissa: '
-        + '"Pohjalauta on vaihdettu uuteen. Minä en ole vaihtanut sitä '
-        + '— eikä kukaan lainaa toisen abraa."',
+      aarre: 'Lipas nousi veneen pohjalaudan alta, kuivana ja '
+        + 'rasvattuna. Rashid souti rantaan hiljaa ja sanoi vasta '
+        + 'laiturissa: "Isäni isä ei osannut lukea. Silti hän rasvasi '
+        + 'lippaan joka kuukausi — niin kuin olisi tiennyt, että sen '
+        + 'sisällä on paperia."',
     },
     {
       id: 'halab',
@@ -1952,18 +1970,22 @@ export const KAARI_PAKETIT = {
         + 'tietää, mitkä käytävät johtavat maan alle ja mitkä '
         + 'umpikujaan.',
       kohtaaminen: 'Meryem suojaa kynttilää kädellään portaikossa. '
-        + '"Alakaupungissa on käytävä, jonka päässä sukuni on pitänyt '
-        + 'valoa — maksu siitä tuli kauan sitten, ja kuitiksi käy '
-        + 'vastaus. Isoisäsi kysymys koskee tätä kaupunkia. Vastaa."',
+        + '"Alakaupungin käytävä pelasti sukuni kerran, kun maan päällä '
+        + 'ei ollut turvaa — siitä asti olemme pitäneet sen päässä '
+        + 'valoa, ettei kukaan eksyisi pimeään. Isoisäsi laskeutui valon '
+        + 'luo ja jätti sinne kysymyksen tästä kaupungista. Vastaa."',
       kysymys: {
         q: 'Kapadokiassa on kokonaisia kaupunkeja maan alla. Kuinka '
           + 'syviä suurimmat ovat?',
         vaihtoehdot: [
           'Monta kerrosta — syvimmät ulottuvat kymmenien metrien '
             + 'syvyyteen',
-          'Yhden kerroksen — matalia kellareita',
-          'Ne ovat vain tarinaa, ei oikeita kaupunkeja',
-          'Pohjattomia — kukaan ei ole käynyt pohjalla',
+          'Yhden kerroksen — matalia kellareita viinin ja viljan '
+            + 'säilytykseen',
+          'Ne ovat vain tarinaa — luolista on löytynyt pelkkiä paimenten '
+            + 'suojia',
+          'Pohjattomia — syvimpien käytävien päähän ei ole koskaan '
+            + 'päästy',
         ],
         oikea: 0,
         fakta: 'Derinkuyun kaltaiset maanalaiset kaupungit porrastuvat monta '
@@ -1971,10 +1993,10 @@ export const KAARI_PAKETIT = {
           + 'metrejä. Niissä oli asuinhuoneita, talleja, kaivoja ja '
           + 'pyöreät kivioven, jotka vieritettiin käytävän tukkeeksi.',
       },
-      aarre: 'Käytävän päässä, kiviovien takana, odotti kätkö ja sammunut '
-        + 'lyhty. Meryem kosketti lyhdyn nokea: "Meidän kynttilämme '
-        + 'palaa portaissa. Tämä lyhty on kulkenut syvemmällä — ja noki '
-        + 'on yhä pehmeää."',
+      aarre: 'Käytävän päässä, kiviovien takana, odotti kätkö ja '
+        + 'sammunut lyhty. Meryem käänsi lyhtyä valossa: "Tällaisia ei '
+        + 'ole taottu isoisoäitini aikojen jälkeen. Joku on kulkenut '
+        + 'täällä syvemmälle — kauan ennen kirjasi omistajaa."',
     },
     {
       id: 'kuwait',
@@ -1991,18 +2013,23 @@ export const KAARI_PAKETIT = {
       henkilo: 'Veneenveistäjä Nasser rakentaa dhow-veneitä silmämitalla, '
         + 'kuten isänsä ja tämän isä, eikä yksikään kaari ole koskaan '
         + 'väärä.',
-      kohtaaminen: 'Nasser laskee höylän penkille. "Vesiveneen merkki on sukuni '
-        + 'maalaama — työn maksoi matkalainen, joka sanoi: maalatkaa '
-        + 'kunnes tulija vastaa kysymykseeni. Kysymys koskee sitä, mitä '
-        + 'veneet tähän kaupunkiin toivat. Vastaa."',
+      kohtaaminen: 'Nasser laskee höylän penkille. "Merkki on sukuni '
+        + 'maalaama. Matkalainen huomasi kerran laiturilla, että yksi '
+        + 'ruukku itki vettä hiuksenhienosta halkeamasta — pitkällä '
+        + 'matkalla se olisi maksanut miehille janon. Siitä lähtien suku '
+        + 'on maalannut hänen merkkinsä veneeseen omasta tahdostaan: se '
+        + 'käskee katsoa ruukut. Hän jätti kysymyksen siitä, mitä veneet '
+        + 'kaupunkiin toivat. Vastaa."',
       kysymys: {
         q: 'Kuwaitin kaupungilla ei vanhastaan ollut omaa jokea eikä '
           + 'lähdettä. Mistä juomavesi saatiin?',
         vaihtoehdot: [
           'Veneet toivat makeaa vettä ruukuissa kaukaa joensuulta',
-          'Sadevesi riitti ympäri vuoden',
-          'Vesi tislattiin merivedestä auringossa',
-          'Kamelit kantoivat sen vuorilta',
+          'Sadevesi, joka kerättiin talojen katoilta kivisiin altaisiin',
+          'Merivesi, joka tislattiin makeaksi auringon kuumentamissa '
+            + 'maljoissa',
+          'Kamelikaravaanit, jotka kantoivat sen leileissä sisämaan '
+            + 'vuorilta',
         ],
         oikea: 0,
         fakta: 'Kuwait eli merestä: helmistä, kaupasta — ja vedestä, jonka '
@@ -2010,10 +2037,10 @@ export const KAARI_PAKETIT = {
           + 'ja säiliöissä. Vesiveneet olivat kaupungille yhtä tärkeitä '
           + 'kuin kaivot muille.',
       },
-      aarre: 'Kätkö oli veistämön vanhimman veneen kölilaudan alla. Nasser '
-        + 'silitti lankkua: "Tämä vene ei ole kastunut mieheni ikänä. '
-        + 'Mutta kölilaudan naulat on vaihdettu — ja naulat ovat uutta '
-        + 'takoa."',
+      aarre: 'Kätkö oli veistämön vanhimman veneen kölilaudan alla. '
+        + 'Nasser silitti lankkua: "Isäni sanoi aina, että tässä '
+        + 'veneessä on yksi naula enemmän kuin hän on lyönyt. Minä '
+        + 'lasken samoin. Kumpikaan meistä ei ole löytänyt sitä."',
     },
     {
       id: 'luxor',
@@ -2047,10 +2074,12 @@ export const KAARI_PAKETIT = {
           + 'faaraot hakkasivat hautansa piiloon Kuninkaiden laakson '
           + 'kallioihin, ja sisäänkäynnit peitettiin.',
       },
-      aarre: 'Kätkö odotti polun varressa kivenkolossa, johon aurinko osui '
-        + 'vain laskiessaan. Ahmed peitti kolon hiekalla: "Suvussa '
-        + 'sanotaan, että säilytämme tätä kolmatta sukupolvea. Mutta '
-        + 'hiekka oli tasoitettu jo valmiiksi — eilen, viimeistään."',
+      aarre: 'Kätkö odotti polun varressa kivenkolossa, johon aurinko '
+        + 'osui vain laskiessaan. Ahmed kaivoi sen esiin ja pysähtyi: '
+        + 'kätkön alla oli toinen kolo, tyhjä ja huolella veistetty, '
+        + 'reunat tuhansien hiekkamyrskyjen pyöristämät. "Tämä paikka on '
+        + 'ollut kätkö kauan ennen kirjasi omistajaa. Hän ei valinnut '
+        + 'sitä. Hän löysi sen."',
     },
     {
       id: 'masqat',
@@ -2065,11 +2094,12 @@ export const KAARI_PAKETIT = {
         + 'piti paikkansa.',
       henkilo: 'Satamavahti Salim kirjaa saapuvat purret ja tietää, kummassa '
         + 'linnoituksessa valo palaa minäkin yönä.',
-      kohtaaminen: 'Salim sulkee kirjansa laiturilla. "Vuorottelu on vanha '
-        + 'sopimus, ja sen aloitti pyyntö, jonka teki muuan '
-        + 'matkalainen: pitäkää toinen valo aina palamassa, kunnes '
-        + 'kysyjä palaa. Vastaa hänen kysymykseensä, niin sammutamme '
-        + 'sen yhdessä."',
+      kohtaaminen: 'Salim sulkee kirjansa laiturilla. "Valojen '
+        + 'vuorottelu on satamien oma sopimus, vanhempi kuin yksikään '
+        + 'kirjuri: kun toinen linnoitus pimenee, toinen valvoo. '
+        + 'Isoisäsi seisoi tällä laiturilla kolme iltaa ja kirjasi, '
+        + 'kumpi valo syttyi ensin. Lähtiessään hän jätti kysymyksen — '
+        + 'vastaa siihen, niin viemme vastauksen valolle yhdessä."',
       kysymys: {
         q: 'Masqatin satamaa vartioi kaksi vanhaa linnoitusta '
           + 'vastakkaisilla kallioilla. Miksi satama oli niin tarkasti '
@@ -2077,9 +2107,11 @@ export const KAARI_PAKETIT = {
         vaihtoehdot: [
           'Se oli suojaisa syväsatama Intian kauppareitin varrella, '
             + 'jonka moni halusi itselleen',
-          'Sataman pohjassa uskottiin olevan kultaa',
-          'Linnoituksista tähystettiin valaita',
-          'Kaupungin vesi säilytettiin linnoituksissa',
+          'Sataman pohjassa uskottiin lepäävän uponneen kultalaivan, '
+            + 'jota linnoitukset vartioivat',
+          'Linnoituksista tähystettiin valaita, joiden saapuminen avasi '
+            + 'pyyntikauden',
+          'Kaupungin makea vesi säilytettiin linnoitusten kallioaltaissa',
         ],
         oikea: 0,
         fakta: 'Masqatin kalliosatama on harvoja suojaisia syvänteitä Intian '
@@ -2116,9 +2148,11 @@ export const KAARI_PAKETIT = {
           + 'ennen rautatietä. Miten pitkä erämaataival tehtiin?',
         vaihtoehdot: [
           'Kamelikaravaaneissa, joissa kulki tuhansia ihmisiä yhdessä',
-          'Jokilaivoilla virtaa pitkin',
-          'Härkävankkureilla tietä pitkin',
-          'Jalkaisin yksin, kukin omaa polkuaan',
+          'Jokilaivoilla, jotka nousivat virtaa niin pitkälle kuin vettä '
+            + 'riitti',
+          'Härkävankkureilla, jotka kulkivat vanhaa kivettyä valtatietä',
+          'Jalkaisin ja yksin — jokainen kulkija omaa polkuaan tähtien '
+            + 'mukaan',
         ],
         oikea: 0,
         fakta: 'Pyhiinvaellus kulki suurina kamelikaravaaneina: tuhansia '
@@ -2205,9 +2239,10 @@ export const KAARI_PAKETIT = {
           + 'ilmaksi.',
       },
       aarre: 'Harson sisältä paljastui kätkö, kevyt kuin tyhjä. Layla '
-        + 'taitteli kankaan takaisin: "Musliini kellastuu arkussa '
-        + 'vuosikymmenessä. Tämä harso on valkoinen — se on vaihdettu '
-        + 'uuteen, eikä vaihtaja ollut minä."',
+        + 'levitti kankaan valoa vasten: "Reunassa on kuvio, jota ei ole '
+        + 'kudottu minun elinaikanani — se katosi kutojien mukana kauan '
+        + 'ennen pantin jättäjää. Mistä hän sai kankaan, joka oli jo '
+        + 'hänen aikanaan kadonnutta työtä?"',
     },
     {
       id: 'nikosia',
@@ -2222,10 +2257,12 @@ export const KAARI_PAKETIT = {
         + 'sanoi. Tämä harkko odottaa hakijaansa kauempaa kuin muistan.',
       henkilo: 'Kaivosmiehen jälkeläinen Andreas takoo kuparia kujalla, '
         + 'jolla saaren punainen metalli on soinut aina.',
-      kohtaaminen: 'Andreas kääntää harkkoa pihdeissä. "Harkon toi mies, joka '
-        + 'maksoi säilytyksestä sata vuotta etukäteen — ja jätti '
-        + 'kysymyksen saaremme metallista. Vastaa, niin harkko on '
-        + 'sinun."',
+      kohtaaminen: 'Andreas kääntää harkkoa pihdeissä. "Harkon jätti '
+        + 'matkalainen, joka sanoi: en voi myydä sitä enkä kantaa '
+        + 'kauemmas — pitäkää, kunnes joku vastaa kysymykseen saarenne '
+        + 'metallista. Isoisäni otti sen vastaan, koska härän taljan '
+        + 'merkki oli vanhempaa työtä kuin mikään hänen pajassaan — '
+        + 'sellaista ei jätetä kadulle. Vastaa, niin harkko on sinun."',
       kysymys: {
         q: 'Kyproksen saari ja eräs metalli ovat antaneet nimen '
           + 'toisilleen. Mikä metalli?',
@@ -2241,10 +2278,11 @@ export const KAARI_PAKETIT = {
           + 'Saaren kaivokset olivat antiikin maailman tärkeimpiä, ja '
           + 'kuparia laivattiin härän taljan muotoisina harkkoina.',
       },
-      aarre: 'Harkko oli valettu ontoksi, ja sisällä odotti kätkö. Andreas '
-        + 'punnitsi puolikkaita: "Valu on vanhaa työtä. Mutta sauma on '
-        + 'juotettu uudelleen — ja juote kiiltää kuin tämän vuoden '
-        + 'takoa."',
+      aarre: 'Harkko oli valettu ontoksi, ja sisällä odotti kätkö. '
+        + 'Andreas punnitsi puolikkaita: "Härän taljan merkki on lyöty '
+        + 'valuun ennen kuin kupari jäähtyi — mutta harkko on valettu '
+        + 'vuosituhansia niiden aikojen jälkeen. Joku osasi vanhan '
+        + 'valajan työn. Kuka?"',
     },
     {
       id: 'persepolis',
@@ -2270,9 +2308,11 @@ export const KAARI_PAKETIT = {
           + 'kaupunki rakennettiin?',
         vaihtoehdot: [
           'Kevään uudenvuodenjuhlaa, jota vietetään päiväntasauksena',
-          'Kuninkaan syntymäpäivää keskitalvella',
-          'Sadonkorjuujuhlaa syksyllä',
-          'Voitonjuhlaa sotaretkien jälkeen',
+          'Kuninkaan syntymäpäivää, jota koko valtakunta juhli '
+            + 'keskitalvella',
+          'Sadonkorjuun juhlaa, jolloin verot tuotiin kaupunkiin '
+            + 'syksyllä',
+          'Voitonjuhlaa, joka seurasi jokaista onnistunutta sotaretkeä',
         ],
         oikea: 0,
         fakta: 'Persepolis oli Persian kuninkaiden juhlakaupunki, jonne '
@@ -2389,11 +2429,11 @@ export const KAARI_PAKETIT = {
         q: 'Rub al-Khalin dyyneillä voi kuulla oudon äänen, kun hiekka '
           + 'valuu rinnettä alas. Mikä ilmiö on kyseessä?',
         vaihtoehdot: [
-          'Laulava hiekka — valuvat hiekanjyvät saavat dyynin '
-            + 'humisemaan',
-          'Tuuli soittaa dyynien onttoja käytäviä',
-          'Maan alla virtaava joki kohisee',
-          'Kuumuus saa kivet halkeilemaan äänekkäästi',
+          'Laulava hiekka — valuvat hiekanjyvät saavat dyynin humisemaan',
+          'Tuuli, joka soittaa dyynien sisään uurtuneita onttoja '
+            + 'käytäviä',
+          'Maan alla virtaava joki, jonka kohina kantautuu hiekan läpi',
+          'Kuumuus, joka halkoo kiviä niin, että pauke kaikuu dyyneiltä',
         ],
         oikea: 0,
         fakta: 'Kun kuiva, tasarakeinen hiekka lähtee valumaan dyynin '
@@ -2434,9 +2474,10 @@ export const KAARI_PAKETIT = {
         vaihtoehdot: [
           'Khareef-monsuuni tuo mereltä usvan ja sateet juuri tälle '
             + 'rannikolle',
-          'Vuorten lumi sulaa kesällä rinteille',
-          'Joet tuovat vettä Afrikasta asti',
-          'Rannikolla sataa talvella kymmenen kuukautta',
+          'Vuorten lumi, joka sulaa kesällä ja kastelee rinteiden tarhat',
+          'Maanalaiset joet, jotka tuovat vettä Afrikan ylängöiltä asti',
+          'Talvisateet — rannikolla sataa lokakuusta helmikuuhun lähes '
+            + 'joka päivä',
         ],
         oikea: 0,
         fakta: 'Kesäinen khareef-monsuuni osuu Arabian niemimaalla juuri '
@@ -2465,18 +2506,24 @@ export const KAARI_PAKETIT = {
         + 'vielä sanottu meille.',
       henkilo: 'Ikkunantekijä Hamza valaa kipsiin värilasit, jotka muuttavat '
         + 'auringonlaskun huoneen sisällä juhlaksi, sukunsa viidentenä.',
-      kohtaaminen: 'Hamza kohottaa puolikuun valoa vasten. "Ikkunan tilasi '
-        + 'matkalainen ja sanoi: asennetaan, kun tulija vastaa '
-        + 'kysymykseen. Kysymys koskee talojamme. Vastaa."',
+      kohtaaminen: 'Hamza kohottaa puolikuun valoa vasten. "Tämän '
+        + 'ikkunan mitat isoisäni sai matkalaiselta — mutta taloa, johon '
+        + 'se sopisi, ei ole löytynyt koko kaupungista. Olen mitannut '
+        + 'itse: aukkoa, johon tämä istuu, ei ole missään. Hänen '
+        + 'kysymyksensä koskee talojamme. Vastaa, niin mietimme yhdessä, '
+        + 'minne ikkuna kuuluu."',
       kysymys: {
         q: 'Sanaan vanhassakaupungissa asutaan taloissa, jotka ovat '
           + 'harvinaisia koko maailmassa. Millaisia ne ovat?',
         vaihtoehdot: [
           'Monikerroksisia savitorneja, joita on koristeltu valkoisin '
             + 'kipsikuvioin',
-          'Kokonaan maan alle kaivettuja',
-          'Puusta veistettyjä paalutaloja',
-          'Yksikerroksisia kivimajoja ilman ikkunoita',
+          'Kokonaan maan alle kaivettuja, niin että kaduilla näkyvät '
+            + 'vain ovet',
+          'Puusta veistettyjä paalutaloja, jotka seisovat irti kuumasta '
+            + 'maasta',
+          'Yksikerroksisia kivimajoja, joiden ainoa valo tulee '
+            + 'kattoluukusta',
         ],
         oikea: 0,
         fakta: 'Sanaan vanhakaupunki on täynnä satoja vuosia vanhoja '
@@ -2512,11 +2559,14 @@ export const KAARI_PAKETIT = {
         q: 'Pyhän Katariinan luostari Siinain vuorilla on erikoinen koko '
           + 'maailmassa. Miksi?',
         vaihtoehdot: [
-          'Se on toiminut yhtäjaksoisesti noin puolitoista '
-            + 'vuosituhatta, ja sen kirjasto on maailman vanhimpia',
-          'Se on rakennettu kokonaan vuoren sisään',
-          'Sinne pääsee vain köysillä laskeutumalla',
-          'Se siirretään uuteen paikkaan joka vuosisata',
+          'Se on toiminut yhtäjaksoisesti noin puolitoista vuosituhatta, '
+            + 'ja sen kirjasto on maailman vanhimpia',
+          'Se on louhittu kokonaan vuoren sisään, ja sen kirkkosali on '
+            + 'syvällä kallion uumenissa',
+          'Sinne pääsee vain kerran vuodessa, kun portti avataan '
+            + 'pyhiinvaeltajille',
+          'Se puretaan ja siirretään kivi kiveltä uuteen paikkaan aina '
+            + 'vuosisadan vaihtuessa',
         ],
         oikea: 0,
         fakta: 'Pyhän Katariinan luostari on toiminut keskeytyksettä '
@@ -2554,9 +2604,11 @@ export const KAARI_PAKETIT = {
           + 'tehdään?',
         vaihtoehdot: [
           'Solmu kerrallaan käsin — isossa matossa solmuja on miljoonia',
-          'Valamalla villa muottiin',
-          'Ompelemalla valmiit kuviopalat yhteen',
-          'Kutomalla koneella, joka toistaa kuvion',
+          'Valamalla villa suureen muottiin ja leikkaamalla kuvio '
+            + 'pintaan',
+          'Ompelemalla valmiiksi kudotut kuviopalat yhteen nurjalta '
+            + 'puolelta',
+          'Kutomalla puukoneella, joka toistaa saman kuvion rivi riviltä',
         ],
         oikea: 0,
         fakta: 'Solmumatto syntyy käsin solmu kerrallaan: kutoja kiertää '
@@ -2585,19 +2637,24 @@ export const KAARI_PAKETIT = {
         + 'Sen takana oli lokero.',
       henkilo: 'Peilimosaiikin korjaaja Reza vaihtaa saliin himmenneet palat '
         + 'uusiin ja tuntee jokaisen sirpaleen paikan.',
-      kohtaaminen: 'Reza nostaa himmeän palan varovasti irti. "Lokeron teki '
-        + 'mestari, joka sai maksun matkalaiselta: pitäkää pala '
-        + 'himmeänä, kunnes kysyjä tulee. Kysymys on tarina tästä '
-        + 'salista. Vastaa."',
+      kohtaaminen: 'Reza nostaa himmeän palan varovasti irti. '
+        + '"Mestareilla on tapa: kun salissa tapahtuu jotakin, mikä ei '
+        + 'saa unohtua, yksi pala jätetään himmeäksi — sali muistaa, '
+        + 'vaikka kukaan ei kertoisi. Tämä pala himmeni sinä iltana, '
+        + 'jona muuan matkalainen istui täällä sulkemisaikaan asti. '
+        + 'Hänen kysymyksensä on tarina tästä salista. Vastaa."',
       kysymys: {
         q: 'Persialaisten palatsien peilisalit kimaltavat tuhansina '
           + 'sirpaleina. Miten tarinan mukaan tämä taide sai alkunsa?',
         vaihtoehdot: [
           'Peilit saapuivat Euroopasta rikkoutuneina, ja sirpaleista '
             + 'tehtiin mosaiikkia',
-          'Kuningas rikkoi peilit, ettei näkisi itseään vanhana',
-          'Sirpaleet tuotiin meren pohjasta hylyistä',
-          'Kokonaisia peilejä ei osattu valmistaa',
+          'Kuningas särki palatsin peilit, ettei näkisi itseään '
+            + 'vanhenevan',
+          'Sirpaleet nostettiin haaksirikkoutuneiden kauppalaivojen '
+            + 'hylyistä',
+          'Kokonaisia peilejä ei siihen aikaan osattu valmistaa idässä '
+            + 'eikä lännessä',
         ],
         oikea: 0,
         fakta: 'Tarinan mukaan Eurooopasta laivatut suuret peilit särkyivät '
@@ -2608,8 +2665,8 @@ export const KAARI_PAKETIT = {
       },
       aarre: 'Lokerossa odotti kätkö, peilinpalan kokoinen. Reza sovitti '
         + 'himmeän palan takaisin: "Vaihdan himmenneet palat joka vuosi '
-        + '— tämä on ainoa, jonka olen käsketty jättää. Mutta kipsi sen '
-        + 'ympärillä on uusittu, eikä uusija ollut minä."',
+        + '— tämän jätän, niin kuin mestarit ennen minua. Mutta kipsi '
+        + 'sen ympärillä on uusittu, eikä uusija ollut minä."',
     },
   ],
 };
