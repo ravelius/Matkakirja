@@ -9138,17 +9138,15 @@ body.vertailu-tila .pawns { display: none; }
  */
 @media (max-width: 699px) {
   .dialog.nahtavyys-arkki {
-    margin: auto auto 0;
-    /* Alareunan safe-area ei enää vähennä korkeutta: kortti jatkuu
-     * kotipalkin taakse ja sisältö väistää sitä pehmusteella. */
-    max-height: calc(100dvh - 2.25rem - env(safe-area-inset-top, 0px));
-  }
-  .dialog.nahtavyys-arkki .nahtavyys-kortti {
-    /* Ruudun reunaan nojaava alalaita: pyöristys ja varjo kuuluvat
-     * kelluvalle kortille, pohjaan asti ulottuvalle eivät. */
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    /*
+     * 10.8.2026: omistaja muutti 8.8:n pohja-ankkurin ("saisi ulottua
+     * ihan alas asti") — "voisi olla aavistuksen irti myös
+     * alareunasta, näyttäisi kivemmalta". Pieni rako alas kotipalkin
+     * yli; kortti kelluu taas ja pyöristys palaa joka kulmaan.
+     */
+    margin: auto auto calc(0.6rem + env(safe-area-inset-bottom, 0px));
+    max-height: calc(100dvh - 2.85rem
+      - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
   }
 }
 

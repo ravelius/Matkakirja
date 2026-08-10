@@ -5237,8 +5237,16 @@ export class UI {
         this.actionsEl.appendChild(moreBtn);
       }
 
-      if (modes.includes('stay')) {
-        const stayBtn = this.iconButton('suurennuslasi', 'Tutki', 'primary');
+      /*
+       * Tutki on kaupungissa AINA tarjolla, tehtävistä riippumatta:
+       * kortti ja lehti ovat luettavaa sisältöä. Aiemmin nappi katosi
+       * heti kun tehtävät oli käytetty, ja lehtisivulle ei päässyt
+       * enää lainkaan (omistajan löytö 10.8.2026: "kahden väärän
+       * vastauksen jälkeen ei pääse enää ollenkaan edes
+       * lehtisivulle"). Korostus kertoo, odottaako tehtävä.
+       */
+      if (game.cityOf()) {
+        const stayBtn = this.iconButton('suurennuslasi', 'Tutki', modes.includes('stay') ? 'primary' : '');
         stayBtn.addEventListener('click', () => {
           sfx.play('paper');
           // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
@@ -6232,8 +6240,19 @@ export class UI {
     // ei ole artikkelia — kortissa lukee isoisän vakiorivi.
     this.arrivalCity.textContent = city.name;
     // Kohtaamiskaupungissa nappi kutsuu hahmon luo, ei kätkön:
-    // aarretehtävä aukeaa tarinallisen kohtaamisen kautta.
-    document.getElementById('arrival-yes').textContent = KOHTAAMISET[city.id]?.nappi ?? 'Etsi kätkö';
+    // aarretehtävä aukeaa tarinallisen kohtaamisen kautta. Kun
+    // tarinakaaren kohtaaminen odottaa, nappi nimeää henkilön
+    // ("Tapaa Nikos") — omistajan toive 10.8.2026: "pitäisi oikeasti
+    // olla tapaa joku henkilö -nappi". Kaaren käytyä teksti palaa
+    // kätköksi, koska seuraava tehtävä on taas tavallinen.
+    const kaariNappi = this.game.kaariTarina?.(city.id);
+    const tehtavaNappi = document.getElementById('arrival-yes');
+    tehtavaNappi.textContent = KOHTAAMISET[city.id]?.nappi
+      ?? (kaariNappi?.nimi ? `Tapaa ${kaariNappi.nimi}` : 'Etsi kätkö');
+    // Ilman tehtävää nappi on piilossa jo kortilla (ei vasta lehdessä,
+    // ks. paivitaTutkiAlapalkki): kortti jää luettavaksi ja Poistu
+    // palauttaa kartalle.
+    tehtavaNappi.hidden = !this.game.tehtavaTarjolla?.();
     this.arrivalImage.hidden = true;
     this.arrivalImage.removeAttribute('src');
     this.arrivalKuvakotelo.hidden = true;
@@ -6965,7 +6984,38 @@ export class UI {
       kotelo.appendChild(laskuri);
     }
     nayta();
-    kortti.addEventListener('click', () => this.suljeKulttuuriKuva());
+    /*
+     * Pyyhkäisy selaa sarjaa kuten lehden kuvakotelossa (omistajan
+     * toive 10.8.2026). Veto ei saa sulkea katselinta: selain laukoo
+     * clickin myös raahauksen päätteeksi, joten pyyhkäisyn ja
+     * liikkuneen vedon jälkeinen click ohitetaan lipulla.
+     */
+    let veto = null;
+    let ohitaSulku = false;
+    // Lippu nollataan eleen ALUSSA: kosketusnäytöllä pyyhkäisy ei
+    // tuota clickiä lainkaan, joten pelkkä click-puolen nollaus jätti
+    // lipun päälle ja nielaisi pyyhkäisyä seuraavan sulkunapautuksen.
+    kortti.addEventListener('pointerdown', (e) => { veto = { x: e.clientX, y: e.clientY }; ohitaSulku = false; });
+    kortti.addEventListener('pointercancel', () => { veto = null; });
+    kortti.addEventListener('pointerup', (e) => {
+      const alku = veto;
+      veto = null;
+      if (!alku) return;
+      const dx = e.clientX - alku.x;
+      const dy = e.clientY - alku.y;
+      if (lista && Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+        indeksi = (indeksi + (dx < 0 ? 1 : -1) + lista.length) % lista.length;
+        sfx.play('paper');
+        nayta();
+        ohitaSulku = true;
+      } else if (Math.hypot(dx, dy) > 10) {
+        ohitaSulku = true;
+      }
+    });
+    kortti.addEventListener('click', () => {
+      if (ohitaSulku) { ohitaSulku = false; return; }
+      this.suljeKulttuuriKuva();
+    });
     /*
      * Suurennos liitetään PÄÄLLIMMÄISEEN avoimeen dialogiin. Modaali
      * (showModal) elää selaimen top layer -kerroksessa, joka peittää
@@ -7679,7 +7729,15 @@ export class UI {
      * jokaisen kaupunkisivun alareunassa") — täysleveä palkki, jota
      * ei tarvitse etsiä miltään tietyltä sivulta.
      */
-    kyllä.hidden = maalehti;
+    /*
+     * Tehtävänappi piiloon myös silloin, kun kaupungissa ei ole enää
+     * tehtävää (laatta käännetty, kohtaaminen ja pulma nähty,
+     * kertatutkiminen käytetty): kortti ja lehti jäävät luettaviksi,
+     * ja Poistu palauttaa kartalle. Ennen nappi olisi avannut
+     * virheilmoituksen — ja koko kortti oli saavuttamattomissa
+     * (omistajan löytö 10.8.2026).
+     */
+    kyllä.hidden = maalehti || !this.game.tehtavaTarjolla?.();
     ei.textContent = maalehti || viimeisella ? 'Poistu' : 'Poistu lehdestä';
 
     /*
@@ -8983,6 +9041,10 @@ export class UI {
         kehys.classList.add(uusi.naturalWidth >= uusi.naturalHeight ? 'kuva-vaaka' : 'kuva-pysty');
       });
       this.varustaNostonKuva(uusi, kuva, 900);
+      // Suurennos aukeaa koko sarjana (omistajan toive 10.8.2026:
+      // "täysikoon kuvakaruselli samanlaiseksi kuin lehtisivulla") —
+      // galleriaTila antaa katselimelle nuolet, laskurin ja selauksen.
+      uusi.galleriaTila = { teokset: kuvat, kohdalla: kohta };
       if (el) el.replaceWith(uusi); else ikkuna.prepend(uusi);
       el = uusi;
       teksti.replaceChildren();

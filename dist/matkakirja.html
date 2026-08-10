@@ -9146,17 +9146,15 @@ body.vertailu-tila .pawns { display: none; }
  */
 @media (max-width: 699px) {
   .dialog.nahtavyys-arkki {
-    margin: auto auto 0;
-    /* Alareunan safe-area ei enää vähennä korkeutta: kortti jatkuu
-     * kotipalkin taakse ja sisältö väistää sitä pehmusteella. */
-    max-height: calc(100dvh - 2.25rem - env(safe-area-inset-top, 0px));
-  }
-  .dialog.nahtavyys-arkki .nahtavyys-kortti {
-    /* Ruudun reunaan nojaava alalaita: pyöristys ja varjo kuuluvat
-     * kelluvalle kortille, pohjaan asti ulottuvalle eivät. */
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    /*
+     * 10.8.2026: omistaja muutti 8.8:n pohja-ankkurin ("saisi ulottua
+     * ihan alas asti") — "voisi olla aavistuksen irti myös
+     * alareunasta, näyttäisi kivemmalta". Pieni rako alas kotipalkin
+     * yli; kortti kelluu taas ja pyöristys palaa joka kulmaan.
+     */
+    margin: auto auto calc(0.6rem + env(safe-area-inset-bottom, 0px));
+    max-height: calc(100dvh - 2.85rem
+      - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
   }
 }
 
@@ -83097,6 +83095,7 @@ const KAARI_PAKETIT = {
       id: 'jerusalem',
       lauta: 'middleeast',
       luennat: false,
+      nimi: 'Elias',
       otsikko: 'Jerusalem — portti joka on kiinni',
       saapuminen: 'Kävelin vanhan kaupungin muurin ympäri ja laskin portit: '
         + 'seitsemästä kuljettiin sisään ja ulos, kahdeksas oli '
@@ -83370,6 +83369,7 @@ const KAARI_PAKETIT = {
       id: 'mekka',
       lauta: 'middleeast',
       luennat: false,
+      nimi: 'Bilal',
       otsikko: 'Mekka — suunta jota koko maailma katsoo',
       saapuminen: 'Jiddan satamassa laivat purkivat pyhiinvaeltajia aamusta '
         + 'iltaan, ja kaikilla oli sama määränpää, jonne minun tieni ei '
@@ -83876,10 +83876,27 @@ const KAARI_PAKETIT = {
  * aktivoituisivat maailmankartalla, jolla on samat kaupunkitunnukset,
  * ja saapumiskortti yrittäisi soittaa ääntä jota ei ole.
  */
+/*
+ * Henkilön kutsumanimi saapumiskortin nappia varten ("Tapaa Nikos",
+ * omistajan toive 10.8.2026). Kuvaukset alkavat kaavalla
+ * "<ammatti> <Nimi> <tekee>…", ja ammatti voi olla moniosainen
+ * ("Kellonvalajan jälkeläinen Vera tuntee…") — nimi on siis
+ * kuvauksen alun viimeinen isolla alkava sana. Kohde voi antaa nimen
+ * myös itse (nimi-kenttä), jos kuvaus ei noudata kaavaa.
+ */
+const kutsumanimi = (kohde) => {
+  if (kohde.nimi) return kohde.nimi;
+  const sanat = String(kohde.henkilo ?? '').split(' ').slice(0, 3)
+    .map((s) => s.replace(/[,."]/g, ''));
+  let nimi = null;
+  for (const sana of sanat) if (/^[A-ZÅÄÖ]/u.test(sana)) nimi = sana;
+  return nimi;
+};
+
 const TARINAKAARI = Object.fromEntries(
   KAARI_PAKETIT.kohteet
     .filter((kohde) => kohde.luennat !== false)
-    .map((kohde) => [kohde.id, kohde]),
+    .map((kohde) => [kohde.id, { ...kohde, nimi: kutsumanimi(kohde) }]),
 );
 
 /*
@@ -124041,12 +124058,26 @@ class Game {
     if (edges.some((e) => e.type === 'land')) modes.push('land');
     if (edges.some((e) => e.type === 'sea') && player.money >= SEA_FARE) modes.push('sea');
     if (this.airportDestinations(player).length) modes.push('fly');
-    // Tutki paikka: laatan lisäksi myös näkemätön pulma tai kertaalleen
-    // tutkimaton kaupunki — mikään niistä ei aukea itsestään, vaan napista.
-    if (this.tokens.has(city.id) || this.pendingPuzzle(player) || this.canExplore(city)) {
-      modes.push('stay');
-    }
+    // Tutki paikka: tehtävä ei koskaan aukea itsestään, vaan napista.
+    if (this.tehtavaTarjolla(player)) modes.push('stay');
     return modes;
+  }
+
+  /**
+   * Onko nykyisessä kaupungissa vielä tehtävä Etsi kätkö -napille:
+   * laatta, käyttämätön kohtaaminen, näkemätön pulma tai kertaalleen
+   * tutkimaton kaupunki. Sama ehto avaa Tutki paikka -tilan
+   * (travelModes: stay) ja näyttää saapumiskortin tehtävänapin
+   * (ui.js) — lehteä voi lukea silloinkin, kun tehtävät on tehty.
+   * Botille kohtaaminen ei ole peruste jäädä: se ei kuluta kaarta.
+   */
+  tehtavaTarjolla(player = this.player) {
+    const city = this.cityOf(player);
+    if (!city) return false;
+    return Boolean(this.tokens.has(city.id)
+      || this.pendingPuzzle(player)
+      || (!player.isBot && this.kaariTarina(city.id))
+      || this.canExplore(city));
   }
 
   /** Mitä nykyinen pelaaja voi tehdä juuri nyt. */
@@ -124652,19 +124683,34 @@ class Game {
     if (this.phase !== 'offer' && this.phase !== 'action') {
       return { ok: false, error: 'Väärä vaihe' };
     }
-    // Isoisän pulma on pysähdyksen AINOA tehtävä silloin kun se on
-    // näkemättä (omistajan linjaus 10.8.2026: "Pulma korvaa
-    // kohtaamisvisan. Aina on siis vain yksi tehtävä, joko visa, pulma,
-    // tai joku muu"). Laatallisessa kaupungissa pulma siis kääntää
-    // laatan kuten visa; laatattomassa se on entiseen tapaan pelkkä
-    // kokemuspistepysähdys. Nimetty muoto tai vaikea kysymys ohittaa
-    // pulman.
-    if (!hard && form === null && this.pendingPuzzle()) return this.openPuzzle();
+    /*
+     * Tarinakaari (omistajan tilaus 9.8.2026: paketti suoraan peliin):
+     * kohtaaminen, jossa henkilö esittää isoisän jättämän kysymyksen.
+     * Kohtaaminen on kaupungin ENSIMMÄINEN tehtävä JOKA kaupungissa —
+     * myös laatattomissa ja pulmakaupungeissa (omistajan palaute
+     * 10.8.2026 illalla Ateenasta: pulma ja kevyt kertatutkiminen
+     * ohittivat kohtaamisen, jolloin henkilö ja kertojan luenta jäivät
+     * kokonaan pois: "pitäisi tulla se henkilö ja alkaa kertojan ääni
+     * kuulua"). Kohtaaminen on ainoa ääneen luettu tehtävämuoto.
+     * Nimetty muu muoto tai vaikea kysymys ohittaa kaaren kuluttamatta
+     * sitä, eikä botti kuluta kohtaamista — kaariKaytetty on pelaajien
+     * yhteinen, ja tarina kuuluu ihmiselle.
+     */
+    const nykyinen = this.cityOf();
+    const kaari = (hard || (form && form !== 'quiz') || this.player.isBot || !nykyinen)
+      ? null : this.kaariTarina(nykyinen.id);
+
+    // Isoisän pulma on kohtaamisen jälkeen pysähdyksen ainoa tehtävä
+    // (omistajan linjaus 10.8.2026: "Aina on siis vain yksi tehtävä,
+    // joko visa, pulma, tai joku muu"). Laatallisessa kaupungissa
+    // pulma kääntää laatan kuten visa; laatattomassa se on entiseen
+    // tapaan pelkkä kokemuspistepysähdys. Nimetty muoto tai vaikea
+    // kysymys ohittaa pulman.
+    if (!kaari && !hard && form === null && this.pendingPuzzle()) return this.openPuzzle();
 
     const city = this.tokenHere();
-    if (!city) {
+    if (!city && !kaari) {
       // Ilman laattaa kaupunkia voi silti tutkia kerran pelissä.
-      const nykyinen = this.cityOf();
       if (!hard && nykyinen && this.canExplore(nykyinen)) return this.openExplore(nykyinen);
       return { ok: false, error: 'Täällä ei ole laattaa' };
     }
@@ -124672,19 +124718,6 @@ class Game {
       return { ok: false, error: 'Täällä ei ole vaikeita kysymyksiä' };
     }
 
-    /*
-     * Tarinakaari (omistajan tilaus 9.8.2026: paketti suoraan peliin):
-     * kohtaaminen, jossa henkilö esittää isoisän jättämän kysymyksen.
-     * Kohtaaminen on kaupungin ENSIMMÄINEN tehtävä (paitsi
-     * pulmakaupungeissa, joissa pulma korvasi sen jo yllä), koska se
-     * on ainoa ääneen luettu tehtävämuoto — vapaalla arvonnalla
-     * ensimmäinen pysähdys jäi usein mykäksi (omistajan havainto
-     * 10.8.2026 aamulla: "ei tule lukijan ääntä kun painan Etsi
-     * kätkö"). Muotojen vaihtelu jatkuu kohtaamisen jälkeisillä
-     * pysähdyksillä. Nimetty muu muoto tai vaikea kysymys ohittaa
-     * kaaren kuluttamatta sitä.
-     */
-    const kaari = (hard || (form && form !== 'quiz')) ? null : this.kaariTarina(city.id);
     const muoto = (hard || kaari) ? 'quiz' : (form ?? this.pickForm(city.id));
     this.lastForm = muoto;
     if (muoto === 'claim') return this.openClaim(city);
@@ -124695,7 +124728,7 @@ class Game {
     const difficulty = hard ? 'hard' : this.player.quizLevel;
     let question;
     if (kaari) {
-      this.kaariKaytetty.add(`${this.pack.id}:${city.id}`);
+      this.kaariKaytetty.add(`${this.pack.id}:${nykyinen.id}`);
       question = {
         q: kaari.kysymys.q,
         options: kaari.kysymys.vaihtoehdot,
@@ -124707,10 +124740,15 @@ class Game {
     }
     const order = this.shuffledOrder(question.options.length);
     this.quiz = {
-      cityId: city.id,
+      cityId: (city ?? nykyinen).id,
       hard,
       kaari: Boolean(kaari),
-      frame: this.pickAsker(city),
+      // Laatattomassa kaupungissa kohtaaminen palkitsee kuten
+      // tutkiminen: löytöpalkkio ja kokemuspisteet, laattaa ei ole.
+      // Lippu ohjaa answerQuizin explore-haaraan; kertatutkimista
+      // (canExplore) kohtaaminen ei kuluta.
+      explore: Boolean(kaari && !city),
+      frame: this.pickAsker(city ?? nykyinen),
       question: question.q,
       fact: question.fact,
       source: sourceList(question.source),
@@ -131105,8 +131143,16 @@ class UI {
         this.actionsEl.appendChild(moreBtn);
       }
 
-      if (modes.includes('stay')) {
-        const stayBtn = this.iconButton('suurennuslasi', 'Tutki', 'primary');
+      /*
+       * Tutki on kaupungissa AINA tarjolla, tehtävistä riippumatta:
+       * kortti ja lehti ovat luettavaa sisältöä. Aiemmin nappi katosi
+       * heti kun tehtävät oli käytetty, ja lehtisivulle ei päässyt
+       * enää lainkaan (omistajan löytö 10.8.2026: "kahden väärän
+       * vastauksen jälkeen ei pääse enää ollenkaan edes
+       * lehtisivulle"). Korostus kertoo, odottaako tehtävä.
+       */
+      if (game.cityOf()) {
+        const stayBtn = this.iconButton('suurennuslasi', 'Tutki', modes.includes('stay') ? 'primary' : '');
         stayBtn.addEventListener('click', () => {
           sfx.play('paper');
           // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
@@ -132099,8 +132145,19 @@ class UI {
     // ei ole artikkelia — kortissa lukee isoisän vakiorivi.
     this.arrivalCity.textContent = city.name;
     // Kohtaamiskaupungissa nappi kutsuu hahmon luo, ei kätkön:
-    // aarretehtävä aukeaa tarinallisen kohtaamisen kautta.
-    document.getElementById('arrival-yes').textContent = KOHTAAMISET[city.id]?.nappi ?? 'Etsi kätkö';
+    // aarretehtävä aukeaa tarinallisen kohtaamisen kautta. Kun
+    // tarinakaaren kohtaaminen odottaa, nappi nimeää henkilön
+    // ("Tapaa Nikos") — omistajan toive 10.8.2026: "pitäisi oikeasti
+    // olla tapaa joku henkilö -nappi". Kaaren käytyä teksti palaa
+    // kätköksi, koska seuraava tehtävä on taas tavallinen.
+    const kaariNappi = this.game.kaariTarina?.(city.id);
+    const tehtavaNappi = document.getElementById('arrival-yes');
+    tehtavaNappi.textContent = KOHTAAMISET[city.id]?.nappi
+      ?? (kaariNappi?.nimi ? `Tapaa ${kaariNappi.nimi}` : 'Etsi kätkö');
+    // Ilman tehtävää nappi on piilossa jo kortilla (ei vasta lehdessä,
+    // ks. paivitaTutkiAlapalkki): kortti jää luettavaksi ja Poistu
+    // palauttaa kartalle.
+    tehtavaNappi.hidden = !this.game.tehtavaTarjolla?.();
     this.arrivalImage.hidden = true;
     this.arrivalImage.removeAttribute('src');
     this.arrivalKuvakotelo.hidden = true;
@@ -132832,7 +132889,38 @@ class UI {
       kotelo.appendChild(laskuri);
     }
     nayta();
-    kortti.addEventListener('click', () => this.suljeKulttuuriKuva());
+    /*
+     * Pyyhkäisy selaa sarjaa kuten lehden kuvakotelossa (omistajan
+     * toive 10.8.2026). Veto ei saa sulkea katselinta: selain laukoo
+     * clickin myös raahauksen päätteeksi, joten pyyhkäisyn ja
+     * liikkuneen vedon jälkeinen click ohitetaan lipulla.
+     */
+    let veto = null;
+    let ohitaSulku = false;
+    // Lippu nollataan eleen ALUSSA: kosketusnäytöllä pyyhkäisy ei
+    // tuota clickiä lainkaan, joten pelkkä click-puolen nollaus jätti
+    // lipun päälle ja nielaisi pyyhkäisyä seuraavan sulkunapautuksen.
+    kortti.addEventListener('pointerdown', (e) => { veto = { x: e.clientX, y: e.clientY }; ohitaSulku = false; });
+    kortti.addEventListener('pointercancel', () => { veto = null; });
+    kortti.addEventListener('pointerup', (e) => {
+      const alku = veto;
+      veto = null;
+      if (!alku) return;
+      const dx = e.clientX - alku.x;
+      const dy = e.clientY - alku.y;
+      if (lista && Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+        indeksi = (indeksi + (dx < 0 ? 1 : -1) + lista.length) % lista.length;
+        sfx.play('paper');
+        nayta();
+        ohitaSulku = true;
+      } else if (Math.hypot(dx, dy) > 10) {
+        ohitaSulku = true;
+      }
+    });
+    kortti.addEventListener('click', () => {
+      if (ohitaSulku) { ohitaSulku = false; return; }
+      this.suljeKulttuuriKuva();
+    });
     /*
      * Suurennos liitetään PÄÄLLIMMÄISEEN avoimeen dialogiin. Modaali
      * (showModal) elää selaimen top layer -kerroksessa, joka peittää
@@ -133546,7 +133634,15 @@ class UI {
      * jokaisen kaupunkisivun alareunassa") — täysleveä palkki, jota
      * ei tarvitse etsiä miltään tietyltä sivulta.
      */
-    kyllä.hidden = maalehti;
+    /*
+     * Tehtävänappi piiloon myös silloin, kun kaupungissa ei ole enää
+     * tehtävää (laatta käännetty, kohtaaminen ja pulma nähty,
+     * kertatutkiminen käytetty): kortti ja lehti jäävät luettaviksi,
+     * ja Poistu palauttaa kartalle. Ennen nappi olisi avannut
+     * virheilmoituksen — ja koko kortti oli saavuttamattomissa
+     * (omistajan löytö 10.8.2026).
+     */
+    kyllä.hidden = maalehti || !this.game.tehtavaTarjolla?.();
     ei.textContent = maalehti || viimeisella ? 'Poistu' : 'Poistu lehdestä';
 
     /*
@@ -134849,6 +134945,10 @@ class UI {
         kehys.classList.add(uusi.naturalWidth >= uusi.naturalHeight ? 'kuva-vaaka' : 'kuva-pysty');
       });
       this.varustaNostonKuva(uusi, kuva, 900);
+      // Suurennos aukeaa koko sarjana (omistajan toive 10.8.2026:
+      // "täysikoon kuvakaruselli samanlaiseksi kuin lehtisivulla") —
+      // galleriaTila antaa katselimelle nuolet, laskurin ja selauksen.
+      uusi.galleriaTila = { teokset: kuvat, kohdalla: kohta };
       if (el) el.replaceWith(uusi); else ikkuna.prepend(uusi);
       el = uusi;
       teksti.replaceChildren();
@@ -138807,6 +138907,8 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 506, teksti: 'Kohtaaminen ensin joka kaupungissa, lehti aina luettavissa' },
+  { v: 505, teksti: 'Popupille rako alas, täysikoon kuviin lehden selaus' },
   { v: 504, teksti: 'Nähtävyysjutut Tromssaan, Dubrovnikiin, Riikaan' },
   { v: 503, teksti: 'Valokuvapulma: pylväspulman vaihtoehdot oikeina kuvina' },
   { v: 502, teksti: 'Nähtävyysjutut Kiovaan, Pietariin, Moskovaan, Odessaan' },
@@ -139395,7 +139497,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.504';
+const APP_VERSION = '2026-08-09.506';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

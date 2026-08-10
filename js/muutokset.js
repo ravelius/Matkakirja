@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 506, teksti: 'Kohtaaminen ensin joka kaupungissa, lehti aina luettavissa' },
+  { v: 505, teksti: 'Popupille rako alas, täysikoon kuviin lehden selaus' },
   { v: 504, teksti: 'Nähtävyysjutut Tromssaan, Dubrovnikiin, Riikaan' },
   { v: 503, teksti: 'Valokuvapulma: pylväspulman vaihtoehdot oikeina kuvina' },
   { v: 502, teksti: 'Nähtävyysjutut Kiovaan, Pietariin, Moskovaan, Odessaan' },
