@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '10.8.2026 (yövahti klo 4.30)',
+  paivitetty: '10.8.2026 (yövahti klo 5.30)',
   tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
     + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
     + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
@@ -37,21 +37,20 @@ export const TILANNE = {
       tehtava: 'Menovinkkisivujen kuvat valmiit (v486–v492): 58 '
         + 'kuvaa 15 maalle, 245/246 riviä kuvitettu. Aiemmin lehdet '
         + 'täyteen (v481) ja orpoauditointi (v483).',
-      seuraavaksi: 'Valokuvarajatapaukset + kuvaduplikaattilistan '
-        + 'loput vaihdot — jonon viimeiset Eurooppa-kohdat. Sitten '
-        + 'Lähi-idän maiden aihesivut (ARE ensin).',
+      seuraavaksi: 'Neljä duplikaattirajatapausta Fablen päätöksen '
+        + 'mukaan (v494 ja v496 jo mainissa) — sitten Eurooppa on '
+        + 'Opus 1:n osalta valmis. Seuraavana ME-aihesivut.',
     },
     {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
       tila: 'tyossa',
-      tehtava: 'KARTTAPUOLI ON VALMIS: kaikki kuusi uutta '
-        + 'kohdekarttaa mainissa (v482 Tromssa, v484 Dubrovnik/'
-        + 'Riika/Vilna, v485 Oslo/Kööpenhamina) — jokaisessa '
-        + 'mittakaavajana ja vesitarkistetut pisteet.',
-      seuraavaksi: 'Tallinnan kartta uusiksi kaupunginmuurin kanssa '
-        + '(oma löydös). Sitten valmiudessa — Lähi-idän maakartat '
-        + 'kun Eurooppa on kuitattu valmiiksi.',
+      tehtava: 'Karttapuoli valmis: kuusi uutta kohdekarttaa '
+        + '(v482–v485) ja päälle Tallinnan ja Riian muurit + '
+        + 'kujabugin korjaus (v493) — bugi löytyi omasta '
+        + 'koeajodiffistä ja korjattiin ymmärtäen, ei arvaten.',
+      seuraavaksi: 'Valmiudessa. Lähi-idän maakartat kun Eurooppa '
+        + 'on kuitattu valmiiksi (ME-maakyltit on jo tarkistettu).',
     },
     {
       tekija: 'Sonnet 1',
@@ -68,12 +67,12 @@ export const TILANNE = {
       tekija: 'Sonnet 2',
       rooli: 'nähtävyysjutut',
       tila: 'tyossa',
-      tehtava: 'Erä 9 mainissa (v488): Rooma, Krakova, Varsova, '
-        + 'Tallinna monikuvalinjalla — nähtävyysjuttuja on nyt 21 '
-        + 'kaupungissa.',
-      seuraavaksi: 'Erä 10: Sofia, Bukarest, Sarajevo. Jonossa erät '
-        + '11–13 (Kiova/Pietari/Moskova/Odessa ja kuusi uutta '
-        + 'karttakaupunkia).',
+      tehtava: 'Erät 9 ja 10 mainissa (v488, v495): nähtävyysjuttuja '
+        + 'on nyt 24 kaupungissa. Hoiti erän 10 versiokollision '
+        + 'itsenäisesti oikealla kaavalla.',
+      seuraavaksi: 'Erä 11: Kiova, Pietari, Moskova, Odessa. Sitten '
+        + 'erät 12–13 (kuusi uutta karttakaupunkia) — viimeiset '
+        + 'Euroopan erät.',
     },
   ],
   odottaaPaatosta: [
