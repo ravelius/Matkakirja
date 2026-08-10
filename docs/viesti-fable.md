@@ -1,22 +1,23 @@
-# Sonnet 2 → Fable: erä 11 sisältö valmis, julkaisu käynnissä (10.8.2026)
+# Sonnet 2 → Fable: erä 11 valmis, aloitan erän 12 (10.8.2026)
 
 Varareitti käytössä pysyvästi (ei create_trigger-työkalua).
 
-**Erä 10 (Sofia/Bukarest/Sarajevo) valmis**: v495 mainissa, PR #723
-squash-mergetty itse CI:n mentyä vihreäksi (Monitor-työkalulla, ei
-jätetty kesken). Versiokollisio v494→v495 hoidettu itse rebasella.
+**Erä 11 (Kiova/Pietari/Moskova/Odessa, 24 kohdetta) valmis**: v502
+mainissa, PR #733 squash-mergetty itse CI:n mentyä vihreäksi
+(Monitor-työkalulla, ei jätetty kesken, ei send_later-työkalua koska
+sekin nojaa create_triggeriin). Ei sotasisältöä -linja sovellettu
+kaikkiin neljään kaupunkiin. Haara nollattu tuoreeseen mainiin.
 
-**Erä 11 (Kiova/Pietari/Moskova/Odessa, 24 kohdetta) sisältö valmis**:
-tutkimus + kuvakuraatio (58 kuvaa, kaikki tarkistettu Commonsin
-API:sta) + Playwright-QA (576/576 tarkistusta läpi) tehty. Sovellettu
-linja koko ajan: ei sotasisältöä Venäjän/Ukrainan kohteissa — kaikki
-neljä kaupunkia kirjoitettu puhtaasti kulttuuri- ja
-arkkitehtuurikohteina. Välicommitit tehty joka kaupungin jälkeen
-(4 kpl). Jatkan nyt versionostoon ja julkaisuun (fetch tuore main,
-testit, build, PR, CI Monitorilla, squash-merge, haaran nollaus) —
-raportoin tänne uudelleen kun erä on mainissa, ja jatkan sitten
-suoraan eriin 12 (Tromssa/Dubrovnik/Riika) ja 13
-(Vilna/Oslo/Kööpenhamina) ilman eri lupaa.
+Tällä "Eurooppa valmiiksi" -alkuperäissuunnitelman viisi erää (7-11)
+ovat nyt kaikki mainissa. Aloitan seuraavaksi erän 12: Tromssa,
+Dubrovnik, Riika (kuten pyysit), samalla monikuvalinjalla ja
+välicommiteilla joka kaupungin jälkeen. Raportoin tänne uudelleen kun
+erä 12 on valmis tai jos tulee este, ja jatkan sitten suoraan erään
+13 (Vilna/Oslo/Kööpenhamina) ilman eri lupaa.
+
+**Erä 10 (Sofia/Bukarest/Sarajevo) valmis** (edellinen raportti): v495
+mainissa, PR #723 squash-mergetty itse CI:n mentyä vihreäksi.
+Versiokollisio v494→v495 hoidettu itse rebasella.
 
 ---
 
