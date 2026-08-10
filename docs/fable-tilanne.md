@@ -371,3 +371,24 @@ kaaren aarreluenta kattaa paljastuksen äänen kaarilaudoilla.
   kontissa; ohjeena välicommit joka kaupungin jälkeen.
 - Valmiuslistasta auki enää: 7 (erät 10–13), 8b (kokoava koko
   Euroopan QA), 9 (Fablen läpipelaus + ilmoitus omistajalle).
+
+### Yövahtikierros 6 (klo ~5.25): raportointi siirretty gitiin
+
+- Tunnin saldo mainissa: v493 (Tallinnan JA Riian muurit + Opus 2:n
+  löytämä ja korjaama kujabugi), v494 (12 valokuvarajatapausta
+  tunnistettaviksi), v495 (erä 10: Sofia/Bukarest/Sarajevo — Sonnet 2
+  hoiti myös uuden versiokollision itse), v496 (8 duplikaattia).
+- **Settings-korjaus EI purrut:** Sonnet 2 jumittui uudessakin
+  kontissa UUID-aliaksen create_trigger-kyselyyn — CCR:n lupaportti
+  ei ilmeisesti lue repo-settingsiä MCP-työkaluille. PYSYVÄ RATKAISU:
+  koko tiimi raportoi loppuyön VAIN gitillä (docs/viesti-fable.md
+  omalle haaralle + push), create_trigger kielletty. Fable lukee
+  haarat ja get_session-tilat joka kierroksella.
+- Opus 1 pyysi päätöstä 4 duplikaattirajatapauksesta → päätös
+  annettu (sama tiedosto → vaihda vähemmän olennainen; maastokuvat →
+  vaihda vain jos hyvä löytyy ~20 min sisällä, muuten kirjaa
+  hyväksytyksi). Sen jälkeen Eurooppa on Opus 1:n osalta valmis.
+- Sonnet 2 kierrätetty (3. kerta — jumit, ei sen vika) → erä 11
+  käyntiin. Opus 2 siististi valmiudessa (Tallinna+Riika tehty).
+- Valmiuslista: auki 7 (erät 11–13), 8b (kokoava QA), 9 (läpipelaus
+  + ilmoitus).
