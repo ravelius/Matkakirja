@@ -31,19 +31,22 @@ export const KAARI_PAKETIT = {
   kohteet: [
     {
       id: 'praha',
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Praha — kynttilä tyhjässä talossa',
       saapuminen: 'Kultaisella kujalla, talossa numero kahdeksan, paloi '
         + 'kynttilä, vaikka ovi oli lukossa ja ikkunassa vuosisadan '
         + 'pöly. Sisällä pöydällä odotti avoin kirja, ja sen reunaan '
-        + 'oli kirjoitettu barometrini lukema — minuutilleen sama kuin '
+        + 'oli kirjoitettu barometrini lukema — piirtoa myöten sama kuin '
         + 'omani. Käsiala ei ollut minun. Sinä, joka tätä luet: '
         + 'kynttilä ei sytytä itseään.',
       henkilo: 'Lyhdynsytyttäjä Tomáš pitää sukunsa lupauksen: talon '
         + 'kahdeksan kynttilä palaa, kunnes etsijä palaa.',
       kohtaaminen: 'Kujalla tikkaiden päällä seisoo lyhdynsytyttäjä Tomáš. '
-        + '"Talon kahdeksan kynttilä on sukuni työ — isoisäsi maksoi '
-        + 'siitä sadaksi vuodeksi. Vastaa hänen kysymykseensä, niin '
-        + 'lasku on sinun."',
+        + '"Talon kahdeksan kynttilä on sukuni lupaus. Isoisäsi '
+        + 'kolkutti tulipalon yönä joka ovea ja herätti koko kujan — '
+        + 'meidän ovemme viimeisenä, vaikka savu oli jo portailla. '
+        + 'Siitä yöstä liekki on palanut hänen etsijälleen. Vastaa '
+        + 'hänen kysymykseensä, niin sytytät sen tänään itse."',
       kysymys: {
         q: 'Prahan tarun mukaan rabbi teki savesta vartijan, Golemin. '
           + 'Minne Golem kätkettiin, kun se lopulta sammutettiin?',
@@ -58,9 +61,9 @@ export const KAARI_PAKETIT = {
           + '— portaat ullakolle purettiin, ettei kukaan pääsisi '
           + 'katsomaan.',
       },
-      aarre: 'Tomáš sytytti kynttilänpätkän uudelleen: "Niitä oli '
-        + 'tilauksessa kaksi — toinen palaa jossain, missä maa on '
-        + 'lämmin." Jäin miettimään: kuka vartioi sitä toista?',
+      aarre: 'Tomáš sytytti kynttilänpätkän uudelleen: "Lupauksia on '
+        + 'kaksi — toinen liekki palaa jossain, missä maa on lämmin." '
+        + 'Jäin miettimään: kuka pitää sitä toista?',
     },
     {
       id: 'istanbul',
@@ -109,17 +112,20 @@ export const KAARI_PAKETIT = {
         + 'laskeutuivat kolmen lyhdyn kanssa, ja ylös palasi kaksi. '
         + 'Vastaa hänen kysymykseensä, niin kerron, minne kolmas jäi."',
       kysymys: {
-        q: 'Wien on valssin kaupunki. Montako iskua valssin yhteen '
-          + 'tahtiin kuuluu?',
+        q: 'Wienin keisarit haudattiin tavalla, jota ei tunneta '
+          + 'juuri missään muualla. Miten?',
         vaihtoehdot: [
-          'Kolme',
-          'Kaksi',
-          'Neljä',
-          'Kuusi',
+          'Ruumis, sydän ja sisälmykset haudattiin kolmeen eri kirkkoon',
+          'Arkku laskettiin Tonavan pohjaan',
+          'Keisari haudattiin istualleen valtaistuimelleen',
+          'Hauta muurattiin umpeen tornin huippuun',
         ],
         oikea: 0,
-        fakta: 'Valssi soi kolmijakoisessa tahdissa: ensimmäinen isku on '
-          + 'painava ja kaksi seuraavaa keveitä — siksi valssi keinuu.',
+        fakta: 'Habsburgien ruumiit lepäävät kapusiinien kryptassa, '
+          + 'sydämet augustinolaiskirkossa ja sisälmykset '
+          + 'Tapaninkirkon katakombeissa. Kryptan ovella saattue '
+          + 'kolkutti, ja keisari päästettiin sisään vasta kun hänet '
+          + 'oli kuulutettu pelkäksi kuolevaiseksi ihmiseksi.',
       },
       aarre: 'Kätkön päällä seisoi kolmas lyhty, ja Anton puhui portaita '
         + 'kohti: "Veto tulee ovesta, jota ei minun aikanani ole avattu '
@@ -190,7 +196,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lontoo',
-      otsikko: 'Lontoo — kello joka löi sumussa',
+      otsikko: 'Lontoo — laskuveden kello',
       saapuminen: 'Sumu nousi joesta niin sakeana, että kadut sammuivat yksi '
         + 'kerrallaan. Silloin kello löi — mutta ääni ei tullut '
         + 'tornista, vaan joen puolelta, laskuveden paljastamalta '
@@ -225,6 +231,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'pariisi',
+      mykistetyt: ['kohtaaminen'],
       otsikko: 'Pariisi — kirja joka odotti rannalla',
       saapuminen: 'Seinen rannalla kirjalaatikot suljettiin yöksi, mutta yksi '
         + 'kansi jäi raolleen. Sen alla odotti kirja, jonka sivut oli '
@@ -233,10 +240,11 @@ export const KAARI_PAKETIT = {
         + 'kirjan hinnalla, jota myyjä ei suostunut sanomaan ääneen.',
       henkilo: 'Bukinisti Colette myy vanhoja kirjoja Seinen rannalla '
         + 'samasta laatikosta kuin isoisoisänsä.',
-      kohtaaminen: 'Colette tunnistaa laatikkonsa liitumerkin yhdellä '
-        + 'vilkaisulla. "Isoisoisäni piti yhtä kirjaa, jota ei saanut '
-        + 'myydä — sen sai vain antaa sille, joka osaa vastata sen '
-        + 'kysymykseen. Kirja on odottanut sataa vuotta. Vastaa."',
+      kohtaaminen: 'Colette tuntee laatikkonsa liitumerkin ennen kuin ehdin '
+        + 'kysyä. "Isoisoisäni myi tuon kirjan vieraalle — ja sai sen '
+        + 'illalla takaisin. Pitäkää tallessa, vieras sanoi, älkääkä '
+        + 'myykö toiste: antakaa sille, joka vastaa sen kysymykseen. '
+        + 'Kirja on odottanut siitä illasta. Vastaa."',
       kysymys: {
         q: 'Notre Damen katedraalin seinillä nököttää kivisiä '
           + 'hirviöhahmoja. Mikä tehtävä gargoyleilla oikeasti on?',
@@ -259,6 +267,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'berliini',
+      mykistetyt: ['aarre'],
       otsikko: 'Berliini — kaukoputki joka katsoi tyhjää',
       saapuminen: 'Tähtitornin kupoli oli raollaan, vaikka yö oli pilvinen. '
         + 'Kaukoputki osoitti taivaankohtaan, jossa ei paljain silmin '
@@ -285,13 +294,17 @@ export const KAARI_PAKETIT = {
           + 'heilahduksista, ja Berliinin observatorio löysi sen '
           + 'kaukoputkella 1846 — alle asteen päässä lasketusta kohdasta.',
       },
-      aarre: 'Kätkö oli kaukoputken jalustan ontossa jalassa. Lotte selasi '
-        + 'kirjan viimeiselle sivulle: "Sama taivaankohta on kirjattu '
-        + 'uudelleen viime talvena. Käsiala ei ole minun — eikä kirja '
-        + 'ole poistunut tästä huoneesta."',
+      aarre: 'Kätkö oli kaukoputken jalustan ontossa jalassa. Lotte '
+        + 'selasi kirjan viimeiselle sivulle: "Sama taivaankohta on '
+        + 'kirjattu uudelleen viime talvena. Käsiala ei ole minun — '
+        + 'eikä kirja ole poistunut tästä huoneesta." Lotte näppäili '
+        + 'havainnon ensin laitteelleen ja kirjoitti sen sitten '
+        + 'kirjaan, kynällä. Laitteet vaihtuvat, hän sanoi. Kirja on '
+        + 'nähnyt kaikki.',
     },
     {
       id: 'rooma',
+      mykistetyt: ['aarre'],
       otsikko: 'Rooma — kolikko joka palasi altaaseen',
       saapuminen: 'Trevin allas tyhjennettiin puhdistusta varten, ja pohjalta '
         + 'nousi kolikoiden sade. Yksi kolikko oli muita vanhempi, ja '
@@ -318,14 +331,16 @@ export const KAARI_PAKETIT = {
           + 'oikeasti talteen ja lahjoitetaan hyväntekeväisyyteen — niitä '
           + 'kertyy noin miljoona euroa vuodessa.',
       },
-      aarre: 'Kätkö odotti altaan huoltoluukun takana. Enzo saattoi minut '
-        + 'portille: "Tajuatko, mitä vanha kolikko tarkoittaa? Joku '
-        + 'heitti sen luvatakseen palata — eikä ole vielä palannut. Tai '
-        + 'sitten palaa. Joka viikko."',
+      aarre: 'Kätkö odotti altaan huoltoluukun takana. Enzo saattoi '
+        + 'minut portille: "Tajuatko, mitä vanha kolikko tarkoittaa? '
+        + 'Joku heitti sen luvatakseen palata — eikä ole vielä '
+        + 'palannut. Tai sitten palaa. Joka viikko." Portin takana '
+        + 'sata kohotettua puhelinta kuvasi suihkulähdettä. Yksikään '
+        + 'ei kuvannut miestä, joka tietää sen salaisuuden.',
     },
     {
       id: 'madrid',
-      otsikko: 'Madrid — kello joka löi kolmetoista',
+      otsikko: 'Madrid — kolmastoista lyönti',
       saapuminen: 'Puerta del Solin kello löi keskiyön, ja laskin lyönnit '
         + 'vanhasta tottumuksesta. Niitä oli kolmetoista. Aukiolla '
         + 'kukaan muu ei ollut kuulevinaan — mutta tornin ikkunassa '
@@ -393,6 +408,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lissabon',
+      mykistetyt: ['kohtaaminen'],
       otsikko: 'Lissabon — laatta jota ei poltettu loppuun',
       saapuminen: 'Belémin tornin juurella odotin laskuvettä. Vartija vannoi, '
         + 'että torni seisoo joessa siksi, että joki siirtyi — ei '
@@ -402,9 +418,11 @@ export const KAARI_PAKETIT = {
       henkilo: 'Laattamestari Inês polttaa sinivalkoisia azulejo-laattoja '
         + 'samassa uunissa kuin sukunsa kolmesataa vuotta.',
       kohtaaminen: 'Työpajassa laattamestari Inês pyyhkii savipölyn käsistään. '
-        + '"Isoisäsi tilasi suvultani yhden laatan — ja kielsi '
-        + 'polttamasta sitä valmiiksi, ennen kuin joku palaa hakemaan. '
-        + 'Vastaa hänen kysymykseensä, niin sytytän uunin."',
+        + '"Isoisäsi maalasi suvullemme laatan omalla kädellään, '
+        + 'mutta laiva vei hänet ennen polttopäivää. Pajassamme '
+        + 'keskeneräistä työtä ei hävitetä — laatta on odottanut '
+        + 'maalariaan raakana tähän päivään. Vastaa hänen '
+        + 'kysymykseensä, niin sytytän uunin."',
       kysymys: {
         q: 'Lissabonin talojen seinät hohtavat sinivalkoisina. Mitä ovat '
           + 'azulejot?',
@@ -461,12 +479,14 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'dublin',
+      mykistetyt: ['saapuminen'],
       otsikko: 'Dublin — lantti joka odotti maksajaansa',
       saapuminen: 'Ylitin joen sillalla, josta perittiin puolen pennin maksu. '
+        + 'Maksoin sen ilolla: jalkasillalla ei kohtaa hevosia. '
         + 'Vartija mainitsi miehen, joka maksaa joka vuosi yhden '
         + 'ylityksen — mutta ei koskaan ylitä. Maksut on kirjattu '
-        + 'vihkoon, jonka kanteen on painettu barometri. Sinä, joka '
-        + 'tätä luet: se ylitys on maksettu sinulle.',
+        + 'vihkoon, jonka kansi on kulunut sileäksi kuin joenpohjan '
+        + 'kivi. Sinä, joka tätä luet: se ylitys on maksettu sinulle.',
       henkilo: 'Sillanvartija Molly kerää puolen pennin lantit samaan '
         + 'nahkakukkaroon kuin isoisoisänsä aikanaan.',
       kohtaaminen: 'Sillan korvassa Molly punnitsee lanttia sormissaan. '
@@ -494,7 +514,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'edinburgh',
-      otsikko: 'Edinburgh — tykki joka löi sekunnin väärin',
+      otsikko: 'Edinburgh — sekunnin ero',
       saapuminen: 'Linnan kalliolla tykki jyrähti täsmälleen yhdeltä, ja '
         + 'kaupungin kellot vastasivat sille. Kirkkomaalla pieni koira '
         + 'vartioi hautaa, jolta joku oli juuri korjannut kuihtuneet '
@@ -530,6 +550,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'barcelona',
+      mykistetyt: ['aarre'],
       otsikko: 'Barcelona — lohikäärme ja tuore ruusu',
       saapuminen: 'Goottilaiskorttelin kujat kapenivat, kunnes taivas oli enää '
         + 'viiva. Erään portin yllä lohikäärmeen kivinen pää työntyi '
@@ -558,9 +579,13 @@ export const KAARI_PAKETIT = {
           + 'Jordin päivänä 23. huhtikuuta kadut täyttyvät ruusu- ja '
           + 'kirjakojuista — se on kirjan ja rakkauden juhla.',
       },
-      aarre: 'Sidoksen selkämys kätki ontelon, ja ontelossa odotti kätkö — '
-        + 'ja tuoreen ruusun terälehti. Mercè katsoi kujalle: "Ruusujen '
-        + 'päivään on puoli vuotta. Tämä on poimittu tänä aamuna."',
+      aarre: 'Sidoksen selkämys kätki ontelon, ja ontelossa odotti kätkö '
+        + '— ja tuoreen ruusun terälehti. Mercè katsoi kujalle: '
+        + '"Ruusujen päivään on puoli vuotta. Tämä on poimittu tänä '
+        + 'aamuna." Kujan suulla kohosi kirkko, josta isoisän kirja '
+        + 'ei tiedä mitään — sitä ei ollut hänen käydessään vielä '
+        + 'aloitettu, eikä se ole tänäänkään valmis. Tässä '
+        + 'kaupungissa sata vuotta on lyhyt aika, sanoi Mercè.',
     },
     {
       id: 'granada',
@@ -885,6 +910,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'sofia',
+      mykistetyt: ['kohtaaminen'],
       kuva: 'assets/kohtaamiset/kohtaaminen-sofia.jpg',
       otsikko: 'Sofia — lähde joka kirjattiin sata vuotta',
       saapuminen: 'Keskellä kaupunkia maa hönkäisi lämmintä: lähde kumpusi '
@@ -895,11 +921,12 @@ export const KAARI_PAKETIT = {
         + 'Viimeisellä sivulla luki minun nimeni.',
       henkilo: 'Lähteenvartija Nadia täyttää kaupunkilaisten kannut kuumasta '
         + 'lähteestä ja tuntee jokaisen suonen kaupungin alla.',
-      kohtaaminen: 'Höyryn keskellä Nadia laskee kauhansa. "Vihko on sukuni '
-        + 'pitämä — isoisäsi maksoi siitä, että lähteen lämpö kirjataan '
-        + 'joka viikko sadan vuoden ajan. Viikkoja on jäljellä yksi. '
-        + 'Vastaa hänen kysymykseensä, niin kirjaamme viimeisen '
-        + 'yhdessä."',
+      kohtaaminen: 'Höyryn keskellä Nadia laskee kauhansa. "Sukuni on '
+        + 'kirjannut lähteen lämmön niin kauan kuin vihkoja on ollut. '
+        + 'Yksi rivi on vieraalla käsialalla — isoisäsi kävi '
+        + 'kirjaamassa lukemat sinä viikkona, jona kirjaaja makasi '
+        + 'kuumeessa, ettei sarjaan tulisi aukkoa. Vastaa hänen '
+        + 'kysymykseensä, niin näytän sen rivin."',
       kysymys: {
         q: 'Sofia on kasvanut paikalle, jossa maasta kumpuaa jotain '
           + 'harvinaista keskellä kaupunkia. Mitä?',
@@ -921,13 +948,15 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'bukarest',
-      otsikko: 'Bukarest — kello joka löi itsestään',
+      mykistetyt: ['saapuminen', 'aarre'],
+      otsikko: 'Bukarest — paimenen kirkonkello',
       saapuminen: 'Kukkulan pienen kirkon kello löi yhden lyönnin, kun astuin '
         + 'portista — ja kellonsoittaja vannoi, ettei köydessä ollut '
-        + 'kättä. Kirkon perusti tarun mukaan paimen, jonka nimeä koko '
-        + 'kaupunki kantaa. Alttarin kiveen oli hakattu paimensauva, ja '
-        + 'sauvan koukussa riippui pieni messinkinen barometri. Se ei '
-        + 'kuulunut kuvaan. Se riippui siinä oikeasti.',
+        + 'kättä. Kirkon perusti tarun mukaan paimen, jonka nimeä '
+        + 'koko kaupunki kantaa. Alttarin kiveen oli hakattu '
+        + 'paimensauva, ja sauvan koukussa riippui luotilanka, pieni '
+        + 'messinkipaino langan päässä. Se ei kuulunut kuvaan. Se '
+        + 'riippui siinä oikeasti.',
       henkilo: 'Kellonsoittaja Ana soittaa paimenen kirkon kelloa, jonka '
         + 'köyttä hänen sukunsa on vetänyt neljässä polvessa.',
       kohtaaminen: 'Kellotornin portailla Ana kiertää köyden ranteensa ympäri. '
@@ -948,10 +977,11 @@ export const KAARI_PAKETIT = {
           + 'kirkkonsa joen törmälle. Nimi Bucureşti kantaa hänen nimeään '
           + '— ja bucurie tarkoittaa romaniaksi iloa.',
       },
-      aarre: 'Messinkibarometrin sisällä ei ollut koneistoa vaan kätkö. '
-        + 'Ana ripusti sen takaisin koukkuun ja mietti ääneen: "Koukku '
-        + 'on kulunut kiiltäväksi — jokin on riippunut siinä kauan. '
-        + 'Mutta tässä laitteessa ei ole päivääkään pölyä."',
+      aarre: 'Messinkipaino kiertyi auki, eikä sen sisällä ollut lyijyä '
+        + 'vaan kätkö. Ana ripusti langan takaisin koukkuun ja mietti '
+        + 'ääneen: "Koukku on kulunut kiiltäväksi — jokin on '
+        + 'riippunut siinä kauan. Mutta tässä langassa ei ole '
+        + 'päivääkään pölyä."',
     },
     {
       id: 'kiova',
@@ -989,6 +1019,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'odessa',
+      mykistetyt: ['kohtaaminen'],
       otsikko: 'Odessa — lyhty jota ei sytytetty',
       saapuminen: 'Satamasta nousivat portaat, joita laskin sataan asti ennen '
         + 'kuin luovutin. Alhaalta katsoen näin vain askelmia, ylhäältä '
@@ -998,10 +1029,12 @@ export const KAARI_PAKETIT = {
         + 'Solmu oli isoisäni opettama. Vain hän sitoi sen niin.',
       henkilo: 'Lyhdynsytyttäjä Fjodor sytyttää portaikon lyhdyt joka ilta '
         + 'alhaalta ylös ja sammuttaa ne aamulla ylhäältä alas.',
-      kohtaaminen: 'Tasanteella Fjodor nojaa lyhtytankoonsa. "Sukuni on '
-        + 'sytyttänyt nämä lyhdyt portaiden valmistumisesta asti — ja '
-        + 'yksi on käsketty jättää sytyttämättä, kunnes solmun tuntija '
-        + 'tulee. Vastaa kirjan kysymykseen, niin sytytän sen nyt."',
+      kohtaaminen: 'Tasanteella Fjodor nojaa lyhtytankoonsa. "Tuon solmun '
+        + 'sitoi kirjasi omistaja, ja isoisoisäni katseli vieressä. '
+        + 'Samana iltana hän jätti tämän yhden lyhdyn sytyttämättä — '
+        + 'meillä sanotaan: valo säästetään sille, joka vielä nousee '
+        + 'portaat. Suku piti tavan, vaikka syy ehti hämärtyä. Vastaa '
+        + 'kirjan kysymykseen, niin sytytän sen nyt."',
       kysymys: {
         q: 'Odessan jättiläisportaikko tekee silmille tempun. Minkä?',
         vaihtoehdot: [
@@ -1095,6 +1128,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'helsinki',
+      mykistetyt: ['kohtaaminen'],
       otsikko: 'Helsinki — maa joka nousee merestä',
       saapuminen: 'Saarille rakennettu linnoitus nousi merestä harmaana kuin '
         + 'aallonmurtaja. Kuninkaanportin rappusilla istui poika, joka '
@@ -1106,10 +1140,11 @@ export const KAARI_PAKETIT = {
       henkilo: 'Luotsi Aino ohjaa laivat linnoituksen salmien läpi ja tuntee '
         + 'jokaisen karin — myös ne, joita ei ole kartoissa.',
       kohtaaminen: 'Laiturilla Aino kiinnittää veneensä yhdellä solmulla. '
-        + '"Sukuni on luotsannut näitä salmia niin kauan kuin linnoitus '
-        + 'on seissyt. Isoisäsi maksoi luotsauksen, jota ei koskaan '
-        + 'käytetty — se on yhä voimassa. Vastaa hänen kysymykseensä, '
-        + 'niin luotsaan sinut perille."',
+        + '"Isoisäsi maksoi yösijansa kartalla: hän piirsi '
+        + 'isoisoisälleni nämä salmet ulkomuistista, karit mukana. '
+        + 'Yksi väylä siinä on merkitty pelkällä kysymysmerkillä — '
+        + 'sukuni ei ole sitä koskaan kulkenut. Vastaa hänen '
+        + 'kysymykseensä, niin kuljemme sen tänään."',
       kysymys: {
         q: 'Helsingin edustalle rakennettiin merilinnoitus Suomenlinna. '
           + 'Mikä siinä on erikoista?',
@@ -1204,6 +1239,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'vilna',
+      mykistetyt: ['kohtaaminen'],
       otsikko: 'Vilna — susi joka ulvoi sadan äänellä',
       saapuminen: 'Kukkulalla opas kertoi suuriruhtinaan unesta: rautainen susi '
         + 'ulvoi sadan suden äänellä, ja tietäjä luki unen niin, että '
@@ -1214,10 +1250,11 @@ export const KAARI_PAKETIT = {
       henkilo: 'Yövartija Rasa kiertää vanhankaupungin kujat lyhtyineen ja '
         + 'tervehtii rautaista sutta joka kierroksella.',
       kohtaaminen: 'Lyhdyn valossa Rasa laskee kierroksensa avaimet. "Suden '
-        + 'selässä on kulunut kohta — sukuni on silittänyt sitä onneksi '
-        + 'joka yö sata vuotta, koska eräs matkalainen maksoi siitä. '
-        + 'Vastaa hänen kysymykseensä, niin kerron, mitä hän oikeasti '
-        + 'maksoi."',
+        + 'selässä on kulunut kohta. Isoisäsi pysähtyi tähän eräänä '
+        + 'yönä, laski kätensä siihen ja sanoi vartijalle: silittäkää '
+        + 'tekin — tämä kaupunki tarvitsee vielä onnensa. Suku on '
+        + 'totellut siitä asti, ei rahasta vaan siksi, että hän osui '
+        + 'oikeaan. Vastaa hänen kysymykseensä, niin kerron mihin."',
       kysymys: {
         q: 'Vilnan tarun mukaan kaupunki sai alkunsa suuriruhtinas '
           + 'Gediminasin unesta. Mitä hän näki?',
@@ -1309,13 +1346,14 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kobenhavn',
+      mykistetyt: ['saapuminen'],
       otsikko: 'Kööpenhamina — satu jota ei kerrottu loppuun',
       saapuminen: 'Satamakanavan varrella talot hehkuivat keltaisina ja '
         + 'punaisina, ja laiturilla vanha merimies kertoi lapsille '
         + 'satua rumasta ankanpoikasesta — sanasta sanaan niin kuin '
         + 'sadun kirjoittaja itse, jonka sanotaan asuvan tällä '
         + 'kanavalla. Kun satu loppui, merimies ojensi minulle paperin: '
-        + 'herra numerosta kaksikymmentä jätti tämän teille. Paperilla '
+        + 'herra numerosta kahdeksantoista jätti tämän teille. Paperilla '
         + 'oli yksi lause: kaikki tarinat ovat tosia sille, joka etsii '
         + 'loppuun asti.',
       henkilo: 'Sadunkertoja Karen kertoo satuja Nyhavnin laiturilla samalta '
@@ -1382,6 +1420,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'tromssa',
+      mykistetyt: ['kohtaaminen'],
       otsikko: 'Tromssa — lyhty joka paloi keskiyön auringossa',
       saapuminen: 'Aurinko ei laskenut. Se vieri pohjoisen taivaanrannan yli '
         + 'kuin kultakolikko, joka ei suostu putoamaan, ja satama eli '
@@ -1392,9 +1431,11 @@ export const KAARI_PAKETIT = {
       henkilo: 'Satamavahti Ingrid pitää keskiyön auringon aikaan kirjaa '
         + 'saapuvista laivoista, koska yö ei sitä tee.',
       kohtaaminen: 'Laiturin päässä Ingrid sulkee lokikirjansa. "Lyhtyvene on '
-        + 'sukuni vene, ja lyhty on palanut merkkinä samalle '
-        + 'matkalaiselle sata vuotta. Vastaa kirjan kysymykseen, niin '
-        + 'sammutan sen — silloin merkki on mennyt perille."',
+        + 'sukuni vene. Isoisoisäni sytytti maston lyhdyn sinä yönä, '
+        + 'jona isoisäsi laiva lähti yöttömään yöhön, ja suku '
+        + 'sytyttää sen yhä joka kesä — meillä sanotaan: sammutetaan '
+        + 'sitten, kun tieto tulee. Vastaa kirjan kysymykseen. Sinä '
+        + 'olet se tieto, ja minä sammutan lyhdyn."',
       kysymys: {
         q: 'Tromssassa aurinko ei kesällä laske moneen viikkoon. Miksi '
           + 'ilmiötä kutsutaan?',
@@ -1690,10 +1731,11 @@ export const KAARI_PAKETIT = {
         + 'Sitä vartioidaan.',
       henkilo: 'Saippuamestari Karim keittää laakerisaippuaa samassa pajassa '
         + 'kuin sukunsa, ja jokainen erä leimataan suvun merkillä.',
-      kohtaaminen: 'Karim nostaa satavuotiaan kuution hyllyltä. "Erän maksoi '
-        + 'matkalainen, joka pyysi säilyttämään yhden kuution — ja '
-        + 'luovuttamaan sen vastausta vastaan. Kysymys koskee sitä, '
-        + 'mikä tekee saippuastamme kuuluisan. Vastaa."',
+      kohtaaminen: 'Karim nostaa satavuotiaan kuution hyllyltä. "Kuution jätti '
+        + 'matkalainen, joka kirjoitti kääreeseen ilmanpuntarinsa '
+        + 'lukeman ja sanoi: saippua on valmis, kun joku lukee tämän '
+        + 'luvun ääneen ja tietää, mitä se tarkoittaa. Kysymys koskee '
+        + 'sitä, mikä tekee saippuastamme kuuluisan. Vastaa."',
       kysymys: {
         q: 'Halabin kuuluisa saippua on väriltään ulkoa ruskea mutta '
           + 'sisältä vihreä. Mikä öljy antaa sille vihreän sydämen?',
@@ -1842,10 +1884,12 @@ export const KAARI_PAKETIT = {
         + 'risti. Se ei kuulu asteikkoon.',
       henkilo: 'Nilometrin vartija Fatima lukee joen mittaa, kuten hänen '
         + 'sukunsa on lukenut niin kauan kuin tulvia on kirjattu.',
-      kohtaaminen: 'Fatima laskee kätensä kaiverretulle viivalle. "Matkalainen '
-        + 'maksoi siitä, että hänen viivansa pidetään puhtaana. Ja hän '
-        + 'jätti kysymyksen: vastaa, niin kerron miksi juuri tämä '
-        + 'viiva."',
+      kohtaaminen: 'Fatima laskee kätensä kaiverretulle viivalle. "Tämän '
+        + 'viivan mittasi ja kaiversi matkalainen omin käsin sinä '
+        + 'vuonna, jona joki nousi korkeammalle kuin kertaakaan suvun '
+        + 'kirjoissa. Pidämme sen puhtaana, koska se oli oikeassa '
+        + 'silloin kun kaikki muut mitat valehtelivat. Hän jätti '
+        + 'kysymyksen: vastaa, niin kerron miksi juuri tämä viiva."',
       kysymys: {
         q: 'Rodan saaren nilometrillä mitattiin Niilin tulvan korkeutta. '
           + 'Miksi mittaus oli niin tärkeä?',
@@ -2353,9 +2397,11 @@ export const KAARI_PAKETIT = {
       henkilo: 'Suitsukkeenkerääjä Mariam viiltää puiden kuorta ja kerää '
         + 'pihkan kyynelinä, kuten hänen sukunsa on kerännyt aina.',
       kohtaaminen: 'Mariam laskee punnuksen kämmenelleni. "Punnuksen jätti '
-        + 'matkalainen, joka osti pihkaa yhden kyynelen verran ja '
-        + 'maksoi kuin säkistä. Hän sanoi: kysymys on hinta. Vastaa '
-        + 'siihen, niin kerron mitä hän oikeasti osti."',
+        + 'matkalainen, joka huomasi vaakamme valehtelevan — meidän '
+        + 'tappioksemme, ei ostajan. Hän viilasi sen oikeaan omalla '
+        + 'kädellään ja jätti oman punnuksensa takeeksi. Ja hän jätti '
+        + 'kysymyksen: vastaa, niin punnitsen sinulle sen, mitä hän '
+        + 'täältä vei."',
       kysymys: {
         q: 'Salalahin rannikko vihertyy kesällä, kun muu Arabian '
           + 'niemimaa paahtuu. Mikä sen selittää?',

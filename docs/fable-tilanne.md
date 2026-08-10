@@ -6,6 +6,31 @@ uuden tilin session — yli. Lue tämä ENSIN, sitten `CLAUDE.md`,
 `js/tyohuone-tilanne.js`. Ylin osio on aina tuorein tila; alemmat
 osiot ovat aikajärjestyksessä vanhenevaa historiaa.*
 
+## TEKSTIERÄ TOTEUTETTU ~16:30Z (v536) — LUENNAT MYKISTETTY
+
+- **Fable maxin kaariauditti + omat kuusi vietiin dataan yhtenä
+  eränä** (omistajan mandaatti: "toteuta kun raportti valmistuu, ei
+  vielä ääniä"): U1-U5 kohtaamiset (Helsinki, Lissabon, Odessa,
+  Tromssa, Pariisi), U6-U8 (Bukarest luotilanka ×2, Dublin
+  hevospelko), U9-U10 sanakorjaukset (Praha, Kööpenhamina=kobenhavn),
+  K1 Wienin kysymys, K2 neljä otsikkoa, V1/V3/V4 elävöitykset
+  (Rooma, Barcelona, Berliini; V2/V5 jätettiin), omat: Sofia
+  (C1-korjattuna), Praha, Vilna + ME Kairo/Salalah/Halab.
+- **Mykistysmekanismi:** kohteen mykistetyt-lista + tarinakaari.js
+  kaariLuentaSoi + portit ui.js:n neljässä soittokohdassa
+  (saapuminen/kohtaaminen/aarre ×2). Vanha ääni EI soi uuden tekstin
+  päällä; kaiutinnappi piiloutuu. GENEROINTIERÄ MYÖHEMMIN: 17
+  tiedostoa: kohtaamiset ×8 (helsinki, lissabon, odessa, tromssa,
+  pariisi, sofia, praha, vilna), saapumiset ×4 (praha, kobenhavn,
+  dublin, bukarest), aarteet ×5 (praha, bukarest, rooma, barcelona,
+  berliini) = 17 — generoinnin jälkeen mykistetyt-kentät tyhjennetään.
+- **Raamattuun kirjattu:** beat-paletti + kiintiöt, kevätkulkija
+  tahalliseksi, barometrilanka budjetti 4, ME-kiintiöt, vartijoiden
+  ääniprofiilit, väärä johtolanka + nolo hetki, Reginald-profiili,
+  1800-luvun tapapankki.
+- Fable max valmiudessa; Sonnet 1:n kuva-auditin 11 vaihtoa +
+  13 duplikaattia Opus 1:llä työn alla.
+
 ## ILTAPÄIVÄN PIKASYKLIT 10.8. ~14:00–15:00Z (v530–v532)
 
 - **v530:** maapilleri kartan kehykselle + punamulta-ääriviiva

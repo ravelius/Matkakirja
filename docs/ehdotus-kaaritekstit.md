@@ -1,3 +1,12 @@
+# TOTEUTETTU 10.8.2026 (v536) — kuuden kohtaamisen uudet tekstit
+
+*Omistaja hyväksyi erän ja Fable maxin auditin ehdotukset yhdessä;
+kaikki tekstit ovat pelidatassa. Sofia toteutettiin Fable maxin
+C1-huomion mukaisesti muodossa "kävi kirjaamassa lukemat sinä
+viikkona" (kolmas valvottu yö vältetty). Luentoja EI ole generoitu —
+muuttuneet osat on mykistetty (mykistetyt-kentät datassa) kunnes
+generointierä ajetaan. Alla alkuperäinen ehdotus.*
+
 # Ehdotus: kuuden kohtaamisen uudet tekstit (mahtipontisuuspassi)
 
 *Fable 10.8.2026. Tausta: omistajan havainto Sofian Nadia-tekstistä —

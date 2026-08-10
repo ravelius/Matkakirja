@@ -329,6 +329,67 @@ peräkkäisissä kaupungeissa. Vanhojen tekstien parhaat 1873-faktat ja rakkaimm
 lauseet ("Heitin omani samaan kohtaan") saa ja kannattaa
 kierrättää lyhennettyinä — uusiminen ei ole hävittämistä.
 
+## Kaaren rytmi- ja elävyyssäännöt (10.8.2026, Fable maxin auditista — sitovia ME:stä alkaen)
+
+**Aarteen loppubeatin paletti ja kiintiö.** Euroopassa 32/41 aarretta
+päättyy "tuore jälki / joku käy yhä" -iskuun — se on sarjan ydinlanka,
+mutta kiintiö jatkossa: ENINTÄÄN PUOLET laudan aarteista saa päättyä
+tuoreeseen jälkeen, eikä kahdella peräkkäisellä naapurikohteella samaa
+beat-tyyppiä. Paletti: tuore jälki · toinen esine jossain muualla ·
+ajaton arvoitus · liian VANHA jälki (ennen isoisää!) · vartijan oma
+salaisuus · hiljainen loppu ilman koukkua. Vanha-jälki on tuoreen
+paras vastapari ja puuttuu Euroopasta kokonaan.
+
+**Kevätkulkija on tahallinen.** Euroopan tuorejäljistä viisi osuu
+kevääseen — julistetaan dekkarilangaksi: joku kiertää Eurooppaa joka
+kevät. Grimshaw-jatkolinja saa hyödyntää tämän myöhemmin; uusia
+kevät-aikaleimoja ei lisätä ilman tätä tarkoitusta.
+
+**Kaaren motiivilanka "barometrilukema", budjetti 4 + jatkot.**
+Euroopassa Praha, Venetsia, Alpit ja Moskova; ME:llä Ankara, Bagdad
+ja Halab jatkavat suunnitellusti. Ei uusia esiintymiä ilman
+budjettipäätöstä. Vuosisataisten järjestelyjen kirjanpito Euroopassa:
+yksi perittynä tapana (Prahan liekki), kaksi Horation pientä pyyntöä
+(Pietarin avoin sivu, Edinburghin öljyäminen) — täynnä.
+
+**ME-kiintiöt:** "suvun kirja todistaa" enintään 2; valvottu yö
+enintään 2; lyhdynsytyttäjä-ammatti 0 (Euroopassa jo 2);
+"punnitsee kädessään" -ele enintään 2; sävelpaino arvoitus + lämpö
+(Euroopassa jännitys vei yli puolet).
+
+**Vartijoiden ääniprofiilit (ME:stä):** joka erässä yksi puhelias,
+yksi äreä, yksi epäuskoinen ("sukuni tarina on minusta satua — mutta
+vihko on tässä, ja tässä sinä seisot") ja yksi, joka ei tunne sukunsa
+tarinaa vaan hämmästyy itsekin. Epäusko ja hämmästys ovat huumorin
+luonnolliset kodit — kunnioitussäännöt ennallaan.
+
+**Uudet beat-työkalut (1–2 per lauta):** väärä johtolanka (outo
+jälki osoittautuu arkiseksi — liituristi olikin ruutuhyppelyä) ja
+Reginaldin nolo hetki (kätkö löytyy kerran kömpelösti). 1873-ankkurit:
+ME-saapumisiin 2–3 aitoa vuoden 1873 tositapahtumaa (Suezin kanava on
+kaksivuotias). Aistikierto: haju tai maku joka kolmanteen kohteeseen.
+
+### Nuori herra Reginald paperilla (kaanon 10.8.2026)
+
+- **Yrittää maksaa isoisän punnilla** — tottumuksesta, puoliksi
+  vitsinä; hämmentyy aidosti, jos joku ottaa setelin vastaan.
+- **Latauspaniikki:** puhelin on aina 4 %:ssa juuri kun tarvitsisi,
+  offline-kartta lakkaa kujien kohdalla — isoisän paperikartta
+  voittaa aina, ja Reginald vihaa sitä hieman.
+- **Muuttuu isoisäkseen huomaamattaan:** lataa barometrisovelluksen
+  "vertailun vuoksi", alkaa laskea portaita, kirjaa säätä. Tunneytimen
+  kevyt kääntöpuoli: takaa-ajaja alkaa kirjoittaa samaa kirjaa.
+- **Surkea tinkijä, kuten isoisä** — suvun periytyvä vika.
+
+**1800-luvun tapapankki Horatiolle (poimittavaksi, pilkka osuu vain
+Horatioon itseensä):** käyntikortin kulman taittaminen (Horatio
+taittaa aina väärän kulman), ristiinkirjoitetut kirjeet ("isoisän
+kirje on salakirjoitusta vahingossa"), Bradshaw'n aikataulukirjan
+mahdottomuus, viiksilusikka, uimakone-vaunut, suruajan värikoodit,
+hattujen nostelun geometria. Hevospelko välähtää harvakseltaan
+(1. esiintymä: Dublinin saapuminen), itseironia yhteen saapumiseen
+per erä.
+
 ## Aarrevihjeet: matkalle, ei kaupunkeihin (7.8.2026)
 
 Omistajan linjaus: *"Aarrevihjeet voisi siirtää kaupunkien välille,
