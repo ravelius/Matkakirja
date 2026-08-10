@@ -497,6 +497,10 @@ const KAUPUNGIT = {
     // Vanhankaupungin kujat ovat OSM:ssä pääosin footway (805 kpl),
     // joita työkalu ei piirrä — sisus jää siis ilmavaksi eikä
     // sokkeloiseksi. Kartan juoni on muurirengas ja meri, ei kujaverkko.
+    //
+    // Muuri piirtyy 10.8.2026 alkaen (barrier=city_wall). Tallinnassa
+    // se ei ole yhtenäinen rengas kuten Dubrovnikissa vaan sarja
+    // pätkiä, mutta juuri ne pätkät ovat vanhankaupungin reuna.
     // Leveämmällä 2,55 km:n rajauksella rengas alkaa hukkua.
     //
     // meri: true eikä 'maa': maata on vain veden eteläpuolella, joten
@@ -782,7 +786,19 @@ async function haeOverpass(rajat, palvelutiet = false) {
    * 189, joten ilman niitä koko vanhakaupunki jää tyhjäksi paperiksi.
    * Lippu on siksi kaupunkikohtainen eikä oletus.
    */
-  const luokat = [...KADUT.flatMap((k) => k.luokat), ...(palvelutiet ? ['service'] : [])].join('|');
+  /*
+   * HUOM: KADUT on sekä KYSELYN että PIIRRON lähde. Kun palvelutie
+   * lisättiin tauluun omaksi luokakseen, kysely alkoi hakea
+   * service-teitä JOKAISEEN kaupunkiin, vaikka lippu oli tarkoitettu
+   * valinnaiseksi — Tallinnan koeajossa se toi 1526 ylimääräistä
+   * elementtiä ja siroitti kuvaan ohuita kujia kaikkialle. Luokka
+   * suodatetaan siksi pois kyselystä, ellei kaupunki sitä pyydä;
+   * silloin sen piirtokerros jää tyhjäksi eikä mitään piirry.
+   */
+  const luokat = KADUT
+    .flatMap((k) => k.luokat)
+    .filter((l) => l !== 'service' || palvelutiet)
+    .join('|');
   const kysely = `[out:json][timeout:120];(
     way["highway"~"^(${luokat})$"]${alue};
     way["waterway"~"^(river|canal)$"]${alue};
