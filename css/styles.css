@@ -1063,6 +1063,13 @@ body.aloitus-zoom .kiikari {
   cursor: pointer;
 }
 
+/*
+ * Inline-svg elää tekstirivillä ja tuo baseline-tyhjän alleen, mikä
+ * työnsi kuvaketta ylös vasempaan (omistajan havainto 10.8.2026 ilta:
+ * "napin ikoni on oudosti keskitetty") — block antaa gridin keskittää.
+ */
+.maalehti-nappi svg { display: block; }
+
 .maalehti-nappi[hidden] { display: none; }
 
 .maalehti-nappi:hover { background: rgba(245, 231, 200, 0.95); }
