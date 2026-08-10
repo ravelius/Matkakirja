@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.532';
+const CACHE = 'matkakirja-2026-08-09.533';
 const SHELL = [
   './',
   './index.html',
@@ -131,6 +131,10 @@ const SHELL = [
   // selaillaan eniten.
   './assets/linssit/yokartta.jpg',
   './assets/linssit/topografia.webp',
+  // Kohtaamiskuvat (kohtaamiskortti + kätkötulos, pilotti 10.8.2026).
+  './assets/kohtaamiset/kohtaaminen-ateena.jpg',
+  './assets/kohtaamiset/kohtaaminen-sofia.jpg',
+  './assets/kohtaamiset/kohtaaminen-katko.jpg',
   // AI-generoidut aarrekuvat (paljastuskortti) — 21 kpl, 7 lautaa.
   './assets/aarteet/aarre-europe-ruby.jpg',
   './assets/aarteet/aarre-europe-emerald.jpg',

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 533, teksti: 'Kohtaamiskuvat kortille: Ateena, Sofia ja kätkölöytö' },
   { v: 532, teksti: 'Matkustamoääni avauslentoon, maatiedot löydettäväksi' },
   { v: 531, teksti: 'Aarrekortti pysyy luennan ajan ja ruksi sulkee sen' },
   { v: 530, teksti: 'Maan nimi pilleriksi kartan kehykselle ja luennan feidaus' },

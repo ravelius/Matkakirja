@@ -358,6 +358,9 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'ateena',
+      // Kohtaamiskuva (Opus 3:n pilotti 10.8.2026): näkyy kohtaamis-
+      // kortilla tekstin oikealla puolella.
+      kuva: 'assets/kohtaamiset/kohtaaminen-ateena.jpg',
       otsikko: 'Ateena — pöllö joka vartioi rahaa',
       saapuminen: 'Akropoliin juurella pöllö istui kaatuneella pylväällä ja '
         + 'katsoi minua liikahtamatta, kuin olisi odottanut. Sen jalan '
@@ -882,6 +885,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'sofia',
+      kuva: 'assets/kohtaamiset/kohtaaminen-sofia.jpg',
       otsikko: 'Sofia — lähde joka kirjattiin sata vuotta',
       saapuminen: 'Keskellä kaupunkia maa hönkäisi lämmintä: lähde kumpusi '
         + 'kuumana kivialtaaseen, ja ihmiset jonottivat kannuineen '
