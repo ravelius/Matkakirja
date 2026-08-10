@@ -822,11 +822,13 @@ const INTRO_FONT_MAX = 1.32;
 const INTRO_FONT_MIN = 0.72;
 // Omistajan päättämä avausteksti. ÄLÄ muokkaa ilman omistajan lupaa
 // (docs/tyolista-opukselle.md, paketti 3). Lyhennetty omistajan
-// pyynnöstä 4.8.2026: pitkää versiota ei jaksanut kuunnella.
+// pyynnöstä 4.8.2026; draamaviilaus omistajan hyväksynnällä
+// 10.8.2026. Teksti ja luenta (intro-puhe.mp3) pidetään samana —
+// muutos vain tools/generoi-avaus.mjs:n kautta.
 const INTRO_TEXT = 'Vintiltä löytyi isoisän kulunut matkakirja: '
   + '"Maailman ympäri kahdeksassakymmenessä päivässä".\n\n'
   + 'Viimeinen sivu oli revitty kesken lauseen: "…voinut uskoa, siellä '
-  + 'olikin…" Mitä hän oli löytänyt?\n\n'
+  + 'olikin…" Mitä hän löysi? Ja kuka repii kirjasta juuri sen sivun?\n\n'
   + 'Juoksin kentälle kirja kädessäni:\n\n'
   + 'mistä aloitan?';
 /*

@@ -520,12 +520,12 @@ export const MAAILMA = {
     // Avauslennon repliikki on lukittu yhteen riviin, koska sille on
     // tuotettu lukuääni (assets/audio/puhe-lento-alku.mp3) — teksti ja
     // puhe pysyvät aina samana. Rivi jatkaa avaustekstin revittyä sivua.
-    // Lyhennetty 7.8.2026 (omistaja: "Nykyinen on liian pitkä" — taito
-    // on tehdä tarpeeksi lyhyt). Luennan tagit: [excited] alkuun,
-    // [warmly] loppuun; generointi samalla reseptillä kuin
-    // tools/generoi-luennat.mjs.
+    // Uusittu 10.8.2026 omistajan hyväksynnällä (hengästynyt alku,
+    // enemmän imua); luenta v3-tunnetagein tools/generoi-avaus.mjs:llä
+    // — teksti muutetaan vain sen kautta, jotta ruutu ja puhe pysyvät
+    // samana.
     flightFirst: [
-      'Isoisän kirja on auki sylissäni, ja koneen alla maailma vasta alkaa. Kahdeksankymmentä päivää — otetaan selvää, mihin hän ei ehtinyt.',
+      'Huh — ehdin! Kone nousee, ja isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä. Revitty sivu ei kerro, mitä hän löysi — joten menen katsomaan itse.',
     ],
     intro: 'Peli alkaa! Etsikää Magellanin kompassi — maailmanympäripurjehtijan kadonnut aarre.',
     starFound: (name, city) => `◈ ${name} löysi MAGELLANIN KOMPASSIN kaupungista ${city}!`,
