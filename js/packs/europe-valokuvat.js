@@ -478,20 +478,12 @@ export const EUROPE_VALOKUVAT = {
 
       {
 
-        tiedosto: 'Bull leaping minoan fresco archmus Heraklion.jpg',
-
+        tiedosto: 'Knossos fresco of dolphins in queen\'s palace.JPG',
         vuosi: 'noin 1600–1450 eaa. (kuvattu 2015)',
-
-        lahde: 'CC0 (Jebulon, Commons)',
-
-        selite: 'Härkähyppyfresko Knossoksesta, nykyään Herakleionin '
-
-          + 'arkeologisessa museossa. Maalaus ajoitetaan noin vuosiin '
-
-          + '1600–1450 eaa., ja siinä hypätään härän yli juuri niin kuin '
-
-          + 'päiväkirja kertoo.',
-
+        lahde: 'Commons (CC BY-SA 3.0)',
+        selite: 'Delfiinifresko Knossoksen palatsin kuningattaren huoneessa. '
+          + 'Siniset delfiinit ui pienten kalojen seassa, ja alareunassa '
+          + 'kiertää kiehkurakuvio.',
       },
 
       {
@@ -1085,18 +1077,12 @@ export const EUROPE_VALOKUVAT = {
 
       {
 
-        tiedosto: 'Calçada da Praça do Rossio.jpg',
-
+        tiedosto: 'Calçada Portuguesa, Lisboa.jpg',
         vuosi: '2012',
-
-        lahde: 'Roede, Commons (CC BY-SA 3.0)',
-
-        selite: 'Rossion aukion jalkakäytävä Lissabonissa. Calçada portuguesa '
-
-          + 'ladotaan käsin mustasta basaltista ja valkoisesta '
-
-          + 'kalkkikivestä, ja kuvio syntyy pelkästä värierosta.',
-
+        lahde: 'Girassolei, Commons (CC BY-SA 4.0)',
+        selite: 'Portugalilaista mukulakivikuviointia Lissabonin jalkakäytävällä. '
+          + 'Mustat ja valkoiset kivet on ladottu kaariksi käsin, ja päällä '
+          + 'lepää syksyn lehtiä.',
       },
 
     ],
@@ -1569,18 +1555,12 @@ export const EUROPE_VALOKUVAT = {
 
       {
 
-        tiedosto: 'Széchényi Spa Chess Champions (6991219530).jpg',
-
+        tiedosto: 'Budapest Széchenyi Baths R04.jpg',
         vuosi: '2012',
-
-        lahde: 'Christine Zenino, Commons (CC BY 2.0)',
-
-        selite: 'Shakinpelaajia Széchenyin kylpylän ulkoaltaassa Budapestissa. '
-
-          + 'Vesi tulee lämpimänä maan alta, joten peli jatkuu viileälläkin '
-
-          + 'ilmalla — kukaan ympärillä ei pidä sitä sen ihmeellisempänä.',
-
+        lahde: 'Marc Ryckaert, Commons (CC BY 3.0)',
+        selite: 'Széchenyin kylpylän käytävä päärakennuksen sisällä. Holvikatto, '
+          + 'keltaiset seinät ja rivi puisia tuoleja odottavia kylpijöitä '
+          + 'varten.',
       },
 
     ],
@@ -1741,20 +1721,12 @@ export const EUROPE_VALOKUVAT = {
 
       {
 
-        tiedosto: 'Escalators at the deepest metro station of the world Arsenalna (105.5m) (8601894844).jpg',
-
+        tiedosto: 'Arsenalna station. Kyiv metro.jpg',
         vuosi: '2012',
-
-        lahde: 'Jorge Láscar, Commons (CC BY 2.0)',
-
-        selite: 'Arsenalnan aseman liukuportaat Kiovan metrossa. Asema on '
-
-          + 'maailman syvimpiä, runsaat 105 metriä maanpinnan alapuolella, '
-
-          + 'ja laiturille laskeudutaan pitkiä portaita peräkkäin — matka '
-
-          + 'tuntuu siltä kuin se ei loppuisi.',
-
+        lahde: 'Ahernar, Commons (CC BY-SA 4.0)',
+        selite: 'Arsenalnan aseman laiturihalli Kiovassa. Marmoripilarit ja '
+          + 'matala holvi ovat 105 metrin syvyydessä maan alla, ja halli on '
+          + 'poikkeuksellisen lyhyt.',
       },
 
       {
@@ -1927,18 +1899,11 @@ export const EUROPE_VALOKUVAT = {
 
       {
 
-        tiedosto: 'Hermitage cat1.JPG',
-
+        tiedosto: 'RU - Saint Petersburg - Hermitage Museum - 2009-07-18 (4891826564).jpg',
         vuosi: '2014',
-
-        lahde: 'Petrov Victor, Commons (CC BY-SA 3.0)',
-
-        selite: 'Eremitaašin kissa. Talvipalatsin kellareissa pidetään yhä '
-
-          + 'kissoja, ja tapa juontaa juurensa 1700-luvulle asti — samaan '
-
-          + 'määräykseen, jonka isoisän muistiinpanot mainitsevat.',
-
+        lahde: 'CGP Grey, Commons (CC BY 2.0)',
+        selite: 'Eremitaasin sisustusta: kullattuja seinälamppuja, valkoisia '
+          + 'veistoksia ja koristeltuja pilareita talvipalatsin salissa.',
       },
 
     ],
@@ -2426,16 +2391,12 @@ export const EUROPE_VALOKUVAT = {
 
       {
 
-        tiedosto: 'Brunost - Brown cheese.jpg',
-
+        tiedosto: 'Brown cheese sandwiches and coffee..jpg',
         vuosi: '2006',
-
-        lahde: 'CC BY 2.0',
-
-        selite: 'Lähikuva brunostista, norjalaisesta ruskeasta juustosta. Sitä '
-
-          + 'syödään ohuina siivuina leivän tai vohvelin päällä.',
-
+        lahde: 'Kristian Bjornard, Commons (CC BY-SA 2.0)',
+        selite: 'Kaksi voileipää ruskeajuustoviipaleineen ja kahvikuppi. Juusto '
+          + 'leikataan ohuiksi lastuiksi juustohöylällä, joka on norjalainen '
+          + 'keksintö.',
       },
 
     ],

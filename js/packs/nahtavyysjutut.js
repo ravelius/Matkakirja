@@ -3446,10 +3446,11 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Frank K., Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'Casa Batlló 01.jpg',
-          selite: 'Casa Batllón kuuluisa lohikäärmeen selkää muistuttava '
-            + 'kattoharja mosaiikkilaatoin sinistä taivasta vasten.',
-          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Casa Batlló facade at night.JPG',
+          lahde: 'Mikenorton, Wikimedia Commons (CC BY-SA 3.0)',
+          selite: 'Casa Batllón julkisivu valaistuna illalla. Mosaiikki hohtaa '
+            + 'lampuissa, ja parvekkeet erottuvat naamiomaisina Passeig de '
+            + 'Gràcialle.',
         },
       ],
       lahde: 'Wikipedia',

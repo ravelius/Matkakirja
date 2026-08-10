@@ -43,3 +43,34 @@ tools/lainausankkurit.json ja tarkista-lainaukset.mjs nojaavat.
 Tiedosto SÄILYY; vain sen harhaanjohtava kommenttiviite korjataan
 (Opus 2:n erä). "Ei UI-importtia" ei kelpaa poistoperusteeksi —
 kumpaakaan maastotekstipakettia ei ole vielä kytketty käyttöliittymään.
+
+## Tilanne 10.8.2026 (Opus 1, v494–v497)
+
+Listan 17 vaihdosta on tehty 16. Vaihdettu aina se esiintymä, jonka
+yhteyteen löytyi luonteva toinen kuva samasta kohteesta — yleensä
+valokuvapuoli, jotta kulttuurinoston kuratoitu kuva säilyy.
+
+**Hyväksytyt duplikaatit** (ei vaihdeta, peruste kirjattu):
+
+- **Las Meninas** ja **Gizan pyramidit** — Fablen alkuperäinen päätös.
+- **#3 Tšadjärven kalastaja** — Commonsissa on vain sama valokuva
+  kahtena versiona (suoristettu ja alkuperäinen), joten vaihto ei
+  poistaisi toistoa. Esiintymät ovat africa-kulttuuri.js:ssä ja
+  maasto-tekstit.js:ssä, jotka eivät näy pelaajalle vierekkäin.
+- **Rio Javaés** — Commonsissa ei ole toista vapaata kuvaa Javaés-joelta
+  eikä Bananalin saarelta. Sama peruste: maastosivu ja valokuvapaketti
+  eivät ole pelaajalle vierekkäin.
+
+**Listan ulkopuolelta löytyneet ja korjatut** (sama luokka kuin #16–#17,
+syntyivät listan laatimisen jälkeen): Hagia Sofia (Istanbulin kansi sai
+Yerebatanin vesisäiliön), Casa Batlló (nähtävyysjutun karusellikuva
+vaihtui iltakuvaan), Ripon Falls (maasto-tekstit-malli sai vanhan
+puupiirroksen Leclercqin valokuvan tilalle).
+
+**Vielä auki**: Latin Bridge Sarajevo (kulttuuri-kategoriat ↔
+nähtävyysjutut) syntyi v495:n nähtävyysjuttuerässä — sama luokka,
+odottaa päätöstä.
+
+Tarkistin: /tmp:n dup-kaikki.mjs lukee kaikki paketit tekstitasolla
+(`tiedosto:`-kentät), jolloin rakenne ei voi piilottaa duplikaattia.
+Ennen erää 23 päällekkäisyyttä, nyt 6.
