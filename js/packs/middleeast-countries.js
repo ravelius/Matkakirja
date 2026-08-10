@@ -13,12 +13,26 @@
 //   X = (lon - 24) * 25      Y = (44.1 - lat) * 29.28
 // ja jäännökset ovat alle 16 lautayksikköä. Ks. työkalun kommentti.
 //
-// KUUSI LAUDAN KOHDETTA PUUTTUU TAHALLAAN kaupunki-maa-taulusta:
-// Jerusalem, Petra, Siinai, Rub al-Khali, Persepolis ja Kappadokia.
-// Ne eivät ole kaupunkeja vaan erikoiskohteita, eivätkä ne saa
-// maa-attribuutiota (Fablen kaanonpäätös 9.8.2026) — isoisän
-// päiväkirja puhuu paikasta itsestään eikä valtiosta. Esitystapa on
-// Fablen pöydällä. ÄLÄ lisää niitä tauluun ilman Fablen päätöstä.
+// ERIKOISKOHTEIDEN MAATUNNUKSET, PÄIVITETTY 10.8.2026.
+//
+// Tässä luki 9.8.2026 asti, että kuusi laudan kohdetta (Jerusalem,
+// Petra, Siinai, Rub al-Khali, Persepolis, Kappadokia) puuttuu
+// TAHALLAAN taulusta: ne eivät ole kaupunkeja vaan erikoiskohteita,
+// eikä isoisän päiväkirja puhu niiden kohdalla valtiosta. Sääntö
+// päättyi kieltoon "älä lisää niitä ilman Fablen päätöstä".
+//
+// Fable tilasi 10.8.2026 viisi niistä lisättäväksi (kapadokia→TUR,
+// siinai→EGY, rubalkhali→SAU, persepolis→IRN, petra→JOR). Tilaus
+// tulee samalta taholta, joka säännön asetti, joten se korvaa sen.
+// Käytännön peruste on vahva: maailmankartalla näillä viidellä on
+// ollut sama maatunnus koko ajan, joten laudat olivat keskenään
+// ristiriidassa — ja ilman tunnusta kohteen lehdestä puuttuvat maan
+// aihesivut ja "Maa numeroina".
+//
+// JERUSALEM JÄTETTIIN ENNALLEEN. Sitä ei ole kummallakaan laudalla,
+// eikä laudalla ole ISR- tai PSE-muotoa lainkaan. Tunnuksen antaminen
+// olisi kannanotto eikä tekninen yhtenäistys, joten se jää Fablen ja
+// omistajan päätettäväksi.
 //
 // KYTKETTY LAUTAAN 9.8.2026 (middleeast.js:n map-olio: countryShapes
 // ja cityCountry, samoin kuin europe.js:ssä ja africa.js:ssä).
@@ -36,10 +50,11 @@
 // siitä puuttuivat menovinkit ja maa numeroina, vaikka aineisto oli
 // valmiina.
 //
-// Siksi taulussa ei myöskään ole Jordaniaa eikä Israelia: laudalla
-// niiden ainoat kohteet ovat Petra ja Jerusalem, jotka on rajattu
-// ulos, joten maalle ei jäisi yhtään kaupunkia johon korostus
-// kiinnittyisi.
+// Jordanialla ja Israelilla ei ole muotoa tällä laudalla: niiden
+// ainoat kohteet ovat Petra ja Jerusalem. Petra osoittaa nyt silti
+// Jordaniaan, koska maan aihesivut haetaan ISO-tunnuksella eikä
+// muodosta — ja saapumiskortin minikartta ohittaa muodottoman maan
+// omalla vartijallaan (js/ui.js piirraMaakartta).
 export const MIDDLE_EAST_COUNTRY_SHAPES = {
   TUR: {
     nimi: 'Turkki',
@@ -203,18 +218,27 @@ export const MIDDLE_EAST_COUNTRY_SHAPES = {
 };
 
 // Kaupunki → maa. Kuusi erikoiskohdetta puuttuu tahallaan, ks. yllä.
+/*
+ * Laudan kohde -> maatunnus. Tästä syntyy sekä lehden maaosasto
+ * että "Maa numeroina" -sivu, joten puuttuva rivi ei näy virheenä
+ * vaan hiljaisena aukkona: kohteen lehti jää vaille maan sivuja.
+ * Erikoiskohteiden osalta ks. tiedoston alun perustelu.
+ */
 export const MIDDLE_EAST_CITY_COUNTRY = {
   istanbul: 'TUR',
   izmir: 'TUR',
   ankara: 'TUR',
+  kapadokia: 'TUR',
   nikosia: 'CYP',
   halab: 'SYR',
   damaskos: 'SYR',
   kairo: 'EGY',
   luxor: 'EGY',
+  siinai: 'EGY',
   medina: 'SAU',
   mekka: 'SAU',
   riad: 'SAU',
+  rubalkhali: 'SAU',
   sana: 'YEM',
   aden: 'YEM',
   salalah: 'OMN',
@@ -227,4 +251,6 @@ export const MIDDLE_EAST_CITY_COUNTRY = {
   tabriz: 'IRN',
   teheran: 'IRN',
   isfahan: 'IRN',
+  persepolis: 'IRN',
+  petra: 'JOR',
 };
