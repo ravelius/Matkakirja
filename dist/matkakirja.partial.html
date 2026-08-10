@@ -118995,6 +118995,13 @@ const AVAIN = 'matkakirja-aanivalinnat';
 
 // Tyyppiehdokkaat: käyvät kaikille saman maiseman kaupungeille.
 const TYYPPI_EHDOKKAAT = {
+  // Lentoasema on etusivun oma maisema (omistajan toive 10.8.2026:
+  // Lontoon lentokentän lähtöaulan häly ainoaksi taustaääneksi).
+  lentoasema: [
+    { url: 'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6', nimi: 'Gatwickin lähtöaula aamulla (Lontoo) — soundandmelodies, CC0' },
+    { url: 'https://cdn.freesound.org/previews/731/731247_10924423-lq.mp3#voima=0.6', nimi: 'Gatwickin lähtöaula iltapäivällä (Lontoo) — soundandmelodies, CC0' },
+    { url: 'https://cdn.freesound.org/previews/340/340276_2669559-lq.mp3#voima=0.6', nimi: 'Gatwickin odotusaula ja kuulutus (Lontoo) — andriiperevodchyk, CC0' },
+  ],
   basaari: [
     { url: 'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23', nimi: 'Basaarin hälinä (Khan el-Khalili) — 3bagbrew, CC0' },
     { url: 'https://cdn.freesound.org/previews/677/677253_9756914-lq.mp3#voima=0.47', nimi: 'Ouakamin piha illalla (Dakar) — LaureC, CC0' },
@@ -119386,6 +119393,22 @@ for (const pack of PACKS) {
   }
 }
 
+// Etusivun lähtöaula: oma virtuaalipaikka lentoasema-korille
+// (etusivun taustaääni vaihtui satamasta lähtöaulaan 10.8.2026).
+{
+  const kentta = KAUPUNGIT_TYYPEITTAIN.lentoasema ??= [];
+  if (!kentta.some((l) => l.lauta === 'maailma')) {
+    const maailma = PACKS.find((p) => p.id === 'maailma');
+    const paikat = ['Etusivun lähtöaula'];
+    kentta.unshift({
+      lauta: 'maailma',
+      maanosa: maailma?.boardLabel ?? 'Maailma',
+      kaupungit: paikat,
+      maat: [{ nimi: null, kaupungit: paikat }],
+    });
+  }
+}
+
 // Virtuaalipaikat kuuluvat Maailma-laudalle: etusivun satama ja
 // maailmankartan merimatkat saavat meri-äänensä sen korista. Muilla
 // laudoilla merimatka käyttää oman maanosansa koria.
@@ -119444,6 +119467,9 @@ const TYYPPIKORI_AVAIN = 'matkakirja-tyyppivalinnat';
 // näin sama arvonta soi myös kotivalikon sovelluksessa. Uusi maanosa
 // perii nämä, kunnes omistaja rastii sille omat äänensä.
 const OLETUSKORIT = {
+  lentoasema: [
+    'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6',
+  ],
   basaari: [
     'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55',
     'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23',
@@ -120315,10 +120341,14 @@ class Sound {
       src.loop = true; // lyhyempikin äänite kantaa koko kohtauksen yli
       const g = ctx.createGain();
       // Kevyt sisäänfeidaus (omistajan palaute 10.8.2026): moottori
-      // nousee kuuluviin ~2 sekunnissa samalla kun edellisen näkymän
+      // nousee kuuluviin ~3,5 sekunnissa samalla kun edellisen näkymän
       // äänet häipyvät, eikä pamahda päälle kalvon kanssa yhtä aikaa.
+      // HUOM: gain on asetettava hiljaiseksi HETI (t0) — pelkkä
+      // t0+0.15-ajastus jätti oletusarvon 1.0 soimaan 150 ms täysillä
+      // ennen häivytystä (omistajan bugiraportti 10.8.2026).
+      g.gain.setValueAtTime(0.0001, t0);
       g.gain.setValueAtTime(0.0001, t0 + 0.15);
-      g.gain.exponentialRampToValueAtTime(Math.min(1, 0.7 * asetus.voima), t0 + 2.1);
+      g.gain.exponentialRampToValueAtTime(Math.min(1, 0.7 * asetus.voima), t0 + 3.4);
       // Ei ajastettua loppua: moottori soi, kunnes stopFlight häivyttää
       // sen — kalvo on auki niin kauan kuin pelaaja viipyy koneessa.
       src.connect(g).connect(this.bus);
@@ -120357,8 +120387,9 @@ class Sound {
     // Nousee lentoon ja jää soimaan; stopFlight häivyttää. Sisääntulo
     // pehmennetty samaan tapaan kuin äänitetyssä moottorissa.
     const g = ctx.createGain();
+    g.gain.setValueAtTime(0.0001, t0);
     g.gain.setValueAtTime(0.0001, t0 + 0.15);
-    g.gain.exponentialRampToValueAtTime(0.075, t0 + 1.6);
+    g.gain.exponentialRampToValueAtTime(0.075, t0 + 2.6);
 
     // Moottorin virtausääni potkurin alle: kohinaa kaistanpäästön läpi,
     // taajuus nousee lähdössä ja laskee laskeutuessa. Tämä tekee lennosta
@@ -120373,8 +120404,9 @@ class Sound {
     vf.frequency.exponentialRampToValueAtTime(1600, t0 + kesto * 0.4);
     vf.frequency.exponentialRampToValueAtTime(500, t0 + kesto);
     const vg = ctx.createGain();
+    vg.gain.setValueAtTime(0.0001, t0);
     vg.gain.setValueAtTime(0.0001, t0 + 0.15);
-    vg.gain.exponentialRampToValueAtTime(0.055, t0 + 1.8);
+    vg.gain.exponentialRampToValueAtTime(0.055, t0 + 2.8);
 
     // Matala jyrinä pohjalle.
     const runko = ctx.createBufferSource();
@@ -120384,8 +120416,9 @@ class Sound {
     rf.type = 'lowpass';
     rf.frequency.value = 180;
     const rg = ctx.createGain();
+    rg.gain.setValueAtTime(0.0001, t0);
     rg.gain.setValueAtTime(0.0001, t0 + 0.15);
-    rg.gain.exponentialRampToValueAtTime(0.06, t0 + 1.7);
+    rg.gain.exponentialRampToValueAtTime(0.06, t0 + 2.7);
 
     osc.connect(lp).connect(depth).connect(g).connect(this.bus);
     virtaus.connect(vf).connect(vg).connect(this.bus);
@@ -128096,8 +128129,11 @@ const INTRO_TEXT = 'Vintiltä löytyi isoisän kulunut matkakirja — '
   + 'Maailman ympäri kahdeksassakymmenessä päivässä.\n\n'
   + 'Viimeinen sivu on revitty irti kesken lauseen. Mitä hän löysi? '
   + 'Ja kuka repii kirjasta juuri sen sivun?\n\n'
-  + 'Juoksin kentälle kirja kädessäni:\n\n'
-  + 'mistä aloitan?';
+  + 'minne lennän ensin?';
+// Kirjan nimi kursivoidaan VAIN ruudulla (renderIntro) — luentaan
+// kursiivi ei vaikuta. Nimen on esiinnyttävä INTRO_TEXTissä juuri
+// tässä muodossa, jotta kursiivijako osuu.
+const INTRO_KIRJAN_NIMI = 'Maailman ympäri kahdeksassakymmenessä päivässä';
 /*
  * Mantereiden lähikuva puhelimella. Ilme hiotaan ensin Euroopalla
  * (omistajan päätös); muut laudat lisätään tähän settiin sitä mukaa kuin
@@ -128166,6 +128202,10 @@ const SAAPUMIS_OSUUS = 0.43;
  * Eurooppa siinä mielessä kuin omistaja sen tarkoitti.
  */
 const SAAPUMIS_LEVEIN = 1500;
+// Puhelimen kapealla ruudulla saapuminen saa olla pykälän lähempänä
+// (omistajan iPhone-palaute 10.8.2026): 1400 yksikön näkymä on
+// kapealla ruudulla liian laaja.
+const SAAPUMIS_LEVEIN_KAPEA = 1000;
 const MANNER_ZOOM_VIIVE = 1400; // kokonäkymä näkyy tämän verran ennen zoomausta
 // Kuinka suuri osa ruudusta varataan laudan eteläpuolelle, jotta
 // alarivin nappien alle jäävät kaupungit saa panoroitua näkyviin.
@@ -129870,7 +129910,8 @@ class UI {
    */
   saapumisPorras() {
     const leveys = this.contentBox?.w ?? 1000;
-    const tavoite = Math.min(leveys * SAAPUMIS_OSUUS, SAAPUMIS_LEVEIN);
+    const kapea = (this.mapPane?.clientWidth ?? window.innerWidth) < 700;
+    const tavoite = Math.min(leveys * SAAPUMIS_OSUUS, kapea ? SAAPUMIS_LEVEIN_KAPEA : SAAPUMIS_LEVEIN);
     const tasot = this.zoomiTasot();
     let paras = 1;
     for (let i = 1; i < tasot.length; i++) {
@@ -132706,11 +132747,13 @@ class UI {
         // Avauslennon repliikki on lukittu ja luettu ääneen: puhe alkaa
         // pienellä viiveellä, kun moottori on jo ehtinyt nousta esiin.
         this.lentoPuheAjastin = setTimeout(() => {
-          // Lentorepliikin lukee vain pitkä kertoja.
+          // Lentorepliikin lukee vain pitkä kertoja. Kertoja aloittaa
+          // vasta kun moottori on ehtinyt nousta kuuluviin (omistajan
+          // toive 10.8.2026: reilu sekunti myöhemmin kuin ennen).
           if (!this.dead && kertojaTila() === 'pitka') {
             this.playDiaryVoice('assets/audio/puhe-lento-alku.mp3');
           }
-        }, 1400);
+        }, 2800);
       }
       await this.animateFlight(
         'Lontoo', city.name, line,
@@ -133382,7 +133425,9 @@ class UI {
     // korista ääni arvotaan.
     const lauta = game.pack?.id;
     if (game.phase === 'pickstart') {
-      playPlaceAmbience('etusivu', 'meri', lauta);
+      // Etusivun ainoa taustaääni on Lontoon lentokentän lähtöaulan
+      // häly (omistajan toive 10.8.2026) — satama-ambienssi väistyi.
+      playPlaceAmbience('etusivu', 'lentoasema', lauta);
       return;
     }
     const pos = game.player.pos;
@@ -137108,9 +137153,38 @@ class UI {
       varaus.textContent = lopetus;
       this.introLopetus.appendChild(varaus);
     }
-    this.typeText(this.introRunko, runko, 'intro', () => {
-      if (lopetus) this.typeText(this.introLopetus, lopetus, 'intro-loppu', null, INTRO_TYPE_MS);
-    }, INTRO_TYPE_MS);
+    /*
+     * Kirjan nimi kursiiviin (omistajan toive 10.8.2026, vain ruudulla):
+     * runko jaetaan paloihin nimen kohdalta ja palat kirjoitetaan
+     * peräkkäin omiin elementteihinsä (span / i). Jokainen pala varaa
+     * tilansa pending-varjolla heti, jotta fitIntro mittaa koko
+     * tekstin ennen kirjoituksen alkua — sama syy kuin lopetuksella.
+     */
+    this.introRunko.textContent = '';
+    const kohta = runko.indexOf(INTRO_KIRJAN_NIMI);
+    const palat = (kohta < 0
+      ? [{ teksti: runko, kursiivi: false }]
+      : [
+        { teksti: runko.slice(0, kohta), kursiivi: false },
+        { teksti: INTRO_KIRJAN_NIMI, kursiivi: true },
+        { teksti: runko.slice(kohta + INTRO_KIRJAN_NIMI.length), kursiivi: false },
+      ]).filter((pala) => pala.teksti);
+    const palaElementit = palat.map((pala) => {
+      const elementti = html(pala.kursiivi ? 'i' : 'span', 'intro-pala');
+      const varaus = html('span', 'pending');
+      varaus.textContent = pala.teksti;
+      elementti.appendChild(varaus);
+      this.introRunko.appendChild(elementti);
+      return elementti;
+    });
+    const kirjoitaPala = (i) => {
+      if (i >= palat.length) {
+        if (lopetus) this.typeText(this.introLopetus, lopetus, 'intro-loppu', null, INTRO_TYPE_MS);
+        return;
+      }
+      this.typeText(palaElementit[i], palat[i].teksti, 'intro', () => kirjoitaPala(i + 1), INTRO_TYPE_MS);
+    };
+    kirjoitaPala(0);
     // Koko teksti on jo paikallaan, joten koon voi sovittaa heti — sen
     // jälkeen mikään ei enää liiku kirjoituksen aikana.
     this.fitIntro();
@@ -140464,6 +140538,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 521, teksti: 'Intro v3, lähtöaulan ambienssi, pehmeämpi moottori ja zoomit' },
   { v: 519, teksti: 'Alun viilaus: suora zoom, äänet ja kiikari pois, intro v2' },
   { v: 518, teksti: 'Aarteiden pikkuikonit uusiksi kuviksi, jalokivet pois' },
   { v: 517, teksti: 'Esc ja nuolet yhtenäisiksi kaikissa suurennospopupeissa' },
@@ -141067,7 +141142,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.519';
+const APP_VERSION = '2026-08-09.521';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
