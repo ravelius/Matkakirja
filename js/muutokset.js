@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 510, teksti: 'Tallennetun pelin palautus korjattu: Tutki toimii taas' },
   { v: 509, teksti: 'Kohtaamiselle aarre, uusintayritys ja Aloita peli -nappi' },
   { v: 508, teksti: 'Nähtävyysjutut Vilnaan, Osloon, Kööpenhaminaan' },
   { v: 507, teksti: 'Egyptille eläinten ja käsitöiden aihesivut' },

@@ -2828,6 +2828,31 @@ test('tehtävät loppuvat aikanaan: tehtavaTarjolla sammuu kun kaikki on tehty',
   // (omistajan löytö 10.8.2026 — kortti ei saa kadota tehtävien mukana).
 });
 
+/*
+ * Omistajan löytö 10.8.2026: sivun päivityksen jälkeen Tutki-nappi ei
+ * tehnyt mitään kaarikaupungissa. Syy: fromJSON ohittaa konstruktorin
+ * (Object.create) eikä alustanut istuntokohtaista kaariYritykset-
+ * kenttää — jokainen kaaripolun kutsu kaatui TypeErroriin.
+ */
+test('palautettu tallennus toimii kaarikaupungissa: Tutki ja kohtaaminen eivät kaadu', () => {
+  const pack = packById('europe');
+  const kaupunki = pack.cities.find((c) => TARINAKAARI[c.id]?.kysymys)?.id;
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: pack.cities[0].id }],
+    pack,
+    seed: 417,
+  });
+  const kopio = Game.fromJSON(JSON.parse(JSON.stringify(game.toJSON())));
+  kopio.player.pos = { type: 'city', city: kaupunki };
+  kopio.phase = 'action';
+
+  // travelModes kulkee kaaripolun läpi — ei saa heittää.
+  assert.ok(kopio.travelModes().includes('stay'), 'Tutki paikka tarjolla palautuksen jälkeen');
+  assert.ok(kopio.kaariTilanne(kaupunki), 'kohtaamisen tila luettavissa');
+  assert.ok(kopio.actionQuiz().ok, 'Etsi kätkö aukeaa');
+  assert.equal(kopio.quiz.kaari, true, 'ensitehtävä on kohtaaminen myös palautetussa pelissä');
+});
+
 test('onnistunut kohtaaminen sulkee kohtaamisen: nappi harmaantuu eikä uusintaa tule', () => {
   const pack = packById('europe');
   const kaupunki = pack.cities.find(
