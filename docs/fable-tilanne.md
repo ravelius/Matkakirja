@@ -548,3 +548,17 @@ jälkeen.
 - Sonnet 2:n erä 12 tuli mainiin v504:nä kesken Fablen julkaisun
   (versiokollisio nro 5 — ratkaisu kuten aina: merge origin/main +
   uusi-versio uudelleen).
+
+### Vahtikierros klo 06:40Z (9.40): ei jumeja, ei jaettavaa
+
+- Raportit luettu haaroilta: Sonnet 2 erä 12 valmis → erä 13 työn
+  alla (workflow käynnissä, get_session 06:34Z); Opus 1 erä B
+  (Oman+Qatar v501) valmis → erä C (Egypti+Kuwait) työn alla
+  (RUNNING 06:40Z — katsoo ensin mitä Egyptillä jo on, ei
+  päällekkäistä). Opus 2 ja Sonnet 1 valmiudessa. Ei jumeja,
+  kaikki kontit kierrätetty yön aikana — ei uusia kierrätyksiä.
+- KIRJATTU JONOON: Opus 1 raportoi 6 kuvaduplikaattia
+  (mm. Baščaršija.jpg ja Latin Bridge kahdessa paikassa,
+  syntyneet nähtävyysjuttuerissä) — siivotaan kokoavan QA:n
+  yhteydessä tai omana pikkueränä erä 13:n jälkeen.
+- Tilannetaulu päivitetty (v503–v506 + erätilat).
