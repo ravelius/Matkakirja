@@ -58,7 +58,9 @@ export const INTRO_RUUTU = 'Vintiltä löytyi isoisän kulunut matkakirja — '
 // (omistajan päätös 10.8.2026) — luenta päättyy kysymykseen
 // "...juuri sen sivun?". Nykyinen mp3 leikattiin samasta syystä
 // (tools-ohje: scratchpadin leikkaa-intro.mjs-malli).
-export const LENTO_RUUTU = 'Huh — ehdin! Kone nousee, ja isoisän kirja '
+// "Huh — ehdin!" poistui 10.8.2026 illalla (omistajan tilaus) —
+// nykyinen mp3 leikattiin ensimmäisen pitkän puheryöpyn eteen.
+export const LENTO_RUUTU = 'Kone nousee, ja isoisän kirja '
   + 'aukeaa sylissäni kuin se olisi odottanut tätä hetkeä. Revitty sivu '
   + 'ei kerro, mitä hän löysi — joten menen katsomaan itse.';
 
@@ -74,7 +76,7 @@ const TYOT = [
   },
   {
     tiedosto: 'assets/audio/puhe-lento-alku.mp3',
-    luenta: '[out of breath] Huh — ehdin! [exhales] [curious] Kone '
+    luenta: '[curious] Kone '
       + 'nousee, ja isoisän kirja aukeaa sylissäni kuin se olisi '
       + 'odottanut tätä hetkeä. [short pause] [excited] Revitty sivu ei '
       + 'kerro, mitä hän löysi — joten menen katsomaan itse. [long pause]',

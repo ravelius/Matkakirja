@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 538, teksti: 'Huudahdus ääneen, kuvat paperiin, kabiini kuuluviin' },
   { v: 537, teksti: 'Aarrelöydölle nuoren herran hihkaisu' },
   { v: 536, teksti: 'Kaariauditin tekstit peliin, uudet luennat odottavat' },
   { v: 535, teksti: 'Tarinan avainkohteet matkakirjan kuviin 11 kaupungissa' },

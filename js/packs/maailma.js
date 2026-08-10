@@ -509,7 +509,7 @@ export const MAAILMA = {
     // — teksti muutetaan vain sen kautta, jotta ruutu ja puhe pysyvät
     // samana.
     flightFirst: [
-      'Huh — ehdin! Kone nousee, ja isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä. Revitty sivu ei kerro, mitä hän löysi — joten menen katsomaan itse.',
+      'Kone nousee, ja isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä. Revitty sivu ei kerro, mitä hän löysi — joten menen katsomaan itse.',
     ],
     intro: 'Peli alkaa! Etsikää Magellanin kompassi — maailmanympäripurjehtijan kadonnut aarre.',
     starFound: (name, city) => `◈ ${name} löysi MAGELLANIN KOMPASSIN kaupungista ${city}!`,
