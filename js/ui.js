@@ -1048,10 +1048,19 @@ const HUUDAHDUKSET = {
   ],
 };
 
-/** Arvo huudahdus laattatyypin mukaan; muille kuin aarteille ei mitään. */
+/**
+ * Arvo huudahdus laattatyypin mukaan; muille kuin aarteille ei
+ * mitään. Palauttaa tekstin JA sitä vastaavan äänitiedoston — sama
+ * repliikki luetaan ja kirjoitetaan (omistajan tarkennus 10.8.2026:
+ * "Hihkaisu saisi olla sama luettuna ja kirjoitettuna"). Tiedostot
+ * generoi tools/generoi-hihkaisut.mjs täsmälleen tästä taulusta.
+ */
 function arvoHuudahdus(type, token) {
-  const lista = type === 'star' ? HUUDAHDUKSET.star : HUUDAHDUKSET[token.value];
-  return lista ? lista[Math.floor(Math.random() * lista.length)] : null;
+  const avain = type === 'star' ? 'star' : token.value;
+  const lista = HUUDAHDUKSET[avain];
+  if (!lista) return null;
+  const i = Math.floor(Math.random() * lista.length);
+  return { teksti: lista[i], tiedosto: `assets/audio/huudahdus-${avain}-${i + 1}.mp3` };
 }
 
 /*
@@ -4851,11 +4860,12 @@ export class UI {
       nappi.type = 'button';
       nappi.className = 'maa-pilleri';
       nappi.appendChild(html('span', 'maa-pilleri-nimi', ''));
+      // Ei i-merkkiä (omistajan tarkennus 10.8.2026 ilta): pelkkä
+      // nimi ja lippu; koko pilleri on nappi.
       const lippu = document.createElement('img');
       lippu.className = 'maa-pilleri-lippu';
       lippu.alt = '';
       nappi.appendChild(lippu);
-      nappi.appendChild(html('span', 'maa-pilleri-i', 'i'));
       nappi.addEventListener('click', () => {
         if (this.maaPilleriIso) this.avaaMaalehti(this.maaPilleriIso);
       });
@@ -12452,13 +12462,6 @@ export class UI {
    * arvokkaille löydöille, ja ei kertojattomassa tilassa —
    * hihkaisukin on ääninäyttelyä.
    */
-  hihkaisuLahde(type) {
-    if (!['star', 'ruby', 'emerald', 'topaz'].includes(type)) return null;
-    if (!sfx.enabled || kertojaTila() === 'ei') return null;
-    const nimet = ['riemu', 'hammastys', 'hykertely'];
-    return `assets/audio/hihkaisu-${nimet[Math.floor(Math.random() * nimet.length)]}.mp3`;
-  }
-
   soitaHihkaisu(lahde) {
     const audio = new Audio(lahde);
     audio.volume = puheVoima();
@@ -12502,7 +12505,7 @@ export class UI {
     // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
     // kun aarre tulee näkyviin; cliffhanger-teksti vasta sen jälkeen.
     const huudahdus = arvoHuudahdus(type, token);
-    if (huudahdus) caption.appendChild(html('span', 'reveal-huudahdus', huudahdus));
+    if (huudahdus) caption.appendChild(html('span', 'reveal-huudahdus', huudahdus.teksti));
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
     /*
@@ -12515,9 +12518,11 @@ export class UI {
      */
     const kaari = (type !== 'empty' && KAARI_LAUDAT.has(this.game.pack.id))
       ? TARINAKAARI[this.game.quiz?.cityId] : null;
-    // Hihkaisu päätetään ennen luentaa: kertojan aarreteksti alkaa
-    // vasta hihkaisun jälkeen, etteivät äänet puuroudu päällekkäin.
-    const hihkaisu = this.hihkaisuLahde(type);
+    // Hihkaisu on kortin huudahdus ääneen — sama repliikki luettuna
+    // ja kirjoitettuna. Kertojan aarreteksti alkaa vasta sen jälkeen,
+    // etteivät äänet puuroudu päällekkäin.
+    const hihkaisu = (huudahdus && sfx.enabled && kertojaTila() !== 'ei')
+      ? huudahdus.tiedosto : null;
     let luenta = null;
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));

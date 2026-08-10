@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.537';
+const CACHE = 'matkakirja-2026-08-09.538';
 const SHELL = [
   './',
   './index.html',
@@ -131,10 +131,22 @@ const SHELL = [
   // selaillaan eniten.
   './assets/linssit/yokartta.jpg',
   './assets/linssit/topografia.webp',
-  // Aarrelöydön hihkaisut (nuoren herran reaktiot, 10.8.2026).
-  './assets/audio/hihkaisu-riemu.mp3',
-  './assets/audio/hihkaisu-hammastys.mp3',
-  './assets/audio/hihkaisu-hykertely.mp3',
+  // Aarrelöydön huudahdukset ääneen (sama repliikki kuin kortilla).
+  './assets/audio/huudahdus-300-1.mp3',
+  './assets/audio/huudahdus-300-2.mp3',
+  './assets/audio/huudahdus-300-3.mp3',
+  './assets/audio/huudahdus-300-4.mp3',
+  './assets/audio/huudahdus-600-1.mp3',
+  './assets/audio/huudahdus-600-2.mp3',
+  './assets/audio/huudahdus-600-3.mp3',
+  './assets/audio/huudahdus-600-4.mp3',
+  './assets/audio/huudahdus-1000-1.mp3',
+  './assets/audio/huudahdus-1000-2.mp3',
+  './assets/audio/huudahdus-1000-3.mp3',
+  './assets/audio/huudahdus-1000-4.mp3',
+  './assets/audio/huudahdus-star-1.mp3',
+  './assets/audio/huudahdus-star-2.mp3',
+  './assets/audio/huudahdus-star-3.mp3',
   // Kohtaamiskuvat (kohtaamiskortti + kätkötulos, pilotti 10.8.2026).
   './assets/kohtaamiset/kohtaaminen-ateena.jpg',
   './assets/kohtaamiset/kohtaaminen-sofia.jpg',

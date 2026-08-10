@@ -36,13 +36,29 @@ const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
 const LOPPUTAUKO = ' <break time="0.6s" />';
 
 /*
- * Kolme sävyä, jotta sama huudahdus ei toistu joka löydöllä:
- * riemu, hämmästys ja hykertely. Tagit englanniksi (eleven_v3).
+ * Huudahdukset ääneen SAMOIN SANOIN kuin ruudulla (omistajan
+ * tarkennus 10.8.2026 ilta: "Hihkaisu saisi olla sama luettuna ja
+ * kirjoitettuna"). Lista vastaa ui.js:n HUUDAHDUKSET-taulua —
+ * tiedostonimi on huudahdus-<avain>-<järjestys>.mp3, ja ui valitsee
+ * saman indeksin tekstille ja äänelle. Tagit sävyttävät arvon mukaan:
+ * pikkulöytö kuitataan, suurlöytö vie sanat.
  */
 const TYOT = [
-  { tiedosto: 'assets/audio/hihkaisu-riemu.mp3', luenta: '[excited] Jee! [laughs]' },
-  { tiedosto: 'assets/audio/hihkaisu-hammastys.mp3', luenta: '[surprised] Ohhoh! [long pause]' },
-  { tiedosto: 'assets/audio/hihkaisu-hykertely.mp3', luenta: '[chuckles] No sepä siitä. [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-300-1.mp3', luenta: '[pleased] Hei — löytyi sittenkin! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-300-2.mp3', luenta: '[pleased] Pieni, mutta aito! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-300-3.mp3', luenta: '[cheerful] Kelpaa tämäkin! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-300-4.mp3', luenta: '[cheerful] Taskuun ja eteenpäin! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-600-1.mp3', luenta: '[excited] Mahtavaa! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-600-2.mp3', luenta: '[excited] Sepä vasta löytö! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-600-3.mp3', luenta: '[chuckles] Isoisä olisi hykerrellyt! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-600-4.mp3', luenta: '[pleased] Tämä merkitään päiväkirjaan! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-1000-1.mp3', luenta: '[amazed] Uskomatonta! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-1000-2.mp3', luenta: '[excited] Jes! Katsokaa nyt tätä! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-1000-3.mp3', luenta: '[out of breath] Sydän hakkaa — mikä löytö! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-1000-4.mp3', luenta: '[amazed] Juuri tällaisesta isoisä kirjoitti! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-star-1.mp3', luenta: '[awe] Se on totta... [whispers] se on oikeasti totta! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-star-2.mp3', luenta: '[awe] Aarni oli oikeassa — se on olemassa! [long pause]' },
+  { tiedosto: 'assets/audio/huudahdus-star-3.mp3', luenta: '[quietly] Isoisä... [pause] minä löysin sen. [long pause]' },
 ];
 
 const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
@@ -171,7 +187,7 @@ for (const tyo of tyot) {
     const leikattu = await leikkaaPuhe(tavut);
     if (!leikattu) { console.log('  hylätty: puhetta ei löytynyt'); continue; }
     console.log(`  puhe ${leikattu.kesto.toFixed(2)} s (otos ${leikattu.otosKesto.toFixed(2)} s), huippu ${leikattu.huippu.toFixed(2)}`);
-    if (leikattu.kesto < 0.4 || leikattu.kesto > 4.5) { console.log('  hylätty: kesto'); continue; }
+    if (leikattu.kesto < 0.4 || leikattu.kesto > 6) { console.log('  hylätty: kesto'); continue; }
     if (leikattu.huippu < 0.05) { console.log('  hylätty: liian hiljainen'); continue; }
     valmis = leikattu.mp3;
   }

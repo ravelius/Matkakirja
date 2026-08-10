@@ -3776,14 +3776,14 @@ body.radio-tila .board-hint {
 }
 
 /*
- * Maan nimi + ⓘ kiinteänä pillerinä kartan kehyksellä (Fable maxin
- * speksi 10.8.2026): map-panen lapsi kuten #maalehti-nappi ja
- * zoominapit, joten se ei skaalaudu zoomissa, ei liiku panoroinnissa
- * eikä voi peittää kaupunkia tai nappulaa — ja kosketuskohde on aina
- * täydet 44 px. Ulkoasu on entisen kilven: pergamenttitäyttö,
- * musteviiva, versaali ja ⓘ-kehä, jotta se lukee "samana kylttinä,
- * joka muutti kartan reunalle". Puoli (data-side) on päiväkirjakortin
- * peilikuva, kirjanappia väistäen.
+ * Maan nimi + lippu kiinteänä kylttinä kartan kehyksellä (Fable
+ * maxin speksi 10.8.2026; omistajan tarkennukset samana iltana:
+ * aina oikeassa reunassa, aina näkyvillä, EI i-merkkiä, ja mitat
+ * samat kuin matkakirjan supistetulla chipillä leveyttä lukuun
+ * ottamatta — sama kirjasinkoko, tausta, kulma ja varjo). Koko
+ * kyltti on nappi, joka avaa nykyisen maan lehden; osuma-alue
+ * laajennetaan ::after-pseudolla. Kirjanappia väistetään
+ * sivusuunnassa ja yläoikean päiväkirjakorttia alaspäin.
  */
 .maa-pilleri {
   position: absolute;
@@ -3792,20 +3792,16 @@ body.radio-tila .board-hint {
   z-index: 3;
   display: inline-flex;
   align-items: center;
-  gap: 0.5em;
-  /* Matala kyltti — sama mitta kuin matkakirjan supistetulla
-   * chipillä (omistajan toive 10.8.2026); osuma-alue laajennetaan
-   * 44 pikseliin ::after-pseudolla. Asuu AINA oikeassa reunassa
-   * (omistajan tarkennus samana iltana); kirjanappia väistetään
-   * sivusuunnassa ja yläoikealle osuvaa päiväkirjakorttia alaspäin. */
-  min-height: 1.9rem;
-  padding: 0.1rem 0.75rem;
-  border-radius: 999px;
-  border: 1px solid rgba(70, 51, 31, 0.65);
-  background: rgba(245, 231, 200, 0.94);
+  gap: 0.45em;
+  padding: 0.2rem 0.5em;
+  border: 0;
+  border-radius: 6px;
+  background: rgba(244, 231, 202, 0.86);
+  box-shadow: 0 1px 4px rgba(62, 42, 22, 0.18);
   color: rgba(70, 51, 31, 0.92);
   font-family: var(--font-type);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -3816,6 +3812,9 @@ body.radio-tila .board-hint {
   position: absolute;
   inset: -8px;
 }
+
+.maa-pilleri:hover,
+.maa-pilleri:focus-visible { background: rgba(245, 231, 200, 0.97); }
 
 .maa-pilleri[data-kirja='true'] { right: 3.2rem; }
 
@@ -3831,31 +3830,6 @@ body.radio-tila .board-hint {
 }
 
 .maa-pilleri-lippu[hidden] { display: none; }
-
-.maa-pilleri-nimi { pointer-events: none; }
-
-.maa-pilleri-i {
-  display: inline-grid;
-  place-items: center;
-  width: 1.3em;
-  height: 1.3em;
-  border: 1px solid rgba(70, 51, 31, 0.75);
-  border-radius: 50%;
-  font-family: var(--font-kauno);
-  font-style: italic;
-  font-size: 0.95em;
-  pointer-events: none;
-}
-
-.maa-pilleri:hover,
-.maa-pilleri:focus-visible { border-color: var(--map-ink); }
-
-.maa-pilleri:hover .maa-pilleri-i,
-.maa-pilleri:focus-visible .maa-pilleri-i {
-  background: var(--map-ink);
-  border-color: var(--map-ink);
-  color: rgba(245, 231, 200, 0.95);
-}
 
 /* Vertailu-, maatiedot- ja radiotila omistavat kartan itse — pilleri
  * pois tieltä samoin kuin päiväkirjakortti ja toimintonapit. */
@@ -7991,8 +7965,14 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   float: right;
   width: min(34%, 130px);
   margin: 0.1rem 0 0.5rem 0.75rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 5px rgba(62, 42, 22, 0.25);
+  /* Kuvan pergamenttipohja sulautetaan kortin paperiin (omistajan
+   * toive 10.8.2026 ilta: kuva ei saa lukea laatikkona): multiply
+   * hävittää vaalean taustan ja säteittäinen maski pehmentää reunat
+   * paperiin. Ei kehystä eikä varjoa — piirros istuu sivulla kuin
+   * painettu vinjetti. */
+  mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
+  mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
 }
 
 .quiz-kohtaaminen-kuva[hidden] { display: none; }
@@ -8003,8 +7983,10 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   display: block;
   width: min(55%, 170px);
   margin: 0.55rem auto 0.35rem;
-  border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(62, 42, 22, 0.3);
+  /* Sama sulautus kuin kohtaamiskuvalla: ei laatikkoa. */
+  mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
+  mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
 }
 
 .quiz-result .kohtaaminen-repliikki {
@@ -12862,7 +12844,7 @@ const MAAILMA = {
     // — teksti muutetaan vain sen kautta, jotta ruutu ja puhe pysyvät
     // samana.
     flightFirst: [
-      'Huh — ehdin! Kone nousee, ja isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä. Revitty sivu ei kerro, mitä hän löysi — joten menen katsomaan itse.',
+      'Kone nousee, ja isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä. Revitty sivu ei kerro, mitä hän löysi — joten menen katsomaan itse.',
     ],
     intro: 'Peli alkaa! Etsikää Magellanin kompassi — maailmanympäripurjehtijan kadonnut aarre.',
     starFound: (name, city) => `◈ ${name} löysi MAGELLANIN KOMPASSIN kaupungista ${city}!`,
@@ -119455,10 +119437,15 @@ const TYYPPI_EHDOKKAAT = {
   // Avauslennon kalvo: äänimaisema lentokoneen sisältä (omistajan
   // toive 10.8.2026). Voimat kalibroitu RMS-mittauksella aulan äänen
   // tasoon: matkustamo saa olla selvästi läsnä muttei kertojan päällä.
+  // Voimat: striimin kokonaiskerroin (ambience-stream VOIMA 0.14)
+  // painaa tasoja rajusti — ensimmäinen kalibrointi (0.07) jäi siksi
+  // kuulumattomiin (omistajan palaute 10.8.2026 ilta). Oletuksena
+  // äänite, jossa on moottorin lisäksi matkustajien puheensorinaa ja
+  // kuulutus (omistajan toive: "pitäisi löytää puheääntä taustalle").
   lentokone: [
-    { url: 'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.07', nimi: 'Matkustamo lennolla, A330 — FillSoko, CC0' },
-    { url: 'https://cdn.freesound.org/previews/245/245691_2047664-lq.mp3#voima=0.05', nimi: 'Matkustamon tasainen humina — TicAshfield, CC0' },
-    { url: 'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=0.6', nimi: 'Matkustamo, puheensorinaa ja kuulutus — drewhalasz, CC0' },
+    { url: 'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=2.9', nimi: 'Matkustamo, puheensorinaa ja kuulutus — drewhalasz, CC0' },
+    { url: 'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.3', nimi: 'Matkustamo lennolla, A330 — FillSoko, CC0' },
+    { url: 'https://cdn.freesound.org/previews/245/245691_2047664-lq.mp3#voima=0.22', nimi: 'Matkustamon tasainen humina — TicAshfield, CC0' },
   ],
   basaari: [
     { url: 'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23', nimi: 'Basaarin hälinä (Khan el-Khalili) — 3bagbrew, CC0' },
@@ -119946,7 +119933,7 @@ const OLETUSKORIT = {
     'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6',
   ],
   lentokone: [
-    'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.07',
+    'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=2.9',
   ],
   basaari: [
     'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55',
@@ -128926,10 +128913,19 @@ const HUUDAHDUKSET = {
   ],
 };
 
-/** Arvo huudahdus laattatyypin mukaan; muille kuin aarteille ei mitään. */
+/**
+ * Arvo huudahdus laattatyypin mukaan; muille kuin aarteille ei
+ * mitään. Palauttaa tekstin JA sitä vastaavan äänitiedoston — sama
+ * repliikki luetaan ja kirjoitetaan (omistajan tarkennus 10.8.2026:
+ * "Hihkaisu saisi olla sama luettuna ja kirjoitettuna"). Tiedostot
+ * generoi tools/generoi-hihkaisut.mjs täsmälleen tästä taulusta.
+ */
 function arvoHuudahdus(type, token) {
-  const lista = type === 'star' ? HUUDAHDUKSET.star : HUUDAHDUKSET[token.value];
-  return lista ? lista[Math.floor(Math.random() * lista.length)] : null;
+  const avain = type === 'star' ? 'star' : token.value;
+  const lista = HUUDAHDUKSET[avain];
+  if (!lista) return null;
+  const i = Math.floor(Math.random() * lista.length);
+  return { teksti: lista[i], tiedosto: `assets/audio/huudahdus-${avain}-${i + 1}.mp3` };
 }
 
 /*
@@ -132729,11 +132725,12 @@ class UI {
       nappi.type = 'button';
       nappi.className = 'maa-pilleri';
       nappi.appendChild(html('span', 'maa-pilleri-nimi', ''));
+      // Ei i-merkkiä (omistajan tarkennus 10.8.2026 ilta): pelkkä
+      // nimi ja lippu; koko pilleri on nappi.
       const lippu = document.createElement('img');
       lippu.className = 'maa-pilleri-lippu';
       lippu.alt = '';
       nappi.appendChild(lippu);
-      nappi.appendChild(html('span', 'maa-pilleri-i', 'i'));
       nappi.addEventListener('click', () => {
         if (this.maaPilleriIso) this.avaaMaalehti(this.maaPilleriIso);
       });
@@ -140327,13 +140324,6 @@ class UI {
    * arvokkaille löydöille, ja ei kertojattomassa tilassa —
    * hihkaisukin on ääninäyttelyä.
    */
-  hihkaisuLahde(type) {
-    if (!['star', 'ruby', 'emerald', 'topaz'].includes(type)) return null;
-    if (!sfx.enabled || kertojaTila() === 'ei') return null;
-    const nimet = ['riemu', 'hammastys', 'hykertely'];
-    return `assets/audio/hihkaisu-${nimet[Math.floor(Math.random() * nimet.length)]}.mp3`;
-  }
-
   soitaHihkaisu(lahde) {
     const audio = new Audio(lahde);
     audio.volume = puheVoima();
@@ -140377,7 +140367,7 @@ class UI {
     // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
     // kun aarre tulee näkyviin; cliffhanger-teksti vasta sen jälkeen.
     const huudahdus = arvoHuudahdus(type, token);
-    if (huudahdus) caption.appendChild(html('span', 'reveal-huudahdus', huudahdus));
+    if (huudahdus) caption.appendChild(html('span', 'reveal-huudahdus', huudahdus.teksti));
     caption.appendChild(html('strong', '', token.name));
     caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${token.value} puntaa`));
     /*
@@ -140390,9 +140380,11 @@ class UI {
      */
     const kaari = (type !== 'empty' && KAARI_LAUDAT.has(this.game.pack.id))
       ? TARINAKAARI[this.game.quiz?.cityId] : null;
-    // Hihkaisu päätetään ennen luentaa: kertojan aarreteksti alkaa
-    // vasta hihkaisun jälkeen, etteivät äänet puuroudu päällekkäin.
-    const hihkaisu = this.hihkaisuLahde(type);
+    // Hihkaisu on kortin huudahdus ääneen — sama repliikki luettuna
+    // ja kirjoitettuna. Kertojan aarreteksti alkaa vasta sen jälkeen,
+    // etteivät äänet puuroudu päällekkäin.
+    const hihkaisu = (huudahdus && sfx.enabled && kertojaTila() !== 'ei')
+      ? huudahdus.tiedosto : null;
     let luenta = null;
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
@@ -141242,6 +141234,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 538, teksti: 'Huudahdus ääneen, kuvat paperiin, kabiini kuuluviin' },
   { v: 537, teksti: 'Aarrelöydölle nuoren herran hihkaisu' },
   { v: 536, teksti: 'Kaariauditin tekstit peliin, uudet luennat odottavat' },
   { v: 535, teksti: 'Tarinan avainkohteet matkakirjan kuviin 11 kaupungissa' },
@@ -141863,7 +141856,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.537';
+const APP_VERSION = '2026-08-09.538';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

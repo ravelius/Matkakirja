@@ -3773,14 +3773,14 @@ body.radio-tila .board-hint {
 }
 
 /*
- * Maan nimi + ⓘ kiinteänä pillerinä kartan kehyksellä (Fable maxin
- * speksi 10.8.2026): map-panen lapsi kuten #maalehti-nappi ja
- * zoominapit, joten se ei skaalaudu zoomissa, ei liiku panoroinnissa
- * eikä voi peittää kaupunkia tai nappulaa — ja kosketuskohde on aina
- * täydet 44 px. Ulkoasu on entisen kilven: pergamenttitäyttö,
- * musteviiva, versaali ja ⓘ-kehä, jotta se lukee "samana kylttinä,
- * joka muutti kartan reunalle". Puoli (data-side) on päiväkirjakortin
- * peilikuva, kirjanappia väistäen.
+ * Maan nimi + lippu kiinteänä kylttinä kartan kehyksellä (Fable
+ * maxin speksi 10.8.2026; omistajan tarkennukset samana iltana:
+ * aina oikeassa reunassa, aina näkyvillä, EI i-merkkiä, ja mitat
+ * samat kuin matkakirjan supistetulla chipillä leveyttä lukuun
+ * ottamatta — sama kirjasinkoko, tausta, kulma ja varjo). Koko
+ * kyltti on nappi, joka avaa nykyisen maan lehden; osuma-alue
+ * laajennetaan ::after-pseudolla. Kirjanappia väistetään
+ * sivusuunnassa ja yläoikean päiväkirjakorttia alaspäin.
  */
 .maa-pilleri {
   position: absolute;
@@ -3789,20 +3789,16 @@ body.radio-tila .board-hint {
   z-index: 3;
   display: inline-flex;
   align-items: center;
-  gap: 0.5em;
-  /* Matala kyltti — sama mitta kuin matkakirjan supistetulla
-   * chipillä (omistajan toive 10.8.2026); osuma-alue laajennetaan
-   * 44 pikseliin ::after-pseudolla. Asuu AINA oikeassa reunassa
-   * (omistajan tarkennus samana iltana); kirjanappia väistetään
-   * sivusuunnassa ja yläoikealle osuvaa päiväkirjakorttia alaspäin. */
-  min-height: 1.9rem;
-  padding: 0.1rem 0.75rem;
-  border-radius: 999px;
-  border: 1px solid rgba(70, 51, 31, 0.65);
-  background: rgba(245, 231, 200, 0.94);
+  gap: 0.45em;
+  padding: 0.2rem 0.5em;
+  border: 0;
+  border-radius: 6px;
+  background: rgba(244, 231, 202, 0.86);
+  box-shadow: 0 1px 4px rgba(62, 42, 22, 0.18);
   color: rgba(70, 51, 31, 0.92);
   font-family: var(--font-type);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -3813,6 +3809,9 @@ body.radio-tila .board-hint {
   position: absolute;
   inset: -8px;
 }
+
+.maa-pilleri:hover,
+.maa-pilleri:focus-visible { background: rgba(245, 231, 200, 0.97); }
 
 .maa-pilleri[data-kirja='true'] { right: 3.2rem; }
 
@@ -3828,31 +3827,6 @@ body.radio-tila .board-hint {
 }
 
 .maa-pilleri-lippu[hidden] { display: none; }
-
-.maa-pilleri-nimi { pointer-events: none; }
-
-.maa-pilleri-i {
-  display: inline-grid;
-  place-items: center;
-  width: 1.3em;
-  height: 1.3em;
-  border: 1px solid rgba(70, 51, 31, 0.75);
-  border-radius: 50%;
-  font-family: var(--font-kauno);
-  font-style: italic;
-  font-size: 0.95em;
-  pointer-events: none;
-}
-
-.maa-pilleri:hover,
-.maa-pilleri:focus-visible { border-color: var(--map-ink); }
-
-.maa-pilleri:hover .maa-pilleri-i,
-.maa-pilleri:focus-visible .maa-pilleri-i {
-  background: var(--map-ink);
-  border-color: var(--map-ink);
-  color: rgba(245, 231, 200, 0.95);
-}
 
 /* Vertailu-, maatiedot- ja radiotila omistavat kartan itse — pilleri
  * pois tieltä samoin kuin päiväkirjakortti ja toimintonapit. */
@@ -7988,8 +7962,14 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   float: right;
   width: min(34%, 130px);
   margin: 0.1rem 0 0.5rem 0.75rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 5px rgba(62, 42, 22, 0.25);
+  /* Kuvan pergamenttipohja sulautetaan kortin paperiin (omistajan
+   * toive 10.8.2026 ilta: kuva ei saa lukea laatikkona): multiply
+   * hävittää vaalean taustan ja säteittäinen maski pehmentää reunat
+   * paperiin. Ei kehystä eikä varjoa — piirros istuu sivulla kuin
+   * painettu vinjetti. */
+  mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
+  mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
 }
 
 .quiz-kohtaaminen-kuva[hidden] { display: none; }
@@ -8000,8 +7980,10 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   display: block;
   width: min(55%, 170px);
   margin: 0.55rem auto 0.35rem;
-  border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(62, 42, 22, 0.3);
+  /* Sama sulautus kuin kohtaamiskuvalla: ei laatikkoa. */
+  mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
+  mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
 }
 
 .quiz-result .kohtaaminen-repliikki {
