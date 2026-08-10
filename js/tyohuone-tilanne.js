@@ -10,32 +10,34 @@
  */
 
 export const TILANNE = {
-  paivitetty: '10.8.2026 (aamu klo 8.40)',
+  paivitetty: '10.8.2026 (aamupäivä klo 9.45)',
   tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN, sitten Lähi-itä '
     + '(omistajan tilaus 9.8.). Euroopasta auki enää nähtävyysjuttu-'
-    + 'erät 11–13 ja loppu-QA; ME-maiden aihesivut alkoivat jo '
-    + 'rinnalla. Matkakirjan tarinapuoli on parkissa.',
+    + 'erä 13 ja loppu-QA; ME-maiden aihesivut etenevät rinnalla. '
+    + 'Matkakirjan tarinapuoli on parkissa.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
       tila: 'valmis',
-      tehtava: 'Aamun testipelikorjaukset (v499–v500): luettu '
-        + 'kohtaaminen palasi kaupungin ensitehtäväksi, nähtävyys-'
-        + 'karuselliin lehden selaus (nuolet + pyyhkäisy) ja '
-        + 'popupiin hampurilaisvalikko kaupungin muihin kohteisiin.',
-      seuraavaksi: 'Raporttien kuittaus ja erien jako; kun erät 11–13 '
-        + 'ovat mainissa: kokoava QA + läpipelaus + ilmoitus '
-        + 'omistajalle Euroopan valmiudesta.',
+      tehtava: 'Aamupäivän korjaukset: valokuvapulma-pilotti (v503), '
+        + 'popupille rako ja täysikoon kuviin lehden selaus (v505), '
+        + 'ja iso pelisääntökorjaus (v506): kohtaaminen on nyt '
+        + 'ensimmäinen tehtävä JOKA kaupungissa — myös ilman laattaa '
+        + '— nappi nimeää henkilön (Tapaa Nikos) ja lehteä pääsee '
+        + 'aina lukemaan. Testattu 41/41 kaupunkia.',
+      seuraavaksi: 'Kun erä 13 on mainissa: kokoava QA + läpipelaus '
+        + '+ ilmoitus omistajalle Euroopan valmiudesta. Työhuoneen '
+        + 'Pelit-välilehdellä odottaa pelikatalogi valintoja varten.',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'Lähi-itä etenee: ARE sai kolme aihesivua (Aavikko, '
-        + 'Keidas, Ranta ja rata) ja Jordania kaksi (Vedet, Rauniot) '
-        + '— v498, v499. Eurooppa valmistui yöllä kokonaan.',
-      seuraavaksi: 'ME-erä B: Oman + Qatar, sitten Egypti + Kuwait ja '
+      tehtava: 'Lähi-itä etenee erä kerrallaan: ARE 3 sivua + '
+        + 'Jordania (v499), Oman + Qatar (v501). Esitarkistin nappasi '
+        + 'kolme vastausvuotoa ennen julkaisua.',
+      seuraavaksi: 'ME-erä C työn alla: Egypti + Kuwait. Sitten '
         + 'Saudi-Arabia (ilman pyhiä kaupunkeja) + Bahrain.',
     },
     {
@@ -64,12 +66,11 @@ export const TILANNE = {
       tekija: 'Sonnet 2',
       rooli: 'nähtävyysjutut',
       tila: 'tyossa',
-      tehtava: 'Erät 9 ja 10 mainissa (v488, v495): nähtävyysjuttuja '
-        + 'on nyt 24 kaupungissa. Hoiti erän 10 versiokollision '
-        + 'itsenäisesti oikealla kaavalla.',
-      seuraavaksi: 'Erä 11: Kiova, Pietari, Moskova, Odessa. Sitten '
-        + 'erät 12–13 (kuusi uutta karttakaupunkia) — viimeiset '
-        + 'Euroopan erät.',
+      tehtava: 'Erät 9–12 mainissa (v488, v495, v502, v504): '
+        + 'nähtävyysjuttuja on nyt 31 kaupungissa, mukana Kiova, '
+        + 'Pietari, Moskova, Odessa, Tromssa, Dubrovnik ja Riika.',
+      seuraavaksi: 'Erä 13 työn alla: Vilna, Oslo, Kööpenhamina — '
+        + 'Euroopan viimeinen erä.',
     },
   ],
   odottaaPaatosta: [
@@ -89,6 +90,22 @@ export const TILANNE = {
  * siivotaan pois kun ne on katsottu tai ne vanhenevat.
  */
 export const TESTATTAVAA = [
+  {
+    otsikko: 'Kohtaaminen joka kaupungissa + Tapaa X -nappi (v506)',
+    ohje: 'Avaa mikä tahansa Euroopan kaupunki ja paina Tutki: '
+      + 'kortin napissa lukee nyt henkilön nimi (esim. Tapaa Nikos '
+      + 'Ateenassa), henkilö esittäytyy ja kertoja lukee kohtaamisen '
+      + '— myös kaupungeissa joissa ei ole laattaa. Pulma tulee '
+      + 'vasta toisella pysähdyksellä. Tutki-nappi ei enää katoa '
+      + 'väärien vastausten jälkeen: lehti on aina luettavissa.',
+  },
+  {
+    otsikko: 'Valokuvapulma (v503) ja popup-hienosäädöt (v505)',
+    ohje: 'Ateenan pylväspulman vaihtoehdot ovat nyt oikeita '
+      + 'valokuvia (neljäntenä karyatidi-harhautus). Nähtävyys-'
+      + 'popupin alle jää pieni rako, ja täysikoon kuvaa voi selata '
+      + 'nuolilla ja pyyhkäisyllä kuten lehden kuvakotelossa.',
+  },
   {
     otsikko: 'Illan testipelikorjaukset (v475)',
     ohje: 'Avaa Ateenan kartalta Akropolis: kolme kuvaa on nyt yhtenä '
