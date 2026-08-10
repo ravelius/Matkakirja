@@ -19,11 +19,15 @@ import { aaniOsoite, onPeilista, peiliPetti } from './media.js';
 let arvottu = null; // { cityId, url }
 
 /*
- * Paikat, joiden ääni ei saa arpoutua: etusivu on pelin ensimmäinen
- * vaikutelma ja sen kuuluu kuulostaa aina samalta (omistajan toive).
- * Muille paikoille ääni arvotaan korista.
+ * Paikat, joiden ääni ei saa arpoutua eikä aloituskohta vaihdella:
+ * etusivu on pelin ensimmäinen vaikutelma ja sen kuuluu kuulostaa
+ * aina samalta (omistajan toive). Lentomatka kuuluu samaan joukkoon
+ * (omistajan toive 10.8.2026: "heti alussa melkein kuuluisi
+ * taustalla se kuulutus") — matkustamoäänitteen kuulutus on
+ * sekunneilla 1–4, ja arvottu aloituskohta hyppäsi sen yli, jolloin
+ * kabiini kuulosti pelkältä huminalta.
  */
-const VAKIOPAIKAT = new Set(['etusivu']);
+const VAKIOPAIKAT = new Set(['etusivu', 'lentomatka']);
 
 /**
  * Kaupungin äänimaisema: oma kenttä-äänitys ensin, maisematyypin
@@ -273,7 +277,10 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
   // Valinta voi kantaa aloituskohdan ja voimakkuuden (#alku=20&voima=1.5):
   // hypätään äänitteen vaimean alun yli ja soitetaan halutulla tasolla.
   const { url: osoite, alku, voima } = jaaAlku(url);
-  const paikanVoima = VAKIOPAIKAT.has(cityId) ? ETUSIVUN_VOIMA : 1;
+  // Puolitus koskee VAIN etusivua: siellä ääni soi yksin. Lentomatka
+  // on vakiopaikka vain aloituskohtansa puolesta, ja kabiini on jo
+  // kertaalleen kalibroitu täydelle voimalleen.
+  const paikanVoima = cityId === 'etusivu' ? ETUSIVUN_VOIMA : 1;
   const oma = {
     cityId,
     url,
@@ -363,6 +370,27 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
       // koskaan kuuluviin eikä sitä enää tarvita.
       vapautaSoitin(audio);
       return;
+    }
+    /*
+     * REITITYS JÄLKIKÄTEEN. Ensimmäisen eleen soitin (etusivu) syntyy
+     * usein ennen kuin kontekstin resume() on ehtinyt valmiiksi:
+     * liitaKompressori näkee suspended-tilan ja soitin jää pelkän
+     * volumen varaan. Silloin sen häivytys askeltaa pääsäikeessä —
+     * ja lentokalvon rakentamisen jumi jäädytti askelluksen, jolloin
+     * etusivun ääni katkesi kuin veitsellä lennon alkaessa (omistajan
+     * havainto 10.8.2026, sama juurisyy kuin v531:n leikkaus mutta
+     * volume-polulla). play() on ratkennut = ele on käsitelty ja
+     * konteksti tyypillisesti käynnissä, joten reititys onnistuu nyt:
+     * taso siirtyy vahvistimeen ja kaikki häivytykset ajastuvat
+     * äänisäikeelle, jota jumi ei pysäytä.
+     */
+    if (!audio.aaniVahvistin && !oma.ilmanKompressoria) {
+      const vahvistin = liitaKompressori(audio);
+      if (vahvistin) {
+        vahvistin.gain.value = audio.volume;
+        audio.volume = 1;
+        audio.aaniVahvistin = vahvistin;
+      }
     }
     sfx.setAmbience(null); // synteesi väistyy, kun oikea äänite soi
     haivyta(audio, taso(oma), null, nouse);

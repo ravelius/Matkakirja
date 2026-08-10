@@ -10,6 +10,12 @@
  * Käyttö:  NODE_USE_ENV_PROXY=1 ELEVEN_API_KEY=... node tools/generoi-kaari.mjs [praha …]
  * Ilman kaupunkeja generoi kaikki. Avain kierrätetään ajon jälkeen,
  * sitä ei tallenneta minnekään.
+ *
+ * --mykistetyt generoi VAIN mykistetyt-kenttien osoittamat osat
+ * (tekstierän jäljiltä vaienneet luennat) — kaupungin muut, ehjät
+ * luennat eivät kulu eivätkä muutu. Tämä on generointierän
+ * normaalitila: mykistetyt-kentät OVAT erälista. Kenttien tyhjennys
+ * tehdään ajon jälkeen käsin, kun tiedostot on tarkistettu.
  */
 
 import { writeFileSync } from 'node:fs';
@@ -40,8 +46,10 @@ const OSAT = [
   ['aarre', 'aarreLuenta', 'aarre'],
 ];
 
-const pyydetyt = process.argv.slice(2);
-const kohteet = KAARI_PAKETIT.kohteet.filter((k) => !pyydetyt.length || pyydetyt.includes(k.id));
+const vainMykistetyt = process.argv.includes('--mykistetyt');
+const pyydetyt = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+const kohteet = KAARI_PAKETIT.kohteet.filter((k) => (!pyydetyt.length || pyydetyt.includes(k.id))
+  && (!vainMykistetyt || (k.mykistetyt ?? []).length));
 if (!kohteet.length) {
   console.error('Ei kohteita. Tunnetut:', KAARI_PAKETIT.kohteet.map((k) => k.id).join(', '));
   process.exit(1);
@@ -71,12 +79,15 @@ async function generoi(teksti, polku, nimi) {
   console.log(`${nimi}: ${(data.length / 1024).toFixed(0)} kt → ${polku}`);
 }
 
+let generoitu = 0;
 for (const k of kohteet) {
   for (const [osa, luentaKentta, tekstiKentta] of OSAT) {
+    if (vainMykistetyt && !(k.mykistetyt ?? []).includes(osa)) continue;
     const teksti = k[luentaKentta] ?? k[tekstiKentta];
     if (!teksti) { console.error(`${k.id}/${osa}: teksti puuttuu — ohitetaan.`); continue; }
     const polku = resolve(JUURI, `assets/audio/puhe-kaari-${osa}-${k.id}.mp3`);
     await generoi(teksti, polku, `${k.id}/${osa}`);
+    generoitu += 1;
   }
 }
-console.log('Valmis.');
+console.log(`Valmis — ${generoitu} luentaa.`);
