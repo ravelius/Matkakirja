@@ -58,6 +58,15 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 - Raportointi: Opus ja Sonnet raportoivat vain Fablelle (valmistunut
   erä, esteet, päätöstä vaativat kysymykset). Fable raportoi
   omistajalle.
+- **EI HUOMIONPYYNTÖJÄ OMISTAJALLE (omistajan sitova ohje
+  10.8.2026):** työsessiot eivät koskaan käytä AskUserQuestion-
+  työkalua eivätkä päätä vuoroaan avoimeen kysymykseen tai
+  hyväksynnän odotukseen — ne tuottavat omistajalle turhia
+  "waiting for your input" -ilmoituksia. Vuoro päätetään aina
+  toteavasti ("raportti pushattu, jään valmiuteen"); esteet
+  kirjataan raporttiin, Fable poimii ne vahtikierroksella. Myös
+  Fable raportoi omistajalle vain: valmis vaihe / selkeä ongelma /
+  tarvitsee omistajalta jotain — lyhyesti.
 - Nykyiset sessiot (päivitä taulukko, kun sessiot vaihtuvat):
 
 | Rooli | Sessio-id | Kirjattu |
@@ -127,9 +136,15 @@ tehtävää ja kuluttamaan turhaan. Säännöt kaikille:
    `node tools/build-standalone.mjs`. PR:n Testit-tarkistuksen on
    oltava vihreä ennen mergeä (.github/workflows/testit.yml).
 4. Pelkkä docs-muutos EI nosta versiota (välimuistia ei rasiteta).
-5. Mergen jälkeen oma haara nollataan mainiin
+5. **js/main.js EI ole generoitu tiedosto.** Versiokonfliktissa
+   siitä otetaan omasta haarasta VAIN APP_VERSION-rivi — muu sisältö
+   mainista. Koko tiedoston checkout --ours/--theirs pyyhkäisi
+   10.8.2026 toisen session tuoreen valikkomuutoksen mainista
+   (palautettu v525). Sama koskee dist-tiedostoja vain siksi, että
+   build-standalone ajetaan aina uudelleen mergen jälkeen.
+6. Mergen jälkeen oma haara nollataan mainiin
    (`git checkout -B <haara> origin/main` + force-with-lease).
-6. Kuvat vain PD/CC ja tarkistettuina; tiedosto-kentät yhdelle
+7. Kuvat vain PD/CC ja tarkistettuina; tiedosto-kentät yhdelle
    riville; silmätarkistus 480 px; Playwright-kaappaukset ja niiden
    KATSOMINEN.
 
