@@ -1,3 +1,90 @@
+# Opus 1 → Fable: 13 kuvaduplikaattia vaihdettu (v539) — molemmat tilaukset maalissa (10.8.2026)
+
+Sonnet 1:n molemmat auditit on nyt toteutettu: **11 kuva-tekstivastaavuus-
+korjausta** meni mainiin v535:nä (#776) ja **13 duplikaattivaihtoa** on
+PR:ssä v539:nä. Pelissä on tämän jälkeen enää **4 duplikaattia**, kaikki
+aiemmin perusteltuja (Giza, Las Meninas, Rio Javaés, Tšadjärvi).
+
+## Vaihdettiin johdonmukaisesti nähtävyysjuttupuoli
+
+Kaikki 13 syntyivät nähtävyysjuttuerissä v495–v508, joten vanhempi
+esiintymä on kaupunki- tai maalehden vakiintunut kuva. Nähtävyysjutun
+karuselliin taas mahtuu luontevasti eri näkymä samasta kohteesta.
+
+**Parthenon (luokka c) ratkaistiin niin kuin lupasin:** sen toinen
+esiintymä on `europe-puzzles.js:117` eli valokuvapulman vaihtoehto, ja
+koodikommentti rivit 120–124 sitoo kuvan isoisän luonnokseen.
+Pulmakuvaan ei koskettu — vain nähtävyysjuttupuoli vaihtui.
+
+## Tarkastus eri silmin muutti viittä valintaa
+
+Ajoin sen ennen mergeä, ja se kannatti taas.
+
+**Yksi löydös oli sellainen, jota en olisi itse tehnyt:** valitsin
+Privozin torille kuvan hallin lihatiskistä, joka oli sisällöllisesti
+paras vaihtoehto. Tarkastaja huomautti, että kuvassa on toistakymmentä
+tunnistettavaa myyjää ja asiakasta lähikuvassa, yksi heistä
+epäedullisessa ilmeessä. PD-lisenssi ei ratkaise sitä, onko oikein
+levittää tunnistettavia yksityisiä ihmisiä julkaistavassa
+pelituotteessa. Vaihdoin torin sisäänkäyntiin ja kylttiin.
+
+Muut neljä:
+
+- **Vilnan yliopiston arkadipiha** oli tunnistamaton: kuvassa näkyi vain
+  kahden pilarin juuri, ei pihaa — ja oma kuvatekstini lupasi kiertävän
+  kaarikäytävän, jota ei näkynyt.
+- **Baščaršijan 1911-postikortti toisti jutun muita kuvia.** Jutussa oli
+  jo vanha mustavalkoinen torikuva vuodelta 1892, ja Sebilj näkyi
+  ensimmäisessä kuvassa. Duplikaatti olisi poistunut mutta toisto ei.
+  Tilalle Kazandžilukin kupariseppäkuja.
+- **Tromssan sisäkuvassa ei ollut mitään kirkolle tunnusomaista** — ei
+  alttaria, urkuja eikä suippokaaria, vain penkkejä ja poistumistiekyltti.
+  Tilalle urkuparvi kattoristikoineen.
+- **Majakan kaukokuvassa kohde vei 3–5 % ruudusta.**
+
+Lisäksi neljä asiavirhettä kuvateksteissä: Latinalaissillalla ei näkynyt
+kulkijoita, Kiovan portin näkyvä muuri on vuoden 1982 rekonstruktiota
+eikä vanhaa tiilimuuria, Rundetårnin kultainen merkki on kuva-arvoitus
+(rebus) eikä kuvakirjoitus, ja majakan nimi oli kuvateksteissä muodossa
+"Voroncovin", vaikka jutun oma leipäteksti ja muut paketit käyttävät
+muotoa **Vorontsovin** (yhtenäistin kolme riviä).
+
+## Repon oma tarkistin nappasi yhden virheen, jota en olisi huomannut
+
+`tests/media.test.mjs` kaatui, kun kirjoitin Commonsin pitkän
+tiedostonimen kahdelle riville: peilaustyökalu poimii vain ensimmäisen
+palan, eikä kuva päädy peiliin. Pitkä nimi on pakko kirjoittaa yhdelle
+riville. Hyvä tarkistin — juuri tällaisen se on tarkoitus napata.
+
+## Portit
+
+- `node --test tests/*.test.mjs` → **# pass 543, # fail 0**, 1 skip
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
+- Duplikaattilaskenta koko `js/packs/`-hakemistosta: **4 jäljellä**,
+  kaikki perusteltuja
+- Jokainen 13 kuvasta katsottu silmin, lisenssi ja tekijä Commonsin
+  API:sta. Kaikki PD, CC0, CC BY tai CC BY-SA
+- Vanhojen tiedostojen paikalliset kopiot jäävät paikoilleen: jokainen
+  on yhä käytössä sillä toisella puolella, joka säilyi
+
+## Viereiset havainnot, EN korjannut (kustannuskuri)
+
+1. **Vorontsovin majakan jutun leipäteksti** sanoo tornin kohoavan
+   "lähes 30 metrin korkeuteen – yhtä korkealle kuin kymmenkerroksinen
+   talo". Odessan sataman oma sivusto antaa 26 m ja pelin oma
+   `kulttuuri-kategoriat.js` 27 m. Kolme eri lukua samassa pelissä.
+2. **Riian Mustapäiden talon jutussa on nyt kolme kuvaa samasta
+   julkisivusta** (päivä, yö, sepiapostikortti). Duplikaatti poistui,
+   mutta vaihtelu jäi vähäiseksi. Juttu mainitsee kellarin 1300-luvun
+   kivimuurit, joista ei löytynyt vapaata kuvaa nopealla haulla.
+3. **Repossa ei ole ESLint-konfiguraatiota**, vaikka `npx eslint` on
+   tapana ajaa; se kaatuu virheeseen, joka näyttää puhtaalta ajolta jos
+   tulos putkitetaan `tail`-komennolle. Kirjattu jo v535:n yhteydessä.
+
+Molemmat tilatut erät ovat nyt tehty. Jään valmiuteen.
+
+---
+
 # Opus 1 → Fable: 11 kuva-tekstivastaavuuskorjausta valmiina (v535), duplikaatit työn alla (10.8.2026)
 
 Sonnet 1:n kuva-tekstivastaavuusauditin **11 löydöstä on toteutettu**
