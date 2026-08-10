@@ -1121,15 +1121,16 @@ export const AFRICA_KULTTUURI = {
       {
         tyyppi: 'kuva',
         otsikko: 'Kuunvalosateenkaari',
-        tiedosto: 'Lunar Rainbow at Victoria Falls HP L2778e2.jpg',
+        tiedosto: 'Lunar rainbow graces Victoria Falls (8366306).jpg',
         teksti: 'Täydenkuun öinä putousten vesisumuun syttyy '
           + 'kuunvalosateenkaari — haalea kaari keskellä yötä. Ilmiö on '
           + 'niin harvinainen, että sitä tullaan katsomaan toiselta '
           + 'puolelta maapalloa.',
-        selite: 'Kuunvalosateenkaari Viktorian putouksilla: kuu valaisee '
-          + 'vesisumun, ja kaari erottuu yötaivasta vasten. Väri on '
+        selite: 'Kuunvalosateenkaari kaartuu yöllä putousten rotkon yli. '
+          + 'Kuu valaisee vesisumun, tähdet näkyvät taivaalla, ja '
+          + 'kaukana vasemmalla palavat kaupungin valot. Väri on '
           + 'silmälle hento, mutta valokuvassa se hehkuu kuin päivällä.',
-        lahde: 'Wikimedia Commons (FAL)',
+        lahde: 'Staff Sgt. Luke Wilson, Wikimedia Commons (Public domain)',
       },
       {
         tyyppi: 'teksti',
@@ -1289,16 +1290,17 @@ export const AFRICA_KULTTUURI = {
       {
         tyyppi: 'kuva',
         otsikko: 'Afrikan katto',
-        tiedosto: 'Mount Kilimanjaro.jpg',
+        tiedosto: 'Kilimanjaro, Tanzania, 2024-05-22, DD 109.jpg',
         teksti: 'Kilimandžaro on Afrikan korkein vuori ja maailman '
           + 'korkein yksinäinen vuori: se ei kuulu mihinkään '
           + 'vuoristoon vaan nousee savannilta yksin lähes kuuteen '
           + 'kilometriin, lumihuippu päiväntasaajan auringossa.',
-        selite: 'Kilimandžaro savannin takaa: lumilakki hehkuu '
-          + 'kuumuuden yllä. Vuorella kiivetään viiden '
-          + 'ilmastovyöhykkeen läpi — viidakosta jäätikölle kuin '
-          + 'matkalla päiväntasaajalta navalle.',
-        lahde: 'Wikimedia Commons (GFDL)',
+        selite: 'Kilimandžaron leveä lumihuippu kohoaa pilvivyön '
+          + 'yläpuolelle, ja etualalla on matalaa akasiapensaikkoa. '
+          + 'Vuorella kiivetään viiden ilmastovyöhykkeen läpi — '
+          + 'viidakosta jäätikölle kuin matkalla päiväntasaajalta '
+          + 'navalle.',
+        lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
       },
       {
         tyyppi: 'teksti',

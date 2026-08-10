@@ -113,7 +113,13 @@ function siisti(arvo) {
    * on harvinaisempi kuin kokonainen virke, ja liian salliva sääntö
    * päästäisi käyttöehdot takaisin nimeen.
    */
-  const EI_KATKAISE = /(?:^|\s)(?:[A-ZÅÄÖ]|Dr|Mr|Mrs|Ms|Prof|St|Sr|Jr|Fr|Sta|Ing|Rev|Hr|Mme|Mlle)$/;
+  /*
+   * "Sgt" ja lyhenteet: "U.S. Army photo by Staff Sgt. Luke Wilson"
+   * katkesi muotoon "U.S", koska piste "U.S." jälkeen luettiin virkkeen
+   * lopuksi. Tulos näytti nimeltä eikä herättänyt epäilystä — sama
+   * vika kuin muutkin tämän tiedoston hiljaiset katkaisut.
+   */
+  const EI_KATKAISE = /(?:^|\s)(?:[A-ZÅÄÖ]|[A-Z]\.[A-Z]|Dr|Mr|Mrs|Ms|Prof|St|Sr|Jr|Fr|Sta|Ing|Rev|Hr|Mme|Mlle|Sgt|Cpl|Lt|Capt|Maj|Col)$/;
   for (const osuma of [...s.matchAll(/\.\s|\s\.\s/g)]) {
     if (EI_KATKAISE.test(s.slice(0, osuma.index))) continue;
     s = s.slice(0, osuma.index);
@@ -136,6 +142,8 @@ function siisti(arvo) {
   s = s.replace(/\s+from\s+.*$/i, '');
   // Wikipedia-tunnus suluissa ("J Williams (= Hammy07 at en.wikipedia)")
   s = s.replace(/\s*\((=\s*)?[^)]*\b(at|wikipedia|wikimedia)\b[^)]*\)/i, '');
+  // Sama ilman sulkeita ("Shayanshaukat at English Wikipedia")
+  s = s.replace(/\s+at\s+\S+\s*wikipedia\s*$/i, '');
   // Elinvuodet eivät kuulu lähdemerkintään ("Lucien Roy (d. 1941)")
   s = s.replace(/\s*\((k\.|d\.|s\.|b\.|\d{4})[^)]*\)\s*$/i, '');
   // Verkko-osoite ei ole nimi
