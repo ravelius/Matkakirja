@@ -278,17 +278,20 @@ Sonnet 1:n loppu-QA ajettu):
 2. [x] Tehtävämuodot: yksi tehtävä/pysähdys, pulma korvaa visan (v478).
 3. [x] Viisi puuttuvaa kaupunkilehteä (v481 — Eurooppa on lehtien
        osalta täysi; Opus 1 teki koko erän kerralla).
-4. [ ] Orpo minitehtävä -auditointi (evzone-tapaus: vastaus eri
-       sivulla kuin kysymys) — Opus 1 jonossa.
+4. [x] Orpoauditointi (v483): 164 minitehtävää koneellisesti, 0
+       orpoa; 5 orpoa kulttuurivisaa korjattu (ml. evzone).
 5. [ ] Menovinkkisivujen kuvat (omistajan havainto Suomen lehdestä)
        — Opus 1 jonossa 5 lehden jälkeen.
-6. [ ] Uusien lehtikaupunkien kohdekartat: Tromssa, Dubrovnik,
-       Riika, Vilna, Oslo, Kööpenhamina — Opus 2, työn alla.
-       Vesikorjaukset (Tukholma, Madrid, Lontoo) TEHTY v480:ssa.
+6. [x] Kohdekartat kaikille lehtikaupungeille (v482, v484, v485 —
+       Tromssa, Dubrovnik, Riika, Vilna, Oslo, Kööpenhamina) +
+       vesikorjaukset (v480).
 7. [ ] Nähtävyysjutut kohdekartallisiin kaupunkeihin: erä 9 (Rooma,
        Krakova, Varsova, Tallinna — työn alla), erä 10 (Sofia,
        Bukarest, Sarajevo), erä 11 (Kiova, Pietari, Moskova, Odessa)
-       — Sonnet 2.
+       — Sonnet 2. LISÄYS kierroksella 3: erät 12–13 kuudelle
+       uudelle karttakaupungille (Tromssa, Dubrovnik, Riika, Vilna,
+       Oslo, Kööpenhamina) — "kaikilta osin" kattaa nämäkin;
+       kohteet avautuvat wiki-varapolulla siihen asti.
 8. [ ] Sonnet 1:n kokoava QA-kierros koko Euroopalle (peli + lehdet +
        luennat) kun 3–7 ovat mainissa.
 9. [ ] Fablen oma läpipelaus Playwrightilla + ilmoitus omistajalle.
@@ -307,3 +310,15 @@ kaaren aarreluenta kattaa paljastuksen äänen kaarilaudoilla.
 - Sonnet 2: erä 9 työn alla (ei uutta triggeriä).
 - Kierrätykset yhä tekemättä Opus 1/Opus 2/Sonnet 2:lle — tehdään
   raporttien saapuessa erätauolla, ei kesken ajon.
+
+### Yövahtikierros 3 (klo ~2.25): tilanne
+
+- Tunnin saldo mainissa: v482–v485 (Tromssan + viiden uuden kaupungin
+  kohdekartat, orpoauditoinnin korjaukset). Kohdat 4 ja 6 kiinni.
+- Auki: kohta 5 (menovinkkikuvat, Opus 1 työn alla), kohta 7
+  (Sonnet 2: erä 9 käynnissä, jonossa 10–13), kohta 8 (Sonnet 1:n
+  8 lehden QA käynnissä; kokoava koko Euroopan QA vasta kun 5+7
+  kiinni), kohta 9 (Fablen läpipelaus + ilmoitus).
+- Ei jumeja: kaikki sessiot julkaisseet tai saaneet erän tunnin
+  sisällä. Kierrätykset yhä odottavat raportteja (ei arkistointia
+  kesken ajon); Sonnet 1 ainoa kierrätetty.

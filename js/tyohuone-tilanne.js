@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '10.8.2026 (yövahti klo 1.30)',
+  paivitetty: '10.8.2026 (yövahti klo 2.30)',
   tavoite: 'EUROOPPA VALMIIKSI KAIKILTA OSIN (omistajan tilaus 9.8.): '
     + 'lehdet kuntoon ensin. Euroopan valmistuttua siirrytään suoraan '
     + 'Lähi-idän kaupunki- ja maalehtiin. Matkakirjan tarinapuoli on '
@@ -34,24 +34,25 @@ export const TILANNE = {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'EUROOPPA ON LEHTIEN OSALTA TÄYSI: viisi viimeistä '
-        + 'kaupunkilehteä (Dubrovnik, Riika, Vilna, Oslo, '
-        + 'Kööpenhamina) yhtenä eränä (v481), sitä ennen aluelehdet '
-        + '(v473).',
-      seuraavaksi: 'Orpo minitehtävä -auditointi + menovinkkisivujen '
-        + 'kuvat (pilotti Suomi) + valokuvarajatapaukset ja '
-        + 'kuvaduplikaatit → Lähi-idän maiden aihesivut (ARE ensin).',
+      tehtava: 'Eurooppa lehtien osalta täysi (v481) ja '
+        + 'orpoauditointi valmis (v483): 164 minitehtävää '
+        + 'tarkastettu, viisi kadonneeseen juttuun osoittanutta '
+        + 'kulttuurivisaa korjattu — mukana omistajan evzone-löydös.',
+      seuraavaksi: 'Menovinkkisivujen kuvat (pilotti Suomi) + '
+        + 'valokuvarajatapaukset ja kuvaduplikaatit → Lähi-idän '
+        + 'maiden aihesivut (ARE ensin).',
     },
     {
       tekija: 'Opus 2',
       rooli: 'kartat + introt',
       tila: 'tyossa',
-      tehtava: 'Maakyltit mittaamalla kuntoon (v474), mittakaavajana '
-        + 'kaikkiin kohdekarttoihin (v476) ja karttojen '
-        + 'vesikorjaukset saarineen ja suihkulähteineen (v480).',
-      seuraavaksi: 'Kuusi kohdekarttaa uusille lehtikaupungeille: '
-        + 'Tromssa, Dubrovnik, Riika, Vilna, Oslo, Kööpenhamina — '
-        + 'valmiusportin viimeinen karttakohta.',
+      tehtava: 'KARTTAPUOLI ON VALMIS: kaikki kuusi uutta '
+        + 'kohdekarttaa mainissa (v482 Tromssa, v484 Dubrovnik/'
+        + 'Riika/Vilna, v485 Oslo/Kööpenhamina) — jokaisessa '
+        + 'mittakaavajana ja vesitarkistetut pisteet.',
+      seuraavaksi: 'Valmiudessa; raportin jälkeen kontinkierrätys. '
+        + 'Seuraava iso erä on Lähi-idän maakartat, kun Eurooppa on '
+        + 'kuitattu valmiiksi.',
     },
     {
       tekija: 'Sonnet 1',

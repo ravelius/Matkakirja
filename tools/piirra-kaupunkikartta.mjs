@@ -21,6 +21,12 @@
  * ydinkeskustan kuuluisimmat kohteet (n. 5–8 km leveä alue — laajempi
  * muuttuu puuroksi). Aja työkalu ja KATSO kuva silmin ennen käyttöä.
  *
+ * KATSO MYÖS VASEN ALAKULMA. Lehti piirtää sinne mittakaavajanan
+ * (ui.js), eikä työkalu tiedä siitä mitään. Kööpenhaminassa Tivolin
+ * numeroympyrä osui janan päälle, ja se korjattiin laskemalla
+ * rajauksen eteläreunaa. Kuva kannattaa siis katsoa lehdessä eikä
+ * vain tiedostona.
+ *
  * TARKISTA PISTEET VIELÄ ERIKSEEN:
  *   node tools/tarkista-karttapisteet.mjs <kaupunki>
  * Se lukee valmiista PNG:stä pikselin värin jokaisesta kohteesta ja
@@ -380,6 +386,86 @@ const KAUPUNGIT = {
     // osoittavat kolmeen muuhun suuntaan.
     rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
   },
+  oslo: {
+    // Vuonon peruka ja sen ympärille kiertyvä keskusta: kuninkaanlinna
+    // ylhäällä, Karl Johans gate siitä alas kohti tuomiokirkkoa,
+    // Akershusin linnoitus niemellä ja oopperatalo veden toisella
+    // puolella idässä. Satama-altaat jäävät väliin, ja juuri ne
+    // tekevät Oslosta Oslon.
+    //
+    // Bygdøyn laivamuseot (viikinkilaiva, Fram, Kon-Tiki) jäävät
+    // tahallaan pois: ne ovat 3,5 km lännessä, ja mukaan ottaminen
+    // kolminkertaistaisi rajauksen. Lehden laivaosasto kertoo niistä,
+    // ja kartan esittely sanoo, mihin suuntaan ne jäävät.
+    rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
+    meri: true,
+  },
+  kobenhavn: {
+    // Satamakanava halkoo kuvan pohjois–eteläsuunnassa: vasemmalla
+    // vanha kaupunki Tivolista Rundetårniin, oikealla Christianshavn
+    // ja Amager. Pohjoisreuna on valittu niin, että Pieni merenneito
+    // mahtuu mukaan — se on 1,5 km keskustasta pohjoiseen, ja ilman
+    // sitä kartalta puuttuisi se, mitä lapsi ensimmäisenä etsii.
+    //
+    // meri: 'maa' eikä true — koeajo tavallisella täytöllä varoitti
+    // meren peittävän 113 % rajauksesta eli valinneen väärän puolen.
+    // Kööpenhaminassa maata on kanavan molemmin puolin, joten täyttö
+    // osuu oikein vasta käännettynä.
+    // Eteläreuna 55.669 eikä 55.672: Tivolin numeroympyrä osui
+    // muuten mittakaavajanan päälle kuvan vasemmassa alakulmassa
+    // (mitattu selaimessa).
+    rajat: { pohjoinen: 55.6945, etela: 55.669, lansi: 12.5555, ita: 12.6116 },
+    meri: 'maa',
+  },
+  dubrovnik: {
+    // Muurikaupunki kokonaan kuvassa: Pilen portti lännessä,
+    // vanhasatama idässä, Minčetan torni pohjoisessa ja Adrianmeri
+    // etelässä. Lovrijenacin linnake mahtuu vasempaan laitaan omalle
+    // kalliolleen, ja juuri se kertoo, miksi kaupunki on tässä —
+    // linnake vartioi lahden suuta.
+    //
+    // 1,8 × 1,3 km on koko kartaston tiukin rajaus, ja se on
+    // tarkoitus: vanhakaupunki on vain 500 × 300 metriä. Dubain
+    // kokoisella ruudulla se olisi peukalonpään kokoinen läiskä.
+    //
+    // Kujat piirtyvät, toisin kuin Tallinnassa: Dubrovnikin kujat ovat
+    // OSM:ssä pääosin `pedestrian` (jonka työkalu piirtää) eivätkä
+    // `footway` (jota ei). Stradun näkyy siksi kuvassa leveänä
+    // suorana, ja siitä lähtevät portaikot kylkiluina.
+    rajat: { pohjoinen: 42.6442, etela: 42.6388, lansi: 18.1035, ita: 18.1148 },
+    meri: true,
+  },
+  riika: {
+    // Vanhakaupunki Väinäjoen mutkassa: joki vasemmalla, keskiaikainen
+    // rypäs keskellä ja Vapaudenpatsas puistovyöhykkeellä oikealla.
+    // Alaspäin jatkuu keskustori, jonka viisi hallia näkyvät kuvassa
+    // sormina — ne ovat lehden nostossa mainitut ilmalaivahallit.
+    //
+    // Jugend-kortteli (Alberta iela) jää tahallaan pois: se on 1,2 km
+    // pohjoiseen, ja mukaan ottaminen kaksinkertaistaisi rajauksen,
+    // jolloin vanhakaupungin kujat sulaisivat yhdeksi täpläksi.
+    // Kartan juoni on vanhakaupunki, kuten lehdenkin.
+    rajat: { pohjoinen: 56.956, etela: 56.941, lansi: 24.0908, ita: 24.1293 },
+  },
+  vilna: {
+    // Vanhakaupunki kahden joen kainalossa: Neris ylhäällä, Vilnia
+    // oikealla, ja niiden välissä Gediminaksen kukkula. Kuva ulottuu
+    // pohjoisessa tuomiokirkon aukiolle ja etelässä Aamuportille,
+    // eli koko sille matkalle, jonka vanhakaupunki vie.
+    //
+    // Užupis on mukana omana kolkkanaan Vilnia-joen takana — lehti
+    // kertoo sen tasavallasta ja 41 pykälästä, ja kartalla näkee,
+    // että se on oikeasti oma korttelinsa joen toisella puolella.
+    //
+    // palvelutiet: true — Vilnan vanhassakaupungissa kujat on merkitty
+    // OSM:ään service-teiksi (1509 kpl vs. 189 tavallista katua), joten
+    // ilman niitä vanhakaupunki jää tyhjäksi paperiksi. Mitattu
+    // Overpassista ennen lipun lisäämistä.
+    // Eteläreuna 54.6705 eikä 54.6725: Aamuportin numeroympyrä jäi
+    // muuten kiinni kuvan alareunaan (mitattu selaimessa).
+    rajat: { pohjoinen: 54.688, etela: 54.6705, lansi: 25.2695, ita: 25.307 },
+    palvelutiet: true,
+  },
   tromssa: {
     // Tromssan salmi keskellä: saarikaupunki lännessä, Tromsdalen ja
     // Jäämerenkatedraali idässä, ja niiden välissä silta. Rajaus on
@@ -658,6 +744,9 @@ const KAUPUNGIT = {
  * kapeammat mutta kaikki viisi luokkaa erottuvat yhä toisistaan.
  */
 const KADUT = [
+  // Palvelutiet ohuimpana ja haaleimpana: ne ovat kujia eivätkä katuja,
+  // ja ne piirtyvät vain kaupungeissa, joilla on `palvelutiet: true`.
+  { luokat: ['service'], vari: '#d2c7ac', leveys: 0.9 },
   { luokat: ['residential', 'unclassified', 'living_street', 'pedestrian'], vari: '#c8bb9e', leveys: 1.4 },
   { luokat: ['tertiary', 'tertiary_link'], vari: '#c1b394', leveys: 2.2 },
   { luokat: ['secondary', 'secondary_link'], vari: '#b5a583', leveys: 2.9 },
@@ -677,10 +766,23 @@ const VESIREUNA = '#b99a68';
 const PUISTO = '#efe6ca';
 const RATA = '#d5c9b0';
 const PAPERI = '#f6eeda';
+// Muuri on kartan tummin viiva: pääkartan musteen sävy (.city-label),
+// jotta se erottuu vaaleista kaduista mutta pysyy pergamentissa.
+const MUURI = '#6f5a3c';
 
-async function haeOverpass(rajat) {
+async function haeOverpass(rajat, palvelutiet = false) {
   const alue = `(${rajat.etela},${rajat.lansi},${rajat.pohjoinen},${rajat.ita})`;
-  const luokat = KADUT.flatMap((k) => k.luokat).join('|');
+  /*
+   * PALVELUTIET VAIN PYYDETTÄESSÄ (`palvelutiet: true`).
+   *
+   * Useimmissa kaupungeissa `service` on pysäköintialueiden ja
+   * pihojen ajolinjoja, ja niiden piirtäminen tekee kartasta
+   * roskaisen. Vilnan vanhassakaupungissa se on päinvastoin: kujat
+   * ON MERKITTY service-teiksi (1509 kpl), kun tavallisia katuja on
+   * 189, joten ilman niitä koko vanhakaupunki jää tyhjäksi paperiksi.
+   * Lippu on siksi kaupunkikohtainen eikä oletus.
+   */
+  const luokat = [...KADUT.flatMap((k) => k.luokat), ...(palvelutiet ? ['service'] : [])].join('|');
   const kysely = `[out:json][timeout:120];(
     way["highway"~"^(${luokat})$"]${alue};
     way["waterway"~"^(river|canal)$"]${alue};
@@ -704,6 +806,18 @@ async function haeOverpass(rajat) {
     way["leisure"~"^(park|garden)$"]${alue};
     way["landuse"~"^(forest|grass|recreation_ground|cemetery)$"]${alue};
     way["railway"="rail"]${alue};
+    /*
+     * KAUPUNGINMUURI. Muurikaupungeissa muuri on kartan tärkein viiva
+     * eikä koriste: Dubrovnikin vanhastakaupungista piirtyi ilman sitä
+     * vain Stradun ja satama, koska kujat ovat OSM:ssä portaita eikä
+     * katuja. Muurin kanssa kuvassa on se, mistä kaupunki tunnetaan.
+     *
+     * Piirretään omana ohuena viivanaan (ks. kerrokset.muurit), ei
+     * katuna: muuri ei ole reitti, ja katuna se saisi kadun paksuuden
+     * ja sekoittuisi katuverkkoon.
+     */
+    way["barrier"="city_wall"]${alue};
+    way["historic"="citywalls"]${alue};
     /*
      * Isot järvet ja lahdet ovat OSM:ssä monikulmiorelaatioita, ja
      * niiden jäsenpoluilla ei ole omia merkintöjä — pelkkä
@@ -731,10 +845,10 @@ async function haeOverpass(rajat) {
  * minuutti, jonka kysely ehti kestää. Kolme yritystä kasvavalla
  * odotuksella riitti kaikkiin tässä kohdattuihin katkoihin.
  */
-async function haeOverpassSitkeasti(rajat, yrityksia = 3) {
+async function haeOverpassSitkeasti(rajat, palvelutiet = false, yrityksia = 3) {
   for (let i = 1; ; i++) {
     try {
-      return await haeOverpass(rajat);
+      return await haeOverpass(rajat, palvelutiet);
     } catch (virhe) {
       if (i >= yrityksia) throw virhe;
       const odotus = 15000 * i;
@@ -1085,7 +1199,8 @@ function kuvasuhde(rajat) {
 function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
   const pisteet = (geom) => geom.map((p) => `${x(p.lon)},${y(p.lat)}`).join(' ');
   const kerrokset = {
-    meri: [], saaret: [], puistot: [], vedet: [], joet: [], radat: [], kadut: KADUT.map(() => []),
+    meri: [], saaret: [], puistot: [], vedet: [], joet: [], radat: [], muurit: [],
+    kadut: KADUT.map(() => []),
   };
   const rantaviivat = [];
   const laatikonAla = (rajat.ita - rajat.lansi) * (rajat.pohjoinen - rajat.etela);
@@ -1195,6 +1310,8 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
       }
     } else if (t.railway) {
       kerrokset.radat.push(`<polyline points="${pisteet(e.geometry)}"/>`);
+    } else if (t.barrier === 'city_wall' || t.historic === 'citywalls') {
+      kerrokset.muurit.push(`<polyline points="${pisteet(e.geometry)}"/>`);
     } else {
       kerrokset.puistot.push(`<polygon points="${pisteet(e.geometry)}"/>`);
     }
@@ -1278,7 +1395,11 @@ function kerrosKuvaus(kerrokset, mitta = 1) {
      stroke-linejoin="round">${kerrokset.joet.join('')}</g>
   <g fill="${VESI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.vedet.join('')}</g>
   <g fill="none" stroke="${RATA}" stroke-width="${v(1.4)}" stroke-dasharray="${v(7)} ${v(5)}">${kerrokset.radat.join('')}</g>
-  ${katuryhmat}`;
+  ${katuryhmat}
+  <!-- Kaupunginmuuri päällimmäisenä ja katuja tummempana: se on
+       muurikaupungin kartan tärkein viiva, ei tausta. -->
+  <g fill="none" stroke="${MUURI}" stroke-width="${v(3.2)}" stroke-linecap="round"
+     stroke-linejoin="round">${kerrokset.muurit.join('')}</g>`;
 }
 
 /*
@@ -1371,7 +1492,10 @@ if (!KAUPUNGIT[kaupunki]) {
   process.exit(1);
 }
 console.log('Haetaan OpenStreetMap-aineisto (Overpass)…');
-const elementit = await haeOverpassSitkeasti(KAUPUNGIT[kaupunki].rajat);
+const elementit = await haeOverpassSitkeasti(
+  KAUPUNGIT[kaupunki].rajat,
+  KAUPUNGIT[kaupunki].palvelutiet ?? false,
+);
 console.log(`${elementit.length} elementtiä.`);
 /*
  * Kainalot haetaan omina kyselyinään ja TAUON TAKAA: Overpass

@@ -3906,6 +3906,232 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Privozin tori', lat: 46.4699, lon: 30.7368 },
     ],
   },
+  oslo: {
+    polku: 'assets/kartat/oslo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
+    esittely: 'Oslo on vuonon perukassa. Oslovuono työntyy merestä '
+      + 'noin sata kilometriä sisämaahan, ja kaupunki on sen '
+      + 'pohjoisimmassa päässä, siinä missä vesi loppuu ja metsäiset '
+      + 'kukkulat alkavat. Metsä ei ole kaukana: kaupungin pohjoisosista '
+      + 'pääsee raitiovaunulla suoraan Nordmarkaan, joka on suurempi '
+      + 'kuin koko rakennettu kaupunki. Keskusta on rakennettu '
+      + 'suoraviivaiseksi ruuduksi 1600-luvulla, kun vanha puukaupunki '
+      + 'oli palanut ja Tanskan kuningas Kristian IV käski rakentaa '
+      + 'uuden linnoituksen suojaan — kaupunki kantoi hänen nimeään '
+      + 'Kristianiana aina vuoteen 1925.\n\nKartalla vuono on '
+      + 'vasemmalla alhaalla ja kaupunki kiertyy sen ympärille. '
+      + 'Keskustan kadut ovat suoria ja risteävät suorassa kulmassa, '
+      + 'mikä erottaa Oslon Tallinnan tai Vilnan kaltaisista '
+      + 'keskiaikaisista kaupungeista. Yksi katu kulkee vinosti muiden '
+      + 'poikki: se on Karl Johans gate, joka vie kuninkaanlinnalta '
+      + 'tuomiokirkolle ja rautatieasemalle. Niemellä sataman kupeessa '
+      + 'näkyy tumma vallirengas — Akershusin linnoitus, joka on '
+      + 'seisonut paikallaan 1300-luvulta. Oopperatalo on veden '
+      + 'toisella puolella oikealla, ja sen katolle voi kävellä. '
+      + 'Lehden laivamuseot eli viikinkilaiva, Fram ja Kon-Tiki ovat '
+      + 'Bygdøyn niemellä kolme ja puoli kilometriä lännessä, kartan '
+      + 'ulkopuolella. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * VIIDELLÄ KUUDESTA ON PAIKAN OMA WIKI — kartaston paras
+       * osuus, ja se kertoo enemmän fi.wikipediasta kuin Oslosta.
+       * Kuninkaanlinnasta ei ole artikkelia millään kokeillulla
+       * nimellä.
+       */
+      { nimi: 'Kuninkaanlinna', lat: 59.9169, lon: 10.7275 },
+      { nimi: 'Karl Johans gate', lat: 59.9139, lon: 10.74, wiki: 'Karl Johans gate' },
+      { nimi: 'Oslon tuomiokirkko', lat: 59.9128, lon: 10.7442, wiki: 'Oslon tuomiokirkko' },
+      { nimi: 'Kaupungintalo', lat: 59.912, lon: 10.7335, wiki: 'Oslon kaupungintalo' },
+      { nimi: 'Akershusin linnoitus', lat: 59.9075, lon: 10.7365, wiki: 'Akershusin linnoitus' },
+      { nimi: 'Oopperatalo', lat: 59.9075, lon: 10.7522, wiki: 'Oslon oopperatalo' },
+    ],
+  },
+  kobenhavn: {
+    polku: 'assets/kartat/kobenhavn-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 55.6945, etela: 55.669, lansi: 12.5555, ita: 12.6116 },
+    esittely: 'Kööpenhamina on satamakaupunki kahden saaren välissä. '
+      + 'Vanha kaupunki on Sjællandin puolella ja sen vastarannalla on '
+      + 'Amager, ja niiden välissä kulkee satamakanava, jota pitkin '
+      + 'laivat pääsevät kaupungin läpi. Nimi tarkoittaa '
+      + 'kauppasatamaa. Kaupunki on hyvin matala — korkeimmat asiat '
+      + 'ovat kirkontornit — ja se on rakennettu veden ehdoilla: '
+      + 'kanavia on kaivettu lisää sinne, missä niitä tarvittiin, ja '
+      + 'vanhat vallihaudat ovat nykyään järviä keskellä kaupunkia. '
+      + 'Isoisän matkan aikaan Kööpenhaminassa asui jo yli sata tuhatta '
+      + 'ihmistä, ja kaupungin ympäriltä oli juuri purettu muurit, '
+      + 'jotka olivat estäneet sitä kasvamasta.\n\nKartalla kanava '
+      + 'kulkee ylhäältä alas oikeanpuoleisen kolmanneksen halki. '
+      + 'Vasemmalla ovat pitkulaiset järvet, jotka ovat entisiä '
+      + 'vallihautoja, ja niiden ja kanavan välissä on vanha kaupunki '
+      + 'kapeine katuineen. Oikeassa yläkulmassa erottuu tähden '
+      + 'muotoinen linnoitus vallihautoineen: se on Kastellet, ja sen '
+      + 'takana rannalla istuu Pieni merenneito. Kanavan itäpuolella '
+      + 'on Christianshavn, jonka omat kanavat näkyvät suorina '
+      + 'juovina — se rakennettiin hollantilaiseen tapaan kaivamalla. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * AMALIENBORG ON ANSA. fi.wikipedian `Amalienborg` EI ole
+       * Tanskan kuninkaanlinna vaan ruotsalainen panimo
+       * (Amalienborg Aktiebolags Bryggeri). Linnasta ei ole
+       * artikkelia, joten kohde on pelkkä merkki. Älä linkitä.
+       *
+       * `Pieni merenneito` yksinään on satu; patsaasta kertoo
+       * `Pieni merenneito (patsas)`, ja kohde tarkoittaa patsasta.
+       */
+      // Patsas istuu kivellä vedessä; piste on rantapromenadilla,
+      // jotta se osuu maalle (vesitarkistin).
+      { nimi: 'Pieni merenneito', lat: 55.6926, lon: 12.5989, wiki: 'Pieni merenneito (patsas)' },
+      { nimi: 'Amalienborg', lat: 55.6841, lon: 12.5934 },
+      { nimi: 'Rundetårn', lat: 55.6813, lon: 12.5757, wiki: 'Rundetårn' },
+      // Nyhavn on kanava, ja kuuluisa osa on pohjoisen laiturin
+      // värikkäät talot — piste on laiturilla eikä vedessä.
+      { nimi: 'Nyhavn', lat: 55.6802, lon: 12.59, wiki: 'Nyhavn' },
+      { nimi: 'Christiansborgin linna', lat: 55.6761, lon: 12.5797, wiki: 'Christiansborgin linna' },
+      { nimi: 'Tivoli', lat: 55.6737, lon: 12.5681 },
+    ],
+  },
+  dubrovnik: {
+    polku: 'assets/kartat/dubrovnik-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 42.6442, etela: 42.6388, lansi: 18.1035, ita: 18.1148 },
+    esittely: 'Dubrovnik on kaupunki muurin sisällä. Vanhakaupunki on '
+      + 'vain noin viisisataa metriä pitkä ja kolmesataa leveä, ja sen '
+      + 'ympäri kiertää yhtenäinen kivimuuri, joka on paikoin '
+      + 'kuusi metriä paksu ja kaksikymmentäviisi metriä korkea. '
+      + 'Muurilla voi kävellä koko kierroksen. Kaupunki oli satojen '
+      + 'vuosien ajan oma pieni valtionsa, Ragusan tasavalta, jolla '
+      + 'oli omat lakinsa, oma laivastonsa ja oma tapansa selvitä '
+      + 'isompien naapureiden välissä: se maksoi veroa sekä '
+      + 'Venetsialle että sulttaanille eikä sotinut kummankaan '
+      + 'kanssa. Rikkaudet tulivat suolasta ja merenkulusta. '
+      + 'Kaupunki rakennettiin uudestaan kivestä vuoden 1667 '
+      + 'maanjäristyksen jälkeen, ja siksi talot ovat keskenään '
+      + 'samannäköisiä — samaa kiveä, samat kattotiilet, sama '
+      + 'korkeus.\n\nKartalla on melkein pelkkä vanhakaupunki, alle '
+      + 'kilometrin levyinen pala. Tumma viiva kuvan keskellä on '
+      + 'muuri, ja siitä erottuvat pyöreät tornit: ylhäällä on '
+      + 'Minčetan torni, kaupungin korkein kohta. Muurin sisällä '
+      + 'kulkee vasemmalta oikealle yksi leveä suora — se on Stradun, '
+      + 'kaupungin pääkatu, jonka molemmilta puolilta lähtee kapeita '
+      + 'kujia ja portaita rinnettä ylös. Kujat eivät näy kartalla '
+      + 'kaikki, koska ne ovat enimmäkseen portaita. Oikealla on '
+      + 'vanhasatama aallonmurtajineen, ja vasemmalla omalla '
+      + 'kalliollaan Lovrijenacin linnake, joka vartioi sisääntuloa '
+      + 'merelle päin. Lokrumin saari, jonne laivat joutuivat '
+      + 'odottamaan karanteeniin, on kartan ulkopuolella runsaan '
+      + 'kilometrin päässä kaakossa. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään, kuten muillakin kartoilla.
+       *
+       * VAIN KATEDRAALILLA ON PAIKAN OMA WIKI, ja se on tarkistettu
+       * hakemalla. fi.wikipediassa ei ole artikkelia Stradunista,
+       * Minčetasta, Lovrijenacista, Pilen portista, Sponzan
+       * palatsista eikä rektorinpalatsista — koko muurikaupungista on
+       * vain katedraali ja Lokrumin saari, joka jää kartan
+       * ulkopuolelle.
+       */
+      { nimi: 'Minčetan torni', lat: 42.643, lon: 18.1082 },
+      { nimi: 'Pilen portti', lat: 42.6415, lon: 18.1067 },
+      // Rektorinpalatsi jätettiin pois: se on parikymmentä metriä
+      // katedraalista, ja kaksi numeroympyrää olisi mennyt päällekkäin.
+      { nimi: 'Sponzan palatsi', lat: 42.6414, lon: 18.1101 },
+      // Laiturille eikä altaaseen (vesitarkistin).
+      { nimi: 'Vanhasatama', lat: 42.6416, lon: 18.1113 },
+      // Linnake seisoo omalla kalliollaan; aineiston piste osui
+      // meren puolelle (vesitarkistin).
+      { nimi: 'Lovrijenacin linnake', lat: 42.641, lon: 18.106 },
+      { nimi: 'Dubrovnikin katedraali', lat: 42.6403, lon: 18.1103, wiki: 'Dubrovnikin katedraali' },
+    ],
+  },
+  riika: {
+    polku: 'assets/kartat/riika-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 56.956, etela: 56.941, lansi: 24.0908, ita: 24.1293 },
+    esittely: 'Riika kasvoi Väinäjoen suulle. Joki on leveä ja syvä, ja '
+      + 'sen kautta pääsi sisämaahan asti — siksi tähän syntyi '
+      + 'kauppapaikka, josta tuli Baltian suurin kaupunki. '
+      + 'Vanhakaupunki on joen itärannalla, ja siellä talot ovat '
+      + 'kapeita ja korkeita, koska tontista maksettiin leveyden '
+      + 'mukaan. Kaupunkia ympäröi keskiajalla muuri, mutta se '
+      + 'purettiin 1800-luvulla. Muurin paikalle ei rakennettu '
+      + 'taloja vaan puisto ja kanava, ja juuri se tekee Riian '
+      + 'kartasta helposti tunnistettavan: vanhakaupunkia kiertää '
+      + 'vihreä kaari.\n\nKartalla on vanhakaupunki keskellä, Väinäjoki '
+      + 'vasemmalla ja puistovyöhyke oikealla. Kanava mutkittelee '
+      + 'puiston läpi kuin pieni joki — se on entinen vallihauta. '
+      + 'Vanhankaupungin kadut ovat lyhyitä ja kaartuvia, eivätkä ne '
+      + 'muodosta ruutua kuten uudemmissa kaupunginosissa: keskiajalla '
+      + 'katu kulki sinne, minne pääsi. Alhaalla oikealla erottuu '
+      + 'viisi isoa hallia rivissä. Ne ovat keskustorin hallit, ja ne '
+      + 'olivat alun perin ilmalaivojen halleja, jotka siirrettiin '
+      + 'tänne ja koottiin uudestaan toriksi. Jugend-kortteli, josta '
+      + 'Riika on kuuluisa, jää kartan ulkopuolelle runsaan kilometrin '
+      + 'päähän pohjoiseen. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * NELJÄLLÄ KUUDESTA ON PAIKAN OMA WIKI, tarkistettu hakemalla.
+       * Kaksi ansaa kirjattu tähän, jotta niihin ei astuta uudelleen:
+       *  - `Vapaudenpatsas` on fi.wikipediassa NEW YORKIN
+       *    Vapaudenpatsas, ei Riian; Riian patsaasta ei ole
+       *    artikkelia, joten kohde on pelkkä merkki.
+       *  - `Mustapäiden talo` ilman tarkennetta on täsmennyssivu.
+       *    Oikea artikkeli on `Mustapäiden talo (Riika)`.
+       */
+      { nimi: 'Vapaudenpatsas', lat: 56.9512, lon: 24.1132 },
+      { nimi: 'Kolme veljestä', lat: 56.9497, lon: 24.103 },
+      { nimi: 'Riian tuomiokirkko', lat: 56.9494, lon: 24.1042, wiki: 'Riian tuomiokirkko' },
+      { nimi: 'Pyhän Pietarin kirkko', lat: 56.9475, lon: 24.1094, wiki: 'Pyhän Pietarin kirkko (Riika)' },
+      { nimi: 'Mustapäiden talo', lat: 56.9472, lon: 24.1063, wiki: 'Mustapäiden talo (Riika)' },
+      { nimi: 'Keskustori', lat: 56.944, lon: 24.1146, wiki: 'Riian keskustori' },
+    ],
+  },
+  vilna: {
+    polku: 'assets/kartat/vilna-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 54.688, etela: 54.6705, lansi: 25.2695, ita: 25.307 },
+    esittely: 'Vilna on rakennettu kahden joen yhtymäkohtaan. Iso joki '
+      + 'on Neris ja pieni on Vilnia, ja kaupunki on saanut nimensä '
+      + 'pienemmästä. Niiden väliin jää kukkula, jonka päällä on '
+      + 'linnan torni — siitä kaupunki alkoi 1300-luvulla. '
+      + 'Vanhakaupunki levisi kukkulan eteläpuolelle, ja siitä tuli '
+      + 'yksi Euroopan laajimmista: kujia on satoja ja kirkkoja '
+      + 'toistasataa, koska Vilnassa asui rinnakkain katolisia, '
+      + 'ortodokseja, juutalaisia ja muslimeja, ja jokainen rakensi '
+      + 'omansa. Kaupunkia ympäröi ennen muuri yhdeksine portteineen. '
+      + 'Niistä on jäljellä yksi, Aamuportti, ja pätkä muuria sen '
+      + 'kummallakin puolella.\n\nKartalla vanhakaupunki on keskellä '
+      + 'pystysuorana vyöhykkeenä: se alkaa ylhäältä tuomiokirkon '
+      + 'aukiolta ja päättyy alhaalla Aamuportille, ja matkaa on noin '
+      + 'puolitoista kilometriä. Kujat piirtyvät tiheänä verkkona, '
+      + 'jossa korttelit ovat epäsäännöllisiä — mikään katu ei kulje '
+      + 'suoraan päästä päähän. Oikealla mutkittelee Vilnia, ja sen '
+      + 'takana on oma kolkkansa: Užupis, joka julistautui '
+      + 'tasavallaksi ja kirjoitti itselleen perustuslain. Ylhäällä '
+      + 'kaartaa Neris isona koukkuna. Tumma viivanpätkä '
+      + 'vanhankaupungin eteläreunassa on jäljellä oleva '
+      + 'kaupunginmuuri. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KOLMELLA KUUDESTA ON PAIKAN OMA WIKI, tarkistettu hakemalla.
+       * fi.wikipediassa ei ole artikkelia Gediminaksen tornista,
+       * Aamuportista eikä Pyhän Annan kirkosta.
+       */
+      { nimi: 'Gediminaksen torni', lat: 54.6868, lon: 25.2905 },
+      { nimi: 'Vilnan tuomiokirkko', lat: 54.6858, lon: 25.2874, wiki: 'Vilnan tuomiokirkko' },
+      { nimi: 'Pyhän Annan kirkko', lat: 54.6829, lon: 25.2942 },
+      { nimi: 'Vilnan yliopisto', lat: 54.6819, lon: 25.2867, wiki: 'Vilnan yliopisto' },
+      { nimi: 'Užupis', lat: 54.681, lon: 25.2977, wiki: 'Užupis' },
+      { nimi: 'Aamuportti', lat: 54.6733, lon: 25.2896 },
+    ],
+  },
   tromssa: {
     polku: 'assets/kartat/tromssa-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
