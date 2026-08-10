@@ -6006,5 +6006,260 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  pietari: {
+    'Pietari-Paavalin linnoitus': {
+      aika: '1703–1733',
+      teksti: 'Pietari Suuri perusti linnoituksen vuonna 1703 pienelle '
+          + 'Jänissaarelle Nevajoen suulle – tästä paikasta koko '
+          + 'Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen '
+          + 'arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset '
+          + 'muurit ja bastionit, ja saaren keskelle nousi '
+          + 'Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa '
+          + 'kellotornia kruunaa kultainen enkeli tuulen mukana '
+          + 'kääntyvän viirin päällä.'
+        + '\n\n'
+        + 'Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri '
+          + 'astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan '
+          + 'hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni '
+          + 'pronssinen jänispatsas sillan vieressä olevan pylvään '
+          + 'päällä, ja pylvääseen on merkitty vanhojen tulvien '
+          + 'korkeudet. Vuodesta 1873 lähtien linnoituksesta on ammuttu '
+          + 'tykinlaukaus joka päivä juuri keskipäivällä, ja '
+          + 'kaupunkilaiset tarkistivat siitä aikanaan kellonsa.'
+        + '\n\n'
+        + 'Katedraaliin haudattiin Pietari Suuresta lähtien lähes '
+          + 'kaikki Venäjän tsaarit. Myöhemmin osaa linnoituksesta '
+          + 'käytettiin myös vankilana, mutta nykyisin koko alue on '
+          + 'museo, jossa käy vuosittain miljoonia vierailijoita.',
+      kuvat: [
+        {
+          tiedosto: 'Peter & Paul fortress in SPB 03.jpg',
+          selite: 'Aurinkoisena kesäpäivänä joen takaa kuvattu '
+            + 'Pietari-Paavalin linnoitus: kultainen kellotorni, kupolit '
+            + 'ja muurit erottuvat selvästi sinistä taivasta ja valkoisia '
+            + 'pilviä vasten.',
+          lahde: 'Florstein, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Saint Petersburg. Panoramic view towards the Peter and Paul Fortress (Petropavlovskaia Krepost\') across the Neva.jpg',
+          selite: 'Käsin väritetty valokuva vuodelta 1931: näkymä Nevajoen '
+            + 'yli linnoitukseen, jonka kultainen huippu ja kupolit '
+            + 'kimaltelevat iltavalossa.',
+          lahde: 'Branson DeCou, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'RUS-2016-Aerial-SPB-Peter and Paul Fortress.jpg',
+          selite: 'Ilmakuva linnoituksesta ylhäältä: tähdenmuotoiset '
+            + 'bastionit, sisäpiha ja katedraali erottuvat kokonaisuutena '
+            + 'joen ympäröimällä saarella.',
+          lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Talvipalatsi: {
+      aika: '1754–1762',
+      teksti: 'Keisarinna Anna tilasi upean talvipalatsin, ja '
+          + 'italialainen arkkitehti Bartolomeo Rastrelli sai '
+          + 'vihreä-valkoisen barokkilinnan valmiiksi vuonna 1762. '
+          + 'Palatsissa on peräti 1500 huonetta, 1945 ikkunaa ja 117 '
+          + 'porrasta, ja sen pääjulkisivu venyy 215 metrin pituudelta. '
+          + 'Suurimpaan juhlasaliin mahtui seisomaan jopa 10 000 '
+          + 'ihmistä, ja ruokapöytään voitiin kerralla kattaa '
+          + 'tuhannelle vieraalle.'
+        + '\n\n'
+        + 'Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden '
+          + 'ajan. Palvelijat pitivät jopa lehmää ullakolla, jotta '
+          + 'keittiöön riitti tuoretta maitoa joka aamu! Katariina '
+          + 'Suuri alkoi keräillä palatsin viereen niin paljon '
+          + 'taideteoksia, että kokoelmasta kasvoi Eremitaasi – nykyään '
+          + 'yksi maailman suurimmista taidemuseoista.'
+        + '\n\n'
+        + 'Vuonna 1837 tulipalo tuhosi palatsin sisustuksen lähes '
+          + 'kokonaan, mutta se rakennettiin entisenlaiseksi vain '
+          + 'vuodessa – silloin käytettiin ensi kertaa uudenlaisia '
+          + 'rautapalkkeja, jotka kestivät tulta paremmin kuin puu.',
+      lainaus: {
+        teksti: 'Näitä aarteita ihailevat vain hiiret ja minä.',
+        lahde: 'Katariina Suuri, kirjeessä Voltairelle',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Winter Palace - Palace Square facade, 2006 (01).jpg',
+          selite: 'Talvipalatsin vaaleanvihreä julkisivu Palatsiaukiolta '
+            + 'kuvattuna, edustalla Aleksanterin pylväs ja aurinkoinen '
+            + 'kesätaivas.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Winter Palace, St. Petersburg, Russia LCCN2014646334.jpg',
+          selite: 'Mustavalkoinen valokuva Talvipalatsista vuodelta 1890, '
+            + 'edustalla höyrylaiva Nevajoella.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'RUS-2016-Aerial-SPB-Winter Palace.jpg',
+          selite: 'Ilmakuva Talvipalatsin ja Palatsiaukion kokonaisuudesta '
+            + 'ylhäältä, näkyvissä myös rakennuksen sisäpiha ja ympäröivä '
+            + 'kaupunki.',
+          lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Verikirkko: {
+      aika: '1883–1907',
+      teksti: 'Kirkko sai syntynsä traagisesta hetkestä: keisari '
+          + 'Aleksanteri II haavoittui kuolettavasti juuri tällä '
+          + 'paikalla vuonna 1881. Hänen poikansa käski rakentaa '
+          + 'muistoksi kirkon, jonka arkkitehti Alfred Parland '
+          + 'suunnitteli – rakennustyö kesti peräti 24 vuotta ja '
+          + 'valmistui vasta vuonna 1907.'
+        + '\n\n'
+        + 'Toisin kuin Pietarin muut vaaleat ja suorakulmaiset '
+          + 'rakennukset, Verikirkko on täynnä värikkäitä '
+          + 'sipulikupoleita, jotka muistuttavat Moskovan kuuluisaa '
+          + 'Pyhän Basileioksen katedraalia. Sisällä seiniä ja kattoja '
+          + 'peittää yli 7000 neliömetriä värikkäitä mosaiikkeja – se '
+          + 'on yksi maailman suurimmista mosaiikkikokoelmista. Tarkka '
+          + 'kohta, jossa keisari haavoittui, on merkitty pieneen '
+          + 'koristeltuun pyhäkköön kirkon sisällä.',
+      kuvat: [
+        {
+          tiedosto: 'Спас на Крови (вид с канала).jpg',
+          selite: 'Verikirkko Gribojedovin kanavan varrella aurinkoisena '
+            + 'päivänä, kultaiset ja kirjavat sipulikupolit erottuvat '
+            + 'selvästi kanavamaiseman keskellä.',
+          lahde: 'Yaroslav Alekseev, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'The Church of the Savior on Spilled Blood in spring.jpg',
+          selite: 'Verikirkko alhaalta ylös kuvattuna kanavan rannalta, '
+            + 'kupolit ja koristeelliset julkisivut erottuvat kirkkaan '
+            + 'sinistä taivasta vasten.',
+          lahde: 'Egorchetvernin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'SPB Saviour on the Blood 1905-1915.jpg',
+          selite: 'Prokudin-Gorskin värivalokuva Verikirkosta 1900-luvun '
+            + 'alusta, kirkko vielä uudenveroisena vähän valmistumisensa '
+            + 'jälkeen.',
+          lahde: 'Sergei Prokudin-Gorski, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Vaskiratsastaja: {
+      aika: '1782',
+      teksti: 'Ranskalainen kuvanveistäjä Étienne Falconet loi Pietari '
+          + 'Suuren ratsastajapatsaan Katariina Suuren tilauksesta, ja '
+          + 'se paljastettiin Senaatintorilla vuonna 1782. Pietari '
+          + 'istuu pystyssä hevosensa selässä ja osoittaa kädellään '
+          + 'kohti Nevajokea, kun taas hevosen kavion alla käärme '
+          + 'vääntelehtii – sen katsotaan kuvaavan vihollisia, jotka '
+          + 'Pietari voitti uudistuksillaan.'
+        + '\n\n'
+        + 'Patsaan jalusta on yhtä vaikuttava kuin itse veistos: se '
+          + 'on 1250 tonnia painava jättiläismäinen graniittilohkare '
+          + 'nimeltä Ukkoskivi. Yli 400 miestä raahasi sitä yhdeksän '
+          + 'kuukauden ajan erikoisrakenteisilla kelkoilla, joissa '
+          + 'pronssikuulat toimivat kuin nykyaikaiset kuulalaakerit – '
+          + 'koneita tai vetoeläimiä ei käytetty lainkaan.'
+        + '\n\n'
+        + 'Patsas sai lisänimensä Vaskiratsastaja runoilija Aleksandr '
+          + 'Puškinin vuonna 1833 kirjoittamasta kuuluisasta runosta, '
+          + 'joka on yksi venäläisen kirjallisuuden tunnetuimmista '
+          + 'teoksista.',
+      lainaus: {
+        teksti: 'Katariina Toinen – Pietari Ensimmäiselle, 1782.',
+        lahde: 'Vaskiratsastajan jalustan kaiverrus',
+      },
+      kuvat: [
+        {
+          tiedosto: 'RUS-2016-SPB-Bronze Horseman 03.jpg',
+          selite: 'Vaskiratsastaja-patsas iltaruskon kultaisessa valossa: '
+            + 'Pietari Suuri hevosen selässä graniittikiven päällä, '
+            + 'taustalla kirkas taivas.',
+          lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Paterssen View Senate Square with Monument of Peter the Great 1799.jpg',
+          selite: 'Vuoden 1799 väritetty kaiverrus Senaatintorista: '
+            + 'Vaskiratsastaja-patsas keskellä toria hevoskärryjen ja '
+            + 'purjelaivojen ympäröimänä.',
+          lahde: 'Benjamin Patersen (jäljennös), Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kazanin katedraali': {
+      aika: '1801–1811',
+      teksti: 'Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella '
+          + 'katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin '
+          + 'Jumalanäidin ikonia. Ortodoksisessa kirkossa '
+          + 'pääsisäänkäynnin tulisi olla lännessä, mutta tontti '
+          + 'sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä '
+          + 'Voronihin ratkaisi pulman rakentamalla sivulle mahtavan '
+          + 'puolikaaren muotoisen pylväikön, jossa on 96 '
+          + 'korinttilaista pylvästä neljässä rivissä. Katedraali '
+          + 'valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 '
+          + 'metriin.'
+        + '\n\n'
+        + 'Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, '
+          + 'ja voiton jälkeen katedraalista tuli sodan muistomerkki. '
+          + 'Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa '
+          + 'Napoleonia vastaan, haudattiin katedraaliin vuonna 1813, '
+          + 'ja sen sakastiin tuotiin muistoksi valloitettujen '
+          + 'kaupunkien ja linnoitusten avaimia.',
+      kuvat: [
+        {
+          tiedosto: 'Kazan Cathedral Saint Petersburg.jpg',
+          selite: 'Kazanin katedraalin puolikaarinen pylväikkö ja kupoli '
+            + 'hämärän sinisessä iltavalaistuksessa, edustalla '
+            + 'suihkulähde ja puutarha.',
+          lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Kazan Cathedral-Toselli.jpg',
+          selite: '1800-luvun alun litografia Kazanin katedraalista '
+            + 'sivukuvakulmasta, edustalla hevoskärryjä ja ohikulkijoita.',
+          lahde: 'Angelo Toselli (piirros), Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mariinski-teatteri': {
+      aika: '1860',
+      teksti: 'Mariinski-teatteri avasi ovensa vuonna 1860 ja sai nimensä '
+          + 'keisarinna Maria Aleksandrovnan mukaan. Sen lavalla on '
+          + 'nähty ensi-iltoja, joita esitetään yhä ympäri maailmaa: '
+          + 'Tšaikovskin baletti Prinsessa Ruusunen kantaesitettiin '
+          + 'täällä vuonna 1890 ja Pähkinänsärkijä vuonna 1892.'
+        + '\n\n'
+        + 'Teatterin balettikoulusta ovat ponnistaneet monet '
+          + 'historian kuuluisimmista tanssijoista, kuten Anna Pavlova, '
+          + 'Vaslav Nijinski ja Mihail Baryšnikov. Päänäyttämölle '
+          + 'mahtuu 1625 katsojaa, ja vuonna 2013 teatterin viereen '
+          + 'valmistui kokonaan uusi toinen näyttämö, jossa on 1830 '
+          + 'istumapaikkaa.',
+      kuvat: [
+        {
+          tiedosto: 'Санкт-Петербург, Мариинский театр, фасад (edited version).jpg',
+          selite: 'Mariinski-teatterin vaaleanvihreä julkisivu suoraan edestä '
+            + 'kuvattuna aurinkoisena päivänä, kaareva kattoterassi ja '
+            + 'pylväät erottuvat selvästi.',
+          lahde: 'Nikolai Bulykin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '20240524 Mariinsky Theatre main building 01.jpg',
+          selite: 'Mariinski-teatterin kulmatorni läheltä kuvattuna '
+            + 'alaviistosta, koristeelliset yksityiskohdat ja kirkas '
+            + 'taivas.',
+          lahde: 'Sergei A. Demidov, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
   PLACEHOLDER_ERA11
 };
