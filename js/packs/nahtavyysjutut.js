@@ -7289,5 +7289,254 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
-  PLACEHOLDER_ERA12
+  riika: {
+    Vapaudenpatsas: {
+      aika: '1935',
+      teksti: 'Riian keskustassa kohoaa 42 metriä korkea Vapaudenpatsas, '
+          + 'joka pystytettiin vuonna 1935 muistoksi Latvian '
+          + 'itsenäisyyssodassa 1918–1920 kaatuneille sotilaille. '
+          + 'Patsaan huipulla seisoo Vapaus-niminen naishahmo, jota '
+          + 'latvialaiset kutsuvat hellästi Mildaksi. Hän pitelee '
+          + 'käsissään kolmea kultaista tähteä, jotka kuvaavat Latvian '
+          + 'kolmea vanhaa maakuntaa: Vidzemeä, Latgalea ja '
+          + 'Kuurinmaata.'
+        + '\n\n'
+        + 'Patsaan kivi- ja graniittiosien veistämiseen kului yli 300 '
+          + '000 työtuntia – yhdeltä kivenveistäjältä olisi mennyt '
+          + 'siihen yli sata vuotta! Patsas seisoo paikalla, jossa '
+          + 'aiemmin oli Venäjän tsaari Pietari Suuren '
+          + 'ratsastajapatsas. Kun Neuvostoliitto miehitti Latvian, '
+          + 'monet pelkäsivät patsaan tuhoamista, mutta se säilyi – '
+          + 'kerrotaan, että kuuluisa kuvanveistäjä Vera Muhina piti '
+          + 'sitä liian arvokkaana hävitettäväksi.'
+        + '\n\n'
+        + 'Vuonna 1987 patsaan juurelle kokoontui salaa tuhansia '
+          + 'ihmisiä tuomaan kukkia, vaikka se oli Neuvostoliiton '
+          + 'aikaan vaarallista. Se oli yksi ensimmäisistä merkeistä '
+          + 'siitä, että latvialaiset halusivat vapautensa takaisin – '
+          + 'ja vuonna 1991 Latvia itsenäistyi uudelleen.',
+      lainaus: {
+        teksti: 'Tēvzemei un Brīvībai – Isänmaalle ja vapaudelle',
+        lahde: 'Patsaan juurella oleva latviankielinen kaiverrus, '
+          + 'kirjailija Kārlis Skalben sanoin',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Brīvības laukums.jpg',
+          selite: 'Vapaudenpatsas Brīvības-aukion perällä iltapäivän '
+            + 'auringossa, avara näkymä puiden reunustamalta '
+            + 'kävelyväylältä.',
+          lahde: 'DaceX, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Centrs, Centra rajons, Rīga, Latvia - panoramio (11).jpg',
+          selite: 'Kunniavartiosto univormuissaan ja kivääreineen '
+            + 'Vapaudenpatsaan juurella harmaana marraskuun päivänä.',
+          lahde: 'alinco_fan, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kolme veljestä': {
+      aika: '1400-luvun loppu–1746',
+      teksti: 'Riian vanhassa kaupungissa, kapealla Mazā Pils -kadulla, '
+          + 'seisoo vierekkäin kolme erinäköistä taloa, joita kutsutaan '
+          + 'Kolmeksi veljeksi. Ne ovat koko Riian vanhin säilynyt '
+          + 'asuinrakennusten rivi. Vanhin veljeksistä on peräisin '
+          + '1400-luvun lopulta, ja alun perin siellä oli vain yksi '
+          + 'suuri huone sekä ullakko tavaroiden säilytystä varten.'
+        + '\n\n'
+        + 'Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, '
+          + 'mutta sen koristeellinen kivinen ovensuu lisättiin vasta '
+          + 'sata vuotta myöhemmin, vuonna 1746. Nuorin veljeksistä '
+          + 'rakennettiin 1600-luvun lopulla, ja se on kapea, '
+          + 'koristeellinen barokkitalo.'
+        + '\n\n'
+        + 'Sodan jälkeen talot olivat pahoin rapistuneet, mutta ne '
+          + 'kunnostettiin 1950-luvulla. Vuonna 2020 Kolme veljestä sai '
+          + 'arvostetun Euroopan perintötunnuksen. Nykyään taloissa '
+          + 'toimii Latvian arkkitehtuurimuseo, joten sisään pääsee yhä '
+          + 'tutustumaan siihen, miltä Riiassa näytti satoja vuosia '
+          + 'sitten.',
+      kuvat: [
+        {
+          tiedosto: 'Riga - The three brothers - trīs brāļi - panoramio.jpg',
+          selite: 'Kolme veljestä -taloryhmä Mazā Pils -kadulla: kolme '
+            + 'eri-ikäistä ja -väristä porrastalojulkisivua vierekkäin '
+            + 'sinistä taivasta vasten.',
+          lahde: 'giggel, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Riian tuomiokirkko': {
+      aika: '1211',
+      teksti: 'Riian tuomiokirkko on Baltian maiden suurin keskiaikainen '
+          + 'kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 '
+          + 'piispa Albertin toimesta, lähelle Väinäjoen rantaa. '
+          + 'Tiilistä muurattu punertava kirkko näkyy kauas, ja sen '
+          + 'tornin huipulla pyörii viiri, jota riikalaiset ovat '
+          + 'vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan '
+          + 'onnenkin – tarkkailuun.'
+        + '\n\n'
+        + 'Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli '
+          + '6700 pilliä käsittävä soitin valmistui vuonna 1883, ja '
+          + 'sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi '
+          + 'soittaa neljällä eri näppäimistöllä yhtä aikaa.'
+        + '\n\n'
+        + 'Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia '
+          + 'viiteenkymmeneen vuoteen – tilassa toimi sen sijaan '
+          + 'konserttisali ja museo. Vasta vuonna 1991, kun Latvia oli '
+          + 'itsenäistynyt uudelleen, kirkko avattiin taas '
+          + 'seurakuntalaisille.',
+      kuvat: [
+        {
+          tiedosto: '2025 Riga Cathedral (01).jpg',
+          selite: 'Riian tuomiokirkko aurinkoisena kesäpäivänä Doma laukums '
+            + '-aukiolta kuvattuna, punatiilinen julkisivu ja kupolitorni '
+            + 'erottuvat selvästi sinistä taivasta vasten.',
+          lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Dome Square, Riga, Latvia, 1930s.jpg',
+          selite: 'Doman aukio lumisena talvipäivänä 1930-luvulla, '
+            + 'tuomiokirkon torni kohoaa kapean katukuilun päässä ja '
+            + 'kadulla näkyy vanha auto.',
+          lahde: 'Roberts Johansons, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: '2013 Домский собор в Риге -panoramio.jpg',
+          selite: 'Tuomiokirkko lumisena talvipäivänä aukion laidalta '
+            + 'kuvattuna, ohikulkijoita etualalla ja kirkas sininen '
+            + 'taivas.',
+          lahde: 'Валерий Дед, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Pietarin kirkko': {
+      aika: '1209–1746',
+      teksti: 'Pyhän Pietarin kirkko mainitaan Riian asiakirjoissa jo '
+          + 'vuonna 1209, ja se on yksi kaupungin vanhimmista '
+          + 'rakennuksista. Sen torni on ollut vuosisatojen ajan Riian '
+          + 'korkein rakennelma – mutta myös yksi onnettomimmista: '
+          + 'torni on romahtanut ja palanut useita kertoja historian '
+          + 'aikana.'
+        + '\n\n'
+        + 'Vuonna 1666 aiempi 136 metriä korkea puutorni romahti ja '
+          + 'surmasi kahdeksan ihmistä. Uusi torni valmistui 1690, ja '
+          + 'se oli 148 metriä korkea – tuolloin koko Euroopan korkein '
+          + 'puurakennelma! Salama tuhosi tornin taas vuonna 1721, ja '
+          + 'seuraava, matalampi torni valmistui vasta 1746. Toisessa '
+          + 'maailmansodassa vuonna 1941 tykistö tuhosi koko kirkon, ja '
+          + 'nykyinen torni valmistui jälleenrakennettuna vasta '
+          + '1970-luvulla.'
+        + '\n\n'
+        + 'Tornin huipulla kiiltää kukonviiri, joka painaa 158 kiloa '
+          + 'ja on kullattu. Hississä pääsee 72 metrin korkeuteen '
+          + 'katselemaan Riian kattoja, ja kirkonkello soittaa '
+          + 'latvialaista kansansävelmää viisi kertaa päivässä – vaikka '
+          + 'kellossa on vain yksi viisari, joka näyttää pelkät tunnit!',
+      kuvat: [
+        {
+          tiedosto: 'Plaza del Ayuntamiento, Riga, Letonia, 2012-08-07, DD 24.JPG',
+          selite: 'Pyhän Pietarin kirkon korkea kerroksittainen torni kohoaa '
+            + 'Rātslaukums-aukion yllä, etualalla myös Mustapäiden talon '
+            + 'julkisivu.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Riga - St. Peter’s Church - Pētera baznīca - panoramio.jpg',
+          selite: 'Pyhän Pietarin kirkon julkisivu ja koko torni suoraan '
+            + 'edestä kuvattuna, muutama ohikulkija kirkon ovella.',
+          lahde: 'giggel, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mustapäiden talo': {
+      aika: '1334 (jälleenrakennettu 1999)',
+      teksti: 'Mustapäiden talo rakennettiin Riian vanhaan kaupunkiin jo '
+          + 'vuonna 1334 kauppiaiden varastoksi ja kokoontumispaikaksi. '
+          + '1400-luvun puolivälistä lähtien taloa käytti myös '
+          + 'Mustapäiden veljeskunta – naimattomien kauppiaiden, '
+          + 'laivanomistajien ja ulkomaalaisten kilta, joka piti '
+          + 'talossa juhlia ja kokouksia.'
+        + '\n\n'
+        + 'Talon kerrotaan olevan paikka, jonne pystytettiin '
+          + 'ensimmäinen koristeltu joulukuusi vuonna 1510! Talo säilyi '
+          + 'näyttävänä satoja vuosia, kunnes toinen maailmansota '
+          + 'pommitti sen raunioiksi kesäkuussa 1941. '
+          + 'Neuvostoviranomaiset purkivat jäljellä olleet seinät '
+          + 'kokonaan vuonna 1948, vaikka riikalaiset vastustivat sitä '
+          + 'voimakkaasti.'
+        + '\n\n'
+        + 'Talo rakennettiin kokonaan uudelleen vuosina 1996–2000 '
+          + 'vanhojen tutkimusten ja piirustusten avulla – yli 5000 '
+          + 'riikalaista osallistui talkoisiin lahjoittamalla tiiliä. '
+          + 'Talon kellari on ainoa alkuperäinen osa, joka säilyi '
+          + 'sodasta: siellä on yhä 1300-luvun kivimuureja, ja kellari '
+          + 'oli piilossa maan alla aina vuoteen 1992 asti.',
+      kuvat: [
+        {
+          tiedosto: '2025 House of Blackheads (Riga) (01).jpg',
+          selite: 'Mustapäiden talon koristeellinen renessanssijulkisivu '
+            + 'Rātslaukums-aukiolla, kirkkaan sininen taivas taustalla.',
+          lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'House of Blackheads and St. Peter\'s Church Tower, Riga, Latvia - Diliff.jpg',
+          selite: 'Mustapäiden talo valaistuna sinisellä hämärätunnilla, '
+            + 'Pyhän Pietarin kirkon torni siintää vasemmalla taustalla.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Riga house of the blackheads.jpg',
+          selite: 'Mustapäiden talo ja Roland-patsas aukiolla vanhassa '
+            + 'sepiapostikortissa 1900-1918-luvulta, ennen talon '
+            + 'tuhoutumista toisessa maailmansodassa.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Keskustori: {
+      aika: '1924–1930',
+      teksti: 'Riian Keskustori on Euroopan suurin markkinahalli – viisi '
+          + 'valtavaa paviljonkia peittävät yhteensä yli 72 000 '
+          + 'neliömetriä, ja niissä on tilaa yli 3000 myyntipaikalle. '
+          + 'Halli rakennettiin vuosina 1924–1930, ja ensimmäiset '
+          + 'kaupat käytiin marraskuussa 1930.'
+        + '\n\n'
+        + 'Paviljonkien katoissa on kummallinen salaisuus: niiden '
+          + 'metallirungot ovat peräisin ensimmäisen maailmansodan '
+          + 'aikaisista saksalaisista zeppeliinihalleista, jotka '
+          + 'purettiin ja koottiin uudelleen torin katoiksi. Maailmassa '
+          + 'on jäljellä enää yhdeksän tällaista zeppeliinihallia, ja '
+          + 'peräti viisi niistä on juuri Riian Keskustorilla.'
+        + '\n\n'
+        + 'Vuonna 1998 Keskustori liitettiin Unescon '
+          + 'maailmanperintöluetteloon yhdessä koko Riian '
+          + 'vanhankaupungin kanssa. Rakennus yhdistää siistiä '
+          + 'uusklassismia ja tyylikästä art deco -koristelua, ja '
+          + 'valmistuessaan se oli maailman suurin ja nykyaikaisin '
+          + 'markkinapaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Riga Central Market in the Evening (55010487126).jpg',
+          selite: 'Riian keskustorin viisi kaarihallia ilmakuvassa '
+            + 'iltavalossa, taustalla Tiedeakatemian torni ja '
+            + 'vaaleanpunertavat pilvet.',
+          lahde: 'Michael Kuhn, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Riga Central Market.01.jpg',
+          selite: 'Keskustorin päähallin sisäänkäynti sinisellä '
+            + 'hämärätunnilla, suuret ikkunat valaistuina sisältä.',
+          lahde: 'Nenea hartia, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
