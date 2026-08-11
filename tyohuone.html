@@ -243,6 +243,7 @@
       afrikkaKuvat, europeKuvat, asiaKuvat,
       afrikkaArt, europeArt, asiaArt,
       europeKielet, asiaMaat, afrikkaMaat, europeMaat, radiot, kuvaApu,
+      naSaap, saSaap, oceSaap, kannet, maaKategoriat,
     ] = await Promise.all([
       import('./js/packs/africa-saapumiset.js').then((m) => m.AFRICA_SAAPUMISET),
       import('./js/packs/europe-saapumiset.js').then((m) => m.EUROPE_SAAPUMISET),
@@ -261,9 +262,38 @@
       import('./js/packs/europe-maatiedot.js').then((m) => m.EUROPE_MAATIEDOT),
       import('./js/packs/radiot.js').then((m) => m.RADIOT).catch(() => ({})),
       import('./js/packs/africa-valokuvat.js').then((m) => m.valokuvaUrl),
+      import('./js/packs/northamerica-saapumiset.js').then((m) => m.NORTHAMERICA_SAAPUMISET).catch(() => ({})),
+      import('./js/packs/southamerica-saapumiset.js').then((m) => m.SOUTHAMERICA_SAAPUMISET).catch(() => ({})),
+      import('./js/packs/oceania-saapumiset.js').then((m) => m.OCEANIA_SAAPUMISET).catch(() => ({})),
+      import('./js/packs/kulttuuri-kategoriat.js').then((m) => m.KULTTUURI_KATEGORIAT).catch(() => ({})),
+      import('./js/packs/maa-kategoriat.js').then((m) => m.MAA_KATEGORIAT).catch(() => ({})),
     ]);
 
     const SAAPUMISET = { ...afrikkaSaap, ...europeSaap, ...asiaSaap };
+    /*
+     * Laudat-taulun sisältösarakkeet: matkakirjatekstit laudoittain
+     * (maailmankartta perii kaikki), kaupunkilehtien kannet ja maiden
+     * lehtiaiheet. Kaaritekstit lasketaan teksteihin mukaan — "ainakin
+     * joku valmis versio tehtynä" (omistajan tilaus 11.8.).
+     */
+    const SAAPUMISET_LAUDOITTAIN = {
+      africa: afrikkaSaap,
+      europe: europeSaap,
+      asia: asiaSaap,
+      northamerica: naSaap,
+      southamerica: saSaap,
+      oceania: oceSaap,
+      maailmankartta: { ...afrikkaSaap, ...europeSaap, ...asiaSaap, ...naSaap, ...saSaap, ...oceSaap },
+      maailma: { ...afrikkaSaap, ...europeSaap, ...asiaSaap, ...naSaap, ...saSaap, ...oceSaap },
+    };
+    const KAARI_TEKSTIT = new Set(KAARI_PAKETIT.kohteet
+      .filter((k) => k.saapuminen).map((k) => k.id));
+    /*
+     * middleeast on mukana, koska ME-kohteiden kaaritekstit on
+     * kirjoitettu (työhuoneen arviota varten, luennat odottavat) —
+     * "ainakin joku valmis versio tehtynä" täyttyy.
+     */
+    const KAARI_TEKSTILAUDAT = new Set(['europe', 'maailmankartta', 'middleeast']);
     const KULTTUURI = { ...afrikkaKult, ...europeKult };
     const KUVAT = { ...afrikkaKuvat, ...europeKuvat, ...asiaKuvat };
     const ARTIKKELIT = { ...afrikkaArt, ...europeArt, ...asiaArt };
@@ -1092,18 +1122,35 @@
     function piirraLaudat() {
       const taulu = el('table');
       const otsikko = el('tr');
-      for (const t of ['Lauta', 'Kaupunkeja', 'Valmiina', 'Osuus']) {
+      /*
+       * Sisältösarakkeet (omistajan tilaus 11.8.): Tekstit = kaupungilla
+       * on matkakirjamerkintä (vanha malli TAI kaariteksti), Kaupunki-
+       * lehdet = kaupungilla on lehtikansi, Maalehdet = laudan maista
+       * monellako on lehtiaiheet (x/y maata). Kaikki osat = vanha
+       * täydellisyysmitta (jokainen osa koossa), palkki sen mukaan.
+       */
+      for (const t of ['Lauta', 'Kaupunkeja', 'Tekstit', 'Kaupunkilehdet', 'Maalehdet', 'Kaikki osat', 'Osuus']) {
         const th = el('th', t === 'Lauta' ? '' : 'num', t);
         otsikko.append(th);
       }
       taulu.append(el('thead').appendChild(otsikko).parentNode);
       const runko = el('tbody');
       for (const p of PACKS) {
+        const saap = SAAPUMISET_LAUDOITTAIN[p.id] ?? {};
+        const kaariMukana = KAARI_TEKSTILAUDAT.has(p.id);
+        const tekstit = p.cities.filter((c) => saap[c.id]
+          || (kaariMukana && KAARI_TEKSTIT.has(c.id))).length;
+        const lehdet = p.cities.filter((c) => kannet[c.id]).length;
+        const maat = new Set(p.cities.map((c) => p.map?.cityCountry?.[c.id]).filter(Boolean));
+        const lehtimaat = [...maat].filter((iso) => (maaKategoriat[iso] ?? []).length > 0).length;
         const valmiit = p.cities.filter((c) => puuttuvat(c, p).length === 0).length;
         const osuus = p.cities.length ? Math.round((valmiit / p.cities.length) * 100) : 0;
         const tr = el('tr');
         tr.append(el('td', '', p.id));
         tr.append(el('td', 'num', String(p.cities.length)));
+        tr.append(el('td', 'num', String(tekstit)));
+        tr.append(el('td', 'num', String(lehdet)));
+        tr.append(el('td', 'num', maat.size ? `${lehtimaat}/${maat.size}` : '—'));
         tr.append(el('td', 'num', String(valmiit)));
         const td = el('td', 'num');
         td.append(el('span', '', `${osuus} %`));
