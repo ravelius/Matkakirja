@@ -17543,8 +17543,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kaupunki jyrkänteen reunalla',
-          tiedosto: 'إطلالة بانورامية لمدينة كوكبان المعلقة على حافة الجبل Panoramic '
-              + 'view of Kawkaban city perched on the mountain cliff.jpg',
+          tiedosto: 'إطلالة بانورامية لمدينة كوكبان المعلقة على حافة الجبل Panoramic view of Kawkaban city perched on the mountain cliff.jpg',
           teksti: 'Kawkaban on vuoren laella lähes kolmen kilometrin korkeudessa, '
               + 'ja aivan sen alapuolella tasangolla on toinen kaupunki, Shibam — '
               + 'eri Shibam kuin Hadramautin savitiilikaupunki. Ylhäällä '
@@ -17628,8 +17627,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Ainoa apina, joka jäi Afrikan ulkopuolelle',
-          tiedosto: 'Hamadryas Baboon imported from iNaturalist photo 208464977 on 17 '
-              + 'March 2024.jpg',
+          tiedosto: 'Hamadryas Baboon imported from iNaturalist photo 208464977 on 17 March 2024.jpg',
           teksti: 'Jemenin ja Saudi-Arabian vuorilla elää mantelipaviaani. Se on '
               + 'ihmisen ohella ainoa villi kädellinen koko Arabian niemimaalla '
               + 'ja ainoa paviaanilaji, joka esiintyy Afrikan ulkopuolella. Osa '
