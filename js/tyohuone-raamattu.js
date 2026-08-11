@@ -22,7 +22,7 @@ export const RAAMATTU2 = {
   osiot: [
     {
       otsikko: 'Ydinajatus ja kohderyhmä',
-      tila: 'luonnos',
+      tila: 'hyväksytty 11.8.2026',
       kohdat: [
         'Suomenkielinen selainseikkailu: nuori herra Reginald Fogg '
           + 'matkustaa isoisänsä vuoden 1873 matkapäiväkirjan '
@@ -40,7 +40,11 @@ export const RAAMATTU2 = {
         'Mielenkiintoa pitää yllä kehystarinan seikkailuretki: '
           + 'aarteita voi löytää, mutta matkalla on myös vaaroja — '
           + 'ja aikapaine: maailman ympäri alle '
-          + 'kahdeksassakymmenessä päivässä.',
+          + 'kahdeksassakymmenessä päivässä. Raja on tavoite ja '
+          + 'isoisän ennätys, ei tuomio (omistajan päätös '
+          + '11.8.2026): ylityksestä ei rangaista ja alitus '
+          + 'palkitaan, mutta peli muistuttaa kuluvista päivistä '
+          + 'matkan varrella, jotta paine tuntuu.',
         'Oppiminen on seikkailun sivutuote: uteliaisuus '
           + 'kuljettaa, mikään ei tunnu koululta — ja kaikki '
           + 'tieto on totta ja tarkistettua.',
