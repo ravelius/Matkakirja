@@ -18102,6 +18102,22 @@ export const MAA_KATEGORIAT = {
             + 'keltainen torninosturi.',
           lahde: 'Ashashyou, Wikimedia Commons (CC BY-SA 3.0)',
         },
+        {
+          otsikko: 'Simpukat avattiin vasta veneellä',
+          tiedosto: 'طواشة.jpg',
+          teksti: 'Sukeltaja ei avannut simpukoita itse. Päivän saalis kannettiin '
+            + 'kannelle ja pestiin merivedessä, ja avaaminen tehtiin vasta '
+            + 'yhdessä, jotta kukaan ei voisi ottaa helmeä omaan taskuunsa. '
+            + 'Veneellä oli oma työnjakonsa: nahkoda johti, ghais sukelsi ja '
+            + 'saib veti köyttä. Ostajana toimi tawwash, helmikauppias, joka '
+            + 'usein myös rahoitti kauden etukäteen ja peri velan saaliista. '
+            + 'Kauden tuotto jaettiin osuuksina, ja parhaan helmen hinta '
+            + 'saattoi ratkaista koko miehistön vuoden.',
+          selite: 'Vanha mustavalkokuva helmiveneiltä. Miehet valkoisissa vaatteissa '
+            + 'seisovat ja kyykkivät kahden puuveneen laidoilla, ja keskellä '
+            + 'yksi mies huuhtoo saalista suoraan meressä.',
+          lahde: 'Muharraq Forever, Wikimedia Commons (PD)',
+        },
       ],
       tehtava: {
         kysymys: 'Miksi sukeltajan jalkaan sidottiin kivi?',
@@ -18184,6 +18200,23 @@ export const MAA_KATEGORIAT = {
             + 'Oikealla taustalla näkyy sähkölinja ja pylväs.',
           lahde: 'കാക്കര, Wikimedia Commons (CC BY-SA 3.0)',
         },
+        {
+          otsikko: 'Temppeli rakennettiin lähteen päälle',
+          tiedosto: 'Barbar temple, Dilmun culture, ca. 3000-2000 BCE; Bahrain (3).jpg',
+          teksti: 'Barbarin kylässä on kolme temppeliä päällekkäin. Vanhin on '
+            + 'noin vuodelta 3000 eaa., toinen rakennettiin viitisensataa '
+            + 'vuotta myöhemmin ja kolmas 2100–2000 eaa. Keskellä on '
+            + 'luonnonlähde ja sen ympärillä pyöreä allas, johon johdettiin '
+            + 'vettä kivikanavia pitkin. Temppelin arvellaan olleen omistettu '
+            + 'Enkille, makean veden ja viisauden jumalalle. Kalkkikivilohkot '
+            + 'tuotiin veneillä Jiddan saarelta ja hiottiin tarkoiksi '
+            + 'palikoiksi. Tanskalainen tutkimusryhmä löysi paikan vuonna '
+            + '1954; kuuluisin löytö on kuparinen häränpää.',
+          selite: 'Barbarin temppelin kaivausalue. Vaaleaan kivikenttään on '
+            + 'jäänyt matalia muureja ja kolme lieriömäistä kivipaatta, '
+            + 'joiden keskellä on pyöreä reikä; takana kasvaa puurivi.',
+          lahde: 'Prof. Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
       ],
       tehtava: {
         kysymys: "Miksi kumpu Qal'at al-Bahrainin alla on korkea?",
@@ -18196,6 +18229,180 @@ export const MAA_KATEGORIAT = {
         oikea: 0,
         fakta: 'Kerrokset ovat arkeologille kalenteri: mitä syvemmällä esine on, '
           + 'sitä vanhempi se on.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Bahrainissa rakennettiin pitkään siitä, mitä meri antoi: '
+        + 'korallikivestä, kalkista ja palmunrungoista. Uusin aika toi '
+        + 'lasikuidun ja marmorin, mutta vanhat muurit ovat yhä pystyssä.',
+      nostot: [
+        {
+          otsikko: 'Portti seisoo siellä, missä oli ranta',
+          tiedosto: 'Manama Bab al-Bahrain 01.jpg',
+          teksti: 'Bab al-Bahrain eli Bahrainin portti valmistui vuonna 1949 '
+            + 'Manaman tulliaukiolle. Kaaren läpi mennään vanhalle torille, '
+            + 'jossa myydään kultaa, mausteita ja kankaita. Rakennus oli '
+            + 'alun perin aivan veden äärellä: laivat laskivat lastinsa sen '
+            + 'eteen. Nykyään meri on kilometrien päässä, koska väliin on '
+            + 'täytetty uutta maata, ja portin edessä kulkee valtatie. '
+            + 'Julkisivu muutettiin vuonna 1986 islamilaiseen tyyliin, ja '
+            + 'pohjakerroksessa on nyt matkailuneuvonta ja käsityöpuoti.',
+          selite: 'Bab al-Bahrainin valkoinen portti Manamassa. Kaksikerroksisen '
+            + 'rakennuksen keskellä on korkea kaari, katolla liehuu lippu, ja '
+            + 'edustalla kasvaa palmuja ja kulkee ihmisiä.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Linnake muurattiin merestä nostetusta kivestä',
+          tiedosto: 'Arad Qalat Arad Exterior 08.jpg',
+          teksti: 'Aradin linnake on 1400-luvun lopulta. Se on neliön muotoinen, '
+            + 'ja jokaisessa kulmassa on lieriömäinen torni; ympärillä on '
+            + 'matala hauta, johon johdettiin vettä varta vasten kaivetuista '
+            + 'kaivoista. Rakennusaine on korallikiveä, jota irrotettiin '
+            + 'matalikoilta, sekä kalkkia ja palmunrunkoja. Kunnostuksessa '
+            + '1980-luvulla vanhat aineet analysoitiin ensin ja käytettiin '
+            + 'sitten samoja: sementtiä ei laitettu lainkaan, koska se olisi '
+            + 'sulkenut kosteuden muurin sisään. Linnake seisoi ennen omalla '
+            + 'saarellaan, mutta maantäyttö on liittänyt sen Muharraqiin.',
+          selite: 'Aradin linnake ulkoa. Vaaleanruskea muuri kulkee matalana '
+            + 'suorana, kummassakin päässä on pyöreä torni, ja keskellä '
+            + 'johtaa kapea porras pieneen oviaukkoon.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kupoli on lasikuitua',
+          tiedosto: 'Manama al-Fateh Grand Mosque Interior Gebetshalle Kronleuchter 1.jpg',
+          teksti: 'Manaman al-Fatehin moskeija valmistui vuonna 1987, ja siihen '
+            + 'mahtuu yli seitsemäntuhatta ihmistä. Erikoisin osa on kupoli: '
+            + 'se ei ole kiveä eikä betonia vaan lasikuitua, ja se painaa noin '
+            + 'viisikymmentäneljä tonnia. Aikanaan se oli maailman suurin '
+            + 'lasikuitukupoli. Materiaalit tuotiin kaukaa: lattian marmori '
+            + 'Italiasta, kattokruunu Itävallasta ja ovet Intian tiikistä. '
+            + 'Seinillä kiertää kulmikasta kufi-kirjoitusta. Vuodesta 2006 '
+            + 'rakennuksessa on toiminut myös Bahrainin kansalliskirjasto.',
+          selite: 'Al-Fatehin moskeijan kupolisali alhaalta kuvattuna. Keskeltä '
+            + 'riippuu suuri lasikruunu, sen ympärillä kaartuu kupoli, ja '
+            + 'seinustalla kulkee rivi pieniä pallovalaisimia.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vanhaan tyyliin tehty kahvila',
+          tiedosto: 'Manama Bahrain Heritage Village 1.jpg',
+          teksti: 'Manamassa on kortteli, jossa vanha rakennustapa on tehty '
+            + 'uudelleen näkyväksi: puiset kattopalkit jätetään näkyviin, '
+            + 'ikkunaluukut ovat säleiköitä ja valaisimina roikkuu värillisiä '
+            + 'lasilyhtyjä. Tällaisessa tilassa kahvila on samalla '
+            + 'kokoontumispaikka: pöydät ovat pitkiä, tuolit puuta ja seinillä '
+            + 'on vanhoja työkaluja ja kylttejä arabiaksi. Kahvi tarjotaan '
+            + 'pieninä kuppeina ja teetä lasissa. Alkuperäisissä taloissa '
+            + 'sama viilennys hoidettiin ilman koneita: paksu korallikivimuuri '
+            + 'ja ristikkoikkunat pitivät auringon ulkona.',
+          selite: 'Kahvilan sisätila Manaman perinnekorttelissa. Katossa on '
+            + 'puiset palkit ja riippuvia värillisiä lasilyhtyjä, seinustalla '
+            + 'arabiankielisiä kylttejä, ja edessä rivi puisia tuoleja pöytien '
+            + 'ympärillä.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Aradin linnakkeen kunnostuksessa ei käytetty sementtiä?',
+        vaihtoehdot: [
+          'Sementti olisi sulkenut kosteuden muurin sisään',
+          'Sementtiä ei saanut maahan tuoduksi',
+          'Sementti olisi ollut liian kallista',
+          'Sementti ei tartu korallikiveen lainkaan',
+        ],
+        oikea: 0,
+        fakta: 'Vanhat rakennusaineet analysoitiin ensin, ja kunnostuksessa '
+          + 'käytettiin samoja: korallikiveä, kalkkia ja palmunrunkoja.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Bahrainin makeiset ovat pieniä ja uppopaistettuja, ja ne '
+        + 'tarjoillaan kahvin kanssa. Suolaisen puolen perusta on leipä, jota '
+        + 'revitään käsin ja kastetaan kaikkeen muuhun.',
+      nostot: [
+        {
+          otsikko: 'Sahramipallot paistetaan omassa muotissaan',
+          tiedosto: 'الخنفروش البحريني.jpg',
+          teksti: 'Khanfaroosh on bahrainilainen leivonnainen, jota tehdään '
+            + 'juhliin ja erityisesti paastokuukauden iltoihin. Taikinaan '
+            + 'tulee riisijauhoa, sokeria, kardemummaa, sahramia ja '
+            + 'ruusuvettä, ja se saa nousta muutaman tunnin. Paistaminen '
+            + 'tehdään omassa valurautaisessa muotissa, jossa on syviä '
+            + 'kuoppia: taikina kaadetaan kuoppiin ja käännetään kerran, '
+            + 'jolloin syntyy pyöreä leivonnainen, joka on ulkoa rapea ja '
+            + 'sisältä pehmeä. Päälle ripotellaan seesaminsiemeniä. Nimen '
+            + 'alkuperästä ei olla yksimielisiä.',
+          selite: 'Metallivadillinen khanfaroosh-leivonnaisia. Tummanruskeat '
+            + 'pyöreät palat on ripoteltu vaaleilla seesaminsiemenillä, ja '
+            + 'taustalla erottuu punainen matto epätarkkana.',
+          lahde: 'Aysha Ali Alzayed, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Taikinapallot upotetaan siirappiin',
+          tiedosto: 'اللقيمات هي حلوى خليجية شهيرة.jpg',
+          teksti: 'Luqaimat tarkoittaa pieniä suupaloja. Ne ovat hiivataikinasta '
+            + 'pyöriteltyjä palleroita, jotka paistetaan öljyssä ja kastetaan '
+            + 'heti kuumina hunajaan tai taatelisiirappiin. Kuori jää rapeaksi '
+            + 'ja sisus jää pehmeäksi ja hieman ontoksi. Taikinaa ei '
+            + 'muotoilla lusikalla vaan puristetaan nyrkin sormien välistä, '
+            + 'jolloin pallot tulevat samankokoisiksi nopeasti. Luqaimat '
+            + 'tarjotaan arabialaisen kahvin kanssa, ja se on tuttu koko '
+            + 'Persianlahden alueella.',
+          selite: 'Pieni koristeltu kulho, jossa on ruskeita paistettuja '
+            + 'taikinapalloja siirapissa. Taustalla seisoo kaksi kullattua '
+            + 'kahvikannua, joiden kyljissä on sinipunainen kuviointi.',
+          lahde: 'Aysha Ali Alzayed, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Leipä on lautanen ja lusikka',
+          tiedosto: 'Al Abraaj Lunch.jpg',
+          teksti: 'Bahrainilaisella pöydällä leipä tulee ensin. Se paistetaan '
+            + 'litteänä kiekkona kuumassa uunissa, ja se tuodaan pöytään '
+            + 'korissa vielä pehmeänä. Leipää ei leikata veitsellä vaan '
+            + 'revitään käsin pala kerrallaan, ja palasta taivutetaan sormin '
+            + 'pieni kauha, jolla otetaan hummusta, jogurttikastiketta tai '
+            + 'lihaa. Näin ruokailu sujuu ilman aterimia, ja pöydän keskellä '
+            + 'olevat kulhot ovat kaikkien yhteisiä. Aterian lopuksi jäljelle '
+            + 'jäänyt leipä käytetään kulhojen puhtaaksi pyyhkimiseen.',
+          selite: 'Korillinen litteää vastapaistettua leipää ravintolan pöydällä '
+            + 'Manamassa. Ympärillä on kulhoja, joissa on hummusta ja '
+            + 'punertavaa kastiketta, ja taustalla istuu ruokailijoita.',
+          lahde: 'Denise Krebs, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Grilliliha tuodaan leivän päällä',
+          tiedosto: 'Manama Bahrain Heritage Village 2.jpg',
+          teksti: 'Ruokapaikassa grillattu kana tai lammas tuodaan pöytään '
+            + 'suoraan leivän päälle aseteltuna: leipä imee mehut ja toimii '
+            + 'samalla lautasena. Mausteena on usein kuivattu limetti eli '
+            + 'loomi, joka on koko lahden keittiön tunnusmauste — kokonainen '
+            + 'limetti keitetään suolavedessä ja kuivataan auringossa kovaksi, '
+            + 'ja se rikotaan pataan antamaan hapokkuutta. Lisukkeeksi tulee '
+            + 'salaattia ja iso lasillinen tuoremehua. Aterimia ei '
+            + 'välttämättä tuoda pöytään lainkaan, koska leipä riittää.',
+          selite: 'Grillattua kanaa leivän päällä ravintolan pöydässä Manamassa. '
+            + 'Lautasella on lisäksi salaattia ja tuoretta lehtivihannesta, ja '
+            + 'takana pöydällä on kaksi isoa lasillista mehua.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä on loomi lahden keittiössä?',
+        vaihtoehdot: [
+          'Kuivattu limetti, joka rikotaan pataan',
+          'Paksu jogurttikastike',
+          'Uunissa paistettu litteä leipä',
+          'Sahramilla värjätty riisi',
+        ],
+        oikea: 0,
+        fakta: 'Limetti keitetään ensin suolavedessä ja kuivataan sitten '
+          + 'auringossa kovaksi.',
       },
     },
   ],
