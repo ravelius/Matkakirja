@@ -70,8 +70,10 @@ export const RAAMATTU2 = {
       kohdat: [
         'Reginald Fogg perii vintiltä isoisän matkalaukun: vuoden '
           + '1872 kartan, kukkarollisen puntia, passin ja paksun '
-          + 'päiväkirjan vuodelta 1873. Hän olettaa maailman olevan '
-          + 'kuin isoisä sen jätti — ei ole.',
+          + 'päiväkirjan vuodelta 1873. Hän tietää kyllä, että '
+          + 'maailma on muuttunut — yllätys on, kuinka usein '
+          + 'isoisä on yhä oikeassa, ja kuinka paljon työtä vanhan '
+          + 'kirjan ymmärtäminen vaatii.',
         'Matkakirja on puhtaasti isoisän PÄIVÄKIRJA: sitä ei ole '
           + 'kirjoitettu kenellekään eikä se puhuttele lukijaa. '
           + 'Sen revitty viimeinen sivu on arvoitus, jota Reginald '

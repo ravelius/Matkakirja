@@ -680,6 +680,49 @@
         k.append(el('p', 'pieni', `Perustelu: ${n.perustelu}`));
         kohde.append(k);
       }
+
+      kohde.append(el('h3', null, 'Vaihtelua "Isoisä kirjoitti" -johtolauseeseen'));
+      kohde.append(el('p', 'pieni', 'Kaava saa yhä esiintyä — mutta ei joka '
+        + 'kaupungissa. Jokainen tapa on samalla oma pieni kerrontakeino.'));
+      {
+        const lista = el('ul');
+        for (const j of NAYTTEET.johtolauseet) {
+          const rivi = el('li', null);
+          rivi.append(el('b', null, `${j.nimi}: `));
+          rivi.append(document.createTextNode(j.esimerkki));
+          lista.append(rivi);
+        }
+        kohde.append(lista);
+      }
+
+      {
+        const n = NAYTTEET.kohtaamisNayte;
+        kohde.append(el('h3', null, `Kohtaamisnäyte uudella mallilla — ${n.kaupunki}`));
+        const k = el('div', 'kortti');
+        k.append(el('p', 'pieni', `Henkilö: ${n.henkilo}`));
+        k.append(el('p', null, n.kohtaaminen));
+        k.append(el('p', 'pieni', `Kysymys: ${n.kysymys.q}`));
+        const vaihtoehdot = el('ul');
+        n.kysymys.vaihtoehdot.forEach((v, i) => {
+          vaihtoehdot.append(el('li', i === n.kysymys.oikea ? null : 'pieni',
+            i === n.kysymys.oikea ? `${v} ✓` : v));
+        });
+        k.append(vaihtoehdot);
+        k.append(el('p', 'pieni', `Fakta: ${n.kysymys.fakta}`));
+        k.append(el('p', null, `Aarreteksti: ${n.aarre}`));
+        k.append(el('p', 'pieni', `Perustelu: ${n.perustelu}`));
+        kohde.append(k);
+      }
+
+      kohde.append(el('h3', null, 'Aarrelöytötekstit uudella paikallisaarremallilla'));
+      for (const a of NAYTTEET.aarreNaytteet) {
+        const k = el('div', 'kortti');
+        const ots = el('p', null);
+        ots.append(el('b', null, `${a.maa}: ${a.aarre}`));
+        ots.append(el('span', 'pieni', ` — ${a.koko} · huudahdus ${a.huudahdus}`));
+        k.append(ots, el('p', null, a.teksti));
+        kohde.append(k);
+      }
     }
 
     /* ------------------------------------------------------------------
