@@ -112,12 +112,14 @@ export const RAAMATTU2 = {
       tila: 'luonnos',
       kohdat: [
         'Laatta joka kaupungissa; tehtävän oikea vastaus kääntää '
-          + 'sen. Laattojen alta löytyy rahaa, tapahtumia ja '
-          + 'varusteita.',
+          + 'sen. Jokaisella mantereella on OMAT aarteensa omine '
+          + 'kuvineen — laatta paljastaa sen mantereen aarteen, '
+          + 'jolta se löytyy (taulukko alla). Vanhoja Afrikan '
+          + 'tähden jalokiviä ei ole pelissä.',
         'Seitsemän unohdettua aarretta — yksi per manner, Aarnin '
-          + 'luettelosta (Meripihkahuone, El Dorado, jadesinetti…). '
-          + 'Ei portteja eikä kynnyksiä: mantereen aarre voi osua '
-          + 'ensimmäiseen kätköön ja on varmasti viimeisessä.',
+          + 'luettelosta. Ei portteja eikä kynnyksiä: mantereen '
+          + 'aarre voi osua ensimmäiseen kätköön ja on varmasti '
+          + 'viimeisessä.',
         'Kun mantereen aarre löytyy, avautuu mannerlento '
           + 'seuraavalle mantereelle (vain niille, joiden aarre on '
           + 'yhä kateissa).',
