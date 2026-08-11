@@ -139127,16 +139127,21 @@ class UI {
         ? `:a${aikataulu.day}` : '';
 
       /*
-       * Tarinakaaren saapumismerkintä syrjäyttää vanhan mallin
-       * (omistajan tilaus 9.8.2026: paketti suoraan peliin) — isoisän
-       * merkintä on kirjoitettu kaaren kohtaamisen ja aarteen pariksi.
-       * Nosto jää pois: merkintä on jo kokonainen.
+       * TILAPÄINEN (omistajan päätös 11.8.2026 ilta): vanhan mallin
+       * lyhyt kahden äänen merkintä luentoineen on palautettu
+       * kaaritekstin tilalle, kunnes tekstit kirjoitetaan uusiksi
+       * Raamattu 2.0:n mukaan — omistajan arvio: vanha malli on
+       * parempi, ja kaaritekstien luentoja ei ehditty generoida.
+       * Kaarimerkintää käytetään vain, jos vanhaa ei ole; kohtaaminen
+       * ja aarre tulevat yhä kaaresta. Nosto jää kaaritekstistä pois:
+       * merkintä on jo kokonainen.
        */
-      const kaariMerkinta = KAARI_LAUDAT.has(saapuminen.packId)
+      const vanhaMerkinta = (SAAPUMISTEKSTIT[saapuminen.packId] ?? {})[saapuminen.cityId];
+      const kaariMerkinta = !vanhaMerkinta && KAARI_LAUDAT.has(saapuminen.packId)
         ? TARINAKAARI[saapuminen.cityId] : null;
       const uusi = kaariMerkinta
         ? { kuvaus: kaariMerkinta.saapuminen, nosto: '' }
-        : (SAAPUMISTEKSTIT[saapuminen.packId] ?? {})[saapuminen.cityId];
+        : vanhaMerkinta;
       if (uusi && kaupunki) {
         const luentaAvain = `saapui:${saapuminen.packId}:${saapuminen.cityId}`;
         const key = luentaAvain + aikatauluLisa;
@@ -147166,6 +147171,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 577, teksti: 'Vanhat saapumismerkinnät luentoineen tilapäisesti takaisin' },
   { v: 576, teksti: 'Seitsemän aarretta — yksi per manner — ja mannerlento' },
   { v: 575, teksti: 'Uusitut tekstit merkitään ja nousevat sivun kärkeen' },
   { v: 574, teksti: 'Kyproksen lehteen viisi aihesivua ja 20 nostoa' },
@@ -147826,7 +147832,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.576';
+const APP_VERSION = '2026-08-09.577';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
