@@ -16107,9 +16107,10 @@ export const MAA_KATEGORIAT = {
               + 'kylpylärakennuksen kirjoitus ajoittaa kylän vuoteen 473. '
               + 'Asukkaat elivät oliiveista ja viinirypäleistä, ja talot '
               + 'ladottiin suurista kalkkikivilohkareista, joita louhittiin '
-              + 'aivan kylän alta. Kylät tyhjenivät 700–900-luvuilla, kun '
-              + 'kauppareitit siirtyivät muualle; ne jäivät ylängölle ilman '
-              + 'uutta asutusta, joka olisi purkanut kivet muuhun käyttöön. '
+              + 'aivan kylän alta. Kylät tyhjenivät 700–900-luvuilla. Syystä '
+              + 'kiistellään: yhden selityksen mukaan oliiviöljyn kauppa '
+              + 'hiipui, toisen mukaan kauppareitit siirtyivät muualle. Uutta '
+              + 'asutusta ei tullut tilalle purkamaan kiviä muuhun käyttöön. '
               + 'Noin 40 kylää kahdeksassa arkeologisessa puistossa otettiin '
               + 'maailmanperintöluetteloon vuonna 2011.',
           selite: 'Kaksikerroksinen kivitalo seisoo katottomana keskellä '
@@ -16125,12 +16126,13 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Bosra theatre cavea 0510.jpg',
           teksti: 'Bosran teatteri rakennettiin 100-luvulla jaa. mustasta '
               + 'basaltista, jota Hauranin tasangolla on maan alla '
-              + 'kerroksittain. Katsomo on 102 metriä leveä ja siihen mahtui '
-              + 'noin 17 000 katsojaa; kaupungissa asui aikanaan 80 000 '
-              + 'ihmistä. Teatteri jäi alun perin kaupungin muurien '
-              + 'ulkopuolelle, mutta myöhemmät hallitsijat ottivat sen osaksi '
-              + 'kaupungin varustusta ja muurasivat sen ympärille kahdeksan '
-              + 'suurta tornia vuosina 1202–1253. Katsomo jäi rakennelman '
+              + 'kerroksittain. Katsomo on 102 metriä leveä ja se on säilynyt '
+              + 'kokonaisena ylintä pylväskäytävää myöten, mikä on '
+              + 'roomalaisessa teatterissa harvinaista. Syy on siinä, mitä '
+              + 'rakennukselle tehtiin myöhemmin. Teatteri jäi alun perin '
+              + 'kaupungin muurien ulkopuolelle, mutta myöhemmät hallitsijat '
+              + 'ottivat sen osaksi kaupungin varustusta ja muurasivat sen '
+              + 'ympärille tornit vuosina 1202–1253. Katsomo jäi rakennelman '
               + 'sisään piiloon. Sisusta oli täyttynyt hiekalla, joka '
               + 'todennäköisesti suojasi istuinrivejä; hiekka kaivettiin pois '
               + 'ja teatteri kunnostettiin vuosina 1947–1970. Bosra on '
@@ -16146,8 +16148,9 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kolmekymmentä merkkiä, ei yhtään tavua',
           tiedosto: 'Tablet with cuneiform abecedarium-AO 19992-IMG 6956.JPG',
-          teksti: 'Ras Shamran kummulta Latakian pohjoispuolelta löytyi '
-              + 'vuonna 1928 Ugaritin kaupunki ja sen kirjoitus. Merkit '
+          teksti: 'Ras Shamran kumpu Latakian pohjoispuolella paljastui '
+              + 'vuonna 1928, ja seuraavan vuoden kaivauksissa sieltä nousi '
+              + 'esiin Ugaritin kaupunki ja sen kirjoitus. Merkit '
               + 'painetaan saveen ruokokynällä samalla tavalla kuin '
               + 'nuolenpääkirjoituksessa, mutta niitä on vain 30 ja jokainen '
               + 'niistä vastaa yhtä äännettä eikä tavua tai sanaa. Kirjoitus '
@@ -16170,8 +16173,9 @@ export const MAA_KATEGORIAT = {
           teksti: 'Simeon syntyi noin vuonna 390 ja meni luostariin '
               + '16-vuotiaana. Väkeä alkoi kerääntyä katsomaan häntä, joten '
               + 'hän nousi asumaan pienelle tasanteelle pylvään päähän. '
-              + 'Pylväs oli aluksi kolme metriä korkea, ja sitä korotettiin '
-              + 'vähitellen 18 metriin. Ruoka ja kirjeet nostettiin ylös '
+              + 'Pylväs oli aluksi kolme metriä korkea, ja viimeinen niistä '
+              + 'kohosi runsaaseen 15 metriin. Ruoka ja kirjeet nostettiin '
+              + 'ylös '
               + 'tikkaita pitkin, ja Simeon saarnasi alhaalla seisovalle '
               + 'joukolle kahdesti päivässä. Hän eli pylväällä 36 vuotta ja '
               + 'kuoli vuonna 459. Pylvään ympärille rakennettiin kirkko, '
@@ -16234,8 +16238,9 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Maali menee lasin päälle, ei sisään',
           tiedosto: 'حرفة الرسم على الزجاج - دمشق.jpg',
           teksti: 'Damaskoksessa lasiin maalataan käsin ohuella siveltimellä. '
-              + 'Kuvio piirretään ensin ääriviivoina, ja vasta sen jälkeen '
-              + 'kentät täytetään väreillä, jotta rajat pysyvät terävinä. '
+              + 'Kuvan maljassa työ on kesken juuri siinä vaiheessa, jossa '
+              + 'ääriviivat ovat valmiit mutta värikentät vasta osittain '
+              + 'täytetty. '
               + 'Aiheet ovat lähes aina kasveja: kukkia, lehtiä ja '
               + 'kiertyviä varsia. Kaupungin lasi oli keskiajalla haluttua '
               + 'kauppatavaraa Eurooppaa myöten, ja lasinpuhaltamoja on '
@@ -16323,7 +16328,7 @@ export const MAA_KATEGORIAT = {
               + 'tekevät jäätelöstä niin sitkeää, että sen voi leikata '
               + 'veitsellä, ja se sulaa selvästi hitaammin kuin tavallinen '
               + 'jäätelö. Damaskoksen al-Hamidijan basaarissa toimiva '
-              + 'Bakdash on tehnyt boozaa vuodesta 1885.',
+              + 'Bakdash on tehnyt boozaa 1800-luvun lopulta asti.',
           selite: 'Valkopaitainen mies otsanauha päässä survoo pitkällä '
               + 'puuvarrella metallisaavin pohjaa. Saavi on upotettu '
               + 'työtason sisään, ja sen vieressä on toinen samanlainen '
@@ -16358,14 +16363,12 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Aleppo fruitdrinks 8937.jpg',
           teksti: 'Aleppossa tuoremehubaarit ovat oma katukuvansa: kojut '
               + 'ovat vierekkäin samalla kadulla ja kilpailevat asiakkaista '
-              + 'kyltein. Nimi on niissä lähes aina sama. Kyltissä lukee '
-              + 'arabiaksi ja englanniksi vitamiini, ja se on koko '
-              + 'liikkeen laji — mehut sekoitetaan tilauksesta banaanista, '
-              + 'appelsiinista ja granaattiomenasta ja usein kerroksittain '
+              + 'kyltein. Nimi on niissä lähes aina sama: kyltissä lukee '
+              + 'arabiaksi ja englanniksi vitamiini, ja pienemmällä sen alla '
+              + 'mehu ja voileipä. Mehut sekoitetaan tilauksesta banaanista, '
+              + 'appelsiinista ja granaattiomenasta, usein kerroksittain '
               + 'samaan lasiin. Hedelmät roikkuvat katoksen alla '
-              + 'näytteillä, ja niitä otetaan suoraan tiskin yläpuolelta. '
-              + 'Kojut ovat auki myöhään, koska mehu juodaan illalla ulkona '
-              + 'seisten eikä pöydässä.',
+              + 'näytteillä, ja niitä otetaan suoraan tiskin yläpuolelta.',
           selite: 'Rivi mehukojuja kadun varressa. Katoksien alla riippuu '
               + 'suuria kimppuja banaaneja ja appelsiineja verkoissa, ja '
               + 'kylteissä lukee arabiaksi ja englanniksi AL-Asmar Vitamin '
