@@ -1,3 +1,282 @@
+# Opus 5 → Fable: MANNERKOHTAISET AARTEET TOTEUTETTU (11.8.2026)
+
+Omistajan päätös on koodissa. Haara `claude/opus5-vuorikuvat` on tuoreen
+mainin (v576, `aa1593c`) päällä. **Ei PR:ää, ei versionostoa** ohjeen
+mukaan — katselmoi, kirjoita tekstit ja julkaise kun sopii.
+
+**Kaikki seitsemän kohtaa tehty.** Yksi asia jäi tekemättä tarkoituksella
+(dist-build, ks. kohta 9), ja kolme asiaa vaatii sinulta tekstin tai
+päätöksen (kohta 7).
+
+## 0. Kokoluokka ja portit
+
+| portti | tulos |
+|---|---|
+| `node --test tests/*.test.mjs` | **550 pass, 0 fail, 1 skipped** |
+| `node tools/tarkista-kaksoisavaimet.mjs` | puhdas |
+| selainsavuke (uusi, ks. kohta 8) | **11/11 läpi**, ei sivuvirheitä |
+| uudet yksikkötestit | 10 kpl (mannerinvariantti, lento, migraatio) |
+
+Muutos: 20 tiedostoa, +850 / −708 riviä. Neljä committia haaralla.
+
+---
+
+## 1. Laattajako: yksi aarre per manner
+
+`counts.star = 1 → 7` (`maailmankartta.js`). Kuusi uutta tähteä otettiin
+tyhjistä (77 → 71) samalla perusteella kuin linssit aikanaan — tyhjä
+laatta on pelin turhauttavin ruutu. Kaupunkien kokonaismäärä 248 ei
+muutu.
+
+Sijoittelu on `jaaLaatat`issa (`game.js`), täsmälleen sillä
+linssilaattakuviolla jonka kartoitus tunnisti:
+
+1. mantereet luetaan kaupunkijärjestyksessä `cityManner`-kentästä,
+2. kullekin arvotaan yksi tähtikaupunki,
+3. ehdokkaista karsitaan **aloituskaupungit** (mannerkohtainen väistö,
+   ei jälkikäteinen korjaus kuten ennen) ja **linssikaupungit** (ettei
+   sama kaupunki saa kahta käsin sijoitettua laattaa),
+4. sijoitetut tähdet poistetaan pinon alusta, joten muiden laattojen
+   keskinäinen järjestys ei muutu lainkaan.
+
+**Toteutusoivalluksesi piti paikkansa** ja se on nyt kirjattu koodin
+kommenttiin: "aarre voi löytyä ensimmäisestä laatasta, ja jos kaikki
+muut on avattu, viimeisessä on varmasti tähti" on matemaattisesti sama
+asia kuin arpoa yksi tähti per manner laattajaossa. Dynaamista
+uudelleensijoittelua ei tarvita, eikä sitä ole. Kirjoitin siitä oman
+testin (`mantereen aarre on varmasti jäljellä…`), jonka ainoa tehtävä on
+kaatua, jos joku myöhemmin palauttaa siirtelyn.
+
+Vanhaa aloituskaupunkiväistöä ei poistettu vaan yleistettiin: jos
+laudalla joskus on enemmän tähtiä kuin mantereita, ylimääräiset
+vaihtavat paikkaa kuten ennen. Nykyisillä laudoilla se ei laukea
+kertaakaan.
+
+Muut laudat (africa, europe, …) toimivat kuten ennen: niillä koko lauta
+on yksi manner, joten `counts.star = 1` on edelleen oikein. Testi
+`laattoja on yhtä monta kuin kaupunkeja` vaatii nyt
+`counts.star === mantereet(pack).length`, joten sääntö pätee jokaisella
+laudalla automaattisesti.
+
+## 2. Kirjanpito mannerkohtaiseksi + tallennus v1 → v2
+
+| ennen | nyt |
+|---|---|
+| `world.starFound` (lippu) | *(johdettu getteri: `starsFound.size > 0`)* |
+| `world.starCity` | `world.starsFound` — `Map<manner, kaupunki>` |
+| `p.hasStar` (lippu) | `p.stars` (laskuri) |
+
+`game.starFound` toimii yhä kaikkialla missä ennenkin — se tarkoittaa
+nyt "yksikään aarre on löytynyt". `starFound`-**setteri** poistettiin
+(sitä käytti vain testikoodi); tilalle uusi `mantereenTahtiLoytynyt(manner)`
+ja `mannerOf(cityId)`.
+
+**Migraatio v1 → v2 tehtiin** — se oli kohtuudella tehtävissä eikä
+vaatinut kompromisseja:
+
+- version 1 `starFound` + `starCity` → `starsFound: {manner: kaupunki}`,
+  manner luetaan kaupungin `cityManner`-kentästä,
+- `hasStar` → `stars: 1`, ja vanhentunut lippu poistetaan oliosta,
+- reunatapaus `starFound` ilman `starCity`ä: tähti etsitään käännetyistä
+  laatoista,
+- tuntemattomat versiot (0, 3, …) hylätään yhä.
+
+Kolme testiä kattaa tämän, mukaan lukien "löytymätön v1-tallennus jää
+tyhjäksi" ja "vanhentunut lippu ei jää roikkumaan".
+
+**Yksi rehellinen seuraus kirjattavaksi:** vanhan tallennuksen laudalla
+on yhä vain se yksi tähti, koska laattajakoa ei lasketa uudelleen (se
+luetaan tallennuksesta). Aarnin luettelo näyttää siis kesken jääneessä
+matkassa kuusi kateissa olevaa aarretta, joita sillä laudalla ei ole.
+Se on mielestäni rehellisempi kuin tallennuksen hylkääminen, ja koskee
+vain ennen tätä muutosta aloitettuja matkoja. Jos olet eri mieltä,
+vaihtoehto on hylätä version 1 tallennukset kokonaan — yhden rivin
+muutos, mutta se katkaisee kaikki kesken jääneet pelit.
+
+## 3. revealToken, palkkio ja Aarnin luettelo
+
+`revealToken`in `case 'star'` kirjaa nyt mantereen ja kasvattaa
+laskuria. Palkkio on **2000 puntaa per tähti** kuten pyysit.
+
+**Talouden vinouma, kirjattuna:** seitsemän aarretta = 14 000 puntaa.
+Kartoituksessa mitattu tilanne oli jo se, ettei raha ole keskipelissä
+niukkuutta (34 rubiinia, 43 smaragdia, 57 topaasia), joten tämä ei riko
+mitään — mutta se tekee rahasta lopullisesti merkityksettömän toisen
+mantereen jälkeen. Jätin `STAR_PRIZE`:n koskematta ja kirjoitin koodiin
+kommentin, että tämä on ensimmäinen säädettävä luku jos palkkiot alkavat
+latistaa löytöjä. Sinun ja omistajan päätös; en niputa sitä tähän.
+
+**Aarnin luettelo** (passi) lukee nyt `tokens.mannerTypes` -taulun:
+seitsemän riviä, löytyneet nimeltä ja loput lukuna. Löytyneet luetaan
+maailman kirjanpidosta eikä pelaajan lipusta, joten moninpelissä
+luettelo näyttää koko seurueen saaliin — luettelo on Aarnin, ei yhden
+matkaajan. Muilla laudoilla se palaa vanhaan muotoonsa.
+
+Matkasaalis (`renderFinds`) näyttää jokaisen löydetyn aarteen omana
+rivinään oikealla nimellä ja kuvalla; manner luetaan `findManner`-
+listasta, joka kulkee `finds`-listan rinnalla.
+
+## 4. Vihjejärjestelmä poistettu
+
+Poistettu kokonaan:
+
+- `game.js`: `starHint()`, `starHintCity()`, `starCityOf()`,
+  `HINT_EVERY_TURNS`,
+- `ui.js`: vihjeen laskenta ja koko vihjekortin piirto, `vihjeVuoro`,
+  `VIHJELUENNAT`-joukko,
+- `css/styles.css`: `.fact-card.vihjekortti` -säännöt,
+- **datat:** `texts.starHints` yhdeksästä pakkauksesta ja Euroopan
+  `VIHJEALUEET` / `VIHJETEKSTIT` / `starHintAlue`,
+- `sw.js`: **36 kpl** `puhe-*-vihje-*.mp3` -esilatausta.
+
+`renderFact`in varhaispoistuma yksinkertaistui takaisin: vihje oli ainoa
+syy, miksi kortti laskettiin uudelleen kesken matkan.
+
+**Tarinatekstien vihjeisiin ei koskettu** — kohtaamiset, kaaritekstit ja
+`flightRegret` ovat ennallaan. `flightRegret` muuten vaikenee nyt heti
+ensimmäisen aarteen jälkeen (`starFound` = "yksikään"), eli
+kuudella mantereella löytymättä se on jo hiljaa. Tämä oli kartoituksen
+kohta T9; jos haluat sen jatkavan kunnes kaikki seitsemän on löytynyt,
+se on yhden ehdon muutos — sano niin, teen sen.
+
+**Kaksi jälkeä jäi, kummatkin sinun pöydällesi:**
+
+1. `assets/audio/puhe-*-vihje-*.mp3` (36 tiedostoa) ovat yhä repossa,
+   nyt käyttämättöminä. En poistanut mediaa omin päin.
+2. `docs/isoisan-raamattu.md` (rivit ~518–523) ja
+   `docs/tyolista-opukselle.md` (~3913–3923, 3731, 4042) kuvaavat
+   vihjejärjestelmää voimassa olevana. Raamattu on kaanonia, johon vain
+   sinä kirjoitat, joten en koskenut kumpaankaan.
+
+## 5. Mannerlento
+
+`mannerLennot()` + `actionMannerLento(cityId)` (`game.js`), nappi
+`renderTravelChoice`in vaiheeseen B (`ui.js`). Ehdot täsmälleen
+ohjeesi mukaan: **tämän mantereen** aarre löytynyt, `roaming`,
+`FLIGHT_PRICE` (300), yksi vuoro, **ei airport-ehtoa**, ei noppaa.
+Moninpelissä ei tarjota lainkaan.
+
+**Yksi valinta, jonka tein itse ja jonka voit kumota:** kohteita on
+**yksi per manner** — kyseisen mantereen ensimmäinen aloituskaupunki
+kaupunkijärjestyksessä (Lontoo, Istanbul, Tanger, Tokio, New York,
+Sydney). Ohjeesi sanoi "muiden mantereiden aloituskaupungit", mikä
+kirjaimellisesti olisi ollut 15–17 nappia: aloituskaupunkeja on 19.
+Kuusi nappia mahtuu valikkoon, 17 ei. Valinta on vakio eikä kuluta
+arvontaa, joten tallennettu peli palautuu samanlaisena.
+
+**Kaksi paikanvaraajatekstiä odottaa sanamuotoasi**, molemmat
+`js/game.js`:n alussa yhtenä kommentoituna lohkona:
+
+```js
+MANNERLENTO_ILMOITUS = 'Tämän mantereen aarre on löytynyt — matka voi
+                        jatkua toiselle mantereelle.'
+MANNERLENTO_NAPPI = (kaupunki) => `Toiselle mantereelle: ${kaupunki}`
+```
+
+Ilmoitus tulee lokiin heti löydön jälkeen (vain jos muita mantereita on
+jäljellä). Napin teksti on geneerinen, koska kartoituksen kohta T1 —
+mannerten suomenkieliset nimet taivutuksineen — on yhä kirjoittamatta.
+Kun ne ovat olemassa, "Lennä Oseaniaan" on yhden rivin vaihto.
+
+**UI-havainto:** Limassa (lentokenttäkaupunki) vaihe B näytti savukkeen
+kaappauksessa 11 nappia — laiva, kolme tavallista lentoa, kuusi
+mannerlentoa ja Takaisin. 390 × 900 -ruudulla ne mahtuivat juuri ja
+juuri. Kaupungissa, jossa on enemmän lentoreittejä, valikko menee yli.
+Kirjaan tämän enkä korjaa: rajaus on sinun (esim. mannerlennot omaan
+vaiheeseensa tai vain löytämättömien mantereiden kohteet).
+
+## 6. Moninpeli
+
+`checkWin` toimii kuten ennen: **ensimmäinen** aarre käynnistää
+kotiinjuoksun (`p.stars > 0` entisen `p.hasStar`in tilalla). Pienin
+mahdollinen muutos, kuten pyysit.
+
+**Outo seuraus, mitattuna.** Ajoin `tools/simulate.mjs maailmankartta`
+samoilla siemenillä ennen ja jälkeen, 40 peliä kumpikin:
+
+| | kierroksia min/med/max | tähtivoittoja |
+|---|---|---|
+| 1 tähti | 5 / 30 / **459** | 23/40 |
+| 7 tähteä | 5 / 31 / **104** | **31/40** |
+
+Kaksi selvää muutosta, kumpikin sivuvaikutus jota kukaan ei tilannut:
+
+1. **Pitkä häntä katoaa.** Yhden tähden laudalla huonolla tuurilla peli
+   venyi 459 kierrokseen; seitsemällä pisin oli 104. Mediaani ei
+   muuttunut (30 → 31), eli tyypillinen peli on täsmälleen entisen
+   mittainen — vain katastrofitapaukset loppuivat.
+2. **Hevosenkenkävoitot harvenivat**, 17/40 → 9/40. Kun tähti löytyy
+   varmemmin, sen löytäjä myös voittaa useammin. Hevosenkenkä on siis
+   nyt selvästi harvinaisempi tapa voittaa kuin ennen.
+
+Kumpikaan ei ole vika, ja ensimmäinen on mielestäni parannus. Toinen on
+sellainen, jonka haluat ehkä tietää ennen kuin kilpapeliä säädetään
+muuten.
+
+## 7. Sivukorjaukset
+
+- **sw.js:** seitsemän `aarre-*-star.jpg` -kuvaa lisätty esilataukseen.
+  Ne puuttuivat kokonaan — pelin tärkein paljastuskuva ei ollut
+  offline-tilassa käytettävissä. Samalla lähti 36 turhaa vihjeluentaa,
+  joten esilatauslista **lyheni** netto 29 rivillä.
+- **index.html, Säännöt:** teksti kuvasi yhä lautojen välisiä
+  porttikaupunkeja ja tietoportteja, jotka poistettiin 10.8.2026.
+  Kirjoitin tilalle: uusi **Aarnin luettelo** -kappale (seitsemän
+  aarretta nimeltä, ei porttisääntöä), **Matkaan lähtö** vastaamaan
+  yhden laudan mallia, ja **Mantereelta toiselle** joka kertoo lennosta.
+  Poistin lisäksi kaksi vanhentunutta lausetta muualta: "portit toisille
+  laudoille" vuoron kulusta ja "taitettu sivu, joka vihjaa aarteen
+  suunnasta" päiväkirjakappaleesta.
+  **Tämä on pelaajalle näkyvää tekstiä, eli sinun kaistaasi** — kirjoitin
+  sen mekaniikan tasolla oikeaksi, en tyylin tasolla valmiiksi. Lue se
+  läpi ja korjaa sanamuodot.
+
+## 8. Uusi työkalu: selainsavuke
+
+`tools/savuke-mannerlento.mjs` ajaa koko ketjun oikeassa Chromiumissa
+oikean UI:n läpi ja tulostaa OK/FAIL-rivit. Yksitoista tarkistusta:
+peli käynnistyy → lauta on maailmankartta → seitsemän mannerta yhdellä
+aarteella kullakin → löytö kirjautuu mantereelle → aarre saa mantereensa
+nimen → Aarnin luettelossa nimi ja "kateissa 6" → kuusi lentonappia
+vaiheessa B → nappi todella siirtää ja veloittaa → ei vihjekortin
+jälkiä → ei sivuvirheitä.
+
+```
+node tools/savuke-mannerlento.mjs      # 11/11 läpi
+```
+
+Kolme kuvakaappausta `/tmp/matkakirja-kaappaukset/`. Katsoin ne:
+luettelossa lukee "◈ El Doradon aarre — LÖYTYI / Kateissa 6" ja
+aarrekuva latautuu, ja lentonapit ovat oikeassa muodossa.
+
+## 9. Mitä EN tehnyt
+
+- **`node tools/build-standalone.mjs` on ajamatta**, joten `dist/` on
+  haaralla vanhentunut. Syy: build kirjoittaa 674 riviä kahteen
+  tiedostoon, ja koska et halunnut versionostoa, ajo olisi tuottanut vain
+  mergekonfliktimateriaalia muille sessioille. **Aja se julkaisun
+  yhteydessä** versionoston jälkeen, kuten julkaisukaava sanoo.
+- Vihjeäänitiedostoja ei poistettu (kohta 4).
+- Kaanoniin ja työlistaan ei koskettu (kohta 4).
+- `STAR_PRIZE`ä ei säädetty (kohta 3).
+- Mannerten suomenkielisiä nimiä ei keksitty (kohta 5).
+
+## 10. Kolme asiaa, joita odotan sinulta
+
+1. **Kaksi paikanvaraajatekstiä** (`MANNERLENTO_ILMOITUS`,
+   `MANNERLENTO_NAPPI`) ja halutessasi mannerten suomenkieliset nimet
+   taivutuksineen, jolloin napista tulee "Lennä Oseaniaan".
+2. **Säännöt-dialogin luenta** — mekaniikka on oikein, tyyli ei
+   välttämättä.
+3. **Kolme kirjattua asiaa päätettäväksi:** vanhojen tallennusten kuusi
+   olematonta aarretta (kohta 2), 14 000 punnan aarrepotti (kohta 3) ja
+   vaiheen B nappirivin pituus (kohta 5).
+
+Jään valmiuteen. Haara on pushattu ja testit vihreinä; otan seuraavan
+erän vastaan milloin vain.
+
+---
+
 # Opus 5 → Fable: manner-mysteerin KARTOITUS (portti + lento) — malli ei vastaa koodia (11.8.2026)
 
 Kartoitin tuoreesta mainista (v572, `8af3ac6`). **Ei koodimuutoksia** —
