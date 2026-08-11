@@ -1,3 +1,155 @@
+# Opus 1 → Fable: JEMEN VALMIS (v570, #813) — kolme uutta ansaa (11.8.2026 iltapäivä)
+
+**Jemen on valmis:** neljä aihetta (historia, rakennukset, luonto,
+ruoka), 14 nostoa, neljä minitehtävää. PR #813, v570.
+
+- **Historia:** Maribin muinainen pato, Bar'anin temppeli ja sen
+  kuudes pylväs, vanha Marib rauniokummun päällä, Zabidin tiilikaupunki.
+- **Rakennukset:** Shibam, Dar al-Hajar, Al-Hajjarah, Kawkaban.
+- **Luonto:** Tihama ja Jabal an-Nabi Shuayb, kaksi sadekautta ja Ibb,
+  mantelipaviaani.
+- **Ruoka:** madra-kivipata ja hulba, masoob, bint al-sahn.
+
+Kaksi sivua on kolmen noston mittainen (kuten SYR ja IRQ) — syyt
+kohdassa 3.
+
+## 1. TÄRKEIN: kilpailijoita on neljäs, jota luovutuspapereissa ei ole
+
+Edeltäjieni sääntö oli: *maalehden kilpailija on saman maan karttasivu
+ja kaupunkilehti.* Se ei riitä. **`js/packs/maasto-tekstit.js` on
+neljäs kilpailija**, ja se oli varannut puolet suunnittelemastani
+luontosivusta:
+
+Sarawat-vuorten lohko (`maasto-tekstit.js`, hakusana `sarawat`)
+sisältää jo Jemenin ylängön terassit, **saman kuvan**
+(`Haraz Mountains, Yemen (12633745063).jpg`), saman selityksen
+("muuri pitää mullan paikallaan"), kylien sijoittelun harjanteille
+*ja* kahvin — mokka on sataman nimi, ei pavun, sekä hollantilaiset ja
+Jaava. Olin suunnitellut `vuoret`-sivun, joka olisi ollut lähes kopio.
+Vaihdoin sen `luonto`-sivuksi.
+
+**Kahvi on siis varattu kahdesti**, ei kerran: Sanan kulttuurivisassa
+(`q:`-avain) ja tässä maastotekstissä. Luovutuspaperi listasi
+mokkakahvin ja al-Makhan vapaaksi suunnaksi — se tieto oli väärä, ja
+korjaan sen luovutuspaperiin.
+
+**Ehdotus `tools/tarkista-maa.mjs`:ään** (kirjaan tämän myös
+kohtaan 1d): työkalu lukee vain `kysymys:`-avaimia. Jos siihen
+lisätään `q:`-avainten ja `maasto-tekstit.js`:n tekstihaku uuden maan
+aiheita vasten, kaksi viime erän kalleinta löytöä olisi tullut ilmaiseksi.
+
+## 2. Kolme tarkastusta löysi kolme asiavirhettä ja kahdeksan väärää
+   kuvatekstiä
+
+Ajoin kohdan 7b vakiotyötavan (kuvat/selitteet, faktat, kieli).
+Löydökset, jotka **olisivat menneet läpi** ilman sitä:
+
+**Asiavirheet:**
+
+1. **Tihaman rinne.** Kirjoitin, että rannalta noustaan yli kahden
+   kilometrin korkeuteen "parissakymmenessä kilometrissä". Todellinen
+   matka on noin 90 km rannalta ja ~50 km tasangon sisäreunalta, ja
+   välissä on vielä 300–1 100 metrin esivuoret. Korjattu.
+2. **Mantelipaviaanin laumarakenne.** Kirjoitin "kaksiportainen".
+   Laji on primatologian oppikirjaesimerkki **nelitasoisesta**
+   yhteisöstä (yhden uroksen yksikkö → klaani → joukko → lauma).
+   Korjattu.
+3. **Zabidin kaupunginmuuri.** Kirjoitin, että osmanit muurasivat sen
+   1539. Kaupunki oli muurien ympäröimä jo perustamisestaan, ja
+   säilynyt muuri portteineen on **1800-luvun alusta**. Korjattu.
+   (Commonsin oma kuvateksti sanoo "Ottoman Wall" — tiedostosivukaan
+   ei siis ole lähde.)
+
+Lisäksi poistin kolme väitettä, joille ei löytynyt vahvistusta
+(Ibbin "sato neljästi vuodessa", Zabidin tiilikuviointitekniikka,
+Dar al-Hajarin kaivon syvyys) ja korjasin madran kivilajin:
+se on **vuolukiveä**, ei vulkaanista kiveä, vaikka jälkimmäinen
+toistuu joka ruokablogissa.
+
+**Kuvatekstit:** kahdeksaan selitteeseen tuli tarkennus. Nyt
+mainitaan mm. Bar'anin temppelin nykyaikaiset metallituet ja
+kaivauskenttää kiertävä teräsaita, Kawkabanin sähkötolpat ja etualan
+roskat, Ibbin kaksi suurjännitepylvästä sekä se, että Ibbin peltolohkot
+ovat rinteen muotoja seuraavia kaistaleita eivätkä suorakulmioita.
+Tarkistin kaksi vakavinta löydöstä itse suurennoksina ennen korjausta;
+molemmat pitivät paikkansa.
+
+**Poliittisia julisteita, lippuja, aseita tai vesileimoja ei löytynyt
+yhdestäkään 14 kuvasta.** Syyrian Assad-löydön jälkeen tämä
+tarkistettiin erikseen 2400 px:n suurennoksina.
+
+## 3. Miksi kaksi sivua on kolmen noston mittainen
+
+Sama syy kuin Syyriassa: kuvapula, ei aihepula.
+
+- **Ruoka.** `Category:Cuisine of Yemen` on 26 tiedostoa, joista suuri
+  osa on Nokia C5-00 -puhelimella otettuja. Hylkäsin `Yemeni
+  Sweet.jpg`:n (kaksi tunnistettavaa miestä kasvot kameraan),
+  `وجبة يمنية شهيرة.jpg`:n (**vesileima ja logo**) ja `Sayadiyah
+  Fish.jpg`:n (CC0 mutta jemeniläisyys varmistamatta).
+- **Luonto.** Neljäs aihe olisi ollut terassit — ja juuri se osui
+  Sarawat-maastotekstiin.
+
+**Sidr-hunajaa ja qishriä ei voi tehdä lainkaan:** Commonsissa ei ole
+kummastakaan yhtään kuvaa. Molemmat olivat luovutuspaperin
+"vapaat ja lupaavat" -listalla.
+
+## 4. Unesco on kontista estetty — mutta sen oma data ei ole
+
+`whc.unesco.org` palauttaa 403:n (Cloudflare) niin WebFetchillä,
+curlilla kuin Playwrightillakin, ja `web.archive.org` on egress-
+policyn takana. Luovutuspaperin sääntö "Unesco-kohteiden luvut
+Unescolta, EI Wikipediasta" näytti siis mahdottomalta noudattaa.
+
+**Reitti löytyi:** `https://data.unesco.org/api/explore/v2.1/catalog/`
+`datasets/whc001/records` on maailmanperintökeskuksen oma
+syndikaatioaineisto ja sisältää kentät `date_inscribed`,
+`danger_list` ja `justification_en` (= "Brief synthesis" sanasta
+sanaan). Sitä kautta vahvistettiin Shibam 1982, Zabid 1993 +
+vaarantuneet 2000 ja Marib 2023. **Tämä kannattaa kirjata pysyväksi
+ohjeeksi** — se on sama data, jonka whc.unesco.org itse julkaisee.
+
+## 5. Kaksi pienempää, mutta kirjaamisen arvoista
+
+- **Liitostyökaluni katkoi kaksi pitkää tiedostonimeä kahdelle
+  riville** (arabiankielinen Kawkaban-nimi ja iNaturalist-paviaani).
+  Kuvat eivät olisi päätyneet R2-peiliin. `tests/media.test.mjs`
+  nappasi sen — se testi ansaitsee kiitoksen. Korjasin sekä työkalun
+  että tiedoston.
+- **Otsikkotörmäys julkaistuun Syyria-lehteen:** ensimmäinen
+  otsikkoni oli "Kylä, joka jätettiin seisomaan", ja SYR:ssä on
+  "Kylä, jonka talot jäivät seisomaan" — sama aihe ja lähes sama
+  otsikko. Vaihdoin Jemenin otsikoksi "Kumpu on vanhojen talojen
+  tekemä". Kannattaa muistaa: esitarkistin vahtii *kysymysten*
+  ainutkertaisuutta, ei otsikoiden.
+
+## 6. Päätöstä vaativat (ei estä mitään)
+
+1. **Maribin padon korkeus on riidanalainen:** MDPI 2026
+   (vertaisarvioitu) päättää sarjan 7 metriin, Wikipedia sanoo 14 ja
+   Britannica yli 15. Jätin luvun kokonaan pois ja kerron vain
+   vaiheet 4 → 7 metriä, jotka kaikki lähteet jakavat. Jos haluat
+   kärkiluvun, se pitää valita.
+2. **Vanhan Maribin tyhjeneminen** kirjoitettiin neutraalisti
+   ("kylä tyhjeni 1900-luvun kuluessa"). Pääsyy oli 1960-luvun
+   sisällissodan pommitukset; sovelsin sotarajausta samoin kuin
+   Irakin soiden vesihistoriassa.
+3. **Jemenin lippu** on pelissä nykyinen eikä vaadi toimia — mainitsen
+   vain, koska Syyrian lippulinjaus on jonossa.
+
+## 7. Seuraavaksi
+
+CYP on työn alla. Päällekkäisyyskartta on jo mitattu (Kyrenian hylky,
+venetsialainen muuri, halloumi ja kupari ovat varattuja; Kyprosta ei
+ole `maasto-tekstit.js`:ssä lainkaan), ja neljä kuvaa on katsottu.
+**Ansa CYP:ssä:** Khirokitian komeimmat kuvat (A.Savin) ovat
+FAL-lisenssillä eli kiellettyjä, vaikka haku nostaa ne ensimmäisenä.
+
+Kun CYP on sisällä, ME-puutelista on tyhjä ja kirjoitan
+kokonaisyhteenvedon.
+
+---
+
 # Opus 1 → Fable: SYYRIA VALMIS (v564, #807) — kuvatarkastus löysi Assadin muotokuvan (11.8.2026 aamu)
 
 **Syyria on valmis:** kolme aihetta (historia, käsityö, ruoka),
