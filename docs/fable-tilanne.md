@@ -1023,3 +1023,42 @@ rahapalkinnon; lehteen ilmestyi vanha kertatutkimis-"Etsi kätkö";
 - KIRJATTU JONOON OMISTAJALLE: ME-maiden aihemitta nyt 2–4/maa
   (tilattu 5–6) — noston laajuus omistajan päätös (Opus 1:n
   sivuhavainto).
+
+### TILINVAIHTOLUOVUTUS 11.8.2026 ~10.45Z (13.45)
+
+Fable-kredititit täyttyvät tällä tilillä; koordinaatio siirtyy
+toiselle tilille. Tämän session päiväsaldo: v557–v575 (19
+julkaisua). PÄIVÄN TILA LUOVUTUSHETKELLÄ:
+
+- **Eurooppa TEKSTIEN OSALTA VALMIS ja QA-sinetöity**: 41/41
+  pituusbudjetissa ja tagitettu, spoilerisääntö puhdas kaikissa
+  kentissä, lupausketjut suljettu, kulkija-passi ajettu (v573).
+  Työhuoneen Euroopan tekstit -sivulla UUSITTU 11.8. -merkit ja
+  aamupäivän jälkeen uusitut kärjessä (v575). OMISTAJA LUKEE
+  PARHAILLAAN tekstejä ja kommentoi muutokset — uusi Fable ottaa
+  kommentit vastaan ja ohjaa ne uudelle Max-sessiolle.
+- **Manner-mysteerimalli hyväksytty ja kaanonissa** (raamattu
+  "Mantereen mysteeri", sapluunan säiekoukkusäännöt). AVOINNA
+  OMISTAJALLA: (1) hoitaja + kerääjä vai yksi hahmo (suositus:
+  kaksi — kerääjä on Grimshawin jälkeläinen, joka kokoaa revityn
+  sivun paloja; Istanbulin/Kööpenhaminan viejä-havainnot);
+  (2) säietiheyden tasoituserä ~12 loppubeatin vaihto (suositus:
+  tehdään); (3) luentojen generointilupa (koko EU odottaa);
+  (4) ME-seitsikon tasavahvistus (ARE JOR OMN QAT KWT SAU BHR
+  2–3×3 → 4–5×4). Pääaarteen paljastusteksti kirjoitetaan kun
+  hoitaja/kerääjä on päätetty — raaka-aine on Maxin 32 havainnon
+  luettelo (claude/fable-max-ateena:docs/viesti-fable.md).
+- **SEITSEMÄN TÄHTEÄ -MEKANIIKKA TYÖN ALLA**: omistajan päätös
+  (yksi Aarnin luettelon tähti per manner, ei porttia, ei
+  vihjejärjestelmää, viimeinen laatta varma; + lento mantereen
+  tähden löydyttyä). Opus 5 (2) -sessio toteuttaa haaralle
+  claude/opus5-vuorikuvat — UUSI FABLE KATSELMOI, KIRJOITTAA
+  TEKSTIT PLACEHOLDEREIHIN (lentotarjous + Säännöt-dialogi) JA
+  JULKAISEE. Edeltäjän mekaniikkakartoitus samalla haaralla.
+- **ME-maalehdet valmiit** (12 maata, 128 nostoa, raportti
+  claude/opus1-me-lehdet:docs/viesti-fable.md) — kokonaisyhteenveto
+  toimitettu omistajalle. Palmyra-linjaus: pois maalehdestä;
+  1873-kehysidea kirjattu.
+- Toimitusoppi: fire_trigger toimii vain lämpimään konttiin —
+  varmista cse-tunnisteen täsmäys, muuten viesti menee orpoon;
+  kylmälle sessiolle perustetaan seuraaja.

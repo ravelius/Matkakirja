@@ -10,81 +10,81 @@
  */
 
 export const TILANNE = {
-  paivitetty: '11.8.2026 (yö klo 04.40 Suomen aikaa) — YÖAJO KÄYNNISSÄ',
-  tavoite: 'Yöajo: Euroopan rimakierros VALMIS (34/41 uusittu tai '
-    + 'silattu, 7 tietoisesti ennallaan). Nyt korjataan Sonnetin '
-    + 'löytämät EU-visaspoilerit ja ME-kaupunkilehdet etenevät. '
-    + 'Luentojen generoinnit odottavat omistajan lupaa aamulla.',
+  paivitetty: '11.8.2026 (iltapäivä ~13.45) — TILINVAIHTO',
+  tavoite: 'Fable-koordinaatio siirtyy toiselle tilille (krediitit). '
+    + 'Eurooppa on tekstien osalta valmis ja QA-sinetöity; '
+    + 'mysteerimalli kaanonissa; seitsemän tähteä -mekaniikka '
+    + 'työn alla Opus 5:llä. Uusi Fable jatkaa jatkopromptilla.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
-      tila: 'tyossa',
-      tehtava: 'Yön julkaisusykli: v551+v555 vuorigalleriat, '
-        + 'v552+v556+v557 saapumiset uusiksi (28 kohdetta), v553 '
-        + 'maastoartikkelit, v554 ME:n Isfahan-korjaukset. '
-        + 'Kaanonkirjaus: ME-erikoiskohteet saavat maatunnuksen '
-        + '(paitsi Jerusalem) — laudat olivat ristiriidassa.',
-      seuraavaksi: 'Maxin EU-Isfahan-korjausten katselmointi ja '
-        + 'julkaisu. Aamuksi omistajalle: aloituskaupunkipäätös '
-        + '(BA→Lima), lupa Euroopan luentojen generointiin (35 '
-        + 'mykistettyä luentaa jonossa), ME-maiden aihemitan nosto.',
+      tila: 'odottaa',
+      tehtava: 'Päiväsaldo v557–v575: Euroopan hiontakampanja '
+        + '(41/41 budjetissa ja tagitettu, spoilerit ja '
+        + 'lupausketjut suljettu, kulkija-passi), mysteerimalli '
+        + 'kaanoniin, ME-maalehdet valmiiksi, Euroopan tekstit '
+        + '-sivu tageineen ja UUSITTU-merkkeineen.',
+      seuraavaksi: 'UUSI FABLE-SESSIO TOISELLA TILILLÄ: katselmoi '
+        + 'Opus 5:n mekaniikkaerä, ota omistajan tekstikommentit '
+        + 'vastaan, kirjoita lentoteksti ja pääaarteen paljastus '
+        + 'kun hoitaja/kerääjä on päätetty.',
     },
     {
-      tekija: 'Fable max',
+      tekija: 'Fable max 2',
       rooli: 'syväajattelu (apusessio)',
-      tila: 'tyossa',
-      tehtava: 'Riman erät 1–4 valmiit ja mainissa (28 saapumista '
-        + 'uusiksi + 7 Reginald-mietintöä + Tromssan otsikkovuodon '
-        + 'korjaus). Euroopan kierros valmis.',
-      seuraavaksi: 'EU-Isfahan-korjauserä: ~25 visakysymystä uusiksi '
-        + 'Sonnetin raportin pohjalta (vastaus ei saa vuotaa '
-        + 'tekstissä ennen kysymystä), Kreeta/Varsova harkintaan.',
+      tila: 'valmis',
+      tehtava: 'Ateena, pituusbudjetti, hiontaerät 1–3, Sonnet-'
+        + 'korjaukset, mysteerikannanotto ja kulkija-passi — '
+        + 'kaikki mainissa.',
+      seuraavaksi: 'Ei vastaanota viestejä tilinvaihdon jälkeen; '
+        + 'uusi tili perustaa oman Max-session tarvittaessa.',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
-      tila: 'tyossa',
-      tehtava: 'ME-kaupunkilehdet: Iranin historia- ja rakennukset-'
-        + 'aiheet valmiina (8 kuvaa, lisenssit tarkistettu), '
-        + 'erikoiskohteiden maatunnukset korjattu.',
-      seuraavaksi: 'Iranin loput aiheet (puutarhat, ruoka, käsityö) '
-        + '→ julkaisu; sitten IRQ, SYR, YEM, CYP samalla reseptillä.',
+      tila: 'valmis',
+      tehtava: 'ME-MAALEHDET VALMIIT: 12 maata, 37 aihetta, 128 '
+        + 'nostoa ja kuvaa, 0 duplikaattia (v574). '
+        + 'Kokonaisyhteenveto raportissa.',
+      seuraavaksi: 'Valmiudessa. Jonossa omistajan päätöstä '
+        + 'odottaa ME-seitsikon tasavahvistus (vanhan reseptin '
+        + '7 maata uuteen malliin).',
     },
     {
-      tekija: 'Opus 5',
-      rooli: 'vuorigalleriat + kuvatyöt',
+      tekija: 'Opus 5 (2)',
+      rooli: 'koodi + kuvatyöt',
       tila: 'tyossa',
-      tehtava: 'Vuorigalleriaurakka VALMIS: 52/52 kohdetta, 324 '
-        + 'kuraattorikuvaa mainissa ja peilissä (kattavuus '
-        + 'tarkistettu 324/324 + 56/56).',
-      seuraavaksi: 'Kuvatyökalun (hae-vuorikuvat) viimeistely '
-        + 'yleiskäyttöiseksi; sitten valmiustila.',
+      tehtava: 'SEITSEMÄN TÄHTEÄ + LENTO: yksi Aarnin luettelon '
+        + 'tähti per manner, ei vihjejärjestelmää, ei porttia; '
+        + 'lento mantereen tähden löydyttyä. Tallennusversio 1→2.',
+      seuraavaksi: 'Saa tehdä työn loppuun; UUSI Fable katselmoi, '
+        + 'kirjoittaa tekstit placeholdereihin ja julkaisee.',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA',
       tila: 'valmis',
-      tehtava: 'EU-Isfahan-tarkistus valmis: 22/41 spoileria '
-        + 'löydetty (20 ilmaista korjata), bonuksena 3 kysymys–'
-        + 'kohtaus-irrallisuutta. ME:n vastaava (13/28) käsitelty '
-        + 'v554:ssä.',
-      seuraavaksi: 'Valmiudessa; seuraava tarkistuserä annetaan kun '
-        + 'Maxin korjaukset ovat mainissa.',
+      tehtava: 'Kolme tarkistuskierrosta euro-hiontaan (7+15+1 '
+        + 'löydöstä, kaikki korjattu) — Eurooppa sinetöity.',
+      seuraavaksi: 'Valmiudessa; seuraava erä uudelta Fablelta '
+        + '(esim. mekaniikkaerän savutestit).',
     },
   ],
   odottaaPaatosta: [
-    'Aloituskaupunkiarvio: 17/19 pidetään, LA→Chicago selvä, '
-      + 'BA→Lima harkinnainen — päätös omistajalla.',
-    'Euroopan uusien luentojen generointi: 35 mykistettyä luentaa '
-      + 'odottaa lupaa (tekstit pelissä, vanhat äänet eivät soi '
-      + 'väärän tekstin päällä).',
-    'ME-maiden aihemitta: nykyisillä mailla 2–4 aihetta, tilaus oli '
-      + '5–6 — noston laajuus omistajan päätös.',
-    'ME-erikoiskohteiden maatunnus annettu (paitsi Jerusalem) — '
-      + 'kaanonmuutos kirjattu, kumottavissa jos omistaja toisin '
-      + 'päättää.',
-    'Afrikan jakotauluehdotus (P1–P5) omistajalla luettavana.',
+    'Kulkijan henkilöllisyys: hoitaja + kerääjä (suositus; kerääjä '
+      + 'on Grimshawin jälkeläinen, revityn sivun palat) vai yksi '
+      + 'hahmo — pääaarteen paljastusteksti kirjoitetaan tästä.',
+    'Säietiheyden tasoituserä: kulkijahavainto nyt 32/41 '
+      + 'kaupungissa — ~12 loppubeatin vaihto (suositus: tehdään).',
+    'Euroopan luentojen generointilupa (koko EU-lauta mykistetty; '
+      + 'generoidaan yhtenä eränä kun tekstikommentit on käsitelty).',
+    'ME-seitsikon tasavahvistus: ARE JOR OMN QAT KWT SAU BHR '
+      + '2–3 aihetta → uusi 4–5×4-malli (~2 Opus-erää).',
+    'Aloituskaupunkiarvio: BA→Lima harkinnainen (LA→Chicago tehty).',
+    'Afrikan jakotauluehdotus omistajalla luettavana.',
+    'Ämpärin jäänteet kuvat/.jpg ja kuvat/..jpg — poisto vaatii '
+      + 'ämpärioikeudet.',
   ],
 };
 
