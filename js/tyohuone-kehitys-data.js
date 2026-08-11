@@ -208,8 +208,8 @@ export const KAARI_PAKETIT = {
       },
       aarre: 'Sääntö piti: lämmin seinä oikealla, ja kätkö odotti '
         + 'liituristin alla irtokiven takana. Portilla Márta sanoi: '
-        + '"Isoisoäitinikin pyyhki merkin. Silti risti on aamulla aina '
-        + 'seinässä, samaa valkoista liitua."',
+        + '"Isoisoäitinikin pyyhki merkin aikanaan — ja aina se ennen '
+        + 'pitkää palasi. Tämä liitu on tuoretta."',
     },
     {
       id: 'lontoo',
@@ -336,7 +336,7 @@ export const KAARI_PAKETIT = {
       henkilo: 'Suihkulähteenhoitaja Enzo nostaa Trevin kolikot talteen joka '
         + 'viikko, kuten hänen isänsä ja isoisänsä nostivat.',
       kohtaaminen: 'Enzo kääntelee vanhaa kolikkoa hansikkaassa kädessään. '
-        + '"Tämä nousee altaasta joka viikko, vaikka panen sen '
+        + '"Tämä nousee altaasta yhä uudelleen, vaikka panen sen '
         + 'talteen. Isäni sanoi: älä kysy keneltä, kysy miksi. Vastaa '
         + 'tavan kysymykseen, niin kolikko on sinun."',
       kysymys: {
@@ -437,7 +437,8 @@ export const KAARI_PAKETIT = {
       },
       aarre: 'Nikos nosti rahan: sen alla, pylvään onkalossa, odotti '
         + 'kätkö. Hän katsoi rinteeseen: "Pöllö palaa pylväälle joka '
-        + 'ilta. Kukaan ei tiedä, kuka sitä ruokkii."',
+        + 'ilta, niin kauan kuin suku muistaa. Meillä sanotaan, että '
+        + 'se vartioi vielä jotakin."',
     },
     {
       id: 'lissabon',
@@ -1011,8 +1012,8 @@ export const KAARI_PAKETIT = {
       },
       aarre: 'Nadia avasi vihkon vieraan käsialan riville: sen kohdalle, '
         + 'sivujen väliin, oli ommeltu kätkö. Hän vertasi rivejä '
-        + 'pitkään: "Sata vuotta lukemia — mutta joka kymmenes rivi on '
-        + 'samaa mustetta. Tuoretta."',
+        + 'pitkään: "Joka kymmenes rivi on vahvistettu uudelleen — '
+        + 'sama käsi, tuore muste."',
     },
     {
       id: 'bukarest',
@@ -1319,7 +1320,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'vilna',
-      mykistetyt: ['saapuminen', 'kohtaaminen'],
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Vilna — susi joka ulvoi sadan äänellä',
       saapuminen: 'Tornin kivijalassa, sammaleen alla, istui pieni rautainen '
         + 'susi — ja sen selkä oli lämmin, vaikka ilta oli kylmä. '
@@ -1353,8 +1354,9 @@ export const KAARI_PAKETIT = {
           + 'kauppiaita kaikkialta.',
       },
       aarre: 'Suden jalustan alta aukesi kolo, ja kolossa odotti kätkö. '
-        + 'Rasa nosti lyhtyään: "Selän kulunut kohta kiiltää tuoreelta. '
-        + 'Minun kierrosteni välillä sitä silittää joku muukin."',
+        + 'Rasa nosti lyhtyään: "Kuluneessa kohdassa on tuore '
+        + 'kädenjälki, leveämpi kuin minun. Joku on silittänyt sutta '
+        + 'tänä yönä, kierrosteni välissä."',
     },
     {
       id: 'tukholma',
