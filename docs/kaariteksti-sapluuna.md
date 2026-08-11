@@ -188,6 +188,28 @@ joka lunastuu aarretekstissä, (3) jokaisella kohtauksen
 yksityiskohdalla (eläin, esine, ele) on merkitys pelaajalle —
 pelkkä tunnelmaeläin leikataan tai valjastetaan.
 
+### Mysteerisäikeen säännöt (mantereen mysteeri, kaanon 11.8.2026)
+
+Laudalla on korkeintaan yksi mysteeri (ks. raamatun "Mantereen
+mysteeri"). Sen säikeet merkitään ilman kylttejä kolmella säännöllä:
+
+1. **Säiekoukku jää vartijallekin arvoitukseksi** ("eikä vaihtaja
+   ollut minä"). Paikallisen ihmeen vartija sen sijaan kehystää
+   itse legendaksi tai arjeksi ("niin meillä sanotaan").
+2. **Säikeen tuntomerkki on huolenpito + tuoreus** (kiillotettu,
+   täytetty, uusittu, äskettäin). Paikallinen ihme on ajaton.
+3. **Määräkuri: säiekoukku enintään joka toisessa kaupungissa**
+   lukujärjestyksessä — muut loppubeatit (ajaton arvoitus,
+   hiljainen, vartijan salaisuus, vanha jälki) pitävät paletin
+   elossa, ja paletti itsessään on merkintätapa.
+
+Kirjoitusvinkki: uusi teksti kirjoitetaan puhtaalta pöydältä
+(omistajan sääntö 11.8.: vanhasta säilytetään raaka-aineet — beatit,
+faktat, kommellukset, persoonat — mutta lauseet kirjoitetaan
+uudestaan; vanhan virkkeen säilytys on tietoinen poikkeus).
+Spoileritarkistus (sääntö 6 / Isfahan-sääntö) koskee KAIKKIA ennen
+visaa näkyviä kenttiä, myös otsikkoa ja henkilo-kenttää.
+
 ---
 
 ## 5. Kirjoitusvaihe — kolme osaa käytännössä

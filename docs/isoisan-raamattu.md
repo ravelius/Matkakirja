@@ -345,6 +345,42 @@ kevääseen — julistetaan dekkarilangaksi: joku kiertää Eurooppaa joka
 kevät. Grimshaw-jatkolinja saa hyödyntää tämän myöhemmin; uusia
 kevät-aikaleimoja ei lisätä ilman tätä tarkoitusta.
 
+## Mantereen mysteeri (omistajan päätös 11.8.2026)
+
+Jokaisella laudalla on korkeintaan YKSI mysteeri — asia, johon osa
+teksteistä viittaa tietämättä vastausta — ja se ratkeaa, kun laudan
+unohdettu aarre löytyy. Kaikki muu outo on joko isoisän jälkiä
+(premissi, ei mysteeri) tai paikallisia ihmeitä, jotka ratkeavat tai
+saavat jäädä legendoiksi kaupungin oman aarteen kohdalla.
+
+- **Euroopan mysteeri on tuntematon kulkija:** joku kiertää
+  Eurooppaa ja pitää isoisän jälkiä kunnossa — kiillottaa, täyttää,
+  sytyttää, ruokkii. Kevätkulkija-lanka (yllä) on saman mysteerin
+  ydin. Ratkaisu kirjoitetaan Meripihkahuoneen aarteen
+  löytymishetkeen; kulkijan henkilöllisyys päätetään omistajan
+  kanssa erikseen (sateenvarjolinjaus, ks. Vastavoima-luku) —
+  siihen asti kukaan teksti ei nimeä eikä näytä kulkijaa.
+- **Päiväkirjan taitetun sivun vihjeet** (matkojen välissä nousevat
+  merkinnät) kuuluvat samaan mysteeriin: ne kaventavat unohdetun
+  aarteen aluetta ja saavat viitata kulkijan jälkiin — eivät
+  koskaan uusiin, erillisiin arvoituksiin.
+- **Jännitys ei tule mysteeristä** (omistajan linjaus): se tulee
+  isoisän hurjista tilanteista 1873 ja nuoren herran hurjista
+  tilanteista nykyhetkessä. Kulkija on ihminen, jolla on tikkaat ja
+  öljykannu — säiekoukut kirjoitetaan havaintoina ilman
+  aavemaisuutta.
+- **Pelimekaniikka** (toteutus työn alla): laudan unohdettu aarre ei
+  löydy ennen kuin vähintään puolet laudan kaupungeista on käyty;
+  löytymisen jälkeen pelaajalle tarjotaan mahdollisuus jatkaa
+  seuraavalle mantereelle lentäen. Kaupunkitekstit eivät koskaan
+  laske kaupunkeja, lupaa läheisyyttä eivätkä oleta, onko mysteeri
+  jo ratkennut — koukku toimii ennen ratkaisua vihjeenä ja sen
+  jälkeen tunnistamisen ilona.
+- Tulevat laudat: mysteeri nimetään laudan jakotaulussa ENNEN
+  tekstien kirjoittamista (Lähi-idän luonteva ehdokas on
+  VANHA-jälkien hahmo — joku ehti ennen isoisää; päätetään
+  jakotaulun yhteydessä).
+
 **Kaaren motiivilanka "barometrilukema", budjetti 4 + jatkot.**
 Euroopassa Praha, Venetsia, Alpit ja Moskova; ME:llä Ankara, Bagdad
 ja Halab jatkavat suunnitellusti. Ei uusia esiintymiä ilman
