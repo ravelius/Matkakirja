@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 579, teksti: 'Lähi-idän seitsikko uuteen malliin ja Korean K-pop-sivu' },
   { v: 578, teksti: 'Aasian ensimmäiset maalehdet: viisi maata, 100 nostoa' },
   { v: 577, teksti: 'Vanhat saapumismerkinnät luentoineen tilapäisesti takaisin' },
   { v: 576, teksti: 'Seitsemän aarretta — yksi per manner — ja mannerlento' },
