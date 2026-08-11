@@ -16116,11 +16116,12 @@ export const MAA_KATEGORIAT = {
               + 'Noin 40 kylää kahdeksassa arkeologisessa puistossa otettiin '
               + 'maailmanperintöluetteloon vuonna 2011.',
           selite: 'Kaksikerroksinen kivitalo seisoo katottomana keskellä '
-              + 'kivikenttää. Alakerran ovet ja ikkunat on kehystetty '
-              + 'listoilla, yläkerrassa on rivi neliömäisiä aukkoja, ja '
-              + 'seinän yläreuna päättyy suoraan kivilistaan. Ympärillä on '
-              + 'kaatuneita muureja ja irtolohkareita, ja vasemmassa '
-              + 'alalaidassa erottuu pari ihmishahmoa.',
+              + 'kivikenttää. Sekä ala- että yläkerran ovet ja ikkunat on '
+              + 'kehystetty listoilla, ja kerrosten välissä kulkee rivi '
+              + 'pieniä neliöreikiä, joihin välipohjan palkit aikanaan '
+              + 'tukeutuivat. Seinän yläreuna päättyy suoraan kivilistaan. '
+              + 'Ympärillä on kaatuneita muureja ja irtolohkareita, ja '
+              + 'vasemmassa alalaidassa seisoo pieni ihmisryhmä.',
           lahde: 'Gerhard Haubold, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16142,9 +16143,10 @@ export const MAA_KATEGORIAT = {
           selite: 'Puolikaaren muotoinen katsomo tummanharmaasta kivestä. '
               + 'Istuinrivit laskeutuvat tasaisina kaarina alas '
               + 'puoliympyrän muotoiselle vaalealle lattialle, ja niiden '
-              + 'väliin nousee kapeita porrasrivejä. Katsomon yläreunaa '
-              + 'kiertää pylväikkö, ja sen takana näkyy karkeaa muuria. '
-              + 'Taivas on pilvinen.',
+              + 'väliin nousee kapeita porrasrivejä. Yläreunassa on jäljellä '
+              + 'muutama pylväs alkuperäisestä pylväiköstä, vasemmassa '
+              + 'laidassa ja keskellä; muualla kohoaa karkeatekoista '
+              + 'muuria. Taivas on pilvinen.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16163,11 +16165,12 @@ export const MAA_KATEGORIAT = {
               + 'vanhin suora todiste siitä, että kirjaimilla on vakiintunut '
               + 'järjestys — sama, joka jatkuu foinikialaisen kirjoituksen '
               + 'kautta kreikkaan ja latinaan.',
-          selite: 'Kämmenen kokoinen savipala mustalla taustalla, tuettuna '
-              + 'kolmella ohuella metallilangalla. Pintaan on painettu '
-              + 'neljä vaakariviä kiilanmuotoisia jälkiä, jotka ovat '
-              + 'kooltaan ja asennoltaan erilaisia. Reunat ovat lohkeilleet '
-              + 'epätasaisiksi, ja oikeassa laidassa kulkee halkeama.',
+          selite: 'Paksu savipala mustalla taustalla, ohuiden '
+              + 'metallilankojen varassa. Pintaan on painettu vaakariveihin '
+              + 'kiilanmuotoisia jälkiä, jotka ovat kooltaan ja asennoltaan '
+              + 'erilaisia; alin rivi kiertyy taulun alareunaan. Reunat ovat '
+              + 'lohkeilleet epätasaisiksi, ja oikeassa laidassa kulkee '
+              + 'halkeama.',
           lahde: 'Rama, Wikimedia Commons (CC BY-SA 3.0 fr)',
         },
         {
@@ -16218,7 +16221,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Kuvio nostetaan koholle ennen maalaamista',
-          tiedosto: 'مشغل لفن الرسم العجمي في دمشق.jpg',
+          tiedosto: 'Damascus Room - MET - Joy of Museums 1.jpg',
           teksti: 'Ajami on damaskoslainen tapa koristella puupaneeleja. '
               + 'Kuvion ääriviivat pursotetaan ensin puun pintaan tahnana, '
               + 'jossa on eläinliimaa ja kipsijauhetta. Kun tahna on '
@@ -16226,17 +16229,19 @@ export const MAA_KATEGORIAT = {
               + 'kuvio on koholla ja tuntuu sormella. Sen päälle painetaan '
               + 'tina- tai kultalehteä ja maalataan läpikuultavia lasuureja, '
               + 'jotka hehkuvat metallia vasten. Tekniikalla paneloitiin '
-              + 'kokonaisia vierashuoneita: New Yorkissa on säilynyt '
-              + 'damaskoslainen huone vuodelta 1707. Vanhoissa huoneissa '
+              + 'kokonaisia vierashuoneita. Kuvan huone on damaskoslaisen '
+              + 'talon vierashuone vuodelta 1707; se on purettu ja koottu '
+              + 'uudelleen New Yorkiin. Vanhoissa huoneissa '
               + 'värit näyttävät nykyään tummilta, koska pintaan sivelty '
               + 'lakka on kellastunut kerros kerrokselta.',
-          selite: 'Mies kumartuu maalaamaan siveltimellä suurta puulevyä '
-              + 'kadulla. Levyssä on soikeita ja pyöreitä kuvioita: '
-              + 'oranssinpunaisia kukkia, valkoisia lehtiä ja keskellä '
-              + 'arabiankielinen kirjoitus punaisella pohjalla. Taustalla '
-              + 'kaksi muuta työskentelee pienemmän pöydän ääressä, ja '
-              + 'oikealla nojaa seinää vasten pino valmiita levyjä.',
-          lahde: 'AlUmawi, Wikimedia Commons (CC BY 4.0)',
+          selite: 'Huoneen seinä on paneloitu puulla kokonaan lattiasta '
+              + 'kattoon. Paneeleissa vuorottelevat kullalla kirjoitetut '
+              + 'tekstinauhat ja tummanvihreät kuviokentät, ja seinään on '
+              + 'upotettu kolme kaarevaa hyllysyvennystä, joissa on '
+              + 'sinivalkoisia astioita. Seinustalla kiertää matala '
+              + 'punainen istuinpenkki, ja lattia on valkoista marmoria '
+              + 'ruskein kuvioinnein.',
+          lahde: 'Joyofmuseums, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Maali menee lasin päälle, ei sisään',
@@ -16255,7 +16260,9 @@ export const MAA_KATEGORIAT = {
               + 'kaarevaa lasimaljaa, jonka pintaan on jo tehty kullanruskeat '
               + 'ääriviivat ja keltaisia kukkia. Edessä pöydällä on rivi '
               + 'valmiita töitä: iso keltapohjainen maljakko vihrein '
-              + 'lehdin, pieni vaaleanpunainen purkki ja muutama lasi. '
+              + 'lehdin, musta valkokukallinen maljakko, ruskea ruukku '
+              + 'valkoisin lintukuvioin, pieni vaaleanpunainen purkki ja '
+              + 'muutama lasi. '
               + 'Taustalla riippuu raidallisia kankaita.',
           lahde: 'AlUmawi, Wikimedia Commons (CC BY 4.0)',
         },
@@ -16322,7 +16329,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Jäätelöä hakataan survimella',
-          tiedosto: 'صناعة البوظة الدمشقية.jpg',
+          tiedosto: 'عامل بوظة.jpg',
           teksti: 'Booza on Levantin jäätelö, eikä sitä vatkata koneella. '
               + 'Massa kaadetaan kylmään metallisaaviin, ja sitä hakataan ja '
               + 'venytetään pitkällä puusurvimella, kunnes se muuttuu '
@@ -16333,14 +16340,14 @@ export const MAA_KATEGORIAT = {
               + 'veitsellä, ja se sulaa selvästi hitaammin kuin tavallinen. '
               + 'Damaskoksen al-Hamidiyan basaarissa toimiva '
               + 'Bakdash on tehnyt boozaa 1800-luvun lopulta asti.',
-          selite: 'Valkopaitainen mies otsanauha päässä survoo '
-              + 'pitkävartisella puusurvimella metallisaavin sisältöä. '
-              + 'Saavi on upotettu työtason sisään, ja sen vieressä on '
-              + 'toinen samanlainen upotus. Tason päällä on '
-              + 'vaaleanpunainen liina ja miehen toisessa kädessä valkoinen '
-              + 'käsine. Takaseinä on kaakeloitu, ja yläosassa kiertää '
-              + 'peililista.',
-          lahde: 'عمر الحافظ, Wikimedia Commons (CC BY-SA 4.0)',
+          selite: 'Valkopaitainen mies otsanauha päässä pitelee pitkää '
+              + 'puusurvinta, joka ulottuu työtasoon upotettuun '
+              + 'metallisaaviin. Etualan toinen saavi on täynnä sileää '
+              + 'valkoista massaa. Miehen paidan rinnassa on liikkeen '
+              + 'tunnus, toisessa kädessä valkoinen käsine ja tason päällä '
+              + 'vaaleanpunainen liina. Takaseinää kiertää peililista, '
+              + 'jonka takana näkyy vanhoja mustavalkoisia valokuvia.',
+          lahde: 'AlUmawi, Wikimedia Commons (CC BY 4.0)',
         },
         {
           otsikko: 'Neljä ainesta, yksi seos',
@@ -16355,12 +16362,13 @@ export const MAA_KATEGORIAT = {
               + 'sekoitetaan usein oliiviöljyyn ja levitetään leivälle. '
               + 'Kuvan mausteet ovat Aleppon Suq al-Attarinesta, jonka nimi '
               + 'tarkoittaa mausteiden ja hajusteiden kauppakujaa.',
-          selite: 'Lähikuva leveästä mausteläjästä, jonka pinta on '
-              + 'vaaleanvihreä ja täynnä vaaleita seesaminsiemeniä. '
-              + 'Pintaan on kaivettu vinoneliöiden ruudukko, ja jokaisen '
-              + 'ruudun keskellä on kasa toista mauste-erää: '
-              + 'tummanpunaista karkeaa jauhetta, ruskeita seoksia ja '
-              + 'yhdessä ruudussa kirkkaanoranssia.',
+          selite: 'Lähikuva leveästä mausteläjästä. Pohja on hienoa '
+              + 'sinapinkeltaista jauhetta, johon on kaivettu vinoneliöiden '
+              + 'ruudukko. Noin puolet ruuduista on tyhjiä; muissa on kasa '
+              + 'toista erää: tummanpunaista karkeaa sumakkia, ruskeita '
+              + 'seoksia ja vihertäviä kasoja, joissa erottuvat vaaleat '
+              + 'seesaminsiemenet. Alalaidassa pari ruutua hehkuu '
+              + 'kirkkaanoranssina.',
           lahde: 'yeowatzup, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -16378,8 +16386,9 @@ export const MAA_KATEGORIAT = {
               + 'suuria kimppuja banaaneja ja appelsiineja verkoissa, ja '
               + 'kylteissä lukee arabiaksi ja englanniksi AL-Asmar Vitamin '
               + 'ja The King of the Vitamin. Tiskin edessä seisoo miehiä '
-              + 'odottamassa, katolla on rivi lautasantenneja ja katu on '
-              + 'muuten tyhjä.',
+              + 'odottamassa, katolla on rivi lautasantenneja, ja ajorata on '
+              + 'autoton mutta jalkakäytävällä seisoskelee väkeä pitkin '
+              + 'katua.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
