@@ -1437,6 +1437,49 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 .icon-glyph { font-size: 1.15rem; line-height: 1; }
 .icon-label { white-space: nowrap; }
 
+/*
+ * SUURENNUSLASIN SYKE UUDESSA KAUPUNGISSA.
+ *
+ * Omistajan toive 11.8.2026: uuteen kaupunkiin saavuttaessa Tutki-napin
+ * pitää kertoa itsestään, jotta pelaaja tajuaa painaa sitä. Syke on
+ * hillitty ja pergamentin oma oranssi (--accent), ei huomioväri: kartta
+ * on mustetta ja paperia, ja kirkas hehku näyttäisi siinä virheeltä.
+ *
+ * ITERAATIOITA ON KUUSI, EI `infinite`. Kaksi syytä: sykkivä nappi
+ * ruudun laidassa käy hermoille, jos pelaaja jää lukemaan lehteä, ja
+ * ikuinen animaatio jää päälle myös silloin kun sen sammuttava
+ * napautus jää jostain syystä tulematta. Kuusi sykettä on noin
+ * yhdeksän sekuntia — sen ehtii huomata, eikä se jää kiusaamaan.
+ * Luokka poistetaan silti napin painalluksesta (js/ui.js).
+ */
+.icon-btn.tutki-syke {
+  animation: tutki-syke 1.5s ease-in-out 6;
+}
+
+@keyframes tutki-syke {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(217, 161, 59, 0);
+    border-color: var(--line);
+  }
+  50% {
+    box-shadow: 0 0 10px 2px rgba(217, 161, 59, 0.5);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+/*
+ * Liikkeen välttäjälle pelkkä värivihje: nappi jää oranssireunaiseksi,
+ * joten viesti menee perille ilman sykettä.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .icon-btn.tutki-syke {
+    animation: none;
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
 /* Viivaikonit piirretään kartan kynällä: pelkkä ääriviiva tekstivärillä,
  * jotta napit istuvat mustepiirrokseen — emoji erottui siitä irrallisena. */
 .viiva-ikoni { display: inline-flex; align-items: center; }
@@ -3015,6 +3058,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   text-transform: uppercase;
   color: var(--accent);
 }
+
 
 /*
  * Leimaruudukko poistettu v282:ssa yhdessä vihreän passin kanssa.
@@ -10097,4 +10141,133 @@ body.maatiedot-tila .board-hint {
   font-size: 0.62rem;
   letter-spacing: 0.03em;
   color: rgba(70, 51, 31, 0.55);
+}
+
+/*
+ * ==========================================================================
+ * PIKKUSELOSTE — sijoitettu tiedoston loppuun tarkoituksella.
+ *
+ * Komponentti on liitettävissä mihin tahansa, myös <dialog>-korttien
+ * sisään, ja siellä `.dialog button` (rivi ~4900) osuu siihen: se antaa
+ * napeille pergamentin käsinpiirretyn epäsäännöllisen kulman ja oman
+ * taustansa. Se sääntö on yhtä tarkka kuin luokkavalitsin ja tulee
+ * myöhemmin, joten i-ympyrästä tuli sen alla vino suorakaide.
+ *
+ * Kaksi korjausta yhdessä: valitsimissa on elementtitarkennus
+ * (`button.seloste-nappi`) ja lohko on tiedoston lopussa. Näin
+ * komponentti näyttää samalta riippumatta siitä, mihin se liitetään —
+ * mikä on koko sen idea.
+ * ==========================================================================
+ */
+/*
+ * PIKKUSELOSTE: tekstin kokoinen opastuslaatikko, ei ikkuna.
+ *
+ * Uusi komponentti (omistajan toive 11.8.2026: "sitä voidaan käyttää
+ * muuallakin lyhyisiin opastuksiin"). Yhden virkkeen selitys ei ansaitse
+ * koko ruudun dialogia: se peittäisi juuri sen, mitä pelaaja oli
+ * katsomassa, ja vaatisi oman sulkemisensa. Laatikko kasvaa tekstin
+ * mukaan ja katoaa heti kun sen ulkopuolelle napauttaa.
+ *
+ * Paikka lasketaan js/ui.js:ssä (avaaPikkuseloste) ankkurin viereen,
+ * joten tässä on vain ulkoasu ja `position: fixed` — ei mitään, mikä
+ * sitoisi laatikon johonkin tiettyyn paikkaan.
+ */
+button.seloste-nappi {
+  /* Otsikon perässä: pieni ympyrä, joka ei riko rivin rytmiä. */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  /*
+   * `min-height: 0` on pakollinen: yleinen button-sääntö asettaa
+   * napeille 42 pikselin vähimmäiskorkeuden, ja se voittaa pelkän
+   * `height`-arvon. Ilman tätä i-ympyrästä tuli pystysuora suorakaide.
+   */
+  min-height: 0;
+  margin-left: 0.4rem;
+  padding: 0;
+  vertical-align: middle;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent);
+  font-family: var(--font-type);
+  font-size: 0.68rem;
+  font-style: italic;
+  line-height: 1;
+  cursor: pointer;
+  outline-offset: 2px;
+}
+
+/*
+ * Kosketusalue on isompi kuin ympyrä. Näkyvä ympyrä on 18 pikseliä,
+ * johon on puhelimella vaikea osua; läpinäkyvä ::after venyttää
+ * osuma-alan noin 40 pikseliin muuttamatta ulkoasua tai rivin korkeutta.
+ *
+ * Nimenomaan ::after eikä läpinäkyvä box-shadow: varjo ei ota vastaan
+ * osoitintapahtumia, joten se olisi näyttänyt korjaukselta olematta
+ * sellainen.
+ */
+button.seloste-nappi::after {
+  content: '';
+  position: absolute;
+  inset: -0.65rem;
+}
+
+button.seloste-nappi:hover,
+button.seloste-nappi[aria-expanded="true"] {
+  background: var(--accent);
+  color: var(--panel);
+}
+
+.pikkuseloste {
+  position: fixed;
+  z-index: 60;
+  /*
+   * Leveys tekstin mukaan, mutta puhelimen ruutu on katto: omistaja
+   * pelaa iPhonella, ja 320 pikselin ruudulla kiinteä leveys valuisi
+   * reunan yli.
+   */
+  width: max-content;
+  max-width: min(19rem, calc(100vw - 2.5rem));
+  padding: 0.6rem 1.6rem 0.6rem 0.75rem;
+  border: 1px solid var(--overlay-line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--map-ink);
+  box-shadow: 0 6px 18px rgba(20, 12, 4, 0.4);
+  /* Näkyviin vasta kun paikka on laskettu, ettei laatikko vilahda nurkassa. */
+  opacity: 0;
+  transition: opacity 0.12s ease-out;
+}
+
+.pikkuseloste.nakyy { opacity: 1; }
+
+.pikkuseloste-teksti {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+button.pikkuseloste-sulje {
+  position: absolute;
+  top: 0.15rem;
+  right: 0.15rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--map-ink-soft);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+button.pikkuseloste-sulje:hover { color: var(--map-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pikkuseloste { transition: none; }
 }
