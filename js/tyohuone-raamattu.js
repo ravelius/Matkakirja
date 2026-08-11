@@ -97,33 +97,31 @@ export const RAAMATTU2 = {
           + '1873 — mahtipontinen, aina laivavuoron myöhässä, ei '
           + 'koskaan vaarallinen). Reginaldilla on omansa: '
           + 'NÄKYMÄTÖN kilpailija, joka ei koskaan näyttäydy eikä '
-          + 'missään kohdassa paljastu hyväksi tai auttajaksi — '
-          + 'näkyy vain merkkejä seuraamisesta. Hän lisää '
-          + 'aikapainetta ja kaihertaa Reginaldin mieltä.',
+          + 'missään kohdassa paljastu hyväksi tai auttajaksi. '
+          + 'Tummansininen sateenvarjo on seuraajan '
+          + 'tunnistusmerkki (muita tunnistuskeinoja mietitään '
+          + 'vielä). Seuraajan henkilöllisyys EI paljastu koskaan, '
+          + 'eikä revityn sivun arvoitus ratkea — ne jäävät auki.',
         'Aarni: 1800-luvun alun tutkimusmatkailija, jonka '
           + 'luettelossa on maailman unohdetut aarteet — yksi '
           + 'jokaisesta maanosasta. Aikalaiset pitivät luetteloa '
           + 'satukirjana; isoisä uskoi siihen.',
-        'Mantereen mysteeri: jokaisella maanosalla on YKSI '
-          + 'toistuva MERKKI, jonka tarkoitus selviää vasta kun '
-          + 'mantereen pääaarre löytyy — seuraavalla mantereella '
-          + 'alkaa uusi. Tekstimassassa merkit ovat pienessä '
-          + 'roolissa, sivulauseen huomioita.',
-        'Fablen merkkiehdotukset (7, päätetään yhdessä): '
-          + 'Eurooppa — liidulla piirretty pieni kompassiruusu '
-          + 'ovenpielissä ja kivissä; Afrikka — akaasianoksaan '
-          + 'solmittu punainen lanka; Lähi-itä — vastapoltetun '
-          + 'suitsukkeen tuoksu paikoissa, joissa ei ole ketään; '
-          + 'Aasia — taitettu paperikurki jätettynä näkyville; '
-          + 'Pohjois-Amerikka — kolmen kiven latomus polun '
-          + 'varressa; Etelä-Amerikka — solmittu naru '
-          + '(khipu-solmut); Oseania — hiekkaan piirretty '
-          + 'Eteläristin tähtikuvio.',
+        'Maanosan mysteeri = aarrevihjeet: erillisiä symboleja '
+          + 'tai merkkijärjestelmiä EI ole. Sen sijaan harvat '
+          + 'sivuhuomiot (muutamassa kaupungissa per manner) '
+          + 'vihjaavat, että mantereen pääaarre on oikeasti '
+          + 'olemassa, ja raottavat mikä se on — esimerkiksi joku '
+          + 'muistaa isoisänsä puhuneen meripihkapaneelien '
+          + 'kuormavaunusta. Vihjeet loksahtavat paikoilleen, kun '
+          + 'pääaarre löytyy. Vain sivuhuomion kokoisia, ei '
+          + 'kryptisiä.',
         'Matkakirjan tekstien rooli: isoisän seikkailut 1873 ja '
           + 'nuoren herran tarkat, yksityiskohtaiset havainnot '
-          + 'nykyhetkestä. Pieni huomio avaa kaupungin ytimen ja '
-          + 'tunnelman tarinana — lehdet syventävät sen tiedoksi, '
-          + 'ja tarinan kautta paikka myös muistetaan.',
+          + 'nykyhetkestä — myös pienet arkiset havainnot ja '
+          + 'kommellukset (vaikka minkä värinen vessapaperi on ja '
+          + 'mitä sen kanssa sattui). Pieni huomio avaa kaupungin '
+          + 'ytimen ja tunnelman tarinana — lehdet syventävät sen '
+          + 'tiedoksi, ja tarinan kautta paikka myös muistetaan.',
       ],
     },
     {
@@ -133,12 +131,20 @@ export const RAAMATTU2 = {
         'Yksi lauta: koko maailma yhdellä kartalla (erilliset '
           + 'mannerlaudat ja vaihtoportit poistettu 11.8.).',
         'Vuoro: valitse matkustustapa (jalan / laivalla / '
-          + 'lentäen) → noppa → siirto kartalla. Aika kuluu '
-          + 'päivinä ja vuorokaudenaikoina.',
+          + 'lentäen) → noppa → siirto kartalla. Yksi nopanheitto, '
+          + 'laivamatka tai lento kuluttaa 6 tuntia matka-aikaa; '
+          + 'aika kuluu päivinä ja vuorokaudenaikoina.',
+        'Mannerraja: uudelle mantereelle ei pääse ennen kuin '
+          + 'nykyisen mantereen pääaarre on löytynyt. Kahden '
+          + 'maanosan rajalla olevaan kaupunkiin pääsee, muttei '
+          + 'siitä pidemmälle — pieni teksti selittää esteen. '
+          + 'Esteen voi purkaa maksamalla 1000 puntaa, ja maksu '
+          + 'peritään jokaisesta ylityksestä uudelle, '
+          + 'käymättömälle maanosalle.',
         'Kaupungissa mikään ei ponnahda ruudulle itsestään: '
           + 'Tutki-nappi avaa saapumiskortin, ja tehtävä alkaa '
-          + 'kortin omasta napista. Matka on vapaata vaellusta '
-          + 'ilman pakotettua reittiä.',
+          + 'kortin omasta napista. Matka on muuten vapaata '
+          + 'vaellusta ilman pakotettua reittiä.',
       ],
     },
     {
@@ -146,20 +152,25 @@ export const RAAMATTU2 = {
       tila: 'luonnos',
       kohdat: [
         'Laatta joka kaupungissa; tehtävän oikea vastaus kääntää '
-          + 'sen. Jokaisella mantereella on OMAT aarteensa omine '
-          + 'kuvineen — laatta paljastaa sen mantereen aarteen, '
-          + 'jolta se löytyy (taulukko alla). Vanhoja Afrikan '
-          + 'tähden jalokiviä ei ole pelissä.',
-        'Seitsemän unohdettua aarretta — yksi per manner, Aarnin '
-          + 'luettelosta. Ei portteja eikä kynnyksiä: mantereen '
-          + 'aarre voi osua ensimmäiseen kätköön ja on varmasti '
-          + 'viimeisessä.',
-        'Kun mantereen aarre löytyy, avautuu mannerlento '
+          + 'sen. Laattojen alta löytyy joko AARTEITA (muuttuvat '
+          + 'heti rahaksi — eivät jää matkalaukkuun), VARUSTEITA '
+          + '(ei rahallista arvoa, mutta toiminnallisia) tai '
+          + 'mantereen PÄÄAARRE (+2000 puntaa JA jää '
+          + 'matkalaukkuun näkyviin). Jokaisella mantereella on '
+          + 'omat aarteensa omine kuvineen — laatta paljastaa sen '
+          + 'mantereen aarteen, jolta se löytyy (taulukko alla). '
+          + 'Vanhoja Afrikan tähden jalokiviä ei ole pelissä.',
+        'Seitsemän pääaarretta eli unohdettua aarretta — yksi per '
+          + 'manner, Aarnin luettelosta. Löytymiselle ei ole '
+          + 'kynnystä: pääaarre voi osua mantereen ensimmäiseen '
+          + 'kätköön ja on varmasti viimeisessä.',
+        'Kun mantereen pääaarre löytyy, avautuu mannerlento '
           + 'seuraavalle mantereelle (vain niille, joiden aarre on '
-          + 'yhä kateissa).',
+          + 'yhä kateissa). Mannerrajan voi ylittää aiemmin vain '
+          + 'maksamalla (ks. Pelin kulku).',
         'Erillinen vihjejärjestelmä on poistettu (11.8.) — '
-          + 'päiväkirjan taitettu sivu on tarinamotiivi, ei '
-          + 'mekaniikka.',
+          + 'aarrevihjeet ovat tekstien sivuhuomioita (ks. Tarina '
+          + 'ja hahmot), eivät mekaniikkaa.',
       ],
     },
     {

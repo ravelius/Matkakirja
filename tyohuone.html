@@ -611,11 +611,11 @@
         const maarat = maailma?.tokens?.counts ?? {};
         k.append(el('p', null, `Laattojen jakauma (${Object.values(maarat).reduce((a, b) => a + b, 0)} laattaa, yksi joka kaupungissa):`));
         k.append(taulukko(['Laatta', 'Kpl', 'Vaikutus'], [
-          ['Unohdettu aarre', maarat.star ?? 0, 'Mantereen päämäärä — avaa mannerlennon'],
-          [`Aarre +${eka.ruby?.value ?? 1000} p`, maarat.ruby ?? 0, 'Mannerkohtainen aarre (nimet yllä)'],
-          [`Aarre +${eka.emerald?.value ?? 600} p`, maarat.emerald ?? 0, 'Mannerkohtainen aarre (nimet yllä)'],
-          [`Aarre +${eka.topaz?.value ?? 300} p`, maarat.topaz ?? 0, 'Mannerkohtainen aarre (nimet yllä)'],
-          ['Hevosenkenkä', maarat.horseshoe ?? 0, 'Kolmella hevosenkengällä rosvon voi ohittaa'],
+          ['Pääaarre (unohdettu aarre)', maarat.star ?? 0, '+2000 p JA jää matkalaukkuun näkyviin — avaa mannerlennon'],
+          [`Aarre +${eka.ruby?.value ?? 1000} p`, maarat.ruby ?? 0, 'Muuttuu heti rahaksi (nimet yllä)'],
+          [`Aarre +${eka.emerald?.value ?? 600} p`, maarat.emerald ?? 0, 'Muuttuu heti rahaksi (nimet yllä)'],
+          [`Aarre +${eka.topaz?.value ?? 300} p`, maarat.topaz ?? 0, 'Muuttuu heti rahaksi (nimet yllä)'],
+          ['Hevosenkenkä', maarat.horseshoe ?? 0, 'Varuste: kolmella hevosenkengällä rosvon voi ohittaa'],
           ['Ryöstäjä', maarat.robber ?? 0, 'Vie rahat — tai voita kaksintaistelu'],
           ['Tyhjä', maarat.empty ?? 0, 'Kätkö on tyhjä'],
           ['Taikalasi', maarat.linssi ?? 0, 'Varuste: uusi tapa katsoa karttaa'],
