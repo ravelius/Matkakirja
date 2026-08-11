@@ -1,3 +1,188 @@
+# Opus 1 → Fable: SYYRIA VALMIS (v564, #807) — kuvatarkastus löysi Assadin muotokuvan (11.8.2026 aamu)
+
+**Syyria on valmis:** kolme aihetta (historia, käsityö, ruoka),
+11 nostoa, kolme minitehtävää. PR #807, v564.
+
+- **Historia:** Serjilla ja kuolleet kaupungit, Bosran basalttiteatteri,
+  Ugaritin 30-merkkinen aakkosto, Simeon Styliitan pylväskirkko.
+- **Käsityö:** ajami-kohomaalaus, damaskoslainen lasinmaalaus,
+  kupariastioiden tinaus Aleppossa, ruokokynäkalligrafia.
+- **Ruoka:** booza ja sen survominen, zaatar, Aleppon
+  "vitamiini"-mehukojut.
+
+Kolme sivua neljän sijaan on tietoinen valinta, ei oikominen: ks.
+kohta "Miksi ei neljättä sivua" alempana.
+
+## 1. TÄRKEIN: kuvatarkastus löysi Bashar al-Assadin muotokuvan
+
+Valitsin ajami-käsityön kuvaksi damaskoslaisen verstaskuvan
+(`مشغل لفن الرسم العجمي في دمشق.jpg`, AlUmawi, CC BY 4.0). **Olin
+katsonut sen itse 960 pikselin levyisenä** enkä nähnyt mitään
+huomautettavaa: mies maalaa paneelia kadulla, taustalla kaksi muuta
+työssä.
+
+Tarkastusagentti löysi kuvan yläreunasta, noin 68 % leveydeltä,
+**kehystetyn Bashar al-Assadin muotokuvajulisteen** liikkeen oven
+yläpuolella. Latasin alkuperäisen 3840 px:n tiedoston ja rajasin
+kohdan kuusinkertaiseksi: puku, solmio, viikset, virallinen
+presidenttikuva-asetelma, arabiankielinen teksti alla. Ei
+tulkinnanvaraa.
+
+**Kuva vaihdettiin.** Tilalle tuli Metropolitan-museon damaskoslainen
+vierashuone vuodelta 1707 (`Damascus Room - MET - Joy of Museums
+1.jpg`, CC BY-SA 4.0) — sama huone, jonka nostoteksti jo mainitsi.
+
+**Opetus perittäväksi:** 480–600 px:n silmätarkistus riittää kuvan
+pääkohteen arviointiin, mutta **ei taustan poliittisiin merkkeihin.**
+Kadulla ja liikkeissä otetuissa kuvissa seinillä on julisteita, ja
+480 px:ssä valtionpäämiehen muotokuva on kymmenen pikselin täplä.
+Ehdotan lisättäväksi kuvasääntöihin: *kaupunki- ja liikeympäristössä
+otetuista kuvista tarkistetaan taustan seinät ja ikkunat erikseen
+suurennettuna.*
+
+## 2. Toinen kuva vaihdettiin: saavi oli tyhjä
+
+Boozanoston kuvassa (`صناعة البوظة الدمشقية.jpg`) mies pitelee
+survinta metallisaavissa. Rajasin saavin: **se on käytännössä tyhjä** —
+paljas metallipohja ja ohut kuivunut valuma seinämässä, survin lepää
+pohjaa vasten, mies katsoo kameraan. Otsikko lupaa jäätelön
+hakkaamista, eikä kuvassa ole jäätelöä.
+
+Tilalle tuli saman kuvaajan laajempi kuva samasta liikkeestä
+(`عامل بوظة.jpg`, AlUmawi, CC BY 4.0), jossa etualan toinen saavi on
+täynnä sileää valkoista massaa. Tarkistin senkin taustan
+suurennettuna kohdan 1 jälkeen: pelkkiä vanhoja mustavalkoisia
+kaupunkikuvia kehyksissä.
+
+## 3. Esitarkistin esti neljä päällekkäisyyttä — enemmän kuin kertaakaan
+
+Edeltäjäni sääntö ("maalehden kilpailija on saman maan karttasivu ja
+kaupunkilehti") osui Syyriassa täydellisesti. Edeltäjän ehdottama
+käsityösivu olisi ollut lähes kokonaan päällekkäinen:
+
+| Aihe | Missä jo on |
+|---|---|
+| Aleppon saippua | kaupunkilehden kuva, kaupungin artikkeli JA kulttuurivisa |
+| Damastikangas | Damaskoksen kulttuurivisa |
+| Damaskoksen teräs | Damaskoksen kulttuurivisa |
+| Haman vesirattaat | maan karttasivun nosto |
+
+Kolme neljästä oli **kulttuurivisassa**, jota `tarkista-maa.mjs` ei
+lue (se lukee vain `kysymys:`-avaimia, visat käyttävät `q:`). Löysin
+ne käsin grepillä. **Ehdotan työkaluun lisäystä:** visakysymysten
+(`q:`) ja niiden vastausvaihtoehtojen tekstihaku uuden maan aiheita
+vasten. Se olisi säästänyt tässä erässä puoli tuntia ja estää
+myöhemmin virheen, jota kukaan ei huomaa.
+
+## 4. Faktatarkastus: neljä numeroa pois tai muutettu
+
+- **Bosran katsojaluku poistettiin kokonaan.** Kirjoitin ~17 000
+  (en-Wikipedia). Arviot vaihtelevat 6 000:sta 17 000:een, ja
+  **Unesco ei anna lukua lainkaan** — ja Unesco on maailmanperintö-
+  kohteissa se lähde, jota sääntömme käskee käyttää. Tilalle Unescon
+  oma perustelu: katsomo on säilynyt kokonaisena ylintä
+  pylväskäytävää myöten. Poistin myös "80 000 asukasta", joka on
+  lähteetön kiertoluku.
+- **Simeonin pylväs 18 m → runsaat 15 m.** Kaksi Wikipedian
+  artikkelia ovat keskenään eri mieltä; Britannica ja Catholic
+  Encyclopedia tukevat 15:tä.
+- **Bakdash 1885 → "1800-luvun lopulta".** Tarkistin artikkelin
+  raakatekstin itse: infolaatikko sanoo 1895, leipäteksti 1885,
+  **molemmat samaan lähteeseen viitaten.**
+- **Ugaritin löytövuosi täsmennettiin:** kumpu paljastui 1928, mutta
+  kirjoitetut savitaulut nousivat esiin vasta vuoden 1929
+  kaivauksissa. Olin niputtanut nämä yhdeksi.
+
+## 5. Kieli: minitehtävän fakta kumosi oman vastauksensa
+
+Historian minitehtävä kysyi, mikä säilytti Bosran katsomon. Oikea
+vastaus nimesi linnoituksen — mutta kirjoittamani `fakta` sanoi
+"molemmat suojasivat istuinrivejä yhtä lailla", eli teki oikeasta
+vastauksesta puolet totuudesta. Kirjoitin faktan niin, että syyt
+sisäkkäistyvät: muurit keräsivät hiekan, joka peitti rivit.
+
+Muuta: rektiovirheet, kahdeksan puuttuvaa pilkkua rinnasteisten
+päälauseiden välistä, ja kolme kohtaa joissa **teksti ja sen oma
+kuvateksti käyttivät eri sanaa samasta esineestä** (survin/puuvarsi,
+pumpulituppo/pumpulitukko, kuparipata/kupariastia — kuvassa on kannu).
+
+## 6. Miksi ei neljättä sivua
+
+Etsin luonto- ja musiikkisivua varten kuvat Commonsista ja
+**hylkäsin molemmat aiheet kuvapulan takia**, en aiheen takia:
+
+- **Luonto:** Syyrian maisemakuvasto Commonsissa on ohutta.
+  Nabi Mattan suojelualueen kuvat ovat pimeitä ja sumuisia, Kasabin
+  kuvassa on päivämääräleima ja se esittää lähinnä taloja, Jabbulin
+  suolajärvi on utuinen tienvarsikuva. Yksi hyvä löytyi:
+  `Al Khawabi River - tartus - 2019.jpg` (ACEsAF, CC BY-SA 4.0) —
+  vihreät metsäiset vuoret, kevätniitty täynnä kukkia ja retkeilijöitä.
+  Se yksin ei kanna sivua. **Jos haluat luontosivun, tämä on hyvä
+  aloitus** ja se rikkoisi mielikuvan Syyriasta pelkkänä aavikkona.
+- **Musiikki:** `Category:Music of Syria` on 14 tiedostoa, joista
+  suurin osa pieniä tai nuottikuvia. Turkilla on jo musiikkisivu,
+  jossa on oud-perhe ja pyörivät dervissit, joten päällekkäisyysriski
+  olisi lisäksi suuri.
+
+Kolme sivua on reseptin sisällä (2–4 aihesivua per maa), joten pidän
+Syyriaa valmiina — mutta neljäs sivu on tehtävissä, jos haluat.
+
+## 7. Lippuasia — kirjattu, ei tehty
+
+Nostin maalehden otsikkopalkin Syyrian lipun (vuotta 2024 edeltävä) ja
+saman lipun rintapinssin lasinmaalaajan kuvassa. **Fable vastasi
+11.8.: maalehdet näyttävät nykymaailman, eli lippu päivitetään
+2024 jälkeiseen, mutta jaetun maadatan eränä jonossa — ei nyt.**
+Pinssikuva jää siis ennalleen siihen asti; kun otsikkolippu
+vaihdetaan, tämä kannattaa katsoa samalla. Commonsissa ei ole toista
+syyrialaista lasinmaalauskuvaa, joten vaihto tarkoittaisi aiheen
+vaihtoa.
+
+**Palmyra on yhä koskematon** edeltäjäni linjauksen mukaisesti.
+
+## 7b. Mergen opit (Fablen palaute 11.8.)
+
+Fable joutui viimeistelemään #807:n mergen: olin ajanut
+versionoston ennen kuin hänen v563:nsa ehti mainiin, joten
+sw.js/main.js/muutokset.js olivat konfliktissa. Lisäksi #807:n CI ei
+koskaan käynnistynyt (Actions-häikkä) — työnsin tyhjän commitin
+herättääkseni sen, eikä sekään auttanut.
+
+Kaksi sääntöä jatkoon, molemmat nyt käytössä:
+
+1. **Versionosto vasta juuri ennen PR:n avaamista**, `git fetch
+   origin main` välittömästi ennen sitä. Jos PR odottaa pitkään, nosto
+   ajetaan uudelleen ennen mergeä.
+2. **Jos CI ei käynnisty, portit ajetaan paikallisesti ja se
+   kirjataan PR:ään.** Hiljainen CI ei ole vihreä CI.
+
+## 8. Jemenin päällekkäisyydet kartoitettu valmiiksi
+
+Ajoin YEM:n tarkistuksen jo odotellessa. Varattuja aiheita:
+
+- **Karttasivun nosto vie Sokotran kokonaan:** traakkipuu,
+  endeemisyys, pullorunkoinen kurkkupuu, sokotran kieli, Unesco 2008.
+- **Sanaan artikkeli:** tornitalot, mafraj, kipsikehysikkunat,
+  2 250 m korkeus.
+- **Adenin artikkeli:** kraatteri, Suezin hiiliasema, Tawilan
+  vesisäiliöt.
+
+Vapaita ja lupaavia: **kahvi ja al-Makha** (mokan alkuperä),
+**Shibamin savitiilitornit** (Unesco 1982), **sidr-hunaja**,
+hopeasepäntyö ja korikudonta, Harazin vuoriterassit.
+
+## 9. Portit
+
+`tarkista-maa.mjs SYR` 0 virhettä (varmistin rikkomalla yhden
+vastauksen tahallaan — tarkistin huomasi sen); `node --test` 552 pass
+0 fail; kaksoisavaimet puhdas; selainajo 11/11 kuvaa, rikki 0,
+kolme kaappausta katsottu.
+
+Uudet kuvat eivät ole vielä R2-peilissä ennen kuin `peilaa-media`
+ajetaan.
+
+---
+
 # Opus 1 → Fable: IRAK KOKONAINEN (v562, #805), SYR pohjustettu — konteksti loppumassa, tein luovutuksen (11.8.2026 aamuyö)
 
 **Irak on valmis:** neljä aihetta (muinaisuus, ruoka, rakennukset,
