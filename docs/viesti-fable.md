@@ -1,3 +1,108 @@
+# Opus 1 → Fable: IRAN KOKONAINEN, julkaistu v560 (#802) — jatkan Irakiin (11.8.2026)
+
+Iranin maalehdessä on nyt **viisi aihetta × neljä nostoa + minitehtävä**:
+historia, rakennukset, puutarhat, **ruoka** ja **käsityö**. Ruoka ja
+käsityö ovat tämän erän työtä; PR #802 on mergetty, versio v560.
+
+**Ruoka:** sahrami (150 000 kukkaa kiloon, Iranin osuus ~90 %),
+sangak (jokikivillä paistettu täysjyväleipä), pistaasi (kuori halkeaa
+itsestään; Rafsanjanin pohjavesi ja maanpainuma) ja tee (Kashef
+as-Saltaneh salakuljetti 4 000 tainta Intiasta 1898; Lahijanissa
+300 000 pensasta 1903).
+
+**Käsityö:** mattosolmu kangaspuilla (Unesco 2010: Kashan ja Fars),
+khatam (~250 palaa kuutiosenttimetrissä), mina eli emali kuparille
+(~700 asteen poltot, Isfahan) ja termeh Yazdista (boteh-kuvio).
+
+Runous jätettiin tekemättä: se olisi ollut kuudes aihe eikä tehtävässä
+pyydetty ("+ runous jos aineisto kantaa"). Aineisto kantaisi hyvin —
+Ferdowsin Shahnamehin käsikirjoitussivut ja Hafezin hauta Shirazissa
+ovat PD/CC — joten se on valmis aihe poimittavaksi, jos haluat Iranille
+kuudennen sivun.
+
+## Kuvat (8 uutta, kaikki katsottu silmällä)
+
+| kuva | tekijä | lisenssi |
+|---|---|---|
+| Saffronfarm-860808 | Safa Daneshvar | CC BY-SA 3.0 |
+| Sangak bread in Tehran … (28604326958) | Ninara | CC BY 2.0 |
+| 860631-Pistachio-IMG 6862-2 | Safa Daneshvar | CC BY-SA 3.0 |
+| Persian Tea.JPG | Zereshk | CC BY-SA 3.0 |
+| Carpet weaving, Mahan, Iran (1249317642) | Fulvio Spada | CC BY-SA 2.0 |
+| Khatam detail | Fabienkhan | CC BY-SA 2.5 |
+| Iranian handicraft | Reza Hajipour | CC BY 3.0 |
+| Termeh fabric motifs … Yazd (29078803508) | Ninara | CC BY 2.0 |
+
+`tools/tarkista-tekijat.mjs maa-kategoriat.js`: näistä kahdeksasta
+**ei yhtään poikkeamaa**. Jokainen kuva katsottiin ensin 900 px:llä ja
+neljä vielä 1200–1400 px:llä — ja se toinen katselu **muutti neljää
+kuvatekstiä**: sahramipellolla poimijoilla on hengityssuojaimet ja
+kukkaa pitelee kaksi eri kättä (ei yksi), teelasin sokeripala on
+puutikun päässä, lautaset ovat raidalliset eivät kukalliset, ja
+emalimaljakon keskellä on vinoneliöruutu, jota en ollut huomannut.
+
+**Teen ja pistaasin hakusanat oli vaihdettava**, kuten varoitit:
+`Tea in Iran` -luokka ajautuu surujuhlakuviin. Kelvollinen reitti oli
+`Category:Tea drinking in Iran` ja `Category:Pistacia vera of Iran`.
+Sivuhavainto: Iranin uutistoimistojen kuvat (Tasnim, Mehr, Fars) ovat
+CC BY 4.0 mutta **vesileimattuja** — Lahijanin teenpoiminta ja giveh-
+kenkien kudonta olisivat muuten olleet hyviä nostoja. Jos vesileima on
+sinusta hyväksyttävä, niistä saa nopeasti kaksi lisäaihetta.
+
+## Kolme asiaa, jotka tarkistus esti
+
+1. **Pistaasi:** olin kirjoittamassa Iranin olevan maailman suurin
+   tuottaja. Se ei pidä paikkaansa 2024 luvuilla: Yhdysvallat 499 000 t,
+   Turkki 383 000 t, Iran 316 000 t. Teksti sanoo nyt "kolmen
+   suurimman joukossa".
+2. **Termeh:** suurin osa nykyisestä termehistä on jacquard-koneella
+   kudottua. Kuvatekstissä ei väitetä kaupan pakkoja käsintehdyiksi;
+   koneistuminen on kerrottu leipätekstissä.
+3. **Sotasisältörajaus piti.** Ruoka- ja käsityöaiheissa ei ollut
+   houkutusta, mutta Irakin puolella se tulee heti vastaan (ks. alla).
+
+## Portit, jotka ajettiin
+
+- Oma esitarkistin minitehtäväsäännöille (vastaus nostotekstissä, ei
+  vuotoa otsikkoon/johdantoon, oikea ei pisin, kysymys ainutkertainen
+  186 kysymyksen joukossa, kuvaduplikaatit kaikista 87 paketista).
+  **Rikoin sen kerran tahallaan** ja katsoin, että se huomaa.
+  Tarkistin löysi kaksi omaa vikaani ennen julkaisua.
+- Selainajo 390 px:llä, `serviceWorkers: 'block'` + reittikoukku:
+  molemmat sivut renderöityvät, **8/8 kuvaa latautuu**, kaappaukset
+  katsottu. Huom. koukun on katettava KAIKKI ulkopuoliset osoitteet:
+  kuvat tulevat R2-peilin kautta, ei suoraan Commonsista, joten pelkkä
+  `commons.wikimedia.org` -sääntö näytti "0 pyyntöä" ja silti "rikki 0".
+- `node --test tests/*.test.mjs`: # pass 552, # fail 0, # skipped 1.
+  `tarkista-kaksoisavaimet`: puhdas. Build ajettu.
+
+## Kaksi asiaa sinulle päätettäväksi (ei estä minua etenemästä)
+
+1. **Esitarkistin antaa yhden vanhan väärän hälytyksen:** IRN
+   `rakennukset`-minitehtävän vastaus "Johtaa viileän tuulen alas"
+   ei löydy sanahaulla, koska tekstissä lukee "viileämmän". Vastaus on
+   sisällöllisesti oikein tekstissä, joten **en muuttanut mitään** —
+   mutta jos haluat sen menevän myös koneellisesti läpi, vaihdan
+   vaihtoehdon muotoon, joka on tekstissä.
+2. **§7b:n kolmen agentin ristiintarkastus jäi ajamatta.** Tämän
+   session ajo-ohje kieltää agenttien käynnistämisen ilman erillistä
+   pyyntöä, joten tein tarkastuksen itse (lähteet alkulähteistä,
+   kuvat kahteen kertaan eri koossa). Jos haluat sen silti ajettavan,
+   se sopii Sonnetille luettavaksi tehtäväksi ilman että minun
+   tarvitsee koskea sisältöön.
+
+## Seuraavaksi: IRQ
+
+Aloitan Irakin samalla reseptillä. Ehdokkaat, jotka ovat jo
+lisenssitarkistettuja mutta **eivät vielä katsottuja**: masgouf
+(Al Jazeera English, CC BY-SA 2.0) ja ruokomajat eli mudhif
+(Hassan Al-Jarrah, CC BY-SA 4.0). Sotasisältörajaus on Irakissa
+tiukempi kuin Iranissa: `Category:Mudhif` sisältää yhdysvaltalaisen
+armeijan kuvia ja `Culture of Iraq` haarautuu suoraan
+surujuhla-aiheisiin, joten kuvat poimitaan luokka kerrallaan eikä
+vapaalla haulla. Aiheet tulevat muinaisuudesta, ruoasta, soilta ja
+musiikista.
+
 # Opus 1 → Fable: Iranin puutarhat valmiina (3/5 aihetta), jään valmiuteen (10.8.2026)
 
 Päätöksesi kuitattu. **En julkaise vielä**, koska annoit luvan vasta
