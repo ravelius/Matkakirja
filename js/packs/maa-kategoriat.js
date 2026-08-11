@@ -20402,4 +20402,496 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  KOR: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Korean historian suurimmat saavutukset ovat kirjoitettuja: '
+          + 'kirjaimisto, joka suunniteltiin pöydän ääressä, ja kaksi '
+          + 'painotyötä, joiden rinnalle Eurooppa ehti vasta paljon '
+          + 'myöhemmin.',
+      nostot: [
+        {
+          otsikko: 'Kirjaimisto suunniteltiin tarkoituksella',
+          aika: '1446',
+          tiedosto: 'Hunminjeongeum Haerye 03.jpg',
+          teksti: 'Korean kieltä kirjoitettiin pitkään kiinalaisin merkein, '
+              + 'jotka sopivat siihen huonosti ja joiden opettelu vei vuosia. '
+              + 'Kuningas Sejong esitteli uuden kirjaimiston vuoden 1443 '
+              + 'lopulla, ja se julkaistiin 1446 teoksessa Hunminjeongeum '
+              + 'selityksineen. Kirjaimisto ei kehittynyt vaan se '
+              + 'suunniteltiin: konsonanttien muodot jäljittelevät sitä, '
+              + 'miten kieli, huulet ja kurkku asettuvat äännettäessä, ja '
+              + 'vokaalit koottiin kolmesta merkistä. Oppineet halveksivat '
+              + 'sitä vuosisatoja, ja yleisesti hyväksytyksi se tuli vasta '
+              + '1800-luvun lopulla.',
+          selite: 'Avattu vanha kirja mustaa taustaa vasten. Kellastuneilla '
+              + 'sivuilla on pystysuoria rivejä mustaa kirjoitusta, ja '
+              + 'ylimmällä rivillä erottuu suuria yksinkertaisia merkkejä: '
+              + 'ympyröitä, viivoja ja kulmia. Sivujen reunassa näkyy '
+              + 'ommelnauha, jolla kirja on sidottu.',
+          lahde: 'Government of Joseon, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kahdeksankymmentätuhatta puulaattaa',
+          aika: '1200-luku',
+          tiedosto: 'Korea-Haeinsa Tripitaka Koreana woodblock 2770-06a.jpg',
+          teksti: 'Tripitaka Koreana on buddhalainen kaanon, joka kaiverrettiin '
+              + '1200-luvulla yli 81 000 puulaattaan. Se on vanhin ehjänä '
+              + 'säilynyt laitos itäaasialaisesta kaanonista, ja siihen on '
+              + 'veistetty yli viisikymmentä miljoonaa merkkiä. Yksi laatta on '
+              + '24 senttimetriä korkea ja 70 pitkä ja painaa kolmesta '
+              + 'neljään kiloa; peräkkäin aseteltuina laatat ulottuisivat '
+              + 'kuusikymmentä kilometriä. Ne säilytetään Haeinsan '
+              + 'luostarissa varastorakennuksissa, joiden ristikkoikkunat ja '
+              + 'savikerroksinen lattia pitävät ilman kuivana ilman koneita — '
+              + 'laatat ovat yhä vääntymättömiä.',
+          selite: 'Tumma puinen painolaatta lepää pöydällä. Sen koko pinta on '
+              + 'täynnä tiheitä pystyrivejä käänteisiä kiinalaisia merkkejä, '
+              + 'jotka on kaiverrettu koholle. Laatan molemmissa päissä on '
+              + 'paksummat kahvamaiset listat. Puu on tummunut ja kiiltävä.',
+          lahde: 'Steve46814, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kirja, joka ehti Gutenbergin edelle',
+          aika: '1377',
+          tiedosto: 'Replica metal print plate of Jikji Shimche Yojeol.jpg',
+          teksti: 'Jikji painettiin Heungdeokin temppelissä vuonna 1377, ja se '
+              + 'on maailman vanhin säilynyt metallikirjakkeilla painettu '
+              + 'kirja — seitsemänkymmentäkahdeksan vuotta ennen kuin '
+              + 'Johannes Gutenbergin 42-rivinen raamattu valmistui. '
+              + 'Alkuperäisestä kaksiosaisesta teoksesta on jäljellä vain '
+              + 'jälkimmäinen osa, ja se on Ranskan kansalliskirjastossa '
+              + 'Pariisissa. Unesco vahvisti kirjan aseman vuonna 2001 ja '
+              + 'merkitsi sen Maailman muisti -rekisteriin. Sisältö on '
+              + 'kokoelma buddhalaisten mestareiden opetuksia.',
+          selite: 'Metallinen painolaatta lasin takana museossa. Kehyksen '
+              + 'sisään on ladottu tiiviisti pieniä nelikulmaisia '
+              + 'metallikirjakkeita riveiksi, ja rivien väliin on työnnetty '
+              + 'kapeita metalliliuskoja. Kehys on kuparinvärinen, kirjakkeet '
+              + 'harmaita, tausta musta.',
+          lahde: 'Kjoonlee, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Luolatemppeli koottiin kivestä',
+          aika: '700-luku',
+          tiedosto: 'Seokguram Grotto 03.jpg',
+          teksti: 'Seokguram on Gyeongjun yläpuolella vuorenrinteessä, ja se '
+              + 'rakennettiin 700-luvulla Silla-kuningaskunnan aikaan. Se ei '
+              + 'ole luonnonluola vaan tehty: graniittilohkareista ladottiin '
+              + 'pyöreä kammio ja sen päälle kupoli, joka pysyy koossa '
+              + 'kivien painon varassa ilman laastia. Kammion keskellä istuu '
+              + 'graniittiin veistetty buddha katse itään merta kohti, ja '
+              + 'seinillä on reliefeinä oppilaita ja vartijoita. Nykyään '
+              + 'kammion eteen on rakennettu lasiseinä, eikä sisälle pääse — '
+              + 'kuva katsotaan lasin läpi.',
+          selite: 'Puinen temppelirakennus vihreän rinteen juurella. Katto on '
+              + 'harmaata tiiltä, räystäät kaartuvat ylöspäin ja pylväät ovat '
+              + 'punaiset. Rakennuksen oikealla puolella näkyy paljasta '
+              + 'kalliota ja kivimuuria; edessä on kiviportaat ja '
+              + 'vierailijoita.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä Jikji painettiin vuonna 1377?',
+        vaihtoehdot: [
+          'Metallikirjakkeilla',
+          'Puisilla laatoilla',
+          'Kivipainokoneella',
+          'Käsin kirjoittaen',
+        ],
+        oikea: 0,
+        fakta: 'Vain teoksen jälkimmäinen osa on säilynyt, ja se on nykyään '
+            + 'Pariisissa.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Korealainen talo vastaa kahteen ääripäähän: talvi on kylmä '
+          + 'ja kesä on kuuma ja kostea. Siksi samassa talossa on lämmitetty '
+          + 'lattia ja avoin puinen halli.',
+      nostot: [
+        {
+          otsikko: 'Talossa on lämmin lattia ja viileä halli',
+          tiedosto: 'Bukchon-ro 11-gil street with hanok houses in Bukchon Hanok Village Seoul.jpg',
+          teksti: 'Hanok on perinteinen korealainen talo, ja siinä on kaksi '
+              + 'erilaista huonetta samassa katon alla. Toinen on '
+              + 'ondol-huone, jonka savitiililattian alla kulkee lämpö; '
+              + 'toinen on maru, korotettu puulattiainen halli, joka avautuu '
+              + 'pihalle ja pysyy viileänä kesähelteellä. Talot rakennettiin '
+              + 'mieluiten niin, että takana on vuori ja edessä vesi. '
+              + 'Soulin Bukchonissa on satoja hanokeja rinnekujien varrella; '
+              + 'moni niistä on nykyään kahvila tai majatalo, mutta kadut '
+              + 'ovat entisellään kapeat.',
+          selite: 'Kapea nouseva katu, jota reunustavat matalat perinteiset '
+              + 'talot. Seinissä on harmaita ja valkoisia geometrisia '
+              + 'kuvioita, katot ovat tummaa kaarevaa tiiltä ja ikkunoissa '
+              + 'ruskeat puuritilät. Kadun päässä siintää sininen taivas ja '
+              + 'kaupunkia.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Savu kulkee lattian alta',
+          tiedosto: 'Ondol Chimneys in the Amisan Garden of Gyeongbokgung IMG 2062.jpg',
+          teksti: 'Ondol on maailman vanhimpia yhä käytössä olevia '
+              + 'lattialämmityksiä. Talon viereisessä huoneessa, usein '
+              + 'keittiössä, on tulisija, ja siitä lähtevä savu johdetaan '
+              + 'vaakasuoria kanavia pitkin paksun kivi- ja savilattian alle. '
+              + 'Lattia lämpiää hitaasti ja pysyy lämpimänä pitkään tulen '
+              + 'sammuttua. Savu poistuu vastakkaisella seinällä olevaa '
+              + 'erillistä piippua pitkin, ja piippu on usein tehty '
+              + 'koristeelliseksi. Lattian päällimmäisenä on öljytty paperi, '
+              + 'joka pitää savun poissa huoneesta. Tästä on peräisin tapa '
+              + 'istua ja nukkua lattialla.',
+          selite: 'Puutarhassa seisoo kaksi kuusikulmaista tiilipiippua '
+              + 'kivimuurin takana. Piippujen kyljissä on koristekuvioita ja '
+              + 'päällä pieni tiilikatto. Ympärillä kasvaa vihreitä puita ja '
+              + 'pensaita, edessä kulkee harmaa kivireunus.',
+          lahde: 'G41rn8, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puutarha jätettiin ennalleen',
+          tiedosto: 'Biwon Huwon of Changdeokgung.jpg',
+          teksti: 'Changdeokgungin palatsi rakennettiin Souliin vuonna 1405, '
+              + 'ja sen takana on Huwon, takapuutarha, joka kattaa suurimman '
+              + 'osan koko alueesta. Puutarhaa ei muotoiltu vaan seurattiin: '
+              + 'lammet kaivettiin sinne, missä maasto oli valmiiksi kostea, '
+              + 'polut kiertävät kukkulat eivätkä lävistä niitä, ja '
+              + 'paviljongit asetettiin kohtiin, joista näkymä oli jo '
+              + 'ennestään hyvä. Sama periaate erottaa Changdeokgungin '
+              + 'suorakulmaisista palatseista, ja se on syy siihen, että '
+              + 'alue otettiin maailmanperintöluetteloon vuonna 1997.',
+          selite: 'Nelikulmainen lampi metsäisessä laaksossa. Rannalla seisoo '
+              + 'kaksi puista paviljonkia kaarevine tiilikattoineen, ja lammen '
+              + 'pinta on osittain lumpeenlehtien peitossa. Ympärillä nousee '
+              + 'tiheä vihreä rinne, ja etualalla kulkee kivireunus.',
+          lahde: 'Christian Bolz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Muuri, joka rakennettiin kirjan mukaan',
+          aika: '1796',
+          tiedosto: 'Hwaseong Fortress 01.jpg',
+          teksti: 'Kuningas Jeongjo rakennutti Suwoniin Hwaseongin muurin '
+              + 'vuosina 1794–1796. Työstä laadittiin poikkeuksellisen '
+              + 'yksityiskohtainen selvitys: kirjaan merkittiin piirustukset, '
+              + 'mitat, materiaalit, työvuorot ja palkat. Kun muuri myöhemmin '
+              + 'vaurioitui, se voitiin korjata alkuperäisen mukaan juuri '
+              + 'näiden kirjausten ansiosta. Rakennustyössä käytettiin myös '
+              + 'uusia nostolaitteita, joilla raskaat kivet saatiin '
+              + 'paikalleen pienemmällä väellä. Alue merkittiin '
+              + 'maailmanperintöluetteloon vuonna 1997.',
+          selite: 'Harmaasta kivestä ja tiilestä muurattu muuri kaartuu '
+              + 'nurmisen kukkulan yli. Muurin päällä kulkee kaiteellinen '
+              + 'käytävä, ja kukkulan laella seisoo puinen kaksikerroksinen '
+              + 'porttitorni kaarevine kattoineen. Rinteessä kasvaa mäntyjä, '
+              + 'taivaalla on ohuita pilviä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä lämmittää perinteisen korealaistalon lattian?',
+        vaihtoehdot: [
+          'Tulisijan savu',
+          'Kuuma vesi putkissa',
+          'Auringon valo ikkunoista',
+          'Lattian alla poltettu öljy',
+        ],
+        oikea: 0,
+        fakta: 'Lattia lämpiää hitaasti mutta pysyy lämpimänä pitkään sen '
+            + 'jälkeen kun tuli on jo sammunut.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Korealainen ateria on pöydällinen pieniä kulhoja, joista '
+          + 'jokainen ottaa mitä haluaa. Talven varalle säilötään syksyllä, '
+          + 'ja se työ tehdään yhdessä.',
+      nostot: [
+        {
+          otsikko: 'Talvivarasto tehdään yhtenä kuukautena',
+          tiedosto: 'Korean cuisine-Kimchi-02.jpg',
+          teksti: 'Kimchi on suolattua ja hapatettua kasvista, useimmiten '
+              + 'kiinankaalia ja retikkaa. Reseptejä tunnetaan jo 1200-luvulta, '
+              + 'mutta punainen chili tuli mukaan vasta 1600-luvulla — sitä '
+              + 'ennen kimchi oli vaaleaa. Kesällä sitä tehdään tuoreena '
+              + 'pieninä erinä, mutta lokakuusta alkaen vietetään gimjangia: '
+              + 'kuukauden ajan naapurit ja suvut kokoontuvat tekemään '
+              + 'talveksi riittävän määrän kerralla, satoja kaalinkeriä '
+              + 'yhtenä päivänä. Tapa otettiin Unescon aineettoman '
+              + 'kulttuuriperinnön luetteloon vuonna 2013.',
+          selite: 'Valkoinen kulho, jossa on paksuja vaaleita kaalinlehtiä '
+              + 'punaisessa mausteliemessä. Lehtien väliin on tarttunut '
+              + 'punaista chilitahnaa ja vihreitä sipulinpaloja. Liemi on '
+              + 'kirkkaan oranssinpunaista ja kiiltävää.',
+          lahde: 'Jess Lander, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Riisi sekoitetaan vasta pöydässä',
+          tiedosto: 'Bibimbap 7.jpg',
+          teksti: 'Bibimbap tarkoittaa sekoitettua riisiä. Kulhon pohjalle '
+              + 'tulee riisi, ja sen päälle ladotaan lohkoina eri '
+              + 'kasviksia: porkkanasuikaleita, kurkkua, sieniä, versoja ja '
+              + 'lehtivihannesta, kukin erikseen maustettuna. Keskelle '
+              + 'pannaan chilitahnaa ja usein kananmuna. Annos tuodaan '
+              + 'pöytään koskemattomana, ja syöjä sekoittaa sen itse lusikalla '
+              + 'yhdeksi massaksi — vasta silloin maut yhdistyvät. Kuumassa '
+              + 'kivikulhossa tarjottu versio paahtaa pohjalle rapean '
+              + 'riisikerroksen.',
+          selite: 'Kulho ylhäältä kuvattuna. Valkoisen riisin päällä on '
+              + 'säteittäin lohkoja eri aineksia: oranssia porkkanasuikaletta, '
+              + 'vihreitä palkoja, ruskeita sienisuikaleita ja vaaleaa '
+              + 'retikkaa. Keskellä on kasa punaista tahnaa ja sen päällä '
+              + 'vaaleita hiutaleita.',
+          lahde: 'Chloe Lim, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Pikkulautaset täytetään uudelleen',
+          tiedosto: 'Korean table setting-01.jpg',
+          teksti: 'Banchan ovat pieniä lisukkeita, joita tuodaan pöydän '
+              + 'keskelle kaikkien ulottuville. Niitä voi olla kolme tai '
+              + 'kaksitoista: hapatettuja kasviksia, maustettuja versoja, '
+              + 'pieniä kaloja, munakasviipaleita, soijassa haudutettuja '
+              + 'juureksia. Ne eivät ole alkuruoka vaan syödään pääruoan '
+              + 'rinnalla, ja ravintolat täyttävät lautaset pyydettäessä '
+              + 'ilman lisämaksua. Tapa on peräisin hovin ateriajärjestyksestä, '
+              + 'jossa lautasten lukumäärä kertoi juhlan arvon.',
+          selite: 'Puinen pöytä, jolla on rivi pieniä valkoisia lautasia. '
+              + 'Yhdellä on paksuja kullanruskeita munakasviipaleita, '
+              + 'toisella punaista maustettua suikaletta, kolmannella '
+              + 'tummaa haudutettua ainesta ja neljännellä vihreää '
+              + 'lehtivihannesta. Takana on kaksi kannellista messinkiastiaa.',
+          lahde: 'Alan Chan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Nuudelit tarjoillaan jäisessä liemessä',
+          tiedosto: 'Mul-naengmyeon 1.jpg',
+          teksti: 'Naengmyeon on kylmä nuudeliannos, jonka nuudelit tehdään '
+              + 'tattarista ja tärkkelyksestä. Ne ovat ohuita, tummia ja '
+              + 'sitkeitä, niin sitkeitä että ne leikataan saksilla '
+              + 'pöydässä. Liemi on hapanta ja jäähdytetty melkein jäiseksi, '
+              + 'ja päälle tulee kurkkusuikaletta, keitetty kananmuna, pala '
+              + 'lihaa ja joskus päärynää. Ruokalaji on kotoisin '
+              + 'Korean niemimaan pohjoisosista, Pjongjangista ja '
+              + 'Hamhungista, ja se oli alun perin talviruoka — nykyään se '
+              + 'syödään kesähelteellä.',
+          selite: 'Matala metallikulho ylhäältä kuvattuna. Kirkkaassa '
+              + 'liemessä on kasa ohuita vaaleita nuudeleita, päällä '
+              + 'puolikas keitetty kananmuna ja ohuita vaaleanruskeita '
+              + 'lihasiivuja. Liemen pinnalla kelluu jäämurskaa ja '
+              + 'punaisia mausteripauksia.',
+          lahde: 'chomjong, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Milloin chili tuli mukaan kimchiin?',
+        vaihtoehdot: [
+          '1600-luvulla',
+          '1200-luvulla',
+          '1900-luvulla',
+          'Jo ennen ajanlaskua',
+        ],
+        oikea: 0,
+        fakta: 'Sitä ennen kimchi oli vaaleaa: kasvikset säilöttiin suolaan '
+            + 'ilman punaista mausteseosta.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Korealainen esine on usein kaunis siksi, mitä siitä on '
+          + 'jätetty pois. Sama maa teki maailman hienointa vihreää '
+          + 'keramiikkaa ja sitten purkkeja, joissa ei ole yhtään kuviota.',
+      nostot: [
+        {
+          otsikko: 'Kuvio upotetaan saven sisään',
+          tiedosto: 'Goryeo dynasty plum blossom vase Honolulu Museum of Art 110.JPG',
+          teksti: 'Goryeo-kauden selado on harmaanvihreää kivitavaraa, jonka '
+              + 'väriä on verrattu kuningaskalastajan höyheniin. Korealaiset '
+              + 'savenvalajat kehittivät sille oman koristelutavan, sanggamin: '
+              + 'kuvio kaiverretaan puolikuivaan saveen uraksi, ura '
+              + 'täytetään valkoisella tai mustalla savivellillä, ylimääräinen '
+              + 'kaavitaan pois ja vasta sitten astia lasitetaan ja '
+              + 'poltetaan. Kuvio ei siis ole maalattu pinnalle vaan se on '
+              + 'osa astian seinämää. Aiheiksi valittiin kurkia, pilviä, '
+              + 'krysanteemeja ja luumunkukkia.',
+          selite: 'Korkea kapeasuinen maljakko vaalealla alustalla. Astia '
+              + 'levenee yläosastaan ja kapenee alaspäin. Lasitus on '
+              + 'harmaanvihreä ja himmeän kiiltävä, ja siihen on upotettu '
+              + 'valkoisella pilvimäisiä kuvioita ja pieniä kukkia oksineen.',
+          lahde: 'Hiart, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Purkki, jossa ei ole kuviota',
+          tiedosto: 'Korea-Joseon-Moon jar-01.jpg',
+          teksti: 'Kuupurkki on Joseon-kauden valkoista posliinia, ja niitä '
+              + 'tehtiin 1600-luvun lopulta 1700-luvun puoliväliin. Nimi on '
+              + 'paljon nuorempi kuin esine: kuupurkiksi niitä alettiin '
+              + 'kutsua vasta 1950-luvulla maidonvalkoisen värin ja pyöreän '
+              + 'muodon takia. Purkki muotoillaan kahdesta puolikkaasta, '
+              + 'jotka dreijataan erikseen ja liitetään keskeltä yhteen. '
+              + 'Sauma jättää muodon hieman epäsymmetriseksi, eikä sitä '
+              + 'pidetty virheenä vaan osana viehätystä. Yli 40 senttimetrin '
+              + 'kokoisia purkkeja tunnetaan enää parikymmentä.',
+          selite: 'Pyöreä maidonvalkoinen purkki mustaa taustaa vasten. Se on '
+              + 'lähes pallon muotoinen mutta hieman epäsäännöllinen, ja '
+              + 'yläosassa on matala suora kaulus. Pinta on tasainen ja '
+              + 'himmeä, ja valo kaartuu sen yli pehmeänä.',
+          lahde: 'hojusaram, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Tiikeri, joka ei pelota',
+          tiedosto: 'Korean.Folk.Village-Minsokchon-04-alt.jpg',
+          teksti: 'Minhwa on korealaista kansanmaalausta: nimettömien '
+              + 'tekijöiden kuvia, joita ripustettiin tavallisiin koteihin '
+              + 'suojaksi ja onneksi. Suosituin aihe on tiikeri, usein '
+              + 'harakan seurassa. Kuvan tiikeri ei ole pelottava vaan '
+              + 'kömpelö ja hieman naurettava: silmät kieroon, raidat '
+              + 'sekaisin, ilme neuvoton. Tulkinnan mukaan harakka on '
+              + 'tavallinen ihminen ja tiikeri mahtava mutta hidasjärkinen '
+              + 'vallanpitäjä. Sama kuva ripustettiin uudenvuoden aikaan '
+              + 'oveen karkottamaan vahinkoja.',
+          selite: 'Pystysuora tussipiirros vaalealla paperilla. Keskellä '
+              + 'seisoo raidallinen tiikeri sivuttain, häntä koholla ja pää '
+              + 'kääntyneenä katsojaan päin. Silmät ovat suuret ja pyöreät ja '
+              + 'suu auki. Yläkulmassa istuu oksalla lintu, ja reunoilla '
+              + 'kiertää kehysviiva.',
+          lahde: 'unknown painter, Joseon Period, Korea, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Väri suojaa puuta',
+          tiedosto: 'Korea-Mountain-Jirisan-Hwaeomsa-03.jpg',
+          teksti: 'Dancheong on korealaisten temppelien ja palatsien '
+              + 'räystäiden ja palkkien värikuviointi. Se perustuu viiteen '
+              + 'väriin, joilla on kullakin ilmansuunta: sininen on itä, '
+              + 'valkoinen länsi, punainen etelä, musta pohjoinen ja '
+              + 'keltainen keskusta. Kuvioissa toistuvat lohikäärmeet, '
+              + 'kurjet ja lootuskukat. Maalaus ei ole pelkkää koristetta: '
+              + 'paksu mineraalipohjainen väri suojaa puuta kosteudelta, '
+              + 'auringolta ja hyönteisiltä, ja peittää samalla puun '
+              + 'epätasaisuudet. Työn tekee erikoistunut maalari, ja kuviot '
+              + 'noudattavat vakiintuneita malleja.',
+          selite: 'Temppelin räystään alapuoli kuvattuna alaviistosta. '
+              + 'Kaarevan katon alla on tiheä rivi puisia orsia ja '
+              + 'kannattimia, jotka on maalattu vihreäksi, punaiseksi, '
+              + 'siniseksi ja valkoiseksi geometrisin ja kukkakuvioin. '
+              + 'Pylväät ovat punaruskeat, ja katon kulmasta roikkuu '
+              + 'koristelauta.',
+          lahde: 'by eimoberg, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten kuupurkki muotoillaan?',
+        vaihtoehdot: [
+          'Kahdesta puolikkaasta',
+          'Yhdestä savipaakusta',
+          'Muotista valamalla',
+          'Levyistä kokoamalla',
+        ],
+        oikea: 0,
+        fakta: 'Liitossauma jättää muodon hieman epäsymmetriseksi, eikä sitä '
+            + 'pidetty virheenä vaan osana esineen viehätystä.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Etelä-Korea on kolmelta sivultaan meren ympäröimä ja '
+          + 'suurimmaksi osaksi vuorta. Eteläinen saari on kokonaan '
+          + 'tulivuoren tekemä, ja sen alla kulkee onttoja käytäviä.',
+      nostot: [
+        {
+          otsikko: 'Kraatteri nousi merestä',
+          tiedosto: 'Seongsan Ilchulbong 01.jpg',
+          teksti: 'Seongsan Ilchulbong on Jejun saaren itäkärjessä, ja se '
+              + 'syntyi noin viisituhatta vuotta sitten purkauksessa, jossa '
+              + 'sula kivi kohtasi matalan meren. Vesi höyrystyi räjähtäen ja '
+              + 'sinkosi tuhkaa renkaaksi purkausaukon ympärille; siitä '
+              + 'syntyi tuffikartio, jonka laella on avoin kraatteri. Kartio '
+              + 'oli aluksi oma saarensa ja liittyi Jejuun vasta myöhemmin, '
+              + 'kun hiekka kasautui väliin. Nimi tarkoittaa '
+              + 'auringonnousuhuippua: sen laelta katsotaan auringon nousua '
+              + 'merestä.',
+          selite: 'Vihreän ruohikon takaa kohoaa matala jyrkkäreunainen '
+              + 'kukkula, jonka rinteillä näkyy tummaa kalliota ja '
+              + 'ruohikkoa. Kukkulan laki on epätasainen ja hammastettu. '
+              + 'Etualalla on nurmikenttää ja matala rakennus, taivas on '
+              + 'vaalean pilvinen.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Laava kaivoi itselleen käytävän',
+          tiedosto: 'Jeju-Manjanggul Lava Tube.jpg',
+          teksti: 'Manjanggulin luola on lähes yhdeksän kilometriä pitkä, '
+              + 'paikoin 23 metriä leveä ja 30 korkea. Se ei ole veden '
+              + 'liuottama vaan laavaputki: laavavirta kaivoi sen itse. '
+              + 'Virran pinta jähmettyi katoksi, mutta sisällä kuuma laava '
+              + 'jatkoi matkaansa, ja kun purkaus loppui, putki jäi tyhjäksi '
+              + 'käytäväksi. Katosta valuneesta laavasta on jäänyt riippuvia '
+              + 'tippukiviä, ja luolan perällä seisoo 7,6 metriä korkea '
+              + 'laavapylväs, joka on maailman suurin tunnettu. Luola '
+              + 'kuuluu Jejun maailmanperintökohteeseen.',
+          selite: 'Luolan sisältä otettu kuva: leveä holvimainen käytävä, '
+              + 'jonka seinät ja katto ovat tummaa kivistä laavaa ja '
+              + 'juovaisia. Käytävän pohja on epätasainen. Kattoon '
+              + 'kiinnitetyt pienet lamput valaisevat käytävää kellertävinä '
+              + 'pisteinä syvyyteen asti.',
+          lahde: 'Olga Lipunova, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ruovikko elää vuoroveden mukana',
+          tiedosto: '20181231 Suncheon Bay 002.jpg',
+          teksti: 'Suncheonin lahti etelärannikolla on yksi Korean '
+              + 'laajimmista ruovikoista. Vuorovesi tuo ja vie veden kahdesti '
+              + 'vuorokaudessa, ja väliin jää mutatasanko, jossa elää '
+              + 'rapuja, simpukoita ja matoja. Ruoko kasvaa kilometrien '
+              + 'laajuisina kenttinä, ja talvella kuivunut ruoko muuttuu '
+              + 'kullanruskeaksi. Lahti on tärkeä lintualue: siellä '
+              + 'talvehtii muun muassa munkkikurkia, jotka ruokailevat '
+              + 'sängellä ja mutatasangolla. Alue on rauhoitettu ja sinne '
+              + 'pääsee vain merkittyjä pitkospuita pitkin.',
+          selite: 'Laaja kullanruskea ruovikko täyttää kuvan alaosan '
+              + 'horisonttiin asti. Vasemmalla kohoaa tummanvihreä '
+              + 'metsäinen rinne, taustalla siintää matalia sinisiä vuoria. '
+              + 'Kirkas talviaurinko paistaa suoraan ylhäältä pilvettömältä '
+              + 'taivaalta.',
+          lahde: 'Jjw, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Graniittihuiput itärannikolla',
+          tiedosto: 'Landscape in Seoraksan National Park 1.jpg',
+          teksti: 'Seoraksanin kansallispuisto on itärannikon tuntumassa, ja '
+              + 'se kuuluu Korean niemimaan halki kulkevaan '
+              + 'selkärankamaiseen vuorijonoon. Huiput ovat graniittia: '
+              + 'sula kivi jähmettyi aikanaan syvälle maan sisään, ja kun '
+              + 'päällä ollut kiviaines kului pois, paljastunut graniitti '
+              + 'alkoi lohkeilla suuriksi pystyseiniksi ja torneiksi. '
+              + 'Puistossa kasvaa yli tuhat kasvilajia, ja syksyn '
+              + 'ruskaviikkoina kapeat laaksot ruuhkautuvat kävelijöistä. '
+              + 'Nimi tarkoittaa lumista huippua: lunta on rinteillä '
+              + 'pitkälle kevääseen.',
+          selite: 'Harmaita graniittihuippuja nousee sumuisen laakson '
+              + 'takaa peräkkäisinä harjanteina. Kalliot ovat jyrkkiä ja '
+              + 'pyöreähköjä, ja niiden raoissa kasvaa mäntyjä. Etualalla on '
+              + 'tiheää metsää, jossa näkyy yksittäisiä punaisia ja '
+              + 'keltaisia syyslehtiä.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Manjanggulin luolakäytävä syntyi?',
+        vaihtoehdot: [
+          'Laavavirta kaivoi sen',
+          'Meri huuhtoi kallion ontoksi',
+          'Maanjäristys halkaisi kallion',
+          'Ihmiset louhivat sen',
+        ],
+        oikea: 0,
+        fakta: 'Virran pinta jähmettyi katoksi, ja purkauksen loputtua '
+            + 'sisälle jäi tyhjä putki.',
+      },
+    },
+  ],
 };
