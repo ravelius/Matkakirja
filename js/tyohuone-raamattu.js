@@ -167,6 +167,49 @@ export const RAAMATTU2 = {
       ],
     },
     {
+      otsikko: 'Tekstien vetovoima',
+      tila: 'luonnos',
+      kohdat: [
+        'Keinopakki, jolla teksteistä tehdään mielenkiintoisia — '
+          + 'nämä ovat käytettävissä heti, jos Euroopan uudet '
+          + 'tekstit aloitettaisiin nyt. Keinot punnitaan yhdessä '
+          + 'ja osio täydentyy ennen uudelleenkirjoitusta.',
+        'Kommellus: jokin menee herroilta konkreettisesti '
+          + 'pieleen ja siitä seuraa jotain — tehokkain '
+          + 'yksittäinen keino.',
+        'Aikakontrasti: isoisän 1873 väittää, nykypäivä vastaa. '
+          + 'Lukija saa itse huomata, mikä on muuttunut ja mikä '
+          + 'yllättäen ei.',
+        'Aistiankkuri: yksi tarkka haju, ääni tai maku kiinnittää '
+          + 'paikan muistiin paremmin kuin kappale kuvailua.',
+        'Mittaajan persoona: isoisä mittaa, laskee ja vertaa — '
+          + 'tarkat numerot ja välineet (barometri) tekevät '
+          + 'hänestä elävän.',
+        'Auki jäävä koukku: merkintä tai kohtaaminen päättyy '
+          + 'kysymykseen tai vihjeeseen, joka jää kutkuttamaan '
+          + '(dekkarin imu).',
+        'Aarrevihjeet: harva sivuhuomio vahvistaa, että Aarnin '
+          + 'aarre on totta — palkitsee tarkan lukijan.',
+        'Seuraajan varjo: tummansininen sateenvarjo vilahtaa '
+          + 'harvoin ja ohimennen — jännite ilman uhkaa.',
+        'Yllätysfakta: tosi mutta hämmästyttävä yksityiskohta, '
+          + 'josta lukija haluaa kertoa jollekulle ("tätä en '
+          + 'olisi uskonut").',
+        'Konkreettinen ihminen: nimetty paikallinen ja hänen '
+          + 'hiljainen tietonsa — ei koskaan "ihmiset" tai '
+          + '"kansa".',
+        'Arjen hinnat ja tavat 1873: mitä ateria, yösija tai '
+          + 'sähke maksoi ja miten asiat hoidettiin — aikamatkan '
+          + 'tuntu syntyy arjesta, ei monumenteista.',
+        '80 päivän paine: aikataulu muistuttaa itsestään '
+          + 'pienissä valinnoissa — ehtiikö, uskaltaako viipyä '
+          + 'vielä päivän.',
+        'Löytöhetken tunne: hauskan yllättävät paikallisaarteet '
+          + 'ja lyhyet huudahdukset — nauru tai häkellys sinetöi '
+          + 'muistijäljen.',
+      ],
+    },
+    {
       otsikko: 'Pelin kulku',
       tila: 'luonnos',
       kohdat: [
@@ -222,9 +265,15 @@ export const RAAMATTU2 = {
           + 'lyhyet, korkeintaan kahden sanan huudahdukset: '
           + 'isoille löydöille tyyliin "Jes!" / "Jippii!", '
           + 'pienille "No okei." / "Voi rähmä."',
-        'AVOINNA (kirjattu 11.8.): vertailulinssilaatan (varuste, '
-          + '7 laattaa) kohtalo, ja rosvon poisto lopettaa myös '
-          + 'rosvon kaksintaistelu -pelin — päätetään yhdessä.',
+        'VARUSTEET JA KAUPPA (päätös 11.8.): varusteita ei enää '
+          + 'löydy laatoista, vaan ne ostetaan kaupasta. '
+          + 'Hampurilaisvalikkoon tulee "Käy kaupassa" -painike, '
+          + 'jonka takana varusteet on listattu — hinta '
+          + 'alustavasti 1000 puntaa kappale. Varusteita tehdään '
+          + 'lisää myöhemmin. Hevosenkenkä poistuu pelistä '
+          + 'kokonaan; vertailulinssi siirtyy laatoista kauppaan.',
+        'Rosvon kaksintaistelu -peli poistuu kokonaan '
+          + 'rosvolaatan mukana (päätös 11.8.).',
         'Seitsemän pääaarretta eli unohdettua aarretta — yksi per '
           + 'manner, Aarnin luettelosta. Löytymiselle ei ole '
           + 'kynnystä: pääaarre voi osua mantereen ensimmäiseen '
@@ -278,7 +327,8 @@ export const RAAMATTU2 = {
         'Joka kaupungille käsin kirjoitettu TYYPILLINEN '
           + 'PAIKALLINEN henkilö (ammatti sidottu paikkaan), '
           + 'jolle piirretään myös kasvot peliin (yhtenäinen '
-          + 'kuvatyyli, kuten aarrekuvissa). Henkilöllä on '
+          + 'kuvatyyli, kuten aarrekuvissa; Fable suunnittelee '
+          + 'tyylin ja promptit — lupa 11.8.). Henkilöllä on '
           + 'repliikki, kysymys ja aarreteksti; kohtaaminen ja '
           + 'aarre luetaan ääneen.',
         'Aarrejahti on pelin satua — kaikki tieto paikoista on '
