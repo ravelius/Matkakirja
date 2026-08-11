@@ -1366,6 +1366,79 @@
       return k;
     });
 
+    /*
+     * Kevyt markdown-muotoilija docs-kansion kaanondokumenteille
+     * (omistajan tilaus 11.8.2026: raamattu luettavaksi työhuoneessa).
+     * Kattaa vain sen, mitä dokumenteissa oikeasti on: otsikot,
+     * kappaleet, listat, taulukot, lainaukset ja tekstikorostukset.
+     * Dokumentti haetaan aina tuoreena — kopiota ei synny.
+     */
+    function mdHtml(md) {
+      const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const inline = (s) => esc(s)
+        .replace(/`([^`]+)`/g, '<code>$1</code>')
+        .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
+        .replace(/\*([^*]+)\*/g, '<i>$1</i>')
+        .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,
+          '<a href="$2" target="_blank" rel="noopener">$1</a>');
+      const rivit = md.split('\n');
+      const ulos = [];
+      let i = 0;
+      while (i < rivit.length) {
+        const r = rivit[i];
+        if (!r.trim()) { i += 1; continue; }
+        const otsikko = r.match(/^(#{1,3})\s+(.*)$/);
+        if (otsikko) {
+          // #→h2, ##→h3, ###→h4: sisältö elää haitariosion sisällä.
+          ulos.push(`<h${otsikko[1].length + 1}>${inline(otsikko[2])}</h${otsikko[1].length + 1}>`);
+          i += 1; continue;
+        }
+        if (r.startsWith('|')) {
+          const taulu = [];
+          while (i < rivit.length && rivit[i].startsWith('|')) { taulu.push(rivit[i]); i += 1; }
+          const solut = (rivi) => rivi.replace(/^\||\|$/g, '').split('|').map((s) => s.trim());
+          const runko = taulu.filter((rivi) => !/^\|[\s|:-]+\|?$/.test(rivi));
+          const html = runko.map((rivi, j) => {
+            const tagi = j === 0 ? 'th' : 'td';
+            return `<tr>${solut(rivi).map((s) => `<${tagi}>${inline(s)}</${tagi}>`).join('')}</tr>`;
+          }).join('');
+          ulos.push(`<div class="md-taulu"><table>${html}</table></div>`);
+          continue;
+        }
+        if (r.startsWith('>')) {
+          const osat = [];
+          while (i < rivit.length && rivit[i].startsWith('>')) {
+            osat.push(rivit[i].replace(/^>\s?/, '')); i += 1;
+          }
+          ulos.push(`<blockquote>${inline(osat.join(' ').trim())}</blockquote>`);
+          continue;
+        }
+        const lista = r.match(/^(\s*)([-*]|\d+\.)\s+/);
+        if (lista) {
+          const tagi = /\d/.test(lista[2]) ? 'ol' : 'ul';
+          const alkiot = [];
+          while (i < rivit.length) {
+            const a = rivit[i].match(/^(\s*)([-*]|\d+\.)\s+(.*)$/);
+            if (a) { alkiot.push(a[3]); i += 1; continue; }
+            // Sisennetty jatkorivi kuuluu edelliseen alkioon.
+            if (alkiot.length && /^\s{2,}\S/.test(rivit[i])) {
+              alkiot[alkiot.length - 1] += ` ${rivit[i].trim()}`; i += 1; continue;
+            }
+            break;
+          }
+          ulos.push(`<${tagi}>${alkiot.map((a) => `<li>${inline(a)}</li>`).join('')}</${tagi}>`);
+          continue;
+        }
+        const kappale = [];
+        while (i < rivit.length && rivit[i].trim()
+          && !/^(#{1,3}\s|\||>|\s*([-*]|\d+\.)\s)/.test(rivit[i])) {
+          kappale.push(rivit[i].trim()); i += 1;
+        }
+        ulos.push(`<p>${inline(kappale.join(' '))}</p>`);
+      }
+      return ulos.join('\n');
+    }
+
     haitari($('dokumentit'), [
       {
         otsikko: 'Dokumentit',
@@ -1389,6 +1462,20 @@
             p.append(a);
             d.append(p);
           }
+          return [d];
+        },
+      },
+      {
+        otsikko: 'Isoisän raamattu',
+        maara: 'dekkarikaanon, luettavana',
+        rakenna: () => {
+          const d = el('div', 'md-doc');
+          d.append(el('p', '', 'Ladataan…'));
+          fetch('docs/isoisan-raamattu.md')
+            .then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); })
+            .then((md) => { d.innerHTML = mdHtml(md); })
+            .catch(() => { d.replaceChildren(el('p', 'puuttuu',
+              'Raamattua ei saatu haettua — suora linkki: docs/isoisan-raamattu.md')); });
           return [d];
         },
       },
