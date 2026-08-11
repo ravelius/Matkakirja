@@ -19922,4 +19922,484 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  THA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Thaimaan pääkaupunki on vaihtunut kolmesti, ja jokainen '
+          + 'entinen on jäänyt paikalleen näkyviin. Vanhat kaupungit '
+          + 'rakennettiin veden varaan, ja vesi on niissä yhä.',
+      nostot: [
+        {
+          otsikko: 'Ensimmäinen pääkaupunki tiilessä ja laastissa',
+          aika: '1200-luku',
+          tiedosto: 'Sukhothai Historical Park Wat Mahathat 02.jpg',
+          teksti: 'Sukhothai oli 1200- ja 1300-luvulla thaikuningaskunnan '
+              + 'keskus, ja sen raunioalueella on yli sata temppelin jäännöstä. '
+              + 'Suurin niistä on Wat Mahathat, jonka keskuspyhäkköä ympäröi '
+              + 'lampi ja tiiviisti ladottu pylväsrivi. Pylväät kannattelivat '
+              + 'aikanaan puukattoa, joka on aikaa sitten hävinnyt, joten '
+              + 'buddhankuvat istuvat nyt taivasalla. Sukhothaista on peräisin '
+              + 'myös thaimaalainen kirjaimisto, jonka syntyajaksi on '
+              + 'perinteisesti sanottu vuotta 1283. Alue otettiin '
+              + 'maailmanperintöluetteloon vuonna 1991.',
+          selite: 'Suuri istuva buddhapatsas hämärtyvässä illassa, valaistuna '
+              + 'lämpimällä valolla. Sen edessä ja sivuilla nousee rivi '
+              + 'katkenneita tiilipylväitä, ja taustalla erottuu suippo '
+              + 'torni. Taivas on syvänsininen ja alalaidassa näkyy vettä.',
+          lahde: 'Ninaras, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Pää jäi bodhipuun juurten väliin',
+          aika: '1767',
+          tiedosto: 'Ayutthaya Historical Park Buddha Head in Tree Roots (46453946381).jpg',
+          teksti: 'Ayutthaya perustettiin vuonna 1351, ja siitä kasvoi yksi '
+              + 'Aasian vilkkaimmista kauppakaupungeista: kolmen joen '
+              + 'saartamalla saarella kävivät kiinalaiset, persialaiset, '
+              + 'portugalilaiset ja hollantilaiset kauppiaat. Vuonna 1767 '
+              + 'kaupunki hylättiin ja pääkaupunki siirtyi etelään. Wat '
+              + 'Mahathatin raunioissa on kivinen buddhanpää, joka on jäänyt '
+              + 'bodhipuun juurten väliin: puu kasvoi vuosikymmenten kuluessa '
+              + 'maahan pudonneen pään ympärille ja nosti sen takaisin '
+              + 'silmien korkeudelle. Kukaan ei asettanut sitä sinne.',
+          selite: 'Harmaa kivinen buddhanpää on juuttunut tiiviiseen '
+              + 'juuriverkkoon. Puun ruskeat juuret kiertävät kasvojen '
+              + 'ympärillä joka suunnasta ja koskettavat poskia ja otsaa. '
+              + 'Kasvot ovat rauhalliset ja silmät suljetut, kivi on kulunut '
+              + 'ja jäkälän täplittämä.',
+          lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Uusi pääkaupunki joen mutkaan',
+          aika: '1782',
+          tiedosto: 'Temple of the Emerald Buddha.jpg',
+          teksti: 'Bangkok perustettiin pääkaupungiksi vuonna 1782 Chao '
+              + 'Phrayan itärannalle. Kuninkaanpalatsin viereen rakennettiin '
+              + 'Wat Phra Kaew, jonne sijoitettiin Smaragdibuddha — pieni, '
+              + 'vain noin 66 senttimetriä korkea patsas, joka on veistetty '
+              + 'yhdestä vihreästä jadeiittilohkareesta. Se on Thaimaan '
+              + 'arvostetuin buddhankuva, ja kuningas vaihtaa sille '
+              + 'vuodenaikojen mukaan puvun. Temppelialueella ei asu munkkeja: '
+              + 'se on hovin oma pyhäkkö eikä luostari.',
+          selite: 'Pitkä temppelialue kuvattuna vesialtaan toiselta puolen. '
+              + 'Rivissä kohoaa kultaisia suippoja torneja ja kaksivärisiä '
+              + 'kaarevia kattoja, ja koko rakennusrivi heijastuu tyynestä '
+              + 'vedestä. Etualalla kävelee oranssikaapuinen munkki valkoisen '
+              + 'muurin vierustaa. Taivas on aamun vaaleansininen.',
+          lahde: 'Nawit science, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kadut olivat pitkään kanavia',
+          tiedosto: 'Amphawa Floating Market 1.jpg',
+          teksti: 'Chao Phrayan suistossa maa on matalaa ja vettä on '
+              + 'kaikkialla, joten liikkuminen tapahtui pitkään veneellä. '
+              + 'Kaivetut kanavat eli klongit olivat kaupunkien katuja: '
+              + 'taloilla oli portaat suoraan veteen, kauppa käytiin '
+              + 'veneestä veneeseen ja koulumatka soudettiin. Nimitys '
+              + 'idän Venetsia syntyi juuri tästä. Moni klong on sittemmin '
+              + 'täytetty kaduksi, mutta Amphawan ja Damnoen Saduakin '
+              + 'kaltaisilla kanavamarkkinoilla kauppa käydään yhä vedestä '
+              + 'käsin, ja kapea pitkähäntävene on edelleen nopein kulkutapa '
+              + 'kanavien verkossa.',
+          selite: 'Leveä ruskeavetinen joki, jonka rannalla seisoo puinen '
+              + 'monikattoinen rakennus koristeltuine päätykolmioineen. '
+              + 'Vedessä lipuu pieni kapea vene, jonka perässä on '
+              + 'pitkävartinen moottori. Rantaa reunustaa tiheä vihreä '
+              + 'puurivi, taivaalla on ohuita pilviä.',
+          lahde: 'Rangan Datta Wiki, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten buddhanpää päätyi Ayutthayassa puun juuriin?',
+        vaihtoehdot: [
+          'Puu kasvoi kiven ympärille',
+          'Se veistettiin suoraan puuhun',
+          'Se nostettiin sinne juhlaa varten',
+          'Juuret kannattelevat temppelin kattoa',
+        ],
+        oikea: 0,
+        fakta: 'Pää putosi maahan raunioiden joukkoon, ja bodhipuu kasvoi '
+            + 'hitaasti sen ympäri vuosikymmenten kuluessa.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Thaimaalainen ateria haetaan neljän maun tasapainosta: '
+          + 'suolainen, hapan, makea ja tulinen. Yksikään niistä ei saa '
+          + 'voittaa, ja viimeisen säädön tekee syöjä itse pöydässä.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka on nuorempi kuin luulisi',
+          tiedosto: 'Pad Thai en Bangkok, Tailandia (23790424338).jpg',
+          teksti: 'Pad thai on paistettu riisinuudeliannos, jossa on kananmunaa, '
+              + 'tofua, kuivattua katkarapua, maapähkinää ja idätettyjä papuja. '
+              + 'Happamuus tulee tamarindista ja suolaisuus kalakastikkeesta. '
+              + 'Ruokalaji ei ole vanha: se syntyi 1930-luvulla ja levisi '
+              + 'toisen maailmansodan aikana, kun riisistä oli pulaa ja '
+              + 'pääministeri Plaek Phibunsongkhramin hallitus kannusti '
+              + 'kansalaisia syömään nuudeleita riisin sijaan. Samalla '
+              + 'annoksesta tehtiin tietoisesti kansallisruoka. Nykyään se on '
+              + 'katukeittiöiden perusannos.',
+          selite: 'Katukoju, jonka pöydällä on kasoittain nuudeleita, '
+              + 'kananmunia ja mausteita muovikoreissa. Kojun takana istuu '
+              + 'myyjä keltaisessa lippalakissa. Yläpuolella roikkuu käsin '
+              + 'kirjoitettu keltainen kyltti, jossa lukee pad thai ja hinta. '
+              + 'Vieressä on värikäs päivänvarjo.',
+          lahde: 'Edgardo W. Olivera from Montevideo, Uruguay, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Salaatti survotaan huhmaressa',
+          tiedosto: 'Som Tum ส้มตำไทย- mortar pounded green papaya salad with palm sugar, lime juice, bird eye chile, peanuts.jpg',
+          teksti: 'Som tam tehdään raa\'asta papaijasta, joka on vielä kova ja '
+              + 'valkoinen. Hedelmä raastetaan pitkiksi suikaleiksi ja '
+              + 'survotaan savi- tai puuhuhmaressa yhdessä limetin, '
+              + 'palmusokerin, kalakastikkeen, valkosipulin ja pienten '
+              + 'chilien kanssa. Survominen ei ole hienontamista vaan '
+              + 'sekoittamista: nuija rikkoo soluseinät niin, että mausteet '
+              + 'imeytyvät suikaleisiin. Ruoka on kotoisin Koillis-Thaimaan '
+              + 'Isanista. Tekijä kysyy usein ensin, montako chiliä laitetaan '
+              + '— ja vastausta kannattaa harkita.',
+          selite: 'Valkoinen lautanen kukallisella pöytäliinalla. Lautasella '
+              + 'on kasa vaaleita papaijasuikaleita, joiden seassa on '
+              + 'oranssia porkkanaa, punaisia chilinpaloja ja maapähkinöitä. '
+              + 'Reunalla on lusikka ja pieni vaaleanpunainen katkarapu.',
+          lahde: 'T.Tseng, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kastike, joka odottaa pöydässä',
+          tiedosto: 'Nampla phrik, 2018-05-05.jpg',
+          teksti: 'Nam pla on kalakastike, ja se tehdään suolaamalla pieniä '
+              + 'kaloja tynnyriin ja antamalla niiden käydä kuukausia. '
+              + 'Kalasta valuva kirkas neste on lopputuote: se on väkevän '
+              + 'suolainen ja täynnä umamia. Jokaisessa ruokapaikassa on '
+              + 'pöydällä pieni kulho nam pla phrikiä, kalakastiketta jossa '
+              + 'kelluu viipaloituja chilejä ja usein limettiä ja '
+              + 'valkosipulia. Sillä syöjä säätää annoksensa itse: ruoka '
+              + 'tuodaan keittiöstä perusmaultaan, ja loppusilaus tehdään '
+              + 'pöydässä.',
+          selite: 'Valkoinen neliönmuotoinen kulho keltaisella pöytäliinalla. '
+              + 'Kulhon pohjalla on kirkasta vaaleanruskeaa nestettä, jonka '
+              + 'pinnalla kelluu viitisen pientä chiliä: osa vihreitä, osa '
+              + 'kirkkaanpunaisia, viipaloituina ja kokonaisina.',
+          lahde: 'Bitterschoko, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Jälkiruoka valuu kookoskermassa',
+          tiedosto: 'Mango sticky rice served in Thailand.jpg',
+          teksti: 'Khao niao mamuang eli mangoa ja tahmeaa riisiä on Thaimaan '
+              + 'tunnetuin jälkiruoka. Tahmea riisi on eri lajike kuin '
+              + 'tavallinen: siinä on hyvin vähän amyloosia, joten jyvät '
+              + 'tarttuvat kypsyessään yhteen ja riisiä voi syödä sormin. '
+              + 'Riisi höyrytetään, sekoitetaan makeaan kookosmaitoon ja '
+              + 'annetaan vetäytyä. Päälle asetetaan kypsän mangon lohkot ja '
+              + 'lorautetaan suolaista kookoskermaa. Annos on parhaimmillaan '
+              + 'huhti-kesäkuussa, kun mangot kypsyvät.',
+          selite: 'Soikea lautanen, jolla on kasa valkoista tahmeaa riisiä ja '
+              + 'sen vieressä viisi paksua kirkkaankeltaista mangolohkoa. '
+              + 'Riisin päällä on vaaleaa kastiketta ja mustia siemeniä. '
+              + 'Taustalla näkyy puinen pöytä ja toinen annos.',
+          lahde: 'Arthur Taksin, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi hallitus kannusti syömään nuudeleita 1940-luvulla?',
+        vaihtoehdot: [
+          'Riisistä oli pulaa',
+          'Nuudelit olivat halvempia tuoda',
+          'Vehnää saatiin liikaa',
+          'Kalastus oli keskeytyksissä',
+        ],
+        oikea: 0,
+        fakta: 'Samalla annoksesta tehtiin tietoisesti kansallisruoka, ja '
+            + 'nimeen liitettiin sana thai.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Thaimaalainen kuva ei useinkaan ole yksittäinen teos vaan osa '
+          + 'jotain suurempaa: seinän mittainen kertomus, pöytäastiasto tai '
+          + 'kangas, jota kudotaan neljän ihmisen voimin.',
+      nostot: [
+        {
+          otsikko: 'Kertomus kiertää koko pihan',
+          tiedosto: 'Ramakien 04.jpg',
+          teksti: 'Ramakien on Thaimaan kansalliseepos ja oma versionsa '
+              + 'intialaisesta Ramayanasta. Osa vanhemmista käsikirjoituksista '
+              + 'katosi vuonna 1767, ja nykyinen laitos koottiin vuonna 1797 '
+              + 'kuningas Rama I:n johdolla. Wat Phra Kaew\'n ympäri kiertävän '
+              + 'pylväskäytävän seiniin on maalattu koko kertomus jaksoittain: '
+              + 'kävelijä seuraa tarinaa askel askeleelta, ja maalaukset '
+              + 'jatkuvat sadan kahdeksankymmenen kentän verran. Alkuperäiset '
+              + '1700-luvun maalaukset tehtiin kultalehteä käyttäen, ja niitä '
+              + 'on korjattu useaan otteeseen.',
+          selite: 'Kultainen maalaus tummanpunaisella pohjalla. Keskellä on '
+              + 'monikätinen ja monikasvoinen hahmo, joka seisoo jalat '
+              + 'levällään ja kädet ojennettuina eri suuntiin. Käsissä on '
+              + 'aseita ja esineitä, päässä suippo kruunu. Ympärillä kiertää '
+              + 'koristeellinen kultainen kehys.',
+          lahde: 'Prof Ranga Sai, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Patsas, joka näyttää astuvan eteenpäin',
+          tiedosto: 'Bronze walking Buddha, Thailand, Sukhothai kingdom, 15th century, Honolulu Academy of Arts.jpg',
+          teksti: 'Sukhothain kuvanveistäjät kehittivät jotain, mitä muualla '
+              + 'ei ollut tehty: kävelevä buddhahahmo. Aiemmat kuvat istuivat, '
+              + 'seisoivat tai makasivat, mutta täällä hahmo on kesken '
+              + 'askeleen — takajalka nousee kantapäältä, vartalo kaartuu '
+              + 'pehmeästi ja toinen käsi on nostettu. Muoto ei jäljittele '
+              + 'ihmisvartaloa vaan runokuvia: hartiat kuin leijonalla, '
+              + 'käsivarret kuin norsun kärsä, kasvot kuin muna. Patsaat '
+              + 'valettiin pronssista, ja niiden pinta on tarkoituksella '
+              + 'sileä ja kiillotettu.',
+          selite: 'Kaksi valokuvaa samasta tummanvihreästä pronssipatsaasta, '
+              + 'edestä ja takaa. Hahmo on hoikka ja pitkä, se astuu askelta '
+              + 'eteenpäin ja oikea käsi on nostettu rinnan korkeudelle. '
+              + 'Päälaella on liekin muotoinen kärki. Patsas seisoo museon '
+              + 'lasivitriinissä vaalealla taustalla.',
+          lahde: 'Hiart, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Viisi väriä ja kultaa',
+          tiedosto: 'Benjarong Thai 19th cent Ayuthaya porcelain Jim Thompson Museum IMG 7102.jpg',
+          teksti: 'Benjarong tarkoittaa viittä väriä. Se on thaimaalainen '
+              + 'koristeposliini, jota tehtiin alun perin hovin tilauksesta: '
+              + 'astiat poltettiin Kiinassa thaimaalaisten mallien mukaan ja '
+              + 'koristeltiin sitten paikan päällä. Kuviot maalataan '
+              + 'emalilla lasituksen päälle, joten pintaa voi sormella '
+              + 'tunnustella kohomaisena. Aiheina toistuvat liekkikuviot, '
+              + 'jumalhahmot ja kukkarivit, ja tausta täytetään kokonaan. '
+              + 'Kultaus lisätään viimeisenä ja poltetaan matalassa '
+              + 'lämpötilassa, ettei se pala pois.',
+          selite: 'Pyöreä kannellinen ruukku museovitriinissä. Astian pinta '
+              + 'on peitetty tiheällä kuviolla: tummansinisiä, punaisia ja '
+              + 'kullanvärisiä liekkimäisiä muotoja ja pieniä hahmoja '
+              + 'riveissä. Kansi kohoaa nuppiin. Taustalla näkyy toinen '
+              + 'samanlainen astia epätarkkana.',
+          lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kangas vaatii neljä kutojaa',
+          tiedosto: 'Thai Silk Weaving 1 - Ban Tha Sawang.jpg',
+          teksti: 'Koillis-Thaimaan Surinissa, Ban Tha Sawangin kylässä, '
+              + 'kudotaan brokadisilkkiä kangaspuilla, joita ei voi käyttää '
+              + 'yksin: kuviolangat nostetaan ylhäältä käsin samaan aikaan '
+              + 'kun kutoja heittää sukkulaa, joten yhdellä puilla '
+              + 'työskentelee useampi ihminen kerralla. Eteneminen on '
+              + 'hidasta, muutamia senttimetrejä päivässä. Silkkilanka '
+              + 'kehrätään paikallisten silkkiperhosten koteloista, ja '
+              + 'kuvioihin käytetään myös kultalankaa. Thaimaalainen silkki '
+              + 'tunnetaan epätasaisesta langastaan, joka saa kankaan '
+              + 'kimaltamaan eri tavoin eri suunnista.',
+          selite: 'Kaksi naista työskentelee puisilla kangaspuilla '
+              + 'hämärässä hallissa. Etummainen istuu puiden ääressä ja '
+              + 'pitelee sukkulaa, takimmainen seisoo sivummalla. Puiden '
+              + 'yläpuolelta roikkuu kymmeniä valkoisia lankoja alas '
+              + 'kudokseen. Kudos on kellertävä ja kiiltävä.',
+          lahde: 'JJ Harrison ( https://www.jjharrison.com.au/ ), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä uuden buddhankuvan Sukhothain veistäjät kehittivät?',
+        vaihtoehdot: [
+          'Kävelevä buddhahahmo',
+          'Istuva buddhahahmo',
+          'Makaava buddhahahmo',
+          'Kaksipäinen buddhahahmo',
+        ],
+        oikea: 0,
+        fakta: 'Muoto ei jäljittele ihmisvartaloa vaan vanhoja runokuvia: '
+            + 'hartiat kuin leijonalla, käsivarret kuin norsun kärsä.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Thaimaan luonto on pystysuoraa: kalkkikivipylväät nousevat '
+          + 'suoraan merestä, sademetsä kiipeää rinteitä ja linnut asuvat '
+          + 'kahdenkymmenen metrin korkeudessa.',
+      nostot: [
+        {
+          otsikko: 'Saaret nousevat suoraan merestä',
+          tiedosto: 'Phang Nga Bay, Karst islands, Thailand.jpg',
+          teksti: 'Phang Ngan lahdella Andamaanienmerellä kohoaa vedestä '
+              + 'satoja jyrkkäseinäisiä kalkkikivisaaria. Kivi on syntynyt '
+              + 'muinaisen matalan meren pohjalle kertyneistä kuorista ja '
+              + 'korallista, ja sadevesi on liuottanut siihen onkaloita, '
+              + 'luolia ja kokonaisia sisäjärviä. Osaan saarista pääsee vain '
+              + 'sukeltamalla luolakäytävän läpi, ja saaren sisällä avautuu '
+              + 'jyrkkäreunainen laakso omine metsineen. Merenpinnan noustua '
+              + 'jääkauden jälkeen vanha maasto jäi veden alle ja jäljelle '
+              + 'jäivät vain kovimmat kalliot.',
+          selite: 'Tyyni harmaansininen merenlahti, jossa kohoaa neljä '
+              + 'jyrkkäseinäistä metsäistä kalliosaarta eri etäisyyksillä. '
+              + 'Vedessä kelluu muutama nelikulmainen kalankasvatuslautta ja '
+              + 'kapea vene. Etäisyyden sumu vaalentaa taimmaiset saaret '
+              + 'lähes valkoisiksi.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Naaras sulkeutuu pesään',
+          tiedosto: 'Wreathed hornbill, Khao Yai National Park, Nakhon Ratchasima province.jpg',
+          teksti: 'Sarvinokat pesivät suurten puiden koloissa 18–28 metrin '
+              + 'korkeudessa, eivätkä ne osaa koverta koloa itse vaan etsivät '
+              + 'valmiin. Naaras muuraa pesäkolon lähes umpeen omalla '
+              + 'ulosteellaan ja mudalla ja jättää vain raon, josta koiras '
+              + 'syöttää sitä. Näin munat ja poikanen ovat turvassa '
+              + 'saalistajilta. Naaras hautoo yksin noin 40 vuorokautta, ja '
+              + 'koko pesintä kestää 111–137 päivää. Sarvinokka syö suuria '
+              + 'hedelmiä kokonaisina ja pudottaa siemenet ehjinä kauas — '
+              + 'yhden seuratun koiraan päivämatka oli lähes 25 kilometriä.',
+          selite: 'Suuri lintu lentää siivet levällään sumuisen '
+              + 'metsänrinteen yllä. Siipien alta erottuu vaalea kaistale ja '
+              + 'pää on vaaleampi kuin tumma vartalo. Alla aaltoilee tiheä '
+              + 'vihreä latvusmeri, taustalla siniset vuoret ja '
+              + 'poutapilviä.',
+          lahde: 'Kanrit74, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Norsut tulevat vedelle iltapäivällä',
+          tiedosto: 'Wild Elephants in Kui Buri National Park.jpg',
+          teksti: 'Aasiannorsu on Thaimaan kansalliseläin, ja se on ollut '
+              + 'vuosisatoja työeläin ja seremonioiden kantaja. Villejä '
+              + 'norsuja elää yhä maan kansallispuistoissa; Kui Burissa niitä '
+              + 'näkee iltapäivisin, kun laumat tulevat metsästä avoimille '
+              + 'niityille ja vesilammikoille. Lauma on naaraiden ja '
+              + 'poikasten muodostama, ja sitä johtaa vanhin naaras, joka '
+              + 'muistaa vesipaikkojen sijainnin vuosikymmenten takaa. '
+              + 'Kuivana kautena tämä muisti ratkaisee, missä lauma selviää.',
+          selite: 'Norsulauma seisoo matalan vesilammikon rannalla metsän '
+              + 'reunassa. Eläimiä on toistakymmentä eri kokoisina, ja osa '
+              + 'on kahlannut veteen. Rannan multa on ruskeaa ja tallattua, '
+              + 'takana kohoaa tiheä vihreä puurivi.',
+          lahde: 'Khajonrat.K, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sademetsä ja tekojärvi',
+          tiedosto: 'Cheow Lan Lake, Rainforest, Khao Sok, Thailand.jpg',
+          teksti: 'Khao Sokin kansallispuisto Etelä-Thaimaassa on '
+              + 'ikivihreää trooppista sademetsää, jossa sataa runsaasti '
+              + 'lähes ympäri vuoden. Puiston keskellä on Cheow Lanin järvi, '
+              + 'joka ei ole luonnon tekemä: se syntyi, kun jokeen '
+              + 'rakennettiin pato ja laakso täyttyi vedellä. Veden noustua '
+              + 'entiset kukkulanhuiput jäivät saariksi, ja kalkkikivijyrkänteet '
+              + 'nousevat nyt suoraan järvestä. Aamuisin vesi höyryää ja '
+              + 'sumu jää roikkumaan puiden latvoihin.',
+          selite: 'Tyyni järvi aamun sumussa. Rannalla kasvaa tiheä '
+              + 'monikerroksinen sademetsä, jonka latvojen yllä leijuu '
+              + 'valkoisia sumuhattaroita. Taustalla häämöttää jyrkkä '
+              + 'kalliohuippu usvan takaa. Vesi heijastaa metsän tummana.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten sarvinokkanaaras suojaa pesäänsä?',
+        vaihtoehdot: [
+          'Muuraa pesäkolon lähes umpeen',
+          'Rakentaa pesän kalliolle',
+          'Peittää munat lehdillä',
+          'Vartioi pesää läheiseltä oksalta',
+        ],
+        oikea: 0,
+        fakta: 'Rako jätetään niin pieneksi, että vain ruoka mahtuu läpi — '
+            + 'koiras syöttää naarasta koko haudonnan ajan.',
+      },
+    },
+    {
+      id: 'juhlat',
+      nimi: 'Juhlat',
+      johdanto: 'Thaimaan juhlissa tehdään jotain veden kanssa: sitä '
+          + 'kaadetaan, sillä kellutetaan tai se heijastaa tulta. Vuoden '
+          + 'kaksi suurinta juhlaa ovat molemmat veden juhlia.',
+      nostot: [
+        {
+          otsikko: 'Uusivuosi vietetään vedellä',
+          tiedosto: 'Chiang-Mai Thailand Songkran-Festival-2017-04.jpg',
+          teksti: 'Songkran on perinteinen thaimaalainen uusivuosi, ja sitä '
+              + 'vietetään 13. huhtikuuta ja kahtena seuraavana päivänä. '
+              + 'Alkuperäinen tapa on hellä: nuorempi kaataa varovasti '
+              + 'tuoksutettua vettä vanhemman käsille ja pyytää siunausta, ja '
+              + 'buddhankuvia pestään puhtaiksi. Kaduilla tavasta on kasvanut '
+              + 'koko maan kattava vesisota, jossa ämpärit ja vesipyssyt ovat '
+              + 'käytössä kolme päivää — huhtikuu on vuoden kuumin kuukausi, '
+              + 'joten kastuminen on lahja. Juhla on Unescon aineettoman '
+              + 'kulttuuriperinnön luettelossa.',
+          selite: 'Nuori mies seisoo kadulla kukkakuvioisessa paidassa ja '
+              + 'tähtää suurella keltavihreällä vesipyssyllä kameraa kohti. '
+              + 'Hän on läpimärkä ja nauraa. Taustalla näkyy kojuja, '
+              + 'värikkäitä kylttejä ja muita juhlijoita vihreiden pensaiden '
+              + 'takana.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kori lasketaan virtaan',
+          tiedosto: 'Chiang Mai, Krathong Festival, Thailand.jpg',
+          teksti: 'Loi Krathongia vietetään kahdennentoista kuukauden '
+              + 'täydenkuun iltana, joten päivä vaihtelee vuosittain. Nimi '
+              + 'tarkoittaa kelluvaa koria: banaaninlehdistä taitellaan '
+              + 'lautasen kokoinen alus, se koristellaan kukilla ja siihen '
+              + 'asetetaan kynttilä ja suitsukkeita. Kori lasketaan jokeen ja '
+              + 'sen mukana lähetetään pois kuluneen vuoden harmit; monelle '
+              + 'se on myös kiitos vesien jumalattarelle. Nykymuotoinen juhla '
+              + 'on osin uusi: se levisi koko maahan vasta toisen '
+              + 'maailmansodan jälkeen.',
+          selite: 'Nuori nainen kyykistyy pimeän joen rantaan ja laskee '
+              + 'vedelle pyöreää koria, jossa palaa kynttilä. Kynttilän '
+              + 'lämmin valo valaisee hänen kasvonsa ja kädet. Ympärillä on '
+              + 'pimeää, ja vedessä näkyy kaukaisia valopilkkuja.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Lyhdyt nousevat taivaalle',
+          tiedosto: 'Yi peng sky lantern festival San Sai Thailand.jpg',
+          teksti: 'Pohjois-Thaimaassa vietetään samoihin aikoihin Yi Peng '
+              + '-juhlaa, joka on peräisin vanhasta Lannan kuningaskunnasta. '
+              + 'Siinä lasketaan taivaalle khom loi -lyhtyjä: riisipaperista '
+              + 'tehdyn pussin alle kiinnitetään vahalla kyllästetty rengas, '
+              + 'joka sytytetään. Kuuma ilma nostaa lyhdyn samalla '
+              + 'periaatteella kuin kuumailmapallon. Chiang Main ympäristössä '
+              + 'niitä nousee tuhansia yhtä aikaa. Lentokentät sopivat '
+              + 'nykyään erikseen siitä, milloin ja missä lyhtyjä saa '
+              + 'päästää ilmaan.',
+          selite: 'Yön taivas täynnä satoja kellertäviä valopilkkuja, jotka '
+              + 'nousevat rivissä ylöspäin. Alhaalla vasemmassa reunassa '
+              + 'näkyy ihmisen pää ja olkapää siluettina sekä yksi lyhty '
+              + 'aivan lähellä, sen paperinen pussi hehkuen sisältäpäin.',
+          lahde: 'Takeaway, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Aamu alkaa ruoan antamisella',
+          tiedosto: 'Pindacāra.jpg',
+          teksti: 'Joka aamu ennen aamiaista munkit kulkevat kaduilla jonossa '
+              + 'kerjuukulkueella. He eivät pyydä mitään eivätkä kiitä: '
+              + 'munkki seisoo hiljaa, ja ohikulkija panee ruokaa hänen '
+              + 'kulhoonsa. Ajatus kulkee toisin päin kuin luulisi — antaja '
+              + 'saa ansiota, joten kiitosvelka on hänellä. Munkit syövät '
+              + 'saamansa ruoan ennen keskipäivää, eivätkä sen jälkeen enää '
+              + 'ennen seuraavaa aamua. Moni thaimaalainen mies viettää '
+              + 'jonkin jakson elämästään luostarissa, usein muutaman '
+              + 'kuukauden nuorena aikuisena.',
+          selite: 'Iäkäs oranssikaapuinen munkki seisoo paljain jaloin '
+              + 'kadulla ja pitelee kulhoa kaulassaan. Hänen edessään seisoo '
+              + 'nainen kuviollisessa paidassa ja kumartuu panemaan jotain '
+              + 'kulhoon. Taustalla on kaupungin katua, kojuja ja '
+              + 'moottoripyöriä.',
+          lahde: 'Photogoddle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä sana krathong tarkoittaa?',
+        vaihtoehdot: [
+          'Kelluvaa koria',
+          'Vesikannua',
+          'Kynttiläjalkaa',
+          'Täysikuuta',
+        ],
+        oikea: 0,
+        fakta: 'Alus taitellaan banaaninlehdistä ja koristellaan kukilla '
+            + 'ennen kuin siihen asetetaan kynttilä.',
+      },
+    },
+  ],
 };
