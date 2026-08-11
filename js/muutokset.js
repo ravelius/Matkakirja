@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 572, teksti: 'Riadin kohtaaminen viittaa oikeaan kysymykseen' },
   { v: 571, teksti: 'Sonnetin 15 löydöstä korjattu — Eurooppa puhdas' },
   { v: 570, teksti: 'Jemenin lehteen historia-, rakennus-, luonto- ja ruokasivut' },
   { v: 569, teksti: 'Euro-hionnan erä 3: EU-lauta kokonaan budjettiin' },
