@@ -2438,8 +2438,8 @@ export const KAARI_PAKETIT = {
       henkilo: 'Kaivonkaivaja Abdullah on nostanut vettä aavikon alta koko '
         + 'ikänsä, kuten hänen sukunsa ennen häntä.',
       kohtaaminen: 'Abdullah kelaa köyttä kaivolta. "Työkalun omistaja kysyi, '
-        + 'miksi rakennamme savesta emmekä kivestä. Hän tiesi '
-        + 'vastauksen itse — ja jätti kysymyksen perinnöksi. Vastaa, '
+        + 'mistä kaivaja tietää, minne kaivaa. Hän tiesi vastauksen '
+        + 'itse — ja jätti kysymyksen perinnöksi. Vastaa, '
         + 'niin lasken sangon kaivoon vielä kerran."',
       kysymys: {
         q: 'Kaivonkaivaja löytää aavikolta veden ilman karttaa. Mistä '
