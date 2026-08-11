@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 559, teksti: 'Kolme kysymystäsmennystä Sonnetin varmistuskierroksesta' },
   { v: 558, teksti: 'Visaspoilerit pois Euroopasta: 25 kysymystä uusiksi' },
   { v: 557, teksti: 'Yhdeksän saapumista uusiksi: Euroopan rimakierros valmis' },
   { v: 556, teksti: 'Kahdeksan saapumista uusiksi: mittaajan kommellukset (erä 3)' },
