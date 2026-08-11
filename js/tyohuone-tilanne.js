@@ -10,75 +10,80 @@
  */
 
 export const TILANNE = {
-  paivitetty: '11.8.2026 (yö klo 03 Suomen aikaa) — YÖAJO KÄYNNISSÄ',
-  tavoite: 'Yöajo: Euroopan matkakirjatekstit hiotaan uuteen rimaan '
-    + 'erissä (kommellukset, tosihuomiot, mittaajan persoona), '
-    + 'vuorigalleriat valmistuivat (52/52), ME-kaupunkilehdet '
-    + 'etenevät. Luentojen generoinnit odottavat omistajan lupaa '
-    + 'aamulla; ME-generointi odottaa Euroopan valmistumista.',
+  paivitetty: '11.8.2026 (yö klo 04.40 Suomen aikaa) — YÖAJO KÄYNNISSÄ',
+  tavoite: 'Yöajo: Euroopan rimakierros VALMIS (34/41 uusittu tai '
+    + 'silattu, 7 tietoisesti ennallaan). Nyt korjataan Sonnetin '
+    + 'löytämät EU-visaspoilerit ja ME-kaupunkilehdet etenevät. '
+    + 'Luentojen generoinnit odottavat omistajan lupaa aamulla.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
       tila: 'tyossa',
-      tehtava: 'Yön julkaisusykli: v551+v555 vuorigalleriat (52 '
-        + 'kohdetta, 324 kuvaa), v552+v556 saapumiset uusiksi (19 '
-        + 'kohdetta tähän mennessä), v553 maastoartikkelit i-ikkunaan, '
-        + 'v554 ME:n Isfahan-korjaukset. Tromssan otsikkovuoto '
-        + 'korjattu (otsikko paljasti visan vastauksen).',
-      seuraavaksi: 'Vahtikierrokset yön yli ~75 min välein. Aamuksi '
-        + 'omistajalle: aloituskaupunkipäätös (BA→Lima), lupa Euroopan '
-        + 'luentojen generointiin (26 mykistettyä luentaa jonossa).',
+      tehtava: 'Yön julkaisusykli: v551+v555 vuorigalleriat, '
+        + 'v552+v556+v557 saapumiset uusiksi (28 kohdetta), v553 '
+        + 'maastoartikkelit, v554 ME:n Isfahan-korjaukset. '
+        + 'Kaanonkirjaus: ME-erikoiskohteet saavat maatunnuksen '
+        + '(paitsi Jerusalem) — laudat olivat ristiriidassa.',
+      seuraavaksi: 'Maxin EU-Isfahan-korjausten katselmointi ja '
+        + 'julkaisu. Aamuksi omistajalle: aloituskaupunkipäätös '
+        + '(BA→Lima), lupa Euroopan luentojen generointiin (35 '
+        + 'mykistettyä luentaa jonossa), ME-maiden aihemitan nosto.',
     },
     {
       tekija: 'Fable max',
       rooli: 'syväajattelu (apusessio)',
       tila: 'tyossa',
-      tehtava: 'Riman erät 1–3 valmiit ja mainissa: 19 saapumista '
-        + 'uusiksi + 7 Reginald-mietintöä. Löysi ja korjasi Tromssan '
-        + 'otsikkovuodon, tarkisti loput 40 otsikkoa (puhtaat).',
-      seuraavaksi: 'Erä 4 käynnissä: isompi käsittely Sarajevo, '
-        + 'Kiova, Bukarest, Praha; kevyt silaus Amsterdam, Krakova, '
-        + 'Kööpenhamina, Berliini, Helsinki. Erä 5 päättää Euroopan.',
+      tehtava: 'Riman erät 1–4 valmiit ja mainissa (28 saapumista '
+        + 'uusiksi + 7 Reginald-mietintöä + Tromssan otsikkovuodon '
+        + 'korjaus). Euroopan kierros valmis.',
+      seuraavaksi: 'EU-Isfahan-korjauserä: ~25 visakysymystä uusiksi '
+        + 'Sonnetin raportin pohjalta (vastaus ei saa vuotaa '
+        + 'tekstissä ennen kysymystä), Kreeta/Varsova harkintaan.',
     },
     {
       tekija: 'Opus 1',
       rooli: 'lehdet + rakenne',
       tila: 'tyossa',
-      tehtava: 'ME-kaupunkilehdet: Isfahan-korjauserä mainissa '
-        + '(v554), Iranin lehteen historia- ja rakennukset-aiheet '
-        + 'työn alla, ME-laudan erikoiskohteille maatunnukset.',
-      seuraavaksi: 'ME-lehtien loput erät; lehtien esilataus jonossa.',
+      tehtava: 'ME-kaupunkilehdet: Iranin historia- ja rakennukset-'
+        + 'aiheet valmiina (8 kuvaa, lisenssit tarkistettu), '
+        + 'erikoiskohteiden maatunnukset korjattu.',
+      seuraavaksi: 'Iranin loput aiheet (puutarhat, ruoka, käsityö) '
+        + '→ julkaisu; sitten IRQ, SYR, YEM, CYP samalla reseptillä.',
     },
     {
       tekija: 'Opus 5',
       rooli: 'vuorigalleriat + kuvatyöt',
       tila: 'tyossa',
       tehtava: 'Vuorigalleriaurakka VALMIS: 52/52 kohdetta, 324 '
-        + 'käsin kuratoitua Commons-kuvaa (v551 + v555). '
-        + 'Silmätarkistus hylkäsi mm. väärät vuoret, vesileimat ja '
-        + 'GFDL-lisenssit; tekijätarkistin vertaa Commonsin kenttään.',
-      seuraavaksi: 'Peiliajo: 324 uutta kuvaa + 15 nimenvaihtoa '
-        + 'peiliin. Sen jälkeen perhekuvien kuratointierä '
-        + 'numeroina-sivulle.',
+        + 'kuraattorikuvaa mainissa ja peilissä (kattavuus '
+        + 'tarkistettu 324/324 + 56/56).',
+      seuraavaksi: 'Kuvatyökalun (hae-vuorikuvat) viimeistely '
+        + 'yleiskäyttöiseksi; sitten valmiustila.',
     },
     {
       tekija: 'Sonnet 1',
       rooli: 'QA',
-      tila: 'odottaa',
-      tehtava: 'ME-kokonaisristiriitatarkistus valmis: 13/28 '
-        + 'Isfahan-sääntö-spoileria löydetty ja kaikki käsitelty '
+      tila: 'valmis',
+      tehtava: 'EU-Isfahan-tarkistus valmis: 22/41 spoileria '
+        + 'löydetty (20 ilmaista korjata), bonuksena 3 kysymys–'
+        + 'kohtaus-irrallisuutta. ME:n vastaava (13/28) käsitelty '
         + 'v554:ssä.',
-      seuraavaksi: 'Euroopan Isfahan-sääntötarkistus käynnistyy '
-        + 'automaattisesti 00:30Z (03:30 Suomen aikaa).',
+      seuraavaksi: 'Valmiudessa; seuraava tarkistuserä annetaan kun '
+        + 'Maxin korjaukset ovat mainissa.',
     },
   ],
   odottaaPaatosta: [
     'Aloituskaupunkiarvio: 17/19 pidetään, LA→Chicago selvä, '
       + 'BA→Lima harkinnainen — päätös omistajalla.',
-    'Euroopan uusien luentojen generointi: 26 mykistettyä luentaa '
+    'Euroopan uusien luentojen generointi: 35 mykistettyä luentaa '
       + 'odottaa lupaa (tekstit pelissä, vanhat äänet eivät soi '
       + 'väärän tekstin päällä).',
+    'ME-maiden aihemitta: nykyisillä mailla 2–4 aihetta, tilaus oli '
+      + '5–6 — noston laajuus omistajan päätös.',
+    'ME-erikoiskohteiden maatunnus annettu (paitsi Jerusalem) — '
+      + 'kaanonmuutos kirjattu, kumottavissa jos omistaja toisin '
+      + 'päättää.',
     'Afrikan jakotauluehdotus (P1–P5) omistajalla luettavana.',
   ],
 };
@@ -98,8 +103,10 @@ export const TESTATTAVAA = [
       + 'yhteensä 324 Commons-valokuvaa suomenkielisin selittein.',
   },
   {
-    otsikko: 'Matkakirjan saapumiset uudella rimalla (v552 + v556)',
-    ohje: 'Saavu Istanbuliin, Lontooseen, Pietariin tai Madridiin: '
+    otsikko: 'Matkakirjan saapumiset uudella rimalla (v552–v557)',
+    ohje: 'Euroopan rimakierros on valmis: 34/41 kohteen merkinnät '
+      + 'uusittu tai silattu. Saavu Istanbuliin, Prahaan, Kiovaan '
+      + 'tai Madridiin: '
       + 'isoisän merkinnät ovat nyt kommelluksia, tosihuomioita ja '
       + 'mittaajan persoonaa — mm. Bradshaw\'n käsittämätön '
       + 'aikataulukirja ja kolmentoista lyönnin varmistus kahtena '
