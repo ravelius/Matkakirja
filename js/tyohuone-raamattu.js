@@ -194,14 +194,37 @@ export const RAAMATTU2 = {
       tila: 'luonnos',
       kohdat: [
         'Laatta joka kaupungissa; tehtävän oikea vastaus kääntää '
-          + 'sen. Laattojen alta löytyy joko AARTEITA (muuttuvat '
-          + 'heti rahaksi — eivät jää matkalaukkuun), VARUSTEITA '
-          + '(ei rahallista arvoa, mutta toiminnallisia) tai '
-          + 'mantereen PÄÄAARRE (+2000 puntaa JA jää '
-          + 'matkalaukkuun näkyviin). Jokaisella mantereella on '
-          + 'omat aarteensa omine kuvineen — laatta paljastaa sen '
-          + 'mantereen aarteen, jolta se löytyy (taulukko alla). '
-          + 'Vanhoja Afrikan tähden jalokiviä ei ole pelissä.',
+          + 'sen. UUSI LINJAUS (11.8.2026, luonnos): laatan alta '
+          + 'löytyy aina aarre — pieni tai iso PAIKALLISAARRE, '
+          + 'mantereen 1000 pisteen aarre tai mantereen PÄÄAARRE '
+          + '(+2000 puntaa JA jää matkalaukkuun näkyviin). Rosvo, '
+          + 'tyhjä laatta ja hevosenkenkä poistetaan pelistä '
+          + 'kokonaan. Aarteet muuttuvat heti rahaksi (paitsi '
+          + 'pääaarre, joka jää myös laukkuun).',
+        'PAIKALLISAARTEET (luonnos): jokaiselle maalle omat kaksi '
+          + 'aarretta — pieni, lähes arvoton mutta paikkaan sopiva '
+          + '(esim. Suomessa mustikat) ja iso, arvokas '
+          + 'kulttuuriesine tai muuten paikkaan kuuluva aarre. Osa '
+          + 'saa olla hauskan yllättäviä. Nämä korvaavat vanhat '
+          + '300 ja 600 pisteen yleisaarteet. Laudalla on 110 '
+          + 'maata, joten pareja tulee noin 220.',
+        'Aarteen tarkka arvo vaihtelee löytöhetkellä — pelaaja '
+          + 'tietää vain, löytyikö pieni vai iso paikallisaarre '
+          + '(esim. pieni ~100–250 p, iso ~500–800 p; haarukat '
+          + 'päätetään erikseen). Mantereen 1000 pisteen aarre ja '
+          + 'pääaarteen 2000 puntaa pysyvät kiinteinä.',
+        'Löytöteksti: paikallisaarteesta kerrotaan lyhyesti '
+          + 'jotain totta ja kiinnostavaa, ja lopuksi nuorelle '
+          + 'herralle toivotetaan onnea etsintöihin.',
+        'Huudahdukset: pääaarteen nykyiset luetut huudahdukset '
+          + 'säilyvät — se on pysäyttävä hetki. Kaikki muut '
+          + 'nykyiset huudahdukset poistetaan. Tilalle todella '
+          + 'lyhyet, korkeintaan kahden sanan huudahdukset: '
+          + 'isoille löydöille tyyliin "Jes!" / "Jippii!", '
+          + 'pienille "No okei." / "Voi rähmä."',
+        'AVOINNA (kirjattu 11.8.): vertailulinssilaatan (varuste, '
+          + '7 laattaa) kohtalo, ja rosvon poisto lopettaa myös '
+          + 'rosvon kaksintaistelu -pelin — päätetään yhdessä.',
         'Seitsemän pääaarretta eli unohdettua aarretta — yksi per '
           + 'manner, Aarnin luettelosta. Löytymiselle ei ole '
           + 'kynnystä: pääaarre voi osua mantereen ensimmäiseen '
