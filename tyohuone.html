@@ -28,6 +28,7 @@
       <button data-tab="raamattu">Raamattu 2.0</button>
       <button data-tab="tilanne">Tilanne</button>
       <button data-tab="eurotekstit">Euroopan tekstit</button>
+      <button data-tab="naytteet">Näytteet</button>
       <button data-tab="pelit">Pelit</button>
       <button data-tab="kaupungit">Kaupungit</button>
       <button data-tab="studio">Studio</button>
@@ -102,6 +103,12 @@
       <div id="eurotekstit-yhteenveto"></div>
       <div id="eurotekstit-selite"></div>
       <div id="eurotekstit"></div>
+    </section>
+
+    <!-- NÄYTTEET: uusiksi kirjoitetut merkinnät vertailtavaksi
+         (omistajan tilaus 11.8.2026). Sisältö js/tyohuone-naytteet.js. -->
+    <section id="tab-naytteet" hidden>
+      <div id="naytteet"></div>
     </section>
 
     <!-- PELIT: tutki kätkö -pelien katalogi (omistajan tilaus 10.8.2026:
@@ -212,6 +219,7 @@
     import { TILANNE } from './js/tyohuone-tilanne.js';
     import { PELIT as KATKOPELIT } from './js/tyohuone-pelit.js';
     import { RAAMATTU2 } from './js/tyohuone-raamattu.js';
+    import { NAYTTEET } from './js/tyohuone-naytteet.js';
 
     const $ = (id) => document.getElementById(id);
     const el = (tagi, luokka, teksti) => {
@@ -642,6 +650,36 @@
         if (osio.otsikko.startsWith('Tutki kätkö')) peliTaulu(k);
         kohde.append(k);
       });
+    }
+
+    /* ------------------------------------------------------------------
+     * NÄYTTEET: uusiksi kirjoitetut merkinnät rinnakkain vanhojen
+     * kanssa (js/tyohuone-naytteet.js) — keskustelupohja tekstien
+     * uudelleenkirjoitukselle, ei pelisisältöä.
+     * ------------------------------------------------------------------ */
+    {
+      const kohde = document.getElementById('naytteet');
+      kohde.append(el('h2', null, 'Näytteet — merkinnät uusiksi vetovoimakeinoilla'));
+      kohde.append(el('p', 'pieni', `Päivitetty ${NAYTTEET.paivitetty} · Fable ylläpitää · EI pelissä`));
+      kohde.append(el('p', null, NAYTTEET.johdanto));
+      for (const n of NAYTTEET.kaupungit) {
+        const k = el('div', 'kortti');
+        const ots = el('p', null);
+        ots.append(el('b', null, n.nimi));
+        ots.append(el('span', 'pieni', ` — keinot: ${n.keinot.join(' · ')}`));
+        k.append(ots);
+        const pari = (otsikko, m) => {
+          k.append(el('p', 'pieni', otsikko));
+          const lista = el('ul');
+          lista.append(el('li', null, m.kuvaus));
+          lista.append(el('li', null, m.nosto));
+          k.append(lista);
+        };
+        pari('Nykyinen merkintä:', n.nykyinen);
+        pari('UUSI EHDOTUS:', n.uusi);
+        k.append(el('p', 'pieni', `Perustelu: ${n.perustelu}`));
+        kohde.append(k);
+      }
     }
 
     /* ------------------------------------------------------------------
