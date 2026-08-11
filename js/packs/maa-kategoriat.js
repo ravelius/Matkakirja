@@ -17795,37 +17795,39 @@ export const MAA_KATEGORIAT = {
           lahde: 'Kishore R Sudarsan, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          otsikko: 'Kreikkalaiset nimesivät saaren Ikarokseksi',
-          tiedosto: 'Antiquities of Failaka island 02.JPG',
-          teksti: 'Aleksanteri Suuren retkien jälkeen 300-luvulla eaa. '
-            + 'kreikkalaiset asettuivat Kuwaitinlahdelle. Failaka sai nimen '
-            + 'Ikaros, ja antiikin kirjoittajien Strabonin ja Arrianoksen '
-            + 'mukaan nimi tuli siitä, että saari muistutti kooltaan ja '
-            + 'muodoltaan samannimistä Egeanmeren saarta. Saarelle '
-            + 'rakennettiin linnoitettu asuinalue temppeleineen, ja sieltä on '
-            + 'löytynyt kreikankielisiä kivikirjoituksia. Myös nykyinen nimi '
-            + 'lienee kreikkaa: fylakion tarkoittaa vartioasemaa.',
-          selite: 'Failakan kaivauskenttä lähempää. Kivimuurit rajaavat useita '
-            + 'pieniä huoneita, joiden lattiat ovat hiekan peitossa; takana '
-            + 'kulkee aita ja sen takana meri.',
-          lahde: 'Bo hessin, Wikimedia Commons (CC BY-SA 3.0)',
+          otsikko: 'Vesitorneja rakennettiin kolmisenkymmentä',
+          tiedosto: 'Kuwait 1982-0128.jpg',
+          teksti: 'Kuwaitissa ei ole jokea eikä järveä, ja juomavesi tehdään '
+            + 'merivedestä tislaamalla. Sitä on siis varastoitava, ja '
+            + '1960–70-luvuilla maahan rakennettiin vesitornien verkosto: '
+            + 'kolmisenkymmentä tornia eri puolille kaupunkia. Tavallinen '
+            + 'malli on sienimäinen — kapea pilari ja sen päällä leveä '
+            + 'maljamainen säiliö, joka on maalattu ruskein ja valkoisin '
+            + 'pystyraidoin. Tornit seisovat useimmiten rivissä, koska yhteen '
+            + 'paikkaan tehtiin monta kerralla. Järjestelmä sai vuonna 1980 '
+            + 'kansainvälisen arkkitehtuuripalkinnon.',
+          selite: 'Rivi Kuwaitin sienimäisiä vesitorneja vuonna 1982. Kuusi '
+            + 'tornia seisoo peräkkäin, kunkin päällä on leveä maljamainen '
+            + 'säiliö ruskein ja valkoisin pystyraidoin, ja etualalla on auto '
+            + 'ja hiekkakenttä.',
+          lahde: 'Dennis Sylvester Hurd, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Vesisäiliöstä tehtiin maan tunnus',
-          tiedosto: 'Kuwait tower at dusk.jpg',
-          teksti: 'Kuwaitin vedenjakelua varten rakennettiin 1970-luvulla '
-            + 'kolmisenkymmentä vesitornia. Viimeinen ryhmä sai muista '
-            + 'poikkeavan muodon: kolme ohutta tornia niemen kärkeen. Korkein '
+          tiedosto: 'Rise and shine at seaside.jpg',
+          teksti: 'Vesitorniryhmistä viimeinen sai muista poikkeavan muodon: '
+            + 'kolme ohutta tornia niemen kärkeen. Korkein '
             + 'on 187 metriä, ja siinä on kaksi palloa. Alemman pallon '
             + 'alaosassa on 4 500 kuutiometrin vesisäiliö ja yläosassa '
             + 'ravintola; ylempi pallo on näköalakahvila, joka pyörähtää '
             + 'ympäri puolessa tunnissa. Pallot on päällystetty noin 41 000 '
             + 'emaloidulla teräskiekolla kahdeksassa sinisen ja vihreän '
             + 'sävyssä. Tornit avattiin yleisölle maaliskuussa 1979.',
-          selite: 'Kuwaitin tornit iltahämärässä. Kaksi pallojen koristamaa '
-            + 'tornia piirtyy tummana oranssia taivasta vasten, ja rannan '
-            + 'valot heijastuvat tyynestä merestä.',
-          lahde: 'Samarstha45, Wikimedia Commons (CC BY-SA 4.0)',
+          selite: 'Kuwaitin tornit auringonnousussa. Kaksi pallojen koristamaa '
+            + 'tornia piirtyy tummana vaaleanpunaista taivasta vasten, ja '
+            + 'niiden vieressä nousee punainen aurinko; etualalla on '
+            + 'katulyhtyjen siluetteja.',
+          lahde: 'Criselda Rayo, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Kupolin alle mahtuu kymmenentuhatta',
