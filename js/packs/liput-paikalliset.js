@@ -60,6 +60,7 @@ export const LIPUT_PAIKALLISET = new Map([
   ["Flag of Libya.svg", 'libya.png'],
   ["Flag of Lithuania.svg", 'lithuania.png'],
   ["Flag of Madagascar.svg", 'madagascar.png'],
+  ["Flag of Malaysia.svg", 'malaysia.png'],
   ["Flag of Mali.svg", 'mali.png'],
   ["Flag of Mongolia.svg", 'mongolia.png'],
   ["Flag of Morocco.svg", 'morocco.png'],
