@@ -338,6 +338,18 @@ dialog.loki .v { flex: 0 0 2.6rem; color: var(--haalea);
 }
 
 table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+
+/* Markdown-dokumentit haitarissa (esim. isoisän raamattu): leveä
+ * jakotaulu vierii omassa kotelossaan eikä riko sivun leveyttä. */
+.md-taulu { overflow-x: auto; margin: 0 0 0.7rem; }
+.md-taulu table { min-width: 28rem; }
+.md-doc blockquote {
+  margin: 0 0 0.7rem; padding: 0.1rem 0 0.1rem 0.8rem;
+  border-left: 3px solid var(--reuna); color: var(--himmea);
+  font-style: italic; max-width: 44rem;
+}
+.md-doc h4 { font-size: 0.95rem; font-weight: 600; margin: 1rem 0 0.3rem; }
+.md-doc ul, .md-doc ol { max-width: 44rem; color: var(--himmea); }
 th, td { border-bottom: 1px solid var(--reuna); padding: 0.42rem 0.5rem; text-align: left; }
 th { color: var(--haalea); font-weight: 500; }
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
