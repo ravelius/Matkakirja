@@ -16815,6 +16815,24 @@ export const MAA_KATEGORIAT = {
             + 'läpikuultavia ja epätasaisen muotoisia, kuin kovettuneita pisaroita.',
           lahde: 'Gaius Cornelius, Wikimedia Commons (public domain)',
         },
+        {
+          otsikko: 'Merenpohja työntyi maan päälle',
+          tiedosto: 'Pillow Lava at Wadi Jizzi in Oman.jpg',
+          teksti: 'Omanin vuoristo ei ole tavallista mannerkalliota. Samailin '
+            + 'ofioliitti on pala valtameren pohjaa ja sen alla ollutta '
+            + 'vaippaa, joka työntyi mannerlaattojen liikkeessä kuivalle maalle '
+            + 'noin sata miljoonaa vuotta sitten. Se on maailman laajimpia ja '
+            + 'parhaiten paljastuneita: kalliota on satatuhatta '
+            + 'neliökilometriä, ja siitä näkyy koko merenpohjan kerrossarja. '
+            + 'Wadi Jizzissä pinta on täynnä tyynylaavaa — pyöreitä pötköjä, '
+            + 'joita syntyy kun sula laava purkautuu veden alla ja jähmettyy '
+            + 'heti ulkopinnalta. Geologit tulevat tänne katsomaan sitä, mitä '
+            + 'muualla pitäisi porata merenpohjasta.',
+          selite: 'Tyynylaavaa Wadi Jizzin kalliossa. Vaaleanharmaat kivipötköt '
+            + 'makaavat päällekkäin kuin täytetyt säkit, ja niiden väliin on '
+            + 'jäänyt kapeita rakoja.',
+          lahde: 'Lionel Duchoiselle, Wikimedia Commons (CC BY-SA 3.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Miksi Jebel Akhdarin rinteillä kasvaa ruusuja ja hedelmäpuita?',
@@ -16883,6 +16901,23 @@ export const MAA_KATEGORIAT = {
             + 'puuvene.',
           lahde: 'Robert Haandrikman, Wikimedia Commons (CC BY 2.0)',
         },
+        {
+          otsikko: 'Satama tukkeutui hiekkavalliin',
+          tiedosto: 'Khor Rori, the site of the ancient fortified port city of Sumhuram, was abandoned in the 5th century most likely due to the formation of the sandbar blocking the estuary.jpg',
+          teksti: 'Dhofarin rannikolla on Khor Rori, kapea suistolahti, jonka '
+            + 'rannalle rakennettiin muinainen Sumhuramin satamakaupunki. '
+            + 'Sieltä lastattiin suitsuketta laivoihin, jotka purjehtivat '
+            + 'Intiaan ja Punaisellemerelle. Kaupunki jäi autioksi noin '
+            + '400-luvulla, ja syy näkyy yhä maastossa: meren tuoma hiekka '
+            + 'kasasi lahden suulle vallin, joka katkaisi väylän. Nyt lahti on '
+            + 'makean ja suolaisen veden sekoitus, jonka matalikoilla lepää '
+            + 'flamingoja. Paikka kuuluu Unescon Suitsukkeen maa -nimiseen '
+            + 'maailmanperintökohteeseen.',
+          selite: 'Khor Rorin suistolahti Dhofarissa. Sinivihreä vesi lepää '
+            + 'kahden matalan kalliotöyrään välissä, ja etualalla erottuu '
+            + 'muinaisen kaupungin kivijalkoja.',
+          lahde: 'Richard N Horne, Wikimedia Commons (CC BY-SA 4.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Mikä ohjaa kuoriutuneen kilpikonnanpoikasen kohti merta?',
@@ -16895,6 +16930,185 @@ export const MAA_KATEGORIAT = {
         oikea: 2,
         fakta: 'Siksi rantojen valot pidetään sammuksissa munimisaikaan: kirkas '
           + 'lamppu johtaisi poikaset väärään suuntaan.',
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Oman on vanhaa kauppamaata: kuparia vietiin täältä Mesopotamiaan '
+        + 'jo viisituhatta vuotta sitten. Rakennukset kertovat samaa — '
+        + 'kivihautoja, savitiililinnoja ja vesikanavia, joita on hoidettu '
+        + 'satoja vuosia.',
+      nostot: [
+        {
+          otsikko: 'Kivihaudat seisovat jonossa harjanteella',
+          tiedosto: 'Bat Al Ayn Beehive Tombs UNESCO Oman.jpg',
+          teksti: 'Bat, Al-Khutm ja Al-Ayn muodostavat hauta-alueen kolmannelta '
+            + 'vuosituhannelta ennen ajanlaskun alkua. Haudat on ladottu '
+            + 'litteistä kivistä ilman laastia, ja ne kapenevat ylöspäin kuin '
+            + 'mehiläispesät — siitä nimi. Al-Aynissa niitä seisoo rivissä '
+            + 'harjanteella sahalaitaisen vuoren edessä. Batissa hautoja on '
+            + 'satakunta, ja siellä on myös noin kahdenkymmenen metrin '
+            + 'levyisiä pyöreitä rakennuksia, joiden käyttötarkoitus on yhä '
+            + 'auki: niissä ei ole ainuttakaan aukkoa ulos, joten ne saattoivat '
+            + 'olla varastoja tai vesisäiliöitä. Alue otettiin '
+            + 'maailmanperintöluetteloon vuonna 1988.',
+          selite: 'Al-Aynin kivihaudat harjanteella iltavalossa. Kartiomaiset '
+            + 'kivikasat seisovat rivissä, ja takana kohoaa jyrkkä '
+            + 'sahalaitainen vuorenseinämä.',
+          lahde: 'Esra1993, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Savitiililinna sulaa, jos sitä ei paikata',
+          tiedosto: 'Bahla fort and mountais.jpg',
+          teksti: 'Bahlan linna Jebel Akhdarin juurella on Omanin ensimmäinen '
+            + 'maailmanperintökohde, hyväksytty vuonna 1987. Se rakennettiin '
+            + '1100–1400-luvuilla, ja rakennusaine on savesta ja oljesta '
+            + 'muotoiltu kuivattu tiili. Sellainen muuri kestää kuivassa hyvin '
+            + 'mutta liukenee sateessa, joten linnaa on paikattava jatkuvasti. '
+            + 'Kunnostus meni pahasti pieleen 1990-luvulla, kun vanhat muurit '
+            + 'peitettiin sementillä, ja kohde oli vaarantuneiden '
+            + 'maailmanperintökohteiden listalla vuoteen 2004. Linnan ympärillä '
+            + 'on keidas ja kolmentoista kilometrin muuri.',
+          selite: 'Bahlan linna savitiilestä. Vasemmalla kohoaa paksu pyöreä '
+            + 'torni, oikealla matalampia rakennuksia pienine ikkuna-aukkoineen, '
+            + 'ja takana harmaat vuoret.',
+          lahde: 'Albinfo, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Palatsissa opetettiin tähtitiedettä',
+          tiedosto: 'Jabreen Castle, Oman - 2024 1.jpg',
+          teksti: 'Jabreenin linna valmistui vuonna 1670. Se ei ole varsinainen '
+            + 'linnoitus vaan asuinpalatsi, jossa myös opiskeltiin: kolmessa '
+            + 'kerroksessa on luokkahuoneita, kirjasto ja vastaanottosaleja, ja '
+            + 'siellä opetettiin tähtitiedettä, lääketiedettä ja lakia. '
+            + 'Kattojen puupalkit on maalattu kukkakuvioin, ja tunnetuimmassa '
+            + 'salissa palkkeihin on maalattu auringon ja kuun kiekkoja — '
+            + 'huoneen nimi tulee niistä. Linna on kunnostettu ja avoinna, ja '
+            + 'osa kattomaalauksista on säilynyt alkuperäisenä.',
+          selite: 'Jabreenin linna ulkoa. Vaaleasta savitiilestä muurattu '
+            + 'rakennus kohoaa kolmeen kerrokseen, ja vasemmalla on paksu '
+            + 'pyöreä torni pienine ikkuna-aukkoineen.',
+          lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Vesi jaetaan aikaosuuksina',
+          tiedosto: 'Faladsch daris nizwa.jpg',
+          teksti: 'Falaj tarkoittaa osiin jakamista. Se on kanava, joka tuo '
+            + 'vettä pohjavedestä tai lähteestä kylään pelkän painovoiman '
+            + 'avulla: uoma laskee koko matkan loivasti, osa maan alla ja osa '
+            + 'avoimena. Maanalaiseen osaan on kaivettu ilmakuilu noin '
+            + 'kahdenkymmenen metrin välein, ja kuilun suussa on poltetusta '
+            + 'savesta tehty rengas, jottei tunneli sorru eikä kukaan putoa '
+            + 'sisään. Vesi jaetaan taloille aikaosuuksina, ja vuoro mitataan '
+            + 'auringon ja tähtien mukaan. Omanissa toimii yhä noin '
+            + 'kolmetuhatta falajia; viisi niistä on maailmanperintöluettelossa '
+            + 'vuodesta 2006.',
+          selite: 'Falaj Daris Nizwan lähellä. Kivireunainen avokouru kulkee '
+            + 'kävelytien vieressä, ja sen yllä kaartuu taatelipalmun runko ja '
+            + 'lehvästö.',
+          lahde: 'lagerschaden, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Bahlan linnaa on paikattava jatkuvasti?',
+        vaihtoehdot: [
+          'Se on kuivattua savitiiltä, joka liukenee sateessa',
+          'Maanjäristykset halkovat sen muureja',
+          'Suolainen merituuli syövyttää kiveä',
+          'Lintujen pesät irrottavat laastia',
+        ],
+        oikea: 0,
+        fakta: 'Kohde oli vaarantuneiden maailmanperintökohteiden listalla '
+          + 'vuoteen 2004.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Oman on aavikkomaa, jossa on silti vettä: monsuuni tekee '
+        + 'eteläisistä vuorista vihreitä kolmeksi kuukaudeksi, ja pohjoisen '
+        + 'laaksoissa on altaita, jotka eivät kuivu koskaan.',
+      nostot: [
+        {
+          otsikko: 'Kolmeksi kuukaudeksi vuoret muuttuvat vihreiksi',
+          tiedosto: 'Salalah 21.jpg',
+          teksti: 'Dhofarissa Omanin eteläkärjessä sataa kesällä, siis silloin '
+            + 'kun muualla Arabiassa on kuuminta. Kesä–syyskuussa Intian '
+            + 'valtamereltä työntyvä monsuuni pysähtyy rannikkovuoriin ja '
+            + 'jättää niihin tihkusateen ja sumun. Ilma viilenee, rinteet '
+            + 'menevät vihreiksi ja kalliojyrkänteille syntyy vesiputouksia. '
+            + 'Ilmiötä sanotaan khareefiksi, ja sen aikaan Salalahiin tullaan '
+            + 'lomalle muualta Arabiasta. Sama kosteus tekee mahdolliseksi '
+            + 'kasvattaa kaupungin puutarhoissa kookosta ja banaania.',
+          selite: 'Vihreä laakso Salalahin lähellä khareefin aikaan. '
+            + 'Kalkkikivijyrkänteet ovat kasvillisuuden peitossa, ja alhaalla '
+            + 'on lampi, jossa ui yksi ihminen.',
+          lahde: 'Syed99975, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Dyynit kulkevat pitkinä harjanteina',
+          tiedosto: 'Wahiba Sands 05.jpg',
+          teksti: 'Sharqiyan hiekka-aavikko, entiseltä nimeltään Wahiba Sands, '
+            + 'on satakahdeksankymmentä kilometriä pitkä ja kahdeksankymmentä '
+            + 'leveä. Sen dyynit eivät ole yksittäisiä kumpuja vaan pitkiä '
+            + 'harjanteita, jotka kulkevat etelästä pohjoiseen: suunnan on '
+            + 'antanut monsuunituuli, ja korkeimmat harjut yltävät noin sataan '
+            + 'metriin. Kuninkaallisen maantieteellisen seuran retkikunta '
+            + 'kartoitti alueen vuonna 1986 ja kirjasi sieltä 16 000 '
+            + 'selkärangatonta lajia ja 150 kasvilajia. Beduiiniperheet '
+            + 'kokoontuvat kesällä aavikon laidan keitaalle korjaamaan '
+            + 'taateleita.',
+          selite: 'Sharqiyan dyynejä auringonlaskussa. Hiekkaharjanteet kulkevat '
+            + 'vinoina riveinä horisonttiin asti, ja niiden rinteillä '
+            + 'vuorottelevat valo ja varjo.',
+          lahde: 'albinfo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Altaat pysyvät täynnä ympäri vuoden',
+          tiedosto: 'Wadi Bani Khalid, Omán, 2024-08-17, DD 34.jpg',
+          teksti: 'Wadi Bani Khalid on Hajar-vuoriston laakso, jonka pohjalla on '
+            + 'altaita, jotka eivät kuivu edes kesällä. Se on Omanissa '
+            + 'harvinaista: useimmissa laaksoissa vesi juoksee vain sateen '
+            + 'jälkeen. Täällä vesi tulee lähteistä kallion sisältä, joten se '
+            + 'ei ole sateen varassa. Altaiden ympärillä kasvaa '
+            + 'taatelipalmuja, ja rinteillä on kyliä, joiden pellot kastellaan '
+            + 'samasta vedestä kanavia pitkin. Laakson yläpäässä on Muqalin '
+            + 'luola, jonne kavutaan kapeaa polkua; sisällä on pimeää ja '
+            + 'viileää, ja katosta tippuu vettä.',
+          selite: 'Wadi Bani Khalidin allas. Vihertävä vesi täyttää laakson '
+            + 'pohjan, rannoilla kasvaa taatelipalmuja ja ympärillä nousevat '
+            + 'paljaat kalliorinteet.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Saaret suljetaan, kun kilpikonnat munivat',
+          tiedosto: 'Al Dimaniyyat Islands Nature Reserve in Oman (53697957918).jpg',
+          teksti: 'Daymaniyat on yhdeksän asumattoman saaren jono noin '
+            + 'kuudentoista kilometrin päässä rannikosta. Alue on ollut '
+            + 'luonnonsuojelualuetta vuodesta 1996. Saarten ympärillä on '
+            + 'koralliriuttoja, joilla elää yli 280 kalalajia ja toistasataa '
+            + 'korallilajia, ja rannoille nousee kesällä karettikilpikonna ja '
+            + 'vihreä merikilpikonna munimaan. Juuri siksi saaret suljetaan '
+            + 'vierailijoilta kokonaan toukokuun alusta lokakuun loppuun. '
+            + 'Kallioilla pesii merilintuja, muun muassa sääksi ja nokihaukka.',
+          selite: 'Daymaniyatin saaria. Matala vaalea kalkkikivisaari nousee '
+            + 'turkoosista merestä, ja sen rannassa on ankkuroituna muutama '
+            + 'vene.',
+          lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Dhofarin vuoret ovat vihreitä kesällä?',
+        vaihtoehdot: [
+          'Vuorilla sulaa lunta',
+          'Monsuuni tuo rannikkovuorille tihkusadetta ja sumua',
+          'Rinteitä kastellaan merivedestä tislatulla vedellä',
+          'Sadekausi osuu Arabiassa aina heinäkuuhun',
+        ],
+        oikea: 1,
+        fakta: 'Ilmiötä sanotaan khareefiksi, ja sen aikaan Salalahiin tullaan '
+          + 'lomalle muualta Arabiasta.',
       },
     },
   ],
