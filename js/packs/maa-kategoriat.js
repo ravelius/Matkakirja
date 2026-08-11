@@ -18420,4 +18420,509 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  JPN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Japani rakensi puusta ja piti rakennuksensa pystyssä '
+          + 'korjaamalla ne yhä uudelleen. Vanhin niistä seisoo yhä — ja '
+          + 'saman maan rannalla oli kaksisataa vuotta yksi ainoa portti '
+          + 'ulkomaailmaan.',
+      nostot: [
+        {
+          otsikko: 'Buddha valettiin pronssista kerralla',
+          aika: '752',
+          tiedosto: '20190121 Tōdai-ji Great Buddha-1.jpg',
+          teksti: 'Nara oli Japanin pääkaupunki, kun keisari Shōmu antoi vuonna '
+              + '741 käskyn perustaa temppeleitä ympäri maata: kulkutaudit ja '
+              + 'katovuodet olivat runnelleet valtakuntaa. Tōdai-jin työ oli '
+              + 'alkanut jo 738, ja temppeli vihittiin vuonna 752. Sen suureen '
+              + 'saliin valettiin pronssinen Vairocana-buddha, maailman suurin '
+              + 'pronssinen buddhankuva. Kuvaa on korjattu useasti, pahimmat '
+              + 'vauriot vuonna 1692, ja nykyinen sali on vuodelta 1709. Salin '
+              + 'oma katto kävi 1800-luvun lopulla niin raskaaksi, että '
+              + 'rakennus oli romahtaa: se tuettiin vuosina 1904–1913 ja sai '
+              + 'lopulta sisäänsä teräsrungon 1974–1980.',
+          selite: 'Tummanpronssinen istuva buddhapatsas hämärässä puusalissa. '
+              + 'Patsaan takana kohoaa kullanhohtoinen koristeltu kehä, sen '
+              + 'oikea käsi on nostettu kämmen eteenpäin. Etualalla kulkee '
+              + 'punaiseksi maalattu kaide ja katosta riippuu valkoisia '
+              + 'lyhtyjä; oikealla nousee paksu punainen pylväs kattoon asti.',
+          lahde: 'Balon Greyjoy, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Linnaa sanotaan valkohaikaraksi',
+          aika: '1609',
+          tiedosto: 'Himeji castle in may 2015.jpg',
+          teksti: 'Himejin linna alkoi vuonna 1333 vaatimattomana varustuksena '
+              + 'kukkulan laella. Nykyisen muotonsa se sai, kun Ikeda Terumasa '
+              + 'rakensi paikan uudelleen vuosina 1601–1609 ja laajensi sen 83 '
+              + 'rakennuksen verkostoksi. Ulkoseinät rapattiin valkoisella '
+              + 'kalkkilaastilla, ja siitä tulee nimi Shirasagi-jō eli '
+              + 'valkohaikaran linna: rakennuksen sanotaan muistuttavan '
+              + 'lentoon nousevaa lintua. Päätornia käytettiin rauhan aikana '
+              + 'varastona. Linna on säilynyt lähes seitsemänsataa vuotta '
+              + 'koskemattomana, myös vuoden 1995 suuren Hanshinin '
+              + 'maanjäristyksen läpi, ja se merkittiin '
+              + 'maailmanperintöluetteloon vuonna 1993.',
+          selite: 'Valkoinen monikerroksinen linna kukkulan laella kirkkaassa '
+              + 'kevätvalossa. Kaarevat harmaat tiilikatot kerrostuvat '
+              + 'päällekkäin, ja alimpana näkyy vaalea kalteva kivimuuri. '
+              + 'Etualalla on tummanvihreitä mäntyjä ja leikattua pensasaitaa, '
+              + 'taivas on syvänsininen ja pilvetön.',
+          lahde: 'Nikos Kitsakis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maailman vanhin puurakennus',
+          aika: '607',
+          tiedosto: 'Horyuji c093.jpg',
+          teksti: 'Prinssi Shōtoku perusti Hōryū-jin vuonna 607 Ikarugan kylään. '
+              + 'Vuonna 670 salama sytytti rakennukset, ja temppeli pystytettiin '
+              + 'pian uudelleen. Sen päähallia Kondōa pidetään maailman '
+              + 'vanhimpana puurakennuksena. Viereisen viisikerroksisen pagodin '
+              + 'keskuspylväs tutkittiin vuonna 2001 vuosilustoista: puu oli '
+              + 'kaadettu jo vuonna 594. Tammikuussa 1949 purkukorjauksen aikana '
+              + 'syttynyt tulipalo tuhosi Kondōn vanhat seinämaalaukset, ja '
+              + 'siitä päivästä tehtiin Japanissa kulttuuriomaisuuden '
+              + 'paloturvallisuuden päivä. Hōryū-ji oli vuonna 1993 Japanin '
+              + 'ensimmäinen maailmanperintökohde.',
+          selite: 'Temppelialue puiden keskellä sinisen taivaan alla. '
+              + 'Vasemmalla kohoaa viisikerroksinen pagodi, jonka kaarevat '
+              + 'katot pienenevät ylöspäin; oikealla on matalampi '
+              + 'kaksikerroksinen halli. Etualalla nousee leveitä kiviportaita, '
+              + 'joilla kulkee vierailijoita, ja portaiden vieressä seisoo '
+              + 'kivinen lyhty.',
+          lahde: 'Michael Gunther, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Saari, jolle Eurooppa mahtui kokonaan',
+          aika: '1636',
+          tiedosto: 'Dejima Nagasaki Japan02s3.jpg',
+          teksti: 'Dejima syntyi vuonna 1636 kaivamalla kanava niemen poikki '
+              + 'Nagasakin edustalla; syntynyt saari yhdistettiin mantereeseen '
+              + 'pienellä sillalla. Portugalilaiset karkotettiin 1639, ja '
+              + 'hollantilainen kauppakomppania siirrettiin saarelle 1641. '
+              + 'Seuraavat runsaat kaksisataa vuotta, vuoteen 1858 asti, Dejima '
+              + 'oli ainoa paikka Japanissa, jonne länsimaalainen sai astua. '
+              + 'Kaupan mukana tuli kirjoja, ja niistä kasvoi oma oppisuuntansa: '
+              + 'rangaku eli hollantilainen oppi, jonka kautta japanilaiset '
+              + 'lääkärit ja tähtitieteilijät seurasivat Euroopan tiedettä. '
+              + 'Saari on nykyään kaivettu esiin ja rakennettu uudelleen.',
+          selite: 'Jälleenrakennettu kauppa-asema keskellä nykyaikaista '
+              + 'kaupunkia: tummakattoisia puutaloja rivissä kivimuurin päällä '
+              + 'ja niiden edessä kapea suora kanava. Kanavan takana näkyy '
+              + 'valkoisia asuinkerrostaloja, ja talorivin lomassa kasvaa '
+              + 'leveitä mäntyjä.',
+          lahde: '663highland, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Dejiman saari tehtiin?',
+        vaihtoehdot: [
+          'Kaivamalla kanava niemen poikki',
+          'Kasaamalla kiviä merenpohjalle',
+          'Patoamalla joensuu umpeen',
+          'Upottamalla vanhoja laivoja riviin',
+        ],
+        oikea: 0,
+        fakta: 'Saari jäi irralleen rannasta, ja ainoa yhteys mantereelle oli '
+            + 'pieni vartioitu silta.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Japanilaisen keittiön pohjalla on liemi, jota ei keitetä '
+          + 'tunteja vaan uutetaan minuutissa. Sen ainekset ovat kuivia ja '
+          + 'kovia, ja juuri siksi ne luovuttavat makunsa niin nopeasti.',
+      nostot: [
+        {
+          otsikko: 'Kala kovetetaan kuukausissa',
+          tiedosto: 'Katsuobushi Kagoshima.JPG',
+          teksti: 'Katsuobushin raaka-aine on boniitti, tonnikalan sukuinen kala. '
+              + 'Se perataan ja fileoidaan, rasvainen vatsapuoli leikataan pois '
+              + 'ja fileet haudutetaan tunnin verran kiehumispisteen '
+              + 'alapuolella. Sitten ne savustetaan tammen tai kastanjan puulla '
+              + 'viisi tai kuusi tuntia kerrallaan, jäähdytetään vuorokaudeksi '
+              + 'ja savustetaan taas — kaikkiaan kaksitoista tai viisitoista '
+              + 'kertaa. Lopuksi kappaleen annetaan homehtua tarkoituksella: '
+              + 'pinnalle kylvetään Aspergillus glaucus -hometta, joka imee '
+              + 'lopunkin kosteuden. Hiutaleet syntyvät höyläämällä, ja '
+              + 'merilevän kanssa niistä uutetaan dashi-liemi.',
+          selite: 'Vaaleanvihreässä muovikorissa on rivissä kuusi kuivattua '
+              + 'kalafileetä. Ne ovat tummanruskeita ja kiiltäviä, pinta on '
+              + 'uurteinen ja halkeillut, ja muoto muistuttaa paksua kaarevaa '
+              + 'puukappaletta. Taustalla näkyy kirkkaankeltainen laatikko.',
+          lahde: 'Sakurai Midori, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          otsikko: 'Sushi oli Edon katuruokaa',
+          tiedosto: 'Hiroshige Bowl of Sushi.jpg',
+          teksti: 'Sushin määrittävä osa ei ole kala vaan riisi: etikalla, '
+              + 'sokerilla ja suolalla maustettu shari. Vanhin sushi oli '
+              + 'säilöntäkeino, jossa kala hapatettiin riisin sisässä '
+              + 'kuukausien ajan ja riisi heitettiin lopuksi pois. Kädessä '
+              + 'puristetun nigirin keksi Hanaya Yohei noin vuonna 1824. Se oli '
+              + 'Edon kaupunkilaisten pikaruokaa: pala kalaa riisimykyn päällä, '
+              + 'ostettuna kadun kojusta ja syötynä sormin seisaaltaan. Utagawa '
+              + 'Hiroshige asetteli tällaisen annoksen viuhkanmuotoiseen '
+              + 'vedokseen, ja katkarapu on siinä samanlainen kuin nyt.',
+          selite: 'Viuhkan muotoinen puupiirros, jonka yläreuna kaartuu ja '
+              + 'tummuu siniseksi. Keskellä on matala kulho vihreiden lehtien '
+              + 'päällä, ja kulhossa on vaaleita sushipaloja: yksi punainen '
+              + 'katkarapu, keltainen munakaspala ja kääryleitä. Vasemmassa '
+              + 'reunassa on pystysuora japanilainen kirjoitus.',
+          lahde: 'Utagawa Hiroshige, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Nuudelikulho tuli satamasta',
+          tiedosto: 'White Soup Ramen in Nagoya City 2021-12-05.jpg',
+          teksti: 'Ramen ei ole vanha japanilainen ruoka. Se syntyi Jokohaman '
+              + 'kiinalaiskaupungissa 1800-luvun lopulla, ja sen nuudeli on '
+              + 'kiinalaista perua: chūkamen-taikinaan sekoitetaan emäksistä '
+              + 'vettä, joka tekee nuudelista keltaisen ja kimmoisan. Liemi '
+              + 'vaihtuu maakunnasta toiseen. Sapporossa se maustetaan misolla, '
+              + 'Hakodatessa suolalla ja Kyūshūssa keitetään possunluista '
+              + 'sameaksi tonkotsuksi. Päälle ladotaan siivu porsasta, '
+              + 'hapatettua bambunversoa ja merilevää. Vuonna 1958 Momofuku '
+              + 'Ando keksi pikanuudelin, ja ramen levisi maailmalle.',
+          selite: 'Valkoinen syvä kulho pöydällä, täynnä maidonvaaleaa lientä. '
+              + 'Liemen pinnalla kelluu kaksi vaaleaa lihasiivua, tummanvihreää '
+              + 'silputtua sipulia ja punaisia mausteripauksia. Nuudelit '
+              + 'näkyvät liemen alta. Taustalla erottuu ravintolan pöytäliina.',
+          lahde: 'ウィキ太郎(WikiTaro), Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Eväsrasia ostetaan asemalta',
+          tiedosto: 'Ekiben (16942832905).jpg',
+          teksti: 'Ekiben on juna-aseman eväsrasia, ja se on oma lajinsa. '
+              + 'Ensimmäisen myynnin uskotaan tapahtuneen Utsunomiyan asemalla '
+              + 'vuonna 1885, kun rata oli juuri yhdistänyt kaupungin Tokioon. '
+              + 'Rasiaan pakataan sen seudun omia raaka-aineita, joten '
+              + 'matkustaja saa jokaisella asemalla maistaa eri maakuntaa. '
+              + 'Suosio oli huipussaan 1980-luvulla ja notkahti sitten, mutta '
+              + 'luotijunissa ekiben palasi käyttöön, kun ravintolavaunut '
+              + 'lakkautettiin. Osa rasioista on itsessään matkamuisto: astia '
+              + 'voi olla puuta, keramiikkaa tai junan muotoinen laatikko.',
+          selite: 'Avattu eväsrasia, joka on muotoiltu sinivalkoisen luotijunan '
+              + 'nokaksi. Sisällä on kaksi merileväpaperiin käärittyä '
+              + 'riisipalaa, keltainen pyöreä hedelmä, vihreitä papuja sekä '
+              + 'ruskeaksi haudutettuja liha- ja juurespaloja omissa '
+              + 'lokeroissaan.',
+          lahde: 'masataka muto from japan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä katsuobushille tehdään savustusten jälkeen?',
+        vaihtoehdot: [
+          'Sen annetaan homehtua',
+          'Se marinoidaan soijassa',
+          'Se pakastetaan kuukaudeksi',
+          'Se paahdetaan uunissa',
+        ],
+        oikea: 0,
+        fakta: 'Home ei ole vahinko vaan työvaihe: se kuivattaa kappaleen '
+            + 'sisältä ja tekee mausta pyöreämmän.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Puupiirros ei ollut Edon aikaan taidetta vaan kauppatavaraa: '
+          + 'kuva piirrettiin, veistettiin puulevyihin ja painettiin tuhansina '
+          + 'kappaleina. Juuri siksi sitä on yhä jäljellä joka maanosassa.',
+      nostot: [
+        {
+          otsikko: 'Aallon alla kyyhöttää Fuji',
+          tiedosto: '1952.343 - Under the Wave off Kanagawa (Kanagawa oki nami.jpg',
+          teksti: 'Katsushika Hokusai piirsi Suuren aallon vuoden 1831 lopulla. '
+              + 'Se on ensimmäinen lehti sarjassa Kolmekymmentäkuusi näkymää '
+              + 'Fuji-vuorelle, ja siinä on kolme venettä myrskyävällä merellä. '
+              + 'Uutta oli väri: Euroopasta tuotu berliininsininen ei '
+              + 'haalistunut kuten kasviväri, ja Hokusai rakensi koko kuvan sen '
+              + 'varaan. Aalto ei ole hyökyaalto vaan tuulen nostama '
+              + 'merenkäynti, ja vuori jää sen taakse pieneksi kolmioksi. '
+              + 'Vedoksia lyötiin puulaatoista niin monta kuin kysyntää riitti; '
+              + 'niistä tunnetaan nykyään enää noin sata säilynyttä kappaletta.',
+          selite: 'Vaakasuora puupiirros, jossa valtava sininen aalto kaartuu '
+              + 'vasemmalta oikealle ja sen harja hajoaa valkoisiksi kynsimäisiksi '
+              + 'pisaroiksi. Aallon alla keinuu kaksi kapeaa venettä täynnä '
+              + 'kumartuneita soutajia. Taustalla kohoaa lumihuippuinen '
+              + 'kartiovuori, taivas on vaaleanharmaa.',
+          lahde: 'Katsushika Hokusai, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Sade piirrettiin suorina viivoina',
+          tiedosto: 'Print, Shono, Rainstorm, in The Fifty-Three Stations of the Tokaido Road (Tokaido Gojusan Tsugi-no Uchi), ca. 1834 (CH 18608899).jpg',
+          teksti: 'Tōkaidō oli Japanin tärkein maantie: se yhdisti sotapäällikön '
+              + 'pääkaupungin Edon keisarin Kiotoon, ja sen varrella oli 53 '
+              + 'majataloasemaa. Utagawa Hiroshige kulki tien vuonna 1832 ja '
+              + 'teki matkastaan vedossarjan, joka ilmestyi vuosina 1833–1834. '
+              + 'Sarjan neljäskymmenneskuudes lehti on Shōno, ja siinä sataa. '
+              + 'Sade on veistetty puulaattaan suorina vinoina viivoina, jotka '
+              + 'risteävät kahteen suuntaan. Kantajat juoksevat rinnettä alas, '
+              + 'olkihatut painuvat ja bambumetsä taipuu. Sarjasta tuli aikansa '
+              + 'myydyin japanilainen vedossarja.',
+          selite: 'Puupiirros harmaassa sateessa. Neljä ihmistä kiiruhtaa '
+              + 'mäkeä alas: kaksi kantaa keskellään katettua kantotuolia, '
+              + 'kaksi juoksee olkiviitoissa. Yksi pitää keltaista sateenvarjoa. '
+              + 'Taustalla häämöttää bambumetsä harmaan sadeverhon takaa, ja '
+              + 'koko kuvan poikki kulkee tiheitä vinoja viivoja.',
+          lahde: 'Utagawa Hiroshige, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kaksi luumupuuta kultapohjalla',
+          tiedosto: 'Ogata Korin - RED AND WHITE PLUM BLOSSOMS (National Treasure) - Google Art Project.jpg',
+          teksti: 'Ogata Kōrin maalasi Punaiset ja valkoiset luumunkukat kahdelle '
+              + 'kaksiosaiselle taittoseinälle todennäköisesti vuosina '
+              + '1714–1715, aivan elämänsä lopussa. Vasemmalla kukkii valkoinen '
+              + 'luumupuu, oikealla punainen, ja niiden välissä virtaa joki. '
+              + 'Vettä ei ole maalattu näköiseksi vaan kuvioksi: tumma pinta on '
+              + 'peitetty kiemurtelevalla aaltokuviolla, joka levenee alaspäin. '
+              + 'Tausta on kultalehteä, eikä maisemasta näy mitään muuta — ei '
+              + 'rantaa, ei taivasta. Teos on Japanissa kansallisaarre ja '
+              + 'esillä MOA-museossa Atamin kaupungissa.',
+          selite: 'Leveä kaksiosainen taittoseinä kullanvärisellä pohjalla. '
+              + 'Keskellä kulkee ylhäältä alas tumma joki, jonka pinnalla '
+              + 'kiertää vaaleita pyörrekuvioita. Vasemmalla kaartuu ohut '
+              + 'valkokukkainen puu, oikealla paksurunkoinen puu tummine '
+              + 'oksineen ja pienine punaisine kukkineen.',
+          lahde: 'Ogata Kōrin, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kymmenen kuukautta ja sitten hiljaisuus',
+          tiedosto: 'The actor Otani Oniji II as Yakko Edobei - Sharaku - TNM.jpg',
+          teksti: 'Tōshūsai Sharaku ilmestyi Edon kirjapainoihin vuonna 1794 ja '
+              + 'katosi kymmenen kuukautta myöhemmin. Sinä aikana hän teki '
+              + 'muotokuvia kabuki-näyttelijöistä, ja ne olivat toisenlaisia '
+              + 'kuin muiden: aikalaiset kaunistivat kasvot, Sharaku piirsi '
+              + 'kaarevan nenän, tiukan suun ja jännittyneet sormet sellaisina '
+              + 'kuin ne näkyivät. Yleisö ei pitänyt siitä, ja työt loppuivat '
+              + 'vuoden 1795 ensimmäisessä kuussa. Hänen oikeaa nimeään ei '
+              + 'tiedetä. Arvauksia on kymmeniä — runoilija, no-näyttelijä, '
+              + 'jopa Hokusai itse.',
+          selite: 'Pystysuora puupiirros tummanharmaalla pohjalla. Näyttelijä '
+              + 'on kuvattu vyötäröstä ylöspäin: mustat hiukset nostettuna, '
+              + 'kulmat kurtussa ja suu tiukkana. Molemmat kädet ovat koholla '
+              + 'rinnan edessä sormet levällään ja koukussa. Puvussa on '
+              + 'ruskeat ja mustat pystyraidat.',
+          lahde: 'Sharaku, Wikimedia Commons (PD)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä uusi väri kannattelee Hokusain aaltokuvaa?',
+        vaihtoehdot: [
+          'Berliininsininen',
+          'Indigo',
+          'Ultramariini',
+          'Kobolttivihreä',
+        ],
+        oikea: 0,
+        fakta: 'Kasvivärit haalistuivat valossa, mutta tuotu synteettinen '
+            + 'sininen pysyi kirkkaana vuosikymmeniä.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Japani on kolmen tuhannen kilometrin nauha saaria: '
+          + 'pohjoispäässä sataa lunta ja eteläpäässä kasvaa lähes '
+          + 'sademetsä. Sama maa elättää kuumassa lähteessä kylpeviä apinoita '
+          + 'ja vuosituhansia vanhoja setrejä.',
+      nostot: [
+        {
+          otsikko: 'Vuori on nukkunut vuodesta 1707',
+          tiedosto: 'Mount Fuji from Lake Kawaguchi s2.jpg',
+          teksti: 'Fuji on kerrostulivuori ja Japanin korkein vuori, 3 776 '
+              + 'metriä. Se purkautui viimeksi vuosina 1707–1708 eikä ole sen '
+              + 'jälkeen liikahtanut. Kartio on poikkeuksellisen tasainen joka '
+              + 'suunnasta katsottuna, ja lunta on huipulla noin viisi '
+              + 'kuukautta vuodessa. Tokioon on matkaa noin sata kilometriä, ja '
+              + 'selkeällä säällä vuori näkyy kaupunkiin asti. Fuji on yksi '
+              + 'Japanin kolmesta pyhästä vuoresta Tate-vuoren ja Haku-vuoren '
+              + 'rinnalla. Maailmanperintöluetteloon se otettiin vuonna 2013 '
+              + 'kulttuurikohteena, koska se on ollut vuosisatoja '
+              + 'pyhiinvaelluksen määränpää.',
+          selite: 'Tyyni järvi etualalla ja sen takana lumihuippuinen '
+              + 'kartiovuori sinisenä usvassa. Vuoren rinteet laskeutuvat '
+              + 'loivina molemmille sivuille, ja niiden juurella kulkee tumma '
+              + 'metsäinen rantaviiva. Vasemmalla näkyy kivinen ranta, taivas '
+              + 'on vaaleansininen ja pilvetön.',
+          lahde: 'Alpsdake, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Apinat laskeutuivat kuumaan altaaseen',
+          tiedosto: 'Nagano Jigokudani yaen park m.jpg',
+          teksti: 'Jigokudani tarkoittaa helvetin laaksoa. Nimi tulee höyrystä, '
+              + 'joka nousee jäätyneen maan raoista Yokoyu-joen '
+              + 'jyrkkäseinäisessä laaksossa Naganon maakunnassa. Japaninmakakit '
+              + 'asuivat ennen ylempänä, mutta 1950-luvulla vuorten metsiä '
+              + 'hakattiin ja rinteille rakennettiin hiihtokeskuksia, ja apinat '
+              + 'siirtyivät alas ihmisten liepeille. Laakson puisto on 850 '
+              + 'metrin korkeudella, ja lunta on maassa neljä kuukautta '
+              + 'vuodessa. Talvella apinat tulevat istumaan kuumaan altaaseen. '
+              + 'Paikalle pääsee vain kahden kilometrin polkua pitkin metsän '
+              + 'läpi.',
+          selite: 'Kolme paksuturkkista apinaa kivien päällä kuuman lähteen '
+              + 'reunalla. Kasvot ovat kirkkaanpunaiset ja turkki '
+              + 'harmaanruskea; lähimmät kaksi istuvat vedessä vyötäröä myöten '
+              + 'ja katsovat kameraan, taaempi kurkottaa kiveltä. Vesi on '
+              + 'tummaa ja pinta tyyni.',
+          lahde: 'Akiko_Toshinai, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Setri, jonka ikää ei osata sanoa',
+          tiedosto: 'Jomon Sugi 03.jpg',
+          teksti: 'Yakushiman saarella kasvaa japaninsetrejä, joita saarelaiset '
+              + 'kutsuvat yakusugiksi. Suurin niistä löydettiin vuonna 1968, ja '
+              + 'se sai nimen Jōmon Sugi. Puu on 25,3 metriä korkea ja sen '
+              + 'rungon ympärysmitta on 16,4 metriä. Iästä ei ole '
+              + 'yksimielisyyttä: arviot vaihtelevat 2 170 ja 7 200 vuoden '
+              + 'välillä. Löytö sai saarelaiset puolustamaan metsiään, ja '
+              + 'Yakushima otettiin maailmanperintöluetteloon vuonna 1993. Sen '
+              + 'jälkeen puun luo on päässyt vain katselulavalle, joka on '
+              + 'viidentoista metrin päässä rungosta. Kävelymatka lähimmältä '
+              + 'tieltä kestää neljästä viiteen tuntia.',
+          selite: 'Sumuinen vuoristometsä, jonka keskellä seisoo valtava '
+              + 'paksurunkoinen puu. Runko on epätasainen ja pullistelee '
+              + 'juurelta, ja siitä lähtee muutama karu paksu oksa. Ympärillä '
+              + 'kasvaa ohuempia puita sammaleisilla rinteillä, ja valo tulee '
+              + 'sumun läpi vaaleana.',
+          lahde: 'Σ64, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Kurki, joka ei muuta minnekään',
+          tiedosto: 'Grus japonensis Kushiro 1.jpg',
+          teksti: 'Japaninkurki on maailman harvinaisimpia kurkia. Mantereen '
+              + 'linnut muuttavat Siperiasta ja Koillis-Kiinasta talveksi '
+              + 'Korean niemimaalle, mutta Itä-Hokkaidon kanta pysyy '
+              + 'paikallaan ja siirtyy talvehtimaan vain noin 150 kilometrin '
+              + 'päähän. Vuoden 2020 talvilaskennassa Japanissa oli noin 1 900 '
+              + 'lintua. Koiras painaa keskimäärin 8,2 kiloa. Hokkaidon '
+              + 'alkuperäiskansa ainu kutsui lintua nimellä Sarurun Kamuy, '
+              + 'suon jumala. Japani rauhoitti lajin ja sen pesimäalueet '
+              + 'vuonna 1935, ja Kushiron kurjet nimettiin erityiseksi '
+              + 'luonnonmuistomerkiksi vuonna 1952.',
+          selite: 'Valkoinen kurki seisoo rehevässä vihreässä ruohikossa. '
+              + 'Kaulan yläosa ja kasvot ovat mustat, päälaella on punainen '
+              + 'paljas läiskä ja siiven takaosassa mustat sulat. Nokka on '
+              + 'pitkä ja vaalea, jalat harmaat. Ympärillä kasvaa korkeaa '
+              + 'heinää ja lehtipensaita.',
+          lahde: 'Tzuhsun Hsu from Taipei, Taiwan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Jigokudanin makakit siirtyivät laaksoon?',
+        vaihtoehdot: [
+          'Vuorten metsiä hakattiin',
+          'Laaksoon istutettiin hedelmäpuita',
+          'Vuorilta loppui vesi',
+          'Ne pakenivat karhuja',
+        ],
+        oikea: 0,
+        fakta: 'Rinteille rakennettiin samaan aikaan hiihtokeskuksia, joten '
+            + 'vanhaa elinaluetta jäi jäljelle yhä vähemmän.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Kahden vuosisadan suljettujen rajojen takana Japani kehitti '
+          + 'oman matematiikkansa ja omat koneensa. Kun rajat aukesivat, sama '
+          + 'tarkkuus siirtyi kelloista rautateihin.',
+      nostot: [
+        {
+          otsikko: 'Matematiikkaa maalattiin puulevylle',
+          tiedosto: 'Sangaku of Konnoh Hachimangu 1850.jpg',
+          teksti: 'Sangaku tarkoittaa laskutaulua. Edon aikaan geometrian '
+              + 'tehtävä maalattiin väreillä puiselle ema-levylle ja '
+              + 'ripustettiin temppelin tai pyhäkön seinälle — osaksi '
+              + 'uhrilahjaksi, osaksi haasteeksi muille kävijöille. Tekijät '
+              + 'tulivat kaikista sääryhmistä. Tauluja on säilynyt noin '
+              + 'yhdeksänsataa; ensimmäisen kokoelman tehtäviä julkaisi Fujita '
+              + 'Kagen vuonna 1790. Japanin oma matematiikka wasan kehittyi '
+              + 'erillään Euroopasta, eikä differentiaalilaskentaa tunnettu: '
+              + 'pinta-alat ja tilavuudet ratkottiin laskemalla päättymättömiä '
+              + 'sarjoja termi kerrallaan.',
+          selite: 'Tummanruskea puinen taulu seinällä. Sen yläosassa on kaksi '
+              + 'riviä värillisiä ympyröitä — punaisia, keltaisia ja vihreitä '
+              + '— jotka koskettavat toisiaan, ja alempana on tiheitä '
+              + 'pystyrivejä japanilaista kirjoitusta. Puun syyt näkyvät '
+              + 'maalin läpi.',
+          lahde: 'Momotarou2012, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Nukke kantaa teekupin ja kääntyy takaisin',
+          tiedosto: 'Tea-carrying doll by Shobei Tamaya, replica from book published in 1796 - National Museum of Nature and Science, Tokyo - DSC07434.JPG',
+          teksti: 'Karakuri-nuket ovat japanilaisia mekaanisia automaatteja '
+              + '1600-luvulta 1800-luvulle. Ne syntyivät, kun eurooppalainen '
+              + 'kellosepäntaito saapui maahan: kellon hammasrattaat ja nokat '
+              + 'pantiin liikuttamaan nukkea. Tunnetuin niistä on chahakobi eli '
+              + 'teetä kantava nukke. Kun kuppi lasketaan tarjottimelle, nukke '
+              + 'lähtee kävelemään suoraan eteenpäin ja kumartaa perillä '
+              + 'päänsä. Kun kuppi nostetaan pois, se pysähtyy; kun kuppi '
+              + 'asetetaan takaisin, nukke kohottaa päänsä, kääntyy ympäri ja '
+              + 'palaa lähtöpaikkaansa. Voima tulee valaanluusta väännetystä '
+              + 'jousesta.',
+          selite: 'Museovitriinissä kaksi nukkea vierekkäin. Vasemmanpuoleisesta '
+              + 'on riisuttu vaatteet ja verho, joten puinen koneisto näkyy: '
+              + 'runko, hammasrattaat ja jalat. Oikeanpuoleisella on '
+              + 'oranssinvärinen takki, violetti hame ja mustat hiukset, ja se '
+              + 'kannattelee tarjotinta. Edessä pöydällä on tumma teekuppi.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kello venyttää tunteja vuodenajan mukaan',
+          tiedosto: 'Myriad-Year Clock, made by Hisashige Tanaka, 1851, with western and Japanese dials, weekly, monthly, and zodiac setting, plus sun and moon - National Museum of Nature and Science, Tokyo - DSC07407.JPG',
+          teksti: 'Edon Japanissa tunti ei ollut vakiomittainen. Vuorokausi '
+              + 'jaettiin päivään ja yöhön ja kumpikin kuuteen osaan, joten '
+              + 'kesällä päivän tunti oli pitkä ja talvella lyhyt. Hisashige '
+              + 'Tanaka rakensi vuonna 1851 kellon, joka hoitaa tämän itse: '
+              + 'kellotaulun jako siirtyy vuodenajan mukana. Mannen dokei '
+              + 'näyttää ajan seitsemällä eri tavalla ja soittaa täydet tunnit. '
+              + 'Osia on yli tuhat, ja Tanaka teki ne käsin viilalla ja sahalla; '
+              + 'kokoaminen kesti yli kolme vuotta. Yksi veto riittää vuodeksi. '
+              + 'Vuonna 2004 sata insinööriä rakensi siitä kopion puolessa '
+              + 'vuodessa, eikä kaikkia osia silti pystytty toistamaan.',
+          selite: 'Lasivitriinissä seisova koristeellinen kello. Alaosa on '
+              + 'kuusikulmainen puinen jalusta, jonka sivuilla on '
+              + 'metallikoristeita ja pieniä kellotauluja. Päällä on '
+              + 'messinkinen kehikko ja sen sisällä lasikupu. Tausta on '
+              + 'tumma, ja valo osuu messinkiin lämpimänä.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Luotijuna ajoi neljäkymmentäneljä vuotta',
+          tiedosto: '0 series SK5 West Hikari Nishi-Akashi 199703.jpg',
+          teksti: 'Ensimmäinen luotijuna, sarja 0, aloitti lokakuussa 1964 '
+              + 'uudella Tōkaidō-radalla Tokion ja Osakan välillä. Rata '
+              + 'rakennettiin 1 435 millimetrin normaaliraiteelle, vaikka muu '
+              + 'Japanin verkko oli kapearaiteinen: leveämpi raideväli salli '
+              + 'suuremman nopeuden. Junassa oli veto kaikilla akseleilla, ja '
+              + 'huippunopeus oli 220 kilometriä tunnissa. Vaunuja valmistettiin '
+              + '3 216 kappaletta vuosina 1963–1986, ja viimeiset sarjan 0 '
+              + 'junat poistettiin liikenteestä vuonna 2008. Pyöreä nokka on '
+              + 'yhä luotijunan tunnusmerkki.',
+          selite: 'Valkoinen luotijuna laiturilla katoksen alla. Nokka on '
+              + 'pyöreä ja matala, keulassa on yksi suuri valo ja sen '
+              + 'ympärillä sininen raita, joka jatkuu ikkunarivin alapuolella '
+              + 'koko junan pituudelta. Kiskot kaartuvat kuvassa oikealle, ja '
+              + 'yläpuolella kulkee ajolankoja.',
+          lahde: 'DAJF, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minne Edon ajan laskutaulut vietiin näytille?',
+        vaihtoehdot: [
+          'Temppelin seinälle',
+          'Sanomalehteen',
+          'Yliopiston kirjastoon',
+          'Kauppiaan kirjanpitoon',
+        ],
+        oikea: 0,
+        fakta: 'Taulu oli yhtä aikaa lahja pyhäkölle ja avoin haaste: kuka '
+            + 'tahansa kävijä sai yrittää ratkaista tehtävän.',
+      },
+    },
+  ],
 };
