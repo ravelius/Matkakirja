@@ -210,40 +210,92 @@ turvallisempi kuin 2 900 kuvan lataus.
 kielletty, pelkkä viittauksen vaihto ei riitä: repo levittää yhä
 tiedostoa `assets/valokuvat`-kansiosta. Poista myös tiedosto.
 
-## 1b. JATKOKOHTA: ME-lehdet kesken (10.8.2026 ilta)
+## 1b. JATKOKOHTA: ME-lehdet kesken (11.8.2026 yö)
 
-Haara **`claude/opus1-me-lehdet`**, pohja v554-main. Ei PR:ää — Fable
-antoi julkaisuluvan vasta kun **Iran on kokonainen**.
+Haara **`claude/opus1-me-lehdet`**, nollattu mainiin jokaisen mergen
+jälkeen. Julkaisulupa on annettu, joten erä julkaistaan heti kun se on
+valmis — ei enää odoteta kuittausta.
 
-**Valmiina ja committina:**
+**Mainissa nyt:**
 
-- cityCountry-korjaus: kapadokia→TUR, siinai→EGY, rubalkhali→SAU,
-  persepolis→IRN, petra→JOR. Jerusalem jää ilman tunnusta (Fablen
-  päätös 10.8.: muutos jää voimaan, Jerusalem on omistajan pöydällä).
-- **IRN: 3 aihetta × 4 nostoa** — historia, rakennukset, puutarhat.
+- **IRN kokonainen (v560, #802):** historia, rakennukset, puutarhat,
+  ruoka, käsityö — viisi aihetta × neljä nostoa + minitehtävä.
+- **IRQ aloitettu (v561, #803):** muinaisuus ja ruoka, 4 + 4 nostoa.
+- cityCountry-korjaus (kapadokia→TUR, siinai→EGY, rubalkhali→SAU,
+  persepolis→IRN, petra→JOR) on mainissa aiemmasta erästä.
 
 **Seuraavaksi, tässä järjestyksessä:**
 
-1. **IRN ruoka** ja **IRN käsityö** (+ runous jos aineisto kantaa).
-   Sitten Iran on kokonainen → julkaise normaalilla kaavalla.
-2. **IRQ** samalla reseptillä, sitten SYR, YEM, CYP.
+1. **IRQ rakennukset ja suot** — tälle on jo katsotut kuvaehdokkaat,
+   ks. alla. Sitten Irak on samassa laajuudessa kuin Iran.
+2. **SYR, YEM, CYP** samalla reseptillä.
+3. Valinnainen: **IRN runous** kuudenneksi aiheeksi (Shahnamehin
+   käsikirjoitussivut ja Hafezin hauta ovat PD/CC; aineisto kantaa).
 
-**Puutelista on viisi maata, ei kuusi:** IRN, IRQ, SYR, YEM, CYP.
-Jordanialla on jo aiheet (vedet, rauniot) — siltä puuttui vain
-Petran cityCountry-rivi, joka on nyt lisätty. Älä luota
+**Puutelista on nyt kolme maata:** SYR, YEM, CYP. Älä luota
 tehtävänannon listaan, mittaa itse:
 
     node -e "import('./js/packs/maa-kategoriat.js').then(m=>
       console.log(Object.keys(m.MAA_KATEGORIAT).sort().join(' ')))"
 
-**Kuvaehdokkaita, jotka on jo lisenssitarkistettu mutta EI katsottu
-silmin** (nämä on katsottava ennen kuin kuvateksti kirjoitetaan):
-saffron `Saffronfarm-860808.jpg` (CC BY-SA 3.0), sangak-leipä
-`Sangak bread in Tehran … (40668041370).jpg` (CC BY 2.0), khatam
-`Khatam detail.jpg` (CC BY-SA 2.5), miniatyyri `A prince offering a
-cup, by Shaykh 'Abbasi, Isfahan, dated 1654-5.jpg` (PD). Pistaasille
-ja teelle ei löytynyt kelvollista hakua — teehaku ajautui
-uskonnollisiin surujuhlakuviin, joten hakusanat on vaihdettava.
+### Työkalut, jotka kannattaa tehdä heti uudestaan
+
+Ne ovat scratchpadissa ja katoavat kontin mukana. Molemmat maksoivat
+itsensä takaisin jo ensimmäisessä erässä:
+
+1. `commons.mjs` — Commonsin API neljällä komennolla: `haku`,
+   `luokka`, `alaluokat`, `lataa`. **Luokkaselaus on ainoa toimiva
+   reitti**: vapaa tekstihaku palauttaa lähinnä 1900-luvun PDF-kirjoja,
+   ja aihehaku ajautuu uskonnollisiin surujuhlakuviin (varoitus oli
+   oikea). Lisenssin ja tekijän saa samasta kutsusta.
+2. `tarkista-maa.mjs XXX` — esitarkistin, joka luetaan PAKETISTA eikä
+   välitiedostosta. Tarkistaa minitehtäväsäännöt, kenttien olemassaolon,
+   kysymysten ainutkertaisuuden (188 kysymystä) ja kuvaduplikaatit
+   kaikista 87 paketista. **Se löysi Irakissa oikean virheen:** valitsemani
+   masgouf-kuva oli jo Bagdadin kaupunkilehdessä.
+3. `kuvaa-maalehti.mjs XXX sivu1 sivu2` — selainajo. Kolme asiaa, joita
+   ilman tulos ei todista mitään, ks. seuraava kohta.
+
+### Selainajon kolme ansaa (kaikki tulivat vastaan tässä erässä)
+
+1. **Maalehti aukeaa vain, jos maalla on muoto NYKYISEN laudan
+   kartalla.** Peli käynnistyy `maailma`-laudalla, jolla ei ole IRN:ää.
+   `ui.game.pack = ...` ei mene läpi. Toimiva tapa on katselutila:
+   `index.html?lauta=middleeast`, jolloin `window.matkakirja.ui` on
+   valmiina eikä peliä tarvitse aloittaa.
+2. **`naytaTutkiSivu(i)` on indeksi, `vaihdaTutkiSivu(d)` on suunta** —
+   ja indeksissä on yhden siirtymä: `tutkiSivut[i]` näkyy kutsulla
+   `naytaTutkiSivu(i + 1)`. Väärä kutsu näytti *edellisen* aiheen kuvat
+   ja raportoi silti "kuvia 4, rikki 0".
+3. **Reittikoukun on katettava KAIKKI ulkopuoliset osoitteet** — kuvat
+   haetaan ensin R2-peilistä, ei Commonsista. Pelkkä
+   `commons.wikimedia.org` -sääntö antoi "0 pyyntöä, rikki 0".
+   Ja jos peilistä puuttuvan kuvan virhesivun tarjoilee selaimelle
+   `image/jpeg`-otsakkeella, `onerror` ei laukea eikä **pelin oma
+   varareitti Commonsiin** pääse ajoon: mittari näyttää "rikki 4",
+   vaikka peli toimisi oikein. Tarkista tavut ennen fulfillia.
+
+**Uudet kuvat eivät ole R2-peilissä** ennen kuin `peilaa-media` ajetaan.
+Se ei riko mitään (varareitti hakee ne Commonsista), mutta kannattaa
+mainita raportissa.
+
+### IRQ:n seuraavaan erään: kuvat jo katsottu silmällä
+
+- **Malwiya, Samarran kierreminareetti:** `The spiral minaret in
+  Samarra.jpg` (Jim Gordon, CC BY 2.0) — ilmakuva, kierreramppi näkyy
+  selvästi, oikealla moskeijan ulkomuuri.
+- **Mudhif, ruokomaja:** `Sumerian Mudhif-guesthouse, Southern Eastern
+  marshes, Iraq.jpg` (Hassan Al-Jarrah, CC BY-SA 4.0) — sisäkuva
+  ruokokaarista, päädyssä ristikkoseinät ja yksi työskentelevä ihminen.
+- Vielä katsomatta: `سور قلعة أربيل الأثري.jpg` (Erbilin kansi,
+  JEHAN SHERKO, CC BY-SA 4.0) ja `Marsh Arab Canoes (30928817552).jpg`
+  (David Stanley, CC BY 2.0).
+
+**Sotasisältörajaus on Irakissa tiukempi kuin Iranissa.** Luokat
+`Great Ziggurat of Ur`, `Mudhif` ja `Mesopotamian Marshes` ovat
+puolillaan Yhdysvaltain armeijan kuvia (PD, siis lisenssi ei pysäytä
+niitä), ja `Culture of Iraq` haarautuu suoraan surujuhla-aiheisiin.
+Poimi luokka kerrallaan ja katso tekijäkenttä.
 
 **Sotasisältörajaus purtiin jo kerran:** Naqsh-e Rostamin
 tunnetuimmat reliefit esittävät Shapur I:n voittoa roomalaisista ja
