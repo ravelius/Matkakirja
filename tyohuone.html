@@ -269,7 +269,15 @@
       import('./js/packs/maa-kategoriat.js').then((m) => m.MAA_KATEGORIAT).catch(() => ({})),
     ]);
 
-    const SAAPUMISET = { ...afrikkaSaap, ...europeSaap, ...asiaSaap };
+    /*
+     * Kaikki kuusi mannerta — aiemmin täältä puuttuivat Amerikat ja
+     * Oseania, jolloin puutelista ja Päiväkirjamerkintöjä-luku
+     * väittivät niiden tekstejä puuttuviksi vaikka ne ovat repossa.
+     */
+    const SAAPUMISET = {
+      ...afrikkaSaap, ...europeSaap, ...asiaSaap,
+      ...naSaap, ...saSaap, ...oceSaap,
+    };
     /*
      * Laudat-taulun sisältösarakkeet: matkakirjatekstit laudoittain
      * (maailmankartta perii kaikki), kaupunkilehtien kannet ja maiden
@@ -1136,12 +1144,26 @@
       taulu.append(el('thead').appendChild(otsikko).parentNode);
       const runko = el('tbody');
       for (const p of PACKS) {
+        /*
+         * Yhdistelmälaudat pois (omistajan toive 11.8.): maailmankartta
+         * ja vanha maailma toistavat mannerlautojen kaupungit, joten
+         * rivit olivat kaksinkertaista kirjanpitoa.
+         */
+        if (p.id === 'maailma' || p.id === 'maailmankartta') continue;
         const saap = SAAPUMISET_LAUDOITTAIN[p.id] ?? {};
         const kaariMukana = KAARI_TEKSTILAUDAT.has(p.id);
         const tekstit = p.cities.filter((c) => saap[c.id]
           || (kaariMukana && KAARI_TEKSTIT.has(c.id))).length;
         const lehdet = p.cities.filter((c) => kannet[c.id]).length;
-        const maat = new Set(p.cities.map((c) => p.map?.cityCountry?.[c.id]).filter(Boolean));
+        /*
+         * Osalla laudoista (asia, oceania, amerikat) ei ole omaa
+         * kaupunki→maa-karttaa — maailmankartan kartta kattaa samat
+         * kaupunkitunnukset ja toimii varana, jotta Maalehdet-sarake
+         * ei näytä tyhjää vaikka maiden aiheet valmistuvat.
+         */
+        const ccVara = paalauta.map?.cityCountry ?? {};
+        const maat = new Set(p.cities
+          .map((c) => p.map?.cityCountry?.[c.id] ?? ccVara[c.id]).filter(Boolean));
         const lehtimaat = [...maat].filter((iso) => (maaKategoriat[iso] ?? []).length > 0).length;
         const valmiit = p.cities.filter((c) => puuttuvat(c, p).length === 0).length;
         const osuus = p.cities.length ? Math.round((valmiit / p.cities.length) * 100) : 0;
@@ -1163,7 +1185,15 @@
         runko.append(tr);
       }
       taulu.append(runko);
-      $('laudat').replaceChildren(taulu);
+      const selite = el('p', 'pieni', 'Tekstit = kaupungilla on '
+        + 'matkakirjamerkintä (Lähi-idän luonnokset mukana). '
+        + 'Kaupunkilehdet = kaupungilla on lehtikansi. Maalehdet = '
+        + 'monellako laudan maista on lehtiaiheet. Kaikki osat ja '
+        + 'Osuus = kaupungit, joilla on jokainen yhdeksästä osasta: '
+        + 'merkintä, artikkeli, kuvakortti, kulttuurinostot, '
+        + 'visakysymykset, äänimaisema, maatunnus, tunnusluvut ja '
+        + 'kielinäyte tai radio.');
+      $('laudat').replaceChildren(taulu, selite);
     }
 
     /*
