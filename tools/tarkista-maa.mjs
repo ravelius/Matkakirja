@@ -46,16 +46,18 @@ for (const a of aiheet) {
     for (const k of ['otsikko', 'tiedosto', 'teksti', 'selite', 'lahde']) {
       if (!no[k]) moiti(`${a.id} / ${no.otsikko || '?'}: kenttä ${k} puuttuu`);
     }
+    // aika = tasokorotuksen aikamerkintä (käytössä sadoissa nostoissa).
     const tuntematon = Object.keys(no).filter(
-      (k) => !['otsikko', 'tiedosto', 'teksti', 'selite', 'lahde', 'kuvat',
-        'aani', 'linkki', 'galleria'].includes(k));
+      (k) => !['otsikko', 'aika', 'tiedosto', 'teksti', 'selite', 'lahde',
+        'kuvat', 'aani', 'linkki', 'galleria'].includes(k));
     if (tuntematon.length) moiti(`${a.id} / ${no.otsikko}: tuntematon kenttä ${tuntematon}`);
     if (no.teksti && (no.teksti.length < 300 || no.teksti.length > 1200)) {
       huomiot.push(`${a.id} / ${no.otsikko}: teksti ${no.teksti.length} merkkiä`);
     }
     // CC0 kirjoitetaan paketeissa ilman välilyöntiä ("… (CC0)"), joten
     // pelkkä /\(CC / hylkäsi kelvollisen lisenssin — ks. CYP 11.8.2026.
-    if (no.lahde && !/\((CC |CC0|public domain)/i.test(no.lahde)) {
+    // "(PD)" on docs/tutki-aiheet.md:n mukainen public domain -merkintä.
+    if (no.lahde && !/\((CC |CC0|PD\)|public domain)/i.test(no.lahde)) {
       moiti(`${a.id} / ${no.otsikko}: lahde ilman lisenssiä: ${no.lahde}`);
     }
   }

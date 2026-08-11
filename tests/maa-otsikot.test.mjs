@@ -85,6 +85,7 @@ const GENETIIVIT = {
   Nigeria: 'Nigerian',
   Norja: 'Norjan',
   Oman: 'Omanin',
+  Malesia: 'Malesian',
   Pakistan: 'Pakistanin',
   Portugali: 'Portugalin',
   Puola: 'Puolan',
