@@ -53,7 +53,9 @@ for (const a of aiheet) {
     if (no.teksti && (no.teksti.length < 300 || no.teksti.length > 1200)) {
       huomiot.push(`${a.id} / ${no.otsikko}: teksti ${no.teksti.length} merkkiä`);
     }
-    if (no.lahde && !/\((CC |public domain)/.test(no.lahde)) {
+    // CC0 kirjoitetaan paketeissa ilman välilyöntiä ("… (CC0)"), joten
+    // pelkkä /\(CC / hylkäsi kelvollisen lisenssin — ks. CYP 11.8.2026.
+    if (no.lahde && !/\((CC |CC0|public domain)/i.test(no.lahde)) {
       moiti(`${a.id} / ${no.otsikko}: lahde ilman lisenssiä: ${no.lahde}`);
     }
   }

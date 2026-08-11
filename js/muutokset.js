@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 574, teksti: 'Kyproksen lehteen viisi aihesivua ja 20 nostoa' },
   { v: 573, teksti: 'Kulkija-johdonmukaisuuspassi: viisi korjausta' },
   { v: 572, teksti: 'Riadin kohtaaminen viittaa oikeaan kysymykseen' },
   { v: 571, teksti: 'Sonnetin 15 löydöstä korjattu — Eurooppa puhdas' },

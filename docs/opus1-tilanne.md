@@ -215,6 +215,124 @@ turvallisempi kuin 2 900 kuvan lataus.
 kielletty, pelkkä viittauksen vaihto ei riitä: repo levittää yhä
 tiedostoa `assets/valokuvat`-kansiosta. Poista myös tiedosto.
 
+## 1d. JATKOKOHTA: JEMEN VALMIS, KYPROS KESKEN (11.8.2026 iltapäivä)
+
+*Tuorein jatkokohta. Kohdat 1b ja 1c ovat vanhempia; niiden opit
+(kohdat 3–8) ovat yhä voimassa, mutta lue tämän kohdan korjaukset
+niihin.*
+
+**Mainissa nyt:** YEM kokonainen (v570, #813) — historia,
+rakennukset, luonto, ruoka; 14 nostoa. Haara nollattu mainiin.
+
+**Jäljellä ME-puutelistalla: CYP. Sen jälkeen lista on tyhjä** ja
+Fablelle kirjoitetaan kokonaisyhteenveto. Mittaa itse:
+
+    node -e "import('./js/packs/maa-kategoriat.js').then(m=>
+      console.log(Object.keys(m.MAA_KATEGORIAT).sort().join(' ')))"
+
+### KORJAUS KOHTAAN 1c: kilpailijoita on NELJÄ, ei kaksi
+
+Vanha sääntö oli "karttasivu ja kaupunkilehti". Se ei riitä.
+**`js/packs/maasto-tekstit.js` on neljäs kilpailija.** Sarawat-lohko
+(hakusana `sarawat`) oli varannut Jemenin terassit, saman Haraz-kuvan,
+saman "muuri pitää mullan paikallaan" -selityksen ja **kahvin**
+(mokka = sataman nimi, hollantilaiset, Jaava). Suunnittelemani
+`vuoret`-sivu olisi ollut lähes kopio; vaihdoin sen `luonto`-sivuksi.
+
+**Kohdan 1c taulukko oli tässä väärässä: mokkakahvi ja al-Makha EIVÄT
+ole vapaita.** Ne on varattu kahdesti — Sanan visassa (`q:`) ja tässä
+maastotekstissä.
+
+Tarkista siis uudelle maalle NELJÄ paikkaa:
+
+    grep -n "^  <maa>:" -A 60 js/packs/maakartat.js       # karttasivun nosto
+    grep -rn "<kaupunki>" js/packs/asia-artikkelit.js js/packs/asia-valokuvat.js
+    grep -n "^  <kaupunki>:" -A 40 js/packs/middleeast-questions.js   # myös q:
+    grep -in "<maa>\|<vuoristo>" js/packs/maasto-tekstit.js           # UUSI
+
+### Unesco EI ole saavuttamaton — reitti löytyi
+
+`whc.unesco.org` palauttaa 403:n (Cloudflare) WebFetchillä, curlilla
+JA Playwrightilla, ja `web.archive.org` on egress-policyn takana.
+Sääntö "Unesco-luvut Unescolta" näytti mahdottomalta. **Käytä tätä:**
+
+    https://data.unesco.org/api/explore/v2.1/catalog/datasets/whc001/records
+
+Se on maailmanperintökeskuksen oma syndikaatioaineisto ja sisältää
+kentät `date_inscribed`, `danger_list` ja `justification_en`
+(= "Brief synthesis" sanasta sanaan). Sama data, jonka whc.unesco.org
+itse julkaisee.
+
+### Liitostyökalu: `tiedosto`-kenttää EI SAA rivittää
+
+Kirjoitin liittimen, joka katkoi pitkät merkkijonot ~74 merkin
+riveiksi. Kaksi tiedostonimeä (arabiankielinen Kawkaban-nimi ja
+iNaturalist-paviaani) katkesi kahdelle riville, jolloin peilaustyökalu
+olisi poiminut vain ensimmäisen palan eikä kuva olisi päätynyt
+R2-peiliin. `tests/media.test.mjs` nappasi sen. Työkalu on korjattu:
+`tiedosto` kirjoitetaan aina yhdelle riville pituudesta riippumatta.
+Kopio: `/tmp/.../scratchpad/liita-aihe.mjs` (tee uudelleen jos katosi).
+
+### Esitarkistin ei vahdi otsikoita
+
+`tarkista-maa.mjs` vahtii kysymysten ainutkertaisuutta, ei otsikoiden.
+Ensimmäinen Jemen-otsikkoni oli "Kylä, joka jätettiin seisomaan", ja
+SYR:ssä on "Kylä, jonka talot jäivät seisomaan" — sama aihe ja lähes
+sama otsikko. Vaihdettu. **Lue naapurimaiden otsikot ennen kuin lyöt
+omat lukkoon.**
+
+### CYP: päällekkäisyydet on kartoitettu VALMIIKSI
+
+| Varattu | Missä |
+|---|---|
+| Kyrenialainen hylky **kokonaan** (Kariolou 1965, 27 m, aleppomänty, 400 ruukkua, neljä miehistön jäsentä, kolikot) | karttasivun nosto |
+| Venetsialainen muuri ja 11 bastionia, Famagustan portti, Ledran katu ja ylityspaikka 2008, jaettu pääkaupunki, hallitsijoiden ketju | Nikosian artikkeli + kuvasivu |
+| **Halloumi** | Nikosian visa (`q:`) |
+| **Kupari ja nimen alkuperä (cuprum)** | Nikosian visa (`q:`) |
+| Kreikka ja turkki virallisina kielinä | Nikosian visa |
+
+**`maasto-tekstit.js`:ssä ei ole Kyprosta lainkaan** — tarkistettu
+(ei Troodosta, ei Olymbosta). Tämä on siis puhtaampi maa kuin Jemen.
+
+**Vapaat ja kuvatilanteeltaan varmistetut suunnat:**
+Khirokitia (`Category:Khirokitia`, Berthold Wernerin CC BY-SA 4.0
+-sarja 2023, 6016×4000), Kourion, Kolossi ja sokeri, Pafoksen
+mosaiikit, Troodoksen maalatut kirkot (Asinou: Zairon CC BY-SA 4.0),
+kyproksenmufloni, kyproksensetri (`Cedrus libani var. brevifolia`,
+Krzysztof Ziarnek CC BY-SA 4.0), Petra tou Romiou, lefkaralainen
+pitsi.
+
+**Heikko kuvatilanne:** Commandaria (vain pullokuvia ja vanhoja
+etikettejä), kyproslainen savityö (`Category:Traditional pottery of
+Cyprus` on tyhjä), merikilpikonnat (ei kuvia Kyprokselta).
+
+### CYP-ANSA: Khirokitian parhaat kuvat ovat FAL-lisenssillä
+
+`Khirokitia near Larnaca 01-2017 img1–9.jpg` (A.Savin) ovat komeimmat
+kuvat kohteesta ja **FAL — kielletty lisenssi**. Haku nostaa ne
+ensimmäisenä. Käytä sen sijaan `Category:Khirokitia` -luokan
+CC-kuvia. Samoin Pafoksen `Mosaic-House of Dionysos-Paphos-*.jpg` on
+merkitty PD:ksi tekijänä "AnonymousUnknown author"; luotettavampi on
+`Birth of Dionysos - House of Aion - Paphos Archaeological Park.jpg`
+(George M. Groutas, CC BY 2.0) — **katsottu, kelpaa**: mosaiikissa on
+hahmojen kreikankieliset nimikyltit ladottuna kiveen, ja se on hyvä
+nostoaihe. Alareunassa on toinen kohtaus ja vasemmalla kaksi valkoista
+paikkauskohtaa, jotka on mainittava selitteessä.
+
+### Muut jo katsotut CYP-kuvat
+
+- `Lefkara lace.jpg` (Cyprus Tourism CH, CC BY 2.0, 3994×2662) — kolme
+  pitsi- ja kirjontatyötä päällekkäin. **Kelpaa.**
+- `Cyprus mouflon (Ovis gmelini ophion).jpg` (Charles J. Sharp,
+  CC BY-SA 4.0) — pässi rinteellä. Kelpaa, mutta **kuva on neliö** ja
+  postikortti rajaa suhteeseen 1,47: sarvet ovat lähellä ylärajaa.
+  Simuloi rajaus tai käytä `Cypriot Male Mouflon.jpg` (WoodsAndrew,
+  CC BY-SA 4.0, 4736×3552).
+- `Nikitari Kirche Panagia Asinou Innen Gewölbefresken 1.jpg` (Zairon,
+  CC BY-SA 4.0) — Asinoun holvifreskot. **Kelpaa.** Kaksi valkoista
+  pistettä ovat kattoon asennetut valaisimet; mainittava, tai ne
+  näyttävät vaurioilta.
+
 ## 1c. JATKOKOHTA: SYYRIA VALMIS, JEMEN ALOITETTU (11.8.2026 aamu)
 
 *Tämä on tuorein jatkokohta. Kohta 1b on edellisen session tilanne ja
