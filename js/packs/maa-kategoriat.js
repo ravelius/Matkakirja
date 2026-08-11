@@ -15539,6 +15539,196 @@ export const MAA_KATEGORIAT = {
             + 'ylös, ja niistä pääsee yhä huoltamaan käytävää.',
       },
     },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Iranin ruokapöytä nojaa siihen, mitä ylänkö ja Kaspianmeren '
+          + 'rannikko antavat: riisiin, yrtteihin, pähkinöihin ja mausteisiin. '
+          + 'Moni raaka-aine punnitaan grammoissa ja vaatii enemmän käsityötä '
+          + 'kuin peltoa.',
+      nostot: [
+        {
+          otsikko: 'Kilo maustetta, satatuhatta kukkaa',
+          tiedosto: 'Saffronfarm-860808.jpg',
+          teksti: 'Sahrami on Crocus sativus -kukan kolme punaista luottia, jotka '
+              + 'nypitään irti käsin. Kukka avautuu aamunkoitteessa ja lakastuu '
+              + 'päivän mittaan, joten pelto poimitaan aamuvarhaisella, ja koko '
+              + 'sato kypsyy parin viikon ikkunassa loka–marraskuussa. Kilo '
+              + 'kuivattua sahramia vaatii noin 150 000 kukkaa ja noin 40 tuntia '
+              + 'poimintatyötä. Iran tuottaa noin 90 prosenttia maailman '
+              + 'sahramista, ja suurin osa kasvaa maan koillisosassa Khorasanin '
+              + 'maakunnissa.',
+          selite: 'Neljä poimijaa kyykkii pellolla valkoisissa haalareissa ja '
+              + 'leveälierisissä olkihatuissa. Kahdella on valkoiset käsineet, ja '
+              + 'toinen pitelee sormissaan poimittua kukkaa. Edessä maassa on rivi '
+              + 'punottuja koreja, ja ruskeasta mullasta nousee matalia '
+              + 'vaaleanvioletteja kukkia.',
+          lahde: 'Safa Daneshvar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ostaja kopistelee kivet pois',
+          tiedosto: 'Sangak bread in Tehran, national bread of Iran. (28604326958).jpg',
+          teksti: 'Sangak tarkoittaa persiaksi pikkukiveä, ja nimi kertoo koko '
+              + 'menetelmän. Uunin pohjalla on kalteva pinta sileitä jokikiviä, '
+              + 'joiden päälle taikina levitetään pitkävartisella lapiolla. '
+              + 'Taikina on täysjyväistä hapanjuurta ja hyvin vetistä, joten se '
+              + 'valuu kiville ohueksi levyksi ja paistuu kuoppaiseksi. Valmis '
+              + 'leipä nostetaan ulos kolmikärkisellä koukulla, ja muutama kivi '
+              + 'tulee usein mukana. Leipomot kilpailevat siitä, kuka saa uunista '
+              + 'pisimmän leivän.',
+          selite: 'Mies poimii kivenmuruja ohuen, epäsäännöllisen muotoisen leivän '
+              + 'pinnalta metalliritilällä kadun varrella. Ritilällä on toinen '
+              + 'pino samanlaisia leipiä päällekkäin. Taustalla on kapea katu, '
+              + 'puita ja pysäköityjä autoja.',
+          lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kuori aukeaa napsahtaen',
+          tiedosto: '860631-Pistachio-IMG 6862-2.jpg',
+          teksti: 'Pistaasipuu kantaa satonsa terttuina, ja kypsyessään hedelmän '
+              + 'ulkokuori vaihtaa vihreän punertavaan. Sisällä oleva kova kuori '
+              + 'halkeaa itsestään pituussuunnassa, ja avautuminen kuuluu '
+              + 'napsahduksena. Puu alkaa tuottaa kunnolla vasta 7–10 vuoden '
+              + 'iässä, on parhaimmillaan noin kahdenkymmenen ja voi elää '
+              + 'kolmesataa vuotta. Iran on Yhdysvaltain ja Turkin ohella kolmen '
+              + 'suurimman tuottajan joukossa: vuonna 2024 sato oli noin 316 000 '
+              + 'tonnia. Tärkein alue on Kermanin maakunnan Rafsanjan, jonka '
+              + 'kastelu ottaa vetensä pohjavedestä — ja jonka maanpinta on '
+              + 'siksi painunut.',
+          selite: 'Tiivis terttu vaaleanpunaisia, punaläikkäisiä pähkinänkuoria '
+              + 'roikkuu oksassa. Kuoret ovat soikeita ja himmeäpintaisia, ja '
+              + 'niiden ympärillä on tummanvihreitä parilehdykkäisiä lehtiä. '
+              + 'Tausta on epätarkka.',
+          lahde: 'Safa Daneshvar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Neljätuhatta tainta salamatkustajana',
+          tiedosto: 'Persian Tea.JPG',
+          teksti: 'Iranissa juodaan mustaa teetä, mutta pensaat ovat maassa vasta '
+              + 'runsaat sata vuotta. Mohammad Mirza, arvonimeltään Kashef '
+              + 'as-Saltaneh, meni vuonna 1898 Brittiläiseen Intiaan opiskelemaan '
+              + 'teen viljelyä ja salakuljetti sieltä siemeniä ja 4 000 tainta. '
+              + 'Ne istutettiin Kaspianmeren rannikolle Lahijaniin ja '
+              + 'Tonekaboniin, ja vuoteen 1903 mennessä pelkästään Lahijanissa '
+              + 'kasvoi 300 000 teepensasta. Tarjoiluastia on vyötäröltä kapea '
+              + 'lasi. Sokeria ei sekoiteta joukkoon: kidesokeripala pidetään '
+              + 'suussa ja tee juodaan sen läpi.',
+          selite: 'Kaksi vyötäröltä kapenevaa, kultareunuksista lasia seisoo '
+              + 'kukallisilla lautasilla. Lasissa on kirkkaan ruskeaa teetä, ja '
+              + 'nesteen sisällä on kellertävä, kiteinen sokerinpala tikun '
+              + 'päässä. Taustalla näkyy epätarkkana punaisia servettejä ja '
+              + 'kuvioitu pöytäliina.',
+          lahde: 'Zereshk, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi sangak-leivän pinta jää kuoppaiseksi?',
+        vaihtoehdot: [
+          'Se paistuu jokikivillä',
+          'Taikinaan painetaan sormenpäät',
+          'Se kohotetaan reikäisessä vuoassa',
+          'Uunin savu kuplii pinnan alle',
+        ],
+        oikea: 0,
+        fakta: 'Leipurin lapion varsi voi olla kolme metriä pitkä, jotta taikina '
+            + 'yltää uunin perälle asti.',
+      },
+    },
+    {
+      id: 'kasityo',
+      nimi: 'Käsityö',
+      johdanto: 'Iranilaista käsityötä mitataan tiheytenä: solmuina rivissä, '
+          + 'paloina kuutiosenttimetrissä, polttokerroksina emalin alla. Työ '
+          + 'tehdään yhä samoissa kaupungeissa kuin satoja vuosia sitten — '
+          + 'Kashanissa, Shirazissa, Isfahanissa ja Yazdissa.',
+      nostot: [
+        {
+          otsikko: 'Solmu kerrallaan, rivi kerrallaan',
+          tiedosto: 'Carpet weaving, Mahan, Iran (1249317642).jpg',
+          teksti: 'Iranilainen matto solmitaan käsin: kutoja kiertää värjätyn '
+              + 'villalangan loimilankaparin ympäri, kiristää ja katkaisee, ja '
+              + 'kuvio nousee esiin rivi riviltä. Kashanissa käytetään '
+              + 'epäsymmetristä persialaissolmua, ja Unesco otti kaupungin '
+              + 'mattoperinteen aineettoman kulttuuriperinnön luetteloon vuonna '
+              + '2010. Samana vuonna listalle pääsi Farsin maakunnan perinne, '
+              + 'jossa miehet kerivät villan ja rakentavat maahan asetettavat '
+              + 'kangaspuut ja naiset kehräävät, värjäävät ja kutovat. Värit '
+              + 'saadaan matarasta, indigosta sekä saksanpähkinän ja '
+              + 'granaattiomenan kuorista.',
+          selite: 'Lähikuva kangaspuista. Yläosassa on kymmeniä pystysuoria '
+              + 'vaaleita loimilankoja vierekkäin, alaosassa valmista nukkapintaa, '
+              + 'jossa jokainen solmu erottuu omana villakiehkuranaan. Kuviossa on '
+              + 'oranssia, punaista, vaaleaa ja tummansinistä.',
+          lahde: 'Fulvio Spada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Palat lasketaan kuutiosenttimetreissä',
+          tiedosto: 'Khatam detail.jpg',
+          teksti: 'Khatam on upotustyötä. Puusta, messinkilangasta ja luusta '
+              + 'veistetään ohuita kolmiotankoja, jotka liimataan nipuksi, ja '
+              + 'nipusta viipaloidaan ohuita levyjä. Levyt liimataan esineen '
+              + 'pintaan, hiotaan ja kiillotetaan, joten sama kuvio jatkuu '
+              + 'kannessa, kyljissä ja reunoissa saumatta. Tiheys on huima: '
+              + 'kuutiosenttimetriin mahtuu noin 250 erillistä palaa. Puulajeina '
+              + 'käytetään muun muassa saksanpähkinää, sypressiä ja mäntyä. Työn '
+              + 'keskukset ovat Shiraz ja Isfahan, ja loistokautensa khatam eli '
+              + 'safavidien aikana.',
+          selite: 'Lähikuva pinnasta, joka on kokonaan peitetty pienillä '
+              + 'kolmioilla. Kolmiot muodostavat kuusisakaraisia tähtiä ja niitä '
+              + 'kiertäviä kuusikulmioita. Palat ovat luunvalkoisia, punaisia, '
+              + 'tummanvihreitä ja kiiltävän messingin värisiä.',
+          lahde: 'Fabienkhan, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+        {
+          otsikko: 'Sininen poltetaan kiinni kupariin',
+          tiedosto: 'Iranian handicraft.jpg',
+          teksti: 'Mina eli emalityö tehdään kuparille. Vasaroitu astia '
+              + 'päällystetään valkoisella emalijauheella ja poltetaan uunissa '
+              + 'noin 700 asteessa; päällystys ja poltto toistetaan kolmesta '
+              + 'neljään kertaan, kunnes pinta on tasainen ja luja. Vasta sitten '
+              + 'maalataan. Värit ovat metallioksideja, ja koboltin sininen '
+              + 'hallitsee. Maalattu astia palaa uuniin matalampaan lämpöön, '
+              + 'jolloin värit kiinnittyvät lasittuneeseen pintaan. Isfahan on '
+              + 'työn tärkein keskus, ja samaa kuviokieltä näkee kaupungin '
+              + 'kupolien laatoissa.',
+          selite: 'Pieni pullomainen maljakko seisoo matolla. Kaula on syvän '
+              + 'sininen ja koristeltu vaalein kiehkuroin, ja valkoisella '
+              + 'vartalolla on punaisia ja sinisiä kukka-aiheita, pyöreitä '
+              + 'medaljonkeja ja pieni lintu. Suuaukko on poimureunainen ja '
+              + 'sisältä valkoinen.',
+          lahde: 'Reza Hajipour, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Pisaran muotoinen boteh',
+          tiedosto: 'Termeh fabric motifs (handwoven cloth) Yazd, Iran (29078803508).jpg',
+          teksti: 'Termeh on villasta tai silkistä kudottu kangas, jonka '
+              + 'tunnistaa botehista: käyrästä, pisaran muotoisesta kuviosta, '
+              + 'joka tunnetaan Euroopassa nimellä paisley. Kudonta alkoi '
+              + 'Kermanissa ja siirtyi Yazdiin, joka on yhä keskus. Kangas '
+              + 'kudottiin kapeina kaistoina, jotka ommeltiin yhteen niin ettei '
+              + 'sauma näkynyt. Qajarien aikana termeh oli hovipuvun ja lahjan '
+              + 'kangas. 1970-luvulta lähtien suurin osa on kudottu '
+              + 'jacquard-koneilla, ja käsin tehty kaista on kallis erikoisuus.',
+          selite: 'Pino taiteltuja kangaspakkoja päällekkäin, jokainen eri '
+              + 'värinen: sininen, vihreä, turkoosi, vaaleanpunainen ja '
+              + 'hopeanharmaa. Kuvioissa toistuu käyrä pisaramainen boteh sekä '
+              + 'maljakkoaiheita ja tiheitä kukkarivejä.',
+          lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten khatam-kuvion pienet palat syntyvät?',
+        vaihtoehdot: [
+          'Nipusta viipaloidaan ohuita levyjä',
+          'Kuvio poltetaan pintaan raudalla',
+          'Palat leikataan yksitellen käsin',
+          'Kuvio maalataan siveltimellä puuhun',
+        ],
+        oikea: 0,
+        fakta: 'Palat ovat niin pieniä, ettei kuviota tarvitse piirtää: se syntyy '
+            + 'siitä, missä järjestyksessä tangot on nipussa.',
+      },
+    },
   ],
   JOR: [
     {
