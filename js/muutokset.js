@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 567, teksti: 'Euroopan tekstit -sivu tageineen työhuoneeseen' },
   { v: 566, teksti: 'Euro-hionnan erä 1: 15 pisintä kohdetta pituusbudjettiin' },
   { v: 565, teksti: 'Ateenan kaari tiiviiksi ja lupaus konkreettiseksi' },
   { v: 564, teksti: 'Syyrian lehteen historia-, käsityö- ja ruokasivut' },
