@@ -15558,11 +15558,11 @@ export const MAA_KATEGORIAT = {
               + 'poimintatyötä. Iran tuottaa noin 90 prosenttia maailman '
               + 'sahramista, ja suurin osa kasvaa maan koillisosassa Khorasanin '
               + 'maakunnissa.',
-          selite: 'Neljä poimijaa kyykkii pellolla valkoisissa haalareissa ja '
-              + 'leveälierisissä olkihatuissa. Kahdella on valkoiset käsineet, ja '
-              + 'toinen pitelee sormissaan poimittua kukkaa. Edessä maassa on rivi '
-              + 'punottuja koreja, ja ruskeasta mullasta nousee matalia '
-              + 'vaaleanvioletteja kukkia.',
+          selite: 'Neljä poimijaa kyykkii pellolla valkoisissa haalareissa, '
+              + 'leveälierisissä olkihatuissa ja valkoisissa hengityssuojaimissa. '
+              + 'Keskellä kaksi käsinepukuista kättä pitelee pientä violettia '
+              + 'kukkaa. Edessä maassa on rivi punottuja koreja, ja ruskeasta '
+              + 'mullasta nousee tiheä matto vaaleanvioletteja kukkia.',
           lahde: 'Safa Daneshvar, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -15614,10 +15614,10 @@ export const MAA_KATEGORIAT = {
               + 'lasi. Sokeria ei sekoiteta joukkoon: kidesokeripala pidetään '
               + 'suussa ja tee juodaan sen läpi.',
           selite: 'Kaksi vyötäröltä kapenevaa, kultareunuksista lasia seisoo '
-              + 'kukallisilla lautasilla. Lasissa on kirkkaan ruskeaa teetä, ja '
-              + 'nesteen sisällä on kellertävä, kiteinen sokerinpala tikun '
-              + 'päässä. Taustalla näkyy epätarkkana punaisia servettejä ja '
-              + 'kuvioitu pöytäliina.',
+              + 'valkoisilla lautasilla, joissa on oranssit raidat. Lasissa on '
+              + 'kirkkaan ruskeaa teetä, ja nesteen sisällä törröttää kiteinen '
+              + 'sokerinpala puutikun päässä. Taustalla näkyy epätarkkana '
+              + 'punaisia servettejä ja kuvioitu pöytäliina.',
           lahde: 'Zereshk, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -15691,11 +15691,12 @@ export const MAA_KATEGORIAT = {
               + 'jolloin värit kiinnittyvät lasittuneeseen pintaan. Isfahan on '
               + 'työn tärkein keskus, ja samaa kuviokieltä näkee kaupungin '
               + 'kupolien laatoissa.',
-          selite: 'Pieni pullomainen maljakko seisoo matolla. Kaula on syvän '
-              + 'sininen ja koristeltu vaalein kiehkuroin, ja valkoisella '
-              + 'vartalolla on punaisia ja sinisiä kukka-aiheita, pyöreitä '
-              + 'medaljonkeja ja pieni lintu. Suuaukko on poimureunainen ja '
-              + 'sisältä valkoinen.',
+          selite: 'Pieni pullomainen maljakko seisoo raidallisella matolla. Kaula '
+              + 'on syvän sininen ja koristeltu vaalein kiehkuroin, ja '
+              + 'valkoisella vartalolla on punaisia ja turkooseja kukka-aiheita. '
+              + 'Keskellä on vinoneliön muotoinen sininen ruutu, sen alla kaksi '
+              + 'pyöreää medaljonkia ja pieni riikinkukkamainen lintu. Suuaukko '
+              + 'on poimureunainen ja sisältä valkoinen.',
           lahde: 'Reza Hajipour, Wikimedia Commons (CC BY 3.0)',
         },
         {
