@@ -166,6 +166,28 @@ alla oleva lasketaan ENNEN erän julkaisua — käsin tai työkalulla.
 | "Sinä, joka tätä luet" | säästellen — se on tunneydin | kuluu käytössä |
 | Lämpö + hengähdys | vähintään 1 + 1 / erä | dekkari tarvitsee taukoja |
 
+### Pituusbudjetti (omistajan sääntö 11.8.2026: "tekstit menevät
+### koko ajan liian pitkiksi")
+
+Mitataan merkkeinä joka erässä ENNEN julkaisua (Fable maxin
+ehdotus, omistajan direktiivillä kaanoniin). Ateena v565 on
+malliesimerkki (344 + 235 + 155 = 734).
+
+| Kenttä | Tavoite | Kova katto | Miksi |
+|---|---|---|---|
+| Saapuminen | 280–350 | 380 | puhelimella ~9 riviä ilman vieritystä; luentana ~25 s |
+| Kohtaaminen | 180–240 | 260 | pidempänä vartija alkaa selittää legendaa, jonka visa jo kertoo |
+| Aarre | 140–200 | 220 | viimeinen virke jää soimaan vain, jos sitä ei edellä kolmea muuta |
+| Kohde yhteensä | ≤ 800 | — | koko ääniaika alle minuutin |
+
+Lisäksi joka kohteesta tarkistetaan kolme selkeyskysymystä
+(omistajan Ateena-palaute 11.8.): (1) kertoja tunnistuu
+päiväkirjamerkinnäksi ilman kylttiä (kirjaamisen ele riittää),
+(2) kohtaamisen loppuvirkkeen lupaus on käsin kosketeltava teko,
+joka lunastuu aarretekstissä, (3) jokaisella kohtauksen
+yksityiskohdalla (eläin, esine, ele) on merkitys pelaajalle —
+pelkkä tunnelmaeläin leikataan tai valjastetaan.
+
 ---
 
 ## 5. Kirjoitusvaihe — kolme osaa käytännössä

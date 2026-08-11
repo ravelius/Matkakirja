@@ -466,30 +466,23 @@ export const KAARI_PAKETIT = {
       // kortilla tekstin oikealla puolella.
       kuva: 'assets/kohtaamiset/kohtaaminen-ateena.jpg',
       otsikko: 'Ateena — pöllö joka vartioi rahaa',
+      // Omistajan palaute 11.8.2026: lyhennetty ja pöllön ele sekä
+      // päiväkirjakehys kirkastettu; kohtaamisen lupaus konkreettinen.
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       saapuminen: 'Pöllö istui kaatuneella pylväällä ja katsoi minua '
         + 'liikahtamatta, kuin vaatisi selitystä myöhästymisestäni. '
-        + 'Mittasin tuijotuksemme keston: seitsemän minuuttia, ja '
-        + 'minä käänsin katseeni ensin. Olen pitänyt suuntani '
-        + 'myrskyssä kolmella merellä, mutta hävisin linnulle, joka '
-        + 'ei edes räpäyttänyt. Vasta sitten näin sen jalan alla '
-        + 'hopearahan — vanhemman kuin mikään, mitä olen mitannut. '
-        + 'Kun kumarruin, pöllö ei lentänyt pois. Se siirtyi askeleen '
-        + 'ja jäi katsomaan, mitä tekisin.',
-      saapumisLuenta: '[curious] Pöllö istui kaatuneella pylväällä ja '
-        + 'katsoi minua liikahtamatta, kuin vaatisi selitystä '
-        + 'myöhästymisestäni. Mittasin tuijotuksemme keston: seitsemän '
-        + 'minuuttia, ja minä käänsin katseeni ensin. [softly] Olen '
-        + 'pitänyt suuntani myrskyssä kolmella merellä, mutta hävisin '
-        + 'linnulle, joka ei edes räpäyttänyt. [whispers] Vasta sitten '
-        + 'näin sen jalan alla hopearahan — vanhemman kuin mikään, mitä '
-        + 'olen mitannut. Kun kumarruin, pöllö ei lentänyt pois. Se '
-        + 'siirtyi askeleen ja jäi katsomaan, mitä tekisin.',
+        + 'Kirjasin vihkooni tuijotuksemme keston: seitsemän '
+        + 'minuuttia, ja minä käänsin katseeni ensin. Silloin se '
+        + 'astui syrjään: jalan alla oli hopearaha, vanhempi kuin '
+        + 'mikään mittaamani. Se ei vartioinut rahaa minulta — se '
+        + 'näytti, mistä aloittaa.',
       henkilo: 'Marmorinveistäjä Nikos korjaa Akropoliin pylväitä ja tuntee '
         + 'jokaisen kiven — ja rahan, jota siellä vartioidaan.',
       kohtaaminen: 'Nikos laskee talttansa nähdessään rahan. "Isoisoisäni löysi '
         + 'samanlaisen ja pani sen takaisin — hän sanoi, että pöllö '
         + 'laskee ne. Kirjasi omistaja tiesi rahasta. Vastaa hänen '
-        + 'kysymykseensä, niin raha ei jää vartioimatta."',
+        + 'kysymykseensä, niin nostan rahan ja näytän, mitä sen alla '
+        + 'on."',
       kysymys: {
         q: 'Kaupunki on nimetty jumalattaren mukaan. Millä lahjalla '
           + 'Athene tarun mukaan voitti kaupungin itselleen?',
@@ -507,10 +500,9 @@ export const KAARI_PAKETIT = {
           + 'kaupungille, ja hopearahoihin lyötiin jumalattaren viisas '
           + 'lintu.',
       },
-      aarre: 'Kätkö oli pylvään onkalossa, rahan alla. Nikos katsoi ylös '
-        + 'rinteeseen: "Pöllö on istunut samalla pylväällä joka ilta '
-        + 'niin kauan kuin suku muistaa. Kukaan ei tiedä, kuka sitä '
-        + 'ruokkii."',
+      aarre: 'Nikos nosti rahan: sen alla, pylvään onkalossa, odotti '
+        + 'kätkö. Hän katsoi rinteeseen: "Pöllö palaa pylväälle joka '
+        + 'ilta. Kukaan ei tiedä, kuka sitä ruokkii."',
     },
     {
       id: 'lissabon',
