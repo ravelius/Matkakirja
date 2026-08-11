@@ -220,6 +220,7 @@
     import { PELIT as KATKOPELIT } from './js/tyohuone-pelit.js';
     import { RAAMATTU2 } from './js/tyohuone-raamattu.js';
     import { NAYTTEET } from './js/tyohuone-naytteet.js';
+    import { EUROPE_SAAPUMISET } from './js/packs/europe-saapumiset.js';
 
     const $ = (id) => document.getElementById(id);
     const el = (tagi, luokka, teksti) => {
@@ -723,6 +724,35 @@
         ots.append(el('span', 'pieni', ` — ${a.koko} · huudahdus ${a.huudahdus}`));
         k.append(ots, el('p', null, a.teksti));
         kohde.append(k);
+      }
+
+      /*
+       * Vanhan mallin merkinnät talteen ja luettavaksi (omistajan
+       * pyyntö 11.8. ilta: näytteiden "nykyinen merkintä" -tekstit
+       * olivat parempia kuin kaariversiot). Peli ei näytä näitä —
+       * tarinakaari syrjäyttää ne — mutta ne ovat raaka-ainetta
+       * uudelleenkirjoitukseen: lyhyt kahden äänen malli (Reginaldin
+       * havainto + isoisän nosto).
+       */
+      kohde.append(el('h3', null, 'Vanhan mallin merkinnät — koko Eurooppa (41)'));
+      kohde.append(el('p', 'pieni', 'Nämä lyhyet kahden äänen merkinnät '
+        + '(js/packs/europe-saapumiset.js) jäivät tarinakaaren alle eivätkä näy '
+        + 'pelissä. Omistajan arvio 11.8.: tämä malli on parempi kuin pitkät '
+        + 'kaaritekstit — säilytetään raaka-aineena uudelleenkirjoitukseen.'));
+      {
+        const europe = PACKS.find((p) => p.id === 'europe');
+        const nimet = Object.fromEntries((europe?.cities ?? []).map((c) => [c.id, c.name]));
+        for (const [id, m] of Object.entries(EUROPE_SAAPUMISET)) {
+          const k = el('div', 'kortti');
+          k.append(el('p', null, ''));
+          k.lastChild.append(el('b', null, nimet[id] ?? id));
+          const lista = el('ul');
+          for (const osa of [m.kuvaus, m.nosto].filter(Boolean)) {
+            lista.append(el('li', null, osa));
+          }
+          k.append(lista);
+          kohde.append(k);
+        }
       }
     }
 
