@@ -17783,56 +17783,54 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Pyöreitä taloja muurin sisällä',
           tiedosto: 'Khirokitia2.jpg',
           teksti: 'Khirokitia on kukkulan rinteellä noin kuuden kilometrin päässä '
-              + 'Kyproksen etelärannikolta, Maroni-joen mutkan sisällä. Kylässä '
-              + 'asuttiin 7.–5. vuosituhannella eaa., ja laajimmillaan se peitti '
-              + 'noin kolme hehtaaria. Talot olivat pyöreitä ja ne muurattiin '
-              + 'savitiilestä ja kivestä; katto oli litteä. Yhteen asumukseen '
-              + 'kuului useita pyöreitä rakennuksia pienen pihan ympärillä, ja '
-              + 'pihalla oli tulisija ja altaita. Vainajat haudattiin talon '
-              + 'sisään, poljetun lattian alle kaivettuihin kuoppiin, eikä taloa '
-              + 'jätetty sen takia. Kylää suojasivat peräkkäiset muurit, ja '
-              + 'kukkulan laelta on kaivettu esiin monimutkainen kulkujärjestely '
-              + '— sen rakentaminen vaati yhteisen suunnitelman ja paljon työtä. '
-              + 'Saaren ensimmäiset viljelijät olivat tulleet Lähi-idän '
-              + 'mantereelta 9. vuosituhannen eaa. alussa. Ranskalainen '
-              + 'tutkimusryhmä on kaivanut paikkaa vuodesta 1976, ja suurin osa '
-              + 'kylästä on yhä koskematta. Khirokitia otettiin '
-              + 'maailmanperintöluetteloon vuonna 1998.',
+              + 'etelärannikolta, Maroni-joen mutkan sisällä. Kylässä asuttiin '
+              + '7.–5. vuosituhannella eaa., ja laajimmillaan se peitti kolme '
+              + 'hehtaaria. Talot olivat pyöreitä ja ne muurattiin savitiilestä '
+              + 'ja kivestä; katto oli litteä. Yhteen asumukseen kuului useita '
+              + 'pyöreitä rakennuksia pienen pihan ympärillä, ja pihalla oli '
+              + 'tulisija ja altaita. Vainajat haudattiin talon sisään, poljetun '
+              + 'lattian alle kaivettuihin kuoppiin, eikä taloa jätetty sen '
+              + 'takia. Kylää suojasivat peräkkäiset muurit, ja kukkulan laelta '
+              + 'on kaivettu esiin monimutkainen kulkujärjestely. Khirokitia '
+              + 'otettiin maailmanperintöluetteloon 1998. Ranskalainen '
+              + 'tutkimusryhmä on kaivanut paikkaa vuodesta 1976, eikä suurinta '
+              + 'osaa kylästä ole vieläkään avattu.',
           selite: 'Kolme rekonstruoitua pyöreää majaa rinteessä. Seinät ovat '
               + 'lieriömäisiä ja rapattu vaaleiksi, ja litteän katon reunaa '
               + 'kiertää ladottu kivikehä. Kahden majan seinässä on pieni '
               + 'neliömäinen aukko. Majojen edessä kulkee kahtena tasona paksu '
               + 'kivimuuri, jonka kivet ovat pyöristyneitä jokikiviä ja '
-              + 'lohkareita. Ympärillä kasvaa tiheää tummanvihreää pensaikkoa, ja '
-              + 'etualan puskissa on punaisia marjoja. Ihmisiä ei näy.',
+              + 'lohkareita. Ympärillä kasvaa tiheää tummanvihreää pensaikkoa. '
+              + 'Takana rinteessä pilkottaa puiden välistä nykyaikainen ajoneuvo, '
+              + 'jonka katolla on oranssi vilkkuvalo.',
           lahde: 'Ophelia2, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Teatterista tehtiin kehä ja takaisin',
           tiedosto: 'Ancient Roman theatre Kourion Cyprus.jpg',
           teksti: 'Kourion oli kaupunkikuningaskunta jyrkänteen päällä '
-              + 'etelärannikolla. Akhaialaiset siirtolaiset perustivat sen '
-              + '1100–1000-luvuilla eaa., eikä kaupungille ole säilynyt antiikin '
-              + 'perustajatarinaa toisin kuin monelle naapurilleen. Teatteri '
-              + 'rakennettiin 100-luvulla eaa. ja se oli aluksi pienempi; '
-              + 'nykyiseen kokoonsa se laajennettiin 100-luvulla jaa., jolloin '
-              + 'katsomoon mahtui 3 500 katsojaa. Noin vuoden 200 jaa. tienoilla '
-              + 'teatteri muutettiin areenaksi: näyttämön eteen pystytettiin '
+              + 'etelärannikolla. Herodotos kertoo kourionilaisten polveutuvan '
+              + 'Argoksesta tulleista siirtolaisista, ja saman toistaa Strabon; '
+              + 'akhaialaiset asettuivat paikalle 1100-luvulla eaa. Teatteri '
+              + 'rakennettiin 100-luvulla eaa. ja se oli aluksi pienempi. '
+              + 'Nykyiseen kokoonsa se laajennettiin 100-luvulla jaa., jolloin '
+              + 'katsomoon mahtui 3 500 katsojaa. 200-luvun alkupuolella teatteri '
+              + 'muutettiin areenaksi: näyttämön eteen pystytettiin '
               + 'metalliristikko petoeläinnäytöksiä varten ja kolme alinta '
               + 'istuinriviä purettiin, jotta katsojat olisivat kauempana '
-              + 'kehästä. Saman vuosisadan lopulla areena muutettiin takaisin '
-              + 'teatteriksi, ja alimmat karkeasti hakatut rivit ovat juuri siitä '
-              + 'jälleenrakennuksesta. 300-luvulla teatteri jäi tyhjilleen. '
-              + 'Katsomo rakennettiin uudelleen vuonna 1961, ja siitä lähtien '
-              + 'paikalla on taas pidetty esityksiä.',
+              + 'kehästä. Saman vuosisadan puolivälin jälkeen areena muutettiin '
+              + 'takaisin teatteriksi, ja alimmat karkeasti hakatut rivit ovat '
+              + 'siitä jälleenrakennuksesta. Katsomo koottiin uudelleen 1961, ja '
+              + 'siellä pidetään taas esityksiä.',
           selite: 'Puolikaaren muotoinen kivikatsomo kuvattuna ylhäältä viistosti. '
               + 'Toistakymmentä kaarevaa penkkiriviä laskeutuu portaittain kohti '
               + 'alhaalla olevaa laatoitettua tasoa, ja rivien välissä erottuu '
               + 'kapeita porrasväyliä. Katsomon takaa avautuu meri, joka täyttää '
-              + 'kuvan oikean puoliskon; rannalla on kapea viljelty tasanko ja '
+              + 'kuvan oikean yläosan; rannalla on kapea viljelty tasanko ja '
               + 'kuivaa pensasrinnettä. Ylimmän rivin päällä vasemmalla on '
-              + 'nykyaikainen valonheitinteline, oikealla puinen kaide ja '
-              + 'valkoinen aurinkopurje.',
+              + 'nykyaikainen valonheitinteline. Oikeassa alalaidassa, näyttämön '
+              + 'takana olevalla asfaltoidulla tasanteella, on puutolppa- ja '
+              + 'vaijerikaide sekä valkoinen aurinkopurje.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
         },
         {
@@ -17844,53 +17842,50 @@ export const MAA_KATEGORIAT = {
               + 'löytyi vasta vuonna 1983, kun puolalainen retkikunta kaivoi '
               + 'esiin 68 neliömetrin huoneen; kuvakenttää siitä on 16 '
               + 'neliömetriä, ja se jakautuu viiteen kohtaukseen. Kivenpalat eli '
-              + 'tesserat ovat kahdesta viiteen millimetriin. Talo on saanut '
-              + 'nimensä keskimmäisen kohtauksen tuomarista: Aion on ikuisen ajan '
-              + 'jumala, ja hän ratkaisee kauneuskilpailun, jossa Kassiopeia '
-              + 'kilpailee merenneitoja vastaan. Aihe on harvinainen — muita '
-              + 'esityksiä tunnetaan vain kaksi, molemmat Syyriasta. Lattian '
-              + 'erikoisuus on se, että lähes jokaisen hahmon yläpuolelle on '
-              + 'ladottu tämän nimi kreikkalaisin kirjaimin. Ajoituksesta '
-              + 'kiistellään, mutta laastista löytynyt kolikko osoittaa, että työ '
-              + 'tehtiin vuoden 318 jälkeen.',
+              + 'tesserat ovat 2–5 millimetrin kokoisia. Talo on saanut nimensä '
+              + 'keskimmäisen kohtauksen tuomarista: Aion on ikuisen ajan jumala, '
+              + 'ja hän ratkaisee kauneuskilpailun, jossa Kassiopeia kilpailee '
+              + 'merenneitoja vastaan. Aihe on harvinainen — muita esityksiä '
+              + 'tunnetaan vain kaksi, molemmat Syyriasta. Lattian erikoisuus on '
+              + 'se, että lähes jokaisen hahmon yläpuolelle on ladottu tämän nimi '
+              + 'kreikkalaisin kirjaimin.',
           selite: 'Värikäs lattiamosaiikki kahdesta kohtauksesta. Ylemmässä istuu '
-              + 'keskellä hahmo, joka pitelee sylissään vastasyntynyttä lasta '
-              + 'liinan päällä; ympärillä on seppelepäisiä naisia, parrakas '
-              + 'satyyri ja oikeassa laidassa kättään kohottava hahmo. Päiden '
-              + 'yläpuolella lukee kreikkalaisin kirjaimin muun muassa ΕΡΜΗC, '
-              + 'ΔΙΟΝΥCΟC, ΝΕΚΤΑΡ ja ΑΜΒΡΟCΙΑ. Alempi kaistale on toisesta '
-              + 'kohtauksesta: siinä on vedessä olevia hahmoja ja merenolentoja, '
-              + 'ja niiden nimissä lukee ΖΕΥC, ΑΘΗΝΑ, ΘΕΤΙC ja ΓΑΛΑΤΙΑ. Ylhäällä '
-              + 'kiertää leveä lehtikiehkuroista ladottu reunus. Vasemmassa '
-              + 'reunassa ja alanurkassa on vaaleita kipsipaikkauksia puuttuvien '
-              + 'kohtien tilalla.',
+              + 'kuvan oikealla puolella hahmo, joka pitelee sylissään '
+              + 'vastasyntynyttä lasta liinan päällä; keskellä on parrakas '
+              + 'silenoshahmo ja seppelepäisiä naisia, ja lasta pitelevän takana '
+              + 'kättään kohottava hahmo. Päiden yläpuolella lukee kreikkalaisin '
+              + 'kirjaimin muun muassa ΕΡΜΗC, ΔΙΟΝΥCΟC, ΝΕΚΤΑΡ ja ΑΜΒΡΟCΙΑ. '
+              + 'Alempi kaistale on toisesta kohtauksesta: siinä on vedessä '
+              + 'olevia hahmoja ja merenolentoja nimillä ΖΕΥC, ΑΘΗΝΑ, ΘΕΤΙC ja '
+              + 'ΓΑΛΑΤΙΑ. Ylhäällä kiertää leveä lehtikiehkuroista ladottu '
+              + 'reunus. Vasemmassa reunassa ja alanurkassa on vaaleita '
+              + 'kipsipaikkauksia.',
           lahde: 'George M. Groutas from Dali, Nicosia, Cyprus, Wikimedia Commons '
               + '(CC BY 2.0)',
         },
         {
-          otsikko: 'Kulttikuva ei ollut ihmisen näköinen',
+          otsikko: 'Muuri ladottiin viiden metrin laatoista',
           tiedosto: 'Sanctuary Aphrodite Kouklia Cyprus 05.jpg',
           teksti: 'Kouklian kylässä Pafoksesta itään on Palaipafos eli Vanha Pafos. '
               + 'Sinne pystytettiin noin 1200–1100 eaa. suuri pyhäkkö, ja '
-              + 'jumalatarta palvottiin samalla paikalla myöhäiseltä '
-              + 'pronssikaudelta 300-luvulle jaa. asti. Säilyneet jäännökset '
-              + 'muodostuvat kahdesta suorakaiteen muotoisesta osasta. Eteläinen '
-              + 'oli avoin piha, jota rajaa lännessä muuri jättimäisistä '
-              + 'työstetyistä kalkkikivilaatoista: pisimmät ovat viisi metriä '
-              + 'pitkiä ja 2,2 metriä korkeita. Kulttikuva ei esittänyt ihmistä. '
-              + 'Roomalainen historioitsija Tacitus kuvaa sen pyöreäksi '
-              + 'möhkäleeksi, joka kohoaa leveästä pohjasta kartiona kapeaan '
-              + 'huippuun. Alttarilla ei uhrattu verta vaan pelkkiä rukouksia ja '
-              + 'puhdasta liekkiä. Pafos, johon Palaipafos kuuluu, oli '
-              + 'ensimmäinen kyproslainen maailmanperintökohde vuonna 1980.',
+              + 'jumalatarta palvottiin samalla paikalla 300-luvulle jaa. asti. '
+              + 'Säilyneet jäännökset muodostuvat kahdesta suorakaiteen '
+              + 'muotoisesta osasta. Eteläinen oli avoin piha, jota rajaa '
+              + 'lännessä muuri jättimäisistä työstetyistä kalkkikivilaatoista: '
+              + 'pisimmät ovat viisi metriä pitkiä ja 2,2 metriä korkeita. '
+              + 'Kulttikuva ei esittänyt ihmistä. Roomalainen historioitsija '
+              + 'Tacitus kuvaa sen pyöreäksi möhkäleeksi, joka kohoaa leveästä '
+              + 'pohjasta kartiona kapeaan huippuun. Alttarilla ei uhrattu verta '
+              + 'vaan pelkkiä rukouksia ja puhdasta liekkiä.',
           selite: 'Avoin kivinen raunioalue. Etualalla seisoo kaksi järeää '
               + 'katkaistua kalkkikivipylvästä porrastetuilla nelikulmaisilla '
               + 'jalustoilla, ja niiden takana oikealla on kolmas, rapautunut '
-              + 'kivipaasi. Maassa on hajallaan lohkottuja rakennuskiviä ja '
-              + 'matalia muurinjäänteitä kuivalla soraisella maalla. Vasemmalla '
-              + 'on yksi lehdetön puu ja rivi matalia perustuksia. Taustalla '
-              + 'näkyy kapea sinisen meren kaistale ja sen yllä harmaanvaalea '
-              + 'taivas. Ihmisiä tai rakennuksia ei näy.',
+              + 'kivipaasi. Vasemmalla taustalla kulkee matala muuri, joka on '
+              + 'ladottu isoista työstetyistä lohkareista; niissä on pyöreitä '
+              + 'reikiä. Maassa on hajallaan lohkottuja rakennuskiviä ja matalia '
+              + 'muurinjäänteitä kuivalla soraisella maalla, ja vasemmalla kasvaa '
+              + 'yksi lehdetön puu. Taustalla näkyy kapea sinisen meren kaistale. '
+              + 'Kulttikivi ei ole kuvassa.',
           lahde: 'Nikodem Nijaki, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -17912,9 +17907,10 @@ export const MAA_KATEGORIAT = {
       id: 'kirkot',
       nimi: 'Kirkot',
       johdanto: 'Troodoksen vuoristossa on kymmenen pientä kirkkoa ja luostaria, '
-          + 'jotka on maalattu sisältä kauttaaltaan. Ne ovat maailmanperintökohde '
-          + 'vuodesta 1985, eikä syy ole koko vaan se, mitä seinillä on ja mitä '
-          + 'niihin on kirjoitettu.',
+          + 'jotka on maalattu sisältä kauttaaltaan. Ne otettiin '
+          + 'maailmanperintöluetteloon 1985 ja luetteloa laajennettiin myöhemmin '
+          + 'kymmenenteen kirkkoon. Syy ei ole koko vaan se, mitä seinillä on ja '
+          + 'mitä niihin on kirjoitettu.',
       nostot: [
         {
           otsikko: 'Seinään kirjoitettiin vuosiluku',
@@ -17922,18 +17918,16 @@ export const MAA_KATEGORIAT = {
           teksti: 'Asinoun kirkko eli Panagia Phorbiotissa on Troodoksen '
               + 'pohjoisrinteillä kolme kilometriä Nikitarin kylästä etelään. Se '
               + 'on yksilaivainen ja tynnyriholvattu, muurattu paikallisesta '
-              + 'kovasta kivestä. Kirkon piirtokirjoituksen mukaan se '
-              + 'rakennettiin tai maalattiin vuonna 1105 tai 1106 Nikeforos '
-              + 'Ischyrioksen lahjoituksella; miehellä oli bysanttilainen '
-              + 'arvonimi magistros. Juuri päivätyt piirtokirjoitukset tekevät '
-              + 'Troodoksen kirkoista tutkijoille poikkeuksellisia: keskiajan '
-              + 'itäisellä Välimerellä maalauksia päivättiin harvoin, joten '
-              + 'näiden kirkkojen avulla voidaan ajoittaa muitakin. Asinoun '
-              + 'maalauksissa on useita kerroksia — vanhin on vuodelta 1105/6, ja '
+              + 'kovasta kivestä. Piirtokirjoituksen mukaan kirkko rakennettiin '
+              + 'tai maalattiin vuonna 1105 tai 1106 Nikeforos Ischyrioksen '
+              + 'lahjoituksella; miehellä oli bysanttilainen arvonimi magistros. '
+              + 'Päivätyt piirtokirjoitukset tekevät Troodoksen kirkoista '
+              + 'tutkijoille poikkeuksellisia: keskiajan itäisellä Välimerellä '
+              + 'maalauksia päivättiin harvoin, joten näiden avulla voidaan '
+              + 'ajoittaa muitakin. Asinoussa on useita maalauskerroksia, ja '
               + 'eteishuone sai yhtenäisen ohjelmansa vuonna 1332 tai 1333. Sen '
-              + 'omistuskirjoitus kertoo työn tehdyn luostarin ja tavallisen '
-              + 'kansan tuella. Kirkon nykyinen jyrkkä puukatto pystytettiin '
-              + 'vuoden 1959 korjauksissa, ja freskot puhdistettiin 1965–1967.',
+              + 'omistuskirjoituksen mukaan työ tehtiin luostarin ja tavallisen '
+              + 'kansan tuella.',
           selite: 'Kirkon holvi kuvattuna alhaalta ylöspäin. Koko pinta on maalattu '
               + 'freskoin syvänsinistä pohjaa vasten ja jaettu punaruskein '
               + 'kehysnauhoin ruutuihin: vasemmalla ristiinnaulitseminen, '
@@ -17941,9 +17935,9 @@ export const MAA_KATEGORIAT = {
               + 'vuoteella ja rivi pyöreitä medaljonkeja, joissa on pyhimysten '
               + 'kasvot. Alareunassa kaaren keskellä on pieni pyöreä '
               + 'Kristus-medaljonki ja sen molemmin puolin siivekäs enkeli. '
-              + 'Holvin poikki kulkee kaksi tummaa puista vetopalkkia, ja niistä '
-              + 'roikkuu kaksi valkoista pyöreää valaisinta — ne ovat '
-              + 'nykyaikaisia lamppuja, eivät vaurioita.',
+              + 'Holvin poikki kulkee vaalea puinen vetopalkki, johon on maalattu '
+              + 'kolmiofriisi, ja holvin harjaa myöten toinen palkki. Palkkeihin '
+              + 'on kiinnitetty kaksi valkoista pyöreää lamppua.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -17953,74 +17947,70 @@ export const MAA_KATEGORIAT = {
               + 'lounaaseen, 800 metrin korkeudessa. Kirkkosali on 1000-luvulta '
               + 'ja kupolillinen eteishuone 1100-luvun alusta; molemmat katettiin '
               + 'alun perin tiilellä. Myöhemmin niiden ylle rakennettiin päädyt '
-              + 'ja iso jyrkkä puukatto, joka peittää kupolin ja holvit kokonaan. '
-              + 'Siitä tulee myös nimi: kreikan stegi tarkoittaa kattoa, ja '
-              + 'vanhin tunnettu nimen esiintymä on myöhäiseltä 1200-luvulta '
-              + 'oleva ikoni, joka tilattiin tähän kirkkoon. Kyproksen kirkoista '
-              + 'se on ainoa, joka on nimetty kattonsa mukaan. Katon tarkka ikä '
-              + 'on kiistanalainen: eri lähteet ajoittavat sen 1100-luvun alusta '
-              + '1200-luvulle. Näiden kirkkojen kate on erikoisvalmisteista '
-              + 'litteää koukkutiiltä: kukin tiili peittää seuraavasta kaksi '
-              + 'kolmasosaa, joten pystysuora leikkaus osuu aina kolmeen tiileen. '
-              + 'Freskoja on neljältä vuosisadalta.',
-          selite: 'Matala kivikirkko, jonka päälle on rakennettu iso jyrkkä '
-              + 'satulakatto puupaanuista; katto ulottuu räystäineen alas seinien '
-              + 'yli. Katon alta pilkottaa kaksi vanhempaa tiilikatteista '
-              + 'kaarevaa pintaa — alkuperäistä kattoa, joka jäi uuden alle. '
-              + 'Seinissä vuorottelevat vaalea laasti ja tummat mukulakivet, ja '
-              + 'niissä on kaari-ikkuna, pyöreä kolmiapilaikkuna ja tumma avoin '
-              + 'oviaukko. Oven vieressä on pieni sinivalkoinen kilpi. Edessä on '
-              + 'nurmikko, nuori puuntaimi ja kivetty polku, oikeassa reunassa '
-              + 'nykyaikainen kivimuuri ja musta metallikaide. Taustalla nousee '
-              + 'mäntyinen rinne.',
+              + 'ja iso puukatto, joka peittää kupolin ja holvit kokonaan. Siitä '
+              + 'tulee myös nimi: kreikan stegi tarkoittaa kattoa, ja vanhin '
+              + 'tunnettu nimen esiintymä on myöhäiseltä 1200-luvulta oleva '
+              + 'ikoni, joka tilattiin tähän kirkkoon. Kyproksen kirkoista se on '
+              + 'ainoa, joka on nimetty kattonsa mukaan. Katon ikä on '
+              + 'kiistanalainen: lähteet ajoittavat sen 1100-luvun alusta '
+              + '1200-luvulle. Kate on erikoisvalmisteista litteää koukkutiiltä, '
+              + 'ja kukin tiili peittää seuraavasta kaksi kolmasosaa, joten '
+              + 'pystysuora leikkaus osuu aina kolmeen tiileen.',
+          selite: 'Matala kivikirkko, jonka päälle on rakennettu iso satulakatto. '
+              + 'Kate on litteää, tiiviisti limitettyä tiiltä, ja harjalla on '
+              + 'isommat harjatiilet; räystäät ulottuvat alas seinien yli. Katon '
+              + 'alta pilkottaa kaksi vanhempaa tiilikatteista kaarevaa pintaa — '
+              + 'alkuperäistä kattoa, joka jäi uuden alle. Seinissä vuorottelevat '
+              + 'vaalea laasti ja tummat mukulakivet, ja niissä on kaari-ikkuna, '
+              + 'puoliympyrän muotoinen ikkuna kuudella pyöreällä aukolla ja '
+              + 'tumma avoin oviaukko. Vasemmassa laidassa on verkkoaita, '
+              + 'kiviportaat ja musta metalliportti, oikeassa kivimuuri ja '
+              + 'metallikaide. Taustalla nousee mäntyinen rinne.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          otsikko: 'Työ ajoitettiin, tekijää ei',
+          otsikko: 'Kaksitoista ikkunaa, kaksitoista profeettaa',
           tiedosto: 'Lagoudera Kirche Panagia tou Arakou Innen Gewölbe.jpg',
           teksti: 'Panagia tou Araka seisoo Lagouderan kylän ulkopuolella tuhannen '
               + 'metrin korkeudessa. Kupolillinen kirkko rakennettiin 1100-luvun '
-              + 'jälkipuoliskolla, ja pohjoisoven sisäpuolella olevan '
-              + 'piirtokirjoituksen mukaan seinämaalaukset valmistuivat '
-              + 'joulukuussa 1192 Leon tou Authentou -nimisen lahjoittajan '
-              + 'kustannuksella. Maalarin nimeä piirtokirjoitus ei kerro. '
-              + 'Maalaukset on usein liitetty Theodoros Apsevdisiin, joka '
-              + 'työskenteli Pafoksessa vuonna 1183, mutta tunnistus perustuu '
-              + 'tyyliin ja sitä on epäilty. Kupolin rummussa on kaksitoista '
-              + 'ikkunaa ja niiden välissä kaksitoista profeettaa. Apsiksen '
-              + 'maalaukset ovat toisen, karkeampilinjaisen tekijän työtä ja '
-              + 'muuta ohjelmaa vanhempia. Suojaava puukatto lisättiin '
-              + 'luultavasti vasta 1300-luvulla — sen alla holvien päällä ovat '
-              + 'yhä alkuperäiset kattotiilet. Kirkkoa käytetään yhä, ja sen '
-              + 'juhlapäivä on 8. syyskuuta.',
+              + 'jälkipuoliskolla, ja sen kupolin rummussa on kaksitoista ikkunaa '
+              + 'ja niiden välissä kaksitoista profeettaa. Pohjoisoven '
+              + 'sisäpuolella olevan piirtokirjoituksen mukaan seinämaalaukset '
+              + 'valmistuivat joulukuussa 1192 Leon tou Authentou -nimisen '
+              + 'lahjoittajan kustannuksella. Maalarin nimeä piirtokirjoitus ei '
+              + 'kerro, ja tunnistus Theodoros Apsevdisiin perustuu pelkkään '
+              + 'tyyliin. Apsiksen maalaukset ovat toisen, karkeampilinjaisen '
+              + 'tekijän työtä ja muuta ohjelmaa vanhempia. Suojaava puukatto '
+              + 'lisättiin luultavasti vasta 1300-luvulla — sen alla holvien '
+              + 'päällä ovat yhä alkuperäiset kattotiilet. Kirkkoa käytetään yhä, '
+              + 'ja sen juhlapäivä on 8. syyskuuta.',
           selite: 'Kirkon holvi alhaalta kuvattuna. Keskellä kulkee leveä '
               + 'kullankeltainen nauha, jossa on neljä pyöreää medaljonkia; '
-              + 'kussakin on nuoren pyhimyksen rintakuva kultaisine sädekehineen '
-              + 'ja nimi kreikkalaisin kirjaimin. Nauhan vasemmalla puolella on '
-              + 'syvänsinisellä pohjalla Kristuksen syntymä: makaava Neitsyt '
-              + 'Maria punaisessa viitassa ja rivi enkeleitä. Oikealla on '
-              + 'kultapohjainen kohtaus, jossa hahmo pitelee suurta ristiä ja '
-              + 'jonka yllä lukee ΗΑΝΑCΤΑCΙC. Tekstit on maalattu valkoisella '
-              + 'suoraan siniselle pohjalle. Värit ovat säilyneet kirkkaina, eikä '
-              + 'kuvassa näy valaisimia eikä ihmisiä.',
+              + 'kahdessa ylimmässä on parrakas pyhimys, kahdessa alimmassa '
+              + 'parraton nuorukainen, ja kunkin vieressä on nimi kreikkalaisin '
+              + 'kirjaimin. Nauhan vasemmalla puolella on syvänsinisellä pohjalla '
+              + 'Kristuksen syntymä: makaava Neitsyt Maria punaisessa viitassa ja '
+              + 'rivi enkeleitä. Oikealla on kultapohjainen kohtaus, jossa hahmo '
+              + 'pitelee suurta ristiä. Kohtausten nimet on maalattu valkoisella '
+              + 'siniselle pohjalle. Värit ovat säilyneet kirkkaina, eikä kuvassa '
+              + 'näy valaisimia eikä ihmisiä.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          otsikko: 'Katto kiertää talon joka sivulta',
+          otsikko: 'Viimeinen tuomio nousee harjaan asti',
           tiedosto: 'Église Sainte-Croix d\'Agiasmáti Fresques du narthex.jpg',
           teksti: 'Timios Stavros tou Agiasmati on noin kolmen kilometrin päässä '
-              + 'Platanistasan kylästä. Kirkko on yksilaivainen, ja sen jyrkkä '
-              + 'litteillä tiilillä katettu puukatto jatkuu seinien ulkopuolelle '
-              + 'kaikilla neljällä sivulla ja muodostaa kiertävän kuistin — '
-              + 'sellaista ei ole missään muualla Kyproksella. Maalaukset '
-              + 'valmistuivat vuonna 1494 papin nimeltä Petros Peratis ja hänen '
-              + 'vaimonsa Pepanin lahjoituksella, ja kirkossa on saaren '
-              + 'täydellisimmät 1400-luvun jälkipuoliskon maalaussarjat. '
-              + 'Lahjoittajat on maalattu itsekin seinään: he ojentavat '
-              + 'Kristukselle pienoismallia omasta kirkostaan. Länsipäädyssä on '
-              + 'laaja monihenkinen viimeisen tuomion kuvaelma, joka jatkuu ylös '
-              + 'harjaan asti. Kirkko on omistettu Pyhälle Ristille, ja ristin '
-              + 'löytymisen tarina on maalattu pieninä kuvina holvikaareen.',
+              + 'Platanistasan kylästä. Maalaukset valmistuivat vuonna 1494 pappi '
+              + 'Petros Peratiksen ja hänen vaimonsa Pepanin lahjoituksella, ja '
+              + 'kirkossa on saaren täydellisimmät 1400-luvun jälkipuoliskon '
+              + 'maalaussarjat. Länsipäädyssä on laaja monihenkinen viimeisen '
+              + 'tuomion kuvaelma, joka jatkuu ylös harjaan asti. Lahjoittajat on '
+              + 'maalattu itsekin seinään: he ojentavat Kristukselle '
+              + 'pienoismallia omasta kirkostaan. Kirkko on omistettu Pyhälle '
+              + 'Ristille, ja ristin löytymisen tarina on maalattu pieninä kuvina '
+              + 'holvikaareen. Rakennuksessa on vielä yksi piirre, jota ei ole '
+              + 'muualla saarella: jyrkkä puukatto jatkuu seinien ulkopuolelle '
+              + 'kaikilla neljällä sivulla ja muodostaa kiertävän kuistin.',
           selite: 'Kirkon länsiseinä maalattuna kokonaan freskoin, kuvattuna '
               + 'kuistin alta; ylhäällä näkyy kuistin puisia kattopalkkeja. '
               + 'Kolmiopäätyisen seinän yläosassa on tiheä viimeisen tuomion '
@@ -18063,18 +18053,15 @@ export const MAA_KATEGORIAT = {
           teksti: 'Kyproksenmufloni on villilammas, jota ei tavata missään muualla. '
               + 'Se on elänyt saarella yli 8 000 vuotta, ja sen uskotaan '
               + 'polveutuvan kotieläimestä, jonka saaren ensimmäiset asukkaat '
-              + 'toivat mukanaan. Uros painaa 35–45 kiloa ja naaras 25–35 kiloa; '
-              + 'säkäkorkeus on noin metri, ja sirppimäiset sarvet kasvavat vain '
-              + 'uroksille. Kun mesopotamiankuusipeura hävisi saarelta '
-              + '1800-luvulla, muflonista tuli suurin maalla elävä nisäkäs. '
-              + 'Vuonna 1930 eläimiä oli kahdessa laumassa runsaat kaksikymmentä '
-              + 'kummassakin, ja vuonna 1937 toinen laumoista katosi kokonaan. '
-              + 'Metsästyslakia tiukennettiin 1938 ja koko Pafoksen metsä '
-              + 'rauhoitettiin 1939. Sen jälkeen kanta on noussut: sata yksilöä '
-              + 'vuonna 1949, kahdeksansataa vuonna 1988, ja viranomaiset '
-              + 'ilmoittavat nykyään yli kolmetuhatta. Tarkin julkaistu laskenta '
-              + 'on silti vuodelta 2007. Mufloni liikkuu yli 700 neliökilometrin '
-              + 'metsäalueella saaren luoteisosassa.',
+              + 'toivat mukanaan. Uros painaa 35–45 kiloa ja naaras 25–35 kiloa, '
+              + 'ja sirppimäiset sarvet kasvavat vain uroksille. Kun '
+              + 'mesopotamiankuusipeura hävisi saarelta, muflonista tuli suurin '
+              + 'maalla elävä nisäkäs. Vuonna 1930 eläimiä oli kahdessa laumassa '
+              + 'runsaat kaksikymmentä kummassakin, ja vuonna 1937 toinen '
+              + 'laumoista katosi kokonaan. Metsästyslakia tiukennettiin 1938 ja '
+              + 'Pafoksen metsä rauhoitettiin. Kanta on siitä lähtien noussut, ja '
+              + 'viranomaiset ilmoittavat nyt yli kolmetuhatta yksilöä — tarkin '
+              + 'julkaistu laskenta on silti vuodelta 2007.',
           selite: 'Ruskeaturkkinen muflonipässi seisoo kuivalla kivikkorinteellä ja '
               + 'katsoo suoraan kameraan. Sarvet kaartuvat leveinä renkaina '
               + 'taaksepäin korvien ohi, ja kuonon alaosa, vatsa ja jalkojen '
@@ -18094,22 +18081,20 @@ export const MAA_KATEGORIAT = {
               + 'tarkoittaa lyhytlehtistä: neulaset ovat lyhyet, 5–16 '
               + 'millimetriä, kun libanoninsetrillä ne ovat 20–25 millimetriä. '
               + 'Lyhyempiä ei ole yhdelläkään setrillä, ja setrejä on maailmassa '
-              + 'neljä — kyproksensetri luetaan välillä omaksi lajikseen, välillä '
-              + 'libanoninsetrin muunnokseksi. Sukulaisuus on kaukainen: '
-              + 'sukulinjat erkanivat noin 6,6 miljoonaa vuotta sitten. Jotkin '
-              + 'puut ovat yli 500-vuotiaita. Puu kukkii syys–lokakuussa, ja käpy '
-              + 'kypsyy vasta seuraavan vuoden loppukesällä. Setripuuta on '
-              + 'käytetty kirkkojen ikonostaaseihin, koska se kestää lahoa ja '
-              + 'hyönteisiä. Tripyloksen alue ja Setrilaakso rauhoitettiin 823 '
-              + 'hehtaarin alalta vuonna 1984.',
-          selite: 'Yksittäinen setri kohoaa kuvan keskellä syvänsinistä taivasta '
-              + 'vasten. Oksat lähtevät rungosta vaakasuorina kerroksina ja '
-              + 'muodostavat leveän, litteän latvuksen. Puun takana laskeutuu '
-              + 'laakso, jonka rinteillä kasvaa lisää setrejä ja mäntyjä, ja '
-              + 'kaukana horisontissa on valkoinen pilvimuodostelma. Oikeassa '
-              + 'laidassa on varjoinen kallioleikkaus ja tummia havunoksia, '
-              + 'alalaidassa kulkee sorapintainen metsätie. Ihmisiä, ajoneuvoja '
-              + 'tai kylttejä ei näy.',
+              + 'neljä. Kyproksensetri luetaan välillä omaksi lajikseen, välillä '
+              + 'libanoninsetrin muunnokseksi; sukulinjat erkanivat noin 5–10 '
+              + 'miljoonaa vuotta sitten. Puu kukkii syys–lokakuussa, ja käpy '
+              + 'kypsyy vasta seuraavan vuoden loppukesällä. Vanhimmat puut ovat '
+              + 'yli 500-vuotiaita.',
+          selite: 'Yksittäinen setri kohoaa kuvan vasemmalla puoliskolla '
+              + 'syvänsinistä taivasta vasten. Alaoksat lähtevät rungosta '
+              + 'vaakasuorina kerroksina, ja latvus kapenee ylöspäin kartioksi, '
+              + 'jonka huippu on vielä terävä. Puun takana laskeutuu laakso, '
+              + 'jonka rinteillä kasvaa lisää setrejä ja mäntyjä, ja kaukana '
+              + 'horisontissa on valkoinen pilvimuodostelma. Oikeassa laidassa on '
+              + 'varjoinen kallioleikkaus ja tummia havunoksia, alalaidassa '
+              + 'kulkee sorapintainen metsätie. Ihmisiä, ajoneuvoja tai kylttejä '
+              + 'ei näy.',
           lahde: 'Gerda Arendt, Wikimedia Commons (CC0)',
         },
         {
@@ -18122,50 +18107,47 @@ export const MAA_KATEGORIAT = {
               + 'että sarjaa pidetään maailman parhaiten paljastuneena laatuaan: '
               + 'ylimpänä ovat tyynylaavat, sitten pystyt juonet, karkeat '
               + 'syväkivet ja alimpana maan vaipan kiviä. Tyynylaava syntyy, kun '
-              + 'laava purkautuu veden alle ja jähmettyy 30–170 senttimetrin '
-              + 'pallomaisiksi patjoiksi, joiden pinta on lasimainen ja sisus '
-              + 'huokoinen. Erikoisin piirre on se, että kerrostuma on kääntynyt '
-              + 'topografisesti ympäri: syvimmät kivet paljastuvat korkeimman '
-              + 'huipun ympäriltä ja nuoremmat alempaa rinteiltä. Saaren '
-              + 'kuparimalmi on samaa alkuperää, sillä sulfidiesiintymät ovat '
-              + 'tyynylaavojen seassa; niitä tunnetaan yli kolmekymmentä. Korkein '
-              + 'huippu Chionistra on 1 952 metriä.',
+              + 'laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi, '
+              + 'joiden läpimitta on 30 sentistä metriin; pinta on lasimainen ja '
+              + 'sisus huokoinen. Erikoisin piirre on se, että kerrostuma on '
+              + 'kääntynyt topografisesti ympäri: syvimmät kivet paljastuvat '
+              + 'korkeimman huipun ympäriltä ja nuoremmat alempaa rinteiltä. '
+              + 'Korkein huippu Chionistra on 1 952 metriä.',
           selite: 'Näkymä korkealta Troodoksen rinteeltä yli metsäisten '
-              + 'harjanteiden, jotka haalistuvat siniharmaiksi horisonttia kohti. '
-              + 'Etualan vasemmassa laidassa törröttää paljasta kalliota, jonka '
-              + 'pinta on ruosteenruskeaa ja vihertävänharmaata, ja sen päällä '
-              + 'kasvaa hajanaisia mäntyjä. Laakson pohjalla näkyy pieni kylä '
-              + 'vaaleine taloineen ja rinnettä kiertävä mutkainen tie; oikeassa '
-              + 'reunassa on lisää tietä ja muutama rakennus. Taivas on kirkkaan '
-              + 'sininen ja siinä on yksi valkoinen pilvi.',
+              + 'harjanteiden, jotka haalistuvat siniharmaiksi utuista '
+              + 'horisonttia kohti. Etualan vasemmassa laidassa törröttää '
+              + 'paljasta kalliota, jonka pinta on ruosteenruskeaa ja '
+              + 'vihertävänharmaata, ja sen päällä kasvaa hajanaisia mäntyjä. '
+              + 'Laakson pohjalla näkyy pieni kylä vaaleine taloineen ja rinnettä '
+              + 'kiertävä mutkainen tie; oikeassa reunassa on lisää tietä ja '
+              + 'muutama rakennus. Taivas on sininen, ja siinä on muutama '
+              + 'valkoinen pilvi.',
           lahde: 'Michal Osmenda from Brussels, Belgium, Wikimedia Commons (CC BY '
               + '2.0)',
         },
         {
-          otsikko: 'Järvi täyttyy talveksi ja kuivuu kesäksi',
+          otsikko: 'Koko järvi katoaa kesäksi',
           tiedosto: 'Flamencos comunes (Phoenicopterus roseus), lago salado de Lárnaca, Chipre, 2021-12-12, DD 01.jpg',
-          teksti: 'Larnakan suolajärvi on suurin neljän järven ryhmästä aivan '
-              + 'kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä '
-              + 'alkukesään: sadetta tulee 300–350 millimetriä vuodessa, ja '
-              + 'haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja '
-              + '60 prosentilla pinta-alasta alle 30 senttimetriä. Kesällä '
-              + 'suolapitoisuus nousee moninkertaiseksi meriveteen verrattuna. '
-              + 'Ravintoketju alkaa yksisoluisesta viherlevästä, jota syö '
-              + 'suolalehtijalkainen Artemia salina — ja juuri se on flamingojen '
-              + 'pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin '
-              + 'pesimäalueilta ja viipyvät helmikuun loppuun. Tavallisesti niitä '
-              + 'on noin kaksituhatta, enimmillään kymmenentuhatta. Samaan aikaan '
-              + 'järvellä talvehtii tuhansittain ristisorsia, taveja ja '
-              + 'naurulokkeja. Alue on Ramsar-kosteikko, ja se rauhoitettiin '
-              + 'vuonna 1997.',
-          selite: 'Parikymmentä vaaleanpunertavan valkoista flamingoa seisoo '
-              + 'matalassa harmaanvihreässä vedessä; osa kahlaa, osa on työntänyt '
-              + 'päänsä veteen ruokailemaan. Punaiset jalat ja mustakärkiset '
-              + 'kaarevat nokat erottuvat selvästi, ja linnut heijastuvat tyyneen '
-              + 'veteen. Takana kulkee kapea vihreä kaistale ja hiekkainen '
-              + 'penger, ja niiden takana näkyy Larnakan matala valkoinen '
-              + 'kaupunkisiluetti utuisessa ilmassa. Kuvan alaosa on pelkkää '
-              + 'vettä.',
+          teksti: 'Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin '
+              + 'laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: '
+              + 'sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin '
+              + 'syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 '
+              + 'senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee '
+              + 'moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. '
+              + 'Koko ravintoketju lepää kahden lajin varassa: yksisoluinen '
+              + 'viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka '
+              + 'on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja '
+              + 'Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä '
+              + 'vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on '
+              + 'Ramsar-kosteikko ja rauhoitettiin 1997.',
+          selite: 'Kymmeniä vaaleanpunertavan valkoisia flamingoja seisoo matalassa '
+              + 'harmaanvihreässä vedessä kahtena epämääräisenä rivinä; osa '
+              + 'kahlaa, osa on työntänyt päänsä veteen ruokailemaan. Punaiset '
+              + 'jalat ja mustakärkiset kaarevat nokat erottuvat selvästi. '
+              + 'Vedenpinta väreilee kevyesti. Takana kulkee kapea vihreä '
+              + 'kaistale ja hiekkainen penger, ja niiden takana näkyy Larnakan '
+              + 'matala valkoinen kaupunkisiluetti utuisessa ilmassa. Kuvan '
+              + 'alaosa on pelkkää vettä.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18197,17 +18179,15 @@ export const MAA_KATEGORIAT = {
               + 'puuvillalangalla, ja työ koostuu neljästä osasta: '
               + 'reikäompeleesta, leikkaustyöstä, laakapistotäytteistä ja '
               + 'neulapitsireunuksista. Kaksi ensimmäistä tarkoittavat sitä, että '
-              + 'osa kuviosta syntyy poistamalla lankoja kankaasta — kuvio on '
-              + 'siis reikiä yhtä paljon kuin lankaa. Perinne ulottuu Lefkaran '
-              + 'kylässä ainakin 1300-luvulle. Unesco mainitsee vaikutteina '
-              + 'paikallisen käsityön, venetsialaisten hovipukujen kirjonnan ja '
-              + 'antiikin geometriset kuviot; venetsialaiset saapuivat saarelle '
-              + '1489. Väriskaala on kapea: valkoinen, ruskea ja ekru. '
-              + 'Lefkaritika merkittiin Unescon aineettoman kulttuuriperinnön '
-              + 'luetteloon vuonna 2009. Kylässä kerrotaan yhä, että Leonardo da '
-              + 'Vinci olisi ostanut sieltä liinan Milanon tuomiokirkolle vuonna '
-              + '1481, mutta aikalaislähdettä siitä ei ole: tarina ilmestyi '
-              + 'painettuna vasta noin 1930.',
+              + 'osa kuviosta syntyy poistamalla lankoja kankaasta — kuviossa on '
+              + 'yhtä paljon reikää kuin lankaa. Perinne ulottuu Lefkaran kylässä '
+              + 'ainakin 1300-luvulle. Unesco mainitsee vaikutteina paikallisen '
+              + 'käsityön, venetsialaisten hovipukujen kirjonnan sekä antiikin '
+              + 'kreikkalaiset ja bysanttilaiset geometriset kuviot. Väriskaala '
+              + 'on kapea: valkoinen, ruskea ja ekru. Kylässä kerrotaan, että '
+              + 'Leonardo da Vinci olisi ostanut sieltä liinan Milanon '
+              + 'tuomiokirkolle vuonna 1481, mutta aikalaislähdettä siitä ei ole: '
+              + 'tarina ilmestyi painettuna vasta noin 1930.',
           selite: 'Terävä lähikuva valkoisen pellavaliinan kulmasta mustaa alustaa '
               + 'vasten, jolloin jokainen reikä erottuu. Liinassa on tiheä '
               + 'ruudukko työtä, jossa kankaasta on poistettu lankoja ja jäljelle '
@@ -18226,21 +18206,21 @@ export const MAA_KATEGORIAT = {
               + 'sen pääkadulla liinat ripustetaan myyntiin suoraan puotien '
               + 'seinille ja oviaukkojen pieliin. Työ on hidasta: yhteen '
               + 'pöytäliinaan voi kulua kaksi vuotta, ja sellaisen hinta voi '
-              + 'nousta tuhansiin euroihin. Tekijöitä on kuitenkin yhä vähemmän. '
-              + 'Kylässä perustettiin vuonna 2013 yhdistys pitämään taitoa yllä, '
-              + 'ja siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin kirjoja '
+              + 'nousta tuhansiin euroihin. Tekijöitä on kuitenkin koko ajan '
+              + 'vähemmän. Kylässä perustettiin yhdistys pitämään taitoa yllä, ja '
+              + 'siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin ompelija '
               + 'oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä '
-              + 'käsissä. Sama pätee saaren savenvalajiin: heitä on jäljellä noin '
-              + 'kaksi tusinaa, enimmäkseen yli 50-vuotiaita ja lähes kaikki '
-              + 'naisia.',
+              + 'käsissä. Lefkaritika merkittiin Unescon aineettoman '
+              + 'kulttuuriperinnön luetteloon vuonna 2009.',
           selite: 'Okrankeltaiseksi rapattu kylätalo, jonka alakerrassa on kaksi '
               + 'avointa oviaukkoa ja niiden yllä valkoiset markiisit. '
               + 'Oviaukkojen pieliin ja seinään on ripustettu myytäviä liinoja: '
               + 'suuria pöytäliinoja reunapitseineen, kapeita kaitaliinoja, '
               + 'kirjottuja neliöitä ja oikeassa reunassa iso kolmioksi taiteltu '
-              + 'pitsihuivi. Vasemmalla on kulmapeili, kivimuuria ja pala '
-              + 'punavalkoista työmaanauhaa, yläikkunoissa ruskeat puuluukut. '
-              + 'Katu edustalla on tyhjä. Ihmisiä ei näy.',
+              + 'pitsihuivi. Oikeassa laidassa on lisäksi suljettu puuovi. '
+              + 'Vasemmalla on kulmapeili, kivimuuria ja pala punavalkoista '
+              + 'työmaanauhaa, yläikkunoissa ruskeat puuluukut. Katu edustalla on '
+              + 'tyhjä, eikä ihmisiä näy.',
           lahde: 'דוד שי, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -18255,19 +18235,20 @@ export const MAA_KATEGORIAT = {
               + 'kolmesta neljään kiloa savea, renkaittain kohotettu vaihe kesti '
               + 'neljästä kuuteen viikkoa, kuivuminen 10–15 päivää ja poltto '
               + 'puu-uunissa kolme vuorokautta. Valmis ruukku tiivistettiin pikeä '
-              + 'ja etikkaa käyttäen. Moniin kaiverrettiin tekijän nimi ja '
+              + 'ja etikkaa käyttäen, ja moniin kaiverrettiin tekijän nimi ja '
               + 'vuosiluku. Ruukuissa säilytettiin viiniä ja vettä ja keitettiin '
-              + 'trahanas-keittoa. Foinin tuotanto loppui 1970-luvun alussa. '
-              + 'Kornoksessa työ jatkuu, ja se merkittiin Kyproksen kansalliseen '
-              + 'aineettoman kulttuuriperinnön luetteloon vuonna 2016.',
+              + 'trahanas-keittoa. Foinin tuotanto loppui 1970-luvun alussa; '
+              + 'Kornoksessa työ jatkuu yhä, mutta perinnesavenvalajia on '
+              + 'jäljellä vain muutamia kymmeniä, enimmäkseen naisia.',
           selite: 'Kymmenkunta jättimäistä pallomaista saviruukkua makaa kyljellään '
-              + 'kyläpihan hiekkaisella maalla. Ruukut ovat lasittamatonta '
-              + 'vaaleanruskeaa savea, ja niissä on leveä pyöreä suuaukko '
-              + 'paksuine reunuksineen; pinta on haalistunut auringossa. '
-              + 'Taustalla on valkoiseksi kalkittu talo, jonka ikkunoissa on '
-              + 'kirkkaan siniset säleluukut, sekä kiviportaat ja rapistunut '
-              + 'holvikaari. Pihaa reunustavat matalat kuivamuurit, joiden päällä '
-              + 'kasvaa viikunanvesoja. Ihmisiä ei näy.',
+              + 'kyläpihan soraisella maalla. Ruukut ovat lasittamatonta '
+              + 'vaaleanruskeaa savea — yksi takimmainen on lähes musta — ja '
+              + 'niissä on leveä pyöreä suuaukko paksuine reunuksineen. Taustalla '
+              + 'on valkoiseksi kalkittu talo, jonka ikkunoissa on kirkkaan '
+              + 'siniset säleluukut, ja sen edessä kiviportaat. Vasemmalla näkyy '
+              + 'romahtaneen kivitalon aukko suorine betonikamanoineen. Pihaa '
+              + 'reunustavat matalat kuivamuurit, joiden päällä kasvaa '
+              + 'viikunanvesoja. Ihmisiä ei näy.',
           lahde: 'Charisc, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -18283,17 +18264,17 @@ export const MAA_KATEGORIAT = {
               + 'ristit. Vanhimmat värit olivat punainen ja sininen; keltainen, '
               + 'oranssi ja vihreä tulivat myöhemmin. Kudonta kuului taloihin, '
               + 'joissa tytöt valmistivat vuosien ajan tekstiilejä omiin '
-              + 'myötäjäisiinsä. Kylässä on nykyään kudontamuseo, jossa vanhat '
-              + 'kangaspuut ovat yhä pystyssä.',
+              + 'myötäjäisiinsä. Kylässä on nykyään kudontamuseo.',
           selite: 'Suuret puiset kangaspuut keskellä vaaleaa laattalattiaista '
-              + 'museohuonetta. Kuteessa on kesken oleva kapea kangas, jossa on '
-              + 'vaaleanpunaisia ja vihreitä raitoja, ja etummaisella puomilla '
-              + 'lepää kirkkaanpunainen raidallinen kudonnainen ja valkoinen '
-              + 'käämipuola. Loimen yläpuolella riippuu nippuja värjättyjä '
-              + 'lankoja sekä pieniä puisia niisiä ja narupyöriä. Takaseinällä ja '
-              + 'oviaukon yläpuolella on esillä valmiita kudonnaisia geometrisine '
-              + 'raitakuvioineen, oikealla nykyaikaisia muovikoreja lankakeriä '
-              + 'täynnä. Huoneessa ei ole ihmisiä.',
+              + 'museohuonetta. Kangaspuissa on kesken oleva kapea raitakangas, '
+              + 'jonka päällä lepää sakset ja tumma metallinen työkalu; raidat '
+              + 'ovat vaaleanpunaisia, kermanvalkoisia, oransseja ja '
+              + 'harmaanvihreitä. Loimen yläpuolella riippuu nippuja värjättyjä '
+              + 'lankoja sekä puisia niisiä ja narupyöriä. Takaseinällä on esillä '
+              + 'valmiita kudonnaisia geometrisine raitakuvioineen. Nykyaika '
+              + 'näkyy kuvassa kolmesti: penkin jalassa roikkuu sininen '
+              + 'kertakäyttöinen kasvomaski, oikealla on kaksi tyhjää valkoista '
+              + 'muovikoria ja niiden yllä pahvilaatikko tuotemerkkiteksteineen.',
           lahde: 'Mboesch, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18306,9 +18287,9 @@ export const MAA_KATEGORIAT = {
           'Levyt taivutettiin muotin ympäri',
         ],
         oikea: 0,
-        fakta: 'Renkaittain kohottaminen kesti neljästä kuuteen viikkoa, ja työ '
-            + 'oli tehtävä hitaasti, jottei alaosa lyhistyisi märkänä. Sama '
-            + 'tekniikka on käytössä yhä Kornoksessa.',
+        fakta: 'Renkaittain kohottaminen kesti neljästä kuuteen viikkoa, koska '
+            + 'märkä savi ei kanna omaa painoaan. Sama tekniikka on käytössä '
+            + 'Kornoksessa.',
       },
     },
     {
@@ -18322,18 +18303,18 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Mustaksi kullaksi sanottu palko',
           tiedosto: 'Кипр.Шоколадное дерево.Плоды.JPG',
           teksti: 'Johanneksenleipäpuun palkoja kutsuttiin Kyproksella mustaksi '
-              + 'kullaksi. Puu kestää kuivuutta eikä vaadi kastelua, ja palot '
-              + 'vietiin ennen kaikkea Englantiin, Ranskaan ja Egyptiin. Viljely '
-              + 'voimistui Limassolin seudulla vuodesta 1854. Sato korjattiin '
-              + 'elokuun lopusta alkaen noin kolmen viikon aikana: miehet '
-              + 'pudottivat palot kepeillä ja naiset keräsivät ne koreihin. '
-              + 'Vuoden 1994 inventaarissa saarella laskettiin noin 265 000 '
-              + 'puuta, ja määrä oli pudonnut 23 prosenttia vuodesta 1977. Vuonna '
-              + '2012 viljelyala oli 1 709 hehtaaria ja sato 9 123 tonnia; '
-              + 'vuoteen 2022 mennessä ala oli laskenut 1 340 hehtaariin. '
-              + 'Paloista keitetään siirappia: niitä haudutetaan vedessä suuressa '
-              + 'astiassa noin neljä tuntia, minkä jälkeen neste siivilöidään. '
-              + 'Siirapista tehdään pastelli-nimistä makeista.',
+              + 'kullaksi. Puu kestää kuivuutta eikä vaadi kastelua, ja palkoja '
+              + 'vietiin ennen kaikkea Englantiin ja Ranskaan. Viljely voimistui '
+              + 'Limassolin seudulla vuodesta 1854. Sato korjattiin elokuun '
+              + 'lopusta alkaen noin kolmen viikon aikana: miehet pudottivat '
+              + 'palot kepeillä ja naiset keräsivät ne koreihin. Vuoden 1994 '
+              + 'inventaarissa saarella laskettiin 265 000 puuta, ja määrä oli '
+              + 'pudonnut 23 prosenttia vuodesta 1977. Vuonna 2012 viljelyala oli '
+              + '1 709 hehtaaria ja sato 9 123 tonnia; vuoteen 2022 mennessä ala '
+              + 'oli laskenut 1 340 hehtaariin. Paloista keitetään siirappia: '
+              + 'niitä haudutetaan vedessä suuressa astiassa muutaman tunnin, '
+              + 'minkä jälkeen neste siivilöidään ja siitä tehdään '
+              + 'pastelli-nimistä makeista.',
           selite: 'Alaviistosta otettu kuva johanneksenleipäpuun oksistoon. Oksilta '
               + 'roikkuu tiheinä rypäleinä kymmeniä pitkiä, litteitä ja hieman '
               + 'kaarevia palkoja, jotka ovat kypsyneet tummanruskeiksi ja '
@@ -18341,7 +18322,8 @@ export const MAA_KATEGORIAT = {
               + 'keskiosan. Ympärillä on puun pyöreähköjä, nahkeita ja '
               + 'tummanvihreitä lehtiä sekä paksuja harmaanruskeita oksia, ja '
               + 'vasemmalla muutama punertava kuivunut lehti. Lehtien välistä '
-              + 'pilkottaa vaalea taivas. Ihmisiä tai rakennuksia ei näy.',
+              + 'pilkottaa vaalea taivas ja oikealla kirkkaan keltainen pinta, '
+              + 'joka jää epätarkkana tunnistamatta. Ihmisiä ei näy.',
           lahde: 'Маслова Людмила, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -18355,20 +18337,19 @@ export const MAA_KATEGORIAT = {
               + 'paketiksi. Grillissä rasvakalvo sulaa ja kastelee lihan sisältä, '
               + 'ja pinta ruskistuu rapeaksi; siksi sheftalia ei kuivu, vaikka '
               + 'siinä ei ole kuorta pitämässä nesteitä sisällä. Makkarat '
-              + 'käännellään hiilloksen päällä tasaisin väliajoin. Sheftalia '
-              + 'tarjoillaan joko pitaleivässä salaatin kanssa tai lautasella '
-              + 'grillipöydän osana. Kyproksen toinen grilliperinne on souvla, '
-              + 'jossa suuret lihapalat pyörivät pitkässä vartaassa kauempana '
-              + 'hiilloksesta ja kypsyvät hitaasti.',
-          selite: 'Valkoisella lautasella on rivissä seitsemän grillattua, '
+              + 'käännellään hiilloksen päällä tasaisin väliajoin ja tarjoillaan '
+              + 'joko pitaleivässä salaatin kanssa tai lautasella. Saaren toinen '
+              + 'grilliperinne on souvla, jossa suuret lihapalat pyörivät '
+              + 'pitkässä vartaassa kauempana hiilloksesta ja kypsyvät hitaasti.',
+          selite: 'Valkoisella lautasella on rivissä kuusi grillattua, '
               + 'tummanruskeaksi paahtunutta makkaraa vaalealla puupöydällä. '
-              + 'Takana lautasella on suikaloitua valkokaalia, hienonnettua '
-              + 'persiljaa, sipulinlohko, puolikas sitruuna ja kaksi '
-              + 'tomaattilohkoa. Lautasen oikealla puolella on lautasliina, '
-              + 'veitsi ja haarukka. Kuvan yläreunassa näkyy toisen lautasen '
-              + 'reuna samoja makkaroita ja oikeassa yläkulmassa kromattu '
-              + 'leipäkori. Pöydän puusyyt ja oksankohdat erottuvat selvästi, '
-              + 'eikä kuvassa ole ihmisiä.',
+              + 'Vasemmanpuoleisin on selvästi muita tummempi. Takana lautasella '
+              + 'on suikaloitua valkokaalia, hienonnettua persiljaa, '
+              + 'sipulinlohko, puolikas sitruuna ja kolme tomaattilohkoa. '
+              + 'Lautasen oikealla puolella on lautasliina, veitsi ja haarukka. '
+              + 'Kuvan yläreunassa näkyy toisen lautasen reuna samoja makkaroita '
+              + 'ja oikeassa yläkulmassa kromattu leipäkori. Kuvassa ei ole '
+              + 'ihmisiä.',
           lahde: 'Pampos1997, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -18377,18 +18358,17 @@ export const MAA_KATEGORIAT = {
           teksti: 'Commandaria on makea kyproslainen viini, joka tehdään vain '
               + 'kahdesta saaren omasta rypälelajikkeesta: valkoisesta '
               + 'Xynisteristä ja punaisesta Mavrosta. Poimitut rypäleet '
-              + 'levitetään kuivauskentille auringonpaisteeseen 8–15 päiväksi '
-              + 'sään mukaan. Kuivuessaan marjat menettävät vettä ja mehun '
-              + 'sokeripitoisuus nousee: se vastaa 15–17 tilavuusprosentin '
+              + 'levitetään kuivauskentille auringonpaisteeseen runsaaksi '
+              + 'viikoksi sään mukaan. Kuivuessaan marjat menettävät vettä ja '
+              + 'mehun sokeripitoisuus nousee: se vastaa 15–17 tilavuusprosentin '
               + 'alkoholimäärää, kun tavallisissa viineissä luku on 13–14. Lain '
               + 'mukaan viini on kypsytettävä vähintään kaksi vuotta '
               + 'tammitynnyrissä. Tuotantoalueeseen kuuluu neljätoista kylää '
-              + 'Troodoksen etelärinteillä, ja nimi juontuu ristiretkiajan '
-              + 'hallintoalueesta La Grande Commanderie. Commandaria on suojattu '
-              + 'alkuperänimitys vuodesta 2006. Guinnessin ennätyskirja pitää '
-              + 'sitä maailman vanhimpana yhä valmistettavana viininä, mutta '
-              + 'tarina siitä, että Rikhard Leijonamieli olisi vuonna 1191 '
-              + 'kutsunut sitä viinien kuninkaaksi, on perimätietoa.',
+              + 'Troodoksen etelärinteillä, ja nimi juontuu keskiaikaisesta '
+              + 'hallintoalueesta La Grande Commanderie. Commandaria on ollut '
+              + 'EU:n suojattu alkuperänimitys vuodesta 2006, ja Guinnessin '
+              + 'ennätyskirja pitää sitä maailman vanhimpana yhä valmistettavana '
+              + 'nimettynä viininä.',
           selite: 'Lähikuva viiniköynnöksen alta ylöspäin. Paksusta, ryppyisestä ja '
               + 'harmaanruskeasta rungosta roikkuu kymmeniä suuria tiiviitä '
               + 'rypäleterttuja pitkinä kartioina. Marjat ovat vaaleanvihreitä ja '
@@ -18404,25 +18384,25 @@ export const MAA_KATEGORIAT = {
           tiedosto: 'Sugar Mill, Kolossi Castle3.jpg',
           teksti: 'Ennen kuin sokeriruoko siirtyi Atlantin taakse, sitä '
               + 'kasvatettiin Kyproksen etelärannikolla. Kolossin tila annettiin '
-              + 'vuonna 1210 Johanniittain ritarikunnalle, ja sokerin valmistus '
-              + 'paikalla on dokumentoitu vuodesta 1343. Parhaimmillaan 1300- ja '
-              + '1400-luvuilla tilan arvioidaan tuottaneen jopa 400 tonnia '
-              + 'sokeria vuodessa. Linnan itäpuolella on yhä jäljellä pitkä ja '
-              + 'kapea holvattu halli, jossa ruoko puristettiin ja mehu '
-              + 'keitettiin. Työ vaati vettä kahteen tarkoitukseen: kastelemaan '
-              + 'ruokoviljelmiä ja pyörittämään myllynrattaita. Sitä varten '
-              + 'alueelle rakennettiin akveduktien, altaiden ja vesimyllyjen '
-              + 'verkosto. Sokerista tuli keskiajan Kyproksen arvokkain '
-              + 'vientituote, ja se myytiin Eurooppaan mausteena eikä makeisena.',
+              + 'vuonna 1210 johanniittojen ritarikunnalle, ja sokerin valmistus '
+              + 'paikalla on dokumentoitu vuodesta 1343. Linnan itäpuolella on '
+              + 'yhä jäljellä pitkä ja kapea holvattu halli, jossa ruoko '
+              + 'puristettiin ja mehu keitettiin. Työ vaati vettä kahteen '
+              + 'tarkoitukseen: kastelemaan ruokoviljelmiä ja pyörittämään '
+              + 'myllynrattaita. Sitä varten alueelle rakennettiin akveduktien, '
+              + 'altaiden ja vesimyllyjen verkosto. Sokeri oli keskiajan '
+              + 'Euroopassa kallis ylellisyystuote, ja saaren sokeri myytiin '
+              + 'sinne mausteen tapaan.',
           selite: 'Massiivinen keltahiekkakivinen raunioseinä alaviistosta '
               + 'kuvattuna pilvettömän sinisen taivaan alla. Seinässä on kolme '
-              + 'peräkkäistä suippokaarista holviaukkoa; lähin on hyvin säilynyt '
-              + 'teräväkärkinen kaari ja etäisemmät ovat murentuneempia. Holvien '
-              + 'sisällä näkyy karkeaa kivimuurausta ja hämärä sisätila. Muurin '
-              + 'harja on rikkonainen, ja siitä työntyy esiin irtokiviä. '
-              + 'Vasemmalla erottuu matalampia raunioperustuksia ja vihreä puu, '
-              + 'alhaalla kulkee vaalea kivilaatoitettu polku. Kuvassa ei ole '
-              + 'ihmisiä, ajoneuvoja eikä opastekylttejä.',
+              + 'peräkkäistä suippokaarista holviaukkoa; lähin on teräväkärkinen '
+              + 'ja hyvin säilynyt, keskimmäinen murentunein. Holvien sisällä '
+              + 'näkyy karkeaa kivimuurausta, ja toisen aukon läpi erottuu '
+              + 'nykyaikainen suojakatos: harmaansininen peltikatto mustine '
+              + 'teräspilareineen. Muurin harja on rikkonainen, ja siitä työntyy '
+              + 'esiin irtokiviä. Vasemmalla on matalampia raunioperustuksia ja '
+              + 'vihreä puu, alhaalla kulkee vaalea kivilaatoitettu polku. '
+              + 'Ihmisiä ei näy.',
           lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
