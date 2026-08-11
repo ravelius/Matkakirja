@@ -441,8 +441,8 @@ export const KAARI_PAKETIT = {
         + 'Suvussani sanotaan, että se on viesti. Vastaa kysymykseen, '
         + 'niin näytän, mihin viesti osoittaa."',
       kysymys: {
-        q: 'Puerta del Solin aukiolla on laatta, josta jotakin mitataan. '
-          + 'Mitä?',
+        q: 'Saman aukion kiveyksessä, jolla kello lyö, on laatta, josta '
+          + 'jotakin mitataan. Mitä?',
         vaihtoehdot: [
           'Espanjan maanteiden kilometrit — nollapiste on tässä',
           'Auringon varjon pituus tarkalleen keskipäivällä',
@@ -1339,8 +1339,8 @@ export const KAARI_PAKETIT = {
         + 'pitämään sivun auki. Vastaa hänen kysymykseensä, niin '
         + 'käännämme sivua yhdessä."',
       kysymys: {
-        q: 'Pietari rakennettiin paikkaan, jota rakentajat kirosivat. '
-          + 'Millaiselle maalle kaupunki nousi?',
+        q: 'Sillat nousevat öisin, sillä joki on kaupungin valtakatu. '
+          + 'Millaiselle maalle rakentajat tämän kaupungin pystyttivät?',
         vaihtoehdot: [
           'Nevan suiston soille, tammipaalujen varaan',
           'Graniittiharjulle, joka lohkottiin tasaiseksi',
@@ -1385,7 +1385,8 @@ export const KAARI_PAKETIT = {
         + '[excited] Vastaa hänen kysymykseensä, niin kuljemme sen '
         + 'tänään."',
       kysymys: {
-        q: 'Suomenlinna levittäytyy usealle saarelle. Kuinka monelle?',
+        q: 'Suomenlinnan linnoitus rakennettiin aikanaan usealle '
+          + 'saarelle. Kuinka monelle?',
         vaihtoehdot: [
           'Kuudelle',
           'Kolmelle',
