@@ -17358,4 +17358,387 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  YEM: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Jemenin sisämaassa aavikko alkaa heti vuorten takaa, ja silti siellä '
+          + 'oli kolmetuhatta vuotta sitten kaupunkeja, temppeleitä ja peltoja. '
+          + 'Ne eivät eläneet sateesta vaan siitä, mitä sateelle tehtiin.',
+      nostot: [
+        {
+          otsikko: 'Pato, joka kasteli keitaan tuhat vuotta',
+          tiedosto: 'Jemen1988-022 hg.jpg',
+          teksti: 'Maribin pato ei ollut yksi rakennus vaan tuhannen vuoden työ. '
+              + 'Vanhin luotettavasti ajoitettu vaihe on 700-luvulta eaa.: noin '
+              + '580 metriä pitkä maavalli, korkeutta vain nelisen metriä. Noin '
+              + '500 eaa. valli nostettiin seitsemään metriin ja sen yläpuoli '
+              + 'vuorattiin kivellä. Himjarien aikaan pato oli neljätoista metriä '
+              + 'korkea, ja kummassakin päässä oli kivestä muurattu '
+              + 'sulkurakennelma, josta vesi juoksutettiin kanaviin. Rakennelma '
+              + 'ei padonnut järveä. Sade tuli vuorille muutamana päivänä '
+              + 'vuodessa kerralla, ja koko tulva piti ohjata pelloille sillä '
+              + 'välin. Pato murtui ja korjattiin useasti — vuosina 449, 450, 542 '
+              + 'ja 548 — ja vuoden 570 tienoilla sitä ei enää korjattu.',
+          selite: 'Kallioon tukeutuva korkea kivimuuri, jonka pintaa jäsentävät '
+              + 'pystyt pilarimaiset tuet ja niiden välissä rivit pieniä '
+              + 'neliöreikiä. Oikealla nousee erillinen muurinpätkä, ja niiden '
+              + 'välissä paljas kallio on veistetty portaiksi ja altaiksi. '
+              + 'Etualalla on matalaa vettä ja leveä hiekkasärkkä, taustalla '
+              + 'paljaita ruskeita kukkuloita. Muurin vasemmassa laidassa seisoo '
+              + 'yksi ihminen, josta näkee mittasuhteet.',
+          lahde: 'H. Grobe, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Viisi pylvästä, ja yksi maan alla',
+          tiedosto: 'Barran Temple.jpg',
+          teksti: 'Maribin keitaan reunalla seisoo rivi hoikkia kivipylväitä. Ne '
+              + 'kuuluivat Almaqah-jumalalle pyhitettyyn temppeliin, jota '
+              + 'kutsutaan Bar\'anin temppeliksi ja kansanomaisesti Bilqiksen '
+              + 'valtaistuimeksi. Wendell Phillipsin retkikunta kaivoi paikkaa '
+              + 'vuosina 1951–1952, ja työtä jatkettiin vuonna 1988. Silloin '
+              + 'selvisi, ettei pylväitä ollut viisi vaan kuusi: kuudennen '
+              + 'pylvään jäännökset olivat maan alla. Pihan keskellä on kaivo, ja '
+              + 'seiniin on hakattu piirtokirjoituksia, joissa kerrotaan Saban '
+              + 'valtakunnan tapahtumia — temppeli oli siis myös paikka, jossa '
+              + 'asiat pantiin muistiin. Lähistöllä on samalle jumalalle '
+              + 'omistettu Awwamin temppeli, Jemenin suurin esi-islamilainen '
+              + 'pyhäkkö.',
+          selite: 'Kaivauskenttä, jonka keskellä nousee viisi kapeaa nelisärmäistä '
+              + 'pylvästä samasta vaaleasta kivestä. Niiden juurella on leveä '
+              + 'porrasrivi ja kivilaatoitettu taso, ympärillä matalia '
+              + 'muurinjäännöksiä ja irtolohkareita suorina riveinä. Kentän '
+              + 'reunaa kiertää suora kiviaita. Takana on vihreitä peltoja, '
+              + 'puurivi ja matalia taloja, ja taivas on kalpea.',
+          lahde: 'Ali Mohamed, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kylä, joka jätettiin seisomaan',
+          tiedosto: 'Ancient Ma\'rib 01.jpg',
+          teksti: 'Vanha Marib on savitiilikylä kummun päällä, mutta kumpu ei ole '
+              + 'luonnon tekemä. Savitiilitalo kestää muutaman sukupolven, ja kun '
+              + 'se sortuu, seuraava rakennetaan raunion päälle. Riittävän monta '
+              + 'kertaa toistettuna maanpinta nousee talojen mukana. Kummun '
+              + 'sisällä on Saban valtakunnan pääkaupunki eli sama paikka, josta '
+              + 'patoa hallittiin. Kylä tyhjeni 1900-luvun kuluessa, ja asukkaat '
+              + 'siirtyivät tasangolle uuteen Maribiin muutaman kilometrin '
+              + 'päähän. Vanhat talot jäivät paikoilleen ilman kattoja.',
+          selite: 'Savitiilikaupunki loivan kummun laella, kuvattuna alhaalta. '
+              + 'Talot ovat kolmi- ja nelikerroksisia ja saman värisiä kuin maa; '
+              + 'useasta on jäljellä vain seinät ja tyhjät ikkuna-aukot, ja '
+              + 'muutama on romahtanut kasaksi. Kummun rinne on paljasta '
+              + 'hiekansekaista maata. Juurella on matalia uudempia rakennuksia, '
+              + 'oikeassa laidassa pylväskäytävällinen talo. Etualalla on '
+              + 'tasaista soraa ja renkaanjälkiä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tiilikaupunki, jossa opiskeltiin',
+          tiedosto: 'Zabid 1987 04.jpg',
+          teksti: 'Zabid perustettiin Punaisenmeren rannikkotasangolle noin vuonna '
+              + '820. Se oli kolmen peräkkäisen hallitsijasuvun pääkaupunki, ja '
+              + 'sen moskeijoista tuli oppilaitoksia, joihin tultiin kaukaa. '
+              + '1300-luvulla elänyt paikallinen kirjoittaja laski kaupungissa '
+              + 'olleen 230–240 moskeijaa. Osmanit ottivat Zabidin haltuunsa '
+              + 'vuonna 1539 ja muurasivat sen ympärille muurin portteineen. '
+              + 'Rakennusaine on koko kaupungissa sama poltettu tiili, ja '
+              + 'seinäpintoihin saadaan kuvioita jättämällä tiiliä ulos ja '
+              + 'sisään. Zabid otettiin maailmanperintöluetteloon vuonna 1993 ja '
+              + 'siirrettiin vaarantuneiden kohteiden listalle vuonna 2000 maan '
+              + 'omasta pyynnöstä: siihen mennessä 40 prosenttia vanhoista '
+              + 'taloista oli korvattu betonilla.',
+          selite: 'Tiilestä muurattu kaupunginportti, jonka molemmin puolin kohoaa '
+              + 'massiivinen pyöreä torni. Keskellä on korkea kärjekäs '
+              + 'holvikaari, ja sen läpi näkyy vihreä puu toisella puolella. '
+              + 'Tiilipinta on kulunut ja paikoin peittynyt vaaleaan laastiin; '
+              + 'muurissa on rivejä pieniä neliömäisiä aukkoja. Maa on hiekkaa, '
+              + 'ja taivas on ylivalottunut valkoiseksi.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Maribin temppelistä löytyi vasta vuoden 1988 kaivauksissa?',
+        vaihtoehdot: [
+          'Kuudennen pylvään jäännökset',
+          'Sabalaisen kuninkaan hautakammio',
+          'Kadonneen kastelukanavan suuaukko',
+          'Almaqah-jumalan patsas',
+        ],
+        oikea: 0,
+        fakta: 'Pystyssä olevia pylväitä on viisi, ja niin monta niitä oli luultu '
+            + 'olleenkin. Kuudes oli sortunut ja jäänyt maan alle.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Jemenissä rakennetaan ylöspäin ja jyrkille paikoille. Syy ei ole '
+          + 'näyttävyys vaan se, että tasainen maa on peltoa ja veden reitit on '
+          + 'jätettävä rauhaan.',
+      nostot: [
+        {
+          otsikko: 'Savesta tehty pilvenpiirtäjäkortteli',
+          tiedosto: 'Shibam Wadi Hadhramaut Yemen.jpg',
+          teksti: 'Shibam seisoo Hadramautin laakson pohjalla kallioisen kohouman '
+              + 'päällä. Nykyinen kaupunki on rakennettu pääosin vuoden 1533 '
+              + 'jälkeen, kun tulva oli vienyt edellisen. Muurien sisällä on noin '
+              + 'viisisataa tornitaloa, joissa on viidestä yhteentoista kerrosta; '
+              + 'korkeimmat nousevat yli kolmenkymmenen metrin. Kerroksessa on '
+              + 'tavallisesti yksi tai kaksi huonetta. Rakennusaine on auringossa '
+              + 'kuivattu savitiili, jota ei ole poltettu — se ei kestä sadetta '
+              + 'itsestään, vaan seinät on rapattava uudella savikerroksella yhä '
+              + 'uudelleen. Muurien ulkopuolella maa on wadin tulvatasankoa, ja '
+              + 'juuri siksi kaupunki kasvoi ylöspäin eikä sivuille. Shibam '
+              + 'otettiin maailmanperintöluetteloon vuonna 1982.',
+          selite: 'Tiivis kortteli korkeita savitiilitaloja iltavalossa. Talot ovat '
+              + 'kullanruskeita ja monen yläosa on kalkittu valkoiseksi; ikkunat '
+              + 'ovat pieniä ja säännöllisissä riveissä. Kortteli päättyy '
+              + 'jyrkkään reunaan, jonka takana on hiekkaista tasankoa ja '
+              + 'palmuja. Taustalla kohoaa pitkä pöytävuoren reuna vaakasuorine '
+              + 'kerroksineen. Alalaidassa näkyy tie, autoja ja matalampia '
+              + 'valkoisia taloja.',
+          lahde: 'Jialiang Gao, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Palatsi seisoo yhden kallion varassa',
+          tiedosto: 'Wadi Dhar 1987 09.jpg',
+          teksti: 'Wadi Dharin laaksossa noin viidentoista kilometrin päässä '
+              + 'Sanaasta kohoaa yksinäinen hiekkakivipaasi. Sen päällä on Dar '
+              + 'al-Hajar, seitsenkerroksinen palatsi, joka valmistui nykyiseen '
+              + 'muotoonsa vuonna 1920 imaami Yahyan kesäasunnoksi. Paikalla oli '
+              + 'jo rakennus vuodelta 1786. Pohjakaava ei ole suora, koska se '
+              + 'noudattaa kallion muotoa: huoneet asettuvat siihen, mihin paasi '
+              + 'antaa myöten. Alaosa on mustaa basalttia ja yläkerrokset '
+              + 'poltettua tiiltä. Vesi tuli kaivosta, joka on louhittu kallion '
+              + 'sisään ylhäältä alas asti. Palatsi on nykyään museo.',
+          selite: 'Vaalea monikerroksinen rakennus seisoo kalliopaaden päällä '
+              + 'keskellä laaksoa. Julkisivun ikkunat on kehystetty valkoisin '
+              + 'kaari- ja ympyräkuvioin, ja rakennus kapenee ylöspäin '
+              + 'portaittain kallion muodon mukaan. Oikealla kohoaa terävä harmaa '
+              + 'kallioseinämä, takana matalampia poimuttuneita vuoria. '
+              + 'Alarinteessä on matalia savenvärisiä taloja ja etualalla tiheää '
+              + 'vihreää puustoa ja yksi tumma sypressi.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Talot jatkavat kalliota ylöspäin',
+          tiedosto: 'Jemen1988-033 hg.jpg',
+          teksti: 'Al-Hajjarah on kylä Harazin vuorilla noin 1 860 metrin '
+              + 'korkeudessa, vajaan sadan kilometrin päässä Sanaasta länteen. '
+              + 'Sen linnake perustettiin 1100-luvulla. Talot on muurattu samasta '
+              + 'harmaasta kivestä, jonka päällä ne seisovat, ja alimmat '
+              + 'kerrokset lähtevät suoraan kalliopinnasta ilman erillistä '
+              + 'perustusta — kaukaa katsottuna on vaikea sanoa, missä kallio '
+              + 'loppuu ja seinä alkaa. Kiviseinä on paksu, mikä pitää sisätilat '
+              + 'viileinä päivällä ja lämpiminä yöllä. Kylään noustaan kapeita '
+              + 'kivikujia pitkin.',
+          selite: 'Kivikylä jyrkän kallion päällä. Alaosa on karkeaa harmaata '
+              + 'luonnonkiveä, jonka pinnassa on pieniä aukkoja; ylempänä '
+              + 'julkisivut vaalenevat ja ikkunoiden ympärille on maalattu '
+              + 'valkoisia kaaria ja kuvioita. Kalliosta on hakattu portaita ja '
+              + 'kivetty polku, jota pitkin nousee vuohilauma. Vasemmassa '
+              + 'laidassa seisoo muutama ihminen, ja etualan kallio on paljasta '
+              + 'ja pyöreäksi kulunutta.',
+          lahde: 'H. Grobe, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaupunki jyrkänteen reunalla',
+          tiedosto: 'إطلالة بانورامية لمدينة كوكبان المعلقة على حافة الجبل Panoramic '
+              + 'view of Kawkaban city perched on the mountain cliff.jpg',
+          teksti: 'Kawkaban on vuoren laella lähes kolmen kilometrin korkeudessa, '
+              + 'ja aivan sen alapuolella tasangolla on toinen kaupunki, Shibam — '
+              + 'eri Shibam kuin Hadramautin savitiilikaupunki. Ylhäällä '
+              + 'asuttiin, alhaalla käytiin kauppaa, ja väliä kuljettiin '
+              + 'vuorenrinteeseen hakattuja portaita. Nimi tarkoittaa arabiaksi '
+              + 'kahta planeettaa. Kaupunki oli Yufirien hallitsijasuvun '
+              + 'pääkaupunki 800-luvulta alkaen ja Sharaf ad-Dinin suvun '
+              + 'tukikohta 1500-luvulta. Lähdettä ei ylhäällä ole, joten '
+              + 'kalliosta louhittiin sadevesialtaita, joilla on omat nimensä. '
+              + 'Korkeus tuo mukanaan sateen: Kawkabaniin sataa enemmän kuin '
+              + 'Sanaaseen, koska kostea ilma joutuu nousemaan vuoren yli.',
+          selite: 'Savenvärinen kaupunki seisoo aivan pystysuoran kalliojyrkänteen '
+              + 'reunalla. Kallio putoaa satoja metrejä alempaan laaksoon, ja sen '
+              + 'seinämässä erottuu vaakasuoria hiekkakivikerroksia ja pensaita '
+              + 'halkeamissa. Etualalla on paljasta kalliota, taustalla loivempia '
+              + 'vuoria ja tasankoa. Taivaalla on suuria valkoisia kumpupilviä.',
+          lahde: 'Ayah Alakwaa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Shibamin taloja on rapattava savella yhä uudelleen?',
+        vaihtoehdot: [
+          'Kuivattu savitiili ei kestä sadetta',
+          'Rappaus pitää talon viileänä',
+          'Se on maailmanperintökohteen ehto',
+          'Tiili haalistuu auringossa vaaleaksi',
+        ],
+        oikea: 0,
+        fakta: 'Tiiltä ei ole poltettu vaan kuivattu auringossa, joten vesi '
+            + 'liuottaa sitä. Uusi savikerros on talon ainoa sadetakki.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Jemen on Arabian niemimaan sateisin kolkka. Syy on vuorijonossa, '
+          + 'joka nousee Punaisenmeren rannalta ja pysäyttää mereltä tulevan '
+          + 'kostean ilman.',
+      nostot: [
+        {
+          otsikko: 'Rannalta katsottuna seinä nousee pystyyn',
+          tiedosto: 'La Tihama 1987 01.jpg',
+          teksti: 'Punaisenmeren ja vuorten välissä on Tihama, tasainen ja kuuma '
+              + 'rannikkokaistale. Sen takaa nousee jyrkkä rinne, joka vie '
+              + 'parissakymmenessä kilometrissä merenpinnasta yli kahden '
+              + 'kilometrin korkeuteen. Ylhäällä on Jabal an-Nabi Shuayb, 3 666 '
+              + 'metriä, koko Arabian niemimaan korkein kohta. Huipulla ei ole '
+              + 'pysyvää lunta, mutta lumesta ja talviyön pakkasesta on '
+              + 'havaintoja. Jemenin ylängöllä maaperä on suurelta osin vanhaa '
+              + 'tulivuoriperäistä kiveä. Tihaman kylissä rakennetaan toisin '
+              + 'kuin vuorilla: talo on '
+              + 'pyöreä ja sen katto on oljesta kartion muotoon sidottu, mikä '
+              + 'muistuttaa enemmän Afrikan puolta kuin Arabiaa.',
+          selite: 'Tasainen tomuinen tasanko, jonka reunalla on kylä pyöreitä '
+              + 'majoja. Majojen katot ovat korkeita olkikartioita, ja niiden '
+              + 'ympärillä on risuaitoja. Kylän takaa nousee suoraan ylös jyrkkä '
+              + 'ja terävähuippuinen vuorijono, joka häviää sinertävään utuun. '
+              + 'Etualalla on kivistä maata ja vihreää nurmikaistaa, ja tietä '
+              + 'pitkin kävelee poispäin yksi valkoasuinen ihminen.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sadetta tulee kahdesti vuodessa',
+          tiedosto: 'Ibb (14931213550) (cropped).jpg',
+          teksti: 'Jemenin sateet tulevat kahtena kautena: keväällä '
+              + 'maalis–huhtikuussa ja kesällä heinä–elokuussa, jolloin monsuunin '
+              + 'kostea ilmavirta työntyy niemimaan yli. Vuoret pakottavat ilman '
+              + 'nousemaan, ja se sataa lounaisrinteille. Ibbin, Taizzin ja '
+              + 'Yarimin seudulla vuosisade on 600–1 500 millimetriä, ja Ibbissä '
+              + 'päästään tuhanteen — enemmän kuin missään muualla Arabian '
+              + 'niemimaalla. Sen takia Ibbiä kutsutaan vihreäksi maakunnaksi, ja '
+              + 'sen pelloilta korjataan sato jopa neljästi vuodessa. Kolmensadan '
+              + 'kilometrin päässä koilliseen alkaa Rub al-Khalin hiekka.',
+          selite: 'Loivien vuorten ympäröimä laakso, joka on kokonaan vihreiden '
+              + 'peltojen peitossa. Pellot on jaettu suorakulmaisiksi lohkoiksi '
+              + 'matalin pientarein, ja niiden keskellä kaartaa leveä '
+              + 'asfalttitie. Rinteillä näkyy porrastettujen peltojen reunoja ja '
+              + 'valkoisia taloja hajallaan. Etualan alalaidassa on savenvärinen '
+              + 'kaksikerroksinen talo, taustalla kaupunki rinteen päällä.',
+          lahde: 'المصور أنس الحاج, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Ainoa apina, joka jäi Afrikan ulkopuolelle',
+          tiedosto: 'Hamadryas Baboon imported from iNaturalist photo 208464977 on 17 '
+              + 'March 2024.jpg',
+          teksti: 'Jemenin ja Saudi-Arabian vuorilla elää mantelipaviaani. Se on '
+              + 'ihmisen ohella ainoa villi kädellinen koko Arabian niemimaalla '
+              + 'ja ainoa paviaanilaji, joka esiintyy Afrikan ulkopuolella. Osa '
+              + 'tutkijoista arvelee, että lajin esi-isät kulkeutuivat '
+              + 'niemimaalle ihmisen mukana jo muinaisen Egyptin aikaan; toisten '
+              + 'mukaan ne tulivat itse silloin, kun Punainenmeri oli kapeampi. '
+              + 'Laumarakenne on kaksiportainen: yksi uros pitää seurassaan '
+              + 'yhdestä yhdeksään naarasta poikasineen, ja tällaisia pienryhmiä '
+              + 'liikkuu yhdessä jopa satojen yksilöiden joukkona. Yönsä ne '
+              + 'nukkuvat kallioseinämillä.',
+          selite: 'Parikymmentä paviaania paljaalla, loivasti viettävällä '
+              + 'kalliopinnalla. Ne ovat harmaanruskeita ja pitkähäntäisiä; osa '
+              + 'istuu, osa kävelee ylös rinnettä, ja muutamalla on poikanen '
+              + 'vatsan alla. Matala aurinko heittää niistä pitkiä teräviä '
+              + 'varjoja vasemmalle. Kallion pinta on karkea ja täplikäs, ja '
+              + 'oikeassa alanurkassa kasvaa yksi vihreä kasvitupsu.',
+          lahde: 'Manuel Schwarz, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä on Arabian niemimaan korkein kohta?',
+        vaihtoehdot: [
+          'Jemenin ylängöllä',
+          'Omanin pohjoisrannikolla',
+          'Siinain niemimaalla',
+          'Rub al-Khalin keskellä',
+        ],
+        oikea: 0,
+        fakta: 'Jabal an-Nabi Shuayb kohoaa 3 666 metriin. Sen rinne nousee '
+            + 'Punaisenmeren rannalta muutamassa kymmenessä kilometrissä.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Jemeniläinen ateria tuodaan pöytään kuumana ja jaetaan yhdeltä '
+          + 'vadilta. Lusikkaa ei välttämättä tarvita — leipä hoitaa saman '
+          + 'tehtävän.',
+      nostot: [
+        {
+          otsikko: 'Kivipata kiehuu vielä pöydässä',
+          tiedosto: 'Fahsa.jpg',
+          teksti: 'Jemenin kansallisruoka saltah ja sen lähisukulainen fahsa '
+              + 'keitetään ja tarjoillaan samassa astiassa: madra on '
+              + 'vulkaanisesta kivestä koverrettu pata, joka kuumennetaan niin '
+              + 'kuumaksi, että sisältö poreilee vielä pöydässä. Puinen alusta '
+              + 'sen alla nokeentuu käytössä mustaksi. Pohjalla on maraq eli '
+              + 'lihaliemi, ja päälle lusikoidaan hulba, sarviapilansiemenistä '
+              + 'vatkattu vaalea vaahto. Siemenet liotetaan ensin vedessä ja '
+              + 'vatkataan sitten kunnes ne kuohuvat. Mausteeksi tulee sahawiq, '
+              + 'chilistä, tomaatista, valkosipulista ja yrteistä survottu tahna. '
+              + 'Ateria syödään ohuella mulawah-leivällä, jota revitään pala '
+              + 'kerrallaan ja käytetään lusikkana.',
+          selite: 'Musta kivipata pyöreällä puualustalla, joka on nokeentunut padan '
+              + 'ympäriltä mustaksi. Padassa on oranssinruskeaa keittoa, ja sen '
+              + 'pinnalla kelluu vaaleaa kuohuvaa vaahtoa. Padan reuna on karkea '
+              + 'ja epätasainen, ja alla näkyy toinen kivilautanen. Vasemmalla '
+              + 'pöydällä on kasa ohutta rakkulaista leipää.',
+          lahde: 'غسان السقاف, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Aamiainen tehdään ylikypsästä banaanista',
+          tiedosto: 'Yemeni Masoob.jpg',
+          teksti: 'Masoob on jemeniläinen aamiainen, joka syntyy siitä, mikä muuten '
+              + 'heitettäisiin pois. Pohjaksi otetaan ylikypsiä banaaneja ja '
+              + 'edellisen päivän leipää, jotka survotaan yhdessä tasaiseksi '
+              + 'massaksi. Päälle tulee kermaa ja hunajaa, usein myös taateleita, '
+              + 'pähkinöitä tai juustoa. Annos tuodaan isolta vadilta, ja siitä '
+              + 'syödään yhdessä. Ruokalaji tunnetaan myös nimellä malikia, ja '
+              + 'sitä syödään yhtä lailla Saudi-Arabian länsiosissa.',
+          selite: 'Valkoinen kulmikas kulho vaaleanruskealla marmoripöydällä. '
+              + 'Kulhossa on ruskeaa murumaista massaa, jonka päälle on kaadettu '
+              + 'paksua valkoista kermaa ja kirkasta ruskeaa hunajaa niin, että '
+              + 'ne valuvat rinnakkain reunoja kohti. Pinta kiiltää, ja hunaja on '
+              + 'kerääntynyt lammikoksi kulhon oikeaan reunaan.',
+          lahde: 'SharabSalam, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kakku, jossa on toistakymmentä kerrosta',
+          tiedosto: 'Bint al Sahn.png',
+          teksti: 'Bint al-sahn tarkoittaa kirjaimellisesti lautasen tytärtä. '
+              + 'Taikina vaivataan pehmeäksi, jaetaan palloiksi ja jokainen '
+              + 'niistä venytetään käsin niin ohueksi, että läpi näkee. Levyt '
+              + 'ladotaan päällekkäin ja jokaisen väliin sivellään kirkastettua '
+              + 'voita. Pino paistetaan uunissa yhdeksi kakuksi, joka nousee '
+              + 'kerroksittain. Päälle valutetaan hunajaa ja ripotellaan '
+              + 'mustakuminan siemeniä. Sama leivonnainen tunnetaan myös nimellä '
+              + 'sabaya. Se tarjoillaan juhlissa ja usein aterian yhteydessä eikä '
+              + 'vasta jälkiruokana.',
+          selite: 'Kolmion muotoinen pala kerrosleivonnaista valkoista taustaa '
+              + 'vasten. Leikkauspinnasta erottuu toistakymmentä ohutta '
+              + 'taikinalevyä päällekkäin. Pinta on paistunut kullanruskeaksi ja '
+              + 'aaltoilee, sen päällä kiiltää kirkas hunaja, ja hunajassa on '
+              + 'mustia soikeita siemeniä. Palan kärki osoittaa vasemmalle ylös.',
+          lahde: 'Rukn950, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä jemeniläisen padan päällä oleva vaalea vaahto vatkataan?',
+        vaihtoehdot: [
+          'Sarviapilansiemenistä',
+          'Kananmunan valkuaisesta',
+          'Kermasta ja sitruunasta',
+          'Kikherneiden liotusvedestä',
+        ],
+        oikea: 0,
+        fakta: 'Siemeniä liotetaan ensin vedessä, ja vatkattaessa niistä irtoava '
+            + 'aine kuohuu paksuksi vaahdoksi. Se on saltahin tunnusmerkki.',
+      },
+    },
+  ],
 };
