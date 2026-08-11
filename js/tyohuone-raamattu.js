@@ -126,6 +126,21 @@ export const RAAMATTU2 = {
           + 'mitä sen kanssa sattui). Pieni huomio avaa kaupungin '
           + 'ytimen ja tunnelman tarinana — lehdet syventävät sen '
           + 'tiedoksi, ja tarinan kautta paikka myös muistetaan.',
+        'KAANON (omistajan linjaus 11.8.): isoisä EI ole '
+          + 'virittänyt mitään, mikä maagisesti kantaisi '
+          + 'vuosisadan yli ja odottaisi poikaa — kukaan ei ole '
+          + 'odottanut häntä 150 vuotta. Pelin kauneus on siinä, '
+          + 'että poika yrittää ymmärtää, mitä isoisä on kokenut '
+          + 'ja mitä ihmettä hän on kirjaansa kirjoittanut. Kirja '
+          + 'itsessään saa olla vähän arvoitus, koska vanhan '
+          + 'päiväkirjan lukeminen on hidasta ja vaatii '
+          + 'ponnistelua. Teema: ihminen on samojen '
+          + 'peruskysymysten äärellä yhtä pihalla kuin ennenkin — '
+          + 'vastausta etsimässä.',
+        'Reginaldille ja Horatiolle kirjoitetaan tarvittaessa '
+          + 'muutama uusi persoonan piirre vetovoimakeinoja '
+          + 'varten (esim. etikettivirheet, hassu pukeutuminen) — '
+          + 'luonnostellaan yhdessä.',
       ],
     },
     {
@@ -207,6 +222,58 @@ export const RAAMATTU2 = {
         'Löytöhetken tunne: hauskan yllättävät paikallisaarteet '
           + 'ja lyhyet huudahdukset — nauru tai häkellys sinetöi '
           + 'muistijäljen.',
+        'Skandaali (omistajan ehdotus 11.8.): historiallinen tai '
+          + 'varovasti tuore skandaali — isoisä saa paheksua ja '
+          + 'olla salaa kiinnostunut. Eläviä yksityishenkilöitä '
+          + 'ei käytetä; kuolleet ja instituutiot kestävät.',
+        'Historian oikku (11.8.): yksi käänne, joka muovasi '
+          + 'paikan ja ihmiset — ja sen näkyvä jälki nykypäivässä.',
+        'Pienestä suureen (11.8.): pieni asia paljastaa '
+          + 'perusteluineen jotain suurta paikasta — mieluiten '
+          + 'tarinan tai huumorin kautta, ettei oivallus jää '
+          + 'luennoksi.',
+        'Nykyhetken kiinne (11.8.): esim. vuosittainen '
+          + 'musiikkifestivaali historiallisella paikalla — sama '
+          + 'aukio, isoisän aikana paraati, nyt festarilava. '
+          + 'Artisti mainitaan menneessä muodossa ("täällä lauloi '
+          + 'viime kesänä X"), ettei teksti vanhene valheeksi.',
+        'Yllätyskohtaaminen (11.8.): joku tulee juttelemaan '
+          + 'Reginaldille pyytämättä. Harvinaisena tehokas, koska '
+          + 'kaikki muu pelissä tapahtuu vain napista.',
+        'Elokuvallinen avaus (11.8.): kohtaus rakennetaan '
+          + 'monesta kuvakulmasta kuin elokuvassa, ja kun '
+          + 'Reginald astuu kuvaan, jokin särähtää hauskasti — '
+          + 'etikettivirhe tai hassu asu. Reginaldille ja '
+          + 'Horatiolle kirjoitetaan tarvittaessa muutama uusi '
+          + 'persoonan piirre näitä varten (ks. Tarina ja hahmot).',
+        'Henkilö liikkeellä (11.8.): merkintä matkan päältä — '
+          + 'ratikassa, taksissa, tuktukissa, kuumailmapallossa, '
+          + 'sukeltamassa (poika tai isoisä).',
+        'Ketju kaupunkien välillä (Fablen ehdotus): pieni juonne '
+          + 'alkaa yhdessä kaupungissa ja päättyy toisessa — '
+          + 'esim. Pariisissa postitettu kirje odottaa Wienissä.',
+        'Paikallinen sana (Fablen ehdotus): Reginald oppii yhden '
+          + 'paikallisen sanan tai sanonnan ja käyttää sitä — '
+          + 'joskus väärin. Kieli jää mieleen paikan mukana.',
+        'Kirjan fyysiset jäljet (Fablen ehdotus): tahra, '
+          + 'puristettu kukka, hiekanjyvät taitteessa — kirja '
+          + 'esineenä todistaa kokemuksesta. Jälkiä menneestä, EI '
+          + 'koskaan viritettyjä viestejä (ks. vältettävät).',
+        'VÄLTETTÄVÄT (omistajan linjaus 11.8.): 1) '
+          + 'monimutkaiset ja vanhahtavat viittaukset mystisiin '
+          + 'asioihin, jotka eivät johda mihinkään; 2) '
+          + '"odottanut 150 vuotta kuin messiasta" -siirappi — '
+          + 'kukaan ei ole odottanut poikaa, eikä isoisä ole '
+          + 'virittänyt mitään, mikä maagisesti kantaisi '
+          + 'vuosisadan yli. Kirja saa olla arvoitus siksi, että '
+          + 'melkein 200 vuotta vanhan päiväkirjan lukeminen on '
+          + 'hidasta ja vaatii ponnistelua — ei siksi, että se '
+          + 'olisi suunniteltu arvoitukseksi.',
+        'SYDÄNTEEMA (omistajan sanoin 11.8.): ihminen on samojen '
+          + 'peruskysymysten äärellä yhtä pihalla kuin ennenkin, '
+          + 'vastausta etsimässä. Poika yrittää ymmärtää, mitä '
+          + 'isoisä koki ja mitä ihmettä hän kirjaansa kirjoitti — '
+          + 'siinä on pelin kauneus.',
       ],
     },
     {
