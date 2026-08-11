@@ -17874,6 +17874,23 @@ export const MAA_KATEGORIAT = {
             + 'seinien päällä yhä poikittain palmunrunkoja.',
           lahde: 'Pteropus conspicillatus, Wikimedia Commons (CC BY-SA 3.0)',
         },
+        {
+          otsikko: 'Savitiilikaupunki sahalaitaisine harjoineen',
+          tiedosto: 'At-Turaif District.jpg',
+          teksti: 'Riadin luoteispuolella, Diriyan keitaalla, on At-Turaifin '
+            + 'kaupunginosa. Se perustettiin 1400-luvulla ja oli ensimmäisen '
+            + 'Saudi-valtion keskus vuosina 1727–1818. Rakennusaine on '
+            + 'savitiili, ja tyyli on najdilainen: paksut muurit, kolmiomaiset '
+            + 'ilma-aukot ylhäällä ja katonreunan hammasmainen harja, joka '
+            + 'näyttää sahalaidalta. Kulmiin on muurattu vinot tukipilarit '
+            + 'kannattamaan savimuuria. Alue otettiin maailmanperintöluetteloon '
+            + 'vuonna 2010, ja rauniot on sen jälkeen tuettu ja avattu '
+            + 'yleisölle.',
+          selite: 'At-Turaifin savitiilirakennuksia Diriyassa. Muurin '
+            + 'yläreunassa kulkee sahalaitainen harja, seinässä on pieniä '
+            + 'kolmioaukkoja, ja alaosassa nojaa vinoja vaaleita tukipilareita.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Miten Jubbahin kalliokuvat on tehty?',
@@ -17948,6 +17965,23 @@ export const MAA_KATEGORIAT = {
             + 'seinällä näkyy poistumistiekyltti.',
           lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
+        {
+          otsikko: 'Harakka, jota ei ole muualla',
+          tiedosto: 'Asir Magpie, Asir Mountains, Saudi Arabia (2025).jpg',
+          teksti: 'Asirin vuoristossa elää harakka, jota ei tavata missään '
+            + 'muualla maailmassa. Asirinharakka on eurooppalaista sukulaistaan '
+            + 'tummempi: sen takaruumis on musta eikä valkoinen, nokka ja '
+            + 'jalat ovat tanakammat, ja ääni on pitkä valittava kirkaisu. Se '
+            + 'elää afrikanjuniperimetsissä yli kahdentuhannen metrin '
+            + 'korkeudella, missä on varjoa ja kosteutta. Lintuja arvioidaan '
+            + 'olevan jäljellä noin 270 aikuista, ja määrä laskee, koska '
+            + 'juniperimetsä ei uudistu. Kesällä ruokana ovat toukat, muina '
+            + 'aikoina siemenet ja katajanmarjat.',
+          selite: 'Asirinharakka istuu keltaisella multakummulla. Höyhenpuku on '
+            + 'musta, vatsa ja olkapäät valkoiset, pitkä pyrstö hohtaa '
+            + 'vihertävänä, ja taustalla on epätarkkaa vihreää.',
+          lahde: 'Saudi Press Agency (SPA), Wikimedia Commons (CC BY-SA 4.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Mitä varten Rijal Almaan seiniin ladottiin valkoisia kvartsikiviä?',
@@ -18019,6 +18053,22 @@ export const MAA_KATEGORIAT = {
             + 'raidallinen puhdistajakala.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Flamingot kahlaavat vuoroveden jäljissä',
+          tiedosto: 'Flamingos in Farasan Island, Saudi Arabia (2025).jpg',
+          teksti: 'Farasanin saaristo on myös lintujen levähdyspaikka. Saarten '
+            + 'välissä on laajoja matalikkoja, jotka vuorovesi paljastaa '
+            + 'kahdesti vuorokaudessa, ja liejusta löytyy ruokaa. Isoflamingot '
+            + 'kävelevät rivissä matalassa vedessä ja siivilöivät ravintonsa '
+            + 'nokkansa reunalevyillä. Saaristo on suojelualue: siellä pesii '
+            + 'merilintuja ja elää oma gasellikanta, joka on jäänyt saarille '
+            + 'eristyksiin. Talvella lahdilla lepää myös kahlaajia, jotka ovat '
+            + 'matkalla Euraasiasta Afrikkaan.',
+          selite: 'Isoflamingoja Farasanin matalikolla. Kahdeksan lintua kahlaa '
+            + 'vaaleansinisessä vedessä, etualalla on aaltoileva liejuranta ja '
+            + 'takana matala ruskea rantatöyräs.',
+          lahde: 'Saudi Press Agency (SPA), Wikimedia Commons (CC BY-SA 4.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Mistä Farasanin saarten kivi on syntynyt?',
@@ -18031,6 +18081,95 @@ export const MAA_KATEGORIAT = {
         oikea: 0,
         fakta: 'Sama kivi kelpasi rakennusaineeksi: saarten vanhoja taloja on '
           + 'muurattu riutan palasista.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Saudi-Arabia ei ole pelkkää hiekkaa: pohjoisessa on '
+        + 'hiekkakivivuoria, lännessä laavakenttiä ja etelässä '
+        + 'juniperimetsiä. Suojelualueille on palautettu eläimiä, jotka olivat '
+        + 'jo ehtineet kadota.',
+      nostot: [
+        {
+          otsikko: 'Pienin leopardi on käynyt harvinaiseksi',
+          tiedosto: 'Arabian Leopard (2023).jpg',
+          teksti: 'Arabianleopardi on maailman pienin leopardin alalaji: uros '
+            + 'painaa noin kolmekymmentä kiloa ja naaras parikymmentä. Se elää '
+            + 'vuoristossa ja kallioisilla rinteillä, ei avoimella aavikolla. '
+            + 'Villejä yksilöitä arvioitiin vuonna 2023 olevan koko Arabian '
+            + 'niemimaalla enää noin sata, ja pääosa niistä on Omanissa ja '
+            + 'Jemenissä; Saudi-Arabiasta laji on saattanut hävitä luonnosta '
+            + 'kokonaan. Maassa toimii kasvatuskeskus, jossa poikasia syntyy '
+            + 'vuosittain, ja tavoitteena on palauttaa laji takaisin '
+            + 'vuoristoon.',
+          selite: 'Arabianleopardi seisoo kuivan heinikon keskellä sivuttain. '
+            + 'Turkki on vaaleankeltainen ja täynnä pieniä mustia täpliä, '
+            + 'korvat ovat pystyssä ja katse suuntautuu vasemmalle.',
+          lahde: 'Saudi Press Agency (SPA), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Gaselli palautettiin suojelualueelle',
+          tiedosto: 'Arabian Sand Gazelle at King Salman Royal Reserve, Tabuk Region (2023).jpg',
+          teksti: 'Arabiangaselli eli reem on pienikokoinen antilooppi, jonka '
+            + 'sarvet ovat ohuet ja turkki hyvin vaalea. Vaalea väri heijastaa '
+            + 'auringonvaloa ja auttaa kestämään kuumuutta, ja eläin tulee '
+            + 'toimeen vähällä vedellä: suuren osan nesteestään se saa '
+            + 'kasveista. Metsästys vei kannan lähes olemattomiin. Nyt '
+            + 'gaselleja on palautettu Kuningas Salmanin suojelualueelle maan '
+            + 'pohjoisosaan, joka on pinta-alaltaan yksi maailman laajimmista. '
+            + 'Alueella liikkuu vartijoita, ja laidunkasvillisuutta on '
+            + 'istutettu takaisin.',
+          selite: 'Arabiangaselli seisoo tummalla kivikolla ja katsoo suoraan '
+            + 'kameraan. Turkki on hiekanvaalea, sarvet nousevat ohuina, ja '
+            + 'taustalla kohoaa epätarkkana punertava hiekkakivipaasi.',
+          lahde: 'Saudi Press Agency (SPA), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Laavakenttä erottuu avaruuteen asti',
+          tiedosto: 'Harrat Khaybar Space.jpg',
+          teksti: 'Arabian niemimaan länsiosassa on laajoja laavakenttiä, joita '
+            + 'sanotaan harrateiksi. Harrat Khaybar on niistä tunnetuimpia: se '
+            + 'kattaa noin kaksitoistatuhatta neliökilometriä ja on syntynyt '
+            + 'purkauksista viiden miljoonan vuoden aikana. Viimeisin purkaus '
+            + 'ajoittuu vuosien 600 ja 700 väliin. Alueella on kahdenlaista '
+            + 'kiveä: tumma basaltti ja vaalea komendiitti, joka muodostaa '
+            + 'valkoiset vuoret. Niistä korkein, Jabal Abyad, on koko maan '
+            + 'korkein tulivuori. Avaruusasemalta otetussa kuvassa ero näkyy '
+            + 'väreinä.',
+          selite: 'Satelliittikuva Harrat Khaybarin laavakentästä. Keskellä on '
+            + 'vaalea alue täynnä pyöreitä kraattereita, ja sen ympärillä '
+            + 'laava on tummansinistä, vihreää ja ruskeaa.',
+          lahde: 'NASA, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Hiekkakivi on veistetty tuulella',
+          tiedosto: '02 Al-Musamma Mountains, King Salman Royal Reserve, Hail Region, Saudi Arabia (2023).jpg',
+          teksti: 'Pohjois-Saudi-Arabiassa Hailin seudulla kohoaa '
+            + 'hiekkakivimuodostumia, joiden väliin jää kapeita laaksoja. Kivi '
+            + 'on kerroksellista, ja tuuli ja harvat rankkasateet ovat '
+            + 'kuluttaneet pehmeämmät kerrokset nopeammin kuin kovat: siitä '
+            + 'syntyvät ulokkeet, kielekkeet ja onkalot. Alue kuuluu Kuningas '
+            + 'Salmanin suojelualueeseen, ja sen halki on kuljettu vanhoja '
+            + 'karavaanireittejä. Aamulla ja illalla kivi hehkuu oranssina, '
+            + 'koska matala aurinko korostaa hiekkakiven rautapitoista pintaa.',
+          selite: 'Al-Musamman hiekkakivikallioita auringonlaskussa. Kaksi '
+            + 'jyrkkää kalliomuodostumaa reunustaa hiekkaista laaksoa, ja '
+            + 'niiden välistä paistaa matala aurinko.',
+          lahde: 'Saudi Press Agency (SPA), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi arabiangasellin turkki on hyvin vaalea?',
+        vaihtoehdot: [
+          'Se heijastaa auringonvaloa ja auttaa kestämään kuumuutta',
+          'Se suojaa hyönteisiltä',
+          'Se vaihtuu tummaksi talveksi',
+          'Se on merkki nuoresta iästä',
+        ],
+        oikea: 0,
+        fakta: 'Gaselleja on palautettu Kuningas Salmanin suojelualueelle, joka '
+          + 'on pinta-alaltaan yksi maailman laajimmista.',
       },
     },
   ],
