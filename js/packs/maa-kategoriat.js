@@ -16093,24 +16093,26 @@ export const MAA_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
-      johdanto: 'Syyrian kalkkikivikukkuloilla seisoo satoja kyliä, joista '
+      johdanto: 'Syyrian kalkkikiviylängöllä seisoo satoja kyliä, joista '
           + 'asukkaat lähtivät toistatuhatta vuotta sitten ja jotka jäivät '
-          + 'muuten paikoilleen. Rannikolta on löytynyt sitäkin vanhempaa: '
-          + 'savitauluja, joihin on painettu kirjaimia eikä tavuja.',
+          + 'muuten koskemattomiksi. Rannikolta on löytynyt sitäkin '
+          + 'vanhempaa: savitauluja, joihin on painettu aakkosia.',
       nostot: [
         {
           otsikko: 'Kylä, jonka talot jäivät seisomaan',
           tiedosto: '12.17 Serjilla.jpg',
           teksti: 'Aleppon ja Idlibin välisellä kalkkikiviylängöllä on noin '
-              + '700 hylättyä asutusta, joita kutsutaan kuolleiksi '
-              + 'kaupungeiksi. Serjilla on niistä parhaiten säilyneitä. Sen '
+              + '700 hylättyä asuinpaikkaa, joita kutsutaan kuolleiksi '
+              + 'kaupungeiksi. Serjilla on niistä parhaiten säilyneitä '
+              + 'kyliä. Sen '
               + 'kylpylärakennuksen kirjoitus ajoittaa kylän vuoteen 473. '
               + 'Asukkaat elivät oliiveista ja viinirypäleistä, ja talot '
               + 'ladottiin suurista kalkkikivilohkareista, joita louhittiin '
               + 'aivan kylän alta. Kylät tyhjenivät 700–900-luvuilla. Syystä '
               + 'kiistellään: yhden selityksen mukaan oliiviöljyn kauppa '
-              + 'hiipui, toisen mukaan kauppareitit siirtyivät muualle. Uutta '
-              + 'asutusta ei tullut tilalle purkamaan kiviä muuhun käyttöön. '
+              + 'hiipui, toisen mukaan kauppareitit siirtyivät muualle. '
+              + 'Ylängölle ei tullut uutta asutusta, joka olisi käyttänyt '
+              + 'kivet uudelleen. '
               + 'Noin 40 kylää kahdeksassa arkeologisessa puistossa otettiin '
               + 'maailmanperintöluetteloon vuonna 2011.',
           selite: 'Kaksikerroksinen kivitalo seisoo katottomana keskellä '
@@ -16118,30 +16120,30 @@ export const MAA_KATEGORIAT = {
               + 'listoilla, yläkerrassa on rivi neliömäisiä aukkoja, ja '
               + 'seinän yläreuna päättyy suoraan kivilistaan. Ympärillä on '
               + 'kaatuneita muureja ja irtolohkareita, ja vasemmassa '
-              + 'alalaidassa erottuu pari ihmishahmoa kokoa antamassa.',
+              + 'alalaidassa erottuu pari ihmishahmoa.',
           lahde: 'Gerhard Haubold, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Katsomo jäi linnoituksen sisään',
           tiedosto: 'Bosra theatre cavea 0510.jpg',
           teksti: 'Bosran teatteri rakennettiin 100-luvulla jaa. mustasta '
-              + 'basaltista, jota Hauranin tasangolla on maan alla '
-              + 'kerroksittain. Katsomo on 102 metriä leveä ja se on säilynyt '
+              + 'basaltista, jota Hauranin tasangon alla on paksuina '
+              + 'kerroksina. Katsomo on 102 metriä leveä, ja se on säilynyt '
               + 'kokonaisena ylintä pylväskäytävää myöten, mikä on '
               + 'roomalaisessa teatterissa harvinaista. Syy on siinä, mitä '
               + 'rakennukselle tehtiin myöhemmin. Teatteri jäi alun perin '
               + 'kaupungin muurien ulkopuolelle, mutta myöhemmät hallitsijat '
-              + 'ottivat sen osaksi kaupungin varustusta ja muurasivat sen '
-              + 'ympärille tornit vuosina 1202–1253. Katsomo jäi rakennelman '
-              + 'sisään piiloon. Sisusta oli täyttynyt hiekalla, joka '
-              + 'todennäköisesti suojasi istuinrivejä; hiekka kaivettiin pois '
-              + 'ja teatteri kunnostettiin vuosina 1947–1970. Bosra on '
-              + 'maailmanperintökohde vuodesta 1980.',
+              + 'muurasivat sen ympärille linnoituksen torneineen vuosina '
+              + '1202–1253. Katsomo jäi muurien sisään piiloon, ja sisukseen '
+              + 'kertyi hiekkaa, joka todennäköisesti suojasi istuinrivejä. '
+              + 'Hiekka kaivettiin pois, ja teatteri kunnostettiin vuosina '
+              + '1947–1970. Bosra otettiin maailmanperintöluetteloon vuonna '
+              + '1980.',
           selite: 'Puolikaaren muotoinen katsomo tummanharmaasta kivestä. '
               + 'Istuinrivit laskeutuvat tasaisina kaarina alas '
               + 'puoliympyrän muotoiselle vaalealle lattialle, ja niiden '
-              + 'väliin nousee kapeita porrasjuovia. Katsomon yläreunaa '
-              + 'kiertää pylväikkö ja sen takana näkyy karkeaa muuria. '
+              + 'väliin nousee kapeita porrasrivejä. Katsomon yläreunaa '
+              + 'kiertää pylväikkö, ja sen takana näkyy karkeaa muuria. '
               + 'Taivas on pilvinen.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -16151,31 +16153,31 @@ export const MAA_KATEGORIAT = {
           teksti: 'Ras Shamran kumpu Latakian pohjoispuolella paljastui '
               + 'vuonna 1928, ja seuraavan vuoden kaivauksissa sieltä nousi '
               + 'esiin Ugaritin kaupunki ja sen kirjoitus. Merkit '
-              + 'painetaan saveen ruokokynällä samalla tavalla kuin '
-              + 'nuolenpääkirjoituksessa, mutta niitä on vain 30 ja jokainen '
-              + 'niistä vastaa yhtä äännettä eikä tavua tai sanaa. Kirjoitus '
+              + 'painettiin saveen ruokokynällä samalla tavalla kuin '
+              + 'nuolenpääkirjoituksessa, mutta niitä on vain 30, ja '
+              + 'jokainen niistä vastaa yhtä äännettä, ei tavua eikä sanaa. '
+              + 'Kirjoitus '
               + 'otettiin käyttöön noin 1400–1300 eaa. ja jäi pois käytöstä '
               + 'noin 1190 eaa. Ugaritista on löytynyt myös aakkostauluja, '
-              + 'joihin merkit on kirjoitettu järjestyksessä. Ne ovat vanhin '
-              + 'suora todiste siitä, että kirjaimilla on vakiintunut '
+              + 'joihin merkit on kirjoitettu järjestyksessä. Taulut ovat '
+              + 'vanhin suora todiste siitä, että kirjaimilla on vakiintunut '
               + 'järjestys — sama, joka jatkuu foinikialaisen kirjoituksen '
               + 'kautta kreikkaan ja latinaan.',
           selite: 'Kämmenen kokoinen savipala mustalla taustalla, tuettuna '
               + 'kolmella ohuella metallilangalla. Pintaan on painettu '
               + 'neljä vaakariviä kiilanmuotoisia jälkiä, jotka ovat '
               + 'kooltaan ja asennoltaan erilaisia. Reunat ovat lohkeilleet '
-              + 'epätasaisiksi ja oikeassa laidassa kulkee halkeama.',
+              + 'epätasaisiksi, ja oikeassa laidassa kulkee halkeama.',
           lahde: 'Rama, Wikimedia Commons (CC BY-SA 3.0 fr)',
         },
         {
-          otsikko: 'Kolmekymmentäkuusi vuotta pylvään päällä',
+          otsikko: 'Mies, joka ei tullut alas',
           tiedosto: 'Church of Saint Simeon Stylites 01.jpg',
           teksti: 'Simeon syntyi noin vuonna 390 ja meni luostariin '
               + '16-vuotiaana. Väkeä alkoi kerääntyä katsomaan häntä, joten '
               + 'hän nousi asumaan pienelle tasanteelle pylvään päähän. '
               + 'Pylväs oli aluksi kolme metriä korkea, ja viimeinen niistä '
-              + 'kohosi runsaaseen 15 metriin. Ruoka ja kirjeet nostettiin '
-              + 'ylös '
+              + 'kohosi runsaaseen 15 metriin. Ruoka ja kirjeet vietiin ylös '
               + 'tikkaita pitkin, ja Simeon saarnasi alhaalla seisovalle '
               + 'joukolle kahdesti päivässä. Hän eli pylväällä 36 vuotta ja '
               + 'kuoli vuonna 459. Pylvään ympärille rakennettiin kirkko, '
@@ -16196,29 +16198,31 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä säilytti Bosran teatterin katsomon lähes ehjänä?',
         vaihtoehdot: [
-          'Sen ympärille rakennettu varustus',
+          'Sen ympärille rakennettu linnoitus',
           'Katsomon päälle tehty puinen katto',
-          'Kiven poikkeuksellinen kovuus',
+          'Basaltin poikkeuksellinen kovuus',
           'Kaupungin katkeamaton asutus',
         ],
         oikea: 0,
-        fakta: 'Muurit sulkivat katsomon sisäänsä, ja hiekka täytti sen. '
-            + 'Molemmat suojasivat istuinrivejä yhtä lailla.',
+        fakta: 'Muurit sulkivat katsomon sisäänsä, ja niiden suojaan kertyi '
+            + 'hiekka, joka peitti istuinrivit. Ilman muureja hiekkaakaan '
+            + 'ei olisi kertynyt.',
       },
     },
     {
       id: 'kasityo',
       nimi: 'Käsityö',
       johdanto: 'Damaskoksen ja Aleppon kujilla työ tehdään yhä samassa '
-          + 'huoneessa, jossa tavara myydään. Osa ammateista tekee uutta, '
-          + 'osa pitää vanhaa käyttökunnossa.',
+          + 'huoneessa, jossa tavara myydään. Osassa ammateista tehdään '
+          + 'uutta, osassa pidetään vanhaa käyttökunnossa.',
       nostot: [
         {
           otsikko: 'Kuvio nostetaan koholle ennen maalaamista',
           tiedosto: 'مشغل لفن الرسم العجمي في دمشق.jpg',
           teksti: 'Ajami on damaskoslainen tapa koristella puupaneeleja. '
               + 'Kuvion ääriviivat pursotetaan ensin puun pintaan tahnana, '
-              + 'jossa on eläinliimaa ja kipsijauhetta. Kun tahna kovettuu, '
+              + 'jossa on eläinliimaa ja kipsijauhetta. Kun tahna on '
+              + 'kovettunut, '
               + 'kuvio on koholla ja tuntuu sormella. Sen päälle painetaan '
               + 'tina- tai kultalehteä ja maalataan läpikuultavia lasuureja, '
               + 'jotka hehkuvat metallia vasten. Tekniikalla paneloitiin '
@@ -16244,10 +16248,10 @@ export const MAA_KATEGORIAT = {
               + 'Aiheet ovat lähes aina kasveja: kukkia, lehtiä ja '
               + 'kiertyviä varsia. Kaupungin lasi oli keskiajalla haluttua '
               + 'kauppatavaraa Eurooppaa myöten, ja lasinpuhaltamoja on '
-              + 'toiminut vanhassakaupungissa suvusta toiseen. Työ tehdään '
+              + 'toiminut vanhassakaupungissa polvesta polveen. Työ tehdään '
               + 'ilman koneita ja ilman kaavaa, joten kahta samanlaista '
               + 'kappaletta ei synny.',
-          selite: 'Silmälasipäinen mies maalaa ohuella työkalulla '
+          selite: 'Silmälasipäinen mies maalaa ohuella siveltimellä '
               + 'kaarevaa lasimaljaa, jonka pintaan on jo tehty kullanruskeat '
               + 'ääriviivat ja keltaisia kukkia. Edessä pöydällä on rivi '
               + 'valmiita töitä: iso keltapohjainen maljakko vihrein '
@@ -16256,16 +16260,16 @@ export const MAA_KATEGORIAT = {
           lahde: 'AlUmawi, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          otsikko: 'Kuparipata pitää pinnoittaa uudestaan',
+          otsikko: 'Kupariastia pinnoitetaan aina uudelleen',
           tiedosto: 'Aleppo tinsmithing 9721.jpg',
           teksti: 'Kupariastia ei kestä happamia ruokia sellaisenaan, joten '
               + 'sen sisäpinta pinnoitetaan tinalla. Astia kuumennetaan, '
-              + 'pintaan hierotaan salmiakkia puhdistukseksi ja sula tina '
-              + 'levitetään pumpulitupolla tasaiseksi kalvoksi. Pinnoite '
-              + 'kuluu käytössä pois, joten sama astia tuodaan takaisin '
-              + 'vuosien välein — pajan asiakas ei osta uutta vaan korjauttaa '
-              + 'vanhan. Aleppon vanhassakaupungissa metallipajat ovat '
-              + 'omalla kujallaan, kuten muutkin ammatit.',
+              + 'pinta puhdistetaan salmiakilla, ja sula tina levitetään '
+              + 'pumpulitukolla tasaiseksi kalvoksi. Pinnoite kuluu '
+              + 'käytössä pois, joten sama astia tuodaan takaisin muutaman '
+              + 'vuoden välein — asiakas ei osta uutta vaan korjauttaa '
+              + 'vanhan. Aleppon vanhassakaupungissa metallipajoilla on oma '
+              + 'kujansa, kuten muillakin ammateilla.',
           selite: 'Harmaahiuksinen mies kumartuu matalan työpöydän yli. '
               + 'Hänen edessään palaa avotuli metallilevyn päällä ja siinä '
               + 'lämpiää kaatonokkainen kannu. Miehellä on pihdit oikeassa '
@@ -16285,8 +16289,8 @@ export const MAA_KATEGORIAT = {
               + 'ja se otetaan mustepullosta, jonka pohjalla on silkkitukko '
               + 'säätämässä kärkeen tarttuvaa määrää. Kirjaintyylejä on useita '
               + 'ja niiden mittasuhteet on määritelty tarkasti: kirjaimen '
-              + 'korkeus ilmoitetaan siinä, montako kynänleveää pistettä '
-              + 'siihen mahtuu.',
+              + 'korkeus ilmoitetaan pisteinä, ja yksi piste on kynän '
+              + 'kärjen levyinen jälki.',
           selite: 'Vanhempi mies pipo päässä ja silmälasit nenällä piirtää '
               + 'kynällä valkoiselle paperille arabiankielistä tekstiä. '
               + 'Pöydällä on tölkillinen vaaleita ruokokyniä, avoin '
@@ -16300,41 +16304,42 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mistä ajami-koristelun kohokuvio tehdään?',
         vaihtoehdot: [
           'Eläinliimasta ja kipsijauheesta',
-          'Sulasta lasista puhaltamalla',
-          'Puuhun veistetystä syvennyksestä',
+          'Muottiin valetusta kipsimassasta',
+          'Puuhun upotetusta helmiäisestä',
           'Ohuesta taivutetusta metallilangasta',
         ],
         oikea: 0,
-        fakta: 'Tahna pursotetaan ääriviivoiksi ja annetaan kovettua. Vasta '
-            + 'sen jälkeen kuvio saa metallilehden ja värit.',
+        fakta: 'Tahna pursotetaan ääriviivoiksi ja sen annetaan kovettua. '
+            + 'Kuvio tuntuu sormella vielä maalikerrosten alta.',
       },
     },
     {
       id: 'ruoka',
       nimi: 'Ruoka',
       johdanto: 'Syyrialainen keittiö tunnetaan mausteseoksistaan ja '
-          + 'makeistaan. Kaksi tunnetuinta valmistetaan yhä käsin ja '
-          + 'näkyvästi asiakkaan silmien edessä.',
+          + 'makeisistaan. Kadulla ne tehdään yhä käsin, asiakkaan silmien '
+          + 'edessä.',
       nostot: [
         {
           otsikko: 'Jäätelöä hakataan survimella',
           tiedosto: 'صناعة البوظة الدمشقية.jpg',
           teksti: 'Booza on Levantin jäätelö, eikä sitä vatkata koneella. '
-              + 'Massa kaadetaan kylmään metallisaaviin ja sitä hakataan ja '
+              + 'Massa kaadetaan kylmään metallisaaviin, ja sitä hakataan ja '
               + 'venytetään pitkällä puusurvimella, kunnes se muuttuu '
               + 'sitkeäksi. Rakenne tulee kahdesta aineesta: mastiksista, '
-              + 'joka on pistaasipuun sukuisen puun pihkaa, ja salepista, '
-              + 'joka on kämmekän mukulasta jauhettua jauhoa. Yhdessä ne '
+              + 'joka on pistaasin sukuisen puun pihkaa, ja salepista, '
+              + 'joka on kämmekän mukulasta jauhettua jauhetta. Yhdessä ne '
               + 'tekevät jäätelöstä niin sitkeää, että sen voi leikata '
-              + 'veitsellä, ja se sulaa selvästi hitaammin kuin tavallinen '
-              + 'jäätelö. Damaskoksen al-Hamidijan basaarissa toimiva '
+              + 'veitsellä, ja se sulaa selvästi hitaammin kuin tavallinen. '
+              + 'Damaskoksen al-Hamidiyan basaarissa toimiva '
               + 'Bakdash on tehnyt boozaa 1800-luvun lopulta asti.',
-          selite: 'Valkopaitainen mies otsanauha päässä survoo pitkällä '
-              + 'puuvarrella metallisaavin pohjaa. Saavi on upotettu '
-              + 'työtason sisään, ja sen vieressä on toinen samanlainen '
-              + 'aukko. Tason päällä on vaaleanpunainen liina ja miehen '
-              + 'toisessa kädessä valkoinen käsine. Takaseinä on kaakeloitu '
-              + 'ja yläosassa kiertää peililista.',
+          selite: 'Valkopaitainen mies otsanauha päässä survoo '
+              + 'pitkävartisella puusurvimella metallisaavin sisältöä. '
+              + 'Saavi on upotettu työtason sisään, ja sen vieressä on '
+              + 'toinen samanlainen upotus. Tason päällä on '
+              + 'vaaleanpunainen liina ja miehen toisessa kädessä valkoinen '
+              + 'käsine. Takaseinä on kaakeloitu, ja yläosassa kiertää '
+              + 'peililista.',
           lahde: 'عمر الحافظ, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16344,14 +16349,14 @@ export const MAA_KATEGORIAT = {
               + 'seosta. Yrtti on Origanum syriacum, meiramin ja '
               + 'oreganon sukulainen. Seokseen tulee kuivattua yrttiä, '
               + 'paahdettuja seesaminsiemeniä, sumakkia ja suolaa. Sumakki '
-              + 'on kuivatusta marjasta jauhettu tummanpunainen mauste, ja '
+              + 'on kuivatuista marjoista jauhettu tummanpunainen mauste, ja '
               + 'juuri se tuo seokseen happaman vivahteen. Suhteet '
               + 'vaihtelevat maasta ja kaupasta toiseen, ja seos '
               + 'sekoitetaan usein oliiviöljyyn ja levitetään leivälle. '
               + 'Kuvan mausteet ovat Aleppon Suq al-Attarinesta, jonka nimi '
               + 'tarkoittaa mausteiden ja hajusteiden kauppakujaa.',
-          selite: 'Lähikuva laakeasta mausteesta, joka on pinnaltaan '
-              + 'vaaleanvihreää ja täynnä vaaleita seesaminsiemeniä. '
+          selite: 'Lähikuva leveästä mausteläjästä, jonka pinta on '
+              + 'vaaleanvihreä ja täynnä vaaleita seesaminsiemeniä. '
               + 'Pintaan on kaivettu vinoneliöiden ruudukko, ja jokaisen '
               + 'ruudun keskellä on kasa toista mauste-erää: '
               + 'tummanpunaista karkeaa jauhetta, ruskeita seoksia ja '
@@ -16365,7 +16370,7 @@ export const MAA_KATEGORIAT = {
               + 'ovat vierekkäin samalla kadulla ja kilpailevat asiakkaista '
               + 'kyltein. Nimi on niissä lähes aina sama: kyltissä lukee '
               + 'arabiaksi ja englanniksi vitamiini, ja pienemmällä sen alla '
-              + 'mehu ja voileipä. Mehut sekoitetaan tilauksesta banaanista, '
+              + 'mehu ja voileipä. Mehut tehdään tilauksesta banaanista, '
               + 'appelsiinista ja granaattiomenasta, usein kerroksittain '
               + 'samaan lasiin. Hedelmät roikkuvat katoksen alla '
               + 'näytteillä, ja niitä otetaan suoraan tiskin yläpuolelta.',
@@ -16384,11 +16389,11 @@ export const MAA_KATEGORIAT = {
           'Mastiksi ja salep',
           'Kova pakastaminen',
           'Runsas sokerimäärä',
-          'Pitkä kypsytysaika kellarissa',
+          'Pitkä vatkausaika koneella',
         ],
         oikea: 0,
         fakta: 'Mastiksi on puun pihkaa ja salep kämmekän mukulasta '
-            + 'jauhettua jauhoa. Kumpikaan ei ole makeutusaine.',
+            + 'jauhettua jauhetta. Kumpikaan ei ole makeutusaine.',
       },
     },
   ],
