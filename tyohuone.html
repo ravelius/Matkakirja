@@ -671,8 +671,9 @@
         const pari = (otsikko, m) => {
           k.append(el('p', 'pieni', otsikko));
           const lista = el('ul');
-          lista.append(el('li', null, m.kuvaus));
-          lista.append(el('li', null, m.nosto));
+          for (const osa of [m.kuvaus, m.nosto].filter(Boolean)) {
+            lista.append(el('li', null, osa));
+          }
           k.append(lista);
         };
         pari('Nykyinen merkintä:', n.nykyinen);

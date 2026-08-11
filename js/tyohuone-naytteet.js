@@ -20,7 +20,11 @@ export const NAYTTEET = {
     + 'tilalle sekä näytteet kohtaamisesta ja aarreteksteistä '
     + 'uudella mallilla. Tarkoitus ei ole, että näytteet korvaavat '
     + 'vanhat sellaisenaan, vaan että niistä nähdään, mitkä keinot '
-    + 'toimivat ja mitkä eivät. Faktat tarkistettu.',
+    + 'toimivat ja mitkä eivät. Faktat tarkistettu. HUOM: '
+    + '"Nykyinen merkintä" on pelin tarinakaaren saapumisteksti — '
+    + 'sama joka näkyy Euroopan tekstit -välilehdellä. (Repossa on '
+    + 'myös vanhempi europe-saapumiset-tiedosto, jonka kaari '
+    + 'syrjäytti; se poistuu uudelleenkirjoituksen yhteydessä.)',
   /*
    * Vaihtelua "Isoisä kirjoitti:" -johtolauseeseen (omistajan
    * tilaus 11.8. illalla). Kaava saa yhä esiintyä — mutta ei joka
@@ -85,12 +89,13 @@ export const NAYTTEET = {
       keinot: ['skandaali (pörssiromahdus 1873)', 'aikakontrasti',
         'mittaajan persoona'],
       nykyinen: {
-        kuvaus: 'Kahvilassa kaakao tuli hopeatarjottimella ja '
-          + 'vierellä lasi vettä, jota en ollut pyytänyt. Kukaan ei '
-          + 'hoputtanut, vaikka istuin kaksi tuntia.',
-        nosto: 'Isoisä kirjoitti: "Keisari avasi tänään vesijohdon, '
-          + 'joka tuo veden vuorilta ilman ainuttakaan pumppua." '
-          + 'Join siitä hanasta tänään.',
+        kuvaus: 'Maailmannäyttelyn rotunda kohosi Praterissa '
+          + 'suurempana kuin yksikään mittaamani kupoli, ja sen '
+          + 'alla koneet kutoivat, laskivat ja kirjoittivat. '
+          + 'Jonotin tunnin sisään ja toisen ulos. Illalla '
+          + 'laskeuduin kirkon alle luukammioihin. Kynttilöiden '
+          + 'liekit taipuivat kaikki samaan suuntaan, vaikka ilma '
+          + 'seisoi. Kirjasin molemmat ihmeet samalle sivulle.',
       },
       uusi: {
         kuvaus: 'Kahvilan lehtitelineessä talouslehti huusi kurssien '
@@ -107,8 +112,8 @@ export const NAYTTEET = {
         + 'kesken juhlien. Vanhan herran repliikki sitoo skandaalin '
         + 'nykypäivään ilman, että teksti vanhenee. Horatio saa '
         + 'olla varovainen mittaaja, joka ei lähde kuplaan mukaan. '
-        + 'Vanhan merkinnän vesijohtofakta (Hochquellenleitung '
-        + '1873) on hyvä — se voi siirtyä lehteen tai kohtaamiseen.',
+        + 'Nykyinen kaarimerkintä kertoo rotundasta muttei '
+        + 'romahduksesta — draama jää käyttämättä.',
     },
     {
       id: 'helsinki',
@@ -116,12 +121,13 @@ export const NAYTTEET = {
       keinot: ['pienestä suureen (mustikka → jokamiehenoikeus)',
         'kommellus', 'huumori'],
       nykyinen: {
-        kuvaus: 'Laiva pujotteli Suomenlinnan saarten välistä '
-          + 'satamaan, ja Tuomiokirkko nousi valkoisena kaiken '
-          + 'ylle. Kauppatorilla lokit väijyivät saalistaan.',
-        nosto: 'Isoisä kirjoitti: "Helsingfors näyttää mereltä '
-          + 'suuremmalta kuin maalta. Valkoinen kirkko seisoo kuin '
-          + 'keisarin allekirjoitus." Keisari on poissa — kirkko ei.',
+        kuvaus: 'Kuninkaanportin rappusilla poika onki ilman '
+          + 'koukkua; siimassa riippui pelkkä paino. Mitä pyydät, '
+          + 'kysyin. Pohjaa, poika vastasi — isä käski mitata, '
+          + 'nouseeko maa täälläkin. Kirjasin hänen lukemansa '
+          + 'vihkooni ja annoin hänelle lyijykynäni: mittamies '
+          + 'tarvitsee oman. Maa nousee. Jonain päivänä se nostaa '
+          + 'esiin sen, minkä minä jätin.',
       },
       uusi: {
         kuvaus: 'Ostin Kauppatorilta rasian mustikoita. Myyjä '
@@ -136,7 +142,11 @@ export const NAYTTEET = {
         + 'melkein koko muusta maailmasta. Oivallus tulee myyjän '
         + 'naurun ja Horation pilalle menneiden housujen kautta, '
         + 'ei luentona. Sama mustikka on ehdolla Suomen pieneksi '
-        + 'paikallisaarteeksi — teksti ja aarre tukevat toisiaan.',
+        + 'paikallisaarteeksi — teksti ja aarre tukevat toisiaan. '
+        + 'HUOM: nykyisen kaarimerkinnän maankohoaminen on upea '
+        + 'fakta ja poika hieno kohtaus, mutta loppu ("se nostaa '
+        + 'esiin sen, minkä minä jätin") rikkoo uutta kaanonia — '
+        + 'isoisä ei jätä mitään odottamaan.',
     },
     {
       id: 'lissabon',
@@ -144,13 +154,13 @@ export const NAYTTEET = {
       keinot: ['historian oikku (maanjäristys 1755)',
         'henkilö liikkeellä (ratikka)'],
       nykyinen: {
-        kuvaus: 'Keltainen ratikka kiipesi Alfaman kujaa niin '
-          + 'ahdasta, että olisin yltänyt seiniin ikkunasta. '
-          + 'Ylhäällä koko kaupunki aukesi kerralla — ja joki oli '
-          + 'leveä kuin meri.',
-        nosto: 'Isoisä kirjoitti: "Seitsemän kukkulaa, ja '
-          + 'jokaiselta näkyy meri. Täältä lähdettiin aikoinaan '
-          + 'etsimään maailman toista laitaa." Ymmärsin lähtijöitä.',
+        kuvaus: 'Belémin vartija vannoi, ettei torni ole siirtynyt '
+          + 'keskelle jokea — joki siirtyi. Kirjasin väitteen '
+          + 'varauksella ja tilasin kolmannen kermaleivoksen: '
+          + 'reseptin loivat munkit, ja sen tuntee yhä vain '
+          + 'kourallinen eläviä. Laskuveden rajassa kiveä kiersi '
+          + 'rengas, syvälle kulunut. Sata vuotta laivoja, jotka '
+          + 'eivät enää käy. Nousuvesi peitti sen silmissäni.',
       },
       uusi: {
         kuvaus: 'Ratikankuljettaja osoitti risteystä: "Suorat kadut '
@@ -165,8 +175,10 @@ export const NAYTTEET = {
         + 'kaupungin, ja jälki näkyy yhä katukuvassa — vino katu '
         + 'on vanha, suora uusi. Tieto tulee liikkeessä olevalta '
         + 'ihmiseltä, ei kyltistä. Alfama tosiaan säästyi '
-        + 'pahimmalta, kun ala-kaupunki sortui; Baixa rakennettiin '
-        + 'ruutuun. Vanhan merkinnän ratikkakuva säilyy pohjana.',
+        + 'pahimmalta, kun alakaupunki sortui; Baixa rakennettiin '
+        + 'ruutuun. Nykyinen kaarimerkintä (Belém) on tunnelmaltaan '
+        + 'hieno mutta järistys — kaupungin suurin tarina — jää '
+        + 'siinä kokonaan kertomatta.',
     },
     {
       id: 'rooma',
@@ -174,12 +186,14 @@ export const NAYTTEET = {
       keinot: ['elokuvallinen avaus + etikettivirhe',
         'aikakontrasti (sama kömmähdys 150 v välein)'],
       nykyinen: {
-        kuvaus: 'Trevin lähteen pohjalla, kolikoiden seassa, '
-          + 'välkkyi yksi jota vesi ei ollut tummentanut: vanha '
-          + 'englantilainen punta. Se oli heitetty tänä aamuna.',
-        nosto: 'Isoisä kirjoitti: "Heitin kolikon Treviin, kuten '
-          + 'tapa vaatii — ja toisen, jotta näkisin vedestä, kuka '
-          + 'seisoo takanani." Heitin omani samaan kohtaan.',
+        kuvaus: 'Trevin allas oli tyhjennetty, ja pohjalta nousi '
+          + 'kolikoiden sade — rahat annetaan köyhille. Yksi '
+          + 'kolikko oli muita vanhempi, ja sen reunaan oli '
+          + 'viilattu tähtäinristi. Heitin sen takaisin väärin. '
+          + 'Vieressä seissyt rouva näytti oikean tavan — oikealla '
+          + 'kädellä vasemman olan yli — niin arvokkaasti, että '
+          + 'heitin toisenkin. Kirjasin: köyhät saivat kaksi '
+          + 'ropoa, minä opetuksen.',
       },
       uusi: {
         kuvaus: 'Baari kiilsi: kone paineessa, barista tarkka kuin '
@@ -197,9 +211,11 @@ export const NAYTTEET = {
         + 'kömmähdyksen eri muodossa 1873 (Caffè Greco on ollut '
         + 'taiteilijoiden kahvila 1760-luvulta). Kaksi herraa, '
         + 'sama nolous, 150 vuotta väliä — piikki osoittaa '
-        + 'herroihin, ei paikallisiin. HUOM: nykyinen Trevi-'
-        + 'merkintä on dekkarina vahva — tämä näyte on rinnalle '
-        + 'punnittavaksi, ei itsestäänselvä korvaaja.',
+        + 'herroihin, ei paikallisiin. HUOM: nykyinen '
+        + 'kaarimerkintä (rouva opettaa kolikonheiton) on hieno ja '
+        + 'samanhenkinen — tämä näyte on rinnalle punnittavaksi, '
+        + 'ei itsestäänselvä korvaaja. Tähtäinristikolikko on '
+        + 'tosin mystiikkaa, joka ei johda mihinkään.',
     },
     {
       id: 'praha',
@@ -207,12 +223,13 @@ export const NAYTTEET = {
       keinot: ['johtolause: reunamerkintä', 'yllätysfakta',
         'aikakontrasti'],
       nykyinen: {
-        kuvaus: 'Vanhankaupungin kello löi täyden tunnin: luukut '
-          + 'aukesivat, apostolit kulkivat ohi ja kukko kiekui. '
-          + 'Koko aukio nosti katseensa yhtä aikaa.',
-        nosto: 'Isoisä kirjoitti: "Prahassa on kello, joka näyttää '
-          + 'auringon ja kuun paikan mutta ei kiirettä." '
-          + 'Myöhästyin sen takia raitiovaunusta.',
+        kuvaus: 'Kultaisen kujan talot ovat niin pieniä, että löin '
+          + 'pääni kamanaan kahdesti; kolmannella kumarsin ennen '
+          + 'kuin ovi ehti pyytää. Talossa kahdeksan paloi '
+          + 'kynttilä lukitun oven takana. Pöydällä oli kirja, '
+          + 'reunassaan barometrini lukema. Kirjasin omani '
+          + 'viereen: piirtoa myöten samat — eri käsialalla. Sinä, '
+          + 'joka tätä luet: kynttilä ei sytytä itseään.',
       },
       uusi: {
         kuvaus: 'Kellon alla opas kertoi, että apostolit paloivat '
@@ -227,7 +244,11 @@ export const NAYTTEET = {
         + 'mukanaan. Yllätysfakta on tosi: Orloj vaurioitui Prahan '
         + 'kansannousussa toukokuussa 1945, puiset apostolit '
         + 'paloivat ja Vojtěch Sucharda veisti uudet. Vanhin osa '
-        + 'kellosta on 1400-luvulta.',
+        + 'kellosta on 1400-luvulta. HUOM: nykyinen kaarimerkintä '
+        + 'rikkoo uutta kaanonia kahdesti — "Sinä, joka tätä '
+        + 'luet" -puhuttelu on poistettu linjauksissa, ja '
+        + 'etsijälle palava kynttilä on juuri sitä 150 vuoden '
+        + 'odotusta, josta luovutaan.',
     },
     {
       id: 'istanbul',
@@ -235,14 +256,13 @@ export const NAYTTEET = {
       keinot: ['johtolause: lainaus ensin', 'henkilö liikkeellä',
         'pienestä suureen'],
       nykyinen: {
-        kuvaus: 'Bosporin lautan teenmyyjä nyökkäsi minulle kuin '
-          + 'tutulle: "Sama paikka kuin hänellä aina — perän '
-          + 'penkki, selkä merelle." En ollut käynyt täällä '
-          + 'koskaan.',
-        nosto: 'Isoisä kirjoitti: "Kahden maanosan kaupungissa '
-          + 'vaihda rantaa aina, kun joku katsoo liian kauan. '
-          + 'Lautta maksaa kolikon, rauha ei mitään." Istuin '
-          + 'perän penkille.',
+        kuvaus: 'Laskin viisikymmentäkaksi porrasta pimeään, ja '
+          + 'kaupungin äänet sammuivat yksi kerrallaan. Alhaalla '
+          + 'avautui pylväsmetsä mustassa vedessä; laskin '
+          + 'pylväitä, kunnes lyhty vapisi kädessäni. Yhden '
+          + 'pylvään alla lepäsi kivinen kasvo ylösalaisin. '
+          + 'Sammutin lyhtyni kokeeksi — ja veden ylle jäi '
+          + 'palamaan toinen valo, joka ei ollut minun.',
       },
       uusi: {
         kuvaus: 'Lautta kynti Bosporia, ja kymmenessä minuutissa '
@@ -256,8 +276,10 @@ export const NAYTTEET = {
         + 'perässä — nopein tapa päästä isoisän ääneen. Pienestä '
         + 'suureen: teelasi lautalla avaa sen, että Istanbul on '
         + 'maailman ainoa suurkaupunki kahdella mantereella, ja '
-        + 'ylitys on tavallista arkea. HUOM: nykyinen teenmyyjä-'
-        + 'merkintä on hyvä — tässä punnitaan vain kerrontatapaa.',
+        + 'ylitys on tavallista arkea. Nykyinen kaarimerkintä '
+        + '(Basilika-säiliö) on tunnelmallinen, mutta toinen valo '
+        + 'pimeässä on mystiikkaa ilman jatkoa — ja säiliön '
+        + 'sijaan arkinen lautta kertoo kaupungista enemmän.',
     },
     {
       id: 'ateena',
@@ -265,12 +287,13 @@ export const NAYTTEET = {
       keinot: ['johtolause: mittaus puhuu', 'mittaajan persoona',
         'aikakontrasti'],
       nykyinen: {
-        kuvaus: 'Torin kauppias antoi minun maistaa oliiveja '
-          + 'kolmesta ruukusta ja kysyi, mikä vuori maistui '
-          + 'parhaalta. Nauroin, kunnes hän osoitti rinteitä '
-          + 'kaupungin takana: jokainen ruukku oli omaltaan.',
-        nosto: '(Nykyinen nosto säilyy vertailussa lehtisivulla — '
-          + 'näyte koskee johtolausetta.)',
+        kuvaus: 'Pöllö istui kaatuneella pylväällä ja katsoi minua '
+          + 'liikahtamatta, kuin vaatisi selitystä '
+          + 'myöhästymisestäni. Kirjasin vihkooni tuijotuksemme '
+          + 'keston: seitsemän minuuttia, ja minä käänsin katseeni '
+          + 'ensin. Silloin se astui syrjään: jalan alla oli '
+          + 'hopearaha, vanhempi kuin mikään mittaamani. Se ei '
+          + 'vartioinut rahaa minulta — se näytti, mistä aloittaa.',
       },
       uusi: {
         kuvaus: 'Ostin Akropoliin lipun puhelimella, ja jono '
@@ -286,7 +309,10 @@ export const NAYTTEET = {
         + 'luvuissa kertoo liikutuksesta enemmän kuin ylistys. '
         + 'Faktat: Parthenonin ulkopylväikössä on 46 pylvästä ja '
         + 'stylobaatissa kolme askelmaa. Portaiden kuluma on totta '
-        + 'ja jokainen turisti näkee sen itse.',
+        + 'ja jokainen turisti näkee sen itse. Nykyisen '
+        + 'kaarimerkinnän pöllö on kaunis kuva, mutta ohjaava '
+        + 'eläin ("näytti mistä aloittaa") on taikaa, josta uusi '
+        + 'kaanon luopuu.',
     },
   ],
   /*
