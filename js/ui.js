@@ -5378,12 +5378,13 @@ export class UI {
     /*
      * Mannerlento: aarre löytyi, matka voi jatkua. Napit ovat samaa
      * leveää muotoa kuin poistuneet porttinapit, koska kohde on kaukana
-     * ruudun ulkopuolella eikä löydy kartalta osoittamalla.
-     * MANNERLENTO_NAPPI on paikanvaraaja — Fable kirjoittaa sanamuodon.
+     * ruudun ulkopuolella eikä löydy kartalta osoittamalla. Nappi
+     * nimeää mantereen ("Lennä Oseaniaan: Sydney"), koska tavalliset
+     * lentonapit ovat pelkkiä kaupunkeja — ero on pidettävä näkyvänä.
      */
     for (const kohde of mannerLennot) {
       const btn = this.ikoniTekstiNappi('kone',
-        `${MANNERLENTO_NAPPI(kohde.label)} (${FLIGHT_PRICE} p)`, 'wide');
+        `${MANNERLENTO_NAPPI(kohde)} (${FLIGHT_PRICE} p)`, 'wide');
       btn.addEventListener('click', () => {
         this.travelExpanded = false;
         sfx.play('flight');
@@ -5935,7 +5936,7 @@ export class UI {
         const key = luentaAvain + aikatauluLisa;
         if (this.factKey === key) return;
         this.uusiFactKey(key);
-          this.factVoiceEl.textContent = 'Matkakirjasta';
+        this.factVoiceEl.textContent = 'Matkakirjasta';
         this.factPlace.textContent = kaupunki.name;
         this.factImageTitle = null;
         this.factImage.hidden = true;
@@ -6001,7 +6002,7 @@ export class UI {
         const key = luentaAvain + aikatauluLisa;
         if (this.factKey === key) return;
         this.uusiFactKey(key);
-          this.factVoiceEl.textContent = voiceTitle(factVoice(fakta));
+        this.factVoiceEl.textContent = voiceTitle(factVoice(fakta));
         this.factPlace.textContent = kaupunki.name;
         this.factImageTitle = typeof fakta === 'string' ? null : fakta.wiki ?? null;
         this.factImage.hidden = !this.factImageTitle;

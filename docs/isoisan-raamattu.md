@@ -360,22 +360,27 @@ saavat jäädä legendoiksi kaupungin oman aarteen kohdalla.
   löytymishetkeen; kulkijan henkilöllisyys päätetään omistajan
   kanssa erikseen (sateenvarjolinjaus, ks. Vastavoima-luku) —
   siihen asti kukaan teksti ei nimeä eikä näytä kulkijaa.
-- **Päiväkirjan taitetun sivun vihjeet** (matkojen välissä nousevat
-  merkinnät) kuuluvat samaan mysteeriin: ne kaventavat unohdetun
-  aarteen aluetta ja saavat viitata kulkijan jälkiin — eivät
+- **Päiväkirjan taitettu sivu** on tarinamotiivi, ei enää
+  pelimekaniikka (vihjejärjestelmä poistettiin 11.8.2026, ks.
+  Aarrevihjeet-luku): jos taitettu sivu esiintyy teksteissä, se
+  kuuluu samaan mysteeriin ja saa viitata kulkijan jälkiin — ei
   koskaan uusiin, erillisiin arvoituksiin.
 - **Jännitys ei tule mysteeristä** (omistajan linjaus): se tulee
   isoisän hurjista tilanteista 1873 ja nuoren herran hurjista
   tilanteista nykyhetkessä. Kulkija on ihminen, jolla on tikkaat ja
   öljykannu — säiekoukut kirjoitetaan havaintoina ilman
   aavemaisuutta.
-- **Pelimekaniikka** (toteutus työn alla): laudan unohdettu aarre ei
-  löydy ennen kuin vähintään puolet laudan kaupungeista on käyty;
-  löytymisen jälkeen pelaajalle tarjotaan mahdollisuus jatkaa
-  seuraavalle mantereelle lentäen. Kaupunkitekstit eivät koskaan
-  laske kaupunkeja, lupaa läheisyyttä eivätkä oleta, onko mysteeri
-  jo ratkennut — koukku toimii ennen ratkaisua vihjeenä ja sen
-  jälkeen tunnistamisen ilona.
+- **Pelimekaniikka** (omistajan tarkennus 11.8.2026, toteutettu):
+  jokaisella mantereella on OMA Aarnin luettelon aarteensa —
+  seitsemän tähtilaattaa, yksi per manner. Porttia tai
+  käyntikynnystä EI ole: aarre voi löytyä mantereen ensimmäisestä
+  kätköstä, ja jos kaikki muut mantereen laatat on käännetty, se on
+  varmasti viimeisessä. Kun mantereen aarre on löytynyt, pelaajalle
+  avautuu lento toiselle mantereelle (vain mantereille, joiden aarre
+  on vielä kateissa). Kaupunkitekstit eivät koskaan laske
+  kaupunkeja, lupaa läheisyyttä eivätkä oleta, onko mysteeri jo
+  ratkennut — koukku toimii ennen ratkaisua vihjeenä ja sen jälkeen
+  tunnistamisen ilona.
 - Tulevat laudat: mysteeri nimetään laudan jakotaulussa ENNEN
   tekstien kirjoittamista (Lähi-idän luonteva ehdokas on
   VANHA-jälkien hahmo — joku ehti ennen isoisää; päätetään
@@ -509,28 +514,24 @@ lisätään teksteihin). Aisti joka kolmannessa. Naapurusten
 beat-törmäykset tarkistetaan kirjoitusvaiheessa laudan
 geometriasta.
 
-## Aarrevihjeet: matkalle, ei kaupunkeihin (7.8.2026)
+## Aarrevihjeet: järjestelmä poistettu (11.8.2026)
 
-Omistajan linjaus: *"Aarrevihjeet voisi siirtää kaupunkien välille,
-niin eivät sotke kaupunkien tekstejä. Niitä vihjeitä riittää vain
-pari ja niihin voisi generoida äänen myös."*
+Tähtivihjejärjestelmä (isoisän päiväkirjan taitettu sivu, joka
+osoitti kohti laudan ainoaa pääaarretta) POISTETTIIN pelistä
+omistajan päätöksellä 11.8.2026: kun aarteita on seitsemän — yksi
+joka mantereella — manner itse rajaa etsinnän eikä erillistä
+vihjettä tarvita. Koodista lähtivät starHint/starHints/starHintAlue
+ja vihjekortti; 36 kuiskattua vihjeluentaa
+(`puhe-*-vihje-*.mp3`) on yhä assets/audio-kansiossa
+käyttämättöminä, kunnes omistaja päättää niiden poistosta.
 
-- **Vihje nousee esiin vain kaupunkien välissä** (game.starHint:
-  pelaaja seisoo reunaruudulla). Kaupungissa tietoruudussa on aina
-  kaupungin oma merkintä.
-- **Vihjetekstejä on lautaa kohden vain kourallinen** — Euroopassa
-  neljä, yksi per ilmansuunta (js/packs/europe.js: VIHJEALUEET ja
-  VIHJETEKSTIT; starHintAlue valitsee äänitiedoston). Vihje kertoo
-  suunnan, ei koskaan kaupunkia.
-- **Jokaiselle vihjeelle luenta**: kuiskattu resepti
-  ([whispers]/[softly], stability 0.5), tiedostot
-  `puhe-<lauta>-vihje-<alue>.mp3`. Neljä tiedostoa per lauta on
-  halpa generoida.
-- Kaupunkimerkinnät EIVÄT viittaa laudan pääaarteeseen — aarrejahti
-  kulkee vihjeissä, dekkarikoukut merkinnöissä (sääntö 4 yllä).
-- Afrikan vanhat kaupunkikohtaiset vihjeet toimivat toistaiseksi
-  samassa mekaniikassa; ne tiivistetään ilmansuunniksi, kun Afrikan
-  merkinnät uusitaan.
+Voimaan jäävät säännöt:
+
+- Kaupunkimerkinnät EIVÄT viittaa laudan unohdettuihin aarteisiin —
+  aarrejahti on laattamekaniikkaa, dekkarikoukut merkinnöissä
+  (sääntö 4 yllä).
+- "Päiväkirjan taitettu sivu" säilyy tarinamotiivina (tarina.md) ja
+  mysteerisäikeiden raaka-aineena — se ei enää ole pelimekaniikka.
 
 ## Muut maanosat: hahmotelmat (7.8.2026, omistajan tilaus)
 

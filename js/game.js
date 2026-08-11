@@ -18,15 +18,33 @@ export const DUEL_PRIZE = 200; // rosvon saalis, jos kaksintaistelun voittaa suo
 export const DUEL_BYPASS_SHOES = 3; // näin monella hevosenkengällä rosvon voi ohittaa
 
 /*
- * MANNERLENNON PAIKANVARAAJATEKSTIT (Opus 5, 11.8.2026).
- *
- * Nämä kaksi riviä ovat MEKANIIKAN paikanvaraajia, eivät lopullista
- * tarinatekstiä: Fable kirjoittaa sanamuodot. Ne ovat tässä yhdessä
+ * MANNERLENNON TEKSTIT (Fable 11.8.2026). Ne ovat tässä yhdessä
  * paikassa eivätkä pakkausten texts-taulussa, koska mannerlento on
  * laudan sisäinen mekaniikka eikä kuulu yhdellekään mantereelle.
+ *
+ * Ilmoitus on nuoren herran ääni: nykymaailmassa lentokenttä on joka
+ * kaupungin naapurissa — siksi lento ei vaadi lentokenttälaattaa, ja
+ * ilmoitus sanoo sen ääneen.
  */
-export const MANNERLENTO_ILMOITUS = 'Tämän mantereen aarre on löytynyt — matka voi jatkua toiselle mantereelle.';
-export const MANNERLENTO_NAPPI = (kaupunki) => `Toiselle mantereelle: ${kaupunki}`;
+export const MANNERLENTO_ILMOITUS = 'Mantereen aarre on laukussa. Isoisä olisi etsinyt satamasta laivaa — minä ostin lentolipun puhelimella: toiselle mantereelle pääsee nyt mistä tahansa kaupungista.';
+
+// Mannerten suomenkieliset nimet nappia ja tekstejä varten. Avaimet
+// ovat lähdepakettien tunnuksia (cityManner) — muilla laudoilla manner
+// on laudan oma id, ja tuntematon tunnus palaa pelkkään kaupunkiin.
+export const MANNER_NIMET = {
+  europe: { nimi: 'Eurooppa', illatiivi: 'Eurooppaan' },
+  middleeast: { nimi: 'Lähi-itä', illatiivi: 'Lähi-itään' },
+  africa: { nimi: 'Afrikka', illatiivi: 'Afrikkaan' },
+  asia: { nimi: 'Aasia', illatiivi: 'Aasiaan' },
+  northamerica: { nimi: 'Pohjois-Amerikka', illatiivi: 'Pohjois-Amerikkaan' },
+  southamerica: { nimi: 'Etelä-Amerikka', illatiivi: 'Etelä-Amerikkaan' },
+  oceania: { nimi: 'Oseania', illatiivi: 'Oseaniaan' },
+};
+
+export const MANNERLENTO_NAPPI = ({ manner, label }) => {
+  const kohde = MANNER_NIMET[manner]?.illatiivi;
+  return kohde ? `Lennä ${kohde}: ${label}` : `Toiselle mantereelle: ${label}`;
+};
 
 // Aika on pelin vastustaja, ei sen tuomari: ajan loppuminen ei päätä peliä
 // koskaan. Vuoro on kuusi tuntia, joten neljä vuoroa on yksi matkapäivä.
@@ -904,6 +922,12 @@ export class Game {
     const oma = this.mannerOf(city.id);
     if (!this.mantereenTahtiLoytynyt(oma)) return [];
 
+    /*
+     * Vain mantereet, joiden aarre on vielä kateissa (Fablen rajaus
+     * 11.8.2026): lento on jahdin jatkamista varten, ja jo löydetylle
+     * mantereelle pääsee tavallisilla reiteillä. Samalla nappirivi
+     * lyhenee matkan edetessä eikä valikko kasva yli ruudun.
+     */
     const nahdyt = new Set([oma]);
     const kohteet = [];
     for (const c of this.pack.cities) {
@@ -911,6 +935,7 @@ export class Game {
       const manner = this.mannerOf(c.id);
       if (nahdyt.has(manner)) continue;
       nahdyt.add(manner);
+      if (this.mantereenTahtiLoytynyt(manner)) continue;
       kohteet.push({ city: c.id, manner, label: c.name });
     }
     return kohteet;
@@ -1626,9 +1651,12 @@ export class Game {
      * (omistajan toive): pelaaja hahmottaa, että jonnekin kannattaa
      * vielä palata. Rivi ei koskaan paljasta, missä aarre on — vain
      * että se on yhä jossain. Arvonta pelin rng:llä kuten muutkin.
+     * Mannerkohtaisten aarteiden kanssa muistutus jatkuu, kunnes
+     * Aarnin luettelo on täynnä — yksi löytö ei hiljennä sitä.
      */
     const katumukset = pack.texts?.flightRegret ?? [];
-    if (katumukset.length && this.world && !this.starFound
+    const mantereita = new Set(this.pack.cities.map((c) => this.mannerOf(c.id))).size;
+    if (katumukset.length && this.world && this.world.starsFound.size < mantereita
       && this.rng() < 0.35) {
       return katumukset[Math.floor(this.rng() * katumukset.length)];
     }
@@ -2184,8 +2212,10 @@ export class Game {
           p.money += STAR_PRIZE;
           this.say(p.id, `◈ ${p.name} löysi aarteen ${token.name} kaupungista ${city.name} — arvo ${STAR_PRIZE} puntaa!`);
           this.emit('treasure', this.pack.texts.starToast, { token: type, city: cityId, sub: `+${STAR_PRIZE} puntaa` });
-          // Ilmoitus mannerlennosta vain, jos muita mantereita on.
-          if (this.mannerLennot().length || this.muutMantereet(manner).length) {
+          // Ilmoitus mannerlennosta vain, jos jollakin muulla
+          // mantereella on vielä aarre kateissa — viimeisen löydön
+          // jälkeen lupaus lennosta olisi tyhjä.
+          if (this.muutMantereet(manner).some((m) => !this.mantereenTahtiLoytynyt(m))) {
             this.say(p.id, MANNERLENTO_ILMOITUS);
           }
         } else {
@@ -2374,10 +2404,9 @@ export class Game {
         starsFound: new Map(w.starsFound ?? mannerkohtaisetTahdet(pack, w)),
       });
     }
-    // Uusi kenttä saa oletuksen spreadin edestä eikä version numeroa
-    // nosteta: fromJSON hylkää kaiken muun kuin version 1, joten noston
-    // hinta olisi jokainen kesken jäänyt peli. Sama kuvio kuin xp- ja
-    // quizAsked-kentillä aiemmin.
+    // Uusi kenttä saa oletuksen spreadin edestä (sama kuvio kuin xp-
+    // ja quizAsked-kentillä aiemmin) — versionosto tehdään vain, kun
+    // vanhaa muotoa ei voi lukea kääntämättä, kuten 1 -> 2 alla.
     // Versio 1 -> 2: hasStar oli lippu, stars on laskuri. Kentät
     // luetaan ennen spreadia ja hasStar jätetään pois, jottei
     // vanhentunut lippu jää roikkumaan olioon.

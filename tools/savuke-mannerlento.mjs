@@ -145,7 +145,7 @@ const lento = await sivu.evaluate(async () => {
   window.matkakirja.ui.render();
   await new Promise((r) => setTimeout(r, 300));
   const napit = [...document.querySelectorAll('#actions button')].map((b) => b.textContent.trim());
-  const mannerNapit = napit.filter((t) => /toiselle mantereelle/i.test(t));
+  const mannerNapit = napit.filter((t) => /^Lennä /.test(t));
   return { napit, mannerNapit };
 });
 vaadi('mannerlennon napit vaiheessa B', lento.mannerNapit.length === 6,
@@ -158,7 +158,7 @@ const lensi = await sivu.evaluate(async () => {
   const g = window.matkakirja.game;
   const ennen = { kaupunki: g.player.pos.city, raha: g.player.money };
   const nappi = [...document.querySelectorAll('#actions button')]
-    .find((b) => /toiselle mantereelle/i.test(b.textContent));
+    .find((b) => /^Lennä /.test(b.textContent.trim()));
   if (!nappi) return { virhe: 'nappia ei löydy' };
   nappi.click();
   await new Promise((r) => setTimeout(r, 900));

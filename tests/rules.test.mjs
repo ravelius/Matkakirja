@@ -1218,10 +1218,14 @@ test('mannerlento aukeaa vasta kun tämän mantereen aarre on löytynyt', () => 
   assert.deepEqual(game.mannerLennot(), [], 'toisen mantereen aarre avasi lennon');
 
   game.world.starsFound.set('southamerica', 'lima');
+  // Kohteita on yksi per muu manner, jonka aarre on vielä kateissa:
+  // lento on jahdin jatkamista varten (Fablen rajaus 11.8.2026), joten
+  // oceania (aarre jo löytynyt) ei ole listalla.
   const kohteet = game.mannerLennot();
-  assert.equal(kohteet.length, 6, 'kohteita pitää olla yksi per muu manner');
-  assert.equal(new Set(kohteet.map((k) => k.manner)).size, 6, 'sama manner kahdesti');
+  assert.equal(kohteet.length, 5, 'kohteita pitää olla yksi per kateissa oleva muu manner');
+  assert.equal(new Set(kohteet.map((k) => k.manner)).size, 5, 'sama manner kahdesti');
   assert.ok(!kohteet.some((k) => k.manner === 'southamerica'), 'oma manner kohteena');
+  assert.ok(!kohteet.some((k) => k.manner === 'oceania'), 'löydetyn aarteen manner kohteena');
   for (const kohde of kohteet) {
     const city = pack.cities.find((c) => c.id === kohde.city);
     assert.ok(city?.start, `${kohde.city} ei ole aloituskaupunki`);

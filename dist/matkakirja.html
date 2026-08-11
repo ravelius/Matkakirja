@@ -3132,26 +3132,6 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   color: var(--accent);
 }
 
-/* Aarrevihje erottuu tavallisesta merkinnästä: kellertävä revitty sivu,
- * isompi tähtiotsikko ja repaleinen yläreuna. Hiljaisuus on tarkoitus —
- * vihjettä ei lueta ääneen, ja ilme kertoo sen. */
-.fact-card.vihjekortti {
-  background:
-    linear-gradient(rgba(214, 168, 66, 0.12), rgba(214, 168, 66, 0.05)),
-    var(--panel);
-  border-top: 1px solid rgba(140, 100, 30, 0.5);
-}
-
-.fact-card.vihjekortti h2 {
-  font-size: 0.92rem;
-  letter-spacing: 0.1em;
-  color: #a5691f;
-}
-
-.fact-card.vihjekortti .fact-text {
-  font-style: italic;
-}
-
 .fact-place {
   margin: 0 0 0.25rem;
   font-size: 0.8rem;
@@ -10842,32 +10822,34 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
     <div class="rules-text">
       <p><b>Peli.</b> Matkakirja ja unohdettu aarre on yksin pelattava vaellus: kierrä maailmaa,
         avaa aarteita vastaamalla kysymyksiin ja opi matkalla maista, kulttuureista
-        ja elämästä eri puolilla maapalloa. Peli ei pääty — jokaisella laudalla on
-        oma unohdettu aarteensa (2000 p), ja löytöjä voi kerätä niin kauan kuin huvittaa.</p>
-      <p><b>Matkaan lähtö.</b> Uusi peli alkaa maailmankartalta. Napauta kaupunkia:
-        matka lähtee heti ja laskeudut ilmaiseksi sen mantereen omalle kartalle.
-        Maailmankartalle pääsee myöhemmin takaisin porttikaupungeista, ja siellä
-        valtameret ylitetään laivalla tai lentäen. Jokaisella laudalla on omat
-        paikkansa, reittinsä, unohdettu aarteensa ja kysymyksensä.</p>
-      <p><b>Portit.</b> Porttikaupungin tunnistaa katkoviivakehästä: siitä pääsee
-        lennolla (300 p) toiselle laudalle — mantereelta toiselle, maailmankartalle
-        tai vaikka kaupunkitason laudalle kuten Istanbuliin. Laudan aarteet ja
-        löydöt säilyvät, vaikka kävisit välillä muualla. Keltaisella pohjalla ovat
-        laudan omat aloituskaupungit eli kotisatamat, joihin unohdettu aarre tuodaan — ne
-        ovat eri asia kuin portit, ja maailmankartalta saatetaan laskeutua muuhunkin
-        porttikaupunkiin.</p>
-      <p><b>Tietoportit.</b> Maan oma kartta (esim. Suomi) ei aukea rahalla vaan
-        tiedolla: maan pääkaupungissa voi vastata vaikeaan kysymykseen, ja oikea
-        vastaus avaa portin ilmaiseksi. Väärästä vastauksesta vuoro päättyy —
-        uusi yritys seuraavalla vuorolla. Kiertotiekin voi löytyä: Suomeen pääsee
-        myös ruotsinlaivalla Tukholmasta Ahvenanmaalle.</p>
+        ja elämästä eri puolilla maapalloa. Peli ei pääty — löytöjä voi kerätä niin
+        kauan kuin huvittaa.</p>
+      <p><b>Aarnin luettelo.</b> Tutkimusmatkailija Aarni kirjasi luetteloonsa yhden
+        unohdetun aarteen jokaisesta seitsemästä maanosasta: Meripihkahuoneen aarre,
+        Suuren Zimbabwen kivilintu, Sheban kuningattaren aarre, keisarin jadesinetti,
+        Montezuman aarre, El Doradon aarre ja Eteläristin helmi. Jokainen niistä (2000 p)
+        on piilossa oman mantereensa kätköjen joukossa, eikä kukaan tiedä missä —
+        aarre voi odottaa mantereen ensimmäisessä kätkössä tai sen viimeisessä.
+        Matkalaukun Aarnin luettelo kertoo, mitkä on jo löydetty ja montako on yhä
+        kateissa.</p>
+      <p><b>Matkaan lähtö.</b> Uusi peli alkaa aloitusnäytöltä: napauta kaupunkia,
+        ja matka lähtee ilmaiseksi maailmankartalle. Sen jälkeen pelataan yhdellä
+        laudalla, jolla ovat kaikki mantereet, kaikki 248 kaupunkia ja kaikki
+        reitit. Keltaisella pohjalla ovat aloituskaupungit eli kotisatamat.</p>
+      <p><b>Mantereelta toiselle.</b> Naapurimantereille pääsee kävellen tai laivalla
+        — Afrikasta Lähi-itään, Euroopasta Atlantin yli Amerikkaan. Kun mantereen
+        unohdettu aarre on löytynyt, avautuu lisäksi lento: mistä tahansa kaupungista
+        pääsee 300 punnalla yhdessä vuorossa sellaisen mantereen kotisatamaan, jonka
+        aarre on vielä kateissa. Lentokenttää ei tarvita — lento on aarteen palkinto,
+        ei reitti.</p>
       <p><b>Kartta.</b> Koko lauta näkyy aina kerralla, joten karttaa ei tarvitse
         raahata eikä zoomata. Päiväkirjakortti hakeutuu sille kartan nurkalle, jossa
         on eniten merta, jottei se peitä mannerta.</p>
       <p><b>Vuoron kulku.</b> 1) Valitse matkustustapa. Näkyvillä on kerrallaan vain
         muutama nappi: <b>Jalan</b> lähtee heti matkaan ja heittää nopan samalla
         painalluksella, <b>Laiva &amp; lento…</b> avaa loput vaihtoehdot (laiva 100 p,
-        lennot 300 p sekä portit toisille laudoille), ja isoisän merkitsemässä
+        lennot 300 p — ja kun mantereen aarre on löytynyt, lento toiselle
+        mantereelle), ja isoisän merkitsemässä
         kaupungissa voi jäädä <b>tutkimaan paikkaa</b>. Jos vaihtoehtoja ei ole —
         esimerkiksi sisämaassa tai kesken reittiä — noppa pyörähtää itsestään.
         2) Valitse kohde kartalta. 3) Jos päädyit kaupunkiin, jonka isoisä on
@@ -10909,12 +10891,10 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
         kelpaa tässä pelissä yhä kaikkialla.</p>
       <p><b>Kaksi ääntä.</b> Tietoruutu kertoo siitä paikasta, jossa vuorossa oleva
         pelaaja on, ja siinä puhuu vuorotellen kaksi ääntä: <b>isoisän päiväkirja</b>
-        vuodelta 1873 ja <b>nuoren herran havainto</b> tästä päivästä. Harvakseltaan
-        päiväkirjasta löytyy taitettu sivu, joka vihjaa laudan unohdetun aarteen suunnasta —
-        muttei koskaan nimeä kaupunkia.</p>
+        vuodelta 1873 ja <b>nuoren herran havainto</b> tästä päivästä.</p>
       <p><b>Kokemuspisteet ja tieto.</b> Pisteitä kertyy matkasta eikä onnesta:
-        uudesta kaupungista 10, uudesta laudasta 50, tietoportin vaikeasta
-        kysymyksestä 25 ja laudan unohdetusta aarteesta 100. Yläpalkin tietoprosentti kertoo,
+        uudesta kaupungista 10, uudesta laudasta 50, vaikeasta
+        kysymyksestä 25 ja jokaisesta unohdetusta aarteesta 100. Yläpalkin tietoprosentti kertoo,
         kuinka moneen kysymykseen olet vastannut oikein — kaksintaistelut mukaan
         lukien. Rahat, pisteet ja sijainti näkyvät yläpalkissa; tavarat matkalaukussa.</p>
       <p><b>Matkalaukku.</b> Yläpalkin kukkaropilleriä napauttamalla aukeaa isoisän matkalaukku.
@@ -13392,22 +13372,6 @@ const MAAILMA = {
       'Isoisä laski matkansa hinnaksi kaksituhatta puntaa ja piti sitä ruhtinaallisena. Sama summa riittää nykyään yhteen lentolippuun ja kohtuulliseen aamiaiseen. Rahassa mitattuna maailma on kutistunut; kaikessa muussa se on kasvanut.',
       'Ensimmäisellä sivulla lukee: "Lähden selvittämään, onko maailma niin suuri kuin sanotaan." Viimeisellä sivulla lukee: "On." Väliin mahtuu kaksisataa sivua, joista aion tarkistaa jokaisen.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu,
-    // ei koskaan kaupungin nimeä.
-    starHints: {
-      kairo: 'Suurin joista tulee etelästä ja hajoaa Välimereen kolmiona. Sen suistossa on kaupunki, jonka basaarissa puhuttiin haudatuista kuninkaista. Laivani kääntyi itään ennen kuin ehdin.',
-      rio: 'Päiväntasaajan eteläpuolella, Atlantin länsirannalla, on lahti jota purjehtijat pitivät maailman kauneimpana. Kirjasin sen muistiin ja jatkoin pohjoiseen. Typerää.',
-      mumbai: 'Intian niemimaan länsirannikolla sataa neljä kuukautta yhteen menoon, ja siellä on satama, jonne monsuuni tuo laivat takaisin. Sinne minun olisi pitänyt jäädä odottamaan.',
-      peking: 'Kiinan pohjoisosassa, suuren muurin eteläpuolella, kerrottiin olevan kaupunki jonka keskellä on toinen kaupunki, jonne ei päästetä ketään. Katselin sitä kartalta enkä uskaltanut lähteä.',
-      sydney: 'Eteläisen mantereen kaakkoiskulmassa on luonnonsatama, jota merimiehet ylistivät kolmella mantereella. Purjehdin ohi pimeällä. Kadun sitä yhä.',
-      moskova: 'Kaukana Euroopan tasangon itälaidalla, joen mutkassa, kohoaa sipulikupolien kaupunki. Sinne olisi pitänyt mennä talvella, kun tiet ovat jäässä eivätkä mudassa.',
-      tokio: 'Itäisimmässä saariketjussa, siellä mistä aurinko meille tulee, on pääkaupunki jota kukaan klubilla ei ollut nähnyt omin silmin. Se jäi matkani kaukaisimmaksi puuttuvaksi kohdaksi.',
-      singapore: 'Malaijien niemimaan eteläkärjessä, kapean salmen partaalla, on satama jonka läpi kulkee puoli maailman rahtia. Ohitin sen yöllä enkä noussut kannelle katsomaan.',
-      kapkaupunki: 'Afrikan eteläkärjessä kaksi valtamerta lyö yhteen, ja siellä on kaupunki pöydänmuotoisen vuoren juurella. Näin vuoren kaukaa mereltä. Sen olisi pitänyt riittää houkutukseksi.',
-      losangeles: 'Pohjois-Amerikan länsirannikolla, vuorten kuivalla puolella, kerrottiin kasvavan pikkukaupunkia appelsiinitarhojen keskelle. Pidin kertomusta liioitteluna ja jatkoin matkaa.',
-      tanger: 'Afrikan luoteisimmassa kulmassa, siinä salmessa jossa manner on kivenheiton päässä Euroopasta, on satamakaupunki jossa puhutaan viittä kieltä samassa korttelissa. Näin sen kannelta enkä noussut maihin.',
-      ateena: 'Välimeren pohjoisrannalla seisoo kukkulalla marmoritemppeli, joka oli vanha jo roomalaisille. Sen kaupungissa en käynyt: satamaan tuli lastia ja laiva lähti ennen aikojaan.',
-    },
   },
 
   decor: {
@@ -81330,47 +81294,6 @@ const AFRICA = {
       { day: 84, text: 'Isoisä olisi jo kotona. Minä en ole. Tästä eteenpäin kirjoitan sivuja, joita hänellä ei ole.' },
       { day: 100, text: 'Isoisän päiväkirja loppuu kesken lauseen. Tästä eteenpäin kartta on minun.' },
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu,
-    // ei koskaan kaupungin nimeä.
-    starHints: {
-      karthago: 'Etsi satama, jonka mahti haastoi kerran Rooman — rauniot lepäävät nykyisen pääkaupungin kupeessa niemellä.',
-      nairobi: 'Ylängön viileä rautatiekaupunki, jonka laidalla kirahvit käyskentelevät kansallispuistossa pilvenpiirtäjien katseen alla.',
-      lagos: 'Guineanlahden jättiläinen, mantereen väkirikkaimpia kaupunkeja, joka lepää saarten ja siltojen varassa laguunin suulla.',
-      viktorianputoukset: 'Jylisevä savu nousee suuren joen reunalta kahden maan rajalla — vesisumu näkyy kilometrien päähän.',
-      tshadjarvi: 'Matala sisämaan allas neljän maan rajalla; sen vesi ei koskaan löydä tietä mereen, ja rannat elävät kalasta.',
-      marrakech: 'Punaisista savimuureista rakennettu kaupunki aavikon portilla: suurtorilla tarinankertojat aloittavat iltaisin, ja vuorten lumi näkyy basaarin katoilta.',
-      sthelena: 'Yksinäinen kalliosaari keskellä eteläistä valtamerta, jonne vietiin kerran vangittu keisari — sinne pääsee vain laivalla, eikä sieltä paeta.',
-      tripoli: 'Välimeren eteläisellä rannalla, siellä missä aavikko tulee melkein mereen asti, on satamakaupunki jonka läpi karavaanit purkavat lastinsa laivoihin.',
-      murzuk: 'Suoraan etelään Välimeren rannikolta, keskellä autiomaata, on keidaskaupunki joka oli karavaanireitin tärkein pysähdys. Sinne on rannikolta kuukausi kamelilla.',
-      alkufra: 'Kaukana koillisessa autiomaassa, kaukana kaikista reiteistä, on keidasryhmä jonne pääsee vain sen tietäen. Kukaan tuntemani eurooppalainen ei ollut käynyt siellä.',
-      sahara: 'Keskellä maailman suurinta hiekkamerta, kaukana kaikista rannikoista, on paikka johon karavaanit pysähtyivät veden vuoksi. Sitä ei löydä kartalta, vaan oppaalta.',
-      ahaggar: 'Läntisen autiomaan keskellä kohoaa vulkaaninen vuoristo, jonka huipuilla on yöllä kylmä. Tuaregit tunsivat sen polut; me emme.',
-      timbuktu: 'Aavikon eteläreunalla, suuren joen mutkassa, kerrottiin kaupungista jonka kirjastot hävettivät Oxfordia. En ehtinyt käydä. Käy sinä.',
-      gao: 'Saman suuren joen varrella, alempana itään päin aavikon reunaa, oli mahtavan valtakunnan pääkaupunki, jonka hallitsijan hautakumpu on savesta.',
-      dakar: 'Läntisimmässä kärjessä, siinä missä manner työntyy pisimmälle Atlanttiin, on satama josta on Amerikkaan lyhyempi matka kuin Lontooseen.',
-      sierraleone: 'Läntisellä rannikolla etelämpänä on vuorinen niemi ja sen suojassa satama, joka perustettiin vapautettujen ihmisten kotipaikaksi. Nimi tarkoittaa leijonavuoria.',
-      kappalmas: 'Siinä kohdassa, jossa läntinen rannikko kääntyy jyrkästi itään, on niemi jonka ohi jokainen etelään menevä laiva purjehtii. Palmuja on niin paljon että ne näkyvät mereltä.',
-      kumasi: 'Guineanlahden pohjoispuolella, sisämaassa sademetsän keskellä, oli kultarikkaan valtakunnan pääkaupunki. Sen kuninkaan istuin on kultaa eikä sitä saa laskea maahan.',
-      orjarannikko: 'Guineanlahden pohjukassa on rannikonpätkä, jolle eurooppalaiset antoivat nimen sen mukaan mitä sieltä veivät. Se nimi on häpeällinen ja se on meidän antamamme.',
-      kano: 'Aavikon ja metsän välissä, sisämaassa itään Nigerin mutkasta, on savimuurien ympäröimä kauppakaupunki. Sen indigovärjäämöt ovat toimineet satoja vuosia.',
-      kamerun: 'Guineanlahden pohjukassa, aivan rannikolla, kohoaa tulivuori suoraan merestä. Se on koko läntisen rannikon korkein kohta ja sataa siellä enemmän kuin missään.',
-      kongo: 'Keskellä mannerta, päiväntasaajalla, laskee mereen joki jonka virtaama on maailman toiseksi suurin. Sen suulle pääsee laivalla; ylemmäs ei koskilta.',
-      angola: 'Lounaisrannikolla, päiväntasaajan eteläpuolella, on portugalilaisten satama jonka takana alkaa ylätasanko. Sieltä vietiin ihmisiä Brasiliaan kolmesataa vuotta.',
-      namib: 'Lounaassa, siinä missä autiomaa tulee kylmään merivirtaan asti, on rannikko jonka hiekasta löytyy laivanhylkyjä. Sumu tulee mereltä joka aamu eikä sada koskaan.',
-      kapkaupunki: 'Aivan mantereen eteläkärjessä, pöydänmuotoisen vuoren juurella, on satama jossa kaksi valtamerta kohtaa. Kaikki Intiaan menevät laivat täydentävät siellä vetensä.',
-      kimberley: 'Eteläisellä ylätasangolla, kaukana rannikoilta sisämaassa, kaivettiin maahan kuoppa niin suuri että se näkyy taivaalle. Sieltä nostettiin timantteja.',
-      mosambik: 'Kaakkoisrannikolla, suuren saaren vastapäätä salmen toisella puolen, on portugalilaisten vanha satamakaupunki omalla pikkusaarellaan.',
-      madagaskar: 'Kaakossa, salmen takana omalla suurella saarellaan, on maa jossa kasvit ja eläimet eivät muistuta mantereen omia lainkaan. Ne kehittyivät erillään miljoonia vuosia.',
-      sansibar: 'Itärannikon edustalla, pienellä saarella päiväntasaajan tuntumassa, on satama joka tuoksuu neilikalle kilometrien päähän. Sieltä lähtivät karavaanit sisämaahan.',
-      kilimandzaro: 'Itä-Afrikassa, aivan päiväntasaajan tuntumassa, kohoaa yksinäinen vuori jonka huipulla on lunta ympäri vuoden. Lontoossa minua ei uskottu.',
-      viktoria: 'Keskellä itäistä ylätasankoa, päiväntasaajan molemmin puolin, on järvi joka on kuin sisämeri: toista rantaa ei näy. Sen pohjoisrannalta lähtee Niili.',
-      tanganjika: 'Idässä, kahden hautavajoaman välissä, on kapea ja hyvin pitkä järvi joka on maailman toiseksi syvin. Rannalta rannalle kestää laivalla koko päivän.',
-      bahrelghazal: 'Ylä-Niilin varrella, keskellä mannerta pohjoisessa, on suunnaton suoalue jossa joki hajoaa ruohikkoon. Siellä katosi useampi retkikunta kuin yksikään uskalsi laskea.',
-      darfur: 'Niilin länsipuolella, autiomaan ja savannin rajalla, on sulttaanikunnan vuoristoinen ylänkö. Sinne ei ollut asiaa ilman sulttaanin lupaa.',
-      suakin: 'Punaisenmeren länsirannalla on korallista rakennettu satamakaupunki omalla saarellaan. Sen valkoiset talot on tehty merestä nostetusta kivestä.',
-      addisabeba: 'Koillisen ylängöllä, kahden ja puolen kilometrin korkeudessa, perustettiin keisarikunnalle uusi pääkaupunki kuumien lähteiden viereen. Siellä on viileää päiväntasaajan lähelläkin.',
-      rashafun: 'Mantereen itäisimmässä kärjessä, siinä missä rannikko kääntyy Intian valtamerelle, on niemi jonka ohi purjehtivat jo antiikin kauppiaat suitsuketta hakemaan.',
-    },
   },
 
   decor: {
@@ -89001,47 +88924,6 @@ const EU_EDGES = [
   { a: 'islanti', b: 'tromssa', steps: 5, type: 'sea', via: [[290, 32], [450, 38]] },
 ];
 
-/*
- * Isoisän aarrevihjeet neljänä ilmansuuntana (omistajan linjaus
- * 7.8.2026: "Niitä vihjeitä riittää vain pari ja niihin voisi
- * generoida äänen myös"). Jokainen aarre-ehdokaskaupunki kuuluu
- * yhteen alueeseen; teksti kertoo suunnan, ei koskaan kaupunkia.
- * Luennat: assets/audio/puhe-europe-vihje-<alue>.mp3. Luentateksti
- * on sama kuin vihje, kuiskaustagein — generointi samalla reseptillä
- * kuin tools/generoi-luennat.mjs (stability 0.5).
- */
-const VIHJEALUEET = {
-  pohjoinen: ['islanti', 'tromssa', 'lappi', 'oslo', 'tukholma',
-    'kobenhavn', 'helsinki', 'pietari', 'tallinna', 'riika', 'vilna'],
-  lansi: ['dublin', 'edinburgh', 'amsterdam', 'pariisi', 'lissabon',
-    'madrid', 'barcelona', 'granada', 'marseille'],
-  etela: ['alpit', 'venetsia', 'rooma', 'sisilia', 'ateena', 'kreeta',
-    'dubrovnik', 'sarajevo', 'sofia'],
-  ita: ['berliini', 'praha', 'wien', 'budapest', 'varsova', 'krakova',
-    'bukarest', 'kiova', 'odessa', 'moskova'],
-};
-
-const VIHJETEKSTIT = {
-  pohjoinen: '"Luettelon rivi vie pohjoiseen — sinne, missä kesäyö ei '
-    + 'pimene ja meri jäätyy talvella. En ehtinyt." Nuoli osoittaa '
-    + 'kartan yläreunaan.',
-  lansi: '"Lännessä, sillä puolen mannerta missä valtameri lyö '
-    + 'rantaan, luettelon rivi odottaa yhä." Sivun reunassa on pieni '
-    + 'ankkuri.',
-  etela: '"Etelässä, lämpimän meren äärellä, missä rauniot ovat '
-    + 'vanhimpia, luettelo lupaa aarteen. Laivani kääntyi liian '
-    + 'aikaisin."',
-  ita: '"Idässä, suurten jokien ja tasankojen maassa, on rivi vailla '
-    + 'rastia. Sinne aioin palata." Hän ei palannut — minä palaan.',
-};
-
-const EUROPE_VIHJEET = {
-  tekstit: Object.fromEntries(Object.entries(VIHJEALUEET)
-    .flatMap(([alue, kaupungit]) => kaupungit.map((id) => [id, VIHJETEKSTIT[alue]]))),
-  alueet: Object.fromEntries(Object.entries(VIHJEALUEET)
-    .flatMap(([alue, kaupungit]) => kaupungit.map((id) => [id, alue]))),
-};
-
 // Lentoreitit kulkevat suoraan kaupungista toiseen yhdellä vuorolla.
 const EU_AIR_ROUTES = [
   { a: 'lontoo', b: 'madrid' },
@@ -89160,17 +89042,6 @@ const EUROPE = {
       '"Junat myöhästyvät kaikkialla paitsi Sveitsissä", merkitsi isoisä huolellisesti. Istun asemalla ja katson taulua, joka sanoo saman asian sataviisikymmentä vuotta myöhemmin. Jotkut havainnot eivät vanhene lainkaan.',
       'Isoisä luetteli maanosan suuret joet ja sai ne oikein: Volga, Tonava, Rein, Veiksel. Rajat hän sai väärin lähes kaikki. Vedet pysyivät, rajat eivät — tämä on matkani lyhyin oppitunti.',
     ],
-    /*
-     * Isoisän vihjeet laudan pääaarteesta — omistajan linjaus
-     * 7.8.2026: vihjeitä on vain neljä, yksi per ilmansuunta, ne
-     * nousevat esiin KAUPUNKIEN VÄLILLÄ (game.starHint näyttää ne
-     * vain tien päällä) eivätkä sotke kaupunkien merkintöjä. Kullekin
-     * on luenta: assets/audio/puhe-europe-vihje-<alue>.mp3
-     * (VIHJELUENNAT js/ui.js:ssä, starHintAlue valitsee tiedoston).
-     * Vihje viittaa suuntaan, ei koskaan kaupunkiin.
-     */
-    starHints: EUROPE_VIHJEET.tekstit,
-    starHintAlue: EUROPE_VIHJEET.alueet,
   },
 
   puzzles: EUROPE_PUZZLES,
@@ -89489,37 +89360,6 @@ const MIDDLE_EAST = {
       '"Öljyllä ei ole täällä käyttöä", merkitsi isoisä Persianlahden rannalla. Yhden lauseen kohdalla hän oli väärässä perusteellisemmin kuin koko muussa päiväkirjassaan yhteensä.',
       'Isoisä kirjasi tarkasti kaupunkien iän ja sai luvut oikein: Damaskos, Aleppo, Jeriko. Sivun alalaidassa hän lisää, että meidän Lontoomme on tähän verrattuna uudisrakennus. Se on hänen rehellisin lauseensa.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu, ei koskaan
-    // kaupungin nimeä.
-    starHints: {
-      izmir: 'Egeanmeren rannalla on satama, jota kutsuttiin antiikissa toisella nimellä. Sen lähellä makaa marmorikaupunki, jonka satama liettyi umpeen.',
-      ankara: 'Sisämaan ylängöllä noin kilometrin korkeudessa on kaupunki, joka tunnetaan vuohistaan ja niiden pehmeästä villasta.',
-      kapadokia: 'Keski-Anatolian tuhkakivialueella on kartiomaisia kivitorneja ja kokonaisia maanalaisia kaupunkeja, joiden käytävät suljettiin vierivillä kivillä.',
-      nikosia: 'Välimeren itäisen saaren keskellä sisämaassa on pääkaupunki, jossa kuulee kahta kieltä samalla torilla.',
-      halab: 'Pohjoisessa kauppareittien risteyksessä on kaupunki, jonka katetut basaarikujat jatkuvat kilometrikaupalla ja jossa keitetään saippuaa oliiviöljystä.',
-      damaskos: 'Vuorilta tulevan joen kastelemalla keitaalla on kaupunki, joka on ollut asuttu yhtäjaksoisesti pidempään kuin melkein mikään muu.',
-      jerusalem: 'Vuoriston harjanteella muurien sisällä on kaupunki, jonka samoja kortteleita kolme uskontoa pitää pyhinä.',
-      petra: 'Etelän autiomaassa kapean rotkon päässä on kallioon veistetty kaupunki, joka eli kalliokouruihin kerätystä sadevedestä.',
-      siinai: 'Kahden lahden väliin jäävällä niemimaalla on graniittivuoria ja niiden keskellä luostari, joka on toiminut yli tuhat vuotta.',
-      luxor: 'Suuren joen varrella sisämaassa on temppelikaupunki, jonka länsirannan kallioihin on hakattu kuninkaiden hautoja.',
-      medina: 'Punaisenmeren takana sisämaan keitaalla on kaupunki, joka elää taateleista ja pyhiinvaeltajista. Se on islamin toiseksi pyhin paikka.',
-      mekka: 'Länsirannikon vuorten laaksossa on kaupunki, jonne miljoona ihmistä saapuu vuosittain samaan aikaan. Rukoiltaessa käännytään kaikkialla maailmassa sitä kohti.',
-      riad: 'Keskellä Arabian niemimaata aavikon ympäröimänä on savitiilikaupunki, jonka laidalla käydään kamelikauppaa.',
-      rubalkhali: 'Niemimaan etelävyöhykkeellä on maailman suurin yhtenäinen hiekka-aavikko, jonka dyynit kohoavat satoihin metreihin.',
-      sana: 'Vuorten keskellä yli kahden kilometrin korkeudessa on kaupunki, jonka savitiilitalot ovat kahdeksankerroksisia ja ikkunat kipsikoristeisia.',
-      aden: 'Niemimaan eteläkärjessä sammuneen tulivuoren kraatterissa on satama, jossa höyrylaivat täydensivät hiilivarastonsa.',
-      salalah: 'Kaakkoisrannikon nurkassa kesämonsuuni tekee maisemasta vihreän. Sieltä on viety suitsuketta faaraoiden ajoista asti.',
-      masqat: 'Kaakkoisrannikolla jyrkkien vuorten ja meren välissä on satama, jonka kallioilla seisoo vanhoja linnoituksia.',
-      dubai: 'Persianlahden etelärannalla on helmenkalastajien kylä lahdelman varrella. Sieltä purjehditaan talvisin Intiaan.',
-      doha: 'Persianlahteen työntyvän niemimaan itärannalla on helmenkalastajien kaupunki, jossa juomavesi on arvokkaampaa kuin helmet.',
-      kuwait: 'Persianlahden pohjoisimmassa pohjukassa on luonnonsatama, josta purjelaivat lähtevät Intiaan ja Itä-Afrikkaan.',
-      bagdad: 'Kaksoisvirranmaan itäisen virran rannalla on kaupunki, joka oli tuhat vuotta sitten maailman oppinein.',
-      mosul: 'Saman virran varrella pohjoisempana on kaupunki, jonka vastarannalla ovat muinaisen suurkaupungin kummut.',
-      tabriz: 'Luoteisen ylängön laaksossa on kaupunki, jonka katettuun basaariin eksyy ja jossa solmitaan mattoja vientiin.',
-      teheran: 'Lumihuippuisen vuoren juurella ylätasangolla on kaupunki, johon vesi tuodaan vuorilta maanalaisia kanavia pitkin.',
-      isfahan: 'Keskellä maata joen varrella on kaupunki, jonka aukiota ja sinisiä kaakelikupoleita sananlasku kutsuu puoleksi maailmaksi.',
-      persepolis: 'Lounaisen ylätasangon reunalla makaa palatsin rauniot, joiden reliefeissä kansat tuovat lahjoja kuninkaalle.',
-    },
   },
 
   decor: {
@@ -92391,45 +92231,6 @@ const ASIA = {
       '"Kiina valmistaa posliinia ja silkkiä, Britannia koneita", tiivisti isoisä työnjaon. Tarkistin asian: koneet tehdään täällä ja Lontoossa niitä myydään. Työnjako säilyi, suunta vaihtui.',
       'Isoisä laski matka-aikoja karavaanipäivissä ja monsuunituulissa. Molemmat ovat yhä olemassa: tuuli kääntyy kesäkuussa ja aavikon poikki menee yhä tie. Vain minun kärsivällisyyteni on kadonnut.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu, ei koskaan
-    // kaupungin nimeä.
-    starHints: {
-      jekaterinburg: 'Vuorijonon itäpuolella, siellä missä Euroopan ja Aasian raja on merkitty kiveen, on kaupunki jossa jalostetaan malmia ja hiotaan korukiviä.',
-      astana: 'Keskellä puuttomia aroja, kaukana kaikista meristä, on paikka jossa talvituuli käy läpi paksuimmasta takista. Sinne kaavaillaan uutta hallintokaupunkia.',
-      novosibirsk: 'Suuren pohjoiseen virtaavan joen ylityspaikassa keskellä Siperiaa rakennetaan rautatiesiltaa. Sen työmaan ympärille kasvaa kaupunki nopeammin kuin uskoin.',
-      irkutsk: 'Maailman syvimmän järven länsipuolella on kauppakaupunki, jota kutsutaan Siperian Pariisiksi. Sieltä lähtee teetä länteen karavaaneina.',
-      jakutsk: 'Kaukana pohjoisessa, ikiroudan päälle rakennetussa kaupungissa, elohopea jäätyy lämpömittarissa. Sinne pääsee kesällä jokilaivalla ja talvella jäätietä.',
-      magadan: 'Idän kaukaisimmalla rannikolla, kylmän meren pohjukassa, on satama josta ei johda rautatietä minnekään. Sisämaassa kerrotaan olevan kultaa.',
-      kamtsatka: 'Kaukoidän niemimaalla savuaa parikymmentä tulivuorta, ja joet ovat täynnä lohta. Sinne ei johda maantietä, joten laiva on ainoa keino.',
-      sahalin: 'Kaukoidässä, kapean salmen takana pitkulaisella saarella, asuu kalastajakansoja ja sumu on lähes jatkuva. Kaksi valtakuntaa kiistelee sen omistuksesta.',
-      vladivostok: 'Tyynenmeren rannalla, valtakunnan itäisimmässä kolkassa, on uusi sotasatama jonka nimi kertoo idän hallitsemisesta.',
-      ulanbator: 'Arojen keskellä, jokilaaksossa kilometrin korkeudella, on luostarikaupunki jonka ympärillä paimenten asumukset siirtyvät kausien mukaan.',
-      peking: 'Muurin eteläpuolella on suorakulmainen keisarikaupunki, jonka sisimpään palatsiin ei päästetä ketään. Sen kujat ovat kapeampia kuin vaunu.',
-      soul: 'Vuorten ympäröimässä laaksossa joen varrella on kuningaskunnan pääkaupunki, joka on suljettu ulkomaalaisilta. Siellä on oma aakkosto, jonka oppii päivässä.',
-      xian: 'Sisämaassa, siellä missä karavaanireitti päättyy muurien sisälle, on vanha keisarikaupunki. Sen kaupunginmuurin päällä voi ajaa vaunuilla.',
-      shanghai: 'Suuren joen suistossa itärannikolla on satama, jossa džonkit ja eurooppalaiset laivat purjehtivat sekaisin. Kauppa käy siellä yötä päivää.',
-      taipei: 'Kaakkoisen saaren pohjoisosassa, teeplantaasien ja kuumien lähteiden keskellä, on kaupunki jonka saari on kartoissa nimeltään kaunis.',
-      hongkong: 'Eteläisellä rannikolla on jyrkkä saari ja sen suojassa erinomainen satama, jonka Britannia otti sopimuksella jota en puolusta.',
-      manila: 'Kaakkoisen saariston suurimmalla saarella on espanjalaisten muurikaupunki lahden rannalla. Sinne saapuvat gallionit Amerikan puolelta.',
-      hanoi: 'Kaakkoisen niemimaan pohjoisosassa, jokien ja järvien keskellä, on kaupunki jossa tavarat kannetaan kantosauvoilla. Ranskalaiset ovat sinne juuri saapuneet.',
-      bangkok: 'Kaakkoisen niemimaan keskellä, kanaalien halkomassa kuningaskunnassa, on kaupunki jossa kauppa käydään veneistä. Se ei ole kenenkään siirtomaa.',
-      yangon: 'Lännempänä samalla niemimaalla, laajan suiston jokisatamassa, kohoaa kullattu pagodi joka näkyy joelle asti.',
-      singapore: 'Kapean salmen suussa on saari, jossa laivat ottavat hiiltä ja jossa kuulee neljää kieltä yhden korttelin matkalla.',
-      sumatra: 'Päiväntasaajan ylittävällä suurella saarella on vuorijono, tulivuorijärvi ja sademetsä. Rinteillä kasvatetaan kahvia vientiin.',
-      borneo: 'Päiväntasaajalla, saarella jonka sisämaahan pääsee vain jokea pitkin, elää punaturkkisia apinoita puiden latvoissa.',
-      jakarta: 'Eteläisellä saarella, hollantilaisten kanaalikaupungissa, on kuuma kuin uunissa. He ovat rakentaneet sinne Amsterdamin kopion.',
-      lhasa: 'Maailman korkeimmalla ylätasangolla, kalliolle rakennetun palatsin juurella, on kaupunki jonne ulkomaalainen ei saa lupaa.',
-      kathmandu: 'Korkeiden vuorten eteläpuolella on temppeleiden täyttämä laakso. Pohjoisessa kohoavat huiput, joille kukaan ei ole noussut.',
-      delhi: 'Suuren niemimaan pohjoisosassa, tasangolla jokien välissä, on kaupunki jonka lähellä seisoo valkoinen marmorihauta.',
-      kolkata: 'Suuren suiston jokisatamassa niemimaan itäpuolella on Britannian Intian pääkaupunki. Rikkaus tulee sieltä juutista ja teestä.',
-      mumbai: 'Niemimaan länsirannikolla, seitsemästä saaresta yhdeksi täytetyllä maalla, on puuvillakaupunki jonne monsuuni saapuu kesäkuussa.',
-      chennai: 'Niemimaan itärannikolla, pitkän hiekkarannan äärellä, on kaupunki jossa puhutaan kieltä joka on vanhempi kuin latina.',
-      colombo: 'Niemimaan eteläkärjen takana omalla saarellaan on satama, josta viedään teetä ja kanelia. Ylängöillä on plantaaseja.',
-      karachi: 'Lännempänä, suuren joen suulla, on satama josta lähtee puuvilla ja vehnä. Joen laaksossa on hyvin vanhoja raunioita.',
-      kabul: 'Vuorisolien takana, hedelmätarhojen keskellä kahden kilometrin korkeudella, on kaupunki joka muistaa jokaisen armeijan nimeltä.',
-      samarkand: 'Keski-Aasiassa, aavikon ja vuorten välissä, on sinisten kupolien kaupunki. Sen korkeakoulut opettivat tähtitiedettä ennen Oxfordia.',
-      kashgar: 'Aavikon läntisellä laidalla kohtaavat karavaanireitin kaksi haaraa. Sinne on Bagdadista lyhyempi matka kuin keisarin pääkaupungista.',
-    },
   },
 
   decor: {
@@ -94759,40 +94560,6 @@ const OCEANIA = {
       '"Näillä saarilla aika kuluu hitaasti", merkitsi isoisä hyväntahtoisesti. Kysyin asiaa satamassa, ja minulle näytettiin merenpinnan mittaustaulukkoa ja kysyttiin kummalla meistä on kiire. Hitaus taisi olla hänen omansa.',
       'Isoisä päätteli, ettei saarten välillä voi olla kauppaa, koska etäisyydet ovat liian suuria. Kauppaa käytiin tuhat vuotta ennen häntä: obsidiaania, simpukkaa ja sukulaisuussuhteita kulki saarelta saarelle kanooteilla.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu, ei koskaan
-    // kaupungin nimeä.
-    starHints: {
-      melbourne: 'Kaakkoisrannikolla, kultaryntäyksen rikastuttamassa siirtokunnassa, on kaupunki jossa on leveät kadut ja kiskoilla kulkevia vaunuja. Sää vaihtuu siellä neljä kertaa päivässä.',
-      brisbane: 'Itärannikolla mutkittelevan joen varrella on kaupunki, jossa talvi on lämpimämpi kuin Englannin kesä. Pohjoisessa alkavat pitkät hiekkarannat.',
-      cairns: 'Koillisrannikolla, siellä missä sademetsä tulee suoraan riuttaan asti, on satama josta lähdetään korallien luo.',
-      darwin: 'Mantereen pohjoisrannikolla on satama, josta on Jaavaan lyhyempi matka kuin etelän suurkaupunkeihin. Vuodenajat ovat siellä sadekausi ja kuiva kausi.',
-      adelaide: 'Etelärannikolla on ruutuun kaavoitettu kaupunki, jota kiertää yhtenäinen puistokehä. Sen takana laaksossa kasvatetaan viiniä.',
-      alicesprings: 'Lähes tarkalleen mantereen keskellä, punaisen maan ja matalien vuorijonojen välissä, on lennätinasema jonka kautta viestit kulkevat etelästä pohjoiseen.',
-      uluru: 'Keskellä punaista autiomaata kohoaa tasangolta yksinäinen hiekkakivikallio, jonka väri vaihtuu auringon mukaan. Alueen asukkaille paikka on pyhä.',
-      broome: 'Luoteisrannikolla on helmenkalastajien satama, jossa vuorovesi vaihtelee yli yhdeksän metriä. Sukeltajat ovat tulleet sinne pääosin Aasiasta.',
-      kalgoorlie: 'Lännen autiomaassa on kultakaupunki, johon vesi tuodaan satojen kilometrien putkessa rannikolta asti.',
-      townsville: 'Koillisrannikolla riutan edessä on satama, jonka lähisaarella elää koaloita. Kesällä rannoilla varotaan läpinäkyviä meduusoja.',
-      hobart: 'Kaakon saarella myrskyisän salmen takana on satama, joka aloitti rangaistussiirtolana. Sinne päättyy purjehduskilpailu joulun jälkeen.',
-      nullarbor: 'Etelärannikon takana on tasanko, jolla ei kasva yhtään puuta ja jonka kalkkikiven alla on luolia. Sen halki kulkee suora rautatie.',
-      birdsville: 'Sisämaan autiomaan laidalla on kylä, jossa on hotelli, kaivo ja kerran vuodessa hevoskilpailut.',
-      exmouth: 'Länsirannikon niemellä on riutta niin lähellä rantaa, että sinne kahlaa. Keväällä sinne saapuvat maailman suurimmat kalat.',
-      mountisa: 'Sisämaassa satojen kilometrien päässä rannikosta on kaivoskaupunki, jossa louhitaan kuparia, lyijyä ja sinkkiä.',
-      cooberpedy: 'Etelän autiomaassa on opaalinkaivajien kaupunki, jossa osa asukkaista asuu maan alle kaivetuissa huoneissa.',
-      geraldton: 'Länsirannikolla on vehnäsatama, jonka edustan saarilla makaa hollantilaisen laivan hylky. Iltapäivätuuli puhaltaa siellä kellon tarkkuudella.',
-      portmoresby: 'Pohjoisen suuren saaren eteläisellä rannikolla on hallintokaupunki, jonka takamaiden laaksoissa puhutaan satoja eri kieltä.',
-      sepik: 'Saman suuren saaren pohjoisosassa mutkittelee joki, jonka kyliin kuljetaan veneellä. Sen varrella veistetään naamioita ja korkeita seremoniataloja.',
-      honiara: 'Koillisen saariryhmän suurimmalla saarella on satama, ja kauppaa käydään osin simpukkanauhoilla. Saaria on satoja.',
-      portvila: 'Tulivuorisaarten ryhmässä lounaisella Tyynellämerellä on satamakaupunki, jonka naapurisaarella miehet hyppäävät tornista liaanin varassa.',
-      noumea: 'Riutan ympäröimällä saarella lounaisella Tyynellämerellä on ranskalainen hallintokaupunki. Saaren oma kansa on ollut siellä ensin.',
-      norfolk: 'Pienellä jyrkkärantaisella saarella mantereen ja eteläisten saarten välissä oli ankara rangaistussiirtola. Nyt siellä asuu kapinallisten jälkeläisiä.',
-      suva: 'Itäisen saarivaltion suurimmalla saarella on satama, jossa vieraalle tarjotaan juuresta valmistettua juomaa tarkassa järjestyksessä.',
-      auckland: 'Kahden sataman välisellä kannaksella, sammuneiden tulivuorten päällä, on kaupunki jossa on enemmän veneitä kuin vaunuja.',
-      wellington: 'Kahden saaren välisen salmen rannalla on pääkaupunki, jossa tuuli ei lakkaa. Hallinto siirrettiin sinne keskemmälle maata.',
-      christchurch: 'Eteläisen saaren tasangolla on englantilaiseen malliin rakennettu kaupunki puutarhoineen. Sen takana kohoavat lumihuippuiset vuoret.',
-      milfordsound: 'Eteläisen saaren lounaisnurkassa on jäätikön kaivama vuono, jonka seinämiltä putoaa sateen jälkeen satoja putouksia.',
-      dili: 'Kahden vallan kesken jaetun saaren pohjoisrannikolla on satama, josta viedään santelipuuta.',
-      bali: 'Eteläisellä saarella temppeleitä on enemmän kuin kyliä, ja riisipellot laskeutuvat rinteillä portaina.',
-    },
   },
 
   decor: {
@@ -97442,45 +97209,6 @@ const NORTHAMERICA = {
       '"Kulta loppuu ja kaupungit katoavat", ennusti isoisä kaivoskaupungeista. Osa katosi ja osa on nyt miljoonakaupunkeja. Hän oli oikeassa puolet ajasta, mikä on ennustajalle kunniallinen tulos.',
       'Isoisän kartassa raja kulkee suorana viivana länteen. Suora viiva on yhä siellä, ja se leikkaa yhä läpi jokia, vuoria ja kansoja, jotka olivat paikalla ennen viivan piirtäjää.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu, ei koskaan
-    // kaupungin nimeä.
-    starHints: {
-      nome: 'Beringinmeren rannalla on kaupunki, jonne kulta houkutteli tuhansia suoraan rannan hiekasta. Sinne ei johda maantietä, ja koiravaljakot saapuvat maaliskuussa.',
-      anchorage: 'Luoteisen niemimaan vuonon pohjukassa on osavaltion suurin kaupunki, jonka lentoasemalla rahtikoneet tankkaavat matkalla Aasiaan.',
-      whitehorse: 'Luoteisen sisämaan jokivarressa on kaupunki, jonka ohi kullankaivajat laskivat lautoillaan kohti kultakenttiä.',
-      yellowknife: 'Pohjoisen suuren järven rannalla on kaupunki, jonka taivas palaa vihreänä lähes joka selkeä yö ja jonka kaivoksista nousee timantteja.',
-      vancouver: 'Läntisellä rannikolla vuorten juurella on jäätön satama, jonka takana kasvaa lauhkeaa sademetsää.',
-      yellowstone: 'Läntisellä ylängöllä on alue, jossa kuuma vesi suihkuaa maasta säännöllisin väliajoin. Se julistettiin maailman ensimmäiseksi kansallispuistoksi.',
-      mountrushmore: 'Preeriakukkuloiden graniittiin on veistetty neljän presidentin kasvot. Lähistöllä veistetään lakota-päällikön muistomerkkiä, ja alue on lakotoille pyhä.',
-      winnipeg: 'Preerialla kahden joen yhtymäkohdassa on kaupunki, jossa talvipakkanen painuu alle kolmenkymmenen asteen ja jonka seudulla syntyi métis-kansa.',
-      churchill: 'Suuren pohjoisen lahden rannalla on kauppa-asema, jonka ohi jääkarhut kävelevät syksyisin odottamaan jään tuloa.',
-      iqaluit: 'Koillisen saariston rannalla on inuiittien hallintokaupunki, jonne tavarat tuodaan laivalla vain lyhyen kesän aikana.',
-      nuuk: 'Jättimäisen jäätikkösaaren lounaisrannikolla vuonon suojassa on yksi maailman pohjoisimmista pääkaupungeista.',
-      labrador: 'Koillisrannikolla on karu niemimaa, jossa etelän havumetsä vaihtuu pohjoisen tundraksi ja jonka vesivoimalaitos on maanosan suurimpia.',
-      stjohns: 'Itäisimmällä saarella, sumuisen rannikon kalliorinteillä, on satama jonka puutalot on maalattu kirkkain värein.',
-      halifax: 'Atlantin rannikolla on syvä satama, joka ei jäädy talvellakaan. Vuonna 1917 siellä sattui laivojen törmäyksestä alkanut suuronnettomuus.',
-      montreal: 'Suuren joen saarella kukkulan juurella on kaupunki, jossa puhutaan ranskaa ja jonka keskustan alla kulkee kilometrien käytäväverkosto.',
-      toronto: 'Suuren järven pohjoisrannalla on maan väkirikkain kaupunki, jonka torni oli pitkään maailman korkein vapaasti seisova rakennelma.',
-      chicago: 'Toisen suuren järven rannalla on kaupunki, joka paloi 1871 ja rakensi sen jälkeen maailman ensimmäiset pilvenpiirtäjät.',
-      appalakit: 'Idässä kulkee vanha ja kulunut vuorijono, jonka laaksoissa on kivihiiltä ja jonka harjannetta pitkin kulkee pitkä vaellusreitti.',
-      bermuda: 'Kaukana Atlantilla on saariryhmä, jonka valkoiset katot keräävät sadeveden ja jonka ympärillä on maailman pohjoisimmat koralliriutat.',
-      denver: 'Kalliovuorten juurella tasangon reunalla on kaupunki tasan mailin korkeudessa merenpinnasta.',
-      santafe: 'Lounaisen ylängön korkealla tasangolla on savitiilistä rakennettu vanha hallintokaupunki, jonne päättyi vaunureitti preerian halki.',
-      grandcanyon: 'Lounaisen ylängön halki virtaava joki on uurtanut yli kilometrin syvyisen rotkon. Sen pohjalle laskeudutaan jalan tai muulilla.',
-      losangeles: 'Tyynenmeren rannalla vuorten sulkemassa altaassa on kaupunki, joka on levinnyt satojen kilometrien matkalle ja tuo vetensä kaukaa.',
-      hawaii: 'Keskellä Tyyntämerta on tulivuorista syntynyt saariryhmä, jonka korkein vuori on merenpohjasta mitattuna maailman korkein.',
-      houston: 'Lahden rannan suurkaupungista johdettiin kuulentoja, ja astronauttien ensimmäinen sana Kuun pinnalta oli sen nimi.',
-      neworleans: 'Suuren joen mutkassa lähellä lahtea on kaupunki, jonka kaduilla syntyi jazz ja jonka karnevaali päättyy paastonajan alkuun.',
-      miami: 'Kaakkoisen niemimaan kärjessä on kaupunki, jonka länsipuolella leviää ruohoinen suo ja jonka alla on huokoista kalkkikiveä.',
-      havanna: 'Karibian suurimman saaren pääkaupungissa ajetaan yhä 1950-luvun autoilla, ja iltaisin koko kaupunki istuu rantamuurilla.',
-      sanjuan: 'Karibian saarella, jonka asukkaat ovat Yhdysvaltain kansalaisia, on satama jota vartioi kuusikerroksinen 1500-luvun linnoitus.',
-      monterrey: 'Etelänaapurin pohjoisosassa vuorten välissä on teollisuuskaupunki, jonka tunnus on satulan muotoinen vuori.',
-      mexico: 'Vuorten ympäröimässä laaksossa kahden kilometrin korkeudessa on kaupunki, joka rakennettiin kuivatun järven päälle atsteekkien pääkaupungin paikalle.',
-      merida: 'Kaakkoisella niemimaalla, jossa ei ole jokia vaan kalkkikiven kuoppia täynnä pohjavettä, on mayakaupunkien ympäröimä hallintokaupunki.',
-      guatemala: 'Keski-Amerikan vuoristossa tulivuorten keskellä on maan suurin kaupunki, jonka takamailla kasvatetaan kahvia ja kudotaan kylän omia kuvioita.',
-      managua: 'Keski-Amerikan järven rannalla tulivuorten katveessa on matalaksi rakennettu pääkaupunki. Järvessä elää haita.',
-      panama: 'Kahden mantereen välisellä kapealla kannaksella on kaupunki kanavan päässä. Sulut nostavat laivat tekojärven tasolle ja laskevat toiselle merelle.',
-    },
   },
 
   decor: {
@@ -100146,45 +99874,6 @@ const SOUTHAMERICA = {
       '"Kahvi, kumi ja hopea — siinä koko manner", tiivisti isoisä talouden. Lisäisin listalle litiumin, soijan, lentokoneet ja sen, että tuotteiden hinnasta päätetään nykyään useammin täällä kuin Lontoossa.',
       'Isoisä merkitsi muistiin, että putoukset ovat vaikuttavat mutta Niagara vaikuttavampi. Seisoin molempien äärellä ja olen eri mieltä. Tämä on ainoa kohta, jossa uskallan sanoa hänen erehtyneen mittasuhteissa.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu, ei koskaan
-    // kaupungin nimeä.
-    starHints: {
-      caracas: 'Karibian rannikolla vuorten takana laaksossa on pääkaupunki, jossa muistetaan tarkkaan mantereen vapauttajan nimi. Maalla on suuret öljyvarat.',
-      bogota: 'Andien ylätasangolla kahden kilometrin korkeudessa on pääkaupunki, jossa on viileää ympäri vuoden. Lähistön järvestä on nostettu kultaesineitä.',
-      quito: 'Päiväntasaajan kohdalla vuorten välissä on pääkaupunki, jossa päivä ja yö ovat yhtä pitkiä ympäri vuoden. Lumihuippuinen tulivuori näkyy kaupunkiin.',
-      galapagos: 'Tuhannen kilometrin päässä mantereesta päiväntasaajalla on saariryhmä, jonka eläimet eivät pakene ihmistä. Siellä elää pingviinejä keskellä lämpöä.',
-      boavista: 'Pohjoisessa sademetsän keskellä avautuu savanni, jonka takana kohoaa jyrkkäseinäinen pöytävuori kolmen maan rajalle.',
-      cayenne: 'Koillisrannikolla on Euroopan unioniin kuuluva alue, jossa maksetaan eurolla ja josta laukaistaan raketteja päiväntasaajan lähellä.',
-      macapa: 'Suuren joen suistossa päiväntasaajan kohdalla on kaupunki, jonne ei johda maantietä. Sen stadionin keskiviiva jakaa maapallon kahtia.',
-      manaus: 'Tuhannen kilometrin päässä merestä sademetsän keskellä on kaupunki, jossa on oopperatalo. Kaksi erilaista jokivettä virtaa siellä rinnakkain sekoittumatta.',
-      santarem: 'Kahden joen yhtymässä sademetsän keskellä on satama, jonka rannat ovat valkoista hiekkaa ja vesi kirkasta.',
-      saoluis: 'Koillisrannikon saarella on kaupunki, jonka talot on päällystetty kaakeleilla ja jossa tanssitaan kesäkuussa tarinaa härästä.',
-      joaopessoa: 'Koillisrannikolla on kaupunki lähellä koko mantereen itäisintä kohtaa. Sieltä on Afrikkaan lyhyempi matka kuin maan pääkaupunkiin.',
-      salvador: 'Koillisrannikon lahden rannalla on kaupunki, joka oli maan ensimmäinen pääkaupunki. Sen rummut, tanssi ja ruoka ovat Afrikasta tuotujen ihmisten perintöä.',
-      iquitos: 'Sademetsän keskellä on suuri kaupunki, jonne ei johda ainuttakaan maantietä. Kumikauppa rakensi sen kaakeloidut julkisivut.',
-      portovelho: 'Sademetsän lounaisosassa suuren sivujoen varrella on kaupunki, jonka ohi rakennettiin rautatie koskien kiertämiseksi.',
-      bananal: 'Sisämaan savannissa joki jakautuu kahtia ja yhtyy taas satojen kilometrien päässä. Väliin jää maailman suurin jokisaari.',
-      machupicchu: 'Andien harjanteella pilvien alapuolella on inkojen kivikaupunki, jonne ei johda maantietä. Muurien kivet on hiottu yhteen ilman laastia.',
-      titicaca: 'Lähes neljän kilometrin korkeudessa kahden maan rajalla on suuri järvi, jolla purjehditaan kaislaveneillä ja jonka saaret kelluvat.',
-      lima: 'Tyynenmeren rannalla autiomaassa on pääkaupunki, jossa ei käytännössä koskaan sada mutta jossa sumu peittää auringon kuukausiksi.',
-      santacruz: 'Andien itäpuolella alavilla mailla on maan suurin kaupunki, jonka ympärillä kasvatetaan soijaa.',
-      campogrande: 'Sisämaassa on kaupunki, jonka länsipuolella alkaa laaja kosteikko. Se tulvii puoli vuotta ja kuivuu laitumeksi toisen puolen.',
-      rio: 'Kaakkoisrannikolla vuorten välisen lahden äärellä on kaupunki, jonka yllä seisoo vuorella valtava patsas.',
-      saopaulo: 'Kaakkoisella ylängöllä lähellä rannikkoa on eteläisen pallonpuoliskon väkirikkain kaupunki, joka rikastui kahvista.',
-      iguazu: 'Kahden maan rajalla sisämaassa on satojen putousten sarja, jonka suurinta kuilua kutsutaan paholaisen kurkuksi.',
-      portoalegre: 'Etelässä laajan laguunin pohjukassa on satama, jonka ympäristössä ratsastavat karjapaimenet ja juodaan mate-teetä yhteisestä astiasta.',
-      antofagasta: 'Maailman kuivimman autiomaan rannikolla on satama, josta viedään kuparia ja jonne vesi tuodaan putkessa vuorilta.',
-      salta: 'Luoteisen vuoriston laaksossa on kaupunki, jossa soitetaan perinnemusiikkia ja josta rautatie nousee neljän kilometrin korkeuteen.',
-      asuncion: 'Paraguayn jokipääkaupungissa puhutaan kahta kieltä, ja kaupunkien äidiksi kutsuttua satamaa vartioi leveä Paraguayjoki.',
-      valparaiso: 'Tyynenmeren rannalla jyrkille rinteille rakennettu satamakaupunki nousee vinohisseillä. Maan parlamentti kokoontuu siellä.',
-      sanambrosio: 'Avomerellä satojen kilometrien päässä rannikosta on pieni tulivuorisaari ilman satamaa ja ilman makeaa vettä.',
-      robinsoncrusoe: 'Tyynellämerellä on saari, joka on nimetty romaanin mukaan. Sen esikuvana oli merimies, joka eli siellä yksin neljä vuotta.',
-      puertomontt: 'Eteläisen rannikon kohdalla, siellä missä alkaa vuonojen ja saarten sokkelo, on satama jonne saksalaiset siirtolaiset asettuivat 1850-luvulla.',
-      montevideo: 'La Platan suiston rannalla mate kiertää kädestä käteen ja rantabulevardi jatkuu yli kaksikymmentä kilometriä.',
-      falkland: 'Kaukana etelässä avomerellä on saariryhmä, jossa on enemmän lampaita kuin ihmisiä. Kaksi maata esittää siitä eri näkemyksen.',
-      puntaarenas: 'Mantereen eteläkärjen salmen rannalla on kaupunki, jonka ohi purjehti jokainen Tyynellemerelle matkaava laiva ennen kanavan avaamista.',
-      caphorn: 'Mantereen eteläisimmässä kärjessä on kallioinen saari, jonka ohi purjehtiminen on merimiehen kunniamerkki. Aallot kiertävät siellä koko maapallon.',
-    },
   },
 
   decor: {
@@ -101579,27 +101268,6 @@ const SUOMI = {
       '"Talvi kestää täällä puoli vuotta ja on itse asiassa vuoden paras aika", isoisä merkitsi muistiin. Pidin sitä pakkasen aiheuttamana harhana, kunnes näin ensimmäisen kunnolla auratun jäätien.',
       'Isoisä ihmetteli, että talonpojankin lapset osasivat lukea. Nykyään täällä ihmetellään, jos joku ei osaa. Muutos on hänen listassaan pieni rivi; minusta se on koko kirjan tärkein.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu,
-    // ei koskaan kaupungin nimeä.
-    starHints: {
-      turku: 'Lounaisrannikolla, siellä missä saaristo alkaa, on maan vanhin kaupunki: linna joen suulla ja tuomiokirkko vähän ylempänä. Sinne saapuu laiva lännestä joka päivä.',
-      maarianhamina: 'Lännessä, keskellä Pohjanlahtea, on saariryhmä joka kuuluu tähän maahan mutta puhuu naapurin kieltä. Sen ainoa kaupunki elää purjelaivoista ja postista.',
-      tampere: 'Sisämaassa, kahden suuren järven välissä, vesi putoaa kosken kautta alempaan järveen. Sen kosken partaalle rakennettiin punatiilinen tehdaskaupunki — ensimmäinen laatuaan koko maassa.',
-      pori: 'Länsirannikolla, suuren joen suulla, on satamakaupunki jonka edustalla on maan pisin hiekkaranta. Meri vetäytyy siellä kaiken aikaa kauemmas kaupungista.',
-      vaasa: 'Pohjanlahden rannalla, kapeimman kohdan kohdalla, maa nousee merestä sentin vuodessa. Siellä on kaupunki, josta pääsee naapurimaahan lautalla nopeammin kuin pääkaupunkiin.',
-      jyvaskyla: 'Keskellä maata, suuren pitkän järven pohjoispäässä, on kaupunki joka kasvoi koulujen ympärille. Sinne perustettiin ensimmäinen suomenkielinen oppikoulu koko ruhtinaskunnassa.',
-      lappeenranta: 'Kaakossa, suuren järvialtaan eteläkulmassa, on linnoituskaupunki jonka ohi kaivettiin kanava merelle. Kanava teki siitä sisämaan sataman.',
-      savonlinna: 'Idässä, keskellä sokkeloista järvialuetta, seisoo keskiaikainen linna omalla saarellaan kahden salmen välissä. Sen muureilla kuulemma lauletaan nykyään.',
-      kuopio: 'Itä-Suomessa, järvien keskellä, on kaupunki jonka takana kohoaa jyrkkä mäki. Mäen laelta näkee vettä joka suuntaan — ja kalatorilla myydään kalaa piirakan sisällä.',
-      joensuu: 'Aivan itärajan tuntumassa, siellä missä suuri reittivesi laskee etelään, on kaupunki jonka läpi virtaa joki. Sitä sanotaan Karjalan porteiksi.',
-      kajaani: 'Koillisessa, suuren järven laskujoen varrella, on raunioituneen linnan kaupunki. Sen kautta soudettiin tervaveneet koskia alas merelle asti — vaarallista työtä nuorille miehille.',
-      kemi: 'Aivan Pohjanlahden perukassa, suuren pohjoisen joen suulla, on satamakaupunki jonne uitettiin tukit sisämaasta. Talvella siellä jäätyy koko lahti.',
-      rovaniemi: 'Pohjoisessa, tasan sillä viivalla jonka takana aurinko ei kesällä laske, yhtyy kaksi jokea. Niiden yhtymäkohdassa on kauppapaikka, jonka läpi kaikki Lapin matkat kulkevat.',
-      kittila: 'Lapissa, tunturien länsipuolella, kultajoen latvoilla, on kirkonkylä jonne huuhtojat kokoontuivat. Siellä mitattiin maan kylmimmät pakkaset.',
-      inari: 'Kaukana pohjoisessa on järvi, jossa sanottiin olevan kolmetuhatta saarta, ja sen rannalla kylä joka on saamelaisen kulttuurin keskus. Sinne asti en päässyt: tie loppui kesken.',
-      kilpisjarvi: 'Aivan luoteisimmassa kolkassa, siellä missä kolmen valtakunnan rajat kohtaavat pyykillä, kohoavat maan korkeimmat tunturit. Kylä on pieni ja tuuli kova.',
-      utsjoki: 'Pohjoisimmassa pisteessä, suuren lohijoen varrella, kulkee raja naapurimaahan keskellä virtaa. Siellä puhutaan saamea enemmän kuin suomea — ainoana kuntana koko maassa.',
-    },
   },
 
   decor: {
@@ -102801,25 +102469,6 @@ const ISTANBUL = {
       '"Basaarissa on neljätuhatta puotia ja jokaisessa sama hinta kolmella eri tavalla sanottuna", isoisä valitti. Tinkiminen jatkuu ennallaan. Ainoa muutos on, että vaihtorahat annetaan puhelimella.',
       'Isoisä nousi laivaan Kultaisen sarven suulla ja kirjoitti, että kalanhaju seuraa matkustajaa Wieniin asti. Sama laituri, sama haju, sama kala leivän välissä. Jotkin asiat eivät kaipaa parannusta.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu,
-    // ei koskaan kaupungin nimeä.
-    starHints: {
-      rumelinlinnoitus: 'Salmen Euroopan puoleisella rannalla, kaukana pohjoisessa kaupungin yläpuolella, kohoaa jyrkälle rinteelle muurattu linnake. Se pystytettiin katkaisemaan laivaliikenne salmessa, ja sen tornit näkyvät kannelle asti.',
-      dolmabahce: 'Euroopan rannalla, keskikaupungin pohjoispuolella, on aivan vesirajaan eurooppalaiseen tapaan rakennettu hovin asuinrakennus. Sulttaani muutti sinne vanhasta niemen kärjestä.',
-      taksim: 'Kultaisen sarven pohjoispuolella, ylhäällä rinteen päällä, on aukio jonne uudet kadut ja lähetystöt vedettiin. Siellä liikkuu se osa kaupunkia, joka katsoo länteen.',
-      galata: 'Aivan Kultaisen sarven pohjoisrannalla kohoaa rinteestä pyöreä kivitorni, jonka genovalaiset rakensivat vartioimaan omaa kaupunginosaansa. Sen huipulta näkee molemmille mantereille.',
-      pierreloti: 'Kultaisen sarven yläjuoksulla, sen pohjoispuoleisella kukkulalla, on hautausmaan yläpuolinen kahvila. Sieltä ranskalainen kirjailija katseli kaupunkia ja kirjoitti siitä liikaa.',
-      balat: 'Kultaisen sarven länsirannalla, vanhojen maamuurien sisäpuolella, on kortteleita joissa asuivat juutalaiset ja kreikkalaiset perheet vuosisatoja. Talot on maalattu joka väriin.',
-      maustebasaari: 'Aivan Kultaisen sarven suulla, laivalaitureiden vieressä, on L-kirjaimen muotoinen katettu halli, joka rakennettiin moskeijan tuloilla. Sinne tuotiin mausteet Egyptistä.',
-      suuribasaari: 'Vanhan kaupungin sydämessä, kukkulan laella, on katettu kauppakaupunki jossa on kuusikymmentä katua saman katon alla. Sisään mennään yhdestä portista ja ulos jostakin aivan toisesta.',
-      topkapi: 'Vanhan kaupungin itäisimmässä kärjessä, siinä niemellä jossa salmi, Kultainen sarvi ja Marmaranmeri kohtaavat, on muurien ympäröimä hallitsijan asuinsija puutarhoineen. Sieltä johdettiin valtakuntaa neljäsataa vuotta.',
-      hagiasofia: 'Vanhassa kaupungissa, aivan palatsin porttien länsipuolella, on rakennus jonka kupoli oli tuhat vuotta maailman suurin. Se on ollut kirkko, moskeija ja museo — ja järjestyksessä.',
-      sinimoskeija: 'Vanhassa kaupungissa, suuren kupolin eteläpuolella hippodromin laidalla, on rukoushuone jolla on kuusi minareettia — enemmän kuin yhdelläkään toisella koko kaupungissa. Sisäseinät on laatoitettu siniseksi.',
-      uskudar: 'Salmen Aasian puoleisella rannalla, vastapäätä vanhaa kaupunkia, on kaupunginosa josta karavaanit lähtivät itään. Sinne mennessä ylitetään maanosien raja.',
-      neitsyttorni: 'Salmen keskellä, aivan Aasian rannan tuntumassa, on pienelle luodolle rakennettu valkoinen torni. Siitä kerrotaan tarinaa, jossa ennustus toteutuu käärmeen ja hedelmäkorin avulla.',
-      kadikoy: 'Aasian puolella, etelämpänä salmen suulla, on satamakaupunginosa joka perustettiin ennen vanhaa kaupunkia — ja väärään paikkaan, sanoi oraakkeli. Nykyään siellä on kalatori ja lauttalaituri.',
-      prinssisaaret: 'Kaakossa, Marmaranmerellä tunnin laivamatkan päässä, on saariryhmä jonne karkotettiin ruhtinaita. Saarilla ei ole autoja lainkaan; siellä kuljetaan yhä hevosella ja polkupyörällä.',
-    },
   },
 
   decor: {
@@ -103809,7 +103458,13 @@ const MAAILMANKARTTA = {
     // Seitsemän linssilaattaa on otettu tyhjistä (84 -> 77), koska
     // maailmankartalla on seitsemän lähdemannerta ja tyhjä laatta on
     // pelin turhauttavin ruutu: se vie vuoron eikä anna mitään.
-    counts: {"star":1,"horseshoe":11,"robber":18,"ruby":34,"emerald":43,"topaz":57,"empty":77,"linssi":7},
+    //
+    // SEITSEMÄN TÄHTEÄ, YKSI PER MANNER (omistajan päätös 11.8.2026):
+    // jokaisella mantereella on oma Aarnin luettelon aarteensa, ja
+    // mannerTypes antaa kullekin oman nimensä ja kuvansa. Kuusi uutta
+    // tähteä otettiin tyhjistä samalla perusteella kuin linssit
+    // (77 -> 71); kaupunkien kokonaismäärä 248 ei muutu.
+    counts: {"star":7,"horseshoe":11,"robber":18,"ruby":34,"emerald":43,"topaz":57,"empty":71,"linssi":7},
   },
 
   questions: yhdistaKysymykset(),
@@ -130977,7 +130632,35 @@ const HARD_BONUS = 100; // palkkio vaikeasta kysymyksestä oikein vastattaessa
 const STAR_PRIZE = 2000; // pääaarteen arvo vaellustilassa, jossa peli ei pääty
 const DUEL_PRIZE = 200; // rosvon saalis, jos kaksintaistelun voittaa suoraan
 const DUEL_BYPASS_SHOES = 3; // näin monella hevosenkengällä rosvon voi ohittaa
-const HINT_EVERY_TURNS = 4; // näin harvoin isoisän vihje aarteesta
+
+/*
+ * MANNERLENNON TEKSTIT (Fable 11.8.2026). Ne ovat tässä yhdessä
+ * paikassa eivätkä pakkausten texts-taulussa, koska mannerlento on
+ * laudan sisäinen mekaniikka eikä kuulu yhdellekään mantereelle.
+ *
+ * Ilmoitus on nuoren herran ääni: nykymaailmassa lentokenttä on joka
+ * kaupungin naapurissa — siksi lento ei vaadi lentokenttälaattaa, ja
+ * ilmoitus sanoo sen ääneen.
+ */
+const MANNERLENTO_ILMOITUS = 'Mantereen aarre on laukussa. Isoisä olisi etsinyt satamasta laivaa — minä ostin lentolipun puhelimella: toiselle mantereelle pääsee nyt mistä tahansa kaupungista.';
+
+// Mannerten suomenkieliset nimet nappia ja tekstejä varten. Avaimet
+// ovat lähdepakettien tunnuksia (cityManner) — muilla laudoilla manner
+// on laudan oma id, ja tuntematon tunnus palaa pelkkään kaupunkiin.
+const MANNER_NIMET = {
+  europe: { nimi: 'Eurooppa', illatiivi: 'Eurooppaan' },
+  middleeast: { nimi: 'Lähi-itä', illatiivi: 'Lähi-itään' },
+  africa: { nimi: 'Afrikka', illatiivi: 'Afrikkaan' },
+  asia: { nimi: 'Aasia', illatiivi: 'Aasiaan' },
+  northamerica: { nimi: 'Pohjois-Amerikka', illatiivi: 'Pohjois-Amerikkaan' },
+  southamerica: { nimi: 'Etelä-Amerikka', illatiivi: 'Etelä-Amerikkaan' },
+  oceania: { nimi: 'Oseania', illatiivi: 'Oseaniaan' },
+};
+
+const MANNERLENTO_NAPPI = ({ manner, label }) => {
+  const kohde = MANNER_NIMET[manner]?.illatiivi;
+  return kohde ? `Lennä ${kohde}: ${label}` : `Toiselle mantereelle: ${label}`;
+};
 
 // Aika on pelin vastustaja, ei sen tuomari: ajan loppuminen ei päätä peliä
 // koskaan. Vuoro on kuusi tuntia, joten neljä vuoroa on yksi matkapäivä.
@@ -131073,6 +130756,31 @@ function mulberry32(seed) {
   };
 }
 
+/**
+ * TALLENNUKSEN MIGRAATIO 1 -> 2: yksi tähti mannerkohtaiseksi tauluksi.
+ *
+ * Versiossa 1 maailmalla oli `starFound` (lippu) ja `starCity`. Version 2
+ * `starsFound` on taulu manner -> kaupunki. Käännös on suora: jos aarre
+ * oli löytynyt, sen kaupunki kertoo mantereen. Jos vanhassa
+ * tallennuksessa on `starFound` mutta ei `starCity`ä (teoreettinen
+ * reunatapaus), tähti etsitään käännettyjen laattojen joukosta.
+ *
+ * Vanhan pelin laudalla on yhä vain se yksi tähti — laattajakoa ei
+ * lasketa uudelleen. Aarnin luettelo näyttää siis kuusi kateissa olevaa
+ * aarretta, joita sillä laudalla ei ole; se on rehellisempi kuin
+ * tallennuksen hylkääminen, ja koskee vain ennen 11.8.2026 aloitettuja
+ * matkoja.
+ */
+function mannerkohtaisetTahdet(pack, w) {
+  if (!w?.starFound) return [];
+  let city = w.starCity ?? null;
+  if (!city) {
+    city = (w.revealed ?? []).find(([, type]) => type === 'star')?.[0] ?? null;
+  }
+  const manner = (city && pack.map?.cityManner?.[city]) ?? pack.id;
+  return [[manner, city]];
+}
+
 class Game {
   /**
    * @param {{players: Array<{name, color, isBot, start}>, pack?: object, roaming?: boolean, rng?: () => number}} opts
@@ -131114,7 +130822,8 @@ class Game {
       quizLevel: p.quizLevel === 'easy' ? 'easy' : 'normal',
       money: START_MONEY,
       pos: { type: 'city', city: p.start ?? firstStart.id },
-      hasStar: false,
+      // Montako unohdettua aarretta pelaaja kantaa (yksi per manner).
+      stars: 0,
       horseshoes: 0,
       finds: [], // löydetyt laatat tyyppeinä
       // Miltä mantereelta kukin löytö on (maailmankartta) — kulkee
@@ -131237,8 +130946,10 @@ class Game {
       tokens: this.jaaLaatat(pack, tokenCities, pile),
       revealed: new Map(), // kaupunki -> laattatyyppi
       visited: new Set(), // kaupungit, joissa on jo käyty (kokemuspisteitä varten)
-      starFound: false,
-      starCity: null,
+      // Löytyneet unohdetut aarteet: manner -> kaupunki, jossa aarre oli.
+      // Jokaisella mantereella on oma aarteensa (omistajan päätös
+      // 11.8.2026), joten yksi lippu ei enää riitä.
+      starsFound: new Map(),
     };
     this.worlds.set(pack.id, world);
     return world;
@@ -131256,6 +130967,14 @@ class Game {
    * Jos mantereella ei ole yhtään vapaata laattakaupunkia — tai jos
    * linssejä on laudalla enemmän kuin mantereita — ylimääräiset laatat
    * jäävät sekoitukseen ja arvotaan muiden mukana. Peli ei kaadu siihen.
+   *
+   * Sama koskee unohdettuja aarteita (tähtilaattoja): omistajan päätös
+   * 11.8.2026 on, että jokaisella mantereella on OMA aarteensa. Portteja
+   * eikä kynnyksiä ei ole — aarre voi löytyä mantereen ensimmäisestä
+   * laatasta, ja jos kaikki muut mantereen laatat on jo käännetty, se on
+   * varmasti viimeisessä. Tämä on matemaattisesti sama asia kuin arpoa
+   * yksi tähti per manner jo laattajaossa, joten dynaamista
+   * uudelleensijoittelua ei tarvita.
    */
   jaaLaatat(pack, tokenCities, pile) {
     // Muilla laudoilla kuin maailmankartalla koko lauta on yksi manner.
@@ -131272,14 +130991,45 @@ class Game {
       linssikaupungit.add(ehdokkaat[Math.floor(this.rng() * ehdokkaat.length)]);
     }
 
-    // Käsin sijoitetut linssilaatat poistetaan pinon alusta, jottei
-    // muiden laattojen keskinäinen järjestys muutu lainkaan: sekoitus
-    // on jo tehty, ja tämä vaihe vain nostaa siitä osan sivuun.
+    /*
+     * Yksi unohdettu aarre per manner. Tähti ei kuulu aloituskaupunkiin
+     * (pelin päämaali heti lähtöruudussa olisi latistus), joten
+     * aloituskaupungit karsitaan jo ehdokaslistasta — mannerkohtainen
+     * väistö, ei jälkikäteinen korjaus. Linssikaupungit karsitaan, jotta
+     * sama kaupunki ei saisi kahta käsin sijoitettua laattaa.
+     *
+     * Laudoilla, joilla mantereita on vain yksi (pack.id), tämä tekee
+     * saman kuin ennen: yksi tähti, ei aloituskaupunkiin.
+     */
+    const startit = new Set(pack.cities.filter((c) => c.start).map((c) => c.id));
+    const tahtia = pile.filter((type) => type === 'star').length;
+    const tahtikaupungit = new Set();
+    const mantereet = [];
+    for (const id of tokenCities) {
+      const manner = mannerNimi(id);
+      if (!mantereet.includes(manner)) mantereet.push(manner);
+    }
+    for (const manner of mantereet) {
+      if (tahtikaupungit.size >= tahtia) break;
+      const ehdokkaat = tokenCities.filter((id) => mannerNimi(id) === manner
+        && !startit.has(id) && !linssikaupungit.has(id));
+      if (!ehdokkaat.length) continue;
+      tahtikaupungit.add(ehdokkaat[Math.floor(this.rng() * ehdokkaat.length)]);
+    }
+
+    // Käsin sijoitetut linssi- ja tähtilaatat poistetaan pinon alusta,
+    // jottei muiden laattojen keskinäinen järjestys muutu lainkaan:
+    // sekoitus on jo tehty, ja tämä vaihe vain nostaa siitä osan sivuun.
     const jaettava = [];
-    let poistettavia = linssikaupungit.size;
+    let linssejaPois = linssikaupungit.size;
+    let tahtiaPois = tahtikaupungit.size;
     for (const type of pile) {
-      if (type === 'linssi' && poistettavia > 0) {
-        poistettavia--;
+      if (type === 'linssi' && linssejaPois > 0) {
+        linssejaPois--;
+        continue;
+      }
+      if (type === 'star' && tahtiaPois > 0) {
+        tahtiaPois--;
         continue;
       }
       jaettava.push(type);
@@ -131288,25 +131038,26 @@ class Game {
     const laatat = new Map();
     let i = 0;
     for (const city of tokenCities) {
-      laatat.set(city, linssikaupungit.has(city) ? 'linssi' : jaettava[i++]);
+      if (linssikaupungit.has(city)) laatat.set(city, 'linssi');
+      else if (tahtikaupungit.has(city)) laatat.set(city, 'star');
+      else laatat.set(city, jaettava[i++]);
     }
 
     /*
-     * Tähti ei kuulu aloituskaupunkiin: pelin päämaali heti
-     * lähtöruudussa olisi latistus, eikä aloituskaupungeille ole
-     * vihjetekstejä (texts.starHints kattaa vain tavalliset
-     * laattakaupungit). Jos sekoitus toi tähden aloituskaupunkiin,
-     * se vaihtaa paikkaa arvotun tavallisen kaupungin laatan kanssa.
+     * Varmistus ylimääräisille tähdille: jos laudalla on enemmän
+     * tähtiä kuin mantereita, loput jäivät sekoitukseen ja voivat osua
+     * aloituskaupunkiin. Silloin ne vaihtavat paikkaa arvotun
+     * tavallisen kaupungin laatan kanssa, kuten ennen. Nykyisillä
+     * laudoilla tämä ei laukea kertaakaan.
      */
-    const startit = new Set(pack.cities.filter((c) => c.start).map((c) => c.id));
-    const tahtiKaupunki = [...laatat].find(([, type]) => type === 'star')?.[0];
-    if (tahtiKaupunki && startit.has(tahtiKaupunki)) {
-      const vapaat = tokenCities.filter((id) => !startit.has(id) && laatat.get(id) !== 'linssi');
+    for (const [cityId, type] of laatat) {
+      if (type !== 'star' || !startit.has(cityId)) continue;
+      const vapaat = tokenCities.filter((id) => !startit.has(id)
+        && laatat.get(id) !== 'linssi' && laatat.get(id) !== 'star');
       const vaihto = vapaat[Math.floor(this.rng() * vapaat.length)];
-      if (vaihto) {
-        laatat.set(tahtiKaupunki, laatat.get(vaihto));
-        laatat.set(vaihto, 'star');
-      }
+      if (!vaihto) break;
+      laatat.set(cityId, laatat.get(vaihto));
+      laatat.set(vaihto, 'star');
     }
     return laatat;
   }
@@ -131369,12 +131120,38 @@ class Game {
     return this.pack.airRoutes;
   }
 
-  get starFound() {
-    return this.world.starFound;
+  /**
+   * Kaupungin manner. Laudoilla, joilla mantereita ei ole erikseen
+   * merkitty, koko lauta on yksi manner ja tunnus on laudan oma —
+   * sama sopimus kuin laattajaossa (jaaLaatat).
+   */
+  mannerOf(cityId, world = this.world) {
+    return world.pack.map?.cityManner?.[cityId] ?? world.pack.id;
   }
 
-  set starFound(value) {
-    this.world.starFound = value;
+  /** Onko mantereen unohdettu aarre jo löytynyt tällä matkalla? */
+  mantereenTahtiLoytynyt(manner, world = this.world) {
+    return world.starsFound.has(manner);
+  }
+
+  /** Laudan muut mantereet: annetun mantereen ulkopuoliset tunnukset. */
+  muutMantereet(manner) {
+    const ulos = [];
+    for (const c of this.pack.cities) {
+      const m = this.mannerOf(c.id);
+      if (m === manner || ulos.includes(m)) continue;
+      ulos.push(m);
+    }
+    return ulos;
+  }
+
+  /**
+   * Onko laudalta löytynyt yksikään unohdettu aarre. Moninpelissä
+   * ensimmäinen aarre käynnistää kotiinjuoksun (checkWin), joten tämä
+   * on nimenomaan "yksikään", ei "kaikki".
+   */
+  get starFound() {
+    return this.world.starsFound.size > 0;
   }
 
   /** Lisää tapahtuman, jonka käyttöliittymä näyttää hetkeksi kartan päällä. */
@@ -131471,6 +131248,7 @@ class Game {
       fly: this.phase === 'action' ? this.airportDestinations() : [],
       gateways: this.gatewayOptions(),
       countryGates: this.countryGateOptions(),
+      mannerFlights: this.mannerLennot(),
     };
   }
 
@@ -131668,38 +131446,17 @@ class Game {
     return null;
   }
 
-  /** Kaupunki, johon laudan pääaarre on kätketty — löytynyt tai ei. */
-  starCityOf(world = this.world) {
-    if (world.starCity) return world.starCity;
-    for (const [cityId, type] of world.tokens) {
-      if (type === 'star') return cityId;
-    }
-    return null;
-  }
-
-  /**
-   * Isoisän päiväkirjan taitettu sivu: vihje laudan pääaarteesta. Vihje
-   * viittaa suuntaan tai alueeseen muttei nimeä kaupunkia. Omistajan
-   * linjaus 7.8.2026: vihje kuuluu MATKALLE — se nousee esiin vain
-   * kaupunkien välissä, jotta se ei sotke kaupunkien merkintöjä.
-   * Harventamisen (HINT_EVERY_TURNS) hoitaa tietoruutu, koska tämän
-   * on pysyttävä puhtaana funktiona piirtoa varten. Kun aarre on
-   * löytynyt, sivua ei enää tarvita.
+  /*
+   * TÄHTIVIHJEJÄRJESTELMÄ POISTETTU (omistajan päätös 11.8.2026).
+   *
+   * Tässä oli starCityOf, starHint ja starHintCity: isoisän päiväkirjan
+   * taitettu sivu, joka osoitti kohti laudan ainoaa pääaarretta. Kun
+   * aarteita on seitsemän — yksi joka mantereella — vihje ei enää ole
+   * arvoituksen ydin: manner itse rajaa etsinnän. Poistettiin myös
+   * pakkausten starHints- ja starHintAlue-taulut sekä HINT_EVERY_TURNS.
+   * Tarinatekstien omiin vihjeisiin (kohtaamiset, kaaritekstit) tämä ei
+   * koske.
    */
-  starHint() {
-    const world = this.world;
-    if (!world || world.starFound) return null;
-    if (this.player?.pos?.type !== 'edge') return null;
-    const cityId = this.starCityOf(world);
-    return this.pack.texts.starHints?.[cityId] ?? null;
-  }
-
-  /** Vihjeen kohdekaupunki luentatiedoston valintaa varten (ei näytetä). */
-  starHintCity() {
-    const world = this.world;
-    if (!world || world.starFound) return null;
-    return this.starCityOf(world);
-  }
 
   /**
    * Kulttuurikysymys Tutki-kortissa (tutustu ja vastaa -kokeilu):
@@ -131750,6 +131507,70 @@ class Game {
     this.lastPath = null;
     this.say(p.id, `${p.name} lensi ${FLIGHT_PRICE} punnalla: ${link.label}.`);
     this.emit('flight', link.label, { icon: 'kompassi', sub: `−${FLIGHT_PRICE} puntaa` });
+    if (this.offerQuiz()) return { ok: true, offer: true };
+    this.endTurn();
+    return { ok: true };
+  }
+
+  /**
+   * MANNERLENTO: kun tämän mantereen unohdettu aarre on löytynyt, matka
+   * voi jatkua toiselle mantereelle mistä tahansa kaupungista.
+   *
+   * Lentokenttäehtoa EI ole (omistajan linjaus 11.8.2026: nykymaailmassa
+   * lentokentälle pääsee käytännössä joka kaupungista) — siksi tämä on
+   * oma metodinsa actionFly'n rinnalla eikä ehto sen sisällä.
+   *
+   * Kohteita on yksi per manner: mantereen ENSIMMÄINEN aloituskaupunki
+   * kaupunkijärjestyksessä. Valinta on vakio eikä kuluta arvontaa, joten
+   * tallennettu peli palautuu samanlaisena. Kaikkien 19 aloituskaupungin
+   * tarjoaminen olisi tehnyt matkavalikosta luettelon.
+   *
+   * Vain vaellustilassa: moninpelissä ensimmäinen aarre aloittaa
+   * kotiinjuoksun, jota lento sotisi suoraan vastaan.
+   */
+  mannerLennot(player = this.player) {
+    if (this.phase !== 'action') return [];
+    if (!this.roaming) return [];
+    if (player.money < FLIGHT_PRICE) return [];
+    const city = this.cityOf(player);
+    if (!city) return [];
+    const oma = this.mannerOf(city.id);
+    if (!this.mantereenTahtiLoytynyt(oma)) return [];
+
+    /*
+     * Vain mantereet, joiden aarre on vielä kateissa (Fablen rajaus
+     * 11.8.2026): lento on jahdin jatkamista varten, ja jo löydetylle
+     * mantereelle pääsee tavallisilla reiteillä. Samalla nappirivi
+     * lyhenee matkan edetessä eikä valikko kasva yli ruudun.
+     */
+    const nahdyt = new Set([oma]);
+    const kohteet = [];
+    for (const c of this.pack.cities) {
+      if (!c.start) continue;
+      const manner = this.mannerOf(c.id);
+      if (nahdyt.has(manner)) continue;
+      nahdyt.add(manner);
+      if (this.mantereenTahtiLoytynyt(manner)) continue;
+      kohteet.push({ city: c.id, manner, label: c.name });
+    }
+    return kohteet;
+  }
+
+  /** Lentää toiselle mantereelle. Vie koko vuoron, hinta FLIGHT_PRICE. */
+  actionMannerLento(cityId) {
+    const kohde = this.mannerLennot().find((k) => k.city === cityId);
+    if (!kohde) return { ok: false, error: 'Sinne ei ole mannerlentoa' };
+    const p = this.player;
+    this.travelMode = 'fly';
+    p.money -= FLIGHT_PRICE;
+    p.pos = { type: 'city', city: cityId };
+    this.visitCity(p);
+    this.lastPath = null;
+    const city = this.board.cityById.get(cityId);
+    this.say(p.id, `${p.name} lensi ${FLIGHT_PRICE} punnalla kaupunkiin ${city.name}.`);
+    this.emit('flight', `Lento kaupunkiin ${city.name}`, { icon: 'kone', sub: `−${FLIGHT_PRICE} puntaa` });
+    // checkWin ei tarvita: mannerlento on vaellustilan mekaniikka, ja
+    // vaelluksessa checkWin palauttaa aina false.
     if (this.offerQuiz()) return { ok: true, offer: true };
     this.endTurn();
     return { ok: true };
@@ -131809,7 +131630,7 @@ class Game {
     if (!canTravel) return true;
 
     // Vaelluksessa kotiin ei tarvitse ehtiä, joten tavoitteita ovat aina laatat.
-    const racingHome = !this.roaming && (p.hasStar || (this.starFound && p.horseshoes > 0));
+    const racingHome = !this.roaming && (p.stars > 0 || (this.starFound && p.horseshoes > 0));
     const goals = racingHome
       ? new Set(this.players.map((pl) => pl.start))
       : new Set(this.tokens.keys());
@@ -132445,9 +132266,12 @@ class Game {
      * (omistajan toive): pelaaja hahmottaa, että jonnekin kannattaa
      * vielä palata. Rivi ei koskaan paljasta, missä aarre on — vain
      * että se on yhä jossain. Arvonta pelin rng:llä kuten muutkin.
+     * Mannerkohtaisten aarteiden kanssa muistutus jatkuu, kunnes
+     * Aarnin luettelo on täynnä — yksi löytö ei hiljennä sitä.
      */
     const katumukset = pack.texts?.flightRegret ?? [];
-    if (katumukset.length && this.world && !this.world.starFound
+    const mantereita = new Set(this.pack.cities.map((c) => this.mannerOf(c.id))).size;
+    if (katumukset.length && this.world && this.world.starsFound.size < mantereita
       && this.rng() < 0.35) {
       return katumukset[Math.floor(this.rng() * katumukset.length)];
     }
@@ -132984,16 +132808,31 @@ class Game {
     const city = this.board.cityById.get(cityId);
 
     switch (type) {
-      case 'star':
-        p.hasStar = true;
-        this.world.starFound = true;
-        this.world.starCity = cityId;
+      case 'star': {
+        /*
+         * Kirjanpito on mannerkohtaista: jokaisella mantereella on oma
+         * unohdettu aarteensa, ja pelaajan laskuri kertoo montako hän
+         * kantaa. Vaellustilassa jokainen aarre maksaa STAR_PRIZE:n —
+         * seitsemällä aarteella se on 14 000 puntaa. Talous kestää sen
+         * tänään (raha ei ole niukkuutta keskipelissä), mutta jos
+         * palkkiot alkavat latistaa löytöjä, tämä on ensimmäinen
+         * säädettävä luku.
+         */
+        const manner = this.mannerOf(cityId);
+        this.world.starsFound.set(manner, cityId);
+        p.stars = (p.stars ?? 0) + 1;
         this.awardXp(p, XP_STAR);
         this.noteRecord(p);
         if (this.roaming) {
           p.money += STAR_PRIZE;
           this.say(p.id, `◈ ${p.name} löysi aarteen ${token.name} kaupungista ${city.name} — arvo ${STAR_PRIZE} puntaa!`);
           this.emit('treasure', this.pack.texts.starToast, { token: type, city: cityId, sub: `+${STAR_PRIZE} puntaa` });
+          // Ilmoitus mannerlennosta vain, jos jollakin muulla
+          // mantereella on vielä aarre kateissa — viimeisen löydön
+          // jälkeen lupaus lennosta olisi tyhjä.
+          if (this.muutMantereet(manner).some((m) => !this.mantereenTahtiLoytynyt(m))) {
+            this.say(p.id, MANNERLENTO_ILMOITUS);
+          }
         } else {
           this.say(p.id, this.pack.texts.starFound(p.name, city.name));
           this.say(null, this.pack.texts.starChase);
@@ -133004,6 +132843,7 @@ class Game {
           });
         }
         break;
+      }
       case 'horseshoe':
         p.horseshoes++;
         this.say(p.id, `Ω ${p.name} löysi hevosenkengän kaupungista ${city.name}.`);
@@ -133051,7 +132891,12 @@ class Game {
     return type;
   }
 
-  /** Voitto: tähden tai hevosenkengän kanssa aloituskaupunkiin sen jälkeen kun tähti on löytynyt. */
+  /**
+   * Voitto: tähden tai hevosenkengän kanssa aloituskaupunkiin sen
+   * jälkeen kun tähti on löytynyt. ENSIMMÄINEN aarre riittää — vaikka
+   * mantereita on seitsemän, moninpelin kotiinjuoksu alkaa yhdestä
+   * (omistajan linjaus 11.8.2026: pienin muutos nykyiseen).
+   */
   checkWin() {
     if (this.roaming) return false;
     if (this.winner) return true;
@@ -133059,11 +132904,11 @@ class Game {
     const p = this.player;
     const city = this.cityOf();
     if (!city || !city.start) return false;
-    if (!p.hasStar && p.horseshoes === 0) return false;
+    if (!p.stars && p.horseshoes === 0) return false;
 
     this.winner = p;
     this.phase = 'over';
-    const reason = p.hasStar
+    const reason = p.stars
       ? this.pack.texts.winStar
       : 'ehti hevosenkengän kanssa kotiin ensimmäisenä';
     this.say(p.id, `🏆 ${p.name} ${reason} kaupungissa ${city.name} ja voitti pelin!`);
@@ -133072,10 +132917,19 @@ class Game {
 
   // --- tallennus ----------------------------------------------------------
 
-  /** Pelin tila tavallisena oliona (localStorage / JSON). */
+  /**
+   * Pelin tila tavallisena oliona (localStorage / JSON).
+   *
+   * VERSIO 2 (11.8.2026): mannerkohtaiset unohdetut aarteet. Maailman
+   * `starFound`/`starCity` korvautuivat `starsFound`-taululla (manner ->
+   * kaupunki) ja pelaajan `hasStar` laskurilla `stars`. Tämä on koko
+   * pelin ensimmäinen tallennusmuodon nosto; version 1 pelit luetaan
+   * yhä (fromJSON kääntää ne lennossa), joten kesken jäänyt matka ei
+   * katkea.
+   */
   toJSON() {
     return {
-      version: 1,
+      version: 2,
       packId: this.rootPackId,
       roaming: this.roaming,
       seed: this.seed,
@@ -133086,8 +132940,7 @@ class Game {
           tokens: [...w.tokens.entries()],
           revealed: [...w.revealed.entries()],
           visited: [...w.visited],
-          starFound: w.starFound,
-          starCity: w.starCity,
+          starsFound: [...w.starsFound.entries()],
         }]),
       ),
       usedQuestions: [...this.usedQuestions],
@@ -133117,9 +132970,14 @@ class Game {
     };
   }
 
-  /** Palauttaa tallennetun pelin. Palauttaa null, jos tallennus on kelvoton. */
+  /**
+   * Palauttaa tallennetun pelin. Palauttaa null, jos tallennus on
+   * kelvoton. Versiot 1 ja 2 kelpaavat: version 1 yksi tähti
+   * käännetään mannerkohtaiseksi kirjanpidoksi alla.
+   */
   static fromJSON(data) {
-    if (!data || data.version !== 1 || !Array.isArray(data.players)) return null;
+    if (!data || !Array.isArray(data.players)) return null;
+    if (data.version !== 1 && data.version !== 2) return null;
 
     const game = Object.create(Game.prototype);
     game.seed = data.seed;
@@ -133158,21 +133016,23 @@ class Game {
         // Vanhoissa tallennuksissa käyntejä ei kirjattu: jo käännetyt laatat
         // kertovat, missä on käyty, joten kokemuspisteet eivät kerry uudelleen.
         visited: new Set(w.visited ?? (w.revealed ?? []).map(([city]) => city)),
-        starFound: !!w.starFound,
-        starCity: w.starCity ?? null,
+        starsFound: new Map(w.starsFound ?? mannerkohtaisetTahdet(pack, w)),
       });
     }
-    // Uusi kenttä saa oletuksen spreadin edestä eikä version numeroa
-    // nosteta: fromJSON hylkää kaiken muun kuin version 1, joten noston
-    // hinta olisi jokainen kesken jäänyt peli. Sama kuvio kuin xp- ja
-    // quizAsked-kentillä aiemmin.
-    game.players = data.players.map((p) => ({
+    // Uusi kenttä saa oletuksen spreadin edestä (sama kuvio kuin xp-
+    // ja quizAsked-kentillä aiemmin) — versionosto tehdään vain, kun
+    // vanhaa muotoa ei voi lukea kääntämättä, kuten 1 -> 2 alla.
+    // Versio 1 -> 2: hasStar oli lippu, stars on laskuri. Kentät
+    // luetaan ennen spreadia ja hasStar jätetään pois, jottei
+    // vanhentunut lippu jää roikkumaan olioon.
+    game.players = data.players.map(({ hasStar, ...p }) => ({
       packId: rootPack.id,
       xp: 0,
       quizAsked: 0,
       quizCorrect: 0,
       linssit: [],
       findManner: [],
+      stars: hasStar ? 1 : 0,
       ...p,
     }));
     // findManner kulkee finds-listan rinnalla samoin indeksein. Vanhan
@@ -133279,7 +133139,7 @@ const BOT_SKILL = 0.55;
 function racingHome(game, p) {
   // Vaelluksessa ei kiirehditä kotiin, koska peli ei pääty.
   if (game.roaming) return false;
-  return p.hasStar || (game.starFound && p.horseshoes > 0);
+  return p.stars > 0 || (game.starFound && p.horseshoes > 0);
 }
 
 /** Etäisyydet kohteisiin: yhdistetty kartta, jossa jokainen kohde on nollaetäisyydellä. */
@@ -133948,52 +133808,6 @@ const SAAPUMISLUENNAT = new Set([
   'oceania:townsville',
   'oceania:uluru',
   'oceania:wellington',
-]);
-
-// Kaupungit, joiden aarrevihjeelle on kuiskattu luenta (ElevenLabs).
-// Euroopassa vihjeet ovat ilmansuunnittain (starHintAlue,
-// js/packs/europe.js) — rivit ovat alueita, eivät kaupunkeja.
-const VIHJELUENNAT = new Set([
-  'europe:pohjoinen',
-  'europe:lansi',
-  'europe:etela',
-  'europe:ita',
-  'africa:karthago',
-  'africa:nairobi',
-  'africa:lagos',
-  'africa:viktorianputoukset',
-  'africa:tshadjarvi',
-  'africa:marrakech',
-  'africa:sthelena',
-  'africa:tripoli',
-  'africa:murzuk',
-  'africa:alkufra',
-  'africa:sahara',
-  'africa:ahaggar',
-  'africa:timbuktu',
-  'africa:gao',
-  'africa:dakar',
-  'africa:sierraleone',
-  'africa:kappalmas',
-  'africa:kumasi',
-  'africa:orjarannikko',
-  'africa:kano',
-  'africa:kamerun',
-  'africa:kongo',
-  'africa:angola',
-  'africa:namib',
-  'africa:kimberley',
-  'africa:mosambik',
-  'africa:madagaskar',
-  'africa:sansibar',
-  'africa:kilimandzaro',
-  'africa:viktoria',
-  'africa:tanganjika',
-  'africa:bahrelghazal',
-  'africa:darfur',
-  'africa:suakin',
-  'africa:addisabeba',
-  'africa:rashafun',
 ]);
 
 const HAVAINTOLUENNAT = new Set([
@@ -138500,7 +138314,7 @@ class UI {
     el('circle', { r: 9.5, fill: player.color, class: 'pawn-dot' }, g);
     el('path', { d: 'M-5,-3 a6,6 0 0 1 8,-3', class: 'pawn-gloss', fill: 'none',
       stroke: 'rgba(255,255,255,0.6)', 'stroke-width': 2.2, 'stroke-linecap': 'round' }, g);
-    if (player.hasStar) {
+    if (player.stars > 0) {
       el('text', { x: 0, y: -18, class: 'pawn-star', 'text-anchor': 'middle' }, g).textContent = '◈';
     }
     return g;
@@ -138690,8 +138504,11 @@ class UI {
     const flights = game.airportDestinations();
     const gateways = game.gatewayOptions();
     const countryGates = game.countryGateOptions();
+    // Mannerlento aukeaa, kun tämän mantereen unohdettu aarre on
+    // löytynyt — se ei vaadi lentokenttää, joten se on oma listansa.
+    const mannerLennot = game.mannerLennot();
     const hasSlow = modes.includes('sea') || flights.length > 0
-      || gateways.length > 0 || countryGates.length > 0;
+      || gateways.length > 0 || countryGates.length > 0 || mannerLennot.length > 0;
 
     // Jos välivaiheeseen ei jää yhtään valintaa (esim. rahat eivät riitä
     // lentoon eikä satamaa ole), palataan suoraan perusvalintoihin —
@@ -138763,6 +138580,24 @@ class UI {
       const flyBtn = this.ikoniTekstiNappi('kone', `${city.name} (${FLIGHT_PRICE} p)`, 'wide');
       flyBtn.addEventListener('click', () => this.doFly(dest));
       this.actionsEl.appendChild(flyBtn);
+    }
+
+    /*
+     * Mannerlento: aarre löytyi, matka voi jatkua. Napit ovat samaa
+     * leveää muotoa kuin poistuneet porttinapit, koska kohde on kaukana
+     * ruudun ulkopuolella eikä löydy kartalta osoittamalla. Nappi
+     * nimeää mantereen ("Lennä Oseaniaan: Sydney"), koska tavalliset
+     * lentonapit ovat pelkkiä kaupunkeja — ero on pidettävä näkyvänä.
+     */
+    for (const kohde of mannerLennot) {
+      const btn = this.ikoniTekstiNappi('kone',
+        `${MANNERLENTO_NAPPI(kohde)} (${FLIGHT_PRICE} p)`, 'wide');
+      btn.addEventListener('click', () => {
+        this.travelExpanded = false;
+        sfx.play('flight');
+        this.doAction(() => game.actionMannerLento(kohde.city));
+      });
+      this.actionsEl.appendChild(btn);
     }
 
     // Vaelluksessa porttikaupungeista jatketaan toisille laudoille.
@@ -139223,7 +139058,6 @@ class UI {
       // Piilotuksen lisäksi sisältö tyhjennetään: muuten edellisen pelin
       // teksti voi välähtää ruudulla ennen kuin kortti ehtii piiloon.
       this.uusiFactKey(null);
-      this.factCard.classList.remove('vihjekortti');
       this.factVoiceEl.textContent = '';
       this.factPlace.textContent = '';
       this.factText.textContent = '';
@@ -139234,23 +139068,16 @@ class UI {
       return;
     }
 
-    // Matkalla kortti ei päivity: sama merkintä pysyy näytöllä, kunnes
-    // saavutaan uuteen kaupunkiin — uusi nopanheitto reitillä ei vaihda
-    // tekstiä (omistajan päätös).
     /*
-     * Isoisän vihje nousee esiin kaupunkien välissä (omistajan
-     * linjaus 7.8.2026) — siksi se lasketaan ENNEN reunan
-     * varhaispoistumista, joka muuten jäädyttäisi kortin matkan
-     * ajaksi. Harvennus tehdään täällä: sama vihje ei nouse joka
-     * pysähdyksellä, vaan aikaisintaan HINT_EVERY_TURNS vuoron
-     * välein (game.starHint on puhdas funktio piirtoa varten).
+     * Matkalla kortti ei päivity: sama merkintä pysyy näytöllä, kunnes
+     * saavutaan uuteen kaupunkiin — uusi nopanheitto reitillä ei vaihda
+     * tekstiä (omistajan päätös). Ennen tässä laskettiin myös isoisän
+     * aarrevihje, joka nousi esiin nimenomaan kaupunkien välissä ja
+     * siksi ohitti tämän varhaispoistuman; tähtivihjejärjestelmä
+     * poistettiin 11.8.2026 (ks. js/game.js), joten ehto on jälleen
+     * yksinkertainen.
      */
-    const vihjeTeksti = game.starHint();
-    const vihjeEsilla = this.factKey?.startsWith('hint:') ?? false;
-    const vihjeTuore = Boolean(vihjeTeksti) && (vihjeEsilla
-      || this.vihjeVuoro == null
-      || game.turnCount - this.vihjeVuoro >= HINT_EVERY_TURNS);
-    if (game.player.pos.type === 'edge' && this.factKey && !vihjeTuore) return;
+    if (game.player.pos.type === 'edge' && this.factKey) return;
 
     // Matkakirjan merkintä voittaa aina (omistajan havainto Gaossa:
     // aikataulurivi peitti uuden saapumistekstin koko käynnin ajaksi).
@@ -139267,7 +139094,6 @@ class UI {
       const key = `schedule:${aikataulu.packId}:${aikataulu.day}`;
       if (this.factKey === key) return;
       this.uusiFactKey(key);
-      this.factCard.classList.remove('vihjekortti');
       this.factVoiceEl.textContent = 'Isoisän aikataulusta';
       this.factPlace.textContent = `Päivä ${aikataulu.day}`;
       this.factImage.hidden = true;
@@ -139275,41 +139101,6 @@ class UI {
       this.naytaFactValokuva(null);
       this.stopDiaryVoice();
       this.typeText(this.factText, aikataulu.text);
-      return;
-    }
-
-    // Isoisän vihje laudan pääaarteesta nousee esiin harvakseltaan
-    // kaupunkien välissä. Vihjekortti erottuu tavallisesta
-    // merkinnästä: tähtiotsikko, oma revityn sivun ilme ja paperin
-    // rapina — pelkkä otsikkorivi meni pelaajalta ohi ja hiljainen
-    // kortti tuntui virheeltä (omistajan havainto).
-    if (vihjeTuore) {
-      const key = `hint:${game.pack.id}:${game.turnCount}`;
-      if (this.factKey === key) return;
-      this.uusiFactKey(key);
-      this.vihjeVuoro = game.turnCount;
-      this.factCard.classList.add('vihjekortti');
-      this.factVoiceEl.textContent = '◈ Isoisän vihje aarteesta';
-      this.factPlace.textContent = 'Päiväkirjasta revitty sivu';
-      this.factImage.hidden = true;
-      this.naytaFactValokuva(null);
-      this.stopDiaryVoice();
-      sfx.play('paper');
-      // Kuiskattu luenta (omistajan tilaus): vihje luetaan hiljaa, jos
-      // luenta on generoitu — kaiutinnapista sen voi kuunnella uudelleen.
-      // Aluevihjeillä (esim. Eurooppa) äänitiedosto on alueen, ei
-      // kaupungin: starHintAlue kuvaa kaupungin ilmansuunnaksi.
-      const vihjeKaupunki = game.starHintCity();
-      const vihjeAvain = game.pack.texts.starHintAlue?.[vihjeKaupunki] ?? vihjeKaupunki;
-      const vihjeLauta = luentaLauta(VIHJELUENNAT, game.pack.id, vihjeAvain);
-      this.diaryFullUrl = vihjeLauta
-        ? `assets/audio/puhe-${vihjeLauta}-vihje-${vihjeAvain}.mp3`
-        : null;
-      this.factKuuntele.hidden = !vihjeLauta;
-      if (vihjeLauta && kertojaTila() !== 'ei') {
-        this.playDiaryVoice(this.diaryFullUrl, { viive: 1200 });
-      }
-      this.typeText(this.factText, vihjeTeksti);
       return;
     }
 
@@ -139351,7 +139142,6 @@ class UI {
         const key = luentaAvain + aikatauluLisa;
         if (this.factKey === key) return;
         this.uusiFactKey(key);
-        this.factCard.classList.remove('vihjekortti');
         this.factVoiceEl.textContent = 'Matkakirjasta';
         this.factPlace.textContent = kaupunki.name;
         this.factImageTitle = null;
@@ -139418,7 +139208,6 @@ class UI {
         const key = luentaAvain + aikatauluLisa;
         if (this.factKey === key) return;
         this.uusiFactKey(key);
-        this.factCard.classList.remove('vihjekortti');
         this.factVoiceEl.textContent = voiceTitle(factVoice(fakta));
         this.factPlace.textContent = kaupunki.name;
         this.factImageTitle = typeof fakta === 'string' ? null : fakta.wiki ?? null;
@@ -139482,7 +139271,6 @@ class UI {
 
     // Otsikko kertoo kumpi ääni puhuu, alarivi paikan.
     const onRoute = player.pos.type === 'edge';
-      this.factCard.classList.remove('vihjekortti');
     this.factVoiceEl.textContent = voiceTitle(factVoice(fact));
     this.factPlace.textContent = onRoute ? `Matkalla — ${city.name}` : city.name;
     // Havaintoon voi liittyä kuva: pieni linkki avaa ilmiön Wikipedia-kuvan.
@@ -144572,20 +144360,33 @@ class UI {
      * Nyt luettelo täyttyy matkan mukana, kuten Aarnin oma luettelo
      * täyttyi. Kateissa-luku kertoo silti kuinka pitkä matka on jäljellä.
      */
-    const kaikki = PACKS.map((pakkaus) => pakkaus.tokens?.types?.star)
-      .filter((aarre) => aarre?.name);
+    /*
+     * LUETTELO ON MANNERKOHTAINEN (omistajan päätös 11.8.2026):
+     * jokaisella seitsemällä mantereella on oma unohdettu aarteensa, ja
+     * mannerTypes kertoo kunkin nimen. Muilla laudoilla — ja vanhoissa
+     * yhden tähden tallennuksissa — mannerTypes puuttuu, jolloin
+     * luettelo palaa vanhaan muotoonsa lautojen omista aarteista.
+     */
+    const mannerTypes = game.pack?.tokens?.mannerTypes;
+    const kaikki = mannerTypes
+      ? Object.entries(mannerTypes)
+        .map(([manner, types]) => ({ manner, aarre: types?.star }))
+        .filter((rivi) => rivi.aarre?.name)
+      : PACKS.map((pakkaus) => ({ manner: pakkaus.id, aarre: pakkaus.tokens?.types?.star }))
+        .filter((rivi) => rivi.aarre?.name);
 
     /*
      * LÖYTYNYT TARKOITTAA TÄTÄ MATKAA. Aarteen löytymistä ei tallenneta
      * pelikertojen yli (js/passport.js tuntee vain lautaleimat ja
      * linssit), joten luettelo kertoo rehellisesti tämän matkan
-     * tilanteen eikä väitä muistavansa enempää.
+     * tilanteen eikä väitä muistavansa enempää. Löytyneet luetaan
+     * maailman kirjanpidosta, joten moninpelissä luettelo näyttää koko
+     * seurueen saaliin — luettelo on Aarnin, ei yhden matkaajan.
      */
-    const loydetyt = [];
-    if (game.player?.hasStar) {
-      const oma = game.pack?.tokens?.types?.star;
-      if (oma?.name) loydetyt.push(oma);
-    }
+    const loytyneet = game.world?.starsFound ?? new Map();
+    const loydetyt = kaikki
+      .filter((rivi) => loytyneet.has(rivi.manner))
+      .map((rivi) => rivi.aarre);
 
     for (const aarre of loydetyt) {
       const rivi = html('div', 'aarre-rivi loytynyt');
@@ -144661,10 +144462,18 @@ class UI {
 
     // Isommat kuvat ja selite alla — tavarat kuin matkamuistohyllyllä
     // (omistajan toive).
-    if (p.hasStar) {
-      const tahti = game.aarreTyyppi('star', game.world?.starCity);
+    /*
+     * Unohdetut aarteet omina riveinään: jokaisella mantereella on oma
+     * aarteensa, joten yksi rivi ei enää riitä. Manner luetaan
+     * findManner-listasta, joka kulkee finds-listan rinnalla samoin
+     * indeksein — se kertoo mistä KUKIN tähti löytyi, myös silloin kun
+     * pelaajalla on niitä useita.
+     */
+    p.finds.forEach((type, i) => {
+      if (type !== 'star') return;
+      const tahti = game.aarreMantereella('star', p.findManner?.[i] ?? null);
       rivi(aarreIkoni(tahti, 'star', 44), tahti.name);
-    }
+    });
     if (p.horseshoes) rivi(tokenIconSvg('horseshoe', 44), `Hevosenkenkiä ${p.horseshoes}`);
 
     /*
@@ -145715,7 +145524,7 @@ class UI {
     if (!this.winnerDialog.open) sfx.play('win');
     const w = this.game.winner;
     document.getElementById('winner-title').textContent = `${w.name} voitti!`;
-    this.typeText(document.getElementById('winner-text'), w.hasStar
+    this.typeText(document.getElementById('winner-text'), w.stars > 0
       ? this.game.pack.texts.winnerStar(w.name, w.money)
       : `${w.name} ehti hevosenkengän kanssa kotiin ennen unohdetun aarteen löytäjää.`, 'winner');
     const roamBtn = document.getElementById('winner-roam');
@@ -147357,6 +147166,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 576, teksti: 'Seitsemän aarretta — yksi per manner — ja mannerlento' },
   { v: 575, teksti: 'Uusitut tekstit merkitään ja nousevat sivun kärkeen' },
   { v: 574, teksti: 'Kyproksen lehteen viisi aihesivua ja 20 nostoa' },
   { v: 573, teksti: 'Kulkija-johdonmukaisuuspassi: viisi korjausta' },
@@ -148016,7 +147826,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.575';
+const APP_VERSION = '2026-08-09.576';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
