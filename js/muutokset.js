@@ -13,6 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 569, teksti: 'Euro-hionnan erä 3: EU-lauta kokonaan budjettiin' },
+  { v: 568, teksti: 'Euro-hionnan erä 2: 19 kohdetta budjettiin + tagit' },
+  { v: 567, teksti: 'Euroopan tekstit -sivu tageineen työhuoneeseen' },
   { v: 566, teksti: 'Euro-hionnan erä 1: 15 pisintä kohdetta pituusbudjettiin' },
   { v: 565, teksti: 'Ateenan kaari tiiviiksi ja lupaus konkreettiseksi' },
   { v: 564, teksti: 'Syyrian lehteen historia-, käsityö- ja ruokasivut' },
