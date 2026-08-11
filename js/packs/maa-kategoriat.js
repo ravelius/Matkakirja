@@ -20893,5 +20893,122 @@ export const MAA_KATEGORIAT = {
             + 'sisälle jäi tyhjä putki.',
       },
     },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Etelä-Korean tunnetuin vientituote ei ole tavara vaan '
+          + 'populaarikulttuuri: vuosien harjoittelu, tarkkaan mietityt '
+          + 'koreografiat ja fanikunta, joka toimii kuin oma järjestönsä. '
+          + 'Taustalla on paljon vanhempi tapa esittää musiikkia.',
+      nostot: [
+        {
+          otsikko: 'Esiintyjäksi harjoitellaan vuosia',
+          aika: '1990-luvulta',
+          tiedosto: 'BTS at a fansigning event in Daegu, 30 March 2014.jpg',
+          teksti: 'K-popin yhtyeet kootaan harjoittelijoista. Levy-yhtiöt '
+              + 'valitsevat hakijat koelauluissa, ja valittu muuttaa yhtiön '
+              + 'asuntolaan ja käy päivittäin laulu-, tanssi- ja '
+              + 'kielitunneilla. SM Entertainmentin ohjelmassa jakso kestää '
+              + 'vuodesta kuuteen vuoteen, eikä debyytti ole taattu: osa '
+              + 'lopettaa ennen sitä. Tapa vakiintui 1990-luvulla, ja se '
+              + 'selittää sen mitä lavalla näkyy — koko ryhmä liikkuu kuin '
+              + 'yksi. Yhtyeen ympärille kasvaa fanikunta, jolla on oma '
+              + 'nimensä, oma värinsä ja oma valotikkunsa. Fanitapaamisissa '
+              + 'levyn ostaneet pääsevät arvonnan kautta lavan eteen '
+              + 'muutamaksi minuutiksi, ja tapaamiset ovat osa työtä siinä '
+              + 'missä konsertitkin.',
+          selite: 'Seitsemän nuorta miestä seisoo rivissä matalalla lavalla. '
+              + 'Kaikilla on viininpunainen bleiseri, valkoinen paita ja '
+              + 'tumma solmio sekä mustat housut ja lenkkarit, ja osalla on '
+              + 'mikrofoni kädessä. Takana on suuri juliste, jossa samat '
+              + 'esiintyjät poseeraavat, ja lavan reunassa on sininen '
+              + 'verhokangas.',
+          lahde: 'Marshmallow9293, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Läpimurto tuli kahdessa vaiheessa',
+          aika: '2012',
+          tiedosto: 'BTS win first Daesang (Grand Prize) at Melon Music Awards, 19 November 2016.jpg',
+          teksti: 'Ensimmäinen vaihe oli yksi kappale. Laulaja Psyn Gangnam '
+              + 'Style julkaistiin heinäkuussa 2012, ja se ilkkuu Soulin '
+              + 'Gangnamin varakasta elämäntapaa — maailmalle siitä jäi '
+              + 'käteen tanssi. Kappale nousi Yhdysvaltain listan kakkoseksi, '
+              + 'ja joulukuussa 2012 sen video oli ensimmäinen YouTubessa, '
+              + 'joka ylitti miljardin katselukerran rajan. Toinen vaihe oli '
+              + 'hitaampi. Yhtye BTS aloitti vuonna 2013 pienen levy-yhtiön '
+              + 'kokoamana, eikä ensimmäinen julkaisu myynyt juuri lainkaan; '
+              + 'kotimaan pääpalkinnon se sai vasta 2016. Vuonna 2018 se oli '
+              + 'ensimmäinen korealainen kokoonpano Yhdysvaltain '
+              + 'albumilistan kärjessä ja 2020 ensimmäinen myös '
+              + 'kappalelistalla.',
+          selite: 'Ryhmä esiintyjiä seisoo lavalla selin kameraan ja pitää '
+              + 'toisiaan olkapäistä kiinni tiiviissä rykelmässä. Kaikilla '
+              + 'on mustat puvut, joiden hihoissa on punaisia kuvioita, ja '
+              + 'hiukset on värjätty vaaleiksi, punertaviksi ja '
+              + 'roosanpunaisiksi. Taustalla hehkuu tummanpunainen '
+              + 'koristekuvio.',
+          lahde: 'HopeSmiling, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Aallolle antoivat nimen naapurit',
+          aika: '1999',
+          tiedosto: 'Parasite (film) director and cast in 2019.jpg',
+          teksti: 'Nimi keksittiin Kiinassa: pekingiläinen sanomalehti '
+              + 'kirjoitti marraskuussa 1999 hallyusta, korealaisesta '
+              + 'aallosta, kun korealaiset tv-sarjat ja popkappaleet olivat '
+              + 'vallanneet kiinalaisyleisön. Japanissa sama tapahtui '
+              + 'sarjalla Talvisonaatti vuonna 2002, ja sen kuvauspaikoista '
+              + 'tuli matkakohteita. Vuonna 2008 Etelä-Korean kulttuurivienti '
+              + 'ylitti ensi kertaa tuonnin. Elokuva laajensi aaltoa '
+              + 'edelleen: Bong Joon-hon Parasite voitti Cannesin '
+              + 'pääpalkinnon 2019 ja helmikuussa 2020 neljä Oscaria, '
+              + 'ensimmäisenä muulla kuin englannin kielellä tehtynä '
+              + 'elokuvana myös parhaan elokuvan palkinnon. Sanat hallyu ja '
+              + 'Korean wave lisättiin Oxfordin sanakirjaan vuonna 2021.',
+          selite: 'Seitsemän ihmistä seisoo rivissä matalalla korokkeella '
+              + 'lehdistötilaisuudessa. Takana on ruudullinen taustaseinä, '
+              + 'jossa toistuu elokuvan korealainen nimi mustin kirjaimin '
+              + 'vihreän ja valkoisen ruudukon päällä. Yhdellä on kirkkaan '
+              + 'punainen mekko, muilla tummia pukuja tai vaaleanpunainen '
+              + 'jakkupuku, ja osa taputtaa.',
+          lahde: 'Kinocine, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksi ihmistä ja koko tarina',
+          aika: '1600-luvulta',
+          tiedosto: 'Korean music-Pansori-Heungbuga-01.jpg',
+          teksti: 'Pansori on kertova laulu, jossa on vain kaksi esittäjää. '
+              + 'Laulaja seisoo viuhka kädessä ja vuorottelee laulun ja '
+              + 'puheen välillä; hänen vieressään istuu rumpali, joka lyö '
+              + 'buk-rumpua ja huutaa väliin kannustuksia. Myös yleisö saa '
+              + 'huudella mukana. Yksi tarina kestää tunteja, kokonaisena '
+              + 'jopa kahdeksan, ja 1700-luvulla vakiintuneesta '
+              + 'kahdestatoista tarinasta esitetään enää viittä. Laji syntyi '
+              + 'niemimaan lounaisosissa rahvaan huvina ja kelpasi '
+              + '1800-luvulla myös säätyläisille. Etelä-Korea merkitsi sen '
+              + 'kansalliseen kulttuuriperintöluetteloonsa vuonna 1964 ja '
+              + 'Unesco omaansa vuonna 2003.',
+          selite: 'Pimeällä lavalla seisoo nainen valkoisessa korealaisessa '
+              + 'puvussa, käsi kohotettuna ja kokoontaitettu viuhka toisessa '
+              + 'kädessä. Hänen oikealla puolellaan istuu lattialla '
+              + 'vaaleanharmaisiin pukeutunut mies mustassa hatussa, edessään '
+              + 'matala vaalea rumpu. Taustalla on tussimaalaus, jossa '
+              + 'erottuu lehdettömiä puita.',
+          lahde: 'Brian Negin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä oli ensimmäinen YouTube-video, joka ylitti miljardin '
+            + 'katselukerran rajan?',
+        vaihtoehdot: [
+          'Gangnam Style',
+          'Talvisonaatti',
+          'Dynamite',
+          'Heungbuga',
+        ],
+        oikea: 0,
+        fakta: 'Video pysyi palvelun katsotuimpana vuoteen 2017 asti.',
+      },
+    },
   ],
 };
