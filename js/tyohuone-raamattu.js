@@ -14,7 +14,7 @@
  */
 
 export const RAAMATTU2 = {
-  paivitetty: '11.8.2026',
+  paivitetty: '11.8.2026 (ilta)',
   johdanto: 'Koko pelin idea yhdessä dokumentissa. TAVOITE '
     + '(omistajan linjaus 11.8.2026): tämän lukeminen riittää '
     + 'yksinään pelin kehittämiseen ja uusien matkakirjatekstien '
@@ -62,6 +62,12 @@ export const RAAMATTU2 = {
           + 'selkeään, kiinnostavaan, yllättävään ja koskettavaan '
           + 'muotoon — ihminen valitsee ja hyväksyy '
           + 'lopputuloksen.',
+        'SYDÄNTEEMA (lisätty omistajan päätöksellä 11.8. illalla): '
+          + 'ihminen on samojen peruskysymysten äärellä yhtä '
+          + 'pihalla kuin ennenkin — vastausta etsimässä. Poika '
+          + 'yrittää ymmärtää, mitä isoisä koki ja mitä ihmettä '
+          + 'hän kirjaansa kirjoitti; siinä on pelin kauneus, ja '
+          + 'siihen pelin loppu päättyy.',
       ],
     },
     {
@@ -76,8 +82,9 @@ export const RAAMATTU2 = {
           + 'kirjan ymmärtäminen vaatii.',
         'Matkakirja on puhtaasti isoisän PÄIVÄKIRJA: sitä ei ole '
           + 'kirjoitettu kenellekään eikä se puhuttele lukijaa. '
-          + 'Sen revitty viimeinen sivu on arvoitus, jota Reginald '
-          + 'lähtee selvittämään.',
+          + 'Sen revitty viimeinen sivu on arvoitus, joka ajaa '
+          + 'Reginaldin matkaan — vastausta se ei koskaan anna '
+          + '(ks. Vastustajat ja Pelin kulku: loppu).',
         'Reginaldin kiire on itse valittu: hän on päättänyt tehdä '
           + 'matkan samassa ajassa kuin isoisä — alle 80 päivässä.',
         'Matkalla Reginaldille selviää, millainen isoisä hänellä '
@@ -181,101 +188,128 @@ export const RAAMATTU2 = {
         'Faktakuri: jokainen fakta tarkistetaan ja lähde '
           + 'merkitään. Luenta vastaa tekstiä sanasta sanaan — '
           + 'siksi arvottavia tekstejä ei lueta ääneen.',
+        'Puhtaalta pöydältä: uusi teksti kirjoitetaan aina '
+          + 'puhtaalta pöydältä — vanhasta säilytetään raaka-'
+          + 'aineet (beatit, faktat, kommellukset, persoonat), '
+          + 'mutta lauseet kirjoitetaan uudestaan. Vanhan '
+          + 'virkkeen säilytys on tietoinen poikkeus.',
+        'Pituusbudjetti merkkeinä, mitataan ennen julkaisua: '
+          + 'saapuminen 280–350 (katto 380), kohtaaminen 180–240 '
+          + '(katto 260), aarreteksti 140–200 (katto 220), kohde '
+          + 'yhteensä enintään 800 — koko ääniaika alle minuutin.',
+        'Kolme selkeyskysymystä joka kohteesta: (1) tunnistuuko '
+          + 'kertoja päiväkirjamerkinnäksi ilman kylttiä, (2) '
+          + 'onko kohtaamisen lupaus käsin kosketeltava teko, '
+          + 'joka lunastuu aarretekstissä, (3) onko jokaisella '
+          + 'yksityiskohdalla (eläin, esine, ele) merkitys '
+          + 'pelaajalle — pelkkä tunnelmaeläin leikataan.',
+        'Spoilerisääntö: mikään ennen visaa näkyvä kenttä '
+          + '(otsikko, henkilön esittely, saapumisteksti) ei saa '
+          + 'paljastaa visan oikeaa vastausta.',
+        'Motiivibudjetit sovitaan mantereittain ennen '
+          + 'kirjoituserää (montako kertaa barometri, sateenvarjo, '
+          + 'aarrevihje tms. saavat esiintyä) ja lasketaan ennen '
+          + 'julkaisua — harvuus tekee motiivista tehokkaan.',
       ],
     },
     {
       otsikko: 'Tekstien vetovoima',
       tila: 'luonnos',
       kohdat: [
-        'Keinopakki, jolla teksteistä tehdään mielenkiintoisia — '
-          + 'nämä ovat käytettävissä heti, jos Euroopan uudet '
-          + 'tekstit aloitettaisiin nyt. Keinot punnitaan yhdessä '
-          + 'ja osio täydentyy ennen uudelleenkirjoitusta.',
+        'Keinopakki, jolla teksteistä tehdään mielenkiintoisia. '
+          + 'Kolme ryhmää: KANTAVAT KEINOT ovat tekstin '
+          + 'selkäranka ja saavat esiintyä usein; MAUSTEET '
+          + 'toimivat vain harvoin käytettyinä (budjetti ennen '
+          + 'kirjoituserää); KERRONNAN TAVAT ovat muotovalintoja, '
+          + 'jotka tuovat vaihtelua. Ryhmittelyä kehitetään vielä '
+          + 'yhdessä. Sydänteema on Ydinajatuksessa.',
+        '— KANTAVAT KEINOT (saavat esiintyä usein) —',
         'Kommellus: jokin menee herroilta konkreettisesti '
           + 'pieleen ja siitä seuraa jotain — tehokkain '
           + 'yksittäinen keino.',
         'Aikakontrasti: isoisän 1873 väittää, nykypäivä vastaa. '
           + 'Lukija saa itse huomata, mikä on muuttunut ja mikä '
           + 'yllättäen ei.',
-        'Aistiankkuri: yksi tarkka haju, ääni tai maku kiinnittää '
-          + 'paikan muistiin paremmin kuin kappale kuvailua.',
-        'Mittaajan persoona: isoisä mittaa, laskee ja vertaa — '
-          + 'tarkat numerot ja välineet (barometri) tekevät '
-          + 'hänestä elävän.',
         'Auki jäävä koukku: merkintä tai kohtaaminen päättyy '
           + 'kysymykseen tai vihjeeseen, joka jää kutkuttamaan '
           + '(dekkarin imu).',
-        'Aarrevihjeet: harva sivuhuomio vahvistaa, että Aarnin '
-          + 'aarre on totta — palkitsee tarkan lukijan.',
-        'Seuraajan varjo: tummansininen sateenvarjo vilahtaa '
-          + 'harvoin ja ohimennen — jännite ilman uhkaa.',
-        'Yllätysfakta: tosi mutta hämmästyttävä yksityiskohta, '
-          + 'josta lukija haluaa kertoa jollekulle ("tätä en '
-          + 'olisi uskonut").',
+        'Aistiankkuri: yksi tarkka haju, ääni tai maku kiinnittää '
+          + 'paikan muistiin paremmin kuin kappale kuvailua '
+          + '(noin joka kolmanteen kohteeseen).',
         'Konkreettinen ihminen: nimetty paikallinen ja hänen '
           + 'hiljainen tietonsa — ei koskaan "ihmiset" tai '
           + '"kansa".',
+        '— MAUSTEET (harvuus tekee tehokkaaksi; budjetti '
+          + 'sovitaan mantereittain) —',
+        'Yllätysfakta: tosi mutta hämmästyttävä yksityiskohta, '
+          + 'josta lukija haluaa kertoa jollekulle ("tätä en '
+          + 'olisi uskonut").',
+        'Pienestä suureen: pieni asia paljastaa perusteluineen '
+          + 'jotain suurta paikasta — mieluiten tarinan tai '
+          + 'huumorin kautta, ettei oivallus jää luennoksi.',
+        'Skandaali: historiallinen tai varovasti tuore skandaali '
+          + '— isoisä saa paheksua ja olla salaa kiinnostunut. '
+          + 'Eläviä yksityishenkilöitä ei käytetä; kuolleet ja '
+          + 'instituutiot kestävät.',
+        'Historian oikku: yksi käänne, joka muovasi paikan ja '
+          + 'ihmiset — ja sen näkyvä jälki nykypäivässä.',
         'Arjen hinnat ja tavat 1873: mitä ateria, yösija tai '
           + 'sähke maksoi ja miten asiat hoidettiin — aikamatkan '
           + 'tuntu syntyy arjesta, ei monumenteista.',
+        'Nykyhetken kiinne: esim. vuosittainen musiikkifestivaali '
+          + 'historiallisella paikalla — sama aukio, isoisän '
+          + 'aikana paraati, nyt festarilava. Artisti mainitaan '
+          + 'menneessä muodossa ("täällä lauloi viime kesänä X"), '
+          + 'ettei teksti vanhene valheeksi.',
+        'Yllätyskohtaaminen: joku tulee juttelemaan Reginaldille '
+          + 'pyytämättä. Harvinaisena tehokas, koska kaikki muu '
+          + 'pelissä tapahtuu vain napista.',
+        'Elokuvallinen avaus: kohtaus rakennetaan monesta '
+          + 'kuvakulmasta kuin elokuvassa, ja kun Reginald astuu '
+          + 'kuvaan, jokin särähtää hauskasti — etikettivirhe tai '
+          + 'hassu asu (persoonan piirteet: ks. Tarina ja hahmot).',
+        'Ketju kaupunkien välillä: pieni juonne alkaa yhdessä '
+          + 'kaupungissa ja päättyy toisessa — esim. Pariisissa '
+          + 'postitettu kirje odottaa Wienissä.',
+        'Paikallinen sana: Reginald oppii yhden paikallisen '
+          + 'sanan tai sanonnan ja käyttää sitä — joskus väärin. '
+          + 'Kieli jää mieleen paikan mukana.',
+        'Kirjan fyysiset jäljet: tahra, puristettu kukka, '
+          + 'hiekanjyvät taitteessa — kirja esineenä todistaa '
+          + 'kokemuksesta. Jälkiä menneestä, EI koskaan '
+          + 'viritettyjä viestejä (ks. vältettävät).',
+        'Seuraajan varjo: tummansininen sateenvarjo vilahtaa '
+          + 'harvoin ja ohimennen — jännite ilman uhkaa.',
+        'Aarrevihjeet: harva sivuhuomio vahvistaa, että Aarnin '
+          + 'aarre on totta — palkitsee tarkan lukijan.',
         '80 päivän paine: aikataulu muistuttaa itsestään '
           + 'pienissä valinnoissa — ehtiikö, uskaltaako viipyä '
           + 'vielä päivän.',
+        '— KERRONNAN TAVAT (muotovalinnat) —',
+        'Mittaajan persoona: isoisä mittaa, laskee ja vertaa — '
+          + 'tarkat numerot ja välineet (barometri) tekevät '
+          + 'hänestä elävän.',
+        'Johtolausevariaatiot: "Isoisä kirjoitti" -kaavalle '
+          + 'yhdeksän vaihtoehtoa (lainaus ensin, käsiala kertoo, '
+          + 'reunamerkintä, jälki kirjassa, referointi, kirja '
+          + 'vaikenee, mittaus puhuu, vastaus ajan yli, hidas '
+          + 'luku) — esimerkit Näytteet-välilehdellä.',
+        'Henkilö liikkeellä: merkintä matkan päältä — ratikassa, '
+          + 'taksissa, tuktukissa, kuumailmapallossa, '
+          + 'sukeltamassa (poika tai isoisä).',
         'Löytöhetken tunne: hauskan yllättävät paikallisaarteet '
           + 'ja lyhyet huudahdukset — nauru tai häkellys sinetöi '
           + 'muistijäljen.',
-        'Skandaali (omistajan ehdotus 11.8.): historiallinen tai '
-          + 'varovasti tuore skandaali — isoisä saa paheksua ja '
-          + 'olla salaa kiinnostunut. Eläviä yksityishenkilöitä '
-          + 'ei käytetä; kuolleet ja instituutiot kestävät.',
-        'Historian oikku (11.8.): yksi käänne, joka muovasi '
-          + 'paikan ja ihmiset — ja sen näkyvä jälki nykypäivässä.',
-        'Pienestä suureen (11.8.): pieni asia paljastaa '
-          + 'perusteluineen jotain suurta paikasta — mieluiten '
-          + 'tarinan tai huumorin kautta, ettei oivallus jää '
-          + 'luennoksi.',
-        'Nykyhetken kiinne (11.8.): esim. vuosittainen '
-          + 'musiikkifestivaali historiallisella paikalla — sama '
-          + 'aukio, isoisän aikana paraati, nyt festarilava. '
-          + 'Artisti mainitaan menneessä muodossa ("täällä lauloi '
-          + 'viime kesänä X"), ettei teksti vanhene valheeksi.',
-        'Yllätyskohtaaminen (11.8.): joku tulee juttelemaan '
-          + 'Reginaldille pyytämättä. Harvinaisena tehokas, koska '
-          + 'kaikki muu pelissä tapahtuu vain napista.',
-        'Elokuvallinen avaus (11.8.): kohtaus rakennetaan '
-          + 'monesta kuvakulmasta kuin elokuvassa, ja kun '
-          + 'Reginald astuu kuvaan, jokin särähtää hauskasti — '
-          + 'etikettivirhe tai hassu asu. Reginaldille ja '
-          + 'Horatiolle kirjoitetaan tarvittaessa muutama uusi '
-          + 'persoonan piirre näitä varten (ks. Tarina ja hahmot).',
-        'Henkilö liikkeellä (11.8.): merkintä matkan päältä — '
-          + 'ratikassa, taksissa, tuktukissa, kuumailmapallossa, '
-          + 'sukeltamassa (poika tai isoisä).',
-        'Ketju kaupunkien välillä (Fablen ehdotus): pieni juonne '
-          + 'alkaa yhdessä kaupungissa ja päättyy toisessa — '
-          + 'esim. Pariisissa postitettu kirje odottaa Wienissä.',
-        'Paikallinen sana (Fablen ehdotus): Reginald oppii yhden '
-          + 'paikallisen sanan tai sanonnan ja käyttää sitä — '
-          + 'joskus väärin. Kieli jää mieleen paikan mukana.',
-        'Kirjan fyysiset jäljet (Fablen ehdotus): tahra, '
-          + 'puristettu kukka, hiekanjyvät taitteessa — kirja '
-          + 'esineenä todistaa kokemuksesta. Jälkiä menneestä, EI '
-          + 'koskaan viritettyjä viestejä (ks. vältettävät).',
-        'VÄLTETTÄVÄT (omistajan linjaus 11.8.): 1) '
-          + 'monimutkaiset ja vanhahtavat viittaukset mystisiin '
-          + 'asioihin, jotka eivät johda mihinkään; 2) '
-          + '"odottanut 150 vuotta kuin messiasta" -siirappi — '
-          + 'kukaan ei ole odottanut poikaa, eikä isoisä ole '
-          + 'virittänyt mitään, mikä maagisesti kantaisi '
-          + 'vuosisadan yli. Kirja saa olla arvoitus siksi, että '
-          + 'melkein 200 vuotta vanhan päiväkirjan lukeminen on '
-          + 'hidasta ja vaatii ponnistelua — ei siksi, että se '
-          + 'olisi suunniteltu arvoitukseksi.',
-        'SYDÄNTEEMA (omistajan sanoin 11.8.): ihminen on samojen '
-          + 'peruskysymysten äärellä yhtä pihalla kuin ennenkin, '
-          + 'vastausta etsimässä. Poika yrittää ymmärtää, mitä '
-          + 'isoisä koki ja mitä ihmettä hän kirjaansa kirjoitti — '
-          + 'siinä on pelin kauneus.',
+        '— VÄLTETTÄVÄT (omistajan linjaus 11.8.) —',
+        'Monimutkaiset ja vanhahtavat viittaukset mystisiin '
+          + 'asioihin, jotka eivät johda mihinkään.',
+        '"Odottanut 150 vuotta kuin messiasta" -siirappi: kukaan '
+          + 'ei ole odottanut poikaa, eikä isoisä ole virittänyt '
+          + 'mitään, mikä maagisesti kantaisi vuosisadan yli. '
+          + 'Kirja saa olla arvoitus siksi, että melkein 200 '
+          + 'vuotta vanhan päiväkirjan lukeminen on hidasta ja '
+          + 'vaatii ponnistelua — ei siksi, että se olisi '
+          + 'suunniteltu arvoitukseksi.',
       ],
     },
     {
@@ -284,6 +318,25 @@ export const RAAMATTU2 = {
       kohdat: [
         'Yksi lauta: koko maailma yhdellä kartalla (erilliset '
           + 'mannerlaudat ja vaihtoportit poistettu 11.8.).',
+        'ALKU: tarina alkaa Lontoosta, isoisän kotikaupungista — '
+          + 'etusivu on lähtöaula, jossa alkuteksti naputetaan '
+          + 'koneella. Pelissä ensimmäisen kohteen saa valita '
+          + 'maailmankartalta vapaasti ja ilmaiseksi; '
+          + 'aloituskaupunkeja on joka mantereella, ja valinta '
+          + 'ratkaisee, minkä mantereen pääaarretta etsitään '
+          + 'ensin.',
+        'LOPPU (päätös 11.8. ilta): peli huipentuu, kun '
+          + 'seitsemäs pääaarre löytyy. Revitty sivu ja seuraajan '
+          + 'henkilöllisyys jäävät auki — vastausta arvoitukseen '
+          + 'ei tule, mutta Reginald on saanut sen, mitä oikeasti '
+          + 'etsi: hän ymmärtää vihdoin isoisäänsä. '
+          + 'Loppukohtauksen teksti kirjoitetaan tästä '
+          + '(sydänteeman lunastus).',
+        '80 PÄIVÄN PALKINTO (päätös 11.8. ilta): jos matka '
+          + 'maailman ympäri taittuu alle 80 päivässä, pelaaja '
+          + 'saa SUPERLINSSIN, jota ei voi ostaa kaupasta — ja '
+          + 'kaikki muutkin linssit käyttöönsä. Ylityksestä ei '
+          + 'rangaista (ks. Ydinajatus).',
         'Vuoro: valitse matkustustapa (jalan / laivalla / '
           + 'lentäen) → noppa → siirto kartalla. Yksi nopanheitto, '
           + 'laivamatka tai lento kuluttaa 6 tuntia matka-aikaa; '
@@ -306,14 +359,14 @@ export const RAAMATTU2 = {
       tila: 'luonnos',
       kohdat: [
         'Laatta joka kaupungissa; tehtävän oikea vastaus kääntää '
-          + 'sen. UUSI LINJAUS (11.8.2026, luonnos): laatan alta '
-          + 'löytyy aina aarre — pieni tai iso PAIKALLISAARRE, '
-          + 'mantereen 1000 pisteen aarre tai mantereen PÄÄAARRE '
-          + '(+2000 puntaa JA jää matkalaukkuun näkyviin). Rosvo, '
-          + 'tyhjä laatta ja hevosenkenkä poistetaan pelistä '
-          + 'kokonaan. Aarteet muuttuvat heti rahaksi (paitsi '
-          + 'pääaarre, joka jää myös laukkuun).',
-        'PAIKALLISAARTEET (luonnos): jokaiselle maalle omat kaksi '
+          + 'sen, ja laatan alta löytyy AINA aarre: pieni tai iso '
+          + 'PAIKALLISAARRE, mantereen 1000 pisteen aarre tai '
+          + 'mantereen PÄÄAARRE (+2000 puntaa JA jää '
+          + 'matkalaukkuun näkyviin). Rosvoa, tyhjää laattaa ja '
+          + 'hevosenkenkää ei ole (poistettu 11.8.). Aarteet '
+          + 'muuttuvat heti rahaksi (paitsi pääaarre, joka jää '
+          + 'myös laukkuun).',
+        'PAIKALLISAARTEET: jokaiselle maalle omat kaksi '
           + 'aarretta — pieni, lähes arvoton mutta paikkaan sopiva '
           + '(esim. Suomessa mustikat) ja iso, arvokas '
           + 'kulttuuriesine tai muuten paikkaan kuuluva aarre. Osa '
@@ -365,9 +418,14 @@ export const RAAMATTU2 = {
         'Kaupungin ensimmäinen peli on aina luettu kohtaaminen; '
           + 'sen jälkeen muodot vaihtelevat painotetulla '
           + 'arvonnalla: tietovisa, isoisän väittämä, '
-          + 'valokuvakysymys, lippukysymys, tapahtumakortti, '
-          + 'isoisän pulma (piirros- tai valokuvapulma), vaikea '
-          + 'kysymys ja rosvon kaksintaistelu.',
+          + 'valokuvakysymys, lippukysymys, isoisän pulma '
+          + '(piirros- tai valokuvapulma) ja vaikea kysymys. '
+          + 'Rosvon kaksintaistelu on poistettu (11.8.); '
+          + 'tapahtumakortti palaa vasta, jos maailmankartalle '
+          + 'tehdään oma tapahtumapankki — päätetään erikseen.',
+        'Visoissa voi ostaa rahalla apua: VISAVIHJEEN saa '
+          + 'ostettua myös tietovisassa, samoin 50:50-karsinnan. '
+          + 'Hinnat: ks. Talous ja palkkiot.',
         'Pelin on auettava siitä, mitä ruudulla näkyy — ei ulkoa '
           + 'opettelua. Kuvat ovat oikeita ja tarkistettuja.',
         'Koko katalogi ja uudet peliehdotukset: Pelit-välilehti. '
@@ -423,10 +481,12 @@ export const RAAMATTU2 = {
           + 'kaupungin esittely kuvineen.',
         'Lehtikaupungeissa kortti taittuu paikallislehdeksi: '
           + 'useita sivuja, kuvataitto, sää, uutiset ja media.',
-        'Kohdekartta numeropisteineen ja itse kirjoitetut '
-          + 'nähtävyysjutut (Euroopassa 34 kaupunkia): lehtijutun '
-          + 'taitto, kuvakaruselli, henkilölinkit (esim. Engel '
-          + 'Helsingissä) ja täysikoon kuvaselaus.',
+        'Lehtikaupungissa on lisäksi kohdekartta '
+          + 'numeropisteineen ja itse kirjoitetut nähtävyysjutut: '
+          + 'lehtijutun taitto, kuvakaruselli, henkilölinkit '
+          + '(esim. Engel Helsingissä) ja täysikoon kuvaselaus. '
+          + 'Se, missä kaupungeissa mikäkin on valmiina, näkyy '
+          + 'Tilanne-välilehdellä — ei tässä.',
       ],
     },
     {
@@ -438,11 +498,10 @@ export const RAAMATTU2 = {
           + 'Maa numeroina -tunnusluvut.',
         'Kuva ja aihe ovat aina siitä maasta, jota sivu '
           + 'käsittelee — naapurin parasta kuvaa ei lainata.',
-        'Eurooppa on valmis; Lähi-itä pitkällä (ARE, Jordania, '
-          + 'Oman, Qatar, Egypti, Kuwait, Bahrain + Irakin, '
-          + 'Iranin, Jemenin, Syyrian ja Kyproksen sivuja). Pyhät '
-          + 'kaupungit ovat oma sivutyyppinsä, jonka johdannot '
-          + 'kirjoittaa Fable omistajan päätöksellä.',
+        'Pyhät kaupungit ovat oma sivutyyppinsä, jonka '
+          + 'johdannot kirjoittaa Fable omistajan päätöksellä. '
+          + 'Valmiiden maalehtien tilanne mantereittain näkyy '
+          + 'Tilanne-välilehdellä — Raamattu kuvaa vain mallin.',
       ],
     },
     {
@@ -473,12 +532,25 @@ export const RAAMATTU2 = {
       otsikko: 'Talous ja palkkiot',
       tila: 'luonnos',
       kohdat: [
-        'Punnat: laiva ja lento maksavat, oikeat vastaukset, '
-          + 'löydöt ja kätköt palkitsevat; apukeinot maksavat '
-          + '(vihje, 50:50).',
+        'Tulot: paikallisaarteet (pieni ~100–250 p, iso '
+          + '~500–800 p — haarukat päätetään erikseen), mantereen '
+          + '1000 pisteen aarre, pääaarre 2000 p ja oikeat '
+          + 'vastaukset.',
+        'Menot: laiva ja lento maksavat; mannerrajan '
+          + 'ennenaikainen ylitys 1000 p; varustekaupan varusteet '
+          + 'alustavasti 1000 p kappale; visojen apukeinot '
+          + 'maksavat — VISAVIHJEEN voi ostaa rahalla myös '
+          + 'tietovisassa, samoin 50:50-karsinnan.',
         'Kokemuspisteet nostavat tasoa ja kysymysten vaikeutta.',
-        'Varusteet (mm. linssit ja hevosenkengät) tuovat kykyjä — '
-          + 'esim. rosvon ohituksen tai maiden vertailun kartalla.',
+        'Varusteet ovat LINSSEJÄ (nyt vertailulinssi; lisää on '
+          + 'tulossa ja ideoita on paljon). Ne ostetaan '
+          + 'hampurilaisvalikon varustekaupasta, eivät löydy '
+          + 'laatoista. SUPERLINSSI on ainoa, jota ei saa '
+          + 'kaupasta: se ansaitaan alle 80 päivän matkalla, ja '
+          + 'samalla kaikki muutkin linssit aukeavat käyttöön.',
+        'Kaksi eri vihjettä: VISAVIHJE on rahalla ostettava apu '
+          + 'visassa; AARREVIHJE on tekstin sivuhuomio Aarnin '
+          + 'aarteista — ei mekaniikkaa eikä maksa mitään.',
       ],
     },
     {
@@ -498,15 +570,25 @@ export const RAAMATTU2 = {
       otsikko: 'Sanasto',
       tila: 'luonnos',
       kohdat: [
-        'unohdettu aarre = Aarnin luettelon manneraarre · laatta '
-          + '= kaupungin käännettävä kätkö · tutki kätkö -pelit = '
-          + 'kaikki Etsi kätkö -napin tehtävät · kohtaaminen / '
-          + 'tarinakaari = kaupungin henkilö ja hänen kysymyksensä '
-          + '· valokuvapulma = pulma, jonka vaihtoehdot ovat '
-          + 'oikeita valokuvia · mannerlento = aarteen avaama '
-          + 'lento seuraavalle mantereelle · lehtikaupunki / '
-          + 'maalehti = kaupungin/maan luettava lehti · työhuone '
-          + '= tämä sivusto.',
+        'unohdettu aarre = Aarnin luettelon manneraarre · '
+          + 'paikallisaarre = maan oma pieni tai iso aarre · '
+          + 'laatta = kaupungin käännettävä kätkö · tutki kätkö '
+          + '-pelit = kaikki Etsi kätkö -napin tehtävät · '
+          + 'kohtaaminen / tarinakaari = kaupungin henkilö ja '
+          + 'hänen kysymyksensä · hiljaisen tiedon arkku = '
+          + 'kohtaamisten kehys: paikallinen auttaa vasta, kun '
+          + 'tietämys on todistettu · valokuvapulma = pulma, '
+          + 'jonka vaihtoehdot ovat oikeita valokuvia · '
+          + 'mannerraja = uudelle mantereelle vasta pääaarteella '
+          + 'tai maksulla · mannerlento = aarteen avaama lento '
+          + 'seuraavalle mantereelle · varustekauppa = '
+          + 'hampurilaisvalikon Käy kaupassa -painike · '
+          + 'superlinssi = alle 80 päivän matkan palkinto · '
+          + 'visavihje = rahalla ostettava apu visassa · '
+          + 'aarrevihje = tekstin sivuhuomio Aarnin aarteista · '
+          + 'johtolause = tapa tuoda isoisän ääni merkintään · '
+          + 'lehtikaupunki / maalehti = kaupungin/maan luettava '
+          + 'lehti · työhuone = tämä sivusto.',
       ],
     },
   ],
