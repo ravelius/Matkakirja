@@ -356,3 +356,156 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .todo-aani-nimi { margin: 0 0 0.15rem; }
 .todo-aani audio { width: 100%; margin-top: 0.4rem; }
 .todo-aani .merkki { font-size: 0.75rem; opacity: 0.75; }
+
+/* ====================================================================== *
+ * EUROOPAN TEKSTIT -sivu (omistajan tilaus 11.8.2026).
+ *
+ * Mobiili ensin: omistaja lukee tämän puhelimella. Kaikki rivittyy,
+ * mitään ei ole kiinteän levyisenä eikä mikään vaadi sivuvieritystä.
+ * ====================================================================== */
+
+/* Kokonaiskuva sivun kärjessä. */
+.euro-luvut {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.6rem 0 0.5rem;
+}
+
+.euro-luku {
+  flex: 1 1 8rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--reuna);
+  border-radius: 9px;
+  background: var(--pohja);
+}
+
+.euro-luku.hyva { border-color: var(--vihrea); }
+
+.euro-luku-arvo {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.euro-luku-teksti {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--himmea);
+}
+
+/* Kohteen otsikkorivi: nimi ja pituusmittari samalle riville, mutta
+   mittari pakenee omalle rivilleen kun otsikko on pitkä. */
+.euro-ylin {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.euro-ylin h3 { margin: 0; flex: 1 1 12rem; }
+
+.euro-pituus {
+  flex: 0 0 auto;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/*
+ * Vihreä = budjetissa, keltainen = yli. Keltainen on varoitus eikä
+ * virhe: pitkä teksti ei ole rikki, se on vain vielä hiomatta. Siksi
+ * punaista ei käytetä.
+ */
+.euro-pituus.hyva { background: rgba(46, 125, 91, 0.14); color: var(--vihrea); }
+.euro-pituus.yli { background: rgba(154, 107, 18, 0.16); color: var(--korostus); }
+
+.euro-osat {
+  margin: 0.15rem 0 0.5rem;
+  font-size: 0.74rem;
+  color: var(--haalea);
+  font-variant-numeric: tabular-nums;
+}
+
+.euro-nimio {
+  margin: 0.7rem 0 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--himmea);
+}
+
+.euro-teksti {
+  margin: 0;
+  /* Luettava mitta puhelimella: ei liian pitkiä rivejä isollakaan ruudulla. */
+  max-width: 42rem;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+.euro-vaihtoehdot {
+  margin: 0.2rem 0 0.3rem;
+  padding-left: 1.1rem;
+  line-height: 1.45;
+}
+
+.euro-vaihtoehdot .oikea { font-weight: 700; color: var(--vihrea); }
+
+/* ---- Tagit ---------------------------------------------------------- *
+ * Väri tulee luokan nimestä (tyohuone.html: tagiSavy) muuttujana
+ * --tagi-savy, joten uusi luokka saa värinsä ilman että tänne pitää
+ * lisätä mitään. Sävy on sama vaalealla ja tummalla pohjalla; kontrastin
+ * kantaa reuna ja teksti, tausta on kevyt.
+ */
+.tagirivi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.1rem 0 0.2rem;
+}
+
+.tagi-ryhma {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.4rem;
+  border: 1px solid hsl(var(--tagi-savy) 55% 45% / 0.55);
+  border-radius: 999px;
+  background: hsl(var(--tagi-savy) 60% 50% / 0.1);
+}
+
+.tagi-luokka {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: hsl(var(--tagi-savy) 60% 32%);
+}
+
+.tagi {
+  font-size: 0.76rem;
+  color: var(--teksti);
+}
+
+.tagi-tulossa {
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--haalea);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Tummalla pohjalla sama sävy tarvitsee enemmän valoa erottuakseen. */
+  .tagi-luokka { color: hsl(var(--tagi-savy) 70% 72%); }
+  .tagi-ryhma {
+    border-color: hsl(var(--tagi-savy) 60% 60% / 0.5);
+    background: hsl(var(--tagi-savy) 60% 60% / 0.13);
+  }
+  .euro-pituus.hyva { background: rgba(94, 196, 154, 0.16); }
+  .euro-pituus.yli { background: rgba(224, 169, 74, 0.18); }
+}

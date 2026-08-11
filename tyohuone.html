@@ -28,6 +28,7 @@
       <button data-tab="tilanne">Tilanne</button>
       <button data-tab="testaa">Testaa</button>
       <button data-tab="kehitys">Kehitys</button>
+      <button data-tab="eurotekstit">Euroopan tekstit</button>
       <button data-tab="pelit">Pelit</button>
       <button data-tab="kaupungit">Kaupungit</button>
       <button data-tab="studio">Studio</button>
@@ -103,6 +104,17 @@
       <p>Omistajan luettavaksi: uusin kokeilu. Vanhat kokeilut on siivottu
          pois (9.8.2026) — ne löytyvät tarvittaessa git-historiasta.</p>
       <div id="kehitys"></div>
+    </section>
+
+    <!-- EUROOPAN TEKSTIT: kaikki Euroopan kaarikohteet lukujärjestyksessä,
+         jokaisesta koko ketju ja tagirivi (omistajan tilaus 11.8.2026).
+         Sivua kasvatetaan sitä mukaa kuin hiontaeriä valmistuu: tekstit
+         tulevat js/tyohuone-kehitys-data.js:stä ja tagit
+         js/tyohuone-tagit.js:stä, eikä sivu odota kumpaakaan valmiiksi. -->
+    <section id="tab-eurotekstit" hidden>
+      <div id="eurotekstit-yhteenveto"></div>
+      <div id="eurotekstit-selite"></div>
+      <div id="eurotekstit"></div>
     </section>
 
     <!-- PELIT: tutki kätkö -pelien katalogi (omistajan tilaus 10.8.2026:
@@ -209,6 +221,7 @@
       LAAJENNUKSET, TODO_SAMILLE,
     } from './js/tyohuone-data.js';
     import { KAARI_PAKETIT } from './js/tyohuone-kehitys-data.js';
+    import { KAARI_TAGIT } from './js/tyohuone-tagit.js';
     import { TILANNE, TESTATTAVAA } from './js/tyohuone-tilanne.js';
     import { PELIT as KATKOPELIT } from './js/tyohuone-pelit.js';
 
@@ -405,6 +418,203 @@
     };
 
     $('kehitys').replaceChildren(...haitariOsat([uusinKokeilu]));
+
+    /* ------------------------------------------------------------------ *
+     * EUROOPAN TEKSTIT: kaikki Euroopan kaarikohteet lukujärjestyksessä,
+     * jokaisesta koko ketju ja tagirivi (omistajan tilaus 11.8.2026).
+     *
+     * Sivu on hionnan työpöytä: se kasvaa erä kerrallaan eikä odota
+     * mitään valmiiksi. Tekstit tulevat KAARI_PAKETIT:sta ja tagit
+     * KAARI_TAGIT:sta; kohde ilman tageja näkyy haaleana "tagit
+     * tulossa" -merkkinä.
+     * ------------------------------------------------------------------ */
+
+    /*
+     * EUROOPAN RAJA LUETAAN LAUDALTA, EI INDEKSISTÄ.
+     *
+     * Datassa Euroopan kohteet ovat ensin ja Lähi-idän Adenista alkaen,
+     * mutta kiinteä katkaisukohta (0..40) vanhenisi heti, kun Fable
+     * lisää yhden kohteen väliin. Siksi kohde on Euroopan kohde, jos sen
+     * tunnus on europe-laudan kaupunki.
+     *
+     * Järjestys EI ole aakkosjärjestys vaan datan oma lukujärjestys —
+     * juuri siinä omistaja tekstit lukee.
+     *
+     * Istanbul on sekä europe- että middleeast-laudalla. Se kuuluu
+     * Euroopan kaareen (kohde numero 2), joten europe-lauta tarkistetaan
+     * ensin. Tämä antaa täsmälleen datan oman jaon: 41 + 28.
+     */
+    const EU_KAUPUNGIT = new Set(
+      (PACKS.find((p) => p.id === 'europe')?.cities ?? []).map((c) => c.id),
+    );
+    const EURO_KOHTEET = KAARI_PAKETIT.kohteet.filter((m) => EU_KAUPUNGIT.has(m.id));
+
+    /*
+     * Pituusbudjetti docs/kaariteksti-sapluuna.md:stä (omistajan sääntö
+     * 11.8.2026). Mitataan samat kolme luettavaa osaa kuin kaanonissa,
+     * joten sivun luku täsmää siihen, mitä hiontaerissä raportoidaan
+     * (Ateena v565: 344 + 235 + 155 = 734).
+     */
+    const BUDJETTI = { saapuminen: 380, kohtaaminen: 260, aarre: 220, yhteensa: 800 };
+    const EURO_OSAT = ['saapuminen', 'kohtaaminen', 'aarre'];
+    const pituudet = (m) => {
+      const osat = EURO_OSAT.map((f) => [f, (m[f] ?? '').length]);
+      return { osat, yhteensa: osat.reduce((s, [, n]) => s + n, 0) };
+    };
+
+    /*
+     * TAGIEN VÄRIT LUOKITTAIN.
+     *
+     * Luokat ovat avoimia (omistaja: "voi olla muitakin tageja tarpeen
+     * mukaan"), joten väriä ei voi hakea kiinteästä listasta — muuten
+     * uusi luokka vaatisi koodimuutoksen. Väri lasketaan luokan NIMESTÄ:
+     * sama nimi antaa aina saman värin, ja uusi luokka saa omansa
+     * ilmaiseksi.
+     *
+     * Tunnetuimmille luokille on silti kiinteä paikka, jotta ne saavat
+     * varmasti selkeästi erottuvat sävyt eivätkä jää sattuman varaan.
+     * Sävyt ovat pergamentin lämpimässä piirissä ja toimivat sekä
+     * vaalealla että tummalla pohjalla (rajaväri kantaa kontrastin,
+     * tausta on kevyt).
+     */
+    const TAGI_SAVYT = [28, 96, 200, 320, 168, 262, 8, 128];
+    const KIINTEAT = { puhuja: 0, teemat: 1, tunnetilat: 2, motiivit: 3, paikat: 4 };
+    const tagiSavy = (luokka) => {
+      if (luokka in KIINTEAT) return TAGI_SAVYT[KIINTEAT[luokka]];
+      let luku = 0;
+      for (let i = 0; i < luokka.length; i += 1) luku = (luku * 31 + luokka.charCodeAt(i)) >>> 0;
+      return TAGI_SAVYT[luku % TAGI_SAVYT.length];
+    };
+    const varita = (solmu, luokka) => {
+      const h = tagiSavy(luokka);
+      solmu.style.setProperty('--tagi-savy', h);
+      return solmu;
+    };
+
+    /** Yhden kohteen tagirivi, tai haalea merkki jos tageja ei vielä ole. */
+    const tagiRivi = (id) => {
+      const tagit = KAARI_TAGIT[id];
+      const rivi = el('div', 'tagirivi');
+      const luokat = Object.entries(tagit ?? {})
+        .filter(([, arvot]) => Array.isArray(arvot) && arvot.length);
+      if (!luokat.length) {
+        rivi.append(el('span', 'tagi-tulossa', 'tagit tulossa'));
+        return rivi;
+      }
+      for (const [luokka, arvot] of luokat) {
+        const ryhma = varita(el('span', 'tagi-ryhma'), luokka);
+        ryhma.append(el('span', 'tagi-luokka', luokka));
+        for (const arvo of arvot) ryhma.append(el('span', 'tagi', arvo));
+        rivi.append(ryhma);
+      }
+      return rivi;
+    };
+
+    /** Väriselite: mitkä luokat aineistossa juuri nyt on. */
+    const rakennaTagiSelite = () => {
+      const luokat = new Set();
+      for (const m of EURO_KOHTEET) {
+        for (const [luokka, arvot] of Object.entries(KAARI_TAGIT[m.id] ?? {})) {
+          if (Array.isArray(arvot) && arvot.length) luokat.add(luokka);
+        }
+      }
+      const kortti = el('div', 'kortti');
+      kortti.append(el('h3', '', 'Tagiluokat'));
+      if (!luokat.size) {
+        kortti.append(el('p', 'pieni', 'Tageja ei ole vielä kirjattu yhteenkään kohteeseen.'));
+        return kortti;
+      }
+      kortti.append(el('p', 'pieni',
+        'Jokainen luokka on omanvärinen, ja sama luokka on samanvärinen joka '
+        + 'kohteessa. Luokat ovat avoimia: uusi luokka js/tyohuone-tagit.js:ssä '
+        + 'ilmestyy tänne itsestään omalla värillään.'));
+      const rivi = el('div', 'tagirivi');
+      for (const luokka of [...luokat].sort()) {
+        const ryhma = varita(el('span', 'tagi-ryhma'), luokka);
+        ryhma.append(el('span', 'tagi-luokka', luokka));
+        rivi.append(ryhma);
+      }
+      kortti.append(rivi);
+      return kortti;
+    };
+
+    /** Kokonaiskuva sivun kärkeen. */
+    const rakennaYhteenveto = () => {
+      const tagitettu = EURO_KOHTEET.filter((m) => {
+        const t = KAARI_TAGIT[m.id];
+        return t && Object.values(t).some((a) => Array.isArray(a) && a.length);
+      }).length;
+      const budjetissa = EURO_KOHTEET.filter((m) => pituudet(m).yhteensa <= BUDJETTI.yhteensa).length;
+      const kortti = el('div', 'kortti');
+      kortti.append(el('h3', '', `Euroopan kaaritekstit — ${EURO_KOHTEET.length} kohdetta`));
+      const luvut = el('div', 'euro-luvut');
+      const luku = (arvo, teksti, sävy) => {
+        const laatikko = el('div', `euro-luku${sävy ? ` ${sävy}` : ''}`);
+        laatikko.append(el('span', 'euro-luku-arvo', String(arvo)));
+        laatikko.append(el('span', 'euro-luku-teksti', teksti));
+        return laatikko;
+      };
+      /*
+       * Kaksi eri lukua, koska ne kertovat eri asian eikä niitä pidä
+       * sekoittaa: tagit ovat merkki siitä, että Fable on käynyt kohteen
+       * läpi, ja pituus on mitattu suoraan teksteistä. Kohde voi olla
+       * budjetissa ilman tageja (erä 1 lyhensi 15 kohdetta ennen kuin
+       * tageja oli olemassa).
+       */
+      luvut.append(luku(`${tagitettu}/${EURO_KOHTEET.length}`, 'tagit kirjattu'));
+      luvut.append(luku(`${budjetissa}/${EURO_KOHTEET.length}`, `pituusbudjetissa (≤ ${BUDJETTI.yhteensa})`,
+        budjetissa === EURO_KOHTEET.length ? 'hyva' : ''));
+      kortti.append(luvut);
+      kortti.append(el('p', 'pieni',
+        `Pituus lasketaan kolmesta luettavasta osasta (${EURO_OSAT.join(' + ')}) `
+        + 'samalla säännöllä kuin docs/kaariteksti-sapluuna.md:ssä. Vihreä '
+        + `= budjetissa, keltainen = yli ${BUDJETTI.yhteensa} merkkiä.`));
+      return kortti;
+    };
+
+    /** Yksi kohde: tagit, pituusmittari ja koko ketju. */
+    const rakennaKohde = (m, numero) => {
+      const { osat, yhteensa } = pituudet(m);
+      const k = el('div', 'kortti euro-kohde');
+
+      const ylin = el('div', 'euro-ylin');
+      ylin.append(el('h3', '', `${numero}. ${m.otsikko}`));
+      const mittari = el('span', `euro-pituus ${yhteensa <= BUDJETTI.yhteensa ? 'hyva' : 'yli'}`);
+      mittari.textContent = `${yhteensa} / ${BUDJETTI.yhteensa}`;
+      mittari.title = osat.map(([f, n]) => `${f} ${n}/${BUDJETTI[f]}`).join(' · ');
+      ylin.append(mittari);
+      k.append(ylin);
+
+      k.append(tagiRivi(m.id));
+      k.append(el('p', 'euro-osat', osat.map(([f, n]) => `${f} ${n}`).join(' · ')));
+
+      const nimio = (teksti) => el('p', 'euro-nimio', teksti);
+      k.append(nimio('Saapuminen (Horatio 1873)'));
+      k.append(el('p', 'euro-teksti', m.saapuminen));
+      k.append(nimio('Henkilö'));
+      k.append(el('p', 'euro-teksti pieni', m.henkilo));
+      k.append(nimio('Kohtaaminen'));
+      k.append(el('p', 'euro-teksti', m.kohtaaminen));
+      if (m.kysymys) {
+        k.append(nimio('Visakysymys'));
+        k.append(el('p', 'euro-teksti', m.kysymys.q));
+        const lista = el('ul', 'euro-vaihtoehdot');
+        m.kysymys.vaihtoehdot.forEach((v, i) => {
+          lista.append(el('li', i === m.kysymys.oikea ? 'oikea' : '', v));
+        });
+        k.append(lista);
+        if (m.kysymys.fakta) k.append(el('p', 'pieni', `Fakta: ${m.kysymys.fakta}`));
+      }
+      k.append(nimio('Aarre'));
+      k.append(el('p', 'euro-teksti', m.aarre));
+      return k;
+    };
+
+    $('eurotekstit-yhteenveto').replaceChildren(rakennaYhteenveto());
+    $('eurotekstit-selite').replaceChildren(rakennaTagiSelite());
+    $('eurotekstit').replaceChildren(
+      ...EURO_KOHTEET.map((m, i) => rakennaKohde(m, i + 1)),
+    );
 
     const napit = [...document.querySelectorAll('#valilehdet button')];
     /* Vanhat kirjanmerkit eivät saa hajota nimien muuttuessa. */
