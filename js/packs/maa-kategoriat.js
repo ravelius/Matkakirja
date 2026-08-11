@@ -22643,9 +22643,9 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mistä puusta vesinuket veistetään?',
         vaihtoehdot: [
           'Viikunapuusta',
-          'Tiikistä',
-          'Bambusta',
-          'Männystä',
+          'Tiikkipuusta',
+          'Bambupuusta',
+          'Mäntypuusta',
         ],
         oikea: 0,
         fakta: 'Puun keveys ratkaisee: nukke jää itsestään pinnalle, ja '
@@ -22845,7 +22845,7 @@ export const MAA_KATEGORIAT = {
           'Halkaistuja bambuja pitkin',
           'Savisilla vesijohdoilla',
           'Puisilla vesipyörillä',
-          'Kaivetuissa tunneleissa',
+          'Kaivetuissa maatunneleissa',
         ],
         oikea: 0,
         fakta: 'Painovoima riittää: vesi lasketaan ylimmältä pengermältä '
@@ -22953,10 +22953,10 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Millä ehdolla Prambananin kaatunut temppeli pystytetään uudelleen?',
         vaihtoehdot: [
-          'Kun vähintään 75 prosenttia sen omista kivistä on tallella',
-          'Kun se näkyy jossakin vanhassa valokuvassa',
-          'Kun sen nimi löytyy piirtokirjoituksesta',
-          'Kun se on alle kymmenen metriä korkea',
+          'Kun 75 prosenttia sen kivistä on yhä tallella',
+          'Kun se näkyy jossakin 1900-luvun valokuvassa',
+          'Kun sen nimi löytyy kivipiirtokirjoituksesta',
+          'Kun se on ollut alle kymmenen metriä korkea',
         ],
         oikea: 0,
         fakta: 'Siksi 224 pienestä sivutemppelistä on koottu vasta kuusi ja '
@@ -23053,7 +23053,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä tietää, että muskottipähkinä on kuivunut valmiiksi?',
         vaihtoehdot: [
-          'Se rapisee kuorensa sisällä, kun sitä ravistaa',
+          'Se rapisee, kun sitä ravistaa',
           'Se kelluu vesiastiassa',
           'Sen kuori muuttuu punaiseksi',
           'Se halkeaa itsestään kahtia',
@@ -23276,8 +23276,8 @@ export const MAA_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
-      johdanto: 'Indonesialainen soitin on harvoin yksin riittävä. Yksi '
-          + 'angklung antaa yhden sävelen, gamelan viritetään vain itsensä '
+      johdanto: 'Indonesialainen soittaja on harvoin yksin. Angklungia '
+          + 'ravistetaan rivissä, gamelan viritetään vain itsensä '
           + 'kanssa yhteen, ja kecakissa soittimia ei ole lainkaan — on vain '
           + 'ympyrä miehiä ja heidän äänensä.',
       nostot: [
@@ -23423,7 +23423,7 @@ export const MAA_KATEGORIAT = {
               + 'Piirustuksia ei jäänyt, vain kuvaus Malaijien aikakirjassa, '
               + 'ja sen mukaan rakennus pystytettiin uudelleen vuosina '
               + '1984–1986: runko kovapuuta, katto belian-puuta ja liitokset '
-              + 'puutappeja, ei yhtään naulaa.',
+              + 'puutapeilla, ei yhtään naulaa.',
           selite: 'Pitkä tummanruskea puupalatsi loivassa rinteessä. Jyrkät '
               + 'harmaat harjakatot kerrostuvat peräkkäin, ja päädyt '
               + 'kaartuvat ylös kärkiin. Seinät ovat puupaneelia ja '
@@ -23682,9 +23682,9 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Missä rafflesia kasvaa, kun sillä ei ole juuria?',
         vaihtoehdot: [
           'Tetrastigma-köynnöksen sisällä',
-          'Kalliopinnan sammaleessa',
-          'Kaatuneen puun kannossa',
-          'Vapaana maan pinnalla',
+          'Kalliopinnan rahkasammaleessa',
+          'Kaatuneen puun lahossa kannossa',
+          'Vapaana kostealla maan pinnalla',
         ],
         oikea: 0,
         fakta: 'Kasvista näkyy köynnöksen ulkopuolelle vain kukka; kaikki muu '
@@ -23864,7 +23864,7 @@ export const MAA_KATEGORIAT = {
           lahde: 'Milei.vencel, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          otsikko: 'Talo, jonka voi purkaa ja siirtää',
+          otsikko: 'Reiät ja urat sahataan valmiiksi',
           tiedosto: 'Rumah Warisan Haji Su, Kuala Terengganu.jpg',
           teksti: 'Perinteinen malaijitalo tehdään puusta ja bambusta ilman '
               + 'nauloja. Osiin sahataan valmiiksi reiät ja urat, ja ne '
@@ -23887,10 +23887,10 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi perinteinen malaijitalo rakennettiin ilman nauloja?',
         vaihtoehdot: [
-          'Jotta sen voisi purkaa ja siirtää',
-          'Koska rauta ruostui liian nopeasti',
-          'Koska naulat olivat liian kalliita',
-          'Jotta talo kelluisi tulvassa',
+          'Jotta sen voisi purkaa ja pystyttää uudelleen',
+          'Koska rauta ruostui kosteudessa liian nopeasti',
+          'Koska rautanaulat olivat aivan liian kalliita',
+          'Jotta talo kelluisi tulvaveden noustessa',
         ],
         oikea: 0,
         fakta: 'Osiin sahattiin valmiiksi reiät ja urat, joten talo oli '
@@ -24092,10 +24092,10 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä magtataho kantaa pienemmässä sangossaan?',
         vaihtoehdot: [
-          'Sagohelmiä ja sokerisiirappia',
-          'Murskattua jäätä',
-          'Kookosmaitoa',
-          'Paahdettua riisiä',
+          'Sagohelmiä ja siirappia',
+          'Hienoksi murskattua jäätä',
+          'Makeutettua kookosmaitoa',
+          'Paahdettua riisijauhoa',
         ],
         oikea: 0,
         fakta: 'Isompi sanko on täynnä lämmintä tofua, ja annos kootaan vasta '
@@ -24267,7 +24267,7 @@ export const MAA_KATEGORIAT = {
           lahde: 'Juan Luna, Wikimedia Commons (PD)',
         },
         {
-          otsikko: 'Kuvio nähdään unessa',
+          otsikko: 'Kangas kudotaan banaanin kuidusta',
           tiedosto: 'T\'nalak cloth of the T\'boli people from Lake Sebu.jpg',
           teksti: 'Etelä-Cotabatossa Sebu-järven rannoilla t\'boli-naiset '
               + 'kutovat t\'nalak-kangasta abakabanaanin kuidusta. Kuviota ei '
@@ -24289,7 +24289,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä t\'nalak-kankaan kuvio saadaan?',
         vaihtoehdot: [
-          'Kutojan unesta',
+          'Kutoja näkee sen unessa',
           'Vanhoista mallikirjoista',
           'Kirkon ikkunoista',
           'Merilevän muodoista',
@@ -24385,10 +24385,10 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Diego Cera hautasi bambut rantahiekkaan?',
         vaihtoehdot: [
-          'Suojaksi hyönteisiltä',
+          'Jotta hyönteiset eivät söisi niitä',
           'Jotta ne taipuisivat kaareviksi',
           'Värin tummentamiseksi',
-          'Jotta suola kovettaisi ne',
+          'Jotta meriveden suola kovettaisi ne',
         ],
         oikea: 0,
         fakta: 'Bambut kaivettiin esiin vasta seuraavana vuonna, ja urku '
@@ -24597,7 +24597,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mitä niharin nimi tarkoittaa arabiaksi?',
         vaihtoehdot: [
-          'Aamua',
+          'Aamu',
           'Pataa',
           'Pippuria',
           'Juhlaa',
@@ -24735,7 +24735,7 @@ export const MAA_KATEGORIAT = {
           lahde: 'Shaun Metcalfe, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          otsikko: 'Soitin veistetään yhdestä mulperinrungosta',
+          otsikko: 'Soitin veistetään yhdestä puunrungosta',
           tiedosto: 'Rabab.jpg',
           teksti: 'Rabab on luuttu, jota soitetaan Pakistanin luoteisosissa ja '
               + 'joka on Afganistanin kansallissoitin. Runko kaiverretaan '
@@ -24898,14 +24898,14 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mistä sanasta ajrakin nimen arvellaan tulevan?',
         vaihtoehdot: [
-          'Persian tiiltä tarkoittavasta sanasta',
+          'Persian sanasta ajar',
           'Arabian meren nimestä',
           'Sindhin kaupungin nimestä',
           'Indigokasvin nimestä',
         ],
         oikea: 0,
-        fakta: 'Ajrak annetaan vieraalle kunnianosoituksena sindhiläisen lakin '
-            + 'kanssa.',
+        fakta: 'Ajar tarkoittaa tiiltä, ja nimeen liitetään lisäksi '
+            + 'pienennyspääte.',
       },
     },
   ],
