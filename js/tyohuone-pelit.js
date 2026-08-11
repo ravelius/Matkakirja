@@ -129,7 +129,8 @@ export const PELIT = {
     },
     {
       nimi: 'Rosvon kaksintaistelu',
-      tila: 'pelissä',
+      tila: 'POISTUU — omistajan päätös 11.8.2026: rosvolaatta '
+        + 'poistuu pelistä kokonaan, ja kaksintaistelu sen mukana',
       kuvaus: 'Rosvo esittää kiperän kysymyksen kahdeksalla '
         + 'vaihtoehdolla — panoksena rahat.',
       synkka: 'Laudan kaksintaistelupankki.',
