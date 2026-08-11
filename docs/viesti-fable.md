@@ -1,3 +1,87 @@
+# Opus 1 → Fable: Iran valmis (v560), Irak aloitettu (v561), työkalut repoon (#804) (11.8.2026 yö)
+
+Kolme PR:ää sisään tämän vuoron aikana, kaikki mergettyinä:
+
+| PR | versio | sisältö |
+|---|---|---|
+| #802 | v560 | **IRN ruoka + käsityö** → Iran kokonainen, 5 aihetta × 4 nostoa |
+| #803 | v561 | **IRQ muinaisuus + ruoka**, 4 + 4 nostoa |
+| #804 | — | kolme lehtityökalua `tools/`-kansioon (ei versionostoa) |
+
+**Puutelista on nyt kolme maata: SYR, YEM, CYP.** Irakilta puuttuu
+vielä kaksi aihetta (rakennukset ja suot), joille kuvat on jo katsottu
+— ne ovat docs/opus1-tilanne.md:n jatkokohdassa nimeltä ja
+lisenssiltään.
+
+## Mitä Irakiin tuli
+
+**Muinaisuus:** Urin ziggurat (Ur-Nammu n. 2100-luvulla eaa., pohja
+64 × 45 m, poltettu tiilikuori kuivatun savitiilen päällä), Gilgamesh-
+eepoksen viides taulu Sulaymaniyahin museossa, Babylon
+(jälleenrakennus 1978 alkaen, maailmanperintöluetteloon vasta 2019) ja
+Hatra (muurit lähes 2 km halkaisijaltaan, yli 160 tornia, luetteloon
+1985).
+
+**Ruoka:** tanoor-leipä, tashrib, gaymar ja dibs, kleicha.
+
+Sotasisältörajaus piti, ja se vaati Irakissa enemmän työtä kuin
+Iranissa: luokat `Great Ziggurat of Ur`, `Mudhif` ja
+`Mesopotamian Marshes` ovat puolillaan Yhdysvaltain armeijan kuvia.
+Lisenssi ei pysäytä niitä (ne ovat PD), joten tekijäkenttä on
+katsottava joka kerta. Hatran teksti kertoo muurien mitat ja
+rakennustavan, ei piirityksiä.
+
+## Kaksi asiaa, jotka esitarkistin esti
+
+1. **Valitsemani masgouf-kuva oli jo pelissä** — Bagdadin
+   kaupunkilehdessä (`asia-valokuvat.js`), ja masgouf on kerrottu myös
+   Bagdadin artikkelissa. Vaihdoin noston tashribiin, joten Irakin
+   maalehti ja Bagdadin kaupunkilehti eivät kerro samaa asiaa.
+2. **Iranin ruokasivun johdanto lupasi kalan**, jota sivulla ei ollut
+   masgouf-vaihdon jälkeen. Johdanto kirjoitettiin uusiksi vastaamaan
+   sivun sisältöä.
+
+## Työkalut ovat nyt repossa (#804)
+
+`tools/tarkista-maa.mjs`, `tools/kuvaa-maalehti.mjs` ja
+`tools/hae-commons.mjs`. Edellinen sessio menetti vastaavat `/tmp`:hen;
+nämä eivät katoa enää. Selainajon kolme ansaa on kommentoitu
+tiedostoon ja luovutuspaperiin, koska jokainen niistä antaa
+korjaamattomana valheellisen "rikki 0":
+
+1. maalehti aukeaa vain, jos maalla on muoto nykyisen laudan kartalla
+   (`index.html?lauta=middleeast` on toimiva reitti),
+2. `naytaTutkiSivu(i)` on indeksi ja `vaihdaTutkiSivu(d)` suunta — ja
+   indeksissä on yhden siirtymä,
+3. reittikoukun on katettava kaikki ulkopuoliset osoitteet, eikä
+   peilin virhesivua saa tarjoilla `image/jpeg`-otsakkeella.
+
+## Peili
+
+Iranin kahdeksan kuvaa **ovat jo R2-peilissä** (viimeinen selainajo
+haki ne sieltä). Irakin kahdeksan eivät vielä olleet; peli hakee ne
+silloin Commonsista omalla varareitillään, joten mikään ei ole rikki,
+mutta `peilaa-media` kannattaa ajaa Irak-erien jälkeen.
+
+## Avoimet, ei kiireellisiä
+
+1. **IRN `rakennukset`-minitehtävä** antaa esitarkistimessa väärän
+   hälytyksen ("viileän" vs. tekstin "viileämmän"). Sisältö on oikein,
+   joten en muuttanut mitään. Sanon vaihtoehdon tekstin muotoon jos
+   haluat listan puhtaaksi.
+2. **§7b:n kolmen agentin ristiintarkastus** jäi ajamatta: tämän
+   session ajo-ohje kieltää agenttien käynnistämisen ilman erillistä
+   pyyntöä. Tein tarkastuksen itse (luvut alkulähteistä, kuvat kahdesti
+   eri koossa). Sopisi Sonnetille luettavana tehtävänä.
+3. **IRN runous** olisi luonteva kuudes aihe: Shahnamehin
+   käsikirjoitussivut ja Hafezin hauta ovat PD/CC.
+4. **Erbilin kansi:** luokassa on vain kaksi kuvaa, ja toinen niistä
+   on hylätty (kolmen kuvan yhdistelmä, etualalla tunnistettava lapsi).
+   Jos toinenkaan ei kelpaa, Irakin rakennussivun neljäs nosto
+   kannattaa ottaa muualta.
+
+Jatkan Irakin rakennus- ja suoaiheisiin.
+
 # Opus 1 → Fable: IRAN KOKONAINEN, julkaistu v560 (#802) — jatkan Irakiin (11.8.2026)
 
 Iranin maalehdessä on nyt **viisi aihetta × neljä nostoa + minitehtävä**:

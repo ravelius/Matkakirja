@@ -287,9 +287,16 @@ mainita raportissa.
 - **Mudhif, ruokomaja:** `Sumerian Mudhif-guesthouse, Southern Eastern
   marshes, Iraq.jpg` (Hassan Al-Jarrah, CC BY-SA 4.0) — sisäkuva
   ruokokaarista, päädyssä ristikkoseinät ja yksi työskentelevä ihminen.
-- Vielä katsomatta: `سور قلعة أربيل الأثري.jpg` (Erbilin kansi,
-  JEHAN SHERKO, CC BY-SA 4.0) ja `Marsh Arab Canoes (30928817552).jpg`
-  (David Stanley, CC BY 2.0).
+- **Suomaisema:** `Marsh Arab Canoes (30928817552).jpg` (David Stanley,
+  CC BY 2.0) — pitkiä kapeita mashuf-veneitä täynnä leikattua ruokoa
+  rannassa, takana ruovikko ja avovesi. Katsottu, kelpaa.
+- **Erbilin kansi:** `Pictures of tourists near Erbil Citadel.jpg`
+  **HYLÄTTY** — se on kolmen kuvan yhdistelmä, jossa etualalla on
+  yksittäinen tunnistettava lapsi. Luokassa on vain kaksi tiedostoa,
+  joten toinen (`سور قلعة أربيل الأثري.jpg`, JEHAN SHERKO,
+  CC BY-SA 4.0) on katsottava ennen käyttöä; jos sekään ei kelpaa,
+  neljäs rakennusnosto kannattaa ottaa muualta (esim. Bagdadin
+  Mustansiriya tai Ktesifonin holvi) eikä Erbilistä.
 
 **Sotasisältörajaus on Irakissa tiukempi kuin Iranissa.** Luokat
 `Great Ziggurat of Ur`, `Mudhif` ja `Mesopotamian Marshes` ovat

@@ -15912,6 +15912,182 @@ export const MAA_KATEGORIAT = {
             + 'itsestään, se putoaa uunin pohjalle.',
       },
     },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Irakissa on rakennettu tiilestä yhtäjaksoisesti tuhansia '
+          + 'vuosia, koska rakennuskiveä ei tasangolla juuri ole. Tiili taipuu '
+          + 'kaareksi ja holviksi, ja samalla tekniikalla on tehty sekä '
+          + 'autiomaan linnoitus että kaupungin koulu.',
+      nostot: [
+        {
+          otsikko: 'Kierre nousee ulkopuolelta',
+          tiedosto: 'The spiral minaret in Samarra.jpg',
+          teksti: 'Samarran suuren moskeijan minareetti tunnetaan nimellä '
+              + 'Malwiya eli kierre. Se on 52 metriä korkea ja pohjaltaan 33 '
+              + 'metriä leveä, ja huipulle noustaan ulkopintaa kiertävää '
+              + 'ramppia pitkin — sisällä ei ole portaita lainkaan. Torni '
+              + 'valmistui kalifi al-Mutawakkilin käskystä vuosina 848–852. '
+              + 'Itse moskeija oli aikanaan valtava: sen ala oli noin 166 000 '
+              + 'neliömetriä. Samarran arkeologinen kaupunki otettiin '
+              + 'maailmanperintöluetteloon vuonna 2007.',
+          selite: 'Ilmakuva kartiomaisesta tiilitornista, jonka kylkeä kiertää '
+              + 'ylöspäin leveä ramppi ilman kaidetta. Torni seisoo laajalla '
+              + 'hiekkakentällä; oikealla näkyy moskeijan matala ulkomuuri '
+              + 'torneineen ja taustalla matalaa kaupunkia.',
+          lahde: 'Jim Gordon, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Suorakaide keskellä autiomaata',
+          tiedosto: 'Al-Ukhaidir Fortress (30655095821).jpg',
+          teksti: 'Al-Ukhaidirin linnoituspalatsi rakennettiin noin vuonna 775. '
+              + 'Rakennuttajaksi mainitaan Isa ibn Musa, abbasidikalifi '
+              + 'as-Saffahin veljenpoika. Muurien sisällä on kokonainen pieni '
+              + 'kaupunki: vastaanottosali, iwan eli päädystään avoin '
+              + 'holvihuone, asuinsiivet, moskeija ja useita pihoja, jotka '
+              + 'yhdistyvät käytävillä ja kaaririveillä. Vastakohta on '
+              + 'tahallinen — ulkoa mahtava mittakaava, sisältä ahtaat '
+              + 'asuinhuoneet.',
+          selite: 'Laaja suorakaiteen muotoinen raunioalue hiekkatasangolla. '
+              + 'Etualalla on paksu muuri, jota jäsentävät puolipyöreät '
+              + 'tornimaiset pilarit; sisäpuolella näkyy katottomia huoneita '
+              + 'ruudukossa. Takana kohoaa korkeampi muuri, jonka pinnassa on '
+              + 'kahdessa kerroksessa kaarikäytäviä.',
+          lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Neljä koulukuntaa saman pihan ympärillä',
+          tiedosto: 'المدرسة المستنصرية في بغداد (3).jpg',
+          teksti: 'Bagdadin Mustansiriya-madrasa vihittiin käyttöön 6. '
+              + 'huhtikuuta 1233 kalifi al-Mustansirin perustamana. Se oli '
+              + 'aikansa poikkeus: neljä sunnalaista lakikoulukuntaa opiskeli '
+              + 'saman pihan ympärillä, ja opetukseen kuuluivat myös '
+              + 'lääketiede, matematiikka, algebra ja kielioppi. Kirjasto sai '
+              + 'kalifilta 80 000 nidettä, ja opiskelijat saivat ruoan, '
+              + 'asunnon, vaatteet ja kuukausirahan. Pihalle valmistui vuonna '
+              + '1235 vesikello, joka ilmoitti rukoushetket. Rakennus kuuluu '
+              + 'nykyään Mustansiriyan yliopistolle.',
+          selite: 'Suorakaiteen muotoinen sisäpiha, jota kiertää kaksikerroksinen '
+              + 'kaarikäytävä hiekanvärisestä koristetiilestä. Päädyssä avautuu '
+              + 'korkea suippokaarinen porttiholvi, sen takana näkyy '
+              + 'turkoosikuvioinen minareetti ja sininen kupoli. Pihan poikki '
+              + 'kasvaa taatelipalmu, ja etualan vesialtaasta koko julkisivu '
+              + 'heijastuu ylösalaisin.',
+          lahde: 'Taisir Mahdi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Holvi ilman yhtään pilaria',
+          tiedosto: '001125-TaqKasra-Iraq-IMG 7960-2.jpg',
+          teksti: 'Ktesifonin Taq Kasra on sasanidien palatsin jäänne: avoin '
+              + 'holvisali, jonka korkeus on 37 metriä, leveys 26 metriä ja '
+              + 'syvyys 50 metriä. Se on maailman toiseksi suurin yhden '
+              + 'jännevälin holvi, joka on muurattu raudoittamattomasta '
+              + 'tiilestä. Rakennusvuodesta kiistellään: ehdolla ovat sekä '
+              + 'Shapur I (242–272) että Khosrow I 540-luvun jälkeen. Tiilet '
+              + 'ladottiin noin 18 asteen kulmaan pystysuorasta, jolloin holvi '
+              + 'kantoi itsensä jo muurausvaiheessa. Tulva vei suuren osan '
+              + 'rakennuksesta vuonna 1888, ja osa siitä romahti vielä '
+              + 'maaliskuussa 2019.',
+          selite: 'Korkea tiilijulkisivu, jonka pintaa jäsentävät neljä '
+              + 'kerrosta pieniä umpikaaria ja puolipylväitä. Oikealla avautuu '
+              + 'valtava paraabelin muotoinen holvi, jonka edessä on '
+              + 'metallitelineitä korjaustyötä varten. Taivas on syvänsininen '
+              + 'ja aukion hiekkapinta tyhjä.',
+          lahde: 'Safa Daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Taq Kasran holvi kantoi itsensä jo muurattaessa?',
+        vaihtoehdot: [
+          'Tiilet ladottiin kulmaan',
+          'Sisälle muurattiin pilari',
+          'Puumuotti jätettiin paikalleen',
+          'Holvi valettiin kipsistä',
+        ],
+        oikea: 0,
+        fakta: 'Nopeasti kuivuva laasti teki saman työn kuin muotti: jokainen '
+            + 'kerros kantoi itsensä ennen kuin seuraava ladottiin.',
+      },
+    },
+    {
+      id: 'suot',
+      nimi: 'Suot',
+      johdanto: 'Tigris ja Eufrat päättyvät samaan paikkaan: laajaan '
+          + 'kosteikkoon Basran pohjoispuolella. Siellä ruoko on rakennusaine, '
+          + 'vesipuhveli kotieläin ja vene ainoa tie naapuriin.',
+      nostot: [
+        {
+          otsikko: 'Saari tehdään itse',
+          tiedosto: '2019-03-27 Marshes Iraq Suq al-shuyukh belem.jpg',
+          teksti: 'Etelä-Irakin soilla asutaan keinosaarilla: ruokoa niitetään, '
+              + 'kasataan kerroksiksi ja poljetaan tiiviiksi, kunnes syntyy '
+              + 'kuiva alusta majalle ja karjalle. Saari vaatii jatkuvaa '
+              + 'huoltoa, koska pohja painuu ja vesi nousee. Vesipuhveli on '
+              + 'talouden keskus: se syö ruokoa ja antaa maidon, josta tehdään '
+              + 'gaymar. Soiden alue otettiin maailmanperintöluetteloon vuonna '
+              + '2016, ja se on harvinainen sekakohde — luettelointi kattaa '
+              + 'sekä kosteikot että kolme muinaista kaupunkia.',
+          selite: 'Matala ruokosaari keskellä avovettä iltavalossa. Saarella on '
+              + 'tummalla peitteellä katettu kaarevakattoinen maja ja sen '
+              + 'vieressä musta vesipuhveli. Oikealla seisoo mies pitkässä '
+              + 'kapeassa veneessä käsi ylhäällä. Taivaalla on rikkonaista '
+              + 'pilveä.',
+          lahde: 'Pharling, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Yksi huone, monta kaarta',
+          tiedosto: 'Sumerian Mudhif-guesthouse, Southern Eastern marshes, Iraq.jpg',
+          teksti: 'Sisältä mudhif on yksi ainoa pitkä huone. Kaaret on tehty '
+              + 'paksuista ruokonipuista, jotka on taivutettu vastakkain ja '
+              + 'sidottu yhteen, ja ne jaksottavat tilan holvikäytäväksi. '
+              + 'Päädyt ovat ruokomattoa, johon on punottu ristikkokuvioita '
+              + 'niin että valo pääsee sisään. Lattia peitetään matoilla ja '
+              + 'vieraat istuvat seinustoilla. Maja on kylän juhla- ja '
+              + 'neuvottelutila: siellä otetaan vastaan vieraat, pidetään häät '
+              + 'ja surraan vainajia. Samanmuotoinen rakennus on kuvattu jo '
+              + 'Urukin kivikaiverrukseen noin vuonna 3300 eaa., joten muoto on '
+              + 'lähes viisituhatta vuotta vanha.',
+          selite: 'Ruokomajan sisänäkymä. Peräkkäiset kaaret muodostavat '
+              + 'holvikäytävän, jonka seinät ja katto ovat tiiviisti sidottua '
+              + 'ruokoa. Päädyssä on ristikkokuvioisia mattoseiniä, joiden '
+              + 'lomitse paistaa päivänvalo, ja aukosta näkyy ulos. Lattialla '
+              + 'on irtonaista olkea ja yksi ihminen seisoo pylvään vieressä.',
+          lahde: 'Hassan Al-Jarrah, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ruokosato veneellä',
+          tiedosto: 'Marsh Arab Canoes (30928817552).jpg',
+          teksti: 'Ruoko on soiden sato: se niitetään veneeseen ja tuodaan '
+              + 'rantaan sekä rehuksi että rakennusaineeksi. Sama kasvi on '
+              + 'majan runko, mattojen materiaali ja puhvelin talviruoka. '
+              + 'Kosteikon pinta-ala riippuu siitä, paljonko jokivettä sinne '
+              + 'päätyy: 1900-luvun loppupuolella vettä ohjattiin kanaviin ja '
+              + 'yläjuoksulle nousi patoja, ja jäljellä oli enää noin '
+              + 'kymmenesosa entisestä. 2000-luvun alussa osa vedestä '
+              + 'palautettiin, ja vuoden 2006 lopussa noin 58 prosenttia '
+              + 'kosteikosta oli taas veden alla. Kuivat vuodet ovat sen '
+              + 'jälkeen laskeneet osuuden noin kolmannekseen.',
+          selite: 'Neljä pitkää ja kapeaa venettä on vedetty loivaan '
+              + 'hiekkarantaan. Jokaisessa on iso kasa vastaniitettyä vihreää '
+              + 'ruokoa, ja kahdessa on perämoottori. Veneiden vierellä seisoo '
+              + 'viisi ihmistä. Takana avautuu matala vesi ja laaja ruovikko '
+              + 'horisonttiin asti.',
+          lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä mudhif-majan kaaret tehdään?',
+        vaihtoehdot: [
+          'Taivutetuista ruokonipuista',
+          'Halkaistuista palmunrungoista',
+          'Kuivatuista härän nahoista',
+          'Poltetuista savitiilistä',
+        ],
+        oikea: 0,
+        fakta: 'Niput työnnetään maahan hieman vastakkaisiin kulmiin, jolloin ne '
+            + 'vetävät toisiaan vastaan ja jäykistävät koko rakenteen.',
+      },
+    },
   ],
   JOR: [
     {
