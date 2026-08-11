@@ -1,4 +1,4 @@
-# Opus 1:n tilanne (päivitetty 11.8.2026)
+# Opus 1:n tilanne (päivitetty 11.8.2026 aamulla)
 
 Tämä on **luovutuspaperi**: seuraava Opus-sessio toisella tilillä voi
 jatkaa suoraan tästä ilman edellisen session kontekstia. Voimassa olevat
@@ -11,7 +11,7 @@ työkalut. **Tarinatekstit eivät kuulu tälle kaistalle** — saapumistekstit,
 kohtaamiset, aarrevihjeet ja kulttuurivisat kirjoittaa Fable. Jos
 tarinatekstissä on vika, se raportoidaan Fablelle eikä korjata itse.
 
-> **AJANTASAINEN TILANNE ON KOHDASSA 1b.** Kohdat 1–2 kuvaavat
+> **AJANTASAINEN TILANNE ON KOHDASSA 1c.** Kohdat 1–2 kuvaavat
 > 10.8. tilannetta ja ovat osin vanhentuneita; ne on jätetty siksi,
 > että niiden opit (kohdat 3–8) ovat yhä voimassa.
 
@@ -214,6 +214,136 @@ turvallisempi kuin 2 900 kuvan lataus.
 **Paikallinen kopio on osa lisenssiä.** Jos kuvan lisenssi on
 kielletty, pelkkä viittauksen vaihto ei riitä: repo levittää yhä
 tiedostoa `assets/valokuvat`-kansiosta. Poista myös tiedosto.
+
+## 1c. JATKOKOHTA: SYYRIA VALMIS, JEMEN ALOITETTU (11.8.2026 aamu)
+
+*Tämä on tuorein jatkokohta. Kohta 1b on edellisen session tilanne ja
+osin vanhentunut; sen opit (kohdat 3–8) ovat yhä voimassa.*
+
+**Mainissa nyt:** SYR kokonainen (v564, #807) — historia, käsityö,
+ruoka; 11 nostoa. Haara on nollattu mainiin (v565).
+
+**Seuraavaksi: YEM, sitten CYP.** Sen jälkeen ME-puutelista on tyhjä
+ja Fablelle raportoidaan kokonaisyhteenveto.
+
+### Jemenin päällekkäisyydet on jo kartoitettu — lue tämä ensin
+
+Tein tämän valmiiksi, joten älä tee uudestaan. **Kaksi Fablen
+ehdottamaa suuntaa on jo varattu**, ja se selviää vain kartta- ja
+kaupunkisivuja lukemalla:
+
+| Varattu | Missä |
+|---|---|
+| Sokotra **kokonaan**: traakkipuu, endeemisyys, pullorunkopuu, sokotran kieli, 50 000 asukasta, Unesco 2008, 132 km | maan **karttasivun nosto** (`maakartat.js`) |
+| Sanaan tornitalot, mafraj, kipsikehysikkunat, 2 250 m | Sanaan **kaupunkiartikkeli** |
+| Adenin kraatteri, Tawilan vesisäiliöt, Suezin hiiliasema, Bab el-Mandeb | Adenin artikkeli, **kuvasivu JA neljä visakysymystä** |
+| Suitsuke | Omanin Salalah-visa |
+
+Sanaalla ei ole kuvasivua, Adenilla on. **Vapaita ja lupaavia:**
+Shibam, Marib, Zabid, Dar al-Hajar, mokkakahvi ja al-Makha, qishr,
+sidr-hunaja, saltah ja hulba, Harazin vuoriterassit.
+
+### Jemenin kuvat: yksi katsottu hyväksi, yksi ansa löytyi
+
+- **HYVÄ:** `Shibam Wadi Hadhramaut Yemen.jpg` (Jialiang Gao,
+  CC BY-SA 3.0, 2000×1320). Savitiilitornikaupunki iltavalossa,
+  takana jyrkkä pöytävuoren reuna. Katsottu, kelpaa.
+- **ANSA:** `Marib dam.jpg` (Bernard Gagnon, CC BY-SA 3.0) EI ole
+  muinainen saba-lainen pato vaan **vuoden 1986 nykypato** —
+  louhekivinen maapato ja tekojärvi. Jos kirjoitat muinaisesta
+  padosta ja käytät tätä kuvaa, teet saman virheen kuin minä
+  boozasaavin kanssa. Muinaisen padon jäänteet ovat kivisulkuja;
+  etsi ne erikseen tai kirjoita nykypadosta.
+- **VÄLTÄ Marib-haun PD-kuvat**, joissa on presidenttejä
+  avajaisseremoniassa: ne ovat poliittisia muotokuvia.
+- Katsomatta vielä: `Dar Al Hajar, Wadi Dhahr, Yemen (4325726246).jpg`
+  (yeowatzup, CC BY 2.0) ja Hasso Hohmannin Shibam-lähikuvat
+  (CC BY 4.0).
+
+### UUSI KUVASÄÄNTÖ: tarkista taustan seinät suurennettuna
+
+Valitsin Syyrian käsityösivulle damaskoslaisen verstaskuvan ja
+**katsoin sen itse 960 px:n levyisenä huomaamatta mitään**.
+Tarkastusagentti löysi kuvan yläreunasta kehystetyn **Bashar
+al-Assadin muotokuvajulisteen**. Latasin 3840 px:n alkuperäisen ja
+rajasin kohdan kuusinkertaiseksi: ei tulkinnanvaraa. Kuva vaihdettiin.
+
+**480–600 px riittää kuvan pääkohteeseen mutta ei taustan
+poliittisiin merkkeihin.** Kadulla ja liikkeissä otetuissa kuvissa
+seinillä on julisteita, ja pikkukuvassa valtionpäämies on kymmenen
+pikselin täplä. Tee näin: lataa alkuperäinen täysikokoisena ja rajaa
+seinät ja ikkuna-aukot erikseen 4–6-kertaisiksi. Rajaustyökalu on
+helppo tehdä uudelleen (Playwright + `/opt/pw-browsers/chromium`,
+`import pkg from '/opt/node22/lib/node_modules/playwright/index.js'`
+— `playwright` ei löydy paketin nimellä eikä sillä ole named
+exportia): aseta kuva luonnollisiin pikselimittoihin negatiivisilla
+left/top-arvoilla ja ota ruutu viewportin kokoisena.
+
+Sama tarkkuus kannattaa kohdistaa myös siihen, **onko kuvassa se,
+mitä otsikko lupaa.** Boozanoston saavi näytti työn alla olevalta,
+mutta rajattuna se oli tyhjä: paljas metallipohja ja kuivunut valuma.
+
+### tarkista-maa.mjs:n sokea piste: kulttuurivisat
+
+Työkalu lukee vain `kysymys:`-avaimia. **Kaupunkien kulttuurivisat
+käyttävät avainta `q:`, eikä työkalu näe niitä lainkaan.** Syyriassa
+kolme neljästä päällekkäisyydestä oli juuri visoissa (Aleppon
+saippua, damastikangas, Damaskoksen teräs). Löysin ne käsin:
+
+    grep -n "^  <kaupunki>:" -A 40 js/packs/middleeast-questions.js
+
+**Ehdotettu parannus (kirjattu Fablelle):** lisää työkaluun `q:`- ja
+vastausvaihtoehtojen tekstihaku uuden maan aiheita vasten.
+
+### Julkaisukaavan kaksi korjausta (Fablen palaute 11.8.)
+
+1. **Aja `uusi-versio.mjs` vasta JUURI ennen PR:n avaamista**, `git
+   fetch origin main` välittömästi ennen. Ajoin sen liian aikaisin, ja
+   Fable joutui viimeistelemään mergen puolestani, kun hänen v563:nsa
+   ehti mainiin välissä. Jos PR odottaa pitkään, aja nosto uudelleen
+   ennen mergeä.
+2. **Jos CI ei käynnisty, aja portit paikallisesti ja kirjaa se
+   PR:ään.** #807:n Testit-ajo ei koskaan lähtenyt (Actions-häikkä);
+   tyhjä commit ei herättänyt sitä. Hiljainen CI ei ole vihreä CI.
+
+### Haaran nollaus mainiin: `checkout -B` ja `reset --hard` on estetty
+
+Julkaisusääntö 6 sanoo nollaamaan haaran komennolla
+`git checkout -B <haara> origin/main`. **Lupaluokitin estää sen ja
+myös `git reset --hard origin/main` -komennon** (ne hävittävät
+historiaa). Toimiva ja turvallinen kierto:
+
+    git fetch origin main
+    git merge origin/main
+    # ratkaise KAIKKI konfliktit mainin hyväksi:
+    for f in $(git diff --name-only --diff-filter=U); do
+      git checkout origin/main -- "$f" && git add "$f"; done
+    git diff origin/main --stat    # <-- PITÄÄ OLLA TYHJÄ, tarkista
+    git commit && git push
+
+Se `git diff origin/main --stat` -tarkistus on koko kierron pointti:
+se todistaa, ettei mitään mainin sisältöä jäänyt yli eikä oman haaran
+vanhaa sisältöä herännyt henkiin. Jos etähaara on ehtinyt liikkua
+(Fable saattoi mergetä mainin siihen), sama tehdään toiseen kertaan
+`origin/<haara>`-haaraa vasten.
+
+### Lippulinjaus (Fable 11.8.)
+
+**Maalehdet näyttävät nykymaailman**, eli Syyrian lippu päivitetään
+2024 jälkeiseen versioon — mutta **jaetun maadatan eränä jonossa, ei
+lehtityön yhteydessä.** Älä koske siihen omalla kaistallasi. Samaa
+vanhaa lippua on rintapinssinä Syyrian lasinmaalauskuvassa; se jää
+ennalleen, kunnes otsikkolippu vaihdetaan.
+
+### Miksi Syyriassa on kolme sivua eikä neljää
+
+Etsin luonto- ja musiikkisivun kuvat ja hylkäsin molemmat aiheet
+**kuvapulan takia, en aiheen takia.** Syyrian maisemakuvasto
+Commonsissa on ohutta ja `Category:Music of Syria` on 14 tiedostoa.
+Yksi hyvä luontokuva löytyi, jos Fable haluaa neljännen sivun:
+`Al Khawabi River - tartus - 2019.jpg` (ACEsAF, CC BY-SA 4.0) —
+vihreät metsäiset vuoret, kevätniitty ja retkeilijöitä. Se rikkoisi
+mielikuvan Syyriasta pelkkänä aavikkona.
 
 ## 1b. JATKOKOHTA: ME-lehdet kesken (11.8.2026, aamuyö)
 
