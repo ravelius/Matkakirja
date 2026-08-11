@@ -509,3 +509,18 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .euro-pituus.hyva { background: rgba(94, 196, 154, 0.16); }
   .euro-pituus.yli { background: rgba(224, 169, 74, 0.18); }
 }
+
+/* Uusittu-merkki (omistajan pyyntö 11.8.2026): aamupäivän
+ * mysteeriselvityksen jälkeen uusitut kohteet erottuvat listassa. */
+.euro-uusi {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid #b0304a;
+  border-radius: 0.6rem;
+  color: #b0304a;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
+  white-space: nowrap;
+}

@@ -448,6 +448,22 @@
       (PACKS.find((p) => p.id === 'europe')?.cities ?? []).map((c) => c.id),
     );
     const EURO_KOHTEET = KAARI_PAKETIT.kohteet.filter((m) => EU_KAUPUNGIT.has(m.id));
+    /* Omistajan pyyntö 11.8.2026: aamupäivän mysteeriselvityspyynnön
+     * JÄLKEEN uusitut kohteet merkitään ja nostetaan sivun kärkeen
+     * (mitattu kenttävertailulla v567 → v573; erät 2–3, Sonnet-
+     * korjaukset ja kulkija-passi). Lista päivitetään käsin, kun
+     * uusia hiontaeriä julkaistaan. */
+    const UUSITUT_AAMUN_JALKEEN = new Set(['praha', 'istanbul', 'venetsia',
+      'budapest', 'lontoo', 'pariisi', 'berliini', 'rooma', 'madrid',
+      'ateena', 'lissabon', 'amsterdam', 'edinburgh', 'barcelona',
+      'granada', 'marseille', 'varsova', 'krakova', 'alpit', 'kreeta',
+      'dubrovnik', 'sofia', 'bukarest', 'odessa', 'moskova', 'pietari',
+      'helsinki', 'tallinna', 'vilna', 'oslo', 'kobenhavn', 'lappi',
+      'islanti']);
+    const EURO_JARJESTYS = [
+      ...EURO_KOHTEET.filter((m) => UUSITUT_AAMUN_JALKEEN.has(m.id)),
+      ...EURO_KOHTEET.filter((m) => !UUSITUT_AAMUN_JALKEEN.has(m.id)),
+    ];
 
     /*
      * Pituusbudjetti docs/kaariteksti-sapluuna.md:stä (omistajan sääntö
@@ -579,6 +595,11 @@
 
       const ylin = el('div', 'euro-ylin');
       ylin.append(el('h3', '', `${numero}. ${m.otsikko}`));
+      if (UUSITUT_AAMUN_JALKEEN.has(m.id)) {
+        const uusi = el('span', 'euro-uusi', 'UUSITTU 11.8.');
+        uusi.title = 'Kirjoitettu uusiksi aamupäivän mysteeriselvityksen jälkeen';
+        ylin.append(uusi);
+      }
       const mittari = el('span', `euro-pituus ${yhteensa <= BUDJETTI.yhteensa ? 'hyva' : 'yli'}`);
       mittari.textContent = `${yhteensa} / ${BUDJETTI.yhteensa}`;
       mittari.title = osat.map(([f, n]) => `${f} ${n}/${BUDJETTI[f]}`).join(' · ');
@@ -613,7 +634,7 @@
     $('eurotekstit-yhteenveto').replaceChildren(rakennaYhteenveto());
     $('eurotekstit-selite').replaceChildren(rakennaTagiSelite());
     $('eurotekstit').replaceChildren(
-      ...EURO_KOHTEET.map((m, i) => rakennaKohde(m, i + 1)),
+      ...EURO_JARJESTYS.map((m, i) => rakennaKohde(m, i + 1)),
     );
 
     const napit = [...document.querySelectorAll('#valilehdet button')];

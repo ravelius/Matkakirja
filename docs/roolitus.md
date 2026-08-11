@@ -71,15 +71,15 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 
 | Rooli | Sessio-id | Kirjattu |
 | --- | --- | --- |
-| Fable | session_01BPysCfxscsVyzAEYmb88Zr | 10.8.2026 (uusi tili) |
-| Fable max (apusessio) | session_01U8NqxuC5RCoMozxGqDzEJm | 10.8.2026 |
-| Opus 1 | session_01RZAfWgFGP3dw4p4FMUTJ7v | 11.8.2026 (jatkosessio; edellisen session_01LrZTPX64… konteksti täyttyi Iranin puutarhat-aiheen jälkeen, luovutus docs/opus1-tilanne.md 1b) |
+| Fable | LUOVUTETTU 11.8.2026 ~10.45Z — krediitit täynnä; uusi Fable perustetaan TOISELLE tilille (jatkoprompti annettu omistajalle; edellinen: session_01BPysCfxscsVyzAEYmb88Zr, päiväsaldo v557–v575) | 11.8.2026 |
+| Fable max (apusessio) | session_01NQpicvHRAzUpX4NfcYwsyv (Fable max 2; EI vastaanota viestejä tilinvaihdon jälkeen — uusi tili perustaa oman Max-session tarvittaessa. Vanha session_01U8Nqxu… arkistoitu 11.8. konttivian takia) | 11.8.2026 |
+| Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |
 | Sonnet 1 | session_0184WdPeGzjAbnuXjWvquN8Q | 10.8.2026 (5. yritys; aiemmat kaatuivat source_url-vikaan, ks. fable-tilanne) |
 | Sonnet 2 | — (perustetaan kun ME-jono aukeaa) | 10.8.2026 |
 | Opus 3 (aarrekuvat) | — (valmis ja arkistoitu: 7 pääaarteen kuvat mainissa v524) | 10.8.2026 |
 | Opus 4 (varustekuvat) | — (valmis ja arkistoitu: 5 varustekuvaa mainissa v541) | 10.8.2026 |
-| Opus 5 (vuorigalleriat + kuvatyöt) | session_015EzqrmmDkMCBzenZ5Ud5Mq | 10.8.2026 (52/52 valmis v555; jatkaa peiliajolla ja kuvaerillä) |
+| Opus 5 (koodi + kuvatyöt) | session_01PD29g5Bs2A6TQSMNnrHRDc (Opus 5 (2): toteuttaa seitsemän tähteä + lento -mekaniikkaa haaralle claude/opus5-vuorikuvat; UUSI FABLE katselmoi ja julkaisee. Vanha session_015Ezqr… arkistoitu — sen mekaniikkakartoitus ja galleriaurakka 52/52 mainissa) | 11.8.2026 |
 
 Vanhan tilin sessiot (8.8.2026 taulukko) ovat arkistoituja eivätkä
 tee enää työtä. **Fable max** on omistajan 10.8.2026 tilaama
