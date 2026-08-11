@@ -497,47 +497,6 @@ const EU_EDGES = [
   { a: 'islanti', b: 'tromssa', steps: 5, type: 'sea', via: [[290, 32], [450, 38]] },
 ];
 
-/*
- * Isoisän aarrevihjeet neljänä ilmansuuntana (omistajan linjaus
- * 7.8.2026: "Niitä vihjeitä riittää vain pari ja niihin voisi
- * generoida äänen myös"). Jokainen aarre-ehdokaskaupunki kuuluu
- * yhteen alueeseen; teksti kertoo suunnan, ei koskaan kaupunkia.
- * Luennat: assets/audio/puhe-europe-vihje-<alue>.mp3. Luentateksti
- * on sama kuin vihje, kuiskaustagein — generointi samalla reseptillä
- * kuin tools/generoi-luennat.mjs (stability 0.5).
- */
-const VIHJEALUEET = {
-  pohjoinen: ['islanti', 'tromssa', 'lappi', 'oslo', 'tukholma',
-    'kobenhavn', 'helsinki', 'pietari', 'tallinna', 'riika', 'vilna'],
-  lansi: ['dublin', 'edinburgh', 'amsterdam', 'pariisi', 'lissabon',
-    'madrid', 'barcelona', 'granada', 'marseille'],
-  etela: ['alpit', 'venetsia', 'rooma', 'sisilia', 'ateena', 'kreeta',
-    'dubrovnik', 'sarajevo', 'sofia'],
-  ita: ['berliini', 'praha', 'wien', 'budapest', 'varsova', 'krakova',
-    'bukarest', 'kiova', 'odessa', 'moskova'],
-};
-
-export const VIHJETEKSTIT = {
-  pohjoinen: '"Luettelon rivi vie pohjoiseen — sinne, missä kesäyö ei '
-    + 'pimene ja meri jäätyy talvella. En ehtinyt." Nuoli osoittaa '
-    + 'kartan yläreunaan.',
-  lansi: '"Lännessä, sillä puolen mannerta missä valtameri lyö '
-    + 'rantaan, luettelon rivi odottaa yhä." Sivun reunassa on pieni '
-    + 'ankkuri.',
-  etela: '"Etelässä, lämpimän meren äärellä, missä rauniot ovat '
-    + 'vanhimpia, luettelo lupaa aarteen. Laivani kääntyi liian '
-    + 'aikaisin."',
-  ita: '"Idässä, suurten jokien ja tasankojen maassa, on rivi vailla '
-    + 'rastia. Sinne aioin palata." Hän ei palannut — minä palaan.',
-};
-
-const EUROPE_VIHJEET = {
-  tekstit: Object.fromEntries(Object.entries(VIHJEALUEET)
-    .flatMap(([alue, kaupungit]) => kaupungit.map((id) => [id, VIHJETEKSTIT[alue]]))),
-  alueet: Object.fromEntries(Object.entries(VIHJEALUEET)
-    .flatMap(([alue, kaupungit]) => kaupungit.map((id) => [id, alue]))),
-};
-
 // Lentoreitit kulkevat suoraan kaupungista toiseen yhdellä vuorolla.
 const EU_AIR_ROUTES = [
   { a: 'lontoo', b: 'madrid' },
@@ -656,17 +615,6 @@ export const EUROPE = {
       '"Junat myöhästyvät kaikkialla paitsi Sveitsissä", merkitsi isoisä huolellisesti. Istun asemalla ja katson taulua, joka sanoo saman asian sataviisikymmentä vuotta myöhemmin. Jotkut havainnot eivät vanhene lainkaan.',
       'Isoisä luetteli maanosan suuret joet ja sai ne oikein: Volga, Tonava, Rein, Veiksel. Rajat hän sai väärin lähes kaikki. Vedet pysyivät, rajat eivät — tämä on matkani lyhyin oppitunti.',
     ],
-    /*
-     * Isoisän vihjeet laudan pääaarteesta — omistajan linjaus
-     * 7.8.2026: vihjeitä on vain neljä, yksi per ilmansuunta, ne
-     * nousevat esiin KAUPUNKIEN VÄLILLÄ (game.starHint näyttää ne
-     * vain tien päällä) eivätkä sotke kaupunkien merkintöjä. Kullekin
-     * on luenta: assets/audio/puhe-europe-vihje-<alue>.mp3
-     * (VIHJELUENNAT js/ui.js:ssä, starHintAlue valitsee tiedoston).
-     * Vihje viittaa suuntaan, ei koskaan kaupunkiin.
-     */
-    starHints: EUROPE_VIHJEET.tekstit,
-    starHintAlue: EUROPE_VIHJEET.alueet,
   },
 
   puzzles: EUROPE_PUZZLES,

@@ -16,7 +16,17 @@ export const HARD_BONUS = 100; // palkkio vaikeasta kysymyksestä oikein vastatt
 export const STAR_PRIZE = 2000; // pääaarteen arvo vaellustilassa, jossa peli ei pääty
 export const DUEL_PRIZE = 200; // rosvon saalis, jos kaksintaistelun voittaa suoraan
 export const DUEL_BYPASS_SHOES = 3; // näin monella hevosenkengällä rosvon voi ohittaa
-export const HINT_EVERY_TURNS = 4; // näin harvoin isoisän vihje aarteesta
+
+/*
+ * MANNERLENNON PAIKANVARAAJATEKSTIT (Opus 5, 11.8.2026).
+ *
+ * Nämä kaksi riviä ovat MEKANIIKAN paikanvaraajia, eivät lopullista
+ * tarinatekstiä: Fable kirjoittaa sanamuodot. Ne ovat tässä yhdessä
+ * paikassa eivätkä pakkausten texts-taulussa, koska mannerlento on
+ * laudan sisäinen mekaniikka eikä kuulu yhdellekään mantereelle.
+ */
+export const MANNERLENTO_ILMOITUS = 'Tämän mantereen aarre on löytynyt — matka voi jatkua toiselle mantereelle.';
+export const MANNERLENTO_NAPPI = (kaupunki) => `Toiselle mantereelle: ${kaupunki}`;
 
 // Aika on pelin vastustaja, ei sen tuomari: ajan loppuminen ei päätä peliä
 // koskaan. Vuoro on kuusi tuntia, joten neljä vuoroa on yksi matkapäivä.
@@ -113,6 +123,31 @@ export function mulberry32(seed) {
   };
 }
 
+/**
+ * TALLENNUKSEN MIGRAATIO 1 -> 2: yksi tähti mannerkohtaiseksi tauluksi.
+ *
+ * Versiossa 1 maailmalla oli `starFound` (lippu) ja `starCity`. Version 2
+ * `starsFound` on taulu manner -> kaupunki. Käännös on suora: jos aarre
+ * oli löytynyt, sen kaupunki kertoo mantereen. Jos vanhassa
+ * tallennuksessa on `starFound` mutta ei `starCity`ä (teoreettinen
+ * reunatapaus), tähti etsitään käännettyjen laattojen joukosta.
+ *
+ * Vanhan pelin laudalla on yhä vain se yksi tähti — laattajakoa ei
+ * lasketa uudelleen. Aarnin luettelo näyttää siis kuusi kateissa olevaa
+ * aarretta, joita sillä laudalla ei ole; se on rehellisempi kuin
+ * tallennuksen hylkääminen, ja koskee vain ennen 11.8.2026 aloitettuja
+ * matkoja.
+ */
+function mannerkohtaisetTahdet(pack, w) {
+  if (!w?.starFound) return [];
+  let city = w.starCity ?? null;
+  if (!city) {
+    city = (w.revealed ?? []).find(([, type]) => type === 'star')?.[0] ?? null;
+  }
+  const manner = (city && pack.map?.cityManner?.[city]) ?? pack.id;
+  return [[manner, city]];
+}
+
 export class Game {
   /**
    * @param {{players: Array<{name, color, isBot, start}>, pack?: object, roaming?: boolean, rng?: () => number}} opts
@@ -154,7 +189,8 @@ export class Game {
       quizLevel: p.quizLevel === 'easy' ? 'easy' : 'normal',
       money: START_MONEY,
       pos: { type: 'city', city: p.start ?? firstStart.id },
-      hasStar: false,
+      // Montako unohdettua aarretta pelaaja kantaa (yksi per manner).
+      stars: 0,
       horseshoes: 0,
       finds: [], // löydetyt laatat tyyppeinä
       // Miltä mantereelta kukin löytö on (maailmankartta) — kulkee
@@ -277,8 +313,10 @@ export class Game {
       tokens: this.jaaLaatat(pack, tokenCities, pile),
       revealed: new Map(), // kaupunki -> laattatyyppi
       visited: new Set(), // kaupungit, joissa on jo käyty (kokemuspisteitä varten)
-      starFound: false,
-      starCity: null,
+      // Löytyneet unohdetut aarteet: manner -> kaupunki, jossa aarre oli.
+      // Jokaisella mantereella on oma aarteensa (omistajan päätös
+      // 11.8.2026), joten yksi lippu ei enää riitä.
+      starsFound: new Map(),
     };
     this.worlds.set(pack.id, world);
     return world;
@@ -296,6 +334,14 @@ export class Game {
    * Jos mantereella ei ole yhtään vapaata laattakaupunkia — tai jos
    * linssejä on laudalla enemmän kuin mantereita — ylimääräiset laatat
    * jäävät sekoitukseen ja arvotaan muiden mukana. Peli ei kaadu siihen.
+   *
+   * Sama koskee unohdettuja aarteita (tähtilaattoja): omistajan päätös
+   * 11.8.2026 on, että jokaisella mantereella on OMA aarteensa. Portteja
+   * eikä kynnyksiä ei ole — aarre voi löytyä mantereen ensimmäisestä
+   * laatasta, ja jos kaikki muut mantereen laatat on jo käännetty, se on
+   * varmasti viimeisessä. Tämä on matemaattisesti sama asia kuin arpoa
+   * yksi tähti per manner jo laattajaossa, joten dynaamista
+   * uudelleensijoittelua ei tarvita.
    */
   jaaLaatat(pack, tokenCities, pile) {
     // Muilla laudoilla kuin maailmankartalla koko lauta on yksi manner.
@@ -312,14 +358,45 @@ export class Game {
       linssikaupungit.add(ehdokkaat[Math.floor(this.rng() * ehdokkaat.length)]);
     }
 
-    // Käsin sijoitetut linssilaatat poistetaan pinon alusta, jottei
-    // muiden laattojen keskinäinen järjestys muutu lainkaan: sekoitus
-    // on jo tehty, ja tämä vaihe vain nostaa siitä osan sivuun.
+    /*
+     * Yksi unohdettu aarre per manner. Tähti ei kuulu aloituskaupunkiin
+     * (pelin päämaali heti lähtöruudussa olisi latistus), joten
+     * aloituskaupungit karsitaan jo ehdokaslistasta — mannerkohtainen
+     * väistö, ei jälkikäteinen korjaus. Linssikaupungit karsitaan, jotta
+     * sama kaupunki ei saisi kahta käsin sijoitettua laattaa.
+     *
+     * Laudoilla, joilla mantereita on vain yksi (pack.id), tämä tekee
+     * saman kuin ennen: yksi tähti, ei aloituskaupunkiin.
+     */
+    const startit = new Set(pack.cities.filter((c) => c.start).map((c) => c.id));
+    const tahtia = pile.filter((type) => type === 'star').length;
+    const tahtikaupungit = new Set();
+    const mantereet = [];
+    for (const id of tokenCities) {
+      const manner = mannerNimi(id);
+      if (!mantereet.includes(manner)) mantereet.push(manner);
+    }
+    for (const manner of mantereet) {
+      if (tahtikaupungit.size >= tahtia) break;
+      const ehdokkaat = tokenCities.filter((id) => mannerNimi(id) === manner
+        && !startit.has(id) && !linssikaupungit.has(id));
+      if (!ehdokkaat.length) continue;
+      tahtikaupungit.add(ehdokkaat[Math.floor(this.rng() * ehdokkaat.length)]);
+    }
+
+    // Käsin sijoitetut linssi- ja tähtilaatat poistetaan pinon alusta,
+    // jottei muiden laattojen keskinäinen järjestys muutu lainkaan:
+    // sekoitus on jo tehty, ja tämä vaihe vain nostaa siitä osan sivuun.
     const jaettava = [];
-    let poistettavia = linssikaupungit.size;
+    let linssejaPois = linssikaupungit.size;
+    let tahtiaPois = tahtikaupungit.size;
     for (const type of pile) {
-      if (type === 'linssi' && poistettavia > 0) {
-        poistettavia--;
+      if (type === 'linssi' && linssejaPois > 0) {
+        linssejaPois--;
+        continue;
+      }
+      if (type === 'star' && tahtiaPois > 0) {
+        tahtiaPois--;
         continue;
       }
       jaettava.push(type);
@@ -328,25 +405,26 @@ export class Game {
     const laatat = new Map();
     let i = 0;
     for (const city of tokenCities) {
-      laatat.set(city, linssikaupungit.has(city) ? 'linssi' : jaettava[i++]);
+      if (linssikaupungit.has(city)) laatat.set(city, 'linssi');
+      else if (tahtikaupungit.has(city)) laatat.set(city, 'star');
+      else laatat.set(city, jaettava[i++]);
     }
 
     /*
-     * Tähti ei kuulu aloituskaupunkiin: pelin päämaali heti
-     * lähtöruudussa olisi latistus, eikä aloituskaupungeille ole
-     * vihjetekstejä (texts.starHints kattaa vain tavalliset
-     * laattakaupungit). Jos sekoitus toi tähden aloituskaupunkiin,
-     * se vaihtaa paikkaa arvotun tavallisen kaupungin laatan kanssa.
+     * Varmistus ylimääräisille tähdille: jos laudalla on enemmän
+     * tähtiä kuin mantereita, loput jäivät sekoitukseen ja voivat osua
+     * aloituskaupunkiin. Silloin ne vaihtavat paikkaa arvotun
+     * tavallisen kaupungin laatan kanssa, kuten ennen. Nykyisillä
+     * laudoilla tämä ei laukea kertaakaan.
      */
-    const startit = new Set(pack.cities.filter((c) => c.start).map((c) => c.id));
-    const tahtiKaupunki = [...laatat].find(([, type]) => type === 'star')?.[0];
-    if (tahtiKaupunki && startit.has(tahtiKaupunki)) {
-      const vapaat = tokenCities.filter((id) => !startit.has(id) && laatat.get(id) !== 'linssi');
+    for (const [cityId, type] of laatat) {
+      if (type !== 'star' || !startit.has(cityId)) continue;
+      const vapaat = tokenCities.filter((id) => !startit.has(id)
+        && laatat.get(id) !== 'linssi' && laatat.get(id) !== 'star');
       const vaihto = vapaat[Math.floor(this.rng() * vapaat.length)];
-      if (vaihto) {
-        laatat.set(tahtiKaupunki, laatat.get(vaihto));
-        laatat.set(vaihto, 'star');
-      }
+      if (!vaihto) break;
+      laatat.set(cityId, laatat.get(vaihto));
+      laatat.set(vaihto, 'star');
     }
     return laatat;
   }
@@ -409,12 +487,38 @@ export class Game {
     return this.pack.airRoutes;
   }
 
-  get starFound() {
-    return this.world.starFound;
+  /**
+   * Kaupungin manner. Laudoilla, joilla mantereita ei ole erikseen
+   * merkitty, koko lauta on yksi manner ja tunnus on laudan oma —
+   * sama sopimus kuin laattajaossa (jaaLaatat).
+   */
+  mannerOf(cityId, world = this.world) {
+    return world.pack.map?.cityManner?.[cityId] ?? world.pack.id;
   }
 
-  set starFound(value) {
-    this.world.starFound = value;
+  /** Onko mantereen unohdettu aarre jo löytynyt tällä matkalla? */
+  mantereenTahtiLoytynyt(manner, world = this.world) {
+    return world.starsFound.has(manner);
+  }
+
+  /** Laudan muut mantereet: annetun mantereen ulkopuoliset tunnukset. */
+  muutMantereet(manner) {
+    const ulos = [];
+    for (const c of this.pack.cities) {
+      const m = this.mannerOf(c.id);
+      if (m === manner || ulos.includes(m)) continue;
+      ulos.push(m);
+    }
+    return ulos;
+  }
+
+  /**
+   * Onko laudalta löytynyt yksikään unohdettu aarre. Moninpelissä
+   * ensimmäinen aarre käynnistää kotiinjuoksun (checkWin), joten tämä
+   * on nimenomaan "yksikään", ei "kaikki".
+   */
+  get starFound() {
+    return this.world.starsFound.size > 0;
   }
 
   /** Lisää tapahtuman, jonka käyttöliittymä näyttää hetkeksi kartan päällä. */
@@ -511,6 +615,7 @@ export class Game {
       fly: this.phase === 'action' ? this.airportDestinations() : [],
       gateways: this.gatewayOptions(),
       countryGates: this.countryGateOptions(),
+      mannerFlights: this.mannerLennot(),
     };
   }
 
@@ -708,38 +813,17 @@ export class Game {
     return null;
   }
 
-  /** Kaupunki, johon laudan pääaarre on kätketty — löytynyt tai ei. */
-  starCityOf(world = this.world) {
-    if (world.starCity) return world.starCity;
-    for (const [cityId, type] of world.tokens) {
-      if (type === 'star') return cityId;
-    }
-    return null;
-  }
-
-  /**
-   * Isoisän päiväkirjan taitettu sivu: vihje laudan pääaarteesta. Vihje
-   * viittaa suuntaan tai alueeseen muttei nimeä kaupunkia. Omistajan
-   * linjaus 7.8.2026: vihje kuuluu MATKALLE — se nousee esiin vain
-   * kaupunkien välissä, jotta se ei sotke kaupunkien merkintöjä.
-   * Harventamisen (HINT_EVERY_TURNS) hoitaa tietoruutu, koska tämän
-   * on pysyttävä puhtaana funktiona piirtoa varten. Kun aarre on
-   * löytynyt, sivua ei enää tarvita.
+  /*
+   * TÄHTIVIHJEJÄRJESTELMÄ POISTETTU (omistajan päätös 11.8.2026).
+   *
+   * Tässä oli starCityOf, starHint ja starHintCity: isoisän päiväkirjan
+   * taitettu sivu, joka osoitti kohti laudan ainoaa pääaarretta. Kun
+   * aarteita on seitsemän — yksi joka mantereella — vihje ei enää ole
+   * arvoituksen ydin: manner itse rajaa etsinnän. Poistettiin myös
+   * pakkausten starHints- ja starHintAlue-taulut sekä HINT_EVERY_TURNS.
+   * Tarinatekstien omiin vihjeisiin (kohtaamiset, kaaritekstit) tämä ei
+   * koske.
    */
-  starHint() {
-    const world = this.world;
-    if (!world || world.starFound) return null;
-    if (this.player?.pos?.type !== 'edge') return null;
-    const cityId = this.starCityOf(world);
-    return this.pack.texts.starHints?.[cityId] ?? null;
-  }
-
-  /** Vihjeen kohdekaupunki luentatiedoston valintaa varten (ei näytetä). */
-  starHintCity() {
-    const world = this.world;
-    if (!world || world.starFound) return null;
-    return this.starCityOf(world);
-  }
 
   /**
    * Kulttuurikysymys Tutki-kortissa (tutustu ja vastaa -kokeilu):
@@ -790,6 +874,63 @@ export class Game {
     this.lastPath = null;
     this.say(p.id, `${p.name} lensi ${FLIGHT_PRICE} punnalla: ${link.label}.`);
     this.emit('flight', link.label, { icon: 'kompassi', sub: `−${FLIGHT_PRICE} puntaa` });
+    if (this.offerQuiz()) return { ok: true, offer: true };
+    this.endTurn();
+    return { ok: true };
+  }
+
+  /**
+   * MANNERLENTO: kun tämän mantereen unohdettu aarre on löytynyt, matka
+   * voi jatkua toiselle mantereelle mistä tahansa kaupungista.
+   *
+   * Lentokenttäehtoa EI ole (omistajan linjaus 11.8.2026: nykymaailmassa
+   * lentokentälle pääsee käytännössä joka kaupungista) — siksi tämä on
+   * oma metodinsa actionFly'n rinnalla eikä ehto sen sisällä.
+   *
+   * Kohteita on yksi per manner: mantereen ENSIMMÄINEN aloituskaupunki
+   * kaupunkijärjestyksessä. Valinta on vakio eikä kuluta arvontaa, joten
+   * tallennettu peli palautuu samanlaisena. Kaikkien 19 aloituskaupungin
+   * tarjoaminen olisi tehnyt matkavalikosta luettelon.
+   *
+   * Vain vaellustilassa: moninpelissä ensimmäinen aarre aloittaa
+   * kotiinjuoksun, jota lento sotisi suoraan vastaan.
+   */
+  mannerLennot(player = this.player) {
+    if (this.phase !== 'action') return [];
+    if (!this.roaming) return [];
+    if (player.money < FLIGHT_PRICE) return [];
+    const city = this.cityOf(player);
+    if (!city) return [];
+    const oma = this.mannerOf(city.id);
+    if (!this.mantereenTahtiLoytynyt(oma)) return [];
+
+    const nahdyt = new Set([oma]);
+    const kohteet = [];
+    for (const c of this.pack.cities) {
+      if (!c.start) continue;
+      const manner = this.mannerOf(c.id);
+      if (nahdyt.has(manner)) continue;
+      nahdyt.add(manner);
+      kohteet.push({ city: c.id, manner, label: c.name });
+    }
+    return kohteet;
+  }
+
+  /** Lentää toiselle mantereelle. Vie koko vuoron, hinta FLIGHT_PRICE. */
+  actionMannerLento(cityId) {
+    const kohde = this.mannerLennot().find((k) => k.city === cityId);
+    if (!kohde) return { ok: false, error: 'Sinne ei ole mannerlentoa' };
+    const p = this.player;
+    this.travelMode = 'fly';
+    p.money -= FLIGHT_PRICE;
+    p.pos = { type: 'city', city: cityId };
+    this.visitCity(p);
+    this.lastPath = null;
+    const city = this.board.cityById.get(cityId);
+    this.say(p.id, `${p.name} lensi ${FLIGHT_PRICE} punnalla kaupunkiin ${city.name}.`);
+    this.emit('flight', `Lento kaupunkiin ${city.name}`, { icon: 'kone', sub: `−${FLIGHT_PRICE} puntaa` });
+    // checkWin ei tarvita: mannerlento on vaellustilan mekaniikka, ja
+    // vaelluksessa checkWin palauttaa aina false.
     if (this.offerQuiz()) return { ok: true, offer: true };
     this.endTurn();
     return { ok: true };
@@ -849,7 +990,7 @@ export class Game {
     if (!canTravel) return true;
 
     // Vaelluksessa kotiin ei tarvitse ehtiä, joten tavoitteita ovat aina laatat.
-    const racingHome = !this.roaming && (p.hasStar || (this.starFound && p.horseshoes > 0));
+    const racingHome = !this.roaming && (p.stars > 0 || (this.starFound && p.horseshoes > 0));
     const goals = racingHome
       ? new Set(this.players.map((pl) => pl.start))
       : new Set(this.tokens.keys());
@@ -1487,7 +1628,7 @@ export class Game {
      * että se on yhä jossain. Arvonta pelin rng:llä kuten muutkin.
      */
     const katumukset = pack.texts?.flightRegret ?? [];
-    if (katumukset.length && this.world && !this.world.starFound
+    if (katumukset.length && this.world && !this.starFound
       && this.rng() < 0.35) {
       return katumukset[Math.floor(this.rng() * katumukset.length)];
     }
@@ -2024,16 +2165,29 @@ export class Game {
     const city = this.board.cityById.get(cityId);
 
     switch (type) {
-      case 'star':
-        p.hasStar = true;
-        this.world.starFound = true;
-        this.world.starCity = cityId;
+      case 'star': {
+        /*
+         * Kirjanpito on mannerkohtaista: jokaisella mantereella on oma
+         * unohdettu aarteensa, ja pelaajan laskuri kertoo montako hän
+         * kantaa. Vaellustilassa jokainen aarre maksaa STAR_PRIZE:n —
+         * seitsemällä aarteella se on 14 000 puntaa. Talous kestää sen
+         * tänään (raha ei ole niukkuutta keskipelissä), mutta jos
+         * palkkiot alkavat latistaa löytöjä, tämä on ensimmäinen
+         * säädettävä luku.
+         */
+        const manner = this.mannerOf(cityId);
+        this.world.starsFound.set(manner, cityId);
+        p.stars = (p.stars ?? 0) + 1;
         this.awardXp(p, XP_STAR);
         this.noteRecord(p);
         if (this.roaming) {
           p.money += STAR_PRIZE;
           this.say(p.id, `◈ ${p.name} löysi aarteen ${token.name} kaupungista ${city.name} — arvo ${STAR_PRIZE} puntaa!`);
           this.emit('treasure', this.pack.texts.starToast, { token: type, city: cityId, sub: `+${STAR_PRIZE} puntaa` });
+          // Ilmoitus mannerlennosta vain, jos muita mantereita on.
+          if (this.mannerLennot().length || this.muutMantereet(manner).length) {
+            this.say(p.id, MANNERLENTO_ILMOITUS);
+          }
         } else {
           this.say(p.id, this.pack.texts.starFound(p.name, city.name));
           this.say(null, this.pack.texts.starChase);
@@ -2044,6 +2198,7 @@ export class Game {
           });
         }
         break;
+      }
       case 'horseshoe':
         p.horseshoes++;
         this.say(p.id, `Ω ${p.name} löysi hevosenkengän kaupungista ${city.name}.`);
@@ -2091,7 +2246,12 @@ export class Game {
     return type;
   }
 
-  /** Voitto: tähden tai hevosenkengän kanssa aloituskaupunkiin sen jälkeen kun tähti on löytynyt. */
+  /**
+   * Voitto: tähden tai hevosenkengän kanssa aloituskaupunkiin sen
+   * jälkeen kun tähti on löytynyt. ENSIMMÄINEN aarre riittää — vaikka
+   * mantereita on seitsemän, moninpelin kotiinjuoksu alkaa yhdestä
+   * (omistajan linjaus 11.8.2026: pienin muutos nykyiseen).
+   */
   checkWin() {
     if (this.roaming) return false;
     if (this.winner) return true;
@@ -2099,11 +2259,11 @@ export class Game {
     const p = this.player;
     const city = this.cityOf();
     if (!city || !city.start) return false;
-    if (!p.hasStar && p.horseshoes === 0) return false;
+    if (!p.stars && p.horseshoes === 0) return false;
 
     this.winner = p;
     this.phase = 'over';
-    const reason = p.hasStar
+    const reason = p.stars
       ? this.pack.texts.winStar
       : 'ehti hevosenkengän kanssa kotiin ensimmäisenä';
     this.say(p.id, `🏆 ${p.name} ${reason} kaupungissa ${city.name} ja voitti pelin!`);
@@ -2112,10 +2272,19 @@ export class Game {
 
   // --- tallennus ----------------------------------------------------------
 
-  /** Pelin tila tavallisena oliona (localStorage / JSON). */
+  /**
+   * Pelin tila tavallisena oliona (localStorage / JSON).
+   *
+   * VERSIO 2 (11.8.2026): mannerkohtaiset unohdetut aarteet. Maailman
+   * `starFound`/`starCity` korvautuivat `starsFound`-taululla (manner ->
+   * kaupunki) ja pelaajan `hasStar` laskurilla `stars`. Tämä on koko
+   * pelin ensimmäinen tallennusmuodon nosto; version 1 pelit luetaan
+   * yhä (fromJSON kääntää ne lennossa), joten kesken jäänyt matka ei
+   * katkea.
+   */
   toJSON() {
     return {
-      version: 1,
+      version: 2,
       packId: this.rootPackId,
       roaming: this.roaming,
       seed: this.seed,
@@ -2126,8 +2295,7 @@ export class Game {
           tokens: [...w.tokens.entries()],
           revealed: [...w.revealed.entries()],
           visited: [...w.visited],
-          starFound: w.starFound,
-          starCity: w.starCity,
+          starsFound: [...w.starsFound.entries()],
         }]),
       ),
       usedQuestions: [...this.usedQuestions],
@@ -2157,9 +2325,14 @@ export class Game {
     };
   }
 
-  /** Palauttaa tallennetun pelin. Palauttaa null, jos tallennus on kelvoton. */
+  /**
+   * Palauttaa tallennetun pelin. Palauttaa null, jos tallennus on
+   * kelvoton. Versiot 1 ja 2 kelpaavat: version 1 yksi tähti
+   * käännetään mannerkohtaiseksi kirjanpidoksi alla.
+   */
   static fromJSON(data) {
-    if (!data || data.version !== 1 || !Array.isArray(data.players)) return null;
+    if (!data || !Array.isArray(data.players)) return null;
+    if (data.version !== 1 && data.version !== 2) return null;
 
     const game = Object.create(Game.prototype);
     game.seed = data.seed;
@@ -2198,21 +2371,24 @@ export class Game {
         // Vanhoissa tallennuksissa käyntejä ei kirjattu: jo käännetyt laatat
         // kertovat, missä on käyty, joten kokemuspisteet eivät kerry uudelleen.
         visited: new Set(w.visited ?? (w.revealed ?? []).map(([city]) => city)),
-        starFound: !!w.starFound,
-        starCity: w.starCity ?? null,
+        starsFound: new Map(w.starsFound ?? mannerkohtaisetTahdet(pack, w)),
       });
     }
     // Uusi kenttä saa oletuksen spreadin edestä eikä version numeroa
     // nosteta: fromJSON hylkää kaiken muun kuin version 1, joten noston
     // hinta olisi jokainen kesken jäänyt peli. Sama kuvio kuin xp- ja
     // quizAsked-kentillä aiemmin.
-    game.players = data.players.map((p) => ({
+    // Versio 1 -> 2: hasStar oli lippu, stars on laskuri. Kentät
+    // luetaan ennen spreadia ja hasStar jätetään pois, jottei
+    // vanhentunut lippu jää roikkumaan olioon.
+    game.players = data.players.map(({ hasStar, ...p }) => ({
       packId: rootPack.id,
       xp: 0,
       quizAsked: 0,
       quizCorrect: 0,
       linssit: [],
       findManner: [],
+      stars: hasStar ? 1 : 0,
       ...p,
     }));
     // findManner kulkee finds-listan rinnalla samoin indeksein. Vanhan

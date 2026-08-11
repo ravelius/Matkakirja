@@ -81,7 +81,7 @@ function simulate(pack, games) {
       continue;
     }
     rounds.push(game.turnCount);
-    if (game.winner.hasStar) star++;
+    if (game.winner.stars) star++;
   }
 
   rounds.sort((a, b) => a - b);

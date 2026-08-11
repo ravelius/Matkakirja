@@ -204,25 +204,6 @@ export const ISTANBUL = {
       '"Basaarissa on neljätuhatta puotia ja jokaisessa sama hinta kolmella eri tavalla sanottuna", isoisä valitti. Tinkiminen jatkuu ennallaan. Ainoa muutos on, että vaihtorahat annetaan puhelimella.',
       'Isoisä nousi laivaan Kultaisen sarven suulla ja kirjoitti, että kalanhaju seuraa matkustajaa Wieniin asti. Sama laituri, sama haju, sama kala leivän välissä. Jotkin asiat eivät kaipaa parannusta.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu,
-    // ei koskaan kaupungin nimeä.
-    starHints: {
-      rumelinlinnoitus: 'Salmen Euroopan puoleisella rannalla, kaukana pohjoisessa kaupungin yläpuolella, kohoaa jyrkälle rinteelle muurattu linnake. Se pystytettiin katkaisemaan laivaliikenne salmessa, ja sen tornit näkyvät kannelle asti.',
-      dolmabahce: 'Euroopan rannalla, keskikaupungin pohjoispuolella, on aivan vesirajaan eurooppalaiseen tapaan rakennettu hovin asuinrakennus. Sulttaani muutti sinne vanhasta niemen kärjestä.',
-      taksim: 'Kultaisen sarven pohjoispuolella, ylhäällä rinteen päällä, on aukio jonne uudet kadut ja lähetystöt vedettiin. Siellä liikkuu se osa kaupunkia, joka katsoo länteen.',
-      galata: 'Aivan Kultaisen sarven pohjoisrannalla kohoaa rinteestä pyöreä kivitorni, jonka genovalaiset rakensivat vartioimaan omaa kaupunginosaansa. Sen huipulta näkee molemmille mantereille.',
-      pierreloti: 'Kultaisen sarven yläjuoksulla, sen pohjoispuoleisella kukkulalla, on hautausmaan yläpuolinen kahvila. Sieltä ranskalainen kirjailija katseli kaupunkia ja kirjoitti siitä liikaa.',
-      balat: 'Kultaisen sarven länsirannalla, vanhojen maamuurien sisäpuolella, on kortteleita joissa asuivat juutalaiset ja kreikkalaiset perheet vuosisatoja. Talot on maalattu joka väriin.',
-      maustebasaari: 'Aivan Kultaisen sarven suulla, laivalaitureiden vieressä, on L-kirjaimen muotoinen katettu halli, joka rakennettiin moskeijan tuloilla. Sinne tuotiin mausteet Egyptistä.',
-      suuribasaari: 'Vanhan kaupungin sydämessä, kukkulan laella, on katettu kauppakaupunki jossa on kuusikymmentä katua saman katon alla. Sisään mennään yhdestä portista ja ulos jostakin aivan toisesta.',
-      topkapi: 'Vanhan kaupungin itäisimmässä kärjessä, siinä niemellä jossa salmi, Kultainen sarvi ja Marmaranmeri kohtaavat, on muurien ympäröimä hallitsijan asuinsija puutarhoineen. Sieltä johdettiin valtakuntaa neljäsataa vuotta.',
-      hagiasofia: 'Vanhassa kaupungissa, aivan palatsin porttien länsipuolella, on rakennus jonka kupoli oli tuhat vuotta maailman suurin. Se on ollut kirkko, moskeija ja museo — ja järjestyksessä.',
-      sinimoskeija: 'Vanhassa kaupungissa, suuren kupolin eteläpuolella hippodromin laidalla, on rukoushuone jolla on kuusi minareettia — enemmän kuin yhdelläkään toisella koko kaupungissa. Sisäseinät on laatoitettu siniseksi.',
-      uskudar: 'Salmen Aasian puoleisella rannalla, vastapäätä vanhaa kaupunkia, on kaupunginosa josta karavaanit lähtivät itään. Sinne mennessä ylitetään maanosien raja.',
-      neitsyttorni: 'Salmen keskellä, aivan Aasian rannan tuntumassa, on pienelle luodolle rakennettu valkoinen torni. Siitä kerrotaan tarinaa, jossa ennustus toteutuu käärmeen ja hedelmäkorin avulla.',
-      kadikoy: 'Aasian puolella, etelämpänä salmen suulla, on satamakaupunginosa joka perustettiin ennen vanhaa kaupunkia — ja väärään paikkaan, sanoi oraakkeli. Nykyään siellä on kalatori ja lauttalaituri.',
-      prinssisaaret: 'Kaakossa, Marmaranmerellä tunnin laivamatkan päässä, on saariryhmä jonne karkotettiin ruhtinaita. Saarilla ei ole autoja lainkaan; siellä kuljetaan yhä hevosella ja polkupyörällä.',
-    },
   },
 
   decor: {

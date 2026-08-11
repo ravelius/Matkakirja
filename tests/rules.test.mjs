@@ -30,7 +30,7 @@ import { tokenPileTemplate } from '../js/tokens.js';
 import {
   Game, mulberry32, questionLevel, FLIGHT_PRICE, START_MONEY, STAR_PRIZE, STRANDED_AID,
   DUEL_BYPASS_SHOES, DUEL_PRIZE, FIFTY_FIFTY_PRICE, HARD_BONUS, HINT_PRICE,
-  QUIZ_SECONDS, SEA_FARE, HINT_EVERY_TURNS,
+  QUIZ_SECONDS, SEA_FARE,
   XP_NEW_CITY, XP_NEW_BOARD, XP_HARD_ANSWER, XP_STAR,
   TURN_HOURS, RECORD_DAYS, XP_RECORD, timeOfDayName,
   FORM_WEIGHTS, PHOTO_CHOICES, XP_EXPLORE, XP_PUZZLE, EXPLORE_REWARD,
@@ -89,6 +89,20 @@ const SISALTO_VALMIS = new Set([
 const MERIREITIT_KESKEN = new Set();
 
 const MIN_CITY_QUESTIONS = (packId) => (SISALTO_VALMIS.has(packId) ? 5 : 2);
+
+/**
+ * Laudan mantereet kaupunkijärjestyksessä. Sama sopimus kuin
+ * js/game.js jaaLaatat: ilman cityManner-merkintää koko lauta on yksi
+ * manner ja tunnus on laudan oma.
+ */
+function mantereet(pack) {
+  const ulos = [];
+  for (const c of pack.cities) {
+    const manner = pack.map?.cityManner?.[c.id] ?? pack.id;
+    if (!ulos.includes(manner)) ulos.push(manner);
+  }
+  return ulos;
+}
 const MIN_GENERAL_QUESTIONS = (packId) => (SISALTO_VALMIS.has(packId) ? 15 : 10);
 
 // Laudat, joilta on siivottu kysymykset, joiden oikea vastaus lukee saman
@@ -128,7 +142,9 @@ for (const pack of PACKS) {
     // päätös 10.8.2026 — js/game.js enterWorld).
     const pile = tokenPileTemplate(pack.tokens.counts);
     assert.equal(pile.length, pack.cities.length);
-    assert.equal(pack.tokens.counts.star, 1);
+    // Tähtiä on yksi per manner (omistajan päätös 11.8.2026): laudalla,
+    // jolla mantereita ei ole erikseen merkitty, se on yksi.
+    assert.equal(pack.tokens.counts.star, mantereet(pack).length);
     assert.ok(pack.tokens.counts.horseshoe >= 1);
     for (const type of Object.keys(pack.tokens.counts)) {
       assert.ok(pack.tokens.types[type], `laattatyyppiä ${type} ei ole määritelty`);
@@ -326,34 +342,6 @@ for (const pack of PACKS) {
     }
   });
 
-  // Isoisän taitettu sivu vihjaa laudan pääaarteesta. Vihje ei saa paljastaa
-  // kaupunkia eikä osoittaa kaupunkiin, jota laudalla ei ole. Täysi kattavuus
-  // vaaditaan laudoilta, joiden sisältö on kirjoitettu (VOICES_DONE).
-  test(`${pack.id}: aarrevihjeet eivät paljasta kaupunkia`, () => {
-    const hints = pack.texts.starHints;
-    assert.ok(hints && typeof hints === 'object', 'texts.starHints puuttuu');
-    const extra = Object.keys(hints).filter((id) => !pack.cities.some((c) => c.id === id));
-    assert.deepEqual(extra, [], 'vihje osoittaa tuntemattomaan kaupunkiin');
-
-    for (const city of pack.cities) {
-      const hint = hints[city.id];
-      if (!hint) continue;
-      assert.ok(hint.length >= 40, `${city.id}: vihje on liian lyhyt`);
-      // Nimen jokainen kunnollinen sana tarkistetaan erikseen sanarajoilla:
-      // lyhyt alkuosa (esim. "Al Kufra") osuisi muuten keskelle muita sanoja.
-      for (const word of city.name.split(/[ ()]+/).filter((w) => w.length >= 4)) {
-        assert.ok(
-          !new RegExp(`\\b${word}`, 'i').test(hint),
-          `${city.id}: vihje nimeää kaupungin ("${word}")`,
-        );
-      }
-    }
-
-    if (!VOICES_DONE.has(pack.id)) return;
-    for (const city of pack.cities.filter((c) => !c.start)) {
-      assert.ok(hints[city.id], `vihje puuttuu kaupungilta ${city.id}`);
-    }
-  });
 
   test(`${pack.id}: rosvon kaksintaistelupakka on ehjä`, () => {
     assert.ok(pack.duels.length >= 4, 'liian vähän kaksintaistelukysymyksiä');
@@ -667,7 +655,7 @@ test('laattojen vaikutukset: jalokivi, ryöstäjä ja tähti', () => {
 
   game.tokens.set('timbuktu', 'star');
   game.revealToken('timbuktu');
-  assert.ok(p.hasStar);
+  assert.equal(p.stars, 1);
   assert.ok(game.starFound);
 });
 
@@ -682,8 +670,8 @@ test('tähti kotiin voittaa, hevosenkenkä voi ehtiä ensin', () => {
     });
 
   const g1 = makeGame();
-  g1.player.hasStar = true;
-  g1.starFound = true;
+  g1.player.stars = 1;
+  g1.world.starsFound.set('africa', 'timbuktu');
   g1.player.pos = { type: 'city', city: 'tanger' };
   assert.ok(g1.checkWin());
   assert.equal(g1.winner.name, 'A');
@@ -694,7 +682,7 @@ test('tähti kotiin voittaa, hevosenkenkä voi ehtiä ensin', () => {
   g2.player.horseshoes = 1;
   g2.player.pos = { type: 'city', city: 'tanger' };
   assert.equal(g2.checkWin(), false);
-  g2.starFound = true;
+  g2.world.starsFound.set('africa', 'timbuktu');
   assert.ok(g2.checkWin());
 });
 
@@ -1000,7 +988,7 @@ test('vaellus: yksin pelattaessa peli ei pääty ja tähti on arvokas löytö', 
   game.tokens.set('timbuktu', 'star');
   const rahaEnnen = p.money;
   game.revealToken('timbuktu');
-  assert.ok(p.hasStar);
+  assert.equal(p.stars, 1);
   assert.equal(p.money, rahaEnnen + STAR_PRIZE, 'tähti on rahanarvoinen löytö');
 
   // Kotiin palaaminen ei päätä peliä.
@@ -1116,8 +1104,8 @@ test('kilpapelin voittaja voi jatkaa vaellusta', () => {
     ],
     rng: mulberry32(47),
   });
-  game.player.hasStar = true;
-  game.starFound = true;
+  game.player.stars = 1;
+  game.world.starsFound.set('africa', 'timbuktu');
   game.player.pos = { type: 'city', city: 'tanger' };
   assert.ok(game.checkWin());
   assert.equal(game.phase, 'over');
@@ -1202,13 +1190,15 @@ test('aarretta ei voi ostaa rahalla', () => {
   const actions = game.availableActions();
   assert.deepEqual(
     Object.keys(actions).sort(),
-    ['countryGates', 'fly', 'gateways', 'quiz', 'roll', 'travel'],
+    ['countryGates', 'fly', 'gateways', 'mannerFlights', 'quiz', 'roll', 'travel'],
   );
   assert.ok(actions.travel.includes('land'));
   // Laudanvaihtoportteja ei pelissä ole (yksi lauta, omistajan päätös
   // 10.8.2026) — porttilistat ovat tyhjät myös kilpapelissä.
   assert.deepEqual(actions.gateways, []);
   assert.deepEqual(actions.countryGates, []);
+  // Mannerlento on vaellustilan mekaniikka: kilpapelissä sitä ei ole.
+  assert.deepEqual(actions.mannerFlights, []);
 });
 
 test('50:50 poistaa kaksi väärää vaihtoehtoa ja maksaa 80', () => {
@@ -1529,62 +1519,6 @@ test('saapumishavainto seuraa matkaajaa kaupungista kaupunkiin', () => {
   game.phase = 'move';
   game.moves = new Map([['x', { pos: { type: 'edge', edge: Object.keys(game.board.edgeById?.entries?.() ?? {})[0] ?? 'e', at: 1 }, path: [] }]]);
   assert.equal(game.arrivalFact?.cityId, 'kairo', 'havainto säilyy nopanheittojen yli');
-});
-
-test('isoisän vihje näkyy vain matkalla ja vaikenee kun aarre on löytynyt', () => {
-  const game = new Game({
-    players: [{ name: 'Yksin', color: '#f00', start: 'tanger' }],
-    pack: packById('africa'),
-    rng: mulberry32(21),
-  });
-
-  const starCity = game.starCityOf();
-  assert.ok(starCity, 'tähtikaupunkia ei löytynyt');
-  assert.equal(game.tokens.get(starCity), 'star');
-
-  // Kaupungissa vihje ei nouse esiin (omistajan linjaus 7.8.2026:
-  // vihje kuuluu matkalle eikä sotke kaupunkien merkintöjä).
-  assert.equal(game.player.pos.type, 'city');
-  assert.equal(game.starHint(), null, 'vihje näkyy kaupungissa');
-
-  // Kaupunkien välissä vihje osoittaa tähtikaupunkiin.
-  const edgeId = [...game.board.edgeById.keys()][0];
-  game.player.pos = { type: 'edge', edge: edgeId, at: 1 };
-  assert.equal(game.starHint(), packById('africa').texts.starHints[starCity]);
-
-  // Löytynyt aarre sulkee taitetun sivun.
-  game.world.starFound = true;
-  assert.equal(game.starHint(), null, 'vihje jatkuu vaikka aarre on löytynyt');
-});
-
-test('Euroopan vihjeet ovat ilmansuunnittain ja alue kattaa joka aarrekaupungin', () => {
-  const europe = packById('europe');
-  const { starHints, starHintAlue } = europe.texts;
-  // Jokaisella laattakaupungilla on vihjeteksti ja alue äänitiedostoa
-  // varten — puuttuva rivi jättäisi pelin ilman vihjettä.
-  for (const c of europe.cities) {
-    if (c.start) continue; // aloituskaupungeissa ei ole laattaa
-    assert.ok(starHints[c.id], `${c.id}: vihjeteksti puuttuu`);
-    assert.ok(['pohjoinen', 'lansi', 'etela', 'ita'].includes(starHintAlue[c.id]),
-      `${c.id}: alue puuttuu tai tuntematon`);
-  }
-  // Tekstejä on vain neljä (omistaja: "vihjeitä riittää vain pari").
-  assert.equal(new Set(Object.values(starHints)).size, 4);
-});
-
-test('vihjeetön lauta ei kaada tietoruutua', () => {
-  // Lauta, jonka vihjeet ovat vielä kirjoittamatta: tietoruutu ei saa kaatua.
-  // Tyhjä starHints tehdään tässä käsin, jotta testi ei riipu siitä, minkä
-  // laudan sisältö on kirjoitettu (kaista B täydentää lautoja yksi kerrallaan).
-  const base = packById('europe');
-  const game = new Game({
-    players: [{ name: 'Yksin', color: '#f00', start: 'lissabon' }],
-    pack: { ...base, texts: { ...base.texts, starHints: {} } },
-    rng: mulberry32(3),
-  });
-  const edgeId = [...game.board.edgeById.keys()][0];
-  game.player.pos = { type: 'edge', edge: edgeId, at: 1 };
-  assert.equal(game.starHint(), null);
 });
 
 // --- kokemuspisteet, tietoprosentti ja passi (paketti 6) --------------------
@@ -3113,7 +3047,7 @@ test('lentorepliikin arvonta on siemenellä deterministinen', () => {
     const game = new Game({
       players: [{ name: 'A', color: '#f00' }], pack: packById('maailma'), seed,
     });
-    game.starFound = true;
+    game.world.starsFound.set('maailma', 'kairo');
     return game;
   };
   const a = uusi(77).flightLine('kairo');
@@ -3131,7 +3065,7 @@ test('tuntematon kohde saa yleisrivin', () => {
   const game = new Game({
     players: [{ name: 'A', color: '#f00' }], pack: packById('maailma'), seed: 3,
   });
-  game.starFound = true;
+  game.world.starsFound.set('maailma', 'kairo');
   const rivi = game.flightLine('ei-tallaista-kaupunkia');
   assert.ok(packById('maailma').texts.flightDefault.includes(rivi));
 });
@@ -3159,7 +3093,7 @@ test('lento muistuttaa unohdetusta aarteesta vain kun se on löytämättä', () 
   // ...mutta löydön jälkeen ei enää koskaan.
   for (let seed = 1; seed <= 40; seed++) {
     const game = uusi(seed);
-    game.starFound = true;
+    game.world.starsFound.set('maailma', 'kairo');
     assert.ok(!kaipuu.includes(game.flightLine('kairo')), 'kaipuurivi soi vaikka aarre löytyi');
   }
 });
@@ -3818,7 +3752,7 @@ test('pelaajalle näkyvässä tekstissä ei ole tähti-sanastoa eikä pääaarre
   for (const pack of PACKS) {
     const tekstit = [
       pack.texts?.intro, pack.texts?.starToast, pack.texts?.starChase,
-      pack.texts?.winStar, pack.texts?.starHint,
+      pack.texts?.winStar,
       pack.texts?.starFound?.('A', 'B'), pack.texts?.winnerStar?.('A', 1),
       ...Object.values(pack.tokenTypes ?? {}).map((t) => t?.name),
     ].filter((t) => typeof t === 'string');
