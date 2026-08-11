@@ -19426,4 +19426,500 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  IND: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Intian vanhimmat jäljet eivät ole kirjoituksissa vaan '
+          + 'kivessä ja raudassa: hiotussa leijonanpäässä, kallioon '
+          + 'kaiverretussa luostarissa ja pylväässä, joka ei suostu '
+          + 'ruostumaan.',
+      nostot: [
+        {
+          otsikko: 'Neljä leijonaa yhdestä kivestä',
+          aika: 'n. 250 eaa.',
+          tiedosto: 'Sarnath capital.jpg',
+          teksti: 'Keisari Ashoka pystytti Sarnathiin pylvään sinne, missä '
+              + 'Buddhan kerrotaan pitäneen ensimmäisen puheensa. Pylvään '
+              + 'päähän veistettiin neljä luonnollisen kokoista leijonaa '
+              + 'selät vastakkain. Ne on hakattu yhdestä ainoasta '
+              + 'hiekkakivilohkareesta ja kiillotettu peilipinnaksi; koko '
+              + 'kappale on 2,1 metriä korkea. Alustan kyljessä kiertää neljä '
+              + 'eläintä — leijona, norsu, härkä ja laukkaava hevonen — ja '
+              + 'niiden välissä pyörä. Pylväs kaatui aikojen kuluessa ja '
+              + 'hautautui maahan; se kaivettiin esiin vasta talvella '
+              + '1904–1905.',
+          selite: 'Kiillotettu vaalea kivipatsas museon lavalla. Ylhäällä '
+              + 'seisoo neljä leijonaa selät vastakkain, kidat auki ja harjat '
+              + 'tarkkaan kaiverrettuina. Niiden alla on pyöreä alusta, jonka '
+              + 'kyljessä näkyy pyörä ja kaviot, ja alimpana kellon muotoinen '
+              + 'lootuskukka.',
+          lahde: 'Chrisi1964, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Luostari kaiverrettiin kallioon',
+          aika: '480',
+          tiedosto: 'Ajanta Caves, Painting 4.JPG',
+          teksti: 'Ajantan 30 luolaa on hakattu 75 metriä korkeaan '
+              + 'kallioseinään Maharashtrassa. Vanhimmat ovat 200-luvulta eaa. '
+              + 'ja nuorimmat noin vuodelta 480. Osa on munkkien asuinluolia, '
+              + 'osa rukoushalleja, ja seinät on maalattu täyteen kertomuksia '
+              + 'Buddhan aiemmista elämistä. Maalaukset ovat tunnettuja siitä, '
+              + 'että ne näyttävät tunteen eleellä ja asennolla: käden '
+              + 'kääntö, kallistunut pää, katse ohi katsojan. Luolat jäivät '
+              + 'metsän peittoon vuosisadoiksi ja tulivat uudelleen '
+              + 'tunnetuiksi vasta vuonna 1819.',
+          selite: 'Kallioon maalattu seinäpinta, jossa kulkee vaakasuora '
+              + 'kuvakaista. Ruskeansävyisten kuvien sisällä istuu ja seisoo '
+              + 'ihmishahmoja koruissa ja päähineissä. Kaistan ylä- ja '
+              + 'alapuolella kiertää koristenauha, jossa toistuu vaaleita '
+              + 'lootuskukkia. Maali on kulunut ja paikoin lohkeillut.',
+          lahde: 'Vu2sga, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tuhat vuotta samaa opetusta',
+          aika: '427',
+          tiedosto: 'Nalanda Ruins (60).jpg',
+          teksti: 'Nalanda perustettiin Biharissa noin vuonna 427, ja siellä '
+              + 'opetettiin lähes tuhat vuotta, noin vuoteen 1400 asti. '
+              + 'Paikkaa on sanottu maailman ensimmäiseksi asuntolayliopistoksi, '
+              + 'vaikka tutkijat pitävät vertausta nykyiseen yliopistoon '
+              + 'epätarkkana. Alue oli kokonainen kaupunki: luostarikortteleita '
+              + 'sisäpihoineen, temppeleitä, luentosaleja ja opiskelijasoluja '
+              + 'tiiliseinien takana. Opiskelijoita tuli Kiinasta, Koreasta ja '
+              + 'Kaakkois-Aasiasta asti, ja kiinalaiset pyhiinvaeltajat '
+              + 'kirjoittivat paikasta matkakertomuksia, joista tiedämme yhä '
+              + 'suuren osan siitä mitä tiedämme.',
+          selite: 'Punatiilinen luostarin sisäpiha kirkkaassa auringossa. '
+              + 'Keskellä nousee leveät portaat korkeammalle tasanteelle, ja '
+              + 'pihaa reunustavat matalat tiilimuurit ja pienten huoneiden '
+              + 'perustukset. Kivetys on kulunut, taivas pilvetön ja sininen.',
+          lahde: 'Sumitsurai, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Pylväs ei ole ruostunut 1600 vuoteen',
+          aika: '400-luku',
+          tiedosto: 'The Iron pillar of Delhi 01.jpg',
+          teksti: 'Delhin Qutb-alueella seisoo rautapylväs, joka on 7,21 '
+              + 'metriä korkea ja painaa yli kuusi tonnia. Se pystytettiin '
+              + 'Chandragupta II:n aikana 300–400-luvun vaihteessa, alun perin '
+              + 'muualle, ja siirrettiin Delhiin vasta 1000-luvulla. Pylväs on '
+              + 'kiinnostanut materiaalitutkijoita, koska se ei juuri ruostu '
+              + 'ulkoilmassa. Syy on raudan poikkeuksellisen korkea '
+              + 'fosforipitoisuus: pintaan on vuosisatojen kuluessa syntynyt '
+              + 'ohut tiivis kerros, joka suojaa alla olevaa metallia. Sitä ei '
+              + 'osattu tehdä tarkoituksella, mutta seppien taito valmistaa '
+              + 'rautaa oli poikkeuksellinen.',
+          selite: 'Tumma kapea rautapylväs seisoo hiekkakivestä muurattujen '
+              + 'suippokaarien keskellä. Kaaret kohoavat molemmin puolin '
+              + 'raunioituneina, ja niiden takaa näkyy sininen taivas. '
+              + 'Pylvään juurella on matala kiviaita ja nurmikkoa.',
+          lahde: 'Hridya08, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä pitää Delhin rautapylvään ruostumattomana?',
+        vaihtoehdot: [
+          'Raudan korkea fosforipitoisuus',
+          'Vuosittainen voitelu öljyllä',
+          'Delhin kuiva ilmasto',
+          'Pylvääseen tehty kultaus',
+        ],
+        oikea: 0,
+        fakta: 'Suojaava kerros syntyi itsestään vuosisatojen kuluessa, eikä '
+            + 'sitä osattu tavoitella tarkoituksella.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Intialainen rakentaminen menee usein alaspäin yhtä paljon '
+          + 'kuin ylöspäin: portaat vievät veden luo, kivi mittaa aikaa ja '
+          + 'temppeli näyttää vaunulta, joka on juuri pysähtynyt.',
+      nostot: [
+        {
+          otsikko: 'Kolmetuhatta porrasta veden luo',
+          aika: '800-luku',
+          tiedosto: 'Chand Baori 03.jpg',
+          teksti: 'Chand Baori on porrasallas Abhanerin kylässä Rajasthanissa. '
+              + 'Se laskeutuu noin kolmekymmentä metriä maan sisään ja on yksi '
+              + 'Intian syvimmistä. Kolmelle seinälle on ladottu 3 500 '
+              + 'porrasta kolmessatoista kerroksessa niin, että ne muodostavat '
+              + 'ylösalaisin käännetyn pyramidin. Rakennelma on 700–800-luvulta. '
+              + 'Idea on yksinkertainen: kuivassa maassa vedenpinta laskee '
+              + 'vuodenaikojen mukaan monta metriä, ja portaat vievät veden '
+              + 'ääreen milloin tahansa. Syvällä altaan pohjalla on myös '
+              + 'monta astetta viileämpää kuin pinnalla.',
+          selite: 'Neliömäinen kaivo, jonka kolmea seinää peittävät tiheät '
+              + 'siksak-kuvioiset porrasrivit alas asti. Portaat kapenevat '
+              + 'syvyyteen ja niiden pohjalla on vihertävä vesiallas. '
+              + 'Yläreunassa kiertää pylväikkö ja katettu käytävä.',
+          lahde: 'Vetra, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Aurinkokello talon kokoisena',
+          aika: '1734',
+          tiedosto: '20191218 Jantar Mantar, Jaipur 0906 8983 DxO.jpg',
+          teksti: 'Jaipurin Jantar Mantar on kokoelma yhdeksäätoista '
+              + 'tähtitieteellistä kojetta, ja se valmistui vuonna 1734 '
+              + 'kuningas Sawai Jai Singhin käskystä. Ne on tarkoitettu ajan '
+              + 'ja taivaankappaleiden paikkojen mittaamiseen, ja ne on '
+              + 'rakennettu kivestä ja laastista talon kokoisiksi, koska iso '
+              + 'koje mittaa tarkemmin kuin pieni: mitä pidempi asteikko, sitä '
+              + 'pienempi lukemisvirhe. Suurin niistä on maailman suurin kivinen '
+              + 'aurinkokello, jonka kolmion muotoinen varjostin nousee '
+              + 'kymmenien metrien korkeuteen. Kaikki mittaukset tehdään '
+              + 'paljain silmin — kaukoputkea ei tarvita, vaan luetaan '
+              + 'auringon varjon reunaa kaarelta.',
+          selite: 'Punaruskeasta kivestä muurattu jättimäinen kolmio, jonka '
+              + 'hypotenuusa nousee jyrkästi vasemmalle ja jonka kylkeä '
+              + 'pitkin kulkevat portaat ylös. Kolmion oikealla puolella '
+              + 'kaartuu kaksi holvikaarta. Maa on tasaista kivetystä, taivas '
+              + 'sininen.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vaunut, jotka on veistetty kivestä',
+          aika: '1500-luku',
+          tiedosto: 'Iconic Stone Chariot @ Vittala Temple, Hampi, Karnataka.jpg',
+          teksti: 'Hampi oli Vijayanagaran valtakunnan pääkaupunki ja '
+              + 'aikanaan yksi maailman suurimmista kaupungeista. Vittala-'
+              + 'temppelin pihalla seisoo pieni pyhäkkö, joka on veistetty '
+              + 'temppelivaunun muotoon: sillä on kaiverretut pyörät, '
+              + 'vetoeläimet edessä ja koristeltu katos päällä. Vaunu on '
+              + 'kokonaan kiveä, mutta se on koottu palasista kuin oikea '
+              + 'ajoneuvo, ja pyörät ovat erillisiä kiekkoja, joiden '
+              + 'kerrotaan aikoinaan pyörineen paikallaan. Kuva vaunusta on '
+              + 'painettu Intian viidenkymmenen rupian seteliin.',
+          selite: 'Kivinen vaunun muotoinen pyhäkkö seisoo aukiolla. Sen '
+              + 'kyljissä on suuret koristellut kivipyörät, seinissä '
+              + 'kaiverruksia ja päällä matala torni. Edessä maassa lepää '
+              + 'kaksi kivieläintä. Taustalla kohoaa raunioitunut torni ja '
+              + 'pylväikköjä, taivaalla on hattarapilviä.',
+          lahde: 'Ram Nagesh Thota, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Hauta, joka rakennettiin puolisolle',
+          aika: '1653',
+          tiedosto: 'Taj Mahal, Agra, India edit2.jpg',
+          teksti: 'Taj Mahal on hautamuistomerkki, jonka mogulihallitsija '
+              + 'Shah Jahan rakennutti Agraan puolisonsa Mumtaz Mahalin '
+              + 'muistoksi. Työ alkoi 1632 ja rakennus valmistui '
+              + '1650-luvulla. Rakennus on täysin symmetrinen: neljä '
+              + 'minareettia, neljä samanlaista julkisivua ja niiden edessä '
+              + 'puutarha, jonka halkaisee suora vesiallas. Valkoinen marmori '
+              + 'tuotiin kaukaa, ja seiniin upotettiin puolijalokiviä '
+              + 'kukkakuvioiksi. Marmori muuttaa väriä päivän mittaan, koska '
+              + 'kivi päästää valon hieman lävitseen: aamulla se on '
+              + 'vaaleanpunertava, keskipäivällä valkoinen.',
+          selite: 'Valkoinen marmorirakennus keskellä kuvaa, päällä suuri '
+              + 'sipulikupoli ja ympärillä neljä kapeaa tornia. Edessä '
+              + 'johtaa suora kapea vesiallas, jonka molemmin puolin on '
+              + 'leikattua nurmikkoa ja tummia kartiomaisia puita. Taivas on '
+              + 'kirkkaan sininen.',
+          lahde: 'Yann ; edited by King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä varten Jaipurin jättikojeet rakennettiin?',
+        vaihtoehdot: [
+          'Ajan mittaamiseen auringosta',
+          'Veden keräämiseen sateesta',
+          'Tähtien laskemiseen yöllä',
+          'Tuulen suunnan seurantaan',
+        ],
+        oikea: 0,
+        fakta: 'Suuri koko ei ole koristetta: mitä pidempi asteikko, sitä '
+            + 'tarkemmin varjon reunan voi lukea paljain silmin.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Intiassa ruoka on harvoin yksi annos. Se on lautasellinen '
+          + 'pieniä kulhoja, kadulla juotu lasi ja kotoa kannettu rasia, '
+          + 'joka löytää perille miljoonakaupungin läpi.',
+      nostot: [
+        {
+          otsikko: 'Sata tuhatta lounasta perille joka päivä',
+          tiedosto: 'Dabbawala.jpg',
+          teksti: 'Mumbain dabbawalat noutavat kotoa valmistetut lounaat ja '
+              + 'vievät ne työpaikoille polkupyörillä ja lähijunilla — ja '
+              + 'palauttavat tyhjät rasiat iltapäivällä. Palvelu alkoi vuonna '
+              + '1890, kun Mahadeo Havaji Bachche kokosi noin sata miestä. '
+              + 'Nykyään 4 500–5 000 kuljettajaa siirtää 175 000–200 000 '
+              + 'rasiaa päivässä. Kannen värit ja merkit kertovat lähtöaseman, '
+              + 'määränpään ja talon, joten pitkiä osoitteita ei tarvitse '
+              + 'lukea. Uniformuun kuuluu valkoinen puuvillapaita ja valkoinen '
+              + 'gandhilakki.',
+          selite: 'Valkolakkinen mies nostaa metallisia lieriönmuotoisia '
+              + 'ruokarasioita polkupyörän tarakalle. Rasioita on kymmeniä, ja '
+              + 'niiden kansissa on käsin maalattuja kirjaimia ja numeroita. '
+              + 'Taustalla on musta rauta-aita ja vihreää pensaikkoa, maa on '
+              + 'märkä.',
+          lahde: 'Joe Zachs from Pune, India, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Ohukainen odottaa yön yli',
+          tiedosto: 'Masala Dosa or Dosai.JPG',
+          teksti: 'Dosa on eteläintialainen ohut suolainen ohukainen. Taikina '
+              + 'tehdään riisistä ja mustapapulinsseistä, jotka liotetaan, '
+              + 'jauhetaan tahnaksi ja jätetään seisomaan yön yli. Hapan maku '
+              + 'ja kuplat tulevat käymisestä: taikinassa elävät hiivat ja '
+              + 'maitohappobakteerit nostavat sen ja tekevät siitä helpommin '
+              + 'sulavan. Aamulla taikinaa kaadetaan kuumalle levylle ja '
+              + 'levitetään kauhan pohjalla ohueksi kiekoksi. Vanhin '
+              + 'kirjallinen maininta dosasta on 700-luvun tamilinkielisessä '
+              + 'kirjallisuudessa.',
+          selite: 'Metallilautasella tarjottu vaalea rullalle taitettu '
+              + 'ohukainen banaaninlehden päällä. Vieressä on kolme pientä '
+              + 'metallikulhoa: yhdessä oranssinruskeaa keittoa, toisessa '
+              + 'vaaleaa kookoskastiketta, kolmannessa tummempaa. Ohukaisen '
+              + 'pinta on rapea ja kupruinen.',
+          lahde: 'OdetomyLife, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tee keitetään, ei haudute',
+          tiedosto: 'Chai - desi water.jpg',
+          teksti: 'Intialainen chai ei synny hauduttamalla vaan keittämällä. '
+              + 'Kattilaan pannaan vesi, maito, sokeri ja voimakas musta tee, '
+              + 'ja kaikki kiehautetaan yhdessä. Masala chaihin lisätään '
+              + 'mausteita: kardemummaa, inkivääriä, neilikkaa, kanelia ja '
+              + 'usein mustapippuria. Valmis juoma siivilöidään pieneen '
+              + 'lasiin, ja se kaadetaan usein korkealta astiasta toiseen, '
+              + 'jotta se jäähtyy ja vaahtoutuu. Katukojujen chai juodaan '
+              + 'seisaaltaan ja nopeasti — lasi on pieni tarkoituksella.',
+          selite: 'Kuusi kättä kohottaa yhteen kuvan keskellä pieniä laseja, '
+              + 'joissa on vaaleanruskeaa maitoteetä. Lasit ovat matalia ja '
+              + 'kapenevat alaspäin. Alla näkyy keltainen pöytä ja vihreä '
+              + 'muovinen kori, ranteissa on rannerenkaita.',
+          lahde: 'Meemeyes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ateria tarjoillaan lehden päällä',
+          tiedosto: 'A Thali, famous South Indian meal served on a banana leaf.jpg',
+          teksti: 'Thali tarkoittaa vatia, mutta sana on siirtynyt '
+              + 'tarkoittamaan koko ateriaa. Vadille tai banaaninlehdelle '
+              + 'asetetaan riisi ja leipä keskelle ja niiden ympärille rivi '
+              + 'pieniä annoksia: linssikeittoa, kasviksia, hapanta '
+              + 'kastiketta, jogurttia, pikkelssiä ja jotain makeaa. Idea on, '
+              + 'että ateriassa on kaikki maut yhtä aikaa ja syöjä yhdistelee '
+              + 'niitä itse suupala kerrallaan. Etelässä lehti pestään ennen '
+              + 'käyttöä ja heitetään aterian jälkeen pois, joten astioita ei '
+              + 'tarvitse tiskata.',
+          selite: 'Vaaleanvihreä banaaninlehti pöydällä, ja sen päällä rivi '
+              + 'pieniä metallikulhoja täynnä eri värisiä kastikkeita ja '
+              + 'keittoja. Lehden reunoilla on kasoja valkoista riisiä, '
+              + 'keltaista vihannesmuhennosta ja vihreää lehtiruokaa sekä '
+              + 'ruskea rapea leipä.',
+          lahde: 'Melanie M, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä dosan taikina saa happaman makunsa?',
+        vaihtoehdot: [
+          'Käymisestä',
+          'Sitruunasta',
+          'Etikasta',
+          'Jogurtista',
+        ],
+        oikea: 0,
+        fakta: 'Taikina seisoo yön yli, ja samalla se nousee — hapatus tekee '
+            + 'siitä myös helpommin sulavan.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Intiassa kuva ei aina asu museossa. Se voi olla '
+          + 'kämmenenkokoinen kirjan sivu, painettu juliste, seinälle '
+          + 'maalattu kertomus tai jauhosta piirretty kuvio, joka katoaa '
+          + 'saman päivän aikana.',
+      nostot: [
+        {
+          otsikko: 'Maalaus mahtuu kämmenelle',
+          tiedosto: 'Govardhan. Akbar With Lion and Calf ca. 1630, Metmuseum.jpg',
+          teksti: 'Mogulikauden miniatyyri on kirjan sivun kokoinen maalaus, '
+              + 'ja siihen mahtuu silti kokonainen näyttämö. Väri jauhettiin '
+              + 'kivistä ja kasveista, sivellin tehtiin muutamasta oravan '
+              + 'karvasta, ja kultaa käytettiin lehtenä. Hovin työpajassa '
+              + 'yhtä kuvaa saattoi tehdä useampi mestari: yksi sommitteli, '
+              + 'toinen maalasi kasvot, kolmas taustan. Tässä kuvassa '
+              + 'hallitsija seisoo leijonan ja vasikan vieressä — vertauskuva '
+              + 'siitä, että saalistaja ja saalis ovat rauhassa hyvän '
+              + 'hallitsijan aikana.',
+          selite: 'Pystysuora miniatyyri kultareunuksen sisällä. Keskellä '
+              + 'seisoo valkopukuinen mies, jolla on pyöreä kultainen '
+              + 'sädekehä pään ympärillä. Hänen jaloissaan makaa leijona ja '
+              + 'sen vieressä pieni vaalea vasikka. Yläreunassa leijuu kaksi '
+              + 'pientä siivekästä hahmoa vaaleansinisellä taivaalla.',
+          lahde: 'Govardhan, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Jumalat tulivat painokoneesta',
+          tiedosto: 'Raja Ravi Varma, Vasantika (oleographic print).jpg',
+          teksti: 'Raja Ravi Varma (1848–1906) maalasi eurooppalaisen '
+              + 'öljymaalauksen tekniikalla intialaisia aiheita: eeposten '
+              + 'kohtauksia, jumalia ja muotokuvia. Suurin muutos ei '
+              + 'kuitenkaan ollut tyyli vaan levikki. Varma alkoi painamalla '
+              + 'litografioita myydä kuviaan halpoina vedoksina, jolloin '
+              + 'sama kuva päätyi tavallisiin koteihin ympäri maata. Monen '
+              + 'jumalhahmon nykyinen ulkonäkö on peräisin juuri näistä '
+              + 'vedoksista — kasvot, asento ja vaatteet vakiintuivat sen '
+              + 'mukaan, miltä ne näyttivät seinällä olevassa painokuvassa.',
+          selite: 'Värikäs painokuva, jossa nuori nainen seisoo kukkivan puun '
+              + 'alla. Hänellä on vaaleanpunainen sari, runsaasti kultakoruja '
+              + 'ja kädessään kukkiva oksa. Taustalla on vihreä puutarha ja '
+              + 'vaaleansininen taivas. Kuvan värit ovat kirkkaat ja pinta '
+              + 'sileä kuin julisteessa.',
+          lahde: 'Raja Ravi Varma, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kuvio piirretään aamulla ja katoaa iltaan',
+          tiedosto: 'Kolam-Attur town-2012-Salem-Tamil Nadu-6.JPG',
+          teksti: 'Kolam on eteläintialainen lattiakuvio, joka piirretään '
+              + 'talon oven eteen. Ensin maahan asetetaan pistematriisi, '
+              + 'sitten pisteiden ympäri vedetään yhtenäinen viiva riisi- tai '
+              + 'kivijauhosta sormien välistä valuttaen. Kuvio tehdään '
+              + 'aamulla, ja se kuluu päivän mittaan pois jalkojen ja tuulen '
+              + 'mukana. Jauho on tarkoituksella syötävää: muurahaiset ja '
+              + 'linnut saavat sen. Kolamin tekevät useimmiten talon naiset, '
+              + 'ja juhlien aikaan kuviot ovat suuria ja värillisiä.',
+          selite: 'Betonipihalle piirretty suuri kuvio talon portaiden edessä. '
+              + 'Keskellä on kuusisakarainen tähti, jonka sisällä ja '
+              + 'ympärillä kiertää sinisiä, punaisia, keltaisia ja vihreitä '
+              + 'silmukoita ja pisteitä. Taustalla näkyy vaaleanpunainen '
+              + 'seinä ja portaat.',
+          lahde: 'தகவலுழவன், Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Seinämaalaus siirtyi paperille',
+          tiedosto: 'Madhubani painting by Bhuvana Meenakshi.jpg',
+          teksti: 'Madhubani- eli mithilamaalaus on kotoisin Biharin '
+              + 'Mithilan seudulta. Sitä ovat perinteisesti tehneet talon '
+              + 'naiset, ja aiheet liittyivät elämän käännekohtiin: '
+              + 'syntymään, häihin ja vuoden juhliin. Kuvat maalattiin '
+              + 'savipintaisille seinille. Työvälineeksi kelpasivat sormet, '
+              + 'oksat, kynänterät ja tulitikut, ja värit tehtiin luonnon '
+              + 'aineista — okrasta ruskea, noesta musta. Tyylille ovat '
+              + 'tunnusomaisia tiheät geometriset kuviot, joilla koko pinta '
+              + 'täytetään: tyhjää kohtaa ei jätetä.',
+          selite: 'Kehystetty maalaus mustalla pohjalla. Keskellä on '
+              + 'soikea kenttä, jossa ui kaksi kalaa ja lintuja '
+              + 'keltaisella taustalla. Kenttää kiertää useita '
+              + 'suorakaiteen muotoisia reunuksia täynnä pieniä '
+              + 'kolmioita, pisteitä ja kukkakuvioita punaisella, '
+              + 'sinisellä ja keltaisella.',
+          lahde: 'Bhuvana Meenakshi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Ravi Varman kuvat päätyivät tavallisiin koteihin?',
+        vaihtoehdot: [
+          'Painamalla litografioita',
+          'Maalaamalla temppelien seiniä',
+          'Myymällä alkuperäisteoksia',
+          'Kiertämällä kylissä näyttelyn kanssa',
+        ],
+        oikea: 0,
+        fakta: 'Vedokset olivat halpoja, joten sama kuva levisi ympäri maata '
+            + 'ja vakiinnutti monen jumalhahmon ulkonäön.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Intian luonnossa kasvi tekee usein rakennustyön: yksi puu '
+          + 'levittäytyy metsäksi, toisen juuret kasvavat sillaksi ja kolmas '
+          + 'pitää suolaisen meren loitolla.',
+      nostot: [
+        {
+          otsikko: 'Yksi puu, joka näyttää metsältä',
+          tiedosto: 'Great Banyan Tree - AJC Bose Indian Botanic Garden - Howrah 2018-04-01 2288.JPG',
+          teksti: 'Suuri banyan kasvaa kasvitieteellisessä puutarhassa '
+              + 'Howrahissa Kolkatan kupeessa. Banyan eli Ficus benghalensis '
+              + 'laskee oksistaan ilmajuuria, jotka juurtuvat maahan ja '
+              + 'paksuuntuvat uusiksi rungoiksi — niin puu leviää sivusuunnassa '
+              + 'ilman rajaa. Tämä yksilö sai kaksi myrskyä ja sen jälkeen '
+              + 'sienitaudin, ja alkuperäinen päärunko poistettiin vuonna 1925 '
+              + 'jotta loppuosa säilyisi. Puun ympäri rakennettiin 330 metriä '
+              + 'pitkä tie, mutta se on jo kasvanut tien ylikin. Vuonna 1989 '
+              + 'se merkittiin maailman laaja-alaisimmaksi puuksi.',
+          selite: 'Matala tiheä lehtikatos, jota kannattelee kymmeniä '
+              + 'pystysuoria harmaita juurirunkoja kuin pylväsmetsä. Rungot '
+              + 'ovat eri paksuisia ja seisovat epäsäännöllisessä rivissä. '
+              + 'Maa on paljas ja hiekkainen, ja valo tulee vaakasuoraan '
+              + 'katoksen alta.',
+          lahde: 'Biswarup Ganguly, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Silta kasvatetaan paikalleen',
+          tiedosto: 'Living root bridges of Nongriat village in East Khasi Hills district, Meghalaya JEG7387.jpg',
+          teksti: 'Meghalayan sateisilla rinteillä khasit ja jaintiat ovat '
+              + 'tehneet siltansa kasvattamalla. Puro ylitetään ohjaamalla '
+              + 'kumiviikunan ilmajuurista muutama toiselle rannalle ja '
+              + 'kiinnittämällä ne sinne; vuosien kuluessa juuret paksuuntuvat '
+              + 'ja kietoutuvat toisiinsa. Elävä silta ei mätäne kuten '
+              + 'puusilta, vaan vahvistuu niin kauan kuin puu voi hyvin. '
+              + 'Valmiin sillan yli voi kulkea viisikymmentä ihmistä '
+              + 'yhtä aikaa. Siltoja on eniten 50–1 150 metrin korkeudella '
+              + 'Shillongin ylängön eteläreunalla.',
+          selite: 'Kapea silta kaartuu vuolaan puron yli tiheässä vihreässä '
+              + 'metsässä. Sillan kaiteet ja pohja muodostuvat toisiinsa '
+              + 'kietoutuneista puunjuurista, ja niiden päälle on ladottu '
+              + 'litteitä kiviä kulkupinnaksi. Molemmilla rannoilla kasvaa '
+              + 'sammaleisia puita, ja purossa on isoja lohkareita.',
+          lahde: 'PJeganathan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Metsä, joka kestää suolaa',
+          tiedosto: 'Sundarban Mangrove forest 14.jpg',
+          teksti: 'Sundarbans on maailman laajin mangrovemetsä: yhteensä noin '
+              + '10 300 neliökilometriä Gangesin, Brahmaputran ja Meghnan '
+              + 'suistossa, osa Intiassa ja osa Bangladeshissa. Vuorovesi '
+              + 'nousee ja laskee kahdesti vuorokaudessa, joten metsän pohja '
+              + 'on vuoroin kuiva ja vuoroin suolaisen veden alla. Mangrovet '
+              + 'selviävät siitä hengitysjuurilla, jotka työntyvät ylös '
+              + 'mudasta kuin piikit, ja monet lajit suodattavat suolaa jo '
+              + 'juurissaan. Yleisin puu on sundri, josta metsä on saanut '
+              + 'nimensä. Alue on myös bengalintiikerin elinaluetta.',
+          selite: 'Leveä ruskeanharmaa vuorovesiuoma kaartuu kuvan läpi. '
+              + 'Molemmilla rannoilla kasvaa tiheää matalaa mangrovemetsää, '
+              + 'jonka juuret näkyvät paljastuneessa mutarannassa. Vesi on '
+              + 'sameaa ja tyyntä, taivas vaalea ja kirkas.',
+          lahde: 'Pinakpani, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Norsu tuntee laumansa hajusta',
+          tiedosto: 'Kerala Elephant 0170 by N A Nazeer 02.jpg',
+          teksti: 'Aasiannorsu on pienempi kuin afrikkalainen sukulaisensa, ja '
+              + 'sen korvat ovat selvästi pienemmät. Intiassa laji elää '
+              + 'metsissä etelästä pohjoiseen, ja Keralan ja Karnatakan '
+              + 'metsissä on maan tiheimpiä kantoja. Lauman johtaja on '
+              + 'iäkkäin naaras, ja lauma koostuu naaraista ja poikasista; '
+              + 'urokset elävät aikuisina enimmäkseen yksin. Norsu käyttää '
+              + 'kärsäänsä myös hajuaistiin: se nostaa kärsän ilmaan kuin '
+              + 'jaksoperiskoopin ja tunnistaa hajusta tutut yksilöt ja '
+              + 'veden suunnan kilometrien päästä.',
+          selite: 'Kaksi harmaanruskeaa norsua seisoo vierekkäin kuivassa '
+              + 'metsässä. Etummaisen kärsä roikkuu suorana alas ja korvat '
+              + 'ovat pienet ja pyöreähköt. Ympärillä kasvaa harvaa '
+              + 'lehtipuustoa, maa on kellertävää ruohoa ja hiekkaa.',
+          lahde: 'N.A.Nazeer, Wikimedia Commons (CC BY-SA 2.5 in)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Meghalayan elävät sillat kasvatetaan?',
+        vaihtoehdot: [
+          'Kumiviikunan ilmajuurista',
+          'Bambun varsista punottuna',
+          'Palmun lehtiruodoista',
+          'Mangroven oksista',
+        ],
+        oikea: 0,
+        fakta: 'Elävä silta vahvistuu vuosi vuodelta, kun taas puinen silta '
+            + 'alkaa heti lahota kosteassa ilmastossa.',
+      },
+    },
+  ],
 };
