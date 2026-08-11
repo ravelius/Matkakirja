@@ -18925,4 +18925,505 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  CHN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kiinan historiassa kaivetaan, kaivertaan ja kaivataan esiin. '
+          + 'Muurattu luola, hiekan alle jäänyt savisotilas ja tuhat vuotta '
+          + 'kaivettu kanava kertovat kaikki samaa: mitään ei tehty vain '
+          + 'yhdeksi sukupolveksi.',
+      nostot: [
+        {
+          otsikko: 'Luola muurattiin umpeen tuhanneksi vuodeksi',
+          aika: '366',
+          tiedosto: 'Dunhuang Mogao Ku 2013.12.31 12-30-18.jpg',
+          teksti: 'Mogaon luolat on hakattu jyrkänteeseen 25 kilometriä '
+              + 'Dunhuangin keidaskaupungista kaakkoon, keskelle Silkkitien '
+              + 'risteystä. Ensimmäinen luola kaivettiin vuonna 366 '
+              + 'mietiskelypaikaksi, ja työ jatkui 1300-luvulle asti: '
+              + 'luolatemppeleitä on noin viisisataa ja maalauksia tuhannen '
+              + 'vuoden ajalta. Vuonna 1900 löytyi luola, joka oli muurattu '
+              + 'umpeen 1000-luvulla. Sen sisältä tuli esiin valtava määrä '
+              + 'kirjakääröjä ja asiakirjoja. Kokoelma hajosi ympäri maailmaa, '
+              + 'ja suurimmat osat ovat nyt Pekingissä, Lontoossa, Pariisissa '
+              + 'ja Berliinissä.',
+          selite: 'Yhdeksänkerroksinen punainen puujulkisivu on rakennettu '
+              + 'kiinni vaaleaan kallioseinään. Katot kaartuvat joka '
+              + 'kerroksessa ulospäin, ja rakennuksen molemmin puolin näkyy '
+              + 'kallioon hakattuja tummia oviaukkoja ja niille johtavia '
+              + 'portaita. Taivas on syvänsininen, edessä kasvaa lehdettömiä '
+              + 'puita.',
+          lahde: 'Zhangzhugang, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Savisotilaat tehtiin osista',
+          aika: '210 eaa.',
+          tiedosto: 'Qin Terracotta Army, Pit 1 09.jpg',
+          teksti: 'Kiinan ensimmäinen keisari Qin Shi Huang haudattiin vuosina '
+              + '210–209 eaa., ja hänen hautansa lähelle upotettiin maahan '
+              + 'savesta poltettu saattue. Kolmesta kuopasta on arvioitu '
+              + 'löytyvän yli 8 000 hahmoa, 130 vaunua ja yli 600 hevosta. '
+              + 'Hahmot valmistettiin osista kuin tehtaassa: vartalot muotista, '
+              + 'kädet ja päät erikseen, ja vasta viimeistelyssä jokaiselle '
+              + 'kasvolle tehtiin oma ilme. Paikallinen maanviljelijä osui '
+              + 'kaivoa kaivaessaan ensimmäisiin palasiin vuonna 1974. Muutkin '
+              + 'kuin sotilaat ovat päässeet esiin: virkamiehiä, '
+              + 'akrobaatteja ja soittajia.',
+          selite: 'Lähikuva savihahmojen päistä tiiviissä rivissä. Kasvot ovat '
+              + 'harmaanruskeat ja jokainen erilainen: viikset, sidotut '
+              + 'nutturat, erilaiset silmät ja suut. Hahmot seisovat kapeassa '
+              + 'kuopassa maakerrosten välissä, taustalla näkyy karkeaa '
+              + 'multaseinää.',
+          lahde: 'Gary Lee Todd, Ph.D., Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Maailman pisin kaivettu vesitie',
+          aika: '600-luku',
+          tiedosto: 'Kaiserkanal Grand Canal Hangzhou China (45133988404).jpg',
+          teksti: 'Suuri kanava on maailman pisin ihmisen kaivama vesitie. '
+              + 'Nykyinen päähaara Pekingistä Hangzhouhun on noin 1 776 '
+              + 'kilometriä pitkä, ja se yhdistää toisiinsa maan suuret joet '
+              + 'ja järvet. Kanavaa kaivettiin ja siirrettiin osissa vuosisadat '
+              + 'läpi; laajimmat työt tehtiin 600-luvulla, kun etelän riisi '
+              + 'piti saada pohjoiseen. Vesitie ei ollut vain kuljetusreitti '
+              + 'vaan verojen kulkuväylä: vilja liikkui kanavaa pitkin '
+              + 'pääkaupunkiin. Eteläiset osuudet ovat pysyneet lähes samoina '
+              + 'tähän päivään, ja kanava on maailmanperintökohde.',
+          selite: 'Leveä vihertävä kanava kaupungin läpi. Vasemmalla kaartuu '
+              + 'vanha kivinen kaarisilta, jonka päällä on katettu '
+              + 'lepopaviljonki; oikealla ja taustalla kohoaa valkoisia '
+              + 'asuinkerrostaloja rivissä. Rannalla kasvaa pajuja, taivas on '
+              + 'kirkkaan sininen.',
+          lahde: 'FLASHPACKER TRAVELGUIDE, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Laivasto toi kotiin kirahvin',
+          aika: '1414',
+          tiedosto: 'Tribute Giraffe with Attendant.jpg',
+          teksti: 'Amiraali Zheng He johti vuosina 1405–1433 seitsemän suurta '
+              + 'merimatkaa Yongle-keisarin toimeksiannosta. Laivasto purjehti '
+              + 'Kaakkois-Aasiaan, Intiaan, Arabian niemimaalle ja Afrikan '
+              + 'itärannikolle asti, ja mukana kulki satoja aluksia. Vuonna '
+              + '1414 laivat toivat mukanaan elävän kirahvin, jollaista '
+              + 'Kiinassa ei ollut nähty. Hovi tulkitsi eläimen qiliniksi, '
+              + 'onnea tuottavaksi taruolennoksi. Tapaus maalattiin '
+              + 'pystykääröön, joka tunnetaan Shen Dun nimellä; Philadelphian '
+              + 'taidemuseo pitää säilynyttä versiota myöhempänä, 1500-luvulla '
+              + 'tehtynä toisintona.',
+          selite: 'Kapea pystysuora maalaus vaalealle silkille. Keskellä seisoo '
+              + 'sivuttain pitkäkaulainen kirahvi, jonka turkissa on '
+              + 'kuusikulmainen ruskea laikkukuvio. Sen vieressä on pieni '
+              + 'punapukuinen mies, joka pitää kiinni päitsimistä. Yläosassa on '
+              + 'tiheä pystyrivi kiinalaista kirjoitusta.',
+          lahde: 'Shen Du, Wikimedia Commons (PD)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Dunhuangin umpeen muuratusta luolasta löytyi 1900?',
+        vaihtoehdot: [
+          'Kirjakääröjä',
+          'Kultaharkkoja',
+          'Keisarin hautakammio',
+          'Suolan varasto',
+        ],
+        oikea: 0,
+        fakta: 'Löytö hajautui pian eri maiden kokoelmiin, ja tutkijat kokoavat '
+            + 'sitä yhä yhteen digitaalisena.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kiina ei ole yksi keittiö vaan kymmeniä. Sama maa kasvattaa '
+          + 'teetä terassiviljelminä ja tekee taikinasta lankaa käsin — ja '
+          + 'jokaisella maakunnalla on oma käsitys siitä, mikä on maukasta.',
+      nostot: [
+        {
+          otsikko: 'Tee paahdetaan pannussa käsin',
+          tiedosto: 'Longjing Tea field, Dragon Well area, Meijiawu China.jpg',
+          teksti: 'Longjing eli lohikäärmeenkaivon tee kasvaa Länsijärven '
+              + 'ympärillä Hangzhoussa. Se on vihreää teetä, jonka lehdet '
+              + 'kuivataan kuumassa pannussa käsin: paahtaminen pysäyttää '
+              + 'hapettumisen ja litistää lehden litteäksi ja suoraksi. Maku '
+              + 'on makea ja muistuttaa kastanjaa. Parhaat erät poimitaan '
+              + 'ennen huhtikuun alun qingming-juhlaa, ja niitä sanotaan '
+              + 'mingqian-teeksi. Qing-kaudella Longjing sai keisarillisen '
+              + 'teen aseman, ja tarinan mukaan Qianlong-keisari nimesi '
+              + 'kahdeksantoista pensasta omikseen.',
+          selite: 'Loivaa rinnettä peittävät tiheät matalat teepensaat '
+              + 'kaarevina riveinä. Rivien välissä kulkee kapea kivipolku. '
+              + 'Vasemmalla on punainen puinen katos ja taustalla nousee '
+              + 'sumuinen metsäinen vuorenrinne.',
+          lahde: 'Peter K Burian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Yhdestä kimpaleesta sata lankaa',
+          tiedosto: 'Dalian Liaoning China Noodlemaker-01.jpg',
+          teksti: 'Lamian tarkoittaa vedettyä nuudelia. Taikinaa venytetään '
+              + 'käsin: kokki ottaa vehnätaikinakimpaleen, kiertää sitä, '
+              + 'venyttää käsivarsien mitan ja taittaa kahtia. Joka taitto '
+              + 'kaksinkertaistaa lankojen määrän ja puolittaa paksuuden, '
+              + 'joten kymmenen taittoa riittää tuhanteen säikeeseen. Veistä '
+              + 'ei tarvita lainkaan. Vanhin kuvaus tekniikasta on vuoden 1504 '
+              + 'ruokavalio-oppaassa. Japanin ramen ei polveudu lamianista, '
+              + 'mutta sen nimi on lainattu siitä — ja korean ramyeon taas '
+              + 'japanista.',
+          selite: 'Valkoiseen kokinasuun ja lakkiin pukeutunut mies pitää '
+              + 'käsissään paksua nippua vaaleita nuudelisäikeitä, jotka '
+              + 'roikkuvat silmukkana hänen kämmeniensä välissä. Edessä on '
+              + 'jauhotettu työtaso, taustalla sinivalkoinen ravintolan seinä '
+              + 'ja ikkuna.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Mauste, joka puuduttaa kielen',
+          tiedosto: 'Chongqing.Original Sichuan hotpot base.jpg',
+          teksti: 'Sichuaninpippuri ei ole pippuria eikä chiliä vaan '
+              + 'sitruunan sukuisen puun kuivattu hedelmäkuori. Sen '
+              + 'vaikuttava aine on hydroksi-alfa-sanshooli, joka saa huulet '
+              + 'ja kielen kihelmöimään ja puutumaan. Kun sen yhdistää '
+              + 'chiliin, syntyy sichuanilaisen keittiön tunnusmaku mala eli '
+              + 'puuduttava tulisuus. Sitä käytetään mapo-tofussa ja '
+              + 'Chongqingin tulisessa padassa, jossa ainekset keitetään '
+              + 'pöydässä kuplivassa liemessä. Puutuminen ei ole makuaisti '
+              + 'vaan tuntoaisti — se on kemiallinen väristys, ei maku.',
+          selite: 'Kirkas teräspata punaisella pöydällä. Padan pohjalla on '
+              + 'paksu kerros oranssinpunaista mausteseosta, jonka päällä '
+              + 'kelluu punaisia chilinpaloja ja mausteita kirkkaassa '
+              + 'öljyssä. Padan reunat kiiltävät, ja pinta on vielä tyyni.',
+          lahde: 'Popolon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Yksi kuppi, kaksi palaa',
+          tiedosto: 'Dim sum collection in lunch.jpg',
+          teksti: 'Dim sum tarkoittaa suunnilleen sydäntä koskettavaa. Tapa '
+              + 'syntyi Guangzhoussa, jonne 900-luvulta alkaen tuli yhä '
+              + 'enemmän kauppamatkalaisia: teehuoneissa alettiin tarjota '
+              + 'teen kanssa kaksi pientä suupalaa, mistä sanonta yksi kuppi '
+              + 'ja kaksi palaa. Tavasta kasvoi yum cha, teen juonti pienten '
+              + 'annosten kanssa. Nykyinen valikoima kehittyi 1800-luvun '
+              + 'jälkipuoliskolla, ja annokset höyrytetään bambukoreissa, '
+              + 'jotka pinotaan päällekkäin. Ateria on aamun ja keskipäivän '
+              + 'väliin sijoittuva, ja se syödään yhdessä pöydän ääressä.',
+          selite: 'Pyöreällä pöydällä kolme bambukoria vierekkäin. Yhdessä on '
+              + 'kaksi valkoista höyrytettyä pullaa, toisessa keltareunaisia '
+              + 'avonaisia nyyttejä, kolmannessa tummempia ruskeita paloja. '
+              + 'Reunalla näkyy valkoinen teekannu, pieni kuppi ja kaksi '
+              + 'ruokailijan kättä.',
+          lahde: 'Geoffreyrabbit, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten lamian-nuudelit syntyvät?',
+        vaihtoehdot: [
+          'Taikinaa venytetään käsin',
+          'Taikina leikataan veitsellä',
+          'Taikina puristetaan muotista',
+          'Taikina raastetaan höylällä',
+        ],
+        oikea: 0,
+        fakta: 'Joka taitto kaksinkertaistaa säikeiden määrän, joten muutama '
+            + 'toisto riittää satoihin lankoihin.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Kiinalaisessa maalauksessa sivellin on sama kuin '
+          + 'kirjoituksessa, ja siksi maalaus ja käsiala arvioidaan samoilla '
+          + 'sanoilla. Kääröä ei myöskään ripusteta seinälle katsottavaksi — '
+          + 'se avataan käsissä pätkä kerrallaan.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki mahtuu viiteen metriin',
+          tiedosto: 'Along the River During the Qingming Festival (detail of original).jpg',
+          teksti: 'Zhang Zeduanin käärö on 25,5 senttimetriä korkea ja 5,25 '
+              + 'metriä pitkä. Se kuvaa Bianjingin eli nykyisen Kaifengin '
+              + 'arkea Pohjois-Song-kaudella, ja siihen on laskettu 814 '
+              + 'ihmistä, 28 venettä, 60 eläintä, 30 rakennusta ja 170 puuta. '
+              + 'Käärö avataan oikealta vasemmalle, jolloin maaseutu vaihtuu '
+              + 'vähitellen kaupungiksi. Keskikohdassa on jännityshetki: '
+              + 'kaarisillan alla vene on törmäämässä siltaan mastonsa vuoksi, '
+              + 'väki huutaa ja joku laskee köyttä miehistölle. Teosta on '
+              + 'kopioitu satoja kertoja.',
+          selite: 'Vaakasuora maalaus vaalealle silkille. Keskellä kaartuu '
+              + 'puinen kaarisilta joen yli, ja sen päällä tungeksii pieniä '
+              + 'ihmishahmoja. Sillan alla on kaksi venettä, joissa miehet '
+              + 'kurkottavat ja huitovat. Rannoilla on tiheästi kaupunkitaloja, '
+              + 'kojuja ja puita.',
+          lahde: 'Zhang Zeduan, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Nimikirjoitus löytyi lehvistön seasta',
+          tiedosto: 'Fan Kuan - Travelers Among Mountains and Streams - Google Art Project.jpg',
+          teksti: 'Fan Kuan eli noin vuosina 960–1030, ja Vaeltajia vuorten ja '
+              + 'purojen keskellä on hänen ainoa varmuudella säilynyt työnsä. '
+              + 'Riippukääröä pidetään Pohjois-Songin maisemamaalauksen '
+              + 'perusteoksena. Kuvassa on kolme tasoa: etuala silmän '
+              + 'korkeudelta, keskellä vesi ja usva, ja takana pystysuora '
+              + 'kallio kuin kulissi. Ihmiset ovat kuvassa mukana, mutta '
+              + 'pieninä — kuormahevosten jono erottuu vaivoin puiden takaa '
+              + 'jyrkänteen juurella. Maalarin oma nimikirjoitus löydettiin '
+              + 'lehvistön seasta vasta vuonna 1958.',
+          selite: 'Korkea kapea maalaus tummalle silkille. Alaosassa on '
+              + 'kivikkoinen etuala ja tiheää pensaikkoa, keskellä usvainen '
+              + 'aukko ja pieni vesiputous. Ylhäällä kohoaa kuvan täyttävä '
+              + 'jyrkkä kallioseinä, jonka laella kasvaa tiheä metsä. Väri on '
+              + 'ruskeanharmaa ja tummunut.',
+          lahde: 'Fan Kuan, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Juomapeli synnytti kuuluisimman käsialan',
+          tiedosto: 'LantingXu.jpg',
+          teksti: 'Vuonna 353 Wang Xizhi kutsui neljäkymmentäkaksi oppinutta '
+              + 'Orkideapaviljongille kevätjuhlaan. Puron mutkaan laskettiin '
+              + 'viinikuppeja: kenen eteen kuppi pysähtyi, sen oli sepitettävä '
+              + 'runo tai juotava. Päivän päätteeksi kaksikymmentäkuusi '
+              + 'osallistujaa oli kirjoittanut 37 runoa, ja Wang kirjoitti '
+              + 'kokoelmalle esipuheen paikan päällä puolikursiivilla. '
+              + 'Lantingji Xu on kiinalaisen kalligrafian kuuluisin teos. '
+              + 'Alkuperäinen katosi jo kauan sitten; jäljellä on vain '
+              + 'jäljennöksiä paperilla ja kiveen hakattuina.',
+          selite: 'Leveä vaakasuora käärö vaaleanruskealla paperilla. Koko '
+              + 'pinta on täynnä pystysuoria rivejä mustaa kiinalaista '
+              + 'käsialaa, jossa merkit ovat pyöreitä ja yhteen sidottuja. '
+              + 'Tekstin seassa ja reunoilla on kymmeniä punaisia '
+              + 'neliömäisiä leimoja.',
+          lahde: 'Feng Chengsu, alkuperäinen Wang Xizhi, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Sininen kestää kuumimman polton',
+          tiedosto: 'Ming Jingdezhen Porcelain, Chongzhen Reign 06.jpg',
+          teksti: 'Sinivalkoisen posliinin väri on kobolttioksidia, joka '
+              + 'maalataan lasituksen alle. Kobolttia käytetään siksi, että se '
+              + 'on harvoja väriaineita, jotka kestävät posliinin vaatiman '
+              + 'korkean polttolämpötilan: muut värit vaativat toisen, '
+              + 'matalamman polton lasituksen päälle. Idea sinivalkoisesta '
+              + 'astiasta syntyi 800-luvulla Basrassa, jossa savenvalajat '
+              + 'jäljittelivät Kiinasta tuotua valkoista kiviastiaa. Kiinassa '
+              + 'tekniikka vietiin täydellisyyteen Jingdezhenin uuneissa, ja '
+              + 'sieltä astiat matkasivat takaisin länteen.',
+          selite: 'Korkea kapea maljakko lasivitriinissä. Astia on valkoinen ja '
+              + 'siihen on maalattu sinisellä kukkivia oksia ja lehtiä; '
+              + 'keskiosassa kiertää kapea kuvioitu vyö. Suuaukko levenee '
+              + 'torvimaisesti. Tausta on lämpimän keltainen museovalo.',
+          lahde: 'Gary Todd, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Qingming-kääryn sillan kohdalla on tapahtumassa?',
+        vaihtoehdot: [
+          'Vene on törmäämässä siltaan',
+          'Silta on romahtamassa jokeen',
+          'Keisari saapuu kulkueessa',
+          'Sillalla on syttynyt tulipalo',
+        ],
+        oikea: 0,
+        fakta: 'Kohta on kääryn keskus: koko väkijoukko on kääntynyt katsomaan '
+            + 'samaan suuntaan, ja joku laskee köyttä alas.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kiinassa mahtuu samaan maahan kalkkikivipylväitä, punaisia '
+          + 'hiekkakivivuoria ja vuoristometsiä, joissa apina kestää pakkasta '
+          + 'paremmin kuin yksikään toinen kädellinen.',
+      nostot: [
+        {
+          otsikko: 'Karhu, joka söi itsensä kasvissyöjäksi',
+          tiedosto: 'Panda eating Bamboo leaves.jpg',
+          teksti: 'Isopanda on karhu, jonka ruokavalio on lähes kokonaan '
+              + 'bambua. Aikuinen painaa 100–115 kiloa ja elää vain kuudella '
+              + 'vuoristoalueella, korkeintaan kolmen kilometrin korkeudessa. '
+              + 'Etukäpälässä on ylimääräinen peukalomainen uloke, jolla '
+              + 'panda pitää bambun varresta kiinni syödessään; poskihampaat '
+              + 'ovat suuret ja purentalihasten kiinnityskohdat leveät. '
+              + 'Bambussa on niin vähän ravintoa, että eläin joutuu syömään '
+              + 'suuria määriä. Panda elää yksin ja tapaa lajitovereitaan '
+              + 'lähinnä pariutumisaikaan; naaras hoitaa poikastaan noin '
+              + 'kahden vuoden ajan.',
+          selite: 'Musta-valkoinen panda istuu bambupensaikossa ja pitelee '
+              + 'käpälässään lehtevää bambunoksaa suunsa edessä. Silmien '
+              + 'ympärillä on mustat läiskät ja korvat ovat mustat. Turkki on '
+              + 'paksu ja hieman likaisen valkoinen, ympärillä kasvaa '
+              + 'vihreitä kapeita lehtiä.',
+          lahde: 'MspreilsCN, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Kalkkikivipylväitä joen mutkissa',
+          tiedosto: '1 li jiang guilin yangshuo 2011.jpg',
+          teksti: 'Li-joki kiemurtelee Guilinista Yangshuohon kalkkikiven '
+              + 'läpi. Maisema on kuuluisaa karstia: sadetta hitaasti liuottama '
+              + 'kalkkikivi on jättänyt jäljelle kymmenien metrien korkuisia '
+              + 'jyrkkäseinäisiä kukkuloita, jotka nousevat tasangolta yksi '
+              + 'kerrallaan. Muoto syntyy siitä, että vesi syövyttää kiveä '
+              + 'ennen kaikkea rakojen kohdalta, ja väliin jää liukenematonta '
+              + 'kiveä. Kiinalaiset maisemamaalarit ovat piirtäneet näitä '
+              + 'kukkuloita vuosisatoja, ja monessa maalauksessa väitetty '
+              + 'liioittelu onkin lähempänä totuutta kuin luulisi.',
+          selite: 'Näkymä korkealta joen mutkaan. Vihreä joki kaartuu kuvan '
+              + 'poikki hiekkasärkkien välissä, ja sen ympärillä kohoaa '
+              + 'kymmeniä jyrkkiä kartiomaisia kukkuloita rivi toisensa '
+              + 'takana. Etualalla on peltotilkkuja ja pieni kylä, kaukana '
+              + 'kukkulat vaalenevat sinisiksi.',
+          lahde: 'chensiyuan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Punainen kivi on hiekkaa liimattuna',
+          tiedosto: 'Zhangye Danxia 2016.jpg',
+          teksti: 'Danxia-muodostumat ovat punaisia hiekkakivi- ja '
+              + 'konglomeraattivuoria, joiden kerrokset ovat pääosin '
+              + 'liitukaudelta. Ne näyttävät karstilta, mutta koska kivi on '
+              + 'hiekkakiveä eikä kalkkikiveä, muotoja sanotaan '
+              + 'valekarstiksi: ne eivät ole liuenneet vaan kohonneet, '
+              + 'lohkeilleet ja kuluneet. Zhangyessa Gansun maakunnassa '
+              + 'kerrokset ovat kallistuneet vinoon, jolloin eri rautapitoiset '
+              + 'kerrokset näkyvät rinteessä vierekkäisinä raitoina. Ilmiö on '
+              + 'nimetty Danxia-vuoren mukaan, jota tutkittiin ensimmäisenä '
+              + '1920- ja 1930-luvuilla.',
+          selite: 'Matalia vuoria, joiden rinteet on raidoitettu vinoilla '
+              + 'kerroksilla oranssia, punaista, keltaista ja harmaata. '
+              + 'Kerrokset kulkevat yhdensuuntaisina vuorelta toiselle. '
+              + 'Yläpuolella on raskas tummanharmaa pilvikatto, ja aurinko '
+              + 'osuu rinteisiin sivulta.',
+          lahde: 'Marcus Hsu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Apina, joka kestää lunta',
+          tiedosto: 'RHINOPITHECUS ROXELLANA IN SHENZHEN SAFARI PARK.jpg',
+          teksti: 'Kultanenäapina elää vain Keski- ja Lounais-Kiinan '
+              + 'vuoristometsissä 1 500–3 400 metrin korkeudella. Sen '
+              + 'elinalueella sataa säännöllisesti lunta, ja se sietää kylmää '
+              + 'paremmin kuin yksikään muu kädellinen ihmistä lukuun '
+              + 'ottamatta. Ravinto vaihtelee vuodenajan mukaan, mutta '
+              + 'pääasiallinen ruoka on jäkälää, jota kasvaa puiden rungoilla '
+              + 'ja oksilla. Apina viettää noin 97 prosenttia ajastaan puiden '
+              + 'latvustossa. Kanta on arviolta 8 000–15 000 yksilöä, ja '
+              + 'suurin uhka on elinympäristön katoaminen.',
+          selite: 'Oranssinruskeaturkkinen apina istuu ohuella oksalla ja '
+              + 'katsoo sivulle. Kasvot ovat vaaleansiniset ja lähes '
+              + 'karvattomat, nenä on litteä ja ylöspäin kääntynyt. Turkki on '
+              + 'pitkä ja hehkuu kullanruskeana; taustalla näkyy sumeaa '
+              + 'vihreää lehvistöä ja puunrunko.',
+          lahde: 'Dinkun Chen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä on kultanenäapinan pääasiallinen ravinto?',
+        vaihtoehdot: [
+          'Jäkälää',
+          'Bambua',
+          'Kalaa',
+          'Linnunmunia',
+        ],
+        oikea: 0,
+        fakta: 'Jäkälää on tarjolla myös talvella, mikä auttaa lajia '
+            + 'selviämään lumisilla vuorilla.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Kiinalaiset keksinnöt eivät synny tyhjästä vaan ongelmasta: '
+          + 'joki tulvii, kirjaa tarvitaan monta kappaletta, maa järisee '
+          + 'kaukana eikä kukaan tiedä missä.',
+      nostot: [
+        {
+          otsikko: 'Jokea ei padottu vaan halkaistiin',
+          aika: '256 eaa.',
+          tiedosto: 'Dujiangyan Irrigation System (50620244551).jpg',
+          teksti: 'Min-joki syöksyi vuorilta Chengdun tasangolle, hidastui '
+              + 'äkisti ja jätti uomaan lietettä, joten seutu tulvi jatkuvasti. '
+              + 'Noin vuonna 256 eaa. Qinin valtio ryhtyi töihin, mutta '
+              + 'toisella tavalla kuin oli tapana: jokea ei padottu. '
+              + 'Dujiangyan hillitsee tulvia jakamalla joen kahtia keskelle '
+              + 'rakennetulla kärjellä, ohjaa osan vedestä kalliosta '
+              + 'louhitusta aukosta kastelukanaviin ja päästää liian veden '
+              + 'takaisin ylivuotokohdasta. Järjestelmä toimii yhä ja kastelee '
+              + 'yli 600 000 hehtaaria peltoa.',
+          selite: 'Voimakkaasti virtaava vihertävä joki kaartuu jyrkän '
+              + 'metsäisen niemen ympäri. Niemen laella seisoo punainen '
+              + 'kiinalainen paviljonki kaarevine kattoineen, rinteessä on '
+              + 'kivimuuria ja portaita. Vedenpinta on rauhaton ja vaahtoinen, '
+              + 'taustalla kohoaa sumuisia vuoria.',
+          lahde: 'Hugh Llewelyn from Keynsham, UK, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kirjakkeet syntyivät savesta',
+          aika: '1040-luku',
+          tiedosto: 'Beijing printing museum.wooden movable types.jpg',
+          teksti: 'Bi Sheng oli oppimaton käsityöläinen, ja hänestä tiedetään '
+              + 'oikeastaan vain yksi asia: hän keksi liikkuvan kirjakkeen '
+              + 'joskus vuosina 1039–1048. Jokainen merkki muotoiltiin '
+              + 'savitiilestä kolikon reunan paksuiseksi ja poltettiin kovaksi. '
+              + 'Ladelma asetettiin rautalevylle, jolle oli levitetty '
+              + 'pihkan, vahan ja paperituhkan seosta; levy lämmitettiin, '
+              + 'ladelma painettiin tasaiseksi ja seos jähmettyi. Keksinnön '
+              + 'kuvasi Shen Kuo kirjassaan Unilammikon esseitä. Myöhemmin '
+              + 'kirjakkeita tehtiin myös puusta ja metallista.',
+          selite: 'Museovitriinissä kaksi puista laatikkoa punaisella '
+              + 'alustalla. Toisessa on tiivis ruudukko neliömäisiä '
+              + 'puukirjakkeita, toisessa hajallaan yksittäisiä tummempia '
+              + 'kirjakkeita. Etualalla on harmaa suorakaiteen muotoinen levy, '
+              + 'jonka pintaan on kaiverrettu merkkejä.',
+          lahde: 'Popolon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kellotorni, joka näytti taivaan',
+          aika: '1092',
+          tiedosto: 'Song or Yuan Mechanical Astronomical Device Model (10370353385).jpg',
+          teksti: 'Su Song oli virkamies ja monialainen tutkija, joka rakensi '
+              + 'Kaifengiin vesikäyttöisen tähtitieteellisen kellotornin. Se '
+              + 'valmistui vuonna 1092. Tornissa oli säätelymekanismi, joka '
+              + 'päästi vesipyörän liikkumaan aina saman verran kerrallaan, ja '
+              + 'sen voima siirtyi ylös ketjulla, jota Su Song kutsui taivaan '
+              + 'tikkaiksi. Ylimpänä pyöri armillaarisfääri tähtien mukana, ja '
+              + 'torni näytti tunnit 133 pienen liikkuvan hahmon avulla. Kun '
+              + 'pääkaupunkia siirrettiin vuonna 1127, torni purettiin eikä '
+              + 'sitä saatu enää koskaan kokoon.',
+          selite: 'Alaviistosta kuvattu puinen rakennelma museossa. Paksujen '
+              + 'puupalkkien muodostaman kehikon sisällä riippuu '
+              + 'messinkirenkaista koottu pallomainen laite, jonka kehillä on '
+              + 'asteikkoja. Palkkien päällä näkyy kattorakenteita, ja tausta '
+              + 'on vaalea museoseinä.',
+          lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Laite kertoi, mistä suunnasta maa järisi',
+          aika: '132',
+          tiedosto: 'Seismograph IMG 5401.JPG',
+          teksti: 'Zhang Heng (78–139) oli hovin tähtitieteilijä, matemaatikko '
+              + 'ja insinööri. Vuonna 132 hän esitteli laitteen, joka kertoi '
+              + 'kaukaisen maanjäristyksen suunnan. Pronssinen astia oli '
+              + 'ihmisen korkuinen, ja sen kylkiin oli kiinnitetty kahdeksan '
+              + 'lohikäärmeenpäätä, joista jokainen piti suussaan pientä '
+              + 'pronssikuulaa. Alla istui kahdeksan sammakkoa suu auki. Kun '
+              + 'maa liikahti, yksi kuula putosi lohikäärmeen suusta sammakon '
+              + 'suuhun ja kilahti — ja se kertoi, mistä ilmansuunnasta '
+              + 'liike oli tullut. Sisärakenne on hävinnyt, ja siitä on tehty '
+              + 'useita erilaisia arvauksia.',
+          selite: 'Tummanharmaa pronssinen astia lasivitriinissä. Astia on '
+              + 'pallomainen ja kupumainen kansi, ja sen kyljistä työntyy '
+              + 'ulos kaarevia lohikäärmehahmoja pää alaspäin. Astian '
+              + 'ympärillä alustalla istuu rivi pieniä sammakkohahmoja suu '
+              + 'ylöspäin auki.',
+          lahde: 'deror_avi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Dujiangyan suojaa tasankoa tulvilta?',
+        vaihtoehdot: [
+          'Jakamalla joen kahtia',
+          'Patoamalla joen kokonaan',
+          'Johtamalla veden maan alle',
+          'Kaivamalla tasangolle järven',
+        ],
+        oikea: 0,
+        fakta: 'Ratkaisu oli aikanaan poikkeuksellinen: muualla vesi pyrittiin '
+            + 'pysäyttämään, täällä se ohjattiin kulkemaan kahta reittiä.',
+      },
+    },
+  ],
 };
