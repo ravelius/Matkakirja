@@ -15444,6 +15444,101 @@ export const MAA_KATEGORIAT = {
             + 'myös silloin kun ei tuule.',
       },
     },
+    {
+      id: 'puutarhat',
+      nimi: 'Puutarhat',
+      johdanto: 'Iranin puutarha ei ole niitty vaan rakennelma: muuri ympärille, '
+          + 'suora vesikanava keskelle ja varjo puiden alle. Se on vastaus '
+          + 'samaan kysymykseen kuin tuulitorni — miten kuivassa maassa tehdään '
+          + 'paikka, jossa on viileää.',
+      nostot: [
+        {
+          otsikko: 'Neljä osaa ja yksi kanava',
+          tiedosto: 'Jardín de Fin, Kashan, Irán, 2016-09-19, DD 22.jpg',
+          teksti: 'Persialaisen puutarhan peruskaava on nimeltään chahar bagh eli '
+              + 'neljä puutarhaa: muurien sisään jäävä suorakaide jaetaan '
+              + 'vesikanavilla neljään osaan. Kashanin Finin puutarha on kaavan '
+              + 'tunnetuin esimerkki, ja se on säilynyt 1500-luvulta. Vesi tulee '
+              + 'puutarhaan Solaymaniyeh-lähteestä eikä sitä pumpata: koko puisto '
+              + 'on rakennettu loivaan rinteeseen, joten painovoima riittää '
+              + 'pitämään suihkut käynnissä. Yhdeksän iranilaista puutarhaa '
+              + 'otettiin yhdessä maailmanperintöluetteloon vuonna 2011, ja Fin on '
+              + 'niistä yksi.',
+          selite: 'Pitkä matala vesikanava johtaa suoraan katsojasta poispäin. Vesi '
+              + 'on kirkkaan turkoosia, koska allas on laatoitettu, ja siitä nousee '
+              + 'rivi pieniä suihkuja. Kanavan molemmin puolin on leikattu '
+              + 'pensasaita ja korkeita sypressejä, ja päädyssä on vaalea '
+              + 'holvikaarinen paviljonki.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kanava, joka kaivettiin maan alle',
+          tiedosto: 'Shafiabad (Shahdad), Kerman Province, Iran (42688716052).jpg',
+          teksti: 'Puutarhojen ja peltojen vesi tuli usein qanatista. Se on loivasti '
+              + 'viettävä maanalainen käytävä, joka johtaa vettä vuoren juurella '
+              + 'olevasta pohjavesikerroksesta kylään asti. Käytävä kaivetaan maan '
+              + 'alle juuri siksi, ettei vesi haihdu matkalla auringossa, ja sen '
+              + 'varrelle jää rivi pystykuiluja, joista kaivumaa nostettiin ja '
+              + 'joista käytävään pääsee huoltamaan. Pisimmät ovat kymmeniä '
+              + 'kilometrejä pitkiä. Tapa on tuhansia vuosia vanha, ja se levisi '
+              + 'Iranista laajalle; yksitoista iranilaista qanatia otettiin '
+              + 'maailmanperintöluetteloon vuonna 2016.',
+          selite: 'Maanalainen käytävä, jonka seinät ja katto on kaivettu '
+              + 'punaruskeaan maahan. Käytävän pohjalla virtaa matala kirkas vesi '
+              + 'kapeassa uomassa, ja taustalla erottuu kaksi kaarevaa aukkoa, '
+              + 'joista käytävä jatkuu pimeään.',
+          lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kaksikymmentä pylvästä, jotka näyttävät neljältäkymmeneltä',
+          tiedosto: 'Chehel Sotoun Palace, Isfahan, Iran (53788680140).jpg',
+          teksti: 'Chehel Sotoun tarkoittaa neljääkymmentä pylvästä, mutta '
+              + 'paviljongin edustalla niitä on kaksikymmentä. Nimi selittyy '
+              + 'altaasta: kun pylväät heijastuvat pitkästä vesipeilistä, niitä on '
+              + 'katsojan silmissä neljäkymmentä. Rakennus valmistui shaahi Abbas '
+              + 'II:n aikana 1600-luvun puolivälissä, ja se oli juhla- ja '
+              + 'vastaanottopaikka. Puutarha on samaa chahar bagh -kaavaa kuin '
+              + 'Finissä, mutta allas on tehty leveäksi eikä kapeaksi kanavaksi — '
+              + 'juuri sitä heijastusta varten.',
+          selite: 'Suorakaiteen muotoinen allas kivetyn aukion laidassa, vesi '
+              + 'vihertävää. Altaan takana on hiekanvärinen paviljonki, jonka '
+              + 'julkisivussa on suuri holvikaari ja sen molemmin puolin matalampia '
+              + 'kaaria. Vasemmalla on tuuheita puita ja altaan reunalla rivi '
+              + 'kivisiä kukkaruukkuja.',
+          lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Puutarha, joka on myös kasvitieteellinen kokoelma',
+          tiedosto: 'Eram Garden Shiraz باغ ارم شیراز 02.jpg',
+          teksti: 'Shirazin Eramin puutarhassa kasvaa yli kolmesataa kasvilajia, ja '
+              + 'se on nykyään Shirazin yliopiston kasvitieteellinen puutarha. '
+              + 'Puutarha on vanha, mutta nykyinen paviljonki rakennettiin '
+              + '1800-luvulla qajar-kaudella: kolme kerrosta, ohuet pylväät ja '
+              + 'julkisivu, jonka kaaret on peitetty maalatuilla laatoilla. '
+              + 'Sypressit ovat puutarhan tunnusmerkki — yhtä niistä on kutsuttu '
+              + 'Shirazin komeimmaksi puuksi. Eram kuuluu samaan yhdeksän puutarhan '
+              + 'maailmanperintökohteeseen kuin Fin.',
+          selite: 'Kapea sinilaattainen vesikanava johtaa suoraan kolmikerroksiselle '
+              + 'paviljongille. Kanavan molemmin puolin on tiheät rivit punaisia, '
+              + 'valkoisia ja violetteja kukkia sekä leikattu pensasaita. Taustalla '
+              + 'kohoaa palmuja ja sypressejä, ja paviljongin kaaret on koristeltu '
+              + 'värillisin laatoin.',
+          lahde: 'Mostafameraji, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi qanat kaivetaan maan alle?',
+        vaihtoehdot: [
+          'Ettei vesi haihdu matkalla',
+          'Että vesi jäähtyisi kylmäksi',
+          'Ettei kanava jäätyisi talvella',
+          'Että kaivumaasta saataisiin tiiltä',
+        ],
+        oikea: 0,
+        fakta: 'Käytävän varrella on rivi pystykuiluja: niistä kaivumaa nostettiin '
+            + 'ylös, ja niistä pääsee yhä huoltamaan käytävää.',
+      },
+    },
   ],
   JOR: [
     {

@@ -210,6 +210,58 @@ turvallisempi kuin 2 900 kuvan lataus.
 kielletty, pelkkä viittauksen vaihto ei riitä: repo levittää yhä
 tiedostoa `assets/valokuvat`-kansiosta. Poista myös tiedosto.
 
+## 1b. JATKOKOHTA: ME-lehdet kesken (10.8.2026 ilta)
+
+Haara **`claude/opus1-me-lehdet`**, pohja v554-main. Ei PR:ää — Fable
+antoi julkaisuluvan vasta kun **Iran on kokonainen**.
+
+**Valmiina ja committina:**
+
+- cityCountry-korjaus: kapadokia→TUR, siinai→EGY, rubalkhali→SAU,
+  persepolis→IRN, petra→JOR. Jerusalem jää ilman tunnusta (Fablen
+  päätös 10.8.: muutos jää voimaan, Jerusalem on omistajan pöydällä).
+- **IRN: 3 aihetta × 4 nostoa** — historia, rakennukset, puutarhat.
+
+**Seuraavaksi, tässä järjestyksessä:**
+
+1. **IRN ruoka** ja **IRN käsityö** (+ runous jos aineisto kantaa).
+   Sitten Iran on kokonainen → julkaise normaalilla kaavalla.
+2. **IRQ** samalla reseptillä, sitten SYR, YEM, CYP.
+
+**Puutelista on viisi maata, ei kuusi:** IRN, IRQ, SYR, YEM, CYP.
+Jordanialla on jo aiheet (vedet, rauniot) — siltä puuttui vain
+Petran cityCountry-rivi, joka on nyt lisätty. Älä luota
+tehtävänannon listaan, mittaa itse:
+
+    node -e "import('./js/packs/maa-kategoriat.js').then(m=>
+      console.log(Object.keys(m.MAA_KATEGORIAT).sort().join(' ')))"
+
+**Kuvaehdokkaita, jotka on jo lisenssitarkistettu mutta EI katsottu
+silmin** (nämä on katsottava ennen kuin kuvateksti kirjoitetaan):
+saffron `Saffronfarm-860808.jpg` (CC BY-SA 3.0), sangak-leipä
+`Sangak bread in Tehran … (40668041370).jpg` (CC BY 2.0), khatam
+`Khatam detail.jpg` (CC BY-SA 2.5), miniatyyri `A prince offering a
+cup, by Shaykh 'Abbasi, Isfahan, dated 1654-5.jpg` (PD). Pistaasille
+ja teelle ei löytynyt kelvollista hakua — teehaku ajautui
+uskonnollisiin surujuhlakuviin, joten hakusanat on vaihdettava.
+
+**Sotasisältörajaus purtiin jo kerran:** Naqsh-e Rostamin
+tunnetuimmat reliefit esittävät Shapur I:n voittoa roomalaisista ja
+Bahram II:n ratsastustaistelua. Ne ovat hyviä kuvia mutta rajauksen
+ulkopuolella. Sama koskee Irakia, Syyriaa ja Jemeniä: aiheet
+kulttuurista, historiasta, ruoasta, musiikista ja luonnosta.
+
+### Liitostyökalun ansa, joka söi valmiin aiheen
+
+Kirjoitin ensin liittimen, joka etsi maan taulukon lopun
+`rindex('  ],')`-tekstihaulla. Taulukon sisällä on kymmeniä samalta
+näyttäviä rivejä (jokaisen aiheen `nostot`-lista päättyy niin), joten
+haku osui väärään ja **hukkasi juuri lisätyn aiheen hiljaa** — tiedosto
+jäsentyi yhä, testit menivät läpi, ja vika näkyi vasta kun laski
+aiheet. Toimiva versio laskee hakasulkeita ja ohittaa merkkijonot:
+`/tmp/.../scratchpad/liita-aihe.mjs`. **Laske aiheet ja nostot joka
+liitoksen jälkeen** — jäsennys ei ole todiste.
+
 ## 5c. Postikortti rajaa kuvan keskeltä — kohde keskelle
 
 `css/styles.css:1817` antaa postikortin kuvalle **kiinteän

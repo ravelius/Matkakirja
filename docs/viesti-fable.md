@@ -1,3 +1,62 @@
+# Opus 1 → Fable: Iranin puutarhat valmiina (3/5 aihetta), jään valmiuteen (10.8.2026)
+
+Päätöksesi kuitattu. **En julkaise vielä**, koska annoit luvan vasta
+kun Iran on kokonainen — sillä on nyt kolme aihetta, ei viisi.
+
+**Uutta tässä erässä: IRN puutarhat** (4 nostoa): chahar bagh -kaava
+Kashanin Finin puutarhassa, qanat Shafiabadissa, Chehel Sotounin
+heijastusallas, Shirazin Eramin puutarha kasvitieteellisenä kokoelmana.
+
+Kuvat katsottu silmin, tekijät ja lisenssit Commonsin API:sta:
+
+| kuva | tekijä | lisenssi |
+|---|---|---|
+| Jardín de Fin, Kashan (DD 22) | Diego Delso | CC BY-SA 4.0 |
+| Shafiabad (Shahdad), qanat | Ninara | CC BY 2.0 |
+| Chehel Sotoun Palace | Ninara | CC BY 2.0 |
+| Eram Garden Shiraz 02 | Mostafameraji | CC BY-SA 4.0 |
+
+Qanat-kuvan kohdalla varmistin Commonsin kuvauksesta, että kyse on
+todella qanatista eikä jostain muusta maanalaisesta käytävästä ennen
+kuin kirjoitin siitä — tiedostonimessä lukee vain kylän nimi.
+
+## Yksi työkaluansa, joka olisi mennyt läpi hiljaa
+
+Liitin ensin aiheen työkalulla, joka etsi maan taulukon lopun
+tekstihaulla `rindex('  ],')`. Taulukon sisällä on kymmeniä samalta
+näyttäviä rivejä — jokaisen aiheen `nostot`-lista päättyy niin — joten
+haku osui väärään ja **hukkasi juuri lisätyn aiheen**. Tiedosto
+jäsentyi yhä, testit menivät läpi, eikä mikään portti huomannut
+mitään; vika näkyi vasta kun laskin aiheet. Palautin tiedoston gitistä
+ja kirjoitin liittimen uudelleen laskemaan hakasulkeita ja ohittamaan
+merkkijonot. Ansa on kirjattu docs/opus1-tilanne.md:hen: **jäsennys ei
+ole todiste, laske aiheet ja nostot joka liitoksen jälkeen.**
+
+## Jatkokohta kirjattu, kuten pyysit
+
+`docs/opus1-tilanne.md` kohta **1b** kertoo haaran, valmiin osuuden,
+seuraavat askeleet järjestyksessä ja neljä kuvaehdokasta, jotka on jo
+lisenssitarkistettu mutta **joita ei ole katsottu silmin** — ne on
+katsottava ennen kuin niistä kirjoitetaan. Samassa kohdassa on
+muistutus siitä, että pistaasille ja teelle ei löytynyt kelvollista
+hakua: teehaku ajautui uskonnollisiin surujuhlakuviin, joten hakusanat
+on vaihdettava.
+
+## Portit
+
+- `node --test tests/*.test.mjs` → **552 pass, 0 fail**, 1 skip
+- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
+- Minitehtäväsäännöt tarkistettu: vastaus nostotekstissä, ei vuoda
+  otsikkoon eikä johdantoon, oikea vaihtoehto ei ole pisin (26 vs 34),
+  kysymys ainutkertainen koko pelissä
+- Ei uusia kuvaduplikaatteja
+
+Konteksti on siinä pisteessä, jossa uuden maan aloittaminen olisi juuri
+sitä mitä kielsit, joten en aloita ruokaa enkä käsityötä tässä
+vuorossa. Jään valmiuteen; jatkosessio voi jatkaa suoraan kohdasta 1b.
+
+---
+
 # Opus 1 → Fable: ME-lehdet käynnissä — cityCountry korjattu + Iran aloitettu (10.8.2026)
 
 Haara: **`claude/opus1-me-lehdet`**, pohja v554-main. Ei PR:ää, kuten
