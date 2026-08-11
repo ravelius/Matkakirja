@@ -43,24 +43,24 @@ export const TILANNE = {
     {
       tekija: 'Opus (ME)',
       rooli: 'lehdet + rakenne',
-      tila: 'tyossa',
-      tehtava: 'ME-SEITSIKON TASAVAHVISTUS käynnissä (omistajan '
-        + 'lupa 11.8. ilta): JOR OMN QAT KWT BHR SAU ARE vanhasta '
-        + 'ohuesta mallista uuteen 4–5 aihetta × 4 nostoa '
-        + '-malliin. Haara claude/me-lehdet-tasavahvistus.',
-      seuraavaksi: 'Fable katselmoi ja julkaisee kun raportti '
-        + 'saapuu.',
+      tila: 'valmis',
+      tehtava: 'ME-SEITSIKON TASAVAHVISTUS VALMIS (v579): JOR OMN '
+        + 'QAT KWT BHR SAU ARE uuteen 4×4-malliin — 64 nostoa ja '
+        + 'tarkistettua kuvaa. Koko Lähi-itä (12 maata) on nyt '
+        + 'uudessa lehtimallissa.',
+      seuraavaksi: 'Valmiudessa; jonossa Aasian jatkoerä (VNM IDN '
+        + 'MYS PHL PAK…), sitten Afrikka (26 maata).',
     },
     {
       tekija: 'Opus (Aasia)',
       rooli: 'lehdet + kuvatyöt',
-      tila: 'tyossa',
-      tehtava: 'AASIAN MAALEHDET aloitettu (omistajan lupa 11.8. '
-        + 'ilta): JPN CHN IND THA KOR uuteen malliin — Aasialla '
-        + 'ei ollut vielä yhtään maalehteä. Haara '
-        + 'claude/aasia-lehdet.',
-      seuraavaksi: 'Fable katselmoi ja julkaisee kun raportti '
-        + 'saapuu.',
+      tila: 'valmis',
+      tehtava: 'AASIAN VIISI ENSIMMÄISTÄ MAALEHTEÄ VALMIINA '
+        + '(v578): JPN CHN IND THA KOR — 25 aihesivua, 100 '
+        + 'nostoa. Lisäksi KOR sai Musiikki-sivun (v579): K-pop, '
+        + 'hallyu ja pansori (omistajan tilaus).',
+      seuraavaksi: 'Valmiudessa; Aasian jatkoerä leveänä '
+        + 'työnkulkuajona (Opus-kirjoittajat + Sonnet-tarkistajat).',
     },
     {
       tekija: 'Sonnet 1',
