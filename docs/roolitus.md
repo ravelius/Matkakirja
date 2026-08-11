@@ -73,7 +73,7 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 | --- | --- | --- |
 | Fable | session_01BPysCfxscsVyzAEYmb88Zr | 10.8.2026 (uusi tili) |
 | Fable max (apusessio) | session_01U8NqxuC5RCoMozxGqDzEJm | 10.8.2026 |
-| Opus 1 | session_01LrZTPX64MWBxukCQ7p7NBJ | 10.8.2026 (uusi tili) |
+| Opus 1 | session_01RZAfWgFGP3dw4p4FMUTJ7v | 11.8.2026 (jatkosessio; edellisen session_01LrZTPX64… konteksti täyttyi Iranin puutarhat-aiheen jälkeen, luovutus docs/opus1-tilanne.md 1b) |
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |
 | Sonnet 1 | session_0184WdPeGzjAbnuXjWvquN8Q | 10.8.2026 (5. yritys; aiemmat kaatuivat source_url-vikaan, ks. fable-tilanne) |
 | Sonnet 2 | — (perustetaan kun ME-jono aukeaa) | 10.8.2026 |
