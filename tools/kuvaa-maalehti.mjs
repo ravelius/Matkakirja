@@ -105,6 +105,15 @@ for (const id of sivut.length ? sivut : ['']) {
     console.log('liuska', id, '→', JSON.stringify(painettu).slice(0, 200));
     await sivu.waitForTimeout(2500);
   }
+  // Odota, että jokainen kuva on joko latautunut tai luovuttanut. Pelkkä
+  // kiinteä odotus antoi "rikki 3" laiskasti ladatuista kuvista, jotka
+  // eivät olleet vielä edes aloittaneet latausta.
+  await sivu.waitForFunction(() => {
+    const kuvat = [...document.querySelectorAll('.wiki-nosto img')];
+    // naturalWidth > 0, EI i.complete: epäonnistuneella kuvalla complete
+    // on myös true, ja mittaus ehti silloin pelin oman varareitin edelle.
+    return kuvat.length > 0 && kuvat.every((i) => i.naturalWidth > 0);
+  }, null, { timeout: 30000 }).catch(() => console.log('  (odotus umpeutui)'));
   const kuvat = await sivu.evaluate(() => [...document.querySelectorAll('.wiki-nosto img')]
     .map((i) => ({ src: i.currentSrc.split('/').pop().slice(-45), w: i.naturalWidth })));
   console.log(`  kuvia sivulla: ${kuvat.length}, rikki: ${kuvat.filter((k) => !k.w).length}`);

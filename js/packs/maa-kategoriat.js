@@ -15932,7 +15932,7 @@ export const MAA_KATEGORIAT = {
               + 'neliömetriä. Samarran arkeologinen kaupunki otettiin '
               + 'maailmanperintöluetteloon vuonna 2007.',
           selite: 'Ilmakuva kartiomaisesta tiilitornista, jonka kylkeä kiertää '
-              + 'leveä ramppi ylöspäin kaviona. Torni seisoo laajalla '
+              + 'ylöspäin leveä ramppi ilman kaidetta. Torni seisoo laajalla '
               + 'hiekkakentällä; oikealla näkyy moskeijan matala ulkomuuri '
               + 'torneineen ja taustalla matalaa kaupunkia.',
           lahde: 'Jim Gordon, Wikimedia Commons (CC BY 2.0)',
