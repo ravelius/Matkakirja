@@ -5921,16 +5921,21 @@ export class UI {
         ? `:a${aikataulu.day}` : '';
 
       /*
-       * Tarinakaaren saapumismerkintä syrjäyttää vanhan mallin
-       * (omistajan tilaus 9.8.2026: paketti suoraan peliin) — isoisän
-       * merkintä on kirjoitettu kaaren kohtaamisen ja aarteen pariksi.
-       * Nosto jää pois: merkintä on jo kokonainen.
+       * TILAPÄINEN (omistajan päätös 11.8.2026 ilta): vanhan mallin
+       * lyhyt kahden äänen merkintä luentoineen on palautettu
+       * kaaritekstin tilalle, kunnes tekstit kirjoitetaan uusiksi
+       * Raamattu 2.0:n mukaan — omistajan arvio: vanha malli on
+       * parempi, ja kaaritekstien luentoja ei ehditty generoida.
+       * Kaarimerkintää käytetään vain, jos vanhaa ei ole; kohtaaminen
+       * ja aarre tulevat yhä kaaresta. Nosto jää kaaritekstistä pois:
+       * merkintä on jo kokonainen.
        */
-      const kaariMerkinta = KAARI_LAUDAT.has(saapuminen.packId)
+      const vanhaMerkinta = (SAAPUMISTEKSTIT[saapuminen.packId] ?? {})[saapuminen.cityId];
+      const kaariMerkinta = !vanhaMerkinta && KAARI_LAUDAT.has(saapuminen.packId)
         ? TARINAKAARI[saapuminen.cityId] : null;
       const uusi = kaariMerkinta
         ? { kuvaus: kaariMerkinta.saapuminen, nosto: '' }
-        : (SAAPUMISTEKSTIT[saapuminen.packId] ?? {})[saapuminen.cityId];
+        : vanhaMerkinta;
       if (uusi && kaupunki) {
         const luentaAvain = `saapui:${saapuminen.packId}:${saapuminen.cityId}`;
         const key = luentaAvain + aikatauluLisa;
