@@ -79,8 +79,10 @@ koodin sisäisissä kommenteissa, mutta ei pelaajalle näkyvissä teksteissä.
 
 Isoisä ei löytänyt kaikkea, mitä lähti hakemaan. Sinne tänne päiväkirjaan
 on jäänyt merkintä paikasta, jonne hän ei ehtinyt: suunta, seutu, huhu —
-ei koskaan kaupungin nimeä. Nämä nousevat pelissä esiin harvakseltaan ja
-kaventavat aluetta, jolta laudan unohdettua aarretta kannattaa etsiä.
+ei koskaan kaupungin nimeä. *(Pelimekaniikkana vihjejärjestelmä
+poistettiin 11.8.2026 — jokaisella mantereella on oma aarteensa, ja
+manner itse rajaa etsinnän. Taitettu sivu säilyy tarinamotiivina;
+ks. isoisan-raamattu.md.)*
 
 ## Sävy: särmää, mutta piikki osoittaa aina oikeaan suuntaan
 

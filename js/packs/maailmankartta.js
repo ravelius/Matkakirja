@@ -975,7 +975,13 @@ export const MAAILMANKARTTA = {
     // Seitsemän linssilaattaa on otettu tyhjistä (84 -> 77), koska
     // maailmankartalla on seitsemän lähdemannerta ja tyhjä laatta on
     // pelin turhauttavin ruutu: se vie vuoron eikä anna mitään.
-    counts: {"star":1,"horseshoe":11,"robber":18,"ruby":34,"emerald":43,"topaz":57,"empty":77,"linssi":7},
+    //
+    // SEITSEMÄN TÄHTEÄ, YKSI PER MANNER (omistajan päätös 11.8.2026):
+    // jokaisella mantereella on oma Aarnin luettelon aarteensa, ja
+    // mannerTypes antaa kullekin oman nimensä ja kuvansa. Kuusi uutta
+    // tähteä otettiin tyhjistä samalla perusteella kuin linssit
+    // (77 -> 71); kaupunkien kokonaismäärä 248 ei muutu.
+    counts: {"star":7,"horseshoe":11,"robber":18,"ruby":34,"emerald":43,"topaz":57,"empty":71,"linssi":7},
   },
 
   questions: yhdistaKysymykset(),

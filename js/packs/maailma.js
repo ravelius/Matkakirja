@@ -525,22 +525,6 @@ export const MAAILMA = {
       'Isoisä laski matkansa hinnaksi kaksituhatta puntaa ja piti sitä ruhtinaallisena. Sama summa riittää nykyään yhteen lentolippuun ja kohtuulliseen aamiaiseen. Rahassa mitattuna maailma on kutistunut; kaikessa muussa se on kasvanut.',
       'Ensimmäisellä sivulla lukee: "Lähden selvittämään, onko maailma niin suuri kuin sanotaan." Viimeisellä sivulla lukee: "On." Väliin mahtuu kaksisataa sivua, joista aion tarkistaa jokaisen.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu,
-    // ei koskaan kaupungin nimeä.
-    starHints: {
-      kairo: 'Suurin joista tulee etelästä ja hajoaa Välimereen kolmiona. Sen suistossa on kaupunki, jonka basaarissa puhuttiin haudatuista kuninkaista. Laivani kääntyi itään ennen kuin ehdin.',
-      rio: 'Päiväntasaajan eteläpuolella, Atlantin länsirannalla, on lahti jota purjehtijat pitivät maailman kauneimpana. Kirjasin sen muistiin ja jatkoin pohjoiseen. Typerää.',
-      mumbai: 'Intian niemimaan länsirannikolla sataa neljä kuukautta yhteen menoon, ja siellä on satama, jonne monsuuni tuo laivat takaisin. Sinne minun olisi pitänyt jäädä odottamaan.',
-      peking: 'Kiinan pohjoisosassa, suuren muurin eteläpuolella, kerrottiin olevan kaupunki jonka keskellä on toinen kaupunki, jonne ei päästetä ketään. Katselin sitä kartalta enkä uskaltanut lähteä.',
-      sydney: 'Eteläisen mantereen kaakkoiskulmassa on luonnonsatama, jota merimiehet ylistivät kolmella mantereella. Purjehdin ohi pimeällä. Kadun sitä yhä.',
-      moskova: 'Kaukana Euroopan tasangon itälaidalla, joen mutkassa, kohoaa sipulikupolien kaupunki. Sinne olisi pitänyt mennä talvella, kun tiet ovat jäässä eivätkä mudassa.',
-      tokio: 'Itäisimmässä saariketjussa, siellä mistä aurinko meille tulee, on pääkaupunki jota kukaan klubilla ei ollut nähnyt omin silmin. Se jäi matkani kaukaisimmaksi puuttuvaksi kohdaksi.',
-      singapore: 'Malaijien niemimaan eteläkärjessä, kapean salmen partaalla, on satama jonka läpi kulkee puoli maailman rahtia. Ohitin sen yöllä enkä noussut kannelle katsomaan.',
-      kapkaupunki: 'Afrikan eteläkärjessä kaksi valtamerta lyö yhteen, ja siellä on kaupunki pöydänmuotoisen vuoren juurella. Näin vuoren kaukaa mereltä. Sen olisi pitänyt riittää houkutukseksi.',
-      losangeles: 'Pohjois-Amerikan länsirannikolla, vuorten kuivalla puolella, kerrottiin kasvavan pikkukaupunkia appelsiinitarhojen keskelle. Pidin kertomusta liioitteluna ja jatkoin matkaa.',
-      tanger: 'Afrikan luoteisimmassa kulmassa, siinä salmessa jossa manner on kivenheiton päässä Euroopasta, on satamakaupunki jossa puhutaan viittä kieltä samassa korttelissa. Näin sen kannelta enkä noussut maihin.',
-      ateena: 'Välimeren pohjoisrannalla seisoo kukkulalla marmoritemppeli, joka oli vanha jo roomalaisille. Sen kaupungissa en käynyt: satamaan tuli lastia ja laiva lähti ennen aikojaan.',
-    },
   },
 
   decor: {

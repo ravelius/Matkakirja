@@ -3124,26 +3124,6 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   color: var(--accent);
 }
 
-/* Aarrevihje erottuu tavallisesta merkinnästä: kellertävä revitty sivu,
- * isompi tähtiotsikko ja repaleinen yläreuna. Hiljaisuus on tarkoitus —
- * vihjettä ei lueta ääneen, ja ilme kertoo sen. */
-.fact-card.vihjekortti {
-  background:
-    linear-gradient(rgba(214, 168, 66, 0.12), rgba(214, 168, 66, 0.05)),
-    var(--panel);
-  border-top: 1px solid rgba(140, 100, 30, 0.5);
-}
-
-.fact-card.vihjekortti h2 {
-  font-size: 0.92rem;
-  letter-spacing: 0.1em;
-  color: #a5691f;
-}
-
-.fact-card.vihjekortti .fact-text {
-  font-style: italic;
-}
-
 .fact-place {
   margin: 0 0 0.25rem;
   font-size: 0.8rem;

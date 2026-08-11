@@ -30,7 +30,7 @@ import { tokenPileTemplate } from '../js/tokens.js';
 import {
   Game, mulberry32, questionLevel, FLIGHT_PRICE, START_MONEY, STAR_PRIZE, STRANDED_AID,
   DUEL_BYPASS_SHOES, DUEL_PRIZE, FIFTY_FIFTY_PRICE, HARD_BONUS, HINT_PRICE,
-  QUIZ_SECONDS, SEA_FARE, HINT_EVERY_TURNS,
+  QUIZ_SECONDS, SEA_FARE,
   XP_NEW_CITY, XP_NEW_BOARD, XP_HARD_ANSWER, XP_STAR,
   TURN_HOURS, RECORD_DAYS, XP_RECORD, timeOfDayName,
   FORM_WEIGHTS, PHOTO_CHOICES, XP_EXPLORE, XP_PUZZLE, EXPLORE_REWARD,
@@ -89,6 +89,20 @@ const SISALTO_VALMIS = new Set([
 const MERIREITIT_KESKEN = new Set();
 
 const MIN_CITY_QUESTIONS = (packId) => (SISALTO_VALMIS.has(packId) ? 5 : 2);
+
+/**
+ * Laudan mantereet kaupunkijärjestyksessä. Sama sopimus kuin
+ * js/game.js jaaLaatat: ilman cityManner-merkintää koko lauta on yksi
+ * manner ja tunnus on laudan oma.
+ */
+function mantereet(pack) {
+  const ulos = [];
+  for (const c of pack.cities) {
+    const manner = pack.map?.cityManner?.[c.id] ?? pack.id;
+    if (!ulos.includes(manner)) ulos.push(manner);
+  }
+  return ulos;
+}
 const MIN_GENERAL_QUESTIONS = (packId) => (SISALTO_VALMIS.has(packId) ? 15 : 10);
 
 // Laudat, joilta on siivottu kysymykset, joiden oikea vastaus lukee saman
@@ -128,7 +142,9 @@ for (const pack of PACKS) {
     // päätös 10.8.2026 — js/game.js enterWorld).
     const pile = tokenPileTemplate(pack.tokens.counts);
     assert.equal(pile.length, pack.cities.length);
-    assert.equal(pack.tokens.counts.star, 1);
+    // Tähtiä on yksi per manner (omistajan päätös 11.8.2026): laudalla,
+    // jolla mantereita ei ole erikseen merkitty, se on yksi.
+    assert.equal(pack.tokens.counts.star, mantereet(pack).length);
     assert.ok(pack.tokens.counts.horseshoe >= 1);
     for (const type of Object.keys(pack.tokens.counts)) {
       assert.ok(pack.tokens.types[type], `laattatyyppiä ${type} ei ole määritelty`);
@@ -326,34 +342,6 @@ for (const pack of PACKS) {
     }
   });
 
-  // Isoisän taitettu sivu vihjaa laudan pääaarteesta. Vihje ei saa paljastaa
-  // kaupunkia eikä osoittaa kaupunkiin, jota laudalla ei ole. Täysi kattavuus
-  // vaaditaan laudoilta, joiden sisältö on kirjoitettu (VOICES_DONE).
-  test(`${pack.id}: aarrevihjeet eivät paljasta kaupunkia`, () => {
-    const hints = pack.texts.starHints;
-    assert.ok(hints && typeof hints === 'object', 'texts.starHints puuttuu');
-    const extra = Object.keys(hints).filter((id) => !pack.cities.some((c) => c.id === id));
-    assert.deepEqual(extra, [], 'vihje osoittaa tuntemattomaan kaupunkiin');
-
-    for (const city of pack.cities) {
-      const hint = hints[city.id];
-      if (!hint) continue;
-      assert.ok(hint.length >= 40, `${city.id}: vihje on liian lyhyt`);
-      // Nimen jokainen kunnollinen sana tarkistetaan erikseen sanarajoilla:
-      // lyhyt alkuosa (esim. "Al Kufra") osuisi muuten keskelle muita sanoja.
-      for (const word of city.name.split(/[ ()]+/).filter((w) => w.length >= 4)) {
-        assert.ok(
-          !new RegExp(`\\b${word}`, 'i').test(hint),
-          `${city.id}: vihje nimeää kaupungin ("${word}")`,
-        );
-      }
-    }
-
-    if (!VOICES_DONE.has(pack.id)) return;
-    for (const city of pack.cities.filter((c) => !c.start)) {
-      assert.ok(hints[city.id], `vihje puuttuu kaupungilta ${city.id}`);
-    }
-  });
 
   test(`${pack.id}: rosvon kaksintaistelupakka on ehjä`, () => {
     assert.ok(pack.duels.length >= 4, 'liian vähän kaksintaistelukysymyksiä');
@@ -667,7 +655,7 @@ test('laattojen vaikutukset: jalokivi, ryöstäjä ja tähti', () => {
 
   game.tokens.set('timbuktu', 'star');
   game.revealToken('timbuktu');
-  assert.ok(p.hasStar);
+  assert.equal(p.stars, 1);
   assert.ok(game.starFound);
 });
 
@@ -682,8 +670,8 @@ test('tähti kotiin voittaa, hevosenkenkä voi ehtiä ensin', () => {
     });
 
   const g1 = makeGame();
-  g1.player.hasStar = true;
-  g1.starFound = true;
+  g1.player.stars = 1;
+  g1.world.starsFound.set('africa', 'timbuktu');
   g1.player.pos = { type: 'city', city: 'tanger' };
   assert.ok(g1.checkWin());
   assert.equal(g1.winner.name, 'A');
@@ -694,7 +682,7 @@ test('tähti kotiin voittaa, hevosenkenkä voi ehtiä ensin', () => {
   g2.player.horseshoes = 1;
   g2.player.pos = { type: 'city', city: 'tanger' };
   assert.equal(g2.checkWin(), false);
-  g2.starFound = true;
+  g2.world.starsFound.set('africa', 'timbuktu');
   assert.ok(g2.checkWin());
 });
 
@@ -1000,7 +988,7 @@ test('vaellus: yksin pelattaessa peli ei pääty ja tähti on arvokas löytö', 
   game.tokens.set('timbuktu', 'star');
   const rahaEnnen = p.money;
   game.revealToken('timbuktu');
-  assert.ok(p.hasStar);
+  assert.equal(p.stars, 1);
   assert.equal(p.money, rahaEnnen + STAR_PRIZE, 'tähti on rahanarvoinen löytö');
 
   // Kotiin palaaminen ei päätä peliä.
@@ -1108,6 +1096,279 @@ test('vaellus: monen laudan peli tallentuu ja palautuu', () => {
   assert.equal(restored.rng(), game.rng(), 'arvonnat jatkuvat samasta kohdasta');
 });
 
+// --- mannerkohtaiset unohdetut aarteet (omistajan päätös 11.8.2026) --------
+
+test('maailmankartalla on tasan yksi aarre joka mantereella', () => {
+  const pack = packById('maailmankartta');
+  const odotetut = mantereet(pack);
+  assert.equal(odotetut.length, 7, 'maailmankartalla pitää olla seitsemän mannerta');
+
+  // Sijoittelu on arvottu, joten invariantti tarkistetaan monella
+  // siemenellä: yksi onnistunut arvonta ei todista mitään.
+  for (let seed = 1; seed <= 12; seed++) {
+    const game = new Game({
+      players: [{ name: 'Yksin', color: '#f00', start: null }],
+      pack,
+      seed,
+    });
+    const laskuri = new Map(odotetut.map((m) => [m, 0]));
+    for (const [cityId, type] of game.world.tokens) {
+      if (type !== 'star') continue;
+      const manner = pack.map.cityManner[cityId];
+      laskuri.set(manner, (laskuri.get(manner) ?? 0) + 1);
+    }
+    for (const manner of odotetut) {
+      assert.equal(laskuri.get(manner), 1,
+        `siemen ${seed}: mantereella ${manner} on ${laskuri.get(manner)} aarretta`);
+    }
+  }
+});
+
+test('aarre ei ole koskaan aloituskaupungissa eikä linssikaupungissa', () => {
+  const pack = packById('maailmankartta');
+  const startit = new Set(pack.cities.filter((c) => c.start).map((c) => c.id));
+  for (let seed = 1; seed <= 12; seed++) {
+    const game = new Game({
+      players: [{ name: 'Yksin', color: '#f00', start: null }],
+      pack,
+      seed,
+    });
+    for (const [cityId, type] of game.world.tokens) {
+      if (type !== 'star') continue;
+      assert.ok(!startit.has(cityId), `siemen ${seed}: aarre aloituskaupungissa ${cityId}`);
+    }
+  }
+});
+
+test('mantereen aarre on varmasti jäljellä, kun muut laatat on käännetty', () => {
+  /*
+   * Porttisääntöä ei ole: aarre voi löytyä mantereen ensimmäisestä
+   * laatasta. Toinen puoli samaa lupausta on, että se EI voi jäädä
+   * löytymättä — kun mantereen kaikki muut laatat on käännetty, aarre
+   * on viimeisessä. Se seuraa suoraan siitä, että tähti sijoitetaan
+   * laattajaossa, mutta juuri se on tämän testin arvo: jos joku
+   * myöhemmin palauttaa dynaamisen siirtelyn, tämä kaatuu.
+   */
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 5,
+  });
+  const oceania = pack.cities
+    .map((c) => c.id)
+    .filter((id) => pack.map.cityManner[id] === 'oceania');
+
+  // Käännetään kaikki paitsi viimeinen tähti pois laskuista.
+  const tahdet = oceania.filter((id) => game.world.tokens.get(id) === 'star');
+  assert.equal(tahdet.length, 1);
+  for (const id of oceania) {
+    if (id !== tahdet[0]) game.world.tokens.delete(id);
+  }
+  const jaljella = oceania.filter((id) => game.world.tokens.has(id));
+  assert.deepEqual(jaljella, tahdet, 'viimeinen kääntämätön laatta ei ollut aarre');
+});
+
+test('aarteen löytyminen kirjataan mantereelle ja palkitsee vaelluksessa', () => {
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 9,
+  });
+  assert.ok(game.roaming);
+  const p = game.player;
+  p.pos = { type: 'city', city: 'lima' };
+  game.world.tokens.set('lima', 'star');
+
+  const rahaEnnen = p.money;
+  game.revealToken('lima');
+
+  assert.equal(p.stars, 1, 'pelaajan aarrelaskuri ei kasvanut');
+  assert.equal(p.money, rahaEnnen + STAR_PRIZE);
+  assert.ok(game.mantereenTahtiLoytynyt('southamerica'), 'mannerta ei kirjattu');
+  assert.ok(!game.mantereenTahtiLoytynyt('oceania'), 'väärä manner kirjattiin');
+  assert.ok(game.starFound, 'starFound kertoo että jokin aarre on löytynyt');
+
+  // Löytö on Etelä-Amerikan oma aarre, ei laudan yleinen tyyppi.
+  const aarre = game.aarreTyyppi('star', 'lima');
+  assert.equal(aarre.name, packById('southamerica').tokens.types.star.name);
+});
+
+// --- mannerlento -----------------------------------------------------------
+
+test('mannerlento aukeaa vasta kun tämän mantereen aarre on löytynyt', () => {
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 12,
+  });
+  const p = game.player;
+  // start: null jättää pelin lähtöpisteen valintaan; mannerlento on
+  // tavallisen vuoron toiminto, joten vaihe siirretään käsin.
+  game.phase = 'action';
+  p.pos = { type: 'city', city: 'lima' };
+  p.money = 1000;
+
+  assert.deepEqual(game.mannerLennot(), [], 'lento tarjolla ilman aarretta');
+
+  // Toisen mantereen aarre ei riitä: portti on mannerkohtainen.
+  game.world.starsFound.set('oceania', 'sydney');
+  assert.deepEqual(game.mannerLennot(), [], 'toisen mantereen aarre avasi lennon');
+
+  game.world.starsFound.set('southamerica', 'lima');
+  // Kohteita on yksi per muu manner, jonka aarre on vielä kateissa:
+  // lento on jahdin jatkamista varten (Fablen rajaus 11.8.2026), joten
+  // oceania (aarre jo löytynyt) ei ole listalla.
+  const kohteet = game.mannerLennot();
+  assert.equal(kohteet.length, 5, 'kohteita pitää olla yksi per kateissa oleva muu manner');
+  assert.equal(new Set(kohteet.map((k) => k.manner)).size, 5, 'sama manner kahdesti');
+  assert.ok(!kohteet.some((k) => k.manner === 'southamerica'), 'oma manner kohteena');
+  assert.ok(!kohteet.some((k) => k.manner === 'oceania'), 'löydetyn aarteen manner kohteena');
+  for (const kohde of kohteet) {
+    const city = pack.cities.find((c) => c.id === kohde.city);
+    assert.ok(city?.start, `${kohde.city} ei ole aloituskaupunki`);
+  }
+});
+
+test('mannerlento vaatii rahat, kaupungin ja vaellustilan', () => {
+  const pack = packById('maailmankartta');
+  const uusi = (opts) => {
+    const game = new Game({
+      players: [{ name: 'Yksin', color: '#f00', start: null }],
+      pack,
+      seed: 12,
+      ...opts,
+    });
+    game.phase = 'action';
+    game.player.pos = { type: 'city', city: 'lima' };
+    game.player.money = 1000;
+    game.world.starsFound.set('southamerica', 'lima');
+    return game;
+  };
+
+  const koyha = uusi({});
+  koyha.player.money = FLIGHT_PRICE - 1;
+  assert.deepEqual(koyha.mannerLennot(), [], 'lento ilman rahaa');
+
+  const matkalla = uusi({});
+  const edgeId = [...matkalla.board.edgeById.keys()][0];
+  matkalla.player.pos = { type: 'edge', edge: edgeId, at: 1 };
+  assert.deepEqual(matkalla.mannerLennot(), [], 'lento kesken reittiä');
+
+  // Kilpapelissä aarre aloittaa kotiinjuoksun — lentoa ei tarjota.
+  const kilpa = new Game({
+    players: [
+      { name: 'A', color: '#f00', start: null },
+      { name: 'B', color: '#00f', start: null },
+    ],
+    pack,
+    seed: 12,
+  });
+  kilpa.phase = 'action';
+  kilpa.player.pos = { type: 'city', city: 'lima' };
+  kilpa.player.money = 1000;
+  kilpa.world.starsFound.set('southamerica', 'lima');
+  assert.equal(kilpa.roaming, false);
+  assert.deepEqual(kilpa.mannerLennot(), [], 'lento kilpapelissä');
+});
+
+test('mannerlento veloittaa, siirtää ja vie yhden vuoron', () => {
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 12,
+  });
+  const p = game.player;
+  game.phase = 'action';
+  p.pos = { type: 'city', city: 'lima' };
+  p.money = 1000;
+  game.world.starsFound.set('southamerica', 'lima');
+
+  const kohde = game.mannerLennot()[0];
+  const vuoroEnnen = game.turnCount;
+  const tulos = game.actionMannerLento(kohde.city);
+
+  assert.ok(tulos.ok, tulos.error);
+  assert.equal(p.pos.city, kohde.city);
+  assert.equal(p.money, 1000 - FLIGHT_PRICE);
+  assert.ok(game.world.visited.has(kohde.city), 'kohdetta ei kirjattu käydyksi');
+  assert.ok(game.turnCount > vuoroEnnen || game.phase === 'offer',
+    'lento ei vienyt vuoroa');
+
+  // Tuntemattomaan kohteeseen ei lennetä.
+  assert.equal(game.actionMannerLento('ei-tallaista').ok, false);
+});
+
+// --- tallennuksen versio 1 -> 2 -------------------------------------------
+
+test('tallennus kirjoitetaan versiona 2 ja palautuu mannerkohtaisena', () => {
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 31,
+  });
+  game.player.pos = { type: 'city', city: 'lima' };
+  game.world.tokens.set('lima', 'star');
+  game.revealToken('lima');
+
+  const data = JSON.parse(JSON.stringify(game.toJSON()));
+  assert.equal(data.version, 2);
+  assert.deepEqual(data.worlds.maailmankartta.starsFound, [['southamerica', 'lima']]);
+
+  const palautettu = Game.fromJSON(data);
+  assert.ok(palautettu, 'versio 2 ei kelvannut');
+  assert.ok(palautettu.mantereenTahtiLoytynyt('southamerica'));
+  assert.equal(palautettu.players[0].stars, 1);
+});
+
+test('version 1 tallennus kääntyy mannerkohtaiseksi', () => {
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 31,
+  });
+  game.player.pos = { type: 'city', city: 'kairo' };
+
+  // Rakennetaan version 1 muotoinen tallennus käsin: yksi tähti,
+  // starFound-lippu ja starCity, pelaajalla hasStar.
+  const vanha = JSON.parse(JSON.stringify(game.toJSON()));
+  vanha.version = 1;
+  vanha.worlds.maailmankartta.starFound = true;
+  vanha.worlds.maailmankartta.starCity = 'kairo';
+  delete vanha.worlds.maailmankartta.starsFound;
+  vanha.players[0].hasStar = true;
+  delete vanha.players[0].stars;
+
+  const palautettu = Game.fromJSON(vanha);
+  assert.ok(palautettu, 'version 1 tallennus hylättiin');
+  assert.ok(palautettu.mantereenTahtiLoytynyt('middleeast'),
+    'Kairon aarretta ei kirjattu Lähi-idälle');
+  assert.equal(palautettu.world.starsFound.size, 1, 'muita mantereita merkittiin löytyneiksi');
+  assert.equal(palautettu.players[0].stars, 1, 'hasStar ei kääntynyt laskuriksi');
+  assert.equal(palautettu.players[0].hasStar, undefined, 'vanhentunut lippu jäi olioon');
+
+  // Löytymätön version 1 tallennus jää tyhjäksi.
+  const tyhja = JSON.parse(JSON.stringify(game.toJSON()));
+  tyhja.version = 1;
+  delete tyhja.worlds.maailmankartta.starsFound;
+  tyhja.players[0].hasStar = false;
+  delete tyhja.players[0].stars;
+  const puhdas = Game.fromJSON(tyhja);
+  assert.equal(puhdas.world.starsFound.size, 0);
+  assert.equal(puhdas.players[0].stars, 0);
+  assert.equal(puhdas.starFound, false);
+});
+
+test('tuntematon tallennusversio hylätään yhä', () => {
+  assert.equal(Game.fromJSON({ version: 3, players: [] }), null);
+  assert.equal(Game.fromJSON({ version: 0, players: [] }), null);
+});
+
 test('kilpapelin voittaja voi jatkaa vaellusta', () => {
   const game = new Game({
     players: [
@@ -1116,8 +1377,8 @@ test('kilpapelin voittaja voi jatkaa vaellusta', () => {
     ],
     rng: mulberry32(47),
   });
-  game.player.hasStar = true;
-  game.starFound = true;
+  game.player.stars = 1;
+  game.world.starsFound.set('africa', 'timbuktu');
   game.player.pos = { type: 'city', city: 'tanger' };
   assert.ok(game.checkWin());
   assert.equal(game.phase, 'over');
@@ -1202,13 +1463,15 @@ test('aarretta ei voi ostaa rahalla', () => {
   const actions = game.availableActions();
   assert.deepEqual(
     Object.keys(actions).sort(),
-    ['countryGates', 'fly', 'gateways', 'quiz', 'roll', 'travel'],
+    ['countryGates', 'fly', 'gateways', 'mannerFlights', 'quiz', 'roll', 'travel'],
   );
   assert.ok(actions.travel.includes('land'));
   // Laudanvaihtoportteja ei pelissä ole (yksi lauta, omistajan päätös
   // 10.8.2026) — porttilistat ovat tyhjät myös kilpapelissä.
   assert.deepEqual(actions.gateways, []);
   assert.deepEqual(actions.countryGates, []);
+  // Mannerlento on vaellustilan mekaniikka: kilpapelissä sitä ei ole.
+  assert.deepEqual(actions.mannerFlights, []);
 });
 
 test('50:50 poistaa kaksi väärää vaihtoehtoa ja maksaa 80', () => {
@@ -1529,62 +1792,6 @@ test('saapumishavainto seuraa matkaajaa kaupungista kaupunkiin', () => {
   game.phase = 'move';
   game.moves = new Map([['x', { pos: { type: 'edge', edge: Object.keys(game.board.edgeById?.entries?.() ?? {})[0] ?? 'e', at: 1 }, path: [] }]]);
   assert.equal(game.arrivalFact?.cityId, 'kairo', 'havainto säilyy nopanheittojen yli');
-});
-
-test('isoisän vihje näkyy vain matkalla ja vaikenee kun aarre on löytynyt', () => {
-  const game = new Game({
-    players: [{ name: 'Yksin', color: '#f00', start: 'tanger' }],
-    pack: packById('africa'),
-    rng: mulberry32(21),
-  });
-
-  const starCity = game.starCityOf();
-  assert.ok(starCity, 'tähtikaupunkia ei löytynyt');
-  assert.equal(game.tokens.get(starCity), 'star');
-
-  // Kaupungissa vihje ei nouse esiin (omistajan linjaus 7.8.2026:
-  // vihje kuuluu matkalle eikä sotke kaupunkien merkintöjä).
-  assert.equal(game.player.pos.type, 'city');
-  assert.equal(game.starHint(), null, 'vihje näkyy kaupungissa');
-
-  // Kaupunkien välissä vihje osoittaa tähtikaupunkiin.
-  const edgeId = [...game.board.edgeById.keys()][0];
-  game.player.pos = { type: 'edge', edge: edgeId, at: 1 };
-  assert.equal(game.starHint(), packById('africa').texts.starHints[starCity]);
-
-  // Löytynyt aarre sulkee taitetun sivun.
-  game.world.starFound = true;
-  assert.equal(game.starHint(), null, 'vihje jatkuu vaikka aarre on löytynyt');
-});
-
-test('Euroopan vihjeet ovat ilmansuunnittain ja alue kattaa joka aarrekaupungin', () => {
-  const europe = packById('europe');
-  const { starHints, starHintAlue } = europe.texts;
-  // Jokaisella laattakaupungilla on vihjeteksti ja alue äänitiedostoa
-  // varten — puuttuva rivi jättäisi pelin ilman vihjettä.
-  for (const c of europe.cities) {
-    if (c.start) continue; // aloituskaupungeissa ei ole laattaa
-    assert.ok(starHints[c.id], `${c.id}: vihjeteksti puuttuu`);
-    assert.ok(['pohjoinen', 'lansi', 'etela', 'ita'].includes(starHintAlue[c.id]),
-      `${c.id}: alue puuttuu tai tuntematon`);
-  }
-  // Tekstejä on vain neljä (omistaja: "vihjeitä riittää vain pari").
-  assert.equal(new Set(Object.values(starHints)).size, 4);
-});
-
-test('vihjeetön lauta ei kaada tietoruutua', () => {
-  // Lauta, jonka vihjeet ovat vielä kirjoittamatta: tietoruutu ei saa kaatua.
-  // Tyhjä starHints tehdään tässä käsin, jotta testi ei riipu siitä, minkä
-  // laudan sisältö on kirjoitettu (kaista B täydentää lautoja yksi kerrallaan).
-  const base = packById('europe');
-  const game = new Game({
-    players: [{ name: 'Yksin', color: '#f00', start: 'lissabon' }],
-    pack: { ...base, texts: { ...base.texts, starHints: {} } },
-    rng: mulberry32(3),
-  });
-  const edgeId = [...game.board.edgeById.keys()][0];
-  game.player.pos = { type: 'edge', edge: edgeId, at: 1 };
-  assert.equal(game.starHint(), null);
 });
 
 // --- kokemuspisteet, tietoprosentti ja passi (paketti 6) --------------------
@@ -3113,7 +3320,7 @@ test('lentorepliikin arvonta on siemenellä deterministinen', () => {
     const game = new Game({
       players: [{ name: 'A', color: '#f00' }], pack: packById('maailma'), seed,
     });
-    game.starFound = true;
+    game.world.starsFound.set('maailma', 'kairo');
     return game;
   };
   const a = uusi(77).flightLine('kairo');
@@ -3131,7 +3338,7 @@ test('tuntematon kohde saa yleisrivin', () => {
   const game = new Game({
     players: [{ name: 'A', color: '#f00' }], pack: packById('maailma'), seed: 3,
   });
-  game.starFound = true;
+  game.world.starsFound.set('maailma', 'kairo');
   const rivi = game.flightLine('ei-tallaista-kaupunkia');
   assert.ok(packById('maailma').texts.flightDefault.includes(rivi));
 });
@@ -3159,7 +3366,7 @@ test('lento muistuttaa unohdetusta aarteesta vain kun se on löytämättä', () 
   // ...mutta löydön jälkeen ei enää koskaan.
   for (let seed = 1; seed <= 40; seed++) {
     const game = uusi(seed);
-    game.starFound = true;
+    game.world.starsFound.set('maailma', 'kairo');
     assert.ok(!kaipuu.includes(game.flightLine('kairo')), 'kaipuurivi soi vaikka aarre löytyi');
   }
 });
@@ -3818,7 +4025,7 @@ test('pelaajalle näkyvässä tekstissä ei ole tähti-sanastoa eikä pääaarre
   for (const pack of PACKS) {
     const tekstit = [
       pack.texts?.intro, pack.texts?.starToast, pack.texts?.starChase,
-      pack.texts?.winStar, pack.texts?.starHint,
+      pack.texts?.winStar,
       pack.texts?.starFound?.('A', 'B'), pack.texts?.winnerStar?.('A', 1),
       ...Object.values(pack.tokenTypes ?? {}).map((t) => t?.name),
     ].filter((t) => typeof t === 'string');

@@ -235,27 +235,6 @@ export const SUOMI = {
       '"Talvi kestää täällä puoli vuotta ja on itse asiassa vuoden paras aika", isoisä merkitsi muistiin. Pidin sitä pakkasen aiheuttamana harhana, kunnes näin ensimmäisen kunnolla auratun jäätien.',
       'Isoisä ihmetteli, että talonpojankin lapset osasivat lukea. Nykyään täällä ihmetellään, jos joku ei osaa. Muutos on hänen listassaan pieni rivi; minusta se on koko kirjan tärkein.',
     ],
-    // Isoisän vihjeet laudan pääaarteesta: suunta tai seutu,
-    // ei koskaan kaupungin nimeä.
-    starHints: {
-      turku: 'Lounaisrannikolla, siellä missä saaristo alkaa, on maan vanhin kaupunki: linna joen suulla ja tuomiokirkko vähän ylempänä. Sinne saapuu laiva lännestä joka päivä.',
-      maarianhamina: 'Lännessä, keskellä Pohjanlahtea, on saariryhmä joka kuuluu tähän maahan mutta puhuu naapurin kieltä. Sen ainoa kaupunki elää purjelaivoista ja postista.',
-      tampere: 'Sisämaassa, kahden suuren järven välissä, vesi putoaa kosken kautta alempaan järveen. Sen kosken partaalle rakennettiin punatiilinen tehdaskaupunki — ensimmäinen laatuaan koko maassa.',
-      pori: 'Länsirannikolla, suuren joen suulla, on satamakaupunki jonka edustalla on maan pisin hiekkaranta. Meri vetäytyy siellä kaiken aikaa kauemmas kaupungista.',
-      vaasa: 'Pohjanlahden rannalla, kapeimman kohdan kohdalla, maa nousee merestä sentin vuodessa. Siellä on kaupunki, josta pääsee naapurimaahan lautalla nopeammin kuin pääkaupunkiin.',
-      jyvaskyla: 'Keskellä maata, suuren pitkän järven pohjoispäässä, on kaupunki joka kasvoi koulujen ympärille. Sinne perustettiin ensimmäinen suomenkielinen oppikoulu koko ruhtinaskunnassa.',
-      lappeenranta: 'Kaakossa, suuren järvialtaan eteläkulmassa, on linnoituskaupunki jonka ohi kaivettiin kanava merelle. Kanava teki siitä sisämaan sataman.',
-      savonlinna: 'Idässä, keskellä sokkeloista järvialuetta, seisoo keskiaikainen linna omalla saarellaan kahden salmen välissä. Sen muureilla kuulemma lauletaan nykyään.',
-      kuopio: 'Itä-Suomessa, järvien keskellä, on kaupunki jonka takana kohoaa jyrkkä mäki. Mäen laelta näkee vettä joka suuntaan — ja kalatorilla myydään kalaa piirakan sisällä.',
-      joensuu: 'Aivan itärajan tuntumassa, siellä missä suuri reittivesi laskee etelään, on kaupunki jonka läpi virtaa joki. Sitä sanotaan Karjalan porteiksi.',
-      kajaani: 'Koillisessa, suuren järven laskujoen varrella, on raunioituneen linnan kaupunki. Sen kautta soudettiin tervaveneet koskia alas merelle asti — vaarallista työtä nuorille miehille.',
-      kemi: 'Aivan Pohjanlahden perukassa, suuren pohjoisen joen suulla, on satamakaupunki jonne uitettiin tukit sisämaasta. Talvella siellä jäätyy koko lahti.',
-      rovaniemi: 'Pohjoisessa, tasan sillä viivalla jonka takana aurinko ei kesällä laske, yhtyy kaksi jokea. Niiden yhtymäkohdassa on kauppapaikka, jonka läpi kaikki Lapin matkat kulkevat.',
-      kittila: 'Lapissa, tunturien länsipuolella, kultajoen latvoilla, on kirkonkylä jonne huuhtojat kokoontuivat. Siellä mitattiin maan kylmimmät pakkaset.',
-      inari: 'Kaukana pohjoisessa on järvi, jossa sanottiin olevan kolmetuhatta saarta, ja sen rannalla kylä joka on saamelaisen kulttuurin keskus. Sinne asti en päässyt: tie loppui kesken.',
-      kilpisjarvi: 'Aivan luoteisimmassa kolkassa, siellä missä kolmen valtakunnan rajat kohtaavat pyykillä, kohoavat maan korkeimmat tunturit. Kylä on pieni ja tuuli kova.',
-      utsjoki: 'Pohjoisimmassa pisteessä, suuren lohijoen varrella, kulkee raja naapurimaahan keskellä virtaa. Siellä puhutaan saamea enemmän kuin suomea — ainoana kuntana koko maassa.',
-    },
   },
 
   decor: {

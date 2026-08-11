@@ -10,25 +10,23 @@
  */
 
 export const TILANNE = {
-  paivitetty: '11.8.2026 (iltapäivä ~13.45) — TILINVAIHTO',
-  tavoite: 'Fable-koordinaatio siirtyy toiselle tilille (krediitit). '
-    + 'Eurooppa on tekstien osalta valmis ja QA-sinetöity; '
-    + 'mysteerimalli kaanonissa; seitsemän tähteä -mekaniikka '
-    + 'työn alla Opus 5:llä. Uusi Fable jatkaa jatkopromptilla.',
+  paivitetty: '11.8.2026 (ilta) — uusi Fable-koordinaattori aloitti',
+  tavoite: 'Seitsemän aarretta ja mannerlento pelissä (v576). '
+    + 'Eurooppa on tekstien osalta valmis ja QA-sinetöity; omistaja '
+    + 'lukee Euroopan tekstejä ja kommentoi. Seuraavaksi omistajan '
+    + 'avoimet päätökset (kulkija, luennat, ME-tasavahvistus).',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
-      tila: 'odottaa',
-      tehtava: 'Päiväsaldo v557–v575: Euroopan hiontakampanja '
-        + '(41/41 budjetissa ja tagitettu, spoilerit ja '
-        + 'lupausketjut suljettu, kulkija-passi), mysteerimalli '
-        + 'kaanoniin, ME-maalehdet valmiiksi, Euroopan tekstit '
-        + '-sivu tageineen ja UUSITTU-merkkeineen.',
-      seuraavaksi: 'UUSI FABLE-SESSIO TOISELLA TILILLÄ: katselmoi '
-        + 'Opus 5:n mekaniikkaerä, ota omistajan tekstikommentit '
-        + 'vastaan, kirjoita lentoteksti ja pääaarteen paljastus '
-        + 'kun hoitaja/kerääjä on päätetty.',
+      tila: 'tyossa',
+      tehtava: 'Tilinvaihto tehty: uusi koordinaattori luki kaanonin '
+        + 'ja luovutuksen. Raamattu luettavaksi työhuoneeseen (#820). '
+        + 'Opus 5:n mekaniikkaerä katselmoitu, tekstit kirjoitettu '
+        + '(lentotarjous, mannernapit, Säännöt) ja julkaistu v576.',
+      seuraavaksi: 'Ottaa omistajan Eurooppa-tekstikommentit vastaan; '
+        + 'pääaarteen paljastusteksti kun hoitaja/kerääjä on '
+        + 'päätetty.',
     },
     {
       tekija: 'Fable max 2',
@@ -54,12 +52,12 @@ export const TILANNE = {
     {
       tekija: 'Opus 5 (2)',
       rooli: 'koodi + kuvatyöt',
-      tila: 'tyossa',
-      tehtava: 'SEITSEMÄN TÄHTEÄ + LENTO: yksi Aarnin luettelon '
-        + 'tähti per manner, ei vihjejärjestelmää, ei porttia; '
-        + 'lento mantereen tähden löydyttyä. Tallennusversio 1→2.',
-      seuraavaksi: 'Saa tehdä työn loppuun; UUSI Fable katselmoi, '
-        + 'kirjoittaa tekstit placeholdereihin ja julkaisee.',
+      tila: 'valmis',
+      tehtava: 'SEITSEMÄN TÄHTEÄ + LENTO valmis ja mainissa (v576): '
+        + 'yksi Aarnin luettelon aarre per manner, vihjejärjestelmä '
+        + 'pois, mannerlento, tallennusversio 1→2 migraatioineen, '
+        + 'uusi selainsavuke (11/11). Fable katselmoi ja julkaisi.',
+      seuraavaksi: 'Valmiudessa; seuraava erä Fablelta.',
     },
     {
       tekija: 'Sonnet 1',
@@ -82,6 +80,10 @@ export const TILANNE = {
     'ME-seitsikon tasavahvistus: ARE JOR OMN QAT KWT SAU BHR '
       + '2–3 aihetta → uusi 4–5×4-malli (~2 Opus-erää).',
     'Aloituskaupunkiarvio: BA→Lima harkinnainen (LA→Chicago tehty).',
+    '36 käyttämätöntä vihjeluentaa (puhe-*-vihje-*.mp3) repossa — '
+      + 'poistetaanko mediat vai säilytetäänkö varalle?',
+    'Aarrepotti: 7 × 2000 p = 14 000 p vaelluksessa — säädetäänkö '
+      + 'STAR_PRIZE, jos palkkiot alkavat latistaa löytöjä?',
     'Afrikan jakotauluehdotus omistajalla luettavana.',
     'Ämpärin jäänteet kuvat/.jpg ja kuvat/..jpg — poisto vaatii '
       + 'ämpärioikeudet.',
@@ -95,6 +97,16 @@ export const TILANNE = {
  * siivotaan pois kun ne on katsottu tai ne vanhenevat.
  */
 export const TESTATTAVAA = [
+  {
+    otsikko: 'Seitsemän aarretta ja mannerlento (v576)',
+    ohje: 'Aloita uusi peli: jokaisella mantereella on nyt oma Aarnin '
+      + 'luettelon aarre (Meripihkahuone, kivilintu, jadesinetti…) — '
+      + 'matkalaukun luettelo kertoo mitkä on löydetty. Kun mantereen '
+      + 'aarre löytyy, Laiva & lento -valikkoon ilmestyy "Lennä '
+      + 'Eurooppaan: Lontoo" -tyyliset napit mantereille, joiden aarre '
+      + 'on vielä kateissa. Isoisän vihjekortti (revitty sivu) on '
+      + 'poistunut pelistä. Vanhat tallennukset toimivat yhä.',
+  },
   {
     otsikko: 'Vuorten kuvagalleriat kaikkialla (v551 + v555)',
     ohje: 'Zoomaa kartalla mille tahansa vuoristolle (esim. Kaukasus, '

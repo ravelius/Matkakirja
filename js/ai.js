@@ -14,7 +14,7 @@ export const BOT_SKILL = 0.55;
 function racingHome(game, p) {
   // Vaelluksessa ei kiirehditä kotiin, koska peli ei pääty.
   if (game.roaming) return false;
-  return p.hasStar || (game.starFound && p.horseshoes > 0);
+  return p.stars > 0 || (game.starFound && p.horseshoes > 0);
 }
 
 /** Etäisyydet kohteisiin: yhdistetty kartta, jossa jokainen kohde on nollaetäisyydellä. */

@@ -13,7 +13,7 @@ import {
 } from './ai.js';
 import {
   DUEL_BYPASS_SHOES, DUEL_PRIZE, EXPLORE_REWARD, FIFTY_FIFTY_PRICE, FLIGHT_PRICE,
-  HARD_BONUS, HINT_EVERY_TURNS, HINT_PRICE, QUIZ_SECONDS, SEA_FARE,
+  HARD_BONUS, HINT_PRICE, MANNERLENTO_NAPPI, QUIZ_SECONDS, SEA_FARE,
 } from './game.js';
 import {
   factSource, factText, factVoice, isSourceUrl, PACKS, packById, sourceLabel, voiceTitle,
@@ -554,52 +554,6 @@ export const SAAPUMISLUENNAT = new Set([
   'oceania:townsville',
   'oceania:uluru',
   'oceania:wellington',
-]);
-
-// Kaupungit, joiden aarrevihjeelle on kuiskattu luenta (ElevenLabs).
-// Euroopassa vihjeet ovat ilmansuunnittain (starHintAlue,
-// js/packs/europe.js) — rivit ovat alueita, eivät kaupunkeja.
-export const VIHJELUENNAT = new Set([
-  'europe:pohjoinen',
-  'europe:lansi',
-  'europe:etela',
-  'europe:ita',
-  'africa:karthago',
-  'africa:nairobi',
-  'africa:lagos',
-  'africa:viktorianputoukset',
-  'africa:tshadjarvi',
-  'africa:marrakech',
-  'africa:sthelena',
-  'africa:tripoli',
-  'africa:murzuk',
-  'africa:alkufra',
-  'africa:sahara',
-  'africa:ahaggar',
-  'africa:timbuktu',
-  'africa:gao',
-  'africa:dakar',
-  'africa:sierraleone',
-  'africa:kappalmas',
-  'africa:kumasi',
-  'africa:orjarannikko',
-  'africa:kano',
-  'africa:kamerun',
-  'africa:kongo',
-  'africa:angola',
-  'africa:namib',
-  'africa:kimberley',
-  'africa:mosambik',
-  'africa:madagaskar',
-  'africa:sansibar',
-  'africa:kilimandzaro',
-  'africa:viktoria',
-  'africa:tanganjika',
-  'africa:bahrelghazal',
-  'africa:darfur',
-  'africa:suakin',
-  'africa:addisabeba',
-  'africa:rashafun',
 ]);
 
 const HAVAINTOLUENNAT = new Set([
@@ -5153,7 +5107,7 @@ export class UI {
     el('circle', { r: 9.5, fill: player.color, class: 'pawn-dot' }, g);
     el('path', { d: 'M-5,-3 a6,6 0 0 1 8,-3', class: 'pawn-gloss', fill: 'none',
       stroke: 'rgba(255,255,255,0.6)', 'stroke-width': 2.2, 'stroke-linecap': 'round' }, g);
-    if (player.hasStar) {
+    if (player.stars > 0) {
       el('text', { x: 0, y: -18, class: 'pawn-star', 'text-anchor': 'middle' }, g).textContent = '◈';
     }
     return g;
@@ -5343,8 +5297,11 @@ export class UI {
     const flights = game.airportDestinations();
     const gateways = game.gatewayOptions();
     const countryGates = game.countryGateOptions();
+    // Mannerlento aukeaa, kun tämän mantereen unohdettu aarre on
+    // löytynyt — se ei vaadi lentokenttää, joten se on oma listansa.
+    const mannerLennot = game.mannerLennot();
     const hasSlow = modes.includes('sea') || flights.length > 0
-      || gateways.length > 0 || countryGates.length > 0;
+      || gateways.length > 0 || countryGates.length > 0 || mannerLennot.length > 0;
 
     // Jos välivaiheeseen ei jää yhtään valintaa (esim. rahat eivät riitä
     // lentoon eikä satamaa ole), palataan suoraan perusvalintoihin —
@@ -5416,6 +5373,24 @@ export class UI {
       const flyBtn = this.ikoniTekstiNappi('kone', `${city.name} (${FLIGHT_PRICE} p)`, 'wide');
       flyBtn.addEventListener('click', () => this.doFly(dest));
       this.actionsEl.appendChild(flyBtn);
+    }
+
+    /*
+     * Mannerlento: aarre löytyi, matka voi jatkua. Napit ovat samaa
+     * leveää muotoa kuin poistuneet porttinapit, koska kohde on kaukana
+     * ruudun ulkopuolella eikä löydy kartalta osoittamalla. Nappi
+     * nimeää mantereen ("Lennä Oseaniaan: Sydney"), koska tavalliset
+     * lentonapit ovat pelkkiä kaupunkeja — ero on pidettävä näkyvänä.
+     */
+    for (const kohde of mannerLennot) {
+      const btn = this.ikoniTekstiNappi('kone',
+        `${MANNERLENTO_NAPPI(kohde)} (${FLIGHT_PRICE} p)`, 'wide');
+      btn.addEventListener('click', () => {
+        this.travelExpanded = false;
+        sfx.play('flight');
+        this.doAction(() => game.actionMannerLento(kohde.city));
+      });
+      this.actionsEl.appendChild(btn);
     }
 
     // Vaelluksessa porttikaupungeista jatketaan toisille laudoille.
@@ -5877,7 +5852,6 @@ export class UI {
       // Piilotuksen lisäksi sisältö tyhjennetään: muuten edellisen pelin
       // teksti voi välähtää ruudulla ennen kuin kortti ehtii piiloon.
       this.uusiFactKey(null);
-      this.factCard.classList.remove('vihjekortti');
       this.factVoiceEl.textContent = '';
       this.factPlace.textContent = '';
       this.factText.textContent = '';
@@ -5888,23 +5862,16 @@ export class UI {
       return;
     }
 
-    // Matkalla kortti ei päivity: sama merkintä pysyy näytöllä, kunnes
-    // saavutaan uuteen kaupunkiin — uusi nopanheitto reitillä ei vaihda
-    // tekstiä (omistajan päätös).
     /*
-     * Isoisän vihje nousee esiin kaupunkien välissä (omistajan
-     * linjaus 7.8.2026) — siksi se lasketaan ENNEN reunan
-     * varhaispoistumista, joka muuten jäädyttäisi kortin matkan
-     * ajaksi. Harvennus tehdään täällä: sama vihje ei nouse joka
-     * pysähdyksellä, vaan aikaisintaan HINT_EVERY_TURNS vuoron
-     * välein (game.starHint on puhdas funktio piirtoa varten).
+     * Matkalla kortti ei päivity: sama merkintä pysyy näytöllä, kunnes
+     * saavutaan uuteen kaupunkiin — uusi nopanheitto reitillä ei vaihda
+     * tekstiä (omistajan päätös). Ennen tässä laskettiin myös isoisän
+     * aarrevihje, joka nousi esiin nimenomaan kaupunkien välissä ja
+     * siksi ohitti tämän varhaispoistuman; tähtivihjejärjestelmä
+     * poistettiin 11.8.2026 (ks. js/game.js), joten ehto on jälleen
+     * yksinkertainen.
      */
-    const vihjeTeksti = game.starHint();
-    const vihjeEsilla = this.factKey?.startsWith('hint:') ?? false;
-    const vihjeTuore = Boolean(vihjeTeksti) && (vihjeEsilla
-      || this.vihjeVuoro == null
-      || game.turnCount - this.vihjeVuoro >= HINT_EVERY_TURNS);
-    if (game.player.pos.type === 'edge' && this.factKey && !vihjeTuore) return;
+    if (game.player.pos.type === 'edge' && this.factKey) return;
 
     // Matkakirjan merkintä voittaa aina (omistajan havainto Gaossa:
     // aikataulurivi peitti uuden saapumistekstin koko käynnin ajaksi).
@@ -5921,7 +5888,6 @@ export class UI {
       const key = `schedule:${aikataulu.packId}:${aikataulu.day}`;
       if (this.factKey === key) return;
       this.uusiFactKey(key);
-      this.factCard.classList.remove('vihjekortti');
       this.factVoiceEl.textContent = 'Isoisän aikataulusta';
       this.factPlace.textContent = `Päivä ${aikataulu.day}`;
       this.factImage.hidden = true;
@@ -5929,41 +5895,6 @@ export class UI {
       this.naytaFactValokuva(null);
       this.stopDiaryVoice();
       this.typeText(this.factText, aikataulu.text);
-      return;
-    }
-
-    // Isoisän vihje laudan pääaarteesta nousee esiin harvakseltaan
-    // kaupunkien välissä. Vihjekortti erottuu tavallisesta
-    // merkinnästä: tähtiotsikko, oma revityn sivun ilme ja paperin
-    // rapina — pelkkä otsikkorivi meni pelaajalta ohi ja hiljainen
-    // kortti tuntui virheeltä (omistajan havainto).
-    if (vihjeTuore) {
-      const key = `hint:${game.pack.id}:${game.turnCount}`;
-      if (this.factKey === key) return;
-      this.uusiFactKey(key);
-      this.vihjeVuoro = game.turnCount;
-      this.factCard.classList.add('vihjekortti');
-      this.factVoiceEl.textContent = '◈ Isoisän vihje aarteesta';
-      this.factPlace.textContent = 'Päiväkirjasta revitty sivu';
-      this.factImage.hidden = true;
-      this.naytaFactValokuva(null);
-      this.stopDiaryVoice();
-      sfx.play('paper');
-      // Kuiskattu luenta (omistajan tilaus): vihje luetaan hiljaa, jos
-      // luenta on generoitu — kaiutinnapista sen voi kuunnella uudelleen.
-      // Aluevihjeillä (esim. Eurooppa) äänitiedosto on alueen, ei
-      // kaupungin: starHintAlue kuvaa kaupungin ilmansuunnaksi.
-      const vihjeKaupunki = game.starHintCity();
-      const vihjeAvain = game.pack.texts.starHintAlue?.[vihjeKaupunki] ?? vihjeKaupunki;
-      const vihjeLauta = luentaLauta(VIHJELUENNAT, game.pack.id, vihjeAvain);
-      this.diaryFullUrl = vihjeLauta
-        ? `assets/audio/puhe-${vihjeLauta}-vihje-${vihjeAvain}.mp3`
-        : null;
-      this.factKuuntele.hidden = !vihjeLauta;
-      if (vihjeLauta && kertojaTila() !== 'ei') {
-        this.playDiaryVoice(this.diaryFullUrl, { viive: 1200 });
-      }
-      this.typeText(this.factText, vihjeTeksti);
       return;
     }
 
@@ -6005,7 +5936,6 @@ export class UI {
         const key = luentaAvain + aikatauluLisa;
         if (this.factKey === key) return;
         this.uusiFactKey(key);
-        this.factCard.classList.remove('vihjekortti');
         this.factVoiceEl.textContent = 'Matkakirjasta';
         this.factPlace.textContent = kaupunki.name;
         this.factImageTitle = null;
@@ -6072,7 +6002,6 @@ export class UI {
         const key = luentaAvain + aikatauluLisa;
         if (this.factKey === key) return;
         this.uusiFactKey(key);
-        this.factCard.classList.remove('vihjekortti');
         this.factVoiceEl.textContent = voiceTitle(factVoice(fakta));
         this.factPlace.textContent = kaupunki.name;
         this.factImageTitle = typeof fakta === 'string' ? null : fakta.wiki ?? null;
@@ -6136,7 +6065,6 @@ export class UI {
 
     // Otsikko kertoo kumpi ääni puhuu, alarivi paikan.
     const onRoute = player.pos.type === 'edge';
-      this.factCard.classList.remove('vihjekortti');
     this.factVoiceEl.textContent = voiceTitle(factVoice(fact));
     this.factPlace.textContent = onRoute ? `Matkalla — ${city.name}` : city.name;
     // Havaintoon voi liittyä kuva: pieni linkki avaa ilmiön Wikipedia-kuvan.
@@ -11227,20 +11155,33 @@ export class UI {
      * Nyt luettelo täyttyy matkan mukana, kuten Aarnin oma luettelo
      * täyttyi. Kateissa-luku kertoo silti kuinka pitkä matka on jäljellä.
      */
-    const kaikki = PACKS.map((pakkaus) => pakkaus.tokens?.types?.star)
-      .filter((aarre) => aarre?.name);
+    /*
+     * LUETTELO ON MANNERKOHTAINEN (omistajan päätös 11.8.2026):
+     * jokaisella seitsemällä mantereella on oma unohdettu aarteensa, ja
+     * mannerTypes kertoo kunkin nimen. Muilla laudoilla — ja vanhoissa
+     * yhden tähden tallennuksissa — mannerTypes puuttuu, jolloin
+     * luettelo palaa vanhaan muotoonsa lautojen omista aarteista.
+     */
+    const mannerTypes = game.pack?.tokens?.mannerTypes;
+    const kaikki = mannerTypes
+      ? Object.entries(mannerTypes)
+        .map(([manner, types]) => ({ manner, aarre: types?.star }))
+        .filter((rivi) => rivi.aarre?.name)
+      : PACKS.map((pakkaus) => ({ manner: pakkaus.id, aarre: pakkaus.tokens?.types?.star }))
+        .filter((rivi) => rivi.aarre?.name);
 
     /*
      * LÖYTYNYT TARKOITTAA TÄTÄ MATKAA. Aarteen löytymistä ei tallenneta
      * pelikertojen yli (js/passport.js tuntee vain lautaleimat ja
      * linssit), joten luettelo kertoo rehellisesti tämän matkan
-     * tilanteen eikä väitä muistavansa enempää.
+     * tilanteen eikä väitä muistavansa enempää. Löytyneet luetaan
+     * maailman kirjanpidosta, joten moninpelissä luettelo näyttää koko
+     * seurueen saaliin — luettelo on Aarnin, ei yhden matkaajan.
      */
-    const loydetyt = [];
-    if (game.player?.hasStar) {
-      const oma = game.pack?.tokens?.types?.star;
-      if (oma?.name) loydetyt.push(oma);
-    }
+    const loytyneet = game.world?.starsFound ?? new Map();
+    const loydetyt = kaikki
+      .filter((rivi) => loytyneet.has(rivi.manner))
+      .map((rivi) => rivi.aarre);
 
     for (const aarre of loydetyt) {
       const rivi = html('div', 'aarre-rivi loytynyt');
@@ -11316,10 +11257,18 @@ export class UI {
 
     // Isommat kuvat ja selite alla — tavarat kuin matkamuistohyllyllä
     // (omistajan toive).
-    if (p.hasStar) {
-      const tahti = game.aarreTyyppi('star', game.world?.starCity);
+    /*
+     * Unohdetut aarteet omina riveinään: jokaisella mantereella on oma
+     * aarteensa, joten yksi rivi ei enää riitä. Manner luetaan
+     * findManner-listasta, joka kulkee finds-listan rinnalla samoin
+     * indeksein — se kertoo mistä KUKIN tähti löytyi, myös silloin kun
+     * pelaajalla on niitä useita.
+     */
+    p.finds.forEach((type, i) => {
+      if (type !== 'star') return;
+      const tahti = game.aarreMantereella('star', p.findManner?.[i] ?? null);
       rivi(aarreIkoni(tahti, 'star', 44), tahti.name);
-    }
+    });
     if (p.horseshoes) rivi(tokenIconSvg('horseshoe', 44), `Hevosenkenkiä ${p.horseshoes}`);
 
     /*
@@ -12371,7 +12320,7 @@ export class UI {
     if (!this.winnerDialog.open) sfx.play('win');
     const w = this.game.winner;
     document.getElementById('winner-title').textContent = `${w.name} voitti!`;
-    this.typeText(document.getElementById('winner-text'), w.hasStar
+    this.typeText(document.getElementById('winner-text'), w.stars > 0
       ? this.game.pack.texts.winnerStar(w.name, w.money)
       : `${w.name} ehti hevosenkengän kanssa kotiin ennen unohdetun aarteen löytäjää.`, 'winner');
     const roamBtn = document.getElementById('winner-roam');
