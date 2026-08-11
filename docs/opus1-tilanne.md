@@ -1,4 +1,4 @@
-# Opus 1:n tilanne (päivitetty 10.8.2026, erän D jälkeen)
+# Opus 1:n tilanne (päivitetty 11.8.2026)
 
 Tämä on **luovutuspaperi**: seuraava Opus-sessio toisella tilillä voi
 jatkaa suoraan tästä ilman edellisen session kontekstia. Voimassa olevat
@@ -10,6 +10,10 @@ aihesivut, minitehtävät, menovinkit, lehtien kuvat, UI-koodi ja
 työkalut. **Tarinatekstit eivät kuulu tälle kaistalle** — saapumistekstit,
 kohtaamiset, aarrevihjeet ja kulttuurivisat kirjoittaa Fable. Jos
 tarinatekstissä on vika, se raportoidaan Fablelle eikä korjata itse.
+
+> **AJANTASAINEN TILANNE ON KOHDASSA 1b.** Kohdat 1–2 kuvaavat
+> 10.8. tilannetta ja ovat osin vanhentuneita; ne on jätetty siksi,
+> että niiden opit (kohdat 3–8) ovat yhä voimassa.
 
 ## 1. Missä ollaan juuri nyt
 
@@ -69,8 +73,9 @@ Fablen antamat rajaukset erälle D, sitovina (yhä voimassa):
 - **Bahrain:** helmenkalastus, Dilmunin hautakummut, Qal'at al-Bahrain,
   Elämänpuu, meren pohjan makean veden lähteet, tuulitornit. Öljy ja
   moderni kaupunki ovat jo naapurien sivuilla.
-- **Lehdettömät maat (Irak, Iran, Jemen) pysyvät kahden sivun mallissa.**
-  Ei aihesivuja niille ilman Fablen eri päätöstä.
+- ~~Lehdettömät maat (Irak, Iran, Jemen) pysyvät kahden sivun
+  mallissa.~~ **VANHENTUNUT:** Fable avasi 10.–11.8. täydet aihesivut,
+  ja Iran (5 aihetta) sekä Irak (4 aihetta) ovat valmiit.
 - **Ei sotasisältöä. Syyria-linja ennallaan.**
 
 Jonon jälkeen avoinna olevat omat työt ovat kohdassa 7.
@@ -210,93 +215,102 @@ turvallisempi kuin 2 900 kuvan lataus.
 kielletty, pelkkä viittauksen vaihto ei riitä: repo levittää yhä
 tiedostoa `assets/valokuvat`-kansiosta. Poista myös tiedosto.
 
-## 1b. JATKOKOHTA: ME-lehdet kesken (11.8.2026 yö)
+## 1b. JATKOKOHTA: ME-lehdet kesken (11.8.2026, aamuyö)
 
-Haara **`claude/opus1-me-lehdet`**, nollattu mainiin jokaisen mergen
-jälkeen. Julkaisulupa on annettu, joten erä julkaistaan heti kun se on
-valmis — ei enää odoteta kuittausta.
+Haara **`claude/opus1-me-lehdet`**, nollataan mainiin jokaisen mergen
+jälkeen. Julkaisulupa on voimassa: erä julkaistaan heti kun se on
+valmis, kuittausta ei odoteta.
 
 **Mainissa nyt:**
 
 - **IRN kokonainen (v560, #802):** historia, rakennukset, puutarhat,
-  ruoka, käsityö — viisi aihetta × neljä nostoa + minitehtävä.
-- **IRQ aloitettu (v561, #803):** muinaisuus ja ruoka, 4 + 4 nostoa.
-- cityCountry-korjaus (kapadokia→TUR, siinai→EGY, rubalkhali→SAU,
-  persepolis→IRN, petra→JOR) on mainissa aiemmasta erästä.
+  ruoka, käsityö — 5 aihetta, 20 nostoa.
+- **IRQ kokonainen (v561 #803, v562 #805):** muinaisuus, ruoka,
+  rakennukset, suot — 4 aihetta, 15 nostoa. Suot-sivulla on kolme
+  nostoa neljän sijaan, ks. syy alempaa.
+- **Työkalut (#804):** `tools/tarkista-maa.mjs`,
+  `tools/kuvaa-maalehti.mjs`, `tools/hae-commons.mjs`.
 
-**Seuraavaksi, tässä järjestyksessä:**
-
-1. **IRQ rakennukset ja suot** — tälle on jo katsotut kuvaehdokkaat,
-   ks. alla. Sitten Irak on samassa laajuudessa kuin Iran.
-2. **SYR, YEM, CYP** samalla reseptillä.
-3. Valinnainen: **IRN runous** kuudenneksi aiheeksi (Shahnamehin
-   käsikirjoitussivut ja Hafezin hauta ovat PD/CC; aineisto kantaa).
-
-**Puutelista on nyt kolme maata:** SYR, YEM, CYP. Älä luota
-tehtävänannon listaan, mittaa itse:
+**Seuraavaksi: SYR, sitten YEM ja CYP.** Puutelista on kolme maata.
+Mittaa itse, älä luota tehtävänannon listaan:
 
     node -e "import('./js/packs/maa-kategoriat.js').then(m=>
       console.log(Object.keys(m.MAA_KATEGORIAT).sort().join(' ')))"
 
-### Työkalut, jotka kannattaa tehdä heti uudestaan
+### AJA ESITARKISTIN. Se on estänyt kaksi päällekkäisyyttä kahdessa erässä
 
-Ne ovat scratchpadissa ja katoavat kontin mukana. Molemmat maksoivat
-itsensä takaisin jo ensimmäisessä erässä:
+    node tools/tarkista-maa.mjs SYR
 
-1. `commons.mjs` — Commonsin API neljällä komennolla: `haku`,
-   `luokka`, `alaluokat`, `lataa`. **Luokkaselaus on ainoa toimiva
-   reitti**: vapaa tekstihaku palauttaa lähinnä 1900-luvun PDF-kirjoja,
-   ja aihehaku ajautuu uskonnollisiin surujuhlakuviin (varoitus oli
-   oikea). Lisenssin ja tekijän saa samasta kutsusta.
-2. `tarkista-maa.mjs XXX` — esitarkistin, joka luetaan PAKETISTA eikä
-   välitiedostosta. Tarkistaa minitehtäväsäännöt, kenttien olemassaolon,
-   kysymysten ainutkertaisuuden (188 kysymystä) ja kuvaduplikaatit
-   kaikista 87 paketista. **Se löysi Irakissa oikean virheen:** valitsemani
-   masgouf-kuva oli jo Bagdadin kaupunkilehdessä.
-3. `kuvaa-maalehti.mjs XXX sivu1 sivu2` — selainajo. Kolme asiaa, joita
-   ilman tulos ei todista mitään, ks. seuraava kohta.
+Molemmat löydöt olivat sellaisia, joita ei olisi huomannut lukemalla:
 
-### Selainajon kolme ansaa (kaikki tulivat vastaan tässä erässä)
+1. **Irak/ruoka:** valitsemani masgouf-kuva oli jo Bagdadin
+   kaupunkilehdessä (`asia-valokuvat.js`), ja masgouf oli kerrottu myös
+   Bagdadin artikkelissa. → vaihdettiin tashribiin.
+2. **Irak/suot:** valitsemani mudhif-kuva oli jo `maakartat.js`:ssä
+   Irakin **karttasivun** nostona, otsikolla "Talo, jossa ei ole yhtään
+   naulaa" — ja karttasivu on saman maalehden ensimmäinen sivu. Lukija
+   olisi nähnyt saman kuvan ja saman jutun kahden sivun välein. →
+   nosto poistettiin, sivulle jäi kolme nostoa.
+
+**Opetus: maalehden kilpailija ei ole toinen maalehti vaan saman maan
+karttasivu ja kaupunkilehti.** Tarkista `maakartat.js`-nosto ja maan
+kaupunkien lehdet ennen kuin lyöt aiheen lukkoon.
+
+### SYR: kuvat, jotka on jo katsottu silmällä
+
+- **Serjilla, kuolleet kaupungit:** `12.17 Serjilla.jpg`
+  (Gerhard Haubold, CC BY-SA 4.0) — kaksikerroksinen kalkkikivitalo
+  seisoo katottomana mutta lähes ehjänä, ympärillä kivikenttää.
+- **Aleppon saippua, kuivatus:** `Aleppo soap 03.jpg`
+  (Bernard Gagnon, CC BY-SA 3.0) — vihreitä saippuakuutioita ladottuna
+  ristikoksi holvihuoneeseen kuivumaan.
+- **Aleppon saippua, keittopata:** `Aleppo soap - vat.jpg`
+  (Bernard Gagnon, CC BY-SA 3.0) — valtava lattiaan upotettu pyöreä
+  pata.
+- **Hylätty:** `A03 Bosra - Teatro Primo ordine 331.jpg` on lähikuva
+  yhdestä korinttilaisesta kapiteelista, ei teatterista. Bosran
+  teatterin tunnus on musta basaltti ja se, että teatteri on linnoituksen
+  sisällä; `Category:Ancient Roman theatre (Bosra)` -luokan Huldran
+  CC0-kuvat ovat katsomatta.
+
+**Aihe-ehdotus SYR:lle** (kaikki kulttuuria, historiaa, ruokaa,
+musiikkia ja luontoa): *historia* — Serjilla ja kuolleet kaupungit,
+Bosran basalttiteatteri, Ugaritin aakkoset, Apamean pylväskatu;
+*käsityö* — Aleppon saippua, damastikudonta, lasi, puu-upotus.
+**Palmyra kannattaa jättää Fablen päätettäväksi:** aihe on
+kulttuurihistoriaa, mutta se tunnetaan nykyään ennen kaikkea
+tuhoamisesta, eikä sitä voi käsitellä mainitsematta sitä.
+
+### Neutraali sanamuoto on Fablen päätös, ei makuasia
+
+`maakartat.js`:n kommentissa (Fable 9.8.2026): *pelissä ei ole sorto-
+eikä sotamainintoja edes yhden lauseen verran silloin, kun neutraali
+vaihtoehto on olemassa.* Kirjoitin Irakin soiden vesihistorian tämän
+mukaan: kanavat, padot, pinta-alan putoaminen kymmenesosaan, palautus
+58 prosenttiin 2006 ja nykyinen noin kolmannes — **ilman toimijoita**.
+Syyriassa tämä koskee lähes jokaista 2010-luvun lausetta.
+
+### Selainajon neljä ansaa (kaikki tulivat vastaan)
 
 1. **Maalehti aukeaa vain, jos maalla on muoto NYKYISEN laudan
-   kartalla.** Peli käynnistyy `maailma`-laudalla, jolla ei ole IRN:ää.
-   `ui.game.pack = ...` ei mene läpi. Toimiva tapa on katselutila:
-   `index.html?lauta=middleeast`, jolloin `window.matkakirja.ui` on
-   valmiina eikä peliä tarvitse aloittaa.
-2. **`naytaTutkiSivu(i)` on indeksi, `vaihdaTutkiSivu(d)` on suunta** —
-   ja indeksissä on yhden siirtymä: `tutkiSivut[i]` näkyy kutsulla
-   `naytaTutkiSivu(i + 1)`. Väärä kutsu näytti *edellisen* aiheen kuvat
-   ja raportoi silti "kuvia 4, rikki 0".
-3. **Reittikoukun on katettava KAIKKI ulkopuoliset osoitteet** — kuvat
-   haetaan ensin R2-peilistä, ei Commonsista. Pelkkä
-   `commons.wikimedia.org` -sääntö antoi "0 pyyntöä, rikki 0".
-   Ja jos peilistä puuttuvan kuvan virhesivun tarjoilee selaimelle
-   `image/jpeg`-otsakkeella, `onerror` ei laukea eikä **pelin oma
-   varareitti Commonsiin** pääse ajoon: mittari näyttää "rikki 4",
-   vaikka peli toimisi oikein. Tarkista tavut ennen fulfillia.
+   kartalla.** Peli käynnistyy `maailma`-laudalla; `ui.game.pack = ...`
+   ei mene läpi. Käytä katselutilaa: `index.html?lauta=middleeast`.
+2. **`naytaTutkiSivu(i)` on indeksi, `vaihdaTutkiSivu(d)` suunta** — ja
+   indeksissä on yhden siirtymä: `tutkiSivut[i]` näkyy kutsulla
+   `naytaTutkiSivu(i + 1)`. Väärä kutsu näytti edellisen aiheen kuvat
+   ja raportoi silti "rikki 0".
+3. **Reittikoukun on katettava kaikki ulkopuoliset osoitteet** (kuvat
+   tulevat R2-peilistä), eikä peilin virhesivua saa tarjoilla
+   `image/jpeg`-otsakkeella — muuten pelin oma Commons-varareitti ei
+   pääse ajoon.
+4. **Mittaa `naturalWidth > 0`, älä `img.complete`.** Epäonnistuneella
+   kuvalla `complete` on myös true, joten mittaus ehti varareitin
+   edelle ja raportoi "rikki 4" sivusta, jonka kaikki kuvat näkyvät.
+   Korjattu työkaluun; älä pura korjausta.
 
-**Uudet kuvat eivät ole R2-peilissä** ennen kuin `peilaa-media` ajetaan.
-Se ei riko mitään (varareitti hakee ne Commonsista), mutta kannattaa
-mainita raportissa.
-
-### IRQ:n seuraavaan erään: kuvat jo katsottu silmällä
-
-- **Malwiya, Samarran kierreminareetti:** `The spiral minaret in
-  Samarra.jpg` (Jim Gordon, CC BY 2.0) — ilmakuva, kierreramppi näkyy
-  selvästi, oikealla moskeijan ulkomuuri.
-- **Mudhif, ruokomaja:** `Sumerian Mudhif-guesthouse, Southern Eastern
-  marshes, Iraq.jpg` (Hassan Al-Jarrah, CC BY-SA 4.0) — sisäkuva
-  ruokokaarista, päädyssä ristikkoseinät ja yksi työskentelevä ihminen.
-- **Suomaisema:** `Marsh Arab Canoes (30928817552).jpg` (David Stanley,
-  CC BY 2.0) — pitkiä kapeita mashuf-veneitä täynnä leikattua ruokoa
-  rannassa, takana ruovikko ja avovesi. Katsottu, kelpaa.
-- **Erbilin kansi:** `Pictures of tourists near Erbil Citadel.jpg`
-  **HYLÄTTY** — se on kolmen kuvan yhdistelmä, jossa etualalla on
-  yksittäinen tunnistettava lapsi. Luokassa on vain kaksi tiedostoa,
-  joten toinen (`سور قلعة أربيل الأثري.jpg`, JEHAN SHERKO,
-  CC BY-SA 4.0) on katsottava ennen käyttöä; jos sekään ei kelpaa,
-  neljäs rakennusnosto kannattaa ottaa muualta (esim. Bagdadin
-  Mustansiriya tai Ktesifonin holvi) eikä Erbilistä.
+**Uudet kuvat eivät ole R2-peilissä** ennen kuin `peilaa-media` ajetaan
+(Iranin kuvat olivat peilissä muutamassa tunnissa). Ei riko mitään,
+mutta mainitse raportissa.
 
 **Sotasisältörajaus on Irakissa tiukempi kuin Iranissa.** Luokat
 `Great Ziggurat of Ur`, `Mudhif` ja `Mesopotamian Marshes` ovat

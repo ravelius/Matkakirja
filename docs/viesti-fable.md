@@ -1,3 +1,81 @@
+# Opus 1 → Fable: IRAK KOKONAINEN (v562, #805), SYR pohjustettu — konteksti loppumassa, tein luovutuksen (11.8.2026 aamuyö)
+
+**Irak on valmis:** neljä aihetta (muinaisuus, ruoka, rakennukset,
+suot), 15 nostoa, neljä minitehtävää. Tämän vuoron neljä PR:ää:
+
+| PR | versio | sisältö |
+|---|---|---|
+| #802 | v560 | IRN ruoka + käsityö → **Iran kokonainen** |
+| #803 | v561 | IRQ muinaisuus + ruoka |
+| #804 | — | kolme lehtityökalua repoon |
+| #805 | v562 | IRQ rakennukset + suot → **Irak kokonainen** |
+
+Rakennussivulle tulivat Samarran Malwiya (52 m, ramppi ulkopinnalla),
+Al-Ukhaidir, Bagdadin Mustansiriya (neljä lakikoulukuntaa saman pihan
+ympärillä, vesikello 1235) ja Ktesifonin Taq Kasra. Suosivulle
+keinosaaret ja vesipuhveli, mudhifin sisus ja ruokosato veneissä.
+
+## Esitarkistin esti toisen päällekkäisyyden — ja se oli pahempi
+
+Valitsemani mudhif-kuva oli jo `maakartat.js`:ssä **Irakin oman
+karttasivun** nostona, otsikolla "Talo, jossa ei ole yhtään naulaa".
+Karttasivu on saman maalehden ensimmäinen sivu, joten lukija olisi
+nähnyt saman kuvan ja saman jutun kahden sivun välein. Poistin oman
+nostoni ja jätin suot-sivulle kolme nostoa neljän sijaan.
+
+**Tästä syntyi sääntö, jonka kirjasin luovutuspaperiin:** maalehden
+kilpailija ei ole toinen maalehti vaan saman maan **karttasivu ja
+kaupunkilehti**. Ne on katsottava ennen kuin aihe lyödään lukkoon.
+
+## Kaksi kohtaa, joissa noudatin sinun aiempaa päätöstäsi
+
+1. **Soiden vesihistoria neutraalisti.** Löysin `maakartat.js`:n
+   kommentista päätöksesi 9.8.: ei sorto- eikä sotamainintoja edes
+   yhden lauseen verran, kun neutraali vaihtoehto on olemassa.
+   Kirjoitin siksi kanavat, padot, pinta-alan putoamisen
+   kymmenesosaan, palautuksen 58 prosenttiin 2006 ja nykyisen noin
+   kolmanneksen — ilman toimijoita. Jos haluat rajata tiukemmin
+   (koko vesihistoria pois), se on yhden noston viimeisen kolmen
+   virkkeen poisto.
+2. **Erbilin kansi jätettiin pois.** Luokassa on kaksi kuvaa: toinen
+   on kolmen kuvan yhdistelmä, jonka etualalla on yksittäinen
+   tunnistettava lapsi, toinen kaivantokuva jossa kohdetta ei
+   tunnista. Neljänneksi rakennusnostoksi tuli Taq Kasra.
+
+## Yksi asiavirhe, jonka lähde esti
+
+Olin kirjoittamassa Taq Kasran holvin olevan **maailman suurin**
+yhden jännevälin raudoittamaton tiiliholvi. Se on toiseksi suurin.
+Sama kuvio kuin Iranin pistaasiluvuissa: uskottava numero, jota ei
+huomaa vääräksi lukemalla.
+
+## SYR pohjustettu, kolme kuvaa jo katsottu
+
+Ehdin katsoa Syyrian kuvaehdokkaita ennen kuin konteksti alkoi loppua.
+Luovutuspaperissa on nimet ja lisenssit; lyhyesti: Serjillan
+kaksikerroksinen kalkkikivitalo (Gerhard Haubold, CC BY-SA 4.0) ja
+kaksi Aleppon saippuakuvaa (Bernard Gagnon, CC BY-SA 3.0) — kuivumaan
+ladottu vihreä saippuamuuri ja lattiaan upotettu keittopata. Bosran
+teatterikuva hylättiin: se on lähikuva yhdestä kapiteelista.
+
+**Yksi päätös sinulle: Palmyra.** Aihe on kulttuurihistoriaa ja
+aineistoa on paljon, mutta Palmyra tunnetaan nykyään ennen kaikkea
+tuhoamisesta, eikä sitä voi käsitellä mainitsematta sitä. En ottanut
+sitä ehdotukseeni; sano jos haluat sen mukaan ja millä rajauksella.
+
+## Miksi lopetan tähän enkä aloita Syyriaa
+
+Konteksti on käytetty pitkälti, ja kesken jäävä erä olisi huonompi
+kuin siisti luovutus: docs/opus1-tilanne.md:n kohta 1b on nyt
+kirjoitettu niin, että seuraava sessio pääsee Syyriaan kiinni ilman
+tätä keskustelua — mukana aihe-ehdotus, katsotut kuvat, karttasivun
+päällekkäisyyssääntö, neutraalin sanamuodon perustelu ja selainajon
+neljä ansaa. Merkitsin myös luovutuspaperin vanhentuneet kohdat
+vanhentuneiksi (mm. "lehdettömät maat pysyvät kahden sivun mallissa"),
+koska ne olisivat ohjanneet seuraavan session väärään.
+
+Puutelista: **SYR, YEM, CYP.**
+
 # Opus 1 → Fable: Iran valmis (v560), Irak aloitettu (v561), työkalut repoon (#804) (11.8.2026 yö)
 
 Kolme PR:ää sisään tämän vuoron aikana, kaikki mergettyinä:
