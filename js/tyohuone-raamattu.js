@@ -18,7 +18,9 @@ export const RAAMATTU2 = {
   johdanto: 'Koko pelin idea yhdessä dokumentissa. Tämä on Fablen '
     + 'tiivistys pelin nykytilasta (v576) — käydään läpi yhdessä '
     + 'kohta kohdalta ja muokataan, kunnes jokainen osio on '
-    + 'hyväksytty.',
+    + 'hyväksytty. HUOM (omistajan linjaus 11.8.2026): kun Raamattu '
+    + '2.0 on valmis, KAIKKI matkakirjamerkinnät, kohtaamiset ja '
+    + 'aarrelöytötekstit kirjoitetaan uusiksi sen mukaisiksi.',
   osiot: [
     {
       otsikko: 'Ydinajatus ja kohderyhmä',
@@ -47,7 +49,10 @@ export const RAAMATTU2 = {
           + 'matkan varrella, jotta paine tuntuu.',
         'Oppiminen on seikkailun sivutuote: uteliaisuus '
           + 'kuljettaa, mikään ei tunnu koululta — ja kaikki '
-          + 'tieto on totta ja tarkistettua.',
+          + 'tieto on totta ja tarkistettua. Oppiminen lähtee '
+          + 'usein pienestä kiinnostavasta yksityiskohdasta ja '
+          + 'laajenee siitä ymmärrykseksi koko maasta tai '
+          + 'kulttuurista.',
         'Tekoäly tekee mahdolliseksi valtavan käyttövapaan '
           + 'aineiston (PD/CC) hyödyntämisen ja kuratoinnin '
           + 'selkeään, kiinnostavaan, yllättävään ja koskettavaan '
@@ -63,33 +68,62 @@ export const RAAMATTU2 = {
           + '1872 kartan, kukkarollisen puntia, passin ja paksun '
           + 'päiväkirjan vuodelta 1873. Hän olettaa maailman olevan '
           + 'kuin isoisä sen jätti — ei ole.',
+        'Matkakirja on puhtaasti isoisän PÄIVÄKIRJA: sitä ei ole '
+          + 'kirjoitettu kenellekään eikä se puhuttele lukijaa. '
+          + 'Sen revitty viimeinen sivu on arvoitus, jota Reginald '
+          + 'lähtee selvittämään.',
+        'Reginaldin kiire on itse valittu: hän on päättänyt tehdä '
+          + 'matkan samassa ajassa kuin isoisä — alle 80 päivässä.',
+        'Matkalla Reginaldille selviää, millainen isoisä hänellä '
+          + 'oli ja mitä kummallista tälle sattui — ja samalla hän '
+          + 'alkaa ymmärtää maailmaa ja sen muuttumista. '
+          + 'Päiväkirjan tapahtumat ja nykymaailman ilmiöt ovat '
+          + 'niin hurjia, että Reginaldia alkaa itseäänkin '
+          + 'jännittää — varsinkin kun joku tuntuu seuraavan. '
+          + 'Onko joku muukin saanut vihiä, että Aarnin aarteet '
+          + 'ovat sittenkin olemassa?',
         'Isoisä Horatio Fogg (H.F.): laivaston kartanpiirtäjä, '
           + 'erosi 1873 ("halusin tietää, mitä rannikon takana '
           + 'on"). Mittaa kaiken (barometri kulkee nyt Reginaldin '
           + 'laukussa), pelkää hevosia muttei myrskyjä, kohtelias '
-          + 'kaikille, kirjoittaa aina "sinulle, joka tätä luet" — '
-          + 'tarinan tunneydin.',
+          + 'kaikille — persoona välittyy päiväkirjan '
+          + 'merkinnöistä, ei puhuttelusta.',
         'Kaksi ääntä vuorottelee: isoisän päiväkirja 1873 ja '
           + 'nuoren herran havainto nyt. Huumori syntyy niiden '
           + 'välistä; joskus isoisä on yhä oikeassa, ettei vanha '
           + 'ääni ole narri. Ivaa paikallisille ei koskaan — '
           + 'piikki osoittaa herroihin itseensä.',
-        'Kilpailija Ezekiel Grimshaw (1873): osti Aarnin '
-          + 'kuolinpesän, seurasi Horatiota aina laivavuoron '
-          + 'myöhässä — mahtipontinen, ei koskaan vaarallinen. '
-          + 'Nykyajassa vilahtaa tummansininen sateenvarjo; '
-          + 'kantajaa ei paljasteta ilman yhteistä päätöstä.',
+        'Vastustajat: isoisällä oli kilpailija (Ezekiel Grimshaw, '
+          + '1873 — mahtipontinen, aina laivavuoron myöhässä, ei '
+          + 'koskaan vaarallinen). Reginaldilla on omansa: '
+          + 'NÄKYMÄTÖN kilpailija, joka ei koskaan näyttäydy eikä '
+          + 'missään kohdassa paljastu hyväksi tai auttajaksi — '
+          + 'näkyy vain merkkejä seuraamisesta. Hän lisää '
+          + 'aikapainetta ja kaihertaa Reginaldin mieltä.',
         'Aarni: 1800-luvun alun tutkimusmatkailija, jonka '
           + 'luettelossa on maailman unohdetut aarteet — yksi '
           + 'jokaisesta maanosasta. Aikalaiset pitivät luetteloa '
-          + 'satukirjana; isoisä uskoi siihen, ja revitty '
-          + 'viimeinen sivu vihjaa että hän löysi yhden (ei '
-          + 'koskaan kerrota minkä).',
-        'Mysteerit: joka mantereella korkeintaan YKSI, ja se '
-          + 'ratkeaa mantereen aarteen löytyessä (Euroopassa '
-          + 'tuntematon kulkija, joka pitää isoisän jälkiä '
-          + 'kunnossa). Jännitys ei tule mysteeristä vaan '
-          + 'herrojen hurjista tilanteista.',
+          + 'satukirjana; isoisä uskoi siihen.',
+        'Mantereen mysteeri: jokaisella maanosalla on YKSI '
+          + 'toistuva MERKKI, jonka tarkoitus selviää vasta kun '
+          + 'mantereen pääaarre löytyy — seuraavalla mantereella '
+          + 'alkaa uusi. Tekstimassassa merkit ovat pienessä '
+          + 'roolissa, sivulauseen huomioita.',
+        'Fablen merkkiehdotukset (7, päätetään yhdessä): '
+          + 'Eurooppa — liidulla piirretty pieni kompassiruusu '
+          + 'ovenpielissä ja kivissä; Afrikka — akaasianoksaan '
+          + 'solmittu punainen lanka; Lähi-itä — vastapoltetun '
+          + 'suitsukkeen tuoksu paikoissa, joissa ei ole ketään; '
+          + 'Aasia — taitettu paperikurki jätettynä näkyville; '
+          + 'Pohjois-Amerikka — kolmen kiven latomus polun '
+          + 'varressa; Etelä-Amerikka — solmittu naru '
+          + '(khipu-solmut); Oseania — hiekkaan piirretty '
+          + 'Eteläristin tähtikuvio.',
+        'Matkakirjan tekstien rooli: isoisän seikkailut 1873 ja '
+          + 'nuoren herran tarkat, yksityiskohtaiset havainnot '
+          + 'nykyhetkestä. Pieni huomio avaa kaupungin ytimen ja '
+          + 'tunnelman tarinana — lehdet syventävät sen tiedoksi, '
+          + 'ja tarinan kautta paikka myös muistetaan.',
       ],
     },
     {
