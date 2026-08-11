@@ -558,6 +558,65 @@
       kohde.append(el('p', 'pieni',
         `Päivitetty ${RAAMATTU2.paivitetty} · Fable ylläpitää · vanhat kirjaukset: Arkisto-välilehti`));
       kohde.append(el('p', null, RAAMATTU2.johdanto));
+
+      const taulukko = (otsikot, rivit) => {
+        const kotelo = el('div', 'md-taulu');
+        const t = el('table');
+        const otsRivi = el('tr');
+        for (const o of otsikot) otsRivi.append(el('th', null, o));
+        t.append(otsRivi);
+        for (const rivi of rivit) {
+          const tr = el('tr');
+          for (const solu of rivi) tr.append(el('td', null, String(solu)));
+          t.append(tr);
+        }
+        kotelo.append(t);
+        return kotelo;
+      };
+
+      /*
+       * Taulukot generoidaan suoraan pelin datasta (omistajan tilaus
+       * 11.8.2026: "listata selkeästi kaikki tutki kätkö pelit sekä
+       * kaikki aarteet taulukoituna") — ne eivät voi vanhentua, koska
+       * lähde on sama kuin pelillä.
+       */
+      const maailma = PACKS.find((p) => p.id === 'maailmankartta');
+      const aarreTaulut = (k) => {
+        k.append(el('p', null, 'Aarnin luettelon unohdetut aarteet (pelin päämäärä):'));
+        const mannerNimi = {
+          europe: 'Eurooppa', middleeast: 'Lähi-itä', africa: 'Afrikka',
+          asia: 'Aasia', northamerica: 'Pohjois-Amerikka',
+          southamerica: 'Etelä-Amerikka', oceania: 'Oseania',
+        };
+        k.append(taulukko(['Manner', 'Unohdettu aarre'],
+          Object.entries(maailma?.tokens?.mannerTypes ?? {}).map(([manner, tyypit]) =>
+            [mannerNimi[manner] ?? manner, tyypit.star?.name ?? '?'])));
+        k.append(el('p', null, `Kaikki laattatyypit (${Object.values(maailma?.tokens?.counts ?? {}).reduce((a, b) => a + b, 0)} laattaa, yksi joka kaupungissa):`));
+        const tyypit = maailma?.tokens?.types ?? {};
+        const maarat = maailma?.tokens?.counts ?? {};
+        const VAIKUTUS = {
+          star: 'Mantereen unohdettu aarre — avaa mannerlennon',
+          horseshoe: 'Suoja: kolmella hevosenkengällä rosvon voi ohittaa',
+          robber: 'Ryöstäjä vie rahat — tai voita kaksintaistelu',
+          ruby: 'puntaa', emerald: 'puntaa', topaz: 'puntaa',
+          empty: 'Kätkö on tyhjä',
+          linssi: 'Varuste: uusi tapa katsoa karttaa',
+        };
+        k.append(taulukko(['Laatta', 'Kpl', 'Vaikutus'],
+          Object.entries(tyypit).map(([id, t]) => [
+            t.name,
+            maarat[id] ?? 0,
+            t.value ? `+${t.value} ${VAIKUTUS[id]}` : (VAIKUTUS[id] ?? ''),
+          ])));
+      };
+      const peliTaulu = (k) => {
+        k.append(el('p', null, 'Kaikki pelityypit (Pelit-välilehdellä kuvaukset ja tarinasynkat kokonaisuudessaan):'));
+        k.append(taulukko(['Peli', 'Tila'], [
+          ...KATKOPELIT.nykyiset.map((p) => [p.nimi, p.tila]),
+          ...KATKOPELIT.ehdotukset.map((p) => [p.nimi, 'ehdotus — ei päätetty']),
+        ]));
+      };
+
       RAAMATTU2.osiot.forEach((osio, i) => {
         const k = el('div', 'kortti');
         const ots = el('p', null);
@@ -567,6 +626,8 @@
         const lista = el('ul');
         for (const rivi of osio.kohdat) lista.append(el('li', null, rivi));
         k.append(lista);
+        if (osio.otsikko.startsWith('Aarteet')) aarreTaulut(k);
+        if (osio.otsikko.startsWith('Tutki kätkö')) peliTaulu(k);
         kohde.append(k);
       });
     }
