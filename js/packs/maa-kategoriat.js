@@ -16462,6 +16462,23 @@ export const MAA_KATEGORIAT = {
             + 'vuoret.',
           lahde: 'Gerda Arendt, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Rotkossa kuljetaan vastavirtaan vedessä',
+          tiedosto: '17 Wadi Mujib Malaqi Trail - In the Siq - panoramio.jpg',
+          teksti: 'Kuolleeseenmereen laskee idästä rotko, jonka pohjalla virtaa '
+            + 'vettä ympäri vuoden. Wadi Mujibin suojelualue perustettiin '
+            + 'vuonna 1987, ja Unesco nimesi sen biosfäärialueeksi 2011. '
+            + 'Rotkon kapeinta kohtaa sanotaan Siqiksi, ja siellä retki '
+            + 'tehdään vastavirtaan vedessä kahlaten: seinämät nousevat '
+            + 'molemmin puolin lähes pystyinä, eikä kuivaa polkua ole. Jokea '
+            + 'ruokkii seitsemän sivupuroa, ja valuma-alueen korkeusero on yli '
+            + 'tuhat seitsemänsataa metriä — ylängöltä alas neljänsadan metrin '
+            + 'syvyyteen merenpinnan alapuolelle.',
+          selite: 'Kolme retkeilijää kahlaa Wadi Mujibin rotkossa. Vihertävä vesi '
+            + 'juoksee kivien lomassa, ja hiekkakiviset seinämät nousevat '
+            + 'molemmin puolin korkeina.',
+          lahde: 'hikinginjordan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Miksi Kuolleessameressä kelluu ilman ponnistelua?',
@@ -16531,6 +16548,24 @@ export const MAA_KATEGORIAT = {
             + 'ympärillä pelkkää kuivaa maata.',
           lahde: 'Paul Mannix, Wikimedia Commons (CC BY 2.0)',
         },
+        {
+          otsikko: 'Kahdeksansataa porrasta ylös kallion kylkeen',
+          tiedosto: 'The Monastery, Petra, Jordan8.jpg',
+          teksti: 'Petran tunnetuin julkisivu on Aarrekammio, mutta suurin on '
+            + 'ad-Deir. Se hakattiin kallioseinään noin ensimmäisen '
+            + 'vuosisadan puolivälissä, ja julkisivu on 47 metriä korkea ja '
+            + '48 metriä leveä. Ylös noustaan lähes kahdeksansataa kallioon '
+            + 'veistettyä porrasta, ja kävelyyn menee reilu puoli tuntia. '
+            + 'Sisällä on vain yksi neliön muotoinen huone, jonka takaseinässä '
+            + 'on syvennys — julkisivu on siis paljon suurempi kuin tila sen '
+            + 'takana. Nimi Deir tarkoittaa luostaria ja juontuu myöhemmästä '
+            + 'käytöstä: tutkijoiden mukaan salia käytettiin bysanttilaisaikana '
+            + 'todennäköisesti kirkkona.',
+          selite: 'Ad-Deirin julkisivu Petrassa. Punertavaan kallioon on veistetty '
+            + 'kahdessa kerroksessa pylväitä, ja keskellä ylhäällä kohoaa '
+            + 'pyöreä torni, jonka huipulla on uurna.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Minkä muotoinen on Jerashin kuuluisin tori?',
@@ -16543,6 +16578,184 @@ export const MAA_KATEGORIAT = {
         oikea: 0,
         fakta: 'Toria kiertää lähes seitsemänkymmentä pylvästä, ja sen kivetys '
           + 'on yhä alkuperäinen.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Jordanialainen juhla-ateria on iso vati keskellä ja ihmiset sen '
+        + 'ympärillä. Ruoka valmistuu hitaasti: maito kuivataan koviksi '
+        + 'palloiksi, sipulit kuullotetaan tunti ja liha hautuu hiekkaan '
+        + 'kaivetussa uunissa.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka syödään seisten ja oikealla kädellä',
+          tiedosto: 'Préparation du mansaf-Jordanie (8).jpg',
+          teksti: 'Mansaf on Jordanian kansallisruoka. Ison vadin pohjalle '
+            + 'levitetään ohutta leipää, sen päälle riisi ja lampaanliha, ja '
+            + 'päällimmäiseksi kaadetaan kuumaa jameed-kastiketta. Koristeeksi '
+            + 'tulee paahdettuja manteleita ja pinjansiemeniä. Vati kannetaan '
+            + 'keskelle, ja syöjät seisovat sen ympärillä: vasen käsi selän '
+            + 'takana, oikealla kädellä otetaan omalta kohdalta. Mansaf kuuluu '
+            + 'häihin, valmistujaisiin ja juhlapyhiin, ja sitä tarjotaan myös '
+            + 'silloin, kun riitoja sovitellaan. Unesco lisäsi tavan '
+            + 'aineettoman kulttuuriperinnön luetteloon vuonna 2022.',
+          selite: 'Mansaf-vati Petran seudulla. Ohuen leivän päälle on kasattu '
+            + 'riisiä ja lihaa ja ripoteltu paahdettuja manteleita ja '
+            + 'persiljaa; tällä vadilla lihana on lampaan sijasta kana.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Jogurtti kuivataan koviksi palloiksi',
+          tiedosto: 'Jordan 3077.jpg',
+          teksti: 'Mansafin kastike alkaa maidosta. Lampaan- tai vuohenmaito '
+            + 'keitetään, hapatetaan ja valutetaan harsokankaassa paksuksi '
+            + 'jogurtiksi. Siihen sekoitetaan suolaa päivä toisensa jälkeen, '
+            + 'kunnes massa on niin tiivistä, että siitä voi pyöritellä '
+            + 'palloja. Pallot kuivataan auringossa koviksi kuin kivet, ja '
+            + 'sellaisina ne säilyvät kuukausia ilman kylmää. Kun kastiketta '
+            + 'tarvitaan, pallo liotetaan ja hierotaan takaisin nesteeksi. '
+            + 'Parhaan jameedin maineessa on Al-Karakin kaupunki.',
+          selite: 'Kulhollinen valmista jameed-kastiketta Jerashin lähellä. '
+            + 'Vaaleankeltainen neste on maustettu tummalla mausteella, ja '
+            + 'kulhossa on iso metallinen kauha.',
+          lahde: 'Avery Jensen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Uuni kaivetaan hiekkaan',
+          tiedosto: 'The underground oven for Zarb.jpg',
+          teksti: 'Wadi Rumin beduiinien juhlaruoka on zarb, ja sen uuni on maan '
+            + 'alla. Hiekkaan kaivetaan kuoppa, jonka pohjalle sytytetään '
+            + 'hiillos. Päälle lasketaan teline, jonka tasoille on aseteltu '
+            + 'lihaa, tomaattia ja sipulia, ja mukaan menee pata riisiä. '
+            + 'Kuoppa peitetään kannella ja hiekalla, jotta lämpö ja höyry '
+            + 'jäävät sisään, ja ateria hautuu siellä tunteja. Kun kansi '
+            + 'nostetaan, hiekasta nousee ensin höyry ja sitten koko ruoka '
+            + 'kerralla. Valmistuminen vie koko iltapäivän, joten zarb tehdään '
+            + 'vieraille ja juhlaan.',
+          selite: 'Zarb-uuni Wadi Rumissa. Punaiseen hiekkaan on upotettu musta '
+            + 'metallinen astia, jonka pohjalla on hiiltynyttä puuta.',
+          lahde: 'فيصل العدناني, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sipulipiirakka leivotaan oliivinkorjuun juhlaksi',
+          tiedosto: 'Makmura 5.jpg',
+          teksti: 'Pohjois-Jordanian kylissä leivotaan makmuraa. Nimi tarkoittaa '
+            + 'peitettyä, ja se kuvaa tekotapaa: täyte jää taikinakerrosten '
+            + 'alle piiloon. Täytteeksi kuullotetaan iso määrä hienoksi '
+            + 'pilkottua sipulia oliiviöljyssä, mausteeksi tulee sumakkia, ja '
+            + 'väliin ladotaan kanaa tai lihaa. Taikina tehdään '
+            + 'kokojyvävehnästä. Piirakka paistuu hitaasti ja käännetään '
+            + 'vadille kokonaisena ennen leikkaamista. Makmuraa on tehty '
+            + 'erityisesti oliivinkorjuun juhlaksi, koska öljyä kuluu paljon '
+            + 'ja korjuun jälkeen sitä on tuoreena.',
+          selite: 'Valmis makmura metallivadilla ylhäältä kuvattuna. Pinta on '
+            + 'tummanruskea ja kiiltävä, ja reunoilta erottuvat päällekkäiset '
+            + 'taikinakerrokset.',
+          lahde: 'Malkawi99, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten jameed säilyy kuukausia ilman kylmää?',
+        vaihtoehdot: [
+          'Se säilötään oliiviöljyyn',
+          'Se suolataan ja kuivataan koviksi palloiksi',
+          'Se haudataan hiekkaan viileään',
+          'Se keitetään umpeen savipurkkiin',
+        ],
+        oikea: 1,
+        fakta: 'Kun kastiketta tarvitaan, kova pallo liotetaan ja hierotaan '
+          + 'takaisin nesteeksi.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Jordania on pinta-alaltaan pieni mutta pystysuunnassa valtava: '
+        + 'samalle päivämatkalle mahtuu tuhannen metrin ylänkö ja laakso, '
+        + 'joka on neljäsataa metriä merenpinnan alapuolella. Väliin sopii '
+        + 'useita kasvillisuusvyöhykkeitä.',
+      nostot: [
+        {
+          otsikko: 'Kalliot on kirjoitettu täyteen',
+          tiedosto: 'Jordan, Wadi Rum Desert, Jebel Khazali.jpg',
+          teksti: 'Wadi Rum on Jordanian suurin kuivalaakso: '
+            + 'seitsemänsataakaksikymmentä neliökilometriä hiekkakiveä ja '
+            + 'graniittia. Vuoret nousevat tasaisesta hiekasta lähes '
+            + 'pystysuorina seininä, ja niiden itärinteillä on lähteitä, koska '
+            + 'pohjavesi pysähtyy kivilajien rajapintaan. Kallioseinämiin on '
+            + 'hakattu piirroksia ja kirjoituksia tuhansien vuosien ajalta: '
+            + 'ihmisiä, kameleita ja antilooppeja. Jebel Khazalin rotkossa '
+            + 'niitä on rivikaupalla. Alue on ollut Unescon '
+            + 'maailmanperintökohde vuodesta 2011, ja suojelun perusteena ovat '
+            + 'sekä maisema että kalliopiirrokset.',
+          selite: 'Jebel Khazalin hiekkakivimassiivi Wadi Rumissa. Punaruskea '
+            + 'kallio nousee jyrkkänä tasaisesta punaisesta hiekasta, ja sen '
+            + 'juurella näkyy pieninä pilkkuina muutama maastoauto.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Yksi laakso, neljä kasvillisuusvyöhykettä',
+          tiedosto: 'Dana Reserve 07.jpg',
+          teksti: 'Danan biosfäärialue on Jordanian suurin suojelualue, '
+            + 'kolmesataakahdeksan neliökilometriä. Se alkaa 1 500 metrin '
+            + 'korkeudelta ylängöltä ja laskeutuu Wadi Araban aavikolle, ja '
+            + 'matkalla vaihtuu neljä kasvillisuusvyöhykettä välimerellisestä '
+            + 'saharalais-arabialaiseen. Siksi lajeja on poikkeuksellisen '
+            + 'paljon: 703 kasvia, 215 lintua ja 38 nisäkästä. Kolmea '
+            + 'kasvilajia ei tavata mistään muualta maailmasta, ja Dana on '
+            + 'eteläisin paikka, jossa kasvaa välimerensypressi. Alue '
+            + 'perustettiin vuonna 1989.',
+          selite: 'Näkymä Danan biosfäärialueen laaksoon. Etualalla on vaaleaa '
+            + 'kalliota ja matalaa pensaikkoa, ja takana laakso jatkuu '
+            + 'sinertävinä vuorenrinteinä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Keidas kuivui, kun pumput käynnistyivät',
+          tiedosto: 'Azraq Wetland Reserve, May 2017.jpg',
+          teksti: 'Azraqin kosteikko itäisellä aavikolla oli vuosituhansia sekä '
+            + 'karavaanien että muuttolintujen levähdyspaikka: se osuu Afrikan '
+            + 'ja Euraasian väliselle lentoreitille. 1960-luvulla sen '
+            + 'pohjavettä alettiin pumpata Ammanin juomavedeksi, ja vuoteen '
+            + '1992 mennessä lähteet olivat kuivuneet umpeen. Nyt vettä '
+            + 'johdetaan takaisin keinotekoisesti, mutta se riittää '
+            + 'palauttamaan alkuperäisestä kosteikosta vain kymmenesosan. Osa '
+            + 'linnuista on silti palannut, ja alueelta on kirjattu 280 '
+            + 'muuttavaa lajia.',
+          selite: 'Azraqin kosteikon lampi. Tyyni vesi peilaa ruovikkoa ja '
+            + 'pensaikkoa, ja taivaalla lentää muutama lintu.',
+          lahde: 'Joe Roe, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kansalliskukka on melkein musta',
+          tiedosto: 'Iris nigricans 104379460.jpg',
+          teksti: 'Jordanian kansalliskukka on mustairis. Kukka on '
+            + 'tummanpurppura, lähes musta, ja halkaisijaltaan 12–15 '
+            + 'senttimetriä — paljon noin 35 senttimetrin korkuiselle '
+            + 'kasville. Lajia kasvaa luonnonvaraisena vain Jordaniassa eikä '
+            + 'missään muualla maailmassa, ja se on uhanalainen. Kasvi vaatii '
+            + 'suoraa aurinkoa ja maan, josta sadevesi valuu heti pois, joten '
+            + 'sitä löytää kivikkoisilta rinteiltä. Jordaniassa kasvaa '
+            + 'kahdeksan muutakin irislajia, ja useimmat niistä ovat nekin '
+            + 'uhanalaisia.',
+          selite: 'Mustairis kukkii kivikkoisella rinteellä. Tummanpurppurat '
+            + 'terälehdet kaartuvat alaspäin, ja vieressä nousee vielä '
+            + 'avautumaton nuppu.',
+          lahde: 'Santiago Martín-Bravo, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Danan alueella elää poikkeuksellisen monta lajia?',
+        vaihtoehdot: [
+          'Siellä sataa enemmän kuin muualla Jordaniassa',
+          'Laakson pohjalla virtaa iso joki',
+          'Korkeusero tuo samaan laaksoon neljä kasvillisuusvyöhykettä',
+          'Alue on aidattu ja lajit on tuotu sinne',
+        ],
+        oikea: 2,
+        fakta: 'Dana on eteläisin paikka maailmassa, jossa kasvaa '
+          + 'välimerensypressi.',
       },
     },
   ],
