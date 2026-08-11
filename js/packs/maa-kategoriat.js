@@ -15003,6 +15003,22 @@ export const MAA_KATEGORIAT = {
             + 'pukuun pukeutunut ihminen.',
           lahde: 'Delta.jpg, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Dyyni, joka on muuttunut kiveksi',
+          tiedosto: 'Fossil Dunes, Abu Dhabi - Flickr - Robert Haandrikman.jpg',
+          teksti: 'Al Wathban aavikolla Abu Dhabin lähellä seisoo muotoja, jotka '
+            + 'näyttävät veistoksilta: ohuita levyjä, kiemuroita ja hattumaisia '
+            + 'ulokkeita. Ne ovat vanhoja hiekkadyynejä, jotka ovat kovettuneet '
+            + 'kiveksi. Kun sadevesi valuu hiekan läpi, se liuottaa mukaansa '
+            + 'kalkkia ja jättää sen jyvien väliin liimaksi; vähitellen dyyni '
+            + 'muuttuu hiekkakiveksi. Sen jälkeen tuuli on kaivanut pehmeät '
+            + 'kohdat pois ja jättänyt kovat pystyyn. Alue on suojeltu, ja sen '
+            + 'poikki kulkee merkitty polku.',
+          selite: 'Mustavalkoinen kuva Al Wathban fossiilidyyneistä. Etualalla '
+            + 'kohoaa hiekkakivipaasi, jonka yläosa levittäytyy kuin hattu, ja '
+            + 'takana aavikko jatkuu tasaisena auringonlaskuun.',
+          lahde: 'Robert Haandrikman, Wikimedia Commons (CC BY 2.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Miten ghaf-puu pärjää aavikolla ilman sadetta?',
@@ -15072,6 +15088,22 @@ export const MAA_KATEGORIAT = {
             + 'kuppi, jonka pohjalla on vaaleaa kahvia, ja lautasella kaksi '
             + 'taatelia.',
           lahde: 'Slywire, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vuori kerää veden keitaalle',
+          tiedosto: 'Jebel Hafeet - Aerial View.jpg',
+          teksti: 'Al Ainin kaupungin laidalla kohoaa Jebel Hafeet, pitkä ja '
+            + 'kapea kalkkikivivuori, joka nousee tasaisen aavikon keskeltä '
+            + 'yli tuhanteen metriin. Vuorella on keitaalle suuri merkitys: '
+            + 'harvat sateet valuvat sen rinteitä pitkin ja imeytyvät maahan '
+            + 'juurelle, jossa pohjavesi täyttyy. Juuri sieltä falaj-kanavat '
+            + 'ottavat vetensä. Vuoren juurella on myös lämpimiä lähteitä, '
+            + 'joiden vesi tulee maasta noin neljänkymmenen asteisena. '
+            + 'Rinteiltä on löydetty satoja pronssikautisia hautoja.',
+          selite: 'Ilmakuva Jebel Hafeetista Al Ainin vieressä. Pitkänomainen '
+            + 'kalkkikivivuori kohoaa jyrkkänä tasaisesta maasta, ja sen '
+            + 'juurella levittäytyy matala kaupunki suorine katuineen.',
+          lahde: 'Nicolascornet, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       tehtava: {
@@ -15143,6 +15175,23 @@ export const MAA_KATEGORIAT = {
             + 'lippuja.',
           lahde: 'Tmsprophoto.photography, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Toisella puolella maata on toinen meri',
+          tiedosto: 'Khor Fakkan Beach Fujairah UAE - panoramio (9).jpg',
+          teksti: 'Emiraateilla on kaksi rannikkoa. Suurin osa kaupungeista on '
+            + 'Persianlahden puolella, mutta vuoriston takana idässä on toinen '
+            + 'ranta, joka avautuu Omaninlahdelle ja sitä kautta Intian '
+            + 'valtamerelle. Khor Fakkanin lahti on niistä tunnetuin: '
+            + 'Hajar-vuoret laskeutuvat siellä suoraan mereen ja jättävät '
+            + 'väliinsä puolikuun muotoisen hiekkarannan. Vesi on syvempää ja '
+            + 'viileämpää kuin lännessä, ja siksi kalasto on toinen. Satama '
+            + 'on tärkeä, koska laivan ei tarvitse kiertää Hormuzinsalmen '
+            + 'kautta.',
+          selite: 'Khor Fakkanin ranta Omaninlahdella. Hiekkaranta kaartuu '
+            + 'kuvassa vasemmalle, edessä on kirkas vihertävä vesi, ja takana '
+            + 'kohoavat paljaat ruskeat vuoret.',
+          lahde: 'Rizwan Ullah Wazir, Wikimedia Commons (CC BY 3.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Kuka ohjaa kamelia nykyään kilpailuradalla?',
@@ -15155,6 +15204,93 @@ export const MAA_KATEGORIAT = {
         oikea: 0,
         fakta: 'Omistajat ajavat radan viertä autoissa ja käyttävät robotin '
           + 'ohjaimia ikkunasta.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Emiraateissa rakennettiin viisituhatta vuotta samasta '
+        + 'aineesta: kivestä, savesta ja palmusta. Öljy toi teräksen ja '
+        + 'lasin, ja väliin mahtuu vain muutama sukupolvi.',
+      nostot: [
+        {
+          otsikko: 'Pyöreä hauta viideltä vuosituhannelta',
+          tiedosto: 'Hili-Grand-Tomb-2.jpg',
+          teksti: 'Al Ainin Hilissä seisoo pyöreä kivirakennelma, jonka '
+            + 'halkaisija on noin kaksitoista metriä. Se on hauta '
+            + 'kolmannelta vuosituhannelta ennen ajanlaskun alkua. Lohkot on '
+            + 'hakattu suorakulmaisiksi ja ladottu ilman laastia niin '
+            + 'tarkasti, että seinä kaartuu tasaisena ympäri. Sisään johtaa '
+            + 'matala oviaukko, jonka yläpuolelle on veistetty kuvia '
+            + 'ihmisistä ja eläimistä — ne ovat harvinaisia, koska '
+            + 'useimmissa saman ajan haudoissa ei ole kuvia lainkaan. Alue '
+            + 'kuuluu Al Ainin maailmanperintökohteeseen.',
+          selite: 'Hilin suuri hauta valaistuna illalla. Pyöreä muuri on ladottu '
+            + 'vaaleista suorakulmaisista kivistä, ja alareunassa on matala '
+            + 'oviaukko, jonka päällä erottuu veistettyjä hahmoja.',
+          lahde: 'SUNILKUMAR NAIR, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Savilinnake keitaan reunalla',
+          tiedosto: 'Al Jahili Fort Towers.jpg',
+          teksti: 'Al Jahilin linnake Al Ainissa rakennettiin 1890-luvulla '
+            + 'keitaan reunalle. Se on savitiiltä ja savilaastia, ja seinät '
+            + 'ovat alhaalta paksummat kuin ylhäältä, jotta rakennelma pysyy '
+            + 'pystyssä. Pihan puolella on rivi kartiomaisia tukikeiloja, '
+            + 'jotka nojaavat muuriin ja ottavat vastaan sen painon. '
+            + 'Näkyvimmässä kulmassa on pyöreä torni, jossa on neljä '
+            + 'kerrosta ja katolla hammaslaita. Linnake on kunnostettu, ja '
+            + 'sisällä on nykyään näyttelytiloja ja kirjasto.',
+          selite: 'Al Jahilin linnake Al Ainissa. Etualalla seisoo rivi '
+            + 'kartiomaisia savitukia, ja niiden takana kohoaa vaalea muuri '
+            + 'ja kolme nelikulmaista tornia; vasemmalla kasvaa palmu.',
+          lahde: 'Jeff2rado, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tuulitorni oli talon ilmastointi',
+          tiedosto: 'Sheikh Saeed al-Maktoum house built in 1896.jpg',
+          teksti: 'Dubain Shindaghassa on 1890-luvulla rakennettu kauppiaan '
+            + 'ja hallitsijan talo, joka on nykyään museo. Katolla on '
+            + 'tuulitorneja: neliömäisiä hormeja, jotka on jaettu sisältä '
+            + 'ristikkäisillä väliseinillä neljään osaan. Mistä suunnasta '
+            + 'tuuli tuleekin, yksi osa ottaa ilman sisään ja muut '
+            + 'imevät lämmintä ilmaa ulos, joten alla oleva huone pysyy '
+            + 'viileämpänä. Seinät ovat korallikiveä ja kipsiä, ja '
+            + 'kattopalkkeina on mangrovepuun runkoja, jotka kasvavat '
+            + 'suoriksi mutta jäävät ohuiksi.',
+          selite: 'Sheikh Saeed al-Maktoumin talo Dubaissa. Kaksikerroksinen '
+            + 'hiekanvärinen rakennus, jonka katolla kohoaa neliömäisiä '
+            + 'tuulitorneja, ja edessä on kuviollinen kivetty aukio.',
+          lahde: 'Iwona Rege, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Torni kapenee kolmeen suuntaan',
+          tiedosto: 'Burj Khalifa from Safa Park.jpg',
+          teksti: 'Burj Khalifa on maailman korkein rakennus: 828 metriä. Sen '
+            + 'pohja on Y-kirjaimen muotoinen, ja torni kapenee ylöspäin '
+            + 'portaittain kolmea sivuaan pitkin. Muoto ei ole vain '
+            + 'ulkonäköä varten: pyörteet, joita tuuli synnyttää korkean '
+            + 'rakennuksen taakse, saisivat suoran tornin heilumaan '
+            + 'säännöllisesti, ja portaikko rikkoo pyörteet, koska '
+            + 'poikkileikkaus muuttuu joka kerroksessa. Ylimmät sata metriä '
+            + 'ovat pelkkää teräspiikkiä. Rakennus valmistui vuonna 2010.',
+          selite: 'Burj Khalifa Safa Parkin puiden takaa. Ohut hopeanharmaa '
+            + 'torni nousee kirkkaan siniselle taivaalle, ja etualalla on '
+            + 'rivi taatelipalmuja ja muita puita.',
+          lahde: 'Gfilip, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Burj Khalifa kapenee ylöspäin portaittain?',
+        vaihtoehdot: [
+          'Portaikko rikkoo tuulen synnyttämät pyörteet',
+          'Ylimmät kerrokset olisivat muuten liian kylmiä',
+          'Muoto lyhentää hissimatkaa',
+          'Se säästää lasia julkisivussa',
+        ],
+        oikea: 0,
+        fakta: 'Poikkileikkaus muuttuu joka kerroksessa, joten pyörteet eivät '
+          + 'ehdi järjestäytyä säännöllisiksi.',
       },
     },
     {
