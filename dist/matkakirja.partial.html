@@ -85267,8 +85267,8 @@ const KAARI_PAKETIT = {
       },
       aarre: 'Sääntö piti: lämmin seinä oikealla, ja kätkö odotti '
         + 'liituristin alla irtokiven takana. Portilla Márta sanoi: '
-        + '"Isoisoäitinikin pyyhki merkin. Silti risti on aamulla aina '
-        + 'seinässä, samaa valkoista liitua."',
+        + '"Isoisoäitinikin pyyhki merkin aikanaan — ja aina se ennen '
+        + 'pitkää palasi. Tämä liitu on tuoretta."',
     },
     {
       id: 'lontoo',
@@ -85395,7 +85395,7 @@ const KAARI_PAKETIT = {
       henkilo: 'Suihkulähteenhoitaja Enzo nostaa Trevin kolikot talteen joka '
         + 'viikko, kuten hänen isänsä ja isoisänsä nostivat.',
       kohtaaminen: 'Enzo kääntelee vanhaa kolikkoa hansikkaassa kädessään. '
-        + '"Tämä nousee altaasta joka viikko, vaikka panen sen '
+        + '"Tämä nousee altaasta yhä uudelleen, vaikka panen sen '
         + 'talteen. Isäni sanoi: älä kysy keneltä, kysy miksi. Vastaa '
         + 'tavan kysymykseen, niin kolikko on sinun."',
       kysymys: {
@@ -85496,7 +85496,8 @@ const KAARI_PAKETIT = {
       },
       aarre: 'Nikos nosti rahan: sen alla, pylvään onkalossa, odotti '
         + 'kätkö. Hän katsoi rinteeseen: "Pöllö palaa pylväälle joka '
-        + 'ilta. Kukaan ei tiedä, kuka sitä ruokkii."',
+        + 'ilta, niin kauan kuin suku muistaa. Meillä sanotaan, että '
+        + 'se vartioi vielä jotakin."',
     },
     {
       id: 'lissabon',
@@ -86070,8 +86071,8 @@ const KAARI_PAKETIT = {
       },
       aarre: 'Nadia avasi vihkon vieraan käsialan riville: sen kohdalle, '
         + 'sivujen väliin, oli ommeltu kätkö. Hän vertasi rivejä '
-        + 'pitkään: "Sata vuotta lukemia — mutta joka kymmenes rivi on '
-        + 'samaa mustetta. Tuoretta."',
+        + 'pitkään: "Joka kymmenes rivi on vahvistettu uudelleen — '
+        + 'sama käsi, tuore muste."',
     },
     {
       id: 'bukarest',
@@ -86378,7 +86379,7 @@ const KAARI_PAKETIT = {
     },
     {
       id: 'vilna',
-      mykistetyt: ['saapuminen', 'kohtaaminen'],
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Vilna — susi joka ulvoi sadan äänellä',
       saapuminen: 'Tornin kivijalassa, sammaleen alla, istui pieni rautainen '
         + 'susi — ja sen selkä oli lämmin, vaikka ilta oli kylmä. '
@@ -86412,8 +86413,9 @@ const KAARI_PAKETIT = {
           + 'kauppiaita kaikkialta.',
       },
       aarre: 'Suden jalustan alta aukesi kolo, ja kolossa odotti kätkö. '
-        + 'Rasa nosti lyhtyään: "Selän kulunut kohta kiiltää tuoreelta. '
-        + 'Minun kierrosteni välillä sitä silittää joku muukin."',
+        + 'Rasa nosti lyhtyään: "Kuluneessa kohdassa on tuore '
+        + 'kädenjälki, leveämpi kuin minun. Joku on silittänyt sutta '
+        + 'tänä yönä, kierrosteni välissä."',
     },
     {
       id: 'tukholma',
@@ -146699,6 +146701,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 573, teksti: 'Kulkija-johdonmukaisuuspassi: viisi korjausta' },
   { v: 572, teksti: 'Riadin kohtaaminen viittaa oikeaan kysymykseen' },
   { v: 571, teksti: 'Sonnetin 15 löydöstä korjattu — Eurooppa puhdas' },
   { v: 570, teksti: 'Jemenin lehteen historia-, rakennus-, luonto- ja ruokasivut' },
@@ -147355,7 +147358,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.572';
+const APP_VERSION = '2026-08-09.573';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

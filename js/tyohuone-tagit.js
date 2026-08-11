@@ -26,7 +26,7 @@ export const KAARI_TAGIT = {
     puhuja: ['Horatio 1873', 'Nikos'],
     tunnetilat: ['arvoitus', 'huumori'],
     teemat: ['mittaus', 'suvun jälki', 'tuijotuskilpa', 'legenda'],
-    beat: ['tuore jälki'],
+    beat: ['ajaton arvoitus'],
   },
   praha: {
     puhuja: ['Horatio 1873', 'Tomáš', 'Reginald'],
