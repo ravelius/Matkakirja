@@ -1517,6 +1517,19 @@ export class UI {
     this.passportProgress = document.getElementById('passport-progress');
 
     /*
+     * Aarnin luettelon i-nappi. Teksti on tarinakaanonia (Fablen
+     * kirjoittama), joten se on tässä sellaisenaan eikä sitä lyhennetä
+     * näytön mukaan — pikkuseloste kasvaa tekstin mukaan.
+     */
+    document.getElementById('aarni-otsikko')?.appendChild(this.pikkuselosteNappi(
+      'Aarnin luettelo on isoisän vanhan ystävän, keräilijä Aarnin, kokoama '
+      + 'lista aarteista, jotka ovat päässeet unohtumaan. Kateissa-luku '
+      + 'kertoo, montako niistä on vielä löytämättä — jokainen matkalla '
+      + 'ratkaistu johtolanka voi viedä yhden jäljille.',
+      'Mikä Aarnin luettelo on?',
+    ));
+
+    /*
      * Laukun alalaidan nimikilpi avaa lähdeikkunan.
      *
      * Kaksi <dialog>-modaalia päällekkäin jättäisi alemman
@@ -1551,6 +1564,9 @@ export class UI {
     this.passportDialog?.addEventListener('click', (e) => {
       if (e.target === this.passportDialog) this.passportDialog.close();
     });
+    // Seloste elää laukun sisällä, joten se sulkeutuu laukun mukana —
+    // muuten se jäisi leijumaan kartan päälle ilman ankkuriaan.
+    this.passportDialog?.addEventListener('close', () => this.suljePikkuseloste());
 
     this.turnCard = document.getElementById('actions').closest('.turn-card');
     this.introEl = document.getElementById('intro');
@@ -5365,8 +5381,14 @@ export class UI {
        */
       if (game.cityOf()) {
         const stayBtn = this.iconButton('suurennuslasi', 'Tutki', modes.includes('stay') ? 'primary' : '');
+        // Uudessa kaupungissa nappi sykkii, kunnes sitä on painettu kerran.
+        if (this.tutkiSyke && this.tutkiSyke === this.kaupunkiAvain(game.cityOf())) {
+          stayBtn.classList.add('tutki-syke');
+        }
         stayBtn.addEventListener('click', () => {
           sfx.play('paper');
+          this.tutkiSyke = null;
+          stayBtn.classList.remove('tutki-syke');
           // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
           // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
           this.openArrival(game.cityOf());
@@ -6292,6 +6314,8 @@ export class UI {
     this.drawTargets();
     this.drawPawns();
     this.renderTurnPill();
+    // Ennen nappien latomista: syke luetaan napin luonnissa.
+    this.paivitaTutkiSyke();
     this.renderActions();
     this.renderFact();
     this.renderQuiz();
@@ -10985,6 +11009,175 @@ export class UI {
       this.vapautaPuhuja(audio);
     }
     this.luennat?.clear();
+  }
+
+  /** Kaupungin tunnus laudan kanssa: sama nimi voi olla kahdella laudalla. */
+  kaupunkiAvain(city) {
+    return city ? `${this.game.pack.id}:${city.id}` : null;
+  }
+
+  /**
+   * Sytyttää suurennuslasin sykkeen, kun pelaaja saapuu kaupunkiin
+   * ENSIMMÄISTÄ KERTAA (omistajan toive: "jotta pelaaja tajuaa painaa").
+   *
+   * Uutuus luetaan pelin omasta käytyjen kaupunkien listasta, mutta
+   * VERTAAMALLA SITÄ EDELLISEEN PIIRTOON. Suora kysely ei kelpaa:
+   * game.visitCity lisää kaupungin listaan jo saapumishetkellä, joten
+   * piirron aikaan se on siellä aina — vasta ero edelliseen kertoo,
+   * oliko käynti uusi.
+   *
+   * Ensimmäinen piirto vain kirjaa lähtötilanteen. Tallennuksesta
+   * palattaessa saapuminen on jo tapahtunut, eikä vanhaa kaupunkia pidä
+   * korostaa uutena.
+   *
+   * Botin vuorot kirjataan mutta eivät sytytä sykettä: nappi on
+   * pelaajan, ja botin liikkeet vain merkitsevät kaupungit nähdyiksi.
+   */
+  paivitaTutkiSyke() {
+    const { game } = this;
+    const kaydyt = game.worldOf?.(game.player)?.visited;
+    if (!kaydyt) return;
+    const avaimet = [...kaydyt].map((id) => `${game.pack.id}:${id}`);
+    if (!this.kaydytEnnen) {
+      this.kaydytEnnen = new Set(avaimet);
+      return;
+    }
+    const nyt = this.kaupunkiAvain(game.cityOf());
+    if (nyt && !game.player.isBot && !this.kaydytEnnen.has(nyt) && kaydyt.has(game.cityOf().id)) {
+      this.tutkiSyke = nyt;
+    }
+    for (const avain of avaimet) this.kaydytEnnen.add(avain);
+  }
+
+  /**
+   * Pieni i-ympyrä, jonka napautus avaa selosteen napin vierestä.
+   *
+   * Palauttaa valmiin napin, jonka voi liittää minkä tahansa otsikon
+   * perään: `otsikko.appendChild(ui.pikkuselosteNappi('teksti', 'nimi'))`.
+   * Nappi hoitaa itse avaamisen, sulkemisen ja aria-tilansa.
+   *
+   * @param {string} teksti selosteen sisältö
+   * @param {string} nimi ruudunlukijan ja hiiren osoittimen nimi napille
+   */
+  pikkuselosteNappi(teksti, nimi = 'Lisätietoa') {
+    const nappi = html('button', 'seloste-nappi', 'i');
+    nappi.type = 'button';
+    nappi.title = nimi;
+    nappi.setAttribute('aria-label', nimi);
+    nappi.setAttribute('aria-expanded', 'false');
+    nappi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      // Toinen napautus samaan nappiin sulkee: i-nappi on katkaisija,
+      // ei pelkkä avaaja.
+      if (this.pikkuseloste?.ankkuri === nappi) this.suljePikkuseloste();
+      else this.avaaPikkuseloste(nappi, teksti);
+    });
+    return nappi;
+  }
+
+  /**
+   * Lyhyt seloste ankkurielementin viereen.
+   *
+   * Tämä EI ole <dialog> vaan tekstin kokoinen laatikko: opastus on
+   * yhden virkkeen mittainen, eikä sen takia pidä peittää koko ruutua
+   * eikä keskeyttää sitä mitä pelaaja oli tekemässä. Sulkeutuu
+   * napautuksesta ulkopuolelle, omasta ×:stään tai Escistä.
+   *
+   * Laatikko lisätään AVOIMEN DIALOGIN SISÄÄN, jos ankkuri on
+   * sellaisessa: selain nostaa <dialog>-modaalin omaan ylätasoonsa, ja
+   * muualle lisätty kerros jäisi sen alle näkymättömiin. Sama ansa on
+   * ratkaistu samalla tavalla suurennoskatselimessa (openLightbox).
+   *
+   * @param {HTMLElement} ankkuri elementti, jonka viereen seloste tulee
+   * @param {string} teksti selosteen sisältö
+   */
+  avaaPikkuseloste(ankkuri, teksti) {
+    this.suljePikkuseloste();
+    if (!ankkuri || !teksti) return null;
+
+    const koti = ankkuri.closest('dialog[open]') ?? document.body;
+    const laatikko = html('div', 'pikkuseloste');
+    laatikko.setAttribute('role', 'note');
+    laatikko.appendChild(html('p', 'pikkuseloste-teksti', teksti));
+    const sulje = html('button', 'pikkuseloste-sulje', '×');
+    sulje.type = 'button';
+    sulje.setAttribute('aria-label', 'Sulje seloste');
+    sulje.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.suljePikkuseloste();
+    });
+    laatikko.appendChild(sulje);
+    koti.appendChild(laatikko);
+    ankkuri.setAttribute('aria-expanded', 'true');
+
+    /*
+     * Paikka lasketaan vasta kun laatikko on DOMissa ja sillä on mitat.
+     * Ankkurin alle, keskitettynä siihen — ja jos alle ei mahdu (nappi
+     * on ruudun alalaidassa), yläpuolelle. Reunoista jätetään marginaali,
+     * jottei laatikko valu ruudun ulkopuolelle puhelimella.
+     */
+    const asemoi = () => {
+      if (!laatikko.isConnected) return;
+      const a = ankkuri.getBoundingClientRect();
+      const l = laatikko.getBoundingClientRect();
+      const marginaali = 10;
+      const alle = a.bottom + 8;
+      const yli = a.top - l.height - 8;
+      const mahtuuAlle = alle + l.height <= window.innerHeight - marginaali;
+      const ylin = mahtuuAlle ? alle : Math.max(marginaali, yli);
+      let vasen = a.left + a.width / 2 - l.width / 2;
+      vasen = Math.min(Math.max(marginaali, vasen), window.innerWidth - l.width - marginaali);
+      laatikko.style.top = `${Math.round(ylin)}px`;
+      laatikko.style.left = `${Math.round(vasen)}px`;
+      laatikko.classList.add('nakyy');
+    };
+    asemoi();
+
+    /*
+     * Sulkijat lisätään vasta seuraavalla silmukalla: sama napautus,
+     * joka avasi selosteen, ehtisi muuten kuplia dokumenttiin ja sulkea
+     * sen heti (mitattu ansa, ei teoreettinen).
+     */
+    const ulkopuolella = (e) => {
+      if (laatikko.contains(e.target) || ankkuri.contains(e.target)) return;
+      this.suljePikkuseloste();
+    };
+    const nappaimesta = (e) => {
+      if (e.key === 'Escape') {
+        // Laukku on <dialog>, ja Esc sulkisi senkin. Seloste on päällimmäisin,
+        // joten se saa Escin ensin eikä päästä sitä eteenpäin.
+        e.stopPropagation();
+        e.preventDefault();
+        this.suljePikkuseloste();
+      }
+    };
+    const ajastin = setTimeout(() => {
+      document.addEventListener('pointerdown', ulkopuolella, true);
+      document.addEventListener('keydown', nappaimesta, true);
+    }, 0);
+    window.addEventListener('resize', asemoi);
+
+    this.pikkuseloste = {
+      laatikko,
+      ankkuri,
+      siivoa: () => {
+        clearTimeout(ajastin);
+        document.removeEventListener('pointerdown', ulkopuolella, true);
+        document.removeEventListener('keydown', nappaimesta, true);
+        window.removeEventListener('resize', asemoi);
+      },
+    };
+    return laatikko;
+  }
+
+  /** Sulkee avoimen selosteen ja irrottaa sen kuuntelijat. */
+  suljePikkuseloste() {
+    const auki = this.pikkuseloste;
+    if (!auki) return;
+    this.pikkuseloste = null;
+    auki.siivoa();
+    auki.ankkuri?.setAttribute('aria-expanded', 'false');
+    auki.laatikko.remove();
   }
 
   /** Matkalaukku: matkan tiedot, Aarnin luettelo ja tavarat. */

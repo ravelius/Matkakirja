@@ -471,7 +471,13 @@
       Passin leimat SÄILYVÄT tallennuksessa (js/passport.js) — linssien
       omistus lepää niiden päällä. Vain näyttö laukussa lähti.
     -->
-    <p class="passport-count">Aarnin luettelo</p>
+    <!--
+      i-nappi otsikon perään: lyhyt seloste siitä, mikä Aarnin luettelo
+      on ja mitä Kateissa-luku tarkoittaa. Nappi luodaan js/ui.js:ssä
+      (pikkuselosteNappi), jotta sama komponentti on liitettävissä mihin
+      tahansa otsikkoon ilman että jokaiselle kirjoitetaan omaa merkkausta.
+    -->
+    <p class="passport-count" id="aarni-otsikko">Aarnin luettelo</p>
     <div id="passport-aarteet" class="laukku-aarteet"></div>
     <p class="passport-count">Tavarat</p>
     <div id="passport-finds" class="passport-finds"></div>
