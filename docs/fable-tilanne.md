@@ -992,3 +992,34 @@ rahapalkinnon; lehteen ilmestyi vanha kertatutkimis-"Etsi kätkö";
   syntyneet nähtävyysjuttuerissä) — siivotaan kokoavan QA:n
   yhteydessä tai omana pikkueränä erä 13:n jälkeen.
 - Tilannetaulu päivitetty (v503–v506 + erätilat).
+
+### Vahtikierros 13, klo 01:19–01:40Z (04:19–04:40)
+
+- **v557 julkaistu (PR #799):** Maxin riman erä 4 (9 saapumista:
+  Praha, Sarajevo, Kiova, Bukarest isommin; Amsterdam, Krakova,
+  Kööpenhamina, Berliini, Helsinki silauksin). **Euroopan
+  rimakierros valmis:** 34/41 uusittu tai silattu, 7 tietoisesti
+  ennallaan. Mykistettyjä luentoja jonossa nyt 35.
+- **Sonnetin EU-Isfahan-raportti luettu:** 22/41 rikkomusta
+  (54 %), 20 ilmaista kysymyksenvaihtoa, Kreeta/Varsova epävarmat,
+  bonus D: 3 kysymys–kohtaus-irrallisuutta (Praha, Pariisi,
+  Sisilia). → ANNETTU MAXILLE korjauserä (poikkeus: muokkaa dataa
+  suoraan haaralleen, Fable katselmoi ja julkaisee).
+- **Opus 1:n raportti luettu (oli review_ready 22:27Z asti —
+  jäi huomaamatta ~3 h, koska list_sessions-etusivu ei näyttänyt
+  sitä; oppi: get_session myös Opus 1:lle joka kierroksella).**
+  Päätökset: (1) cityCountry-muutos JÄÄ — erikoiskohteet saavat
+  maatunnuksen (yhden laudan päätös v529 oli jo kumonnut 9.8:n
+  kaanonpäätöksen käytännössä), Jerusalem pysyy ilman
+  attribuutiota; omistaja voi kumota commitin halutessaan.
+  (2) ME-puutelista 5 maata (IRN/IRQ/SYR/YEM/CYP). (3) Opus 1
+  jatkaa Irania (puutarhat/ruoka/käsityö), sai julkaisuluvan kun
+  Iran on kokonainen; sitten IRQ. Kontekstibudjetti loppusuoralla
+  — ohjeistettu siisti luovutus docs/opus1-tilanne.md:hen.
+- **Opus 5:** peiliajo oli jo tehty (324/324 + 56/56); laukaistu
+  viestijono (työkalulupa hae-vuorikuvat.mjs:n viimeistelyyn +
+  valmiustila; perhekuvaerä siirtyi Fablelle uuden sisältölajin
+  säännöllä).
+- KIRJATTU JONOON OMISTAJALLE: ME-maiden aihemitta nyt 2–4/maa
+  (tilattu 5–6) — noston laajuus omistajan päätös (Opus 1:n
+  sivuhavainto).
