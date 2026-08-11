@@ -24,17 +24,31 @@ export const RAAMATTU2 = {
       otsikko: 'Ydinajatus ja kohderyhmä',
       tila: 'luonnos',
       kohdat: [
-        'Suomenkielinen selainseikkailu, jossa oppii maailmasta '
-          + 'huomaamatta: nuori herra Reginald Fogg matkustaa '
-          + 'isoisänsä vuoden 1873 matkapäiväkirjan jäljillä ja '
-          + 'etsii Aarnin luettelon unohdettuja aarteita.',
-        'Kohderyhmä: 13 vuotta täyttäneet ja aikuiset — EI '
-          + 'lastenpeli. "Imu aikuiselle" on sitova linja: vaara '
-          + 'saa tuntua, mutta se tulee maailmasta ja '
-          + 'kilpajuoksusta, ei ihmisten pahuudesta.',
-        'Kaikki tieto on totta ja tarkistettua: paikat, historia, '
-          + 'kuvat ja äänet opettavat oikeita asioita tarinan '
-          + 'kyydissä.',
+        'Suomenkielinen selainseikkailu: nuori herra Reginald Fogg '
+          + 'matkustaa isoisänsä vuoden 1873 matkapäiväkirjan '
+          + 'jäljillä maailman ympäri ja etsii Aarnin luettelon '
+          + 'unohdettuja aarteita.',
+        'Kohderyhmä: 13 vuotta täyttäneet ja aikuiset.',
+        'Peli näyttää uusia paikkoja ja kiinnostavia '
+          + 'yksityiskohtia kaupungeista ja maista — '
+          + 'kulttuureista, tavoista, kielistä, keksinnöistä ja '
+          + 'historiasta — sekä hurjia tarinoita niin '
+          + '1800-luvulta kuin nykypäivästä. Ymmärrys rakentuu '
+          + 'tarkoin valituista kuvista, teksteistä, peleistä, '
+          + 'grafiikoista, animoiduista karttavisualisoinneista, '
+          + 'linkeistä, radioista ja muista lähteistä.',
+        'Mielenkiintoa pitää yllä kehystarinan seikkailuretki: '
+          + 'aarteita voi löytää, mutta matkalla on myös vaaroja — '
+          + 'ja aikapaine: maailman ympäri alle '
+          + 'kahdeksassakymmenessä päivässä.',
+        'Oppiminen on seikkailun sivutuote: uteliaisuus '
+          + 'kuljettaa, mikään ei tunnu koululta — ja kaikki '
+          + 'tieto on totta ja tarkistettua.',
+        'Tekoäly tekee mahdolliseksi valtavan käyttövapaan '
+          + 'aineiston (PD/CC) hyödyntämisen ja kuratoinnin '
+          + 'selkeään, kiinnostavaan, yllättävään ja koskettavaan '
+          + 'muotoon — ihminen valitsee ja hyväksyy '
+          + 'lopputuloksen.',
       ],
     },
     {
