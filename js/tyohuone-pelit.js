@@ -87,7 +87,7 @@ export const PELIT = {
     },
     {
       nimi: 'Tapahtumakortti',
-      tila: 'pelissä',
+      tila: 'EI KÄYTÖSSÄ maailmankartalla — tapahtumapankki puuttuu (demo käyttää Afrikan kortteja)',
       kuvaus: 'Kysymyksen sijaan tapahtuu jotain — pieni tarinallinen '
         + 'käänne, jonka vaikutus kerrotaan kortin lopussa.',
       synkka: 'Laudan tapahtumapankki.',
@@ -122,7 +122,7 @@ export const PELIT = {
     },
     {
       nimi: 'Tietoportti',
-      tila: 'pelissä',
+      tila: 'EI KÄYTÖSSÄ — laudanvaihtoportit poistuivat yhden laudan mallissa (havainto 11.8.)',
       kuvaus: 'Oikea vastaus avaa portin toiselle laudalle ja matka '
         + 'jatkuu ilmaiseksi.',
       synkka: 'Kysymys liittyy kohdelautaan.',
@@ -136,7 +136,7 @@ export const PELIT = {
     },
     {
       nimi: 'Tutkiminen ilman laattaa',
-      tila: 'pelissä vain kaarettomilla laudoilla (Afrikka, Aasia…)',
+      tila: 'EI KÄYTÖSSÄ — laatta on nyt joka kaupungissa (havainto 11.8.)',
       kuvaus: 'Laatattomassa kaupungissa paikkaa voi tutkia kerran: '
         + 'kevyt kysymys, löytöpalkkio oikeasta. POISTETTU '
         + 'kaarikaupungeista 10.8. (omistajan päätös: kohtaamisen '

@@ -15,12 +15,16 @@
 
 export const RAAMATTU2 = {
   paivitetty: '11.8.2026',
-  johdanto: 'Koko pelin idea yhdessä dokumentissa. Tämä on Fablen '
-    + 'tiivistys pelin nykytilasta (v576) — käydään läpi yhdessä '
-    + 'kohta kohdalta ja muokataan, kunnes jokainen osio on '
-    + 'hyväksytty. HUOM (omistajan linjaus 11.8.2026): kun Raamattu '
-    + '2.0 on valmis, KAIKKI matkakirjamerkinnät, kohtaamiset ja '
-    + 'aarrelöytötekstit kirjoitetaan uusiksi sen mukaisiksi.',
+  johdanto: 'Koko pelin idea yhdessä dokumentissa. TAVOITE '
+    + '(omistajan linjaus 11.8.2026): tämän lukeminen riittää '
+    + 'yksinään pelin kehittämiseen ja uusien matkakirjatekstien '
+    + 'kirjoittamiseen — muista muistiinpanoista luovutaan, kun '
+    + 'Raamattu 2.0 on valmis (vain tekniset toteutusohjeet jäävät '
+    + 'erikseen, eikä omistajan tarvitse tuntea niitä). Käydään läpi '
+    + 'yhdessä kohta kohdalta; Fable täydentää itse puuttuvan '
+    + 'oleellisen. Kun Raamattu 2.0 on valmis, KAIKKI '
+    + 'matkakirjamerkinnät, kohtaamiset ja aarrelöytötekstit '
+    + 'kirjoitetaan uusiksi sen mukaisiksi.',
   osiot: [
     {
       otsikko: 'Ydinajatus ja kohderyhmä',
@@ -125,6 +129,44 @@ export const RAAMATTU2 = {
       ],
     },
     {
+      otsikko: 'Kirjoittajan säännöt (matkakirjatekstit)',
+      tila: 'luonnos',
+      kohdat: [
+        'Kaksi ääntä: isoisä saa loistaa asioissa, jotka ovat '
+          + 'yhä totta (joet, vuoret, tuoksut, satamien '
+          + 'järjestys), ja olla toivottoman vanhentunut nimissä, '
+          + 'rajoissa ja tekniikassa. Joskus isoisä on yhä '
+          + 'oikeassa ja nuori herra yllättyy — vanha ääni ei ole '
+          + 'narri. Nuori herra ei ole viisaampi ihmisenä, hän '
+          + 'vain elää 150 vuotta myöhemmin.',
+        'Kunnioitus: paikallisia ei ivata koskaan — piikki '
+          + 'osoittaa herroihin itseensä. Kohtaamishenkilöissä '
+          + 'epäusko ja hämmästys ovat huumorin luonnolliset '
+          + 'kodit, eivät nauraminen kenellekään.',
+        'Imu aikuiselle: vaara saa tuntua, mutta se tulee '
+          + 'maailmasta ja kilpajuoksusta, ei ihmisten '
+          + 'pahuudesta. Seuraaja kaihertaa mieltä muttei koskaan '
+          + 'uhkaa ketään.',
+        'Kommellus on polttoainetta: jokaisessa kirjoituserässä '
+          + 'vähintään yksi aito kommellus — jokin menee '
+          + 'herroilta konkreettisesti pieleen ja siitä seuraa '
+          + 'jotain. Suoraa itsensä pilkkaa säästeliäästi.',
+        'Vaihtelu budjetilla: toistuvat motiivit (barometri, '
+          + 'sateenvarjo, aarrevihjeet…) esiintyvät harvakseltaan '
+          + '— harvuus tekee niistä tehokkaita. Aistihavainto '
+          + '(haju tai maku) noin joka kolmanteen kohteeseen; '
+          + 'aitoja vuoden 1873 tositapahtumia ankkureiksi sinne '
+          + 'tänne.',
+        'Pituuskuri: tekstit ovat lyhyitä ja sivuhuomiot '
+          + 'sivulauseita — ei kryptisyyttä, ei selittelyä. '
+          + 'Pieni konkreettinen yksityiskohta voittaa aina '
+          + 'yleisen kuvailun.',
+        'Faktakuri: jokainen fakta tarkistetaan ja lähde '
+          + 'merkitään. Luenta vastaa tekstiä sanasta sanaan — '
+          + 'siksi arvottavia tekstejä ei lueta ääneen.',
+      ],
+    },
+    {
       otsikko: 'Pelin kulku',
       tila: 'luonnos',
       kohdat: [
@@ -196,17 +238,39 @@ export const RAAMATTU2 = {
       otsikko: 'Kohtaamiset ja henkilöt',
       tila: 'luonnos',
       kohdat: [
-        'Joka kaupungille käsin kirjoitettu henkilö, jonka suku '
-          + 'tai ammatti liittyy isoisän jälkeen: repliikki, '
-          + 'isoisän jättämä kysymys ja aarreteksti (tarinakaari). '
-          + 'Kohtaaminen ja aarre luetaan ääneen.',
+        'Kehyskertomus (omistajan idea 11.8.): pelaaja yrittää '
+          + 'ratkaista matkakirjan arvoitusta ja löytää kätkön — '
+          + 'ja tutustuu paikallisiin saadakseen apua. Matkakirja '
+          + 'kuvaa paikan, mutta 150 vuodessa maisema on '
+          + 'muuttunut eikä paikka ole enää ilmeinen: vasta '
+          + 'PAIKALLISEN HILJAINEN TIETO ja isoisän kuvaus '
+          + 'YHDESSÄ ratkaisevat kätkön sijainnin.',
+        'Hiljaisen tiedon arkku: paikallinen haluaa, että nuori '
+          + 'herra todistaa tietämyksensä ja kiinnostuksensa '
+          + 'heidän maataan ja kaupunkiaan kohtaan, ennen kuin '
+          + 'avaa arkkunsa. Siksi kohtaamisen kysymys on AINA '
+          + 'paikasta — oikea vastaus avaa luottamuksen, ja '
+          + 'kätkö löytyy. Tämä on koko visamekaniikan '
+          + 'tarinallinen syy.',
+        'Joka kaupungille käsin kirjoitettu TYYPILLINEN '
+          + 'PAIKALLINEN henkilö (ammatti sidottu paikkaan), '
+          + 'jolle piirretään myös kasvot peliin (yhtenäinen '
+          + 'kuvatyyli, kuten aarrekuvissa). Henkilöllä on '
+          + 'repliikki, kysymys ja aarreteksti; kohtaaminen ja '
+          + 'aarre luetaan ääneen.',
+        'Aarrejahti on pelin satua — kaikki tieto paikoista on '
+          + 'silti totta. Tässä peli ja todellisuus saavat '
+          + 'erkaantua: Aarnin luetteloa pidettiin satukirjana, '
+          + 'ja pelissä satu osoittautuu todeksi.',
         'Saapumiskortin nappi nimeää henkilön ("Tapaa Nikos"). '
           + 'Aloita peli -nappi erottaa luennan ja tehtävän — '
           + 'tiimalasi ei kulu kertojan puhuessa.',
         'Epäonnistumisesta yksi uusintayritys ("Viimeinen '
-          + 'mahdollisuus tavata"); toisen jälkeen henkilö ei ole '
-          + 'tavattavissa, onnistumisen jälkeen nappi harmaantuu. '
-          + 'Kohtaamiset ovat istuntokohtaisia.',
+          + 'mahdollisuus tavata") — paikallinen antaa toisen '
+          + 'tilaisuuden; toisen epäonnistumisen jälkeen arkku '
+          + 'pysyy kiinni eikä henkilö ole tavattavissa. '
+          + 'Onnistumisen jälkeen nappi harmaantuu. Kohtaamiset '
+          + 'ovat istuntokohtaisia.',
       ],
     },
     {
