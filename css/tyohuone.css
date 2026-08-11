@@ -536,3 +536,93 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   vertical-align: middle;
   white-space: nowrap;
 }
+
+/* --- pelidemot -------------------------------------------------------- *
+ *
+ * Pelit-välilehden pelattavat esimerkit (js/tyohuone-pelidemot.js,
+ * omistajan tilaus 11.8.2026). Tyylit ovat tarkoituksella omat eivätkä
+ * pelin quiz-kortin kopio: työhuone on tarkastelupöytä, ei peli-ikkuna,
+ * ja demon pitää näyttää työhuoneelta. Vain yksi demo on kerrallaan
+ * näkyvissä, joten korttia ei tarvitse erotella naapureistaan.
+ */
+
+.pelidemot .pieni { font-size: 0.86rem; color: var(--haalea); }
+.pelidemo-napit { margin-bottom: 0.8rem; }
+.pelidemo-napit button.paalla {
+  color: var(--korostus);
+  border-color: var(--korostus);
+  background: var(--korostus-pehmea);
+}
+
+.pelidemo-otsikko { font-weight: 600; color: var(--teksti); margin-bottom: 0.4rem; }
+/* Kohtaamisen repliikki on puhetta, ei pelitekstiä — kursiivi erottaa sen. */
+.pelidemo-tervehdys {
+  font-style: italic;
+  color: var(--teksti);
+  border-left: 2px solid var(--reuna);
+  padding-left: 0.7rem;
+}
+.pelidemo-kysymys { color: var(--teksti); margin-bottom: 0.6rem; }
+
+.pelidemo-vaihtoehdot { display: grid; gap: 0.4rem; margin-bottom: 0.6rem; }
+.pelidemo-vaihtoehto {
+  font: inherit; font-size: 0.95rem; text-align: left;
+  display: flex; align-items: baseline; gap: 0.55rem; flex-wrap: wrap;
+  color: var(--teksti); background: var(--pohja);
+  border: 1px solid var(--reuna); border-radius: 9px;
+  padding: 0.5rem 0.7rem; cursor: pointer;
+}
+.pelidemo-vaihtoehto:disabled { cursor: default; }
+.pelidemo-vaihtoehto .kirjain {
+  font-weight: 600; color: var(--haalea); min-width: 1.1rem;
+}
+.pelidemo-vaihtoehto .teksti { flex: 1 1 8rem; }
+.pelidemo-vaihtoehto.oikein { border-color: var(--vihrea); color: var(--vihrea); }
+.pelidemo-vaihtoehto.vaarin { border-color: var(--punainen); color: var(--punainen); }
+.pelidemo-vaihtoehto.valittu { font-weight: 600; }
+/* Kuvallinen vaihtoehto: kuva omalle rivilleen, kirjain ja teksti alle. */
+.pelidemo-vaihtoehto.kuvallinen { flex-wrap: wrap; }
+.pelidemo-vaihtoehto-kuva {
+  display: block; flex: 1 0 100%; width: 100%; height: 6.5rem;
+  object-fit: cover; border-radius: 7px; margin-bottom: 0.4rem;
+}
+
+.pelidemo-tulos { font-weight: 600; margin-bottom: 0.3rem; }
+.pelidemo-tulos.oikein { color: var(--vihrea); }
+.pelidemo-tulos.vaarin { color: var(--punainen); }
+
+.pelidemo-kuva {
+  display: block; width: 100%; max-width: 26rem; max-height: 15rem;
+  object-fit: cover; border-radius: 9px; margin: 0 0 0.7rem;
+}
+/* Lippu on leveä ja matala: se näytetään kokonaan, kuten pelissä. */
+.pelidemo-kuva.lippu {
+  object-fit: contain; max-width: 14rem; max-height: 9rem;
+  background: rgba(252, 241, 212, 0.92); padding: 0.4rem;
+}
+
+/* Pulman luonnos: sama mustetyyli kuin pelissä (css/styles.css). */
+.pelidemo-sketch {
+  display: block; width: 100%; max-width: 21rem;
+  aspect-ratio: 320 / 150; height: auto;
+  margin: 0 0 0.6rem; color: var(--teksti);
+}
+.pelidemo-sketch .ink {
+  fill: none; stroke: currentColor; stroke-width: 1.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.pelidemo-sketch .ink-fill {
+  fill: currentColor; fill-opacity: 0.72; stroke: currentColor; stroke-width: 1.2;
+}
+/*
+ * HUOM: font-size jätetään tarkoituksella pois. Piirtäjät antavat
+ * jokaiselle tekstille oman koon font-size-attribuutilla (9, 11, 13),
+ * ja CSS-sääntö kumoaisi ne kaikki — pelin oma .quiz-sketch .ink-text
+ * asettaa 13px, ja siksi esimerkiksi valokuvapulman pitkä kuvateksti
+ * leikkautuu piirroksen reunoihin. Demossa piirtäjän oma koko voittaa.
+ */
+.pelidemo-sketch .ink-text {
+  fill: currentColor; font-family: 'Courier New', monospace; text-anchor: middle;
+}
+
+.pelidemo-uusi { margin-top: 0.3rem; }

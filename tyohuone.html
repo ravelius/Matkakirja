@@ -649,6 +649,22 @@
      * ------------------------------------------------------------------ */
     {
       const kohde = document.getElementById('pelit');
+
+      /*
+       * PELIDEMOT ensin, katalogi vasta alle (omistajan tilaus
+       * 11.8.2026): jokaisesta pelityypistä pääsee kokeilemaan oikeaa
+       * peliä oikealla sisällöllä. Itse demot rakennetaan vasta kun
+       * välilehti avataan (kaynnistaPelidemotKerran alla) — moduuli
+       * lataa pelimoottorin ja kaikki kuvapaketit, eikä työhuoneen
+       * avaus saa hidastua siitä.
+       */
+      kohde.append(el('h2', null, 'Pelidemot'));
+      kohde.append(el('p', null, 'Kokeile jokaista pelityyppiä oikealla '
+        + 'pelisisällöllä — valitse peli napista; vain yksi näkyy kerrallaan.'));
+      const demoalue = el('div');
+      demoalue.id = 'pelidemot';
+      kohde.append(demoalue);
+
       const otsikko = el('h2', null, 'Tutki kätkö -pelit');
       kohde.append(otsikko, el('p', 'pieni', `Päivitetty ${KATKOPELIT.paivitetty} · Fable ylläpitää`));
       kohde.append(el('p', null, KATKOPELIT.johdanto));
@@ -681,6 +697,7 @@
       }
       // Raskaat kehykset ladataan vasta avattaessa.
       if (loytyi === 'studio') kaynnistaStudio();
+      if (loytyi === 'pelit') kaynnistaPelidemotKerran();
       history.replaceState(null, '', `#${loytyi}`);
       window.scrollTo(0, 0);
     }
@@ -702,6 +719,25 @@
         studioKaynnissa = false;
         $('tab-studio').prepend(Object.assign(document.createElement('p'),
           { className: 'puuttuu', textContent: `Äänistudiota ei saatu ladattua: ${virhe.message}` }));
+      }
+    }
+
+    /*
+     * Pelidemot samalla kaavalla: moduuli tuo mukanaan pelimoottorin,
+     * maailmankartan ja kaikki kuvapaketit, joten se ladataan vasta kun
+     * Pelit-välilehti avataan ensimmäistä kertaa.
+     */
+    let pelidemotKaynnissa = false;
+    async function kaynnistaPelidemotKerran() {
+      if (pelidemotKaynnissa) return;
+      pelidemotKaynnissa = true;
+      try {
+        const { kaynnistaPelidemot } = await import('./js/tyohuone-pelidemot.js');
+        kaynnistaPelidemot($('pelidemot'));
+      } catch (virhe) {
+        pelidemotKaynnissa = false;
+        $('pelidemot').append(Object.assign(document.createElement('p'),
+          { className: 'puuttuu', textContent: `Pelidemoja ei saatu ladattua: ${virhe.message}` }));
       }
     }
 
