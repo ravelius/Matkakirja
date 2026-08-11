@@ -10,11 +10,13 @@
  */
 
 export const TILANNE = {
-  paivitetty: '11.8.2026 (ilta) — uusi Fable-koordinaattori aloitti',
-  tavoite: 'Seitsemän aarretta ja mannerlento pelissä (v576). '
-    + 'Eurooppa on tekstien osalta valmis ja QA-sinetöity; omistaja '
-    + 'lukee Euroopan tekstejä ja kommentoi. Seuraavaksi omistajan '
-    + 'avoimet päätökset (kulkija, luennat, ME-tasavahvistus).',
+  paivitetty: '11.8.2026 (myöhäisilta) — Raamattu 2.0 -päivä',
+  tavoite: 'Raamattu 2.0 rakennetaan yhdessä työhuoneessa (15 '
+    + 'osiota; isot linjaukset 11.8.: paikallisaarteet, '
+    + 'varustekauppa, pelin loppu, tekstien vetovoimakeinot). '
+    + 'Vanhat saapumismerkinnät luentoineen palautettu peliin '
+    + '(v577) kunnes tekstit kirjoitetaan uusiksi. Opukset '
+    + 'jatkavat Lähi-idän ja Aasian maalehtiä taustalla.',
   rivit: [
     {
       tekija: 'Fable',
@@ -39,25 +41,26 @@ export const TILANNE = {
         + 'uusi tili perustaa oman Max-session tarvittaessa.',
     },
     {
-      tekija: 'Opus 1',
+      tekija: 'Opus (ME)',
       rooli: 'lehdet + rakenne',
-      tila: 'valmis',
-      tehtava: 'ME-MAALEHDET VALMIIT: 12 maata, 37 aihetta, 128 '
-        + 'nostoa ja kuvaa, 0 duplikaattia (v574). '
-        + 'Kokonaisyhteenveto raportissa.',
-      seuraavaksi: 'Valmiudessa. Jonossa omistajan päätöstä '
-        + 'odottaa ME-seitsikon tasavahvistus (vanhan reseptin '
-        + '7 maata uuteen malliin).',
+      tila: 'tyossa',
+      tehtava: 'ME-SEITSIKON TASAVAHVISTUS käynnissä (omistajan '
+        + 'lupa 11.8. ilta): JOR OMN QAT KWT BHR SAU ARE vanhasta '
+        + 'ohuesta mallista uuteen 4–5 aihetta × 4 nostoa '
+        + '-malliin. Haara claude/me-lehdet-tasavahvistus.',
+      seuraavaksi: 'Fable katselmoi ja julkaisee kun raportti '
+        + 'saapuu.',
     },
     {
-      tekija: 'Opus 5 (2)',
-      rooli: 'koodi + kuvatyöt',
-      tila: 'valmis',
-      tehtava: 'SEITSEMÄN TÄHTEÄ + LENTO valmis ja mainissa (v576): '
-        + 'yksi Aarnin luettelon aarre per manner, vihjejärjestelmä '
-        + 'pois, mannerlento, tallennusversio 1→2 migraatioineen, '
-        + 'uusi selainsavuke (11/11). Fable katselmoi ja julkaisi.',
-      seuraavaksi: 'Valmiudessa; seuraava erä Fablelta.',
+      tekija: 'Opus (Aasia)',
+      rooli: 'lehdet + kuvatyöt',
+      tila: 'tyossa',
+      tehtava: 'AASIAN MAALEHDET aloitettu (omistajan lupa 11.8. '
+        + 'ilta): JPN CHN IND THA KOR uuteen malliin — Aasialla '
+        + 'ei ollut vielä yhtään maalehteä. Haara '
+        + 'claude/aasia-lehdet.',
+      seuraavaksi: 'Fable katselmoi ja julkaisee kun raportti '
+        + 'saapuu.',
     },
     {
       tekija: 'Sonnet 1',
@@ -70,15 +73,17 @@ export const TILANNE = {
     },
   ],
   odottaaPaatosta: [
+    'Uudelleenkirjoituksen pohjamalli: Fablen ehdotus — vanha '
+      + 'kahden äänen rakenne (Reginaldin havainto + isoisän ääni '
+      + 'johtolausevariaatioilla), kaariteksteistä vain parhaat '
+      + 'kohtaukset ja faktat ilman mystiikkaa. Omistaja miettii.',
     'Kulkijan henkilöllisyys: hoitaja + kerääjä (suositus; kerääjä '
       + 'on Grimshawin jälkeläinen, revityn sivun palat) vai yksi '
-      + 'hahmo — pääaarteen paljastusteksti kirjoitetaan tästä.',
-    'Säietiheyden tasoituserä: kulkijahavainto nyt 32/41 '
-      + 'kaupungissa — ~12 loppubeatin vaihto (suositus: tehdään).',
-    'Euroopan luentojen generointilupa (koko EU-lauta mykistetty; '
-      + 'generoidaan yhtenä eränä kun tekstikommentit on käsitelty).',
-    'ME-seitsikon tasavahvistus: ARE JOR OMN QAT KWT SAU BHR '
-      + '2–3 aihetta → uusi 4–5×4-malli (~2 Opus-erää).',
+      + 'hahmo — pääaarteen paljastusteksti kirjoitetaan tästä. '
+      + 'HUOM: punnittava uudelleen 11.8. linjauksia vasten '
+      + '(kukaan ei odota poikaa, mystiikka pois).',
+    'Superlinssin ja tulevien kauppalinssien toiminnot — '
+      + 'luonnostellaan yhdessä (omistajalla paljon ideoita).',
     'Aloituskaupunkiarvio: BA→Lima harkinnainen (LA→Chicago tehty).',
     '36 käyttämätöntä vihjeluentaa (puhe-*-vihje-*.mp3) repossa — '
       + 'poistetaanko mediat vai säilytetäänkö varalle?',
@@ -97,6 +102,16 @@ export const TILANNE = {
  * siivotaan pois kun ne on katsottu tai ne vanhenevat.
  */
 export const TESTATTAVAA = [
+  {
+    otsikko: 'Kertojan ääni palasi saapumisiin (v577)',
+    ohje: 'Saavu mihin tahansa Euroopan kaupunkiin: saapumiskortti '
+      + 'näyttää taas lyhyen kahden äänen merkinnän (Reginaldin '
+      + 'havainto + isoisän nosto) ja kertoja lukee sen ääneen — '
+      + 'kaaritekstien mykkä kausi on ohi. Tilapäinen ratkaisu '
+      + 'kunnes tekstit kirjoitetaan uusiksi Raamattu 2.0:n mukaan. '
+      + 'Vertailu: työhuoneen Näytteet-välilehden lopussa kaikki '
+      + '41 merkintää.',
+  },
   {
     otsikko: 'Seitsemän aarretta ja mannerlento (v576)',
     ohje: 'Aloita uusi peli: jokaisella mantereella on nyt oma Aarnin '
