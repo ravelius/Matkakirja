@@ -17166,6 +17166,24 @@ export const MAA_KATEGORIAT = {
             + 'neljännessä kulmikas.',
           lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
         },
+        {
+          otsikko: 'Kallioon on hakattu yhdeksänsataa kuvaa',
+          tiedosto: 'Jebel Jassassiyeh rock carvings.jpg',
+          teksti: 'Koillisrannikolla on matalia kalkkikivikumpuja, joiden pintaan '
+            + 'on hakattu kuvia: kuppimaisia kuoppia riveissä, kaloja, '
+            + 'kilpikonnia, strutseja ja veneitä. Al Jassasiya on Qatarin '
+            + 'laajin kalliotaidekohde — kuvia on yli yhdeksänsataa lähes '
+            + 'kuudessasadassa numeroidussa kohdassa, ja se on maan ainoa '
+            + 'paikka, josta veneenkuvia on löydetty. Veneet on useimmiten '
+            + 'piirretty ylhäältä katsottuna, ikään kuin kartaksi. Iästä '
+            + 'kiistellään: arviot ulottuvat kolmannelta vuosisadalta ennen '
+            + 'ajanlaskua muutamaan sataan vuoteen, eikä vuoden 2012 ajoitus '
+            + 'tukenut vanhimpia arvioita.',
+          selite: 'Kalliopiirros Al Jassasiyassa. Kalkkikiveen on hakattu pitkä '
+            + 'keskiviiva ja sen molemmin puolin rivi vinoja uurteita kuin '
+            + 'airot; yläkulmassa on pyöreä kuoppa.',
+          lahde: 'Peter, Wikimedia Commons (CC BY 2.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Miksi Zekreetin kalliot ovat sienen muotoisia?',
@@ -17236,6 +17254,23 @@ export const MAA_KATEGORIAT = {
             + 'palmurivi.',
           lahde: 'Mohamed Nanabhay, Wikimedia Commons (CC BY 2.0)',
         },
+        {
+          otsikko: 'Torni rakennettiin sadeveden vartijaksi',
+          tiedosto: 'Umm Salal Barzan Towers 03.jpg',
+          teksti: 'Umm Salalissa seisoo kaksi kuudentoista metrin korkuista '
+            + 'tornia. Ne rakennettiin 1800-luvun lopulla ja kunnostettiin '
+            + 'vuonna 1910. Tehtävänä oli vartioida rawdaa eli matalaa '
+            + 'painannetta, johon sadevesi valuu ylempää ja jää maahan: '
+            + 'vedestä oli pulaa, joten se kannatti pitää silmällä. '
+            + 'Torneista tarkkailtiin myös uutta kuuta, koska paastokuukauden '
+            + 'alku määräytyy kuun mukaan. Katto tehtiin neljässä kerroksessa: '
+            + 'puiset danchal-orret, punottua bambua, mangrovepuun oksaverkko '
+            + 'ja päällimmäisenä tiivistetty savi.',
+          selite: 'Barzanin tornit Umm Salalissa. Kaksi vaaleaa nelikulmaista '
+            + 'tornia nousee kivimuurin takaa, ja niiden välissä kasvaa '
+            + 'taatelipalmu.',
+          lahde: 'Zairon, Wikimedia Commons (CC0)',
+        },
       ],
       tehtava: {
         kysymys: 'Mistä Qatarin kansallismuseon muoto on lainattu?',
@@ -17248,6 +17283,180 @@ export const MAA_KATEGORIAT = {
         oikea: 2,
         fakta: 'Aavikkoruusu syntyy, kun suolainen vesi haihtuu hiekassa ja '
           + 'jättää jälkeensä levymäisiä kiteitä.',
+      },
+    },
+    {
+      id: 'meri',
+      nimi: 'Meri',
+      johdanto: 'Qatar on niemimaa, jonka historia on ollut veden varassa: '
+        + 'purppuraa keitettiin kotiloista, helmiä nostettiin sukeltamalla ja '
+        + 'kalaa haettiin puuveneillä. Rannikko elää yhä merestä.',
+      nostot: [
+        {
+          otsikko: 'Kolme miljoonaa murskattua kotiloa',
+          tiedosto: '2 - Al Khor Island.jpg',
+          teksti: 'Al Khorin lahdella on pieni saari, jota sanotaan '
+            + 'Purppurasaareksi. Nimi on ansaittu: sieltä on kaivettu esiin '
+            + 'kolme miljoonaa rikottua merikotilon kuorta. Kassilaiset '
+            + 'valmistivat saarella purppuraväriä noin vuosina 1400–1100 eaa. '
+            + 'Väri saadaan murex-kotilon rauhasesta, ja pienenkin '
+            + 'väriannoksen saamiseksi kotiloita tarvitaan tuhansia — siksi '
+            + 'purppura oli kallista. Saarta pidetään vanhimpana tunnettuna '
+            + 'paikkana, jossa kotilopurppuraa on valmistettu, ja se on '
+            + 'Qatarin ainoa toiselle vuosituhannelle eaa. ajoittuva '
+            + 'muinaisjäännös.',
+          selite: 'Purppurasaari Al Khorin lahdella auringonlaskun aikaan. '
+            + 'Etualalla kasvaa matalia mangrovepensaita kivikkoisella '
+            + 'rannalla, ja takana vesi jatkuu tyynenä horisonttiin.',
+          lahde: 'Mr fahad.k, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Helmi oli koko maan elinkeino',
+          tiedosto: 'Doha - Traditional wooden dhows in the harbor.jpg',
+          teksti: 'Ennen öljyä Qatar eli helmistä. Kesäkuusta syyskuuhun '
+            + 'laivasto vietiin matalikoille, ja sukeltajat menivät pohjaan '
+            + 'ilman happea: nenässä oli puristin, sormissa nahkasuojukset ja '
+            + 'köyden päässä kivi, joka veti alas. Yksi sukellus kesti '
+            + 'minuutin tai pari, ja niitä tehtiin päivässä kymmeniä. Ala '
+            + 'romahti 1930-luvulla, kun japanilainen viljelty helmi tuli '
+            + 'markkinoille ja maailmantalous notkahti samaan aikaan. Puiset '
+            + 'dhow-veneet ovat yhä satamassa, mutta ne kuljettavat nykyään '
+            + 'matkailijoita.',
+          selite: 'Puisia dhow-veneitä Dohan satamassa. Kolme korkeakokkaista '
+            + 'venettä keinuu vedessä, ja takana kohoaa nykyaikaisten '
+            + 'tornitalojen rivi.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Veneellä oli tusina eri nimeä',
+          tiedosto: 'An exhibit in Sheikh Faisal Bin Qassim Al Thani Museum showing the different types of dhow.jpg',
+          teksti: 'Dhow ei ole yksi vene vaan joukko veneitä. Rungon muoto '
+            + 'kertoi käyttötarkoituksen, ja jokaisella tyypillä oli oma '
+            + 'nimensä: boom ja baghlah kulkivat pitkiä matkoja Intiaan, '
+            + 'sambuk ja jalibut olivat helmisukeltajien veneitä ja pienin '
+            + 'shu\'ai jäi rannikkokalastukseen. Rakentaja ei käyttänyt '
+            + 'piirustuksia vaan mittasi silmällä ja käsivarrella, ja taito '
+            + 'siirtyi mestarilta oppipojalle. Sheikh Faisalin museossa on '
+            + 'rivi pienoismalleja, joista tyyppierot näkee kerralla: '
+            + 'toisella on suora perä, toisella kaareva.',
+          selite: 'Dhow-pienoismalleja Sheikh Faisalin museossa. Puiset veneet '
+            + 'on aseteltu riviin telineille, ja seinällä on kehystettyjä '
+            + 'selityskylttejä.',
+          lahde: 'Lawrence Wang, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kalastuslaivasto lähtee yhä aamuisin',
+          tiedosto: 'Fishing vessels. al corniche. al khor, , persian gulf. qatar - panoramio.jpg',
+          teksti: 'Al Khor oli aikanaan helmenpyynnin keskus, ja nykyään sen '
+            + 'satamassa on kalastusveneitä. Lahden pohja on matala ja '
+            + 'hiekkainen, ja pyydyksenä käytetään yhä kupumaista mertaa, '
+            + 'joka lasketaan pohjaan ja nostetaan seuraavana päivänä. '
+            + 'Saaliina on ryhmäkaloja, kuten hamouria ja safia, joita myydään '
+            + 'kaupungin kalatorilla samana aamuna. Kalastajat lähtevät ennen '
+            + 'auringonnousua, koska keskipäivällä kansi on liian kuuma '
+            + 'seistä. Sama lahti on lintujen talvehtimispaikka.',
+          selite: 'Kalastusveneitä Al Khorin rantakadun edustalla. Kymmenkunta '
+            + 'puuvenettä on ankkuroitu vierekkäin, ja niiden yllä on matalat '
+            + 'katokset.',
+          lahde: 'Suresh Babunair, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Purppurasaari on saanut nimensä?',
+        vaihtoehdot: [
+          'Saaren kalliot ovat violetteja',
+          'Saarella valmistettiin purppuraväriä merikotiloista',
+          'Saarella kasvaa purppuranpunaisia kukkia',
+          'Auringonlasku värjää lahden violetiksi',
+        ],
+        oikea: 1,
+        fakta: 'Saarelta on kaivettu esiin kolme miljoonaa rikottua '
+          + 'kotilonkuorta.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Qatarissa ei ole jokea eikä järveä. Vesi tulee harvoista '
+        + 'sateista ja kerääntyy painanteisiin, joissa kasvaa puita. Muualla '
+        + 'maa on kivikkoa, suolakuorta ja rannan tuntumassa mangrovea.',
+      nostot: [
+        {
+          otsikko: 'Luolan seinät hohtavat heikosti',
+          tiedosto: 'Dhal Al Misfir Cave.jpg',
+          teksti: 'Keskellä Qatarin kivikkoista tasankoa aukeaa maahan kuilu. '
+            + 'Dahl Al Misfirin luolan suu on noin kaksitoista metriä pitkä ja '
+            + 'neljä ja puoli leveä, ja pohja on ainakin neljänkymmenen metrin '
+            + 'syvyydessä. Seinissä on kuitumaista kipsiä, joka hohtaa '
+            + 'hämärässä heikosti — siitä luola tunnetaan. Kipsi on peräisin '
+            + 'kalkkikivikerroksista, jotka ovat noin neljä-viisikymmentä '
+            + 'miljoonaa vuotta vanhoja; luola itse on niitä nuorempi. Alas '
+            + 'pääsee vain kiipeämällä kivikkoista rinnettä pitkin.',
+          selite: 'Dahl Al Misfirin luolan sisus. Aukosta laskeutuu vino '
+            + 'valojuova kivikkoiselle pohjalle, ja kalliopinta on kellertävää '
+            + 'ja lohkeillutta.',
+          lahde: 'Alex Sergeev, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Puut kasvavat painanteissa',
+          tiedosto: 'Water stream in silty depression in Ain Al Nuaman.jpg',
+          teksti: 'Qatarissa sataa vähän, ja sade tulee lyhyinä ryöppyinä '
+            + 'talvella. Vesi ei imeydy kovaan maahan vaan valuu pintaa pitkin '
+            + 'matalaan painanteeseen, jota sanotaan rawdaksi. Painanteen '
+            + 'pohjalla maa on hienojakoista ja pitää kosteuden pitkään, joten '
+            + 'juuri siellä kasvavat maan harvat puut ja pensaat: akasiat, '
+            + 'sidra-puut ja ruoho, joka viheriöi sateen jälkeen muutamaksi '
+            + 'viikoksi. Rawdat ovat aina olleet laiduntamisen ja asutuksen '
+            + 'paikkoja, ja niitä on myös vartioitu torneista.',
+          selite: 'Sadevettä matalassa painanteessa Ain Al Nuamanissa. '
+            + 'Ruskehtava vesi lammikoituu hiekkaiselle maalle, ja sen '
+            + 'reunalla kasvaa tiheitä vihreitä pensaita.',
+          lahde: 'Alex Sergeev, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Suolakuoren alla asuu rapuja',
+          tiedosto: 'Mud crab burrows in a salt marsh near Al Thakhira.jpg',
+          teksti: 'Rannikolla on laajoja tasankoja, joita sanotaan sabkhoiksi. '
+            + 'Ne syntyvät, kun merivesi nousee matalalle maalle ja haihtuu: '
+            + 'jäljelle jää suolakuori, joka rasahtaa askelten alla. Kasveista '
+            + 'pärjäävät vain suolaa sietävät lajit. Pinta ei silti ole '
+            + 'eloton: rapujen kaivamien käytävien suulle nousee pieniä kekoja '
+            + 'kaivumaata, ja käytävät päästävät happea maan sisään. '
+            + 'Vuoroveden mukana lahdet täyttyvät ja tyhjenevät, ja silloin '
+            + 'ravut, katkaravut ja pikkukalat liikkuvat sisään ja ulos.',
+          selite: 'Rapujen kaivamia koloja suolatasangolla Al Thakiran lähellä. '
+            + 'Vaaleaa suolakuorta peittävät pienet kaivumaakeot, ja niiden '
+            + 'lomassa kasvaa harmaanvihreitä suolakasveja.',
+          lahde: 'Alex Sergeev, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ainoa metsä kasvaa rantavedessä',
+          tiedosto: 'Qatar - Al Thakira Mangrove.jpg',
+          teksti: 'Qatarin ainoa varsinainen metsä on mangrove. Al Thakiran '
+            + 'matalassa lahdessa kasvaa harmaamangrovea, ja se on maan laajin '
+            + 'yhtenäinen kasvusto. Puiden juuristo pidättää mutaa ja hidastaa '
+            + 'aallokkoa, ja juurten suojassa kasvaa kalanpoikasia ja '
+            + 'katkarapuja — sama saalis, jota kalastajat myöhemmin nostavat '
+            + 'lahdelta. Rantavedessä ruokailee lintuja: haikaroita, '
+            + 'kahlaajia ja talvisin flamingoja. Alue on suojeltu, ja siellä '
+            + 'liikutaan kajakilla, koska vettä on paikoin vain vaaksan verran.',
+          selite: 'Al Thakiran mangrovemetsää. Tiheä vihreä lehvästö nousee '
+            + 'suoraan vedestä, oksalla istuu valkoinen haikara, ja alla '
+            + 'näkyy juurten muodostama harmaa verkko.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Qatarin harvat puut kasvavat juuri painanteissa?',
+        vaihtoehdot: [
+          'Painanteet ovat tuulelta suojassa',
+          'Sadevesi valuu niihin ja maa pitää kosteuden',
+          'Niissä on suolatonta merivettä',
+          'Ne on kaivettu puita varten',
+        ],
+        oikea: 1,
+        fakta: 'Painannetta sanotaan rawdaksi, ja niiden ympärille on syntynyt '
+          + 'laidunmaita ja asutusta.',
       },
     },
   ],
