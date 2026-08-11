@@ -17516,6 +17516,22 @@ export const MAA_KATEGORIAT = {
             + 'peilikuva näkyy tyynessä vedessä.',
           lahde: 'Aboyahia74, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Töyhtö nousee pystyyn laskeutuessa',
+          tiedosto: 'Hoopoe Kuwait.jpg',
+          teksti: 'Harjalintu on yksi Kuwaitin tutuimmista läpimuuttajista. Sen '
+            + 'tuntee mistä vain: vaaleanruskea ruumis, mustavalkoraidalliset '
+            + 'siivet ja pitkä alaspäin kaartuva nokka. Päälaella on töyhtö, '
+            + 'joka on tavallisesti litteänä taaksepäin mutta nousee viuhkaksi, '
+            + 'kun lintu laskeutuu tai säikähtää. Nokka toimii kuin luotain: '
+            + 'lintu kävelee maassa ja työntää nokan pehmeään maahan etsien '
+            + 'toukkia ja kuoriaisia. Kuwaitissa harjalintuja nähdään eniten '
+            + 'kevät- ja syysmuuton aikaan puistoissa ja peltojen laidoilla.',
+          selite: 'Harjalintu kävelee hiekalla pensaan varjossa. Töyhtö on '
+            + 'kohotettu, siivissä on leveitä mustavalkoisia raitoja ja nokka '
+            + 'kaartuu pitkänä alaspäin.',
+          lahde: 'Mohlayel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
       ],
       tehtava: {
         kysymys: 'Millainen pesä tiiralla on Kubbarin saarella?',
@@ -17588,6 +17604,22 @@ export const MAA_KATEGORIAT = {
             + 'hapsut, ja taustalla näkyy vaalea laattalattia.',
           lahde: 'Di7ane, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          otsikko: 'Skorpioni hehkuu ultraviolettivalossa',
+          tiedosto: 'FAT TAILED SCORPION (KUWAIT SALMI DESERT).jpg',
+          teksti: 'Kuwaitin aavikolla elää arabianpaksupyrstöskorpioni. Se on '
+            + 'kämmenen mittainen, tummanruskea tai lähes musta, ja sen pyrstö '
+            + 'on poikkeuksellisen paksu. Laji on myrkyllinen, joten sitä '
+            + 'katsotaan etäältä. Päivällä eläin on kiven alla tai kolossa ja '
+            + 'tulee esiin vasta pimeän tultua. Kuoressa on ainetta, joka '
+            + 'hohtaa kirkkaan vihreänä ultraviolettivalossa, ja siksi '
+            + 'tutkijat etsivät skorpioneja yöllä UV-lampun kanssa: hiekalla '
+            + 'loistaa pisteitä, joita ei paljaalla silmällä erota lainkaan.',
+          selite: 'Paksupyrstöskorpioni hiekalla vastavalossa. Tumma pyrstö '
+            + 'kaartuu koukkuna selän yli, ja sen kärjessä erottuu pisti; '
+            + 'taustalla hiekka hehkuu ruskeana.',
+          lahde: 'RATHEESH POTTEPARAMBIL BALAKRISHNAN, Wikimedia Commons (CC0)',
+        },
       ],
       tehtava: {
         kysymys: 'Miten beduiinien teltan kangas kudotaan?',
@@ -17600,6 +17632,179 @@ export const MAA_KATEGORIAT = {
         oikea: 0,
         fakta: 'Beduiinien teltan nimi bait al-shaar tarkoittaa kirjaimellisesti '
           + 'karvasta tehtyä taloa.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Kuwaitin rakennettu historia mahtuu kahteen paikkaan: Failakan '
+        + 'saarelle, josta on kaivettu esiin neljätuhatta vuotta vanhoja '
+        + 'kortteleita, ja pääkaupunkiin, jossa 1970-luvun vesitorneista tuli '
+        + 'maan tunnus.',
+      nostot: [
+        {
+          otsikko: 'Saari oli Dilmunin kaupan solmukohta',
+          tiedosto: 'Archeological site Failaka,Kuwait.jpg',
+          teksti: 'Failakan saari on kahdenkymmenen kilometrin päässä Kuwait '
+            + 'Cityn rannikosta. Sinne asetuttiin noin vuoden 2000 eaa. '
+            + 'tienoilla, kun merenpinta laski, ja Urin kauppiaat pitivät '
+            + 'saarella tukikohtaa. Dilmunin aikaan saari tunnettiin nimellä '
+            + 'Agarum, ja sitä pidettiin Enzak-jumalan maana. Saarelta on '
+            + 'löytynyt nuolenpääkirjoitusta ja sinettejä, joihin on kaiverrettu '
+            + 'kuninkaiden nimiä. Kivikorttelit on kaivettu esiin ja peitetty '
+            + 'paikoin suojaverkoilla, jottei tuuli kuluttaisi muureja.',
+          selite: 'Kaivausaluetta Failakan saarella. Matalat kivimuurit rajaavat '
+            + 'huoneita hiekassa, osan päällä on vihreä suojaverkko, ja takana '
+            + 'siintää meri.',
+          lahde: 'Kishore R Sudarsan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kreikkalaiset nimesivät saaren Ikarokseksi',
+          tiedosto: 'Antiquities of Failaka island 02.JPG',
+          teksti: 'Aleksanteri Suuren retkien jälkeen 300-luvulla eaa. '
+            + 'kreikkalaiset asettuivat Kuwaitinlahdelle. Failaka sai nimen '
+            + 'Ikaros, ja antiikin kirjoittajien Strabonin ja Arrianoksen '
+            + 'mukaan nimi tuli siitä, että saari muistutti kooltaan ja '
+            + 'muodoltaan samannimistä Egeanmeren saarta. Saarelle '
+            + 'rakennettiin linnoitettu asuinalue temppeleineen, ja sieltä on '
+            + 'löytynyt kreikankielisiä kivikirjoituksia. Myös nykyinen nimi '
+            + 'lienee kreikkaa: fylakion tarkoittaa vartioasemaa.',
+          selite: 'Failakan kaivauskenttä lähempää. Kivimuurit rajaavat useita '
+            + 'pieniä huoneita, joiden lattiat ovat hiekan peitossa; takana '
+            + 'kulkee aita ja sen takana meri.',
+          lahde: 'Bo hessin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Vesisäiliöstä tehtiin maan tunnus',
+          tiedosto: 'Kuwait tower at dusk.jpg',
+          teksti: 'Kuwaitin vedenjakelua varten rakennettiin 1970-luvulla '
+            + 'kolmisenkymmentä vesitornia. Viimeinen ryhmä sai muista '
+            + 'poikkeavan muodon: kolme ohutta tornia niemen kärkeen. Korkein '
+            + 'on 187 metriä, ja siinä on kaksi palloa. Alemman pallon '
+            + 'alaosassa on 4 500 kuutiometrin vesisäiliö ja yläosassa '
+            + 'ravintola; ylempi pallo on näköalakahvila, joka pyörähtää '
+            + 'ympäri puolessa tunnissa. Pallot on päällystetty noin 41 000 '
+            + 'emaloidulla teräskiekolla kahdeksassa sinisen ja vihreän '
+            + 'sävyssä. Tornit avattiin yleisölle maaliskuussa 1979.',
+          selite: 'Kuwaitin tornit iltahämärässä. Kaksi pallojen koristamaa '
+            + 'tornia piirtyy tummana oranssia taivasta vasten, ja rannan '
+            + 'valot heijastuvat tyynestä merestä.',
+          lahde: 'Samarstha45, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kupolin alle mahtuu kymmenentuhatta',
+          tiedosto: 'Kuwait City Grand Mosque Interior 01.jpg',
+          teksti: 'Kuwait Cityn suuri moskeija rakennettiin vuosina 1979–1986, '
+            + 'ja se on maan suurin. Päärukoussaliin mahtuu kymmenentuhatta '
+            + 'ihmistä ja erilliseen naisten saliin lähes tuhat. Keskuskupoli '
+            + 'on halkaisijaltaan 26 metriä ja korkeimmillaan 43 metriä, ja '
+            + 'sen sisäpintaan on kirjoitettu Jumalan yhdeksänkymmentäyhdeksän '
+            + 'nimeä. Sali on tarkoituksella lähes tyhjä: matto, pilarit ja '
+            + 'valo riittävät. Rakennuksen mittakaavan huomaa vasta kun katsoo '
+            + 'lattialla seisovia ihmisiä.',
+          selite: 'Kuwaitin suuren moskeijan rukoussali. Keskellä kohoaa paksu '
+            + 'nelipilarinen tuki, katto on kullanhohtoinen ja kuvioitu, ja '
+            + 'lattialla on sininen matto ja muutama ihminen.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Kuwaitin tornien alempi pallo pitää sisällään?',
+        vaihtoehdot: [
+          'Vesisäiliön ja sen päällä ravintolan',
+          'Pelkän näköalatasanteen',
+          'Radio- ja tv-lähettimet',
+          'Museon ja kirjaston',
+        ],
+        oikea: 0,
+        fakta: 'Ylempi pallo on kahvila, joka pyörähtää ympäri puolessa '
+          + 'tunnissa.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kuwaitin keittiö tulee merestä ja vanhalta torilta: katkarapua '
+        + 'ja kalaa riisin kanssa, grillivartaita isolta tarjottimelta ja '
+        + 'taateleita kymmentä eri lajia vierekkäin matalissa laatikoissa.',
+      nostot: [
+        {
+          otsikko: 'Katkaravut piiloutuvat riisin alle',
+          tiedosto: 'Kuwaiti Murabyan.jpg',
+          teksti: 'Murabyan on Kuwaitin tunnetuin kotiruoka. Nimi tulee sanasta '
+            + 'robyan eli katkarapu. Pohjalle keitetään katkaravut sipulin, '
+            + 'tomaatin ja mausteseoksen kanssa, ja päälle höyrytetään riisi, '
+            + 'joka imee liemen makuunsa. Osa riisistä värjätään sahramilla '
+            + 'tai kurkumalla keltaiseksi, ja se sekoitetaan valkoisen sekaan '
+            + 'vasta vadille kaadettaessa — siksi valmis annos on raidallinen. '
+            + 'Katkaravut jäävät riisikerroksen alle, ja ne löytyvät vasta '
+            + 'lusikoimalla.',
+          selite: 'Murabyan-annos lautasella. Valkoisen riisin päälle on '
+            + 'ripoteltu keltaiseksi värjättyä riisiä ja muutama tumma marja; '
+            + 'reunoilta pilkottaa ruskeaa liemeä.',
+          lahde: 'آية سعيد البيطار, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kala mausteliemessä on lahden arvostetuin',
+          tiedosto: 'Kuwaiti Fish.jpg',
+          teksti: 'Kuwaitin arvostetuin kala on zubaidi eli hopeaparma. Se on '
+            + 'litteä, hopeanhohtoinen ja lähes ruodoton, ja sitä pyydetään '
+            + 'lahden matalikoilta. Tavallisin tapa on marinoida kala '
+            + 'vihreään tahnaan, jossa on korianteria, valkosipulia, '
+            + 'kuivattua limettiä ja mausteita, ja paistaa se sitten '
+            + 'kokonaisena. Kalatorilla hinta vaihtelee vuodenajan mukaan '
+            + 'enemmän kuin millään muulla lajilla, ja parhaat yksilöt '
+            + 'myydään heti aamulla. Lisukkeeksi tulee riisi ja hapan kastike.',
+          selite: 'Kokonainen paistettu kala foliolla. Pinta on peitetty tummalla '
+            + 'vihreällä mausteseoksella, ja koristeeksi on aseteltu tomaatti, '
+            + 'sitruunaviipale, sipuli ja vihreä chili.',
+          lahde: 'آية سعيد البيطار, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vanhalla torilla ruoka tulee tarjottimella',
+          tiedosto: 'Food in Mubarakiya.jpg',
+          teksti: 'Souq Al-Mubarakiya on Kuwait Cityn vanhin tori, ja sen kujilla '
+            + 'on ruokapaikkoja, joissa annos tuodaan pöytään yhtenä isona '
+            + 'metallitarjottimena. Tarjottimella on tavallisesti grillattua '
+            + 'lihaa, kaksi eri riisiä, kulhollinen tummaa lihakastiketta ja '
+            + 'toinen kulhollinen vihreää yrttimuhennosta. Kaikki syödään '
+            + 'samalta tarjottimelta yhdessä, ja leipää käytetään lusikan '
+            + 'sijasta. Tori on toiminut samalla paikalla toistasataa vuotta, '
+            + 'ja sen ympärillä myydään yhä mausteita, kultaa ja kankaita.',
+          selite: 'Ruokatarjotin ylhäältä kuvattuna. Metallitarjottimella on '
+            + 'grillivartaita leivän päällä, kaksi lautasellista riisiä sekä '
+            + 'kolme kulhoa: ruskeaa kastiketta, vihreää muhennosta ja tummaa '
+            + 'lientä.',
+          lahde: 'آية سعيد البيطار, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Taatelikaupassa lajitellaan kymmentä laatua',
+          tiedosto: 'Date-seller.jpg',
+          teksti: 'Vanhan torin taatelikaupassa hedelmät ovat esillä matalissa '
+            + 'laatikoissa vierekkäin, ja jokaisessa on eri lajike ja eri '
+            + 'hinta. Osa taateleista on Kuwaitista, osa tuodaan Iranista, '
+            + 'Saudi-Arabiasta ja kauempaakin, ja kauppias tuntee erot '
+            + 'ulkonäöstä: väri, ryppyisyys ja kiilto kertovat lajikkeen ja '
+            + 'kypsyyden. Osa lajikkeista syödään kiinteinä ja rapeina, osa '
+            + 'pehmeinä ja siirappisina. Hyllyillä on lisäksi taatelisiirappia '
+            + 'purkeissa — sitä valuu hedelmistä itsestään, kun ne pinotaan.',
+          selite: 'Taatelikauppias vanhan torin myymälässä Kuwait Cityssä. '
+            + 'Edessä on rivi matalia laatikoita täynnä eri sävyisiä '
+            + 'taateleita, ja takaseinän hyllyt ovat täynnä purkkeja.',
+          lahde: 'Trammell Hudson, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä murabyan on saanut nimensä?',
+        vaihtoehdot: [
+          'Sahramista',
+          'Katkaravusta',
+          'Kuivatusta limetistä',
+          'Kalastajakylästä',
+        ],
+        oikea: 1,
+        fakta: 'Katkaravut jäävät riisikerroksen alle ja löytyvät vasta '
+          + 'lusikoimalla.',
       },
     },
   ],
