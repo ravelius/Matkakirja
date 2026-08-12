@@ -63,6 +63,26 @@ ole ("According to the Omani narrative"), ja tarkistin siteerasi
 artikkelista lauseita, joita nykyversiossa ei ole. Kumpikin virhe
 paljastui vasta, kun lähde haettiin kolmannen kerran.
 
+### Kaksi vuosilukua, joita en saanut vahvistettua
+
+Bait Al Zubair -juttu alkoi sanomalla, että perhe rakennutti talon 1914
+ja että museo avattiin 1998. Faktatarkistin merkitsi ne oikeiksi ja
+kertoi vahvistaneensa ne museon omalta sivustolta. **Kun hain lähteen
+itse, kumpaakaan lukua ei löytynyt** — ei en-Wikipedian artikkelista
+(joka on tynkä eikä sisällä yhtään vuosilukua), ei baitalzubair.comin
+etusivulta eikä neljästä arvatusta alasivusta, jotka kaikki vastasivat
+404. Molemmat luvut poistettiin.
+
+Wikipedia tukee jutun kaiken muun: sijainnin Al Saidiyan kadulla,
+kokoelman luonteen suvun omana kokoelmana ja pihan kylän pienoismallin.
+Nyt juttu pysyy siinä, mitä sen `lahde`-kenttä lupaa.
+
+**Tämä on toinen kerta tässä nipussa, kun tarkistin ilmoitti
+vahvistaneensa väitteen lähteestä, jota en itse saanut vastaamaan
+samalla tavalla** (ensimmäinen oli Al-Miranin piiritysartikkeli).
+Tarkistusagentti on hyvä löytämään epäilyttävät kohdat, mutta sen
+"täsmää lähteeseen" -rivi ei ole todiste — se on kehotus katsoa itse.
+
 ### Kaksi lehden sisäistä toistoa
 
 1. **Kannen nosto "Palatsissa ei asuta"** kertoi Al Alamin palatsista
@@ -128,4 +148,11 @@ kaupungin sisällä.
 3. **Bagdad** odottaa yhä. Overpass palauttaa Rusafan rajauksesta vain
    runsaat 400 elementtiä (Doha 2 387), joten kartan puolikas jää
    tyhjäksi paperiksi. Kyse on OSM-aineiston kattavuudesta.
-4. **Mekka ja Medina** — ei aloitettu eikä valmisteltu.
+4. **`lahde`-kenttä on yksiarvoinen.** Kaikki 248 nähtävyysjuttua
+   käyttävät merkkijonoa "Wikipedia", joten juttu ei voi kertoa, että
+   osa sen faktoista tulee muualta. Tässä nipussa se ratkaistiin
+   poistamalla ne faktat, joita Wikipedia ei tue. Jos kohteita tulee
+   lisää, joiden Wikipedia-artikkeli on tynkä (Bait Al Zubair on
+   sellainen), kenttä kannattaisi sallia monilähteisenä — muuten
+   kaupunkien parhaat kohteet jäävät ohuiksi.
+5. **Mekka ja Medina** — ei aloitettu eikä valmisteltu.
