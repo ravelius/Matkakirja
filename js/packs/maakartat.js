@@ -2491,6 +2491,42 @@ export const KAUPUNKIKARTAT = {
    * pihan ympärillä, vihkiminen 1233) ja asia-valokuvat.js:n
    * kuvatekstissä, joten sen nähtävyysjuttu kertoo eri asian.
    */
+  /*
+   * İzmirin vanha keskusta (nippu 2, 13.8.2026). Konakin aukio
+   * kellotorneineen lännessä, Kemeraltin basaari keskellä ja antiikin
+   * agora idässä — kaikki kävelymatkan päässä. Kadifekalen linnavuori
+   * jää ulos (perustelu tools/piirra-kaupunkikartta.mjs).
+   *
+   * RAJAUS SISÄLLÖLLE: peli ei käsittele nykykonflikteja. İzmirin
+   * kohdalla se tarkoittaa, ettei vuoden 1919 maihinnousua, Kreikan ja
+   * Turkin sotaa eikä vuoden 1922 paloa käsitellä — OSM:ssä on kaksi
+   * battlefield-merkintää juuri tämän kartan alueella, eivätkä ne ole
+   * lehden aiheita. Kohteet kuvataan kulttuurikohteina.
+   */
+  izmir: {
+    polku: 'assets/kartat/izmir-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 38.426, etela: 38.413, lansi: 27.124, ita: 27.142,
+    },
+    esittely: 'İzmir on rakennettu lahden pohjukkaan, ja sen vanha '
+      + 'keskusta on puolikuun muotoinen. Muoto ei ole sattumaa: '
+      + 'kartan keskellä kaartuvat kadut seuraavat antiikin sataman '
+      + 'rantaviivaa, joka on sittemmin täytetty maaksi. Basaari '
+      + 'kasvoi umpeenkasvaneen sataman päälle.\n\n'
+      + 'Kemeraltin kujat, Konakin aukio ja roomalainen agora ovat '
+      + 'kaikki saman kilometrin sisällä, ja niiden välissä kaupunki '
+      + 'on yhtenäistä vanhaa rakennuskantaa: moskeijoita, '
+      + 'karavaaniseraajeja ja katettuja käytäviä.',
+    kohteet: [
+      { nimi: 'İzmirin kellotorni', lat: 38.4189, lon: 27.1287 },
+      { nimi: 'Kemeraltin basaari', lat: 38.4187, lon: 27.1329 },
+      { nimi: 'Hisarin moskeija', lat: 38.4215, lon: 27.1336 },
+      { nimi: 'Sulu Han', lat: 38.4216, lon: 27.1361 },
+      { nimi: 'Smyrnan agora', lat: 38.4190, lon: 27.1384 },
+      { nimi: 'Salepçioğlun moskeija', lat: 38.4170, lon: 27.1325 },
+    ],
+  },
   bagdad: {
     polku: 'assets/kartat/bagdad-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

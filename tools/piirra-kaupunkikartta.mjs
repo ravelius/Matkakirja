@@ -801,6 +801,14 @@ const KAUPUNGIT = {
     // jäi pelkkää esikaupunkia. Nyt tähtimuoto on keskellä.
     rajat: { pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378 },
   },
+  izmir: {
+    // Konakin aukio, Kemeraltin basaari ja antiikin agora mahtuvat
+    // samaan runsaan puolentoista kilometrin ruutuun, ja niiden väli on
+    // yhtenäistä vanhaa kaupunkia — ei tyhjää kuten Masqatissa.
+    // Kadifekale jää ulos: linnavuori on 1,5 km itään ja sen ja agoran
+    // välissä on jyrkkä rinne, joka venyttäisi rajauksen kaksinkertaiseksi.
+    rajat: { pohjoinen: 38.426, etela: 38.413, lansi: 27.124, ita: 27.142 },
+  },
   bagdad: {
     // Rusafan vanha puoli Tigrisin itärannalla: Mutanabbin kirjakatu,
     // abbasidipalatsi, Qishlan kellotorni ja Bagdadin museo ovat
