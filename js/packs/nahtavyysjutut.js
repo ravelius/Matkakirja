@@ -9412,4 +9412,281 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Masqatin nähtävyysjutut (nippu 2, 12.8.2026). Nikosia on jaettu
+   * kaupunki, mutta lehti ei käsittele jakoa: peli ei kerro
+   * nykykonflikteista, joten kohteet kuvataan kulttuurikohteina
+   * omalla historiallaan. CYP-maalehti kertoo saaren muinaisuudesta
+   * ja kirkoista, joten kaupungin jutut pysyvät rakennuksissa.
+   */
+  masqat: {
+    'Masqatin portti': {
+      teksti: 'Vanhaa Maskatia kiertää muuri, jossa on pyöreitä torneja. Se '
+        + 'rakennettiin vuonna 1625, portugalilaisten kaudella, ja se '
+        + 'kulkee vain kaupungin länsi- ja eteläsivulla: idässä ja '
+        + 'pohjoisessa raja syntyy itsestään merestä ja kalliosta. Muurin '
+        + 'läpi vievä Al Saidiyan katu on yhä se reitti, jota myöten '
+        + 'vanhaan kaupunkiin ajetaan.'
+        + '\n\n'
+        + 'Portin arki oli tarkkaan säädelty. Portit suljettiin kolme '
+        + 'tuntia hämärän jälkeen, ja tapa jatkui 1900-luvun puoliväliin '
+        + 'asti. Sen jälkeen kadulla liikkuvan oli kannettava mukanaan '
+        + 'lyhtyä. Samaan järjestykseen kuului kaksi muuta kieltoa: '
+        + 'pääkaduilla ei saanut polttaa, eikä musiikkia saanut soittaa '
+        + 'julkisesti.'
+        + '\n\n'
+        + 'Muurin sisään avattiin tammikuussa 2001 Muscat Gate Museum. '
+        + 'Näyttely kulkee Omanin historian läpi nuoremmasta kivikaudesta '
+        + 'nykypäivään, ja omat osastonsa ovat saaneet kaupungin lähteet, '
+        + 'vanhat kaivot, torit, talot, moskeijat ja satamat. Ulkoa '
+        + 'rakennus on yhä portti: kaksi suippokaarta ajoradan yllä, '
+        + 'niiden päällä rivi kapeita kaari-ikkunoita ja hammastettu '
+        + 'harja, ja kummassakin päässä pyöreä torni.',
+      kuvat: [
+        {
+          tiedosto: 'Muscat Gate Museum.jpg',
+          selite: 'Maskatin portti tieltä nähtynä: kaksi suippokaarta vie '
+            + 'ajoradan muurin läpi, yläkerroksessa on rivi kapeita '
+            + 'kaari-ikkunoita ja kulmissa pyöreät tornit. Muurin sisällä '
+            + 'toimii museo.',
+          lahde: 'Tristan from Luxembourg, Luxembourg, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'The gate to Muscat (8727196402).jpg',
+          selite: 'Sama portti kauempaa rannikkotieltä: hammastettu muuri '
+            + 'jatkuu portilta oikealle kallioiselle kummulle, ja kaaren '
+            + 'läpi näkyy vanhan kaupungin kattolinjaa.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Miranin linnake': {
+      aika: '1587',
+      teksti: 'Linnake ei seiso kalliolla vaan jatkaa sitä: muurit on ladottu '
+        + 'kiinni sataman länsipuolen jyrkänteeseen, ja pohjakaava on '
+        + 'epäsäännöllinen, koska se noudattaa kallion muotoa. Tasot ovat '
+        + 'eri korkeuksilla — pyöreitä torneja, ampuma-aukoin '
+        + 'varustettuja muureja ja pihoja, joiden välillä kuljetaan '
+        + 'jyrkkiä kapeita portaita.'
+        + '\n\n'
+        + 'Linnake oli paikalla jo ennen portugalilaisia, ja se oli '
+        + 'Omanin ensimmäinen tykeillä aseistettu linnoitus. Kallio ei '
+        + 'kuitenkaan suojannut ylhäältä. Vuonna 1552 osmanien laivasto — '
+        + 'neljä galleonia, kaksikymmentäviisi kaleeria ja '
+        + 'kahdeksansataaviisikymmentä miestä — valtasi kaupungin ja '
+        + 'piiritti linnaketta kahdeksantoista päivää. Ratkaisun teki '
+        + 'yksi ainoa tykki, joka hinattiin linnakkeen yläpuoliselle '
+        + 'harjanteelle: linnake vallattiin ja sen varustukset purettiin. '
+        + 'Portugalilaiset rakensivat sen uudelleen vuonna 1587.'
+        + '\n\n'
+        + 'Portugalin valta Maskatissa päättyi tähän linnakkeeseen. '
+        + 'Imaami Sultan bin Saifin joukot ottivat kaupungin joulukuussa '
+        + '1649, ja Miraniin linnoittautuneet antautuivat 23. tammikuuta '
+        + '1650. Maskatissa kerrotaan lopusta yhä tarinaa, jonka mukaan '
+        + 'linnakkeen varastoa hoitanut intialainen Narottam pilasi '
+        + 'ruutivaraston sen jälkeen, kun portugalilainen kapteeni oli '
+        + 'kosinut hänen tytärtään. Tarinaa ei ole voitu todentaa.',
+      kuvat: [
+        {
+          tiedosto: 'Al Khor Mosque and Al Mirani Fort (47953967282).jpg',
+          selite: 'Al-Miranin linnake vanhassa Maskatissa: muurit ja pyöreä '
+            + 'torni nousevat suoraan paljaasta kalliosta, edessä Al '
+            + 'Khorin moskeijan sinikupolinen minareetti.',
+          lahde: 'Eduard Marmet, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Fuerte de Al Mirani, Mascate, Omán, 2024-08-14, DD 43.jpg',
+          selite: 'Linnakkeen sisällä kaksi pyöreää tornia seisoo eri '
+            + 'korkeuksilla, ja pihalta nousee jyrkkä kapea porras muurin '
+            + 'harjalle. Vasemmalla siintää meri, oikealla vuoret.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Jalalin linnake': {
+      aika: '1983',
+      teksti: 'Kummun laella seisoo kaksi tornia eri korkeudella, toinen '
+        + 'pyöreä ja toinen neliömäinen. Niiden välissä on muuri, johon '
+        + 'on puhkaistu kahteen riviin kaariaukkoja tykeille. '
+        + 'Merenpuoleiselle täyttömaalle on sittemmin tehty '
+        + 'helikopterikenttä ja rinteeseen köysirata. Sisällä osastojen '
+        + 'välissä on raskaita ovia, joista törröttää rautapiikkejä.'
+        + '\n\n'
+        + 'Suurimman osan 1900-lukua linnake toimi Omanin päävankilana, '
+        + 'jossa oli kerrallaan noin kaksisataa vankia. Vuonna 1963 '
+        + 'neljäkymmentäneljä vankia pakeni tarkkaan suunnitellussa '
+        + 'joukkokarkauksessa, mutta useimmat saatiin kiinni pian: he '
+        + 'olivat liian heikkokuntoisia päästäkseen kauas. Vankila '
+        + 'suljettiin 1970-luvulla.'
+        + '\n\n'
+        + 'Linnake kunnostettiin vuonna 1983 ja siitä tehtiin Omanin '
+        + 'kulttuurihistorian kokoelma. Portugalin ajalta on jäljellä '
+        + 'muutama kiveen hakattu kirjoitus. Tykkiaukoilla seisoo tykkejä '
+        + 'ammuksineen ja sytytysvälineineen, ja esillä on vanhoja '
+        + 'musketteja ja karttoja; yksi taulu esittää Maskatin lahden '
+        + 'tuulet ja virtaukset. Neliötornissa ovat mattoja, keramiikkaa, '
+        + 'koruja, aseita ja suitsukeastioita, ja yhden huoneen katto on '
+        + 'ladottu palmunrungoista. Yleisölle kokoelmaa ei ole avattu: '
+        + 'sisään pääsevät vain valtiovieraat.',
+      kuvat: [
+        {
+          tiedosto: 'Al Jalali Fort (47953954322).jpg',
+          selite: 'Linnake kalliokummulla: vasemmalla matalampi pyöreä torni, '
+            + 'oikealla korkeampi neliötorni, välissä kaariaukoin '
+            + 'puhkaistu muuri. Oikealla erottuu kalliota ylös '
+            + 'kiemurteleva kiviportaikko.',
+          lahde: 'Eduard Marmet, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Fuerte de Al Jalali, Mascate, Omán, 2024-08-14, DD 37.jpg',
+          selite: 'Muuri läheltä iltavalossa: kaariaukot kahdessa rivissä, '
+            + 'tornit eri korkeudella ja oikealla rinteessä alempana '
+            + 'porrastettu bastioni.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al Alamin palatsi': {
+      aika: '1972',
+      teksti: 'Julkisivun tunnistaa pylväistä. Ne ovat alhaalta kapeita ja '
+        + 'levenevät ylöspäin sienimäisiksi kannattimiksi, jotka kantavat '
+        + 'litteän kattolaatan. Laatta työntyy joka sivulla pitkälle ulos '
+        + 'seinälinjasta, joten pylväsrivi jää varjoon. Osa pylväistä on '
+        + 'kullanvärisiä, osa sinisen mosaiikin peitossa, ja niiden '
+        + 'väliin jää korkeita kaari-ikkunoita. Katon yli nousee '
+        + 'lipputanko — nimi Qasr al-Alam tarkoittaa lipun palatsia.'
+        + '\n\n'
+        + 'Talossa ei asuta. Se on sulttaanin seremoniallinen palatsi: '
+        + 'siellä otetaan vastaan valtiovieraita ja valtionpäämiehiä, ja '
+        + 'asunnot ovat muualla. Nykyisen rakennuksen teetti sulttaani '
+        + 'Qaboos bin Said, ja sen suunnitteli ja rakensi mumbailainen '
+        + 'Shapoorji Pallonji. Talo valmistui vuonna 1972.'
+        + '\n\n'
+        + 'Palatsi seisoo 250 metriä pitkän, pylväskäytävien reunustaman '
+        + 'aukion pohjoispäässä, vastapäätä Omanin kansallismuseota. '
+        + 'Aukio on suljettu, mutta portille saa tulla kuvaamaan, ja '
+        + 'julkisivun näkee myös satamasta veneestä. Edeltäjä Bait '
+        + 'al-Alam rakennettiin 1800-luvun alussa sulttaani Said bin '
+        + 'Sultanin aikana vanhan merimuurin perustuksille kahden '
+        + 'linnakkeen väliin. Heimokapinalliset vaurioittivat sitä vuonna '
+        + '1895, eikä sulttaani Faisal bin Turkilla ollut varaa '
+        + 'korjauttaa sitä, ja Said bin Taimur, joka vietti aikansa '
+        + 'Salalassa, piti taloa lukossa. Se purettiin 1971 uuden tieltä.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio de Al Alam, Mascate, Omán, 2024-08-14, DD 33.jpg',
+          selite: 'Al Alamin palatsin julkisivu portin takaa: pylväät '
+            + 'levenevät ylöspäin sienimäisiksi kannattimiksi, jotka '
+            + 'kantavat pitkälle ulos työntyvää litteää kattolaattaa. '
+            + 'Keskiosa on kullanvärinen, reunapylväät sinisen mosaiikin '
+            + 'peitossa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Palacio de Al Alam, Mascate, Omán, 2024-08-14, DD 36.jpg',
+          selite: 'Sama julkisivu vinosti iltavalossa. Pylväiden turkoosi '
+            + 'laattapinta ja kattolaatan hammastettu reunalista '
+            + 'erottuvat, ja taustalla näkyvät aukiota reunustavat '
+            + 'matalat vaaleat hallintorakennukset.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bait Al Zubair': {
+      teksti: 'Museo on Al Saidiyan kadun varrella vanhassa Maskatissa. Al '
+        + 'Zubairin perhe rakennutti talon asuinkodikseen, ja siitä '
+        + 'tehtiin yksityinen museo. Esineet ovat pääosin suvun omasta '
+        + 'kokoelmasta: khanjar-tikareita, naisten hopeakoruja, pukuja, '
+        + 'aseita ja kotitaloustavaraa. Pihalla on pienoismalli '
+        + 'omanilaisesta kylämaisemasta linnakkeineen ja vesiuomineen.'
+        + '\n\n'
+        + 'Khanjarissa on kolme osaa: kahva, lyhyt kaareva terä ja tuppi, '
+        + 'joka taittuu jyrkästi J-kirjaimen muotoon. Hienoimpien '
+        + 'tikareiden tuppi on kultaa tai hopeaa, paikallisten seppien '
+        + 'töissä messinkiä tai kuparia. Kahva tehtiin ennen sarvesta tai '
+        + 'norsunluusta, mutta kansainvälisen kaupan kiellon jälkeen '
+        + 'aineena on puu, kamelinluu tai muovi; kahvan pää on litteä, '
+        + 'hallitsijasuvun tikarissa ristin muotoinen. Jokainen tikari '
+        + 'tehdään tilaajan omien toiveiden mukaan, ja työhön menee '
+        + 'kolmesta viikosta useaan kuukauteen.'
+        + '\n\n'
+        + 'Tikari työnnetään kudotun vyön alle keskelle vartalon '
+        + 'etupuolta. Ennen se kuului arkiasuun, nykyään se otetaan esiin '
+        + 'häihin, paraateihin ja virallisiin tilaisuuksiin; poika saa '
+        + 'oman tikarinsa usein murrosiässä ja sulhanen häälahjaksi. '
+        + 'Tupesta vetäminen ilman syytä on tapojen vastaista. Sama '
+        + 'tikari tupessaan kahden ristikkäisen miekan päällä on Omanin '
+        + 'vaakuna: se on ollut lipun ylänurkassa vuodesta 1970 ja näkyy '
+        + 'myös yhden rialin setelissä.',
+      kuvat: [
+        {
+          tiedosto: 'Muscat, Bait Al Zubair, ingresso.jpg',
+          selite: 'Museon sisäänkäynti vanhassa Maskatissa: valkoinen portti, '
+            + 'jonka päädyssä lukee Bait Al Zubair, ja avoimet '
+            + 'takorautaiset koristeportit pihalle.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Al Khanjar, Bait al Zubair Museum, Oman 1.jpg',
+          selite: 'Khanjar museon vitriinissä. Hopeatuppi taittuu jyrkäksi '
+            + 'koukuksi, kahvan pää on litteä, ja tikari roikkuu '
+            + 'hopearenkailla kudotusta vyöstä.',
+          lahde: 'Reda Kerbush, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Bait al Zubair Museum-02.jpg',
+          selite: 'Museon pihan pienoismalli: savenvärisiä vuoria, muureja, '
+            + 'vartiotorneja ja vesiuoma, jonka varrella on pieniä '
+            + 'veneitä ja ihmishahmoja.',
+          lahde: 'Muck, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Motishwar Mandir': {
+      teksti: 'Motishwar Mandir seisoo vanhassa Maskatissa Al Alamin palatsin '
+        + 'naapurissa, paljaan kalliorinteen juurella. Se ei ole yksi '
+        + 'rakennus vaan kolmen pyhäkön piha: Shri Adi Motishwar Mahadev, '
+        + 'Shri Motishwar Mahadev ja Hanumanille omistettu temppeli. '
+        + 'Päärakennus on matala ja vaaleaa kiveä, oviaukot on muotoiltu '
+        + 'simpukkakaariksi, ja katolla kohoaa pystyuriin jaettu kupoli '
+        + 'kullattuine huippuineen. Pihan kaivossa on vettä ympäri '
+        + 'vuoden, vaikka ympärillä on aavikkoa. Temppeli on '
+        + 'päivittäisessä käytössä: papit toimittavat aamu- ja '
+        + 'iltarituaalit, ja piha täyttyy juhlapäivinä.'
+        + '\n\n'
+        + 'Rakentajiksi mainitaan Thattan bhatia-kauppiaat. Bhatiat ovat '
+        + 'kauppiasyhteisö Sindhin, Kutchin ja Gujaratin suunnalta, ja '
+        + 'heitä asettui Maskatiin jo vuonna 1507. Tanskalainen matkaaja '
+        + 'Carsten Niebuhr laski Maskatista vuonna 1765 noin 1 200 '
+        + 'intialaista ja kirjasi, että nämä saivat elää omien lakiensa '
+        + 'mukaan, tuoda vaimonsa kaupunkiin ja polttaa vainajansa. Oman '
+        + 'on Lähi-idän ainoa maa, jossa on paikallissyntyinen '
+        + 'hinduväestö.'
+        + '\n\n'
+        + 'Rakennusvuodesta lähteet ovat eri mieltä. Wikipedian teksti '
+        + 'sanoo 1909, sen tietolaatikko antaa haarukan 1892–1909, ja kun '
+        + 'Intian pääministeri kävi temppelissä 12. helmikuuta 2018, '
+        + 'lehdet kutsuivat sitä 125-vuotiaaksi — se veisi vuoteen 1893. '
+        + 'Hajonta on siis lähes sata vuotta, eikä millekään luvulle ole '
+        + 'esitetty asiakirjaa. Maha Shivaratrin aikaan pihalla käy yli '
+        + '20 000 ihmistä.',
+      kuvat: [
+        {
+          tiedosto: 'Muscat-shiva temple.jpg',
+          selite: 'Motishwar Mandirin päärakennus vaaleasta kivestä: '
+            + 'pystyuriin jaettu kupoli kullattuine huippuineen, '
+            + 'simpukkakaarilla kehystetyt puuovet ja laatoitettu piha, '
+            + 'jolle on levitetty punainen matto. Pihan yllä liehuu '
+            + 'punainen viiri.',
+          lahde: 'కాసుబాబు, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
