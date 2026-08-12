@@ -480,6 +480,15 @@ export const RAAMATTU2 = {
         'VAIHEISTUS: ensin testiversio omistajan omalla '
           + 'API-tilillä; ansaintamalli (kuukausimaksu tms.) '
           + 'päätetään vasta kokeilun jälkeen.',
+        'PUHEKUPLA (idea 12.8. — ajatustasolla, EI vielä '
+          + 'toteutukseen): pöllöllä voisi olla pieni puhekupla, '
+          + 'jossa se kertoo proaktiivisesti esiohjelmoituja '
+          + 'asioita — ajan kulumisesta (80 päivän muistutusten '
+          + 'luonteva kanava) ja alkuvaiheen ohjeista, jos '
+          + 'pelaaja ei paina mitään tiettyyn aikaan. Reunaehto: '
+          + 'kupla vihjaa, ei keskeytä — ei modaalia, ei ääntä, '
+          + 'harvoin, häviää itsestään. Esiohjelmoituna ei maksa '
+          + 'mitään (ei API-kutsuja).',
       ],
     },
     {
