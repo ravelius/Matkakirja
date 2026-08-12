@@ -178,6 +178,8 @@ const MODULES = [
    */
   'js/pollo-haku.js',
   'js/pollo.js',
+  // Sivujen luenta: ui.js tuo lukijan staattisesti.
+  'js/lukija.js',
   'js/ui.js',
 
   'js/muutokset.js',
