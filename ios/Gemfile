@@ -1,0 +1,13 @@
+# Fastlane asennetaan tästä mac-ajurilla (`bundle install`).
+#
+# Fastlanea tarvitaan vain yhteen asiaan: valmiin IPA-paketin lähettämiseen
+# App Store Connectiin. Allekirjoituksen hoitaa xcodebuild itse
+# (ks. .github/workflows/ios-testflight.yml), joten fastlanesta ei tule
+# toista projektinhallintaa tämän kansion rinnalle.
+#
+# Versio on lukittu tarkkaan numeroon eikä väljään "~>"-ehtoon, jotta
+# lähetysputki ei voi rikkoutua siitä, että joku julkaisee uuden fastlanen.
+# Päivitys on tietoinen teko: vaihda numero ja aja `bundle lock` uudelleen.
+source "https://rubygems.org"
+
+gem "fastlane", "2.238.0"

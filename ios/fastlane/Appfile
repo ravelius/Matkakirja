@@ -1,0 +1,7 @@
+# Sovelluksen tunniste. Sama arvo on ios/project.yml:ssä
+# (PRODUCT_BUNDLE_IDENTIFIER) — jos toinen muuttuu, molemmat muuttuvat.
+#
+# Apple-tunnusta (apple_id) tai salasanaa ei tänne kirjoiteta: kirjautuminen
+# tehdään App Store Connect -API-avaimella, joka tulee GitHubin salaisuuksista
+# ajon ajaksi. Ks. ios/OHJE.md.
+app_identifier("fi.matkakirja.peli")
