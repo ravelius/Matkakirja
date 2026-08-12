@@ -18,6 +18,8 @@ on:
   push:
     paths:
       - 'ios/**'
+      # Pelkkä ohjeen korjaus ei ole syy käynnistää mac-ajuria.
+      - '!ios/**/*.md'
       - '.github/workflows/ios-kaannos.yml'
 
 permissions:

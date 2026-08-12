@@ -24,10 +24,20 @@ enum AaniIstunto {
     /// Sanelutila: mikrofoni auki, muut äänet vaimennettuina, kaiutin käyttöön
     /// myös silloin kun kuulokkeita ei ole.
     static func sanelutila() throws {
+        // Apple nimesi asetuksen uudelleen iOS 26:n kääntäjässä. Vanha nimi
+        // toimii yhä, mutta varoittaa; uutta nimeä ei ole vanhemmissa
+        // Xcodeissa. Valinta tehdään siis kääntäjän version mukaan, jotta
+        // sama koodi kääntyy puhtaasti molemmilla.
+        #if compiler(>=6.2)
+        let kuulokkeet: AVAudioSession.CategoryOptions = .allowBluetoothHFP
+        #else
+        let kuulokkeet: AVAudioSession.CategoryOptions = .allowBluetooth
+        #endif
+
         let istunto = AVAudioSession.sharedInstance()
         try istunto.setCategory(.playAndRecord,
                                 mode: .measurement,
-                                options: [.duckOthers, .defaultToSpeaker, .allowBluetooth])
+                                options: [.duckOthers, .defaultToSpeaker, kuulokkeet])
         try istunto.setActive(true, options: [])
     }
 
