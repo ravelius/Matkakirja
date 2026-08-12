@@ -205,8 +205,20 @@
         <section id="intro" class="intro" hidden>
           <!-- Avausteksti kahtena osana: runko ja viimeinen rivi
                ("mistä aloitan?"), joka lihavoidaan omistajan toiveesta.
-               Teksti itse on lukittu js/ui.js:n INTRO_TEXT-vakioon. -->
-          <p id="intro-text" class="intro-text"><span id="intro-runko"></span><b id="intro-lopetus" class="intro-lopetus"></b></p>
+               Teksti itse on lukittu js/ui.js:n INTRO_TEXT-vakioon.
+
+               PAIKKARIVI ON PELKKÄ RUUTUTEKSTI (omistajan tilaus
+               12.8.2026). Se on tarkoituksella HTML:ssä eikä
+               INTRO_TEXTissä: kertoja ei lue sitä, ja avaustekstin
+               luenta (assets/audio/intro-puhe.mp3) on nauhoitettu
+               täsmälleen INTRO_TEXTin mukaan. Rivi kuuluu samaan
+               kappaleeseen, jotta fitIntro mittaa senkin korkeuden ja
+               skaalaa koko avauksen yhtenä.
+
+               ELEMENTIT SAMALLE RIVILLE: .intro-text on
+               white-space: pre-line, joten lähdekoodin rivinvaihto
+               tagien välissä näkyisi ruudulla tyhjänä rivinä. -->
+          <p id="intro-text" class="intro-text"><span class="intro-paikka">Lontoo, nykyhetki:</span><span id="intro-runko"></span><b id="intro-lopetus" class="intro-lopetus"></b></p>
         </section>
       </section>
 

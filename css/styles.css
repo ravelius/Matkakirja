@@ -3923,6 +3923,100 @@ body.radio-tila .maa-pilleri { display: none; }
   opacity: 0.42;
 }
 
+/*
+ * ETUSIVUN ALKUANIMAATIO (js/ui.js piirraAlkuReitit).
+ *
+ * Kaksi valopistettä kiertää aloituskarttaa: isoisän maailmanympärysmatka
+ * himmeän punaisena ja kauppareitti Intiasta Lontooseen siniharmaana.
+ * Kumpikin jättää perässään haipuvan katkoviivajäljen.
+ *
+ * VÄRIT OVAT SEEPIAN SISÄLTÄ. Kirkas punainen ja sininen repisivät
+ * kartan ilmeen rikki; nämä kaksi ovat samaa sammunutta sävyä kuin
+ * kartan omat merkinnät, vain sen verran erillään toisistaan että ne
+ * erottaa toisikseen. Peittävyys tulee --kirkkaus-muuttujasta, jonka
+ * kulkukäyrä nostaa ja laskee — siksi sitä ei aseteta tässä.
+ *
+ * KERROS NÄKYY VAIN AVAUSNÄKYMÄSSÄ. Varsinaisen irrotuksen tekee
+ * js/ui.js render(): pelin alkaessa kerros otetaan kokonaan pois
+ * puusta, jottei sen viisitoista animaatiota jää käymään näkymättömissä.
+ * Nämä säännöt ovat varmistus kahteen väliin, joissa kerros on vielä
+ * puussa mutta ei saa näkyä: aloitusruudun zoomaus (.aloitus-zoom) ja
+ * liikkeen vähennys, jos asetus vaihtuu kesken istunnon.
+ */
+.alkureitit { display: none; }
+body[data-mode="start"] .alkureitit { display: inline; }
+body.aloitus-zoom .alkureitit { display: none; }
+
+.alkureitti-osa {
+  fill: none;
+  stroke-linecap: round;
+  opacity: 0;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: stroke-dashoffset;
+}
+
+.alkureitti-isoisa .alkureitti-osa { stroke: #a4442b; }
+.alkureitti-kauppa .alkureitti-osa { stroke: #4a6883; }
+
+.alkureitti-karki { stroke-width: 7; }
+.alkureitti-keha { stroke-width: 15; }
+
+/*
+ * Kulku: yksi ainoa katkoviivan pätkä matkaa reitin alusta loppuun, kun
+ * dashoffset liukuu nollasta polun pituuden verran miinukselle. Pituus
+ * tulee elementiltä (--pituus), koska jokainen reitti on eri mittainen.
+ *
+ * Matka kestää vain osan silmukasta: punaisen reitin kaksi puoliskoa
+ * (Lontoo–Tokio ja Los Angeles–Lontoo) vuorottelevat samassa 40 sekunnin
+ * kierrossa, joten kummallekin varataan siitä oma ikkunansa. Loppuosan
+ * piste on näkymätön ja odottaa vuoroaan.
+ */
+@keyframes alkureitti-kulku {
+  0% { stroke-dashoffset: 0; opacity: 0; }
+  4% { opacity: var(--kirkkaus, 1); }
+  38% { opacity: var(--kirkkaus, 1); }
+  44% { stroke-dashoffset: calc(var(--pituus, 1000px) * -1); opacity: 0; }
+  100% { stroke-dashoffset: calc(var(--pituus, 1000px) * -1); opacity: 0; }
+}
+
+/* Yksiosaisella reitillä ei ole vuoroa odotettavana, joten se saa
+   matkata melkein koko kierroksen ajan. */
+@keyframes alkureitti-kulku-pitka {
+  0% { stroke-dashoffset: 0; opacity: 0; }
+  3% { opacity: var(--kirkkaus, 1); }
+  74% { opacity: var(--kirkkaus, 1); }
+  80% { stroke-dashoffset: calc(var(--pituus, 1000px) * -1); opacity: 0; }
+  100% { stroke-dashoffset: calc(var(--pituus, 1000px) * -1); opacity: 0; }
+}
+
+/* Syke tehdään viivan paksuudella eikä peittävyydellä: peittävyys on jo
+   kulkukäyrän käytössä, ja sama ominaisuus kahdessa animaatiossa
+   tarkoittaisi, että jälkimmäinen syö edellisen. */
+@keyframes alkureitti-syke {
+  from { stroke-width: 5.6; }
+  to { stroke-width: 8.6; }
+}
+
+/* Kehä sykkii vastakkaiseen suuntaan ja laajemmin: hehku hengittää
+   ytimen ympärillä sen sijaan että ne kasvaisivat yhtenä möykkynä. */
+@keyframes alkureitti-syke-keha {
+  from { stroke-width: 17; }
+  to { stroke-width: 11; }
+}
+
+.alkureitti-karki,
+.alkureitti-keha {
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: normal, alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Liikkeen vähennys: ei animaatiota eikä sen jälkeä lainkaan. */
+  body[data-mode="start"] .alkureitit { display: none; }
+}
+
 .step { fill: #e8d7b0; stroke: #8a7048; stroke-width: 1.2; opacity: 0.7; }
 /* Meriaskelmat samaan sepiaan kuin muu vesi: ei sinistä (v252). */
 .step-sea { fill: #eee3c8; stroke: #8a7a5f; opacity: 0.65; }
@@ -3960,11 +4054,28 @@ body.radio-tila .maa-pilleri { display: none; }
 .intro-text {
   margin: 0;
   color: var(--map-ink);
-  /* Kokoa säätää js/ui.js fitIntro kaistan korkeuden mukaan. */
-  font-size: 1.02rem;
+  /* Kokoa säätää js/ui.js fitIntro kaistan korkeuden mukaan
+     (INTRO_FONT_MAX/MIN); tämä on lähtöarvo ennen mittausta. */
+  font-size: 0.96rem;
   line-height: 1.6;
   white-space: pre-line; /* omistajan teksti on kolmena kappaleena */
   text-shadow: 0 1px 0 rgba(247, 237, 216, 0.9), 0 0 6px rgba(247, 237, 216, 0.75);
+}
+
+/*
+ * Paikkarivi avaustekstin yläpuolella — kohtausmerkintä, ei repliikki.
+ * Kertoja ei lue sitä (ks. index.html), joten se ei myöskään näytä
+ * samalta kuin luettu teksti: pienempi, harvempi ja himmeämpi, kuin
+ * käsikirjoituksen kohtausotsikko. Koko on em, jotta se seuraa
+ * fitIntron säätämää kirjasinkokoa.
+ */
+.intro-paikka {
+  display: block;
+  margin-bottom: 0.9em;
+  font-size: 0.86em;
+  letter-spacing: 0.14em;
+  color: var(--map-ink-soft);
+  opacity: 0.9;
 }
 
 .intro.intro-fade { opacity: 0; }
@@ -4013,9 +4124,25 @@ body.radio-tila .maa-pilleri { display: none; }
   background: rgba(243, 231, 205, 0.62);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
+  /*
+   * KARTTA, TEKSTI JA NAPPI YHTENÄ PINONA (omistajan tilaus 12.8.2026).
+   *
+   * Ennen kartta keskitettiin kalvoon ja repliikki kellui erikseen
+   * kalvon alalaidassa. Leveällä ruudulla ne osuivat päällekkäin:
+   * tekstilaatikko peitti lentoreitin loppupään ja kohdekaupungin
+   * nimen. Pystypino ratkaisee sen ilman yhtään mittaa — kartta
+   * asettuu ylös, teksti tulee sen alle eikä päälle.
+   *
+   * Pino keskitetään pystysuunnassa mutta painotetaan ylöspäin
+   * alareunan täytteellä: silmä lukee kartan ensin, ja Astu
+   * mantereelle -nappi jää mukavalle peukalokorkeudelle puhelimessa.
+   */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: clamp(0.5rem, 2.5vh, 1.6rem) 0
+    max(calc(env(safe-area-inset-bottom, 0px) + 3.5rem), 12vh);
   animation: flight-overlay-in 0.35s ease;
 }
 
@@ -4029,9 +4156,15 @@ body.flight-active .grain { display: none; }
 
 @keyframes flight-overlay-in { from { opacity: 0; } }
 
+/*
+ * Karttalehti pinon ylimpänä. flex-shrink: 0 on tässä välttämätön:
+ * ilman sitä pystypinossa oleva SVG kutistuisi tekstin tieltä ja
+ * lentoreitti litistyisi sitä mukaa kuin repliikki pitenee.
+ */
 .flight-scene {
   width: min(96%, 1100px);
-  max-height: 82%;
+  max-height: 62%;
+  flex: 0 0 auto;
 }
 
 .flight-scene .flight-trail { stroke-width: 4.4; }
@@ -4088,19 +4221,22 @@ body.flight-active .grain { display: none; }
   transition: opacity 0.28s ease;
 }
 
-/* Repliikki ja Astu mantereelle -nappi kelluvat samassa alaosassa:
- * asettelu hoituu virtauksella, joten napin osumakohta on aina siinä
- * missä nappi näkyy — myös kun alakehys elää turva-alueen mukana. */
+/* Repliikki ja Astu mantereelle -nappi samassa alaosassa: asettelu
+ * hoituu virtauksella, joten napin osumakohta on aina siinä missä nappi
+ * näkyy.
+ *
+ * VIRRASSA EIKÄ KELLUEN (omistajan tilaus 12.8.2026): alaosa on nyt
+ * kalvon pystypinon toinen jäsen kartan alla, joten teksti ei voi enää
+ * osua lentoreitin päälle. Repliikki varaa koko korkeutensa heti
+ * (js/ui.js typeText piirtää kirjoittamattoman osan näkymättömänä),
+ * joten nappi ei liiku kirjoituksen aikana. */
 .flight-alaosa {
-  position: absolute;
-  left: 50%;
-  bottom: max(calc(var(--gap) + 1rem), calc(env(safe-area-inset-bottom, 0px) + 1rem));
-  transform: translateX(-50%);
+  margin-top: clamp(0.6rem, 2.5vh, 1.6rem);
   width: min(680px, calc(100% - 1.6rem));
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.9rem;
   z-index: 5;
 }
 
@@ -4158,19 +4294,40 @@ body.flight-active .grain { display: none; }
   .flight-eteen { transition: none; }
 }
 
+/*
+ * Astu mantereelle on kalvon ainoa napautettava asia, ja nyt kun
+ * repliikin tumma laatikko on poissa, se on myös kalvon ainoa väripinta
+ * — sen on erotuttava vaaleasta pergamentista yksin. Siksi täysi
+ * messinkiliuku, tumma teksti ja selvä varjo.
+ *
+ * Nappi on ruudulla koko lennon ajan mutta näkymättömänä (js/ui.js:
+ * .odottaa), jotta pino ei liiku kun se syttyy. Häivytys tehdään
+ * siirtymällä eikä animaatiolla: animaatio olisi ehtinyt ajaa loppuun
+ * jo piilossa, eikä syttymistä näkisi lainkaan.
+ */
 .flight-exit {
   padding: 0.6rem 1.6rem;
   font-size: 1.05rem;
-  animation: flight-overlay-in 0.5s ease;
   background: linear-gradient(180deg, #eab84e, #d09024);
   border-color: var(--accent-dark);
   color: #2c1e07;
   font-weight: 700;
   box-shadow: 0 6px 18px rgba(20, 12, 4, 0.45);
+  opacity: 1;
+  transition: opacity 0.45s ease, visibility 0s;
+}
+
+.flight-exit.odottaa {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .flight-exit:hover:not(:disabled) {
   background: linear-gradient(180deg, #f3c661, #d9a13b);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flight-exit { transition: none; }
 }
 
 /* Aloita seikkailu -portti: kartta himmeänä taustalla, nappi keskellä.
@@ -6839,9 +6996,20 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 
 .flight-trail { will-change: stroke-dashoffset; }
 
-/* Repliikki kelluu kartan alalaidassa, samaa kirjoituskonetyyliä kuin muut. */
-/* Nuoren herran repliikki: vanhan filmin tekstiplanssi kelluvassa
- * alaosassa. Ei osumakohtaa — napautukset kuuluvat kalvolle ja napille. */
+/*
+ * Nuoren herran repliikki kartan alla.
+ *
+ * EI TAUSTALAATIKKOA (omistajan tilaus 12.8.2026). Tumma planssi oli
+ * kalvolla ainoa umpinainen pinta ja veti katseen kartalta; teksti
+ * kirjoittuu nyt tummana suoraan kalvon vaalealle pergamentille, kuten
+ * muukin kartan päälle kirjoitettu. Luettavuus tulee kolmesta asiasta,
+ * joita ilman vaalea pohja ei riitä: musteenvahva väri (--map-ink,
+ * kontrasti pergamenttiin yli 8:1), väljä riviväli ja vaalea
+ * tekstivarjo, joka nostaa kirjaimet irti kartan viivoista siellä
+ * missä kalvo on ohuimmillaan.
+ *
+ * Ei osumakohtaa — napautukset kuuluvat kalvolle ja napille.
+ */
 .flight-line {
   pointer-events: none;
   margin: 0;
@@ -6851,17 +7019,17 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   width: 100%;
   max-width: 100%;
   contain: content;
-  padding: 0.75rem 1.2rem;
-  background: rgba(36, 26, 18, 0.92);
-  border: 1px solid rgba(214, 188, 140, 0.4);
-  border-radius: 10px;
-  box-shadow: 0 8px 26px rgba(20, 13, 6, 0.35);
-  color: #f0e2c4;
+  /* Pystytäyte on tekstivarjoa varten: contain: content rajaa maalauksen
+     täytelaatikkoon, ja ilman tätä ylimmän ja alimman rivin hehku
+     leikkautuisi juuri siitä mistä se nostaa kirjaimet kartasta irti. */
+  padding: 0.35rem 0.6rem;
+  color: var(--map-ink);
   font-family: var(--font-type);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.75;
   letter-spacing: 0.01em;
   text-align: center;
+  text-shadow: 0 1px 0 rgba(247, 237, 216, 0.95), 0 0 7px rgba(247, 237, 216, 0.85);
   animation: flight-overlay-in 0.4s ease;
 }
 
