@@ -1,0 +1,229 @@
+# Julkaisee Viisas Pöllö -välityspalvelimen Cloudflaren Workersiin.
+#
+# Omistaja tekee kaiken puhelimella, joten komentorivipolku (npx
+# wrangler login → deploy → secret put → kv namespace create) ei ole
+# käytettävissä. Tämä työnkulku tekee samat vaiheet ajurilla: luo
+# tarvittaessa KV-säilön, rakentaa täytetyn asetustiedoston, julkaisee
+# workerin ja asettaa API-avaimen salaisuudeksi.
+#
+# TÄMÄ AJO NUKKUU, KUNNES SALAISUUDET ON ASETETTU. Ensimmäinen työ
+# (ubuntu, halpa) katsoo, ovatko CLOUDFLARE_API_TOKEN,
+# CLOUDFLARE_ACCOUNT_ID ja ANTHROPIC_API_KEY olemassa. Jos eivät, ajo
+# jää vihreäksi ja yhteenvedossa lukee mitä puuttuu. Ohje avainten
+# hakemiseen: tools/pollo/OHJE.md.
+#
+# Salaisuuksien arvoja ei tulosteta missään vaiheessa: API-avain menee
+# wranglerille putkessa (printf | wrangler secret put), ei komennon
+# argumenttina eikä tiedostona.
+#
+# Repossa oleva tools/pollo/wrangler.jsonc jätetään rauhaan (se on
+# komentorivipolun ohjeen mukainen). KV-tunnus ja sallittu origin
+# lisätään vasta ajon aikana väliaikaiseen kopioon — ks.
+# tools/pollo/ci-asetus.mjs.
+
+name: Pöllön julkaisu
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'tools/pollo/**'
+      # Ohjeen korjaus ei ole syy julkaista workeria uudelleen.
+      - '!tools/pollo/**/*.md'
+      - '.github/workflows/pollo-julkaisu.yml'
+
+permissions:
+  contents: read
+
+# Yksi julkaisu kerrallaan. Keskeneräistä ei katkaista: puoliksi
+# julkaistu worker on ikävämpi selvitettävä kuin odottaminen.
+concurrency:
+  group: pollo-julkaisu
+  cancel-in-progress: false
+
+env:
+  # Mistä peli tulee. Worker vertaa tätä pyynnön Origin-otsakkeeseen,
+  # joka on aina pelkkä alkuosa ILMAN polkua: pelin sivu on
+  # https://ravelius.github.io/Matkakirja/ mutta Origin on
+  # https://ravelius.github.io. Useampi arvo erotetaan pilkulla.
+  POLLO_ORIGINIT: 'https://ravelius.github.io'
+  # Wranglerin suurversio lukittuna, jotta ajo ei muutu itsestään.
+  WRANGLER_VERSIO: 'wrangler@4'
+  # Ei käyttötilastoja eikä interaktiivisia kysymyksiä ajurilla.
+  WRANGLER_SEND_METRICS: 'false'
+  CI: 'true'
+
+jobs:
+  # Halpa portti kalliin edessä. Salaisuuksien arvoja ei lueta eikä
+  # tulosteta — katsotaan vain, onko kentässä jotakin. Tarkistus on
+  # omana steppinään, koska secrets-kontekstia ei voi käyttää
+  # job-tason if-ehdossa.
+  portti:
+    name: Onko julkaisu mahdollinen
+    runs-on: ubuntu-latest
+    outputs:
+      salaisuudet: ${{ steps.tarkista.outputs.salaisuudet }}
+    steps:
+      - name: Tarkista salaisuudet
+        id: tarkista
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          puuttuu=""
+          for nimi in CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID ANTHROPIC_API_KEY; do
+            arvo=$(printenv "$nimi" || true)
+            if [ -z "$arvo" ]; then
+              puuttuu="$puuttuu $nimi"
+            fi
+          done
+          if [ -n "$puuttuu" ]; then
+            echo "salaisuudet=ei" >> "$GITHUB_OUTPUT"
+            {
+              echo "## Pöllön julkaisu nukkuu"
+              echo
+              echo "Puuttuvat salaisuudet:$puuttuu"
+              echo
+              echo "Ne lisätään: Settings → Secrets and variables → Actions."
+              echo "Askel askeleelta: \`tools/pollo/OHJE.md\`."
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::notice title=Pöllön julkaisu nukkuu::Salaisuuksia puuttuu:$puuttuu — ohje tools/pollo/OHJE.md"
+          else
+            echo "salaisuudet=on" >> "$GITHUB_OUTPUT"
+          fi
+
+  julkaisu:
+    name: Julkaise worker
+    needs: portti
+    if: needs.portti.outputs.salaisuudet == 'on'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Wrangler asennetaan ajurin väliaikaiskansioon, ei repoon: repon
+      # package.json kuuluu pelille eikä siihen haluta julkaisutyökalua
+      # (eikä npm install repon juuressa vetäisi mukanaan Playwrightia).
+      - name: Asenna wrangler
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/wrangler"
+          npm install --prefix "$RUNNER_TEMP/wrangler" --no-fund --no-audit "$WRANGLER_VERSIO"
+          echo "WRANGLER=$RUNNER_TEMP/wrangler/node_modules/.bin/wrangler" >> "$GITHUB_ENV"
+
+      # KV-säilö on käyttörajojen laskurien muisti. Jos säilöä ei vielä
+      # ole, se luodaan; olemassa olevaa ei kosketa, jotta laskurit
+      # eivät nollaudu jokaisella julkaisulla.
+      #
+      # Komennot ajetaan repon ulkopuolella, jottei wrangler nappaa
+      # käyttöönsä repon juuren wrangler.jsonc:tä (se kuuluu
+      # uutisvälitykselle, ei pöllölle).
+      - name: Etsi tai luo KV-säilö
+        working-directory: ${{ runner.temp }}
+        run: |
+          set -euo pipefail
+          apuri="$GITHUB_WORKSPACE/tools/pollo/ci-asetus.mjs"
+          "$WRANGLER" kv namespace list > "$RUNNER_TEMP/kv-lista.json" 2> "$RUNNER_TEMP/kv-virhe.log" || {
+            echo "::error title=KV-listaus epäonnistui::Tarkista, että CLOUDFLARE_API_TOKEN kelpaa Workers-oikeuksilla ja CLOUDFLARE_ACCOUNT_ID on oikein."
+            cat "$RUNNER_TEMP/kv-virhe.log"
+            exit 1
+          }
+          tunnus=$(node "$apuri" kv-tunnus "$RUNNER_TEMP/kv-lista.json")
+          if [ -z "$tunnus" ]; then
+            echo "POLLO_KV puuttuu — luodaan uusi säilö."
+            "$WRANGLER" kv namespace create POLLO_KV
+            "$WRANGLER" kv namespace list > "$RUNNER_TEMP/kv-lista.json"
+            tunnus=$(node "$apuri" kv-tunnus "$RUNNER_TEMP/kv-lista.json")
+          else
+            echo "POLLO_KV löytyi valmiina."
+          fi
+          if [ -z "$tunnus" ]; then
+            echo "::error title=KV-säilöä ei saatu::Säilön POLLO_KV tunnusta ei löytynyt listauksesta."
+            exit 1
+          fi
+          # Tunnus ei ole salaisuus (se on julkinen sidoksen osoite),
+          # mutta ei sitä silti tarvitse lokiin tulostaa.
+          echo "KV_TUNNUS=$tunnus" >> "$GITHUB_ENV"
+
+      # Repon wrangler.jsonc pysyy ennallaan; tähän kirjoitetaan sen
+      # täytetty kopio. Kopio menee samaan kansioon, jotta "main":
+      # "worker.js" osoittaa yhä oikeaan tiedostoon.
+      - name: Rakenna ajonaikainen asetus
+        run: |
+          set -euo pipefail
+          node tools/pollo/ci-asetus.mjs asetus \
+            --lahde tools/pollo/wrangler.jsonc \
+            --ulos tools/pollo/wrangler.ci.json \
+            --kv "$KV_TUNNUS" \
+            --originit "$POLLO_ORIGINIT"
+          echo "POLLO_ASETUS=tools/pollo/wrangler.ci.json" >> "$GITHUB_ENV"
+
+      - name: Julkaise worker
+        run: |
+          set -euo pipefail
+          "$WRANGLER" deploy --config "$POLLO_ASETUS" 2>&1 | tee "$RUNNER_TEMP/deploy.log"
+          osoite=$(grep -Eo 'https://[A-Za-z0-9._-]+\.workers\.dev' "$RUNNER_TEMP/deploy.log" | head -1 || true)
+          if [ -n "$osoite" ]; then
+            echo "POLLO_OSOITE=$osoite" >> "$GITHUB_ENV"
+          else
+            echo "::warning title=Osoitetta ei löytynyt::Julkaisu meni läpi, mutta workers.dev-osoitetta ei tunnistettu tulosteesta. Katso ajon loki."
+          fi
+
+      # Avain menee wranglerille putkessa: se ei näy komentorivillä, ei
+      # ympäristölistauksessa eikä jää tiedostoksi ajurille. Wrangler ei
+      # tulosta salaisuuden arvoa, ja GitHub peittää sen joka tapauksessa.
+      # Tässä stepissä ei ole yhtään echoa avaimesta eikä set -x:ää.
+      - name: Aseta API-avain workerin salaisuudeksi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -euo pipefail
+          set +x
+          printf '%s' "$ANTHROPIC_API_KEY" | "$WRANGLER" secret put ANTHROPIC_API_KEY --config "$POLLO_ASETUS"
+
+      - name: Kerro mitä julkaistiin
+        if: success()
+        run: |
+          {
+            echo "## Pöllö on julkaistu"
+            echo
+            if [ -n "${POLLO_OSOITE:-}" ]; then
+              echo "**Workerin osoite:**"
+              echo
+              echo "\`\`\`"
+              echo "$POLLO_OSOITE"
+              echo "\`\`\`"
+            else
+              echo "Osoitetta ei saatu poimittua automaattisesti — se on"
+              echo "muotoa \`https://matkakirja-pollo.<tunnuksesi>.workers.dev\`"
+              echo "ja näkyy tämän ajon \"Julkaise worker\" -vaiheen lopussa."
+            fi
+            echo
+            echo "**Kerro tämä osoite Fablelle, niin se kytketään peliin.**"
+            echo
+            echo "- Sallittu origin: \`$POLLO_ORIGINIT\`"
+            echo "- Käyttörajojen KV-säilö: käytössä"
+            echo "- API-avain: asetettu workerin salaisuudeksi (ei näy missään lokissa)"
+            echo
+            echo "Ennen kytkentää pöllönappi näyttää pelissä siistin"
+            echo "\"Pöllö ei ole vielä hereillä\" -viestin — mikään ei ole rikki."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # Väliaikainen asetus ei sisällä salaisuuksia, mutta se ei kuulu
+      # myöskään mihinkään pysyvään — poistetaan siltä varalta, että
+      # jokin myöhempi vaihe keräisi tiedostoja talteen.
+      - name: Siivoa väliaikainen asetus
+        if: always()
+        run: rm -f tools/pollo/wrangler.ci.json
