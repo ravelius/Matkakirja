@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 589, teksti: 'Matkatapa kolmena nappina, pöllön chattiin matala alarivi' },
   { v: 588, teksti: 'Viisas Pöllö: apuri, sanelu, tietohaku, uusi alanappirivi' },
   { v: 587, teksti: 'Dohan kaupunkilehti, kohdekartta ja kuusi nähtävyysjuttua' },
   { v: 586, teksti: 'Auditin korjaukset: minitehtävät, toistot, Dubain jutut' },
