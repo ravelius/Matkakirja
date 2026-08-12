@@ -15626,22 +15626,31 @@ export const MAA_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          otsikko: 'Kanava, joka kaivettiin maan alle',
-          tiedosto: 'Shafiabad (Shahdad), Kerman Province, Iran (42688716052).jpg',
-          teksti: 'Puutarhojen ja peltojen vesi tuli usein qanatista. Se on loivasti '
-              + 'viettävä maanalainen käytävä, joka johtaa vettä vuoren juurella '
-              + 'olevasta pohjavesikerroksesta kylään asti. Käytävä kaivetaan maan '
-              + 'alle juuri siksi, ettei vesi haihdu matkalla auringossa, ja sen '
-              + 'varrelle jää rivi pystykuiluja, joista kaivumaa nostettiin ja '
-              + 'joista käytävään pääsee huoltamaan. Pisimmät ovat kymmeniä '
-              + 'kilometrejä pitkiä. Tapa on tuhansia vuosia vanha, ja se levisi '
-              + 'Iranista laajalle; yksitoista iranilaista qanatia otettiin '
-              + 'maailmanperintöluetteloon vuonna 2016.',
-          selite: 'Maanalainen käytävä, jonka seinät ja katto on kaivettu '
-              + 'punaruskeaan maahan. Käytävän pohjalla virtaa matala kirkas vesi '
-              + 'kapeassa uomassa, ja taustalla erottuu kaksi kaarevaa aukkoa, '
-              + 'joista käytävä jatkuu pimeään.',
-          lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
+          /*
+           * Qanat-kanava kerrotaan jo Iranin karttasivun nostossa
+           * (maakartat.js), joka on saman maalehden ensimmäinen sivu.
+           * Juttu ja sivun minitehtävä vaihdettiin 12.8.2026.
+           */
+          otsikko: 'Vihreä suorakaide keskellä paljasta maata',
+          tiedosto: 'Bird view of Baghe Shazdeh Mahan Kerman.jpg',
+          teksti: 'Mahanin kylän laidalla Kermanin maakunnassa on Shazdeh eli '
+              + 'ruhtinaan puutarha. Ylhäältä katsottuna se on tarkka '
+              + 'suorakaide: muurien sisällä kasvaa poppeleita, sypressejä ja '
+              + 'hedelmäpuita, ja heti muurin takana alkaa paljas sorapinta. '
+              + 'Pinta-alaa on 5,5 hehtaaria. Puutarha on porrastettu '
+              + 'rinteeseen, joten keskiakselin allas laskeutuu tasolta '
+              + 'toiselle portaikkona, ja rinteen ylimmällä tasolla on '
+              + 'kaksikerroksinen asuinrakennus. Nykyisen asunsa puisto sai '
+              + '1870-luvulta alkaen Kermanin kuvernöörin Abdolhamid Mirzan '
+              + 'tilauksesta. Rakennuttaja kuoli 1890-luvun alussa, ja '
+              + 'muurarit jättivät työn kesken: sisääntuloportissa näkyy yhä '
+              + 'viimeistelemättömiä kohtia.',
+          selite: 'Shazdehin puutarha ylhäältä kuvattuna syksyllä. Muurien '
+              + 'rajaama suorakaide on täynnä oranssia ja vihreää puustoa, '
+              + 'keskellä kulkee suora vesiakseli, molemmissa päissä on '
+              + 'rakennus, ja muurin ulkopuolella on joka suuntaan paljasta '
+              + 'vaaleanruskeaa maata ja hiekkateitä.',
+          lahde: 'Mohammad Sadegh Ebrahimi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Kaksikymmentä pylvästä, jotka näyttävät neljältäkymmeneltä',
@@ -15681,16 +15690,18 @@ export const MAA_KATEGORIAT = {
         },
       ],
       tehtava: {
-        kysymys: 'Miksi qanat kaivetaan maan alle?',
+        // Vanha kysymys koski qanat-kanavaa, joka siirtyi pois sivulta
+        // 12.8.2026 (sama juttu oli jo Iranin karttasivulla).
+        kysymys: 'Miksi Shazdehin puutarhan sisääntuloportti jäi kesken?',
         vaihtoehdot: [
-          'Ettei vesi haihdu matkalla',
-          'Että vesi jäähtyisi kylmäksi',
-          'Ettei kanava jäätyisi talvella',
-          'Että kaivumaasta saataisiin tiiltä',
+          'Rakennuttaja kuoli kesken työn',
+          'Portin kivet vietiin moskeijaan',
+          'Sadevesi vei portin perustukset',
+          'Portti purettiin uuden tien tieltä',
         ],
         oikea: 0,
-        fakta: 'Käytävän varrella on rivi pystykuiluja: niistä kaivumaa nostettiin '
-            + 'ylös, ja niistä pääsee yhä huoltamaan käytävää.',
+        fakta: 'Shazdeh kuuluu samaan yhdeksän puutarhan '
+            + 'maailmanperintökohteeseen kuin Finin ja Eramin puutarhat.',
       },
     },
     {
@@ -17047,20 +17058,29 @@ export const MAA_KATEGORIAT = {
           lahde: 'F igy, Wikimedia Commons (CC BY 3.0)',
         },
         {
-          otsikko: 'Vuonot, joita sanotaan Arabian Norjaksi',
-          tiedosto: 'Dhow trip in the fjords of Musandam, Oman (36208084624).jpg',
-          teksti: 'Omanin pohjoisin osa, Musandamin niemimaa, on erillään muusta '
-            + 'maasta. Sinne vuoristo laskeutuu suoraan mereen ja jättää '
-            + 'väliinsä kapeita lahtia, jotka näyttävät vuonoilta — siksi '
-            + 'paikkaa sanotaan Arabian Norjaksi. Todellisuudessa ne eivät '
-            + 'ole jäätikön uurtamia vaan syntyivät, kun maankuori painui '
-            + 'hitaasti alas ja meri täytti laaksot. Kylien väliä kuljetaan '
-            + 'yhä veneellä, koska teitä ei kaikkialle ole, ja delfiinit '
-            + 'seuraavat usein veneitä lahdelta toiselle.',
-          selite: 'Musandamin vuono Omanissa. Paljaat vuoret laskeutuvat mereen '
-            + 'molemmin puolin, ja keskellä sinistä vettä kulkee yksinäinen '
-            + 'puuvene.',
-          lahde: 'Robert Haandrikman, Wikimedia Commons (CC BY 2.0)',
+          /*
+           * Musandamin vuonot kerrotaan jo Omanin karttasivun nostossa
+           * (maakartat.js), joka on saman maalehden ensimmäinen sivu.
+           * Juttu vaihdettiin 12.8.2026.
+           */
+          otsikko: 'Kahdeksan kuukautta Kiinaan ilman moottoria',
+          tiedosto: 'Sohar replica.JPG',
+          teksti: 'Sindbad-merenkulkijan tarinat sijoittuvat aikaan, jolloin '
+              + 'arabialaiset purjelaivat kulkivat Omanista Kiinaan asti. '
+              + 'Irlantilainen tutkimusmatkailija Tim Severin halusi tietää, '
+              + 'oliko matka mahdollinen tuon ajan aluksella. Surin telakalla '
+              + 'rakennettiin seitsemässä kuukaudessa 26,5-metrinen puulaiva, '
+              + 'joka sai nimekseen Sohar. Se lähti Omanista marraskuussa '
+              + '1980 ilman moottoria, seurasi Intian rannikkoa, kiersi Sri '
+              + 'Lankan ja tuli Malakan salmen kautta Kiinan merille. '
+              + 'Kantoniin laiva saapui 6. heinäkuuta 1981: matkaa oli takana '
+              + 'noin 9 600 kilometriä ja aikaa kahdeksan kuukautta. Sohar '
+              + 'seisoo nykyään liikenneympyrässä Muscatin Al Bustanissa.',
+          selite: 'Sohar-laiva liikenneympyrässä Muscatin Al Bustanissa. '
+              + 'Kaksimastoinen ruskea puulaiva seisoo kuivalla maalla, '
+              + 'köysistö laskeutuu mastoista keulapuomille, ja edessä kukkii '
+              + 'oranssin ja keltaisen kirjava istutus.',
+          lahde: 'Joe Castleman, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Satama tukkeutui hiekkavalliin',
@@ -17312,20 +17332,29 @@ export const MAA_KATEGORIAT = {
           lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          otsikko: 'Vanha kauppakaupunki jäi hiekan alle',
-          tiedosto: 'Qatar - Al Zubarah Fort 02.jpg',
-          teksti: 'Luoteisrannikolla oli 1700-luvulla Al Zubarah, vilkas satama- '
-            + 'ja helmenpyyntikaupunki, jossa asui tuhansia ihmisiä. Kaupunki '
-            + 'hiljeni 1800-luvulla, ja hiekka peitti sen kadut, talot ja '
-            + 'muurit. Juuri siksi se on säilynyt: paikka on Qatarin '
-            + 'ensimmäinen Unescon maailmanperintökohde, ja kaivauksissa on '
-            + 'paljastunut kokonaisia korttelipohjia. Rannalla seisoo '
-            + '1930-luvulla rakennettu linnake, jonka kulmatorneista näkee '
-            + 'kauas merelle.',
-          selite: 'Al Zubarahin linnake autiomaassa. Vaalea nelikulmainen '
-            + 'rakennus, jonka kolmessa kulmassa on pyöreä torni ja '
-            + 'neljännessä kulmikas.',
-          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+          /*
+           * Al Zubarah kerrotaan jo Qatarin karttasivun nostossa
+           * (maakartat.js), joka on saman maalehden ensimmäinen sivu.
+           * Juttu vaihdettiin 12.8.2026.
+           */
+          otsikko: 'Dyyni, joka hurisee kun hiekka vyöryy',
+          tiedosto: 'Singing sand dunes.jpg',
+          teksti: 'Noin neljänkymmenen kilometrin päässä Dohasta, Mesaieedin '
+              + 'suunnassa, on dyyni, jonka rinne pitää ääntä. Kun kuiva '
+              + 'hiekka lähtee vyörymään alas jyrkkää sivua, siitä nousee '
+              + 'hurina, jota on verrattu kaukaiseen moottoriin. Ääni voi '
+              + 'jatkua minuutteja ja yltää yli sadan desibelin. Mikä tahansa '
+              + 'hiekka ei laula: jyvien on oltava kuivia, pyöreitä, '
+              + 'pinnaltaan puhtaita ja kooltaan 0,1–0,5 millimetriä. Kostea '
+              + 'hiekka vaikenee, koska jyvät tarttuvat toisiinsa. Tällaisia '
+              + 'laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. '
+              + 'Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan '
+              + 'aikaan liukumalla alas.',
+          selite: 'Laulavan dyynin rinne Qatarissa iltavalossa. Ihmiset '
+              + 'kiipeävät harjalle ja liukuvat alas jyrkkää sivua, hiekassa '
+              + 'näkyy satoja jalanjälkiä, ja rinteen juurella on pysäköity '
+              + 'auto.',
+          lahde: 'Peter, Wikimedia Commons (CC BY 2.0)',
         },
         {
           otsikko: 'Kallioon on hakattu yhdeksänsataa kuvaa',
@@ -17472,21 +17501,31 @@ export const MAA_KATEGORIAT = {
           lahde: 'Mr fahad.k, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          otsikko: 'Helmi oli koko maan elinkeino',
-          tiedosto: 'Doha - Traditional wooden dhows in the harbor.jpg',
-          teksti: 'Ennen öljyä Qatar eli helmistä. Kesäkuusta syyskuuhun '
-            + 'laivasto vietiin matalikoille, ja sukeltajat menivät pohjaan '
-            + 'ilman happea: nenässä oli puristin, sormissa nahkasuojukset ja '
-            + 'köyden päässä kivi, joka veti alas. Yksi sukellus kesti '
-            + 'minuutin tai pari, ja niitä tehtiin päivässä kymmeniä. Ala '
-            + 'romahti 1930-luvulla, kun japanilainen viljelty helmi tuli '
-            + 'markkinoille ja maailmantalous notkahti samaan aikaan. Puiset '
-            + 'dhow-veneet ovat yhä satamassa, mutta ne kuljettavat nykyään '
-            + 'matkailijoita.',
-          selite: 'Puisia dhow-veneitä Dohan satamassa. Kolme korkeakokkaista '
-            + 'venettä keinuu vedessä, ja takana kohoaa nykyaikaisten '
-            + 'tornitalojen rivi.',
-          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+          /*
+           * Sukellustekniikka (nenäpuristin, kivipaino, kesäkuu–syyskuu)
+           * kerrottiin ennen tässä, Bahrainin helmet-sivulla JA Dubain
+           * kaupunkilehden kannessa. Bahrain omistaa aiheen kokonaisella
+           * sivulla, joten tämä juttu vaihdettiin 12.8.2026 kertomaan
+           * laivaston koosta ja siitä, mitä rannalle jäi.
+           */
+          otsikko: 'Kahdeksansataa venettä samalta rannalta',
+          tiedosto: 'Al Wakrah Souq beachside view.jpg',
+          teksti: 'Brittiläinen virkamies J. G. Lorimer kokosi vuoden 1908 '
+              + 'käsikirjaansa taulukon Qatarin helmiveneistä. Niitä oli 817, '
+              + 'ja niissä purjehti noin 13 000 miestä eli keskimäärin '
+              + 'kuusitoista miestä venettä kohti. Suurin satama oli Doha 350 '
+              + 'veneellä, toisena Al Wakra 150 veneellä. Kun kausi alkoi, '
+              + 'kylistä lähti merelle valtaosa työikäisistä miehistä, ja '
+              + 'rannalle jäi muu väki pitämään talot ja kaupat käynnissä. '
+              + 'Öljyn jälkeen Al Wakran vanha rantakaista rakennettiin '
+              + 'uudelleen: vuonna 2014 avatussa Souq Al Wakrassa on '
+              + 'toistasataa liikettä, hiekalle on nostettu puuveneitä '
+              + 'näytille ja kalasatama on yhä käytössä.',
+          selite: 'Souq Al Wakran rantakatu iltavalossa. Kivetty käytävä johtaa '
+              + 'suoraan poispäin, oikealla on savenvärinen muuri ja sen '
+              + 'edessä ravintoloiden pöytiä, vasemmalla hiekalla lepää '
+              + 'puuveneitä ja niiden takana siintää meri.',
+          lahde: 'Bojan Mustur, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Veneellä oli tusina eri nimeä',
@@ -24708,24 +24747,31 @@ export const MAA_KATEGORIAT = {
           lahde: 'Shahzaib Damn Cruze, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          otsikko: 'Metsä, joka kasvaa suolavedessä',
-          tiedosto: 'Mangrove Forest Sindh.jpg',
-          teksti: 'Induksen suisto on noin 41 000 neliökilometriä ja levittäytyy '
-              + 'yli kahdensadan kilometrin levyisenä Arabianmereen. Sadetta '
-              + 'tulee vain 25–50 senttiä vuodessa, ja siksi suiston '
-              + 'mangrovemetsät ovat maailman laajimmat kuivan ilmaston '
-              + 'mangrovet. Lajeja oli ennen kahdeksan, nyt neljä, ja '
-              + 'valtalajina on harmaamangrove Avicennia marina, jota on 99 '
-              + 'prosenttia puista. Metsiköt ovat kalojen, katkarapujen ja '
-              + 'mutarapujen kutupaikka; aktiivisen suiston asukkaista kolme '
-              + 'neljäsosaa elää kalastuksesta. Jokivesien vähennyttyä metsää '
-              + 'menetettiin, ja sitä on istutettu takaisin.',
-          selite: 'Matalaa mangrovemetsää loivalla rannikolla. Etualan '
-              + 'tummanvihreät pensasmaiset puut kasvavat ruskeasta '
-              + 'mutatasangosta, jonka läpi kiemurtelee kapea vihertävä '
-              + 'vesiuoma. Vasemmalla aukeaa laaja vaalea vuovesi, ja '
-              + 'horisontti häviää valkoiseen usvaan.',
-          lahde: 'Ayazan57, Wikimedia Commons (CC BY-SA 4.0)',
+          /*
+           * Vanha otsikko oli sanasta sanaan sama kuin Emiraattien
+           * ranta-sivulla ("Metsä, joka kasvaa suolavedessä"), ja tekstit
+           * kertoivat samat perusasiat suolanerityksestä ja kutupaikoista.
+           * Emiraattien versio jäi; tämä kirjoitettiin 12.8.2026 uusiksi
+           * Induksen suiston omasta näkökulmasta.
+           */
+          otsikko: 'Miljoona tainta yhdessä päivässä',
+          tiedosto: 'Newly planted mangroves.jpg',
+          teksti: 'Induksen suistoon on istutettu mangrovea ennätysvauhtia. '
+              + 'Sindhin metsähallinto istutti vuonna 2009 Keti Bandarissa '
+              + 'yli 540 000 tainta yhdessä päivässä, ja siitä tuli '
+              + 'maailmanennätys. Intia ohitti luvun vuonna 2010, ja Pakistan '
+              + 'otti ennätyksen takaisin 22. kesäkuuta 2013, kun Kharo '
+              + 'Chanissa istutettiin 847 275 tainta. Ennätys parani vielä '
+              + '19. huhtikuuta 2018, jolloin Keti Bandarissa saatiin maahan '
+              + '1 129 294 tainta. Säännöt ovat tiukat: työn tekee kolmesataa '
+              + 'vapaaehtoista valoisan aikaan. Taimet painetaan käsin '
+              + 'pehmeään mutaan vuoroveden laskettua. Lehdet kelpaavat myös '
+              + 'rehuksi, ja kyläläiset keräävät niitä karjalleen.',
+          selite: 'Uutta mangroveistutusta Induksen suistossa Shah Bandarissa. '
+              + 'Etualalla on ruskeaa vuoroveden vettä, rannassa kasvaa '
+              + 'matalia vihreitä pensaita, ja niiden takana mutatasanko on '
+              + 'täynnä tiheitä rivejä pieniä taimia.',
+          lahde: 'Agha Tahir Hussain, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       tehtava: {

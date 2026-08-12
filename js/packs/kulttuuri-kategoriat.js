@@ -5125,21 +5125,35 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       nostot: [
         {
-          otsikko: 'Helmi nostettiin yhdellä hengenvedolla',
+          /*
+           * Sukellustekniikka (nenäpuristin, kivipaino, kesäkuu–syyskuu,
+           * japanilainen viljelty helmi) kerrottiin ennen tässä lähes
+           * samoin sanoin kuin Bahrainin helmet-sivulla JA Dubain
+           * kohdekartan esittelyssä. Bahrain omistaa aiheen kokonaisella
+           * sivulla, joten tämä nosto kertoo 12.8.2026 alkaen itse
+           * kuvasta: siitä, miten Euroopan lukija näki lahden.
+           *
+           * Kuva on 829 px leveä eli alle nykysäännön, mutta se on
+           * lehden aihe eikä kuvitus — samaa kaiverrusta ei ole
+           * Commonsissa suurempana.
+           */
+          otsikko: 'Näin Lontoo näki helmenpyynnin',
           tiedosto: 'The Pearl Fishery in the Persian Gulf - The Graphic 1881.jpg',
-          teksti: 'Ennen öljyä Dubai eli helmistä. Kesäkuusta syyskuuhun '
-            + 'purjeveneet lähtivät lahdelle, ja sukeltajat menivät pohjaan '
-            + 'ilman happilaitteita: nenässä oli luinen puristin, vyössä '
-            + 'kivipaino ja kaulassa kori simpukoille. Pohjassa oltiin '
-            + 'minuutin verran, ja sukelluksia tehtiin kymmeniä päivässä. '
-            + 'Ammatti katosi nopeasti 1930-luvulla, kun Japanissa opittiin '
-            + 'kasvattamaan helmiä viljellysti ja maailman talous romahti. '
-            + 'Öljyä löytyi vasta 1966.',
-          selite: 'Vanha kaiverrus vuodelta 1881: purjeveneitä ankkurissa, '
-            + 'sukeltajia menossa alas ja pohjassa työssä. Reunakuvissa näkyy '
-            + 'sukeltajan nenäpuristin ja simpukkakori.',
+          teksti: 'Ennen öljyä lahden ranta eli helmistä, ja Euroopassa '
+            + 'siitä tiedettiin sen verran kuin kuvalehdet kertoivat. '
+            + 'Lontoolainen The Graphic julkaisi 1. lokakuuta 1881 koko '
+            + 'sivun kaiverruksen, joka on jaettu neljään numeroituun '
+            + 'osaan: sukeltaja, ankkurissa odottava veneistö, sukeltajat '
+            + 'työssä pohjassa ja välineet omana piirroksenaan. Lehti '
+            + 'kutsui pikkuveneiden joukkoa hyttyslaivastoksi. Piirtäjää '
+            + 'ei tiedetä, eikä hän luultavasti ollut paikalla: kuva on '
+            + 'tehty matkakertomusten mukaan, ja siksi se kertoo yhtä '
+            + 'paljon lukijoistaan kuin lahdesta.',
+          selite: 'The Graphicin kaiverrus vuodelta 1881: purjeveneitä '
+            + 'ankkurissa, sukeltajia menossa alas ja pohjassa työssä. '
+            + 'Reunakuvissa näkyy sukeltajan nenäpuristin ja '
+            + 'simpukkakori.',
           lahde: 'Tuntematon kaivertaja, Wikimedia Commons (public domain)',
-          wiki: 'Helmenkalastus',
         },
         {
           otsikko: 'Metrossa ei ole kuljettajaa',
