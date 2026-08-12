@@ -76,14 +76,26 @@ const MODULES = [
    * eteenpäin: älä lisää tänne moduulia, jota mikään listalla oleva ei
    * staattisesti tuo.
    *
-   * HUOM: yhden tiedoston versio ei silti käynnisty. Samanlaisia
-   * törmäyksiä on vielä ainakin viisitoista muuta, ja ne ovat vanhempia
-   * kuin tämä rivi (mitattu 4.8.2026 myös HEADin dist-tiedostosta):
-   * africa-puzzles.js ja europe-puzzles.js julistavat samat kahdeksan
-   * nimeä, KEHITTAJA_AVAIN on kahdesti, JARVET ja JOET kolmesti,
-   * hash01 kahdesti. Yksikään testi ei näe niitä, koska KOKOAMINEN
-   * onnistuu virheittä ja vika on vasta ajossa. Kunnollinen korjaus on
-   * kääriä jokainen moduuli omaan sulkeumaansa; se on oma työnsä.
+   * Loput kuusitoista törmäystä on nyt purettu nimeämällä (12.8.2026):
+   * europe-puzzles.js sai omat euro-alkuiset apurit ja EUROPE_-vakiot,
+   * pulmien piirtäjät ovat piirraAfrikanPulma / piirraEuroopanPulma,
+   * omistus.js KEHITTAJA_TILA_AVAIN, sound.js ZOOM_PEHMENNYS_PISTEET,
+   * rules.js hashLuku01, maailmankartta.js LAHDEPAKAT, linssi-kielet.js
+   * KIELIKUNNAT, maailmankartta-maasto.js LAUDAN_JARVET/LAUDAN_JOET ja
+   * maasto-nimet-vedet.js JARVINIMET/JOKINIMET. js/ui.js:n nimet jäivät
+   * ennalleen. Tuonneissa EI SAA käyttää aliasta (`import { A as B }`)
+   * silloin kun nimi tarvitaan täällä: alias katoaa import-rivin mukana,
+   * ja niputettu koodi jää viittaamaan olemattomaan B:hen.
+   *
+   * Sama koskee järjestystä: niputus on yhtä näkyvyysaluetta, joten
+   * moduulin, jonka moduulitason koodi lukee toisen vientiä, on oltava
+   * listalla sen JÄLKEEN (ks. middleeast-countries.js ja
+   * maailmankartta-maasto.js alempana). Muuten selain kaatuu
+   * "Cannot access ... before initialization". Yksikään testi ei näe
+   * kumpaakaan vikaa, koska KOKOAMINEN onnistuu virheittä ja vika on
+   * vasta ajossa; tarkista aina dist/matkakirja.html selaimessa.
+   * Kunnollinen korjaus on kääriä jokainen moduuli omaan sulkeumaansa;
+   * se on yhä oma työnsä.
    */
   'js/linssit/rekisteri.js',
   'js/linssit/omistus.js',
@@ -102,8 +114,12 @@ const MODULES = [
   'js/tyohuone-kehitys-data.js',
   'js/packs/tarinakaari.js',
   'js/packs/europe.js',
-  'js/packs/middleeast.js',
+  // middleeast-countries.js ENNEN middleeast.js:ää: niputettu koodi on yhtä
+  // näkyvyysaluetta, ja middleeast.js lukee MIDDLE_EAST_COUNTRY_SHAPESin heti
+  // moduulitasolla. Väärä järjestys kaatuu ajossa ("Cannot access ... before
+  // initialization"), ei kokoamisessa.
   'js/packs/middleeast-countries.js',
+  'js/packs/middleeast.js',
   'js/packs/asia-questions.js',
   'js/packs/asia.js',
   'js/packs/oceania-questions.js',
@@ -116,8 +132,10 @@ const MODULES = [
   'js/packs/suomi.js',
   'js/packs/istanbul-questions.js',
   'js/packs/istanbul.js',
-  'js/packs/maailmankartta.js',
+  // Sama syy kuin edellä: maailmankartta.js lukee MAAILMANKARTAN_MAASTOn
+  // moduulitasolla, joten maasto on niputettava ensin.
   'js/packs/maailmankartta-maasto.js',
+  'js/packs/maailmankartta.js',
   'js/packs/maailmankartta-nimet.js',
   'js/packs/maasto-vedet.js',
   'js/packs/maasto-korkeus.js',

@@ -623,4 +623,4 @@ const KUNNAT = [
   },
 ];
 
-export const KIELET = { kunnat: KUNNAT };
+export const KIELIKUNNAT = { kunnat: KUNNAT };

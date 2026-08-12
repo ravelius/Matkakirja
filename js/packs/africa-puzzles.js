@@ -605,11 +605,11 @@ export const AFRICA_PUZZLES = [
  * piirrokselle, jotta luvut tulevat pulmadatasta eivätkä piirroskoodista —
  * näin piirros ja vastausvaihtoehdot eivät voi eriytyä toisistaan.
  */
-export function drawPuzzle(svg, id, data) {
+export function piirraAfrikanPulma(svg, id, data) {
   SKETCHES[id]?.(svg, data);
 }
 
 /** Onko pulmalle olemassa piirros? Testit vartioivat tätä. */
-export function hasSketch(id) {
+export function onAfrikanPulma(id) {
   return typeof SKETCHES[id] === 'function';
 }

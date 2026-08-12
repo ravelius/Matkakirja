@@ -90,11 +90,11 @@ function ensimmainenOmistamaton(omat, ehto) {
  * Avain luetaan suoraan localStoragesta eikä js/ui.js:n kautta:
  * js/ui.js tuo tämän tiedoston, joten tuonti takaisin olisi kehä.
  */
-const KEHITTAJA_AVAIN = 'matkakirja-kehittaja';
+const KEHITTAJA_TILA_AVAIN = 'matkakirja-kehittaja';
 
 function kehittajaTila() {
   try {
-    return globalThis.localStorage?.getItem(KEHITTAJA_AVAIN) === '1';
+    return globalThis.localStorage?.getItem(KEHITTAJA_TILA_AVAIN) === '1';
   } catch {
     return false; // yksityinen selaus
   }

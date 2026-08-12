@@ -22,7 +22,7 @@
 // selitys    1-2 lausetta aikuiselle lukijalle: jotain, mitä kartalta
 //            ei näe.
 
-const JOET = [
+const JOKINIMET = [
   { avain: 'Jangtse', nimi: 'Jangtse', tarkeys: 1, pituus: 1611.5, wiki: 'Jangtse',
     selitys: 'Jangtse on Aasian pisin ja maailman kolmanneksi pisin joki; Kiinassa siitä käytetään nimeä Changjiang, ”pitkä joki”. Se laskee Itä-Kiinan mereen Shanghain pohjoispuolella.' },
   { avain: 'Volga', nimi: 'Volga', tarkeys: 1, pituus: 1473.2, wiki: 'Volga',
@@ -271,7 +271,7 @@ const JOET = [
     selitys: 'Shatt al-Arab syntyy Eufratin ja Tigriksen yhtyessä ja virtaa noin 200 kilometriä Persianlahteen. Se on Irakin tärkein meriyhteys, sillä maalla on rannikkoa vain 40 kilometriä.' },
 ];
 
-const JARVET = [
+const JARVINIMET = [
   { avain: 'Kaspianmeri', nimi: 'Kaspianmeri', tarkeys: 1, pituus: 423.1, wiki: 'Kaspianmeri',
     selitys: 'Kaspianmeri on suolainen sisämeri Euroopan ja Aasian rajalla, ja järveksi luettuna ylivoimaisesti maailman suurin. Sen pinta on merenpinnan alapuolella, eikä siitä lähde vettä minnekään.' },
   { avain: 'Baikal', nimi: 'Baikal', tarkeys: 1, pituus: 278.1, wiki: 'Baikaljärvi',
@@ -350,4 +350,4 @@ const JARVET = [
     selitys: 'Tšadjärvi on neljän valtion alueella ja keskisyvyydeltään vain puolitoista metriä. Se kuivui rajusti 1960-luvulta 1980-luvulle, ja kartan muoto on siksi vain suuntaa antava.' },
 ];
 
-export const VESISTONIMET = { joet: JOET, jarvet: JARVET };
+export const VESISTONIMET = { joet: JOKINIMET, jarvet: JARVINIMET };

@@ -777,8 +777,10 @@ function vauhtiKayra(pehmennys, matalin = 0.76, korkein = 1.02, pisteita = 28) {
 
 // Sama pehmennys kuin kartan liu'ulla (js/ui.js ZOOM_PEHMENNYS). Jos se
 // muuttuu siellä, muuta myös tässä — ääni ja kuva seuraavat toisiaan.
-const ZOOM_PEHMENNYS = [0.68, 0, 0.3, 1];
-const ZOOM_VAUHTI = vauhtiKayra(ZOOM_PEHMENNYS);
+// Nimi on eri kuin ui.js:ssä, koska yhden tiedoston versio niputtaa moduulit
+// samaan näkyvyysalueeseen: samanniminen const kahdesti kaataisi koko sivun.
+const ZOOM_PEHMENNYS_PISTEET = [0.68, 0, 0.3, 1];
+const ZOOM_VAUHTI = vauhtiKayra(ZOOM_PEHMENNYS_PISTEET);
 const ZOOM_VAUHTI_MIN = Math.min(...ZOOM_VAUHTI);
 const ZOOM_VAUHTI_MAX = Math.max(...ZOOM_VAUHTI);
 

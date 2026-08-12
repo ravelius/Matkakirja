@@ -410,7 +410,7 @@ ${TUONNIT.map((t) => `import { ${t.vienti} } from '${t.tiedosto}';`).join('\n')}
 import { themedTokenTypes } from '../tokens.js';
 import { MAAILMANKARTAN_MAASTO } from './maailmankartta-maasto.js';
 
-const LAHTEET = [${TUONNIT.map((t) => t.vienti).join(', ')}];
+const LAHDEPAKAT = [${TUONNIT.map((t) => t.vienti).join(', ')}];
 
 /*
  * Yhdistää lähdepakettien kysymyskorit lajeittain.
@@ -435,13 +435,13 @@ function yhdistaKysymykset() {
       kori.push(kysymys);
     }
   };
-  for (const pack of LAHTEET) {
+  for (const pack of LAHDEPAKAT) {
     for (const [laji, lista] of Object.entries(pack.questions ?? {})) {
       if (laji === 'general') continue;
       lisaa(laji, lista);
     }
   }
-  for (const pack of LAHTEET) lisaa('general', pack.questions?.general ?? []);
+  for (const pack of LAHDEPAKAT) lisaa('general', pack.questions?.general ?? []);
   return ulos;
 }
 
@@ -458,7 +458,7 @@ function yksilolliset(lista) {
 
 /** Yhdistää paikkakohtaiset tiedot; kaupunkitunnus on avain. */
 function yhdistaTiedot(kentta) {
-  return Object.assign({}, ...LAHTEET.map((p) => p[kentta] ?? {}));
+  return Object.assign({}, ...LAHDEPAKAT.map((p) => p[kentta] ?? {}));
 }
 
 const OUTLINES = [
@@ -503,7 +503,7 @@ export const MAAILMANKARTTA = {
   },
   cities: CITIES,
   edges: EDGES,
-  airRoutes: LAHTEET.flatMap((p) => p.airRoutes ?? []),
+  airRoutes: LAHDEPAKAT.flatMap((p) => p.airRoutes ?? []),
   islands: ${JSON.stringify(islands)},
   minCityDistance: 60,
 
@@ -515,8 +515,8 @@ export const MAAILMANKARTTA = {
 
   questions: yhdistaKysymykset(),
   placeFacts: yhdistaTiedot('placeFacts'),
-  duels: yksilolliset(LAHTEET.flatMap((p) => p.duels ?? [])),
-  puzzles: yksilolliset(LAHTEET.flatMap((p) => p.puzzles ?? [])),
+  duels: yksilolliset(LAHDEPAKAT.flatMap((p) => p.duels ?? [])),
+  puzzles: yksilolliset(LAHDEPAKAT.flatMap((p) => p.puzzles ?? [])),
   texts: EUROPE.texts,
 
   decor: {

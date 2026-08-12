@@ -28,8 +28,8 @@ import { Game } from './game.js';
 import { packById } from './pack.js';
 import { TARINAKAARI } from './packs/tarinakaari.js';
 import { asetaKuva } from './media.js';
-import { drawPuzzle as piirraAfrikanPulma, hasSketch as afrikanPulma } from './packs/africa-puzzles.js';
-import { drawPuzzle as piirraEuroopanPulma } from './packs/europe-puzzles.js';
+import { piirraAfrikanPulma, onAfrikanPulma } from './packs/africa-puzzles.js';
+import { piirraEuroopanPulma } from './packs/europe-puzzles.js';
 import {
   AFRICA_VALOKUVAT, lippuUrl, lippuVara, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
@@ -111,7 +111,7 @@ function kuvapooli(pack) {
 
 /** Pulman piirros oikeasta laudasta — sama jako kuin ui.js:ssä. */
 function piirraPulma(svg, id, data) {
-  if (afrikanPulma(id)) piirraAfrikanPulma(svg, id, data);
+  if (onAfrikanPulma(id)) piirraAfrikanPulma(svg, id, data);
   else piirraEuroopanPulma(svg, id, data);
 }
 

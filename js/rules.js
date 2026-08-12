@@ -42,7 +42,7 @@ function densify(points, perSpan = 14) {
 }
 
 /** Deterministinen 0–1 -arvo merkkijonosta (sama kuin kartan piirrossa). */
-function hash01(key) {
+function hashLuku01(key) {
   let h = 2166136261;
   for (let i = 0; i < key.length; i++) {
     h ^= key.charCodeAt(i);
@@ -69,7 +69,7 @@ export function edgePolyline(edge, cityById, map = null) {
     const ny = dx / len;
     const bend = Math.min(len * 0.035, 7);
     waypoints = [0.33, 0.68].map((t, i) => {
-      const swing = (hash01(`${edge.id}:bend:${i}`) - 0.5) * 2 * bend;
+      const swing = (hashLuku01(`${edge.id}:bend:${i}`) - 0.5) * 2 * bend;
       return [a.x + dx * t + nx * swing, a.y + dy * t + ny * swing];
     });
   }

@@ -15,9 +15,9 @@
 
 import { el } from '../mapart.js';
 
-const ink = (d, parent) => el('path', { d, class: 'ink' }, parent);
-const fill = (d, parent) => el('path', { d, class: 'ink-fill' }, parent);
-const text = (x, y, s, parent, size = 13, anchor = 'middle') => {
+const euroInk = (d, parent) => el('path', { d, class: 'ink' }, parent);
+const euroFill = (d, parent) => el('path', { d, class: 'ink-fill' }, parent);
+const euroText = (x, y, s, parent, size = 13, anchor = 'middle') => {
   const t = el('text', {
     x, y, class: 'ink-text', 'font-size': size, 'text-anchor': anchor,
   }, parent);
@@ -25,8 +25,8 @@ const text = (x, y, s, parent, size = 13, anchor = 'middle') => {
   return t;
 };
 
-const poimi = (rng, lista) => lista[Math.floor(rng() * lista.length)];
-const sekoita = (rng, lista) => {
+const euroPoimi = (rng, lista) => lista[Math.floor(rng() * lista.length)];
+const euroSekoita = (rng, lista) => {
   const ulos = [...lista];
   for (let i = ulos.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
@@ -46,8 +46,8 @@ const ROMAANIT = [
 ];
 
 function arvoRoomalaiset(rng) {
-  const v = poimi(rng, ROMAANIT);
-  const options = sekoita(rng, [v.oikea, ...v.muut]).map(String);
+  const v = euroPoimi(rng, ROMAANIT);
+  const options = euroSekoita(rng, [v.oikea, ...v.muut]).map(String);
   return {
     sketch: { rivit: v.rivit, arvot: v.arvot, kysytty: v.kysytty },
     options,
@@ -60,19 +60,19 @@ const piirraRoomalaiset = (svg, data) => {
   const rivit = d.rivit ?? ROMAANIT[0].rivit;
   const arvot = d.arvot ?? ROMAANIT[0].arvot;
   svg.setAttribute('viewBox', '0 0 260 150');
-  text(130, 18, 'KIVEEN HAKATUT LUVUT', svg, 11);
-  ink('M28,26 L232,26', svg);
+  euroText(130, 18, 'KIVEEN HAKATUT LUVUT', svg, 11);
+  euroInk('M28,26 L232,26', svg);
   rivit.forEach((rivi, i) => {
     const y = 52 + i * 26;
-    text(72, y, rivi, svg, 19);
-    text(128, y, '=', svg, 14);
-    text(172, y, String(arvot[i]), svg, 17);
+    euroText(72, y, rivi, svg, 19);
+    euroText(128, y, '=', svg, 14);
+    euroText(172, y, String(arvot[i]), svg, 17);
   });
-  ink('M28,124 L232,124', svg);
+  euroInk('M28,124 L232,124', svg);
   const y = 143;
-  text(72, y, d.kysytty ?? ROMAANIT[0].kysytty, svg, 19);
-  text(128, y, '=', svg, 14);
-  text(172, y, '?', svg, 19);
+  euroText(72, y, d.kysytty ?? ROMAANIT[0].kysytty, svg, 19);
+  euroText(128, y, '=', svg, 14);
+  euroText(172, y, '?', svg, 19);
 };
 
 // --- 2. Pylväiden päät ------------------------------------------------------
@@ -83,21 +83,21 @@ const PYLVAAT = ['doorilainen', 'joonialainen', 'korinttilainen'];
 
 const piirraPaa = (x, y, tyyli, p) => {
   // Runko: uurrettu pylväs.
-  fill(`M${x - 11},${y} L${x + 11},${y} L${x + 9},${y + 46} L${x - 9},${y + 46} Z`, p);
-  for (const dx of [-5, 0, 5]) ink(`M${x + dx},${y + 4} L${x + dx},${y + 44}`, p);
+  euroFill(`M${x - 11},${y} L${x + 11},${y} L${x + 9},${y + 46} L${x - 9},${y + 46} Z`, p);
+  for (const dx of [-5, 0, 5]) euroInk(`M${x + dx},${y + 4} L${x + dx},${y + 44}`, p);
   if (tyyli === 'doorilainen') {
     // Koruton laatta.
-    fill(`M${x - 15},${y - 10} L${x + 15},${y - 10} L${x + 15},${y} L${x - 15},${y} Z`, p);
+    euroFill(`M${x - 15},${y - 10} L${x + 15},${y - 10} L${x + 15},${y} L${x - 15},${y} Z`, p);
   } else if (tyyli === 'joonialainen') {
     // Kaksi kiehkuraa eli voluuttaa.
-    ink(`M${x - 15},${y - 4} L${x + 15},${y - 4}`, p);
-    ink(`M${x - 8},${y - 6} q-9,-2 -8,-7 q1,-5 6,-4 q4,1 3,4`, p);
-    ink(`M${x + 8},${y - 6} q9,-2 8,-7 q-1,-5 -6,-4 q-4,1 -3,4`, p);
+    euroInk(`M${x - 15},${y - 4} L${x + 15},${y - 4}`, p);
+    euroInk(`M${x - 8},${y - 6} q-9,-2 -8,-7 q1,-5 6,-4 q4,1 3,4`, p);
+    euroInk(`M${x + 8},${y - 6} q9,-2 8,-7 q-1,-5 -6,-4 q-4,1 -3,4`, p);
   } else {
     // Akantuksen lehdet.
-    ink(`M${x - 14},${y - 2} L${x + 14},${y - 2}`, p);
+    euroInk(`M${x - 14},${y - 2} L${x + 14},${y - 2}`, p);
     for (const dx of [-9, 0, 9]) {
-      ink(`M${x + dx},${y - 3} q-4,-8 0,-14 q4,6 0,14`, p);
+      euroInk(`M${x + dx},${y - 3} q-4,-8 0,-14 q4,6 0,14`, p);
     }
   }
 };
@@ -145,8 +145,8 @@ const PYLVASKUVAT = [
 ];
 
 function arvoPylvaat(rng) {
-  const kysytty = poimi(rng, PYLVAAT);
-  const jarjestys = sekoita(rng, PYLVASKUVAT);
+  const kysytty = euroPoimi(rng, PYLVAAT);
+  const jarjestys = euroSekoita(rng, PYLVASKUVAT);
   return {
     sketch: { kysytty },
     options: jarjestys.map((k) => k.nimi),
@@ -164,9 +164,9 @@ function arvoPylvaat(rng) {
 const piirraPylvaat = (svg, data) => {
   const kysytty = data?.kysytty ?? PYLVAAT[1];
   svg.setAttribute('viewBox', '0 0 200 120');
-  text(100, 16, 'ISOISÄN LUONNOS', svg, 11);
+  euroText(100, 16, 'ISOISÄN LUONNOS', svg, 11);
   piirraPaa(100, 44, kysytty, svg);
-  text(100, 112, 'Mikä valokuvista näyttää saman pään?', svg, 9);
+  euroText(100, 112, 'Mikä valokuvista näyttää saman pään?', svg, 9);
 };
 
 // --- 3. Suola-altaat --------------------------------------------------------
@@ -179,7 +179,7 @@ function arvoSuolaaltaat(rng) {
   const paivia = 4 + Math.floor(rng() * 3);  // 4–6 päivää
   const oikea = haihtuu * paivia;
   const muut = [oikea + haihtuu, oikea - haihtuu, oikea + haihtuu * 2];
-  const syvyydet = sekoita(rng, [oikea, ...muut]);
+  const syvyydet = euroSekoita(rng, [oikea, ...muut]);
   const kirjaimet = ['A', 'B', 'C', 'D'];
   const options = kirjaimet.map((k, i) => `Allas ${k} (${syvyydet[i]} cm)`);
   return {
@@ -192,18 +192,18 @@ function arvoSuolaaltaat(rng) {
 const piirraSuolaaltaat = (svg, data) => {
   const d = data ?? { syvyydet: [8, 10, 12, 14], haihtuu: 2, paivia: 5, kirjaimet: ['A', 'B', 'C', 'D'] };
   svg.setAttribute('viewBox', '0 0 260 160');
-  text(130, 16, 'SUOLA-ALTAAT — VEDEN SYVYYS', svg, 11);
+  euroText(130, 16, 'SUOLA-ALTAAT — VEDEN SYVYYS', svg, 11);
   d.syvyydet.forEach((cm, i) => {
     const x = 26 + i * 58;
     // Allas: matala laatikko, jonka pohjalla vettä.
-    ink(`M${x},44 L${x},96 L${x + 44},96 L${x + 44},44`, svg);
-    fill(`M${x + 2},${96 - Math.min(48, cm * 3)} L${x + 42},${96 - Math.min(48, cm * 3)} L${x + 42},94 L${x + 2},94 Z`, svg);
-    text(x + 22, 112, `${cm} cm`, svg, 12);
-    text(x + 22, 36, d.kirjaimet[i], svg, 13);
+    euroInk(`M${x},44 L${x},96 L${x + 44},96 L${x + 44},44`, svg);
+    euroFill(`M${x + 2},${96 - Math.min(48, cm * 3)} L${x + 42},${96 - Math.min(48, cm * 3)} L${x + 42},94 L${x + 2},94 Z`, svg);
+    euroText(x + 22, 112, `${cm} cm`, svg, 12);
+    euroText(x + 22, 36, d.kirjaimet[i], svg, 13);
   });
-  ink('M14,124 L246,124', svg);
-  text(130, 140, `Vettä haihtuu ${d.haihtuu} cm päivässä.`, svg, 11);
-  text(130, 154, `Suola on valmista, kun allas on kuiva ${d.paivia} päivän kuluttua.`, svg, 11);
+  euroInk('M14,124 L246,124', svg);
+  euroText(130, 140, `Vettä haihtuu ${d.haihtuu} cm päivässä.`, svg, 11);
+  euroText(130, 154, `Suola on valmista, kun allas on kuiva ${d.paivia} päivän kuluttua.`, svg, 11);
 };
 
 // --- 4. Geysirin kello ------------------------------------------------------
@@ -230,28 +230,28 @@ function arvoGeysir(rng) {
     lisaaMinuutit(alku, vali * 3 + 2),
     lisaaMinuutit(alku, vali * 4),
   ];
-  const options = sekoita(rng, [oikea, ...muut]);
+  const options = euroSekoita(rng, [oikea, ...muut]);
   return { sketch: { ajat }, options, correct: options.indexOf(oikea) };
 }
 
 const piirraGeysir = (svg, data) => {
   const ajat = data?.ajat ?? ['10:00', '10:07', '10:14'];
   svg.setAttribute('viewBox', '0 0 300 158');
-  text(150, 16, 'GEYSIRIN PURKAUKSET', svg, 11);
-  ink('M20,106 L280,106', svg);
+  euroText(150, 16, 'GEYSIRIN PURKAUKSET', svg, 11);
+  euroInk('M20,106 L280,106', svg);
   const xs = [56, 118, 180, 242];
   xs.forEach((x, i) => {
     if (i < 3) {
       // Vesipatsas ylös maasta.
-      ink(`M${x},106 L${x - 7},74 L${x - 2},66 L${x},56 L${x + 3},68 L${x + 7},78 L${x},106`, svg);
-      text(x, 124, ajat[i], svg, 13);
+      euroInk(`M${x},106 L${x - 7},74 L${x - 2},66 L${x},56 L${x + 3},68 L${x + 7},78 L${x},106`, svg);
+      euroText(x, 124, ajat[i], svg, 13);
     } else {
-      text(x, 82, '?', svg, 22);
-      text(x, 124, '?', svg, 14);
+      euroText(x, 82, '?', svg, 22);
+      euroText(x, 124, '?', svg, 14);
     }
   });
-  ink('M20,136 L280,136', svg);
-  text(150, 151, 'Purkausten väli on aina sama.', svg, 11);
+  euroInk('M20,136 L280,136', svg);
+  euroText(150, 151, 'Purkausten väli on aina sama.', svg, 11);
 };
 
 // --- 5. Vuoroveden laiturit -------------------------------------------------
@@ -264,7 +264,7 @@ function arvoLaiturit(rng) {
   const yli2 = yli1 + 10 + Math.floor(rng() * 2) * 5;
   const ali1 = vesi - 5 - Math.floor(rng() * 2) * 5;
   const ali2 = ali1 - 10 - Math.floor(rng() * 2) * 5;
-  const korkeudet = sekoita(rng, [yli1, yli2, ali1, ali2]);
+  const korkeudet = euroSekoita(rng, [yli1, yli2, ali1, ali2]);
   const options = korkeudet.map((cm) => `${cm} cm`);
   return { sketch: { korkeudet, vesi }, options, correct: korkeudet.indexOf(yli1) };
 }
@@ -274,20 +274,20 @@ const piirraLaiturit = (svg, data) => {
   const pohja = 138;
   const y = (cm) => pohja - cm * 0.7;
   svg.setAttribute('viewBox', '0 0 300 168');
-  text(150, 16, 'VUOROVESI JA KULKUSILLAT', svg, 11);
+  euroText(150, 16, 'VUOROVESI JA KULKUSILLAT', svg, 11);
   const yv = y(d.vesi);
-  fill(`M14,${yv.toFixed(1)} L286,${yv.toFixed(1)} L286,${pohja} L14,${pohja} Z`, svg);
-  ink(`M14,${yv.toFixed(1)} L286,${yv.toFixed(1)}`, svg);
+  euroFill(`M14,${yv.toFixed(1)} L286,${yv.toFixed(1)} L286,${pohja} L14,${pohja} Z`, svg);
+  euroInk(`M14,${yv.toFixed(1)} L286,${yv.toFixed(1)}`, svg);
   const xs = [50, 118, 186, 254];
   d.korkeudet.forEach((cm, i) => {
     const x = xs[i];
     const yp = y(cm).toFixed(1);
-    ink(`M${x - 16},${yp} L${x + 16},${yp}`, svg);
-    ink(`M${x - 12},${yp} L${x - 12},${pohja}`, svg);
-    ink(`M${x + 12},${yp} L${x + 12},${pohja}`, svg);
-    text(x, y(cm) - 6, `${cm} cm`, svg, 11);
+    euroInk(`M${x - 16},${yp} L${x + 16},${yp}`, svg);
+    euroInk(`M${x - 12},${yp} L${x - 12},${pohja}`, svg);
+    euroInk(`M${x + 12},${yp} L${x + 12},${pohja}`, svg);
+    euroText(x, y(cm) - 6, `${cm} cm`, svg, 11);
   });
-  text(150, pohja + 16, `Vesi nousee ${d.vesi} cm.`, svg, 11);
+  euroText(150, pohja + 16, `Vesi nousee ${d.vesi} cm.`, svg, 11);
 };
 
 // --- 6. Tuulikukko ----------------------------------------------------------
@@ -306,9 +306,9 @@ const SUUNNAT = [
 ];
 
 function arvoKukko(rng) {
-  const oikea = poimi(rng, SUUNNAT);
-  const muut = sekoita(rng, SUUNNAT.filter((s) => s.avain !== oikea.avain)).slice(0, 3);
-  const options = sekoita(rng, [oikea, ...muut]).map((s) => s.avain);
+  const oikea = euroPoimi(rng, SUUNNAT);
+  const muut = euroSekoita(rng, SUUNNAT.filter((s) => s.avain !== oikea.avain)).slice(0, 3);
+  const options = euroSekoita(rng, [oikea, ...muut]).map((s) => s.avain);
   return { sketch: { kulma: oikea.kulma }, options, correct: options.indexOf(oikea.avain) };
 }
 
@@ -317,33 +317,33 @@ const piirraKukko = (svg, data) => {
   const cx = 100;
   const cy = 106;
   svg.setAttribute('viewBox', '0 0 200 200');
-  text(cx, 18, 'TUULIKUKKO', svg, 11);
+  euroText(cx, 18, 'TUULIKUKKO', svg, 11);
   // Pääilmansuunnat kirjaimin.
-  text(cx, cy - 72, 'P', svg, 13);
-  text(cx + 80, cy + 4, 'I', svg, 13);
-  text(cx, cy + 84, 'E', svg, 13);
-  text(cx - 80, cy + 4, 'L', svg, 13);
-  ink(`M${cx},${cy - 62} L${cx},${cy + 62}`, svg);
-  ink(`M${cx - 62},${cy} L${cx + 62},${cy}`, svg);
+  euroText(cx, cy - 72, 'P', svg, 13);
+  euroText(cx + 80, cy + 4, 'I', svg, 13);
+  euroText(cx, cy + 84, 'E', svg, 13);
+  euroText(cx - 80, cy + 4, 'L', svg, 13);
+  euroInk(`M${cx},${cy - 62} L${cx},${cy + 62}`, svg);
+  euroInk(`M${cx - 62},${cy} L${cx + 62},${cy}`, svg);
   const rad = (kulma * Math.PI) / 180;
   const ux = Math.cos(rad);
   const uy = Math.sin(rad);
   const P = (a, p) => `${(cx + ux * a - uy * p).toFixed(1)},${(cy + uy * a + ux * p).toFixed(1)}`;
   // Runko: lyhyt varsi, jonka päässä kukko. Pyrstö jää tahallaan pieneksi,
   // jottei se muistuta toista nuolenkärkeä — suunnan kertoo umpinainen nokka.
-  ink(`M${P(-30, 0)} L${P(30, 0)}`, svg);
+  euroInk(`M${P(-30, 0)} L${P(30, 0)}`, svg);
   // Vartalo pyöreänä möykkynä.
-  fill(`M${P(30, 7)} L${P(6, 8)} L${P(-18, 5)} L${P(-18, -5)} L${P(6, -8)} L${P(30, -7)} Z`, svg);
+  euroFill(`M${P(30, 7)} L${P(6, 8)} L${P(-18, 5)} L${P(-18, -5)} L${P(6, -8)} L${P(30, -7)} Z`, svg);
   // Nokka: iso umpinainen kärki eteenpäin — tämä on suunnan osoitin.
-  fill(`M${P(56, 0)} L${P(34, 9)} L${P(34, -9)} Z`, svg);
+  euroFill(`M${P(56, 0)} L${P(34, 9)} L${P(34, -9)} Z`, svg);
   // Harja kahtena piikkinä nokan takana yläpuolella.
-  ink(`M${P(30, -7)} L${P(35, -14)} M${P(22, -8)} L${P(26, -15)}`, svg);
+  euroInk(`M${P(30, -7)} L${P(35, -14)} M${P(22, -8)} L${P(26, -15)}`, svg);
   // Pyrstö: kaksi lyhyttä sulkaa taakse, selvästi nokkaa pienempi.
-  ink(`M${P(-18, -3)} L${P(-32, -10)}`, svg);
-  ink(`M${P(-18, 3)} L${P(-32, 10)}`, svg);
+  euroInk(`M${P(-18, -3)} L${P(-32, -10)}`, svg);
+  euroInk(`M${P(-18, 3)} L${P(-32, 10)}`, svg);
 };
 
-export const GENERATORS = {
+export const EUROPE_GENERATORS = {
   roomalaiset: arvoRoomalaiset,
   pylvaat: arvoPylvaat,
   suolaaltaat: arvoSuolaaltaat,
@@ -352,7 +352,7 @@ export const GENERATORS = {
   kukko: arvoKukko,
 };
 
-const SKETCHES = {
+const EUROPE_SKETCHES = {
   roomalaiset: piirraRoomalaiset,
   pylvaat: piirraPylvaat,
   suolaaltaat: piirraSuolaaltaat,
@@ -365,7 +365,7 @@ const SKETCHES = {
 export const EUROPE_PUZZLES = [
   {
     id: 'roomalaiset',
-    generate: GENERATORS.roomalaiset,
+    generate: EUROPE_GENERATORS.roomalaiset,
     city: 'rooma',
     title: 'Kiveen hakatut luvut',
     selite: 'Piirroksessa: neljä kiveen hakattua lukua. Kolmen ensimmäisen arvo lukee vieressä; neljäs on ratkaistava.',
@@ -376,7 +376,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'pylvaat',
-    generate: GENERATORS.pylvaat,
+    generate: EUROPE_GENERATORS.pylvaat,
     city: 'ateena',
     title: 'Pylväiden päät',
     selite: 'Piirroksessa: isoisän luonnos yhdestä pylväänpäästä. Vaihtoehdot ovat oikeita valokuvia — valitse se, jossa on samanlainen pää.',
@@ -388,7 +388,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'suolaaltaat',
-    generate: GENERATORS.suolaaltaat,
+    generate: EUROPE_GENERATORS.suolaaltaat,
     city: 'dubrovnik',
     title: 'Stonin suola-altaat',
     selite: 'Piirroksessa: neljä allasta, joissa lukee veden syvyys senttimetreinä. Alla lukee, montako senttiä haihtuu päivässä ja monenko päivän kuluttua suolan pitää olla valmis.',
@@ -399,7 +399,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'geysir',
-    generate: GENERATORS.geysir,
+    generate: EUROPE_GENERATORS.geysir,
     city: 'islanti',
     title: 'Geysirin kello',
     selite: 'Piirroksessa: neljä purkausta kellonaikoineen. Kolmen aika lukee alla; neljäs on ratkaistava.',
@@ -410,7 +410,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'laiturit',
-    generate: GENERATORS.laiturit,
+    generate: EUROPE_GENERATORS.laiturit,
     city: 'venetsia',
     title: 'Vuoroveden laiturit',
     selite: 'Piirroksessa: vedenpinta ja neljä kulkusiltaa eri korkeuksilla senttimetreinä. Oikea on matalin silta, joka jää vielä veden yläpuolelle.',
@@ -421,7 +421,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'kukko',
-    generate: GENERATORS.kukko,
+    generate: EUROPE_GENERATORS.kukko,
     city: 'pariisi',
     title: 'Tuulikukko',
     selite: 'Piirroksessa: kirkontornin tuulikukko ja pääilmansuunnat (P pohjoinen, I itä, E etelä, L länsi). Oikea on suunta, johon kukon nokka osoittaa.',
@@ -433,11 +433,11 @@ export const EUROPE_PUZZLES = [
 ];
 
 /** Piirtää Euroopan pulman luonnoksen annettuun SVG-elementtiin. */
-export function drawPuzzle(svg, id, data) {
-  SKETCHES[id]?.(svg, data);
+export function piirraEuroopanPulma(svg, id, data) {
+  EUROPE_SKETCHES[id]?.(svg, data);
 }
 
 /** Onko pulmalle olemassa piirros? Testit vartioivat tätä. */
-export function hasSketch(id) {
-  return typeof SKETCHES[id] === 'function';
+export function onEuroopanPulma(id) {
+  return typeof EUROPE_SKETCHES[id] === 'function';
 }

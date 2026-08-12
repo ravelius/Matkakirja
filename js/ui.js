@@ -24,15 +24,19 @@ import { LAHTEET, LAHTEITA, PELI } from './lahteet.js';
 import {
   fetchArticle, fetchImage, fetchImages, fetchSummary, suurennusportaat,
 } from './wiki.js';
-import { drawPuzzle as piirraAfrikanPulma, hasSketch as afrikanPulma } from './packs/africa-puzzles.js';
-import { drawPuzzle as piirraEuroopanPulma } from './packs/europe-puzzles.js';
+// HUOM: tuonnit ilman aliasta. Yhden tiedoston versio (tools/build-standalone.mjs)
+// niputtaa moduulit samaan näkyvyysalueeseen ja poistaa import-rivit, joten alias
+// katoaisi ja nimi jäisi määrittelemättä. Siksi lautakohtaiset nimet ovat
+// yksilöllisiä jo lähdetiedostoissa.
+import { piirraAfrikanPulma, onAfrikanPulma } from './packs/africa-puzzles.js';
+import { piirraEuroopanPulma } from './packs/europe-puzzles.js';
 
 /**
  * Pulman piirros oikeasta laudasta. Tunnisteet ovat yksilöllisiä yli
  * lautojen, joten oikea piirtäjä löytyy kysymällä.
  */
 function drawPuzzle(svg, id, data) {
-  if (afrikanPulma(id)) piirraAfrikanPulma(svg, id, data);
+  if (onAfrikanPulma(id)) piirraAfrikanPulma(svg, id, data);
   else piirraEuroopanPulma(svg, id, data);
 }
 import { OMAT_TIIVISTELMAT } from './packs/omat-tiivistelmat.js';
