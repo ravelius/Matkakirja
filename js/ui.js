@@ -833,6 +833,17 @@ const VERTAILUVARIT = [
   'maakayra-viiva', 'maakayra-toinen', 'maakayra-kolmas', 'maakayra-neljas',
 ];
 const AUTO_ROLL_MS = 320; // tauko ennen itsestään pyörähtävää noppaa
+/*
+ * NÄKYMÄN KOKOVAHDIN RAJAT (ks. UI vahdiNakymanKokoa).
+ *
+ * Alle 240 pikselin leveys ei ole mikään laite vaan mittausvirhe —
+ * kapeinkin puhelin on 320 px. Neljänneksen romahdus on selvä merkki
+ * siitä, ettei mitta ole vielä asettunut; 120 ms riittää iOS:llä
+ * niputtamaan peräkkäiset resize-tapahtumat yhdeksi.
+ */
+const NAKYMAN_VAHIMMAISLEVEYS = 240;
+const NAKYMAN_KUTISTUMISRAJA = 0.75;
+const NAKYMAN_ELVYTYSVIIVE = 120;
 // Kuinka paljon pergamenttia jatketaan kartan alle avaustekstiä varten.
 const INTRO_SPACE = 0.5;
 // Kuinka paljon lautaa lasketaan yläreunasta aloitusnäkymässä.
@@ -2674,8 +2685,111 @@ export class UI {
     this.fitViewBox();
     this.observer = new ResizeObserver(() => this.fitViewBox());
     this.observer.observe(this.svg.parentElement);
+    this.vahdiNakymanKokoa();
     this.render();
     this.esilataaAarrekuvat();
+  }
+
+  /* --- näkymän koko ja sen elpyminen taustalta ---------------------- */
+
+  /** Näkymän leveys pikseleinä. visualViewport on iOS:llä tarkempi. */
+  mittaaNakyma() {
+    return Math.round(window.visualViewport?.width || window.innerWidth || 0);
+  }
+
+  /**
+   * NÄKYMÄN ELVYTYS (omistajan havainto 13.8.2026 iPadilla:
+   * *"lehti oli ensin leveä ja monipalstainen, ja taustakäynnin
+   * jälkeen se avautui kapeana yksipalstaisena"*).
+   *
+   * Lehtiarkin leveys ja palstojen määrä tulevat näkymän mitasta
+   * (css: .dialog.arkki on 100vw, ja kahden palstan taitto alkaa
+   * 700 pikselistä), ja arkin sisällä on lisäksi piirroksia, jotka
+   * mitoitetaan JS:ssä kortin senhetkisestä leveydestä — kohdekartta,
+   * maakäyrät ja tilastopalkit. WKWebView voi taustalta palatessa
+   * ilmoittaa hetkeksi väärän — pienen tai nollan — näkymäkoon, ja jos
+   * asettelu lasketaan juuri silloin, lehti jää puhelinlevyiseksi
+   * vaikka ruutu on iPadin kokoinen.
+   *
+   * Vahti tekee kaksi asiaa:
+   *
+   *   a) EI KOSKAAN sivuta roskamitalla. Nolla tai epäilyttävän pieni
+   *      luku hylätään, ja jos mitta romahtaa dokumentin ollessa
+   *      piilossa, laskenta lykätään siihen hetkeen, jolloin näkymä on
+   *      taas esillä oikean kokoisena.
+   *   b) Kun oikea koko palaa, AVOINNA OLEVA lehti sivutetaan
+   *      uudelleen itsestään — lehteä ei tarvitse sulkea ja avata.
+   *
+   * Kynnykset ovat tarkoituksella karkeat: puhelimen näppäimistö ja
+   * osoiterivi muuttavat näkymän korkeutta jatkuvasti, mutta LEVEYS
+   * muuttuu vain kääntyessä tai ikkunaa vetämällä — ja silloin
+   * uudelleensivutus on juuri se, mitä halutaan.
+   */
+  vahdiNakymanKokoa() {
+    if (this.nakymaVahti) return;
+    this.nakymanLeveys = this.mittaaNakyma();
+    this.nakymaElvytyksia = 0;
+    this.nakymaVahti = () => this.tarkistaNakyma();
+    window.addEventListener('resize', this.nakymaVahti);
+    window.addEventListener('orientationchange', this.nakymaVahti);
+    window.addEventListener('pageshow', this.nakymaVahti);
+    document.addEventListener('visibilitychange', this.nakymaVahti);
+    window.visualViewport?.addEventListener('resize', this.nakymaVahti);
+  }
+
+  tarkistaNakyma() {
+    if (this.dead) return;
+    const leveys = this.mittaaNakyma();
+    const edellinen = this.nakymanLeveys || 0;
+    const roska = !leveys || leveys < NAKYMAN_VAHIMMAISLEVEYS;
+    const romahti = edellinen > 0 && leveys < edellinen * NAKYMAN_KUTISTUMISRAJA;
+    /*
+     * Roskamitta ja piilossa tapahtunut romahdus jätetään huomiotta,
+     * mutta merkitään: seuraava esiintulo tarkistaa koon uudestaan,
+     * vaikka luku olisi silloin sama kuin ennen romahdusta.
+     */
+    if (roska || (romahti && document.hidden)) {
+      this.nakymaEpavarma = true;
+      return;
+    }
+    if (document.hidden) return;
+    if (leveys === edellinen && !this.nakymaEpavarma) return;
+    this.nakymanLeveys = leveys;
+    this.nakymaEpavarma = false;
+    this.ajastaNakymanElvytys();
+  }
+
+  ajastaNakymanElvytys() {
+    clearTimeout(this.nakymaAjastin);
+    // Pieni odotus: iOS ilmoittaa koon usein ennen kuin asettelu on
+    // ehtinyt sen mukaiseksi, ja peräkkäiset tapahtumat niputtuvat.
+    this.nakymaAjastin = setTimeout(() => {
+      if (this.dead) return;
+      const leveys = this.mittaaNakyma();
+      if (!leveys || leveys < NAKYMAN_VAHIMMAISLEVEYS) return;
+      this.nakymanLeveys = leveys;
+      this.elvytaNakyma();
+    }, NAKYMAN_ELVYTYSVIIVE);
+  }
+
+  /** Asettelu uusiksi oikealla mitalla. Kutsutaan vain kun mitta on kelvollinen. */
+  elvytaNakyma() {
+    this.nakymaElvytyksia = (this.nakymaElvytyksia ?? 0) + 1;
+    /*
+     * Pakotettu asettelun luku. WKWebView jättää taustalta palatessa
+     * vanhan mitan voimaan, kunnes joku sitä kysyy — tämä on se kysyjä.
+     */
+    void document.body.offsetWidth;
+    this.fitViewBox();
+    if (!this.arrivalDialog?.open) return;
+    // Avoinna oleva lehti sivutetaan uudelleen: kortin leveys on nyt
+    // oikea, joten palstat, kohdekartta ja käyrät piirtyvät sen mukaan.
+    const kortti = this.arrivalDialog.querySelector('.dialog-card');
+    const kohta = kortti?.scrollTop ?? 0;
+    this.naytaTutkiSivu(this.tutkiSivu ?? this.tutkiEkaSivu(), { heti: true });
+    // Sivunvaihto vierittää alkuun; elvytys ei ole sivunvaihto, joten
+    // lukukohta palautetaan.
+    if (kortti) kortti.scrollTop = kohta;
   }
 
   /*
@@ -2832,6 +2946,16 @@ export class UI {
       document.removeEventListener('visibilitychange', this.tarkkuusVahti);
       this.tarkkuusVahti = null;
     }
+    // Näkymän kokovahti kuuntelee ikkunaa ja dokumenttia — sama sääntö.
+    if (this.nakymaVahti) {
+      window.removeEventListener('resize', this.nakymaVahti);
+      window.removeEventListener('orientationchange', this.nakymaVahti);
+      window.removeEventListener('pageshow', this.nakymaVahti);
+      document.removeEventListener('visibilitychange', this.nakymaVahti);
+      window.visualViewport?.removeEventListener('resize', this.nakymaVahti);
+      this.nakymaVahti = null;
+    }
+    clearTimeout(this.nakymaAjastin);
     // Sama koskee alanappirivin liukua sulkevaa karttanapautusta.
     if (this.liukuKuuntelija) {
       document.removeEventListener('pointerdown', this.liukuKuuntelija);

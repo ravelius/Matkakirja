@@ -8,6 +8,52 @@
  */
 [hidden] { display: none !important; }
 
+/*
+ * PÄIVITYSRUUTU (omistajan havainto 13.8.2026: "ruma välitila").
+ *
+ * Näkyy vain päivityksen jälkeisen latauksen ajan (index.html:n
+ * pikkuskripti + js/main.js). Tasainen pelin tumma pohja, keskellä
+ * logo ja yksi rivi tekstiä — ei kehyksiä, ei kortteja, ei mitään
+ * puoliksi rakentunutta.
+ *
+ * Sääntö on tiedoston alussa tarkoituksella: se on ensimmäistä
+ * maalausta varten, eikä se saa jäädä myöhempien sääntöjen taakse.
+ * Värit kirjoitetaan tähän suoraan eikä muuttujina, koska :root-lohko
+ * tulee vasta alempana.
+ */
+.paivitysruutu {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 2rem 1.4rem;
+  background: #1d1610;
+  color: #f3e6d0;
+  text-align: center;
+}
+
+.paivitysruutu-logo {
+  width: min(19rem, 66vw);
+  height: auto;
+  opacity: 0.92;
+}
+
+.paivitysruutu-teksti {
+  margin: 0;
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+  color: #d9a13b;
+}
+
+/* Pelin oma runko pysyy piilossa, kunnes se on rakennettu: puoliksi
+   valmis näkymä ei saa vilkkua päivitysruudun alta. */
+body.paivittyy .app,
+body.paivittyy .rotate-guard { visibility: hidden; }
+
 :root {
   /* Sovelluksen kehys */
   --bg: #1d1610;
@@ -10744,15 +10790,17 @@ body[data-mode] .actions .pollo-paneeli,
 body[data-mode] .actions .pollo-paneeli * { text-shadow: none; }
 
 /*
- * Ehdotukset ovat paneelin ylin osa nyt kun otsikkopalkkia ei ole.
- * Yläpehmuste antaa niille saman ilmavan reunuksen, joka palkilla oli.
+ * Ehdotukset ovat KESKUSTELUVIRRASSA, eivät paneelin yläreunassa
+ * (omistajan havainto 13.8.2026). Aiemmin laatikko oli paneelin oma
+ * ylin osa, jolloin se jäi lukituksi vanhan vastauksen päälle ja näytti
+ * kuuluvan siihen. Nyt se vierii viestien mukana ja saa saman muodon
+ * kuin vastauksen alla olevat jatkokysymykset (.pollo-jatkot).
  */
 .pollo-ehdotukset {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  padding: 0.55rem 0.6rem;
-  border-bottom: 1px solid var(--pollo-viiva);
+  gap: 0.25rem;
+  margin: 0 0 0.6rem;
 }
 
 button.pollo-ehdotus {
@@ -10809,6 +10857,36 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
 }
 
 .pollo-odottaa { color: var(--pollo-muste-himmea); font-style: italic; }
+
+/*
+ * ALLEVIIVATTU LINKKI KESKELLÄ VASTAUSTA (omistajan tilaus 12.8.2026).
+ *
+ * Kun paikallishaku löytää osuvan jutun, vastaustekstin oma maininta
+ * siitä muuttuu linkiksi — erillistä nappia ei silloin tarvita.
+ * Alleviivaus on katkoviiva samalla kynällä kuin varapolun napin
+ * kehys, jotta pelinsisäinen linkki näyttää samalta kummassakin
+ * muodossa.
+ */
+a.pollo-tekstilinkki {
+  color: var(--pollo-korostus);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+a.pollo-tekstilinkki:hover { background: rgba(122, 85, 20, 0.12); }
+
+/* Jatkokysymykset vastauksen alla. Samaa muotoa kuin avausruudun
+   ehdotukset (.pollo-ehdotus), mutta virran sisällä: ne kuuluvat juuri
+   siihen vastaukseen, jonka perässä ne ovat. */
+.pollo-jatkot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0 0 0.6rem;
+}
 
 /* Pelinsisäiset linkit vastauksen alle. Ne rakennetaan paikallisen haun
    tuloksista, ei mallin tekstistä, joten ne osoittavat aina johonkin. */
@@ -10876,16 +10954,27 @@ button.pollo-linkki:hover { background: rgba(122, 85, 20, 0.12); }
   padding: 0.4rem 0.45rem 0.45rem;
 }
 
+/*
+ * Kolme nappia: näppäimistö 1, kaiutin 1, mikrofoni 2 (omistajan
+ * tilaus 12.8.2026). Suhteet tulevat flexistä eivätkä gridistä
+ * tarkoituksella: laite, joka ei osaa sanella tai lukea, piilottaa
+ * oman nappinsa, ja flexissä jäljelle jäävät jakavat rivin samassa
+ * suhteessa — gridissä tilalle jäisi tyhjä sarake.
+ */
 .pollo-sanelu {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   gap: 0.4rem;
 }
 
-/* Molemmat alarivin napit ovat samaa matalaa muotoa. */
+button.pollo-kirjoita { flex: 1 1 0; }
+button.pollo-kaiutin { flex: 1 1 0; }
+button.pollo-mikki { flex: 2 1 0; }
+
+/* Kaikki alarivin napit ovat samaa matalaa muotoa. */
 button.pollo-nappula {
   display: grid;
   place-items: center;
+  min-width: 0;
   min-height: 2.25rem;
   padding: 0.15rem 0.3rem;
   border: 1px solid var(--pollo-viiva);
@@ -10904,6 +10993,36 @@ button.pollo-nappula:disabled { opacity: 0.5; cursor: default; }
  * kirjoitetaan paneelin luokan alle: kartalla .actions-napeille on oma
  * pergamenttisääntö, joka muuten voittaisi tämän.
  */
+/*
+ * Kaiutin päällä: sama täyteinen muoto kuin kuuntelevalla mikillä,
+ * mutta ilman sykettä — vipu on päällä, se ei tee juuri nyt mitään.
+ * Valitsin on paneelin luokan alla samasta syystä kuin mikillä:
+ * kartan .actions-napeilla on oma pergamenttisääntönsä.
+ */
+.pollo-paneeli button.pollo-kaiutin.paalla {
+  background: var(--pollo-korostus);
+  color: #f7f1e2;
+  border-color: var(--pollo-korostus);
+}
+
+/* Kehittäjäkoodin kenttä: näkyy vain kehittäjätilassa, ja sen kuuluu
+   olla huomaamaton — se on työkalu, ei pelin osa. */
+.pollo-kehittaja { display: flex; }
+
+input.pollo-kehittaja-kentta {
+  flex: 1;
+  min-width: 0;
+  padding: 0.3rem 0.45rem;
+  border: 1px dashed var(--pollo-viiva);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--pollo-muste-himmea);
+  font-family: var(--font-type);
+  font-size: 0.8rem;
+}
+
+input.pollo-kehittaja-kentta::placeholder { color: var(--pollo-muste-himmea); opacity: 0.7; }
+
 .pollo-paneeli button.pollo-mikki.kuuntelee {
   background: var(--pollo-korostus);
   color: #f7f1e2;

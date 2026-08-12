@@ -29,10 +29,12 @@ import {
   lueLuku,
   paivaAvain,
   poimiEhdotukset,
+  poimiJatkot,
   sallittuOrigin,
   siivoaHistoria,
   siivoaTeksti,
   tarkistaRajat,
+  vertaaSalaisuus,
 } from './rajat.js';
 
 /*
@@ -78,6 +80,23 @@ esimerkiksi "Tästä ei ole pelissä juttua, mutta yleisesti…". Pelaajan on \
 voitava erottaa, milloin vastaus nojaa tarkistettuun aineistoon ja \
 milloin ei.
 
+SIJAINTI ON ANNETTU, ÄLÄ MYÖTÄILE VÄÄRÄÄ OLETUSTA
+Kontekstin rivit "Kaupunki, jossa pelaaja on" ja "Maa, jossa pelaaja on" \
+tulevat pelin omasta tarkistetusta kartta-aineistosta ja pitävät \
+paikkansa. Jos kysymys on ristiriidassa niiden kanssa — esimerkiksi \
+olettaa kaupungin olevan eri maassa kuin se on — oikaise virhe \
+ystävällisesti heti vastauksen ensimmäisessä lauseessa ("Sofia on \
+Bulgarian pääkaupunki, ei Kreikan") ja vastaa vasta sitten. Älä koskaan \
+toista tai vahvista väärää oletusta. Kontekstissa voi olla myös lehden \
+maaosasto, joka koskee jotakin muuta maata kuin sitä, jossa pelaaja on; \
+sijainti on aina se rivi, jossa lukee "jossa pelaaja on".
+
+ÄLÄ KEKSI FAKTAA
+Pääkaupungit, valtioiden rajat, hallintoalueet, etäisyydet ja vuosiluvut \
+ovat asioita, joissa arvaus on aina väärä vastaus. Jos et ole varma, sano \
+se suoraan ("en ole varma tästä") äläkä keksi hallinnollista tai \
+maantieteellistä väitettä sen paikalle.
+
 MITÄ ET TEE
 - Et ratkaise pelin tehtäviä. Jos pelaaja kysyy visan, kohtaamisen, \
 minitehtävän tai pulman vastausta, kieltäydyt ystävällisesti ja lyhyesti: \
@@ -99,6 +118,32 @@ huudahduksia, ei selittelyä siitä mitä aiot sanoa. Yleensä 2–5 virkettä. 
 Jos kysymys on iso, annat lyhyen vastauksen ja tarjoat yhden tarkennuksen, \
 josta voi jatkaa.`;
 
+/*
+ * JATKOKYSYMYKSET — muoto määrätään täällä palvelimella.
+ *
+ * Peli näyttää jokaisen vastauksen alla 2–3 ehdotusta siitä, mitä
+ * seuraavaksi voisi kysyä. Kehote on osa järjestelmäkehotetta eikä
+ * asiakkaan pyyntöä, joten muotoa ei voi vaihtaa selaimesta.
+ *
+ * Muoto on rivipohjainen eikä JSON: pieni malli kirjoittaa vastauksen
+ * luonnollisena tekstinä, ja JSON-kuoren vaatiminen sotkisi sen
+ * herkästi (lainausmerkit, rivinvaihdot, katkennut sulku). Erotinrivi
+ * "JATKOT:" on triviaali jäsentää ja helppo pudottaa pois, jos malli
+ * unohtaa sen kokonaan.
+ *
+ * Jäsennys on rajat.js:n poimiJatkot, ja se ajetaan AINA — merkintä ei
+ * siis voi vuotaa pelaajan ruudulle, vaikka jäsennys epäonnistuisi.
+ */
+const JATKOKEHOTE = `JATKOKYSYMYKSET
+Päätä jokainen vastauksesi näin: kirjoita vastauksen jälkeen omalle \
+rivilleen pelkkä sana JATKOT: ja sen alle 2–3 riviä, joista jokainen on \
+yksi lyhyt kysymys, jonka pelaaja voisi haluta kysyä seuraavaksi. Yksi \
+kysymys riville, ilman numerointia ja ilman ranskalaisia viivoja, \
+enintään 70 merkkiä, ja jokainen päättyy kysymysmerkkiin. Kysymysten \
+pitää liittyä juuri antamaasi vastaukseen ja olla tosimaailman \
+kysymyksiä — ei pelin tehtäviin, pisteisiin tai juoneen liittyviä. \
+Älä viittaa vastauksessasi näihin riveihin äläkä selitä niitä.`;
+
 /** Ehdotuskehote: erillinen, koska tehtävä on aivan toinen. */
 const EHDOTUSKEHOTE = `Keksi kolme lyhyttä kysymystä, jotka pelaaja voisi \
 haluta kysyä sinulta juuri nyt. Nojaa alla olevaan tilannekuvaukseen: hyvä \
@@ -112,11 +157,38 @@ merkkiä ja päättyy kysymysmerkkiin.`;
 
 /* ------------------------------------------------------------------ */
 
+/**
+ * KEHITTÄJÄKOODI — rajaton käyttö omistajan omalla laitteella.
+ *
+ * Päiväraja on tehty suojaamaan laskua satunnaiselta väärinkäytöltä,
+ * mutta omistaja itse testaa peliä kymmeniä kysymyksiä kerrallaan ja
+ * törmää siihen ensimmäisenä. Jos ympäristössä on salaisuus
+ * POLLO_KEHITTAJAKOODI ja pyynnön otsakkeessa on sama koodi, rajat
+ * ohitetaan.
+ *
+ * Kolme sääntöä pitävät tämän vaarattomana:
+ *   - Ilman asetettua salaisuutta otsake ei tee YHTÄÄN mitään.
+ *   - Vertailu on vakioaikainen (rajat.js vertaaSalaisuus).
+ *   - Laskurit kasvavat silti: käyttö näkyy kuukausiluvussa, vaikka
+ *     se ei pysäytä kehittäjää.
+ *
+ * Koodi ei ole repossa eikä pelin koodissa: omistaja syöttää sen
+ * kehittäjätilassa pöllön paneeliin, ja se jää vain laitteelle.
+ */
+const KEHITTAJA_OTSAKE = 'x-pollo-kehittaja';
+
+function kehittajaOhitus(pyynto, env) {
+  if (!env.POLLO_KEHITTAJAKOODI) return false;
+  return vertaaSalaisuus(pyynto.headers.get(KEHITTAJA_OTSAKE), env.POLLO_KEHITTAJAKOODI);
+}
+
 /** CORS-otsakkeet. Origin kaiutetaan takaisin vain jos se on sallittu. */
 function korsOtsakkeet(origin, sallitut) {
   const otsakkeet = {
     'access-control-allow-methods': 'POST, OPTIONS',
-    'access-control-allow-headers': 'content-type',
+    // Kehittäjäotsake on sallittava erikseen, tai selain ei päästä
+    // esilentoa (OPTIONS) läpi eikä pyyntö lähde lainkaan.
+    'access-control-allow-headers': `content-type, ${KEHITTAJA_OTSAKE}`,
     'access-control-max-age': '86400',
     vary: 'Origin',
   };
@@ -243,7 +315,8 @@ export default {
     const nyt = new Date();
     const pAvain = paivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt);
     const kAvain = kuukausiAvain(nyt);
-    const raja = tarkistaRajat({
+    const kehittaja = kehittajaOhitus(pyynto, env);
+    const raja = kehittaja ? { ok: true } : tarkistaRajat({
       paiva: await lueLaskuri(kv, pAvain),
       kuukausi: await lueLaskuri(kv, kAvain),
       paivaraja: lueLuku(env.POLLO_PAIVARAJA, PAIVARAJA_OLETUS),
@@ -290,12 +363,16 @@ export default {
       viestit.push({ role: 'user', content: kysymys });
 
       const teksti = await kysyMallilta(env, {
-        jarjestelma: JARJESTELMAKEHOTE,
+        jarjestelma: `${JARJESTELMAKEHOTE}\n\n${JATKOKEHOTE}`,
         viestit,
         maxTokens: MAX_TOKENS,
       });
+      // Erotinrivi puretaan aina täällä: pelaajalle menee vastaus ja
+      // erillinen lista, ei koskaan raakaa merkintää.
+      const { vastaus, jatkot } = poimiJatkot(teksti);
       return vastaa({
-        vastaus: teksti || 'En osaa vastata tähän. Kysytkö jotain muuta?',
+        vastaus: vastaus || 'En osaa vastata tähän. Kysytkö jotain muuta?',
+        jatkot,
       }, kors);
     } catch (virhe) {
       // Vain tilakoodi lokiin — ei avainta, ei pelaajan tekstiä.
