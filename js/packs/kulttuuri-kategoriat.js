@@ -7434,4 +7434,187 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * MASQATIN KANSISIVU (nippu 2, 12.8.2026). Aihesivun id on arki,
+   * koska OMN-maalehdellä on vuoret, meri, historia ja luonto —
+   * sama id kaupungilla peittäisi maan sivun (rakennaSivut).
+   */
+  masqat: [
+    {
+      id: 'kaupunki',
+      nimi: 'Masqat',
+      johdanto: 'Masqat on pääkaupunki, jossa tunnetuimmat rakennukset ovat '
+        + 'nuoria: seremoniapalatsi valmistui 1972, suurmoskeija 2001 ja '
+        + 'oopperatalo 2011.',
+      kansikuvat: [
+        {
+          tiedosto: 'Palacio de Al Alam, Mascate, Omán, 2024-08-14, DD 29.jpg',
+          selite: 'Al Alamin palatsi aukion perällä. Molemmin puolin aukiota '
+            + 'jatkuu valkoinen kaarikäytävä, keskellä on punaruskeaksi '
+            + 'kivetty ajotie ja kaksi riviä leikattuja puita, ja '
+            + 'palatsin takaa erottuu paljas vuorenharjanne.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Royal Opera House Muscat, Muscat, Sultanate of Oman.jpg',
+          selite: 'Oopperatalon katsomo permannolta ylöspäin kuvattuna. Kolme '
+            + 'parvea kaartuu salin ympäri, puupinnat on jaettu '
+            + 'kullattuihin ruutuihin, penkit ovat punaiset ja '
+            + 'keskimmäisen parven etureunassa on kullattu tunnus.',
+          lahde: 'Chief National Guard Bureau, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Riyam Park with incense burner Mabkhara (47954080007).jpg',
+          selite: 'Suitsukeastian muotoinen monumentti paljaan kalliokummun '
+            + 'laella Riyamin puistossa. Valkoisen astian kuvussa on '
+            + 'kaarevat aukot, ja alhaalla on puistoa: kukkapenkkejä, '
+            + 'palmuja ja mustaksi maalattu rauta-aita.',
+          lahde: 'Eduard Marmet, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Varastokin kuuluu näyttelyyn',
+          tiedosto: 'National museum of Oman in Muscat (53697743211).jpg',
+          teksti: 'Omanin kansallismuseo avattiin vanhassa Maskatissa 30. '
+            + 'heinäkuuta 2016; perustamisasetus oli annettu kolme vuotta '
+            + 'aiemmin. Rakennuksen pinta-ala on 13 700 neliömetriä, ja '
+            + 'siitä 4 000 neliötä on jaettu neljääntoista pysyvään '
+            + 'näyttelysaliin. Esineitä on 5 466, ja niiden rinnalla '
+            + 'saleissa on 43 digitaalista esityspistettä. '
+            + 'Kokoelmavarasto on avointa tilaa: kävijälle näytetään myös '
+            + 'se työ, joka esineelle tehdään ennen kuin se pääsee '
+            + 'vitriiniin. Museo oli ensimmäinen Lähi-idässä, jonka '
+            + 'opasteissa on näkövammaisille tarkoitettua arabiankielistä '
+            + 'pistekirjoitusta.',
+          selite: 'Kansallismuseon julkisivu vaaleaa kiveä: keskellä on '
+            + 'korkea teräväkärkinen kaari, sivuilla holvikäytävät ja '
+            + 'päissä torneiksi korotetut osat. Katolla liehuu Omanin '
+            + 'lippu, ja takana nousee paljas ruskea vuorenrinne. '
+            + 'Portaiden edessä kulkee rivi mustia pollareita ja ketjuja, '
+            + 'asfaltilla on keltaisia liikennekartioita ja etualalla '
+            + 'punertava kiveys.',
+          lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Turandot avasi talon',
+          tiedosto: 'Royal Opera House Muscat 2.jpg',
+          teksti: 'Sulttaani Qaboos määräsi vuonna 2001 rakennettavaksi '
+            + 'talon, jonka työnimi oli Musiikkitaiteiden talo. Se '
+            + 'avattiin 12. lokakuuta 2011 Puccinin Turandotilla, jota '
+            + 'johti Plácido Domingo. Saliin mahtuu enintään 1 100 '
+            + 'kuulijaa. Talo oli maailmassa ensimmäinen, johon '
+            + 'asennettiin Radio Marconin Mode23-järjestelmä: jokaisen '
+            + 'penkin selkänojassa on oma näyttö. Ensimmäisellä kaudella '
+            + 'lavalla nähtiin Domingon lisäksi Andrea Bocelli ja Renée '
+            + 'Fleming, myöhemmin muun muassa sellisti Yo-Yo Ma ja '
+            + 'Mariinski-teatterin Joutsenlampi.',
+          selite: 'Oopperatalon aula ennen esitystä. Marmoriportaat nousevat '
+            + 'kahtaalle punaista mattoa pitkin, seinissä on tummasta '
+            + 'puusta tehtyjä teräväkärkisiä kaaria ja katossa maalattuja '
+            + 'palkkeja; alhaalla odottaa yleisöä.',
+          lahde: 'Juozas Šalna, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Yksi matto peittää koko lattian',
+          tiedosto: 'Muscat, moschea del sultano qaboos, interno, grande sala di preghiera 01.jpg',
+          teksti: 'Sulttaani Qaboosin suurmoskeija Bawsharissa vihittiin 4. '
+            + 'toukokuuta 2001. Rukoussali on 4 343 neliömetriä, ja sen '
+            + 'lattian peittää yksi ainoa matto: siinä on 1,7 miljoonaa '
+            + 'solmua, se painaa 21 tonnia ja sen kutomiseen meni neljä '
+            + 'vuotta yli kuudeltasadalta tekijältä. Sävyjä on 28, '
+            + 'enimmäkseen kasvivärejä. Katosta riippuu 14 metriä korkea '
+            + 'kruunu, jossa on 600 000 kristallia ja 1 122 lamppua, ja '
+            + 'kruunun sisällä on portaat, joita pitkin lamput '
+            + 'vaihdetaan. Samanlaisia pienempiä kruunuja on talossa 34.',
+          selite: 'Suurmoskeijan päärukoussali. Kupolin keskeltä riippuu '
+            + 'jättimäinen kristallikruunu, holvit on peitetty vihreällä '
+            + 'ja kullalla, perällä erottuu mihrab-syvennys, ja kävijät '
+            + 'kulkevat maton yli levitettyä sinistä kaistaa pitkin.',
+          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Omanilaisen miehen juhlapuvussa on kolme osaa, joilla '
+        + 'jokaisella on oma nimensä, ja vieraan vastaanotossa on oma '
+        + 'järjestyksensä. Molemmat ovat Masqatissa yhä tavallista arkea.',
+      nostot: [
+        {
+          otsikko: 'Kahvi kuului naapuriin ennen kuin se tuoksui',
+          tiedosto: 'Al Dallah, Bait al Zubair Museum, Oman.jpg',
+          teksti: 'Kahwa keitetään vaaleiksi paahdetuista pavuista ja '
+            + 'maustetaan kardemummalla. Sitä ei suodateta, joten juoma '
+            + 'on väkevää ja katkeraa, ja vastapainoksi pöytään tulee '
+            + 'taateleita ja omanilaista halwaa. Keittoastian nimi on '
+            + 'dallah, ja sen tunnistaa kaarevasta nokasta ja '
+            + 'saranoidusta kannesta. Pavut paahdettiin ennen '
+            + 'pitkävartisella rautapannulla ja survottiin puisessa '
+            + 'huhmaressa. Huhmaren kalkkeesta naapurit tiesivät, että '
+            + 'kahvia on tulossa ja että vieraat ovat tervetulleita. '
+            + 'Kuppi, finjan, on pieni ja korvaton.',
+          selite: 'Kuparista ja messingistä tehty dallah Bait al-Zubairin '
+            + 'museossa vanhassa Masqatissa. Pinta on kaiverrettu täyteen '
+            + 'kukka- ja köynnöskuvioita, kansi päättyy piikkiin ja nokka '
+            + 'kaartuu alaspäin kuin linnun nokka.',
+          lahde: 'Reda Kerbush, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Astia kiertää kädestä käteen',
+          tiedosto: 'Incense burner2374pdf.jpg',
+          teksti: 'Suitsuke poltetaan astiassa, jonka nimi on mabkhara tai '
+            + 'majmar. Pohjalle pannaan hehkuvaa puuhiiltä ja hiilten '
+            + 'päälle muutama jyvä lubania eli suitsuketta; savu nousee '
+            + 'suoraan huoneeseen, eikä liekkiä tarvita. Astiat tehdään '
+            + 'Dhofarissa savesta, ja niitä on muotoiltu ja maalattu '
+            + 'etenkin kolmessa kaupungissa: Salalahissa, Mirbatissa ja '
+            + 'Taqahissa. Muoto vaihtelee nelikulmaisesta lieriöön ja '
+            + 'veneeseen. Vieraiden tullessa astia kiertää kädestä '
+            + 'käteen, ja jokainen ohjaa savua vaatteidensa alle ja '
+            + 'hiuksiinsa. Illan päätteeksi sama kierros on kohtelias '
+            + 'merkki siitä, että vierailu on ohi.',
+          selite: 'Savesta poltettu suitsutusastia museovitriinissä. Se on '
+            + 'muotoiltu veneeksi: kokka ja perä nousevat ylös, kannella '
+            + 'seisoo kaksi pientä kupolitornia ja niiden välissä '
+            + 'laatikkomainen koppi. Kylkiin on leikattu kolmiomaisia '
+            + 'reikiä ja maalattu punaruskeaa kuviota. Astia on vaalealla '
+            + 'jalustalla mustaa taustaa vasten.',
+          lahde: 'Mohammed90m, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaulusta ei ole, tupsu on',
+          tiedosto: 'معرض مسقط الدولي للكتاب - نمایشگاه بین المللی کتاب مسقط در کشور عمان 13.jpg',
+          teksti: 'Miehen puku on dishdasha: nilkkaan ulottuva pitkähihainen '
+            + 'kaapu, useimmiten valkoinen. Omanilaisessa mallissa ei ole '
+            + 'kaulusta lainkaan, pääntien sulkevat nyörilenkit, ja '
+            + 'kaulasta roikkuu lyhyt tupsu. Arabiemiraateissa sama tupsu '
+            + 'yltää vyötärölle asti. Päässä on kummah, käsin kirjailtu '
+            + 'lakki. Juhlatilaisuuksissa lakin päälle kääritään massar, '
+            + 'kankaasta sidottu turbaani; omanilaiset eivät käytä sen '
+            + 'pitämiseen mustaa agal-rengasta, joka on tavallinen '
+            + 'muualla Persianlahdella.',
+          selite: 'Kaksi omanilaispoikaa Masqatin kansainvälisillä '
+            + 'kirjamessuilla. Molemmilla on valkoinen dishdasha ja '
+            + 'päässä kirjailtu kummah-lakki, ja pöydän yli kirjapinojen '
+            + 'takaa ojennetaan heille sinistä paperia.',
+          lahde: 'Mostafameraji, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä naapurit tiesivät ennen, että kahvia ollaan '
+          + 'keittämässä?',
+        vaihtoehdot: [
+          'Huhmaren kalkkeesta',
+          'Katolle nostetusta lipusta',
+          'Kellon soitosta',
+          'Savumerkeistä',
+        ],
+        oikea: 0,
+        fakta: 'Pavut survottiin käsin, ja ääni kantoi naapuritaloihin '
+          + 'kutsuna: kahvia on pian tarjolla.',
+      },
+    },
+  ],
 };
