@@ -70,7 +70,7 @@ export const LUETTAVAN_VAHIMMAIS = 80;
  * elementille annetaan attribuutti data-lukija="ei", joka toimii ilman
  * koodimuutosta.
  */
-export const OHITETTAVAT = [
+export const LUKIJAN_OHITETTAVAT = [
   '[data-lukija="ei"]',
 
   // Lähdemerkinnät ja krediitit.
@@ -191,7 +191,7 @@ function paate(teksti) {
  * @param {{ ohita?: string[], katto?: number }} asetukset
  * @returns {string} luettava teksti tai tyhjä merkkijono
  */
-export function kokoaLuettavaTeksti(juuri, { ohita = OHITETTAVAT, katto = LUETTAVAN_KATTO } = {}) {
+export function kokoaLuettavaTeksti(juuri, { ohita = LUKIJAN_OHITETTAVAT, katto = LUETTAVAN_KATTO } = {}) {
   if (!juuri) return '';
   const palat = [];
   let kertyma = [];

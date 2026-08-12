@@ -860,9 +860,10 @@ body.manner-zoom .fact-card { isolation: isolate; }
 /*
  * Toimintonappien alta vaalennus on poistettu (omistajan toive): se
  * haalisti kartan alalaidan, ja siellä juuri on eniten katsottavaa.
- * Napeilla on oma pergamenttilevynsä ja "Valitse matkustustapa"
- * -rivillä sama vaalea tekstivarjo kuin kartan omissa nimissä, joten
- * kumpikin pysyy luettavana ilman erillistä valoa.
+ * Napeilla on oma pergamenttilevynsä ja tilarivillä sama vaalea
+ * tekstivarjo kuin kartan omissa nimissä, joten kumpikin pysyy
+ * luettavana ilman erillistä valoa. (Rivin entinen otsikkoteksti
+ * "Valitse matkustustapa." poistettiin 12.8.2026.)
  *
  * Päiväkirjakortti pitää omansa: siinä on pitkä leipäteksti, joka ei
  * mahtuisi luettavaksi pelkän varjon turvin.
@@ -3868,13 +3869,17 @@ body.radio-tila .board-hint {
  */
 .maa-pilleri {
   position: absolute;
-  top: 0.6rem;
-  right: 0.5rem;
+  /* Sama etäisyys reunasta kuin matkakirjan lapulla (data-corner-säännöt:
+   * 0.4rem) ja ilman pystytäytettä sama rivinkorkeus kuin lapun
+   * supistetulla rivillä — omistajan huomio 12.8.2026: kyltit istuivat
+   * eri korkeuksilla ja maakyltti oli paksumpi. */
+  top: 0.4rem;
+  right: 0.4rem;
   z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: 0.45em;
-  padding: 0.2rem 0.5em;
+  padding: 0 0.5em;
   border: 0;
   border-radius: 6px;
   background: rgba(244, 231, 202, 0.86);
@@ -5479,8 +5484,8 @@ body[data-mode].flight-active .rail > * { pointer-events: none; }
  * (omistajan havainto ja kuvakaappauksesta mitattuna). Nyt alakehys on
  * sama kapea rako kuin sivuilla, ja kartta jatkuu kotipalkin alle —
  * pergamentilla ei ole siellä mitään napautettavaa, ja kelluvat kortit
- * pysyvät turva-alueen yläpuolella omilla säännöillään (.rail alla,
- * versionumero #versio-kulma). */
+ * pysyvät turva-alueen yläpuolella omilla säännöillään (.rail alla).
+ * Versionumero ei enää asu kulmassa vaan valikon pohjarivillä. */
 body[data-mode] .app { padding-bottom: 0; }
 body[data-mode] .stage { padding-bottom: var(--gap); }
 
@@ -5823,6 +5828,49 @@ body[data-mode] .actions button.primary:hover:not(:disabled) {
   background: rgba(234, 184, 78, 0.18);
 }
 
+/*
+ * ── IPHONEN KAARET JA KOTIPALKKI (omistajan havainto 12.8.2026) ──
+ *
+ * Pelitilassa `.app` luopuu alareunan turva-alueesta tarkoituksella
+ * (body[data-mode] .app { padding-bottom: 0 }): pergamentin pitää
+ * jatkua kotipalkin alle, tai kartta loppuisi selvästi ennen ruudun
+ * reunaa. Kelluvat napit eivät kuitenkaan saa jäädä sinne — iPhonella
+ * monitoiminappi, Tutki ja pöllö jäivät osittain kotipalkin ja näytön
+ * pyöristetyn kulman alle.
+ *
+ * Nosto tehdään turva-alueen verran, ja kartan alakulmien pyöristys
+ * loivenee samalla niin, että se myötäilee näytön kaarta eikä leikkaa
+ * nappien reunoja. Sääntö on rajattu kapeisiin ruutuihin, joten iPad
+ * ja työpöytä pysyvät ennallaan — ja koska env():n oletusarvo on 0 px,
+ * tavallisessa selaimessa (esim. 390 px Chromium) ulkoasu on
+ * pikselilleen entinen.
+ *
+ * index.html:n viewport-metassa on jo viewport-fit=cover, ilman jota
+ * env() palauttaisi iPhonella nollan.
+ */
+@media (max-width: 640px) {
+  body[data-mode] .turn-card {
+    bottom: calc(0.9rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  body[data-mode] .fact-card[data-corner='bl'],
+  body[data-mode] .fact-card[data-corner='br'] {
+    bottom: calc(0.9rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .linssi-selite[data-corner='bl'],
+  .linssi-selite[data-corner='br'] {
+    bottom: calc(0.9rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Loivempi kaari alakulmiin: pidempi matka, sama muoto kuin näytön
+     omassa reunassa. */
+  body[data-mode] .map-pane {
+    border-bottom-left-radius: calc(var(--radius) + 1.2rem);
+    border-bottom-right-radius: calc(var(--radius) + 1.2rem);
+  }
+}
+
 body[data-mode] .fact-card[data-corner='tl'] { top: 0.4rem; left: 0.4rem; }
 body[data-mode] .fact-card[data-corner='tr'] { top: 0.4rem; right: 0.4rem; }
 body[data-mode] .fact-card[data-corner='bl'] { bottom: 0.9rem; left: 0.4rem; }
@@ -6057,65 +6105,61 @@ body.katselu #newgame-btn { display: none; }
 /* Kaiutin ankkuroituu korttiin myös silloin, kun kortti on staattinen. */
 .fact-card { position: relative; }
 
-/* Versionumero aina näkyvissä vasemmassa alakulmassa — pieni ja
- * huomaamaton, mutta riittää kertomaan mikä versio on käytössä. */
+/*
+ * ── VALIKON POHJARIVI: versionumero ja palaute ───────────────────
+ *
+ * Molemmat olivat ennen kiinteinä kartan alakulmissa (position: fixed).
+ * Omistajan päätös 12.8.2026 siirsi ne hampurilaisvalikon alimmalle
+ * riville: pelinäkymään ei jää kumpaakaan, ja valikko on se paikka,
+ * josta pelin ympärykset etsitään. Versionumero vasemmalle, palaute
+ * oikealle — sama peilikuva kuin kulmissa, nyt yhdellä rivillä.
+ */
+.valikko-pohjarivi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: 0.45rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--line);
+}
+
+/* Pohjarivin napit mittaavat itsensä: `.paavalikko button` venyttäisi
+   ne täyteen leveyteen ja rivi hajoaisi kahdeksi. */
+.paavalikko .valikko-pohjarivi button { width: auto; }
+
 .versio-kulma {
-  position: fixed;
-  /* Numero lepää kartan pergamentilla (omistajan toive) — ei kehyksen
-   * rajalla, jossa se jäi puoliksi piiloon. Väri on kartan mustetta. */
-  left: max(1.3rem, calc(env(safe-area-inset-left, 0px) + 0.9rem));
-  /*
-   * Sama syy kuin .railissa: turva-alue jää sovelluksen alueen
-   * ulkopuolelle, joten sen varaaminen vain nostaisi numeron turhan ylös.
-   *
-   * ISOLLA RUUDULLA NUMERO VÄISTÄÄ MATKAKIRJAKORTTIA. Kortti kelluu
-   * samassa kulmassa, ja työpöytäselaimessa se on niin korkea että
-   * numero jäi kiinni sen alareunaan (omistajan havainto). Puhelimessa
-   * kortti on matalampi eikä väistöä tarvita, joten se tehdään vasta
-   * leveällä ruudulla — muuten numero karkaisi kartan reunasta.
-   */
-  bottom: 0.95rem;
-  z-index: 5;
-  font-size: 0.62rem;
-  letter-spacing: 0.04em;
-  color: rgba(70, 51, 31, 0.55);
-  /* Napautettava: numero avaa päivityslokin. Ulkonäkö pysyy samana
-     kuin ennen, joten napiksi muuttuminen ei näy kartalla. */
+  min-height: 0;
+  padding: 0.25rem 0.3rem;
   background: none;
   border: 0;
-  padding: 0.35rem 0.25rem;
-  margin: -0.35rem -0.25rem;
   font: inherit;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  /* Valikko on tumma paneeli, ei kartan pergamentti — muste vaihtuu
+     vaimeaan vaaleaan, jotta numero pysyy luettavana. */
+  color: var(--muted);
   cursor: pointer;
 }
 
-/*
- * Hiiren alla numero vain tummuu, ei muutu laatikoksi.
- *
- * Yleinen `button:hover` maalaa napin tummalla (#43331f), ja se osui
- * myös tähän: työpöytäselaimessa versionumeron päälle ilmestyi musta
- * suorakaide keskelle karttaa (omistajan havainto). Numero ei ole nappi
- * vaan merkintä pergamentilla — se saa reagoida, mutta pinnalla eikä
- * muodolla.
- */
 /*
  * Tuore päivitys korostuu (omistajan toive 9.8.2026): numero on
  * ensimmäisen puolen minuutin ajan selvästi isompi ja tummempi,
  * sitten se kutistuu tavalliseksi pehmeällä siirtymällä.
  */
-.versio-kulma { transition: font-size 0.6s ease, opacity 0.6s ease; }
+.versio-kulma { transition: font-size 0.6s ease, color 0.6s ease; }
 
 .versio-kulma.tuore {
-  font-size: 1.5em;
-  opacity: 1;
+  font-size: 1.4em;
+  color: var(--accent);
   font-weight: 700;
 }
 
-.versio-kulma:hover:not(:disabled),
-.versio-kulma:focus-visible {
+.paavalikko .versio-kulma:hover:not(:disabled),
+.paavalikko .versio-kulma:focus-visible {
   background: none;
-  color: rgba(70, 51, 31, 0.9);
+  color: var(--ink-light);
 }
 
 /* Päivitysloki: lyhyt lista siitä, mitä kussakin versiossa muuttui.
@@ -6172,42 +6216,39 @@ body.katselu #newgame-btn { display: none; }
   cursor: pointer;
 }
 
-/* Palautehuutomerkki oikeassa alakulmassa (omistajan toive): pieni ja
- * hillitty, mutta aina saatavilla — pelaaja voi kertoa virheestä juuri
- * siinä kohdassa peliä, jossa se osui silmään. Versionumeron peilikuva
- * vastakkaisessa kulmassa. */
+/*
+ * Palautehuutomerkki valikon pohjarivin oikeassa reunassa (omistajan
+ * päätös 12.8.2026; ennen kiinteänä kartan oikeassa alakulmassa):
+ * pieni ja hillitty, mutta aina saatavilla. Pelaaja voi kertoa
+ * virheestä juuri siinä kohdassa peliä, jossa se osui silmään —
+ * pelitilanne luetaan vasta lomaketta avattaessa (js/ui.js
+ * palauteTilanne), joten siirto valikkoon ei muuta viestin sisältöä.
+ */
 .palaute-kulma {
-  position: fixed;
-  right: max(1.1rem, calc(env(safe-area-inset-right, 0px) + 0.75rem));
-  bottom: 0.8rem;
-  z-index: 6;
-  width: 1.55rem;
-  height: 1.55rem;
+  width: 1.6rem;
+  height: 1.6rem;
   min-height: 0;
   padding: 0;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  border: 1px solid rgba(70, 51, 31, 0.35);
-  background: rgba(250, 242, 219, 0.55);
-  color: rgba(70, 51, 31, 0.7);
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--muted);
   font-family: var(--font-hand, inherit);
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
   transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
-.palaute-kulma:hover,
-.palaute-kulma:focus-visible {
-  background: rgba(250, 242, 219, 0.9);
-  color: rgba(70, 51, 31, 0.95);
+.paavalikko .palaute-kulma:hover,
+.paavalikko .palaute-kulma:focus-visible {
+  background: rgba(234, 184, 78, 0.18);
+  color: var(--ink-light);
   transform: scale(1.08);
 }
-
-/* Lennon ja muiden kalvojen aikana huutomerkki väistyy pois tieltä. */
-body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 
 /* Palauteikkuna: sama pergamentti-ilme kuin periaateikkunassa, mutta
  * pienempi — yksi selitys, yksi kenttä ja lähetys. */
@@ -6717,6 +6758,47 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
     column-gap: 2.2rem;
     column-rule: 1px solid rgba(70, 51, 31, 0.25);
   }
+}
+
+/*
+ * ── SISÄLTÖARKIT ISOLLA RUUDULLA (omistajan havainto 12.8.2026) ──
+ *
+ * `.dialog` on 620 px ja `.wiki-card` sama kaikilla ruuduilla, joten
+ * iPadilla (834–1024 px pystyssä) "Lue lisää" -artikkeli jäi kapeaksi
+ * puhelinpalstaksi keskelle isoa ruutua. Lehtiarkki (.dialog.arkki) on
+ * jo täysleveä eikä sitä tarvitse koskea — mitattuna 738 px / 834 px ja
+ * 928 px / 1024 px — mutta sen leipätekstin ympärillä on samaa vaivaa:
+ * ingressi ja esittelyt ovat yksittäisiä kappaleita ilman rivimittaa.
+ *
+ * Katto nousee 768 pikselistä ylöspäin. Rivin mitta EI kuitenkaan
+ * kasva samassa suhteessa: yli 75 merkin rivi eksyttää silmän
+ * rivinvaihdossa, ja lehti on nimenomaan luettavaksi tehty. Nostojen
+ * leipäteksti taittuu jo kahdelle palstalle (.wiki-nosto .leipa,
+ * ≥ 700 px), joten sitä ei tarvitse rajata — ne kappaleet, jotka
+ * juoksevat yhtenä palstana, saavat 38 em:n katon. Mitta on em eikä
+ * pikseleitä, joten merkkimäärä pysyy samana kirjasinkoosta
+ * riippumatta.
+ *
+ * 390 pikselin ulkoasu ei muutu: koko lohko elää media queryn sisällä.
+ */
+@media (min-width: 768px) {
+  #wiki-dialog { max-width: min(860px, 92vw); }
+  .wiki-card { max-width: min(860px, 92vw); }
+
+  /* Artikkelin palsta keskelle arkkia — otsikko, liuskat ja teksti
+     samassa linjassa, jottei leveä arkki hajota lukusuuntaa. */
+  .wiki-card #wiki-title,
+  .wiki-card #wiki-kategoria,
+  .wiki-card #wiki-extract,
+  .wiki-card #wiki-source {
+    max-width: 38em;
+    margin-inline: auto;
+  }
+
+  /* Lehden yksipalstaiset kappaleet: ingressi ja esittelyt. */
+  .dialog.lehti #arrival-intro,
+  .dialog.lehti .wiki-kategoria .johdanto,
+  .dialog.lehti .nahtavyys-kappale { max-width: 38em; }
 }
 
 /* Kuvan napautus avaa katselimen — kursori kertoo sen hiirikäyttäjälle. */
@@ -7655,6 +7737,62 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 
 .tutki-nuoli svg { width: 100%; height: 100%; display: block; }
 
+/*
+ * ── LUKIJAN KAIUTIN (js/lukija.js) ───────────────────────────────
+ *
+ * Pieni kaiutin sivun ylälaidassa: napautus lukee sivun ääneen.
+ * Ilme on sama huomaamaton mustepiirros kuin sivunumeropillerissä ja
+ * matkakirjan kaiuttimessa — se ei saa kilpailla otsikon kanssa.
+ *
+ * Nappi on DIALOGIN lapsi eikä vierivän kortin sisällä (js/lukija.js
+ * liitaLukija), joten se pysyy paikallaan kun pitkä juttu rullaa.
+ */
+/*
+ * Valitsimissa on mukana `.dialog button`, koska dialogien yleissääntö
+ * maalaa jokaisen napin pergamenttilaatikoksi aaltoreunoineen — pelkkä
+ * `.lukija-nappi` häviäisi sille tarkkuudessa ja kaiuttimesta tulisi
+ * iso valkoinen nappula otsikon päälle.
+ */
+button.lukija-nappi,
+.dialog button.lukija-nappi {
+  position: absolute;
+  top: max(0.45rem, env(safe-area-inset-top, 0px));
+  right: max(0.5rem, env(safe-area-inset-right, 0px));
+  z-index: 6;
+  width: 1.7rem;
+  height: 1.7rem;
+  min-height: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(246, 231, 198, 0.72);
+  color: rgba(70, 51, 31, 0.6);
+  box-shadow: none;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+button.lukija-nappi:hover:not(:disabled),
+button.lukija-nappi:focus-visible,
+.dialog button.lukija-nappi:hover:not(:disabled),
+.dialog button.lukija-nappi:focus-visible {
+  background: rgba(246, 231, 198, 0.92);
+  color: rgba(70, 51, 31, 0.95);
+}
+
+.lukija-nappi .viiva-ikoni svg { width: 1.05rem; height: 1.05rem; }
+
+/* Luenta käynnissä: kaiutin tummuu ja saa hennon kehän. Ääni ei näy
+ * ruudulla, joten napin on kerrottava tilansa itse. */
+button.lukija-nappi.lukee,
+.dialog button.lukija-nappi.lukee {
+  background: rgba(234, 184, 78, 0.34);
+  color: rgba(70, 51, 31, 0.95);
+  box-shadow: 0 0 0 2px rgba(70, 51, 31, 0.28);
+}
+
 /* ── Isoisän sitaatit visassa ja aarteessa ────────────────────────
  * Matkakirja lainaa pelkkää isoisän tarinaa (omistajan päätös
  * 8.8.2026); nimiö kertoo kehyksen, sitaatti on kursiivia kuin
@@ -7743,26 +7881,6 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   .tutki-nuoli { transition: none; }
 }
 
-/*
- * Leveällä ruudulla versionumero siirtyy oikeaan alakulmaan.
- *
- * Vasen alakulma on matkakirjakortin, ja työpöytäselaimessa kortti on
- * niin korkea että numero jäi kiinni sen alareunaan (omistajan
- * havainto). Puhelimessa kortti on matalampi ja numero mahtuu sen alle,
- * joten siirto tehdään vasta leveällä.
- *
- * Siirto on EHDOTON eikä riipu siitä, näkyykö kortti: numero ei saa
- * hypätä puolelta toiselle sitä mukaa kuin kortti ilmestyy ja katoaa.
- * Oikeassa laidassa on jo palautenappi, joten numero jää sen vasemmalle
- * puolelle.
- */
-@media (min-width: 900px) {
-  .versio-kulma {
-    left: auto;
-    right: max(3.6rem, calc(env(safe-area-inset-right, 0px) + 3.2rem));
-    bottom: 1.05rem;
-  }
-}
 
 /*
  * ============================================================
@@ -10865,15 +10983,11 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
     <p>Matkakirja pelataan pystyssä.</p>
     <p class="muted">Käännä laite pystyasentoon.</p>
   </div>
-  <!-- Versionumero näkyy aina pienenä alakulmassa. Napautus avaa
-       päivityslokin (omistajan toive) — siksi tämä on nappi eikä
-       koristediv, ja siksi aria-hidden on poissa. -->
-  <!-- Saavutettava nimi on kirjoitettava tähän: napin oma teksti on
-       pelkkä versionumero ("v238"), eikä siitä kuule mitä nappi tekee.
-       Se on nyt myös ainoa reitti päivitykseen ja kehittäjätilaan. -->
-  <button id="versio-kulma" class="versio-kulma" type="button"
-          aria-haspopup="dialog" title="Mitä uutta?"
-          aria-label="Mitä uutta, päivitys ja kehittäjätila"></button>
+  <!-- Versionumero ja palautenappi asuvat hampurilaisvalikon alarivillä
+       (omistajan päätös 12.8.2026). Ne olivat ennen kartan alakulmissa
+       kiinteästi paikoillaan; nyt pelinäkymässä on pelkkä peli. Loki
+       itse jää tänne ylätasolle, koska <dialog> kuuluu ylimpään
+       kerrokseen eikä valikon sisään. -->
   <dialog id="muutokset-dialog" class="muutokset-dialog">
     <h2 class="muutokset-otsikko">Mitä uutta</h2>
     <ol id="muutokset-lista" class="muutokset-lista"></ol>
@@ -10892,11 +11006,6 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
     </div>
     <button id="muutokset-sulje" class="muutokset-sulje" type="button">Sulje</button>
   </dialog>
-  <!-- Palautehuutomerkki oikeassa alakulmassa: palautetta juuri siitä
-       kohdasta peliä, jossa pelaaja on (omistajan toive). -->
-  <button id="palaute-kulma" class="palaute-kulma" type="button"
-          aria-label="Lähetä palautetta tästä kohdasta"
-          title="Lähetä palautetta tästä kohdasta">!</button>
   <div class="app">
     <header class="topbar">
       <!-- Nimilogo (omistajan toive): Matkakirja, pitkä viiva ja sen
@@ -10988,6 +11097,30 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
                 <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.6"/><path d="M12 8.4v7.2M8.4 12h7.2"/></svg></span>
                 <span>Uusi peli</span>
               </button>
+            </div>
+            <!--
+              VALIKON POHJARIVI (omistajan päätös 12.8.2026): vasemmalla
+              versionumero, oikealla palautehuutomerkki. Molemmat olivat
+              ennen kiinteinä kartan alakulmissa, eivätkä ne kuulu
+              pelinäkymään — ne ovat pelin ympäryksiä, ja valikko on
+              paikka, josta ympärykset etsitään.
+
+              Tunnisteet ja luokat ovat entiset, joten js/main.js
+              kytkee ne kuten ennenkin: numero avaa päivityslokin ja
+              huutomerkki palautelomakkeen, joka kerää pelitilanteen
+              vasta avaushetkellä (js/ui.js palauteTilanne).
+
+              Saavutettava nimi on kirjoitettava tähän: napin oma
+              teksti on pelkkä versionumero ("v238"), eikä siitä kuule
+              mitä nappi tekee.
+            -->
+            <div class="valikko-pohjarivi">
+              <button id="versio-kulma" class="versio-kulma" type="button"
+                      aria-haspopup="dialog" title="Mitä uutta?"
+                      aria-label="Mitä uutta, päivitys ja kehittäjätila"></button>
+              <button id="palaute-kulma" class="palaute-kulma" type="button"
+                      aria-label="Lähetä palautetta tästä kohdasta"
+                      title="Lähetä palautetta tästä kohdasta">!</button>
             </div>
           </div>
         </div>
@@ -142769,6 +142902,36 @@ function haePuheTunnistus() {
   return window.SpeechRecognition ?? window.webkitSpeechRecognition ?? null;
 }
 
+/**
+ * iOS-KUOREN SANELUSILTA (ios/Matkakirja/Selain/natiivi-silta.js).
+ *
+ * WKWebView ei tarjoa SpeechRecognitionia lainkaan, joten natiivissa
+ * kuoressa pöllön mikrofoni olisi ilman tätä pelkkä koriste: nappi
+ * näkyisi (Chromium-pohjaisissa selaimissa) tai katoaisi kokonaan, ja
+ * sanelu jäisi tekemättä. Kuori tarjoaa saman asian omalla
+ * rajapinnallaan — luvat, aloita, tapahtumat, lopeta — ja pelin puoli
+ * valitsee sen aina kun se on tarjolla.
+ *
+ * Ominaisuuslippu ratkaisee: vanha kuori voi tarjota olion ilman
+ * toimivaa sanelua. Tiedot luetaan myös suoraan
+ * __matkakirjaNatiiviTiedot-oliosta siltä varalta, että kysytään ennen
+ * kuin silta on ehtinyt sulattaa sen.
+ */
+function haeNatiiviSanelu() {
+  if (typeof window === 'undefined') return null;
+  const natiivi = window.matkakirjaNatiivi;
+  if (!natiivi?.onkoNatiivi) return null;
+  if (typeof natiivi.sanelu?.aloita !== 'function') return null;
+  const lippu = natiivi.ominaisuudet?.sanelu
+    ?? window.__matkakirjaNatiiviTiedot?.ominaisuudet?.sanelu;
+  return lippu ? natiivi : null;
+}
+
+/** Osaako tämä laite sanella jommallakummalla tavalla? */
+function saneluTuettu() {
+  return Boolean(haeNatiiviSanelu() || haePuheTunnistus());
+}
+
 class Pollo {
   /**
    * @param {() => object|null} haeUi palauttaa nykyisen UI-olion.
@@ -142785,8 +142948,11 @@ class Pollo {
     this.indeksi = null;
     this.tunnistin = null;
     this.puhuttu = '';
+    // Natiivisanelun purkajat: kuuntele() palauttaa poistofunktion.
+    this.saneluKuulijat = [];
+    this.natiiviSanelussa = false;
     // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
-    this.tila = haePuheTunnistus() ? 'sanelu' : 'kirjoitus';
+    this.tila = saneluTuettu() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
     this.seuraaNakymaa();
     this.seuraaSulkemista();
@@ -142932,9 +143098,11 @@ class Pollo {
    * näppäimistönappi olisi silloin ainoa vaihtoehto eikä siis valinta.
    */
   naytaSyote() {
-    const saneluTuettu = Boolean(haePuheTunnistus());
-    const sanelussa = this.tila === 'sanelu' && saneluTuettu;
-    this.saneluOsa.hidden = !saneluTuettu;
+    // Natiivikuoressa sanelu tulee sillalta, selaimessa
+    // SpeechRecognitionista — kummankin puuttuessa rivi jää pois.
+    const osaa = saneluTuettu();
+    const sanelussa = this.tila === 'sanelu' && osaa;
+    this.saneluOsa.hidden = !osaa;
     this.lomake.hidden = sanelussa;
   }
 
@@ -143377,14 +143545,116 @@ class Pollo {
 
   /** Mikrofonin napautus: aloita tai lopeta. */
   vaihdaSanelu() {
-    if (this.tunnistin) {
+    if (this.tunnistin || this.natiiviSanelussa) {
       this.lopetaSanelu({ laheta: true });
       return;
     }
     this.aloitaSanelu();
   }
 
+  /** Mikkinapin ulkoasu: kuunteleva vai lepäävä. */
+  merkitseMikki(kuuntelee) {
+    this.mikki.classList.toggle('kuuntelee', Boolean(kuuntelee));
+    this.mikki.setAttribute('aria-pressed', kuuntelee ? 'true' : 'false');
+  }
+
+  /** Natiivisanelun tapahtumakuuntelijat pois. */
+  purkaSaneluKuulijat() {
+    for (const purku of this.saneluKuulijat) {
+      try {
+        purku();
+      } catch {
+        /* silta oli jo purettu */
+      }
+    }
+    this.saneluKuulijat = [];
+  }
+
+  /**
+   * SANELU iOS-KUOREN SILLALTA.
+   *
+   * Kulku on sillan oma: luvat → aloita → osittaiset tulokset
+   * tapahtumina → lopeta. Mikkinapin tilat ovat samat kuin
+   * selainsanelussa, ja valmis teksti menee samaa reittiä kysymykseksi
+   * — vain tunnistin vaihtuu.
+   *
+   * Luentaa ei tarvitse pysäyttää täältä: silta keskeyttää puheen
+   * itse, kun sanelu alkaa.
+   */
+  async aloitaNatiiviSanelu(natiivi) {
+    if (this.tila !== 'sanelu') this.vaihdaTilaan('sanelu');
+    this.puhuttu = '';
+    this.natiiviSanelussa = true;
+    this.merkitseMikki(true);
+    this.saneluTila.textContent = SANELU_KUUNTELEE;
+
+    // Mikrofoni- ja puheentunnistuslupa kysytään vasta tästä, ei
+    // paneelia avattaessa — sama sääntö kuin selainsanelussa.
+    try {
+      const luvat = await natiivi.sanelu.luvat();
+      if (luvat && luvat.kunnossa === false) {
+        this.natiiviSanelussa = false;
+        this.merkitseMikki(false);
+        this.saneluTila.textContent = 'Mikrofonin käyttö ei ole sallittu.';
+        this.vaihdaTilaan('kirjoitus');
+        return;
+      }
+    } catch (virhe) {
+      this.natiiviSanelussa = false;
+      this.merkitseMikki(false);
+      this.saneluTila.textContent = virhe?.message ?? 'Sanelu ei käynnisty juuri nyt.';
+      return;
+    }
+    // Nappia on voitu napauttaa uudestaan lupien odotuksen aikana.
+    if (!this.natiiviSanelussa) return;
+
+    const kuuntele = (laji, kuulija) => {
+      const purku = natiivi.kuuntele?.(laji, kuulija);
+      if (typeof purku === 'function') this.saneluKuulijat.push(purku);
+    };
+    kuuntele('sanelu-osittainen', (tieto) => {
+      this.puhuttu = String(tieto?.teksti ?? '');
+      this.saneluTila.textContent = this.puhuttu.trim() || SANELU_KUUNTELEE;
+    });
+    kuuntele('sanelu-valmis', (tieto) => {
+      const teksti = String(tieto?.teksti ?? this.puhuttu).trim();
+      this.paataNatiiviSanelu();
+      if (teksti) this.kysy(teksti);
+      else this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
+    });
+    kuuntele('sanelu-keskeytyi', (tieto) => {
+      const teksti = String(tieto?.teksti ?? this.puhuttu).trim();
+      this.paataNatiiviSanelu();
+      if (teksti) this.kysy(teksti);
+      else this.saneluTila.textContent = 'Sanelu keskeytyi. Yritä uudelleen.';
+    });
+    kuuntele('sanelu-virhe', (tieto) => {
+      this.paataNatiiviSanelu();
+      this.saneluVirhe(tieto?.syy, tieto?.viesti);
+    });
+
+    try {
+      await natiivi.sanelu.aloita({ kieli: PUHE_KIELI });
+    } catch (virhe) {
+      this.paataNatiiviSanelu();
+      this.saneluTila.textContent = virhe?.message ?? 'Sanelu ei käynnisty juuri nyt.';
+    }
+  }
+
+  /** Natiivisanelu kiinni: kuulijat pois ja mikki lepoon. */
+  paataNatiiviSanelu() {
+    this.natiiviSanelussa = false;
+    this.purkaSaneluKuulijat();
+    this.merkitseMikki(false);
+  }
+
   aloitaSanelu() {
+    // Natiivisilta ensin: WKWebView:ssä SpeechRecognitionia ei ole.
+    const natiivi = haeNatiiviSanelu();
+    if (natiivi) {
+      this.aloitaNatiiviSanelu(natiivi);
+      return;
+    }
     const Tunnistus = haePuheTunnistus();
     if (!Tunnistus) {
       // Selain ei osaa: kirjoituskenttä esiin ilman konsolivirhettä.
@@ -143420,8 +143690,7 @@ class Pollo {
     tunnistin.onend = () => {
       const oliTunnistin = this.tunnistin;
       this.tunnistin = null;
-      this.mikki.classList.remove('kuuntelee');
-      this.mikki.setAttribute('aria-pressed', 'false');
+      this.merkitseMikki(false);
       if (!oliTunnistin) return;
       const teksti = this.puhuttu.trim();
       if (teksti) this.kysy(teksti);
@@ -143430,25 +143699,44 @@ class Pollo {
       }
     };
     this.tunnistin = tunnistin;
-    this.mikki.classList.add('kuuntelee');
-    this.mikki.setAttribute('aria-pressed', 'true');
+    this.merkitseMikki(true);
     this.saneluTila.textContent = SANELU_KUUNTELEE;
     try {
       // Mikrofonilupa kysytään vasta tästä — ei paneelia avattaessa.
       tunnistin.start();
     } catch {
       this.tunnistin = null;
-      this.mikki.classList.remove('kuuntelee');
+      this.merkitseMikki(false);
       this.saneluTila.textContent = 'Sanelu ei käynnisty juuri nyt.';
     }
   }
 
   lopetaSanelu({ laheta = false } = {}) {
+    /*
+     * Natiivisanelu lopetetaan sillan kautta: lopeta() palauttaa
+     * viimeistellyn tekstin, ja se kelpaa kysymykseksi myös silloin,
+     * kun 'sanelu-valmis' ei ehdi tulla perille ennen sulkemista.
+     */
+    if (this.natiiviSanelussa) {
+      const natiivi = haeNatiiviSanelu();
+      this.paataNatiiviSanelu();
+      const kesken = this.puhuttu.trim();
+      try {
+        Promise.resolve(natiivi?.sanelu?.lopeta?.()).then((tulos) => {
+          const teksti = String(tulos?.teksti ?? kesken).trim();
+          if (laheta && teksti) this.kysy(teksti);
+        }, () => {
+          if (laheta && kesken) this.kysy(kesken);
+        });
+      } catch {
+        if (laheta && kesken) this.kysy(kesken);
+      }
+      return;
+    }
     const tunnistin = this.tunnistin;
     if (!tunnistin) return;
     if (!laheta) this.tunnistin = null;
-    this.mikki.classList.remove('kuuntelee');
-    this.mikki.setAttribute('aria-pressed', 'false');
+    this.merkitseMikki(false);
     try {
       tunnistin.stop();
     } catch {
@@ -143456,11 +143744,18 @@ class Pollo {
     }
   }
 
-  /** Siisti suomenkielinen tila jokaiselle virheelle — ei konsolia. */
-  saneluVirhe(koodi) {
+  /**
+   * Siisti suomenkielinen tila jokaiselle virheelle — ei konsolia.
+   *
+   * Koodit tulevat selaimen SpeechRecognitionista; natiivisilta antaa
+   * lisäksi valmiin suomenkielisen viestin, joka näytetään sellaisenaan
+   * silloin kun koodia ei tunnisteta.
+   */
+  saneluVirhe(koodi, viesti = '') {
     this.tunnistin = null;
-    this.mikki.classList.remove('kuuntelee');
-    this.mikki.setAttribute('aria-pressed', 'false');
+    this.natiiviSanelussa = false;
+    this.purkaSaneluKuulijat();
+    this.merkitseMikki(false);
     if (koodi === 'not-allowed' || koodi === 'service-not-allowed') {
       this.saneluTila.textContent = 'Mikrofonin käyttö ei ole sallittu.';
       this.vaihdaTilaan('kirjoitus');
@@ -143475,7 +143770,7 @@ class Pollo {
       this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
       return;
     }
-    this.saneluTila.textContent = 'Sanelu ei onnistunut. Voit myös kirjoittaa.';
+    this.saneluTila.textContent = viesti || 'Sanelu ei onnistunut. Voit myös kirjoittaa.';
   }
 }
 
@@ -143513,6 +143808,560 @@ function asennaPollo(haeUi, asetukset = {}) {
   // Savukkeet ja kehitys tarvitsevat kahvan; peli itse ei käytä tätä.
   window.matkakirjaPollo = nykyinenPollo;
   return nykyinenPollo;
+}
+
+// ===== js/lukija.js =====
+/*
+ * LUKIJA — sivun teksti ääneen laitteen omalla puheäänellä.
+ *
+ * Peli on tehty kuunneltavaksi, mutta valmiita luenta-äänitteitä on
+ * vain matkakirjamerkinnöille: lehtien sivut, maalehden aihesivut ja
+ * pitkät artikkelit ovat pelkkää luettavaa. Tämä moduuli antaa niille
+ * pienen kaiuttimen, joka lukee sivun ääneen ilman että yhtään
+ * mp3-tiedostoa tarvitsee generoida.
+ *
+ * KAKSI TAUSTAJÄRJESTELMÄÄ, TÄRKEYSJÄRJESTYKSESSÄ
+ *
+ *   1. window.matkakirjaNatiivi.luenta (iOS-kuori,
+ *      ios/Matkakirja/Selain/natiivi-silta.js). Kuori valitsee
+ *      parhaan suomenkielisen äänen itse, joten pelin ei tarvitse
+ *      tuntea ääniluetteloa. Luennan loppu kuullaan sillan
+ *      'luenta-loppui'-tapahtumasta.
+ *   2. window.speechSynthesis fi-FI-äänellä (Safari, Chrome, työpöytä).
+ *   3. Ei kumpaakaan → nappia ei näytetä lainkaan. Piilotettu nappi on
+ *      parempi kuin nappi, joka tuottaa hiljaisuuden.
+ *
+ * MITÄ LUETAAN — JA MITÄ EI
+ *
+ * Teksti kootaan sivun DOMista valinnalla, joka OHITTAA kolme asiaa:
+ *
+ *   a) lähdemerkinnät (.lahde, .kuvalahde, .nahtavyys-lahderivi …).
+ *      Ne ovat lisenssin ehto ruudulla, mutta ääneen luettuna
+ *      "Kuva: Wellcome Collection, CC BY 4.0" katkaisee jutun.
+ *   b) kuvatekstit ja selitteet (figcaption, .kuvateksti, .selite …).
+ *      Ne kuuluvat kuvaan, jota kuuntelija ei näe.
+ *   c) VISAT JA TEHTÄVÄT vaihtoehtoineen. Tämä on spoilerisuoja, sama
+ *      periaate kuin pöllöllä (js/pollo.js SPOILERI_LOHKOT): lukija ei
+ *      saa lausua oikeaa vastausta ennen kuin pelaaja on vastannut.
+ *
+ * Piilotetut lohkot jäävät pois itsestään, koska [hidden]-elementit
+ * ohitetaan — lehden kaikki sivut asuvat samassa dialogissa ja vain
+ * avoinna oleva on näkyvissä. Sama valinta kelpaa siis sellaisenaan
+ * jokaiselle sivulle eikä sivutyyppejä tarvitse tuntea.
+ *
+ * Vain yksi luenta kerrallaan: uusi aloitus, sivunvaihto ja dialogin
+ * sulkeutuminen pysäyttävät edellisen.
+ */
+
+/** Luennan kieli. Sama luku molemmilla taustajärjestelmillä. */
+const LUENNAN_KIELI = 'fi-FI';
+
+/**
+ * Luettavan tekstin katto merkkeinä.
+ *
+ * Pitkä artikkeli voi olla kymmeniä tuhansia merkkejä, eikä kukaan
+ * kuuntele sitä loppuun. Katkaisu tehdään virkkeen rajalta, jottei
+ * luenta lopu kesken sanan.
+ */
+const LUETTAVAN_KATTO = 12000;
+
+/**
+ * Kuinka pitkä sivun on oltava, ennen kuin kaiutin ilmestyy.
+ *
+ * Kaiutin lupaa luettavaa sisältöä. Otsikko ja "Haetaan…" eivät ole
+ * sitä: verkkohakua odottava "Lue lisää" -ikkuna näyttäisi napin,
+ * jonka koko anti olisi kaksi sanaa. Raja on tarkoituksella matala —
+ * lyhinkin aihesivu ylittää sen moninkertaisesti.
+ */
+const LUETTAVAN_VAHIMMAIS = 80;
+
+/**
+ * MITÄ JÄTETÄÄN LUKEMATTA.
+ *
+ * Kolme ryhmää: lähdemerkinnät, kuvatekstit ja pelin tehtävät. Jos
+ * peliin tulee uusi lähde- tai selite-luokka, se lisätään tähän — tai
+ * elementille annetaan attribuutti data-lukija="ei", joka toimii ilman
+ * koodimuutosta.
+ */
+const LUKIJAN_OHITETTAVAT = [
+  '[data-lukija="ei"]',
+
+  // Lähdemerkinnät ja krediitit.
+  '.lahde',
+  '.kuvalahde',
+  '.lehti-kuvalahde',
+  '.kulttuuri-lahde',
+  '.vinkki-lahde',
+  '.nahtavyys-lahde',
+  '.nahtavyys-lahderivi',
+  '.nahtavyys-lainaus-lahde',
+  '.lightbox-lahde',
+  '.maakayra-lahde',
+  '.linssi-lahde',
+  '.linssi-selite-lahde',
+  '.wiki-source',
+  '.source-line',
+  '.quiz-kuvalahteet',
+
+  // Kuvatekstit, selitteet ja karttojen numeroselitykset.
+  '.kuvateksti',
+  '.nahtavyys-kuvateksti',
+  '.wiki-kuvateksti',
+  '.selite',
+  '.nahtavyys-selite',
+  '.vinkki-hero-selite',
+  '.vinkki-hero-teksti',
+  '.kartta-selite',
+  '.kartta-selite-numero',
+  '.lightbox-caption',
+  '.reveal-caption',
+  '.paivan-kuva-selite',
+  '.linssi-selite',
+  '.quiz-selite',
+  '.arrival-kuva-laskuri',
+
+  /*
+   * SPOILERISUOJA: tehtävät vaihtoehtoineen. Sama lista kuin pöllöllä
+   * (js/pollo.js), koska riski on sama: kuultu oikea vastaus on yhtä
+   * paha kuin luettu.
+   */
+  '[data-pollo="ei"]',
+  '.minitehtava',
+  '#arrival-kulttuuri',
+  '#arrival-kulttuuri-visa',
+  '#arrival-kulttuuri-kysymys',
+  '#arrival-kulttuuri-vaihtoehdot',
+  '.kulttuuri-vaihtoehdot',
+  '.quiz-question',
+  '.quiz-options',
+  '.quiz-option',
+  '.quiz-hint-text',
+  '.quiz-result',
+
+  // Lukija itse ei kuulu luettavaan.
+  '.lukija-nappi',
+];
+
+/**
+ * Tagit, joita ei lueta lainkaan.
+ *
+ * Napit ovat käyttöliittymää ("Lue lisää aiheesta", "Poistu lehdestä",
+ * sivunuolet), eivät juttua. Navigaatio, lomakkeet ja upotukset samoin.
+ */
+const OHITETTAVAT_TAGIT = new Set([
+  'SCRIPT', 'STYLE', 'SVG', 'BUTTON', 'NAV', 'SELECT', 'INPUT',
+  'TEXTAREA', 'AUDIO', 'VIDEO', 'IFRAME', 'CANVAS', 'IMG', 'NOSCRIPT',
+]);
+
+/**
+ * Lohkotason tagit: näiden rajalla teksti katkaistaan omaksi
+ * palakseen, jotta otsikko ja kappale eivät liimaudu yhteen sanaksi.
+ */
+const LOHKOTAGIT = new Set([
+  'P', 'DIV', 'SECTION', 'ARTICLE', 'ASIDE', 'HEADER', 'FOOTER',
+  'H1', 'H2', 'H3', 'H4', 'H5', 'H6',
+  'UL', 'OL', 'LI', 'DL', 'DT', 'DD',
+  'BLOCKQUOTE', 'FIGURE', 'FIGCAPTION', 'TABLE', 'TR', 'TD', 'TH',
+  'BR', 'HR', 'PRE',
+]);
+
+/** Rivinvaihdot ja tuplavälit pois. */
+function siisti(teksti) {
+  return String(teksti ?? '').replace(/\s+/g, ' ').trim();
+}
+
+/**
+ * Ohitetaanko tämä elementti?
+ *
+ * Piilotettu elementti ohitetaan aina: lehden sivut asuvat samassa
+ * dialogissa, ja ilman tätä lukija lukisi koko lehden yhdellä
+ * napautuksella.
+ */
+function ohitetaanko(el, ohita) {
+  const tagi = String(el.nodeName ?? el.tagName ?? '').toUpperCase();
+  if (OHITETTAVAT_TAGIT.has(tagi)) return true;
+  if (el.hidden === true) return true;
+  if (el.getAttribute?.('aria-hidden') === 'true') return true;
+  for (const valitsin of ohita) {
+    if (el.matches?.(valitsin)) return true;
+  }
+  return false;
+}
+
+/** Piste palan perään, jotta puhesyntetisaattori pitää tauon. */
+function paate(teksti) {
+  return /[.!?:;…]$/.test(teksti) ? teksti : `${teksti}.`;
+}
+
+/**
+ * Kokoaa luettavan tekstin elementin sisältä.
+ *
+ * Palauttaa palat rivinvaihdoilla eroteltuina: otsikko, kappale,
+ * kappale. Rivinvaihto on molemmille taustajärjestelmille se merkki,
+ * josta ne pitävät tauon.
+ *
+ * @param {Element} juuri elementti, jonka sisältö luetaan
+ * @param {{ ohita?: string[], katto?: number }} asetukset
+ * @returns {string} luettava teksti tai tyhjä merkkijono
+ */
+function kokoaLuettavaTeksti(juuri, { ohita = LUKIJAN_OHITETTAVAT, katto = LUETTAVAN_KATTO } = {}) {
+  if (!juuri) return '';
+  const palat = [];
+  let kertyma = [];
+  const katkaise = () => {
+    const teksti = siisti(kertyma.join(' '));
+    if (teksti) palat.push(paate(teksti));
+    kertyma = [];
+  };
+  const kavele = (solmu) => {
+    if (solmu.nodeType === 3) {
+      kertyma.push(solmu.data ?? solmu.textContent ?? '');
+      return;
+    }
+    if (solmu.nodeType !== 1) return;
+    if (ohitetaanko(solmu, ohita)) return;
+    const lohko = LOHKOTAGIT.has(String(solmu.nodeName ?? solmu.tagName ?? '').toUpperCase());
+    if (lohko) katkaise();
+    for (const lapsi of solmu.childNodes ?? []) kavele(lapsi);
+    if (lohko) katkaise();
+  };
+  kavele(juuri);
+  katkaise();
+  const kaikki = palat.join('\n');
+  if (kaikki.length <= katto) return kaikki;
+  // Katkaisu virkkeen rajalta: kesken sanaa loppuva luenta kuulostaa
+  // rikkinäiseltä, vaikka syy olisikin vain pituus.
+  const leikattu = kaikki.slice(0, katto);
+  const raja = Math.max(leikattu.lastIndexOf('.'), leikattu.lastIndexOf('\n'));
+  return (raja > katto * 0.5 ? leikattu.slice(0, raja + 1) : leikattu).trim();
+}
+
+/* ------------------------------------------------------------------ */
+/* Taustajärjestelmät                                                  */
+/* ------------------------------------------------------------------ */
+
+/** iOS-kuoren luentarajapinta, tai null selaimessa. */
+function natiiviLuenta() {
+  if (typeof window === 'undefined') return null;
+  const natiivi = window.matkakirjaNatiivi;
+  if (!natiivi?.onkoNatiivi) return null;
+  if (typeof natiivi.luenta?.puhu !== 'function') return null;
+  /*
+   * Ominaisuuslippu ratkaisee: vanha kuori voi tarjota rajapinnan
+   * ilman toimivaa luentaa. Tiedot luetaan myös suoraan
+   * __matkakirjaNatiiviTiedot-oliosta siltä varalta, että pelin koodi
+   * ehtii kysyä ennen kuin silta on ehtinyt sulattaa sen.
+   */
+  const lippu = natiivi.ominaisuudet?.luenta
+    ?? window.__matkakirjaNatiiviTiedot?.ominaisuudet?.luenta;
+  return lippu ? natiivi : null;
+}
+
+/** Selaimen puhesyntetisaattori, tai null jos sitä ei ole. */
+function selainPuhe() {
+  if (typeof window === 'undefined') return null;
+  const synth = window.speechSynthesis;
+  if (!synth || typeof window.SpeechSynthesisUtterance !== 'function') return null;
+  return synth;
+}
+
+/** Paras suomenkielinen ääni, jos selain tarjoaa sellaisen. */
+function suomiAani(synth) {
+  let aanet = [];
+  try {
+    aanet = synth.getVoices?.() ?? [];
+  } catch {
+    return null;
+  }
+  const suomi = [...aanet].filter((a) => /^fi([-_]|$)/i.test(String(a?.lang ?? '')));
+  if (!suomi.length) return null;
+  // Laitteen oma ääni ennen verkkoääntä: se toimii myös lentokoneessa.
+  return suomi.find((a) => a.localService) ?? suomi[0];
+}
+
+/** Onko luenta ylipäätään mahdollista tällä laitteella? */
+function lukijaTuettu() {
+  return Boolean(natiiviLuenta() || selainPuhe());
+}
+
+/**
+ * Puhesyntetisaattorin palakoko.
+ *
+ * Chrome katkaisee pitkän lausuman noin viidentoista sekunnin
+ * kohdalla. Teksti pilkotaan siksi virkkeen mittaisiksi paloiksi ja
+ * jonotetaan: tauot osuvat luonnollisiin kohtiin eikä luenta katkea.
+ */
+const PALAN_KATTO = 220;
+
+function paloittele(teksti, katto = PALAN_KATTO) {
+  const palat = [];
+  for (const rivi of String(teksti).split('\n')) {
+    const siistitty = rivi.trim();
+    if (!siistitty) continue;
+    if (siistitty.length <= katto) {
+      palat.push(siistitty);
+      continue;
+    }
+    let jaljella = siistitty;
+    while (jaljella.length > katto) {
+      const pala = jaljella.slice(0, katto);
+      // Virkkeen raja on paras katkaisukohta, välilyönti toiseksi paras.
+      let raja = Math.max(pala.lastIndexOf('. '), pala.lastIndexOf('! '), pala.lastIndexOf('? '));
+      if (raja < katto * 0.4) raja = pala.lastIndexOf(' ');
+      if (raja <= 0) raja = katto - 1;
+      palat.push(jaljella.slice(0, raja + 1).trim());
+      jaljella = jaljella.slice(raja + 1).trim();
+    }
+    if (jaljella) palat.push(jaljella);
+  }
+  return palat;
+}
+
+/* ------------------------------------------------------------------ */
+/* Luennan tila — vain yksi kerrallaan                                 */
+/* ------------------------------------------------------------------ */
+
+/** Käynnissä oleva luenta: { nappi, merkki, lopeta } tai null. */
+let ajossa = null;
+
+/**
+ * Lukeeko lukija juuri nyt?
+ *
+ * @param {Element|null} nappi jos annettu, kysytään juuri tätä nappia
+ */
+function lukijaLukee(nappi = null) {
+  if (!ajossa) return false;
+  return nappi ? ajossa.nappi === nappi : true;
+}
+
+/** Pysäyttää luennan. Turvallista kutsua vaikka mitään ei olisi käynnissä. */
+function pysaytaLukija() {
+  const nyt = ajossa;
+  if (!nyt) return;
+  ajossa = null;
+  try {
+    nyt.lopeta();
+  } catch {
+    /* taustajärjestelmä oli jo hiljaa */
+  }
+  merkitseTila(nyt.nappi, false);
+}
+
+/**
+ * Aloittaa luennan. Edellinen luenta pysähtyy aina ensin.
+ *
+ * @param {string} teksti luettava teksti
+ * @param {Element|null} nappi nappi, jonka tila seuraa luentaa
+ * @returns {boolean} lähtikö luenta käyntiin
+ */
+function lueAaneen(teksti, nappi = null) {
+  pysaytaLukija();
+  const puhuttava = String(teksti ?? '').trim();
+  if (!puhuttava) return false;
+
+  const merkki = {};
+  const loppui = () => {
+    if (ajossa?.merkki !== merkki) return;
+    ajossa = null;
+    merkitseTila(nappi, false);
+  };
+
+  const natiivi = natiiviLuenta();
+  if (natiivi) {
+    /*
+     * Napin tila palautuu sillan 'luenta-loppui'-tapahtumasta. Lupaus
+     * kelpaa toiseksi merkiksi, mutta vain jos se palauttaa oikean
+     * tulosolion: osa kuorista ratkaisee postMessagen heti, ja silloin
+     * lupaus kertoisi vain että viesti lähti perille.
+     */
+    let irrota = null;
+    ajossa = {
+      nappi,
+      merkki,
+      lopeta: () => {
+        irrota?.();
+        try {
+          natiivi.luenta.pysayta()?.catch?.(() => {});
+        } catch {
+          /* kuori oli jo hiljaa */
+        }
+      },
+    };
+    irrota = natiivi.kuuntele?.('luenta-loppui', () => loppui()) ?? null;
+    try {
+      Promise.resolve(natiivi.luenta.puhu(puhuttava, LUENNAN_KIELI)).then((tulos) => {
+        if (tulos && typeof tulos === 'object' && 'tila' in tulos) loppui();
+      }, () => loppui());
+    } catch {
+      loppui();
+      return false;
+    }
+    merkitseTila(nappi, true);
+    return true;
+  }
+
+  const synth = selainPuhe();
+  if (!synth) return false;
+  try {
+    synth.cancel();
+  } catch {
+    /* ei mitään peruttavaa */
+  }
+  const palat = paloittele(puhuttava);
+  if (!palat.length) return false;
+  let jaljella = palat.length;
+  ajossa = {
+    nappi,
+    merkki,
+    lopeta: () => {
+      try {
+        synth.cancel();
+      } catch {
+        /* selain oli jo hiljaa */
+      }
+    },
+  };
+  const aani = suomiAani(synth);
+  for (const pala of palat) {
+    const lausuma = new window.SpeechSynthesisUtterance(pala);
+    lausuma.lang = LUENNAN_KIELI;
+    if (aani) lausuma.voice = aani;
+    const valmis = () => {
+      jaljella -= 1;
+      if (jaljella <= 0) loppui();
+    };
+    lausuma.onend = valmis;
+    lausuma.onerror = valmis;
+    synth.speak(lausuma);
+  }
+  merkitseTila(nappi, true);
+  return true;
+}
+
+/* ------------------------------------------------------------------ */
+/* Kaiutinnappi                                                        */
+/* ------------------------------------------------------------------ */
+
+/*
+ * Sama kaiutin kuin aloitussivun ääniviihjeessä (js/ui.js
+ * VIIVA_IKONIT.kaiutin): pelkkä ääriviiva kartan musteella, ei emojia.
+ * Piirto on toistettu tässä tarkoituksella — lukija ei saa riippua
+ * ui.js:stä, koska ui.js tuo lukijan.
+ */
+const KAIUTIN_PIIRTO = '<path d="M4.2 9.3h3.2l4.4-3.6v12.6l-4.4-3.6H4.2z"/>'
+  + '<path d="M14.8 9.4a3.7 3.7 0 0 1 0 5.2"/>'
+  + '<path d="M17.4 6.9a7.3 7.3 0 0 1 0 10.2"/>';
+
+const KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
+  + ' stroke="currentColor" stroke-width="1.6" stroke-linecap="round"'
+  + ' stroke-linejoin="round">' + KAIUTIN_PIIRTO + '</svg>';
+
+const LUE_OTSIKKO = 'Kuuntele sivu';
+const SEIS_OTSIKKO = 'Lopeta kuuntelu';
+
+/** Napin ulkoasu ja saavutettava nimi seuraavat luennan tilaa. */
+function merkitseTila(nappi, lukee) {
+  if (!nappi) return;
+  nappi.classList?.toggle('lukee', Boolean(lukee));
+  const nimi = lukee ? SEIS_OTSIKKO : (nappi.dataset?.lukijaNimi || LUE_OTSIKKO);
+  nappi.setAttribute?.('aria-pressed', lukee ? 'true' : 'false');
+  nappi.setAttribute?.('aria-label', nimi);
+  if ('title' in nappi) nappi.title = nimi;
+}
+
+/** Napin luettava teksti: lähde voi olla elementti, funktio tai teksti. */
+function napinTeksti(nappi) {
+  const lahde = nappi?.__lukijaLahde;
+  const kohde = typeof lahde === 'function' ? lahde() : lahde;
+  if (!kohde) return '';
+  if (typeof kohde === 'string') return kohde.trim();
+  return kokoaLuettavaTeksti(kohde);
+}
+
+/**
+ * Kiinnittää kaiutinnapin sivun ylälaitaan.
+ *
+ * Nappi on isännän (yleensä <dialog>) suora lapsi eikä vierivän kortin
+ * sisällä — sama ratkaisu kuin lehden sivunumeropillerillä: kortti
+ * vierii, ja kortin sisällä nappi katoaisi heti kun tekstiä lukee.
+ *
+ * Kutsu on idempotentti: sama isäntä saa yhden napin, ja uusi kutsu
+ * vain päivittää sen lähteen. Jos laitteella ei ole kumpaakaan
+ * taustajärjestelmää, nappia ei luoda lainkaan ja paluuarvo on null.
+ *
+ * `seuraa` kytkee tarkkailijan: sivu, jonka teksti valmistuu vasta
+ * verkkohaun jälkeen ("Lue lisää"), saa kaiuttimensa näkyviin heti kun
+ * artikkeli laskeutuu ruudulle.
+ *
+ * @param {Element} isanta elementti, johon nappi lisätään
+ * @param {Element|(() => Element|string)|string} lahde luettava sisältö
+ * @param {{ luokka?: string, nimi?: string, seuraa?: boolean }} asetukset
+ * @returns {Element|null} nappi
+ */
+function liitaLukija(isanta, lahde, { luokka = '', nimi = LUE_OTSIKKO, seuraa = false } = {}) {
+  if (!isanta || !lukijaTuettu()) return null;
+  let nappi = isanta.querySelector?.(':scope > .lukija-nappi') ?? null;
+  if (!nappi) {
+    nappi = isanta.ownerDocument.createElement('button');
+    nappi.type = 'button';
+    nappi.className = `lukija-nappi${luokka ? ` ${luokka}` : ''}`;
+    nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${KAIUTIN_IKONI}</span>`;
+    nappi.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      if (lukijaLukee(nappi)) {
+        pysaytaLukija();
+        return;
+      }
+      const teksti = napinTeksti(nappi);
+      if (teksti) lueAaneen(teksti, nappi);
+    });
+    isanta.appendChild(nappi);
+    /*
+     * Pelitilaan poistuminen pysäyttää: dialogin sulkeutuminen on se
+     * hetki, jolloin pelaaja palaa kartalle. Kuuntelija kytketään
+     * kerran napin luonnin yhteydessä.
+     */
+    if (typeof isanta.addEventListener === 'function' && isanta.tagName === 'DIALOG') {
+      isanta.addEventListener('close', () => {
+        if (lukijaLukee(nappi)) pysaytaLukija();
+      });
+    }
+  }
+  nappi.__lukijaLahde = lahde;
+  nappi.dataset.lukijaNimi = nimi;
+  merkitseTila(nappi, lukijaLukee(nappi));
+  if (seuraa && !nappi.__lukijaVahti && typeof MutationObserver === 'function') {
+    // Yksi päivitys per kehys riittää: artikkeli voi laskeutua ruudulle
+    // kymmenenä muutoksena peräkkäin, eikä tekstiä kannata koota joka
+    // kerta uudestaan.
+    let odottaa = false;
+    nappi.__lukijaVahti = new MutationObserver(() => {
+      if (odottaa) return;
+      odottaa = true;
+      const aja = () => {
+        odottaa = false;
+        if (!lukijaLukee(nappi)) paivitaLukija(nappi);
+      };
+      if (typeof requestAnimationFrame === 'function') requestAnimationFrame(aja);
+      else setTimeout(aja, 0);
+    });
+    nappi.__lukijaVahti.observe(isanta, { childList: true, subtree: true, characterData: true });
+  }
+  return nappi;
+}
+
+/**
+ * Päivittää napin näkyvyyden sivunvaihdon jälkeen.
+ *
+ * Sivu, jolla ei ole luettavaa tekstiä (pelkkä kartta tai kuvasivu),
+ * ei saa tarjota kaiutinta — se tuottaisi hiljaisuuden.
+ */
+function paivitaLukija(nappi, { vahimmais = LUETTAVAN_VAHIMMAIS } = {}) {
+  if (!nappi) return;
+  const teksti = napinTeksti(nappi);
+  const riittaa = teksti.length >= vahimmais;
+  nappi.hidden = !riittaa;
+  if (!riittaa && lukijaLukee(nappi)) pysaytaLukija();
 }
 
 // ===== js/ui.js =====
@@ -144114,6 +144963,13 @@ async function cachedGallery(title) {
   }
   return wikiGalleryCache.get(title);
 }
+
+/*
+ * Sivun luenta laitteen omalla äänellä (js/lukija.js). Lehden sivuilla,
+ * maalehden aihesivuilla ja pitkissä artikkeleissa ei ole generoituja
+ * äänitteitä, joten kaiutinnappi turvautuu iOS-kuoren luentasiltaan tai
+ * selaimen puhesyntetisaattoriin.
+ */
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -145754,7 +146610,23 @@ class UI {
         return;
       }
       // Ääni ehti sulkeutua (esim. korttien vaihto) — aloitetaan alusta.
-      if (this.diaryFullUrl) this.playDiaryVoice(this.diaryFullUrl);
+      if (this.diaryFullUrl) {
+        this.playDiaryVoice(this.diaryFullUrl);
+        return;
+      }
+      /*
+       * MERKINTÄ ILMAN GENEROITUA ÄÄNITETTÄ (v-lisäys 12.8.2026).
+       *
+       * Sama kaiutin, sama ele, eri lukija: kun puhe-*.mp3:ää ei ole
+       * tehty, merkintä luetaan laitteen omalla äänellä (iOS-kuoren
+       * luentasilta tai selaimen puhesyntetisaattori). Generoituihin
+       * äänitteisiin tämä ei kajoa lainkaan — ne käsitellään yllä.
+       */
+      if (lukijaLukee(this.factKuuntele)) {
+        pysaytaLukija();
+        return;
+      }
+      lueAaneen(kokoaLuettavaTeksti(this.factText), this.factKuuntele);
     });
 
     this.eventDialog = document.getElementById('event-dialog');
@@ -146221,6 +147093,9 @@ class UI {
     sfx.stopFlight();
     this.stopIntroVoice();
     this.stopDiaryVoice();
+    // Uusi peli vaientaa myös sivujen luennan: se on documentin
+    // ulkopuolinen puhuja eikä lopu itsestään pelin vaihtuessa.
+    pysaytaLukija();
     this.suljePostikortti();
     this.suljeKulttuuriKuva();
     this.pysaytaKulttuuriAani();
@@ -149505,7 +150380,14 @@ class UI {
     if (this.travelExpanded && (!hasSlow || suodatinTyhja)) this.suljeMatkavalikko();
 
     if (!this.travelExpanded) {
-      this.turnStatus.textContent = 'Valitse matkustustapa.';
+      /*
+       * OTSIKKORIVI POIS (omistajan päätös 12.8.2026): kolme
+       * matkanappia kertovat itse mitä valitaan, eikä "Valitse
+       * matkustustapa." lisää siihen mitään. Tilarivi tyhjennetään
+       * eikä poisteta — vaiheen B valikot ja nopanheitto kirjoittavat
+       * siihen yhä oman tekstinsä.
+       */
+      this.turnStatus.textContent = '';
 
       // Jalan. Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
       // pelin estetyissä napeissa (vrt. vertailunappi).
@@ -150182,6 +151064,26 @@ class UI {
   }
 
   /**
+   * Matkakirjamerkinnän kaiutin: sama nappi, kaksi lukijaa.
+   *
+   * Generoitu äänite (assets/audio/puhe-*.mp3) soitetaan kuten ennen.
+   * Merkinnälle, jolle äänitettä ei ole tehty, tarjotaan sama
+   * kuunteluele laitteen omalla äänellä — nappi näkyy siis myös
+   * silloin, kunhan laitteella on jompikumpi lukija. Ilman kumpaakaan
+   * nappi piiloutuu entiseen tapaan, koska se tuottaisi hiljaisuuden.
+   */
+  naytaMerkinnanKaiutin(onAanite) {
+    const nappi = this.factKuuntele;
+    if (!nappi) return;
+    nappi.hidden = !onAanite && !lukijaTuettu();
+    const nimi = onAanite ? 'Jatka merkinnän kuuntelua' : 'Kuuntele merkintä';
+    nappi.dataset.lukijaNimi = nimi;
+    if (lukijaLukee(nappi)) return;
+    nappi.title = nimi;
+    nappi.setAttribute('aria-label', nimi);
+  }
+
+  /**
    * Uusi päiväkirjamerkintä alkaa aina alusta ja avaa kortin.
    *
    * Teksti palautetaan alkuun, koska edellinen merkintä on voitu
@@ -150196,6 +151098,8 @@ class UI {
    */
   uusiFactKey(key) {
     this.factKey = key;
+    // Uusi merkintä, uusi teksti: edellisen luenta ei saa jatkua.
+    if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
     if (this.factText) this.factText.scrollTop = 0;
     this.asetaPaivakirjanKoko(false);
     this.paivitaJatkuuVihje?.();
@@ -150370,7 +151274,7 @@ class UI {
         this.diaryFullUrl = saapumisLauta
           ? `assets/audio/puhe-${saapumisLauta}-saapuminen-${saapuminen.cityId}.mp3`
           : null;
-        this.factKuuntele.hidden = !saapumisLauta;
+        this.naytaMerkinnanKaiutin(Boolean(saapumisLauta));
         if (saapumisLauta && this.luettuSaapuminen !== luentaAvain) {
           this.luettuSaapuminen = luentaAvain;
           // Kertojan tila (yläpalkin valikko): pitkä lukee koko merkinnän,
@@ -150434,7 +151338,7 @@ class UI {
         this.diaryFullUrl = havaintoLauta
           ? `assets/audio/puhe-${havaintoLauta}-havainto-${saapuminen.cityId}.mp3`
           : null;
-        this.factKuuntele.hidden = !havaintoLauta;
+        this.naytaMerkinnanKaiutin(Boolean(havaintoLauta));
         if (havaintoLauta && this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
           this.luettuSaapuminen = luentaAvain;
           this.playDiaryVoice(this.diaryFullUrl, {
@@ -152174,6 +153078,29 @@ class UI {
     // Uusi sivu alkaa alusta, ei edellisen sivun vierityskohdasta.
     const kortti = this.arrivalDialog.querySelector('.dialog-card');
     if (kortti) kortti.scrollTop = 0;
+    /*
+     * Kaiutin sivun ylälaitaan. Sivunvaihto pysäyttää käynnissä olevan
+     * luennan: lukija ei saa jatkaa edellisen sivun tekstiä sen
+     * jälkeen kun sivu on jo kääntynyt.
+     */
+    pysaytaLukija();
+    this.varustaLukija(this.arrivalDialog, () => this.arrivalDialog.querySelector('.dialog-card'));
+  }
+
+  /**
+   * Kaiutinnappi tekstisisältösivulle — yksi yhteinen apuri kaikille
+   * kolmelle ikkunalle (lehti, nähtävyysjuttu, "Lue lisää").
+   *
+   * Luettava teksti kootaan aina samalla valinnalla (js/lukija.js
+   * kokoaLuettavaTeksti), joten lähteet, kuvatekstit ja visan
+   * vaihtoehdot jäävät pois ilman että sivutyyppejä tarvitsee tuntea.
+   * Piilotettu sivu jää pois itsestään, koska valinta ohittaa
+   * [hidden]-elementit — lehden kaikki sivut asuvat samassa dialogissa.
+   */
+  varustaLukija(dialogi, haeJuuri, { seuraa = false } = {}) {
+    const nappi = liitaLukija(dialogi, haeJuuri, { luokka: 'lukija-sivu', seuraa });
+    paivitaLukija(nappi);
+    return nappi;
   }
 
   /**
@@ -153533,6 +154460,9 @@ class UI {
     }
     if (!dialogi.open) dialogi.showModal();
     this.nollaaDialoginVieritys(dialogi);
+    // Uusi juttu, uusi teksti: edellisen kohteen luenta ei saa jatkua.
+    pysaytaLukija();
+    this.varustaLukija(dialogi, () => dialogi.querySelector('.nahtavyys-kortti'));
   }
 
   /**
@@ -154237,6 +155167,14 @@ class UI {
     }
     if (!this.wikiDialog.open) this.wikiDialog.showModal();
     this.nollaaDialoginVieritys(this.wikiDialog);
+    /*
+     * Kaiutin artikkelin ylälaitaan. Teksti valmistuu vasta
+     * verkkohaun jälkeen, joten nappi seuraa kortin sisältöä ja
+     * ilmestyy siinä hetkessä, kun artikkeli laskeutuu ruudulle.
+     */
+    pysaytaLukija();
+    this.wikiLukija = this.varustaLukija(this.wikiDialog,
+      () => this.wikiDialog.querySelector('.wiki-card'), { seuraa: true });
 
     // Teksti ja kuvat molemmat paketista: verkkoa ei tarvita lainkaan.
     if (omat && this.wikiGalleria) return;
@@ -154616,6 +155554,18 @@ class UI {
     // mutta lähikuvassa teksti on väistynyt tarkoituksella, joten sitä ei
     // palauteta joka renderöinnillä.
     if (nakyy && !this.aloitusZoom) this.introEl.classList.remove('intro-fade', 'intro-pois');
+    /*
+     * KOKO AVAUSKAPPALE ODOTTAA NAPPIA (omistajan tilaus 12.8.2026).
+     *
+     * Runko ja lopetus kirjoittuivat jo ennestään vasta napin jälkeen,
+     * mutta paikkarivi ("Lontoo, nykyhetki:") on kirjoitettu suoraan
+     * HTML:ään (index.html), joten se oli ruudulla heti — ja jäi
+     * kellumaan yksin kartan alle ennen kuin seikkailu oli alkanut.
+     * Perustilassa etusivulla on siis vain kartta ja aloitusnappi;
+     * kappale ilmestyy napin painalluksen jälkeen entiseen tapaan
+     * animoituna.
+     */
+    if (this.introText) this.introText.hidden = !nakyy || !this.aloitettu;
     if (!nakyy) {
       this.introShown = false;
       this.introRunko.textContent = '';
@@ -155339,6 +156289,9 @@ class UI {
   stopDiaryVoice() {
     this.diaryVoice = null;
     this.luentaTauolla = null;
+    // Laitteen lukija on saman kaiuttimen takana kuin generoitu äänite,
+    // joten "luenta kiinni" tarkoittaa myös sitä.
+    if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
     // Kaikki luennat kiinni — myös mahdollinen myöhästelijä, joka ei
     // enää ollut diaryVoice mutta soi yhä.
     for (const audio of [...(this.luennat ?? [])]) {
@@ -158479,6 +159432,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 593, teksti: 'Kaiutinluenta sivuille, valikkosiirrot ja iPhonen alareuna' },
   { v: 592, teksti: 'Nikosian kaupunkilehti ja mittakaavajanan tarkistin' },
   { v: 591, teksti: 'Viisas Pöllö hereille: workerin osoite peliin' },
   { v: 590, teksti: 'Kolme matkanappia siististi, pöllön paneeli vaaleaksi' },
@@ -159155,7 +160109,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.592';
+const APP_VERSION = '2026-08-09.593';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

@@ -21,7 +21,7 @@ import { readFileSync } from 'node:fs';
 import {
   LUETTAVAN_KATTO,
   LUETTAVAN_VAHIMMAIS,
-  OHITETTAVAT,
+  LUKIJAN_OHITETTAVAT,
   kokoaLuettavaTeksti,
 } from '../js/lukija.js';
 
@@ -180,6 +180,6 @@ test('ohituslista kattaa pöllön spoilerilohkot', () => {
   const valitsimet = [...lohko.matchAll(/'([^']+)'/g)].map((m) => m[1])
     // Visan dialogi ei ole sivun sisällä, joten lukija ei voi törmätä siihen.
     .filter((v) => v !== '#quiz-dialog');
-  const puuttuu = valitsimet.filter((v) => !OHITETTAVAT.includes(v));
+  const puuttuu = valitsimet.filter((v) => !LUKIJAN_OHITETTAVAT.includes(v));
   assert.deepEqual(puuttuu, [], 'lukijan ohituslistalta puuttuu pöllön spoilerilohkoja');
 });
