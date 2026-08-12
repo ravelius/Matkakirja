@@ -10428,3 +10428,363 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 @media (prefers-reduced-motion: reduce) {
   .pikkuseloste { transition: none; }
 }
+
+/* ===========================================================================
+   ALANAPPIRIVI — kolme paikkaa (js/ui.js piirraToimintorivi)
+   ---------------------------------------------------------------------------
+   Vasemmalla monitoiminappi, keskellä Viisas Pöllö, oikealla suurennuslasi.
+   Matkustusnapit eivät levitä riviä vaan LIUKUVAT pöllön ja suurennuslasin
+   päälle, joten rivi on aina täsmälleen kolmen napin levyinen (omistajan
+   linjaus 12.8.2026).
+   =========================================================================== */
+
+.toimintorivi { position: relative; }
+
+.toimintorivi-perus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  justify-items: stretch;
+}
+
+/* Tyhjä paikka pitää ruudukon kolmena, vaikka Tutki ei olisi tarjolla. */
+.rivi-tyhja { visibility: hidden; }
+
+/* Pöllön paikka: nappi asuu js/pollo.js:ssä ja siirtyy tänne joka
+   piirrolla. Grid-venytys pitää sen samankokoisena kuin naapurinsa. */
+.pollo-paikka { display: grid; }
+.pollo-paikka > .pollo-nappi { width: 100%; }
+
+/*
+ * Liuku peittää keskimmäisen ja oikean paikan. Monitoiminappi jää näkyviin
+ * ja napautettavaksi, jotta liu'un saa kiinni samasta napista josta se
+ * aukesi. Kiinni ollessaan liuku on sekä läpinäkyvä että napautuksille
+ * läpäisemätön — muuten se söisi pöllön ja Tutkin napautukset.
+ */
+.toimintorivi-liuku {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* Vasen reuna alkaa monitoiminapin jälkeen: kolmasosa + puolet väleistä. */
+  left: calc((100% - 1rem) / 3 + 0.5rem);
+  right: 0;
+  display: flex;
+  gap: 0.4rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-14%);
+  transition: transform 0.22s ease, opacity 0.18s ease;
+}
+
+.toimintorivi-liuku > button { flex: 1 1 0; min-width: 0; }
+
+.toimintorivi.liuku-auki .toimintorivi-liuku {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* Avoin liuku merkitään myös monitoiminappiin, jotta tila näkyy. */
+.toimintorivi.liuku-auki .monitoimi-nappi { color: var(--accent); }
+
+/*
+ * Peittyvät napit väistyvät liu'un alta.
+ *
+ * Ilman tätä pöllö ja suurennuslasi näkyivät liu'un nappien läpi (napit
+ * ovat läpikuultavia kartan päällä), ja rivi näytti neljältä napilta
+ * kolmen sijaan. Nyt ne häivytetään ja niiden napautukset menevät
+ * liu'ulle — juuri sitä "liukuvat päälle" tarkoittaa.
+ */
+.toimintorivi-perus > .pollo-paikka,
+.toimintorivi-perus > *:last-child {
+  transition: opacity 0.18s ease;
+}
+
+.toimintorivi.liuku-auki .toimintorivi-perus > .pollo-paikka,
+.toimintorivi.liuku-auki .toimintorivi-perus > *:last-child {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toimintorivi-liuku,
+  .toimintorivi-perus > .pollo-paikka,
+  .toimintorivi-perus > *:last-child { transition: none; }
+}
+
+/* ===========================================================================
+   VIISAS PÖLLÖ — chat-paneeli (js/pollo.js)
+   ---------------------------------------------------------------------------
+   Nappi elää kahdessa paikassa. Kartalla se on alanappirivin keskimmäinen
+   paikka ja perii .icon-btn-tyylin, jolloin se näyttää naapureiltaan.
+   Lehtinäkymässä se siirtyy lehden <dialog>-elementin sisään ja saa
+   lisäluokan .pollo-kelluu — modaali elää selaimen ylimmässä kerroksessa,
+   eikä rivissä oleva nappi olisi sen alla napautettavissa.
+   =========================================================================== */
+
+/* Kelluva muoto: pyöreä nappi lehden oikeassa alalaidassa. */
+.pollo-nappi.pollo-kelluu {
+  position: fixed;
+  right: calc(0.7rem + env(safe-area-inset-right, 0px));
+  bottom: calc(3.4rem + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  width: 2.9rem;
+  height: 2.9rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--overlay-line);
+  border-radius: 50%;
+  background: var(--overlay-card);
+  color: var(--paper);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.pollo-nappi.pollo-kelluu .icon-label { display: none; }
+.pollo-nappi.pollo-kelluu .viiva-ikoni svg { width: 1.7rem; height: 1.7rem; }
+.pollo-nappi.auki { color: var(--accent); }
+
+.pollo-paneeli {
+  position: fixed;
+  right: calc(0.7rem + env(safe-area-inset-right, 0px));
+  bottom: calc(7.2rem + env(safe-area-inset-bottom, 0px));
+  z-index: 41;
+  display: flex;
+  flex-direction: column;
+  width: min(21rem, calc(100vw - 1.4rem));
+  max-height: min(27rem, calc(100vh - 10rem));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  color: var(--ink-light);
+  font-family: var(--font-type);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.pollo-yla {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.5rem 0.45rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-2);
+}
+
+.pollo-otsikko {
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+/* Rasti on selvä ja riittävän iso sormelle — sulkeminen ei saa jäädä
+   arvailun varaan (pelin sääntö: pöllö ei koskaan tunkeile). */
+button.pollo-sulje {
+  width: 1.9rem;
+  height: 1.9rem;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+button.pollo-sulje:hover { color: var(--ink-light); background: rgba(255, 255, 255, 0.06); }
+
+.pollo-ehdotukset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+button.pollo-ehdotus {
+  padding: 0.4rem 0.55rem;
+  min-height: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--ink-light);
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+
+button.pollo-ehdotus:hover { border-color: var(--accent-dark); color: var(--accent); }
+button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
+
+.pollo-virta {
+  flex: 1;
+  min-height: 3rem;
+  padding: 0.6rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Vastaukset ovat pitkähköä leipätekstiä, joten ne käyttävät samaa
+   lukukirjasinta kuin lehden jutut (--font-luku). Pelaajan oma kysymys
+   pysyy kirjoituskoneessa, jotta puheenvuorot erottuvat toisistaan. */
+.pollo-viesti {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.pollo-viesti:last-child { margin-bottom: 0; }
+
+.pollo-kayttaja {
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--ink-light);
+}
+
+.pollo-pollo {
+  font-family: var(--font-luku);
+  font-size: 0.92rem;
+  color: var(--ink-light);
+}
+
+.pollo-odottaa { color: var(--muted); font-style: italic; }
+
+/* Pelinsisäiset linkit vastauksen alle. Ne rakennetaan paikallisen haun
+   tuloksista, ei mallin tekstistä, joten ne osoittavat aina johonkin. */
+.pollo-linkit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0 0 0.6rem;
+}
+
+button.pollo-linkki {
+  padding: 0.35rem 0.5rem;
+  min-height: 0;
+  border: 1px dashed var(--accent-dark);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+
+button.pollo-linkki:hover { background: rgba(217, 161, 59, 0.12); }
+
+.pollo-nukkuu { text-align: center; padding: 0.6rem 0.3rem; }
+.pollo-nukkuu-otsikko { margin: 0 0 0.4rem; color: var(--accent); font-size: 0.9rem; }
+.pollo-nukkuu-lisa { margin: 0; color: var(--muted); font-size: 0.78rem; line-height: 1.4; }
+
+/* --- syöttöalue: sanelu edellä, näppäimistö varalla ------------------ */
+
+.pollo-syote {
+  border-top: 1px solid var(--line);
+  background: var(--panel-2);
+  padding: 0.5rem;
+}
+
+.pollo-sanelu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Iso mikrofoninappi: sanelu on ensisijainen syöttötapa, joten se saa
+   olla paneelin selvästi suurin kohde. */
+button.pollo-mikki {
+  width: 3.4rem;
+  height: 3.4rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--panel);
+  color: var(--accent);
+  cursor: pointer;
+}
+
+button.pollo-mikki .viiva-ikoni svg { width: 1.7rem; height: 1.7rem; }
+button.pollo-mikki:hover:not(:disabled) { border-color: var(--accent-dark); }
+button.pollo-mikki:disabled { opacity: 0.5; cursor: default; }
+
+button.pollo-mikki.kuuntelee {
+  background: var(--accent-dark);
+  color: var(--ink-light);
+  animation: pollo-syke 1.4s ease-in-out infinite;
+}
+
+@keyframes pollo-syke {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217, 161, 59, 0.5); }
+  60% { box-shadow: 0 0 0 0.55rem rgba(217, 161, 59, 0); }
+}
+
+.pollo-sanelu-tila {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/* Vaihtolinkit ovat tekstilinkin näköisiä: ne eivät kilpaile mikin kanssa. */
+button.pollo-vaihda {
+  display: block;
+  margin: 0.3rem auto 0;
+  padding: 0.2rem 0.3rem;
+  min-height: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.72rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button.pollo-vaihda:hover { color: var(--accent); background: transparent; }
+
+.pollo-rivi { display: flex; gap: 0.35rem; }
+
+input.pollo-kentta {
+  flex: 1;
+  min-width: 0;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--ink-light);
+  font-family: inherit;
+  /* 16 px estää iOS:n automaattisen zoomin kenttään napautettaessa. */
+  font-size: 16px;
+}
+
+input.pollo-kentta::placeholder { color: var(--muted); }
+input.pollo-kentta:disabled { opacity: 0.6; }
+
+button.pollo-laheta {
+  width: 2.3rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--accent);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button.pollo-laheta:hover:not(:disabled) { border-color: var(--accent-dark); }
+button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
+
+@media (prefers-reduced-motion: reduce) {
+  button.pollo-mikki.kuuntelee { animation: none; }
+}

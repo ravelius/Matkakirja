@@ -1,0 +1,39 @@
+/*
+ * Viisas Pöllö -välityspalvelimen julkaisuasetukset.
+ *
+ * Tämä on ERI worker kuin uutisvälitys (tools/uutisproxy): sillä on oma
+ * nimensä, oma osoitteensa ja oma salaisuutensa. Repon juuren
+ * wrangler.jsonc kuuluu uutisvälitykselle eikä sitä muuteta.
+ *
+ * Julkaisu: `npx wrangler deploy` TÄSTÄ kansiosta. Vaiheet ja
+ * ympäristömuuttujat: OHJE.md tässä kansiossa.
+ *
+ * Tiedosto ei liity itse peliin: peli ei lue tätä, eikä worker vaikuta
+ * pelin versionumeroon.
+ */
+{
+  "name": "matkakirja-pollo",
+  "main": "worker.js",
+  "compatibility_date": "2026-08-12",
+  /*
+   * Julkiset asetukset. Salaisuudet EIVÄT tule tänne — API-avain
+   * asetetaan komennolla `npx wrangler secret put ANTHROPIC_API_KEY`.
+   *
+   * POLLO_ORIGINIT on tyhjä tarkoituksella: worker ei päästä ketään
+   * läpi ennen kuin omistaja on kirjoittanut tähän pelin oman
+   * osoitteen. Puolivalmis asetus on kiinni, ei auki.
+   */
+  "vars": {
+    "POLLO_ORIGINIT": "",
+    "POLLO_PAIVARAJA": "30",
+    "POLLO_KUUKAUSIRAJA": "1500",
+    "POLLO_MALLI": "claude-haiku-4-5-20251001"
+  }
+  /*
+   * KV-säilö käyttörajojen laskureille. Ota käyttöön poistamalla
+   * kommentit ja liittämällä oman säilön tunnus (OHJE.md, vaihe 4).
+   * Ilman KV:tä worker toimii, mutta rajat pitävät vain osittain.
+   *
+   * "kv_namespaces": [{ "binding": "POLLO_KV", "id": "<KV-säilön tunnus>" }]
+   */
+}
