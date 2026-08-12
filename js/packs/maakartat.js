@@ -2460,6 +2460,50 @@ export const MAAKARTAT = {
  */
 export const KAUPUNKIKARTAT = {
   /*
+   * Kuwait City (nippu 2, 12.8.2026). Kolme kohdetta on jo KWT-
+   * maalehdessä omina juttuinaan — Kuwait-tornit, suurmoskeija ja
+   * Mubarakiyan tori (maalehdessä ruokajuttuna) — koska maalehti
+   * kirjoitettiin ennen kuin kaupungilla oli lehteä. Niiden
+   * nähtävyysjutut kertovat siksi eri asian kuin maalehti.
+   *
+   * Kansallismuseo ja kansalliskirjasto jätettiin pois, vaikka
+   * molemmat olisivat kelvollisia: ne ovat parinsadan metrin päässä
+   * Sadu Housesta, ja numeroympyrät olisivat menneet päällekkäin.
+   */
+  kuwait: {
+    polku: 'assets/kartat/kuwait-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 29.392, etela: 29.370, lansi: 47.962, ita: 48.010,
+    },
+    esittely: 'Kuwait City on rakennettu lahden kaarelle, ja koko '
+      + 'kaupunki katsoo veteen päin. Vanha kaupunki oli 1950-luvulle '
+      + 'asti pieni: muurin sisällä asui muutama kymmenentuhatta '
+      + 'ihmistä, ja muurin ulkopuolella alkoi aavikko. Öljy muutti '
+      + 'mittakaavan kerralla. Vanha savitiilikaupunki purettiin '
+      + 'lähes kokonaan 1950- ja 1960-luvuilla ja tilalle piirrettiin '
+      + 'uusi keskusta kehäteineen — juuri ne kaaret, jotka kartalla '
+      + 'erottuvat leveimpinä viivoina. Vanhasta kaupungista jäivät '
+      + 'jäljelle tori, muutama portti ja rannan palatsi.'
+      + '\n\n'
+      + 'Kartalla meri on ylhäällä ja vasemmalla. Rannassa erottuu '
+      + 'satamien suorakulmaisia altaita, ja oikeassa yläkulmassa '
+      + 'niemi työntyy veteen: siinä ovat Kuwait-tornit. Kehätiet '
+      + 'kaartavat rannan suuntaisesti, ja niiden väliin jäävät '
+      + 'korttelit ovat sitä tiheämpiä mitä lähempänä rantaa ollaan. '
+      + 'Vasemmassa alakulmassa näkyy pieni tiheä ruudukko: se on '
+      + 'vanhan torin kortteli, ainoa kohta jossa kadut ovat yhä '
+      + 'kapeita. Kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Kuwait-tornit', lat: 29.3900, lon: 48.0031 },
+      { nimi: 'Al Hamra -torni', lat: 29.3790, lon: 47.9932 },
+      { nimi: 'Seifin palatsi', lat: 29.3808, lon: 47.9711 },
+      { nimi: 'Kuwaitin suurmoskeija', lat: 29.3789, lon: 47.9747 },
+      { nimi: 'Mubarakiyan tori', lat: 29.3748, lon: 47.9741 },
+      { nimi: 'Sadu House', lat: 29.3744, lon: 47.9672 },
+    ],
+  },
+  /*
    * Nikosia (nippu 2, 12.8.2026). Rajaus on pieni, koska venetsialaisten
    * muurien kehä on halkaisijaltaan vain noin puolitoista kilometriä.
    *
