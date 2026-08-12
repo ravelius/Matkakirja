@@ -10432,6 +10432,422 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
   .pikkuseloste { transition: none; }
 }
 
+/* ===========================================================================
+   ALANAPPIRIVI — kolme paikkaa (js/ui.js piirraToimintorivi)
+   ---------------------------------------------------------------------------
+   Vasemmalla monitoiminappi, keskellä Viisas Pöllö, oikealla suurennuslasi.
+   Matkustusnapit eivät levitä riviä vaan LIUKUVAT koko rivin päälle, joten
+   rivi on aina täsmälleen kolmen napin levyinen (omistajan linjaus
+   12.8.2026). Liu'un ollessa auki KAIKKI kolme perusnappia väistyvät —
+   myös monitoiminappi, joka liu'un avasi (omistajan havainto v589,
+   iPhone: rivissä näkyi neljä nappia kolmen sijaan).
+   =========================================================================== */
+
+.toimintorivi { position: relative; }
+
+.toimintorivi-perus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  justify-items: stretch;
+}
+
+/* Tyhjä paikka pitää ruudukon kolmena, vaikka Tutki ei olisi tarjolla. */
+.rivi-tyhja { visibility: hidden; }
+
+/* Pöllön paikka: nappi asuu js/pollo.js:ssä ja siirtyy tänne joka
+   piirrolla. Grid-venytys pitää sen samankokoisena kuin naapurinsa. */
+.pollo-paikka { display: grid; }
+.pollo-paikka > .pollo-nappi { width: 100%; }
+
+/*
+ * Liuku peittää koko rivin: kolme matkanappia asettuu täsmälleen kolmen
+ * peruspaikan päälle, joten mikään nappi ei jää niiden viereen näkyviin.
+ * Sama väli kuin ruudukossa (0.5rem) pitää napit samoissa sarakkeissa.
+ * Kiinni ollessaan liuku on sekä läpinäkyvä että napautuksille
+ * läpäisemätön — muuten se söisi pöllön ja Tutkin napautukset.
+ *
+ * Liuku suljetaan napauttamalla rivin ulkopuolelta (kartta) tai
+ * valitsemalla jokin matkanapeista; monitoiminappi on auki-tilassa
+ * piilossa, joten se ei enää ole neljäs nappi rivissä.
+ */
+.toimintorivi-liuku {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-8%);
+  transition: transform 0.22s ease, opacity 0.18s ease;
+}
+
+.toimintorivi-liuku > button { flex: 1 1 0; min-width: 0; }
+
+/*
+ * Liu'un napit ovat aina pelkkiä ikoneita.
+ *
+ * Matkustustapoja on kolme (jalan, laiva, lento) ja ne jakavat rivin
+ * kolmeen yhtä suureen paikkaan, aivan kuten perusnapitkin. Selite
+ * kelpaa vain hiirelle, joka näkee saman titlestä; ilman tätä sääntöä
+ * nimet olisivat leveällä ruudulla puskeneet napit ahtaiksi ja
+ * kaventaneet ikonit tunnistamattomiksi.
+ */
+.toimintorivi-liuku .icon-label { display: none; }
+.toimintorivi-liuku > button { padding-left: 0.35rem; padding-right: 0.35rem; }
+
+.toimintorivi.liuku-auki .toimintorivi-liuku {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/*
+ * Peittyvät napit väistyvät liu'un alta — kaikki kolme.
+ *
+ * Ilman tätä pöllö ja suurennuslasi näkyivät liu'un nappien läpi (napit
+ * ovat läpikuultavia kartan päällä), ja rivi näytti neljältä napilta
+ * kolmen sijaan. Sama koski monitoiminappia, joka jäi ennen näkyviin
+ * matkanappien viereen: omistaja laski iPhonella neljä nappia, vaikka
+ * matkustustapoja on kolme. Nyt väistyvät kaikki, ja liuku saa koko
+ * leveyden.
+ *
+ * visibility viivästetään häivytyksen loppuun: näkymätön nappi katoaa
+ * myös sarkainkierrosta ja ruudunlukijalta, mutta pitää paikkansa
+ * ruudukossa, joten rivin korkeus ja liu'un mitat säilyvät.
+ */
+.toimintorivi-perus > * {
+  transition: opacity 0.18s ease, visibility 0s;
+}
+
+.toimintorivi.liuku-auki .toimintorivi-perus > * {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.18s ease, visibility 0s linear 0.18s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toimintorivi-liuku,
+  .toimintorivi-perus > *,
+  .toimintorivi.liuku-auki .toimintorivi-perus > * { transition: none; }
+}
+
+/* ===========================================================================
+   VIISAS PÖLLÖ — chat-paneeli (js/pollo.js)
+   ---------------------------------------------------------------------------
+   Nappi elää kahdessa paikassa. Kartalla se on alanappirivin keskimmäinen
+   paikka ja perii .icon-btn-tyylin, jolloin se näyttää naapureiltaan.
+   Lehtinäkymässä se siirtyy lehden <dialog>-elementin sisään ja saa
+   lisäluokan .pollo-kelluu — modaali elää selaimen ylimmässä kerroksessa,
+   eikä rivissä oleva nappi olisi sen alla napautettavissa.
+
+   PANEELI ON PAPERIA (omistajan linjaus 12.8.2026). Tumma laatikko vaihtui
+   samaan painopaperiin kuin kaupunkilehden arkki (.dialog.arkki
+   .dialog-card): vaalea pohja, kohinapinta ja tumma muste. Samalla
+   poistuivat yläpalkin otsikko ja ×-nappi — paneeli suljetaan napauttamalla
+   sen ulkopuolelle tai Esc-näppäimestä (js/pollo.js seuraaSulkemista).
+
+   TERÄVYYS. Paneeli asuu DOMissa alanappirivin sisällä eli .turn-cardin
+   alla, ja peri sieltä pergamentin vaalean tekstivarjon (body[data-mode]
+   .turn-card: 0 0 6px vaalea hehku). Tummalla pohjalla vaalean tekstin
+   ympärille syntyi hehkureunus, joka täytti kirjainten sisukset — teksti
+   näytti iPhonella suttuiselta (omistajan havainto v589). Varjo on nyt
+   nollattu koko paneelista, leipäteksti on lukukirjasimella (--font-luku)
+   ja kirjasinkoot on nostettu puhelinluettaviksi.
+   =========================================================================== */
+
+/* Kelluva muoto: pyöreä nappi lehden oikeassa alalaidassa. */
+.pollo-nappi.pollo-kelluu {
+  position: fixed;
+  right: calc(0.7rem + env(safe-area-inset-right, 0px));
+  bottom: calc(3.4rem + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  width: 2.9rem;
+  height: 2.9rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--overlay-line);
+  border-radius: 50%;
+  background: var(--overlay-card);
+  color: var(--paper);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.pollo-nappi.pollo-kelluu .icon-label { display: none; }
+.pollo-nappi.pollo-kelluu .viiva-ikoni svg { width: 1.7rem; height: 1.7rem; }
+.pollo-nappi.auki { color: var(--accent); }
+
+.pollo-paneeli {
+  /*
+   * Paneelin oma väripaletti. Sävyt on otettu kaupunkilehdestä: paperi
+   * #f5f0e2 ja painomuste #211d18 ovat samat kuin .dialog.arkki
+   * .dialog-cardissa, jotta pöllön paneeli tuntuu samalta arkilta kuin
+   * lehti. Muuttujat pitävät sävyt yhdessä paikassa, koska paneelin
+   * sisällä on kymmenkunta osaa.
+   */
+  --pollo-paperi: #f5f0e2;
+  --pollo-paperi-2: #ece2c8;
+  --pollo-muste: #211d18;
+  --pollo-muste-himmea: #6b5a45;
+  --pollo-korostus: #7a5514;
+  --pollo-viiva: rgba(122, 85, 20, 0.32);
+
+  position: fixed;
+  right: calc(0.7rem + env(safe-area-inset-right, 0px));
+  bottom: calc(7.2rem + env(safe-area-inset-bottom, 0px));
+  z-index: 41;
+  display: flex;
+  flex-direction: column;
+  width: min(21rem, calc(100vw - 1.4rem));
+  max-height: min(27rem, calc(100vh - 10rem));
+  border: 1px solid var(--pollo-viiva);
+  border-radius: var(--radius);
+  /* Sama painopaperi kuin lehden arkissa: kohina kertaantuu värin päälle. */
+  background-color: var(--pollo-paperi);
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+  color: var(--pollo-muste);
+  /* Leipäteksti lukukirjasimella, kuten lehden jutut. */
+  font-family: var(--font-luku);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+/*
+ * EI HEHKUA. Kaikki paneelin teksti nollaa perityn pergamenttivarjon —
+ * tämä on se sääntö, joka teki teksteistä jälleen teräviä. Valitsin on
+ * tarkoituksella tarkempi kuin body[data-mode] .actions button, joka
+ * yltää paneelin nappeihin asti.
+ */
+.pollo-paneeli,
+body[data-mode] .actions .pollo-paneeli,
+body[data-mode] .actions .pollo-paneeli * { text-shadow: none; }
+
+/*
+ * Ehdotukset ovat paneelin ylin osa nyt kun otsikkopalkkia ei ole.
+ * Yläpehmuste antaa niille saman ilmavan reunuksen, joka palkilla oli.
+ */
+.pollo-ehdotukset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.55rem 0.6rem;
+  border-bottom: 1px solid var(--pollo-viiva);
+}
+
+button.pollo-ehdotus {
+  padding: 0.4rem 0.55rem;
+  min-height: 0;
+  border: 1px solid var(--pollo-viiva);
+  border-radius: 8px;
+  background: var(--pollo-paperi-2);
+  color: var(--pollo-muste);
+  font-family: inherit;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+}
+
+button.pollo-ehdotus:hover { border-color: var(--pollo-korostus); color: var(--pollo-korostus); }
+button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
+
+.pollo-virta {
+  flex: 1;
+  min-height: 3rem;
+  padding: 0.7rem 0.6rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Vastaukset ovat pitkähköä leipätekstiä, joten ne käyttävät samaa
+   lukukirjasinta kuin lehden jutut (--font-luku, paneelin perintö).
+   Pelaajan oma kysymys pysyy kirjoituskoneessa, jotta puheenvuorot
+   erottuvat toisistaan. Koot ovat puhelinluettavia: alle 13 pikselin
+   teksti ei ole tässä kirjasimessa enää terävää. */
+.pollo-viesti {
+  margin: 0 0 0.55rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.pollo-viesti:last-child { margin-bottom: 0; }
+
+.pollo-kayttaja {
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  background: var(--pollo-paperi-2);
+  color: var(--pollo-muste);
+  font-family: var(--font-type);
+  font-size: 0.85rem;
+}
+
+.pollo-pollo {
+  font-family: var(--font-luku);
+  font-size: 0.95rem;
+  color: var(--pollo-muste);
+}
+
+.pollo-odottaa { color: var(--pollo-muste-himmea); font-style: italic; }
+
+/* Pelinsisäiset linkit vastauksen alle. Ne rakennetaan paikallisen haun
+   tuloksista, ei mallin tekstistä, joten ne osoittavat aina johonkin. */
+.pollo-linkit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0 0 0.6rem;
+}
+
+button.pollo-linkki {
+  padding: 0.35rem 0.5rem;
+  min-height: 0;
+  border: 1px dashed var(--pollo-korostus);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--pollo-korostus);
+  font-family: inherit;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+}
+
+button.pollo-linkki:hover { background: rgba(122, 85, 20, 0.12); }
+
+/*
+ * "Ei hereillä" -ilmoitus on paneelin ainoa sisältö ennen käyttöönottoa,
+ * joten se on myös se teksti, jonka omistaja näki suttuisena. Otsikko on
+ * tumma kulta paperilla (sama sävy kuin lehden otsikoissa), lisärivi
+ * himmeää mustetta — molemmat riittävän isoina luettaviksi.
+ */
+.pollo-nukkuu { text-align: center; padding: 0.7rem 0.3rem; }
+
+.pollo-nukkuu-otsikko {
+  margin: 0 0 0.45rem;
+  color: var(--pollo-korostus);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.pollo-nukkuu-lisa {
+  margin: 0;
+  color: var(--pollo-muste-himmea);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+/* ---------------------------------------------------------------------
+   SYÖTTÖALUE: matala nappirivi paneelin pohjalla (omistajan linjaus
+   12.8.2026). Vasemmalla näppäimistö kolmasosan leveydeltä, oikealla
+   mikrofoni kahden kolmasosan. Selitetekstejä ei ole — kuvakkeiden
+   merkitys on aria-labelissa ja titlessä. Rivi on tarkoituksella matala:
+   ennen tässä oli 3,4 rem korkea pyöreä mikki ja kaksi tekstiriviä, mikä
+   söi neljäsosan paneelista.
+   --------------------------------------------------------------------- */
+
+.pollo-syote {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-top: 1px solid var(--pollo-viiva);
+  /* Hitusen tummempi paperi erottaa pohjarivin arkista ilman omaa väriä. */
+  background: var(--pollo-paperi-2);
+  padding: 0.4rem 0.45rem 0.45rem;
+}
+
+.pollo-sanelu {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.4rem;
+}
+
+/* Molemmat alarivin napit ovat samaa matalaa muotoa. */
+button.pollo-nappula {
+  display: grid;
+  place-items: center;
+  min-height: 2.25rem;
+  padding: 0.15rem 0.3rem;
+  border: 1px solid var(--pollo-viiva);
+  border-radius: 8px;
+  background: var(--pollo-paperi);
+  color: var(--pollo-korostus);
+  cursor: pointer;
+}
+
+button.pollo-nappula .viiva-ikoni svg { width: 1.15rem; height: 1.15rem; }
+button.pollo-nappula:hover:not(:disabled) { border-color: var(--pollo-korostus); }
+button.pollo-nappula:disabled { opacity: 0.5; cursor: default; }
+
+/*
+ * Kuunteleva mikki on ainoa täyteinen nappi paneelissa, joten sen sävy
+ * kirjoitetaan paneelin luokan alle: kartalla .actions-napeille on oma
+ * pergamenttisääntö, joka muuten voittaisi tämän.
+ */
+.pollo-paneeli button.pollo-mikki.kuuntelee {
+  background: var(--pollo-korostus);
+  color: #f7f1e2;
+  border-color: var(--pollo-korostus);
+  animation: pollo-syke 1.4s ease-in-out infinite;
+}
+
+@keyframes pollo-syke {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(122, 85, 20, 0.45); }
+  60% { box-shadow: 0 0 0 0.45rem rgba(122, 85, 20, 0); }
+}
+
+/* Sanelun tilarivi kertoo vain hetkellisen tilan. Tyhjänä se ei vie
+   tilaa lainkaan, joten paneelin pohja pysyy matalana. */
+.pollo-sanelu-tila {
+  margin: 0;
+  color: var(--pollo-muste-himmea);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.pollo-sanelu-tila:empty { display: none; }
+
+.pollo-rivi { display: flex; gap: 0.35rem; }
+
+input.pollo-kentta {
+  flex: 1;
+  min-width: 0;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--pollo-viiva);
+  border-radius: 8px;
+  background: var(--pollo-paperi);
+  color: var(--pollo-muste);
+  font-family: inherit;
+  /* 16 px estää iOS:n automaattisen zoomin kenttään napautettaessa. */
+  font-size: 16px;
+}
+
+input.pollo-kentta::placeholder { color: var(--pollo-muste-himmea); }
+input.pollo-kentta:disabled { opacity: 0.6; }
+
+button.pollo-laheta {
+  width: 2.3rem;
+  border: 1px solid var(--pollo-viiva);
+  border-radius: 8px;
+  background: var(--pollo-paperi);
+  color: var(--pollo-korostus);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button.pollo-laheta:hover:not(:disabled) { border-color: var(--pollo-korostus); }
+button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
+
+@media (prefers-reduced-motion: reduce) {
+  button.pollo-mikki.kuuntelee { animation: none; }
+}
+
 </style>
 
 <!--
@@ -37630,193 +38046,6 @@ const KULTTUURI_KATEGORIAT = {
         oikea: 2,
         fakta: 'Torilla myytävät hamourit ovat useimmiten nuoria, koska '
           + 'täyteen mittaan ehtii kasvaa yhä harvempi kala.',
-      },
-    },
-  ],
-  /*
-   * NIKOSIAN KANSISIVU (nippu 2, 12.8.2026). Aihesivun id on valittu
-   * niin, ettei se peitä CYP-maalehden omaa sivua (rakennaSivut):
-   * maalehdellä on muinaisuus, kirkot, luonto, kasityo ja ruoka.
-   * Jakoa ei käsitellä — ks. nahtavyysjutut.js:n nikosia-kommentti.
-   */
-  nikosia: [
-    {
-      id: 'kaupunki',
-      nimi: 'Nikosia',
-      johdanto: 'Nikosia on Kyproksen hallinnon ja rahan kaupunki: saaren '
-        + 'kaikkien pankkien pääkonttorit ovat täällä, samoin viisi '
-        + 'yliopistoa ja saaren vanhin ja suurin arkeologinen museo.',
-      kansikuvat: [
-        {
-          tiedosto: 'Nicosia\'s skyline 2024.jpg',
-          selite: 'Näkymä yli keskustan kattojen auringonlaskun aikaan: '
-            + 'etualalla matalia tiili- ja tasakattoja vesisäiliöineen, '
-            + 'takana muutama lasitorni ja horisontissa vuorijono.',
-          lahde: 'PomposPompou, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'A house with a palm tree in the Arab Quarter, North Nicosia, Cyprus.jpg',
-          selite: 'Kivetty kuja Arabahmetin korttelissa. Vasemmalla on '
-            + 'valkoiseksi rapattu talo, jonka ikkunanpuitteet ja '
-            + 'säleluukut on maalattu keltaisiksi ja jonka tiilikaton '
-            + 'takaa nousee palmu; katoksen alle on pysäköity auto. '
-            + 'Oikealla erottuu turkoosiksi maalattu umpierkkeri ja kujan '
-            + 'päässä toinen auto.',
-          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Izgled-Old House Nicosia-6.jpg',
-          selite: 'Vanhan talon pyöristetty kulma vanhassakaupungissa. '
-            + 'Alhaalla on avoin loggia, jonka perällä näkyy ovi, ja sen '
-            + 'päälle työntyy parveke valkoisine pylväskaiteineen. '
-            + 'Kannattimina on kierrekoristeisia kivikonsoleita, '
-            + 'ikkunoissa puiset säleluukut, ja julkisivun poikki kulkee '
-            + 'sähköjohtoja.',
-          lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      nostot: [
-        {
-          otsikko: 'Tulkin talo vaihtoi omistajaa kahdesti',
-          tiedosto: 'Etnografski-Facade2.jpg',
-          teksti: 'Hadjigeorgakis Kornesios toimi Kyproksen dragomaanina eli '
-            + 'hallinnon tulkkina vuosina 1779–1809, ja noin vuonna 1796 '
-            + 'sulttaani Selim III nimitti hänet virkaan elinikäisesti. '
-            + 'Kartanonsa hän rakennutti Agios Antonioksen kaupunginosaan '
-            + 'arkkipiispan asunnon lähelle. Vuoden 1804 kapinassa '
-            + 'väkijoukko murtautui taloon ja ryösti sen, ja perhe pakeni '
-            + 'Konstantinopoliin. Hänet teloitettiin siellä vuonna 1809, '
-            + 'omaisuus takavarikoitiin ja talo meni kaupaksi 13 000 '
-            + 'kuruşilla; nuorin poika osti sen takaisin vuonna 1830. '
-            + 'Viimeinen asukas kuoli 1979, ja nyt talossa on etnologinen '
-            + 'museo. Kunnostuksesta myönnettiin Europa Nostra -palkinto.',
-          selite: 'Kartanon katujulkisivu. Ylhäällä työntyy ulos umpinainen '
-            + 'puinen erkkeri, jonka luukut ovat kiinni, alempana on '
-            + 'ristikoin varustettuja ikkunoita, ja oikealla erottuu '
-            + 'teräväkaarinen oviaukko.',
-          lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          otsikko: 'Kangaskauppa muutti kirkon holvien alle',
-          tiedosto: 'Bedestan Nicosia (42819030095).jpg',
-          teksti: 'Vanhan kaupungin Bedestenin sisällä on paloja '
-            + 'bysanttilaisesta basilikasta, joka ajoitetaan 500-luvulle. '
-            + 'Sen tilalle rakennettiin kirkko, jota laajennettiin '
-            + '1100–1500-luvuilla. Koristeellisin osa on '
-            + 'pohjoisjulkisivu: goottilainen portaali, sen molemmin '
-            + 'puolin sukujen vaakunat, Pyhän Nikolaoksen pienoispatsas '
-            + 'sekä eläinhahmoja ja vedenheittäjiä. Vuonna 1573 talo '
-            + 'annettiin bedesteniksi eli katetuksi kangaskaupaksi, ja '
-            + '1760-luvulla siellä kävivät kauppaa turkkilaiset, '
-            + 'kreikkalaiset ja armenialaiset kauppiaat. Vuonna 1873 se '
-            + 'oli jauhovarasto. Kunnostus kesti 2004–2009, ja sen '
-            + 'suunnittelutyö sai Europa Nostra -palkinnon; nyt talossa '
-            + 'on kulttuurikeskus.',
-          selite: 'Bedestenin kaaririvi hunajanväristä kiveä. Kaksi '
-            + 'vasemmanpuoleista teräväkärkistä kaarta on suljettu '
-            + 'lasilla, yläpuolella kulkee kunnostuksessa lisätty '
-            + 'peltikatto säleikköineen, ja oikealla nousee palmu. '
-            + 'Pihamaalla on irtonaisia kivilohkareita ja ruukkukasveja.',
-          lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          otsikko: 'Kaaririvit ovat 1950-luvun työtä',
-          tiedosto: 'Nikosia Erzbischöfliches Palais 1.jpg',
-          teksti: 'Arkkipiispan palatsi rakennettiin vuosina 1956–1960 '
-            + 'vanhan, 1600-luvulta olevan arkkipiispantalon viereen. '
-            + 'Tyyli on uusbysanttilainen: kahdessa kerroksessa kulkee '
-            + 'kaariaukkojen rivi, kivi on hiekankeltaista ja katto '
-            + 'tiiltä. Yleispiirustukset laati Ateenassa työskennellyt '
-            + 'George Nomikos, ja muun arkkitehtityön tekivät '
-            + 'limassolilaiset Nicholas S. Roussos ja John Pericleous. '
-            + 'Itse palatsiin ei pääse sisään, mutta samalla tontilla '
-            + 'ovat yleisölle avoimet bysanttilainen museo, '
-            + 'arkkipiispanistuimen kirjasto ja kansantaiteen museo.',
-          selite: 'Palatsin pitkä julkisivu hämärtyvässä valossa. Kummassakin '
-            + 'kerroksessa on rivi kaariaukkoja, kivi on hiekankeltaista '
-            + 'ja katto tiiltä; kadun puolella on koristeellinen '
-            + 'rautaportti.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-    },
-    {
-      id: 'arki',
-      nimi: 'Arki',
-      johdanto: 'Nikosia on Mesaorian tasangolla, jonka nimi tarkoittaa vuorten '
-        + 'välistä. Tasanko on lähes puuton, ja kaupungin pinta-alasta on '
-        + 'puiden alla kolme prosenttia — vähemmän kuin missään muussa '
-        + 'Euroopan pääkaupungissa.',
-      nostot: [
-        {
-          otsikko: 'Kortteli, jossa autot eivät kulje',
-          tiedosto: 'Laiki Geitonia by Georgy90 - panoramio.jpg',
-          teksti: 'Laiki Geitonia on vanhankaupungin kävelykortteli, joka '
-            + 'alkaa Eleftherian aukiolta ja jatkuu noin 300 metriä. '
-            + 'Talot ovat 1700-luvun lopulta, ja rakennusaineina ovat '
-            + 'puu, hiekkakivi ja savitiili; kunnostettuja taloja '
-            + 'pidetään esimerkkinä perinteisestä kyproslaisesta '
-            + 'kaupunkirakentamisesta. Kujat ovat kapeita ja '
-            + 'mutkittelevia, ja asuintalojen välissä on käsityöpajoja, '
-            + 'matkamuistoliikkeitä ja tavernoja. Korttelissa on myös '
-            + 'kaupungin tärkein matkailuneuvonta, ja opastetut '
-            + 'kävelykierrokset lähtevät sieltä maanantaisin, torstaisin '
-            + 'ja perjantaisin.',
-          selite: 'Kapea kuja korttelissa: keskellä kasvaa appelsiinipuita '
-            + 'hedelmineen, vasemmalla on talo, jonka nurkat on ladottu '
-            + 'hiekkakivestä, ja seinässä roikkuu lyhty ja takorautainen '
-            + 'kylttivarsi.',
-          lahde: 'Georgy Papantoniou, Wikimedia Commons (CC BY 3.0)',
-        },
-        {
-          otsikko: 'Saaren pisin joki kulkee kuivana',
-          tiedosto: 'Řeka Pedieos, Nicosia, Kypr 2.jpg',
-          teksti: 'Pedieos on Kyproksen pisin joki, 98 kilometriä. Se alkaa '
-            + 'Troodoksen Machairas-metsästä samannimisen luostarin '
-            + 'läheltä, virtaa koilliseen Mesaorian tasangon poikki '
-            + 'Nikosian halki ja kääntyy sitten itään kohti Famagustan '
-            + 'lahtea. Uoma on siirretty pois vanhankaupungin vierestä '
-            + '1500-luvulla. Suurin osa saaren 35 joesta ja purosta on '
-            + 'tilapäisiä ja kuivuu kesäksi, ja Nikosiassa mitattiin 4. '
-            + 'syyskuuta 2020 lämpötila 46,2 astetta, koko Kyproksen '
-            + 'korkein lukema. Jokivartta on muutettu kävelyreitiksi 18 '
-            + 'kilometrin matkalta.',
-          selite: 'Uoma keskellä eukalyptuslehtoa: vettä on vain kapea nauha '
-            + 'betonikourun pohjalla, rannat ovat hiekkaa ja kuivia '
-            + 'oksia, ja yläreunassa erottuu kulkupolku.',
-          lahde: 'Fry72, Karel Frydrýšek, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          otsikko: 'Sinettivahasta koneisiin',
-          tiedosto: 'Laiki Geitonia - panoramio (3).jpg',
-          teksti: 'Kyproksen postimuseo avattiin vuonna 1981, ja se toimii '
-            + 'vanhan kartanon pohjakerroksessa Laiki Geitonian '
-            + 'kortteleissa. Vanhimmat esineet ovat 1400-luvulta: silloin '
-            + 'saaren postinkulku järjestettiin ensimmäisen kerran '
-            + 'venetsialaisten aikana. Kokoelmassa on vanhin kyproslainen '
-            + 'merkkisarja, jossa on kuningatar Viktorian kuva ja sana '
-            + 'Cyprus, sekä vuoden 1928 sarja, joka tehtiin varta vasten '
-            + 'Kyprokselle ja jossa on saaren monumentteja. Esillä on '
-            + 'myös kirjeiden varmistamista sinettivahasta koneisiin, '
-            + 'vaakoja ja alan kirjallisuutta.',
-          selite: 'Kujan varressa seisoo punaiseksi maalattu valurautainen '
-            + 'pylväspostilaatikko tiilisen istutuslaatikon vieressä. '
-            + 'Takana on matkailuneuvonnan kyltti ja kunnostettuja '
-            + 'taloja, joissa on puiset ikkunaluukut.',
-          lahde: 'Georgy Papantoniou, Wikimedia Commons (CC BY 3.0)',
-        },
-      ],
-      tehtava: {
-        kysymys: 'Kuinka pitkä Pedieos-joki on?',
-        vaihtoehdot: [
-          '48 kilometriä',
-          '78 kilometriä',
-          '98 kilometriä',
-          '128 kilometriä',
-        ],
-        oikea: 2,
-        fakta: 'Joki on suuren osan vuotta kuiva, ja sen vartta on '
-          + 'muutettu kävelyreitiksi 18 kilometrin matkalta.',
       },
     },
   ],
@@ -65278,143 +65507,6 @@ const MAAKARTAT = {
  */
 const KAUPUNKIKARTAT = {
   /*
-   * Vanha Masqat (nippu 2, 12.8.2026). Kuvassa on vain muurien
-   * sisäinen vanhakaupunki — Mutrahin suuki neljän kilometrin päässä
-   * jää tarkoituksella ulos (perustelu tools/piirra-kaupunkikartta.mjs).
-   *
-   * OMN-maalehti kertoo Bahlan ja Jabreenin linnoista mutta EI
-   * Masqatin omista kohteista, joten tämä kaupunki on lähes kokonaan
-   * vapaata aihepiiriä — poikkeus Persianlahden kaupunkien joukossa.
-   * Kuudes kohde, hindutemppeli, ei ole linnake eikä palatsi: sen
-   * takia rajausta siirrettiin ensin etelämmäs ja sitten lännemmäs,
-   * jotta sen numeroympyrä ei istu mittakaavajanan päällä.
-   */
-  masqat: {
-    polku: 'assets/kartat/masqat-keskusta.png',
-    lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: {
-      pohjoinen: 23.6205, etela: 23.6085, lansi: 58.5805, ita: 58.602,
-    },
-    esittely: 'Masqat ei ole yksi kaupunki vaan jono pieniä lahtia '
-      + 'vuorten välissä. Vanha Masqat on niistä itäisin: puolikuun '
-      + 'muotoinen poukama, jonka ympärillä kalliot nousevat suoraan '
-      + 'ylös. Juuri siksi kaupunki syntyi tähän — poukama on '
-      + 'luonnonsatama, jonne pääsee mereltä mutta jonne maitse '
-      + 'pääsee vain kahdesta portista. Portugalilaiset ottivat '
-      + 'sataman 1507 ja rakensivat sen suulle kaksi linnaketta, '
-      + 'Jalalin ja Miranin, jotka valvovat väylää edelleen. Muuri '
-      + 'kiersi kaupungin, ja portit suljettiin öisin vielä '
-      + '1970-luvulla.'
-      + '\n\n'
-      + 'Kartalla meri tulee sisään oikealta ja ylhäältä, ja '
-      + 'poukaman ympärillä kulkee ohut rantaviiva. Vanhankaupungin '
-      + 'kadut näkyvät keskellä pienenä tiheänä ruudukkona — se on '
-      + 'koko historiallinen Masqat, alle kilometrin levyinen. '
-      + 'Katkoviivat ovat vanhan kaupunginmuurin jäänteitä. '
-      + 'Ympärillä oleva vaalea ala ei ole tyhjää tonttimaata vaan '
-      + 'paljasta vuorta: siihen ei ole rakennettu, koska siihen ei '
-      + 'voi rakentaa. Kohteista pääsee lukemaan lisää napauttamalla.',
-    kohteet: [
-      { nimi: 'Masqatin portti', lat: 23.6175, lon: 58.5869 },
-      { nimi: 'Al-Miranin linnake', lat: 23.6172, lon: 58.5931 },
-      { nimi: 'Al-Jalalin linnake', lat: 23.6167, lon: 58.5979 },
-      { nimi: 'Al Alamin palatsi', lat: 23.6160, lon: 58.5947 },
-      { nimi: 'Bait Al Zubair', lat: 23.6155, lon: 58.5921 },
-      { nimi: 'Motishwar Mandir', lat: 23.6097, lon: 58.5882 },
-    ],
-  },
-  /*
-   * Kuwait City (nippu 2, 12.8.2026). Kolme kohdetta on jo KWT-
-   * maalehdessä omina juttuinaan — Kuwait-tornit, suurmoskeija ja
-   * Mubarakiyan tori (maalehdessä ruokajuttuna) — koska maalehti
-   * kirjoitettiin ennen kuin kaupungilla oli lehteä. Niiden
-   * nähtävyysjutut kertovat siksi eri asian kuin maalehti.
-   *
-   * Kansallismuseo ja kansalliskirjasto jätettiin pois, vaikka
-   * molemmat olisivat kelvollisia: ne ovat parinsadan metrin päässä
-   * Sadu Housesta, ja numeroympyrät olisivat menneet päällekkäin.
-   */
-  kuwait: {
-    polku: 'assets/kartat/kuwait-keskusta.png',
-    lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: {
-      pohjoinen: 29.392, etela: 29.366, lansi: 47.962, ita: 48.010,
-    },
-    esittely: 'Kuwait City on rakennettu lahden kaarelle, ja koko '
-      + 'kaupunki katsoo veteen päin. Vanha kaupunki oli 1950-luvulle '
-      + 'asti pieni: muurin sisällä asui muutama kymmenentuhatta '
-      + 'ihmistä, ja muurin ulkopuolella alkoi aavikko. Öljy muutti '
-      + 'mittakaavan kerralla. Vanha savitiilikaupunki purettiin '
-      + 'lähes kokonaan 1950- ja 1960-luvuilla ja tilalle piirrettiin '
-      + 'uusi keskusta kehäteineen — juuri ne kaaret, jotka kartalla '
-      + 'erottuvat leveimpinä viivoina. Vanhasta kaupungista jäivät '
-      + 'jäljelle tori, muutama portti ja rannan palatsi.'
-      + '\n\n'
-      + 'Kartalla meri on ylhäällä ja vasemmalla. Rannassa erottuu '
-      + 'satamien suorakulmaisia altaita, ja oikeassa yläkulmassa '
-      + 'niemi työntyy veteen: siinä ovat Kuwait-tornit. Kehätiet '
-      + 'kaartavat rannan suuntaisesti, ja niiden väliin jäävät '
-      + 'korttelit ovat sitä tiheämpiä mitä lähempänä rantaa ollaan. '
-      + 'Vasemmassa alakulmassa näkyy pieni tiheä ruudukko: se on '
-      + 'vanhan torin kortteli, ainoa kohta jossa kadut ovat yhä '
-      + 'kapeita. Kohteista pääsee lukemaan lisää napauttamalla.',
-    kohteet: [
-      { nimi: 'Kuwait-tornit', lat: 29.3900, lon: 48.0031 },
-      { nimi: 'Al Hamra -torni', lat: 29.3790, lon: 47.9932 },
-      { nimi: 'Seifin palatsi', lat: 29.3808, lon: 47.9711 },
-      { nimi: 'Kuwaitin suurmoskeija', lat: 29.3789, lon: 47.9747 },
-      { nimi: 'Mubarakiyan tori', lat: 29.3748, lon: 47.9741 },
-      { nimi: 'Sadu House', lat: 29.3744, lon: 47.9672 },
-    ],
-  },
-  /*
-   * Nikosia (nippu 2, 12.8.2026). Rajaus on pieni, koska venetsialaisten
-   * muurien kehä on halkaisijaltaan vain noin puolitoista kilometriä.
-   *
-   * KOHTEIKSI EI VALITTU muuria, Famagustan porttia eikä Ledran katua,
-   * vaikka ne ovat kaupungin tunnetuimmat: kaikki kolme on jo varattu
-   * muualla pelissä (asia-valokuvat.js:n kuvatekstit ja Nikosian
-   * kulttuurivisa). Tilalle otettiin kuusi kohdetta, joista mikään ei
-   * esiinny pelissä ennestään. Selimiyen viereinen Bedesten jätettiin
-   * pois, koska se on kolmenkymmenen metrin päässä moskeijasta ja
-   * numeroympyrät olisivat menneet päällekkäin — se kerrotaan
-   * Selimiyen jutun sisällä.
-   */
-  nikosia: {
-    polku: 'assets/kartat/nikosia-keskusta.png',
-    lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: {
-      pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378,
-    },
-    esittely: 'Nikosia on tasangon keskellä, ei rannikolla, ja se on '
-      + 'ainoa Kyproksen suurista kaupungeista jota ei perustettu '
-      + 'sataman viereen. Kaupunki kasvoi joen mutkaan, ja sen muoto '
-      + 'päätettiin kerralla vuonna 1567: venetsialaiset purkivat '
-      + 'keskiaikaisen kaupungin laidat ja rakensivat tilalle '
-      + 'ympyränmuotoisen muurin, jossa on yksitoista nuolenkärjen '
-      + 'muotoista bastionia. Kehä on kartan selvin muoto, ja se on '
-      + 'yhä kaupungin sisärengas: muurin sisäpuoli on vanhakaupunki, '
-      + 'ulkopuoli nykyistä Nikosiaa.'
-      + '\n\n'
-      + 'Kartalla tähtimuoto erottuu heti keskeltä. Sen sisällä kadut '
-      + 'ovat kapeita ja mutkittelevia, ulkopuolella suoria ja leveitä '
-      + '— ero näkyy viivojen tiheydestä. Muurin ympärillä kiertää '
-      + 'vaaleampi kaistale: se on entinen vallihauta, jossa kasvaa '
-      + 'nykyään puita ja jonka pohjalla on puistoja ja '
-      + 'urheilukenttiä. Vanhankaupungin kohteet ovat kävelymatkan '
-      + 'päässä toisistaan; kartan itäreunassa kulkeva leveä väylä on '
-      + 'jo muurien ulkopuolella. Kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
-    kohteet: [
-      { nimi: 'Selimiyen moskeija', lat: 35.1765, lon: 33.3645 },
-      { nimi: 'Büyük Han', lat: 35.1763, lon: 33.3625 },
-      { nimi: 'Faneromenin kirkko', lat: 35.1735, lon: 33.3625 },
-      { nimi: 'Omeryen hamam', lat: 35.1726, lon: 33.3654 },
-      { nimi: 'Kyproksen museo', lat: 35.1717, lon: 33.3553 },
-      { nimi: 'Leventis-museo', lat: 35.1706, lon: 33.3617 },
-    ],
-  },
-  /*
    * Doha (nippu 2:n pilottikaupunki, 12.8.2026). Rajaus kattaa vanhan
    * ytimen Corniche-rantakadun kaaressa; West Bayn tornit jäävät
    * pohjoiseen kartan ulkopuolelle tarkoituksella (ks. perustelu
@@ -76207,321 +76299,6 @@ const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
-  /*
-   * Nikosian nähtävyysjutut (nippu 2, 12.8.2026). Nikosia on jaettu
-   * kaupunki, mutta lehti ei käsittele jakoa: peli ei kerro
-   * nykykonflikteista, joten kohteet kuvataan kulttuurikohteina
-   * omalla historiallaan. CYP-maalehti kertoo saaren muinaisuudesta
-   * ja kirkoista, joten kaupungin jutut pysyvät rakennuksissa.
-   */
-  nikosia: {
-    'Selimiyen moskeija': {
-      aika: '1570',
-      teksti: 'Perustuskivi laskettiin 1209, ja vihkiminen ehti vasta vuoteen '
-        + '1326. Väliin osui kaksi maanjäristystä, 1267 ja 1303, ja '
-        + 'keskilaiva ja länsijulkisivu valmistuivat vasta arkkipiispa '
-        + 'Giovanni del Conten aikana 1319–1326. Sisämitat ovat 66 × 21 '
-        + 'metriä, ja rakennus on Kyproksen vanhin ja suurin säilynyt '
-        + 'goottilainen kirkko. Pohjakaava on lainattu Pariisista: kuoria '
-        + 'kiertää käytävä eikä apsidiin tehty kappeleita, kuten '
-        + 'Notre-Damessa. Ranskalaisen Lusignan-suvun kuninkaat '
-        + 'kruunattiin täällä.'
-        + '\n\n'
-        + 'Syyskuussa 1570 rakennus sai toisen elämän. Ensimmäinen '
-        + 'perjantairukous pidettiin 15. syyskuuta, ja samana vuonna '
-        + 'länsipäätyyn nousi kaksi minareettia. Sisällä muutos oli '
-        + 'käytännöllinen: patsaat ja kirkon kalusteet kannettiin ulos, '
-        + 'kivilattia peitettiin matoilla ja seinään hakattiin '
-        + 'mihrab-syvennys. Mekka on Nikosiasta kaakossa, ei idässä, '
-        + 'joten rukoussuunta ei osu kirkon pituusakselille — matot on '
-        + 'ladottu vinoon pilaririveihin nähden. Runkoon ei koskettu: '
-        + 'ristiholvit, ikkunaruusukkeet ja kimppupilarit jäivät '
-        + 'paikoilleen. Rukoustilaa on 1 750 neliömetriä, ja väkeä mahtuu '
-        + '2 500.'
-        + '\n\n'
-        + 'Nimi on nuori: vuoteen 1954 asti rakennus oli Ayasofya, ja 13. '
-        + 'elokuuta se nimettiin sulttaani Selim II:n mukaan. Vuodesta '
-        + '1949 rukouskutsu on tullut kaiuttimista eikä minareetin '
-        + 'parvekkeelta.',
-      kuvat: [
-        {
-          tiedosto: 'Selimiye Mosque (St. Sophie Cathedral) (01).JPG',
-          selite: 'Länsipäädyn eteishalli: kaksi korkeaa goottilaista '
-            + 'suippokaarta järeiden kivipilarien välissä, takaa nousee '
-            + 'minareetti parvekkeineen. Kaaren takana näkyy veistoksin '
-            + 'koristeltu ovipieli, josta kuljetaan rukoussaliin.',
-          lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Lefkoşa Selimiye-Moschee (Sophienkathedrale) Innen Mihrab 1.jpg',
-          selite: 'Mihrab valkoiseksi kalkitun goottilaisen seinän edessä: '
-            + 'maalattu kukkakehys, kalligrafiakenttä ja tippukivimäinen '
-            + 'katos syvennyksen yllä. Vasemmalla kohoaa kimppupilari, '
-            + 'oikealla korkea puuristikkoikkuna, ja koko lattian peittää '
-            + 'punainen kuviomatto.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
-    'Büyük Han': {
-      aika: '1572',
-      teksti: 'Kyproksen suurin karavaaniseraaji mittaa ulkoa 50,67 × 45,25 '
-        + 'metriä, ja sen sisään jää 27,68 × 26,21 metrin piha. Ovia on '
-        + 'kaksi, idässä ja lännessä, vaikka tämän tyypin majatalossa on '
-        + 'tavallisesti yksi. Pääovi on itäsivulla, ja sen yllä oleva '
-        + 'piirtokirjoituksen kehys jäi tyhjäksi. Alakerran ristiholvatun '
-        + 'kaarikäytävän takana ovat holvatut huoneet, ja niiden edessä '
-        + 'oli kaukalot, joihin matkustajan eläimet kytkettiin: tavara ja '
-        + 'juhdat jäivät maan tasalle.'
-        + '\n\n'
-        + 'Yläkertaan noustaan kahta kiviportaikkoa myöten pihan '
-        + 'kaakkois- ja luoteiskulmasta. Huoneita on kahdessa kerroksessa '
-        + 'yhteensä 68, ja yläkerran huone on tehty nukkumista varten: '
-        + 'matalakaarinen ovi, tulisija, kaappina käytetty seinäsyvennys, '
-        + 'kapeat ikkuna-aukot ja katossa valoaukko. Itäportin päällä '
-        + 'oleva huone on muita suurempi. Katolla seisoo puolentoista '
-        + 'metrin korkuisia savupiippuja, joiden pohja on kuusi- tai '
-        + 'kahdeksankulmainen ja huippu kartiomainen.'
-        + '\n\n'
-        + 'Pihan keskellä on köşk mescit, kahdeksankulmainen rukoushuone '
-        + 'kupolin alla. Se lepää kahdeksan marmoripylvään kannattamien '
-        + 'suippokaarien varassa, jokaisella sivulla on pihalle avautuva '
-        + 'ikkuna, ja pylväiden alla on vesisäiliö. Britannian hallinnon '
-        + 'aikana rakennus toimi kaupungin keskusvankilana 1892–1903, '
-        + 'sitten jälleen majatalona ja vuodesta 1947 halpoina '
-        + 'vuokrahuoneina; kunnostus valmistui 2002. Vuokrasopimus vaatii '
-        + 'nyt, että myytävä tavara on myyjän omaa käsialaa.',
-      kuvat: [
-        {
-          tiedosto: 'Büyük Han (43722761521).jpg',
-          selite: 'Sisäpiha ylhäältä: suippokaariset holvikäytävät kiertävät '
-            + 'pihaa kahdessa kerroksessa, keskellä kohoaa kupolinen '
-            + 'rukoushuone kaarien päällä ja katonharjalla on rivi '
-            + 'kartiopäisiä savupiippuja.',
-          lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'Lefkoşa Karawanserei Büyük Han Innenhof Obere Galerie 1.jpg',
-          selite: 'Yläkerran pylväskäytävä huoneiden edessä: holvattu '
-            + 'kivikatto, vasemmalla huoneen ovi ja karkea kiviseinä, '
-            + 'oikealla kaide ja näkymä pihan yli vastapäiseen käytävään.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
-    'Faneromenin kirkko': {
-      aika: '1872',
-      teksti: 'Kirkon muurikivistä suuri osa on vanhempaa perua. Pääosa '
-        + 'tuotiin La Cavan linnasta, joka pystytettiin noin 1385 '
-        + 'Arona-kukkulalle ja joka sai nimensä kallioon louhitusta '
-        + 'vesisäiliöstä. Venetsialaiset räjäyttivät linnan 1520-luvulla, '
-        + 'mutta vielä 1870 siitä oli pystyssä holvisali, kehämuurit ja '
-        + 'kaksi tornia. Sinä vuonna jäljellä ollut purettiin lähes '
-        + 'kokonaan ja kivet ajettiin kirkon työmaalle. Loput otettiin '
-        + 'samalla paikalla aiemmin toimineesta nunnaluostarista.'
-        + '\n\n'
-        + 'Nykyinen kirkko valmistui 1872 vanhemman kirkon paikalle, ja '
-        + 'se on vanhankaupungin suurin kirkko. Se on omistettu Neitsyt '
-        + 'Marialle, ja nimi Faneromeni tarkoittaa ilmestynyttä. Tyylejä '
-        + 'on kolme päällekkäin: uusklassinen, bysanttilainen ja '
-        + 'keskiaikainen latinalainen. Pilaririvit jakavat salin kolmeen '
-        + 'laivaan, holvit ovat suippokaarisia ja perällä on kullattu '
-        + 'ikonostaasi. Kellotorni kohoaa kirkon toisessa päässä kahtena '
-        + 'kaariaukkoisena kerroksena.'
-        + '\n\n'
-        + 'Pihalla seisoo marmorinen mausoleumi neljän vuonna 1821 '
-        + 'teloitetun kirkonmiehen muistoksi; kryptassa lepäävät '
-        + 'arkkipiispa Kyprianoksen ja kolmen piispan jäännökset. '
-        + 'Vastapäätä on Faneromenin koulu, jonka arkkipiispa Makarios I '
-        + 'perusti 1857 saaren ensimmäisenä tyttökouluna. Oppilaita oli '
-        + 'alussa 115 ja opettajia yksi, joten vanhemmat lapset pantiin '
-        + 'apuopettajiksi. Vuodesta 1903 talossa koulutettiin myös '
-        + 'naisopettajia, ja nykyisen muotonsa se sai 1924 kirkon '
-        + 'rahoituksella.',
-      kuvat: [
-        {
-          tiedosto: 'Lefkosia-faneromeni-church.jpg',
-          selite: 'Kirkon kylki hiekankeltaisesta kivestä: etualalla '
-            + 'suippokaarinen kuisti, takana kellotorni, jonka molemmissa '
-            + 'kerroksissa on kaariaukkoja ja huipulla risti.',
-          lahde: 'Mboesch, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Lefkosia-faneromeni-church-inside.jpg',
-          selite: 'Kirkkosali sisäänkäynniltä: pilaririvit, suippokaariset '
-            + 'holvit ja perällä kullattu ikonostaasi. Katosta riippuu '
-            + 'monikerroksinen kristallikruunu, vasemmalla on puinen '
-            + 'saarnatuoli portaineen.',
-          lahde: 'Mboesch, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'NICOSIA, 11 AUGUST, 2011 172.jpg',
-          selite: 'Marmorinen mausoleumi kirkon pihalla: pylväät kannattavat '
-            + 'kaarta ja kupolia, jonka huipulla on risti. Takana kohoaa '
-            + 'Faneromenin koulun uusklassinen julkisivu, ja niiden '
-            + 'välissä liehuu ortodoksikirkon keltainen lippu '
-            + 'kaksipäisine kotkineen.',
-          lahde: 'Giorgis 2011, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
-    'Omeryen hamam': {
-      aika: '1571',
-      teksti: 'Kylpylän paikalla seisoi 1300-luvulla augustinolaisten Pyhän '
-        + 'Marian kirkko, kivestä muurattu ja katettu pienillä '
-        + 'kupoleilla. Nikosian piirityksessä 1570 tykkituli hajotti '
-        + 'siitä suurimman osan. Vuonna 1571 Lala Mustafa Pasha '
-        + 'rakennutti paikalle moskeijan kalifi Omarin muistoksi, ja '
-        + 'kylpylä pystytettiin saman kokonaisuuden osaksi. Kirkosta on '
-        + 'yhä jäljellä pääsisäänkäynnin ovi, joka on 1300-luvulta '
-        + 'Lusignanien ajalta, ja koillissivulla erottuu jäänteitä '
-        + 'myöhemmästä renessanssivaiheesta.'
-        + '\n\n'
-        + 'Hamamissa kuljetaan aina samassa järjestyksessä: riisuutumis- '
-        + 'ja vilvoittelutila, lämmin välihuone, kuuma huone. Kuuman '
-        + 'huoneen keskellä on lämmitetty marmoripöytä, jolla maataan, ja '
-        + 'nurkissa pieniä kupolikomeroita yksityistä peseytymistä '
-        + 'varten. Lämpö tulee huoneiden takaa, niitä alemmas '
-        + 'sijoitetusta uunista: padassa kuumennetaan vesi, ja savu ja '
-        + 'kuuma ilma johdetaan lattian alla kulkevia kanavia pitkin '
-        + 'seinien sisään ja hormeihin. Kylpijä ei upottaudu altaaseen '
-        + 'vaan peseytyy juoksevassa vedessä. Kupoleihin on puhkaistu '
-        + 'pieniä aukkoja, jotka päästävät päivänvalon sisään ja liian '
-        + 'höyryn ulos.'
-        + '\n\n'
-        + 'Rakennus kunnostettiin 2002–2004 osana Nikosian '
-        + 'yleissuunnitelmaa EU:n rahoituksella. Työhön kuului kupolien, '
-        + 'lattianalaisen lämmityskanaviston ja uunitilan lujittaminen, '
-        + 'ja se palkittiin Europa Nostra -palkinnolla rakennusperinnön '
-        + 'suojelusta. Kylpylästä ei tehty museota: se on yhä käytössä.',
-      kuvat: [
-        {
-          tiedosto: 'Hamam baths, Cyprus.jpg',
-          selite: 'Hamamin matalat valkoiset kupolit karkean kalkkikivimuurin '
-            + 'takaa: kupolien pintaan on upotettu rivi pyöreitä '
-            + 'lasitäpliä ja yksi suorakaiteen muotoinen valoluukku. '
-            + 'Takana kohoaa kaksi rapattua hormia, joiden yläosassa on '
-            + 'aukko, ja kauempana moskeijan minareetti.',
-          lahde: 'Mikettg at English Wikipedia, Wikimedia Commons (PD)',
-        },
-        {
-          tiedosto: 'Omerye - panoramio.jpg',
-          selite: 'Kylpylän laatoitettu etupiha: seinässä lukee Hamam Omerye, '
-            + 'vieressä ruskeat luukkuovet, ja muurin takaa nousee '
-            + 'valkoinen kupoli, jonka huipulla on ikkunallinen lyhty. '
-            + 'Kupolin edessä näkyy vanhaa hiekkakivimuuria ja pihalle '
-            + 'ripustetut verhot.',
-          lahde: 'Georgy Papantoniou, Wikimedia Commons (CC BY 3.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
-    'Kyproksen museo': {
-      teksti: 'Punaiseksi maalatun seinän edessä seisoo porrastetulla '
-        + 'kivialustalla noin kaksituhatta terrakottahahmoa '
-        + 'puolikaaressa. Ne kaivettiin Agia Irinin pyhäköstä '
-        + 'marraskuussa 1929 puolen metrin syvyydestä hiekasta, ja ne '
-        + 'olivat maassa juuri samassa puoliympyrässä — kaivajien '
-        + 'mielestä asetelma muistutti teatteria. Museo on toistanut sen: '
-        + 'kämmenen kokoiset hahmot ovat eturiveissä, taaimpana lähes '
-        + 'luonnollisen kokoisia. Joukossa on pappeja, sotureita, härkiä '
-        + 'ja hevosvaljakoita. Yksi tunnetaan uhripappina: pitkä viitta, '
-        + 'turbaani ja kohotettu vasen käsi, jossa on luultavasti ollut '
-        + 'uhriveitsi.'
-        + '\n\n'
-        + 'Roomalaisajan salissa seisoo pyöreän kivipaaden päällä '
-        + 'pronssinen Septimius Severus, luonnollista kokoa suurempi. '
-        + 'Patsas tuli esiin sattumalta 1928 Kythrean kylän liepeillä. '
-        + 'Piirtokirjoitukset todistavat, että saarella oli '
-        + 'roomalaisaikana runsaasti pronssiveistoksia; tämä on niistä '
-        + 'ainoa säilynyt. Toisessa salissa on omalla jalustallaan '
-        + 'marmorinen Afrodite Soloista, ensimmäiseltä vuosisadalta eaa.'
-        + '\n\n'
-        + 'Museo perustettiin 1882 kyproslaisten vetoomuksesta, kun Luigi '
-        + 'Palma di Cesnola oli vienyt saarelta yli 35 000 esinettä. '
-        + 'Nykyisen rakennuksen työt alkoivat 1908 ja päättyivät 1924. '
-        + 'Neljätoista näyttelysalia kiertää neliömäistä keskiosaa, jossa '
-        + 'ovat kirjasto, varastot ja laboratoriot; salit etenevät '
-        + 'kivikaudesta roomalaisaikaan. Esillä on vain pieni osa '
-        + 'kokoelmasta, ja pelkästään saarelta löytyneitä esineitä.',
-      kuvat: [
-        {
-          tiedosto: 'Nikosia BW 2023-09-21 11-50-51.jpg',
-          selite: 'Agia Irinin terrakottahahmot punaisen seinän edessä: '
-            + 'pienet figuurit alimmilla kiviportailla, takarivissä lähes '
-            + 'luonnollisen kokoiset hahmot kartiomaisine päähineineen.',
-          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Nikosia BW 2023-09-21 12-04-43.jpg',
-          selite: 'Septimius Severuksen pronssipatsas pyöreän kivipaaden '
-            + 'päällä: vihertäväksi patinoitunut parrakas hahmo, kädet '
-            + 'koukussa kuin ne olisivat pitäneet asetta.',
-          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
-    'Leventis-museo': {
-      aika: '1989',
-      teksti: 'Museo kertoo yhden kaupungin tarinan, ja se kerrotaan '
-        + 'takaperin. Näyttely alkaa nykypäivän Nikosiasta ja vie kävijän '
-        + 'kerros kerrokselta taaksepäin kalkoliittiseen aikaan, vuoteen '
-        + '3000 eaa. Kokoelmissa on yli 5 000 vuotta pääkaupungin '
-        + 'historiaa: kaivauslöytöjä, keskiaikaista keramiikkaa, koruja, '
-        + 'pukuja, valokuvia ja huonekaluja.'
-        + '\n\n'
-        + 'Vanhimmasta päästä on lautamainen naista esittävä hahmo '
-        + '1700-luvulta eaa. ja tynnyrinmuotoinen oinochoe-kannu, jonka '
-        + 'kylkeen on maalattu lintu; se on arkaaiselta kaudelta 750–600 '
-        + 'eaa. Keskiajan vitriineissä ovat vihreän ja ruskean kirjava '
-        + 'lasitettu savivati 1300-luvulta, ristiretkeläisen miekka noin '
-        + 'vuodelta 1200 ja kaupunginsinetti 1200-luvulta. Uusin pää on '
-        + 'sisustettu huoneiksi, joissa on lasiovisia kaappeja ja '
-        + 'veistoselkäisiä tuoleja. Yhdessä vitriinissä on nikosialaisen '
-        + 'naisen puku vuoden 1721 piirroksen mukaan, toisessa '
-        + 'hopealankakori kullattuine kotkineen vuodelta 1884.'
-        + '\n\n'
-        + 'Museo toimii vanhassa asuintalossa Hippokrateen kadun '
-        + 'varrella. A. G. Leventisin säätiö osti ja kunnosti '
-        + 'rakennuksen, ja museo perustettiin 1984 kaupunginjohtaja '
-        + 'Lellos Demetriadesin aloitteesta; kaupunki hallinnoi sitä. '
-        + 'Ovet avattiin yleisölle 20. huhtikuuta 1989, ja se oli '
-        + 'Kyproksen ensimmäinen historiallinen museo. Kokoelmia '
-        + 'kartuttamaan perustettiin 1985 ystäväyhdistys, jonka '
-        + 'jäsenmaksu oli viisi Kyproksen puntaa vuodessa. Vuonna 1991 '
-        + 'museo valittiin Euroopan vuoden museoksi.',
-      kuvat: [
-        {
-          tiedosto: 'Leventio historic museum in Nicosia Republic of Cyprus.JPG',
-          selite: 'Museon julkisivu kadun varrella: okrankeltainen seinä, '
-            + 'siniset säleikkoluukut ja harmaat kiviset pielet, '
-            + 'takorautainen parveke veistettyjen konsolien varassa ja '
-            + 'sen alla holvikaarinen ovi rautaisine viuhkaikkunoineen.',
-          lahde: 'AyianapaProtaras, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          tiedosto: 'LMM - Schüssel 14.Jhdt.jpg',
-          selite: 'Lasitettu savivati 1300-luvulta: vaalealle pohjalle on '
-            + 'kaiverrettu kiertävä kuvio ja siihen levitetty vihreää ja '
-            + 'oranssinruskeaa. Vati on halkeillut ja koottu paloista.',
-          lahde: 'Wolfgang Sauber, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          tiedosto: 'Muzei Leventis-Interior.jpg',
-          selite: 'Sisustettu huone näyttelyssä: lasiovinen puukaappi '
-            + 'kirjoineen, kaksi posliinimaljakkoa sen päällä, '
-            + 'raidallinen saviruukku rautajalustalla ja veistoselkäinen '
-            + 'nojatuoli matoilla.',
-          lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
-  },
 };
 
 // ===== js/packs/henkilot.js =====
@@ -76667,36 +76444,6 @@ const SAATIEDOT = {
     lon: 51.53,
     keskilampo: [17.6, 18.6, 21.7, 26.6, 31.8, 34.2, 35.3, 35.2, 33.1, 29.7, 24.7, 19.8],
     sade: [11, 12, 12, 4, 0, 0, 0, 0, 0, 0, 7, 14],
-  },
-  // Nikosia on sisämaassa tasangolla, ei rannikolla: kesä on siksi
-  // kuumempi ja talvi viileämpi kuin Kyproksen rantakaupungeissa.
-  // Heinä- ja elokuussa sataa käytännössä ei lainkaan, ja koko vuoden
-  // sade tulee marraskuun ja maaliskuun välillä.
-  nikosia: {
-    lat: 35.17,
-    lon: 33.36,
-    keskilampo: [10.7, 11.2, 13.6, 17.5, 22.2, 26.8, 29.7, 29.6, 26.3, 21.9, 16.6, 12.5],
-    sade: [54, 47, 35, 30, 29, 9, 2, 3, 11, 35, 37, 53],
-  },
-  // Kuwait on Persianlahden pohjukassa ja kaukana avomerestä, joten
-  // kesä on koko lahden alueen kuumin: heinäkuun keskilämpö ylittää 37
-  // astetta eikä kesä-syyskuussa sada lainkaan. Sade tulee talvella
-  // lyhyinä ryöppyinä.
-  kuwait: {
-    lat: 29.38,
-    lon: 47.99,
-    keskilampo: [13.5, 15.4, 19.7, 25.4, 31.7, 36.1, 37.6, 37.4, 34.1, 28.7, 21, 15.4],
-    sade: [30, 13, 17, 6, 2, 0, 0, 0, 0, 2, 30, 26],
-  },
-  // Masqat on meren rannalla vuorten juurella: talvi on lämpimämpi
-  // kuin Kuwaitissa ja kesä hieman viileämpi, koska meri tasaa. Sade
-  // on vähäistä ympäri vuoden, ja kesäkuun piikki tulee harvinaisista
-  // trooppisista matalapaineista.
-  masqat: {
-    lat: 23.615,
-    lon: 58.593,
-    keskilampo: [20.7, 21.9, 24.4, 28.6, 32.5, 33.5, 33, 31.9, 30.8, 29, 25.3, 22.2],
-    sade: [18, 11, 18, 7, 1, 10, 4, 1, 0, 1, 12, 14],
   },
 };
 
@@ -77131,6 +76878,27 @@ const UUTISLAHTEET = {
     syote: 'https://www.tagesschau.de/infoservices/alle-meldungen-100~rss2.xml',
   },
 };
+
+// ===== js/packs/pollo-asetukset.js =====
+/*
+ * Viisaan Pöllön rajapintaosoite.
+ *
+ * Sama käytäntö kuin uutisvälityksellä (js/packs/uutislahteet.js): peli
+ * ei puhu maksulliseen tekoälyrajapintaan suoraan, vaan oman pienen
+ * Cloudflare Workerin kautta. Workerin lähdekoodi ja omistajan
+ * käyttöönotto-ohje: tools/pollo/.
+ *
+ * Kun osoite on tyhjä, pöllönappi näkyy pelissä mutta napautus avaa
+ * siistin "Pöllö ei ole vielä hereillä" -tilan. Peli ei tee yhtään
+ * verkkopyyntöä eikä kirjoita mitään konsoliin.
+ *
+ * HUOM: https://-alku on pakollinen — ilman sitä selain tulkitsisi
+ * osoitteen suhteelliseksi poluksi pelin omalle sivustolle.
+ *
+ * API-avainta EI kirjoiteta tänne eikä mihinkään muualle repoon. Avain
+ * elää vain Cloudflaren salaisuussäilössä (ks. tools/pollo/OHJE.md).
+ */
+const POLLOPALVELIN = 'https://matkakirja-pollo.samireivinen.workers.dev';
 
 // ===== js/packs/europe-valokuvat.js =====
 // Euroopan matkakirjavalokuvat (sama rakenne kuin AFRICA_VALOKUVAT):
@@ -141684,6 +141452,1394 @@ function chooseDuelAnswer(game) {
   return wrong.length ? wrong[Math.floor(game.rng() * wrong.length)] : duel.correct;
 }
 
+// ===== js/pollo-haku.js =====
+/*
+ * VIISAAN PÖLLÖN PAIKALLINEN TIETOHAKU.
+ *
+ * Ennen kuin kysymys lähtee välityspalvelimelle, pelin OMASTA
+ * tarkistetusta aineistosta haetaan muutama osuvin katkelma ja ne
+ * liitetään pyyntöön. Näin pöllö vastaa ensisijaisesti sillä tiedolla,
+ * joka on jo kertaalleen tarkistettu ja lähteistetty — eikä sillä, mitä
+ * malli sattuu muistavansa.
+ *
+ * MITÄ INDEKSOIDAAN (kaikki tarkistettua tietosisältöä, ei tarinaa)
+ *   - kaupunkilehtien aihesivut (KULTTUURI_KATEGORIAT): johdannot ja nostot
+ *   - maalehtien aihesivut (MAA_KATEGORIAT): johdannot ja nostot
+ *   - kohdekarttojen nähtävyysjutut (NAHTAVYYSJUTUT) lainauksineen
+ *   - aihesivun minitehtävän fakta VAIN jos pelaaja on jo vastannut
+ *     siihen (ks. onVastattu alla)
+ *
+ * MITÄ EI INDEKSOIDA — EIKÄ SAA INDEKSOIDA
+ *   - Tarinakaanon kokonaan: saapumismerkinnät, kohtaamiset,
+ *     tarinakaaret ja aarretekstit. Niissä on juonisisältöä (seuraaja,
+ *     revitty sivu, aarteiden sijainnit), eikä pöllö ole tarinan hahmo.
+ *   - Visakysymykset, niiden vaihtoehdot ja oikeat vastaukset —
+ *     minkään pakan kysymyspankkia ei lueta lainkaan. Kysymyspankkien
+ *     fakta-kentät jäävät myös pois: fakta on kirjoitettu kysymyksen
+ *     pariksi ja sanoo usein suoraan oikean vastauksen, eikä
+ *     kysymyspankissa ole kenttää, josta erottaisi mikä kysymys on
+ *     kenelläkin auki. Lehden minitehtävän fakta sen sijaan kelpaa
+ *     vastaamisen JÄLKEEN: silloin peli on jo näyttänyt sen pelaajalle.
+ *
+ * Indeksi rakennetaan laiskasti — vasta kun pöllö avataan ensimmäisen
+ * kerran, ei pelin käynnistyksessä.
+ */
+
+/** Katkelman katto merkkeinä. Pitkästä nostosta otetaan alkupää. */
+const KATKELMAN_KATTO = 700;
+
+/*
+ * Otsikko-osuma painaa enemmän kuin leipätekstiosuma, ja TARKKA
+ * sanaosuma enemmän kuin pelkkä alkuosuma.
+ *
+ * Painot on viritetty oikeilla kysymyksillä (12.8.2026). Ilman tarkan
+ * osuman bonusta kysymys "Mitä Stonehengen kivistä tiedetään?" palautti
+ * Borobudurin: aineiston otsikko "…omista kivistään" alkaa hakusanalla
+ * "kivistä", ja pelkkä alkuosuma otsikossa voitti tarkan osuman
+ * "Stonehengen" leipätekstissä.
+ */
+const OTSIKON_PAINO = 2;
+const TEKSTIN_PAINO = 1;
+const TARKAN_OSUMAN_KERROIN = 2.5;
+
+/** Hakusanan vähimmäispituus. Lyhyemmät ovat sidesanoja. */
+const SANAN_VAHIMMAISPITUUS = 3;
+
+/**
+ * Suomen yleisimmät sidesanat. Ne osuisivat kaikkeen eivätkä kertoisi
+ * mitään siitä, mistä kysymys on.
+ */
+const OHITETTAVAT = new Set([
+  'mikä', 'mika', 'mitä', 'mita', 'miksi', 'miten', 'kuka', 'ketkä', 'ketka',
+  'missä', 'missa', 'mistä', 'mista', 'mihin', 'milloin', 'kuinka', 'onko',
+  'oli', 'olivat', 'ovat', 'olla', 'sen', 'tämä', 'tama', 'tuo', 'siellä',
+  'siella', 'täällä', 'taalla', 'että', 'etta', 'mutta', 'kun', 'niin',
+  'myös', 'myos', 'vielä', 'viela', 'sekä', 'seka', 'joka', 'jossa', 'jonka',
+  'voi', 'saa', 'ole', 'olen', 'kerro', 'kerrotko', 'kertoisitko',
+]);
+
+/** Merkkijono sanoiksi: pienet kirjaimet, vain kirjaimet ja numerot. */
+function sanoita(teksti) {
+  return String(teksti ?? '')
+    .toLowerCase()
+    .split(/[^0-9a-zà-öø-ÿåäö]+/i)
+    .filter((sana) => sana.length >= SANAN_VAHIMMAISPITUUS);
+}
+
+/** Kysymyksen hakusanat: sanoitus ilman sidesanoja, ilman toistoja. */
+function hakusanat(kysymys) {
+  return [...new Set(sanoita(kysymys).filter((sana) => !OHITETTAVAT.has(sana)))];
+}
+
+/**
+ * Yksi indeksimerkintä.
+ *
+ * `reitti` on YLEINEN avausreitti, ei lehtioletus: {tyyppi, tunniste,
+ * sivu?, kohde?, otsikko}. Pöllö rakentaa siitä napautettavan linkin
+ * vastauksensa alle (js/pollo.js avaaKohde). Uusi sisältötyyppi
+ * (esim. tulevat pidemmät artikkelit) tarvitsee vain oman
+ * reittityyppinsä ja sitä vastaavan avausrivin — ei muutoksia hakuun.
+ */
+function merkinta({
+  tyyppi, omistaja, aihe, aiheNimi, otsikko, teksti,
+  lahde = null, tehtavaAvain = null, reitti = null,
+}) {
+  const puhdas = String(teksti ?? '').replace(/\s+/g, ' ').trim();
+  if (!puhdas) return null;
+  return {
+    tyyppi,
+    omistaja,
+    aihe,
+    aiheNimi,
+    otsikko: String(otsikko ?? '').trim(),
+    teksti: puhdas,
+    lahde,
+    tehtavaAvain,
+    reitti,
+    otsikkoSanat: [...new Set(sanoita(otsikko))],
+    tekstiSanat: [...new Set(sanoita(puhdas))],
+  };
+}
+
+/** Lisää kategorian (kaupunki- tai maalehden aihesivu) merkinnät. */
+function lisaaKategoriat(ulos, taulu, tyyppi) {
+  for (const [omistaja, kategoriat] of Object.entries(taulu ?? {})) {
+    for (const kategoria of kategoriat ?? []) {
+      const reitti = {
+        tyyppi: tyyppi === 'maa' ? 'maalehti' : 'kaupunkilehti',
+        tunniste: omistaja,
+        sivu: kategoria.id,
+        otsikko: kategoria.nimi ?? kategoria.id,
+      };
+      const yhteinen = {
+        tyyppi, omistaja, aihe: kategoria.id, aiheNimi: kategoria.nimi ?? kategoria.id, reitti,
+      };
+      const johdanto = merkinta({
+        ...yhteinen,
+        otsikko: kategoria.nimi ?? kategoria.id,
+        teksti: kategoria.johdanto,
+      });
+      if (johdanto) ulos.push(johdanto);
+      for (const nosto of kategoria.nostot ?? []) {
+        const m = merkinta({
+          ...yhteinen,
+          otsikko: nosto.otsikko,
+          teksti: [nosto.aika, nosto.teksti].filter(Boolean).join(' — '),
+          lahde: nosto.lahde ?? null,
+        });
+        if (m) ulos.push(m);
+      }
+      /*
+       * Minitehtävän fakta on tarkistettua tietoa, mutta se on myös
+       * tehtävän vastauksen selitys. Se otetaan mukaan merkittynä
+       * tehtäväavaimella, ja haku ottaa sen käyttöön vasta kun
+       * pelaaja on ratkaissut kyseisen sivun tehtävän.
+       */
+      if (kategoria.tehtava?.fakta) {
+        const m = merkinta({
+          ...yhteinen,
+          tyyppi: 'fakta',
+          otsikko: kategoria.nimi ?? kategoria.id,
+          teksti: kategoria.tehtava.fakta,
+          tehtavaAvain: kategoria.id,
+        });
+        if (m) ulos.push(m);
+      }
+    }
+  }
+}
+
+/** Lisää kohdekarttojen nähtävyysjutut. */
+function lisaaNahtavyydet(ulos, taulu) {
+  for (const [kaupunki, kohteet] of Object.entries(taulu ?? {})) {
+    for (const [nimi, juttu] of Object.entries(kohteet ?? {})) {
+      const osat = [juttu.aika, juttu.teksti];
+      if (juttu.lainaus?.teksti) {
+        osat.push(`"${juttu.lainaus.teksti}" — ${juttu.lainaus.lahde ?? ''}`);
+      }
+      const m = merkinta({
+        tyyppi: 'nahtavyys',
+        omistaja: kaupunki,
+        aihe: 'nahtavyys',
+        aiheNimi: 'Kohdekartta',
+        otsikko: nimi,
+        teksti: osat.filter(Boolean).join(' '),
+        reitti: {
+          tyyppi: 'nahtavyys', tunniste: kaupunki, kohde: nimi, otsikko: nimi,
+        },
+      });
+      if (m) ulos.push(m);
+    }
+  }
+}
+
+/**
+ * Rakentaa hakuindeksin. Kutsutaan kerran, laiskasti.
+ *
+ * @returns {{merkinnat: Array, kesto: number, sanoja: number}}
+ */
+function rakennaIndeksi({ kulttuuri = {}, maat = {}, nahtavyydet = {} } = {}) {
+  const alku = (globalThis.performance ?? Date).now();
+  const merkinnat = [];
+  lisaaKategoriat(merkinnat, kulttuuri, 'kaupunki');
+  lisaaKategoriat(merkinnat, maat, 'maa');
+  lisaaNahtavyydet(merkinnat, nahtavyydet);
+  const kesto = (globalThis.performance ?? Date).now() - alku;
+  const sanoja = merkinnat.reduce((s, m) => s + m.tekstiSanat.length, 0);
+  return { merkinnat, kesto, sanoja };
+}
+
+/**
+ * Osuuko hakusana johonkin sanaan alkuosumana?
+ *
+ * Palauttaa 0 (ei osumaa), 1 (alkuosuma) tai 2 (tarkka sanaosuma).
+ *
+ * Vertailu tehdään MOLEMPIIN suuntiin, koska suomi taivuttaa kysyjän
+ * sanan yhtä hyvin kuin aineiston sanan: "Stonehengen kivistä" ei
+ * osuisi aineiston sanaan "Stonehenge", jos katsottaisiin vain että
+ * aineiston sana alkaa hakusanalla. Toiseen suuntaan vaaditaan
+ * vähintään viisi merkkiä, jottei lyhyt aineistosana ala osua kaikkeen.
+ */
+const TAKAPERIN_VAHIMMAISPITUUS = 5;
+
+function osuu(sanat, hakusana) {
+  let paras = 0;
+  for (const sana of sanat) {
+    if (sana === hakusana) return 2;
+    if (sana.startsWith(hakusana)) paras = 1;
+    else if (sana.length >= TAKAPERIN_VAHIMMAISPITUUS && hakusana.startsWith(sana)) paras = 1;
+  }
+  return paras;
+}
+
+/**
+ * Lähdeleima, jonka pöllö näkee ja voi mainita vastauksessaan.
+ *
+ * Esim. "Kiinan maalehti / Kuvataide: Sinipunainen posliini".
+ */
+function lahdeLeima(m, nimet = {}) {
+  const nimi = m.tyyppi === 'maa'
+    ? (nimet.maa?.(m.omistaja) ?? m.omistaja)
+    : (nimet.kaupunki?.(m.omistaja) ?? m.omistaja);
+  const lehti = m.tyyppi === 'maa' ? `${nimi} — maalehti`
+    : m.tyyppi === 'nahtavyys' ? `${nimi} — kohdekartta`
+      : `${nimi} — kaupunkilehti`;
+  const otsikko = m.otsikko && m.otsikko !== m.aiheNimi ? `: ${m.otsikko}` : '';
+  return `${lehti} / ${m.aiheNimi}${otsikko}`;
+}
+
+/**
+ * Hakee osuvimmat katkelmat.
+ *
+ * @param {object} indeksi rakennaIndeksin tulos
+ * @param {string} kysymys pelaajan kysymys
+ * @param {object} asetukset
+ *   maara      montako katkelmaa enintään
+ *   onVastattu (merkinta) => boolean — palauttaa tosi, jos merkinnän
+ *              tehtävä on jo ratkaistu. Ilman tätä fakta-merkinnät
+ *              jätetään aina pois (varovainen oletus).
+ *   nimet      { kaupunki(id), maa(iso) } lähdeleimoja varten
+ */
+function haeKatkelmat(indeksi, kysymys, { maara = 4, onVastattu = null, nimet = {} } = {}) {
+  const alku = (globalThis.performance ?? Date).now();
+  const sanat = hakusanat(kysymys);
+  if (!indeksi?.merkinnat?.length || !sanat.length) {
+    return { katkelmat: [], kesto: 0 };
+  }
+  /*
+   * Kaksi kierrosta, koska yleinen sana ei saa voittaa harvinaista.
+   *
+   * Ilman painotusta kysymys "Mitä Stonehengen kivistä tiedetään?"
+   * palautti Borobudurin ja Sakkaran: sanat "kivistä" ja "tiedetään"
+   * osuvat satoihin merkintöihin, kun taas "Stonehengen" osuu yhteen.
+   * Siksi ensimmäinen kierros laskee, moneenko merkintään kukin
+   * hakusana osuu, ja toinen painottaa harvinaiset sanat raskaiksi
+   * (käänteinen esiintymistiheys).
+   */
+  const osumat = [];
+  const tiheys = new Array(sanat.length).fill(0);
+  for (const m of indeksi.merkinnat) {
+    // Vastaamaton minitehtävän fakta ei tule hakuun: se selittäisi
+    // vastauksen tehtävään, joka pelaajalla on vielä auki.
+    if (m.tyyppi === 'fakta' && !(onVastattu?.(m) ?? false)) continue;
+    let rivi = null;
+    for (let i = 0; i < sanat.length; i += 1) {
+      const otsikossa = osuu(m.otsikkoSanat, sanat[i]);
+      const tekstissa = osuu(m.tekstiSanat, sanat[i]);
+      if (!otsikossa && !tekstissa) continue;
+      tiheys[i] += 1;
+      (rivi ??= []).push([i, otsikossa, tekstissa]);
+    }
+    if (rivi) osumat.push({ m, rivi });
+  }
+
+  const yhteensa = Math.max(indeksi.merkinnat.length, 1);
+  const painot = tiheys.map((df) => Math.log(yhteensa / (1 + df)));
+  const pisteet = [];
+  for (const { m, rivi } of osumat) {
+    let piste = 0;
+    for (const [i, otsikossa, tekstissa] of rivi) {
+      const paino = Math.max(painot[i], 0.05);
+      if (otsikossa) piste += OTSIKON_PAINO * paino * (otsikossa === 2 ? TARKAN_OSUMAN_KERROIN : 1);
+      if (tekstissa) piste += TEKSTIN_PAINO * paino * (tekstissa === 2 ? TARKAN_OSUMAN_KERROIN : 1);
+    }
+    pisteet.push({ m, piste });
+  }
+  pisteet.sort((a, b) => b.piste - a.piste || b.m.teksti.length - a.m.teksti.length);
+  const katkelmat = pisteet.slice(0, maara).map(({ m, piste }) => ({
+    piste,
+    leima: lahdeLeima(m, nimet),
+    teksti: m.teksti.length > KATKELMAN_KATTO
+      ? `${m.teksti.slice(0, KATKELMAN_KATTO - 1)}…`
+      : m.teksti,
+    lahde: m.lahde,
+    // Avausreitti pelin sisään. Linkit rakennetaan TÄSTÄ eikä mallin
+    // tekstistä, joten pöllö ei voi keksiä rikkinäistä linkkiä.
+    reitti: m.reitti ? { ...m.reitti, leima: lahdeLeima(m, nimet) } : null,
+  }));
+  return { katkelmat, kesto: (globalThis.performance ?? Date).now() - alku };
+}
+
+// ===== js/pollo.js =====
+/*
+ * VIISAS PÖLLÖ — pelin oma tietokumppani.
+ *
+ * Pöllö on alanappirivin keskimmäinen nappi (js/ui.js piirraToimintorivi)
+ * ja lehtinäkymässä lehden kulmassa kelluva nappi. Napautus avaa
+ * chat-paneelin: yläosassa muutama tekoälyn ehdottama kysymys, alhaalla
+ * sanelunappi ja sen takana kirjoituskenttä. Pöllö EI koskaan ponnahda
+ * itsestään (pelin sääntö) — se aukeaa vain napautuksesta ja sulkeutuu
+ * selvästä rastista.
+ *
+ * KOLME ASIAA, JOTKA TÄSSÄ TIEDOSTOSSA OVAT TÄRKEIMMÄT
+ *
+ * 1. Kontekstinkeruu. Pöllö saa tietää, missä pelaaja on ja mitä
+ *    ruudulla näkyy, jotta se voi syventää juuri sitä. Paketti kootaan
+ *    avaus- ja kysymyshetkellä, ja se on enintään 5000 merkkiä.
+ *
+ * 2. Paikallinen tietohaku (js/pollo-haku.js). Ennen kysymyksen
+ *    lähettämistä pelin omasta tarkistetusta aineistosta haetaan
+ *    osuvimmat katkelmat lähdeleimoineen ja ne liitetään pakettiin.
+ *    Pöllö suosii niitä, koska ne on jo kertaalleen tarkistettu.
+ *
+ * 3. Spoilerisuoja. Aktiivista tehtävää — visaa, minitehtävää,
+ *    kohtaamisen kysymystä — vaihtoehtoineen ja vastauksineen ei laiteta
+ *    kontekstiin KOSKAAN. Se on toteutettu kolmella lukolla:
+ *
+ *      a) VALKOINEN LISTA. Lehdestä luetaan vain LEHTI_LOHKOT-listan
+ *         nimeämät lohkot. Mitään ei kerätä "kaikki näkyvä teksti"
+ *         -periaatteella, joten uusi tehtävälohko ei voi vahingossa
+ *         vuotaa mukaan — se pitäisi erikseen lisätä listalle.
+ *      b) MUSTA LISTA. Sallitunkin lohkon sisältä poistetaan
+ *         SPOILERI_LOHKOT-listan solmut ennen tekstin lukemista
+ *         (aihesivun minitehtävä asuu kirjaimellisesti jutun perässä
+ *         samassa säiliössä, joten pelkkä valkoinen lista ei riittäisi).
+ *      c) HAUN RAJAUS. Indeksiin ei oteta tarinakaanonia eikä
+ *         kysymyspankkeja lainkaan, ja minitehtävän fakta tulee mukaan
+ *         vasta kun pelaaja on ratkaissut sen (js/pollo-haku.js).
+ *
+ *    Pelin tilaa luetaan vain pelinTila():n nimeämistä kentistä. Se ei
+ *    kosketa game.quiz-, game.duel- eikä game.eventCard-olioihin
+ *    lainkaan — niissä asuvat kysymykset ja oikeat vastaukset.
+ *
+ * Neljäs lukko on palvelimen puolella: järjestelmäkehote elää
+ * workerissa (tools/pollo/worker.js), joten sitä ei voi kiertää
+ * muokkaamalla selaimen koodia.
+ *
+ * Kertojaääntä ei kytketä tähän — pöllön luenta on myöhempi
+ * natiiviominaisuus. Sanelu on eri asia: se on pelaajan puhetta
+ * sisään, ei pöllön puhetta ulos.
+ */
+
+/** Kontekstipaketin katto merkkeinä. Sama luku myös workerin puolella. */
+const KONTEKSTIN_ENIMMAISPITUUS = 5000;
+
+/** Yksittäisten osien katot, jottei mikään niistä syö koko pakettia. */
+const MATKAKIRJAN_KATTO = 900;
+const LOHKON_KATTO = 1600;
+const AINEISTON_KATTO = 1900;
+
+/** Montako viestiä keskustelusta lähetetään mukaan seuraavaan. */
+const HISTORIAN_KATTO = 6;
+
+/** Puheentunnistuksen kieli. */
+const PUHE_KIELI = 'fi-FI';
+
+/**
+ * VALKOINEN LISTA: mistä lehden tekstit luetaan.
+ *
+ * Järjestys on tärkeysjärjestys — jos paketti täyttyy, loppupää jää
+ * pois. Otsikko on se sana, jolla lohko esitellään pöllölle.
+ */
+const LEHTI_LOHKOT = [
+  { valitsin: '#arrival-city', otsikko: 'Lehden nimiö' },
+  { valitsin: '#arrival-lehti-pvm', otsikko: 'Päiväys' },
+  { valitsin: '#arrival-intro', otsikko: 'Kaupungin esittely' },
+  { valitsin: '#arrival-maa-nimi', otsikko: 'Maa' },
+  { valitsin: '#arrival-maa-intro', otsikko: 'Maan esittely' },
+  { valitsin: '#arrival-maa-tunnusluvut', otsikko: 'Maa numeroina' },
+  { valitsin: '#arrival-kategoria', otsikko: 'Avoinna oleva sivu' },
+  { valitsin: '#arrival-kulttuuri-lista', otsikko: 'Lehden nostot' },
+];
+
+/**
+ * MUSTA LISTA: mitä sallitunkin lohkon sisältä poistetaan.
+ *
+ * Nämä ovat pelin tehtäviä: kysymys, vaihtoehdot, vihje ja tulos.
+ * Jos peliin tulee uusi tehtävätyyppi, sen juurisolmu lisätään tähän —
+ * tai sille annetaan attribuutti data-pollo="ei", joka toimii ilman
+ * koodimuutosta.
+ */
+const SPOILERI_LOHKOT = [
+  '[data-pollo="ei"]',
+  '.minitehtava',
+  '#arrival-kulttuuri-visa',
+  '#arrival-kulttuuri-kysymys',
+  '#arrival-kulttuuri-vaihtoehdot',
+  '.kulttuuri-vaihtoehdot',
+  '#quiz-dialog',
+  '.quiz-question',
+  '.quiz-options',
+  '.quiz-hint-text',
+  '.quiz-result',
+];
+
+/* ------------------------------------------------------------------ */
+/* Kontekstinkeruu                                                     */
+/* ------------------------------------------------------------------ */
+
+/** Rivinvaihdot ja tuplavälit pois; tyhjästä tulee tyhjä merkkijono. */
+function polloSiisti(teksti) {
+  return String(teksti ?? '').replace(/\s+/g, ' ').trim();
+}
+
+/** Leikkaa tekstin kattoon ja merkitsee leikkauksen. */
+function polloLeikkaa(teksti, katto) {
+  const t = String(teksti ?? '');
+  return t.length > katto ? `${t.slice(0, katto - 1)}…` : t;
+}
+
+/** Onko elementti (tai jokin sen esivanhempi) piilotettu? */
+function polloPiilossa(el) {
+  if (!el) return true;
+  if (el.hidden) return true;
+  return Boolean(el.closest?.('[hidden]'));
+}
+
+/**
+ * Yhden lohkon teksti ilman spoilereita.
+ *
+ * Työ tehdään KOPIOLLE: alkuperäistä DOMia ei kosketa, joten pelaajan
+ * näkymä ei muutu vaikka tehtävälohkoja poistetaan luettavasta.
+ */
+function tekstiIlmanSpoilereita(el, estot = SPOILERI_LOHKOT) {
+  if (!el) return '';
+  // Jos lohko on itse tehtävä, siitä ei oteta mitään.
+  for (const esto of estot) {
+    if (el.matches?.(esto)) return '';
+  }
+  const kopio = el.cloneNode ? el.cloneNode(true) : el;
+  for (const esto of estot) {
+    for (const roska of kopio.querySelectorAll?.(esto) ?? []) roska.remove?.();
+  }
+  return polloSiisti(kopio.textContent);
+}
+
+/**
+ * Kerää valkoisen listan lohkot juuresta.
+ *
+ * Piilotetut lohkot ohitetaan: lehden sivut ovat samassa dialogissa ja
+ * vain avoinna oleva sivu on näkyvissä, joten tämä rajaa paketin
+ * siihen mitä pelaaja oikeasti katsoo.
+ */
+function poimiLohkot(juuri, lohkot = LEHTI_LOHKOT, estot = SPOILERI_LOHKOT) {
+  if (!juuri?.querySelectorAll) return [];
+  const tulos = [];
+  for (const { valitsin, otsikko } of lohkot) {
+    for (const el of juuri.querySelectorAll(valitsin) ?? []) {
+      if (polloPiilossa(el)) continue;
+      const teksti = polloLeikkaa(tekstiIlmanSpoilereita(el, estot), LOHKON_KATTO);
+      if (teksti) tulos.push({ otsikko, teksti });
+    }
+  }
+  return tulos;
+}
+
+/**
+ * Pelin tila kontekstia varten.
+ *
+ * TÄMÄ ON SPOILERISUOJAN YDIN: funktio lukee vain nämä neljä kenttää.
+ * game.quiz, game.duel, game.eventCard ja game.arrivalFact jäävät
+ * koskematta — niissä ovat aktiivisen tehtävän kysymys, vaihtoehdot ja
+ * oikean vastauksen indeksi.
+ */
+function pelinTila(game) {
+  if (!game) return {};
+  const cityId = game.player?.pos?.city ?? null;
+  let kaupunki = null;
+  try {
+    kaupunki = cityId ? game.board?.cityById?.get(cityId)?.name ?? null : null;
+  } catch {
+    kaupunki = null;
+  }
+  let paiva = null;
+  try {
+    paiva = game.dayCount?.() ?? null;
+  } catch {
+    paiva = null;
+  }
+  return {
+    lauta: game.pack?.name ?? null,
+    kaupunki,
+    maaIso: cityId ? game.pack?.map?.cityCountry?.[cityId] ?? null : null,
+    paiva,
+  };
+}
+
+/**
+ * Kokoaa tekstipaketin. Enintään KONTEKSTIN_ENIMMAISPITUUS merkkiä.
+ *
+ * Järjestys on tärkeysjärjestys: otsikkorivit ensin (ne mahtuvat
+ * aina), sitten pelin oman aineiston katkelmat omalla katollaan, ja
+ * lopuksi avoinna olevan lehden tekstit niin paljon kuin jää tilaa.
+ * Aineistolla on oma katto siksi, ettei pitkä lehtisivu söisi sitä
+ * kokonaan — tarkistettu tieto on juuri se, mitä pöllön pitäisi
+ * ensisijaisesti käyttää.
+ */
+function kokoaKonteksti({
+  lauta = null,
+  kaupunki = null,
+  maa = null,
+  paiva = null,
+  nakyma = null,
+  matkakirja = null,
+  aineisto = [],
+  lohkot = [],
+} = {}, katto = KONTEKSTIN_ENIMMAISPITUUS) {
+  const rivit = [];
+  if (lauta) rivit.push(`Lauta: ${polloSiisti(lauta)}`);
+  if (kaupunki) rivit.push(`Kaupunki, jossa pelaaja on: ${polloSiisti(kaupunki)}`);
+  if (maa) rivit.push(`Maa: ${polloSiisti(maa)}`);
+  if (paiva) rivit.push(`Matkapäivä: ${paiva}`);
+  if (nakyma) rivit.push(`Näkymä: ${polloSiisti(nakyma)}`);
+  if (matkakirja) {
+    rivit.push(`Isoisän matkakirjamerkintä: ${polloLeikkaa(polloSiisti(matkakirja), MATKAKIRJAN_KATTO)}`);
+  }
+  let teksti = rivit.join('\n');
+
+  const palat = Array.isArray(aineisto) ? aineisto : [];
+  if (palat.length) {
+    let osio = '\n\nPELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):';
+    for (const pala of palat) {
+      const rivi = `\n- [${pala.leima}] ${polloSiisti(pala.teksti)}`;
+      if (osio.length + rivi.length > AINEISTON_KATTO) break;
+      osio += rivi;
+    }
+    if (teksti.length + osio.length <= katto) teksti += osio;
+  }
+
+  for (const lohko of Array.isArray(lohkot) ? lohkot : []) {
+    const tilaa = katto - teksti.length;
+    if (tilaa < 40) break;
+    const pala = `\n\n${lohko.otsikko}: ${lohko.teksti}`;
+    teksti += pala.length <= tilaa ? pala : `${pala.slice(0, tilaa - 1)}…`;
+  }
+  return teksti.slice(0, katto);
+}
+
+/**
+ * Lukee nykytilan pelistä ja DOMista yhdeksi tekstipaketiksi.
+ *
+ * ui-olio on valinnainen: siitä otetaan vain maan nimi ja tieto siitä,
+ * kumpi lehti on auki. Ilman sitä paketti on hieman köyhempi mutta
+ * kelvollinen.
+ */
+function lueNakyma({ game = null, ui = null, doc = document, aineisto = [] } = {}) {
+  const tila = pelinTila(game);
+  const lehti = doc?.getElementById?.('arrival-dialog') ?? null;
+  const lehtiAuki = Boolean(lehti?.open);
+  const matkakirja = polloSiisti(doc?.getElementById?.('fact-text')?.textContent);
+  return kokoaKonteksti({
+    ...tila,
+    maa: ui?.arrivalMaaTiedot?.nimi ?? tila.maaIso ?? null,
+    matkakirja,
+    nakyma: lehtiAuki
+      ? (ui?.tutkiMaaLehti ? 'maan lehti auki' : 'kaupungin lehti auki')
+      : 'kartta',
+    aineisto,
+    lohkot: lehtiAuki ? poimiLohkot(lehti) : [],
+  });
+}
+
+/* ------------------------------------------------------------------ */
+/* Käyttöliittymä                                                      */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Seepiapöllö. Viivapiirros samaan tapaan kuin pelin muut kuvakkeet
+ * (.viiva-ikoni): pelkkä ääriviiva, täyttö vain silmäterissä, jotta se
+ * istuu kartan mustekynätyyliin.
+ */
+const POLLO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<path d="M6.4 5.2 8.4 7.6"/><path d="M17.6 5.2 15.6 7.6"/>'
+  + '<path d="M12 3.7c3.3 0 5.7 2.6 5.7 6.3 0 5.1-2.3 8.5-5.7 8.5s-5.7-3.4-5.7-8.5c0-3.7 2.4-6.3 5.7-6.3z"/>'
+  + '<circle cx="9.6" cy="9.5" r="1.9"/><circle cx="14.4" cy="9.5" r="1.9"/>'
+  + '<circle class="taytto" cx="9.6" cy="9.5" r="0.75"/>'
+  + '<circle class="taytto" cx="14.4" cy="9.5" r="0.75"/>'
+  + '<path d="M12 11.3 11 13.1h2z"/>'
+  + '<path d="M8.7 14.7c1 .9 1.9 1.3 3.3 1.3s2.3-.4 3.3-1.3"/>'
+  + '<path d="M9.4 18.4v1.6M14.6 18.4v1.6"/>'
+  + '<path d="M4.4 20.2h15.2"/>'
+  + '</svg>';
+
+/** Mikrofoni samalla viivakynällä. */
+const MIKKI_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<rect x="9" y="2.8" width="6" height="11.4" rx="3"/>'
+  + '<path d="M5.6 11.4a6.4 6.4 0 0 0 12.8 0"/>'
+  + '<path d="M12 17.8v3.4M8.6 21.2h6.8"/>'
+  + '</svg>';
+
+/**
+ * Näppäimistö samalla viivakynällä. Näppäimet ovat pyöreäpäisiä
+ * pistemäisiä vetoja (h.01), jolloin ne piirtyvät pisteinä eivätkä
+ * vaadi omaa täyttöä.
+ */
+const NAPPAIMISTO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<rect x="2.4" y="6.2" width="19.2" height="11.6" rx="2.2"/>'
+  + '<path d="M6 10h.01M9.3 10h.01M12.6 10h.01M15.9 10h.01M19.2 10h.01"/>'
+  + '<path d="M6 13h.01M9.3 13h.01M12.6 13h.01M15.9 13h.01M19.2 13h.01"/>'
+  + '<path d="M8.4 15.6h7.2"/>'
+  + '</svg>';
+
+const TERVEHDYS = 'Kysy minulta mitä tahansa siitä, mitä kartalla tai '
+  + 'lehdessä juuri nyt näkyy — tai muusta maailmasta. Pelin tehtäviä en '
+  + 'ratkaise puolestasi.';
+
+const EI_HEREILLA = 'Pöllö ei ole vielä hereillä.';
+const EI_HEREILLA_LISA = 'Tietokumppani odottaa vielä käyttöönottoa. '
+  + 'Peli toimii normaalisti ilman sitä.';
+
+const SANELU_KUUNTELEE = 'Kuuntelen…';
+
+function polloElementti(tagi, luokka = '', teksti = '') {
+  const el = document.createElement(tagi);
+  if (luokka) el.className = luokka;
+  if (teksti) el.textContent = teksti;
+  return el;
+}
+
+/** Selaimen puheentunnistus, jos sellainen on. Luetaan vasta tarvittaessa. */
+function haePuheTunnistus() {
+  if (typeof window === 'undefined') return null;
+  return window.SpeechRecognition ?? window.webkitSpeechRecognition ?? null;
+}
+
+class Pollo {
+  /**
+   * @param {() => object|null} haeUi palauttaa nykyisen UI-olion.
+   *   Getteri eikä suora viittaus, koska uusi peli luo uuden UI:n.
+   */
+  constructor(haeUi, { palvelin = POLLOPALVELIN, doc = document } = {}) {
+    this.haeUi = haeUi;
+    this.palvelin = String(palvelin ?? '').replace(/\/+$/, '');
+    this.doc = doc;
+    this.auki = false;
+    this.kesken = false;
+    this.historia = [];
+    this.ankkuri = null;
+    this.indeksi = null;
+    this.tunnistin = null;
+    this.puhuttu = '';
+    // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
+    this.tila = haePuheTunnistus() ? 'sanelu' : 'kirjoitus';
+    this.rakenna();
+    this.seuraaNakymaa();
+    this.seuraaSulkemista();
+    this.paivitaNakyvyys();
+  }
+
+  /* --- rakenne --------------------------------------------------- */
+
+  rakenna() {
+    /*
+     * Nappi on samaa muotoa kuin muut alanappirivin napit (.icon-btn:
+     * viivaikoni ja selite), jotta se istuu riviin ilman omaa
+     * poikkeustyyliä. Lehden päällä kelluessaan se saa lisäluokan
+     * .pollo-kelluu, joka tekee siitä pyöreän kelluvan napin.
+     */
+    const nappi = polloElementti('button', 'icon-btn pollo-nappi');
+    nappi.type = 'button';
+    nappi.title = 'Viisas Pöllö';
+    nappi.setAttribute('aria-label', 'Viisas Pöllö — avaa keskustelu');
+    nappi.setAttribute('aria-expanded', 'false');
+    nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${POLLO_IKONI}</span>`
+      + '<span class="icon-label">Pöllö</span>';
+    nappi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.vaihdaTila();
+    });
+    this.nappi = nappi;
+
+    /*
+     * PANEELISSA EI OLE YLÄPALKKIA (omistajan linjaus 12.8.2026).
+     *
+     * Otsikko "Viisas Pöllö" ja ×-nappi poistuivat: nimi lukee jo napissa
+     * josta paneeli aukesi, ja pieni paneeli on kokonaan luettavaa tilaa.
+     * Nimi jää aria-labeliin, joten ruudunlukija tietää yhä minkä
+     * keskustelun se avasi. Sulkeminen: napautus paneelin ulkopuolelle,
+     * Esc tai pöllön oma nappi (seuraaSulkemista).
+     */
+    const paneeli = polloElementti('div', 'pollo-paneeli');
+    paneeli.hidden = true;
+    paneeli.setAttribute('role', 'dialog');
+    paneeli.setAttribute('aria-label', 'Viisas Pöllö');
+    // Paneelin sisällä napautus ei saa sulkea alanappirivin liukua.
+    paneeli.addEventListener('click', (e) => e.stopPropagation());
+
+    this.ehdotukset = polloElementti('div', 'pollo-ehdotukset');
+    this.ehdotukset.hidden = true;
+    paneeli.appendChild(this.ehdotukset);
+
+    this.virta = polloElementti('div', 'pollo-virta');
+    paneeli.appendChild(this.virta);
+
+    paneeli.appendChild(this.rakennaSyote());
+    this.paneeli = paneeli;
+    this.kiinnita();
+  }
+
+  /**
+   * Syöttöalue: matala nappirivi paneelin alareunassa.
+   *
+   * Omistajan linjaus 12.8.2026: alareunassa on yksi matala rivi koko
+   * paneelin leveydeltä — vasemmalla näppäimistökuvake (kolmasosa),
+   * oikealla mikrofoni (kaksi kolmasosaa). Sanelu on yhä ensisijainen
+   * syöttötapa, ja se saa siksi leveämmän puolikkaan, mutta iso pyöreä
+   * mikki ja sen alla olleet selitetekstit ("Napauta ja kysy ääneen.",
+   * "Kirjoita sen sijaan") ovat poissa: rivi vie nyt murto-osan
+   * paneelin korkeudesta ja jättää tilaa vastauksille. Kuvakkeiden
+   * merkitys luetaan aria-labelista, koska tekstit poistuivat.
+   *
+   * DOM-järjestys alhaalta lukien: nappirivi on viimeisenä, sen yllä
+   * kirjoituskenttä ja ylimpänä sanelun tilarivi (tyhjänä piilossa).
+   */
+  rakennaSyote() {
+    const syote = polloElementti('div', 'pollo-syote');
+
+    /*
+     * Tilarivi kertoo vain sen mitä juuri nyt tapahtuu: "Kuuntelen…",
+     * puheeksi tunnistettu teksti tai virheen syy. Tyhjänä se ei vie
+     * riviäkään (css: :empty), joten paneeli pysyy matalana.
+     */
+    this.saneluTila = polloElementti('p', 'pollo-sanelu-tila');
+    this.saneluTila.setAttribute('aria-live', 'polite');
+    syote.appendChild(this.saneluTila);
+
+    const lomake = polloElementti('form', 'pollo-rivi');
+    this.kentta = polloElementti('input', 'pollo-kentta');
+    this.kentta.type = 'text';
+    this.kentta.placeholder = 'Kysy pöllöltä…';
+    this.kentta.setAttribute('aria-label', 'Kysymys pöllölle');
+    this.kentta.maxLength = 300;
+    this.laheta = polloElementti('button', 'pollo-laheta', '→');
+    this.laheta.type = 'submit';
+    this.laheta.title = 'Lähetä';
+    this.laheta.setAttribute('aria-label', 'Lähetä kysymys');
+    lomake.appendChild(this.kentta);
+    lomake.appendChild(this.laheta);
+    lomake.addEventListener('submit', (e) => {
+      e.preventDefault();
+      this.kysy(this.kentta.value);
+    });
+    this.lomake = lomake;
+    syote.appendChild(lomake);
+
+    /*
+     * Matala nappirivi: näppäimistö 1/3, mikrofoni 2/3. Rivi on aina
+     * paneelin pohjalla, joten kirjoituskenttä avautuu sen yläpuolelle
+     * eikä sen tilalle — mikrofoni on siis yhden napautuksen päässä myös
+     * kirjoitettaessa, ja erillistä "Sanele sen sijaan" -linkkiä ei
+     * tarvita.
+     */
+    const rivi = polloElementti('div', 'pollo-sanelu');
+
+    const kirjoita = polloElementti('button', 'pollo-nappula pollo-kirjoita');
+    kirjoita.type = 'button';
+    kirjoita.title = 'Kirjoita kysymys';
+    kirjoita.setAttribute('aria-label', 'Kirjoita kysymys');
+    kirjoita.innerHTML = `<span class="icon-glyph viiva-ikoni">${NAPPAIMISTO_IKONI}</span>`;
+    kirjoita.addEventListener('click', () => this.vaihdaTilaan('kirjoitus', { kohdista: true }));
+    this.kirjoitaNappi = kirjoita;
+    rivi.appendChild(kirjoita);
+
+    const mikki = polloElementti('button', 'pollo-nappula pollo-mikki');
+    mikki.type = 'button';
+    mikki.title = 'Kysy ääneen';
+    mikki.setAttribute('aria-label', 'Kysy ääneen');
+    mikki.innerHTML = `<span class="icon-glyph viiva-ikoni">${MIKKI_IKONI}</span>`;
+    mikki.addEventListener('click', () => this.vaihdaSanelu());
+    this.mikki = mikki;
+    rivi.appendChild(mikki);
+
+    this.saneluOsa = rivi;
+    syote.appendChild(rivi);
+
+    this.syote = syote;
+    this.naytaSyote();
+    return syote;
+  }
+
+  /**
+   * Piirtää syöttöalueen nykyisen tilan mukaan.
+   *
+   * Nappirivi on esillä aina kun selain osaa sanella. Jos ei osaa,
+   * rivi jää pois kokonaan ja kirjoituskenttä on suoraan esillä —
+   * näppäimistönappi olisi silloin ainoa vaihtoehto eikä siis valinta.
+   */
+  naytaSyote() {
+    const saneluTuettu = Boolean(haePuheTunnistus());
+    const sanelussa = this.tila === 'sanelu' && saneluTuettu;
+    this.saneluOsa.hidden = !saneluTuettu;
+    this.lomake.hidden = sanelussa;
+  }
+
+  vaihdaTilaan(tila, { kohdista = false } = {}) {
+    this.lopetaSanelu();
+    this.tila = tila;
+    this.naytaSyote();
+    // Näppäimistö avautuu vasta kun pelaaja itse valitsee kirjoittamisen.
+    if (tila === 'kirjoitus' && kohdista) this.kentta.focus({ preventScroll: true });
+  }
+
+  /**
+   * Missä nappi ja paneeli asuvat?
+   *
+   * Lehti on <dialog>, joka avataan modaalina. Modaali elää selaimen
+   * ylimmässä kerroksessa, joten alanappirivissä oleva nappi jäisi sen
+   * alle eikä olisi napautettavissa. Siksi nappi ja paneeli SIIRRETÄÄN
+   * lehden sisään, kun lehti on auki — sama ratkaisu kuin lehden omalla
+   * sisällysluettelolevyllä (ui.js: avaaSisallysvalikko). Kartalla ne
+   * palaavat alanappirivin keskimmäiseen paikkaan.
+   */
+  kiinnitysKohde() {
+    const lehti = this.doc.getElementById('arrival-dialog');
+    if (lehti?.open) return lehti;
+    return this.ankkuri?.isConnected ? this.ankkuri : this.doc.body;
+  }
+
+  /** Alanappirivi ilmoittaa paikkansa joka piirrolla (js/ui.js). */
+  ankkuroi(el) {
+    this.ankkuri = el ?? null;
+    this.kiinnita();
+  }
+
+  kiinnita() {
+    const kohde = this.kiinnitysKohde();
+    if (!kohde) return;
+    // Kelluva muoto vain silloin, kun nappi ei ole rivissä.
+    const kelluu = kohde !== this.ankkuri;
+    this.nappi.classList.toggle('pollo-kelluu', kelluu);
+    this.paneeli.classList.toggle('pollo-paneeli-kelluu', kelluu);
+    if (this.nappi.parentNode !== kohde) kohde.appendChild(this.nappi);
+    if (this.paneeli.parentNode !== kohde) kohde.appendChild(this.paneeli);
+  }
+
+  /**
+   * Näkyvyyssääntö: pöllö ei ole etusivun alkutekstin päällä.
+   *
+   * Alkuteksti on #intro, joka on näkyvissä vain lähtöpaikkaa
+   * valittaessa. Kun se väistyy, pöllö ilmestyy — eikä koskaan
+   * itsestään avaudu, vain näy. Alanappirivissä ollessaan pöllö
+   * noudattaa lisäksi rivin omaa piilotuslogiikkaa (js/ui.js).
+   */
+  nakyyko() {
+    const intro = this.doc.getElementById('intro');
+    return !intro || intro.hidden;
+  }
+
+  paivitaNakyvyys() {
+    const nakyy = this.nakyyko();
+    this.nappi.hidden = !nakyy;
+    if (!nakyy && this.auki) this.sulje();
+  }
+
+  /**
+   * Seuraa, milloin lehti aukeaa/sulkeutuu ja milloin alkuteksti
+   * väistyy. Kumpikaan ei lähetä omaa tapahtumaansa, joten tila
+   * luetaan attribuuteista.
+   */
+  seuraaNakymaa() {
+    const lehti = this.doc.getElementById('arrival-dialog');
+    const intro = this.doc.getElementById('intro');
+    if (typeof MutationObserver !== 'function') return;
+    if (lehti) {
+      new MutationObserver(() => {
+        this.kiinnita();
+        // Lehden sulkeutuminen sulkee myös pöllön: paneeli siirtyy
+        // takaisin kartalle, eikä keskustelun pidä jäädä leijumaan
+        // siirtymän päälle.
+        if (!lehti.open && this.auki) this.sulje();
+      }).observe(lehti, { attributes: true, attributeFilter: ['open'] });
+    }
+    if (intro) {
+      new MutationObserver(() => this.paivitaNakyvyys())
+        .observe(intro, { attributes: true, attributeFilter: ['hidden'] });
+    }
+  }
+
+  /**
+   * SULKEMINEN ILMAN RASTIA (omistajan linjaus 12.8.2026).
+   *
+   * Paneelin yläpalkki katosi otsikkoineen ja ×-nappeineen, joten
+   * keskustelu suljetaan napauttamalla sen ulkopuolelle — karttaa,
+   * lehteä, mitä tahansa — tai Esc-näppäimestä. Pöllön oma nappi on yhä
+   * vipu: se avaa ja sulkee.
+   *
+   * pointerdown eikä click: sama tapahtuma, jolla alanappirivin liuku
+   * sulkeutuu (js/ui.js kytkeLiukuSulku), joten kartan napautus sulkee
+   * molemmat samalla kertaa eikä sulkeminen odota sormen nostoa.
+   * Kuuntelijat ovat dokumentissa, koska napautus voi osua minne vain;
+   * paneeli ja nappi rajataan pois closestilla.
+   *
+   * Esc estetään etenemästä: lehtinäkymässä <dialog> sulkeutuisi muuten
+   * samasta painalluksesta, ja pelaaja menettäisi lehden vain
+   * sulkiessaan chatin. Toinen painallus sulkee lehden normaalisti.
+   */
+  seuraaSulkemista() {
+    if (typeof this.doc.addEventListener !== 'function') return;
+    this.doc.addEventListener('pointerdown', (e) => {
+      if (!this.auki) return;
+      if (e.target?.closest?.('.pollo-paneeli, .pollo-nappi')) return;
+      this.sulje();
+    });
+    this.doc.addEventListener('keydown', (e) => {
+      if (!this.auki || e.key !== 'Escape') return;
+      e.preventDefault();
+      e.stopPropagation();
+      this.sulje();
+    });
+  }
+
+  /* --- avaus ja sulku -------------------------------------------- */
+
+  vaihdaTila() {
+    if (this.auki) this.sulje();
+    else this.avaa();
+  }
+
+  avaa() {
+    // Liuku peittäisi pöllön napin: se väistyy, kun chat aukeaa.
+    this.haeUi?.()?.suljeLiuku?.();
+    this.kiinnita();
+    this.auki = true;
+    this.paneeli.hidden = false;
+    this.nappi.setAttribute('aria-expanded', 'true');
+    this.nappi.classList.add('auki');
+    if (!this.palvelin) {
+      this.naytaNukkuva();
+      return;
+    }
+    if (!this.virta.childElementCount) this.lisaaViesti('pollo', TERVEHDYS);
+    this.naytaSyote();
+    // Indeksi rakennetaan laiskasti ensimmäisellä avauksella, ei pelin
+    // käynnistyksessä. Ehdotushaku odottaa sen valmistumista.
+    this.varmistaIndeksi();
+    this.haeEhdotukset();
+  }
+
+  sulje() {
+    this.lopetaSanelu();
+    this.auki = false;
+    this.paneeli.hidden = true;
+    this.nappi.setAttribute('aria-expanded', 'false');
+    this.nappi.classList.remove('auki');
+  }
+
+  /** Tila, jossa omistaja ei ole vielä ottanut välityspalvelinta käyttöön. */
+  naytaNukkuva() {
+    this.ehdotukset.hidden = true;
+    this.syote.hidden = true;
+    if (this.virta.querySelector('.pollo-nukkuu')) return;
+    this.virta.replaceChildren();
+    const laatikko = polloElementti('div', 'pollo-nukkuu');
+    laatikko.appendChild(polloElementti('p', 'pollo-nukkuu-otsikko', EI_HEREILLA));
+    laatikko.appendChild(polloElementti('p', 'pollo-nukkuu-lisa', EI_HEREILLA_LISA));
+    this.virta.appendChild(laatikko);
+  }
+
+  /* --- paikallinen tietohaku -------------------------------------- */
+
+  /** Rakentaa hakuindeksin kerran. Mittaustulos jää talteen raportointia varten. */
+  varmistaIndeksi() {
+    if (this.indeksi) return this.indeksi;
+    try {
+      this.indeksi = rakennaIndeksi({
+        kulttuuri: KULTTUURI_KATEGORIAT,
+        maat: MAA_KATEGORIAT,
+        nahtavyydet: NAHTAVYYSJUTUT,
+      });
+    } catch {
+      // Aineiston puuttuminen ei saa estää kysymistä.
+      this.indeksi = { merkinnat: [], kesto: 0, sanoja: 0 };
+    }
+    return this.indeksi;
+  }
+
+  /**
+   * Onko merkinnän minitehtävä jo ratkaistu?
+   *
+   * Avain on sama kuin pelillä (game.js actionMinitehtava:
+   * pakka:kaupunki:aihe, jossa maalehden aihe on ISO:aihe). Ilman
+   * tätä vastaamattoman tehtävän fakta selittäisi vastauksen.
+   */
+  tehtavaRatkaistu(merkinta) {
+    const game = this.haeUi?.()?.game ?? null;
+    const cityId = game?.player?.pos?.city;
+    if (!game?.minitehtavatVastatut || !cityId) return false;
+    const aihe = merkinta.tyyppi === 'maa'
+      ? `${merkinta.omistaja}:${merkinta.tehtavaAvain}`
+      : merkinta.tehtavaAvain;
+    return game.minitehtavatVastatut.has(`${game.pack?.id}:${cityId}:${aihe}`);
+  }
+
+  /**
+   * Avaa pelin oman jutun hakutuloksen reittikuvauksesta.
+   *
+   * Reitti on yleinen {tyyppi, tunniste, sivu|kohde}: tässä on yksi rivi
+   * per tyyppi, ja jokainen rivi kutsuu SAMAA metodia, jota pelin oma
+   * navigointi käyttää — rinnakkaista navigointia ei rakenneta. Uusi
+   * sisältötyyppi (esim. pidemmät artikkelit) tarvitsee vain uuden
+   * rivin tähän.
+   */
+  avaaKohde(reitti) {
+    const ui = this.haeUi?.();
+    if (!ui || !reitti) return false;
+    // Chat väistyy, mutta nappi jää: paluu keskusteluun on yksi
+    // napautus, ja historia säilyy.
+    this.sulje();
+    if (reitti.tyyppi === 'maalehti') {
+      ui.avaaMaalehti?.(reitti.tunniste);
+      this.siirraSivulle(ui, reitti.sivu);
+      return true;
+    }
+    if (reitti.tyyppi === 'kaupunkilehti') {
+      const city = ui.game?.board?.cityById?.get(reitti.tunniste);
+      if (!city) return false;
+      ui.openArrival?.(city);
+      this.siirraSivulle(ui, reitti.sivu);
+      return true;
+    }
+    if (reitti.tyyppi === 'nahtavyys') {
+      const juttu = NAHTAVYYSJUTUT[reitti.tunniste]?.[reitti.kohde];
+      if (!juttu) return false;
+      // Tyhjä henkilölinkkilista: juttu ei linkitä itseensä.
+      ui.avaaNahtavyys?.({ nimi: reitti.kohde, ...juttu }, null, { henkilolinkit: [] });
+      return true;
+    }
+    return false;
+  }
+
+  /** Lehden sivunvaihto: sivu 0 on kansi, siksi +1. */
+  siirraSivulle(ui, sivuId) {
+    if (!sivuId) return;
+    const i = (ui.tutkiSivut ?? []).findIndex((sivu) => sivu?.id === sivuId);
+    if (i >= 0) ui.naytaTutkiSivu?.(i + 1, { heti: true });
+  }
+
+  /**
+   * Onko reitti oikeasti avattavissa juuri nyt?
+   *
+   * Linkkiä ei näytetä, jos kohde ei ole tällä laudalla — rikkinäinen
+   * linkki on pahempi kuin puuttuva linkki.
+   */
+  reittiAvattavissa(reitti) {
+    const game = this.haeUi?.()?.game ?? null;
+    if (!reitti || !game) return false;
+    if (reitti.tyyppi === 'maalehti') {
+      return Boolean(game.pack?.map?.countryShapes?.[reitti.tunniste]);
+    }
+    if (reitti.tyyppi === 'kaupunkilehti') {
+      return Boolean(game.board?.cityById?.get(reitti.tunniste));
+    }
+    if (reitti.tyyppi === 'nahtavyys') {
+      // Kohdekartta kuuluu kaupunkiin, jossa pelaaja seisoo.
+      return game.player?.pos?.city === reitti.tunniste
+        && Boolean(NAHTAVYYSJUTUT[reitti.tunniste]?.[reitti.kohde]);
+    }
+    return false;
+  }
+
+  /** Napautettavat linkit vastauksen alle. Enintään kolme, vain aidosti osuvat. */
+  naytaLinkit(katkelmat) {
+    const nahdyt = new Set();
+    const reitit = [];
+    for (const katkelma of katkelmat ?? []) {
+      const reitti = katkelma?.reitti;
+      if (!reitti) continue;
+      const avain = `${reitti.tyyppi}:${reitti.tunniste}:${reitti.sivu ?? reitti.kohde ?? ''}`;
+      if (nahdyt.has(avain)) continue;
+      if (!this.reittiAvattavissa(reitti)) continue;
+      nahdyt.add(avain);
+      reitit.push(reitti);
+      if (reitit.length >= 3) break;
+    }
+    if (!reitit.length) return;
+    const laatikko = polloElementti('div', 'pollo-linkit');
+    for (const reitti of reitit) {
+      const nappi = polloElementti('button', 'pollo-linkki', `Lue: ${reitti.leima ?? reitti.otsikko}`);
+      nappi.type = 'button';
+      nappi.addEventListener('click', () => this.avaaKohde(reitti));
+      laatikko.appendChild(nappi);
+    }
+    this.virta.appendChild(laatikko);
+    this.virta.scrollTop = this.virta.scrollHeight;
+  }
+
+  /** Osuvimmat katkelmat pelin omasta aineistosta. */
+  haeAineisto(kysymys) {
+    const indeksi = this.varmistaIndeksi();
+    if (!indeksi?.merkinnat?.length) return [];
+    const game = this.haeUi?.()?.game ?? null;
+    const tulos = haeKatkelmat(indeksi, kysymys, {
+      maara: 4,
+      onVastattu: (m) => this.tehtavaRatkaistu(m),
+      nimet: {
+        kaupunki: (id) => game?.board?.cityById?.get(id)?.name ?? id,
+        maa: (iso) => game?.pack?.map?.countryShapes?.[iso]?.nimi ?? iso,
+      },
+    });
+    this.hakuKesto = tulos.kesto;
+    // Talteen linkkejä varten: linkit rakennetaan näistä, ei mallin
+    // tekstistä (omistajan linjaus 12.8.2026).
+    this.viimeisetKatkelmat = tulos.katkelmat;
+    return tulos.katkelmat;
+  }
+
+  /* --- keskustelu ------------------------------------------------- */
+
+  lisaaViesti(rooli, teksti) {
+    const viesti = polloElementti('p', `pollo-viesti pollo-${rooli}`, teksti);
+    this.virta.appendChild(viesti);
+    this.virta.scrollTop = this.virta.scrollHeight;
+    return viesti;
+  }
+
+  /** Kevyt jarru: yksi pyyntö kerrallaan. */
+  asetaKesken(kesken) {
+    this.kesken = kesken;
+    this.kentta.disabled = kesken;
+    this.laheta.disabled = kesken;
+    this.mikki.disabled = kesken;
+    this.paneeli.classList.toggle('pollo-odottaa', kesken);
+    for (const nappi of this.ehdotukset.querySelectorAll('button')) {
+      nappi.disabled = kesken;
+    }
+  }
+
+  konteksti(kysymys = '') {
+    try {
+      const ui = this.haeUi?.() ?? null;
+      return lueNakyma({
+        game: ui?.game ?? null,
+        ui,
+        doc: this.doc,
+        aineisto: kysymys ? this.haeAineisto(kysymys) : [],
+      });
+    } catch {
+      // Kontekstin puuttuminen ei saa estää kysymistä.
+      return '';
+    }
+  }
+
+  /**
+   * Yksi pyyntö välityspalvelimelle.
+   *
+   * Virheet eivät koskaan päädy konsoliin: pelaajalle näkyy siisti
+   * viesti, ja peli jatkuu. Verkkovirhe on täysin normaali tilanne
+   * puhelimessa eikä se ole pelin vika.
+   */
+  async pyyda(runko) {
+    const vastaus = await fetch(this.palvelin, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(runko),
+    });
+    const data = await vastaus.json().catch(() => ({}));
+    if (!vastaus.ok) {
+      const virhe = new Error(data?.virhe ?? 'virhe');
+      virhe.viesti = data?.viesti ?? null;
+      throw virhe;
+    }
+    return data;
+  }
+
+  async haeEhdotukset() {
+    if (this.kesken || !this.palvelin) return;
+    this.ehdotukset.replaceChildren();
+    this.ehdotukset.hidden = true;
+    this.asetaKesken(true);
+    try {
+      const data = await this.pyyda({ tehtava: 'ehdotukset', konteksti: this.konteksti() });
+      this.naytaEhdotukset(Array.isArray(data?.ehdotukset) ? data.ehdotukset : []);
+    } catch {
+      // Ehdotukset ovat lisä, eivät välttämättömiä: jos ne eivät tule,
+      // sanelu ja kirjoituskenttä riittävät eikä pelaajalle valiteta.
+      this.ehdotukset.hidden = true;
+    } finally {
+      this.asetaKesken(false);
+    }
+  }
+
+  naytaEhdotukset(lista) {
+    this.ehdotukset.replaceChildren();
+    for (const teksti of lista.slice(0, 3)) {
+      const nappi = polloElementti('button', 'pollo-ehdotus', teksti);
+      nappi.type = 'button';
+      nappi.addEventListener('click', () => this.kysy(teksti));
+      this.ehdotukset.appendChild(nappi);
+    }
+    this.ehdotukset.hidden = !this.ehdotukset.childElementCount;
+  }
+
+  async kysy(raakaKysymys) {
+    const kysymys = String(raakaKysymys ?? '').trim();
+    if (!kysymys || this.kesken || !this.palvelin) return;
+    this.kentta.value = '';
+    // Tilarivi tyhjenee: kysymys on jo keskustelussa, eikä sanelun
+    // väliaikainen teksti saa jäädä vastauksen alle.
+    this.saneluTila.textContent = '';
+    this.ehdotukset.replaceChildren();
+    this.ehdotukset.hidden = true;
+    this.lisaaViesti('kayttaja', kysymys);
+    const odotus = this.lisaaViesti('odottaa', 'Pöllö miettii…');
+    this.asetaKesken(true);
+    this.viimeisetKatkelmat = [];
+    try {
+      const data = await this.pyyda({
+        tehtava: 'vastaus',
+        kysymys,
+        konteksti: this.konteksti(kysymys),
+        historia: this.historia.slice(-HISTORIAN_KATTO),
+      });
+      const teksti = String(data?.vastaus ?? '').trim() || 'En osaa vastata tähän.';
+      odotus.remove();
+      this.lisaaViesti('pollo', teksti);
+      this.naytaLinkit(this.viimeisetKatkelmat);
+      this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
+      this.historia.push({ rooli: 'pollo', teksti });
+      this.historia = this.historia.slice(-HISTORIAN_KATTO);
+    } catch (virhe) {
+      odotus.remove();
+      this.lisaaViesti('pollo', virhe?.viesti
+        ?? 'Pöllö ei saanut ajatuksesta kiinni. Yritä hetken päästä uudelleen.');
+    } finally {
+      this.asetaKesken(false);
+      this.virta.scrollTop = this.virta.scrollHeight;
+    }
+  }
+
+  /* --- sanelu ------------------------------------------------------ */
+
+  /** Mikrofonin napautus: aloita tai lopeta. */
+  vaihdaSanelu() {
+    if (this.tunnistin) {
+      this.lopetaSanelu({ laheta: true });
+      return;
+    }
+    this.aloitaSanelu();
+  }
+
+  aloitaSanelu() {
+    const Tunnistus = haePuheTunnistus();
+    if (!Tunnistus) {
+      // Selain ei osaa: kirjoituskenttä esiin ilman konsolivirhettä.
+      this.vaihdaTilaan('kirjoitus');
+      return;
+    }
+    // Mikrofonia voi napauttaa myös kirjoitustilassa: rivi on aina
+    // esillä, joten sanelu palauttaa kentän piiloon.
+    if (this.tila !== 'sanelu') this.vaihdaTilaan('sanelu');
+    let tunnistin;
+    try {
+      tunnistin = new Tunnistus();
+    } catch {
+      this.saneluTila.textContent = 'Sanelu ei käynnisty tässä selaimessa.';
+      this.vaihdaTilaan('kirjoitus');
+      return;
+    }
+    tunnistin.lang = PUHE_KIELI;
+    tunnistin.interimResults = true;
+    tunnistin.continuous = false;
+    tunnistin.maxAlternatives = 1;
+    this.puhuttu = '';
+    tunnistin.onresult = (tapahtuma) => {
+      let teksti = '';
+      const tulokset = tapahtuma?.results ?? [];
+      for (let i = 0; i < tulokset.length; i += 1) {
+        teksti += tulokset[i]?.[0]?.transcript ?? '';
+      }
+      this.puhuttu = teksti;
+      this.saneluTila.textContent = teksti.trim() || SANELU_KUUNTELEE;
+    };
+    tunnistin.onerror = (tapahtuma) => this.saneluVirhe(tapahtuma?.error);
+    tunnistin.onend = () => {
+      const oliTunnistin = this.tunnistin;
+      this.tunnistin = null;
+      this.mikki.classList.remove('kuuntelee');
+      this.mikki.setAttribute('aria-pressed', 'false');
+      if (!oliTunnistin) return;
+      const teksti = this.puhuttu.trim();
+      if (teksti) this.kysy(teksti);
+      else if (this.saneluTila.textContent === SANELU_KUUNTELEE) {
+        this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
+      }
+    };
+    this.tunnistin = tunnistin;
+    this.mikki.classList.add('kuuntelee');
+    this.mikki.setAttribute('aria-pressed', 'true');
+    this.saneluTila.textContent = SANELU_KUUNTELEE;
+    try {
+      // Mikrofonilupa kysytään vasta tästä — ei paneelia avattaessa.
+      tunnistin.start();
+    } catch {
+      this.tunnistin = null;
+      this.mikki.classList.remove('kuuntelee');
+      this.saneluTila.textContent = 'Sanelu ei käynnisty juuri nyt.';
+    }
+  }
+
+  lopetaSanelu({ laheta = false } = {}) {
+    const tunnistin = this.tunnistin;
+    if (!tunnistin) return;
+    if (!laheta) this.tunnistin = null;
+    this.mikki.classList.remove('kuuntelee');
+    this.mikki.setAttribute('aria-pressed', 'false');
+    try {
+      tunnistin.stop();
+    } catch {
+      /* tunnistin oli jo pysähtynyt */
+    }
+  }
+
+  /** Siisti suomenkielinen tila jokaiselle virheelle — ei konsolia. */
+  saneluVirhe(koodi) {
+    this.tunnistin = null;
+    this.mikki.classList.remove('kuuntelee');
+    this.mikki.setAttribute('aria-pressed', 'false');
+    if (koodi === 'not-allowed' || koodi === 'service-not-allowed') {
+      this.saneluTila.textContent = 'Mikrofonin käyttö ei ole sallittu.';
+      this.vaihdaTilaan('kirjoitus');
+      return;
+    }
+    if (koodi === 'audio-capture') {
+      this.saneluTila.textContent = 'Mikrofonia ei löytynyt.';
+      this.vaihdaTilaan('kirjoitus');
+      return;
+    }
+    if (koodi === 'no-speech') {
+      this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
+      return;
+    }
+    this.saneluTila.textContent = 'Sanelu ei onnistunut. Voit myös kirjoittaa.';
+  }
+}
+
+/*
+ * Yksi pöllö per peli. Alanappirivi tarvitsee kahvan voidakseen
+ * ilmoittaa paikkansa joka piirrolla, eikä js/ui.js:n kuulu tuntea
+ * oliota — riittää että se osaa antaa paikan.
+ */
+let nykyinenPollo = null;
+
+/** Alanappirivi ilmoittaa pöllön paikan (js/ui.js piirraToimintorivi). */
+function polloAnkkuri(el) {
+  nykyinenPollo?.ankkuroi(el);
+}
+
+/** Onko pöllö auki? Alanappirivi tarvitsee tiedon liukua sulkiessaan. */
+function polloAuki() {
+  return Boolean(nykyinenPollo?.auki);
+}
+
+/** Sulkee chatin. Alanappirivin liuku peittää pöllön, joten se sulkee myös chatin. */
+function polloSulje() {
+  nykyinenPollo?.sulje();
+}
+
+/**
+ * Asentaa pöllön peliin. Kutsutaan kerran käynnistyksessä.
+ *
+ * @param {() => object|null} haeUi getteri nykyiseen UI-olioon.
+ * @returns {Pollo|null} olio testejä ja savukkeita varten.
+ */
+function asennaPollo(haeUi, asetukset = {}) {
+  if (typeof document === 'undefined') return null;
+  nykyinenPollo = new Pollo(haeUi, asetukset);
+  // Savukkeet ja kehitys tarvitsevat kahvan; peli itse ei käytä tätä.
+  window.matkakirjaPollo = nykyinenPollo;
+  return nykyinenPollo;
+}
+
 // ===== js/ui.js =====
 // Käyttöliittymä: aarrekartan piirto, ohjauspaneeli, tietovisa ja bottien ohjaus.
 
@@ -144198,6 +145354,7 @@ class UI {
     this.busy = false;
     this.dead = false; // destroy() jälkeen instanssi ei saa enää piirtää
     this.travelExpanded = false; // matkavalinnan toinen vaihe auki
+    this.travelSuodatin = null; // 'sea' | 'air' | null — kumpi lista näytetään
     this.kehittajaTila = kehittajaTilaPaalla();
     this.autoRollTimer = null;
     this.movingPlayerId = null;
@@ -144375,6 +145532,11 @@ class UI {
     if (this.tarkkuusVahti) {
       document.removeEventListener('visibilitychange', this.tarkkuusVahti);
       this.tarkkuusVahti = null;
+    }
+    // Sama koskee alanappirivin liukua sulkevaa karttanapautusta.
+    if (this.liukuKuuntelija) {
+      document.removeEventListener('pointerdown', this.liukuKuuntelija);
+      this.liukuKuuntelija = null;
     }
     // Puskurirenkaan jono elää joutohetkien varassa: ilman perumista se
     // piirtäisi kuolleen pelin ruutuja uuden kartan päälle.
@@ -147377,7 +148539,8 @@ class UI {
     // kone kohdekaupungin päällä, ja napautus ostaa lennon suoraan
     // (omistajan toive). Porttilennot toisille laudoille pysyvät napeissa,
     // koska niiden kohde ei ole tällä kartalla.
-    if (game.phase === 'action' && this.travelExpanded && !game.player.isBot) {
+    if (game.phase === 'action' && this.travelExpanded
+      && this.travelSuodatin !== 'sea' && !game.player.isBot) {
       for (const dest of game.airportDestinations()) {
         const city = game.board.cityById.get(dest);
         if (!city) continue;
@@ -147604,13 +148767,18 @@ class UI {
         return;
       }
       this.turnStatus.textContent = `${TRAVEL_LABEL[game.travelMode]} — heitä noppa.`;
-      const rollBtn = this.ikoniTekstiNappi('noppa', 'Heitä noppa', 'primary');
+      /*
+       * Nopanheitto ja matkustustavan vaihto ovat monitoiminapin
+       * liu'ussa kuten muutkin matkustustoiminnot (omistajan linjaus
+       * 12.8.2026): alanappirivi on aina täsmälleen kolme paikkaa.
+       */
+      const rollBtn = this.iconButton('noppa', 'Heitä noppa', 'primary');
       rollBtn.addEventListener('click', () => this.doRoll());
-      this.actionsEl.appendChild(rollBtn);
 
-      const backBtn = this.ikoniTekstiNappi('nuoli', 'Vaihda matkustustapa');
+      const backBtn = this.iconButton('nuoli', 'Vaihda matkustustapa');
       backBtn.addEventListener('click', () => this.doAction(() => game.actionCancelTravel()));
-      this.actionsEl.appendChild(backBtn);
+
+      this.piirraToimintorivi([rollBtn, backBtn], this.tutkiNappi());
       return;
     }
 
@@ -147621,9 +148789,18 @@ class UI {
   }
 
   /**
-   * Matkustustavan valinta kahdessa vaiheessa. Vaihe A: jalan, "laiva &
-   * lento…" ja aarrekaupungin kysymys. Vaihe B (`travelExpanded`): kaikki
-   * maksulliset ja laudalta toiselle vievät vaihtoehdot.
+   * Matkustustavan valinta kahdessa vaiheessa.
+   *
+   * VAIHE A on alanappirivin liuku: kolme nappia — jalan, laiva ja lento
+   * (omistajan linjaus 12.8.2026). Aiemmin laiva ja lento olivat saman
+   * "Laiva & lento" -napin takana, ja pelaaja joutui etsimään lentonsa
+   * laivalistan seasta. Nyt nappi valitsee jo listan: LAIVA avaa vaiheen
+   * B pelkillä laivavaihtoehdoilla, LENTO pelkillä lentävillä
+   * vaihtoehdoilla (lennot, mannerlennot ja portit). Se mitä listassa
+   * NÄYTETÄÄN suodattuu — säännöt, hinnat ja toiminnot ovat ennallaan.
+   *
+   * VAIHE B (`travelExpanded`) on entinen valikko. `travelSuodatin`
+   * kertoo kumpi puoli näytetään: 'sea', 'air' tai null (molemmat).
    */
   renderTravelChoice(modes) {
     const { game } = this;
@@ -147633,75 +148810,76 @@ class UI {
     // Mannerlento aukeaa, kun tämän mantereen unohdettu aarre on
     // löytynyt — se ei vaadi lentokenttää, joten se on oma listansa.
     const mannerLennot = game.mannerLennot();
-    const hasSlow = modes.includes('sea') || flights.length > 0
-      || gateways.length > 0 || countryGates.length > 0 || mannerLennot.length > 0;
+    /*
+     * Portit (vaellus ja tietoportti) kuuluvat LENNON puolelle: molemmat
+     * ovat pitkiä lentoja toiselle laudalle (game.gatewayOptions), eikä
+     * kumpikaan ole laivamatka. Näin mikään vaihtoehto ei jää kahden
+     * napin väliin saavuttamattomiin.
+     */
+    const laivaa = modes.includes('sea');
+    const lentoa = flights.length > 0 || mannerLennot.length > 0
+      || gateways.length > 0 || countryGates.length > 0;
+    const hasSlow = laivaa || lentoa;
 
     // Jos välivaiheeseen ei jää yhtään valintaa (esim. rahat eivät riitä
     // lentoon eikä satamaa ole), palataan suoraan perusvalintoihin —
-    // pelkkä Takaisin-nappi ei ole näkymä.
-    if (this.travelExpanded && !hasSlow) this.travelExpanded = false;
+    // pelkkä Takaisin-nappi ei ole näkymä. Sama koskee tyhjäksi jäävää
+    // suodatinta: laivalistaa ei avata, jos laivoja ei ole.
+    const suodatinTyhja = (this.travelSuodatin === 'sea' && !laivaa)
+      || (this.travelSuodatin === 'air' && !lentoa);
+    if (this.travelExpanded && (!hasSlow || suodatinTyhja)) this.suljeMatkavalikko();
 
     if (!this.travelExpanded) {
       this.turnStatus.textContent = 'Valitse matkustustapa.';
-      // Kaikki vaiheen A napit mahtuvat aina yhteen riviin.
-      this.actionsEl.dataset.rivi = 'yksi';
 
-      if (modes.includes('land')) {
-        const landBtn = this.iconButton('saapas', 'Jalan', modes.includes('stay') ? '' : 'primary');
-        landBtn.addEventListener('click', () => this.doWalk());
-        this.actionsEl.appendChild(landBtn);
+      // Jalan. Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
+      // pelin estetyissä napeissa (vrt. vertailunappi).
+      const landBtn = this.iconButton('saapas', 'Jalan',
+        modes.includes('land') && !modes.includes('stay') ? 'primary' : '');
+      if (modes.includes('land')) landBtn.addEventListener('click', () => this.doWalk());
+      else this.estaNappi(landBtn, this.maaEste());
+
+      const laivaBtn = this.iconButton('purje', 'Laivalla');
+      if (laivaa) {
+        laivaBtn.addEventListener('click', () => this.avaaMatkavalikko('sea'));
+      } else {
+        this.estaNappi(laivaBtn, this.laivaEste());
       }
 
-      if (hasSlow) {
-        const moreBtn = this.iconButton('purje', 'Laiva & lento');
-        moreBtn.addEventListener('click', () => {
-          this.travelExpanded = true;
-          this.render();
-        });
-        this.actionsEl.appendChild(moreBtn);
+      const lentoBtn = this.iconButton('kone', 'Lentäen');
+      if (lentoa) {
+        lentoBtn.addEventListener('click', () => this.avaaMatkavalikko('air'));
+      } else {
+        this.estaNappi(lentoBtn, this.lentoEste());
       }
 
-      /*
-       * Tutki on kaupungissa AINA tarjolla, tehtävistä riippumatta:
-       * kortti ja lehti ovat luettavaa sisältöä. Aiemmin nappi katosi
-       * heti kun tehtävät oli käytetty, ja lehtisivulle ei päässyt
-       * enää lainkaan (omistajan löytö 10.8.2026: "kahden väärän
-       * vastauksen jälkeen ei pääse enää ollenkaan edes
-       * lehtisivulle"). Korostus kertoo, odottaako tehtävä.
-       */
-      if (game.cityOf()) {
-        const stayBtn = this.iconButton('suurennuslasi', 'Tutki', modes.includes('stay') ? 'primary' : '');
-        // Uudessa kaupungissa nappi sykkii, kunnes sitä on painettu kerran.
-        if (this.tutkiSyke && this.tutkiSyke === this.kaupunkiAvain(game.cityOf())) {
-          stayBtn.classList.add('tutki-syke');
-        }
-        stayBtn.addEventListener('click', () => {
-          sfx.play('paper');
-          this.tutkiSyke = null;
-          stayBtn.classList.remove('tutki-syke');
-          // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
-          // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
-          this.openArrival(game.cityOf());
-        });
-        this.actionsEl.appendChild(stayBtn);
-      }
+      this.piirraToimintorivi([landBtn, laivaBtn, lentoBtn], this.tutkiNappi());
       return;
     }
 
     // Vaihe B.
-    this.turnStatus.textContent = 'Laivalla, lentäen vai portin kautta?';
+    const meri = this.travelSuodatin !== 'air';
+    const ilma = this.travelSuodatin !== 'sea';
+    /*
+     * Laivalistassa on vain yksi nappi (määränpää valitaan kartalta
+     * nopanheiton jälkeen), joten tilarivi ei kysy "mihin" — se kertoo
+     * mitä valitaan. Lentolistassa kohteet ovat nimeltä, joten siinä
+     * kysymys on paikallaan.
+     */
+    this.turnStatus.textContent = meri && ilma ? 'Laivalla, lentäen vai portin kautta?'
+      : (meri ? 'Laivalla merten yli.' : 'Minne lennetään?');
 
-    if (modes.includes('sea')) {
+    if (meri && modes.includes('sea')) {
       const seaBtn = this.ikoniTekstiNappi('purje', `Laivalla (${SEA_FARE} p)`, 'wide');
       seaBtn.addEventListener('click', () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('ferry');
         this.doAction(() => game.actionTravel('sea'));
       });
       this.actionsEl.appendChild(seaBtn);
     }
 
-    for (const dest of flights) {
+    for (const dest of ilma ? flights : []) {
       const city = game.board.cityById.get(dest);
       const flyBtn = this.ikoniTekstiNappi('kone', `${city.name} (${FLIGHT_PRICE} p)`, 'wide');
       flyBtn.addEventListener('click', () => this.doFly(dest));
@@ -147715,11 +148893,11 @@ class UI {
      * nimeää mantereen ("Lennä Oseaniaan: Sydney"), koska tavalliset
      * lentonapit ovat pelkkiä kaupunkeja — ero on pidettävä näkyvänä.
      */
-    for (const kohde of mannerLennot) {
+    for (const kohde of ilma ? mannerLennot : []) {
       const btn = this.ikoniTekstiNappi('kone',
         `${MANNERLENTO_NAPPI(kohde)} (${FLIGHT_PRICE} p)`, 'wide');
       btn.addEventListener('click', () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('flight');
         this.doAction(() => game.actionMannerLento(kohde.city));
       });
@@ -147727,10 +148905,10 @@ class UI {
     }
 
     // Vaelluksessa porttikaupungeista jatketaan toisille laudoille.
-    for (const link of gateways) {
+    for (const link of ilma ? gateways : []) {
       const gwBtn = this.ikoniTekstiNappi('kompassi', link.label, 'wide');
       gwBtn.addEventListener('click', async () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('flight');
         // Lentokalvo kuuluu vain maailmankartalle — mantereella lento
         // tapahtuu suoraan karttanäkymässä. Siirto tehdään ennen kalvoa,
@@ -147749,10 +148927,10 @@ class UI {
     }
 
     // Tietoportti: maan lauta aukeaa pääkaupungista vaikealla kysymyksellä.
-    for (const gate of countryGates) {
+    for (const gate of ilma ? countryGates : []) {
       const gateBtn = this.ikoniTekstiNappi('tahti', `${gate.label} — vaikea kysymys`, 'wide');
       gateBtn.addEventListener('click', () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('paper');
         this.doAction(() => game.actionGateQuiz(gate.index));
       });
@@ -147761,10 +148939,220 @@ class UI {
 
     const backBtn = this.iconButton('nuoli', 'Takaisin');
     backBtn.addEventListener('click', () => {
-      this.travelExpanded = false;
+      this.suljeMatkavalikko();
       this.render();
     });
     this.actionsEl.appendChild(backBtn);
+  }
+
+  /** Avaa vaiheen B yhdellä listalla: 'sea' laivat, 'air' lennot ja portit. */
+  avaaMatkavalikko(suodatin = null) {
+    this.travelExpanded = true;
+    this.travelSuodatin = suodatin;
+    this.render();
+  }
+
+  /** Sulkee vaiheen B ja unohtaa suodattimen. */
+  suljeMatkavalikko() {
+    this.travelExpanded = false;
+    this.travelSuodatin = null;
+  }
+
+  /**
+   * Estetty nappi kertoo syyn.
+   *
+   * Sama tapa kuin muualla pelissä (esim. vertailunappi): teksti menee
+   * titleen ja aria-labeliin, joten se näkyy hiirellä ja kuuluu
+   * ruudunlukijalle. Napin oma nimi jää alkuun, jotta ikonin merkitys ei
+   * katoa syyn alle.
+   */
+  estaNappi(nappi, syy) {
+    nappi.disabled = true;
+    if (!syy) return nappi;
+    const nimi = nappi.getAttribute('aria-label') ?? '';
+    const teksti = nimi ? `${nimi} — ${syy}` : syy;
+    nappi.title = teksti;
+    nappi.setAttribute('aria-label', teksti);
+    return nappi;
+  }
+
+  /**
+   * Miksi jalan, laivalla tai lentäen ei juuri nyt onnistu?
+   *
+   * Syyt luetaan laudalta ja kukkarosta samoilla ehdoilla kuin
+   * game.travelModes käyttää — tässä ei päätetä mistään, vain
+   * sanoitetaan se mitä säännöt jo sanoivat.
+   */
+  keskenReittia() {
+    // Kesken reittiä matka jatkuu samalla tavalla kuin se alkoi.
+    return this.game.player.pos.type === 'edge';
+  }
+
+  maaEste() {
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    return 'täältä ei lähde maareittiä';
+  }
+
+  laivaEste() {
+    const { game } = this;
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    const city = game.cityOf();
+    if (!city) return 'laiva lähtee vain satamasta';
+    const satama = game.board.adj.get(city.id)
+      ?.some((id) => game.board.edgeById.get(id)?.type === 'sea');
+    if (!satama) return 'täältä ei lähde laivareittiä';
+    return `laivalippu maksaa ${SEA_FARE} puntaa`;
+  }
+
+  lentoEste() {
+    const { game } = this;
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    const city = game.cityOf();
+    if (!city) return 'lento lähtee vain kaupungista';
+    const kentta = Boolean(city.airport) || Boolean(city.links?.length);
+    if (!kentta) return 'täällä ei ole lentokenttää';
+    if (game.player.money < FLIGHT_PRICE) return `lentolippu maksaa ${FLIGHT_PRICE} puntaa`;
+    return 'täältä ei lähde lentoja';
+  }
+
+  /**
+   * Tutki-nappi (suurennuslasi) alanappirivin oikeaan paikkaan.
+   *
+   * Tutki on kaupungissa AINA tarjolla, tehtävistä riippumatta: kortti
+   * ja lehti ovat luettavaa sisältöä. Aiemmin nappi katosi heti kun
+   * tehtävät oli käytetty, ja lehtisivulle ei päässyt enää lainkaan
+   * (omistajan löytö 10.8.2026: "kahden väärän vastauksen jälkeen ei
+   * pääse enää ollenkaan edes lehtisivulle"). Korostus kertoo,
+   * odottaako tehtävä. Palauttaa null, jos pelaaja ei ole kaupungissa.
+   */
+  tutkiNappi() {
+    const { game } = this;
+    const city = game.cityOf();
+    if (!city) return null;
+    const stayBtn = this.iconButton('suurennuslasi', 'Tutki',
+      game.travelModes().includes('stay') ? 'primary' : '');
+    // Uudessa kaupungissa nappi sykkii, kunnes sitä on painettu kerran.
+    if (this.tutkiSyke && this.tutkiSyke === this.kaupunkiAvain(city)) {
+      stayBtn.classList.add('tutki-syke');
+    }
+    stayBtn.addEventListener('click', () => {
+      sfx.play('paper');
+      this.tutkiSyke = null;
+      stayBtn.classList.remove('tutki-syke');
+      // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
+      // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
+      this.openArrival(city);
+    });
+    return stayBtn;
+  }
+
+  /**
+   * ALANAPPIRIVI: kolme paikkaa (omistajan linjaus 12.8.2026).
+   *
+   *   vasen   monitoiminappi — avaa matkustusnapit
+   *   keski   Viisas Pöllö   — js/pollo.js siirtää nappinsa tähän
+   *   oikea   suurennuslasi  — Tutki, ennallaan
+   *
+   * Matkustusnapit eivät levitä riviä: ne LIUKUVAT koko rivin päälle,
+   * joten rivi on aina täsmälleen kolmen napin levyinen. Liu'un ollessa
+   * auki myös monitoiminappi väistyy (css: .toimintorivi.liuku-auki):
+   * omistaja laski iPhonella neljä nappia, kun kompassi jäi kolmen
+   * matkanapin viereen. Liuku sulkeutuu matkanapin valinnasta tai mistä
+   * tahansa napautuksesta rivin ulkopuolella (kartta) — piiloon
+   * jäänyttä monitoiminappia ei voi enää napauttaa uudelleen.
+   *
+   * Liu'ussa on matkustustapaa valittaessa kolme nappia — jalan, laiva
+   * ja lento (renderTravelChoice) — ja nopanheiton hetkellä kaksi:
+   * noppa ja paluu matkustustavan valintaan. Napit ovat pelkkiä
+   * ikoneita kuten rivin perusnapitkin; nimi luetaan titlestä ja
+   * aria-labelista.
+   *
+   * Napit itse ovat samoja kuin ennen — tapahtumakäsittelijät,
+   * korostukset ja estotilat tulevat kutsujalta, joten mikään
+   * pelitoiminto ei muutu tämän myötä.
+   */
+  piirraToimintorivi(matkanapit = [], tutkiNappi = null) {
+    const rivi = html('div', 'toimintorivi');
+    const perus = html('div', 'toimintorivi-perus');
+
+    const monitoimi = this.iconButton('kompassi', 'Matkustustavat');
+    monitoimi.classList.add('monitoimi-nappi');
+    /*
+     * Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
+     * muillakin estetyillä napeilla, ei katoamista. Rivi tarjoaa nykyään
+     * aina kolme nappia (jalan, laiva, lento), joten pelkkä lukumäärä ei
+     * riitä: liuku on tyhjä myös silloin, kun kaikki kolme ovat estettyjä.
+     */
+    monitoimi.disabled = matkanapit.length === 0 || matkanapit.every((n) => n.disabled);
+    monitoimi.setAttribute('aria-expanded', String(Boolean(this.liukuAuki)));
+    monitoimi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.vaihdaLiuku();
+    });
+    perus.appendChild(monitoimi);
+
+    // Pöllön paikka. Nappi asuu js/pollo.js:ssä, koska sen pitää siirtyä
+    // lehden sisään lehtinäkymässä — tässä annetaan vain paikka.
+    const polloPaikka = html('div', 'pollo-paikka');
+    perus.appendChild(polloPaikka);
+
+    perus.appendChild(tutkiNappi ?? html('div', 'rivi-tyhja'));
+    rivi.appendChild(perus);
+
+    const liuku = html('div', 'toimintorivi-liuku');
+    liuku.setAttribute('role', 'group');
+    liuku.setAttribute('aria-label', 'Matkustustavat');
+    for (const nappi of matkanapit) liuku.appendChild(nappi);
+    // Mikä tahansa liu'un nappi vie toimintoon, jonka jälkeen rivi
+    // piirretään uudestaan — liuku ei saa jäädä auki sen alle.
+    liuku.addEventListener('click', () => { this.liukuAuki = false; });
+    rivi.appendChild(liuku);
+
+    if (this.liukuAuki && !monitoimi.disabled) rivi.classList.add('liuku-auki');
+    else this.liukuAuki = false;
+
+    this.actionsEl.appendChild(rivi);
+    this.toimintoRivi = rivi;
+    polloAnkkuri(polloPaikka);
+    this.kytkeLiukuSulku();
+  }
+
+  /** Monitoiminapin napautus: liuku auki tai kiinni. */
+  vaihdaLiuku() {
+    this.liukuAuki = !this.liukuAuki;
+    // Liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
+    if (this.liukuAuki) polloSulje();
+    this.paivitaLiuku();
+  }
+
+  suljeLiuku() {
+    if (!this.liukuAuki) return;
+    this.liukuAuki = false;
+    this.paivitaLiuku();
+  }
+
+  paivitaLiuku() {
+    const rivi = this.toimintoRivi;
+    if (!rivi || !rivi.isConnected) return;
+    rivi.classList.toggle('liuku-auki', Boolean(this.liukuAuki));
+    rivi.querySelector('.monitoimi-nappi')
+      ?.setAttribute('aria-expanded', String(Boolean(this.liukuAuki)));
+  }
+
+  /**
+   * Napautus rivin ulkopuolella (kartta) sulkee liu'un.
+   *
+   * Kuuntelija kytketään kerran ja puretaan destroyssa: ilman purkua
+   * kuollut instanssi jäisi kuuntelemaan uuden pelin rinnalle.
+   */
+  kytkeLiukuSulku() {
+    if (this.liukuKuuntelija) return;
+    this.liukuKuuntelija = (e) => {
+      if (this.dead || !this.liukuAuki) return;
+      if (e.target?.closest?.('.toimintorivi')) return;
+      this.suljeLiuku();
+    };
+    document.addEventListener('pointerdown', this.liukuKuuntelija);
   }
 
   /**
@@ -147864,7 +149252,7 @@ class UI {
     }
     // Nappula siirtyy ilman animaatiota: oikotie saa näyttää oikotieltä.
     this.haivytaLuenta();
-    this.travelExpanded = false;
+    this.suljeMatkavalikko();
     this.doAction(() => game.actionKehittajaSiirto(city.id));
   }
 
@@ -148565,7 +149953,7 @@ class UI {
     this.paivitaAlkuReitit(avauksessa);
     // Matkavalinnan toinen vaihe koskee vain käsillä olevaa valintaa: heti
     // kun vaihe vaihtuu, ollaan taas seuraavan vuoron ensimmäisessä vaiheessa.
-    if (this.game.phase !== 'action') this.travelExpanded = false;
+    if (this.game.phase !== 'action') this.suljeMatkavalikko();
     // Saapumiskortti kuuluu vain offer-vaiheeseen: botin vuorolla ja muissa
     // vaiheissa se suljetaan, jottei se jää roikkumaan kartan päälle.
     if (this.game.phase !== 'offer' || this.game.player.isBot) this.closeArrival();
@@ -155802,7 +157190,7 @@ class UI {
     if (this.radioPaalla()) return;
     const { game } = this;
     // Matkavalinnan välivaihe ei saa jäädä päälle seuraavaan vuoroon.
-    this.travelExpanded = false;
+    this.suljeMatkavalikko();
     const player = game.player;
     const from = player.pos;
     const lahto = from.type === 'city' ? game.board.cityById.get(from.city) : null;
@@ -156416,7 +157804,10 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
-  { v: 592, teksti: 'Nikosian kaupunkilehti ja mittakaavajanan tarkistin' },
+  { v: 591, teksti: 'Viisas Pöllö hereille: workerin osoite peliin' },
+  { v: 590, teksti: 'Kolme matkanappia siististi, pöllön paneeli vaaleaksi' },
+  { v: 589, teksti: 'Matkatapa kolmena nappina, pöllön chattiin matala alarivi' },
+  { v: 588, teksti: 'Viisas Pöllö: apuri, sanelu, tietohaku, uusi alanappirivi' },
   { v: 587, teksti: 'Dohan kaupunkilehti, kohdekartta ja kuusi nähtävyysjuttua' },
   { v: 586, teksti: 'Auditin korjaukset: minitehtävät, toistot, Dubain jutut' },
   { v: 585, teksti: 'Majakkavälähdys, hitaammat reitit, lennon uusi ajoitus' },
@@ -157088,7 +158479,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.592';
+const APP_VERSION = '2026-08-09.591';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -157717,4 +159108,13 @@ kehittajaLomake.addEventListener('submit', (e) => {
   e.preventDefault();
   kytkeKehittaja();
 });
+
+/*
+ * Viisas Pöllö: kartan kulman tietokumppani (js/pollo.js).
+ *
+ * Asennetaan kerran ja annetaan getteri UI-olioon — uusi peli luo uuden
+ * UI:n, eikä pöllön pidä jäädä kiinni vanhaan. Pöllö ei koskaan avaudu
+ * itsestään, se vain ilmestyy näkyviin kun avausteksti on väistynyt.
+ */
+asennaPollo(() => ui);
 </script>

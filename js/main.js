@@ -7,6 +7,7 @@ import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-stream.js';
 import { kertojaTila, asetaKertojaTila } from './aani-ehdokkaat.js';
+import { asennaPollo } from './pollo.js';
 
 const PLAYER_COLOR = '#d94f3d';
 /*
@@ -19,7 +20,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.592';
+const APP_VERSION = '2026-08-09.591';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -648,3 +649,12 @@ kehittajaLomake.addEventListener('submit', (e) => {
   e.preventDefault();
   kytkeKehittaja();
 });
+
+/*
+ * Viisas Pöllö: kartan kulman tietokumppani (js/pollo.js).
+ *
+ * Asennetaan kerran ja annetaan getteri UI-olioon — uusi peli luo uuden
+ * UI:n, eikä pöllön pidä jäädä kiinni vanhaan. Pöllö ei koskaan avaudu
+ * itsestään, se vain ilmestyy näkyviin kun avausteksti on väistynyt.
+ */
+asennaPollo(() => ui);

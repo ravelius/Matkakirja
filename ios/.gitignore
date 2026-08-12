@@ -1,0 +1,12 @@
+# Fastlanen ja allekirjoituksen jäljet mac-ajurilla ja Macilla.
+# Näistä yksikään ei ole aineistoa: kaikki syntyy uudelleen ajossa.
+vendor/
+.bundle/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/test_output/
+fastlane/README.md
+*.xcarchive/
+*.ipa
+*.dSYM.zip
+ExportOptions.plist

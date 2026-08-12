@@ -1,0 +1,330 @@
+# Kääntää, allekirjoittaa ja lähettää iPhone-kuoren TestFlightiin.
+#
+# Omistajalla ei ole Macia, joten kaikki tehdään GitHubin mac-ajurilla.
+# Allekirjoitus tapahtuu App Store Connect -API-avaimella (.p8), jonka
+# xcodebuild saa lipuilla -authenticationKey*: Apple luo ja uusii silloin
+# varmenteet ja provisiointiprofiilit itse (ns. pilviallekirjoitus).
+# Yhtään varmennetta tai salasanaa ei siis säilytetä repossa.
+#
+# TÄMÄ AJO NUKKUU, KUNNES SALAISUUDET ON ASETETTU. Ensimmäinen työ
+# (ubuntu, halpa) katsoo ovatko ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8 ja
+# TEAM_ID olemassa. Jos eivät, kallista mac-ajuria ei käynnistetä
+# lainkaan ja ajo jää vihreäksi. Ohje salaisuuksien hakemiseen: ios/OHJE.md.
+#
+# Allekirjoittamaton savukoe (.github/workflows/ios-kaannos.yml) jää
+# ennalleen: se todistaa nopeasti ja ilmaiseksi, että projekti kääntyy.
+
+name: iOS TestFlight
+
+on:
+  workflow_dispatch:
+    inputs:
+      rekisteroi_appi:
+        description: 'Yritä ensin luoda App Store Connect -appimerkintä (vain aivan ensimmäisellä kerralla)'
+        type: boolean
+        default: false
+  push:
+    branches:
+      - main
+    paths:
+      - 'ios/**'
+      # Ohjeen korjaus ei ole syy lähettää uutta versiota testaajille.
+      - '!ios/**/*.md'
+      - '.github/workflows/ios-testflight.yml'
+
+permissions:
+  contents: read
+
+# Yksi lähetys kerrallaan. Keskeneräistä ei katkaista: puolivalmis
+# lataus App Store Connectiin on ikävämpi siivottava kuin odottaminen.
+concurrency:
+  group: ios-testflight
+  cancel-in-progress: false
+
+jobs:
+  # Halpa portti kalliin edessä. Salaisuuksien arvoja ei lueta eikä
+  # tulosteta — katsotaan vain, onko kentässä jotakin.
+  portti:
+    name: Onko allekirjoitus mahdollinen
+    runs-on: ubuntu-latest
+    outputs:
+      salaisuudet: ${{ steps.tarkista.outputs.salaisuudet }}
+    steps:
+      - name: Tarkista salaisuudet
+        id: tarkista
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          TEAM_ID: ${{ secrets.TEAM_ID }}
+        run: |
+          puuttuu=""
+          for nimi in ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_P8 TEAM_ID; do
+            arvo=$(printenv "$nimi" || true)
+            if [ -z "$arvo" ]; then
+              puuttuu="$puuttuu $nimi"
+            fi
+          done
+          if [ -n "$puuttuu" ]; then
+            echo "salaisuudet=ei" >> "$GITHUB_OUTPUT"
+            {
+              echo "## TestFlight-lähetys nukkuu"
+              echo
+              echo "Puuttuvat salaisuudet:$puuttuu"
+              echo
+              echo "Ne lisätään: Settings → Secrets and variables → Actions."
+              echo "Askel askeleelta: \`ios/OHJE.md\`."
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::notice title=TestFlight nukkuu::Salaisuuksia puuttuu:$puuttuu — ohje ios/OHJE.md"
+          else
+            echo "salaisuudet=on" >> "$GITHUB_OUTPUT"
+          fi
+
+  lahetys:
+    name: Käännä, allekirjoita ja lähetä
+    needs: portti
+    if: needs.portti.outputs.salaisuudet == 'on'
+    runs-on: macos-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ympäristö
+        run: |
+          sw_vers
+          xcodebuild -version
+
+      # Kuori kääntyy ja lähtee TestFlightiin, vaikka pelin osoitetta ei
+      # olisi asetettu — mutta silloin puhelimessa näkyy vain huomautus.
+      # Kaadetaan ei, huomautetaan kyllä.
+      - name: Onko pelin osoite asetettu
+        run: |
+          osoite=$(plutil -extract PELIN_OSOITE raw ios/Matkakirja/Resurssit/Config.plist)
+          case "$osoite" in
+            *ASETA-PELIN-OSOITE*)
+              echo "::warning title=Pelin osoite puuttuu::ios/Matkakirja/Resurssit/Config.plist on yhä paikkamerkillä — TestFlight-versio näyttää vain huomautuksen. Ks. ios/OHJE.md."
+              ;;
+            *)
+              echo "Pelin osoite on asetettu."
+              ;;
+          esac
+
+      # --- Allekirjoituksen esivalmistelut -------------------------------
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"
+          chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          # Salaisuus on .p8-tiedoston koko sisältö base64-muodossa.
+          # openssl osaa purkaa myös yhtenä pitkänä rivinä (-A).
+          #
+          # Puhelimella base64-muunnos on kiusallinen, joten kelpuutetaan
+          # myös avain sellaisenaan liitettynä: jos arvo näyttää valmiilta
+          # avaimelta, sitä ei yritetä purkaa.
+          if printf '%s' "$ASC_KEY_P8" | grep -q "BEGIN PRIVATE KEY"; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          # Avainta ei tulosteta. Tarkistetaan vain, että purku tuotti avaimen
+          # — muuten virhe tulisi vasta xcodebuildilta käsittämättömänä.
+          if ! grep -q "BEGIN PRIVATE KEY" "$polku"; then
+            echo "::error title=Avain ei purkautunut::ASC_KEY_P8 ei ole .p8-avain — liitä tiedoston koko sisältö sellaisenaan tai base64-muodossa. Ks. ios/OHJE.md."
+            exit 1
+          fi
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      # Allekirjoitus tarvitsee avainnipun, johon Apple tallettaa luomansa
+      # varmenteen. Ajurin oletusnippua ei käytetä: oma nippu on avoinna
+      # koko ajon ja katoaa ajon mukana.
+      - name: Luo väliaikainen avainnippu
+        run: |
+          set -euo pipefail
+          salasana=$(openssl rand -base64 24)
+          echo "::add-mask::$salasana"
+          nippu="$RUNNER_TEMP/matkakirja.keychain-db"
+          security create-keychain -p "$salasana" "$nippu"
+          # 6 h auki; ajo kestää minuutteja, mutta lukkiutunut nippu
+          # kaataisi allekirjoituksen ilman selitystä.
+          security set-keychain-settings -lut 21600 "$nippu"
+          security unlock-keychain -p "$salasana" "$nippu"
+          security list-keychains -d user -s "$nippu" $(security list-keychains -d user | sed 's/"//g')
+          security default-keychain -s "$nippu"
+          echo "AVAINNIPPU=$nippu" >> "$GITHUB_ENV"
+
+      # --- Projekti ja työkalut ------------------------------------------
+
+      - name: Asenna XcodeGen
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: '1'
+          HOMEBREW_NO_INSTALL_CLEANUP: '1'
+        run: brew install xcodegen
+
+      - name: Luo Xcode-projekti
+        working-directory: ios
+        run: |
+          xcodegen generate --spec project.yml
+          xcodebuild -list -project Matkakirja.xcodeproj
+
+      - name: Asenna fastlane
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          working-directory: ios
+          bundler-cache: true
+
+      # --- Käännös, allekirjoitus ja paketointi --------------------------
+
+      # CURRENT_PROJECT_VERSION = ajon numero. App Store Connect hylkää
+      # latauksen, jos sama versio+buildnumero on jo lähetetty, ja ajon
+      # numero kasvaa aina — se on siis turvallisin buildnumero.
+      # Näkyvä versionumero (MARKETING_VERSION) tulee ios/project.yml:stä.
+      - name: Arkistoi ja allekirjoita
+        working-directory: ios
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          TEAM_ID: ${{ secrets.TEAM_ID }}
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project Matkakirja.xcodeproj \
+            -scheme Matkakirja \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$RUNNER_TEMP/Matkakirja.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_AVAIN_POLKU" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            DEVELOPMENT_TEAM="$TEAM_ID" \
+            CURRENT_PROJECT_VERSION="${{ github.run_number }}" \
+            archive
+
+      - name: Vie IPA
+        working-directory: ios
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          TEAM_ID: ${{ secrets.TEAM_ID }}
+        run: |
+          set -euo pipefail
+          # method-arvon nimi vaihtui Xcode 15.3:ssa (app-store →
+          # app-store-connect). Vanha nimi kelpaa yhä uusillekin Xcodeille,
+          # mutta uusi ei vanhoille, joten katsotaan versio.
+          suurversio=$(xcodebuild -version | awk 'NR==1 {print $2}' | cut -d. -f1)
+          if [ "$suurversio" -ge 16 ]; then
+            tapa="app-store-connect"
+          else
+            tapa="app-store"
+          fi
+          echo "Vientitapa: $tapa"
+          # Tiedostoon kirjoitetaan tiimitunnus. Sitä ei tulosteta lokiin
+          # eikä tiedostoa talleteta ajon jälkeen.
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key>
+            <string>$tapa</string>
+            <key>teamID</key>
+            <string>$TEAM_ID</string>
+            <key>signingStyle</key>
+            <string>automatic</string>
+            <key>uploadSymbols</key>
+            <true/>
+            <key>manageAppVersionAndBuildNumber</key>
+            <false/>
+          </dict>
+          </plist>
+          PLIST
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/Matkakirja.xcarchive" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -exportPath "$RUNNER_TEMP/ipa" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$ASC_AVAIN_POLKU" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID"
+          ipa=$(find "$RUNNER_TEMP/ipa" -maxdepth 2 -name '*.ipa' | head -1) || true
+          if [ -z "$ipa" ]; then
+            echo "::error title=IPA puuttuu::Vienti ei tuottanut .ipa-tiedostoa."
+            exit 1
+          fi
+          echo "IPA: $ipa"
+          echo "IPA_POLKU=$ipa" >> "$GITHUB_ENV"
+
+      # --- Lähetys App Store Connectiin ----------------------------------
+
+      # Vain käsin käynnistettynä ja vain jos ruutu on rastitettu: appin
+      # luonti tehdään elämän aikana kerran. Ks. ios/fastlane/Fastfile.
+      - name: Rekisteröi appi (valinnainen, kerran)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.rekisteroi_appi }}
+        working-directory: ios
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          FASTLANE_SKIP_UPDATE_CHECK: '1'
+          FASTLANE_DISABLE_COLORS: '1'
+          LANG: en_US.UTF-8
+          LC_ALL: en_US.UTF-8
+        run: bundle exec fastlane ios rekisteroi_appi
+
+      # altool on poistumassa ja iTMSTransporter on käsityötä; fastlanen
+      # pilot on ainoa polku, joka ottaa App Store Connect -API-avaimen
+      # vastaan sellaisenaan eikä kysele mitään ajon aikana.
+      - name: Lähetä TestFlightiin
+        working-directory: ios
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          FASTLANE_SKIP_UPDATE_CHECK: '1'
+          FASTLANE_DISABLE_COLORS: '1'
+          LANG: en_US.UTF-8
+          LC_ALL: en_US.UTF-8
+        run: bundle exec fastlane ios testflight_lahetys ipa:"$IPA_POLKU"
+
+      - name: Kerro mitä lähti
+        if: success()
+        run: |
+          {
+            echo "## Lähetetty TestFlightiin"
+            echo
+            echo "- Buildnumero: **${{ github.run_number }}**"
+            echo "- Commit: \`${{ github.sha }}\`"
+            echo
+            echo "Apple käsittelee latauksen omaan tahtiinsa (usein 5–30 min)."
+            echo "Kun se on valmis, versio näkyy TestFlight-sovelluksessa puhelimessa."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # IPA talteen, jotta lähetyksen voi tarvittaessa uusia käsin ilman
+      # uutta käännöstä. Paketti on allekirjoitettu, mutta ei sisällä
+      # avaimia — varmenteen yksityinen avain jää avainnippuun.
+      - name: Talleta IPA
+        if: always() && env.IPA_POLKU != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: matkakirja-ipa
+          path: ${{ env.IPA_POLKU }}
+          if-no-files-found: warn
+          retention-days: 14
+
+      # Ajuri on kertakäyttöinen, mutta avaimet siivotaan silti: unohtunut
+      # .p8 ja avoin avainnippu ovat juuri sitä tapaa, jolla salaisuudet
+      # vuotavat myöhemmin.
+      - name: Siivoa avaimet
+        if: always()
+        run: |
+          rm -rf "$RUNNER_TEMP/asc" || true
+          rm -f "$RUNNER_TEMP/ExportOptions.plist" || true
+          if [ -n "${AVAINNIPPU:-}" ]; then
+            security delete-keychain "$AVAINNIPPU" || true
+          fi

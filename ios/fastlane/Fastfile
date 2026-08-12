@@ -1,0 +1,83 @@
+# Fastlane-kaistat iPhone-kuorelle.
+#
+# Tässä tiedostossa tehdään VAIN ne asiat, joita xcodebuild ei osaa:
+# valmiin IPA:n lähetys App Store Connectiin ja (kokeiluna) appimerkinnän
+# luonti. Käännös ja allekirjoitus ovat xcodebuildin vastuulla, ks.
+# .github/workflows/ios-testflight.yml ja ios/OHJE.md.
+#
+# Kaistat ajetaan mac-ajurilla näin:
+#   bundle exec fastlane ios testflight_lahetys ipa:/polku/Matkakirja.ipa
+#
+# Ympäristömuuttujat (tulevat GitHubin salaisuuksista, eivät koskaan repoon):
+#   ASC_KEY_ID       — API-avaimen tunnus (Key ID)
+#   ASC_ISSUER_ID    — myöntäjän tunnus (Issuer ID)
+#   ASC_AVAIN_POLKU  — puretun .p8-avaintiedoston polku ajurin levyllä
+
+default_platform(:ios)
+
+# Sovelluksen tunniste on myös fastlane/Appfilessa; tässä siksi, että
+# kaistat toimivat myös ilman Appfilen automatiikkaa.
+TUNNISTE = "fi.matkakirja.peli"
+
+platform :ios do
+
+  desc "Lähettää valmiin IPA:n TestFlightiin sisäisiä testaajia varten."
+  lane :testflight_lahetys do |asetukset|
+    ipa = asetukset[:ipa]
+    UI.user_error!("Anna IPA:n polku: fastlane ios testflight_lahetys ipa:...") if ipa.nil? || ipa.empty?
+    UI.user_error!("IPA-tiedostoa ei löydy: #{ipa}") unless File.exist?(ipa)
+
+    avain = app_store_connect_api_key(
+      key_id: ENV.fetch("ASC_KEY_ID"),
+      issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+      key_filepath: ENV.fetch("ASC_AVAIN_POLKU"),
+      # Applen sallima enimmäisikä pyyntötunnukselle on 20 minuuttia.
+      duration: 1200,
+      in_house: false
+    )
+
+    # skip_waiting_for_build_processing: Apple käsittelee latauksen omaan
+    # tahtiinsa (usein 5–30 min). Odottaminen ei toisi mitään lisätietoa,
+    # mutta polttaisi kalliita mac-minuutteja, joten lataus kuitataan
+    # valmiiksi heti kun Apple on ottanut paketin vastaan.
+    # skip_submission: sisäiset testaajat saavat version ilman erillistä
+    # jakelupyyntöä; ulkoisia testaajia ei tästä putkesta kutsuta.
+    upload_to_testflight(
+      api_key: avain,
+      app_identifier: TUNNISTE,
+      ipa: ipa,
+      skip_waiting_for_build_processing: true,
+      skip_submission: true
+    )
+  end
+
+  desc "Kokeilee luoda App Store Connect -appimerkinnän. Ks. ios/OHJE.md — voi vaatia käsityötä."
+  lane :rekisteroi_appi do
+    avain = app_store_connect_api_key(
+      key_id: ENV.fetch("ASC_KEY_ID"),
+      issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+      key_filepath: ENV.fetch("ASC_AVAIN_POLKU"),
+      duration: 1200,
+      in_house: false
+    )
+
+    # skip_devcenter: true — tunnisteen (bundle ID) luo xcodebuildin
+    # pilviallekirjoitus arkistointivaiheessa, joten täällä tehdään vain
+    # App Store Connectin puoleinen merkintä.
+    #
+    # REHELLISESTI: tämä kaista on kokeilu. Applen rajapinta vaatii appia
+    # luodessa tietoja (mm. myyjän nimen), joita se ei aina saa pelkällä
+    # API-avaimella, ja silloin fastlane kaatuu tai jää kysymään. Jos näin
+    # käy, appimerkintä tehdään puhelimella käsin — ohje ios/OHJE.md.
+    produce(
+      api_key: avain,
+      app_identifier: TUNNISTE,
+      app_name: "Matkakirja ja unohdettu aarre",
+      language: "Finnish",
+      app_version: "0.1.0",
+      sku: "matkakirja-ios",
+      platform: "ios",
+      skip_devcenter: true
+    )
+  end
+end

@@ -1,0 +1,97 @@
+# Xcode-projekti syntyy TÄSTÄ tiedostosta (XcodeGen).
+#
+# Repossa ei ole .xcodeproj-kansiota tarkoituksella: se on konegeneroitua
+# XML:ää, joka törmää joka mergessä eikä kerro katselmoijalle mitään.
+# Käännösajuri (.github/workflows/ios-kaannos.yml) asentaa xcodegenin ja
+# ajaa `xcodegen generate` ennen xcodebuildia. Sama komento toimii
+# omistajan Macilla: `cd ios && xcodegen generate && open Matkakirja.xcodeproj`.
+#
+# Swift Package ei kelpaa tähän: SwiftPM ei osaa tuottaa iOS-sovelluspakettia
+# (.app) eikä kantaa Info.plistiä, resursseja ja ikonikatalogia — se rakentaa
+# vain kirjastoja ja komentorivityökaluja. Siksi XcodeGen.
+
+name: Matkakirja
+
+options:
+  bundleIdPrefix: fi.matkakirja
+  # iOS 16 on alaraja, koska AVSpeechSynthesisVoice-laadut (premium) ja
+  # WKScriptMessageHandlerWithReply vaativat sen. Kattaa iPhone 8:sta ylöspäin.
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+  developmentLanguage: fi
+  groupSortPosition: top
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    # Näkyvä versionumero. Tätä nostetaan käsin, kun kuoreen tulee jotain
+    # kerrottavaa — esimerkiksi "0.2.0". Kuoren versionumero EI liity pelin
+    # versionumeroon (docs/roolitus.md): peli päivittyy verkosta, kuori vain
+    # harvoin App Storen kautta.
+    MARKETING_VERSION: "0.1.0"
+    # Buildnumero. Tämä on vain paikallista käännöstä varten: TestFlight-ajo
+    # korvaa sen GitHub-ajon numerolla (CURRENT_PROJECT_VERSION=<ajon numero>),
+    # koska App Store Connect hylkää saman version+buildnumeron kahdesti.
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  Matkakirja:
+    type: application
+    platform: iOS
+    sources:
+      # Info.plist ja siltaskripti luetellaan erikseen alempana, jotta ne
+      # eivät päädy vahingossa väärään käännösvaiheeseen.
+      - path: Matkakirja
+        excludes:
+          - "Resurssit/Info.plist"
+          - "Resurssit/Config.plist"
+          - "Selain/natiivi-silta.js"
+      - path: Matkakirja/Resurssit/Info.plist
+        buildPhase: none
+      # Pelin osoite luetaan tästä ajon aikana, joten sen on oltava paketissa.
+      - path: Matkakirja/Resurssit/Config.plist
+        buildPhase: resources
+      # Siltaskripti PITÄÄ päätyä sovelluspakettiin: ilman sitä
+      # window.matkakirjaNatiivi ei synny. Käännösajuri tarkistaa tämän.
+      - path: Matkakirja/Selain/natiivi-silta.js
+        buildPhase: resources
+    settings:
+      base:
+        # Sovelluksen pysyvä tunniste. TÄTÄ EI VAIHDETA sen jälkeen kun se on
+        # kerran rekisteröity Applelle: uusi tunniste tarkoittaa Applen
+        # silmissä eri sovellusta, jolloin testaajat ja arvostelut jäisivät
+        # vanhaan. Sama arvo on ios/fastlane/Appfilessa.
+        PRODUCT_BUNDLE_IDENTIFIER: fi.matkakirja.peli
+        PRODUCT_NAME: Matkakirja
+        INFOPLIST_FILE: Matkakirja/Resurssit/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
+        # Allekirjoitus on automaattinen: Apple luo ja uusii varmenteet ja
+        # profiilit itse, kun xcodebuild saa App Store Connect -API-avaimen
+        # (.github/workflows/ios-testflight.yml).
+        CODE_SIGN_STYLE: Automatic
+        # Tiimitunnus on tarkoituksella tyhjä: se on GitHubin salaisuus
+        # (TEAM_ID) eikä kuulu repoon. Käännösajuri antaa sen komentorivillä
+        # (DEVELOPMENT_TEAM=...), ja Macilla Xcode täyttää sen itse, kun
+        # kirjautunut Apple-tili valitaan Signing-välilehdellä.
+        # Savukoeajo (ios-kaannos.yml) ei tarvitse tätä lainkaan: se kääntää
+        # simulaattorille CODE_SIGNING_ALLOWED=NO.
+        DEVELOPMENT_TEAM: ""
+
+# Skeema kirjataan tässä, jotta sekä käännösajuri (`xcodebuild -scheme
+# Matkakirja`) että Xcoden käynnistysnappi löytävät saman kohteen.
+schemes:
+  Matkakirja:
+    build:
+      targets:
+        Matkakirja: all
+    run:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

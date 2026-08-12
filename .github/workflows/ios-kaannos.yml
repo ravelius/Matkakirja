@@ -1,0 +1,106 @@
+# Todistaa, että iOS-kuori kääntyy.
+#
+# Kehityskoneessa ei ole macOS:ää, joten käännös ajetaan GitHubin
+# mac-ajurilla. Allekirjoitusta ei ole eikä tarvita: käännös tehdään
+# simulaattorille ilman allekirjoitusta, mikä riittää osoittamaan että
+# projekti, lähdekoodi ja resurssit ovat kunnossa. Laitteelle vietävä
+# ja TestFlightiin allekirjoitettu paketti tehdään myöhemmin, kun
+# Apple Developer -tili on olemassa (ios/OHJE.md).
+#
+# MAC-AJURIN MINUUTIT OVAT KALLIITA (noin 10× Linuxin hinta), joten tämä
+# ajo EI käynnisty pelin commiteista — vain ios/-kansion muutoksista ja
+# käsin käynnistettynä.
+
+name: iOS-käännös
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'ios/**'
+      # Pelkkä ohjeen korjaus ei ole syy käynnistää mac-ajuria.
+      - '!ios/**/*.md'
+      - '.github/workflows/ios-kaannos.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-kaannos-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  kaannos:
+    runs-on: macos-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ympäristö
+        run: |
+          sw_vers
+          xcodebuild -version
+
+      # Xcode-projektia ei ole repossa: se syntyy ios/project.yml:stä.
+      # Perustelu ja käyttö: ios/project.yml ja ios/OHJE.md.
+      - name: Asenna XcodeGen
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: '1'
+          HOMEBREW_NO_INSTALL_CLEANUP: '1'
+        run: brew install xcodegen
+
+      - name: Luo Xcode-projekti
+        working-directory: ios
+        run: |
+          xcodegen generate --spec project.yml
+          xcodebuild -list -project Matkakirja.xcodeproj
+
+      - name: Käännä simulaattorille
+        working-directory: ios
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project Matkakirja.xcodeproj \
+            -scheme Matkakirja \
+            -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build 2>&1 | tee kaannos.log
+
+      # Käännös voi mennä läpi, vaikka jokin resurssi jäisi pois paketista —
+      # ja silloin sillat eivät toimisi puhelimessa. Tarkistetaan paketti.
+      - name: Tarkista sovelluspaketti
+        working-directory: ios
+        run: |
+          set -e
+          paketti=$(find build/Build/Products -maxdepth 3 -name 'Matkakirja.app' | head -1)
+          if [ -z "$paketti" ]; then
+            echo "Sovelluspakettia ei löytynyt."
+            exit 1
+          fi
+          echo "Paketti: $paketti"
+          ls -la "$paketti"
+          for tiedosto in natiivi-silta.js Config.plist Info.plist Assets.car; do
+            if [ ! -f "$paketti/$tiedosto" ]; then
+              echo "PUUTTUU: $tiedosto"
+              exit 1
+            fi
+          done
+          echo "--- Lupatekstit ---"
+          plutil -extract NSMicrophoneUsageDescription raw "$paketti/Info.plist"
+          plutil -extract NSSpeechRecognitionUsageDescription raw "$paketti/Info.plist"
+          echo "--- Pelin osoite ---"
+          plutil -extract PELIN_OSOITE raw "$paketti/Config.plist"
+
+      - name: Talleta käännösloki
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-kaannosloki
+          path: ios/kaannos.log
+          if-no-files-found: warn
+          retention-days: 14

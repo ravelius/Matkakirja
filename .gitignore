@@ -28,3 +28,11 @@ node_modules/
 # (tools/hae-vuorikuvat.mjs, tools/tee-kuvataulu.py).
 tools/vuorikuva-aineisto/
 tools/vuorikuva-taulut/
+
+# iOS-kuoren käännöstulokset. Xcode-projekti syntyy ios/project.yml:stä
+# (XcodeGen), joten sitä ei säilytetä repossa — konegeneroitu XML törmäisi
+# joka mergessä. Ks. ios/OHJE.md.
+ios/*.xcodeproj/
+ios/build/
+ios/kaannos.log
+ios/DerivedData/
