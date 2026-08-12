@@ -15520,7 +15520,8 @@ export const MAA_KATEGORIAT = {
               + 'kiertää kaksikerroksinen kaaririvi. Se rakennettiin 1600-luvun '
               + 'alussa, ja sen neljälle sivulle avautuu neljä eri asiaa: moskeija, '
               + 'toinen pienempi moskeija, palatsi ja basaarin portti. Aukio on '
-              + 'noin 160 metriä leveä ja 500 metriä pitkä, eli reilusti suurempi '
+              + '160 metriä leveä ja 560 metriä pitkä eli lähes yhdeksän '
+              + 'hehtaaria, reilusti suurempi '
               + 'kuin useimmat Euroopan torit. Alun perin sillä pelattiin poolo, ja '
               + 'maalitolpat seisovat yhä paikoillaan päädyissä. Aukio otettiin '
               + 'maailmanperintöluetteloon vuonna 1979.',
@@ -16036,7 +16037,9 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Puolikuu ja täysikuu',
-          tiedosto: 'Iraqi Kleicha.jpg',
+          // Vanha kuva oli 540 px leveä eli kaukana 1 200 px:n
+          // säännöstä. Vaihdettu 12.8.2026 auditissa.
+          tiedosto: 'Iraqi Dates Kleicha.jpg',
           teksti: 'Kleicha on Irakin kansallisleivonnainen. Tavallisimmat muodot '
               + 'ovat taatelitahnalla täytetty rulla, joka leikataan viipaleiksi, '
               + 'ja puolikuun muotoinen pähkinä- tai kookostäytteinen kuori. '
@@ -16045,11 +16048,12 @@ export const MAA_KATEGORIAT = {
               + 'Esikuvana pidetään sumerilaista qullupua, jota leivottiin '
               + 'uudenvuoden juhlaan kuun muotoon. Kleichaa tehdään yhä '
               + 'juhlapyhiin ja tarjotaan teen kanssa.',
-          selite: 'Kolmella vadilla on pyöreitä, kullanruskeita leivonnaisia. '
-              + 'Osa on siroteltu seesaminsiemenillä, osan pinnalla on '
-              + 'tummanvihreä yrttiseos. Etualan kasassa näkyy renkaan muotoisia '
-              + 'kappaleita, joiden päistä pilkottaa tummaa täytettä.',
-          lahde: 'Eng Omer Akram, Wikimedia Commons (CC BY-SA 4.0)',
+          selite: 'Valkoisella lautasella on kullanruskeita '
+              + 'kleicha-leivonnaisia. Suurin osa on leikattu poikki niin, '
+              + 'että taatelitäytteen tumma spiraali näkyy, ja päällimmäiset '
+              + 'palat ovat puolikuun muotoisia ja seesaminsiementen '
+              + 'peittämiä.',
+          lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       tehtava: {
@@ -18864,7 +18868,10 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Palatsi seisoo yhden kallion varassa',
-          tiedosto: 'Wadi Dhar 1987 09.jpg',
+          // Vanha kuva oli 967 px leveä. Uusi on 3 888 px ja kuvattu
+          // alaviistosta, joten kalliopaasi — jutun ydin — erottuu
+          // selvemmin (vaihdettu 12.8.2026).
+          tiedosto: 'Dar Al Hajar, Wadi Dhahr, Yemen (4325704846).jpg',
           teksti: 'Wadi Dharissa noin viidentoista kilometrin päässä pääkaupungista '
               + 'on yksinäinen hiekkakivipaasi. Sen päällä on Dar al-Hajar, '
               + 'monikerroksinen palatsi, joka sai nykyisen muotonsa vuonna 1920 '
@@ -18874,16 +18881,12 @@ export const MAA_KATEGORIAT = {
               + 'Alimmat kerrokset on muurattu mustasta basaltista ja ylemmät '
               + 'poltetusta tiilestä. Kallion sisässä on kaivo, josta talo sai '
               + 'vetensä. Palatsi on nykyään museo.',
-          selite: 'Vaalea monikerroksinen rakennus kalliopaaden päällä. Julkisivun '
-              + 'ikkunat on kehystetty valkoisin kaari- ja ympyräkuvioin, ja '
-              + 'rakennus kapenee ylöspäin portaittain kallion muodon mukaan. '
-              + 'Oikealla on terävä harmaa kallioseinämä, johon paasi tästä '
-              + 'suunnasta sulautuu, ja takana matalampia poimuttuneita vuoria. '
-              + 'Palatsin oikealla puolella on tasakattoinen uudempi rakennus '
-              + 'lasikatteineen ja metallipylväs. Alarinteessä on matalia '
-              + 'savenvärisiä taloja ja etualalla tiheää vihreää puustoa ja yksi '
-              + 'tumma sypressi.',
-          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+          selite: 'Dar al-Hajarin palatsi alaviistosta kuvattuna '
+              + 'tummansinistä taivasta vasten. Rakennus seisoo pyöreän '
+              + 'hiekkakivipaaden päällä ja kapenee ylöspäin portaittain; '
+              + 'julkisivun ikkunat on kehystetty valkoisin kaari- ja '
+              + 'hammaskuvioin, ja kallion kyljessä erottuu kaksi aukkoa.',
+          lahde: 'yeowatzup, Wikimedia Commons (CC BY 2.0)',
         },
         {
           otsikko: 'Talot jatkavat kalliota ylöspäin',
