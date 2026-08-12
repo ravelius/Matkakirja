@@ -66,10 +66,24 @@ function arvoAani(cityId, tyyppi, lauta, cityCountry = null) {
 
 // Striimi on taustaa, ei etualaa — hiljaisempi kuin tehosteäänet.
 const VOIMA = 0.14;
-// Etusivu on pelin ensimmäinen vaikutelma, ja siinä ääni soi ilman
-// mitään muuta: sama taso kuin matkalla kuulosti liian kovalta
-// (omistajan havainto). Puolet siitä riittää tunnelmaksi.
-const ETUSIVUN_VOIMA = 0.5;
+/*
+ * Etusivun oma kerroin. Se oli 0,5, koska sama taso kuin matkalla
+ * kuulosti aikanaan liian kovalta — mutta puolitus osui äänitteeseen,
+ * jonka oma mitattu kerroin on jo 0,6 (lentoaseman lähtöaula). Yhdessä
+ * ne painoivat efektiivisen tason lukemaan 0,14 × 0,6 × 0,5 = 0,042,
+ * joka on läppärin kaiuttimista käytännössä kuulumaton: omistaja
+ * raportoi 12.8.2026, ettei etusivu soi työpöydällä lainkaan.
+ *
+ * 1,4 nostaa efektiivisen tason lukemaan 0,14 × 0,6 × 1,4 ≈ 0,118 eli
+ * noin kolminkertaiseksi. Kerroin koskee VAIN etusivua (cityId
+ * 'etusivu'); muiden näkymien tasot ovat ennallaan.
+ *
+ * LOPULLINEN TASO SÄÄDETÄÄN KUULOKOKEELLA. Tämä on laskettu arvio siitä,
+ * mikä on kuultavissa läppärin kaiuttimista — omistaja kuulee sen
+ * ensimmäisenä oikeasta laitteesta ja saa siirtää lukemaa suuntaan tai
+ * toiseen.
+ */
+const ETUSIVUN_VOIMA = 1.4;
 const HAIVYTYS_MS = 1800;
 // Sama äänite alkaa joka kerta eri kohdasta, jottei paikka kuulosta
 // itseään toistavalta kun sinne palaa. Loppuun jätetään varaa, ettei
@@ -287,9 +301,10 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
   // Valinta voi kantaa aloituskohdan ja voimakkuuden (#alku=20&voima=1.5):
   // hypätään äänitteen vaimean alun yli ja soitetaan halutulla tasolla.
   const { url: osoite, alku, voima } = jaaAlku(url);
-  // Puolitus koskee VAIN etusivua: siellä ääni soi yksin. Lentomatka
-  // on vakiopaikka vain aloituskohtansa puolesta, ja kabiini on jo
-  // kertaalleen kalibroitu täydelle voimalleen.
+  // Etusivun oma kerroin (ks. ETUSIVUN_VOIMA) koskee VAIN etusivua:
+  // siellä ääni soi yksin. Lentomatka on vakiopaikka vain
+  // aloituskohtansa puolesta, ja kabiini on jo kertaalleen kalibroitu
+  // täydelle voimalleen.
   const paikanVoima = cityId === 'etusivu' ? ETUSIVUN_VOIMA : 1;
   const oma = {
     cityId,
@@ -469,7 +484,15 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
    * osoitteella. Vahti sammutetaan odotuksen ajaksi: pysäytetty ääni
    * ei lataa puskuriaan täyteen, eikä sitä saa tulkita kuolleeksi.
    */
-  const ELEET = ['pointerdown', 'touchstart', 'keydown'];
+  /*
+   * ELELISTA ON LEVEÄ TARKOITUKSELLA. Safari myöntää soittoluvan sille
+   * tapahtumalle, jonka se itse laskee eleeksi, eikä lista ole sama
+   * kaikissa versioissa: vanhemmat WebKitit tunnistivat mousedownin ja
+   * clickin, uudemmat myös pointerdownin. Kuuntelijat purkautuvat
+   * ensimmäisestä laukeamisesta, joten päällekkäisyys ei maksa mitään —
+   * mutta puuttuva laji maksaisi koko taustaäänen.
+   */
+  const ELEET = ['pointerdown', 'mousedown', 'touchstart', 'touchend', 'click', 'keydown'];
   let eleOdottaa = false;
   const odotaElea = () => {
     if (eleOdottaa) return;
@@ -477,13 +500,40 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     clearTimeout(vahti);
     const ele = () => {
       eleOdottaa = false;
-      for (const laji of ELEET) document.removeEventListener(laji, ele);
+      for (const laji of ELEET) document.removeEventListener(laji, ele, true);
       // Soitin on voinut jo väistyä uuden tieltä odotuksen aikana.
       if (nykyinen !== oma || oma.audio !== audio) return;
-      viritaVahti();
+      /*
+       * play() KUTSUTAAN TÄSSÄ SYNKRONISESTI. Safari myöntää luvan vain
+       * kutsulle, joka on suoraan eleen kutsupinossa: yksikin await,
+       * .then() tai setTimeout välissä, ja lupa on jo mennyt. Siksi
+       * tämän ja soi():n välissä ei saa olla mitään asynkronista, ja
+       * soi() kutsuu audio.play():tä suoraan. Vahti viritetään vasta
+       * perään — se on pelkkä ajastin eikä vaikuta lupaan, mutta
+       * järjestys pitää soiton mahdollisimman lähellä elettä.
+       */
       soi();
+      viritaVahti();
     };
-    for (const laji of ELEET) document.addEventListener(laji, ele, { passive: true });
+    /*
+     * KUUNTELU ON KAAPPAUSVAIHEESSA, EI KUPLINNASSA. Kuplintavaiheen
+     * kuuntelija dokumentissa jää kokonaan ilman napautusta, jos joku
+     * matkan varrella pysäyttää tapahtuman — eikä se ole tällä sivulla
+     * teoriaa: kartan oma napautuszoomaus (js/ui.js, pane-kuuntelija
+     * kaappausvaiheessa) kutsuu stopPropagationia ja preventDefaultia
+     * maailmankartan napautuksesta, ja kartta on etusivun suurin kohde.
+     * Ehtojen (aloitettu, ei aloitusporttia, zoomTarpeen) takia sitä ei
+     * saatu Playwrightilla laukeamaan, joten tämä on kovennus eikä
+     * mitattu korjaus — mutta ainoa ele, jonka varassa koko taustaääni
+     * on, ei saa olla minkään muun kuuntelijan armoilla.
+     *
+     * Kaappausvaihe kulkee dokumentista sisäänpäin, joten tämä
+     * kuuntelija ehtii ensin eikä sitä voi enää pysäyttää. Se ei
+     * myöskään häiritse ketään: se vain lukee eleen tapahtuneeksi.
+     */
+    for (const laji of ELEET) {
+      document.addEventListener(laji, ele, { passive: true, capture: true });
+    }
   };
   const petti = () => {
     clearTimeout(vahti);
