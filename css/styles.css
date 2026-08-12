@@ -3984,6 +3984,25 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * suurin sävyero 58/255, kun liikkeen vähennys on päällä.
  */
 .alkureitti-viiva { stroke-width: 6; opacity: 0.17; }
+/*
+ * Laivojen pohjaviivat ovat himmeämpiä kuin isoisän (omistaja
+ * 12.8.2026: punainen on päähahmo). Sinisiä reittejä on neljä yhden
+ * sijaan, joten sama 0,17 olisi kuormittanut kartan neljästä kohtaa
+ * kerralla. Liikkuvien osien vastaava kerroin on js/ui.js:n
+ * LAJIN_KIRKKAUS — täällä se on käsin, koska pohjaviivaa ei animoida.
+ */
+.alkureitti-kauppa .alkureitti-viiva { opacity: 0.11; }
+
+/*
+ * JÄLKI: SUORAT PÄÄT, EI PYÖREÄT.
+ *
+ * Jälki kasvaa niin, että seuraava katkoviivan pätkä venyy nollasta
+ * täyteen mittaansa (js/ui.js). Pyöreällä päällä nollan mittainen pätkä
+ * piirtyy SVG:ssä pisteenä, joten koko piirtämätön osa reittiä olisi
+ * näkynyt pistejonona ensimmäisestä ruudusta asti — juuri se, mitä
+ * kasvavalla jäljellä yritetään välttää.
+ */
+.alkureitti-jalki { stroke-linecap: butt; }
 
 @media (prefers-reduced-motion: reduce) {
   /*
@@ -4208,9 +4227,20 @@ body.flight-active .grain { display: none; }
  * kalvon pystypinon toinen jäsen kartan alla, joten teksti ei voi enää
  * osua lentoreitin päälle. Repliikki varaa koko korkeutensa heti
  * (js/ui.js typeText piirtää kirjoittamattoman osan näkymättömänä),
- * joten nappi ei liiku kirjoituksen aikana. */
+ * joten nappi ei liiku kirjoituksen aikana.
+ *
+ * VÄLI KARTAN JA REPLIIKIN VÄLIIN (omistajan tilaus 12.8.2026: teksti
+ * saa olla vähän alempana). Repliikki oli kiinni lentoreitin
+ * alareunassa, ja kone lensi käytännössä tekstin niskaan. Väli on noin
+ * kaksinkertainen entiseen, ja se on koko pinon — repliikin ja napin —
+ * yhteinen: nappi pysyy siis samalla etäisyydellä repliikistä eikä pino
+ * järjesty uudelleen kesken kirjoituksen. Mitattuna 51 px (390 px) ja
+ * 48 px (900 px), kun se oli ennen 21 px ja 20 px.
+ *
+ * Yläraja on rem-mitta eikä vh, jottei matala vaakanäyttö työntäisi
+ * nappia ruudun ulkopuolelle. */
 .flight-alaosa {
-  margin-top: clamp(0.6rem, 2.5vh, 1.6rem);
+  margin-top: clamp(1.4rem, 6vh, 3.2rem);
   width: min(680px, calc(100% - 1.6rem));
   display: flex;
   flex-direction: column;

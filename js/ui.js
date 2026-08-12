@@ -779,6 +779,8 @@ const FLY_OVERLAY_MS = 4800;
 const LENNON_POHJA_MS = 2200;
 const LENNON_SANA_MS = 210;
 const LENNON_ENINTAAN_MS = 15000;
+// Kuinka kauan valmis repliikki jää ruudulle ennen kuin lento päättyy.
+const LENNON_LUKUAIKA_MS = 1600;
 // Kuinka kauan lennon jälkeen odotetaan, ennen kuin pieni nuoli syttyy.
 const LENNON_NUOLI_MS = 3500;
 const TOAST_MS = { die: 950, default: 1200 };
@@ -801,6 +803,56 @@ const INTRO_TOP = 0.05;
 // Kirjoituskoneen tahti: avaus saa naksua rauhassa, muut tekstit ripeästi.
 const TYPE_MS = 50;
 const INTRO_TYPE_MS = 190;
+/*
+ * KIRJOITTAJAN RYTMI. Sanaväli huojuu, ja välimerkin jälkeen pidetään
+ * tauko: revennyt katkelma jättää lukijan pisimmäksi aikaa tyhjän
+ * päälle, piste hengähdyksen ajaksi ja pilkku hetkeksi.
+ *
+ * Taulukossa eikä koodissa, koska kaksi kohtaa lukee samat luvut:
+ * typeText arpoo niistä oikean viiveen, ja kirjoituksenKesto laskee
+ * niiden keskiarvoista, kuinka kauan rivin kirjoittaminen kestää.
+ * Jälkimmäistä tarvitaan lennon mitoitukseen.
+ */
+const KIRJOITUSTAUOT = [
+  { osuu: /…"?$/, tauko: 1200, huojunta: 500 },
+  { osuu: /[.!?]$/, tauko: 620, huojunta: 320 },
+  { osuu: /[,;:—–]$/, tauko: 300, huojunta: 160 },
+];
+// Kirjoittaja pysähtyy välillä miettimään kesken virkkeenkin.
+const KIRJOITUS_MIETE = { osuus: 0.15, tauko: 280, huojunta: 340 };
+/*
+ * Ne kirjoituspaikat, joilla rytmi on käytössä. Muualla teksti naksuu
+ * tasaisesti: pelitilanneilmoitus tai tehtäväkortti ei ole kenenkään
+ * kirjoittama, vaan pelin oma ääni.
+ *
+ * Lennon repliikki liitettiin joukkoon 12.8.2026 omistajan tilauksesta:
+ * *"pitää animoida samalla tavalla kuin etusivun teksti"*. Se on nuoren
+ * herran oma repliikki niin kuin avaustekstikin, joten se ansaitsee
+ * saman käden — ja koska tahti on sama, ruututeksti pysyy luennan
+ * tahdissa siellä missä kertoja lukee.
+ */
+const KIRJOITUSRYTMI = new Set(['intro', 'flight']);
+
+/**
+ * Kuinka kauan typeText kirjoittaa tekstin: sama rytmi keskiarvoilla,
+ * ilman arpaa. Lennon kesto mitoitetaan tällä, jottei kone laskeudu
+ * kesken lauseen.
+ */
+export function kirjoituksenKesto(teksti, tahti = INTRO_TYPE_MS) {
+  const sanat = String(teksti).trim().split(/\s+/).filter(Boolean);
+  if (!sanat.length) return 0;
+  // Ensimmäinen sana ilmestyy yhden tahdin päästä, ja sen jälkeen
+  // jokainen väli on edellisen sanan mukainen (ks. typeText).
+  let ms = tahti;
+  for (const sana of sanat.slice(0, -1)) {
+    // Huojunnan (0,7…1,3) keskiarvo on tasan yksi tahti.
+    ms += tahti;
+    const tauko = KIRJOITUSTAUOT.find((t) => t.osuu.test(sana));
+    if (tauko) ms += tauko.tauko + tauko.huojunta / 2;
+    else ms += KIRJOITUS_MIETE.osuus * (KIRJOITUS_MIETE.tauko + KIRJOITUS_MIETE.huojunta / 2);
+  }
+  return ms;
+}
 // Tehtäväkortti paljastuu vaiheittain: kehys, tauko, kysymys, tauko,
 // vaihtoehdot. Kirjoituskone on etusivua ripeämpi mutta rauhallisempi
 // kuin pelitilanneilmoitukset.
@@ -833,12 +885,29 @@ const INTRO_TEXT = 'Vintiltä löytyi isoisän kulunut matkakirja — '
 const INTRO_KIRJAN_NIMI = 'Maailman ympäri kahdeksassakymmenessä päivässä';
 
 /*
- * ETUSIVUN ALKUANIMAATIO: kaksi reittiä, joita pitkin kulkee valopiste.
+ * ETUSIVUN ALKUANIMAATIO: kuusi reittiä, joita pitkin kulkee sykkivä
+ * valopiste ja piirtää kuljetun osuuden näkyviin katkoviivana.
  *
  * Omistajan tilaus 12.8.2026: aloituskartalle kevyt jatkuva liike —
- * isoisän maailmanympärysmatka punaisella ja kauppareitti Intiasta
- * Lontooseen sinisellä. Piste sykkii pehmeästi ja jättää perässään
- * himmenevän katkoviivajäljen.
+ * isoisän maailmanympärysmatka punaisella ja laivareitit sinisellä.
+ *
+ * HIENOSÄÄTÖ 12.8.2026, kun animaatio vihdoin näkyi omistajan
+ * Safarissa. Neljä havaintoa, neljä muutosta:
+ *   1. PISTE SYKKII SELVÄSTI. Ennen säde hengitti 4,2 sekunnin
+ *      jaksolla ja kehä vastavaiheessa ytimen kanssa, jolloin kärjen
+ *      kokonaispinta pysyi jotakuinkin samana eikä syke erottunut.
+ *      Nyt kehä ja ydin sykkivät samassa vaiheessa 1,6 sekunnissa, ja
+ *      säteen lisäksi aaltoilee peittävyys.
+ *   2. JÄLKI JÄÄ NÄKYVIIN. Ennen jälki oli lyhyt haipuva häntä, joka
+ *      seurasi pistettä "kuin mato" ja katosi heti perässä. Nyt
+ *      kuljettu osuus piirtyy pysyvästi tasaisen himmeänä
+ *      katkoviivana ja pyyhkiytyy vasta kun silmukka alkaa alusta.
+ *   3. LAIVOJA ON NELJÄ. Yksi sininen reitti oli liian vähän isolle
+ *      merikartalle; nyt niitä on neljä eri satamista, ja ne lähtevät
+ *      porrastetusti (ks. alku-kenttä).
+ *   4. SINISET OVAT HIMMEÄMPIÄ. Punainen piste on päähahmo, laivat
+ *      taustaa — ero tehdään kirkkauskertoimella (LAJIN_KIRKKAUS),
+ *      ei värillä.
  *
  * REITTIPISTEET OVAT LAUDAN OMIA. Jokainen väliarvo alla on poimittu
  * js/packs/maailma.js:n WORLD_EDGES-merireiteiltä (tai niiden
@@ -851,7 +920,7 @@ const INTRO_KIRJAN_NIMI = 'Maailman ympäri kahdeksassakymmenessä päivässä';
  * ympyrän itäreuna ja vasemman ympyrän länsireuna ovat samaa 160.
  * pituuspiiriä. Yhtenäinen viiva niiden välillä kulkisi koko kartan
  * halki väärään suuntaan. Osat kulkevat vuorotellen samassa
- * silmukassa (ks. ALKUREITIT[].vaihe), joten matka luetaan yhtenä.
+ * silmukassa (ks. ALKUREITIT[].alku), joten matka luetaan yhtenä.
  *
  * KOKO JA VAUHTI ON MITATTU, EI ARVATTU (12.8.2026). Omistaja ei
  * nähnyt animaatiota lainkaan sen paremmin iPhonella kuin
@@ -867,16 +936,30 @@ const INTRO_KIRJAN_NIMI = 'Maailman ympäri kahdeksassakymmenessä päivässä';
  * lyhyempi (40 s → 26 s, kauppareitti 34 s → 24 s). Värit ovat
  * ennallaan eli seepian sisällä: liike saa erottua, ilme ei saa
  * muuttua julisteeksi.
+ *
+ * KENTÄT: `kesto` on koko silmukan pituus sekunteina, `ikkuna` se
+ * osuus silmukasta joka kuluu matkaan (loppu on lepoa, jonka ajan
+ * valmis reitti jää näkyviin) ja `alku` se kohta silmukasta, jossa
+ * reitti lähtee liikkeelle. `alku` on samalla porrastus: laivat
+ * lähtevät 3, 6, 9 ja 12 sekunnin kohdalla, eivät yhtä aikaa.
+ *
+ * ALKU-KENTÄN KAKSI RAJAA (tarkistettu testissä). Sekä kärjen että
+ * jäljen avainhetket kierretään kohdasta 1 − alku, ja sen kohdan on
+ * osuttava lepovaiheeseen — muuten kierto katkaisisi matkan tai
+ * pyyhkäisyn keskeltä. Siitä seuraa `alku + ikkuna < 1` ja
+ * `alku > JALJEN_PYYHKAISY` (tai alku = 0, jolloin ei kierretä).
  */
 const ALKU_LONTOO = [731.7, 225.9];
 const ALKU_KAIRO = [772.5, 322.1];
 const ALKU_MUMBAI = [871.5, 353.5];
-const ALKUREITIT = [
+const ALKU_SYDNEY = [1051.9, 527.7];
+const ALKU_NEWYORK = [359, 293.2];
+export const ALKUREITIT = [
   {
     // Isoisän matka itään: Lontoo – Välimeri – Suez – Intia – Kaakkois-
     // Aasia – Kiina – Japani. Verne'n reitti pelin omia meriteitä pitkin.
     laji: 'isoisa',
-    vaihe: 0,
+    alku: 0,
     kesto: 26,
     ikkuna: 0.44,
     pisteet: [
@@ -900,13 +983,13 @@ const ALKUREITIT = [
     // Yorkiin ja Atlantin yli kotiin. Alkaa vasta kun ensimmäinen osa
     // on päättynyt Tokioon.
     laji: 'isoisa',
-    vaihe: 0.5,
+    alku: 0.5,
     kesto: 26,
     ikkuna: 0.44,
     pisteet: [
       [286.5, 322.3], // Los Angeles
       [313.3, 312.3], [339.5, 293.7],
-      [359, 293.2], // New York
+      ALKU_NEWYORK,
       [412.1, 259], [443.9, 213.6],
       ALKU_LONTOO,
     ],
@@ -916,9 +999,9 @@ const ALKUREITIT = [
     // tie, jota mausteet ja tee kulkivat ennen Suezin kanavaa. Kiertää
     // Afrikan, joten se ei osu isoisän reitin päälle missään kohtaa.
     laji: 'kauppa',
-    vaihe: 0,
-    kesto: 24,
-    ikkuna: 0.8,
+    alku: 0.12,
+    kesto: 26,
+    ikkuna: 0.67,
     pisteet: [
       ALKU_MUMBAI,
       [882, 392], [880, 435], [855, 470], [830, 495], [799.7, 508.2],
@@ -931,38 +1014,121 @@ const ALKUREITIT = [
       ALKU_LONTOO,
     ],
   },
+  {
+    // Etelä-Atlantti: New York – Rio de Janeiro. Amerikkojen puoliskolla
+    // ei liikkunut mitään, ja tämä on kartan tyhjin merialue.
+    //
+    // Miksi ei New York – Lontoo, jota omistaja ehdotti: se on täsmälleen
+    // sama viiva kuin isoisän paluumatkan viimeinen osuus. Sininen olisi
+    // piirtynyt punaisen päälle, ja päällekkäisyys näyttäisi virheeltä.
+    laji: 'kauppa',
+    alku: 0.29,
+    kesto: 21,
+    ikkuna: 0.43,
+    pisteet: [
+      ALKU_NEWYORK,
+      [377.7, 304.6], [424.8, 340.2], [461.6, 383.5], [517, 399.8], [502.2, 458.5],
+      [457.7, 477], // Rio de Janeiro
+    ],
+  },
+  {
+    // Intian valtameri: Sydney – Mumbai. Kulkee Australian länsipuolitse
+    // eikä osu missään isoisän reittiin tai Afrikan kiertävään
+    // kauppareittiin — vain Mumbain satamassa viivat kohtaavat.
+    laji: 'kauppa',
+    alku: 0.375,
+    kesto: 24,
+    ikkuna: 0.4,
+    pisteet: [
+      ALKU_SYDNEY,
+      [1040.7, 542.8], [1003.6, 531.1], [956.6, 506.2], [929.8, 471.7], [900.5, 426.6],
+      [876, 388.2],
+      ALKU_MUMBAI,
+    ],
+  },
+  {
+    // Tyynenmeren laita: Peking – Sydney. Kartan oikea reuna, jossa ei
+    // ole muuta liikettä sen jälkeen kun isoisä on kääntynyt Tokioon.
+    laji: 'kauppa',
+    alku: 0.43,
+    kesto: 28,
+    ikkuna: 0.33,
+    pisteet: [
+      [959.8, 286.6], // Peking
+      [1007.7, 321.5], [1049, 364.9], [1078.7, 431.4], [1094.6, 475.9], [1086.8, 513.3],
+      ALKU_SYDNEY,
+    ],
+  },
 ];
 /*
- * Jäljen muoto: montako pistettä, kuinka tiheässä ja miten himmeinä.
- * Ryhmä kerrallaan, koska yhden polun kaikki viivat jakavat saman
- * peittävyyden — kolme ryhmää antaa jäljelle portaittain haipuvan
- * hännän neljällä animoidulla polulla reittiä kohti.
- *
- * Mitat kaksinkertaistettiin 12.8.2026: 3,4–4,6 laudan yksikköä oli
- * puhelimen ruudulla 1,1–1,5 pikseliä eli ohuempi kuin kartan oma
- * katkoviiva, jolloin jälki ei erottunut karttataiteesta lainkaan.
+ * Punainen on päähahmo, siniset taustaa (omistaja 12.8.2026). Ero
+ * tehdään kertoimella eikä värillä: sama seepian sisällä pysyvä sininen
+ * himmenee, joten kartan ilme ei muutu — vain katseen järjestys.
+ * Kerroin osuu sekä kärkeen että jälkeen; pohjaviivan vastaava himmennys
+ * on css/styles.css:ssä, koska sitä ei animoida.
  */
-const JALJEN_PATKA = 5.5;      // yhden katkoviivan pituus laudan yksikköinä
-const JALJEN_VALI = 10;        // pätkien väli
-const JALJEN_JAKSO = JALJEN_PATKA + JALJEN_VALI;
-const JALJEN_PATKIA = 4;       // pätkiä yhdessä ryhmässä
-const JALJEN_RYHMAT = [
-  { leveys: 8.4, kirkkaus: 0.72 },
-  { leveys: 7.2, kirkkaus: 0.5 },
-  { leveys: 6, kirkkaus: 0.3 },
-];
+const LAJIN_KIRKKAUS = { isoisa: 1, kauppa: 0.66 };
+/*
+ * JÄLKI: KULJETTU OSUUS JÄÄ NÄKYVIIN.
+ *
+ * Omistaja 12.8.2026: *"nyt jälki seuraa pistettä lyhyenä häntänä kuin
+ * mato"*. Ennen jälki oli kolme ryhmää katkoviivan pätkiä, jotka
+ * liukuivat pisteen perässä stroke-dashoffsetilla ja himmenivät
+ * portaittain. Nyt jälki on yksi polku reittiä kohti, ja se piirtyy
+ * pysyvästi: tasainen himmeä katkoviiva kasvaa pisteen mukana ja jää
+ * paikalleen, kunnes silmukka alkaa alusta.
+ *
+ * TEKNIIKKA: animoidaan stroke-dasharrayta, ei dashoffsetia. Kuvio on
+ * kirjoitettu kokonaan auki — yhtä monta pätkä/väli-paria kuin reitillä
+ * on jaksoja — ja kasvu tapahtuu niin, että seuraava pätkä venyy
+ * nollasta täyteen mittaansa samalla kun sen jälkeinen väli lyhenee
+ * saman verran. Parin summa pysyy siis jakson mittaisena, jolloin jo
+ * piirtyneet pätkät eivät liiku paikaltaan. Yksi ainoa polku riittää
+ * koko reitin jäljeksi, eikä yhdenkään pätkän kirkkaus muutu.
+ *
+ * Kaksi seurausta, jotka on pakko muistaa:
+ *   - PÄÄT OVAT SUORAT (stroke-linecap: butt). Pyöreäpäinen nollan
+ *     mittainen pätkä piirtyy SVG:ssä pisteenä, joten piirtämätön osa
+ *     reittiä olisi näkynyt pistejonona koko matkan.
+ *   - JAKSO LASKETAAN REITIN PITUUDESTA (pituus / jaksoja), ei
+ *     kiinteänä lukuna. Silloin kuvion kokonaispituus on tasan reitin
+ *     pituus, eikä jälki karkaa pisteestä edelle tai jälkeen matkan
+ *     varrella.
+ *
+ * Jos selain ei jostain animoisi dasharrayta, määreen pohja-arvo on
+ * valmiiksi piirretty kuvio: silloin reitti näkyy staattisena
+ * katkoviivana eikä tyhjänä.
+ */
+const JALJEN_PATKA = 5.5;       // yhden katkoviivan pituus laudan yksikköinä
+const JALJEN_JAKSO = 15.5;      // tavoiteltu pätkän ja välin summa
+const JALJEN_LEVEYS = 7.2;
+const JALJEN_KIRKKAUS = 0.5;
+// Pyyhkäisy: osuus silmukasta, jonka aikana valmis jälki häipyy pois
+// ennen kuin se piirtyy uudelleen. Ilman häivytystä koko reitti
+// katoaisi yhdellä ruudulla, ja se näkyisi nykäyksenä.
+export const JALJEN_PYYHKAISY = 0.06;
 /*
  * Kärki on kaksi päällekkäistä ympyrää: leveä ja himmeä kehä sekä sen
  * sisällä kirkas ydin. Se on hehkun halvin muoto — suodatin
  * (feGaussianBlur) maksaisi koko kerroksen uudelleenpiirron joka
  * ruudulla.
  *
- * Mitat ovat entiset: ennen kärki oli pyöreäpäinen katkoviivan pätkä,
- * jonka viivanleveys 13 ja 28 vastaa säteitä 6,5 ja 14.
+ * SYKE ON NYT SELVÄ (omistaja 12.8.2026: *"tee kulkevista pisteistä
+ * selvästi sykkiviä"*). Kolme muutosta entiseen: jakso lyheni 4,2
+ * sekunnista 1,6:een, kehä ja ydin sykkivät samassa vaiheessa (ennen
+ * vastakkaisissa, jolloin kärjen kokonaispinta pysyi lähes samana), ja
+ * säteen rinnalla aaltoilee peittävyys.
+ *
+ * Peittävyys mahtuu mukaan, koska kärki asuu <g>-ryhmässä: ryhmä
+ * kantaa silmukan oman häivytyksen ja ympyrä sykkeen, ja SVG kertoo
+ * ne keskenään. Yhdelle elementille ei voi asettaa kahta
+ * peittävyysanimaatiota.
  */
+const SYKE_KESTO = '1.6s';
+const SYKE_SPLINE = '0.4 0 0.6 1;0.4 0 0.6 1';
 const KARJET = [
-  { luokka: 'alkureitti-keha', sade: 14, syke: [16, 10], kirkkaus: 0.38 },
-  { luokka: 'alkureitti-karki', sade: 6.5, syke: [5.25, 8], kirkkaus: 0.95 },
+  { luokka: 'alkureitti-keha', sade: [9.5, 17.5], kirkkaus: [0.26, 0.46] },
+  { luokka: 'alkureitti-karki', sade: [4.6, 8.4], kirkkaus: [0.72, 1] },
 ];
 
 /*
@@ -1046,6 +1212,31 @@ export function kierraKehykset(kehykset, vaihe) {
   }
   uudet[uudet.length - 1].t = 1;
   return uudet;
+}
+
+/**
+ * Jäljen avainhetket: kuinka monta pätkää reitistä on piirretty milläkin
+ * hetkellä, kun silmukka luetaan reitin omasta lähtöhetkestä alkaen.
+ *
+ * `kulku` on nyt piirretty osuus (0…1) eikä kärjen paikka, ja siitä
+ * poimitaan valmis katkoviivakuvio. Nimi on sama, koska kierto
+ * (kierraKehykset) käsittelee molempia samalla koodilla — ja juuri sen
+ * takia arvon on oltava vakio siinä kohdassa, josta kierretään.
+ *
+ * Silmukka: pätkät kasvavat matkan ajan (0…ikkuna), valmis reitti jää
+ * lepäämään näkyviin, häipyy pyyhkäisyn ajan ja on kadonnut siinä
+ * vaiheessa kun kuvio palaa tyhjäksi. Kuvion nollaus tapahtuu siis
+ * peittävyyden ollessa nolla, eikä sitä näe.
+ */
+export function jaljenKehykset(ikkuna, jaksoja) {
+  const kehykset = [];
+  for (let i = 0; i <= jaksoja; i++) {
+    kehykset.push({ t: (ikkuna * i) / jaksoja, kulku: i / jaksoja, nakyy: 1 });
+  }
+  kehykset.push({ t: 1 - JALJEN_PYYHKAISY, kulku: 1, nakyy: 1 });
+  kehykset.push({ t: 1 - ALKU_SAUMA, kulku: 1, nakyy: 0 });
+  kehykset.push({ t: 1, kulku: 0, nakyy: 0 });
+  return kehykset;
 }
 
 /*
@@ -4561,8 +4752,8 @@ export class UI {
   }
 
   /**
-   * Etusivun alkuanimaatio: valopiste kulkee reittiä ja jättää perässään
-   * himmenevän katkoviivajäljen (ALKUREITIT).
+   * Etusivun alkuanimaatio: sykkivä valopiste kulkee reittiä ja piirtää
+   * kuljetun osuuden näkyviin himmeänä katkoviivana (ALKUREITIT).
    *
    * LIIKE ON SMILIÄ, EI CSS:ÄÄ (12.8.2026). Aiempi versio teki kaiken
    * CSS-animaatiolla: kärki oli polku, jonka katkoviiva oli `0.01
@@ -4610,8 +4801,15 @@ export class UI {
       el('path', { d, class: 'alkureitti-osa alkureitti-viiva' }, ryhma);
       if (this.reducedMotion) continue;
 
-      const kehykset = alkuKehykset(reitti.ikkuna);
       const kesto = `${reitti.kesto}s`;
+      const himmennys = LAJIN_KIRKKAUS[reitti.laji] ?? 1;
+      /*
+       * Reitin oma lähtöhetki kierroksesta. Sekä kärjen että jäljen
+       * avainhetket on kirjoitettu reitin omasta ajasta (0 = lähtö), ja
+       * sama kierto siirtää molemmat samaan kohtaan kierrosta — siksi ne
+       * pysyvät toisissaan kiinni ilman erillistä ajastusta.
+       */
+      const kierto = (1 - reitti.alku) % 1;
       /** Yksi SMIL-animaatio: arvot ja hetket samasta kierretystä listasta. */
       const animoi = (kohde, attributeName, kierretyt, arvo) => el('animate', {
         attributeName,
@@ -4623,78 +4821,83 @@ export class UI {
       }, kohde);
 
       /*
-       * Kärki: ympyrä, jonka <animateMotion> vie polkua pitkin.
+       * JÄLKI. Kuvio kirjoitetaan auki jokaiselle askeleelle: `piirretty`
+       * ensimmäistä paria on täysimittaisia pätkiä, loput ovat nollan
+       * mittaisia ja niiden väli koko jakson mittainen. Kahden peräkkäisen
+       * askeleen välillä muuttuu siis vain yksi pari, ja SMILin lineaarinen
+       * välistys venyttää sen pätkän esiin — muut pysyvät paikallaan.
+       */
+      const jaksoja = Math.max(1, Math.round(pituus / JALJEN_JAKSO));
+      const jakso = pituus / jaksoja;
+      const patka = JALJEN_PATKA.toFixed(2);
+      const vali = (jakso - JALJEN_PATKA).toFixed(2);
+      const tyhja = jakso.toFixed(2);
+      const kuviot = [];
+      for (let piirretty = 0; piirretty <= jaksoja; piirretty++) {
+        const osat = [];
+        for (let i = 0; i < jaksoja; i++) {
+          if (i < piirretty) osat.push(patka, vali);
+          else osat.push('0', tyhja);
+        }
+        kuviot.push(osat.join(' '));
+      }
+      const jaljet = kierraKehykset(jaljenKehykset(reitti.ikkuna, jaksoja), kierto);
+      const jalki = el('path', {
+        d,
+        class: 'alkureitti-osa alkureitti-jalki',
+        'stroke-width': JALJEN_LEVEYS,
+        // Pohja-arvo on valmis kuvio: jos dasharrayn animointi jostain
+        // pettäisi, reitti näkyisi staattisena katkoviivana eikä tyhjänä.
+        'stroke-dasharray': kuviot[jaksoja],
+        opacity: 0,
+      }, ryhma);
+      animoi(jalki, 'stroke-dasharray', jaljet,
+        (k) => kuviot[Math.min(jaksoja, Math.max(0, Math.round(k.kulku * jaksoja)))]);
+      animoi(jalki, 'opacity', jaljet,
+        (k) => (k.nakyy * JALJEN_KIRKKAUS * himmennys).toFixed(3));
+
+      /*
+       * KÄRKI: ryhmä, jonka <animateMotion> vie polkua pitkin.
        * Polku annetaan path-määreenä eikä <mpath>-viittauksena — sama
        * asia SMILin kannalta, mutta ilman id-viittausta, joka pitäisi
        * pitää yksilöllisenä myös yhden tiedoston dist-versiossa.
        * keyPoints kertoo, missä kohtaa polkua ollaan milläkin hetkellä,
        * joten odotusvuoro on vain jono samaa arvoa.
+       *
+       * Ryhmä kantaa silmukan häivytyksen ja reitin lajikohtaisen
+       * himmennyksen, ympyrät oman sykkeensä. SVG kertoo ryhmän ja
+       * lapsen peittävyydet keskenään, joten sykkeelle jää oma
+       * animaationsa — yhdelle elementille niitä ei mahtuisi kahta.
+       * Samalla molemmat ympyrät jakavat yhden liikeanimaation.
        */
-      const kierretyt = kierraKehykset(kehykset, reitti.vaihe);
+      const kierretyt = kierraKehykset(alkuKehykset(reitti.ikkuna), kierto);
+      const kulkija = el('g', { class: 'alkureitti-kulkija', opacity: 0 }, ryhma);
+      el('animateMotion', {
+        dur: kesto,
+        repeatCount: 'indefinite',
+        calcMode: 'linear',
+        rotate: '0',
+        path: d,
+        keyPoints: kierretyt.map((k) => k.kulku.toFixed(5)).join(';'),
+        keyTimes: kierretyt.map((k) => k.t.toFixed(5)).join(';'),
+      }, kulkija);
+      animoi(kulkija, 'opacity', kierretyt, (k) => (k.nakyy * himmennys).toFixed(3));
       for (const karki of KARJET) {
         const ympyra = el('circle', {
-          class: `alkureitti-piste ${karki.luokka}`, cx: 0, cy: 0, r: karki.sade,
-        }, ryhma);
-        el('animateMotion', {
-          dur: kesto,
-          repeatCount: 'indefinite',
-          calcMode: 'linear',
-          rotate: '0',
-          path: d,
-          keyPoints: kierretyt.map((k) => k.kulku.toFixed(5)).join(';'),
-          keyTimes: kierretyt.map((k) => k.t.toFixed(5)).join(';'),
-        }, ympyra);
-        animoi(ympyra, 'opacity', kierretyt, (k) => (k.nakyy * karki.kirkkaus).toFixed(3));
-        /*
-         * Syke paikallaan: säde hengittää edestakaisin omassa
-         * tahdissaan. Ennen tämä tehtiin viivanleveydellä, koska
-         * peittävyys oli jo kulkukäyrän käytössä; ympyrällä säde on
-         * suora tie samaan ilmeeseen.
-         */
-        el('animate', {
-          attributeName: 'r',
-          dur: '4.2s',
-          repeatCount: 'indefinite',
-          calcMode: 'spline',
-          values: `${karki.syke[0]};${karki.syke[1]};${karki.syke[0]}`,
-          keyTimes: '0;0.5;1',
-          keySplines: '0.4 0 0.6 1;0.4 0 0.6 1',
-        }, ympyra);
+          class: `alkureitti-piste ${karki.luokka}`, cx: 0, cy: 0, r: karki.sade[1],
+        }, kulkija);
+        for (const [maare, arvot] of [['r', karki.sade], ['opacity', karki.kirkkaus]]) {
+          el('animate', {
+            attributeName: maare,
+            dur: SYKE_KESTO,
+            repeatCount: 'indefinite',
+            calcMode: 'spline',
+            values: `${arvot[0]};${arvot[1]};${arvot[0]}`,
+            keyTimes: '0;0.5;1',
+            keySplines: SYKE_SPLINE,
+          }, ympyra);
+        }
       }
-
-      /*
-       * Jälki: kolme ryhmää katkoviivan pätkiä, kukin edellistä
-       * himmeämpi. Yhden polun kaikki pätkät jakavat saman
-       * peittävyyden, joten haipuminen tarvitsee useamman polun.
-       *
-       * Katkoviivan siirtymää animoidaan SMILillä eikä CSS:llä, ja
-       * mitat annetaan määreinä eikä tyyleinä — muuten CSS jyräisi
-       * animaation. Pätkä on 5,5 laudan yksikköä eli selvästi yli sen
-       * rajan, jossa WebKitin pyöreäpäinen pätkä voi kadota.
-       */
-      // Pariton lukumäärä kahdentaisi kuvion (SVG:n sääntö), joten
-      // viimeinen väli on koko reitin mittainen: yksi ryhmä kerrallaan.
-      const kuvio = `${Array(JALJEN_PATKIA - 1).fill(`${JALJEN_PATKA} ${JALJEN_VALI}`).join(' ')} `
-        + `${JALJEN_PATKA} ${pituus.toFixed(1)}`;
-      JALJEN_RYHMAT.forEach((jalki, i) => {
-        const osa = el('path', {
-          d,
-          class: 'alkureitti-osa alkureitti-jalki',
-          'stroke-width': jalki.leveys,
-          'stroke-dasharray': kuvio,
-          'stroke-dashoffset': 0,
-          opacity: 0,
-        }, ryhma);
-        // Ryhmä i alkaa siitä mihin edellinen loppui, ja ensimmäinen
-        // jättää kärjen ja jäljen väliin yhden jakson raon. Matka
-        // muuttuu vaiheeksi reitin oman ikkunan mukaan: sama etäisyys
-        // on eri osuus eri mittaisesta reitistä.
-        const matka = (i + 1) * JALJEN_PATKIA * JALJEN_JAKSO;
-        const vaihe = reitti.vaihe - (matka / pituus) * reitti.ikkuna;
-        const jaljessa = kierraKehykset(kehykset, vaihe);
-        animoi(osa, 'stroke-dashoffset', jaljessa, (k) => (-k.kulku * pituus).toFixed(1));
-        animoi(osa, 'opacity', jaljessa, (k) => (k.nakyy * jalki.kirkkaus).toFixed(3));
-      });
     }
     return kerros;
   }
@@ -13788,27 +13991,31 @@ export class UI {
     };
     piirra();
 
-    // Avaustekstillä on kirjoittajan rytmi: sanaväli huojuu ja
+    // Kirjoittajan rytmi (ks. KIRJOITUSTAUOT): sanaväli huojuu ja
     // välimerkin jälkeen pidetään tauko — tasainen konemainen tahti
-    // kuulosti ja näytti luonnottomalta.
+    // näytti luonnottomalta.
     const viive = (sana) => {
-      if (slot !== 'intro') return speed;
+      if (!KIRJOITUSRYTMI.has(slot)) return speed;
       const perus = speed * (0.7 + Math.random() * 0.6);
-      // Revennyt katkelma jättää lukijan tyhjän päälle: pitkä hiljaisuus
-      // ennen kuin seuraava ajatus naksahtaa ruutuun.
-      if (/…"?$/.test(sana)) return perus + 1200 + Math.random() * 500;
-      if (/[.!?]$/.test(sana)) return perus + 620 + Math.random() * 320;
-      if (/[,;:—–]$/.test(sana)) return perus + 300 + Math.random() * 160;
+      const tauko = KIRJOITUSTAUOT.find((t) => t.osuu.test(sana));
+      if (tauko) return perus + tauko.tauko + Math.random() * tauko.huojunta;
       // Kirjoittaja pysähtyy välillä miettimään kesken virkkeenkin.
-      if (Math.random() < 0.15) return perus + 280 + Math.random() * 340;
+      if (Math.random() < KIRJOITUS_MIETE.osuus) {
+        return perus + KIRJOITUS_MIETE.tauko + Math.random() * KIRJOITUS_MIETE.huojunta;
+      }
       return perus;
     };
 
     const kirjoita = () => {
       shown++;
       piirra();
-      // Kirjoituskoneen lyönti täsmälleen sillä hetkellä, kun sana
-      // ilmestyy — ei ennen eikä jälkeen.
+      /*
+       * Kirjoituskoneen lyönti täsmälleen sillä hetkellä, kun sana
+       * ilmestyy — ei ennen eikä jälkeen. Vain avaustekstillä: lennon
+       * repliikki sai saman rytmin 12.8.2026, mutta sen alla soi
+       * matkustamon äänimaisema, ja naputus kuulostaisi sen päällä
+       * viallisen koneen ääneltä. Rytmi on tässä kuvaa, ei ääntä.
+       */
       if (slot === 'intro') sfx.play('pen');
       if (shown >= words.length) {
         // Lopuksi pelkkä teksti, jotta perään lisättävä lähderivi asettuu
@@ -14119,11 +14326,24 @@ export class UI {
     const nappi = html('button', 'flight-exit odottaa', 'Astu mantereelle');
     nappi.type = 'button';
     alaosa.appendChild(nappi);
-    // Lennon kesto repliikin mukaan; ilman repliikkiä perusmitta.
+    /*
+     * Lennon kesto repliikin mukaan; ilman repliikkiä perusmitta.
+     *
+     * Toinen alaraja tuli 12.8.2026, kun repliikki sai avaustekstin
+     * hitaan tahdin: sanamäärään perustuva arvio ei enää tunne rivin
+     * välimerkkejä, ja kolmen pisteen jälkeinen tauko yksin on yli
+     * sekunnin. Ilman tätä kone laskeutui pisimmillä riveillä kesken
+     * lauseen. Lukuaika on se hetki, jonka valmis rivi ehtii olla
+     * ruudulla ennen kuin Astu mantereelle syttyy.
+     */
     const sanoja = line ? String(line).trim().split(/\s+/).length : 0;
     const lennonKesto = Math.min(
       LENNON_ENINTAAN_MS,
-      Math.max(FLY_OVERLAY_MS, LENNON_POHJA_MS + sanoja * LENNON_SANA_MS),
+      Math.max(
+        FLY_OVERLAY_MS,
+        LENNON_POHJA_MS + sanoja * LENNON_SANA_MS,
+        line ? kirjoituksenKesto(line) + LENNON_LUKUAIKA_MS : 0,
+      ),
     );
     /*
      * Pieni nuoli oikeaan alanurkkaan muutaman sekunnin kuluttua.
@@ -14258,11 +14478,19 @@ export class UI {
   /**
    * Nuoren herran repliikki lennon ajaksi, kirjoituskoneella. Rivi elää
    * kalvon kelluvassa alaosassa ja poistuu kalvon mukana.
+   *
+   * SAMA KÄSI KUIN ETUSIVULLA (omistajan tilaus 12.8.2026). Ennen rivi
+   * naksui tasaista 50 millisekunnin tahtia ja oli valmis parissa
+   * sekunnissa: se ei ollut kirjoittamista vaan latautumista. Nyt tahti
+   * ja rytmi ovat avaustekstin (INTRO_TYPE_MS, KIRJOITUSRYTMI), eli
+   * sanaväli huojuu ja välimerkin jälkeen hengähdetään. Lennon kesto on
+   * mitoitettu tälle tahdille (kirjoituksenKesto), joten kone ei
+   * laskeudu kesken lauseen.
    */
   showFlightLine(line, kotelo) {
     this.flightLine = html('p', 'flight-line');
     kotelo.appendChild(this.flightLine);
-    this.typeText(this.flightLine, line, 'flight');
+    this.typeText(this.flightLine, line, 'flight', null, INTRO_TYPE_MS);
   }
 
   hideFlightLine() {

@@ -11,7 +11,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-import { polunPituus, alkuKehykset, kierraKehykset } from '../js/ui.js';
+import {
+  polunPituus, alkuKehykset, kierraKehykset, jaljenKehykset,
+  ALKUREITIT, JALJEN_PYYHKAISY,
+} from '../js/ui.js';
 import { jaaAlku } from '../js/aani-ehdokkaat.js';
 
 const UI = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
@@ -34,7 +37,8 @@ test('CSS ei aseta niitä ominaisuuksia, joita SMIL animoi', () => {
    * katkoviivan, animaatio jää paikalleen eikä siitä tule virhettä —
    * ruudulle jää vain liikkumaton piste, aivan kuten omistajalle.
    */
-  for (const luokka of ['alkureitti-jalki', 'alkureitti-piste', 'alkureitti-karki', 'alkureitti-keha']) {
+  for (const luokka of ['alkureitti-jalki', 'alkureitti-piste', 'alkureitti-karki',
+    'alkureitti-keha', 'alkureitti-kulkija']) {
     const teksti = saannot(luokka);
     for (const omin of ['opacity', 'r:', 'stroke-dashoffset', 'stroke-dasharray', 'animation']) {
       assert.ok(!teksti.includes(omin),
@@ -94,6 +98,98 @@ test('silmukan sauma osuu kohtaan, jossa mitään ei näy', () => {
       assert.equal(k[i - 1].nakyy, 0, `vaihe ${vaihe}: hyppy näkyisi (peittävyys ${k[i - 1].nakyy})`);
     }
   }
+});
+
+/*
+ * HIENOSÄÄTÖ 12.8.2026. Jälki jää näkyviin, pisteet sykkivät, laivoja on
+ * useampi ja ne ovat isoisää himmeämpiä. Alla oleva vartioi niitä
+ * oletuksia, joiden rikkoutuminen ei näkyisi virheenä vaan vain
+ * väärältä näyttävänä etusivuna.
+ */
+
+test('reitin lähtöhetki mahtuu lepovaiheeseen', () => {
+  /*
+   * Sekä kärki että jälki kierretään kohdasta 1 − alku, ja sen kohdan
+   * arvon on oltava vakio: matkan aikana kierto katkaisisi matkan
+   * keskeltä, pyyhkäisyn aikana se jättäisi puolikkaan jäljen ruudulle.
+   */
+  for (const reitti of ALKUREITIT) {
+    const { alku, ikkuna } = reitti;
+    if (alku === 0) continue;
+    assert.ok(alku + ikkuna < 1, `reitti (${reitti.laji}, alku ${alku}): matka jatkuu kierron yli`);
+    assert.ok(alku > JALJEN_PYYHKAISY,
+      `reitti (${reitti.laji}, alku ${alku}): kierto osuu pyyhkäisyyn`);
+  }
+});
+
+test('jäljen silmukka kelpaa SMILille ja osuu pätkäjaon askeleisiin', () => {
+  for (const reitti of ALKUREITIT) {
+    const jaksoja = 37;
+    const k = kierraKehykset(jaljenKehykset(reitti.ikkuna, jaksoja), (1 - reitti.alku) % 1);
+    assert.equal(k[0].t, 0);
+    assert.equal(k[k.length - 1].t, 1);
+    for (let i = 1; i < k.length; i++) {
+      assert.ok(k[i].t > k[i - 1].t, `${reitti.laji}: keyTimes ei kasva kohdassa ${i}`);
+    }
+    for (const askel of k) {
+      // Kuvio poimitaan taulukosta pyöristetyllä indeksillä: jos kierto
+      // tuottaisi väliarvon, jälki hyppäisi pätkän verran väärään kohtaan.
+      const osuma = askel.kulku * jaksoja;
+      assert.ok(Math.abs(osuma - Math.round(osuma)) < 1e-9,
+        `${reitti.laji}: piirretty osuus ${askel.kulku} ei osu pätkäjakoon`);
+    }
+  }
+});
+
+test('jäljen nollaus tapahtuu näkymättömissä', () => {
+  // Kuvio palaa tyhjäksi kerran kierroksessa. Jos peittävyys ei ole
+  // silloin nolla, koko reitti näyttäisi kelautuvan auki takaperin.
+  for (const reitti of ALKUREITIT) {
+    const k = kierraKehykset(jaljenKehykset(reitti.ikkuna, 21), (1 - reitti.alku) % 1);
+    for (let i = 1; i < k.length; i++) {
+      if (k[i].kulku >= k[i - 1].kulku - 1e-9) continue;
+      assert.equal(k[i].nakyy, 0, `${reitti.laji}: nollaus näkyisi`);
+      assert.equal(k[i - 1].nakyy, 0, `${reitti.laji}: nollaus näkyisi`);
+    }
+  }
+});
+
+test('jälki kasvaa katkoviivana eikä ole enää liukuva häntä', () => {
+  // Vanha jälki oli lyhyt pätkäjono, jota siirrettiin dashoffsetilla
+  // pisteen perässä ("kuin mato", omistaja 12.8.2026).
+  assert.match(UI, /animoi\(jalki, 'stroke-dasharray'/,
+    'jäljen kasvua ei tehdä katkoviivakuviolla');
+  assert.ok(!/animoi\([^)]*'stroke-dashoffset'/.test(UI),
+    'jälki liukuu yhä dashoffsetilla');
+  // Nollan mittainen pätkä piirtyisi pyöreällä päällä pisteenä, jolloin
+  // piirtämätön osa reittiä näkyisi pistejonona.
+  assert.match(CSS, /\.alkureitti-jalki\s*\{[^}]*stroke-linecap:\s*butt/,
+    'jäljen päät ovat pyöreät');
+});
+
+test('kulkeva piste sykkii selvästi ja noin sekunnin jaksolla', () => {
+  const kesto = Number(UI.match(/const SYKE_KESTO = '([\d.]+)s'/)[1]);
+  assert.ok(kesto >= 1 && kesto <= 2, `sykkeen jakso ${kesto}s ei ole 1–2 sekuntia`);
+  const karjet = UI.match(/const KARJET = \[[\s\S]*?\];/)[0];
+  const parit = [...karjet.matchAll(/\[([\d.]+), ([\d.]+)\]/g)]
+    .map(([, a, b]) => [Number(a), Number(b)]);
+  assert.equal(parit.length, 4, 'kärjillä ei ole sekä säteen että kirkkauden ääriarvoja');
+  for (const [pieni, iso] of parit) {
+    assert.ok(iso / pieni > 1.25, `syke ${pieni}…${iso} on liian vaimea nähtäväksi`);
+  }
+});
+
+test('laivoja on useampi, ne lähtevät porrastetusti ja ovat isoisää himmeämpiä', () => {
+  const laivat = ALKUREITIT.filter((r) => r.laji === 'kauppa');
+  assert.ok(laivat.length >= 3, `sinisiä merireittejä on vain ${laivat.length}`);
+  const lahdot = laivat.map((r) => r.alku * r.kesto).sort((a, b) => a - b);
+  for (let i = 1; i < lahdot.length; i++) {
+    const vali = lahdot[i] - lahdot[i - 1];
+    assert.ok(vali > 1.5, `laivat lähtevät ${vali.toFixed(1)} s välein — käytännössä yhtä aikaa`);
+  }
+  const kirkkaus = UI.match(/const LAJIN_KIRKKAUS = \{ isoisa: ([\d.]+), kauppa: ([\d.]+) \}/);
+  assert.ok(Number(kirkkaus[2]) < Number(kirkkaus[1]),
+    'siniset eivät ole punaista himmeämpiä');
 });
 
 test('liikkeen vähennys näyttää reitit, ei tyhjää', () => {
