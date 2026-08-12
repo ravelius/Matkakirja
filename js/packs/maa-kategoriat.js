@@ -15024,7 +15024,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Miten ghaf-puu pärjää aavikolla ilman sadetta?',
         vaihtoehdot: [
           'Se kerää kastetta lehtiinsä',
-          'Sen juuret yltävät syvälle pohjaveteen',
+          'Sen juuret yltävät pohjaveteen asti',
           'Se pudottaa lehtensä kuivaksi ajaksi',
           'Sitä kastellaan letkulla',
         ],
@@ -15111,7 +15111,7 @@ export const MAA_KATEGORIAT = {
         vaihtoehdot: [
           'Tuuli työntää sitä eteenpäin',
           'Kamelit vetävät ämpäreitä vuorotellen',
-          'Painovoima: kanava laskee alaspäin',
+          'Painovoima, sillä vettä ei pumpata',
           'Sähköpumput vuoren juurella',
         ],
         oikea: 2,
@@ -15196,7 +15196,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuka ohjaa kamelia nykyään kilpailuradalla?',
         vaihtoehdot: [
-          'Pieni robotti kamelin selässä',
+          'Pieni robotti, jota ohjataan radiolla',
           'Kukaan, kamelit juoksevat vapaina',
           'Valmentaja polkupyörällä vieressä',
           'Ratsastaja perässä toisella kamelilla',
@@ -15283,7 +15283,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Burj Khalifa kapenee ylöspäin portaittain?',
         vaihtoehdot: [
-          'Portaikko rikkoo tuulen synnyttämät pyörteet',
+          'Portaikko rikkoo pyörteet joka kerroksessa',
           'Ylimmät kerrokset olisivat muuten liian kylmiä',
           'Muoto lyhentää hissimatkaa',
           'Se säästää lasia julkisivussa',
@@ -15570,7 +15570,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten tuulitorni viilentää talon?',
         vaihtoehdot: [
-          'Johtaa viileän tuulen alas',
+          'Johtaa viileämmän tuulen alas',
           'Varjostaa katon auringolta',
           'Kerää sadeveden seiniin',
           'Puhaltaa keittiön savun pois katolta',
@@ -16620,7 +16620,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Miksi Kuolleessameressä kelluu ilman ponnistelua?',
         vaihtoehdot: [
           'Vesi on tavallista lämpimämpää',
-          'Suola tekee vedestä raskaampaa',
+          'Suola tekee vedestä painavaa',
           'Pohja on aivan pinnan lähellä',
           'Meressä on voimakas pohjavirta',
         ],
@@ -16795,7 +16795,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Miten jameed säilyy kuukausia ilman kylmää?',
         vaihtoehdot: [
           'Se säilötään oliiviöljyyn',
-          'Se suolataan ja kuivataan koviksi palloiksi',
+          'Se kuivataan auringossa koviksi',
           'Se haudataan hiekkaan viileään',
           'Se keitetään umpeen savipurkkiin',
         ],
@@ -16886,7 +16886,7 @@ export const MAA_KATEGORIAT = {
         vaihtoehdot: [
           'Siellä sataa enemmän kuin muualla Jordaniassa',
           'Laakson pohjalla virtaa iso joki',
-          'Korkeusero tuo samaan laaksoon neljä kasvillisuusvyöhykettä',
+          'Matkalla vaihtuu neljä kasvillisuusvyöhykettä',
           'Alue on aidattu ja lajit on tuotu sinne',
         ],
         oikea: 2,
@@ -16974,7 +16974,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Miksi Jebel Akhdarin rinteillä kasvaa ruusuja ja hedelmäpuita?',
         vaihtoehdot: [
           'Vuorella sataa lunta talvisin',
-          'Korkealla on viileämpää kuin rannikolla',
+          'Ylhäällä on viileämpää kuin rannikolla',
           'Maa on siellä poikkeuksellisen mustaa',
           'Kasvit kastellaan merivedellä',
         ],
@@ -17060,7 +17060,7 @@ export const MAA_KATEGORIAT = {
         vaihtoehdot: [
           'Emo kantaa sen rantaveteen',
           'Aaltojen ääni hiekan läpi',
-          'Meren puolen vaalea valo',
+          'Meren puoli on vaaleampi',
           'Tuulen suunta rannalla',
         ],
         oikea: 2,
@@ -17149,7 +17149,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Bahlan linnaa on paikattava jatkuvasti?',
         vaihtoehdot: [
-          'Se on kuivattua savitiiltä, joka liukenee sateessa',
+          'Kuivattu tiili liukenee sateessa',
           'Maanjäristykset halkovat sen muureja',
           'Suolainen merituuli syövyttää kiveä',
           'Lintujen pesät irrottavat laastia',
@@ -17324,7 +17324,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Zekreetin kalliot ovat sienen muotoisia?',
         vaihtoehdot: [
-          'Tuuli kuluttaa alaosaa nopeammin',
+          'Tuuli hioo kiveä eniten alaosasta',
           'Ne on veistetty työkaluilla',
           'Sade on liuottanut kiven päältä',
           'Meri peitti ne aikoinaan kokonaan',
@@ -17412,8 +17412,8 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mistä Qatarin kansallismuseon muoto on lainattu?',
         vaihtoehdot: [
           'Purjelaivan kolmiopurjeesta',
-          'Taatelipalmun riippuvista lehdistä',
-          'Aavikkoruususta eli kiteestä',
+          'Taatelipalmun riippuvista lehtiruodoista',
+          'Aavikkoruususta, joka syntyy hiekkaan',
           'Vanhan linnakkeen torneista',
         ],
         oikea: 2,
@@ -17501,7 +17501,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mistä Purppurasaari on saanut nimensä?',
         vaihtoehdot: [
           'Saaren kalliot ovat violetteja',
-          'Saarella valmistettiin purppuraväriä merikotiloista',
+          'Saarella valmistettiin purppuraväriä',
           'Saarella kasvaa purppuranpunaisia kukkia',
           'Auringonlasku värjää lahden violetiksi',
         ],
@@ -17586,7 +17586,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Miksi Qatarin harvat puut kasvavat juuri painanteissa?',
         vaihtoehdot: [
           'Painanteet ovat tuulelta suojassa',
-          'Sadevesi valuu niihin ja maa pitää kosteuden',
+          'Maa pitää siellä kosteuden pitkään',
           'Niissä on suolatonta merivettä',
           'Ne on kaivettu puita varten',
         ],
@@ -17847,16 +17847,19 @@ export const MAA_KATEGORIAT = {
         },
       ],
       tehtava: {
-        kysymys: 'Mitä Kuwaitin tornien alempi pallo pitää sisällään?',
+        // Tornien pallojen SISÄLTÖ on jo Kuwaitin kulttuurivisassa
+        // (middleeast-questions.js: "Mitä niiden palloissa säilytetään?"),
+        // joten minitehtävä kysyy pinnasta — sama sivu, eri asia.
+        kysymys: 'Mistä Kuwait-tornien pallojen pinta on tehty?',
         vaihtoehdot: [
-          'Vesisäiliön ja sen päällä ravintolan',
-          'Pelkän näköalatasanteen',
-          'Radio- ja tv-lähettimet',
-          'Museon ja kirjaston',
+          'Emaloiduista teräskiekoista',
+          'Käsin maalatuista laatoista',
+          'Kiillotetusta kuparipellistä',
+          'Valkoisesta marmorista',
         ],
         oikea: 0,
-        fakta: 'Ylempi pallo on kahvila, joka pyörähtää ympäri puolessa '
-          + 'tunnissa.',
+        fakta: 'Kiekkoja on noin 41 000, ja ne on emaloitu kahdeksaan sinisen '
+          + 'ja vihreän sävyyn.',
       },
     },
     {
@@ -17933,16 +17936,19 @@ export const MAA_KATEGORIAT = {
         },
       ],
       tehtava: {
-        kysymys: 'Mistä murabyan on saanut nimensä?',
+        // Nimen alkuperä (robyan = katkarapu) luki jo sivun otsikossa ja
+        // johdannossa, joten vastaus vuoti kahdesta paikasta. Kysymys
+        // siirrettiin annoksen ulkonäköön, joka selviää vain tekstistä.
+        kysymys: 'Miksi murabyan on vadilla raidallinen?',
         vaihtoehdot: [
-          'Sahramista',
-          'Katkaravusta',
-          'Kuivatusta limetistä',
-          'Kalastajakylästä',
+          'Osa riisistä värjätään sahramilla',
+          'Riisi keitetään kahdessa erässä',
+          'Kastike kaadetaan raitoina päälle',
+          'Vati vuorataan kahdella leivällä',
         ],
-        oikea: 1,
-        fakta: 'Katkaravut jäävät riisikerroksen alle ja löytyvät vasta '
-          + 'lusikoimalla.',
+        oikea: 0,
+        fakta: 'Keltainen riisi sekoitetaan valkoisen sekaan vasta vadille '
+          + 'kaadettaessa.',
       },
     },
   ],
@@ -18300,8 +18306,8 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi arabiangasellin turkki on hyvin vaalea?',
         vaihtoehdot: [
-          'Se heijastaa auringonvaloa ja auttaa kestämään kuumuutta',
-          'Se suojaa hyönteisiltä',
+          'Se heijastaa auringonvaloa',
+          'Se suojaa hyönteisten puremilta',
           'Se vaihtuu tummaksi talveksi',
           'Se on merkki nuoresta iästä',
         ],
@@ -18586,7 +18592,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Aradin linnakkeen kunnostuksessa ei käytetty sementtiä?',
         vaihtoehdot: [
-          'Sementti olisi sulkenut kosteuden muurin sisään',
+          'Sementti olisi sulkenut kosteuden sisään',
           'Sementtiä ei saanut maahan tuoduksi',
           'Sementti olisi ollut liian kallista',
           'Sementti ei tartu korallikiveen lainkaan',
@@ -18672,7 +18678,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä on loomi lahden keittiössä?',
         vaihtoehdot: [
-          'Kuivattu limetti, joka rikotaan pataan',
+          'Kuivattu limetti',
           'Paksu jogurttikastike',
           'Uunissa paistettu litteä leipä',
           'Sahramilla värjätty riisi',
