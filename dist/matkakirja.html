@@ -10437,6 +10437,366 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
   .pikkuseloste { transition: none; }
 }
 
+/* ===========================================================================
+   ALANAPPIRIVI — kolme paikkaa (js/ui.js piirraToimintorivi)
+   ---------------------------------------------------------------------------
+   Vasemmalla monitoiminappi, keskellä Viisas Pöllö, oikealla suurennuslasi.
+   Matkustusnapit eivät levitä riviä vaan LIUKUVAT pöllön ja suurennuslasin
+   päälle, joten rivi on aina täsmälleen kolmen napin levyinen (omistajan
+   linjaus 12.8.2026).
+   =========================================================================== */
+
+.toimintorivi { position: relative; }
+
+.toimintorivi-perus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  justify-items: stretch;
+}
+
+/* Tyhjä paikka pitää ruudukon kolmena, vaikka Tutki ei olisi tarjolla. */
+.rivi-tyhja { visibility: hidden; }
+
+/* Pöllön paikka: nappi asuu js/pollo.js:ssä ja siirtyy tänne joka
+   piirrolla. Grid-venytys pitää sen samankokoisena kuin naapurinsa. */
+.pollo-paikka { display: grid; }
+.pollo-paikka > .pollo-nappi { width: 100%; }
+
+/*
+ * Liuku peittää keskimmäisen ja oikean paikan. Monitoiminappi jää näkyviin
+ * ja napautettavaksi, jotta liu'un saa kiinni samasta napista josta se
+ * aukesi. Kiinni ollessaan liuku on sekä läpinäkyvä että napautuksille
+ * läpäisemätön — muuten se söisi pöllön ja Tutkin napautukset.
+ */
+.toimintorivi-liuku {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* Vasen reuna alkaa monitoiminapin jälkeen: kolmasosa + puolet väleistä. */
+  left: calc((100% - 1rem) / 3 + 0.5rem);
+  right: 0;
+  display: flex;
+  gap: 0.4rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-14%);
+  transition: transform 0.22s ease, opacity 0.18s ease;
+}
+
+.toimintorivi-liuku > button { flex: 1 1 0; min-width: 0; }
+
+.toimintorivi.liuku-auki .toimintorivi-liuku {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* Avoin liuku merkitään myös monitoiminappiin, jotta tila näkyy. */
+.toimintorivi.liuku-auki .monitoimi-nappi { color: var(--accent); }
+
+/*
+ * Peittyvät napit väistyvät liu'un alta.
+ *
+ * Ilman tätä pöllö ja suurennuslasi näkyivät liu'un nappien läpi (napit
+ * ovat läpikuultavia kartan päällä), ja rivi näytti neljältä napilta
+ * kolmen sijaan. Nyt ne häivytetään ja niiden napautukset menevät
+ * liu'ulle — juuri sitä "liukuvat päälle" tarkoittaa.
+ */
+.toimintorivi-perus > .pollo-paikka,
+.toimintorivi-perus > *:last-child {
+  transition: opacity 0.18s ease;
+}
+
+.toimintorivi.liuku-auki .toimintorivi-perus > .pollo-paikka,
+.toimintorivi.liuku-auki .toimintorivi-perus > *:last-child {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toimintorivi-liuku,
+  .toimintorivi-perus > .pollo-paikka,
+  .toimintorivi-perus > *:last-child { transition: none; }
+}
+
+/* ===========================================================================
+   VIISAS PÖLLÖ — chat-paneeli (js/pollo.js)
+   ---------------------------------------------------------------------------
+   Nappi elää kahdessa paikassa. Kartalla se on alanappirivin keskimmäinen
+   paikka ja perii .icon-btn-tyylin, jolloin se näyttää naapureiltaan.
+   Lehtinäkymässä se siirtyy lehden <dialog>-elementin sisään ja saa
+   lisäluokan .pollo-kelluu — modaali elää selaimen ylimmässä kerroksessa,
+   eikä rivissä oleva nappi olisi sen alla napautettavissa.
+   =========================================================================== */
+
+/* Kelluva muoto: pyöreä nappi lehden oikeassa alalaidassa. */
+.pollo-nappi.pollo-kelluu {
+  position: fixed;
+  right: calc(0.7rem + env(safe-area-inset-right, 0px));
+  bottom: calc(3.4rem + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  width: 2.9rem;
+  height: 2.9rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--overlay-line);
+  border-radius: 50%;
+  background: var(--overlay-card);
+  color: var(--paper);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.pollo-nappi.pollo-kelluu .icon-label { display: none; }
+.pollo-nappi.pollo-kelluu .viiva-ikoni svg { width: 1.7rem; height: 1.7rem; }
+.pollo-nappi.auki { color: var(--accent); }
+
+.pollo-paneeli {
+  position: fixed;
+  right: calc(0.7rem + env(safe-area-inset-right, 0px));
+  bottom: calc(7.2rem + env(safe-area-inset-bottom, 0px));
+  z-index: 41;
+  display: flex;
+  flex-direction: column;
+  width: min(21rem, calc(100vw - 1.4rem));
+  max-height: min(27rem, calc(100vh - 10rem));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  color: var(--ink-light);
+  font-family: var(--font-type);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.pollo-yla {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.5rem 0.45rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-2);
+}
+
+.pollo-otsikko {
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+/* Rasti on selvä ja riittävän iso sormelle — sulkeminen ei saa jäädä
+   arvailun varaan (pelin sääntö: pöllö ei koskaan tunkeile). */
+button.pollo-sulje {
+  width: 1.9rem;
+  height: 1.9rem;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+button.pollo-sulje:hover { color: var(--ink-light); background: rgba(255, 255, 255, 0.06); }
+
+.pollo-ehdotukset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+button.pollo-ehdotus {
+  padding: 0.4rem 0.55rem;
+  min-height: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--ink-light);
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+
+button.pollo-ehdotus:hover { border-color: var(--accent-dark); color: var(--accent); }
+button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
+
+.pollo-virta {
+  flex: 1;
+  min-height: 3rem;
+  padding: 0.6rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Vastaukset ovat pitkähköä leipätekstiä, joten ne käyttävät samaa
+   lukukirjasinta kuin lehden jutut (--font-luku). Pelaajan oma kysymys
+   pysyy kirjoituskoneessa, jotta puheenvuorot erottuvat toisistaan. */
+.pollo-viesti {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.pollo-viesti:last-child { margin-bottom: 0; }
+
+.pollo-kayttaja {
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--ink-light);
+}
+
+.pollo-pollo {
+  font-family: var(--font-luku);
+  font-size: 0.92rem;
+  color: var(--ink-light);
+}
+
+.pollo-odottaa { color: var(--muted); font-style: italic; }
+
+/* Pelinsisäiset linkit vastauksen alle. Ne rakennetaan paikallisen haun
+   tuloksista, ei mallin tekstistä, joten ne osoittavat aina johonkin. */
+.pollo-linkit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0 0 0.6rem;
+}
+
+button.pollo-linkki {
+  padding: 0.35rem 0.5rem;
+  min-height: 0;
+  border: 1px dashed var(--accent-dark);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+
+button.pollo-linkki:hover { background: rgba(217, 161, 59, 0.12); }
+
+.pollo-nukkuu { text-align: center; padding: 0.6rem 0.3rem; }
+.pollo-nukkuu-otsikko { margin: 0 0 0.4rem; color: var(--accent); font-size: 0.9rem; }
+.pollo-nukkuu-lisa { margin: 0; color: var(--muted); font-size: 0.78rem; line-height: 1.4; }
+
+/* --- syöttöalue: sanelu edellä, näppäimistö varalla ------------------ */
+
+.pollo-syote {
+  border-top: 1px solid var(--line);
+  background: var(--panel-2);
+  padding: 0.5rem;
+}
+
+.pollo-sanelu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Iso mikrofoninappi: sanelu on ensisijainen syöttötapa, joten se saa
+   olla paneelin selvästi suurin kohde. */
+button.pollo-mikki {
+  width: 3.4rem;
+  height: 3.4rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--panel);
+  color: var(--accent);
+  cursor: pointer;
+}
+
+button.pollo-mikki .viiva-ikoni svg { width: 1.7rem; height: 1.7rem; }
+button.pollo-mikki:hover:not(:disabled) { border-color: var(--accent-dark); }
+button.pollo-mikki:disabled { opacity: 0.5; cursor: default; }
+
+button.pollo-mikki.kuuntelee {
+  background: var(--accent-dark);
+  color: var(--ink-light);
+  animation: pollo-syke 1.4s ease-in-out infinite;
+}
+
+@keyframes pollo-syke {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217, 161, 59, 0.5); }
+  60% { box-shadow: 0 0 0 0.55rem rgba(217, 161, 59, 0); }
+}
+
+.pollo-sanelu-tila {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/* Vaihtolinkit ovat tekstilinkin näköisiä: ne eivät kilpaile mikin kanssa. */
+button.pollo-vaihda {
+  display: block;
+  margin: 0.3rem auto 0;
+  padding: 0.2rem 0.3rem;
+  min-height: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.72rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button.pollo-vaihda:hover { color: var(--accent); background: transparent; }
+
+.pollo-rivi { display: flex; gap: 0.35rem; }
+
+input.pollo-kentta {
+  flex: 1;
+  min-width: 0;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--ink-light);
+  font-family: inherit;
+  /* 16 px estää iOS:n automaattisen zoomin kenttään napautettaessa. */
+  font-size: 16px;
+}
+
+input.pollo-kentta::placeholder { color: var(--muted); }
+input.pollo-kentta:disabled { opacity: 0.6; }
+
+button.pollo-laheta {
+  width: 2.3rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--accent);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button.pollo-laheta:hover:not(:disabled) { border-color: var(--accent-dark); }
+button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
+
+@media (prefers-reduced-motion: reduce) {
+  button.pollo-mikki.kuuntelee { animation: none; }
+}
+
 </style>
 </head>
 <body>
@@ -76469,6 +76829,27 @@ const UUTISLAHTEET = {
   },
 };
 
+// ===== js/packs/pollo-asetukset.js =====
+/*
+ * Viisaan Pöllön rajapintaosoite.
+ *
+ * Sama käytäntö kuin uutisvälityksellä (js/packs/uutislahteet.js): peli
+ * ei puhu maksulliseen tekoälyrajapintaan suoraan, vaan oman pienen
+ * Cloudflare Workerin kautta. Workerin lähdekoodi ja omistajan
+ * käyttöönotto-ohje: tools/pollo/.
+ *
+ * Kun osoite on tyhjä, pöllönappi näkyy pelissä mutta napautus avaa
+ * siistin "Pöllö ei ole vielä hereillä" -tilan. Peli ei tee yhtään
+ * verkkopyyntöä eikä kirjoita mitään konsoliin.
+ *
+ * HUOM: https://-alku on pakollinen — ilman sitä selain tulkitsisi
+ * osoitteen suhteelliseksi poluksi pelin omalle sivustolle.
+ *
+ * API-avainta EI kirjoiteta tänne eikä mihinkään muualle repoon. Avain
+ * elää vain Cloudflaren salaisuussäilössä (ks. tools/pollo/OHJE.md).
+ */
+const POLLOPALVELIN = '';
+
 // ===== js/packs/europe-valokuvat.js =====
 // Euroopan matkakirjavalokuvat (sama rakenne kuin AFRICA_VALOKUVAT):
 // vanha vedos isoisän ajoilta ja sama paikka nykyään. Rakentuu kaupunki
@@ -141021,6 +141402,1322 @@ function chooseDuelAnswer(game) {
   return wrong.length ? wrong[Math.floor(game.rng() * wrong.length)] : duel.correct;
 }
 
+// ===== js/pollo-haku.js =====
+/*
+ * VIISAAN PÖLLÖN PAIKALLINEN TIETOHAKU.
+ *
+ * Ennen kuin kysymys lähtee välityspalvelimelle, pelin OMASTA
+ * tarkistetusta aineistosta haetaan muutama osuvin katkelma ja ne
+ * liitetään pyyntöön. Näin pöllö vastaa ensisijaisesti sillä tiedolla,
+ * joka on jo kertaalleen tarkistettu ja lähteistetty — eikä sillä, mitä
+ * malli sattuu muistavansa.
+ *
+ * MITÄ INDEKSOIDAAN (kaikki tarkistettua tietosisältöä, ei tarinaa)
+ *   - kaupunkilehtien aihesivut (KULTTUURI_KATEGORIAT): johdannot ja nostot
+ *   - maalehtien aihesivut (MAA_KATEGORIAT): johdannot ja nostot
+ *   - kohdekarttojen nähtävyysjutut (NAHTAVYYSJUTUT) lainauksineen
+ *   - aihesivun minitehtävän fakta VAIN jos pelaaja on jo vastannut
+ *     siihen (ks. onVastattu alla)
+ *
+ * MITÄ EI INDEKSOIDA — EIKÄ SAA INDEKSOIDA
+ *   - Tarinakaanon kokonaan: saapumismerkinnät, kohtaamiset,
+ *     tarinakaaret ja aarretekstit. Niissä on juonisisältöä (seuraaja,
+ *     revitty sivu, aarteiden sijainnit), eikä pöllö ole tarinan hahmo.
+ *   - Visakysymykset, niiden vaihtoehdot ja oikeat vastaukset —
+ *     minkään pakan kysymyspankkia ei lueta lainkaan. Kysymyspankkien
+ *     fakta-kentät jäävät myös pois: fakta on kirjoitettu kysymyksen
+ *     pariksi ja sanoo usein suoraan oikean vastauksen, eikä
+ *     kysymyspankissa ole kenttää, josta erottaisi mikä kysymys on
+ *     kenelläkin auki. Lehden minitehtävän fakta sen sijaan kelpaa
+ *     vastaamisen JÄLKEEN: silloin peli on jo näyttänyt sen pelaajalle.
+ *
+ * Indeksi rakennetaan laiskasti — vasta kun pöllö avataan ensimmäisen
+ * kerran, ei pelin käynnistyksessä.
+ */
+
+/** Katkelman katto merkkeinä. Pitkästä nostosta otetaan alkupää. */
+const KATKELMAN_KATTO = 700;
+
+/*
+ * Otsikko-osuma painaa enemmän kuin leipätekstiosuma, ja TARKKA
+ * sanaosuma enemmän kuin pelkkä alkuosuma.
+ *
+ * Painot on viritetty oikeilla kysymyksillä (12.8.2026). Ilman tarkan
+ * osuman bonusta kysymys "Mitä Stonehengen kivistä tiedetään?" palautti
+ * Borobudurin: aineiston otsikko "…omista kivistään" alkaa hakusanalla
+ * "kivistä", ja pelkkä alkuosuma otsikossa voitti tarkan osuman
+ * "Stonehengen" leipätekstissä.
+ */
+const OTSIKON_PAINO = 2;
+const TEKSTIN_PAINO = 1;
+const TARKAN_OSUMAN_KERROIN = 2.5;
+
+/** Hakusanan vähimmäispituus. Lyhyemmät ovat sidesanoja. */
+const SANAN_VAHIMMAISPITUUS = 3;
+
+/**
+ * Suomen yleisimmät sidesanat. Ne osuisivat kaikkeen eivätkä kertoisi
+ * mitään siitä, mistä kysymys on.
+ */
+const OHITETTAVAT = new Set([
+  'mikä', 'mika', 'mitä', 'mita', 'miksi', 'miten', 'kuka', 'ketkä', 'ketka',
+  'missä', 'missa', 'mistä', 'mista', 'mihin', 'milloin', 'kuinka', 'onko',
+  'oli', 'olivat', 'ovat', 'olla', 'sen', 'tämä', 'tama', 'tuo', 'siellä',
+  'siella', 'täällä', 'taalla', 'että', 'etta', 'mutta', 'kun', 'niin',
+  'myös', 'myos', 'vielä', 'viela', 'sekä', 'seka', 'joka', 'jossa', 'jonka',
+  'voi', 'saa', 'ole', 'olen', 'kerro', 'kerrotko', 'kertoisitko',
+]);
+
+/** Merkkijono sanoiksi: pienet kirjaimet, vain kirjaimet ja numerot. */
+function sanoita(teksti) {
+  return String(teksti ?? '')
+    .toLowerCase()
+    .split(/[^0-9a-zà-öø-ÿåäö]+/i)
+    .filter((sana) => sana.length >= SANAN_VAHIMMAISPITUUS);
+}
+
+/** Kysymyksen hakusanat: sanoitus ilman sidesanoja, ilman toistoja. */
+function hakusanat(kysymys) {
+  return [...new Set(sanoita(kysymys).filter((sana) => !OHITETTAVAT.has(sana)))];
+}
+
+/**
+ * Yksi indeksimerkintä.
+ *
+ * `reitti` on YLEINEN avausreitti, ei lehtioletus: {tyyppi, tunniste,
+ * sivu?, kohde?, otsikko}. Pöllö rakentaa siitä napautettavan linkin
+ * vastauksensa alle (js/pollo.js avaaKohde). Uusi sisältötyyppi
+ * (esim. tulevat pidemmät artikkelit) tarvitsee vain oman
+ * reittityyppinsä ja sitä vastaavan avausrivin — ei muutoksia hakuun.
+ */
+function merkinta({
+  tyyppi, omistaja, aihe, aiheNimi, otsikko, teksti,
+  lahde = null, tehtavaAvain = null, reitti = null,
+}) {
+  const puhdas = String(teksti ?? '').replace(/\s+/g, ' ').trim();
+  if (!puhdas) return null;
+  return {
+    tyyppi,
+    omistaja,
+    aihe,
+    aiheNimi,
+    otsikko: String(otsikko ?? '').trim(),
+    teksti: puhdas,
+    lahde,
+    tehtavaAvain,
+    reitti,
+    otsikkoSanat: [...new Set(sanoita(otsikko))],
+    tekstiSanat: [...new Set(sanoita(puhdas))],
+  };
+}
+
+/** Lisää kategorian (kaupunki- tai maalehden aihesivu) merkinnät. */
+function lisaaKategoriat(ulos, taulu, tyyppi) {
+  for (const [omistaja, kategoriat] of Object.entries(taulu ?? {})) {
+    for (const kategoria of kategoriat ?? []) {
+      const reitti = {
+        tyyppi: tyyppi === 'maa' ? 'maalehti' : 'kaupunkilehti',
+        tunniste: omistaja,
+        sivu: kategoria.id,
+        otsikko: kategoria.nimi ?? kategoria.id,
+      };
+      const yhteinen = {
+        tyyppi, omistaja, aihe: kategoria.id, aiheNimi: kategoria.nimi ?? kategoria.id, reitti,
+      };
+      const johdanto = merkinta({
+        ...yhteinen,
+        otsikko: kategoria.nimi ?? kategoria.id,
+        teksti: kategoria.johdanto,
+      });
+      if (johdanto) ulos.push(johdanto);
+      for (const nosto of kategoria.nostot ?? []) {
+        const m = merkinta({
+          ...yhteinen,
+          otsikko: nosto.otsikko,
+          teksti: [nosto.aika, nosto.teksti].filter(Boolean).join(' — '),
+          lahde: nosto.lahde ?? null,
+        });
+        if (m) ulos.push(m);
+      }
+      /*
+       * Minitehtävän fakta on tarkistettua tietoa, mutta se on myös
+       * tehtävän vastauksen selitys. Se otetaan mukaan merkittynä
+       * tehtäväavaimella, ja haku ottaa sen käyttöön vasta kun
+       * pelaaja on ratkaissut kyseisen sivun tehtävän.
+       */
+      if (kategoria.tehtava?.fakta) {
+        const m = merkinta({
+          ...yhteinen,
+          tyyppi: 'fakta',
+          otsikko: kategoria.nimi ?? kategoria.id,
+          teksti: kategoria.tehtava.fakta,
+          tehtavaAvain: kategoria.id,
+        });
+        if (m) ulos.push(m);
+      }
+    }
+  }
+}
+
+/** Lisää kohdekarttojen nähtävyysjutut. */
+function lisaaNahtavyydet(ulos, taulu) {
+  for (const [kaupunki, kohteet] of Object.entries(taulu ?? {})) {
+    for (const [nimi, juttu] of Object.entries(kohteet ?? {})) {
+      const osat = [juttu.aika, juttu.teksti];
+      if (juttu.lainaus?.teksti) {
+        osat.push(`"${juttu.lainaus.teksti}" — ${juttu.lainaus.lahde ?? ''}`);
+      }
+      const m = merkinta({
+        tyyppi: 'nahtavyys',
+        omistaja: kaupunki,
+        aihe: 'nahtavyys',
+        aiheNimi: 'Kohdekartta',
+        otsikko: nimi,
+        teksti: osat.filter(Boolean).join(' '),
+        reitti: {
+          tyyppi: 'nahtavyys', tunniste: kaupunki, kohde: nimi, otsikko: nimi,
+        },
+      });
+      if (m) ulos.push(m);
+    }
+  }
+}
+
+/**
+ * Rakentaa hakuindeksin. Kutsutaan kerran, laiskasti.
+ *
+ * @returns {{merkinnat: Array, kesto: number, sanoja: number}}
+ */
+function rakennaIndeksi({ kulttuuri = {}, maat = {}, nahtavyydet = {} } = {}) {
+  const alku = (globalThis.performance ?? Date).now();
+  const merkinnat = [];
+  lisaaKategoriat(merkinnat, kulttuuri, 'kaupunki');
+  lisaaKategoriat(merkinnat, maat, 'maa');
+  lisaaNahtavyydet(merkinnat, nahtavyydet);
+  const kesto = (globalThis.performance ?? Date).now() - alku;
+  const sanoja = merkinnat.reduce((s, m) => s + m.tekstiSanat.length, 0);
+  return { merkinnat, kesto, sanoja };
+}
+
+/**
+ * Osuuko hakusana johonkin sanaan alkuosumana?
+ *
+ * Palauttaa 0 (ei osumaa), 1 (alkuosuma) tai 2 (tarkka sanaosuma).
+ *
+ * Vertailu tehdään MOLEMPIIN suuntiin, koska suomi taivuttaa kysyjän
+ * sanan yhtä hyvin kuin aineiston sanan: "Stonehengen kivistä" ei
+ * osuisi aineiston sanaan "Stonehenge", jos katsottaisiin vain että
+ * aineiston sana alkaa hakusanalla. Toiseen suuntaan vaaditaan
+ * vähintään viisi merkkiä, jottei lyhyt aineistosana ala osua kaikkeen.
+ */
+const TAKAPERIN_VAHIMMAISPITUUS = 5;
+
+function osuu(sanat, hakusana) {
+  let paras = 0;
+  for (const sana of sanat) {
+    if (sana === hakusana) return 2;
+    if (sana.startsWith(hakusana)) paras = 1;
+    else if (sana.length >= TAKAPERIN_VAHIMMAISPITUUS && hakusana.startsWith(sana)) paras = 1;
+  }
+  return paras;
+}
+
+/**
+ * Lähdeleima, jonka pöllö näkee ja voi mainita vastauksessaan.
+ *
+ * Esim. "Kiinan maalehti / Kuvataide: Sinipunainen posliini".
+ */
+function lahdeLeima(m, nimet = {}) {
+  const nimi = m.tyyppi === 'maa'
+    ? (nimet.maa?.(m.omistaja) ?? m.omistaja)
+    : (nimet.kaupunki?.(m.omistaja) ?? m.omistaja);
+  const lehti = m.tyyppi === 'maa' ? `${nimi} — maalehti`
+    : m.tyyppi === 'nahtavyys' ? `${nimi} — kohdekartta`
+      : `${nimi} — kaupunkilehti`;
+  const otsikko = m.otsikko && m.otsikko !== m.aiheNimi ? `: ${m.otsikko}` : '';
+  return `${lehti} / ${m.aiheNimi}${otsikko}`;
+}
+
+/**
+ * Hakee osuvimmat katkelmat.
+ *
+ * @param {object} indeksi rakennaIndeksin tulos
+ * @param {string} kysymys pelaajan kysymys
+ * @param {object} asetukset
+ *   maara      montako katkelmaa enintään
+ *   onVastattu (merkinta) => boolean — palauttaa tosi, jos merkinnän
+ *              tehtävä on jo ratkaistu. Ilman tätä fakta-merkinnät
+ *              jätetään aina pois (varovainen oletus).
+ *   nimet      { kaupunki(id), maa(iso) } lähdeleimoja varten
+ */
+function haeKatkelmat(indeksi, kysymys, { maara = 4, onVastattu = null, nimet = {} } = {}) {
+  const alku = (globalThis.performance ?? Date).now();
+  const sanat = hakusanat(kysymys);
+  if (!indeksi?.merkinnat?.length || !sanat.length) {
+    return { katkelmat: [], kesto: 0 };
+  }
+  /*
+   * Kaksi kierrosta, koska yleinen sana ei saa voittaa harvinaista.
+   *
+   * Ilman painotusta kysymys "Mitä Stonehengen kivistä tiedetään?"
+   * palautti Borobudurin ja Sakkaran: sanat "kivistä" ja "tiedetään"
+   * osuvat satoihin merkintöihin, kun taas "Stonehengen" osuu yhteen.
+   * Siksi ensimmäinen kierros laskee, moneenko merkintään kukin
+   * hakusana osuu, ja toinen painottaa harvinaiset sanat raskaiksi
+   * (käänteinen esiintymistiheys).
+   */
+  const osumat = [];
+  const tiheys = new Array(sanat.length).fill(0);
+  for (const m of indeksi.merkinnat) {
+    // Vastaamaton minitehtävän fakta ei tule hakuun: se selittäisi
+    // vastauksen tehtävään, joka pelaajalla on vielä auki.
+    if (m.tyyppi === 'fakta' && !(onVastattu?.(m) ?? false)) continue;
+    let rivi = null;
+    for (let i = 0; i < sanat.length; i += 1) {
+      const otsikossa = osuu(m.otsikkoSanat, sanat[i]);
+      const tekstissa = osuu(m.tekstiSanat, sanat[i]);
+      if (!otsikossa && !tekstissa) continue;
+      tiheys[i] += 1;
+      (rivi ??= []).push([i, otsikossa, tekstissa]);
+    }
+    if (rivi) osumat.push({ m, rivi });
+  }
+
+  const yhteensa = Math.max(indeksi.merkinnat.length, 1);
+  const painot = tiheys.map((df) => Math.log(yhteensa / (1 + df)));
+  const pisteet = [];
+  for (const { m, rivi } of osumat) {
+    let piste = 0;
+    for (const [i, otsikossa, tekstissa] of rivi) {
+      const paino = Math.max(painot[i], 0.05);
+      if (otsikossa) piste += OTSIKON_PAINO * paino * (otsikossa === 2 ? TARKAN_OSUMAN_KERROIN : 1);
+      if (tekstissa) piste += TEKSTIN_PAINO * paino * (tekstissa === 2 ? TARKAN_OSUMAN_KERROIN : 1);
+    }
+    pisteet.push({ m, piste });
+  }
+  pisteet.sort((a, b) => b.piste - a.piste || b.m.teksti.length - a.m.teksti.length);
+  const katkelmat = pisteet.slice(0, maara).map(({ m, piste }) => ({
+    piste,
+    leima: lahdeLeima(m, nimet),
+    teksti: m.teksti.length > KATKELMAN_KATTO
+      ? `${m.teksti.slice(0, KATKELMAN_KATTO - 1)}…`
+      : m.teksti,
+    lahde: m.lahde,
+    // Avausreitti pelin sisään. Linkit rakennetaan TÄSTÄ eikä mallin
+    // tekstistä, joten pöllö ei voi keksiä rikkinäistä linkkiä.
+    reitti: m.reitti ? { ...m.reitti, leima: lahdeLeima(m, nimet) } : null,
+  }));
+  return { katkelmat, kesto: (globalThis.performance ?? Date).now() - alku };
+}
+
+// ===== js/pollo.js =====
+/*
+ * VIISAS PÖLLÖ — pelin oma tietokumppani.
+ *
+ * Pöllö on alanappirivin keskimmäinen nappi (js/ui.js piirraToimintorivi)
+ * ja lehtinäkymässä lehden kulmassa kelluva nappi. Napautus avaa
+ * chat-paneelin: yläosassa muutama tekoälyn ehdottama kysymys, alhaalla
+ * sanelunappi ja sen takana kirjoituskenttä. Pöllö EI koskaan ponnahda
+ * itsestään (pelin sääntö) — se aukeaa vain napautuksesta ja sulkeutuu
+ * selvästä rastista.
+ *
+ * KOLME ASIAA, JOTKA TÄSSÄ TIEDOSTOSSA OVAT TÄRKEIMMÄT
+ *
+ * 1. Kontekstinkeruu. Pöllö saa tietää, missä pelaaja on ja mitä
+ *    ruudulla näkyy, jotta se voi syventää juuri sitä. Paketti kootaan
+ *    avaus- ja kysymyshetkellä, ja se on enintään 5000 merkkiä.
+ *
+ * 2. Paikallinen tietohaku (js/pollo-haku.js). Ennen kysymyksen
+ *    lähettämistä pelin omasta tarkistetusta aineistosta haetaan
+ *    osuvimmat katkelmat lähdeleimoineen ja ne liitetään pakettiin.
+ *    Pöllö suosii niitä, koska ne on jo kertaalleen tarkistettu.
+ *
+ * 3. Spoilerisuoja. Aktiivista tehtävää — visaa, minitehtävää,
+ *    kohtaamisen kysymystä — vaihtoehtoineen ja vastauksineen ei laiteta
+ *    kontekstiin KOSKAAN. Se on toteutettu kolmella lukolla:
+ *
+ *      a) VALKOINEN LISTA. Lehdestä luetaan vain LEHTI_LOHKOT-listan
+ *         nimeämät lohkot. Mitään ei kerätä "kaikki näkyvä teksti"
+ *         -periaatteella, joten uusi tehtävälohko ei voi vahingossa
+ *         vuotaa mukaan — se pitäisi erikseen lisätä listalle.
+ *      b) MUSTA LISTA. Sallitunkin lohkon sisältä poistetaan
+ *         SPOILERI_LOHKOT-listan solmut ennen tekstin lukemista
+ *         (aihesivun minitehtävä asuu kirjaimellisesti jutun perässä
+ *         samassa säiliössä, joten pelkkä valkoinen lista ei riittäisi).
+ *      c) HAUN RAJAUS. Indeksiin ei oteta tarinakaanonia eikä
+ *         kysymyspankkeja lainkaan, ja minitehtävän fakta tulee mukaan
+ *         vasta kun pelaaja on ratkaissut sen (js/pollo-haku.js).
+ *
+ *    Pelin tilaa luetaan vain pelinTila():n nimeämistä kentistä. Se ei
+ *    kosketa game.quiz-, game.duel- eikä game.eventCard-olioihin
+ *    lainkaan — niissä asuvat kysymykset ja oikeat vastaukset.
+ *
+ * Neljäs lukko on palvelimen puolella: järjestelmäkehote elää
+ * workerissa (tools/pollo/worker.js), joten sitä ei voi kiertää
+ * muokkaamalla selaimen koodia.
+ *
+ * Kertojaääntä ei kytketä tähän — pöllön luenta on myöhempi
+ * natiiviominaisuus. Sanelu on eri asia: se on pelaajan puhetta
+ * sisään, ei pöllön puhetta ulos.
+ */
+
+/** Kontekstipaketin katto merkkeinä. Sama luku myös workerin puolella. */
+const KONTEKSTIN_ENIMMAISPITUUS = 5000;
+
+/** Yksittäisten osien katot, jottei mikään niistä syö koko pakettia. */
+const MATKAKIRJAN_KATTO = 900;
+const LOHKON_KATTO = 1600;
+const AINEISTON_KATTO = 1900;
+
+/** Montako viestiä keskustelusta lähetetään mukaan seuraavaan. */
+const HISTORIAN_KATTO = 6;
+
+/** Puheentunnistuksen kieli. */
+const PUHE_KIELI = 'fi-FI';
+
+/**
+ * VALKOINEN LISTA: mistä lehden tekstit luetaan.
+ *
+ * Järjestys on tärkeysjärjestys — jos paketti täyttyy, loppupää jää
+ * pois. Otsikko on se sana, jolla lohko esitellään pöllölle.
+ */
+const LEHTI_LOHKOT = [
+  { valitsin: '#arrival-city', otsikko: 'Lehden nimiö' },
+  { valitsin: '#arrival-lehti-pvm', otsikko: 'Päiväys' },
+  { valitsin: '#arrival-intro', otsikko: 'Kaupungin esittely' },
+  { valitsin: '#arrival-maa-nimi', otsikko: 'Maa' },
+  { valitsin: '#arrival-maa-intro', otsikko: 'Maan esittely' },
+  { valitsin: '#arrival-maa-tunnusluvut', otsikko: 'Maa numeroina' },
+  { valitsin: '#arrival-kategoria', otsikko: 'Avoinna oleva sivu' },
+  { valitsin: '#arrival-kulttuuri-lista', otsikko: 'Lehden nostot' },
+];
+
+/**
+ * MUSTA LISTA: mitä sallitunkin lohkon sisältä poistetaan.
+ *
+ * Nämä ovat pelin tehtäviä: kysymys, vaihtoehdot, vihje ja tulos.
+ * Jos peliin tulee uusi tehtävätyyppi, sen juurisolmu lisätään tähän —
+ * tai sille annetaan attribuutti data-pollo="ei", joka toimii ilman
+ * koodimuutosta.
+ */
+const SPOILERI_LOHKOT = [
+  '[data-pollo="ei"]',
+  '.minitehtava',
+  '#arrival-kulttuuri-visa',
+  '#arrival-kulttuuri-kysymys',
+  '#arrival-kulttuuri-vaihtoehdot',
+  '.kulttuuri-vaihtoehdot',
+  '#quiz-dialog',
+  '.quiz-question',
+  '.quiz-options',
+  '.quiz-hint-text',
+  '.quiz-result',
+];
+
+/* ------------------------------------------------------------------ */
+/* Kontekstinkeruu                                                     */
+/* ------------------------------------------------------------------ */
+
+/** Rivinvaihdot ja tuplavälit pois; tyhjästä tulee tyhjä merkkijono. */
+function polloSiisti(teksti) {
+  return String(teksti ?? '').replace(/\s+/g, ' ').trim();
+}
+
+/** Leikkaa tekstin kattoon ja merkitsee leikkauksen. */
+function polloLeikkaa(teksti, katto) {
+  const t = String(teksti ?? '');
+  return t.length > katto ? `${t.slice(0, katto - 1)}…` : t;
+}
+
+/** Onko elementti (tai jokin sen esivanhempi) piilotettu? */
+function polloPiilossa(el) {
+  if (!el) return true;
+  if (el.hidden) return true;
+  return Boolean(el.closest?.('[hidden]'));
+}
+
+/**
+ * Yhden lohkon teksti ilman spoilereita.
+ *
+ * Työ tehdään KOPIOLLE: alkuperäistä DOMia ei kosketa, joten pelaajan
+ * näkymä ei muutu vaikka tehtävälohkoja poistetaan luettavasta.
+ */
+function tekstiIlmanSpoilereita(el, estot = SPOILERI_LOHKOT) {
+  if (!el) return '';
+  // Jos lohko on itse tehtävä, siitä ei oteta mitään.
+  for (const esto of estot) {
+    if (el.matches?.(esto)) return '';
+  }
+  const kopio = el.cloneNode ? el.cloneNode(true) : el;
+  for (const esto of estot) {
+    for (const roska of kopio.querySelectorAll?.(esto) ?? []) roska.remove?.();
+  }
+  return polloSiisti(kopio.textContent);
+}
+
+/**
+ * Kerää valkoisen listan lohkot juuresta.
+ *
+ * Piilotetut lohkot ohitetaan: lehden sivut ovat samassa dialogissa ja
+ * vain avoinna oleva sivu on näkyvissä, joten tämä rajaa paketin
+ * siihen mitä pelaaja oikeasti katsoo.
+ */
+function poimiLohkot(juuri, lohkot = LEHTI_LOHKOT, estot = SPOILERI_LOHKOT) {
+  if (!juuri?.querySelectorAll) return [];
+  const tulos = [];
+  for (const { valitsin, otsikko } of lohkot) {
+    for (const el of juuri.querySelectorAll(valitsin) ?? []) {
+      if (polloPiilossa(el)) continue;
+      const teksti = polloLeikkaa(tekstiIlmanSpoilereita(el, estot), LOHKON_KATTO);
+      if (teksti) tulos.push({ otsikko, teksti });
+    }
+  }
+  return tulos;
+}
+
+/**
+ * Pelin tila kontekstia varten.
+ *
+ * TÄMÄ ON SPOILERISUOJAN YDIN: funktio lukee vain nämä neljä kenttää.
+ * game.quiz, game.duel, game.eventCard ja game.arrivalFact jäävät
+ * koskematta — niissä ovat aktiivisen tehtävän kysymys, vaihtoehdot ja
+ * oikean vastauksen indeksi.
+ */
+function pelinTila(game) {
+  if (!game) return {};
+  const cityId = game.player?.pos?.city ?? null;
+  let kaupunki = null;
+  try {
+    kaupunki = cityId ? game.board?.cityById?.get(cityId)?.name ?? null : null;
+  } catch {
+    kaupunki = null;
+  }
+  let paiva = null;
+  try {
+    paiva = game.dayCount?.() ?? null;
+  } catch {
+    paiva = null;
+  }
+  return {
+    lauta: game.pack?.name ?? null,
+    kaupunki,
+    maaIso: cityId ? game.pack?.map?.cityCountry?.[cityId] ?? null : null,
+    paiva,
+  };
+}
+
+/**
+ * Kokoaa tekstipaketin. Enintään KONTEKSTIN_ENIMMAISPITUUS merkkiä.
+ *
+ * Järjestys on tärkeysjärjestys: otsikkorivit ensin (ne mahtuvat
+ * aina), sitten pelin oman aineiston katkelmat omalla katollaan, ja
+ * lopuksi avoinna olevan lehden tekstit niin paljon kuin jää tilaa.
+ * Aineistolla on oma katto siksi, ettei pitkä lehtisivu söisi sitä
+ * kokonaan — tarkistettu tieto on juuri se, mitä pöllön pitäisi
+ * ensisijaisesti käyttää.
+ */
+function kokoaKonteksti({
+  lauta = null,
+  kaupunki = null,
+  maa = null,
+  paiva = null,
+  nakyma = null,
+  matkakirja = null,
+  aineisto = [],
+  lohkot = [],
+} = {}, katto = KONTEKSTIN_ENIMMAISPITUUS) {
+  const rivit = [];
+  if (lauta) rivit.push(`Lauta: ${polloSiisti(lauta)}`);
+  if (kaupunki) rivit.push(`Kaupunki, jossa pelaaja on: ${polloSiisti(kaupunki)}`);
+  if (maa) rivit.push(`Maa: ${polloSiisti(maa)}`);
+  if (paiva) rivit.push(`Matkapäivä: ${paiva}`);
+  if (nakyma) rivit.push(`Näkymä: ${polloSiisti(nakyma)}`);
+  if (matkakirja) {
+    rivit.push(`Isoisän matkakirjamerkintä: ${polloLeikkaa(polloSiisti(matkakirja), MATKAKIRJAN_KATTO)}`);
+  }
+  let teksti = rivit.join('\n');
+
+  const palat = Array.isArray(aineisto) ? aineisto : [];
+  if (palat.length) {
+    let osio = '\n\nPELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):';
+    for (const pala of palat) {
+      const rivi = `\n- [${pala.leima}] ${polloSiisti(pala.teksti)}`;
+      if (osio.length + rivi.length > AINEISTON_KATTO) break;
+      osio += rivi;
+    }
+    if (teksti.length + osio.length <= katto) teksti += osio;
+  }
+
+  for (const lohko of Array.isArray(lohkot) ? lohkot : []) {
+    const tilaa = katto - teksti.length;
+    if (tilaa < 40) break;
+    const pala = `\n\n${lohko.otsikko}: ${lohko.teksti}`;
+    teksti += pala.length <= tilaa ? pala : `${pala.slice(0, tilaa - 1)}…`;
+  }
+  return teksti.slice(0, katto);
+}
+
+/**
+ * Lukee nykytilan pelistä ja DOMista yhdeksi tekstipaketiksi.
+ *
+ * ui-olio on valinnainen: siitä otetaan vain maan nimi ja tieto siitä,
+ * kumpi lehti on auki. Ilman sitä paketti on hieman köyhempi mutta
+ * kelvollinen.
+ */
+function lueNakyma({ game = null, ui = null, doc = document, aineisto = [] } = {}) {
+  const tila = pelinTila(game);
+  const lehti = doc?.getElementById?.('arrival-dialog') ?? null;
+  const lehtiAuki = Boolean(lehti?.open);
+  const matkakirja = polloSiisti(doc?.getElementById?.('fact-text')?.textContent);
+  return kokoaKonteksti({
+    ...tila,
+    maa: ui?.arrivalMaaTiedot?.nimi ?? tila.maaIso ?? null,
+    matkakirja,
+    nakyma: lehtiAuki
+      ? (ui?.tutkiMaaLehti ? 'maan lehti auki' : 'kaupungin lehti auki')
+      : 'kartta',
+    aineisto,
+    lohkot: lehtiAuki ? poimiLohkot(lehti) : [],
+  });
+}
+
+/* ------------------------------------------------------------------ */
+/* Käyttöliittymä                                                      */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Seepiapöllö. Viivapiirros samaan tapaan kuin pelin muut kuvakkeet
+ * (.viiva-ikoni): pelkkä ääriviiva, täyttö vain silmäterissä, jotta se
+ * istuu kartan mustekynätyyliin.
+ */
+const POLLO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<path d="M6.4 5.2 8.4 7.6"/><path d="M17.6 5.2 15.6 7.6"/>'
+  + '<path d="M12 3.7c3.3 0 5.7 2.6 5.7 6.3 0 5.1-2.3 8.5-5.7 8.5s-5.7-3.4-5.7-8.5c0-3.7 2.4-6.3 5.7-6.3z"/>'
+  + '<circle cx="9.6" cy="9.5" r="1.9"/><circle cx="14.4" cy="9.5" r="1.9"/>'
+  + '<circle class="taytto" cx="9.6" cy="9.5" r="0.75"/>'
+  + '<circle class="taytto" cx="14.4" cy="9.5" r="0.75"/>'
+  + '<path d="M12 11.3 11 13.1h2z"/>'
+  + '<path d="M8.7 14.7c1 .9 1.9 1.3 3.3 1.3s2.3-.4 3.3-1.3"/>'
+  + '<path d="M9.4 18.4v1.6M14.6 18.4v1.6"/>'
+  + '<path d="M4.4 20.2h15.2"/>'
+  + '</svg>';
+
+/** Mikrofoni samalla viivakynällä. */
+const MIKKI_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<rect x="9" y="2.8" width="6" height="11.4" rx="3"/>'
+  + '<path d="M5.6 11.4a6.4 6.4 0 0 0 12.8 0"/>'
+  + '<path d="M12 17.8v3.4M8.6 21.2h6.8"/>'
+  + '</svg>';
+
+const TERVEHDYS = 'Kysy minulta mitä tahansa siitä, mitä kartalla tai '
+  + 'lehdessä juuri nyt näkyy — tai muusta maailmasta. Pelin tehtäviä en '
+  + 'ratkaise puolestasi.';
+
+const EI_HEREILLA = 'Pöllö ei ole vielä hereillä.';
+const EI_HEREILLA_LISA = 'Tietokumppani odottaa vielä käyttöönottoa. '
+  + 'Peli toimii normaalisti ilman sitä.';
+
+const SANELU_KEHOTE = 'Napauta ja kysy ääneen.';
+const SANELU_KUUNTELEE = 'Kuuntelen…';
+
+function polloElementti(tagi, luokka = '', teksti = '') {
+  const el = document.createElement(tagi);
+  if (luokka) el.className = luokka;
+  if (teksti) el.textContent = teksti;
+  return el;
+}
+
+/** Selaimen puheentunnistus, jos sellainen on. Luetaan vasta tarvittaessa. */
+function haePuheTunnistus() {
+  if (typeof window === 'undefined') return null;
+  return window.SpeechRecognition ?? window.webkitSpeechRecognition ?? null;
+}
+
+class Pollo {
+  /**
+   * @param {() => object|null} haeUi palauttaa nykyisen UI-olion.
+   *   Getteri eikä suora viittaus, koska uusi peli luo uuden UI:n.
+   */
+  constructor(haeUi, { palvelin = POLLOPALVELIN, doc = document } = {}) {
+    this.haeUi = haeUi;
+    this.palvelin = String(palvelin ?? '').replace(/\/+$/, '');
+    this.doc = doc;
+    this.auki = false;
+    this.kesken = false;
+    this.historia = [];
+    this.ankkuri = null;
+    this.indeksi = null;
+    this.tunnistin = null;
+    this.puhuttu = '';
+    // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
+    this.tila = haePuheTunnistus() ? 'sanelu' : 'kirjoitus';
+    this.rakenna();
+    this.seuraaNakymaa();
+    this.paivitaNakyvyys();
+  }
+
+  /* --- rakenne --------------------------------------------------- */
+
+  rakenna() {
+    /*
+     * Nappi on samaa muotoa kuin muut alanappirivin napit (.icon-btn:
+     * viivaikoni ja selite), jotta se istuu riviin ilman omaa
+     * poikkeustyyliä. Lehden päällä kelluessaan se saa lisäluokan
+     * .pollo-kelluu, joka tekee siitä pyöreän kelluvan napin.
+     */
+    const nappi = polloElementti('button', 'icon-btn pollo-nappi');
+    nappi.type = 'button';
+    nappi.title = 'Viisas Pöllö';
+    nappi.setAttribute('aria-label', 'Viisas Pöllö — avaa keskustelu');
+    nappi.setAttribute('aria-expanded', 'false');
+    nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${POLLO_IKONI}</span>`
+      + '<span class="icon-label">Pöllö</span>';
+    nappi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.vaihdaTila();
+    });
+    this.nappi = nappi;
+
+    const paneeli = polloElementti('div', 'pollo-paneeli');
+    paneeli.hidden = true;
+    paneeli.setAttribute('role', 'dialog');
+    paneeli.setAttribute('aria-label', 'Viisas Pöllö');
+    // Paneelin sisällä napautus ei saa sulkea alanappirivin liukua.
+    paneeli.addEventListener('click', (e) => e.stopPropagation());
+
+    const yla = polloElementti('div', 'pollo-yla');
+    yla.appendChild(polloElementti('span', 'pollo-otsikko', 'Viisas Pöllö'));
+    const sulje = polloElementti('button', 'pollo-sulje', '×');
+    sulje.type = 'button';
+    sulje.title = 'Sulje';
+    sulje.setAttribute('aria-label', 'Sulje keskustelu');
+    sulje.addEventListener('click', () => this.sulje());
+    yla.appendChild(sulje);
+    paneeli.appendChild(yla);
+
+    this.ehdotukset = polloElementti('div', 'pollo-ehdotukset');
+    this.ehdotukset.hidden = true;
+    paneeli.appendChild(this.ehdotukset);
+
+    this.virta = polloElementti('div', 'pollo-virta');
+    paneeli.appendChild(this.virta);
+
+    paneeli.appendChild(this.rakennaSyote());
+    this.paneeli = paneeli;
+    this.kiinnita();
+  }
+
+  /**
+   * Syöttöalue: sanelu edellä, näppäimistö varalla.
+   *
+   * Omistajan linjaus: chatin ensisijainen syöttötapa on sanelu, niin
+   * ettei näppäimistöä tarvitse näyttää lainkaan. Kirjoituskenttä on
+   * yhden napautuksen takana — ja suoraan esillä, jos selain ei tue
+   * puheentunnistusta.
+   */
+  rakennaSyote() {
+    const syote = polloElementti('div', 'pollo-syote');
+
+    const sanelu = polloElementti('div', 'pollo-sanelu');
+    const mikki = polloElementti('button', 'pollo-mikki');
+    mikki.type = 'button';
+    mikki.title = 'Sanele kysymys';
+    mikki.setAttribute('aria-label', 'Sanele kysymys');
+    mikki.innerHTML = `<span class="icon-glyph viiva-ikoni">${MIKKI_IKONI}</span>`;
+    mikki.addEventListener('click', () => this.vaihdaSanelu());
+    this.mikki = mikki;
+    sanelu.appendChild(mikki);
+
+    this.saneluTila = polloElementti('p', 'pollo-sanelu-tila', SANELU_KEHOTE);
+    this.saneluTila.setAttribute('aria-live', 'polite');
+    sanelu.appendChild(this.saneluTila);
+
+    const kirjoitaLinkki = polloElementti('button', 'pollo-vaihda', 'Kirjoita sen sijaan');
+    kirjoitaLinkki.type = 'button';
+    kirjoitaLinkki.addEventListener('click', () => this.vaihdaTilaan('kirjoitus', { kohdista: true }));
+    sanelu.appendChild(kirjoitaLinkki);
+    this.saneluOsa = sanelu;
+    syote.appendChild(sanelu);
+
+    const lomake = polloElementti('form', 'pollo-rivi');
+    this.kentta = polloElementti('input', 'pollo-kentta');
+    this.kentta.type = 'text';
+    this.kentta.placeholder = 'Kysy pöllöltä…';
+    this.kentta.setAttribute('aria-label', 'Kysymys pöllölle');
+    this.kentta.maxLength = 300;
+    this.laheta = polloElementti('button', 'pollo-laheta', '→');
+    this.laheta.type = 'submit';
+    this.laheta.title = 'Lähetä';
+    this.laheta.setAttribute('aria-label', 'Lähetä kysymys');
+    lomake.appendChild(this.kentta);
+    lomake.appendChild(this.laheta);
+    lomake.addEventListener('submit', (e) => {
+      e.preventDefault();
+      this.kysy(this.kentta.value);
+    });
+    this.lomake = lomake;
+    syote.appendChild(lomake);
+
+    // Paluu saneluun näkyy vain, jos selain osaa sen.
+    const saneleLinkki = polloElementti('button', 'pollo-vaihda', 'Sanele sen sijaan');
+    saneleLinkki.type = 'button';
+    saneleLinkki.addEventListener('click', () => this.vaihdaTilaan('sanelu'));
+    this.saneleLinkki = saneleLinkki;
+    syote.appendChild(saneleLinkki);
+
+    this.syote = syote;
+    this.naytaSyote();
+    return syote;
+  }
+
+  /** Piirtää syöttöalueen nykyisen tilan mukaan. */
+  naytaSyote() {
+    const saneluTuettu = Boolean(haePuheTunnistus());
+    const sanelussa = this.tila === 'sanelu' && saneluTuettu;
+    this.saneluOsa.hidden = !sanelussa;
+    this.lomake.hidden = sanelussa;
+    this.saneleLinkki.hidden = sanelussa || !saneluTuettu;
+  }
+
+  vaihdaTilaan(tila, { kohdista = false } = {}) {
+    this.lopetaSanelu();
+    this.tila = tila;
+    this.naytaSyote();
+    // Näppäimistö avautuu vasta kun pelaaja itse valitsee kirjoittamisen.
+    if (tila === 'kirjoitus' && kohdista) this.kentta.focus({ preventScroll: true });
+  }
+
+  /**
+   * Missä nappi ja paneeli asuvat?
+   *
+   * Lehti on <dialog>, joka avataan modaalina. Modaali elää selaimen
+   * ylimmässä kerroksessa, joten alanappirivissä oleva nappi jäisi sen
+   * alle eikä olisi napautettavissa. Siksi nappi ja paneeli SIIRRETÄÄN
+   * lehden sisään, kun lehti on auki — sama ratkaisu kuin lehden omalla
+   * sisällysluettelolevyllä (ui.js: avaaSisallysvalikko). Kartalla ne
+   * palaavat alanappirivin keskimmäiseen paikkaan.
+   */
+  kiinnitysKohde() {
+    const lehti = this.doc.getElementById('arrival-dialog');
+    if (lehti?.open) return lehti;
+    return this.ankkuri?.isConnected ? this.ankkuri : this.doc.body;
+  }
+
+  /** Alanappirivi ilmoittaa paikkansa joka piirrolla (js/ui.js). */
+  ankkuroi(el) {
+    this.ankkuri = el ?? null;
+    this.kiinnita();
+  }
+
+  kiinnita() {
+    const kohde = this.kiinnitysKohde();
+    if (!kohde) return;
+    // Kelluva muoto vain silloin, kun nappi ei ole rivissä.
+    const kelluu = kohde !== this.ankkuri;
+    this.nappi.classList.toggle('pollo-kelluu', kelluu);
+    this.paneeli.classList.toggle('pollo-paneeli-kelluu', kelluu);
+    if (this.nappi.parentNode !== kohde) kohde.appendChild(this.nappi);
+    if (this.paneeli.parentNode !== kohde) kohde.appendChild(this.paneeli);
+  }
+
+  /**
+   * Näkyvyyssääntö: pöllö ei ole etusivun alkutekstin päällä.
+   *
+   * Alkuteksti on #intro, joka on näkyvissä vain lähtöpaikkaa
+   * valittaessa. Kun se väistyy, pöllö ilmestyy — eikä koskaan
+   * itsestään avaudu, vain näy. Alanappirivissä ollessaan pöllö
+   * noudattaa lisäksi rivin omaa piilotuslogiikkaa (js/ui.js).
+   */
+  nakyyko() {
+    const intro = this.doc.getElementById('intro');
+    return !intro || intro.hidden;
+  }
+
+  paivitaNakyvyys() {
+    const nakyy = this.nakyyko();
+    this.nappi.hidden = !nakyy;
+    if (!nakyy && this.auki) this.sulje();
+  }
+
+  /**
+   * Seuraa, milloin lehti aukeaa/sulkeutuu ja milloin alkuteksti
+   * väistyy. Kumpikaan ei lähetä omaa tapahtumaansa, joten tila
+   * luetaan attribuuteista.
+   */
+  seuraaNakymaa() {
+    const lehti = this.doc.getElementById('arrival-dialog');
+    const intro = this.doc.getElementById('intro');
+    if (typeof MutationObserver !== 'function') return;
+    if (lehti) {
+      new MutationObserver(() => {
+        this.kiinnita();
+        // Lehden sulkeutuminen sulkee myös pöllön: paneeli siirtyy
+        // takaisin kartalle, eikä keskustelun pidä jäädä leijumaan
+        // siirtymän päälle.
+        if (!lehti.open && this.auki) this.sulje();
+      }).observe(lehti, { attributes: true, attributeFilter: ['open'] });
+    }
+    if (intro) {
+      new MutationObserver(() => this.paivitaNakyvyys())
+        .observe(intro, { attributes: true, attributeFilter: ['hidden'] });
+    }
+  }
+
+  /* --- avaus ja sulku -------------------------------------------- */
+
+  vaihdaTila() {
+    if (this.auki) this.sulje();
+    else this.avaa();
+  }
+
+  avaa() {
+    // Liuku peittäisi pöllön napin: se väistyy, kun chat aukeaa.
+    this.haeUi?.()?.suljeLiuku?.();
+    this.kiinnita();
+    this.auki = true;
+    this.paneeli.hidden = false;
+    this.nappi.setAttribute('aria-expanded', 'true');
+    this.nappi.classList.add('auki');
+    if (!this.palvelin) {
+      this.naytaNukkuva();
+      return;
+    }
+    if (!this.virta.childElementCount) this.lisaaViesti('pollo', TERVEHDYS);
+    this.naytaSyote();
+    // Indeksi rakennetaan laiskasti ensimmäisellä avauksella, ei pelin
+    // käynnistyksessä. Ehdotushaku odottaa sen valmistumista.
+    this.varmistaIndeksi();
+    this.haeEhdotukset();
+  }
+
+  sulje() {
+    this.lopetaSanelu();
+    this.auki = false;
+    this.paneeli.hidden = true;
+    this.nappi.setAttribute('aria-expanded', 'false');
+    this.nappi.classList.remove('auki');
+  }
+
+  /** Tila, jossa omistaja ei ole vielä ottanut välityspalvelinta käyttöön. */
+  naytaNukkuva() {
+    this.ehdotukset.hidden = true;
+    this.syote.hidden = true;
+    if (this.virta.querySelector('.pollo-nukkuu')) return;
+    this.virta.replaceChildren();
+    const laatikko = polloElementti('div', 'pollo-nukkuu');
+    laatikko.appendChild(polloElementti('p', 'pollo-nukkuu-otsikko', EI_HEREILLA));
+    laatikko.appendChild(polloElementti('p', 'pollo-nukkuu-lisa', EI_HEREILLA_LISA));
+    this.virta.appendChild(laatikko);
+  }
+
+  /* --- paikallinen tietohaku -------------------------------------- */
+
+  /** Rakentaa hakuindeksin kerran. Mittaustulos jää talteen raportointia varten. */
+  varmistaIndeksi() {
+    if (this.indeksi) return this.indeksi;
+    try {
+      this.indeksi = rakennaIndeksi({
+        kulttuuri: KULTTUURI_KATEGORIAT,
+        maat: MAA_KATEGORIAT,
+        nahtavyydet: NAHTAVYYSJUTUT,
+      });
+    } catch {
+      // Aineiston puuttuminen ei saa estää kysymistä.
+      this.indeksi = { merkinnat: [], kesto: 0, sanoja: 0 };
+    }
+    return this.indeksi;
+  }
+
+  /**
+   * Onko merkinnän minitehtävä jo ratkaistu?
+   *
+   * Avain on sama kuin pelillä (game.js actionMinitehtava:
+   * pakka:kaupunki:aihe, jossa maalehden aihe on ISO:aihe). Ilman
+   * tätä vastaamattoman tehtävän fakta selittäisi vastauksen.
+   */
+  tehtavaRatkaistu(merkinta) {
+    const game = this.haeUi?.()?.game ?? null;
+    const cityId = game?.player?.pos?.city;
+    if (!game?.minitehtavatVastatut || !cityId) return false;
+    const aihe = merkinta.tyyppi === 'maa'
+      ? `${merkinta.omistaja}:${merkinta.tehtavaAvain}`
+      : merkinta.tehtavaAvain;
+    return game.minitehtavatVastatut.has(`${game.pack?.id}:${cityId}:${aihe}`);
+  }
+
+  /**
+   * Avaa pelin oman jutun hakutuloksen reittikuvauksesta.
+   *
+   * Reitti on yleinen {tyyppi, tunniste, sivu|kohde}: tässä on yksi rivi
+   * per tyyppi, ja jokainen rivi kutsuu SAMAA metodia, jota pelin oma
+   * navigointi käyttää — rinnakkaista navigointia ei rakenneta. Uusi
+   * sisältötyyppi (esim. pidemmät artikkelit) tarvitsee vain uuden
+   * rivin tähän.
+   */
+  avaaKohde(reitti) {
+    const ui = this.haeUi?.();
+    if (!ui || !reitti) return false;
+    // Chat väistyy, mutta nappi jää: paluu keskusteluun on yksi
+    // napautus, ja historia säilyy.
+    this.sulje();
+    if (reitti.tyyppi === 'maalehti') {
+      ui.avaaMaalehti?.(reitti.tunniste);
+      this.siirraSivulle(ui, reitti.sivu);
+      return true;
+    }
+    if (reitti.tyyppi === 'kaupunkilehti') {
+      const city = ui.game?.board?.cityById?.get(reitti.tunniste);
+      if (!city) return false;
+      ui.openArrival?.(city);
+      this.siirraSivulle(ui, reitti.sivu);
+      return true;
+    }
+    if (reitti.tyyppi === 'nahtavyys') {
+      const juttu = NAHTAVYYSJUTUT[reitti.tunniste]?.[reitti.kohde];
+      if (!juttu) return false;
+      // Tyhjä henkilölinkkilista: juttu ei linkitä itseensä.
+      ui.avaaNahtavyys?.({ nimi: reitti.kohde, ...juttu }, null, { henkilolinkit: [] });
+      return true;
+    }
+    return false;
+  }
+
+  /** Lehden sivunvaihto: sivu 0 on kansi, siksi +1. */
+  siirraSivulle(ui, sivuId) {
+    if (!sivuId) return;
+    const i = (ui.tutkiSivut ?? []).findIndex((sivu) => sivu?.id === sivuId);
+    if (i >= 0) ui.naytaTutkiSivu?.(i + 1, { heti: true });
+  }
+
+  /**
+   * Onko reitti oikeasti avattavissa juuri nyt?
+   *
+   * Linkkiä ei näytetä, jos kohde ei ole tällä laudalla — rikkinäinen
+   * linkki on pahempi kuin puuttuva linkki.
+   */
+  reittiAvattavissa(reitti) {
+    const game = this.haeUi?.()?.game ?? null;
+    if (!reitti || !game) return false;
+    if (reitti.tyyppi === 'maalehti') {
+      return Boolean(game.pack?.map?.countryShapes?.[reitti.tunniste]);
+    }
+    if (reitti.tyyppi === 'kaupunkilehti') {
+      return Boolean(game.board?.cityById?.get(reitti.tunniste));
+    }
+    if (reitti.tyyppi === 'nahtavyys') {
+      // Kohdekartta kuuluu kaupunkiin, jossa pelaaja seisoo.
+      return game.player?.pos?.city === reitti.tunniste
+        && Boolean(NAHTAVYYSJUTUT[reitti.tunniste]?.[reitti.kohde]);
+    }
+    return false;
+  }
+
+  /** Napautettavat linkit vastauksen alle. Enintään kolme, vain aidosti osuvat. */
+  naytaLinkit(katkelmat) {
+    const nahdyt = new Set();
+    const reitit = [];
+    for (const katkelma of katkelmat ?? []) {
+      const reitti = katkelma?.reitti;
+      if (!reitti) continue;
+      const avain = `${reitti.tyyppi}:${reitti.tunniste}:${reitti.sivu ?? reitti.kohde ?? ''}`;
+      if (nahdyt.has(avain)) continue;
+      if (!this.reittiAvattavissa(reitti)) continue;
+      nahdyt.add(avain);
+      reitit.push(reitti);
+      if (reitit.length >= 3) break;
+    }
+    if (!reitit.length) return;
+    const laatikko = polloElementti('div', 'pollo-linkit');
+    for (const reitti of reitit) {
+      const nappi = polloElementti('button', 'pollo-linkki', `Lue: ${reitti.leima ?? reitti.otsikko}`);
+      nappi.type = 'button';
+      nappi.addEventListener('click', () => this.avaaKohde(reitti));
+      laatikko.appendChild(nappi);
+    }
+    this.virta.appendChild(laatikko);
+    this.virta.scrollTop = this.virta.scrollHeight;
+  }
+
+  /** Osuvimmat katkelmat pelin omasta aineistosta. */
+  haeAineisto(kysymys) {
+    const indeksi = this.varmistaIndeksi();
+    if (!indeksi?.merkinnat?.length) return [];
+    const game = this.haeUi?.()?.game ?? null;
+    const tulos = haeKatkelmat(indeksi, kysymys, {
+      maara: 4,
+      onVastattu: (m) => this.tehtavaRatkaistu(m),
+      nimet: {
+        kaupunki: (id) => game?.board?.cityById?.get(id)?.name ?? id,
+        maa: (iso) => game?.pack?.map?.countryShapes?.[iso]?.nimi ?? iso,
+      },
+    });
+    this.hakuKesto = tulos.kesto;
+    // Talteen linkkejä varten: linkit rakennetaan näistä, ei mallin
+    // tekstistä (omistajan linjaus 12.8.2026).
+    this.viimeisetKatkelmat = tulos.katkelmat;
+    return tulos.katkelmat;
+  }
+
+  /* --- keskustelu ------------------------------------------------- */
+
+  lisaaViesti(rooli, teksti) {
+    const viesti = polloElementti('p', `pollo-viesti pollo-${rooli}`, teksti);
+    this.virta.appendChild(viesti);
+    this.virta.scrollTop = this.virta.scrollHeight;
+    return viesti;
+  }
+
+  /** Kevyt jarru: yksi pyyntö kerrallaan. */
+  asetaKesken(kesken) {
+    this.kesken = kesken;
+    this.kentta.disabled = kesken;
+    this.laheta.disabled = kesken;
+    this.mikki.disabled = kesken;
+    this.paneeli.classList.toggle('pollo-odottaa', kesken);
+    for (const nappi of this.ehdotukset.querySelectorAll('button')) {
+      nappi.disabled = kesken;
+    }
+  }
+
+  konteksti(kysymys = '') {
+    try {
+      const ui = this.haeUi?.() ?? null;
+      return lueNakyma({
+        game: ui?.game ?? null,
+        ui,
+        doc: this.doc,
+        aineisto: kysymys ? this.haeAineisto(kysymys) : [],
+      });
+    } catch {
+      // Kontekstin puuttuminen ei saa estää kysymistä.
+      return '';
+    }
+  }
+
+  /**
+   * Yksi pyyntö välityspalvelimelle.
+   *
+   * Virheet eivät koskaan päädy konsoliin: pelaajalle näkyy siisti
+   * viesti, ja peli jatkuu. Verkkovirhe on täysin normaali tilanne
+   * puhelimessa eikä se ole pelin vika.
+   */
+  async pyyda(runko) {
+    const vastaus = await fetch(this.palvelin, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(runko),
+    });
+    const data = await vastaus.json().catch(() => ({}));
+    if (!vastaus.ok) {
+      const virhe = new Error(data?.virhe ?? 'virhe');
+      virhe.viesti = data?.viesti ?? null;
+      throw virhe;
+    }
+    return data;
+  }
+
+  async haeEhdotukset() {
+    if (this.kesken || !this.palvelin) return;
+    this.ehdotukset.replaceChildren();
+    this.ehdotukset.hidden = true;
+    this.asetaKesken(true);
+    try {
+      const data = await this.pyyda({ tehtava: 'ehdotukset', konteksti: this.konteksti() });
+      this.naytaEhdotukset(Array.isArray(data?.ehdotukset) ? data.ehdotukset : []);
+    } catch {
+      // Ehdotukset ovat lisä, eivät välttämättömiä: jos ne eivät tule,
+      // sanelu ja kirjoituskenttä riittävät eikä pelaajalle valiteta.
+      this.ehdotukset.hidden = true;
+    } finally {
+      this.asetaKesken(false);
+    }
+  }
+
+  naytaEhdotukset(lista) {
+    this.ehdotukset.replaceChildren();
+    for (const teksti of lista.slice(0, 3)) {
+      const nappi = polloElementti('button', 'pollo-ehdotus', teksti);
+      nappi.type = 'button';
+      nappi.addEventListener('click', () => this.kysy(teksti));
+      this.ehdotukset.appendChild(nappi);
+    }
+    this.ehdotukset.hidden = !this.ehdotukset.childElementCount;
+  }
+
+  async kysy(raakaKysymys) {
+    const kysymys = String(raakaKysymys ?? '').trim();
+    if (!kysymys || this.kesken || !this.palvelin) return;
+    this.kentta.value = '';
+    this.saneluTila.textContent = SANELU_KEHOTE;
+    this.ehdotukset.replaceChildren();
+    this.ehdotukset.hidden = true;
+    this.lisaaViesti('kayttaja', kysymys);
+    const odotus = this.lisaaViesti('odottaa', 'Pöllö miettii…');
+    this.asetaKesken(true);
+    this.viimeisetKatkelmat = [];
+    try {
+      const data = await this.pyyda({
+        tehtava: 'vastaus',
+        kysymys,
+        konteksti: this.konteksti(kysymys),
+        historia: this.historia.slice(-HISTORIAN_KATTO),
+      });
+      const teksti = String(data?.vastaus ?? '').trim() || 'En osaa vastata tähän.';
+      odotus.remove();
+      this.lisaaViesti('pollo', teksti);
+      this.naytaLinkit(this.viimeisetKatkelmat);
+      this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
+      this.historia.push({ rooli: 'pollo', teksti });
+      this.historia = this.historia.slice(-HISTORIAN_KATTO);
+    } catch (virhe) {
+      odotus.remove();
+      this.lisaaViesti('pollo', virhe?.viesti
+        ?? 'Pöllö ei saanut ajatuksesta kiinni. Yritä hetken päästä uudelleen.');
+    } finally {
+      this.asetaKesken(false);
+      this.virta.scrollTop = this.virta.scrollHeight;
+    }
+  }
+
+  /* --- sanelu ------------------------------------------------------ */
+
+  /** Mikrofonin napautus: aloita tai lopeta. */
+  vaihdaSanelu() {
+    if (this.tunnistin) {
+      this.lopetaSanelu({ laheta: true });
+      return;
+    }
+    this.aloitaSanelu();
+  }
+
+  aloitaSanelu() {
+    const Tunnistus = haePuheTunnistus();
+    if (!Tunnistus) {
+      // Selain ei osaa: kirjoituskenttä esiin ilman konsolivirhettä.
+      this.vaihdaTilaan('kirjoitus');
+      return;
+    }
+    let tunnistin;
+    try {
+      tunnistin = new Tunnistus();
+    } catch {
+      this.saneluTila.textContent = 'Sanelu ei käynnisty tässä selaimessa.';
+      this.vaihdaTilaan('kirjoitus');
+      return;
+    }
+    tunnistin.lang = PUHE_KIELI;
+    tunnistin.interimResults = true;
+    tunnistin.continuous = false;
+    tunnistin.maxAlternatives = 1;
+    this.puhuttu = '';
+    tunnistin.onresult = (tapahtuma) => {
+      let teksti = '';
+      const tulokset = tapahtuma?.results ?? [];
+      for (let i = 0; i < tulokset.length; i += 1) {
+        teksti += tulokset[i]?.[0]?.transcript ?? '';
+      }
+      this.puhuttu = teksti;
+      this.saneluTila.textContent = teksti.trim() || SANELU_KUUNTELEE;
+    };
+    tunnistin.onerror = (tapahtuma) => this.saneluVirhe(tapahtuma?.error);
+    tunnistin.onend = () => {
+      const oliTunnistin = this.tunnistin;
+      this.tunnistin = null;
+      this.mikki.classList.remove('kuuntelee');
+      this.mikki.setAttribute('aria-pressed', 'false');
+      if (!oliTunnistin) return;
+      const teksti = this.puhuttu.trim();
+      if (teksti) this.kysy(teksti);
+      else if (this.saneluTila.textContent === SANELU_KUUNTELEE) {
+        this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
+      }
+    };
+    this.tunnistin = tunnistin;
+    this.mikki.classList.add('kuuntelee');
+    this.mikki.setAttribute('aria-pressed', 'true');
+    this.saneluTila.textContent = SANELU_KUUNTELEE;
+    try {
+      // Mikrofonilupa kysytään vasta tästä — ei paneelia avattaessa.
+      tunnistin.start();
+    } catch {
+      this.tunnistin = null;
+      this.mikki.classList.remove('kuuntelee');
+      this.saneluTila.textContent = 'Sanelu ei käynnisty juuri nyt.';
+    }
+  }
+
+  lopetaSanelu({ laheta = false } = {}) {
+    const tunnistin = this.tunnistin;
+    if (!tunnistin) return;
+    if (!laheta) this.tunnistin = null;
+    this.mikki.classList.remove('kuuntelee');
+    this.mikki.setAttribute('aria-pressed', 'false');
+    try {
+      tunnistin.stop();
+    } catch {
+      /* tunnistin oli jo pysähtynyt */
+    }
+  }
+
+  /** Siisti suomenkielinen tila jokaiselle virheelle — ei konsolia. */
+  saneluVirhe(koodi) {
+    this.tunnistin = null;
+    this.mikki.classList.remove('kuuntelee');
+    this.mikki.setAttribute('aria-pressed', 'false');
+    if (koodi === 'not-allowed' || koodi === 'service-not-allowed') {
+      this.saneluTila.textContent = 'Mikrofonin käyttö ei ole sallittu.';
+      this.vaihdaTilaan('kirjoitus');
+      return;
+    }
+    if (koodi === 'audio-capture') {
+      this.saneluTila.textContent = 'Mikrofonia ei löytynyt.';
+      this.vaihdaTilaan('kirjoitus');
+      return;
+    }
+    if (koodi === 'no-speech') {
+      this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
+      return;
+    }
+    this.saneluTila.textContent = 'Sanelu ei onnistunut. Voit myös kirjoittaa.';
+  }
+}
+
+/*
+ * Yksi pöllö per peli. Alanappirivi tarvitsee kahvan voidakseen
+ * ilmoittaa paikkansa joka piirrolla, eikä js/ui.js:n kuulu tuntea
+ * oliota — riittää että se osaa antaa paikan.
+ */
+let nykyinenPollo = null;
+
+/** Alanappirivi ilmoittaa pöllön paikan (js/ui.js piirraToimintorivi). */
+function polloAnkkuri(el) {
+  nykyinenPollo?.ankkuroi(el);
+}
+
+/** Onko pöllö auki? Alanappirivi tarvitsee tiedon liukua sulkiessaan. */
+function polloAuki() {
+  return Boolean(nykyinenPollo?.auki);
+}
+
+/** Sulkee chatin. Alanappirivin liuku peittää pöllön, joten se sulkee myös chatin. */
+function polloSulje() {
+  nykyinenPollo?.sulje();
+}
+
+/**
+ * Asentaa pöllön peliin. Kutsutaan kerran käynnistyksessä.
+ *
+ * @param {() => object|null} haeUi getteri nykyiseen UI-olioon.
+ * @returns {Pollo|null} olio testejä ja savukkeita varten.
+ */
+function asennaPollo(haeUi, asetukset = {}) {
+  if (typeof document === 'undefined') return null;
+  nykyinenPollo = new Pollo(haeUi, asetukset);
+  // Savukkeet ja kehitys tarvitsevat kahvan; peli itse ei käytä tätä.
+  window.matkakirjaPollo = nykyinenPollo;
+  return nykyinenPollo;
+}
+
 // ===== js/ui.js =====
 // Käyttöliittymä: aarrekartan piirto, ohjauspaneeli, tietovisa ja bottien ohjaus.
 
@@ -143712,6 +145409,11 @@ class UI {
     if (this.tarkkuusVahti) {
       document.removeEventListener('visibilitychange', this.tarkkuusVahti);
       this.tarkkuusVahti = null;
+    }
+    // Sama koskee alanappirivin liukua sulkevaa karttanapautusta.
+    if (this.liukuKuuntelija) {
+      document.removeEventListener('pointerdown', this.liukuKuuntelija);
+      this.liukuKuuntelija = null;
     }
     // Puskurirenkaan jono elää joutohetkien varassa: ilman perumista se
     // piirtäisi kuolleen pelin ruutuja uuden kartan päälle.
@@ -146941,13 +148643,18 @@ class UI {
         return;
       }
       this.turnStatus.textContent = `${TRAVEL_LABEL[game.travelMode]} — heitä noppa.`;
-      const rollBtn = this.ikoniTekstiNappi('noppa', 'Heitä noppa', 'primary');
+      /*
+       * Nopanheitto ja matkustustavan vaihto ovat monitoiminapin
+       * liu'ussa kuten muutkin matkustustoiminnot (omistajan linjaus
+       * 12.8.2026): alanappirivi on aina täsmälleen kolme paikkaa.
+       */
+      const rollBtn = this.iconButton('noppa', 'Heitä noppa', 'primary');
       rollBtn.addEventListener('click', () => this.doRoll());
-      this.actionsEl.appendChild(rollBtn);
 
-      const backBtn = this.ikoniTekstiNappi('nuoli', 'Vaihda matkustustapa');
+      const backBtn = this.iconButton('nuoli', 'Vaihda matkustustapa');
       backBtn.addEventListener('click', () => this.doAction(() => game.actionCancelTravel()));
-      this.actionsEl.appendChild(backBtn);
+
+      this.piirraToimintorivi([rollBtn, backBtn], this.tutkiNappi());
       return;
     }
 
@@ -146980,13 +148687,12 @@ class UI {
 
     if (!this.travelExpanded) {
       this.turnStatus.textContent = 'Valitse matkustustapa.';
-      // Kaikki vaiheen A napit mahtuvat aina yhteen riviin.
-      this.actionsEl.dataset.rivi = 'yksi';
 
+      const matkanapit = [];
       if (modes.includes('land')) {
         const landBtn = this.iconButton('saapas', 'Jalan', modes.includes('stay') ? '' : 'primary');
         landBtn.addEventListener('click', () => this.doWalk());
-        this.actionsEl.appendChild(landBtn);
+        matkanapit.push(landBtn);
       }
 
       if (hasSlow) {
@@ -146995,33 +148701,10 @@ class UI {
           this.travelExpanded = true;
           this.render();
         });
-        this.actionsEl.appendChild(moreBtn);
+        matkanapit.push(moreBtn);
       }
 
-      /*
-       * Tutki on kaupungissa AINA tarjolla, tehtävistä riippumatta:
-       * kortti ja lehti ovat luettavaa sisältöä. Aiemmin nappi katosi
-       * heti kun tehtävät oli käytetty, ja lehtisivulle ei päässyt
-       * enää lainkaan (omistajan löytö 10.8.2026: "kahden väärän
-       * vastauksen jälkeen ei pääse enää ollenkaan edes
-       * lehtisivulle"). Korostus kertoo, odottaako tehtävä.
-       */
-      if (game.cityOf()) {
-        const stayBtn = this.iconButton('suurennuslasi', 'Tutki', modes.includes('stay') ? 'primary' : '');
-        // Uudessa kaupungissa nappi sykkii, kunnes sitä on painettu kerran.
-        if (this.tutkiSyke && this.tutkiSyke === this.kaupunkiAvain(game.cityOf())) {
-          stayBtn.classList.add('tutki-syke');
-        }
-        stayBtn.addEventListener('click', () => {
-          sfx.play('paper');
-          this.tutkiSyke = null;
-          stayBtn.classList.remove('tutki-syke');
-          // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
-          // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
-          this.openArrival(game.cityOf());
-        });
-        this.actionsEl.appendChild(stayBtn);
-      }
+      this.piirraToimintorivi(matkanapit, this.tutkiNappi());
       return;
     }
 
@@ -147102,6 +148785,133 @@ class UI {
       this.render();
     });
     this.actionsEl.appendChild(backBtn);
+  }
+
+  /**
+   * Tutki-nappi (suurennuslasi) alanappirivin oikeaan paikkaan.
+   *
+   * Tutki on kaupungissa AINA tarjolla, tehtävistä riippumatta: kortti
+   * ja lehti ovat luettavaa sisältöä. Aiemmin nappi katosi heti kun
+   * tehtävät oli käytetty, ja lehtisivulle ei päässyt enää lainkaan
+   * (omistajan löytö 10.8.2026: "kahden väärän vastauksen jälkeen ei
+   * pääse enää ollenkaan edes lehtisivulle"). Korostus kertoo,
+   * odottaako tehtävä. Palauttaa null, jos pelaaja ei ole kaupungissa.
+   */
+  tutkiNappi() {
+    const { game } = this;
+    const city = game.cityOf();
+    if (!city) return null;
+    const stayBtn = this.iconButton('suurennuslasi', 'Tutki',
+      game.travelModes().includes('stay') ? 'primary' : '');
+    // Uudessa kaupungissa nappi sykkii, kunnes sitä on painettu kerran.
+    if (this.tutkiSyke && this.tutkiSyke === this.kaupunkiAvain(city)) {
+      stayBtn.classList.add('tutki-syke');
+    }
+    stayBtn.addEventListener('click', () => {
+      sfx.play('paper');
+      this.tutkiSyke = null;
+      stayBtn.classList.remove('tutki-syke');
+      // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
+      // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
+      this.openArrival(city);
+    });
+    return stayBtn;
+  }
+
+  /**
+   * ALANAPPIRIVI: kolme paikkaa (omistajan linjaus 12.8.2026).
+   *
+   *   vasen   monitoiminappi — avaa matkustusnapit
+   *   keski   Viisas Pöllö   — js/pollo.js siirtää nappinsa tähän
+   *   oikea   suurennuslasi  — Tutki, ennallaan
+   *
+   * Matkustusnapit eivät levitä riviä: ne LIUKUVAT pöllön ja
+   * suurennuslasin päälle, joten rivi on aina täsmälleen kolmen napin
+   * levyinen. Liuku sulkeutuu monitoiminapin uudesta napautuksesta tai
+   * mistä tahansa napautuksesta rivin ulkopuolella (kartta).
+   *
+   * Napit itse ovat samoja kuin ennen — tapahtumakäsittelijät,
+   * korostukset ja estotilat tulevat kutsujalta, joten mikään
+   * pelitoiminto ei muutu tämän myötä.
+   */
+  piirraToimintorivi(matkanapit = [], tutkiNappi = null) {
+    const rivi = html('div', 'toimintorivi');
+    const perus = html('div', 'toimintorivi-perus');
+
+    const monitoimi = this.iconButton('kompassi', 'Matkustustavat');
+    monitoimi.classList.add('monitoimi-nappi');
+    // Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
+    // muillakin estetyillä napeilla, ei katoamista.
+    monitoimi.disabled = matkanapit.length === 0;
+    monitoimi.setAttribute('aria-expanded', String(Boolean(this.liukuAuki)));
+    monitoimi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.vaihdaLiuku();
+    });
+    perus.appendChild(monitoimi);
+
+    // Pöllön paikka. Nappi asuu js/pollo.js:ssä, koska sen pitää siirtyä
+    // lehden sisään lehtinäkymässä — tässä annetaan vain paikka.
+    const polloPaikka = html('div', 'pollo-paikka');
+    perus.appendChild(polloPaikka);
+
+    perus.appendChild(tutkiNappi ?? html('div', 'rivi-tyhja'));
+    rivi.appendChild(perus);
+
+    const liuku = html('div', 'toimintorivi-liuku');
+    liuku.setAttribute('role', 'group');
+    liuku.setAttribute('aria-label', 'Matkustustavat');
+    for (const nappi of matkanapit) liuku.appendChild(nappi);
+    // Mikä tahansa liu'un nappi vie toimintoon, jonka jälkeen rivi
+    // piirretään uudestaan — liuku ei saa jäädä auki sen alle.
+    liuku.addEventListener('click', () => { this.liukuAuki = false; });
+    rivi.appendChild(liuku);
+
+    if (this.liukuAuki && matkanapit.length) rivi.classList.add('liuku-auki');
+    else this.liukuAuki = false;
+
+    this.actionsEl.appendChild(rivi);
+    this.toimintoRivi = rivi;
+    polloAnkkuri(polloPaikka);
+    this.kytkeLiukuSulku();
+  }
+
+  /** Monitoiminapin napautus: liuku auki tai kiinni. */
+  vaihdaLiuku() {
+    this.liukuAuki = !this.liukuAuki;
+    // Liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
+    if (this.liukuAuki) polloSulje();
+    this.paivitaLiuku();
+  }
+
+  suljeLiuku() {
+    if (!this.liukuAuki) return;
+    this.liukuAuki = false;
+    this.paivitaLiuku();
+  }
+
+  paivitaLiuku() {
+    const rivi = this.toimintoRivi;
+    if (!rivi || !rivi.isConnected) return;
+    rivi.classList.toggle('liuku-auki', Boolean(this.liukuAuki));
+    rivi.querySelector('.monitoimi-nappi')
+      ?.setAttribute('aria-expanded', String(Boolean(this.liukuAuki)));
+  }
+
+  /**
+   * Napautus rivin ulkopuolella (kartta) sulkee liu'un.
+   *
+   * Kuuntelija kytketään kerran ja puretaan destroyssa: ilman purkua
+   * kuollut instanssi jäisi kuuntelemaan uuden pelin rinnalle.
+   */
+  kytkeLiukuSulku() {
+    if (this.liukuKuuntelija) return;
+    this.liukuKuuntelija = (e) => {
+      if (this.dead || !this.liukuAuki) return;
+      if (e.target?.closest?.('.toimintorivi')) return;
+      this.suljeLiuku();
+    };
+    document.addEventListener('pointerdown', this.liukuKuuntelija);
   }
 
   /**
@@ -157053,6 +158863,15 @@ kehittajaLomake.addEventListener('submit', (e) => {
   e.preventDefault();
   kytkeKehittaja();
 });
+
+/*
+ * Viisas Pöllö: kartan kulman tietokumppani (js/pollo.js).
+ *
+ * Asennetaan kerran ja annetaan getteri UI-olioon — uusi peli luo uuden
+ * UI:n, eikä pöllön pidä jäädä kiinni vanhaan. Pöllö ei koskaan avaudu
+ * itsestään, se vain ilmestyy näkyviin kun avausteksti on väistynyt.
+ */
+asennaPollo(() => ui);
 </script>
 </body>
 </html>
