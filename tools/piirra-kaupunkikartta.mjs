@@ -743,6 +743,48 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 25.302, etela: 25.278, lansi: 51.518, ita: 51.556 },
     meri: true,
   },
+  masqat: {
+    // Vanha Masqat ja Mutrah samassa kuvassa. Kaupunki on jono lahtia
+    // vuorten välissä: Mutrahin suuki on lännessä, Al Alamin palatsi ja
+    // portugalilaislinnakkeet Jalali ja Mirani idässä, ja niiden
+    // välissä niemi, jonka yli tie kiertää. Rajaus on siksi leveä
+    // (n. 4,3 km) — kapeampi jättäisi toisen pään pois, ja juuri
+    // kahden kylän välimatka on tämän kaupungin muoto.
+    //
+    // meri: true — Omaninlahti on OSM:ssä rantaviivaa ilman
+    // vesimonikulmiota, sama tilanne kuin Dohassa.
+    rajat: { pohjoinen: 23.629, etela: 23.606, lansi: 58.558, ita: 58.604 },
+    meri: true,
+  },
+  kuwait: {
+    // Kuwait Cityn vanha ydin: Mubarakiyan tori ja kansallismuseo
+    // lännessä, Seifin palatsi rannassa, Kuwait-tornit niemen kärjessä
+    // koillisessa. Tornit ovat kaupungin tunnus, joten ne otetaan
+    // mukaan, vaikka rajaus venyy sen takia n. 4,3 km:iin.
+    rajat: { pohjoinen: 29.392, etela: 29.370, lansi: 47.962, ita: 48.006 },
+    meri: true,
+  },
+  nikosia: {
+    // Venetsialaisten muurien ympäröimä vanhakaupunki mahtuu lähes
+    // kokonaan: Famagustan portti idässä, Kyproksen museo lännessä,
+    // Faneromeni keskellä. Muurikehä on halkaisijaltaan vain noin
+    // puolitoista kilometriä, joten rajaus on pieni (n. 2,6 km) —
+    // laajempi hukuttaisi tähtimuotoisen muurin esikaupunkeihin.
+    //
+    // Ei meri-lippua: Nikosia on ainoa pääkaupunki tässä erässä, joka
+    // ei ole meren rannalla.
+    rajat: { pohjoinen: 35.181, etela: 35.163, lansi: 33.350, ita: 33.378 },
+  },
+  bagdad: {
+    // Rusafan vanha puoli Tigrisin itärannalla: Mutanabbin kirjakatu,
+    // abbasidipalatsi, Qishlan kellotorni ja Bagdadin museo ovat
+    // kaikki noin kilometrin säteellä. Joki halkaisee kuvan, ja
+    // länsirannalta otetaan mukaan sen verran, että sillat näkyvät.
+    // Shahid-monumentti (5 km itään) ja Mustansiriyan yliopiston
+    // nykykampus jäävät tarkoituksella ulos — keskiaikainen
+    // Mustansiriya-koulu on rajauksen sisällä.
+    rajat: { pohjoinen: 33.348, etela: 33.332, lansi: 44.376, ita: 44.400 },
+  },
 };
 
 /*
