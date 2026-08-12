@@ -65,4 +65,15 @@ export const SAATIEDOT = {
     keskilampo: [0.7, 1.6, 4.5, 9.4, 14.1, 17.5, 19.6, 19.5, 15.1, 10.1, 5.2, 1.9],
     sade: [50, 37, 48, 37, 56, 59, 77, 56, 52, 46, 42, 46],
   },
+  // Doha on Persianlahden rannalla mutta aavikkomaassa: kesäkuusta
+  // syyskuuhun sataa nolla millimetriä ja keskilämpö pysyy yli 33
+  // asteessa, kun taas talvella lämpötila on Välimeren kevään luokkaa.
+  // Koko vuoden sade, noin 60 mm, tulee marraskuun ja huhtikuun
+  // välillä lyhyinä ryöppyinä.
+  doha: {
+    lat: 25.29,
+    lon: 51.53,
+    keskilampo: [17.6, 18.6, 21.7, 26.6, 31.8, 34.2, 35.3, 35.2, 33.1, 29.7, 24.7, 19.8],
+    sade: [11, 12, 12, 4, 0, 0, 0, 0, 0, 0, 7, 14],
+  },
 };
