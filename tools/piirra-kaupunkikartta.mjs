@@ -760,7 +760,10 @@ const KAUPUNGIT = {
     // hindutemppeli, jäi ensimmäisessä rajauksessa 33 metriä kuvan
     // ulkopuolelle. Se on kuudes karttakohde ja ainoa, joka ei ole
     // linnake tai palatsi, joten sen takia kannatti siirtää reunaa.
-    rajat: { pohjoinen: 23.6205, etela: 23.6085, lansi: 58.586, ita: 58.604 },
+    // Länsireuna 58,584 eikä 58,586: Masqatin portti (58,5869) osui
+    // ensin 5 %:n kohdalle, jolloin numeroympyrä olisi ollut kiinni
+    // kuvan reunassa. Nyt se on 16 %:n kohdalla.
+    rajat: { pohjoinen: 23.6205, etela: 23.6085, lansi: 58.584, ita: 58.602 },
     meri: true,
   },
   kuwait: {

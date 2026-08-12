@@ -2460,6 +2460,51 @@ export const MAAKARTAT = {
  */
 export const KAUPUNKIKARTAT = {
   /*
+   * Vanha Masqat (nippu 2, 12.8.2026). Kuvassa on vain muurien
+   * sisäinen vanhakaupunki — Mutrahin suuki neljän kilometrin päässä
+   * jää tarkoituksella ulos (perustelu tools/piirra-kaupunkikartta.mjs).
+   *
+   * OMN-maalehti kertoo Bahlan ja Jabreenin linnoista mutta EI
+   * Masqatin omista kohteista, joten tämä kaupunki on lähes kokonaan
+   * vapaata aihepiiriä — poikkeus Persianlahden kaupunkien joukossa.
+   * Kuudes kohde, hindutemppeli, ei ole linnake eikä palatsi: sen
+   * takia rajausta siirrettiin etelämmäs.
+   */
+  masqat: {
+    polku: 'assets/kartat/masqat-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 23.6205, etela: 23.6085, lansi: 58.584, ita: 58.602,
+    },
+    esittely: 'Masqat ei ole yksi kaupunki vaan jono pieniä lahtia '
+      + 'vuorten välissä. Vanha Masqat on niistä itäisin: puolikuun '
+      + 'muotoinen poukama, jonka ympärillä kalliot nousevat suoraan '
+      + 'ylös. Juuri siksi kaupunki syntyi tähän — poukama on '
+      + 'luonnonsatama, jonne pääsee mereltä mutta jonne maitse '
+      + 'pääsee vain kahdesta portista. Portugalilaiset ottivat '
+      + 'sataman 1507 ja rakensivat sen suulle kaksi linnaketta, '
+      + 'Jalalin ja Miranin, jotka valvovat väylää edelleen. Muuri '
+      + 'kiersi kaupungin, ja portit suljettiin öisin vielä '
+      + '1970-luvulla.'
+      + '\n\n'
+      + 'Kartalla meri tulee sisään oikealta ja ylhäältä, ja '
+      + 'poukaman ympärillä kulkee ohut rantaviiva. Vanhankaupungin '
+      + 'kadut näkyvät keskellä pienenä tiheänä ruudukkona — se on '
+      + 'koko historiallinen Masqat, alle kilometrin levyinen. '
+      + 'Katkoviivat ovat vanhan kaupunginmuurin jäänteitä. '
+      + 'Ympärillä oleva vaalea ala ei ole tyhjää tonttimaata vaan '
+      + 'paljasta vuorta: siihen ei ole rakennettu, koska siihen ei '
+      + 'voi rakentaa. Kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Masqatin portti', lat: 23.6175, lon: 58.5869 },
+      { nimi: 'Al-Miranin linnake', lat: 23.6172, lon: 58.5931 },
+      { nimi: 'Al-Jalalin linnake', lat: 23.6167, lon: 58.5979 },
+      { nimi: 'Al Alamin palatsi', lat: 23.6160, lon: 58.5947 },
+      { nimi: 'Bait Al Zubair', lat: 23.6155, lon: 58.5921 },
+      { nimi: 'Motishwar Mandir', lat: 23.6097, lon: 58.5882 },
+    ],
+  },
+  /*
    * Kuwait City (nippu 2, 12.8.2026). Kolme kohdetta on jo KWT-
    * maalehdessä omina juttuinaan — Kuwait-tornit, suurmoskeija ja
    * Mubarakiyan tori (maalehdessä ruokajuttuna) — koska maalehti
