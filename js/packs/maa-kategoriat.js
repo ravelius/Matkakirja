@@ -16642,8 +16642,9 @@ export const MAA_KATEGORIAT = {
           teksti: 'Jerash oli roomalaisajan vauras kaupunki, ja sen keskellä on '
             + 'epätavallinen tori: se ei ole neliö vaan soikea. Muoto syntyi '
             + 'siitä, että vanha pyhäkköalue ja uusi pylväskatu piti sovittaa '
-            + 'yhteen, ja tori venytettiin niiden väliin. Toria kiertää lähes '
-            + 'seitsemänkymmentä pylvästä, ja kivetys on yhä alkuperäinen: '
+            + 'yhteen, ja tori venytettiin niiden väliin. Toria kiertää '
+            + 'yhtenäinen joonialainen pylväsrivi, ja kivetys on yhä '
+            + 'alkuperäinen: '
             + 'kivet on ladottu kaareviin riveihin torin muodon mukaan. '
             + 'Kaupunki tyhjeni maanjäristyksen jälkeen ja peittyi hiekkaan, '
             + 'mistä syystä se on säilynyt näin hyvin.',
@@ -16652,13 +16653,16 @@ export const MAA_KATEGORIAT = {
           lahde: 'Institute for the Study of the Ancient World, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          otsikko: 'Pääkaupungin kukkulalla seisoo kuusi pylvästä',
+          otsikko: 'Kuudesta pylväästä pystyssä on kolme',
           tiedosto: 'Temple of Hercules - Amman citadel.jpg',
           teksti: 'Ammanin keskellä kohoaa kukkula, jolla on asuttu tuhansia '
-            + 'vuosia. Sen laella on Herkuleen temppelin jäänteet: muutama '
-            + 'valtava pylväs, jotka on nostettu takaisin pystyyn. Temppeli '
-            + 'jäi aikanaan kesken, eikä sitä ilmeisesti koskaan saatu '
-            + 'valmiiksi. Samalta kukkulalta on löytynyt myös jättimäisen '
+            + 'vuosia. Sen laella on Herkuleen temppelin jäänteet. Etusivun '
+            + 'pylväikössä oli kuusi runsaan kolmentoista metrin korkuista '
+            + 'pylvästä, ja niistä kolme on nostettu takaisin pystyyn. '
+            + 'Sivuilla pylväitä ei ollut lainkaan, ja siitä on päätelty, '
+            + 'ettei temppeliä koskaan saatu valmiiksi: ylijäänyt marmori '
+            + 'näyttää päätyneen viereiseen bysanttilaiseen kirkkoon. '
+            + 'Samalta kukkulalta on löytynyt myös jättimäisen '
             + 'kivikäden palasia, joten patsas on ollut valtava. Kukkulalla '
             + 'on lisäksi umaijadien palatsin kupolisali ja bysanttilaisen '
             + 'kirkon pohja — kolme aikakautta muutaman sadan metrin '
@@ -16712,8 +16716,8 @@ export const MAA_KATEGORIAT = {
           'Neliö, jossa on kulmatornit',
         ],
         oikea: 0,
-        fakta: 'Toria kiertää lähes seitsemänkymmentä pylvästä, ja sen kivetys '
-          + 'on yhä alkuperäinen.',
+        fakta: 'Toria kiertää joonialainen pylväsrivi, ja sen kivetys on yhä '
+          + 'alkuperäinen.',
       },
     },
     {
