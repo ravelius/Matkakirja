@@ -8306,4 +8306,230 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Dubain kohdekartta (maakartat.js, v467) oli pelissä ilman yhtään
+   * juttua — auditin löydös 12.8.2026. Kuusi kohdetta samassa
+   * järjestyksessä kuin kartalla, pohjoisesta etelään.
+   */
+  dubai: {
+    'Kultasuuk': {
+      aika: '1900-luvun alku',
+      teksti: 'Kultasuuk syntyi epävirallisesti 1900-luvun alussa, kun '
+          + 'kourallinen kauppiaita avasi puotinsa lahden rannalle Deiran '
+          + 'puolelle. Kauppa kasvoi 1940-luvulla, kun Dubain '
+          + 'vapaakauppapolitiikka veti paikalle yrittäjiä Intiasta ja '
+          + 'Iranista. Nykyään Al Rasin kaupunginosassa on yli 380 '
+          + 'liikettä, joista suurin osa on kultasepänliikkeitä. Myynnissä '
+          + 'on kulta-, platina- ja hopeakoruja, harkkoja, irtotimantteja '
+          + 'ja värikiviä.'
+          + '\n\n'
+          + '1960-luvulla suukin kauppa oli kansainvälisen mittaluokan '
+          + 'bisnestä. Vuonna 1966 Dubai oli Lontoon kullan kolmanneksi '
+          + 'suurin vientikohde noin neljällä miljoonalla unssilla. Vuonna '
+          + '1967 unssi maksoi Dubain suukeissa 35 dollaria ja Intiassa 68, '
+          + 'ja koska Intia säännösteli kullan tuontia, Dubain kauppiaat '
+          + 'lensivät metallin Lontoosta ja lähettivät sen edelleen '
+          + 'dhow-veneillä Intian aluevesirajalle. Kulta pakattiin kymmenen '
+          + 'tolan harkkoihin — tola on runsaat 11,66 grammaa.'
+          + '\n\n'
+          + 'Suukin pohjoispuolella ovat Deiran kala- ja vihannestori ja '
+          + 'Corniche-rantakatu, lahden toisella rannalla kangassuukki. '
+          + 'Koru punnitaan asiakkaan edessä, ja hinta lasketaan päivän '
+          + 'kultakurssista plus työn osuus.',
+      kuvat: [
+        {
+          tiedosto: 'Dubai Gold Souk (8668422526).jpg',
+          selite: 'Kultasuukin katettu puukäytävä, kultasepänliikkeiden '
+            + 'ikkunat molemmin puolin.',
+          lahde: 'Rob Young from United Kingdom, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Gold Souk, Dubai5.jpg',
+          selite: 'Näyteikkuna täynnä kultakaulakoruja suukin liikkeessä: '
+            + 'viisi mallinukkea massiivisissa koruissa ja alla rivi '
+            + 'rannerenkaita.',
+          lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dhow-satama': {
+      teksti: 'Khor Dubai ei ole joki vaan Persianlahden suolainen lahti, '
+          + 'joka työntyy noin 14 kilometriä sisämaahan. Leveyttä on '
+          + '200–1200 metriä ja syvyyttä keskimäärin 6,5–7 metriä. Deiran '
+          + 'puoleiseen laituriin kiinnittyy puisia dhow-aluksia kahden ja '
+          + 'kolmen rivissä, ja lasti odottaa laiturilla taivasalla '
+          + 'laatikkopinoina. Lahden kautta kulkee yhä yli 13 000 alusta '
+          + 'vuodessa.'
+          + '\n\n'
+          + 'Dhow on eurooppalaisten antama yleisnimi Intian valtameren '
+          + 'pitkärunkoisille purjealuksille. Suurimmissa on noin '
+          + 'kolmenkymmenen hengen miehistö, pienimmissä tusinan verran. '
+          + 'Osa purjehtii yhä monsuunin mukana: etelään Itä-Afrikkaan '
+          + 'talvella tai alkukeväästä taatelilastissa, takaisin Arabiaan '
+          + 'myöhään keväällä mangrovepuutavaraa kyydissä. Runkoja '
+          + 'rakennetaan edelleen Beyporessa Keralassa, jossa alusta '
+          + 'kutsutaan nimellä uru.'
+          + '\n\n'
+          + '1900-luvun alussa lahti oli matala satama, johon dhowit '
+          + 'tulivat Intiasta ja Itä-Afrikasta asti. Ruoppaukset 1950- ja '
+          + '1960-luvun taitteessa syvensivät väylän niin, että 2,1 metrin '
+          + 'syväyksen alukset pääsivät läpi vuorovedestä riippumatta. '
+          + 'Jebel Alin suursataman valmistuttua lahden merkitys '
+          + 'rahtiväylänä pieneni, mutta Port Saeedin kaltaiset pienet '
+          + 'laiturit palvelevat yhä lähialueen ja Intian niemimaan '
+          + 'kauppiaita.',
+      kuvat: [
+        {
+          tiedosto: 'Deira Dhow Wharfage (Dubai).jpg',
+          selite: 'Dhow-aluksia rinnakkain laiturissa Deirassa, lasti '
+            + 'pinottuna laiturille laatikoiksi ja säkeiksi.',
+          lahde: 'Iwona Rege, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al Shindagha': {
+      aika: '1896',
+      teksti: 'Al Shindagha on niemi Khor Dubain suulla, Bur Dubain puolella '
+          + 'lahtea. Alue on pieni: 0,26 neliökilometriä, ja vuoden 2000 '
+          + 'laskennassa siellä asui 16 ihmistä. Niemen tunnetuin rakennus '
+          + 'on noin vuonna 1896 pystytetty Sheikh Saeed Al Maktoumin talo, '
+          + 'Al Maktoumin suvun päämaja. Dubain hallitsija Saeed bin '
+          + 'Maktoum asui siinä vuodesta 1912 kuolemaansa 1958 asti.'
+          + '\n\n'
+          + 'Talo on kunnostettu ja avattu museoksi. Pinta-alaa on 3 600 '
+          + 'neliömetriä, ja näyttely jakautuu yhdeksään siipeen: talon '
+          + 'historia, Al Maktoumin suku, vanha Dubai, meren elämä, näkymiä '
+          + 'Dubaista, kaupungin sosiaalinen elämä, kolikot ja postimerkit '
+          + 'sekä historialliset asiakirjat ja kartat.'
+          + '\n\n'
+          + 'Niemen rantaviiva ei ole alkuperäinen. Kun lahtea ruopattiin '
+          + '1958–1959, pohjasta nostetulla massalla vahvistettiin '
+          + 'viereistä Ghubaiban vuorovesialuetta, jonka yli oli aiemmin '
+          + 'päästy betonisia askelkiviä pitkin, ja jatkettiin Shindaghan '
+          + 'rantaa ulospäin. Vuonna 1975 niemen alle avattiin Al '
+          + 'Shindaghan tunneli, yhä lahden ainoa maantietunneli: neljä '
+          + 'kaistaa, viiden metrin alikulkukorkeus ja vuoteen 2010 '
+          + 'mennessä noin 55 000 ajoneuvoa päivässä.',
+      kuvat: [
+        {
+          tiedosto: 'Saeed Al Maktoum House-Dubai2841.JPG',
+          selite: 'Sheikh Saeed Al Maktoumin talon hiekkapohjainen sisäpiha, '
+            + 'kipsikoristeltu yläparveke ja tuulitorni taivasta vasten.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Abra-laiturit': {
+      teksti: 'Abra on puinen vene, ja nimi tulee arabian verbistä abara, '
+          + 'ylittää. Abrat ovat Dubain vanhin joukkoliikenneväline: ennen '
+          + 'siltoja ja Al Shindaghan tunnelia lahdelman toiselle puolelle '
+          + 'pääsi vain veneellä. Keskikokoiseen yksimoottoriseen abraan '
+          + 'mahtuu 20 matkustajaa. He istuvat katoksen alla penkeillä '
+          + 'ohjaamon ympärillä, kymmenen kummallakin puolella, kasvot '
+          + 'vettä kohti, ja kuljettaja ohjaa veneen keskeltä.'
+          + '\n\n'
+          + 'Ylitys Deiran ja Bur Dubain välillä kestää viidestä seitsemään '
+          + 'minuuttia, ja veneitä lähtee muutaman minuutin välein. Lippu '
+          + 'maksetaan suoraan kuljettajalle. Veneitä on noin 150, ja ne '
+          + 'kuljettavat vuodessa 15–20 miljoonaa matkustajaa. Al Sabkhan '
+          + 'ja vanhan suukin välinen reitti kulkee ympäri vuorokauden, '
+          + 'Deira Old Souqin ja Bur Dubain välinen viidestä aamulla '
+          + 'puoleenyöhön.'
+          + '\n\n'
+          + 'Vanhat rantalaiturit on korvattu virallisilla asemilla, joissa '
+          + 'kulkuväylät on mitoitettu ihmisjoukoille. Laiturin edustalla '
+          + 'veneet ohittavat toisensa hyvin läheltä, ja siksi matkustajien '
+          + 'on pysyttävä istuallaan koko matkan ajan. Heinäkuussa 2024 '
+          + 'liikenteeseen tulivat ensimmäiset 3D-tulostetut abrat.',
+      kuvat: [
+        {
+          tiedosto: 'Bur Dubai Abra Station.jpg',
+          selite: 'Abroja kiinni Bur Dubain laiturilla iltavalossa. Veneiden '
+            + 'päällä on vaaleat kangaskatokset, mastoissa liehuu '
+            + 'Emiraattien lippuja, ja takana avautuu lahdelma.',
+          lahde: 'Iwona Rege, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Commuting by Abra (3049532876).jpg',
+          selite: 'Täysi abra ylittämässä lahdelmaa. Matkustajat istuvat '
+            + 'katoksen alla kahdessa rivissä, ja takarannalla näkyy '
+            + 'Deiran matalia taloja ja minareetti.',
+          lahde: 'Peter Dowley, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bastakian kaupunginosa': {
+      aika: '1890-luku',
+      teksti: 'Kortteli rakennettiin 1890-luvulta alkaen, ja rakentajat '
+          + 'olivat varakkaita persialaisia kauppiaita, jotka Dubain '
+          + 'kauppaedut olivat houkutelleet lahden yli. Alue sai nimensä '
+          + 'Bastakin kaupungista Etelä-Iranista. Parhaimmillaan taloja oli '
+          + 'noin 60, ja useimpien välissä kulki vain kapea mutkitteleva '
+          + 'kuja.'
+          + '\n\n'
+          + '1980-luvulla puolet Bastakiasta purettiin toimistokompleksin '
+          + 'tieltä, ja jäljelle jääneet talot päätyivät varastoiksi. '
+          + 'Vuonna 1989 Dubain kaupunki määräsi lopunkin purettavaksi. '
+          + 'Alueella asunut brittiarkkitehti Rayner Otter oli kunnostanut '
+          + 'oman talonsa perusteellisesti, ja hän aloitti kampanjan '
+          + 'korttelin puolesta ja kirjoitti kirjeen prinssi Charlesille, '
+          + 'joka oli tulossa Dubaihin samana vuonna. Charles pyysi päästä '
+          + 'Bastakiaan, kierteli alueen Otterin kanssa ja ehdotti sen '
+          + 'säilyttämistä. Purkupäätös peruttiin.'
+          + '\n\n'
+          + 'Dubain kaupunki aloitti kunnostushankkeen vuonna 2005, ja '
+          + 'samalla nimeksi vaihtui Al Fahidin historiallinen '
+          + 'kaupunginosa. Kujien varrella on nykyään gallerioita, '
+          + 'kahviloita ja pieniä museoita: kahvimuseon alakerrassa '
+          + 'paahdetaan ja keitetään papuja näytille.',
+      kuvat: [
+        {
+          tiedosto: 'Bastikya - With Old City Wall.jpg',
+          selite: 'Kapea kuja Bastakiassa. Vasemmalla on palmunvarsista tehty '
+            + 'seinä ja rivi puuovia, oikealla korkea hiekanvärinen '
+            + 'muuri, ja perällä kohoaa tuulitorni.',
+          lahde: 'MrT HK, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al Fahidin linnoitus': {
+      aika: '1787',
+      teksti: 'Linnoituksen vanhin torni rakennettiin noin vuonna 1787, ja se '
+          + 'on Dubain vanhin yhä pystyssä oleva rakennus. Linnoitus on '
+          + 'neliön muotoinen, ja kolmessa sen kulmassa on torni. Muurit '
+          + 'ovat korallikiveä ja laastia, ja ne nousivat useassa '
+          + 'vaiheessa. Linnoitus vartioi kaupunkiin johtavia maareittejä '
+          + 'ja toimi vuoroin hallitsijan asuntona, varuskuntana ja '
+          + 'vankilana. Itämuurin pääportilla seisoo kaksi tykkiä.'
+          + '\n\n'
+          + 'Vuonna 1969 sheikki Hamdan bin Rashid Al Maktoum pyysi '
+          + 'kirjeitse Kuwaitista museoasiantuntijaa Dubaihin, ja museo '
+          + 'avattiin linnoitukseen vuonna 1971. Tilaa on 4 000 '
+          + 'neliömetriä. Vuonna 2007 kävijöitä oli 1 800 päivässä ja 611 '
+          + '840 koko vuonna; vuonna 2013 ylittyi miljoonan raja. Rakennus '
+          + 'kunnostettiin vuonna 2021.'
+          + '\n\n'
+          + 'Näyttely jatkuu maan alla. Lounaistornista laskeudutaan '
+          + 'kierreportaita käytäviin, joissa on luonnollisen kokoisia '
+          + 'lavasteita öljyä edeltävästä Dubaista: rannan suuki kojuineen, '
+          + 'räätäli, puuseppä ja seppä työn ääressä, sitten aavikko ja '
+          + 'meri, jossa rakennetaan dhow-purjelaivaa. Viimeinen lavaste on '
+          + 'Al Qusaisin kaivauskohde, jonka haudat ovat vuodelta 3000 eaa.',
+      kuvat: [
+        {
+          tiedosto: 'Al Fahidi Fort 02.jpg',
+          selite: 'Al Fahidin linnoituksen pyöreä kulmatorni ja '
+            + 'korallikivestä ladottu muuri. Tornin huipulla liehuu '
+            + 'Dubain lippu, ja takana kohoaa moskeijan minareetti.',
+          lahde: 'Nasser Ali Alkhlaifi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
