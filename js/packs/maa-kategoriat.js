@@ -22409,8 +22409,8 @@ export const MAA_KATEGORIAT = {
               + 'nostettiin kivisten kilpikonnien selkään, koska kilpikonna '
               + 'tarkoitti pitkää ikää ja viisautta. Paasia pystytettiin '
               + 'vuoteen 1780 asti, ja niissä luetellaan vuosien 1442–1779 '
-              + 'kokeiden menestyjät. Paasia pystytettiin kaikkiaan 116, ja '
-              + 'niistä on jäljellä 82. Unescon Maailman muisti -ohjelman '
+              + 'kokeiden menestyjät. Kaikkiaan paasia oli 116, ja niistä '
+              + 'on jäljellä 82. Unescon Maailman muisti -ohjelman '
               + 'Aasian ja Tyynenmeren rekisteriin ne liitettiin vuonna '
               + '2010.',
           selite: 'Kolme suurta kivipaatta rivissä puisen katoksen alla. '
