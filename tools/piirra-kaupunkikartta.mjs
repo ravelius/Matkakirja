@@ -724,21 +724,6 @@ const KAUPUNGIT = {
     // viivaksi eikä vanhasta kaupungista erottuisi mitään.
     rajat: { pohjoinen: 25.276, etela: 25.256, lansi: 55.284, ita: 55.312 },
   },
-  doha: {
-    // Dohan vanha ydin Corniche-rantakadun kaaressa: Souq Waqif ja
-    // Msheirebin kortteli lännessä, Islamilaisen taiteen museo omalla
-    // tekosaarellaan idässä, Al Bidda -puisto pohjoisessa. Noin 3,5 km
-    // leveä ruutu — West Bayn pilvenpiirtäjät jäävät pohjoiseen kartan
-    // ulkopuolelle, koska koko lahden mahduttaminen kutistaisi
-    // Cornichen kaaren viivaksi eikä vanhasta keskustasta erottuisi
-    // mitään.
-    //
-    // meri: true — Dohanlahti on OSM:ssä pelkkää rantaviivaa, ei yhtään
-    // vesimonikulmiota, joten ilman lippua koko kuvan yläkolmannes jäi
-    // paperinvalkoiseksi ja Cornichen kaari näytti pelkältä kadulta.
-    rajat: { pohjoinen: 25.302, etela: 25.276, lansi: 51.516, ita: 51.548 },
-    meri: true,
-  },
 };
 
 /*
