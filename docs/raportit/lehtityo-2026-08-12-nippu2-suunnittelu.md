@@ -82,3 +82,49 @@ Sama linja skaalaa, mutta (a) tuottaisi tiiviimmät maalehdet.
 - Kohteiden koordinaatit haettu Nominatimista; vesitarkistus
   (`tools/tarkista-karttapisteet.mjs`) ajetaan vasta kun
   KAUPUNKIKARTAT-rivi on olemassa — työkalu lukee kohteet siitä.
+
+## Pilotti valmis 12.8.2026 (v587)
+
+Doha tehtiin kokonaan: kohdekartta + kansisivu + aihesivu `ruoka`
+minitehtävineen + kuusi nähtävyysjuttua + säätiedot. Kirjoitustyö
+tehtiin seitsemällä rinnakkaisella kirjoittaja-agentilla ja tarkistus
+kolmella Sonnet-agentilla (kuvat, faktat, päällekkäisyys).
+
+**Tarkistus löysi seitsemän vikaa, jotka kaikki korjattiin ennen
+liittämistä.** Yksikään ei olisi näkynyt testeissä:
+
+1. Msheireb-kuvan tekijämerkintä oli "Michael Coghlan", kun Commonsin
+   `extmetadata.Artist` on "Michael Coghlan @ Flickr". Kirjoittaja oli
+   pudottanut alustaliitteen tarkoituksella — juuri se "kaunisteltu
+   nimi", joka on lisenssirikkomus.
+2. **Sama kuva kahdesti samassa kaupungissa:** Msheirebin raitiovaunu
+   oli sekä nähtävyysjutussa että kannen nostossa.
+3. **Kannen kolmas nosto kertoi saman tarinan** kuin Msheirebin
+   nähtävyysjuttu, sanasta sanaan samalla avausvirkkeellä. Korvattiin
+   metroasemien muotoa käsittelevällä jutulla (ja Dubain lehden
+   "Metrossa ei ole kuljettajaa" -kulma kierrettiin tarkoituksella).
+4. Islamilaisen taiteen museon juttu päättyi merinäkymään, jonka
+   QAT-maalehti antaa jo huipennuksenaan → poistettu.
+5. Corniche-juttu avasi maantäyttöväitteellä, joka on sanasta sanaan jo
+   `asia-valokuvat.js`:n kuvatekstissä → kärki vaihdettu.
+6. Haukkasairaalan "yli 150 lintua päivässä" → lähteet sanovat "jopa
+   150" (swfh.com, The Peninsula).
+7. Metsästysmatkojen kohdemaista vain osa oli vahvistettavissa →
+   virke poistettu kokonaan.
+
+**Karttaopetus, joka kannattaa periä:** vesitarkistin ilmoitti
+Islamilaisen taiteen museon pisteestä "vettä 100 %". Se on tässä
+OIKEIN eikä vika — museo seisoo aidosti lahdella omalla tekosaarellaan
+(en-Wikipedia 25,2950 / 51,5393), joka ei piirry Overpassin
+aineistosta. Piste jätettiin paikalleen ja perustelu kirjoitettiin
+`maakartat.js`:ään, ettei sitä siirretä rannalle myöhemmin.
+
+**Mitat:** kuusi juttua 1 256–1 400 merkkiä, 20 kuvaa joista yksikään
+ei ole pelissä ennestään eikä toistu kaupungin sisällä. `npm test`
+573/0, `tarkista-aihetoisto` ei nosta yhtään Doha-paria, selaintarkistus
+390 px: lehti kolme ruutua, sää näkyy mastossa, nähtävyyspopup selaa
+kohteita 3/6 ja kuvia 1/2.
+
+**Seuraavat neljä kaupunkia** samalla työtavalla: Masqat, Kuwait,
+Nikosia ja Bagdad. Isfahan jätetään myöhemmäksi, koska sen kuusi
+maamerkkiä ovat IRN-maalehdessä — se vaatii eniten uudelleenkulmausta.
