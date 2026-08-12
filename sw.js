@@ -8,6 +8,7 @@ const SHELL = [
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
+  './js/lukija.js',
   './js/pollo.js',
   './js/pollo-haku.js',
   './js/game.js',

@@ -852,9 +852,10 @@ body.manner-zoom .fact-card { isolation: isolate; }
 /*
  * Toimintonappien alta vaalennus on poistettu (omistajan toive): se
  * haalisti kartan alalaidan, ja siellä juuri on eniten katsottavaa.
- * Napeilla on oma pergamenttilevynsä ja "Valitse matkustustapa"
- * -rivillä sama vaalea tekstivarjo kuin kartan omissa nimissä, joten
- * kumpikin pysyy luettavana ilman erillistä valoa.
+ * Napeilla on oma pergamenttilevynsä ja tilarivillä sama vaalea
+ * tekstivarjo kuin kartan omissa nimissä, joten kumpikin pysyy
+ * luettavana ilman erillistä valoa. (Rivin entinen otsikkoteksti
+ * "Valitse matkustustapa." poistettiin 12.8.2026.)
  *
  * Päiväkirjakortti pitää omansa: siinä on pitkä leipäteksti, joka ei
  * mahtuisi luettavaksi pelkän varjon turvin.
@@ -5471,8 +5472,8 @@ body[data-mode].flight-active .rail > * { pointer-events: none; }
  * (omistajan havainto ja kuvakaappauksesta mitattuna). Nyt alakehys on
  * sama kapea rako kuin sivuilla, ja kartta jatkuu kotipalkin alle —
  * pergamentilla ei ole siellä mitään napautettavaa, ja kelluvat kortit
- * pysyvät turva-alueen yläpuolella omilla säännöillään (.rail alla,
- * versionumero #versio-kulma). */
+ * pysyvät turva-alueen yläpuolella omilla säännöillään (.rail alla).
+ * Versionumero ei enää asu kulmassa vaan valikon pohjarivillä. */
 body[data-mode] .app { padding-bottom: 0; }
 body[data-mode] .stage { padding-bottom: var(--gap); }
 
@@ -5815,6 +5816,49 @@ body[data-mode] .actions button.primary:hover:not(:disabled) {
   background: rgba(234, 184, 78, 0.18);
 }
 
+/*
+ * ── IPHONEN KAARET JA KOTIPALKKI (omistajan havainto 12.8.2026) ──
+ *
+ * Pelitilassa `.app` luopuu alareunan turva-alueesta tarkoituksella
+ * (body[data-mode] .app { padding-bottom: 0 }): pergamentin pitää
+ * jatkua kotipalkin alle, tai kartta loppuisi selvästi ennen ruudun
+ * reunaa. Kelluvat napit eivät kuitenkaan saa jäädä sinne — iPhonella
+ * monitoiminappi, Tutki ja pöllö jäivät osittain kotipalkin ja näytön
+ * pyöristetyn kulman alle.
+ *
+ * Nosto tehdään turva-alueen verran, ja kartan alakulmien pyöristys
+ * loivenee samalla niin, että se myötäilee näytön kaarta eikä leikkaa
+ * nappien reunoja. Sääntö on rajattu kapeisiin ruutuihin, joten iPad
+ * ja työpöytä pysyvät ennallaan — ja koska env():n oletusarvo on 0 px,
+ * tavallisessa selaimessa (esim. 390 px Chromium) ulkoasu on
+ * pikselilleen entinen.
+ *
+ * index.html:n viewport-metassa on jo viewport-fit=cover, ilman jota
+ * env() palauttaisi iPhonella nollan.
+ */
+@media (max-width: 640px) {
+  body[data-mode] .turn-card {
+    bottom: calc(0.9rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  body[data-mode] .fact-card[data-corner='bl'],
+  body[data-mode] .fact-card[data-corner='br'] {
+    bottom: calc(0.9rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .linssi-selite[data-corner='bl'],
+  .linssi-selite[data-corner='br'] {
+    bottom: calc(0.9rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Loivempi kaari alakulmiin: pidempi matka, sama muoto kuin näytön
+     omassa reunassa. */
+  body[data-mode] .map-pane {
+    border-bottom-left-radius: calc(var(--radius) + 1.2rem);
+    border-bottom-right-radius: calc(var(--radius) + 1.2rem);
+  }
+}
+
 body[data-mode] .fact-card[data-corner='tl'] { top: 0.4rem; left: 0.4rem; }
 body[data-mode] .fact-card[data-corner='tr'] { top: 0.4rem; right: 0.4rem; }
 body[data-mode] .fact-card[data-corner='bl'] { bottom: 0.9rem; left: 0.4rem; }
@@ -6049,65 +6093,61 @@ body.katselu #newgame-btn { display: none; }
 /* Kaiutin ankkuroituu korttiin myös silloin, kun kortti on staattinen. */
 .fact-card { position: relative; }
 
-/* Versionumero aina näkyvissä vasemmassa alakulmassa — pieni ja
- * huomaamaton, mutta riittää kertomaan mikä versio on käytössä. */
+/*
+ * ── VALIKON POHJARIVI: versionumero ja palaute ───────────────────
+ *
+ * Molemmat olivat ennen kiinteinä kartan alakulmissa (position: fixed).
+ * Omistajan päätös 12.8.2026 siirsi ne hampurilaisvalikon alimmalle
+ * riville: pelinäkymään ei jää kumpaakaan, ja valikko on se paikka,
+ * josta pelin ympärykset etsitään. Versionumero vasemmalle, palaute
+ * oikealle — sama peilikuva kuin kulmissa, nyt yhdellä rivillä.
+ */
+.valikko-pohjarivi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: 0.45rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--line);
+}
+
+/* Pohjarivin napit mittaavat itsensä: `.paavalikko button` venyttäisi
+   ne täyteen leveyteen ja rivi hajoaisi kahdeksi. */
+.paavalikko .valikko-pohjarivi button { width: auto; }
+
 .versio-kulma {
-  position: fixed;
-  /* Numero lepää kartan pergamentilla (omistajan toive) — ei kehyksen
-   * rajalla, jossa se jäi puoliksi piiloon. Väri on kartan mustetta. */
-  left: max(1.3rem, calc(env(safe-area-inset-left, 0px) + 0.9rem));
-  /*
-   * Sama syy kuin .railissa: turva-alue jää sovelluksen alueen
-   * ulkopuolelle, joten sen varaaminen vain nostaisi numeron turhan ylös.
-   *
-   * ISOLLA RUUDULLA NUMERO VÄISTÄÄ MATKAKIRJAKORTTIA. Kortti kelluu
-   * samassa kulmassa, ja työpöytäselaimessa se on niin korkea että
-   * numero jäi kiinni sen alareunaan (omistajan havainto). Puhelimessa
-   * kortti on matalampi eikä väistöä tarvita, joten se tehdään vasta
-   * leveällä ruudulla — muuten numero karkaisi kartan reunasta.
-   */
-  bottom: 0.95rem;
-  z-index: 5;
-  font-size: 0.62rem;
-  letter-spacing: 0.04em;
-  color: rgba(70, 51, 31, 0.55);
-  /* Napautettava: numero avaa päivityslokin. Ulkonäkö pysyy samana
-     kuin ennen, joten napiksi muuttuminen ei näy kartalla. */
+  min-height: 0;
+  padding: 0.25rem 0.3rem;
   background: none;
   border: 0;
-  padding: 0.35rem 0.25rem;
-  margin: -0.35rem -0.25rem;
   font: inherit;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  /* Valikko on tumma paneeli, ei kartan pergamentti — muste vaihtuu
+     vaimeaan vaaleaan, jotta numero pysyy luettavana. */
+  color: var(--muted);
   cursor: pointer;
 }
 
-/*
- * Hiiren alla numero vain tummuu, ei muutu laatikoksi.
- *
- * Yleinen `button:hover` maalaa napin tummalla (#43331f), ja se osui
- * myös tähän: työpöytäselaimessa versionumeron päälle ilmestyi musta
- * suorakaide keskelle karttaa (omistajan havainto). Numero ei ole nappi
- * vaan merkintä pergamentilla — se saa reagoida, mutta pinnalla eikä
- * muodolla.
- */
 /*
  * Tuore päivitys korostuu (omistajan toive 9.8.2026): numero on
  * ensimmäisen puolen minuutin ajan selvästi isompi ja tummempi,
  * sitten se kutistuu tavalliseksi pehmeällä siirtymällä.
  */
-.versio-kulma { transition: font-size 0.6s ease, opacity 0.6s ease; }
+.versio-kulma { transition: font-size 0.6s ease, color 0.6s ease; }
 
 .versio-kulma.tuore {
-  font-size: 1.5em;
-  opacity: 1;
+  font-size: 1.4em;
+  color: var(--accent);
   font-weight: 700;
 }
 
-.versio-kulma:hover:not(:disabled),
-.versio-kulma:focus-visible {
+.paavalikko .versio-kulma:hover:not(:disabled),
+.paavalikko .versio-kulma:focus-visible {
   background: none;
-  color: rgba(70, 51, 31, 0.9);
+  color: var(--ink-light);
 }
 
 /* Päivitysloki: lyhyt lista siitä, mitä kussakin versiossa muuttui.
@@ -6164,42 +6204,39 @@ body.katselu #newgame-btn { display: none; }
   cursor: pointer;
 }
 
-/* Palautehuutomerkki oikeassa alakulmassa (omistajan toive): pieni ja
- * hillitty, mutta aina saatavilla — pelaaja voi kertoa virheestä juuri
- * siinä kohdassa peliä, jossa se osui silmään. Versionumeron peilikuva
- * vastakkaisessa kulmassa. */
+/*
+ * Palautehuutomerkki valikon pohjarivin oikeassa reunassa (omistajan
+ * päätös 12.8.2026; ennen kiinteänä kartan oikeassa alakulmassa):
+ * pieni ja hillitty, mutta aina saatavilla. Pelaaja voi kertoa
+ * virheestä juuri siinä kohdassa peliä, jossa se osui silmään —
+ * pelitilanne luetaan vasta lomaketta avattaessa (js/ui.js
+ * palauteTilanne), joten siirto valikkoon ei muuta viestin sisältöä.
+ */
 .palaute-kulma {
-  position: fixed;
-  right: max(1.1rem, calc(env(safe-area-inset-right, 0px) + 0.75rem));
-  bottom: 0.8rem;
-  z-index: 6;
-  width: 1.55rem;
-  height: 1.55rem;
+  width: 1.6rem;
+  height: 1.6rem;
   min-height: 0;
   padding: 0;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  border: 1px solid rgba(70, 51, 31, 0.35);
-  background: rgba(250, 242, 219, 0.55);
-  color: rgba(70, 51, 31, 0.7);
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--muted);
   font-family: var(--font-hand, inherit);
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
   transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
-.palaute-kulma:hover,
-.palaute-kulma:focus-visible {
-  background: rgba(250, 242, 219, 0.9);
-  color: rgba(70, 51, 31, 0.95);
+.paavalikko .palaute-kulma:hover,
+.paavalikko .palaute-kulma:focus-visible {
+  background: rgba(234, 184, 78, 0.18);
+  color: var(--ink-light);
   transform: scale(1.08);
 }
-
-/* Lennon ja muiden kalvojen aikana huutomerkki väistyy pois tieltä. */
-body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 
 /* Palauteikkuna: sama pergamentti-ilme kuin periaateikkunassa, mutta
  * pienempi — yksi selitys, yksi kenttä ja lähetys. */
@@ -6709,6 +6746,47 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
     column-gap: 2.2rem;
     column-rule: 1px solid rgba(70, 51, 31, 0.25);
   }
+}
+
+/*
+ * ── SISÄLTÖARKIT ISOLLA RUUDULLA (omistajan havainto 12.8.2026) ──
+ *
+ * `.dialog` on 620 px ja `.wiki-card` sama kaikilla ruuduilla, joten
+ * iPadilla (834–1024 px pystyssä) "Lue lisää" -artikkeli jäi kapeaksi
+ * puhelinpalstaksi keskelle isoa ruutua. Lehtiarkki (.dialog.arkki) on
+ * jo täysleveä eikä sitä tarvitse koskea — mitattuna 738 px / 834 px ja
+ * 928 px / 1024 px — mutta sen leipätekstin ympärillä on samaa vaivaa:
+ * ingressi ja esittelyt ovat yksittäisiä kappaleita ilman rivimittaa.
+ *
+ * Katto nousee 768 pikselistä ylöspäin. Rivin mitta EI kuitenkaan
+ * kasva samassa suhteessa: yli 75 merkin rivi eksyttää silmän
+ * rivinvaihdossa, ja lehti on nimenomaan luettavaksi tehty. Nostojen
+ * leipäteksti taittuu jo kahdelle palstalle (.wiki-nosto .leipa,
+ * ≥ 700 px), joten sitä ei tarvitse rajata — ne kappaleet, jotka
+ * juoksevat yhtenä palstana, saavat 38 em:n katon. Mitta on em eikä
+ * pikseleitä, joten merkkimäärä pysyy samana kirjasinkoosta
+ * riippumatta.
+ *
+ * 390 pikselin ulkoasu ei muutu: koko lohko elää media queryn sisällä.
+ */
+@media (min-width: 768px) {
+  #wiki-dialog { max-width: min(860px, 92vw); }
+  .wiki-card { max-width: min(860px, 92vw); }
+
+  /* Artikkelin palsta keskelle arkkia — otsikko, liuskat ja teksti
+     samassa linjassa, jottei leveä arkki hajota lukusuuntaa. */
+  .wiki-card #wiki-title,
+  .wiki-card #wiki-kategoria,
+  .wiki-card #wiki-extract,
+  .wiki-card #wiki-source {
+    max-width: 38em;
+    margin-inline: auto;
+  }
+
+  /* Lehden yksipalstaiset kappaleet: ingressi ja esittelyt. */
+  .dialog.lehti #arrival-intro,
+  .dialog.lehti .wiki-kategoria .johdanto,
+  .dialog.lehti .nahtavyys-kappale { max-width: 38em; }
 }
 
 /* Kuvan napautus avaa katselimen — kursori kertoo sen hiirikäyttäjälle. */
@@ -7647,6 +7725,62 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
 
 .tutki-nuoli svg { width: 100%; height: 100%; display: block; }
 
+/*
+ * ── LUKIJAN KAIUTIN (js/lukija.js) ───────────────────────────────
+ *
+ * Pieni kaiutin sivun ylälaidassa: napautus lukee sivun ääneen.
+ * Ilme on sama huomaamaton mustepiirros kuin sivunumeropillerissä ja
+ * matkakirjan kaiuttimessa — se ei saa kilpailla otsikon kanssa.
+ *
+ * Nappi on DIALOGIN lapsi eikä vierivän kortin sisällä (js/lukija.js
+ * liitaLukija), joten se pysyy paikallaan kun pitkä juttu rullaa.
+ */
+/*
+ * Valitsimissa on mukana `.dialog button`, koska dialogien yleissääntö
+ * maalaa jokaisen napin pergamenttilaatikoksi aaltoreunoineen — pelkkä
+ * `.lukija-nappi` häviäisi sille tarkkuudessa ja kaiuttimesta tulisi
+ * iso valkoinen nappula otsikon päälle.
+ */
+button.lukija-nappi,
+.dialog button.lukija-nappi {
+  position: absolute;
+  top: max(0.45rem, env(safe-area-inset-top, 0px));
+  right: max(0.5rem, env(safe-area-inset-right, 0px));
+  z-index: 6;
+  width: 1.7rem;
+  height: 1.7rem;
+  min-height: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(246, 231, 198, 0.72);
+  color: rgba(70, 51, 31, 0.6);
+  box-shadow: none;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+button.lukija-nappi:hover:not(:disabled),
+button.lukija-nappi:focus-visible,
+.dialog button.lukija-nappi:hover:not(:disabled),
+.dialog button.lukija-nappi:focus-visible {
+  background: rgba(246, 231, 198, 0.92);
+  color: rgba(70, 51, 31, 0.95);
+}
+
+.lukija-nappi .viiva-ikoni svg { width: 1.05rem; height: 1.05rem; }
+
+/* Luenta käynnissä: kaiutin tummuu ja saa hennon kehän. Ääni ei näy
+ * ruudulla, joten napin on kerrottava tilansa itse. */
+button.lukija-nappi.lukee,
+.dialog button.lukija-nappi.lukee {
+  background: rgba(234, 184, 78, 0.34);
+  color: rgba(70, 51, 31, 0.95);
+  box-shadow: 0 0 0 2px rgba(70, 51, 31, 0.28);
+}
+
 /* ── Isoisän sitaatit visassa ja aarteessa ────────────────────────
  * Matkakirja lainaa pelkkää isoisän tarinaa (omistajan päätös
  * 8.8.2026); nimiö kertoo kehyksen, sitaatti on kursiivia kuin
@@ -7735,26 +7869,6 @@ body.flight-active .palaute-kulma { opacity: 0; pointer-events: none; }
   .tutki-nuoli { transition: none; }
 }
 
-/*
- * Leveällä ruudulla versionumero siirtyy oikeaan alakulmaan.
- *
- * Vasen alakulma on matkakirjakortin, ja työpöytäselaimessa kortti on
- * niin korkea että numero jäi kiinni sen alareunaan (omistajan
- * havainto). Puhelimessa kortti on matalampi ja numero mahtuu sen alle,
- * joten siirto tehdään vasta leveällä.
- *
- * Siirto on EHDOTON eikä riipu siitä, näkyykö kortti: numero ei saa
- * hypätä puolelta toiselle sitä mukaa kuin kortti ilmestyy ja katoaa.
- * Oikeassa laidassa on jo palautenappi, joten numero jää sen vasemmalle
- * puolelle.
- */
-@media (min-width: 900px) {
-  .versio-kulma {
-    left: auto;
-    right: max(3.6rem, calc(env(safe-area-inset-right, 0px) + 3.2rem));
-    bottom: 1.05rem;
-  }
-}
 
 /*
  * ============================================================

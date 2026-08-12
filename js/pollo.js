@@ -337,6 +337,36 @@ function haePuheTunnistus() {
   return window.SpeechRecognition ?? window.webkitSpeechRecognition ?? null;
 }
 
+/**
+ * iOS-KUOREN SANELUSILTA (ios/Matkakirja/Selain/natiivi-silta.js).
+ *
+ * WKWebView ei tarjoa SpeechRecognitionia lainkaan, joten natiivissa
+ * kuoressa pöllön mikrofoni olisi ilman tätä pelkkä koriste: nappi
+ * näkyisi (Chromium-pohjaisissa selaimissa) tai katoaisi kokonaan, ja
+ * sanelu jäisi tekemättä. Kuori tarjoaa saman asian omalla
+ * rajapinnallaan — luvat, aloita, tapahtumat, lopeta — ja pelin puoli
+ * valitsee sen aina kun se on tarjolla.
+ *
+ * Ominaisuuslippu ratkaisee: vanha kuori voi tarjota olion ilman
+ * toimivaa sanelua. Tiedot luetaan myös suoraan
+ * __matkakirjaNatiiviTiedot-oliosta siltä varalta, että kysytään ennen
+ * kuin silta on ehtinyt sulattaa sen.
+ */
+function haeNatiiviSanelu() {
+  if (typeof window === 'undefined') return null;
+  const natiivi = window.matkakirjaNatiivi;
+  if (!natiivi?.onkoNatiivi) return null;
+  if (typeof natiivi.sanelu?.aloita !== 'function') return null;
+  const lippu = natiivi.ominaisuudet?.sanelu
+    ?? window.__matkakirjaNatiiviTiedot?.ominaisuudet?.sanelu;
+  return lippu ? natiivi : null;
+}
+
+/** Osaako tämä laite sanella jommallakummalla tavalla? */
+function saneluTuettu() {
+  return Boolean(haeNatiiviSanelu() || haePuheTunnistus());
+}
+
 class Pollo {
   /**
    * @param {() => object|null} haeUi palauttaa nykyisen UI-olion.
@@ -353,8 +383,11 @@ class Pollo {
     this.indeksi = null;
     this.tunnistin = null;
     this.puhuttu = '';
+    // Natiivisanelun purkajat: kuuntele() palauttaa poistofunktion.
+    this.saneluKuulijat = [];
+    this.natiiviSanelussa = false;
     // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
-    this.tila = haePuheTunnistus() ? 'sanelu' : 'kirjoitus';
+    this.tila = saneluTuettu() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
     this.seuraaNakymaa();
     this.seuraaSulkemista();
@@ -500,9 +533,11 @@ class Pollo {
    * näppäimistönappi olisi silloin ainoa vaihtoehto eikä siis valinta.
    */
   naytaSyote() {
-    const saneluTuettu = Boolean(haePuheTunnistus());
-    const sanelussa = this.tila === 'sanelu' && saneluTuettu;
-    this.saneluOsa.hidden = !saneluTuettu;
+    // Natiivikuoressa sanelu tulee sillalta, selaimessa
+    // SpeechRecognitionista — kummankin puuttuessa rivi jää pois.
+    const osaa = saneluTuettu();
+    const sanelussa = this.tila === 'sanelu' && osaa;
+    this.saneluOsa.hidden = !osaa;
     this.lomake.hidden = sanelussa;
   }
 
@@ -945,14 +980,116 @@ class Pollo {
 
   /** Mikrofonin napautus: aloita tai lopeta. */
   vaihdaSanelu() {
-    if (this.tunnistin) {
+    if (this.tunnistin || this.natiiviSanelussa) {
       this.lopetaSanelu({ laheta: true });
       return;
     }
     this.aloitaSanelu();
   }
 
+  /** Mikkinapin ulkoasu: kuunteleva vai lepäävä. */
+  merkitseMikki(kuuntelee) {
+    this.mikki.classList.toggle('kuuntelee', Boolean(kuuntelee));
+    this.mikki.setAttribute('aria-pressed', kuuntelee ? 'true' : 'false');
+  }
+
+  /** Natiivisanelun tapahtumakuuntelijat pois. */
+  purkaSaneluKuulijat() {
+    for (const purku of this.saneluKuulijat) {
+      try {
+        purku();
+      } catch {
+        /* silta oli jo purettu */
+      }
+    }
+    this.saneluKuulijat = [];
+  }
+
+  /**
+   * SANELU iOS-KUOREN SILLALTA.
+   *
+   * Kulku on sillan oma: luvat → aloita → osittaiset tulokset
+   * tapahtumina → lopeta. Mikkinapin tilat ovat samat kuin
+   * selainsanelussa, ja valmis teksti menee samaa reittiä kysymykseksi
+   * — vain tunnistin vaihtuu.
+   *
+   * Luentaa ei tarvitse pysäyttää täältä: silta keskeyttää puheen
+   * itse, kun sanelu alkaa.
+   */
+  async aloitaNatiiviSanelu(natiivi) {
+    if (this.tila !== 'sanelu') this.vaihdaTilaan('sanelu');
+    this.puhuttu = '';
+    this.natiiviSanelussa = true;
+    this.merkitseMikki(true);
+    this.saneluTila.textContent = SANELU_KUUNTELEE;
+
+    // Mikrofoni- ja puheentunnistuslupa kysytään vasta tästä, ei
+    // paneelia avattaessa — sama sääntö kuin selainsanelussa.
+    try {
+      const luvat = await natiivi.sanelu.luvat();
+      if (luvat && luvat.kunnossa === false) {
+        this.natiiviSanelussa = false;
+        this.merkitseMikki(false);
+        this.saneluTila.textContent = 'Mikrofonin käyttö ei ole sallittu.';
+        this.vaihdaTilaan('kirjoitus');
+        return;
+      }
+    } catch (virhe) {
+      this.natiiviSanelussa = false;
+      this.merkitseMikki(false);
+      this.saneluTila.textContent = virhe?.message ?? 'Sanelu ei käynnisty juuri nyt.';
+      return;
+    }
+    // Nappia on voitu napauttaa uudestaan lupien odotuksen aikana.
+    if (!this.natiiviSanelussa) return;
+
+    const kuuntele = (laji, kuulija) => {
+      const purku = natiivi.kuuntele?.(laji, kuulija);
+      if (typeof purku === 'function') this.saneluKuulijat.push(purku);
+    };
+    kuuntele('sanelu-osittainen', (tieto) => {
+      this.puhuttu = String(tieto?.teksti ?? '');
+      this.saneluTila.textContent = this.puhuttu.trim() || SANELU_KUUNTELEE;
+    });
+    kuuntele('sanelu-valmis', (tieto) => {
+      const teksti = String(tieto?.teksti ?? this.puhuttu).trim();
+      this.paataNatiiviSanelu();
+      if (teksti) this.kysy(teksti);
+      else this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
+    });
+    kuuntele('sanelu-keskeytyi', (tieto) => {
+      const teksti = String(tieto?.teksti ?? this.puhuttu).trim();
+      this.paataNatiiviSanelu();
+      if (teksti) this.kysy(teksti);
+      else this.saneluTila.textContent = 'Sanelu keskeytyi. Yritä uudelleen.';
+    });
+    kuuntele('sanelu-virhe', (tieto) => {
+      this.paataNatiiviSanelu();
+      this.saneluVirhe(tieto?.syy, tieto?.viesti);
+    });
+
+    try {
+      await natiivi.sanelu.aloita({ kieli: PUHE_KIELI });
+    } catch (virhe) {
+      this.paataNatiiviSanelu();
+      this.saneluTila.textContent = virhe?.message ?? 'Sanelu ei käynnisty juuri nyt.';
+    }
+  }
+
+  /** Natiivisanelu kiinni: kuulijat pois ja mikki lepoon. */
+  paataNatiiviSanelu() {
+    this.natiiviSanelussa = false;
+    this.purkaSaneluKuulijat();
+    this.merkitseMikki(false);
+  }
+
   aloitaSanelu() {
+    // Natiivisilta ensin: WKWebView:ssä SpeechRecognitionia ei ole.
+    const natiivi = haeNatiiviSanelu();
+    if (natiivi) {
+      this.aloitaNatiiviSanelu(natiivi);
+      return;
+    }
     const Tunnistus = haePuheTunnistus();
     if (!Tunnistus) {
       // Selain ei osaa: kirjoituskenttä esiin ilman konsolivirhettä.
@@ -988,8 +1125,7 @@ class Pollo {
     tunnistin.onend = () => {
       const oliTunnistin = this.tunnistin;
       this.tunnistin = null;
-      this.mikki.classList.remove('kuuntelee');
-      this.mikki.setAttribute('aria-pressed', 'false');
+      this.merkitseMikki(false);
       if (!oliTunnistin) return;
       const teksti = this.puhuttu.trim();
       if (teksti) this.kysy(teksti);
@@ -998,25 +1134,44 @@ class Pollo {
       }
     };
     this.tunnistin = tunnistin;
-    this.mikki.classList.add('kuuntelee');
-    this.mikki.setAttribute('aria-pressed', 'true');
+    this.merkitseMikki(true);
     this.saneluTila.textContent = SANELU_KUUNTELEE;
     try {
       // Mikrofonilupa kysytään vasta tästä — ei paneelia avattaessa.
       tunnistin.start();
     } catch {
       this.tunnistin = null;
-      this.mikki.classList.remove('kuuntelee');
+      this.merkitseMikki(false);
       this.saneluTila.textContent = 'Sanelu ei käynnisty juuri nyt.';
     }
   }
 
   lopetaSanelu({ laheta = false } = {}) {
+    /*
+     * Natiivisanelu lopetetaan sillan kautta: lopeta() palauttaa
+     * viimeistellyn tekstin, ja se kelpaa kysymykseksi myös silloin,
+     * kun 'sanelu-valmis' ei ehdi tulla perille ennen sulkemista.
+     */
+    if (this.natiiviSanelussa) {
+      const natiivi = haeNatiiviSanelu();
+      this.paataNatiiviSanelu();
+      const kesken = this.puhuttu.trim();
+      try {
+        Promise.resolve(natiivi?.sanelu?.lopeta?.()).then((tulos) => {
+          const teksti = String(tulos?.teksti ?? kesken).trim();
+          if (laheta && teksti) this.kysy(teksti);
+        }, () => {
+          if (laheta && kesken) this.kysy(kesken);
+        });
+      } catch {
+        if (laheta && kesken) this.kysy(kesken);
+      }
+      return;
+    }
     const tunnistin = this.tunnistin;
     if (!tunnistin) return;
     if (!laheta) this.tunnistin = null;
-    this.mikki.classList.remove('kuuntelee');
-    this.mikki.setAttribute('aria-pressed', 'false');
+    this.merkitseMikki(false);
     try {
       tunnistin.stop();
     } catch {
@@ -1024,11 +1179,18 @@ class Pollo {
     }
   }
 
-  /** Siisti suomenkielinen tila jokaiselle virheelle — ei konsolia. */
-  saneluVirhe(koodi) {
+  /**
+   * Siisti suomenkielinen tila jokaiselle virheelle — ei konsolia.
+   *
+   * Koodit tulevat selaimen SpeechRecognitionista; natiivisilta antaa
+   * lisäksi valmiin suomenkielisen viestin, joka näytetään sellaisenaan
+   * silloin kun koodia ei tunnisteta.
+   */
+  saneluVirhe(koodi, viesti = '') {
     this.tunnistin = null;
-    this.mikki.classList.remove('kuuntelee');
-    this.mikki.setAttribute('aria-pressed', 'false');
+    this.natiiviSanelussa = false;
+    this.purkaSaneluKuulijat();
+    this.merkitseMikki(false);
     if (koodi === 'not-allowed' || koodi === 'service-not-allowed') {
       this.saneluTila.textContent = 'Mikrofonin käyttö ei ole sallittu.';
       this.vaihdaTilaan('kirjoitus');
@@ -1043,7 +1205,7 @@ class Pollo {
       this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
       return;
     }
-    this.saneluTila.textContent = 'Sanelu ei onnistunut. Voit myös kirjoittaa.';
+    this.saneluTila.textContent = viesti || 'Sanelu ei onnistunut. Voit myös kirjoittaa.';
   }
 }
 

@@ -674,6 +674,16 @@ import {
   puheVoima, jaaAlku, kertojaTila, HUUDAHDUKSET,
 } from './aani-ehdokkaat.js';
 import { BoardDie } from './die.js';
+/*
+ * Sivun luenta laitteen omalla äänellä (js/lukija.js). Lehden sivuilla,
+ * maalehden aihesivuilla ja pitkissä artikkeleissa ei ole generoituja
+ * äänitteitä, joten kaiutinnappi turvautuu iOS-kuoren luentasiltaan tai
+ * selaimen puhesyntetisaattoriin.
+ */
+import {
+  kokoaLuettavaTeksti, liitaLukija, lueAaneen, lukijaLukee, lukijaTuettu,
+  paivitaLukija, pysaytaLukija,
+} from './lukija.js';
 import {
   el,
   hash01,
@@ -2352,7 +2362,23 @@ export class UI {
         return;
       }
       // Ääni ehti sulkeutua (esim. korttien vaihto) — aloitetaan alusta.
-      if (this.diaryFullUrl) this.playDiaryVoice(this.diaryFullUrl);
+      if (this.diaryFullUrl) {
+        this.playDiaryVoice(this.diaryFullUrl);
+        return;
+      }
+      /*
+       * MERKINTÄ ILMAN GENEROITUA ÄÄNITETTÄ (v-lisäys 12.8.2026).
+       *
+       * Sama kaiutin, sama ele, eri lukija: kun puhe-*.mp3:ää ei ole
+       * tehty, merkintä luetaan laitteen omalla äänellä (iOS-kuoren
+       * luentasilta tai selaimen puhesyntetisaattori). Generoituihin
+       * äänitteisiin tämä ei kajoa lainkaan — ne käsitellään yllä.
+       */
+      if (lukijaLukee(this.factKuuntele)) {
+        pysaytaLukija();
+        return;
+      }
+      lueAaneen(kokoaLuettavaTeksti(this.factText), this.factKuuntele);
     });
 
     this.eventDialog = document.getElementById('event-dialog');
@@ -2819,6 +2845,9 @@ export class UI {
     sfx.stopFlight();
     this.stopIntroVoice();
     this.stopDiaryVoice();
+    // Uusi peli vaientaa myös sivujen luennan: se on documentin
+    // ulkopuolinen puhuja eikä lopu itsestään pelin vaihtuessa.
+    pysaytaLukija();
     this.suljePostikortti();
     this.suljeKulttuuriKuva();
     this.pysaytaKulttuuriAani();
@@ -6103,7 +6132,14 @@ export class UI {
     if (this.travelExpanded && (!hasSlow || suodatinTyhja)) this.suljeMatkavalikko();
 
     if (!this.travelExpanded) {
-      this.turnStatus.textContent = 'Valitse matkustustapa.';
+      /*
+       * OTSIKKORIVI POIS (omistajan päätös 12.8.2026): kolme
+       * matkanappia kertovat itse mitä valitaan, eikä "Valitse
+       * matkustustapa." lisää siihen mitään. Tilarivi tyhjennetään
+       * eikä poisteta — vaiheen B valikot ja nopanheitto kirjoittavat
+       * siihen yhä oman tekstinsä.
+       */
+      this.turnStatus.textContent = '';
 
       // Jalan. Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
       // pelin estetyissä napeissa (vrt. vertailunappi).
@@ -6781,6 +6817,26 @@ export class UI {
   }
 
   /**
+   * Matkakirjamerkinnän kaiutin: sama nappi, kaksi lukijaa.
+   *
+   * Generoitu äänite (assets/audio/puhe-*.mp3) soitetaan kuten ennen.
+   * Merkinnälle, jolle äänitettä ei ole tehty, tarjotaan sama
+   * kuunteluele laitteen omalla äänellä — nappi näkyy siis myös
+   * silloin, kunhan laitteella on jompikumpi lukija. Ilman kumpaakaan
+   * nappi piiloutuu entiseen tapaan, koska se tuottaisi hiljaisuuden.
+   */
+  naytaMerkinnanKaiutin(onAanite) {
+    const nappi = this.factKuuntele;
+    if (!nappi) return;
+    nappi.hidden = !onAanite && !lukijaTuettu();
+    const nimi = onAanite ? 'Jatka merkinnän kuuntelua' : 'Kuuntele merkintä';
+    nappi.dataset.lukijaNimi = nimi;
+    if (lukijaLukee(nappi)) return;
+    nappi.title = nimi;
+    nappi.setAttribute('aria-label', nimi);
+  }
+
+  /**
    * Uusi päiväkirjamerkintä alkaa aina alusta ja avaa kortin.
    *
    * Teksti palautetaan alkuun, koska edellinen merkintä on voitu
@@ -6795,6 +6851,8 @@ export class UI {
    */
   uusiFactKey(key) {
     this.factKey = key;
+    // Uusi merkintä, uusi teksti: edellisen luenta ei saa jatkua.
+    if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
     if (this.factText) this.factText.scrollTop = 0;
     this.asetaPaivakirjanKoko(false);
     this.paivitaJatkuuVihje?.();
@@ -6969,7 +7027,7 @@ export class UI {
         this.diaryFullUrl = saapumisLauta
           ? `assets/audio/puhe-${saapumisLauta}-saapuminen-${saapuminen.cityId}.mp3`
           : null;
-        this.factKuuntele.hidden = !saapumisLauta;
+        this.naytaMerkinnanKaiutin(Boolean(saapumisLauta));
         if (saapumisLauta && this.luettuSaapuminen !== luentaAvain) {
           this.luettuSaapuminen = luentaAvain;
           // Kertojan tila (yläpalkin valikko): pitkä lukee koko merkinnän,
@@ -7033,7 +7091,7 @@ export class UI {
         this.diaryFullUrl = havaintoLauta
           ? `assets/audio/puhe-${havaintoLauta}-havainto-${saapuminen.cityId}.mp3`
           : null;
-        this.factKuuntele.hidden = !havaintoLauta;
+        this.naytaMerkinnanKaiutin(Boolean(havaintoLauta));
         if (havaintoLauta && this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
           this.luettuSaapuminen = luentaAvain;
           this.playDiaryVoice(this.diaryFullUrl, {
@@ -8773,6 +8831,29 @@ export class UI {
     // Uusi sivu alkaa alusta, ei edellisen sivun vierityskohdasta.
     const kortti = this.arrivalDialog.querySelector('.dialog-card');
     if (kortti) kortti.scrollTop = 0;
+    /*
+     * Kaiutin sivun ylälaitaan. Sivunvaihto pysäyttää käynnissä olevan
+     * luennan: lukija ei saa jatkaa edellisen sivun tekstiä sen
+     * jälkeen kun sivu on jo kääntynyt.
+     */
+    pysaytaLukija();
+    this.varustaLukija(this.arrivalDialog, () => this.arrivalDialog.querySelector('.dialog-card'));
+  }
+
+  /**
+   * Kaiutinnappi tekstisisältösivulle — yksi yhteinen apuri kaikille
+   * kolmelle ikkunalle (lehti, nähtävyysjuttu, "Lue lisää").
+   *
+   * Luettava teksti kootaan aina samalla valinnalla (js/lukija.js
+   * kokoaLuettavaTeksti), joten lähteet, kuvatekstit ja visan
+   * vaihtoehdot jäävät pois ilman että sivutyyppejä tarvitsee tuntea.
+   * Piilotettu sivu jää pois itsestään, koska valinta ohittaa
+   * [hidden]-elementit — lehden kaikki sivut asuvat samassa dialogissa.
+   */
+  varustaLukija(dialogi, haeJuuri, { seuraa = false } = {}) {
+    const nappi = liitaLukija(dialogi, haeJuuri, { luokka: 'lukija-sivu', seuraa });
+    paivitaLukija(nappi);
+    return nappi;
   }
 
   /**
@@ -10133,6 +10214,9 @@ export class UI {
     }
     if (!dialogi.open) dialogi.showModal();
     this.nollaaDialoginVieritys(dialogi);
+    // Uusi juttu, uusi teksti: edellisen kohteen luenta ei saa jatkua.
+    pysaytaLukija();
+    this.varustaLukija(dialogi, () => dialogi.querySelector('.nahtavyys-kortti'));
   }
 
   /**
@@ -10837,6 +10921,14 @@ export class UI {
     }
     if (!this.wikiDialog.open) this.wikiDialog.showModal();
     this.nollaaDialoginVieritys(this.wikiDialog);
+    /*
+     * Kaiutin artikkelin ylälaitaan. Teksti valmistuu vasta
+     * verkkohaun jälkeen, joten nappi seuraa kortin sisältöä ja
+     * ilmestyy siinä hetkessä, kun artikkeli laskeutuu ruudulle.
+     */
+    pysaytaLukija();
+    this.wikiLukija = this.varustaLukija(this.wikiDialog,
+      () => this.wikiDialog.querySelector('.wiki-card'), { seuraa: true });
 
     // Teksti ja kuvat molemmat paketista: verkkoa ei tarvita lainkaan.
     if (omat && this.wikiGalleria) return;
@@ -11216,6 +11308,18 @@ export class UI {
     // mutta lähikuvassa teksti on väistynyt tarkoituksella, joten sitä ei
     // palauteta joka renderöinnillä.
     if (nakyy && !this.aloitusZoom) this.introEl.classList.remove('intro-fade', 'intro-pois');
+    /*
+     * KOKO AVAUSKAPPALE ODOTTAA NAPPIA (omistajan tilaus 12.8.2026).
+     *
+     * Runko ja lopetus kirjoittuivat jo ennestään vasta napin jälkeen,
+     * mutta paikkarivi ("Lontoo, nykyhetki:") on kirjoitettu suoraan
+     * HTML:ään (index.html), joten se oli ruudulla heti — ja jäi
+     * kellumaan yksin kartan alle ennen kuin seikkailu oli alkanut.
+     * Perustilassa etusivulla on siis vain kartta ja aloitusnappi;
+     * kappale ilmestyy napin painalluksen jälkeen entiseen tapaan
+     * animoituna.
+     */
+    if (this.introText) this.introText.hidden = !nakyy || !this.aloitettu;
     if (!nakyy) {
       this.introShown = false;
       this.introRunko.textContent = '';
@@ -11939,6 +12043,9 @@ export class UI {
   stopDiaryVoice() {
     this.diaryVoice = null;
     this.luentaTauolla = null;
+    // Laitteen lukija on saman kaiuttimen takana kuin generoitu äänite,
+    // joten "luenta kiinni" tarkoittaa myös sitä.
+    if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
     // Kaikki luennat kiinni — myös mahdollinen myöhästelijä, joka ei
     // enää ollut diaryVoice mutta soi yhä.
     for (const audio of [...(this.luennat ?? [])]) {
