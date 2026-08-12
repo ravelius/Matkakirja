@@ -8532,4 +8532,280 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Dohan nähtävyysjutut (nippu 2, 12.8.2026). Kolme kohdetta — Souq
+   * Waqif, Islamilaisen taiteen museo ja kansallismuseo — on jo QAT-
+   * maalehdessä omina juttuinaan, koska maalehti kirjoitettiin ennen
+   * kuin Dohalla oli lehteä. Niiden jutut kertovat siksi tarkoituksella
+   * eri asian kuin maalehti: museon sisätilan, haukkasuukin ja vanhan
+   * palatsin. Perustelu ja mittaus:
+   * docs/raportit/lehtityo-2026-08-12-nippu2-suunnittelu.md.
+   */
+  doha: {
+    'Islamilaisen taiteen museo': {
+      teksti: 'Näyttelysalit on ryhmitelty suuren keskusaulan ympärille, ja '
+        + 'valo tulee aulaan ylhäältä. Katon kupoli on monikulmainen ja '
+        + 'koostuu kolmiomaisista pinnoista, ja sen lakeen on jätetty '
+        + 'tähdenmuotoinen aukko, josta päivänvalo putoaa suoraan alas. '
+        + 'Pääportaikko haarautuu kahdeksi kaartuvaksi syöksyksi, ja '
+        + 'portaiden yllä riippuu rengasmainen metallinen kattokruunu. '
+        + 'Lattiaan on ladottu mustan ja vaalean kiven geometrinen kuvio.'
+        + '\n\n'
+        + 'Päärakennuksessa on viisi kerrosta, kupoli ja keskustorni, ja '
+        + 'pinta-alaa 45 000 neliömetriä. Julkisivut ovat kermanvaaleaa '
+        + 'kalkkikiveä, jonka sävy vaihtuu päivän mittaan, ja kiveen on '
+        + 'tehty pieniä kaari-ikkunoita tasavälein. Pohjoissivulla kaikki '
+        + 'viisi kerrosta on verhottu lasiseinällä. Salien sisustuksen '
+        + 'suunnitteli Wilmotte & Associés, sama toimisto kuin Louvren '
+        + 'hankkeessa.'
+        + '\n\n'
+        + 'Museo seisoo noin 60 metrin päässä Corniche-rantakadusta ja on '
+        + 'sen seitsemän kilometrin mitan toisessa päässä. Itä- ja '
+        + 'eteläsivua kiertää varta vasten tehty 290 000 neliömetrin '
+        + 'puisto, jolle johtaa museon eteläjulkisivulta kaksi siltaa; '
+        + 'lännessä ja pohjoisessa on vanha dhow-satama. Rakennustyöstä '
+        + 'vastasi turkkilainen Baytur Construction vuonna 2006, ja museo '
+        + 'avattiin yleisölle 8. joulukuuta 2008. Remontin jälkeen ovet '
+        + 'aukesivat uudelleen 4. lokakuuta 2022: saleja oli 18 ja esillä '
+        + 'yli 1 100 esinettä.',
+      kuvat: [
+        {
+          tiedosto: 'Doha Museum of Islamic Arts Interior Hall 01.jpg',
+          selite: 'Museon keskusaula: portaat haarautuvat kahdeksi kaarevaksi '
+            + 'syöksyksi, yllä riippuu rengasmainen kattokruunu ja '
+            + 'taustalla nousee pohjoisseinän lasipinta.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Doha Museum of Islamic Arts Interior Hall Ceiling 1.jpg',
+          selite: 'Aulan kupoli alhaalta kuvattuna: kolmiopinnoista koottu '
+            + 'holvi ja sen lakeen jätetty tähdenmuotoinen valoaukko.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Corniche': {
+      teksti: 'Kartalla näkyvä kaari on Corniche, seitsemän kilometrin '
+        + 'rantabulevardi puolikuun muotoisen Dohanlahden ympäri: '
+        + 'pohjoispäässä West Bayn Sheraton, eteläpäässä Al Khulaifatin '
+        + 'puisto, välissä kuusikaistainen katu ja yhtenäinen '
+        + 'jalankulkuraitti. Kaari ei seuraa vanhaa rantaviivaa. Vesiraja '
+        + 'kulki ennen nykyisten kortteleiden kohdalla, ja Souq Waqif — '
+        + 'joka oli satamatori — jäi sisämaahan.'
+        + '\n\n'
+        + 'Kaari piirrettiin 1970-luvun puolivälissä, kun lahden '
+        + 'pohjukkaan oli kasattu 630 hehtaaria uutta maata. Emiirin '
+        + 'hallintoviraston suunnittelutoimistoa johtanut Hisham Qaddumi '
+        + 'kutsui Dohaan amerikkalaisen arkkitehdin William Pereiran '
+        + 'vuonna 1975. Kaksikko teki yli neljäkymmentä luonnosta: kaari '
+        + 'suljettiin puoliympyräksi ja katuun merkittiin viisi '
+        + 'liikenneympyrää. Pereiran pyramidinmuotoinen Sheraton nousi '
+        + 'omalle täyttömaasaarelleen ja avattiin 22. helmikuuta 1982. '
+        + 'Sen taakse ruopatulle maalle kasvoi 1980-luvulla Al Dafnan '
+        + 'liikekeskusta.'
+        + '\n\n'
+        + 'Sama kaari yhdistää vanhan sataman ja pohjoispään lasitornit. '
+        + 'Sataman suulla seisoo veistos: avattu simpukankuori ja sen '
+        + 'sisällä helmi. Rantaan on rakennettu kolme laituria puisille '
+        + 'dhow-veneille, katua reunustaa 1 440 palmunlehden muotoista '
+        + 'valaisinta, ja Dohan metron 37 asemasta seitsemän on kaaren '
+        + 'varrella. Aamuvarhaisella raitilla juostaan, keskipäivällä '
+        + 'istutaan palmujen varjossa, illalla ranta täyttyy perheistä.',
+      kuvat: [
+        {
+          tiedosto: 'Corniche in Doha, Promenade.jpg',
+          selite: 'Cornichen laatoitettu kävelyraitti ja matala betonimuuri '
+            + 'kaartuvat lahden ympäri, vastarannalla West Bayn tornit.',
+          lahde: 'FLASHPACKER TRAVELGUIDE, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Traditional dhows on Doha Corniche used for pearling.jpg',
+          selite: 'Kaksi puista dhow-venettä kiinni rannassa, kansilla '
+            + 'lehvistä katetut varjokatokset; takana rantakadun palmut '
+            + 'ja kaupungin talot.',
+          lahde: 'Larry Johnson @ Flickr, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Souq Waqif': {
+      teksti: 'Torin laidalla on oma osastonsa haukoille. Haukkasuukissa '
+        + 'pidetään huutokauppoja ja totutetaan lintuja käsittelyyn, ja '
+        + 'myynnissä on lintujen lisäksi varusteita laskeutumisalustoista '
+        + 'GPS-paikantimiin. Metsästyskausi kestää lokakuusta '
+        + 'huhtikuuhun. Lintu maksaa tavallisesti 4 000–10 000 dollaria, '
+        + 'mutta vuonna 2022 yhdestä maksettiin huutokaupassa 250 000. '
+        + 'Lajeja käytetään neljää: aavikkohaukkaa sitkeyden ja näön '
+        + 'takia, muuttohaukkaa nopeuden vuoksi, kuivuutta kestävää '
+        + 'keltapäähaukkaa ja tuotua tunturihaukkaa, joka on lähinnä '
+        + 'näyttölintu.'
+        + '\n\n'
+        + 'Eläinlääkäri on samalla kujalla. Souq Waqif Falcon Hospital on '
+        + 'tarkoitettu pelkästään haukoille, se toimii useassa '
+        + 'kerroksessa, ja kiireimpään aikaan siellä käy jopa 150 lintua '
+        + 'päivässä. Aavikkohaukka on Qatarin kansallislintu, sama laji '
+        + 'kuin Arabiemiirikunnissa, Saudi-Arabiassa, Omanissa ja '
+        + 'Jemenissä. Linnut hankitaan enimmäkseen pyydystämällä, harvoin '
+        + 'pesästä, ja Al Khorin lahden seutu on suosittu pyyntipaikka.'
+        + '\n\n'
+        + 'Kortteli on nimeltään Al Jasrah. Samassa korttelissa ovat Souq '
+        + 'Waqifin hevostallit ja Al Kootin linnake, ja ihmisten '
+        + 'ensimmäinen sairaala perustettiin tänne vuonna 1947. '
+        + 'Haukkametsästäjien ainoa yhdistys Al Gannas syntyi 2008 '
+        + 'Kataran kulttuurikylässä ja järjestää vuosittaisen '
+        + 'S\'hail-festivaalin.',
+      kuvat: [
+        {
+          tiedosto: 'Falcon souq 03.jpg',
+          selite: 'Haukkasuukin liike Souq Waqifissa: lattiana on hiekka, sen '
+            + 'yli kulkee vihreäpäällysteisiä orsirimoja ja niillä istuu '
+            + 'haukkoja ilman huppua. Takaseinällä on varustevitriini, ja '
+            + 'asiakkaat seisovat korotetulla kivilattialla; takaseinällä '
+            + 'on liikkeen sisustuksena suuria muotokuvia.',
+          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Doha - Gyrfalcon at Falcon hospital.jpg',
+          selite: 'Valkoinen tunturihaukka vihreällä pylväsorrella '
+            + 'haukkasairaalan portaiden edessä Dohassa.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Qatarin kansallismuseo': {
+      aika: '1975',
+      teksti: 'Sheikki Jassim bin Mohammed Al Thani valitsi hallintonsa '
+        + 'paikaksi 1900-luvun alussa Fereej Al Salatan, '
+        + 'merenrantakorttelin, jonne veneillä oli helppo tulla. Kun hän '
+        + 'kuoli 1913, palatsiin jäi asumaan hänen poikansa Abdullah bin '
+        + 'Jassim Al Thani, maan seuraava hallitsija. Rakennusryhmä '
+        + 'kasvoi vuosikymmenten mittaan ilman kokonaissuunnitelmaa, ja '
+        + 'vuoden 2010 inventoinnissa siitä tunnistettiin yhdeksän osaa: '
+        + 'kolmen sheikin perheasunnot, vartijan talo, moskeijan hoitajan '
+        + 'talo, kaksi porttitaloa ja kaksi majlista eli vierashuonetta.'
+        + '\n\n'
+        + 'Vuonna 1923 Abdullah siirsi hallinnon rannalta keskustaan, '
+        + 'tyhjäksi jääneeseen vanhaan linnakkeeseen, ja palatsi jäi '
+        + 'ilman tehtävää ja rapistui. Vuonna 1972 valtaan noussut '
+        + 'Khalifa bin Hamad Al Thani päätti tehdä siitä maan '
+        + 'kansallismuseon. Palatsi kunnostettiin, sen ympärille '
+        + 'rakennettiin näyttelytilat ja viereen kaivettiin allas '
+        + 'puuveneitä ja helmenpyynnin välineitä varten. Museo avattiin '
+        + '23. kesäkuuta 1975, ja siihen kuului sadan paikan luentosali '
+        + 'ja kirjasto. Vuonna 1980 se sai Aga Khan '
+        + '-arkkitehtuuripalkinnon.'
+        + '\n\n'
+        + 'Palatsi kunnostettiin toistamiseen vuonna 2015, kun uutta '
+        + 'museorakennusta valmisteltiin. Työstä vastasi berliiniläinen '
+        + 'ZRS Architekten Ingenieure. Nykyään palatsi on museon keskellä '
+        + 'oma pihapiirinsä: sahalaitaisten muurien sisällä on '
+        + 'hiekkakenttä, palmuja ja kaksikerroksinen päärakennus, jonka '
+        + 'yläkerrassa on rivi kaariaukkoja.',
+      kuvat: [
+        {
+          tiedosto: 'Old Palace at National Museum of Qatar.jpg',
+          selite: 'Vanha palatsi ylhäältä: sahalaitaisten muurien rajaama '
+            + 'pihapiiri, palmurivi ja kaksikerroksinen päärakennus, '
+            + 'ympärillä museon vaaleat katot ja takana meri.',
+          lahde: 'Manjri Saxena, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Courtyard of the Palace.jpg',
+          selite: 'Palatsin piha: palmunrunkopylväiden kannattaman katoksen '
+            + 'alla rivi isoja saviruukkuja puutelineillä, taustalla '
+            + 'päärakennuksen puuristikkoparvekkeet.',
+          lahde: 'Alexmounayer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al Koot -linnake': {
+      teksti: 'Al Koot -linnake tunnetaan myös nimellä Dohan linnake, ja se '
+        + 'seisoo Al Biddan kaupunginosassa Souq Waqifin laidalla. '
+        + 'Pohjakaava on neliö, muurit on rapattu valkoisiksi ja niiden '
+        + 'harjalla kiertää rivi kolmiomaisia sakaroita. Kulmatorneja on '
+        + 'neljä, mutta ne eivät ole keskenään samanlaisia: kolme on '
+        + 'pyöreää ja yksi nelikulmainen. Muurissa on kapeita pystysuoria '
+        + 'aukkoja, ja sisään mennään vaatimattomasta puuovesta keskellä '
+        + 'seinää.'
+        + '\n\n'
+        + 'Vuosiluvuista on eri tietoja, mutta useimmin toistettu kulku '
+        + 'menee näin: paikalle rakennettiin poliisiasema vuonna 1880, '
+        + 'tilat otettiin vankilakäyttöön 1906, ja kun osmanit olivat '
+        + 'jättäneet linnakkeen, sheikki Abdullah bin Jassim Al Thani '
+        + 'rakennutti sen uudelleen vuonna 1927. Hän hallitsi Qataria '
+        + 'vuodesta 1913 vuoteen 1949. Osa lähteistä kertoo tehtäväksi '
+        + 'suoraan sen, että viereisen torin kauppiaat saisivat pitää '
+        + 'tavaransa varkailta rauhassa.'
+        + '\n\n'
+        + 'Vankila-aika näkyy yhä yhdessä yksityiskohdassa: sisäpihan '
+        + 'rukouspaikalta jätettiin pois sekä seinät että katto, jotta '
+        + 'vartijat näkivät vangit myös rukouksen ajan. Vuoden 1978 '
+        + 'korjaus muutti rakennusta niin paljon, että osa alkuperäisistä '
+        + 'yksityiskohdista katosi, ja samalla linnakkeesta tuli '
+        + 'näyttelytila. Esillä on kipsi- ja puuleikkauksia, '
+        + 'kalastusvälineitä ja veneitä, vanhoja valokuvia ja '
+        + 'öljymaalauksia käsityöläisistä. Qatar Museums sai uuden '
+        + 'kunnostuksen valmiiksi vuonna 2022.',
+      kuvat: [
+        {
+          tiedosto: 'Doha Souq Waqif Al Koot Fort 1.jpg',
+          selite: 'Linnake kadun puolelta: nelikulmainen kulmatorni '
+            + 'vasemmalla, pyöreät tornit keskellä ja oikealla, muurin '
+            + 'harjalla kolmiomaiset sakarat.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Msheireb': {
+      aika: '2010–2022',
+      teksti: 'Msheireb tarkoittaa arabiaksi paikkaa, jossa juodaan vettä. '
+        + 'Dohan vanha liikekeskusta oli rapistunut, ja tilalle '
+        + 'rakennettiin kokonaan uusi 31 hehtaarin kaupunginosa. Työ '
+        + 'alkoi tammikuussa 2010 ja eteni kuudessa vaiheessa; viimeinen '
+        + 'valmistui helmikuussa 2022. Hinta oli noin 5,5 miljardia '
+        + 'dollaria, asukkaita on suunniteltu 15 000. Vanhaa ei kopioitu, '
+        + 'mutta mittakaava otettiin talteen: matalat talot seisovat '
+        + 'lähekkäin varjostaen toisiaan, ja kadut on käännetty ottamaan '
+        + 'vastaan lahdelta tuleva tuuli. Katoilla on 6 400 '
+        + 'aurinkopaneelia sähköä ja 1 400 veden lämmitystä varten.'
+        + '\n\n'
+        + 'Neljää vanhaa taloa ei purettu. Ne kunnostettiin arkkitehti '
+        + 'John McAslanin johdolla ja avattiin museoina lokakuussa 2015. '
+        + 'Company House kertoo öljyalan ensimmäisistä työntekijöistä ja '
+        + 'heidän perheistään: ensimmäinen kaivo porattiin Dukhanissa '
+        + '1939 ja ensimmäinen öljylasti lähti maasta 1949. Radwani House '
+        + 'on 1920-luvulta, kuului Akbar Radwanin perheelle ja näyttää '
+        + 'tavallisen perheen arjen. Mohammed Bin Jassim Housen '
+        + 'rakennutti maan perustajan poika; siellä on Echo Memory '
+        + '-kokoelma esineitä, jotka tulivat esiin aluetta purettaessa. '
+        + 'Bin Jelmood House käsittelee Intian valtameren orjakauppaa ja '
+        + 'sen lakkauttamista.'
+        + '\n\n'
+        + 'Talot ovat Mohammed Bin Jassim -kadulla kansallisarkiston '
+        + 'naapurissa, ja korttelin läpi kulkee raitiotie. Britannian '
+        + 'arkkitehtiliitto valitsi museon 2018 maailman parhaiden uusien '
+        + 'rakennusten joukkoon.',
+      kuvat: [
+        {
+          tiedosto: 'Msheireb Downtown Doha tram at night.jpg',
+          selite: 'Msheirebin raitiovaunu illalla uuden korttelin '
+            + 'kivijulkisivujen välissä; kiskot on upotettu kuvioituun '
+            + 'jalankulkupintaan.',
+          lahde: 'Michael Coghlan @ Flickr, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Radwani House.jpg',
+          selite: 'Radwani Housen lattia on avattu kaivauksin: renkaan '
+            + 'muotoinen syvennys ja vanhempien muurien pohjia '
+            + 'kalkittujen seinien sisällä.',
+          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
