@@ -584,6 +584,14 @@ export const RAAMATTU2 = {
           + 'johdannot kirjoittaa Fable omistajan päätöksellä. '
           + 'Valmiiden maalehtien tilanne mantereittain näkyy '
           + 'Tilanne-välilehdellä — Raamattu kuvaa vain mallin.',
+        'PITKÄT ARTIKKELIT (idea 12.8. — ideatasolla, '
+          + 'omistajalla lisäajatuksia tulossa): peliin tulee '
+          + 'myös pidempiä artikkeleita eri aiheista — kuin '
+          + 'professorin kirjoituksia — joita voi lukea rauhassa '
+          + 'ja myöhemmin myös kuunnella (laitteen ääniluenta '
+          + 'natiivisovelluksessa). Viisas Pöllö osaa ehdottaa '
+          + 'niitä linkkeinä, joista artikkeli nousee suoraan '
+          + 'esiin — pöllöstä tulee syvemmän sisällön löytöreitti.',
       ],
     },
     {
