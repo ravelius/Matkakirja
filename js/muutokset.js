@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 596, teksti: 'Pöllö tietää maan oikein, oikaisee virheet; chat siistiksi' },
   { v: 595, teksti: 'Pöllöön kaiutin, osuvat linkit, jatkot; lehti elpyy' },
   { v: 594, teksti: 'Kuwaitin kaupunkilehti ja kuusi nahtavyysjuttua' },
   { v: 593, teksti: 'Kaiutinluenta sivuille, valikkosiirrot ja iPhonen alareuna' },
