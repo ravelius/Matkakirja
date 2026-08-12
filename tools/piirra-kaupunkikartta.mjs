@@ -756,7 +756,11 @@ const KAUPUNGIT = {
     //
     // meri: true — Omaninlahti on OSM:ssä rantaviivaa ilman
     // vesimonikulmiota, sama tilanne kuin Dohassa.
-    rajat: { pohjoinen: 23.622, etela: 23.610, lansi: 58.586, ita: 58.604 },
+    // Eteläreuna 23,6085 eikä 23,610: Motishwar Mandir, Omanin vanhin
+    // hindutemppeli, jäi ensimmäisessä rajauksessa 33 metriä kuvan
+    // ulkopuolelle. Se on kuudes karttakohde ja ainoa, joka ei ole
+    // linnake tai palatsi, joten sen takia kannatti siirtää reunaa.
+    rajat: { pohjoinen: 23.6205, etela: 23.6085, lansi: 58.586, ita: 58.604 },
     meri: true,
   },
   kuwait: {
