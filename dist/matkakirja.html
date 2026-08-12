@@ -10441,9 +10441,11 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
    ALANAPPIRIVI — kolme paikkaa (js/ui.js piirraToimintorivi)
    ---------------------------------------------------------------------------
    Vasemmalla monitoiminappi, keskellä Viisas Pöllö, oikealla suurennuslasi.
-   Matkustusnapit eivät levitä riviä vaan LIUKUVAT pöllön ja suurennuslasin
-   päälle, joten rivi on aina täsmälleen kolmen napin levyinen (omistajan
-   linjaus 12.8.2026).
+   Matkustusnapit eivät levitä riviä vaan LIUKUVAT koko rivin päälle, joten
+   rivi on aina täsmälleen kolmen napin levyinen (omistajan linjaus
+   12.8.2026). Liu'un ollessa auki KAIKKI kolme perusnappia väistyvät —
+   myös monitoiminappi, joka liu'un avasi (omistajan havainto v589,
+   iPhone: rivissä näkyi neljä nappia kolmen sijaan).
    =========================================================================== */
 
 .toimintorivi { position: relative; }
@@ -10464,23 +10466,27 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 .pollo-paikka > .pollo-nappi { width: 100%; }
 
 /*
- * Liuku peittää keskimmäisen ja oikean paikan. Monitoiminappi jää näkyviin
- * ja napautettavaksi, jotta liu'un saa kiinni samasta napista josta se
- * aukesi. Kiinni ollessaan liuku on sekä läpinäkyvä että napautuksille
+ * Liuku peittää koko rivin: kolme matkanappia asettuu täsmälleen kolmen
+ * peruspaikan päälle, joten mikään nappi ei jää niiden viereen näkyviin.
+ * Sama väli kuin ruudukossa (0.5rem) pitää napit samoissa sarakkeissa.
+ * Kiinni ollessaan liuku on sekä läpinäkyvä että napautuksille
  * läpäisemätön — muuten se söisi pöllön ja Tutkin napautukset.
+ *
+ * Liuku suljetaan napauttamalla rivin ulkopuolelta (kartta) tai
+ * valitsemalla jokin matkanapeista; monitoiminappi on auki-tilassa
+ * piilossa, joten se ei enää ole neljäs nappi rivissä.
  */
 .toimintorivi-liuku {
   position: absolute;
   top: 0;
   bottom: 0;
-  /* Vasen reuna alkaa monitoiminapin jälkeen: kolmasosa + puolet väleistä. */
-  left: calc((100% - 1rem) / 3 + 0.5rem);
+  left: 0;
   right: 0;
   display: flex;
-  gap: 0.4rem;
+  gap: 0.5rem;
   opacity: 0;
   pointer-events: none;
-  transform: translateX(-14%);
+  transform: translateX(-8%);
   transition: transform 0.22s ease, opacity 0.18s ease;
 }
 
@@ -10489,11 +10495,11 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 /*
  * Liu'un napit ovat aina pelkkiä ikoneita.
  *
- * Matkustustapoja on kolme (jalan, laiva, lento) ja liuku on kaksi
- * paikkaa leveä, joten 390 pikselin ruudulla nappiin jää noin 70 px.
- * Ikoni mahtuu siihen väljästi, selite ei — ja selite kelpaa muutenkin
- * vain hiirelle, joka näkee saman titlestä. Ilman tätä sääntöä nimet
- * olisivat leveällä ruudulla puskeneet napit ahtaiksi.
+ * Matkustustapoja on kolme (jalan, laiva, lento) ja ne jakavat rivin
+ * kolmeen yhtä suureen paikkaan, aivan kuten perusnapitkin. Selite
+ * kelpaa vain hiirelle, joka näkee saman titlestä; ilman tätä sääntöä
+ * nimet olisivat leveällä ruudulla puskeneet napit ahtaiksi ja
+ * kaventaneet ikonit tunnistamattomiksi.
  */
 .toimintorivi-liuku .icon-label { display: none; }
 .toimintorivi-liuku > button { padding-left: 0.35rem; padding-right: 0.35rem; }
@@ -10504,32 +10510,35 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
   transform: translateX(0);
 }
 
-/* Avoin liuku merkitään myös monitoiminappiin, jotta tila näkyy. */
-.toimintorivi.liuku-auki .monitoimi-nappi { color: var(--accent); }
-
 /*
- * Peittyvät napit väistyvät liu'un alta.
+ * Peittyvät napit väistyvät liu'un alta — kaikki kolme.
  *
  * Ilman tätä pöllö ja suurennuslasi näkyivät liu'un nappien läpi (napit
  * ovat läpikuultavia kartan päällä), ja rivi näytti neljältä napilta
- * kolmen sijaan. Nyt ne häivytetään ja niiden napautukset menevät
- * liu'ulle — juuri sitä "liukuvat päälle" tarkoittaa.
+ * kolmen sijaan. Sama koski monitoiminappia, joka jäi ennen näkyviin
+ * matkanappien viereen: omistaja laski iPhonella neljä nappia, vaikka
+ * matkustustapoja on kolme. Nyt väistyvät kaikki, ja liuku saa koko
+ * leveyden.
+ *
+ * visibility viivästetään häivytyksen loppuun: näkymätön nappi katoaa
+ * myös sarkainkierrosta ja ruudunlukijalta, mutta pitää paikkansa
+ * ruudukossa, joten rivin korkeus ja liu'un mitat säilyvät.
  */
-.toimintorivi-perus > .pollo-paikka,
-.toimintorivi-perus > *:last-child {
-  transition: opacity 0.18s ease;
+.toimintorivi-perus > * {
+  transition: opacity 0.18s ease, visibility 0s;
 }
 
-.toimintorivi.liuku-auki .toimintorivi-perus > .pollo-paikka,
-.toimintorivi.liuku-auki .toimintorivi-perus > *:last-child {
+.toimintorivi.liuku-auki .toimintorivi-perus > * {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+  transition: opacity 0.18s ease, visibility 0s linear 0.18s;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .toimintorivi-liuku,
-  .toimintorivi-perus > .pollo-paikka,
-  .toimintorivi-perus > *:last-child { transition: none; }
+  .toimintorivi-perus > *,
+  .toimintorivi.liuku-auki .toimintorivi-perus > * { transition: none; }
 }
 
 /* ===========================================================================
@@ -10540,6 +10549,20 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
    Lehtinäkymässä se siirtyy lehden <dialog>-elementin sisään ja saa
    lisäluokan .pollo-kelluu — modaali elää selaimen ylimmässä kerroksessa,
    eikä rivissä oleva nappi olisi sen alla napautettavissa.
+
+   PANEELI ON PAPERIA (omistajan linjaus 12.8.2026). Tumma laatikko vaihtui
+   samaan painopaperiin kuin kaupunkilehden arkki (.dialog.arkki
+   .dialog-card): vaalea pohja, kohinapinta ja tumma muste. Samalla
+   poistuivat yläpalkin otsikko ja ×-nappi — paneeli suljetaan napauttamalla
+   sen ulkopuolelle tai Esc-näppäimestä (js/pollo.js seuraaSulkemista).
+
+   TERÄVYYS. Paneeli asuu DOMissa alanappirivin sisällä eli .turn-cardin
+   alla, ja peri sieltä pergamentin vaalean tekstivarjon (body[data-mode]
+   .turn-card: 0 0 6px vaalea hehku). Tummalla pohjalla vaalean tekstin
+   ympärille syntyi hehkureunus, joka täytti kirjainten sisukset — teksti
+   näytti iPhonella suttuiselta (omistajan havainto v589). Varjo on nyt
+   nollattu koko paneelista, leipäteksti on lukukirjasimella (--font-luku)
+   ja kirjasinkoot on nostettu puhelinluettaviksi.
    =========================================================================== */
 
 /* Kelluva muoto: pyöreä nappi lehden oikeassa alalaidassa. */
@@ -10565,6 +10588,20 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 .pollo-nappi.auki { color: var(--accent); }
 
 .pollo-paneeli {
+  /*
+   * Paneelin oma väripaletti. Sävyt on otettu kaupunkilehdestä: paperi
+   * #f5f0e2 ja painomuste #211d18 ovat samat kuin .dialog.arkki
+   * .dialog-cardissa, jotta pöllön paneeli tuntuu samalta arkilta kuin
+   * lehti. Muuttujat pitävät sävyt yhdessä paikassa, koska paneelin
+   * sisällä on kymmenkunta osaa.
+   */
+  --pollo-paperi: #f5f0e2;
+  --pollo-paperi-2: #ece2c8;
+  --pollo-muste: #211d18;
+  --pollo-muste-himmea: #6b5a45;
+  --pollo-korostus: #7a5514;
+  --pollo-viiva: rgba(122, 85, 20, 0.32);
+
   position: fixed;
   right: calc(0.7rem + env(safe-area-inset-right, 0px));
   bottom: calc(7.2rem + env(safe-area-inset-bottom, 0px));
@@ -10573,89 +10610,75 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
   flex-direction: column;
   width: min(21rem, calc(100vw - 1.4rem));
   max-height: min(27rem, calc(100vh - 10rem));
-  border: 1px solid var(--line);
+  border: 1px solid var(--pollo-viiva);
   border-radius: var(--radius);
-  background: var(--panel);
-  color: var(--ink-light);
-  font-family: var(--font-type);
+  /* Sama painopaperi kuin lehden arkissa: kohina kertaantuu värin päälle. */
+  background-color: var(--pollo-paperi);
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+  color: var(--pollo-muste);
+  /* Leipäteksti lukukirjasimella, kuten lehden jutut. */
+  font-family: var(--font-luku);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
   overflow: hidden;
 }
 
-.pollo-yla {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0.45rem 0.5rem 0.45rem 0.7rem;
-  border-bottom: 1px solid var(--line);
-  background: var(--panel-2);
-}
+/*
+ * EI HEHKUA. Kaikki paneelin teksti nollaa perityn pergamenttivarjon —
+ * tämä on se sääntö, joka teki teksteistä jälleen teräviä. Valitsin on
+ * tarkoituksella tarkempi kuin body[data-mode] .actions button, joka
+ * yltää paneelin nappeihin asti.
+ */
+.pollo-paneeli,
+body[data-mode] .actions .pollo-paneeli,
+body[data-mode] .actions .pollo-paneeli * { text-shadow: none; }
 
-.pollo-otsikko {
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  color: var(--accent);
-}
-
-/* Rasti on selvä ja riittävän iso sormelle — sulkeminen ei saa jäädä
-   arvailun varaan (pelin sääntö: pöllö ei koskaan tunkeile). */
-button.pollo-sulje {
-  width: 1.9rem;
-  height: 1.9rem;
-  min-height: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--muted);
-  font-size: 1.25rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-button.pollo-sulje:hover { color: var(--ink-light); background: rgba(255, 255, 255, 0.06); }
-
+/*
+ * Ehdotukset ovat paneelin ylin osa nyt kun otsikkopalkkia ei ole.
+ * Yläpehmuste antaa niille saman ilmavan reunuksen, joka palkilla oli.
+ */
 .pollo-ehdotukset {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  padding: 0.5rem 0.6rem;
-  border-bottom: 1px solid var(--line);
+  padding: 0.55rem 0.6rem;
+  border-bottom: 1px solid var(--pollo-viiva);
 }
 
 button.pollo-ehdotus {
   padding: 0.4rem 0.55rem;
   min-height: 0;
-  border: 1px solid var(--line);
+  border: 1px solid var(--pollo-viiva);
   border-radius: 8px;
-  background: var(--panel-2);
-  color: var(--ink-light);
+  background: var(--pollo-paperi-2);
+  color: var(--pollo-muste);
   font-family: inherit;
-  font-size: 0.78rem;
-  line-height: 1.3;
+  font-size: 0.85rem;
+  line-height: 1.35;
   text-align: left;
   cursor: pointer;
 }
 
-button.pollo-ehdotus:hover { border-color: var(--accent-dark); color: var(--accent); }
+button.pollo-ehdotus:hover { border-color: var(--pollo-korostus); color: var(--pollo-korostus); }
 button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
 
 .pollo-virta {
   flex: 1;
   min-height: 3rem;
-  padding: 0.6rem;
+  padding: 0.7rem 0.6rem;
   overflow-y: auto;
   overscroll-behavior: contain;
 }
 
 /* Vastaukset ovat pitkähköä leipätekstiä, joten ne käyttävät samaa
-   lukukirjasinta kuin lehden jutut (--font-luku). Pelaajan oma kysymys
-   pysyy kirjoituskoneessa, jotta puheenvuorot erottuvat toisistaan. */
+   lukukirjasinta kuin lehden jutut (--font-luku, paneelin perintö).
+   Pelaajan oma kysymys pysyy kirjoituskoneessa, jotta puheenvuorot
+   erottuvat toisistaan. Koot ovat puhelinluettavia: alle 13 pikselin
+   teksti ei ole tässä kirjasimessa enää terävää. */
 .pollo-viesti {
-  margin: 0 0 0.5rem;
-  font-size: 0.82rem;
-  line-height: 1.45;
+  margin: 0 0 0.55rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .pollo-viesti:last-child { margin-bottom: 0; }
@@ -10663,17 +10686,19 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
 .pollo-kayttaja {
   padding: 0.35rem 0.5rem;
   border-radius: 8px;
-  background: var(--panel-2);
-  color: var(--ink-light);
+  background: var(--pollo-paperi-2);
+  color: var(--pollo-muste);
+  font-family: var(--font-type);
+  font-size: 0.85rem;
 }
 
 .pollo-pollo {
   font-family: var(--font-luku);
-  font-size: 0.92rem;
-  color: var(--ink-light);
+  font-size: 0.95rem;
+  color: var(--pollo-muste);
 }
 
-.pollo-odottaa { color: var(--muted); font-style: italic; }
+.pollo-odottaa { color: var(--pollo-muste-himmea); font-style: italic; }
 
 /* Pelinsisäiset linkit vastauksen alle. Ne rakennetaan paikallisen haun
    tuloksista, ei mallin tekstistä, joten ne osoittavat aina johonkin. */
@@ -10687,22 +10712,40 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
 button.pollo-linkki {
   padding: 0.35rem 0.5rem;
   min-height: 0;
-  border: 1px dashed var(--accent-dark);
+  border: 1px dashed var(--pollo-korostus);
   border-radius: 8px;
   background: transparent;
-  color: var(--accent);
+  color: var(--pollo-korostus);
   font-family: inherit;
-  font-size: 0.75rem;
-  line-height: 1.3;
+  font-size: 0.82rem;
+  line-height: 1.35;
   text-align: left;
   cursor: pointer;
 }
 
-button.pollo-linkki:hover { background: rgba(217, 161, 59, 0.12); }
+button.pollo-linkki:hover { background: rgba(122, 85, 20, 0.12); }
 
-.pollo-nukkuu { text-align: center; padding: 0.6rem 0.3rem; }
-.pollo-nukkuu-otsikko { margin: 0 0 0.4rem; color: var(--accent); font-size: 0.9rem; }
-.pollo-nukkuu-lisa { margin: 0; color: var(--muted); font-size: 0.78rem; line-height: 1.4; }
+/*
+ * "Ei hereillä" -ilmoitus on paneelin ainoa sisältö ennen käyttöönottoa,
+ * joten se on myös se teksti, jonka omistaja näki suttuisena. Otsikko on
+ * tumma kulta paperilla (sama sävy kuin lehden otsikoissa), lisärivi
+ * himmeää mustetta — molemmat riittävän isoina luettaviksi.
+ */
+.pollo-nukkuu { text-align: center; padding: 0.7rem 0.3rem; }
+
+.pollo-nukkuu-otsikko {
+  margin: 0 0 0.45rem;
+  color: var(--pollo-korostus);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.pollo-nukkuu-lisa {
+  margin: 0;
+  color: var(--pollo-muste-himmea);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
 
 /* ---------------------------------------------------------------------
    SYÖTTÖALUE: matala nappirivi paneelin pohjalla (omistajan linjaus
@@ -10717,8 +10760,9 @@ button.pollo-linkki:hover { background: rgba(217, 161, 59, 0.12); }
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  border-top: 1px solid var(--line);
-  background: var(--panel-2);
+  border-top: 1px solid var(--pollo-viiva);
+  /* Hitusen tummempi paperi erottaa pohjarivin arkista ilman omaa väriä. */
+  background: var(--pollo-paperi-2);
   padding: 0.4rem 0.45rem 0.45rem;
 }
 
@@ -10734,34 +10778,40 @@ button.pollo-nappula {
   place-items: center;
   min-height: 2.25rem;
   padding: 0.15rem 0.3rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--pollo-viiva);
   border-radius: 8px;
-  background: var(--panel);
-  color: var(--accent);
+  background: var(--pollo-paperi);
+  color: var(--pollo-korostus);
   cursor: pointer;
 }
 
 button.pollo-nappula .viiva-ikoni svg { width: 1.15rem; height: 1.15rem; }
-button.pollo-nappula:hover:not(:disabled) { border-color: var(--accent-dark); }
+button.pollo-nappula:hover:not(:disabled) { border-color: var(--pollo-korostus); }
 button.pollo-nappula:disabled { opacity: 0.5; cursor: default; }
 
-button.pollo-mikki.kuuntelee {
-  background: var(--accent-dark);
-  color: var(--ink-light);
+/*
+ * Kuunteleva mikki on ainoa täyteinen nappi paneelissa, joten sen sävy
+ * kirjoitetaan paneelin luokan alle: kartalla .actions-napeille on oma
+ * pergamenttisääntö, joka muuten voittaisi tämän.
+ */
+.pollo-paneeli button.pollo-mikki.kuuntelee {
+  background: var(--pollo-korostus);
+  color: #f7f1e2;
+  border-color: var(--pollo-korostus);
   animation: pollo-syke 1.4s ease-in-out infinite;
 }
 
 @keyframes pollo-syke {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(217, 161, 59, 0.5); }
-  60% { box-shadow: 0 0 0 0.45rem rgba(217, 161, 59, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(122, 85, 20, 0.45); }
+  60% { box-shadow: 0 0 0 0.45rem rgba(122, 85, 20, 0); }
 }
 
 /* Sanelun tilarivi kertoo vain hetkellisen tilan. Tyhjänä se ei vie
    tilaa lainkaan, joten paneelin pohja pysyy matalana. */
 .pollo-sanelu-tila {
   margin: 0;
-  color: var(--muted);
-  font-size: 0.76rem;
+  color: var(--pollo-muste-himmea);
+  font-size: 0.82rem;
   line-height: 1.35;
   text-align: center;
 }
@@ -10774,29 +10824,29 @@ input.pollo-kentta {
   flex: 1;
   min-width: 0;
   padding: 0.45rem 0.55rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--pollo-viiva);
   border-radius: 8px;
-  background: var(--bg);
-  color: var(--ink-light);
+  background: var(--pollo-paperi);
+  color: var(--pollo-muste);
   font-family: inherit;
   /* 16 px estää iOS:n automaattisen zoomin kenttään napautettaessa. */
   font-size: 16px;
 }
 
-input.pollo-kentta::placeholder { color: var(--muted); }
+input.pollo-kentta::placeholder { color: var(--pollo-muste-himmea); }
 input.pollo-kentta:disabled { opacity: 0.6; }
 
 button.pollo-laheta {
   width: 2.3rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--pollo-viiva);
   border-radius: 8px;
-  background: var(--panel);
-  color: var(--accent);
+  background: var(--pollo-paperi);
+  color: var(--pollo-korostus);
   font-size: 1rem;
   cursor: pointer;
 }
 
-button.pollo-laheta:hover:not(:disabled) { border-color: var(--accent-dark); }
+button.pollo-laheta:hover:not(:disabled) { border-color: var(--pollo-korostus); }
 button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -142070,6 +142120,7 @@ class Pollo {
     this.tila = haePuheTunnistus() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
     this.seuraaNakymaa();
+    this.seuraaSulkemista();
     this.paivitaNakyvyys();
   }
 
@@ -142095,22 +142146,21 @@ class Pollo {
     });
     this.nappi = nappi;
 
+    /*
+     * PANEELISSA EI OLE YLÄPALKKIA (omistajan linjaus 12.8.2026).
+     *
+     * Otsikko "Viisas Pöllö" ja ×-nappi poistuivat: nimi lukee jo napissa
+     * josta paneeli aukesi, ja pieni paneeli on kokonaan luettavaa tilaa.
+     * Nimi jää aria-labeliin, joten ruudunlukija tietää yhä minkä
+     * keskustelun se avasi. Sulkeminen: napautus paneelin ulkopuolelle,
+     * Esc tai pöllön oma nappi (seuraaSulkemista).
+     */
     const paneeli = polloElementti('div', 'pollo-paneeli');
     paneeli.hidden = true;
     paneeli.setAttribute('role', 'dialog');
     paneeli.setAttribute('aria-label', 'Viisas Pöllö');
     // Paneelin sisällä napautus ei saa sulkea alanappirivin liukua.
     paneeli.addEventListener('click', (e) => e.stopPropagation());
-
-    const yla = polloElementti('div', 'pollo-yla');
-    yla.appendChild(polloElementti('span', 'pollo-otsikko', 'Viisas Pöllö'));
-    const sulje = polloElementti('button', 'pollo-sulje', '×');
-    sulje.type = 'button';
-    sulje.title = 'Sulje';
-    sulje.setAttribute('aria-label', 'Sulje keskustelu');
-    sulje.addEventListener('click', () => this.sulje());
-    yla.appendChild(sulje);
-    paneeli.appendChild(yla);
 
     this.ehdotukset = polloElementti('div', 'pollo-ehdotukset');
     this.ehdotukset.hidden = true;
@@ -142301,6 +142351,39 @@ class Pollo {
       new MutationObserver(() => this.paivitaNakyvyys())
         .observe(intro, { attributes: true, attributeFilter: ['hidden'] });
     }
+  }
+
+  /**
+   * SULKEMINEN ILMAN RASTIA (omistajan linjaus 12.8.2026).
+   *
+   * Paneelin yläpalkki katosi otsikkoineen ja ×-nappeineen, joten
+   * keskustelu suljetaan napauttamalla sen ulkopuolelle — karttaa,
+   * lehteä, mitä tahansa — tai Esc-näppäimestä. Pöllön oma nappi on yhä
+   * vipu: se avaa ja sulkee.
+   *
+   * pointerdown eikä click: sama tapahtuma, jolla alanappirivin liuku
+   * sulkeutuu (js/ui.js kytkeLiukuSulku), joten kartan napautus sulkee
+   * molemmat samalla kertaa eikä sulkeminen odota sormen nostoa.
+   * Kuuntelijat ovat dokumentissa, koska napautus voi osua minne vain;
+   * paneeli ja nappi rajataan pois closestilla.
+   *
+   * Esc estetään etenemästä: lehtinäkymässä <dialog> sulkeutuisi muuten
+   * samasta painalluksesta, ja pelaaja menettäisi lehden vain
+   * sulkiessaan chatin. Toinen painallus sulkee lehden normaalisti.
+   */
+  seuraaSulkemista() {
+    if (typeof this.doc.addEventListener !== 'function') return;
+    this.doc.addEventListener('pointerdown', (e) => {
+      if (!this.auki) return;
+      if (e.target?.closest?.('.pollo-paneeli, .pollo-nappi')) return;
+      this.sulje();
+    });
+    this.doc.addEventListener('keydown', (e) => {
+      if (!this.auki || e.key !== 'Escape') return;
+      e.preventDefault();
+      e.stopPropagation();
+      this.sulje();
+    });
   }
 
   /* --- avaus ja sulku -------------------------------------------- */
@@ -148976,16 +149059,19 @@ class UI {
    *   keski   Viisas Pöllö   — js/pollo.js siirtää nappinsa tähän
    *   oikea   suurennuslasi  — Tutki, ennallaan
    *
-   * Matkustusnapit eivät levitä riviä: ne LIUKUVAT pöllön ja
-   * suurennuslasin päälle, joten rivi on aina täsmälleen kolmen napin
-   * levyinen. Liuku sulkeutuu monitoiminapin uudesta napautuksesta tai
-   * mistä tahansa napautuksesta rivin ulkopuolella (kartta).
+   * Matkustusnapit eivät levitä riviä: ne LIUKUVAT koko rivin päälle,
+   * joten rivi on aina täsmälleen kolmen napin levyinen. Liu'un ollessa
+   * auki myös monitoiminappi väistyy (css: .toimintorivi.liuku-auki):
+   * omistaja laski iPhonella neljä nappia, kun kompassi jäi kolmen
+   * matkanapin viereen. Liuku sulkeutuu matkanapin valinnasta tai mistä
+   * tahansa napautuksesta rivin ulkopuolella (kartta) — piiloon
+   * jäänyttä monitoiminappia ei voi enää napauttaa uudelleen.
    *
    * Liu'ussa on matkustustapaa valittaessa kolme nappia — jalan, laiva
    * ja lento (renderTravelChoice) — ja nopanheiton hetkellä kaksi:
    * noppa ja paluu matkustustavan valintaan. Napit ovat pelkkiä
-   * ikoneita, koska liuku on vain kaksi paikkaa leveä; nimi luetaan
-   * titlestä ja aria-labelista.
+   * ikoneita kuten rivin perusnapitkin; nimi luetaan titlestä ja
+   * aria-labelista.
    *
    * Napit itse ovat samoja kuin ennen — tapahtumakäsittelijät,
    * korostukset ja estotilat tulevat kutsujalta, joten mikään
@@ -157724,6 +157810,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 590, teksti: 'Kolme matkanappia siististi, pöllön paneeli vaaleaksi' },
   { v: 589, teksti: 'Matkatapa kolmena nappina, pöllön chattiin matala alarivi' },
   { v: 588, teksti: 'Viisas Pöllö: apuri, sanelu, tietohaku, uusi alanappirivi' },
   { v: 587, teksti: 'Dohan kaupunkilehti, kohdekartta ja kuusi nähtävyysjuttua' },
@@ -158397,7 +158484,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.589';
+const APP_VERSION = '2026-08-09.590';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
