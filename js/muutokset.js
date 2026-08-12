@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 584, teksti: 'Sykkivät pisteet, pysyvä jälki, neljä laivaa, lennon teksti' },
   { v: 583, teksti: 'Reittianimaatio Safari-varmaksi, etusivun ääni kuuluviin' },
   { v: 582, teksti: 'Reittianimaatio näkyväksi ja työpöydän ääni käyntiin' },
   { v: 581, teksti: 'Etusivun reittianimaatio ja laatikoton lentonäkymä' },
