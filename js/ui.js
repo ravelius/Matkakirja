@@ -6326,16 +6326,19 @@ export class UI {
    *   keski   Viisas Pöllö   — js/pollo.js siirtää nappinsa tähän
    *   oikea   suurennuslasi  — Tutki, ennallaan
    *
-   * Matkustusnapit eivät levitä riviä: ne LIUKUVAT pöllön ja
-   * suurennuslasin päälle, joten rivi on aina täsmälleen kolmen napin
-   * levyinen. Liuku sulkeutuu monitoiminapin uudesta napautuksesta tai
-   * mistä tahansa napautuksesta rivin ulkopuolella (kartta).
+   * Matkustusnapit eivät levitä riviä: ne LIUKUVAT koko rivin päälle,
+   * joten rivi on aina täsmälleen kolmen napin levyinen. Liu'un ollessa
+   * auki myös monitoiminappi väistyy (css: .toimintorivi.liuku-auki):
+   * omistaja laski iPhonella neljä nappia, kun kompassi jäi kolmen
+   * matkanapin viereen. Liuku sulkeutuu matkanapin valinnasta tai mistä
+   * tahansa napautuksesta rivin ulkopuolella (kartta) — piiloon
+   * jäänyttä monitoiminappia ei voi enää napauttaa uudelleen.
    *
    * Liu'ussa on matkustustapaa valittaessa kolme nappia — jalan, laiva
    * ja lento (renderTravelChoice) — ja nopanheiton hetkellä kaksi:
    * noppa ja paluu matkustustavan valintaan. Napit ovat pelkkiä
-   * ikoneita, koska liuku on vain kaksi paikkaa leveä; nimi luetaan
-   * titlestä ja aria-labelista.
+   * ikoneita kuten rivin perusnapitkin; nimi luetaan titlestä ja
+   * aria-labelista.
    *
    * Napit itse ovat samoja kuin ennen — tapahtumakäsittelijät,
    * korostukset ja estotilat tulevat kutsujalta, joten mikään
