@@ -76904,7 +76904,7 @@ const UUTISLAHTEET = {
  * API-avainta EI kirjoiteta tänne eikä mihinkään muualle repoon. Avain
  * elää vain Cloudflaren salaisuussäilössä (ks. tools/pollo/OHJE.md).
  */
-const POLLOPALVELIN = '';
+const POLLOPALVELIN = 'https://matkakirja-pollo.samireivinen.workers.dev';
 
 // ===== js/packs/europe-valokuvat.js =====
 // Euroopan matkakirjavalokuvat (sama rakenne kuin AFRICA_VALOKUVAT):
@@ -157810,6 +157810,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 591, teksti: 'Viisas Pöllö hereille: workerin osoite peliin' },
   { v: 590, teksti: 'Kolme matkanappia siististi, pöllön paneeli vaaleaksi' },
   { v: 589, teksti: 'Matkatapa kolmena nappina, pöllön chattiin matala alarivi' },
   { v: 588, teksti: 'Viisas Pöllö: apuri, sanelu, tietohaku, uusi alanappirivi' },
@@ -158484,7 +158485,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.590';
+const APP_VERSION = '2026-08-09.591';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

@@ -16,4 +16,4 @@
  * API-avainta EI kirjoiteta tänne eikä mihinkään muualle repoon. Avain
  * elää vain Cloudflaren salaisuussäilössä (ks. tools/pollo/OHJE.md).
  */
-export const POLLOPALVELIN = '';
+export const POLLOPALVELIN = 'https://matkakirja-pollo.samireivinen.workers.dev';
