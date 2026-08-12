@@ -763,7 +763,7 @@ const KAUPUNGIT = {
     // Länsireuna 58,584 eikä 58,586: Masqatin portti (58,5869) osui
     // ensin 5 %:n kohdalle, jolloin numeroympyrä olisi ollut kiinni
     // kuvan reunassa. Nyt se on 16 %:n kohdalla.
-    rajat: { pohjoinen: 23.6205, etela: 23.6085, lansi: 58.584, ita: 58.602 },
+    rajat: { pohjoinen: 23.6205, etela: 23.607, lansi: 58.584, ita: 58.602 },
     meri: true,
   },
   kuwait: {
@@ -774,7 +774,12 @@ const KAUPUNGIT = {
     // Itäreuna 48,010 eikä 48,006: ensimmäisessä ajossa Kuwait-tornit
     // osuivat 94 %:n kohdalle, jolloin numeroympyrä olisi ollut
     // kiinni kuvan reunassa.
-    rajat: { pohjoinen: 29.392, etela: 29.370, lansi: 47.962, ita: 48.010 },
+    // Eteläreuna 29,366 eikä 29,370: Sadu House päätyi 80 %:n
+    // korkeudelle vasempaan alakulmaan, jossa lehti piirtää
+    // mittakaavajanan, ja numeroympyrä peitti janan tekstin
+    // (tools/tarkista-karttapisteet.mjs). Etelässä on tiivistä
+    // kaupunkia, joten reunan siirto ei tuota tyhjää paperia.
+    rajat: { pohjoinen: 29.392, etela: 29.366, lansi: 47.962, ita: 48.010 },
     meri: true,
   },
   nikosia: {

@@ -24,10 +24,10 @@
  * maakartat.js:stä. Toisena argumenttina voi antaa JSON-listan
  * [[nimi, lat, lon], ...], kun pistettä vasta etsitään.
  *
- * TÄMÄ EI KORVAA SILMÄTARKISTUSTA. Työkalu kertoo vain, onko piste
- * vedessä. Se ei näe, meneekö numeroympyrä toisen päälle, jääkö
- * kohde kuvan reunaan tai onko rajaus mielekäs — ne katsotaan
- * kuvasta niin kuin ennenkin.
+ * TÄMÄ EI KORVAA SILMÄTARKISTUSTA. Työkalu kertoo, onko piste vedessä
+ * ja osuuko se mittakaavajanan päälle. Se ei näe, meneekö numeroympyrä
+ * toisen numeroympyrän päälle, jääkö kohde kuvan reunaan tai onko
+ * rajaus mielekäs — ne katsotaan kuvasta niin kuin ennenkin.
  *
  * "VESI" EI AINA OLE VIRHE, joten paluuarvo on lippu ihmiselle eikä
  * tuomio. Silta on vedellä määritelmän mukaan (Rialto, Ha'penny),
@@ -203,4 +203,80 @@ for (const [nimi, lat, lon] of pisteet) {
 }
 
 console.log(vedessa ? `\n${vedessa} pistettä vedessä — siirrä ne rannalle.` : '\nkaikki pisteet maalla');
-process.exitCode = vedessa ? 1 : 0;
+
+/*
+ * TÖRMÄÄKÖ NUMEROYMPYRÄ MITTAKAAVAJANAAN.
+ *
+ * Lehti piirtää kartan vasempaan alakulmaan mittakaavajanan (ui.js:n
+ * piirraKaupunkiKartta, tyyli css/styles.css .kartta-mittajana), ja
+ * jana on siellä aina — sitä ei voi siirtää kaupungin takia. Jos
+ * kohde osuu samaan kulmaan, numeroympyrä peittää janan ja janan
+ * tekstin, eikä kumpikaan ole enää luettavissa. Kööpenhaminassa
+ * Tivolin ympyrä osui janan päälle, ja Masqatissa (12.8.2026) Omanin
+ * vanhin hindutemppeli teki saman: se oli kartan ainoa kohde etelässä
+ * ja päätyi tarkalleen janan päälle.
+ *
+ * Mitat on MITATTU SELAIMESTA eikä arvattu: 390 px:n näytöllä kartan
+ * kotelo on 360 px leveä, numeroympyrä 24 × 24 px ja janan teksti 10 px
+ * korkea. Kapein näyttö on pahin tapaus, koska jana ja ympyrä ovat
+ * pikseleitä mutta kuva prosentteja: mitä kapeampi kuva, sitä suuremman
+ * osan kuvasta ne peittävät. Siksi tarkistus tehdään puhelinleveydellä.
+ *
+ * Tekstin leveys lasketaan merkkimäärästä eikä kiinteänä lukuna, koska
+ * kiinteä arvo antoi vääriä osumia: Odessan Privozin tori ilmoitettiin
+ * janan päälle osuvaksi, vaikka selaimessa "1 km" (28 px) loppuu
+ * kuusi pikseliä ennen ympyrää. Kaava on sovitettu mitattuihin
+ * leveyksiin ("1 km" 28 px, "500 m" 34 px).
+ *
+ * Korjaustapa on rajaus, ei pisteen siirto: kohde on siellä missä on.
+ * Masqatissa eteläreunaa vietiin alemmas, jolloin piste nousi 90 %:sta
+ * 80 %:iin ja irtosi janasta.
+ */
+const KOTELO = 360;   // px, mitattu 390 px:n näytöllä
+const YMPYRA = 24;    // px, .maakartta-piste.kohde-numero
+const JANA_H = 6;     // px, .kartta-mittajana
+const TEKSTI_H = 10;  // px, .kartta-mittajana-teksti rivikorkeus
+const tekstinLeveys = (t) => t.length * 5.5 + 6;  // px, keskitettynä janalle
+
+const { mittakaava } = await import(`${JUURI}/js/packs/maakartat.js`);
+const jana = mittakaava(kartta);
+let janalla = 0;
+if (!jana) {
+  console.log('\nkartalla ei ole mittakaavajanaa — janatarkistus ohitettu');
+} else {
+  const korkeus = KOTELO * (kuva.korkeus / kuva.leveys);
+  const janaLaatikko = {
+    x: KOTELO * 0.032,
+    y: korkeus * 0.95 - JANA_H,
+    w: KOTELO * (jana.osuus / 100),
+    h: JANA_H,
+  };
+  const tekstiW = tekstinLeveys(jana.teksti);
+  const tekstiLaatikko = {
+    x: janaLaatikko.x + janaLaatikko.w / 2 - tekstiW / 2,
+    y: janaLaatikko.y - TEKSTI_H - 1,
+    w: tekstiW,
+    h: TEKSTI_H,
+  };
+  const osuu = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+  console.log(`\nmittakaavajana ${jana.teksti} (${jana.osuus.toFixed(1)} % kuvan leveydestä):`);
+  for (const [nimi, lat, lon] of pisteet) {
+    const { x, y } = karttapiste(kartta, lat, lon);
+    const ympyra = {
+      x: (x / 100) * KOTELO - YMPYRA / 2,
+      y: (y / 100) * korkeus - YMPYRA / 2,
+      w: YMPYRA,
+      h: YMPYRA,
+    };
+    const j = osuu(ympyra, janaLaatikko);
+    const t = osuu(ympyra, tekstiLaatikko);
+    if (j || t) {
+      janalla += 1;
+      const mika = [j && 'janan', t && 'tekstin'].filter(Boolean).join(' ja ');
+      console.log(`  ${String(nimi).padEnd(24)} peittää ${mika} — siirrä rajausta`);
+    }
+  }
+  console.log(janalla ? `\n${janalla} pistettä janan päällä.` : '  yksikään piste ei peitä janaa');
+}
+
+process.exitCode = (vedessa || janalla) ? 1 : 0;

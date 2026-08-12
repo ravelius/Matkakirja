@@ -2474,7 +2474,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/masqat-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: {
-      pohjoinen: 23.6205, etela: 23.6085, lansi: 58.584, ita: 58.602,
+      pohjoinen: 23.6205, etela: 23.607, lansi: 58.584, ita: 58.602,
     },
     esittely: 'Masqat ei ole yksi kaupunki vaan jono pieniä lahtia '
       + 'vuorten välissä. Vanha Masqat on niistä itäisin: puolikuun '
@@ -2519,7 +2519,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kuwait-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: {
-      pohjoinen: 29.392, etela: 29.370, lansi: 47.962, ita: 48.010,
+      pohjoinen: 29.392, etela: 29.366, lansi: 47.962, ita: 48.010,
     },
     esittely: 'Kuwait City on rakennettu lahden kaarelle, ja koko '
       + 'kaupunki katsoo veteen päin. Vanha kaupunki oli 1950-luvulle '
