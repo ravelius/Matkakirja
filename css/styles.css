@@ -10478,6 +10478,18 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 
 .toimintorivi-liuku > button { flex: 1 1 0; min-width: 0; }
 
+/*
+ * Liu'un napit ovat aina pelkkiä ikoneita.
+ *
+ * Matkustustapoja on kolme (jalan, laiva, lento) ja liuku on kaksi
+ * paikkaa leveä, joten 390 pikselin ruudulla nappiin jää noin 70 px.
+ * Ikoni mahtuu siihen väljästi, selite ei — ja selite kelpaa muutenkin
+ * vain hiirelle, joka näkee saman titlestä. Ilman tätä sääntöä nimet
+ * olisivat leveällä ruudulla puskeneet napit ahtaiksi.
+ */
+.toimintorivi-liuku .icon-label { display: none; }
+.toimintorivi-liuku > button { padding-left: 0.35rem; padding-right: 0.35rem; }
+
 .toimintorivi.liuku-auki .toimintorivi-liuku {
   opacity: 1;
   pointer-events: auto;
@@ -10684,39 +10696,46 @@ button.pollo-linkki:hover { background: rgba(217, 161, 59, 0.12); }
 .pollo-nukkuu-otsikko { margin: 0 0 0.4rem; color: var(--accent); font-size: 0.9rem; }
 .pollo-nukkuu-lisa { margin: 0; color: var(--muted); font-size: 0.78rem; line-height: 1.4; }
 
-/* --- syöttöalue: sanelu edellä, näppäimistö varalla ------------------ */
+/* ---------------------------------------------------------------------
+   SYÖTTÖALUE: matala nappirivi paneelin pohjalla (omistajan linjaus
+   12.8.2026). Vasemmalla näppäimistö kolmasosan leveydeltä, oikealla
+   mikrofoni kahden kolmasosan. Selitetekstejä ei ole — kuvakkeiden
+   merkitys on aria-labelissa ja titlessä. Rivi on tarkoituksella matala:
+   ennen tässä oli 3,4 rem korkea pyöreä mikki ja kaksi tekstiriviä, mikä
+   söi neljäsosan paneelista.
+   --------------------------------------------------------------------- */
 
 .pollo-syote {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
   border-top: 1px solid var(--line);
   background: var(--panel-2);
-  padding: 0.5rem;
+  padding: 0.4rem 0.45rem 0.45rem;
 }
 
 .pollo-sanelu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.4rem;
 }
 
-/* Iso mikrofoninappi: sanelu on ensisijainen syöttötapa, joten se saa
-   olla paneelin selvästi suurin kohde. */
-button.pollo-mikki {
-  width: 3.4rem;
-  height: 3.4rem;
+/* Molemmat alarivin napit ovat samaa matalaa muotoa. */
+button.pollo-nappula {
   display: grid;
   place-items: center;
-  padding: 0;
+  min-height: 2.25rem;
+  padding: 0.15rem 0.3rem;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 8px;
   background: var(--panel);
   color: var(--accent);
   cursor: pointer;
 }
 
-button.pollo-mikki .viiva-ikoni svg { width: 1.7rem; height: 1.7rem; }
-button.pollo-mikki:hover:not(:disabled) { border-color: var(--accent-dark); }
-button.pollo-mikki:disabled { opacity: 0.5; cursor: default; }
+button.pollo-nappula .viiva-ikoni svg { width: 1.15rem; height: 1.15rem; }
+button.pollo-nappula:hover:not(:disabled) { border-color: var(--accent-dark); }
+button.pollo-nappula:disabled { opacity: 0.5; cursor: default; }
 
 button.pollo-mikki.kuuntelee {
   background: var(--accent-dark);
@@ -10726,9 +10745,11 @@ button.pollo-mikki.kuuntelee {
 
 @keyframes pollo-syke {
   0%, 100% { box-shadow: 0 0 0 0 rgba(217, 161, 59, 0.5); }
-  60% { box-shadow: 0 0 0 0.55rem rgba(217, 161, 59, 0); }
+  60% { box-shadow: 0 0 0 0.45rem rgba(217, 161, 59, 0); }
 }
 
+/* Sanelun tilarivi kertoo vain hetkellisen tilan. Tyhjänä se ei vie
+   tilaa lainkaan, joten paneelin pohja pysyy matalana. */
 .pollo-sanelu-tila {
   margin: 0;
   color: var(--muted);
@@ -10737,22 +10758,7 @@ button.pollo-mikki.kuuntelee {
   text-align: center;
 }
 
-/* Vaihtolinkit ovat tekstilinkin näköisiä: ne eivät kilpaile mikin kanssa. */
-button.pollo-vaihda {
-  display: block;
-  margin: 0.3rem auto 0;
-  padding: 0.2rem 0.3rem;
-  min-height: 0;
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  font-family: inherit;
-  font-size: 0.72rem;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-button.pollo-vaihda:hover { color: var(--accent); background: transparent; }
+.pollo-sanelu-tila:empty { display: none; }
 
 .pollo-rivi { display: flex; gap: 0.35rem; }
 

@@ -10486,6 +10486,18 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 
 .toimintorivi-liuku > button { flex: 1 1 0; min-width: 0; }
 
+/*
+ * Liu'un napit ovat aina pelkkiä ikoneita.
+ *
+ * Matkustustapoja on kolme (jalan, laiva, lento) ja liuku on kaksi
+ * paikkaa leveä, joten 390 pikselin ruudulla nappiin jää noin 70 px.
+ * Ikoni mahtuu siihen väljästi, selite ei — ja selite kelpaa muutenkin
+ * vain hiirelle, joka näkee saman titlestä. Ilman tätä sääntöä nimet
+ * olisivat leveällä ruudulla puskeneet napit ahtaiksi.
+ */
+.toimintorivi-liuku .icon-label { display: none; }
+.toimintorivi-liuku > button { padding-left: 0.35rem; padding-right: 0.35rem; }
+
 .toimintorivi.liuku-auki .toimintorivi-liuku {
   opacity: 1;
   pointer-events: auto;
@@ -10692,39 +10704,46 @@ button.pollo-linkki:hover { background: rgba(217, 161, 59, 0.12); }
 .pollo-nukkuu-otsikko { margin: 0 0 0.4rem; color: var(--accent); font-size: 0.9rem; }
 .pollo-nukkuu-lisa { margin: 0; color: var(--muted); font-size: 0.78rem; line-height: 1.4; }
 
-/* --- syöttöalue: sanelu edellä, näppäimistö varalla ------------------ */
+/* ---------------------------------------------------------------------
+   SYÖTTÖALUE: matala nappirivi paneelin pohjalla (omistajan linjaus
+   12.8.2026). Vasemmalla näppäimistö kolmasosan leveydeltä, oikealla
+   mikrofoni kahden kolmasosan. Selitetekstejä ei ole — kuvakkeiden
+   merkitys on aria-labelissa ja titlessä. Rivi on tarkoituksella matala:
+   ennen tässä oli 3,4 rem korkea pyöreä mikki ja kaksi tekstiriviä, mikä
+   söi neljäsosan paneelista.
+   --------------------------------------------------------------------- */
 
 .pollo-syote {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
   border-top: 1px solid var(--line);
   background: var(--panel-2);
-  padding: 0.5rem;
+  padding: 0.4rem 0.45rem 0.45rem;
 }
 
 .pollo-sanelu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.4rem;
 }
 
-/* Iso mikrofoninappi: sanelu on ensisijainen syöttötapa, joten se saa
-   olla paneelin selvästi suurin kohde. */
-button.pollo-mikki {
-  width: 3.4rem;
-  height: 3.4rem;
+/* Molemmat alarivin napit ovat samaa matalaa muotoa. */
+button.pollo-nappula {
   display: grid;
   place-items: center;
-  padding: 0;
+  min-height: 2.25rem;
+  padding: 0.15rem 0.3rem;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 8px;
   background: var(--panel);
   color: var(--accent);
   cursor: pointer;
 }
 
-button.pollo-mikki .viiva-ikoni svg { width: 1.7rem; height: 1.7rem; }
-button.pollo-mikki:hover:not(:disabled) { border-color: var(--accent-dark); }
-button.pollo-mikki:disabled { opacity: 0.5; cursor: default; }
+button.pollo-nappula .viiva-ikoni svg { width: 1.15rem; height: 1.15rem; }
+button.pollo-nappula:hover:not(:disabled) { border-color: var(--accent-dark); }
+button.pollo-nappula:disabled { opacity: 0.5; cursor: default; }
 
 button.pollo-mikki.kuuntelee {
   background: var(--accent-dark);
@@ -10734,9 +10753,11 @@ button.pollo-mikki.kuuntelee {
 
 @keyframes pollo-syke {
   0%, 100% { box-shadow: 0 0 0 0 rgba(217, 161, 59, 0.5); }
-  60% { box-shadow: 0 0 0 0.55rem rgba(217, 161, 59, 0); }
+  60% { box-shadow: 0 0 0 0.45rem rgba(217, 161, 59, 0); }
 }
 
+/* Sanelun tilarivi kertoo vain hetkellisen tilan. Tyhjänä se ei vie
+   tilaa lainkaan, joten paneelin pohja pysyy matalana. */
 .pollo-sanelu-tila {
   margin: 0;
   color: var(--muted);
@@ -10745,22 +10766,7 @@ button.pollo-mikki.kuuntelee {
   text-align: center;
 }
 
-/* Vaihtolinkit ovat tekstilinkin näköisiä: ne eivät kilpaile mikin kanssa. */
-button.pollo-vaihda {
-  display: block;
-  margin: 0.3rem auto 0;
-  padding: 0.2rem 0.3rem;
-  min-height: 0;
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  font-family: inherit;
-  font-size: 0.72rem;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-button.pollo-vaihda:hover { color: var(--accent); background: transparent; }
+.pollo-sanelu-tila:empty { display: none; }
 
 .pollo-rivi { display: flex; gap: 0.35rem; }
 
@@ -142009,6 +142015,18 @@ const MIKKI_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
   + '<path d="M12 17.8v3.4M8.6 21.2h6.8"/>'
   + '</svg>';
 
+/**
+ * Näppäimistö samalla viivakynällä. Näppäimet ovat pyöreäpäisiä
+ * pistemäisiä vetoja (h.01), jolloin ne piirtyvät pisteinä eivätkä
+ * vaadi omaa täyttöä.
+ */
+const NAPPAIMISTO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<rect x="2.4" y="6.2" width="19.2" height="11.6" rx="2.2"/>'
+  + '<path d="M6 10h.01M9.3 10h.01M12.6 10h.01M15.9 10h.01M19.2 10h.01"/>'
+  + '<path d="M6 13h.01M9.3 13h.01M12.6 13h.01M15.9 13h.01M19.2 13h.01"/>'
+  + '<path d="M8.4 15.6h7.2"/>'
+  + '</svg>';
+
 const TERVEHDYS = 'Kysy minulta mitä tahansa siitä, mitä kartalla tai '
   + 'lehdessä juuri nyt näkyy — tai muusta maailmasta. Pelin tehtäviä en '
   + 'ratkaise puolestasi.';
@@ -142017,7 +142035,6 @@ const EI_HEREILLA = 'Pöllö ei ole vielä hereillä.';
 const EI_HEREILLA_LISA = 'Tietokumppani odottaa vielä käyttöönottoa. '
   + 'Peli toimii normaalisti ilman sitä.';
 
-const SANELU_KEHOTE = 'Napauta ja kysy ääneen.';
 const SANELU_KUUNTELEE = 'Kuuntelen…';
 
 function polloElementti(tagi, luokka = '', teksti = '') {
@@ -142108,36 +142125,31 @@ class Pollo {
   }
 
   /**
-   * Syöttöalue: sanelu edellä, näppäimistö varalla.
+   * Syöttöalue: matala nappirivi paneelin alareunassa.
    *
-   * Omistajan linjaus: chatin ensisijainen syöttötapa on sanelu, niin
-   * ettei näppäimistöä tarvitse näyttää lainkaan. Kirjoituskenttä on
-   * yhden napautuksen takana — ja suoraan esillä, jos selain ei tue
-   * puheentunnistusta.
+   * Omistajan linjaus 12.8.2026: alareunassa on yksi matala rivi koko
+   * paneelin leveydeltä — vasemmalla näppäimistökuvake (kolmasosa),
+   * oikealla mikrofoni (kaksi kolmasosaa). Sanelu on yhä ensisijainen
+   * syöttötapa, ja se saa siksi leveämmän puolikkaan, mutta iso pyöreä
+   * mikki ja sen alla olleet selitetekstit ("Napauta ja kysy ääneen.",
+   * "Kirjoita sen sijaan") ovat poissa: rivi vie nyt murto-osan
+   * paneelin korkeudesta ja jättää tilaa vastauksille. Kuvakkeiden
+   * merkitys luetaan aria-labelista, koska tekstit poistuivat.
+   *
+   * DOM-järjestys alhaalta lukien: nappirivi on viimeisenä, sen yllä
+   * kirjoituskenttä ja ylimpänä sanelun tilarivi (tyhjänä piilossa).
    */
   rakennaSyote() {
     const syote = polloElementti('div', 'pollo-syote');
 
-    const sanelu = polloElementti('div', 'pollo-sanelu');
-    const mikki = polloElementti('button', 'pollo-mikki');
-    mikki.type = 'button';
-    mikki.title = 'Sanele kysymys';
-    mikki.setAttribute('aria-label', 'Sanele kysymys');
-    mikki.innerHTML = `<span class="icon-glyph viiva-ikoni">${MIKKI_IKONI}</span>`;
-    mikki.addEventListener('click', () => this.vaihdaSanelu());
-    this.mikki = mikki;
-    sanelu.appendChild(mikki);
-
-    this.saneluTila = polloElementti('p', 'pollo-sanelu-tila', SANELU_KEHOTE);
+    /*
+     * Tilarivi kertoo vain sen mitä juuri nyt tapahtuu: "Kuuntelen…",
+     * puheeksi tunnistettu teksti tai virheen syy. Tyhjänä se ei vie
+     * riviäkään (css: :empty), joten paneeli pysyy matalana.
+     */
+    this.saneluTila = polloElementti('p', 'pollo-sanelu-tila');
     this.saneluTila.setAttribute('aria-live', 'polite');
-    sanelu.appendChild(this.saneluTila);
-
-    const kirjoitaLinkki = polloElementti('button', 'pollo-vaihda', 'Kirjoita sen sijaan');
-    kirjoitaLinkki.type = 'button';
-    kirjoitaLinkki.addEventListener('click', () => this.vaihdaTilaan('kirjoitus', { kohdista: true }));
-    sanelu.appendChild(kirjoitaLinkki);
-    this.saneluOsa = sanelu;
-    syote.appendChild(sanelu);
+    syote.appendChild(this.saneluTila);
 
     const lomake = polloElementti('form', 'pollo-rivi');
     this.kentta = polloElementti('input', 'pollo-kentta');
@@ -142158,25 +142170,53 @@ class Pollo {
     this.lomake = lomake;
     syote.appendChild(lomake);
 
-    // Paluu saneluun näkyy vain, jos selain osaa sen.
-    const saneleLinkki = polloElementti('button', 'pollo-vaihda', 'Sanele sen sijaan');
-    saneleLinkki.type = 'button';
-    saneleLinkki.addEventListener('click', () => this.vaihdaTilaan('sanelu'));
-    this.saneleLinkki = saneleLinkki;
-    syote.appendChild(saneleLinkki);
+    /*
+     * Matala nappirivi: näppäimistö 1/3, mikrofoni 2/3. Rivi on aina
+     * paneelin pohjalla, joten kirjoituskenttä avautuu sen yläpuolelle
+     * eikä sen tilalle — mikrofoni on siis yhden napautuksen päässä myös
+     * kirjoitettaessa, ja erillistä "Sanele sen sijaan" -linkkiä ei
+     * tarvita.
+     */
+    const rivi = polloElementti('div', 'pollo-sanelu');
+
+    const kirjoita = polloElementti('button', 'pollo-nappula pollo-kirjoita');
+    kirjoita.type = 'button';
+    kirjoita.title = 'Kirjoita kysymys';
+    kirjoita.setAttribute('aria-label', 'Kirjoita kysymys');
+    kirjoita.innerHTML = `<span class="icon-glyph viiva-ikoni">${NAPPAIMISTO_IKONI}</span>`;
+    kirjoita.addEventListener('click', () => this.vaihdaTilaan('kirjoitus', { kohdista: true }));
+    this.kirjoitaNappi = kirjoita;
+    rivi.appendChild(kirjoita);
+
+    const mikki = polloElementti('button', 'pollo-nappula pollo-mikki');
+    mikki.type = 'button';
+    mikki.title = 'Kysy ääneen';
+    mikki.setAttribute('aria-label', 'Kysy ääneen');
+    mikki.innerHTML = `<span class="icon-glyph viiva-ikoni">${MIKKI_IKONI}</span>`;
+    mikki.addEventListener('click', () => this.vaihdaSanelu());
+    this.mikki = mikki;
+    rivi.appendChild(mikki);
+
+    this.saneluOsa = rivi;
+    syote.appendChild(rivi);
 
     this.syote = syote;
     this.naytaSyote();
     return syote;
   }
 
-  /** Piirtää syöttöalueen nykyisen tilan mukaan. */
+  /**
+   * Piirtää syöttöalueen nykyisen tilan mukaan.
+   *
+   * Nappirivi on esillä aina kun selain osaa sanella. Jos ei osaa,
+   * rivi jää pois kokonaan ja kirjoituskenttä on suoraan esillä —
+   * näppäimistönappi olisi silloin ainoa vaihtoehto eikä siis valinta.
+   */
   naytaSyote() {
     const saneluTuettu = Boolean(haePuheTunnistus());
     const sanelussa = this.tila === 'sanelu' && saneluTuettu;
-    this.saneluOsa.hidden = !sanelussa;
+    this.saneluOsa.hidden = !saneluTuettu;
     this.lomake.hidden = sanelussa;
-    this.saneleLinkki.hidden = sanelussa || !saneluTuettu;
   }
 
   vaihdaTilaan(tila, { kohdista = false } = {}) {
@@ -142548,7 +142588,9 @@ class Pollo {
     const kysymys = String(raakaKysymys ?? '').trim();
     if (!kysymys || this.kesken || !this.palvelin) return;
     this.kentta.value = '';
-    this.saneluTila.textContent = SANELU_KEHOTE;
+    // Tilarivi tyhjenee: kysymys on jo keskustelussa, eikä sanelun
+    // väliaikainen teksti saa jäädä vastauksen alle.
+    this.saneluTila.textContent = '';
     this.ehdotukset.replaceChildren();
     this.ehdotukset.hidden = true;
     this.lisaaViesti('kayttaja', kysymys);
@@ -142597,6 +142639,9 @@ class Pollo {
       this.vaihdaTilaan('kirjoitus');
       return;
     }
+    // Mikrofonia voi napauttaa myös kirjoitustilassa: rivi on aina
+    // esillä, joten sanelu palauttaa kentän piiloon.
+    if (this.tila !== 'sanelu') this.vaihdaTilaan('sanelu');
     let tunnistin;
     try {
       tunnistin = new Tunnistus();
@@ -145232,6 +145277,7 @@ class UI {
     this.busy = false;
     this.dead = false; // destroy() jälkeen instanssi ei saa enää piirtää
     this.travelExpanded = false; // matkavalinnan toinen vaihe auki
+    this.travelSuodatin = null; // 'sea' | 'air' | null — kumpi lista näytetään
     this.kehittajaTila = kehittajaTilaPaalla();
     this.autoRollTimer = null;
     this.movingPlayerId = null;
@@ -148416,7 +148462,8 @@ class UI {
     // kone kohdekaupungin päällä, ja napautus ostaa lennon suoraan
     // (omistajan toive). Porttilennot toisille laudoille pysyvät napeissa,
     // koska niiden kohde ei ole tällä kartalla.
-    if (game.phase === 'action' && this.travelExpanded && !game.player.isBot) {
+    if (game.phase === 'action' && this.travelExpanded
+      && this.travelSuodatin !== 'sea' && !game.player.isBot) {
       for (const dest of game.airportDestinations()) {
         const city = game.board.cityById.get(dest);
         if (!city) continue;
@@ -148665,9 +148712,18 @@ class UI {
   }
 
   /**
-   * Matkustustavan valinta kahdessa vaiheessa. Vaihe A: jalan, "laiva &
-   * lento…" ja aarrekaupungin kysymys. Vaihe B (`travelExpanded`): kaikki
-   * maksulliset ja laudalta toiselle vievät vaihtoehdot.
+   * Matkustustavan valinta kahdessa vaiheessa.
+   *
+   * VAIHE A on alanappirivin liuku: kolme nappia — jalan, laiva ja lento
+   * (omistajan linjaus 12.8.2026). Aiemmin laiva ja lento olivat saman
+   * "Laiva & lento" -napin takana, ja pelaaja joutui etsimään lentonsa
+   * laivalistan seasta. Nyt nappi valitsee jo listan: LAIVA avaa vaiheen
+   * B pelkillä laivavaihtoehdoilla, LENTO pelkillä lentävillä
+   * vaihtoehdoilla (lennot, mannerlennot ja portit). Se mitä listassa
+   * NÄYTETÄÄN suodattuu — säännöt, hinnat ja toiminnot ovat ennallaan.
+   *
+   * VAIHE B (`travelExpanded`) on entinen valikko. `travelSuodatin`
+   * kertoo kumpi puoli näytetään: 'sea', 'air' tai null (molemmat).
    */
   renderTravelChoice(modes) {
     const { game } = this;
@@ -148677,51 +148733,76 @@ class UI {
     // Mannerlento aukeaa, kun tämän mantereen unohdettu aarre on
     // löytynyt — se ei vaadi lentokenttää, joten se on oma listansa.
     const mannerLennot = game.mannerLennot();
-    const hasSlow = modes.includes('sea') || flights.length > 0
-      || gateways.length > 0 || countryGates.length > 0 || mannerLennot.length > 0;
+    /*
+     * Portit (vaellus ja tietoportti) kuuluvat LENNON puolelle: molemmat
+     * ovat pitkiä lentoja toiselle laudalle (game.gatewayOptions), eikä
+     * kumpikaan ole laivamatka. Näin mikään vaihtoehto ei jää kahden
+     * napin väliin saavuttamattomiin.
+     */
+    const laivaa = modes.includes('sea');
+    const lentoa = flights.length > 0 || mannerLennot.length > 0
+      || gateways.length > 0 || countryGates.length > 0;
+    const hasSlow = laivaa || lentoa;
 
     // Jos välivaiheeseen ei jää yhtään valintaa (esim. rahat eivät riitä
     // lentoon eikä satamaa ole), palataan suoraan perusvalintoihin —
-    // pelkkä Takaisin-nappi ei ole näkymä.
-    if (this.travelExpanded && !hasSlow) this.travelExpanded = false;
+    // pelkkä Takaisin-nappi ei ole näkymä. Sama koskee tyhjäksi jäävää
+    // suodatinta: laivalistaa ei avata, jos laivoja ei ole.
+    const suodatinTyhja = (this.travelSuodatin === 'sea' && !laivaa)
+      || (this.travelSuodatin === 'air' && !lentoa);
+    if (this.travelExpanded && (!hasSlow || suodatinTyhja)) this.suljeMatkavalikko();
 
     if (!this.travelExpanded) {
       this.turnStatus.textContent = 'Valitse matkustustapa.';
 
-      const matkanapit = [];
-      if (modes.includes('land')) {
-        const landBtn = this.iconButton('saapas', 'Jalan', modes.includes('stay') ? '' : 'primary');
-        landBtn.addEventListener('click', () => this.doWalk());
-        matkanapit.push(landBtn);
+      // Jalan. Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
+      // pelin estetyissä napeissa (vrt. vertailunappi).
+      const landBtn = this.iconButton('saapas', 'Jalan',
+        modes.includes('land') && !modes.includes('stay') ? 'primary' : '');
+      if (modes.includes('land')) landBtn.addEventListener('click', () => this.doWalk());
+      else this.estaNappi(landBtn, this.maaEste());
+
+      const laivaBtn = this.iconButton('purje', 'Laivalla');
+      if (laivaa) {
+        laivaBtn.addEventListener('click', () => this.avaaMatkavalikko('sea'));
+      } else {
+        this.estaNappi(laivaBtn, this.laivaEste());
       }
 
-      if (hasSlow) {
-        const moreBtn = this.iconButton('purje', 'Laiva & lento');
-        moreBtn.addEventListener('click', () => {
-          this.travelExpanded = true;
-          this.render();
-        });
-        matkanapit.push(moreBtn);
+      const lentoBtn = this.iconButton('kone', 'Lentäen');
+      if (lentoa) {
+        lentoBtn.addEventListener('click', () => this.avaaMatkavalikko('air'));
+      } else {
+        this.estaNappi(lentoBtn, this.lentoEste());
       }
 
-      this.piirraToimintorivi(matkanapit, this.tutkiNappi());
+      this.piirraToimintorivi([landBtn, laivaBtn, lentoBtn], this.tutkiNappi());
       return;
     }
 
     // Vaihe B.
-    this.turnStatus.textContent = 'Laivalla, lentäen vai portin kautta?';
+    const meri = this.travelSuodatin !== 'air';
+    const ilma = this.travelSuodatin !== 'sea';
+    /*
+     * Laivalistassa on vain yksi nappi (määränpää valitaan kartalta
+     * nopanheiton jälkeen), joten tilarivi ei kysy "mihin" — se kertoo
+     * mitä valitaan. Lentolistassa kohteet ovat nimeltä, joten siinä
+     * kysymys on paikallaan.
+     */
+    this.turnStatus.textContent = meri && ilma ? 'Laivalla, lentäen vai portin kautta?'
+      : (meri ? 'Laivalla merten yli.' : 'Minne lennetään?');
 
-    if (modes.includes('sea')) {
+    if (meri && modes.includes('sea')) {
       const seaBtn = this.ikoniTekstiNappi('purje', `Laivalla (${SEA_FARE} p)`, 'wide');
       seaBtn.addEventListener('click', () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('ferry');
         this.doAction(() => game.actionTravel('sea'));
       });
       this.actionsEl.appendChild(seaBtn);
     }
 
-    for (const dest of flights) {
+    for (const dest of ilma ? flights : []) {
       const city = game.board.cityById.get(dest);
       const flyBtn = this.ikoniTekstiNappi('kone', `${city.name} (${FLIGHT_PRICE} p)`, 'wide');
       flyBtn.addEventListener('click', () => this.doFly(dest));
@@ -148735,11 +148816,11 @@ class UI {
      * nimeää mantereen ("Lennä Oseaniaan: Sydney"), koska tavalliset
      * lentonapit ovat pelkkiä kaupunkeja — ero on pidettävä näkyvänä.
      */
-    for (const kohde of mannerLennot) {
+    for (const kohde of ilma ? mannerLennot : []) {
       const btn = this.ikoniTekstiNappi('kone',
         `${MANNERLENTO_NAPPI(kohde)} (${FLIGHT_PRICE} p)`, 'wide');
       btn.addEventListener('click', () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('flight');
         this.doAction(() => game.actionMannerLento(kohde.city));
       });
@@ -148747,10 +148828,10 @@ class UI {
     }
 
     // Vaelluksessa porttikaupungeista jatketaan toisille laudoille.
-    for (const link of gateways) {
+    for (const link of ilma ? gateways : []) {
       const gwBtn = this.ikoniTekstiNappi('kompassi', link.label, 'wide');
       gwBtn.addEventListener('click', async () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('flight');
         // Lentokalvo kuuluu vain maailmankartalle — mantereella lento
         // tapahtuu suoraan karttanäkymässä. Siirto tehdään ennen kalvoa,
@@ -148769,10 +148850,10 @@ class UI {
     }
 
     // Tietoportti: maan lauta aukeaa pääkaupungista vaikealla kysymyksellä.
-    for (const gate of countryGates) {
+    for (const gate of ilma ? countryGates : []) {
       const gateBtn = this.ikoniTekstiNappi('tahti', `${gate.label} — vaikea kysymys`, 'wide');
       gateBtn.addEventListener('click', () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('paper');
         this.doAction(() => game.actionGateQuiz(gate.index));
       });
@@ -148781,10 +148862,80 @@ class UI {
 
     const backBtn = this.iconButton('nuoli', 'Takaisin');
     backBtn.addEventListener('click', () => {
-      this.travelExpanded = false;
+      this.suljeMatkavalikko();
       this.render();
     });
     this.actionsEl.appendChild(backBtn);
+  }
+
+  /** Avaa vaiheen B yhdellä listalla: 'sea' laivat, 'air' lennot ja portit. */
+  avaaMatkavalikko(suodatin = null) {
+    this.travelExpanded = true;
+    this.travelSuodatin = suodatin;
+    this.render();
+  }
+
+  /** Sulkee vaiheen B ja unohtaa suodattimen. */
+  suljeMatkavalikko() {
+    this.travelExpanded = false;
+    this.travelSuodatin = null;
+  }
+
+  /**
+   * Estetty nappi kertoo syyn.
+   *
+   * Sama tapa kuin muualla pelissä (esim. vertailunappi): teksti menee
+   * titleen ja aria-labeliin, joten se näkyy hiirellä ja kuuluu
+   * ruudunlukijalle. Napin oma nimi jää alkuun, jotta ikonin merkitys ei
+   * katoa syyn alle.
+   */
+  estaNappi(nappi, syy) {
+    nappi.disabled = true;
+    if (!syy) return nappi;
+    const nimi = nappi.getAttribute('aria-label') ?? '';
+    const teksti = nimi ? `${nimi} — ${syy}` : syy;
+    nappi.title = teksti;
+    nappi.setAttribute('aria-label', teksti);
+    return nappi;
+  }
+
+  /**
+   * Miksi jalan, laivalla tai lentäen ei juuri nyt onnistu?
+   *
+   * Syyt luetaan laudalta ja kukkarosta samoilla ehdoilla kuin
+   * game.travelModes käyttää — tässä ei päätetä mistään, vain
+   * sanoitetaan se mitä säännöt jo sanoivat.
+   */
+  keskenReittia() {
+    // Kesken reittiä matka jatkuu samalla tavalla kuin se alkoi.
+    return this.game.player.pos.type === 'edge';
+  }
+
+  maaEste() {
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    return 'täältä ei lähde maareittiä';
+  }
+
+  laivaEste() {
+    const { game } = this;
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    const city = game.cityOf();
+    if (!city) return 'laiva lähtee vain satamasta';
+    const satama = game.board.adj.get(city.id)
+      ?.some((id) => game.board.edgeById.get(id)?.type === 'sea');
+    if (!satama) return 'täältä ei lähde laivareittiä';
+    return `laivalippu maksaa ${SEA_FARE} puntaa`;
+  }
+
+  lentoEste() {
+    const { game } = this;
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    const city = game.cityOf();
+    if (!city) return 'lento lähtee vain kaupungista';
+    const kentta = Boolean(city.airport) || Boolean(city.links?.length);
+    if (!kentta) return 'täällä ei ole lentokenttää';
+    if (game.player.money < FLIGHT_PRICE) return `lentolippu maksaa ${FLIGHT_PRICE} puntaa`;
+    return 'täältä ei lähde lentoja';
   }
 
   /**
@@ -148830,6 +148981,12 @@ class UI {
    * levyinen. Liuku sulkeutuu monitoiminapin uudesta napautuksesta tai
    * mistä tahansa napautuksesta rivin ulkopuolella (kartta).
    *
+   * Liu'ussa on matkustustapaa valittaessa kolme nappia — jalan, laiva
+   * ja lento (renderTravelChoice) — ja nopanheiton hetkellä kaksi:
+   * noppa ja paluu matkustustavan valintaan. Napit ovat pelkkiä
+   * ikoneita, koska liuku on vain kaksi paikkaa leveä; nimi luetaan
+   * titlestä ja aria-labelista.
+   *
    * Napit itse ovat samoja kuin ennen — tapahtumakäsittelijät,
    * korostukset ja estotilat tulevat kutsujalta, joten mikään
    * pelitoiminto ei muutu tämän myötä.
@@ -148840,9 +148997,13 @@ class UI {
 
     const monitoimi = this.iconButton('kompassi', 'Matkustustavat');
     monitoimi.classList.add('monitoimi-nappi');
-    // Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
-    // muillakin estetyillä napeilla, ei katoamista.
-    monitoimi.disabled = matkanapit.length === 0;
+    /*
+     * Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
+     * muillakin estetyillä napeilla, ei katoamista. Rivi tarjoaa nykyään
+     * aina kolme nappia (jalan, laiva, lento), joten pelkkä lukumäärä ei
+     * riitä: liuku on tyhjä myös silloin, kun kaikki kolme ovat estettyjä.
+     */
+    monitoimi.disabled = matkanapit.length === 0 || matkanapit.every((n) => n.disabled);
     monitoimi.setAttribute('aria-expanded', String(Boolean(this.liukuAuki)));
     monitoimi.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -148867,7 +149028,7 @@ class UI {
     liuku.addEventListener('click', () => { this.liukuAuki = false; });
     rivi.appendChild(liuku);
 
-    if (this.liukuAuki && matkanapit.length) rivi.classList.add('liuku-auki');
+    if (this.liukuAuki && !monitoimi.disabled) rivi.classList.add('liuku-auki');
     else this.liukuAuki = false;
 
     this.actionsEl.appendChild(rivi);
@@ -149011,7 +149172,7 @@ class UI {
     }
     // Nappula siirtyy ilman animaatiota: oikotie saa näyttää oikotieltä.
     this.haivytaLuenta();
-    this.travelExpanded = false;
+    this.suljeMatkavalikko();
     this.doAction(() => game.actionKehittajaSiirto(city.id));
   }
 
@@ -149712,7 +149873,7 @@ class UI {
     this.paivitaAlkuReitit(avauksessa);
     // Matkavalinnan toinen vaihe koskee vain käsillä olevaa valintaa: heti
     // kun vaihe vaihtuu, ollaan taas seuraavan vuoron ensimmäisessä vaiheessa.
-    if (this.game.phase !== 'action') this.travelExpanded = false;
+    if (this.game.phase !== 'action') this.suljeMatkavalikko();
     // Saapumiskortti kuuluu vain offer-vaiheeseen: botin vuorolla ja muissa
     // vaiheissa se suljetaan, jottei se jää roikkumaan kartan päälle.
     if (this.game.phase !== 'offer' || this.game.player.isBot) this.closeArrival();
@@ -156949,7 +157110,7 @@ class UI {
     if (this.radioPaalla()) return;
     const { game } = this;
     // Matkavalinnan välivaihe ei saa jäädä päälle seuraavaan vuoroon.
-    this.travelExpanded = false;
+    this.suljeMatkavalikko();
     const player = game.player;
     const from = player.pos;
     const lahto = from.type === 'city' ? game.board.cityById.get(from.city) : null;
