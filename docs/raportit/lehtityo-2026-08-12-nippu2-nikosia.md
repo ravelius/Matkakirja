@@ -79,11 +79,66 @@ katsottiin; jälkimmäinen jäi voimaan.
 
 ## Mitä tarkistus löysi
 
-*(täydennetään ennen julkaisua)*
+Kolme Sonnet-agenttia luki aineiston eri silmin. **Faktatarkistus ei
+löytänyt yhtään virhettä** — noin 50 väitettä tarkistettiin ulkoisesta
+lähteestä kahdeksasta Wikipedia-artikkelista. Kuvien lisenssit, koot,
+tekijämerkinnät ja "ei pelissä ennestään" -ehto olivat kaikki kunnossa
+kaikissa 22 viittauksessa. Löydökset koskivat siis sisältöä, eivät
+tekniikkaa — ja yksikään niistä ei olisi näkynyt testeissä:
+
+1. **Kansinosto toisti nähtävyysjutun.** Kannen toinen nosto kertoi
+   Kyproksen museosta samat asiat kuin saman kaupungin nähtävyysjuttu:
+   perustaminen 1882 vetoomuksesta, Cesnolan yli 35 000 esinettä,
+   rakennus 1908–1924, neljätoista salia. Pelaaja olisi lukenut saman
+   jutun kahdesti. Sama vika oli Dohassa nipun pilotissa. Nosto
+   kirjoitettiin kokonaan uusiksi Bedestenistä.
+2. **Sama kuva kahdesti samassa kaupungissa.**
+   `Lefkosia-faneromeni-church.jpg` oli sekä Faneromenin
+   nähtävyysjutussa että kannessa. Kansikuva vaihdettiin.
+3. **Uusi nosto toi mukanaan uuden päällekkäisyyden**, ja se huomattiin
+   vasta liittämisvaiheessa: Selimiyen juttu päättyi sivulauseeseen,
+   joka kertoi Bedestenistä täsmälleen samat kolme asiaa kuin uusi
+   nosto (aloitti kirkkona, 1573 kangaskauppa, nykyään kulttuurikeskus).
+   Sivulause poistettiin Selimiyen jutusta, ja aihe jäi nostolle.
+4. **Liput jäivät selitteistä pois.** Kuudessa kuvassa näkyy Kreikan,
+   Kyproksen tai ortodoksikirkon lippu, eikä yksikään selite maininnut
+   niitä. Katsoin kolme vahvinta tapausta itse, ja tarkistin oli
+   liioitellut kahdessa: arkkipiispan palatsin kolme lipputankoa ovat
+   kuvan laidassa ja huomaamattomampia kuin kadun liikennekartiot.
+   Kaksi tapausta oli aitoja. Mausoleumikuvassa ortodoksikirkon
+   keltainen lippu liehuu kahden aiheen välissä — kuva jäi, koska se
+   kuvaa kappaletta hyvin, mutta selite kertoo nyt lipusta.
+   Kaupunginteatterin kansikuvassa oli iso tapahtumamainosbanneri ja
+   "NO PARKING" -kylttejä, joita selite ei maininnut; se vaihdettiin.
+5. **Pedieos-joen uoman siirto vuonna 1567** viittaa venetsialaisten
+   muurihankkeeseen, joka on varattu aihe. Virke muotoiltiin ilman
+   vuosilukua ja syy-yhteyttä.
+
+Lisäksi Omeryen hamamin juttu oli 1 423 merkkiä eli mallin ylärajan
+yli; se lyhennettiin 1 383:een.
 
 ## Mitat
 
-*(täydennetään ennen julkaisua)*
+Kuusi nähtävyysjuttua 1 269–1 402 merkkiä, kansisivu kolmella
+kansikuvalla ja kolmella nostolla, aihesivu `arki` kolmella nostolla ja
+minitehtävällä. Kuvia 23, joista yksikään ei ole pelissä ennestään eikä
+toistu kaupungin sisällä. `npm test` 573/0, `tarkista-kaksoisavaimet`
+puhdas, `tarkista-aihetoisto` ei nosta yhtään Nikosia-paria.
+Selaintarkistus 390 px: lehti kaksi liuskaa, sää näkyy mastossa
+(elokuussa 30°, sadetta 3 mm), nähtävyyspopup selaa kohteita 5/6 ja
+kuvia 1/2.
+
+## Havainto, joka ei ole tämän työn vika mutta joka kannattaa tietää
+
+Tehtävänannon rajaus oli, ettei lehti käsittele kaupungin jakoa, ja
+lehti ei käsittele sitä. **Saapumissivun yläosassa se kuitenkin lukee
+silti**, koska peli hakee sinne Wikipedian tiivistelmän elävänä: teksti
+on nyt "Nikosia on Kyproksen pääkaupunki ja maailman viimeinen jaettu
+pääkaupunki. Kaupungin läpi kulkee puskurivyöhyke…". Sama koskee
+Nikosian kulttuurivisaa ja `asia-valokuvat.js`:n kuvatekstiä, jotka
+ovat repossa ennestään. Rajaus koskee siis vain sitä osaa sivusta,
+jonka tämä työ kirjoitti — **jos linjan on tarkoitus kattaa koko sivu,
+se on oma työnsä eikä ratkea lehtitekstiä muokkaamalla.**
 
 ## Jonossa
 
@@ -112,7 +167,14 @@ katsottiin; jälkimmäinen jäi voimaan.
    siirretäänkö maalehden juttu pois ja annetaan aihe kaupunkilehdelle
    (a), vai jätetäänkö molemmat ja kirjoitetaan eri näkökulmista (b)?
    Doha, Nikosia ja Kuwait on tehty linjalla (b).
-4. **Service workerin SHELL-lista**: vain kuuden ensimmäisen kaupungin
+4. **Uuden kansikuvan Commons-tiedostonimi** on "A house with a palm
+   tree in the Arab Quarter, North Nicosia, Cyprus.jpg". Nimi sisältää
+   sanan "North Nicosia", vaikka selite ei ota kantaa sijaintiin.
+   Tiedostonimi ei näy pelaajalle missään — `alt`-teksti tulee aina
+   selitteestä (ui.js) — mutta se on repossa. Kuva itse on neutraali
+   katunäkymä. Jätin sen, koska nimen vaihtaminen ei ole mahdollista:
+   se on Commonsin tiedostonimi, jolla kuva haetaan.
+5. **Service workerin SHELL-lista**: vain kuuden ensimmäisen kaupungin
    karttakuvat ovat listassa, ja sen jälkeen tulleet 32 eivät. Uudet
    kaupungit noudattavat nykykäytäntöä eli jäävät pois. Jos lista on
    tarkoitus pitää ajan tasalla, se on oma työnsä.

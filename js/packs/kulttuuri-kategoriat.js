@@ -7066,4 +7066,191 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * NIKOSIAN KANSISIVU (nippu 2, 12.8.2026). Aihesivun id on valittu
+   * niin, ettei se peitä CYP-maalehden omaa sivua (rakennaSivut):
+   * maalehdellä on muinaisuus, kirkot, luonto, kasityo ja ruoka.
+   * Jakoa ei käsitellä — ks. nahtavyysjutut.js:n nikosia-kommentti.
+   */
+  nikosia: [
+    {
+      id: 'kaupunki',
+      nimi: 'Nikosia',
+      johdanto: 'Nikosia on Kyproksen hallinnon ja rahan kaupunki: saaren '
+        + 'kaikkien pankkien pääkonttorit ovat täällä, samoin viisi '
+        + 'yliopistoa ja saaren vanhin ja suurin arkeologinen museo.',
+      kansikuvat: [
+        {
+          tiedosto: 'Nicosia\'s skyline 2024.jpg',
+          selite: 'Näkymä yli keskustan kattojen auringonlaskun aikaan: '
+            + 'etualalla matalia tiili- ja tasakattoja vesisäiliöineen, '
+            + 'takana muutama lasitorni ja horisontissa vuorijono.',
+          lahde: 'PomposPompou, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'A house with a palm tree in the Arab Quarter, North Nicosia, Cyprus.jpg',
+          selite: 'Kivetty kuja Arabahmetin korttelissa. Vasemmalla on '
+            + 'valkoiseksi rapattu talo, jonka ikkunanpuitteet ja '
+            + 'säleluukut on maalattu keltaisiksi ja jonka tiilikaton '
+            + 'takaa nousee palmu; katoksen alle on pysäköity auto. '
+            + 'Oikealla erottuu turkoosiksi maalattu umpierkkeri ja kujan '
+            + 'päässä toinen auto.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Izgled-Old House Nicosia-6.jpg',
+          selite: 'Vanhan talon pyöristetty kulma vanhassakaupungissa. '
+            + 'Alhaalla on avoin loggia, jonka perällä näkyy ovi, ja sen '
+            + 'päälle työntyy parveke valkoisine pylväskaiteineen. '
+            + 'Kannattimina on kierrekoristeisia kivikonsoleita, '
+            + 'ikkunoissa puiset säleluukut, ja julkisivun poikki kulkee '
+            + 'sähköjohtoja.',
+          lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Tulkin talo vaihtoi omistajaa kahdesti',
+          tiedosto: 'Etnografski-Facade2.jpg',
+          teksti: 'Hadjigeorgakis Kornesios toimi Kyproksen dragomaanina eli '
+            + 'hallinnon tulkkina vuosina 1779–1809, ja noin vuonna 1796 '
+            + 'sulttaani Selim III nimitti hänet virkaan elinikäisesti. '
+            + 'Kartanonsa hän rakennutti Agios Antonioksen kaupunginosaan '
+            + 'arkkipiispan asunnon lähelle. Vuoden 1804 kapinassa '
+            + 'väkijoukko murtautui taloon ja ryösti sen, ja perhe pakeni '
+            + 'Konstantinopoliin. Hänet teloitettiin siellä vuonna 1809, '
+            + 'omaisuus takavarikoitiin ja talo meni kaupaksi 13 000 '
+            + 'kuruşilla; nuorin poika osti sen takaisin vuonna 1830. '
+            + 'Viimeinen asukas kuoli 1979, ja nyt talossa on etnologinen '
+            + 'museo. Kunnostuksesta myönnettiin Europa Nostra -palkinto.',
+          selite: 'Kartanon katujulkisivu. Ylhäällä työntyy ulos umpinainen '
+            + 'puinen erkkeri, jonka luukut ovat kiinni, alempana on '
+            + 'ristikoin varustettuja ikkunoita, ja oikealla erottuu '
+            + 'teräväkaarinen oviaukko.',
+          lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kangaskauppa muutti kirkon holvien alle',
+          tiedosto: 'Bedestan Nicosia (42819030095).jpg',
+          teksti: 'Vanhan kaupungin Bedestenin sisällä on paloja '
+            + 'bysanttilaisesta basilikasta, joka ajoitetaan 500-luvulle. '
+            + 'Sen tilalle rakennettiin kirkko, jota laajennettiin '
+            + '1100–1500-luvuilla. Koristeellisin osa on '
+            + 'pohjoisjulkisivu: goottilainen portaali, sen molemmin '
+            + 'puolin sukujen vaakunat, Pyhän Nikolaoksen pienoispatsas '
+            + 'sekä eläinhahmoja ja vedenheittäjiä. Vuonna 1573 talo '
+            + 'annettiin bedesteniksi eli katetuksi kangaskaupaksi, ja '
+            + '1760-luvulla siellä kävivät kauppaa turkkilaiset, '
+            + 'kreikkalaiset ja armenialaiset kauppiaat. Vuonna 1873 se '
+            + 'oli jauhovarasto. Kunnostus kesti 2004–2009, ja sen '
+            + 'suunnittelutyö sai Europa Nostra -palkinnon; nyt talossa '
+            + 'on kulttuurikeskus.',
+          selite: 'Bedestenin kaaririvi hunajanväristä kiveä. Kaksi '
+            + 'vasemmanpuoleista teräväkärkistä kaarta on suljettu '
+            + 'lasilla, yläpuolella kulkee kunnostuksessa lisätty '
+            + 'peltikatto säleikköineen, ja oikealla nousee palmu. '
+            + 'Pihamaalla on irtonaisia kivilohkareita ja ruukkukasveja.',
+          lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kaaririvit ovat 1950-luvun työtä',
+          tiedosto: 'Nikosia Erzbischöfliches Palais 1.jpg',
+          teksti: 'Arkkipiispan palatsi rakennettiin vuosina 1956–1960 '
+            + 'vanhan, 1600-luvulta olevan arkkipiispantalon viereen. '
+            + 'Tyyli on uusbysanttilainen: kahdessa kerroksessa kulkee '
+            + 'kaariaukkojen rivi, kivi on hiekankeltaista ja katto '
+            + 'tiiltä. Yleispiirustukset laati Ateenassa työskennellyt '
+            + 'George Nomikos, ja muun arkkitehtityön tekivät '
+            + 'limassolilaiset Nicholas S. Roussos ja John Pericleous. '
+            + 'Itse palatsiin ei pääse sisään, mutta samalla tontilla '
+            + 'ovat yleisölle avoimet bysanttilainen museo, '
+            + 'arkkipiispanistuimen kirjasto ja kansantaiteen museo.',
+          selite: 'Palatsin pitkä julkisivu hämärtyvässä valossa. Kummassakin '
+            + 'kerroksessa on rivi kaariaukkoja, kivi on hiekankeltaista '
+            + 'ja katto tiiltä; kadun puolella on koristeellinen '
+            + 'rautaportti.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Nikosia on Mesaorian tasangolla, jonka nimi tarkoittaa vuorten '
+        + 'välistä. Tasanko on lähes puuton, ja kaupungin pinta-alasta on '
+        + 'puiden alla kolme prosenttia — vähemmän kuin missään muussa '
+        + 'Euroopan pääkaupungissa.',
+      nostot: [
+        {
+          otsikko: 'Kortteli, jossa autot eivät kulje',
+          tiedosto: 'Laiki Geitonia by Georgy90 - panoramio.jpg',
+          teksti: 'Laiki Geitonia on vanhankaupungin kävelykortteli, joka '
+            + 'alkaa Eleftherian aukiolta ja jatkuu noin 300 metriä. '
+            + 'Talot ovat 1700-luvun lopulta, ja rakennusaineina ovat '
+            + 'puu, hiekkakivi ja savitiili; kunnostettuja taloja '
+            + 'pidetään esimerkkinä perinteisestä kyproslaisesta '
+            + 'kaupunkirakentamisesta. Kujat ovat kapeita ja '
+            + 'mutkittelevia, ja asuintalojen välissä on käsityöpajoja, '
+            + 'matkamuistoliikkeitä ja tavernoja. Korttelissa on myös '
+            + 'kaupungin tärkein matkailuneuvonta, ja opastetut '
+            + 'kävelykierrokset lähtevät sieltä maanantaisin, torstaisin '
+            + 'ja perjantaisin.',
+          selite: 'Kapea kuja korttelissa: keskellä kasvaa appelsiinipuita '
+            + 'hedelmineen, vasemmalla on talo, jonka nurkat on ladottu '
+            + 'hiekkakivestä, ja seinässä roikkuu lyhty ja takorautainen '
+            + 'kylttivarsi.',
+          lahde: 'Georgy Papantoniou, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Saaren pisin joki kulkee kuivana',
+          tiedosto: 'Řeka Pedieos, Nicosia, Kypr 2.jpg',
+          teksti: 'Pedieos on Kyproksen pisin joki, 98 kilometriä. Se alkaa '
+            + 'Troodoksen Machairas-metsästä samannimisen luostarin '
+            + 'läheltä, virtaa koilliseen Mesaorian tasangon poikki '
+            + 'Nikosian halki ja kääntyy sitten itään kohti Famagustan '
+            + 'lahtea. Uoma on siirretty pois vanhankaupungin vierestä '
+            + '1500-luvulla. Suurin osa saaren 35 joesta ja purosta on '
+            + 'tilapäisiä ja kuivuu kesäksi, ja Nikosiassa mitattiin 4. '
+            + 'syyskuuta 2020 lämpötila 46,2 astetta, koko Kyproksen '
+            + 'korkein lukema. Jokivartta on muutettu kävelyreitiksi 18 '
+            + 'kilometrin matkalta.',
+          selite: 'Uoma keskellä eukalyptuslehtoa: vettä on vain kapea nauha '
+            + 'betonikourun pohjalla, rannat ovat hiekkaa ja kuivia '
+            + 'oksia, ja yläreunassa erottuu kulkupolku.',
+          lahde: 'Fry72, Karel Frydrýšek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sinettivahasta koneisiin',
+          tiedosto: 'Laiki Geitonia - panoramio (3).jpg',
+          teksti: 'Kyproksen postimuseo avattiin vuonna 1981, ja se toimii '
+            + 'vanhan kartanon pohjakerroksessa Laiki Geitonian '
+            + 'kortteleissa. Vanhimmat esineet ovat 1400-luvulta: silloin '
+            + 'saaren postinkulku järjestettiin ensimmäisen kerran '
+            + 'venetsialaisten aikana. Kokoelmassa on vanhin kyproslainen '
+            + 'merkkisarja, jossa on kuningatar Viktorian kuva ja sana '
+            + 'Cyprus, sekä vuoden 1928 sarja, joka tehtiin varta vasten '
+            + 'Kyprokselle ja jossa on saaren monumentteja. Esillä on '
+            + 'myös kirjeiden varmistamista sinettivahasta koneisiin, '
+            + 'vaakoja ja alan kirjallisuutta.',
+          selite: 'Kujan varressa seisoo punaiseksi maalattu valurautainen '
+            + 'pylväspostilaatikko tiilisen istutuslaatikon vieressä. '
+            + 'Takana on matkailuneuvonnan kyltti ja kunnostettuja '
+            + 'taloja, joissa on puiset ikkunaluukut.',
+          lahde: 'Georgy Papantoniou, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka pitkä Pedieos-joki on?',
+        vaihtoehdot: [
+          '48 kilometriä',
+          '78 kilometriä',
+          '98 kilometriä',
+          '128 kilometriä',
+        ],
+        oikea: 2,
+        fakta: 'Joki on suuren osan vuotta kuiva, ja sen vartta on '
+          + 'muutettu kävelyreitiksi 18 kilometrin matkalta.',
+      },
+    },
+  ],
 };

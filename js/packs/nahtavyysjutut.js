@@ -8808,4 +8808,319 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Nikosian nähtävyysjutut (nippu 2, 12.8.2026). Nikosia on jaettu
+   * kaupunki, mutta lehti ei käsittele jakoa: peli ei kerro
+   * nykykonflikteista, joten kohteet kuvataan kulttuurikohteina
+   * omalla historiallaan. CYP-maalehti kertoo saaren muinaisuudesta
+   * ja kirkoista, joten kaupungin jutut pysyvät rakennuksissa.
+   */
+  nikosia: {
+    'Selimiyen moskeija': {
+      aika: '1570',
+      teksti: 'Perustuskivi laskettiin 1209, ja vihkiminen ehti vasta vuoteen '
+        + '1326. Väliin osui kaksi maanjäristystä, 1267 ja 1303, ja '
+        + 'keskilaiva ja länsijulkisivu valmistuivat vasta arkkipiispa '
+        + 'Giovanni del Conten aikana 1319–1326. Sisämitat ovat 66 × 21 '
+        + 'metriä, ja rakennus on Kyproksen vanhin ja suurin säilynyt '
+        + 'goottilainen kirkko. Pohjakaava on lainattu Pariisista: kuoria '
+        + 'kiertää käytävä eikä apsidiin tehty kappeleita, kuten '
+        + 'Notre-Damessa. Ranskalaisen Lusignan-suvun kuninkaat '
+        + 'kruunattiin täällä.'
+        + '\n\n'
+        + 'Syyskuussa 1570 rakennus sai toisen elämän. Ensimmäinen '
+        + 'perjantairukous pidettiin 15. syyskuuta, ja samana vuonna '
+        + 'länsipäätyyn nousi kaksi minareettia. Sisällä muutos oli '
+        + 'käytännöllinen: patsaat ja kirkon kalusteet kannettiin ulos, '
+        + 'kivilattia peitettiin matoilla ja seinään hakattiin '
+        + 'mihrab-syvennys. Mekka on Nikosiasta kaakossa, ei idässä, '
+        + 'joten rukoussuunta ei osu kirkon pituusakselille — matot on '
+        + 'ladottu vinoon pilaririveihin nähden. Runkoon ei koskettu: '
+        + 'ristiholvit, ikkunaruusukkeet ja kimppupilarit jäivät '
+        + 'paikoilleen. Rukoustilaa on 1 750 neliömetriä, ja väkeä mahtuu '
+        + '2 500.'
+        + '\n\n'
+        + 'Nimi on nuori: vuoteen 1954 asti rakennus oli Ayasofya, ja 13. '
+        + 'elokuuta se nimettiin sulttaani Selim II:n mukaan. Vuodesta '
+        + '1949 rukouskutsu on tullut kaiuttimista eikä minareetin '
+        + 'parvekkeelta.',
+      kuvat: [
+        {
+          tiedosto: 'Selimiye Mosque (St. Sophie Cathedral) (01).JPG',
+          selite: 'Länsipäädyn eteishalli: kaksi korkeaa goottilaista '
+            + 'suippokaarta järeiden kivipilarien välissä, takaa nousee '
+            + 'minareetti parvekkeineen. Kaaren takana näkyy veistoksin '
+            + 'koristeltu ovipieli, josta kuljetaan rukoussaliin.',
+          lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Lefkoşa Selimiye-Moschee (Sophienkathedrale) Innen Mihrab 1.jpg',
+          selite: 'Mihrab valkoiseksi kalkitun goottilaisen seinän edessä: '
+            + 'maalattu kukkakehys, kalligrafiakenttä ja tippukivimäinen '
+            + 'katos syvennyksen yllä. Vasemmalla kohoaa kimppupilari, '
+            + 'oikealla korkea puuristikkoikkuna, ja koko lattian peittää '
+            + 'punainen kuviomatto.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Büyük Han': {
+      aika: '1572',
+      teksti: 'Kyproksen suurin karavaaniseraaji mittaa ulkoa 50,67 × 45,25 '
+        + 'metriä, ja sen sisään jää 27,68 × 26,21 metrin piha. Ovia on '
+        + 'kaksi, idässä ja lännessä, vaikka tämän tyypin majatalossa on '
+        + 'tavallisesti yksi. Pääovi on itäsivulla, ja sen yllä oleva '
+        + 'piirtokirjoituksen kehys jäi tyhjäksi. Alakerran ristiholvatun '
+        + 'kaarikäytävän takana ovat holvatut huoneet, ja niiden edessä '
+        + 'oli kaukalot, joihin matkustajan eläimet kytkettiin: tavara ja '
+        + 'juhdat jäivät maan tasalle.'
+        + '\n\n'
+        + 'Yläkertaan noustaan kahta kiviportaikkoa myöten pihan '
+        + 'kaakkois- ja luoteiskulmasta. Huoneita on kahdessa kerroksessa '
+        + 'yhteensä 68, ja yläkerran huone on tehty nukkumista varten: '
+        + 'matalakaarinen ovi, tulisija, kaappina käytetty seinäsyvennys, '
+        + 'kapeat ikkuna-aukot ja katossa valoaukko. Itäportin päällä '
+        + 'oleva huone on muita suurempi. Katolla seisoo puolentoista '
+        + 'metrin korkuisia savupiippuja, joiden pohja on kuusi- tai '
+        + 'kahdeksankulmainen ja huippu kartiomainen.'
+        + '\n\n'
+        + 'Pihan keskellä on köşk mescit, kahdeksankulmainen rukoushuone '
+        + 'kupolin alla. Se lepää kahdeksan marmoripylvään kannattamien '
+        + 'suippokaarien varassa, jokaisella sivulla on pihalle avautuva '
+        + 'ikkuna, ja pylväiden alla on vesisäiliö. Britannian hallinnon '
+        + 'aikana rakennus toimi kaupungin keskusvankilana 1892–1903, '
+        + 'sitten jälleen majatalona ja vuodesta 1947 halpoina '
+        + 'vuokrahuoneina; kunnostus valmistui 2002. Vuokrasopimus vaatii '
+        + 'nyt, että myytävä tavara on myyjän omaa käsialaa.',
+      kuvat: [
+        {
+          tiedosto: 'Büyük Han (43722761521).jpg',
+          selite: 'Sisäpiha ylhäältä: suippokaariset holvikäytävät kiertävät '
+            + 'pihaa kahdessa kerroksessa, keskellä kohoaa kupolinen '
+            + 'rukoushuone kaarien päällä ja katonharjalla on rivi '
+            + 'kartiopäisiä savupiippuja.',
+          lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Lefkoşa Karawanserei Büyük Han Innenhof Obere Galerie 1.jpg',
+          selite: 'Yläkerran pylväskäytävä huoneiden edessä: holvattu '
+            + 'kivikatto, vasemmalla huoneen ovi ja karkea kiviseinä, '
+            + 'oikealla kaide ja näkymä pihan yli vastapäiseen käytävään.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Faneromenin kirkko': {
+      aika: '1872',
+      teksti: 'Kirkon muurikivistä suuri osa on vanhempaa perua. Pääosa '
+        + 'tuotiin La Cavan linnasta, joka pystytettiin noin 1385 '
+        + 'Arona-kukkulalle ja joka sai nimensä kallioon louhitusta '
+        + 'vesisäiliöstä. Venetsialaiset räjäyttivät linnan 1520-luvulla, '
+        + 'mutta vielä 1870 siitä oli pystyssä holvisali, kehämuurit ja '
+        + 'kaksi tornia. Sinä vuonna jäljellä ollut purettiin lähes '
+        + 'kokonaan ja kivet ajettiin kirkon työmaalle. Loput otettiin '
+        + 'samalla paikalla aiemmin toimineesta nunnaluostarista.'
+        + '\n\n'
+        + 'Nykyinen kirkko valmistui 1872 vanhemman kirkon paikalle, ja '
+        + 'se on vanhankaupungin suurin kirkko. Se on omistettu Neitsyt '
+        + 'Marialle, ja nimi Faneromeni tarkoittaa ilmestynyttä. Tyylejä '
+        + 'on kolme päällekkäin: uusklassinen, bysanttilainen ja '
+        + 'keskiaikainen latinalainen. Pilaririvit jakavat salin kolmeen '
+        + 'laivaan, holvit ovat suippokaarisia ja perällä on kullattu '
+        + 'ikonostaasi. Kellotorni kohoaa kirkon toisessa päässä kahtena '
+        + 'kaariaukkoisena kerroksena.'
+        + '\n\n'
+        + 'Pihalla seisoo marmorinen mausoleumi neljän vuonna 1821 '
+        + 'teloitetun kirkonmiehen muistoksi; kryptassa lepäävät '
+        + 'arkkipiispa Kyprianoksen ja kolmen piispan jäännökset. '
+        + 'Vastapäätä on Faneromenin koulu, jonka arkkipiispa Makarios I '
+        + 'perusti 1857 saaren ensimmäisenä tyttökouluna. Oppilaita oli '
+        + 'alussa 115 ja opettajia yksi, joten vanhemmat lapset pantiin '
+        + 'apuopettajiksi. Vuodesta 1903 talossa koulutettiin myös '
+        + 'naisopettajia, ja nykyisen muotonsa se sai 1924 kirkon '
+        + 'rahoituksella.',
+      kuvat: [
+        {
+          tiedosto: 'Lefkosia-faneromeni-church.jpg',
+          selite: 'Kirkon kylki hiekankeltaisesta kivestä: etualalla '
+            + 'suippokaarinen kuisti, takana kellotorni, jonka molemmissa '
+            + 'kerroksissa on kaariaukkoja ja huipulla risti.',
+          lahde: 'Mboesch, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Lefkosia-faneromeni-church-inside.jpg',
+          selite: 'Kirkkosali sisäänkäynniltä: pilaririvit, suippokaariset '
+            + 'holvit ja perällä kullattu ikonostaasi. Katosta riippuu '
+            + 'monikerroksinen kristallikruunu, vasemmalla on puinen '
+            + 'saarnatuoli portaineen.',
+          lahde: 'Mboesch, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'NICOSIA, 11 AUGUST, 2011 172.jpg',
+          selite: 'Marmorinen mausoleumi kirkon pihalla: pylväät kannattavat '
+            + 'kaarta ja kupolia, jonka huipulla on risti. Takana kohoaa '
+            + 'Faneromenin koulun uusklassinen julkisivu, ja niiden '
+            + 'välissä liehuu ortodoksikirkon keltainen lippu '
+            + 'kaksipäisine kotkineen.',
+          lahde: 'Giorgis 2011, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Omeryen hamam': {
+      aika: '1571',
+      teksti: 'Kylpylän paikalla seisoi 1300-luvulla augustinolaisten Pyhän '
+        + 'Marian kirkko, kivestä muurattu ja katettu pienillä '
+        + 'kupoleilla. Nikosian piirityksessä 1570 tykkituli hajotti '
+        + 'siitä suurimman osan. Vuonna 1571 Lala Mustafa Pasha '
+        + 'rakennutti paikalle moskeijan kalifi Omarin muistoksi, ja '
+        + 'kylpylä pystytettiin saman kokonaisuuden osaksi. Kirkosta on '
+        + 'yhä jäljellä pääsisäänkäynnin ovi, joka on 1300-luvulta '
+        + 'Lusignanien ajalta, ja koillissivulla erottuu jäänteitä '
+        + 'myöhemmästä renessanssivaiheesta.'
+        + '\n\n'
+        + 'Hamamissa kuljetaan aina samassa järjestyksessä: riisuutumis- '
+        + 'ja vilvoittelutila, lämmin välihuone, kuuma huone. Kuuman '
+        + 'huoneen keskellä on lämmitetty marmoripöytä, jolla maataan, ja '
+        + 'nurkissa pieniä kupolikomeroita yksityistä peseytymistä '
+        + 'varten. Lämpö tulee huoneiden takaa, niitä alemmas '
+        + 'sijoitetusta uunista: padassa kuumennetaan vesi, ja savu ja '
+        + 'kuuma ilma johdetaan lattian alla kulkevia kanavia pitkin '
+        + 'seinien sisään ja hormeihin. Kylpijä ei upottaudu altaaseen '
+        + 'vaan peseytyy juoksevassa vedessä. Kupoleihin on puhkaistu '
+        + 'pieniä aukkoja, jotka päästävät päivänvalon sisään ja liian '
+        + 'höyryn ulos.'
+        + '\n\n'
+        + 'Rakennus kunnostettiin 2002–2004 osana Nikosian '
+        + 'yleissuunnitelmaa EU:n rahoituksella. Työhön kuului kupolien, '
+        + 'lattianalaisen lämmityskanaviston ja uunitilan lujittaminen, '
+        + 'ja se palkittiin Europa Nostra -palkinnolla rakennusperinnön '
+        + 'suojelusta. Kylpylästä ei tehty museota: se on yhä käytössä.',
+      kuvat: [
+        {
+          tiedosto: 'Hamam baths, Cyprus.jpg',
+          selite: 'Hamamin matalat valkoiset kupolit karkean kalkkikivimuurin '
+            + 'takaa: kupolien pintaan on upotettu rivi pyöreitä '
+            + 'lasitäpliä ja yksi suorakaiteen muotoinen valoluukku. '
+            + 'Takana kohoaa kaksi rapattua hormia, joiden yläosassa on '
+            + 'aukko, ja kauempana moskeijan minareetti.',
+          lahde: 'Mikettg at English Wikipedia, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Omerye - panoramio.jpg',
+          selite: 'Kylpylän laatoitettu etupiha: seinässä lukee Hamam Omerye, '
+            + 'vieressä ruskeat luukkuovet, ja muurin takaa nousee '
+            + 'valkoinen kupoli, jonka huipulla on ikkunallinen lyhty. '
+            + 'Kupolin edessä näkyy vanhaa hiekkakivimuuria ja pihalle '
+            + 'ripustetut verhot.',
+          lahde: 'Georgy Papantoniou, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kyproksen museo': {
+      teksti: 'Punaiseksi maalatun seinän edessä seisoo porrastetulla '
+        + 'kivialustalla noin kaksituhatta terrakottahahmoa '
+        + 'puolikaaressa. Ne kaivettiin Agia Irinin pyhäköstä '
+        + 'marraskuussa 1929 puolen metrin syvyydestä hiekasta, ja ne '
+        + 'olivat maassa juuri samassa puoliympyrässä — kaivajien '
+        + 'mielestä asetelma muistutti teatteria. Museo on toistanut sen: '
+        + 'kämmenen kokoiset hahmot ovat eturiveissä, taaimpana lähes '
+        + 'luonnollisen kokoisia. Joukossa on pappeja, sotureita, härkiä '
+        + 'ja hevosvaljakoita. Yksi tunnetaan uhripappina: pitkä viitta, '
+        + 'turbaani ja kohotettu vasen käsi, jossa on luultavasti ollut '
+        + 'uhriveitsi.'
+        + '\n\n'
+        + 'Roomalaisajan salissa seisoo pyöreän kivipaaden päällä '
+        + 'pronssinen Septimius Severus, luonnollista kokoa suurempi. '
+        + 'Patsas tuli esiin sattumalta 1928 Kythrean kylän liepeillä. '
+        + 'Piirtokirjoitukset todistavat, että saarella oli '
+        + 'roomalaisaikana runsaasti pronssiveistoksia; tämä on niistä '
+        + 'ainoa säilynyt. Toisessa salissa on omalla jalustallaan '
+        + 'marmorinen Afrodite Soloista, ensimmäiseltä vuosisadalta eaa.'
+        + '\n\n'
+        + 'Museo perustettiin 1882 kyproslaisten vetoomuksesta, kun Luigi '
+        + 'Palma di Cesnola oli vienyt saarelta yli 35 000 esinettä. '
+        + 'Nykyisen rakennuksen työt alkoivat 1908 ja päättyivät 1924. '
+        + 'Neljätoista näyttelysalia kiertää neliömäistä keskiosaa, jossa '
+        + 'ovat kirjasto, varastot ja laboratoriot; salit etenevät '
+        + 'kivikaudesta roomalaisaikaan. Esillä on vain pieni osa '
+        + 'kokoelmasta, ja pelkästään saarelta löytyneitä esineitä.',
+      kuvat: [
+        {
+          tiedosto: 'Nikosia BW 2023-09-21 11-50-51.jpg',
+          selite: 'Agia Irinin terrakottahahmot punaisen seinän edessä: '
+            + 'pienet figuurit alimmilla kiviportailla, takarivissä lähes '
+            + 'luonnollisen kokoiset hahmot kartiomaisine päähineineen.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Nikosia BW 2023-09-21 12-04-43.jpg',
+          selite: 'Septimius Severuksen pronssipatsas pyöreän kivipaaden '
+            + 'päällä: vihertäväksi patinoitunut parrakas hahmo, kädet '
+            + 'koukussa kuin ne olisivat pitäneet asetta.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Leventis-museo': {
+      aika: '1989',
+      teksti: 'Museo kertoo yhden kaupungin tarinan, ja se kerrotaan '
+        + 'takaperin. Näyttely alkaa nykypäivän Nikosiasta ja vie kävijän '
+        + 'kerros kerrokselta taaksepäin kalkoliittiseen aikaan, vuoteen '
+        + '3000 eaa. Kokoelmissa on yli 5 000 vuotta pääkaupungin '
+        + 'historiaa: kaivauslöytöjä, keskiaikaista keramiikkaa, koruja, '
+        + 'pukuja, valokuvia ja huonekaluja.'
+        + '\n\n'
+        + 'Vanhimmasta päästä on lautamainen naista esittävä hahmo '
+        + '1700-luvulta eaa. ja tynnyrinmuotoinen oinochoe-kannu, jonka '
+        + 'kylkeen on maalattu lintu; se on arkaaiselta kaudelta 750–600 '
+        + 'eaa. Keskiajan vitriineissä ovat vihreän ja ruskean kirjava '
+        + 'lasitettu savivati 1300-luvulta, ristiretkeläisen miekka noin '
+        + 'vuodelta 1200 ja kaupunginsinetti 1200-luvulta. Uusin pää on '
+        + 'sisustettu huoneiksi, joissa on lasiovisia kaappeja ja '
+        + 'veistoselkäisiä tuoleja. Yhdessä vitriinissä on nikosialaisen '
+        + 'naisen puku vuoden 1721 piirroksen mukaan, toisessa '
+        + 'hopealankakori kullattuine kotkineen vuodelta 1884.'
+        + '\n\n'
+        + 'Museo toimii vanhassa asuintalossa Hippokrateen kadun '
+        + 'varrella. A. G. Leventisin säätiö osti ja kunnosti '
+        + 'rakennuksen, ja museo perustettiin 1984 kaupunginjohtaja '
+        + 'Lellos Demetriadesin aloitteesta; kaupunki hallinnoi sitä. '
+        + 'Ovet avattiin yleisölle 20. huhtikuuta 1989, ja se oli '
+        + 'Kyproksen ensimmäinen historiallinen museo. Kokoelmia '
+        + 'kartuttamaan perustettiin 1985 ystäväyhdistys, jonka '
+        + 'jäsenmaksu oli viisi Kyproksen puntaa vuodessa. Vuonna 1991 '
+        + 'museo valittiin Euroopan vuoden museoksi.',
+      kuvat: [
+        {
+          tiedosto: 'Leventio historic museum in Nicosia Republic of Cyprus.JPG',
+          selite: 'Museon julkisivu kadun varrella: okrankeltainen seinä, '
+            + 'siniset säleikkoluukut ja harmaat kiviset pielet, '
+            + 'takorautainen parveke veistettyjen konsolien varassa ja '
+            + 'sen alla holvikaarinen ovi rautaisine viuhkaikkunoineen.',
+          lahde: 'AyianapaProtaras, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'LMM - Schüssel 14.Jhdt.jpg',
+          selite: 'Lasitettu savivati 1300-luvulta: vaalealle pohjalle on '
+            + 'kaiverrettu kiertävä kuvio ja siihen levitetty vihreää ja '
+            + 'oranssinruskeaa. Vati on halkeillut ja koottu paloista.',
+          lahde: 'Wolfgang Sauber, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Muzei Leventis-Interior.jpg',
+          selite: 'Sisustettu huone näyttelyssä: lasiovinen puukaappi '
+            + 'kirjoineen, kaksi posliinimaljakkoa sen päällä, '
+            + 'raidallinen saviruukku rautajalustalla ja veistoselkäinen '
+            + 'nojatuoli matoilla.',
+          lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
