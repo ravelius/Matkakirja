@@ -6888,4 +6888,182 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * DOHAN KANSISIVU (nippu 2:n pilottikaupunki, 12.8.2026). Aihesivun
+   * id on ruoka, koska QAT-maalehdellä on aavikko, rakennukset, meri ja
+   * luonto — sama id kaupungilla peittäisi maan sivun (rakennaSivut).
+   */
+  doha: [
+    {
+      id: 'kaupunki',
+      nimi: 'Doha',
+      johdanto: 'Doha on pääkaupunki, jossa moni tunnetuin paikka on vasta '
+        + 'parinkymmenen vuoden ikäinen: kulttuurikylä avattiin 2010, '
+        + 'kansalliskirjasto 2018 ja metro 2019.',
+      kansikuvat: [
+        {
+          tiedosto: 'Doha Corniche Skyline View 1.jpg',
+          selite: 'Cornichen rantakadulta katsottuna lahden takana nousee '
+            + 'West Bayn torniryhmä. Etualalla on portaikoksi kivetty '
+            + 'ranta ja palmuja, ja vastarannalla on keltaisia '
+            + 'telttakatoksia ja rivi valkoisia veneitä.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Doha Metro station in December 2019.jpg',
+          selite: 'Metroaseman lippuhalli. Katto laskeutuu pilarien päälle '
+            + 'valkoisina lehtimäisinä holveina, opasteet ovat arabiaksi '
+            + 'ja englanniksi, ja oikealla odottavat lippuportit.',
+          lahde: 'Tim Adams, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Doha Qatar - Katara Dovecotes.jpg',
+          selite: 'Kaksi kartiomaista kyyhkystornia Kataran kulttuurikylässä. '
+            + 'Savenvärisessä pinnassa on rivi pieniä reikiä ja niiden '
+            + 'vieressä ulos työntyviä puutikkuja, joilla linnut istuvat. '
+            + 'Tornit ovat viisitoista metriä korkeita.',
+          lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaikki hyllyt ovat samassa salissa',
+          tiedosto: 'Qatar National Library.jpg',
+          teksti: 'Qatarin kansalliskirjasto avattiin Education Cityssä '
+            + 'huhtikuussa 2018. Talon piirsi hollantilainen Rem '
+            + 'Koolhaas, eivätkä kirjat ole erillisissä huoneissa vaan '
+            + 'yhdessä isossa salissa, jonka poikki hyllyrivit kulkevat '
+            + 'suorina. Avausvuonna hyllyillä oli yli 800 000 kirjaa ja '
+            + 'lisäksi puoli miljoonaa sähkökirjaa, lehteä ja '
+            + 'erikoiskokoelmien nidettä. Sama talo hoitaa kolmea '
+            + 'tehtävää: se on kansalliskirjasto, yliopistokirjasto ja '
+            + 'kaupunginkirjasto, ja kirjastokortin saa jokainen maassa '
+            + 'vakinaisesti asuva. Perintökokoelmassa on noin 2 400 '
+            + 'käsikirjoitusta sekä karttoja ja matkakertomuksia, joita '
+            + 'Persianlahdelle tulleet kirjoittivat vuosisatojen mittaan.',
+          selite: 'Kirjastosali ylhäältä. Pitkät valkoiset hyllyrivit '
+            + 'jatkuvat läpi salin, kirjat täyttävät ne reunaa myöten, ja '
+            + 'taustalla erottuu lukupöytiä ja kävijöitä.',
+          lahde: 'En Merker, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Katsomo, jossa kaksi rakennustapaa kohtaa',
+          tiedosto: 'Outside the Amphitheatre, Katara (10995278063).jpg',
+          teksti: 'Kataran kulttuurikylä avattiin lokakuussa 2010 rannalle '
+            + 'täytetylle maalle. Se on rakennettu matalaksi kyläksi: '
+            + 'hiekanvärisiä taloja, tasakattoja, varjoisia kujia ja '
+            + 'sisäpihoja. Keskellä on marmorista muurattu amfiteatteri, '
+            + 'jonka ala on 3 275 neliömetriä ja johon mahtuu 5 000 '
+            + 'katsojaa. Muoto on lainattu kahdesta suunnasta: pyöreä '
+            + 'katsomo ja pylväät ovat antiikin Kreikasta, kaarien '
+            + 'teräväkärkinen muoto ja parvekkeet arabialaisesta '
+            + 'rakennustavasta. Ensimmäinen Qatarissa esitetty ooppera '
+            + 'nähtiin täällä lokakuussa 2012, kun ohjelmassa oli Verdin '
+            + 'Aida. Kylässä on lisäksi maan ainoa oopperatalo, jossa on '
+            + '550 paikkaa.',
+          selite: 'Amfiteatterin ulkoseinä vaaleaa kiveä. Pylväiden päissä '
+            + 'ovat kierteiset kreikkalaiset kapiteelit, ja niiden '
+            + 'välissä syvennykset päättyvät ylöspäin teräväksi kaareksi. '
+            + 'Alla on punaisia penkkejä ja sinisiä ruukkuja.',
+          lahde: 'Paul Trafford, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Asemat tunnistaa muodosta',
+          tiedosto: 'Al Sadd Metro Station 3.jpg',
+          teksti: 'Dohan metro avattiin 8. toukokuuta 2019. Kolme linjaa — '
+            + 'punainen, vihreä ja kulta — kohtaavat yhdessä ainoassa '
+            + 'paikassa: Msheirebin asemalla vanhan keskustan alla. Rataa '
+            + 'on noin 76 kilometriä ja asemia 37, ja junat kulkevat '
+            + 'sadan kilometrin tuntinopeudella. Asemat tunnistaa jo '
+            + 'kadulta. Sisäänkäynnin katto nousee korkeaksi holviksi, '
+            + 'jonka kaaret leviävät ylöspäin kuin teltan tangot, ja '
+            + 'seinänä on reikäkuvioitua lasia, joka päästää valon läpi '
+            + 'mutta pitää auringon ulkona. Pimeällä kaaret valaistaan '
+            + 'sisältä, ja asema hehkuu kadulle lyhtynä.',
+          selite: 'Al Saddin metroaseman sisäänkäynti illalla. Kullanruskeat '
+            + 'kaaret nousevat holviksi, vasemmalla on reikäkuvioitua '
+            + 'lasiseinää ja sen takana metron punainen tunnus; oikealla '
+            + 'näkyy kauppakeskuksen julkisivu ja Qatarin lippuja.',
+          lahde: 'Thameur Belghith, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Qatarilainen ateria tuodaan pöytään yhdellä isolla vadilla, ja '
+        + 'sen ympärille kokoonnutaan yhdessä. Kala ostetaan aamun '
+        + 'torilta, ja makeisilla on oma iltansa kerran vuodessa.',
+      nostot: [
+        {
+          otsikko: 'Riisi ja liha samassa padassa',
+          tiedosto: 'Qatari machbous served at a wedding.png',
+          teksti: 'Madžbus on Qatarin kansallisruoka: riisiä, lihaa, sipulia '
+            + 'ja tomaattia. Nimi tulee arabian sanasta, joka tarkoittaa '
+            + 'painamista — kaikki ainekset kypsennetään puristettuina '
+            + 'samaan pataan. Mausteseos on nimeltään bizar, ja siihen '
+            + 'kuuluu muun muassa mustapippuria, korianterinsiemeniä, '
+            + 'kanelia, kardemummaa, chiliä ja kurkumaa. Kanasta tehtyyn '
+            + 'annokseen pannaan koko lintu. Vati kannetaan pöydän '
+            + 'keskelle, ja siitä syödään yhdessä käsin. Ruokaa tehdään '
+            + 'aina enemmän kuin syöjiä riittää: sen loppuminen kesken '
+            + 'olisi isännälle nolo asia.',
+          selite: 'Iso metallivati keskellä katettua pöytää. Keltaisen riisin '
+            + 'päällä on kokonaisia paistettuja kanoja ja lihapaloja, ja '
+            + 'vadin ympärillä on pieniä sivukulhoja ja lautasia.',
+          lahde: 'Dana Club Doha @ YouTube, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Torin halutuin kala vaihtaa sukupuolta',
+          tiedosto: 'Varieties of Hamour Fish.jpg',
+          teksti: 'Hamour on Persianlahden nimi meriahvenille, ja se on Dohan '
+            + 'kalatorin halutuin kala. Myynnissä olevat yksilöt ovat '
+            + 'useimmiten nuoria ja pilkukkaita: ostaja valitsee kalan '
+            + 'laatikosta, ja se punnitaan ja perataan siinä samassa. '
+            + 'Täysikasvuinen hamour voi kasvaa 120 senttimetriä pitkäksi '
+            + 'ja painaa viisitoista kiloa. Laji aloittaa elämänsä usein '
+            + 'naaraana ja vaihtaa koiraaksi vasta noin 67 senttimetrin '
+            + 'mitassa ja seitsemän ja puolen vuoden iässä. Kutuaika osuu '
+            + 'lahdella maaliskuun ja kesäkuun väliin, ja pyynti on ollut '
+            + 'niin kovaa, että isot yksilöt ovat käyneet harvinaisiksi.',
+          selite: 'Kalakauppias pitelee kahta nuorta hamouria Dohan '
+            + 'kalatorilla. Kalojen kyljet ovat vaaleanruskeita ja täynnä '
+            + 'tummia pilkkuja, ja taustalla on jäälaatikoissa muita '
+            + 'kaloja ja katkarapuja sekä hintalappu, jossa lukee 45.',
+          lahde: 'Abedwayyad, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Pussi kaulassa ovelta ovelle',
+          tiedosto: 'Garangao bags given out during a festival in Qatar.png',
+          teksti: 'Garangao vietetään paastokuukauden viidentenätoista yönä, '
+            + 'kun ramadanista on kulunut puolet. Lapset pukeutuvat '
+            + 'värikkäisiin juhlavaatteisiin ja kiertävät naapuritalojen '
+            + 'ovilla laulamassa, ja lauluissa toivotetaan perheen '
+            + 'nuorimmille terveyttä. Palkaksi pussiin tulee makeisia ja '
+            + 'pähkinöitä. Ennen jaettiin saksanpähkinöitä, manteleita ja '
+            + 'kikherneitä, nykyään enimmäkseen karkkia. Nimi tulee '
+            + 'arabian sanasta, joka tarkoittaa helinää tai ravistelua. '
+            + 'Tytöillä on illassa usein kultaketjuinen päähine, ja '
+            + 'nykyään myös kauppakeskukset järjestävät omia '
+            + 'garangao-tilaisuuksiaan.',
+          selite: 'Rivikaupalla sinisiä ja violetteja harsopusseja, joiden '
+            + 'suu on kiristetty kultanauhalla ja solmittu rusetiksi. '
+            + 'Pussit odottavat jakoa garangao-illassa Dohassa.',
+          lahde: 'Dana Club Doha @ YouTube, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka pitkäksi hamour-kala voi kasvaa?',
+        vaihtoehdot: [
+          '30 senttimetriä',
+          '60 senttimetriä',
+          '120 senttimetriä',
+          '250 senttimetriä',
+        ],
+        oikea: 2,
+        fakta: 'Torilla myytävät hamourit ovat useimmiten nuoria, koska '
+          + 'täyteen mittaan ehtii kasvaa yhä harvempi kala.',
+      },
+    },
+  ],
 };

@@ -2459,6 +2459,64 @@ export const MAAKARTAT = {
  * kirjattu tähän eikä vain poistettu. Löytö: Sonnet 1:n QA.
  */
 export const KAUPUNKIKARTAT = {
+  /*
+   * Doha (nippu 2:n pilottikaupunki, 12.8.2026). Rajaus kattaa vanhan
+   * ytimen Corniche-rantakadun kaaressa; West Bayn tornit jäävät
+   * pohjoiseen kartan ulkopuolelle tarkoituksella (ks. perustelu
+   * tools/piirra-kaupunkikartta.mjs:n KAUPUNGIT-taulussa).
+   *
+   * Kohteista kolme — Souq Waqif, Islamilaisen taiteen museo ja
+   * kansallismuseo — on jo Qatarin MAALEHDESSÄ omina juttuinaan,
+   * koska maalehti kirjoitettiin ennen kuin Dohalla oli lehteä.
+   * Niiden nähtävyysjutut kertovat siksi eri asian kuin maalehti
+   * (docs/raportit/lehtityo-2026-08-12-nippu2-suunnittelu.md).
+   */
+  doha: {
+    polku: 'assets/kartat/doha-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 25.302, etela: 25.278, lansi: 51.518, ita: 51.556,
+    },
+    esittely: 'Doha kasvoi matalan lahden pohjukkaan. Vielä 1900-luvun '
+      + 'alussa se oli helmenpyyntisatama, jonka talot seisoivat aivan '
+      + 'rantaviivassa: vesi tuli nykyisten kortteleiden kohdalle, ja '
+      + 'veneet vedettiin hiekalle. Öljyn jälkeen rantaa siirrettiin. '
+      + 'Lahden pohjukkaa täytettiin 1970- ja 1980-luvuilla niin '
+      + 'paljon, että syntyi kokonaan uutta maata, ja sen reunaa '
+      + 'kiertämään rakennettiin Corniche — seitsemän kilometrin '
+      + 'kaari, joka on kartan selvin muoto. Vanha kaupunki jäi sen '
+      + 'taakse sisämaahan: Souq Waqif ja Msheirebin kortteli ovat '
+      + 'siellä, missä ranta ennen oli.'
+      + '\n\n'
+      + 'Kartalla meri tulee sisään ylhäältä ja kaartaa vasemmalta '
+      + 'oikealle. Rantaviivan myötäistä kaarta seuraa leveä katu; se '
+      + 'on Corniche. Keskellä ylhäällä työntyy veteen niemeke, jonka '
+      + 'kärjessä on Islamilaisen taiteen museo omalla tekosaarellaan '
+      + '— se erottuu kartalta selvästi, koska sen ympärillä ei ole '
+      + 'mitään muuta. Oikeassa reunassa vesi työntyy takaisin maalle: '
+      + 'siellä on vanha satama. Cornichen eteläpuolella katuverkko '
+      + 'muuttuu tiheäksi kujien seitiksi, ja juuri siinä ovat tori ja '
+      + 'linnake. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * VESITARKISTIN VAROITTAA TÄSTÄ PISTEESTÄ, JA SE ON OIKEIN NÄIN.
+       * tools/tarkista-karttapisteet.mjs sanoo "vettä 100 %", koska
+       * museon oma tekosaari ei piirry Overpassin aineistosta
+       * monikulmiona — mutta museo todella seisoo lahdella irti
+       * rannasta (en-Wikipedia: 25,2950 / 51,5393, ja sama sanotaan
+       * QAT-maalehden jutussa "seisoo omalla saarellaan"). Piste on
+       * siis totuudenmukainen; työkalun ohje sallii veden sillan ja
+       * majakan kohdalla, ja tämä on sama tapaus. ÄLÄ SIIRRÄ pistettä
+       * rannalle — se osoittaisi väärään paikkaan.
+       */
+      { nimi: 'Islamilaisen taiteen museo', lat: 25.2950, lon: 51.5393 },
+      { nimi: 'Corniche', lat: 25.2904, lon: 51.5352 },
+      { nimi: 'Souq Waqif', lat: 25.2882, lon: 51.5332 },
+      { nimi: 'Qatarin kansallismuseo', lat: 25.2868, lon: 51.5495 },
+      { nimi: 'Al Koot -linnake', lat: 25.2866, lon: 51.5310 },
+      { nimi: 'Msheireb', lat: 25.2828, lon: 51.5256 },
+    ],
+  },
   istanbul: {
     polku: 'assets/kartat/istanbul-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
