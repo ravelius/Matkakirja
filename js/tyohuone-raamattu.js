@@ -14,7 +14,7 @@
  */
 
 export const RAAMATTU2 = {
-  paivitetty: '11.8.2026 (ilta)',
+  paivitetty: '12.8.2026',
   johdanto: 'Koko pelin idea yhdessä dokumentissa. TAVOITE '
     + '(omistajan linjaus 11.8.2026): tämän lukeminen riittää '
     + 'yksinään pelin kehittämiseen ja uusien matkakirjatekstien '
@@ -410,6 +410,48 @@ export const RAAMATTU2 = {
       ],
     },
     {
+      otsikko: 'Karttalinssit',
+      tila: 'luonnos',
+      kohdat: [
+        'PERIAATE (linjaus 12.8.2026): kartta ei ole valikko vaan '
+          + 'pelin keskusesine. Pelin edetessä pelaaja oppii '
+          + 'näkemään samasta kartasta yhä uusia asioita — '
+          + 'ihmiskunnan liikkeet, kaupan, imperiumit, verkostot.',
+        'Linssi muuttaa maailmankartan hetkeksi eläväksi '
+          + 'visualisoinniksi: animoitu ilmiö ja juoksevat '
+          + 'vuosiluvut. Ydintarkoitus on, että visuaalinen '
+          + 'esitys auttaa hahmottamaan monimutkaiset asiat '
+          + 'helposti — ja avaa historian muutkin vuosisadat ja '
+          + 'vuosituhannet, ei vain 1873:n.',
+        'Linssit tulevat käyttöön PELIN AIKANA ja jaksottavat '
+          + 'pelirytmiä (katkaisevat monotonian, kun koko lautaa '
+          + 'kierretään). Osa ostetaan varustekaupasta, osa aukeaa '
+          + 'matkalla. SUPERLINSSI on eri asia kuin nämä — sen '
+          + 'sisältö jää vielä mietintään.',
+        'Paikkasidonnaisuus: historiallinen linssi aukeaa siellä, '
+          + 'missä se merkitsee eniten — Afrikassa ihmiskunnan '
+          + 'leviäminen maapallolle, Espanjassa Kolumbuksen '
+          + 'matkat, Roomassa Rooman valtakunnan kasvu, Intiassa '
+          + 'Itä-Intian kauppakomppania, Kiinassa dynastioiden '
+          + 'vaihtuminen ja ulkopuoliset valloittajat (Kiinan '
+          + 'pitkä historia on omistajalle erityisen läheinen).',
+        'Ideapankki: imperiumisalama (Britannia, meriteitä '
+          + 'pitkin), ihmiskunnan leviäminen, kauppareitit '
+          + '(Silkkitie ym. — sama reittidata palvelee myöhemmin '
+          + 'tautilinssiä), viestinnän historia (1873 lennätin → '
+          + 'internet), tutkimusmatkat (kytkeytyy Aarnin ja '
+          + 'Horation kaanoniin), aikapyyhkäisy 1873↔nyt. '
+          + 'Kerroksia saa yhdistää (esim. uskonnot + ristiretket) '
+          + '— enintään 2–3 kerralla, kullakin oma visuaalinen '
+          + 'kieli.',
+        'Toteutusperiaate: reitit ja vuosiluvut käsin '
+          + 'tarkistettuna datana, animaatio pelin omalla '
+          + 'tekniikalla — tekoälyvideo on korkeintaan erillinen '
+          + 'viimeistelykerros. Etusivun kartalla kevyt animaatio '
+          + 'vihjeenä tulevasta (isoisän reitti + kauppareitti).',
+      ],
+    },
+    {
       otsikko: 'Tutki kätkö -pelit',
       tila: 'luonnos',
       kohdat: [
@@ -557,8 +599,12 @@ export const RAAMATTU2 = {
       otsikko: 'Rajaukset ja turvalinjat',
       tila: 'luonnos',
       kohdat: [
-        'Ei sotasisältöä: Venäjän, Ukrainan ja Syyrian kohteet '
-          + 'kuvataan kulttuurikohteina.',
+        'Ei nykysotasisältöä: Venäjän, Ukrainan ja Syyrian '
+          + 'kohteet kuvataan kulttuurikohteina. TARKENNUS '
+          + '(omistajan päätös 12.8.): HISTORIALLISET taistelut '
+          + 'ja sotaretket saa näyttää ja visualisoida — ne ovat '
+          + 'perushistoriaa (esikuva: Minardin kaavio Napoleonin '
+          + 'Venäjän-retkestä, 1869).',
         'Pyhät kaupungit (Mekka, Medina) vain omistajan '
           + 'erillisellä päätöksellä, kunnioittavasti.',
         'Grimshaw ei ole koskaan vaarallinen; kukaan ei iva '
