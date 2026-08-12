@@ -7,6 +7,7 @@ import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-stream.js';
 import { kertojaTila, asetaKertojaTila } from './aani-ehdokkaat.js';
+import { asennaPollo } from './pollo.js';
 
 const PLAYER_COLOR = '#d94f3d';
 /*
@@ -648,3 +649,12 @@ kehittajaLomake.addEventListener('submit', (e) => {
   e.preventDefault();
   kytkeKehittaja();
 });
+
+/*
+ * Viisas Pöllö: kartan kulman tietokumppani (js/pollo.js).
+ *
+ * Asennetaan kerran ja annetaan getteri UI-olioon — uusi peli luo uuden
+ * UI:n, eikä pöllön pidä jäädä kiinni vanhaan. Pöllö ei koskaan avaudu
+ * itsestään, se vain ilmestyy näkyviin kun avausteksti on väistynyt.
+ */
+asennaPollo(() => ui);

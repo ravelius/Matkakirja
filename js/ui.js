@@ -76,6 +76,7 @@ import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { MAAKARTAT, KAUPUNKIKARTAT, karttapiste, mittakaava } from './packs/maakartat.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
+import { polloAnkkuri, polloSulje } from './pollo.js';
 import { HENKILOT, HENKILOLINKIT } from './packs/henkilot.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
@@ -2803,6 +2804,11 @@ export class UI {
     if (this.tarkkuusVahti) {
       document.removeEventListener('visibilitychange', this.tarkkuusVahti);
       this.tarkkuusVahti = null;
+    }
+    // Sama koskee alanappirivin liukua sulkevaa karttanapautusta.
+    if (this.liukuKuuntelija) {
+      document.removeEventListener('pointerdown', this.liukuKuuntelija);
+      this.liukuKuuntelija = null;
     }
     // Puskurirenkaan jono elää joutohetkien varassa: ilman perumista se
     // piirtäisi kuolleen pelin ruutuja uuden kartan päälle.
@@ -6032,13 +6038,18 @@ export class UI {
         return;
       }
       this.turnStatus.textContent = `${TRAVEL_LABEL[game.travelMode]} — heitä noppa.`;
-      const rollBtn = this.ikoniTekstiNappi('noppa', 'Heitä noppa', 'primary');
+      /*
+       * Nopanheitto ja matkustustavan vaihto ovat monitoiminapin
+       * liu'ussa kuten muutkin matkustustoiminnot (omistajan linjaus
+       * 12.8.2026): alanappirivi on aina täsmälleen kolme paikkaa.
+       */
+      const rollBtn = this.iconButton('noppa', 'Heitä noppa', 'primary');
       rollBtn.addEventListener('click', () => this.doRoll());
-      this.actionsEl.appendChild(rollBtn);
 
-      const backBtn = this.ikoniTekstiNappi('nuoli', 'Vaihda matkustustapa');
+      const backBtn = this.iconButton('nuoli', 'Vaihda matkustustapa');
       backBtn.addEventListener('click', () => this.doAction(() => game.actionCancelTravel()));
-      this.actionsEl.appendChild(backBtn);
+
+      this.piirraToimintorivi([rollBtn, backBtn], this.tutkiNappi());
       return;
     }
 
@@ -6071,13 +6082,12 @@ export class UI {
 
     if (!this.travelExpanded) {
       this.turnStatus.textContent = 'Valitse matkustustapa.';
-      // Kaikki vaiheen A napit mahtuvat aina yhteen riviin.
-      this.actionsEl.dataset.rivi = 'yksi';
 
+      const matkanapit = [];
       if (modes.includes('land')) {
         const landBtn = this.iconButton('saapas', 'Jalan', modes.includes('stay') ? '' : 'primary');
         landBtn.addEventListener('click', () => this.doWalk());
-        this.actionsEl.appendChild(landBtn);
+        matkanapit.push(landBtn);
       }
 
       if (hasSlow) {
@@ -6086,33 +6096,10 @@ export class UI {
           this.travelExpanded = true;
           this.render();
         });
-        this.actionsEl.appendChild(moreBtn);
+        matkanapit.push(moreBtn);
       }
 
-      /*
-       * Tutki on kaupungissa AINA tarjolla, tehtävistä riippumatta:
-       * kortti ja lehti ovat luettavaa sisältöä. Aiemmin nappi katosi
-       * heti kun tehtävät oli käytetty, ja lehtisivulle ei päässyt
-       * enää lainkaan (omistajan löytö 10.8.2026: "kahden väärän
-       * vastauksen jälkeen ei pääse enää ollenkaan edes
-       * lehtisivulle"). Korostus kertoo, odottaako tehtävä.
-       */
-      if (game.cityOf()) {
-        const stayBtn = this.iconButton('suurennuslasi', 'Tutki', modes.includes('stay') ? 'primary' : '');
-        // Uudessa kaupungissa nappi sykkii, kunnes sitä on painettu kerran.
-        if (this.tutkiSyke && this.tutkiSyke === this.kaupunkiAvain(game.cityOf())) {
-          stayBtn.classList.add('tutki-syke');
-        }
-        stayBtn.addEventListener('click', () => {
-          sfx.play('paper');
-          this.tutkiSyke = null;
-          stayBtn.classList.remove('tutki-syke');
-          // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
-          // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
-          this.openArrival(game.cityOf());
-        });
-        this.actionsEl.appendChild(stayBtn);
-      }
+      this.piirraToimintorivi(matkanapit, this.tutkiNappi());
       return;
     }
 
@@ -6193,6 +6180,133 @@ export class UI {
       this.render();
     });
     this.actionsEl.appendChild(backBtn);
+  }
+
+  /**
+   * Tutki-nappi (suurennuslasi) alanappirivin oikeaan paikkaan.
+   *
+   * Tutki on kaupungissa AINA tarjolla, tehtävistä riippumatta: kortti
+   * ja lehti ovat luettavaa sisältöä. Aiemmin nappi katosi heti kun
+   * tehtävät oli käytetty, ja lehtisivulle ei päässyt enää lainkaan
+   * (omistajan löytö 10.8.2026: "kahden väärän vastauksen jälkeen ei
+   * pääse enää ollenkaan edes lehtisivulle"). Korostus kertoo,
+   * odottaako tehtävä. Palauttaa null, jos pelaaja ei ole kaupungissa.
+   */
+  tutkiNappi() {
+    const { game } = this;
+    const city = game.cityOf();
+    if (!city) return null;
+    const stayBtn = this.iconButton('suurennuslasi', 'Tutki',
+      game.travelModes().includes('stay') ? 'primary' : '');
+    // Uudessa kaupungissa nappi sykkii, kunnes sitä on painettu kerran.
+    if (this.tutkiSyke && this.tutkiSyke === this.kaupunkiAvain(city)) {
+      stayBtn.classList.add('tutki-syke');
+    }
+    stayBtn.addEventListener('click', () => {
+      sfx.play('paper');
+      this.tutkiSyke = null;
+      stayBtn.classList.remove('tutki-syke');
+      // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
+      // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
+      this.openArrival(city);
+    });
+    return stayBtn;
+  }
+
+  /**
+   * ALANAPPIRIVI: kolme paikkaa (omistajan linjaus 12.8.2026).
+   *
+   *   vasen   monitoiminappi — avaa matkustusnapit
+   *   keski   Viisas Pöllö   — js/pollo.js siirtää nappinsa tähän
+   *   oikea   suurennuslasi  — Tutki, ennallaan
+   *
+   * Matkustusnapit eivät levitä riviä: ne LIUKUVAT pöllön ja
+   * suurennuslasin päälle, joten rivi on aina täsmälleen kolmen napin
+   * levyinen. Liuku sulkeutuu monitoiminapin uudesta napautuksesta tai
+   * mistä tahansa napautuksesta rivin ulkopuolella (kartta).
+   *
+   * Napit itse ovat samoja kuin ennen — tapahtumakäsittelijät,
+   * korostukset ja estotilat tulevat kutsujalta, joten mikään
+   * pelitoiminto ei muutu tämän myötä.
+   */
+  piirraToimintorivi(matkanapit = [], tutkiNappi = null) {
+    const rivi = html('div', 'toimintorivi');
+    const perus = html('div', 'toimintorivi-perus');
+
+    const monitoimi = this.iconButton('kompassi', 'Matkustustavat');
+    monitoimi.classList.add('monitoimi-nappi');
+    // Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
+    // muillakin estetyillä napeilla, ei katoamista.
+    monitoimi.disabled = matkanapit.length === 0;
+    monitoimi.setAttribute('aria-expanded', String(Boolean(this.liukuAuki)));
+    monitoimi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.vaihdaLiuku();
+    });
+    perus.appendChild(monitoimi);
+
+    // Pöllön paikka. Nappi asuu js/pollo.js:ssä, koska sen pitää siirtyä
+    // lehden sisään lehtinäkymässä — tässä annetaan vain paikka.
+    const polloPaikka = html('div', 'pollo-paikka');
+    perus.appendChild(polloPaikka);
+
+    perus.appendChild(tutkiNappi ?? html('div', 'rivi-tyhja'));
+    rivi.appendChild(perus);
+
+    const liuku = html('div', 'toimintorivi-liuku');
+    liuku.setAttribute('role', 'group');
+    liuku.setAttribute('aria-label', 'Matkustustavat');
+    for (const nappi of matkanapit) liuku.appendChild(nappi);
+    // Mikä tahansa liu'un nappi vie toimintoon, jonka jälkeen rivi
+    // piirretään uudestaan — liuku ei saa jäädä auki sen alle.
+    liuku.addEventListener('click', () => { this.liukuAuki = false; });
+    rivi.appendChild(liuku);
+
+    if (this.liukuAuki && matkanapit.length) rivi.classList.add('liuku-auki');
+    else this.liukuAuki = false;
+
+    this.actionsEl.appendChild(rivi);
+    this.toimintoRivi = rivi;
+    polloAnkkuri(polloPaikka);
+    this.kytkeLiukuSulku();
+  }
+
+  /** Monitoiminapin napautus: liuku auki tai kiinni. */
+  vaihdaLiuku() {
+    this.liukuAuki = !this.liukuAuki;
+    // Liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
+    if (this.liukuAuki) polloSulje();
+    this.paivitaLiuku();
+  }
+
+  suljeLiuku() {
+    if (!this.liukuAuki) return;
+    this.liukuAuki = false;
+    this.paivitaLiuku();
+  }
+
+  paivitaLiuku() {
+    const rivi = this.toimintoRivi;
+    if (!rivi || !rivi.isConnected) return;
+    rivi.classList.toggle('liuku-auki', Boolean(this.liukuAuki));
+    rivi.querySelector('.monitoimi-nappi')
+      ?.setAttribute('aria-expanded', String(Boolean(this.liukuAuki)));
+  }
+
+  /**
+   * Napautus rivin ulkopuolella (kartta) sulkee liu'un.
+   *
+   * Kuuntelija kytketään kerran ja puretaan destroyssa: ilman purkua
+   * kuollut instanssi jäisi kuuntelemaan uuden pelin rinnalle.
+   */
+  kytkeLiukuSulku() {
+    if (this.liukuKuuntelija) return;
+    this.liukuKuuntelija = (e) => {
+      if (this.dead || !this.liukuAuki) return;
+      if (e.target?.closest?.('.toimintorivi')) return;
+      this.suljeLiuku();
+    };
+    document.addEventListener('pointerdown', this.liukuKuuntelija);
   }
 
   /**

@@ -52,6 +52,8 @@ const MODULES = [
   'js/packs/kohtaamiset.js',
   'js/packs/paivan-kuvat.js',
   'js/packs/uutislahteet.js',
+  // Viisaan Pöllön rajapinta-asetus. Pelkkä vakio, jonka js/pollo.js lukee.
+  'js/packs/pollo-asetukset.js',
   'js/packs/europe-valokuvat.js',
   'js/packs/europe-kielet.js',
   'js/packs/europe-maatiedot.js',
@@ -170,7 +172,14 @@ const MODULES = [
   'js/mapart.js',
   'js/game.js',
   'js/ai.js',
+  /*
+   * Viisas Pöllö ENNEN ui.js:ää: ui.js tuo polloAnkkurin ja polloSuljen
+   * staattisesti, ja main.js kutsuu asennaPolloa moduulitasolla.
+   */
+  'js/pollo-haku.js',
+  'js/pollo.js',
   'js/ui.js',
+
   'js/muutokset.js',
   'js/main.js',
 ];
