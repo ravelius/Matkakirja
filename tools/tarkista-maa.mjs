@@ -48,10 +48,15 @@ for (const a of aiheet) {
     }
     // aika = tasokorotuksen aikamerkintä (käytössä sadoissa nostoissa).
     // wiki = "Lue lisää aiheesta" -nappi noston lopussa (ui.js tukee sitä
-    // myös maalehdessä; käytössä ARE:lla ja JOR:lla).
+    // myös maalehdessä; käytössä ARE:lla ja JOR:lla). musiikki*, aani* ja
+    // esikuuntelu ovat docs/tutki-aiheet.md:n mukaisia nostokenttiä —
+    // ne puuttuivat listalta, joten Egyptin musiikkisivu näytti kahdelta
+    // virheeltä, vaikka kentät ovat oikein (12.8.2026).
     const tuntematon = Object.keys(no).filter(
       (k) => !['otsikko', 'aika', 'tiedosto', 'teksti', 'selite', 'lahde',
-        'kuvat', 'aani', 'linkki', 'galleria', 'wiki'].includes(k));
+        'kuvat', 'aani', 'aaniLahde', 'linkki', 'galleria', 'wiki',
+        'musiikki', 'musiikkiNimi', 'musiikkiNayte', 'musiikkiNayteNimi',
+        'esikuuntelu'].includes(k));
     if (tuntematon.length) moiti(`${a.id} / ${no.otsikko}: tuntematon kenttä ${tuntematon}`);
     if (no.teksti && (no.teksti.length < 300 || no.teksti.length > 1200)) {
       huomiot.push(`${a.id} / ${no.otsikko}: teksti ${no.teksti.length} merkkiä`);

@@ -343,6 +343,88 @@ export const KULTTUURI_KATEGORIAT = {
            * alle nykysäännön, mutta se on ollut pelissä alusta asti ja
            * on aidosti paras vapaa kuva laulajasta.
            */
+          otsikko: 'Umm Kulthum, Egyptin ääni',
+          tiedosto: 'Umm Kulthum4.jpg',
+          teksti: 'Laulajatar Umm Kulthum oli arabimaailman rakastetuin '
+            + 'ääni: kun hänen radiokonserttinsa alkoi kuun ensimmäisenä '
+            + 'torstaina, Kairon kadut hiljenivät ja kahvilat täyttyivät '
+            + 'kuuntelijoista. Yksi laulu saattoi kestää tunnin, eikä '
+            + 'kukaan pitänyt sitä pitkänä.',
+          selite: 'Umm Kulthum mikrofonin äärellä uransa alkupuolella. '
+            + 'Tunnusmerkit olivat aina samat: tummat lasit, nenäliina '
+            + 'kädessä ja orkesteri takana — ja ääni, jota kutsuttiin '
+            + 'Egyptin neljänneksi pyramidiksi.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Umm Kulthum',
+          musiikki: 'https://music.apple.com/fi/album/enta-oumry-remastered/922753882?i=922753943',
+          musiikkiNimi: 'Umm Kulthum Apple Musicissa',
+          // Laulajan rakastetuin kappale.
+          esikuuntelu: 'Umm Kulthum Enta Omri',
+        },
+      ],
+    },
+    /*
+     * Kairon AIHESIVU (12.8.2026). Auditissa Kairo oli ainoa
+     * kaupunkilehti ilman aihesivua: kannella oli neljä nostoa eikä
+     * minitehtävää ollut lainkaan. Kannen neljäs nosto (Description de
+     * l'Égypten kartta 1809) siirtyi tänne, ja sen eteen kirjoitettiin
+     * kaksi juttua, jotka tekevät sivusta aikajanan 641 → 970 → 1809.
+     *
+     * Aiheet on valittu niin, etteivät ne osu Egyptin maalehden
+     * yhdeksään sivuun (EGY maa-kategoriat.js) eivätkä kannen omiin
+     * nostoihin: sitadelli on jo kansikuvana ja Metwaleyn portti
+     * Robertsin galleriassa.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kairo alkoi telttaleiristä Niilin itärannalla vuonna '
+        + '641. Kolmesataa vuotta myöhemmin uuden kaupungin moskeijaan '
+        + 'tuli oppilaita koko islamilaisesta maailmasta, ja 1800-luvun '
+        + 'alussa koko kaupunki mahtui vielä yhdelle kartalle.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki alkoi teltasta',
+          tiedosto: 'December photowalk - inside \'Amr ibn al-\'As mosque 3.jpg',
+          teksti: 'Kairon vanhin kaupunginosa syntyi telttaleiristä. '
+            + 'Arabijoukkojen komentaja Amr ibn al-As jätti oman '
+            + 'telttansa purkamatta Niilin itärannalle vuonna 641 — '
+            + 'tarinan mukaan siksi, että kyyhky oli muninut siihen. '
+            + 'Leiristä kasvoi al-Fustat, ja sen keskelle nousi vuonna '
+            + '642 Egyptin ensimmäinen moskeija: matala vaja, jonka '
+            + 'pylväinä olivat halkaistut palmunrungot ja lattiana '
+            + 'sora. Fustat oli maan pääkaupunki noin viisisataa '
+            + 'vuotta. Ensimmäisestä moskeijasta ei ole jäljellä '
+            + 'mitään: sali on rakennettu uudelleen kerta toisensa '
+            + 'jälkeen.',
+          selite: 'Amr ibn al-Asin moskeijan rukoussali nykyään. '
+            + 'Marmoripylväiden rivit kantavat teräväkärkisiä kaaria '
+            + 'ja puisia vetopalkkeja, katosta riippuu lamppuja ja '
+            + 'lattialla on punainen matto.',
+          lahde: 'Protious, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Tuhat vuotta oppitunteja pihalla',
+          tiedosto: 'Egypt, Cairo, Islamic scholars in the courtyard of Al-Azhar University.jpg',
+          teksti: 'Fatimidien kenraali Jawhar aloitti al-Azharin '
+            + 'rakentamisen vuonna 970, ja ensimmäinen perjantairukous '
+            + 'pidettiin siellä kesäkuussa 972. Rukoussalin '
+            + 'marmoripylväät kerättiin vanhemmista rakennuksista, ja '
+            + 'eripituiset pylväät tasattiin eri paksuisilla '
+            + 'jalustoilla. Vuonna 988 visiiri Yaqub ibn Killis '
+            + 'palkkasi moskeijaan 35 oppinutta vakituiseen työhön. '
+            + 'Tutkintotodistuksia ei jaettu: opinnot kestivät '
+            + 'keskimäärin kuusi vuotta, ja yksittäinen opettaja '
+            + 'päätti itse, milloin oppilas oli valmis. Opiskelijat '
+            + 'asuivat riwaq-osastoissa kotiseutunsa mukaan.',
+          selite: 'Kaksi al-Azharin oppinutta keskustelee moskeijan '
+            + 'marmoripihalla, toisella papereita kädessä. Taustalla '
+            + 'istuu oppilaita lattialla puisen ristikkoseinän edessä, '
+            + 'ja pihaa kiertävät koristeellisin kapiteelein veistetyt '
+            + 'pylväät.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
           /*
            * Vanha kartta -nosto (uusi lähdeidea 5.8.2026): Napoleonin
            * retkikunnan kartat ovat PD:nä Commonsissa, ja "silloin ja
@@ -367,26 +449,21 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Imprimerie impériale / NYPL, Wikimedia Commons (PD)',
           wiki: 'Description de l\'Égypte',
         },
-        {
-          otsikko: 'Umm Kulthum, Egyptin ääni',
-          tiedosto: 'Umm Kulthum4.jpg',
-          teksti: 'Laulajatar Umm Kulthum oli arabimaailman rakastetuin '
-            + 'ääni: kun hänen radiokonserttinsa alkoi kuun ensimmäisenä '
-            + 'torstaina, Kairon kadut hiljenivät ja kahvilat täyttyivät '
-            + 'kuuntelijoista. Yksi laulu saattoi kestää tunnin, eikä '
-            + 'kukaan pitänyt sitä pitkänä.',
-          selite: 'Umm Kulthum mikrofonin äärellä uransa alkupuolella. '
-            + 'Tunnusmerkit olivat aina samat: tummat lasit, nenäliina '
-            + 'kädessä ja orkesteri takana — ja ääni, jota kutsuttiin '
-            + 'Egyptin neljänneksi pyramidiksi.',
-          lahde: 'Wikimedia Commons (PD)',
-          wiki: 'Umm Kulthum',
-          musiikki: 'https://music.apple.com/fi/album/enta-oumry-remastered/922753882?i=922753943',
-          musiikkiNimi: 'Umm Kulthum Apple Musicissa',
-          // Laulajan rakastetuin kappale.
-          esikuuntelu: 'Umm Kulthum Enta Omri',
-        },
       ],
+      tehtava: {
+        kysymys: 'Keneltä al-Azharin oppilas sai todistuksen '
+          + 'opinnoistaan?',
+        vaihtoehdot: [
+          'Yksittäiseltä opettajalta',
+          'Kaupungin päätuomarilta',
+          'Kalifin hovin virastolta',
+          'Moskeijan rahastonhoitajalta',
+        ],
+        oikea: 0,
+        fakta: 'Tutkintojärjestelmää ei ollut: opinnot kestivät '
+          + 'keskimäärin kuusi vuotta, ja opettaja päätti itse, '
+          + 'milloin oppilas oli valmis.',
+      },
     },
   ],
   /*

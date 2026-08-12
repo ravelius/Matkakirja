@@ -1805,7 +1805,9 @@ export const MAA_KATEGORIAT = {
           wiki: 'Ful medames',
         },
         {
-          otsikko: 'Leipä tarkoittaa elämää',
+          // Otsikko ei saa sisältää minitehtävän vastausta ('Elämää'),
+          // joten se kertoo leivänkuljettajista (12.8.2026).
+          otsikko: 'Leipäritilä kulkee pään päällä',
           tiedosto: 'Bread in move.jpg',
           teksti: 'Arabiaksi leipä on khubz — mutta Egyptissä sitä '
             + 'kutsutaan sanalla aish, joka tarkoittaa elämää. Litteä '
@@ -2099,28 +2101,43 @@ export const MAA_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
-      johdanto: 'Laulaja, jonka konsertti tyhjensi kadut kerran kuussa, soitin '
-        + 'jolla on oma koulunsa, ja hautakammion seinälle veistetty harpisti '
-        + '3 300 vuoden takaa.',
+      johdanto: 'Oopperatalo, joka nousi pystyyn puolessa vuodessa ja paloi '
+        + 'sata vuotta myöhemmin maan tasalle, soitin jolla on oma koulunsa, '
+        + 'ja hautakammion seinälle veistetty harpisti 3 300 vuoden takaa.',
       nostot: [
         {
-          otsikko: 'Kerran kuussa kadut hiljenivät',
-          tiedosto: 'Oum Kaltoum à Rabat.jpg',
-          teksti: 'Umm Kulthum lauloi radiossa joka kuukauden ensimmäisenä '
-            + 'torstaina, ja koko arabimaailma pysähtyi kuuntelemaan: '
-            + 'kahvilat täyttyivät, kadut tyhjenivät ja taksit jäivät '
-            + 'odottamaan. Konsertti saattoi kestää kuusi tuntia, koska hän '
-            + 'lauloi saman säkeen uudestaan ja uudestaan hieman eri tavalla '
-            + '— niin kauan kuin yleisö huusi lisää. Kädessä oli aina '
-            + 'nenäliina, jota hän puristi laulaessaan. Hänen hautajaisissaan '
-            + '1975 Kairon kaduilla oli arviolta neljä miljoonaa ihmistä.',
-          selite: 'Umm Kulthum lavalla Rabatissa 1968, nenäliina kädessä. Takana '
-            + 'orkesteri, oikealla qanun-kanteleen soittaja.',
-          lahde: 'Mmaradji, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Umm Kulthum',
-          musiikki: 'https://music.apple.com/fi/album/enta-oumry-remastered/922753882?i=922753943',
-          musiikkiNimi: 'Umm Kulthum: Enta Omri',
-          esikuuntelu: 'Umm Kulthum Enta Omri',
+          /*
+           * Umm Kulthum siirtyi pois maalehdestä 12.8.2026: Kairon
+           * kaupunkilehden kansi kertoi hänestä täsmälleen samat asiat
+           * (kadut hiljenivät, nenäliina, kahvilat) eri kuvalla, ja
+           * kannen versio on Kairon kulttuurivisan ankkuri, joten se
+           * jää. Apple Music -linkki ja esikuuntelu ovat kannessa.
+           */
+          otsikko: 'Oopperatalo puolessa vuodessa',
+          tiedosto: 'ModernEgypt, Khedivial Opera House, BAP 25178.jpg',
+          teksti: 'Kediivi Ismail halusi Kairoon oopperatalon, ja '
+            + 'italialaisten arkkitehtien piirtämä talo nousi pystyyn '
+            + 'kuudessa kuukaudessa. Se avattiin 1. marraskuuta 1869 '
+            + 'Verdin oopperalla Rigoletto, veti noin 850 katsojaa ja oli '
+            + 'Afrikan ja Lähi-idän ensimmäinen oopperatalo. Kediivi oli '
+            + 'tilannut Verdiltä myös uuden, muinaiseen Egyptiin '
+            + 'sijoittuvan teoksen, mutta lavasteet ja puvut jäivät '
+            + 'Pariisiin, ja Aida sai kantaesityksensä vasta 24. '
+            + 'joulukuuta 1871. Lokakuun yönä 1971 lähes kokonaan puusta '
+            + 'rakennettu talo paloi maan tasalle, ja jäljelle jäi kaksi '
+            + 'patsasta. Nykyinen oopperatalo avattiin 1988.',
+          selite: 'Kediivin oopperatalo Kairossa pian valmistumisensa '
+            + 'jälkeen: pylväiden kannattama sisäänajokatos, '
+            + 'kaari-ikkunoiden rivi parvekkeen takana ja kello '
+            + 'päätykolmiossa.',
+          lahde: 'Tuntematon kuvaaja, Bibliotheca Alexandrina / '
+            + 'Wikimedia Commons (PD)',
+          // Aida sai kantaesityksensä juuri tässä talossa 1871;
+          // riemumarssi on sen tunnetuin kohta. Hakutermi tarkistettu
+          // iTunesin rajapinnasta ennen julkaisua.
+          musiikki: 'https://music.apple.com/fi/album/aida-triumphal-march-aida-triumphal-march/375453807?i=375454022',
+          musiikkiNimi: 'Verdi: Aidan riemumarssi',
+          esikuuntelu: 'Verdi Aida Triumphal March',
         },
         {
           otsikko: 'Koulu, jossa opetetaan yhtä ainoaa soitinta',
@@ -2183,7 +2200,7 @@ export const MAA_KATEGORIAT = {
         vaihtoehdot: [
           'Kieliä on paljon enemmän',
           'Kaikukoppa on suurempi',
-          'Otelaudassa ei ole nauhoja',
+          'Otelauta on ilman nauhoja',
           'Sitä soitetaan jousella',
         ],
         oikea: 2,
