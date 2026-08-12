@@ -9123,4 +9123,293 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Kuwaitin nähtävyysjutut (nippu 2, 12.8.2026). Nikosia on jaettu
+   * kaupunki, mutta lehti ei käsittele jakoa: peli ei kerro
+   * nykykonflikteista, joten kohteet kuvataan kulttuurikohteina
+   * omalla historiallaan. CYP-maalehti kertoo saaren muinaisuudesta
+   * ja kirkoista, joten kaupungin jutut pysyvät rakennuksissa.
+   */
+  kuwait: {
+    'Kuwait-tornit': {
+      aika: '1976',
+      teksti: 'Tornit syntyivät ruotsalaisen insinööritoimisto VBB:n '
+        + 'hankkeessa. Toimiston pääarkkitehti Sune Lindström oli jo '
+        + 'pystyttänyt viisi tornirykelmää samalla kaavalla, mutta '
+        + 'kuudennelle paikalle niemen kärkeen haluttiin jotain muuta. '
+        + 'Kymmenestä luonnoksesta kolme esiteltiin maan hallitsijalle '
+        + 'Jaber al-Ahmadille, joka valitsi tanskalaisen arkkitehdin '
+        + 'Malene Bjørnin työn. Rakentamisen hoiti belgradilainen Union '
+        + 'Inženjering, ja rungot tehtiin teräsbetonista ja jännitetystä '
+        + 'betonista. Työ kesti vuodesta 1971 vuoteen 1976.'
+        + '\n\n'
+        + 'Pallojen kuori on koottu pienistä emaloiduista teräskiekoista, '
+        + 'jotka on ladottu kierteisiksi nauhoiksi pallon ympäri. Sävyt '
+        + 'eivät muodosta yhtenäistä pintaa vaan kaarevia raitoja, ja '
+        + 'siksi pallo näyttää eri suunnista ja eri valossa eri '
+        + 'väriseltä. Kuvio muistuttaa vanhojen moskeijoiden kaakeloituja '
+        + 'kupoleita. Arkkitehdin mukaan koko ryhmä yhdistää kaksi kuvaa, '
+        + 'maapallon ja raketin.'
+        + '\n\n'
+        + 'Kolmas torni on kapea neula ilman palloa: siihen sijoitettiin '
+        + 'laitteet, joilla kaksi muuta valaistaan pimeän tultua. Aga '
+        + 'Khan -arkkitehtuuripalkinto jaettiin ensimmäisen kerran vuonna '
+        + '1980, ja Kuwaitin tornit olivat yksi palkituista kohteista. '
+        + 'Kunnostuksen ajan maaliskuusta 2012 maaliskuuhun 2016 tornit '
+        + 'olivat suljettuina.',
+      kuvat: [
+        {
+          tiedosto: 'Kuwait towers -2005 2006 Winter- (302658101).jpg',
+          selite: 'Kolmikko tienvarresta nähtynä: oikealla päätorni kahtine '
+            + 'palloineen, vasemmalla yksipalloinen torni ja niiden '
+            + 'välissä kolmas, kapea ja palloton. Kiekkojen kierteinen '
+            + 'ladonta erottuu pallojen pinnassa vaaleansinisenä '
+            + 'ristikkona.',
+          lahde: 'radiant guy from Den Haag, The Netherlands, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Kuwait City\'s popular landmarks Liberty Tower & Kuwait Towers.jpg',
+          selite: 'Samat tornit mereltä kuvattuna keskipäivän autereessa. '
+            + 'Kaukaa katsottuna pallot näyttävät hopeanharmailta ja '
+            + 'kiekkojen kuvio häviää lähes kokonaan; takana kohoavat '
+            + 'kaupungin uudemmat pilvenpiirtäjät.',
+          lahde: 'Mahrs Multiverse, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al Hamra -torni': {
+      teksti: 'Tornin pohjakaava on pyöristetty neliö, josta on leikattu '
+        + 'neljännes pois. Puuttuva neljännes ei ole joka kerroksessa '
+        + 'samassa kohdassa: alhaalla se on lounaisnurkassa, ylhäällä '
+        + 'kaakkoisnurkassa ja siirtyy kerros kerrokselta vähän. Siksi '
+        + 'torni näyttää kiertyvän. Viillon reunoina on kaksi '
+        + 'betoniseinää, jotka nousevat ytimen nurkista katolle asti ja '
+        + 'kaartuvat ulospäin. Niiden väliin jäävä eteläsivu on lähes '
+        + 'umpinainen kalkkikiviseinä; lasia on vain pohjoisessa, idässä '
+        + 'ja lännessä.'
+        + '\n\n'
+        + 'Muodon sanelee aurinko. Kuwait City on 29. leveyspiirillä, '
+        + 'joten aurinko on keskipäivällä aina etelässä ja eteläjulkisivu '
+        + 'saisi päivän kovimman säteilyn. Poistettu neljännes siirtää '
+        + 'toimistokerrokset pois siltä puolelta ja kääntää ne merelle '
+        + 'päin. Jura-kalkkikiviseinään ikkunat on upotettu vinoon niin, '
+        + 'että aukon reuna varjostaa lasia. Kantavat betoniseinät ovat '
+        + 'alhaalla 1 200 millimetriä paksuja ja ohenevat huipulla 300 '
+        + 'millimetriin.'
+        + '\n\n'
+        + 'Korkeutta on 412 metriä ja kerroksia 80, joista noin 72 on '
+        + 'toimistokerroksia; ylin käytössä oleva lattia on 351 metrissä. '
+        + 'Sisääntuloaula on 24 metriä korkea ilman yhtään pilaria, ja '
+        + 'hissejä on 43. Perustuksena on neljä metriä paksu betonilaatta '
+        + '289 paalun päällä. Tontille oli suunniteltu 200-metrinen talo, '
+        + 'mutta kaupunki nosti korkeusrajan 400 metriin kesken '
+        + 'kellarikaivuiden. Gary Haneyn ja Skidmore, Owings & Merrillin '
+        + 'suunnittelema torni valmistui 2011.',
+      kuvat: [
+        {
+          tiedosto: 'Kuwait City Kuwait Towers View to the al-Hamra Tower.jpg',
+          selite: 'Al Hamra -torni keskustan matalampien tornien yllä: '
+            + 'lasipinta kaartuu ylöspäin ja pohjakaavasta pois leikattu '
+            + 'neljännes päättyy huipulla vinoon kärkeen.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Al Hamra Kuwait Mai 2010.jpg',
+          selite: 'Torni keskeneräisenä toukokuussa 2010 alhaalta kuvattuna. '
+            + 'Kalkkikivellä verhotut kaarevat betoniseinät nousevat '
+            + 'maasta huipulle, ja niiden väliin jäävään eteläseinään on '
+            + 'tehty vinot ikkuna-aukot.',
+          lahde: 'J.Stiegler, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Seifin palatsi': {
+      aika: '1904',
+      teksti: 'Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen '
+        + 'kupoli, joka on päällystetty kullalla, ja sen laella ohut '
+        + 'piikki. Kupolin alla on avoin lyhtykerros: kapeita '
+        + 'kaari-ikkunoita ja niiden yläpuolella rivi sinisiä '
+        + 'tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa '
+        + 'vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä '
+        + 'laattaa. Torni nousee muurin takaa, jonka harjalla ovat '
+        + 'porrastetut sakarat. Nykyisen koneiston teki englantilainen '
+        + 'Smith of Derby — sama vuonna 1856 perustettu paja, joka '
+        + 'rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893.'
+        + '\n\n'
+        + 'Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja '
+        + 'siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. '
+        + 'Rakennusaineet olivat paikallisia — savea, kiveä, kalkkikiveä, '
+        + 'puuta ja metallia. Sen jälkeen kerroksia on kertynyt lisää: '
+        + 'ensimmäinen uudistus tehtiin 1917, suuret muutokset ja '
+        + 'lisäsiivet 1961, ja vuoden 1962 lopulla koko kortteli sai '
+        + 'nimen al-Diwan al-Amiri. Palatsi on suurmoskeijaa vastapäätä.'
+        + '\n\n'
+        + 'Pääportin yläpuolelle asetettiin 1918 laatta, jossa lukee '
+        + 'arabiaksi: ”Jos se olisi pysynyt toisilla, se ei olisi tullut '
+        + 'sinulle.” Sama lause on hakattu myös uuden aukion '
+        + 'kiviporttiin, ja sen alle vuosiluku 1337 — hidžra-ajanlaskun '
+        + 'vuosi, joka vastaa vuotta 1918. Vanhan portin teräväkaarisesta '
+        + 'aukosta näkee pihan yli suoraan merelle.',
+      kuvat: [
+        {
+          tiedosto: 'Seif tér, az emír palotája. Fortepan 30446.jpg',
+          selite: 'Palatsin vanha pääportti vuonna 1973: teräväkaarinen aukko '
+            + 'sakaramuurissa, sen yllä tummareunainen laatta '
+            + 'arabiankielisine lauseineen ja kahden puolen vartija '
+            + 'punaisessa takissa. Muurin takaa nousee kellotorni, ja '
+            + 'kaaresta näkyy meri.',
+          lahde: 'FOTO:FORTEPAN / Schiffer Pál, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Plaza Sief, ciudad de Kuwait, Kuwait, 2024-08-12, DD 45.jpg',
+          selite: 'Sama lause kiveen hakattuna uuden aukion portissa, alla '
+            + 'hidžra-vuosi 1337. Takana kohoaa kellotorni: turkoosi '
+            + 'laattakehys kellotaulun ympärillä ja kullattu kupoli, alla '
+            + 'vanhan muurin sakarat.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kuwaitin suurmoskeija': {
+      teksti: 'Päärukoussali on neliö, jonka jokainen sivu on 72 metriä. '
+        + 'Lattian peittää sininen matto, ja seiniä kiertävät massiiviset '
+        + 'marmoripilarit; niiden väliin on veistetty kaariaiheita ja '
+        + 'asetettu tummasta puusta tehtyjä ristikkosäleikköjä. Ovet ovat '
+        + 'tiikkiä, ja seinustalla on rivi matalia puisia lukutelineitä. '
+        + 'Päivänvalo tulee saliin 144 ikkunasta, jotka ovat korkealla '
+        + 'seinien yläosassa; kattoon on lisäksi ripustettu suuria '
+        + 'kristallikruunuja.'
+        + '\n\n'
+        + 'Katossa on yksi ainoa kupoli. Sen sisäpinta on '
+        + 'ruskeanpunainen, ja keskellä on pyöreä medaljonki, jonka '
+        + 'kahdessa kehässä kiertää kullattu kalligrafia. Kupolin juurta '
+        + 'kiertää sinisten ikkunoiden rivi, ja sen alapuolella katto on '
+        + 'kaiverrettua ja kullattua puuta.'
+        + '\n\n'
+        + 'Rakennus peittää 20 000 neliömetriä ja koko tontti 45 000. '
+        + 'Salin lisäksi sisällä on 350 neliön kirjasto, jossa '
+        + 'säilytetään islamilaisia hakuteoksia ja asiakirjoja. Ainoa '
+        + 'minareetti seisoo luoteiskulmassa, kohoaa 74 metriin ja on '
+        + 'tehty andalusialaisen esikuvan mukaan. Itäisen pihan alle on '
+        + 'kaivettu viisikerroksinen pysäköintihalli 550 autolle. Hanke '
+        + 'maksoi 13 miljoonaa Kuwaitin dinaaria, ja moskeija otettiin '
+        + 'käyttöön id al-fitr -juhlana, hijri-vuoden 1407 shawwal-kuun '
+        + 'ensimmäisenä päivänä.',
+      kuvat: [
+        {
+          tiedosto: 'Kuwait City Grand Mosque Interior 12.jpg',
+          selite: 'Rukoussalin seinustaa: marmoripilarien välissä '
+            + 'kaariaiheita ja puisia ristikkosäleikköjä, alhaalla rivi '
+            + 'puisia lukutelineitä, katossa kullattu kaiverrettu pinta '
+            + 'ja lattialla sininen matto.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Kuwait City Grand Mosque Interior Dome 2.jpg',
+          selite: 'Kupoli suoraan alhaalta kuvattuna: ruskeanpunainen '
+            + 'sisäpinta, keskellä kalligrafiamedaljonki ja reunalla '
+            + 'sinisten ikkunoiden kehä.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mubarakiyan tori': {
+      teksti: 'Souq Al-Mubarakiya on ollut samalla paikalla ainakin '
+        + 'kaksisataa vuotta, ja se oli kaupungin kauppapaikka jo kauan '
+        + 'ennen öljyä. Vuonna 1952 valtio hyväksyi ensimmäisen '
+        + 'asemakaavansa, jonka laati brittiläinen toimisto Minoprio, '
+        + 'Spenceley & Macfarlane. Kaava pyyhki vanhan kaupungin: '
+        + 'savitiilitalot purettiin kortteli kerrallaan. Tori jäi: se oli '
+        + 'purkutöiden aikaan yhä paikka, jossa kaupunki kävi kauppaa, '
+        + 'eikä kauppa keskeytynyt.'
+        + '\n\n'
+        + 'Kujat on jaettu ammatin mukaan, ja risteyksessä kyltti '
+        + 'luettelee suunnat. Kultakujalla kulta ja hopea ovat samoissa '
+        + 'vitriineissä, kangaskujalla riippuvat perinnepuvut ja '
+        + 'persialaiset silkkimatot, mausteiden kujalla säkkien vieressä '
+        + 'myydään myskiä ja oudia. Vihanneksilla, lihalla ja kalalla on '
+        + 'omat kujansa. Käytävän yllä on puukatos: järeät pylväät '
+        + 'molemmin puolin, näkyvät kattotuolit ja loiva harjakatto, '
+        + 'jonka alla kuja pysyy varjossa koko päivän. Al-Bahar-moskeijan '
+        + 'viereisellä pihalla pöytien yllä kulkevista putkista '
+        + 'suihkutetaan kesällä vesisumua.'
+        + '\n\n'
+        + 'Torilla on kaksi pientä museota, joihin on vapaa pääsy: šeikki '
+        + 'Mubarakin kioski ja Kuwaitin ensimmäinen apteekki. '
+        + 'Maaliskuussa 2022 tulipalo tuhosi osan torin kaupoista, ja '
+        + 'vuonna 2024 allekirjoitettiin urakkasopimus palaneen osan '
+        + 'rakentamisesta uudelleen: noin seitsemäntoista rakennusta, '
+        + 'kustannusarvio kahdeksan miljoonaa Kuwaitin dinaaria.',
+      kuvat: [
+        {
+          tiedosto: 'Kuwait City Souq al-Mubarakeya 1.jpg',
+          selite: 'Torin katettu pääkuja: puupylväät molemmin puolin, '
+            + 'kattotuolit näkyvissä ja käytävän yllä opastekyltti, joka '
+            + 'luettelee kultatorin sekä vihannes-, liha- ja kalatorin '
+            + 'suunnat.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Kuwait City Souq al-Mubarakeya 5.jpg',
+          selite: 'Šeikki Mubarakin kioski torin pihalla: puinen yläkerta '
+            + 'ikkunaluukkuineen, ulkoportaat ja seinässä laatta '
+            + 'rakennuksen uudelleenavaamisesta.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sadu House': {
+      aika: '1936',
+      teksti: 'Sadu-talo seisoo Persianlahden rantakadun varrella '
+        + 'kansallismuseon naapurissa. Paikalla ollut savitiilitalo '
+        + 'tuhoutui vuoden 1936 tulvissa, ja samana vuonna varakkaan '
+        + 'suvun päämies Youssef al-Marzouk rakennutti tilalle uuden: '
+        + 'Kuwaitin ensimmäisen kivestä muuratun ja betonilla vahvistetun '
+        + 'talon. Siinä on neljä avointa sisäpihaa, ikkunoissa '
+        + 'rautaristikot ja ovissa Karachista tuotua puukoristelua. '
+        + 'Vuonna 1938 uusi omistaja lisäsi kerroksen ja eurooppalaiset '
+        + 'takat diwaniya-huoneisiin. Valtio osti talon 1970-luvulla, ja '
+        + 'rakennus kunnostettiin 2006.'
+        + '\n\n'
+        + 'Kudonnaiset muuttivat taloon vuonna 1980. Vuoteen 1984 '
+        + 'mennessä seuraan oli kirjattu 300 beduiinikutojaa, jotka '
+        + 'tekivät noin seitsemänkymmentä esinettä viikossa; 1991 '
+        + 'hankkeesta tuli osuuskunta, jonka omistavat kutojat itse. '
+        + 'Talossa on nyt museo, työpaja ja myymälä. Kokoelmassa on myös '
+        + 'kaupungin kudontaa: aavikolla kutoivat naiset, kaupungissa '
+        + 'miehet, joiden työtä oli bisht eli olkaviitta.'
+        + '\n\n'
+        + 'Värit ovat musta, valkoinen, ruskea, beige ja punainen; langat '
+        + 'värjättiin kasveilla, hennalla ja sahramilla. Aloittelija '
+        + 'opettelee ensin reunakuviot: hubub eli siemenet, dealla eli '
+        + 'kylkiluut, eein eli silmä, dhurs el khail eli hevosen hampaat '
+        + 'ja uwairjan eli vastakkain osoittavien kolmioiden rivi. Vasta '
+        + 'sitten hän saa kutoa keskiraidan, jonka nimi on shajarah, puu; '
+        + 'sen hallitsevaa kutojaa kutsutaan nimellä thafrah, voittoisa.',
+      kuvat: [
+        {
+          tiedosto: 'Kuwaiti embroidered rugs.png',
+          selite: 'Seinälle ripustettu kudonnainen: leveät tummanruskeat ja '
+            + 'kermanvalkoiset kentät, niiden välissä kapeat '
+            + 'mustavalkoiset kuvioraidat ja poikittain ommellut '
+            + 'punaoranssit kolmioraidat.',
+          lahde: 'Di7ane, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'السدو 3.jpg',
+          selite: 'Kapea kaistale museon seinällä: punaisia ja mustia '
+            + 'kolmioruutuja, niiden välissä valkoinen keskiraita. '
+            + 'Vieressä oleva kyltti ajoittaa työn noin vuoteen 1950 ja '
+            + 'nimeää keskiraidan kuvioksi shajarah.',
+          lahde: 'Di7ane, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

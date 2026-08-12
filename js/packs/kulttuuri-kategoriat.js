@@ -7253,4 +7253,185 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * KUWAITIN KANSISIVU (nippu 2, 12.8.2026). Aihesivun id on arki,
+   * koska KWT-maalehdellä on linnut, aavikko, rakennukset ja ruoka
+   * — sama id kaupungilla peittäisi maan sivun (rakennaSivut).
+   */
+  kuwait: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kuwait',
+      johdanto: 'Kuwait on lahden pohjukan kaupunki, jossa maailman suurimmaksi '
+        + 'rakennettu puulaiva seisoo kuivalla maalla, parlamenttitalon '
+        + 'katto on valettu betonista teltan muotoon ja tunnetuin museo '
+        + 'on kokonaan maan alla.',
+      kansikuvat: [
+        {
+          tiedosto: 'Al-Hashemi-II (ship).jpg',
+          selite: 'Al-Hashemi-II mereltä nähtynä. Kaksimastoinen puulaiva '
+            + 'seisoo kivisen rantamuurin takana kuivalla maalla, ja '
+            + 'perän kaiverrettu punaruskea korokeosa kohoaa muuta runkoa '
+            + 'korkeammalle.',
+          lahde: 'Photographer: Mosbatho, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Silver Jewellery in the TRM.jpg',
+          selite: 'Hopeakorusali Tareq Rajab -museossa. Vitriineissä on '
+            + 'pinkkiä ja sinistä taustaa vasten kaulakoruja ja isoja '
+            + 'rintakoruja, joista riippuu rivi hopeakiekkoja, ja käytävä '
+            + 'jatkuu pimeänä.',
+          lahde: 'Tnrajab, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'TSCK Kuwait Old Building.jpg',
+          selite: 'Tieteen keskus Salmiyassa ilmasta nähtynä. Valkoiset '
+            + 'purjemaiset katokset peittävät rakennuksen, viereiseen '
+            + 'satamaan on ankkuroitu puisia purjelaivoja, ja takana '
+            + 'kulkee rantatie tornitalojen ohi.',
+          lahde: 'TSCKuwait, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Laivaa ei ole koskaan laskettu vesille',
+          tiedosto: 'Hawalli Al-Hashemi II Exterior Aft 1.jpg',
+          teksti: 'Al-Hashemi-II on rakennettu dhow-laivan muotoon, mutta se '
+            + 'ei ole koskaan ollut vedessä. Husain Marafie tilasi '
+            + 'laivan, suunnittelu alkoi 1985 ja rakennustyöt 1997. '
+            + 'Guinnessin ennätysluetteloon pituudeksi kirjattiin 80,4 '
+            + 'metriä ja leveydeksi 18,7 metriä, ja työ maksoi yli '
+            + 'kolmekymmentä miljoonaa dollaria. Runko tilkittiin vanhaan '
+            + 'tapaan vesitiiviiksi, vaikka laiva jäi maalle. Nyt se '
+            + 'seisoo rantahotellin vieressä, ja sisällä on juhlasali ja '
+            + 'merenkulkumuseo. Peräpeiliin on veistetty kukkakiehkuroita '
+            + 'ja rivi kaari-ikkunoita, ja niiden yläpuolella on silmä.',
+          selite: 'Al-Hashemi-II:n perä alhaalta katsottuna. Punaruskeaan '
+            + 'puuhun on kaiverrettu kasviaiheita ja kaari-ikkunoita, '
+            + 'nimi on maalattu kullalla, ja rungon alla näkyy ovi '
+            + 'juhlasaliin.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Museo on maanpinnan alapuolella',
+          tiedosto: 'Manuscripts in the TRM.jpg',
+          teksti: 'Jabriyan asuinkorttelissa on huvila, jonka kokoelma on '
+            + 'kokonaan maanpinnan alapuolella. Tareq Rajab -museo '
+            + 'avattiin 1980, ja se oli ensimmäinen islamilaisen taiteen '
+            + 'museo Kuwaitissa ja koko Persianlahden alueella. Kokoelma '
+            + 'on yhden pariskunnan keräämä: Tareq ja Jehan Rajab ajoivat '
+            + '1960-luvulla autolla Syyriaan, Iraniin ja Turkkiin ja '
+            + 'ostivat esineitä kauppiailta ja kylistä. Vitriineissä on '
+            + 'Koraaneja 600-luvulta alkaen, keramiikkaa, aseita, pukuja '
+            + 'ja yksi maailman laajimmista hopeakorukokoelmista. Museota '
+            + 'rahoittaa yhä sama perhe, ja kalligrafialle avattiin 2007 '
+            + 'oma talo samaan kaupunginosaan.',
+          selite: 'Käsikirjoitussali museon alakerrassa. Lasivitriinit '
+            + 'muodostavat pitkiä rivejä, seinillä on kehystettyjä '
+            + 'käsikirjoituslehtiä tummansinistä taustaa vasten, ja '
+            + 'edessä on metallinen eläinhahmo ja suitsutusastia.',
+          lahde: 'Tnrajab, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Parlamentti rakennettiin basaarikadun ympärille',
+          tiedosto: 'Kuwait City Arabian Gulf Street 10.jpg',
+          teksti: 'Kansalliskokouksen talon suunnitteli tanskalainen Jørn '
+            + 'Utzon, sama arkkitehti kuin Sydneyn oopperatalon. '
+            + 'Piirustukset syntyivät 1972, työt alkoivat heinäkuussa '
+            + '1978 ja talo valmistui 1982 hänen poikansa Janin johdolla. '
+            + 'Keskellä kulkee 130 metriä pitkä ja 10 metriä leveä '
+            + 'katettu käytävä, jonka esikuva on Isfahanin basaari; '
+            + 'istuntosalissa ei ole yhtään ikkunaa, ja valo tulee '
+            + 'katolle nostetuista puolikkaista tynnyriholveista. '
+            + 'Betoniosia valettiin valmiiksi 12 800 kappaletta 150 '
+            + 'perusmallista. Meren puolella katto nousee ylöspäin kuin '
+            + 'teltan kangas.',
+          selite: 'Kansalliskokouksen talo Arabianlahden rantakadun varrella. '
+            + 'Valkoisen betonisiiven viisto katto päättyy laskostettuun '
+            + 'reunaan, vasemmalla on kaariholvinen matalampi osa, ja '
+            + 'edessä kasvaa palmuja tyhjän kadun laidalla.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Kuwait Cityn arki jakautuu kahtia vuodenajan mukaan: kesällä '
+        + 'päivä vietetään sisällä ja talvella aamut alkavat sumusta. '
+        + 'Sisätiloista on tehty katuja, ja rannalla on satama vanhoille '
+        + 'laivoille.',
+      nostot: [
+        {
+          otsikko: 'Heinäkuussa 46 astetta, tammikuussa neljä pakkasta',
+          tiedosto: 'Misty Jan morning in kuwait 2013 (3).jpg',
+          teksti: 'Kuwait Cityn heinäkuun keskimääräinen ylin lämpötila on '
+            + '46,6 astetta ja yön alin 30,4. Tammikuussa vastaavat luvut '
+            + 'ovat 19,6 ja 7,6, ja koko mittaushistorian alin lukema on '
+            + 'niin ikään tammikuulta: neljä astetta pakkasta. Sadepäiviä '
+            + 'kertyy vuodessa yhdeksäntoista, ja kesäkuun ja syyskuun '
+            + 'välillä sadetta ei mitata lainkaan. Ilmankosteus kääntyy '
+            + 'vuodenajan mukana: tammikuussa se on 65 prosenttia, '
+            + 'kesäkuussa 16. Aurinkoa paistaa vuodessa noin kolmetuhatta '
+            + 'tuntia, eli keskimäärin runsaat kahdeksan tuntia päivässä.',
+          selite: 'Sumuinen tammikuun aamu kaupungin laidalla. Valtatiellä '
+            + 'ajaa auto takavalot palaen, tienvarren pensasrivi ja '
+            + 'yksinäinen puu häviävät sumuun, ja hiekan päällä kasvaa '
+            + 'talven vihreä ruoho.',
+          lahde: 'irvin calicut, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Katu, jonka päälle on vedetty katto',
+          tiedosto: 'Grand Avenue in Kuwait.jpg',
+          teksti: 'Rain kaupunginosassa on The Avenues, joka avattiin '
+            + 'huhtikuussa 2007 ja jota on laajennettu kolmesti: 2009, '
+            + '2012 ja 2018. Koko alue on noin 1,2 miljoonaa neliömetriä '
+            + 'ja jakautuu kuuteentoista osaan, liikkeitä on yli 1 400 ja '
+            + 'pysäköintipaikkoja lähes 17 000 autolle. Osa käytävistä on '
+            + 'tehty kadun näköisiksi. Grand Avenuen keskellä kasvaa '
+            + 'palmuja, kahviloiden edessä on päivänvarjoja, ja '
+            + 'parvekkeet seuraavat toisiaan kuin talorivit. Katto on '
+            + 'läpikuultavaa muovikalvoa, jota tähän yhteen kattoon meni '
+            + '74 500 neliömetriä.',
+          selite: 'Grand Avenuen sisäkatu ylhäältä. Läpikuultava valkoinen '
+            + 'kattoholvi kaartuu käytävän yllä, keskellä kasvaa palmu, '
+            + 'kahviloiden edessä on punaisia päivänvarjoja, ja ihmiset '
+            + 'kävelevät kahdessa kerroksessa.',
+          lahde: 'EnGxBaDeR, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Hai kulkee katsojan yläpuolelta',
+          tiedosto: 'Sharks - Mijbil Almutawa Aquarium.jpg',
+          teksti: 'Salmiyan rannalla oleva Tieteen keskus avattiin vuonna '
+            + '2000. Tontti on 80 000 neliömetriä ja rakennus 18 000, ja '
+            + 'talossa on kolme osaa: akvaario, tiedenäyttely ja '
+            + 'IMAX-teatteri. Akvaariossa elää yli sata eläinlajia, ja '
+            + 'suuren kaarevan ikkunan takaa hait näkyvät alhaaltapäin. '
+            + 'Ulkona on satama, jossa seisoo vanhoja puulaivoja. Niistä '
+            + 'tunnetuin on Fateh Al-Khayr, 226 tonnin boum, joka '
+            + 'rakennettiin Kuwaitissa 1938 ja myytiin 1952 iranilaiselle '
+            + 'kapteenille. Merihistorioitsija Yacoub al-Hijji löysi sen '
+            + '1994, ja kahden vuoden kunnostuksen jälkeen se on ainoa '
+            + 'jäljellä oleva kuwaitilainen purjelaiva öljyä edeltävältä '
+            + 'ajalta.',
+          selite: 'Kaksi haita akvaarion ikkunan takana. Ne uivat katsojan '
+            + 'yläpuolella sinisessä vedessä, valo lankeaa pinnasta '
+            + 'juovina, ja alalaidassa erottuu korallia ja pieniä kaloja.',
+          lahde: 'TSCKuwait, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monena päivänä vuodessa Kuwait Cityssä sataa?',
+        vaihtoehdot: [
+          'Yhdeksäntoista',
+          'Neljäkymmentä',
+          'Kahdeksankymmentä',
+          'Sata',
+        ],
+        oikea: 0,
+        fakta: 'Sade osuu marraskuun ja huhtikuun väliin; kesäkuusta '
+          + 'syyskuuhun sadetta ei mitata lainkaan.',
+      },
+    },
+  ],
 };
