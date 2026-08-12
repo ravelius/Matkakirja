@@ -108,9 +108,14 @@ export const LEHTI_LOHKOT = [
   { valitsin: '#arrival-city', otsikko: 'Lehden nimiö' },
   { valitsin: '#arrival-lehti-pvm', otsikko: 'Päiväys' },
   { valitsin: '#arrival-intro', otsikko: 'Kaupungin esittely' },
-  { valitsin: '#arrival-maa-nimi', otsikko: 'Maa' },
-  { valitsin: '#arrival-maa-intro', otsikko: 'Maan esittely' },
-  { valitsin: '#arrival-maa-tunnusluvut', otsikko: 'Maa numeroina' },
+  /*
+   * Lehden oma maaosasto EI ole sijaintitieto: Maiden tiedot
+   * -varusteella auki voi olla minkä tahansa maan lehti. Otsikot
+   * sanovat sen ääneen, jottei pöllö lue niitä pelaajan sijainniksi.
+   */
+  { valitsin: '#arrival-maa-nimi', otsikko: 'Lehden maaosasto koskee maata' },
+  { valitsin: '#arrival-maa-intro', otsikko: 'Lehden maaosaston esittely' },
+  { valitsin: '#arrival-maa-tunnusluvut', otsikko: 'Lehden maaosasto numeroina' },
   { valitsin: '#arrival-kategoria', otsikko: 'Avoinna oleva sivu' },
   { valitsin: '#arrival-kulttuuri-lista', otsikko: 'Lehden nostot' },
 ];
@@ -199,12 +204,42 @@ export function poimiLohkot(juuri, lohkot = LEHTI_LOHKOT, estot = SPOILERI_LOHKO
 }
 
 /**
+ * Maan nimi ISO-3-tunnuksesta pelin omalla aineistolla.
+ *
+ * Sama lähde kuin kartan maakyltillä (js/ui.js drawCountryBorders →
+ * paivitaMaaPilleri): map.countryShapes[iso].nimi. Jos laudalla ei ole
+ * tälle maalle muotoa, nimeä EI ole — silloin myös kartan kyltti on
+ * piilossa, eikä pöllökään saa keksiä maata omin päin.
+ *
+ * Nimi on pöllön oma (polloMaanNimi eikä maanNimi): yhden tiedoston
+ * koonti on yhtä näkyvyysaluetta, ja js/ui.js käyttää nimeä maanNimi
+ * sekä paikallismuuttujana että parametrina.
+ */
+function polloMaanNimi(game, iso) {
+  if (!iso) return null;
+  try {
+    return game?.pack?.map?.countryShapes?.[iso]?.nimi ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Pelin tila kontekstia varten.
  *
- * TÄMÄ ON SPOILERISUOJAN YDIN: funktio lukee vain nämä neljä kenttää.
+ * TÄMÄ ON SPOILERISUOJAN YDIN: funktio lukee vain nämä kentät.
  * game.quiz, game.duel, game.eventCard ja game.arrivalFact jäävät
  * koskematta — niissä ovat aktiivisen tehtävän kysymys, vaihtoehdot ja
  * oikean vastauksen indeksi.
+ *
+ * MAA JOHDETAAN AINA KAUPUNGISTA (omistajan havainto 13.8.2026).
+ * Pelaaja oli Sofiassa, ja pöllö väitti Sofiaa Kreikan pääkaupungiksi:
+ * konteksti luki maan ui.arrivalMaaTiedoista, joka osoittaa VIIMEKSI
+ * AVATTUUN maalehteen — Maiden tiedot -varusteella selattu Kreikka jäi
+ * siihen roikkumaan, vaikka pelaaja seisoi Bulgariassa. Nyt ketju on
+ * yksi ja sama kuin kartan maakyltillä: kaupunki → map.cityCountry →
+ * map.countryShapes[iso].nimi. Jos nimeä ei löydy, maa jää kokonaan
+ * pois — väärä maa on pahempi kuin puuttuva.
  */
 export function pelinTila(game) {
   if (!game) return {};
@@ -221,10 +256,17 @@ export function pelinTila(game) {
   } catch {
     paiva = null;
   }
+  let maaIso = null;
+  try {
+    maaIso = cityId ? game.pack?.map?.cityCountry?.[cityId] ?? null : null;
+  } catch {
+    maaIso = null;
+  }
   return {
     lauta: game.pack?.name ?? null,
     kaupunki,
-    maaIso: cityId ? game.pack?.map?.cityCountry?.[cityId] ?? null : null,
+    maaIso,
+    maa: polloMaanNimi(game, maaIso),
     paiva,
   };
 }
@@ -252,7 +294,10 @@ export function kokoaKonteksti({
   const rivit = [];
   if (lauta) rivit.push(`Lauta: ${polloSiisti(lauta)}`);
   if (kaupunki) rivit.push(`Kaupunki, jossa pelaaja on: ${polloSiisti(kaupunki)}`);
-  if (maa) rivit.push(`Maa: ${polloSiisti(maa)}`);
+  // Sama sanamuoto kuin kaupungilla: lehtilohkoissa voi olla toisen maan
+  // osasto (Maiden tiedot -varusteella selattu vieras maalehti), joten
+  // pelkkä "Maa:" olisi kahdesti kontekstissa eri merkityksessä.
+  if (maa) rivit.push(`Maa, jossa pelaaja on: ${polloSiisti(maa)}`);
   if (paiva) rivit.push(`Matkapäivä: ${paiva}`);
   if (nakyma) rivit.push(`Näkymä: ${polloSiisti(nakyma)}`);
   if (matkakirja) {
@@ -283,22 +328,35 @@ export function kokoaKonteksti({
 /**
  * Lukee nykytilan pelistä ja DOMista yhdeksi tekstipaketiksi.
  *
- * ui-olio on valinnainen: siitä otetaan vain maan nimi ja tieto siitä,
- * kumpi lehti on auki. Ilman sitä paketti on hieman köyhempi mutta
- * kelvollinen.
+ * ui-olio on valinnainen: siitä otetaan vain tieto siitä, kumpi lehti on
+ * auki ja minkä maan lehti se on. Ilman sitä paketti on hieman köyhempi
+ * mutta kelvollinen.
+ *
+ * SIJAINTI EI TULE KOSKAAN UI:STA. Maa luetaan pelinTilasta eli
+ * kaupungista johdettuna; ui.arrivalMaaTiedot kertoo vain, minkä maan
+ * osasto lehdessä sattuu olemaan auki, ja se voi olla mikä tahansa maa
+ * (Maiden tiedot -varuste). Sen käyttäminen sijaintina oli juuri se
+ * vika, joka teki Sofiasta Kreikan pääkaupungin.
  */
 export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [] } = {}) {
   const tila = pelinTila(game);
   const lehti = doc?.getElementById?.('arrival-dialog') ?? null;
   const lehtiAuki = Boolean(lehti?.open);
   const matkakirja = polloSiisti(doc?.getElementById?.('fact-text')?.textContent);
+  // Maalehti kerrotaan nimeltä, jottei sen maaosasto sekoitu siihen
+  // maahan, jossa pelaaja seisoo.
+  const maalehtiIso = lehtiAuki ? ui?.tutkiMaaLehti ?? null : null;
+  const lehdenMaa = polloMaanNimi(game, maalehtiIso);
+  let nakyma = 'kartta';
+  if (lehtiAuki && maalehtiIso) {
+    nakyma = lehdenMaa ? `maan lehti auki (${lehdenMaa})` : 'maan lehti auki';
+  } else if (lehtiAuki) {
+    nakyma = 'kaupungin lehti auki';
+  }
   return kokoaKonteksti({
     ...tila,
-    maa: ui?.arrivalMaaTiedot?.nimi ?? tila.maaIso ?? null,
     matkakirja,
-    nakyma: lehtiAuki
-      ? (ui?.tutkiMaaLehti ? 'maan lehti auki' : 'kaupungin lehti auki')
-      : 'kartta',
+    nakyma,
     aineisto,
     lohkot: lehtiAuki ? poimiLohkot(lehti) : [],
   });
@@ -502,12 +560,22 @@ class Pollo {
     // Paneelin sisällä napautus ei saa sulkea alanappirivin liukua.
     paneeli.addEventListener('click', (e) => e.stopPropagation());
 
-    this.ehdotukset = polloElementti('div', 'pollo-ehdotukset');
-    this.ehdotukset.hidden = true;
-    paneeli.appendChild(this.ehdotukset);
-
+    /*
+     * EHDOTUKSET ELÄVÄT VIRRASSA (omistajan havainto 13.8.2026).
+     *
+     * Ennen ehdotuslaatikko oli paneelin oma ylin osa, eli se jäi
+     * lukituksi yläreunaan keskustelun päälle: kun pelaaja avasi
+     * paneelin uudelleen, kolme kysymysnappia leijui vanhan vastauksen
+     * yläpuolella kuin ne kuuluisivat siihen. Nyt laatikko on virran
+     * sisällä ja siirtyy aina viimeisen viestin perään — mikään
+     * paneelin osa ei enää kiinnity keskustelun päälle.
+     */
     this.virta = polloElementti('div', 'pollo-virta');
     paneeli.appendChild(this.virta);
+
+    this.ehdotukset = polloElementti('div', 'pollo-ehdotukset');
+    this.ehdotukset.hidden = true;
+    this.virta.appendChild(this.ehdotukset);
 
     paneeli.appendChild(this.rakennaSyote());
     this.paneeli = paneeli;
@@ -836,7 +904,9 @@ class Pollo {
       this.naytaNukkuva();
       return;
     }
-    if (!this.virta.childElementCount) this.lisaaViesti('pollo', TERVEHDYS);
+    // Ehdotuslaatikko asuu virrassa, joten tervehdystä ei etsitä
+    // lapsimäärästä vaan viesteistä.
+    if (!this.virta.querySelector('.pollo-viesti')) this.lisaaViesti('pollo', TERVEHDYS);
     // Kehittäjätila voi vaihtua kesken pelin, joten kenttä katsotaan
     // joka avauksella eikä kerran käynnistyksessä.
     this.kehittajaRivi.hidden = !polloKehittajaTila();
@@ -1117,6 +1187,28 @@ class Pollo {
     return viesti;
   }
 
+  /**
+   * VASTAUS ALKAA NÄKYMÄN YLÄREUNASTA (omistajan havainto 13.8.2026).
+   *
+   * Virta kelasi jokaisen vastauksen jälkeen pohjaan, jolloin pitkän
+   * vastauksen luku alkoi sen viimeiseltä riviltä ja pelaaja joutui
+   * kelaamaan ylös. Nyt vastauksen ENSIMMÄINEN rivi tuodaan näkyviin ja
+   * loppu jää pelaajan itsensä vieritettäväksi. Pelaajan oma kysymys
+   * kelaa yhä pohjaan (lisaaViesti) — se on lyhyt ja kuuluu näkyä heti.
+   *
+   * Muutama pikseli jätetään yläpuolelle, jottei rivi liimaudu kiinni
+   * reunaan: edellisen viestin häntä kertoo, että ylempänä on lisää.
+   */
+  vieritaAlkuun(el, pehmuste = 8) {
+    if (!el?.getBoundingClientRect || !this.virta?.getBoundingClientRect) return;
+    try {
+      const ero = el.getBoundingClientRect().top - this.virta.getBoundingClientRect().top;
+      this.virta.scrollTop += ero - pehmuste;
+    } catch {
+      /* asettelua ei ole käytettävissä — vieritys jää tekemättä */
+    }
+  }
+
   /** Kevyt jarru: yksi pyyntö kerrallaan. */
   asetaKesken(kesken) {
     this.kesken = kesken;
@@ -1204,6 +1296,12 @@ class Pollo {
       this.ehdotukset.appendChild(nappi);
     }
     this.ehdotukset.hidden = !this.ehdotukset.childElementCount;
+    // Laatikko siirtyy viimeisen viestin perään: se koskee sitä, mitä
+    // keskustelussa on nyt, ei sitä mistä keskustelu alkoi.
+    if (!this.ehdotukset.hidden) {
+      this.virta.appendChild(this.ehdotukset);
+      this.virta.scrollTop = this.virta.scrollHeight;
+    }
   }
 
   async kysy(raakaKysymys) {
@@ -1237,17 +1335,20 @@ class Pollo {
       const linkit = this.poimiLinkit(this.viimeisetKatkelmat);
       this.naytaLinkit(this.korostaLinkit(viesti, linkit));
       this.naytaJatkot(data?.jatkot);
+      // Vasta kun koko vastaus liitteineen on virrassa: nyt sen alkuun
+      // voi vierittää, koska sisältöä on riittävästi alapuolella.
+      this.vieritaAlkuun(viesti);
       this.lueVastaus(teksti);
       this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
       this.historia.push({ rooli: 'pollo', teksti });
       this.historia = this.historia.slice(-HISTORIAN_KATTO);
     } catch (virhe) {
       odotus.remove();
+      // Virheilmoitus on yksi rivi: se saa kelata pohjaan kuten ennenkin.
       this.lisaaViesti('pollo', virhe?.viesti
         ?? 'Pöllö ei saanut ajatuksesta kiinni. Yritä hetken päästä uudelleen.');
     } finally {
       this.asetaKesken(false);
-      this.virta.scrollTop = this.virta.scrollHeight;
     }
   }
 

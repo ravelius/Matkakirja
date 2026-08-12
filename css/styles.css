@@ -10790,15 +10790,17 @@ body[data-mode] .actions .pollo-paneeli,
 body[data-mode] .actions .pollo-paneeli * { text-shadow: none; }
 
 /*
- * Ehdotukset ovat paneelin ylin osa nyt kun otsikkopalkkia ei ole.
- * Yläpehmuste antaa niille saman ilmavan reunuksen, joka palkilla oli.
+ * Ehdotukset ovat KESKUSTELUVIRRASSA, eivät paneelin yläreunassa
+ * (omistajan havainto 13.8.2026). Aiemmin laatikko oli paneelin oma
+ * ylin osa, jolloin se jäi lukituksi vanhan vastauksen päälle ja näytti
+ * kuuluvan siihen. Nyt se vierii viestien mukana ja saa saman muodon
+ * kuin vastauksen alla olevat jatkokysymykset (.pollo-jatkot).
  */
 .pollo-ehdotukset {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  padding: 0.55rem 0.6rem;
-  border-bottom: 1px solid var(--pollo-viiva);
+  gap: 0.25rem;
+  margin: 0 0 0.6rem;
 }
 
 button.pollo-ehdotus {

@@ -327,6 +327,46 @@ function lukijaPaloittele(teksti, katto = PALAN_KATTO) {
   return palat;
 }
 
+/**
+ * VAIENTAA SELAIMEN PUHESYNTETISAATTORIN HETI.
+ *
+ * synth.cancel() riittää määritelmän mukaan, mutta ei käytännössä:
+ * WebKitissä (Safari ja iOS-kuoren WKWebView) tauolle jäänyt jono ei
+ * tyhjene ennen kuin se on herätetty, ja juuri aloitettu lausuma jatkuu
+ * toisinaan ensimmäisestä perumisesta huolimatta. Siksi tässä tehdään
+ * kolme asiaa: herätys, peruminen ja varmistus seuraavalla vuorolla.
+ *
+ * Tämä on se puolisko, jonka pöllön kaiutinvipu tarvitsee: vipu pois →
+ * ääni loppuu kesken lauseen, ei lauseen tai jonon loputtua (omistajan
+ * havainto 13.8.2026).
+ */
+let vaimennusVuoro = 0;
+
+function vaimennaSynth(synth, varmista = false) {
+  if (!synth) return;
+  // Vuoronumero mitätöi vanhat varmistukset: jos uusi luenta (tai uusi
+  // pysäytys) ehtii väliin, viivästetty peruminen ei saa katkaista sitä.
+  const vuoro = (vaimennusVuoro += 1);
+  const yrita = () => {
+    try {
+      if (synth.paused && typeof synth.resume === 'function') synth.resume();
+      synth.cancel();
+    } catch {
+      /* selain oli jo hiljaa */
+    }
+  };
+  yrita();
+  if (!varmista || typeof setTimeout !== 'function') return;
+  setTimeout(() => {
+    if (vuoro !== vaimennusVuoro) return;
+    try {
+      if (synth.speaking || synth.pending) yrita();
+    } catch {
+      /* syntetisaattori katosi kesken kaiken */
+    }
+  }, 0);
+}
+
 /* ------------------------------------------------------------------ */
 /* Luennan tila — vain yksi kerrallaan                                 */
 /* ------------------------------------------------------------------ */
@@ -412,38 +452,61 @@ export function lueAaneen(teksti, nappi = null) {
 
   const synth = selainPuhe();
   if (!synth) return false;
-  try {
-    synth.cancel();
-  } catch {
-    /* ei mitään peruttavaa */
-  }
+  vaimennaSynth(synth);
   const palat = lukijaPaloittele(puhuttava);
   if (!palat.length) return false;
-  let jaljella = palat.length;
+  const aani = suomiAani(synth);
+
+  /*
+   * PALAT JONOTETAAN YKSI KERRALLAAN, EI KAIKKI KERRALLA.
+   *
+   * Ennen koko teksti työnnettiin syntetisaattorin jonoon heti, jolloin
+   * pysäytys oli sen varassa, että selain tyhjentää jonon oikein — ja
+   * juuri sitä WebKit ei tee luotettavasti: peruttu luenta jatkui
+   * seuraavasta palasta. Nyt jonossa on korkeintaan yksi lausuma ja
+   * seuraava lähtee vasta edellisen päätyttyä, joten peruminen lopettaa
+   * luennan lopullisesti — ja `peruttu` estää jo lähteneen päätöksen
+   * käynnistämästä uutta palaa.
+   */
+  const tila = { peruttu: false, lausuma: null };
+  let seuraava = 0;
+  const puhuPala = () => {
+    if (tila.peruttu) return;
+    if (seuraava >= palat.length) {
+      loppui();
+      return;
+    }
+    const lausuma = new window.SpeechSynthesisUtterance(palat[seuraava]);
+    seuraava += 1;
+    lausuma.lang = LUENNAN_KIELI;
+    if (aani) lausuma.voice = aani;
+    const valmis = () => {
+      if (tila.peruttu) return;
+      puhuPala();
+    };
+    lausuma.onend = valmis;
+    lausuma.onerror = valmis;
+    tila.lausuma = lausuma;
+    synth.speak(lausuma);
+  };
+
   ajossa = {
     nappi,
     merkki,
     lopeta: () => {
-      try {
-        synth.cancel();
-      } catch {
-        /* selain oli jo hiljaa */
+      tila.peruttu = true;
+      // Kuulijat irti ensin: peruminen laukaisee onend/onerror, eikä se
+      // saa käynnistää seuraavaa palaa.
+      if (tila.lausuma) {
+        tila.lausuma.onend = null;
+        tila.lausuma.onerror = null;
       }
+      // Varmistus päälle vain pysäytettäessä: WebKitissä juuri alkanut
+      // lausuma jää toisinaan käyntiin ensimmäisestä perumisesta.
+      vaimennaSynth(synth, true);
     },
   };
-  const aani = suomiAani(synth);
-  for (const pala of palat) {
-    const lausuma = new window.SpeechSynthesisUtterance(pala);
-    lausuma.lang = LUENNAN_KIELI;
-    if (aani) lausuma.voice = aani;
-    const valmis = () => {
-      jaljella -= 1;
-      if (jaljella <= 0) loppui();
-    };
-    lausuma.onend = valmis;
-    lausuma.onerror = valmis;
-    synth.speak(lausuma);
-  }
+  puhuPala();
   merkitseTila(nappi, true);
   return true;
 }

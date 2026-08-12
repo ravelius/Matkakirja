@@ -17,6 +17,9 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+// Workerin järjestelmäkehote luetaan tiedostona: se on palvelimen koodia
+// eikä sitä tuoda peliin, joten merkkijonotarkistus on oikea mitta.
+import { readFileSync } from 'node:fs';
 
 import {
   KONTEKSTIN_ENIMMAISPITUUS,
@@ -167,7 +170,14 @@ function teeLehti({ auki = true, sivuPiilossa = false } = {}) {
 /** Peliolio, jonka quiz-kentässä on aktiivinen tehtävä vastauksineen. */
 function teeGame() {
   return {
-    pack: { name: 'Maailmankartta', map: { cityCountry: { doha: 'QAT' } } },
+    pack: {
+      name: 'Maailmankartta',
+      map: {
+        cityCountry: { doha: 'QAT' },
+        // Maan nimi tulee samasta taulusta kuin kartan maakyltille.
+        countryShapes: { QAT: { nimi: 'Qatar' } },
+      },
+    },
     player: { pos: { city: 'doha' } },
     board: { cityById: new Map([['doha', { id: 'doha', name: 'Doha' }]]) },
     dayCount: () => 23,
@@ -279,6 +289,98 @@ test('lueNakyma kartalla: ei lehtitekstiä, ei kaatumista ilman peliä', () => {
   assert.ok(kartalla.includes('Näkymä: kartta'));
   assert.ok(!kartalla.includes(JUTUN_TEKSTI));
   assert.equal(lueNakyma({ game: null, doc: teeDoc() }), 'Näkymä: kartta');
+});
+
+/* ---------------------------------------------------------------- */
+/* Sijaintikontekstin eheys                                          */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026. Pelaaja seisoi Sofiassa ja kartan
+ * maakyltissä luki BULGARIA, mutta pöllö ehdotti kysymystä "Mikä on
+ * Sofian rooli Kreikassa tänä päivänä?" ja vahvisti sen. Syy oli
+ * kontekstissa: maa luettiin ui.arrivalMaaTiedoista, joka osoittaa
+ * viimeksi avattuun MAALEHTEEN — Maiden tiedot -varusteella selattu
+ * Kreikka jäi siihen roikkumaan. Nämä testit lukitsevat säännön: maa
+ * johdetaan aina nykyisestä kaupungista, eikä vanhentunut kenttä voita.
+ */
+
+/** Peli Sofiassa. Bulgarialla on maan muoto ja nimi, kuten oikeallakin laudalla. */
+function teeSofiaGame({ cityCountry = { sofia: 'BGR' }, countryShapes = { BGR: { nimi: 'Bulgaria' }, GRC: { nimi: 'Kreikka' } } } = {}) {
+  return {
+    pack: { name: 'Eurooppa', map: { cityCountry, countryShapes } },
+    player: { pos: { city: 'sofia' } },
+    board: { cityById: new Map([['sofia', { id: 'sofia', name: 'Sofia' }]]) },
+    dayCount: () => 12,
+  };
+}
+
+test('pelinTila johtaa maan kaupungista pelin omalla kaupunki→maa-datalla', () => {
+  const tila = pelinTila(teeSofiaGame());
+  assert.equal(tila.kaupunki, 'Sofia');
+  assert.equal(tila.maaIso, 'BGR');
+  assert.equal(tila.maa, 'Bulgaria');
+});
+
+test('vanhentunut maalehtikenttä ei voita kaupunkia: Sofia on Bulgariassa', () => {
+  // ui.arrivalMaaTiedot osoittaa Kreikkaan, koska pelaaja selasi
+  // Kreikan maalehteä. Sen EI saa näkyä sijaintina.
+  const konteksti = lueNakyma({
+    game: teeSofiaGame(),
+    ui: { arrivalMaaTiedot: { nimi: 'Kreikka' }, tutkiMaaLehti: 'GRC' },
+    doc: teeDoc(),
+  });
+  assert.ok(konteksti.includes('Kaupunki, jossa pelaaja on: Sofia'), konteksti);
+  assert.ok(konteksti.includes('Maa, jossa pelaaja on: Bulgaria'), konteksti);
+  assert.ok(!/Kreikka/.test(konteksti), konteksti);
+});
+
+test('avoin vieraan maan lehti kerrotaan nimeltä, ei sijaintina', () => {
+  const lehti = teeLehti();
+  const konteksti = lueNakyma({
+    game: teeSofiaGame(),
+    ui: { arrivalMaaTiedot: { nimi: 'Kreikka' }, tutkiMaaLehti: 'GRC' },
+    doc: teeDoc({ lehti }),
+  });
+  assert.ok(konteksti.includes('Maa, jossa pelaaja on: Bulgaria'), konteksti);
+  assert.ok(konteksti.includes('maan lehti auki (Kreikka)'), konteksti);
+  // Sijaintirivi on yksi ja yksiselitteinen: lehden maaosastolla on
+  // oma, eri otsikkonsa.
+  assert.equal(konteksti.match(/jossa pelaaja on: /g)?.length, 2);
+});
+
+test('tuntemattomalle maalle ei keksitä nimeä — maa jää pois kokonaan', () => {
+  // Laudalla ei ole muotoa tälle maalle, jolloin myös kartan maakyltti
+  // on piilossa. Väärä tai käsittämätön maa on pahempi kuin puuttuva.
+  const konteksti = lueNakyma({
+    game: teeSofiaGame({ cityCountry: { sofia: 'ZZZ' }, countryShapes: {} }),
+    ui: { arrivalMaaTiedot: { nimi: 'Kreikka' } },
+    doc: teeDoc(),
+  });
+  assert.ok(konteksti.includes('Kaupunki, jossa pelaaja on: Sofia'), konteksti);
+  assert.ok(!/Maa, jossa pelaaja on/.test(konteksti), konteksti);
+  assert.ok(!/ZZZ|Kreikka/.test(konteksti), konteksti);
+});
+
+test('ilman kaupunkia ei ole maata', () => {
+  const tila = pelinTila({ pack: teeSofiaGame().pack, player: { pos: {} } });
+  assert.equal(tila.maaIso, null);
+  assert.equal(tila.maa, null);
+});
+
+/*
+ * JÄRJESTELMÄKEHOTE ON PALVELIMELLA (tools/pollo/worker.js), eikä sitä
+ * voi CI:ssä koeajaa mallia vasten. Tässä tarkistetaan vain, että
+ * oikaisuohje on kehotteessa: se on se sääntö, jonka puuttuminen sai
+ * mallin vahvistamaan kysymyksen väärän oletuksen.
+ */
+test('workerin kehotteessa on oikaisuohje ja faktakuri', () => {
+  const kehote = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
+  assert.ok(/oikaise/i.test(kehote), 'oikaisuohje puuttuu kehotteesta');
+  assert.ok(/jossa pelaaja on/.test(kehote), 'sijaintirivin nimi puuttuu kehotteesta');
+  assert.ok(/vahvista väärää oletusta/.test(kehote), 'kielto vahvistaa väärä oletus puuttuu');
+  assert.ok(/et ole varma/i.test(kehote), 'epävarmuuden myöntäminen puuttuu');
+  assert.ok(/hallinnollis/i.test(kehote), 'kielto keksiä hallinnollisia väitteitä puuttuu');
 });
 
 /* ---------------------------------------------------------------- */
