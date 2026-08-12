@@ -1805,7 +1805,9 @@ export const MAA_KATEGORIAT = {
           wiki: 'Ful medames',
         },
         {
-          otsikko: 'Leipä tarkoittaa elämää',
+          // Otsikko ei saa sisältää minitehtävän vastausta ('Elämää'),
+          // joten se kertoo leivänkuljettajista (12.8.2026).
+          otsikko: 'Leipäritilä kulkee pään päällä',
           tiedosto: 'Bread in move.jpg',
           teksti: 'Arabiaksi leipä on khubz — mutta Egyptissä sitä '
             + 'kutsutaan sanalla aish, joka tarkoittaa elämää. Litteä '
@@ -2099,28 +2101,43 @@ export const MAA_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
-      johdanto: 'Laulaja, jonka konsertti tyhjensi kadut kerran kuussa, soitin '
-        + 'jolla on oma koulunsa, ja hautakammion seinälle veistetty harpisti '
-        + '3 300 vuoden takaa.',
+      johdanto: 'Oopperatalo, joka nousi pystyyn puolessa vuodessa ja paloi '
+        + 'sata vuotta myöhemmin maan tasalle, soitin jolla on oma koulunsa, '
+        + 'ja hautakammion seinälle veistetty harpisti 3 300 vuoden takaa.',
       nostot: [
         {
-          otsikko: 'Kerran kuussa kadut hiljenivät',
-          tiedosto: 'Oum Kaltoum à Rabat.jpg',
-          teksti: 'Umm Kulthum lauloi radiossa joka kuukauden ensimmäisenä '
-            + 'torstaina, ja koko arabimaailma pysähtyi kuuntelemaan: '
-            + 'kahvilat täyttyivät, kadut tyhjenivät ja taksit jäivät '
-            + 'odottamaan. Konsertti saattoi kestää kuusi tuntia, koska hän '
-            + 'lauloi saman säkeen uudestaan ja uudestaan hieman eri tavalla '
-            + '— niin kauan kuin yleisö huusi lisää. Kädessä oli aina '
-            + 'nenäliina, jota hän puristi laulaessaan. Hänen hautajaisissaan '
-            + '1975 Kairon kaduilla oli arviolta neljä miljoonaa ihmistä.',
-          selite: 'Umm Kulthum lavalla Rabatissa 1968, nenäliina kädessä. Takana '
-            + 'orkesteri, oikealla qanun-kanteleen soittaja.',
-          lahde: 'Mmaradji, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Umm Kulthum',
-          musiikki: 'https://music.apple.com/fi/album/enta-oumry-remastered/922753882?i=922753943',
-          musiikkiNimi: 'Umm Kulthum: Enta Omri',
-          esikuuntelu: 'Umm Kulthum Enta Omri',
+          /*
+           * Umm Kulthum siirtyi pois maalehdestä 12.8.2026: Kairon
+           * kaupunkilehden kansi kertoi hänestä täsmälleen samat asiat
+           * (kadut hiljenivät, nenäliina, kahvilat) eri kuvalla, ja
+           * kannen versio on Kairon kulttuurivisan ankkuri, joten se
+           * jää. Apple Music -linkki ja esikuuntelu ovat kannessa.
+           */
+          otsikko: 'Oopperatalo puolessa vuodessa',
+          tiedosto: 'ModernEgypt, Khedivial Opera House, BAP 25178.jpg',
+          teksti: 'Kediivi Ismail halusi Kairoon oopperatalon, ja '
+            + 'italialaisten arkkitehtien piirtämä talo nousi pystyyn '
+            + 'kuudessa kuukaudessa. Se avattiin 1. marraskuuta 1869 '
+            + 'Verdin oopperalla Rigoletto, veti noin 850 katsojaa ja oli '
+            + 'Afrikan ja Lähi-idän ensimmäinen oopperatalo. Kediivi oli '
+            + 'tilannut Verdiltä myös uuden, muinaiseen Egyptiin '
+            + 'sijoittuvan teoksen, mutta lavasteet ja puvut jäivät '
+            + 'Pariisiin, ja Aida sai kantaesityksensä vasta 24. '
+            + 'joulukuuta 1871. Lokakuun yönä 1971 lähes kokonaan puusta '
+            + 'rakennettu talo paloi maan tasalle, ja jäljelle jäi kaksi '
+            + 'patsasta. Nykyinen oopperatalo avattiin 1988.',
+          selite: 'Kediivin oopperatalo Kairossa pian valmistumisensa '
+            + 'jälkeen: pylväiden kannattama sisäänajokatos, '
+            + 'kaari-ikkunoiden rivi parvekkeen takana ja kello '
+            + 'päätykolmiossa.',
+          lahde: 'Tuntematon kuvaaja, Bibliotheca Alexandrina / '
+            + 'Wikimedia Commons (PD)',
+          // Aida sai kantaesityksensä juuri tässä talossa 1871;
+          // riemumarssi on sen tunnetuin kohta. Hakutermi tarkistettu
+          // iTunesin rajapinnasta ennen julkaisua.
+          musiikki: 'https://music.apple.com/fi/album/aida-triumphal-march-aida-triumphal-march/375453807?i=375454022',
+          musiikkiNimi: 'Verdi: Aidan riemumarssi',
+          esikuuntelu: 'Verdi Aida Triumphal March',
         },
         {
           otsikko: 'Koulu, jossa opetetaan yhtä ainoaa soitinta',
@@ -2183,7 +2200,7 @@ export const MAA_KATEGORIAT = {
         vaihtoehdot: [
           'Kieliä on paljon enemmän',
           'Kaikukoppa on suurempi',
-          'Otelaudassa ei ole nauhoja',
+          'Otelauta on ilman nauhoja',
           'Sitä soitetaan jousella',
         ],
         oikea: 2,
@@ -15024,7 +15041,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Miten ghaf-puu pärjää aavikolla ilman sadetta?',
         vaihtoehdot: [
           'Se kerää kastetta lehtiinsä',
-          'Sen juuret yltävät syvälle pohjaveteen',
+          'Sen juuret yltävät pohjaveteen asti',
           'Se pudottaa lehtensä kuivaksi ajaksi',
           'Sitä kastellaan letkulla',
         ],
@@ -15111,7 +15128,7 @@ export const MAA_KATEGORIAT = {
         vaihtoehdot: [
           'Tuuli työntää sitä eteenpäin',
           'Kamelit vetävät ämpäreitä vuorotellen',
-          'Painovoima: kanava laskee alaspäin',
+          'Painovoima, sillä vettä ei pumpata',
           'Sähköpumput vuoren juurella',
         ],
         oikea: 2,
@@ -15196,7 +15213,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Kuka ohjaa kamelia nykyään kilpailuradalla?',
         vaihtoehdot: [
-          'Pieni robotti kamelin selässä',
+          'Pieni robotti, jota ohjataan radiolla',
           'Kukaan, kamelit juoksevat vapaina',
           'Valmentaja polkupyörällä vieressä',
           'Ratsastaja perässä toisella kamelilla',
@@ -15283,7 +15300,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Burj Khalifa kapenee ylöspäin portaittain?',
         vaihtoehdot: [
-          'Portaikko rikkoo tuulen synnyttämät pyörteet',
+          'Portaikko rikkoo pyörteet joka kerroksessa',
           'Ylimmät kerrokset olisivat muuten liian kylmiä',
           'Muoto lyhentää hissimatkaa',
           'Se säästää lasia julkisivussa',
@@ -15503,7 +15520,8 @@ export const MAA_KATEGORIAT = {
               + 'kiertää kaksikerroksinen kaaririvi. Se rakennettiin 1600-luvun '
               + 'alussa, ja sen neljälle sivulle avautuu neljä eri asiaa: moskeija, '
               + 'toinen pienempi moskeija, palatsi ja basaarin portti. Aukio on '
-              + 'noin 160 metriä leveä ja 500 metriä pitkä, eli reilusti suurempi '
+              + '160 metriä leveä ja 560 metriä pitkä eli lähes yhdeksän '
+              + 'hehtaaria, reilusti suurempi '
               + 'kuin useimmat Euroopan torit. Alun perin sillä pelattiin poolo, ja '
               + 'maalitolpat seisovat yhä paikoillaan päädyissä. Aukio otettiin '
               + 'maailmanperintöluetteloon vuonna 1979.',
@@ -15570,7 +15588,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miten tuulitorni viilentää talon?',
         vaihtoehdot: [
-          'Johtaa viileän tuulen alas',
+          'Johtaa viileämmän tuulen alas',
           'Varjostaa katon auringolta',
           'Kerää sadeveden seiniin',
           'Puhaltaa keittiön savun pois katolta',
@@ -15608,22 +15626,31 @@ export const MAA_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          otsikko: 'Kanava, joka kaivettiin maan alle',
-          tiedosto: 'Shafiabad (Shahdad), Kerman Province, Iran (42688716052).jpg',
-          teksti: 'Puutarhojen ja peltojen vesi tuli usein qanatista. Se on loivasti '
-              + 'viettävä maanalainen käytävä, joka johtaa vettä vuoren juurella '
-              + 'olevasta pohjavesikerroksesta kylään asti. Käytävä kaivetaan maan '
-              + 'alle juuri siksi, ettei vesi haihdu matkalla auringossa, ja sen '
-              + 'varrelle jää rivi pystykuiluja, joista kaivumaa nostettiin ja '
-              + 'joista käytävään pääsee huoltamaan. Pisimmät ovat kymmeniä '
-              + 'kilometrejä pitkiä. Tapa on tuhansia vuosia vanha, ja se levisi '
-              + 'Iranista laajalle; yksitoista iranilaista qanatia otettiin '
-              + 'maailmanperintöluetteloon vuonna 2016.',
-          selite: 'Maanalainen käytävä, jonka seinät ja katto on kaivettu '
-              + 'punaruskeaan maahan. Käytävän pohjalla virtaa matala kirkas vesi '
-              + 'kapeassa uomassa, ja taustalla erottuu kaksi kaarevaa aukkoa, '
-              + 'joista käytävä jatkuu pimeään.',
-          lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
+          /*
+           * Qanat-kanava kerrotaan jo Iranin karttasivun nostossa
+           * (maakartat.js), joka on saman maalehden ensimmäinen sivu.
+           * Juttu ja sivun minitehtävä vaihdettiin 12.8.2026.
+           */
+          otsikko: 'Vihreä suorakaide keskellä paljasta maata',
+          tiedosto: 'Bird view of Baghe Shazdeh Mahan Kerman.jpg',
+          teksti: 'Mahanin kylän laidalla Kermanin maakunnassa on Shazdeh eli '
+              + 'ruhtinaan puutarha. Ylhäältä katsottuna se on tarkka '
+              + 'suorakaide: muurien sisällä kasvaa poppeleita, sypressejä ja '
+              + 'hedelmäpuita, ja heti muurin takana alkaa paljas sorapinta. '
+              + 'Pinta-alaa on 5,5 hehtaaria. Puutarha on porrastettu '
+              + 'rinteeseen, joten keskiakselin allas laskeutuu tasolta '
+              + 'toiselle portaikkona, ja rinteen ylimmällä tasolla on '
+              + 'kaksikerroksinen asuinrakennus. Nykyisen asunsa puisto sai '
+              + '1870-luvulta alkaen Kermanin kuvernöörin Abdolhamid Mirzan '
+              + 'tilauksesta. Rakennuttaja kuoli 1890-luvun alussa, ja '
+              + 'muurarit jättivät työn kesken: sisääntuloportissa näkyy yhä '
+              + 'viimeistelemättömiä kohtia.',
+          selite: 'Shazdehin puutarha ylhäältä kuvattuna syksyllä. Muurien '
+              + 'rajaama suorakaide on täynnä oranssia ja vihreää puustoa, '
+              + 'keskellä kulkee suora vesiakseli, molemmissa päissä on '
+              + 'rakennus, ja muurin ulkopuolella on joka suuntaan paljasta '
+              + 'vaaleanruskeaa maata ja hiekkateitä.',
+          lahde: 'Mohammad Sadegh Ebrahimi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Kaksikymmentä pylvästä, jotka näyttävät neljältäkymmeneltä',
@@ -15663,16 +15690,18 @@ export const MAA_KATEGORIAT = {
         },
       ],
       tehtava: {
-        kysymys: 'Miksi qanat kaivetaan maan alle?',
+        // Vanha kysymys koski qanat-kanavaa, joka siirtyi pois sivulta
+        // 12.8.2026 (sama juttu oli jo Iranin karttasivulla).
+        kysymys: 'Miksi Shazdehin puutarhan sisääntuloportti jäi kesken?',
         vaihtoehdot: [
-          'Ettei vesi haihdu matkalla',
-          'Että vesi jäähtyisi kylmäksi',
-          'Ettei kanava jäätyisi talvella',
-          'Että kaivumaasta saataisiin tiiltä',
+          'Rakennuttaja kuoli kesken työn',
+          'Portin kivet vietiin moskeijaan',
+          'Sadevesi vei portin perustukset',
+          'Portti purettiin uuden tien tieltä',
         ],
         oikea: 0,
-        fakta: 'Käytävän varrella on rivi pystykuiluja: niistä kaivumaa nostettiin '
-            + 'ylös, ja niistä pääsee yhä huoltamaan käytävää.',
+        fakta: 'Shazdeh kuuluu samaan yhdeksän puutarhan '
+            + 'maailmanperintökohteeseen kuin Finin ja Eramin puutarhat.',
       },
     },
     {
@@ -16019,7 +16048,9 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Puolikuu ja täysikuu',
-          tiedosto: 'Iraqi Kleicha.jpg',
+          // Vanha kuva oli 540 px leveä eli kaukana 1 200 px:n
+          // säännöstä. Vaihdettu 12.8.2026 auditissa.
+          tiedosto: 'Iraqi Dates Kleicha.jpg',
           teksti: 'Kleicha on Irakin kansallisleivonnainen. Tavallisimmat muodot '
               + 'ovat taatelitahnalla täytetty rulla, joka leikataan viipaleiksi, '
               + 'ja puolikuun muotoinen pähkinä- tai kookostäytteinen kuori. '
@@ -16028,11 +16059,12 @@ export const MAA_KATEGORIAT = {
               + 'Esikuvana pidetään sumerilaista qullupua, jota leivottiin '
               + 'uudenvuoden juhlaan kuun muotoon. Kleichaa tehdään yhä '
               + 'juhlapyhiin ja tarjotaan teen kanssa.',
-          selite: 'Kolmella vadilla on pyöreitä, kullanruskeita leivonnaisia. '
-              + 'Osa on siroteltu seesaminsiemenillä, osan pinnalla on '
-              + 'tummanvihreä yrttiseos. Etualan kasassa näkyy renkaan muotoisia '
-              + 'kappaleita, joiden päistä pilkottaa tummaa täytettä.',
-          lahde: 'Eng Omer Akram, Wikimedia Commons (CC BY-SA 4.0)',
+          selite: 'Valkoisella lautasella on kullanruskeita '
+              + 'kleicha-leivonnaisia. Suurin osa on leikattu poikki niin, '
+              + 'että taatelitäytteen tumma spiraali näkyy, ja päällimmäiset '
+              + 'palat ovat puolikuun muotoisia ja seesaminsiementen '
+              + 'peittämiä.',
+          lahde: 'Abdulsalam Al Dabbagh, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       tehtava: {
@@ -16620,7 +16652,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Miksi Kuolleessameressä kelluu ilman ponnistelua?',
         vaihtoehdot: [
           'Vesi on tavallista lämpimämpää',
-          'Suola tekee vedestä raskaampaa',
+          'Suola tekee vedestä painavaa',
           'Pohja on aivan pinnan lähellä',
           'Meressä on voimakas pohjavirta',
         ],
@@ -16642,8 +16674,9 @@ export const MAA_KATEGORIAT = {
           teksti: 'Jerash oli roomalaisajan vauras kaupunki, ja sen keskellä on '
             + 'epätavallinen tori: se ei ole neliö vaan soikea. Muoto syntyi '
             + 'siitä, että vanha pyhäkköalue ja uusi pylväskatu piti sovittaa '
-            + 'yhteen, ja tori venytettiin niiden väliin. Toria kiertää lähes '
-            + 'seitsemänkymmentä pylvästä, ja kivetys on yhä alkuperäinen: '
+            + 'yhteen, ja tori venytettiin niiden väliin. Toria kiertää '
+            + 'yhtenäinen joonialainen pylväsrivi, ja kivetys on yhä '
+            + 'alkuperäinen: '
             + 'kivet on ladottu kaareviin riveihin torin muodon mukaan. '
             + 'Kaupunki tyhjeni maanjäristyksen jälkeen ja peittyi hiekkaan, '
             + 'mistä syystä se on säilynyt näin hyvin.',
@@ -16652,13 +16685,16 @@ export const MAA_KATEGORIAT = {
           lahde: 'Institute for the Study of the Ancient World, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          otsikko: 'Pääkaupungin kukkulalla seisoo kuusi pylvästä',
+          otsikko: 'Kuudesta pylväästä pystyssä on kolme',
           tiedosto: 'Temple of Hercules - Amman citadel.jpg',
           teksti: 'Ammanin keskellä kohoaa kukkula, jolla on asuttu tuhansia '
-            + 'vuosia. Sen laella on Herkuleen temppelin jäänteet: muutama '
-            + 'valtava pylväs, jotka on nostettu takaisin pystyyn. Temppeli '
-            + 'jäi aikanaan kesken, eikä sitä ilmeisesti koskaan saatu '
-            + 'valmiiksi. Samalta kukkulalta on löytynyt myös jättimäisen '
+            + 'vuosia. Sen laella on Herkuleen temppelin jäänteet. Etusivun '
+            + 'pylväikössä oli kuusi runsaan kolmentoista metrin korkuista '
+            + 'pylvästä, ja niistä kolme on nostettu takaisin pystyyn. '
+            + 'Sivuilla pylväitä ei ollut lainkaan, ja siitä on päätelty, '
+            + 'ettei temppeliä koskaan saatu valmiiksi: ylijäänyt marmori '
+            + 'näyttää päätyneen viereiseen bysanttilaiseen kirkkoon. '
+            + 'Samalta kukkulalta on löytynyt myös jättimäisen '
             + 'kivikäden palasia, joten patsas on ollut valtava. Kukkulalla '
             + 'on lisäksi umaijadien palatsin kupolisali ja bysanttilaisen '
             + 'kirkon pohja — kolme aikakautta muutaman sadan metrin '
@@ -16712,8 +16748,8 @@ export const MAA_KATEGORIAT = {
           'Neliö, jossa on kulmatornit',
         ],
         oikea: 0,
-        fakta: 'Toria kiertää lähes seitsemänkymmentä pylvästä, ja sen kivetys '
-          + 'on yhä alkuperäinen.',
+        fakta: 'Toria kiertää joonialainen pylväsrivi, ja sen kivetys on yhä '
+          + 'alkuperäinen.',
       },
     },
     {
@@ -16795,7 +16831,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Miten jameed säilyy kuukausia ilman kylmää?',
         vaihtoehdot: [
           'Se säilötään oliiviöljyyn',
-          'Se suolataan ja kuivataan koviksi palloiksi',
+          'Se kuivataan auringossa koviksi',
           'Se haudataan hiekkaan viileään',
           'Se keitetään umpeen savipurkkiin',
         ],
@@ -16886,7 +16922,7 @@ export const MAA_KATEGORIAT = {
         vaihtoehdot: [
           'Siellä sataa enemmän kuin muualla Jordaniassa',
           'Laakson pohjalla virtaa iso joki',
-          'Korkeusero tuo samaan laaksoon neljä kasvillisuusvyöhykettä',
+          'Matkalla vaihtuu neljä kasvillisuusvyöhykettä',
           'Alue on aidattu ja lajit on tuotu sinne',
         ],
         oikea: 2,
@@ -16974,7 +17010,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Miksi Jebel Akhdarin rinteillä kasvaa ruusuja ja hedelmäpuita?',
         vaihtoehdot: [
           'Vuorella sataa lunta talvisin',
-          'Korkealla on viileämpää kuin rannikolla',
+          'Ylhäällä on viileämpää kuin rannikolla',
           'Maa on siellä poikkeuksellisen mustaa',
           'Kasvit kastellaan merivedellä',
         ],
@@ -17022,20 +17058,29 @@ export const MAA_KATEGORIAT = {
           lahde: 'F igy, Wikimedia Commons (CC BY 3.0)',
         },
         {
-          otsikko: 'Vuonot, joita sanotaan Arabian Norjaksi',
-          tiedosto: 'Dhow trip in the fjords of Musandam, Oman (36208084624).jpg',
-          teksti: 'Omanin pohjoisin osa, Musandamin niemimaa, on erillään muusta '
-            + 'maasta. Sinne vuoristo laskeutuu suoraan mereen ja jättää '
-            + 'väliinsä kapeita lahtia, jotka näyttävät vuonoilta — siksi '
-            + 'paikkaa sanotaan Arabian Norjaksi. Todellisuudessa ne eivät '
-            + 'ole jäätikön uurtamia vaan syntyivät, kun maankuori painui '
-            + 'hitaasti alas ja meri täytti laaksot. Kylien väliä kuljetaan '
-            + 'yhä veneellä, koska teitä ei kaikkialle ole, ja delfiinit '
-            + 'seuraavat usein veneitä lahdelta toiselle.',
-          selite: 'Musandamin vuono Omanissa. Paljaat vuoret laskeutuvat mereen '
-            + 'molemmin puolin, ja keskellä sinistä vettä kulkee yksinäinen '
-            + 'puuvene.',
-          lahde: 'Robert Haandrikman, Wikimedia Commons (CC BY 2.0)',
+          /*
+           * Musandamin vuonot kerrotaan jo Omanin karttasivun nostossa
+           * (maakartat.js), joka on saman maalehden ensimmäinen sivu.
+           * Juttu vaihdettiin 12.8.2026.
+           */
+          otsikko: 'Kahdeksan kuukautta Kiinaan ilman moottoria',
+          tiedosto: 'Sohar replica.JPG',
+          teksti: 'Sindbad-merenkulkijan tarinat sijoittuvat aikaan, jolloin '
+              + 'arabialaiset purjelaivat kulkivat Omanista Kiinaan asti. '
+              + 'Irlantilainen tutkimusmatkailija Tim Severin halusi tietää, '
+              + 'oliko matka mahdollinen tuon ajan aluksella. Surin telakalla '
+              + 'rakennettiin seitsemässä kuukaudessa 26,5-metrinen puulaiva, '
+              + 'joka sai nimekseen Sohar. Se lähti Omanista marraskuussa '
+              + '1980 ilman moottoria, seurasi Intian rannikkoa, kiersi Sri '
+              + 'Lankan ja tuli Malakan salmen kautta Kiinan merille. '
+              + 'Kantoniin laiva saapui 6. heinäkuuta 1981: matkaa oli takana '
+              + 'noin 9 600 kilometriä ja aikaa kahdeksan kuukautta. Sohar '
+              + 'seisoo nykyään liikenneympyrässä Muscatin Al Bustanissa.',
+          selite: 'Sohar-laiva liikenneympyrässä Muscatin Al Bustanissa. '
+              + 'Kaksimastoinen ruskea puulaiva seisoo kuivalla maalla, '
+              + 'köysistö laskeutuu mastoista keulapuomille, ja edessä kukkii '
+              + 'oranssin ja keltaisen kirjava istutus.',
+          lahde: 'Joe Castleman, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Satama tukkeutui hiekkavalliin',
@@ -17060,7 +17105,7 @@ export const MAA_KATEGORIAT = {
         vaihtoehdot: [
           'Emo kantaa sen rantaveteen',
           'Aaltojen ääni hiekan läpi',
-          'Meren puolen vaalea valo',
+          'Meren puoli on vaaleampi',
           'Tuulen suunta rannalla',
         ],
         oikea: 2,
@@ -17149,7 +17194,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Bahlan linnaa on paikattava jatkuvasti?',
         vaihtoehdot: [
-          'Se on kuivattua savitiiltä, joka liukenee sateessa',
+          'Kuivattu tiili liukenee sateessa',
           'Maanjäristykset halkovat sen muureja',
           'Suolainen merituuli syövyttää kiveä',
           'Lintujen pesät irrottavat laastia',
@@ -17287,20 +17332,29 @@ export const MAA_KATEGORIAT = {
           lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          otsikko: 'Vanha kauppakaupunki jäi hiekan alle',
-          tiedosto: 'Qatar - Al Zubarah Fort 02.jpg',
-          teksti: 'Luoteisrannikolla oli 1700-luvulla Al Zubarah, vilkas satama- '
-            + 'ja helmenpyyntikaupunki, jossa asui tuhansia ihmisiä. Kaupunki '
-            + 'hiljeni 1800-luvulla, ja hiekka peitti sen kadut, talot ja '
-            + 'muurit. Juuri siksi se on säilynyt: paikka on Qatarin '
-            + 'ensimmäinen Unescon maailmanperintökohde, ja kaivauksissa on '
-            + 'paljastunut kokonaisia korttelipohjia. Rannalla seisoo '
-            + '1930-luvulla rakennettu linnake, jonka kulmatorneista näkee '
-            + 'kauas merelle.',
-          selite: 'Al Zubarahin linnake autiomaassa. Vaalea nelikulmainen '
-            + 'rakennus, jonka kolmessa kulmassa on pyöreä torni ja '
-            + 'neljännessä kulmikas.',
-          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+          /*
+           * Al Zubarah kerrotaan jo Qatarin karttasivun nostossa
+           * (maakartat.js), joka on saman maalehden ensimmäinen sivu.
+           * Juttu vaihdettiin 12.8.2026.
+           */
+          otsikko: 'Dyyni, joka hurisee kun hiekka vyöryy',
+          tiedosto: 'Singing sand dunes.jpg',
+          teksti: 'Noin neljänkymmenen kilometrin päässä Dohasta, Mesaieedin '
+              + 'suunnassa, on dyyni, jonka rinne pitää ääntä. Kun kuiva '
+              + 'hiekka lähtee vyörymään alas jyrkkää sivua, siitä nousee '
+              + 'hurina, jota on verrattu kaukaiseen moottoriin. Ääni voi '
+              + 'jatkua minuutteja ja yltää yli sadan desibelin. Mikä tahansa '
+              + 'hiekka ei laula: jyvien on oltava kuivia, pyöreitä, '
+              + 'pinnaltaan puhtaita ja kooltaan 0,1–0,5 millimetriä. Kostea '
+              + 'hiekka vaikenee, koska jyvät tarttuvat toisiinsa. Tällaisia '
+              + 'laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. '
+              + 'Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan '
+              + 'aikaan liukumalla alas.',
+          selite: 'Laulavan dyynin rinne Qatarissa iltavalossa. Ihmiset '
+              + 'kiipeävät harjalle ja liukuvat alas jyrkkää sivua, hiekassa '
+              + 'näkyy satoja jalanjälkiä, ja rinteen juurella on pysäköity '
+              + 'auto.',
+          lahde: 'Peter, Wikimedia Commons (CC BY 2.0)',
         },
         {
           otsikko: 'Kallioon on hakattu yhdeksänsataa kuvaa',
@@ -17324,7 +17378,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Zekreetin kalliot ovat sienen muotoisia?',
         vaihtoehdot: [
-          'Tuuli kuluttaa alaosaa nopeammin',
+          'Tuuli hioo kiveä eniten alaosasta',
           'Ne on veistetty työkaluilla',
           'Sade on liuottanut kiven päältä',
           'Meri peitti ne aikoinaan kokonaan',
@@ -17412,8 +17466,8 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mistä Qatarin kansallismuseon muoto on lainattu?',
         vaihtoehdot: [
           'Purjelaivan kolmiopurjeesta',
-          'Taatelipalmun riippuvista lehdistä',
-          'Aavikkoruususta eli kiteestä',
+          'Taatelipalmun riippuvista lehtiruodoista',
+          'Aavikkoruususta, joka syntyy hiekkaan',
           'Vanhan linnakkeen torneista',
         ],
         oikea: 2,
@@ -17447,21 +17501,31 @@ export const MAA_KATEGORIAT = {
           lahde: 'Mr fahad.k, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          otsikko: 'Helmi oli koko maan elinkeino',
-          tiedosto: 'Doha - Traditional wooden dhows in the harbor.jpg',
-          teksti: 'Ennen öljyä Qatar eli helmistä. Kesäkuusta syyskuuhun '
-            + 'laivasto vietiin matalikoille, ja sukeltajat menivät pohjaan '
-            + 'ilman happea: nenässä oli puristin, sormissa nahkasuojukset ja '
-            + 'köyden päässä kivi, joka veti alas. Yksi sukellus kesti '
-            + 'minuutin tai pari, ja niitä tehtiin päivässä kymmeniä. Ala '
-            + 'romahti 1930-luvulla, kun japanilainen viljelty helmi tuli '
-            + 'markkinoille ja maailmantalous notkahti samaan aikaan. Puiset '
-            + 'dhow-veneet ovat yhä satamassa, mutta ne kuljettavat nykyään '
-            + 'matkailijoita.',
-          selite: 'Puisia dhow-veneitä Dohan satamassa. Kolme korkeakokkaista '
-            + 'venettä keinuu vedessä, ja takana kohoaa nykyaikaisten '
-            + 'tornitalojen rivi.',
-          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+          /*
+           * Sukellustekniikka (nenäpuristin, kivipaino, kesäkuu–syyskuu)
+           * kerrottiin ennen tässä, Bahrainin helmet-sivulla JA Dubain
+           * kaupunkilehden kannessa. Bahrain omistaa aiheen kokonaisella
+           * sivulla, joten tämä juttu vaihdettiin 12.8.2026 kertomaan
+           * laivaston koosta ja siitä, mitä rannalle jäi.
+           */
+          otsikko: 'Kahdeksansataa venettä samalta rannalta',
+          tiedosto: 'Al Wakrah Souq beachside view.jpg',
+          teksti: 'Brittiläinen virkamies J. G. Lorimer kokosi vuoden 1908 '
+              + 'käsikirjaansa taulukon Qatarin helmiveneistä. Niitä oli 817, '
+              + 'ja niissä purjehti noin 13 000 miestä eli keskimäärin '
+              + 'kuusitoista miestä venettä kohti. Suurin satama oli Doha 350 '
+              + 'veneellä, toisena Al Wakra 150 veneellä. Kun kausi alkoi, '
+              + 'kylistä lähti merelle valtaosa työikäisistä miehistä, ja '
+              + 'rannalle jäi muu väki pitämään talot ja kaupat käynnissä. '
+              + 'Öljyn jälkeen Al Wakran vanha rantakaista rakennettiin '
+              + 'uudelleen: vuonna 2014 avatussa Souq Al Wakrassa on '
+              + 'toistasataa liikettä, hiekalle on nostettu puuveneitä '
+              + 'näytille ja kalasatama on yhä käytössä.',
+          selite: 'Souq Al Wakran rantakatu iltavalossa. Kivetty käytävä johtaa '
+              + 'suoraan poispäin, oikealla on savenvärinen muuri ja sen '
+              + 'edessä ravintoloiden pöytiä, vasemmalla hiekalla lepää '
+              + 'puuveneitä ja niiden takana siintää meri.',
+          lahde: 'Bojan Mustur, Wikimedia Commons (CC0)',
         },
         {
           otsikko: 'Veneellä oli tusina eri nimeä',
@@ -17501,7 +17565,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Mistä Purppurasaari on saanut nimensä?',
         vaihtoehdot: [
           'Saaren kalliot ovat violetteja',
-          'Saarella valmistettiin purppuraväriä merikotiloista',
+          'Saarella valmistettiin purppuraväriä',
           'Saarella kasvaa purppuranpunaisia kukkia',
           'Auringonlasku värjää lahden violetiksi',
         ],
@@ -17586,7 +17650,7 @@ export const MAA_KATEGORIAT = {
         kysymys: 'Miksi Qatarin harvat puut kasvavat juuri painanteissa?',
         vaihtoehdot: [
           'Painanteet ovat tuulelta suojassa',
-          'Sadevesi valuu niihin ja maa pitää kosteuden',
+          'Maa pitää siellä kosteuden pitkään',
           'Niissä on suolatonta merivettä',
           'Ne on kaivettu puita varten',
         ],
@@ -17847,16 +17911,19 @@ export const MAA_KATEGORIAT = {
         },
       ],
       tehtava: {
-        kysymys: 'Mitä Kuwaitin tornien alempi pallo pitää sisällään?',
+        // Tornien pallojen SISÄLTÖ on jo Kuwaitin kulttuurivisassa
+        // (middleeast-questions.js: "Mitä niiden palloissa säilytetään?"),
+        // joten minitehtävä kysyy pinnasta — sama sivu, eri asia.
+        kysymys: 'Mistä Kuwait-tornien pallojen pinta on tehty?',
         vaihtoehdot: [
-          'Vesisäiliön ja sen päällä ravintolan',
-          'Pelkän näköalatasanteen',
-          'Radio- ja tv-lähettimet',
-          'Museon ja kirjaston',
+          'Emaloiduista teräskiekoista',
+          'Käsin maalatuista laatoista',
+          'Kiillotetusta kuparipellistä',
+          'Valkoisesta marmorista',
         ],
         oikea: 0,
-        fakta: 'Ylempi pallo on kahvila, joka pyörähtää ympäri puolessa '
-          + 'tunnissa.',
+        fakta: 'Kiekkoja on noin 41 000, ja ne on emaloitu kahdeksaan sinisen '
+          + 'ja vihreän sävyyn.',
       },
     },
     {
@@ -17933,16 +18000,19 @@ export const MAA_KATEGORIAT = {
         },
       ],
       tehtava: {
-        kysymys: 'Mistä murabyan on saanut nimensä?',
+        // Nimen alkuperä (robyan = katkarapu) luki jo sivun otsikossa ja
+        // johdannossa, joten vastaus vuoti kahdesta paikasta. Kysymys
+        // siirrettiin annoksen ulkonäköön, joka selviää vain tekstistä.
+        kysymys: 'Miksi murabyan on vadilla raidallinen?',
         vaihtoehdot: [
-          'Sahramista',
-          'Katkaravusta',
-          'Kuivatusta limetistä',
-          'Kalastajakylästä',
+          'Osa riisistä värjätään sahramilla',
+          'Riisi keitetään kahdessa erässä',
+          'Kastike kaadetaan raitoina päälle',
+          'Vati vuorataan kahdella leivällä',
         ],
-        oikea: 1,
-        fakta: 'Katkaravut jäävät riisikerroksen alle ja löytyvät vasta '
-          + 'lusikoimalla.',
+        oikea: 0,
+        fakta: 'Keltainen riisi sekoitetaan valkoisen sekaan vasta vadille '
+          + 'kaadettaessa.',
       },
     },
   ],
@@ -18300,8 +18370,8 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi arabiangasellin turkki on hyvin vaalea?',
         vaihtoehdot: [
-          'Se heijastaa auringonvaloa ja auttaa kestämään kuumuutta',
-          'Se suojaa hyönteisiltä',
+          'Se heijastaa auringonvaloa',
+          'Se suojaa hyönteisten puremilta',
           'Se vaihtuu tummaksi talveksi',
           'Se on merkki nuoresta iästä',
         ],
@@ -18586,7 +18656,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Miksi Aradin linnakkeen kunnostuksessa ei käytetty sementtiä?',
         vaihtoehdot: [
-          'Sementti olisi sulkenut kosteuden muurin sisään',
+          'Sementti olisi sulkenut kosteuden sisään',
           'Sementtiä ei saanut maahan tuoduksi',
           'Sementti olisi ollut liian kallista',
           'Sementti ei tartu korallikiveen lainkaan',
@@ -18672,7 +18742,7 @@ export const MAA_KATEGORIAT = {
       tehtava: {
         kysymys: 'Mikä on loomi lahden keittiössä?',
         vaihtoehdot: [
-          'Kuivattu limetti, joka rikotaan pataan',
+          'Kuivattu limetti',
           'Paksu jogurttikastike',
           'Uunissa paistettu litteä leipä',
           'Sahramilla värjätty riisi',
@@ -18837,7 +18907,10 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Palatsi seisoo yhden kallion varassa',
-          tiedosto: 'Wadi Dhar 1987 09.jpg',
+          // Vanha kuva oli 967 px leveä. Uusi on 3 888 px ja kuvattu
+          // alaviistosta, joten kalliopaasi — jutun ydin — erottuu
+          // selvemmin (vaihdettu 12.8.2026).
+          tiedosto: 'Dar Al Hajar, Wadi Dhahr, Yemen (4325704846).jpg',
           teksti: 'Wadi Dharissa noin viidentoista kilometrin päässä pääkaupungista '
               + 'on yksinäinen hiekkakivipaasi. Sen päällä on Dar al-Hajar, '
               + 'monikerroksinen palatsi, joka sai nykyisen muotonsa vuonna 1920 '
@@ -18847,16 +18920,12 @@ export const MAA_KATEGORIAT = {
               + 'Alimmat kerrokset on muurattu mustasta basaltista ja ylemmät '
               + 'poltetusta tiilestä. Kallion sisässä on kaivo, josta talo sai '
               + 'vetensä. Palatsi on nykyään museo.',
-          selite: 'Vaalea monikerroksinen rakennus kalliopaaden päällä. Julkisivun '
-              + 'ikkunat on kehystetty valkoisin kaari- ja ympyräkuvioin, ja '
-              + 'rakennus kapenee ylöspäin portaittain kallion muodon mukaan. '
-              + 'Oikealla on terävä harmaa kallioseinämä, johon paasi tästä '
-              + 'suunnasta sulautuu, ja takana matalampia poimuttuneita vuoria. '
-              + 'Palatsin oikealla puolella on tasakattoinen uudempi rakennus '
-              + 'lasikatteineen ja metallipylväs. Alarinteessä on matalia '
-              + 'savenvärisiä taloja ja etualalla tiheää vihreää puustoa ja yksi '
-              + 'tumma sypressi.',
-          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+          selite: 'Dar al-Hajarin palatsi alaviistosta kuvattuna '
+              + 'tummansinistä taivasta vasten. Rakennus seisoo pyöreän '
+              + 'hiekkakivipaaden päällä ja kapenee ylöspäin portaittain; '
+              + 'julkisivun ikkunat on kehystetty valkoisin kaari- ja '
+              + 'hammaskuvioin, ja kallion kyljessä erottuu kaksi aukkoa.',
+          lahde: 'yeowatzup, Wikimedia Commons (CC BY 2.0)',
         },
         {
           otsikko: 'Talot jatkavat kalliota ylöspäin',
@@ -19378,7 +19447,8 @@ export const MAA_KATEGORIAT = {
           teksti: 'Kyproksenmufloni on villilammas, jota ei tavata missään muualla. '
               + 'Se on elänyt saarella yli 8 000 vuotta, ja sen uskotaan '
               + 'polveutuvan kotieläimestä, jonka saaren ensimmäiset asukkaat '
-              + 'toivat mukanaan. Uros painaa 35–45 kiloa ja naaras 25–35 kiloa, '
+              + 'toivat mukanaan. Uros painaa jopa viisikymmentä kiloa ja '
+              + 'naaras noin kolmekymmentäviisi, '
               + 'ja sirppimäiset sarvet kasvavat vain uroksille. Kun '
               + 'mesopotamiankuusipeura hävisi saarelta, muflonista tuli suurin '
               + 'maalla elävä nisäkäs. Vuonna 1930 eläimiä oli kahdessa laumassa '
@@ -22281,9 +22351,10 @@ export const MAA_KATEGORIAT = {
           teksti: 'Nimi keksittiin Kiinassa: pekingiläinen sanomalehti '
               + 'kirjoitti marraskuussa 1999 hallyusta, korealaisesta '
               + 'aallosta, kun korealaiset tv-sarjat ja popkappaleet olivat '
-              + 'vallanneet kiinalaisyleisön. Japanissa sama tapahtui '
-              + 'sarjalla Talvisonaatti vuonna 2002, ja sen kuvauspaikoista '
-              + 'tuli matkakohteita. Vuonna 2008 Etelä-Korean kulttuurivienti '
+              + 'vallanneet kiinalaisyleisön. Japanissa sama tapahtui, '
+              + 'kun NHK esitti korealaisen Talvisonaatin vuonna 2003. '
+              + 'Sarja oli nähty Koreassa jo edellisenä vuonna, ja sen '
+              + 'kuvauspaikoista tuli matkakohteita. Vuonna 2008 Etelä-Korean kulttuurivienti '
               + 'ylitti ensi kertaa tuonnin. Elokuva laajensi aaltoa '
               + 'edelleen: Bong Joon-hon Parasite voitti Cannesin '
               + 'pääpalkinnon 2019 ja helmikuussa 2020 neljä Oscaria, '
@@ -22399,9 +22470,10 @@ export const MAA_KATEGORIAT = {
               + 'nostettiin kivisten kilpikonnien selkään, koska kilpikonna '
               + 'tarkoitti pitkää ikää ja viisautta. Paasia pystytettiin '
               + 'vuoteen 1780 asti, ja niissä luetellaan vuosien 1442–1779 '
-              + 'kokeiden menestyjät. Yhdeksänkymmenestäyhdestä paadesta on '
-              + 'jäljellä 82. Unescon Maailman muisti -ohjelman Aasian ja Tyynenmeren rekisteriin ne liitettiin '
-              + 'vuonna 2010.',
+              + 'kokeiden menestyjät. Kaikkiaan paasia oli 116, ja niistä '
+              + 'on jäljellä 82. Unescon Maailman muisti -ohjelman '
+              + 'Aasian ja Tyynenmeren rekisteriin ne liitettiin vuonna '
+              + '2010.',
           selite: 'Kolme suurta kivipaatta rivissä puisen katoksen alla. '
               + 'Jokainen paasi on pyöreäpäinen ja täynnä kulunutta '
               + 'kirjoitusta, ja jokainen seisoo oman kivisen kilpikonnan '
@@ -24675,24 +24747,31 @@ export const MAA_KATEGORIAT = {
           lahde: 'Shahzaib Damn Cruze, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          otsikko: 'Metsä, joka kasvaa suolavedessä',
-          tiedosto: 'Mangrove Forest Sindh.jpg',
-          teksti: 'Induksen suisto on noin 41 000 neliökilometriä ja levittäytyy '
-              + 'yli kahdensadan kilometrin levyisenä Arabianmereen. Sadetta '
-              + 'tulee vain 25–50 senttiä vuodessa, ja siksi suiston '
-              + 'mangrovemetsät ovat maailman laajimmat kuivan ilmaston '
-              + 'mangrovet. Lajeja oli ennen kahdeksan, nyt neljä, ja '
-              + 'valtalajina on harmaamangrove Avicennia marina, jota on 99 '
-              + 'prosenttia puista. Metsiköt ovat kalojen, katkarapujen ja '
-              + 'mutarapujen kutupaikka; aktiivisen suiston asukkaista kolme '
-              + 'neljäsosaa elää kalastuksesta. Jokivesien vähennyttyä metsää '
-              + 'menetettiin, ja sitä on istutettu takaisin.',
-          selite: 'Matalaa mangrovemetsää loivalla rannikolla. Etualan '
-              + 'tummanvihreät pensasmaiset puut kasvavat ruskeasta '
-              + 'mutatasangosta, jonka läpi kiemurtelee kapea vihertävä '
-              + 'vesiuoma. Vasemmalla aukeaa laaja vaalea vuovesi, ja '
-              + 'horisontti häviää valkoiseen usvaan.',
-          lahde: 'Ayazan57, Wikimedia Commons (CC BY-SA 4.0)',
+          /*
+           * Vanha otsikko oli sanasta sanaan sama kuin Emiraattien
+           * ranta-sivulla ("Metsä, joka kasvaa suolavedessä"), ja tekstit
+           * kertoivat samat perusasiat suolanerityksestä ja kutupaikoista.
+           * Emiraattien versio jäi; tämä kirjoitettiin 12.8.2026 uusiksi
+           * Induksen suiston omasta näkökulmasta.
+           */
+          otsikko: 'Miljoona tainta yhdessä päivässä',
+          tiedosto: 'Newly planted mangroves.jpg',
+          teksti: 'Induksen suistoon on istutettu mangrovea ennätysvauhtia. '
+              + 'Sindhin metsähallinto istutti vuonna 2009 Keti Bandarissa '
+              + 'yli 540 000 tainta yhdessä päivässä, ja siitä tuli '
+              + 'maailmanennätys. Intia ohitti luvun vuonna 2010, ja Pakistan '
+              + 'otti ennätyksen takaisin 22. kesäkuuta 2013, kun Kharo '
+              + 'Chanissa istutettiin 847 275 tainta. Ennätys parani vielä '
+              + '19. huhtikuuta 2018, jolloin Keti Bandarissa saatiin maahan '
+              + '1 129 294 tainta. Säännöt ovat tiukat: työn tekee kolmesataa '
+              + 'vapaaehtoista valoisan aikaan. Taimet painetaan käsin '
+              + 'pehmeään mutaan vuoroveden laskettua. Lehdet kelpaavat myös '
+              + 'rehuksi, ja kyläläiset keräävät niitä karjalleen.',
+          selite: 'Uutta mangroveistutusta Induksen suistossa Shah Bandarissa. '
+              + 'Etualalla on ruskeaa vuoroveden vettä, rannassa kasvaa '
+              + 'matalia vihreitä pensaita, ja niiden takana mutatasanko on '
+              + 'täynnä tiheitä rivejä pieniä taimia.',
+          lahde: 'Agha Tahir Hussain, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       tehtava: {

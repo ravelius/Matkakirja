@@ -47,9 +47,16 @@ for (const a of aiheet) {
       if (!no[k]) moiti(`${a.id} / ${no.otsikko || '?'}: kenttä ${k} puuttuu`);
     }
     // aika = tasokorotuksen aikamerkintä (käytössä sadoissa nostoissa).
+    // wiki = "Lue lisää aiheesta" -nappi noston lopussa (ui.js tukee sitä
+    // myös maalehdessä; käytössä ARE:lla ja JOR:lla). musiikki*, aani* ja
+    // esikuuntelu ovat docs/tutki-aiheet.md:n mukaisia nostokenttiä —
+    // ne puuttuivat listalta, joten Egyptin musiikkisivu näytti kahdelta
+    // virheeltä, vaikka kentät ovat oikein (12.8.2026).
     const tuntematon = Object.keys(no).filter(
       (k) => !['otsikko', 'aika', 'tiedosto', 'teksti', 'selite', 'lahde',
-        'kuvat', 'aani', 'linkki', 'galleria'].includes(k));
+        'kuvat', 'aani', 'aaniLahde', 'linkki', 'galleria', 'wiki',
+        'musiikki', 'musiikkiNimi', 'musiikkiNayte', 'musiikkiNayteNimi',
+        'esikuuntelu'].includes(k));
     if (tuntematon.length) moiti(`${a.id} / ${no.otsikko}: tuntematon kenttä ${tuntematon}`);
     if (no.teksti && (no.teksti.length < 300 || no.teksti.length > 1200)) {
       huomiot.push(`${a.id} / ${no.otsikko}: teksti ${no.teksti.length} merkkiä`);
@@ -118,6 +125,36 @@ for (const a of aiheet) {
   if (!a.tehtava) continue;
   const avain = a.tehtava.kysymys.toLowerCase().replace(/\s+/g, ' ').trim();
   if ((nahdyt.get(avain) || 0) > 1) moiti(`${a.id}: kysymys esiintyy ${nahdyt.get(avain)} kertaa`);
+}
+
+// --- 3b. törmääkö minitehtävä kaupungin kulttuurivisaan? -----------------
+// Kaupunkien visat käyttävät avainta `q:`, eikä kohta 3 näe niitä lainkaan.
+// Juuri siellä törmäykset ovat: Kuwaitin visa kysyi tornien palloista, ja
+// saman maan minitehtävä kysyi samaa (12.8.2026). Tämä on HUOMIO eikä
+// virhe — sanaosuma voi olla sattumaa, ja ihminen ratkaisee.
+let visoja = 0;
+const visat = [];
+for (const f of kaikki) {
+  const src = readFileSync(join(pakDir, f), 'utf8');
+  for (const m of src.matchAll(/\bq:\s*'((?:[^'\\]|\\.)*)'/g)) {
+    visoja += 1;
+    visat.push({ tiedosto: f, teksti: m[1] });
+  }
+}
+console.log(`# kulttuurivisoja paketeissa: ${visoja}`);
+const avainsanat = (s) => new Set((s.toLowerCase().match(/[a-zà-ÿåäö]{6,}/gi) || [])
+  .map((w) => w.slice(0, 7)));
+for (const a of aiheet) {
+  if (!a.tehtava) continue;
+  const oikea = a.tehtava.vaihtoehdot[a.tehtava.oikea];
+  const omat = avainsanat(`${a.tehtava.kysymys} ${oikea}`);
+  for (const v of visat) {
+    const yhteiset = [...avainsanat(v.teksti)].filter((w) => omat.has(w));
+    if (yhteiset.length >= 2) {
+      huomiot.push(`${a.id}: minitehtävä muistuttaa visaa (${v.tiedosto}):`
+        + ` "${v.teksti}" — yhteiset: ${yhteiset.join(', ')}`);
+    }
+  }
 }
 
 // --- 4. kuvaduplikaatit kaikista paketeista ------------------------------
