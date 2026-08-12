@@ -2627,6 +2627,7 @@ export class UI {
     this.busy = false;
     this.dead = false; // destroy() jälkeen instanssi ei saa enää piirtää
     this.travelExpanded = false; // matkavalinnan toinen vaihe auki
+    this.travelSuodatin = null; // 'sea' | 'air' | null — kumpi lista näytetään
     this.kehittajaTila = kehittajaTilaPaalla();
     this.autoRollTimer = null;
     this.movingPlayerId = null;
@@ -5811,7 +5812,8 @@ export class UI {
     // kone kohdekaupungin päällä, ja napautus ostaa lennon suoraan
     // (omistajan toive). Porttilennot toisille laudoille pysyvät napeissa,
     // koska niiden kohde ei ole tällä kartalla.
-    if (game.phase === 'action' && this.travelExpanded && !game.player.isBot) {
+    if (game.phase === 'action' && this.travelExpanded
+      && this.travelSuodatin !== 'sea' && !game.player.isBot) {
       for (const dest of game.airportDestinations()) {
         const city = game.board.cityById.get(dest);
         if (!city) continue;
@@ -6060,9 +6062,18 @@ export class UI {
   }
 
   /**
-   * Matkustustavan valinta kahdessa vaiheessa. Vaihe A: jalan, "laiva &
-   * lento…" ja aarrekaupungin kysymys. Vaihe B (`travelExpanded`): kaikki
-   * maksulliset ja laudalta toiselle vievät vaihtoehdot.
+   * Matkustustavan valinta kahdessa vaiheessa.
+   *
+   * VAIHE A on alanappirivin liuku: kolme nappia — jalan, laiva ja lento
+   * (omistajan linjaus 12.8.2026). Aiemmin laiva ja lento olivat saman
+   * "Laiva & lento" -napin takana, ja pelaaja joutui etsimään lentonsa
+   * laivalistan seasta. Nyt nappi valitsee jo listan: LAIVA avaa vaiheen
+   * B pelkillä laivavaihtoehdoilla, LENTO pelkillä lentävillä
+   * vaihtoehdoilla (lennot, mannerlennot ja portit). Se mitä listassa
+   * NÄYTETÄÄN suodattuu — säännöt, hinnat ja toiminnot ovat ennallaan.
+   *
+   * VAIHE B (`travelExpanded`) on entinen valikko. `travelSuodatin`
+   * kertoo kumpi puoli näytetään: 'sea', 'air' tai null (molemmat).
    */
   renderTravelChoice(modes) {
     const { game } = this;
@@ -6072,51 +6083,76 @@ export class UI {
     // Mannerlento aukeaa, kun tämän mantereen unohdettu aarre on
     // löytynyt — se ei vaadi lentokenttää, joten se on oma listansa.
     const mannerLennot = game.mannerLennot();
-    const hasSlow = modes.includes('sea') || flights.length > 0
-      || gateways.length > 0 || countryGates.length > 0 || mannerLennot.length > 0;
+    /*
+     * Portit (vaellus ja tietoportti) kuuluvat LENNON puolelle: molemmat
+     * ovat pitkiä lentoja toiselle laudalle (game.gatewayOptions), eikä
+     * kumpikaan ole laivamatka. Näin mikään vaihtoehto ei jää kahden
+     * napin väliin saavuttamattomiin.
+     */
+    const laivaa = modes.includes('sea');
+    const lentoa = flights.length > 0 || mannerLennot.length > 0
+      || gateways.length > 0 || countryGates.length > 0;
+    const hasSlow = laivaa || lentoa;
 
     // Jos välivaiheeseen ei jää yhtään valintaa (esim. rahat eivät riitä
     // lentoon eikä satamaa ole), palataan suoraan perusvalintoihin —
-    // pelkkä Takaisin-nappi ei ole näkymä.
-    if (this.travelExpanded && !hasSlow) this.travelExpanded = false;
+    // pelkkä Takaisin-nappi ei ole näkymä. Sama koskee tyhjäksi jäävää
+    // suodatinta: laivalistaa ei avata, jos laivoja ei ole.
+    const suodatinTyhja = (this.travelSuodatin === 'sea' && !laivaa)
+      || (this.travelSuodatin === 'air' && !lentoa);
+    if (this.travelExpanded && (!hasSlow || suodatinTyhja)) this.suljeMatkavalikko();
 
     if (!this.travelExpanded) {
       this.turnStatus.textContent = 'Valitse matkustustapa.';
 
-      const matkanapit = [];
-      if (modes.includes('land')) {
-        const landBtn = this.iconButton('saapas', 'Jalan', modes.includes('stay') ? '' : 'primary');
-        landBtn.addEventListener('click', () => this.doWalk());
-        matkanapit.push(landBtn);
+      // Jalan. Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
+      // pelin estetyissä napeissa (vrt. vertailunappi).
+      const landBtn = this.iconButton('saapas', 'Jalan',
+        modes.includes('land') && !modes.includes('stay') ? 'primary' : '');
+      if (modes.includes('land')) landBtn.addEventListener('click', () => this.doWalk());
+      else this.estaNappi(landBtn, this.maaEste());
+
+      const laivaBtn = this.iconButton('purje', 'Laivalla');
+      if (laivaa) {
+        laivaBtn.addEventListener('click', () => this.avaaMatkavalikko('sea'));
+      } else {
+        this.estaNappi(laivaBtn, this.laivaEste());
       }
 
-      if (hasSlow) {
-        const moreBtn = this.iconButton('purje', 'Laiva & lento');
-        moreBtn.addEventListener('click', () => {
-          this.travelExpanded = true;
-          this.render();
-        });
-        matkanapit.push(moreBtn);
+      const lentoBtn = this.iconButton('kone', 'Lentäen');
+      if (lentoa) {
+        lentoBtn.addEventListener('click', () => this.avaaMatkavalikko('air'));
+      } else {
+        this.estaNappi(lentoBtn, this.lentoEste());
       }
 
-      this.piirraToimintorivi(matkanapit, this.tutkiNappi());
+      this.piirraToimintorivi([landBtn, laivaBtn, lentoBtn], this.tutkiNappi());
       return;
     }
 
     // Vaihe B.
-    this.turnStatus.textContent = 'Laivalla, lentäen vai portin kautta?';
+    const meri = this.travelSuodatin !== 'air';
+    const ilma = this.travelSuodatin !== 'sea';
+    /*
+     * Laivalistassa on vain yksi nappi (määränpää valitaan kartalta
+     * nopanheiton jälkeen), joten tilarivi ei kysy "mihin" — se kertoo
+     * mitä valitaan. Lentolistassa kohteet ovat nimeltä, joten siinä
+     * kysymys on paikallaan.
+     */
+    this.turnStatus.textContent = meri && ilma ? 'Laivalla, lentäen vai portin kautta?'
+      : (meri ? 'Laivalla merten yli.' : 'Minne lennetään?');
 
-    if (modes.includes('sea')) {
+    if (meri && modes.includes('sea')) {
       const seaBtn = this.ikoniTekstiNappi('purje', `Laivalla (${SEA_FARE} p)`, 'wide');
       seaBtn.addEventListener('click', () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('ferry');
         this.doAction(() => game.actionTravel('sea'));
       });
       this.actionsEl.appendChild(seaBtn);
     }
 
-    for (const dest of flights) {
+    for (const dest of ilma ? flights : []) {
       const city = game.board.cityById.get(dest);
       const flyBtn = this.ikoniTekstiNappi('kone', `${city.name} (${FLIGHT_PRICE} p)`, 'wide');
       flyBtn.addEventListener('click', () => this.doFly(dest));
@@ -6130,11 +6166,11 @@ export class UI {
      * nimeää mantereen ("Lennä Oseaniaan: Sydney"), koska tavalliset
      * lentonapit ovat pelkkiä kaupunkeja — ero on pidettävä näkyvänä.
      */
-    for (const kohde of mannerLennot) {
+    for (const kohde of ilma ? mannerLennot : []) {
       const btn = this.ikoniTekstiNappi('kone',
         `${MANNERLENTO_NAPPI(kohde)} (${FLIGHT_PRICE} p)`, 'wide');
       btn.addEventListener('click', () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('flight');
         this.doAction(() => game.actionMannerLento(kohde.city));
       });
@@ -6142,10 +6178,10 @@ export class UI {
     }
 
     // Vaelluksessa porttikaupungeista jatketaan toisille laudoille.
-    for (const link of gateways) {
+    for (const link of ilma ? gateways : []) {
       const gwBtn = this.ikoniTekstiNappi('kompassi', link.label, 'wide');
       gwBtn.addEventListener('click', async () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('flight');
         // Lentokalvo kuuluu vain maailmankartalle — mantereella lento
         // tapahtuu suoraan karttanäkymässä. Siirto tehdään ennen kalvoa,
@@ -6164,10 +6200,10 @@ export class UI {
     }
 
     // Tietoportti: maan lauta aukeaa pääkaupungista vaikealla kysymyksellä.
-    for (const gate of countryGates) {
+    for (const gate of ilma ? countryGates : []) {
       const gateBtn = this.ikoniTekstiNappi('tahti', `${gate.label} — vaikea kysymys`, 'wide');
       gateBtn.addEventListener('click', () => {
-        this.travelExpanded = false;
+        this.suljeMatkavalikko();
         sfx.play('paper');
         this.doAction(() => game.actionGateQuiz(gate.index));
       });
@@ -6176,10 +6212,80 @@ export class UI {
 
     const backBtn = this.iconButton('nuoli', 'Takaisin');
     backBtn.addEventListener('click', () => {
-      this.travelExpanded = false;
+      this.suljeMatkavalikko();
       this.render();
     });
     this.actionsEl.appendChild(backBtn);
+  }
+
+  /** Avaa vaiheen B yhdellä listalla: 'sea' laivat, 'air' lennot ja portit. */
+  avaaMatkavalikko(suodatin = null) {
+    this.travelExpanded = true;
+    this.travelSuodatin = suodatin;
+    this.render();
+  }
+
+  /** Sulkee vaiheen B ja unohtaa suodattimen. */
+  suljeMatkavalikko() {
+    this.travelExpanded = false;
+    this.travelSuodatin = null;
+  }
+
+  /**
+   * Estetty nappi kertoo syyn.
+   *
+   * Sama tapa kuin muualla pelissä (esim. vertailunappi): teksti menee
+   * titleen ja aria-labeliin, joten se näkyy hiirellä ja kuuluu
+   * ruudunlukijalle. Napin oma nimi jää alkuun, jotta ikonin merkitys ei
+   * katoa syyn alle.
+   */
+  estaNappi(nappi, syy) {
+    nappi.disabled = true;
+    if (!syy) return nappi;
+    const nimi = nappi.getAttribute('aria-label') ?? '';
+    const teksti = nimi ? `${nimi} — ${syy}` : syy;
+    nappi.title = teksti;
+    nappi.setAttribute('aria-label', teksti);
+    return nappi;
+  }
+
+  /**
+   * Miksi jalan, laivalla tai lentäen ei juuri nyt onnistu?
+   *
+   * Syyt luetaan laudalta ja kukkarosta samoilla ehdoilla kuin
+   * game.travelModes käyttää — tässä ei päätetä mistään, vain
+   * sanoitetaan se mitä säännöt jo sanoivat.
+   */
+  keskenReittia() {
+    // Kesken reittiä matka jatkuu samalla tavalla kuin se alkoi.
+    return this.game.player.pos.type === 'edge';
+  }
+
+  maaEste() {
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    return 'täältä ei lähde maareittiä';
+  }
+
+  laivaEste() {
+    const { game } = this;
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    const city = game.cityOf();
+    if (!city) return 'laiva lähtee vain satamasta';
+    const satama = game.board.adj.get(city.id)
+      ?.some((id) => game.board.edgeById.get(id)?.type === 'sea');
+    if (!satama) return 'täältä ei lähde laivareittiä';
+    return `laivalippu maksaa ${SEA_FARE} puntaa`;
+  }
+
+  lentoEste() {
+    const { game } = this;
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    const city = game.cityOf();
+    if (!city) return 'lento lähtee vain kaupungista';
+    const kentta = Boolean(city.airport) || Boolean(city.links?.length);
+    if (!kentta) return 'täällä ei ole lentokenttää';
+    if (game.player.money < FLIGHT_PRICE) return `lentolippu maksaa ${FLIGHT_PRICE} puntaa`;
+    return 'täältä ei lähde lentoja';
   }
 
   /**
@@ -6225,6 +6331,12 @@ export class UI {
    * levyinen. Liuku sulkeutuu monitoiminapin uudesta napautuksesta tai
    * mistä tahansa napautuksesta rivin ulkopuolella (kartta).
    *
+   * Liu'ussa on matkustustapaa valittaessa kolme nappia — jalan, laiva
+   * ja lento (renderTravelChoice) — ja nopanheiton hetkellä kaksi:
+   * noppa ja paluu matkustustavan valintaan. Napit ovat pelkkiä
+   * ikoneita, koska liuku on vain kaksi paikkaa leveä; nimi luetaan
+   * titlestä ja aria-labelista.
+   *
    * Napit itse ovat samoja kuin ennen — tapahtumakäsittelijät,
    * korostukset ja estotilat tulevat kutsujalta, joten mikään
    * pelitoiminto ei muutu tämän myötä.
@@ -6235,9 +6347,13 @@ export class UI {
 
     const monitoimi = this.iconButton('kompassi', 'Matkustustavat');
     monitoimi.classList.add('monitoimi-nappi');
-    // Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
-    // muillakin estetyillä napeilla, ei katoamista.
-    monitoimi.disabled = matkanapit.length === 0;
+    /*
+     * Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
+     * muillakin estetyillä napeilla, ei katoamista. Rivi tarjoaa nykyään
+     * aina kolme nappia (jalan, laiva, lento), joten pelkkä lukumäärä ei
+     * riitä: liuku on tyhjä myös silloin, kun kaikki kolme ovat estettyjä.
+     */
+    monitoimi.disabled = matkanapit.length === 0 || matkanapit.every((n) => n.disabled);
     monitoimi.setAttribute('aria-expanded', String(Boolean(this.liukuAuki)));
     monitoimi.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -6262,7 +6378,7 @@ export class UI {
     liuku.addEventListener('click', () => { this.liukuAuki = false; });
     rivi.appendChild(liuku);
 
-    if (this.liukuAuki && matkanapit.length) rivi.classList.add('liuku-auki');
+    if (this.liukuAuki && !monitoimi.disabled) rivi.classList.add('liuku-auki');
     else this.liukuAuki = false;
 
     this.actionsEl.appendChild(rivi);
@@ -6407,7 +6523,7 @@ export class UI {
     }
     // Nappula siirtyy ilman animaatiota: oikotie saa näyttää oikotieltä.
     this.haivytaLuenta();
-    this.travelExpanded = false;
+    this.suljeMatkavalikko();
     this.doAction(() => game.actionKehittajaSiirto(city.id));
   }
 
@@ -7108,7 +7224,7 @@ export class UI {
     this.paivitaAlkuReitit(avauksessa);
     // Matkavalinnan toinen vaihe koskee vain käsillä olevaa valintaa: heti
     // kun vaihe vaihtuu, ollaan taas seuraavan vuoron ensimmäisessä vaiheessa.
-    if (this.game.phase !== 'action') this.travelExpanded = false;
+    if (this.game.phase !== 'action') this.suljeMatkavalikko();
     // Saapumiskortti kuuluu vain offer-vaiheeseen: botin vuorolla ja muissa
     // vaiheissa se suljetaan, jottei se jää roikkumaan kartan päälle.
     if (this.game.phase !== 'offer' || this.game.player.isBot) this.closeArrival();
@@ -14347,7 +14463,7 @@ export class UI {
     if (this.radioPaalla()) return;
     const { game } = this;
     // Matkavalinnan välivaihe ei saa jäädä päälle seuraavaan vuoroon.
-    this.travelExpanded = false;
+    this.suljeMatkavalikko();
     const player = game.player;
     const from = player.pos;
     const lahto = from.type === 'city' ? game.board.cityById.get(from.city) : null;

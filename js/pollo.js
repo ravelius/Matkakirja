@@ -302,6 +302,18 @@ const MIKKI_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
   + '<path d="M12 17.8v3.4M8.6 21.2h6.8"/>'
   + '</svg>';
 
+/**
+ * Näppäimistö samalla viivakynällä. Näppäimet ovat pyöreäpäisiä
+ * pistemäisiä vetoja (h.01), jolloin ne piirtyvät pisteinä eivätkä
+ * vaadi omaa täyttöä.
+ */
+const NAPPAIMISTO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<rect x="2.4" y="6.2" width="19.2" height="11.6" rx="2.2"/>'
+  + '<path d="M6 10h.01M9.3 10h.01M12.6 10h.01M15.9 10h.01M19.2 10h.01"/>'
+  + '<path d="M6 13h.01M9.3 13h.01M12.6 13h.01M15.9 13h.01M19.2 13h.01"/>'
+  + '<path d="M8.4 15.6h7.2"/>'
+  + '</svg>';
+
 const TERVEHDYS = 'Kysy minulta mitä tahansa siitä, mitä kartalla tai '
   + 'lehdessä juuri nyt näkyy — tai muusta maailmasta. Pelin tehtäviä en '
   + 'ratkaise puolestasi.';
@@ -310,7 +322,6 @@ const EI_HEREILLA = 'Pöllö ei ole vielä hereillä.';
 const EI_HEREILLA_LISA = 'Tietokumppani odottaa vielä käyttöönottoa. '
   + 'Peli toimii normaalisti ilman sitä.';
 
-const SANELU_KEHOTE = 'Napauta ja kysy ääneen.';
 const SANELU_KUUNTELEE = 'Kuuntelen…';
 
 function polloElementti(tagi, luokka = '', teksti = '') {
@@ -401,36 +412,31 @@ class Pollo {
   }
 
   /**
-   * Syöttöalue: sanelu edellä, näppäimistö varalla.
+   * Syöttöalue: matala nappirivi paneelin alareunassa.
    *
-   * Omistajan linjaus: chatin ensisijainen syöttötapa on sanelu, niin
-   * ettei näppäimistöä tarvitse näyttää lainkaan. Kirjoituskenttä on
-   * yhden napautuksen takana — ja suoraan esillä, jos selain ei tue
-   * puheentunnistusta.
+   * Omistajan linjaus 12.8.2026: alareunassa on yksi matala rivi koko
+   * paneelin leveydeltä — vasemmalla näppäimistökuvake (kolmasosa),
+   * oikealla mikrofoni (kaksi kolmasosaa). Sanelu on yhä ensisijainen
+   * syöttötapa, ja se saa siksi leveämmän puolikkaan, mutta iso pyöreä
+   * mikki ja sen alla olleet selitetekstit ("Napauta ja kysy ääneen.",
+   * "Kirjoita sen sijaan") ovat poissa: rivi vie nyt murto-osan
+   * paneelin korkeudesta ja jättää tilaa vastauksille. Kuvakkeiden
+   * merkitys luetaan aria-labelista, koska tekstit poistuivat.
+   *
+   * DOM-järjestys alhaalta lukien: nappirivi on viimeisenä, sen yllä
+   * kirjoituskenttä ja ylimpänä sanelun tilarivi (tyhjänä piilossa).
    */
   rakennaSyote() {
     const syote = polloElementti('div', 'pollo-syote');
 
-    const sanelu = polloElementti('div', 'pollo-sanelu');
-    const mikki = polloElementti('button', 'pollo-mikki');
-    mikki.type = 'button';
-    mikki.title = 'Sanele kysymys';
-    mikki.setAttribute('aria-label', 'Sanele kysymys');
-    mikki.innerHTML = `<span class="icon-glyph viiva-ikoni">${MIKKI_IKONI}</span>`;
-    mikki.addEventListener('click', () => this.vaihdaSanelu());
-    this.mikki = mikki;
-    sanelu.appendChild(mikki);
-
-    this.saneluTila = polloElementti('p', 'pollo-sanelu-tila', SANELU_KEHOTE);
+    /*
+     * Tilarivi kertoo vain sen mitä juuri nyt tapahtuu: "Kuuntelen…",
+     * puheeksi tunnistettu teksti tai virheen syy. Tyhjänä se ei vie
+     * riviäkään (css: :empty), joten paneeli pysyy matalana.
+     */
+    this.saneluTila = polloElementti('p', 'pollo-sanelu-tila');
     this.saneluTila.setAttribute('aria-live', 'polite');
-    sanelu.appendChild(this.saneluTila);
-
-    const kirjoitaLinkki = polloElementti('button', 'pollo-vaihda', 'Kirjoita sen sijaan');
-    kirjoitaLinkki.type = 'button';
-    kirjoitaLinkki.addEventListener('click', () => this.vaihdaTilaan('kirjoitus', { kohdista: true }));
-    sanelu.appendChild(kirjoitaLinkki);
-    this.saneluOsa = sanelu;
-    syote.appendChild(sanelu);
+    syote.appendChild(this.saneluTila);
 
     const lomake = polloElementti('form', 'pollo-rivi');
     this.kentta = polloElementti('input', 'pollo-kentta');
@@ -451,25 +457,53 @@ class Pollo {
     this.lomake = lomake;
     syote.appendChild(lomake);
 
-    // Paluu saneluun näkyy vain, jos selain osaa sen.
-    const saneleLinkki = polloElementti('button', 'pollo-vaihda', 'Sanele sen sijaan');
-    saneleLinkki.type = 'button';
-    saneleLinkki.addEventListener('click', () => this.vaihdaTilaan('sanelu'));
-    this.saneleLinkki = saneleLinkki;
-    syote.appendChild(saneleLinkki);
+    /*
+     * Matala nappirivi: näppäimistö 1/3, mikrofoni 2/3. Rivi on aina
+     * paneelin pohjalla, joten kirjoituskenttä avautuu sen yläpuolelle
+     * eikä sen tilalle — mikrofoni on siis yhden napautuksen päässä myös
+     * kirjoitettaessa, ja erillistä "Sanele sen sijaan" -linkkiä ei
+     * tarvita.
+     */
+    const rivi = polloElementti('div', 'pollo-sanelu');
+
+    const kirjoita = polloElementti('button', 'pollo-nappula pollo-kirjoita');
+    kirjoita.type = 'button';
+    kirjoita.title = 'Kirjoita kysymys';
+    kirjoita.setAttribute('aria-label', 'Kirjoita kysymys');
+    kirjoita.innerHTML = `<span class="icon-glyph viiva-ikoni">${NAPPAIMISTO_IKONI}</span>`;
+    kirjoita.addEventListener('click', () => this.vaihdaTilaan('kirjoitus', { kohdista: true }));
+    this.kirjoitaNappi = kirjoita;
+    rivi.appendChild(kirjoita);
+
+    const mikki = polloElementti('button', 'pollo-nappula pollo-mikki');
+    mikki.type = 'button';
+    mikki.title = 'Kysy ääneen';
+    mikki.setAttribute('aria-label', 'Kysy ääneen');
+    mikki.innerHTML = `<span class="icon-glyph viiva-ikoni">${MIKKI_IKONI}</span>`;
+    mikki.addEventListener('click', () => this.vaihdaSanelu());
+    this.mikki = mikki;
+    rivi.appendChild(mikki);
+
+    this.saneluOsa = rivi;
+    syote.appendChild(rivi);
 
     this.syote = syote;
     this.naytaSyote();
     return syote;
   }
 
-  /** Piirtää syöttöalueen nykyisen tilan mukaan. */
+  /**
+   * Piirtää syöttöalueen nykyisen tilan mukaan.
+   *
+   * Nappirivi on esillä aina kun selain osaa sanella. Jos ei osaa,
+   * rivi jää pois kokonaan ja kirjoituskenttä on suoraan esillä —
+   * näppäimistönappi olisi silloin ainoa vaihtoehto eikä siis valinta.
+   */
   naytaSyote() {
     const saneluTuettu = Boolean(haePuheTunnistus());
     const sanelussa = this.tila === 'sanelu' && saneluTuettu;
-    this.saneluOsa.hidden = !sanelussa;
+    this.saneluOsa.hidden = !saneluTuettu;
     this.lomake.hidden = sanelussa;
-    this.saneleLinkki.hidden = sanelussa || !saneluTuettu;
   }
 
   vaihdaTilaan(tila, { kohdista = false } = {}) {
@@ -841,7 +875,9 @@ class Pollo {
     const kysymys = String(raakaKysymys ?? '').trim();
     if (!kysymys || this.kesken || !this.palvelin) return;
     this.kentta.value = '';
-    this.saneluTila.textContent = SANELU_KEHOTE;
+    // Tilarivi tyhjenee: kysymys on jo keskustelussa, eikä sanelun
+    // väliaikainen teksti saa jäädä vastauksen alle.
+    this.saneluTila.textContent = '';
     this.ehdotukset.replaceChildren();
     this.ehdotukset.hidden = true;
     this.lisaaViesti('kayttaja', kysymys);
@@ -890,6 +926,9 @@ class Pollo {
       this.vaihdaTilaan('kirjoitus');
       return;
     }
+    // Mikrofonia voi napauttaa myös kirjoitustilassa: rivi on aina
+    // esillä, joten sanelu palauttaa kentän piiloon.
+    if (this.tila !== 'sanelu') this.vaihdaTilaan('sanelu');
     let tunnistin;
     try {
       tunnistin = new Tunnistus();

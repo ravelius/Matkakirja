@@ -5,8 +5,10 @@
  * oikea selain oikeasta DOMista lähettää. Tämä ajaa koko ketjun läpi:
  *
  *   1. alanappirivi: kolme paikkaa, monitoiminapin liuku auki/kiinni,
- *      matkustusnapit toimivat liu'usta, kartan napautus sulkee
- *   2. pöllö kartalla ja lehdessä, paneelin avaus ja sulku
+ *      liu'ussa kolme nappia (jalan, laiva, lento), laiva- ja
+ *      lentovalikon suodatus, estotilat, kartan napautus sulkee
+ *   2. pöllö kartalla ja lehdessä, paneelin avaus ja sulku sekä
+ *      matala alanappirivi (näppäimistö 1/3, mikrofoni 2/3)
  *   3. ehdotukset ja kysymys → vastaus (rajapinta mockattu route-fulfillillä)
  *   4. SPOILERISUOJA oikeasta pyyntörungosta: avoinna olevan lehden
  *      minitehtävä ei ole kontekstissa, jutun teksti on
@@ -205,7 +207,112 @@ vaadi('monitoiminappi avaa liu\'un', auki.luokka === true && auki.aria === 'true
 vaadi('liuku alkaa monitoiminapin jälkeen', auki.peittaaPollon === true);
 vaadi('liu\'ussa on matkustusnapit', auki.napit.length >= 1, auki.napit.join(' | '));
 
+/*
+ * KOLME NAPPIA: jalan, laiva ja lento erikseen (omistajan linjaus
+ * 12.8.2026). Nimet luetaan aria-labelista, koska napit ovat liu'ussa
+ * pelkkiä ikoneita. Estetyllä napilla nimen perässä on syy, joten
+ * vertailu tehdään alkuosalla.
+ */
+vaadi('liu\'ussa on kolme matkustusnappia', auki.napit.length === 3, auki.napit.join(' | '));
+vaadi('napit ovat jalan, laiva ja lento',
+  /^Jalan/.test(auki.napit[0] ?? '') && /^Laivalla/.test(auki.napit[1] ?? '')
+  && /^Lentäen/.test(auki.napit[2] ?? ''), auki.napit.join(' | '));
+
+// Kolme nappia ei saa ahtautua kapealla ruudulla.
+const leveydet = await sivu.evaluate(() => [...document.querySelectorAll('.toimintorivi-liuku button')]
+  .map((b) => Math.round(b.getBoundingClientRect().width)));
+vaadi('liu\'un napit eivät ahtaudu 390 pikselissä', leveydet.every((w) => w >= 44),
+  leveydet.join(' / '));
+
 await sivu.screenshot({ path: join(ULOS, 'pollo-rivi-auki-390.png') });
+
+/*
+ * SUODATUS: laivanappi näyttää vain laivat, lentonappi vain lennot ja
+ * portit. Säännöt eivät muutu — vain se, mitä listassa näkyy.
+ */
+const suodatus = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const lista = () => [...document.querySelectorAll('.actions .ikoni-teksti')]
+    .map((b) => b.textContent.trim());
+  const avaa = async (nimi) => {
+    const ui = window.matkakirja.ui;
+    ui.suljeMatkavalikko();
+    ui.render();
+    await odota(200);
+    document.querySelector('.monitoimi-nappi').click();
+    await odota(250);
+    const nappi = [...document.querySelectorAll('.toimintorivi-liuku button')]
+      .find((b) => new RegExp(`^${nimi}`).test(b.getAttribute('aria-label') ?? ''));
+    if (!nappi || nappi.disabled) return { estetty: true, vihje: nappi?.title ?? '' };
+    nappi.click();
+    await odota(400);
+    return { estetty: false, lista: lista(), suodatin: window.matkakirja.ui.travelSuodatin };
+  };
+  const laiva = await avaa('Laivalla');
+  const lento = await avaa('Lentäen');
+  window.matkakirja.ui.suljeMatkavalikko();
+  window.matkakirja.ui.render();
+  await odota(200);
+  return { laiva, lento };
+});
+vaadi('laivanappi avaa vain laivavaihtoehdot',
+  suodatus.laiva.estetty === false && suodatus.laiva.suodatin === 'sea'
+  && suodatus.laiva.lista.length > 0 && suodatus.laiva.lista.every((t) => /^Laivalla/.test(t)),
+  JSON.stringify(suodatus.laiva));
+vaadi('lentonappi ei näytä laivoja',
+  suodatus.lento.estetty === false && suodatus.lento.suodatin === 'air'
+  && suodatus.lento.lista.length > 0 && suodatus.lento.lista.every((t) => !/^Laivalla/.test(t)),
+  JSON.stringify(suodatus.lento));
+
+// Kaappaus suodatetusta laivavalikosta kapealla ruudulla.
+await sivu.evaluate(async () => {
+  document.querySelector('.monitoimi-nappi').click();
+  await new Promise((r) => setTimeout(r, 250));
+  const nappi = [...document.querySelectorAll('.toimintorivi-liuku button')]
+    .find((b) => /^Laivalla/.test(b.getAttribute('aria-label') ?? ''));
+  if (nappi && !nappi.disabled) nappi.click();
+  await new Promise((r) => setTimeout(r, 500));
+});
+await sivu.screenshot({ path: join(ULOS, 'pollo-laivavalikko-390.png') });
+await sivu.evaluate(async () => {
+  window.matkakirja.ui.suljeMatkavalikko();
+  window.matkakirja.ui.render();
+  await new Promise((r) => setTimeout(r, 250));
+});
+
+/*
+ * Estotila: ilman laivayhteyksiä laivanappi on harmaana ja kertoo syyn.
+ * Lennot pidetään tarjolla, jotta rivi ei ole kokonaan estetty.
+ */
+const laivaEsto = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  const g = window.matkakirja.game;
+  const alku = g.travelModes.bind(g);
+  g.travelModes = () => ['land'];
+  ui.suljeMatkavalikko();
+  ui.render();
+  await new Promise((r) => setTimeout(r, 250));
+  document.querySelector('.monitoimi-nappi').click();
+  await new Promise((r) => setTimeout(r, 250));
+  const napit = [...document.querySelectorAll('.toimintorivi-liuku button')];
+  const laiva = napit.find((b) => /^Laivalla/.test(b.getAttribute('aria-label') ?? ''));
+  const lento = napit.find((b) => /^Lentäen/.test(b.getAttribute('aria-label') ?? ''));
+  const tila = {
+    laivaEstetty: laiva?.disabled ?? null,
+    vihje: laiva?.title ?? '',
+    lentoAuki: lento ? !lento.disabled : null,
+    monitoimi: document.querySelector('.monitoimi-nappi').disabled,
+  };
+  g.travelModes = alku;
+  ui.render();
+  await new Promise((r) => setTimeout(r, 200));
+  return tila;
+});
+vaadi('ilman laivayhteyksiä laivanappi on harmaana', laivaEsto.laivaEstetty === true,
+  JSON.stringify(laivaEsto));
+vaadi('estetty laivanappi kertoo syyn', /laiva/i.test(laivaEsto.vihje), laivaEsto.vihje);
+vaadi('estetty laiva ei estä lentoa eikä koko riviä',
+  laivaEsto.lentoAuki === true && laivaEsto.monitoimi === false, JSON.stringify(laivaEsto));
 
 const karttaSulkee = await sivu.evaluate(async () => {
   document.getElementById('board').dispatchEvent(
@@ -231,7 +338,8 @@ const matkusti = await sivu.evaluate(async () => {
   const ennen = { vaihe: g.phase, laajennettu: ui.travelExpanded };
   document.querySelector('.monitoimi-nappi').click();
   await new Promise((r) => setTimeout(r, 250));
-  const nappi = document.querySelector('.toimintorivi-liuku button');
+  const nappi = [...document.querySelectorAll('.toimintorivi-liuku button')]
+    .find((b) => !b.disabled);
   if (!nappi) return { virhe: 'liuku on tyhjä' };
   const nimi = nappi.getAttribute('aria-label');
   nappi.click();
@@ -327,10 +435,68 @@ vaadi('ehdotukset renderöityvät', avaus.ehdotuksia === 3, `${avaus.ehdotuksia}
 vaadi('sanelunappi on ensisijainen syöte', avaus.mikki === true && avaus.kenttaPiilossa === true,
   JSON.stringify(avaus));
 
+/*
+ * ALARIVI: yksi matala nappirivi koko leveydeltä — näppäimistö 1/3,
+ * mikrofoni 2/3 (omistajan linjaus 12.8.2026). Selitetekstit poistuivat,
+ * joten aria-labelit ovat pakolliset.
+ */
+const alarivi = await sivu.evaluate(() => {
+  const syote = document.querySelector('.pollo-syote');
+  const rivi = document.querySelector('.pollo-sanelu');
+  const kirjoita = document.querySelector('.pollo-kirjoita');
+  const mikki = document.querySelector('.pollo-mikki');
+  const r = rivi.getBoundingClientRect();
+  const k = kirjoita.getBoundingClientRect();
+  const m = mikki.getBoundingClientRect();
+  return {
+    pohjalla: syote.lastElementChild === rivi,
+    korkeus: Math.round(r.height),
+    osuusKirjoita: k.width / r.width,
+    osuusMikki: m.width / r.width,
+    leveysSuhde: r.width / syote.getBoundingClientRect().width,
+    kirjoitaLabel: kirjoita.getAttribute('aria-label') ?? '',
+    mikkiLabel: mikki.getAttribute('aria-label') ?? '',
+    // Selitetekstit poistuivat: jäljellä on vain tyhjä tilarivi.
+    selitteet: [...syote.querySelectorAll('p, .pollo-vaihda')]
+      .map((e) => e.textContent.trim()).filter(Boolean).join(' '),
+  };
+});
+vaadi('nappirivi on paneelin pohjalla', alarivi.pohjalla === true, JSON.stringify(alarivi));
+vaadi('nappirivi on matala (alle 42 px)', alarivi.korkeus <= 42, `${alarivi.korkeus} px`);
+vaadi('näppäimistö vie kolmasosan, mikrofoni kaksi kolmasosaa',
+  Math.abs(alarivi.osuusKirjoita - 1 / 3) < 0.06 && Math.abs(alarivi.osuusMikki - 2 / 3) < 0.06,
+  `${alarivi.osuusKirjoita.toFixed(2)} / ${alarivi.osuusMikki.toFixed(2)}`);
+vaadi('rivi on koko paneelin levyinen', alarivi.leveysSuhde > 0.9,
+  alarivi.leveysSuhde.toFixed(2));
+vaadi('kuvakkeilla on aria-labelit',
+  /kirjoita/i.test(alarivi.kirjoitaLabel) && /ääneen/i.test(alarivi.mikkiLabel),
+  `${alarivi.kirjoitaLabel} | ${alarivi.mikkiLabel}`);
+vaadi('mikin alta poistuivat tekstiselitteet', alarivi.selitteet === '',
+  alarivi.selitteet.slice(0, 60));
+
 await sivu.screenshot({ path: join(ULOS, 'pollo-paneeli-390.png') });
 
+// Näppäimistönappi avaa kentän nappirivin YLÄPUOLELLE: mikrofoni pysyy
+// näkyvissä, joten saneluun palataan yhdellä napautuksella.
+const kirjoitustila = await sivu.evaluate(async () => {
+  document.querySelector('.pollo-kirjoita').click();
+  await new Promise((r) => setTimeout(r, 250));
+  const kentta = document.querySelector('.pollo-rivi');
+  const rivi = document.querySelector('.pollo-sanelu');
+  return {
+    kenttaNakyy: !kentta.hidden,
+    riviNakyy: !rivi.hidden,
+    kenttaYlla: kentta.getBoundingClientRect().top < rivi.getBoundingClientRect().top,
+  };
+});
+vaadi('näppäimistönappi avaa kirjoituskentän',
+  kirjoitustila.kenttaNakyy === true && kirjoitustila.kenttaYlla === true,
+  JSON.stringify(kirjoitustila));
+vaadi('nappirivi pysyy näkyvissä kirjoitettaessa', kirjoitustila.riviNakyy === true);
+await sivu.screenshot({ path: join(ULOS, 'pollo-kirjoitus-390.png') });
+
 const kysymys = await sivu.evaluate(async () => {
-  document.querySelector('.pollo-vaihda').click();
+  document.querySelector('.pollo-kirjoita').click();
   await new Promise((r) => setTimeout(r, 150));
   const kentta = document.querySelector('.pollo-kentta');
   kentta.value = 'Milloin Lontoon metro avattiin?';
@@ -386,7 +552,7 @@ vaadi('pöllö siirtyy lehden sisään', lehdessa.polloLehdessa === true && lehd
 const lehtiKysely = await sivu.evaluate(async () => {
   document.querySelector('.pollo-nappi').click();
   await new Promise((r) => setTimeout(r, 700));
-  document.querySelector('.pollo-vaihda')?.click();
+  document.querySelector('.pollo-kirjoita')?.click();
   await new Promise((r) => setTimeout(r, 150));
   const kentta = document.querySelector('.pollo-kentta');
   kentta.value = 'Mitä tällä sivulla kerrotaan?';
@@ -448,10 +614,10 @@ const sanelu = await sivu.evaluate(async () => {
   pollo.historia = [];
   document.querySelector('.pollo-nappi').click();
   await new Promise((r) => setTimeout(r, 600));
-  // Takaisin saneluun, jos kirjoitustila jäi päälle edellisestä kysymyksestä.
-  document.querySelectorAll('.pollo-vaihda').forEach((b) => {
-    if (/sanele/i.test(b.textContent)) b.click();
-  });
+  /*
+   * Alanappirivi on aina esillä, joten mikistä pääsee saneluun myös
+   * kirjoitustilasta — erillistä "Sanele sen sijaan" -linkkiä ei ole.
+   */
   await new Promise((r) => setTimeout(r, 150));
   const mikki = document.querySelector('.pollo-mikki');
   const nakyy = !document.querySelector('.pollo-sanelu').hidden;
@@ -473,13 +639,28 @@ await sivu.screenshot({ path: join(ULOS, 'pollo-sanelu-390.png') });
 const leveaCtx = await selain.newContext({ viewport: { width: 900, height: 900 }, serviceWorkers: 'block' });
 const { sivu: leveaSivu } = await avaaPeli(leveaCtx);
 await kytkeRajapinta(leveaSivu, []);
-await leveaSivu.evaluate(async () => {
+const leveaNapit = await leveaSivu.evaluate(async () => {
   document.querySelector('.monitoimi-nappi').click();
   await new Promise((r) => setTimeout(r, 350));
+  return [...document.querySelectorAll('.toimintorivi-liuku button')]
+    .map((b) => Math.round(b.getBoundingClientRect().width));
 });
+vaadi('liu\'un napit eivät ahtaudu 900 pikselissä',
+  leveaNapit.length === 3 && leveaNapit.every((w) => w >= 44), leveaNapit.join(' / '));
 await leveaSivu.screenshot({ path: join(ULOS, 'pollo-rivi-auki-900.png') });
+
+// Suodatettu laivavalikko myös leveällä ruudulla.
 await leveaSivu.evaluate(async () => {
-  document.querySelector('.monitoimi-nappi').click();
+  const nappi = [...document.querySelectorAll('.toimintorivi-liuku button')]
+    .find((b) => /^Laivalla/.test(b.getAttribute('aria-label') ?? ''));
+  if (nappi && !nappi.disabled) nappi.click();
+  await new Promise((r) => setTimeout(r, 500));
+});
+await leveaSivu.screenshot({ path: join(ULOS, 'pollo-laivavalikko-900.png') });
+
+await leveaSivu.evaluate(async () => {
+  window.matkakirja.ui.suljeMatkavalikko();
+  window.matkakirja.ui.render();
   await new Promise((r) => setTimeout(r, 250));
   document.querySelector('.pollo-nappi').click();
   await new Promise((r) => setTimeout(r, 800));
@@ -500,13 +681,13 @@ const ilmanSanelua = await ilmanSivu.evaluate(async () => {
   return {
     saneluPiilossa: document.querySelector('.pollo-sanelu').hidden,
     kenttaNakyy: !document.querySelector('.pollo-rivi').hidden,
-    saneleLinkkiPiilossa: document.querySelector('.pollo-syote').lastElementChild.hidden,
+    mikkiaEiNayteta: document.querySelector('.pollo-mikki').offsetParent === null,
   };
 });
 vaadi('ilman puheentunnistusta kenttä on suoraan esillä',
   ilmanSanelua.saneluPiilossa === true && ilmanSanelua.kenttaNakyy === true,
   JSON.stringify(ilmanSanelua));
-vaadi('ilman puheentunnistusta ei tarjota sanelua', ilmanSanelua.saneleLinkkiPiilossa === true);
+vaadi('ilman puheentunnistusta ei tarjota sanelua', ilmanSanelua.mikkiaEiNayteta === true);
 vaadi('ei konsolivirheitä ilman puheentunnistusta', ilmanVirheet.length === 0,
   ilmanVirheet.join(' | '));
 await ilmanSivu.screenshot({ path: join(ULOS, 'pollo-ilman-sanelua-390.png') });
