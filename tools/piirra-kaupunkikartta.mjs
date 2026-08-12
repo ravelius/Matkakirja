@@ -744,16 +744,19 @@ const KAUPUNGIT = {
     meri: true,
   },
   masqat: {
-    // Vanha Masqat ja Mutrah samassa kuvassa. Kaupunki on jono lahtia
-    // vuorten välissä: Mutrahin suuki on lännessä, Al Alamin palatsi ja
-    // portugalilaislinnakkeet Jalali ja Mirani idässä, ja niiden
-    // välissä niemi, jonka yli tie kiertää. Rajaus on siksi leveä
-    // (n. 4,3 km) — kapeampi jättäisi toisen pään pois, ja juuri
-    // kahden kylän välimatka on tämän kaupungin muoto.
+    // VAIN VANHA MASQAT, EI MUTRAHIA — ja se on mitattu päätös.
+    // Ensimmäinen rajaus (58,558–58,604) otti molemmat kylät mukaan,
+    // koska ne ovat kaupungin todellinen muoto. Kuva oli kelvoton:
+    // Mutrahin ja vanhan Masqatin välissä on paljasta vuorta ilman
+    // yhtään katua, joten keskelle jäi valtava tyhjä paperiala ja
+    // molemmat kylät kutistuivat pikkuruisiksi laitoihin. Nyt kuvassa
+    // on muurien sisäinen vanhakaupunki: Al Alamin palatsi, Jalalin ja
+    // Miranin linnakkeet, Bait Al Zubair ja Masqatin portti mahtuvat
+    // alle kahden kilometrin ruutuun.
     //
     // meri: true — Omaninlahti on OSM:ssä rantaviivaa ilman
     // vesimonikulmiota, sama tilanne kuin Dohassa.
-    rajat: { pohjoinen: 23.629, etela: 23.606, lansi: 58.558, ita: 58.604 },
+    rajat: { pohjoinen: 23.622, etela: 23.610, lansi: 58.586, ita: 58.604 },
     meri: true,
   },
   kuwait: {
@@ -761,7 +764,10 @@ const KAUPUNGIT = {
     // lännessä, Seifin palatsi rannassa, Kuwait-tornit niemen kärjessä
     // koillisessa. Tornit ovat kaupungin tunnus, joten ne otetaan
     // mukaan, vaikka rajaus venyy sen takia n. 4,3 km:iin.
-    rajat: { pohjoinen: 29.392, etela: 29.370, lansi: 47.962, ita: 48.006 },
+    // Itäreuna 48,010 eikä 48,006: ensimmäisessä ajossa Kuwait-tornit
+    // osuivat 94 %:n kohdalle, jolloin numeroympyrä olisi ollut
+    // kiinni kuvan reunassa.
+    rajat: { pohjoinen: 29.392, etela: 29.370, lansi: 47.962, ita: 48.010 },
     meri: true,
   },
   nikosia: {
@@ -773,7 +779,10 @@ const KAUPUNGIT = {
     //
     // Ei meri-lippua: Nikosia on ainoa pääkaupunki tässä erässä, joka
     // ei ole meren rannalla.
-    rajat: { pohjoinen: 35.181, etela: 35.163, lansi: 33.350, ita: 33.378 },
+    // Rajausta siirretty 0,003 astetta pohjoiseen ensimmäisen ajon
+    // jälkeen: muurikehä istui kuvan yläkolmanneksessa ja alalaitaan
+    // jäi pelkkää esikaupunkia. Nyt tähtimuoto on keskellä.
+    rajat: { pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378 },
   },
   bagdad: {
     // Rusafan vanha puoli Tigrisin itärannalla: Mutanabbin kirjakatu,
@@ -783,6 +792,16 @@ const KAUPUNGIT = {
     // Shahid-monumentti (5 km itään) ja Mustansiriyan yliopiston
     // nykykampus jäävät tarkoituksella ulos — keskiaikainen
     // Mustansiriya-koulu on rajauksen sisällä.
+    //
+    // ODOTTAA: TÄSTÄ EI SAA KELVOLLISTA KUVAA NYKYAINEISTOLLA.
+    // Overpass palautti tälle ruudulle kaksi eri ajokertaa täsmälleen
+    // 441 elementtiä (vertailuksi Nikosia 1457, Doha 2387), eli kyse ei
+    // ole hakuvirheestä vaan siitä, että Bagdadin katuverkkoa on
+    // kartoitettu OSM:ään ohuesti. Piirretty kuva oli puoliksi tyhjää
+    // paperia eikä muistuttanut kaupunkia, joten Bagdad jätettiin
+    // 12.8.2026 pois kaupunkilehtierästä. Rajaus on tallessa tässä,
+    // jotta seuraava yrittäjä näkee mitä on jo kokeiltu — tarkista
+    // elementtimäärä ENNEN kuin kirjoitat sisältöä.
     rajat: { pohjoinen: 33.348, etela: 33.332, lansi: 44.376, ita: 44.400 },
   },
 };
