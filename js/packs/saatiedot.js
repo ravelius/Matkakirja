@@ -76,4 +76,34 @@ export const SAATIEDOT = {
     keskilampo: [17.6, 18.6, 21.7, 26.6, 31.8, 34.2, 35.3, 35.2, 33.1, 29.7, 24.7, 19.8],
     sade: [11, 12, 12, 4, 0, 0, 0, 0, 0, 0, 7, 14],
   },
+  // Nikosia on sisämaassa tasangolla, ei rannikolla: kesä on siksi
+  // kuumempi ja talvi viileämpi kuin Kyproksen rantakaupungeissa.
+  // Heinä- ja elokuussa sataa käytännössä ei lainkaan, ja koko vuoden
+  // sade tulee marraskuun ja maaliskuun välillä.
+  nikosia: {
+    lat: 35.17,
+    lon: 33.36,
+    keskilampo: [10.7, 11.2, 13.6, 17.5, 22.2, 26.8, 29.7, 29.6, 26.3, 21.9, 16.6, 12.5],
+    sade: [54, 47, 35, 30, 29, 9, 2, 3, 11, 35, 37, 53],
+  },
+  // Kuwait on Persianlahden pohjukassa ja kaukana avomerestä, joten
+  // kesä on koko lahden alueen kuumin: heinäkuun keskilämpö ylittää 37
+  // astetta eikä kesä-syyskuussa sada lainkaan. Sade tulee talvella
+  // lyhyinä ryöppyinä.
+  kuwait: {
+    lat: 29.38,
+    lon: 47.99,
+    keskilampo: [13.5, 15.4, 19.7, 25.4, 31.7, 36.1, 37.6, 37.4, 34.1, 28.7, 21, 15.4],
+    sade: [30, 13, 17, 6, 2, 0, 0, 0, 0, 2, 30, 26],
+  },
+  // Masqat on meren rannalla vuorten juurella: talvi on lämpimämpi
+  // kuin Kuwaitissa ja kesä hieman viileämpi, koska meri tasaa. Sade
+  // on vähäistä ympäri vuoden, ja kesäkuun piikki tulee harvinaisista
+  // trooppisista matalapaineista.
+  masqat: {
+    lat: 23.615,
+    lon: 58.593,
+    keskilampo: [20.7, 21.9, 24.4, 28.6, 32.5, 33.5, 33, 31.9, 30.8, 29, 25.3, 22.2],
+    sade: [18, 11, 18, 7, 1, 10, 4, 1, 0, 1, 12, 14],
+  },
 };

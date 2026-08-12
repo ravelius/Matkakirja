@@ -743,6 +743,84 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 25.302, etela: 25.278, lansi: 51.518, ita: 51.556 },
     meri: true,
   },
+  masqat: {
+    // VAIN VANHA MASQAT, EI MUTRAHIA — ja se on mitattu päätös.
+    // Ensimmäinen rajaus (58,558–58,604) otti molemmat kylät mukaan,
+    // koska ne ovat kaupungin todellinen muoto. Kuva oli kelvoton:
+    // Mutrahin ja vanhan Masqatin välissä on paljasta vuorta ilman
+    // yhtään katua, joten keskelle jäi valtava tyhjä paperiala ja
+    // molemmat kylät kutistuivat pikkuruisiksi laitoihin. Nyt kuvassa
+    // on muurien sisäinen vanhakaupunki: Al Alamin palatsi, Jalalin ja
+    // Miranin linnakkeet, Bait Al Zubair ja Masqatin portti mahtuvat
+    // alle kahden kilometrin ruutuun.
+    //
+    // meri: true — Omaninlahti on OSM:ssä rantaviivaa ilman
+    // vesimonikulmiota, sama tilanne kuin Dohassa.
+    // Eteläreuna 23,6085 eikä 23,610: Motishwar Mandir, Omanin vanhin
+    // hindutemppeli, jäi ensimmäisessä rajauksessa 33 metriä kuvan
+    // ulkopuolelle. Se on kuudes karttakohde ja ainoa, joka ei ole
+    // linnake tai palatsi, joten sen takia kannatti siirtää reunaa.
+    // Länsireuna 58,5805 kahdesta syystä. Ensin se siirrettiin 58,586:sta
+    // 58,584:ään, koska Masqatin portti (58,5869) osui 5 %:n kohdalle ja
+    // numeroympyrä olisi ollut kiinni kuvan reunassa. Sitten vielä
+    // 58,5805:een, koska Motishwar Mandir osui vasempaan alakulmaan
+    // mittakaavajanan päälle (tools/tarkista-karttapisteet.mjs).
+    // Eteläreunaa kokeiltiin ensin janan väistämiseen, mutta se toi
+    // kuvan alalaitaan puolikilometrisen kaistan tyhjää wadia; leveämpi
+    // rajaus vie temppelin janan ohi ilman sitä hintaa.
+    rajat: { pohjoinen: 23.6205, etela: 23.6085, lansi: 58.5805, ita: 58.602 },
+    meri: true,
+  },
+  kuwait: {
+    // Kuwait Cityn vanha ydin: Mubarakiyan tori ja kansallismuseo
+    // lännessä, Seifin palatsi rannassa, Kuwait-tornit niemen kärjessä
+    // koillisessa. Tornit ovat kaupungin tunnus, joten ne otetaan
+    // mukaan, vaikka rajaus venyy sen takia n. 4,3 km:iin.
+    // Itäreuna 48,010 eikä 48,006: ensimmäisessä ajossa Kuwait-tornit
+    // osuivat 94 %:n kohdalle, jolloin numeroympyrä olisi ollut
+    // kiinni kuvan reunassa.
+    // Eteläreuna 29,366 eikä 29,370: Sadu House päätyi 80 %:n
+    // korkeudelle vasempaan alakulmaan, jossa lehti piirtää
+    // mittakaavajanan, ja numeroympyrä peitti janan tekstin
+    // (tools/tarkista-karttapisteet.mjs). Etelässä on tiivistä
+    // kaupunkia, joten reunan siirto ei tuota tyhjää paperia.
+    rajat: { pohjoinen: 29.392, etela: 29.366, lansi: 47.962, ita: 48.010 },
+    meri: true,
+  },
+  nikosia: {
+    // Venetsialaisten muurien ympäröimä vanhakaupunki mahtuu lähes
+    // kokonaan: Famagustan portti idässä, Kyproksen museo lännessä,
+    // Faneromeni keskellä. Muurikehä on halkaisijaltaan vain noin
+    // puolitoista kilometriä, joten rajaus on pieni (n. 2,6 km) —
+    // laajempi hukuttaisi tähtimuotoisen muurin esikaupunkeihin.
+    //
+    // Ei meri-lippua: Nikosia on ainoa pääkaupunki tässä erässä, joka
+    // ei ole meren rannalla.
+    // Rajausta siirretty 0,003 astetta pohjoiseen ensimmäisen ajon
+    // jälkeen: muurikehä istui kuvan yläkolmanneksessa ja alalaitaan
+    // jäi pelkkää esikaupunkia. Nyt tähtimuoto on keskellä.
+    rajat: { pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378 },
+  },
+  bagdad: {
+    // Rusafan vanha puoli Tigrisin itärannalla: Mutanabbin kirjakatu,
+    // abbasidipalatsi, Qishlan kellotorni ja Bagdadin museo ovat
+    // kaikki noin kilometrin säteellä. Joki halkaisee kuvan, ja
+    // länsirannalta otetaan mukaan sen verran, että sillat näkyvät.
+    // Shahid-monumentti (5 km itään) ja Mustansiriyan yliopiston
+    // nykykampus jäävät tarkoituksella ulos — keskiaikainen
+    // Mustansiriya-koulu on rajauksen sisällä.
+    //
+    // ODOTTAA: TÄSTÄ EI SAA KELVOLLISTA KUVAA NYKYAINEISTOLLA.
+    // Overpass palautti tälle ruudulle kaksi eri ajokertaa täsmälleen
+    // 441 elementtiä (vertailuksi Nikosia 1457, Doha 2387), eli kyse ei
+    // ole hakuvirheestä vaan siitä, että Bagdadin katuverkkoa on
+    // kartoitettu OSM:ään ohuesti. Piirretty kuva oli puoliksi tyhjää
+    // paperia eikä muistuttanut kaupunkia, joten Bagdad jätettiin
+    // 12.8.2026 pois kaupunkilehtierästä. Rajaus on tallessa tässä,
+    // jotta seuraava yrittäjä näkee mitä on jo kokeiltu — tarkista
+    // elementtimäärä ENNEN kuin kirjoitat sisältöä.
+    rajat: { pohjoinen: 33.348, etela: 33.332, lansi: 44.376, ita: 44.400 },
+  },
 };
 
 /*

@@ -2460,6 +2460,143 @@ export const MAAKARTAT = {
  */
 export const KAUPUNKIKARTAT = {
   /*
+   * Vanha Masqat (nippu 2, 12.8.2026). Kuvassa on vain muurien
+   * sisäinen vanhakaupunki — Mutrahin suuki neljän kilometrin päässä
+   * jää tarkoituksella ulos (perustelu tools/piirra-kaupunkikartta.mjs).
+   *
+   * OMN-maalehti kertoo Bahlan ja Jabreenin linnoista mutta EI
+   * Masqatin omista kohteista, joten tämä kaupunki on lähes kokonaan
+   * vapaata aihepiiriä — poikkeus Persianlahden kaupunkien joukossa.
+   * Kuudes kohde, hindutemppeli, ei ole linnake eikä palatsi: sen
+   * takia rajausta siirrettiin ensin etelämmäs ja sitten lännemmäs,
+   * jotta sen numeroympyrä ei istu mittakaavajanan päällä.
+   */
+  masqat: {
+    polku: 'assets/kartat/masqat-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 23.6205, etela: 23.6085, lansi: 58.5805, ita: 58.602,
+    },
+    esittely: 'Masqat ei ole yksi kaupunki vaan jono pieniä lahtia '
+      + 'vuorten välissä. Vanha Masqat on niistä itäisin: puolikuun '
+      + 'muotoinen poukama, jonka ympärillä kalliot nousevat suoraan '
+      + 'ylös. Juuri siksi kaupunki syntyi tähän — poukama on '
+      + 'luonnonsatama, jonne pääsee mereltä mutta jonne maitse '
+      + 'pääsee vain kahdesta portista. Portugalilaiset ottivat '
+      + 'sataman 1507 ja rakensivat sen suulle kaksi linnaketta, '
+      + 'Jalalin ja Miranin, jotka valvovat väylää edelleen. Muuri '
+      + 'kiersi kaupungin, ja portit suljettiin öisin vielä '
+      + '1970-luvulla.'
+      + '\n\n'
+      + 'Kartalla meri tulee sisään oikealta ja ylhäältä, ja '
+      + 'poukaman ympärillä kulkee ohut rantaviiva. Vanhankaupungin '
+      + 'kadut näkyvät keskellä pienenä tiheänä ruudukkona — se on '
+      + 'koko historiallinen Masqat, alle kilometrin levyinen. '
+      + 'Katkoviivat ovat vanhan kaupunginmuurin jäänteitä. '
+      + 'Ympärillä oleva vaalea ala ei ole tyhjää tonttimaata vaan '
+      + 'paljasta vuorta: siihen ei ole rakennettu, koska siihen ei '
+      + 'voi rakentaa. Kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Masqatin portti', lat: 23.6175, lon: 58.5869 },
+      { nimi: 'Al-Miranin linnake', lat: 23.6172, lon: 58.5931 },
+      { nimi: 'Al-Jalalin linnake', lat: 23.6167, lon: 58.5979 },
+      { nimi: 'Al Alamin palatsi', lat: 23.6160, lon: 58.5947 },
+      { nimi: 'Bait Al Zubair', lat: 23.6155, lon: 58.5921 },
+      { nimi: 'Motishwar Mandir', lat: 23.6097, lon: 58.5882 },
+    ],
+  },
+  /*
+   * Kuwait City (nippu 2, 12.8.2026). Kolme kohdetta on jo KWT-
+   * maalehdessä omina juttuinaan — Kuwait-tornit, suurmoskeija ja
+   * Mubarakiyan tori (maalehdessä ruokajuttuna) — koska maalehti
+   * kirjoitettiin ennen kuin kaupungilla oli lehteä. Niiden
+   * nähtävyysjutut kertovat siksi eri asian kuin maalehti.
+   *
+   * Kansallismuseo ja kansalliskirjasto jätettiin pois, vaikka
+   * molemmat olisivat kelvollisia: ne ovat parinsadan metrin päässä
+   * Sadu Housesta, ja numeroympyrät olisivat menneet päällekkäin.
+   */
+  kuwait: {
+    polku: 'assets/kartat/kuwait-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 29.392, etela: 29.366, lansi: 47.962, ita: 48.010,
+    },
+    esittely: 'Kuwait City on rakennettu lahden kaarelle, ja koko '
+      + 'kaupunki katsoo veteen päin. Vanha kaupunki oli 1950-luvulle '
+      + 'asti pieni: muurin sisällä asui muutama kymmenentuhatta '
+      + 'ihmistä, ja muurin ulkopuolella alkoi aavikko. Öljy muutti '
+      + 'mittakaavan kerralla. Vanha savitiilikaupunki purettiin '
+      + 'lähes kokonaan 1950- ja 1960-luvuilla ja tilalle piirrettiin '
+      + 'uusi keskusta kehäteineen — juuri ne kaaret, jotka kartalla '
+      + 'erottuvat leveimpinä viivoina. Vanhasta kaupungista jäivät '
+      + 'jäljelle tori, muutama portti ja rannan palatsi.'
+      + '\n\n'
+      + 'Kartalla meri on ylhäällä ja vasemmalla. Rannassa erottuu '
+      + 'satamien suorakulmaisia altaita, ja oikeassa yläkulmassa '
+      + 'niemi työntyy veteen: siinä ovat Kuwait-tornit. Kehätiet '
+      + 'kaartavat rannan suuntaisesti, ja niiden väliin jäävät '
+      + 'korttelit ovat sitä tiheämpiä mitä lähempänä rantaa ollaan. '
+      + 'Vasemmassa alakulmassa näkyy pieni tiheä ruudukko: se on '
+      + 'vanhan torin kortteli, ainoa kohta jossa kadut ovat yhä '
+      + 'kapeita. Kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Kuwait-tornit', lat: 29.3900, lon: 48.0031 },
+      { nimi: 'Al Hamra -torni', lat: 29.3790, lon: 47.9932 },
+      { nimi: 'Seifin palatsi', lat: 29.3808, lon: 47.9711 },
+      { nimi: 'Kuwaitin suurmoskeija', lat: 29.3789, lon: 47.9747 },
+      { nimi: 'Mubarakiyan tori', lat: 29.3748, lon: 47.9741 },
+      { nimi: 'Sadu House', lat: 29.3744, lon: 47.9672 },
+    ],
+  },
+  /*
+   * Nikosia (nippu 2, 12.8.2026). Rajaus on pieni, koska venetsialaisten
+   * muurien kehä on halkaisijaltaan vain noin puolitoista kilometriä.
+   *
+   * KOHTEIKSI EI VALITTU muuria, Famagustan porttia eikä Ledran katua,
+   * vaikka ne ovat kaupungin tunnetuimmat: kaikki kolme on jo varattu
+   * muualla pelissä (asia-valokuvat.js:n kuvatekstit ja Nikosian
+   * kulttuurivisa). Tilalle otettiin kuusi kohdetta, joista mikään ei
+   * esiinny pelissä ennestään. Selimiyen viereinen Bedesten jätettiin
+   * pois, koska se on kolmenkymmenen metrin päässä moskeijasta ja
+   * numeroympyrät olisivat menneet päällekkäin — se kerrotaan
+   * Selimiyen jutun sisällä.
+   */
+  nikosia: {
+    polku: 'assets/kartat/nikosia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378,
+    },
+    esittely: 'Nikosia on tasangon keskellä, ei rannikolla, ja se on '
+      + 'ainoa Kyproksen suurista kaupungeista jota ei perustettu '
+      + 'sataman viereen. Kaupunki kasvoi joen mutkaan, ja sen muoto '
+      + 'päätettiin kerralla vuonna 1567: venetsialaiset purkivat '
+      + 'keskiaikaisen kaupungin laidat ja rakensivat tilalle '
+      + 'ympyränmuotoisen muurin, jossa on yksitoista nuolenkärjen '
+      + 'muotoista bastionia. Kehä on kartan selvin muoto, ja se on '
+      + 'yhä kaupungin sisärengas: muurin sisäpuoli on vanhakaupunki, '
+      + 'ulkopuoli nykyistä Nikosiaa.'
+      + '\n\n'
+      + 'Kartalla tähtimuoto erottuu heti keskeltä. Sen sisällä kadut '
+      + 'ovat kapeita ja mutkittelevia, ulkopuolella suoria ja leveitä '
+      + '— ero näkyy viivojen tiheydestä. Muurin ympärillä kiertää '
+      + 'vaaleampi kaistale: se on entinen vallihauta, jossa kasvaa '
+      + 'nykyään puita ja jonka pohjalla on puistoja ja '
+      + 'urheilukenttiä. Vanhankaupungin kohteet ovat kävelymatkan '
+      + 'päässä toisistaan; kartan itäreunassa kulkeva leveä väylä on '
+      + 'jo muurien ulkopuolella. Kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      { nimi: 'Selimiyen moskeija', lat: 35.1765, lon: 33.3645 },
+      { nimi: 'Büyük Han', lat: 35.1763, lon: 33.3625 },
+      { nimi: 'Faneromenin kirkko', lat: 35.1735, lon: 33.3625 },
+      { nimi: 'Omeryen hamam', lat: 35.1726, lon: 33.3654 },
+      { nimi: 'Kyproksen museo', lat: 35.1717, lon: 33.3553 },
+      { nimi: 'Leventis-museo', lat: 35.1706, lon: 33.3617 },
+    ],
+  },
+  /*
    * Doha (nippu 2:n pilottikaupunki, 12.8.2026). Rajaus kattaa vanhan
    * ytimen Corniche-rantakadun kaaressa; West Bayn tornit jäävät
    * pohjoiseen kartan ulkopuolelle tarkoituksella (ks. perustelu
