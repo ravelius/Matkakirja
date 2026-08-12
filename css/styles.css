@@ -3959,8 +3959,15 @@ body.aloitus-zoom .alkureitit { display: none; }
 .alkureitti-isoisa .alkureitti-osa { stroke: #a4442b; }
 .alkureitti-kauppa .alkureitti-osa { stroke: #4a6883; }
 
-.alkureitti-karki { stroke-width: 7; }
-.alkureitti-keha { stroke-width: 15; }
+/*
+ * Kärjen koko on mitattu ruudulta, ei arvattu. Laudan yksikkö on 390
+ * pikselin levyisellä puhelimella noin 0,33 pikseliä, joten vanha
+ * 7 yksikön kärki oli 2,3–2,7 pikseriä — piste, jota omistaja ei
+ * nähnyt kummallakaan laitteellaan (12.8.2026). Kaksinkertainen mitta
+ * on ruudulla noin 4–5 pikseliä: selvästi havaittava, yhä hillitty.
+ */
+.alkureitti-karki { stroke-width: 13; }
+.alkureitti-keha { stroke-width: 28; }
 
 /*
  * Kulku: yksi ainoa katkoviivan pätkä matkaa reitin alusta loppuun, kun
@@ -3968,7 +3975,7 @@ body.aloitus-zoom .alkureitit { display: none; }
  * tulee elementiltä (--pituus), koska jokainen reitti on eri mittainen.
  *
  * Matka kestää vain osan silmukasta: punaisen reitin kaksi puoliskoa
- * (Lontoo–Tokio ja Los Angeles–Lontoo) vuorottelevat samassa 40 sekunnin
+ * (Lontoo–Tokio ja Los Angeles–Lontoo) vuorottelevat samassa 26 sekunnin
  * kierrossa, joten kummallekin varataan siitä oma ikkunansa. Loppuosan
  * piste on näkymätön ja odottaa vuoroaan.
  */
@@ -3994,15 +4001,15 @@ body.aloitus-zoom .alkureitit { display: none; }
    kulkukäyrän käytössä, ja sama ominaisuus kahdessa animaatiossa
    tarkoittaisi, että jälkimmäinen syö edellisen. */
 @keyframes alkureitti-syke {
-  from { stroke-width: 5.6; }
-  to { stroke-width: 8.6; }
+  from { stroke-width: 10.5; }
+  to { stroke-width: 16; }
 }
 
 /* Kehä sykkii vastakkaiseen suuntaan ja laajemmin: hehku hengittää
    ytimen ympärillä sen sijaan että ne kasvaisivat yhtenä möykkynä. */
 @keyframes alkureitti-syke-keha {
-  from { stroke-width: 17; }
-  to { stroke-width: 11; }
+  from { stroke-width: 32; }
+  to { stroke-width: 20; }
 }
 
 .alkureitti-karki,
