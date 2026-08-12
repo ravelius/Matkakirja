@@ -67,12 +67,19 @@ for (const koko of LEVEYDET) {
       .find((b) => /aloita seikkailu/i.test(b.textContent));
     n?.click();
   });
-  // Avausteksti kirjoittuu kirjoituskoneella; odotetaan sen loppuun.
-  await sivu.waitForTimeout(9000);
-  await sivu.screenshot({ path: join(ULOS, `etusivu-${koko.nimi}.png`) });
-  // Toinen kaappaus hetken päästä: animaation pisteet ovat eri kohdissa.
-  await sivu.waitForTimeout(3200);
-  await sivu.screenshot({ path: join(ULOS, `etusivu-${koko.nimi}-b.png`) });
+  /*
+   * Kaksi kaappausta reittianimaatiosta: alusta ja pitkän ajan päästä.
+   *
+   * Kolmen sekunnin kohdalla isoisän jälki on vasta alullaan ja laivat
+   * juuri lähdössä; viidentoista kohdalla jäljen on määrä olla pitkä ja
+   * useamman laivan liikkeellä eri vaiheissa. Juuri se ero on se, mitä
+   * 12.8.2026 tehty hienosäätö lupaa — jälki jää näkyviin eikä seuraa
+   * pistettä lyhyenä häntänä.
+   */
+  await sivu.waitForTimeout(3000);
+  await sivu.screenshot({ path: join(ULOS, `etusivu-${koko.nimi}-3s.png`) });
+  await sivu.waitForTimeout(12000);
+  await sivu.screenshot({ path: join(ULOS, `etusivu-${koko.nimi}-15s.png`) });
 
   // Avauslento: valitaan Lontoo lähtökaupungiksi ja lennetään.
   const lento = await sivu.evaluate(async () => {
@@ -84,10 +91,12 @@ for (const koko of LEVEYDET) {
     ui.doFly('kairo');
     return 'ok';
   });
+  // Kesken kirjoituksen: repliikki on avaustekstin tahdissa (12.8.2026),
+  // joten tässä kohtaa rivistä on näkyvissä vasta osa.
   await sivu.waitForTimeout(2600);
   await sivu.screenshot({ path: join(ULOS, `lento-${koko.nimi}.png`) });
-  // Lennon loppu: Astu mantereelle -nappi esillä.
-  await sivu.waitForTimeout(9000);
+  // Lennon loppu: rivi valmis ja Astu mantereelle -nappi esillä.
+  await sivu.waitForTimeout(14000);
   await sivu.screenshot({ path: join(ULOS, `lento-${koko.nimi}-loppu.png`) });
 
   console.log(`${koko.nimi}px: lento=${lento} pageerror=${virheet.length}`);
