@@ -3933,95 +3933,67 @@ body.radio-tila .maa-pilleri { display: none; }
  * VÄRIT OVAT SEEPIAN SISÄLTÄ. Kirkas punainen ja sininen repisivät
  * kartan ilmeen rikki; nämä kaksi ovat samaa sammunutta sävyä kuin
  * kartan omat merkinnät, vain sen verran erillään toisistaan että ne
- * erottaa toisikseen. Peittävyys tulee --kirkkaus-muuttujasta, jonka
- * kulkukäyrä nostaa ja laskee — siksi sitä ei aseteta tässä.
+ * erottaa toisikseen.
+ *
+ * TÄSSÄ EI ASETETA YHTÄKÄÄN ANIMOITUA OMINAISUUTTA. Liike on SMILiä
+ * (12.8.2026, ks. piirraAlkuReitit), ja tyylitiedoston sääntö jyrää
+ * SMIL-arvon: jos peittävyys, säde, viivanleveys tai katkoviiva
+ * asetettaisiin täällä, animaatio jäisi paikalleen. Ne tulevat
+ * elementtien omina määreinä js/ui.js:stä. Väri ja viivan pää eivät
+ * ole animoituja, joten ne saavat olla tyylinä.
  *
  * KERROS NÄKYY VAIN AVAUSNÄKYMÄSSÄ. Varsinaisen irrotuksen tekee
  * js/ui.js render(): pelin alkaessa kerros otetaan kokonaan pois
- * puusta, jottei sen viisitoista animaatiota jää käymään näkymättömissä.
- * Nämä säännöt ovat varmistus kahteen väliin, joissa kerros on vielä
- * puussa mutta ei saa näkyä: aloitusruudun zoomaus (.aloitus-zoom) ja
- * liikkeen vähennys, jos asetus vaihtuu kesken istunnon.
+ * puusta, jottei sen animaatioita jää käymään näkymättömissä. Nämä
+ * säännöt ovat varmistus kahteen väliin, joissa kerros on vielä
+ * puussa mutta ei saa näkyä.
+ *
+ * PIILOTUS ON visibility, EI display. Kerros syntyy drawBoardissa
+ * ennen kuin bodyyn tulee data-mode="start", eli se on hetken
+ * piilossa — ja display: none -tilassa syntyneen elementin
+ * SMIL-animaatioiden käynnistyminen on juuri sitä WebKitin
+ * käyttäytymistä, jota tässä korjauksessa vältetään. visibility
+ * piilottaa mutta jättää elementin asetteluun ja aikajanalle.
  */
-.alkureitit { display: none; }
-body[data-mode="start"] .alkureitit { display: inline; }
-body.aloitus-zoom .alkureitit { display: none; }
+.alkureitit { visibility: hidden; }
+body[data-mode="start"] .alkureitit { visibility: visible; }
+body.aloitus-zoom .alkureitit { visibility: hidden; }
 
-.alkureitti-osa {
-  fill: none;
-  stroke-linecap: round;
-  opacity: 0;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  will-change: stroke-dashoffset;
-}
+.alkureitti-osa { fill: none; stroke-linecap: round; }
+.alkureitti-piste { stroke: none; }
 
 .alkureitti-isoisa .alkureitti-osa { stroke: #a4442b; }
+.alkureitti-isoisa .alkureitti-piste { fill: #a4442b; }
 .alkureitti-kauppa .alkureitti-osa { stroke: #4a6883; }
+.alkureitti-kauppa .alkureitti-piste { fill: #4a6883; }
 
 /*
- * Kärjen koko on mitattu ruudulta, ei arvattu. Laudan yksikkö on 390
- * pikselin levyisellä puhelimella noin 0,33 pikseliä, joten vanha
- * 7 yksikön kärki oli 2,3–2,7 pikseriä — piste, jota omistaja ei
- * nähnyt kummallakaan laitteellaan (12.8.2026). Kaksinkertainen mitta
- * on ruudulla noin 4–5 pikseliä: selvästi havaittava, yhä hillitty.
- */
-.alkureitti-karki { stroke-width: 13; }
-.alkureitti-keha { stroke-width: 28; }
-
-/*
- * Kulku: yksi ainoa katkoviivan pätkä matkaa reitin alusta loppuun, kun
- * dashoffset liukuu nollasta polun pituuden verran miinukselle. Pituus
- * tulee elementiltä (--pituus), koska jokainen reitti on eri mittainen.
+ * POHJAVIIVA: koko reitti hentona yhtenäisenä viivana, aina näkyvissä.
  *
- * Matka kestää vain osan silmukasta: punaisen reitin kaksi puoliskoa
- * (Lontoo–Tokio ja Los Angeles–Lontoo) vuorottelevat samassa 26 sekunnin
- * kierrossa, joten kummallekin varataan siitä oma ikkunansa. Loppuosan
- * piste on näkymätön ja odottaa vuoroaan.
+ * Omistaja ei nähnyt animaatiosta jälkeäkään yhdelläkään laitteellaan
+ * (12.8.2026), ja liikkeen vähennys piilotti ennen koko kerroksen.
+ * Kumpikin päättyi tyhjään karttaan. Pohjaviiva on niin himmeä, että se
+ * lukee kartan omana merkintänä — mutta sen ansiosta reitit ovat
+ * etusivulla olemassa silloinkin, kun liike ei jostain syystä käy.
+ *
+ * MITTA ON PIKSELEISSÄ, EI YKSIKÖISSÄ. Laudan yksikkö on 390 pikselin
+ * puhelimella noin 0,33 pikseliä, joten 2,6 yksikön viiva olisi ollut
+ * alle pikselin — juuri se virhe, joka teki edellisestäkin yrityksestä
+ * näkymättömän. Kuusi yksikköä on puhelimella noin kaksi pikseliä.
+ * Mitattu ero taustaan (Chromium, 390 px): 1544 pikseliä muuttuu,
+ * suurin sävyero 58/255, kun liikkeen vähennys on päällä.
  */
-@keyframes alkureitti-kulku {
-  0% { stroke-dashoffset: 0; opacity: 0; }
-  4% { opacity: var(--kirkkaus, 1); }
-  38% { opacity: var(--kirkkaus, 1); }
-  44% { stroke-dashoffset: calc(var(--pituus, 1000px) * -1); opacity: 0; }
-  100% { stroke-dashoffset: calc(var(--pituus, 1000px) * -1); opacity: 0; }
-}
-
-/* Yksiosaisella reitillä ei ole vuoroa odotettavana, joten se saa
-   matkata melkein koko kierroksen ajan. */
-@keyframes alkureitti-kulku-pitka {
-  0% { stroke-dashoffset: 0; opacity: 0; }
-  3% { opacity: var(--kirkkaus, 1); }
-  74% { opacity: var(--kirkkaus, 1); }
-  80% { stroke-dashoffset: calc(var(--pituus, 1000px) * -1); opacity: 0; }
-  100% { stroke-dashoffset: calc(var(--pituus, 1000px) * -1); opacity: 0; }
-}
-
-/* Syke tehdään viivan paksuudella eikä peittävyydellä: peittävyys on jo
-   kulkukäyrän käytössä, ja sama ominaisuus kahdessa animaatiossa
-   tarkoittaisi, että jälkimmäinen syö edellisen. */
-@keyframes alkureitti-syke {
-  from { stroke-width: 10.5; }
-  to { stroke-width: 16; }
-}
-
-/* Kehä sykkii vastakkaiseen suuntaan ja laajemmin: hehku hengittää
-   ytimen ympärillä sen sijaan että ne kasvaisivat yhtenä möykkynä. */
-@keyframes alkureitti-syke-keha {
-  from { stroke-width: 32; }
-  to { stroke-width: 20; }
-}
-
-.alkureitti-karki,
-.alkureitti-keha {
-  animation-timing-function: linear, ease-in-out;
-  animation-iteration-count: infinite, infinite;
-  animation-direction: normal, alternate;
-}
+.alkureitti-viiva { stroke-width: 6; opacity: 0.17; }
 
 @media (prefers-reduced-motion: reduce) {
-  /* Liikkeen vähennys: ei animaatiota eikä sen jälkeä lainkaan. */
-  body[data-mode="start"] .alkureitit { display: none; }
+  /*
+   * Liikkeen vähennys: reitit näkyvät staattisina, liikkuvat osat
+   * eivät lainkaan. Jos asetus oli päällä jo latautuessa, liikkuvia
+   * osia ei ole edes rakennettu (piirraAlkuReitit) — tämä sääntö on
+   * sitä varten, että asetus vaihtuu kesken istunnon.
+   */
+  .alkureitti-viiva { stroke-width: 7; opacity: 0.42; }
+  .alkureitti-jalki, .alkureitti-piste { display: none; }
 }
 
 .step { fill: #e8d7b0; stroke: #8a7048; stroke-width: 1.2; opacity: 0.7; }

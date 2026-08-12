@@ -951,6 +951,102 @@ const JALJEN_RYHMAT = [
   { leveys: 7.2, kirkkaus: 0.5 },
   { leveys: 6, kirkkaus: 0.3 },
 ];
+/*
+ * Kärki on kaksi päällekkäistä ympyrää: leveä ja himmeä kehä sekä sen
+ * sisällä kirkas ydin. Se on hehkun halvin muoto — suodatin
+ * (feGaussianBlur) maksaisi koko kerroksen uudelleenpiirron joka
+ * ruudulla.
+ *
+ * Mitat ovat entiset: ennen kärki oli pyöreäpäinen katkoviivan pätkä,
+ * jonka viivanleveys 13 ja 28 vastaa säteitä 6,5 ja 14.
+ */
+const KARJET = [
+  { luokka: 'alkureitti-keha', sade: 14, syke: [16, 10], kirkkaus: 0.38 },
+  { luokka: 'alkureitti-karki', sade: 6.5, syke: [5.25, 8], kirkkaus: 0.95 },
+];
+
+/*
+ * SILMUKAN AVAINHETKET.
+ *
+ * Yksi kierros on `kesto` sekuntia, ja siitä matkaan käytetään
+ * `ikkuna`n verran: punaisen reitin kaksi puoliskoa vuorottelevat
+ * samassa kierrossa, joten kumpikin saa siitä oman osuutensa ja
+ * odottaa lopun näkymättömänä. `kulku` on osuus matkasta ja `nakyy`
+ * kerroin peittävyydelle; reunapehmennys estää sen, että piste
+ * ilmestyisi ja katoaisi napsahtaen.
+ */
+const ALKU_REUNA = 0.06;
+export function alkuKehykset(ikkuna) {
+  return [
+    { t: 0, kulku: 0, nakyy: 0 },
+    { t: ikkuna * ALKU_REUNA, kulku: ALKU_REUNA, nakyy: 1 },
+    { t: ikkuna * (1 - ALKU_REUNA), kulku: 1 - ALKU_REUNA, nakyy: 1 },
+    { t: ikkuna, kulku: 1, nakyy: 0 },
+    { t: 1, kulku: 1, nakyy: 0 },
+  ];
+}
+
+/** Avainhetkien väliltä luettu arvo (lineaarinen, kuten SMIL itsekin). */
+function alkuArvoKohdassa(kehykset, t) {
+  for (let i = 1; i < kehykset.length; i++) {
+    const a = kehykset[i - 1];
+    const b = kehykset[i];
+    if (t > b.t) continue;
+    const osa = b.t > a.t ? (t - a.t) / (b.t - a.t) : 0;
+    return {
+      t,
+      kulku: a.kulku + (b.kulku - a.kulku) * osa,
+      nakyy: a.nakyy + (b.nakyy - a.nakyy) * osa,
+    };
+  }
+  const viim = kehykset[kehykset.length - 1];
+  return { t, kulku: viim.kulku, nakyy: viim.nakyy };
+}
+
+/*
+ * Sauma on se hetki, jossa arvo hyppää kierroksen lopusta sen alkuun.
+ * SMIL kulkee avainhetkestä toiseen lineaarisesti, joten hyppy tehdään
+ * kahdella lähes päällekkäisellä hetkellä. Se osuu aina kohtaan, jossa
+ * peittävyys on nolla, eikä sitä siksi näe.
+ */
+const ALKU_SAUMA = 0.0004;
+
+/**
+ * Kierretään avainhetket alkamaan vaiheesta `vaihe` (0…1 kierroksesta).
+ *
+ * NEGATIIVISTA VIIVETTÄ EI KÄYTETÄ. CSS-versiossa jälki jäi kärjestä
+ * jälkeen negatiivisella animation-delaylla, ja SMIL osaa saman tempun
+ * negatiivisella begin-arvolla — mutta juuri ajastuksen erikoistapaukset
+ * ovat WebKitin SMIL-toteutuksessa se osa, johon ei kannata nojata, kun
+ * korjataan vikaa jota ei pääse itse toistamaan. Vaihe leivotaan siis
+ * suoraan avainhetkiin: jokainen animaatio alkaa nollasta ja on silti
+ * omassa kohdassaan kierrosta.
+ */
+export function kierraKehykset(kehykset, vaihe) {
+  const p = ((vaihe % 1) + 1) % 1;
+  if (p < ALKU_SAUMA || p > 1 - 2 * ALKU_SAUMA) return kehykset.map((k) => ({ ...k }));
+  const alku = alkuArvoKohdassa(kehykset, p);
+  const uudet = [{ ...alku, t: 0 }];
+  // Kierroksen loppuosa ensin: siitä vaihe alkaa.
+  for (const k of kehykset) if (k.t > p && k.t < 1) uudet.push({ ...k, t: k.t - p });
+  uudet.push({ ...alkuArvoKohdassa(kehykset, 1), t: 1 - p });
+  uudet.push({ ...alkuArvoKohdassa(kehykset, 0), t: 1 - p + ALKU_SAUMA });
+  // ...ja sen jälkeen kierroksen alkuosa.
+  for (const k of kehykset) if (k.t > 0 && k.t < p) uudet.push({ ...k, t: k.t + (1 - p) });
+  uudet.push({ ...alku, t: 1 });
+  uudet.sort((a, b) => a.t - b.t);
+  // keyTimes on oltava kasvava ja päätyttävä ykköseen, tai koko
+  // animaatio hylätään. Sattumalta päällekkäin osuvat hetket
+  // erotetaan toisistaan, ja viimeinen naulataan ykköseen.
+  let edellinen = -1;
+  for (const k of uudet) {
+    if (k.t <= edellinen) k.t = edellinen + ALKU_SAUMA / 4;
+    edellinen = Math.min(k.t, 1);
+    k.t = edellinen;
+  }
+  uudet[uudet.length - 1].t = 1;
+  return uudet;
+}
 
 /*
  * Mantereiden lähikuva puhelimella. Ilme hiotaan ensin Euroopalla
@@ -1244,24 +1340,67 @@ function html(tag, className, text) {
  * kulkee jokaisen annetun pisteen kautta, joten rannikot pysyvät
  * kierrettyinä.
  */
-function pehmeaPolku(pisteet) {
-  if (pisteet.length < 2) return '';
+function pehmeatJaksot(pisteet) {
   const p = (i) => pisteet[Math.min(pisteet.length - 1, Math.max(0, i))];
-  const luvut = [`M${p(0)[0]},${p(0)[1]}`];
+  const jaksot = [];
   for (let i = 0; i < pisteet.length - 1; i++) {
     const [x0, y0] = p(i - 1);
     const [x1, y1] = p(i);
     const [x2, y2] = p(i + 1);
     const [x3, y3] = p(i + 2);
     // Kerroin 1/6 on Catmull–Romin vakiomuunnos Bézier-ohjauspisteiksi.
-    const c1x = x1 + (x2 - x0) / 6;
-    const c1y = y1 + (y2 - y0) / 6;
-    const c2x = x2 - (x3 - x1) / 6;
-    const c2y = y2 - (y3 - y1) / 6;
-    luvut.push(`C${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} `
-      + `${x2.toFixed(1)},${y2.toFixed(1)}`);
+    jaksot.push({
+      a: [x1, y1],
+      c1: [x1 + (x2 - x0) / 6, y1 + (y2 - y0) / 6],
+      c2: [x2 - (x3 - x1) / 6, y2 - (y3 - y1) / 6],
+      b: [x2, y2],
+    });
+  }
+  return jaksot;
+}
+
+function pehmeaPolku(pisteet) {
+  if (pisteet.length < 2) return '';
+  const jaksot = pehmeatJaksot(pisteet);
+  const luvut = [`M${jaksot[0].a[0]},${jaksot[0].a[1]}`];
+  for (const { c1, c2, b } of jaksot) {
+    luvut.push(`C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} `
+      + `${b[0].toFixed(1)},${b[1].toFixed(1)}`);
   }
   return luvut.join(' ');
+}
+
+/**
+ * Saman käyrän pituus laskettuna itse, EI selaimen getTotalLengthilla.
+ *
+ * WebKit palauttaa geometriakyselyihin nollan elementille, jota ei
+ * piirretä (kerros syntyy drawBoardissa ennen kuin body saa
+ * data-mode="start", eli se on siinä hetkessä piilotettu). Nolla
+ * pituus olisi tehnyt katkoviivan mitoista ja jäljen viiveistä
+ * roskaa juuri sillä selaimella, jolla vika ilmeni — ja hiljaa,
+ * ilman virheilmoitusta. Sama luku lasketaan nyt kaikissa
+ * selaimissa samasta kaavasta.
+ *
+ * Kaari mitataan murtoviivana: 24 osaa jaksoa kohti riittää tämän
+ * kokoisilla kaarilla alle promillen virheeseen, eikä tarkempi
+ * mittaus näkyisi ruudulla mitenkään.
+ */
+export function polunPituus(pisteet) {
+  if (pisteet.length < 2) return 0;
+  const OSIA = 24;
+  let summa = 0;
+  for (const { a, c1, c2, b } of pehmeatJaksot(pisteet)) {
+    let edellinen = a;
+    for (let k = 1; k <= OSIA; k++) {
+      const t = k / OSIA;
+      const u = 1 - t;
+      const kohta = [0, 1].map((i) => u * u * u * a[i] + 3 * u * u * t * c1[i]
+        + 3 * u * t * t * c2[i] + t * t * t * b[i]);
+      summa += Math.hypot(kohta[0] - edellinen[0], kohta[1] - edellinen[1]);
+      edellinen = kohta;
+    }
+  }
+  return summa;
 }
 
 /*
@@ -4425,87 +4564,136 @@ export class UI {
    * Etusivun alkuanimaatio: valopiste kulkee reittiä ja jättää perässään
    * himmenevän katkoviivajäljen (ALKUREITIT).
    *
-   * KAIKKI LIIKE ON stroke-dashoffsetia. Yksi piste on polku, jonka
-   * katkoviiva on `0.01 pituus` eli yksi ainoa pyöreäpäinen viivanpätkä;
-   * kun dashoffset liukuu nollasta pituuden verran miinukselle, pätkä
-   * matkaa reitin alusta loppuun. Jäljen pisteet ovat samaa temppua
-   * neljän pisteen kuvioina, ja ne jäävät jälkeen pelkällä negatiivisella
-   * animation-delaylla — ei yhtään ajastinta, ei rAF-silmukkaa eikä
-   * suodatinta. Selain hoitaa animaation omalla säikeellään, ja kun
-   * render() irrottaa kerroksen pelin alkaessa, siitä ei jää mitään
-   * käymään taustalle.
+   * LIIKE ON SMILIÄ, EI CSS:ÄÄ (12.8.2026). Aiempi versio teki kaiken
+   * CSS-animaatiolla: kärki oli polku, jonka katkoviiva oli `0.01
+   * pituus` eli yksi ainoa pyöreäpäinen pätkä, ja se matkasi reittiä
+   * liu'uttamalla stroke-dashoffsetia. Chromiumilla se mitattiin
+   * toimivaksi kerta toisensa jälkeen, mutta omistaja ei nähnyt
+   * animaatiota millään laitteellaan — ei iPhonella eikä työpöydällä.
+   * Kaikki mittaukset oli tehty Chromiumilla, ja omistajan selaimet
+   * ovat WebKit-pohjaisia.
    *
-   * Viive lasketaan tässä eikä CSS:ssä, koska jokainen reitti on eri
-   * mittainen: sama etäisyys pisteinä on eri osuus eri reitistä.
+   * Kolme tunnettua WebKitin käyttäytymistä osuu tuohon tekniikkaan
+   * yhtä aikaa, eikä yhtäkään pysty tästä ympäristöstä sulkemaan pois
+   * (koneessa on vain Chromium):
+   *   1. alle puolen yksikön mittainen katkoviivan pätkä pyöreällä
+   *      päällä voi jäädä piirtymättä kokonaan,
+   *   2. stroke-dashoffsetin CSS-animaatio SVG:ssä on epäluotettava,
+   *   3. @keyframes-lohkossa oleva var() ei ole aina ratkennut —
+   *      ja peittävyys tuli täällä nimenomaan var(--kirkkaus):sta,
+   *      pohja-arvon ollessa 0. Ratkeamaton muuttuja jättäisi koko
+   *      kerroksen näkymättömäksi juuri niin kuin omistaja kuvaili.
+   *
+   * Siksi liike tehdään nyt SMILillä: kärki on oikea <circle>, joka
+   * kulkee polkua <animateMotion>illa, ja peittävyys, säde ja jäljen
+   * katkoviivan siirtymä ovat <animate>-elementtejä. SMIL on WebKitin
+   * vanhin ja vakain SVG-animaatiotie, eikä se kulje CSS:n kautta
+   * lainkaan. Samasta syystä yhtään animoitua ominaisuutta EI aseteta
+   * tyylitiedostossa: CSS-sääntö jyräisi SMIL-arvon, ja piste jäisi
+   * paikalleen.
+   *
+   * POHJAVIIVA PIIRTYY AINA. Jos animaatio jostain vielä pettää,
+   * reitit näkyvät silti hentona viivana — etusivu ei enää voi olla
+   * tyhjä. Sama viiva on liikkeen vähennyksen koko näkymä.
    */
   piirraAlkuReitit(root) {
     const kerros = el('g', { class: 'alkureitit', 'pointer-events': 'none' }, root);
     for (const reitti of ALKUREITIT) {
       const d = pehmeaPolku(reitti.pisteet);
+      // Pituus lasketaan itse (polunPituus): selaimen getTotalLength
+      // palauttaa WebKitissä nollan piirtämättömälle elementille, ja
+      // kerros syntyy piilossa.
+      const pituus = polunPituus(reitti.pisteet);
       const ryhma = el('g', { class: `alkureitti alkureitti-${reitti.laji}` }, kerros);
-      // Pituus mitataan valmiista polusta: se on ainoa tapa saada
-      // katkoviivan mitat ja jäljen viiveet samaan mittakaavaan.
-      const mitta = el('path', { d, class: 'alkureitti-mitta' }, ryhma);
-      const pituus = mitta.getTotalLength();
-      mitta.remove();
-      // Kuinka suuri osa silmukasta kuluu matkaan (ikkuna) — siitä
-      // saadaan etäisyys viiveeksi: matka/pituus × ikkuna × kesto.
-      const viiveeksi = (matka) => (matka / pituus) * reitti.ikkuna * reitti.kesto;
-      // Kaksi eri kulkukäyrää: yksiosainen reitti saa matkata melkein
-      // koko silmukan ajan, kaksiosainen vain oman vuoronsa.
-      const kulku = reitti.ikkuna > 0.6 ? 'alkureitti-kulku-pitka' : 'alkureitti-kulku';
-      const lisaa = (luokka, dasharray, tyylit) => {
-        const polku = el('path', { d, class: `alkureitti-osa ${luokka}` }, ryhma);
-        polku.style.strokeDasharray = dasharray;
-        polku.style.setProperty('--pituus', `${pituus.toFixed(1)}px`);
-        polku.style.animationName = kulku;
-        polku.style.animationDuration = `${reitti.kesto}s`;
-        for (const [avain, arvo] of Object.entries(tyylit)) polku.style.setProperty(avain, arvo);
-        return polku;
-      };
+      // Hento pohjaviiva koko reitistä: näkyy aina, myös liikkeen
+      // vähennyksessä ja siinä tapauksessa ettei SMIL jostain käynnisty.
+      el('path', { d, class: 'alkureitti-osa alkureitti-viiva' }, ryhma);
+      if (this.reducedMotion) continue;
+
+      const kehykset = alkuKehykset(reitti.ikkuna);
+      const kesto = `${reitti.kesto}s`;
+      /** Yksi SMIL-animaatio: arvot ja hetket samasta kierretystä listasta. */
+      const animoi = (kohde, attributeName, kierretyt, arvo) => el('animate', {
+        attributeName,
+        dur: kesto,
+        repeatCount: 'indefinite',
+        calcMode: 'linear',
+        values: kierretyt.map(arvo).join(';'),
+        keyTimes: kierretyt.map((k) => k.t.toFixed(5)).join(';'),
+      }, kohde);
+
       /*
-       * Kärki on kaksi päällekkäistä pistettä: leveä ja himmeä kehä
-       * sekä sen sisällä kirkas ydin. Se on hehkun halvin muoto —
-       * suodatin (feGaussianBlur) olisi maksanut koko kerroksen
-       * uudelleenpiirron joka ruudulla, ja tällä kartalla se näkyi
-       * mitattuna heti (ks. flight-overlayn sumennuskommentti).
+       * Kärki: ympyrä, jonka <animateMotion> vie polkua pitkin.
+       * Polku annetaan path-määreenä eikä <mpath>-viittauksena — sama
+       * asia SMILin kannalta, mutta ilman id-viittausta, joka pitäisi
+       * pitää yksilöllisenä myös yhden tiedoston dist-versiossa.
+       * keyPoints kertoo, missä kohtaa polkua ollaan milläkin hetkellä,
+       * joten odotusvuoro on vain jono samaa arvoa.
        */
-      for (const keha of [true, false]) {
-        const karki = lisaa(keha ? 'alkureitti-keha' : 'alkureitti-karki',
-          `0.01 ${pituus.toFixed(1)}`, { '--kirkkaus': keha ? '0.38' : '0.95' });
-        // Kärjellä on kaksi animaatiota: kulku reittiä pitkin ja syke
-        // paikallaan. Kummallakin oma kesto ja oma viive.
-        karki.style.animationName = `${kulku}, ${keha ? 'alkureitti-syke-keha' : 'alkureitti-syke'}`;
-        karki.style.animationDuration = `${reitti.kesto}s, 2.1s`;
-        karki.style.animationDelay = `${(-reitti.vaihe * reitti.kesto).toFixed(2)}s, 0s`;
+      const kierretyt = kierraKehykset(kehykset, reitti.vaihe);
+      for (const karki of KARJET) {
+        const ympyra = el('circle', {
+          class: `alkureitti-piste ${karki.luokka}`, cx: 0, cy: 0, r: karki.sade,
+        }, ryhma);
+        el('animateMotion', {
+          dur: kesto,
+          repeatCount: 'indefinite',
+          calcMode: 'linear',
+          rotate: '0',
+          path: d,
+          keyPoints: kierretyt.map((k) => k.kulku.toFixed(5)).join(';'),
+          keyTimes: kierretyt.map((k) => k.t.toFixed(5)).join(';'),
+        }, ympyra);
+        animoi(ympyra, 'opacity', kierretyt, (k) => (k.nakyy * karki.kirkkaus).toFixed(3));
+        /*
+         * Syke paikallaan: säde hengittää edestakaisin omassa
+         * tahdissaan. Ennen tämä tehtiin viivanleveydellä, koska
+         * peittävyys oli jo kulkukäyrän käytössä; ympyrällä säde on
+         * suora tie samaan ilmeeseen.
+         */
+        el('animate', {
+          attributeName: 'r',
+          dur: '4.2s',
+          repeatCount: 'indefinite',
+          calcMode: 'spline',
+          values: `${karki.syke[0]};${karki.syke[1]};${karki.syke[0]}`,
+          keyTimes: '0;0.5;1',
+          keySplines: '0.4 0 0.6 1;0.4 0 0.6 1',
+        }, ympyra);
       }
+
       /*
        * Jälki: kolme ryhmää katkoviivan pätkiä, kukin edellistä
-       * himmeämpi. Yhden polun kaikki pätkät jakavat saman peittävyyden,
-       * joten haipuminen tarvitsee useamman polun — kolme riittää, kun
-       * jokainen tuo neljä pätkää.
+       * himmeämpi. Yhden polun kaikki pätkät jakavat saman
+       * peittävyyden, joten haipuminen tarvitsee useamman polun.
        *
-       * Ryhmä jää kärjestä jälkeen pelkällä negatiivisella viiveellä:
-       * sama animaatio, sama kesto, vain vaihe eri. Ei siis mitään, mitä
-       * pitäisi pitää synkassa ajastimella.
+       * Katkoviivan siirtymää animoidaan SMILillä eikä CSS:llä, ja
+       * mitat annetaan määreinä eikä tyyleinä — muuten CSS jyräisi
+       * animaation. Pätkä on 5,5 laudan yksikköä eli selvästi yli sen
+       * rajan, jossa WebKitin pyöreäpäinen pätkä voi kadota.
        */
       // Pariton lukumäärä kahdentaisi kuvion (SVG:n sääntö), joten
       // viimeinen väli on koko reitin mittainen: yksi ryhmä kerrallaan.
       const kuvio = `${Array(JALJEN_PATKIA - 1).fill(`${JALJEN_PATKA} ${JALJEN_VALI}`).join(' ')} `
         + `${JALJEN_PATKA} ${pituus.toFixed(1)}`;
       JALJEN_RYHMAT.forEach((jalki, i) => {
-        const osa = lisaa('alkureitti-jalki', kuvio, {
-          '--kirkkaus': String(jalki.kirkkaus),
-          'stroke-width': String(jalki.leveys),
-        });
+        const osa = el('path', {
+          d,
+          class: 'alkureitti-osa alkureitti-jalki',
+          'stroke-width': jalki.leveys,
+          'stroke-dasharray': kuvio,
+          'stroke-dashoffset': 0,
+          opacity: 0,
+        }, ryhma);
         // Ryhmä i alkaa siitä mihin edellinen loppui, ja ensimmäinen
-        // jättää kärjen ja jäljen väliin yhden jakson raon.
+        // jättää kärjen ja jäljen väliin yhden jakson raon. Matka
+        // muuttuu vaiheeksi reitin oman ikkunan mukaan: sama etäisyys
+        // on eri osuus eri mittaisesta reitistä.
         const matka = (i + 1) * JALJEN_PATKIA * JALJEN_JAKSO;
-        // Vaihe kierretään aina välille [0, 1): negatiivinen viive on
-        // ainoa tapa saada pysyvä jälkeenjääminen (positiivinen viive
-        // koskisi vain ensimmäistä kierrosta).
-        const vaihe = (((reitti.vaihe - viiveeksi(matka) / reitti.kesto) % 1) + 1) % 1;
-        osa.style.animationDelay = `${(-vaihe * reitti.kesto).toFixed(2)}s`;
+        const vaihe = reitti.vaihe - (matka / pituus) * reitti.ikkuna;
+        const jaljessa = kierraKehykset(kehykset, vaihe);
+        animoi(osa, 'stroke-dashoffset', jaljessa, (k) => (-k.kulku * pituus).toFixed(1));
+        animoi(osa, 'opacity', jaljessa, (k) => (k.nakyy * jalki.kirkkaus).toFixed(3));
       });
     }
     return kerros;
@@ -4795,16 +4983,15 @@ export class UI {
      * Etusivun kulkevat valopisteet. Vain aloituslaudalla; render()
      * irrottaa kerroksen puusta heti kun peli alkaa.
      *
-     * Liikkeen vähennystä toivovalle kerrosta ei rakenneta lainkaan —
-     * pelkkä display: none piilottaisi sen silmältä mutta jättäisi
-     * viisitoista animaatiota selaimen listalle. CSS piilottaa sen
-     * lisäksi omalla mediakyselyllään, jos asetus vaihtuu kesken
-     * istunnon.
+     * Liikkeen vähennystä toivovalle kerros rakennetaan silti, mutta
+     * pelkkinä hentoina pohjaviivoina ilman yhtäkään animaatiota
+     * (ks. piirraAlkuReitit). Ennen kerros jäi silloin kokonaan
+     * tekemättä ja etusivu oli asetuksen kanssa tyhjä — juuri se, mitä
+     * omistaja kuvaili näkevänsä kaikilla laitteillaan.
      */
     this.alkuReittiJuuri = root;
     this.alkuReittiPaikka = null;
-    this.alkuReittiKerros = pack.id === 'maailma' && !this.reducedMotion
-      ? this.piirraAlkuReitit(root) : null;
+    this.alkuReittiKerros = pack.id === 'maailma' ? this.piirraAlkuReitit(root) : null;
 
     // Nykyisen maan korostus (hento sävy + nimi kaunolla) piirretään tähän
     // kerrokseen pelin edetessä (drawCountryBorders). Sävy rajataan
