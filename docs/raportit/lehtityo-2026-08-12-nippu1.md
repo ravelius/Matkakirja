@@ -79,11 +79,17 @@ Lisäksi kirjattavaksi, ei korjattavaksi tässä nipussa:
 ### 2.3 Kaupunkilehtien rakenne — Kairo oli vajaa
 
 Malli on **kansi (3 nostoa + 3 kansikuvaa) + yksi aihesivu (2–3 nostoa +
-minitehtävä)**. 42 kaupunkia noudattaa sitä. Poikkeus:
+minitehtävä)**. 40 kaupunkia 43:sta noudattaa sitä tarkalleen. Kolme
+poikkeaa:
 
-- **Kairo:** kansi neljällä nostolla eikä aihesivua lainkaan. Kairon
-  lehti oli siis kaksi ruutua kolmen sijaan, eikä siinä ollut yhtään
-  minitehtävää.
+- **Kairo** oli ainoa vajaa: kansi neljällä nostolla eikä aihesivua
+  lainkaan. Lehti oli siis ruudun lyhyempi kuin muilla, eikä siinä ollut
+  yhtään minitehtävää. Korjattu tässä nipussa.
+- **Madrid** (urheilu + rakennukset) ja **Venetsia** (rakennukset +
+  käsityö) kantavat kaksi aihesivua yhden sijaan. Nämä eivät ole
+  unohdus: docs/lehtitasapaino.md merkitsi molemmat karsittaviksi
+  kolmen ruudun säännön takia, ja karsinta on yhä tekemättä. Jätetty
+  ennalleen — sivun poistaminen on omistajan päätös, ei auditin.
 
 ### 2.4 Kaupunkinähtävyyksien jutut
 
