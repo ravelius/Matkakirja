@@ -2471,6 +2471,50 @@ export const KAUPUNKIKARTAT = {
    * takia rajausta siirrettiin ensin etelämmäs ja sitten lännemmäs,
    * jotta sen numeroympyrä ei istu mittakaavajanan päällä.
    */
+  /*
+   * Bagdadin Rusafa (nippu 2, 13.8.2026). Kartta on Tigrisin itäranta:
+   * Mutanabbin kirjakatu, Qushlan kellotorniaukio, abbasidipalatsi,
+   * Khan Mirjan, Mustansiriya-koulu ja Bagdadin museo mahtuvat kaikki
+   * runsaan kilometrin ruutuun. Länsirannalta otetaan mukaan sen
+   * verran, että sillat näkyvät.
+   *
+   * KARTTA VAATI palvelutiet: true. Rusafan kujat on OSM:ssä merkitty
+   * service- ja footway-teiksi, joten vakiokysely löysi vain
+   * kolmasosan kaduista ja kuva näytti autiolta — perustelu ja
+   * mittaukset tools/piirra-kaupunkikartta.mjs:n bagdad-lohkossa.
+   *
+   * RAJAUS SISÄLLÖLLE: peli ei käsittele nykykonflikteja. Bagdadin
+   * kohdalla se tarkoittaa, ettei vuoden 2003 sotaa, miehitystä,
+   * pommi-iskuja eikä Mutanabbin kadun vuoden 2007 iskua käsitellä.
+   * Kohteet kuvataan kulttuurikohteina omalla historiallaan.
+   * Mustansiriya-koulu on JO IRQ-maalehdessä (neljä koulukuntaa saman
+   * pihan ympärillä, vihkiminen 1233) ja asia-valokuvat.js:n
+   * kuvatekstissä, joten sen nähtävyysjuttu kertoo eri asian.
+   */
+  bagdad: {
+    polku: 'assets/kartat/bagdad-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 33.348, etela: 33.332, lansi: 44.376, ita: 44.400,
+    },
+    esittely: 'Bagdad perustettiin vuonna 762 Tigrisin länsirannalle '
+      + 'täydellisen pyöreäksi kaupungiksi. Siitä ei ole jäljellä '
+      + 'mitään: pyöreä kaupunki on maan alla nykykaupunginosien '
+      + 'kohdalla, eikä sen muuria ole löydetty. Kaupungin vanha '
+      + 'säilynyt puoli on toisella rannalla.\n\n'
+      + 'Tämä kartta on Rusafa, Tigrisin itäranta. Kaikki kuvan '
+      + 'kohteet ovat kävelymatkan päässä toisistaan, ja ne ovat eri '
+      + 'aikakausilta: abbasidien 1200-luku, Mirjanin karavaaniseraaji '
+      + '1359, ottomaanien kasarmiaukio ja 1900-luvun kirjakatu.',
+    kohteet: [
+      { nimi: 'Mutanabbin katu', lat: 33.3410, lon: 44.3888 },
+      { nimi: 'Qushlan kellotorni', lat: 33.3412, lon: 44.3860 },
+      { nimi: 'Abbasidipalatsi', lat: 33.3431, lon: 44.3835 },
+      { nimi: 'Khan Mirjan', lat: 33.3386, lon: 44.3925 },
+      { nimi: 'Mustansiriya-koulu', lat: 33.3385, lon: 44.3896 },
+      { nimi: 'Bagdadin museo', lat: 33.3401, lon: 44.3895 },
+    ],
+  },
   masqat: {
     polku: 'assets/kartat/masqat-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
