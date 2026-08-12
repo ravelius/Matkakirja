@@ -357,6 +357,7 @@ class Pollo {
     this.tila = haePuheTunnistus() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
     this.seuraaNakymaa();
+    this.seuraaSulkemista();
     this.paivitaNakyvyys();
   }
 
@@ -382,22 +383,21 @@ class Pollo {
     });
     this.nappi = nappi;
 
+    /*
+     * PANEELISSA EI OLE YLÄPALKKIA (omistajan linjaus 12.8.2026).
+     *
+     * Otsikko "Viisas Pöllö" ja ×-nappi poistuivat: nimi lukee jo napissa
+     * josta paneeli aukesi, ja pieni paneeli on kokonaan luettavaa tilaa.
+     * Nimi jää aria-labeliin, joten ruudunlukija tietää yhä minkä
+     * keskustelun se avasi. Sulkeminen: napautus paneelin ulkopuolelle,
+     * Esc tai pöllön oma nappi (seuraaSulkemista).
+     */
     const paneeli = polloElementti('div', 'pollo-paneeli');
     paneeli.hidden = true;
     paneeli.setAttribute('role', 'dialog');
     paneeli.setAttribute('aria-label', 'Viisas Pöllö');
     // Paneelin sisällä napautus ei saa sulkea alanappirivin liukua.
     paneeli.addEventListener('click', (e) => e.stopPropagation());
-
-    const yla = polloElementti('div', 'pollo-yla');
-    yla.appendChild(polloElementti('span', 'pollo-otsikko', 'Viisas Pöllö'));
-    const sulje = polloElementti('button', 'pollo-sulje', '×');
-    sulje.type = 'button';
-    sulje.title = 'Sulje';
-    sulje.setAttribute('aria-label', 'Sulje keskustelu');
-    sulje.addEventListener('click', () => this.sulje());
-    yla.appendChild(sulje);
-    paneeli.appendChild(yla);
 
     this.ehdotukset = polloElementti('div', 'pollo-ehdotukset');
     this.ehdotukset.hidden = true;
@@ -588,6 +588,39 @@ class Pollo {
       new MutationObserver(() => this.paivitaNakyvyys())
         .observe(intro, { attributes: true, attributeFilter: ['hidden'] });
     }
+  }
+
+  /**
+   * SULKEMINEN ILMAN RASTIA (omistajan linjaus 12.8.2026).
+   *
+   * Paneelin yläpalkki katosi otsikkoineen ja ×-nappeineen, joten
+   * keskustelu suljetaan napauttamalla sen ulkopuolelle — karttaa,
+   * lehteä, mitä tahansa — tai Esc-näppäimestä. Pöllön oma nappi on yhä
+   * vipu: se avaa ja sulkee.
+   *
+   * pointerdown eikä click: sama tapahtuma, jolla alanappirivin liuku
+   * sulkeutuu (js/ui.js kytkeLiukuSulku), joten kartan napautus sulkee
+   * molemmat samalla kertaa eikä sulkeminen odota sormen nostoa.
+   * Kuuntelijat ovat dokumentissa, koska napautus voi osua minne vain;
+   * paneeli ja nappi rajataan pois closestilla.
+   *
+   * Esc estetään etenemästä: lehtinäkymässä <dialog> sulkeutuisi muuten
+   * samasta painalluksesta, ja pelaaja menettäisi lehden vain
+   * sulkiessaan chatin. Toinen painallus sulkee lehden normaalisti.
+   */
+  seuraaSulkemista() {
+    if (typeof this.doc.addEventListener !== 'function') return;
+    this.doc.addEventListener('pointerdown', (e) => {
+      if (!this.auki) return;
+      if (e.target?.closest?.('.pollo-paneeli, .pollo-nappi')) return;
+      this.sulje();
+    });
+    this.doc.addEventListener('keydown', (e) => {
+      if (!this.auki || e.key !== 'Escape') return;
+      e.preventDefault();
+      e.stopPropagation();
+      this.sulje();
+    });
   }
 
   /* --- avaus ja sulku -------------------------------------------- */

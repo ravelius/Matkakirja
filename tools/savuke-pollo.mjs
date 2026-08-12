@@ -5,9 +5,11 @@
  * oikea selain oikeasta DOMista lähettää. Tämä ajaa koko ketjun läpi:
  *
  *   1. alanappirivi: kolme paikkaa, monitoiminapin liuku auki/kiinni,
- *      liu'ussa kolme nappia (jalan, laiva, lento), laiva- ja
- *      lentovalikon suodatus, estotilat, kartan napautus sulkee
- *   2. pöllö kartalla ja lehdessä, paneelin avaus ja sulku sekä
+ *      liu'ussa kolme nappia (jalan, laiva, lento) jotka peittävät koko
+ *      rivin, laiva- ja lentovalikon suodatus, estotilat, kartan
+ *      napautus sulkee
+ *   2. pöllö kartalla ja lehdessä, paneelin avaus ja sulku (ulkopuolinen
+ *      napautus ja Esc — rastia ei enää ole), paperinvaalea ulkoasu ja
  *      matala alanappirivi (näppäimistö 1/3, mikrofoni 2/3)
  *   3. ehdotukset ja kysymys → vastaus (rajapinta mockattu route-fulfillillä)
  *   4. SPOILERISUOJA oikeasta pyyntörungosta: avoinna olevan lehden
@@ -197,14 +199,20 @@ const auki = await sivu.evaluate(async () => {
     luokka: rivi.classList.contains('liuku-auki'),
     aria: document.querySelector('.monitoimi-nappi').getAttribute('aria-expanded'),
     napit: [...liuku.querySelectorAll('button')].map((b) => b.getAttribute('aria-label')),
-    // Liuku peittää pöllön ja Tutkin, ei monitoiminappia.
-    peittaaPollon: liuku.getBoundingClientRect().left
-      > document.querySelector('.monitoimi-nappi').getBoundingClientRect().left,
+    // Liuku peittää KOKO rivin: myös monitoiminapin, joka sen avasi.
+    peittaaRivin: Math.abs(liuku.getBoundingClientRect().left
+      - document.querySelector('.toimintorivi-perus').getBoundingClientRect().left) < 2,
+    // Perusnapit väistyvät kaikki, jotta rivissä näkyy vain kolme nappia.
+    perusPiilossa: [...document.querySelectorAll('.toimintorivi-perus > *')]
+      .every((el) => getComputedStyle(el).visibility === 'hidden'
+        || getComputedStyle(el).opacity === '0'),
   };
 });
 vaadi('monitoiminappi avaa liu\'un', auki.luokka === true && auki.aria === 'true',
   JSON.stringify(auki));
-vaadi('liuku alkaa monitoiminapin jälkeen', auki.peittaaPollon === true);
+vaadi('liuku peittää koko rivin', auki.peittaaRivin === true, JSON.stringify(auki));
+vaadi('monitoiminappi väistyy liu\'un tieltä', auki.perusPiilossa === true,
+  JSON.stringify(auki));
 vaadi('liu\'ussa on matkustusnapit', auki.napit.length >= 1, auki.napit.join(' | '));
 
 /*
@@ -436,6 +444,91 @@ vaadi('sanelunappi on ensisijainen syöte', avaus.mikki === true && avaus.kentta
   JSON.stringify(avaus));
 
 /*
+ * PAPERIPANEELI ILMAN YLÄPALKKIA (omistajan linjaus 12.8.2026).
+ *
+ * Otsikko ja ×-nappi ovat poissa, pohja on lehden painopaperia ja muste
+ * tummaa. Kontrasti mitataan suoraan lasketuista väreistä: leipätekstin
+ * pitää erottua pohjasta selvästi, koska juuri sen luettavuudesta
+ * omistaja huomautti (v589, iPhone).
+ */
+const ulkoasu = await sivu.evaluate(() => {
+  const paneeli = document.querySelector('.pollo-paneeli');
+  const luminanssi = (vari) => {
+    const [r, g, b] = vari.match(/[\d.]+/g).slice(0, 3).map(Number);
+    const k = (v) => {
+      const s = v / 255;
+      return s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+    };
+    return 0.2126 * k(r) + 0.7152 * k(g) + 0.0722 * k(b);
+  };
+  const cs = getComputedStyle(paneeli);
+  const teksti = paneeli.querySelector('.pollo-pollo') ?? paneeli;
+  const tekstiCs = getComputedStyle(teksti);
+  const a = luminanssi(cs.backgroundColor);
+  const b = luminanssi(tekstiCs.color);
+  return {
+    otsikoita: paneeli.querySelectorAll('.pollo-otsikko, .pollo-yla').length,
+    sulkeita: paneeli.querySelectorAll('.pollo-sulje').length,
+    pohja: cs.backgroundColor,
+    muste: tekstiCs.color,
+    varjo: tekstiCs.textShadow,
+    kirjasin: tekstiCs.fontFamily,
+    koko: parseFloat(tekstiCs.fontSize),
+    pohjaKirkkaus: a,
+    kontrasti: (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05),
+  };
+});
+vaadi('paneelissa ei ole otsikkoa eikä ×-nappia',
+  ulkoasu.otsikoita === 0 && ulkoasu.sulkeita === 0, JSON.stringify(ulkoasu));
+vaadi('paneelin pohja on vaalea paperi', ulkoasu.pohjaKirkkaus > 0.6,
+  `${ulkoasu.pohja} (${ulkoasu.pohjaKirkkaus.toFixed(2)})`);
+vaadi('leipätekstissä ei ole hehkuvarjoa', ulkoasu.varjo === 'none', ulkoasu.varjo);
+vaadi('leipäteksti on lukukirjasimella', /Iowan|Charter|Palatino|serif/i.test(ulkoasu.kirjasin),
+  ulkoasu.kirjasin);
+vaadi('leipäteksti on vähintään 14 px', ulkoasu.koko >= 14, `${ulkoasu.koko} px`);
+vaadi('kontrasti riittää (WCAG AA, 4.5:1)', ulkoasu.kontrasti >= 4.5,
+  `${ulkoasu.kontrasti.toFixed(1)}:1`);
+
+await sivu.screenshot({ path: join(ULOS, 'pollo-paneeli-390.png') });
+
+/*
+ * Sulkeminen ilman rastia: napautus paneelin ulkopuolelle ja Esc.
+ * Tämä on nyt ainoa tapa sulkea chat pöllön napin lisäksi, joten se
+ * mitataan erikseen molemmilla tavoilla.
+ */
+const sulkeminen = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const auki = () => !document.querySelector('.pollo-paneeli').hidden;
+  const avaa = async () => {
+    if (!auki()) document.querySelector('.pollo-nappi').click();
+    await odota(400);
+  };
+  await avaa();
+  // Napautus paneelin sisällä ei saa sulkea.
+  document.querySelector('.pollo-virta').dispatchEvent(
+    new PointerEvent('pointerdown', { bubbles: true }),
+  );
+  await odota(150);
+  const sisalta = auki();
+  document.getElementById('board').dispatchEvent(
+    new PointerEvent('pointerdown', { bubbles: true }),
+  );
+  await odota(200);
+  const ulkoa = auki();
+  await avaa();
+  document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+  await odota(200);
+  const escilla = auki();
+  await avaa();
+  return { sisalta, ulkoa, escilla, lopuksiAuki: auki() };
+});
+vaadi('napautus paneelin sisällä ei sulje', sulkeminen.sisalta === true,
+  JSON.stringify(sulkeminen));
+vaadi('napautus paneelin ulkopuolelle sulkee', sulkeminen.ulkoa === false,
+  JSON.stringify(sulkeminen));
+vaadi('Esc sulkee paneelin', sulkeminen.escilla === false, JSON.stringify(sulkeminen));
+
+/*
  * ALARIVI: yksi matala nappirivi koko leveydeltä — näppäimistö 1/3,
  * mikrofoni 2/3 (omistajan linjaus 12.8.2026). Selitetekstit poistuivat,
  * joten aria-labelit ovat pakolliset.
@@ -528,7 +621,11 @@ vaadi('pelin oma aineisto on mukana',
 /* ================================================================== */
 
 const lehdessa = await sivu.evaluate(async () => {
-  document.querySelector('.pollo-sulje').click();
+  // Paneelissa ei ole enää ×-nappia: sulku tulee ulkopuolelta.
+  document.getElementById('board').dispatchEvent(
+    new PointerEvent('pointerdown', { bubbles: true }),
+  );
+  await new Promise((r) => setTimeout(r, 200));
   const ui = window.matkakirja.ui;
   ui.openArrival(ui.game.board.cityById.get('lontoo'));
   await new Promise((r) => setTimeout(r, 900));
