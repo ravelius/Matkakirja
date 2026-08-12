@@ -18,6 +18,9 @@
  *   6. sanelu: mockattu SpeechRecognition, nappi → transkripti → lähetys,
  *      ja tila jossa tunnistusta ei ole lainkaan
  *   7. "Pöllö ei ole vielä hereillä" ilman asetettua osoitetta
+ *   8. SANELU NATIIVISILLALTA: valesillalla (window.matkakirjaNatiivi)
+ *      pöllö kutsuu sanelu.luvat/aloita eikä koske SpeechRecognitioniin
+ *      — ja lehden kaiutinnappi lukee sivun sillan luenta.puhulla
  *
  *   node tools/savuke-pollo.mjs
  *
@@ -77,6 +80,72 @@ const vaadi = (nimi, ok, lisa = '') => {
   console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
 };
 
+/*
+ * VALE-NATIIVISILTA (ios/Matkakirja/Selain/natiivi-silta.js).
+ *
+ * WKWebView:ssä ei ole SpeechRecognitionia, joten pöllön sanelu kulkee
+ * iOS-kuoressa sillan kautta. Kuorta ei voi ajaa täällä, joten sillasta
+ * tehdään vale, joka kirjaa kutsut ja lähettää samat tapahtumat kuin
+ * oikea: luvat → aloita → osittainen → valmis. Sama vale palvelee
+ * lukijaa (js/lukija.js): luenta.puhu kirjautuu samaan listaan.
+ */
+const SILTA_MOCK = `
+(function () {
+  var kuulijat = {};
+  var silta = {
+    onkoNatiivi: true,
+    alusta: 'ios',
+    versio: 'testi',
+    ominaisuudet: { luenta: true, sanelu: true },
+    __kutsut: [],
+    kuuntele: function (laji, kuulija) {
+      (kuulijat[laji] = kuulijat[laji] || []).push(kuulija);
+      return function () {
+        var lista = kuulijat[laji] || [];
+        var i = lista.indexOf(kuulija);
+        if (i >= 0) lista.splice(i, 1);
+      };
+    },
+    alaKuuntele: function () {},
+    _tapahtuma: function (tieto) {
+      for (var kuulija of (kuulijat[tieto.laji] || []).slice()) kuulija(tieto);
+    }
+  };
+  function kirjaa(nimi, data) { silta.__kutsut.push(nimi); return data; }
+  silta.luenta = {
+    puhu: function (teksti) {
+      window.__luettuTeksti = teksti;
+      return Promise.resolve(kirjaa('luenta.puhu', {}));
+    },
+    pysayta: function () { return Promise.resolve(kirjaa('luenta.pysayta', { tila: 'pysaytetty' })); },
+    aanet: function () { return Promise.resolve({ aanet: [] }); },
+    puhuuko: function () { return Promise.resolve({ puhuu: false }); }
+  };
+  silta.sanelu = {
+    luvat: function () {
+      return Promise.resolve(kirjaa('sanelu.luvat',
+        { mikrofoni: true, puheentunnistus: true, kunnossa: true }));
+    },
+    aloita: function () {
+      kirjaa('sanelu.aloita');
+      setTimeout(function () {
+        silta._tapahtuma({ laji: 'sanelu-osittainen', teksti: window.__saneluTeksti || '' });
+        setTimeout(function () {
+          silta._tapahtuma({ laji: 'sanelu-valmis', teksti: window.__saneluTeksti || '' });
+        }, 150);
+      }, 150);
+      return Promise.resolve({ tila: 'kuuntelee', kieli: 'fi-FI' });
+    },
+    lopeta: function () {
+      return Promise.resolve(kirjaa('sanelu.lopeta',
+        { tila: 'lopetettu', teksti: window.__saneluTeksti || '' }));
+    },
+    kuunteleeko: function () { return Promise.resolve({ kuuntelee: false }); }
+  };
+  window.matkakirjaNatiivi = silta;
+}());
+`;
+
 /** Mockattu SpeechRecognition. Headless-selaimessa ei ole mikrofonia. */
 const SANELU_MOCK = `
 window.__saneluAloituksia = 0;
@@ -121,7 +190,7 @@ async function kytkeRajapinta(sivu, rungot) {
 }
 
 /** Avaa pelin, käynnistää sen ja vie pelaajan Lontooseen. */
-async function avaaPeli(ctx, { sanelu = true } = {}) {
+async function avaaPeli(ctx, { sanelu = true, silta = false } = {}) {
   const sivu = await ctx.newPage();
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e)));
@@ -143,6 +212,8 @@ async function avaaPeli(ctx, { sanelu = true } = {}) {
    */
   await sivu.addInitScript(sanelu ? SANELU_MOCK
     : 'delete window.SpeechRecognition; delete window.webkitSpeechRecognition;');
+  // Natiivisilta ruiskutetaan ennen pelin skriptejä, kuten oikea kuorikin.
+  if (silta) await sivu.addInitScript(SILTA_MOCK);
   await sivu.route((url) => !/127\.0\.0\.1|localhost|pollo\.testi\.invalid/.test(url.href),
     (route) => route.abort());
   await sivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
@@ -813,6 +884,101 @@ vaadi('hereillä-tila ei kirjoita konsoliin', nukkuvaVirheet.length === 0,
   nukkuvaVirheet.join(' | '));
 await nukkuvaSivu.screenshot({ path: join(ULOS, 'pollo-ei-hereilla-390.png') });
 await nukkuvaCtx.close();
+
+/* ================================================================== */
+/* 10) Sanelu natiivisillan kautta (iOS-kuori)                         */
+/* ================================================================== */
+
+/*
+ * TÄMÄ ON KOKO NATIIVISANELUN VARTIOTESTI.
+ *
+ * WKWebView ei tarjoa SpeechRecognitionia, joten iOS-kuoressa pöllön
+ * mikrofoni toimii vain jos peli osaa käyttää siltaa. Vika ei näkyisi
+ * selaimessa mitenkään — siellä SpeechRecognition on olemassa ja
+ * kaikki näyttää toimivan. Siksi ajo tehdään molemmilla tavoilla:
+ * sillan kanssa sillan pitää olla se, jota kutsutaan, ja ilman siltaa
+ * SpeechRecognitionin (osio 7 yllä).
+ *
+ * Chromiumissa on oma webkitSpeechRecognition, joten mock jätetään
+ * paikalleen tarkoituksella: jos peli valitsisi sen sillan sijaan,
+ * __saneluAloituksia kasvaisi ja testi kaatuisi.
+ */
+polloPaalla = true;
+const siltaCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
+const { sivu: siltaSivu, virheet: siltaVirheet } = await avaaPeli(siltaCtx, { silta: true });
+await kytkeRajapinta(siltaSivu, []);
+const siltaTulos = await siltaSivu.evaluate(async () => {
+  window.__saneluTeksti = 'Mitä Thamesilla kuljetettiin';
+  window.matkakirjaPollo.historia = [];
+  document.querySelector('.pollo-nappi').click();
+  await new Promise((r) => setTimeout(r, 600));
+  const mikki = document.querySelector('.pollo-mikki');
+  const nakyy = !document.querySelector('.pollo-sanelu').hidden;
+  mikki.click();
+  // Vale-silta lähettää osittaisen tuloksen vasta 150 ms:n päästä, joten
+  // tässä välissä sanelu on varmasti vielä kesken.
+  await new Promise((r) => setTimeout(r, 90));
+  const kuunteleeKesken = mikki.classList.contains('kuuntelee');
+  await new Promise((r) => setTimeout(r, 1200));
+  return {
+    nakyy,
+    kuunteleeKesken,
+    kutsut: window.matkakirjaNatiivi.__kutsut.slice(),
+    selainSanelua: window.__saneluAloituksia,
+    lepaa: !mikki.classList.contains('kuuntelee'),
+    viestit: [...document.querySelectorAll('.pollo-viesti')].map((v) => v.textContent),
+  };
+});
+vaadi('sanelunappi näkyy myös natiivikuoressa', siltaTulos.nakyy === true);
+vaadi('sanelu kysyy luvat sillalta', siltaTulos.kutsut.includes('sanelu.luvat'),
+  siltaTulos.kutsut.join(' | '));
+vaadi('sanelu käynnistetään sillalta', siltaTulos.kutsut.includes('sanelu.aloita'),
+  siltaTulos.kutsut.join(' | '));
+vaadi('SpeechRecognitionia ei käytetä kun silta on paikalla',
+  siltaTulos.selainSanelua === 0, String(siltaTulos.selainSanelua));
+vaadi('mikki näyttää kuuntelevaa sanelun aikana', siltaTulos.kuunteleeKesken === true);
+vaadi('mikki palaa lepoon kun sanelu valmistuu', siltaTulos.lepaa === true);
+vaadi('sillan puhe päätyy kysymykseksi',
+  siltaTulos.viestit.some((v) => /Mitä Thamesilla kuljetettiin/.test(v)),
+  JSON.stringify(siltaTulos.viestit.slice(-3)));
+vaadi('natiivisanelu ei kirjoita konsoliin', siltaVirheet.length === 0,
+  siltaVirheet.join(' | '));
+await siltaSivu.screenshot({ path: join(ULOS, 'pollo-natiivisanelu-390.png') });
+
+/*
+ * Sama sivu todistaa vielä lukijan: kaiutinnappi lukee lehden sivun
+ * sillan kautta eikä selaimen puhesyntetisaattorilla.
+ */
+const lukija = await siltaSivu.evaluate(async () => {
+  window.matkakirjaPollo.sulje();
+  const ui = window.matkakirja.ui;
+  ui.openArrival(window.matkakirja.game.board.cityById.get('lontoo'));
+  await new Promise((r) => setTimeout(r, 900));
+  ui.naytaTutkiSivu(1);
+  await new Promise((r) => setTimeout(r, 400));
+  const nappi = document.querySelector('#arrival-dialog > .lukija-nappi');
+  if (!nappi) return { onNappi: false };
+  const piilossa = nappi.hidden;
+  nappi.click();
+  await new Promise((r) => setTimeout(r, 200));
+  const teksti = window.__luettuTeksti ?? '';
+  return {
+    onNappi: true,
+    piilossa,
+    lukee: nappi.classList.contains('lukee'),
+    pituus: teksti.length,
+    lahteita: /Kuva:|CC BY|Wikimedia/.test(teksti),
+    kutsut: window.matkakirjaNatiivi.__kutsut.slice(),
+  };
+});
+vaadi('lehtisivulla on kaiutinnappi', lukija.onNappi === true && lukija.piilossa === false,
+  JSON.stringify(lukija));
+vaadi('kaiutin lukee sivun natiivisillan kautta',
+  (lukija.kutsut ?? []).includes('luenta.puhu'), (lukija.kutsut ?? []).join(' | '));
+vaadi('luettavaa kertyi koko sivun verran', (lukija.pituus ?? 0) > 200, String(lukija.pituus));
+vaadi('lähdemerkinnät eivät päädy luentaan', lukija.lahteita === false);
+vaadi('nappi näyttää luennan olevan käynnissä', lukija.lukee === true);
+await siltaCtx.close();
 
 vaadi('ei sivuvirheitä pääajossa', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
