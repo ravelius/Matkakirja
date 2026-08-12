@@ -11,6 +11,6 @@
 	     käynnistyessään suomenkielisen huomautuksen eikä yritä
 	     ladata mitään. -->
 	<key>PELIN_OSOITE</key>
-	<string>https://ASETA-PELIN-OSOITE.example/</string>
+	<string>https://ravelius.github.io/Matkakirja/</string>
 </dict>
 </plist>
