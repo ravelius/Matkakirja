@@ -354,6 +354,20 @@ th, td { border-bottom: 1px solid var(--reuna); padding: 0.42rem 0.5rem; text-al
 th { color: var(--haalea); font-weight: 500; }
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
+/* --- kaupunkilehdet mantereittain ------------------------------------- *
+ *
+ * Kuusi saraketta ei mahdu puhelimen leveyteen, joten taulu vierii
+ * omassa kotelossaan kuten .md-taulu — sivu itse ei saa vieriä
+ * sivusuunnassa.
+ */
+.taulu-vieri { overflow-x: auto; margin: 0 0 0.7rem; }
+.taulu-vieri table { min-width: 30rem; }
+.lehtitaulu th, .lehtitaulu td:first-child { white-space: nowrap; }
+/* Lehtikaupunki erottuu: nimi korostuvärillä ja hieman lihavampana. */
+.lehtitaulu tr.on-lehti td:first-child { color: var(--korostus); font-weight: 600; }
+/* Täysin aloittamaton rivi himmeäksi, jotta tehty työ nousee esiin. */
+.lehtitaulu tr.tyhja td { color: var(--haalea); }
+
 /*
  * Todo Samille -välilehti: kohta kerrallaan, ääni soittimineen.
  * Soitin on selaimen oma <audio controls> — tässä ei valita mitään,

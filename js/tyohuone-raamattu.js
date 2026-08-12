@@ -452,6 +452,37 @@ export const RAAMATTU2 = {
       ],
     },
     {
+      otsikko: 'Viisas Pöllö (ideointi)',
+      tila: 'luonnos — ideointivaiheessa, ei vielä toteutukseen',
+      kohdat: [
+        'IDEA (omistaja 12.8.2026): pelin ruudulla on aina pieni '
+          + 'pöllö, jota napauttamalla aukeaa chat. Siltä voi kysyä '
+          + 'periaatteessa mitä tahansa, mutta erityisesti siitä, '
+          + 'mitä laudalla tai lehdessä juuri nyt näkyy — tekoäly '
+          + 'saa kontekstikseen kulloisenkin näkymän tilan ja '
+          + 'tekstit. Chatissa muutama pöllön itse päättelemä '
+          + 'kysymysehdotus + vapaa kirjoituskenttä.',
+        'ROOLI JA ÄÄNI: pöllö on tiedon hahmo, ei tarinan — se '
+          + 'vastaa tosimaailman kysymyksiin ja syventää lehtien '
+          + 'tietoa. Se EI koskaan paljasta pelin visavastauksia '
+          + 'eikä juonisalaisuuksia (seuraaja, revitty sivu, '
+          + 'aarteiden sijainnit). Faktakuri ja kunnioitussäännöt '
+          + 'koskevat myös pöllöä, ja se myöntää suoraan, kun ei '
+          + 'tiedä.',
+        'TEKNIIKKA PERIAATTEENA: pieni malli (Haiku/Sonnet) '
+          + 'maksullisen rajapinnan kautta. API-avain EI koskaan '
+          + 'asiakaskoodiin eikä repoon — välissä oma pieni '
+          + 'välityspalvelin (sama worker-infra kuin medialla), '
+          + 'jossa käyttö- ja kustannusrajat alusta asti. Rakenne '
+          + 'niin, että taustan voi myöhemmin vaihtaa: laitteen '
+          + 'oma tekoäly natiivisovelluksessa tai '
+          + 'tilausominaisuus.',
+        'VAIHEISTUS: ensin testiversio omistajan omalla '
+          + 'API-tilillä; ansaintamalli (kuukausimaksu tms.) '
+          + 'päätetään vasta kokeilun jälkeen.',
+      ],
+    },
+    {
       otsikko: 'Tutki kätkö -pelit',
       tila: 'luonnos',
       kohdat: [

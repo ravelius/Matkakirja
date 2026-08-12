@@ -70,6 +70,17 @@
       <h2>Laudat</h2>
       <div class="kortti" id="laudat"></div>
 
+      <!-- KAUPUNKILEHDET MANTEREITTAIN (omistajan tilaus 12.8.2026):
+           yksi pudotusvalikko mannerta kohti, sisällä laudan KAIKKI
+           kaupungit ja se mitä kullekin on tehty. Lähi-itä auki, koska
+           työ on juuri siellä. Luvut lasketaan pelipaketeista samalla
+           logiikalla kuin peli sivut piirtää — käsin ylläpidettyjä
+           lukuja ei ole. -->
+      <h2>Kaupunkilehdet mantereittain</h2>
+      <p>Avaa manner nuolesta. Sivumäärä on sama kuin pelissä: etusivu
+         ja sen jälkeen yksi sivu aihetta kohti.</p>
+      <div id="kaupunkilehdet"></div>
+
       <h2>Tila</h2>
       <p>Peili on Cloudflare R2 -ämpäri, johon kaikki ulkopuolinen aineisto
          kopioidaan. Luvut luetaan peilin omasta manifestista, joten ne
@@ -244,6 +255,7 @@
       afrikkaArt, europeArt, asiaArt,
       europeKielet, asiaMaat, afrikkaMaat, europeMaat, radiot, kuvaApu,
       naSaap, saSaap, oceSaap, kannet, maaKategoriat,
+      kohdekartat, nahtavyysjutut,
     ] = await Promise.all([
       import('./js/packs/africa-saapumiset.js').then((m) => m.AFRICA_SAAPUMISET),
       import('./js/packs/europe-saapumiset.js').then((m) => m.EUROPE_SAAPUMISET),
@@ -267,6 +279,13 @@
       import('./js/packs/oceania-saapumiset.js').then((m) => m.OCEANIA_SAAPUMISET).catch(() => ({})),
       import('./js/packs/kulttuuri-kategoriat.js').then((m) => m.KULTTUURI_KATEGORIAT).catch(() => ({})),
       import('./js/packs/maa-kategoriat.js').then((m) => m.MAA_KATEGORIAT).catch(() => ({})),
+      /*
+       * Kohdekartat ja nähtävyysjutut kaupunkilehtitaulua varten.
+       * Nimet ovat aliaksia, koska js/tyohuone-data.js vie eri
+       * KAUPUNKIKARTAT-nimen (laudan kehityskortit, ei koordinaatteja).
+       */
+      import('./js/packs/maakartat.js').then((m) => m.KAUPUNKIKARTAT).catch(() => ({})),
+      import('./js/packs/nahtavyysjutut.js').then((m) => m.NAHTAVYYSJUTUT).catch(() => ({})),
     ]);
 
     /*
@@ -1193,7 +1212,161 @@
         + 'merkintä, artikkeli, kuvakortti, kulttuurinostot, '
         + 'visakysymykset, äänimaisema, maatunnus, tunnusluvut ja '
         + 'kielinäyte tai radio.');
-      $('laudat').replaceChildren(taulu, selite);
+      /*
+       * Seitsemän saraketta ei mahdu puhelimeen: ilman vierityskoteloa
+       * taulu venytti koko sivun leveämmäksi kuin ruutu (havaittu 390 px
+       * savukkeessa 12.8.2026). Sama kotelo kuin kaupunkilehtitauluissa.
+       */
+      const kotelo = el('div', 'taulu-vieri');
+      kotelo.append(taulu);
+      $('laudat').replaceChildren(kotelo, selite);
+    }
+
+    /* ------------------------------------------------------------------ *
+     * KAUPUNKILEHDET MANTEREITTAIN (omistajan tilaus 12.8.2026)
+     *
+     * Laudat-taulu kertoo montako — tämä kertoo mitkä. Yksi
+     * pudotusvalikko mannerta kohti, sisällä laudan KAIKKI kaupungit
+     * laudan omassa järjestyksessä, ja jokaisesta se mitä lehteen on
+     * tehty.
+     *
+     * SIVUMÄÄRÄ LASKETAAN SAMALLA SÄÄNNÖLLÄ KUIN PELI SEN PIIRTÄÄ
+     * (js/ui.js rakennaSivut + tutkiSivuja): etusivu ja sen jälkeen
+     * yksi sivu jokaista kaupunkilehden aihetta kohti, eli
+     *
+     *   1 + kansiosio + aihesivut + Elämää-varasivu + menovinkit.
+     *
+     * Osat yksitellen:
+     *  - kansiosio = KULTTUURI_KATEGORIAT[kaupunki] jäsen, jonka id on
+     *    'kaupunki'. Se tekee kaupungista lehtikaupungin: etusivu
+     *    rakentuu sen kansikuvista, ja sen nostot saavat oman sivunsa.
+     *  - aihesivut = saman listan muut jäsenet (historia, musiikki…).
+     *  - Elämää = varasivu kaupungille, jolla ei ole kategorioita mutta
+     *    on vanhan mallin litteä nostolista (KULTTUURI[kaupunki].nostot).
+     *  - menovinkit = maapaketin sivu, jonka lehtikaupunki lainaa
+     *    viimeiseksi sivukseen (MAA_KATEGORIAT[maatunnus]).
+     *
+     * "Maa numeroina" ja muut maan sivut EIVÄT ole tässä: v350:n
+     * jälkeen maalehti on oma lehtensä, joka avataan kartalta.
+     *
+     * Maatunnus haetaan laudan omasta kartasta ja maailmankartta
+     * varana — samasta syystä kuin Laudat-taulussa: osalla laudoista
+     * ei ole omaa cityCountry-taulua.
+     * ------------------------------------------------------------------ */
+    const MANTEREET = [
+      // Lähi-itä toisena listassa mutta ensimmäisenä auki: omistajan
+      // työ on juuri siellä (12.8.2026). Yhdistelmälaudat maailma ja
+      // maailmankartta puuttuvat tarkoituksella — ne toistavat samat
+      // kaupungit.
+      ['europe', 'Eurooppa'],
+      ['middleeast', 'Lähi-itä'],
+      ['asia', 'Aasia'],
+      ['africa', 'Afrikka'],
+      ['oceania', 'Oseania'],
+      ['northamerica', 'Pohjois-Amerikka'],
+      ['southamerica', 'Etelä-Amerikka'],
+    ];
+    const AVOIN_MANNER = 'middleeast';
+
+    /** Yhden kaupungin lehtiluvut pelin omalla logiikalla. */
+    function lehtiLuvut(c, p) {
+      const ccVara = paalauta.map?.cityCountry ?? {};
+      const kategoriat = kannet[c.id] ?? [];
+      const kansi = kategoriat.find((k) => k.id === 'kaupunki') ?? null;
+      const aihesivut = kategoriat.filter((k) => k.id !== 'kaupunki').length;
+      const elama = !kategoriat.length
+        && (KULTTUURI[c.id]?.nostot ?? []).length > 0;
+      const iso = p.map?.cityCountry?.[c.id] ?? ccVara[c.id] ?? null;
+      const menovinkit = Boolean(kansi)
+        && (maaKategoriat[iso] ?? []).some((s) => s.id === 'menovinkit');
+      const kartta = kohdekartat[c.id] ?? null;
+      const kohteet = kartta?.kohteet ?? [];
+      /*
+       * Kohde on napautettava juttu, jos sillä on oma teksti — joko
+       * nähtävyysjutuissa nimen mukaan tai (Lontoon malli) suoraan
+       * karttadatassa. Sama ehto kuin js/ui.js piirraKaupunkiKartta.
+       */
+      const jutut = kohteet.filter((k) => nahtavyysjutut[c.id]?.[k.nimi]?.teksti
+        || k.teksti).length;
+      return {
+        kansi,
+        aihesivut,
+        elama,
+        menovinkit,
+        kohteet: kartta ? kohteet.length : null,
+        jutut,
+        saapuminen: Boolean(SAAPUMISET[c.id]),
+        kaari: KAARI_TEKSTIT.has(c.id),
+        sivuja: 1 + (kansi ? 1 : 0) + aihesivut + (elama ? 1 : 0)
+          + (menovinkit ? 1 : 0),
+      };
+    }
+
+    function lehtiTaulu(p) {
+      const kotelo = el('div', 'taulu-vieri');
+      const taulu = el('table', 'lehtitaulu');
+      const otsikko = el('tr');
+      const sarakkeet = [['Kaupunki', ''], ['Merkintä', ''], ['Kansi', 'num'],
+        ['Aihesivut', 'num'], ['Nähtävyysjutut', 'num'], ['Sivuja yht.', 'num']];
+      for (const [nimi, luokka] of sarakkeet) otsikko.append(el('th', luokka, nimi));
+      taulu.append(el('thead').appendChild(otsikko).parentNode);
+      const runko = el('tbody');
+      for (const c of p.cities) {
+        const l = lehtiLuvut(c, p);
+        // Tyhjä rivi himmeäksi: lehteä ei ole alettu, sivuja on vain
+        // etusivu eikä kohdekarttaa ole.
+        const tyhja = l.sivuja === 1 && l.kohteet == null;
+        const tr = el('tr', [l.kansi ? 'on-lehti' : '', tyhja ? 'tyhja' : '']
+          .filter(Boolean).join(' ') || null);
+        tr.append(el('td', '', c.name));
+        tr.append(el('td', '', l.saapuminen || l.kaari
+          ? `✓ ${l.kaari ? 'kaari' : 'vanha'}` : '—'));
+        // Kansi = lehden kansiosio; luku on sen nostojen määrä.
+        tr.append(el('td', 'num', l.kansi
+          ? `✓ ${(l.kansi.nostot ?? []).length}` : '—'));
+        tr.append(el('td', 'num', l.elama ? '1 (Elämää)' : String(l.aihesivut)));
+        tr.append(el('td', 'num', l.kohteet == null
+          ? '—' : `${l.jutut}/${l.kohteet}`));
+        tr.append(el('td', 'num', String(l.sivuja)));
+        runko.append(tr);
+      }
+      taulu.append(runko);
+      kotelo.append(taulu);
+      return kotelo;
+    }
+
+    function piirraKaupunkilehdet() {
+      const kohde = $('kaupunkilehdet');
+      if (!kohde) return;
+      const osiot = [];
+      for (const [id, nimi] of MANTEREET) {
+        const p = PACKS.find((x) => x.id === id);
+        if (!p) continue;
+        const lehtia = p.cities.filter((c) => (kannet[c.id] ?? [])
+          .some((k) => k.id === 'kaupunki')).length;
+        const d = el('details', 'osio');
+        if (id === AVOIN_MANNER) d.open = true;
+        const s = el('summary', '', nimi);
+        s.append(el('small', '', ` — ${lehtia}/${p.cities.length} kaupungilla lehti`));
+        d.append(s);
+        const sisus = el('div', 'sisus');
+        sisus.append(lehtiTaulu(p));
+        d.append(sisus);
+        osiot.push(d);
+      }
+      const selite = el('p', 'pieni', 'Merkintä = matkakirjamerkintä; '
+        + '"kaari" tarkoittaa, että kohteesta on kirjoitettu uudistettu '
+        + 'kaariteksti, "vanha" että käytössä on vain vanhan mallin '
+        + 'saapumisteksti. Kansi = lehden kansiosio ja sen nostojen '
+        + 'määrä; kansi tekee kaupungista lehtikaupungin. Aihesivut = '
+        + 'kaupungin omat kulttuurikategoriat (kansiosio ei ole mukana); '
+        + '"1 (Elämää)" on varasivu vanhoista litteistä nostoista. '
+        + 'Nähtävyysjutut = montako kohdekartan kohdetta avaa oman '
+        + 'jutun. Sivuja yht. = etusivu + kansiosio + aihesivut + '
+        + 'lehtikaupungin lainaama menovinkit-sivu, eli sama luku kuin '
+        + 'peli lehteä selatessa näyttää. Maalehti (maan sivut ja '
+        + 'numerot) on oma lehtensä eikä kuulu näihin lukuihin.');
+      kohde.replaceChildren(...osiot, selite);
     }
 
     /*
@@ -1744,6 +1917,7 @@
     piirraLuvut();
     piirraPuutteet();
     piirraLaudat();
+    piirraKaupunkilehdet();
     piirraTila();
     piirraKaupunkilista();
     piirraKaupunki();
