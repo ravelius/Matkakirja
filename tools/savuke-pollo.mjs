@@ -166,22 +166,49 @@ const SILTA_MOCK = `
  */
 const PUHE_MOCK = `
 window.__puhutut = [];
+window.__peruutuksia = 0;
+/*
+ * HIDAS TILA. Tavallisesti lausuma päättyy 10 ms:ssä, jolloin luenta
+ * valuu läpi eikä pysäytystä voi mitata. Hitaassa tilassa lausuma jää
+ * "puhumaan" kunnes se perutaan — juuri sillä mitataan, katkeaako
+ * kaiutinvivun pysäytys kesken lauseen.
+ */
+window.__puheHidas = false;
 class TestiLausuma {
   constructor(teksti) { this.text = teksti; this.lang = ''; this.voice = null; }
 }
 window.SpeechSynthesisUtterance = TestiLausuma;
+const __synth = {
+  jono: [],
+  paused: false,
+  get speaking() { return __synth.jono.length > 0; },
+  get pending() { return __synth.jono.length > 1; },
+  getVoices: () => [],
+  pause() { __synth.paused = true; },
+  resume() { __synth.paused = false; },
+  cancel() {
+    window.__peruutuksia += 1;
+    __synth.jono = [];
+  },
+  speak(lausuma) {
+    window.__puhutut.push(lausuma.text);
+    __synth.jono.push(lausuma);
+    if (window.__puheHidas) return;
+    setTimeout(() => {
+      const i = __synth.jono.indexOf(lausuma);
+      // Peruttu lausuma on jo poissa jonosta: se ei saa päättyä.
+      if (i < 0) return;
+      __synth.jono.splice(i, 1);
+      lausuma.onend?.();
+    }, 10);
+  },
+};
+window.__puheJono = () => __synth.jono.length;
 // speechSynthesis on selaimessa vain luettava getteri, joten sijoitus
 // ei riitä — se on määriteltävä uudelleen.
 Object.defineProperty(window, 'speechSynthesis', {
   configurable: true,
-  get: () => ({
-    getVoices: () => [],
-    cancel() { window.__peruutuksia = (window.__peruutuksia ?? 0) + 1; },
-    speak(lausuma) {
-      window.__puhutut.push(lausuma.text);
-      setTimeout(() => lausuma.onend?.(), 10);
-    },
-  }),
+  get: () => __synth,
 });
 `;
 
@@ -203,6 +230,18 @@ class TestiTunnistus {
 }
 window.SpeechRecognition = TestiTunnistus;
 `;
+
+/*
+ * PITKÄ VASTAUS. Vierityssääntö (vastaus alkaa näkymän yläreunasta) voi
+ * näkyä vain vastauksesta, joka ei mahdu paneeliin kerralla. Teksti on
+ * savukkeen omaa täytettä; ensimmäinen lause on tunnistettava, koska
+ * juuri sen pitää olla näkyvissä.
+ */
+const PITKA_VASTAUS = 'Ensimmäinen rivi alkaa tästä. '
+  + Array.from({ length: 12 }, (_, i) =>
+    `Thamesin varrella riitti ${i + 1}. vuosikymmenellä satamatyötä, `
+    + 'ja jokilaivat toivat hiiltä, viljaa ja teetä kaupungin varastoihin '
+    + 'aamusta iltaan.').join(' ');
 
 /**
  * Rajapinnan mock: ehdotukset ja vastaus. Pyyntörungot jäävät talteen.
@@ -234,7 +273,11 @@ async function kytkeRajapinta(sivu, rungot) {
          */
         vastaus: /varapolku/i.test(runko.kysymys ?? '')
           ? 'Tästä ei ole pelissä juttua, mutta yleisesti ottaen kyse on vanhasta ilmiöstä.'
-          : 'Lontoon metro avattiin vuonna 1863 ja se oli maailman ensimmäinen.',
+          // "pitkä" on toinen koesana: se antaa vastauksen, joka ei mahdu
+          // paneeliin kerralla (vierityssääntö, osio 3f).
+          : /pitkä/i.test(runko.kysymys ?? '')
+            ? PITKA_VASTAUS
+            : 'Lontoon metro avattiin vuonna 1863 ja se oli maailman ensimmäinen.',
         jatkot: [
           'Miten tunnelit kaivettiin?',
           'Kuka maksoi rakentamisen?',
@@ -816,6 +859,94 @@ await sivu.evaluate(async () => {
 });
 
 /* ================================================================== */
+/* 3e) Mikään paneelin osa ei kiinnity keskustelun päälle               */
+/* ================================================================== */
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026 (kuvakaappaus): kolme kysymysnappia
+ * leijui paneelin yläreunassa vastaustekstin päällä kuin ne olisi
+ * lukittu siihen. Syy oli asettelussa: ehdotuslaatikko oli paneelin oma
+ * ylin osa virran ULKOPUOLELLA, joten se jäi paikalleen kun keskustelu
+ * vieri sen alta. Nyt sekä ehdotukset että jatkokysymykset asuvat
+ * virrassa, eikä kummallakaan ole kiinteää asemointia.
+ */
+const asemointi = await sivu.evaluate(() => {
+  const virta = document.querySelector('.pollo-virta');
+  const ryhma = [...document.querySelectorAll('.pollo-jatkot')].at(-1);
+  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  const ehdotukset = document.querySelector('.pollo-ehdotukset');
+  const asema = (el) => (el ? getComputedStyle(el).position : 'puuttuu');
+  return {
+    jatkotVirrassa: Boolean(virta?.contains(ryhma)),
+    jatkotVastauksenJalkeen: Boolean(vastaus && ryhma
+      && (vastaus.compareDocumentPosition(ryhma) & Node.DOCUMENT_POSITION_FOLLOWING)),
+    jatkojenAsema: asema(ryhma),
+    ehdotuksetVirrassa: Boolean(virta?.contains(ehdotukset)),
+    ehdotustenAsema: asema(ehdotukset),
+    // Paneelin suorat lapset: virta ja syöte, ei erillistä yläosaa.
+    paneelinLapset: [...document.querySelector('.pollo-paneeli').children]
+      .map((el) => el.className),
+  };
+});
+vaadi('jatkokysymykset ovat keskusteluvirrassa vastauksen jäljessä',
+  asemointi.jatkotVirrassa === true && asemointi.jatkotVastauksenJalkeen === true,
+  JSON.stringify(asemointi));
+vaadi('jatkokysymyksiä ei ole naulattu paikalleen',
+  asemointi.jatkojenAsema === 'static', asemointi.jatkojenAsema);
+vaadi('ehdotukset ovat virrassa eivätkä paneelin yläreunassa',
+  asemointi.ehdotuksetVirrassa === true && asemointi.ehdotustenAsema === 'static',
+  JSON.stringify(asemointi));
+vaadi('paneelissa ei ole omaa yläosaa ehdotuksille',
+  !asemointi.paneelinLapset.some((n) => /pollo-ehdotukset/.test(n)),
+  asemointi.paneelinLapset.join(' | '));
+
+/* ================================================================== */
+/* 3f) Pitkä vastaus alkaa näkymän yläreunasta                          */
+/* ================================================================== */
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026: pitkän vastauksen jälkeen virta kelasi
+ * pohjaan, joten lukeminen olisi pitänyt aloittaa kelaamalla ylös. Uusi
+ * sääntö: vastauksen ENSIMMÄINEN rivi tuodaan näkyviin, loput jäävät
+ * pelaajan itsensä vieritettäväksi.
+ */
+const vieritys = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  // Edellinen osio avasi lehden linkistä, joten paneeli on kiinni:
+  // vieritystä ei voi mitata piilotetusta paneelista.
+  if (document.querySelector('.pollo-paneeli').hidden) {
+    document.querySelector('.pollo-nappi').click();
+    await odota(700);
+  }
+  document.querySelector('.pollo-kirjoita').click();
+  await odota(150);
+  document.querySelector('.pollo-kentta').value = 'Kerro pitkä tarina Thamesista';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  await odota(900);
+  const virta = document.querySelector('.pollo-virta');
+  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  const v = virta.getBoundingClientRect();
+  const k = vastaus.getBoundingClientRect();
+  return {
+    alkuNakyvissa: k.top - v.top,
+    ensimmainenLause: vastaus.textContent.slice(0, 28),
+    vastauksenKorkeus: k.height,
+    virranKorkeus: v.height,
+    scrollTop: virta.scrollTop,
+    pohja: virta.scrollHeight - virta.clientHeight,
+  };
+});
+vaadi('koevastaus on paneelia korkeampi (muuten vieritystä ei mitata)',
+  vieritys.vastauksenKorkeus > vieritys.virranKorkeus, JSON.stringify(vieritys));
+vaadi('vastauksen ensimmäinen rivi on näkymän yläosassa',
+  vieritys.alkuNakyvissa >= -2 && vieritys.alkuNakyvissa <= 26
+  && /Ensimmäinen rivi alkaa/.test(vieritys.ensimmainenLause), JSON.stringify(vieritys));
+vaadi('virta ei kelaa pohjaan vastauksen tullessa',
+  vieritys.pohja - vieritys.scrollTop > 20, JSON.stringify(vieritys));
+
+await sivu.screenshot({ path: join(ULOS, 'pollo-pitka-vastaus-390.png') });
+
+/* ================================================================== */
 /* 3c) Kaiutinvipu                                                     */
 /* ================================================================== */
 
@@ -907,6 +1038,60 @@ vaadi('pois kytketty vipu ei jää talletukseen', !kaiutinPois.talletettu,
   String(kaiutinPois.talletettu));
 
 /* ================================================================== */
+/* 3g) Vipu pois KESKEN LUENNAN pysäyttää heti                          */
+/* ================================================================== */
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026: kaiuttimen kytkeminen pois ei
+ * hiljentänyt käynnissä olevaa luentaa, vaan ääni jatkui loppuun asti.
+ * Mock on hitaassa tilassa, jolloin lausuma jää puhumaan kunnes se
+ * perutaan — näin nähdään pysähtyykö puhe kesken lauseen ja tyhjeneekö
+ * paloitellun luennan jono.
+ */
+const pysaytys = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const kaiutin = document.querySelector('.pollo-kaiutin');
+  if (kaiutin.getAttribute('aria-pressed') !== 'true') {
+    kaiutin.click();
+    await odota(120);
+  }
+  window.__puheHidas = true;
+  window.__puhutut = [];
+  window.__peruutuksia = 0;
+  document.querySelector('.pollo-kirjoita').click();
+  await odota(150);
+  document.querySelector('.pollo-kentta').value = 'Kerro pitkä tarina Lontoon satamasta';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  await odota(900);
+  const kesken = { jonossa: window.__puheJono(), puhuttuja: window.__puhutut.length };
+  // Vipu pois kesken luennan.
+  kaiutin.click();
+  await odota(120);
+  const jalkeen = {
+    jonossa: window.__puheJono(),
+    puhuttuja: window.__puhutut.length,
+    peruutuksia: window.__peruutuksia,
+    aria: kaiutin.getAttribute('aria-pressed'),
+  };
+  // Jäikö jokin pala lähtemään pysäytyksen jälkeen?
+  await odota(300);
+  const myohemmin = { jonossa: window.__puheJono(), puhuttuja: window.__puhutut.length };
+  window.__puheHidas = false;
+  localStorage.removeItem('matkakirja-pollo-aani');
+  return { kesken, jalkeen, myohemmin };
+});
+vaadi('pitkä vastaus on luennassa kun vipu kytketään pois',
+  pysaytys.kesken.jonossa >= 1 && pysaytys.kesken.puhuttuja >= 1,
+  JSON.stringify(pysaytys.kesken));
+vaadi('vipu pois pysäyttää luennan välittömästi',
+  pysaytys.jalkeen.jonossa === 0 && pysaytys.jalkeen.peruutuksia >= 1
+  && pysaytys.jalkeen.aria === 'false', JSON.stringify(pysaytys.jalkeen));
+vaadi('paloitellun luennan jonoon ei jää palasia',
+  pysaytys.myohemmin.jonossa === 0
+  && pysaytys.myohemmin.puhuttuja === pysaytys.jalkeen.puhuttuja,
+  JSON.stringify(pysaytys.myohemmin));
+
+/* ================================================================== */
 /* 3d) Kehittäjäkoodi otsakkeessa                                      */
 /* ================================================================== */
 
@@ -962,6 +1147,100 @@ vaadi('konteksti kertoo kaupungin', /Lontoo/.test(vastausRunko.konteksti ?? ''))
 vaadi('pelin oma aineisto on mukana',
   /PELIN TARKISTETTUA AINEISTOA/.test(vastausRunko.konteksti ?? ''),
   (vastausRunko.konteksti ?? '').slice(0, 120));
+
+/* ================================================================== */
+/* 4c) SIJAINTIKONTEKSTIN EHEYS: kaupunki ratkaisee maan                */
+/* ================================================================== */
+
+/*
+ * OMISTAJAN PELISESSIO 13.8.2026. Pelaaja oli Sofiassa — kartan
+ * maakyltissä luki BULGARIA — mutta pöllö ehdotti kysymystä "Mikä on
+ * Sofian rooli Kreikassa tänä päivänä?" ja vahvisti sen. Konteksti luki
+ * maan ui.arrivalMaaTiedoista, joka osoittaa VIIMEKSI AVATTUUN
+ * maalehteen: Maiden tiedot -varusteella selattu Kreikka jäi siihen
+ * roikkumaan.
+ *
+ * Tämä ajo tekee saman virheen tahallaan oikeaa tietä (avaa Kreikan
+ * maalehden Sofiassa) ja vaatii, että sekä avausehdotusten että
+ * kysymyksen konteksti kertovat Bulgarian — saman maan kuin kartan
+ * kyltti. Lopuksi pelaaja palautetaan Lontooseen, jotta myöhemmät osiot
+ * mittaavat sitä mitä ennenkin.
+ */
+/*
+ * OSA 1: OIKEA PYYNTÖ. Elävään UI-olioon istutetaan sama vanhentunut
+ * kenttä, jonka Maiden tiedot -varuste jättäisi jälkeensä. Sen ei saa
+ * näkyä pyynnön kontekstissa millään rivillä — ei ehdotuksissa eikä
+ * kysymyksessä.
+ */
+const vanhentunut = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const ui = window.matkakirja.ui;
+  ui.arrivalMaaTiedot = { nimi: 'Kreikka' };
+  if (!document.querySelector('.pollo-paneeli').hidden) {
+    document.getElementById('board').dispatchEvent(
+      new PointerEvent('pointerdown', { bubbles: true }),
+    );
+    await odota(300);
+  }
+  // Avaus hakee ehdotukset uudelleen samalla kontekstilla.
+  document.querySelector('.pollo-nappi').click();
+  await odota(900);
+  document.querySelector('.pollo-kirjoita').click();
+  await odota(150);
+  document.querySelector('.pollo-kentta').value = 'Missä maassa tämä kaupunki on?';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  await odota(900);
+  ui.arrivalMaaTiedot = null;
+  return true;
+});
+const ehdotusRunko = rungot.filter((r) => r.tehtava === 'ehdotukset').at(-1) ?? {};
+const kysymysRunko = rungot.filter((r) => r.tehtava === 'vastaus').at(-1) ?? {};
+for (const [nimi, runko] of [['ehdotusten', ehdotusRunko], ['kysymyksen', kysymysRunko]]) {
+  const teksti = runko.konteksti ?? '';
+  vaadi(`${nimi} kontekstiin ei vuoda vanhentunutta maalehtikenttää`,
+    vanhentunut === true && !/Kreikka/.test(teksti), teksti.slice(0, 200));
+}
+
+/*
+ * OSA 2: SOFIA JA BULGARIA pelin OMALLA aineistolla. Magellanin
+ * kompassi -laudalla ei ole kaupunki→maa-kytkentää, joten koe tehdään
+ * Euroopan laudan oikealla datalla ja pelin omalla moduulilla — samalla
+ * koodilla, jota pöllö ajaa. Vanhentunut kenttä osoittaa Kreikkaan
+ * täsmälleen kuten omistajan pelisessiossa.
+ */
+const sofia = await sivu.evaluate(async () => {
+  const { lueNakyma } = await import('/js/pollo.js');
+  const { EUROPE } = await import('/js/packs/europe.js');
+  const teeGame = (cityId, pack = EUROPE) => ({
+    pack,
+    player: { pos: { city: cityId } },
+    board: { cityById: new Map(pack.cities.map((c) => [c.id, c])) },
+    dayCount: () => 12,
+  });
+  const vanhaUi = { arrivalMaaTiedot: { nimi: 'Kreikka' }, tutkiMaaLehti: 'GRC' };
+  // Sama lähde kuin kartan maakyltillä (ui.js drawCountryBorders).
+  const kyltinMaa = EUROPE.map.countryShapes[EUROPE.map.cityCountry.sofia]?.nimi ?? '';
+  // Lauta, jolla kaupungin maalle ei ole muotoa: maan pitää jäädä pois.
+  const nimeton = {
+    ...EUROPE,
+    map: { ...EUROPE.map, cityCountry: { ...EUROPE.map.cityCountry, sofia: 'ZZZ' } },
+  };
+  return {
+    kyltinMaa,
+    sofia: lueNakyma({ game: teeGame('sofia'), ui: vanhaUi, doc: document }),
+    ilmanMuotoa: lueNakyma({ game: teeGame('sofia', nimeton), ui: vanhaUi, doc: document }),
+  };
+});
+vaadi('Sofian maa johdetaan kaupungista: Bulgaria, ei Kreikka',
+  /Kaupunki, jossa pelaaja on: Sofia/.test(sofia.sofia)
+  && /Maa, jossa pelaaja on: Bulgaria/.test(sofia.sofia)
+  && !/Kreikka/.test(sofia.sofia), sofia.sofia.slice(0, 200));
+vaadi('pöllön maa on sama kuin kartan maakyltin',
+  sofia.kyltinMaa === 'Bulgaria'
+  && sofia.sofia.includes(`Maa, jossa pelaaja on: ${sofia.kyltinMaa}`), sofia.kyltinMaa);
+vaadi('ilman maan muotoa maa jätetään kokonaan pois',
+  !/Maa, jossa pelaaja on/.test(sofia.ilmanMuotoa)
+  && !/ZZZ|Kreikka/.test(sofia.ilmanMuotoa), sofia.ilmanMuotoa.slice(0, 200));
 
 /* ================================================================== */
 /* 5) Lehtinäkymä: pöllö siirtyy lehteen, minitehtävä ei vuoda          */
