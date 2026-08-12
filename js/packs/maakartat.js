@@ -2468,13 +2468,14 @@ export const KAUPUNKIKARTAT = {
    * Masqatin omista kohteista, joten tämä kaupunki on lähes kokonaan
    * vapaata aihepiiriä — poikkeus Persianlahden kaupunkien joukossa.
    * Kuudes kohde, hindutemppeli, ei ole linnake eikä palatsi: sen
-   * takia rajausta siirrettiin etelämmäs.
+   * takia rajausta siirrettiin ensin etelämmäs ja sitten lännemmäs,
+   * jotta sen numeroympyrä ei istu mittakaavajanan päällä.
    */
   masqat: {
     polku: 'assets/kartat/masqat-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: {
-      pohjoinen: 23.6205, etela: 23.607, lansi: 58.584, ita: 58.602,
+      pohjoinen: 23.6205, etela: 23.6085, lansi: 58.5805, ita: 58.602,
     },
     esittely: 'Masqat ei ole yksi kaupunki vaan jono pieniä lahtia '
       + 'vuorten välissä. Vanha Masqat on niistä itäisin: puolikuun '
