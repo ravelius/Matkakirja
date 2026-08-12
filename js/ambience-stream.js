@@ -392,6 +392,11 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     }).catch((syy) => {
       if (audio.soiYritys !== yritys) return;
       if (syy?.name === 'AbortError') return;
+      // Automaattitoiston esto ei ole vika äänitteessä — se odottaa elettä.
+      if (syy?.name === 'NotAllowedError') {
+        odotaElea();
+        return;
+      }
       petti();
     });
   };
@@ -441,6 +446,45 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     }, 6000);
   };
   audio.addEventListener('canplay', () => clearTimeout(vahti));
+  /*
+   * AUTOMAATTITOISTON ESTO ODOTTAA ELETTÄ, EI VARAREITTIÄ.
+   *
+   * Työpöytäselain hylkää play():n NotAllowedErrorilla, jos sivulla ei
+   * ole vielä napautettu mitään. Se ei kerro äänitteestä yhtään mitään
+   * — mutta ennen tätä se meni samaan petti-polkuun kuin rikkinäinen
+   * osoite, ja MITATTU seuraus oli (12.8.2026, Playwright, työpöytä):
+   * neljä play()-kutsua 66 millisekunnin sisällä sivun latauduttua,
+   * kaikki NotAllowedError, ja niiden mukana paloi kumpikin varaporras
+   * (peili → alkuperäinen lähde → CORSiton yritys) ennen kuin
+   * käyttäjä oli ehtinyt koskea sivuun. Lopputulos oli varalle():
+   * striimi luovutti ja tilalle jäi syntetisoitu ambienssi.
+   *
+   * Ääni palasi vain siksi, että "Aloita seikkailu" -nappi sattuu
+   * kutsumaan render()iä, joka aloittaa koko soittimen alusta. Se on
+   * vahinko, ei mekanismi: jos ensimmäinen ele osuu muualle, etusivu
+   * jää mykäksi lopullisesti.
+   *
+   * Oikea vastaus estoon on odottaa yksi ele ja yrittää samaa
+   * äänitettä uudelleen — kerran, samalla soittimella ja samalla
+   * osoitteella. Vahti sammutetaan odotuksen ajaksi: pysäytetty ääni
+   * ei lataa puskuriaan täyteen, eikä sitä saa tulkita kuolleeksi.
+   */
+  const ELEET = ['pointerdown', 'touchstart', 'keydown'];
+  let eleOdottaa = false;
+  const odotaElea = () => {
+    if (eleOdottaa) return;
+    eleOdottaa = true;
+    clearTimeout(vahti);
+    const ele = () => {
+      eleOdottaa = false;
+      for (const laji of ELEET) document.removeEventListener(laji, ele);
+      // Soitin on voinut jo väistyä uuden tieltä odotuksen aikana.
+      if (nykyinen !== oma || oma.audio !== audio) return;
+      viritaVahti();
+      soi();
+    };
+    for (const laji of ELEET) document.addEventListener(laji, ele, { passive: true });
+  };
   const petti = () => {
     clearTimeout(vahti);
     if (!varareittiKokeiltu && onPeilista(audio.getAttribute('src'))) {

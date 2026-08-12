@@ -153,16 +153,16 @@ const HUIPPU = [
 ${lista(maasto.huippu)}
 ];
 
-const JARVET = [
+const LAUDAN_JARVET = [
 ${maasto.jarvet.map((j) => `  ${JSON.stringify(j)},`).join('\n')}
 ];
 
-const JOET = [
+const LAUDAN_JOET = [
 ${maasto.joet.map((j) => `  ${JSON.stringify(j)},`).join('\n')}
 ];
 
 export const MAAILMANKARTAN_MAASTO = {
-  keski: KESKI, ylos: YLOS, huippu: HUIPPU, jarvet: JARVET, joet: JOET,
+  keski: KESKI, ylos: YLOS, huippu: HUIPPU, jarvet: LAUDAN_JARVET, joet: LAUDAN_JOET,
 };
 `;
 

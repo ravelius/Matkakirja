@@ -1052,7 +1052,7 @@ const KUNNAT = [
 ${kunnatTeksti}
 ];
 
-export const KIELET = { kunnat: KUNNAT };
+export const KIELIKUNNAT = { kunnat: KUNNAT };
 `;
 
 const ulos = join(JUURI, 'js/packs/linssi-kielet.js');

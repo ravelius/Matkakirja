@@ -24,15 +24,19 @@ import { LAHTEET, LAHTEITA, PELI } from './lahteet.js';
 import {
   fetchArticle, fetchImage, fetchImages, fetchSummary, suurennusportaat,
 } from './wiki.js';
-import { drawPuzzle as piirraAfrikanPulma, hasSketch as afrikanPulma } from './packs/africa-puzzles.js';
-import { drawPuzzle as piirraEuroopanPulma } from './packs/europe-puzzles.js';
+// HUOM: tuonnit ilman aliasta. Yhden tiedoston versio (tools/build-standalone.mjs)
+// niputtaa moduulit samaan näkyvyysalueeseen ja poistaa import-rivit, joten alias
+// katoaisi ja nimi jäisi määrittelemättä. Siksi lautakohtaiset nimet ovat
+// yksilöllisiä jo lähdetiedostoissa.
+import { piirraAfrikanPulma, onAfrikanPulma } from './packs/africa-puzzles.js';
+import { piirraEuroopanPulma } from './packs/europe-puzzles.js';
 
 /**
  * Pulman piirros oikeasta laudasta. Tunnisteet ovat yksilöllisiä yli
  * lautojen, joten oikea piirtäjä löytyy kysymällä.
  */
 function drawPuzzle(svg, id, data) {
-  if (afrikanPulma(id)) piirraAfrikanPulma(svg, id, data);
+  if (onAfrikanPulma(id)) piirraAfrikanPulma(svg, id, data);
   else piirraEuroopanPulma(svg, id, data);
 }
 import { OMAT_TIIVISTELMAT } from './packs/omat-tiivistelmat.js';
@@ -848,6 +852,21 @@ const INTRO_KIRJAN_NIMI = 'Maailman ympäri kahdeksassakymmenessä päivässä';
  * pituuspiiriä. Yhtenäinen viiva niiden välillä kulkisi koko kartan
  * halki väärään suuntaan. Osat kulkevat vuorotellen samassa
  * silmukassa (ks. ALKUREITIT[].vaihe), joten matka luetaan yhtenä.
+ *
+ * KOKO JA VAUHTI ON MITATTU, EI ARVATTU (12.8.2026). Omistaja ei
+ * nähnyt animaatiota lainkaan sen paremmin iPhonella kuin
+ * työpöytäselaimella. Playwright-mittaus 390 pikselin levyisellä
+ * näytöllä osoitti, että kerros rakentuu ja liikkuu oikein — 15
+ * polkua, 36 animaatiota, kärki eteni 41 pikseliä viidessä
+ * sekunnissa — mutta itse kärki oli vain 2,7 pikseriä leveä ja jäljen
+ * pisteet 1,1–1,5 pikseliä. Sen kokoinen piste katoaa seepiakartan
+ * omaan kuvioon: kartalla on jo valmiiksi katkoviivoitettuja
+ * laivareittejä, ja himmeä pistejono luki osana karttataidetta.
+ *
+ * Siksi kärki ja jälki ovat nyt noin kaksinkertaisia ja silmukka
+ * lyhyempi (40 s → 26 s, kauppareitti 34 s → 24 s). Värit ovat
+ * ennallaan eli seepian sisällä: liike saa erottua, ilme ei saa
+ * muuttua julisteeksi.
  */
 const ALKU_LONTOO = [731.7, 225.9];
 const ALKU_KAIRO = [772.5, 322.1];
@@ -858,7 +877,7 @@ const ALKUREITIT = [
     // Aasia – Kiina – Japani. Verne'n reitti pelin omia meriteitä pitkin.
     laji: 'isoisa',
     vaihe: 0,
-    kesto: 40,
+    kesto: 26,
     ikkuna: 0.44,
     pisteet: [
       ALKU_LONTOO,
@@ -882,7 +901,7 @@ const ALKUREITIT = [
     // on päättynyt Tokioon.
     laji: 'isoisa',
     vaihe: 0.5,
-    kesto: 40,
+    kesto: 26,
     ikkuna: 0.44,
     pisteet: [
       [286.5, 322.3], // Los Angeles
@@ -898,7 +917,7 @@ const ALKUREITIT = [
     // Afrikan, joten se ei osu isoisän reitin päälle missään kohtaa.
     laji: 'kauppa',
     vaihe: 0,
-    kesto: 34,
+    kesto: 24,
     ikkuna: 0.8,
     pisteet: [
       ALKU_MUMBAI,
@@ -918,15 +937,19 @@ const ALKUREITIT = [
  * Ryhmä kerrallaan, koska yhden polun kaikki viivat jakavat saman
  * peittävyyden — kolme ryhmää antaa jäljelle portaittain haipuvan
  * hännän neljällä animoidulla polulla reittiä kohti.
+ *
+ * Mitat kaksinkertaistettiin 12.8.2026: 3,4–4,6 laudan yksikköä oli
+ * puhelimen ruudulla 1,1–1,5 pikseliä eli ohuempi kuin kartan oma
+ * katkoviiva, jolloin jälki ei erottunut karttataiteesta lainkaan.
  */
-const JALJEN_PATKA = 4;        // yhden katkoviivan pituus laudan yksikköinä
-const JALJEN_VALI = 9;         // pätkien väli
+const JALJEN_PATKA = 5.5;      // yhden katkoviivan pituus laudan yksikköinä
+const JALJEN_VALI = 10;        // pätkien väli
 const JALJEN_JAKSO = JALJEN_PATKA + JALJEN_VALI;
 const JALJEN_PATKIA = 4;       // pätkiä yhdessä ryhmässä
 const JALJEN_RYHMAT = [
-  { leveys: 4.6, kirkkaus: 0.6 },
-  { leveys: 4, kirkkaus: 0.38 },
-  { leveys: 3.4, kirkkaus: 0.2 },
+  { leveys: 8.4, kirkkaus: 0.72 },
+  { leveys: 7.2, kirkkaus: 0.5 },
+  { leveys: 6, kirkkaus: 0.3 },
 ];
 
 /*
@@ -4449,7 +4472,7 @@ export class UI {
        */
       for (const keha of [true, false]) {
         const karki = lisaa(keha ? 'alkureitti-keha' : 'alkureitti-karki',
-          `0.01 ${pituus.toFixed(1)}`, { '--kirkkaus': keha ? '0.3' : '0.95' });
+          `0.01 ${pituus.toFixed(1)}`, { '--kirkkaus': keha ? '0.38' : '0.95' });
         // Kärjellä on kaksi animaatiota: kulku reittiä pitkin ja syke
         // paikallaan. Kummallakin oma kesto ja oma viive.
         karki.style.animationName = `${kulku}, ${keha ? 'alkureitti-syke-keha' : 'alkureitti-syke'}`;

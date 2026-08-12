@@ -6,9 +6,9 @@ import {
   PACKS, packById, allQuestions, factSource, factText, factVoice, isSourceUrl,
   sourceLabel, sourceList, voiceTitle,
 } from '../js/pack.js';
-import { arvoksi, hasSketch } from '../js/packs/africa-puzzles.js';
+import { arvoksi, onAfrikanPulma } from '../js/packs/africa-puzzles.js';
 import { TARINAKAARI } from '../js/packs/tarinakaari.js';
-import { hasSketch as europeHasSketch } from '../js/packs/europe-puzzles.js';
+import { onEuroopanPulma as europeHasSketch } from '../js/packs/europe-puzzles.js';
 
 /** Lähde on merkkijono tai lista merkkijonoja; verkko-osoite vain http(s). */
 function checkSources(source, where) {
@@ -2504,7 +2504,7 @@ test('Afrikan pulmadata on ehjä', () => {
     assert.ok(!nahdyt.has(p.id), `sama pulma-id kahdesti: ${p.id}`);
     nahdyt.add(p.id);
     assert.ok(cityIds.has(p.city), `pulman ${p.id} kaupunki ${p.city} ei ole laudalla`);
-    assert.ok(hasSketch(p.id), `pulmalta ${p.id} puuttuu piirros`);
+    assert.ok(onAfrikanPulma(p.id), `pulmalta ${p.id} puuttuu piirros`);
     assert.ok(p.title && p.title.length > 2, `pulmalta ${p.id} puuttuu otsikko`);
     assert.ok(p.q && p.q.length > 20, `pulman ${p.id} kysymys on liian lyhyt`);
     assert.equal(p.options.length, 4, `pulmalla ${p.id} ei ole neljää vaihtoehtoa`);

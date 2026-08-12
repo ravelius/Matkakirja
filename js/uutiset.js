@@ -17,8 +17,8 @@ import { UUTISPROXY, UUTISLAHTEET } from './packs/uutislahteet.js';
 const KAANNOS_OSOITE = 'https://api.mymemory.translated.net/get';
 // Puoli tuntia: lehteä selataan saman pelisession aikana monta
 // kertaa, eikä syöte ehdi muuttua.
-const VALIMUISTI_MS = 30 * 60 * 1000;
-const valimuisti = new Map();
+const UUTIS_VALIMUISTI_MS = 30 * 60 * 1000;
+const uutisValimuisti = new Map();
 
 export function uutislahde(iso) {
   return UUTISPROXY ? (UUTISLAHTEET[iso] ?? null) : null;
@@ -28,8 +28,8 @@ export function uutislahde(iso) {
 export async function haeUutiset(iso) {
   const lahde = uutislahde(iso);
   if (!lahde) return [];
-  const vanha = valimuisti.get(iso);
-  if (vanha && Date.now() - vanha.aika < VALIMUISTI_MS) return vanha.uutiset;
+  const vanha = uutisValimuisti.get(iso);
+  if (vanha && Date.now() - vanha.aika < UUTIS_VALIMUISTI_MS) return vanha.uutiset;
   try {
     const osoite = `${UUTISPROXY}?url=${encodeURIComponent(lahde.syote)}`;
     const vastaus = await fetch(osoite, { signal: AbortSignal.timeout(10000) });
@@ -41,7 +41,7 @@ export async function haeUutiset(iso) {
       linkki: item.querySelector('link')?.textContent.trim() ?? '',
       aika: item.querySelector('pubDate')?.textContent.trim() ?? '',
     })).filter((u) => u.otsikko);
-    valimuisti.set(iso, { aika: Date.now(), uutiset });
+    uutisValimuisti.set(iso, { aika: Date.now(), uutiset });
     return uutiset;
   } catch {
     return [];

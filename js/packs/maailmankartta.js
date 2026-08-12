@@ -37,7 +37,7 @@ import { OCEANIA } from './oceania.js';
 import { themedTokenTypes } from '../tokens.js';
 import { MAAILMANKARTAN_MAASTO } from './maailmankartta-maasto.js';
 
-const LAHTEET = [EUROPE, AFRICA, MIDDLE_EAST, ASIA, NORTHAMERICA, SOUTHAMERICA, OCEANIA];
+const LAHDEPAKAT = [EUROPE, AFRICA, MIDDLE_EAST, ASIA, NORTHAMERICA, SOUTHAMERICA, OCEANIA];
 
 /*
  * Mikä manner minkin kaupungin takana on. Tarvitaan linssilaattojen
@@ -53,12 +53,12 @@ const LAHTEET = [EUROPE, AFRICA, MIDDLE_EAST, ASIA, NORTHAMERICA, SOUTHAMERICA, 
  *
  * Neljä kaupunkia on kahdessa pakassa (Istanbul, Kairo, Teheran,
  * Panama), ja Object.fromEntries antaa niille viimeisen mantereen
- * LAHTEET-järjestyksessä. Se on deterministinen ja riittää: kaupunki on
+ * LAHDEPAKAT-järjestyksessä. Se on deterministinen ja riittää: kaupunki on
  * pelin kannalta joka tapauksessa yhdellä mantereella, eikä yksikään
  * niistä ole mantereensa ainoa laattakaupunki.
  */
 const CITY_MANNER = Object.fromEntries(
-  LAHTEET.flatMap((p) => (p.cities ?? []).map((c) => [c.id, p.id])),
+  LAHDEPAKAT.flatMap((p) => (p.cities ?? []).map((c) => [c.id, p.id])),
 );
 
 /*
@@ -84,13 +84,13 @@ function yhdistaKysymykset() {
       kori.push(kysymys);
     }
   };
-  for (const pack of LAHTEET) {
+  for (const pack of LAHDEPAKAT) {
     for (const [laji, lista] of Object.entries(pack.questions ?? {})) {
       if (laji === 'general') continue;
       lisaa(laji, lista);
     }
   }
-  for (const pack of LAHTEET) lisaa('general', pack.questions?.general ?? []);
+  for (const pack of LAHDEPAKAT) lisaa('general', pack.questions?.general ?? []);
   return ulos;
 }
 
@@ -107,7 +107,7 @@ function yksilolliset(lista) {
 
 /** Yhdistää paikkakohtaiset tiedot; kaupunkitunnus on avain. */
 function yhdistaTiedot(kentta) {
-  return Object.assign({}, ...LAHTEET.map((p) => p[kentta] ?? {}));
+  return Object.assign({}, ...LAHDEPAKAT.map((p) => p[kentta] ?? {}));
 }
 
 const OUTLINES = [
@@ -959,7 +959,7 @@ export const MAAILMANKARTTA = {
   },
   cities: CITIES,
   edges: EDGES,
-  airRoutes: LAHTEET.flatMap((p) => p.airRoutes ?? []),
+  airRoutes: LAHDEPAKAT.flatMap((p) => p.airRoutes ?? []),
   islands: ["dublin","sisilia","kreeta","islanti","sthelena","madagaskar","sansibar","nikosia","tokio","kamtsatka","sahalin","taipei","manila","sumatra","borneo","jakarta","colombo","nuuk","stjohns","bermuda","hawaii","havanna","sanjuan","galapagos","sanambrosio","robinsoncrusoe","falkland","caphorn","hobart","honiara","portvila","noumea","norfolk","suva","dili","bali"],
   minCityDistance: 60,
 
@@ -973,7 +973,7 @@ export const MAAILMANKARTTA = {
      * yllä jäävät varasoluksi (mm. vanhat tallennukset ilman
      * löytömannerta).
      */
-    mannerTypes: Object.fromEntries(LAHTEET.map((p) => [p.id, p.tokens.types])),
+    mannerTypes: Object.fromEntries(LAHDEPAKAT.map((p) => [p.id, p.tokens.types])),
     // Laattamäärä = kaupunkien määrä (248): jokainen kaupunki saa
     // laatan, myös aloituskaupungit (omistajan päätös 10.8.2026).
     // Aloituskaupunkien 19 lisälaattaa ovat jalokiviä — ei uusia
@@ -993,8 +993,8 @@ export const MAAILMANKARTTA = {
 
   questions: yhdistaKysymykset(),
   placeFacts: yhdistaTiedot('placeFacts'),
-  duels: yksilolliset(LAHTEET.flatMap((p) => p.duels ?? [])),
-  puzzles: yksilolliset(LAHTEET.flatMap((p) => p.puzzles ?? [])),
+  duels: yksilolliset(LAHDEPAKAT.flatMap((p) => p.duels ?? [])),
+  puzzles: yksilolliset(LAHDEPAKAT.flatMap((p) => p.puzzles ?? [])),
   // Euroopan tekstit + oma avausrepliikki: ilman sitä ensimmäinen lento
   // arpoisi tavallisen rivin, vaikka lukuääni lukee lukittua avausriviä.
   texts: {

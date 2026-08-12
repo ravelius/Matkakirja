@@ -964,15 +964,15 @@ const teksti = `// Vesistöjen nimet maailmankartalle: joet ja järvet.
 // selitys    1-2 lausetta aikuiselle lukijalle: jotain, mitä kartalta
 //            ei näe.
 
-const JOET = [
+const JOKINIMET = [
 ${joet.map(rivi).join('\n')}
 ];
 
-const JARVET = [
+const JARVINIMET = [
 ${jarvet.map(rivi).join('\n')}
 ];
 
-export const VESISTONIMET = { joet: JOET, jarvet: JARVET };
+export const VESISTONIMET = { joet: JOKINIMET, jarvet: JARVINIMET };
 `;
 
 const ulos = join(JUURI, 'js/packs/maasto-nimet-vedet.js');
