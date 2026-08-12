@@ -167,15 +167,89 @@ test('jälki kasvaa katkoviivana eikä ole enää liukuva häntä', () => {
     'jäljen päät ovat pyöreät');
 });
 
-test('kulkeva piste sykkii selvästi ja noin sekunnin jaksolla', () => {
+test('punainen piste välähtää kuin majakka: lyhyt leimahdus, pitkä lepo', () => {
+  /*
+   * Omistaja 12.8.2026: *"nopea kirkas välähdys ja sitten pitkä himmeä
+   * vaihe (kuten majakka)"*. Tasainen sini-aalto oli juuri se, mitä ei
+   * haluta, eikä sen paluu näkyisi virheenä — siksi verhokäyrän muoto
+   * mitataan tässä lukuina.
+   */
   const kesto = Number(UI.match(/const SYKE_KESTO = '([\d.]+)s'/)[1]);
-  assert.ok(kesto >= 1 && kesto <= 2, `sykkeen jakso ${kesto}s ei ole 1–2 sekuntia`);
+  assert.ok(kesto >= 2 && kesto <= 3, `sykkeen jakso ${kesto}s ei ole 2–3 sekuntia`);
+  const luvut = (nimi) => UI.match(new RegExp(`const ${nimi} = \\[([^\\]]*)\\]`))[1]
+    .split(',').map((s) => Number(s.trim()));
+  const hetket = luvut('SYKE_HETKET');
+  const muoto = luvut('SYKE_MUOTO');
+  assert.equal(hetket.length, muoto.length, 'keyTimes ja values eri mittaiset — SMIL hylkää');
+  // SMILin hylkäysehdot: alkaa nollasta, päättyy ykköseen, kasvaa.
+  assert.equal(hetket[0], 0);
+  assert.equal(hetket[hetket.length - 1], 1);
+  for (let i = 1; i < hetket.length; i++) {
+    assert.ok(hetket[i] > hetket[i - 1], `keyTimes ei kasva kohdassa ${i}`);
+  }
+  // Leimahdus: huippuun päästään nopeasti ja takaisin lepoon pian.
+  const huippu = muoto.indexOf(1);
+  assert.ok(huippu > 0, 'verhokäyrä ei käy huipussa lainkaan');
+  assert.equal(muoto[0], 0, 'jakso ei ala levosta');
+  assert.equal(muoto[muoto.length - 1], 0, 'jakso ei pääty lepoon');
+  const nousu = hetket[huippu] * kesto;
+  assert.ok(nousu <= 0.15, `leimahdus nousee ${nousu.toFixed(2)}s — ei ole välähdys`);
+  const lepoon = muoto.findIndex((arvo, i) => i > huippu && arvo === 0);
+  assert.ok(lepoon > huippu, 'leimahdus ei palaa lepoon');
+  const valahdys = hetket[lepoon] * kesto;
+  assert.ok(valahdys > 0.15 && valahdys <= 0.45,
+    `leimahdus kestää ${valahdys.toFixed(2)}s — tavoite on noin 0,3 s`);
+  assert.ok(kesto - valahdys >= 1.5,
+    `himmeä vaihe on vain ${(kesto - valahdys).toFixed(2)}s — majakan pimeä hetki on pitkä`);
+  // Sini-aallon paluu näkyisi tässä: puolivälissä jaksoa ollaan levossa.
+  const puolivali = hetket.findIndex((t) => t >= 0.5);
+  assert.equal(muoto[puolivali], 0, 'jakson puolivälissä piste ei ole himmeä — muoto on aalto');
+  // Muoto on kirjoitettava SMILille juuri näinä listoina: spline-
+  // pehmennys tekisi verhokäyrästä taas aallon.
+  const animaatio = UI.match(/for \(const \[maare, arvot\] of[\s\S]*?\}, ympyra\);/)[0];
+  assert.ok(!/keySplines/.test(animaatio), 'syke käyttää yhä spline-pehmennystä');
+  assert.match(animaatio, /calcMode: 'linear'/, 'sykkeen välistys ei ole lineaarinen');
+  assert.match(animaatio, /keyTimes: SYKE_HETKET/, 'sykkeen avainhetket eivät tule taulukosta');
+
   const karjet = UI.match(/const KARJET = \[[\s\S]*?\];/)[0];
   const parit = [...karjet.matchAll(/\[([\d.]+), ([\d.]+)\]/g)]
     .map(([, a, b]) => [Number(a), Number(b)]);
   assert.equal(parit.length, 4, 'kärjillä ei ole sekä säteen että kirkkauden ääriarvoja');
   for (const [pieni, iso] of parit) {
     assert.ok(iso / pieni > 1.25, `syke ${pieni}…${iso} on liian vaimea nähtäväksi`);
+  }
+});
+
+test('siniset pisteet eivät välky lainkaan', () => {
+  // Omistaja 12.8.2026: laivat ovat tasaisen himmeitä pisteitä, jotka
+  // vain liikkuvat. Syke lisätään vain isoisän reitille.
+  assert.match(UI, /const valahtaa = reitti\.laji === 'isoisa';/,
+    'sykettä ei rajata isoisän reittiin');
+  assert.match(UI, /if \(!valahtaa\) continue;/,
+    'laivan kärjelle luodaan yhä <animate> — piste välkkyisi');
+});
+
+test('punainen kulkee entistä hitaammin ja laivat sitä hitaammin', () => {
+  /*
+   * Omistaja 12.8.2026: *"punainen isoisän piste liikkuu hitaammin kuin
+   * nyt, ja siniset laivat vielä hitaammin kuin punainen"*. Vauhti on
+   * matkan pituus jaettuna matka-ajalla (kesto × ikkuna), joten
+   * kummankin kentän muutos näkyisi tässä.
+   */
+  const vauhti = (r) => polunPituus(r.pisteet) / (r.kesto * r.ikkuna);
+  const punaiset = ALKUREITIT.filter((r) => r.laji === 'isoisa');
+  const laivat = ALKUREITIT.filter((r) => r.laji === 'kauppa');
+  for (const r of punaiset) {
+    // Ennen hienosäätöä silmukka oli 26 s ja nopein osa 60 yks/s.
+    assert.ok(r.kesto >= 36, `punaisen silmukka ${r.kesto}s on entistä lyhyempi`);
+    assert.ok(vauhti(r) < 45, `punainen kulkee ${vauhti(r).toFixed(1)} yks/s — yhä kiitolaukkaa`);
+  }
+  const hitainPunainen = Math.min(...punaiset.map(vauhti));
+  for (const r of laivat) {
+    assert.ok(r.kesto >= 50 && r.kesto <= 70,
+      `laivan silmukka ${r.kesto}s ei ole 50–70 sekuntia`);
+    assert.ok(vauhti(r) < hitainPunainen,
+      `laiva kulkee ${vauhti(r).toFixed(1)} yks/s eli vähintään yhtä nopeasti kuin punainen`);
   }
 });
 
