@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- PELIN OSOITE.
+	     Tähän tulee se verkko-osoite, josta peli avautuu selaimella.
+	     Vaihda alla oleva paikkamerkki oikeaksi osoitteeksi — se on
+	     ainoa muutos, jonka kuori tarvitsee. Ohje: ios/OHJE.md.
+
+	     Niin kauan kuin arvo on paikkamerkki, sovellus näyttää
+	     käynnistyessään suomenkielisen huomautuksen eikä yritä
+	     ladata mitään. -->
+	<key>PELIN_OSOITE</key>
+	<string>https://ASETA-PELIN-OSOITE.example/</string>
+</dict>
+</plist>

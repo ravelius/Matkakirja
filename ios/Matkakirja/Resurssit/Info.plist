@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>fi</string>
+	<key>CFBundleDisplayName</key>
+	<string>Matkakirja</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+
+	<!-- Aloitusruutu on pelkkä pelin taustaväri: peli itse piirtää kantensa,
+	     eikä kuoreen haluta erillistä splashia, joka vanhenee. -->
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>Taustavari</string>
+	</dict>
+
+	<!-- Peli on suunniteltu pystyasentoon (manifest.webmanifest: portrait).
+	     iPadilla sallitaan kaikki asennot, koska siellä pystylukko tuntuu rikkinäiseltä. -->
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+
+	<!-- Pelin tausta on tumma (#1d1610), joten tilapalkin teksti valkoisena. -->
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+
+	<!-- Lupatekstit näkyvät pelaajalle sellaisenaan, siksi suomeksi ja
+	     pelin äänellä. Molempia tarvitaan saneluun (Viisas Pöllö). -->
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Matkakirja käyttää mikrofonia, kun puhut pelille — esimerkiksi vastataksesi kysymykseen ääneen. Ääntä ei tallenneta eikä lähetetä minnekään pelin ulkopuolelle.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Puheentunnistus muuttaa puheesi tekstiksi, jotta voit vastata pelille sanomalla vastauksen ääneen. Tunnistus tehdään laitteessa aina kun se on mahdollista.</string>
+
+	<!-- Peli haetaan https-osoitteesta. Paikallisverkko sallitaan vain siksi,
+	     että kehitysversion voi ajaa omalta koneelta (http://192.168.x.x:8000). -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+
+	<!-- Sovellus ei sisällä omaa salausta; vastaus säästää TestFlight-kierrokselta
+	     erillisen vientilomakkeen joka latauksella. -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+</dict>
+</plist>
