@@ -27,6 +27,59 @@ const winnerDialog = document.getElementById('winner-dialog');
 
 let ui = null;
 
+/* --- päivitysruutu ja päivityksen jälkeinen nollaus ------------------------ */
+
+/*
+ * PÄIVITYSRUUTU (omistajan havainto 13.8.2026).
+ *
+ * Lippu asetetaan JUURI ennen uudelleenlatausta, ja index.html:n
+ * pikkuskripti näyttää sen perusteella tumman ruudun logoineen heti
+ * uuden latauksen ensimmäisellä maalauksella. Lippu on
+ * sessionStoragessa eikä localStoragessa: se koskee tätä yhtä latausta
+ * eikä saa jäädä laitteelle, jos päivitys jää kesken.
+ */
+const PAIVITYS_LIPPU = 'matkakirja-paivittyy';
+/** Viimeksi nähty versio. Sama avain kuin versionumeron korostuksella. */
+const NAHTY_VERSIO_AVAIN = 'matkakirja-nahty-versio';
+
+function merkitsePaivitys() {
+  try {
+    sessionStorage.setItem(PAIVITYS_LIPPU, '1');
+  } catch {
+    /* yksityinen selaus: päivitys toimii, ruutu vain jää näyttämättä */
+  }
+  // Ruutu esiin jo ennen latausta, jottei vanha näkymä jää tuijottamaan.
+  document.body.classList.add('paivittyy');
+  const ruutu = document.getElementById('paivitysruutu');
+  if (ruutu) ruutu.hidden = false;
+}
+
+/** Päivitysruutu pois, kun peli on rakennettu. */
+function paataPaivitysruutu() {
+  try {
+    sessionStorage.removeItem(PAIVITYS_LIPPU);
+  } catch {
+    /* ei mitään siivottavaa */
+  }
+  document.body.classList.remove('paivittyy');
+  const ruutu = document.getElementById('paivitysruutu');
+  if (ruutu) ruutu.hidden = true;
+}
+
+/**
+ * Onko tämä ensimmäinen lataus uudella versiolla?
+ *
+ * Luetaan KERRAN ja ennen kuin uusi versionumero kirjoitetaan, koska
+ * sama tieto tarvitaan kahteen asiaan: versionumeron korostukseen ja
+ * päivityksen jälkeiseen nollaukseen (nollaaValitila).
+ */
+let paivitysTapahtui = false;
+try {
+  paivitysTapahtui = localStorage.getItem(NAHTY_VERSIO_AVAIN) !== APP_VERSION;
+} catch {
+  paivitysTapahtui = false;
+}
+
 // Pystyasento. Androidilla tämä lukitsee laitteen; iOS ei tue rajapintaa,
 // joten siellä vaaka-asennon hoitaa css:n .rotate-guard.
 try {
@@ -304,6 +357,7 @@ const updateBtn = document.getElementById('update-btn');
 updateBtn.addEventListener('click', async () => {
   updateBtn.disabled = true;
   updateBtn.textContent = 'Päivitetään…';
+  merkitsePaivitys();
   try {
     if ('serviceWorker' in navigator) {
       const regs = await navigator.serviceWorker.getRegistrations();
@@ -351,9 +405,8 @@ paivitaVersioKulma();
  * sitten se kutistuu tavalliseksi CSS-siirtymällä.
  */
 try {
-  const AVAIN = 'matkakirja-nahty-versio';
-  if (localStorage.getItem(AVAIN) !== APP_VERSION) {
-    localStorage.setItem(AVAIN, APP_VERSION);
+  if (paivitysTapahtui) {
+    localStorage.setItem(NAHTY_VERSIO_AVAIN, APP_VERSION);
     versioKulma.classList.add('tuore');
     setTimeout(() => versioKulma.classList.remove('tuore'), 30000);
   }
@@ -459,6 +512,7 @@ document.getElementById('nollaa-ok').addEventListener('click', () => {
   const nappi = document.getElementById('nollaa-ok');
   nappi.disabled = true;
   nappi.textContent = 'Tyhjennetään…';
+  merkitsePaivitys();
   tyhjennaMuistit();
 });
 document.getElementById('rules-btn').addEventListener('click', () => rulesDialog.showModal());
@@ -495,6 +549,9 @@ if (hasManifest && 'serviceWorker' in navigator && location.protocol.startsWith(
       oliOhjain = true;
       return;
     }
+    // Sama siisti ruutu kuin Päivitä-napista: lataus alkaa heti, joten
+    // lippu on asetettava ennen sitä.
+    merkitsePaivitys();
     location.reload();
   });
 
@@ -546,14 +603,70 @@ try {
   katseluPack = null;
 }
 
+/*
+ * PÄIVITYKSEN JÄLKEINEN KOVA NOLLAUS (omistajan havainto 13.8.2026
+ * iPadilla: "kartta jäi sumennetuksi ja saapumiskortti puuttui, uusi
+ * peli korjasi").
+ *
+ * Tallennuksessa on kaksi eri lajia tietoa. Ensimmäinen on pelaajan
+ * eteneminen — sijainti, rahat, löydöt, leimat, päivät — ja siihen EI
+ * kosketa. Toinen on hetkellinen välitila: kesken jäänyt siirtovalinta,
+ * auki ollut visa, tarjottu kohtaaminen, käynnissä ollut lento. Ne
+ * kuuluvat siihen hetkeen, jona sivu suljettiin, ja ne odottavat
+ * jatkoa käyttöliittymältä, jota ei enää ole.
+ *
+ * Tavallisessa latauksessa se ei haittaa: sama koodi jatkaa siitä
+ * mihin jäi. Version vaihtuessa jatkaja on eri koodi, ja silloin
+ * välitila voi jäädä ristiriitaan — sumennusverho päälle ilman
+ * dialogia, saapumiskortti piirtämättä. Siksi juuri päivityksen
+ * jälkeen välitila pyyhitään ja näkymä rakennetaan tallenteesta
+ * puhtaalta pöydältä.
+ *
+ * Vaiheet 'pickstart' ja 'over' jätetään rauhaan: kumpikaan ei ole
+ * välitila vaan pelin oma kohta.
+ */
+const VALITILAN_VAIHEET = new Set(['roll', 'move', 'quiz', 'offer', 'event', 'duel']);
+
+function nollaaValitila(game) {
+  if (!game) return game;
+  // Selaimen puolen hetkelliset liput: animaatioluokat ja auki jääneet
+  // ikkunat. DOM on latauksen jäljiltä puhdas, mutta tämä on halpa ja
+  // tekee säännöstä yksiselitteisen.
+  document.body.classList.remove(
+    'flight-active', 'zoom-kaynnissa', 'manner-zoom', 'manner-odottaa',
+    'kartta-raahaus', 'radio-tila',
+  );
+  for (const dialogi of document.querySelectorAll('dialog[open]')) dialogi.close();
+
+  if (VALITILAN_VAIHEET.has(game.phase)) game.phase = 'action';
+  game.die = null;
+  game.moves = null;
+  game.quiz = null;
+  game.duel = null;
+  game.eventCard = null;
+  game.pendingFare = null;
+  game.autoTravel = false;
+  game.travelMode = null;
+  game.lastPath = null;
+  return game;
+}
+
 // Kesken jäänyt peli jatkuu automaattisesti, muuten kysytään pelaajat.
 if (katseluPack) {
   avaaKatselu(katseluPack);
 } else {
   const saved = loadGame();
-  if (saved) attach(saved);
-  else startGame();
+  if (saved) {
+    if (paivitysTapahtui) nollaaValitila(saved);
+    attach(saved);
+    // Nollattu tila myös levylle, jottei sama välitila palaa seuraavalla
+    // avauksella.
+    if (paivitysTapahtui) saveGame(saved);
+  } else startGame();
 }
+
+// Peli on rakennettu: päivitysruutu väistyy.
+paataPaivitysruutu();
 
 /*
  * Kehittäjätila (omistajan toive). Muutoslokista aukeaa salasanaikkuna, ja

@@ -82,6 +82,25 @@ function aihesivu() {
       el('figcaption', { luokat: ['vinkki-hero-teksti'] }, t('Kew Gardens ilmasta.'))));
 }
 
+/**
+ * Maalehden alku: tilastorivit, tervehdykset ja vasta sitten juttu.
+ *
+ * Rakenne on sama kuin js/ui.js naytaMaaTunnusluvut piirtää.
+ */
+function maalehdenAlku() {
+  return el('div', { id: 'arrival-maa' },
+    el('div', { id: 'arrival-maa-tunnusluvut' },
+      el('div', { luokat: ['maa-tunnusrivi'] },
+        el('span', { luokat: ['maa-tunnus'] }, t('37,9 milj.'), el('span', { luokat: ['maa-sija'] }, t(' (36)'))),
+        el('span', { luokat: ['maa-tunnus'] }, t('603 500 km²'))),
+      el('div', { luokat: ['maa-tunnusrivi'] },
+        el('span', { luokat: ['maa-tunnus'] }, el('button', { luokat: ['maa-demokratia'] }, t('0,34 · V-Dem'))))),
+    el('div', { id: 'arrival-maa-tervehdykset' },
+      el('span', { luokat: ['tervehdys'] }, t('Dobryi den 67 %')),
+      el('span', { luokat: ['tervehdys'] }, t('Zdrastvuite 30 %'))),
+    el('p', { luokat: ['arrival-intro'] }, t('Ukraina on suurin kokonaan Euroopassa sijaitseva maa.')));
+}
+
 /** Visa asuu samassa dialogissa sivun perässä. */
 function visa() {
   return el('div', { id: 'arrival-kulttuuri' },
@@ -167,6 +186,19 @@ test('tyhjä tai puuttuva juuri ei kaadu', () => {
 test('katot ovat järkevät', () => {
   assert.ok(LUETTAVAN_KATTO > LUETTAVAN_VAHIMMAIS);
   assert.ok(LUETTAVAN_VAHIMMAIS > 0);
+});
+
+/*
+ * Maalehden tilastorivit ovat ruutugrafiikkaa, eivät luettavaa
+ * (omistajan havainto 13.8.2026: luenta alkoi minuutin numerolitanialla
+ * ennen kuin juttu edes alkoi).
+ */
+test('maalehden tilastorivit ja tervehdykset jäävät lukematta', () => {
+  const teksti = kokoaLuettavaTeksti(maalehdenAlku());
+  assert.ok(teksti.startsWith('Ukraina on suurin'), teksti);
+  for (const kielletty of ['37,9', '603 500', 'V-Dem', 'Dobryi', 'Zdrastvuite', '67 %']) {
+    assert.ok(!teksti.includes(kielletty), `tilastolohko vuoti luentaan: ${kielletty}`);
+  }
 });
 
 /*

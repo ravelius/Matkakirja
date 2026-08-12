@@ -10,7 +10,7 @@
  *      napautus sulkee
  *   2. pöllö kartalla ja lehdessä, paneelin avaus ja sulku (ulkopuolinen
  *      napautus ja Esc — rastia ei enää ole), paperinvaalea ulkoasu ja
- *      matala alanappirivi (näppäimistö 1/3, mikrofoni 2/3)
+ *      matala alanappirivi (näppäimistö | kaiutin | mikrofoni)
  *   3. ehdotukset ja kysymys → vastaus (rajapinta mockattu route-fulfillillä)
  *   4. SPOILERISUOJA oikeasta pyyntörungosta: avoinna olevan lehden
  *      minitehtävä ei ole kontekstissa, jutun teksti on
@@ -21,6 +21,16 @@
  *   8. SANELU NATIIVISILLALTA: valesillalla (window.matkakirjaNatiivi)
  *      pöllö kutsuu sanelu.luvat/aloita eikä koske SpeechRecognitioniin
  *      — ja lehden kaiutinnappi lukee sivun sillan luenta.puhulla
+ *
+ * TOISEN ERÄN LISÄYKSET (13.8.2026)
+ *   9. KAIUTINVIPU: päällä ollessaan uusi vastaus luetaan ääneen, eikä
+ *      luentaan päädy kysymyksiä, ehdotuksia eikä jatkokysymyksiä
+ *  10. JATKOKYSYMYKSET vastauksen alla ja niiden napautus
+ *  11. ALLEVIIVATTU LINKKI keskellä vastausta → avaa pelin oman jutun
+ *  12. KEHITTÄJÄOTSAKE lähtee vain kun koodi on talletettu
+ *  13. PÄIVITYSRUUTU latauksen ajan
+ *  14. NÄKYMÄN ELVYTYS: kutistunut ja palautunut näkymä ei jätä lehteä
+ *      puhelinlevyiseksi
  *
  *   node tools/savuke-pollo.mjs
  *
@@ -146,6 +156,35 @@ const SILTA_MOCK = `
 }());
 `;
 
+/**
+ * Mockattu puhesyntetisaattori (js/lukija.js selainPuhe).
+ *
+ * Headless-Chromiumissa speechSynthesis on olemassa mutta ei puhu, eikä
+ * siitä saa selville MITÄ luettiin. Kaiutinvivun koko idea on juuri se,
+ * että luettavaksi menee vain vastausteksti — ei kysymyksiä, ei
+ * ehdotuksia — joten mock kirjaa jokaisen lausuman talteen.
+ */
+const PUHE_MOCK = `
+window.__puhutut = [];
+class TestiLausuma {
+  constructor(teksti) { this.text = teksti; this.lang = ''; this.voice = null; }
+}
+window.SpeechSynthesisUtterance = TestiLausuma;
+// speechSynthesis on selaimessa vain luettava getteri, joten sijoitus
+// ei riitä — se on määriteltävä uudelleen.
+Object.defineProperty(window, 'speechSynthesis', {
+  configurable: true,
+  get: () => ({
+    getVoices: () => [],
+    cancel() { window.__peruutuksia = (window.__peruutuksia ?? 0) + 1; },
+    speak(lausuma) {
+      window.__puhutut.push(lausuma.text);
+      setTimeout(() => lausuma.onend?.(), 10);
+    },
+  }),
+});
+`;
+
 /** Mockattu SpeechRecognition. Headless-selaimessa ei ole mikrofonia. */
 const SANELU_MOCK = `
 window.__saneluAloituksia = 0;
@@ -165,10 +204,18 @@ class TestiTunnistus {
 window.SpeechRecognition = TestiTunnistus;
 `;
 
-/** Rajapinnan mock: ehdotukset ja vastaus. Pyyntörungot jäävät talteen. */
+/**
+ * Rajapinnan mock: ehdotukset ja vastaus. Pyyntörungot jäävät talteen.
+ *
+ * Vastaus jäljittelee oikeaa workeria (tools/pollo/worker.js), joka
+ * erottaa jatkokysymykset omaan kenttäänsä — peli ei siis koskaan näe
+ * "JATKOT:"-merkintää, ja mockin on oltava samaa mieltä.
+ */
 async function kytkeRajapinta(sivu, rungot) {
   await sivu.route(`${POLLO_URL}/**`, async (route) => {
     const runko = JSON.parse(route.request().postData() ?? '{}');
+    // Otsakkeet talteen: kehittäjäkoodi kulkee niissä.
+    runko.__otsakkeet = route.request().headers();
     rungot.push(runko);
     const data = runko.tehtava === 'ehdotukset'
       ? {
@@ -178,7 +225,21 @@ async function kytkeRajapinta(sivu, rungot) {
           'Millainen kaupunki Lontoo oli 1873?',
         ],
       }
-      : { vastaus: 'Lontoon metro avattiin vuonna 1863 ja se oli maailman ensimmäinen.' };
+      : {
+        /*
+         * "varapolku" on savukkeen oma koesana: se antaa vastauksen,
+         * jossa EI ole yhtään pelin indeksin sanaa, jolloin linkille ei
+         * löydy ankkuria tekstistä ja sen pitää ilmestyä napiksi
+         * vastauksen alle.
+         */
+        vastaus: /varapolku/i.test(runko.kysymys ?? '')
+          ? 'Tästä ei ole pelissä juttua, mutta yleisesti ottaen kyse on vanhasta ilmiöstä.'
+          : 'Lontoon metro avattiin vuonna 1863 ja se oli maailman ensimmäinen.',
+        jatkot: [
+          'Miten tunnelit kaivettiin?',
+          'Kuka maksoi rakentamisen?',
+        ],
+      };
     await route.fulfill({
       status: 200,
       contentType: 'application/json; charset=utf-8',
@@ -212,6 +273,12 @@ async function avaaPeli(ctx, { sanelu = true, silta = false } = {}) {
    */
   await sivu.addInitScript(sanelu ? SANELU_MOCK
     : 'delete window.SpeechRecognition; delete window.webkitSpeechRecognition;');
+  /*
+   * Puhesyntetisaattori mockataan aina paitsi natiivisiltakokeessa:
+   * siellä luennan pitää mennä sillan kautta, ja mock veisi siltä
+   * ensisijaisuuden todistusvoiman.
+   */
+  if (!silta) await sivu.addInitScript(PUHE_MOCK);
   // Natiivisilta ruiskutetaan ennen pelin skriptejä, kuten oikea kuorikin.
   if (silta) await sivu.addInitScript(SILTA_MOCK);
   await sivu.route((url) => !/127\.0\.0\.1|localhost|pollo\.testi\.invalid/.test(url.href),
@@ -600,25 +667,31 @@ vaadi('napautus paneelin ulkopuolelle sulkee', sulkeminen.ulkoa === false,
 vaadi('Esc sulkee paneelin', sulkeminen.escilla === false, JSON.stringify(sulkeminen));
 
 /*
- * ALARIVI: yksi matala nappirivi koko leveydeltä — näppäimistö 1/3,
- * mikrofoni 2/3 (omistajan linjaus 12.8.2026). Selitetekstit poistuivat,
- * joten aria-labelit ovat pakolliset.
+ * ALARIVI: yksi matala nappirivi koko leveydeltä — näppäimistö,
+ * kaiutin ja mikrofoni (omistajan tilaus 13.8.2026). Mikrofoni on yhä
+ * levein. Selitetekstit poistuivat, joten aria-labelit ovat pakolliset.
  */
 const alarivi = await sivu.evaluate(() => {
   const syote = document.querySelector('.pollo-syote');
   const rivi = document.querySelector('.pollo-sanelu');
   const kirjoita = document.querySelector('.pollo-kirjoita');
+  const kaiutin = document.querySelector('.pollo-kaiutin');
   const mikki = document.querySelector('.pollo-mikki');
   const r = rivi.getBoundingClientRect();
   const k = kirjoita.getBoundingClientRect();
+  const a = kaiutin.getBoundingClientRect();
   const m = mikki.getBoundingClientRect();
   return {
     pohjalla: syote.lastElementChild === rivi,
     korkeus: Math.round(r.height),
+    jarjestys: [...rivi.children].map((el) => el.className.replace('pollo-nappula ', '')),
     osuusKirjoita: k.width / r.width,
+    osuusKaiutin: a.width / r.width,
     osuusMikki: m.width / r.width,
     leveysSuhde: r.width / syote.getBoundingClientRect().width,
     kirjoitaLabel: kirjoita.getAttribute('aria-label') ?? '',
+    kaiutinLabel: kaiutin.getAttribute('aria-label') ?? '',
+    kaiutinPainettu: kaiutin.getAttribute('aria-pressed'),
     mikkiLabel: mikki.getAttribute('aria-label') ?? '',
     // Selitetekstit poistuivat: jäljellä on vain tyhjä tilarivi.
     selitteet: [...syote.querySelectorAll('p, .pollo-vaihda')]
@@ -627,14 +700,21 @@ const alarivi = await sivu.evaluate(() => {
 });
 vaadi('nappirivi on paneelin pohjalla', alarivi.pohjalla === true, JSON.stringify(alarivi));
 vaadi('nappirivi on matala (alle 42 px)', alarivi.korkeus <= 42, `${alarivi.korkeus} px`);
-vaadi('näppäimistö vie kolmasosan, mikrofoni kaksi kolmasosaa',
-  Math.abs(alarivi.osuusKirjoita - 1 / 3) < 0.06 && Math.abs(alarivi.osuusMikki - 2 / 3) < 0.06,
-  `${alarivi.osuusKirjoita.toFixed(2)} / ${alarivi.osuusMikki.toFixed(2)}`);
+vaadi('rivillä on kolme nappia järjestyksessä näppäimistö, kaiutin, mikrofoni',
+  alarivi.jarjestys.join(' ') === 'pollo-kirjoita pollo-kaiutin pollo-mikki',
+  alarivi.jarjestys.join(' '));
+vaadi('mikrofoni on yhä levein, näppäimistö ja kaiutin yhtä leveät',
+  Math.abs(alarivi.osuusKirjoita - alarivi.osuusKaiutin) < 0.02
+  && alarivi.osuusMikki > alarivi.osuusKirjoita * 1.7,
+  `${alarivi.osuusKirjoita.toFixed(2)} / ${alarivi.osuusKaiutin.toFixed(2)} / ${alarivi.osuusMikki.toFixed(2)}`);
 vaadi('rivi on koko paneelin levyinen', alarivi.leveysSuhde > 0.9,
   alarivi.leveysSuhde.toFixed(2));
 vaadi('kuvakkeilla on aria-labelit',
-  /kirjoita/i.test(alarivi.kirjoitaLabel) && /ääneen/i.test(alarivi.mikkiLabel),
-  `${alarivi.kirjoitaLabel} | ${alarivi.mikkiLabel}`);
+  /kirjoita/i.test(alarivi.kirjoitaLabel) && /ääneen/i.test(alarivi.mikkiLabel)
+  && /lue|luenta/i.test(alarivi.kaiutinLabel),
+  `${alarivi.kirjoitaLabel} | ${alarivi.kaiutinLabel} | ${alarivi.mikkiLabel}`);
+vaadi('kaiutin on vipu (aria-pressed) ja aluksi pois päältä',
+  alarivi.kaiutinPainettu === 'false', String(alarivi.kaiutinPainettu));
 vaadi('mikin alta poistuivat tekstiselitteet', alarivi.selitteet === '',
   alarivi.selitteet.slice(0, 60));
 
@@ -674,6 +754,202 @@ vaadi('kysymys näkyy keskustelussa',
 vaadi('vastaus näkyy keskustelussa',
   kysymys.viestit.some((v) => /maailman ensimmäinen/.test(v)));
 vaadi('odotusviesti poistuu vastauksen tullessa', kysymys.odottaa === 0);
+
+/* ================================================================== */
+/* 3b) Jatkokysymykset ja alleviivattu linkki                          */
+/* ================================================================== */
+
+/*
+ * JATKOKYSYMYKSET tulevat workerilta omana kenttänään, ja peli näyttää
+ * ne nappeina vastauksen alla. Raaka "JATKOT:"-merkintä ei saa näkyä
+ * missään — jäsennys tehdään palvelimella.
+ */
+const jatkot = await sivu.evaluate(() => {
+  // Virrassa on aiempienkin vastausten ryhmiä: mitataan viimeisin.
+  const ryhma = [...document.querySelectorAll('.pollo-jatkot')].at(-1);
+  const napit = [...(ryhma?.querySelectorAll('.pollo-jatko') ?? [])];
+  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  return {
+    maara: napit.length,
+    tekstit: napit.map((n) => n.textContent),
+    jarjestys: vastaus ? Boolean(vastaus.compareDocumentPosition(napit[0]?.parentElement ?? vastaus)
+      & Node.DOCUMENT_POSITION_FOLLOWING) : false,
+    raakaaMerkintaa: /JATKOT/i.test(document.querySelector('.pollo-virta').textContent),
+    // Alleviivattu linkki keskellä vastausta: teksti puhuu Lontoon
+    // metrosta, ja pelin oma juttu löytyy indeksistä.
+    linkkeja: vastaus?.querySelectorAll('a.pollo-tekstilinkki').length ?? 0,
+    linkinTeksti: vastaus?.querySelector('a.pollo-tekstilinkki')?.textContent ?? '',
+    napitAlla: [...document.querySelectorAll('.pollo-linkit')].at(-1)
+      ?.querySelectorAll('.pollo-linkki').length ?? 0,
+  };
+});
+vaadi('vastauksen alle tulee jatkokysymysnapit', jatkot.maara === 2,
+  `${jatkot.maara} kpl: ${jatkot.tekstit.join(' | ')}`);
+vaadi('jatkokysymykset ovat vastauksen alla', jatkot.jarjestys === true);
+vaadi('raaka JATKOT-merkintä ei näy pelaajalle', jatkot.raakaaMerkintaa === false);
+vaadi('vastaustekstissä on alleviivattu pelinsisäinen linkki', jatkot.linkkeja >= 1,
+  `${jatkot.linkkeja} kpl (${jatkot.linkinTeksti}), varapolun nappeja ${jatkot.napitAlla}`);
+
+await sivu.screenshot({ path: join(ULOS, 'pollo-jatkot-390.png') });
+
+// Alleviivatun linkin napautus avaa pelin oman jutun samalla
+// mekanismilla kuin vanhat "Lue:"-napit.
+const tekstilinkki = await sivu.evaluate(async () => {
+  const linkki = [...document.querySelectorAll('.pollo-pollo a.pollo-tekstilinkki')].at(-1);
+  if (!linkki) return { onLinkkia: false };
+  const ui = window.matkakirja.ui;
+  linkki.click();
+  await new Promise((r) => setTimeout(r, 900));
+  return {
+    onLinkkia: true,
+    lehtiAuki: document.getElementById('arrival-dialog').open,
+    maalehti: Boolean(ui.tutkiMaaLehti),
+    chatKiinni: document.querySelector('.pollo-paneeli').hidden,
+  };
+});
+vaadi('alleviivattu linkki avaa pelin oman jutun',
+  tekstilinkki.onLinkkia === true && tekstilinkki.lehtiAuki === true
+  && tekstilinkki.chatKiinni === true, JSON.stringify(tekstilinkki));
+await sivu.evaluate(async () => {
+  document.getElementById('arrival-dialog').close();
+  await new Promise((r) => setTimeout(r, 400));
+});
+
+/* ================================================================== */
+/* 3c) Kaiutinvipu                                                     */
+/* ================================================================== */
+
+/*
+ * KAIUTIN ON VIPU. Päällä ollessaan jokainen uusi vastaus luetaan heti
+ * ääneen — mutta VAIN vastaus. Kysymys, ehdotukset ja jatkokysymykset
+ * eivät ole pöllön puhetta, eivätkä ne saa päätyä luentaan.
+ */
+const kaiutinTila = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  if (document.querySelector('.pollo-paneeli').hidden) {
+    document.querySelector('.pollo-nappi').click();
+    await odota(600);
+  }
+  window.__puhutut = [];
+  const kaiutin = document.querySelector('.pollo-kaiutin');
+  kaiutin.click();
+  await odota(120);
+  const paallaHeti = {
+    luokka: kaiutin.classList.contains('paalla'),
+    aria: kaiutin.getAttribute('aria-pressed'),
+    talletettu: localStorage.getItem('matkakirja-pollo-aani'),
+    puhuttuaEnnenVastausta: window.__puhutut.length,
+  };
+  document.querySelector('.pollo-kirjoita').click();
+  await odota(150);
+  document.querySelector('.pollo-kentta').value = 'Milloin Lontoon metro avattiin?';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  await odota(900);
+  return {
+    ...paallaHeti,
+    puhutut: window.__puhutut.slice(),
+    jatkoja: document.querySelectorAll('.pollo-jatkot .pollo-jatko').length,
+  };
+});
+vaadi('kaiutin merkitään päälle näkyvästi ja saavutettavasti',
+  kaiutinTila.luokka === true && kaiutinTila.aria === 'true', JSON.stringify(kaiutinTila));
+vaadi('vipu muistetaan laitteella', kaiutinTila.talletettu === '1',
+  String(kaiutinTila.talletettu));
+vaadi('vivun kytkeminen ei itsessään lue mitään',
+  kaiutinTila.puhuttuaEnnenVastausta === 0);
+vaadi('uusi vastaus luetaan ääneen',
+  kaiutinTila.puhutut.join(' ').includes('Lontoon metro avattiin'),
+  JSON.stringify(kaiutinTila.puhutut));
+vaadi('kysymystä ei lueta ääneen',
+  !kaiutinTila.puhutut.some((t) => /Milloin Lontoon metro avattiin\?/.test(t)),
+  JSON.stringify(kaiutinTila.puhutut));
+vaadi('jatkokysymyksiä ei lueta ääneen',
+  kaiutinTila.jatkoja > 0
+  && !kaiutinTila.puhutut.some((t) => /Miten tunnelit kaivettiin/.test(t)),
+  JSON.stringify(kaiutinTila.puhutut));
+
+await sivu.screenshot({ path: join(ULOS, 'pollo-kaiutin-390.png') });
+
+// Jatkokysymyksen napautus lähettää sen kysymyksenä.
+const jatkoKlikki = await sivu.evaluate(async () => {
+  const nappi = document.querySelector('.pollo-jatkot .pollo-jatko');
+  const teksti = nappi?.textContent ?? '';
+  nappi?.click();
+  await new Promise((r) => setTimeout(r, 900));
+  return {
+    teksti,
+    kysytty: [...document.querySelectorAll('.pollo-kayttaja')].some((v) => v.textContent === teksti),
+  };
+});
+vaadi('jatkokysymyksen napautus lähettää sen', jatkoKlikki.kysytty === true,
+  JSON.stringify(jatkoKlikki));
+
+// Vipu pois: luenta lakkaa ja tila unohtuu talletuksesta.
+const kaiutinPois = await sivu.evaluate(async () => {
+  const kaiutin = document.querySelector('.pollo-kaiutin');
+  kaiutin.click();
+  await new Promise((r) => setTimeout(r, 100));
+  window.__puhutut = [];
+  document.querySelector('.pollo-kirjoita').click();
+  await new Promise((r) => setTimeout(r, 120));
+  document.querySelector('.pollo-kentta').value = 'Entä Thames?';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  await new Promise((r) => setTimeout(r, 900));
+  return {
+    aria: kaiutin.getAttribute('aria-pressed'),
+    talletettu: localStorage.getItem('matkakirja-pollo-aani'),
+    puhutut: window.__puhutut.length,
+  };
+});
+vaadi('vipu pois: vastausta ei enää lueta',
+  kaiutinPois.aria === 'false' && kaiutinPois.puhutut === 0, JSON.stringify(kaiutinPois));
+vaadi('pois kytketty vipu ei jää talletukseen', !kaiutinPois.talletettu,
+  String(kaiutinPois.talletettu));
+
+/* ================================================================== */
+/* 3d) Kehittäjäkoodi otsakkeessa                                      */
+/* ================================================================== */
+
+/*
+ * Otsake lähtee VAIN jos koodi on talletettu laitteelle. Ilman koodia
+ * pyynnössä ei saa olla mitään jälkeä kehittäjätilasta.
+ */
+const ilmanKoodia = rungot.filter((r) => r.tehtava === 'vastaus').at(-1) ?? {};
+vaadi('ilman koodia kehittäjäotsaketta ei lähetetä',
+  !('x-pollo-kehittaja' in (ilmanKoodia.__otsakkeet ?? {})),
+  JSON.stringify(Object.keys(ilmanKoodia.__otsakkeet ?? {})));
+
+const koodilla = await sivu.evaluate(async () => {
+  localStorage.setItem('matkakirja-pollo-kehittajakoodi', 'testikoodi-123');
+  document.querySelector('.pollo-kirjoita').click();
+  await new Promise((r) => setTimeout(r, 120));
+  document.querySelector('.pollo-kentta').value = 'Kuka rakensi metron?';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  await new Promise((r) => setTimeout(r, 900));
+  localStorage.removeItem('matkakirja-pollo-kehittajakoodi');
+  return true;
+});
+const koodillinen = rungot.filter((r) => r.tehtava === 'vastaus').at(-1) ?? {};
+vaadi('talletettu koodi lähtee otsakkeessa',
+  koodilla === true
+  && (koodillinen.__otsakkeet ?? {})['x-pollo-kehittaja'] === 'testikoodi-123',
+  JSON.stringify((koodillinen.__otsakkeet ?? {})['x-pollo-kehittaja']));
+
+// Kehittäjäkoodin kenttä näkyy vain kehittäjätilassa.
+const koodikentta = await sivu.evaluate(async () => {
+  const pollo = window.matkakirjaPollo;
+  const ennen = pollo.kehittajaRivi.hidden;
+  localStorage.setItem('matkakirja-kehittaja', '1');
+  pollo.sulje();
+  await new Promise((r) => setTimeout(r, 150));
+  pollo.avaa();
+  await new Promise((r) => setTimeout(r, 400));
+  const jalkeen = pollo.kehittajaRivi.hidden;
+  localStorage.removeItem('matkakirja-kehittaja');
+  return { ennen, jalkeen };
+});
+vaadi('kehittäjäkoodin kenttä näkyy vain kehittäjätilassa',
+  koodikentta.ennen === true && koodikentta.jalkeen === false, JSON.stringify(koodikentta));
 
 /* ================================================================== */
 /* 4) Spoilerisuoja ja paikallinen aineisto oikeasta pyyntörungosta     */
@@ -730,6 +1006,45 @@ const lehtiKysely = await sivu.evaluate(async () => {
 });
 vaadi('lehdestä voi kysyä', lehtiKysely === true);
 
+/* ================================================================== */
+/* 4b) Linkkisuositusten osuvuus (omistajan havainto 12.8.2026)         */
+/* ================================================================== */
+
+/*
+ * Kynnys mitataan pelin OMASTA hausta oikealla aineistolla ja oikealla
+ * sijainnilla — sama koodi, jota pöllö ajaa ennen jokaista kysymystä.
+ * Kaksi tapausta: sijaintiin liittyvä kysymys (oman maan pitää tulla
+ * ensin) ja yleiskysymys, johon aineistossa ei ole vastausta (silloin
+ * ei yhtään linkkiä).
+ */
+const osuvuus = await sivu.evaluate(async () => {
+  const { haeKatkelmat } = await import('/js/pollo-haku.js');
+  const pollo = window.matkakirjaPollo;
+  const indeksi = pollo.varmistaIndeksi();
+  const game = window.matkakirja.game;
+  const cityId = game.player?.pos?.city ?? null;
+  const sijainti = {
+    kaupunki: cityId,
+    maa: cityId ? game.pack?.map?.cityCountry?.[cityId] ?? null : null,
+  };
+  const aja = (kysymys) => haeKatkelmat(indeksi, kysymys, { maara: 4, sijainti })
+    .katkelmat.map((k) => ({ leima: k.leima, oma: k.oma }));
+  return {
+    sijainti,
+    paikallinen: aja('Milloin Lontoon metro avattiin?'),
+    yleinen: aja('Kuka oli Napoleon?'),
+    hatara: aja('Kuinka vanha ihmiskunta on?'),
+  };
+});
+vaadi('sijaintiin liittyvä kysymys nostaa oman maan ensimmäiseksi',
+  osuvuus.paikallinen.length > 0 && osuvuus.paikallinen[0].oma === true,
+  JSON.stringify(osuvuus.paikallinen));
+vaadi('yleiskysymys ilman hyviä osumia ei tuota yhtään linkkiä',
+  osuvuus.yleinen.length === 0 && osuvuus.hatara.length === 0,
+  `${JSON.stringify(osuvuus.yleinen)} / ${JSON.stringify(osuvuus.hatara)}`);
+vaadi('linkkejä on enintään kaksi', osuvuus.paikallinen.length <= 4
+  && osuvuus.paikallinen.slice(0, 2).length <= 2, JSON.stringify(osuvuus.paikallinen));
+
 await sivu.screenshot({ path: join(ULOS, 'pollo-lehdessa-390.png') });
 
 const lehtiRunko = rungot.filter((r) => r.tehtava === 'vastaus').at(-1) ?? {};
@@ -745,27 +1060,51 @@ if (lehdessa.tehtavanKysymys) {
 }
 
 /* ================================================================== */
-/* 6) Pelinsisäinen linkki                                             */
+/* 6) Varapolku: linkki napiksi, kun ankkuria ei löydy tekstistä        */
 /* ================================================================== */
 
+/*
+ * Ensisijainen muoto on alleviivattu linkki keskellä vastausta (osio
+ * 3b). Jos vastauksessa ei ole yhtään kohtaa, joka puhuisi samasta
+ * asiasta, linkin on ilmestyttävä entiseen tapaan napiksi vastauksen
+ * alle — ei kadottava.
+ */
 const linkki = await sivu.evaluate(async () => {
-  const linkit = [...document.querySelectorAll('.pollo-linkki')].map((b) => b.textContent);
-  if (!linkit.length) return { linkit };
-  const ui = window.matkakirja.ui;
-  const ennen = { maalehti: ui.tutkiMaaLehti, sivu: ui.tutkiSivu };
-  document.querySelector('.pollo-linkki').click();
-  await new Promise((r) => setTimeout(r, 900));
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  document.getElementById('arrival-dialog').close();
+  await odota(400);
+  if (document.querySelector('.pollo-paneeli').hidden) {
+    document.querySelector('.pollo-nappi').click();
+    await odota(600);
+  }
+  document.querySelector('.pollo-kirjoita').click();
+  await odota(150);
+  document.querySelector('.pollo-kentta').value = 'Kerro Lontoon metrosta varapolku';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  await odota(900);
+  const viesti = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  // Virrassa on aiempienkin vastausten linkkiryhmiä: viimeisin on tämän
+  // vastauksen oma.
+  const ryhma = [...document.querySelectorAll('.pollo-linkit')].at(-1);
+  const napit = [...(ryhma?.querySelectorAll('.pollo-linkki') ?? [])];
+  const linkit = napit.map((b) => b.textContent);
+  if (!linkit.length) {
+    return { linkit, tekstilinkkeja: viesti?.querySelectorAll('a').length ?? 0 };
+  }
+  napit[0].click();
+  await odota(900);
   return {
     linkit,
-    ennen,
-    jalkeen: { maalehti: ui.tutkiMaaLehti, sivu: ui.tutkiSivu },
-    lehtiAuki: document.getElementById('arrival-dialog').open,
+    tekstilinkkeja: viesti?.querySelectorAll('a').length ?? 0,
+    // Reitti voi olla lehti tai kohdekartan juttu — kumpikin on pelin
+    // oma näkymä, ja kumpikin avautuu samalla mekanismilla.
+    avautui: Boolean(document.querySelector('#arrival-dialog[open], #nahtavyys-dialog[open]')),
     chatKiinni: document.querySelector('.pollo-paneeli').hidden,
   };
 });
-vaadi('vastauksen alle tulee pelinsisäisiä linkkejä', (linkki.linkit ?? []).length > 0,
-  (linkki.linkit ?? []).join(' | '));
-vaadi('linkki avaa lehden peliin', linkki.lehtiAuki === true, JSON.stringify(linkki));
+vaadi('ankkuriton vastaus saa linkin napiksi alleen', (linkki.linkit ?? []).length > 0
+  && (linkki.linkit ?? []).length <= 2 && linkki.tekstilinkkeja === 0, JSON.stringify(linkki));
+vaadi('varapolun linkki avaa pelin oman näkymän', linkki.avautui === true, JSON.stringify(linkki));
 vaadi('linkki sulkee chatin (paluu yhdellä napautuksella)', linkki.chatKiinni === true);
 
 await sivu.screenshot({ path: join(ULOS, 'pollo-linkki-avattu-390.png') });
@@ -847,15 +1186,23 @@ const ilmanSanelua = await ilmanSivu.evaluate(async () => {
   document.querySelector('.pollo-nappi').click();
   await new Promise((r) => setTimeout(r, 700));
   return {
-    saneluPiilossa: document.querySelector('.pollo-sanelu').hidden,
+    // Rivi jää esiin kaiuttimen takia: laite osaa lukea, vaikkei sanella.
+    riviNakyy: !document.querySelector('.pollo-sanelu').hidden,
     kenttaNakyy: !document.querySelector('.pollo-rivi').hidden,
     mikkiaEiNayteta: document.querySelector('.pollo-mikki').offsetParent === null,
+    kaiutinNakyy: document.querySelector('.pollo-kaiutin').offsetParent !== null,
+    kaiuttimenOsuus: document.querySelector('.pollo-kaiutin').getBoundingClientRect().width
+      / document.querySelector('.pollo-sanelu').getBoundingClientRect().width,
   };
 });
 vaadi('ilman puheentunnistusta kenttä on suoraan esillä',
-  ilmanSanelua.saneluPiilossa === true && ilmanSanelua.kenttaNakyy === true,
-  JSON.stringify(ilmanSanelua));
+  ilmanSanelua.kenttaNakyy === true, JSON.stringify(ilmanSanelua));
 vaadi('ilman puheentunnistusta ei tarjota sanelua', ilmanSanelua.mikkiaEiNayteta === true);
+vaadi('kaiutin jää riville, vaikka mikrofonia ei ole',
+  ilmanSanelua.riviNakyy === true && ilmanSanelua.kaiutinNakyy === true,
+  JSON.stringify(ilmanSanelua));
+vaadi('jäljelle jäävät napit jakavat rivin (ei tyhjää saraketta)',
+  ilmanSanelua.kaiuttimenOsuus > 0.4, ilmanSanelua.kaiuttimenOsuus.toFixed(2));
 vaadi('ei konsolivirheitä ilman puheentunnistusta', ilmanVirheet.length === 0,
   ilmanVirheet.join(' | '));
 await ilmanSivu.screenshot({ path: join(ULOS, 'pollo-ilman-sanelua-390.png') });
@@ -979,6 +1326,159 @@ vaadi('luettavaa kertyi koko sivun verran', (lukija.pituus ?? 0) > 200, String(l
 vaadi('lähdemerkinnät eivät päädy luentaan', lukija.lahteita === false);
 vaadi('nappi näyttää luennan olevan käynnissä', lukija.lukee === true);
 await siltaCtx.close();
+
+/* ================================================================== */
+/* 11) Päivitysruutu                                                   */
+/* ================================================================== */
+
+/*
+ * Päivityksen jälkeisen latauksen ajan ruudulla on tumma pohja, logo ja
+ * yksi rivi tekstiä — ei tyhjiä kehyksiä. Lippu on sessionStoragessa
+ * (js/main.js merkitsePaivitys), ja index.html:n pikkuskripti näyttää
+ * ruudun heti ensimmäisellä maalauksella.
+ *
+ * js/main.js viivästetään puolellatoista sekunnilla, jotta ruutu ehtii
+ * kaappaukseen: oikeassa käytössä sama tila kestää yhtä kauan kuin
+ * pelin rakentuminen.
+ */
+const paivitysCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
+const paivitysSivu = await paivitysCtx.newPage();
+await paivitysSivu.addInitScript("try { sessionStorage.setItem('matkakirja-paivittyy', '1'); } catch (e) {}");
+await paivitysSivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+/*
+ * js/main.js korvataan tyhjällä: näin sivu latautuu loppuun mutta peli
+ * ei rakennu, eli ruudulla on täsmälleen se tila, joka päivityksen
+ * aikana näkyy. Viivästäminen ei kelpaa — Playwrightin screenshot
+ * odottaa sivun latautumista, joten kaappaus osuisi aina vasta pelin
+ * käynnistymisen jälkeen.
+ */
+await paivitysSivu.route(/js\/main\.js$/, (route) => route.fulfill({
+  status: 200, contentType: 'text/javascript', body: '',
+}));
+await paivitysSivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await paivitysSivu.waitForTimeout(300);
+await paivitysSivu.screenshot({ path: join(ULOS, 'paivitysruutu-390.png') });
+const paivitysruutu = await paivitysSivu.evaluate(() => {
+  const ruutu = document.getElementById('paivitysruutu');
+  const cs = getComputedStyle(ruutu);
+  const luminanssi = (vari) => {
+    const [r, g, b] = vari.match(/[\d.]+/g).slice(0, 3).map(Number);
+    const k = (v) => {
+      const s = v / 255;
+      return s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+    };
+    return 0.2126 * k(r) + 0.7152 * k(g) + 0.0722 * k(b);
+  };
+  return {
+    nakyy: !ruutu.hidden && cs.display !== 'none',
+    peittaa: ruutu.getBoundingClientRect().height >= window.innerHeight - 1,
+    tumma: luminanssi(cs.backgroundColor) < 0.05,
+    logo: Boolean(ruutu.querySelector('img')),
+    teksti: ruutu.querySelector('.paivitysruutu-teksti')?.textContent ?? '',
+    peliPiilossa: getComputedStyle(document.querySelector('.app')).visibility === 'hidden',
+  };
+});
+vaadi('päivitysruutu näkyy latauksen ajan', paivitysruutu.nakyy === true,
+  JSON.stringify(paivitysruutu));
+vaadi('päivitysruutu peittää koko ruudun tummana', paivitysruutu.peittaa === true
+  && paivitysruutu.tumma === true, JSON.stringify(paivitysruutu));
+vaadi('päivitysruudussa on logo ja odotusteksti', paivitysruutu.logo === true
+  && /Päivitetään, odota hetki/.test(paivitysruutu.teksti), paivitysruutu.teksti);
+vaadi('rakentumaton peli ei näy ruudun alta', paivitysruutu.peliPiilossa === true);
+await paivitysCtx.close();
+
+/*
+ * Sama lippu oikealla latauksella: kun peli on rakennettu, ruudun on
+ * väistyttävä ja lipun siivouduttava — muuten ruutu jäisi päälle myös
+ * seuraavalla avauksella.
+ */
+const paivitysLoppuCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
+const paivitysLoppuSivu = await paivitysLoppuCtx.newPage();
+await paivitysLoppuSivu.addInitScript("try { sessionStorage.setItem('matkakirja-paivittyy', '1'); } catch (e) {}");
+await paivitysLoppuSivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+await paivitysLoppuSivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await paivitysLoppuSivu.waitForTimeout(2500);
+const paivitysLoppu = await paivitysLoppuSivu.evaluate(() => ({
+  ruutuPiilossa: document.getElementById('paivitysruutu').hidden,
+  luokkaPois: !document.body.classList.contains('paivittyy'),
+  lippuPois: (() => {
+    try { return sessionStorage.getItem('matkakirja-paivittyy') === null; } catch { return true; }
+  })(),
+  peliNakyy: getComputedStyle(document.querySelector('.app')).visibility !== 'hidden',
+}));
+vaadi('päivitysruutu väistyy kun peli on rakennettu',
+  paivitysLoppu.ruutuPiilossa === true && paivitysLoppu.luokkaPois === true
+  && paivitysLoppu.peliNakyy === true, JSON.stringify(paivitysLoppu));
+vaadi('päivityslippu siivotaan latauksen jälkeen', paivitysLoppu.lippuPois === true);
+await paivitysLoppuCtx.close();
+
+/* ================================================================== */
+/* 12) Näkymän elvytys taustalta palatessa                             */
+/* ================================================================== */
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026 (iPad, TestFlight): sama maalehti oli
+ * ensin leveä ja monipalstainen, ja toisessa apissa käynnin jälkeen se
+ * avautui kapeana yksipalstaisena. WKWebView ilmoittaa taustalta
+ * palatessa hetkeksi väärän näkymäkoon, ja jos asettelu lasketaan
+ * silloin, lehti jää puhelinlevyiseksi.
+ *
+ * Tässä sama tilanne rakennetaan käsin: lehti auki leveällä ruudulla,
+ * näkymä kutistuu dokumentin ollessa piilossa, ja palaa sitten
+ * esiin oikean kokoisena. Arkin pitää olla taas leveä ilman että
+ * pelaaja sulkee ja avaa lehden.
+ */
+const elvytysCtx = await selain.newContext({ viewport: { width: 900, height: 900 }, serviceWorkers: 'block' });
+const { sivu: elvytysSivu, virheet: elvytysVirheet } = await avaaPeli(elvytysCtx);
+await kytkeRajapinta(elvytysSivu, []);
+await elvytysSivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  ui.openArrival(ui.game.board.cityById.get('lontoo'));
+  await new Promise((r) => setTimeout(r, 900));
+});
+const arkinLeveys = () => elvytysSivu.evaluate(() => Math.round(
+  document.querySelector('#arrival-dialog .dialog-card').getBoundingClientRect().width,
+));
+const leveaEnnen = await arkinLeveys();
+
+// Dokumentti "piiloon" ja näkymä kapeaksi: tällä mitalla ei saa sivuttaa.
+await elvytysSivu.evaluate(() => {
+  Object.defineProperty(document, 'hidden', { get: () => true, configurable: true });
+  Object.defineProperty(document, 'visibilityState', { get: () => 'hidden', configurable: true });
+  document.dispatchEvent(new Event('visibilitychange'));
+});
+await elvytysSivu.setViewportSize({ width: 320, height: 900 });
+await elvytysSivu.waitForTimeout(400);
+const piilossa = await elvytysSivu.evaluate(() => ({
+  epavarma: window.matkakirja.ui.nakymaEpavarma === true,
+  elvytyksia: window.matkakirja.ui.nakymaElvytyksia,
+  muistettuLeveys: window.matkakirja.ui.nakymanLeveys,
+}));
+vaadi('piilossa kutistunut näkymä ei laukaise sivutusta',
+  piilossa.epavarma === true && piilossa.elvytyksia === 0 && piilossa.muistettuLeveys >= 700,
+  JSON.stringify(piilossa));
+
+// Näkymä palaa esiin oikean kokoisena.
+await elvytysSivu.setViewportSize({ width: 900, height: 900 });
+await elvytysSivu.evaluate(() => {
+  Object.defineProperty(document, 'hidden', { get: () => false, configurable: true });
+  Object.defineProperty(document, 'visibilityState', { get: () => 'visible', configurable: true });
+  document.dispatchEvent(new Event('visibilitychange'));
+});
+await elvytysSivu.waitForTimeout(700);
+const leveaJalkeen = await arkinLeveys();
+const elvytys = await elvytysSivu.evaluate(() => ({
+  elvytyksia: window.matkakirja.ui.nakymaElvytyksia,
+  lehtiAuki: document.getElementById('arrival-dialog').open,
+}));
+vaadi('arkki palaa leveäksi ilman lehden sulkemista',
+  leveaJalkeen >= leveaEnnen - 2 && elvytys.lehtiAuki === true,
+  `${leveaEnnen} → ${leveaJalkeen} px`);
+vaadi('elvytys ajettiin kerran, kun koko palautui', elvytys.elvytyksia >= 1,
+  String(elvytys.elvytyksia));
+vaadi('näkymän elvytys ei kirjoita konsoliin', elvytysVirheet.length === 0,
+  elvytysVirheet.join(' | '));
+await elvytysCtx.close();
 
 vaadi('ei sivuvirheitä pääajossa', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 

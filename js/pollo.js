@@ -52,7 +52,8 @@ import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
-import { haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
+import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
+import { lueAaneen, lukijaTuettu, pysaytaLukija } from './lukija.js';
 
 /** Kontekstipaketin katto merkkeinä. Sama luku myös workerin puolella. */
 export const KONTEKSTIN_ENIMMAISPITUUS = 5000;
@@ -67,6 +68,35 @@ const HISTORIAN_KATTO = 6;
 
 /** Puheentunnistuksen kieli. */
 export const PUHE_KIELI = 'fi-FI';
+
+/**
+ * Kaiuttimen tila laitteella.
+ *
+ * Kaiutin on VIPU eikä kertakäyttönappi: päällä ollessaan se lukee
+ * jokaisen uuden vastauksen heti sen saavuttua. Valinta on laitteen
+ * asetus (kuten äänet ja kertoja), joten se säilyy käyntien yli eikä
+ * kuulu pelin tallennukseen.
+ */
+export const POLLO_AANI_AVAIN = 'matkakirja-pollo-aani';
+
+/**
+ * Kehittäjäkoodi laitteella.
+ *
+ * Koodi EI ole repossa: omistaja syöttää sen kehittäjätilassa pöllön
+ * paneeliin, ja se lähtee pyynnön otsakkeessa välityspalvelimelle,
+ * joka ohittaa sillä käyttörajat (tools/pollo/worker.js).
+ */
+export const POLLO_KEHITTAJAKOODI_AVAIN = 'matkakirja-pollo-kehittajakoodi';
+
+/** Otsake, jossa kehittäjäkoodi kulkee. Sama nimi workerin puolella. */
+export const POLLO_KEHITTAJA_OTSAKE = 'X-Pollo-Kehittaja';
+
+/*
+ * Kehittäjätilan avain luetaan suoraan localStoragesta eikä js/ui.js:n
+ * kautta: ui.js tuo tämän tiedoston, joten tuonti takaisin olisi kehä.
+ * Sama ratkaisu kuin js/linssit/omistus.js:ssä.
+ */
+const POLLO_KEHITTAJA_TILA_AVAIN = 'matkakirja-kehittaja';
 
 /**
  * VALKOINEN LISTA: mistä lehden tekstit luetaan.
@@ -314,6 +344,43 @@ const NAPPAIMISTO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
   + '<path d="M8.4 15.6h7.2"/>'
   + '</svg>';
 
+/**
+ * Kaiutin samalla viivakynällä kuin muutkin pöllön kuvakkeet.
+ *
+ * Piirto on sama kuin lukijan napissa (js/lukija.js KAIUTIN_PIIRTO),
+ * mutta oma vakionsa: pöllö ei saa riippua lukijan kuvakkeesta, ja
+ * yhden tiedoston koonti on yhtä näkyvyysaluetta, jossa kaksi samaa
+ * nimeä törmäisi.
+ */
+const POLLO_KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<path d="M4.2 9.3h3.2l4.4-3.6v12.6l-4.4-3.6H4.2z"/>'
+  + '<path d="M14.8 9.4a3.7 3.7 0 0 1 0 5.2"/>'
+  + '<path d="M17.4 6.9a7.3 7.3 0 0 1 0 10.2"/>'
+  + '</svg>';
+
+/** Laitteelle talletettu asetus. Yksityinen selaus ei saa kaataa mitään. */
+function polloAsetus(avain) {
+  try {
+    return globalThis.localStorage?.getItem(avain) ?? '';
+  } catch {
+    return '';
+  }
+}
+
+function polloTallenna(avain, arvo) {
+  try {
+    if (arvo) globalThis.localStorage?.setItem(avain, arvo);
+    else globalThis.localStorage?.removeItem(avain);
+  } catch {
+    /* yksityinen selaus: valinta jää vain tälle istunnolle */
+  }
+}
+
+/** Onko pelin kehittäjätila päällä? */
+function polloKehittajaTila() {
+  return polloAsetus(POLLO_KEHITTAJA_TILA_AVAIN) === '1';
+}
+
 const TERVEHDYS = 'Kysy minulta mitä tahansa siitä, mitä kartalla tai '
   + 'lehdessä juuri nyt näkyy — tai muusta maailmasta. Pelin tehtäviä en '
   + 'ratkaise puolestasi.';
@@ -386,6 +453,9 @@ class Pollo {
     // Natiivisanelun purkajat: kuuntele() palauttaa poistofunktion.
     this.saneluKuulijat = [];
     this.natiiviSanelussa = false;
+    // Kaiuttimen vipu muistetaan laitteella (ks. POLLO_AANI_AVAIN).
+    this.aaniPaalla = polloAsetus(POLLO_AANI_AVAIN) === '1';
+    this.viimeisetKatkelmat = [];
     // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
     this.tila = saneluTuettu() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
@@ -463,6 +533,30 @@ class Pollo {
     const syote = polloElementti('div', 'pollo-syote');
 
     /*
+     * KEHITTÄJÄKOODI. Näkyy vain pelin kehittäjätilassa (sama
+     * localStorage-lippu kuin muullakin kehittäjätilalla). Koodi jää
+     * laitteelle ja lähtee otsakkeessa välityspalvelimelle, joka
+     * ohittaa sillä käyttörajat. Koodia ei ole repossa eikä pelin
+     * koodissa — tämä on pelkkä kenttä sen syöttämiseen.
+     */
+    const koodiRivi = polloElementti('div', 'pollo-kehittaja');
+    koodiRivi.hidden = true;
+    const koodi = polloElementti('input', 'pollo-kehittaja-kentta');
+    koodi.type = 'password';
+    koodi.autocomplete = 'off';
+    koodi.placeholder = 'kehittäjäkoodi';
+    koodi.setAttribute('aria-label', 'Pöllön kehittäjäkoodi');
+    koodi.maxLength = 100;
+    koodi.value = polloAsetus(POLLO_KEHITTAJAKOODI_AVAIN);
+    koodi.addEventListener('input', () => {
+      polloTallenna(POLLO_KEHITTAJAKOODI_AVAIN, koodi.value.trim());
+    });
+    koodiRivi.appendChild(koodi);
+    this.kehittajaRivi = koodiRivi;
+    this.kehittajaKentta = koodi;
+    syote.appendChild(koodiRivi);
+
+    /*
      * Tilarivi kertoo vain sen mitä juuri nyt tapahtuu: "Kuuntelen…",
      * puheeksi tunnistettu teksti tai virheen syy. Tyhjänä se ei vie
      * riviäkään (css: :empty), joten paneeli pysyy matalana.
@@ -491,11 +585,16 @@ class Pollo {
     syote.appendChild(lomake);
 
     /*
-     * Matala nappirivi: näppäimistö 1/3, mikrofoni 2/3. Rivi on aina
+     * Matala nappirivi: näppäimistö, kaiutin ja mikrofoni. Rivi on aina
      * paneelin pohjalla, joten kirjoituskenttä avautuu sen yläpuolelle
      * eikä sen tilalle — mikrofoni on siis yhden napautuksen päässä myös
      * kirjoitettaessa, ja erillistä "Sanele sen sijaan" -linkkiä ei
      * tarvita.
+     *
+     * Leveydet tulevat flexistä (css .pollo-sanelu): näppäimistö 1,
+     * kaiutin 1, mikrofoni 2. Kun jokin napeista puuttuu (laite ei osaa
+     * lukea tai ei osaa sanella), jäljelle jäävät jakavat rivin samassa
+     * suhteessa — tyhjää saraketta ei jää.
      */
     const rivi = polloElementti('div', 'pollo-sanelu');
 
@@ -507,6 +606,21 @@ class Pollo {
     kirjoita.addEventListener('click', () => this.vaihdaTilaan('kirjoitus', { kohdista: true }));
     this.kirjoitaNappi = kirjoita;
     rivi.appendChild(kirjoita);
+
+    /*
+     * KAIUTIN ON VIPU, EI SOITTONAPPI.
+     *
+     * Päällä ollessaan jokainen UUSI vastaus luetaan ääneen heti kun se
+     * saapuu. Luettavaksi menee vain vastausteksti: kysymykset,
+     * ehdotukset, jatkokysymykset ja "ei hereillä" -ilmoitus jäävät
+     * lukematta, koska ne ovat käyttöliittymää eivätkä pöllön puhetta.
+     */
+    const kaiutin = polloElementti('button', 'pollo-nappula pollo-kaiutin');
+    kaiutin.type = 'button';
+    kaiutin.innerHTML = `<span class="icon-glyph viiva-ikoni">${POLLO_KAIUTIN_IKONI}</span>`;
+    kaiutin.addEventListener('click', () => this.vaihdaAani());
+    this.kaiutin = kaiutin;
+    rivi.appendChild(kaiutin);
 
     const mikki = polloElementti('button', 'pollo-nappula pollo-mikki');
     mikki.type = 'button';
@@ -521,23 +635,68 @@ class Pollo {
     syote.appendChild(rivi);
 
     this.syote = syote;
+    this.merkitseKaiutin();
     this.naytaSyote();
     return syote;
+  }
+
+  /* --- kaiutin ---------------------------------------------------- */
+
+  /** Kaiutinnapin ulkoasu ja saavutettava nimi seuraavat vipua. */
+  merkitseKaiutin() {
+    const paalla = this.aaniPaalla;
+    const nimi = paalla
+      ? 'Vastausten luenta päällä — kytke pois'
+      : 'Lue vastaukset ääneen';
+    this.kaiutin.classList.toggle('paalla', paalla);
+    this.kaiutin.setAttribute('aria-pressed', paalla ? 'true' : 'false');
+    this.kaiutin.setAttribute('aria-label', nimi);
+    this.kaiutin.title = nimi;
+  }
+
+  /** Vivun napautus. Pois kytkeminen katkaisee myös käynnissä olevan luennan. */
+  vaihdaAani() {
+    this.aaniPaalla = !this.aaniPaalla;
+    polloTallenna(POLLO_AANI_AVAIN, this.aaniPaalla ? '1' : '');
+    if (!this.aaniPaalla) pysaytaLukija();
+    this.merkitseKaiutin();
+  }
+
+  /**
+   * Lukee vastauksen ääneen, jos vipu on päällä.
+   *
+   * Uusi vastaus keskeyttää edellisen luennan: lueAaneen pysäyttää
+   * käynnissä olevan aina ensin (js/lukija.js).
+   */
+  lueVastaus(teksti) {
+    if (!this.aaniPaalla || !teksti) return;
+    try {
+      lueAaneen(teksti);
+    } catch {
+      /* laitteen puheääni ei ole käytettävissä — vastaus jää luettavaksi */
+    }
   }
 
   /**
    * Piirtää syöttöalueen nykyisen tilan mukaan.
    *
-   * Nappirivi on esillä aina kun selain osaa sanella. Jos ei osaa,
-   * rivi jää pois kokonaan ja kirjoituskenttä on suoraan esillä —
-   * näppäimistönappi olisi silloin ainoa vaihtoehto eikä siis valinta.
+   * Nappirivi on esillä, jos laite osaa edes toisen kahdesta: sanella
+   * (mikrofoni) tai lukea ääneen (kaiutin). Kumpikin nappi näkyy vain
+   * jos sen taustajärjestelmä on olemassa — nappi, joka ei tee mitään,
+   * on pahempi kuin puuttuva nappi.
+   *
+   * Kirjoituskenttä on suoraan esillä aina kun sanelua ei ole: silloin
+   * näppäimistönappi ei olisi valinta vaan ainoa vaihtoehto.
    */
   naytaSyote() {
     // Natiivikuoressa sanelu tulee sillalta, selaimessa
-    // SpeechRecognitionista — kummankin puuttuessa rivi jää pois.
-    const osaa = saneluTuettu();
-    const sanelussa = this.tila === 'sanelu' && osaa;
-    this.saneluOsa.hidden = !osaa;
+    // SpeechRecognitionista — kummankin puuttuessa mikkiä ei ole.
+    const osaaSanella = saneluTuettu();
+    const osaaLukea = lukijaTuettu();
+    const sanelussa = this.tila === 'sanelu' && osaaSanella;
+    this.mikki.hidden = !osaaSanella;
+    this.kaiutin.hidden = !osaaLukea;
+    this.saneluOsa.hidden = !osaaSanella && !osaaLukea;
     this.lomake.hidden = sanelussa;
   }
 
@@ -678,6 +837,9 @@ class Pollo {
       return;
     }
     if (!this.virta.childElementCount) this.lisaaViesti('pollo', TERVEHDYS);
+    // Kehittäjätila voi vaihtua kesken pelin, joten kenttä katsotaan
+    // joka avauksella eikä kerran käynnistyksessä.
+    this.kehittajaRivi.hidden = !polloKehittajaTila();
     this.naytaSyote();
     // Indeksi rakennetaan laiskasti ensimmäisellä avauksella, ei pelin
     // käynnistyksessä. Ehdotushaku odottaa sen valmistumista.
@@ -687,6 +849,10 @@ class Pollo {
 
   sulje() {
     this.lopetaSanelu();
+    // Chatin sulkeutuminen hiljentää myös luennan: pöllön ääni ei jää
+    // puhumaan tyhjälle kartalle. Vipu jää päälle seuraavaa kertaa
+    // varten.
+    if (this.aaniPaalla) pysaytaLukija();
     this.auki = false;
     this.paneeli.hidden = true;
     this.nappi.setAttribute('aria-expanded', 'false');
@@ -807,10 +973,17 @@ class Pollo {
     return false;
   }
 
-  /** Napautettavat linkit vastauksen alle. Enintään kolme, vain aidosti osuvat. */
-  naytaLinkit(katkelmat) {
+  /**
+   * Avattavat kohteet hakutuloksista.
+   *
+   * Enintään POLLON_LINKKIKATTO kappaletta, ei kahta samaa, ja vain ne
+   * jotka oikeasti aukeavat tällä laudalla. Osuvuuskynnys on jo tehty
+   * haussa (js/pollo-haku.js) — jos mikään ei ylittänyt sitä, tämä
+   * palauttaa tyhjän listan, ja se on oikea vastaus.
+   */
+  poimiLinkit(katkelmat) {
     const nahdyt = new Set();
-    const reitit = [];
+    const ulos = [];
     for (const katkelma of katkelmat ?? []) {
       const reitti = katkelma?.reitti;
       if (!reitti) continue;
@@ -818,15 +991,90 @@ class Pollo {
       if (nahdyt.has(avain)) continue;
       if (!this.reittiAvattavissa(reitti)) continue;
       nahdyt.add(avain);
-      reitit.push(reitti);
-      if (reitit.length >= 3) break;
+      ulos.push({ reitti, ankkurit: katkelma.ankkurit ?? [] });
+      if (ulos.length >= POLLON_LINKKIKATTO) break;
     }
-    if (!reitit.length) return;
+    return ulos;
+  }
+
+  /**
+   * ALLEVIIVATTU LINKKI KESKELLE VASTAUSTA (omistajan tilaus 12.8.2026).
+   *
+   * Erillisen "Lue: …" -napin sijaan vastauksesta etsitään kohta, joka
+   * puhuu samasta asiasta, ja SE muutetaan linkiksi. Ankkurisanat
+   * tulevat pelin omasta indeksistä (js/pollo-haku.js ankkuriSanat),
+   * eivät koskaan mallin tekstistä, joten linkki ei voi osoittaa
+   * mihinkään keksittyyn.
+   *
+   * TURVALLISUUS: mallin tekstiä ei koskaan tulkita HTML:nä. Solmut
+   * rakennetaan käsin ja teksti asetetaan tekstisisältönä, joten
+   * vastaus ei voi injektoida merkkausta paneeliin.
+   *
+   * @returns {Array} ne linkit, joille ei löytynyt ankkuria tekstistä
+   */
+  korostaLinkit(viesti, linkit) {
+    const jaljelle = [];
+    for (const linkki of linkit) {
+      if (!this.sidoLinkki(viesti, linkki)) jaljelle.push(linkki);
+    }
+    return jaljelle;
+  }
+
+  /** Yksi linkki tekstiin. Palauttaa tosi, jos ankkuri löytyi. */
+  sidoLinkki(viesti, { reitti, ankkurit }) {
+    // Vain koskemattomat tekstisolmut kelpaavat: jo linkitetyn kohdan
+    // sisään ei rakenneta toista linkkiä.
+    for (const solmu of [...viesti.childNodes]) {
+      if (solmu.nodeType !== 3) continue;
+      const osuma = etsiAnkkuri(solmu.data, ankkurit);
+      if (!osuma) continue;
+      const teksti = solmu.data;
+      const linkki = polloElementti('a', 'pollo-tekstilinkki', teksti.slice(osuma.alku, osuma.loppu));
+      linkki.href = '#';
+      linkki.title = `Lue: ${reitti.leima ?? reitti.otsikko}`;
+      linkki.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.avaaKohde(reitti);
+      });
+      const jalki = viesti.ownerDocument.createTextNode(teksti.slice(osuma.loppu));
+      solmu.data = teksti.slice(0, osuma.alku);
+      solmu.parentNode.insertBefore(jalki, solmu.nextSibling);
+      solmu.parentNode.insertBefore(linkki, jalki);
+      return true;
+    }
+    return false;
+  }
+
+  /** Varapolku: linkki vastauksen alle, kun tekstistä ei löytynyt kohtaa. */
+  naytaLinkit(linkit) {
+    if (!linkit?.length) return;
     const laatikko = polloElementti('div', 'pollo-linkit');
-    for (const reitti of reitit) {
+    for (const { reitti } of linkit) {
       const nappi = polloElementti('button', 'pollo-linkki', `Lue: ${reitti.leima ?? reitti.otsikko}`);
       nappi.type = 'button';
       nappi.addEventListener('click', () => this.avaaKohde(reitti));
+      laatikko.appendChild(nappi);
+    }
+    this.virta.appendChild(laatikko);
+    this.virta.scrollTop = this.virta.scrollHeight;
+  }
+
+  /**
+   * Jatkokysymykset vastauksen alle.
+   *
+   * Samaa muotoa kuin avausruudun ehdotukset, mutta ne elävät
+   * keskusteluvirrassa vastauksen perässä eivätkä paneelin yläreunassa:
+   * ne kuuluvat juuri siihen vastaukseen. Napautus lähettää kysymyksen.
+   * Kaiutin ei lue näitä — ne ovat käyttöliittymää, eivät pöllön puhetta.
+   */
+  naytaJatkot(lista) {
+    const jatkot = (Array.isArray(lista) ? lista : []).slice(0, 3);
+    if (!jatkot.length) return;
+    const laatikko = polloElementti('div', 'pollo-jatkot');
+    for (const teksti of jatkot) {
+      const nappi = polloElementti('button', 'pollo-ehdotus pollo-jatko', teksti);
+      nappi.type = 'button';
+      nappi.addEventListener('click', () => this.kysy(teksti));
       laatikko.appendChild(nappi);
     }
     this.virta.appendChild(laatikko);
@@ -838,9 +1086,16 @@ class Pollo {
     const indeksi = this.varmistaIndeksi();
     if (!indeksi?.merkinnat?.length) return [];
     const game = this.haeUi?.()?.game ?? null;
+    // Missä pelaaja seisoo: oman kaupungin ja maan jutut painavat
+    // haussa selvästi enemmän (js/pollo-haku.js HAUN_SIJAINTIKERROIN).
+    const cityId = game?.player?.pos?.city ?? null;
     const tulos = haeKatkelmat(indeksi, kysymys, {
       maara: 4,
       onVastattu: (m) => this.tehtavaRatkaistu(m),
+      sijainti: {
+        kaupunki: cityId,
+        maa: cityId ? game?.pack?.map?.cityCountry?.[cityId] ?? null : null,
+      },
       nimet: {
         kaupunki: (id) => game?.board?.cityById?.get(id)?.name ?? id,
         maa: (iso) => game?.pack?.map?.countryShapes?.[iso]?.nimi ?? iso,
@@ -872,6 +1127,10 @@ class Pollo {
     for (const nappi of this.ehdotukset.querySelectorAll('button')) {
       nappi.disabled = kesken;
     }
+    // Vastausten alla olevat jatkokysymykset ovat samaa jarrua.
+    for (const nappi of this.virta.querySelectorAll('.pollo-jatko')) {
+      nappi.disabled = kesken;
+    }
   }
 
   konteksti(kysymys = '') {
@@ -897,9 +1156,17 @@ class Pollo {
    * puhelimessa eikä se ole pelin vika.
    */
   async pyyda(runko) {
+    const otsakkeet = { 'content-type': 'application/json' };
+    /*
+     * Kehittäjäkoodi mukaan vain jos se on laitteelle talletettu.
+     * Ilman koodia otsaketta ei lähetetä lainkaan, ja ilman workerin
+     * salaisuutta se ei tekisi mitään vaikka lähetettäisiinkin.
+     */
+    const koodi = polloAsetus(POLLO_KEHITTAJAKOODI_AVAIN).trim();
+    if (koodi) otsakkeet[POLLO_KEHITTAJA_OTSAKE] = koodi;
     const vastaus = await fetch(this.palvelin, {
       method: 'POST',
-      headers: { 'content-type': 'application/json' },
+      headers: otsakkeet,
       body: JSON.stringify(runko),
     });
     const data = await vastaus.json().catch(() => ({}));
@@ -961,8 +1228,16 @@ class Pollo {
       });
       const teksti = String(data?.vastaus ?? '').trim() || 'En osaa vastata tähän.';
       odotus.remove();
-      this.lisaaViesti('pollo', teksti);
-      this.naytaLinkit(this.viimeisetKatkelmat);
+      const viesti = this.lisaaViesti('pollo', teksti);
+      /*
+       * Järjestys: ensin linkit tekstin sisään, sitten varapolun napit,
+       * viimeisenä jatkokysymykset. Luenta saa VAIN vastaustekstin —
+       * linkit ja jatkot ovat käyttöliittymää.
+       */
+      const linkit = this.poimiLinkit(this.viimeisetKatkelmat);
+      this.naytaLinkit(this.korostaLinkit(viesti, linkit));
+      this.naytaJatkot(data?.jatkot);
+      this.lueVastaus(teksti);
       this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
       this.historia.push({ rooli: 'pollo', teksti });
       this.historia = this.historia.slice(-HISTORIAN_KATTO);

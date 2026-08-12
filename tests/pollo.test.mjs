@@ -33,10 +33,12 @@ import {
   lueLuku,
   paivaAvain,
   poimiEhdotukset,
+  poimiJatkot,
   sallittuOrigin,
   siivoaHistoria,
   siivoaTeksti,
   tarkistaRajat,
+  vertaaSalaisuus,
 } from '../tools/pollo/rajat.js';
 
 /* ---------------------------------------------------------------- */
@@ -394,6 +396,49 @@ test('ehdotukset siivotaan numeroinnista ja ei-kysymykset hylätään', () => {
   assert.deepEqual(poimiEhdotukset(null), []);
 });
 
+/*
+ * JATKOKYSYMYKSET. Erotinrivi jäsennetään palvelimella, jotta raaka
+ * merkintä ei voi päätyä pelaajan ruudulle. Kolme tapausta: siisti
+ * vastaus, merkintä ilman kelvollisia kysymyksiä ja vastaus ilman
+ * merkintää lainkaan.
+ */
+test('vastauksesta erotetaan jatkokysymykset erotinrivin kohdalta', () => {
+  const { vastaus, jatkot } = poimiJatkot(
+    'Lontoon metro avattiin vuonna 1863.\n\n'
+    + 'JATKOT:\n'
+    + 'Miksi ensimmäinen linja kulki juuri siinä?\n'
+    + '- Millaista matkustaminen oli höyryjunassa?\n',
+  );
+  assert.equal(vastaus, 'Lontoon metro avattiin vuonna 1863.');
+  assert.deepEqual(jatkot, [
+    'Miksi ensimmäinen linja kulki juuri siinä?',
+    'Millaista matkustaminen oli höyryjunassa?',
+  ]);
+});
+
+test('merkintä katoaa vastauksesta myös silloin kun kysymyksiä ei tule', () => {
+  const { vastaus, jatkot } = poimiJatkot('Tämä on vastaus.\nJATKOT:\nEi kysymysmerkkiä');
+  assert.equal(vastaus, 'Tämä on vastaus.');
+  assert.deepEqual(jatkot, []);
+});
+
+test('ilman merkintää koko teksti on vastaus', () => {
+  const { vastaus, jatkot } = poimiJatkot('Pelkkä vastaus ilman mitään merkintää.');
+  assert.equal(vastaus, 'Pelkkä vastaus ilman mitään merkintää.');
+  assert.deepEqual(jatkot, []);
+  assert.deepEqual(poimiJatkot(null), { vastaus: '', jatkot: [] });
+});
+
+test('kehittäjäkoodin vertailu kelpuuttaa vain täsmälleen saman', () => {
+  assert.equal(vertaaSalaisuus('avaa-seesam', 'avaa-seesam'), true);
+  assert.equal(vertaaSalaisuus('avaa-seesan', 'avaa-seesam'), false);
+  assert.equal(vertaaSalaisuus('avaa-seesam2', 'avaa-seesam'), false);
+  // Puuttuva otsake tai puuttuva salaisuus ei koskaan kelpaa.
+  assert.equal(vertaaSalaisuus(null, 'avaa-seesam'), false);
+  assert.equal(vertaaSalaisuus('avaa-seesam', ''), false);
+  assert.equal(vertaaSalaisuus('', ''), false);
+});
+
 /* ---------------------------------------------------------------- */
 /* Paikallinen tietohaku pelin omasta aineistosta                    */
 /* ---------------------------------------------------------------- */
@@ -402,7 +447,9 @@ const { KULTTUURI_KATEGORIAT } = await import('../js/packs/kulttuuri-kategoriat.
 const { MAA_KATEGORIAT } = await import('../js/packs/maa-kategoriat.js');
 const { NAHTAVYYSJUTUT } = await import('../js/packs/nahtavyysjutut.js');
 const { EUROPE_QUESTIONS } = await import('../js/packs/europe-questions.js');
-const { haeKatkelmat, rakennaIndeksi, hakusanat } = await import('../js/pollo-haku.js');
+const {
+  POLLON_LINKKIKATTO, ankkuriSanat, etsiAnkkuri, haeKatkelmat, hakusanat, rakennaIndeksi,
+} = await import('../js/pollo-haku.js');
 
 /** Koko pelin aineistosta rakennettu indeksi. Jaetaan testien kesken. */
 const INDEKSI = rakennaIndeksi({
@@ -522,6 +569,87 @@ test('jokaisella katkelmalla on yleismuotoinen avausreitti', () => {
     assert.ok(katkelma.reitti.tunniste, 'reitiltä puuttuu tunniste');
     assert.ok(katkelma.reitti.sivu || katkelma.reitti.kohde, 'reitiltä puuttuu kohde');
   }
+});
+
+/* ---------------------------------------------------------------- */
+/* Osuvuuskynnys                                                     */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN HAVAINTO 12.8.2026: Ateenan torikysymys sai linkin Syyrian
+ * historiaan. Nämä testit ovat sen korjauksen vartijat. Ne eivät vahdi
+ * yksittäistä pistemäärää — luvut elävät aineiston mukana — vaan
+ * sääntöä: osuman on liityttävä kysymyksen AIHEESEEN, ja jos mikään ei
+ * liity, oikea vastaus on tyhjä lista.
+ */
+const ATEENASSA = { kaupunki: 'ateena', maa: 'GRC' };
+const LONTOOSSA = { kaupunki: 'lontoo', maa: 'GBR' };
+
+test('yleinen sana ei enää riitä osumaksi', () => {
+  const { katkelmat } = haeKatkelmat(INDEKSI, 'Mitä Ateenan torilla tapahtui antiikin aikaan?', {
+    maara: 4, sijainti: ATEENASSA,
+  });
+  assert.ok(katkelmat.length > 0, 'Ateenan oma tori ei löytynyt lainkaan');
+  // Jokaisen osuman on oltava Ateenasta tai Kreikasta — pelkkä "tori"
+  // muualla maailmassa ei enää kelpaa.
+  for (const k of katkelmat) {
+    assert.ok(/ateena|GRC/i.test(k.leima), `epäolennainen osuma: ${k.leima}`);
+  }
+});
+
+test('kysymys, johon aineistossa ei ole vastausta, ei tuota yhtään linkkiä', () => {
+  for (const kysymys of ['Kuka oli Napoleon?', 'Kuinka vanha ihmiskunta on?', 'Onko Syyriassa sotaa?']) {
+    const { katkelmat } = haeKatkelmat(INDEKSI, kysymys, { maara: 4, sijainti: LONTOOSSA });
+    assert.deepEqual(katkelmat.map((k) => k.leima), [],
+      `heikko osuma pääsi läpi: ${kysymys}`);
+  }
+});
+
+test('pelaajan oma maa nousee kärkeen', () => {
+  const { katkelmat } = haeKatkelmat(INDEKSI, 'Mitä ruokaa Kreikassa syödään?', {
+    maara: 4, sijainti: ATEENASSA,
+  });
+  assert.ok(katkelmat.length > 0, 'ruokakysymys ei löytänyt mitään');
+  assert.equal(katkelmat[0].oma, true, `kärjessä oli vieras juttu: ${katkelmat[0].leima}`);
+  // Ilman nimet-taulua leimassa on tunniste sellaisenaan (ateena / GRC).
+  assert.ok(/ateena|GRC/i.test(katkelmat[0].leima), katkelmat[0].leima);
+});
+
+test('sama kysymys eri paikassa antaa eri kärjen', () => {
+  const ateenassa = haeKatkelmat(INDEKSI, 'Mitä täällä syödään?', { sijainti: ATEENASSA });
+  const lontoossa = haeKatkelmat(INDEKSI, 'Mitä täällä syödään?', { sijainti: LONTOOSSA });
+  assert.ok(ateenassa.katkelmat.length && lontoossa.katkelmat.length);
+  assert.notEqual(ateenassa.katkelmat[0].leima, lontoossa.katkelmat[0].leima);
+});
+
+test('linkkikatto on kaksi', () => {
+  assert.equal(POLLON_LINKKIKATTO, 2);
+});
+
+/* ---------------------------------------------------------------- */
+/* Ankkurointi vastaustekstiin                                       */
+/* ---------------------------------------------------------------- */
+
+test('ankkurisanat tulevat merkinnän otsikosta, eivät sidesanoista', () => {
+  const sanat = ankkuriSanat({ otsikko: 'Maailman ensimmäinen metro', aiheNimi: 'Historia' });
+  assert.ok(sanat.includes('maailman'));
+  assert.ok(sanat.includes('ensimmäinen'));
+  assert.ok(sanat.includes('historia'));
+  // Lyhyet sanat eivät kelpaa ankkuriksi: ne tarttuisivat mihin tahansa.
+  assert.ok(sanat.every((s) => s.length >= 5), sanat.join(', '));
+});
+
+test('ankkuri löytyy taivutetustakin sanasta', () => {
+  const osuma = etsiAnkkuri('Akropoliin temppelit rakennettiin 400-luvulla eaa.', ['akropolis']);
+  assert.deepEqual(osuma, { alku: 0, loppu: 10 });
+});
+
+test('ankkuria ei keksitä sinne, missä sitä ei ole', () => {
+  assert.equal(etsiAnkkuri('Tästä ei ole pelissä juttua.', ['akropolis']), null);
+  // Lyhyt yhteinen alku ei riitä: "kivet" ei saa tarttua sanaan "kivistä".
+  assert.equal(etsiAnkkuri('Tämä juttu kertoo kivistä.', ['kivet']), null);
+  assert.equal(etsiAnkkuri('', ['akropolis']), null);
+  assert.equal(etsiAnkkuri('Teksti ilman ankkureita', []), null);
 });
 
 test('hakusanoista karsitaan sidesanat', () => {

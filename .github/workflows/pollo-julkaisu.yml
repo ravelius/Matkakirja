@@ -193,6 +193,23 @@ jobs:
           set +x
           printf '%s' "$ANTHROPIC_API_KEY" | "$WRANGLER" secret put ANTHROPIC_API_KEY --config "$POLLO_ASETUS"
 
+      # KEHITTÄJÄKOODI on vapaaehtoinen: jos salaisuutta ei ole asetettu,
+      # tämä vaihe ohitetaan eikä worker tunne koodia lainkaan — silloin
+      # otsake X-Pollo-Kehittaja ei tee mitään. Koodi menee wranglerille
+      # samalla tavalla kuin API-avain: putkessa, ei komentorivillä eikä
+      # tiedostona, eikä sitä tulosteta missään vaiheessa.
+      - name: Aseta kehittäjäkoodi workerin salaisuudeksi (jos on)
+        env:
+          POLLO_KEHITTAJAKOODI: ${{ secrets.POLLO_KEHITTAJAKOODI }}
+        run: |
+          set -euo pipefail
+          set +x
+          if [ -z "${POLLO_KEHITTAJAKOODI:-}" ]; then
+            echo "POLLO_KEHITTAJAKOODI ei ole asetettu — ohitetaan."
+            exit 0
+          fi
+          printf '%s' "$POLLO_KEHITTAJAKOODI" | "$WRANGLER" secret put POLLO_KEHITTAJAKOODI --config "$POLLO_ASETUS"
+
       - name: Kerro mitä julkaistiin
         if: success()
         run: |
@@ -216,6 +233,8 @@ jobs:
             echo "- Sallittu origin: \`$POLLO_ORIGINIT\`"
             echo "- Käyttörajojen KV-säilö: käytössä"
             echo "- API-avain: asetettu workerin salaisuudeksi (ei näy missään lokissa)"
+            echo "- Kehittäjäkoodi: valinnainen salaisuus \`POLLO_KEHITTAJAKOODI\`"
+            echo "  (jos asetettu, sama koodi pelin kehittäjätilassa ohittaa käyttörajat)"
             echo
             echo "Ennen kytkentää pöllönappi näyttää pelissä siistin"
             echo "\"Pöllö ei ole vielä hereillä\" -viestin — mikään ei ole rikki."

@@ -242,6 +242,28 @@ uudelleen) tai kun ajetaan `npx wrangler deploy` komentoriviltä.
 Ylityksestä pelaaja saa siistin viestin ("Pöllö on vastannut sinulle jo
 monta kertaa tänään"), ei virhettä.
 
+## Kehittäjäkoodi: rajaton käyttö omalla laitteella
+
+Päiväraja tulee ensimmäisenä vastaan sinulle itsellesi, koska testaat
+peliä kymmenillä kysymyksillä peräkkäin. Sitä varten on **valinnainen**
+salaisuus `POLLO_KEHITTAJAKOODI`.
+
+1. Keksi koodi (mikä tahansa pitkä merkkijono, esim. salasanageneraattorista).
+2. Vie se GitHubin salaisuuksiin nimellä `POLLO_KEHITTAJAKOODI`
+   (Settings → Secrets and variables → Actions) ja aja "Pöllön julkaisu"
+   uudelleen. Julkaisuajo asettaa sen workerin salaisuudeksi samalla
+   tavalla kuin API-avaimen — putkessa, ei koskaan lokiin.
+3. Pelissä: kytke **kehittäjätila** päälle (versionumero → Kehittäjä),
+   avaa pöllö ja kirjoita koodi paneelin alalaidan pieneen kenttään.
+   Koodi jää vain sille laitteelle.
+
+Sen jälkeen pyynnöt siltä laitteelta ohittavat päivä- ja
+kuukausirajan. Laskurit kasvavat silti, joten kulutus näkyy normaalisti.
+
+**Koodia ei kirjoiteta repoon** — ei tähän tiedostoon, ei pelin koodiin,
+ei viestiin. Jos salaisuutta ei ole asetettu, otsake ei tee mitään:
+worker ei tunne mitään koodia, joten mikään ei muutu.
+
 Vuorokausi ja kuukausi vaihtuvat UTC-ajassa, eli Suomen kesäajassa klo
 3.00. Vastauksen katto on 700 merkkiyksikköä (max_tokens), joten
 yksittäinen kysymys ei voi karata pitkäksi.

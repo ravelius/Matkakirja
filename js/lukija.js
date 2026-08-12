@@ -90,6 +90,22 @@ export const LUKIJAN_OHITETTAVAT = [
   '.source-line',
   '.quiz-kuvalahteet',
 
+  /*
+   * MAALEHDEN TILASTOLOHKO (omistajan havainto 13.8.2026).
+   *
+   * Maalehden alussa on symbolirivit — väkiluku, pinta-ala, V-Dem,
+   * $/v — ja niiden alla tervehdykset kielineen ja puhujaosuuksineen
+   * (js/ui.js naytaMaaTunnusluvut). Ruudulla ne ovat yhdellä
+   * silmäyksellä luettavia, mutta ääneen luettuna niistä tulee
+   * minuutin mittainen numerolitania ennen kuin juttu edes alkaa:
+   * "44 miljoonaa 34 603 700 neliökilometriä 25 0,34 V-Dem 128…".
+   * Luennan kuuluu alkaa leipätekstistä ("Ukraina on suurin…").
+   */
+  '#arrival-maa-tunnusluvut',
+  '#arrival-maa-tervehdykset',
+  '.maa-tunnusrivi',
+  '.tervehdys',
+
   // Kuvatekstit, selitteet ja karttojen numeroselitykset.
   '.kuvateksti',
   '.nahtavyys-kuvateksti',
@@ -280,7 +296,14 @@ export function lukijaTuettu() {
  */
 const PALAN_KATTO = 220;
 
-function paloittele(teksti, katto = PALAN_KATTO) {
+/*
+ * Nimi on lukijan oma (lukijaPaloittele eikä paloittele): yhden
+ * tiedoston koonti (tools/build-standalone.mjs) on yhtä
+ * näkyvyysaluetta, ja js/uutiset.js julistaa oman paloittele-funktionsa
+ * eri palakoolla. Samanniminen jälkimmäinen voitti hiljaa, jolloin
+ * uutisten palat pilkkoutuivat dist-versiossa lukijan mitalla.
+ */
+function lukijaPaloittele(teksti, katto = PALAN_KATTO) {
   const palat = [];
   for (const rivi of String(teksti).split('\n')) {
     const siistitty = rivi.trim();
@@ -394,7 +417,7 @@ export function lueAaneen(teksti, nappi = null) {
   } catch {
     /* ei mitään peruttavaa */
   }
-  const palat = paloittele(puhuttava);
+  const palat = lukijaPaloittele(puhuttava);
   if (!palat.length) return false;
   let jaljella = palat.length;
   ajossa = {
