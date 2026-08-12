@@ -25,10 +25,15 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.0"
+    # Näkyvä versionumero. Tätä nostetaan käsin, kun kuoreen tulee jotain
+    # kerrottavaa — esimerkiksi "0.2.0". Kuoren versionumero EI liity pelin
+    # versionumeroon (docs/roolitus.md): peli päivittyy verkosta, kuori vain
+    # harvoin App Storen kautta.
     MARKETING_VERSION: "0.1.0"
+    # Buildnumero. Tämä on vain paikallista käännöstä varten: TestFlight-ajo
+    # korvaa sen GitHub-ajon numerolla (CURRENT_PROJECT_VERSION=<ajon numero>),
+    # koska App Store Connect hylkää saman version+buildnumeron kahdesti.
     CURRENT_PROJECT_VERSION: "1"
-    # Kuoren versionumero EI liity pelin versionumeroon (docs/roolitus.md):
-    # peli päivittyy verkosta, kuori vain harvoin App Storen kautta.
 
 targets:
   Matkakirja:
@@ -53,15 +58,26 @@ targets:
         buildPhase: resources
     settings:
       base:
+        # Sovelluksen pysyvä tunniste. TÄTÄ EI VAIHDETA sen jälkeen kun se on
+        # kerran rekisteröity Applelle: uusi tunniste tarkoittaa Applen
+        # silmissä eri sovellusta, jolloin testaajat ja arvostelut jäisivät
+        # vanhaan. Sama arvo on ios/fastlane/Appfilessa.
         PRODUCT_BUNDLE_IDENTIFIER: fi.matkakirja.peli
         PRODUCT_NAME: Matkakirja
         INFOPLIST_FILE: Matkakirja/Resurssit/Info.plist
         GENERATE_INFOPLIST_FILE: NO
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         TARGETED_DEVICE_FAMILY: "1,2"
+        # Allekirjoitus on automaattinen: Apple luo ja uusii varmenteet ja
+        # profiilit itse, kun xcodebuild saa App Store Connect -API-avaimen
+        # (.github/workflows/ios-testflight.yml).
         CODE_SIGN_STYLE: Automatic
-        # Allekirjoitusta ei ole vielä: käännösajuri ajaa
-        # CODE_SIGNING_ALLOWED=NO ja rakentaa simulaattorille.
+        # Tiimitunnus on tarkoituksella tyhjä: se on GitHubin salaisuus
+        # (TEAM_ID) eikä kuulu repoon. Käännösajuri antaa sen komentorivillä
+        # (DEVELOPMENT_TEAM=...), ja Macilla Xcode täyttää sen itse, kun
+        # kirjautunut Apple-tili valitaan Signing-välilehdellä.
+        # Savukoeajo (ios-kaannos.yml) ei tarvitse tätä lainkaan: se kääntää
+        # simulaattorille CODE_SIGNING_ALLOWED=NO.
         DEVELOPMENT_TEAM: ""
 
 # Skeema kirjataan tässä, jotta sekä käännösajuri (`xcodebuild -scheme
