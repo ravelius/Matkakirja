@@ -3861,13 +3861,17 @@ body.radio-tila .board-hint {
  */
 .maa-pilleri {
   position: absolute;
-  top: 0.6rem;
-  right: 0.5rem;
+  /* Sama etäisyys reunasta kuin matkakirjan lapulla (data-corner-säännöt:
+   * 0.4rem) ja ilman pystytäytettä sama rivinkorkeus kuin lapun
+   * supistetulla rivillä — omistajan huomio 12.8.2026: kyltit istuivat
+   * eri korkeuksilla ja maakyltti oli paksumpi. */
+  top: 0.4rem;
+  right: 0.4rem;
   z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: 0.45em;
-  padding: 0.2rem 0.5em;
+  padding: 0 0.5em;
   border: 0;
   border-radius: 6px;
   background: rgba(244, 231, 202, 0.86);
