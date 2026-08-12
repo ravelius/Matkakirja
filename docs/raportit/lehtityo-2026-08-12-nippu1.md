@@ -19,7 +19,7 @@ Mittarit:
 | Kuvaduplikaatit koko pakkaa vasten | `tiedosto:`-tekstihaku kaikista paketeista | 3 781 viittausta |
 | Aihetoisto (sama juttu kahdesti eri kuvalla) | uusi `tools/tarkista-aihetoisto.mjs` | 1 340 juttua |
 | Kaupunkilehtien rakenne | KULTTUURI_KATEGORIAT vs. malli | 43 kaupunkia |
-| Faktat | kaksi tarkistusagenttia (ME-seitsikko, Aasian 2. erä) | ks. kohta 3 |
+| Faktat | neljä tarkistusagenttia, erä kerrallaan | 396 juttua, ks. kohta 3 |
 
 ## 2. Löydökset
 
@@ -110,11 +110,108 @@ kaistoilla. Lista on kohdassa 5.
 
 ## 3. Faktatarkistus
 
-*(täydennetään, kun tarkistusagenttien tulokset ovat sisällä)*
+Neljä tarkistusagenttia ajettiin kaikkien 22 maalehden yli erillisinä
+erinä. Toimeksianto oli sama joka kerta: *oleta että teksteissä on
+virheitä ja kumoa ne*, Unesco-luvut Unescon omasta rajapinnasta
+(`data.unesco.org/.../whc001`, koska whc.unesco.org antaa 403:n).
+Yhteensä käytiin läpi **396 juttua** ja tarkistettiin ulkoisesta
+lähteestä noin 250 yksittäistä väitettä.
+
+**Viisi todistettua virhettä. Kaikki korjattu, ja jokainen tarkistettiin
+vielä itse ennen korjausta:**
+
+| Missä | Väite | Oikein |
+|---|---|---|
+| JOR/rauniot | Jerashin soikeaa toria kiertää "lähes seitsemänkymmentä pylvästä" | Lukua ei saatu vahvistettua mistään luotettavasta lähteestä → luku poistettiin, teksti kertoo nyt joonialaisesta pylväsrivistä |
+| JOR/rauniot | Otsikko "Pääkaupungin kukkulalla seisoo kuusi pylvästä" | Herkuleen temppelin portiikossa OLI kuusi runsaan 13 metrin pylvästä; pystyssä on kolme — sen sanoo myös jutun oma kuva. Otsikko ja teksti korjattu |
+| IRN/rakennukset | Naqsh-e Jahanin aukio "noin 160 × 500 metriä" | 160 × 560 m, lähes 9 hehtaaria (Unescon oma kuvaus) |
+| VNM/historia | "Yhdeksänkymmenestäyhdestä paadesta on jäljellä 82" | Paasia pystytettiin 116, jäljellä 82 |
+| KOR/musiikki | "Japanissa sama tapahtui sarjalla Talvisonaatti vuonna 2002" | Sarja esitettiin Koreassa 2002; Japanin hallyu-buumin laukaisi NHK:n lähetys 2003 |
+
+Lisäksi **CYP/luonto**: kyproksenmuflonin painot (uros 35–45 kg, naaras
+25–35 kg) eivät vastanneet lähdettä, joka sanoo uroksesta "jopa 50 kg"
+ja naaraasta "noin 35 kg". Luvut kirjoitettiin lähteen mukaisiksi.
+
+**Epävarmoina kirjattu, EI korjattu** (lähteet ovat keskenään
+ristiriitaisia, eikä yksikään auktoritatiivinen lähde ratkaissut asiaa):
+
+- IRQ/rakennukset: Samarran Malwiya "848–852" — en-Wikipedia sanoo
+  valmistumisvuodeksi 851.
+- IRQ/rakennukset: Mustansiriyan vesikello "pihalle" — lähde sijoittaa
+  sen eteishalliin.
+- THA/kuvataide: Ramakien-gallerian "sadan kahdeksankymmenen kentän
+  verran" — useat toisiolähteet sanovat 178 paneelia.
+- THA/historia: Smaragdibuddha "veistetty yhdestä vihreästä
+  jadeiittilohkareesta" — lähteet puhuvat jaspiksesta tai jadesta
+  eivätkä ratkaise kivilajia.
+
+**Puhtaita maita:** OMN, QAT, KWT, SAU, BHR, ARE, SYR, YEM, JPN, CHN,
+IND, IDN, MYS, PHL, PAK — ei yhtään todistettua virhettä. Aineisto on
+kokonaisuutena hyvin tarkkaa: Qingming-kääryn 814 ihmistä, Hegran 111
+hautaa, Kuwait-tornien 41 000 kiekkoa ja Danan 703 kasvilajia täsmäsivät
+kaikki lähteisiin.
 
 ## 4. Mitä tässä nipussa korjattiin
 
-*(täydennetään ennen julkaisua)*
+**Minitehtävät (27 rikettä, 8 maata).** Oikeat vastaukset kirjoitettiin
+siihen muotoon, jossa sanat ovat sivun tekstissä; liian pitkät oikeat
+vaihtoehdot lyhennettiin tai vääriä pidennettiin; KWT/ruoka sai kokonaan
+uuden kysymyksen (vanha vastaus luki sekä otsikossa että johdannossa) ja
+KWT/rakennukset uuden aiheen (vanha kysyi samaa kuin Kuwaitin
+kulttuurivisa). **Kaikki 22 maata läpäisevät nyt esitarkistimen.**
+
+**Aihetoisto (6 kohtaa).** Viisi juttua kirjoitettiin uusiksi ja yksi
+siirrettiin:
+
+| Mikä | Miten ratkaistiin |
+|---|---|
+| Helmisukellus kolmesti | Bahrain omistaa aiheen (koko sivu). QAT/meri kertoo nyt laivaston koosta (Lorimerin 1908 taulukko: 817 venettä, 13 000 miestä), ja Dubain kannen juttu kertoo itse kaiverruksesta — miten The Graphic esitteli lahden Lontoon lukijoille 1881 |
+| Umm Kulthum kahdesti | Kannen versio jää, koska Kairon kulttuurivisa nojaa siihen. EGY/musiikki sai tilalle kediivin oopperatalon (1869, Rigoletto, palo 1971) ja Aidan riemumarssin esikuunteluna |
+| Sama otsikko ARE ja PAK | PAK/luonto kirjoitettiin uusiksi Induksen suiston omasta näkökulmasta: kolme mangroven istutuksen maailmanennätystä |
+| Qanat IRN + karttasivu | IRN/puutarhat sai Shazdehin puutarhan (ja sivu uuden minitehtävän, koska vanha kysyi qanatista) |
+| Musandam OMN + karttasivu | OMN/meri sai Sohar-laivan matkan Kiinaan 1980–81 |
+| Al Zubarah QAT + karttasivu | QAT/aavikko sai laulavan dyynin |
+
+**Kairon kaupunkilehti.** Kansi lyhennettiin kolmeen nostoon mallin
+mukaisesti, ja Kairo sai aihesivun `historia`: al-Fustat (641), al-Azhar
+(970) ja kannelta siirretty Description de l'Égypten kartta (1809) —
+sivusta tuli aikajana. Sivulle kirjoitettiin minitehtävä, jollaista
+Kairolla ei ollut lainkaan.
+
+**Dubain nähtävyysjutut.** Kuusi juttua kohdekartan kuudelle kohteelle:
+Kultasuuk, Dhow-satama, Al Shindagha, Abra-laiturit, Bastakian
+kaupunginosa ja Al Fahidin linnoitus. Kahdeksan uutta kuvaa, kaikki
+katsottu ja lähdetiedot haettu Commonsin API:sta.
+
+**Kuvat.** Kaksi vaihdettiin: IRQ/ruoka kleicha 540 px → 4 624 px ja
+YEM/rakennukset Dar al-Hajar 967 px → 3 888 px (uusi kuva on myös
+alaviistosta, joten kalliopaasi erottuu paremmin). **Seitsemän jätettiin
+ennalleen ja perustelu kirjattiin:**
+
+- IRQ tashrib (1 080 px), YEM Zabid (1 062 px) ja YEM Tihama (961 px) —
+  kelvollista korvaajaa ei löytynyt. Ainoat riittävän isot ehdokkaat
+  olivat vesileimattuja tai esittivät eri kohdetta.
+- IRQ Ukhaidir (1 024 px) — löytyi 5 663 px:n kuva, mutta se on otettu
+  muurin edestä eikä näytä suorakaidetta, josta otsikko puhuu. Pienempi
+  kuva vastaa juttua paremmin.
+- IRQ mudhif ja IRQ ruokovene (1 024 px) — parhaat korvaajat olivat
+  Yhdysvaltain armeijan insinöörijoukkojen kuvia. Lisenssi kelpaa (PD),
+  mutta edeltäjä oli tietoisesti välttänyt niitä Irakin sivuilla, joten
+  1 024 px:n ero ei ollut sen arvoinen.
+- OMN suitsuke (1 125 px) — korvaaja olisi esittänyt puun, nykyinen
+  esittää hartsijyviä, joista juttu kertoo.
+- Dubain kannen kaiverrus (829 px) — kuva ON jutun aihe, eikä samaa
+  kaiverrusta ole Commonsissa suurempana.
+
+**Työkalut.** `tools/tarkista-aihetoisto.mjs` (uusi) ja
+`tools/tarkista-maa.mjs` (lukee nyt kulttuurivisat ja tuntee kentät
+`wiki`, `musiikki*`, `esikuuntelu`).
+
+**Egyptin sivutuotteet.** EGY/musiikki oli tämän nipun kohde, ja samalla
+korjattiin kaksi esitarkistimen löydöstä: EGY/ruoan otsikko "Leipä
+tarkoittaa elämää" sisälsi sivun minitehtävän vastauksen, ja
+EGY/musiikin vastaus "Otelaudassa ei ole nauhoja" ei ollut sivun
+tekstissä siinä muodossa.
 
 ## 5. Jonoon jätetty — Fablen tai toisen kaistan päätettäväksi
 
