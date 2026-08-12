@@ -135,6 +135,59 @@ export function siivoaHistoria(historia, maara = HISTORIAN_KATTO) {
 }
 
 /**
+ * Vakioaikainen merkkijonovertailu.
+ *
+ * Kehittäjäkoodi on lyhyt salaisuus, ja tavallinen === kertoo
+ * vastausajallaan, kuinka monta merkkiä osui. Ero on mikroskooppinen
+ * ja verkon yli käytännössä mittaamaton, mutta oikea vertailu maksaa
+ * kaksi riviä eikä sitä siksi jätetä tekemättä.
+ *
+ * Pituusero paljastuu (sitä ei voi piilottaa vertailemalla), mutta
+ * silloinkin käydään koko silmukka läpi.
+ */
+export function vertaaSalaisuus(annettu, oikea) {
+  const a = String(annettu ?? '');
+  const b = String(oikea ?? '');
+  if (!a || !b) return false;
+  let ero = a.length ^ b.length;
+  const pituus = Math.max(a.length, b.length);
+  for (let i = 0; i < pituus; i += 1) {
+    ero |= (a.charCodeAt(i % a.length) ?? 0) ^ (b.charCodeAt(i % b.length) ?? 0);
+  }
+  return ero === 0;
+}
+
+/**
+ * Jatkokysymysten erotin mallin vastauksessa.
+ *
+ * Malli ohjeistetaan (worker.js JATKOKEHOTE) päättämään vastauksensa
+ * riviin "JATKOT:" ja sen alle 2–3 kysymystä. Merkintä jäsennetään
+ * TÄÄLLÄ PALVELIMELLA, jotta raaka merkintä ei voi missään tilanteessa
+ * päätyä pelaajan ruudulle: peli saa erikseen vastauksen ja listan.
+ */
+const JATKOT_MERKKI = /^\s*jatkot\s*:?\s*$/i;
+
+/**
+ * Erottaa vastauksesta jatkokysymykset.
+ *
+ * @returns {{vastaus: string, jatkot: string[]}}
+ */
+export function poimiJatkot(teksti, maara = 3) {
+  const rivit = String(teksti ?? '').split('\n');
+  let raja = -1;
+  for (let i = rivit.length - 1; i >= 0; i -= 1) {
+    if (JATKOT_MERKKI.test(rivit[i])) { raja = i; break; }
+  }
+  if (raja < 0) return { vastaus: String(teksti ?? '').trim(), jatkot: [] };
+  return {
+    vastaus: rivit.slice(0, raja).join('\n').trim(),
+    // Sama siivous kuin avausruudun ehdotuksilla: numerointi ja
+    // ranskalaiset viivat pois, ei-kysymykset hylätään.
+    jatkot: poimiEhdotukset(rivit.slice(raja + 1).join('\n'), maara),
+  };
+}
+
+/**
  * Mallin vastauksesta kysymysehdotuksiksi.
  *
  * Malli ohjeistetaan kirjoittamaan yksi kysymys riville, mutta pieni

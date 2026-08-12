@@ -47,6 +47,48 @@ const OTSIKON_PAINO = 2;
 const TEKSTIN_PAINO = 1;
 const TARKAN_OSUMAN_KERROIN = 2.5;
 
+/*
+ * OSUVUUSKYNNYS (omistajan huomio 12.8.2026: Ateenan torikysymys sai
+ * linkin Syyrian historiaan).
+ *
+ * Haku palautti ennen aina neljä parasta, olivatpa ne kuinka heikkoja
+ * tahansa. Yksi yleinen sana riitti: "Mitä Ateenan torilla tapahtui?"
+ * osui kaikkeen, missä mainittiin tori. Nyt osumalta vaaditaan kolme
+ * asiaa, ja mieluummin ei yhtään katkelmaa kuin epäolennainen:
+ *
+ *   1. AVAINSANA. Kysymyksen harvinaisimmat sanat ovat sen aihe.
+ *      Osuman on osuttava vähintään yhteen niistä — pelkkä "torilla"
+ *      ei kelpaa, kun kysymyksen aihe on "Ateenan".
+ *   2. POHJAPISTE. Alle pohjan jäävä osuma on käytännössä aina
+ *      sattuma (yksi yleinen sana leipätekstissä).
+ *   3. SUHTEELLINEN KYNNYS. Jos joukossa on selvästi paras osuma,
+ *      selvästi heikommat eivät kulje sen mukana.
+ *
+ * Luvut on viritetty ajamalla oikeita kysymyksiä koko aineistoa
+ * vasten; ks. tests/pollo.test.mjs, jossa samat tapaukset ovat
+ * vartiotesteinä.
+ */
+export const HAUN_POHJAPISTE = 15;
+export const HAUN_SUHDEKYNNYS = 0.8;
+export const HAUN_AVAINSANARAJA = 0.9;
+
+/**
+ * Pelaajan sijainnin kerroin.
+ *
+ * Kysymys kysytään lähes aina siitä paikasta, jossa pelaaja seisoo.
+ * Nykyisen kaupungin ja maan omat jutut nostetaan siksi selvästi muiden
+ * edelle — kaksinkertainen piste riittää kääntämään kilpailun oman
+ * maan hyväksi silloinkin, kun vieraassa jutussa sattuu olemaan sama
+ * sana otsikossa.
+ */
+export const HAUN_SIJAINTIKERROIN = 2;
+
+/** Montako pelinsisäistä linkkiä vastauksen yhteydessä enintään näytetään. */
+export const POLLON_LINKKIKATTO = 2;
+
+/** Ankkurisanan vähimmäispituus vastaustekstissä (ks. ankkuriSanat). */
+const ANKKURIN_VAHIMMAISPITUUS = 5;
+
 /** Hakusanan vähimmäispituus. Lyhyemmät ovat sidesanoja. */
 const SANAN_VAHIMMAISPITUUS = 3;
 
@@ -61,6 +103,18 @@ const OHITETTAVAT = new Set([
   'siella', 'täällä', 'taalla', 'että', 'etta', 'mutta', 'kun', 'niin',
   'myös', 'myos', 'vielä', 'viela', 'sekä', 'seka', 'joka', 'jossa', 'jonka',
   'voi', 'saa', 'ole', 'olen', 'kerro', 'kerrotko', 'kertoisitko',
+  /*
+   * Kysymyksen kehys, ei sen aihe. Nämä lisättiin osuvuuskorjauksen
+   * yhteydessä (12.8.2026): ilman niitä "Millainen sää täällä on
+   * talvella?" nosti kärkeen jutun, jonka leipätekstissä sattui
+   * lukemaan "millainen", ja "Mitä Tokiossa kannattaa nähdä?" haki
+   * osumia sanoilla "kannattaa" ja "nähdä".
+   */
+  'millainen', 'millaista', 'millaisia', 'minkälainen', 'minkalainen',
+  'paljonko', 'montako', 'monta', 'kannattaa', 'nähdä', 'nahda',
+  'tapahtui', 'tapahtuu', 'tiedätkö', 'tiedatko', 'osaatko', 'tarkoittaa',
+  'olisi', 'pitäisi', 'pitaisi', 'sitten', 'muuta', 'tässä', 'tassa',
+  'tuolla', 'ihan',
 ]);
 
 /** Merkkijono sanoiksi: pienet kirjaimet, vain kirjaimet ja numerot. */
@@ -234,6 +288,67 @@ export function lahdeLeima(m, nimet = {}) {
 }
 
 /**
+ * Ankkurisanat, joilla katkelman voi sitoa vastaustekstiin.
+ *
+ * Pöllön vastauksesta etsitään kohta, joka puhuu samasta asiasta, ja se
+ * kohta muutetaan linkiksi (js/pollo.js korostaLinkit). Sanat tulevat
+ * VAIN pelin omasta indeksistä — merkinnän otsikosta ja aiheen nimestä
+ * — eivät koskaan mallin tekstistä. Lyhyet ja yleiset sanat jätetään
+ * pois, jottei linkki tarttuisi sanaan "ruoka" keskellä lausetta.
+ *
+ * Järjestys on tarkkuusjärjestys: otsikon sanat ensin (ne nimeävät
+ * juuri tämän jutun), aiheen nimi vasta perässä.
+ */
+export function ankkuriSanat(m) {
+  const ulos = [];
+  const lisaa = (teksti) => {
+    for (const sana of sanoita(teksti)) {
+      if (sana.length < ANKKURIN_VAHIMMAISPITUUS) continue;
+      if (OHITETTAVAT.has(sana)) continue;
+      if (!ulos.includes(sana)) ulos.push(sana);
+    }
+  };
+  lisaa(m?.otsikko);
+  lisaa(m?.aiheNimi);
+  return ulos;
+}
+
+/** Kahden sanan yhteisen alkuosan pituus. */
+function yhteinenAlku(a, b) {
+  const raja = Math.min(a.length, b.length);
+  let i = 0;
+  while (i < raja && a[i] === b[i]) i += 1;
+  return i;
+}
+
+/**
+ * Etsii vastaustekstistä kohdan, joka puhuu samasta asiasta.
+ *
+ * Palauttaa {alku, loppu} — merkkivälin, joka voidaan muuttaa linkiksi
+ * — tai null, jos luontevaa kohtaa ei ole. Suomen taivutuksen takia
+ * vertailu tehdään yhteisellä alkuosalla eikä tasan: "Akropolis" saa
+ * osua sanaan "Akropoliin", mutta "kivet" ei sanaan "kivistä".
+ *
+ * @param {string} teksti mallin vastaus
+ * @param {string[]} ankkurit ankkuriSanat()-lista pelin omasta indeksistä
+ */
+export function etsiAnkkuri(teksti, ankkurit = []) {
+  const koko = String(teksti ?? '');
+  if (!koko || !ankkurit?.length) return null;
+  const sanat = [...koko.matchAll(/[0-9a-zà-öø-ÿåäöÅÄÖ]+/gi)];
+  for (const ankkuri of ankkurit) {
+    for (const osuma of sanat) {
+      const sana = osuma[0].toLowerCase();
+      if (sana.length < ANKKURIN_VAHIMMAISPITUUS) continue;
+      const vaadittu = Math.min(6, sana.length, ankkuri.length);
+      if (yhteinenAlku(sana, ankkuri) < vaadittu) continue;
+      return { alku: osuma.index, loppu: osuma.index + osuma[0].length };
+    }
+  }
+  return null;
+}
+
+/**
  * Hakee osuvimmat katkelmat.
  *
  * @param {object} indeksi rakennaIndeksin tulos
@@ -244,8 +359,13 @@ export function lahdeLeima(m, nimet = {}) {
  *              tehtävä on jo ratkaistu. Ilman tätä fakta-merkinnät
  *              jätetään aina pois (varovainen oletus).
  *   nimet      { kaupunki(id), maa(iso) } lähdeleimoja varten
+ *   sijainti   { kaupunki: cityId, maa: ISO } — näiden omat jutut
+ *              painotetaan ylös (HAUN_SIJAINTIKERROIN)
+ *   kynnys     false ohittaa osuvuuskynnyksen (vain työkaluja varten)
  */
-export function haeKatkelmat(indeksi, kysymys, { maara = 4, onVastattu = null, nimet = {} } = {}) {
+export function haeKatkelmat(indeksi, kysymys, {
+  maara = 4, onVastattu = null, nimet = {}, sijainti = {}, kynnys = true,
+} = {}) {
   const alku = (globalThis.performance ?? Date).now();
   const sanat = hakusanat(kysymys);
   if (!indeksi?.merkinnat?.length || !sanat.length) {
@@ -279,25 +399,47 @@ export function haeKatkelmat(indeksi, kysymys, { maara = 4, onVastattu = null, n
   }
 
   const yhteensa = Math.max(indeksi.merkinnat.length, 1);
-  const painot = tiheys.map((df) => Math.log(yhteensa / (1 + df)));
+  const painot = tiheys.map((df) => Math.max(Math.log(yhteensa / (1 + df)), 0.05));
+  /*
+   * Kysymyksen avainsanat: harvinaisimmat sanat kertovat, mistä
+   * kysymys on. Raja on suhteellinen, jotta lyhyt kysymys ("Mikä on
+   * Akropolis?") toimii samalla säännöllä kuin pitkä.
+   */
+  const suurinPaino = painot.length ? Math.max(...painot) : 0;
+  const avainsana = painot.map((paino) => paino >= HAUN_AVAINSANARAJA * suurinPaino);
+
   const pisteet = [];
   for (const { m, rivi } of osumat) {
     let piste = 0;
+    let avaimia = 0;
     for (const [i, otsikossa, tekstissa] of rivi) {
-      const paino = Math.max(painot[i], 0.05);
+      const paino = painot[i];
       if (otsikossa) piste += OTSIKON_PAINO * paino * (otsikossa === 2 ? TARKAN_OSUMAN_KERROIN : 1);
       if (tekstissa) piste += TEKSTIN_PAINO * paino * (tekstissa === 2 ? TARKAN_OSUMAN_KERROIN : 1);
+      if (avainsana[i]) avaimia += 1;
     }
-    pisteet.push({ m, piste });
+    // Pelaajan oma kaupunki ja maa painavat selvästi enemmän.
+    const oma = Boolean((sijainti?.kaupunki && m.omistaja === sijainti.kaupunki)
+      || (sijainti?.maa && m.omistaja === sijainti.maa));
+    if (oma) piste *= HAUN_SIJAINTIKERROIN;
+    if (kynnys && (avaimia < 1 || piste < HAUN_POHJAPISTE)) continue;
+    pisteet.push({ m, piste, oma });
   }
   pisteet.sort((a, b) => b.piste - a.piste || b.m.teksti.length - a.m.teksti.length);
-  const katkelmat = pisteet.slice(0, maara).map(({ m, piste }) => ({
+  const paras = pisteet[0]?.piste ?? 0;
+  const kelvolliset = kynnys
+    ? pisteet.filter(({ piste }) => piste >= HAUN_SUHDEKYNNYS * paras)
+    : pisteet;
+  const katkelmat = kelvolliset.slice(0, maara).map(({ m, piste, oma }) => ({
     piste,
+    oma,
     leima: lahdeLeima(m, nimet),
     teksti: m.teksti.length > KATKELMAN_KATTO
       ? `${m.teksti.slice(0, KATKELMAN_KATTO - 1)}…`
       : m.teksti,
     lahde: m.lahde,
+    // Sanat, joilla katkelman voi sitoa vastaustekstin kohtaan.
+    ankkurit: ankkuriSanat(m),
     // Avausreitti pelin sisään. Linkit rakennetaan TÄSTÄ eikä mallin
     // tekstistä, joten pöllö ei voi keksiä rikkinäistä linkkiä.
     reitti: m.reitti ? { ...m.reitti, leima: lahdeLeima(m, nimet) } : null,

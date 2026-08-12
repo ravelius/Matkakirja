@@ -173,13 +173,18 @@ const MODULES = [
   'js/game.js',
   'js/ai.js',
   /*
+   * Sivujen luenta ENNEN pöllöä: ui.js tuo lukijan staattisesti, ja
+   * js/pollo.js tuo siitä kaiutinvivun luentafunktiot (lueAaneen,
+   * lukijaTuettu, pysaytaLukija). Niputus on yhtä näkyvyysaluetta,
+   * joten lukija on turvallisinta ladata ennen sen käyttäjiä.
+   */
+  'js/lukija.js',
+  /*
    * Viisas Pöllö ENNEN ui.js:ää: ui.js tuo polloAnkkurin ja polloSuljen
    * staattisesti, ja main.js kutsuu asennaPolloa moduulitasolla.
    */
   'js/pollo-haku.js',
   'js/pollo.js',
-  // Sivujen luenta: ui.js tuo lukijan staattisesti.
-  'js/lukija.js',
   'js/ui.js',
 
   'js/muutokset.js',
