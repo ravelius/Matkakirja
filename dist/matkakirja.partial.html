@@ -10793,15 +10793,17 @@ body[data-mode] .actions .pollo-paneeli,
 body[data-mode] .actions .pollo-paneeli * { text-shadow: none; }
 
 /*
- * Ehdotukset ovat paneelin ylin osa nyt kun otsikkopalkkia ei ole.
- * Yläpehmuste antaa niille saman ilmavan reunuksen, joka palkilla oli.
+ * Ehdotukset ovat KESKUSTELUVIRRASSA, eivät paneelin yläreunassa
+ * (omistajan havainto 13.8.2026). Aiemmin laatikko oli paneelin oma
+ * ylin osa, jolloin se jäi lukituksi vanhan vastauksen päälle ja näytti
+ * kuuluvan siihen. Nyt se vierii viestien mukana ja saa saman muodon
+ * kuin vastauksen alla olevat jatkokysymykset (.pollo-jatkot).
  */
 .pollo-ehdotukset {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  padding: 0.55rem 0.6rem;
-  border-bottom: 1px solid var(--pollo-viiva);
+  gap: 0.25rem;
+  margin: 0 0 0.6rem;
 }
 
 button.pollo-ehdotus {
@@ -143200,6 +143202,46 @@ function lukijaPaloittele(teksti, katto = PALAN_KATTO) {
   return palat;
 }
 
+/**
+ * VAIENTAA SELAIMEN PUHESYNTETISAATTORIN HETI.
+ *
+ * synth.cancel() riittää määritelmän mukaan, mutta ei käytännössä:
+ * WebKitissä (Safari ja iOS-kuoren WKWebView) tauolle jäänyt jono ei
+ * tyhjene ennen kuin se on herätetty, ja juuri aloitettu lausuma jatkuu
+ * toisinaan ensimmäisestä perumisesta huolimatta. Siksi tässä tehdään
+ * kolme asiaa: herätys, peruminen ja varmistus seuraavalla vuorolla.
+ *
+ * Tämä on se puolisko, jonka pöllön kaiutinvipu tarvitsee: vipu pois →
+ * ääni loppuu kesken lauseen, ei lauseen tai jonon loputtua (omistajan
+ * havainto 13.8.2026).
+ */
+let vaimennusVuoro = 0;
+
+function vaimennaSynth(synth, varmista = false) {
+  if (!synth) return;
+  // Vuoronumero mitätöi vanhat varmistukset: jos uusi luenta (tai uusi
+  // pysäytys) ehtii väliin, viivästetty peruminen ei saa katkaista sitä.
+  const vuoro = (vaimennusVuoro += 1);
+  const yrita = () => {
+    try {
+      if (synth.paused && typeof synth.resume === 'function') synth.resume();
+      synth.cancel();
+    } catch {
+      /* selain oli jo hiljaa */
+    }
+  };
+  yrita();
+  if (!varmista || typeof setTimeout !== 'function') return;
+  setTimeout(() => {
+    if (vuoro !== vaimennusVuoro) return;
+    try {
+      if (synth.speaking || synth.pending) yrita();
+    } catch {
+      /* syntetisaattori katosi kesken kaiken */
+    }
+  }, 0);
+}
+
 /* ------------------------------------------------------------------ */
 /* Luennan tila — vain yksi kerrallaan                                 */
 /* ------------------------------------------------------------------ */
@@ -143285,38 +143327,61 @@ function lueAaneen(teksti, nappi = null) {
 
   const synth = selainPuhe();
   if (!synth) return false;
-  try {
-    synth.cancel();
-  } catch {
-    /* ei mitään peruttavaa */
-  }
+  vaimennaSynth(synth);
   const palat = lukijaPaloittele(puhuttava);
   if (!palat.length) return false;
-  let jaljella = palat.length;
+  const aani = suomiAani(synth);
+
+  /*
+   * PALAT JONOTETAAN YKSI KERRALLAAN, EI KAIKKI KERRALLA.
+   *
+   * Ennen koko teksti työnnettiin syntetisaattorin jonoon heti, jolloin
+   * pysäytys oli sen varassa, että selain tyhjentää jonon oikein — ja
+   * juuri sitä WebKit ei tee luotettavasti: peruttu luenta jatkui
+   * seuraavasta palasta. Nyt jonossa on korkeintaan yksi lausuma ja
+   * seuraava lähtee vasta edellisen päätyttyä, joten peruminen lopettaa
+   * luennan lopullisesti — ja `peruttu` estää jo lähteneen päätöksen
+   * käynnistämästä uutta palaa.
+   */
+  const tila = { peruttu: false, lausuma: null };
+  let seuraava = 0;
+  const puhuPala = () => {
+    if (tila.peruttu) return;
+    if (seuraava >= palat.length) {
+      loppui();
+      return;
+    }
+    const lausuma = new window.SpeechSynthesisUtterance(palat[seuraava]);
+    seuraava += 1;
+    lausuma.lang = LUENNAN_KIELI;
+    if (aani) lausuma.voice = aani;
+    const valmis = () => {
+      if (tila.peruttu) return;
+      puhuPala();
+    };
+    lausuma.onend = valmis;
+    lausuma.onerror = valmis;
+    tila.lausuma = lausuma;
+    synth.speak(lausuma);
+  };
+
   ajossa = {
     nappi,
     merkki,
     lopeta: () => {
-      try {
-        synth.cancel();
-      } catch {
-        /* selain oli jo hiljaa */
+      tila.peruttu = true;
+      // Kuulijat irti ensin: peruminen laukaisee onend/onerror, eikä se
+      // saa käynnistää seuraavaa palaa.
+      if (tila.lausuma) {
+        tila.lausuma.onend = null;
+        tila.lausuma.onerror = null;
       }
+      // Varmistus päälle vain pysäytettäessä: WebKitissä juuri alkanut
+      // lausuma jää toisinaan käyntiin ensimmäisestä perumisesta.
+      vaimennaSynth(synth, true);
     },
   };
-  const aani = suomiAani(synth);
-  for (const pala of palat) {
-    const lausuma = new window.SpeechSynthesisUtterance(pala);
-    lausuma.lang = LUENNAN_KIELI;
-    if (aani) lausuma.voice = aani;
-    const valmis = () => {
-      jaljella -= 1;
-      if (jaljella <= 0) loppui();
-    };
-    lausuma.onend = valmis;
-    lausuma.onerror = valmis;
-    synth.speak(lausuma);
-  }
+  puhuPala();
   merkitseTila(nappi, true);
   return true;
 }
@@ -144001,9 +144066,14 @@ const LEHTI_LOHKOT = [
   { valitsin: '#arrival-city', otsikko: 'Lehden nimiö' },
   { valitsin: '#arrival-lehti-pvm', otsikko: 'Päiväys' },
   { valitsin: '#arrival-intro', otsikko: 'Kaupungin esittely' },
-  { valitsin: '#arrival-maa-nimi', otsikko: 'Maa' },
-  { valitsin: '#arrival-maa-intro', otsikko: 'Maan esittely' },
-  { valitsin: '#arrival-maa-tunnusluvut', otsikko: 'Maa numeroina' },
+  /*
+   * Lehden oma maaosasto EI ole sijaintitieto: Maiden tiedot
+   * -varusteella auki voi olla minkä tahansa maan lehti. Otsikot
+   * sanovat sen ääneen, jottei pöllö lue niitä pelaajan sijainniksi.
+   */
+  { valitsin: '#arrival-maa-nimi', otsikko: 'Lehden maaosasto koskee maata' },
+  { valitsin: '#arrival-maa-intro', otsikko: 'Lehden maaosaston esittely' },
+  { valitsin: '#arrival-maa-tunnusluvut', otsikko: 'Lehden maaosasto numeroina' },
   { valitsin: '#arrival-kategoria', otsikko: 'Avoinna oleva sivu' },
   { valitsin: '#arrival-kulttuuri-lista', otsikko: 'Lehden nostot' },
 ];
@@ -144092,12 +144162,42 @@ function poimiLohkot(juuri, lohkot = LEHTI_LOHKOT, estot = SPOILERI_LOHKOT) {
 }
 
 /**
+ * Maan nimi ISO-3-tunnuksesta pelin omalla aineistolla.
+ *
+ * Sama lähde kuin kartan maakyltillä (js/ui.js drawCountryBorders →
+ * paivitaMaaPilleri): map.countryShapes[iso].nimi. Jos laudalla ei ole
+ * tälle maalle muotoa, nimeä EI ole — silloin myös kartan kyltti on
+ * piilossa, eikä pöllökään saa keksiä maata omin päin.
+ *
+ * Nimi on pöllön oma (polloMaanNimi eikä maanNimi): yhden tiedoston
+ * koonti on yhtä näkyvyysaluetta, ja js/ui.js käyttää nimeä maanNimi
+ * sekä paikallismuuttujana että parametrina.
+ */
+function polloMaanNimi(game, iso) {
+  if (!iso) return null;
+  try {
+    return game?.pack?.map?.countryShapes?.[iso]?.nimi ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Pelin tila kontekstia varten.
  *
- * TÄMÄ ON SPOILERISUOJAN YDIN: funktio lukee vain nämä neljä kenttää.
+ * TÄMÄ ON SPOILERISUOJAN YDIN: funktio lukee vain nämä kentät.
  * game.quiz, game.duel, game.eventCard ja game.arrivalFact jäävät
  * koskematta — niissä ovat aktiivisen tehtävän kysymys, vaihtoehdot ja
  * oikean vastauksen indeksi.
+ *
+ * MAA JOHDETAAN AINA KAUPUNGISTA (omistajan havainto 13.8.2026).
+ * Pelaaja oli Sofiassa, ja pöllö väitti Sofiaa Kreikan pääkaupungiksi:
+ * konteksti luki maan ui.arrivalMaaTiedoista, joka osoittaa VIIMEKSI
+ * AVATTUUN maalehteen — Maiden tiedot -varusteella selattu Kreikka jäi
+ * siihen roikkumaan, vaikka pelaaja seisoi Bulgariassa. Nyt ketju on
+ * yksi ja sama kuin kartan maakyltillä: kaupunki → map.cityCountry →
+ * map.countryShapes[iso].nimi. Jos nimeä ei löydy, maa jää kokonaan
+ * pois — väärä maa on pahempi kuin puuttuva.
  */
 function pelinTila(game) {
   if (!game) return {};
@@ -144114,10 +144214,17 @@ function pelinTila(game) {
   } catch {
     paiva = null;
   }
+  let maaIso = null;
+  try {
+    maaIso = cityId ? game.pack?.map?.cityCountry?.[cityId] ?? null : null;
+  } catch {
+    maaIso = null;
+  }
   return {
     lauta: game.pack?.name ?? null,
     kaupunki,
-    maaIso: cityId ? game.pack?.map?.cityCountry?.[cityId] ?? null : null,
+    maaIso,
+    maa: polloMaanNimi(game, maaIso),
     paiva,
   };
 }
@@ -144145,7 +144252,10 @@ function kokoaKonteksti({
   const rivit = [];
   if (lauta) rivit.push(`Lauta: ${polloSiisti(lauta)}`);
   if (kaupunki) rivit.push(`Kaupunki, jossa pelaaja on: ${polloSiisti(kaupunki)}`);
-  if (maa) rivit.push(`Maa: ${polloSiisti(maa)}`);
+  // Sama sanamuoto kuin kaupungilla: lehtilohkoissa voi olla toisen maan
+  // osasto (Maiden tiedot -varusteella selattu vieras maalehti), joten
+  // pelkkä "Maa:" olisi kahdesti kontekstissa eri merkityksessä.
+  if (maa) rivit.push(`Maa, jossa pelaaja on: ${polloSiisti(maa)}`);
   if (paiva) rivit.push(`Matkapäivä: ${paiva}`);
   if (nakyma) rivit.push(`Näkymä: ${polloSiisti(nakyma)}`);
   if (matkakirja) {
@@ -144176,22 +144286,35 @@ function kokoaKonteksti({
 /**
  * Lukee nykytilan pelistä ja DOMista yhdeksi tekstipaketiksi.
  *
- * ui-olio on valinnainen: siitä otetaan vain maan nimi ja tieto siitä,
- * kumpi lehti on auki. Ilman sitä paketti on hieman köyhempi mutta
- * kelvollinen.
+ * ui-olio on valinnainen: siitä otetaan vain tieto siitä, kumpi lehti on
+ * auki ja minkä maan lehti se on. Ilman sitä paketti on hieman köyhempi
+ * mutta kelvollinen.
+ *
+ * SIJAINTI EI TULE KOSKAAN UI:STA. Maa luetaan pelinTilasta eli
+ * kaupungista johdettuna; ui.arrivalMaaTiedot kertoo vain, minkä maan
+ * osasto lehdessä sattuu olemaan auki, ja se voi olla mikä tahansa maa
+ * (Maiden tiedot -varuste). Sen käyttäminen sijaintina oli juuri se
+ * vika, joka teki Sofiasta Kreikan pääkaupungin.
  */
 function lueNakyma({ game = null, ui = null, doc = document, aineisto = [] } = {}) {
   const tila = pelinTila(game);
   const lehti = doc?.getElementById?.('arrival-dialog') ?? null;
   const lehtiAuki = Boolean(lehti?.open);
   const matkakirja = polloSiisti(doc?.getElementById?.('fact-text')?.textContent);
+  // Maalehti kerrotaan nimeltä, jottei sen maaosasto sekoitu siihen
+  // maahan, jossa pelaaja seisoo.
+  const maalehtiIso = lehtiAuki ? ui?.tutkiMaaLehti ?? null : null;
+  const lehdenMaa = polloMaanNimi(game, maalehtiIso);
+  let nakyma = 'kartta';
+  if (lehtiAuki && maalehtiIso) {
+    nakyma = lehdenMaa ? `maan lehti auki (${lehdenMaa})` : 'maan lehti auki';
+  } else if (lehtiAuki) {
+    nakyma = 'kaupungin lehti auki';
+  }
   return kokoaKonteksti({
     ...tila,
-    maa: ui?.arrivalMaaTiedot?.nimi ?? tila.maaIso ?? null,
     matkakirja,
-    nakyma: lehtiAuki
-      ? (ui?.tutkiMaaLehti ? 'maan lehti auki' : 'kaupungin lehti auki')
-      : 'kartta',
+    nakyma,
     aineisto,
     lohkot: lehtiAuki ? poimiLohkot(lehti) : [],
   });
@@ -144395,12 +144518,22 @@ class Pollo {
     // Paneelin sisällä napautus ei saa sulkea alanappirivin liukua.
     paneeli.addEventListener('click', (e) => e.stopPropagation());
 
-    this.ehdotukset = polloElementti('div', 'pollo-ehdotukset');
-    this.ehdotukset.hidden = true;
-    paneeli.appendChild(this.ehdotukset);
-
+    /*
+     * EHDOTUKSET ELÄVÄT VIRRASSA (omistajan havainto 13.8.2026).
+     *
+     * Ennen ehdotuslaatikko oli paneelin oma ylin osa, eli se jäi
+     * lukituksi yläreunaan keskustelun päälle: kun pelaaja avasi
+     * paneelin uudelleen, kolme kysymysnappia leijui vanhan vastauksen
+     * yläpuolella kuin ne kuuluisivat siihen. Nyt laatikko on virran
+     * sisällä ja siirtyy aina viimeisen viestin perään — mikään
+     * paneelin osa ei enää kiinnity keskustelun päälle.
+     */
     this.virta = polloElementti('div', 'pollo-virta');
     paneeli.appendChild(this.virta);
+
+    this.ehdotukset = polloElementti('div', 'pollo-ehdotukset');
+    this.ehdotukset.hidden = true;
+    this.virta.appendChild(this.ehdotukset);
 
     paneeli.appendChild(this.rakennaSyote());
     this.paneeli = paneeli;
@@ -144729,7 +144862,9 @@ class Pollo {
       this.naytaNukkuva();
       return;
     }
-    if (!this.virta.childElementCount) this.lisaaViesti('pollo', TERVEHDYS);
+    // Ehdotuslaatikko asuu virrassa, joten tervehdystä ei etsitä
+    // lapsimäärästä vaan viesteistä.
+    if (!this.virta.querySelector('.pollo-viesti')) this.lisaaViesti('pollo', TERVEHDYS);
     // Kehittäjätila voi vaihtua kesken pelin, joten kenttä katsotaan
     // joka avauksella eikä kerran käynnistyksessä.
     this.kehittajaRivi.hidden = !polloKehittajaTila();
@@ -145010,6 +145145,28 @@ class Pollo {
     return viesti;
   }
 
+  /**
+   * VASTAUS ALKAA NÄKYMÄN YLÄREUNASTA (omistajan havainto 13.8.2026).
+   *
+   * Virta kelasi jokaisen vastauksen jälkeen pohjaan, jolloin pitkän
+   * vastauksen luku alkoi sen viimeiseltä riviltä ja pelaaja joutui
+   * kelaamaan ylös. Nyt vastauksen ENSIMMÄINEN rivi tuodaan näkyviin ja
+   * loppu jää pelaajan itsensä vieritettäväksi. Pelaajan oma kysymys
+   * kelaa yhä pohjaan (lisaaViesti) — se on lyhyt ja kuuluu näkyä heti.
+   *
+   * Muutama pikseli jätetään yläpuolelle, jottei rivi liimaudu kiinni
+   * reunaan: edellisen viestin häntä kertoo, että ylempänä on lisää.
+   */
+  vieritaAlkuun(el, pehmuste = 8) {
+    if (!el?.getBoundingClientRect || !this.virta?.getBoundingClientRect) return;
+    try {
+      const ero = el.getBoundingClientRect().top - this.virta.getBoundingClientRect().top;
+      this.virta.scrollTop += ero - pehmuste;
+    } catch {
+      /* asettelua ei ole käytettävissä — vieritys jää tekemättä */
+    }
+  }
+
   /** Kevyt jarru: yksi pyyntö kerrallaan. */
   asetaKesken(kesken) {
     this.kesken = kesken;
@@ -145097,6 +145254,12 @@ class Pollo {
       this.ehdotukset.appendChild(nappi);
     }
     this.ehdotukset.hidden = !this.ehdotukset.childElementCount;
+    // Laatikko siirtyy viimeisen viestin perään: se koskee sitä, mitä
+    // keskustelussa on nyt, ei sitä mistä keskustelu alkoi.
+    if (!this.ehdotukset.hidden) {
+      this.virta.appendChild(this.ehdotukset);
+      this.virta.scrollTop = this.virta.scrollHeight;
+    }
   }
 
   async kysy(raakaKysymys) {
@@ -145130,17 +145293,20 @@ class Pollo {
       const linkit = this.poimiLinkit(this.viimeisetKatkelmat);
       this.naytaLinkit(this.korostaLinkit(viesti, linkit));
       this.naytaJatkot(data?.jatkot);
+      // Vasta kun koko vastaus liitteineen on virrassa: nyt sen alkuun
+      // voi vierittää, koska sisältöä on riittävästi alapuolella.
+      this.vieritaAlkuun(viesti);
       this.lueVastaus(teksti);
       this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
       this.historia.push({ rooli: 'pollo', teksti });
       this.historia = this.historia.slice(-HISTORIAN_KATTO);
     } catch (virhe) {
       odotus.remove();
+      // Virheilmoitus on yksi rivi: se saa kelata pohjaan kuten ennenkin.
       this.lisaaViesti('pollo', virhe?.viesti
         ?? 'Pöllö ei saanut ajatuksesta kiinni. Yritä hetken päästä uudelleen.');
     } finally {
       this.asetaKesken(false);
-      this.virta.scrollTop = this.virta.scrollHeight;
     }
   }
 
@@ -160605,6 +160771,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 596, teksti: 'Pöllö tietää maan oikein, oikaisee virheet; chat siistiksi' },
   { v: 595, teksti: 'Pöllöön kaiutin, osuvat linkit, jatkot; lehti elpyy' },
   { v: 594, teksti: 'Kuwaitin kaupunkilehti ja kuusi nahtavyysjuttua' },
   { v: 593, teksti: 'Kaiutinluenta sivuille, valikkosiirrot ja iPhonen alareuna' },
@@ -161284,7 +161451,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.595';
+const APP_VERSION = '2026-08-09.596';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
