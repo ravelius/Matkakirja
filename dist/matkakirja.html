@@ -140771,6 +140771,32 @@ const LENNON_SANA_MS = 210;
 const LENNON_ENINTAAN_MS = 15000;
 // Kuinka kauan valmis repliikki jää ruudulle ennen kuin lento päättyy.
 const LENNON_LUKUAIKA_MS = 1600;
+/*
+ * ÄÄNI EDELLÄ, TEKSTI PERÄSSÄ (omistaja 12.8.2026).
+ *
+ * Avauslennon kaksi alkuhetkeä olivat kumpikin aavistuksen väärässä
+ * kohdassa: kertoja aloitti 4,2 sekunnin kohdalla ja ruututeksti heti
+ * kalvon auettua. Kumpaakin siirrettiin saman verran mutta
+ * vastakkaisiin suuntiin — luenta 400 ms aikaisemmaksi ja kirjoitus
+ * 400 ms myöhemmäksi — jolloin ääni ehtii ensin ja teksti seuraa.
+ *
+ * Kirjoituksen viive on erillinen luku eikä osa typeTextiä, koska
+ * lennon kesto lasketaan siitä: lennonKesto lisää saman viiveen
+ * kirjoituksen kestoon, jottei kone laskeudu kesken lauseen.
+ */
+const LENNON_PUHE_MS = 3800;
+const LENNON_TEKSTI_VIIVE_MS = 400;
+/*
+ * Varoventtiili sille odotukselle, jolla kalvo varmistaa ettei kone
+ * laskeudu kesken lauseen (ks. animateFlightSisalla). Tavallisella
+ * laitteella odotusta ei ole lainkaan: rivi on valmis kauan ennen
+ * laskeutumista. Luku on siis vain katkaisija kadonneen kuittauksen
+ * varalle, eikä sitä ole mitoitettu kirjoituksen mukaan — mitattu
+ * hitain tapaus (kuormitettu pääsäie, 25 sanaa) tarvitsi 15,2 s, joten
+ * 30 s jättää reilun varan eikä katkaise kesken lauseen. Pelaaja pääsee
+ * odotuksen ohi milloin tahansa napauttamalla kalvoa tai nuolta.
+ */
+const LENNON_TEKSTI_ODOTUS_MS = 30000;
 // Kuinka kauan lennon jälkeen odotetaan, ennen kuin pieni nuoli syttyy.
 const LENNON_NUOLI_MS = 3500;
 const TOAST_MS = { die: 950, default: 1200 };
@@ -140922,16 +140948,32 @@ const INTRO_KIRJAN_NIMI = 'Maailman ympäri kahdeksassakymmenessä päivässä';
  * omaan kuvioon: kartalla on jo valmiiksi katkoviivoitettuja
  * laivareittejä, ja himmeä pistejono luki osana karttataidetta.
  *
- * Siksi kärki ja jälki ovat nyt noin kaksinkertaisia ja silmukka
- * lyhyempi (40 s → 26 s, kauppareitti 34 s → 24 s). Värit ovat
+ * Siksi kärki ja jälki ovat nyt noin kaksinkertaisia. Värit ovat
  * ennallaan eli seepian sisällä: liike saa erottua, ilme ei saa
  * muuttua julisteeksi.
+ *
+ * VAUHTI HILJENI TAKAISIN (omistaja 12.8.2026, sama ilta). Kun pisteet
+ * olivat vihdoin näkyviä, kävi ilmi että ne kiitävät: silmukka oli
+ * kutistettu 26 sekuntiin siinä toivossa, että liike erottuisi.
+ * Näkyvyys tuli koosta, ei vauhdista, joten vauhti sai palata.
+ * Punainen kulkee nyt 40 sekunnin silmukkaa (matka-aika 11,4 s → 17,6
+ * s, eli noin 39 ja 28 laudan yksikköä sekunnissa reitin osasta
+ * riippuen) ja laivat 52–66 sekunnin silmukkaa (noin 17–19 yksikköä
+ * sekunnissa). Järjestys on tarkoitettu luettavaksi: punainen on
+ * matkalla, siniset ovat maailman taustaliikennettä, ja katse ehtii
+ * seurata kumpaakin.
  *
  * KENTÄT: `kesto` on koko silmukan pituus sekunteina, `ikkuna` se
  * osuus silmukasta joka kuluu matkaan (loppu on lepoa, jonka ajan
  * valmis reitti jää näkyviin) ja `alku` se kohta silmukasta, jossa
  * reitti lähtee liikkeelle. `alku` on samalla porrastus: laivat
- * lähtevät 3, 6, 9 ja 12 sekunnin kohdalla, eivät yhtä aikaa.
+ * lähtevät 8, 15, 22 ja 28 sekunnin kohdalla, eivät yhtä aikaa.
+ *
+ * LAIVOJEN IKKUNA ON KAPEAMPI KUIN PUNAISEN. Pelkkä silmukan
+ * pidennys olisi hidastanut laivat ryömimään (14 yksikköä
+ * sekunnissa), koska matka-aika on kesto × ikkuna. Kapeampi ikkuna
+ * pitää laivat selvästi punaista hitaampina mutta yhä liikkeessä, ja
+ * antaa samalla valmiille katkoviivalle pidemmän lepohetken ruudulla.
  *
  * ALKU-KENTÄN KAKSI RAJAA (tarkistettu testissä). Sekä kärjen että
  * jäljen avainhetket kierretään kohdasta 1 − alku, ja sen kohdan on
@@ -140950,7 +140992,7 @@ const ALKUREITIT = [
     // Aasia – Kiina – Japani. Verne'n reitti pelin omia meriteitä pitkin.
     laji: 'isoisa',
     alku: 0,
-    kesto: 26,
+    kesto: 40,
     ikkuna: 0.44,
     pisteet: [
       ALKU_LONTOO,
@@ -140974,7 +141016,7 @@ const ALKUREITIT = [
     // on päättynyt Tokioon.
     laji: 'isoisa',
     alku: 0.5,
-    kesto: 26,
+    kesto: 40,
     ikkuna: 0.44,
     pisteet: [
       [286.5, 322.3], // Los Angeles
@@ -140990,8 +141032,8 @@ const ALKUREITIT = [
     // Afrikan, joten se ei osu isoisän reitin päälle missään kohtaa.
     laji: 'kauppa',
     alku: 0.12,
-    kesto: 26,
-    ikkuna: 0.67,
+    kesto: 66,
+    ikkuna: 0.55,
     pisteet: [
       ALKU_MUMBAI,
       [882, 392], [880, 435], [855, 470], [830, 495], [799.7, 508.2],
@@ -141013,8 +141055,8 @@ const ALKUREITIT = [
     // piirtynyt punaisen päälle, ja päällekkäisyys näyttäisi virheeltä.
     laji: 'kauppa',
     alku: 0.29,
-    kesto: 21,
-    ikkuna: 0.43,
+    kesto: 52,
+    ikkuna: 0.32,
     pisteet: [
       ALKU_NEWYORK,
       [377.7, 304.6], [424.8, 340.2], [461.6, 383.5], [517, 399.8], [502.2, 458.5],
@@ -141027,8 +141069,8 @@ const ALKUREITIT = [
     // kauppareittiin — vain Mumbain satamassa viivat kohtaavat.
     laji: 'kauppa',
     alku: 0.375,
-    kesto: 24,
-    ikkuna: 0.4,
+    kesto: 58,
+    ikkuna: 0.3,
     pisteet: [
       ALKU_SYDNEY,
       [1040.7, 542.8], [1003.6, 531.1], [956.6, 506.2], [929.8, 471.7], [900.5, 426.6],
@@ -141041,8 +141083,8 @@ const ALKUREITIT = [
     // ole muuta liikettä sen jälkeen kun isoisä on kääntynyt Tokioon.
     laji: 'kauppa',
     alku: 0.43,
-    kesto: 28,
-    ikkuna: 0.33,
+    kesto: 64,
+    ikkuna: 0.28,
     pisteet: [
       [959.8, 286.6], // Peking
       [1007.7, 321.5], [1049, 364.9], [1078.7, 431.4], [1094.6, 475.9], [1086.8, 513.3],
@@ -141103,23 +141145,49 @@ const JALJEN_PYYHKAISY = 0.06;
  * (feGaussianBlur) maksaisi koko kerroksen uudelleenpiirron joka
  * ruudulla.
  *
- * SYKE ON NYT SELVÄ (omistaja 12.8.2026: *"tee kulkevista pisteistä
- * selvästi sykkiviä"*). Kolme muutosta entiseen: jakso lyheni 4,2
- * sekunnista 1,6:een, kehä ja ydin sykkivät samassa vaiheessa (ennen
- * vastakkaisissa, jolloin kärjen kokonaispinta pysyi lähes samana), ja
- * säteen rinnalla aaltoilee peittävyys.
+ * SYKE ON MAJAKKA, EI HENGITYS (omistaja 12.8.2026, sama ilta).
+ * Tasainen sini-aalto (spline-pehmennetty pieni↔iso↔pieni) luki
+ * tykytyksenä: piste oli puolet ajasta kirkkaana, eikä kumpikaan
+ * ääriasento erottunut toisesta. Nyt muoto on majakan: nopea kirkas
+ * leimahdus ja sen jälkeen pitkä himmeä vaihe, jonka aikana piste
+ * vain kulkee.
+ *
+ * MUOTO ON TAULUKKONA, EI SPLINENÄ. keyTimes/values antaa tarkan
+ * verhokäyrän — nousu, terävä huippu, nopea lasku, pitkä lepo —
+ * eivätkä keySplinen neljä lukua pysty samaan. Lineaarinen
+ * välistys riittää, kun avainhetkiä on tarpeeksi, ja calcMode="linear"
+ * on WebKitin varmin tie (sama peruste kuin koko kerroksen SMILillä).
+ *
+ * SYKE_MUOTO on osuus välillä 0 (himmeä lepo) … 1 (leimahduksen
+ * huippu); jokainen KARJET-pari luetaan sen läpi, joten säde ja
+ * peittävyys leimahtavat täsmälleen samassa tahdissa.
  *
  * Peittävyys mahtuu mukaan, koska kärki asuu <g>-ryhmässä: ryhmä
  * kantaa silmukan oman häivytyksen ja ympyrä sykkeen, ja SVG kertoo
  * ne keskenään. Yhdelle elementille ei voi asettaa kahta
  * peittävyysanimaatiota.
+ *
+ * VAIN PUNAINEN VÄLÄHTÄÄ. Laivoilta syke poistettiin kokonaan
+ * (omistaja: *"siniset pisteet eivät välky lainkaan"*) — ne ovat
+ * tasaisen himmeitä pisteitä, jotka vain liikkuvat. Lepotaso
+ * poimitaan samasta taulukosta LAIVAN_TASO-kohdalta, jottei laivalle
+ * tarvita omaa lukusarjaa: piste jää leimahduksen ja levon väliin,
+ * himmeäksi mutta näkyväksi.
  */
-const SYKE_KESTO = '1.6s';
-const SYKE_SPLINE = '0.4 0 0.6 1;0.4 0 0.6 1';
+const SYKE_KESTO = '2.4s';
+// Leimahdus: nousu 0,07 s, huippu, lasku takaisin himmeään 0,31 s
+// kohdalla — loput 2,1 s jakson kestosta on lepoa.
+const SYKE_HETKET = [0, 0.03, 0.06, 0.13, 1];
+const SYKE_MUOTO = [0, 1, 0.42, 0, 0];
+const LAIVAN_TASO = 0.35;
 const KARJET = [
-  { luokka: 'alkureitti-keha', sade: [9.5, 17.5], kirkkaus: [0.26, 0.46] },
-  { luokka: 'alkureitti-karki', sade: [4.6, 8.4], kirkkaus: [0.72, 1] },
+  { luokka: 'alkureitti-keha', sade: [8.5, 20], kirkkaus: [0.14, 0.5] },
+  { luokka: 'alkureitti-karki', sade: [4.2, 9.2], kirkkaus: [0.5, 1] },
 ];
+/** Kärjen arvo sykkeen muodon kohdassa `osuus` (0 = lepo, 1 = huippu). */
+function sykkeenArvo(arvot, osuus) {
+  return arvot[0] + (arvot[1] - arvot[0]) * osuus;
+}
 
 /*
  * SILMUKAN AVAINHETKET.
@@ -142747,6 +142815,7 @@ class UI {
     clearTimeout(this.botTimer);
     clearTimeout(this.autoRollTimer);
     clearTimeout(this.lentoPuheAjastin);
+    clearTimeout(this.lentoTekstiAjastin);
     clearTimeout(this.zoomAlkuAjastin);
     clearTimeout(this.zoomTaustaAjastin);
     if (this.previewFrame) cancelAnimationFrame(this.previewFrame);
@@ -144872,19 +144941,33 @@ class UI {
         keyTimes: kierretyt.map((k) => k.t.toFixed(5)).join(';'),
       }, kulkija);
       animoi(kulkija, 'opacity', kierretyt, (k) => (k.nakyy * himmennys).toFixed(3));
+      /*
+       * Majakkavälähdys vain isoisän pisteelle. Laiva saa saman
+       * ympyräparin mutta ilman yhtäkään animaatiota: sen säde ja
+       * peittävyys ovat kiinteitä määreitä, jolloin piste on tasaisen
+       * himmeä ja liikkuu vain kulkijan mukana.
+       */
+      const valahtaa = reitti.laji === 'isoisa';
       for (const karki of KARJET) {
+        const lepo = (arvot) => sykkeenArvo(arvot, valahtaa ? 0 : LAIVAN_TASO);
         const ympyra = el('circle', {
-          class: `alkureitti-piste ${karki.luokka}`, cx: 0, cy: 0, r: karki.sade[1],
+          class: `alkureitti-piste ${karki.luokka}`,
+          cx: 0,
+          cy: 0,
+          // Pohja-arvot ovat lepoasento: jos SMIL ei jostain käynnisty,
+          // kärki näkyy himmeänä pisteenä eikä katoa.
+          r: lepo(karki.sade).toFixed(2),
+          opacity: lepo(karki.kirkkaus).toFixed(3),
         }, kulkija);
+        if (!valahtaa) continue;
         for (const [maare, arvot] of [['r', karki.sade], ['opacity', karki.kirkkaus]]) {
           el('animate', {
             attributeName: maare,
             dur: SYKE_KESTO,
             repeatCount: 'indefinite',
-            calcMode: 'spline',
-            values: `${arvot[0]};${arvot[1]};${arvot[0]}`,
-            keyTimes: '0;0.5;1',
-            keySplines: SYKE_SPLINE,
+            calcMode: 'linear',
+            values: SYKE_MUOTO.map((osuus) => sykkeenArvo(arvot, osuus).toFixed(3)).join(';'),
+            keyTimes: SYKE_HETKET.join(';'),
           }, ympyra);
         }
       }
@@ -146167,11 +146250,13 @@ class UI {
           // Lentorepliikin lukee vain pitkä kertoja. Kertoja aloittaa
           // vasta kun moottori on ehtinyt nousta kuuluviin (omistajan
           // toive 10.8.2026, tarkennus samana iltana: 4,2 s kohdalla,
-          // kun moottori on jo noussut rauhassa kuuluviin).
+          // kun moottori on jo noussut rauhassa kuuluviin). 12.8.2026
+          // hetki aikaistui LENNON_PUHE_MS:ään: ääni saa olla edellä ja
+          // teksti perässä.
           if (!this.dead && kertojaTila() === 'pitka') {
             this.playDiaryVoice('assets/audio/puhe-lento-alku.mp3');
           }
-        }, 4200);
+        }, LENNON_PUHE_MS);
       }
       await this.animateFlight(
         'Lontoo', city.name, line,
@@ -153998,12 +154083,19 @@ class UI {
       piirra();
       /*
        * Kirjoituskoneen lyönti täsmälleen sillä hetkellä, kun sana
-       * ilmestyy — ei ennen eikä jälkeen. Vain avaustekstillä: lennon
-       * repliikki sai saman rytmin 12.8.2026, mutta sen alla soi
-       * matkustamon äänimaisema, ja naputus kuulostaisi sen päällä
-       * viallisen koneen ääneltä. Rytmi on tässä kuvaa, ei ääntä.
+       * ilmestyy — ei ennen eikä jälkeen.
+       *
+       * NAPUTUS KUULUU MYÖS LENNOLLA (omistaja 12.8.2026). Aiemmin se
+       * jätettiin lennolta pois sillä perusteella, että matkustamon
+       * äänimaisema soi alla ja naputus kuulostaisi sen päällä
+       * viallisen koneen ääneltä. Omistaja kuuli sen toisin ja tilasi
+       * saman äänen kuin etusivun avaustekstissä; poisjättö on siis
+       * kumottu. Sama sfx.play('pen') myös tarkoittaa, että äänet pois
+       * -asetus (SoundKit.enabled) vaientaa naputuksen kummassakin, ja
+       * ääni loppuu itsestään viimeiseen sanaan — se soitetaan vain
+       * kirjoitushetkellä eikä silmukkana.
        */
-      if (slot === 'intro') sfx.play('pen');
+      if (KIRJOITUSRYTMI.has(slot)) sfx.play('pen');
       if (shown >= words.length) {
         // Lopuksi pelkkä teksti, jotta perään lisättävä lähderivi asettuu
         // luontevasti eikä jää näkymättömän jäänteen taakse.
@@ -154194,9 +154286,13 @@ class UI {
     // kuitenkin esillä, kunnes pelaaja astuu ulos napista. Animaatiot
     // kerätään talteen, jotta napautus voi viedä ne loppuun.
     const lentoAnimaatiot = [];
-    overlay.addEventListener('pointerdown', () => {
+    const ohita = () => {
       for (const a of lentoAnimaatiot) a.finish();
-    }, { once: true });
+      // Ohitus vie myös repliikin loppuun: hypätty lento ei saa jäädä
+      // odottamaan kesken jäänyttä kirjoitusta.
+      this.paataLennonTeksti(line);
+    };
+    overlay.addEventListener('pointerdown', ohita, { once: true });
 
     // Isoisän karttalehti: käsin piirretyt vyöhykeviivat katkoviivalla
     // (kääntöpiirit) ja himmeitä päiväkirjamerkintöjä piirroksineen.
@@ -154299,6 +154395,9 @@ class UI {
     // tarvitse laskea käsin.
     const alaosa = html('div', 'flight-alaosa');
     overlay.appendChild(alaosa);
+    // Ilman repliikkiä ei ole mitään odotettavaa: vanha kuittaus pois,
+    // jottei tämä lento jää edellisen rivin varaan.
+    this.flightLineValmis = null;
     if (line) this.showFlightLine(line, alaosa);
     /*
      * Astu mantereelle -nappi luodaan heti mutta näkyy vasta perillä.
@@ -154322,6 +154421,10 @@ class UI {
      * sekunnin. Ilman tätä kone laskeutui pisimmillä riveillä kesken
      * lauseen. Lukuaika on se hetki, jonka valmis rivi ehtii olla
      * ruudulla ennen kuin Astu mantereelle syttyy.
+     *
+     * Kirjoituksen aloitusviive (LENNON_TEKSTI_VIIVE_MS) on mukana
+     * summassa: teksti alkaa nyt myöhemmin kuin kalvo, ja ilman sitä
+     * viive söisi juuri saman verran lukuajasta.
      */
     const sanoja = line ? String(line).trim().split(/\s+/).length : 0;
     const lennonKesto = Math.min(
@@ -154329,7 +154432,7 @@ class UI {
       Math.max(
         FLY_OVERLAY_MS,
         LENNON_POHJA_MS + sanoja * LENNON_SANA_MS,
-        line ? kirjoituksenKesto(line) + LENNON_LUKUAIKA_MS : 0,
+        line ? LENNON_TEKSTI_VIIVE_MS + kirjoituksenKesto(line) + LENNON_LUKUAIKA_MS : 0,
       ),
     );
     /*
@@ -154352,9 +154455,7 @@ class UI {
       + ' stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     overlay.appendChild(nuoli);
     const nuolenAjastin = setTimeout(() => nuoli.classList.add('nakyy'), LENNON_NUOLI_MS);
-    nuoli.addEventListener('click', () => {
-      for (const a of lentoAnimaatiot) a.finish();
-    });
+    nuoli.addEventListener('click', ohita);
     /*
      * Kalvon taustaääni on matkustamon äänimaisema, ei syntetisoitu
      * moottori (omistajan toive 10.8.2026) — sen käynnistää
@@ -154408,6 +154509,30 @@ class UI {
 
     // Moottori jää käymään kalvon ajaksi — se hiljenee vasta, kun
     // pelaaja astuu ulos koneesta.
+
+    /*
+     * KONE EI LASKEUDU KESKEN LAUSEEN — MITATTUNA, EI ARVIOITUNA.
+     *
+     * Lennon kesto on mitoitettu kirjoituksen keskimääräiselle
+     * kestolle (kirjoituksenKesto), ja tavallisesti rivi on valmis
+     * reilusti ennen laskeutumista. Arvio pettää kuormitetulla
+     * pääsäikeellä: kone lentää selaimen omana WAAPI-animaationa
+     * eikä siitä välitä, mutta kirjoituskone naputtaa setTimeoutilla,
+     * ja avauslennon aikana piirtyy koko maailmankartan lauta. Ajossa
+     * 12.8.2026 (Chromium, kontti) 25 sanan rivi kirjoittui 28
+     * sekunnissa 8 sekunnin arviota vastaan — sama luku ennen ja
+     * jälkeen tämän hienosäädön, eli kyse ei ole uudesta viiveestä
+     * vaan vanhasta oletuksesta.
+     *
+     * Siksi Astu mantereelle syttyy vasta kun rivi on oikeasti
+     * valmis. Nopealla laitteella odotus on nolla, hitaalla se on
+     * juuri se hetki, jonka lukija tarvitsee. Yläraja on varoventtiili:
+     * kadonnut kuittaus ei saa jättää kalvoa ikuisiksi ajoiksi.
+     */
+    await Promise.race([
+      this.flightLineValmis ?? Promise.resolve(),
+      this.wait(LENNON_TEKSTI_ODOTUS_MS),
+    ]);
 
     // Perillä kalvo jää odottamaan: lukuääni saa puhua rauhassa, ja
     // pelaaja astuu ulos itse valitsemallaan hetkellä.
@@ -154473,16 +154598,46 @@ class UI {
    * sanaväli huojuu ja välimerkin jälkeen hengähdetään. Lennon kesto on
    * mitoitettu tälle tahdille (kirjoituksenKesto), joten kone ei
    * laskeudu kesken lauseen.
+   *
+   * KIRJOITUS ALKAA VIIVEELLÄ (LENNON_TEKSTI_VIIVE_MS): kertoja saa
+   * lähteä liikkeelle ensin, ja rivi seuraa perässä. Ajastin on
+   * talletettu, jotta ohitettu tai peruttu lento ei jää kirjoittamaan
+   * irronneeseen elementtiin — ja naputtamaan sen tahdissa.
    */
   showFlightLine(line, kotelo) {
     this.flightLine = html('p', 'flight-line');
     kotelo.appendChild(this.flightLine);
-    this.typeText(this.flightLine, line, 'flight', null, INTRO_TYPE_MS);
+    const rivi = this.flightLine;
+    clearTimeout(this.lentoTekstiAjastin);
+    // Kuittaus siitä, että rivi on valmis: lento odottaa sitä ennen kuin
+    // Astu mantereelle syttyy (ks. animateFlightSisalla).
+    this.flightLineValmis = new Promise((valmis) => { this.flightLineKuittaus = valmis; });
+    this.lentoTekstiAjastin = setTimeout(() => {
+      if (this.flightLine !== rivi) return;
+      this.typeText(rivi, line, 'flight', () => this.flightLineKuittaus?.(), INTRO_TYPE_MS);
+    }, LENNON_TEKSTI_VIIVE_MS);
+  }
+
+  /**
+   * Repliikki kerralla valmiiksi. Ohitettu lento (napautus tai nuoli) vie
+   * myös tekstin loppuun: muuten kalvo jäisi odottamaan kirjoitusta,
+   * jonka pelaaja juuri ilmoitti haluavansa ohittaa.
+   */
+  paataLennonTeksti(line) {
+    clearTimeout(this.lentoTekstiAjastin);
+    clearTimeout(this.typeTimers?.flight);
+    if (this.flightLine && line) this.flightLine.textContent = String(line);
+    this.flightLineKuittaus?.();
   }
 
   hideFlightLine() {
     // Rivi poistuu kalvon mukana; viite siivotaan, ettei kirjoitus jatku
-    // irronneeseen elementtiin.
+    // irronneeseen elementtiin. Kuittaus vapautetaan, ettei kukaan jää
+    // odottamaan poistettua riviä.
+    clearTimeout(this.lentoTekstiAjastin);
+    clearTimeout(this.typeTimers?.flight);
+    this.flightLineKuittaus?.();
+    this.flightLineValmis = null;
     this.flightLine = null;
   }
 
