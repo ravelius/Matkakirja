@@ -213,6 +213,21 @@ tarkoittaa elämää" sisälsi sivun minitehtävän vastauksen, ja
 EGY/musiikin vastaus "Otelaudassa ei ole nauhoja" ei ollut sivun
 tekstissä siinä muodossa.
 
+## 4b. ESTE: tämä nippu ei ole vielä mainissa
+
+Nippu on **julkaisuvalmis mutta pushaamatta**. Sessiolla ei ole
+kirjoitusoikeutta repoon: `git push` kaatuu git-välityspalvelimen
+virheeseen *"ravelius/Matkakirja is not in this session's authorized
+repository set"*, ja sekä repon liittäminen työkalulla että `gh`:n
+käyttö estyivät lupatarkistuksessa. Kloonaus ja `git fetch` toimivat,
+eli lukuoikeus on.
+
+Tehty valmiiksi odottamaan: haara `claude/opus-me-aasia-lehdet`, main
+(v585) mergetty sisään, versionosto ajettu työkalulla (**v586**),
+`node --test tests/*.test.mjs` 573/0, `tarkista-kaksoisavaimet` puhdas
+ja `build-standalone` ajettu. Jos main ehtii liikkua ennen pushia,
+versionosto ja build on ajettava uudelleen.
+
 ## 5. Jonoon jätetty — Fablen tai toisen kaistan päätettäväksi
 
 1. **Pyhät kaupungit Mekka ja Medina** odottavat omistajan erillistä
