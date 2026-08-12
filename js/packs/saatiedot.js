@@ -76,4 +76,14 @@ export const SAATIEDOT = {
     keskilampo: [17.6, 18.6, 21.7, 26.6, 31.8, 34.2, 35.3, 35.2, 33.1, 29.7, 24.7, 19.8],
     sade: [11, 12, 12, 4, 0, 0, 0, 0, 0, 0, 7, 14],
   },
+  // Nikosia on sisämaassa tasangolla, ei rannikolla: kesä on siksi
+  // kuumempi ja talvi viileämpi kuin Kyproksen rantakaupungeissa.
+  // Heinä- ja elokuussa sataa käytännössä ei lainkaan, ja koko vuoden
+  // sade tulee marraskuun ja maaliskuun välillä.
+  nikosia: {
+    lat: 35.17,
+    lon: 33.36,
+    keskilampo: [10.7, 11.2, 13.6, 17.5, 22.2, 26.8, 29.7, 29.6, 26.3, 21.9, 16.6, 12.5],
+    sade: [54, 47, 35, 30, 29, 9, 2, 3, 11, 35, 37, 53],
+  },
 };

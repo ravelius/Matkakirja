@@ -2460,6 +2460,53 @@ export const MAAKARTAT = {
  */
 export const KAUPUNKIKARTAT = {
   /*
+   * Nikosia (nippu 2, 12.8.2026). Rajaus on pieni, koska venetsialaisten
+   * muurien kehä on halkaisijaltaan vain noin puolitoista kilometriä.
+   *
+   * KOHTEIKSI EI VALITTU muuria, Famagustan porttia eikä Ledran katua,
+   * vaikka ne ovat kaupungin tunnetuimmat: kaikki kolme on jo varattu
+   * muualla pelissä (asia-valokuvat.js:n kuvatekstit ja Nikosian
+   * kulttuurivisa). Tilalle otettiin kuusi kohdetta, joista mikään ei
+   * esiinny pelissä ennestään. Selimiyen viereinen Bedesten jätettiin
+   * pois, koska se on kolmenkymmenen metrin päässä moskeijasta ja
+   * numeroympyrät olisivat menneet päällekkäin — se kerrotaan
+   * Selimiyen jutun sisällä.
+   */
+  nikosia: {
+    polku: 'assets/kartat/nikosia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378,
+    },
+    esittely: 'Nikosia on tasangon keskellä, ei rannikolla, ja se on '
+      + 'ainoa Kyproksen suurista kaupungeista jota ei perustettu '
+      + 'sataman viereen. Kaupunki kasvoi joen mutkaan, ja sen muoto '
+      + 'päätettiin kerralla vuonna 1567: venetsialaiset purkivat '
+      + 'keskiaikaisen kaupungin laidat ja rakensivat tilalle '
+      + 'ympyränmuotoisen muurin, jossa on yksitoista nuolenkärjen '
+      + 'muotoista bastionia. Kehä on kartan selvin muoto, ja se on '
+      + 'yhä kaupungin sisärengas: muurin sisäpuoli on vanhakaupunki, '
+      + 'ulkopuoli nykyistä Nikosiaa.'
+      + '\n\n'
+      + 'Kartalla tähtimuoto erottuu heti keskeltä. Sen sisällä kadut '
+      + 'ovat kapeita ja mutkittelevia, ulkopuolella suoria ja leveitä '
+      + '— ero näkyy viivojen tiheydestä. Muurin ympärillä kiertää '
+      + 'vaaleampi kaistale: se on entinen vallihauta, jossa kasvaa '
+      + 'nykyään puita ja jonka pohjalla on puistoja ja '
+      + 'urheilukenttiä. Vanhankaupungin kohteet ovat kävelymatkan '
+      + 'päässä toisistaan; kartan itäreunassa kulkeva leveä väylä on '
+      + 'jo muurien ulkopuolella. Kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      { nimi: 'Selimiyen moskeija', lat: 35.1765, lon: 33.3645 },
+      { nimi: 'Büyük Han', lat: 35.1763, lon: 33.3625 },
+      { nimi: 'Faneromenin kirkko', lat: 35.1735, lon: 33.3625 },
+      { nimi: 'Omeryen hamam', lat: 35.1726, lon: 33.3654 },
+      { nimi: 'Kyproksen museo', lat: 35.1717, lon: 33.3553 },
+      { nimi: 'Leventis-museo', lat: 35.1706, lon: 33.3617 },
+    ],
+  },
+  /*
    * Doha (nippu 2:n pilottikaupunki, 12.8.2026). Rajaus kattaa vanhan
    * ytimen Corniche-rantakadun kaaressa; West Bayn tornit jäävät
    * pohjoiseen kartan ulkopuolelle tarkoituksella (ks. perustelu
