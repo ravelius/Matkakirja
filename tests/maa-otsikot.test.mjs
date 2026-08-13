@@ -118,6 +118,7 @@ const GENETIIVIT = {
   Pakistan: 'Pakistanin',
   Panama: 'Panaman',
   'Papua-Uusi-Guinea': 'Papua-Uuden-Guinean',
+  Paraguay: 'Paraguayn',
   Peru: 'Perun',
   'Pohjois-Korea': 'Pohjois-Korean',
   'Pohjois-Makedonia': 'Pohjois-Makedonian',

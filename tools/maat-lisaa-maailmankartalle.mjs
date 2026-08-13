@@ -112,6 +112,7 @@ const MAAT = {
   NIC: ['Nicaragua', 'Nicaragua', 'Flag of Nicaragua.svg'],
   PAN: ['Panama', 'Panama', 'Flag of Panama.svg'],
   PER: ['Peru', 'Peru', 'Flag of Peru.svg'],
+  PRY: ['Paraguay', 'Paraguay', 'Flag of Paraguay.svg'],
   URY: ['Uruguay', 'Uruguay', 'Flag of Uruguay.svg'],
   USA: ['Yhdysvallat', 'Yhdysvallat', 'Flag of the United States.svg', { minKoko: 25, sieto: 4, lisaksi: ['PRI'] }],
   VEN: ['Venezuela', 'Venezuela', 'Flag of Venezuela.svg'],
@@ -144,7 +145,7 @@ const ANKKURIT = [
   ['CHN', ['HKG']],
   ['MYS', ['SGP']],
   ['IDN', ['TLS']],
-  ['TKM', ['ARG', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CUB', 'ECU', 'GRL', 'GTM', 'MEX', 'NIC', 'PAN', 'PER', 'URY', 'USA', 'VEN']],
+  ['TKM', ['ARG', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CUB', 'ECU', 'GRL', 'GTM', 'MEX', 'NIC', 'PAN', 'PER', 'PRY', 'URY', 'USA', 'VEN']],
   ['VEN', ['AUS', 'FJI', 'NZL', 'PNG', 'SLB', 'VUT']],
 ];
 

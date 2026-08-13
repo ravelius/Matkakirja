@@ -105,6 +105,7 @@ export const LIPUT_PAIKALLISET = new Map([
   ["Flag of Pakistan.svg", 'pakistan.png'],
   ["Flag of Panama.svg", 'panama.png'],
   ["Flag of Papua New Guinea.svg", 'papua-new-guinea.png'],
+  ["Flag of Paraguay.svg", 'paraguay.png'],
   ["Flag of Peru.svg", 'peru.png'],
   ["Flag of Poland.svg", 'poland.png'],
   ["Flag of Portugal.svg", 'portugal.png'],
