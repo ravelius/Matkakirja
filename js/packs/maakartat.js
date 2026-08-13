@@ -2503,6 +2503,42 @@ export const KAUPUNKIKARTAT = {
    * battlefield-merkintää juuri tämän kartan alueella, eivätkä ne ole
    * lehden aiheita. Kohteet kuvataan kulttuurikohteina.
    */
+  /*
+   * Ankaran Ulus (nippu 2, 13.8.2026). Vanha Ankara on kokonaan tässä
+   * ruudussa: linnavuori itäreunassa, Augustuksen temppeli ja
+   * roomalainen kylpylä pohjoisessa, Anatolian sivilisaatioiden museo
+   * etelässä. Kızılayn moderni keskusta jää tarkoituksella ulos.
+   *
+   * RAJAUS SISÄLLÖLLE: peli ei käsittele nykykonflikteja. Ankaran
+   * kartalla on OSM:ssä sekä vuoden 2016 muistomerkki että
+   * vapaussotamuseo; kumpikaan ei ole lehden aihe. Kohteet kuvataan
+   * antiikin, bysantin ja ottomaanien kerroksina.
+   */
+  ankara: {
+    polku: 'assets/kartat/ankara-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 39.948, etela: 39.936, lansi: 32.851, ita: 32.868,
+    },
+    esittely: 'Ankara on Turkin pääkaupunki vuodesta 1923, mutta tämä '
+      + 'kartta ei ole siitä kaupungista. Ulus on se Ankara, joka oli '
+      + 'olemassa jo silloin: linnavuori, jonka muurit näkyvät kuvan '
+      + 'oikeassa laidassa, ja sen juurella kortteleita, joissa on '
+      + 'roomalaisia, bysanttilaisia ja ottomaanisia kerroksia '
+      + 'päällekkäin.\n\n'
+      + 'Linnan muurit on ladottu osin vanhoista rakennuksista: '
+      + 'kiviaineksen joukossa on roomalaisia pylväitä ja hautakiviä. '
+      + 'Kaupunki oli pitkään pieni maakuntakeskus, ja juuri siksi '
+      + 'antiikin kerros säilyi — sitä ei rakennettu pois.',
+    kohteet: [
+      { nimi: 'Ankaran linna', lat: 39.9415, lon: 32.8654 },
+      { nimi: 'Augustuksen temppeli', lat: 39.9442, lon: 32.8583 },
+      { nimi: 'Roomalainen kylpylä', lat: 39.9464, lon: 32.8533 },
+      { nimi: 'Julianuksen pylväs', lat: 39.9433, lon: 32.8559 },
+      { nimi: 'Anatolian sivilisaatioiden museo', lat: 39.9380, lon: 32.8618 },
+      { nimi: 'Linnanportin kellotorni', lat: 39.9377, lon: 32.8637 },
+    ],
+  },
   izmir: {
     polku: 'assets/kartat/izmir-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
