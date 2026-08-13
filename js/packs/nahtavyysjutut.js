@@ -9689,4 +9689,308 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Bagdadin nähtävyysjutut (nippu 2, 12.8.2026). Nikosia on jaettu
+   * kaupunki, mutta lehti ei käsittele jakoa: peli ei kerro
+   * nykykonflikteista, joten kohteet kuvataan kulttuurikohteina
+   * omalla historiallaan. CYP-maalehti kertoo saaren muinaisuudesta
+   * ja kirkoista, joten kaupungin jutut pysyvät rakennuksissa.
+   */
+  bagdad: {
+    'Mutanabbin katu': {
+      teksti: 'Katu on kapea ja autoton, alle kilometrin mittainen. Toisessa '
+        + 'päässä on kaariportti runoilijan säkeineen, toisessa Tigrisin '
+        + 'rannalla pronssipatsas, jonka Mohammed Ghani Hikmat veisti '
+        + 'vuonna 1977. Väliin mahtuu kirjakauppoja, kustantamoja ja '
+        + 'kirjapainoja, ja kauppojen edessä kirjat ladotaan riveihin '
+        + 'suoraan katukiveykseen. Julkisivut ovat tiiltä ja parvekkeiden '
+        + 'kaiteet takorautaa. Väkeä liikkuu aamuvarhaisesta iltamyöhään: '
+        + 'runoilijoita, kirjoittajia, taiteilijoita ja opiskelijoita.'
+        + '\n\n'
+        + 'Nimi tulee runoilija Abu at-Tayyib al-Mutanabbista (n. '
+        + '915–965), joka aloitti kirjoittamisen yhdeksänvuotiaana ja '
+        + 'sepitti Aleppon hallitsijalle 300 lehteä runoutta. Hänen '
+        + 'säkeitään siteerataan arabimaailmassa yhä sananlaskuina. '
+        + 'Kirjakauppa on paikalla vanhaa perua: tässä oli abbasidien '
+        + 'aikaan Bagdadin ensimmäinen kirjakauppiaiden tori. Nykyinen '
+        + 'katu vihittiin vuonna 1932, ja vihkijänä oli kuningas Faisal '
+        + 'I. Täältä on lähtöisin sanonta, jonka mukaan Kairo kirjoittaa, '
+        + 'Beirut kustantaa ja Bagdad lukee.'
+        + '\n\n'
+        + 'Kadun varrella on Shabandarin kahvila vuodelta 1917, Bagdadin '
+        + 'vanhimpia yhä toimivia. Seinät on peitetty vanhoilla '
+        + 'valokuvilla irakilaisesta yhteiskunnasta. Kadun päästä jatkuu '
+        + 'Souk al-Sarai, enintään 300 metrin kuja, jossa myytiin ennen '
+        + 'nahkaa ja nykyään vihkoja, paperia ja koulukirjoja.',
+      kuvat: [
+        {
+          tiedosto: 'شارع المتنبي صباحا.jpg',
+          selite: 'Mutanabbin katu ylhäältä aamupäivällä: kirjat on levitetty '
+            + 'riveihin katukiveykselle puisten myyntipöytien eteen, '
+            + 'oikealla nousee keltatiilinen kaariholvirivistö '
+            + 'valurautapylväineen ja vasemmalla on Shabandarin kahvilan '
+            + 'puuparvekkeinen kulmatalo.',
+          lahde: 'Mondalawy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'مقهى الشابندر ببغداد.jpg',
+          selite: 'Shabandarin kahvilan kulmatalo kadulta nähtynä: kaarevan '
+            + 'oven yllä vihreä arabiankielinen kyltti, yläkerrassa '
+            + 'kiertää puinen parvekekaide, ja jalkakäytävällä on rivi '
+            + 'mustia valurautaruukkuja. Ovensuussa istuu miehiä pöydän '
+            + 'ääressä, vieressä videokamera kolmijalalla ja oikealla '
+            + 'hedelmäkärry.',
+          lahde: 'Mondalawy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Qushlan kellotorni': {
+      aika: '1871',
+      teksti: 'Kasarmipiha on nykyään julkinen puisto. Nurmen halki kulkee '
+        + 'hiekkakäytäviä, niiden yllä puisia pergoloita, ja lehtimajat '
+        + 'ovat istumista varten. Bagdadilaiset tulevat aukiolle '
+        + 'viettämään aikaa: majoissa luetaan runoja ääneen, ja alueella '
+        + 'pidetään näyttelyitä ja muita kulttuuritilaisuuksia. Sisään '
+        + 'tullaan Mutanabbin kadun päästä, kirjakauppojen kadulta, ja '
+        + 'aukion takaa avautuu Tigris.'
+        + '\n\n'
+        + 'Aukio oli aiemmin kasarmialue. Ottomaanien kuvernööri Mehmed '
+        + 'Namık Pasha aloitti rakentamisen vuonna 1861 Rusafan puolelle: '
+        + 'paikalle tulivat maakunnan virastot ja kasarmit, joissa asui '
+        + 'tuhansia sotilaita. Kellotorni siirtyi Taqi al-Din Pashan '
+        + 'vastuulle ja valmistui Midhat Pashan kaudella vuonna 1871. Se '
+        + 'herätti miehistön aamulla ja ilmoitti harjoitusten ajat, ja se '
+        + 'pantiin tarkoituksella aivan joen viereen, jotta kellon ääni '
+        + 'kantaisi koko Bagdadiin.'
+        + '\n\n'
+        + 'Torni on kolmekymmentä metriä korkea, perustan sivu on neljä '
+        + 'metriä, ja ylöspäin torni kapenee. Huipulle nousee 73 '
+        + 'porrasta, ja joka sivulla on ikkunoita ilmanvaihtoa varten. '
+        + 'Kellohuone on 23 metrin korkeudessa, ja sen koneisto pyörittää '
+        + 'neljää taulua; se vedetään käsin kolmen päivän välein. Itse '
+        + 'kello on lahja: kun kuningas Faisal I vieraili Britanniassa '
+        + 'kesällä 1927, Yrjö V antoi hänelle brittiläisen yhtiön tekemän '
+        + 'kellon. Kahdessa taulussa numerot ovat arabialaisia, kahdessa '
+        + 'roomalaisia, ja sama kello käy tornissa yhä.',
+      kuvat: [
+        {
+          tiedosto: 'ساعة القشلة في بغداد (4).jpg',
+          selite: 'Kellotorni nousee aukion nurmelta, huipulla tuuliviiri. '
+            + 'Vasemmalla vihreäkattoisessa puisessa lehtimajassa istuu '
+            + 'väkeä, tornin juurella seisoo ihmisryhmiä, ja oikealla '
+            + 'kulkee köysiaidoin rajattuja käytäviä pergoloiden alla.',
+          lahde: 'Taisir Mahdi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Qushla2.jpg',
+          selite: 'Aukio ylhäältä: pergoloiden kattama käytävä johtaa '
+            + 'tornille, ja nurmella ja hiekkapoluilla liikkuu satoja '
+            + 'ihmisiä oliivipuiden ja palmujen välissä. Takana virtaa '
+            + 'Tigris ja vastarannalla näkyy kaupungin taloja.',
+          lahde: 'mohammed aladdin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Abbasidipalatsi': {
+      teksti: 'Tigrisin itärannalla al-Rusafassa seisoo tiilirakennus, joka '
+        + 'ajoitetaan 1100-luvun lopulle tai 1200-luvun alkuun. Sen '
+        + 'käyttötarkoituksesta ei ole yksimielisyyttä. Osa tutkijoista, '
+        + 'muun muassa irakilaiset Mustafa Jawad ja Yaqub Sarkis, pitää '
+        + 'sitä kalifi al-Nasirin palatsina: andalusialainen matkaaja Ibn '
+        + 'Jubayr kertoi nähneensä al-Nasirin nousevan veneestä '
+        + 'palatsiinsa Tigrisin itärannan yläpäässä, ja vanhan '
+        + 'kaupunginmuurin perustukset ovat yhä rakennuksen seinässä. '
+        + 'Toiset lukevat sen madrasaksi, Sharabiyya-kouluksi, koska '
+        + 'molemmissa kerroksissa on sivuhuoneita, jotka riittäisivät '
+        + 'luokiksi. Kaiverrettua todistetta palatsista ei ole löytynyt, '
+        + 'eivätkä aikalaislähteet mainitse koulua.'
+        + '\n\n'
+        + 'Pohjakaava on suorakaide. Keskellä on piha ja sen keskellä '
+        + 'suuri suihkulähde, ja pihaa kiertää kaksi kerrosta '
+        + 'kaarikäytäviä, jotka avautuvat pihalle suippokaarina. Käytävät '
+        + 'ovat yli 26 metriä pitkiä ja yli yhdeksän metriä korkeita. '
+        + 'Pohjakerroksessa on 18 huonetta ja toisessa 22. Itäsivua '
+        + 'hallitsee iwan, päädystään avoin holvihuone, joka on kaksi '
+        + 'kertaa muita suurempi.'
+        + '\n\n'
+        + 'Tiili poltettiin kahdella lämmöllä: seinien ja holvien '
+        + 'kantavat tiilet kovassa kuumuudessa kestäviksi, koristetiilet '
+        + 'matalammassa niin että niitä pystyi veistämään. Itäkäytävän '
+        + 'holvi on sarja toisiinsa lomittuvia muqarnas-kennoja, ja kukin '
+        + 'niistä päättyy kahdeksansakaraiseen tähteen. Kaivaukset ja '
+        + 'kunnostus tehtiin 1933-1971.',
+      kuvat: [
+        {
+          tiedosto: 'القصر العباسي قلب الحكم والفخامة في العصر الإسلامي.jpg',
+          selite: 'Sisäpiha ja sen keskellä matalalla jalustalla lepäävä '
+            + 'kivinen allas, jonka ympärille on vedetty köysiaita. Pihaa '
+            + 'kiertää kaksi kerrosta suippokaarikäytäviä, alakerran '
+            + 'syvennysten holveissa on muqarnas-kennostoa, ja takaseinän '
+            + 'keskellä avautuu muita suurempi iwan. Oikealla '
+            + 'vierailijoita, joista kaksi valmistujaisviitoissa.',
+          lahde: 'Montzr 1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'القصر العباسي رمز السلطة والفن في بغداد التاريخية.jpg',
+          selite: 'Kaarikäytävän holvi alhaalta kuvattuna: muqarnas-kennot '
+            + 'lomittuvat toisiinsa ja laskeutuvat portaittain, kunkin '
+            + 'pohjaan on veistetty kasvikuvio tai kirjoituskoriste, ja '
+            + 'keskellä erottuu kahdeksansakarainen tähti. Alempana '
+            + 'kulkee rivi suippokaaria ja paljasta tiilimuuria, oikeassa '
+            + 'yläkulmassa näkyy taivas.',
+          lahde: 'Montzr 1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Khan Mirjan': {
+      aika: '1358',
+      teksti: 'Khan Mirjan on majatalo kauppiaille. Bagdadin '
+        + 'jalayiridikuvernööri Amin al-Din Mirjan rakennutti sen vuosina '
+        + '1356-1358, ja samalta rakennuttajalta on kadun toisella '
+        + 'puolella Mirjanin moskeija. Kerroksia on kaksi ja huoneita 45: '
+        + 'alakerrassa 22, yläkerrassa 23. Työnjako kulki pystysuunnassa. '
+        + 'Alakerta oli tavaraa ja karavaanin eläimiä varten, yläkerta '
+        + 'kauppiaita — matkustaja nukkui saman katon alla kuormansa '
+        + 'kanssa.'
+        + '\n\n'
+        + 'Keskellä on pitkä sali, ja se on khanien joukossa poikkeus: '
+        + 'pohjakaavaan ei kuulunut avointa keskuspihaa lainkaan. Salin '
+        + 'yli kaartuu rivi suuria teräväkärkisiä kaaria, jotka on '
+        + 'muurattu poltetusta tiilestä ja joiden reunaa kiertää '
+        + 'porrastettu hammaslista. Katon huippu on kolmentoista metrin '
+        + 'korkeudella. Valo tulee sisään päätyseinän kapeista '
+        + 'suippoikkunoista ja muurin lävistetyistä ikkunoista. Ulkopinta '
+        + 'on koristeltu kalligrafialla, ja kirjoituspaneelien tekijäksi '
+        + 'mainitaan tabrizilainen Ahmad Shah, jota kutsuttiin '
+        + 'kultakynäksi.'
+        + '\n\n'
+        + 'Rakennus oli pitkään rapistuneena, ja salissa seisoi Tigriksen '
+        + 'tulvavettä vyötärön korkeudella. Vuonna 1937 tiloihin avattiin '
+        + 'arabialaisten muinaisesineiden museo, ja 1980-luvun '
+        + 'puoliväliin mennessä rakennus oli kunnostettu ja otettu '
+        + 'ravintolakäyttöön. Se on yhä yksi Irakin vanhimmista '
+        + 'säilyneistä khaneista.',
+      kuvat: [
+        {
+          tiedosto: 'خان مرجان.jpg',
+          selite: 'Khan Mirjanin katettu keskussali. Rivi teräväkärkisiä '
+            + 'tiilikaaria jaksottaa katon, alaseinässä on kapeita '
+            + 'suippokaarisia oviaukkoja ja ylhäällä kiertää parveke '
+            + 'tummine puukaiteineen; päätyseinässä on kolme kapeaa '
+            + 'ikkunaa. Sali on tyhjä, vasemmalla seisoo tumma puuseinäke '
+            + 'lasimaalauksineen sekä pöytä ja tuoli.',
+          lahde: 'Zaid isam, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'بوابة خان مرجان.jpg',
+          selite: 'Khanin pääportaali kadulta: suippokaari, kaiverrettua '
+            + 'tiilikoristetta, arabiankielinen kirjoituspaneeli, '
+            + 'ristikkoikkuna ja kaksiosainen puuovi. Oikeassa '
+            + 'alakulmassa näkyy valkoinen muovipöytä, vesipullo ja '
+            + 'pahvilaatikko.',
+          lahde: 'Zaid isam, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mustansiriya-koulu': {
+      aika: '1235',
+      teksti: 'Porttihallissa seisoi vuonna 1235 valmistunut vesikello, jonka '
+        + 'teki Ali ibn Thalab damaskolaisten kellojen malliin. Seinään '
+        + 'oli kuvattu taivas ja siihen kaksi kultaista haukkaa, '
+        + 'kummallakin oma kulhonsa. Tunnin täyttyessä haukan nokka '
+        + 'aukeni ja pudotti pronssipallon kulhoon, ja yksi kaarten '
+        + 'ovista vaihtui kultaisesta hopeiseksi. Kullatut planeetat '
+        + 'kulkivat taivaankuvassa auringon mukana ja hehkuivat yöllä '
+        + 'takaapäin valaistuina. Rukoushetket luettiin seinältä.'
+        + '\n\n'
+        + 'Samojen muurien sisällä oli hammam, sairaala, apteekki ja '
+        + 'keittiö. Lääketieteen koulua johti vanhempi lääkäri, jolla oli '
+        + 'oltava kymmenen oppilasta, ja sairaala oli saman katon alla. '
+        + 'Talossa asui myös kolmekymmentä orpoa, jotka saivat saman '
+        + 'palkkion ja ruoan kuin muut opiskelijat. Seinät ovat '
+        + 'veistettyä tiiltä: pääoven kaarten ympärillä kiertää tähti- ja '
+        + 'monikulmiokuvioita ja piirtokirjoitus rakennuttajasta, '
+        + 'lounaisovessa myöhempi piirtokirjoitus ottomaanisulttaani '
+        + 'Abdulazizista.'
+        + '\n\n'
+        + 'Vuoden 1258 piirityksen vaurioittamat osat korjattiin '
+        + 'myöhemmin. Vesikellon kuvannut Ibn al-Fuwati palasi kaupunkiin '
+        + 'ja nimitettiin koulun johtajaksi 1281. Timurin kaudella opetus '
+        + 'keskeytyi, kirjastosta katosi tuhansia kirjoja ja '
+        + 'rakennusmestareita vietiin Samarkandiin. Koulu yritettiin '
+        + 'avata uudelleen 1589, mutta ovet suljettiin 1638. 1700-luvulla '
+        + 'talo toimi kauppiaiden majatalona nimellä Khan al-Muwasilah. '
+        + 'Irakin valtio kunnosti sen 1960.',
+      kuvat: [
+        {
+          tiedosto: 'Al-Mustansriah School - SW Door.jpg',
+          selite: 'Koulun lounaissivu: kolme suippokaarista aukkoa, ja niiden '
+            + 'ympärillä seinä on ladottu tiilestä tähti- ja '
+            + 'monikulmiokuvioiksi. Etualalla kasvaa korkeaa heinää, '
+            + 'taustalla on pilvetön taivas.',
+          lahde: 'Samir Al-Ibrahem, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Old rusafa (1).jpg',
+          selite: 'Pääoven suippokaari alhaalta kuvattuna: kaaren sisään on '
+            + 'veistetty rivi toisensa jälkeen vaakasuoria '
+            + 'kirjoitusnauhoja, alimpana tähtikuvioinen kenttä, ja '
+            + 'pieliä kiertää kapea koristenauha. Ylhäällä seinän editse '
+            + 'kulkee sähköjohto.',
+          lahde: 'ZaidAiraq, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bagdadin museo': {
+      aika: '1970',
+      teksti: 'Kahvilan kohtauksessa miehet istuvat matalilla penkeillä '
+        + 'keffiyeh päässä, ja keltatiilisellä seinällä riippuu '
+        + 'kehystettyjä valokuvia. Toisessa kohtauksessa puuseppä työstää '
+        + 'lautaa penkkinsä ääressä, työkalut hyllyillä ympärillään. '
+        + 'Hahmot ovat täysikokoisia, ja niitä on 385 kappaletta 77 '
+        + 'kohtauksessa. Kohtauksiin kuuluu hahmojen lisäksi ajan '
+        + 'esineistöä: työkaluja, astioita ja huonekaluja.'
+        + '\n\n'
+        + 'Aiheina ovat käsityöammatit, kaupankäynti, kotien tavat ja '
+        + 'kadunvarren elämä. Osa kohtauksista kertoo tarinan. Yhdessä '
+        + 'äiti nimeltä Umm Ibrahim moittii poikaansa siitä, että tämä '
+        + 'unohti äitinsä heti häiden jälkeen. Toinen esittää zaffan eli '
+        + 'hääkulkueen, jossa naisseurue saattaa morsianta taputuksin, '
+        + 'soitoin ja tanssein. Muualla soittaa irakilaista '
+        + 'maqam-musiikkia esittävä yhtye ja istutaan iltapäivän teellä.'
+        + '\n\n'
+        + 'Museo perustettiin vuonna 1970. Se sijaitsee Tigrisin lähellä '
+        + 'Rusafan puolella kaupunkia, ja rakennus on vuodelta 1869. '
+        + 'Kokoelma rajaa tarkoituksella yhden ajanjakson: sen, miten '
+        + 'bagdadilaiset perheet elivät, mitä työkaluja ja talousesineitä '
+        + 'niillä oli ja miten juhlat vietettiin.',
+      kuvat: [
+        {
+          tiedosto: 'مدخل المتحف البغدادي.jpg',
+          selite: 'Museon julkisivu kadulta ylöspäin kuvattuna: vasemmalla '
+            + 'ulkoneva puinen shanashil-parveke pylväineen ja '
+            + 'ruutuikkunoineen, sen alla rautakoristeinen kaide ja '
+            + 'seinälyhtyjä. Oikealla on kaiverrettu suippokaariovi ja '
+            + 'sen yllä arabiankielinen kivilaatta; taustalla kohoaa '
+            + 'naapuritalon paljas betoniseinä.',
+          lahde: 'Ayat Jaryan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Photos from the Al Baghdadi Museum- Baghdadi cafe.jpg',
+          selite: 'Kahvilan kohtaus: toistakymmentä täysikokoista hahmoa '
+            + 'istuu penkeillä ja tuoleilla valkoisen puukaiteen takana, '
+            + 'päässä ruudullisia huiveja ja valkoisia kalotteja. '
+            + 'Keltatiilisellä seinällä on kehystettyjä valokuvia ja '
+            + 'pieniä hyllyjä, perällä tarjoilutiski kannuineen.',
+          lahde: 'Mustafa alsalhi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

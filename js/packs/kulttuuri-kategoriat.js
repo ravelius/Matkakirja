@@ -7617,4 +7617,203 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * BAGDADIN KANSISIVU (nippu 2, 13.8.2026). Aihesivun id on arki,
+   * koska IRQ-maalehdellä on muinaisuus, ruoka, rakennukset ja suot
+   * — sama id kaupungilla peittäisi maan sivun (rakennaSivut).
+   */
+  bagdad: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bagdad',
+      johdanto: 'Bagdad on kahdeksan miljoonan asukkaan pääkaupunki, jonka '
+        + 'vanhimmat rakennukset ovat tiiltä: kaupunginmuurin portti, '
+        + 'kalifin äidin hauta ja moskeijan minareetti ovat kaikki 1100- '
+        + 'ja 1200-luvuilta.',
+      kansikuvat: [
+        {
+          tiedosto: '001124-Alkadhemiya-Baghdad-IMG 7802-2.jpg',
+          selite: 'Al-Kadhimiyan pyhäkkö Bagdadin pohjoisosassa: kaksi '
+            + 'kullattua kupolia ja neljä kullattua minareettia. Portti '
+            + 'on verhottu siniseen ja valkoiseen kaakeliin, aidat ovat '
+            + 'vihreää metallia ja katolla liehuu vihreitä lippuja. '
+            + 'Kupolien takana seisoo rakennusnosturi, ja aukiolla kulkee '
+            + 'ihmisiä.',
+          lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'AlKhulafa Mosque in Baghdad 01.jpg',
+          selite: 'Khulafa-moskeijan minareetin huippu alhaalta kuvattuna. '
+            + 'Vaalea yläosa lepää kennomaisten syvennysten varassa, ja '
+            + 'sen päällä on kapea huippu. Alempana kiertää tiiliseinässä '
+            + 'arabiankielinen kirjoitusnauha, edessä on kaide ja '
+            + 'oikeassa reunassa puun oksisto.',
+          lahde: 'Usamasaad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'كهرمانة 03.jpg',
+          selite: 'Kahramana-suihkulähde katuaukiolla. Pronssinen naishahmo '
+            + 'kallistaa ruukkua noin neljänkymmenen vihreäksi '
+            + 'patinoituneen pronssiruukun rivistön yläpuolella. '
+            + 'Ympärillä on katulamppuja, palmu, keltainen taksi ja '
+            + 'arabiankielisiä liikekylttejä asuintalon seinässä.',
+          lahde: 'Hussein A.Al-mukhtar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Porteista jäi jäljelle yksi',
+          tiedosto: 'Bab al-Wastani northern gate.jpg',
+          teksti: 'Bagdadin itäpuolta kiersi keskiajalla muuri, jonka '
+            + 'rakennutti kalifi al-Mustazhir (1094–1118); portit teetti '
+            + 'kalifi al-Nasir (1180–1225). Niistä on jäljellä yksi, Bab '
+            + 'al-Wastani eli Keskimmäinen portti, ja sen vieressä muurin '
+            + 'viimeiset jäänteet — molemmat samaa tiiltä. Torni on '
+            + 'lieriö ja 14,5 metriä korkea. Sisällä on '
+            + 'kahdeksankulmainen huone, jonka päällä on kupoli. '
+            + 'Julkisivun yläreunassa kulkee kirjoitusnauha ja sen alla '
+            + 'tähtikuvioita ja kasviaiheita, ja oviaukkojen molemmin '
+            + 'puolin on pieniä leijonakaiverruksia. Kulkutie ei mene '
+            + 'suoraan läpi vaan kaartaa.',
+          selite: 'Bab al-Wastani sisäpihalta kuvattuna. Portin holvikaari on '
+            + 'korkea ja teräväkärkinen, sen yläpuolella harjaa kiertävät '
+            + 'hammastetut lohkot, ja molemmin puolin pihaa nousee '
+            + 'tiiliseinä, jossa on rivi kaarisyvennyksiä. Piha on '
+            + 'laskettu tiilillä, oviaukko on täysin pimeä ja '
+            + 'oikeanpuoleiseen seinään on raapustettu pieni merkintä.',
+          lahde: 'Aboalhasan Ayad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Yhdeksän kerrosta kennoa',
+          tiedosto: 'Zubaida tomb.JPG',
+          teksti: 'Zumurrud Khatun oli turkkilainen nainen, joka oli ollut '
+            + 'orjana ja nousi kalifi al-Mustadin puolisoksi ja kalifi '
+            + 'al-Nasirin äidiksi. Hän kustansi rakennuksia ja korjautti '
+            + 'pyhiinvaellustien vesisäiliöitä 300 000 dirhamilla. Hänen '
+            + 'hautansa valmistui ennen kuolemaa vuonna 1202. Pohja on '
+            + 'kahdeksankulmainen, ja sen päällä kohoaa kartio, joka on '
+            + 'ladottu yhdeksästä kennokerroksesta ja päättyy pieneen '
+            + 'kupuun. Kennoja on kuusitoista, ja jokaisessa on pieni '
+            + 'aukko paksun lasin takana. Sisähuone on noin kolme metriä '
+            + 'pitkä ja seitsemän leveä.',
+          selite: 'Zumurrud Khatunin hauta Bagdadin Karkhin puolella. '
+            + 'Kahdeksankulmaisen tiilirungon päällä kohoaa kartiomainen '
+            + 'kennokatto, joka näyttää alhaalta kuusenkävyltä. Seinissä '
+            + 'on teräväkärkisiä syvennyksiä ja koristemuurausta, '
+            + 'oikealla on matalampi tiiliseinä kaarineen ja vasemmassa '
+            + 'reunassa puun oksat.',
+          lahde: 'Moshtakmoshtak, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Viisikymmentä metriä oikealta vasemmalle',
+          tiedosto: '(نصب التحرير( ساحه التحرير 01.jpg',
+          teksti: 'Tahririn aukion laidalla seisoo travertiiniseinä, joka on '
+            + '50 metriä pitkä ja 10 metriä korkea ja nostettu kuuden '
+            + 'metrin päähän maasta. Siihen on kiinnitetty 14 '
+            + 'pronssivalua ja niissä 25 hahmoa. Muistomerkki tehtiin '
+            + 'Irakin itsenäisyysjulistuksen muistoksi. Sen suunnitteli '
+            + 'kuvanveistäjä Jawad Salim, ja arkkitehti Rifat Chadirji '
+            + 'vaati seinän nostamista ylös maasta. Reliefit luetaan kuin '
+            + 'arabialainen runosäe, oikealta vasemmalle, ja muotokieli '
+            + 'viittaa babylonialaisiin ja assyrialaisiin kaiverruksiin. '
+            + 'Salim kuoli tammikuussa 1961, ja työn saattoivat valmiiksi '
+            + 'hänen puolisonsa Lorna Selim ja Mohammed Ghani Hikmat.',
+          selite: 'Vapauden monumentti Tahririn aukiolla. Vaalean '
+            + 'travertiiniseinän pinnassa on rivi tummia pronssihahmoja, '
+            + 'ja seinä lepää tukien varassa niin että alta näkyy puistoa '
+            + 'ja palmuja. Edessä kulkee katu, jonka reunakivi on '
+            + 'maalattu mustavalkoiseksi ja jolla seisoo valkoinen '
+            + 'maasturi. Oikealla on valkoisia koristekaiteita ja talon '
+            + 'seinässä mainoskyltti.',
+          lahde: 'Hussein A.Al-mukhtar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Bagdadin arki mahtuu kolmeen osoitteeseen: leveään katuun, '
+        + 'jonka pylväskäytävät varjostavat kulkijaa, kahvilaan, jossa '
+        + 'tee tulee lasissa, ja toriin, joka on vanhempi kuin kumpikaan.',
+      nostot: [
+        {
+          otsikko: 'Ensimmäinen leveä katu',
+          tiedosto: 'Baghdadi Balconies al-Rasheed Street.png',
+          teksti: 'Al-Rashid-katu avattiin vuonna 1914. Ottomaanihallinto '
+            + 'halusi Bagdadiin väylän, jolle vaunut mahtuivat: vanha '
+            + 'kujaverkko oli niille liian kapea. Linjauksen tieltä '
+            + 'purettiin noin 700 taloa. Kadulle tuli jalkakäytävät ja '
+            + 'niiden päälle pylväskäytävät, jotka varjostavat kulkijaa, '
+            + 'ja pylväiden varaan nousivat ulkonevat parvekkeet. Katu '
+            + 'kulkee Tigrisin suuntaisesti. Nimiä sillä on ollut useita, '
+            + 'ja nykyinen vahvistui 1936, kun kielentutkija Mustafa '
+            + 'Jawad ehdotti sitä abbasidikalifin mukaan. 1930-luvulla '
+            + 'kadulle avattiin elokuvateattereita, ja torstai-ilta oli '
+            + 'perheiden elokuvailta.',
+          selite: 'Talo al-Rashid-kadun varrella. Kolmessa kerroksessa on '
+            + 'parvekkeet, joiden kaiteet on valettu koristekuvioiksi ja '
+            + 'maalattu vaaleanpunaisella ja turkoosilla; seinillä '
+            + 'roikkuu ilmastointilaitteita. Katutasossa parvekerivistöä '
+            + 'kannattavat valkoiset pylväät, ja niiden takana ovat '
+            + 'myymälöiden suljetut rullaovet ja kyltit, joista yhdessä '
+            + 'lukee Atlas.',
+          lahde: 'Ayham4002, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaupungissa oli 285 kahvilaa',
+          tiedosto: 'Al-Zahawi Coffeehouse in 2025.jpg',
+          teksti: 'Ensimmäinen bagdadilainen kahvila avattiin vuonna 1590. '
+            + 'Vuoden 1882 luettelo tunsi niitä 184, ja vuoteen 1903 '
+            + 'mennessä määrä oli 285. Kilpailu asiakkaista oli kova: '
+            + 'omistajat palkkasivat laulajia esittämään irakilaista '
+            + 'maqamia ja tarinankertojia iltoihin. Tee tarjotaan '
+            + 'pienessä lasissa, jota bagdadilaiset sanovat istikaniksi, '
+            + 'pannun nimi on quri ja istuimena on puinen penkki takht. '
+            + 'Al-Rashid-kadun al-Zahawin kahvila avattiin 1917, ja se '
+            + 'sai nimensä runoilija Jamil Sidqi al-Zahawista. '
+            + '1930-luvulla siellä kävi bengalilainen runoilija '
+            + 'Rabindranath Tagore.',
+          selite: 'Al-Zahawin kahvila al-Rashid-kadun kulmassa illalla. '
+            + 'Puinen julkisivu on jaettu kaariruuduiksi, seinillä palaa '
+            + 'lyhtyjä ja räystään alla kaartuu arabiankielinen kyltti. '
+            + 'Kadulle on nostettu pöytiä ja tuoleja, muutama vieras '
+            + 'istuu niissä, ja yläkerran parvekkeen kaiteessa on pieniä '
+            + 'lippuja.',
+          lahde: 'Ayham4002, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Tori on vanhempi kuin katu',
+          tiedosto: '2024, Muslim Baghdadis flooded the Shorja market celebrating the Islamic holy month of Ramadan.jpg',
+          teksti: 'Shorja on Bagdadin suurin ja vanhin tori. Se on Rusafan '
+            + 'puolella aivan al-Rashid-kadun vieressä. Nimi tulee '
+            + 'persian sanasta shurchah, suolainen kaivo, ja sen antoivat '
+            + 'persialaiset kauppiaat, jotka perustivat paikan. '
+            + 'Naapurikorttelin nimi Ab-Khana tarkoittaa vesisäiliötä. '
+            + 'Torin korttelit olivat kaupan keskus jo kauan ennen leveää '
+            + 'katua: samalla alueella olivat mandealaisten hopeaseppien '
+            + 'pajat, ja vuonna 1866 sinne valmistui Pyhän Joosefin '
+            + 'latinalainen katedraali.',
+          selite: 'Shorjan torikuja täynnä ihmisiä. Etualalla myyjä kaataa '
+            + 'karkkeja vihreään pussiin, tiskeillä on avonaisia '
+            + 'laatikoita makeisia, kuivattuja hedelmiä ja pähkinöitä, ja '
+            + 'seinustan hyllyillä pakattuja tavaroita. Katon alta '
+            + 'roikkuu lamppuja, ja käytävä jatkuu yhtä täytenä niin '
+            + 'pitkälle kuin näkyy.',
+          lahde: 'Chinese Horse From Kaso Mall, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Shorjan torin nimi tarkoittaa persiaksi?',
+        vaihtoehdot: [
+          'suolainen kaivo',
+          'kuivunut lähde',
+          'suuri varasto',
+          'vanha satama',
+        ],
+        oikea: 0,
+        fakta: 'Paikan perustivat persialaiset kauppiaat, ja '
+          + 'naapurikorttelin nimi Ab-Khana tarkoittaa vesisäiliötä.',
+      },
+    },
+  ],
 };
