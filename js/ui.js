@@ -3194,6 +3194,15 @@ export class UI {
     this.peruValintavihje();
     // Sama koskee ääriviivan välähdyksen loppuajastinta.
     clearTimeout(this.aariviivaAjastin);
+    /*
+     * Maapilleri pois DOM:ista (omistajan kaappaus 13.8.2026: "Jordania
+     * jäi maalehtipainikkeen taakse"). Pilleri on mapPanen suora lapsi
+     * eikä kuulu kartan piirtoon, joten uusi peli ei pyyhi sitä muun
+     * mukana — ilman tätä vanhan pelin maa jää kummittelemaan uuden
+     * pillerin alle.
+     */
+    this.maaPilleri?.remove();
+    this.maaPilleri = null;
     // Sama koskee alanappirivin liukua sulkevaa karttanapautusta.
     if (this.liukuKuuntelija) {
       document.removeEventListener('pointerdown', this.liukuKuuntelija);
@@ -6359,6 +6368,10 @@ export class UI {
       return;
     }
     if (!nappi || !nappi.isConnected) {
+      // Varmistus kaksoiskappaleita vastaan: jos mapPanessa asuu vielä
+      // jonkin aiemman elämän pilleri (esim. purkamatta jäänyt UI),
+      // se siivotaan ennen uuden luontia — pillereitä on aina yksi.
+      for (const vanha of this.mapPane.querySelectorAll('.maa-pilleri')) vanha.remove();
       nappi = document.createElement('button');
       nappi.type = 'button';
       nappi.className = 'maa-pilleri';

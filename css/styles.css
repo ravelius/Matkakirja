@@ -3946,13 +3946,15 @@ body.radio-tila .actions {
  * Loppuvälähdys jatkaa siitä, mihin piirron aikainen paisuminen jäi
  * (js/ui.js: piirto nostaa viivan lineaarisesti ~70 prosenttiin,
  * leveys 5.4 ja väri rgba(182,61,42,0.8)) — 0 % on täsmälleen nämä
- * arvot, ettei vaiheiden saumaa näy. Nopea huippu 70→100, pieni pito
+ * arvot, ettei vaiheiden saumaa näy. Nopea huippu 70→80, pieni pito
  * ja pehmeä häivytys lepoon (omistajan tarkennus 13.8.2026 ilta).
  */
+/* Huippu on maltillinen 70→80 (omistajan tarkennus 13.8.2026 ilta:
+   "rajan väläys voisi olla vain 70=>80" — aiempi 70→100 oli liikaa). */
 @keyframes maa-aariviivan-valahdys {
   0% { stroke: rgba(182, 61, 42, 0.8); stroke-width: 5.4; }
-  12% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
-  26% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
+  12% { stroke: rgba(188, 61, 42, 0.85); stroke-width: 5.8; }
+  26% { stroke: rgba(188, 61, 42, 0.85); stroke-width: 5.8; }
   100% { stroke: rgba(150, 60, 45, 0.62); stroke-width: 3.5; }
 }
 
