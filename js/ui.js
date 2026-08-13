@@ -5349,6 +5349,23 @@ export class UI {
         aloitaNipistys(e);
       }],
       ['touchmove', (e) => {
+        /*
+         * ALOITUS MYÖS LIIKKEESTÄ (omistajan iPad-havainto v639:
+         * "zoomi hyppii edelleen"). Kun sormet laskeutuvat alle
+         * aloituskynnyksen (24 px) päähän toisistaan — tavallinen
+         * tapa aloittaa nipistys — aloitaNipistys palasi tyhjin käsin
+         * EIKÄ elettä yritetty enää koskaan uudestaan. Kosketuksia ei
+         * silloin myöskään estetty, joten Safari otti eleen itselleen
+         * ja zoomasi koko sivua: kartta "hyppäsi" aivan muualle.
+         * Nyt kahden sormen liike estetään aina selaimelta ja aloitus
+         * yritetään joka liikkeellä, kunnes sormet ovat kyllin
+         * etäällä — ele alkaa siitä asennosta, ei alkuperäisestä.
+         */
+        if (!nipistys && e.touches.length === 2) {
+          e.preventDefault();
+          aloitaNipistys(e);
+          return;
+        }
         if (!nipistys) return;
         e.preventDefault();
         paivitaNipistys(e);
@@ -5547,7 +5564,10 @@ export class UI {
         liikkui = true;
         this.kartanRaahaus = true;
         document.body.classList.add('kartta-raahaus');
-        pane.setPointerCapture?.(e.pointerId);
+        // Kaappaus voi heittää NotFoundErrorin, jos osoitin ehti
+        // peruuntua (iOS peruu osoittimet oman eleensä alta) — raahaus
+        // toimii silloinkin, kaappaus vain jää tekemättä.
+        try { pane.setPointerCapture?.(e.pointerId); } catch { /* ei kaappausta */ }
         /*
          * Päiväkirja yhdelle riville heti kun kartta lähtee liikkeelle
          * — ja vain kerran eleen aikana (omistajan toive: kortti ei saa
@@ -5567,7 +5587,8 @@ export class UI {
 
     const paata = (e) => {
       if (!alku || (e && e.pointerId !== alku.id)) return;
-      if (liikkui) pane.releasePointerCapture?.(alku.id);
+      // Sama varautuminen kuin kaappauksessa: peruuntunut osoitin heittää.
+      if (liikkui) { try { pane.releasePointerCapture?.(alku.id); } catch { /* ei ollut */ } }
       alku = null;
       // Raahauksen päättävä napautus ei saa valita kaupunkia: lippu
       // luetaan click-vaiheessa (alla) ja nollataan vasta sen jälkeen.

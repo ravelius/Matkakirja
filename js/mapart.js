@@ -2554,8 +2554,82 @@ export function kokoaRuudunTaide(pilkottu, ikkuna) {
 export const RUUTU_TYHJA = 'tyhjä';
 
 /*
+ * PAKKAUSMUODON VALINTA MITATAAN, EI ARVATA (iPad-kierros 13.8.2026).
+ *
+ * "WebP eikä PNG" valittiin aikanaan Chromium-mittauksin, ja siellä
+ * se on yhä oikein: aidolla peliruudulla WebP 301 ms, JPEG 1126 ms,
+ * PNG 1154 ms. WebKitissä järjestys on PÄINVASTAINEN: WebP 196 ms,
+ * PNG 399 ms — ja JPEG 16 ms. Omistajan iPadilla juuri pakkaus oli
+ * ruutuputken suurin yksittäinen pääsäietukos (mitattuna 500–1400 ms
+ * per ruutu), ja se tuntui zoomin tökkimisenä jokaisen eleen perään.
+ *
+ * Siksi nopein muoto mitataan kerran istunnossa pienellä
+ * kohinakankaalla ja JPEG otetaan käyttöön vain, jos se on selvästi
+ * (yli kaksi kertaa) WebP:tä nopeampi — moottorihaistelun sijaan
+ * mitataan sitä mitä oikeasti käytetään. JPEG ei osaa läpinäkyvyyttä,
+ * joten se kelpaa vain ruudulle, jonka joka pikseli on peittävä;
+ * se tarkistetaan ruutukohtaisesti (taysinPeittava), ja muut ruudut
+ * pakataan WebP:nä kuten ennenkin. Laatu 0.90 vastaa silmämääräisesti
+ * WebP:n 0.92:ta pergamenttikartalla, ja tiedostokoko on samaa
+ * luokkaa (mitattu 194 kt vs 164 kt).
+ */
+const PAKKAUS_KOE_PX = 256;
+let pakkausvalintaLupaus = null;
+
+function nopeinPakkausmuoto() {
+  if (pakkausvalintaLupaus) return pakkausvalintaLupaus;
+  pakkausvalintaLupaus = (async () => {
+    try {
+      const koekangas = document.createElement('canvas');
+      koekangas.width = PAKKAUS_KOE_PX;
+      koekangas.height = PAKKAUS_KOE_PX;
+      const ctx = koekangas.getContext('2d');
+      if (!ctx || !koekangas.toBlob) return 'image/webp';
+      // Kohinaa kuten kartalla: tasainen väri pakkautuisi kaikilla
+      // muodoilla hetkessä eikä kertoisi eroista mitään.
+      ctx.fillStyle = '#ecd8ae';
+      ctx.fillRect(0, 0, PAKKAUS_KOE_PX, PAKKAUS_KOE_PX);
+      for (let i = 0; i < 1500; i++) {
+        ctx.fillStyle = `rgba(${(i * 7) % 120},60,30,0.3)`;
+        ctx.fillRect((i * 37) % PAKKAUS_KOE_PX, (i * 91) % PAKKAUS_KOE_PX, 3, 3);
+      }
+      const aika = (tyyppi, laatu) => new Promise((valmis) => {
+        const alku = performance.now();
+        koekangas.toBlob((b) => valmis(b && b.type === tyyppi
+          ? performance.now() - alku : Infinity), tyyppi, laatu);
+      });
+      const webp = await aika('image/webp', 0.92);
+      const jpeg = await aika('image/jpeg', 0.9);
+      return jpeg * 2 < webp ? 'image/jpeg' : 'image/webp';
+    } catch {
+      return 'image/webp';
+    }
+  })();
+  return pakkausvalintaLupaus;
+}
+
+/**
+ * Onko kankaan jokainen pikseli täysin peittävä? JPEG hukkaa
+ * läpinäkyvyyden, ja esimerkiksi meriruudussa, jossa on vain yksi
+ * saari, läpinäkyvä osa muuttuisi mustaksi. Koko kankaan luku maksaa
+ * muutaman millisekunnin — murto-osan siitä, mitä väärä pakkausmuoto
+ * maksaisi joka ruudulla.
+ */
+function taysinPeittava(piirturi, leveys, korkeus) {
+  try {
+    const data = piirturi.getImageData(0, 0, leveys, korkeus).data;
+    for (let i = 3; i < data.length; i += 4) {
+      if (data[i] < 255) return false;
+    }
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/*
  * `keskeyta` on vapaaehtoinen luovutusehto. Ruudun kallein osa —
- * SVG:n maalaus kanvakselle ja WebP-pakkaus — on jakamatonta
+ * SVG:n maalaus kanvakselle ja pakkaus — on jakamatonta
  * pääsäietyötä, ja jos sormi ehtii kartalle kesken kuvan latauksen,
  * juuri se työ tuntuisi nykäyksenä eleen alla. Kun ehto palaa toteen,
  * loput vaiheet jätetään tekemättä ja palautetaan null; kutsuja
@@ -2632,7 +2706,12 @@ export async function rasteroiRuutu(taide, ikkuna, skaala, tarkkuus = 1, keskeyt
       if (!canvas.toBlob) { valmis(null); return; }
       canvas.toBlob((b) => valmis(b && b.type === tyyppi ? b : null), tyyppi, laatu);
     });
-    const png = await pakkaa('image/webp', 0.92) ?? await pakkaa('image/png');
+    // JPEG vain jos se on TÄSSÄ selaimessa mitatusti nopein JA ruutu
+    // on kauttaaltaan peittävä (ks. nopeinPakkausmuoto).
+    const jpegKelpaa = (await nopeinPakkausmuoto()) === 'image/jpeg'
+      && taysinPeittava(piirturi, leveysPx, korkeusPx);
+    const png = (jpegKelpaa ? await pakkaa('image/jpeg', 0.9) : null)
+      ?? await pakkaa('image/webp', 0.92) ?? await pakkaa('image/png');
     const osoite = png ? URL.createObjectURL(png) : canvas.toDataURL('image/png');
 
     /*

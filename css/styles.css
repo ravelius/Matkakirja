@@ -895,6 +895,12 @@ button, .brand, .turn-pill, .fact-card h2 {
   background: #241a12;
   overflow: hidden;
   display: flex;
+  /* Myös säiliölle, ei vain SVG:lle: WebKitin touch-action-tuki on
+     SVG-elementeillä puutteellinen, ja pelkkä #boardin sääntö jätti
+     Safarille raon aloittaa oma sivun zoomaus kartan eleistä (iPadin
+     "kartta hyppää" -havainnon toinen puoli). Div-säiliöllä sääntö
+     pitää kaikissa moottoreissa. */
+  touch-action: none;
 }
 
 #board {
