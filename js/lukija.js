@@ -107,17 +107,23 @@ export const LUKIJAN_OHITETTAVAT = [
   '.tervehdys',
 
   /*
-   * KAUPUNGIN KOHDEKARTTA KOKONAAN (omistajan havainto 13.8.2026:
-   * "lehden lukija lukee vielä kartan tekstit — siihen voisi ohjata
-   * vain ja ainoastaan artikkelin tekstin"). Selitteet olivat jo
-   * ohituksissa, mutta lohkon otsikko, esittelykappaleet ja karttojen
-   * numeropisteet luettiin yhä. Kartta on silmälle, ei korvalle:
-   * ääneen luettuna siitä tulee irrallinen numero- ja nimilitania.
+   * KOHDEKARTAN KARTTAOSAT, EI ESITTELYÄ (omistajan tarkennus
+   * 13.8.2026 iltapäivällä). Ensin ohitettiin koko .kaupunkikartta,
+   * mutta silloin luenta loppui Venetsiassa ensimmäiseen kappaleeseen:
+   * "Kaupunki kartalla" -otsikko ja esittelykappaleet OVAT juttua ja
+   * ne luetaan. Vain itse kartta pisteineen, selitteineen ja
+   * mittajanoineen on silmälle eikä korvalle.
    */
-  '.kaupunkikartta',
   '.maakartta-kotelo',
   '.maakartta-piste',
   '.kartta-mittajana',
+
+  // Lehden päivämäärä on taittoa, ei juttua (omistajan toive).
+  '#arrival-lehti-pvm',
+
+  // "Uutisissa tänään (lähde)" -nimiö samoin (omistajan toive) —
+  // uutisotsikot itse ovat nappeja ja jäävät pois jo tagilistalla.
+  '.uutiset-nimio',
 
   // Kuvatekstit, selitteet ja karttojen numeroselitykset.
   '.kuvateksti',
