@@ -476,6 +476,18 @@ vaadi('samaan maahan palatessa ääriviivaa ei piirretä uudelleen',
  * syy on animaatiossa.
  */
 await sivu.waitForTimeout(1500);
+// Puskurirengas tyhjäksi ennen vertailua: rengas piirtää ruutuja
+// joutohetkinä, ja sen sattumanvarainen jakautuminen kahden
+// mittausikkunan välille näkyisi erona, joka ei kerro animaatiosta
+// mitään (mitattu välkkyväksi: väliin 2 leporuutua ja 3
+// animaatioruutua samasta jonosta).
+for (let i = 0; i < 60; i++) {
+  const kesken = await sivu.evaluate(() => Boolean(window.matkakirja.ui.taideRengas)
+    || window.matkakirja.ui.taidePiirtyy === true);
+  if (!kesken) break;
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(250);
+}
 // Vertailuluku: yhtä pitkä lepojakso ilman animaatiota. Kartta täydentää
 // ruutujaan joutohetkinä muutenkin, joten pelkkä ruutujen määrä ei
 // kertoisi mitään ilman tätä.
@@ -548,11 +560,26 @@ vaadi('kokonäkymän nipistyksen ankkuri ei karkaa (ei Grönlanti-hyppyä)',
 await sivu.waitForTimeout(2500);
 await nollaa();
 const panEnnenLiukua = await sivu.evaluate(() => window.matkakirja.ui.panX);
-await panoroi(220, 8);
-const liukuHeti = await sivu.evaluate(() => ({
-  raahaus: window.matkakirja.ui.kartanRaahaus,
-  panX: window.matkakirja.ui.panX,
-}));
+/*
+ * Pyyhkäisy uusitaan tarvittaessa: CDP:n kosketustapahtumien ajoitus
+ * elää ajokoneen kuorman mukana, ja liian tiheään niputtuneista
+ * tapahtumista ei kerry nopeusikkunaan näytteitä (alle 30 ms:n
+ * mittausväli hylätään kohinana myös oikealla laitteella). Vartioitava
+ * asia on "nopea pyyhkäisy liukuu", ei "jokainen synteettinen
+ * tapahtumasarja tulkitaan nopeaksi".
+ */
+let liukuHeti = { raahaus: false, panX: null };
+for (let yritys = 0; yritys < 3 && !liukuHeti.raahaus; yritys++) {
+  // eslint-disable-next-line no-await-in-loop
+  await panoroi(220, 8);
+  // eslint-disable-next-line no-await-in-loop
+  liukuHeti = await sivu.evaluate(() => ({
+    raahaus: window.matkakirja.ui.kartanRaahaus,
+    panX: window.matkakirja.ui.panX,
+  }));
+  // eslint-disable-next-line no-await-in-loop
+  if (!liukuHeti.raahaus) await sivu.waitForTimeout(400);
+}
 await sivu.waitForTimeout(250);
 const liukuKesken = await sivu.evaluate(() => ({
   panX: window.matkakirja.ui.panX,
