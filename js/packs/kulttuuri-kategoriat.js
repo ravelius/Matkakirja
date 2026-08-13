@@ -10833,4 +10833,269 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * TOKION KANSISIVU (nippu 2, 13.8.2026). JPN-maalehti vie
+   * historian, ruoan, kuvataiteen, luonnon ja tieteen, joten
+   * kaupungille jää arki ja alakaupunki.
+   */
+  tokio: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tokio',
+      johdanto: 'Uenon kukkulalla on Japanin vanhin eläintarha vuodelta 1882, '
+        + 'sen kupeessa yli 250 liikkeen torikuja, ja Asakusan suuntaan '
+        + 'johtavalla kadulla myydään ravintoloille muoviruokaa, jonka '
+        + 'muotti tehdään upottamalla oikea annos silikoniin.',
+      kansikuvat: [
+        {
+          tiedosto: '言問橋 - panoramio.jpg',
+          selite: 'Kototoi-silta Sumida-joen yli. Turkoosiksi maalattu '
+            + 'teräspalkkisilta lepää kahden kivipäällysteisen pilarin '
+            + 'varassa; kummankin pilarin juuressa on kaareva läpiaukko, '
+            + 'ja rannan puolella erottuu vielä kaksi matalampaa kaarta. '
+            + 'Palkin kylkeen on kiinnitetty sillan nimi kolmena isona '
+            + 'mustana merkkinä. Kannen reunassa kulkee vaaleansininen '
+            + 'kaide ja rivi kaarevia valaisinpylväitä. Vastarannalla on '
+            + 'asuintaloja, toimistotaloja ja kaksi punaista kylttiä, '
+            + 'joissa on valkoista tekstiä. Sillan alta paljastuu kivetty '
+            + 'rantapenger, jolla liikkuu pieniä kaukaisia ihmishahmoja. '
+            + 'Vesi on harmaanvihreää, taivas sininen ja pilvet '
+            + 'hattaroina.',
+          lahde: 'Jun Matsuo, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Ameya-yokocho on a March morning, Tokyo, 2016.jpg',
+          selite: 'Ameya-yokochōn kuja aamulla. Kapea katu on täynnä ihmisiä, '
+            + 'jotka kulkevat molempiin suuntiin markiisien alla. '
+            + 'Vasemmalla on kalatiski, jonka vihreällä matolla on '
+            + 'riveittäin lohifileitä ja pakattuja mereneläviä '
+            + 'hintalappuineen; tiskin takana seisoo valkoiseen '
+            + 'esiliinaan pukeutunut myyjä. Tiskin yläpuolella kohoaa '
+            + 'rautainen ratasilta ristikkoineen. Oikealla on kojuja, '
+            + 'keltaisia ja valkoisia kylttejä kanjimerkein, riippuvia '
+            + 'lamppuja ja punavalkoisia markiiseja. Etualalla kävelee '
+            + 'mies ruskeassa takissa, oranssissa lippalakissa ja '
+            + 'valkoisessa kasvomaskissa sekä nainen oliivinvihreässä '
+            + 'takissa sinistä olkalaukkua kantaen. Katu on kivetty ja '
+            + 'taivas valkoinen.',
+          lahde: 'DimiTalen, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Chopsticks for sale in bulk (14163826889).jpg',
+          selite: 'Syömäpuikkoja myynnissä Kappabashi-dōrin varrella. '
+            + 'Metallitelineellä on kolme riviä muovipusseja, joissa on '
+            + 'nippu vaaleita puisia puikkoja kärjet ylöspäin. Jokaisessa '
+            + 'nipussa on oma kuviollinen paperivyö: sinisiä pisteitä, '
+            + 'vihreää lehtikuviota, punavalkoista ruutua, vihreitä '
+            + 'vaahteranlehtiä, violettia kirsikankukkaa, punaisia '
+            + 'kaneja, valkoista havukuviota, punaisia kurkia ja '
+            + 'vaaleanpunaisia kukkia. Alareunassa on japaninkielinen '
+            + 'kyltti, jossa kerrotaan kotimaisesta seteripuusta, sekä '
+            + 'hintatieto. Teline seisoo kadun varressa, ja oikeassa '
+            + 'yläkulmassa näkyy kivetty jalkakäytävä.',
+          lahde: 'Steven-L-Johnson, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Maan ensimmäinen yksikiskorata kulki eläintarhan halki',
+          tiedosto: 'Ueno Zoo 2012.JPG',
+          teksti: 'Uenon eläintarha avattiin 20. maaliskuuta 1882, ja se on '
+            + 'Japanin vanhin. Alkuna oli luonnontieteellisen museon '
+            + 'yhteyteen kertynyt eläinkokoelma; vuonna 1881 vastuu '
+            + 'siirtyi luonnontieteilijä ja virkamies Tanaka Yoshiolle, '
+            + 'joka teki siitä yleisölle avoimen eläintarhan. Maa kuului '
+            + 'keisarilliselle perheelle ja luovutettiin kaupungille 1924 '
+            + 'yhdessä Uenon puiston kanssa kruununprinssi Hirohiton '
+            + 'häiden kunniaksi. Aluetta on 14,3 hehtaaria ja eläimiä yli '
+            + '2 600; lajimäärästä Wikipedia antaa kaksi lukua, 464 ja '
+            + 'yli 500. Puoliskoja yhdisti maan ensimmäinen '
+            + 'yksikiskorata, joka suljettiin lopullisesti 2023 '
+            + 'vanhentuneiden rakenteiden takia.',
+          selite: 'Uenon eläintarhan pääportti talvella. Matalan turkoosin '
+            + 'katoksen päällä lukee suurin punaisin merkein eläintarhan '
+            + 'nimi ja sen perässä sana ZOO. Katoksen alla on rivi '
+            + 'lippuluukkuja, joiden metalliset taittosäleiköt on vedetty '
+            + 'kiinni, ja niiden edessä mutkitteleva jonoaita. Luukkujen '
+            + 'yläpuolella riippuu kolme mainostaulua: '
+            + 'vasemmanpuoleisessa on kaksi pandan kasvokuvaa, '
+            + 'keskimmäisessä sinisellä pohjalla jääkarhuja ja hylkeitä '
+            + 'jäälautoilla, ja oikeanpuoleisessa keltaisella pohjalla '
+            + 'käsi, joka pitelee älypuhelinta. Vasemmalla on punainen '
+            + 'katos, sen alla juoma-automaatteja ja opastauluja. Portin '
+            + 'edessä on tyhjä vihertävä asfalttikenttä, jossa on '
+            + 'vaaleita pyöreitä laattoja. Taustalla kohoaa lehdettömien '
+            + 'puiden takaa viisikerroksinen pagodi. Taivas on pilvetön '
+            + 'ja sininen, eikä kuvassa näy ihmisiä.',
+          lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kadun nimessä on joko karkki tai Amerikka',
+          tiedosto: 'Ameyayokocho Seafood Stand.JPG',
+          teksti: 'Uenon aseman kyljessä kulkee Ameya-yokochō, ulkoilmatori, '
+            + 'jonka pinta-ala on runsaat 15 000 neliömetriä. Se alkaa '
+            + 'Yodobashi Cameran talon takaa ja seuraa Yamanote-radan '
+            + 'vartta etelään Komuron taloon asti. Liikkeitä on yli 250, '
+            + 'ja ne myyvät ruokaa, vaatteita ja kaikkea muuta. Nimestä '
+            + 'on kaksi selitystä. Toisen mukaan takana on sana ameya, '
+            + 'karkkikauppa: sokerista oli sodan jälkeen pulaa, ja '
+            + 'kadulla oli makeiskauppa toisensa vieressä. Toisen mukaan '
+            + 'sana on Amerika, sillä kadulla myytiin Yhdysvaltain '
+            + 'armeijan ylijäämätavaraa. Lyhenne ameyoko sopii '
+            + 'kumpaankin.',
+          selite: 'Kalakoju Ameya-yokochōssa. Puisella pöydällä on neljä '
+            + 'metallivuokaa: oikeanpuoleisessa lepää nesteessä '
+            + 'kirkkaanpunaiseksi keitetty mustekalan lonkero '
+            + 'imukuppeineen, kolmessa muussa on samanväristä mustekalaa '
+            + 'muovipusseihin nypittynä. Vuokien väliin on pistetty käsin '
+            + 'kirjoitettuja hintakylttejä, joissa hinnat lukevat '
+            + 'kiinalaisin numeroin. Takana on pinottuna pusseja täynnä '
+            + 'pieniä vaaleanpunaisia katkarapuja, vasemmalla nippuja '
+            + 'tummaa merilevää ja oikealla valkoisessa '
+            + 'styroksilaatikossa pystyssä rivi ruskeita kuivattuja '
+            + 'kalasuikaleita sinivalkoisin lapuin. Oikeassa reunassa '
+            + 'roikkuu kelattu bambukaihdin, ja taustalla häämöttää '
+            + 'esiliinaan pukeutunut myyjä.',
+          lahde: 'Kamasakizaki, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Muotti tehdään upottamalla oikea ruoka silikoniin',
+          tiedosto: 'Plastic beer (9412114132).jpg',
+          teksti: 'Uenon ja Asakusan välissä kulkee Kappabashi-dōri, katu, '
+            + 'jonka liikkeet myyvät ravintoloille veitsiä, astioita, '
+            + 'uuneja ja kalusteita. Sen erikoisuus on näyteikkunoiden '
+            + 'muoviruoka, shokuhin sampuru. 1800-luvulla myyjä asetti '
+            + 'oven eteen joka päivä lautasellisen oikeaa ruokaa '
+            + 'kirjoitetun listan sijasta; 1920-luvun lopulla '
+            + 'käsityöläiset ja kynttilänvalajat tekivät samasta '
+            + 'annoksesta kestävän. Parafiini haalistui lämmössä ja '
+            + 'auringossa, joten 1980-luvun puolivälissä siirryttiin '
+            + 'PVC-muoviin. Ravintolan koko lista voi maksaa yli miljoona '
+            + 'jeniä.',
+          selite: 'Muoviruokakaupan näyteikkuna Kappabashissa. Lasikaappien '
+            + 'hyllyt ovat täynnä vaahtopäisiä olutlaseja, joissa neste '
+            + 'on kellertävää muovia; muilla hyllyillä on leipiä, '
+            + 'lihaviipaleita, sushia ja pikkuannoksia, kaikki muovia. '
+            + 'Ylähyllyllä roikkuu muovipusseissa värikkäitä '
+            + 'hedelmäviipaleita. Kaapin yläreunassa palaa punasininen '
+            + 'neonkyltti, jossa lukee Welcome, ja sen yläpuolella on '
+            + 'sininen kyltti keltaisin kanjimerkein. Oikealla seisoo '
+            + 'hymyilevä mies vaaleanpunaisessa paidassa, ruskea '
+            + 'niittivyö ja rannerengas; hänen edessään on selin kaksi '
+            + 'lasta, toinen valkoisessa pallokuvioisessa huppupaidassa '
+            + 'ja kahdella poninhännällä, toinen mustavalkoruudullisessa '
+            + 'paidassa.',
+          lahde: 'Maarten Heerlien from Voorschoten, The Netherlands, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki ja alakaupunki',
+      johdanto: 'Alakaupungin talot olivat puuta ja paperia. Sen arkeen kuului '
+        + 'kolme laitosta: kylpylä, jonka piippu näkyy kauas, palokunta, '
+        + 'joka purki taloja, ja sali, jossa yksi kertoja hoiti koko '
+        + 'tarinan.',
+      nostot: [
+        {
+          otsikko: 'Vahtimestari istuu korokkeella kahden puolen välissä',
+          tiedosto: 'Tatsuno-yu Sento Tokyo 1.jpg',
+          teksti: 'Sentō on maksullinen yhteiskylpylä. Sisäänkäynti '
+            + 'muistuttaa temppeliä, ja oviaukossa roikkuu noren-verho, '
+            + 'jossa lukee yu eli kuuma vesi. Oven takana on '
+            + 'kenkälokerikko ja sen jälkeen bandai: puolentoista ja '
+            + 'vajaan kahden metrin korkuinen koroke, jolla vahtimestari '
+            + 'istuu ja jolta näkee miesten ja naisten puolelle yhtä '
+            + 'aikaa. Tokiossa 660 kylpylässä on nykyaikainen tiski ja '
+            + 'enää 315:ssä vanha bandai. Pesuhuoneen perällä on '
+            + 'laattamaalaus, useimmiten Fuji-vuori. Takana on '
+            + 'kattilahuone, jonka korkea piippu erottuu kauas kattojen '
+            + 'ylle.',
+          selite: 'Tatsuno-yu-kylpylä Nerimassa. Rakennuksen julkisivu on '
+            + 'tehty pyhäkön tapaan: harmaa tiilikatto, kaksi '
+            + 'päätykolmiota vaaleanpunaisin reunuksin ja niiden edessä '
+            + 'aaltona kaartuva kolmas pääty. Päätyjen keskellä on '
+            + 'valkoinen kipsikoriste, ja harjalla istuu veistetty '
+            + 'koristepääte. Katoksen alla on lasiset liukuovet ja niiden '
+            + 'vieressä pieniä ilmoituskylttejä. Rakennuksen takaa nousee '
+            + 'korkea vaaleansininen savupiippu, jonka kylkeen on '
+            + 'maalattu punainen kylpymerkki ja kaksi valkoista '
+            + 'tavumerkkiä. Pihalla kasvaa käpypalmu, ja tonttia rajaa '
+            + 'harmaa kivimuuri. Taivas on pilvinen ja valkoinen.',
+          lahde: 'Kurihaya, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Tulipalo pysäytettiin purkamalla taloja',
+          tiedosto: '睦会 １.JPG',
+          teksti: 'Edon talot olivat puuta ja paperia, ja tuli pysäytettiin '
+            + 'purkamalla: hikeshi-miehet repivät tieltä ne rakennukset, '
+            + 'joihin liekki olisi tarttunut. Vuosina 1601–1867 Edossa '
+            + 'oli 49 suurta paloa, Osakassa kuusi; siellä talot oli '
+            + 'rapattu ja katot tehty tiilestä. Vuoden 1657 Meirekin '
+            + 'palon jälkeen shogunaatti perusti pysyvän palokunnan, '
+            + 'maailman ensimmäisen; toinen oli Lontoon palokunta vuoden '
+            + '1666 palon jälkeen. Vapaaehtoisia ryhmiä oli 47, ja '
+            + 'kullakin oli oma matoi: pitkä tanko, jonka päässä on '
+            + 'ryhmän tunnus ja nippu nauhoja. Se nostettiin katolle '
+            + 'palavan talon viereen.',
+          selite: 'Kuusi miestä matoin ympärillä Ikegamissa Tokiossa. '
+            + 'Kaikilla on yllään ruudullinen puuvillatakki, jonka '
+            + 'kaulukseen on kirjottu merkkejä, sekä mustat housut ja '
+            + 'sandaalit; vyötäröllä on erivärinen vyö — viininpunainen, '
+            + 'vihreä, oranssi, ruskea, kullanruskea ja harmaa. Keskellä '
+            + 'seisoo pystyssä matoi: pitkä vaalea tanko, jonka päässä on '
+            + 'nelikulmainen valkoinen levy mustin merkein ja sen alla '
+            + 'nippu pitkiä valkoisia suikaleita. Taustalla on puinen '
+            + 'temppelirakennus leveine räystäineen ja sen molemmin '
+            + 'puolin pystyt kylttilaudat kanjimerkein. Maa on soraa, ja '
+            + 'miesten varjot lankeavat vinosti oikealle.',
+          lahde: '湯越慶太, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kertoja istuu polvillaan eikä nouse kertaakaan',
+          tiedosto: 'Asakusa Engei Hall 2012.JPG',
+          teksti: 'Yose on puhutun teatterin talo. Nimi on lyhenne sanoista '
+            + 'hito yose seki, paikka johon väki kokoontuu. Edon lopulla '
+            + 'taloja oli useita satoja, suunnilleen yksi kaupunginosaa '
+            + 'kohti, ja pääsymaksu oli pieni; sali vetää tavallisesti '
+            + '200 katsojaa. Vuoden 1900 tienoilla niitä laskettiin 70, '
+            + 'ja tunnetuimmat olivat Suehiro-tei Shinjukussa, '
+            + 'Tachibana-tei Kandassa ja Suzumoto-tei Uenossa. Lavan laji '
+            + 'on rakugo eli tarina jolla on putous. Kertoja istuu '
+            + 'korokkeella polvillaan. Välineitä on kaksi: viuhka ja '
+            + 'liina.',
+          selite: 'Asakusa Engei Hallin julkisivu illansuussa. Katoksen '
+            + 'yläpuolella on rivi valkoisia kylttilaatikoita, joihin on '
+            + 'maalattu paksuin siveltimenvedoin mustia merkkejä, ja '
+            + 'niiden molemmin puolin punainen taulu, jossa on kaksi '
+            + 'valkoista merkkiä. Ylimpänä palaa rivi kellertäviä '
+            + 'paperilyhtyjä. Katoksen reunaa kiertävät punaiset lyhdyt '
+            + 'ja vihreät muoviset lehtiköynnökset, ja pystyyn on '
+            + 'nostettu bambusalkoja, joissa liehuu sinisiä, vihreitä ja '
+            + 'oransseja pystylippuja. Vasemmalla seinällä on rivi '
+            + 'kehystettyjä muotokuvia ja lehtiteline, keskellä '
+            + 'lippuluukku ja sen vieressä taulu, jossa on esiintyjien '
+            + 'nimet ja kuvat. Etualalla kävelee poispäin kaksi ihmistä, '
+            + 'toinen oliivinvihreässä kimonossa ja valkoisessa vyössä, '
+            + 'toinen beigessä paidassa ja valkoisissa housuissa.',
+          lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitkä kaksi esinettä rakugon kertojalla on lavalla '
+          + 'mukanaan?',
+        vaihtoehdot: [
+          'viuhka ja liina',
+          'rumpu ja kello',
+          'naamio ja keppi',
+          'kirja ja lyhty',
+        ],
+        oikea: 0,
+        fakta: 'Rakugon kertoja istuu korokkeella polvillaan eikä nouse '
+          + 'kertaakaan. Ainoat välineet ovat paperiviuhka ja pieni '
+          + 'liina, ja henkilöt erottuvat toisistaan vain '
+          + 'äänenkorkeudesta ja pään asennosta.',
+      },
+    },
+  ],
 };
