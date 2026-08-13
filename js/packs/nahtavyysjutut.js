@@ -11703,4 +11703,318 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Riadin nähtävyysjutut (nippu 2, 13.8.2026). Kohteet on valittu
+   * sen mukaan, mistä on englanninkielinen lähde: Souq al-Zal, Qasr
+   * al-Hukm, Thumairin portti ja Deeran aukio palauttavat 404, eikä
+   * Riad-artikkeli mainitse niitä. Punaisen palatsin ja vesitornin
+   * jutut ovat kuvattomia, koska Commonsissa ei ole niistä yhtään
+   * kuvaa, joka täyttäisi lisenssi- ja kokovaatimukset — ks. raportti.
+   */
+  riad: {
+    'Masmakin linnoitus': {
+      aika: '1902',
+      teksti: 'Linnoitus on savitiiltä ja savilaastia, ja perustus on ladottu '
+        + 'kivilohkareista. Rakennus jakautuu kuuteen osaan: portti, '
+        + 'moskeija, majlis, kaivo, tornit ja sisäpiha. Nurkissa on neljä '
+        + 'tornia, kukin noin 18 metriä korkea, ja niiden seinät ovat '
+        + '1,25 metriä paksut; ylös noustaan tornin sisäisiä portaita. '
+        + 'Muodosta lähteet ovat eri mieltä: tornit kuvataan joko '
+        + 'kartiomaisiksi tai sylinterimäisiksi. Kaivo ei ole pihan '
+        + 'keskellä vaan koillisnurkassa. Pihaa kiertävät pylväshuoneet, '
+        + 'ja itäsivun portaat vievät yläkertaan ja katoille. Asuintiloja '
+        + 'on kolme: hallitsijan oma, valtionkassa bayt al-mal ja '
+        + 'vierasmaja.'
+        + '\n\n'
+        + 'Pääportti on länsimuurissa. Ovi on 3,6 metriä korkea, 2,65 '
+        + 'leveä ja kymmenen senttiä paksu, ja se on tehty palmupuusta. '
+        + 'Keskellä on aukko nimeltä al-Khokha, juuri yhden ihmisen '
+        + 'kokoinen. Se on puolustusrakenne: väki kulkee sisään ja ulos '
+        + 'ilman että porttia avataan.'
+        + '\n\n'
+        + 'Työ alkoi 1865 ja valmistui 1895. 13. tammikuuta 1902 '
+        + 'Abdulaziz ibn Saud palasi Kuwaitin maanpaosta ja otti Masmakin '
+        + 'yöllisessä iskussa; Riadin päällikkö Ajlan bin Mohammed '
+        + 'kaatui. Joukon kooksi kerrotaan noin 40 miestä, mutta luku on '
+        + 'epävarma: neljäkymmentä on beduiinien tapa sanoa pieni joukko. '
+        + 'Muualla luvut ovat 68 hyökkääjää ja 80 puolustajaa, kaatuneita '
+        + '7 ja 30. Linnoitus oli asevarastona vuoteen 1938, ja 1995 se '
+        + 'avattiin museona yleisölle.',
+      kuvat: [
+        {
+          tiedosto: 'Masmak Fortress (6329473680).jpg',
+          selite: 'Linnoituksen pääjulkisivu aukiolta palmujen välistä: sileä '
+            + 'savimuuri, jossa kulkee rivi pieniä nelikulmaisia aukkoja, '
+            + 'ja sen kummassakin päässä ylöspäin kapeneva pyöreä '
+            + 'nurkkatorni kolmiohampaisine harjoineen. Muurin takaa '
+            + 'kohoaa matalampi nelikulmainen torni, ja sen vieressä '
+            + 'liehuu vihreä lippu. Portin yläpuolella työntyy seinästä '
+            + 'kolme pyöreäpäistä ulkonemaa, joiden alapinnassa on reikä, '
+            + 'ja muurista pistää esiin puisia parruja. Syvennyksessä on '
+            + 'tumma kaksilehtinen puuovi naulanpäineen ja kaiverrettuine '
+            + 'alapaneeleineen, ja sen eteen nousee tiili- ja '
+            + 'kiviportaita. Aukiolla on lohkareita, ovelle on pysähtynyt '
+            + 'oranssipaitainen kävijä valokuvaamaan, ja reunoilla näkyy '
+            + 'kerrostaloja.',
+          lahde: 'Sammy Six, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Masmak Citadel, Riyadh (14372839641).jpg',
+          selite: 'Sisäpihan reunakäytävä alaviistosta: keskellä avoin '
+            + 'taivas, ympärillä valkoiseksi rapattuja nelikulmaisia '
+            + 'pilareita porrastettuine kannatinpäineen. Kattona on '
+            + 'tiiviisti vierekkäin ladottuja pyöreitä puunrunkoja, ja '
+            + 'pihalle työntyy savipinnan läpi kaksi järeää parrua. '
+            + 'Seinät ovat savipintaisia, takaseinässä on '
+            + 'kolmionmuotoisia syvennyksiä ja tumma oviaukko, ja '
+            + 'katonrajassa palaa museon kohdevaloja.',
+          lahde: 'Rick McCharles from Calgary, Canada, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Imam Turkin suurmoskeija': {
+      teksti: 'Turki bin Abdullah otti Riadin 1824 ja teki siitä toisen '
+        + 'Saudi-valtion pääkaupungin. Suurmoskeija rakennettiin hänen '
+        + 'aikanaan vuosina 1826–1830, hallintopalatsi Qasr al-Hukmin '
+        + 'viereen. Turki surmattiin vuonna 1834 perjantairukouksesta '
+        + 'lähtiessään, ja moskeija kantaa yhä hänen nimeään.'
+        + '\n\n'
+        + 'Nykyinen moskeija on vuodelta 1992, ja se avattiin tammikuussa '
+        + '1993. Samoihin vuosiin osui koko Qasr al-Hukmin korttelin '
+        + 'uudistus, jonka työt kestivät 1983–1992. Sisätilaa on 16 800 '
+        + 'neliömetriä ja rukoilijoita mahtuu 17 000; se on yksi maan '
+        + 'suurimmista moskeijoista. Ulkoseinät ja sisätilan yläosa ovat '
+        + 'ruskeaa riadilaista kalkkikiveä, alaosa valkoista marmoria. '
+        + 'Miesten ja naisten kirjastot ovat kumpikin 325 neliömetriä.'
+        + '\n\n'
+        + 'Tyyli on modernia najdilaista: Najdissa seinä on perinteisesti '
+        + 'savitiiltä ja hyvin paksu, tässä sama muotokieli on toteutettu '
+        + 'kalkkikivestä. Minareetteja on kaksi; ne olivat ennen osmani- '
+        + 'ja egyptiläistyylin sekoitus ja ovat nyt suorakulmaisia koko '
+        + 'matkaltaan. Moskeija on Deeran aukion laidalla vastapäätä Qasr '
+        + 'al-Hukmia, ja rakennukset yhdistää ensimmäisestä kerroksesta '
+        + 'kaksi katettua siltaa as-Safaatin aukion yli. Arkkitehti Rasem '
+        + 'Badran sai työstä Aga Khan -arkkitehtuuripalkinnon 1995.',
+      kuvat: [
+        {
+          tiedosto: 'Deera Square and Imam Turki bin Abdullah Mosque (1).jpg',
+          selite: 'Moskeija Deeran aukion laidalta heinäkuussa 2024: pitkä '
+            + 'kalkkikiviseinä, jossa on pieniä neliöikkunoita ja niiden '
+            + 'yläpuolella kolmion muotoisia tummia aukkoja, alhaalla '
+            + 'rivi syviä oviaukkoja tummine puuristikkoineen. Vasemmalla '
+            + 'nousee suorakulmainen minareetti, jonka huipussa on '
+            + 'hammasmainen harja, ja taempana keskellä toinen '
+            + 'samanlainen; seinän harjalla on valonheittimiä ja '
+            + 'kaiuttimia. Vasemmassa laidassa on palmuja ja '
+            + 'pylväskäytävä, oikealla toinen kivitalo, jonka katolla on '
+            + 'antennimastoja ja seinässä arabiankielinen kyltti. Aukio '
+            + 'on tyhjä ja kivetty vaalealla laatalla, johon on ladottu '
+            + 'tummia suoria kuvioita; kaksi valkoisiin pukeutunutta '
+            + 'ihmistä kävelee seinustalla.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+        {
+          tiedosto: 'Qasr Al Hukm Palace, 2022.jpg',
+          selite: 'Aukion vastakkainen laita joulukuussa 2022: '
+            + 'hallintopalatsi Qasr al-Hukm, jonka kalkkikiviseinän '
+            + 'harjassa on hammasmainen sahalaita ja seinässä pieniä '
+            + 'kolmioaukkoja. Keskeltä työntyy ulos ylempi kerros, jossa '
+            + 'on kaksi suurta tummaa aukkoa, ja oikealla on pylväiden '
+            + 'kannattama katos ja sen yläpuolella vaalea ulkoneva '
+            + 'palkkirakenne. Palmurivi kulkee seinustalla, aukiolla '
+            + 'liikkuu ihmisiä, lapsi potkulaudalla ja valkoinen '
+            + 'maastoauto, ja kiveystä reunustavat metalliaidat.',
+          lahde: 'Geektaker, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Punainen palatsi': {
+      teksti: 'Vuonna 1943 Saud bin Abdulazizin kaksikerroksinen '
+        + 'savitiilipalatsi Murabban palatsin vieressä syttyi palamaan. '
+        + 'Saud ja perhe saatiin ulos, palanut talo purettiin, ja '
+        + 'tontille nousi myöhemmin al-Yamamahin koulu. Samana vuonna '
+        + 'kuningas Abdulaziz teetti pojalleen uuden palatsin. Talo '
+        + 'valmistui 1948, ja siitä tuli lähteen mukaan Saudi-Arabian '
+        + 'ensimmäinen teräsbetonirakennus.'
+        + '\n\n'
+        + 'Esikuva oli kaukaa: Saud oli vieraillut 1940 Intian '
+        + 'Hyderabadissa ja ihastunut brittiläisen residenssin '
+        + 'rakennukseen niin, että halusi omansa samanlaisen. Virallinen '
+        + 'nimi on al-Hamra, mutta talo tunnetaan paremmin nimellä '
+        + 'al-Qasr al-Ahmar, Punainen palatsi; molemmat sanat '
+        + 'tarkoittavat arabiaksi punaista. Saud asui talossa '
+        + 'valmistumisesta alkaen, ja kun isä kuoli 1953 ja hänestä tuli '
+        + 'kuningas, se oli myös hänen työpaikkansa. Vuonna 1956 hän '
+        + 'muutti teettämäänsä al-Nassiriyan palatsiin.'
+        + '\n\n'
+        + 'Vuodesta 1956 talo oli ministerineuvoston päätoimipaikka aina '
+        + 'vuoteen 1988. Valtiovieraita otettiin vastaan vuosina '
+        + '1948–1988: muun muassa Iranin shaahi, Jordanian kuningas '
+        + 'Talal, Egyptin Nasser ja Intian pääministeri Nehru. Neuvoston '
+        + 'muuton jälkeen rakennus siirtyi valituslautakunnalle, ja 1999 '
+        + 'se liitettiin kuningas Abdulazizin historialliseen keskukseen. '
+        + 'Kun lautakuntakin muutti 2002, talo jäi tyhjilleen; yleisölle '
+        + 'se avattiin ensimmäisen kerran maaliskuussa 2019.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Riadin vesitorni': {
+      aika: '1971',
+      teksti: 'Torni on 61 metriä korkea betonirakennelma: leveä säiliö lepää '
+        + 'rungon päällä kuin lakki. Säiliöitä on kaksi. Suurempaan '
+        + 'mahtuu 12 000 kuutiometriä vettä, ja täytenä vedenpinta on 51 '
+        + 'metrin korkeudella maasta. Pienempi vetää 350 kuutiometriä ja '
+        + 'on varattu poikkeukselliseen vesipulaan.'
+        + '\n\n'
+        + 'Kaupungilla ei 1960- ja 1970-luvulla ollut vesijohtoverkkoa, '
+        + 'joka olisi riittänyt asukkaille. Maatalousministeriö antoi '
+        + 'tehtävän vuonna 1969 ruotsalaiselle arkkitehdille Sune '
+        + 'Lindströmille, joka työskenteli tukholmalaisessa '
+        + 'Vattenbyggnadsbyrån-toimistossa. Esikuva on Örebrossa: '
+        + '58-metrinen Svampen, jonka nimi tarkoittaa ruotsiksi sientä ja '
+        + 'jonka Lindström suunnitteli 1958. Työ alkoi 1969, ja torni '
+        + 'valmistui 1971 palvelemaan al-Malazzin, Manfuhahin ja '
+        + 'Shumaisin kaupunginosia.'
+        + '\n\n'
+        + 'Valmistuessaan torni oli Saudi-Arabian korkein rakennelma ja '
+        + 'pysyi sellaisena vuoteen 1982, jolloin 170-metrinen Riadin '
+        + 'televisiotorni ohitti sen. Paikallinen nimi on Burj '
+        + 'al-Khazzaan, säiliötorni, ja sen mukaan on nimetty kaupungin '
+        + 'Khazan-katu. Torni maalattiin uudelleen 1997, kun vuoden 1902 '
+        + 'Riadin valtauksen satavuotispäivä lähestyi.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Murabban palatsi': {
+      teksti: 'Nimi tarkoittaa arabiaksi neliötä, ja neliö on mitta: muurin '
+        + 'ympäröimä alue on 400 metriä kertaa 400 eli runsaat 16 '
+        + 'hehtaaria, ja myöhemmin se laajeni 30 hehtaariin. '
+        + 'Palatsirakennuksen pinta-alaksi on 2021 esitetty 9 845 '
+        + 'neliömetriä. Savitiilimuurissa on yhdeksän porttia. Pääportti '
+        + 'oli aluksi lännessä, mutta myöhemmin käytettiin eteläistä: '
+        + 'sieltä oli lyhyt matka moskeijalle. Pihan ympärillä on '
+        + 'asuintiloja, huoltotiloja ja kuninkaan diwan. Kerroksia on '
+        + 'kaksi ja huoneita 32: alakerrassa varastot, vartiointi ja '
+        + 'hallinto, yläkerrassa vastaanottosali, toimistot ja '
+        + 'vierashuoneet.'
+        + '\n\n'
+        + 'Rakentaminen alkoi 1936, osa valmistui 1938 ja koko palatsi '
+        + 'vasta 1945; työtä johti rakennusmestari Ibn Qabba. Seinät ovat '
+        + 'oljella lujitettua savitiiltä, ja pinnassa on kaiverrettuja '
+        + 'kuvioita. Katossa on akaasiaa ja palmunlehtimattoja, ja '
+        + 'kattopalkkeihin on maalattu keltaisia, punaisia ja mustia '
+        + 'geometrisia kuvioita.'
+        + '\n\n'
+        + 'Talo toi kaupunkiin kolme uutuutta: auton, generaattorisähkön '
+        + 'ja vesivessat viemäreineen. Keskustaan vedettiin betonitie. '
+        + 'Vuonna 1939 Aramcon asentajat lisäsivät valaistuksen, '
+        + 'tuulettimet ja keskitetyn vesijohdon. 1940-luvun lopulla '
+        + 'asennettiin maan ensimmäinen hissi, koska kuninkaan nivelrikko '
+        + 'vaikeutti portaita. Abdulaziz siirsi hovinsa Masmakin '
+        + 'linnoituksesta tänne 1938 ja asui täällä kuolemaansa 1953. '
+        + 'Vuodesta 1999 palatsi on ollut museo osana Kuningas '
+        + 'Abdulazizin historiallista keskusta.',
+      kuvat: [
+        {
+          tiedosto: 'Murabba Palace (1).jpg',
+          selite: 'Palatsialueen savitiilimuuri kulmasta katsottuna: pinnassa '
+            + 'kulkee pystysuora harjattu kuviointi ja harjalla on '
+            + 'valkoiseksi maalattu kolmiohampainen reunus. Muurin takaa '
+            + 'nousee savitiilinen rakennus, jossa on kaari-ikkuna ja '
+            + 'samanlainen hampainen harja, sen vieressä kohoaa palmu ja '
+            + 'vasemmalla näkyy minareetin huippu. Etualalla on kivetty '
+            + 'kuja varjoineen, oikealla pilarikäytävä ja pensaita, ja '
+            + 'taivas on pilvetön.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+        {
+          tiedosto: 'Murabba Palace7.jpg',
+          selite: 'Palatsin sali museokäytössä: pyöreät pylväät on maalattu '
+            + 'marmorikuvioisiksi ja niiden päissä on koristellut '
+            + 'kapiteelit. Katto on vaaleanvihreä, ja siitä riippuu '
+            + 'kupulamppuja ja kattotuulettimia. Seinien vierillä '
+            + 'kiertävät matalat istuinpenkit punakuvioisin patjoin ja '
+            + 'tyynyin, ikkunoissa on punaiset verhot ja vihreät karmit, '
+            + 'ja lattian peittää tummakuvioinen kokolattiamatto. '
+            + 'Oikeassa reunassa näkyy ilmastointilaite ja puinen kaappi.',
+          lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Saudi-Arabian kansallismuseo': {
+      aika: '1999',
+      teksti: 'Museo avattiin 23. tammikuuta 1999 osaksi Kuningas Abdulazizin '
+        + 'historiallista keskusta, noin 360 000 neliömetrin aluetta '
+        + 'Murabban kaupunginosassa. Päivä ei ollut museon valinta: alue '
+        + 'rakennettiin satavuotisjuhliin, joissa muistettiin Riadin '
+        + 'valtausta 1902, ja suunnitteluun ja rakentamiseen jäi 26 '
+        + 'kuukautta. Talon piirsi kanadalainen Raymond Moriyama. '
+        + 'Esikuvana olivat Riadin ulkopuolisten Punaisten hiekkojen '
+        + 'dyynit: Murabban aukion puoleinen länsijulkisivu myötäilee '
+        + 'dyynin loivaa kaarta, ja pohjakaava kaartuu puolikuuksi, jonka '
+        + 'kärki osoittaa Mekkaan.'
+        + '\n\n'
+        + 'Näyttely kulkee kahdeksassa salissa, kolme pohjakerroksessa ja '
+        + 'viisi ylhäällä. Ensimmäisenä on rautameteoriitti Rub al-Khalin '
+        + 'Wabarin kraattereista; painoksi ilmoitetaan 2,2 tonnia, museon '
+        + 'omassa kyltissä 2,75. Samassa salissa ovat kalaliskon ja '
+        + 'Platybelodonin luurangot; jälkimmäinen oli norsun sukulainen, '
+        + 'jonka alaleuka päättyi leveään lapioon. Seuraava sali käy läpi '
+        + '14 islamia edeltänyttä valtakuntaa.'
+        + '\n\n'
+        + 'Ripustus ei nojaa yksittäisiin aarteisiin: kopioita ja '
+        + 'luonnollisen kokoisia lavastuksia on niin paljon, että '
+        + 'alkuperäisen ja jäljennöksen erottaa paikoin vaivoin. '
+        + 'Profeetan tehtävä -salista seuraavaan kuljetaan siltaa pitkin, '
+        + 'jotta siirtymä islamia edeltäneestä ajasta sen jälkeiseen '
+        + 'tulee kävellyksi. Sarja päättyy hajjiin ja kahteen pyhään '
+        + 'moskeijaan; kahdeksan salin lisäksi talossa on kaksi tilaa '
+        + 'vaihtuville näyttelyille.',
+      kuvat: [
+        {
+          tiedosto: 'National Museum Riyadh (6781666263).jpg',
+          selite: 'Museon sisäänkäynti illalla: valonheittimet nostavat '
+            + 'hiekankeltaisen kiviverhouksen esiin mustaa taivasta '
+            + 'vasten. Vasemmalla seinä kapenee teräväksi kärjeksi kuin '
+            + 'veneen keula, keskellä kaartuu katos lasiseinäisen aulan '
+            + 'yllä, ja oikealla julkisivussa on rivi ristikkoisia '
+            + 'ikkunasäleikköjä. Lasin takaa näkyy aulan '
+            + 'pystybanderolleja ja ruukkukasveja, edessä kävelee kaksi '
+            + 'ihmistä, ja vasemmassa reunassa on puu.',
+          lahde: 'Sammy Six, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'National Museum of Saudi Arabia 01.jpg',
+          selite: 'Rautameteoriitti graniittijalustalla: tumma, kuoppainen ja '
+            + 'paikoin kiiltävä möhkäle on aikuisen ihmisen levyinen ja '
+            + 'rinnan korkuinen. Jalustan kyltissä lukee arabiaksi ja '
+            + 'englanniksi ”Meteorite: Found in the Empty Quarter (2.75 '
+            + 'tons)”. Takana on tekokallio, johon on kirjoitettu salin '
+            + 'nimi MAN AND THE UNIVERSE arabiaksi ja englanniksi, ja sen '
+            + 'vieressä on selitetaulu. Vasemmalla kaksi naista ja lapsi '
+            + 'katsovat kalliota, oikealla mies valkoisessa asussa ja '
+            + 'punavalkoisessa päähineessä kävelee ohi puhelin kädessä.',
+          lahde: 'Gryffindor, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'National Museum of Saudi Arabia 02.jpg',
+          selite: 'Ihminen ja maailmankaikkeus -sali: tekokalliolla seisoo '
+            + 'norsun kokoinen luuranko, jonka päästä työntyvät eteenpäin '
+            + 'suorat syöksyhampaat ja pitkä alaleuka. Vasemmalla '
+            + 'vaalealla kaarevalla seinällä on kalaliskon luuranko '
+            + 'laattaan asetettuna ja sen alla selitekyltti. Etualalla '
+            + 'mies valkoisessa asussa ja kolme lasta katsovat vinoa '
+            + 'lattiavitriiniä; katto on musta ja siinä näkyvät '
+            + 'valoraiteet ja putkisto.',
+          lahde: 'Gryffindor, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
