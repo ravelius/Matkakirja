@@ -122,7 +122,7 @@ josta voi jatkaa.`;
 /*
  * JATKOKYSYMYKSET — muoto määrätään täällä palvelimella.
  *
- * Peli näyttää jokaisen vastauksen alla 2–3 ehdotusta siitä, mitä
+ * Peli näyttää jokaisen vastauksen alla kaksi ehdotusta siitä, mitä
  * seuraavaksi voisi kysyä. Kehote on osa järjestelmäkehotetta eikä
  * asiakkaan pyyntöä, joten muotoa ei voi vaihtaa selaimesta.
  *
@@ -137,7 +137,7 @@ josta voi jatkaa.`;
  */
 const JATKOKEHOTE = `JATKOKYSYMYKSET
 Päätä jokainen vastauksesi näin: kirjoita vastauksen jälkeen omalle \
-rivilleen pelkkä sana JATKOT: ja sen alle 2–3 riviä, joista jokainen on \
+rivilleen pelkkä sana JATKOT: ja sen alle täsmälleen kaksi riviä, joista kumpikin on \
 yksi lyhyt kysymys, jonka pelaaja voisi haluta kysyä seuraavaksi. Yksi \
 kysymys riville, ilman numerointia ja ilman ranskalaisia viivoja, \
 enintään 70 merkkiä, ja jokainen päättyy kysymysmerkkiin. Kysymysten \
@@ -146,13 +146,13 @@ kysymyksiä — ei pelin tehtäviin, pisteisiin tai juoneen liittyviä. \
 Älä viittaa vastauksessasi näihin riveihin äläkä selitä niitä.`;
 
 /** Ehdotuskehote: erillinen, koska tehtävä on aivan toinen. */
-const EHDOTUSKEHOTE = `Keksi kolme lyhyttä kysymystä, jotka pelaaja voisi \
+const EHDOTUSKEHOTE = `Keksi kaksi lyhyttä kysymystä, jotka pelaaja voisi \
 haluta kysyä sinulta juuri nyt. Nojaa alla olevaan tilannekuvaukseen: hyvä \
 kysymys koskee paikkaa, ilmiötä tai yksityiskohtaa, joka pelaajalla on \
 näkyvissä. Kysymysten pitää olla tosimaailman kysymyksiä — EI pelin \
 tehtäviin, vastauksiin, pisteisiin tai juoneen liittyviä.
 
-Kirjoita täsmälleen kolme riviä, yksi kysymys riville, ilman numerointia, \
+Kirjoita täsmälleen kaksi riviä, yksi kysymys riville, ilman numerointia, \
 ilman ranskalaisia viivoja ja ilman johdantoa. Jokainen kysymys enintään 70 \
 merkkiä ja päättyy kysymysmerkkiin.`;
 
