@@ -142401,8 +142401,32 @@ class Sound {
       // Oikeat äänitteet (noppa, kynä) latautuvat taustalla.
       this.loadRealSamples();
     }
-    if (this.ctx.state === 'suspended') this.ctx.resume().catch(() => {});
+    if (!this.saneluTauko && this.ctx.state === 'suspended') this.ctx.resume().catch(() => {});
     return this.ctx;
+  }
+
+  /*
+   * SANELUN KOVA TAUKO (omistajan havainto 13.8.2026): iOS:n WebKit ei
+   * aloita mikrofonin kaappausta, jos sivun WebAudio-konteksti on
+   * käynnissä. Lippu estää myös ensure():n automaattisen resumen —
+   * muuten yksikin tehoste herättäisi kontekstin kesken kaappauksen.
+   */
+  taukoaKonteksti() {
+    this.saneluTauko = true;
+    try {
+      this.ctx?.suspend?.().catch?.(() => {});
+    } catch {
+      /* konteksti ei ollut käynnissä */
+    }
+  }
+
+  jatkaKonteksti() {
+    this.saneluTauko = false;
+    try {
+      if (this.ctx?.state === 'suspended') this.ctx.resume().catch(() => {});
+    } catch {
+      /* konteksti syntyy seuraavasta äänestä */
+    }
   }
 
   /**
@@ -144161,6 +144185,9 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
    */
   audio.addEventListener('pause', () => {
     if (nykyinen !== oma || oma.audio !== audio) return;
+    // Sanelun kova tauko on tahallinen: elvytys ei saa kumota sitä
+    // (ks. taukoaSanelunAjaksi) — jatko tulee sanelun päättyessä.
+    if (sanelunTauko) return;
     if (!audio.soinut || audio.ended || audio.jatkoPyynto) return;
     audio.jatkoPyynto = true;
     soi();
@@ -144415,6 +144442,60 @@ function palautaAmbienssi(syy) {
 /** Vain testejä varten: unohtaa kaikki hiljennyssyyt. */
 function nollaaHiljennykset() {
   hiljennykset.clear();
+}
+
+/*
+ * ── SANELUN KOVA TAUKO (omistajan havainto 13.8.2026 illalla) ────────
+ *
+ * "Mikrofonia ei löytynyt" myös kylmäkäynnistyksen jälkeen: iOS:n
+ * WebKit ei aloita mikrofonin kaappausta, jos sivun äänisessio on
+ * aktiivisessa toistossa — ja v614:stä alkaen pöllö soittaa huhuilun
+ * heti paneelin avautuessa, jolloin äänipiiri on hereillä juuri kun
+ * tunnistus yrittää alkaa. Pelkkä gainin lasku (hiljennys) ei auta,
+ * koska elementti soi yhä ja konteksti on käynnissä.
+ *
+ * Sanelun ajaksi ambienssisoitin pysäytetään OIKEASTI ja jatketaan
+ * perästä sanelun päätyttyä. Pause-elvytys (ks. pause-kuuntelija)
+ * ohittaa tahallisen tauon lipun perusteella.
+ */
+let sanelunTauko = false;
+
+function taukoaSanelunAjaksi() {
+  if (sanelunTauko) return;
+  sanelunTauko = true;
+  sfx.taukoaKonteksti?.();
+  const oma = nykyinen;
+  const audio = oma?.audio;
+  if (audio && !audio.paused) {
+    oma.saneluTauolla = true;
+    try {
+      audio.pause();
+    } catch {
+      /* soitin oli jo pysähtynyt */
+    }
+  }
+}
+
+function jatkaSanelunJalkeen() {
+  if (!sanelunTauko) return;
+  sanelunTauko = false;
+  sfx.jatkaKonteksti?.();
+  const oma = nykyinen;
+  if (!oma?.saneluTauolla) return;
+  oma.saneluTauolla = false;
+  const audio = oma.audio;
+  if (audio) {
+    try {
+      audio.play().catch(() => {});
+    } catch {
+      /* jatko epäonnistui — seuraava maisemanvaihto käynnistää uuden */
+    }
+  }
+}
+
+/** Vain testejä varten. */
+function sanelunTaukoPaalla() {
+  return sanelunTauko;
 }
 
 /**
@@ -154229,6 +154310,10 @@ class Pollo {
     // Nappia on voitu napauttaa uudestaan lupien odotuksen aikana.
     if (!this.natiiviSanelussa) return;
 
+    // Sama kova äänitauko kuin selainsanelussa: myös WKWebView:n sivun
+    // äänet pitävät sovelluksen äänisessiota toistotilassa.
+    taukoaSanelunAjaksi();
+
     const kuuntele = (laji, kuulija) => {
       const purku = natiivi.kuuntele?.(laji, kuulija);
       if (typeof purku === 'function') this.saneluKuulijat.push(purku);
@@ -154262,8 +154347,9 @@ class Pollo {
     }
   }
 
-  /** Natiivisanelu kiinni: kuulijat pois ja mikki lepoon. */
+  /** Natiivisanelu kiinni: kuulijat pois, äänet takaisin ja mikki lepoon. */
   paataNatiiviSanelu() {
+    jatkaSanelunJalkeen();
     this.natiiviSanelussa = false;
     this.purkaSaneluKuulijat();
     this.merkitseMikki(false);
@@ -154325,6 +154411,8 @@ class Pollo {
     };
     tunnistin.onerror = (tapahtuma) => this.saneluVirhe(tapahtuma?.error);
     tunnistin.onend = () => {
+      // Äänet takaisin heti kun mikrofoni on vapaa (ks. kova äänitauko).
+      jatkaSanelunJalkeen();
       const oliTunnistin = this.tunnistin;
       this.tunnistin = null;
       this.merkitseMikki(false);
@@ -154338,6 +154426,15 @@ class Pollo {
     this.tunnistin = tunnistin;
     this.merkitseMikki(true);
     this.saneluTila.textContent = SANELU_KUUNTELEE;
+    /*
+     * KOVA ÄÄNITAUKO ENNEN STARTTIA (omistajan havainto 13.8.2026:
+     * "mikrofonia ei löydy" myös kylmäkäynnistyksen jälkeen). iOS:n
+     * WebKit ei aloita kaappausta, jos sivun äänisessio on toistossa —
+     * ja v614:stä alkaen huhuilu herättää äänipiirin heti paneelin
+     * avautuessa. Ambienssi oikeasti tauolle ja konteksti kylmäksi;
+     * palautus onendissä ja virhepolussa.
+     */
+    taukoaSanelunAjaksi();
     try {
       // Mikrofonilupa kysytään vasta tästä — ei paneelia avattaessa.
       tunnistin.start();
@@ -154345,6 +154442,7 @@ class Pollo {
       this.tunnistin = null;
       this.merkitseMikki(false);
       this.saneluTila.textContent = 'Sanelu ei käynnisty juuri nyt.';
+      jatkaSanelunJalkeen();
     }
   }
 
@@ -154404,6 +154502,8 @@ class Pollo {
    * silloin kun koodia ei tunnisteta.
    */
   saneluVirhe(koodi, viesti = '') {
+    // Äänet takaisin joka virhepolussa (ks. kova äänitauko).
+    jatkaSanelunJalkeen();
     this.tunnistin = null;
     this.natiiviSanelussa = false;
     this.purkaSaneluKuulijat();
@@ -170263,6 +170363,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 623, teksti: 'Sanelun ajaksi äänet taukoon: mikrofoni vapautuu iOS:lla' },
   { v: 622, teksti: 'Teheranin kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 621, teksti: 'iOS-kuoreen haptiikka, iCloud-synkka, widget ja Game Center' },
   { v: 620, teksti: 'Sanelun mikrofoni vapautuu aina; työhuoneen taulut' },
@@ -170980,7 +171081,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.622';
+const APP_VERSION = '2026-08-09.623';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
