@@ -600,6 +600,22 @@ export const RAAMATTU2 = {
           + 'natiivisovelluksessa). Viisas Pöllö osaa ehdottaa '
           + 'niitä linkkeinä, joista artikkeli nousee suoraan '
           + 'esiin — pöllöstä tulee syvemmän sisällön löytöreitti.',
+        'KAUPALLISTAMINEN (linjaus 13.8. — suunta, ei vielä '
+          + 'toteutusta): peli on tarkoitus kaupallistaa kun se on '
+          + 'valmis. Mahdollinen polku: ensin ilmaisversio, '
+          + 'myöhemmin maksullinen. MALLI VALITAAN ENNEN '
+          + 'StoreKit-koodia: maksullinen appi ei vaadi koodia '
+          + 'lainkaan, ilmainen→maksullinen toimii luontevimmin '
+          + 'kertaostona apin sisällä (IAP + pelin lisenssitila). '
+          + 'Mallista riippumaton lisenssitila-arkkitehtuuri '
+          + 'valmistellaan etukäteen.',
+        'KÄÄNNÖKSET (linjaus 13.8. — suunta): kun suomenkielinen '
+          + 'sisältö on lukittu, tehdään käännökset, ensimmäisenä '
+          + 'englanti. Tekninen malli: kielikohtaiset '
+          + 'sisältöpaketit ja käyttöliittymätekstien eriytys — '
+          + 'ei rivi riviltä -i18n-jälkiasennusta. Koskee myös '
+          + 'wiki-hakuja, pöllön kehotetta ja App Store -sivua. '
+          + 'Käännöstyötä EI aloiteta ennen sisällön lukitsemista.',
       ],
     },
     {
