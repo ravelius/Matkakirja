@@ -369,6 +369,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 .paavalikko .linssi-valikko,
 .paavalikko .kertoja-valikko {
   align-items: center;
+  justify-content: center;
   position: static;
   width: auto;
   max-width: none;
@@ -450,8 +451,10 @@ button, .brand, .turn-pill, .fact-card h2 {
    * arvausta.
    */
   align-self: center;
-  width: max-content;
-  max-width: 100%;
+  /* Rivi on koko valikon levyinen, jotta yläpuolen vaakaviiva jatkuu
+   * laidasta laitaan (omistaja 13.8.2026); napit keskittää
+   * justify-content, ei rivin kutistuminen. */
+  width: 100%;
   margin-top: 0.5rem;
   padding-top: 0.7rem;
   border-top: 1px solid var(--line);

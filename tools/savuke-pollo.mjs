@@ -831,7 +831,9 @@ vaadi('vastauksen alle tulee jatkokysymysnapit', jatkot.maara === 2,
 vaadi('jatkokysymykset ovat vastauksen alla', jatkot.jarjestys === true);
 vaadi('raaka JATKOT-merkintä ei näy pelaajalle', jatkot.raakaaMerkintaa === false);
 vaadi('vastaustekstissä on alleviivattu pelinsisäinen linkki', jatkot.linkkeja >= 1,
-  `${jatkot.linkkeja} kpl (${jatkot.linkinTeksti}), varapolun nappeja ${jatkot.napitAlla}`);
+  `${jatkot.linkkeja} kpl (${jatkot.linkinTeksti})`);
+vaadi('erillisiä Lue-nappeja ei synny (13.8.2026)', jatkot.napitAlla === 0,
+  `${jatkot.napitAlla} kpl`);
 
 await sivu.screenshot({ path: join(ULOS, 'pollo-jatkot-390.png') });
 
@@ -1362,18 +1364,18 @@ const linkki = await sivu.evaluate(async () => {
   document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
   await odota(900);
   const viesti = [...document.querySelectorAll('.pollo-pollo')].at(-1);
-  // Virrassa on aiempienkin vastausten linkkiryhmiä: viimeisin on tämän
-  // vastauksen oma.
-  const ryhma = [...document.querySelectorAll('.pollo-linkit')].at(-1);
-  const napit = [...(ryhma?.querySelectorAll('.pollo-linkki') ?? [])];
-  const linkit = napit.map((b) => b.textContent);
-  if (!linkit.length) {
-    return { linkit, tekstilinkkeja: viesti?.querySelectorAll('a').length ?? 0 };
+  // Erillisiä Lue-nappeja ei enää ole (13.8.2026): ankkuriton vastaus
+  // jää kokonaan ilman linkkiä, ja avaus testataan tekstilinkillä
+  // edellisestä vastauksesta.
+  const nappiryhmia = document.querySelectorAll('.pollo-linkit').length;
+  const tekstilinkki = [...document.querySelectorAll('a.pollo-tekstilinkki')].at(-1);
+  if (!tekstilinkki) {
+    return { nappiryhmia, tekstilinkkeja: viesti?.querySelectorAll('a').length ?? 0 };
   }
-  napit[0].click();
+  tekstilinkki.click();
   await odota(900);
   return {
-    linkit,
+    nappiryhmia,
     tekstilinkkeja: viesti?.querySelectorAll('a').length ?? 0,
     // Reitti voi olla lehti tai kohdekartan juttu — kumpikin on pelin
     // oma näkymä, ja kumpikin avautuu samalla mekanismilla.
@@ -1381,9 +1383,9 @@ const linkki = await sivu.evaluate(async () => {
     chatKiinni: document.querySelector('.pollo-paneeli').hidden,
   };
 });
-vaadi('ankkuriton vastaus saa linkin napiksi alleen', (linkki.linkit ?? []).length > 0
-  && (linkki.linkit ?? []).length <= 2 && linkki.tekstilinkkeja === 0, JSON.stringify(linkki));
-vaadi('varapolun linkki avaa pelin oman näkymän', linkki.avautui === true, JSON.stringify(linkki));
+vaadi('ankkuriton vastaus jää ilman irrallisia nappeja', linkki.nappiryhmia === 0
+  && linkki.tekstilinkkeja === 0, JSON.stringify(linkki));
+vaadi('tekstilinkki avaa pelin oman näkymän', linkki.avautui === true, JSON.stringify(linkki));
 vaadi('linkki sulkee chatin (paluu yhdellä napautuksella)', linkki.chatKiinni === true);
 
 await sivu.screenshot({ path: join(ULOS, 'pollo-linkki-avattu-390.png') });

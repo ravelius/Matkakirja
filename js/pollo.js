@@ -1115,19 +1115,14 @@ class Pollo {
     return false;
   }
 
-  /** Varapolku: linkki vastauksen alle, kun tekstistä ei löytynyt kohtaa. */
-  naytaLinkit(linkit) {
-    if (!linkit?.length) return;
-    const laatikko = polloElementti('div', 'pollo-linkit');
-    for (const { reitti } of linkit) {
-      const nappi = polloElementti('button', 'pollo-linkki', `Lue: ${reitti.leima ?? reitti.otsikko}`);
-      nappi.type = 'button';
-      nappi.addEventListener('click', () => this.avaaKohde(reitti));
-      laatikko.appendChild(nappi);
-    }
-    this.virta.appendChild(laatikko);
-    this.virta.scrollTop = this.virta.scrollHeight;
-  }
+  /*
+   * Erillisiä "Lue:"-nappeja ei enää ole (omistajan päätös 13.8.2026):
+   * linkki näytetään VAIN, jos se istuu vastaustekstiin alleviivattuna
+   * ankkurina. Jos ankkuria ei löydy, linkki jää kokonaan pois —
+   * irrallinen nappilista vastauksen alla tarjosi liian usein
+   * epäolennaista. korostaLinkit palauttaa yhä ankkurittomat linkit,
+   * mutta niille ei tehdä mitään.
+   */
 
   /**
    * Jatkokysymykset vastauksen alle.
@@ -1288,6 +1283,10 @@ class Pollo {
   }
 
   naytaEhdotukset(lista) {
+    // Sama siivous kuin kysyttäessä: näkyvissä on aina vain tuorein
+    // ehdotusjoukko. Ilman tätä paneelin uudelleenavaus jätti edellisen
+    // vastauksen jatkokysymykset pinoon uusien ylle (omistaja 13.8.2026).
+    for (const vanha of this.virta.querySelectorAll('.pollo-jatkot')) vanha.remove();
     this.ehdotukset.replaceChildren();
     for (const teksti of lista.slice(0, 2)) {
       const nappi = polloElementti('button', 'pollo-ehdotus', teksti);
@@ -1337,7 +1336,7 @@ class Pollo {
        * linkit ja jatkot ovat käyttöliittymää.
        */
       const linkit = this.poimiLinkit(this.viimeisetKatkelmat);
-      this.naytaLinkit(this.korostaLinkit(viesti, linkit));
+      this.korostaLinkit(viesti, linkit);
       this.naytaJatkot(data?.jatkot);
       // Vasta kun koko vastaus liitteineen on virrassa: nyt sen alkuun
       // voi vierittää, koska sisältöä on riittävästi alapuolella.
