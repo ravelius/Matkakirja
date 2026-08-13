@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 611, teksti: 'Päivityksen jälkeen popup kahden version muutoksista' },
   { v: 610, teksti: 'Kartan tökkiminen korjattu: tarkkuusvahti odottaa lepoa' },
   { v: 609, teksti: 'Pöllöön suoratoisto, pöllölinkit, kuvapopup ja sanelutila' },
   { v: 608, teksti: 'Luxorin kaupunkilehti, kohdekartta ja saatiedot' },
