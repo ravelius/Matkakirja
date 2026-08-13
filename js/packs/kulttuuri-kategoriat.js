@@ -8232,4 +8232,226 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * ALEPPON KANSISIVU (nippu 2, 13.8.2026). SYR-maalehdellä on
+   * historia, kasityo ja ruoka, joten kaupunki ottaa oman aiheensa.
+   */
+  halab: [
+    {
+      id: 'kaupunki',
+      nimi: 'Aleppo',
+      johdanto: 'Aleppon vanhakaupunki on 350 hehtaaria kortteleita, joissa '
+        + 'asuu yli 120 000 ihmistä, ja jokainen kortteli rakennettiin '
+        + 'aikanaan tulemaan toimeen omillaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Aleppo 03.jpg',
+          selite: 'Aleppon kattoja korkealta katsottuna. Etualalla on matalia '
+            + 'kivitaloja, joiden katoilla on kymmeniä lautasantenneja ja '
+            + 'pieniä kupoleita, ja keskellä kohoaa kivinen minareetti, '
+            + 'jonka takana on vihreäksi maalattu kupoli ja toinen '
+            + 'pienempi. Oikealla seisoo valkoinen nelikerroksinen '
+            + 'rakennus, jonka julkisivussa on korkeita kaari-ikkunoita, '
+            + 'ja horisontissa kaupunki jatkuu tiheänä matalan '
+            + 'kukkulajonon juurelle.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Al-Madina Souq 02.jpg',
+          selite: 'Katettu kivinen kuja Aleppon Al-Madina-basaarissa: kaareva '
+            + 'kivikatto häviää hämärään, ja sen alla riippuu '
+            + 'rivistöittäin värikkäitä paperilippusia ja lamppuja. '
+            + 'Vasemmalla lihakaupan edessä roikkuu koukuissa leikattuja '
+            + 'lihanpaloja, ja mies istuu jakkaralla kaupan ovella. '
+            + 'Käytävällä kulkee ostajia ja turisteja, muun muassa '
+            + 'keltapaitainen valkohattuinen nainen punaisine reppuineen, '
+            + 'ja oikeassa alakulmassa on laatikollinen vihreitä '
+            + 'vihanneksia. Kaupat ovat auki kujan molemmin puolin.',
+          lahde: 'Folkertherlyn, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Aleppo Beit Wakil 9673.jpg',
+          selite: 'Beit Wakilin sisäpiha. Kiviseinässä on kaiverrettuja '
+            + 'kaarisyvennyksiä ja kapeita ikkunoita, joissa on sinistä '
+            + 'ja valkoista lasia, ja pihan keskellä on matala marmorinen '
+            + 'suihkulähde ruukkukasvien ympäröimänä. Pihalle on katettu '
+            + 'pöytiä valkoisin liinoin, ylle on pingotettu vaalea kangas '
+            + 'mustien takorautapylväiden varaan, ja perällä on koroke, '
+            + 'jolla seisoo kaiuttimia ja verhoiltuja tuoleja.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Katedraalin pylväät jäivät kouluun',
+          tiedosto: 'Madrasa Halawiye, Aleppo (حلب), Syria - Capital of west colonnade - PHBZ024 2016 0469 - Dumbarton Oaks.jpg',
+          teksti: 'Vanhankaupungin al-Jalloumin korttelissa seisoo '
+            + 'al-Halawiyya-koulu. Sen paikalla oli 400-luvulla Aleppon '
+            + 'suuri bysanttilainen katedraali, jonka rakennutti Helena, '
+            + 'keisari Konstantinus Suuren äiti. Vuonna 1124 '
+            + 'ristiretkeläiset ryöstelivät kaupungin ympäristöä, ja '
+            + 'Aleppon ylituomari Ibn al-Khashshab alkoi muuttaa '
+            + 'katedraalia moskeijaksi. Vuonna 1149 Nur ad-Din teki '
+            + 'rakennuksesta madrasan eli uskonnollisen koulun '
+            + 'hanafilaisen lakikoulukunnan seuraajille. Kirkosta ei '
+            + 'purettu kaikkea: vanhan katedraalin pylväät seisovat yhä '
+            + 'salissa, ja niiden päissä ovat akantinlehdiksi veistetyt '
+            + 'kapiteelit.',
+          selite: 'Pylvään kapiteeli al-Halawiyyan salissa. Kiveen on '
+            + 'veistetty kaksi kerrosta akantinlehtiä, jotka kaartuvat '
+            + 'kaikki samaan suuntaan kuin tuulessa, ja lehtien reunat '
+            + 'ovat sahalaitaiset ja paikoin lohjenneet. Kapiteelin '
+            + 'päällä lepää suora kivipalkki, alla näkyy pyöreän pylvään '
+            + 'yläpää, ja taustalla erottuu rapattu seinä ja toisen '
+            + 'kaiverretun kiven kulma.',
+          lahde: 'Frank Kidner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuningatar maksoi koulunsa myllyn tuotolla',
+          tiedosto: 'Aleppo Madrasa Firdows 0210.jpg',
+          teksti: 'Bab al-Maqamin portin lounaispuolelle, muurien '
+            + 'ulkopuolelle, rakennettiin vuosina 1235–36 madrasa nimeltä '
+            + 'al-Firdaws, Paratiisi. Sen teetti Dayfa Khatun, josta tuli '
+            + 'myöhemmin Aleppon ajjubidien sijaishallitsija. Hän maksoi '
+            + 'koulun omista varoistaan ja perusti sille waqfin eli '
+            + 'hurskaan säätiön, jonka tuloina olivat Kafr Zaytan kylän '
+            + 'tuotto ja kaksi kolmasosaa läheisen myllyn tuloista. '
+            + 'Kouluun palkattiin koraaninlukijoita, lainoppineita ja '
+            + 'sufeja. Rakennus on suorakaide, jonka kattona on '
+            + 'yksitoista kupolia. Rukoussalin mihrab on ladottu '
+            + 'suonikkaasta valkoisesta marmorista, punaisesta '
+            + 'porfyyristä ja vihreästä dioriitista.',
+          selite: 'Al-Firdawsin mihrab. Kaaren yläpuolelle on ladottu '
+            + 'vaaleasta marmorista, kellertävästä kivestä ja punaisista '
+            + 'ja vihreistä paloista leveä punos, joka kiertyy itsensä '
+            + 'ympäri. Ylinnä kulkee kaksi arabiankielistä '
+            + 'kirjoitusnauhaa, kaaren yläosassa on kivinen '
+            + 'ristikkoikkuna, ja alhaalla erottuu syvennyksen sileä '
+            + 'marmoripohja. Vasemmassa reunassa roikkuu vihreä '
+            + 'tekstitaulu ja oikealla loistelamppu.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kello nostettiin minareetin malliin',
+          tiedosto: 'Bab al-Faraj Clock tower 01.jpg',
+          teksti: 'Bab al-Farajin portin viereen nousi vuosina 1898–1899 '
+            + 'kellotorni. Sen piirsi Aleppon kaupunginarkkitehti Charles '
+            + 'Chartier, ja työssä oli mukana syyrialainen insinööri Bakr '
+            + 'Sidqi; rakennuttajana oli kaupungin ottomaanikuvernööri '
+            + 'Raif Pasha. Sulttaani Abdulhamid II oli kannustanut '
+            + 'hankkeeseen merkiksi uudesta ajasta, jossa kello määrää '
+            + 'tahdin. Torni maksoi 1 500 ottomaanien liiraa, ja siitä '
+            + 'puolet kerättiin lahjoituksina ja puolet maksoi kaupunki. '
+            + 'Vihkiäiset pidettiin vuonna 1900, kun sulttaanin '
+            + 'valtaannoususta oli kulunut 25 vuotta. Muoto lainattiin '
+            + 'vanhoista minareeteista: neljä samanlaista julkisivua ja '
+            + 'huipulla itämainen kennokoriste.',
+          selite: 'Bab al-Farajin kellotorni aukiollaan. Vaalea kivitorni '
+            + 'kapenee ylöspäin, ylimmässä kerroksessa on kaksi valkoista '
+            + 'kellotaulua mustine viisareineen, ja huipulla on pieni '
+            + 'lyhtymäinen kupu. Torni seisoo aidatulla korokkeella '
+            + 'palmujen keskellä. Taustalla on suuri vaalea '
+            + 'hallintorakennus kaari-ikkunariveineen, oikealla liehuu '
+            + 'Syyrian lippu, ja aukiolla on autoja, pakettiauto ja '
+            + 'kävelijöitä. Etualalla liikennettä ohjaa poliisi '
+            + 'valkolakkisena ja heijastinliivissä, ja katutyöntekijä '
+            + 'vetää kaksipyöräistä roskakärryä.',
+          lahde: 'Preacher lad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki ja keittiö',
+      johdanto: 'Aleppon keittiö nojaa kolmeen ainekseen: kaupungin omaan '
+        + 'pippuriin, saksanpähkinään ja granaattiomenasiirappiin. Kaikki '
+        + 'kolme päätyvät samalle pöydälle, ja lautaselta katsottuna '
+        + 'kaupunki on punainen.',
+      nostot: [
+        {
+          otsikko: 'Pippuri kuivataan vain puoliksi',
+          tiedosto: 'Aleppo chili powder.jpg',
+          teksti: 'Aleppon pippuri on paprikalaji, jonka palot kypsytetään '
+            + 'tummanpunaisiksi, kuivataan vain puolikuiviksi, '
+            + 'siemennetään ja rouhitaan karkeaksi hiutaleeksi. '
+            + 'Kuivauksessa käytetään suolaa, joten hiutale maistuu '
+            + 'hieman suolaiselta ja tuntuu öljyiseltä. Polttavuus on '
+            + 'Scovillen asteikolla noin 10 000: tuli nousee hitaasti, ja '
+            + 'maussa on hedelmäinen, rusinaa muistuttava vivahde. Koska '
+            + 'siemenet ja sisäliha on poistettu, hiutale on mietompi '
+            + 'kuin tavallinen chilirouhe. Turkissa sama mauste on '
+            + 'nimeltään pul biber, ja se on maan kolmanneksi käytetyin '
+            + 'mauste heti suolan ja mustapippurin jälkeen.',
+          selite: 'Kasa Aleppon pippurirouhetta puisella laudalla. Hiutaleet '
+            + 'ovat tummanpunaisia ja epätasaisen kokoisia, ja joukossa '
+            + 'kiiltää muutama kirkkaanpunainen kuorenpala. Kasa on '
+            + 'kaadettu kartioksi, ja sen juurelle on varissut hiutaleita '
+            + 'laudalle. Vasemmassa reunassa näkyy toisen kasan kulma, '
+            + 'joka on vihreä ja karkeajakoinen, ja taustalla on vaalea '
+            + 'kangas.',
+          lahde: 'Veganbaking.net, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Tahna survotaan huhmareessa',
+          tiedosto: 'Muhammara.jpg',
+          teksti: 'Muhammara on Aleppossa syntynyt tahna, ja nimi tarkoittaa '
+            + 'arabiaksi punaiseksi muuttunutta. Pohjana ovat tuoreet '
+            + 'punaiset paprikat, jotka voidaan myös kuivata auringossa '
+            + 'tai grillata ensin. Joukkoon jauhetaan saksanpähkinöitä, '
+            + 'jotka antavat rakenteen, korppujauhoa, joka sitoo massan, '
+            + 'valkosipulia, Aleppon pippuria, suolaa ja oliiviöljyä. '
+            + 'Makean ja happaman vivahteen tuo granaattiomenasiirappi. '
+            + 'Perinteisesti seos survotaan huhmareessa, jolloin massa '
+            + 'jää hieman karkeaksi. Damaskoksessa mukaan lisätään '
+            + 'toisinaan tahinia, ja läntisessä Turkissa tahna tunnetaan '
+            + 'nimellä acuka.',
+          selite: 'Muhammaraa suurella soikealla lautasella. Tumman '
+            + 'punaruskea tahna on levitetty tasaiseksi kerrokseksi ja '
+            + 'sen pinta on vedetty aaltoileviin uriin, joissa kiiltää '
+            + 'oliiviöljy. Päälle on aseteltu kokonaisia '
+            + 'saksanpähkinänpuolikkaita ja mintunlehtiä, ja lautasen '
+            + 'reunassa on vihreä-vaalea ruudutus. Takana näkyy '
+            + 'kulhollinen valkoista kastiketta, lasi jäävettä ja tahnan '
+            + 'päälle jätetty lusikka.',
+          lahde: 'Bazel, Wikimedia Commons (Public domain)',
+        },
+        {
+          otsikko: 'Kastike värjää lautasen purppuraksi',
+          tiedosto: 'لحمة بكرز أحد الأطباق الحلبية التراثية.jpg',
+          teksti: 'Kebab karaz on Aleppon oma ruokalaji, jota tehdään lampaan '
+            + 'jauhelihasta ja kirsikoista. Valmistustapa on lähempänä '
+            + 'muhennosta kuin vartaassa paistettua kebabia. Oikeassa '
+            + 'versiossa marja on hapan kirsikka: soikea, kahdeksasta '
+            + 'kymmeneen millimetriin pitkä ja karmiininpunainen, siis '
+            + 'selvästi pienempi kuin makea kirsikka. Lajikkeita on '
+            + 'useita, ja yksi niistä kantaa nimeä Aleppo. Koska marja on '
+            + 'yhtä aikaa makea ja kirpeä, se sopii rasvaisen '
+            + 'lampaanlihan pariksi, ja kypsyessään kastike värjää '
+            + 'annoksen kirkkaan purppuranpunaiseksi. Armeniaksi ruoka on '
+            + 'fishnah kabab.',
+          selite: 'Valkoisella lautasella on kasa tummanpunaisia, kiiltäviä '
+            + 'lihapyöryköitä paksussa kirsikkakastikkeessa. Kastike on '
+            + 'valunut lautasen laidoille ja niiden päälle asetelluille '
+            + 'kolmiomaisille leipäpaloille, ja pyöryköiden päälle on '
+            + 'ripoteltu hienonnettua persiljaa ja mausteita. Oikeassa '
+            + 'reunassa on hopeinen lusikka ja taustalla toisen annoksen '
+            + 'reuna vihanneksineen.',
+          lahde: 'طارق مناديلي, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä hedelmä haudutetaan Aleppossa lampaan jauhelihan '
+          + 'kanssa?',
+        vaihtoehdot: [
+          'hapan kirsikka',
+          'kuivattu viikuna',
+          'vihreä omena',
+          'suolattu sitruuna',
+        ],
+        oikea: 0,
+        fakta: 'Marja on soikea ja vain 8–10 millimetriä pitkä, ja se '
+          + 'värjää koko annoksen purppuranpunaiseksi.',
+      },
+    },
+  ],
 };

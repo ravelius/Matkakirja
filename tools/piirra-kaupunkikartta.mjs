@@ -808,6 +808,28 @@ const KAUPUNGIT = {
     // koska vanhakaupunki on itä-länsi-suuntainen suorakaide.
     rajat: { pohjoinen: 33.516, etela: 33.5045, lansi: 36.299, ita: 36.32 },
   },
+  luxor: {
+    // Luxor: Niilin itäranta Luxorin temppeliltä Karnakille. Kohteiden
+    // väli on poikkeuksellisen pitkä (2,3 km temppelistä temppelille),
+    // mutta rajaus on silti perusteltu, koska sfinksikuja yhdistää ne
+    // suorana linjana kartan halki — se on kaupungin selkäranka eikä
+    // tyhjää väliä. Länsiranta ja Kuninkaiden laakso jäävät ulos: ne
+    // ovat joen toisella puolella 5 km lännessä.
+    //
+    // Eteläreuna on laskettu 25,6930:een tarkoituksella. Luxorin
+    // temppeli osuisi tiukemmassa rajauksessa 86 %:n korkeudelle
+    // vasemmalle, eli suoraan mittakaavajanan päälle; nyt se on 78 %:ssa.
+    //
+    // KESKEN 13.8.2026. Rajaus on ajettu kahdesti ja KATSOTTU: kartta
+    // on kelvollinen mutta laiha. Syy on mitattu eikä arvattu — Luxorin
+    // ja Karnakin temppelialueet EIVÄT ole OSM:ssä rakennuksia vaan
+    // historic=ruins / archaeological_site -alueita, eikä piirtotyökalu
+    // pyydä niitä lainkaan. Karnakin ulkomuuri näkyy vain siksi, että se
+    // on erikseen way-viiva. Ennen Luxorin julkaisua työkalulle pitää
+    // lisätä arkeologisten alueiden taso; pelkkä rajauksen kiristäminen
+    // ei auta, koska aineisto puuttuu eikä ole väärässä paikassa.
+    rajat: { pohjoinen: 25.7225, etela: 25.693, lansi: 32.6335, ita: 32.6625 },
+  },
   halab: {
     // Aleppo. Avain on halab, koska laudan kaupunki-id on halab.
     // Aleppon muurien sisäinen vanhakaupunki: linnoitus idässä,
