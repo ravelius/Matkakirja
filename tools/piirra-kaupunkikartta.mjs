@@ -801,6 +801,21 @@ const KAUPUNGIT = {
     // jäi pelkkää esikaupunkia. Nyt tähtimuoto on keskellä.
     rajat: { pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378 },
   },
+  damaskos: {
+    // Damaskoksen muurien sisäinen vanhakaupunki: linnoitus ja
+    // Hamidiyyan suuki lännessä, Umaijadien moskeija keskellä,
+    // roomalaiset portit idässä ja etelässä. Rajaus on leveä ja matala,
+    // koska vanhakaupunki on itä-länsi-suuntainen suorakaide.
+    rajat: { pohjoinen: 33.516, etela: 33.5045, lansi: 36.299, ita: 36.32 },
+  },
+  halab: {
+    // Aleppo. Avain on halab, koska laudan kaupunki-id on halab.
+    // Aleppon muurien sisäinen vanhakaupunki: linnoitus idässä,
+    // kaupunginportit lännessä ja etelässä, suukin khanit keskellä.
+    // Rajaus on tiukka, koska vanhakaupunki on tiivis ja kujaverkko
+    // tiheä — laajempi ruutu hukuttaisi sen esikaupunkeihin.
+    rajat: { pohjoinen: 36.2075, etela: 36.193, lansi: 37.146, ita: 37.168 },
+  },
   ankara: {
     // Ulus eli vanha Ankara: linnavuori idässä, Augustuksen temppeli ja
     // roomalainen kylpylä pohjoisessa, Anatolian sivilisaatioiden museo

@@ -10294,4 +10294,365 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Ankaran nähtävyysjutut (nippu 2, 13.8.2026). Kellotornin juttu
+   * kirjoitettiin uudelleen, koska se alkoi samalla virkkeellä kuin
+   * linnan juttu ja toisti muurikehien mitat; nyt se lähtee
+   * portista, jonka torniin kellotorni on rakennettu.
+   */
+  ankara: {
+    'Ankaran linna': {
+      teksti: 'Linnassa on kaksi muurikehää. Ulomman kehän tornit ovat noin '
+        + '40 metrin välein. Sisempi kehä on paljon tiheämpi: siinä '
+        + 'tornit seuraavat toisiaan lyhyin välein, ja muurin sisään jää '
+        + 'alue, joka on noin 350 metriä pitkä ja 150 metriä leveä. '
+        + 'Pohjana on laavakieleke, joka kohoaa selvästi vanhan kaupungin '
+        + 'yläpuolelle.'
+        + '\n\n'
+        + 'Tarkkoja rakennusvuosia ei tiedetä. Molemmat kehät ovat '
+        + 'kuitenkin vuotta 622 nuorempia: silloin persialaiset '
+        + 'valtasivat ja hävittivät kaupungin, ja muurit nousivat vasta '
+        + 'sen jälkeen. Tutkija Clive Foss on arvioinut sisemmän kehän '
+        + 'keisari Konstans II:n ajalta — hän hallitsi Bysantissa vuosina '
+        + '641–668 — ja ulompaa kehää pidetään hieman nuorempana. Kukkula '
+        + 'oli linnoitettu jo kauan ennen sitä: ensimmäiset varustukset '
+        + 'ovat fryygialaisilta 700-luvulta eaa., ja galatialaiset '
+        + 'rakensivat ne uudestaan vuonna 278 eaa. Työ jatkui '
+        + 'kerroksittain roomalaisten, bysanttilaisten, seldžukkien ja '
+        + 'ottomaanien aikana.'
+        + '\n\n'
+        + 'Muurien sisäpuolella on Ankaran vanhin kaupunginosa. Kadut '
+        + 'ovat kapeita ja mutkaisia, ja niiden varrella seisoo kaupungin '
+        + 'parhaiten säilynyttä perinteistä rakennuskantaa; osa taloista '
+        + 'on kunnostettu ravintoloiksi. Muurin ulkopuolella rinteessä on '
+        + 'roomalaisen teatterin jäänteet: näyttämö ja sen takatilat ovat '
+        + 'näkyvissä, katsomoa kaivetaan yhä esiin.',
+      kuvat: [
+        {
+          tiedosto: 'Castillo de Ankara, Ankara, Turquía, 2024-10-02, DD 11-13 HDR.jpg',
+          selite: 'Linnavuoren laki iltavalossa: sisemmän kehän hammastettu '
+            + 'muuri seisoo kalliojyrkänteen päällä, ja muurin takaa '
+            + 'nousee korkea salko, jossa liehuu Turkin lippu. Parapetin '
+            + 'tuntumassa on tv-antenneja ja muuria vasten rakennettu '
+            + 'peltikattoinen talo. Rinteessä on tiheässä '
+            + 'punatiilikattoisia vanhoja taloja, ja horisontissa erottuu '
+            + 'nykyinen keskusta tornitaloineen.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ankara Ickale street view in 2011 01.jpg',
+          selite: 'Kuja muurien sisäpuolella: molemmin puolin valkoiseksi '
+            + 'rapattuja taloja, joissa on ristikkosäleiköllä suojatut '
+            + 'ikkunat, ruskea puuovi ja kuvioitu peltiovi. Kauempana '
+            + 'yläkerrat työntyvät kadun päälle ja katot ovat punaista '
+            + 'tiiltä. Sähkölangat kulkevat puupylväiden varassa, '
+            + 'seinässä on sähkömittarin kotelo, ja poika ajaa '
+            + 'pikkupyörällä kameraa kohti.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Augustuksen temppeli': {
+      teksti: 'Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, '
+        + 'jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman '
+        + 'temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin '
+        + '100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. '
+        + 'Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja '
+        + 'kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun '
+        + 'alussa Hacı Bayramin moskeija.'
+        + '\n\n'
+        + 'Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen '
+        + 'teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan '
+        + 'hän määräsi senaatin pystyttämään tekstin. Alkuperäinen '
+        + 'kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin '
+        + 'eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina '
+        + 'hakattiin eteishallin sisäseiniin, pohjoisseinästä alkaen ja '
+        + 'eteläseinään päättyen, ja kreikankielinen käännös cellan '
+        + 'ulkoseinään. Kaksi muuta säilynyttä kappaletta on '
+        + 'epätäydellisiä; Ankaran seinien kappale on täydellisin.'
+        + '\n\n'
+        + 'Teksti on minä-muodossa: johdanto, 35 lukua ja kuoleman '
+        + 'jälkeen lisätty loppuliite. Augustus luettelee virat, joista '
+        + 'kieltäytyi, jakamansa rahat ja viljan sekä sotaretkensä; '
+        + 'loppuliitteen mukaan hän kustansi julkisia hankkeita omista '
+        + 'varoistaan 600 miljoonalla hopeadenaarilla. Vastustajia ei '
+        + 'mainita nimeltä kertaakaan: Caesarin murhaajat ovat ”ne, jotka '
+        + 'tappoivat isäni” ja Marcus Antonius ”se, jonka kanssa kävin '
+        + 'sotaa”. Kreikannos ei ole sanatarkka.',
+      kuvat: [
+        {
+          tiedosto: 'Ankara Temple of Augustus and Rome exterior from S in 2019 02.jpg',
+          selite: 'Temppelin cellan seinä etelästä: vaaleaa kalkkikiveä '
+            + 'ladottuna kerroksiin, seinässä pieniä ristikkoikkunoita ja '
+            + 'lohkeamia. Vasemmalla nousee Hacı Bayramin moskeijan '
+            + 'tiiliminareetti valkoisine vöineen ja sen takana moskeijan '
+            + 'punatiilinen katto, oikeassa reunassa seinää vasten '
+            + 'teräksinen tukiteline. Nurmikolla edessä on pylväänpaloja '
+            + 'ja kivilohkareita sekä matala kiviaita.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'The Temple of Augustus and Rome with the Res Gestae Divi Augusti ("Deeds of the Divine Augustus") inscribed on the walls of the cella, Ancyra, Ankara (Turkey) (26068597826).jpg',
+          selite: 'Kreikankielinen käännös cellan ulkoseinässä: kreikkalaisin '
+            + 'suuraakkosin hakattua tekstiä tiiviinä palstoina, '
+            + 'kivipinta paikoin lohjennut ja kirjaimia kadonnut. '
+            + 'Alareunassa kulkee meanderilista.',
+          lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Turkey. Ankara. Temple of Augustus Caesar. Latin inscription closer up. LOC matpc.03372.jpg',
+          selite: 'Mustavalkokuva eteishallin seinästä: ylhäällä '
+            + 'latinankielisen tekstin isokirjaiminen otsikkorivi RERVM '
+            + 'GESTARVM DIVI AVGVSTI, sen alla tiheitä tekstipalstoja, ja '
+            + 'seinässä isoja lohkeamia ja reikiä. Negatiivin mustaan '
+            + 'alareunaan on tehty vaalea merkintä.',
+          lahde: 'Matson Collection, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Roomalainen kylpylä': {
+      teksti: 'Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat '
+        + 'tallella: nurmella seisoo satoja tiilipinoja tasaisissa '
+        + 'riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle '
+        + 'ladottiin tiililaatta, sen päälle betonikerros ja vasta '
+        + 'ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi '
+        + 'yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät '
+        + 'pilareiden välissä ja nousivat seinien sisään muurattuja '
+        + 'tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta '
+        + 'että seinistä.'
+        + '\n\n'
+        + 'Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi '
+        + '198–217) aikana ja omistettiin lääketieteen jumalalle '
+        + 'Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja '
+        + 'osoittivat noin viidensadan vuoden käytön. 700-luvulla talo '
+        + 'tuhoutui tulipalossa, ja jäljelle jäivät kellarikerroksen ja '
+        + 'pohjakerroksen rauniot. Kaivaukset tehtiin 1937–1944.'
+        + '\n\n'
+        + 'Sisään tullaan Çankırı Caddesiltä vanhalle palaestralle eli '
+        + 'painipihalle, jota kiersi pylväikkö: marmoripylväitä oli 128, '
+        + '32 kullakin sivulla. Pihan takana ovat pukuhuone ja kolme '
+        + 'kylpyhuonetta — caldarium kuumalle, tepidarium haalealle ja '
+        + 'frigidarium kylmälle vedelle. Tepidarium ja caldarium ovat '
+        + 'poikkeuksellisen suuria: lämpimissä huoneissa viivyttiin '
+        + 'kaupungin kylmien talvien takia pisimpään. Nykyään alue on '
+        + 'ulkoilmamuseo, ja pihalla on esillä hautakiviä, alttareita ja '
+        + 'piirtokirjoituksia roomalaiselta, bysanttilaiselta ja '
+        + 'myöhäishellenistiseltä ajalta.',
+      kuvat: [
+        {
+          tiedosto: 'The Roman Baths of Ancyra, constructed in the third century during the reign of Roman Emperor Caracalla by a wealthy citizen of Ancyra called Tiberius Julius Justus Junianus, Ankara, Turkey (26211723132).jpg',
+          selite: 'Hypokaustin pilarit paikoillaan: pyöreistä ja '
+            + 'neliskulmaisista tiilistä ladotut pinot seisovat '
+            + 'tasaisissa riveissä nurmettuneella pohjalla, ympärillä '
+            + 'kiveä ja tiiltä vuorottelevat perustusmuurit ja oikealla '
+            + 'rivi tiilikaaria. Takana on metalliaita, paljaita puita ja '
+            + 'Ankaran rinteille nouseva nykykaupunki keltaisine '
+            + 'nostokurkineen.',
+          lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Ankara Thermen13.jpg',
+          selite: 'Ulkoilmamuseon kivilöytöjä nurmella: korinttilaisia '
+            + 'pylväänkapiteeleja akantinlehtineen, hakattu kivitaulu, '
+            + 'jonka syvennyksessä seisoo ihmishahmo, ja etualalla maahan '
+            + 'laskettuja harmaita pylväänvarsia. Kuvaa reunustavat '
+            + 'männyn ja oliivipuun oksat, ja taustalla näkyy '
+            + 'lasiseinäinen toimistotalo.',
+          lahde: 'Ingeborg Simon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Julianuksen pylväs': {
+      aika: '362',
+      teksti: 'Uluksen hallintokorttelissa seisoo yksinään noin viisitoista '
+        + 'metriä korkea kivipylväs. Sitä ei ole veistetty yhdestä '
+        + 'kivestä vaan muurattu kappaleista päällekkäin, ja varren pinta '
+        + 'on uurrettu tiheiksi vaakarenkaiksi juuresta latvaan. Ylimpänä '
+        + 'on lehtikoristeinen kapiteeli, jonka yläreunasta on lohjennut '
+        + 'paloja. Turkiksi pylväs on Julianus Sütunu, mutta '
+        + 'ankaralaisten oma nimi sille on Belkıs Minaresi, Belkısin '
+        + 'minareetti.'
+        + '\n\n'
+        + 'Keisari Julianus julisti sodan persialaisia vastaan vuonna 362 '
+        + 'ja määräsi sotaretkelle reitin, joka kulki Ankaran kautta. Kun '
+        + 'kaupunkiin tuli tieto, että keisari pysähtyy siellä '
+        + 'matkallaan, valmistelut aloitettiin koko kaupungissa ja pylväs '
+        + 'pystytettiin hänen kunniakseen. Ajoitus ei silti ole aivan '
+        + 'varma: valmistumisvuodeksi merkitään sekä 362 että 360. '
+        + 'Julianus oli viimeinen pakanallinen Rooman keisari, ja hänestä '
+        + 'jäi kaupunkiin toinenkin kivi: linnan sisemmän muurin '
+        + 'itäsivulla on patsaan jalusta, jonka kirjoitus nimittää '
+        + 'keisaria koko maailman herraksi Britannian valtamerestä '
+        + 'barbaarikansoihin.'
+        + '\n\n'
+        + 'Pylväs seisoo nurmisaarekkeella porrastetun kivijalustan '
+        + 'päällä, ajoteiden välissä, ja sen takana on Ankaran '
+        + 'lääninhallituksen rakennus. Samassa korttelistossa ovat '
+        + 'Augustuksen temppeli ja roomalainen kylpylä. Pylväs oli '
+        + 'pitkään ilman korjauksia; lääninhallitus kunnosti sen vuonna '
+        + '2001.',
+      kuvat: [
+        {
+          tiedosto: 'Julian Column, Ankara 2024.jpg',
+          selite: 'Pylväs kokonaisuudessaan aamuvalossa: profiloitu vaalea '
+            + 'kivijalusta seisoo karkeasta punaruskeasta kivestä '
+            + 'muuratun perustan päällä nurmisaarekkeella, ja jalustan '
+            + 'eteen on asetettu kaksi mustaa valonheitintä. Varsi '
+            + 'kapenee ylöspäin, ja sen pinta on uurrettu tiheiksi '
+            + 'vaakarenkaiksi. Kapiteelissa erottuvat lehtikuvio ja '
+            + 'soikea medaljonki, ja sen yläreunasta on lohjennut pala. '
+            + 'Oikealla on leikattu pensasaita, takana matala kiviaita ja '
+            + 'musta rautakaide, edessä asfalttitie ja vasemmalla '
+            + 'kaksikerroksinen rakennus tiilikattoineen ja '
+            + 'ristikkoikkunoineen.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+        {
+          tiedosto: 'Ankara - Julianus Sütunu 0366.jpg',
+          selite: 'Pylvään latva talvella: kapiteelin päällä on iso risuista '
+            + 'kyhätty pesä, ja irtorisuja roikkuu kapiteelin reunojen '
+            + 'yli. Kapiteeliin on veistetty akantinlehtiä muistuttavat '
+            + 'lehdet ja pyöreä medaljonki, ja sen yläkulmista on '
+            + 'lohjennut kiveä. Kapiteelin alapuolella varsi on uurrettu '
+            + 'kymmeniksi kapeiksi vaakarenkaiksi. Ympärillä on '
+            + 'lehdettömiä oksia ja taustalla harmaa pilvitaivas.',
+          lahde: 'Phyrexian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anatolian sivilisaatioiden museo': {
+      teksti: 'Museo on kahdessa 1400-luvun ottomaanirakennuksessa Ankaran '
+        + 'linnan eteläpuolella Atpazarın korttelissa. Näyttely on Mahmut '
+        + 'Paşan bedestenissä eli katetussa kauppahallissa, jonka Mehmed '
+        + 'II:n visiiri rakennutti vuosina 1464–1471: kymmenen kupolia '
+        + 'kattaa suorakaiteen, ja hallissa oli 102 puotia vastakkain. '
+        + 'Vieressä on Kurşunlu Han: keskellä piha ja pylväskäytävä, '
+        + 'ympärillä kaksi kerrosta huoneita, 28 alhaalla ja 30 ylhäällä. '
+        + 'Han on nykyään hallintosiipi, jossa ovat työhuoneet, kirjasto, '
+        + 'esitelmäsali ja laboratorio.'
+        + '\n\n'
+        + 'Kymmenkupolinen keskihalli on jätetty yhdeksi tilaksi, ja '
+        + 'siinä seisovat suuret kivireliefit ja patsaat '
+        + 'myöhäisheettiläiseltä ajalta: pitkäkaapuisia sotilaita, '
+        + 'sotavaunuja, hieroglyfikirjoitusta ja basalttileijonia '
+        + 'Malatya-Arslantepestä, Karkamışista ja Sakçagözüstä. Hallia '
+        + 'kiertävissä sivusaleissa aikakaudet seuraavat toisiaan '
+        + 'paleoliittisesta klassiseen: neoliittinen ja kalkoliittinen '
+        + 'kausi, varhainen pronssikausi, assyrialaiset '
+        + 'kauppasiirtokunnat, heettiläiset, frygialaiset, urartulaiset '
+        + 'ja lyydialaiset, lopulta roomalainen ja bysanttilainen aika.'
+        + '\n\n'
+        + 'Neoliittisessa salissa on Çatalhöyükin seinämaalauksia '
+        + 'rappauspaloina: metsästyskohtaus 7. vuosituhannelta eaa. ja '
+        + 'purkautuva Hasan-vuori. Varhaisen pronssikauden vitriineissä '
+        + 'ovat Alacahöyükin ruhtinashaudoista kaivetut aurinkokiekot ja '
+        + 'hirvipatsaat. Museo valittiin Euroopan vuoden museoksi 19. '
+        + 'huhtikuuta 1997.',
+      kuvat: [
+        {
+          tiedosto: 'Museum of Anatolian Civilizations 2024.jpg',
+          selite: 'Museon sisäänkäynti pihalta: luonnonkiviseinässä on '
+            + 'valkoinen marmorikaari, johon on hakattu ANADOLU '
+            + 'MEDENİYETLERİ MÜZESİ, ja oven kummallakin puolen pyöreä '
+            + 'museomedaljonki sekä keltainen opastekilpi. Takana kohoaa '
+            + 'bedestenin kaksi lyijykupolia lyhtyineen, vasemmalla näkyy '
+            + 'hanin kaarikäytävä, ja pihan reunoilla seisoo rivi '
+            + 'kivileijonia ja torsoja. Portaiden vieressä on luiska ja '
+            + 'piha on ladottu harmaalla betonikivellä.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+        {
+          tiedosto: 'Museo de las Civilizaciones Anatólicas. Interior.jpg',
+          selite: 'Keskihalli tiiliholvien alla: vasemmalla seinustalla '
+            + 'jatkuu rivi kivireliefejä, joissa kulkee pitkäkaapuisia '
+            + 'hahmoja sauva ja jousi kädessä, ja rivin jatkona on '
+            + 'hieroglyfein kirjoitettu kivipaasi. Oikealla kaksi tummaa '
+            + 'basalttileijonaa on nostettu korokkeille ja '
+            + 'lasivitriinissä on marmoripää. Holvissa on pieniä '
+            + 'kaari-ikkunoita, katosta riippuu valkoinen kangasbanneri, '
+            + 'seinällä on selitystauluja piirroksineen ja reliefien '
+            + 'edessä kulkee köysiaita messinkitolpissa.',
+          lahde: 'José Luis Filpo Cabana, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Museum Ankara 04.jpg',
+          selite: 'Esihistorian sivusali: oikealla seinällä on valaistuissa '
+            + 'syvennyksissä Çatalhöyükin seinämaalausten rappauspaloja, '
+            + 'joihin on maalattu punaruskeita eläin- ja ihmishahmoja, ja '
+            + 'niiden alla on selitekilpiä. Salin keskellä on '
+            + 'lasivitriinejä pienlöytöineen, katto on tummaa puurimaa ja '
+            + 'kiskovalot on suunnattu vitriineihin. Vasemmalla yksi '
+            + 'kävijä kumartuu vitriinin ääreen, musta reppu olalla.',
+          lahde: 'Ingeborg Simon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Linnanportin kellotorni': {
+      aika: '1884',
+      teksti: 'Linnaan mennään yhä samasta paikasta kuin ennen: ulomman '
+        + 'muurin pääportista. Portille noustaan jyrkkää katua, sillä '
+        + 'kukkula kohoaa 150 metriä Ankarajoen rannan yläpuolelle. '
+        + 'Portin vieressä kohoaa pyöreä muuritorni, ja sen päälle on '
+        + 'rakennettu kellotorni — torni tornin päälle, vanhan '
+        + 'varustuksen jatkoksi.'
+        + '\n\n'
+        + 'Kellotorni on vuodelta 1884. Turkin vanhin pystyssä oleva '
+        + 'kellotorni on Safranbolussa vuodelta 1797, ja Keski-Anatolia '
+        + 'on maan kellotornirikkain alue. Osmanien kellotornit tehtiin '
+        + 'kolmiosaisiksi: jalusta, runko ja ylin kamari. Jalustassa on '
+        + 'huone ja portaat, rungossa kierre- tai siksakportaikko, '
+        + 'ylhäällä koneisto. Kaksi teräsvaijeria kantaa painoja, joista '
+        + 'toinen pyörittää viisareita ja toinen heiluttaa soittokellon '
+        + 'vasaraa. Kamarin seiniin jätettiin aukkoja, jotta ääni '
+        + 'kantaisi kauas.'
+        + '\n\n'
+        + 'Kellotorni tuli ottomaanien kaupunkeihin myöhään. Ajatus '
+        + 'syntyi Euroopassa 1200-luvulla ja levisi ottomaanien alueelle '
+        + '1500-luvun lopulla, mutta julkisia torneja rakennettiin vasta '
+        + 'paljon myöhemmin. Syyksi on esitetty huolta siitä, että '
+        + 'muezzinit ja ajanlaskijat menettäisivät merkityksensä — ja '
+        + 'sitä, että koneisto saattoi näyttää väärin, kun ajanlaskija '
+        + 'osasi laskea rukoushetken tarkasti. Leviämisen kynnyksenä '
+        + 'pidetään Abdülhamid II:n valtaannousun 25-vuotisjuhlan '
+        + 'määräyksiä; Ankaran torni on niitä vanhempi. Linnan päälle '
+        + 'nostettuja kellotorneja on Turkissa muitakin: Niğde, Sinop ja '
+        + 'Zile.',
+      kuvat: [
+        {
+          tiedosto: 'Ankara Aug 2023 13 39 04 215000.jpeg',
+          selite: 'Kellotorni ja linnan pääportti samassa kuvassa. Vasemmalla '
+            + 'vaaleanpunaiseksi rapattu torni nousee pyöreän tiili- ja '
+            + 'kivimuuritornin päältä: ylinnä on leveäräystäinen '
+            + 'kahdeksankulmainen kamari kaariaukkoineen, sen alla '
+            + 'valkoinen kellotaulu roomalaisin numeroin ja pieni '
+            + 'kaari-ikkuna. Oikealla muurissa on kaariportti, jonka '
+            + 'kaari on ladottu vuorotellen vaaleista ja tummista '
+            + 'kivistä, ja portin läpi näkyy kauppakatu markiiseineen. '
+            + 'Portin edessä on mustia katulyhtyjä vihrein banderollein, '
+            + 'punainen paloposti, betonipollareita ja opastetaulu, jossa '
+            + 'lukee Ankara Kalesi. Vasemmalla muurin juurella on puinen '
+            + 'luukkukoju ja sen päällä kyltti PARK ETMEK YASAKTIR, ja '
+            + 'oikealla muurin takaa pilkistää talo, jonka katolla on '
+            + 'punainen PANORAMA-kyltti.',
+          lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Old Turkish Houses Ankara.jpg',
+          selite: 'Ottomaanitalo linnan kaupunginosassa: kivestä ladotun '
+            + 'pohjakerroksen päällä yläkerta työntyy ulos puupalkin '
+            + 'varassa, ja sen puurunko on täytetty kalanruotokuvioon '
+            + 'ladotuilla tiilillä. Ikkunat ovat puukehyksisiä ja '
+            + 'pieniruutuisia, seinällä on pieni lyhty, ja julkisivun yli '
+            + 'kiipeää villiviini punaisine lehtineen.',
+          lahde: 'Pivox, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

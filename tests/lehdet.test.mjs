@@ -133,3 +133,28 @@ test('kulttuurivisan vastaus löytyy kaupunkilehden kansisivulta', async () => {
       + `— "${visa.q}"`);
   }
 });
+
+test('jokainen kohdekartta on avaimistettu laudan kaupunki-id:llä', async () => {
+  /*
+   * MIKSI TÄMÄ ON OLEMASSA. ui.js hakee kohdekartan
+   * KAUPUNKIKARTAT[this.arrivalShownFor] eli laudan kaupunki-id:llä.
+   * Jos kartta on avaimistettu jollain muulla nimellä, se ei
+   * renderöidy lainkaan — eikä mikään kerro siitä: ei virhettä, ei
+   * testiä, ei tyhjää laatikkoa. Sivu näyttää samalta kuin
+   * kaupungilla, jolle ei ole karttaa tehty.
+   *
+   * Aleppo (13.8.2026) meni juuri näin: kartta piirrettiin, kohteet
+   * tarkistettiin ja kaikki oli kunnossa, mutta avain oli `aleppo`
+   * kun laudan id on `halab`. Vika löytyi vasta selaintarkistuksesta,
+   * joka sattui ilmoittamaan "aleppo ei laudalla". Ilman sitä
+   * kaupunkilehti olisi julkaistu kartattomana.
+   */
+  const { KAUPUNKIKARTAT } = await import('../js/packs/maakartat.js');
+  const { PACKS } = await import('../js/pack.js');
+  const idt = new Set(PACKS.flatMap((p) => (p.cities ?? []).map((c) => c.id)));
+  for (const avain of Object.keys(KAUPUNKIKARTAT)) {
+    assert.ok(idt.has(avain),
+      `kohdekartta "${avain}" ei vastaa yhdenkään laudan kaupunki-id:tä — `
+      + 'kartta ei renderöidy pelissä. Tarkista js/packs/<lauta>.js:n id.');
+  }
+});

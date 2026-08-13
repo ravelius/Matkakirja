@@ -8019,4 +8019,217 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * ANKARAN KANSISIVU (nippu 2, 13.8.2026). Aihesivun id on arki,
+   * koska TUR-maalehdellä on jo historia, luonto, kasityo, musiikki,
+   * ruoka ja menovinkit — sama id kaupungilla peittäisi maan sivun.
+   */
+  ankara: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ankara',
+      johdanto: 'Ankarassa on viheralaa 72 neliömetriä asukasta kohti, vaikka '
+        + 'keskustaajamassa asuu yli 5,3 miljoonaa ihmistä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Kocatepe Camii, Sheraton, Atakule.jpg',
+          selite: 'Ankaran keskusta kattojen yli katsottuna. Keskellä kohoaa '
+            + 'Kocatepen moskeija, jolla on harmaa kupoli ja neljä '
+            + 'valkoista minareettia mustine huippuineen, ja oikealla '
+            + 'näkyy Atakulen lasipallo sekä sen vierellä rakenteilla '
+            + 'oleva sinilasinen tornitalo nostureineen. Rinteet ovat '
+            + 'täynnä punakattoisia kerrostaloja, katoilla liehuu Turkin '
+            + 'lippuja ja talojen seinissä on kylttejä, muun muassa '
+            + 'DEMORA HOTEL ja liv HOSPITAL. Etualalla on vaalean '
+            + 'toimistotalon katto ilmastointiputkineen ja yksi '
+            + 'katulamppu.',
+          lahde: 'schweinalp, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Kızılay meydanı-Ankara - panoramio.jpg',
+          selite: 'Kızılayn aukio pilvisenä päivänä. Etualalla seisoo rivi '
+            + 'keltaisia takseja ja kaksi moottoripyörää, joiden ajajien '
+            + 'selässä lukee POLİS. Takana nousee korkea valkoinen '
+            + 'toimistotorni ja sen edessä lasiseinäinen kauppakeskus. '
+            + 'Aukiolla on liikennevaloja, kävelijöitä ja mainostauluja, '
+            + 'joissa lukee GÜNEŞ SİGORTA, Vodafone ja COLIN\'S, sekä '
+            + 'talon seinällä pitkä pystysuora Turkin lippu.',
+          lahde: 'HALUK COMERTEL, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Ankara Garı, Ankara (24.03.2023) 79.jpg',
+          selite: 'Ankaran rautatieasema. Vaalean kivijulkisivun edessä on '
+            + 'rivi neliskulmaisia pilareita, katolla punainen kyltti '
+            + 'ANKARA GARI ja pyöreässä kulmatornissa TCDD:n lippu. '
+            + 'Aseman edustalle on aseteltu oransseja liikennekartioita, '
+            + 'sivussa on pysäköityjä moottoripyöriä ja OTOPARK-kyltti, '
+            + 'ja etualalla kasvaa leikattu pensasaita ja lehdettömiä '
+            + 'plataaneja.',
+          lahde: 'Gargarapalvin, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Luostari ensin, moskeija sen viereen',
+          tiedosto: 'Hacı Bayram-ı Veli Camii ve Türbesi.jpg',
+          teksti: 'Numan-niminen mies tapasi opettajansa uhrijuhlan aikaan ja '
+            + 'otti nimen Bayram. Opettajan kuoltua vuonna 1412 hän '
+            + 'palasi Ankaraan ja perusti Bayrami-veljeskunnan, jonka '
+            + 'opetusta tultiin kuuntelemaan kauempaakin. Hacı Bayram '
+            + 'Veli eli vuosina 1352–1430, ja hän rakensi '
+            + 'dervissiluostarin sille paikalle, jossa nyt seisovat hänen '
+            + 'hautansa ja moskeija. Moskeija valmistui 1427–28, kaksi '
+            + 'vuotta ennen hänen kuolemaansa, seldžukkityyliin; '
+            + 'arkkitehtia ei tiedetä. Käyttöalaa on alakerrassa 437 ja '
+            + 'yläkerrassa 263 neliömetriä. 1500-luvulla Mimar Sinan teki '
+            + 'rakennukseen kunnostustöitä, ja 1700-luvulla seiniin '
+            + 'lisättiin Kütahyan laattoja.',
+          selite: 'Hacı Bayramin moskeija Ulusissa. Punatiilisen rakennuksen '
+            + 'päällä on loiva tiilikatto, oikealla nousee '
+            + 'tiiliminareetti, jossa on kaksi parveketta ja harmaa '
+            + 'kartiohuippu, ja sen juurella on lyijykattoinen '
+            + 'hautarakennus koristeltuine kuisteineen. Aukion poikki '
+            + 'kävelee ihmisiä, etualalla on lehdettömiä plataaneja ja '
+            + 'lyhtypylväitä, ja oikealla seisoo keltaiseen huomioliiviin '
+            + 'pukeutunut työntekijä sinisen jäteastian vieressä.',
+          lahde: 'Dursun Sülük, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ravintola tekee kierroksen tunnissa',
+          tiedosto: 'Atakule, 2019 01.jpg',
+          teksti: 'Atakule on 125 metriä korkea viestintä- ja näkötorni '
+            + 'Çankayan kaupunginosassa. Çankaya on itsekin kukkulalla, '
+            + 'joten kirkkaalla säällä torni erottuu lähes mistä tahansa '
+            + 'kaupungin kolkasta. Rakennustyöt kestivät vuodesta 1987 '
+            + 'vuoteen 1989, suunnittelija oli Ragıp Buluç, ja torni '
+            + 'avattiin 13. lokakuuta 1989. Huipulla on avoin terassi ja '
+            + 'pyörivä ravintola Sevilla, joka kiertää täyden ympyrän '
+            + 'tunnissa. Sen yläpuolella kupolin alla on toinen '
+            + 'ravintola, Dome, joka pysyy paikallaan, ja terassin '
+            + 'alapuolella kahvila nimeltä UFO. Nimi tulee sanoista ata, '
+            + 'esi-isä, ja kule, torni.',
+          selite: 'Atakule alhaalta kuvattuna. Valkoinen betonipylväs nousee '
+            + 'suoraan ylös, ja sen kylkeä pitkin kulkee tumma '
+            + 'lasikaista. Huippu levenee kartioksi: alempana on '
+            + 'lasitettu ravintolakerros ja sen päällä kaiteen ympäröimä '
+            + 'avoin terassi. Taivas on kirkkaan sininen, ja vasemmalla '
+            + 'näkyy yksi ohut pilviviiru.',
+          lahde: 'Gargarapalvin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Suo kuivattiin, allas jäi',
+          tiedosto: 'Ankara Gençlik Park in 2011 01.jpg',
+          teksti: 'Puiston paikalla oli suota. Se kuivattiin, ja 19. '
+            + 'toukokuuta 1943 avattiin yleisölle 27,5 hehtaarin puisto '
+            + 'keskelle kaupunkia. Pääallas on 42 000 neliömetriä, ja sen '
+            + 'ympärille tuli kahviloita, uima-allas, huvipuisto ja '
+            + 'ulkoilmateatteri. Vuonna 1957 alueelle rakennettiin kaksi '
+            + 'pienoisjunarataa. Puistoa reunustavat pohjoisessa Ulusin '
+            + 'aukio, idässä oopperatalo, etelässä rautatieasema ja '
+            + 'lännessä stadion. Nykyään puistossa on 43 kioskia, ja '
+            + 'pimeällä altaalla esitetään valonäytöksiä. Gençlik Parkı '
+            + 'oli kuvana sadan liiran setelin kääntöpuolella vuosina '
+            + '1952–1976.',
+          selite: 'Gençlik Parkı syyspäivänä. Etualalla istuu ihmisiä '
+            + 'puisilla penkeillä nurmen ja plataanien katveessa, ja '
+            + 'takana levittäytyy pitkä allas. Vastarannalla näkyy '
+            + 'valkoisia telttakatoksia ja kioskeja sekä maailmanpyörä, '
+            + 'lyhtypylväät seisovat rivissä, ja lehdet ovat '
+            + 'kellastumassa.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Ankaralainen kulkee töihin maan alla, syö lounaaksi '
+        + 'lautasellisen pilahvia ja ostaa kuivatut hedelmänsä samasta '
+        + 'rinteestä, jossa on kaupattu tavaraa jo kauan ennen '
+        + 'ensimmäistä raidelinjaa.',
+      nostot: [
+        {
+          otsikko: 'Kevytmetro ensin, metro seuraavana vuonna',
+          tiedosto: 'Sıhhiye Metro İstasyonu M1 2024.jpg',
+          teksti: 'Ankaran ensimmäinen raidelinja oli kevytmetro Ankaray, '
+            + 'jonka rakensi Siemensin johtama ryhmä neljässä vuodessa '
+            + '1992–96. Se avattiin 30. elokuuta 1996 ja kulkee '
+            + 'linja-autoaseman AŞTİ:n ja Dikimevin väliä 8,53 '
+            + 'kilometriä, josta 6,68 kilometriä on tunnelissa; asemia on '
+            + 'yksitoista. Varsinainen metro alkoi 29. joulukuuta 1997, '
+            + 'kun M1 avattiin Kızılayn ja Batıkentin välille. Vuonna '
+            + '2025 linjoilla tehtiin 173,2 miljoonaa matkaa. Arkipäivänä '
+            + 'ankaralainen viettää joukkoliikenteessä keskimäärin 71 '
+            + 'minuuttia ja odottaa pysäkillä 16 minuuttia.',
+          selite: 'Sıhhiyen aseman laituri M1-linjalla. Vasemmalla on harmaa '
+            + 'mosaiikkilaatoitettu seinä ja siinä punainen kyltti '
+            + 'SIHHİYE; sama nimi toistuu pienempänä tunnelin seinässä '
+            + 'oikealla. Laiturin reunassa kulkee keltainen '
+            + 'varoitusraita, muutama matkustaja odottaa junaa '
+            + 'lasiseinäisen hissin vieressä, ja raide katoaa pimeään '
+            + 'tunneliin.',
+          lahde: 'Kayra, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Pavut ovat koko maan annos',
+          tiedosto: 'Ankara tava and cacik.jpg',
+          teksti: 'Kaupungin omalla ruoalla on kaupungin nimi: Ankara tava on '
+            + 'pilahvi, jonka joukossa on lampaanlihaa. Turkin '
+            + 'ruokalistojen tavallisin annos on kuru fasulye: valkoisia '
+            + 'papuja haudutetaan oliiviöljyssä sipulin ja tomaattisoseen '
+            + 'kanssa, ja usein mukaan tulee pastırmaa eli kuivattua ja '
+            + 'maustettua naudanlihaa. Papuja pidetään yleisesti koko '
+            + 'maan kansallisruokana. Seuraksi otetaan riisiä tai '
+            + 'bulguria ja kulhollinen cacıkia, jogurttia ja kurkkua. '
+            + 'Ankaran seudulta tulee toreille lisäksi päärynöitä, '
+            + 'hunajaa ja muskottirypäleitä.',
+          selite: 'Lautasellinen Ankara tavaa ja sen vieressä kulhollinen '
+            + 'cacıkia. Pilahvi on ruskeaksi kypsynyttä, jyvät ovat '
+            + 'ohuita ja pitkiä, ja seassa erottuu lihanpaloja ja '
+            + 'punaisen paprikan siruja. Kulhossa on jogurttia, '
+            + 'kurkkukuutioita ja kuivattua minttua. Pöydällä on '
+            + 'puna-valkoruudullinen paperitabletti, josta erottuvat '
+            + 'kirjaimet AFİY, ja haarukka odottaa lautasen vieressä.',
+          lahde: 'E4024, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Rinne, jolla myydään yhä kankaita',
+          tiedosto: 'Kuruyemişçi (Çıkrıkçılar Yokuşu).jpg',
+          teksti: 'Ulusin kupeessa nousee rinne nimeltä Çıkrıkçılar Yokuşu, '
+            + 'kutojien mäki. Sen vanhoissa puodeissa myydään kankaita, '
+            + 'käsin kudottuja mattoja ja nahkatavaraa, ja hinnat ovat '
+            + 'matalat. Kupariseppien tori Bakırcılar Çarşısı on '
+            + 'suosituin osa: kuparin lisäksi sieltä saa koruja, pukuja, '
+            + 'vanhaa tavaraa ja kirjontaa. Ylempänä linnanporttia kohti '
+            + 'puodit myyvät mausteita, kuivattuja hedelmiä ja '
+            + 'pähkinöitä. Uudempi kauppa on siirtynyt Kızılayn ja Tunalı '
+            + 'Hilmi -kadun varrelle, missä erään kauppakeskuksen nimi '
+            + 'Karum viittaa assyrialaisten kauppasiirtoloihin, joita '
+            + 'Keski-Anatoliassa oli jo 2000-luvun eaa. alussa.',
+          selite: 'Kuivattujen hedelmien myyntipöytä Çıkrıkçılar Yokuşulla. '
+            + 'Pahvilaatikoissa on nauhoiksi ladottuja viikunoita, '
+            + 'aprikooseja, taateleita ja luumuja, ja edessä on '
+            + 'laatikollinen mustia johanneksenleipäpuun paloja. Oikealla '
+            + 'on pinossa muovipusseja, joissa lukee Dedem, sekä '
+            + 'tarjottimellinen värikkäitä sokerikuorrutettuja makeisia. '
+            + 'Laatikoiden kyljissä lukee Malatya Kayısıları ja '
+            + 'Köylüoğlu.',
+          lahde: 'E4024, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka kauan ankaralainen viettää arkipäivänä keskimäärin '
+          + 'joukkoliikenteessä?',
+        vaihtoehdot: [
+          '71 minuuttia',
+          '25 minuuttia',
+          '46 minuuttia',
+          '99 minuuttia',
+        ],
+        oikea: 0,
+        fakta: 'Pysäkillä odottamiseen kuluu keskimäärin 16 minuuttia, ja '
+          + 'yksi matka on pituudeltaan noin 9,9 kilometriä.',
+      },
+    },
+  ],
 };

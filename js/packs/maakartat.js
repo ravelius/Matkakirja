@@ -2514,6 +2514,89 @@ export const KAUPUNKIKARTAT = {
    * vapaussotamuseo; kumpikaan ei ole lehden aihe. Kohteet kuvataan
    * antiikin, bysantin ja ottomaanien kerroksina.
    */
+  /*
+   * Aleppon vanhakaupunki (nippu 2, 13.8.2026). AVAIN ON halab eikä
+   * aleppo: laudan kaupunki-id on halab (js/packs/middleeast.js), ja
+   * KAUPUNKIKARTAT haetaan sillä id:llä. Väärällä avaimella kartta ei
+   * renderöidy lainkaan eikä virhettä näy missään — tämä huomattiin
+   * vasta selaintarkistuksessa ("aleppo ei laudalla").
+   *
+   * Linnoitus omalla
+   * kummullaan idässä, kaupunginportit lännessä ja etelässä, khanit
+   * keskellä. Rajaus on tiukka, koska kujaverkko on tiheä.
+   *
+   * RAJAUS SISÄLLÖLLE ON TÄMÄN KAUPUNGIN TÄRKEIN SÄÄNTÖ. Peli ei
+   * käsittele nykykonflikteja, ja Raamatun rajaus nimeää syyrialaiset
+   * kohteet nimenomaan kulttuurikohteina. Aleppon lehti kertoo siis
+   * ajasta ennen ensimmäistä maailmansotaa: ajjubidien linnoitus,
+   * mamelukkien khanit, ottomaanien talot.
+   *
+   * KAKSI KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS, vaikka ne ovat
+   * kaupungin tunnetuimpia: Umaijadien suurmoskeija ja Souq
+   * al-Madinan katettu suuki. Kummankin englanninkielinen artikkeli
+   * on nykyään pääosin tuhon kuvausta, eikä niistä saa kirjoitettua
+   * kulttuurijuttua ilman että lähde vie sotaan. Valitut kuusi
+   * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
+   */
+  /*
+   * Damaskoksen vanhakaupunki (nippu 2, 13.8.2026). Sama rajaus kuin
+   * Aleppossa: peli ei käsittele nykykonflikteja, ja syyrialaiset
+   * kohteet ovat kulttuurikohteita. Lehti kertoo roomalaisesta,
+   * ajjubidien, mamelukkien ja ottomaanien Damaskoksesta.
+   *
+   * Suora katu (Via Recta) on VARATTU: siitä on jo kuvateksti
+   * asia-valokuvat.js:ssä, joten se ei ole karttakohde eikä jutun aihe.
+   */
+  damaskos: {
+    polku: 'assets/kartat/damaskos-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 33.516, etela: 33.5045, lansi: 36.299, ita: 36.32,
+    },
+    esittely: 'Damaskoksen vanhakaupunki on suorakaide, ja sen muoto '
+      + 'on roomalainen: kaupunki kaavoitettiin ruutuun, ja itä-länsi- '
+      + 'akseli kulkee yhä läpi koko kartan. Muurit ovat paikoin samoja '
+      + 'kuin roomalaisaikana, ja portit ovat niissä samoissa kohdissa.\n\n'
+      + 'Keskellä on suuri suorakaiteen muotoinen piha-alue, joka on '
+      + 'ollut pyhä paikka kolmella eri tavalla: siinä seisoi ensin '
+      + 'aramealainen temppeli, sitten roomalainen Jupiterin temppeli, '
+      + 'sitten kirkko ja lopulta moskeija. Sama muuri on kiertänyt '
+      + 'niitä kaikkia.',
+    kohteet: [
+      { nimi: 'Damaskoksen linnoitus', lat: 33.5119, lon: 36.3021 },
+      { nimi: 'Umaijadien moskeija', lat: 33.5116, lon: 36.3067 },
+      { nimi: 'Hamidiyyan suuki', lat: 33.5114, lon: 36.3082 },
+      { nimi: "Khan As'ad Pashan", lat: 33.5093, lon: 36.3067 },
+      { nimi: 'Itäportti', lat: 33.5094, lon: 36.3179 },
+      { nimi: 'Kisanin portti', lat: 33.5065, lon: 36.3157 },
+    ],
+  },
+  halab: {
+    polku: 'assets/kartat/halab-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 36.2075, etela: 36.193, lansi: 37.146, ita: 37.168,
+    },
+    esittely: 'Aleppon vanhakaupunki on kartalla helppo tunnistaa: '
+      + 'kuvan oikeassa laidassa on soikea rengas, ja se on '
+      + 'linnoituksen vallihauta. Linnoitus seisoo omalla kummullaan '
+      + 'keskellä kaupunkia, ja kumpu on osin ihmisten tekemä — '
+      + 'asuinkerroksia on kasautunut päällekkäin tuhansien vuosien '
+      + 'ajan.\n\n'
+      + 'Kummun ympärillä kujat ovat kapeita ja mutkittelevia, ja '
+      + 'niiden verkosto on keskiaikainen. Kaupunki oli karavaanitien '
+      + 'pää: idästä tullut tavara purettiin täällä ja jatkoi matkaa '
+      + 'Välimerelle. Siitä ovat jäljelle jääneet khanit, kauppiaiden '
+      + 'majatalot, joita on kartan keskiosassa useita.',
+    kohteet: [
+      { nimi: 'Aleppon linnoitus', lat: 36.1994, lon: 37.1625 },
+      { nimi: 'Antiokian portti', lat: 36.1989, lon: 37.1516 },
+      { nimi: 'Qinnesrinin portti', lat: 36.1945, lon: 37.1559 },
+      { nimi: 'Saippuakhan', lat: 36.2000, lon: 37.1581 },
+      { nimi: 'Arghunin sairaala', lat: 36.1967, lon: 37.1569 },
+      { nimi: 'Beit Ajiqbash', lat: 36.2060, lon: 37.1565 },
+    ],
+  },
   ankara: {
     polku: 'assets/kartat/ankara-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -2526,10 +2609,11 @@ export const KAUPUNKIKARTAT = {
       + 'oikeassa laidassa, ja sen juurella kortteleita, joissa on '
       + 'roomalaisia, bysanttilaisia ja ottomaanisia kerroksia '
       + 'päällekkäin.\n\n'
-      + 'Linnan muurit on ladottu osin vanhoista rakennuksista: '
-      + 'kiviaineksen joukossa on roomalaisia pylväitä ja hautakiviä. '
       + 'Kaupunki oli pitkään pieni maakuntakeskus, ja juuri siksi '
-      + 'antiikin kerros säilyi — sitä ei rakennettu pois.',
+      + 'antiikin kerros säilyi — sitä ei rakennettu pois. Kartan '
+      + 'pohjoisreunassa on roomalaisen kylpylän pohjakaava, keskellä '
+      + 'Augustuksen temppeli ja idässä linnavuori, ja niiden välit '
+      + 'kävelee alle puolessa tunnissa.',
     kohteet: [
       { nimi: 'Ankaran linna', lat: 39.9415, lon: 32.8654 },
       { nimi: 'Augustuksen temppeli', lat: 39.9442, lon: 32.8583 },
