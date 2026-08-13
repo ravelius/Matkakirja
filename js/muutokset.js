@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 633, teksti: 'Kuva ei sulkeudu matkakirjasta; pilleri- ja välähdyskorjaus' },
   { v: 632, teksti: 'Pöllö väljemmäksi; vuosisäägraafi elää; vuosiennuste-linkki' },
   { v: 631, teksti: 'Raja jää vahvempana; mikki rehellinen; iPad-lehti leveäksi' },
   { v: 630, teksti: 'Sanan, Adenin, Salalahin ja Mosulin kaupunkilehdet' },
