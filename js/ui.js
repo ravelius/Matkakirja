@@ -1466,6 +1466,25 @@ const ZOOM_TAUKO_MS = 260;
  * portaikon läpi yhdellä nykäisyllä.
  */
 const RULLAN_VALI_MS = 220;
+/*
+ * Tarkkuusvahdin kaksi viivettä (ks. tarkistaTarkkuus).
+ *
+ * ENSI on latauksen jälkeinen ensitarkistus: runko asettuu muutamassa
+ * fitViewBoxissa, ja heti sen jälkeen tarkistus korjaa mountissa
+ * syntyneen mittakaavavirheen. Siihen ei liity yhtään käyttäjän
+ * elettä, joten se saa tapahtua nopeasti.
+ *
+ * LEPO on se, mitä eleen jälkeen odotetaan. Uudelleenrasterointi vie
+ * satoja millisekunteja PÄÄSÄIKEESSÄ, joten se ei saa osua sormen
+ * alle eikä eleiden väliin — omistajan havainto v607:stä: "kartta
+ * tökkii, vieritys nykii". Puolentoista sekunnin hiljaisuus tarkoittaa
+ * käytännössä, että käyttäjä on lopettanut kartan käsittelyn.
+ */
+const TARKKUUS_ENSI_MS = 350;
+const TARKKUUS_LEPO_MS = 1600;
+// Osoitinlippu on jumissa, jos se on ollut pystyssä näin kauan ilman
+// yhtään tapahtumaa (ks. tarkkuusOdotus).
+const TARKKUUS_JUMI_MS = 5000;
 // Aloituskartan lähikuvan suurennos yleiskuvaan nähden.
 const ALOITUS_ZOOM = 3.1;
 /*
@@ -3408,6 +3427,10 @@ export class UI {
    */
   zoomaaPainikkeella(suunta) {
     if (this.dead || !this.svg) return false;
+    // Painike ja rulla ovat yhtä lailla kartan käsittelyä: tarkkuuden
+    // uudelleenrasterointi odottaa niiden jälkeen saman levon kuin
+    // sormeneleen jälkeen (ks. tarkistaTarkkuus).
+    this.merkitseKartanEle();
     // Avausnäkymässä kartalla on oma lähikuvansa ja avausteksti; sinne
     // painikkeet eivät kuulu. Katselutila (?lauta=) näyttää laudan kuin
     // pelissä, joten siellä ne kuuluvat — sama ehto kuin fitViewBoxissa.
@@ -3565,20 +3588,41 @@ export class UI {
    * Vastaako rasteroitu mittakaava sitä, jolla kartta oikeasti
    * piirretään? Jos ei, koko sarja pyydetään uudestaan.
    *
-   * Ohitetaan tilanteet, joissa mittakaava on hetkellinen eikä ero
-   * kerro sumeudesta: lento, zoomiliuku ja kesken oleva ele. Näissä
-   * tarkistus SIIRRETÄÄN eikä peruta — muuten kartta voisi jäädä
-   * sumeaksi vain siksi, että ajastin sattui osumaan eleen kohdalle.
-   * Jokainen näistä tiloista päättyy, ja päättyessään ajastin laukeaa.
+   * TÖKKIMINEN v607:SSÄ (omistaja 13.8.2026: "kartta tökkii, vieritys
+   * nykii"). Ensimmäinen versio tästä vahdista tarkisti 350 ms jokaisen
+   * fitViewBoxin jälkeen ja SIIRSI tarkistuksen eteenpäin, jos ele oli
+   * kesken. Mitattuna (tools/savuke-kartan-sujuvuus.mjs):
+   *
+   *   nipistys 1,15x → PAKOTETTU uudelleenrasterointi, suhde 1,150
+   *   nipistys 0,90x → PAKOTETTU uudelleenrasterointi, suhde 0,900
+   *   yksi ele, jonka aikana ikkuna eli → 5 tarkistusta samassa eleessä
+   *
+   * Kaksi vikaa. Ensinnäkin kynnys (2 %) on tiukempi kuin
+   * taydennaTaiden oma sietoraja (20 %), joten JOKAINEN nipistys
+   * portaiden välistä pakotti koko ruutusarjan piirrettäväksi
+   * uudestaan — työtä, jonka taydennaTaide oli tarkoituksella jättänyt
+   * tekemättä juuri siksi, että se tökkii. Toiseksi rasterointi osui
+   * hetkeen, jossa sormi oli yhä kartalla: 350 ms on eleiden VÄLI eikä
+   * eleen jälkeinen tauko, ja siirretty tarkistus laukesi heti kun
+   * sormi hetkeksi pysähtyi. Pahimmillaan se nollasi taideSkaalan
+   * kesken käynnissä olevan piirtosarjan, jolloin sarja katkesi
+   * (skaala !== this.taideSkaala) ja työ tehtiin kahteen kertaan.
+   *
+   * Nyt tarkistus vaatii TODELLISEN levon: TARKKUUS_LEPO_MS ilman
+   * yhtäkään kartan elettä, ilman raahausta, lentoa ja zoomiliukua
+   * eikä kesken piirtosarjan. Latauksen jälkeinen ensitarkistus — se
+   * joka korjaa mountin 10 %:n virheen — ei odota mitään, koska
+   * silloin ei ole vielä ollut yhtään elettä (kartanEleHetki puuttuu).
    */
   tarkistaTarkkuus() {
     if (this.dead || !this.taide || !this.taideSkaala) return;
-    if (this.kartanRaahaus
-        || document.body.classList.contains('flight-active')
-        || document.body.classList.contains('zoom-kaynnissa')) {
-      this.ajastaTarkkuustarkistus();
-      return;
-    }
+    /*
+     * Tarkistus SIIRTYY eikä peruunnu: muuten kartta voisi jäädä
+     * sumeaksi vain siksi, että ajastin sattui osumaan eleen kohdalle.
+     * Jokainen odotuksen syy päättyy, ja päättyessään ajastin laukeaa.
+     */
+    const odotus = this.tarkkuusOdotus();
+    if (odotus > 0) { this.ajastaTarkkuustarkistus(odotus); return; }
     const nakyva = this.nakyvaAlue();
     if (!nakyva) return;
     const suhde = nakyva.skaala / this.taideSkaala;
@@ -3589,12 +3633,62 @@ export class UI {
   }
 
   /**
+   * Onko kartalla ele kesken juuri nyt? Rasterointi ei saa alkaa
+   * silloin: se vie satoja millisekunteja pääsäikeessä.
+   *
+   * Osoittimen alhaalla olo on omana ehtonaan eikä kartanRaahauksen
+   * varassa: raahauslippu syttyy vasta kuuden pikselin kynnyksen
+   * jälkeen ja nipistys 24 pikselin jälkeen, joten pelkkä sormi
+   * kartalla — juuri se hetki, jolloin ele on alkamassa — ei muuten
+   * estäisi rasterointia lainkaan.
+   */
+  eleKesken() {
+    /*
+     * Jumiin jäänyt osoitinlippu ei saa pysäyttää piirtoa ikuisesti.
+     * Sormi ei ole ruudulla viittä sekuntia liikkumatta; jos lippu on
+     * sen jälkeen yhä pystyssä, tapahtuma on jäänyt saapumatta
+     * (ikkunanvaihto, selaimen oma ele) ja lippu lasketaan alas.
+     */
+    if (this.osoitinKartalla
+        && performance.now() - (this.kartanEleHetki ?? 0) > TARKKUUS_JUMI_MS) {
+      this.osoitinKartalla = false;
+    }
+    return Boolean(this.osoitinKartalla || this.kartanRaahaus);
+  }
+
+  /**
+   * Kuinka monta millisekuntia tarkistuksen on vielä odotettava.
+   * Nolla tarkoittaa, että ruutu on rauhassa ja työ saa alkaa.
+   */
+  tarkkuusOdotus() {
+    if (this.eleKesken()
+        || this.taidePiirtyy
+        || document.body.classList.contains('flight-active')
+        || document.body.classList.contains('zoom-kaynnissa')) return TARKKUUS_LEPO_MS;
+    const kulunut = performance.now() - (this.kartanEleHetki ?? -Infinity);
+    return kulunut < TARKKUUS_LEPO_MS ? Math.ceil(TARKKUUS_LEPO_MS - kulunut) : 0;
+  }
+
+  /**
+   * Kartan ele juuri nyt: lepolaskuri alkaa alusta.
+   *
+   * Kutsutaan jokaisesta kohdasta, jossa käyttäjä käsittelee karttaa —
+   * sormi, rulla ja zoomipainikkeet. Pelkkä hiiren liike kartan päällä
+   * EI ole ele: työpöydällä osoitin voi levätä kartalla loputtomiin,
+   * eikä tarkistus saa siitä jäädä tekemättä.
+   */
+  merkitseKartanEle() {
+    this.kartanEleHetki = performance.now();
+  }
+
+  /**
    * Sama tarkistus, mutta vasta kun näkymä on lakannut muuttumasta.
    * fitViewBox voi laueta monta kertaa peräkkäin (ResizeObserver,
    * ikkunan raahaus, näppäimistön avautuminen), ja jokainen niistä
-   * saisi muuten oman rasterointinsa.
+   * saisi muuten oman rasterointinsa. Ajastin kuittaa ne yhdeksi:
+   * yksi asettuminen, korkeintaan yksi tarkistus.
    */
-  ajastaTarkkuustarkistus(viive = 350) {
+  ajastaTarkkuustarkistus(viive = TARKKUUS_ENSI_MS) {
     clearTimeout(this.tarkkuusAjastin);
     this.tarkkuusAjastin = setTimeout(() => this.tarkistaTarkkuus(), viive);
   }
@@ -3845,8 +3939,15 @@ export class UI {
     (async () => {
       for (const { avain, rx, ry } of nakyvat) {
         if (this.dead || skaala !== this.taideSkaala) break;
-        // Uusi ele kesken piirron: keskeytetään ja jatketaan sen jälkeen.
-        if (this.kartanRaahaus) { this.taideOdottaa = true; break; }
+        /*
+         * Uusi ele kesken piirron: keskeytetään ja jatketaan sen
+         * jälkeen. Ehtona on eleKesken eikä pelkkä kartanRaahaus:
+         * raahauslippu syttyy vasta kuuden pikselin kynnyksen jälkeen,
+         * joten edellisen eleen sarja jatkoi piirtoa juuri sen hetken,
+         * jolloin sormi oli jo kartalla ja seuraava ele alkamassa.
+         * Sarja jatkuu, kun sormi irtoaa (paata ja irrota).
+         */
+        if (this.eleKesken()) { this.taideOdottaa = true; break; }
         /*
          * Mittakaava luetaan RUUDULTA joka ruudun välissä, ei
          * this.taideSkaalasta.
@@ -3875,7 +3976,7 @@ export class UI {
         this.taideRyhma.insertBefore(kuva, this.taideRyhma.firstChild);
       }
       this.taidePiirtyy = false;
-      if (this.taideOdottaa && !this.kartanRaahaus) {
+      if (this.taideOdottaa && !this.eleKesken()) {
         this.poistaVanhatRuudut();
         this.taydennaTaide({ heti: true });
         return;
@@ -3933,7 +4034,7 @@ export class UI {
        * merkitä odottavaa työtä lipuksi vaan pyydetään yksinkertaisesti
        * seuraava joutohetki — jono on tallessa tässä sulkeumassa.
        */
-      if (this.kartanRaahaus || this.taidePiirtyy
+      if (this.eleKesken() || this.taidePiirtyy
           || document.body.classList.contains('flight-active')
           || document.body.classList.contains('zoom-kaynnissa')) {
         tyo.id = pyyda(askel);
@@ -4651,6 +4752,71 @@ export class UI {
     const pane = this.svg.parentElement;
     let alku = null;
     let liikkui = false;
+
+    /*
+     * ELEVAHTI TARKKUUSTARKISTUSTA VARTEN.
+     *
+     * Rasterointi vie satoja millisekunteja pääsäikeessä, eikä se saa
+     * käynnistyä sormen ollessa kartalla eikä eleiden välissä (ks.
+     * tarkistaTarkkuus). Kuuntelijat ovat KAAPPAUSVAIHEESSA ja
+     * passiivisia: ne eivät saa muuttaa eleen kulkua eivätkä jäädä
+     * väliin, vaikka varsinainen käsittelijä pysäyttäisi kuplinnan.
+     *
+     * pointermove vain napin ollessa pohjassa: pelkkä hiiren lepääminen
+     * kartalla ei ole ele, ja muuten työpöydällä tarkistus ei
+     * tapahtuisi koskaan.
+     */
+    const osoittimet = new Set();
+    const paalla = { capture: true, passive: true };
+    pane.addEventListener('pointerdown', (e) => {
+      osoittimet.add(e.pointerId);
+      this.osoitinKartalla = true;
+      this.merkitseKartanEle();
+    }, paalla);
+    /*
+     * Sormen irrotessa jatketaan kesken jäänyttä piirtoa.
+     *
+     * taydennaTaide keskeyttää sarjansa, jos ele alkaa kesken kaiken
+     * (taideOdottaa). Raahauksen oma lopetus jatkaa sarjaa vain, jos
+     * kartta oikeasti liikkui — pelkän napautuksen jälkeen kesken jäänyt
+     * sarja jäisi muuten odottamaan seuraavaa näkymän asettumista, ja
+     * kartalla näkyisi siihen asti tyhjää pergamenttia.
+     */
+    const jatkaKeskenJaanyt = () => {
+      if (this.dead || !this.taideOdottaa || this.taidePiirtyy) return;
+      if (this.eleKesken()) return;
+      this.taydennaTaide({ heti: true });
+    };
+    const irrota = (e) => {
+      osoittimet.delete(e.pointerId);
+      this.osoitinKartalla = osoittimet.size > 0;
+      this.merkitseKartanEle();
+      if (!this.osoitinKartalla) jatkaKeskenJaanyt();
+    };
+    pane.addEventListener('pointerup', irrota, paalla);
+    pane.addEventListener('pointercancel', irrota, paalla);
+    pane.addEventListener('pointermove', (e) => {
+      if (e.buttons || osoittimet.size) this.merkitseKartanEle();
+    }, paalla);
+    /*
+     * Kosketus omina tapahtuminaan: iOS peruu osoitintapahtumat kesken
+     * nipistyksen (ks. nipistyksen kommentti alempana), jolloin
+     * pointercancel tyhjentäisi joukon ja vahti luulisi kartan olevan
+     * rauhassa — vaikka kaksi sormea on yhä ruudulla.
+     */
+    pane.addEventListener('touchstart', () => {
+      this.osoitinKartalla = true;
+      this.merkitseKartanEle();
+    }, paalla);
+    pane.addEventListener('touchmove', () => this.merkitseKartanEle(), paalla);
+    const kosketusLoppui = (e) => {
+      if (e.touches.length === 0) this.osoitinKartalla = osoittimet.size > 0;
+      this.merkitseKartanEle();
+      if (!this.osoitinKartalla) jatkaKeskenJaanyt();
+    };
+    pane.addEventListener('touchend', kosketusLoppui, paalla);
+    pane.addEventListener('touchcancel', kosketusLoppui, paalla);
+    pane.addEventListener('wheel', () => this.merkitseKartanEle(), paalla);
 
     /*
      * --- nipistys ---------------------------------------------------

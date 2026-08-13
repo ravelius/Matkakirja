@@ -3874,7 +3874,11 @@ test('bittikartta ladataan vain sormen irrotessa, ei kesken eleen', () => {
   const asetaPan = ui.slice(ui.indexOf('  asetaPan('), ui.indexOf('  asetaPan(') + 1200);
   assert.ok(!/taydennaTaide/.test(asetaPan), 'siirto lataa kesken eleen');
 
-  const paata = ui.slice(ui.indexOf('    const paata = '), ui.indexOf("    pane.addEventListener('pointerup'"));
+  // Kiinnekohtana paatan oma rekisteröinti: paneelissa on myös
+  // elevahdin oma pointerup-kuuntelija (ks. asennaPanorointi), joten
+  // pelkkä ensimmäinen pointerup osuisi väärään kohtaan tiedostoa.
+  const paata = ui.slice(ui.indexOf('    const paata = '),
+    ui.indexOf("    pane.addEventListener('pointerup', paata)"));
   assert.match(paata, /taydennaTaide/, 'sormen irrotessa ei ladata');
 
   // Näkymän asettuminen (zoom, koon muutos) siirtää aluetta ilman

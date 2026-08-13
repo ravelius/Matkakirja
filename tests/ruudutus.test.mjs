@@ -63,7 +63,10 @@ test('näkyvyys lasketaan kiertämättömästä sarakkeesta', () => {
 
 test('rengas väistää sormea, lentoa ja zoomiliukua', () => {
   const runko = metodi('taydennaRengas');
-  for (const ehto of ['this.kartanRaahaus', 'this.taidePiirtyy',
+  // eleKesken kattaa raahauksen JA pelkän sormen kartalla: raahauslippu
+  // syttyy vasta kuuden pikselin kynnyksen jälkeen, ja rengas ehti ennen
+  // rasteroida juuri sillä hetkellä, kun ele oli alkamassa.
+  for (const ehto of ['this.eleKesken()', 'this.taidePiirtyy',
     "flight-active", "zoom-kaynnissa"]) {
     assert.ok(runko.includes(ehto), `renkaalta puuttuu kielto: ${ehto}`);
   }
