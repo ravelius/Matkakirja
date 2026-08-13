@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 605, teksti: 'Linkit vain tekstissä, valikko viimeistelty, edistymämittari' },
   { v: 604, teksti: 'Damaskoksen kaupunkilehti ja kuusi nahtavyysjuttua' },
   { v: 603, teksti: 'Aleppon kaupunkilehti ja kuusi nahtavyysjuttua' },
   { v: 602, teksti: 'Valikon kuvakerivi, pieni versionumero, kehittäjämerkintä' },

@@ -377,6 +377,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 .paavalikko .linssi-valikko,
 .paavalikko .kertoja-valikko {
   align-items: center;
+  justify-content: center;
   position: static;
   width: auto;
   max-width: none;
@@ -458,8 +459,10 @@ button, .brand, .turn-pill, .fact-card h2 {
    * arvausta.
    */
   align-self: center;
-  width: max-content;
-  max-width: 100%;
+  /* Rivi on koko valikon levyinen, jotta yläpuolen vaakaviiva jatkuu
+   * laidasta laitaan (omistaja 13.8.2026); napit keskittää
+   * justify-content, ei rivin kutistuminen. */
+  width: 100%;
   margin-top: 0.5rem;
   padding-top: 0.7rem;
   border-top: 1px solid var(--line);
@@ -148456,19 +148459,14 @@ class Pollo {
     return false;
   }
 
-  /** Varapolku: linkki vastauksen alle, kun tekstistä ei löytynyt kohtaa. */
-  naytaLinkit(linkit) {
-    if (!linkit?.length) return;
-    const laatikko = polloElementti('div', 'pollo-linkit');
-    for (const { reitti } of linkit) {
-      const nappi = polloElementti('button', 'pollo-linkki', `Lue: ${reitti.leima ?? reitti.otsikko}`);
-      nappi.type = 'button';
-      nappi.addEventListener('click', () => this.avaaKohde(reitti));
-      laatikko.appendChild(nappi);
-    }
-    this.virta.appendChild(laatikko);
-    this.virta.scrollTop = this.virta.scrollHeight;
-  }
+  /*
+   * Erillisiä "Lue:"-nappeja ei enää ole (omistajan päätös 13.8.2026):
+   * linkki näytetään VAIN, jos se istuu vastaustekstiin alleviivattuna
+   * ankkurina. Jos ankkuria ei löydy, linkki jää kokonaan pois —
+   * irrallinen nappilista vastauksen alla tarjosi liian usein
+   * epäolennaista. korostaLinkit palauttaa yhä ankkurittomat linkit,
+   * mutta niille ei tehdä mitään.
+   */
 
   /**
    * Jatkokysymykset vastauksen alle.
@@ -148629,6 +148627,10 @@ class Pollo {
   }
 
   naytaEhdotukset(lista) {
+    // Sama siivous kuin kysyttäessä: näkyvissä on aina vain tuorein
+    // ehdotusjoukko. Ilman tätä paneelin uudelleenavaus jätti edellisen
+    // vastauksen jatkokysymykset pinoon uusien ylle (omistaja 13.8.2026).
+    for (const vanha of this.virta.querySelectorAll('.pollo-jatkot')) vanha.remove();
     this.ehdotukset.replaceChildren();
     for (const teksti of lista.slice(0, 2)) {
       const nappi = polloElementti('button', 'pollo-ehdotus', teksti);
@@ -148678,7 +148680,7 @@ class Pollo {
        * linkit ja jatkot ovat käyttöliittymää.
        */
       const linkit = this.poimiLinkit(this.viimeisetKatkelmat);
-      this.naytaLinkit(this.korostaLinkit(viesti, linkit));
+      this.korostaLinkit(viesti, linkit);
       this.naytaJatkot(data?.jatkot);
       // Vasta kun koko vastaus liitteineen on virrassa: nyt sen alkuun
       // voi vierittää, koska sisältöä on riittävästi alapuolella.
@@ -164158,6 +164160,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 605, teksti: 'Linkit vain tekstissä, valikko viimeistelty, edistymämittari' },
   { v: 604, teksti: 'Damaskoksen kaupunkilehti ja kuusi nahtavyysjuttua' },
   { v: 603, teksti: 'Aleppon kaupunkilehti ja kuusi nahtavyysjuttua' },
   { v: 602, teksti: 'Valikon kuvakerivi, pieni versionumero, kehittäjämerkintä' },
@@ -164846,7 +164849,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.604';
+const APP_VERSION = '2026-08-09.605';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
