@@ -2761,8 +2761,20 @@ export class UI {
 
   /* --- näkymän koko ja sen elpyminen taustalta ---------------------- */
 
-  /** Näkymän leveys pikseleinä. visualViewport on iOS:llä tarkempi. */
+  /**
+   * Näkymän leveys pikseleinä.
+   *
+   * Ensisijainen mitta on ASETTELUVIEWPORTTI (documentElement), koska
+   * juuri se ohjaa kaikkea, mitä vahti vartioi: arkin 100vw ja palstojen
+   * 700 px:n media query seuraavat asetteluviewporttia. visualViewport
+   * voi erota siitä (nipistyszoomi, näppäimistö), ja sen käyttö
+   * ensisijaisena sai vahdin vertaamaan eri lukua kuin CSS näkee.
+   * visualViewport jää varamittariksi tapauksiin, joissa asettelumitta
+   * on roskaa.
+   */
   mittaaNakyma() {
+    const asettelu = Math.round(document.documentElement?.clientWidth || 0);
+    if (asettelu >= NAKYMAN_VAHIMMAISLEVEYS) return asettelu;
     return Math.round(window.visualViewport?.width || window.innerWidth || 0);
   }
 
@@ -2839,6 +2851,44 @@ export class UI {
       this.nakymanLeveys = leveys;
       this.elvytaNakyma();
     }, NAKYMAN_ELVYTYSVIIVE);
+  }
+
+  /*
+   * LEHDEN AVAUKSEN MITTAVARMISTUS (omistaja 13.8.2026: "lehden leveys
+   * palasi kapeaan iPhone-leveyteen kun suljin ja avasin apin
+   * uudestaan" — kolmas saman perheen oire; v595 hoiti taustapaluun ja
+   * v617 CSS-leveyden).
+   *
+   * Vahti (tarkistaNakyma) herää vain TAPAHTUMISTA. WKWebView kuitenkin
+   * pitää kylmäkäynnistyksessä vanhan — kapean — mitan voimassa siihen
+   * asti, kunnes joku pakottaa asettelun luvun (sama ilmiö, jonka
+   * elvytaNakyma jo kirjaa), eikä oikaisu välttämättä lähetä yhtään
+   * resize-tapahtumaa. Silloin lehti sivutetaan avattaessa vanhalla
+   * mitalla eikä mikään koskaan korjaa sitä.
+   *
+   * Siksi lehden avaus tekee kolme asiaa tapahtumiin luottamatta:
+   *   1. pakottaa asettelun luvun ja mittaa JUURI ennen sivutusta,
+   *   2. tarkistaa mitan uudelleen kahdesti avauksen jälkeen (400 ja
+   *      1600 ms — iOS:n myöhässä asettuva viewportti ehtii molempiin),
+   *   3. jos mitta on ehtinyt muuttua, avoinna oleva lehti sivutetaan
+   *      uudelleen (elvytaNakyma palauttaa myös lukukohdan).
+   */
+  varmistaLehtiMitta() {
+    void document.body.offsetWidth;
+    const mitattu = this.mittaaNakyma();
+    if (mitattu >= NAKYMAN_VAHIMMAISLEVEYS) this.nakymanLeveys = mitattu;
+    clearTimeout(this.lehtiMittaAjastin);
+    clearTimeout(this.lehtiMittaJalkiajastin);
+    const tarkista = () => {
+      if (this.dead || !this.arrivalDialog?.open) return;
+      void document.body.offsetWidth;
+      const nyt = this.mittaaNakyma();
+      if (!nyt || nyt < NAKYMAN_VAHIMMAISLEVEYS || nyt === this.nakymanLeveys) return;
+      this.nakymanLeveys = nyt;
+      this.elvytaNakyma();
+    };
+    this.lehtiMittaAjastin = setTimeout(tarkista, 400);
+    this.lehtiMittaJalkiajastin = setTimeout(tarkista, 1600);
   }
 
   /** Asettelu uusiksi oikealla mitalla. Kutsutaan vain kun mitta on kelvollinen. */
@@ -3025,6 +3075,9 @@ export class UI {
       this.nakymaVahti = null;
     }
     clearTimeout(this.nakymaAjastin);
+    // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
+    clearTimeout(this.lehtiMittaAjastin);
+    clearTimeout(this.lehtiMittaJalkiajastin);
     // Pöllön vihjekupla ei saa ilmestyä kuolleen pelin ajastimesta.
     this.peruValintavihje();
     // Sama koskee ääriviivan välähdyksen loppuajastinta.
@@ -7959,6 +8012,8 @@ export class UI {
 
   openArrival(city) {
     if (this.arrivalShownFor === city.id && this.arrivalDialog.open) return;
+    // Mitta kuntoon ennen kuin mitään sivutetaan (ks. varmistaLehtiMitta).
+    this.varmistaLehtiMitta();
     this.arrivalShownFor = city.id;
     // Matkakirjan luenta tauolle Tutki-näkymän ajaksi: se jatkaa samasta
     // kohdasta, kun pelaaja palaa karttanäkymään (omistajan toive).
@@ -9410,6 +9465,8 @@ export class UI {
   avaaMaalehti(iso, { nimi = null } = {}) {
     const maa = this.game?.pack?.map?.countryShapes?.[iso];
     if (!maa) return;
+    // Mitta kuntoon ennen sivutusta, kuten kaupunkilehdessäkin.
+    this.varmistaLehtiMitta();
     const otsikko = nimi ?? maa.nimi;
     const sivut = [];
     /*
