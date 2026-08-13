@@ -1156,7 +1156,10 @@
        * monellako on lehtiaiheet (x/y maata). Kaikki osat = vanha
        * täydellisyysmitta (jokainen osa koossa), palkki sen mukaan.
        */
-      for (const t of ['Lauta', 'Kaupunkeja', 'Tekstit', 'Kaupunkilehdet', 'Maalehdet', 'Kaikki osat', 'Osuus']) {
+      /* Osuus ensimmäiseksi (omistajan tilaus 13.8.2026): edistymä on
+       * se, mitä taulusta ensimmäisenä katsotaan — puhelimella loput
+       * sarakkeet rullaavat sen perässä. */
+      for (const t of ['Osuus', 'Lauta', 'Kaupunkeja', 'Tekstit', 'Kaupunkilehdet', 'Maalehdet', 'Kaikki osat']) {
         const th = el('th', t === 'Lauta' ? '' : 'num', t);
         otsikko.append(th);
       }
@@ -1198,12 +1201,6 @@
           (summa, c) => summa + (OSAT.length - puuttuvat(c, p).length), 0);
         const osuus = osiaYhteensa ? Math.round((osiaKoossa / osiaYhteensa) * 100) : 0;
         const tr = el('tr');
-        tr.append(el('td', '', p.id));
-        tr.append(el('td', 'num', String(p.cities.length)));
-        tr.append(el('td', 'num', String(tekstit)));
-        tr.append(el('td', 'num', String(lehdet)));
-        tr.append(el('td', 'num', maat.size ? `${lehtimaat}/${maat.size}` : '—'));
-        tr.append(el('td', 'num', String(valmiit)));
         const td = el('td', 'num');
         td.append(el('span', '', `${osuus} %`));
         const palkki = el('div', osuus === 100 ? 'palkki taysi' : 'palkki');
@@ -1212,6 +1209,12 @@
         palkki.append(i);
         td.append(palkki);
         tr.append(td);
+        tr.append(el('td', '', p.id));
+        tr.append(el('td', 'num', String(p.cities.length)));
+        tr.append(el('td', 'num', String(tekstit)));
+        tr.append(el('td', 'num', String(lehdet)));
+        tr.append(el('td', 'num', maat.size ? `${lehtimaat}/${maat.size}` : '—'));
+        tr.append(el('td', 'num', String(valmiit)));
         runko.append(tr);
       }
       taulu.append(runko);
