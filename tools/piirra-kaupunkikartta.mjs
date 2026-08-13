@@ -801,6 +801,20 @@ const KAUPUNGIT = {
     // jäi pelkkää esikaupunkia. Nyt tähtimuoto on keskellä.
     rajat: { pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378 },
   },
+  ankara: {
+    // Ulus eli vanha Ankara: linnavuori idässä, Augustuksen temppeli ja
+    // roomalainen kylpylä pohjoisessa, Anatolian sivilisaatioiden museo
+    // etelässä. Kızılayn moderni keskusta jää tarkoituksella ulos —
+    // kaupungin vanha kerros on kokonaan tässä ruudussa.
+    // Rajaus kiristettiin ensimmäisen ajon jälkeen. Ensimmäinen ruutu
+    // (39,935-39,949 / 32,848-32,870, n. 2,9 km²) näytti autiolta, ja
+    // syy MITATTIIN ennen kuin sitä korjattiin: Overpass antoi ruudulle
+    // 491 way pelin luokissa ja 693 kaikkiaan, eli 71 % kaduista oli jo
+    // mukana. Kyse ei siis ollut Bagdadin tagausongelmasta vaan siitä,
+    // että Ulusin korttelit ovat isoja ja linnavuorella on vähän läpi
+    // kulkevia katuja. Pienempi ruutu nostaa tiheyden ilman lippuja.
+    rajat: { pohjoinen: 39.948, etela: 39.936, lansi: 32.851, ita: 32.868 },
+  },
   izmir: {
     // Konakin aukio, Kemeraltin basaari ja antiikin agora mahtuvat
     // samaan runsaan puolentoista kilometrin ruutuun, ja niiden väli on

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 599, teksti: 'Izmirin kaupunkilehti ja kuusi nahtavyysjuttua' },
   { v: 598, teksti: 'Bagdadin kaupunkilehti ja kuusi nahtavyysjuttua' },
   { v: 597, teksti: 'Masqatin kaupunkilehti ja kuusi nahtavyysjuttua' },
   { v: 596, teksti: 'Pöllö tietää maan oikein, oikaisee virheet; chat siistiksi' },
