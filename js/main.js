@@ -532,10 +532,15 @@ document.addEventListener('pointerdown', (event) => {
 const updateBtn = document.getElementById('update-btn');
 async function haeUusinVersio(nappi) {
   nappi.disabled = true;
-  // Tekstiosa vaihtuu; kuvake (jos on) saa jäädä paikalleen.
-  const nimio = nappi.querySelector('span:last-child');
+  /*
+   * Tekstiosa vaihtuu, jos nappilla on tekstiä; pelkän kuvakkeen
+   * nappi (valikon pieni päivitysnappi) saa .paivittaa-luokan, joka
+   * pyörittää kuvaketta CSS:ssä — tekstiä ei kirjoiteta kuvakkeen
+   * päälle.
+   */
+  const nimio = nappi.querySelector('span:not(.viiva-ikoni)');
   if (nimio) nimio.textContent = 'Päivitetään…';
-  else nappi.textContent = 'Päivitetään…';
+  nappi.classList.add('paivittaa');
   merkitsePaivitys();
   try {
     if ('serviceWorker' in navigator) {

@@ -6310,7 +6310,21 @@ body.katselu #newgame-btn { display: none; }
 }
 
 .versio-paivitys .viiva-ikoni { display: inline-flex; }
-.versio-paivitys .viiva-ikoni svg { width: 0.9em; height: 0.9em; }
+.versio-paivitys .viiva-ikoni svg { width: 1em; height: 1em; }
+
+/* Haun aikana kuvake pyörii — pelkän kuvakkeen napissa ei ole
+   tekstiriviä, joka kertoisi "Päivitetään…". */
+.versio-paivitys.paivittaa .viiva-ikoni svg {
+  animation: versio-paivitys-kierto 900ms linear infinite;
+}
+
+@keyframes versio-paivitys-kierto {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .versio-paivitys.paivittaa .viiva-ikoni svg { animation: none; }
+}
 
 .paavalikko .versio-paivitys:hover:not(:disabled),
 .paavalikko .versio-paivitys:focus-visible {
