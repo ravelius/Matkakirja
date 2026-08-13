@@ -154412,6 +154412,7 @@ class Pollo {
     tunnistin.onerror = (tapahtuma) => this.saneluVirhe(tapahtuma?.error);
     tunnistin.onend = () => {
       // Äänet takaisin heti kun mikrofoni on vapaa (ks. kova äänitauko).
+      this.suljeMikkiKanava();
       jatkaSanelunJalkeen();
       const oliTunnistin = this.tunnistin;
       this.tunnistin = null;
@@ -154435,15 +154436,75 @@ class Pollo {
      * palautus onendissä ja virhepolussa.
      */
     taukoaSanelunAjaksi();
-    try {
-      // Mikrofonilupa kysytään vasta tästä — ei paneelia avattaessa.
-      tunnistin.start();
-    } catch {
-      this.tunnistin = null;
-      this.merkitseMikki(false);
-      this.saneluTila.textContent = 'Sanelu ei käynnisty juuri nyt.';
-      jatkaSanelunJalkeen();
+    /*
+     * MIKROFONIKANAVAN ESIAVAUS UUSINNALLA. Jos ensimmäinen start
+     * kaatui audio-captureen (saneluVirhe), uusintayritys avaa ensin
+     * oikean mikrofonivirran getUserMedialla: iOS siirtää äänisession
+     * äänitystilaan vasta virrasta, ja tunnistuksen oma kaappaus
+     * pääsee sen jälkeen käyntiin. Virta pidetään auki tunnistuksen
+     * ajan ja suljetaan lopussa (sama sivu saa molemmat).
+     */
+    const kaynnista = () => {
+      try {
+        // Mikrofonilupa kysytään vasta tästä — ei paneelia avattaessa.
+        tunnistin.start();
+      } catch {
+        this.tunnistin = null;
+        this.merkitseMikki(false);
+        this.saneluTila.textContent = 'Sanelu ei käynnisty juuri nyt.';
+        this.suljeMikkiKanava();
+        jatkaSanelunJalkeen();
+      }
+    };
+    if (this.saneluUusittu && navigator.mediaDevices?.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ audio: true }).then((virta) => {
+        if (this.tunnistin !== tunnistin) {
+          for (const raide of virta.getTracks()) raide.stop();
+          return;
+        }
+        this.mikkiKanava = virta;
+        kaynnista();
+      }, () => kaynnista());
+      return;
     }
+    kaynnista();
+  }
+
+  /** Esiavattu mikrofonivirta kiinni (ks. aloitaSanelu). */
+  suljeMikkiKanava() {
+    const virta = this.mikkiKanava;
+    this.mikkiKanava = null;
+    if (!virta) return;
+    try {
+      for (const raide of virta.getTracks()) raide.stop();
+    } catch {
+      /* virta oli jo suljettu */
+    }
+  }
+
+  /**
+   * Mikrofonin vianetsintärivi (ks. saneluVirhe audio-capture).
+   * Suomeksi ja tiiviisti — tämä näkyy pelaajalle asti, mutta vain
+   * kun sanelu on jo kahdesti epäonnistunut.
+   */
+  async keraaMikkiDiagnoosi() {
+    const osat = [];
+    try {
+      const laitteet = await navigator.mediaDevices?.enumerateDevices?.() ?? [];
+      osat.push(`laitteita ${laitteet.filter((l) => l.kind === 'audioinput').length}`);
+    } catch {
+      osat.push('laitteita ?');
+    }
+    try {
+      const virta = await navigator.mediaDevices.getUserMedia({ audio: true });
+      for (const raide of virta.getTracks()) raide.stop();
+      osat.push('virta ok');
+    } catch (virhe) {
+      osat.push(`virta ${virhe?.name ?? 'virhe'}`);
+    }
+    osat.push(window.matchMedia?.('(display-mode: standalone)')?.matches
+      ? 'kotivalikko' : 'selain');
+    return osat.join(', ');
   }
 
   lopetaSanelu({ laheta = false } = {}) {
@@ -154480,6 +154541,7 @@ class Pollo {
        * mitään — siksi se on tässä oikea työkalu.
        */
       this.tunnistin = null;
+      this.suljeMikkiKanava();
       try {
         tunnistin.abort();
       } catch {
@@ -154502,7 +154564,8 @@ class Pollo {
    * silloin kun koodia ei tunnisteta.
    */
   saneluVirhe(koodi, viesti = '') {
-    // Äänet takaisin joka virhepolussa (ks. kova äänitauko).
+    // Äänet takaisin ja esiavattu virta kiinni joka virhepolussa.
+    this.suljeMikkiKanava();
     jatkaSanelunJalkeen();
     this.tunnistin = null;
     this.natiiviSanelussa = false;
@@ -154516,10 +154579,11 @@ class Pollo {
     if (koodi === 'audio-capture') {
       /*
        * iOS voi hylätä kaappauksen hetkellisesti, kun edellinen
-       * äänisessio (sanelu, luenta, ambienssi) on vasta vapautumassa.
-       * Yksi hiljainen uusinta pienen tauon jälkeen hoitaa ohimenevän
-       * tilan; vasta toinen peräkkäinen epäonnistuminen näytetään
-       * pelaajalle. Lippu nollataan mikkinapin napautuksessa.
+       * äänisessio on vasta vapautumassa. Uusinta tehdään kerran —
+       * ja uusinnalla mikrofonikanava ESIAVATAAN getUserMedialla
+       * (aloitaSanelu): oikea mikrofonivirta pakottaa iOS:n
+       * äänisession äänitystilaan, jolloin tunnistuksen oma kaappaus
+       * pääsee käyntiin. Lippu nollataan mikkinapin napautuksessa.
        */
       if (!this.saneluUusittu) {
         this.saneluUusittu = true;
@@ -154528,7 +154592,17 @@ class Pollo {
         }, 400);
         return;
       }
-      this.saneluTila.textContent = 'Mikrofonia ei löytynyt.';
+      /*
+       * Toinen peräkkäinen epäonnistuminen: kerätään pelaajan ruudulle
+       * diagnoosi (omistajan iPhonella vika jatkui v623:ssa asti eikä
+       * konsolia ole käytettävissä). Rivistä näkee suoraan, missä
+       * kerroksessa vika on: saako sivu ylipäätään mikrofonivirran,
+       * näkyykö äänilaitteita, ja ollaanko kotivalikkosovelluksessa.
+       */
+      this.saneluTila.textContent = 'Mikrofonia ei löytynyt…';
+      this.keraaMikkiDiagnoosi().then((diagnoosi) => {
+        this.saneluTila.textContent = `Mikrofonia ei löytynyt (${diagnoosi}).`;
+      });
       this.vaihdaTilaan('kirjoitus');
       return;
     }
@@ -170363,6 +170437,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 624, teksti: 'Sanelun uusinta esiavaa mikrofonin; virherivi diagnosoi' },
   { v: 623, teksti: 'Sanelun ajaksi äänet taukoon: mikrofoni vapautuu iOS:lla' },
   { v: 622, teksti: 'Teheranin kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 621, teksti: 'iOS-kuoreen haptiikka, iCloud-synkka, widget ja Game Center' },
@@ -171081,7 +171156,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.623';
+const APP_VERSION = '2026-08-09.624';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
