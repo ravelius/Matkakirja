@@ -18,7 +18,15 @@ final class SaneluSilta: NSObject {
 
     weak var tapahtumat: SiltaTapahtumat?
 
-    private let moottori = AVAudioEngine()
+    /*
+     * Moottori on var eikä let: se luodaan UUTENA jokaiseen aloitukseen
+     * (ks. kaynnista). Luokan alustuksessa syntynyt moottori ehti
+     * sitoutua toistoluokan äänipolkuun, ja sen inputNode raportoi
+     * 0 Hz:n muodon vaikka istunto oli jo vaihdettu nauhoitusluokkaan —
+     * omistajan iPhonella (TestFlight) jokainen sanelu kaatui tähän
+     * ("Mikrofonia ei löytynyt", 13.8.2026).
+     */
+    private var moottori = AVAudioEngine()
     private var tunnistin: SFSpeechRecognizer?
     private var pyynto: SFSpeechAudioBufferRecognitionRequest?
     private var tehtava: SFSpeechRecognitionTask?
@@ -115,6 +123,14 @@ final class SaneluSilta: NSObject {
             return
         }
 
+        /*
+         * Tuore moottori sitoutuu vasta nyt aktivoituun
+         * nauhoitusistuntoon. Kierrätetty moottori jäi toistoluokan
+         * aikaiseen syötepolkuun ja raportoi 0 Hz:n muodon (ks. kentän
+         * kommentti) — se oli "Mikrofonia ei löytynyt" -virheen syy.
+         */
+        moottori = AVAudioEngine()
+
         let uusiPyynto = SFSpeechAudioBufferRecognitionRequest()
         uusiPyynto.shouldReportPartialResults = true
         let laitteessaKaytossa = laitteessa ?? tunnistin.supportsOnDeviceRecognition
@@ -154,8 +170,28 @@ final class SaneluSilta: NSObject {
             }
         }
 
-        let syote = moottori.inputNode
-        let muoto = syote.outputFormat(forBus: 0)
+        var syote = moottori.inputNode
+        var muoto = syote.outputFormat(forBus: 0)
+        if muoto.sampleRate == 0 { muoto = syote.inputFormat(forBus: 0) }
+        if muoto.sampleRate == 0 {
+            /*
+             * Syötepolku ei ollut vielä valmis: istunto uudelleen päälle
+             * ja vielä yksi tuore moottori ennen luovuttamista. Tämä on
+             * varaporras — tuoreen moottorin pitäisi riittää yksinään.
+             */
+            AaniIstunto.lopetaSanelutila()
+            do {
+                try AaniIstunto.sanelutila()
+            } catch {
+                siivoa()
+                vastaus(nil, "Mikrofonia ei saatu käyttöön: \(error.localizedDescription)")
+                return
+            }
+            moottori = AVAudioEngine()
+            syote = moottori.inputNode
+            muoto = syote.outputFormat(forBus: 0)
+            if muoto.sampleRate == 0 { muoto = syote.inputFormat(forBus: 0) }
+        }
         guard muoto.sampleRate > 0 else {
             siivoa()
             vastaus(nil, "Mikrofonia ei löytynyt")
