@@ -9155,4 +9155,263 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * TABRIZIN KANSISIVU (nippu 2, 13.8.2026). IRN-maalehti käsittelee
+   * historian, rakennukset, puutarhat, ruoan ja käsityön, joten
+   * kaupungille jää luonto ja talvi — Sahand, Eynali ja lumi.
+   */
+  tabriz: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tabriz',
+      johdanto: 'Tabrizin Surkhabissa on hautausmaa, jonne on haudattu '
+        + 'runoilijoita 1000-luvulta 2000-luvulle, ja kaupungin '
+        + 'kaakkoislaidalla on 55 000 neliömetrin tekoallas, jonka '
+        + 'paviljonkiin johtaa pengertie.',
+      kansikuvat: [
+        {
+          tiedosto: '11 Chardin Tabriz 1673.png',
+          selite: 'Mustavalkoinen piirros Tabrizista vuodelta 1673. '
+            + 'Yläreunassa on kiemuraiseksi piirretty nauha, jossa lukee '
+            + 'TAURIS ja sen vieressä sama nimi arabialaisin kirjaimin. '
+            + 'Vasemmassa yläkulmassa on ranskankielinen kirjainluettelo, '
+            + 'jossa mainitaan kuninkaan aarrekammio, kymmenkunta '
+            + 'moskeijaa, suuri sairaala ja kapusiinien hospitaali; '
+            + 'vasemmassa alakulmassa on kehystetty toinen luettelo '
+            + 'paikallisin nimin. Keskellä levittäytyy matala kaupunki: '
+            + 'tiheässä tasakattoisia taloja, kupoleita, minareetteja ja '
+            + 'puurivejä, ja kauempana avautuu suuri suorakaiteen '
+            + 'muotoinen kenttä, jonka keskellä on rakennus, sekä '
+            + 'nelikulmainen torni. Taustalla on paljaita, pyöreälakisia '
+            + 'kukkuloita. Etualan mäkien rinteillä makaa hajallaan '
+            + 'matalia, pöydän muotoisia kivilaattoja, ja niiden vieressä '
+            + 'seisoo muutama pieni ihmishahmo. Oikealla mäen laella on '
+            + 'muurien ympäröimä rakennelma, jonne nousee polku, ja '
+            + 'alempana on tumma aukko rinteessä.',
+          lahde: 'Jean Chardin, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Landscape of Tabriz 03.jpg',
+          selite: 'Tabriz ylhäältä kuvattuna iltapäivän matalassa valossa. '
+            + 'Etualalla on kolmilapainen tuulivoimala niin läheltä, että '
+            + 'vain napa ja lavat mahtuvat kuvaan; konehuoneen valkoiseen '
+            + 'kylkeen on maalattu punaisella persiankielistä tekstiä. '
+            + 'Takana kaupunki täyttää rinteen: keltaisia ja harmaita '
+            + 'matalia taloja tiheässä, puukujia, laaja urheilukenttä '
+            + 'juoksuratoineen, kaareva vaalea laitosrakennus, punainen '
+            + 'liikerakennuksen julkisivu ja kaksi korkeaa asuintornia. '
+            + 'Oikeassa yläkulmassa on rakennus, jolla on suuri sininen '
+            + 'kupoli. Ylälaidassa talot loppuvat paljaisiin kukkuloihin, '
+            + 'joiden juurta seuraa tie.',
+          lahde: 'Mostafameraji, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'A street in Tabriz.jpg',
+          selite: 'Hedelmäkoju Taleghanin kadulla Tabrizissa. Etualalla on '
+            + 'suuria pyöreitä metallitarjottimia täynnä persikoita, '
+            + 'punaisia ja vihreitä omenoita ja tummia luumuja, niiden '
+            + 'takana keltaisia meloneita ja banaanikimppuja sekä musta '
+            + 'muovilaatikko kurkkuja. Tarjottimen alla on pahvilaatikko, '
+            + 'jonka kyljessä lukee PREMIUM BANANAS, ja lattialla '
+            + 'muovilaatikoita rypäleitä ja luumuja. Ylhäältä roikkuu '
+            + 'johtojen varassa paljaita hehkulamppuja, jotka palavat. '
+            + 'Kadulla seisoo keltainen taksi takaovi auki, ja ohi kulkee '
+            + 'ihmisiä: kuviopaitainen poika, valkosukkainen tyttö, '
+            + 'kumartunut mies vaaleansinisessä paidassa, sinipaitainen '
+            + 'mies, sinihuivinen nainen ja punapaitainen poika. Seinillä '
+            + 'on persiankielisiä liikekylttejä, ilmastointilaite ja puun '
+            + 'oksia.',
+          lahde: 'Monsieur_mahdi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kolmetoista nimeä, tuhat vuotta väliä',
+          tiedosto: 'Maghbaratolshoara Tabriz, Iran.jpg',
+          teksti: 'Surkhabin kaupunginosassa on hautausmaa nimeltä '
+            + 'Maqbarat-o-shoara, runoilijoiden mausoleumi. Sinne on '
+            + 'haudattu iranilaisia runoilijoita ja mystikkoja: Asadi '
+            + 'Tusi (999–1072), Qatran Tabrizi (1009–1072), Khaqani '
+            + '(1122–1190) ja Humam Tabrizi (1238–1314). Nimiä luetellaan '
+            + 'kolmetoista, ja vanhimman ja tuoreimman väli on yli tuhat '
+            + 'vuotta; viimeisenä on vuonna 2009 kuollut Aziz '
+            + 'Dowlatabadi. Yksi haudatuista ei ole runoilija vaan '
+            + 'armeijan kenraali Aziz Khan Mokri. Tunnetuin on Shahriar '
+            + '(1906–1988), jonka runoelma Heydar Babaya Salam on '
+            + 'käännetty yli kolmellekymmenelle kielelle. Nykyinen '
+            + 'muistorakennus on pystytetty paikalle 1970-luvulta alkaen.',
+          selite: 'Runoilijoiden mausoleumin muistorakennus alhaalta '
+            + 'kuvattuna. Vaaleista kivilaatoista ladottu rakennelma '
+            + 'muodostuu toisiinsa lomittuvista teräväkärkisistä '
+            + 'kaarista, jotka kasvavat reunoilta keskelle päin; kaarien '
+            + 'väliin jää aukkoja, joiden yläreunassa on viuhkamainen '
+            + 'holvikuvio. Laattojen saumat näkyvät pinnassa suorina '
+            + 'viivoina. Alareunassa erottuu sinivalkoinen kaakelipinta '
+            + 'ja karkeaa kiveä, vasemmalla vihreä katto ja oikealla '
+            + 'kaupungin taloja sekä kukkulan rinne. Taivas on kirkas, ja '
+            + 'sen poikki kulkee ohut vaalea juova.',
+          lahde: 'Arashk rp2, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Allas näyttää kelluvan laakson yllä',
+          tiedosto: 'Elgölü front.jpg',
+          teksti: 'Kaupungin kaakkoisosassa on laaja puisto, jonka keskellä '
+            + 'on tekoallas. Pinta-alaa sillä on noin 55 000 neliömetriä. '
+            + 'Perimätiedon mukaan puisto on 1700-luvun lopulta, mutta '
+            + 'osa lähteistä ajoittaa sen jo 1300-luvulle. Qajar-kaudella '
+            + 'puistoon lisättiin korkeat terassit, ja altaan '
+            + 'pohjoispuoli on rakennettu korkeammaksi: '
+            + 'puutarhahistorioitsija Penelope Hobhousen mukaan allas '
+            + 'näyttää siksi kelluvan laakson yllä. Altaalle johtaa '
+            + 'pengertie, jonka päässä on paviljonki, ja siinä toimii '
+            + 'nykyään ravintola. Länsirinteen lähde syöttää altaaseen '
+            + 'vettä viittä terassia pitkin. Puistolla on kaksi nimeä: '
+            + 'Shah Goli on kuninkaan lampi, El Goli kansan järvi.',
+          selite: 'El Golin paviljonki edestä kuvattuna. Keltaisesta tiilestä '
+            + 'muurattu kaksikerroksinen rakennus on monikulmainen, ja '
+            + 'sen molemmissa kerroksissa kiertää rivi teräväkärkisiä '
+            + 'kaaria; katolla on keltainen, uurteinen kupoli. Yläkerran '
+            + 'parvekkeella on punainen neonkyltti, jossa on kahvikupin '
+            + 'kuva. Rakennuksen edestä laskee leveä laatoitettu terassi, '
+            + 'jonka keskellä juoksee kapea vesikouru pieninä altaina; '
+            + 'kourua reunustavat valkoiset ja punaiset kukkapenkit, ja '
+            + 'etualalla on neliön muotoinen upotettu allas. Molemmin '
+            + 'puolin on mustia lyhtypylväitä ja kaiteita, riippapajuja '
+            + 'ja kukkivia pensaita, ja vasemmalla puiden takaa näkyy '
+            + 'kerrostaloja.',
+          lahde: 'Meysem, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Koulu olisi tullut talon tilalle',
+          tiedosto: 'Amir Nezam House.jpg',
+          teksti: 'Sheshgelanin kaupunginosassa on Amir Nezamin talo, joka '
+            + 'tunnetaan myös Tabrizin Qajar-museona. Rakennus on '
+            + 'kruununprinssi Abbas Mirzan (1789–1833) ajalta. '
+            + 'Kruununprinssi asui qajar-kaudella Tabrizissa vuoteen 1925 '
+            + 'asti ja toimi tavallisesti myös Azerbaidžanin '
+            + 'kuvernöörinä. Talo jäi pitkäksi aikaa vaille hoitoa ja '
+            + 'rapistui niin pahoin, että sen tilalle esitettiin koulua. '
+            + 'Purkamisen sijaan rakennus kunnostettiin vuosina 1993–2006 '
+            + 'ja merkittiin kansallisesti suojelluksi kohteeksi. '
+            + 'Vuodesta 2006 siinä on toiminut museo, jonka aihe on '
+            + 'qajar-kausi 1781–1925.',
+          selite: 'Amir Nezamin talon piha. Kaksikerroksisen rakennuksen '
+            + 'keskellä on kolmiopääty, jossa on tiilikuviointi ja pyöreä '
+            + 'koriste, ja sen alla rivi ohuita valkoisia pylväitä. '
+            + 'Julkisivun keskellä on kaarevia ikkunoita puisine '
+            + 'ristikkoineen, ja alakerran keskeltä laskeutuvat leveät '
+            + 'portaat pihalle. Pihalla on kaksi vesiallasta: takana '
+            + 'laaja sinipohjainen allas ja edessä kapea kouru, ja '
+            + 'molemmissa nousee matala vesisuihku. Kourun reunoilla '
+            + 'kasvaa vaaleanpunaisia ja valkoisia kukkia, sivuilla on '
+            + 'ruukkuja violetteine kukkineen. Pihalla seisoo kymmeniä '
+            + 'ihmisiä. Molemmilla sivuilla on holvikaarinen '
+            + 'siipirakennus, ja takana näkyy nykyisiä kerrostaloja.',
+          lahde: 'Farzad Karimnijad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto ja talvi',
+      johdanto: 'Tabriz on Quru-joen laaksossa 1 350–1 600 metrin korkeudella '
+        + 'merenpinnasta, ja laaksoa reunustavat tulivuorenkartioiden '
+        + 'harjanteet: etelässä Sahand, pohjoisessa Eynali. Korkeus näkyy '
+        + 'säässä, sillä talvella osa sateesta tulee lumena.',
+      nostot: [
+        {
+          otsikko: 'Seitsemäntoista huippua yli kolmen kilometrin',
+          tiedosto: '990305-Sahand-IMG 4014-2.jpg',
+          teksti: 'Kaupungin eteläpuolella on Sahand, massiivinen ja '
+            + 'voimakkaasti kulunut kerrostulivuori. Korkein huippu on '
+            + 'Kamal, 3 707 metriä, ja se on samalla Itä-Azerbaidžanin '
+            + 'maakunnan korkein kohta. Yli 3 000 metrin huippuja '
+            + 'lasketaan olevan noin seitsemäntoista, ja vuoren '
+            + 'suhteellinen korkeus ympäristöönsä on 1 826 metriä. Kivi '
+            + 'on pääosin dasiittia ja muita felsisiä lajeja. '
+            + 'Tulivuoritoiminta ajoitetaan 12 miljoonan ja 140 000 '
+            + 'vuoden väliin; vuorta pidetään uinuvana, eikä viimeisintä '
+            + 'purkausta tunneta. Kasvien ja eläinten runsauden takia '
+            + 'vuoristoa kutsutaan Iranissa vuorten morsiameksi.',
+          selite: 'Sahandin lumihuippu keväällä. Keskellä kohoaa leveä '
+            + 'kartiomainen huippu, jonka valkoista lunta rikkovat '
+            + 'tummat, sulaneet läiskät ja juovat; oikealle lumikenttä '
+            + 'jatkuu loivempana rinteenä ja vasemmalla nousee tumma, '
+            + 'lumeton harjanne. Vuoren juurella on vihreitä laidunmaita, '
+            + 'joiden poikki kulkee uomia ja kapea tie. Vasemmassa '
+            + 'laidassa seisoo ristikkorakenteinen sähköpylväs ja rivi '
+            + 'pienempiä pylväitä. Taivas on pilvinen, ja aurinko '
+            + 'valaisee rinteen sivusta.',
+          lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Istutettu metsä paljaalla rinteellä',
+          tiedosto: 'Eynali picknick.jpg',
+          teksti: 'Kaupungin pohjoispuolella nousee Eynalin harjanne, jonka '
+            + 'huiput jäävät matalammiksi kuin etelässä: Eynali 1 800 '
+            + 'metriä, Halileh 1 850, Pakeh-chin 1 945, Bahlul 1 985 ja '
+            + 'korkeimpana Dand 2 378. Eynalin huipulle vie päällystetty '
+            + 'polku, jota on 3,3 kilometriä. Huipulla on hautarakennus, '
+            + 'jota pidetään kahden uskonoppineen hautana; vuori '
+            + 'tunnetaan heidän mukaansa myös nimellä On ibn Ali. '
+            + 'Rinteille on istutettu metsää, ja alue on valtion '
+            + 'metsäpuisto. Tabrizissa on kaikkiaan 132 puistoa, joista '
+            + '97 on pieniä, 31 alueellisia ja 4 koko kaupungin puistoja.',
+          selite: 'Eynalin rinne aamun vastavalossa. Kukkulan päälle on '
+            + 'istutettu tiheä nuori metsä, jonka pikkupuut kasvavat '
+            + 'riveissä paljaassa ruskeassa maassa. Rinteen poikki kulkee '
+            + 'puupylväin ja narulla rajattu polku, jonka varrella istuu '
+            + 'ja kävelee ihmisiä; useasta kohdasta nousee ohutta savua. '
+            + 'Harjanteella seisoo valkoinen ristikkomasto ja sen '
+            + 'vieressä matala rakennus, jonka räystäs on keltainen; '
+            + 'masto kannattaa köysirataa. Vasemmalla on valkoinen '
+            + 'parakki ja oikealla rinne on porrastettu terasseiksi, ja '
+            + 'ylös kiemurtelee tie. Kukkulan laella on mastoja, ja ilma '
+            + 'on utuinen.',
+          lahde: 'User:Abdossamad Talebpour, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tammikuussa yhdeksän lumipäivää',
+          tiedosto: 'Elgoli snow.JPG',
+          teksti: 'Talvi on Tabrizissa luminen ja kylmä. Sääaseman vuosien '
+            + '1991–2020 keskiarvoissa tammikuun keskilämpötila on −1,2 '
+            + 'astetta ja heinä- ja elokuun 26,6. Lunta tai räntää sataa '
+            + 'tammikuussa keskimäärin 9,3 päivänä, helmikuussa 7,9 ja '
+            + 'joulukuussa 6,2, mutta touko- ja syyskuun välillä ei '
+            + 'lainkaan; nämä luvut on laskettu vuosista 1951–2010. '
+            + 'Kylmin mitattu lukema on −25,0 astetta 20. tammikuuta 1964 '
+            + 'ja kuumin 42,0 astetta 26. heinäkuuta 1966. Ranskalainen '
+            + 'matkaaja Jean Chardin kirjoitti 1600-luvulla, että lumi '
+            + 'pysyy seudun vuorilla yhdeksän kuukautta vuodessa.',
+          selite: 'El Golin puisto lumisateen jälkeen, kuvattuna ylhäältä '
+            + 'terassien suunnasta. Etualalla kulkee poikittain matala '
+            + 'kivimuuri, jonka harjalla on paksu kerros lunta. Sen '
+            + 'takana laskeutuu rinne, jossa lehdettömien puiden oksat '
+            + 'ovat kauttaaltaan lumen peitossa; puurivien välissä '
+            + 'juoksee suora käytävä alas puiston pohjalle, ja sen '
+            + 'varrella seisoo tummansinisiä lyhtypylväitä. Käytävällä ja '
+            + 'aukiolla näkyy muutamia pieniä ihmishahmoja. Keskellä '
+            + 'kuvaa on altaan rannan paviljonki: vaalea, monikulmainen '
+            + 'rakennus, jonka alakerrassa kiertää rivi kaaria ja jonka '
+            + 'katolla on keltainen kupoli, sekin lumen peittämä. '
+            + 'Taustalla erottuu usvan takaa kaupungin kerrostaloja ja '
+            + 'kaksi nosturia. Taivas on tasaisen harmaa.',
+          lahde: 'Faridb89, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä kivilajia Sahand on pääosin?',
+        vaihtoehdot: [
+          'dasiittia',
+          'kalkkikiveä',
+          'hiekkakiveä',
+          'marmoria',
+        ],
+        oikea: 0,
+        fakta: 'Sahand on kerrostulivuori, ja sen kivi on dasiittia ja '
+          + 'muita felsisiä lajeja. Korkein huippu Kamal yltää 3 707 '
+          + 'metriin.',
+      },
+    },
+  ],
 };

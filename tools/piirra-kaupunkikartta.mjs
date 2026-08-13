@@ -808,6 +808,19 @@ const KAUPUNGIT = {
     // koska vanhakaupunki on itä-länsi-suuntainen suorakaide.
     rajat: { pohjoinen: 33.516, etela: 33.5045, lansi: 36.299, ita: 36.32 },
   },
+  tabriz: {
+    // Tabrizin keskusta: basaari ja perustuslakitalo pohjoisessa, Arg
+    // lounaassa, Saat-torni keskellä sekä Sininen moskeija ja
+    // Azerbaidžanin museo idässä. Ruutu on lähes neliö (1,7 x 1,6 km).
+    //
+    // KOHTEET TARKISTETTIIN LÄHTEISTÄ ENNEN PIIRTOA (Riadin opetus):
+    // jokaisella kuudella on englanninkielinen Wikipedia-artikkeli, ja
+    // koordinaatit on otettu artikkelien coord-malleista ja
+    // ristiintarkistettu Overpassista. Jameh-moskeija jätettiin pois,
+    // koska se on 130 metrin päässä basaarista ja numeroympyrät
+    // menisivät päällekkäin.
+    rajat: { pohjoinen: 38.085, etela: 38.07, lansi: 46.286, ita: 46.304 },
+  },
   riad: {
     // Riad: vanhankaupungin ydin etelässä, Murabban hallintokortteli
     // pohjoisessa. Ruutu on lähes neliö (2,4 x 2,0 km).

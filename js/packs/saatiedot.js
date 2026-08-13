@@ -167,4 +167,15 @@ export const SAATIEDOT = {
     keskilampo: [14, 16.8, 21.1, 26.8, 32.4, 35, 36.1, 36, 32.8, 27.6, 20.5, 15.4],
     sade: [11, 7, 12, 14, 2, 0, 0, 0, 0, 1, 12, 9],
   },
+  // Tabriz on lehtikaupungeista ainoa, jonka normaali menee pakkaselle:
+  // tammikuu on −1,5 astetta. ERA5:n ruutu ottaa mukaan ympäröivät
+  // vuoret, joten se on kaupungin oman sääaseman lukuja viileämpi ja
+  // sateisempi — lehden tekstissä siteeratut aseman luvut (vuoden
+  // keskilämpö 13,1 °C) on siksi merkitty sääaseman luvuiksi.
+  tabriz: {
+    lat: 38.08,
+    lon: 46.29,
+    keskilampo: [-1.5, 0.1, 4.7, 10.4, 15.8, 21, 23.9, 23.9, 19.6, 13.4, 5.3, 0.1],
+    sade: [30, 41, 57, 66, 50, 21, 14, 8, 7, 22, 38, 33],
+  },
 };
