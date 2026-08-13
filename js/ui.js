@@ -76,7 +76,7 @@ import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { MAAKARTAT, KAUPUNKIKARTAT, karttapiste, mittakaava } from './packs/maakartat.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
-import { polloAnkkuri, polloSulje } from './pollo.js';
+import { polloAnkkuri, polloSulje, polloVihje, polloVihjePois } from './pollo.js';
 import { HENKILOT, HENKILOLINKIT } from './packs/henkilot.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
@@ -835,6 +835,28 @@ const VERTAILUVARIT = [
 ];
 const AUTO_ROLL_MS = 320; // tauko ennen itsestään pyörähtävää noppaa
 /*
+ * PÖLLÖN PAIKALLINEN VIHJE (omistajan toive 13.8.2026: *"Pöllö voi
+ * tarpeen mukaan vinkata, jos pelaaja ei osaa painaa mitään
+ * nappia."*).
+ *
+ * Nopanheiton jälkeen peli odottaa napautusta kartalta, eikä kartan
+ * päällä ole enää ohjetekstiä. Jos kartalla ei tapahdu MITÄÄN näin
+ * pitkään aikaan, pöllö vinkkaa kiinteällä lauseella. Viisitoista
+ * sekuntia on pitkä tauko pelin tahtiin: se ei ehdi häiritä sitä, joka
+ * vain katselee karttaa vuoroaan miettien, mutta ehtii avuksi sille,
+ * joka ei tiedä mitä pitäisi tehdä.
+ */
+const VALINTAVIHJEEN_VIIVE = 15000;
+const VALINTAVIHJEEN_TEKSTI = 'Napauta korostettua kohdetta kartalla, niin matka jatkuu.';
+/*
+ * Maan ääriviivan piirtoanimaatio (animoiMaanAariviiva). Piirto on
+ * omistajan toivomat "parisen sekuntia", välähdys ja sen häivytys
+ * yhteensä alle sekunnin — riittävän lyhyt, ettei se jarruta matkan
+ * kulkua, ja riittävän pitkä, että viivan syntymisen ehtii nähdä.
+ */
+const AARIVIIVAN_PIIRTO_MS = 2000;
+const AARIVIIVAN_VALAHDYS_MS = 900;
+/*
  * NÄKYMÄN KOKOVAHDIN RAJAT (ks. UI vahdiNakymanKokoa).
  *
  * Alle 240 pikselin leveys ei ole mikään laite vaan mittausvirhe —
@@ -1517,8 +1539,8 @@ const TURN_WIDTH = 560; // pidettävä samana kuin .turn-card css:ssä
 const EVENT_SOUND = { fare: 'ferry', flight: 'flight', aid: 'coin', stuck: 'stuck' };
 
 // Paljastusruudun alateksti laattatyypeittäin.
-// Matkustustapojen nimet paneelissa.
-const TRAVEL_LABEL = { land: 'Maitse', sea: 'Laivalla', fly: 'Lentäen', stay: 'Paikallaan' };
+// (Matkustustapojen nimilista TRAVEL_LABEL poistui 13.8.2026: sitä
+// luki vain kartan päällä kellunut tilarivi, jota ei enää ole.)
 
 const REVEAL_SUB = {
   star: 'Vie unohdettu aarre kotiin ja voitat pelin!',
@@ -2061,10 +2083,15 @@ export class UI {
     this.botTimer = null;
 
     this.svg = document.getElementById('board');
-    this.hint = document.getElementById('board-hint');
     this.turnPill = document.getElementById('turn-pill');
-    this.turnStatus = document.getElementById('turn-status');
-    this.dieEl = document.getElementById('die');
+    /*
+     * KARTAN PÄÄLLÄ EI OLE OHJETEKSTIÄ (omistaja 13.8.2026: *"kartan
+     * päälle ei tule enää mitään ohjetekstiä"*). Tässä haettiin ennen
+     * kartan ohjerivi (#board-hint) ja vuorolaatikon tilarivi
+     * (#turn-status); molemmat kelluivat kartan päällä ja molemmat on
+     * poistettu myös index.html:stä. Kehotus tulee kartalta itseltään:
+     * valittavat kohteet korostuvat renkailla.
+     */
     this.actionsEl = document.getElementById('actions');
     this.errorEl = document.getElementById('error');
     this.passportDialog = document.getElementById('passport-dialog');
@@ -2704,6 +2731,14 @@ export class UI {
     this.movingPlayerId = null;
     this.revealShownFor = null;
     this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /*
+     * Pöllön vihjekuplan ajastin (paivitaValintavihje). Viive on
+     * kentässä eikä suoraan vakiona, jotta savukkeen ei tarvitse odottaa
+     * viittätoista sekuntia todistaakseen ketjun toimivaksi.
+     */
+    this.valintavihjeViive = VALINTAVIHJEEN_VIIVE;
+    this.valintavihjeAjastin = null;
+    this.valintavihjeVaihe = false;
 
     this.viewBoxSize = { vw: 1000, vh: 1000 };
     // Aloituskartan lähikuva ja sen vaakapanorointi (puhelin).
@@ -2990,6 +3025,10 @@ export class UI {
       this.nakymaVahti = null;
     }
     clearTimeout(this.nakymaAjastin);
+    // Pöllön vihjekupla ei saa ilmestyä kuolleen pelin ajastimesta.
+    this.peruValintavihje();
+    // Sama koskee ääriviivan välähdyksen loppuajastinta.
+    clearTimeout(this.aariviivaAjastin);
     // Sama koskee alanappirivin liukua sulkevaa karttanapautusta.
     if (this.liukuKuuntelija) {
       document.removeEventListener('pointerdown', this.liukuKuuntelija);
@@ -4787,6 +4826,8 @@ export class UI {
       osoittimet.add(e.pointerId);
       this.osoitinKartalla = true;
       this.merkitseKartanEle();
+      // Pöllön vihjekupla katoaa heti, kun kartalla tapahtuu jotain.
+      this.kartallaKosketettu();
     }, paalla);
     /*
      * Sormen irrotessa jatketaan kesken jäänyttä piirtoa.
@@ -4822,6 +4863,7 @@ export class UI {
     pane.addEventListener('touchstart', () => {
       this.osoitinKartalla = true;
       this.merkitseKartanEle();
+      this.kartallaKosketettu();
     }, paalla);
     pane.addEventListener('touchmove', () => this.merkitseKartanEle(), paalla);
     const kosketusLoppui = (e) => {
@@ -6008,19 +6050,116 @@ export class UI {
     if (!iso) return;
     const key = `${this.game.pack.id}:${iso}`;
     if (this.countryKey === key) return;
+    /*
+     * Onko tämä UUSI maa vai sama maa uudestaan piirrettynä?
+     *
+     * countryKey nollautuu aina kun lauta rakennetaan uusiksi
+     * (drawBoard), joten se ei kelpaa animaation ehdoksi: pelin lataus
+     * ja kartan uudelleenrakennus näyttäisivät sen valossa
+     * maanvaihdolta. viimeMaa muistaa maan laudan piirtojen yli ja on
+     * tyhjä vain istunnon ensimmäisellä kerralla — silloin ääriviiva on
+     * heti valmis eikä piirry.
+     */
+    const uusiMaa = Boolean(this.viimeMaa) && this.viimeMaa !== key;
+    this.viimeMaa = key;
     this.countryKey = key;
     this.countryLayer.textContent = '';
+    this.countryLayer.classList.remove('maa-piirtyy', 'maa-valahtaa');
     this.countryNameLayer.textContent = '';
     const maa = map.countryShapes?.[iso];
     this.paivitaMaaPilleri(maa, iso);
     if (!maa) return;
-    const d = maa.renkaat
-      .map((r) => `M${r.map(([x, y]) => `${x},${y}`).join(' L')}Z`)
-      .join(' ');
-    el('path', { d, class: 'country-tint' }, this.countryLayer);
-    // Ääriviiva countryLayeriin, jolloin maa-rajaus-clip katkaisee sen
-    // tyyliteltyyn rantaan — merelle ei valu mitään.
-    el('path', { d, class: 'country-korostus' }, this.countryLayer);
+    const renkaat = maa.renkaat
+      .map((r) => `M${r.map(([x, y]) => `${x},${y}`).join(' L')}Z`);
+    el('path', { d: renkaat.join(' '), class: 'country-tint' }, this.countryLayer);
+    /*
+     * Ääriviiva countryLayeriin, jolloin maa-rajaus-clip katkaisee sen
+     * tyyliteltyyn rantaan — merelle ei valu mitään.
+     *
+     * Jokainen rengas on OMA polkunsa (ennen kaikki olivat yhdessä
+     * d-määreessä). Saaristomaassa se on animaation ehto: yhtenä
+     * polkuna viivan viiva-aukkokuvio jatkuisi renkaasta toiseen ja
+     * saaret piirtyisivät jonossa, omina polkuinaan ne piirtyvät
+     * rinnakkain kukin oman pituutensa mukaan.
+     */
+    const polut = renkaat.map((d) => el('path', { d, class: 'country-korostus' },
+      this.countryLayer));
+    if (uusiMaa) this.animoiMaanAariviiva(polut, key);
+  }
+
+  /**
+   * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI (omistajan tilaus 13.8.2026:
+   * *"maan kartan punaisen ääriviivan animoisi niin että tultaessa
+   * uuteen maahan peli piirtäisi parissa sekunnissa ääriviivan ja kun se
+   * valmistuisi punainen välähtäisi yhden kerran hieman voimakkaampana
+   * ja feidautuisi sitten pehmeästi nykyisen rajaviivan sävyyn"* sekä
+   * *"maan raja voisi siinä välähdyksessä levitä paksummaksi ja kutistua
+   * sitten feidauksen aikana"*).
+   *
+   * Kolme vaihetta:
+   *   1. viiva piirtyy päästä päähän (stroke-dasharray = polun pituus,
+   *      dashoffset pituudesta nollaan) noin kahdessa sekunnissa
+   *   2. valmistuessa yksi välähdys: voimakkaampi punainen ja kaksin-
+   *      kertainen paksuus
+   *   3. molemmat liukuvat takaisin rajaviivan omaan sävyyn ja mittaan
+   *
+   * Vaiheet 2–3 ovat yksi CSS-animaatio (.maa-valahtaa), vaihe 1
+   * Web Animations API — kummassakaan ei ole kehyskohtaista silmukkaa,
+   * eikä kumpikaan koske näkymään (fitViewBox), joten kartan
+   * bittikarttaa ei rasteroida uudelleen animaation takia.
+   *
+   * Liikeherkkyys ja katselutila (?lauta=) saavat viivan valmiina.
+   */
+  animoiMaanAariviiva(polut, avain) {
+    if (this.reducedMotion || this.katselu) return;
+    if (!polut.length || typeof polut[0].animate !== 'function') return;
+    const kerros = this.countryLayer;
+    kerros.classList.add('maa-piirtyy');
+
+    const liikkeet = [];
+    for (const polku of polut) {
+      // Polun oma mitta: jokainen rengas piirtyy alusta loppuun samassa
+      // ajassa, joten pieni saari ei jää pitkän rannikon jalkoihin.
+      const pituus = polku.getTotalLength?.() ?? 0;
+      if (!pituus) continue;
+      polku.style.strokeDasharray = `${pituus}`;
+      polku.style.strokeDashoffset = `${pituus}`;
+      liikkeet.push(polku.animate(
+        [{ strokeDashoffset: `${pituus}` }, { strokeDashoffset: '0' }],
+        { duration: AARIVIIVAN_PIIRTO_MS, easing: 'ease-in-out', fill: 'forwards' },
+      ));
+    }
+    if (!liikkeet.length) {
+      kerros.classList.remove('maa-piirtyy');
+      return;
+    }
+
+    let jaljella = liikkeet.length;
+    const valmis = () => {
+      jaljella -= 1;
+      if (jaljella > 0) return;
+      // Maa on voinut vaihtua kesken piirron: silloin nämä polut ovat jo
+      // poissa eikä välähdys kuulu uudelle maalle.
+      if (this.dead || this.countryKey !== avain || !kerros.isConnected) return;
+      /*
+       * Viiva-aukkokuvio pois ENNEN animaatioiden perumista: fill:
+       * 'forwards' pitää dashoffsetia nollassa, ja ilman dasharrayta
+       * offsetilla ei ole enää merkitystä. Näin viiva ei välähdä
+       * katkonaisena yhtenä kehyksenä.
+       */
+      for (const polku of polut) {
+        polku.style.strokeDasharray = '';
+        polku.style.strokeDashoffset = '';
+      }
+      for (const liike of liikkeet) liike.cancel();
+      kerros.classList.remove('maa-piirtyy');
+      kerros.classList.add('maa-valahtaa');
+      clearTimeout(this.aariviivaAjastin);
+      this.aariviivaAjastin = setTimeout(() => {
+        kerros.classList.remove('maa-valahtaa');
+      }, AARIVIIVAN_VALAHDYS_MS);
+    };
+    for (const liike of liikkeet) liike.addEventListener('finish', valmis, { once: true });
   }
 
   /**
@@ -6158,14 +6297,32 @@ export class UI {
      * kerralla peitti kartan eikä kartan katselusta tullut mitään.
      * Napautus toimii silti, ja yläreunan merkki kertoo tilan olevan
      * päällä.
+     *
+     * JUURISYY OMISTAJAN HAVAINTOON 13.8.2026 (*"kehittäjänäkymässä
+     * nopanheitto ei vieläkään näytä valittavia kohteita"*): tämä haara
+     * palautti ENNEN aina heti, myös siirtovaiheessa. Näkymättömät
+     * hyppyalueet korvasivat siis nopanheiton kohderenkaat kokonaan, ja
+     * kartta näytti siltä, ettei heitolla ole yhtään valittavaa kohdetta.
+     *
+     * Nyt siirtovaiheessa hyppyalueet piirretään vain niihin
+     * kaupunkeihin, jotka EIVÄT ole heiton laillisia kohteita, ja
+     * laillisten kohteiden renkaat piirtyvät alempana täsmälleen kuten
+     * normaalitilassa. Oikotie säilyy, korostukset palaavat.
      */
     if (this.kehittajaTila && !game.player?.isBot && game.phase !== 'over') {
+      const siirtoVaihe = game.phase === 'move';
+      const kohdeKaupungit = siirtoVaihe
+        ? new Set(game.moveOptions().map((opt) => opt.city?.id).filter(Boolean))
+        : null;
       for (const c of game.board.cities) {
+        if (kohdeKaupungit?.has(c.id)) continue;
         const g = el('g', { class: 'target' }, this.targetLayer);
         el('circle', { cx: c.x, cy: c.y, r: 34, class: 'target-hit' }, g);
         g.addEventListener('click', () => this.doKehittajaSiirto(c));
       }
-      return;
+      // Siirtovaiheessa jatketaan kohderenkaisiin; muissa vaiheissa
+      // kehittäjätila on ainoa tapa napauttaa kartalta.
+      if (!siirtoVaihe) return;
     }
 
     // Lähtöpisteen valinta: kaikki kaupungit ovat napautettavia.
@@ -6356,9 +6513,6 @@ export class UI {
     this.errorEl.hidden = true;
 
     if (game.phase === 'over') {
-      this.turnStatus.textContent = 'Peli päättyi.';
-      this.hint.textContent = '';
-      this.dieEl.hidden = true;
       const again = html('button', 'primary', 'Uusi peli');
       again.addEventListener('click', () => this.onNewGame());
       this.actionsEl.appendChild(again);
@@ -6366,54 +6520,35 @@ export class UI {
     }
 
     const p = game.player;
-    this.dieEl.hidden = true; // silmäluku näkyy laudalla olevassa nopassa
 
-    // Lähtöpisteen valinta tehdään kartalta yhdellä napautuksella, joten
-    // toimintopaneelissa on vain ohje.
-    // Aloitusnäkymässä ei ole toimintoja eikä tilariviä: avausteksti hoitaa
-    // kehotuksen, ja tyhjä kortti vain veisi tilaa kartalta.
+    // Lähtöpisteen valinta tehdään kartalta yhdellä napautuksella.
+    // Aloitusnäkymässä ei ole toimintoja: avausteksti hoitaa kehotuksen,
+    // ja tyhjä kortti vain veisi tilaa kartalta.
     if (game.phase === 'pickstart') {
-      this.turnStatus.textContent = '';
-      this.hint.textContent = '';
       this.turnCard.hidden = true;
       return;
     }
     this.turnCard.hidden = false;
 
-    if (p.isBot) {
-      this.turnStatus.textContent = `${p.name} miettii…`;
-      this.hint.textContent = '';
+    /*
+     * Botin vuoro, siirtovaihe, tapahtuma ja tietovisa: kortissa ei ole
+     * nappeja eikä tekstiä. Ennen näissä kirjoitettiin tilariville
+     * ("Heitit 4 — valitse kohde kartalta", "Matkalla sattui jotain"),
+     * mutta kortti kelluu kartan päällä, joten teksti oli tekstiä kartan
+     * päällä — ja juuri se poistui (omistaja 13.8.2026). Siirtovaiheessa
+     * kehotuksen kertovat kartan korostetut kohteet; jos pelaaja jää
+     * pitkäksi aikaa paikalleen, pöllö vinkkaa (paivitaValintavihje).
+     */
+    if (p.isBot || game.phase === 'move' || game.phase === 'event' || game.phase === 'quiz') {
       return;
     }
 
-    if (game.phase === 'move') {
-      // Tilarivi kertoo jo "valitse kohde kartalta" — erillinen kupla
-      // ylhäällä olisi sama kehotus kahdesti ja jäisi päiväkirjan päälle.
-      this.turnStatus.textContent = `Heitit ${game.die} — valitse kohde kartalta.`;
-      this.hint.textContent = '';
-      return;
-    }
-
-    if (game.phase === 'event') {
-      this.turnStatus.textContent = 'Matkalla sattui jotain.';
-      this.hint.textContent = '';
-      return;
-    }
-    if (game.phase === 'quiz') {
-      this.turnStatus.textContent = 'Tietovisa käynnissä.';
-      this.hint.textContent = '';
-      return;
-    }
-
-    this.hint.textContent = '';
     const modes = game.travelModes();
 
     // Saapuminen aarrekaupunkiin kerrotaan keskelle ruutua omana korttinaan;
     // valinta tehdään siellä, joten toimintopaneeliin ei tule nappeja.
     if (game.phase === 'offer') {
-      const city = game.cityOf();
-      this.turnStatus.textContent = `${city.name} — saavuit perille.`;
-      this.openArrival(city);
+      this.openArrival(game.cityOf());
       return;
     }
 
@@ -6421,11 +6556,9 @@ export class UI {
       // Kun matkustustapa valittiin automaattisesti, ei ole valittavaa eikä
       // mihin palata: noppa pyörähtää itsestään.
       if (game.autoTravel) {
-        this.turnStatus.textContent = `${TRAVEL_LABEL[game.travelMode]} — noppa pyörähtää.`;
         this.autoRoll();
         return;
       }
-      this.turnStatus.textContent = `${TRAVEL_LABEL[game.travelMode]} — heitä noppa.`;
       /*
        * Nopanheitto ja matkustustavan vaihto ovat monitoiminapin
        * liu'ussa kuten muutkin matkustustoiminnot (omistajan linjaus
@@ -6492,12 +6625,9 @@ export class UI {
       /*
        * OTSIKKORIVI POIS (omistajan päätös 12.8.2026): kolme
        * matkanappia kertovat itse mitä valitaan, eikä "Valitse
-       * matkustustapa." lisää siihen mitään. Tilarivi tyhjennetään
-       * eikä poisteta — vaiheen B valikot ja nopanheitto kirjoittavat
-       * siihen yhä oman tekstinsä.
+       * matkustustapa." lisää siihen mitään. Koko tilarivi poistui
+       * 13.8.2026 — kartan päälle ei kirjoiteta mitään.
        */
-      this.turnStatus.textContent = '';
-
       // Jalan. Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
       // pelin estetyissä napeissa (vrt. vertailunappi).
       const landBtn = this.iconButton('saapas', 'Jalan',
@@ -6527,13 +6657,10 @@ export class UI {
     const meri = this.travelSuodatin !== 'air';
     const ilma = this.travelSuodatin !== 'sea';
     /*
-     * Laivalistassa on vain yksi nappi (määränpää valitaan kartalta
-     * nopanheiton jälkeen), joten tilarivi ei kysy "mihin" — se kertoo
-     * mitä valitaan. Lentolistassa kohteet ovat nimeltä, joten siinä
-     * kysymys on paikallaan.
+     * Listan yläpuolella oli ennen kysymysrivi ("Minne lennetään?").
+     * Se on poistettu muun kartanpäällisen tekstin mukana: napit
+     * kertovat itse, mihin ne vievät.
      */
-    this.turnStatus.textContent = meri && ilma ? 'Laivalla, lentäen vai portin kautta?'
-      : (meri ? 'Laivalla merten yli.' : 'Minne lennetään?');
 
     if (meri && modes.includes('sea')) {
       const seaBtn = this.ikoniTekstiNappi('purje', `Laivalla (${SEA_FARE} p)`, 'wide');
@@ -6781,6 +6908,55 @@ export class UI {
     this.toimintoRivi = rivi;
     polloAnkkuri(polloPaikka);
     this.kytkeLiukuSulku();
+  }
+
+  /**
+   * PÖLLÖ VINKKAA, JOS VALINTA JÄÄ TEKEMÄTTÄ (omistajan toive
+   * 13.8.2026: *"Pöllö voi tarpeen mukaan vinkata, jos pelaaja ei osaa
+   * painaa mitään nappia."*).
+   *
+   * Siirtovaiheessa peli odottaa napautusta kartalta eikä kartan päällä
+   * ole enää ohjetekstiä. Jos kartalla ei tapahdu mitään
+   * VALINTAVIHJEEN_VIIVE:n verran, pöllönapin viereen ilmestyy kiinteä
+   * vihjekupla — ei tekoälykutsua, ei ääntä, ei keskustelun avausta.
+   *
+   * Kerran vuorossa: kartan kosketus tai valinta vie kuplan pois, eikä
+   * ajastinta viritetä uudelleen ennen kuin vaihe on käynyt muualla
+   * (valintavihjeVaihe pysyy tosi koko siirtovaiheen ajan).
+   */
+  paivitaValintavihje() {
+    const { game } = this;
+    const odottaaValintaa = game.phase === 'move' && !game.player?.isBot
+      && !this.katselu && !this.busy && !this.radioPaalla();
+    if (!odottaaValintaa) {
+      if (this.valintavihjeVaihe) this.peruValintavihje();
+      this.valintavihjeVaihe = false;
+      return;
+    }
+    if (this.valintavihjeVaihe) return; // sama vuoro: ajastin on jo käynyt
+    this.valintavihjeVaihe = true;
+    this.valintavihjeAjastin = setTimeout(() => {
+      this.valintavihjeAjastin = null;
+      if (this.dead || this.game.phase !== 'move' || this.game.player?.isBot) return;
+      polloVihje(VALINTAVIHJEEN_TEKSTI);
+    }, this.valintavihjeViive);
+  }
+
+  /** Vihjekupla ja sen ajastin pois. */
+  peruValintavihje() {
+    clearTimeout(this.valintavihjeAjastin);
+    this.valintavihjeAjastin = null;
+    polloVihjePois();
+  }
+
+  /**
+   * Kartalla tapahtui jotain: vihje ei ole enää tarpeen eikä se palaa
+   * samassa vuorossa. Kutsutaan kartan osoitin- ja kosketuseleistä
+   * (asennaPanorointi).
+   */
+  kartallaKosketettu() {
+    if (!this.valintavihjeVaihe) return;
+    this.peruValintavihje();
   }
 
   /** Monitoiminapin napautus: liuku auki tai kiinni. */
@@ -7677,6 +7853,9 @@ export class UI {
     // Linssit tahdistetaan joka piirrossa, mutta työ tehdään vasta kun
     // jokin oikeasti muuttui: uusi löytö, uusi lauta tai uusi kerros.
     void this.paivitaLinssit();
+    // Odottaako peli valintaa kartalta? Jos odottaa eikä mitään tapahdu,
+    // pöllö vinkkaa hetken kuluttua.
+    this.paivitaValintavihje();
 
     if (this.game.phase === 'over') {
       this.showWinner();
@@ -15420,9 +15599,8 @@ export class UI {
 
   async animateDie(value) {
     if (!value) return;
-    this.dieEl.hidden = true;
-    this.turnStatus.textContent = 'Noppa pyörii…';
-
+    // Silmäluku kerrotaan vain laudalle jäävällä nopalla — ei tekstinä
+    // kartan päällä (ks. renderActions).
     const player = this.game.player;
     this.dieJitter = { x: (Math.random() - 0.5) * 0.06, y: (Math.random() - 0.5) * 0.05 };
     const from = this.mapToPane(pixelOf(this.game.board, player.pos));
@@ -15435,7 +15613,6 @@ export class UI {
       onLand: () => sfx.play('dieLand'),
       onBounce: () => sfx.play('clack'),
     }));
-    this.turnStatus.textContent = `Heitit ${value} — valitse kohde kartalta.`;
     await this.wait(this.reducedMotion ? 0 : 260);
   }
 

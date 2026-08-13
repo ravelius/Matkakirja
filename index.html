@@ -233,7 +233,14 @@
       <section class="map-pane">
         <svg id="board" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet"
              role="img" aria-label="Afrikan aarrekartta"></svg>
-        <div id="board-hint" class="board-hint"></div>
+        <!--
+          KARTAN PÄÄLLÄ EI OLE OHJETEKSTIÄ (omistajan linjaus 13.8.2026:
+          *"kartan päälle ei tule enää mitään ohjetekstiä"*). Tässä oli
+          #board-hint eli kartan oma ohjerivi; se ja vuorolaatikon
+          tilarivi ("Heitit 4 — valitse kohde kartalta") on poistettu
+          kokonaan. Kehotus luetaan kartalta: valittavat kohteet
+          korostuvat renkailla, ja niitä napautetaan.
+        -->
         <!--
           Zoomipainikkeet (omistajan toive): kartan lähentäminen ei saa
           jäädä sormieleiden varaan, vaan sen pitää onnistua samalla
@@ -335,11 +342,14 @@
           </button>
         </section>
 
+        <!--
+          Vuorolaatikossa on vain napit. Tilarivi (#turn-status) ja sen
+          vieressä maannut vanha silmälukunoppa (#die) poistuivat
+          13.8.2026: kortti kelluu kartan päällä, ja jokainen sen kautta
+          näytetty ohje- tai tilateksti oli tekstiä kartan päällä.
+          Silmäluku näkyy laudalle jäävässä nopassa (js/die.js).
+        -->
         <section class="card turn-card">
-          <div class="turn-row">
-            <div id="die" class="die" hidden></div>
-            <div id="turn-status" class="turn-status"></div>
-          </div>
           <div id="actions" class="actions"></div>
           <div id="error" class="error" hidden></div>
         </section>

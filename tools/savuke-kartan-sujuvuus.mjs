@@ -303,6 +303,141 @@ vaadi('ensitarkistus korjaa mittakaavan alle sekunnissa',
 vaadi('ensitarkistuksen jälkeen tarkkuussuhde on 1,00',
   ensiSuhde !== null && Math.abs(ensiSuhde - 1) <= 0.02, String(ensiSuhde));
 
+/*
+ * 8) MAAN ÄÄRIVIIVA piirtyy uuteen maahan saavuttaessa (omistajan
+ * tilaus 13.8.2026) — mutta EI samaan maahan palatessa, eikä animaatio
+ * saa pakottaa kartan uudelleenrasterointia. Jälkimmäinen on tämän
+ * savukkeen ydinasia: kartan päällä pyörivä animaatio on juuri se
+ * tilanne, jossa tökkiminen ennen näkyi.
+ */
+const maat = await sivu.evaluate(() => {
+  const { game } = window.matkakirja;
+  const map = game.pack.map;
+  const oma = map.cityCountry?.[game.cityOf().id];
+  const kaupungit = game.board.cities;
+  return {
+    oma,
+    toisessa: kaupungit.find((c) => map.cityCountry?.[c.id] && map.cityCountry[c.id] !== oma)?.id,
+  };
+});
+vaadi('laudalta löytyy toisen maan kaupunki vertailua varten',
+  Boolean(maat.toisessa), JSON.stringify(maat));
+
+const piirto = await sivu.evaluate(async (kohde) => {
+  const { game, ui } = window.matkakirja;
+  game.actionKehittajaSiirto(kohde);
+  ui.render();
+  await new Promise((r) => setTimeout(r, 250));
+  const kerros = document.querySelector('.country-borders');
+  const polut = [...kerros.querySelectorAll('.country-korostus')];
+  return {
+    piirtyy: kerros.classList.contains('maa-piirtyy'),
+    polkuja: polut.length,
+    // Jokaisella polulla on OMA pituutensa viiva-aukkokuviona: saaristo
+    // piirtyy rinnakkain eikä jonossa.
+    omatPituudet: polut.every((p) => parseFloat(p.style.strokeDasharray) > 0),
+    animaatioita: polut.reduce((n, p) => n + (p.getAnimations?.().length ?? 0), 0),
+  };
+}, maat.toisessa);
+vaadi('uuteen maahan saavuttaessa ääriviiva alkaa piirtyä',
+  piirto.piirtyy === true && piirto.animaatioita > 0, JSON.stringify(piirto));
+vaadi('jokainen rengas on oma polkunsa omalla pituudellaan',
+  piirto.polkuja > 0 && piirto.omatPituudet === true, JSON.stringify(piirto));
+
+
+const valahdys = await sivu.evaluate(async () => {
+  const kerros = document.querySelector('.country-borders');
+  // Piirto kestää kaksi sekuntia; välähdys odotetaan sen perään.
+  let nahty = false;
+  let leveys = 0;
+  for (let i = 0; i < 40 && !nahty; i++) {
+    if (kerros.classList.contains('maa-valahtaa')) {
+      nahty = true;
+      leveys = parseFloat(getComputedStyle(kerros.querySelector('.country-korostus')).strokeWidth);
+    }
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((r) => setTimeout(r, 50));
+  }
+  await new Promise((r) => setTimeout(r, 1200));
+  const polku = kerros.querySelector('.country-korostus');
+  return {
+    nahty,
+    leveysValahdyksessa: leveys,
+    ohi: !kerros.classList.contains('maa-valahtaa'),
+    // Viiva-aukkokuvio siivotaan lopuksi: viiva jää yhtenäiseksi.
+    dashLopussa: polku?.style.strokeDasharray ?? '',
+    leveysLopussa: parseFloat(getComputedStyle(polku).strokeWidth),
+  };
+});
+vaadi('piirron valmistuttua viiva välähtää kerran',
+  valahdys.nahty === true, JSON.stringify(valahdys));
+vaadi('välähdyksessä viiva on selvästi paksumpi',
+  valahdys.leveysValahdyksessa > valahdys.leveysLopussa * 1.3, JSON.stringify(valahdys));
+vaadi('välähdys häipyy takaisin rajaviivan sävyyn ja mittaan',
+  valahdys.ohi === true && Math.abs(valahdys.leveysLopussa - 3) < 0.2
+  && valahdys.dashLopussa === '', JSON.stringify(valahdys));
+
+const samaMaa = await sivu.evaluate(async () => {
+  const { game, ui } = window.matkakirja;
+  const map = game.pack.map;
+  const nyt = game.cityOf();
+  const oma = map.cityCountry?.[nyt.id];
+  // Naapurikaupunki SAMASTA maasta — tai sama kaupunki, jos toista ei ole.
+  const kohde = game.board.cities.find((c) => c.id !== nyt.id
+    && map.cityCountry?.[c.id] === oma)?.id ?? nyt.id;
+  // countryKey nollataan, jotta kerros oikeasti piirretään uudelleen —
+  // juuri se on se tilanne, jossa animaatio EI saa käynnistyä. Sama
+  // tilanne syntyy pelin latauksessa ja laudan uudelleenpiirrossa.
+  ui.countryKey = null;
+  if (kohde !== nyt.id) game.actionKehittajaSiirto(kohde);
+  ui.render();
+  await new Promise((r) => setTimeout(r, 250));
+  const kerros = document.querySelector('.country-borders');
+  return {
+    maa: oma,
+    kohde,
+    piirtyy: kerros.classList.contains('maa-piirtyy'),
+    dash: kerros.querySelector('.country-korostus')?.style.strokeDasharray ?? '',
+  };
+});
+vaadi('samaan maahan palatessa ääriviivaa ei piirretä uudelleen',
+  samaMaa.piirtyy === false && samaMaa.dash === '', JSON.stringify(samaMaa));
+
+/*
+ * Rasterointi mitataan ERIKSEEN eristetyllä animaatiolla: pelkkä
+ * maanvaihto liikuttaa myös karttaa (uusi kaupunki keskelle), ja sen
+ * ruudut sekoittuisivat mittaukseen. Tässä pelaaja pysyy paikallaan ja
+ * vain ääriviiva piirretään uudestaan — jos kartta silti rasteroituu,
+ * syy on animaatiossa.
+ */
+await sivu.waitForTimeout(1500);
+// Vertailuluku: yhtä pitkä lepojakso ilman animaatiota. Kartta täydentää
+// ruutujaan joutohetkinä muutenkin, joten pelkkä ruutujen määrä ei
+// kertoisi mitään ilman tätä.
+await nollaa();
+await sivu.waitForTimeout(1500);
+const lepo = await mittarit();
+await nollaa();
+const eristetty = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  ui.countryKey = null;
+  ui.viimeMaa = 'savuke:XXX'; // eri maa kuin nykyinen → animaatio käynnistyy
+  ui.render();
+  await new Promise((r) => setTimeout(r, 250));
+  return {
+    piirtyy: document.querySelector('.country-borders').classList.contains('maa-piirtyy'),
+  };
+});
+await sivu.waitForTimeout(1500);
+const animaationAikana = await mittarit();
+vaadi('eristetty ääriviiva-animaatio käynnistyy', eristetty.piirtyy === true,
+  JSON.stringify(eristetty));
+vaadi('ääriviiva-animaatio ei pakota uudelleenrasterointia',
+  animaationAikana.pakotus === 0, JSON.stringify(animaationAikana));
+vaadi('ääriviiva-animaatio ei lisää rasterointia levon yli',
+  animaationAikana.aloitukset <= lepo.aloitukset,
+  `animaatio ${animaationAikana.aloitukset}, lepo ${lepo.aloitukset}`);
+
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
 await selain.close();
