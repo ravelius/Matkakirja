@@ -47,10 +47,26 @@ const MIN_PISTEITA = 4;
 const SIETO = 1.2;        // harvennuksen sallima poikkeama lautayksikköinä
 
 /*
- * Lisättävät maat: suomenkielinen nimi, fi-wikipedian artikkeli ja
- * Commonsin lipputiedosto (kaikki tarkistettu Commonsista ja
- * fi.wikipediasta 13.8.2026). "Pohjois-Korea" on uudelleenohjaus kuten
- * olemassa oleva "Etelä-Korea" — artikkelinäkymä seuraa ohjauksen.
+ * Lisättävät maat: suomenkielinen nimi, fi-wikipedian artikkeli,
+ * Commonsin lipputiedosto ja valinnaiset maakohtaiset asetukset
+ * (kaikki nimet ja liput tarkistettu Commonsista ja fi.wikipediasta
+ * 13.8.2026). "Pohjois-Korea" ja "Salomonsaaret" ovat
+ * uudelleenohjauksia kuten olemassa oleva "Etelä-Korea" —
+ * artikkelinäkymä seuraa ohjauksen.
+ *
+ * Asetukset:
+ *   minKoko  renkaan pienin leveys tai korkeus (oletus MIN_KOKO);
+ *            isoilla saaristomailla suurempi, ettei paketti paisu
+ *   sieto    harvennuksen toleranssi (oletus SIETO); vuonorannikot
+ *            (Kanada, Grönlanti, Chile) karsitaan rohkeammin
+ *   sade     pisin sallittu etäisyys keskuksesta lautayksikköinä —
+ *            Saint Helenan kortti näyttää saaren, ei koko Atlanttia
+ *            (NE:n SHN sisältää myös Ascensionin)
+ *   lisaksi  NE:n erilliset alueet, jotka kuuluvat maan muotoon,
+ *            koska laudan kaupunki on siellä: San Juan on Puerto
+ *            Ricossa (NE:ssä oma piirre PRI, suvereniteetti US1) ja
+ *            Norfolkinsaari on NE:ssä NFK (AU1). Ei rajatulkintaa —
+ *            suvereniteetti luetaan NE:stä sellaisenaan.
  */
 const MAAT = {
   ARM: ['Armenia', 'Armenia', 'Flag of Armenia.svg'],
@@ -64,14 +80,58 @@ const MAAT = {
   PRK: ['Pohjois-Korea', 'Pohjois-Korea', 'Flag of North Korea.svg'],
   TJK: ['Tadžikistan', 'Tadžikistan', 'Flag of Tajikistan.svg'],
   TKM: ['Turkmenistan', 'Turkmenistan', 'Flag of Turkmenistan.svg'],
+  // Eurooppa
+  ALB: ['Albania', 'Albania', 'Flag of Albania.svg'],
+  BEL: ['Belgia', 'Belgia', 'Flag of Belgium (civil).svg'],
+  BLR: ['Valko-Venäjä', 'Valko-Venäjä', 'Flag of Belarus.svg'],
+  LUX: ['Luxemburg', 'Luxemburg', 'Flag of Luxembourg.svg'],
+  MDA: ['Moldova', 'Moldova', 'Flag of Moldova.svg'],
+  MKD: ['Pohjois-Makedonia', 'Pohjois-Makedonia', 'Flag of North Macedonia.svg'],
+  MNE: ['Montenegro', 'Montenegro', 'Flag of Montenegro.svg'],
+  SRB: ['Serbia', 'Serbia', 'Flag of Serbia.svg'],
+  SVK: ['Slovakia', 'Slovakia', 'Flag of Slovakia.svg'],
+  SVN: ['Slovenia', 'Slovenia', 'Flag of Slovenia.svg'],
+  // Aasia ja Atlantti: pienet mutta kaupungilliset — pilleri ja
+  // Tutki-palsta tarvitsevat muodon, pieni rengas riittää.
+  HKG: ['Hongkong', 'Hongkong', 'Flag of Hong Kong.svg', { minKoko: 0, sieto: 0.3 }],
+  SGP: ['Singapore', 'Singapore', 'Flag of Singapore.svg', { minKoko: 0, sieto: 0.3 }],
+  SHN: ['Saint Helena', 'Saint Helena', 'Flag of Saint Helena.svg', { minKoko: 0, sieto: 0.3, sade: 200 }],
+  TLS: ['Itä-Timor', 'Itä-Timor', 'Flag of East Timor.svg'],
+  // Amerikat
+  ARG: ['Argentiina', 'Argentiina', 'Flag of Argentina.svg', { sieto: 2 }],
+  BOL: ['Bolivia', 'Bolivia', 'Flag of Bolivia.svg'],
+  BRA: ['Brasilia', 'Brasilia', 'Flag of Brazil.svg', { sieto: 2 }],
+  CAN: ['Kanada', 'Kanada', 'Flag of Canada.svg', { minKoko: 50, sieto: 6 }],
+  CHL: ['Chile', 'Chile', 'Flag of Chile.svg', { minKoko: 15, sieto: 3 }],
+  COL: ['Kolumbia', 'Kolumbia', 'Flag of Colombia.svg'],
+  CUB: ['Kuuba', 'Kuuba', 'Flag of Cuba.svg'],
+  ECU: ['Ecuador', 'Ecuador', 'Flag of Ecuador.svg'],
+  GRL: ['Grönlanti', 'Grönlanti', 'Flag of Greenland.svg', { minKoko: 50, sieto: 6 }],
+  GTM: ['Guatemala', 'Guatemala', 'Flag of Guatemala.svg'],
+  MEX: ['Meksiko', 'Meksiko', 'Flag of Mexico.svg', { sieto: 2 }],
+  NIC: ['Nicaragua', 'Nicaragua', 'Flag of Nicaragua.svg'],
+  PAN: ['Panama', 'Panama', 'Flag of Panama.svg'],
+  PER: ['Peru', 'Peru', 'Flag of Peru.svg'],
+  URY: ['Uruguay', 'Uruguay', 'Flag of Uruguay.svg'],
+  USA: ['Yhdysvallat', 'Yhdysvallat', 'Flag of the United States.svg', { minKoko: 25, sieto: 4, lisaksi: ['PRI'] }],
+  VEN: ['Venezuela', 'Venezuela', 'Flag of Venezuela.svg'],
+  // Oseania
+  AUS: ['Australia', 'Australia', 'Flag of Australia.svg', { minKoko: 15, sieto: 2, lisaksi: ['NFK'] }],
+  FJI: ['Fidži', 'Fidži', 'Flag of Fiji.svg'],
+  NZL: ['Uusi-Seelanti', 'Uusi-Seelanti', 'Flag of New Zealand.svg', { sieto: 1.6 }],
+  PNG: ['Papua-Uusi-Guinea', 'Papua-Uusi-Guinea', 'Flag of Papua New Guinea.svg', { sieto: 1.6 }],
+  SLB: ['Salomonsaaret', 'Salomonsaaret', 'Flag of the Solomon Islands.svg'],
+  VUT: ['Vanuatu', 'Vanuatu', 'Flag of Vanuatu.svg'],
 };
 
 /*
  * Mihin kohtaan COUNTRY_SHAPES-lohkoa kukin maa kirjoitetaan. Lohko on
- * rakennejärjestyksessä (Eurooppa, Afrikka, Lähi-itä, Aasia), joten
- * uudet maat menevät naapureidensa viereen, kukin ryhmä aakkosissa:
- * Kaukasia Irakin perään, Pohjois-Korea Etelä-Korean perään ja niin
- * edelleen.
+ * rakennejärjestyksessä (Eurooppa, Afrikka, Lähi-itä, Aasia, ...),
+ * joten uudet maat menevät naapureidensa viereen tai oman alueensa
+ * ryhmäksi, kukin ryhmä aakkosissa: Kaukasia Irakin perään,
+ * Pohjois-Korea Etelä-Korean perään, Amerikat ja Oseania omiksi
+ * lohkoikseen loppuun ja niin edelleen. Käsitellään järjestyksessä,
+ * joten ankkuri saa olla myös samalla ajolla kirjoitettu maa (VEN).
  */
 const ANKKURIT = [
   ['IRQ', ['ARM', 'AZE', 'GEO']],
@@ -79,6 +139,13 @@ const ANKKURIT = [
   ['VNM', ['KHM', 'LAO']],
   ['NPL', ['BGD', 'BTN']],
   ['UZB', ['KGZ', 'TJK', 'TKM']],
+  ['DNK', ['ALB', 'BEL', 'BLR', 'LUX', 'MDA', 'MKD', 'MNE', 'SRB', 'SVK', 'SVN']],
+  ['MDG', ['SHN']],
+  ['CHN', ['HKG']],
+  ['MYS', ['SGP']],
+  ['IDN', ['TLS']],
+  ['TKM', ['ARG', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CUB', 'ECU', 'GRL', 'GTM', 'MEX', 'NIC', 'PAN', 'PER', 'URY', 'USA', 'VEN']],
+  ['VEN', ['AUS', 'FJI', 'NZL', 'PNG', 'SLB', 'VUT']],
 ];
 
 const { MAAILMANKARTTA } = await import(`file://${join(JUURI, 'js/packs/maailmankartta.js')}`);
@@ -211,9 +278,79 @@ function harvenna(pisteet, sieto) {
   ];
 }
 
+/*
+ * Päivämäärärajalla katkaistujen renkaiden liitos (vrt.
+ * tools/yhdista-paivamaararaja.mjs). Natural Earth on leikattu 180.
+ * pituuspiirillä; Fidžin saaret jatkuvat sen yli ja olisivat muuten
+ * kahtena monikulmiona, joiden välissä näkyisi pystyviiva keskellä
+ * saarta. Leikkauksen jälki on yksikäsitteinen: kaksi rengasta, joissa
+ * on TÄSMÄLLEEN sama pystysuora jana vastakkaisiin suuntiin
+ * kuljettuna. Pituusvaatimusta ei ole — Fidžin leikkausjanat ovat
+ * lyhyitä — mutta parivaatimus estää luonnollisen pystyrannikon
+ * virheliitoksen.
+ */
+function liitaKatkaistut(renkaat) {
+  const SIETO_X = 0.6;
+  const jana = (rengas) => {
+    const ulos = [];
+    for (let k = 1; k < rengas.length; k++) {
+      const [x1, y1] = rengas[k - 1];
+      const [x2, y2] = rengas[k];
+      if (Math.abs(x1 - x2) > SIETO_X) continue;
+      if (Math.abs(y1 - y2) < 2) continue;
+      ulos.push({ kohta: k - 1, x: x1, ya: y1, yb: y2 });
+    }
+    return ulos;
+  };
+  // Rengas auki leikkausjanan kohdalta: kierretään niin, että jana on
+  // lopussa, ja pudotetaan se pois (sama kuin yhdista-paivamaararaja).
+  const avaa = (rengas, kohta) => {
+    const suljettu = rengas[0][0] === rengas.at(-1)[0] && rengas[0][1] === rengas.at(-1)[1];
+    const pisteet = suljettu ? rengas.slice(0, -1) : rengas.slice();
+    const n = pisteet.length;
+    const ulos = [];
+    for (let i = 1; i < n; i++) ulos.push(pisteet[(kohta + 1 + i) % n]);
+    ulos.unshift(pisteet[(kohta + 1) % n]);
+    return ulos;
+  };
+  let taas = true;
+  while (taas) {
+    taas = false;
+    ulko: for (let i = 0; i < renkaat.length; i++) {
+      for (const a of jana(renkaat[i])) {
+        for (let k = i + 1; k < renkaat.length; k++) {
+          for (const b of jana(renkaat[k])) {
+            if (Math.abs(a.x - b.x) > SIETO_X) continue;
+            if (Math.abs(a.ya - b.yb) > 2 || Math.abs(a.yb - b.ya) > 2) continue;
+            const liitos = [...avaa(renkaat[i], a.kohta), ...avaa(renkaat[k], b.kohta)];
+            liitos.push([...liitos[0]]);
+            renkaat.splice(k, 1);
+            renkaat.splice(i, 1, liitos);
+            taas = true;
+            continue ulko;
+          }
+        }
+      }
+    }
+  }
+  return renkaat;
+}
+
+/** Onko piste renkaan sisällä? Säteenheitto laudan tasossa. */
+const sisalla = ([px, py], rengas) => {
+  let osuu = false;
+  for (let i = 0, j = rengas.length - 1; i < rengas.length; j = i++) {
+    const [xi, yi] = rengas[i];
+    const [xj, yj] = rengas[j];
+    if ((yi > py) !== (yj > py) && px < ((xj - xi) * (py - yi)) / (yj - yi) + xi) osuu = !osuu;
+  }
+  return osuu;
+};
+
 // --- maat ----------------------------------------------------------------------
 
 const nykyiset = MAAILMANKARTTA.map.countryShapes ?? {};
+const cityCountry = MAAILMANKARTTA.map.cityCountry ?? {};
 const data = JSON.parse(readFileSync(LAHDE, 'utf8'));
 const piirteet = new Map();
 for (const f of data.features) {
@@ -223,39 +360,92 @@ for (const f of data.features) {
 
 const uudet = {};
 let renkaita = 0;
-for (const [iso, [nimi, wiki, lippu]] of Object.entries(MAAT)) {
+let pisteitaKaikkiaan = 0;
+for (const [iso, [nimi, wiki, lippu, asetukset = {}]] of Object.entries(MAAT)) {
   if (nykyiset[iso]) { console.log(`${iso} on jo laudalla — ohitetaan`); continue; }
   const f = piirteet.get(iso);
   if (!f) throw new Error(`${iso} ei ole Natural Earthissa`);
-
-  const geo = f.geometry;
-  const monet = geo.type === 'Polygon' ? [geo.coordinates] : geo.coordinates;
-  const renkaat = [];
-  for (const monikko of monet) {
-    // Vain ulkoreuna: reiät (järvet) eivät näy tässä mittakaavassa.
-    const rengas = viivaLaudalle(monikko[0]);
-    const xs = rengas.map(([x]) => x);
-    const ys = rengas.map(([, y]) => y);
-    const leveys = Math.max(...xs) - Math.min(...xs);
-    const korkeus = Math.max(...ys) - Math.min(...ys);
-    if (leveys < MIN_KOKO && korkeus < MIN_KOKO) continue;
-    const harva = harvenna(rengas, SIETO);
-    if (harva.length < MIN_PISTEITA) continue;
-    renkaat.push(harva);
-  }
-  if (!renkaat.length) throw new Error(`${iso}: ei riittävän isoa rengasta`);
+  const minKoko = asetukset.minKoko ?? MIN_KOKO;
+  const sieto = asetukset.sieto ?? SIETO;
 
   /*
    * Keskus on nimen paikka minikartalla. Natural Earthin LABEL_X/Y on
-   * kartografin asettama ja parempi kuin laskettu keskipiste.
+   * kartografin asettama ja parempi kuin laskettu keskipiste. Se
+   * lasketaan ENNEN renkaita, koska renkaat keskitetään sen ympärille.
    */
-  const keskus = Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y)
+  let keskus = Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y)
     ? viivaLaudalle([[f.properties.LABEL_X, f.properties.LABEL_Y]])[0]
-    : (() => {
-      const xs = renkaat.flat().map(([x]) => x);
-      const ys = renkaat.flat().map(([, y]) => y);
-      return [luku((Math.min(...xs) + Math.max(...xs)) / 2), luku((Math.min(...ys) + Math.max(...ys)) / 2)];
-    })();
+    : null;
+
+  // Maan omat kaupungit laudalla: saari, jolla on pysäkki, säilyy
+  // vaikka olisi kuinka pieni (Robinson Crusoe, Galápagos, Hawaii) —
+  // muuten kaupunki jäisi seisomaan tyhjän meren päälle.
+  const omatKaupungit = MAAILMANKARTTA.cities.filter((c) => cityCountry[c.id] === iso);
+
+  const piirreLista = [f, ...(asetukset.lisaksi ?? []).map((extra) => {
+    const lisa = piirteet.get(extra);
+    if (!lisa) throw new Error(`${iso}: lisäaluetta ${extra} ei ole Natural Earthissa`);
+    return lisa;
+  })];
+  const monet = piirreLista.flatMap((piirre) => (piirre.geometry.type === 'Polygon'
+    ? [piirre.geometry.coordinates] : piirre.geometry.coordinates));
+  let raakile = [];
+  for (const monikko of monet) {
+    // Vain ulkoreuna: reiät (järvet) eivät näy tässä mittakaavassa.
+    let rengas = viivaLaudalle(monikko[0]);
+    /*
+     * Kiertävällä laudalla rengas voi päätyä eri kierrokselle kuin
+     * maan keskus: Aleutit jatkuvat sauman (175°W) yli ja putoaisivat
+     * muuten kartan oikeaan laitaan Alaskan ollessa vasemmalla.
+     * Siirretään rengas sille kierrokselle, jolla se on lähimpänä
+     * keskusta — piirtäjä toistaa kartan molemmin puolin, joten
+     * negatiivinenkin x osuu naapurikopioon.
+     */
+    if (keskus) {
+      const keskiX = rengas.reduce((s, [x]) => s + x, 0) / rengas.length;
+      const siirto = Math.round((keskus[0] - keskiX) / LEVEYS) * LEVEYS;
+      if (siirto) rengas = rengas.map(([x, y]) => [luku(x + siirto), y]);
+    }
+    raakile.push(rengas);
+  }
+  raakile = liitaKatkaistut(raakile);
+
+  const renkaat = [];
+  for (const rengas of raakile) {
+    const xs = rengas.map(([x]) => x);
+    const ys = rengas.map(([, y]) => y);
+    if (asetukset.sade && keskus) {
+      const kx = (Math.max(...xs) + Math.min(...xs)) / 2;
+      const ky = (Math.max(...ys) + Math.min(...ys)) / 2;
+      if (Math.hypot(kx - keskus[0], ky - keskus[1]) > asetukset.sade) continue;
+    }
+    const leveys = Math.max(...xs) - Math.min(...xs);
+    const korkeus = Math.max(...ys) - Math.min(...ys);
+    /*
+     * Pakollinen rengas: laudan kaupunki on sen sisällä TAI aivan sen
+     * vieressä. Läheisyys tarvitaan, koska satamakaupungit on
+     * siirretty käsin rannalle ja pieni saarikaupunki (Honolulu,
+     * Kap Horn) voi seistä hiuksenhienosti renkaansa ulkopuolella —
+     * ilman sitä saari karsiutuisi ja kaupunki jäisi tyhjän meren
+     * päälle.
+     */
+    const laatikossa = ([px, py]) => px > Math.min(...xs) - 12 && px < Math.max(...xs) + 12
+      && py > Math.min(...ys) - 12 && py < Math.max(...ys) + 12;
+    const pakollinen = omatKaupungit.some((c) => [c.x, c.x - LEVEYS, c.x + LEVEYS]
+      .some((x) => sisalla([x, c.y], rengas)
+        || ((leveys < 60 && korkeus < 60) && laatikossa([x, c.y]))));
+    if (!pakollinen && leveys < minKoko && korkeus < minKoko) continue;
+    const harva = harvenna(rengas, pakollinen ? Math.min(sieto, SIETO) / 2 : sieto);
+    if (!pakollinen && harva.length < MIN_PISTEITA) continue;
+    renkaat.push(harva.length < MIN_PISTEITA ? rengas : harva);
+  }
+  if (!renkaat.length) throw new Error(`${iso}: ei riittävän isoa rengasta`);
+
+  if (!keskus) {
+    const xs = renkaat.flat().map(([x]) => x);
+    const ys = renkaat.flat().map(([, y]) => y);
+    keskus = [luku((Math.min(...xs) + Math.max(...xs)) / 2), luku((Math.min(...ys) + Math.max(...ys)) / 2)];
+  }
 
   const xs = renkaat.flat().map(([x]) => x);
   uudet[iso] = {
@@ -268,10 +458,26 @@ for (const [iso, [nimi, wiki, lippu]] of Object.entries(MAAT)) {
   };
   renkaita += renkaat.length;
   const pisteita = renkaat.reduce((s, r) => s + r.length, 0);
-  console.log(`${iso}  ${nimi.padEnd(16)} ${renkaat.length} rengasta, ${pisteita} pistettä, `
-    + `keskus [${keskus.join(', ')}]`);
+  pisteitaKaikkiaan += pisteita;
+  console.log(`${iso}  ${nimi.padEnd(18)} ${String(renkaat.length).padStart(3)} rengasta, `
+    + `${String(pisteita).padStart(5)} pistettä, keskus [${keskus.join(', ')}]`);
 }
-console.log(`\n${Object.keys(uudet).length} maata, ${renkaita} rengasta.`);
+console.log(`\n${Object.keys(uudet).length} maata, ${renkaita} rengasta, ${pisteitaKaikkiaan} pistettä.`);
+
+// Tarkistus: kaupungin pitää osua oman maansa rajojen sisään (kierto
+// huomioiden). Poikkeamat raportoidaan, ei kaadeta — esimerkiksi
+// San Juan on Puerto Ricossa, joka on NE:ssä oma alueensa (PRI).
+const ohi = [];
+for (const c of MAAILMANKARTTA.cities) {
+  const iso = cityCountry[c.id];
+  const maa = iso && uudet[iso];
+  if (!maa) continue;
+  const kohdat = [c.x, c.x - LEVEYS, c.x + LEVEYS];
+  if (!maa.renkaat.some((r) => kohdat.some((x) => sisalla([x, c.y], r)))) {
+    ohi.push(`${c.id} (${iso})`);
+  }
+}
+if (ohi.length) console.log(`\nHUOM: rajojen ulkopuolella: ${ohi.join(', ')}`);
 if (kuiva) process.exit(0);
 
 // --- kirjoitus -----------------------------------------------------------------
