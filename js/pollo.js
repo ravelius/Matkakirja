@@ -1029,6 +1029,7 @@ class Pollo {
     // avattaessa ehdotukset kelaavat virran pohjaan, ja varauksen kanssa
     // pohjalla olisi pelkkää paperia.
     this.nollaaTyhjaTila();
+    this.merkitseAuki(true);
     this.paneeli.hidden = false;
     this.nappi.setAttribute('aria-expanded', 'true');
     this.nappi.classList.add('auki');
@@ -1056,9 +1057,23 @@ class Pollo {
     // varten.
     if (this.aaniPaalla) pysaytaLukija();
     this.auki = false;
+    this.merkitseAuki(false);
     this.paneeli.hidden = true;
     this.nappi.setAttribute('aria-expanded', 'false');
     this.nappi.classList.remove('auki');
+  }
+
+  /**
+   * Runkoon merkintä auki olevasta keskustelusta.
+   *
+   * Puhelimella kartan alanappirivi väistyy paneelin ajaksi
+   * (css body.pollo-auki .turn-card): paneelin alle jää tarkoituksella
+   * rako, josta kartta näkyy, ja siitä raosta kurkkisivat muuten myös
+   * napit. Luokka poistetaan aina sulkiessa — myös silloin, kun
+   * sulkeminen tulee näkyvyyssäännöstä (paivitaNakyvyys) eikä pelaajalta.
+   */
+  merkitseAuki(auki) {
+    this.doc.body?.classList?.toggle('pollo-auki', Boolean(auki));
   }
 
   /** Tila, jossa omistaja ei ole vielä ottanut välityspalvelinta käyttöön. */

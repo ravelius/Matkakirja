@@ -5636,12 +5636,31 @@ body[data-mode] .board-hint {
  * kortit menivät päällekkäin kaikilla alle ~1240 px:n leveyksillä,
  * esimerkiksi tabletilla pystyasennossa.
  */
+/*
+ * KESKITYS ILMAN TRANSFORMIA (juurisyy omistajan havaintoon 13.8.2026:
+ * "pöllöikkuna on hassusti vasemmassa reunassa").
+ *
+ * Tässä luki `left: 50%; transform: translateX(-50%)`. Transform tekee
+ * elementistä containing blockin kaikille sen sisällä oleville
+ * `position: fixed` -jälkeläisille — ja pöllöpaneeli asuu DOMissa juuri
+ * tämän kortin sisällä (.turn-card > #actions > .toimintorivi >
+ * .pollo-paikka). Paneelin `right: 0.7rem` mitattiin siis 356 px
+ * levyisestä kortista eikä ruudusta, ja siirretystä laatikosta: paneeli
+ * ajautui kuusi pikseliä ruudun vasemman reunan ULKOPUOLELLE ja oikealle
+ * jäi 28 px rako. Sama vika vääristi paneelin ala- ja yläreunan.
+ *
+ * `left: 0; right: 0; margin-inline: auto` keskittää saman kortin
+ * pikselilleen samaan kohtaan ilman transformia, joten fixed-jälkeläiset
+ * ankkuroituvat jälleen ruutuun. Korjaus tehdään täällä eikä paneelissa:
+ * ansa koskisi mitä tahansa, mitä alanappiriviin vielä lisätään.
+ */
 body[data-mode] .turn-card {
   position: absolute;
-  left: 50%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
   /* Ilman taustalaatikkoa napit osuivat kiinni kartan kehykseen. */
   bottom: 0.9rem;
-  transform: translateX(-50%);
   width: min(560px, calc(100% - 1.2rem));
 }
 
@@ -10915,19 +10934,58 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
  * verran korkeammaksi kuin ruutu antaa. Alalaita jää turva-alueen
  * yläpuolelle, jottei iPhonen kotipalkki leikkaa nappiriviä.
  *
- * Leveyskin kasvoi 21 remistä 24:ään (yhteinen mitta tabletin kanssa),
- * jolloin puhelimella jäljelle jää vain reunan 0,7 rem. Sama tavoite
- * kuin korkeudessa: mahdollisimman paljon tekstiä kerralla näkyviin,
- * kun kartan peittäminen on kerran sallittu.
- *
  * Sulkeminen ei kärsi: paneeli suljetaan napauttamalla sen ULKOPUOLELLE
  * (js/pollo.js seuraaSulkemista) tai Esc-näppäimestä, ei peittyneestä
  * pöllönapista.
+ *
+ * MITAT (omistajan tarkennus 13.8.2026): *"kartta saa jäädä näkyviin
+ * hieman alhaalla ja sivuilla, mutta alanapit pitää peittyä kokonaan ja
+ * sitten vähän enemmän ylhäälle voi jäädä tilaa."*
+ *
+ * Leveys ei tule `width`istä vaan MOLEMMISTA reunoista: `left` ja
+ * `right` samalla kaavalla, `width: auto`. Silloin keskitys ei riipu
+ * yhdestäkään leveyslaskennasta — reunavälit ovat aina yhtä suuret,
+ * vaikka ruudun leveys tai turva-alueet muuttuisivat. Sivuille ja
+ * alalaitaan jää 0,7 rem, josta kartta pilkottaa; ylhäältä paneeli
+ * jättää selvästi enemmän tilaa (katto 38 rem), jotta MATKAKIRJASTA-
+ * kaistale ja yläkartta kehystävät sen.
  */
 @media (max-width: 560px) {
   .pollo-paneeli {
+    left: calc(0.7rem + env(safe-area-inset-left, 0px));
+    right: calc(0.7rem + env(safe-area-inset-right, 0px));
     bottom: calc(0.7rem + env(safe-area-inset-bottom, 0px));
-    height: clamp(14rem, calc(100dvh - 6.5rem - env(safe-area-inset-bottom, 0px)), 42rem);
+    width: auto;
+    height: clamp(14rem, calc(100dvh - 9rem - env(safe-area-inset-bottom, 0px)), 38rem);
+  }
+
+  /*
+   * ── ALANAPIT VÄISTYVÄT PÖLLÖN AJAKSI (omistaja 13.8.2026) ──────────
+   *
+   * *"Eikä napit peity kokonaan alhaalla."* Paneelin alle jää nyt
+   * tarkoituksella pieni rako, josta kartta näkyy — ja samasta raosta
+   * kurkkivat myös kartan alanapit. Peittämisen sijaan koko alanappirivi
+   * (matkustustavat, pöllö, tutki ja niiden pergamenttilevy) piilotetaan
+   * siksi ajaksi kun keskustelu on auki. Pöllötilassa niitä ei käytetä,
+   * ja paneeli suljetaan sen ulkopuolelle napauttamalla tai Escillä —
+   * ei peittyneestä pöllönapista.
+   *
+   * `visibility` eikä `opacity`: paneeli on kortin JÄLKELÄINEN, ja vain
+   * visibility voidaan kytkeä jälkeläisessä takaisin päälle. Luokan
+   * asettaa ja poistaa js/pollo.js (avaa/sulje), joten piilotus ei jää
+   * päälle paneelin sulkeuduttua.
+   *
+   * Sääntö on media-lohkon sisällä: tabletilla paneeli ei ylety nappien
+   * päälle, joten siellä ne saavat näkyä ja toimia normaalisti.
+   */
+  body.pollo-auki .turn-card {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  body.pollo-auki .pollo-paneeli {
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 
