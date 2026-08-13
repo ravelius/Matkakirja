@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 617, teksti: 'Ei ohjetekstiä kartalle, pöllön vihje, maan raja piirtyy' },
   { v: 616, teksti: 'Etusivun taustaääni elpyy iPadilla; pöllölinkit siistiksi' },
   { v: 615, teksti: 'Tabrizin kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 614, teksti: 'Pöllön äänet, striimiluenta ja linkit; lukijaan ohitukset' },
