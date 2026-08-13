@@ -368,6 +368,7 @@ button, .brand, .turn-pill, .fact-card h2 {
  */
 .paavalikko .linssi-valikko,
 .paavalikko .kertoja-valikko {
+  align-items: center;
   position: static;
   width: auto;
   max-width: none;
@@ -457,8 +458,27 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 .paavalikko .valikko-alarivi button {
-  width: auto;
+  /* Täsmälleen sama mitta ja tausta kuin Äänet-rivin kuvakenapeilla
+   * (mitattu 40×40) — rivit ovat päällekkäin ja eri koko näyttäisi
+   * virheeltä (omistaja 13.8.2026). */
+  width: 40px;
+  height: 40px;
+  min-height: 0;
+  padding: 0;
   justify-content: center;
+  background: rgba(53, 39, 26, 0.55);
+  border: 1.2px solid var(--line);
+  border-radius: 8px;
+}
+
+.paavalikko .valikko-alarivi .viiva-ikoni svg { width: 26px; height: 26px; }
+
+.paavalikko .valikko-alarivi .palaute-kulma {
+  /* Huutomerkki on tekstiä, ei 26 px:n viivakuvake — pienempi koko
+   * näytti vajaalta naapuriensa rinnalla (omistaja 13.8.2026). */
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1;
 }
 
 /* Kertojavalikko: nappi näyttää nykyisen tilan kuvakkeen ja avaa alleen
@@ -6155,12 +6175,12 @@ body.katselu #newgame-btn { display: none; }
 .valikko-pohjarivi {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* Versionumero yksin oikealla, eikä väliin jää vaakaviivaa —
+   * kuvakerivi sen yllä on jo oma päätepisteensä (13.8.2026). */
+  justify-content: flex-end;
   gap: 0.8rem;
   width: 100%;
-  margin-top: 0.45rem;
-  padding-top: 0.6rem;
-  border-top: 1px solid var(--line);
+  margin-top: 0.1rem;
 }
 
 /* Pohjarivin napit mittaavat itsensä: `.paavalikko button` venyttäisi
@@ -6189,7 +6209,9 @@ body.katselu #newgame-btn { display: none; }
 .versio-kulma { transition: font-size 0.6s ease, color 0.6s ease; }
 
 .versio-kulma.tuore {
-  font-size: 1.4em;
+  /* Koko ei enää kasva (omistaja 13.8.2026: "versionumero pienellä") —
+   * julkaisuja tulee niin tiheään, että isompi koko näytti pysyvältä.
+   * Tuoreus näkyy pelkkänä kullan välähdyksenä. */
   color: var(--accent);
   font-weight: 700;
 }
