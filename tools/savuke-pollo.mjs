@@ -32,6 +32,14 @@
  *  14. NÄKYMÄN ELVYTYS: kutistunut ja palautunut näkymä ei jätä lehteä
  *      puhelinlevyiseksi
  *
+ * KOLMANNEN ERÄN LISÄYKSET (13.8.2026)
+ *  15. KARTAN SUMENNUS: suljettuna ruudulla ei ole yhtään sumentavaa
+ *      kerrosta, dialogin avaus sumentaa ja sulku poistaa, pöllöpaneeli
+ *      ei sumenna eikä jätä jälkeä — ja ladatun pelin bittikartta on
+ *      näkymän tarkkuudessa
+ *  16. ALANAPPIRIVI on puhelimella kapea ja keskitetty, ja pöllönappi
+ *      palaa riviin myös ladatussa pelissä
+ *
  *   node tools/savuke-pollo.mjs
  *
  * serviceWorkers: 'block' on pakollinen — muuten sw sieppaa pyynnöt ja
@@ -1755,6 +1763,163 @@ vaadi('elvytys ajettiin kerran, kun koko palautui', elvytys.elvytyksia >= 1,
 vaadi('näkymän elvytys ei kirjoita konsoliin', elvytysVirheet.length === 0,
   elvytysVirheet.join(' | '));
 await elvytysCtx.close();
+
+/* ================================================================== */
+/* 13) Kartan sumennus ja alanappirivin leveys                         */
+/* ================================================================== */
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026 (iPhone ja työpöytä): kartta oli
+ * kauttaaltaan sumea, vaikka yhtään ikkunaa ei ollut auki, ja
+ * alanappirivin kolme nappia venyivät lähes ruudun levyisiksi.
+ *
+ * Sumeus on kahden lajin asia, ja molemmat tarkistetaan tässä:
+ *
+ *   a) SUMENNUSKERROS. Ainoa koko kartan peittävä sumennus on lennon
+ *      kalvo (.flight-overlay), ja se on sidottu css:ssä lennon
+ *      todelliseen tilaan — kun mitään ei ole auki, ruudulla ei saa
+ *      olla yhtään sumentavaa kerrosta. Dialogin oma huntu (::backdrop)
+ *      sen sijaan sumentaa avattaessa ja katoaa suljettaessa.
+ *   b) RASTEROINNIN TARKKUUS. Kartta piirretään bittikartaksi sillä
+ *      mittakaavalla, joka näkymällä oli rasterointihetkellä. Jos
+ *      mittakaava ehtii muuttua (mount rasteroi ennen kuin
+ *      ResizeObserverin toinen fitViewBox asettaa lopullisen koon),
+ *      kuva venyy — juuri se näkyi omistajalle sumeana karttana
+ *      jokaisen latauksen jälkeen. js/ui.js tarkistaTarkkuus korjaa
+ *      sen, ja tässä mitataan lopputulos.
+ */
+
+/** Näkyvät, riittävän isot sumentavat kerrokset ruudulla. */
+const SUMENNUSKERROKSET = `(() => {
+  const osumat = [];
+  for (const el of document.querySelectorAll('*')) {
+    const s = getComputedStyle(el);
+    const bf = s.backdropFilter || s.webkitBackdropFilter || '';
+    const sumea = (bf && bf !== 'none' && /blur/.test(bf))
+      || (s.filter && s.filter !== 'none' && /blur/.test(s.filter));
+    if (!sumea) continue;
+    if (s.display === 'none' || s.visibility === 'hidden' || Number(s.opacity) === 0) continue;
+    const r = el.getBoundingClientRect();
+    if (r.width < 200 || r.height < 200) continue;
+    osumat.push(el.className || el.tagName);
+  }
+  return osumat;
+})()`;
+
+const sumennusCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
+const { sivu: sumennusSivu, virheet: sumennusVirheet } = await avaaPeli(sumennusCtx);
+
+const suljettuna = await sumennusSivu.evaluate(`({
+  kerrokset: ${SUMENNUSKERROKSET},
+  dialogeja: document.querySelectorAll('dialog[open]').length,
+})`);
+vaadi('kartalla ei ole sumennusta kun mikään ei ole auki',
+  suljettuna.kerrokset.length === 0 && suljettuna.dialogeja === 0,
+  suljettuna.kerrokset.join(' | '));
+
+// Dialogi: avaus sumentaa taustan, sulku poistaa sumennuksen.
+const dialoginSumennus = await sumennusSivu.evaluate(`(async () => {
+  const d = document.getElementById('nahtavyys-dialog');
+  d.showModal();
+  await new Promise((r) => setTimeout(r, 250));
+  const huntu = getComputedStyle(d, '::backdrop');
+  const auki = huntu.backdropFilter || huntu.webkitBackdropFilter || '';
+  d.close();
+  await new Promise((r) => setTimeout(r, 250));
+  return { auki, kiinniKerroksia: ${SUMENNUSKERROKSET}.length,
+    dialogejaAuki: document.querySelectorAll('dialog[open]').length };
+})()`);
+vaadi('dialogin avaus sumentaa kartan', /blur/.test(dialoginSumennus.auki),
+  dialoginSumennus.auki || '(ei sumennusta)');
+vaadi('dialogin sulku poistaa sumennuksen',
+  dialoginSumennus.kiinniKerroksia === 0 && dialoginSumennus.dialogejaAuki === 0,
+  JSON.stringify(dialoginSumennus));
+
+// Pöllöpaneeli on dialogi vain roolinsa puolesta: se ei sumenna karttaa
+// avattunakaan, eikä siis voi jättää sumennusta jälkeensä.
+const polloSumennus = await sumennusSivu.evaluate(`(async () => {
+  document.querySelector('.pollo-nappi').click();
+  await new Promise((r) => setTimeout(r, 250));
+  const auki = { nakyy: !document.querySelector('.pollo-paneeli').hidden,
+    kerroksia: ${SUMENNUSKERROKSET}.length };
+  document.body.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
+  await new Promise((r) => setTimeout(r, 250));
+  return { auki, kiinni: { piilossa: document.querySelector('.pollo-paneeli').hidden,
+    kerroksia: ${SUMENNUSKERROKSET}.length } };
+})()`);
+vaadi('pöllöpaneeli aukeaa eikä sumenna karttaa',
+  polloSumennus.auki.nakyy === true && polloSumennus.auki.kerroksia === 0,
+  JSON.stringify(polloSumennus.auki));
+vaadi('pöllöpaneelin sulku ei jätä sumennusta',
+  polloSumennus.kiinni.piilossa === true && polloSumennus.kiinni.kerroksia === 0,
+  JSON.stringify(polloSumennus.kiinni));
+
+/*
+ * ALANAPPIRIVI EI VIE KOKO LEVEYTTÄ (omistajan toive 13.8.2026).
+ * Rivi kavennetaan puhelimella, ja liuku on rivin lapsi, joten
+ * matkanappien on yhä osuttava täsmälleen peruspaikkojen päälle.
+ */
+const rivinLeveys = await sumennusSivu.evaluate(() => {
+  const rivi = document.querySelector('.toimintorivi');
+  const perus = document.querySelector('.toimintorivi-perus');
+  const liuku = document.querySelector('.toimintorivi-liuku');
+  const r = rivi.getBoundingClientRect();
+  return {
+    ruutu: window.innerWidth,
+    rivi: Math.round(r.width),
+    // Kolme paikkaa, ei paikkojen sisältöä: pöllön paneeli asuu
+    // keskimmäisessä paikassa eikä ole rivin nappi.
+    napit: [...perus.children].map((b) => Math.round(b.getBoundingClientRect().width)),
+    keskitetty: Math.abs((r.left + r.right) / 2 - window.innerWidth / 2) < 2,
+    liukuSamalla: Math.abs(liuku.getBoundingClientRect().width - r.width) < 2,
+  };
+});
+vaadi('alanappirivi on kapea puhelimella', rivinLeveys.rivi <= rivinLeveys.ruutu * 0.7,
+  `${rivinLeveys.rivi} / ${rivinLeveys.ruutu} px`);
+vaadi('alanappirivi on keskitetty', rivinLeveys.keskitetty === true, JSON.stringify(rivinLeveys));
+vaadi('alanapit ovat yhä sormen mittaisia', rivinLeveys.napit.every((w) => w >= 44),
+  rivinLeveys.napit.join(' / '));
+vaadi('liuku seuraa kavennettua riviä', rivinLeveys.liukuSamalla === true,
+  JSON.stringify(rivinLeveys));
+await sumennusSivu.screenshot({ path: join(ULOS, 'alanapit-kapeat-390.png') });
+
+/*
+ * LADATTU PELI: kartta ei jää sumeaksi eikä pöllö kellumaan.
+ *
+ * Kesken jäänyt peli palautetaan ennen kuin pöllö asennetaan, joten
+ * alanappirivin pöllöpaikka jäi ennen tyhjäksi ja nappi kiinnittyi
+ * bodyyn kelluvana (omistajan havainto työpöydällä: nappi väärässä
+ * kohdassa päivityksen jälkeen, korjautui vasta kaupunginvaihdossa).
+ * Samalla latauksella mitataan rasteroinnin tarkkuus.
+ */
+await sumennusSivu.evaluate(() => {
+  localStorage.setItem('matkakirja-save-v1', JSON.stringify(window.matkakirja.game.toJSON()));
+  localStorage.setItem('matkakirja-nahty-versio', 'vanha');
+  try { sessionStorage.setItem('matkakirja-paivittyy', '1'); } catch { /* ei ruutua */ }
+});
+await sumennusSivu.reload({ waitUntil: 'load' });
+await sumennusSivu.waitForTimeout(3000);
+const palautettu = await sumennusSivu.evaluate(`(() => {
+  const ui = window.matkakirja?.ui;
+  const nakyva = ui?.nakyvaAlue?.();
+  const nappi = document.querySelector('.pollo-nappi');
+  return {
+    kerroksia: ${SUMENNUSKERROKSET}.length,
+    rivissa: nappi?.parentElement?.classList.contains('pollo-paikka') ?? false,
+    kelluu: nappi?.classList.contains('pollo-kelluu') ?? null,
+    suhde: nakyva && ui?.taideSkaala ? nakyva.skaala / ui.taideSkaala : null,
+  };
+})()`);
+vaadi('päivityksen jälkeen kartalla ei ole sumennusta', palautettu.kerroksia === 0,
+  JSON.stringify(palautettu));
+vaadi('kartan bittikartta on näkymän tarkkuudessa',
+  palautettu.suhde !== null && Math.abs(palautettu.suhde - 1) <= 0.02,
+  String(palautettu.suhde));
+vaadi('pöllönappi palaa alanappiriviin ladatussa pelissä',
+  palautettu.rivissa === true && palautettu.kelluu === false, JSON.stringify(palautettu));
+vaadi('sumennuskoe ei kirjoita konsoliin', sumennusVirheet.length === 0,
+  sumennusVirheet.slice(0, 3).join(' | '));
+await sumennusCtx.close();
 
 vaadi('ei sivuvirheitä pääajossa', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 

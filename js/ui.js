@@ -2988,6 +2988,8 @@ export class UI {
     clearTimeout(this.lentoTekstiAjastin);
     clearTimeout(this.zoomAlkuAjastin);
     clearTimeout(this.zoomTaustaAjastin);
+    // Ajastettu tarkkuustarkistus rasteroisi kuolleen pelin karttaa.
+    clearTimeout(this.tarkkuusAjastin);
     if (this.previewFrame) cancelAnimationFrame(this.previewFrame);
     for (const timer of Object.values(this.typeTimers ?? {})) clearTimeout(timer);
     this.stopQuizTimer();
@@ -3155,6 +3157,12 @@ export class UI {
       'viewBox',
       `${box.x + box.w / 2 - vw / 2} ${vy} ${vw} ${vh}`,
     );
+    /*
+     * Tarkkuustarkistus ajastetaan JOKAISESTA fitViewBoxista, myös
+     * lähikuvien haaroista. taydennaTaide sietää viidenneksen eron, ja
+     * juuri siihen väliin sumea kartta jäi (ks. tarkistaTarkkuus).
+     */
+    this.ajastaTarkkuustarkistus();
     // Aloituskartan lähikuva hoitaa oman rajauksensa ja kokonsa.
     if (this.aloitusZoom && alkuun) {
       this.sovitaAloitusZoom(w, h);
@@ -3522,29 +3530,73 @@ export class UI {
    * eikä mikään pyydä niitä uudestaan. Kartta näyttää venytetyltä.
    *
    * Tämä vahti vertaa ruutujen mittakaavaa siihen, mikä kartalla
-   * oikeasti on, aina kun peli palaa näkyviin. Kynnys on tiukempi kuin
-   * täydennyksen oma (2 % eikä 20 %), koska tässä ei olla kesken
-   * eleen: pieni ero tarkoittaa juuri sitä väärää tarkkuutta.
+   * oikeasti on. Kynnys on tiukempi kuin täydennyksen oma (2 % eikä
+   * 20 %), koska tässä ei olla kesken eleen: pieni ero tarkoittaa juuri
+   * sitä väärää tarkkuutta.
    *
-   * Vahti ei korjaa syytä vaan seurauksen — juurisyytä ei ole saatu
-   * toistettua kehityskoneella. Uudelleenrasterointi maksaa muutaman
-   * ruudun verran työtä ja tapahtuu vain kun ero on todellinen.
+   * JUURISYY LÖYTYI 13.8.2026 (omistaja: "kartta on kauttaaltaan sumea
+   * ilman avointa ikkunaa"). Kesken jäänyt peli palautetaan latauksessa,
+   * ja mountissa tapahtuu tämä järjestys:
+   *
+   *   fitViewBox  → mittakaava A → requestAnimationFrame rasteroi A:lla
+   *   ResizeObserver laukeaa heti observen jälkeen
+   *   fitViewBox  → mittakaava B (alakaista korteille muuttaa korkeutta)
+   *
+   * Mitattuna A oli 0,805 ja B 0,886 eli ero 10 %. taydennaTaide sietää
+   * viidenneksen, joten se EI pyytänyt uutta sarjaa — ja koska
+   * yleiskuvassa ei panoroida, mikään ei pyytänyt sitä myöhemminkään.
+   * Kartta jäi venytetyksi ensimmäiseen kaupunginvaihtoon asti. Sama
+   * toistuu jokaisella latauksella, ei vain päivityksen jälkeen.
+   *
+   * Siksi tarkistus ei enää odota välilehden paluuta vaan ajetaan aina
+   * kun näkymä on asettunut (fitViewBox ajastaa sen). Ajastin on siksi,
+   * ettei ikkunan raahaaminen rasteroisi joka pikselillä.
    */
   vahdiTarkkuutta() {
     if (this.tarkkuusVahti) return;
     this.tarkkuusVahti = () => {
-      if (this.dead || document.visibilityState !== 'visible') return;
-      if (!this.taide || !this.taideSkaala) return;
-      const nakyva = this.nakyvaAlue();
-      if (!nakyva) return;
-      const suhde = nakyva.skaala / this.taideSkaala;
-      if (suhde > 1.02 || suhde < 0.98) {
-        // Nollaus pakottaa uuden sarjan: taydennaTaide vertaa tähän.
-        this.taideSkaala = 0;
-        this.taydennaTaide({ heti: true });
-      }
+      if (document.visibilityState !== 'visible') return;
+      this.tarkistaTarkkuus();
     };
     document.addEventListener('visibilitychange', this.tarkkuusVahti);
+  }
+
+  /**
+   * Vastaako rasteroitu mittakaava sitä, jolla kartta oikeasti
+   * piirretään? Jos ei, koko sarja pyydetään uudestaan.
+   *
+   * Ohitetaan tilanteet, joissa mittakaava on hetkellinen eikä ero
+   * kerro sumeudesta: lento, zoomiliuku ja kesken oleva ele. Näissä
+   * tarkistus SIIRRETÄÄN eikä peruta — muuten kartta voisi jäädä
+   * sumeaksi vain siksi, että ajastin sattui osumaan eleen kohdalle.
+   * Jokainen näistä tiloista päättyy, ja päättyessään ajastin laukeaa.
+   */
+  tarkistaTarkkuus() {
+    if (this.dead || !this.taide || !this.taideSkaala) return;
+    if (this.kartanRaahaus
+        || document.body.classList.contains('flight-active')
+        || document.body.classList.contains('zoom-kaynnissa')) {
+      this.ajastaTarkkuustarkistus();
+      return;
+    }
+    const nakyva = this.nakyvaAlue();
+    if (!nakyva) return;
+    const suhde = nakyva.skaala / this.taideSkaala;
+    if (suhde <= 1.02 && suhde >= 0.98) return;
+    // Nollaus pakottaa uuden sarjan: taydennaTaide vertaa tähän.
+    this.taideSkaala = 0;
+    this.taydennaTaide({ heti: true });
+  }
+
+  /**
+   * Sama tarkistus, mutta vasta kun näkymä on lakannut muuttumasta.
+   * fitViewBox voi laueta monta kertaa peräkkäin (ResizeObserver,
+   * ikkunan raahaus, näppäimistön avautuminen), ja jokainen niistä
+   * saisi muuten oman rasterointinsa.
+   */
+  ajastaTarkkuustarkistus(viive = 350) {
+    clearTimeout(this.tarkkuusAjastin);
+    this.tarkkuusAjastin = setTimeout(() => this.tarkistaTarkkuus(), viive);
   }
 
   /**

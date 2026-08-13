@@ -1602,6 +1602,24 @@ export function polloSulje() {
 export function asennaPollo(haeUi, asetukset = {}) {
   if (typeof document === 'undefined') return null;
   nykyinenPollo = new Pollo(haeUi, asetukset);
+  /*
+   * ALANAPPIRIVI ON USEIN PIIRRETTY JO ENNEN ASENNUSTA.
+   *
+   * main.js palauttaa kesken jääneen pelin (attach → mount → render)
+   * ennen kuin se asentaa pöllön, joten piirraToimintorivin
+   * polloAnkkuri-kutsu osui tyhjään: rivin keskimmäinen paikka jäi
+   * tyhjäksi ja nappi kiinnittyi bodyyn kelluvana (.pollo-kelluu).
+   * Työpöydällä se näkyi ruudun oikeassa alakulmassa väärässä
+   * kohdassa, ja korjautui vasta ensimmäisessä kaupunginvaihdossa,
+   * jolloin rivi piirretään uudelleen (omistajan havainto 13.8.2026).
+   *
+   * Paikka luetaan siis suoraan DOMista, jos se on jo olemassa — sama
+   * lopputulos kuin kaupunginvaihdon piirrossa, ilman että
+   * käynnistysjärjestykseen tarvitsee koskea.
+   */
+  const doc = asetukset.doc ?? document;
+  const paikka = doc.querySelector('.pollo-paikka');
+  if (paikka) nykyinenPollo.ankkuroi(paikka);
   // Savukkeet ja kehitys tarvitsevat kahvan; peli itse ei käytä tätä.
   window.matkakirjaPollo = nykyinenPollo;
   return nykyinenPollo;

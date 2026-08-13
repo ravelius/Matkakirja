@@ -4296,6 +4296,20 @@ body.flight-active .grain { display: none; }
   transition: opacity 0.28s ease;
 }
 
+/*
+ * SUMENNUS SEURAA TODELLISTA TILAA, EI SITÄ ETTÄ JOKU MUISTAA SIIVOTA.
+ *
+ * Kalvo on ainoa koko kartan peittävä sumennus pelissä, ja se elää
+ * DOM-elementtinä: jos lennon animaatioketju katkeaa (poikkeus, kesken
+ * jäänyt odotus), elementti jää paikalleen ja kartta näyttää
+ * kauttaaltaan sumealta ilman että mitään on auki. Tämä sääntö tekee
+ * siitä mahdotonta — kalvo näkyy vain silloin kun lento on merkitty
+ * käynnissä olevaksi (body.flight-active) tai kun se on juuri
+ * häipymässä (.flight-leaving, jonka js/ui.js lisää samassa
+ * synkronisessa lohkossa, jossa se poistaa lipun).
+ */
+body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
+
 /* Repliikki ja Astu mantereelle -nappi samassa alaosassa: asettelu
  * hoituu virtauksella, joten napin osumakohta on aina siinä missä nappi
  * näkyy.
@@ -5977,6 +5991,24 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
     padding: 0.3rem;
   }
 
+  /*
+   * ALANAPPIRIVI EI VIE KOKO LEVEYTTÄ PUHELIMELLA.
+   *
+   * Omistajan havainto 13.8.2026 iPhonella: kolme nappia
+   * (Matkustustavat | Pöllö | Tutki) venyivät lähes ruudun levyisiksi
+   * ja näyttivät raskailta — kuvake keskellä ja tyhjää molemmin puolin.
+   * Kavennus tehdään RIVILLE eikä yksittäisille napeille, koska
+   * matkanappien liuku on rivin lapsi (inset: 0): jos vain peruspaikat
+   * kapenisivat, liuku jäisi leveäksi eikä osuisi enää niiden päälle.
+   *
+   * 15rem jättää kullekin napille noin 70 pikseliä — reilusti sormen
+   * mitta, mutta rivi hengittää kartan päällä. iPadille ja työpöydälle
+   * tämä ei yllä: media-ehto rajaa sen puhelimiin.
+   */
+  .toimintorivi {
+    width: min(100%, 15rem);
+    margin-inline: auto;
+  }
 
   /* Kelluva päiväkirja levenee kaistaleeksi kartan ylle: 46 % leveydestä
    * olisi puhelimella liian kapea luettavaksi. */
