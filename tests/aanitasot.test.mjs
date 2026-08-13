@@ -186,7 +186,9 @@ test('kuollut soitin purkaa Web Audio -solmunsa', () => {
   const virta = readFileSync(new URL('../js/ambience-stream.js', import.meta.url), 'utf8');
 
   // Solmut on otettava talteen, muuten niihin ei pääse enää käsiksi.
-  assert.match(virta, /audio\.aaniSolmut = \[lahde, komp, vahvistin\]/,
+  // Mittari (hiljaisuusvahdin AnalyserNode) kuuluu samaan ketjuun ja
+  // samaan purkuun: se on läpimenevä solmu, ei sivuhaara.
+  assert.match(virta, /audio\.aaniSolmut = \[lahde, komp, vahvistin, mittari\]/,
     'liitaKompressori ei tallenna solmuja purkua varten');
   assert.match(virta, /function vapautaSoitin\(audio\)/, 'vapautaSoitin puuttuu');
   assert.match(virta, /solmu\.disconnect\(\)/, 'vapautaSoitin ei pura solmuja');
