@@ -3918,56 +3918,49 @@ body.radio-tila .actions {
 
 .country-korostus {
   fill: none;
-  /* Lepotila aavistuksen vahvempi (omistaja 13.8.2026: "raja voi
-     jäädä vähän voimakkaammin näkyviin") — sama arvopari myös
-     välähdyksen 100 %:ssa ja js/ui.js:n paisumisen lähtöarvoissa. */
-  stroke: rgba(150, 60, 45, 0.62);
-  stroke-width: 3.5;
+  /* Lepotila on LÄHES piirron loppuvoima (omistaja 13.8.2026 ilta:
+     "otetaan rajan väläytys pois mutta raja voisi jäädä lähes yhtä
+     voimakkaana näkyviin kuin se on piirron lopussa") — piirto päättyy
+     arvoihin 5.4 / 0.8, ja lepo on hivenen sen alla. Sama arvopari
+     myös asettumisanimaation 100 %:ssa. */
+  stroke: rgba(160, 58, 42, 0.72);
+  stroke-width: 5;
   stroke-linejoin: round;
   stroke-linecap: round;
 }
 
 /*
- * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI (omistajan tilaus 13.8.2026:
- * ääriviiva piirtyy parissa sekunnissa, välähtää kerran voimakkaampana
- * ja paksumpana ja häipyy pehmeästi rajaviivan omaan sävyyn).
+ * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI: ääriviiva piirtyy parissa
+ * sekunnissa ja paisuu piirtyessään täyteen voimaansa (js/ui.js
+ * animoiMaanAariviiva: polun pituus viiva-aukkokuvioksi, dashoffset
+ * nollaan ja rinnalla paisuminen 5.4:ään / 0.8:aan).
  *
- * Piirtovaihe on JS:n puolella (js/ui.js animoiMaanAariviiva: polun
- * pituus viiva-aukkokuvioksi ja dashoffset nollaan). Välähdys ja sen
- * häivytys ovat tässä yhtenä animaationa: väri ja paksuus liukuvat
- * samaa tahtia takaisin lepoarvoihin, joten viivan ei tarvitse tietää
- * lepoarvoja kahdessa paikassa.
+ * VÄLÄYS POISTUI (omistaja 13.8.2026 ilta: "otetaan rajan väläytys
+ * pois mutta raja voisi jäädä lähes yhtä voimakkaana näkyviin kuin se
+ * on piirron lopussa"). Kokeiltiin huippuja 70→100 ja 70→80 — kumpikin
+ * pois. Piirron perään jää vain lyhyt PEHMEÄ ASETTUMINEN piirron
+ * loppuarvoista lepoon, joka on hivenen niiden alla: silmä ei näe
+ * hyppyä eikä väläystä, ja raja jää vahvana näkyviin.
  *
  * Ei transitionia vaan keyframes: siirtymä vaatisi kaksi peräkkäistä
- * tyylinvaihtoa (ensin vahvaksi, sitten takaisin), eikä sitä voi tehdä
- * pakottamatta asettelun lukua kesken animaation.
+ * tyylinvaihtoa, eikä sitä voi tehdä pakottamatta asettelun lukua
+ * kesken animaation. 0 % on täsmälleen piirron loppuarvot, ettei
+ * vaiheiden saumaa näy.
  */
-/*
- * Loppuvälähdys jatkaa siitä, mihin piirron aikainen paisuminen jäi
- * (js/ui.js: piirto nostaa viivan lineaarisesti ~70 prosenttiin,
- * leveys 5.4 ja väri rgba(182,61,42,0.8)) — 0 % on täsmälleen nämä
- * arvot, ettei vaiheiden saumaa näy. Nopea huippu 70→80, pieni pito
- * ja pehmeä häivytys lepoon (omistajan tarkennus 13.8.2026 ilta).
- */
-/* Huippu on maltillinen 70→80 (omistajan tarkennus 13.8.2026 ilta:
-   "rajan väläys voisi olla vain 70=>80" — aiempi 70→100 oli liikaa). */
-@keyframes maa-aariviivan-valahdys {
+@keyframes maa-aariviivan-asettuminen {
   0% { stroke: rgba(182, 61, 42, 0.8); stroke-width: 5.4; }
-  12% { stroke: rgba(188, 61, 42, 0.85); stroke-width: 5.8; }
-  26% { stroke: rgba(188, 61, 42, 0.85); stroke-width: 5.8; }
-  100% { stroke: rgba(150, 60, 45, 0.62); stroke-width: 3.5; }
+  100% { stroke: rgba(160, 58, 42, 0.72); stroke-width: 5; }
 }
 
-/* Kesto seuraa js/ui.js AARIVIIVAN_VALAHDYS_MS:ää (omistajan tarkennus
-   13.8.2026: hitaampi välähdys ja häivytys, piirtonopeus ennallaan). */
-.country-borders.maa-valahtaa .country-korostus {
-  animation: maa-aariviivan-valahdys 1880ms ease-out;
+/* Kesto seuraa js/ui.js AARIVIIVAN_ASETTUMIS_MS:ää. */
+.country-borders.maa-asettuu .country-korostus {
+  animation: maa-aariviivan-asettuminen 730ms ease-out;
 }
 
-/* Liikeherkkyys: viiva on heti valmis eikä välähdä (js/ui.js ohittaa
+/* Liikeherkkyys: viiva on heti valmis lepoarvoissaan (js/ui.js ohittaa
    koko animaation, tämä on varmistus tyylin puolella). */
 @media (prefers-reduced-motion: reduce) {
-  .country-borders.maa-valahtaa .country-korostus { animation: none; }
+  .country-borders.maa-asettuu .country-korostus { animation: none; }
 }
 
 /*

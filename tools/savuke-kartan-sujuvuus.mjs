@@ -346,8 +346,8 @@ vaadi('jokainen rengas on oma polkunsa omalla pituudellaan',
 
 /*
  * Viiva paisuu piirron AIKANA (omistajan tarkennus 13.8.2026 ilta):
- * puolivälissä leveyden pitää olla selvästi lepoarvon (3) yläpuolella
- * mutta alle loppuvälähdyksen huipun (6.4) — tasainen kasvu, ei
+ * puolivälissä leveyden pitää olla piirron lähtöarvon (3.5) yläpuolella
+ * mutta alle piirron loppuleveyden (5.4) — tasainen kasvu, ei
  * kertahyppy.
  */
 const kesken = await sivu.evaluate(async () => {
@@ -358,40 +358,47 @@ const kesken = await sivu.evaluate(async () => {
 vaadi('viiva paisuu jo piirtyessään',
   kesken.leveys > 3.7 && kesken.leveys < 5.5, JSON.stringify(kesken));
 
-
-const valahdys = await sivu.evaluate(async () => {
+/*
+ * VÄLÄYSTÄ EI ENÄÄ OLE (omistaja 13.8.2026 ilta: "otetaan rajan
+ * väläytys pois mutta raja voisi jäädä lähes yhtä voimakkaana näkyviin
+ * kuin se on piirron lopussa"): piirron perään tulee vain lyhyt pehmeä
+ * asettuminen (.maa-asettuu), jonka aikana viiva EI saa ylittää
+ * piirron loppuleveyttä, ja lepoon jää vahva viiva (5 / 0.72).
+ */
+const asettuminen = await sivu.evaluate(async () => {
   const kerros = document.querySelector('.country-borders');
-  // Piirto kestää kaksi sekuntia; välähdys odotetaan sen perään.
+  // Piirto kestää kaksi sekuntia; asettuminen odotetaan sen perään.
   let nahty = false;
   let leveys = 0;
   for (let i = 0; i < 40 && !nahty; i++) {
-    if (kerros.classList.contains('maa-valahtaa')) {
+    if (kerros.classList.contains('maa-asettuu')) {
       nahty = true;
       leveys = parseFloat(getComputedStyle(kerros.querySelector('.country-korostus')).strokeWidth);
     }
     // eslint-disable-next-line no-await-in-loop
     await new Promise((r) => setTimeout(r, 50));
   }
-  // Välähdys + häivytys kestää nyt 1,9 s (AARIVIIVAN_VALAHDYS_MS) —
-  // loppuarvot luetaan vasta sen mentyä kokonaan ohi.
-  await new Promise((r) => setTimeout(r, 2300));
+  // Asettuminen kestää 750 ms (AARIVIIVAN_ASETTUMIS_MS) — loppuarvot
+  // luetaan vasta sen mentyä kokonaan ohi.
+  await new Promise((r) => setTimeout(r, 1100));
   const polku = kerros.querySelector('.country-korostus');
   return {
     nahty,
-    leveysValahdyksessa: leveys,
-    ohi: !kerros.classList.contains('maa-valahtaa'),
+    leveysAsettuessa: leveys,
+    ohi: !kerros.classList.contains('maa-asettuu'),
     // Viiva-aukkokuvio siivotaan lopuksi: viiva jää yhtenäiseksi.
     dashLopussa: polku?.style.strokeDasharray ?? '',
     leveysLopussa: parseFloat(getComputedStyle(polku).strokeWidth),
   };
 });
-vaadi('piirron valmistuttua viiva välähtää kerran',
-  valahdys.nahty === true, JSON.stringify(valahdys));
-vaadi('välähdyksessä viiva on selvästi paksumpi',
-  valahdys.leveysValahdyksessa > valahdys.leveysLopussa * 1.3, JSON.stringify(valahdys));
-vaadi('välähdys häipyy takaisin rajaviivan sävyyn ja mittaan',
-  valahdys.ohi === true && Math.abs(valahdys.leveysLopussa - 3.5) < 0.2
-  && valahdys.dashLopussa === '', JSON.stringify(valahdys));
+vaadi('piirron valmistuttua viiva asettuu pehmeästi',
+  asettuminen.nahty === true, JSON.stringify(asettuminen));
+vaadi('asettuminen ei väläytä: leveys ei ylitä piirron loppua',
+  asettuminen.leveysAsettuessa > 0 && asettuminen.leveysAsettuessa <= 5.5,
+  JSON.stringify(asettuminen));
+vaadi('lepoon jää lähes piirron loppuvoima',
+  asettuminen.ohi === true && Math.abs(asettuminen.leveysLopussa - 5) < 0.2
+  && asettuminen.dashLopussa === '', JSON.stringify(asettuminen));
 
 const samaMaa = await sivu.evaluate(async () => {
   const { game, ui } = window.matkakirja;
