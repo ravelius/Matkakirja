@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 640, teksti: 'Maaselain: kirjanappi vasemmalle, maakyltti oikealle' },
   { v: 639, teksti: 'Zoomi ei hypi eikä töki; kartta liukuu sormen perässä' },
   { v: 638, teksti: 'Maailmankartalle 49 uutta maata maasivuineen' },
   { v: 637, teksti: 'Kirjoituskone kuuluu taas; suurennos oikean levyiseksi' },
