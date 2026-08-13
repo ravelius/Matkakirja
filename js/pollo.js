@@ -403,10 +403,28 @@ const KASITTEIDEN_KATTO = 12;
 /** Yhden käsitemerkinnän kuvio. Rivinvaihto katkaisee: se on jo virhe. */
 const KASITE_KUVIO = /\[\[([^[\]\n]{1,60})\]\]/g;
 
+/*
+ * Putkimerkintä [[perusmuoto|taivutus]] puretaan aina: pelaajalle
+ * näytetään taivutus, ja kysymys tehdään perusmuodosta. Kehote kieltää
+ * putken, mutta malli lipsuu wiki-tapoihinsa (omistajan kaappaus
+ * 13.8.2026: "juutalaisuus|juutalaisuudelle" näkyi raakana tekstissä)
+ * — pelaaja ei saa koskaan nähdä pystyviivaa, kielsi kehote tai ei.
+ */
+function puraPutki(kasite) {
+  const kohta = kasite.indexOf('|');
+  if (kohta < 0) return { aihe: kasite, nayttomuoto: kasite };
+  const aihe = kasite.slice(0, kohta).trim();
+  const nayttomuoto = kasite.slice(kohta + 1).split('|').pop().trim();
+  return {
+    aihe: aihe || nayttomuoto,
+    nayttomuoto: nayttomuoto || aihe,
+  };
+}
+
 /** Teksti ilman merkintöjä. Myös keskeneräinen "[[" katoaa striimissä. */
 export function poistaKasiteMerkinnat(teksti) {
   return String(teksti ?? '')
-    .replace(KASITE_KUVIO, '$1')
+    .replace(KASITE_KUVIO, (_, sisus) => puraPutki(sisus.trim()).nayttomuoto)
     // Rikkinäiset ja keskeneräiset jäänteet pois: pelaaja näkee vain
     // tekstin, ei koskaan sulkeita.
     .replace(/\[\[|\]\]/g, '')
@@ -427,8 +445,9 @@ export function jasennaKasitteet(teksti, katto = KASITTEIDEN_KATTO) {
     if (loydetty >= katto) break;
     const kasite = osuma[1].trim();
     if (!kasite) continue;
+    const { aihe, nayttomuoto } = puraPutki(kasite);
     palat.push({ teksti: poistaKasiteMerkinnat(koko.slice(kohta, osuma.index)), kasite: false });
-    palat.push({ teksti: kasite, kasite: true });
+    palat.push({ teksti: nayttomuoto, kasite: true, aihe });
     kohta = osuma.index + osuma[0].length;
     loydetty += 1;
   }
@@ -1763,10 +1782,13 @@ class Pollo {
       }
       const linkki = polloElementti('a', 'pollo-kasitelinkki', pala.teksti);
       linkki.href = '#';
-      linkki.title = `Kerro lisää: ${pala.teksti}`;
+      // Kysymys tehdään perusmuodosta jos putkimerkintä antoi sen —
+      // "Kerro lisää: Jeesus" on luontevampi kuin "Kerro lisää: Jeesuksen".
+      const aihe = pala.aihe ?? pala.teksti;
+      linkki.title = `Kerro lisää: ${aihe}`;
       linkki.addEventListener('click', (e) => {
         e.preventDefault();
-        this.kysy(`Kerro lisää: ${pala.teksti}`);
+        this.kysy(`Kerro lisää: ${aihe}`);
       });
       solmut.push(linkki);
     }

@@ -162,23 +162,26 @@ kysymyksiä — ei pelin tehtäviin, pisteisiin tai juoneen liittyviä. \
  * puhtaana — hakasulkeet eivät saa näkyä pelaajalle missään tilanteessa.
  */
 /*
- * Omistajan linjaus 13.8.2026: "Kaikki paikat ja erisnimet, kuten
- * Beethoven, olisi kiva saada jatkokysymyspainikkeeksi tekstiin."
- * Aiempi "yhdestä kolmeen" tuotti vastauksia, joissa ei ollut yhtään
- * merkintää — nyt jokainen paikannimi ja erisnimi merkitään, ja katto
- * pitää tiheyden kurissa (asiakas sietää kaksitoista).
+ * Tiheyden historia: "yhdestä kolmeen" tuotti vastauksia ilman yhtään
+ * merkintää; "jokainen erisnimi" (13.8.2026 aamu) tuotti tekstiä, jossa
+ * lähes joka sana oli alleviivattu (omistaja samana iltana: "liikaa
+ * alleviivauksia"). Nyt 2–5 tärkeintä. Putkimerkintä on kielletty
+ * eksplisiittisesti, koska Sonnet lipsui wiki-tapoihin
+ * ([[juutalaisuus|juutalaisuudelle]]) — asiakas purkaa putken silti
+ * (js/pollo.js puraPutki), mutta kehote pitää sen harvinaisena.
  */
 const KASITEKEHOTE = `AVAINKÄSITTEET
-Merkitse vastauksesi sisään avainkäsitteet kaksoishakasulkeilla: \
-[[käsite]]. Merkitse JOKAINEN paikannimi, henkilö ja muu erisnimi \
-([[Beethoven]], [[Schönbrunn]], [[Tonava]]) sekä ilmiöt ja asiat, \
-joista pelaaja voisi haluta kuulla lisää ([[höyryveturit]] vetivät \
-junia) — käytännössä jokaisessa vastauksessa on useita merkintöjä. \
-Merkintä kirjoitetaan suoraan lauseeseen sen luonnollisella \
-taivutusmuodolla, ei erilliselle riville eikä luetteloksi. Merkitse \
-kukin käsite vain ensimmäisellä esiintymällään, korkeintaan kahdeksan \
-merkintää vastausta kohden. Älä merkitse pelaajan omaa kysymystä äläkä \
-mainitse merkintöjä vastauksessasi.`;
+Merkitse vastauksesi sisään tärkeimmät avainkäsitteet \
+kaksoishakasulkeilla: [[käsite]]. Merkitse kahdesta viiteen käsitettä \
+vastausta kohden: erisnimet ja keskeiset ilmiöt, joista pelaaja \
+todennäköisimmin haluaa kuulla lisää ([[Beethoven]], \
+[[Kalliomoskeija]], [[höyryveturit]]). Merkintä kirjoitetaan suoraan \
+lauseeseen täsmälleen siinä taivutusmuodossa, jossa sana lauseessa on \
+([[Jeesuksen]] ristiinnaulitseminen) — älä KOSKAAN kirjoita sulkeiden \
+sisään pystyviivaa tai perusmuotoa erikseen ([[Jeesus|Jeesuksen]] on \
+väärin). Älä merkitse lukusanoja tai muita yleissanoja, älä samaa \
+käsitettä kahdesti, älä pelaajan omaa kysymystä, äläkä mainitse \
+merkintöjä vastauksessasi.`;
 
 /** Ehdotuskehote: erillinen, koska tehtävä on aivan toinen. */
 const EHDOTUSKEHOTE = `Keksi kaksi lyhyttä kysymystä, jotka pelaaja voisi \
