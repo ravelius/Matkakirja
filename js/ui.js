@@ -1670,6 +1670,23 @@ function html(tag, className, text) {
   return node;
 }
 
+/*
+ * Lähdemerkintä uudelleenkirjoitetulle tekstille (omistajan linjaus
+ * 13.8.2026: "Wikipedia on käytetty lähteenä, mutta tekstit on sen
+ * pohjalta kirjoitettu uudestaan — miten sen merkitsisi?").
+ *
+ * Pelkkä "Wikipedia" väitti tekstiä lainatuksi, vaikka jutut ovat
+ * pelin omaa kirjoitusta Wikipedian tietojen pohjalta — faktat eivät
+ * ole tekijänoikeuden alaisia, joten oma teksti ei tarvitse CC BY-SA
+ * -merkintää, vain reilun lähdemaininnan. Sanatarkat wiki-otteet
+ * (tiivistelmät, "Wikipedia (CC BY-SA)" -merkinnät) kulkevat tästä
+ * läpi muuttumattomina: niissä lisenssimaininta on lisenssin ehto.
+ */
+const OMA_TEKSTI_LAHDE = 'Matkakirjan oma teksti · lähteenä Wikipedia';
+function lahdemerkinta(lahde) {
+  return lahde === 'Wikipedia' ? OMA_TEKSTI_LAHDE : lahde;
+}
+
 /**
  * Pehmeä käyrä pisteiden läpi (Catmull–Rom kuutiollisina Bézier-paloina).
  *
@@ -8535,7 +8552,8 @@ export class UI {
         lohko.appendChild(nappi);
       }
       this.lisaaNostonLinkki(lohko, nosto);
-      const lahteet = [nosto.lahde, nosto.aaniLahde].filter(Boolean).join(' · ');
+      const lahteet = [lahdemerkinta(nosto.lahde), nosto.aaniLahde]
+        .filter(Boolean).join(' · ');
       if (lahteet) lohko.appendChild(html('p', 'kulttuuri-lahde', lahteet));
       lista.appendChild(lohko);
     }
@@ -10582,7 +10600,7 @@ export class UI {
       // kutistuu kuvan mittoihin: kuvateksti ei saa ylittää kuvan
       // reunaa (omistajan toive).
       const selite = nosto.selite ? html('p', 'selite', nosto.selite) : null;
-      const lahde = nosto.lahde ? html('p', 'lahde', nosto.lahde) : null;
+      const lahde = nosto.lahde ? html('p', 'lahde', lahdemerkinta(nosto.lahde)) : null;
       if (kuva && (selite || lahde)) {
         const kehys = html('div', 'kuvakehys');
         kehys.appendChild(kuva);
@@ -10827,8 +10845,9 @@ export class UI {
       sisalto.appendChild(nappi);
     } else if (kohde.lahde) {
       // Oma kooste ilman tarkistettua fi.wikipedian artikkelia: pelkkä
-      // lähdemaininta, ei linkkiä (omistajan spesifikaatio 8.8.2026).
-      sisalto.appendChild(html('p', 'nahtavyys-lahderivi', kohde.lahde));
+      // lähdemaininta, ei linkkiä (omistajan spesifikaatio 8.8.2026;
+      // sanamuoto kertoo tekstin omaksi, ks. lahdemerkinta).
+      sisalto.appendChild(html('p', 'nahtavyys-lahderivi', lahdemerkinta(kohde.lahde)));
     }
     if (!dialogi.open) dialogi.showModal();
     this.nollaaDialoginVieritys(dialogi);
