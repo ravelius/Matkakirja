@@ -8869,6 +8869,18 @@ export class UI {
   naytaKulttuuriKuva(nosto, { teokset = null, kohdalla = 0 } = {}) {
     this.suljeKulttuuriKuva();
     const kortti = html('div', 'postikortti kulttuuri-suurennos');
+    /*
+     * Leveys pikseleinä MITATUSTA näkymästä, ei vw-yksiköistä
+     * (omistajan oivallus 13.8.2026: sama jumiutuneen asettelu-
+     * viewportin ilmiö kuin kapeassa lehdessä voi kutistaa myös
+     * suurennoksen — CSS:n 96vw lukee jumittunutta viewporttia,
+     * mittaaNakyma ristiintarkistaa visuaalisen ja saa oikean
+     * leveyden). Sama vyö ja henkselit kuin arkilla (mitoitaArkki).
+     */
+    const nakyma = this.nakymanLeveys || this.mittaaNakyma();
+    if (nakyma >= NAKYMAN_VAHIMMAISLEVEYS) {
+      kortti.style.width = `${Math.min(Math.round(nakyma * 0.96), 1600)}px`;
+    }
     // Kuva omaan koteloonsa, jotta nuolet ja laskuri asemoituvat
     // täsmälleen kuvan päälle myös kapean pystykuvan kohdalla.
     const kotelo = html('div', 'suurennos-kuvakotelo');
