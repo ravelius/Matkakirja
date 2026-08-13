@@ -344,6 +344,20 @@ vaadi('uuteen maahan saavuttaessa ääriviiva alkaa piirtyä',
 vaadi('jokainen rengas on oma polkunsa omalla pituudellaan',
   piirto.polkuja > 0 && piirto.omatPituudet === true, JSON.stringify(piirto));
 
+/*
+ * Viiva paisuu piirron AIKANA (omistajan tarkennus 13.8.2026 ilta):
+ * puolivälissä leveyden pitää olla selvästi lepoarvon (3) yläpuolella
+ * mutta alle loppuvälähdyksen huipun (6.4) — tasainen kasvu, ei
+ * kertahyppy.
+ */
+const kesken = await sivu.evaluate(async () => {
+  await new Promise((r) => setTimeout(r, 700));
+  const polku = document.querySelector('.country-borders .country-korostus');
+  return { leveys: parseFloat(getComputedStyle(polku).strokeWidth) };
+});
+vaadi('viiva paisuu jo piirtyessään',
+  kesken.leveys > 3.4 && kesken.leveys < 5.5, JSON.stringify(kesken));
+
 
 const valahdys = await sivu.evaluate(async () => {
   const kerros = document.querySelector('.country-borders');

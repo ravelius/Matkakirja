@@ -6215,6 +6215,20 @@ export class UI {
         [{ strokeDashoffset: `${pituus}` }, { strokeDashoffset: '0' }],
         { duration: AARIVIIVAN_PIIRTO_MS, easing: 'ease-in-out', fill: 'forwards' },
       ));
+      /*
+       * Viiva paisuu ja voimistuu TASAISESTI jo piirtyessään noin 70
+       * prosenttiin huipusta (omistajan tarkennus 13.8.2026 ilta:
+       * "tasaisesti levittää ja voimistaa viivaa jo matkalla") —
+       * loppuvälähdys jatkaa tästä 70→100 (css: maa-aariviivan-
+       * valahdys alkaa täsmälleen näistä arvoista, ettei sauma näy).
+       */
+      liikkeet.push(polku.animate(
+        [
+          { strokeWidth: '3', stroke: 'rgba(150, 60, 45, 0.45)' },
+          { strokeWidth: '5.4', stroke: 'rgba(182, 61, 42, 0.8)' },
+        ],
+        { duration: AARIVIIVAN_PIIRTO_MS, easing: 'linear', fill: 'forwards' },
+      ));
     }
     if (!liikkeet.length) {
       kerros.classList.remove('maa-piirtyy');
