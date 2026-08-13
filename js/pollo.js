@@ -58,7 +58,9 @@ import { asetaKuva } from './media.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
 import { lueAaneen, lueVirtana, lukijaTuettu, pysaytaLukija } from './lukija.js';
 import { sfx } from './sound.js';
-import { hiljennaAmbienssi, palautaAmbienssi } from './ambience-stream.js';
+import {
+  hiljennaAmbienssi, palautaAmbienssi, taukoaSanelunAjaksi, jatkaSanelunJalkeen,
+} from './ambience-stream.js';
 
 /** Kontekstipaketin katto merkkeinä. Sama luku myös workerin puolella. */
 export const KONTEKSTIN_ENIMMAISPITUUS = 5000;
@@ -2443,6 +2445,10 @@ class Pollo {
     // Nappia on voitu napauttaa uudestaan lupien odotuksen aikana.
     if (!this.natiiviSanelussa) return;
 
+    // Sama kova äänitauko kuin selainsanelussa: myös WKWebView:n sivun
+    // äänet pitävät sovelluksen äänisessiota toistotilassa.
+    taukoaSanelunAjaksi();
+
     const kuuntele = (laji, kuulija) => {
       const purku = natiivi.kuuntele?.(laji, kuulija);
       if (typeof purku === 'function') this.saneluKuulijat.push(purku);
@@ -2476,8 +2482,9 @@ class Pollo {
     }
   }
 
-  /** Natiivisanelu kiinni: kuulijat pois ja mikki lepoon. */
+  /** Natiivisanelu kiinni: kuulijat pois, äänet takaisin ja mikki lepoon. */
   paataNatiiviSanelu() {
+    jatkaSanelunJalkeen();
     this.natiiviSanelussa = false;
     this.purkaSaneluKuulijat();
     this.merkitseMikki(false);
@@ -2539,6 +2546,8 @@ class Pollo {
     };
     tunnistin.onerror = (tapahtuma) => this.saneluVirhe(tapahtuma?.error);
     tunnistin.onend = () => {
+      // Äänet takaisin heti kun mikrofoni on vapaa (ks. kova äänitauko).
+      jatkaSanelunJalkeen();
       const oliTunnistin = this.tunnistin;
       this.tunnistin = null;
       this.merkitseMikki(false);
@@ -2552,6 +2561,15 @@ class Pollo {
     this.tunnistin = tunnistin;
     this.merkitseMikki(true);
     this.saneluTila.textContent = SANELU_KUUNTELEE;
+    /*
+     * KOVA ÄÄNITAUKO ENNEN STARTTIA (omistajan havainto 13.8.2026:
+     * "mikrofonia ei löydy" myös kylmäkäynnistyksen jälkeen). iOS:n
+     * WebKit ei aloita kaappausta, jos sivun äänisessio on toistossa —
+     * ja v614:stä alkaen huhuilu herättää äänipiirin heti paneelin
+     * avautuessa. Ambienssi oikeasti tauolle ja konteksti kylmäksi;
+     * palautus onendissä ja virhepolussa.
+     */
+    taukoaSanelunAjaksi();
     try {
       // Mikrofonilupa kysytään vasta tästä — ei paneelia avattaessa.
       tunnistin.start();
@@ -2559,6 +2577,7 @@ class Pollo {
       this.tunnistin = null;
       this.merkitseMikki(false);
       this.saneluTila.textContent = 'Sanelu ei käynnisty juuri nyt.';
+      jatkaSanelunJalkeen();
     }
   }
 
@@ -2618,6 +2637,8 @@ class Pollo {
    * silloin kun koodia ei tunnisteta.
    */
   saneluVirhe(koodi, viesti = '') {
+    // Äänet takaisin joka virhepolussa (ks. kova äänitauko).
+    jatkaSanelunJalkeen();
     this.tunnistin = null;
     this.natiiviSanelussa = false;
     this.purkaSaneluKuulijat();

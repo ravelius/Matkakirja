@@ -677,6 +677,9 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
    */
   audio.addEventListener('pause', () => {
     if (nykyinen !== oma || oma.audio !== audio) return;
+    // Sanelun kova tauko on tahallinen: elvytys ei saa kumota sitä
+    // (ks. taukoaSanelunAjaksi) — jatko tulee sanelun päättyessä.
+    if (sanelunTauko) return;
     if (!audio.soinut || audio.ended || audio.jatkoPyynto) return;
     audio.jatkoPyynto = true;
     soi();
@@ -931,6 +934,60 @@ export function palautaAmbienssi(syy) {
 /** Vain testejä varten: unohtaa kaikki hiljennyssyyt. */
 export function nollaaHiljennykset() {
   hiljennykset.clear();
+}
+
+/*
+ * ── SANELUN KOVA TAUKO (omistajan havainto 13.8.2026 illalla) ────────
+ *
+ * "Mikrofonia ei löytynyt" myös kylmäkäynnistyksen jälkeen: iOS:n
+ * WebKit ei aloita mikrofonin kaappausta, jos sivun äänisessio on
+ * aktiivisessa toistossa — ja v614:stä alkaen pöllö soittaa huhuilun
+ * heti paneelin avautuessa, jolloin äänipiiri on hereillä juuri kun
+ * tunnistus yrittää alkaa. Pelkkä gainin lasku (hiljennys) ei auta,
+ * koska elementti soi yhä ja konteksti on käynnissä.
+ *
+ * Sanelun ajaksi ambienssisoitin pysäytetään OIKEASTI ja jatketaan
+ * perästä sanelun päätyttyä. Pause-elvytys (ks. pause-kuuntelija)
+ * ohittaa tahallisen tauon lipun perusteella.
+ */
+let sanelunTauko = false;
+
+export function taukoaSanelunAjaksi() {
+  if (sanelunTauko) return;
+  sanelunTauko = true;
+  sfx.taukoaKonteksti?.();
+  const oma = nykyinen;
+  const audio = oma?.audio;
+  if (audio && !audio.paused) {
+    oma.saneluTauolla = true;
+    try {
+      audio.pause();
+    } catch {
+      /* soitin oli jo pysähtynyt */
+    }
+  }
+}
+
+export function jatkaSanelunJalkeen() {
+  if (!sanelunTauko) return;
+  sanelunTauko = false;
+  sfx.jatkaKonteksti?.();
+  const oma = nykyinen;
+  if (!oma?.saneluTauolla) return;
+  oma.saneluTauolla = false;
+  const audio = oma.audio;
+  if (audio) {
+    try {
+      audio.play().catch(() => {});
+    } catch {
+      /* jatko epäonnistui — seuraava maisemanvaihto käynnistää uuden */
+    }
+  }
+}
+
+/** Vain testejä varten. */
+export function sanelunTaukoPaalla() {
+  return sanelunTauko;
 }
 
 /**

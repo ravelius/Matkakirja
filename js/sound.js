@@ -158,8 +158,32 @@ class Sound {
       // Oikeat äänitteet (noppa, kynä) latautuvat taustalla.
       this.loadRealSamples();
     }
-    if (this.ctx.state === 'suspended') this.ctx.resume().catch(() => {});
+    if (!this.saneluTauko && this.ctx.state === 'suspended') this.ctx.resume().catch(() => {});
     return this.ctx;
+  }
+
+  /*
+   * SANELUN KOVA TAUKO (omistajan havainto 13.8.2026): iOS:n WebKit ei
+   * aloita mikrofonin kaappausta, jos sivun WebAudio-konteksti on
+   * käynnissä. Lippu estää myös ensure():n automaattisen resumen —
+   * muuten yksikin tehoste herättäisi kontekstin kesken kaappauksen.
+   */
+  taukoaKonteksti() {
+    this.saneluTauko = true;
+    try {
+      this.ctx?.suspend?.().catch?.(() => {});
+    } catch {
+      /* konteksti ei ollut käynnissä */
+    }
+  }
+
+  jatkaKonteksti() {
+    this.saneluTauko = false;
+    try {
+      if (this.ctx?.state === 'suspended') this.ctx.resume().catch(() => {});
+    } catch {
+      /* konteksti syntyy seuraavasta äänestä */
+    }
   }
 
   /**
