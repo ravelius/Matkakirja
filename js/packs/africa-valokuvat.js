@@ -1367,6 +1367,23 @@ export function valokuvaVara(tiedosto, leveys) {
 }
 
 /**
+ * SUURENNOKSEN osoite: aina Commonsista pyydetyllä leveydellä.
+ *
+ * valokuvaUrl palauttaa ensisijaisesti repon paikalliskopion, joka on
+ * tallennettu lehden palstaleveydelle (≤1280 px, osa pienempiä) —
+ * leveysparametri ei vaikuta siihen lainkaan. Lehden sivulla CSS
+ * venyttää pikkukopion palstan täyteen, mutta suurennos näyttää
+ * tiedoston luonnollisessa koossaan, jolloin "koko ruudun" kuva oli
+ * iPadilla PIENEMPI kuin sivulla (omistajan havainto 13.8.2026).
+ * Suurennos hakee siksi ison version suoraan Commonsista; kutsuja
+ * antaa varaksi valokuvaUrl:n, jotta kuva näkyy myös yhteydettä —
+ * pienempänä, mutta näkyy.
+ */
+export function valokuvaSuurennos(tiedosto, leveys) {
+  return commonsUrl(tiedosto, leveys);
+}
+
+/**
  * Lipun osoite samoissa portaissa. Liput ovat repossa
  * (tools/fetch-flags.mjs), koska saapumiskortti näyttää niitä useita
  * kerralla ja Commons alkoi rajoittaa peräkkäisiä pyyntöjä — silloin

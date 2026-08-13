@@ -48,7 +48,7 @@ import { OMAT_TIIVISTELMAT } from './packs/omat-tiivistelmat.js';
 import { OMAT_ARTIKKELIT } from './packs/africa-artikkelit.js';
 import { AFRICA_MAATIEDOT } from './packs/africa-maatiedot.js';
 import {
-  AFRICA_VALOKUVAT, lippuUrl, lippuVara, valokuvaUrl, valokuvaVara,
+  AFRICA_VALOKUVAT, lippuUrl, lippuVara, valokuvaSuurennos, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
 import {
   asetaKuva, peiliPetti, peilinLaji, aaniOsoite, onPeilista,
@@ -8887,7 +8887,13 @@ export class UI {
     let laskuri = null;
     const nayta = () => {
       const teos = lista ? lista[indeksi] : nosto;
-      asetaKuva(kuva, valokuvaUrl(teos.tiedosto, 1400), valokuvaVara(teos.tiedosto, 1400));
+      /*
+       * Iso versio Commonsista, EI paikallista palstakopiota
+       * (ks. valokuvaSuurennos): suurennoksen pitää olla vähintään
+       * yhtä iso kuin kuva lehden sivulla. Vara on paikallinen/peili-
+       * reitti, jotta kuva näkyy myös yhteydettä.
+       */
+      asetaKuva(kuva, valokuvaSuurennos(teos.tiedosto, 1600), valokuvaUrl(teos.tiedosto, 1600));
       kuva.alt = teos.otsikko ?? teos.selite ?? '';
       kuvateksti.textContent = teos.selite ?? '';
       kuvateksti.hidden = !teos.selite;
