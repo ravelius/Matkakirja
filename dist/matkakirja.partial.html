@@ -142175,16 +142175,87 @@ function liitaKompressori(audio) {
     for (const [avain, arvo] of Object.entries(KOMPRESSORI)) komp[avain].value = arvo;
     const vahvistin = ctx.createGain();
     vahvistin.gain.value = 0;
-    lahde.connect(komp).connect(vahvistin).connect(ctx.destination);
+    /*
+     * Mittari on KETJUSSA eikä haarassa. Läpimenevä solmu tulee varmasti
+     * ajetuksi, koska ulostulo vetää sitä; sivuhaaraan ripustettua
+     * analysaattoria toteutus ei ole velvollinen käymään läpi lainkaan,
+     * ja mykkä mittari valehtelisi juuri sen, mitä sen pitäisi paljastaa.
+     * AnalyserNode ei muuta signaalia, joten paikka ketjussa on ilmainen.
+     */
+    const mittari = ctx.createAnalyser();
+    mittari.fftSize = 256;
+    lahde.connect(komp).connect(vahvistin).connect(mittari).connect(ctx.destination);
     // Solmut talteen purkua varten (ks. vapautaSoitin). Ilman tätä
     // ketju jää kiinni destinationiin soittimen kuoltua, ja jokainen
     // kaupunki kasvattaa äänigraafia pysyvästi.
-    audio.aaniSolmut = [lahde, komp, vahvistin];
+    audio.aaniSolmut = [lahde, komp, vahvistin, mittari];
+    audio.aaniMittari = mittari;
     return vahvistin;
   } catch {
     // createMediaElementSource heittää, jos elementti on jo reititetty.
     return null;
   }
+}
+
+/*
+ * ── HILJAISUUSVAHTI (turvaverkko Web Audio -reitille) ────────────────
+ *
+ * OMISTAJAN VIKA 13.8.2026 (iPad, v614): *"etusivun taustaääni ei
+ * vieläkään kuulu — puhe kuuluu kyllä mutta ei taustaääni."* Sama vika
+ * on ollut jo ennen iOS-kuorta, eli se on webbipelin omassa
+ * äänipolussa eikä uusien muutosten regressio.
+ *
+ * MITATTU (tools/savuke-etusivun-aani.mjs, tests/ambienssi.test.mjs):
+ * etusivun soitin päätyy volume- tai gain-polulle sen mukaan, oliko
+ * äänikonteksti sattumalta jo käynnissä sillä hetkellä kun soitin
+ * syntyi. Polku ei siis ole valinta vaan kilpajuoksu — ja kun
+ * ensimmäinen soitin kuolee (kaskadi varalle-polkuun) ja seuraava
+ * render rakentaa uuden VASTA ELEEN JÄLKEEN, konteksti on jo
+ * käynnissä ja soitin reititetään. Juuri se on tila, josta
+ * liitaKompressorin ja onnistui():n omat kommentit varoittavat:
+ * WebKitissä Web Audioon reititetty elementti voi jäädä täysin
+ * mykäksi ILMAN VIRHETTÄ, koska se ei enää soi suoraan kaiuttimeen.
+ * Yksikään olemassa oleva vahti ei laukea — readyState on kunnossa ja
+ * error-tapahtumaa ei tule.
+ *
+ * TODISTE (tools/savuke-etusivun-aani.mjs, mykkä ketju): reititetty
+ * soitin ilmoittaa soivansa (paused=false, readyState=4), vahvistimen
+ * gain nousee lukemaan 0,1176 — ja mittarin lukema on 0. Ilman
+ * vahtia se tila jää pysyväksi; vahdin kanssa tilalle syntyy
+ * reitittämätön soitin, jonka volume on 0,1176 ja nauha etenee.
+ *
+ * Siksi mykkyys mitataan itse. Reititetyssä ketjussa on AnalyserNode,
+ * ja jos ulostulo on täsmälleen nolla useassa peräkkäisessä
+ * näytteessä, ketju on kuollut. Silloin sama äänite rakennetaan
+ * uudelleen ilman reititystä (`ilmanKompressoria`) — täsmälleen sama
+ * varaporras, jonka petti() jo tuntee.
+ *
+ * PELKKÄ NOLLA EI RIITÄ. Tauolla oleva soitin, puskuroimaton lataus ja
+ * täysi väistö ovat kaikki laillisesti hiljaisia, joten ne on
+ * suljettava pois erikseen (ks. nayte()). Ja koska liukuvakin äänite
+ * voi olla yhden näytteen verran hiljaa, näytteitä otetaan useita.
+ */
+const HILJAISUUS_ALKU_MS = 2500;
+const HILJAISUUS_VALI_MS = 500;
+const HILJAISUUS_NAYTTEITA = 4;
+
+/** Ulostulon huippupoikkeama nollasta. Nolla = digitaalinen hiljaisuus. */
+function huippu(mittari) {
+  const koko = mittari.fftSize ?? 256;
+  if (mittari.getFloatTimeDomainData) {
+    // Liukuluvut kertovat aidon nollan; tavuina hiljaisuus ja hyvin
+    // hiljainen ääni pyöristyvät molemmat lukemaan 128.
+    const data = new Float32Array(koko);
+    mittari.getFloatTimeDomainData(data);
+    let suurin = 0;
+    for (const arvo of data) suurin = Math.max(suurin, Math.abs(arvo));
+    return suurin;
+  }
+  const data = new Uint8Array(koko);
+  mittari.getByteTimeDomainData(data);
+  let suurin = 0;
+  for (const arvo of data) suurin = Math.max(suurin, Math.abs(arvo - 128));
+  return suurin;
 }
 
 /**
@@ -142217,6 +142288,7 @@ function vapautaSoitin(audio) {
   }
   audio.aaniSolmut = null;
   audio.aaniVahvistin = null;
+  audio.aaniMittari = null;
 }
 
 /** Soittimen nykyinen taso riippumatta siitä, kumpi reitti on käytössä. */
@@ -142338,7 +142410,17 @@ function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = null) {
     // pöllö tai lehti on auki (tai kertoja lukee), kaupungin vaihtuminen
     // ei saa nostaa taustaa yllättäen täyteen voimaan.
     vaimennus: voimassaVaisto(),
-    tavoite: Math.min(1, VOIMA * voima * paikanVoima),
+    /*
+     * TAVOITETTA EI LEIKATA TÄSSÄ, vaan vasta siinä kohdassa, jossa se
+     * asetetaan (asetaTaso). Syy on polkujen ero: vahvistinsolmu SAA
+     * ylittää ykkösen — se on koko kompressorikytkennän sivuhyöty — kun
+     * taas HTML-soittimen volume heittää IndexSizeErrorin ykkösen yli
+     * menevästä arvosta. Etukäteen leikattu tavoite veisi gain-polulta
+     * varan, jota se saa käyttää, ja leikkaamaton arvo kaataisi
+     * volume-polun. Siksi leikkaus kuuluu asettajalle, joka tietää
+     * kummalla polulla ollaan; kumpikin polku sietää nyt kertoimen > 1.
+     */
+    tavoite: VOIMA * voima * paikanVoima,
     // Etusivu alkaa aina samasta kohdasta, koska sen kuuluu kuulostaa
     // joka avauksella samalta.
     arvoAlku: !VAKIOPAIKAT.has(cityId),
@@ -142459,8 +142541,13 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
      * käynnistyy vasta ensimmäisestä ruudusta).
      */
     sfx.setAmbience(null); // synteesi väistyy, kun oikea äänite soi
+    // Soitin on ollut kuuluvissa. Tästä eteenpäin sen pysähtyminen on
+    // keskeytys eikä lataus (ks. pause-kuuntelija alempana).
+    audio.soinut = true;
+    audio.jatkoPyynto = false;
     haivyta(audio, taso(oma), null, nouse);
     vahdiSilmukka(oma, audio);
+    vartioiHiljaisuutta(oma, audio, nouse);
   };
   /*
    * VAHTIAJASTIN: peilin 404 voi jäädä pelkäksi stalled-tapahtumaksi
@@ -142589,9 +142676,83 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
     varalle();
   };
   audio.addEventListener('error', petti);
+  /*
+   * KESKEYTYNYT SOITIN EI KÄYNNISTY ITSESTÄÄN.
+   *
+   * Järjestelmä pysäyttää taustasoittimen omin päin: sovellus menee
+   * taustalle, tulee puhelu, toinen sovellus ottaa äänen. Selain ei
+   * jatka toistoa palatessa, ja koska playPlaceAmbience toteaa saman
+   * paikan ja saman osoitteen (`nykyinen?.cityId === cityId`), yksikään
+   * seuraava renderöinti ei rakenna soitinta uudelleen — etusivu jää
+   * mykäksi lopullisesti. MITATTU tynkäselaimella: ulkopuolelta
+   * pysäytetyn soittimen jälkeen playPlaceAmbience palaa heti eikä
+   * kuuluva taso enää palaa nollasta.
+   *
+   * Tämä koskee iPadia useammin kuin puhelinta, koska rinnakkaisnäkymä
+   * ja sovellusten vaihto ovat siellä arkipäivää.
+   *
+   * Yritys tehdään kerran per pysähdys: jos toisto on estetty (sivu on
+   * taustalla), soi() vie odotaElea-polulle ja seuraava ele jatkaa.
+   * `soinut` erottaa keskeytyksen latauksesta — ennen ensimmäistä
+   * kuuluvaa hetkeä pysähtyneisyys on normaalia.
+   */
+  audio.addEventListener('pause', () => {
+    if (nykyinen !== oma || oma.audio !== audio) return;
+    if (!audio.soinut || audio.ended || audio.jatkoPyynto) return;
+    audio.jatkoPyynto = true;
+    soi();
+  });
   viritaVahti();
   soi();
   return audio;
+}
+
+/**
+ * Mittaa reititetyn ketjun ulostuloa ja rakentaa soittimen uudelleen
+ * ilman reititystä, jos ketju on mykkä (ks. HILJAISUUSVAHTI yllä).
+ * Volume-polulla ei ole mitattavaa: se soi suoraan kaiuttimeen.
+ */
+function vartioiHiljaisuutta(oma, audio, nouse) {
+  const mittari = audio.aaniMittari;
+  if (!mittari) return;
+  if (oma.hiljaisuusTutkittu) return; // yksi tutkinta per maisema riittää
+  oma.hiljaisuusTutkittu = true;
+  const nayte = (jaljella) => {
+    if (nykyinen !== oma || oma.audio !== audio || audio.paused) return;
+    // Yksikin kuuluva näyte todistaa ketjun eläväksi.
+    if (huippu(mittari) > 0) return;
+    if (jaljella > 1) {
+      setTimeout(() => nayte(jaljella - 1), HILJAISUUS_VALI_MS);
+      return;
+    }
+    /*
+     * Puskuri ei riitä: kyse on latauksesta, jonka hoitaa vahti.
+     *
+     * Ehto EI ole "nauha etenee", vaikka se olisi houkutteleva. Kuollut
+     * äänigraafi voi myös PYSÄYTTÄÄ nauhan etenemisen, koska reititetyn
+     * elementin kelloa vetää graafi eikä kaiutin — ja silloin juuri se
+     * tila, joka pitäisi korjata, jäisi tunnistamatta. readyState
+     * kertoo saman asian ilman tuota sokeaa pistettä: dataa on, joten
+     * hiljaisuus ei johdu puuttuvasta äänitteestä.
+     */
+    if (audio.readyState < 3) return;
+    /*
+     * Taso on nollassa tarkoituksella (täysi väistö). Vertailu tehdään
+     * TAVOITTEESEEN eikä solmun luettuun arvoon: pysähtyneessä
+     * kontekstissa gain-rampin lukema jäätyy nollaan, ja juuri se on
+     * yksi mykistymisen muoto — sen lukeminen "tarkoitukselliseksi
+     * hiljaisuudeksi" estäisi korjauksen täsmälleen silloin kun se
+     * eniten tarvitaan.
+     */
+    if (taso(oma) <= 0) return;
+    if (oma.ilmanKompressoria) return;
+    oma.ilmanKompressoria = true;
+    // Sama varaporras kuin petti():ssä: elementti jää lopullisesti
+    // sivuun, joten sen ketju puretaan eikä jätetä roikkumaan.
+    vapautaSoitin(audio);
+    oma.audio = luoSoitin(oma, { arvottuAlku: false, nouse });
+  };
+  setTimeout(() => nayte(HILJAISUUS_NAYTTEITA), HILJAISUUS_ALKU_MS);
 }
 
 /**
@@ -142600,6 +142761,12 @@ function luoSoitin(oma, { arvottuAlku, nouse }) {
  * kuuluu naksahduksena keskellä äänimaisemaa.
  */
 function vahdiSilmukka(oma, audio) {
+  // onnistui() voi tulla samalle soittimelle toisenkin kerran, kun
+  // keskeytynyt toisto jatkuu (ks. pause-kuuntelija). Toinen
+  // timeupdate-kuuntelija käynnistäisi silmukan vaihdon kahdesti, ja
+  // ristihäivytykseen jäisi kaksi soivaa kierrosta päällekkäin.
+  if (audio.silmukkaVahdittu) return;
+  audio.silmukkaVahdittu = true;
   const risti = SILMUKKA_RISTI_MS / 1000;
   const vaihda = () => {
     if (nykyinen !== oma || oma.audio !== audio) return;
@@ -150553,10 +150720,28 @@ const KASITTEIDEN_KATTO = 12;
 /** Yhden käsitemerkinnän kuvio. Rivinvaihto katkaisee: se on jo virhe. */
 const KASITE_KUVIO = /\[\[([^[\]\n]{1,60})\]\]/g;
 
+/*
+ * Putkimerkintä [[perusmuoto|taivutus]] puretaan aina: pelaajalle
+ * näytetään taivutus, ja kysymys tehdään perusmuodosta. Kehote kieltää
+ * putken, mutta malli lipsuu wiki-tapoihinsa (omistajan kaappaus
+ * 13.8.2026: "juutalaisuus|juutalaisuudelle" näkyi raakana tekstissä)
+ * — pelaaja ei saa koskaan nähdä pystyviivaa, kielsi kehote tai ei.
+ */
+function puraPutki(kasite) {
+  const kohta = kasite.indexOf('|');
+  if (kohta < 0) return { aihe: kasite, nayttomuoto: kasite };
+  const aihe = kasite.slice(0, kohta).trim();
+  const nayttomuoto = kasite.slice(kohta + 1).split('|').pop().trim();
+  return {
+    aihe: aihe || nayttomuoto,
+    nayttomuoto: nayttomuoto || aihe,
+  };
+}
+
 /** Teksti ilman merkintöjä. Myös keskeneräinen "[[" katoaa striimissä. */
 function poistaKasiteMerkinnat(teksti) {
   return String(teksti ?? '')
-    .replace(KASITE_KUVIO, '$1')
+    .replace(KASITE_KUVIO, (_, sisus) => puraPutki(sisus.trim()).nayttomuoto)
     // Rikkinäiset ja keskeneräiset jäänteet pois: pelaaja näkee vain
     // tekstin, ei koskaan sulkeita.
     .replace(/\[\[|\]\]/g, '')
@@ -150577,8 +150762,9 @@ function jasennaKasitteet(teksti, katto = KASITTEIDEN_KATTO) {
     if (loydetty >= katto) break;
     const kasite = osuma[1].trim();
     if (!kasite) continue;
+    const { aihe, nayttomuoto } = puraPutki(kasite);
     palat.push({ teksti: poistaKasiteMerkinnat(koko.slice(kohta, osuma.index)), kasite: false });
-    palat.push({ teksti: kasite, kasite: true });
+    palat.push({ teksti: nayttomuoto, kasite: true, aihe });
     kohta = osuma.index + osuma[0].length;
     loydetty += 1;
   }
@@ -151913,10 +152099,13 @@ class Pollo {
       }
       const linkki = polloElementti('a', 'pollo-kasitelinkki', pala.teksti);
       linkki.href = '#';
-      linkki.title = `Kerro lisää: ${pala.teksti}`;
+      // Kysymys tehdään perusmuodosta jos putkimerkintä antoi sen —
+      // "Kerro lisää: Jeesus" on luontevampi kuin "Kerro lisää: Jeesuksen".
+      const aihe = pala.aihe ?? pala.teksti;
+      linkki.title = `Kerro lisää: ${aihe}`;
       linkki.addEventListener('click', (e) => {
         e.preventDefault();
-        this.kysy(`Kerro lisää: ${pala.teksti}`);
+        this.kysy(`Kerro lisää: ${aihe}`);
       });
       solmut.push(linkki);
     }
@@ -168142,6 +168331,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 616, teksti: 'Etusivun taustaääni elpyy iPadilla; pöllölinkit siistiksi' },
   { v: 615, teksti: 'Tabrizin kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 614, teksti: 'Pöllön äänet, striimiluenta ja linkit; lukijaan ohitukset' },
   { v: 613, teksti: 'Pöllö isompana ja vakaana, sanelunappi, valikkorivit' },
@@ -168841,7 +169031,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.615';
+const APP_VERSION = '2026-08-09.616';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
