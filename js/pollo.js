@@ -1283,6 +1283,10 @@ class Pollo {
   }
 
   naytaEhdotukset(lista) {
+    // Sama siivous kuin kysyttäessä: näkyvissä on aina vain tuorein
+    // ehdotusjoukko. Ilman tätä paneelin uudelleenavaus jätti edellisen
+    // vastauksen jatkokysymykset pinoon uusien ylle (omistaja 13.8.2026).
+    for (const vanha of this.virta.querySelectorAll('.pollo-jatkot')) vanha.remove();
     this.ehdotukset.replaceChildren();
     for (const teksti of lista.slice(0, 2)) {
       const nappi = polloElementti('button', 'pollo-ehdotus', teksti);
