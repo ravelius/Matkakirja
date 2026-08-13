@@ -524,6 +524,101 @@ export function lueAaneen(teksti, nappi = null) {
   return true;
 }
 
+/**
+ * VIRTALUENTA: teksti saapuu palasina, luenta alkaa ensimmäisestä
+ * virkkeestä (omistajan tilaus 13.8.2026: *"voiko ääni alkaa lukea
+ * tekstiä jo striimauksen aikana?"*).
+ *
+ * Ero lueAaneeniin on jono, joka voi kasvaa kesken luennan. lueAaneen
+ * saa koko tekstin kerralla ja tietää heti, montako palaa on tulossa;
+ * tässä puhuPala jää lepäämään tyhjän jonon päälle ja herää, kun
+ * lisää() tuo uutta. paata() kertoo, ettei enempää tule — vasta sen
+ * jälkeen tyhjä jono päättää luennan.
+ *
+ * KUTSUJAN VASTUULLA on antaa VALMIITA virkkeitä: tämä ei arvaile,
+ * mihin lause loppuu, koska kutsuja tietää sen paremmin (js/pollo.js
+ * puskuroi striimin ja leikkaa virkkeen rajalta, ettei kesken jäänyt
+ * sana tai puolikas käsitemerkintä päädy puheeksi).
+ *
+ * NATIIVISILLALLA EI VIRTALUENTAA. Sillan luenta.puhu ottaa vastaan
+ * yhden kokonaisen tekstin, eikä sillä ole jonoa johon lisätä — peräkkäiset
+ * kutsut keskeyttäisivät toisensa. Tällöin palautuu null, ja kutsuja
+ * lukee valmiin vastauksen entiseen tapaan.
+ *
+ * @returns {{lisaa(teksti: string): void, paata(): void}|null}
+ */
+export function lueVirtana(nappi = null) {
+  pysaytaLukija();
+  if (natiiviLuenta()) return null;
+  const synth = selainPuhe();
+  if (!synth) return null;
+  vaimennaSynth(synth);
+  const aani = suomiAani(synth);
+
+  const merkki = {};
+  const palat = [];
+  const tila = { peruttu: false, lausuma: null, lepaa: true, paatetty: false };
+  const loppui = () => {
+    if (ajossa?.merkki !== merkki) return;
+    ajossa = null;
+    merkitseTila(nappi, false);
+  };
+
+  const puhuPala = () => {
+    if (tila.peruttu) return;
+    if (!palat.length) {
+      // Jono tyhjeni: joko odotetaan lisää tai luenta on valmis.
+      tila.lepaa = true;
+      if (tila.paatetty) loppui();
+      return;
+    }
+    tila.lepaa = false;
+    const lausuma = new window.SpeechSynthesisUtterance(palat.shift());
+    lausuma.lang = LUENNAN_KIELI;
+    if (aani) lausuma.voice = aani;
+    const valmis = () => {
+      if (tila.peruttu) return;
+      puhuPala();
+    };
+    lausuma.onend = valmis;
+    lausuma.onerror = valmis;
+    tila.lausuma = lausuma;
+    synth.speak(lausuma);
+  };
+
+  ajossa = {
+    nappi,
+    merkki,
+    lopeta: () => {
+      tila.peruttu = true;
+      // Jono tyhjäksi, jottei peruttu luenta jatku seuraavasta palasta.
+      palat.length = 0;
+      if (tila.lausuma) {
+        tila.lausuma.onend = null;
+        tila.lausuma.onerror = null;
+      }
+      vaimennaSynth(synth, true);
+    },
+  };
+  merkitseTila(nappi, true);
+
+  return {
+    lisaa(teksti) {
+      if (tila.peruttu || tila.paatetty) return;
+      // Sama palakatto kuin valmiilla tekstillä: Chrome katkaisee liian
+      // pitkän lausuman kesken.
+      for (const pala of lukijaPaloittele(teksti)) palat.push(pala);
+      if (tila.lepaa) puhuPala();
+    },
+    paata() {
+      if (tila.peruttu || tila.paatetty) return;
+      tila.paatetty = true;
+      // Jos jono ehti tyhjentyä ennen päätöstä, luenta loppuu tästä.
+      if (tila.lepaa) loppui();
+    },
+  };
+}
+
 /* ------------------------------------------------------------------ */
 /* Kaiutinnappi                                                        */
 /* ------------------------------------------------------------------ */

@@ -860,7 +860,11 @@ const REAL_PLAYERS = {
   // iskukohdasta ja on tarpeeksi pitkä, että lyönnin sointi kuuluu —
   // lyhyet pätkät eivät kuulostaneet kirjoituskoneelta. Rytmi tulee
   // tekstin kirjoittumisesta (typeText), ei purskeista.
-  pen: (s) => s.playSlice('pen', { dur: 0.24, gain: 0.35, isku: true, tasavire: true }),
+  // `voima` kertoo, kuinka kovaa lyödään: etusivulla täydellä (1),
+  // pöllön striimin taustanaputuksessa vaimeammin (js/pollo.js).
+  pen: (s, { voima = 1 } = {}) => s.playSlice('pen', {
+    dur: 0.24, gain: 0.35 * voima, isku: true, tasavire: true,
+  }),
   // Sivunkääntö soi alusta, ei siivuna — se on yksi ele.
   quizOpen: (s) => s.playSlice('quizOpen', { dur: 1.1, gain: 0.4, alusta: true }),
   // Generoidut yksittäisefektit soivat aina alusta kokonaisina.
@@ -999,9 +1003,51 @@ const SOUNDS = {
   click: (s) => s.knock({ freqs: [540, 880], dur: 0.045, gain: 0.06, q: 8 }),
   paper: (s) => s.hiss({ dur: 0.34, type: 'highpass', freq: 900, sweepTo: 2800, gain: 0.075 }),
   // Kynän raapaisu pergamentilla — avaustekstin käsinkirjoitus. Hyvin
-  // hiljainen, koska se toistuu joka sanalla.
-  pen: (s) => s.hiss({ dur: 0.06, type: 'highpass', freq: 2600, sweepTo: 1500, gain: 0.02, q: 0.7 }),
+  // hiljainen, koska se toistuu joka sanalla. `voima` on kutsujan oma
+  // kerroin: pöllön striimin naputus on taustaa eikä pääosa, joten se
+  // soittaa saman lyönnin selvästi hiljempaa (js/pollo.js).
+  pen: (s, { voima = 1 } = {}) => s.hiss({
+    dur: 0.06, type: 'highpass', freq: 2600, sweepTo: 1500, gain: 0.02 * voima, q: 0.7,
+  }),
   swipe: (s) => s.hiss({ dur: 0.24, freq: 700, sweepTo: 2600, gain: 0.09, q: 0.8 }),
+
+  /*
+   * PÖLLÖN HUHUILU paneelin avautuessa (omistajan tilaus 13.8.2026:
+   * *"saisiko pöllölle oman äänen kun hänet 'herättää'. — Huhuu on
+   * vähän pitkä mutta alun 'hu' voisi toimia."*).
+   *
+   * Yksitavuinen, ei kaksitavuinen "hu-huu": yksi pehmeä siniaalto
+   * matalalla, loivalla alulla (attack 60 ms — nopeampi alku kuulostaisi
+   * pillin puhallukselta) ja pienellä laskulla lopussa, kuten oikean
+   * lehtopöllön huhuilussa. Oktaavi päällä pelkkänä ruumiina, ja hyvin
+   * hiljainen henkäys alkuun: ilman sitä sini kuulostaa
+   * signaaligeneraattorilta eikä linnulta.
+   *
+   * Ääni on tarkoituksella lyhyt ja hiljainen: se on tervehdys, ei
+   * hälytys, ja se soi joka kerta kun paneeli avataan.
+   */
+  owl: (s) => {
+    s.tone({ freq: 402, to: 336, dur: 0.32, type: 'sine', gain: 0.13, attack: 0.06 });
+    s.tone({ freq: 804, to: 672, dur: 0.26, type: 'sine', gain: 0.022, attack: 0.07 });
+    s.hiss({ dur: 0.08, type: 'bandpass', freq: 620, gain: 0.016, q: 1.2 });
+  },
+
+  /*
+   * KIRJOITUSKONEEN RIVINVAIHTOKELLO pöllön vastauksen valmistuessa
+   * (omistajan tilaus 13.8.2026: *"kun pöllö on valmis, voisi kuulua
+   * bling ääni joka kuuluu kun kirjoituskone vaihtaa riviä"*).
+   *
+   * Marginaalikello on pieni lyöty kuppi: kirkas, lyhyt ja YKSI
+   * helähdys. Kaksi osaa, koska kumpikin tekee eri työn — FM-kilahdus
+   * on vasaran isku ja bell sen sointi. Taajuus 1480 Hz on kokeilluista
+   * (1300 / 1480 / 1600) uskottavin: 1300 kuulosti ovikellolta ja 1600
+   * jo kalliolta. Sointi on lyhyt (0,5 s), jottei se jää soimaan
+   * vastauksen päälle.
+   */
+  typeBell: (s) => {
+    s.ding({ freq: 1480, ratio: 2.4, index: 420, dur: 0.12, gain: 0.06 });
+    s.bell({ freq: 1480, dur: 0.5, gain: 0.085 });
+  },
 
   /*
    * Kartan zoomaus: kompaktikameran zoomimoottori (omistajan toive —

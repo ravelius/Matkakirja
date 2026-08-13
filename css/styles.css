@@ -11118,7 +11118,23 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
   color: var(--pollo-muste);
 }
 
-.pollo-odottaa { color: var(--pollo-muste-himmea); font-style: italic; }
+/*
+ * ── VASTAUSTEKSTI EI OLE KURSIIVIA (omistaja 13.8.2026) ──────────────
+ *
+ * *"saisiko strimitekstin ilman kursiivia"*.
+ *
+ * JUURISYY: tämä sääntö osui kahteen paikkaan yhdellä nimellä.
+ * "Pöllö miettii…" on viestikupla, jolla luokka kuuluu olla — mutta
+ * js/pollo.js asetti saman luokan myös PANEELIIN odotuksen ajaksi, ja
+ * paneelista kursiivi ja himmeä muste periytyivät kaikkeen sisältöön.
+ * Striimattu vastaus kirjoittui siis kursiivilla ja muuttui pystyksi
+ * vasta valmistuessaan — sama teksti kahdessa asussa.
+ *
+ * Valitsimessa on nyt .pollo-viesti mukana, ja paneelin oma odotustila
+ * on eri luokka (.pollo-kesken, ei tyyliä täällä). Kursiivi kuuluu vain
+ * sille yhdelle riville, joka ei ole pöllön puhetta.
+ */
+.pollo-viesti.pollo-odottaa { color: var(--pollo-muste-himmea); font-style: italic; }
 
 /*
  * ALLEVIIVATTU LINKKI KESKELLÄ VASTAUSTA (omistajan tilaus 12.8.2026).
