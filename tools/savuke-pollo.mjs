@@ -3063,8 +3063,10 @@ vaadi('tabletin paneeli on koko korkeutensa jo avattaessa',
 vaadi('tabletin paneeli on korkeampi ja leveämpi kuin ennen (432 × 336)',
   tabletti.tulos.vastauksessa > 432 && tabletti.tulos.leveys > 336,
   JSON.stringify(tabletti.tulos));
-vaadi('tabletin paneeli on oikeassa reunassa, mitattuna ruudusta',
-  tabletti.tulos.oikea > 0 && tabletti.tulos.oikea < 20
+// Omistaja 13.8.2026 ilta: "Pöllö saisi olla hieman irti reunasta"
+// — reunaväli on nyt 1.5 rem (24 px), ei enää kiinni laidassa.
+vaadi('tabletin paneeli on hieman irti oikeasta reunasta',
+  tabletti.tulos.oikea >= 16 && tabletti.tulos.oikea < 48
   && tabletti.tulos.vasen > tabletti.tulos.oikea, JSON.stringify(tabletti.tulos));
 vaadi('tabletilla alanapit näkyvät koko ajan',
   tabletti.tulos.napitEnnen === true && tabletti.tulos.napitAuki === true
