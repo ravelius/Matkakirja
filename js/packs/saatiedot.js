@@ -188,4 +188,14 @@ export const SAATIEDOT = {
     keskilampo: [0.4, 2.5, 8.1, 14.8, 21.4, 27.8, 31, 29.9, 25, 18, 9.1, 3.1],
     sade: [38, 40, 50, 37, 14, 2, 1, 1, 1, 14, 40, 40],
   },
+  // Isfahan on Iranin kolmesta lehtikaupungista kuivin: heinä-, elo- ja
+  // syyskuussa normaali sademäärä on nolla millimetriä, ja sateisinkin
+  // kuukausi jää seitsemääntoista. Vuoden summa on noin 98 mm, eli alle
+  // kolmasosa Tabrizin luvusta.
+  isfahan: {
+    lat: 32.65,
+    lon: 51.67,
+    keskilampo: [2.2, 5.1, 10.1, 16.2, 22, 27.6, 30.3, 28.9, 24.3, 17.6, 9.5, 4.2],
+    sade: [17, 12, 17, 11, 7, 1, 0, 0, 0, 3, 16, 14],
+  },
 };
