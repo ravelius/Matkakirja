@@ -385,9 +385,6 @@ button, .brand, .turn-pill, .fact-card h2 {
 .paavalikko .linssi-valikko,
 .paavalikko .kertoja-valikko {
   align-items: center;
-  /* Rivi täyttää valikon leveyden tasavälein — keskitetty nippu jätti
-   * reunoille tyhjää (omistaja 13.8.2026). */
-  justify-content: space-evenly;
   position: static;
   width: auto;
   max-width: none;
@@ -399,19 +396,50 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 /*
- * Molemmat ruudukot NELJÄÄN SARAKKEESEEN.
+ * VARUSTERUUDUKKO NELJÄÄN SARAKKEESEEN.
  *
- * Äänitiloja on neljä, joten rivi täyttyy tasan. Varusteruudukko saa
- * saman jaon, jotta valikossa on yksi rytmi eikä kahta: `auto-fill`
- * antoi sille kolme saraketta, ja kolmen ja neljän ero näkyi heti
- * vierekkäin. Varusteita on tulossa yksitoista, joten rivejä tulee
- * lisää — sarakemäärä pysyy silti samana.
+ * Neljä saraketta on ruudukon oma rytmi, ei nappien määrästä johdettu:
+ * varusteita on tulossa yksitoista, joten rivejä tulee lisää mutta
+ * sarakemäärä pysyy samana. (`auto-fill` antoi kolme saraketta, ja
+ * leveys heilui varusteiden määrän mukana.)
  */
-.paavalikko .kertoja-valikko,
 .paavalikko .linssi-valikko .linssi-liuskat {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.4rem;
+}
+
+/*
+ * ── VALIKON KAKSI ALINTA RIVIÄ TÄYTTÄVÄT LEVEYDEN ────────────────────
+ *
+ * Omistaja 13.8.2026: *"hampurilaisen ikonit ovat vielä korjaamatta.
+ * Niitä piti vähän levittää ja tehdä vähän lisää välistystä, jotta ne
+ * täyttävät nätisti keskitetysti koko tilan. Siis ne kaksi alinta
+ * nappiriviä. Ylin varusteiden rivi voi jäädä juuri noin."*
+ *
+ * Äänirivi peri varusteruudukon neljä saraketta, vaikka äänitiloja on
+ * kolme: 44 pikselin napit istuivat sarakkeidensa vasemmassa laidassa
+ * ja neljäs sarake jäi tyhjäksi oikeaan reunaan — mitattuna vasemmalla
+ * 14 px ja oikealla 20 px. Rivi on nyt oma flex-rivinsä kuten
+ * alarivikin, ja molemmat käyttävät samaa napinleveyttä ja samaa jakoa
+ * (space-between), joten ne täyttävät valikon laidasta laitaan ja
+ * asettuvat myös keskenään samaan linjaan.
+ *
+ * Varusteruudukko jää ennalleen: se on ruudukko, johon tulee rivejä
+ * lisää varusteiden myötä, eikä sen jakoa saa sitoa nappien määrään.
+ *
+ * EI `flex-wrap: wrap`. Valikko on absoluuttisesti asemoitu, joten sen
+ * leveys tulee sisällön luontaisesta leveydestä — ja rivittyvän
+ * flex-rivin luontainen leveys on yhden napin verran, ei kolmen. Sen
+ * kanssa valikko kutistui 82 pikseliin ja napit latautuivat päällekkäin.
+ * Nappeja on kolme eikä rivin tarvitse rivittyä.
+ */
+.paavalikko .kertoja-valikko,
+.paavalikko .valikko-alarivi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 /*
@@ -420,18 +448,22 @@ button, .brand, .turn-pill, .fact-card h2 {
  * aikeen näkyviin, koska `.linssi-liuskat button` asettaa `width: auto`
  * eri tarkoituksessa (selitekortin liuskarivi ei ole ruudukko).
  */
-.paavalikko .kertoja-valikko button,
 .paavalikko .linssi-valikko .linssi-liuskat button { width: 100%; }
 
 /* Varusteen kuvaus keskitetään kuten otsikot ja napit. */
 .paavalikko .linssi-tiedot { text-align: center; padding-top: 0.5rem; }
 
+/*
+ * Nappi on leveämpi kuin korkea (54 × 44). Kolme leveää nappia täyttää
+ * valikon rivin laidasta laitaan ja jättää kuvakkeelle ilmaa
+ * ympärilleen; korkeus pysyy 44 pikselissä, joka on sormen mitta.
+ * `aspect-ratio` poistui, koska ruutu ei ole enää neliö.
+ */
 .paavalikko .kertoja-valikko button {
   flex-direction: column;
   gap: 0.15rem;
-  width: 44px;
+  width: 54px;
   height: 44px;
-  aspect-ratio: 1;
   padding: 0;
   justify-content: center;
   background: rgba(53, 39, 26, 0.55);
@@ -457,18 +489,9 @@ button, .brand, .turn-pill, .fact-card h2 {
  * ne erotetaan viivalla ja keskitetään omalle rivilleen.
  */
 .valikko-alarivi {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 0.4rem;
-  /*
-   * Rivi mittaa itsensä sisällöstään ja venyttää valikon tarvittaessa,
-   * jotta kaksi nappia mahtuu vierekkäin. Kiinteä vähimmäisleveys ei
-   * kelvannut: nappien mitat tulevat kirjasimesta, ja mitattuna
-   * "Säännöt" + "Uusi peli" vaativat puhelimella 209 px mutta
-   * tabletilla 265. `max-content` on oikea luku molemmilla ilman
-   * arvausta.
-   */
+  /* Ladelma (flex, space-between, väli) on yhteinen Äänet-rivin kanssa,
+     ks. "VALIKON KAKSI ALINTA RIVIÄ TÄYTTÄVÄT LEVEYDEN". Täällä ovat
+     vain ne mitat, jotka ovat tämän rivin omia. */
   align-self: center;
   /* Rivi on koko valikon levyinen, jotta yläpuolen vaakaviiva jatkuu
    * laidasta laitaan (omistaja 13.8.2026); napit keskittää
@@ -481,9 +504,9 @@ button, .brand, .turn-pill, .fact-card h2 {
 
 .paavalikko .valikko-alarivi button {
   /* Täsmälleen sama mitta ja tausta kuin Äänet-rivin kuvakenapeilla
-   * (mitattu 40×40) — rivit ovat päällekkäin ja eri koko näyttäisi
+   * (54 × 44) — rivit ovat päällekkäin, ja eri koko näyttäisi
    * virheeltä (omistaja 13.8.2026). */
-  width: 44px;
+  width: 54px;
   height: 44px;
   min-height: 0;
   padding: 0;
@@ -10840,8 +10863,30 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
   z-index: 41;
   display: flex;
   flex-direction: column;
-  width: min(21rem, calc(100vw - 1.4rem));
-  max-height: min(27rem, calc(100vh - 10rem));
+  /*
+   * ── KORKEUS ON KIINTEÄ, EI SISÄLLÖN MUKAINEN (omistaja 13.8.2026) ──
+   *
+   * *"Pöllönäkymä voisi heti aueta täyteen korkeuteensa. Se nimittäin
+   * myös häiritsee, kun korkeus pikkuhiljalleen kasvaa."*
+   *
+   * Ennen tässä oli `max-height`, joten paneeli kasvoi jokaisen
+   * striimatun rivin myötä ja koko laatikko eli vastauksen alla. Nyt
+   * mitta on `height`: paneeli on avatessaan sen kokoinen kuin se on
+   * vastauksen lopussakin. Sivutuotteena vastauksen alle varattu tyhjä
+   * (js/pollo.js viritaTyhjaTila) mitataan vakaasta korkeudesta.
+   *
+   * clamp pitää mitan järkevänä myös maisema-asennossa, jossa
+   * laskukaavan arvo jäisi muuten olemattomaksi. dvh eikä vh: iOS:n
+   * osoiterivi söi vh-mitasta osan, ja paneelin alalaita jäi kaaren
+   * taakse.
+   *
+   * iPadilla ja työpöydällä paneeli on hieman entistä leveämpi ja
+   * selvästi korkeampi, mutta se EI ylety alanappirivin päälle —
+   * leveällä ruudulla napit ovat kaukana paneelista ja käytössä.
+   * Puhelimen omat mitat ovat media-lohkossa (max-width: 560px).
+   */
+  width: min(24rem, calc(100vw - 1.4rem));
+  height: clamp(14rem, calc(100dvh - 11rem - env(safe-area-inset-bottom, 0px)), 40rem);
   border: 1px solid var(--pollo-viiva);
   border-radius: var(--radius);
   /* Sama painopaperi kuin lehden arkissa: kohina kertaantuu värin päälle. */
@@ -10856,6 +10901,37 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 }
 
 /*
+ * ── PUHELIMELLA PÖLLÖ PEITTÄÄ ALANAPIT (omistaja 13.8.2026) ──────────
+ *
+ * *"Pöllö voisi iPhonessa ainakin tulla tai alkaa alanappien päältä
+ * peittäen ne. Ja koko pop-up-ikkuna voisi olla korkeampi, mahtuu
+ * paremmin tekstiä näkyviin. — Pöllötilassa kuitenkaan ei tehdä mitään
+ * muuta, niin se voi peittää reilumminkin karttaa."*
+ *
+ * Paneeli seisoi alanappirivin yläpuolella (bottom 7.2rem) ja jätti
+ * kartan napit näkyviin, vaikka keskustelun aikana niistä ei ole
+ * mitään hyötyä. Kapealla ruudulla se maksoi kaksi riviä tekstiä.
+ * Puhelimella paneeli laskeutuu siis kotipalkin viereen ja venyy sen
+ * verran korkeammaksi kuin ruutu antaa. Alalaita jää turva-alueen
+ * yläpuolelle, jottei iPhonen kotipalkki leikkaa nappiriviä.
+ *
+ * Leveyskin kasvoi 21 remistä 24:ään (yhteinen mitta tabletin kanssa),
+ * jolloin puhelimella jäljelle jää vain reunan 0,7 rem. Sama tavoite
+ * kuin korkeudessa: mahdollisimman paljon tekstiä kerralla näkyviin,
+ * kun kartan peittäminen on kerran sallittu.
+ *
+ * Sulkeminen ei kärsi: paneeli suljetaan napauttamalla sen ULKOPUOLELLE
+ * (js/pollo.js seuraaSulkemista) tai Esc-näppäimestä, ei peittyneestä
+ * pöllönapista.
+ */
+@media (max-width: 560px) {
+  .pollo-paneeli {
+    bottom: calc(0.7rem + env(safe-area-inset-bottom, 0px));
+    height: clamp(14rem, calc(100dvh - 6.5rem - env(safe-area-inset-bottom, 0px)), 42rem);
+  }
+}
+
+/*
  * EI HEHKUA. Kaikki paneelin teksti nollaa perityn pergamenttivarjon —
  * tämä on se sääntö, joka teki teksteistä jälleen teräviä. Valitsin on
  * tarkoituksella tarkempi kuin body[data-mode] .actions button, joka
@@ -10864,6 +10940,39 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 .pollo-paneeli,
 body[data-mode] .actions .pollo-paneeli,
 body[data-mode] .actions .pollo-paneeli * { text-shadow: none; }
+
+/*
+ * ── ESTETTY NAPPI HIMMENEE, MUTTA EI KATOA ───────────────────────────
+ *
+ * JUURISYY omistajan havaintoon 13.8.2026 ("sanelussa ei näy vielä
+ * mitään tekstiä napissa"): paneeli asuu alanappirivin sisällä, joten
+ * kartan oma sääntö `body[data-mode] .actions button:disabled` yltää
+ * myös paneelin nappeihin — ja se on tarkempi (kolme luokkaa ja kaksi
+ * elementtiä) kuin paneelin omat säännöt. Kartalla sääntö on oikea:
+ * siellä estetty nappi saa sulaa pergamenttiin, koska pohjana on
+ * piirretty kartta. Chatin paperilla se riisui napilta taustan ja jätti
+ * tekstin 45 %:n musteeksi — mitattuna läpinäkyvä pohja ja
+ * rgba(58, 42, 22, 0.45) teksti vaalealla paperilla. Juuri niin
+ * pysäytysneliö ja sana "Lopeta" katosivat siksi aikaa, kun pöllö haki
+ * ehdotuksia tai vastausta (asetaKesken estää koko syöterivin).
+ *
+ * Paneelilla on oma himmennyksensä (opacity 0.5), joten kartan sääntö
+ * kumotaan paneelin osalta yhtä tarkalla valitsimella — ei
+ * !importantilla, vaan lisäämällä .pollo-paneeli valitsinketjuun.
+ */
+body[data-mode] .actions .pollo-paneeli button:disabled {
+  opacity: 0.5;
+  border-color: var(--pollo-viiva);
+  background: var(--pollo-paperi);
+  color: var(--pollo-korostus);
+}
+
+/* Keskustelun napit ovat hitusen tummempaa paperia kuin syöterivin,
+   ja pitävät sävynsä myös estettyinä. */
+body[data-mode] .actions .pollo-paneeli button.pollo-ehdotus:disabled {
+  background: var(--pollo-paperi-2);
+  color: var(--pollo-muste);
+}
 
 /*
  * Ehdotukset ovat KESKUSTELUVIRRASSA, eivät paneelin yläreunassa
@@ -10902,6 +11011,25 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
   padding: 0.7rem 0.6rem;
   overflow-y: auto;
   overscroll-behavior: contain;
+  /*
+   * Selaimen oma vieritysankkuri pois: se siirtää vierityskohtaa itse,
+   * kun sisältö muuttuu, ja juuri sitä liikettä vastaan koko varattu
+   * tyhjä (js/pollo.js viritaTyhjaTila) on rakennettu. Ankkuri on
+   * meidän, ei selaimen.
+   */
+  overflow-anchor: none;
+}
+
+/*
+ * Vastauksen alle varattu tyhjä (js/pollo.js viritaTyhjaTila). Pelkkää
+ * tilaa: korkeus tulee skriptiltä eikä lohkolla ole muuta tehtävää.
+ * Nollamitat kirjataan tähän, jottei mikään perityvä sääntö kasvattaisi
+ * sitä — varauksen koon pitää olla täsmälleen se, mikä on mitattu.
+ */
+.pollo-tyhja {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 /* Vastaukset ovat pitkähköä leipätekstiä, joten ne käyttävät samaa
@@ -11197,7 +11325,8 @@ button.pollo-nappula:disabled { opacity: 0.5; cursor: default; }
  * Valitsin on paneelin luokan alla samasta syystä kuin mikillä:
  * kartan .actions-napeilla on oma pergamenttisääntönsä.
  */
-.pollo-paneeli button.pollo-kaiutin.paalla {
+.pollo-paneeli button.pollo-kaiutin.paalla,
+body[data-mode] .actions .pollo-paneeli button.pollo-kaiutin.paalla {
   background: var(--pollo-korostus);
   color: #f7f1e2;
   border-color: var(--pollo-korostus);
@@ -11226,8 +11355,15 @@ input.pollo-kehittaja-kentta::placeholder { color: var(--pollo-muste-himmea); op
  * nappi on täyteinen, siinä on pysäytysneliö ja sana "Lopeta", ja se
  * sykkii kevyesti. Sisältö on kahdessa sarakkeessa, koska lepotilan
  * nappi on yhden kuvakkeen ruutu (place-items: center).
+ *
+ * Toinen valitsin on pidempi tarkoituksella: kartan estosääntö
+ * (ks. "ESTETTY NAPPI HIMMENEE, MUTTA EI KATOA") on tarkempi kuin
+ * lyhyt muoto, ja se söi kuuntelevalta mikiltä taustan sinä hetkenä,
+ * kun sanelu ja lähtenyt kysymys menivät päällekkäin. Kuunteleva nappi
+ * on täyteinen aina — myös estettynä.
  */
-.pollo-paneeli button.pollo-mikki.kuuntelee {
+.pollo-paneeli button.pollo-mikki.kuuntelee,
+body[data-mode] .actions .pollo-paneeli button.pollo-mikki.kuuntelee {
   grid-auto-flow: column;
   align-items: center;
   justify-content: center;

@@ -388,7 +388,15 @@ export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [
  *   2. Vastausta ei tulkita merkkauksena. Solmut rakennetaan käsin ja
  *      teksti asetetaan tekstisisältönä, kuten artikkelilinkeissäkin.
  */
-const KASITTEIDEN_KATTO = 3;
+/*
+ * Katto on turvaraja, ei tyylivalinta (omistajan havainto 13.8.2026:
+ * "kaikki paikat ja erisnimet, kuten Beethoven, olisi kiva saada
+ * jatkokysymyspainikkeeksi tekstiin"). Kolmen katto leikkasi palvelimen
+ * antamat linkit kesken lauseen, joten loppuvastaus jäi linkittömäksi.
+ * Kaksitoista ei käytännössä osu vastaan — se on olemassa vain siltä
+ * varalta, että malli merkitsee joskus koko vastauksen hakasulkeisiin.
+ */
+const KASITTEIDEN_KATTO = 12;
 
 /** Yhden käsitemerkinnän kuvio. Rivinvaihto katkaisee: se on jo virhe. */
 const KASITE_KUVIO = /\[\[([^[\]\n]{1,60})\]\]/g;
@@ -620,16 +628,21 @@ class Pollo {
     // Kevyt kuvapopup nähtävyyslinkin päällä (avaaKuvapopup).
     this.kuvapopup = null;
     /*
-     * Striimin vieritysankkuri. odotettuVieritys on se kohta, johon
-     * ankkurointi viimeksi jätti virran; jos pelaaja on sen jälkeen
-     * vierittänyt itse, ankkurointi lukitaan eikä näkymä enää liiku
-     * (omistajan reunaehto: vastaus ei koskaan rullaa itsestään).
+     * Vastauksen ankkuri. odotettuVieritys on se kohta, johon ankkurointi
+     * jätti virran; jos pelaaja on sen jälkeen vierittänyt itse, näkymään
+     * ei enää kosketa (omistajan reunaehto: vastaus ei koskaan rullaa
+     * itsestään). ankkuriViesti on se kysymys, joka nostettiin
+     * yläreunaan, ja tyhjaTila kertoo paljonko varattua tyhjää on vielä
+     * jäljellä sen alla — null tarkoittaa, ettei varausta ole.
      */
     this.odotettuVieritys = null;
-    this.vieritysLukossa = false;
+    this.ankkuriViesti = null;
+    this.tyhjaTila = null;
+    this.sisallonPohja = 0;
     // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
     this.tila = saneluTuettu() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
+    this.seuraaPaneelinKokoa();
     this.seuraaNakymaa();
     this.seuraaSulkemista();
     this.paivitaNakyvyys();
@@ -689,6 +702,16 @@ class Pollo {
     this.ehdotukset = polloElementti('div', 'pollo-ehdotukset');
     this.ehdotukset.hidden = true;
     this.virta.appendChild(this.ehdotukset);
+
+    /*
+     * Vastauksen alle varattava tyhjä (viritaTyhjaTila). Lohko on
+     * virran viimeinen lapsi ja korkeudeltaan nolla, kunnes kysymys
+     * virittää sen. Se on pelkkää tilaa, joten ruudunlukija ohittaa sen.
+     */
+    this.tyhja = polloElementti('div', 'pollo-tyhja');
+    this.tyhja.setAttribute('aria-hidden', 'true');
+    this.tyhja.style.height = '0px';
+    this.virta.appendChild(this.tyhja);
 
     paneeli.appendChild(this.rakennaSyote());
     this.paneeli = paneeli;
@@ -1002,6 +1025,10 @@ class Pollo {
     this.haeUi?.()?.suljeLiuku?.();
     this.kiinnita();
     this.auki = true;
+    // Edellisen vastauksen tyhjä varaus pois ennen kuin paneeli näkyy:
+    // avattaessa ehdotukset kelaavat virran pohjaan, ja varauksen kanssa
+    // pohjalla olisi pelkkää paperia.
+    this.nollaaTyhjaTila();
     this.paneeli.hidden = false;
     this.nappi.setAttribute('aria-expanded', 'true');
     this.nappi.classList.add('auki');
@@ -1353,11 +1380,13 @@ class Pollo {
       laatikko.appendChild(nappi);
     }
     /*
-     * Laatikko ei kelaa virtaa. Vieritys on kysy():n asia: striimissä
-     * näkymä on ankkuroitu kysymykseen, eikä jatkojen ilmestyminen saa
-     * napata sitä pohjaan (omistajan reunaehto 13.8.2026).
+     * Laatikko ei kelaa virtaa. Vieritys on kysy():n asia: näkymä on
+     * ankkuroitu kysymykseen, ja jatkot ilmestyvät vastauksen alle
+     * varattuun tyhjään — ne eivät saa napata näkymää pohjaan
+     * (omistajan reunaehto 13.8.2026).
      */
     this.virta.appendChild(laatikko);
+    this.paivitaTyhjaTila();
   }
 
   /** Osuvimmat katkelmat pelin omasta aineistosta. */
@@ -1392,55 +1421,142 @@ class Pollo {
   lisaaViesti(rooli, teksti) {
     const viesti = polloElementti('p', `pollo-viesti pollo-${rooli}`, teksti);
     this.virta.appendChild(viesti);
-    this.virta.scrollTop = this.virta.scrollHeight;
+    /*
+     * Ankkuroidun vastauksen aikana virta EI kelaa pohjaan: pohja on
+     * varattua tyhjää, ja kelaaminen sinne jättäisi ruudulle pelkkää
+     * paperia. Uusi rivi (esim. "Ajatus katkesi") kirjoittuu tyhjään
+     * kuten vastauskin, eikä näkymä liiku (omistaja 13.8.2026).
+     */
+    if (this.tyhjaTila === null) this.virta.scrollTop = this.virta.scrollHeight;
+    else this.paivitaTyhjaTila();
     return viesti;
   }
 
   /**
-   * VASTAUS ALKAA NÄKYMÄN YLÄREUNASTA (omistajan havainto 13.8.2026).
+   * TYHJÄ TILA VASTAUKSEN ALLE (omistajan tilaus 13.8.2026).
    *
-   * Virta kelasi jokaisen vastauksen jälkeen pohjaan, jolloin pitkän
-   * vastauksen luku alkoi sen viimeiseltä riviltä ja pelaaja joutui
-   * kelaamaan ylös. Nyt vastauksen ENSIMMÄINEN rivi tuodaan näkyviin ja
-   * loppu jää pelaajan itsensä vieritettäväksi. Pelaajan oma kysymys
-   * kelaa yhä pohjaan (lisaaViesti) — se on lyhyt ja kuuluu näkyä heti.
+   * *"Kun pöllö alkaa vastata suoratoistona, niin teksti voisi
+   * automaattisesti hypätä yläreunaan ja jättää alle vain tyhjää, jotta
+   * ruutu ei hypi jokaisen rivin kohdalla."*
+   *
+   * Ilman varausta kysymystä ei VOI vierittää yläreunaan: sen alla ei ole
+   * vielä mitään, joten vieritys pysähtyy pohjaan. Ankkurointi jäi siksi
+   * vajaaksi, ja jokainen uusi rivi antoi sille lisää varaa — näkymä
+   * nytkähti alaspäin rivi riviltä koko vastauksen ajan.
+   *
+   * Virran loppuun asetetaan siis tyhjä lohko, joka on paneelin näkyvän
+   * korkeuden mittainen. Kysymys nousee yläreunaan kerralla, ja teksti
+   * kirjoittuu valmiiseen tyhjään ilman että vierityskohta muuttuu.
+   * Mitta luetaan paneelista eikä kirjoiteta pikselilukuna, jotta se
+   * seuraa ruutua, näppäimistöä ja kiertoa.
+   *
+   * Miksi oma lohko eikä virran padding-bottom: virta on paneelin
+   * flex-lapsi, ja täyte on osa sen pienintä mahdollista korkeutta.
+   * Satojen pikselien padding työnsi alimman nappirivin paneelin
+   * ulkopuolelle, jossa `overflow: hidden` leikkasi sen puoliksi.
+   */
+  viritaTyhjaTila() {
+    const virta = this.virta;
+    const tyhja = this.tyhja;
+    if (!virta?.style || !tyhja?.style || typeof virta.clientHeight !== 'number') return;
+    const korkeus = virta.clientHeight;
+    if (!korkeus) return;
+    // Lohko kuuluu aina viimeiseksi: kaikki uusi ilmestyy sen yläpuolelle.
+    if (virta.lastElementChild !== tyhja) virta.appendChild(tyhja);
+    // Sisällön pohja mitataan ilman varausta: siitä lasketaan myöhemmin,
+    // paljonko tekstiä on tullut lisää ja paljonko tyhjää on jäljellä.
+    tyhja.style.height = '0px';
+    this.sisallonPohja = virta.scrollHeight;
+    this.tyhjaTila = korkeus;
+    tyhja.style.height = `${korkeus}px`;
+  }
+
+  /**
+   * Teksti syö varattua tyhjää alhaalta.
+   *
+   * Virran kokonaiskorkeus pysyy samana, kun sisältö kasvaa ja varaus
+   * kutistuu saman verran — juuri siksi vierityskohta ei liiku. Kun
+   * tyhjä on syöty loppuun, ylivuoto jatkuu näkymän alapuolelle
+   * piiloon, kuten omistaja pyysi.
+   */
+  paivitaTyhjaTila() {
+    const virta = this.virta;
+    const tyhja = this.tyhja;
+    if (this.tyhjaTila === null || !virta?.style || !tyhja?.style) return;
+    // Jatkokysymykset ja virherivit tulevat vastauksen perään, joten
+    // tyhjä siirtyy jälleen viimeiseksi ennen mittausta.
+    if (virta.lastElementChild !== tyhja) virta.appendChild(tyhja);
+    const sisalto = virta.scrollHeight - this.tyhjaTila;
+    const kasvu = sisalto - this.sisallonPohja;
+    if (kasvu <= 0) return;
+    this.sisallonPohja = sisalto;
+    this.tyhjaTila = Math.max(0, this.tyhjaTila - kasvu);
+    tyhja.style.height = `${this.tyhjaTila}px`;
+  }
+
+  /**
+   * Varaus pois.
+   *
+   * Ei kesken vastauksen: varaus jää voimaan siihen asti, kunnes
+   * seuraava kysymys virittää sen uudelleen. Purku tehdään vain
+   * tilanteissa, joissa näkymä muutenkin asettuu uudelleen (paneelin
+   * avaus) tai joissa pohjaan kelaaminen on oikein (virheilmoitus) —
+   * muuten purku itsessään hypäyttäisi näkymää.
+   */
+  nollaaTyhjaTila() {
+    this.tyhjaTila = null;
+    this.sisallonPohja = 0;
+    this.ankkuriViesti = null;
+    this.odotettuVieritys = null;
+    if (this.tyhja?.style) this.tyhja.style.height = '0px';
+  }
+
+  /**
+   * Paneelin koko voi muuttua kesken vastauksen: näppäimistö nousee,
+   * puhelin kääntyy. Varaus mitoitetaan silloin uudelleen ja kysymys
+   * palautetaan yläreunaan — vanhan korkeuden mittainen tyhjä jättäisi
+   * ankkurin väärään kohtaan. Pelaajan oma vieritys voittaa: jos hän on
+   * liikuttanut virtaa, näkymään ei kosketa.
+   */
+  seuraaPaneelinKokoa() {
+    if (typeof ResizeObserver !== 'function' || !this.paneeli) return;
+    let edellinen = 0;
+    this.kokoVahti = new ResizeObserver(() => {
+      const korkeus = this.virta?.clientHeight ?? 0;
+      if (korkeus === edellinen) return;
+      edellinen = korkeus;
+      if (this.tyhjaTila === null || !this.ankkuriViesti) return;
+      if (this.odotettuVieritys !== null
+        && Math.abs(this.virta.scrollTop - this.odotettuVieritys) > 2) return;
+      this.viritaTyhjaTila();
+      this.ankkuroiYlos(this.ankkuriViesti);
+    });
+    this.kokoVahti.observe(this.paneeli);
+  }
+
+  /**
+   * KYSYMYS YLÄREUNAAN — KERRAN (omistajan tilaus 13.8.2026).
+   *
+   * Näkymä asetetaan yhden kerran, heti kun kysymys on lähtenyt: kysymys
+   * paneelin yläreunaan ja sen alle varattua tyhjää (viritaTyhjaTila).
+   * Sen jälkeen vieritykseen ei kosketa — ei striimin aikana, ei
+   * vastauksen valmistuessa eikä silloin, kun linkit ja jatkokysymykset
+   * ilmestyvät sen alle. Teksti täyttää tyhjän ja jatkaa näkymän
+   * alapuolelle piiloon; pelaaja vierittää itse jos haluaa.
+   *
+   * Sama sääntö koskee suoratoistoa ja varapolkua: kumpikin näyttää
+   * vastauksen alun samasta kohdasta, joten ruutu käyttäytyy aina
+   * samoin riippumatta siitä, tuleeko vastaus palasina vai kerralla.
    *
    * Muutama pikseli jätetään yläpuolelle, jottei rivi liimaudu kiinni
    * reunaan: edellisen viestin häntä kertoo, että ylempänä on lisää.
    */
-  vieritaAlkuun(el, pehmuste = 8) {
-    if (!el?.getBoundingClientRect || !this.virta?.getBoundingClientRect) return;
+  ankkuroiYlos(el, pehmuste = 8) {
+    const virta = this.virta;
+    if (!el?.getBoundingClientRect || !virta?.getBoundingClientRect) return;
     try {
-      const ero = el.getBoundingClientRect().top - this.virta.getBoundingClientRect().top;
-      this.virta.scrollTop += ero - pehmuste;
-    } catch {
-      /* asettelua ei ole käytettävissä — vieritys jää tekemättä */
-    }
-  }
-
-  /**
-   * STRIIMIN ANKKURI (omistajan reunaehto 13.8.2026).
-   *
-   * Suoratoistossa näkymä kiinnitetään kysymykseen ja sitä seuraavan
-   * vastauksen alkuun — ja siihen se jää. Teksti kirjoittuu alaspäin
-   * ruudun ulkopuolelle, eikä näkymä koskaan hyppää perässä: pelaaja voi
-   * lukea alusta rauhassa, kun loppu on vielä syntymässä.
-   *
-   * Kaksi lukkoa pitävät lupauksen. Vieritys menee vain ALASPÄIN
-   * (ankkuria kohti), eikä koskaan takaisin. Ja jos pelaaja vierittää
-   * itse, ankkurointi lakkaa siltä vastaukselta kokonaan.
-   */
-  ankkuroiAlkuun(el, pehmuste = 8) {
-    if (this.vieritysLukossa) return;
-    if (!el?.getBoundingClientRect || !this.virta?.getBoundingClientRect) return;
-    try {
-      const virta = this.virta;
-      if (this.odotettuVieritys !== null && Math.abs(virta.scrollTop - this.odotettuVieritys) > 2) {
-        this.vieritysLukossa = true;
-        return;
-      }
       const ero = el.getBoundingClientRect().top - virta.getBoundingClientRect().top - pehmuste;
-      if (ero > 1) virta.scrollTop += ero;
+      virta.scrollTop += ero;
       this.odotettuVieritys = virta.scrollTop;
     } catch {
       /* asettelua ei ole käytettävissä — ankkurointi jää tekemättä */
@@ -1670,13 +1786,22 @@ class Pollo {
     // (omistajan huomio 13.8.2026).
     for (const vanha of this.virta.querySelectorAll('.pollo-jatkot')) vanha.remove();
     this.suljeKuvapopup();
+    // Edellisen vastauksen varaus pois, jotta kysymys ja "Pöllö miettii…"
+    // kelaavat vielä pohjaan — uusi varaus viritetään heti perään.
+    this.nollaaTyhjaTila();
     const kysymysViesti = this.lisaaViesti('kayttaja', kysymys);
     const odotus = this.lisaaViesti('odottaa', 'Pöllö miettii…');
     this.asetaKesken(true);
     this.viimeisetKatkelmat = [];
-    // Uusi vastaus, uusi ankkuri: edellisen lukko ei koske tähän.
-    this.odotettuVieritys = null;
-    this.vieritysLukossa = false;
+    /*
+     * Näkymä asetetaan tässä, kerran: alle varataan paneelin korkeuden
+     * verran tyhjää ja kysymys nostetaan yläreunaan. Loppu vastauksesta
+     * — striimin palat, linkit ja jatkokysymykset — kirjoittuu tuohon
+     * tyhjään, eikä vierityskohta enää muutu.
+     */
+    this.ankkuriViesti = kysymysViesti;
+    this.viritaTyhjaTila();
+    this.ankkuroiYlos(kysymysViesti);
     const runko = {
       tehtava: 'vastaus',
       kysymys,
@@ -1700,8 +1825,9 @@ class Pollo {
       if (polloStriimiTuettu()) {
         tulos = await this.pyydaStriimi(runko, (kertynyt) => {
           avaaKupla().textContent = poistaKasiteMerkinnat(kertynyt);
-          // Näkymä kiinnittyy kysymykseen; teksti kasvaa sen alle.
-          this.ankkuroiAlkuun(kysymysViesti);
+          // Näkymä on jo ankkuroitu: uusi teksti syö varattua tyhjää
+          // alhaalta, joten virran vierityskohta ei muutu riviäkään.
+          this.paivitaTyhjaTila();
         });
       } else {
         const data = await this.pyyda(runko);
@@ -1712,7 +1838,6 @@ class Pollo {
         };
       }
       const raaka = String(tulos?.vastaus ?? '').trim();
-      const striimattiin = Boolean(viesti);
       // Katkennutkin virta näyttää sen, mitä ehti tulla.
       const teksti = raaka || (tulos?.katkesi ? '' : 'En osaa vastata tähän.');
       avaaKupla();
@@ -1730,14 +1855,12 @@ class Pollo {
       } else {
         this.naytaJatkot(tulos?.jatkot);
       }
-      if (striimattiin) {
-        // Striimi on jo ankkuroinut näkymän — sitä ei napata uudelleen.
-        this.ankkuroiAlkuun(kysymysViesti);
-      } else {
-        // Vasta kun koko vastaus liitteineen on virrassa: nyt sen alkuun
-        // voi vierittää, koska sisältöä on riittävästi alapuolella.
-        this.vieritaAlkuun(viesti);
-      }
+      /*
+       * Näkymään ei kosketa: ankkuri asetettiin kysymyksen kohdalla.
+       * Valmis vastaus, sen linkit ja jatkokysymykset kirjoittuvat
+       * varattuun tyhjään — sama sääntö striimissä ja varapolussa.
+       */
+      this.paivitaTyhjaTila();
       // Kaiutin lukee vasta valmiin vastauksen, ei kesken striimin.
       const puhdas = poistaKasiteMerkinnat(teksti);
       this.lueVastaus(puhdas);
@@ -1746,7 +1869,9 @@ class Pollo {
       this.historia = this.historia.slice(-HISTORIAN_KATTO);
     } catch (virhe) {
       odotus.remove();
-      // Virheilmoitus on yksi rivi: se saa kelata pohjaan kuten ennenkin.
+      // Virheilmoitus on yksi rivi: varaus puretaan, jotta se kelaa
+      // pohjaan kuten ennenkin eikä jää tyhjän yläpuolelle.
+      this.nollaaTyhjaTila();
       this.lisaaViesti('pollo', virhe?.viesti
         ?? 'Pöllö ei saanut ajatuksesta kiinni. Yritä hetken päästä uudelleen.');
     } finally {

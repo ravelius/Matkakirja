@@ -848,9 +848,19 @@ test('vastaus jäsentyy paloiksi, joista käsitteet ovat omiaan', () => {
     { teksti: 'höyryveturit', kasite: true },
     { teksti: ' vetivät junia.', kasite: false },
   ]);
-  // Yli katon menevät merkinnät purkautuvat tavalliseksi tekstiksi.
-  const monta = jasennaKasitteet('[[a-käsite]] [[b-käsite]] [[c-käsite]] [[d-käsite]]');
-  assert.equal(monta.filter((p) => p.kasite).length, 3);
+  /*
+   * Katto nousi kolmesta kahteentoista (omistaja 13.8.2026: "kaikki
+   * paikat ja erisnimet, kuten Beethoven, olisi kiva saada
+   * jatkokysymyspainikkeeksi tekstiin"). Neljä merkintää pääsee siis
+   * läpi kokonaisuudessaan — katto on turvaraja, ei tyylivalinta.
+   */
+  const nelja = jasennaKasitteet('[[a-käsite]] [[b-käsite]] [[c-käsite]] [[d-käsite]]');
+  assert.equal(nelja.filter((p) => p.kasite).length, 4);
+  assert.ok(!nelja.some((p) => /\[|\]/.test(p.teksti)), JSON.stringify(nelja));
+  // Yli katon menevät merkinnät purkautuvat yhä tavalliseksi tekstiksi.
+  const monta = jasennaKasitteet(Array.from({ length: 15 },
+    (_, i) => `[[käsite-${i}]]`).join(' '));
+  assert.equal(monta.filter((p) => p.kasite).length, 12);
   assert.ok(!monta.some((p) => /\[|\]/.test(p.teksti)), JSON.stringify(monta));
   // Merkinnätön vastaus on yksi pala, eikä tyhjästä synny mitään.
   assert.deepEqual(jasennaKasitteet('Pelkkä vastaus.'),
