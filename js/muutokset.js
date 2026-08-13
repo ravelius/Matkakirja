@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 636, teksti: 'Suurennos täysikokoiseksi; kirjakuvake keskelle' },
   { v: 635, teksti: 'Tokion kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 634, teksti: 'Kuvasarja selaa napautuksella; pöllö ja päivitys valikoista' },
   { v: 633, teksti: 'Kuva ei sulkeudu matkakirjasta; pilleri- ja välähdyskorjaus' },
