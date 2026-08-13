@@ -2808,8 +2808,24 @@ export class UI {
    */
   mittaaNakyma() {
     const asettelu = Math.round(document.documentElement?.clientWidth || 0);
+    const visuaali = Math.round(window.visualViewport?.width || window.innerWidth || 0);
+    /*
+     * RISTIINTARKISTUS (omistaja 13.8.2026: "lehti näkyy vieläkin
+     * kapeana iPadilla" — neljäs saman perheen oire). WKWebView voi
+     * kylmäkäynnistyksessä pitää ASETTELUVIEWPORTIN vanhassa kapeassa
+     * mitassa, vaikka ruutu on iPadin levyinen: clientWidth palauttaa
+     * silloin sitkeästi esim. 390 eikä mikään aiempi vahti epäile sitä,
+     * koska 390 on ihan kelvollisen näköinen luku. Zoomaamattomana
+     * visuaalinen viewportti kertoo laitteen todellisen leveyden —
+     * jos se on selvästi asettelumittaa suurempi, asettelumitta on
+     * vanhentunut ja visuaalinen voittaa. Nipistyszoomissa scale ≠ 1
+     * ja ehto ei laukea, joten zoomattu lukija ei riko mitään.
+     */
+    const zoomaton = !window.visualViewport
+      || Math.abs((window.visualViewport.scale ?? 1) - 1) < 0.05;
+    if (zoomaton && visuaali > asettelu * 1.2) return visuaali;
     if (asettelu >= NAKYMAN_VAHIMMAISLEVEYS) return asettelu;
-    return Math.round(window.visualViewport?.width || window.innerWidth || 0);
+    return visuaali;
   }
 
   /**
@@ -2917,12 +2933,65 @@ export class UI {
       if (this.dead || !this.arrivalDialog?.open) return;
       void document.body.offsetWidth;
       const nyt = this.mittaaNakyma();
-      if (!nyt || nyt < NAKYMAN_VAHIMMAISLEVEYS || nyt === this.nakymanLeveys) return;
+      if (!nyt || nyt < NAKYMAN_VAHIMMAISLEVEYS) return;
+      /*
+       * KORTTI-INVARIANTTI: avoin arkki on aina lähes näkymän levyinen
+       * (CSS: 100vw − 1.6rem). Jos renderöity kortti on selvästi
+       * kapeampi kuin mitattu näkymä, sivutus on tehty vanhalla
+       * mitalla TAI vw-yksiköt elävät yhä vanhassa viewportissa —
+       * kummassakin tapauksessa elvytys mitoittaa arkin pikseleinä
+       * uusiksi. Tämä laukeaa myös silloin, kun mitta itsessään ei
+       * ole muuttunut (aiempi vahti vaati muutoksen ja jäi siksi
+       * sokeaksi juuri tälle vialle).
+       */
+      const kortti = this.arrivalDialog.querySelector('.dialog-card');
+      const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      // Sama leveyssääntö kuin mitoitaArkissa: alle 700 koko ruutu,
+      // muuten 100vw − 6rem katolla 960 (leveä työpöytä EI ole vika).
+      const odotettu = nyt < 700 ? nyt : Math.min(nyt - 6 * rem, 960);
+      const kapea = this.arrivalDialog.classList.contains('arkki')
+        && (kortti?.offsetWidth ?? 0) > 0
+        && kortti.offsetWidth < odotettu * 0.9;
+      if (nyt === this.nakymanLeveys && !kapea) return;
       this.nakymanLeveys = nyt;
       this.elvytaNakyma();
     };
     this.lehtiMittaAjastin = setTimeout(tarkista, 400);
     this.lehtiMittaJalkiajastin = setTimeout(tarkista, 1600);
+  }
+
+  /*
+   * ARKIN LEVEYS PIKSELEINÄ, EI vw-YKSIKÖINÄ. CSS antaa arkille
+   * 100vw − 1.6rem, mutta vw seuraa asetteluviewporttia — ja juuri se
+   * jää WKWebView:n kylmäkäynnistyksessä joskus vanhaan kapeaan
+   * mittaan (ks. mittaaNakyma). Kun mitta on luotettavasti tiedossa,
+   * sama leveys kirjoitetaan inline-pikseleinä: ne eivät riipu
+   * viewportin yksiköistä. Ei mitään, jos mitta ei eroa CSS:n omasta
+   * tuloksesta — inline-arvo vain vahvistaa saman luvun.
+   */
+  mitoitaArkki() {
+    const dialog = this.arrivalDialog;
+    if (!dialog?.classList.contains('arkki')) return;
+    const leveys = this.nakymanLeveys || this.mittaaNakyma();
+    if (!leveys || leveys < NAKYMAN_VAHIMMAISLEVEYS) return;
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+    /*
+     * Sama haarautuma kuin CSS:n media queryissä, mutta TODELLISESTA
+     * mitasta laskettuna: kapea ruutu (<700) saa arkin koko ruudun
+     * levyisenä, leveä 100vw − 6rem katolla 960 px. Myös max-width
+     * kirjoitetaan: jumiutunut viewportti voi pitää puhelimen
+     * 100vw-katon voimassa, ja pelkkä width jäisi sen alle.
+     */
+    const px = leveys < 700
+      ? `${leveys}px`
+      : `${Math.min(Math.round(leveys - 6 * rem), 960)}px`;
+    dialog.style.width = px;
+    dialog.style.maxWidth = px;
+    const kortti = dialog.querySelector('.dialog-card');
+    if (kortti) {
+      kortti.style.width = px;
+      kortti.style.maxWidth = px;
+    }
   }
 
   /** Asettelu uusiksi oikealla mitalla. Kutsutaan vain kun mitta on kelvollinen. */
@@ -2933,6 +3002,15 @@ export class UI {
      * vanhan mitan voimaan, kunnes joku sitä kysyy — tämä on se kysyjä.
      */
     void document.body.offsetWidth;
+    /*
+     * Viewport-metan uudelleenkirjoitus: WebKit laskee asettelu-
+     * viewportin metasta, ja saman sisällön kirjoittaminen takaisin
+     * pakottaa laskennan uusiksi. Vanhentuneeseen mittaan jumiutunut
+     * viewportti (ks. mittaaNakyma) palaa tästä laitteen oikeaan
+     * leveyteen — myös media queryt (palstat ≥ 700 px) näkevät sen.
+     */
+    const meta = document.querySelector('meta[name="viewport"]');
+    if (meta) meta.setAttribute('content', meta.getAttribute('content'));
     this.fitViewBox();
     if (!this.arrivalDialog?.open) return;
     // Avoinna oleva lehti sivutetaan uudelleen: kortin leveys on nyt
@@ -6224,7 +6302,7 @@ export class UI {
        */
       liikkeet.push(polku.animate(
         [
-          { strokeWidth: '3', stroke: 'rgba(150, 60, 45, 0.45)' },
+          { strokeWidth: '3.5', stroke: 'rgba(150, 60, 45, 0.62)' },
           { strokeWidth: '5.4', stroke: 'rgba(182, 61, 42, 0.8)' },
         ],
         { duration: AARIVIIVAN_PIIRTO_MS, easing: 'linear', fill: 'forwards' },
@@ -9376,6 +9454,10 @@ export class UI {
    * otsikosta.
    */
   naytaTutkiSivu(indeksi, { heti = false, suunta = 0 } = {}) {
+    // Arkki oikeaan leveyteen ENNEN sivun rakentamista: sivun sisällä
+    // on kortin leveydestä mitoitettavia piirroksia (kohdekartta,
+    // maakäyrät, tilastopalkit), ja niiden on nähtävä lopullinen mitta.
+    this.mitoitaArkki();
     const sivuja = this.tutkiSivuja();
     const i = Math.min(Math.max(indeksi, this.tutkiEkaSivu()), sivuja - 1);
     this.tutkiSivu = i;
@@ -11937,6 +12019,16 @@ export class UI {
     this.arrivalShownFor = null;
     this.suljeKulttuuriKuva();
     this.pysaytaKulttuuriAani();
+    // Inline-mitat pois (ks. mitoitaArkki): suljettu dialogi palaa
+    // CSS:n varaan, ettei vanha pikselileveys jää seuraavan avauksen
+    // tai muun dialogikäytön tielle.
+    this.arrivalDialog.style.width = '';
+    this.arrivalDialog.style.maxWidth = '';
+    const arkkiKortti = this.arrivalDialog.querySelector('.dialog-card');
+    if (arkkiKortti) {
+      arkkiKortti.style.width = '';
+      arkkiKortti.style.maxWidth = '';
+    }
     if (this.arrivalDialog.open) this.arrivalDialog.close();
     // Tauolle jäänyt luenta jatkuu, kun palataan karttanäkymään — mutta
     // ei tietovisan tai kaksintaistelun päälle (Tutki paikka -polku).

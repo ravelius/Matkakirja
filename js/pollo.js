@@ -648,6 +648,15 @@ const EI_HEREILLA_LISA = 'Tietokumppani odottaa vielä käyttöönottoa. '
   + 'Peli toimii normaalisti ilman sitä.';
 
 const SANELU_KUUNTELEE = 'Kuuntelen…';
+/*
+ * "Kuuntelen…" vasta kun mikrofoni on OIKEASTI auki (omistaja
+ * 13.8.2026: "pöllössä lukee kuuntelen vaikka mikki ei vielä päällä").
+ * Käynnistys voi kestää sekunteja — lupakysely, äänisession vaihto,
+ * moottorin startti — ja sinä aikana tilarivi kertoo rehellisesti
+ * että mikki on vasta tulossa. Selainpolku vaihtaa tekstin
+ * onaudiostartissa, natiivipolku sillan sanelu-alkoi-tapahtumassa.
+ */
+const SANELU_KAYNNISTYY = 'Käynnistän mikrofonia…';
 
 function polloElementti(tagi, luokka = '', teksti = '') {
   const el = document.createElement(tagi);
@@ -2434,7 +2443,7 @@ class Pollo {
     this.puhuttu = '';
     this.natiiviSanelussa = true;
     this.merkitseMikki(true);
-    this.saneluTila.textContent = SANELU_KUUNTELEE;
+    this.saneluTila.textContent = SANELU_KAYNNISTYY;
 
     // Mikrofoni- ja puheentunnistuslupa kysytään vasta tästä, ei
     // paneelia avattaessa — sama sääntö kuin selainsanelussa.
@@ -2464,6 +2473,10 @@ class Pollo {
       const purku = natiivi.kuuntele?.(laji, kuulija);
       if (typeof purku === 'function') this.saneluKuulijat.push(purku);
     };
+    kuuntele('sanelu-alkoi', () => {
+      // Moottori pyörii ja kaappaus on käynnissä — nyt kuunnellaan.
+      if (!this.puhuttu.trim()) this.saneluTila.textContent = SANELU_KUUNTELEE;
+    });
     kuuntele('sanelu-osittainen', (tieto) => {
       this.puhuttu = String(tieto?.teksti ?? '');
       this.saneluTila.textContent = this.puhuttu.trim() || SANELU_KUUNTELEE;
@@ -2555,6 +2568,12 @@ class Pollo {
       this.puhuttu = teksti;
       this.saneluTila.textContent = teksti.trim() || SANELU_KUUNTELEE;
     };
+    tunnistin.onaudiostart = () => {
+      // Äänen kaappaus alkoi oikeasti — vasta nyt "Kuuntelen…".
+      if (this.tunnistin === tunnistin && !this.puhuttu.trim()) {
+        this.saneluTila.textContent = SANELU_KUUNTELEE;
+      }
+    };
     tunnistin.onerror = (tapahtuma) => this.saneluVirhe(tapahtuma?.error);
     tunnistin.onend = () => {
       // Äänet takaisin heti kun mikrofoni on vapaa (ks. kova äänitauko).
@@ -2566,13 +2585,14 @@ class Pollo {
       if (!oliTunnistin) return;
       const teksti = this.puhuttu.trim();
       if (teksti) this.kysy(teksti);
-      else if (this.saneluTila.textContent === SANELU_KUUNTELEE) {
+      else if (this.saneluTila.textContent === SANELU_KUUNTELEE
+        || this.saneluTila.textContent === SANELU_KAYNNISTYY) {
         this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
       }
     };
     this.tunnistin = tunnistin;
     this.merkitseMikki(true);
-    this.saneluTila.textContent = SANELU_KUUNTELEE;
+    this.saneluTila.textContent = SANELU_KAYNNISTYY;
     /*
      * KOVA ÄÄNITAUKO ENNEN STARTTIA (omistajan havainto 13.8.2026:
      * "mikrofonia ei löydy" myös kylmäkäynnistyksen jälkeen). iOS:n

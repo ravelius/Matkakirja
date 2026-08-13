@@ -356,7 +356,7 @@ const kesken = await sivu.evaluate(async () => {
   return { leveys: parseFloat(getComputedStyle(polku).strokeWidth) };
 });
 vaadi('viiva paisuu jo piirtyessään',
-  kesken.leveys > 3.4 && kesken.leveys < 5.5, JSON.stringify(kesken));
+  kesken.leveys > 3.7 && kesken.leveys < 5.5, JSON.stringify(kesken));
 
 
 const valahdys = await sivu.evaluate(async () => {
@@ -390,7 +390,7 @@ vaadi('piirron valmistuttua viiva välähtää kerran',
 vaadi('välähdyksessä viiva on selvästi paksumpi',
   valahdys.leveysValahdyksessa > valahdys.leveysLopussa * 1.3, JSON.stringify(valahdys));
 vaadi('välähdys häipyy takaisin rajaviivan sävyyn ja mittaan',
-  valahdys.ohi === true && Math.abs(valahdys.leveysLopussa - 3) < 0.2
+  valahdys.ohi === true && Math.abs(valahdys.leveysLopussa - 3.5) < 0.2
   && valahdys.dashLopussa === '', JSON.stringify(valahdys));
 
 const samaMaa = await sivu.evaluate(async () => {

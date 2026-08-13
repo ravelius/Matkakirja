@@ -409,6 +409,10 @@ class TestiTunnistus {
   start() {
     window.__saneluAloituksia += 1;
     window.__sanelu = this;
+    // Kaappaus "alkaa" hetken päästä kuten oikeassakin rajapinnassa:
+    // tilarivi näyttää ensin "Käynnistän mikrofonia…" ja vasta tästä
+    // eteenpäin "Kuuntelen…".
+    setTimeout(() => { this.onaudiostart?.(); }, 10);
     setTimeout(() => {
       this.onresult?.({ results: [[{ transcript: window.__saneluTeksti ?? '' }]] });
       if (!window.__saneluHidas) this.onend?.();

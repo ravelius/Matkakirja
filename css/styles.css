@@ -3090,24 +3090,18 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 /* Tavarat matkamuistoina: isompi kuva ja selite sen alla, rivit
  * täyttyvät vasemmalta oikealle (omistajan toive). */
 /*
- * Tumma tarjotin tavaroiden alle (omistajan toive 10.8.2026:
- * "tavaroille pitää tehdä tumma tausta") — aarrekuvat on piirretty
- * mustalle pohjalle, ja vaalealla paperilla ne jäivät irrallisiksi
- * mustiksi kiekoiksi. Tumma samettitausta sulattaa kuvien pohjan
- * ja lukee laukun vuorina; selitteet vaalenevat sen päällä.
+ * Ei erillistä taustaa (omistaja 13.8.2026: "tavaroiden tausta liian
+ * tumma, ei ehkä tarvitse eriväristä taustaa ollenkaan") — 10.8:n
+ * tumma samettitarjotin poistettu, tavarat istuvat suoraan laukun
+ * paperilla ja selitteet perivät kortin tekstivärin.
  */
 #passport-finds {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.8rem 1.1rem;
   align-items: flex-start;
-  background: radial-gradient(circle at 30% 20%, #241a10, #140e07);
-  border-radius: 10px;
-  padding: 0.8rem 0.9rem;
-  box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.55);
+  padding: 0.4rem 0;
 }
-
-#passport-finds .find-text { color: #e4d2ac; }
 
 #passport-finds .find {
   flex-direction: column;
@@ -3924,8 +3918,11 @@ body.radio-tila .actions {
 
 .country-korostus {
   fill: none;
-  stroke: rgba(150, 60, 45, 0.45);
-  stroke-width: 3;
+  /* Lepotila aavistuksen vahvempi (omistaja 13.8.2026: "raja voi
+     jäädä vähän voimakkaammin näkyviin") — sama arvopari myös
+     välähdyksen 100 %:ssa ja js/ui.js:n paisumisen lähtöarvoissa. */
+  stroke: rgba(150, 60, 45, 0.62);
+  stroke-width: 3.5;
   stroke-linejoin: round;
   stroke-linecap: round;
 }
@@ -3956,7 +3953,7 @@ body.radio-tila .actions {
   0% { stroke: rgba(182, 61, 42, 0.8); stroke-width: 5.4; }
   12% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
   26% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
-  100% { stroke: rgba(150, 60, 45, 0.45); stroke-width: 3; }
+  100% { stroke: rgba(150, 60, 45, 0.62); stroke-width: 3.5; }
 }
 
 /* Kesto seuraa js/ui.js AARIVIIVAN_VALAHDYS_MS:ää (omistajan tarkennus
