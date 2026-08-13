@@ -2987,6 +2987,112 @@ vaadi('paneelin syöterivi mahtuu paneelin sisään tabletilla',
 vaadi('tablettimittaus ei kirjoita konsoliin', tabletti.virheet.length === 0,
   tabletti.virheet.slice(0, 3).join(' | '));
 
+/* ================================================================== */
+/* 18) Kartan päällä ei ole ohjetekstiä — ja pöllö vinkkaa hiljaisuudessa */
+/* ================================================================== */
+
+/*
+ * Omistaja 13.8.2026: *"'valitse kohta kartalta' näkyy edelleen kartan
+ * päällä. tämä teksti piti hävittää kokonaan kaikkialta."* ja *"Pöllö
+ * voi tarpeen mukaan vinkata, jos pelaaja ei osaa painaa mitään
+ * nappia."*
+ *
+ * Oma konteksti, jottei nopanheitto sotke edellisten osioiden tilaa.
+ * Vihjeen viive luetaan ja lyhennetään: savukkeen ei tarvitse odottaa
+ * viittätoista sekuntia todistaakseen ketjun toimivaksi, mutta oletus
+ * tarkistetaan silti.
+ */
+const vihjeCtx = await selain.newContext({
+  viewport: { width: 390, height: 844 }, hasTouch: true, serviceWorkers: 'block',
+});
+const { sivu: vihjeSivu, virheet: vihjeVirheet } = await avaaPeli(vihjeCtx);
+
+const ohje = await vihjeSivu.evaluate(async () => {
+  const { game, ui } = window.matkakirja;
+  const tavat = game.travelModes();
+  game.actionTravel(tavat.includes('land') ? 'land' : 'sea');
+  game.actionRoll();
+  ui.render();
+  await new Promise((r) => setTimeout(r, 300));
+  return {
+    vaihe: game.phase,
+    kohteita: document.querySelectorAll('.targets .target-ring').length,
+    tilarivi: Boolean(document.getElementById('turn-status')),
+    ohjerivi: Boolean(document.getElementById('board-hint')),
+    // Poistetut kehotukset kokonaisuudessaan: yksikin osuma tarkoittaa,
+    // että teksti on palannut jonnekin ruudulle.
+    osuma: /valitse kohde kartalta|Heitit \d|Noppa pyörii|heitä noppa|Minne lennetään/i
+      .test(document.body.innerText),
+    kortti: document.querySelector('.turn-card')?.innerText.trim() ?? null,
+  };
+});
+vaadi('nopanheitto vie siirtovaiheeseen', ohje.vaihe === 'move', JSON.stringify(ohje));
+vaadi('valittavat kohteet korostuvat kartalla', ohje.kohteita > 0, JSON.stringify(ohje));
+vaadi('kartan ohjerivi (#board-hint) on poistettu', ohje.ohjerivi === false);
+vaadi('vuorolaatikon tilarivi (#turn-status) on poistettu', ohje.tilarivi === false);
+vaadi('yhtään poistettua ohjetekstiä ei ole ruudulla', ohje.osuma === false,
+  JSON.stringify(ohje));
+vaadi('vuorolaatikossa on vain napit', (ohje.kortti ?? '') === '', String(ohje.kortti));
+
+const kupla = await vihjeSivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  const oletusViive = ui.valintavihjeViive;
+  ui.valintavihjeViive = 400;
+  ui.valintavihjeVaihe = false;
+  ui.paivitaValintavihje();
+  // Ennen viiveen umpeutumista kuplaa ei ole.
+  await new Promise((r) => setTimeout(r, 150));
+  const ennenAikojaan = Boolean(document.querySelector('.pollo-vihje:not([hidden])'));
+  await new Promise((r) => setTimeout(r, 700));
+  const vihje = document.querySelector('.pollo-vihje');
+  const nappi = document.querySelector('.pollo-nappi')?.getBoundingClientRect();
+  const laatikko = vihje?.getBoundingClientRect();
+  return {
+    oletusViive,
+    ennenAikojaan,
+    nakyy: Boolean(vihje) && !vihje.hidden,
+    teksti: vihje?.textContent ?? '',
+    // Kupla istuu napin yläpuolella eikä valu ruudun ulkopuolelle.
+    valiNappiin: laatikko && nappi ? Math.round(nappi.top - laatikko.bottom) : null,
+    ruudulla: Boolean(laatikko) && laatikko.left >= 0 && laatikko.right <= window.innerWidth,
+    // Vihje ei saa varastaa kartalta napautuksia.
+    lapinapautettava: vihje ? getComputedStyle(vihje).pointerEvents === 'none' : null,
+  };
+});
+vaadi('vihjeen oletusviive on 15 sekuntia', kupla.oletusViive === 15000,
+  `${kupla.oletusViive} ms`);
+vaadi('vihje ei ilmesty ennen viiveen umpeutumista', kupla.ennenAikojaan === false);
+vaadi('vihjekupla ilmestyy hiljaisuuden jälkeen', kupla.nakyy === true, JSON.stringify(kupla));
+vaadi('vihje kehottaa napauttamaan korostettua kohdetta',
+  /napauta korostettua kohdetta/i.test(kupla.teksti), kupla.teksti);
+vaadi('kupla on pöllönapin yläpuolella',
+  kupla.valiNappiin !== null && kupla.valiNappiin >= 0 && kupla.valiNappiin < 40,
+  JSON.stringify(kupla));
+vaadi('kupla pysyy ruudun sisällä', kupla.ruudulla === true, JSON.stringify(kupla));
+vaadi('napautus menee kuplan läpi kartalle', kupla.lapinapautettava === true,
+  String(kupla.lapinapautettava));
+
+await vihjeSivu.screenshot({ path: join(ULOS, 'pollo-vihjekupla-390.png') });
+
+const kuplanKato = await vihjeSivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  document.querySelector('.map-pane')
+    .dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, pointerId: 7 }));
+  await new Promise((r) => setTimeout(r, 120));
+  const heti = Boolean(document.querySelector('.pollo-vihje:not([hidden])'));
+  // Samassa vuorossa vihje ei enää palaa, vaikka piirto uusittaisiin.
+  ui.render();
+  await new Promise((r) => setTimeout(r, 800));
+  const palasi = Boolean(document.querySelector('.pollo-vihje:not([hidden])'));
+  return { heti, palasi };
+});
+vaadi('kartan kosketus vie kuplan heti', kuplanKato.heti === false, JSON.stringify(kuplanKato));
+vaadi('kupla ei palaa samassa vuorossa', kuplanKato.palasi === false,
+  JSON.stringify(kuplanKato));
+vaadi('vihjekoe ei kirjoita konsoliin', vihjeVirheet.length === 0,
+  vihjeVirheet.slice(0, 3).join(' | '));
+await vihjeCtx.close();
+
 vaadi('ei sivuvirheitä pääajossa', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
 await selain.close();
