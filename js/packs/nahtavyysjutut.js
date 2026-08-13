@@ -1744,7 +1744,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Aukion keskellä kohoaa 23-metrinen, yli 3 300 vuotta vanha '
           + 'Luxorin obeliski, jonka Egyptin hallitsija lahjoitti '
-          + 'Ranskalle vuonna 1829. Kivijättiläinen tuotiin laivalla '
+          + 'Ranskalle marraskuussa 1830. Kivijättiläinen tuotiin laivalla '
           + 'Niililtä asti ja pystytettiin aukiolle vuonna 1836 '
           + 'valtavan väkijoukon seuratessa.'
         + '\n\n'
@@ -11325,6 +11325,379 @@ export const NAHTAVYYSJUTUT = {
             + 'pylväänkapiteeli, taustalla puita ja matala tummista '
             + 'kivistä ladottu muuri.',
           lahde: 'Kocsis Fülöp, Hajdúdorogi Főegyházmegye, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * Luxorin nähtävyysjutut (nippu 2, 13.8.2026). Neljä kuudesta
+   * kohteesta on Karnakin alueella, joten jutut on kulmattu eri
+   * suuntiin: sfinksikuja kulkemiseen, Mut veteen ja patsassarjaan,
+   * Khonsu temppelin kaavaan ja pylvässali valoon. Kulttuurivisa
+   * kertoo jo salin 134 pylvästä, joten sitä lukua ei käytetä
+   * kärkenä.
+   */
+  luxor: {
+    'Luxorin temppeli': {
+      teksti: 'Theban muut temppelit oli omistettu jumalalle tai kuolleelle '
+        + 'kuninkaalle; tämä oli omistettu kuninkuudelle itselleen. '
+        + 'Vuotuisessa Opet-juhlassa faarao kruunattiin täällä uudelleen '
+        + 'ja hänen kuninkaallinen ka-voimansa uusittiin. '
+        + 'Ensikruunauksista täällä ei ole varmuutta: kruunaus saattoi '
+        + 'olla myös käsitteellinen. Aleksanteri Suuri ilmoitti tulleensa '
+        + 'kruunatuksi Luxorissa, vaikkei hän ehkä käynyt Memfisiä '
+        + 'etelämpänä.'
+        + '\n\n'
+        + 'Työ alkoi Amenhotep III:n aikana 1300-luvulla eaa. Häneltä on '
+        + '100 metrin pituinen kulkukäytävä, jota reunustaa 14 '
+        + 'papyruskukkapäistä pylvästä; seiniin on kuvattu Opet-juhlan '
+        + 'vaiheet. Noin sata vuotta myöhemmin Ramses II rakensi '
+        + 'sisäänkäynnin: 24 metriä korkean pylonin, jonka kiveen '
+        + 'hakattiin hänen sotavoittonsa, etenkin Qadeshin taistelu. '
+        + 'Portin edessä seisoi kuusi hänen kolossiaan, neljä istuvaa ja '
+        + 'kaksi seisovaa; jäljellä on kaksi istuvaa.'
+        + '\n\n'
+        + 'Pylonin edessä seisoo 25 metriä korkea punagraniittiobeliski. '
+        + 'Sen pari oli 23-metrinen, mutta se seisoi korkeammalla '
+        + 'jalustalla ja kauempana pylonista, joten tulijalle ne '
+        + 'näyttivät yhtä korkeilta. Matalampi vietiin Ranskaan '
+        + '1830-luvulla ja seisoo nykyään Pariisissa; kuljetus maksoi 2,5 '
+        + 'miljoonaa frangia, mikä lienee syy siihen, ettei toista '
+        + 'haettu.',
+      kuvat: [
+        {
+          tiedosto: 'Louksor (Thèbes), Construction Antérieure - Pylône Colosses et Obélisque MET DP144527.jpg',
+          selite: 'Pylonin edusta 1850-luvun alussa. Vasemmalla seisoo '
+            + 'hieroglyfien peittämä obeliski, jonka jalusta on hiekan '
+            + 'alla; oikealla kohoavat pylonin kaksi tornia, joiden '
+            + 'kiveen on hakattu ihmishahmoja ja joiden harjalla on '
+            + 'ulkoneva kruunulista. Porttiaukon edestä pistää hiekasta '
+            + 'esiin kahden istuvan kolossin kruunupää ja hartiat, muu '
+            + 'patsas on maan alla. Tornien seinissä on suorakaiteen '
+            + 'muotoisia aukkoja, portin vasen kylki on romahtanut, ja '
+            + 'vasemmassa laidassa näkyy matalia savitiiliraunioita. '
+            + 'Etuala on tyhjää hiekkaa.',
+          lahde: 'Félix Teynard, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Louksor (Thèbes). Construction Centrale - Grande Colonnade MET DP71345.jpg',
+          selite: 'Saman matkan kuva suuresta pylväskäytävästä: viisi järeää '
+            + 'pylvästä nousee vinoon riviin, avonaiset '
+            + 'papyruskukkakapiteelit ovat osin lohjenneet, ja niiden '
+            + 'päällä lepäävät massiiviset kivipalkit. Pylväiden juuret '
+            + 'ovat hiekkakinoksen peitossa, ja pylväiden välissä seisoo '
+            + 'savitiilirakennus, jossa on pieni kaariaukko ja '
+            + 'suorakaiteen muotoinen ovi. Alareunassa on painetut '
+            + 'tekstit kuvaajasta ja kustantajasta sekä punainen '
+            + 'kokoelmaleima.',
+          lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Luxorin museo': {
+      aika: '1975',
+      teksti: 'Museo avattiin 1975 Niilin itärannalle rantakadun varteen. '
+        + 'Kaksikerroksisen talon piirsi Mahmud El Hakim jo 1962, ja '
+        + 'esineet aseteltiin 1972–1975. Esillä on tarkoituksella paljon '
+        + 'vähemmän kuin Kairon egyptiläisessä museossa: vähän esineitä, '
+        + 'väljä ripustus ja monikieliset selitteet.'
+        + '\n\n'
+        + 'Vuonna 1989 Luxorin temppelin aurinkopihan alta kaivettiin 26 '
+        + 'patsaan kätkö. Ne oli haudattu, kun roomalaiset muuttivat '
+        + 'alueen sotilasleiriksi; ensimmäiset viisi löytyivät noin '
+        + 'metrin syvyydestä. Joukossa oli Amenhotep III:n '
+        + 'kvartsiittipatsas kaksoiskruunuineen, kelkka jalustanaan; '
+        + 'korkeudeksi ilmoitetaan 2,49 metriä, osassa lähteitä 1,8. '
+        + 'Kartušeista on hakattu pois yksi ainoa sana, Amunin nimi — '
+        + 'Ekhnatonin jälki isänsä jumalaa vastaan. Samasta kätköstä tuli '
+        + 'Thutmosis III alabasterisfinksinä.'
+        + '\n\n'
+        + 'Ekhnaton itse on museossa seinänä. Hänen Karnakiin '
+        + 'rakennuttamansa Aten-temppelit purettiin, ja vakiokokoiset '
+        + 'talatat-lohkot — 27 × 27 × 54 senttiä, puoli kertaa puoli '
+        + 'kertaa yksi kyynärä — muurattiin pyloonien täytteeksi. '
+        + 'Yhdeksännestä pyloonista saadut kivet on tunnistettu ja koottu '
+        + 'takaisin seinäksi kuin palapeli. Muumioita on kaksi, esillä '
+        + 'maaliskuusta 2004: Ahmose I, joka löytyi 1881 Deir el-Bahrin '
+        + 'kätköstä, ja Ramses I, joka seisoi yli 130 vuotta Niagara '
+        + 'Fallsin museossa nimellä Egyptin ruhtinas. Emoryn yliopiston '
+        + 'museo osti sen 1999 ja palautti Egyptiin 2003. Kummankaan '
+        + 'tunnistusta ei pidetä varmana.',
+      kuvat: [
+        {
+          tiedosto: 'Luxor Museum 1.JPG',
+          selite: 'Museo rantakadun toiselta puolelta: matala punaruskea '
+            + 'seinä ilman ikkunoita, vain kapeita pystyrakoja rivissä. '
+            + 'Aidatulla nurmikolla seisoo kaksi tummaa kivipatsasta, '
+            + 'edessä palmuja ja lehdetön puu, oikealla tyhjä valkoinen '
+            + 'opastetaulu pylväässä. Muutama ihminen kävelee pihalla, ja '
+            + 'etualalla on kukkaistutuksia ja tyhjä asfalttitie '
+            + 'pilvettömän taivaan alla.',
+          lahde: 'Charlesdrakew at English Wikipedia, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Luxor Museum Amenophis III. Statue 05.jpg',
+          selite: 'Amenhotep III:n patsas yksin salissa: punertavaa '
+            + 'kvartsiittia, päässä kaksoiskruunu, leuassa seremoniaparta '
+            + 'ja takana kaareva selkäpilari kartušeineen. Jalusta lepää '
+            + 'kelkalla, jonka jalakset työntyvät edessä esiin. Seinä on '
+            + 'paljas, ja siihen on kaiverrettu vasemmalle AMENHOTEP III, '
+            + 'XVIII. DYN., 1405–1367 B.C. ja oikealle sama arabiaksi. '
+            + 'Katossa palaa kaksi kohdevaloa, lattia on vaaleaa kiveä ja '
+            + 'porrastuu matalina tasoina.',
+          lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Luxor Museum Relief Talatat 06.jpg',
+          selite: 'Talatat-seinä koottuna: pieniä suorakaiteen muotoisia '
+            + 'kivilohkoja riveissä vaalealla taustalla kuin tiilimuuri. '
+            + 'Kuvat kulkevat vyöhykkeittäin — ylimpänä nautoja ja '
+            + 'uhrikasoja, alempana valkoisiin lannevaatteisiin puettuja '
+            + 'miehiä kantotankoineen ja työhön kumartuneina, välissä '
+            + 'hieroglyfipaneeleja. Ihon punaruskeaa maalia on paikoin '
+            + 'jäljellä. Riveissä on suuria aukkoja, ja alimmat rivit '
+            + 'ovat sirpaleisia: yksittäisiä lohkoja seisoo erillään '
+            + 'tyhjän kohdan keskellä.',
+          lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sfinksikuja': {
+      teksti: 'Kuja kulkee suorana 2,7 kilometriä Luxorin temppelin ja '
+        + 'Karnakin välillä, ja sen molemmin puolin seisoi 1 057 '
+        + 'kivipatsasta: 807 sfinksiä ja 250 pässinpäistä. Muotoja on '
+        + 'kolme. Karnakin ja Mutin alueen välisellä noin 300 metrin '
+        + 'pätkällä patsailla on leijonan ruumis ja pässin pää; ne ovat '
+        + 'Tutankhamonin ajalta. Toinen laji on kokonainen pässipatsas, '
+        + 'joka veistettiin 18. dynastian aikana Amenhotep III:lle '
+        + 'muualla ja siirrettiin Karnakiin myöhemmin. Suurin ryhmä on '
+        + 'ihmispäinen sfinksi, ja niitä riittää runsaan puolentoista '
+        + 'kilometrin matkalle Luxorin temppelille asti.'
+        + '\n\n'
+        + 'Tien rakennutti Amenhotep III, ja lopullisen asunsa se sai '
+        + 'Nektanebo I:n aikana (380–362 eaa.). Egyptiläinen nimi oli '
+        + 'wi.t ntr, jumalan tie, ja käyttöä oli yksi: Opet-juhla. '
+        + 'Amon-Ren, Mutin ja Khonsun kuvat kannettiin pyhissä veneissä '
+        + 'pappien harteilla Karnakista Luxorin temppeliin ja takaisin, '
+        + 'ja kujan varrella oli kuusi pysäkkikappelia veneiden '
+        + 'laskupaikoiksi. Juhla piteni hallitsijasta toiseen: Thutmosis '
+        + 'III:n aikana se kesti 11 päivää, Ramses III:n kuollessa 27.'
+        + '\n\n'
+        + 'Kuja hautautui vuosisatojen mittaan hiekan alle, ja Georges '
+        + 'Daressy kirjoitti 1893, ettei Luxorin päätä voi kaivaa, koska '
+        + 'tie makaa pohjaveden pinnan alapuolella. Ensimmäiset patsaat '
+        + 'löytyivät sieltä silti vuonna 1949, ja vuosina 1984–2000 koko '
+        + 'linja kaivettiin auki. Kuja avattiin kulkijoille marraskuussa '
+        + '2021.',
+      kuvat: [
+        {
+          tiedosto: 'Luxor Temple Avenue of Sphinxes (9794899133).jpg',
+          selite: 'Kuja Luxorin temppelin päästä katsottuna: vaalea kivetty '
+            + 'väylä kulkee suorana kohti taivaanrantaa, ja molemmin '
+            + 'puolin seisoo ihmispäisiä sfinksejä matalilla suorakaiteen '
+            + 'muotoisilla jalustoilla. Jalustojen edessä on pieniä '
+            + 'maavalaisimia, kujan reunoilla soraa ja hiekkaa. Taustalla '
+            + 'on palmurivejä, matalia okranvärisiä taloja ja kapea '
+            + 'minareetti. Kujan keskellä kävelee yksi ihminen '
+            + 'oranssinpunaisessa asussa, ja taivas on pilvetön.',
+          lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Theban region, Temple Complex of Amon in Karnak, 19th century pictures, 1870-1888, photo 2 of 91 - Archivio fotografico Museo Egizio, Turin INV08 005.jpg',
+          selite: 'Ruskeasävyinen valokuva Karnakin pässinpäisistä '
+            + 'sfinkseistä: rivi patsaita korkeilla kivijalustoilla, ja '
+            + 'etualan suurimman leuan alla seisoo pieni kuninkaanhahmo. '
+            + 'Keskellä kuvaa seisoo jalustan vieressä mies tummassa '
+            + 'kaavussa ja valkoisessa päähineessä. Edustalla on '
+            + 'irtolohkareita ja kivimurskaa, takana kuivamuuri ja tiheä '
+            + 'palmulehto. Paperissa näkyy taitteita ja yläreunassa kaksi '
+            + 'neulanreikää.',
+          lahde: 'Antonio Beato, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Karnak (Thèbes), Sphinx a Tête Humaine et a Tête de Bélier, en Y MET DP71386.jpg',
+          selite: 'Kaksi kujan patsasta maahan vajonneina: etualalla '
+            + 'pässinpäinen sfinksi, jonka leuan alla on pieni seisova '
+            + 'hahmo, ja sen takana ihmispäinen sfinksi '
+            + 'nemes-päähineessään hartioita myöten mullassa. Oikeassa '
+            + 'reunassa erottuu kolmas kivinen ruumis. Ympärillä nousee '
+            + 'tupsuheinän ja pensaiden peittämä rinne, ja taivas on '
+            + 'tyhjä ja vaalea. Alareunan marginaalissa on painetut '
+            + 'tekstit ja pieni pyöreä leima.',
+          lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mutin temppeli': {
+      teksti: 'Karnakin eteläinen osa on Mutin pyhäkköalue, noin 325 metriä '
+        + 'Amonin alueesta etelään. Sen tunnistaa vedestä: temppeliä '
+        + 'kiertää kolmelta sivulta pitkä kaareva allas, Isheru. '
+        + 'Sellainen kuului nimenomaan leijonapäisten jumalattarien '
+        + 'pyhäköihin: temppelin teksteissä jumalat kaivoivat sen '
+        + 'viilentämään Mutin tulista luonnetta. Muurien sisällä on noin '
+        + 'yhdeksän hehtaaria ja ainakin kuusi temppeliä.'
+        + '\n\n'
+        + 'Alueelta on kaivettu satoja mustasta granodioriitista '
+        + 'veistettyjä Sekhmet-patsaita, osa istuvina valtaistuimella, '
+        + 'osa seisovina papyrussauva kädessä. Luvut vaihtelevat: yhden '
+        + 'arvion mukaan patsaita oli alueella aikanaan noin 570, toisen '
+        + 'mukaan temppelin pihalta löytyi kuusisataa. Sarjan teetti '
+        + 'Amenhotep III, ja osa kappaleista saattaa olla peräisin hänen '
+        + 'muistotemppelistään länsirannalta. British Museumissa niitä on '
+        + 'kolmekymmentä, Kairon museossa kuusi.'
+        + '\n\n'
+        + 'Vanhimmat päivätyt kartussit ovat 18. dynastian Thutmosis II:n '
+        + 'ja III:n, ja osa niistä on ilmeisesti kirjoitettu Hatshepsutin '
+        + 'poistetun nimen päälle. Ramses III:n rakentama temppeli C '
+        + 'purettiin 25. dynastian aikana louhokseksi, kun viereistä '
+        + 'temppeli A:ta korjattiin. Kushin kuningas Taharqa (690–664 '
+        + 'eaa.) lisäsi hiekkakiviportin, ja tiilinen ympärysmuuri on 30. '
+        + 'dynastialta. Ensimmäisen ison kaivauksen teki Margaret Benson, '
+        + 'joka sai 1895 ensimmäisenä naisena kaivausluvan Egyptissä.',
+      kuvat: [
+        {
+          tiedosto: 'Egipto, 1882 "Las Estatuas on cabeza de Leon en Karnak" (21683939911).jpg',
+          selite: 'Mutin alueen pyhä allas vuoden 1882 kirjan värilehdellä: '
+            + 'vihertävä vesi kaartuu etualalla, ja sen oikealla rannalla '
+            + 'istuu rivi tummia leijonapäisiä patsaita punertavien '
+            + 'kivilohkareiden seassa. Vasemmalla rannassa makaa kaatunut '
+            + 'patsas puoliksi hiekan peitossa, keskellä kohoaa '
+            + 'taatelipalmu ja rannalla seisoo valkoinen kahlaajalintu. '
+            + 'Taustalla on vihreää peltoa ja autiomaan pöytävuoria. '
+            + 'Kuvan alla on espanjankielinen kuvateksti ja kustantajan '
+            + 'nimi, vasemmassa alakulmassa signeeraus C. Werner.',
+          lahde: 'Fondo Antiguo de la Biblioteca de la Universidad de Sevilla from Sevilla, España, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Ruines du temple de Mout - A3167.jpg',
+          selite: 'Mutin temppelin raunioalue vuoden 1914 autokromilevyllä: '
+            + 'etualalla on kaatuneita hiekkakivilohkareita ja matalia '
+            + 'muurinjäännöksiä, ja niiden seassa seisoo päättömiä '
+            + 'patsastorsoja. Oikealla kulkee hiekkainen polku, jolla '
+            + 'seisoo kaksi miestä, toinen tummassa kaavussa ja '
+            + 'valkoisessa turbaanissa, toinen vaaleassa galabiyassa. '
+            + 'Takana on kuiva kumpu, savitiilimuuri ja tiheä palmulehto. '
+            + 'Lasilevyn kehys näkyy kuvan reunoilla, ja vasemmassa '
+            + 'reunassa on käsin kirjoitettu merkintä EGYPTE A 3167.',
+          lahde: 'Léon Auguste, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Khonsun temppeli': {
+      teksti: 'Karnakin lounaisnurkassa seisoo temppeli, joka on säilynyt '
+        + 'lähes kokonaisena: siitä näkee egyptiläisen temppelin koko '
+        + 'kaavan. Osat ovat peräkkäin yhdellä akselilla — kaksitorninen '
+        + 'pyloni, avoin pylväspiha, katettu pylvässali, sivukappelit ja '
+        + 'perimmäisenä pyhäkkö. Pylvässali on pieni, ja perimmäinen '
+        + 'pyhäkkö pidettiin pimeänä. Kivi on hiekkakiveä ja graniittia — '
+        + 'kalkkikivitemppelit purettiin melkein kaikki kalkinpolttoon.'
+        + '\n\n'
+        + 'Rakennuttaja oli Ramses III (n. 1186–1155 tai 1185–1154 eaa., '
+        + 'lähteen mukaan), ja temppeli nousi vanhemman rakennuksen '
+        + 'paikalle. Pylvässalista löytyi kaksi paviaanipatsasta Seti I:n '
+        + 'ajalta (1294/1290–1279 eaa.), ilmeisesti vanhemmasta talosta. '
+        + 'Salin pystytys ajoitetaan toisaalla vasta Nektanebo I:lle '
+        + '(379/378–361/360 eaa.). Ramses IV (1154–1148 eaa.) jatkoi '
+        + 'työtä, ja rakentamisen hiipuessa Thebassa myöhemmätkin '
+        + 'kuninkaat keskittyivät tähän. Pihan seinään Amonin ylipappi '
+        + 'Herihor (1080–1074 eaa.) kirjoitutti nimensä kuninkaan '
+        + 'kartussiin, vaikka faaraona istui yhä Ramses XI.'
+        + '\n\n'
+        + 'Edessä seisoo Ptolemaios III Euergeteen (hallitsi 246–222 '
+        + 'eaa.) rakennuttama suuri portti, sfinksikujan pohjoispää. Sama '
+        + 'kuningas teetti myös ympärysmuurin, jota ei ole enää pystyssä. '
+        + 'Kiveä kierrätettiin: seinissä on lohkareita, joiden kuviot '
+        + 'eivät jatku naapurikiveen tai ovat ylösalaisin — ainesta '
+        + 'otettiin ympäröivistä rakennuksista, etenkin ptolemaiosten '
+        + 'aikana.',
+      kuvat: [
+        {
+          tiedosto: 'Théodule Devéria (French - (Portal of the Temple of Khonsu, Karnak) - Google Art Project.jpg',
+          selite: 'Euergetes-portti edestäpäin noin vuonna 1860. Ovenpielet '
+            + 'on jaettu ruutuihin, joissa kuningas seisoo jumalten '
+            + 'edessä, ja päällä on siivekäs aurinkokiekko ja uurrettu '
+            + 'kourulista. Portin takaa nousevat molemmin puolin Khonsun '
+            + 'temppelin pylonin viistot tornit, ja niiden välissä '
+            + 'erottuu temppelin oma matala oviaukko. Oikealla makaa '
+            + 'hiekkaan puoliksi hautautunut sfinksi ja kauempana kohoaa '
+            + 'matala raunioseinä aukkoineen; vasemmalla on romahtanutta '
+            + 'muuria ja irtolohkareita.',
+          lahde: 'Théodule Devéria, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Karnak Tempel Chons 06.jpg',
+          selite: 'Pylväspiha sisältä pylonia kohti. Keskellä on oviaukko, '
+            + 'jonka pielet ovat muuta seinää vaaleammat, ja käytävän '
+            + 'päässä näkyy toinen kehys hahmoineen ja sen takana puu, '
+            + 'metallinen kaide ja aurinkoinen aukio. Oviaukon yllä '
+            + 'kulkee kourulista, jonka keskellä on siivekäs '
+            + 'aurinkokiekko, ja sen yläpuolelle kohoavat pylonin kaksi '
+            + 'tornia, kummassakin neliömäinen aukko. Kummallakin sivulla '
+            + 'seisoo pylväsrivi kattopalkkeineen, ja oikeanpuoleisissa '
+            + 'pylväissä ja palkissa on maalit yhä jäljellä.',
+          lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Karnakin suuri pylvässali': {
+      teksti: 'Sali on 5 000 neliömetriä, ja katto lepäsi kahdenlaisten '
+        + 'pylväiden varassa. Keskikäytävän kaksitoista pylvästä tehtiin '
+        + 'muita korkeammiksi ja paksummiksi: korkeudeksi ilmoitetaan '
+        + 'lähteestä riippuen 21 tai 24 metriä ja ympärysmitaksi kymmenen '
+        + 'metriä. Muut 122 jäivät 10 tai 14 metriin. Korkeusero '
+        + 'täytettiin seinällä, ja siihen hakattiin ikkunat, joiden eteen '
+        + 'jätettiin kivestä veistetyt pystyritilät. Muualta katto oli '
+        + 'umpinainen, joten päivänvalo putosi saliin vain keskikäytävän '
+        + 'yläpuolelta.'
+        + '\n\n'
+        + 'Sama jako näkyy pylväiden päissä: keskikäytävän kapiteelit '
+        + 'ovat auenneen papyruksen kukkia, leveitä ja kellonmuotoisia, '
+        + 'ja sivujen pylväissä kukka on yhä suljettu nuppu. Sali on '
+        + '1200-luvulla eaa. hallinneiden Seti I:n ja Ramses II:n työtä. '
+        + 'Seti I rakennutti koko salin ja kaiverrutti pohjoispuolen; '
+        + 'eteläpuoli ja keskikäytävän kaksitoista suurta pylvästä '
+        + 'koristeltiin Ramses II:lle. Tekniikka vaihtuu kesken: Seti I:n '
+        + 'kuvat ovat kohokuvia, joissa hahmot nousevat pinnasta, ja '
+        + 'Ramses II:n kaivertajat aloittivat samoin mutta siirtyivät '
+        + 'uponneeseen reliefiin, joka on hakattu pintaa syvemmälle.'
+        + '\n\n'
+        + 'Sali pysyi käytössä 300-luvulle jaa., kunnes pakanuus '
+        + 'Egyptissä hiipui. Vuonna 1899 yksitoista suurta pylvästä '
+        + 'kaatui ketjureaktiona, kun pohjavesi oli syönyt niiden '
+        + 'perustukset. Georges Legrain johti pystytystyön, joka '
+        + 'valmistui toukokuussa 1902.',
+      kuvat: [
+        {
+          tiedosto: 'Karnak (Thèbes), Palais - Salle Hypostyle - Fenêtre et Chapiteaux des Galeries Latérales MET DP71376.jpg',
+          selite: 'Félix Teynardin valokuva vuosilta 1851–52 sivulaivan '
+            + 'yläpuolelle nousevasta ikkunaseinästä. Seinässä on kolme '
+            + 'suorakaiteen muotoista aukkoa, ja keskimmäisessä on yhä '
+            + 'paikallaan pystysuorista kivipuikoista veistetty ritilä. '
+            + 'Aukkojen pielet ja niiden yllä kulkeva palkki ovat täynnä '
+            + 'hieroglyfejä, ja seinän alaosa on lohjennut. Kuvan '
+            + 'alalaidassa näkyy rivi sivulaivan pylväitä, joiden '
+            + 'nupinmuotoisiin kapiteeleihin on kaiverrettu kartusseja; '
+            + 'keskellä on pyöreä punainen leima ja aivan alareunassa '
+            + 'painetut kustantajan rivit.',
+          lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Hall of columns, Karnac, RP-F-F25403-AG.jpg',
+          selite: 'Francis Frithin valokuva vuodelta 1857. Pylväitä katsotaan '
+            + 'kaatuneiden kivilohkareiden täyttämältä maalta: yläpäät '
+            + 'ovat murtuneet, muutamassa on yhä leveä kapiteeli, ja '
+            + 'vasemmalla lepää järeitä kivipalkkeja pilarien päällä. '
+            + 'Alhaalla keskellä seisoo kaksi pitkiin viittoihin '
+            + 'pukeutunutta miestä lohkareiden seassa, oikealla on '
+            + 'suorakaiteen muotoinen oviaukko, ja kuvan alakulmiin on '
+            + 'merkitty valokuvaajan nimi ja vuosiluku.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
       ],
       lahde: 'Wikipedia',
