@@ -600,6 +600,24 @@ export const RAAMATTU2 = {
           + 'natiivisovelluksessa). Viisas Pöllö osaa ehdottaa '
           + 'niitä linkkeinä, joista artikkeli nousee suoraan '
           + 'esiin — pöllöstä tulee syvemmän sisällön löytöreitti.',
+        'KAUPALLISTAMINEN (malli päätetty 13.8.): peli julkaistaan '
+          + 'ensin ilmaisena, ja kun se muutetaan maksulliseksi, '
+          + 'aiemmin ladanneet säilyttävät sen ilmaiseksi — vain '
+          + 'uudet ostavat. Tämä on App Storen oma mekanismi '
+          + '(hinnanvaihto), joten peruspeliin EI tarvita '
+          + 'StoreKit-koodia. Pelin sisäiset ostot ovat '
+          + 'mahdollinen myöhempi lisä (erityisesti pöllön '
+          + 'API-kulut) — mutta ensisijainen toive on saada pöllö '
+          + 'ilmaiseksi Applen laitemallilla (Foundation Models) '
+          + 'iOS-päivityksen myötä; suomen laatu testataan ennen '
+          + 'vaihtoa.',
+        'KÄÄNNÖKSET (linjaus 13.8. — suunta): kun suomenkielinen '
+          + 'sisältö on lukittu, tehdään käännökset, ensimmäisenä '
+          + 'englanti. Tekninen malli: kielikohtaiset '
+          + 'sisältöpaketit ja käyttöliittymätekstien eriytys — '
+          + 'ei rivi riviltä -i18n-jälkiasennusta. Koskee myös '
+          + 'wiki-hakuja, pöllön kehotetta ja App Store -sivua. '
+          + 'Käännöstyötä EI aloiteta ennen sisällön lukitsemista.',
       ],
     },
     {
