@@ -118,6 +118,14 @@ Jos laitteessa ei ole iCloud-tiliä, varasto toimii yhä mutta vain
 paikallisesti. Peli näkee sen (`ominaisuudet.talleSynkka`) ja voi kertoa
 sen pelaajalle.
 
+Pelin puoli on nyt kytketty (js/natiivi.js). Se tekee kolme asiaa:
+pilveen kirjoitetaan korkeintaan kerran kymmenessä sekunnissa (viimeisin
+tila ei silti koskaan jää lähettämättä); kesken olevaa matkaa **ei
+koskaan korvata hiljaa**, vaan uudempi tallennus toiselta laitteelta
+tarjotaan pelaajalle omassa ikkunassaan; ja passin leimat yhdistetään
+sen sijaan että ne korvattaisiin, koska leimakokoelma vain kasvaa eikä
+yhdistäminen voi hukata mitään.
+
 ### Widget ja Siri lyhyesti
 
 Widget ei lue peliä eikä avaa verkkoa. Peli työntää tilansa (kaupunki,
@@ -144,8 +152,8 @@ ja toimii ilman niitä. Ne vain jäävät tekemättä siihen asti.
 
 ### 1. Game Center -saavutukset App Store Connectiin
 
-Peli pyytää saavutuksia vapailla tunnuksilla (esimerkiksi `aarre.lontoo`).
-Jos samannimistä saavutusta ei ole luotu Applen puolelle, kutsu palautuu
+Peli pyytää saavutuksia omilla tunnuksillaan (taulukko alla). Jos
+samannimistä saavutusta ei ole luotu Applen puolelle, kutsu palautuu
 hiljaa hylättynä eikä pelaaja huomaa mitään — mitään ei siis riko, mutta
 mitään ei myöskään kirjaudu.
 
@@ -164,8 +172,22 @@ Saavutus luodaan näin:
 7. Kielikohtainen otsikko ja kuvaus suomeksi + kuva (512×512).
 8. **Save**.
 
-Tunnusluettelo sovitaan erikseen, kun pelin puoli kytketään. Siihen asti
-tätä ei tarvitse tehdä lainkaan.
+#### Tunnusluettelo
+
+Peli lähettää näitä neljää tunnusta (js/natiivi.js,
+`NATIIVI_SAAVUTUKSET`). Achievement ID on kopioitava täsmälleen — myös
+pisteet ja väliviivat.
+
+| Achievement ID | Milloin peli lähettää | Ehdotus otsikoksi |
+| --- | --- | --- |
+| `fi.matkakirja.peli.saavutus.ensimmainen-aarre` | Ensimmäinen unohdettu aarre löytyy | Ensimmäinen löytö |
+| `fi.matkakirja.peli.saavutus.kaikki-aarteet` | Aarnin luettelo täyttyy — kaikki mantereiden aarteet löydetty | Aarnin luettelo täynnä |
+| `fi.matkakirja.peli.saavutus.lapipeluu` | Peli päättyy voittoon | Matka kotiin |
+| `fi.matkakirja.peli.saavutus.kymmenen-putkeen` | Kymmenen tehtävää oikein putkeen (visa, rosvo, kulttuurikysymys, lehden minitehtävä) | Kymmenen putkeen |
+
+Kaikki neljä ovat kertasaavutuksia (peli lähettää aina 100 %), ja peli
+lähettää saman tunnuksen vain kerran käynnissä. Tunnusta, jota ei ole
+luotu, ei tarvitse poistaa pelistä — hylätty kutsu on hiljainen.
 
 ### 2. Push-avain — vasta kun lähetysputki rakennetaan
 

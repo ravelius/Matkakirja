@@ -844,7 +844,27 @@
     <p id="winner-text"></p>
     <menu>
       <button id="winner-roam" class="ikoni-teksti" type="button"><span class="viiva-ikoni"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><path d="M12 5.8 14.3 12 12 18.2 9.7 12z"/><circle class="taytto" cx="12" cy="12" r="1"/></svg></span><span>Jatka vaeltamista</span></button>
+      <!-- Jakonappi näkyy VAIN iOS-kuoressa (js/ui.js paivitaJakonappi):
+           selaimessa jakoikkunaa ei ole, joten nappia ei ole olemassa. -->
+      <button id="winner-jaa" class="ikoni-teksti" type="button" hidden><span class="viiva-ikoni"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="17.5" cy="6" r="2.6"/><circle cx="6.5" cy="12" r="2.6"/><circle cx="17.5" cy="18" r="2.6"/><path d="M8.8 10.8 15.2 7.2M8.8 13.2l6.4 3.6"/></svg></span><span>Jaa matka</span></button>
       <button id="winner-close" class="primary" type="button">Uusi peli</button>
+    </menu>
+   </div>
+  </dialog>
+
+  <!--
+    Pilvestä löytynyt uudempi tallennus (iOS-kuori, iCloud). Peli ei
+    koskaan korvaa kesken olevaa matkaa hiljaa: toisen laitteen tallennus
+    otetaan käyttöön vain pelaajan luvalla. Selaimessa ikkuna ei aukea
+    koskaan, koska siltaa ei ole.
+  -->
+  <dialog id="pilvi-dialog" class="dialog">
+   <div class="dialog-card" tabindex="-1" autofocus>
+    <h2>Toisella laitteella jatkettu matka</h2>
+    <p id="pilvi-teksti">Löytyi uudempi tallennus toiselta laitteelta — jatketaanko siitä?</p>
+    <menu>
+      <button id="pilvi-ei" type="button">Ei nyt</button>
+      <button id="pilvi-jatka" class="primary" type="button">Jatka</button>
     </menu>
    </div>
   </dialog>
