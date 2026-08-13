@@ -1042,8 +1042,18 @@ class Pollo {
    * palaavat alanappirivin keskimmäiseen paikkaan.
    */
   kiinnitysKohde() {
-    const lehti = this.doc.getElementById('arrival-dialog');
-    if (lehti?.open) return lehti;
+    /*
+     * Myös artikkeli-ikkunat (Lue lisää -wiki ja nähtävyysarkki) ovat
+     * modaaleja, ja pöllön pitää olla saatavilla niissäkin (omistaja
+     * 13.8.2026: "Pöllö saisi olla sivussa näkyvissä näissä myös").
+     * Järjestys on pinojärjestys: wiki voi aueta nähtävyyden tai
+     * lehden päälle, joten se tarkistetaan ensin — pöllön on asuttava
+     * PÄÄLLIMMÄISESSÄ modaalissa ollakseen napautettavissa.
+     */
+    for (const id of ['wiki-dialog', 'nahtavyys-dialog', 'arrival-dialog']) {
+      const dialogi = this.doc.getElementById(id);
+      if (dialogi?.open) return dialogi;
+    }
     return this.ankkuri?.isConnected ? this.ankkuri : this.doc.body;
   }
 
@@ -1152,17 +1162,19 @@ class Pollo {
    * luetaan attribuuteista.
    */
   seuraaNakymaa() {
-    const lehti = this.doc.getElementById('arrival-dialog');
     const intro = this.doc.getElementById('intro');
     if (typeof MutationObserver !== 'function') return;
-    if (lehti) {
+    // Sama seuranta kaikille modaaleille, joissa pöllö voi asua
+    // (ks. kiinnitysKohde): avautuminen siirtää napin ikkunan sisään,
+    // sulkeutuminen palauttaa sen — ja sulkee auki jääneen paneelin,
+    // ettei keskustelu jää leijumaan siirtymän päälle.
+    for (const id of ['arrival-dialog', 'wiki-dialog', 'nahtavyys-dialog']) {
+      const dialogi = this.doc.getElementById(id);
+      if (!dialogi) continue;
       new MutationObserver(() => {
         this.kiinnita();
-        // Lehden sulkeutuminen sulkee myös pöllön: paneeli siirtyy
-        // takaisin kartalle, eikä keskustelun pidä jäädä leijumaan
-        // siirtymän päälle.
-        if (!lehti.open && this.auki) this.sulje();
-      }).observe(lehti, { attributes: true, attributeFilter: ['open'] });
+        if (!dialogi.open && this.auki) this.sulje();
+      }).observe(dialogi, { attributes: true, attributeFilter: ['open'] });
     }
     if (intro) {
       new MutationObserver(() => this.paivitaNakyvyys())

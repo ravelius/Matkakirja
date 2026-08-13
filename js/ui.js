@@ -8944,8 +8944,22 @@ export class UI {
         ohitaSulku = true;
       }
     });
-    kortti.addEventListener('click', () => {
+    kortti.addEventListener('click', (e) => {
       if (ohitaSulku) { ohitaSulku = false; return; }
+      /*
+       * Sarjassa napautus KUVAAN siirtyy seuraavaan (omistaja
+       * 13.8.2026: "kuva sulkeutui myös sitä painettaessa vaikka
+       * pitäisi vaihtaa seuraavaan kuvaan") — sama ele kuin
+       * päiväkirjan kuvapinossa. Kuvan ulkopuolinen napautus sulkee
+       * kuten ennenkin, samoin yhden kuvan katselimessa napautus
+       * mihin tahansa.
+       */
+      if (lista && e.composedPath?.().includes(kotelo)) {
+        indeksi = (indeksi + 1) % lista.length;
+        sfx.play('paper');
+        nayta();
+        return;
+      }
       this.suljeKulttuuriKuva();
     });
     this.rekisteroiSuurennosNappaimet(lista ? (suunta) => {
