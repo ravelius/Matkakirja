@@ -801,6 +801,13 @@ const KAUPUNGIT = {
     // jäi pelkkää esikaupunkia. Nyt tähtimuoto on keskellä.
     rajat: { pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378 },
   },
+  aleppo: {
+    // Aleppon muurien sisäinen vanhakaupunki: linnoitus idässä,
+    // kaupunginportit lännessä ja etelässä, suukin khanit keskellä.
+    // Rajaus on tiukka, koska vanhakaupunki on tiivis ja kujaverkko
+    // tiheä — laajempi ruutu hukuttaisi sen esikaupunkeihin.
+    rajat: { pohjoinen: 36.2075, etela: 36.193, lansi: 37.146, ita: 37.168 },
+  },
   ankara: {
     // Ulus eli vanha Ankara: linnavuori idässä, Augustuksen temppeli ja
     // roomalainen kylpylä pohjoisessa, Anatolian sivilisaatioiden museo

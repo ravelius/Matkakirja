@@ -2514,6 +2514,50 @@ export const KAUPUNKIKARTAT = {
    * vapaussotamuseo; kumpikaan ei ole lehden aihe. Kohteet kuvataan
    * antiikin, bysantin ja ottomaanien kerroksina.
    */
+  /*
+   * Aleppon vanhakaupunki (nippu 2, 13.8.2026). Linnoitus omalla
+   * kummullaan idässä, kaupunginportit lännessä ja etelässä, khanit
+   * keskellä. Rajaus on tiukka, koska kujaverkko on tiheä.
+   *
+   * RAJAUS SISÄLLÖLLE ON TÄMÄN KAUPUNGIN TÄRKEIN SÄÄNTÖ. Peli ei
+   * käsittele nykykonflikteja, ja Raamatun rajaus nimeää syyrialaiset
+   * kohteet nimenomaan kulttuurikohteina. Aleppon lehti kertoo siis
+   * ajasta ennen ensimmäistä maailmansotaa: ajjubidien linnoitus,
+   * mamelukkien khanit, ottomaanien talot.
+   *
+   * KAKSI KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS, vaikka ne ovat
+   * kaupungin tunnetuimpia: Umaijadien suurmoskeija ja Souq
+   * al-Madinan katettu suuki. Kummankin englanninkielinen artikkeli
+   * on nykyään pääosin tuhon kuvausta, eikä niistä saa kirjoitettua
+   * kulttuurijuttua ilman että lähde vie sotaan. Valitut kuusi
+   * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
+   */
+  aleppo: {
+    polku: 'assets/kartat/aleppo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 36.2075, etela: 36.193, lansi: 37.146, ita: 37.168,
+    },
+    esittely: 'Aleppon vanhakaupunki on kartalla helppo tunnistaa: '
+      + 'kuvan oikeassa laidassa on soikea rengas, ja se on '
+      + 'linnoituksen vallihauta. Linnoitus seisoo omalla kummullaan '
+      + 'keskellä kaupunkia, ja kumpu on osin ihmisten tekemä — '
+      + 'asuinkerroksia on kasautunut päällekkäin tuhansien vuosien '
+      + 'ajan.\n\n'
+      + 'Kummun ympärillä kujat ovat kapeita ja mutkittelevia, ja '
+      + 'niiden verkosto on keskiaikainen. Kaupunki oli karavaanitien '
+      + 'pää: idästä tullut tavara purettiin täällä ja jatkoi matkaa '
+      + 'Välimerelle. Siitä ovat jäljelle jääneet khanit, kauppiaiden '
+      + 'majatalot, joita on kartan keskiosassa useita.',
+    kohteet: [
+      { nimi: 'Aleppon linnoitus', lat: 36.1994, lon: 37.1625 },
+      { nimi: 'Antiokian portti', lat: 36.1989, lon: 37.1516 },
+      { nimi: 'Qinnesrinin portti', lat: 36.1945, lon: 37.1559 },
+      { nimi: 'Saippuakhan', lat: 36.2000, lon: 37.1581 },
+      { nimi: 'Arghunin sairaala', lat: 36.1967, lon: 37.1569 },
+      { nimi: 'Beit Ajiqbash', lat: 36.2060, lon: 37.1565 },
+    ],
+  },
   ankara: {
     polku: 'assets/kartat/ankara-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
