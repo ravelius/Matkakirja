@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 630, teksti: 'Sanan, Adenin, Salalahin ja Mosulin kaupunkilehdet' },
   { v: 629, teksti: 'Ääriviiva paisuu piirtyessään; iPadin tausta kuuluviin' },
   { v: 628, teksti: 'Rajan välähdys hitaammin, nopan tärähdys pysähtyessä' },
   { v: 627, teksti: 'Pöllön mikki heti käyttöön; lähderivi kertoo oman tekstin' },
