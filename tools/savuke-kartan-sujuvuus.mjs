@@ -358,7 +358,9 @@ const valahdys = await sivu.evaluate(async () => {
     // eslint-disable-next-line no-await-in-loop
     await new Promise((r) => setTimeout(r, 50));
   }
-  await new Promise((r) => setTimeout(r, 1200));
+  // Välähdys + häivytys kestää nyt 1,9 s (AARIVIIVAN_VALAHDYS_MS) —
+  // loppuarvot luetaan vasta sen mentyä kokonaan ohi.
+  await new Promise((r) => setTimeout(r, 2300));
   const polku = kerros.querySelector('.country-korostus');
   return {
     nahty,

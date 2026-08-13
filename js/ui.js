@@ -859,12 +859,13 @@ const VALINTAVIHJEEN_VIIVE = 15000;
 const VALINTAVIHJEEN_TEKSTI = 'Napauta korostettua kohdetta kartalla, niin matka jatkuu.';
 /*
  * Maan ääriviivan piirtoanimaatio (animoiMaanAariviiva). Piirto on
- * omistajan toivomat "parisen sekuntia", välähdys ja sen häivytys
- * yhteensä alle sekunnin — riittävän lyhyt, ettei se jarruta matkan
- * kulkua, ja riittävän pitkä, että viivan syntymisen ehtii nähdä.
+ * omistajan toivomat "parisen sekuntia". Välähdys ja häivytys
+ * hidastuivat 900 → 1900 ms (omistajan tarkennus 13.8.2026 illalla:
+ * "välähdys ja feidaus voisi olla hitaampi, mutta rajan piirtonopeus
+ * on hyvä") — sama kesto myös CSS:ssä (maa-aariviivan-valahdys).
  */
 const AARIVIIVAN_PIIRTO_MS = 2000;
-const AARIVIIVAN_VALAHDYS_MS = 900;
+const AARIVIIVAN_VALAHDYS_MS = 1900;
 /*
  * NÄKYMÄN KOKOVAHDIN RAJAT (ks. UI vahdiNakymanKokoa).
  *
@@ -15784,9 +15785,14 @@ export class UI {
       onTick: () => sfx.play('dieTick'),
       onLand: () => sfx.play('dieLand'),
       onBounce: () => sfx.play('clack'),
+      /*
+       * Pysähtymisen tärähdys täsmälleen sillä hetkellä, kun noppa
+       * kallahtaa silmäluvulleen. Aiemmin se odotti koko
+       * animaatiolupauksen ratkeamista ja tuli lähes sekunnin
+       * myöhässä (omistajan havainto 13.8.2026).
+       */
+      onSettle: () => natiiviTarise('keskitaso'),
     }));
-    // Noppa on nyt levossa ja silmäluku näkyvissä.
-    natiiviTarise('keskitaso');
     await this.wait(this.reducedMotion ? 0 : 260);
   }
 
