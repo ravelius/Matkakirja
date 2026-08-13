@@ -1168,6 +1168,14 @@ body.aloitus-zoom .kiikari {
   min-height: 40px;
   display: grid;
   place-items: center;
+  /*
+   * Pehmuste nollaan (omistajan havainto 13.8.2026: "kuvake sivussa
+   * ympyrään nähden"). Nappien yleissääntö antaa 0.5rem/0.8rem
+   * pehmusteen, jolloin 20 px:n kuvake ei mahdu 40 px:n ympyrän
+   * sisältöalueeseen ja gridin keskitys vääntyy sivuun — pyöreässä
+   * kuvakenapissa keskitys hoituu gridillä, ei pehmusteella.
+   */
+  padding: 0;
   border-radius: 50%;
   border: 1px solid var(--line);
   background: rgba(239, 220, 180, 0.9);
