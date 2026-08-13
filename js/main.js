@@ -8,6 +8,12 @@ import { packById } from './pack.js';
 import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-stream.js';
 import { kertojaTila, asetaKertojaTila } from './aani-ehdokkaat.js';
 import { asennaPollo } from './pollo.js';
+// iOS-kuoren kytkennät. Selaimessa jokainen näistä on mykkä (js/natiivi.js).
+import {
+  natiiviKirjauduPelikeskukseen, natiiviKuunteleSynkka, natiiviMerkitseAika,
+  natiiviSeuraa, natiiviSynkkaa, natiiviWidget, natiiviYhdistaLeimat,
+} from './natiivi.js';
+import { readStamps, writeStamps, STAMP_KEY } from './passport.js';
 
 const PLAYER_COLOR = '#d94f3d';
 /*
@@ -17,6 +23,15 @@ const PLAYER_COLOR = '#d94f3d';
  */
 const SAVE_KEY = 'matkakirja-save-v1';
 const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
+/*
+ * iCloud-synkan lähtötilanne talteen HETI, ennen kuin peli ehtii
+ * tallentaa kertaakaan: pelkkä avaaminen ei ole muutos, eikä vanha
+ * tallennus saa leimautua tuoreeksi ja työntyä toisen laitteen
+ * uudemman päälle (js/natiivi.js natiiviSeuraa). Selaimessa tämä on
+ * pelkkää kirjanpitoa.
+ */
+natiiviSeuraa(SAVE_KEY);
+natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
@@ -140,12 +155,124 @@ try {
 // --- tallennus -------------------------------------------------------------
 
 function saveGame(game) {
+  let talletettu = null;
   try {
     if (game.phase === 'over') localStorage.removeItem(SAVE_KEY);
-    else localStorage.setItem(SAVE_KEY, JSON.stringify(game.toJSON()));
+    else {
+      talletettu = JSON.stringify(game.toJSON());
+      localStorage.setItem(SAVE_KEY, talletettu);
+    }
   } catch {
     /* yksityinen selaustila tai täysi levy — peli jatkuu ilman tallennusta */
   }
+  // Sama tallennus iCloudiin ja pelin tila kotinäytölle. Molemmat ovat
+  // mykkiä selaimessa, ja kumpikin harventaa itse (js/natiivi.js).
+  if (talletettu !== null) natiiviSynkkaa(SAVE_KEY, talletettu);
+  synkkaaPassi();
+  paivitaWidget(game);
+}
+
+/* --- iOS-kuori: iCloud-synkka, widget ja Game Center ---------------------- */
+
+/*
+ * PELIN TILA KOTINÄYTÖLLE.
+ *
+ * Widget näyttää tasan sen mitä sille kirjoitetaan, joten kentät
+ * annetaan valmiiksi näytettävässä muodossa (kuori ei muotoile rahaa
+ * eikä taivuta kaupunginnimiä). Kirjoitus tapahtuu kaupungin
+ * vaihtuessa: iOS antaa widgetille päivityskiintiön, eikä sitä ole
+ * varaa kuluttaa joka piirrolla.
+ */
+function paivitaWidget(game) {
+  const city = game.cityOf?.();
+  // Matkalla ei olla missään kaupungissa: widget jää näyttämään edellisen.
+  if (!city) return;
+  const iso = game.pack?.map?.cityCountry?.[city.id];
+  const maa = iso ? game.pack?.map?.countryShapes?.[iso]?.nimi : '';
+  natiiviWidget({
+    kaupunki: city.name,
+    maa: maa ?? '',
+    paiva: game.dayCount(),
+    raha: `£${game.player.money}`,
+  });
+}
+
+/** Passin leimat pilveen, jos ne muuttuivat. */
+function synkkaaPassi() {
+  try {
+    const leimat = localStorage.getItem(STAMP_KEY);
+    if (leimat) natiiviSynkkaa(STAMP_KEY, leimat);
+  } catch {
+    /* yksityistila: passi elää vain tässä istunnossa */
+  }
+}
+
+/*
+ * UUDEMPI TALLENNUS TOISELTA LAITTEELTA.
+ *
+ * Sääntö on "uusin voittaa", mutta sitä EI sovelleta hiljaa: kesken
+ * oleva matka on pelaajan käsissä juuri nyt, ja sen korvaaminen ilman
+ * kysymistä olisi tallennuksen menetys — ei synkka. Peli kysyy siis
+ * kerran, ja "Ei nyt" jättää paikallisen tallennuksen rauhaan.
+ *
+ * Ikkuna avataan vain kerran kerrallaan: iCloud voi lähettää saman
+ * muutoksen useampana tapahtumana.
+ */
+const pilviDialog = document.getElementById('pilvi-dialog');
+let pilviTarjolla = false;
+
+function tarjoaPilviTallennus(raaka) {
+  if (!pilviDialog || pilviTarjolla) return;
+  // Kelvoton tallennus ei ansaitse kysymystä: se ei avautuisi peliksi.
+  let tila = null;
+  try {
+    tila = JSON.parse(raaka);
+  } catch {
+    return;
+  }
+  if (!tila || typeof tila !== 'object') return;
+  pilviTarjolla = true;
+  pilviDialog.showModal();
+
+  const sulje = () => {
+    pilviTarjolla = false;
+    if (pilviDialog.open) pilviDialog.close();
+  };
+  document.getElementById('pilvi-ei').onclick = sulje;
+  document.getElementById('pilvi-jatka').onclick = () => {
+    sulje();
+    try {
+      localStorage.setItem(SAVE_KEY, raaka);
+    } catch {
+      /* levy täynnä: peli jatkuu silti tästä tilasta */
+    }
+    // Aikaleima omaksi: muuten sama tallennus tarjoutuisi uudestaan.
+    natiiviMerkitseAika(SAVE_KEY);
+    siirraVanhaMaailma(tila);
+    const jatkettu = Game.fromJSON(tila);
+    if (jatkettu) attach(jatkettu);
+  };
+}
+
+/*
+ * PASSI YHDISTETÄÄN, EI KORVATA. Leimakokoelma vain kasvaa, joten
+ * yhdistäminen ei voi hukata mitään eikä sitä tarvitse kysyä. Juuri
+ * siksi passille ei tehdä "uusin voittaa" -korvausta: toisella
+ * laitteella lennossa ansaittu leima katoaisi.
+ */
+function yhdistaPilviPassi(raaka) {
+  let pilvesta = null;
+  try {
+    pilvesta = JSON.parse(raaka);
+  } catch {
+    return;
+  }
+  if (!pilvesta || typeof pilvesta !== 'object') return;
+  const yhdistetty = natiiviYhdistaLeimat(readStamps(), pilvesta);
+  writeStamps(yhdistetty);
+  natiiviMerkitseAika(STAMP_KEY);
+  // Matkalaukku rakentaa sisältönsä joka avauksella, joten uudet leimat
+  // näkyvät seuraavalla kerralla ilman erillistä piirtoa.
 }
 
 function loadGame() {
@@ -718,6 +845,20 @@ if (katseluPack) {
 
 // Peli on rakennettu: päivitysruutu väistyy.
 paataPaivitysruutu();
+
+/*
+ * iOS-KUOREN KYTKENNÄT. Selaimessa jokainen näistä palaa heti takaisin
+ * tekemättä mitään, eikä yhtään kuuntelijaa synny.
+ *
+ * Katselutila (työhuoneen kartta kehyksessä) jätetään ulos kokonaan:
+ * se ei ole pelaajan matka, eikä sen pidä kirjautua Game Centeriin
+ * eikä tarjota tallennusta pilvestä.
+ */
+if (!katseluPack) {
+  natiiviKirjauduPelikeskukseen();
+  natiiviKuunteleSynkka(SAVE_KEY, (raaka) => tarjoaPilviTallennus(raaka));
+  natiiviKuunteleSynkka(STAMP_KEY, (raaka) => yhdistaPilviPassi(raaka));
+}
 
 /*
  * Päivityksen jälkeen pieni ilmoitus (omistajan toive 13.8.2026):

@@ -19,6 +19,11 @@ import {
   factSource, factText, factVoice, isSourceUrl, PACKS, packById, sourceLabel, voiceTitle,
 } from './pack.js';
 import { stampBoard } from './passport.js';
+// iOS-kuoren kytkennät. Selaimessa jokainen näistä on mykkä (js/natiivi.js).
+import {
+  NATIIVI_SAAVUTUKSET, natiiviJaaTeksti, natiiviMatkaTeksti, natiiviSaavutus,
+  natiiviTarise, natiiviTukee, natiiviVastaus,
+} from './natiivi.js';
 // Matkalaukun alalaidan "Unohdettu aarre": tekijänoikeus ja lähdeluettelo.
 import { LAHTEET, LAHTEITA, PELI } from './lahteet.js';
 import {
@@ -1541,6 +1546,13 @@ const EVENT_SOUND = { fare: 'ferry', flight: 'flight', aid: 'coin', stuck: 'stuc
 // Paljastusruudun alateksti laattatyypeittäin.
 // (Matkustustapojen nimilista TRAVEL_LABEL poistui 13.8.2026: sitä
 // luki vain kartan päällä kellunut tilarivi, jota ei enää ole.)
+
+/*
+ * Laatat, jotka ovat aarre: unohdettu aarre ja kolme jalokiveä. Erottelu
+ * on iOS-kuoren juhlatärähdystä varten (js/natiivi.js) — muut laatat
+ * ovat löytöjä, mutta eivät sitä hetkeä, jota varten juhla on olemassa.
+ */
+const AARRELAATAT = new Set(['star', 'ruby', 'emerald', 'topaz']);
 
 const REVEAL_SUB = {
   star: 'Vie unohdettu aarre kotiin ja voitat pelin!',
@@ -7909,6 +7921,8 @@ export class UI {
     // Odottaako peli valintaa kartalta? Jos odottaa eikä mitään tapahdu,
     // pöllö vinkkaa hetken kuluttua.
     this.paivitaValintavihje();
+    // Game Centerin saavutukset (iOS-kuori; selaimessa ei tee mitään).
+    this.paivitaSaavutukset();
 
     if (this.game.phase === 'over') {
       this.showWinner();
@@ -8587,6 +8601,7 @@ export class UI {
         // Palaute vieritetään näkyviin — kysymys elää dialogin alalaidassa.
         this.arrivalKulttuuriTulos.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         sfx.play(oikein ? 'correct' : 'wrong');
+        natiiviVastaus(oikein);
         // Palkkiosta myös toast kortin ulkopuolelle, jotta hyvitys näkyy
         // varmasti vaikka katse olisi muualla.
         if (oikein) {
@@ -11221,6 +11236,7 @@ export class UI {
           : `Oikea vastaus: ${tehtava.vaihtoehdot[tehtava.oikea]}. `)
           + (tehtava.fakta ?? '');
         sfx.play(oikein ? 'correct' : 'wrong');
+        natiiviVastaus(oikein);
         // Palkkiosta toast myös kortin ulkopuolelle — sama syy kuin
         // kulttuurivisassa: hyvitys ei saa jäädä huomaamatta.
         if (oikein) {
@@ -12855,9 +12871,41 @@ export class UI {
    * linssit), joten luettelo kertoo rehellisesti tämän matkan tilanteen
    * eikä väitä muistavansa enempää.
    */
+  /**
+   * Luettelo lukuina: kaikki laudan unohdetut aarteet ja niistä
+   * löytyneet.
+   *
+   * LUETTELO ON MANNERKOHTAINEN (omistajan päätös 11.8.2026):
+   * jokaisella seitsemällä mantereella on oma unohdettu aarteensa, ja
+   * mannerTypes kertoo kunkin nimen. Muilla laudoilla — ja vanhoissa
+   * yhden tähden tallennuksissa — mannerTypes puuttuu, jolloin luettelo
+   * palaa vanhaan muotoonsa lautojen omista aarteista.
+   *
+   * Löytyneet luetaan maailman kirjanpidosta, joten moninpelissä
+   * luettelo näyttää koko seurueen saaliin — luettelo on Aarnin, ei
+   * yhden matkaajan.
+   *
+   * Sama laskenta palvelee luetteloa, Game Centerin saavutuksia ja
+   * jaettavaa matkan yhteenvetoa, joten se asuu yhdessä paikassa.
+   */
+  aarreLuettelo() {
+    const { game } = this;
+    const mannerTypes = game.pack?.tokens?.mannerTypes;
+    const kaikki = mannerTypes
+      ? Object.entries(mannerTypes)
+        .map(([manner, types]) => ({ manner, aarre: types?.star }))
+        .filter((rivi) => rivi.aarre?.name)
+      : PACKS.map((pakkaus) => ({ manner: pakkaus.id, aarre: pakkaus.tokens?.types?.star }))
+        .filter((rivi) => rivi.aarre?.name);
+    const loytyneet = game.world?.starsFound ?? new Map();
+    return {
+      kaikki,
+      loydetyt: kaikki.filter((rivi) => loytyneet.has(rivi.manner)).map((rivi) => rivi.aarre),
+    };
+  }
+
   renderAarteet() {
     if (!this.passportAarteet) return;
-    const { game } = this;
     this.passportAarteet.textContent = '';
 
     /*
@@ -12873,33 +12921,7 @@ export class UI {
      * Nyt luettelo täyttyy matkan mukana, kuten Aarnin oma luettelo
      * täyttyi. Kateissa-luku kertoo silti kuinka pitkä matka on jäljellä.
      */
-    /*
-     * LUETTELO ON MANNERKOHTAINEN (omistajan päätös 11.8.2026):
-     * jokaisella seitsemällä mantereella on oma unohdettu aarteensa, ja
-     * mannerTypes kertoo kunkin nimen. Muilla laudoilla — ja vanhoissa
-     * yhden tähden tallennuksissa — mannerTypes puuttuu, jolloin
-     * luettelo palaa vanhaan muotoonsa lautojen omista aarteista.
-     */
-    const mannerTypes = game.pack?.tokens?.mannerTypes;
-    const kaikki = mannerTypes
-      ? Object.entries(mannerTypes)
-        .map(([manner, types]) => ({ manner, aarre: types?.star }))
-        .filter((rivi) => rivi.aarre?.name)
-      : PACKS.map((pakkaus) => ({ manner: pakkaus.id, aarre: pakkaus.tokens?.types?.star }))
-        .filter((rivi) => rivi.aarre?.name);
-
-    /*
-     * LÖYTYNYT TARKOITTAA TÄTÄ MATKAA. Aarteen löytymistä ei tallenneta
-     * pelikertojen yli (js/passport.js tuntee vain lautaleimat ja
-     * linssit), joten luettelo kertoo rehellisesti tämän matkan
-     * tilanteen eikä väitä muistavansa enempää. Löytyneet luetaan
-     * maailman kirjanpidosta, joten moninpelissä luettelo näyttää koko
-     * seurueen saaliin — luettelo on Aarnin, ei yhden matkaajan.
-     */
-    const loytyneet = game.world?.starsFound ?? new Map();
-    const loydetyt = kaikki
-      .filter((rivi) => loytyneet.has(rivi.manner))
-      .map((rivi) => rivi.aarre);
+    const { kaikki, loydetyt } = this.aarreLuettelo();
 
     for (const aarre of loydetyt) {
       const rivi = html('div', 'aarre-rivi loytynyt');
@@ -14046,7 +14068,58 @@ export class UI {
       this.winnerDialog.close();
       this.doAction(() => this.game.continueRoaming());
     };
+    // Läpipeluu on saavutus vasta voitossa — ei vaellustilan välietapissa.
+    natiiviSaavutus(NATIIVI_SAAVUTUKSET.lapipeluu);
+    this.paivitaJakonappi();
     if (!this.winnerDialog.open) this.winnerDialog.showModal();
+  }
+
+  /**
+   * "Jaa matka" voittoruudussa. Nappi on olemassa vain iOS-kuoressa:
+   * selaimessa se pysyy piilossa, koska jakoikkunaa ei ole eikä
+   * puolinaista korviketta rakenneta (navigator.share käyttäytyy eri
+   * selaimissa eri tavoin, eikä työpöydällä lainkaan).
+   */
+  paivitaJakonappi() {
+    const nappi = document.getElementById('winner-jaa');
+    if (!nappi) return;
+    if (!natiiviTukee('jako')) {
+      nappi.hidden = true;
+      return;
+    }
+    nappi.hidden = false;
+    nappi.onclick = () => natiiviJaaTeksti(this.matkanYhteenveto());
+  }
+
+  /** Matkan luvut jaettavaan tekstiin: päivät, kaupungit ja aarteet. */
+  matkanYhteenveto() {
+    const { game } = this;
+    // Kaupungit lasketaan kaikista maailmoista: vaeltaja käy monella laudalla.
+    let kaupungit = 0;
+    for (const maailma of game.worlds?.values?.() ?? []) kaupungit += maailma.visited?.size ?? 0;
+    return natiiviMatkaTeksti({
+      paivat: game.dayCount(),
+      kaupungit,
+      aarteet: this.aarreLuettelo().loydetyt.length,
+    });
+  }
+
+  /**
+   * Game Centerin saavutukset pelitilasta.
+   *
+   * Luetaan piirron yhteydessä eikä löytöhetkellä: löytö voi tulla
+   * monta reittiä (visa, kohtaaminen, tapahtumakortti), ja tilasta
+   * lukeva tarkistus ei voi jäädä yhdestäkään niistä paitsi. Sama
+   * saavutus lähtee silti vain kerran (js/natiivi.js).
+   */
+  paivitaSaavutukset() {
+    // Katselutila on työhuoneen esikatselu eikä pelaajan matka.
+    if (this.katselu) return;
+    const { kaikki, loydetyt } = this.aarreLuettelo();
+    if (loydetyt.length > 0) natiiviSaavutus(NATIIVI_SAAVUTUKSET.ensimmainenAarre);
+    if (kaikki.length > 0 && loydetyt.length >= kaikki.length) {
+      natiiviSaavutus(NATIIVI_SAAVUTUKSET.kaikkiAarteet);
+    }
   }
 
   // --- tietovisa ----------------------------------------------------------
@@ -14565,6 +14638,7 @@ export class UI {
         const duel = game.duel;
         if (!duel) return;
         sfx.play(duel.right ? 'correct' : 'robber');
+        natiiviVastaus(Boolean(duel.right));
         this.renderQuiz();
         await this.wait(this.reducedMotion ? 200 : 900);
         this.revealShownFor = duel;
@@ -14688,6 +14762,8 @@ export class UI {
           const duel = game.duel;
           if (!duel) return;
           sfx.play('timeout');
+          // Aika loppui = väärä vastaus: putki katkeaa.
+          natiiviVastaus(false);
           this.renderQuiz();
           await this.wait(this.reducedMotion ? 200 : 900);
           this.revealShownFor = duel;
@@ -14703,6 +14779,7 @@ export class UI {
         const quiz = game.quiz;
         if (!quiz) return;
         sfx.play('timeout');
+        natiiviVastaus(false);
         this.renderQuiz();
         await this.wait(this.reducedMotion ? 200 : 900);
         this.revealShownFor = quiz;
@@ -14724,6 +14801,8 @@ export class UI {
         const quiz = game.quiz;
         if (!quiz) return;
         sfx.play(quiz.right ? 'correct' : 'wrong');
+        // Tärähdys ja oikeiden vastausten putki (iOS-kuori).
+        natiiviVastaus(Boolean(quiz.right));
         this.renderQuiz();
         await this.wait(this.reducedMotion ? 200 : 850);
         if (quiz.right && quiz.found) await this.playTokenReveal(quiz.found);
@@ -14763,6 +14842,12 @@ export class UI {
 
   async playTokenReveal(type) {
     const token = this.game.aarreTyyppi(type, this.game.quiz?.cityId);
+    /*
+     * Aarre tuntuu kädessä (iOS-kuori). Juhla on pelin voimakkain
+     * tärähdys, ja siksi se on varattu löydölle: tyhjä kotelo, rosvo,
+     * hevosenkenkä ja taikalasi eivät saa sitä, tai ele kuluisi loppuun.
+     */
+    if (AARRELAATAT.has(type)) natiiviTarise('juhla');
     /*
      * Varustekuva (omistajan tilaus 10.8.2026: "tee varusteet kuviksi
      * samoin kuin aarteet"): löytynyt linssi nousee mustasta omalla
@@ -15664,12 +15749,21 @@ export class UI {
     const to = this.dieRestingSpot();
     this.dieThrown = true;
 
+    /*
+     * Noppa tuntuu kädessä kahdesti (iOS-kuori; selaimessa mykkä):
+     * kevyt heiton lähtiessä ja keskitaso silloin kun noppa pysähtyy
+     * laudalle. Kaksi tärähdystä riittää — jokainen pomppu tuntuisi
+     * kohinalta, ja pomppuja on useita.
+     */
+    natiiviTarise('kevyt');
     await this.isoAnimaatio(() => this.boardDie.roll(value, from, to, {
       reduced: this.reducedMotion,
       onTick: () => sfx.play('dieTick'),
       onLand: () => sfx.play('dieLand'),
       onBounce: () => sfx.play('clack'),
     }));
+    // Noppa on nyt levossa ja silmäluku näkyvissä.
+    natiiviTarise('keskitaso');
     await this.wait(this.reducedMotion ? 0 : 260);
   }
 

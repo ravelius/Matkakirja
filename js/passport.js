@@ -4,7 +4,12 @@
 // jäävät jäljelle vaikka peli aloitettaisiin alusta. Siksi ne tallennetaan
 // omalla avaimellaan eivätkä ne kuulu pelitallenteeseen.
 
-const STAMP_KEY = 'matkakirja.passi.v1';
+/*
+ * Avain on julkinen, koska passi on yksi kahdesta asiasta, jotka
+ * iOS-kuori synkkaa iCloudiin (js/natiivi.js): synkka tarvitsee saman
+ * avaimen sekä levylle että pilveen.
+ */
+export const STAMP_KEY = 'matkakirja.passi.v1';
 
 /**
  * Leimat muodossa { packId: { label, date } }, jossa date on ensimmäisen
@@ -36,6 +41,21 @@ export function stampBoard(packId, label, today = new Date()) {
     return false; // tallennustila täynnä tai estetty
   }
   return true;
+}
+
+/**
+ * Kirjoittaa koko leimakokoelman kerralla. Tätä käyttää vain
+ * iCloud-synkka, joka yhdistää toisen laitteen leimat omiin
+ * (js/natiivi.js natiiviYhdistaLeimat) — tavallinen peli leimaa yhden
+ * laudan kerrallaan stampBoardilla.
+ */
+export function writeStamps(stamps) {
+  try {
+    localStorage.setItem(STAMP_KEY, JSON.stringify(stamps ?? {}));
+    return true;
+  } catch {
+    return false; // tallennustila täynnä tai estetty
+  }
 }
 
 /** Leimat vanhimmasta uusimpaan näyttöä varten. */
