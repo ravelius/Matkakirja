@@ -80,15 +80,49 @@ const MIME = {
 /*
  * STRIIMIKOKEEN VASTAUS.
  *
- * Sama pitkä teksti kuin vieritystestissä, mutta perässä ne kaksi asiaa,
- * jotka eivät saa vilahtaa ruudulla: [[käsitemerkintä]] ja JATKOT-lohko.
- * Teksti ajetaan workerin oman suodattimen läpi (rajat.js
+ * Sama pitkä teksti kuin vieritystestissä, mutta perässä ne kolme asiaa,
+ * jotka eivät saa vilahtaa ruudulla: kaksi [[käsitemerkintää]] ja
+ * JATKOT-lohko. Teksti ajetaan workerin oman suodattimen läpi (rajat.js
  * luoJatkoSuodatin) täsmälleen kuten tuotannossa.
+ *
+ * TOINEN MERKINTÄ ON MONISANAINEN TARKOITUKSELLA: sen keskelle
+ * pakotetaan palaraja (ks. striimiPalat). Juuri se aukko piti v613:n
+ * striimitarkistukset vihreinä, vaikka aidolla laitteella vastauksessa
+ * ei näkynyt yhtään pöllölinkkiä.
  */
+const STRIIMI_KATKO = 'Amadeus';
 const STRIIMI_VASTAUS = () => `${PITKA_VASTAUS} Satamassa purettiin `
-  + '[[hiililastit]] käsipelillä aamusta iltaan.';
-const STRIIMI_RAAKA = () => `${STRIIMI_VASTAUS()}\nJATKOT:\n`
-  + 'Miten tunnelit kaivettiin?\nKuka maksoi rakentamisen?\n';
+  + '[[hiililastit]] käsipelillä aamusta iltaan. '
+  + `Samaan aikaan sävelsi [[Wolfgang ${STRIIMI_KATKO} Mozart]] kuolemaansa asti.`;
+/*
+ * LYHYT VASTAUS. Kaksi virkettä, jotka eivät täytä paneelia: sillä
+ * mitataan, ettei loppurenderöinti rullaa näkymää ylöspäin edellisen
+ * vastauksen päälle (omistajan havainto 13.8.2026).
+ */
+const LYHYT_VASTAUS = 'Metro avattiin vuonna 1863. '
+  + 'Ensimmäinen linja kulki [[Paddingtonin asema]] ja Farringdonin väliä.';
+const STRIIMI_JATKOT = 'JATKOT:\nMiten tunnelit kaivettiin?\nKuka maksoi rakentamisen?\n';
+const STRIIMI_RAAKA = (lyhyt) => `${lyhyt ? LYHYT_VASTAUS : STRIIMI_VASTAUS()}\n${STRIIMI_JATKOT}`;
+
+/**
+ * Virran palat.
+ *
+ * Perusmitta on 24 merkkiä, mutta yksi raja PAKOTETAAN keskelle
+ * käsitemerkintää: aidossa virrassa malli kirjoittaa "[[Wolfgang " ja
+ * "Amadeus Mozart]]" eri paloihin, eikä katkennutta merkintää voi
+ * jäsentää linkiksi. Siksi lopullinen sisältö on rakennettava
+ * loppu-tapahtuman tekstistä, ja juuri sitä tämä mittaa.
+ */
+function striimiPalat(raaka, katkoKohta) {
+  const palat = [];
+  for (let i = 0; i < raaka.length;) {
+    let loppu = Math.min(i + 24, raaka.length);
+    if (katkoKohta > i && katkoKohta < loppu) loppu = katkoKohta;
+    palat.push(raaka.slice(i, loppu));
+    i = loppu;
+  }
+  return palat;
+}
 
 /** Savukkeen oma pikku-worker: sama SSE-muoto kuin tools/pollo/worker.js. */
 function striimiPalvelin(req, res) {
@@ -97,6 +131,7 @@ function striimiPalvelin(req, res) {
   req.on('end', async () => {
     let pyynto = {};
     try { pyynto = JSON.parse(runko || '{}'); } catch { pyynto = {}; }
+    const lyhyt = /lyhyt/i.test(String(pyynto?.kysymys ?? ''));
     if (pyynto.tehtava === 'ehdotukset' || !pyynto.striimi) {
       res.writeHead(200, { 'content-type': 'application/json; charset=utf-8' });
       res.end(JSON.stringify({ ehdotukset: [], vastaus: STRIIMI_VASTAUS(), jatkot: [] }));
@@ -108,16 +143,18 @@ function striimiPalvelin(req, res) {
     });
     const laheta = (laji, data) => res.write(`event: ${laji}\ndata: ${JSON.stringify(data)}\n\n`);
     const suodatin = luoJatkoSuodatin();
-    const raaka = STRIIMI_RAAKA();
+    const raaka = STRIIMI_RAAKA(lyhyt);
     // Palat ovat pieniä ja hitaita, jotta kirjoittuminen näkyy oikeasti.
-    for (let i = 0; i < raaka.length; i += 24) {
-      const nakyva = suodatin.lisaa(raaka.slice(i, i + 24));
+    for (const pala of striimiPalat(raaka, raaka.indexOf(STRIIMI_KATKO))) {
+      const nakyva = suodatin.lisaa(pala);
       if (nakyva) laheta('pala', { teksti: nakyva });
       // eslint-disable-next-line no-await-in-loop
       await new Promise((r) => setTimeout(r, 18));
     }
     const { hanta } = suodatin.loppu();
     if (hanta) laheta('pala', { teksti: hanta });
+    // Jatkokysymykset lähtevät VAIN lopputapahtumassa, kuten
+    // tuotannossa: pala-tapahtumista suodatin pidättää ne kokonaan.
     const { vastaus, jatkot } = poimiJatkot(raaka);
     laheta('loppu', { vastaus, jatkot });
     res.end();
@@ -335,8 +372,18 @@ const KASITEVASTAUS = 'Lontoon [[höyryveturit]] vetivät junia, ja '
   + '[[Waterloo]] ja [[Beethoven]] mainitaan samassa lauseessa.';
 const NAHTAVYYSVASTAUS = 'Tower Bridge avattiin vuonna 1894, ja sen '
   + 'maalattu teräsrunko piiloutuu kivikuoren sisään.';
+/*
+ * YLEISSANAVASTAUS (omistaja 13.8.2026: *"Alleviivaukset outoja."*).
+ * Vastauksessa ei ole yhtään erottuvaa nimeä — pelkkiä yleissanoja,
+ * jotka ennen nappasivat artikkelilinkin keskelle lausetta. Nyt linkin
+ * pitää jäädä kokonaan pois.
+ */
+const YLEISSANAVASTAUS = 'Kaupungissa asui paljon ihmisiä, ja historia '
+  + 'näkyi kaduilla. Alue rakennettiin vaiheittain vuosien kuluessa.';
 
 function vastausTekstiin(kysymys) {
+  // "yleissana": vastaus, jossa on vain yleissanoja — ei ankkuria.
+  if (/yleissana/i.test(kysymys)) return YLEISSANAVASTAUS;
   // "varapolku": vastauksessa ei ole yhtään pelin indeksin sanaa, joten
   // linkille ei löydy ankkuria tekstistä.
   if (/varapolku/i.test(kysymys)) {
@@ -961,6 +1008,39 @@ await sivu.evaluate(async () => {
   document.getElementById('arrival-dialog').close();
   await new Promise((r) => setTimeout(r, 400));
 });
+
+/* ------------------------------------------------------------------ */
+/* 3c) Ankkuri ei tartu yhdentekevään sanaan                           */
+/* ------------------------------------------------------------------ */
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026: *"Alleviivaukset outoja."* Wienin
+ * kuuluisuuksista kertovassa vastauksessa artikkelilinkit olivat
+ * sanoissa "kaupungissa" ja "syntyi". Sääntö on nyt: mieluummin ei
+ * linkkiä kuin outo linkki (js/pollo-haku.js YLEISSANOJEN_RUNGOT).
+ */
+const ankkurit = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const kysy = async (teksti) => {
+    document.querySelector('.pollo-nappi').click();
+    await odota(400);
+    document.querySelector('.pollo-kirjoita').click();
+    await odota(120);
+    document.querySelector('.pollo-kentta').value = teksti;
+    document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+    await odota(900);
+    const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+    return [...vastaus.querySelectorAll('a.pollo-tekstilinkki')].map((a) => a.textContent);
+  };
+  const yleissanat = await kysy('Kerro yleissana-vastaus tästä paikasta');
+  const erisnimi = await kysy('Mitä Tower Bridgestä tiedetään?');
+  return { yleissanat, erisnimi };
+});
+vaadi('pelkkä yleissana ei saa artikkelilinkkiä',
+  ankkurit.yleissanat.length === 0, ankkurit.yleissanat.join(' | '));
+vaadi('erisnimi saa linkin omaan kohtaansa',
+  ankkurit.erisnimi.length >= 1 && /Tower/i.test(ankkurit.erisnimi[0] ?? ''),
+  ankkurit.erisnimi.join(' | '));
 
 /* ================================================================== */
 /* 3e) Mikään paneelin osa ei kiinnity keskustelun päälle               */
@@ -2384,31 +2464,73 @@ await sumennusCtx.close();
 /* ================================================================== */
 
 /*
- * OMISTAJAN TILAUS 13.8.2026. Vastaus striimataan, mutta neljä
- * reunaehtoa ovat ehdottomia:
+ * OMISTAJAN TILAUS 13.8.2026. Vastaus striimataan, mutta reunaehdot
+ * ovat ehdottomia:
  *   a) näkymä ankkuroituu kysymykseen eikä rullaa itsestään —
  *      teksti kirjoittuu alas piiloon,
  *   b) JATKOT-lohko ei vilahda kertaakaan,
  *   c) [[merkinnät]] suodattuvat lennossa eivätkä näy koskaan,
- *   d) valmis vastaus saa lopulliset linkit ja jatkokysymykset.
+ *   d) valmis vastaus saa lopulliset linkit ja jatkokysymykset,
+ *   e) vastausteksti EI ole kursiivia missään vaiheessa,
+ *   f) kirjoituskone naputtaa striimin ajan ja vaikenee sen päättyessä,
+ *      jolloin soi rivinvaihtokello.
  *
  * Vastaus tulee savukkeen omalta palvelimelta oikeana SSE-virtana ja
  * kulkee workerin oman suodattimen läpi (rajat.js), joten tämä mittaa
- * samaa koodia, joka on tuotannossa.
+ * samaa koodia, joka on tuotannossa. Yksi käsitemerkintä katkeaa
+ * palarajalle täsmälleen kuten aidossa virrassa.
  */
 polloOsoite = 'http://127.0.0.1:8734/pollo-striimi';
 const striimiCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
 const { sivu: striimiSivu, virheet: striimiVirheet } = await avaaPeli(striimiCtx);
 
+/**
+ * Vakoilee tehosteäänet: jokainen sfx.play kirjautuu nimineen,
+ * aikaleimoineen ja voimakerroin talteen. Kääre asetetaan vasta pelin
+ * latauduttua, koska SoundKit syntyy moduulin latautuessa (js/sound.js).
+ *
+ * VOIMA EROTTAA PÖLLÖN NAPUTUKSEN ETUSIVUN KIRJOITUSKONEESTA. Molemmat
+ * soittavat samaa 'pen'-ääntä, ja avaustekstin kirjoittuminen voi jatkua
+ * taustalla vielä kartallakin — ilman erottelua mittaus laski sen
+ * lyönnit pöllön naputukseksi. Pöllö antaa aina oman kertoimensa
+ * (js/pollo.js NAPUTUS_VOIMA), ui.js ei anna mitään.
+ */
+async function vakoileAanet(sivu) {
+  await sivu.evaluate(() => {
+    const sfx = window.matkakirja?.sfx;
+    if (!sfx || sfx.__vakoiltu) return;
+    sfx.__vakoiltu = true;
+    window.__aanet = [];
+    // Pöllön oma taustanaputus: 'pen' voimakertoimen kanssa.
+    window.__naputukset = () => window.__aanet
+      .filter((a) => a.nimi === 'pen' && a.voima != null);
+    const alkuperainen = sfx.play.bind(sfx);
+    sfx.play = (nimi, asetukset) => {
+      window.__aanet.push({ nimi, hetki: performance.now(), voima: asetukset?.voima ?? null });
+      return alkuperainen(nimi, asetukset);
+    };
+  });
+}
+
+await vakoileAanet(striimiSivu);
+
 const striimi = await striimiSivu.evaluate(async () => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  window.__aanet.length = 0;
   document.querySelector('.pollo-nappi').click();
   await odota(700);
+  // Pöllön huhuilu kuuluu paneelin avautuessa (omistajan tilaus).
+  const huhuiluAvatessa = window.__aanet.filter((a) => a.nimi === 'owl').length;
   document.querySelector('.pollo-kirjoita').click();
   await odota(150);
   const virta = document.querySelector('.pollo-virta');
+  window.__aanet.length = 0;
   document.querySelector('.pollo-kentta').value = 'Kerro Thamesin satamasta';
   document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+
+  // Naputus ja kursiivi mitataan KESKEN striimin, ei vasta lopussa.
+  let naputuksiaKesken = 0;
+  let kursiiviaKesken = false;
 
   let sulkeita = false;
   let jatkoja = false;
@@ -2435,6 +2557,10 @@ const striimi = await striimiSivu.evaluate(async () => {
     if (pituus > 0) {
       if (edellinen >= 0 && pituus > edellinen) kasvuja += 1;
       edellinen = pituus;
+      // Striimattu ja valmis vastaus näyttävät samalta: kumpikaan ei ole
+      // kursiivia (omistaja: "saisiko strimitekstin ilman kursiivia").
+      if (getComputedStyle(vastaus).fontStyle !== 'normal') kursiiviaKesken = true;
+      naputuksiaKesken = window.__naputukset().length;
       if (ankkuri === null) ankkuri = virta.scrollTop;
       const poikkeama = Math.abs(virta.scrollTop - ankkuri);
       if (poikkeama > 1) poikkeamia += 1;
@@ -2457,10 +2583,30 @@ const striimi = await striimiSivu.evaluate(async () => {
   const kysymys = [...document.querySelectorAll('.pollo-kayttaja')].at(-1);
   const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
   const v = virta.getBoundingClientRect();
+  /*
+   * Äänet vastauksen valmistuttua: naputus on loppunut ja kello soinut.
+   * Odotetaan hetki, jotta mahdollinen jäljelle jäänyt ajastin ehtisi
+   * paljastua — juuri sitä tässä mitataan.
+   */
+  const kelloHetki = window.__aanet.find((a) => a.nimi === 'typeBell')?.hetki ?? null;
+  const naputuksiaKellonAikaan = window.__naputukset().length;
+  await odota(700);
+  const naputuksiaJalkeen = window.__naputukset().length;
+  const viimeinenNaputus = window.__naputukset().at(-1)?.hetki ?? null;
   return {
     kasvuja,
     sulkeita,
     jatkoja,
+    huhuiluAvatessa,
+    kursiiviaKesken,
+    naputuksiaKesken,
+    naputuksiaKellonAikaan,
+    naputuksiaJalkeen,
+    // Positiivinen luku: naputus vaikeni ENNEN kelloa.
+    kelloNaputuksenJalkeen: kelloHetki !== null && viimeinenNaputus !== null
+      ? Math.round(kelloHetki - viimeinenNaputus) : null,
+    kelloja: window.__aanet.filter((a) => a.nimi === 'typeBell').length,
+    vastauksenKursiivi: getComputedStyle(vastaus).fontStyle,
     pohjassa,
     mittauksia,
     suurinScroll,
@@ -2473,6 +2619,7 @@ const striimi = await striimiSivu.evaluate(async () => {
     scrollTop: virta.scrollTop,
     pohja: virta.scrollHeight - virta.clientHeight,
     kasitteita: vastaus.querySelectorAll('a.pollo-kasitelinkki').length,
+    kasitteet: [...vastaus.querySelectorAll('a.pollo-kasitelinkki')].map((a) => a.textContent),
     kasite: vastaus.querySelector('a.pollo-kasitelinkki')?.textContent ?? '',
     jatkonappeja: document.querySelectorAll('.pollo-jatkot .pollo-jatko').length,
     loppuu: vastaus.textContent.slice(-40),
@@ -2500,14 +2647,200 @@ vaadi('JATKOT-lohko ei vilahda ruudulla kertaakaan', striimi.jatkoja === false);
 vaadi('hakasulkeet eivät vilahda striimin aikana',
   striimi.sulkeita === false && striimi.virrassaSulkeita === false);
 vaadi('käsitemerkinnästä tulee pöllölinkki vasta valmiiseen vastaukseen',
-  striimi.kasitteita === 1 && /hiililastit/.test(striimi.kasite), JSON.stringify(striimi));
+  striimi.kasitteita === 2 && /hiililastit/.test(striimi.kasite), JSON.stringify(striimi));
+/*
+ * TÄMÄ ON SE AUKKO, JOKA PÄÄSTI v613:N LÄPI. Aiemmin koevirran ainoa
+ * merkintä oli yksisanainen eikä osunut palarajalle, joten lopullinen
+ * teksti olisi voitu rakentaa yhtä hyvin paloista — ja aidolla
+ * laitteella juuri se jätti vastauksen linkittömäksi.
+ */
+vaadi('palarajalle katkennut merkintä linkittyy silti',
+  striimi.kasitteet.some((t) => /Wolfgang Amadeus Mozart/.test(t)),
+  JSON.stringify(striimi.kasitteet));
 vaadi('jatkokysymykset tulevat lopputapahtumasta', striimi.jatkonappeja === 2,
   `${striimi.jatkonappeja} kpl`);
+vaadi('vastausteksti ei ole kursiivia missään vaiheessa',
+  striimi.kursiiviaKesken === false && striimi.vastauksenKursiivi === 'normal',
+  JSON.stringify({ kesken: striimi.kursiiviaKesken, lopussa: striimi.vastauksenKursiivi }));
+vaadi('pöllö huhuilee kerran, kun paneeli avataan',
+  striimi.huhuiluAvatessa === 1, `${striimi.huhuiluAvatessa} kpl`);
+vaadi('kirjoituskone naputtaa striimin ajan',
+  striimi.naputuksiaKesken >= 3, `${striimi.naputuksiaKesken} lyöntiä`);
+vaadi('naputus pysähtyy heti kun vastaus valmistuu',
+  striimi.naputuksiaJalkeen === striimi.naputuksiaKellonAikaan,
+  `${striimi.naputuksiaKellonAikaan} → ${striimi.naputuksiaJalkeen}`);
+vaadi('rivinvaihtokello soi kerran, naputuksen jälkeen',
+  striimi.kelloja === 1 && striimi.kelloNaputuksenJalkeen > 0,
+  JSON.stringify({ kelloja: striimi.kelloja, ero: striimi.kelloNaputuksenJalkeen }));
 vaadi('striimikoe ei kirjoita konsoliin', striimiVirheet.length === 0,
   striimiVirheet.slice(0, 3).join(' | '));
 
 await striimiSivu.screenshot({ path: join(ULOS, 'pollo-striimi-390.png') });
+
+/* ------------------------------------------------------------------ */
+/* 21b) Lyhyt vastaus ei rullaa näkymää edellisen päälle               */
+/* ------------------------------------------------------------------ */
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026: *"kun vastaus on valmis ja tekstiin
+ * päivittyy linkit, niin teksti saattaa vierittyä niin että yläreunassa
+ * näkyykin vielä edellistä vastausta. — silloin pöllö voisi jättää
+ * alareunaan vain tyhjää eikä rullata näkymää ylöspäin täyttääkseen
+ * koko ruudun."*
+ *
+ * Sama sivu, toinen kysymys: nyt keskustelussa on jo edellinen vastaus,
+ * jonka päälle näkymä voisi valua. Vastaus on kaksi virkettä eikä täytä
+ * paneelia, joten varatun tyhjän on kannettava kysymys yläreunassa.
+ */
+const lyhyt = await striimiSivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const virta = document.querySelector('.pollo-virta');
+  const edellinen = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  document.querySelector('.pollo-kentta').value = 'Kerro lyhyt vastaus metrosta';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+
+  // Vierityskohta talteen heti kun vastauskupla on syntynyt.
+  let ennenLoppua = null;
+  for (let i = 0; i < 160; i += 1) {
+    await odota(40);
+    const uusi = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+    if (uusi !== edellinen && uusi.textContent.length > 0 && ennenLoppua === null) {
+      ennenLoppua = virta.scrollTop;
+    }
+    if (document.querySelector('.pollo-jatkot')) break;
+  }
+  await odota(400);
+  const kysymys = [...document.querySelectorAll('.pollo-kayttaja')].at(-1);
+  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  const v = virta.getBoundingClientRect();
+  const e = edellinen.getBoundingClientRect();
+  return {
+    ennenLoppua,
+    jalkeen: virta.scrollTop,
+    kysymysYlhaalla: Math.round(kysymys.getBoundingClientRect().top - v.top),
+    // Positiivinen: edellinen vastaus on kokonaan näkymän yläpuolella.
+    edellinenYlapuolella: Math.round(v.top - e.bottom),
+    tyhjaaAlla: Math.round(document.querySelector('.pollo-tyhja').getBoundingClientRect().height),
+    vastauksenKorkeus: Math.round(vastaus.getBoundingClientRect().height),
+    virranKorkeus: Math.round(v.height),
+    kasitteita: vastaus.querySelectorAll('a.pollo-kasitelinkki').length,
+    jatkonappeja: document.querySelectorAll('.pollo-jatkot .pollo-jatko').length,
+  };
+});
+vaadi('koevastaus on paneelia lyhyempi (muuten mittaus ei kerro mitään)',
+  lyhyt.vastauksenKorkeus < lyhyt.virranKorkeus, JSON.stringify(lyhyt));
+vaadi('lyhyen vastauksen loppurenderöinti ei liikuta näkymää',
+  Math.abs(lyhyt.jalkeen - lyhyt.ennenLoppua) <= 1, JSON.stringify(lyhyt));
+vaadi('kysymys pysyy paneelin yläreunassa myös lyhyellä vastauksella',
+  lyhyt.kysymysYlhaalla >= -2 && lyhyt.kysymysYlhaalla <= 30, JSON.stringify(lyhyt));
+vaadi('edellinen vastaus ei palaa näkyviin uuden alle',
+  lyhyt.edellinenYlapuolella >= 0, JSON.stringify(lyhyt));
+vaadi('lyhyen vastauksen alle jää varattua tyhjää',
+  lyhyt.tyhjaaAlla > 20, JSON.stringify(lyhyt));
+vaadi('lyhytkin vastaus saa linkit ja täsmälleen kaksi jatkokysymystä',
+  lyhyt.kasitteita === 1 && lyhyt.jatkonappeja === 2, JSON.stringify(lyhyt));
+
 await striimiCtx.close();
+
+/* ------------------------------------------------------------------ */
+/* 21c) Luenta alkaa jo striimin aikana                                */
+/* ------------------------------------------------------------------ */
+
+/*
+ * OMISTAJAN TILAUS 13.8.2026: *"voiko ääni alkaa lukea tekstiä jo
+ * striimauksen aikana?"*
+ *
+ * Mitattavat asiat: ensimmäinen lausuma on jonossa ENNEN kuin vastaus on
+ * valmis, luettavassa ei ole koskaan hakasulkeita eikä JATKOT-lohkoa,
+ * ja kaiuttimen sammutus tyhjentää jonon kesken kaiken. Naputus ei soi
+ * puheen päällä.
+ */
+const luentaCtx = await selain.newContext({
+  viewport: { width: 390, height: 900 }, serviceWorkers: 'block',
+});
+const { sivu: luentaSivu, virheet: luentaVirheet } = await avaaPeli(luentaCtx);
+await vakoileAanet(luentaSivu);
+
+const luenta = await luentaSivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  document.querySelector('.pollo-nappi').click();
+  await odota(700);
+  // Kaiutinvipu päälle — se on myös se käyttäjän ele, jonka iOS vaatii.
+  document.querySelector('.pollo-kaiutin').click();
+  document.querySelector('.pollo-kirjoita').click();
+  await odota(150);
+  window.__puhutut.length = 0;
+  window.__aanet.length = 0;
+  document.querySelector('.pollo-kentta').value = 'Kerro Thamesin satamasta';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+
+  let puheAlkoiKesken = 0;
+  let naputuksiaPuheenAikana = 0;
+  let virtaKesken = false;
+  for (let i = 0; i < 200; i += 1) {
+    await odota(40);
+    if (document.querySelector('.pollo-jatkot')) break;
+    // Vastaus on vielä kesken: mitataan, alkoiko puhe jo.
+    puheAlkoiKesken = Math.max(puheAlkoiKesken, window.__puhutut.length);
+    naputuksiaPuheenAikana = window.__naputukset().length;
+    if (window.matkakirjaPollo?.luentaVirta) virtaKesken = true;
+  }
+  await odota(600);
+  const lausumat = [...window.__puhutut];
+  return {
+    puheAlkoiKesken,
+    naputuksiaPuheenAikana,
+    virtaKesken,
+    aaniPaalla: Boolean(window.matkakirjaPollo?.aaniPaalla),
+    lausumia: lausumat.length,
+    ekaLausuma: lausumat[0] ?? '',
+    sulkeitaLuennassa: lausumat.some((t) => /\[|\]/.test(t)),
+    jatkojaLuennassa: lausumat.some((t) => /JATKOT|Miten tunnelit|Kuka maksoi/i.test(t)),
+  };
+});
+vaadi('luenta alkaa jo ennen kuin vastaus on valmis',
+  luenta.puheAlkoiKesken >= 1, JSON.stringify(luenta));
+vaadi('ensimmäinen lausuma on kokonainen virke',
+  /[.!?…]\s*$/.test(luenta.ekaLausuma), JSON.stringify(luenta.ekaLausuma));
+vaadi('luenta jonottaa vastauksen useana lausumana',
+  luenta.lausumia >= 2, `${luenta.lausumia} lausumaa`);
+vaadi('hakasulkeet eivät koskaan päädy luettavaan',
+  luenta.sulkeitaLuennassa === false, JSON.stringify(luenta));
+vaadi('jatkokysymyksiä ei lueta ääneen',
+  luenta.jatkojaLuennassa === false, JSON.stringify(luenta));
+vaadi('naputus vaikenee, kun kaiutin lukee vastausta',
+  luenta.naputuksiaPuheenAikana === 0, `${luenta.naputuksiaPuheenAikana} lyöntiä`);
+
+/*
+ * SAMMUTUS KESKEN LUENNAN. Hidas tila jättää lausuman "puhumaan",
+ * jolloin jonoon ehtii kertyä virkkeitä — juuri niiden pitää kadota,
+ * kun vipu käännetään pois.
+ */
+const sammutus = await luentaSivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  window.__puheHidas = true;
+  window.__puhutut.length = 0;
+  document.querySelector('.pollo-kentta').value = 'Kerro Thamesin satamasta uudelleen';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  // Odotetaan, että ensimmäinen lausuma on puhumassa ja jonoa on kertynyt.
+  for (let i = 0; i < 200 && window.__puhutut.length < 1; i += 1) await odota(40);
+  await odota(600);
+  const ennen = window.__puhutut.length;
+  document.querySelector('.pollo-kaiutin').click();
+  await odota(600);
+  return {
+    ennen,
+    jononPituus: window.__puheJono(),
+    lisaa: window.__puhutut.length - ennen,
+    peruutuksia: window.__peruutuksia,
+  };
+});
+vaadi('kaiuttimen sammutus tyhjentää luentajonon heti',
+  sammutus.ennen >= 1 && sammutus.jononPituus === 0 && sammutus.lisaa === 0,
+  JSON.stringify(sammutus));
+vaadi('luentakoe ei kirjoita konsoliin', luentaVirheet.length === 0,
+  luentaVirheet.slice(0, 3).join(' | '));
+await luentaCtx.close();
 polloOsoite = POLLO_URL;
 
 /* ================================================================== */

@@ -56,7 +56,9 @@ import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
-import { lueAaneen, lukijaTuettu, pysaytaLukija } from './lukija.js';
+import { lueAaneen, lueVirtana, lukijaTuettu, pysaytaLukija } from './lukija.js';
+import { sfx } from './sound.js';
+import { hiljennaAmbienssi, palautaAmbienssi } from './ambience-stream.js';
 
 /** Kontekstipaketin katto merkkeinä. Sama luku myös workerin puolella. */
 export const KONTEKSTIN_ENIMMAISPITUUS = 5000;
@@ -527,6 +529,72 @@ function polloStriimiTuettu() {
   return typeof TextDecoder === 'function' && typeof ReadableStream === 'function';
 }
 
+/*
+ * ── NAPUTUS STRIIMIN TAUSTALLE (omistajan tilaus 13.8.2026) ──────────
+ *
+ * *"saisiko siihen taustalle konekirjoitusäänen taustalle (vaikka sama
+ * kuin etusivulla)"*.
+ *
+ * Ääni on sama kuin etusivun avaustekstillä (sfx 'pen', näytteistetty
+ * kirjoituskoneen näppäinlyönti), mutta kolme asiaa on eri:
+ *
+ *   1. RYTMI TULEE AJASTIMESTA, EI PALOISTA. Teksti saapuu verkosta
+ *      epätasaisina paloina — joskus kolme sanaa kerralla, joskus kaksi
+ *      merkkiä. Jos lyönti sidottaisiin palaan, naputus olisi milloin
+ *      ryöppy milloin hiljaisuus, eikä se kuulostaisi kirjoittajalta.
+ *      Ajastin lyö omaan tahtiinsa niin kauan kuin virta on auki.
+ *   2. TAHTI HUOJUU. Tasavälinen naputus alkaa kuulua kellona (sama syy
+ *      kuin js/ui.js KIRJOITUSTAUOT), joten väli arvotaan haarukasta ja
+ *      joka kuudennen kohdalla pidetään lyhyt hengähdys.
+ *   3. VOIMAKKUUS ON TAUSTAMAINEN. Etusivulla naputus on pääosassa;
+ *      tässä sen alla luetaan tekstiä, joten lyönti soi alle puolella
+ *      voimalla (sound.js 'pen' voima-kerroin).
+ */
+const NAPUTUS_MIN_MS = 95;
+const NAPUTUS_MAX_MS = 210;
+/** Miten usein kirjoittaja hengähtää, ja kuinka pitkäksi aikaa. */
+const NAPUTUS_TAUKO_VALI = 6;
+const NAPUTUS_TAUKO_MS = 420;
+/** Taustanaputus on selvästi hiljaisempi kuin etusivun kirjoituskone. */
+const NAPUTUS_VOIMA = 0.4;
+
+/*
+ * ── LUENTA ALKAA ENSIMMÄISESTÄ VIRKKEESTÄ (omistaja 13.8.2026) ───────
+ *
+ * *"voiko ääni alkaa lukea tekstiä jo striimauksen aikana?"*
+ *
+ * Striimistä leikataan luettavaksi vain se osa, joka on VARMASTI
+ * valmista. Kaksi rajaa, kummallakin oma syynsä:
+ *
+ *   1. AVOIN KÄSITEMERKINTÄ katkaisee. "[[Wolfgang Amadeus" voi jatkua
+ *      seuraavassa palassa, ja puolikkaasta merkinnästä kuuluisi
+ *      hakasulkeet — sääntö, joka ei jousta (ks. jasennaKasitteet).
+ *      Kaikki avoimen "[[":n jälkeinen jää siis odottamaan sulkua.
+ *   2. VIRKKEEN RAJA katkaisee. Kesken lauseen katkaistu lausuma
+ *      kuulostaisi änkytykseltä, ja syntetisaattori tarvitsee
+ *      välimerkin osatakseen intonaation.
+ *
+ * Loppu luetaan striimin päättyessä, oli se kokonainen virke tai ei.
+ */
+const VIRKKEEN_RAJA = /[.!?…]["»)\]]?(\s|$)/g;
+
+/**
+ * Kuinka pitkälti teksti on valmista luettavaksi.
+ *
+ * @returns {number} merkkien määrä alusta, tai 0 jos mikään ei ole valmista
+ */
+export function luettavaRaja(teksti) {
+  const koko = String(teksti ?? '');
+  // Avoin merkintä ensin: sen jälkeinen teksti ei ole vielä varmaa.
+  const auki = koko.lastIndexOf('[[');
+  const kiinni = koko.lastIndexOf(']]');
+  const varma = auki > kiinni ? koko.slice(0, auki) : koko;
+  let raja = 0;
+  VIRKKEEN_RAJA.lastIndex = 0;
+  for (const osuma of varma.matchAll(VIRKKEEN_RAJA)) raja = osuma.index + osuma[0].length;
+  return raja;
+}
+
 /** Laitteelle talletettu asetus. Yksityinen selaus ei saa kaataa mitään. */
 function polloAsetus(avain) {
   try {
@@ -638,7 +706,20 @@ class Pollo {
     this.odotettuVieritys = null;
     this.ankkuriViesti = null;
     this.tyhjaTila = null;
+    this.tyhjanKatto = null;
     this.sisallonPohja = 0;
+    // Striimin taustanaputus: ajastimen kahva ja lyöntilaskuri (ks.
+    // aloitaNaputus). null tarkoittaa, ettei naputus ole käynnissä.
+    this.naputusAjastin = null;
+    this.naputuksia = 0;
+    /*
+     * Striimin virtaluenta (ks. luettavaRaja). `luentaVirta` on
+     * js/lukija.js:n lueVirtana-kahva ja `luettuun` kertoo, mihin
+     * kohtaan kertynyttä tekstiä luenta on jo saanut. Kumpikin null/0,
+     * kun luentaa ei ole käynnissä.
+     */
+    this.luentaVirta = null;
+    this.luettuun = 0;
     // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
     this.tila = saneluTuettu() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
@@ -841,11 +922,24 @@ class Pollo {
     this.kaiutin.title = nimi;
   }
 
-  /** Vivun napautus. Pois kytkeminen katkaisee myös käynnissä olevan luennan. */
+  /**
+   * Vivun napautus. Pois kytkeminen katkaisee myös käynnissä olevan
+   * luennan — myös striimin rinnalla juoksevan (peruLuenta tyhjentää
+   * jonon, jottei peruttu luenta jatku seuraavasta virkkeestä).
+   *
+   * Vipu on myös se käyttäjän ele, jonka iOS vaatii ennen ensimmäistä
+   * puhetta. Siksi luentaa ei koskaan aloiteta ilman sitä.
+   */
   vaihdaAani() {
     this.aaniPaalla = !this.aaniPaalla;
     polloTallenna(POLLO_AANI_AVAIN, this.aaniPaalla ? '1' : '');
-    if (!this.aaniPaalla) pysaytaLukija();
+    if (!this.aaniPaalla) {
+      this.peruLuenta();
+      pysaytaLukija();
+      // Kesken striimin sammutettu kaiutin palauttaa naputuksen: se
+      // vaikeni vain siksi, että puhe soi sen päällä.
+      if (this.kesken) this.aloitaNaputus();
+    }
     this.merkitseKaiutin();
   }
 
@@ -1033,6 +1127,17 @@ class Pollo {
     this.paneeli.hidden = false;
     this.nappi.setAttribute('aria-expanded', 'true');
     this.nappi.classList.add('auki');
+    /*
+     * PÖLLÖ HERÄTETÄÄN (omistajan tilaus 13.8.2026: *"saisiko pöllölle
+     * oman äänen kun hänet 'herättää'"*). Lyhyt "hu" — ks. sound.js
+     * 'owl'. Soi joka avauksella, myös nukkuvassa tilassa: linnun
+     * herääminen ei riipu siitä, onko välityspalvelin pystyssä.
+     */
+    sfx.play('owl');
+    // Taustaäänimaisema madaltuu lukemisen ajaksi (ks.
+    // ambience-stream.js hiljennaAmbienssi). Syy on nimetty, joten
+    // samanaikainen lehti ei purkaudu tämän sulkeutuessa.
+    hiljennaAmbienssi('pollo');
     if (!this.palvelin) {
       this.naytaNukkuva();
       return;
@@ -1050,11 +1155,22 @@ class Pollo {
   }
 
   sulje() {
+    // Naputus katkeaa ENNEN mitään muuta: kesken jäänyt striimi ei saa
+    // jäädä naputtamaan suljetun paneelin takana. Kello ei soi, koska
+    // vastaus ei valmistunut.
+    this.lopetaNaputus();
+    // Ambienssi takaisin täyteen voimaansa. Purku tapahtuu kaikilla
+    // sulkupoluilla (Esc, ulkopuolinen napautus, lehden sulkeutuminen),
+    // koska ne kaikki kulkevat tämän kautta.
+    palautaAmbienssi('pollo');
     this.lopetaSanelu();
     this.suljeKuvapopup();
     // Chatin sulkeutuminen hiljentää myös luennan: pöllön ääni ei jää
     // puhumaan tyhjälle kartalle. Vipu jää päälle seuraavaa kertaa
-    // varten.
+    // varten. peruLuenta tyhjentää myös striimin rinnalla juoksevan
+    // jonon — pelkkä pysäytys jättäisi jonoon virkkeitä, jotka
+    // heräisivät seuraavasta lausumasta.
+    this.peruLuenta();
     if (this.aaniPaalla) pysaytaLukija();
     this.auki = false;
     this.merkitseAuki(false);
@@ -1483,6 +1599,10 @@ class Pollo {
     tyhja.style.height = '0px';
     this.sisallonPohja = virta.scrollHeight;
     this.tyhjaTila = korkeus;
+    // Varauksen katto: tähän asti tyhjä saa kasvaa takaisin, jos sisältö
+    // kutistuu (ks. paivitaTyhjaTila). Enempää ei tarvita — ankkurointi
+    // on mitoitettu täsmälleen tällä korkeudella.
+    this.tyhjanKatto = korkeus;
     tyhja.style.height = `${korkeus}px`;
   }
 
@@ -1493,6 +1613,15 @@ class Pollo {
    * kutistuu saman verran — juuri siksi vierityskohta ei liiku. Kun
    * tyhjä on syöty loppuun, ylivuoto jatkuu näkymän alapuolelle
    * piiloon, kuten omistaja pyysi.
+   *
+   * VARAUS MYÖS KASVAA TAKAISIN (omistaja 13.8.2026: *"silloin pöllö
+   * voisi jättää alareunaan vain tyhjää eikä rullata näkymää ylöspäin
+   * täyttääkseen koko ruudun"*). Loppurenderöinnissä sisältö voi käydä
+   * pienemmäksi kuin striimin aikana — sama teksti rivittyy toisin, kun
+   * käsitteistä tulee linkkejä. Ilman kasvua virran kokonaiskorkeus
+   * putoaisi, selain leikkaisi scrollTopin ja näkymä valuisi ylös
+   * edellisen vastauksen päälle. Katto on alkuperäinen varaus: sitä
+   * suuremmaksi tyhjä ei voi paisua.
    */
   paivitaTyhjaTila() {
     const virta = this.virta;
@@ -1503,10 +1632,34 @@ class Pollo {
     if (virta.lastElementChild !== tyhja) virta.appendChild(tyhja);
     const sisalto = virta.scrollHeight - this.tyhjaTila;
     const kasvu = sisalto - this.sisallonPohja;
-    if (kasvu <= 0) return;
+    if (!kasvu) return;
     this.sisallonPohja = sisalto;
-    this.tyhjaTila = Math.max(0, this.tyhjaTila - kasvu);
+    const katto = this.tyhjanKatto ?? this.tyhjaTila;
+    this.tyhjaTila = Math.min(katto, Math.max(0, this.tyhjaTila - kasvu));
     tyhja.style.height = `${this.tyhjaTila}px`;
+  }
+
+  /**
+   * Ajaa muutoksen niin, ettei virran vierityskohta liiku.
+   *
+   * Loppurenderöinti vaihtaa vastauksen sisällön ja lisää sen perään
+   * linkit ja jatkokysymykset. Yksikään noista ei saa siirtää näkymää:
+   * kysymys on ankkuroitu paneelin yläreunaan, ja siellä sen kuuluu
+   * pysyä myös silloin, kun vastaus on lyhyt eikä täytä ruutua.
+   *
+   * Pelaajan oma vieritys voittaa yhä: jos hän on liikuttanut virtaa
+   * ankkuroinnin jälkeen, kohtaa ei palauteta (sama sääntö kuin
+   * seuraaPaneelinKokoa).
+   */
+  sailytaVieritys(tee) {
+    const virta = this.virta;
+    const oma = this.odotettuVieritys !== null
+      && Math.abs((virta?.scrollTop ?? 0) - this.odotettuVieritys) > 2;
+    const ennen = virta?.scrollTop ?? 0;
+    tee();
+    if (!virta || oma) return;
+    if (Math.abs(virta.scrollTop - ennen) > 0.5) virta.scrollTop = ennen;
+    this.odotettuVieritys = virta.scrollTop;
   }
 
   /**
@@ -1520,6 +1673,7 @@ class Pollo {
    */
   nollaaTyhjaTila() {
     this.tyhjaTila = null;
+    this.tyhjanKatto = null;
     this.sisallonPohja = 0;
     this.ankkuriViesti = null;
     this.odotettuVieritys = null;
@@ -1586,10 +1740,25 @@ class Pollo {
    * asetetaan tekstisisältönä — sama takuu kuin artikkelilinkeissä.
    */
   taytaVastaus(viesti, teksti) {
-    viesti.replaceChildren();
+    /*
+     * SISÄLTÖ VAIHTUU YHDELLÄ KUTSULLA, EI TYHJENTÄMÄLLÄ ENSIN.
+     *
+     * JUURISYY omistajan havaintoon 13.8.2026 (*"kun vastaus on valmis
+     * ja tekstiin päivittyy linkit, niin teksti saattaa vierittyä niin
+     * että yläreunassa näkyykin vielä edellistä vastausta"*):
+     * replaceChildren() ilman argumentteja jätti kuplan hetkeksi
+     * TYHJÄKSI. Virran scrollHeight romahti vastauksen korkeuden verran,
+     * selain leikkasi scrollTopin uuteen maksimiin — ja kun teksti
+     * palasi, vierityskohta oli jo menetetty. Näkymä oli valunut
+     * ylöspäin, ja yläreunassa näkyi edellinen vastaus.
+     *
+     * Solmut rakennetaan siis valmiiksi listaan ja vaihdetaan kerralla:
+     * kuplan korkeus ei käy nollassa missään vaiheessa.
+     */
+    const solmut = [];
     for (const pala of jasennaKasitteet(teksti)) {
       if (!pala.kasite) {
-        viesti.appendChild(this.doc.createTextNode(pala.teksti));
+        solmut.push(this.doc.createTextNode(pala.teksti));
         continue;
       }
       const linkki = polloElementti('a', 'pollo-kasitelinkki', pala.teksti);
@@ -1599,8 +1768,9 @@ class Pollo {
         e.preventDefault();
         this.kysy(`Kerro lisää: ${pala.teksti}`);
       });
-      viesti.appendChild(linkki);
+      solmut.push(linkki);
     }
+    viesti.replaceChildren(...solmut);
     return viesti;
   }
 
@@ -1610,7 +1780,15 @@ class Pollo {
     this.kentta.disabled = kesken;
     this.laheta.disabled = kesken;
     this.mikki.disabled = kesken;
-    this.paneeli.classList.toggle('pollo-odottaa', kesken);
+    /*
+     * Paneelin odotustila on OMA luokkansa (omistaja 13.8.2026:
+     * *"saisiko strimitekstin ilman kursiivia"*). Tässä oli aiemmin
+     * .pollo-odottaa — sama nimi kuin "Pöllö miettii…" -kuplalla — ja
+     * sen kursiivi ja himmeä muste periytyivät paneelista koko
+     * striimattuun vastaukseen. Teksti kirjoittui siis kursiivilla ja
+     * suoristui vasta valmistuessaan.
+     */
+    this.paneeli.classList.toggle('pollo-kesken', kesken);
     for (const nappi of this.ehdotukset.querySelectorAll('button')) {
       nappi.disabled = kesken;
     }
@@ -1738,15 +1916,137 @@ class Pollo {
         }
       }
     }
-    if (tulos) {
+    if (tulos?.vastaus) {
+      /*
+       * LOPULLINEN TEKSTI TULEE AINA loppu-TAPAHTUMASTA.
+       *
+       * Vain siinä käsitemerkinnät ovat ehjinä: paloista kasattu teksti
+       * on voinut katketa keskeltä merkintää ("[[Wolfgang Amadeus" |
+       * " Mozart]]"), ja rikkinäisestä merkinnästä ei synny linkkiä.
+       * `lopullinen` kertoo kutsujalle, kelpaako teksti linkkien
+       * jäsentämiseen (ks. kysy).
+       */
       return {
-        vastaus: String(tulos.vastaus ?? kertynyt),
+        vastaus: String(tulos.vastaus),
         jatkot: Array.isArray(tulos.jatkot) ? tulos.jatkot : [],
         katkesi: false,
+        lopullinen: true,
       };
     }
-    // Virta loppui kesken: näytetään se, mitä ehti tulla.
-    return { vastaus: kertynyt, jatkot: [], katkesi: true };
+    // Virta loppui kesken: näytetään se, mitä ehti tulla — mutta ilman
+    // linkkejä, koska merkinnöistä ei ole takeita.
+    return { vastaus: kertynyt, jatkot: [], katkesi: true, lopullinen: false };
+  }
+
+  /* --- striimin äänet ---------------------------------------------- */
+
+  /**
+   * Naputus käyntiin (ks. NAPUTUS_MIN_MS ja sen yllä oleva selitys).
+   *
+   * Ajastin ketjuttaa itsensä eikä käytä setIntervalia: väli arvotaan
+   * joka lyönnille erikseen, ja tasavälinen tahti kuulostaisi koneelta
+   * eikä kirjoittajalta. Toinen kutsu ei käynnistä toista silmukkaa.
+   */
+  aloitaNaputus() {
+    if (this.naputusAjastin !== null) return;
+    // Sanelun aikana mikrofoni kuuntelee huonetta: naputus menisi
+    // suoraan tunnistukseen. Tähän ei pitäisi päästä (asetaKesken estää
+    // mikin), mutta ehto on halpa ja virhe olisi kallis.
+    if (this.tunnistin || this.natiiviSanelussa) return;
+    this.naputuksia = 0;
+    const lyo = () => {
+      // Mykistys tarkistuu sfx.play():n sisällä (SoundKit.enabled), joten
+      // äänet pois -asetus vaientaa naputuksen samalla tavalla kuin
+      // kaikki muutkin tehosteet.
+      sfx.play('pen', { voima: NAPUTUS_VOIMA });
+      this.naputuksia += 1;
+      const hengahdys = this.naputuksia % NAPUTUS_TAUKO_VALI === 0 ? NAPUTUS_TAUKO_MS : 0;
+      const vali = NAPUTUS_MIN_MS + Math.random() * (NAPUTUS_MAX_MS - NAPUTUS_MIN_MS);
+      this.naputusAjastin = setTimeout(lyo, vali + hengahdys);
+    };
+    lyo();
+  }
+
+  /**
+   * Naputus poikki.
+   *
+   * Kutsutaan JOKAISESTA polusta, joka lopettaa striimin: valmis
+   * vastaus, virhe ja paneelin sulkeminen kesken vastauksen. Naputus ei
+   * saa jäädä soimaan suljetun paneelin taakse, joten tämä on myös
+   * sulje():n ensimmäisiä tehtäviä.
+   */
+  lopetaNaputus() {
+    if (this.naputusAjastin === null) return;
+    clearTimeout(this.naputusAjastin);
+    this.naputusAjastin = null;
+  }
+
+  /* --- luenta striimin rinnalla ------------------------------------ */
+
+  /**
+   * Syöttää striimistä luennalle sen, mikä on valmista.
+   *
+   * Kutsutaan joka palasta. Luenta käynnistyy laiskasti ensimmäisestä
+   * kokonaisesta virkkeestä — ei pyynnön lähtiessä, koska silloin ei ole
+   * vielä mitään luettavaa.
+   *
+   * KAIUTIN KESKEN STRIIMIN: jos vipu kytketään päälle vastauksen
+   * aikana, luenta alkaa siitä tekstistä, joka on jo saapunut, ja jatkaa
+   * virtaan. Näin kuunneltava vastaus on aina KOKO vastaus — sama lupaus
+   * kuin ei-striimatussa polussa, jossa kaiutin lukee tekstin alusta.
+   * `luettuun` on nolla siihen asti kun luenta alkaa, joten alku tulee
+   * mukaan itsestään.
+   *
+   * @returns {boolean} kuuluuko puhetta juuri nyt
+   */
+  syotaLuennalle(kertynyt) {
+    if (!this.aaniPaalla) return false;
+    if (!this.luentaVirta) {
+      // Ilman selaimen puhesyntetisaattoria (tai natiivisillalla)
+      // virtaluentaa ei ole: vastaus luetaan valmiina, kuten ennenkin.
+      try {
+        this.luentaVirta = lueVirtana();
+      } catch {
+        this.luentaVirta = null;
+      }
+      if (!this.luentaVirta) return false;
+    }
+    const raja = luettavaRaja(kertynyt);
+    if (raja > this.luettuun) {
+      const pala = poistaKasiteMerkinnat(kertynyt.slice(this.luettuun, raja)).trim();
+      this.luettuun = raja;
+      if (pala) this.luentaVirta.lisaa(pala);
+    }
+    return true;
+  }
+
+  /**
+   * Striimin loppu luennalle: viimeinen vajaa virke ja päätös.
+   *
+   * Jatkokysymyksiä ei lueta koskaan — ne ovat käyttöliittymää, eivät
+   * pöllön puhetta — eikä palvelin edes lähetä JATKOT-lohkoa
+   * pala-tapahtumissa (tools/pollo/rajat.js).
+   *
+   * @returns {boolean} hoitiko virtaluenta tämän vastauksen
+   */
+  paataLuenta(kertynyt) {
+    const virta = this.luentaVirta;
+    const mihin = this.luettuun;
+    this.luentaVirta = null;
+    this.luettuun = 0;
+    if (!virta) return false;
+    const hanta = poistaKasiteMerkinnat(String(kertynyt ?? '').slice(mihin)).trim();
+    if (hanta) virta.lisaa(hanta);
+    virta.paata();
+    return true;
+  }
+
+  /** Kesken jäänyt virtaluenta pois (sulku, virhe, kaiutin pois). */
+  peruLuenta() {
+    if (!this.luentaVirta) return;
+    this.luentaVirta = null;
+    this.luettuun = 0;
+    pysaytaLukija();
   }
 
   async haeEhdotukset() {
@@ -1837,52 +2137,113 @@ class Pollo {
     };
     try {
       let tulos = null;
+      let striimattiin = false;
+      // Viimeisin kertymä talteen: striimin loppu luetaan siitä eikä
+      // loppu-tapahtuman tekstistä, jottei jo luettua toisteta.
+      let kertyma = '';
       if (polloStriimiTuettu()) {
+        striimattiin = true;
         tulos = await this.pyydaStriimi(runko, (kertynyt) => {
+          kertyma = kertynyt;
+          /*
+           * PUHE JA NAPUTUS EIVÄT SOI YHTÄ AIKAA. Kaiuttimen ollessa
+           * päällä vastaus kuuluu ääneen, ja naputus sen päällä olisi
+           * puuroa. Kello saa silti soida valmistuessa — se on
+           * tapahtuma, ei tausta.
+           */
+          if (this.syotaLuennalle(kertynyt)) this.lopetaNaputus();
+          // Naputus alkaa ENSIMMÄISESTÄ palasta eikä pyynnön
+          // lähtiessä: kirjoituskone ei naputa tyhjää paperia.
+          else this.aloitaNaputus();
           avaaKupla().textContent = poistaKasiteMerkinnat(kertynyt);
           // Näkymä on jo ankkuroitu: uusi teksti syö varattua tyhjää
           // alhaalta, joten virran vierityskohta ei muutu riviäkään.
           this.paivitaTyhjaTila();
         });
       } else {
+        /*
+         * VARAPOLKU: vastaus tulee kerralla. Naputusta ei soiteta —
+         * mitään ei kirjoiteta vähitellen, joten naputus olisi valhe.
+         */
         const data = await this.pyyda(runko);
         tulos = {
           vastaus: String(data?.vastaus ?? ''),
           jatkot: Array.isArray(data?.jatkot) ? data.jatkot : [],
           katkesi: false,
+          lopullinen: true,
         };
       }
+      // Naputus loppuu ennen kelloa, ei sen kanssa päällekkäin.
+      this.lopetaNaputus();
       const raaka = String(tulos?.vastaus ?? '').trim();
       // Katkennutkin virta näyttää sen, mitä ehti tulla.
       const teksti = raaka || (tulos?.katkesi ? '' : 'En osaa vastata tähän.');
       avaaKupla();
       /*
+       * LOPULLINEN SISÄLTÖ RAKENNETAAN KERRALLA JA PAIKALLAAN.
+       *
        * Järjestys: ensin vastausteksti pöllölinkkeineen, sitten
        * artikkelilinkit tekstin sisään, viimeisenä jatkokysymykset.
        * Luenta saa VAIN vastaustekstin — linkit ja jatkot ovat
        * käyttöliittymää.
+       *
+       * Linkit jäsennetään VAIN lopullisesta tekstistä (tulos.lopullinen
+       * eli loppu-tapahtuman koko vastaus). Katkenneessa virrassa on
+       * jäljellä pelkkä paloista kasattu teksti, jonka merkinnät ovat
+       * voineet katketa palarajalle — siitä tehty linkki osoittaisi
+       * puolikkaaseen käsitteeseen. Silloin teksti näytetään
+       * sellaisenaan, ja se on hyväksyttävä vikasieto.
+       *
+       * Koko loppurenderöinti ajetaan sailytaVierityksen sisällä:
+       * kysymys pysyy paneelin yläreunassa myös lyhyellä vastauksella,
+       * jonka linkit ja jatkokysymykset kasvattavat sisältöä.
        */
-      this.taytaVastaus(viesti, teksti);
-      const linkit = this.poimiLinkit(this.viimeisetKatkelmat);
-      this.korostaLinkit(viesti, linkit);
-      if (tulos?.katkesi) {
-        this.lisaaViesti('virherivi', 'Ajatus katkesi kesken lauseen.');
-      } else {
-        this.naytaJatkot(tulos?.jatkot);
-      }
+      const linkitetaan = tulos?.lopullinen !== false;
+      this.sailytaVieritys(() => {
+        if (linkitetaan) {
+          this.taytaVastaus(viesti, teksti);
+          this.korostaLinkit(viesti, this.poimiLinkit(this.viimeisetKatkelmat));
+        } else {
+          viesti.textContent = poistaKasiteMerkinnat(teksti);
+        }
+        if (tulos?.katkesi) {
+          this.lisaaViesti('virherivi', 'Ajatus katkesi kesken lauseen.');
+        } else {
+          // Jatkokysymykset tulevat aina tuoreesta loppu-tapahtumasta:
+          // vanhat poistettiin jo kysymystä lähetettäessä, joten
+          // vastauksen alla on vain sitä koskevat ehdotukset.
+          this.naytaJatkot(tulos?.jatkot);
+        }
+        /*
+         * Näkymään ei kosketa: ankkuri asetettiin kysymyksen kohdalla.
+         * Valmis vastaus, sen linkit ja jatkokysymykset kirjoittuvat
+         * varattuun tyhjään — sama sääntö striimissä ja varapolussa.
+         */
+        this.paivitaTyhjaTila();
+      });
       /*
-       * Näkymään ei kosketa: ankkuri asetettiin kysymyksen kohdalla.
-       * Valmis vastaus, sen linkit ja jatkokysymykset kirjoittuvat
-       * varattuun tyhjään — sama sääntö striimissä ja varapolussa.
+       * RIVINVAIHTOKELLO (omistajan tilaus 13.8.2026). Vain onnistuneen
+       * suoratoiston päätteeksi: varapolussa mitään ei kirjoitettu, eikä
+       * katkennut ajatus ansaitse valmiin rivin kilahdusta.
        */
-      this.paivitaTyhjaTila();
-      // Kaiutin lukee vasta valmiin vastauksen, ei kesken striimin.
+      if (striimattiin && !tulos?.katkesi) sfx.play('typeBell');
       const puhdas = poistaKasiteMerkinnat(teksti);
-      this.lueVastaus(puhdas);
+      /*
+       * LUENTA. Striimissä se on jo käynnissä ja tarvitsee vain lopun
+       * (paataLuenta lukee viimeisen vajaan virkkeen ja päättää jonon).
+       * Muuten — varapolku, kaiutin pois päältä koko striimin ajan,
+       * laite ilman selaimen puhesyntetisaattoria — luetaan valmis
+       * vastaus entiseen tapaan.
+       */
+      if (!this.paataLuenta(kertyma)) this.lueVastaus(puhdas);
       this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
       this.historia.push({ rooli: 'pollo', teksti: puhdas });
       this.historia = this.historia.slice(-HISTORIAN_KATTO);
     } catch (virhe) {
+      // Virhe katkaisee naputuksen ja kesken jääneen luennan heti eikä
+      // soita kelloa.
+      this.lopetaNaputus();
+      this.peruLuenta();
       odotus.remove();
       // Virheilmoitus on yksi rivi: varaus puretaan, jotta se kelaa
       // pohjaan kuten ennenkin eikä jää tyhjän yläpuolelle.
@@ -1890,6 +2251,8 @@ class Pollo {
       this.lisaaViesti('pollo', virhe?.viesti
         ?? 'Pöllö ei saanut ajatuksesta kiinni. Yritä hetken päästä uudelleen.');
     } finally {
+      // Vikaverkko: mikään polku ei saa jättää naputusta soimaan.
+      this.lopetaNaputus();
       this.asetaKesken(false);
     }
   }

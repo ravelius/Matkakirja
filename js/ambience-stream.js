@@ -313,7 +313,10 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
     alku: alku ?? 0,
     audio: null,
     vaistyva: null,
-    vaimennus: 1,
+    // Uusi maisema alkaa siinä tasossa, joka juuri nyt on voimassa: jos
+    // pöllö tai lehti on auki (tai kertoja lukee), kaupungin vaihtuminen
+    // ei saa nostaa taustaa yllättäen täyteen voimaan.
+    vaimennus: voimassaVaisto(),
     tavoite: Math.min(1, VOIMA * voima * paikanVoima),
     // Etusivu alkaa aina samasta kohdasta, koska sen kuuluu kuulostaa
     // joka avauksella samalta.
@@ -722,22 +725,82 @@ export function nollaaPuhujat() {
   puhujia = 0;
 }
 
+/*
+ * ── LUKUNÄKYMÄN HILJENNYS (omistajan tilaus 13.8.2026) ───────────────
+ *
+ * *"tausta ambienssia voisi hiljentää hieman kun pöllönäkymä aukeaa"* ja
+ * *"ambienssi voisi hiljentyä hieman myös jos lehti avataan"*.
+ *
+ * Tämä EI ole väistö vaan tila: näkymä on auki minuutteja, joten tausta
+ * jää selvästi kuuluviin — noin puoleen, ei pois. Ero kertojan väistöön
+ * on tarkoituksellinen: puheen alta tausta väistyy, luettavan tekstin
+ * alla se vain madaltuu.
+ *
+ * SYYT ovat joukko eivätkä laskuri. Pelaaja voi avata pöllön lehden
+ * sisällä, ja silloin toisen sulkeutuminen ei saa nostaa taustaa takaisin
+ * — mutta yhtä lailla sama syy voi tulla kahdesti (paneeli avataan
+ * uudelleen ennen kuin edellinen ehti purkautua). Joukko on kummassakin
+ * tapauksessa oikein; laskuri menisi sekaisin jälkimmäisestä.
+ *
+ * Liuku on lyhyt (400 ms): pitkä häivytys tuntuisi viiveeltä, kun
+ * näkymä on jo auki. Kaupunkien ristihäivytys pitää oman hitaan
+ * mittansa (HAIVYTYS_MS).
+ */
+const VAISTO_HILJENNYS = 0.45;
+const HILJENNYS_LIUKU_MS = 400;
+const hiljennykset = new Set();
+
+export function hiljennaAmbienssi(syy) {
+  if (hiljennykset.has(syy)) return;
+  hiljennykset.add(syy);
+  ajaVaisto(HILJENNYS_LIUKU_MS);
+}
+
+export function palautaAmbienssi(syy) {
+  if (!hiljennykset.delete(syy)) return;
+  ajaVaisto(HILJENNYS_LIUKU_MS);
+}
+
+/** Vain testejä varten: unohtaa kaikki hiljennyssyyt. */
+export function nollaaHiljennykset() {
+  hiljennykset.clear();
+}
+
+/**
+ * Voimassa oleva kerroin: syvin voittaa.
+ *
+ * Kertojan väistö ja lukunäkymän hiljennys elävät rinnakkain, joten
+ * niitä ei voi tallettaa samaan muuttujaan. Pyydetty väistö on se, jonka
+ * vaimennaTausta/puheAlkoi asetti; hiljennys leikkaa siitä katon.
+ */
+let pyydettyVaisto = 1;
+const voimassaVaisto = () => (hiljennykset.size
+  ? Math.min(pyydettyVaisto, VAISTO_HILJENNYS)
+  : pyydettyVaisto);
+
 /** Asettaa väistökertoimen ja ajaa kaikki soivat kierrokset sen mukaiseksi. */
 function saadaVaistoa(kerroin) {
+  pyydettyVaisto = kerroin;
+  ajaVaisto();
+}
+
+/** Ajaa voimassa olevan kertoimen kaikkiin soiviin raitoihin. */
+function ajaVaisto(kesto = HAIVYTYS_MS) {
+  const kerroin = voimassaVaisto();
   // Syntetisoitu äänimaisema väistyy samalla. Aiemmin väistö koski vain
   // nauhoitettua taustaa, ja pelin oma maisema jäi soimaan täydellä
   // voimalla näytteen ja kertojan päälle (omistajan havainto).
   sfx.vaimennaAmbienssi?.(kerroin);
   // Tietovisan musiikki on oma raitansa: se ei saa jäädä jyräämään
   // ääninäytettä, mutta ei myöskään kokonaan vaieta kysymyksen ajaksi.
-  if (musiikki && kerroin < 1) haivyta(musiikki, MUSIIKKI_VOIMA * kerroin);
+  if (musiikki && kerroin < 1) haivyta(musiikki, MUSIIKKI_VOIMA * kerroin, undefined, kesto);
   if (!nykyinen) return;
   nykyinen.vaimennus = kerroin;
   const kohde = taso(nykyinen);
-  if (nykyinen.audio) haivyta(nykyinen.audio, kohde);
+  if (nykyinen.audio) haivyta(nykyinen.audio, kohde, undefined, kesto);
   // Ristihäivytyksen väistyvä puoli on jo matkalla nollaan — sitä ei
   // nosteta takaisin, muuten sauma kuuluisi uudestaan.
-  if (nykyinen.vaistyva && kerroin < 1) haivyta(nykyinen.vaistyva, 0);
+  if (nykyinen.vaistyva && kerroin < 1) haivyta(nykyinen.vaistyva, 0, undefined, kesto);
 }
 
 export function stopQuizMusic() {

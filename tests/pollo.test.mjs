@@ -26,6 +26,7 @@ import {
   jasennaKasitteet,
   kokoaKonteksti,
   lueNakyma,
+  luettavaRaja,
   pelinTila,
   poimiLohkot,
   poistaKasiteMerkinnat,
@@ -740,11 +741,42 @@ test('linkkikatto on kaksi', () => {
 
 test('ankkurisanat tulevat merkinnän otsikosta, eivät sidesanoista', () => {
   const sanat = ankkuriSanat({ otsikko: 'Maailman ensimmäinen metro', aiheNimi: 'Historia' });
-  assert.ok(sanat.includes('maailman'));
   assert.ok(sanat.includes('ensimmäinen'));
-  assert.ok(sanat.includes('historia'));
   // Lyhyet sanat eivät kelpaa ankkuriksi: ne tarttuisivat mihin tahansa.
   assert.ok(sanat.every((s) => s.length >= 5), sanat.join(', '));
+});
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026: *"Alleviivaukset outoja."* Wienin
+ * kuuluisuuksista kertovassa vastauksessa artikkelilinkit osuivat
+ * sanoihin "kaupungissa" ja "syntyi". Ne tulivat merkintöjen otsikoista
+ * ("… — musiikin kaupunki"), eivätkä kertoneet pelaajalle mitään siitä,
+ * minne linkki vie.
+ */
+test('yleissana ei kelpaa ankkuriksi missään taivutusmuodossa', () => {
+  const sanat = ankkuriSanat({
+    otsikko: 'Wien — musiikin kaupunki, jossa valssi syntyi',
+    aiheNimi: 'Historia',
+  });
+  for (const yleinen of ['kaupunki', 'syntyi', 'historia']) {
+    assert.ok(!sanat.includes(yleinen), `yleissana ankkurina: ${sanat.join(', ')}`);
+  }
+  // Erottuva nimi jää: se on juuri se, mihin linkki kuuluu.
+  assert.ok(sanat.includes('musiikin'), sanat.join(', '));
+});
+
+test('yhdyssana ei putoa yleissanan rungon mukana', () => {
+  // "kaupun" pudottaa kaupungin taivutusmuodot, ei pidempiä yhdyssanoja.
+  const sanat = ankkuriSanat({ otsikko: 'Maailmannäyttely ja kaupunkilehti' });
+  assert.deepEqual(sanat, ['maailmannäyttely', 'kaupunkilehti']);
+});
+
+test('pelkistä yleissanoista koostuva merkintä ei saa yhtään ankkuria', () => {
+  // Ankkuriton merkintä ei saa linkkiä lainkaan (js/pollo.js sidoLinkki):
+  // mieluummin ei linkkiä kuin outo linkki.
+  const sanat = ankkuriSanat({ otsikko: 'Kaupungin historia', aiheNimi: 'Kaupunki' });
+  assert.deepEqual(sanat, []);
+  assert.equal(etsiAnkkuri('Kaupungissa asui paljon ihmisiä.', sanat), null);
 });
 
 test('ankkuri löytyy taivutetustakin sanasta', () => {
@@ -839,6 +871,43 @@ test('käsitemerkinnät eivät koskaan näy pelaajalle', () => {
   // Rikkinäinen merkintä (rivinvaihto keskellä) purkautuu tekstiksi.
   assert.equal(poistaKasiteMerkinnat('[[rikki\nmenee]]'), 'rikki\nmenee');
   assert.equal(poistaKasiteMerkinnat(null), '');
+});
+
+/* ---------------------------------------------------------------- */
+/* Luenta striimin rinnalla                                          */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN TILAUS 13.8.2026: *"voiko ääni alkaa lukea tekstiä jo
+ * striimauksen aikana?"* Luettavaksi kelpaa vain se, mikä on VARMASTI
+ * valmista — kokonainen virke, jonka sisällä ei ole avointa
+ * käsitemerkintää.
+ */
+test('luennalle annetaan vain valmiit virkkeet', () => {
+  const teksti = 'Wien on musiikin kaupunki. Mozart asui täällä';
+  const raja = luettavaRaja(teksti);
+  assert.equal(teksti.slice(0, raja), 'Wien on musiikin kaupunki. ');
+  // Kesken lauseen katkeava pala ei anna vielä mitään luettavaa.
+  assert.equal(luettavaRaja('Wien on musiikin'), 0);
+  assert.equal(luettavaRaja(''), 0);
+  // Huutomerkki, kysymysmerkki ja kolme pistettä kelpaavat rajaksi.
+  assert.equal(luettavaRaja('Kuinka ihanaa! Ja sitten'), 'Kuinka ihanaa! '.length);
+  assert.equal(luettavaRaja('Entä sitten? Kuka'), 'Entä sitten? '.length);
+  // Rivin viimeinen virke kelpaa ilman perässä olevaa välilyöntiä.
+  assert.equal(luettavaRaja('Valmis virke.'), 'Valmis virke.'.length);
+});
+
+test('avoin käsitemerkintä pidättää luennan sulkuun asti', () => {
+  // "[[Wolfgang Amadeus" voi jatkua seuraavassa palassa: sulkeita ei saa
+  // koskaan kuulua, joten koko avoin osa jää odottamaan.
+  const kesken = 'Wien on kaupunki. Siellä asui [[Wolfgang Amadeus';
+  assert.equal(luettavaRaja(kesken), 'Wien on kaupunki. '.length);
+  // Sulun saavuttua koko virke vapautuu.
+  const valmis = `${kesken} Mozart]]. Hän sävelsi paljon.`;
+  const raja = luettavaRaja(valmis);
+  assert.equal(poistaKasiteMerkinnat(valmis.slice(0, raja)),
+    'Wien on kaupunki. Siellä asui Wolfgang Amadeus Mozart. Hän sävelsi paljon.');
+  assert.ok(!/\[|\]/.test(poistaKasiteMerkinnat(valmis.slice(0, raja))));
 });
 
 test('vastaus jäsentyy paloiksi, joista käsitteet ovat omiaan', () => {

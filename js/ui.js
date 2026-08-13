@@ -669,6 +669,7 @@ import { sfx, treasureSound } from './sound.js';
 import {
   playPlaceAmbience, startQuizMusic, stopPlaceStream, stopQuizMusic,
   vaimennaTausta, palautaTausta, puheAlkoi, puheLoppui,
+  hiljennaAmbienssi, palautaAmbienssi,
 } from './ambience-stream.js';
 import {
   puheVoima, jaaAlku, kertojaTila, HUUDAHDUKSET,
@@ -2586,6 +2587,20 @@ export class UI {
     for (const lappu of this.taustaLaput) lappu.addEventListener('click', this.lappuTausta);
     this.peruutusLaput = [this.quizDialog, this.eventDialog, this.arrivalDialog];
     for (const lappu of this.peruutusLaput) lappu.addEventListener('cancel', this.lappuPeruutus);
+
+    /*
+     * LEHTI HILJENTÄÄ ÄÄNIMAISEMAN (omistajan tilaus 13.8.2026:
+     * *"ambienssi voisi hiljentyä hieman myös jos lehti avataan"*).
+     * Sama hiljennys kuin pöllöpaneelilla, omalla syyllään — kumpikaan
+     * ei pura toisen hiljennystä (ks. ambience-stream.js).
+     *
+     * Palautus on kiinni dialogin omassa close-tapahtumassa eikä
+     * closeArrivalissa: lehden voi sulkea myös Escillä, taustaa
+     * napauttamalla ja pelin omilta poluilta, ja close laukeaa niistä
+     * kaikista. Hiljennys kytketään päälle näyttöhetkellä
+     * (openArrival ja avaaMaalehti).
+     */
+    this.arrivalDialog.addEventListener('close', () => palautaAmbienssi('lehti'));
 
     this.mapPane = this.svg.parentElement;
     /*
@@ -7870,6 +7885,9 @@ export class UI {
     // kaupungeissa, suora leikattu reuna.)
     this.arrivalDialog.classList.add('arkki');
     if (!this.arrivalDialog.open) this.arrivalDialog.showModal();
+    // Lukemisen ajaksi äänimaisema madaltuu; close-kuuntelija (constructor)
+    // palauttaa sen, sulkeutuipa lehti mitä reittiä tahansa.
+    hiljennaAmbienssi('lehti');
     this.nollaaDialoginVieritys(this.arrivalDialog);
     const arkki = this.arrivalDialog.querySelector('.dialog-card');
     // Sivujen selaus pyyhkäisyllä ja nuolinäppäimillä.
@@ -9307,6 +9325,9 @@ export class UI {
     this.arrivalLehtiAla.hidden = false;
     this.naytaLehtiSaa(null);
     if (!this.arrivalDialog.open) this.arrivalDialog.showModal();
+    // Lukemisen ajaksi äänimaisema madaltuu; close-kuuntelija (constructor)
+    // palauttaa sen, sulkeutuipa lehti mitä reittiä tahansa.
+    hiljennaAmbienssi('lehti');
     const arkki = this.arrivalDialog.querySelector('.dialog-card');
     if (arkki) this.kytkeTutkiSelaus(arkki);
     // Radio ja tv seuraavat lehteä: maalehdessä ne ovat SEN maan,

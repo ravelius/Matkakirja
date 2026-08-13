@@ -139,6 +139,48 @@ const KOHTEEN_YLEISSANAT = new Set([
   'eläintarha', 'elaintarha', 'kaupungintalo',
 ]);
 
+/*
+ * ── ANKKURI EI TARTU YHDENTEKEVÄÄN SANAAN (omistaja 13.8.2026) ───────
+ *
+ * *"Alleviivaukset outoja."* Kuvakaappauksessa pöllö kertoi Mozartista,
+ * Beethovenista ja Schubertista, ja artikkelilinkit olivat sanoissa
+ * "kaupungissa" ja "syntyi" — keskellä lausetta, ilman että linkki
+ * kertoi mitään siitä, minne se vie.
+ *
+ * Juurisyy oli ankkurilistan laadussa. Ankkurisanat tulevat merkinnän
+ * otsikosta ja aiheen nimestä, ja otsikossa lukee usein "Wien —
+ * musiikin kaupunki" tai "Missä valssi syntyi". Sellainen sana osuu
+ * vastaustekstissä ensimmäiseen vastaantulevaan taivutusmuotoon eikä
+ * nimeä mitään. Paras ankkuri on artikkelin OMA erottuva nimi.
+ *
+ * Suomen taivutuksen takia lista on RUNKOJA eikä sanoja: yhdellä
+ * rivillä ("kaupun") tunnistuvat kaupunki, kaupungin, kaupungissa ja
+ * kaupungit. Pituusehto pitää yhdyssanat tallella — "kaupunkilehti" on
+ * liian pitkä ollakseen rungon taivutusmuoto, joten se kelpaa yhä
+ * ankkuriksi. Sama sääntö suojaa myös nimiä: "maailmannäyttely" ei
+ * putoa rungon "maailma" mukana.
+ *
+ * Jos merkinnälle ei jää yhtään erottuvaa ankkuria, linkki jää
+ * kokonaan pois (js/pollo.js sidoLinkki palauttaa epätoden) — mieluummin
+ * ei linkkiä kuin outo linkki.
+ */
+const YLEISSANOJEN_RUNGOT = [
+  'kaupun', 'maailma', 'histori', 'synty', 'sijait', 'asukk', 'ihmis',
+  'vuosi', 'vuode', 'aikaan', 'aikana', 'nykyis', 'paikk', 'alue',
+  'rakenne', 'elämä', 'elama', 'perint', 'kuului', 'tunnet', 'merkit',
+  'kesku', 'seudu', 'seutu',
+];
+
+/** Kuinka monta merkkiä taivutuspääte saa lisätä runkoon (ks. yllä). */
+const YLEISSANAN_PAATE = 6;
+
+/** Onko sana yleissanan taivutusmuoto eikä siis kelpaa ankkuriksi? */
+function yleissana(sana) {
+  if (KOHTEEN_YLEISSANAT.has(sana)) return true;
+  return YLEISSANOJEN_RUNGOT.some((runko) => sana.startsWith(runko)
+    && sana.length <= runko.length + YLEISSANAN_PAATE);
+}
+
 /** Merkkijono sanoiksi: pienet kirjaimet, vain kirjaimet ja numerot. */
 export function sanoita(teksti) {
   return String(teksti ?? '')
@@ -420,18 +462,21 @@ export function lahdeLeima(m, nimet = {}) {
  * kohdekartalta liitetyt nimet (liitaKohdenimet), koska "Schönbrunn"
  * nimeää kohteen tarkemmin kuin otsikko "Keisarin aamiaishuone
  * eläintarhan keskellä". Aiheen nimi on aina viimeisenä.
+ *
+ * Yleissanat karsitaan kaikista lähteistä (YLEISSANOJEN_RUNGOT): otsikon
+ * "kaupunki" tai "syntyi" ei saa päätyä linkiksi keskelle lausetta.
+ * Lista voi jäädä tyhjäksi, ja se on oikea vastaus — silloin merkintä ei
+ * ansaitse linkkiä.
  */
 export function ankkuriSanat(m) {
   const ulos = [];
+  const kelpaa = (sana) => sana.length >= ANKKURIN_VAHIMMAISPITUUS
+    && !OHITETTAVAT.has(sana) && !yleissana(sana) && !ulos.includes(sana);
   const lisaa = (teksti) => {
-    for (const sana of sanoita(teksti)) {
-      if (sana.length < ANKKURIN_VAHIMMAISPITUUS) continue;
-      if (OHITETTAVAT.has(sana)) continue;
-      if (!ulos.includes(sana)) ulos.push(sana);
-    }
+    for (const sana of sanoita(teksti)) if (kelpaa(sana)) ulos.push(sana);
   };
   const nimet = () => {
-    for (const sana of m?.nimiSanat ?? []) if (!ulos.includes(sana)) ulos.push(sana);
+    for (const sana of m?.nimiSanat ?? []) if (kelpaa(sana)) ulos.push(sana);
   };
   if (m?.tyyppi === 'nahtavyys') {
     lisaa(m?.otsikko);

@@ -93,6 +93,9 @@ const NIMET = [
   'click', 'paper', 'swipe', 'step', 'arrive', 'correct', 'wrong', 'hint',
   'tick', 'timeout', 'flip', 'clack', 'star', 'gem', 'horseshoe', 'robber',
   'empty', 'coin', 'stuck', 'turn', 'win', 'pen', 'quizOpen', 'zoom',
+  // Pöllön omat äänet (13.8.2026): huhuilu paneelin avautuessa ja
+  // kirjoituskoneen rivinvaihtokello vastauksen valmistuessa.
+  'owl', 'typeBell',
 ];
 
 test('jokainen tehoste tuottaa äänilähteitä', async () => {
@@ -570,6 +573,86 @@ test('väistö säilyy silmukan sauman yli', async () => {
   // puhe hukkuisi sen alle kesken lauseen.
   assert.ok(toka.volume < taysi, `uusi kierros ohitti väistön (${toka.volume} vs ${taysi})`);
   mod.stopPlaceStream();
+});
+
+/*
+ * OMISTAJAN TILAUS 13.8.2026: *"tausta ambienssia voisi hiljentää hieman
+ * kun pöllönäkymä aukeaa"* ja *"ambienssi voisi hiljentyä hieman myös
+ * jos lehti avataan"*. Kumpikin on oma syynsä, ja toisen sulkeutuminen
+ * ei saa nostaa taustaa takaisin niin kauan kuin toinen on auki.
+ */
+test('lukunäkymä hiljentää taustan ja palauttaa sen vasta viimeisen sulkeuduttua', async () => {
+  const { mod, soittimet, kello } = await lataaAmbienssi();
+  mod.nollaaHiljennykset();
+  mod.playPlaceAmbience('lontoo', 'kaupunki', 'europe');
+  await Promise.resolve();
+  const soi = soittimet[0];
+  soi.laukaise('loadedmetadata');
+  await ajaHaivytykset(kello);
+  const taysi = soi.volume;
+  assert.ok(taysi > 0, 'ambienssi ei lähtenyt soimaan');
+
+  mod.hiljennaAmbienssi('lehti');
+  await ajaHaivytykset(kello);
+  const hiljaa = soi.volume;
+  assert.ok(hiljaa < taysi, `hiljennys ei laskenut taustaa (${hiljaa} vs ${taysi})`);
+  // Hiljennys, ei mykistys: taustan pitää jäädä kuuluviin.
+  assert.ok(hiljaa > 0, 'tausta vaikeni kokonaan');
+
+  // Pöllö avataan lehden sisällä ja suljetaan ensin: lehti pitää yhä
+  // hiljennyksen voimassa.
+  mod.hiljennaAmbienssi('pollo');
+  await ajaHaivytykset(kello);
+  mod.palautaAmbienssi('pollo');
+  await ajaHaivytykset(kello);
+  assert.ok(soi.volume < taysi, 'hiljennys purkautui vaikka lehti oli yhä auki');
+
+  mod.palautaAmbienssi('lehti');
+  await ajaHaivytykset(kello);
+  assert.ok(Math.abs(soi.volume - taysi) < 1e-6,
+    `tausta ei palannut täyteen voimaan (${soi.volume} vs ${taysi})`);
+  mod.stopPlaceStream();
+});
+
+test('sama hiljennyssyy kahdesti ei jää päälle, ja tuntematon purku on turvallinen', async () => {
+  const { mod, soittimet, kello } = await lataaAmbienssi();
+  mod.nollaaHiljennykset();
+  mod.playPlaceAmbience('praha', 'kaupunki', 'europe');
+  await Promise.resolve();
+  const soi = soittimet[0];
+  soi.laukaise('loadedmetadata');
+  await ajaHaivytykset(kello);
+  const taysi = soi.volume;
+
+  // Nopea avaus-sulku-avaus: joukko ei kasaannu kuten laskuri kasaisi.
+  mod.hiljennaAmbienssi('pollo');
+  mod.hiljennaAmbienssi('pollo');
+  await ajaHaivytykset(kello);
+  mod.palautaAmbienssi('pollo');
+  await ajaHaivytykset(kello);
+  assert.ok(Math.abs(soi.volume - taysi) < 1e-6, 'hiljennys jäi päälle');
+  assert.doesNotThrow(() => mod.palautaAmbienssi('ei-ollutkaan'));
+  mod.stopPlaceStream();
+});
+
+test('paneelin ollessa auki alkava ambienssi alkaa hiljennettynä', async () => {
+  const { mod, soittimet, kello } = await lataaAmbienssi();
+  mod.nollaaHiljennykset();
+  // Kaupungin vaihto pöllö auki: uusi maisema ei saa nousta täyteen.
+  mod.hiljennaAmbienssi('pollo');
+  mod.playPlaceAmbience('wien', 'kaupunki', 'europe');
+  await Promise.resolve();
+  const hiljainen = soittimet[0];
+  hiljainen.laukaise('loadedmetadata');
+  await ajaHaivytykset(kello);
+  const hiljaaTaso = hiljainen.volume;
+
+  mod.palautaAmbienssi('pollo');
+  await ajaHaivytykset(kello);
+  assert.ok(hiljainen.volume > hiljaaTaso,
+    `uusi maisema alkoi täydellä voimalla (${hiljaaTaso} → ${hiljainen.volume})`);
+  mod.stopPlaceStream();
+  mod.nollaaHiljennykset();
 });
 
 test('kielinäytteet ovat oikeista kaupungeista ja muodoltaan kelvollisia', async () => {
