@@ -2571,6 +2571,35 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kisanin portti', lat: 33.5065, lon: 36.3157 },
     ],
   },
+  tokio: {
+    polku: 'assets/kartat/tokio-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 35.7245, etela: 35.705, lansi: 139.7645, ita: 139.801,
+    },
+    esittely: 'Kartalla on kaksi erilaista Tokiota. Vasemmassa '
+      + 'laidassa on laaja puisto, jonka eteläkärjessä on '
+      + 'munanmuotoinen lampi, ja sen kupeessa kulkee etelästä '
+      + 'pohjoiseen leveä ratapiha katkoviivoineen. Oikea puoli on '
+      + 'aivan toisenlainen: pikkukatujen ruudukkoa niin tiheässä, '
+      + 'että korttelit ovat vain kymmenien metrien kokoisia.\n\n'
+      + 'Se tiheä puoli on shitamachi, alakaupunki, ja se on Tokion '
+      + 'vanhinta kaupunkia. Oikeassa alakulmassa mutkittelee '
+      + 'Sumida-joki, ja sen ja ruudukon välissä erottuu pieni '
+      + 'suorakaiteen muotoinen alue: Sensō-jin temppelipiiri. '
+      + 'Kohteet jakautuvat kahteen ryhmään aivan kuin kaupunkikin — '
+      + 'Kaminarimon ja Sensō-ji idässä, ja lännessä Uenon kukkulalla '
+      + 'puisto, kansallismuseo, Kan\'ei-ji ja Shitamachi-museo.',
+    kohteet: [
+      { nimi: 'Kaminarimon', lat: 35.7111, lon: 139.7964 },
+      { nimi: 'Sensō-ji', lat: 35.7147, lon: 139.7968 },
+      { nimi: 'Kan\'ei-ji', lat: 35.7214, lon: 139.7743 },
+      { nimi: 'Tokion kansallismuseo', lat: 35.7191, lon: 139.7758 },
+      { nimi: 'Uenon puisto', lat: 35.7122, lon: 139.7711 },
+      { nimi: 'Shitamachi-museo', lat: 35.7102, lon: 139.7726 },
+
+    ],
+  },
   isfahan: {
     polku: 'assets/kartat/isfahan-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
