@@ -2575,24 +2575,24 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/riad-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: {
-      pohjoinen: 24.6345, etela: 24.6265, lansi: 46.708, ita: 46.722,
+      pohjoinen: 24.65, etela: 24.628, lansi: 46.7, ita: 46.722,
     },
-    esittely: 'Riadin vanhan ytimen kohteet ovat kartalla lähellä '
-      + 'toisiaan: Masmakin linnoituksen, Imam Turkin suurmoskeijan ja '
-      + 'Zal-suukin väli on vain parisataa metriä, ja kaikki kolme '
-      + 'mahtuvat samaan kortteliin. Thumairin portti on niistä idässä, '
-      + 'vanhan kaupunginmuurin kohdalla.\n\n'
-      + 'Muualla kartalla kadut ovat leveitä ja suoria ja korttelit '
-      + 'isoja. Mittakaavaero ytimen ja ympäristön välillä näkyy '
-      + 'kartalla suoraan, ja itälaidan leveän väylän takana on '
-      + 'Hillan kansansuuki runsaan kilometrin päässä.',
+    esittely: 'Riadin kartalla on kaksi päätä. Alalaidassa on vanha '
+      + 'ydin: Masmakin linnoitus ja Imam Turkin suurmoskeija ovat '
+      + 'parinsadan metrin päässä toisistaan, ja niiden ympärillä '
+      + 'korttelit ovat pieniä. Ylälaidassa on Murabban kortteli, jonne '
+      + 'hallinto siirtyi vanhan ytimen ulkopuolelle.\n\n'
+      + 'Kahden pään väli on runsaat kaksi kilometriä, ja se näkyy '
+      + 'kartalla leveinä suorina väylinä. Korttelit ovat ympärillä '
+      + 'isoja, ja mittakaavaero vanhan ytimen ja muun kartan välillä '
+      + 'erottuu suoraan.',
     kohteet: [
-      { nimi: 'Masmakin linnoitus', lat: 24.6312, lon: 46.7133 },
-      { nimi: 'Imam Turkin suurmoskeija', lat: 24.6308, lon: 46.7108 },
-      { nimi: 'Thumairin portti', lat: 24.6311, lon: 46.7155 },
-      { nimi: 'Zal-suuki', lat: 24.629, lon: 46.7122 },
-      { nimi: 'Sheikh Mohammed bin Ibrahimin moskeija', lat: 24.6275, lon: 46.7124 },
-      { nimi: 'Hillan kansansuuki', lat: 24.6275, lon: 46.7204 },
+      { nimi: 'Masmakin linnoitus', lat: 24.6311, lon: 46.7133 },
+      { nimi: 'Imam Turkin suurmoskeija', lat: 24.6307, lon: 46.7108 },
+      { nimi: 'Punainen palatsi', lat: 24.6425, lon: 46.7092 },
+      { nimi: 'Riadin vesitorni', lat: 24.645, lon: 46.7122 },
+      { nimi: 'Murabban palatsi', lat: 24.6465, lon: 46.7093 },
+      { nimi: 'Saudi-Arabian kansallismuseo', lat: 24.6472, lon: 46.7108 },
     ],
   },
   luxor: {

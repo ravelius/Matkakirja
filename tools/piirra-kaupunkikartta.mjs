@@ -809,17 +809,29 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 33.516, etela: 33.5045, lansi: 36.299, ita: 36.32 },
   },
   riad: {
-    // Riadin vanhakaupunki: Masmakin linnoitus keskellä, Imam Turkin
-    // suurmoskeija lännessä, Thumairin portti idässä ja Zal-suuki
-    // etelässä. Ruutu on pieni, koska vanhakaupunki on pieni — neljä
-    // kohdetta mahtuu 250 metrin säteelle.
+    // Riad: vanhankaupungin ydin etelässä, Murabban hallintokortteli
+    // pohjoisessa. Ruutu on lähes neliö (2,4 x 2,0 km).
     //
-    // Itäreuna on venytetty 46,7220:een, jotta kuudes kohde (Hillan
-    // kansansuuki) mahtuu mukaan. Ilman sitä nimettyjä kohteita on
-    // OSM:ssä vain viisi: Qasr al-Hukm ja Deeran aukio eivät ole
-    // kartalla nimettyinä lainkaan, ja Punainen palatsi on 1,3 km
-    // pohjoisessa eli oman ruutunsa päässä.
-    rajat: { pohjoinen: 24.6345, etela: 24.6265, lansi: 46.708, ita: 46.722 },
+    // ENSIMMÄINEN RAJAUS OLI VÄÄRÄ, JA SYY EI OLLUT KARTASSA VAAN
+    // LÄHTEISSÄ. Tiukka vanhankaupungin ruutu (24,6265-24,6345 /
+    // 46,708-46,722) piirtyi hyvin ja kaikki kuusi pistettä osuivat
+    // maalle, mutta kohteista neljällä EI OLE englanninkielistä
+    // Wikipedia-artikkelia lainkaan: Souq al-Zal, Qasr al-Hukm,
+    // Thumairin portti ja Deeran aukio palauttavat 404, eikä
+    // Riad-artikkeli mainitse niitä. Peli kirjoitetaan en-Wikipediasta,
+    // joten kohteiksi kelpaavat vain ne, joista on lähde.
+    //
+    // Tarkistetut ja lähteelliset kohteet (koordinaatit artikkelien
+    // coord-malleista, ristiintarkistettu Overpassista):
+    //   Al Masmak Palace              24,6311 / 46,7133  (8,7 kt)
+    //   Imam Turki b. Abdullah Mosque 24,6307 / 46,7108  (9,0 kt)
+    //   Al Hamra Palace (Punainen)    24,6425 / 46,7092
+    //   Riyadh Water Tower            24,6450 / 46,7122  (9,8 kt)
+    //   Murabba Palace                24,6465 / 46,7093  (16,9 kt)
+    //   National Museum of Saudi Ar.  24,6472 / 46,7108  (14,1 kt)
+    // Diriya ja At-Turaif ovat varattuja: ne ovat SAU-maalehdessä ja
+    // kulttuurivisassa.
+    rajat: { pohjoinen: 24.65, etela: 24.628, lansi: 46.7, ita: 46.722 },
   },
   luxor: {
     // Luxor: Niilin itäranta Luxorin temppeliltä Karnakille. Kohteiden
