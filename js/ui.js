@@ -2438,6 +2438,18 @@ export class UI {
         sfx.play('swipe');
         return;
       }
+      /*
+       * Napautus matkakirjaan EI sulje valokuvaa (omistajan havainto
+       * 13.8.2026 iPadilla: "yläreunan matkakirja sulkee kuvan jos
+       * sitä painaa"). Kuva kuuluu päiväkirjamerkintään: merkinnän
+       * oma käsittely (avaus, vieritys, kuuntelunappi) tai yläpalkin
+       * painikkeet eivät ole se "napauta karttaa" -ele, jolla kuvasta
+       * poistutaan. Kartan tai muun ulkopuolen napautus sulkee yhä.
+       */
+      const polku = e.composedPath?.() ?? [];
+      const matkakirjassa = polku.some((osa) => osa?.classList
+        && (osa.classList.contains('fact-card') || osa.classList.contains('topbar')));
+      if (matkakirjassa) return;
       this.suljePostikortti();
     };
 
