@@ -458,8 +458,24 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 .paavalikko .valikko-alarivi button {
-  width: auto;
+  /* Täsmälleen sama mitta ja tausta kuin Äänet-rivin kuvakenapeilla
+   * (mitattu 40×40) — rivit ovat päällekkäin ja eri koko näyttäisi
+   * virheeltä (omistaja 13.8.2026). */
+  width: 40px;
+  height: 40px;
+  min-height: 0;
+  padding: 0;
   justify-content: center;
+  background: rgba(53, 39, 26, 0.55);
+  border: 1.2px solid var(--line);
+  border-radius: 8px;
+}
+
+.paavalikko .valikko-alarivi .viiva-ikoni svg { width: 26px; height: 26px; }
+
+.paavalikko .valikko-alarivi .palaute-kulma {
+  font-size: 1.15rem;
+  line-height: 1;
 }
 
 /* Kertojavalikko: nappi näyttää nykyisen tilan kuvakkeen ja avaa alleen
