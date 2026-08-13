@@ -9993,4 +9993,305 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * İzmirin nähtävyysjutut (nippu 2, 12.8.2026). Nikosia on jaettu
+   * kaupunki, mutta lehti ei käsittele jakoa: peli ei kerro
+   * nykykonflikteista, joten kohteet kuvataan kulttuurikohteina
+   * omalla historiallaan. CYP-maalehti kertoo saaren muinaisuudesta
+   * ja kirkoista, joten kaupungin jutut pysyvät rakennuksissa.
+   */
+  izmir: {
+    'İzmirin kellotorni': {
+      aika: '1901',
+      teksti: 'Torni on 25 metriä korkea ja seisoo 81 neliömetrin alalla. '
+        + 'Pohjakaava on kahdeksankulmainen ja kerroksia on neljä. Runko '
+        + 'on rautaa ja lyijyä, pinta marmoria ja kiveä. Jalustan '
+        + 'ympärille on ladottu kehäksi neljä şadırvania eli '
+        + 'suihkulähdettä. Kellotauluja on niin ikään neljä, '
+        + 'halkaisijaltaan 75 senttiä, ja neljännessä kerroksessa riippuu '
+        + 'soittokello, jota kannattaa kaksitoista pylvästä.'
+        + '\n\n'
+        + 'Aydınin vilajetin kuvernööri Kâmil Pasha kutsui İzmirin '
+        + 'vaikutusvaltaiset koolle 1. elokuuta 1900. Kokouksessa '
+        + 'päätettiin kellotornista, joka pystytettäisiin sulttaani '
+        + 'Abdülhamid II:n valtaistuimelle nousun 25-vuotispäivän '
+        + 'kunniaksi. Peruskivi laskettiin 1. syyskuuta 1900, torni '
+        + 'valmistui elokuussa 1901 ja vihittiin käyttöön juuri '
+        + 'vuosipäivänä 1. syyskuuta 1901. Ensimmäinen nimi oli '
+        + 'Hamidiye-torni.'
+        + '\n\n'
+        + 'Suunnittelija oli ranskalainen Raymond Charles Péré '
+        + '(1854–1929), joka oli tullut kaupunkiin ranskan opettajaksi '
+        + 'vuonna 1880, nai paikallisen levantinolaissuvun tyttären ja '
+        + 'jäi loppuiäkseen. Hänen töitään on myös Karşıyakan Pyhän '
+        + 'Helenan kirkko vuodelta 1904. Tornin koristeaiheet ovat '
+        + 'pohjoisafrikkalaisvaikutteisia. Neljälle sivulle oli hakattu '
+        + 'sulttaanin tugra ja osmanien vaakuna; tasavallan julistuksen '
+        + 'jälkeen ne poistettiin ja tilalle veistettiin tähti ja '
+        + 'puolikuu. Torni on kaupungin vaakunassa, ja se oli 500 liiran '
+        + 'setelin kääntöpuolella vuosina 1983–1989.',
+      kuvat: [
+        {
+          tiedosto: 'İzmir Clock Tower, 2026.jpg',
+          selite: 'Kellotorni keskellä Konakin aukiota: kahdeksankulmainen '
+            + 'kaarigalleria jalustana, sen päältä nousee kapeneva torni, '
+            + 'kellotaulu ja ylimpänä avoin pylväikkökamari. Vasemmalla '
+            + 'Yalı-moskeijan kupoli ja minareetti, oikealla '
+            + 'kuvernöörinkonak keltaisine julkisivuineen ja Turkin lippu '
+            + 'salossa. Aukiolla kävelee ihmisiä, jalkakäytävällä on '
+            + 'opastetaulu ja kiveyksellä satoja kyyhkyjä.',
+          lahde: 'Koray, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Izmir Clock tower 5864.jpg',
+          selite: 'Jalusta lähempää: hevosenkenkäkaaret lepäävät parittaisten '
+            + 'hoikkien pylväiden päällä, ja kaarien alla on kaksi '
+            + 'neljästä marmorisuihkulähteestä maljoineen ja altaineen. '
+            + 'Keskellä on rautaristikolla suljettu ovi, jonka molemmin '
+            + 'puolin on ympyrämedaljonki tähtineen ja puolikuineen. '
+            + 'Kaarien läpi näkyy aukion kävelijöitä ja taustalla '
+            + 'moskeijan turkoosi laattapinta.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kemeraltin basaari': {
+      teksti: 'Kemeraltın pääkuja ei kulje suoraan. Anafartalar caddesi '
+        + 'kaartuu leveänä puolikuuna, ja kaari on vanhan rantaviivan '
+        + 'muoto: kuja seuraa İzmirin sisälahden reunaa. Keskiajalla '
+        + 'katua sanottiin mevlevien kaduksi, koska sen varrella oli '
+        + 'sufiveljeskunnan kokoontumistalo dergah. Basaari syntyi vasta, '
+        + 'kun lahden matalimmat kohdat täytettiin vuosina 1650–1670 ja '
+        + 'kauppa levisi uudelle maalle. Loput sisälahdesta liettyi '
+        + 'umpeen 1700-luvulla, ja rantaviiva sai nykyisen suoran '
+        + 'muotonsa 1800-luvun alussa.'
+        + '\n\n'
+        + 'Täytetylle maalle nousi karavaaniseraajeja. Vuonna 1744 '
+        + 'valmistui Kızlarağası Han, josta tuli basaarin ydin ja joka on '
+        + 'yhä pystyssä. Kortteliin rakennettiin 1600-luvulla myös Suuri '
+        + 'ja Pieni Vezir Han: ensimmäisen rakennutti suurvisiiri Köprülü '
+        + 'Fazıl Ahmed Pasha ja toisen hänen seuraajansa Merzifonlu Kara '
+        + 'Mustafa Pasha. Cezayir Hanin eli Algerian hanin kautta '
+        + 'Länsi-Anatolian liikaväkeä lähetettiin vuosittain töihin '
+        + 'Algeriaan.'
+        + '\n\n'
+        + 'Basaarin keskellä seisoo Hisarin moskeija, keskustan '
+        + 'suurimpia. Nimi tarkoittaa linnaketta ja viittaa samalla '
+        + 'paikalla seisseeseen genovalaiseen San Pietroon, jota '
+        + 'bysanttilaiset kutsuivat nimellä Neon Kastron; linnan '
+        + 'viimeiset jäänteet purettiin uusien satamarakenteiden tieltä '
+        + 'vuosina 1867–1876. Kujilla on omat nimensä, kuten Havra sokağı '
+        + 'eli synagogankatu: alueella on yhä kahdeksan synagogaa.',
+      kuvat: [
+        {
+          tiedosto: 'Kemeraltı daytime.jpg',
+          selite: 'Kemeraltın kivetty kuja keskipäivällä: molemmin puolin '
+            + 'markiisien alla myymälöitä, kylteissä lukee turkiksi '
+            + 'berber, kahvesi ja aksesuar, ja katua varjostaa iso '
+            + 'plataani. Penkeillä istuu miehiä, ohi kävelee ostoksilla '
+            + 'olevia ihmisiä ja puun takana roikkuu punainen lippu.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Izmir Kızlarağası Hanı 5918.jpg',
+          selite: 'Kızlarağası Hanin katettu käytävä sisältä: tiilinen '
+            + 'tynnyriholvi jatkuu perälle asti, molemmin puolin on '
+            + 'nahkatavara- ja korukauppoja valokylttien takana, ja '
+            + 'käytävällä kulkee muutama asiakas.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hisarin moskeija': {
+      aika: '1598',
+      teksti: 'Nimi tarkoittaa linnoitusta. Hisar Camii, myös Hisarönün '
+        + 'moskeija, seisoo Kemeraltın basaarikorttelissa İzmirin '
+        + 'keskustassa, ja se on keskustan suurimpia moskeijoita: '
+        + 'pohjakaava on suorakaide, 25 metriä kertaa 20. Sisäänkäyntiä '
+        + 'vastapäätä kohoaa pääkupoli, jota kannattaa kahdeksan järeää '
+        + 'pylvästä. Sen molemmin puolin on kolme suurta kupolia ja '
+        + 'takaosassa ylhäällä vielä kolme pienempää. Pihan sivuja '
+        + 'kiertää seitsemän kupolin rivi, ja pihalle avautuu şadırvan, '
+        + 'suihkulähde, jonka ääressä peseydytään ennen rukousta.'
+        + '\n\n'
+        + 'Rakennuttajaksi on kirjattu Aydınoğlu Yakup Bey, joka oli '
+        + 'İzmirin osmanihallitsija vuosina 1592–1598, ja '
+        + 'valmistumisvuodeksi 1598. Nykyinen asu ei ole alkuperäinen: '
+        + 'rakennus on korjattu neljästi: 1813, 1881, 1927 ja 1980.'
+        + '\n\n'
+        + 'Sisällä katse nousee kupoliin. Sen sisäpinta on maalattu kehä '
+        + 'kehältä soikeiksi medaljongeiksi, joissa on kullattuja '
+        + 'kukkakimppuja vaalean liilalla pohjalla, ja keskellä on tumma '
+        + 'pyörylä kullattuine ruusukkeineen. Pylväiden päät on veistetty '
+        + 'kullatuiksi lehtikoristeiksi, kaarten ympärillä kiertää '
+        + 'kullattu kipsikoriste ja seinillä riippuu mustia '
+        + 'kalligrafiakilpiä. Sisustusta pidetään İzmirin näyttävimpiin '
+        + 'kuuluvana esimerkkinä osmanien islamilaisesta taiteesta.',
+      kuvat: [
+        {
+          tiedosto: 'Hisar Mosque (October 2018).jpg',
+          selite: 'Moskeija viereisen kauppakorttelin katolta: vasemmalla '
+            + 'minareetti, jonka ainoalla parvekkeella on kaiuttimet, '
+            + 'oikealla lyijynharmaa pääkupoli kuunsirppihuippuineen ja '
+            + 'sen ympärillä pienempiä kupoleita valkoisin, rei\'itetyin '
+            + 'kaari-ikkunoin. Etualan tiili- ja kiviraidallisen '
+            + 'rakennuksen katolla on punatiilisiä hormeja, lasikupuja ja '
+            + 'ilmastointikoneita, ja alhaalla Kemeraltın kujalla näkyvät '
+            + 'kauppojen markiisit, kyltit KAOS SILVER ja Halıcılık, '
+            + 'mallinukkeja ja pöydän ääressä istuvia ihmisiä.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Hisar Camii 2025 Şubat 1.jpg',
+          selite: 'Pääkupoli alhaalta: kehä kehältä soikeita medaljonkeja, '
+            + 'joissa on kullattuja kukkakimppuja vaalean liilalla '
+            + 'pohjalla, keskellä tumma pyörylä kullattuine '
+            + 'ruusukkeineen. Reunoilla kiertää kullattu kipsikoriste, '
+            + 'seinillä on mustia pyöreitä kalligrafiakilpiä ja '
+            + 'kaari-ikkunoita, ja kupolin poikki kulkee kattokruunujen '
+            + 'mustia ripustusvaijereita.',
+          lahde: 'Satirdan kahraman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Hisar Camii 2025 Şubat 14.jpg',
+          selite: 'Yksi kupolia kannattavista paksuista pylväistä '
+            + 'alaviistosta kuvattuna: kapiteeli on veistetty kullatuiksi '
+            + 'lehtikoristeiksi. Taustalla näkyvät sivukupolit ja kapeat '
+            + 'kaari-ikkunat, vasemmalla riippuu iso messinkinen '
+            + 'kynttiläkruunu ja kuvan poikki kulkee useita mustia '
+            + 'ripustusvaijereita.',
+          lahde: 'Satirdan kahraman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sulu Han': {
+      teksti: 'Nimi on kuvaus: sulu tarkoittaa vetistä. Kemeraltın '
+        + '1600-luvulla rakennettu han on korttelin suurimpia, ja sen '
+        + 'sisäpihan keskellä on suihkulähde. Pihaa kiertää kaksi '
+        + 'kerrosta kaarikäytäviä. Vesi oli hanissa käyttötavaraa eikä '
+        + 'koristetta: sitä tarvittiin juomiseen, eläinten juottamiseen, '
+        + 'peseytymiseen ja rukousta edeltävään puhdistautumiseen, ja se '
+        + 'otettiin pihan lähteestä. Siksi kaivo tai suihkulähde kuuluu '
+        + 'lähes jokaisen karavaaniseraajin pihaan.'
+        + '\n\n'
+        + 'Matkustajan kannalta talo on yksinkertainen. Sisään tullaan '
+        + 'yhdestä portista, joka on mitoitettu niin, että kuormattu '
+        + 'juhta mahtuu siitä läpi. Alakerta on tavaraa ja eläimiä '
+        + 'varten: varastokomerot, pilttuut ja rehu. Yläkerta on ihmisiä '
+        + 'varten. Kaupungin han ei ollut pelkkä yösija vaan yhtä lailla '
+        + 'varasto ja kauppapaikka. Tavara purettiin, säilytettiin ja '
+        + 'myytiin samassa talossa, jossa nukuttiin. Pihan puodeista '
+        + 'täydennettiin matkavarat, ja osa puodeista osti tavaran '
+        + 'suoraan tulijalta.'
+        + '\n\n'
+        + 'Haneja rakennettiin kortteliin paljon: vuonna 1905 '
+        + 'ranskalaiset kartoittajat piirsivät alueesta kansainvälisten '
+        + 'vakuutusyhtiöiden tilauksesta kartan, johon niitä on merkitty '
+        + 'satoja.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Smyrnan agora': {
+      aika: '178',
+      teksti: 'Torin lattiaa kannattaa kolmikerroksinen suorakaiteen '
+        + 'muotoinen rakennus, joka on ladottu pylväiden ja kaarien '
+        + 'varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat '
+        + 'portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja '
+        + 'Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen '
+        + 'esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset '
+        + 'pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on '
+        + 'keisarin vaimon Faustinan rintakuva.'
+        + '\n\n'
+        + 'Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan '
+        + 'pohjoisrinteen juurelle. Se oli kaupungin kaupan, '
+        + 'oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. '
+        + 'Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius '
+        + 'määräsi sen rakennettavaksi uudelleen. Puhuja Aelius Aristides '
+        + 'kirjoitti keisarille ja tämän pojalle Commodukselle ja pyysi '
+        + 'heitä kaupungin uusiksi perustajiksi. Kaivauksista on löytynyt '
+        + 'piirtokirjoituksia, joissa luetellaan järistyksen jälkeen apua '
+        + 'antaneet.'
+        + '\n\n'
+        + 'Kaivaukset jatkuvat yhä. Vuodesta 2002 työtä on rahoittanut '
+        + 'İzmirin suurkaupunkikunta, alue on kasvanut 16 590 '
+        + 'neliömetriin, ja vanhoja betonipaikkauksia vaihdetaan '
+        + 'marmoriin. Maasta on nostettu Hermeksen, Dionysoksen, Eroksen '
+        + 'ja Herakleen patsaita sekä Hestiaa esittäviä reliefejä. Vuonna '
+        + '2026 pohjoiskadun varrelta paljastui noin kolme kertaa neljä '
+        + 'metriä mosaiikkilattiaa, jonka keskiössä on Salomonin solmu; '
+        + 'se on tehty 300–500-luvuilla.',
+      kuvat: [
+        {
+          tiedosto: 'Izmir agora substructure 6255.jpg',
+          selite: 'Torin lattiaa kannattaneet holvit: leveä kivikaari ja sen '
+            + 'takana rivi kapeampia kaaria, joiden alla kasvaa ruohoa ja '
+            + 'pikkukukkia. Kaarten yläpuolella näkyy pylväshallin '
+            + 'pylväitä ja yksi katkennut pylväänpätkä.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Agora of Smyrna, built during the Hellenistic era at the base of Pagos Hill and totally rebuilt under Marcus Aurelius after the destructive 178 AD earthquake, Izmir, Turkey (18699693425).jpg',
+          selite: 'Läntisen pylväshallin korinttilaiset pylväät nurmen '
+            + 'reunassa. Taustalla kohoaa vaaleanpunainen monikerroksinen '
+            + 'pysäköintitalo, jonka kansilla seisoo autoja; vasemmalla '
+            + 'kaivausalueen ylle on vedetty vihreä peltikatos.',
+          lahde: 'Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Salepçioğlun moskeija': {
+      aika: '1905',
+      teksti: 'Rukoussali on pohjaltaan neliö, ja sen päällä lepää yksi '
+        + 'kupoli. Siirtymä neliöstä ympyrään on tehty pendentiiveillä '
+        + 'eli kolmiomaisilla kaarevilla pinnoilla salin kulmissa. '
+        + 'Kupolin sisäpinta on veistoskoristeltu, ja värit ovat '
+        + 'punainen, vihreä ja ruskea. Pääkupolin lisäksi rakennuksessa '
+        + 'on kolme pienempää kupolia sisäänkäynnin puolella. Ulkoseinät '
+        + 'on verhottu vihreällä marmorilla ja kivellä, ja saliin tulee '
+        + 'valoa kahdesta ikkunarivistä, alemmasta ja ylemmästä.'
+        + '\n\n'
+        + 'Minareetti ei liity rakennukseen kiinni. Se seisoo '
+        + 'koillispuolella omalla kivijalustallaan, runko on pyöreä ja '
+        + 'parvekkeita on yksi. Muoto on poikkeuksellisen hoikka. '
+        + 'Minareetti on korjattu kahdesti, 1927 ja 1974.'
+        + '\n\n'
+        + 'Moskeija valmistui vuonna 1905 keskelle Kemeraltın '
+        + 'basaarikorttelia, ja se on nimetty rakennuttajansa Salepçizade '
+        + 'Hoca Ahmed Efendin mukaan. Mihrab on pyöreä syvennys valkoista '
+        + 'ja harmaata marmoria, ja saarnatuoli on niin ikään marmoria, '
+        + 'yläosassaan geometrista kuviointia.',
+      kuvat: [
+        {
+          tiedosto: 'Salepçioğlu Mosque, October 2018.jpg',
+          selite: 'Moskeija kadulta alaviistosta: keskellä kohoaa harmaa '
+            + 'pääkupoli puolikuukoristeineen, sen sivuilla pienemmät '
+            + 'kupolit, seinät ovat tummanvihreää kiveä valkoisin '
+            + 'marmorikehyksin ja ikkunoiden edessä on valkoiset '
+            + 'rautaparvekkeet. Vasemmalla nousee hyvin hoikka '
+            + 'minareetti, jossa on yksi parveke ja joka seisoo erillään '
+            + 'rakennuksesta. Aidan edessä on valkoinen kyltti moskeijan '
+            + 'nimellä, kuvan reunaan osuvat katuvalon varsi ja '
+            + 'palmunlehtiä.',
+          lahde: 'BSRF, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Salepçioğlu Camii Kubbesi.jpg',
+          selite: 'Kupoli alhaalta kuvattuna: vaaleansiniseltä pohjalta '
+            + 'säteilee kullanruskeita ripoja keskusmedaljonkiin asti, ja '
+            + 'väleihin on maalattu tähti- ja kasviaiheita. Kupolin '
+            + 'juurella kiertää rivi kaari-ikkunoita värillisine '
+            + 'laseineen, ja kulmien pendentiiveissä on mustat '
+            + 'kahdeksankulmaiset kalligrafialevyt. Kuvan halki kulkee '
+            + 'vaalea vaijeri, jossa kattokruunu riippuu.',
+          lahde: 'Canercangul, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

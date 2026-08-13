@@ -7816,4 +7816,207 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * İZMIRIN KANSISIVU (nippu 2, 13.8.2026). Aihesivun id on arki,
+   * koska TUR-maalehdellä on historia, luonto, kasityo, musiikki ja
+   * ruoka — sama id kaupungilla peittäisi maan sivun.
+   */
+  izmir: [
+    {
+      id: 'kaupunki',
+      nimi: 'İzmir',
+      johdanto: 'İzmir on rakennettu lahden pohjukkaan jyrkkien rinteiden '
+        + 'väliin: ylös noustaan hissitornia ja portaita pitkin, '
+        + 'vastarannalle mennään lautalla.',
+      kansikuvat: [
+        {
+          tiedosto: 'Izmir Ferry ride from Pasaport terminal to Bostanlı terminal 2592.jpg',
+          selite: 'İzmirin lahti lautan kannelta kuvattuna. Aallokossa '
+            + 'purjehtii kuusi pientä valkoista jollaa, joiden purjeissa '
+            + 'lukee TUR ja numero ja joissa istuu lapsia '
+            + 'pelastusliiveissä. Takana kaartuu vastarannan '
+            + 'rantabulevardi täynnä kävelijöitä ja palmuja, sen takana '
+            + 'nousee rinne kerrostaloja, ja oikealla laiturissa on '
+            + 'valkoinen lautta. Talojen seinillä on mainostauluja ja '
+            + 'vihreä Garanti-pankin kyltti.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Izmir aerial.jpg',
+          selite: 'İzmir lentokoneesta kuvattuna. Vasemmalla on satama, jossa '
+            + 'on punainen rahtilaiva ja pinoja kontteja, keskellä '
+            + 'suorien korttelien ruudukko ja mutkitteleva moottoritie, '
+            + 'ja oikealla laaja Kültürparkin puistoalue: nurmikenttiä, '
+            + 'messuhalleja ja kapea vaalea torni.',
+          lahde: 'Coderenius, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Konak Mosque, 2008.jpg',
+          selite: 'Konakin aukion pieni kahdeksankulmainen Yalı-moskeija '
+            + 'pilvisenä päivänä. Ikkunoita kehystävät sinivihreät '
+            + 'laattapaneelit, kattona on lyijynharmaa kupoli ja vieressä '
+            + 'nousee ohut kivinen minareetti. Vasemmalla liehuu Turkin '
+            + 'lippuja ja kasvaa palmuja, oikealla kävelee ihmisiä ja '
+            + 'taustalla näkyy kerrostaloja.',
+          lahde: 'F Mira, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Hissi rakennettiin kadun jatkoksi',
+          tiedosto: 'Asansor ust kisim.JPG',
+          teksti: 'Karataşin kaupunginosassa Konakissa rannan kapean '
+            + 'kaistaleen ja ylärinteen korttelit erottaa jyrkkä '
+            + 'kallioseinämä. Vuonna 1907 varakas juutalainen pankkiiri '
+            + 'ja kauppias Nesim Levi Bayraklıoğlu rakennutti seinämään '
+            + 'tornin, jonka sisällä hissi nostaa ihmiset ja tavarat '
+            + 'alhaalta ylätasolle. Torni tehtiin kaupunkilaisten '
+            + 'käyttöön, ja sen nimi on yksinkertaisesti Asansör, hissi. '
+            + 'Nimi tarttui myös alla kulkevaan kujaan. Kujalla asui '
+            + '1940-luvulla laulaja Dario Moreno, joka teki myöhemmin '
+            + 'uran Ranskassa, ja katu on nimetty hänen mukaansa.',
+          selite: 'Asansörin tiilitornin yläosa ja sen kylkeen rakennettu '
+            + 'terassi. Terassin reunassa on valkoinen valettu '
+            + 'koristekaide ja valkoisia lyhtypylväitä, ja kaiteen '
+            + 'ääressä seisoo kuusi ihmistä katsomassa alas. Tornin ovea '
+            + 'suojaa peltinen markiisi. Vasemmalla näkyy lahti ja '
+            + 'rantatie, oikealla rinnettä nousevia kerrostaloja ja '
+            + 'takana vuoret.',
+          lahde: 'Yabancı, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Puisto sai alkunsa Moskovan-matkasta',
+          tiedosto: 'Kültürpark aerial view 01.jpg',
+          teksti: 'Apulaispormestari Suat Yurtkoru esitti pormestari Behçet '
+            + 'Uzille, että İzmir tarvitsee Moskovan Gorki-puiston '
+            + 'kaltaisen alueen. Kaupunginvaltuusto hyväksyi esityksen '
+            + '14. toukokuuta 1934. Uz matkusti Moskovaan 1935, ja kaksi '
+            + 'arkkitehtia laati suunnitelman. Perustus laskettiin 1. '
+            + 'tammikuuta 1936, ja Kültürpark avattiin yleisölle 1. '
+            + 'syyskuuta 1936. Alaa oli 360 000 neliömetriä, ja vuonna '
+            + '1939 se kasvoi 420 000:een. Puistoon nousi laskuvarjotorni '
+            + '1937 ja eläintarha 1938; eläimet siirrettiin muualle 2008. '
+            + 'Nykyään siellä pidetään İzmirin kansainväliset messut ja '
+            + 'kirjamessut.',
+          selite: 'Kültürpark ylhäältä kuvattuna. Puiden latvusten seassa '
+            + 'erottuu palmurivi, leikattuja pensasaitoja ja '
+            + 'valkokattoinen messuhalli, vasemmassa reunassa nousee '
+            + 'teräksinen ristikkotorni ja keskellä liehuu kaksi Turkin '
+            + 'lippua. Takana on kaupungin tornitaloja ja niiden takana '
+            + 'vuorijono.',
+          lahde: 'BSRF, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Unessa käskettiin muuttaa kukkulalle',
+          tiedosto: 'Izmir Kadifekale exterior 5675.jpg',
+          teksti: 'Kadifekale seisoo Pagos-vuoren laella 186 metrin '
+            + 'korkeudessa, noin kahden kilometrin päässä rantaviivasta. '
+            + 'Ensimmäiset tunnetut muurit rakennutti Lysimakhos, yksi '
+            + 'Aleksanteri Suuren seuraajista, ja samoihin aikoihin '
+            + 'Smyrna siirrettiin tänne vanhalta paikaltaan kummulta, '
+            + 'jolle mahtui vain muutama tuhat asukasta. Pausanias kertoo '
+            + 'tarinan, jonka mukaan Aleksanteri nukahti '
+            + 'metsästysretkellä plataanin alle ja näki unessa kaksi '
+            + 'jumalatarta, jotka käskivät perustaa kaupungin juuri sille '
+            + 'kukkulalle. Nykyiset muurit ovat keskiajalta.',
+          selite: 'Kadifekalen ulkomuuri alhaalta katsottuna. Karkeasta '
+            + 'kivestä ladotun muurin päällä on hammastettu harja ja '
+            + 'vasemmalla pyöreä torni, muurissa on kapea nuoliaukko, ja '
+            + 'edessä kasvaa mäntyjä, joiden rungot on maalattu alaosasta '
+            + 'valkoisiksi. Muurin viereen on pysäköity valkoinen '
+            + 'pakettiauto ja tummansininen tila-auto, ja rinnettä '
+            + 'alempana seisoo joukko ihmisiä; vasemmalla kaukana siintää '
+            + 'lahti.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'İzmirin aamiainen ostetaan kadulta ja syödään seisaaltaan, ja '
+        + 'päivän mittaan tartutaan sämpylään, jota muualla ei myydä '
+        + 'samalla nimellä. Töihin mennään usein lautalla, koska lahti on '
+        + 'tiellä.',
+      nostot: [
+        {
+          otsikko: 'Taikina lepää tuntikausia',
+          tiedosto: 'Boyoz in İzmir.jpg',
+          teksti: 'Boyoz on İzmirin oma leivonnainen. Nimi tulee ladinon '
+            + 'sanasta boyo, pieni pyöreä pulla; sefardijuutalaiset '
+            + 'toivat leivonnaisen kaupunkiin sen jälkeen, kun heidät '
+            + 'karkotettiin Espanjasta 1492. Taikinaan tulee jauhoja, '
+            + 'auringonkukkaöljyä ja hieman tahinia, alun perin '
+            + 'seesamiöljyä. Taikinaa vaivataan käsin ja levätetään '
+            + 'useaan kertaan, ensin kaksi tuntia ja lopuksi useita '
+            + 'tunteja, ja palasista pyöritellään pieniä palloja, jotka '
+            + 'marinoituvat öljyssä puolesta tunnista tuntiin. Uuni on '
+            + 'hyvin kuuma, ja pinnasta tulee kerroksinen. Seuraksi '
+            + 'otetaan tummaa teetä ja kovaksi keitetty muna, jonka '
+            + 'päälle ripotellaan runsaasti mustapippuria.',
+          selite: 'Viisi paistettua boyozia valkoisella paperilla. Ne ovat '
+            + 'kämmenen kokoisia ja pyöreitä, pinta on kellertävä ja '
+            + 'ryppyinen kuin rutistettu lehtitaikina, ja kolmen keskeltä '
+            + 'pilkottaa tumma täyte. Oikeanpuoleisen päälle on siroteltu '
+            + 'tomusokeria.',
+          lahde: 'BSRF, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sämpylä sai nimensä muodostaan',
+          tiedosto: 'Tezgâhta kumru.jpg',
+          teksti: 'Kumru on turkiksi kyyhkynen, ja voileipä on saanut nimensä '
+            + 'muodostaan. Alkuperäinen kumru oli renkaan muotoinen ja '
+            + 'kokonaan seesaminsiementen peitossa. Nykyinen versio '
+            + 'syntyi İzmirissä 1900-luvun puolivälissä ja levisi '
+            + 'nopeasti muualle. Väliin pannaan juustoa, tomaattia ja '
+            + 'sucukia eli tulista makkaraa, ja osa myyjistä lisää '
+            + 'suolakurkkua, tulista paprikaa, majoneesia ja ketsuppia. '
+            + 'Leipä on pehmeää, ja osa leipomoista ja ravintoloista '
+            + 'nostattaa taikinan kikhernejuurella. Kumrua myydään '
+            + 'katuruokana.',
+          selite: 'Myyntitiskin metallipelti täynnä kumruja. Sämpylöitä on '
+            + 'kymmenkunta rivissä, jokaisen kuori on seesaminsiementen '
+            + 'peitossa ja välistä työntyy esiin valkoista juustoa ja '
+            + 'punaisia tomaattiviipaleita. Päällä lojuu kokonaisia '
+            + 'vaaleanvihreitä paprikoita. Vasemmalla on pino valkoisia '
+            + 'servettejä ja oikealla toinen pelti.',
+          lahde: 'Satirdan kahraman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Yhdeksän laituria, 210 vuoroa',
+          tiedosto: 'Izmir Bostanlı Terminal to Karşıyaka Terminal ride Karşıyaka Ferry Terminal 6592.jpg',
+          teksti: 'İzmirin lahden yli kulkevista lautoista vastaa kaupungin '
+            + 'oma yhtiö İzdeniz. Se perustettiin 1992 ja sai nykyisen '
+            + 'nimensä 1999, ja vuonna 2000 valtion yhtiöltä siirtyi '
+            + 'sille 104 työntekijää ja yksitoista lauttaa, joista kolme '
+            + 'oli autolauttoja. Omia aluksia on nyt kolmetoista ja '
+            + 'vuokrattuja kolmetoista, eli yhteensä 26. Vuoroja ajetaan '
+            + 'päivässä 210 ja laitureita on yhdeksän: Alsancak, '
+            + 'Bostanlı, Göztepe, Güzelbahçe, Karantina, Karşıyaka, '
+            + 'Konak, Pasaport ja Üçkuyular. Matkustajia kertyy päivässä '
+            + 'yli 50 000 ja ajoneuvoja yli 1 500.',
+          selite: 'Karşıyakan lauttalaituri lahdelta kuvattuna. Laiturissa on '
+            + 'kiinni valkoinen lautta, jonka perässä liehuu Turkin lippu '
+            + 'ja jonka kaiteessa riippuu rivi pelastusrenkaita, ja '
+            + 'oikealla on kaksi muuta lauttaa. Terminaalirakennuksen '
+            + 'seinässä on kello ja vihreä Garanti-pankin kyltti, ja '
+            + 'takana nousee rinne täynnä kerrostaloja ja minareetteja.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä İzmirissä syödään perinteisesti boyozin kanssa?',
+        vaihtoehdot: [
+          'Kovaksi keitetty muna',
+          'Kulhollinen jogurttia',
+          'Lasi kylmää maitoa',
+          'Kylmä vesimeloni',
+        ],
+        oikea: 0,
+        fakta: 'Boyoz ostetaan aamulla kadulta, ja seuraksi otetaan '
+          + 'lasillinen tummaa teetä ja muna, jonka päälle ripotellaan '
+          + 'mustapippuria.',
+      },
+    },
+  ],
 };
