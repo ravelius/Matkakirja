@@ -158,16 +158,22 @@
               <p class="valikko-otsikko">Äänet</p>
               <div id="kertoja-valikko" class="kertoja-valikko"></div>
             </div>
-            <!-- Säännöt ja uusi peli alimmaisena omalla rivillään. -->
+            <!-- Säännöt, uusi peli ja palaute kuvakkeina yhdellä
+                 keskitetyllä rivillä (omistajan päätös 13.8.2026);
+                 nimet ruudunlukijalle aria-labelissa, koska näkyvää
+                 tekstiä ei ole. -->
             <div class="valikko-alarivi">
-              <button id="rules-btn" class="ghost" type="button" title="Säännöt">
+              <button id="rules-btn" class="ghost" type="button" title="Säännöt"
+                      aria-label="Säännöt">
                 <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.2 3.9h8.1l3.5 3.6v12.6H6.2z"/><path d="M14.1 3.9v3.8h3.7"/><path d="M8.9 11.6h6.2M8.9 14.4h6.2M8.9 17.1h4"/></svg></span>
-                <span>Säännöt</span>
               </button>
-              <button id="newgame-btn" class="ghost" type="button" title="Uusi peli">
+              <button id="newgame-btn" class="ghost" type="button" title="Uusi peli"
+                      aria-label="Uusi peli">
                 <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.6"/><path d="M12 8.4v7.2M8.4 12h7.2"/></svg></span>
-                <span>Uusi peli</span>
               </button>
+              <button id="palaute-kulma" class="palaute-kulma" type="button"
+                      aria-label="Lähetä palautetta tästä kohdasta"
+                      title="Lähetä palautetta tästä kohdasta">!</button>
             </div>
             <!--
               VALIKON POHJARIVI (omistajan päätös 12.8.2026): vasemmalla
@@ -189,9 +195,6 @@
               <button id="versio-kulma" class="versio-kulma" type="button"
                       aria-haspopup="dialog" title="Mitä uutta?"
                       aria-label="Mitä uutta, päivitys ja kehittäjätila"></button>
-              <button id="palaute-kulma" class="palaute-kulma" type="button"
-                      aria-label="Lähetä palautetta tästä kohdasta"
-                      title="Lähetä palautetta tästä kohdasta">!</button>
             </div>
           </div>
         </div>

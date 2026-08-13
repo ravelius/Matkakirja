@@ -368,6 +368,7 @@ button, .brand, .turn-pill, .fact-card h2 {
  */
 .paavalikko .linssi-valikko,
 .paavalikko .kertoja-valikko {
+  align-items: center;
   position: static;
   width: auto;
   max-width: none;
@@ -6155,12 +6156,12 @@ body.katselu #newgame-btn { display: none; }
 .valikko-pohjarivi {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* Versionumero yksin oikealla, eikä väliin jää vaakaviivaa —
+   * kuvakerivi sen yllä on jo oma päätepisteensä (13.8.2026). */
+  justify-content: flex-end;
   gap: 0.8rem;
   width: 100%;
-  margin-top: 0.45rem;
-  padding-top: 0.6rem;
-  border-top: 1px solid var(--line);
+  margin-top: 0.1rem;
 }
 
 /* Pohjarivin napit mittaavat itsensä: `.paavalikko button` venyttäisi
