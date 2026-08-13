@@ -92,6 +92,9 @@ final class PeliSelain: NSObject, ObservableObject {
     /// kehottaa sivua tarkistamaan uuden version: pelissä on jo
     /// palvelutyöntekijä ja Päivitä-mekanismi, jotka osaavat asian.
     func aktivoitui() {
+        // Sillat heräävät aina, myös silloin kun osoite puuttuu: iCloudin
+        // muutokset ja haptiikan lämmitys eivät liity pelin lataamiseen.
+        sillat.aktivoitui()
         guard tila != .eiOsoitetta else { return }
         sillat.laheta(laji: "aktivoitui", tiedot: [:])
 

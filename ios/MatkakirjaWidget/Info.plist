@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>fi</string>
+	<!-- Tämä nimi näkyy widgetin valintagalleriassa otsikkorivillä. -->
+	<key>CFBundleDisplayName</key>
+	<string>Matkakirja</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+
+	<!-- Versionumeroiden ON oltava samat kuin sovelluksella, muuten App
+	     Store Connect hylkää latauksen. Molemmat tulevat samoista
+	     käännösasetuksista (ios/project.yml), joten ne pysyvät synkassa
+	     myös silloin kun ajo antaa buildnumeron komentoriviltä. -->
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+
+	<!-- Tämä avain tekee laajennuksesta WidgetKit-widgetin. Ilman sitä
+	     paketti kääntyy, mutta widget ei ilmesty valintagalleriaan. -->
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.widgetkit-extension</string>
+	</dict>
+</dict>
+</plist>

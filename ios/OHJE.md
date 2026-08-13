@@ -28,7 +28,7 @@ Kun sovellus avataan tai palataan siihen taustalta, se pyytää sivua
 tarkistamaan onko uusi versio ilmestynyt. Pelin oma Päivitä-nappi toimii
 kuoressa kuten selaimessa.
 
-Kuorella on oma versionumeronsa (nyt 0.1.0). **Se ei liity pelin
+Kuorella on oma versionumeronsa (nyt 0.2.0). **Se ei liity pelin
 versionumeroon** eikä kulje pelin muutoslokissa.
 
 ## Mitä pitää asettaa: pelin osoite
@@ -72,6 +72,8 @@ ja perään esimerkiksi oman koneen osoite.)*
 - Luenta ja sanelu tarjolla pelin koodille (`window.matkakirjaNatiivi`).
   Pelissä ei vielä ole niitä käyttävää kohtaa — sillat ovat valmiina,
   kun Viisas Pöllö niitä tarvitsee.
+- Kuusi uutta siltaa, kotinäyttöwidget ja Siri-vastaus. Ne kuvataan
+  omassa luvussaan alempana (**Kuoren versio 0.2.0**).
 - Väliaikainen kuvake (tumma pohja, kultainen kompassiruusu). Oikea
   kuvake tehdään erikseen; sen jälkeen tiedosto
   `ios/tyokalut/tee-ikoni.py` voidaan poistaa.
@@ -85,6 +87,103 @@ ja perään esimerkiksi oman koneen osoite.)*
   ensimmäistä TestFlight-lähetystä, muuten sovellus näyttää puhelimessa
   vain suomenkielisen huomautuksen. Käännösajo huomauttaa tästä, mutta ei
   kaadu siihen.
+
+## Kuoren versio 0.2.0: mitä uutta
+
+Kuoreen tuli kerralla iso paketti. **Mikään näistä ei muuta peliä
+itsessään** — pelin koodi ei vielä kutsu näitä, vaan kytkennät tehdään
+erikseen. Kuori vain tarjoaa ne, ja selaimessa pelattaessa ne puuttuvat
+kokonaan aivan kuten ennenkin.
+
+| Uutuus | Mitä se tekee | Vaatiiko omistajalta toimia |
+| --- | --- | --- |
+| **Tallennussynkka** | Pelin tallennus siirtyy iPhonen ja iPadin välillä iCloudin kautta, jos laitteissa on sama Apple-tili | Ei |
+| **Haptiikka** | Napautukset, onnistumiset ja aarrelöydöt tuntuvat kädessä | Ei |
+| **Jako** | Pelaaja voi lähettää tekstin tai kuvakaappauksen eteenpäin iOS:n omalla jakoikkunalla | Ei |
+| **Game Center** | Saavutukset ja pelaajan tunnus | **Kyllä** — saavutukset luodaan käsin App Store Connectissa |
+| **Kotinäyttöwidget** | Pieni ja keskikokoinen widget: kaupunki, "Päivä N" ja kassa | Ei |
+| **Siri: "Missä olen Matkakirjassa"** | Siri vastaa kaupungin ja matkapäivän lukematta peliä | Ei |
+| **Push-ilmoitusten rekisteröinti** | Lupa ja laitetunnus otetaan talteen | **Kyllä, myöhemmin** — lähetysputki on oma projektinsa |
+
+### Tallennussynkka lyhyesti
+
+Alla on iCloudin avain–arvo-varasto: pieni (yhteensä 1 megatavu), ilmainen
+ja se ei vaadi pelaajalta yhtään asetusta. Kuori **ei päätä mitään**: se
+kuljettaa tallennuksen ja sen aikaleiman, ja kun toisesta laitteesta tulee
+muutos, se kertoo pelille vain *mikä* muuttui. Sääntö "uusin voittaa"
+elää pelin puolella, ei kuoressa — silloin sen voi korjata verkosta
+päivittämällä eikä App Storen kautta.
+
+Jos laitteessa ei ole iCloud-tiliä, varasto toimii yhä mutta vain
+paikallisesti. Peli näkee sen (`ominaisuudet.talleSynkka`) ja voi kertoa
+sen pelaajalle.
+
+### Widget ja Siri lyhyesti
+
+Widget ei lue peliä eikä avaa verkkoa. Peli työntää tilansa (kaupunki,
+maa, päivä, kassa) yhteiseen varastoon, ja widget näyttää tasan sen.
+Siksi widget toimii lentokoneessa eikä kuluta akkua — ja siksi se näyttää
+vanhaa tietoa, jos peliä ei ole avattu vähään aikaan. Sen varalta
+keskikokoisessa widgetissä lukee pienellä "päivitetty eilen".
+
+Siri-fraasit ovat valmiina, eikä pelaajan tarvitse rakentaa oikotietä:
+
+- *"Missä olen Matkakirjassa"*
+- *"Missä menen Matkakirjassa"*
+- *"Matkakirjan tilanne"*
+- *"Jatka Matkakirjaa"* / *"Avaa Matkakirja"* (avaa pelin)
+
+Ennen kuin peliä on kertaalleen avattu uudella kuorella, widget lukee
+"Matka ei ole alkanut" ja Siri vastaa samoin. Se on oikea vastaus eikä
+vika.
+
+## Mitä omistajan pitää tehdä
+
+Kaksi asiaa, ja kumpikin voi odottaa: kuori kääntyy, lähtee TestFlightiin
+ja toimii ilman niitä. Ne vain jäävät tekemättä siihen asti.
+
+### 1. Game Center -saavutukset App Store Connectiin
+
+Peli pyytää saavutuksia vapailla tunnuksilla (esimerkiksi `aarre.lontoo`).
+Jos samannimistä saavutusta ei ole luotu Applen puolelle, kutsu palautuu
+hiljaa hylättynä eikä pelaaja huomaa mitään — mitään ei siis riko, mutta
+mitään ei myöskään kirjaudu.
+
+Saavutus luodaan näin:
+
+1. **appstoreconnect.apple.com → Apps → Matkakirja → Palvelut (Services)
+   → Game Center**.
+2. Ensimmäisellä kerralla: **Enable Game Center** (kertaalleen koko
+   sovellukselle).
+3. **Achievements → +**.
+4. **Reference Name**: oma muistiinpano, esimerkiksi `Aarre: Lontoo`.
+5. **Achievement ID**: *tämä on se tunnus, jonka peli lähettää.* Sen on
+   täsmättävä täsmälleen, isot ja pienet kirjaimet mukaan lukien.
+6. **Point Value**: pisteet (kaikkien saavutusten summa saa olla enintään
+   1000).
+7. Kielikohtainen otsikko ja kuvaus suomeksi + kuva (512×512).
+8. **Save**.
+
+Tunnusluettelo sovitaan erikseen, kun pelin puoli kytketään. Siihen asti
+tätä ei tarvitse tehdä lainkaan.
+
+### 2. Push-avain — vasta kun lähetysputki rakennetaan
+
+**Kuoressa on vain kuuntelupää.** Se kysyy pelaajalta luvan ja hakee
+Applelta laitetunnuksen (device token), jonka se antaa pelille. Sillä ei
+lähetetä yhtään ilmoitusta, koska **lähetyspäätä ei ole**: ilmoitusten
+lähettäminen vaatii palvelimen, joka pitää kirjaa laitetunnuksista,
+puhuu Applen APNs-rajapinnalle ja päättää mitä ja milloin lähetetään.
+
+Se on oma projektinsa, ja se kannattaa aloittaa vasta kun tiedetään mistä
+pelaajalle ylipäätään halutaan ilmoittaa. Silloin tarvitaan:
+
+- **APNs-avain** (.p8) App Store Connectin *Integrations*-välilehdeltä —
+  eri avain kuin käännösajon `ASC_KEY_P8`;
+- paikka, jossa laitetunnukset säilytetään;
+- palvelin tai palvelu, joka lähettää.
+
+Kuoreen ei tarvitse silloin koskea: tunnus kulkee jo pelille asti.
 
 ## Miten tiedämme, että se toimii
 
@@ -270,7 +369,7 @@ tätä** — peli haetaan verkosta, ja vain kuoren muutokset kulkevat App
 Storen kautta.
 
 Buildnumero on aina GitHub-ajon numero, joten se kasvaa itsestään eikä
-Apple valita kaksoiskappaleesta. Näkyvän versionumeron (nyt 0.1.0) voi
+Apple valita kaksoiskappaleesta. Näkyvän versionumeron (nyt 0.2.0) voi
 nostaa käsin tiedostossa `ios/project.yml` (`MARKETING_VERSION`), kun
 kuoreen tulee jotain kerrottavaa.
 
@@ -321,6 +420,69 @@ Jos jokin näistä kompastuu, virhe näkyy ajon lokissa selkokielisenä ja
 korjaus on yhden rivin muutos — mutta kannattaa varata ensimmäiselle
 kerralle rauhallinen hetki eikä yrittää sitä kiireessä.
 
+## Version 0.2.0 riskit ensimmäisessä käännöksessä
+
+Tämä on rehellinen lista, koska version 0.2.0 muutokset osuvat juuri
+siihen kohtaan putkea, jota ei voi kokeilla ilman Macia ja Apple-tiliä:
+**uudet oikeudet (entitlements) ja uusi widget-kohde**. Koodi kääntyy tai
+ei käänny, sen kertoo savukoeajo minuuteissa — mutta *allekirjoitus*
+selviää vasta oikeassa TestFlight-ajossa.
+
+Jos ensimmäinen ajo kaatuu, se kaatuu todennäköisesti johonkin näistä.
+Yksikään ei riko mitään pysyvästi, ja jokainen on korjattavissa.
+
+**1. Uudet oikeudet eivät ole päällä sovelluksen tunnisteessa.**
+Virhe näyttää tältä: *"Provisioning profile ... doesn't include the
+com.apple.developer.ubiquity-kvstore-identifier entitlement"* (tai
+`application-groups`, `game-center`, `aps-environment`).
+Pilviallekirjoitus osaa yleensä kytkeä oikeudet päälle itse, mutta ei
+aina — etenkään App Groupia, joka pitää myös *luoda* ennen kuin siihen
+voi liittyä. Korjaus käsin, kerran:
+
+- **developer.apple.com/account → Identifiers → App Groups → +**, tunnus
+  `group.fi.matkakirja.peli`, kuvaus `Matkakirja`;
+- **Identifiers → fi.matkakirja.peli → Capabilities**: rasti kohtiin
+  *iCloud* (Key-value storage riittää), *App Groups* (ja valitse yllä
+  luotu ryhmä), *Game Center*, *Push Notifications*;
+- **Save**, ja aja ajo uudestaan.
+
+**2. Widgetin tunnistetta ei ole olemassa.** Widget on Applelle oma
+sovellus omalla tunnisteellaan `fi.matkakirja.peli.widget`. Automaattinen
+allekirjoitus luo sen yleensä itse ensimmäisellä ajolla; jos ei, se
+tehdään samalla tavalla käsin (*Identifiers → + → App IDs → App*,
+Explicit `fi.matkakirja.peli.widget`) ja siihen lisätään **App Groups**.
+
+**3. `aps-environment: production` ja TestFlight.** Tämä on oikea arvo
+App Store- ja TestFlight-paketeille. Se ei estä mitään, mutta se vaatii
+että Push Notifications on päällä tunnisteessa (kohta 1). Ilmoituksia ei
+tule kummassakaan tapauksessa, koska lähetyspäätä ei ole.
+
+**4. Widget kääntyy mutta ei näy kotinäytöllä.** Silloin paketti on
+kunnossa mutta App Group -oikeus puuttuu joko sovellukselta tai
+widgetiltä, ja widget lukee tyhjää. Tuntomerkki: widgetin voi lisätä
+kotinäytölle, mutta siinä lukee ikuisesti "Matka ei ole alkanut".
+Sama korjaus kuin kohdassa 1, molemmille tunnisteille.
+
+**5. Siri-fraasit iOS 16.0–16.3.** Valmiit puhefraasit vaativat iOS
+16.4:n. Sitä vanhemmissa aikeet toimivat Oikotiet-sovelluksessa, mutta
+Siri ei tunnista fraaseja ilman että pelaaja tekee oikotien itse. Tämä
+koskee hyvin pientä joukkoa laitteita eikä sitä kannata korjata
+nostamalla koko kuoren alarajaa.
+
+**6. Widget-kohde ja versionumerot.** App Store Connect hylkää latauksen,
+jos widgetin ja sovelluksen versionumerot eroavat. Molemmat lukevat samat
+arvot `ios/project.yml`:stä, ja savukoeajo tarkistaa täsmäyksen — mutta
+jos joskus lisää widgetin Info.plistiin kovan versionumeron, tämä
+räjähtää vasta lähetysvaiheessa.
+
+**7. Ensimmäinen käännös on pidempi.** Widget on toinen kohde, joten
+mac-ajurin minuutteja kuluu enemmän kuin ennen. Se ei ole vika.
+
+Mitä EI voi mennä rikki: peli. Kuori hakee pelin verkosta kuten ennenkin,
+eikä yksikään uusi silta ole pelin toiminnan edellytys. Jos koko 0.2.0
+osoittautuisi hankalaksi, edellinen TestFlight-versio on yhä testaajien
+puhelimissa.
+
 ## Macilla tekeminen (tekninen muistilista)
 
 ```
@@ -338,17 +500,27 @@ asetukset ovat luettavassa muodossa tiedostossa `ios/project.yml`.
 
 | Tiedosto | Mitä |
 | --- | --- |
-| `project.yml` | Xcode-projektin määrittely (XcodeGen) |
-| `Matkakirja/MatkakirjaSovellus.swift` | Sovelluksen käynnistys |
-| `Matkakirja/Asetukset.swift` | Pelin osoitteen lukeminen |
+| `project.yml` | Xcode-projektin määrittely (XcodeGen), molemmat kohteet |
+| `Matkakirja/MatkakirjaSovellus.swift` | Sovelluksen käynnistys + APNs-delegaatti |
+| `Matkakirja/Asetukset.swift` | Pelin osoitteen lukeminen, sillan versionumero |
 | `Matkakirja/Selain/PeliSelain.swift` | Selain, lataus, virhetilat, linkit |
-| `Matkakirja/Selain/NatiiviSilta.swift` | Sillat pelin JavaScriptiin |
+| `Matkakirja/Selain/NatiiviSilta.swift` | Sillat pelin JavaScriptiin (komentojen jako) |
 | `Matkakirja/Selain/LuentaSilta.swift` | Teksti puheeksi |
 | `Matkakirja/Selain/SaneluSilta.swift` | Puhe tekstiksi |
+| `Matkakirja/Selain/TalleSilta.swift` | Tallennussynkka iCloudin kautta |
+| `Matkakirja/Selain/HaptiikkaSilta.swift` | Tuntopalaute |
+| `Matkakirja/Selain/JakoSilta.swift` | Tekstin ja kuvan jakaminen |
+| `Matkakirja/Selain/PelikeskusSilta.swift` | Game Center: kirjautuminen ja saavutukset |
+| `Matkakirja/Selain/WidgetSilta.swift` | Pelin tila widgetille |
+| `Matkakirja/Selain/IlmoitusSilta.swift` | Push-lupa ja laitetunnus (ei lähetystä) |
 | `Matkakirja/Selain/natiivi-silta.js` | Rajapinta pelin puolella + sen ohje |
-| `Matkakirja/Nakymat/` | Lataus-, virhe- ja asetusnäkymät |
+| `Matkakirja/Aikeet/MissaOlenAie.swift` | Siri: "Missä olen Matkakirjassa" |
+| `Matkakirja/Nakymat/` | Lataus-, virhe- ja asetusnäkymät + värit |
 | `Matkakirja/Resurssit/Config.plist` | **Pelin osoite** |
 | `Matkakirja/Resurssit/Info.plist` | Nimi, luvat, asennot |
+| `Matkakirja/Resurssit/Matkakirja.entitlements` | Oikeudet: iCloud, App Group, Game Center, push |
+| `Yhteinen/JaettuPelitila.swift` | Sovelluksen ja widgetin yhteinen tila-varasto |
+| `MatkakirjaWidget/` | Kotinäyttöwidget (oma laajennuskohteensa) |
 | `Gemfile`, `Gemfile.lock` | Fastlanen versio lukittuna lähetystä varten |
 | `fastlane/Fastfile` | Lähetyskaista TestFlightiin (+ appimerkinnän kokeilu) |
 | `fastlane/Appfile` | Sovelluksen tunniste fastlanelle |

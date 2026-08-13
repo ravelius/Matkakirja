@@ -96,6 +96,31 @@ jobs:
           echo "--- Pelin osoite ---"
           plutil -extract PELIN_OSOITE raw "$paketti/Config.plist"
 
+          # Widget on oma laajennuksensa. Se kääntyy omana kohteenaan, mutta
+          # jos upotusvaihe puuttuu, sovellus asentuu ilman widgetiä eikä
+          # kukaan huomaa mitään ennen kuin kotinäytöllä ei ole mitään.
+          # Xcode on siirtämässä laajennuksia PlugIns-kansiosta Extensions-
+          # kansioon, joten katsotaan kummastakin.
+          appex=$(find "$paketti" -maxdepth 2 -name 'MatkakirjaWidget.appex' | head -1)
+          if [ -z "$appex" ]; then
+            echo "PUUTTUU: MatkakirjaWidget.appex — widget ei päätynyt sovellukseen"
+            echo "Sovelluspaketin sisältö:"
+            find "$paketti" -maxdepth 2
+            exit 1
+          fi
+          echo "Widget: $appex"
+          echo "--- Widget ---"
+          plutil -extract NSExtension.NSExtensionPointIdentifier raw "$appex/Info.plist"
+          # Version on täsmättävä sovelluksen kanssa, muuten App Store Connect
+          # hylkää latauksen vasta lähetysvaiheessa.
+          sovellus_versio=$(plutil -extract CFBundleShortVersionString raw "$paketti/Info.plist")
+          widget_versio=$(plutil -extract CFBundleShortVersionString raw "$appex/Info.plist")
+          echo "Sovellus $sovellus_versio / widget $widget_versio"
+          if [ "$sovellus_versio" != "$widget_versio" ]; then
+            echo "Versionumerot eivät täsmää — App Store Connect hylkäisi latauksen."
+            exit 1
+          fi
+
       - name: Talleta käännösloki
         if: always()
         uses: actions/upload-artifact@v4
