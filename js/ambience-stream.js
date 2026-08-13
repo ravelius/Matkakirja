@@ -280,17 +280,28 @@ function vapautaSoitin(audio) {
   audio.aaniMittari = null;
 }
 
+/*
+ * VOLUME-POLUN KORVAUSKERROIN (omistajan havainto 13.8.2026 ilta:
+ * "iPadilla taustaääni kuuluu paljon hiljempaa kuin iPhonella
+ * etusivulla"). Reititetty polku kulkee kompressorin läpi, joka
+ * nostaa äänitteen hiljaisia kohtia; suora volume-polku (mm.
+ * hiljaisuusvahdin varareitti, jolle iPad tyypillisesti päätyy) soi
+ * ilman sitä ja kuulostaa samalla tavoitetasolla selvästi
+ * hiljaisemmalta. Kerroin kuroo eron umpeen — kuulokokeen nuppi.
+ */
+const VOLUME_POLUN_KORVAUS = 1.8;
+
 /** Soittimen nykyinen taso riippumatta siitä, kumpi reitti on käytössä. */
 const lueTaso = (audio) => (audio.aaniVahvistin
   ? audio.aaniVahvistin.gain.value
-  : audio.volume);
+  : audio.volume / VOLUME_POLUN_KORVAUS);
 
 /** Asettaa tason oikeaan paikkaan. Vahvistin sallii yli ykkösen. */
 function asetaTaso(audio, arvo) {
   if (audio.aaniVahvistin) {
     audio.aaniVahvistin.gain.value = Math.max(0, arvo);
   } else {
-    audio.volume = Math.min(1, Math.max(0, arvo));
+    audio.volume = Math.min(1, Math.max(0, arvo * VOLUME_POLUN_KORVAUS));
   }
 }
 
