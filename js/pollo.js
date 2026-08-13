@@ -2364,6 +2364,8 @@ class Pollo {
       this.lopetaSanelu({ laheta: true });
       return;
     }
+    // Uusi napautus saa taas yhden hiljaisen uusinnan (saneluVirhe).
+    this.saneluUusittu = false;
     this.aloitaSanelu();
   }
 
@@ -2497,6 +2499,22 @@ class Pollo {
     // Mikrofonia voi napauttaa myös kirjoitustilassa: rivi on aina
     // esillä, joten sanelu palauttaa kentän piiloon.
     if (this.tila !== 'sanelu') this.vaihdaTilaan('sanelu');
+    /*
+     * Edellinen tunnistin puretaan AINA ennen uutta (omistajan iPad
+     * 13.8.2026: "mikrofonia ei löydy vaikka lupa on annettu ja
+     * aiemmin toimi" — ja tilapalkin mikkimerkki paloi yhä). Jumiin
+     * jäänyt istunto pitää mikrofonia hallussaan, ja seuraava start
+     * kaatuu audio-captureen niin kauan kuin vanha elää.
+     */
+    if (this.tunnistin) {
+      const vanha = this.tunnistin;
+      this.tunnistin = null;
+      try {
+        vanha.abort();
+      } catch {
+        /* oli jo pysähtynyt */
+      }
+    }
     let tunnistin;
     try {
       tunnistin = new Tunnistus();
@@ -2568,8 +2586,23 @@ class Pollo {
     }
     const tunnistin = this.tunnistin;
     if (!tunnistin) return;
-    if (!laheta) this.tunnistin = null;
     this.merkitseMikki(false);
+    if (!laheta) {
+      /*
+       * Lähettämätön lopetus vapauttaa mikrofonin HETI: stop() jää
+       * odottamaan lopputulosta ja voi iOS:lla jättää istunnon
+       * roikkumaan (mikkimerkki paloi tilapalkissa ja seuraava
+       * käynnistys kaatui audio-captureen). Abortilta ei odoteta
+       * mitään — siksi se on tässä oikea työkalu.
+       */
+      this.tunnistin = null;
+      try {
+        tunnistin.abort();
+      } catch {
+        /* tunnistin oli jo pysähtynyt */
+      }
+      return;
+    }
     try {
       tunnistin.stop();
     } catch {
@@ -2595,6 +2628,20 @@ class Pollo {
       return;
     }
     if (koodi === 'audio-capture') {
+      /*
+       * iOS voi hylätä kaappauksen hetkellisesti, kun edellinen
+       * äänisessio (sanelu, luenta, ambienssi) on vasta vapautumassa.
+       * Yksi hiljainen uusinta pienen tauon jälkeen hoitaa ohimenevän
+       * tilan; vasta toinen peräkkäinen epäonnistuminen näytetään
+       * pelaajalle. Lippu nollataan mikkinapin napautuksessa.
+       */
+      if (!this.saneluUusittu) {
+        this.saneluUusittu = true;
+        setTimeout(() => {
+          if (this.auki && this.tila === 'sanelu' && !this.tunnistin) this.aloitaSanelu();
+        }, 400);
+        return;
+      }
       this.saneluTila.textContent = 'Mikrofonia ei löytynyt.';
       this.vaihdaTilaan('kirjoitus');
       return;
