@@ -6294,6 +6294,39 @@ body.katselu #newgame-btn { display: none; }
 }
 
 /*
+ * Pieni tekstinkorkuinen päivitysnappi versionumeron vasemmalla
+ * puolella (omistaja 13.8.2026: "versionumeron vasemmalle laitaan
+ * voisi tehdä pienen päivitysnapin, tekstin korkuisen"). Sama
+ * kirjasinkoko kuin numerolla ja ohut reunus, jotta se lukee napiksi
+ * muttei kilpaile valikon isompien painikkeiden kanssa.
+ */
+.versio-paivitys {
+  min-height: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.15rem 0.45rem;
+  background: none;
+  border: 1px solid rgba(230, 214, 178, 0.3);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.versio-paivitys .viiva-ikoni { display: inline-flex; }
+.versio-paivitys .viiva-ikoni svg { width: 0.9em; height: 0.9em; }
+
+.paavalikko .versio-paivitys:hover:not(:disabled),
+.paavalikko .versio-paivitys:focus-visible {
+  background: none;
+  color: var(--ink-light);
+  border-color: var(--accent);
+}
+
+/*
  * Tuore päivitys korostuu (omistajan toive 9.8.2026): numero on
  * ensimmäisen puolen minuutin ajan selvästi isompi ja tummempi,
  * sitten se kutistuu tavalliseksi pehmeällä siirtymällä.
