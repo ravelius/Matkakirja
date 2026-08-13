@@ -1156,10 +1156,10 @@
        * monellako on lehtiaiheet (x/y maata). Kaikki osat = vanha
        * täydellisyysmitta (jokainen osa koossa), palkki sen mukaan.
        */
-      /* Osuus ensimmäiseksi (omistajan tilaus 13.8.2026): edistymä on
-       * se, mitä taulusta ensimmäisenä katsotaan — puhelimella loput
-       * sarakkeet rullaavat sen perässä. */
-      for (const t of ['Osuus', 'Lauta', 'Kaupunkeja', 'Tekstit', 'Kaupunkilehdet', 'Maalehdet', 'Kaikki osat']) {
+      /* Osuus heti Laudan jälkeen (omistajan tarkennus 13.8.2026 illalla,
+       * kumoaa aamun "ensimmäiseksi"-linjan): nimi ensin, edistymä sen
+       * rinnalla. Lukusarakkeet näyttävät maksiminsa kauttaviivalla. */
+      for (const t of ['Lauta', 'Osuus', 'Kaupunkeja', 'Tekstit', 'Kaupunkilehdet', 'Maalehdet', 'Kaikki osat']) {
         const th = el('th', t === 'Lauta' ? '' : 'num', t);
         otsikko.append(th);
       }
@@ -1201,6 +1201,7 @@
           (summa, c) => summa + (OSAT.length - puuttuvat(c, p).length), 0);
         const osuus = osiaYhteensa ? Math.round((osiaKoossa / osiaYhteensa) * 100) : 0;
         const tr = el('tr');
+        tr.append(el('td', '', p.id));
         const td = el('td', 'num');
         td.append(el('span', '', `${osuus} %`));
         const palkki = el('div', osuus === 100 ? 'palkki taysi' : 'palkki');
@@ -1209,12 +1210,17 @@
         palkki.append(i);
         td.append(palkki);
         tr.append(td);
-        tr.append(el('td', '', p.id));
-        tr.append(el('td', 'num', String(p.cities.length)));
-        tr.append(el('td', 'num', String(tekstit)));
-        tr.append(el('td', 'num', String(lehdet)));
+        /*
+         * Maksimi kauttaviivalla joka lukuun (omistajan tilaus
+         * 13.8.2026): pelkkä "15" ei kerro, onko työ puolivälissä vai
+         * lopussa. Kaupunkeja-sarake on itse maksimi ja jää paljaaksi.
+         */
+        const kaupunkeja = p.cities.length;
+        tr.append(el('td', 'num', String(kaupunkeja)));
+        tr.append(el('td', 'num', `${tekstit}/${kaupunkeja}`));
+        tr.append(el('td', 'num', `${lehdet}/${kaupunkeja}`));
         tr.append(el('td', 'num', maat.size ? `${lehtimaat}/${maat.size}` : '—'));
-        tr.append(el('td', 'num', String(valmiit)));
+        tr.append(el('td', 'num', `${valmiit}/${kaupunkeja}`));
         runko.append(tr);
       }
       taulu.append(runko);
@@ -1314,6 +1320,11 @@
         kaari: KAARI_TEKSTIT.has(c.id),
         sivuja: 1 + (kansi ? 1 : 0) + aihesivut + (elama ? 1 : 0)
           + (menovinkit ? 1 : 0),
+        // Maalehden tila kaupungin maan kautta (omistajan tilaus
+        // 13.8.2026). Sama maa toistuu naapurikaupungeilla — se on
+        // tarkoitus, rivi kertoo kaupungin näkökulman.
+        maaNimi: iso ? (paalauta.map?.countryShapes?.[iso]?.nimi ?? iso) : null,
+        maaAiheita: iso ? (maaKategoriat[iso] ?? []).length : 0,
       };
     }
 
@@ -1322,7 +1333,8 @@
       const taulu = el('table', 'lehtitaulu');
       const otsikko = el('tr');
       const sarakkeet = [['Kaupunki', ''], ['Merkintä', ''], ['Kansi', 'num'],
-        ['Aihesivut', 'num'], ['Nähtävyysjutut', 'num'], ['Sivuja yht.', 'num']];
+        ['Aihesivut', 'num'], ['Nähtävyysjutut', 'num'], ['Sivuja yht.', 'num'],
+        ['Maalehti', '']];
       for (const [nimi, luokka] of sarakkeet) otsikko.append(el('th', luokka, nimi));
       taulu.append(el('thead').appendChild(otsikko).parentNode);
       const runko = el('tbody');
@@ -1343,6 +1355,10 @@
         tr.append(el('td', 'num', l.kohteet == null
           ? '—' : `${l.jutut}/${l.kohteet}`));
         tr.append(el('td', 'num', String(l.sivuja)));
+        // Maalehti toistuu saman maan kaupungeilla tarkoituksella:
+        // rivi kertoo, mitä TÄMÄN kaupungin pelaaja saa avattua.
+        tr.append(el('td', '', l.maaNimi
+          ? `${l.maaNimi}${l.maaAiheita ? ` ✓ ${l.maaAiheita}` : ' —'}` : '—'));
         runko.append(tr);
       }
       taulu.append(runko);
@@ -1379,8 +1395,10 @@
         + 'Nähtävyysjutut = montako kohdekartan kohdetta avaa oman '
         + 'jutun. Sivuja yht. = etusivu + kansiosio + aihesivut + '
         + 'lehtikaupungin lainaama menovinkit-sivu, eli sama luku kuin '
-        + 'peli lehteä selatessa näyttää. Maalehti (maan sivut ja '
-        + 'numerot) on oma lehtensä eikä kuulu näihin lukuihin.');
+        + 'peli lehteä selatessa näyttää. Maalehti = kaupungin maan oma '
+        + 'lehti ja sen aihesivujen määrä; sama maa toistuu '
+        + 'naapurikaupungeilla tarkoituksella. Maalehden sivut eivät '
+        + 'kuulu Sivuja yht. -lukuun.');
       kohde.replaceChildren(...osiot, selite);
     }
 
