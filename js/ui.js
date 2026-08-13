@@ -2945,9 +2945,13 @@ export class UI {
        * sokeaksi juuri tälle vialle).
        */
       const kortti = this.arrivalDialog.querySelector('.dialog-card');
+      const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      // Sama leveyssääntö kuin mitoitaArkissa: alle 700 koko ruutu,
+      // muuten 100vw − 6rem katolla 960 (leveä työpöytä EI ole vika).
+      const odotettu = nyt < 700 ? nyt : Math.min(nyt - 6 * rem, 960);
       const kapea = this.arrivalDialog.classList.contains('arkki')
         && (kortti?.offsetWidth ?? 0) > 0
-        && kortti.offsetWidth < nyt * 0.8;
+        && kortti.offsetWidth < odotettu * 0.9;
       if (nyt === this.nakymanLeveys && !kapea) return;
       this.nakymanLeveys = nyt;
       this.elvytaNakyma();
@@ -2971,10 +2975,23 @@ export class UI {
     const leveys = this.nakymanLeveys || this.mittaaNakyma();
     if (!leveys || leveys < NAKYMAN_VAHIMMAISLEVEYS) return;
     const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
-    const px = `${Math.round(leveys - 1.6 * rem)}px`;
+    /*
+     * Sama haarautuma kuin CSS:n media queryissä, mutta TODELLISESTA
+     * mitasta laskettuna: kapea ruutu (<700) saa arkin koko ruudun
+     * levyisenä, leveä 100vw − 6rem katolla 960 px. Myös max-width
+     * kirjoitetaan: jumiutunut viewportti voi pitää puhelimen
+     * 100vw-katon voimassa, ja pelkkä width jäisi sen alle.
+     */
+    const px = leveys < 700
+      ? `${leveys}px`
+      : `${Math.min(Math.round(leveys - 6 * rem), 960)}px`;
     dialog.style.width = px;
+    dialog.style.maxWidth = px;
     const kortti = dialog.querySelector('.dialog-card');
-    if (kortti) kortti.style.width = px;
+    if (kortti) {
+      kortti.style.width = px;
+      kortti.style.maxWidth = px;
+    }
   }
 
   /** Asettelu uusiksi oikealla mitalla. Kutsutaan vain kun mitta on kelvollinen. */
@@ -12006,8 +12023,12 @@ export class UI {
     // CSS:n varaan, ettei vanha pikselileveys jää seuraavan avauksen
     // tai muun dialogikäytön tielle.
     this.arrivalDialog.style.width = '';
+    this.arrivalDialog.style.maxWidth = '';
     const arkkiKortti = this.arrivalDialog.querySelector('.dialog-card');
-    if (arkkiKortti) arkkiKortti.style.width = '';
+    if (arkkiKortti) {
+      arkkiKortti.style.width = '';
+      arkkiKortti.style.maxWidth = '';
+    }
     if (this.arrivalDialog.open) this.arrivalDialog.close();
     // Tauolle jäänyt luenta jatkuu, kun palataan karttanäkymään — mutta
     // ei tietovisan tai kaksintaistelun päälle (Tutki paikka -polku).
