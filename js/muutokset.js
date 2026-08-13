@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 607, teksti: 'Kartan tarkkuus, kapeat alanapit, latausruutu ensipiirtoon' },
   { v: 606, teksti: 'Saatiedot viidelle Lahi-idan kaupungille' },
   { v: 605, teksti: 'Linkit vain tekstissä, valikko viimeistelty, edistymämittari' },
   { v: 604, teksti: 'Damaskoksen kaupunkilehti ja kuusi nahtavyysjuttua' },

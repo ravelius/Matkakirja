@@ -53,9 +53,25 @@
 }
 
 /* Pelin oma runko pysyy piilossa, kunnes se on rakennettu: puoliksi
-   valmis näkymä ei saa vilkkua päivitysruudun alta. */
+   valmis näkymä ei saa vilkkua latausruudun alta. */
 body.paivittyy .app,
 body.paivittyy .rotate-guard { visibility: hidden; }
+
+/*
+ * Häivytys valmiin näkymän päältä (js/main.js paataPaivitysruutu).
+ * Kesto on sama luku kuin siellä: LATAUSRUUDUN_HAIPYMA_MS. Peli on jo
+ * maalattu ruudun alla, joten häivytyksen läpi paljastuu valmis
+ * kartta eikä rakentumaton runko.
+ */
+.paivitysruutu.latausruutu-haipyy {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 280ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paivitysruutu.latausruutu-haipyy { transition: none; }
+}
 
 :root {
   /* Sovelluksen kehys */
@@ -4299,6 +4315,20 @@ body.flight-active .grain { display: none; }
   transition: opacity 0.28s ease;
 }
 
+/*
+ * SUMENNUS SEURAA TODELLISTA TILAA, EI SITÄ ETTÄ JOKU MUISTAA SIIVOTA.
+ *
+ * Kalvo on ainoa koko kartan peittävä sumennus pelissä, ja se elää
+ * DOM-elementtinä: jos lennon animaatioketju katkeaa (poikkeus, kesken
+ * jäänyt odotus), elementti jää paikalleen ja kartta näyttää
+ * kauttaaltaan sumealta ilman että mitään on auki. Tämä sääntö tekee
+ * siitä mahdotonta — kalvo näkyy vain silloin kun lento on merkitty
+ * käynnissä olevaksi (body.flight-active) tai kun se on juuri
+ * häipymässä (.flight-leaving, jonka js/ui.js lisää samassa
+ * synkronisessa lohkossa, jossa se poistaa lipun).
+ */
+body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
+
 /* Repliikki ja Astu mantereelle -nappi samassa alaosassa: asettelu
  * hoituu virtauksella, joten napin osumakohta on aina siinä missä nappi
  * näkyy.
@@ -5980,6 +6010,24 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
     padding: 0.3rem;
   }
 
+  /*
+   * ALANAPPIRIVI EI VIE KOKO LEVEYTTÄ PUHELIMELLA.
+   *
+   * Omistajan havainto 13.8.2026 iPhonella: kolme nappia
+   * (Matkustustavat | Pöllö | Tutki) venyivät lähes ruudun levyisiksi
+   * ja näyttivät raskailta — kuvake keskellä ja tyhjää molemmin puolin.
+   * Kavennus tehdään RIVILLE eikä yksittäisille napeille, koska
+   * matkanappien liuku on rivin lapsi (inset: 0): jos vain peruspaikat
+   * kapenisivat, liuku jäisi leveäksi eikä osuisi enää niiden päälle.
+   *
+   * 15rem jättää kullekin napille noin 70 pikseliä — reilusti sormen
+   * mitta, mutta rivi hengittää kartan päällä. iPadille ja työpöydälle
+   * tämä ei yllä: media-ehto rajaa sen puhelimiin.
+   */
+  .toimintorivi {
+    width: min(100%, 15rem);
+    margin-inline: auto;
+  }
 
   /* Kelluva päiväkirja levenee kaistaleeksi kartan ylle: 46 % leveydestä
    * olisi puhelimella liian kapea luettavaksi. */
@@ -11116,33 +11164,53 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
 </style>
 
 <!--
-    PÄIVITYSRUUTU (omistajan havainto 13.8.2026).
+    LATAUSRUUTU (omistajan havainto 13.8.2026, tarkennettu samana
+    päivänä iPhonella).
 
-    Kun palvelutyöntekijä vaihtaa version, sivu ladataan uudelleen. Sen
-    aikana ruudulla vilahti pelin rakentumaton runko: tyhjiä tummia
-    kehyksiä ilman karttaa, ilman logoa, ilman selitystä. Nyt sen
-    tilalla on siisti tumma ruutu, jossa on pelin logo ja yksi rivi
-    tekstiä.
+    Sivun rakentumaton runko on ruma: tyhjiä tummia kehyksiä ilman
+    karttaa, ilman logoa, ilman selitystä. Sen tilalla on siisti tumma
+    ruutu, jossa on pelin logo ja yksi rivi tekstiä.
 
-    Ruutu on oletuksena piilossa eikä se hidasta tavallista
-    käynnistystä millään tavalla: alla oleva pikkuskripti näyttää sen
-    VAIN jos päivitys merkitsi lipun sessionStorageen ennen
-    uudelleenlatausta (js/main.js merkitsePaivitys). Skripti on tässä
-    eikä moduulissa, koska sen on ehdittävä ruudulle ennen kuin
-    js/main.js on edes ladattu.
+    RUUTU NÄYTETÄÄN AINA, EI VAIN PÄIVITYKSESSÄ. Ensin se oli vain
+    palvelutyöntekijän version vaihdolle, mutta omistaja näki iPhonella
+    saman rakentumattoman rungon myös tavallisessa kylmäkäynnistyksessä
+    — natiivikuoren "Avataan matkakirjaa…" väistyi ja sen jälkeen
+    vilahti vielä vanha välitila. Siksi teksti on kylmäkäynnistyksessä
+    sama kuin kuoressa (ios/.../PeliNakyma.swift LatausNakyma): kuoresta
+    selaimeen siirtyminen ei enää näy pelaajalle lainkaan. Päivityksessä
+    teksti kertoo päivityksestä, koska se kestää kauemmin.
+
+    Ruutu ei hidasta käynnistystä: se on yksi näytä/piilota-pari ilman
+    latauksia (logo on samassa välimuistissa kuin pelin muutkin kuvat).
+    Skripti on tässä eikä moduulissa, koska sen on ehdittävä ruudulle
+    ennen kuin js/main.js on edes ladattu.
+
+    Poiston hoitaa js/main.js paataPaivitysruutu VASTA kun pelin oma
+    näkymä on rakennettu ja maalattu. Varaventtiili alla on sitä
+    varten, ettei ruutu jää peittämään peliä, jos moduuli ei koskaan
+    lataudu (verkkovirhe, rikkinäinen välimuisti).
   -->
   <div id="paivitysruutu" class="paivitysruutu" role="status" hidden>
     <img class="paivitysruutu-logo" src="assets/logo.png" width="720" height="176"
          alt="Matkakirja ja unohdettu aarre" decoding="async">
-    <p class="paivitysruutu-teksti">Päivitetään, odota hetki…</p>
+    <p class="paivitysruutu-teksti">Avataan matkakirjaa…</p>
   </div>
   <script>
-    try {
-      if (sessionStorage.getItem('matkakirja-paivittyy') === '1') {
-        document.body.classList.add('paivittyy');
-        document.getElementById('paivitysruutu').hidden = false;
-      }
-    } catch (e) { /* yksityinen selaus: ruutu jää näyttämättä */ }
+    (function () {
+      var ruutu = document.getElementById('paivitysruutu');
+      document.body.classList.add('paivittyy');
+      ruutu.hidden = false;
+      try {
+        if (sessionStorage.getItem('matkakirja-paivittyy') === '1') {
+          ruutu.querySelector('.paivitysruutu-teksti').textContent = 'Päivitetään, odota hetki…';
+        }
+      } catch (e) { /* yksityinen selaus: teksti jää oletukseen */ }
+      setTimeout(function () {
+        if (ruutu.hidden) return;
+        ruutu.hidden = true;
+        document.body.classList.remove('paivittyy');
+      }, 10000);
+    }());
   </script>
   <!--
     iOS ei tue screen.orientation.lockia, joten vaaka-asento estetään
@@ -147985,28 +148053,12 @@ class Pollo {
     const syote = polloElementti('div', 'pollo-syote');
 
     /*
-     * KEHITTÄJÄKOODI. Näkyy vain pelin kehittäjätilassa (sama
-     * localStorage-lippu kuin muullakin kehittäjätilalla). Koodi jää
-     * laitteelle ja lähtee otsakkeessa välityspalvelimelle, joka
-     * ohittaa sillä käyttörajat. Koodia ei ole repossa eikä pelin
-     * koodissa — tämä on pelkkä kenttä sen syöttämiseen.
+     * Erillistä kehittäjäkoodikenttää ei enää ole (omistajan päätös
+     * 13.8.2026): kehittäjätilan avauskoodi talletetaan kytkennän
+     * yhteydessä (js/main.js) ja lähtee otsakkeessa automaattisesti.
+     * Rajattu koodi 1122 avaa kehittäjätilan ilman pöllön rajojen
+     * ohitusta, eikä se koskaan päädy otsakkeeseen.
      */
-    const koodiRivi = polloElementti('div', 'pollo-kehittaja');
-    koodiRivi.hidden = true;
-    const koodi = polloElementti('input', 'pollo-kehittaja-kentta');
-    koodi.type = 'password';
-    koodi.autocomplete = 'off';
-    koodi.placeholder = 'kehittäjäkoodi';
-    koodi.setAttribute('aria-label', 'Pöllön kehittäjäkoodi');
-    koodi.maxLength = 100;
-    koodi.value = polloAsetus(POLLO_KEHITTAJAKOODI_AVAIN);
-    koodi.addEventListener('input', () => {
-      polloTallenna(POLLO_KEHITTAJAKOODI_AVAIN, koodi.value.trim());
-    });
-    koodiRivi.appendChild(koodi);
-    this.kehittajaRivi = koodiRivi;
-    this.kehittajaKentta = koodi;
-    syote.appendChild(koodiRivi);
 
     /*
      * Tilarivi kertoo vain sen mitä juuri nyt tapahtuu: "Kuuntelen…",
@@ -148293,7 +148345,6 @@ class Pollo {
     if (!this.virta.querySelector('.pollo-viesti')) this.lisaaViesti('pollo', TERVEHDYS);
     // Kehittäjätila voi vaihtua kesken pelin, joten kenttä katsotaan
     // joka avauksella eikä kerran käynnistyksessä.
-    this.kehittajaRivi.hidden = !polloKehittajaTila();
     this.naytaSyote();
     // Indeksi rakennetaan laiskasti ensimmäisellä avauksella, ei pelin
     // käynnistyksessä. Ehdotushaku odottaa sen valmistumista.
@@ -149003,6 +149054,24 @@ function polloSulje() {
 function asennaPollo(haeUi, asetukset = {}) {
   if (typeof document === 'undefined') return null;
   nykyinenPollo = new Pollo(haeUi, asetukset);
+  /*
+   * ALANAPPIRIVI ON USEIN PIIRRETTY JO ENNEN ASENNUSTA.
+   *
+   * main.js palauttaa kesken jääneen pelin (attach → mount → render)
+   * ennen kuin se asentaa pöllön, joten piirraToimintorivin
+   * polloAnkkuri-kutsu osui tyhjään: rivin keskimmäinen paikka jäi
+   * tyhjäksi ja nappi kiinnittyi bodyyn kelluvana (.pollo-kelluu).
+   * Työpöydällä se näkyi ruudun oikeassa alakulmassa väärässä
+   * kohdassa, ja korjautui vasta ensimmäisessä kaupunginvaihdossa,
+   * jolloin rivi piirretään uudelleen (omistajan havainto 13.8.2026).
+   *
+   * Paikka luetaan siis suoraan DOMista, jos se on jo olemassa — sama
+   * lopputulos kuin kaupunginvaihdon piirrossa, ilman että
+   * käynnistysjärjestykseen tarvitsee koskea.
+   */
+  const doc = asetukset.doc ?? document;
+  const paikka = doc.querySelector('.pollo-paikka');
+  if (paikka) nykyinenPollo.ankkuroi(paikka);
   // Savukkeet ja kehitys tarvitsevat kahvan; peli itse ei käytä tätä.
   window.matkakirjaPollo = nykyinenPollo;
   return nykyinenPollo;
@@ -151880,6 +151949,8 @@ class UI {
     clearTimeout(this.lentoTekstiAjastin);
     clearTimeout(this.zoomAlkuAjastin);
     clearTimeout(this.zoomTaustaAjastin);
+    // Ajastettu tarkkuustarkistus rasteroisi kuolleen pelin karttaa.
+    clearTimeout(this.tarkkuusAjastin);
     if (this.previewFrame) cancelAnimationFrame(this.previewFrame);
     for (const timer of Object.values(this.typeTimers ?? {})) clearTimeout(timer);
     this.stopQuizTimer();
@@ -152047,6 +152118,12 @@ class UI {
       'viewBox',
       `${box.x + box.w / 2 - vw / 2} ${vy} ${vw} ${vh}`,
     );
+    /*
+     * Tarkkuustarkistus ajastetaan JOKAISESTA fitViewBoxista, myös
+     * lähikuvien haaroista. taydennaTaide sietää viidenneksen eron, ja
+     * juuri siihen väliin sumea kartta jäi (ks. tarkistaTarkkuus).
+     */
+    this.ajastaTarkkuustarkistus();
     // Aloituskartan lähikuva hoitaa oman rajauksensa ja kokonsa.
     if (this.aloitusZoom && alkuun) {
       this.sovitaAloitusZoom(w, h);
@@ -152414,29 +152491,73 @@ class UI {
    * eikä mikään pyydä niitä uudestaan. Kartta näyttää venytetyltä.
    *
    * Tämä vahti vertaa ruutujen mittakaavaa siihen, mikä kartalla
-   * oikeasti on, aina kun peli palaa näkyviin. Kynnys on tiukempi kuin
-   * täydennyksen oma (2 % eikä 20 %), koska tässä ei olla kesken
-   * eleen: pieni ero tarkoittaa juuri sitä väärää tarkkuutta.
+   * oikeasti on. Kynnys on tiukempi kuin täydennyksen oma (2 % eikä
+   * 20 %), koska tässä ei olla kesken eleen: pieni ero tarkoittaa juuri
+   * sitä väärää tarkkuutta.
    *
-   * Vahti ei korjaa syytä vaan seurauksen — juurisyytä ei ole saatu
-   * toistettua kehityskoneella. Uudelleenrasterointi maksaa muutaman
-   * ruudun verran työtä ja tapahtuu vain kun ero on todellinen.
+   * JUURISYY LÖYTYI 13.8.2026 (omistaja: "kartta on kauttaaltaan sumea
+   * ilman avointa ikkunaa"). Kesken jäänyt peli palautetaan latauksessa,
+   * ja mountissa tapahtuu tämä järjestys:
+   *
+   *   fitViewBox  → mittakaava A → requestAnimationFrame rasteroi A:lla
+   *   ResizeObserver laukeaa heti observen jälkeen
+   *   fitViewBox  → mittakaava B (alakaista korteille muuttaa korkeutta)
+   *
+   * Mitattuna A oli 0,805 ja B 0,886 eli ero 10 %. taydennaTaide sietää
+   * viidenneksen, joten se EI pyytänyt uutta sarjaa — ja koska
+   * yleiskuvassa ei panoroida, mikään ei pyytänyt sitä myöhemminkään.
+   * Kartta jäi venytetyksi ensimmäiseen kaupunginvaihtoon asti. Sama
+   * toistuu jokaisella latauksella, ei vain päivityksen jälkeen.
+   *
+   * Siksi tarkistus ei enää odota välilehden paluuta vaan ajetaan aina
+   * kun näkymä on asettunut (fitViewBox ajastaa sen). Ajastin on siksi,
+   * ettei ikkunan raahaaminen rasteroisi joka pikselillä.
    */
   vahdiTarkkuutta() {
     if (this.tarkkuusVahti) return;
     this.tarkkuusVahti = () => {
-      if (this.dead || document.visibilityState !== 'visible') return;
-      if (!this.taide || !this.taideSkaala) return;
-      const nakyva = this.nakyvaAlue();
-      if (!nakyva) return;
-      const suhde = nakyva.skaala / this.taideSkaala;
-      if (suhde > 1.02 || suhde < 0.98) {
-        // Nollaus pakottaa uuden sarjan: taydennaTaide vertaa tähän.
-        this.taideSkaala = 0;
-        this.taydennaTaide({ heti: true });
-      }
+      if (document.visibilityState !== 'visible') return;
+      this.tarkistaTarkkuus();
     };
     document.addEventListener('visibilitychange', this.tarkkuusVahti);
+  }
+
+  /**
+   * Vastaako rasteroitu mittakaava sitä, jolla kartta oikeasti
+   * piirretään? Jos ei, koko sarja pyydetään uudestaan.
+   *
+   * Ohitetaan tilanteet, joissa mittakaava on hetkellinen eikä ero
+   * kerro sumeudesta: lento, zoomiliuku ja kesken oleva ele. Näissä
+   * tarkistus SIIRRETÄÄN eikä peruta — muuten kartta voisi jäädä
+   * sumeaksi vain siksi, että ajastin sattui osumaan eleen kohdalle.
+   * Jokainen näistä tiloista päättyy, ja päättyessään ajastin laukeaa.
+   */
+  tarkistaTarkkuus() {
+    if (this.dead || !this.taide || !this.taideSkaala) return;
+    if (this.kartanRaahaus
+        || document.body.classList.contains('flight-active')
+        || document.body.classList.contains('zoom-kaynnissa')) {
+      this.ajastaTarkkuustarkistus();
+      return;
+    }
+    const nakyva = this.nakyvaAlue();
+    if (!nakyva) return;
+    const suhde = nakyva.skaala / this.taideSkaala;
+    if (suhde <= 1.02 && suhde >= 0.98) return;
+    // Nollaus pakottaa uuden sarjan: taydennaTaide vertaa tähän.
+    this.taideSkaala = 0;
+    this.taydennaTaide({ heti: true });
+  }
+
+  /**
+   * Sama tarkistus, mutta vasta kun näkymä on lakannut muuttumasta.
+   * fitViewBox voi laueta monta kertaa peräkkäin (ResizeObserver,
+   * ikkunan raahaus, näppäimistön avautuminen), ja jokainen niistä
+   * saisi muuten oman rasterointinsa.
+   */
+  ajastaTarkkuustarkistus(viive = 350) {
+    clearTimeout(this.tarkkuusAjastin);
+    this.tarkkuusAjastin = setTimeout(() => this.tarkistaTarkkuus(), viive);
   }
 
   /**
@@ -164200,6 +164321,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 607, teksti: 'Kartan tarkkuus, kapeat alanapit, latausruutu ensipiirtoon' },
   { v: 606, teksti: 'Saatiedot viidelle Lahi-idan kaupungille' },
   { v: 605, teksti: 'Linkit vain tekstissä, valikko viimeistelty, edistymämittari' },
   { v: 604, teksti: 'Damaskoksen kaupunkilehti ja kuusi nahtavyysjuttua' },
@@ -164890,7 +165012,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.606';
+const APP_VERSION = '2026-08-09.607';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -164921,19 +165043,61 @@ function merkitsePaivitys() {
   // Ruutu esiin jo ennen latausta, jottei vanha näkymä jää tuijottamaan.
   document.body.classList.add('paivittyy');
   const ruutu = document.getElementById('paivitysruutu');
-  if (ruutu) ruutu.hidden = false;
+  if (!ruutu) return;
+  // Ruutu on tässä vaiheessa jo kertaalleen häivytetty pois (peli on
+  // ollut pelattavissa), joten häivytys perutaan ja teksti vaihtuu
+  // päivityksen omaksi: se kestää kauemmin kuin tavallinen avaus.
+  ruutu.classList.remove('latausruutu-haipyy');
+  ruutu.hidden = false;
+  const teksti = ruutu.querySelector('.paivitysruutu-teksti');
+  if (teksti) teksti.textContent = 'Päivitetään, odota hetki…';
 }
 
-/** Päivitysruutu pois, kun peli on rakennettu. */
+/** Latausruudun häivytys millisekunteina. Sama luku on css:ssä. */
+const LATAUSRUUDUN_HAIPYMA_MS = 280;
+
+/**
+ * Latausruutu pois — VASTA kun pelin oma näkymä on maalattu.
+ *
+ * OMISTAJAN HAVAINTO 13.8.2026 (iPhone): "näkyy ensin siisti Avataan
+ * matkakirjaa -ruutu, mutta sen jälkeen vilahtaa vielä vanha ruma
+ * välitila ennen kuin peli piirtyy."
+ *
+ * Syy oli järjestyksessä. Ruutu piilotettiin heti pelin rakentamisen
+ * jälkeen samassa synkronisessa lohkossa, jossa peli rakennettiin:
+ * selain ei ollut vielä maalannut kertaakaan, ja ensimmäinen maalaus
+ * osui hetkeen, jolloin asettelu oli vasta valmistumassa. Pelaaja näki
+ * siis täsmälleen sen rungon, jonka peittämiseksi ruutu on olemassa.
+ *
+ * Nyt vaiheet erotetaan:
+ *
+ *   1. body.paivittyy pois — peli tulee näkyviin ruudun ALLE, mutta
+ *      ruutu on yhä läpinäkymätön sen päällä eikä pelaaja näe mitään.
+ *   2. Kaksi requestAnimationFramea. Ensimmäisen jälkeen selain on
+ *      laskenut asettelun, toisen jälkeen se on myös maalannut sen.
+ *      Vasta silloin ruudun alla on valmis näkymä.
+ *   3. Häivytys, ettei vaihdos nytkähdä, ja piilotus sen päätteeksi.
+ *
+ * Kaksi kehystä on halpa hinta: käynnistys ei hidastu mitattavasti,
+ * eikä mikään odota verkkoa tai kuvia.
+ */
 function paataPaivitysruutu() {
   try {
     sessionStorage.removeItem(PAIVITYS_LIPPU);
   } catch {
     /* ei mitään siivottavaa */
   }
+  // Peli näkyviin ruudun alle. Ruutu itse on yhä täysin peittävä.
   document.body.classList.remove('paivittyy');
   const ruutu = document.getElementById('paivitysruutu');
-  if (ruutu) ruutu.hidden = true;
+  if (!ruutu || ruutu.hidden) return;
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    ruutu.classList.add('latausruutu-haipyy');
+    setTimeout(() => {
+      ruutu.hidden = true;
+      ruutu.classList.remove('latausruutu-haipyy');
+    }, LATAUSRUUDUN_HAIPYMA_MS);
+  }));
 }
 
 /**
@@ -165548,7 +165712,29 @@ paataPaivitysruutu();
  * lapsen kädessä, ei suojata mitään salaista — pelissä ei ole mitään
  * suojattavaa.
  */
-const KEHITTAJA_SALASANA = '5545';
+/*
+ * Kehittäjäkoodit ovat lähdekoodissa vain SHA-256-tiivisteinä (omistajan
+ * toive 13.8.2026): koodia ei voi lukea suoraan koodista. Tämä on
+ * näkösuoja, ei linnoitus — lyhyt koodi on kokeiltavissa läpi — mutta
+ * pöllön rajaton käyttö varmistetaan joka tapauksessa palvelimella
+ * (worker vertaa otsaketta omaan salaisuuteensa). Pääkoodin tiiviste
+ * avaa kehittäjätilan JA tallettaa syötetyn koodin pöllön otsakkeeseen;
+ * rajattu koodi (betatestaajille) avaa vain kehittäjätilan.
+ */
+const KEHITTAJA_TIIVISTE = '2f7f15d0bb83b97a7ce3054be0972e80b60742cfc8b4c36ce06f3330f6f045c6';
+const KEHITTAJA_TIIVISTE_RAJATTU = 'b3282a2f2a28757b3a18ab833de16a9c54518c0b0cf493e3f0a7cf09386f326a';
+async function sha256Hex(teksti) {
+  const data = new TextEncoder().encode(teksti);
+  const puskuri = await crypto.subtle.digest('SHA-256', data);
+  return [...new Uint8Array(puskuri)].map((t) => t.toString(16).padStart(2, '0')).join('');
+}
+const POLLO_KOODIAVAIN = 'matkakirja-pollo-kehittajakoodi';
+function talletaPolloKoodi(koodi) {
+  try {
+    if (koodi) localStorage.setItem(POLLO_KOODIAVAIN, koodi);
+    else localStorage.removeItem(POLLO_KOODIAVAIN);
+  } catch { /* yksityistila: pöllön ohitus jää pois, muu toimii */ }
+}
 const kehittajaDialog = document.getElementById('kehittaja-dialog');
 const kehittajaSalasana = document.getElementById('kehittaja-salasana');
 const kehittajaVirhe = document.getElementById('kehittaja-virhe');
@@ -165604,20 +165790,27 @@ function avaaKehittajaIkkuna() {
   if (!paalla) kehittajaSalasana.focus();
 }
 
-function kytkeKehittaja() {
+async function kytkeKehittaja() {
   if (kehittajaTilaPaalla()) {
     asetaKehittajaTila(false);
+    talletaPolloKoodi('');
     ui?.paivitaKehittajaTila();
     paivitaVersioKulma();
     kehittajaDialog.close();
     return;
   }
-  if (kehittajaSalasana.value.trim() !== KEHITTAJA_SALASANA) {
+  const syote = kehittajaSalasana.value.trim();
+  const tiiviste = await sha256Hex(syote);
+  const taysi = tiiviste === KEHITTAJA_TIIVISTE;
+  if (!taysi && tiiviste !== KEHITTAJA_TIIVISTE_RAJATTU) {
     kehittajaVirhe.hidden = false;
     kehittajaSalasana.value = '';
     kehittajaSalasana.focus();
     return;
   }
+  // Pääkoodi kulkee pöllölle otsakkeessa (worker vertaa salaisuuteensa
+  // ja ohittaa rajat); rajattu koodi ei koskaan lähde otsakkeessa.
+  talletaPolloKoodi(taysi ? syote : '');
   asetaKehittajaTila(true);
   ui?.paivitaKehittajaTila();
   paivitaVersioKulma();
