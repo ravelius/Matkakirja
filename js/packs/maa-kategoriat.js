@@ -54,6 +54,7 @@ const MAAN_GENETIIVIT = {
   Arabiemiirikunnat: 'Arabiemiirikuntien',
   'Etelä-Afrikka': 'Etelä-Afrikan',
   Filippiinit: 'Filippiinien',
+  Grönlanti: 'Grönlannin',
   Irlanti: 'Irlannin',
   Islanti: 'Islannin',
   'Iso-Britannia': 'Ison-Britannian',
@@ -61,9 +62,13 @@ const MAAN_GENETIIVIT = {
   Kreikka: 'Kreikan',
   Kypros: 'Kyproksen',
   Marokko: 'Marokon',
+  'Papua-Uusi-Guinea': 'Papua-Uuden-Guinean',
+  Salomonsaaret: 'Salomonsaarten',
   Suomi: 'Suomen',
   Turkki: 'Turkin',
   Tšekki: 'Tšekin',
+  'Uusi-Seelanti': 'Uuden-Seelannin',
+  Yhdysvallat: 'Yhdysvaltojen',
 };
 
 /**
