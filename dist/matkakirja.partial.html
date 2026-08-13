@@ -3954,8 +3954,10 @@ body.radio-tila .actions {
   100% { stroke: rgba(150, 60, 45, 0.45); stroke-width: 3; }
 }
 
+/* Kesto seuraa js/ui.js AARIVIIVAN_VALAHDYS_MS:ää (omistajan tarkennus
+   13.8.2026: hitaampi välähdys ja häivytys, piirtonopeus ennallaan). */
 .country-borders.maa-valahtaa .country-korostus {
-  animation: maa-aariviivan-valahdys 880ms ease-out;
+  animation: maa-aariviivan-valahdys 1880ms ease-out;
 }
 
 /* Liikeherkkyys: viiva on heti valmis eikä välähdä (js/ui.js ohittaa
@@ -145409,10 +145411,17 @@ class BoardDie {
    * @param {number} value silmäluku, joka jää päälle
    * @param {{x:number,y:number}} from mistä noppa lähtee (paneelin pikselit)
    * @param {{x:number,y:number}} to mihin se jää lepäämään
-   * @param {{onTick?:Function, onLand?:Function, onBounce?:Function, reduced?:boolean}} hooks
+   * @param {{onTick?:Function, onLand?:Function, onBounce?:Function,
+   *          onSettle?:Function, reduced?:boolean}} hooks
+   *
+   * onSettle laukeaa sillä hetkellä, kun noppa lakkaa liikkumasta ja
+   * kallahtaa lopulliselle silmäluvulleen — EI vasta kun koko
+   * animaatiolupaus ratkeaa. Ero on lähes sekunti, ja pysähtymiseen
+   * sidottu haptiikka tuntui juuri sen verran myöhässä (omistajan
+   * havainto 13.8.2026).
    */
   async roll(value, from, to, hooks = {}) {
-    const { onTick, onLand, onBounce, reduced } = hooks;
+    const { onTick, onLand, onBounce, onSettle, reduced } = hooks;
     this.layer.hidden = false;
     const [faceX, faceY] = FACE_ROTATION[value] ?? [0, 0];
 
@@ -145421,6 +145430,7 @@ class BoardDie {
       this.applyRotation(0);
       this.place(to);
       onLand?.();
+      onSettle?.();
       return;
     }
 
@@ -145505,6 +145515,9 @@ class BoardDie {
 
         if (!settled && t >= settleAt) {
           settled = true;
+          // Noppa pysähtyy tässä — pysähtymiseen sidotut koukut (esim.
+          // haptiikka) kuuluvat tähän hetkeen, eivät lupausten häntään.
+          onSettle?.();
           // Lähin vastaava asento, jotta kallahdus on lyhyt ja luonteva.
           const restX = faceX + tilt.x;
           const restY = faceY + tilt.y;
@@ -156146,12 +156159,13 @@ const VALINTAVIHJEEN_VIIVE = 15000;
 const VALINTAVIHJEEN_TEKSTI = 'Napauta korostettua kohdetta kartalla, niin matka jatkuu.';
 /*
  * Maan ääriviivan piirtoanimaatio (animoiMaanAariviiva). Piirto on
- * omistajan toivomat "parisen sekuntia", välähdys ja sen häivytys
- * yhteensä alle sekunnin — riittävän lyhyt, ettei se jarruta matkan
- * kulkua, ja riittävän pitkä, että viivan syntymisen ehtii nähdä.
+ * omistajan toivomat "parisen sekuntia". Välähdys ja häivytys
+ * hidastuivat 900 → 1900 ms (omistajan tarkennus 13.8.2026 illalla:
+ * "välähdys ja feidaus voisi olla hitaampi, mutta rajan piirtonopeus
+ * on hyvä") — sama kesto myös CSS:ssä (maa-aariviivan-valahdys).
  */
 const AARIVIIVAN_PIIRTO_MS = 2000;
-const AARIVIIVAN_VALAHDYS_MS = 900;
+const AARIVIIVAN_VALAHDYS_MS = 1900;
 /*
  * NÄKYMÄN KOKOVAHDIN RAJAT (ks. UI vahdiNakymanKokoa).
  *
@@ -171068,9 +171082,14 @@ class UI {
       onTick: () => sfx.play('dieTick'),
       onLand: () => sfx.play('dieLand'),
       onBounce: () => sfx.play('clack'),
+      /*
+       * Pysähtymisen tärähdys täsmälleen sillä hetkellä, kun noppa
+       * kallahtaa silmäluvulleen. Aiemmin se odotti koko
+       * animaatiolupauksen ratkeamista ja tuli lähes sekunnin
+       * myöhässä (omistajan havainto 13.8.2026).
+       */
+      onSettle: () => natiiviTarise('keskitaso'),
     }));
-    // Noppa on nyt levossa ja silmäluku näkyvissä.
-    natiiviTarise('keskitaso');
     await this.wait(this.reducedMotion ? 0 : 260);
   }
 
@@ -171185,6 +171204,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 628, teksti: 'Rajan välähdys hitaammin, nopan tärähdys pysähtyessä' },
   { v: 627, teksti: 'Pöllön mikki heti käyttöön; lähderivi kertoo oman tekstin' },
   { v: 626, teksti: 'Avauslennon luenta aiemmin ja kuulutus kuuluviin' },
   { v: 625, teksti: 'Isfahanin kaupunkilehti, kohdekartta ja saatiedot' },
@@ -171907,7 +171927,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.627';
+const APP_VERSION = '2026-08-09.628';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
