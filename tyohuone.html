@@ -1185,7 +1185,18 @@
           .map((c) => p.map?.cityCountry?.[c.id] ?? ccVara[c.id]).filter(Boolean));
         const lehtimaat = [...maat].filter((iso) => (maaKategoriat[iso] ?? []).length > 0).length;
         const valmiit = p.cities.filter((c) => puuttuvat(c, p).length === 0).length;
-        const osuus = p.cities.length ? Math.round((valmiit / p.cities.length) * 100) : 0;
+        /*
+         * Osuus on painotettu kokonaisedistymä (omistajan tilaus
+         * 13.8.2026): kaikkien kaupunkien koossa olevat osat jaettuna
+         * kaikilla mahdollisilla. Vanha kaikki-tai-ei-mitään-mitta
+         * näytti nollaa, vaikka Lähi-idän lehdet ja tekstit olivat jo
+         * pitkällä — sadassa prosentissa ollaan vasta, kun jokaisella
+         * kaupungilla on jokainen osa.
+         */
+        const osiaYhteensa = p.cities.length * OSAT.length;
+        const osiaKoossa = p.cities.reduce(
+          (summa, c) => summa + (OSAT.length - puuttuvat(c, p).length), 0);
+        const osuus = osiaYhteensa ? Math.round((osiaKoossa / osiaYhteensa) * 100) : 0;
         const tr = el('tr');
         tr.append(el('td', '', p.id));
         tr.append(el('td', 'num', String(p.cities.length)));
@@ -1207,11 +1218,12 @@
       const selite = el('p', 'pieni', 'Tekstit = kaupungilla on '
         + 'matkakirjamerkintä (Lähi-idän luonnokset mukana). '
         + 'Kaupunkilehdet = kaupungilla on lehtikansi. Maalehdet = '
-        + 'monellako laudan maista on lehtiaiheet. Kaikki osat ja '
-        + 'Osuus = kaupungit, joilla on jokainen yhdeksästä osasta: '
-        + 'merkintä, artikkeli, kuvakortti, kulttuurinostot, '
-        + 'visakysymykset, äänimaisema, maatunnus, tunnusluvut ja '
-        + 'kielinäyte tai radio.');
+        + 'monellako laudan maista on lehtiaiheet. Kaikki osat = kaupungit, '
+        + 'joilla on jokainen yhdeksästä osasta: merkintä, artikkeli, '
+        + 'kuvakortti, kulttuurinostot, visakysymykset, äänimaisema, '
+        + 'maatunnus, tunnusluvut ja kielinäyte tai radio. Osuus = '
+        + 'laudan kaikkien kaupunkien koossa olevat osat jaettuna '
+        + 'kaikilla mahdollisilla — 100 % vasta kun kaikki on valmista.');
       /*
        * Seitsemän saraketta ei mahdu puhelimeen: ilman vierityskoteloa
        * taulu venytti koko sivun leveämmäksi kuin ruutu (havaittu 390 px
