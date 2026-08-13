@@ -12434,4 +12434,480 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Teheranin nähtävyysjutut (nippu 2, 13.8.2026). Kohteet on
+   * valittu niin, että ne mahtuvat samaan 2,3 km:n ruutuun ja
+   * että jokaisella on englanninkielinen artikkeli. Kulmat on
+   * eriytetty tietoisesti kahdesta suunnasta: pelin oma
+   * Teheran-artikkeli kertoo jo Golestanin peilisalit ja
+   * Unesco-statuksen, ja juuri julkaistu Tabrizin lehti selittää
+   * iranilaisen basaarin pohjakaavan ja André Godardin.
+   */
+  teheran: {
+    'Teheranin basaari': {
+      teksti: 'Basaari ei ole yksi halli vaan käytäväverkosto: käytäviä on '
+        + 'yhteensä yli kymmenen kilometriä, ja kukin on erikoistunut '
+        + 'omaan tavaraansa. Sisäänkäyntejä on useita, ja pääovena '
+        + 'pidetään Sabze Meydania. Kauppojen lisäksi alueella on omat '
+        + 'moskeijansa, majatalonsa ja pankkinsa, ja kujilla on omat '
+        + 'nimensä. Basaari merkittiin Iranin kansalliseen '
+        + 'kulttuuriperintöluetteloon 24. lokakuuta 1977 numerolla 1540.'
+        + '\n\n'
+        + 'Perustamisvuotta ei tiedetä. Vuosien 632–654 islamilaisen '
+        + 'valloituksen jälkeen matkalaiset kertoivat kaupankäynnin '
+        + 'kasvusta juuri sillä alueella, jolla basaari nyt on, ja osa '
+        + 'nykyisestä basaarista on vanhempi kuin Teheranin kylä '
+        + 'safavidien aikaan. Silti vielä vuoden 1660 tienoilla '
+        + 'länsimaiset matkaajat kuvasivat aluetta suurelta osin '
+        + 'avoimeksi ja vain osittain katetuksi. 1870-luvulle saakka koko '
+        + 'Teheran oli muurien ympäröimä linnake, katettu basaari ja '
+        + 'kolme asuinkorttelia: Udlajan, Chale-Meydan ja Sangelaj.'
+        + '\n\n'
+        + 'Basaarin pohjoisosassa on Shaahin moskeija, jonka Fath-Ali '
+        + 'Shah käski rakentaa. Perustukset laskettiin 1810 ja rakennus '
+        + 'valmistui 1825; kaksi minareettia lisättiin 1879 Naser ad-Din '
+        + 'Shahin aikana ja kellotorni 1905. Tiiliä on 18 miljoonaa ja '
+        + 'laattoja 475 000, ja pihalle pääsee useasta kohdasta basaaria. '
+        + 'Kaupungin vanhin moskeija Jameh eli Atiq on Jameh-moskeijan '
+        + 'kujan varrella; sen vanhin pylväshalli on 900- tai '
+        + '1000-luvulta ja pinta-alaa on 20 000 neliömetriä.',
+      kuvat: [
+        {
+          tiedosto: 'بازار تهران 2.jpg',
+          selite: 'Kadkhodan kuja: pitkä käytävä, jonka kattona on '
+            + 'peräkkäisiä tiiliholveja, ja niiden alla palaa pyöreitä '
+            + 'kattolamppuja sekä yksi katulampun mallinen valaisin. '
+            + 'Sähkökaapeleita kulkee pitkin seiniä. Oikean seinän '
+            + 'rappauksessa on tummansininen emalikilpi, jossa lukee '
+            + 'persiaksi كوچه كدخدا ja sen alla latinalaisin kirjaimin '
+            + 'KADKHODA ALLEY; kilven alapuolella on musta valvontakamera '
+            + 'ja kaksi tiiliseinään liimattua paperi-ilmoitusta. '
+            + 'Vasemmalla riippuu telineessä housuja ja t-paitoja, ja '
+            + 'niiden yläpuolella on kaakeloitu kalligrafiakyltti '
+            + 'kukkakuvioisessa kehyksessä; oikealla myymälän ikkunan '
+            + 'takana on punaista kangastavaraa ristikon takana. '
+            + 'Etualalla kaksi vaaleapaitaista miestä seisoo selin, '
+            + 'keskeltä kävelee kameraa kohti puhelintaan katsova nuori '
+            + 'mies mustassa paidassa, ja poispäin loittonee joukko: '
+            + 'vihreäpaitainen mies, huivipäisiä naisia käsilaukkuineen '
+            + 'ja vaaleansiniseen paitaan pukeutunut poika.',
+          lahde: 'Hamidreza Hasani, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tehran farsh bazar.jpg',
+          selite: 'Mattojen osa iltavalaistuksessa: keskellä on korkea pino '
+            + 'litteäksi taiteltuja mattoja, punaisia ja vaaleita '
+            + 'medaljonkikuvioita, ja hapsut roikkuvat reunan yli; '
+            + 'oikealla on toinen pino ja lattialla käärittyjä mattoja. '
+            + 'Ruskeaan tikkitakkiin pukeutunut mies seisoo pinon päällä '
+            + 'kumartuneena, ja pinon vasemmalla puolella kaksi miestä '
+            + 'nostaa ylintä mattoa. Taustalla on kirkkaasti valaistuja '
+            + 'myymälöitä, joiden seinät on peitetty kuviollisilla '
+            + 'matoilla, sekä yläkerran parveke mustine kaiteineen; '
+            + 'ylhäällä vasemmalla loistaa valkoinen valokyltti, jossa on '
+            + 'punainen kukkalogo ja persiankielistä tekstiä. Vasemmalla '
+            + 'lasioven takana seisoo mies harmaissa työvaatteissa ja '
+            + 'hänen takanaan istuu kaksi ihmistä hämärässä, vasemmassa '
+            + 'reunassa seisoo tummapukuinen mies ja oikeassa reunassa '
+            + 'kaksi miestä, joista toisella on neulottu pipo. Lattialla '
+            + 'on suojakankaita ja matalia metallitelineitä.',
+          lahde: 'Fabienkhan, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+        {
+          tiedosto: 'Mosquée du Shah, Téhéran (2).jpg',
+          selite: 'Shaahin moskeijan yläosa pilvettömän sinisen taivaan alla: '
+            + 'kaksi pyöreää minareettia, joiden kyljet on peitetty '
+            + 'kelta-, turkoosi- ja sinikuvioisilla laatoilla '
+            + 'vinoraidoiksi ladottuina, ja kummankin huipulla on ruskea '
+            + 'puinen kaarikatos ja sen päällä nuppimainen huippu. '
+            + 'Minareettien välissä nousee kellotorni: kaakeloidussa '
+            + 'rungossa on kolme korkeaa suippokaarta, niiden yllä '
+            + 'parveke metallikaiteineen ja kalligrafianauhoineen, sitten '
+            + 'vaaleanturkoosi kellotaulu, jossa tunnit on merkitty '
+            + 'mustilla kiiloilla ilman numeroita, ja päällä leveä tumma '
+            + 'katos. Kellotornin ympärillä seisoo ruosteisia '
+            + 'metallitelineitä. Alareunassa näkyy tiilijulkisivun '
+            + 'yläreuna ja sen sinikeltainen laattakehys, ja oikeassa '
+            + 'laidassa on muutama valkoinen pilvi.',
+          lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Golestanin palatsi': {
+      aika: '1865',
+      teksti: 'Naser al-Din Shah halusi pääkaupunkiinsa talon, joka '
+        + 'kilpailisi Isfahanin Ali Qapun kanssa: korkean rakennuksen, '
+        + 'jonka katolta hän näkisi koko Teheranin. Työ alkoi hänen '
+        + 'käskystään 1865 ja valmistui kahdessa vuodessa. '
+        + 'Shams-ol-Emareh eli auringon rakennus on 35 metriä korkea, '
+        + 'siinä on viisi kerrosta ja kaksi samanmuotoista tornia. Se oli '
+        + 'valmistuessaan Teheranin korkein rakennus. Suunnittelijana '
+        + 'mainitaan Moayer ol-Mamalek ja arkkitehtina Ali Mohammed '
+        + 'Kashi.'
+        + '\n\n'
+        + 'Se oli myös ensimmäinen talo kaupungissa, jonka rakenteissa '
+        + 'käytettiin metallia: ylempien kerrosten pylväät ovat kaikki '
+        + 'valurautaa. Shaahi vei vieraansa katolle katsomaan '
+        + 'pääkaupunkia. Qajar-ministerit pitivät talossa istuntonsa ja '
+        + 'kulkivat yhdestä tietystä ovesta, jonka eteen pääministerin '
+        + 'vaunut seitsemine vartijoineen pysähtyivät; siitä nimi '
+        + 'ministerien ovi. Se on ainoa ovi, jonka qajar-ajan julkisivu '
+        + 'on tallella.'
+        + '\n\n'
+        + 'Katolle asennettiin kello, jonka Britannian kuningatar '
+        + 'Viktoria lahjoitti Naser al-Din Shahille. Sen tehtävä oli '
+        + 'kertoa tuolloin pienen Teheranin asukkaille paikallinen aika. '
+        + 'Lyönti oli kova ja palatsin asukkaat valittivat siitä, joten '
+        + 'shaahi määräsi äänen vaimennettavaksi. Kelloon tehty työ ei '
+        + 'auttanut, ja kello vaikeni. Se oli hiljaa yli sata vuotta, ja '
+        + 'lyönti kuului taas 12. marraskuuta 2012.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio de Golestán, Teherán, Irán, 2016-09-17, DD 15-19 PAN.jpg',
+          selite: 'Shams-ol-Emarehin julkisivu palatsin pihalta: keskellä '
+            + 'avoin kuisti, jota kannattaa neljä pylvästä ja jonka '
+            + 'takaseinä ja katto ovat kauttaaltaan peililasia; keskellä '
+            + 'on kaariovi ja sen sivuilla kaksi pienempää. Kuistin alla '
+            + 'kulkee kaakelipaneeli, jossa seisoo vihreällä pohjalla '
+            + 'rivi tummiin takkeihin ja päähineisiin puettuja hahmoja. '
+            + 'Molemmin puolin on korkea kaarisyvennys ja sen alla tumma '
+            + 'ovi, ja kaarien yläpuolella keltainen leijona turkoosilla '
+            + 'kaakelikentällä. Takaa nousee kaksi samanmuotoista tornia, '
+            + 'joissa on kaksi kerrosta kaari-ikkunoita ja parvekkeita, '
+            + 'ja tornien välissä pieni nelikulmainen kellotorni '
+            + 'valkoisine kellotauluineen; kattoterassia kiertää musta '
+            + 'metallikaide. Julkisivua vasten nojaa molemmin puolin '
+            + 'vinoja tankoja. Vasemmalla jatkuu pitkä kaarikäytävä, '
+            + 'jonka edessä kävelee kaksi ihmistä ja seinustalla istuu '
+            + 'yksi, oikealla näkyy turkoosikuvioinen minareetti ja '
+            + 'aukiolla liikkuu kävijöitä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Shams ol Emareh Building01.jpg',
+          selite: 'Tornit alaviistosta sinistä taivasta ja hajanaisia pilviä '
+            + 'vasten. Etummaisessa tornissa on kaksi kerrosta avoimia '
+            + 'parvekkeita, kummassakin kolme hoikkaa pylvästä: ylemmässä '
+            + 'ne on maalattu keltaisiksi, alemmassa oransseiksi, ja '
+            + 'kaiteet ovat tummaa ristikkometallia. Tornin huipulla on '
+            + 'avoin kattokoju leveän tumman räystään alla ja ohut '
+            + 'mastopiikki. Seinät on peitetty sinisin ja keltaisin '
+            + 'kukkakaakelein, ikkunoiden kaarissa on turkoosia '
+            + 'ristikkoa, ja alempana kaakelikentässä seisoo keltainen '
+            + 'leijona, jonka takaa nousee säteilevä aurinko. Vasemmassa '
+            + 'alanurkassa näkyy kuistin pylväikkö, oikealla vaalea '
+            + 'kivijulkisivu kaari-ikkunoineen ja sen seinällä riippuvia '
+            + 'kaapeleita; tornin kyljessä on ilmastointilaite. '
+            + 'Vasemmasta yläkulmasta työntyy kuvaan puun oksia.',
+          lahde: 'Maziar Abidian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dar al-Fonun': {
+      aika: '1851',
+      teksti: 'Naser al-Din Shahin suurvisiiri Amir Kabir perusti Dar '
+        + 'al-Fonunin vuonna 1851. Se oli Iranin ensimmäinen moderni '
+        + 'korkeakoulu: polytekninen oppilaitos, jossa ylimystön nuoret '
+        + 'koulutettiin lääketieteeseen, kirurgiaan, farmasiaan, '
+        + 'matematiikkaan ja geologiaan. Opettajat olivat pääosin '
+        + 'itävaltalaisia, ja heidät värväsi Wienistä Daʼud Khan; joukko '
+        + 'saapui Teheraniin marraskuussa 1851. Myöhemmin opetettiin myös '
+        + 'tykistöä, mineralogiaa, ranskaa ja musiikkia.'
+        + '\n\n'
+        + 'Itävaltalaiset eivät osanneet persiaa, joten aluksi opetettiin '
+        + 'tulkin välityksellä. Lääketieteen opettaja Jakob Eduard Polak '
+        + 'luennoi ranskaksi, opetteli persian puolessa vuodessa ja '
+        + 'jatkoi sillä; hän opetti täällä vuoteen 1860. Osa opettajista '
+        + 'kirjoitti persiaksi luonnontieteiden oppikirjoja. Koulussa oli '
+        + 'oma kirjapaino, ja vuonna 1882 siellä alkoi ilmestyä Danesh, '
+        + 'ensimmäinen Teheranissa julkaistu tiedelehti: kahden viikon '
+        + 'välein, neljätoista numeroa.'
+        + '\n\n'
+        + 'Talon suunnitteli Mirza Reza Mohandes ja toteutti '
+        + 'Mohammad-Taqi Khan Memar-Bashi prinssi Bahram Mirzan '
+        + 'valvonnassa; tiloihin kuului juhlasali, teatteri, kirjasto ja '
+        + 'ruokala. Portin yläosassa on säepari Ferdowsin Shahnamesta: '
+        + 'voimakas on se, joka tietää, ja tiedosta vanha sydän nuortuu. '
+        + 'Oppilasmäärä heilahteli rahoituksen mukana: vuonna 1870 vieras '
+        + 'laski 70 oppilasta ja yhden eurooppalaisen opettajan, vuonna '
+        + '1889 oppilaita oli 287 ja opettajina 16 eurooppalaista ja 26 '
+        + 'iranilaista.',
+      kuvat: [
+        {
+          tiedosto: 'Dar ul-Funun Courtyard 20120326-112041.jpg',
+          selite: 'Koulun sisäpiha: kaksikerroksinen vaaleantiilinen siipi, '
+            + 'jonka yläkerrassa on pitkä rivi suippokaarisia '
+            + 'syvennysikkunoita ja alakerrassa suorakulmaisia ikkunoita, '
+            + 'ja ovien yläpuolella on sinisiä kylttejä. Pihalla kasvaa '
+            + 'korkeita mäntyjä ja lehdettömiä puita, yksi valkoisena '
+            + 'kukkiva pensas, leikattuja pensasaitoja ja nurmikkoa. '
+            + 'Kivetty polku johtaa keskellä olevalle kuivalle '
+            + 'kahdeksankulmaiselle altaalle, jonka pohjalla seisoo yksi '
+            + 'ihminen työvälineen kanssa; oikealla vihreällä penkillä '
+            + 'istuu kaksi ihmistä, joista toisella on vaaleanpunainen '
+            + 'takki. Lipputangossa liehuu vihreä-valko-punainen lippu, '
+            + 'ja rakennuksen takana kohoaa korkea nykyaikainen '
+            + 'toimistotalo.',
+          lahde: 'Sanaei Mehdi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'سر در ورودی دارالفنون.jpg',
+          selite: 'Sisäänkäyntiportin holvi alaviistosta kuvattuna: kaaren '
+            + 'sisäpinta on peitetty laatoilla, joissa on '
+            + 'kahdeksansakaraisia tähtiä, geometrista verkkoa ja '
+            + 'turkooseja kasvikuvioita, ja keskeltä laskeutuu '
+            + 'kennomainen muqarnas-kuvio. Kaaren alla on puinen '
+            + 'ikkunaristikko, jonka tähtikuvion aukoissa on sinisiä, '
+            + 'vihreitä ja punaisia laseja. Alimpana on kobolttisininen '
+            + 'laattapaneeli, jossa lukee valkoisella kalligrafialla Dar '
+            + 'al-Fonun ja sen alla pienemmällä vuosiluku 1268 hijri. '
+            + 'Paneelin reunoja kiertää vaaleapohjainen kukkakuvio, '
+            + 'ympärillä on paljasta vaaleaa tiiltä, ja ylänurkissa näkyy '
+            + 'kaksi kennokoristeista pilarinpäätä.',
+          lahde: 'Ania Mardrosyan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Iranin kansallismuseo': {
+      teksti: 'Kansallismuseo on kaksi taloa vierekkäin. Muinaisen Iranin '
+        + 'museo on tiiltä, ja julkisivun keskellä on soikea '
+        + 'sasanidiholvi, jonka esikuva on Ktesifonin Taq Kasra '
+        + 'pienemmässä mitassa. Sen piirsi ranskalainen André Godard; '
+        + 'muurarimestarit olivat Morad Tabrizi ja Abbas Ali Memar. Tiili '
+        + 'oli kotimaista; ulkoa tuotiin vain vitriinit ja osa '
+        + 'metalliosista. Talo vihittiin 1937, ja kerrosalaa on noin 11 '
+        + '000 neliömetriä.'
+        + '\n\n'
+        + 'Naapuritalo, islamilaisen ajan museo, on valkoista '
+        + 'travertiinia ja pohjakaavaltaan Bishapurin mukainen '
+        + 'kahdeksankulmainen risti. Vuosiluvut hajoavat: rakennus '
+        + 'ajoitetaan vuosiin 1944–1950 tai 1958, perustamisvuodeksi '
+        + 'merkitään 1972, ja museona se avattiin 1996. Seitsemässä '
+        + 'salissa on 170 vitriiniä ja noin 1 500 esinettä: ylimpänä '
+        + 'varhaisislamilainen aika, seldžukit ja ilkhanidit, alempana '
+        + 'koraanisali kullattuine kufi-käsikirjoituksineen sekä '
+        + 'timuridien, safavidien ja qajarien salit.'
+        + '\n\n'
+        + 'Muinaisen puolen aikajana alkaa kivikaudesta. Wezmehin '
+        + 'luolasta Kermanshahin läheltä on Iranin vanhin ihmisfossiili, '
+        + 'yhdeksänvuotiaan lapsen hammas 20 000–25 000 vuoden takaa. '
+        + 'Myöhemmiltä kausilta ovat Marlikin rautakautinen kultamalja ja '
+        + 'Chogha Zanbilin vartijahärkä elamilaisin piirtokirjoituksin. '
+        + 'Tunnetuin löytö on Suolamies: Chehrabadin suolakaivoksesta '
+        + 'Zanjanin luota 1993 löytynyt pää ja vasen jalka. Mies oli '
+        + '35–40-vuotias ja noin 175-senttinen, ja vasemmassa korvassa on '
+        + 'yhä kultarengas.',
+      kuvat: [
+        {
+          tiedosto: 'National museum of Iran, Tehran (2024).jpg',
+          selite: 'Muinaisen Iranin museon julkisivu edestä: punertavaa '
+            + 'tiiltä, ja keskellä koko seinän korkuinen kaarisyvennys, '
+            + 'jonka kaari on ladottu sisäkkäisiksi renkaiksi ja jonka '
+            + 'ulkoreunaa kiertää hammastettu tiilirivi. Kaaren molemmin '
+            + 'puolin nousee pystyjä puolipylväitä, joissa vuorottelevat '
+            + 'sileät ja porrastetut tiilikerrokset, ja katon reunassa '
+            + 'kulkee punainen nauha. Holvin sisällä riippuu ketjussa '
+            + 'yksi lyhty, ja perällä on tumma kaksilehtinen ovi, sen '
+            + 'yllä pieni kaari ja tumma laattavyö. Ovelle nousevat '
+            + 'leveät portaat, mutta koko edusta on aidattu '
+            + 'mustanvihreällä ristikkoaidalla ja suljetulla '
+            + 'kaksoisportilla. Vasemmalla kasvaa sypressi, ja etualalla '
+            + 'on laattakiveystä.',
+          lahde: 'Parsa 2au, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'The Islamic Museum Of National Museum of Iran Darafsh (05).jpg',
+          selite: 'Islamilaisen ajan museon sisäänkäynti: vaaleaa '
+            + 'travertiinia oleva julkisivu, jonka keskellä on kaksi '
+            + 'kiillotettua tummanharmaata kivipilaria ja niiden välissä '
+            + 'kapea, koko korkeuden mittainen ruudukkoikkuna. Ikkunan '
+            + 'puolivälissä on museon nimi kullanvärisin persialaisin '
+            + 'kirjaimin. Alhaalla on lasiovi metallikehyksessä, ja sen '
+            + 'eteen laskeutuvat leveät portaat; portaiden kummallakin '
+            + 'puolella on kaksi palmua ruukussa. Matalammissa '
+            + 'sivusiivissä on pieniä neliöikkunoita, katon reunassa '
+            + 'näkyy pieni pallo tangon päässä, oikealla kohoaa sypressi, '
+            + 'ja taivas on pilvetön.',
+          lahde: 'Darafsh, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Musée de l\'Ère Islamique, Téhéran (2).jpg',
+          selite: 'Islamilaisen ajan museon pääsali: kiiltävä ruskea '
+            + 'parkettilattia, jonka keskellä on valaistuista '
+            + 'lasiruuduista ladottu matala koroke ja sen päällä '
+            + 'valkoisessa kehyksessä pystyssä oleva vaalea kivilaatta, '
+            + 'jonka pinta on täynnä kaiverrettua kalligrafiaa. Salia '
+            + 'kiertää parvi, jonka kaidepinta on yhtenäistä koholla '
+            + 'olevaa beigeä kalligrafianauhaa. Seinustoilla on '
+            + 'mustapintaisia näyttelypöytiä ja matalia vitriinejä, '
+            + 'perällä seinässä pitkä vaakasuora kaiverrettu paneeli, '
+            + 'katossa kohdevaloja ja keskellä suuri valaistu kaukalo. '
+            + 'Perällä kävelee vaaleansiniseen paitaan pukeutunut mies ja '
+            + 'oikealla seisoo toinen kävijä vitriinin äärellä.',
+          lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Masoudiehin talo': {
+      aika: '1878',
+      teksti: 'Talon rakennutti Mas\'ud Mirza Zell-e Soltan, Naser al-Din '
+        + 'Shahin vanhin poika ja Isfahanin kuvernööri vuosina 1872–1907; '
+        + 'shaahiksi hän ei voinut nousta, koska hänen äitinsä ei ollut '
+        + 'qajar-sukua. Rakennus valmistui vuonna 1878 Baharestanin '
+        + 'aukion laidalle, ja rakentajaksi mainitaan Reza Qoli Khan, '
+        + 'lisänimeltään Siraj al-Mulk. Tonttia on noin 4 000 '
+        + 'neliömetriä. Talo jakautuu qajar-tapaan ulko-osaan eli '
+        + 'divanhuoneeseen ja sisäosaan, ja näiden lisäksi on '
+        + 'sivurakennuksia. Tyyliksi merkitään qajar-ajan uusbarokki.'
+        + '\n\n'
+        + 'Talo on ollut monessa käytössä. Sekä Iranin ensimmäinen '
+        + 'kansalliskirjasto että ensimmäinen kansallismuseo mainitaan '
+        + 'perustetuiksi tähän taloon. Museon alkukokoelma — 270 '
+        + 'esinettä, muun muassa keramiikkaa, lasia, kolikoita, '
+        + 'sinettejä, vanhoja aseita ja tekstiilejä — oli kuitenkin '
+        + 'koottu yhteen huoneeseen opetusministeriössä Dar al-Fonunin '
+        + 'koulun pohjoispuolella, ja se siirrettiin Masoudiehiin vasta '
+        + 'vuonna 1925. Myöhemmin talo luovutettiin opetusministeriölle, '
+        + 'ja vuosina 1963–1964 siinä toimi sotilasopisto.'
+        + '\n\n'
+        + 'Maaliskuun 1. päivänä 1998 rakennus annettiin Iranin '
+        + 'kansallisen kulttuuriperinnön seuralle, ja 17. tammikuuta 1999 '
+        + 'se merkittiin Iranin kansalliseen kulttuuriperintöluetteloon '
+        + 'numerolla 2190. Vuosina 2011–2013 arkeologi Naser Norouzadeh '
+        + 'Chegini tutki tontin qajar-kautisia jäänteitä.',
+      kuvat: [
+        {
+          tiedosto: '2018-12-31 Iran, Tehran, Masoudieh Palace.jpg',
+          selite: 'Päärakennus vinosti mukulakivipihalta: kaksikerroksinen '
+            + 'vaaleanruskea tiilitalo, jonka yläkerran korkeat '
+            + 'suippokaari-ikkunat ovat ruskeaa puuta ja joiden yläosassa '
+            + 'on kukka-aiheista ristikkoa; vasemmanpuoleisimmassa '
+            + 'ikkunassa on värillistä lasia ja yksi aukko on peitetty '
+            + 'harmaalla suojalla. Ikkunoiden välissä ja yläpuolella on '
+            + 'vihreitä ja punaruskeita laattakenttiä, joissa on tiheää '
+            + 'kasvikuviota ja vinoneliön sisään asetettuja valkoisia '
+            + 'ruusukkeita. Räystäslista on maalattu vihreäksi, ja '
+            + 'keskeltä nousee kaareva päätykenttä, jonka laatoituksessa '
+            + 'on pyöreä ruusuke ja sen alla persiankielinen '
+            + 'kirjoituslaatta. Keskellä työntyy esiin kuisti, jossa '
+            + 'parittain asetetut kiviset pylväät jalustoineen '
+            + 'kannattavat pyöreitä kaaria ja pyöreistä kohokuvioista '
+            + 'koottua vyötä; kuistin takana on suippokaarinen oviaukko '
+            + 'ja veistetty kaksilehtinen puuovi. Alakerrassa on rivi '
+            + 'kaarisyvennyksiä, joissa on kipsikoristelua ja ruskeat '
+            + 'puuovet. Oikealla siipi jatkuu pylväsjulkisivuna, '
+            + 'taustalla näkyy nykyrakennuksia ja ristikkomasto, ja '
+            + 'vasemmassa alanurkassa on tummanvihreä jäteastia.',
+          lahde: 'Laurens R. Krol, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Mansión Masoudieh, Teherán, Irán, 2016-09-17, DD 58.jpg',
+          selite: 'Sisäpiha altaan takaa: etualalla on suuri pyöreäpäätyinen '
+            + 'vesiallas, jonka vihertävästä pinnasta rakennus heijastuu '
+            + 'kokonaisena. Altaan takana on paviljonki, jonka hoikat '
+            + 'vaaleat pylväät päättyvät lehtikoristeisiin kapiteeleihin '
+            + 'ja kannattavat tasakattoa; pylväiden välissä on korkeita '
+            + 'kaari-ikkunoita oranssinruskeissa puukarmeissa, '
+            + 'kaarikentät on täytetty tiheällä ristikolla ja seinäpinnat '
+            + 'ovat veistettyä vaaleaa kipsiä. Jalustassa on '
+            + 'turkoosinvihreää reikälaattaa ja terassin reunassa rivi '
+            + 'pyöreitä kohokuvioita. Molemmin puolin jatkuu '
+            + 'vaaleankeltainen tiiliarkadi pyörein kaarin; vasemmalla '
+            + 'sen takana on valkoinen metalliportti, maassa tummia '
+            + 'peitteitä ja oranssi liikennekartio. Pihalla kasvaa '
+            + 'hedelmäpuita ja pensaita, joissa kukkii vaaleanpunaisia ja '
+            + 'valkoisia ruusuja, ja oikealla ylhäällä kohoaa tumma '
+            + 'havupuu. Oikeanpuoleisen arkadin kohdalla on kaksi '
+            + 'ihmistä: toisella on vihreä paita ja reppu, toinen seisoo '
+            + 'mustissa vaatteissa pensaiden takana.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Mansión Masoudieh, Teherán, Irán, 2016-09-17, DD 63.jpg',
+          selite: 'Sama julkisivu lähempää suoraan edestä: neljä uurrettua '
+            + 'pylvästä nousee kivijalustoilta räystäslistaan, ja niiden '
+            + 'kapiteeleissa on akantuslehtiä ja kiertyviä voluutteja. '
+            + 'Pylväiden takana avautuu kaari-ikkunoita, joiden '
+            + 'kaarikentässä on ohut ristikko värillisine laseineen ja '
+            + 'sen alla ruskeat pikkuruutuiset puuikkunat. Ikkunoiden '
+            + 'väliset seinäkaistat ja kaarien kehykset ovat kauttaaltaan '
+            + 'veistettyä vaaleaa kipsiä. Alaosassa on turkoosinvihreää '
+            + 'reikälaattaa kaaren muotoisina kenttinä, kenttien välissä '
+            + 'kipsikoristeisia paneeleja, kaarten kulmissa pieniä '
+            + 'sinikeltaisia kuviolaattoja ja kehyksinä vaaleankeltaista '
+            + 'tiiltä. Etualalla kulkee vaalea kiviterassi, jonka '
+            + 'reunassa on rivi soikeita kohokuvioita; terassin '
+            + 'kummassakin päässä seisoo punavalkoinen liikennekartio, ja '
+            + 'niiden välissä on pingotettu keltainen naru.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sepahsalarin moskeija': {
+      teksti: 'Rakennuttaja Mirza Hosein Khan Sepahsalar oli Naser al-Din '
+        + 'Shaahin suurvisiiri 1871–1873 ja sitä ennen Iranin lähettiläs '
+        + 'Konstantinopolissa. Työ alkoi hänen käskystään 1879 ja '
+        + 'ensimmäinen vaihe valmistui 1884; Sepahsalar kuoli 1881, ja '
+        + 'siitä eteenpäin rakennuttajaksi merkitään shaahi. Saman pihan '
+        + 'ympärillä on moskeija ja madrasa eli koulu. Pihaa kiertää '
+        + 'kaksikerroksinen kaarikäytävä, ja sen takana on '
+        + 'oppilashuoneita, kaikkiaan noin 60.'
+        + '\n\n'
+        + 'Minareetteja on kahdeksan, iranilaisessa moskeijassa '
+        + 'poikkeuksellinen määrä, ja kukin on 37 metriä korkea. '
+        + 'Rukoussalin kupoli on niin ikään 37 metriä korkea, ja sitä '
+        + 'kannattaa 44 pylvästä. Pohjan mitat ovat 62 kertaa 61 metriä; '
+        + 'pinta-alaksi lähde ilmoittaa 16 000 neliömetriä, mikä ei '
+        + 'täsmää. Pohjoisen iwanin yläpuolella, kahden minareetin '
+        + 'välissä, on viisimetrinen laatoitettu huone, jossa on '
+        + 'Ranskassa 1880 tehty kellokoneisto ja kolme soittokelloa.'
+        + '\n\n'
+        + 'Pihan laattojen kuviona ovat täyteen puhjenneet kukka-aiheet '
+        + 'qajar-tyyliin, ja laattoihin ladottu kirjoitusnauha kertoo '
+        + 'alkuperäisestä lahjoituksesta; kirjoituksia on sekä thuluth- '
+        + 'että kufi-kirjaimin. Esikuvina mainitaan Isfahanin '
+        + 'perjantaimoskeija ja Istanbulin Sultan Ahmedin moskeija: se on '
+        + 'Teheranin ensimmäinen moskeija, joka yhdistää persialaista ja '
+        + 'osmanilaista tyyliä. Iranin kansalliseen '
+        + 'muinaisjäännösluetteloon talo otettiin 1936, ja se on yhä yksi '
+        + 'Teheranin suurimmista moskeijoista.',
+      kuvat: [
+        {
+          tiedosto: 'Antoin-Sevruguin-Sipahsalar-Moschee-in-Teheran-im-Bau-mit-Arbeitern-Museum-Rietberg-2023.00010.73.jpg',
+          selite: 'Moskeija rakenteilla mustavalkoisessa valokuvassa: '
+            + 'tiilipinta on paljas ja laatoiton, ja kolme paksua pyöreää '
+            + 'tiilitornia on kesken. Keskellä avautuu suuren iwanin '
+            + 'terävä kaari, jota tuetaan ristikkäin asetetuilla '
+            + 'puuriu\'uilla. Katolla ja sen takana kohoavan matalan '
+            + 'kupolin päällä seisoo rivi miehiä, ja katon reunalla on '
+            + 'puinen nostopuomi köysineen. Alhaalla tikkaat nojaavat '
+            + 'tiilitorniin, miehiä seisoo telinelankuilla, ja '
+            + 'hiekkapihalla on tiilikasoja, lankkuja ja seisoskelevia '
+            + 'työmiehiä; vasemmalla näkyy kaksi kerrosta holvattuja '
+            + 'kaarisyvennyksiä.',
+          lahde: 'Antoin Sevruguin, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'گلدسته های ابی و ساعت تاریخی مدرسه ودانشگاه مطهری.jpg',
+          selite: 'Kellotorni iwanin yläpuolella: laattapintaisen tornin '
+            + 'keskellä on valkoinen kellotaulu roomalaisin numeroin, sen '
+            + 'ympärillä sinikeltainen kukkakuvio, ja tornin päällä '
+            + 'puinen avoin lyhty tummine kattoineen. Molemmin puolin '
+            + 'nousee laatoitettu minareetti, jonka parveketta '
+            + 'kannattavat puiset kannattimet ja jonka huipussa on '
+            + 'tummanharmaa sipulikupoli. Julkisivun poikki kulkee '
+            + 'sininen kalligrafianauha, sen alla näkyy iwanin kaaren '
+            + 'yläosa kukkakuvioisine laattoineen, oikeassa reunassa on '
+            + 'männyn oksia ja taivas on pilvetön.',
+          lahde: '0936mastali, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
