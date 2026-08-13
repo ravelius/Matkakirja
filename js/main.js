@@ -678,13 +678,22 @@ paataPaivitysruutu();
  * lapsen kädessä, ei suojata mitään salaista — pelissä ei ole mitään
  * suojattavaa.
  */
-const KEHITTAJA_SALASANA = '5545';
 /*
- * Rajattu kehittäjäkoodi (omistajan päätös 13.8.2026): avaa saman
- * kehittäjätilan, mutta pöllön käyttörajat jäävät voimaan — pääkoodi
- * talletetaan pöllön otsakkeeseen, tämä ei.
+ * Kehittäjäkoodit ovat lähdekoodissa vain SHA-256-tiivisteinä (omistajan
+ * toive 13.8.2026): koodia ei voi lukea suoraan koodista. Tämä on
+ * näkösuoja, ei linnoitus — lyhyt koodi on kokeiltavissa läpi — mutta
+ * pöllön rajaton käyttö varmistetaan joka tapauksessa palvelimella
+ * (worker vertaa otsaketta omaan salaisuuteensa). Pääkoodin tiiviste
+ * avaa kehittäjätilan JA tallettaa syötetyn koodin pöllön otsakkeeseen;
+ * rajattu koodi (betatestaajille) avaa vain kehittäjätilan.
  */
-const KEHITTAJA_SALASANA_RAJATTU = '1122';
+const KEHITTAJA_TIIVISTE = '2f7f15d0bb83b97a7ce3054be0972e80b60742cfc8b4c36ce06f3330f6f045c6';
+const KEHITTAJA_TIIVISTE_RAJATTU = 'b3282a2f2a28757b3a18ab833de16a9c54518c0b0cf493e3f0a7cf09386f326a';
+async function sha256Hex(teksti) {
+  const data = new TextEncoder().encode(teksti);
+  const puskuri = await crypto.subtle.digest('SHA-256', data);
+  return [...new Uint8Array(puskuri)].map((t) => t.toString(16).padStart(2, '0')).join('');
+}
 const POLLO_KOODIAVAIN = 'matkakirja-pollo-kehittajakoodi';
 function talletaPolloKoodi(koodi) {
   try {
@@ -747,7 +756,7 @@ function avaaKehittajaIkkuna() {
   if (!paalla) kehittajaSalasana.focus();
 }
 
-function kytkeKehittaja() {
+async function kytkeKehittaja() {
   if (kehittajaTilaPaalla()) {
     asetaKehittajaTila(false);
     talletaPolloKoodi('');
@@ -757,15 +766,17 @@ function kytkeKehittaja() {
     return;
   }
   const syote = kehittajaSalasana.value.trim();
-  if (syote !== KEHITTAJA_SALASANA && syote !== KEHITTAJA_SALASANA_RAJATTU) {
+  const tiiviste = await sha256Hex(syote);
+  const taysi = tiiviste === KEHITTAJA_TIIVISTE;
+  if (!taysi && tiiviste !== KEHITTAJA_TIIVISTE_RAJATTU) {
     kehittajaVirhe.hidden = false;
     kehittajaSalasana.value = '';
     kehittajaSalasana.focus();
     return;
   }
   // Pääkoodi kulkee pöllölle otsakkeessa (worker vertaa salaisuuteensa
-  // ja ohittaa rajat); rajattu koodi 1122 ei koskaan lähde otsakkeessa.
-  talletaPolloKoodi(syote === KEHITTAJA_SALASANA ? syote : '');
+  // ja ohittaa rajat); rajattu koodi ei koskaan lähde otsakkeessa.
+  talletaPolloKoodi(taysi ? syote : '');
   asetaKehittajaTila(true);
   ui?.paivitaKehittajaTila();
   paivitaVersioKulma();

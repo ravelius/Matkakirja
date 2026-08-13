@@ -337,10 +337,12 @@ export const RAAMATTU2 = {
           + 'saa SUPERLINSSIN, jota ei voi ostaa kaupasta — ja '
           + 'kaikki muutkin linssit käyttöönsä. Ylityksestä ei '
           + 'rangaista (ks. Ydinajatus). SUPERLINSSIN SISÄLTÖ '
-          + '(päätös 13.8.): läpipeluun jälkeen se on "god mode" — '
-          + 'sama liikkumisvapaus kuin kehittäjätilassa, eli '
-          + 'siirtyminen mihin tahansa kaupunkiin ilman '
-          + 'nopanheittoa.',
+          + '(päätös 13.8.): nimeltään SEITSEMÄN PENINKULMAN '
+          + 'LINSSI — läpipeluun jälkeen se antaa saman '
+          + 'liikkumisvapauden kuin kehittäjätila, eli siirtymisen '
+          + 'mihin tahansa kaupunkiin ilman nopanheittoa. Nimi '
+          + 'satujen seitsemän peninkulman saappaista: yksi askel '
+          + 'vie minne tahansa.',
         'Vuoro: valitse matkustustapa (jalan / laivalla / '
           + 'lentäen) → noppa → siirto kartalla. Yksi nopanheitto, '
           + 'laivamatka tai lento kuluttaa 6 tuntia matka-aikaa; '
@@ -430,9 +432,10 @@ export const RAAMATTU2 = {
         'Linssit tulevat käyttöön PELIN AIKANA ja jaksottavat '
           + 'pelirytmiä (katkaisevat monotonian, kun koko lautaa '
           + 'kierretään). Osa ostetaan varustekaupasta, osa aukeaa '
-          + 'matkalla. SUPERLINSSI on eri asia kuin nämä: '
-          + 'läpipeluun palkinto, joka antaa vapaan liikkumisen '
-          + 'ilman nopanheittoa (päätös 13.8., ks. Pelin kulku).',
+          + 'matkalla. SUPERLINSSI eli SEITSEMÄN PENINKULMAN '
+          + 'LINSSI on eri asia kuin nämä: läpipeluun palkinto, '
+          + 'joka antaa vapaan liikkumisen ilman nopanheittoa '
+          + '(päätös 13.8., ks. Pelin kulku).',
         'Paikkasidonnaisuus: historiallinen linssi aukeaa siellä, '
           + 'missä se merkitsee eniten — Afrikassa ihmiskunnan '
           + 'leviäminen maapallolle, Espanjassa Kolumbuksen '
