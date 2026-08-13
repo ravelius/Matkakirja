@@ -42,6 +42,14 @@
  *  17. LATAUSRUUTU näkyy myös kylmäkäynnistyksessä ja väistyy vasta kun
  *      pelinäkymä on rakennettu ja maalattu (osio 11)
  *
+ * NELJÄNNEN ERÄN LISÄYKSET — iOS-AALTO B (13.8.2026)
+ *  23. ILMAN NATIIVISILTAA peli on täsmälleen ennallaan: siltaa ei ole,
+ *      jakonappi pysyy piilossa, pilvi-ikkuna ei aukea, tallennus toimii
+ *      ja konsoli pysyy puhtaana
+ *  24. KUOREN KYTKENNÄT valesillalla: noppa tärähtää kahdesti, Game
+ *      Centeriin kirjaudutaan kerran, widget saa pelin tilan, tallennus
+ *      lähtee pilveen aikaleimoineen ja voittoruudussa on jakonappi
+ *
  *   node tools/savuke-pollo.mjs
  *
  * serviceWorkers: 'block' on pakollinen — muuten sw sieppaa pyynnöt ja
@@ -258,6 +266,74 @@ const SILTA_MOCK = `
     },
     kuunteleeko: function () { return Promise.resolve({ kuuntelee: false }); }
   };
+  /*
+   * AALTO B: haptiikka, tallennussynkka, widget, jako ja Game Center.
+   * Nämä ovat samassa valesillassa kuin sanelu, koska oikeassa kuoressa
+   * ne ovat samassa oliossa: puuttuva metodi ei kaataisi peliä (kaikki
+   * kutsut ovat vartioituja), mutta se peittäisi juuri sen virheen,
+   * jota tässä etsitään — kytkennän puuttumisen.
+   */
+  silta.haptiikka = {
+    nayta: function (laji) {
+      (window.__tarinat = window.__tarinat || []).push(laji);
+      return Promise.resolve(kirjaa('haptiikka.nayta', { tila: 'ok', laji: laji }));
+    }
+  };
+  silta.talle = {
+    // Valevarasto elää sivun ajan; oikea on iCloudin avain–arvo-varasto.
+    __varasto: {},
+    vie: function (avain, arvo, aika) {
+      var leima = typeof aika === 'number' ? aika : Date.now();
+      silta.talle.__varasto[avain] = { arvo: String(arvo), aika: leima };
+      (window.__viedyt = window.__viedyt || []).push({ avain: avain, aika: leima });
+      return Promise.resolve(kirjaa('talle.vie', { avain: avain, aika: leima, pilvi: true }));
+    },
+    tuo: function (avain) {
+      var kuori = silta.talle.__varasto[avain];
+      kirjaa('talle.tuo');
+      return Promise.resolve(kuori
+        ? { avain: avain, loytyi: true, arvo: kuori.arvo, aika: kuori.aika, pilvi: true }
+        : { avain: avain, loytyi: false, arvo: null, aika: 0, pilvi: true });
+    },
+    poista: function (avain) {
+      delete silta.talle.__varasto[avain];
+      return Promise.resolve(kirjaa('talle.poista', { avain: avain, tila: 'poistettu' }));
+    },
+    avaimet: function () { return Promise.resolve({ avaimet: [], pilvi: true }); }
+  };
+  silta.widget = {
+    paivita: function (tila) {
+      window.__widget = tila;
+      return Promise.resolve(kirjaa('widget.paivita', { tila: 'paivitetty' }));
+    },
+    tyhjenna: function () { return Promise.resolve(kirjaa('widget.tyhjenna', { tila: 'tyhjennetty' })); },
+    lue: function () { return Promise.resolve({ asetettu: Boolean(window.__widget) }); }
+  };
+  silta.jaa = {
+    teksti: function (sisalto) {
+      window.__jaettu = sisalto;
+      return Promise.resolve(kirjaa('jaa.teksti', { tila: 'jaettu', kohde: 'testi' }));
+    },
+    kuva: function () { return Promise.resolve(kirjaa('jaa.kuva', { tila: 'peruttu' })); }
+  };
+  silta.pelikeskus = {
+    kirjaudu: function () {
+      return Promise.resolve(kirjaa('pelikeskus.kirjaudu',
+        { kirjautunut: true, nimi: 'Testaaja', tunnus: 'T1', syy: '' }));
+    },
+    saavutus: function (tunnus, osuus) {
+      (window.__saavutukset = window.__saavutukset || []).push(tunnus);
+      return Promise.resolve(kirjaa('pelikeskus.saavutus',
+        { tila: 'kirjattu', tunnus: tunnus, osuus: osuus }));
+    },
+    nayta: function () { return Promise.resolve(kirjaa('pelikeskus.nayta', { tila: 'avattu' })); }
+  };
+  silta.ominaisuudet.haptiikka = true;
+  silta.ominaisuudet.talle = true;
+  silta.ominaisuudet.talleSynkka = true;
+  silta.ominaisuudet.widget = true;
+  silta.ominaisuudet.jako = true;
+  silta.ominaisuudet.pelikeskus = true;
   window.matkakirjaNatiivi = silta;
 }());
 `;
@@ -3197,6 +3273,115 @@ vaadi('puhelimella arkki on yhä koko ruutu',
   puhelinArkki.tulos.leveys === puhelinArkki.tulos.ruutu
   && puhelinArkki.tulos.korkeus === puhelinArkki.tulos.korkeusRuutu,
   JSON.stringify(puhelinArkki.tulos));
+
+/* ================================================================== */
+/* 23) ILMAN NATIIVISILTAA peli on täsmälleen ennallaan                */
+/* ================================================================== */
+
+/*
+ * TÄMÄ ON AALTO B:N TÄRKEIN VARTIOTESTI.
+ *
+ * Kuoren kytkennät (haptiikka, iCloud-synkka, widget, jako, Game
+ * Center) saavat näkyä vain kuoressa. Selain on pelin koti, ja siellä
+ * window.matkakirjaNatiivi puuttuu kokonaan: yhdenkään kytkennän ei
+ * pidä heittää, kirjoittaa konsoliin eikä lisätä ruudulle nappia,
+ * jonka takana ei ole mitään.
+ *
+ * Ajo käy läpi ne kohdat, joihin kytkentä tehtiin ja jotka näkyvät
+ * ruudulla: nopanheitto, tallennus ja voittoruutu. Vastauksen tärähdys
+ * ja putkilaskuri ovat yksikkötesteissä (tests/natiivi.test.mjs).
+ */
+const siltatonCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
+const { sivu: siltatonSivu, virheet: siltatonVirheet } = await avaaPeli(siltatonCtx);
+const ilman = await siltatonSivu.evaluate(async () => {
+  const { game, ui } = window.matkakirja;
+  await ui.animateDie(4);
+  // Voittoruutu ilman oikeaa voittoa: nappirivi on se, mitä mitataan.
+  game.winner = game.player;
+  ui.showWinner();
+  await new Promise((r) => setTimeout(r, 300));
+  const jaa = document.getElementById('winner-jaa');
+  const tulos = {
+    silta: typeof window.matkakirjaNatiivi,
+    jakonappiOlemassa: Boolean(jaa),
+    jakonappiNakyy: Boolean(jaa && !jaa.hidden && jaa.getBoundingClientRect().height > 0),
+    pilviIkkunaAuki: document.getElementById('pilvi-dialog').open,
+    // Tallennus kulkee samaa polkua kuin kuoressa — pilveen vain ei mene mitään.
+    tallennus: Boolean(localStorage.getItem('matkakirja-save-v1')),
+    synkkaLeimoja: localStorage.getItem('matkakirja-synkka-ajat-v1'),
+  };
+  document.getElementById('winner-dialog').close();
+  return tulos;
+});
+vaadi('selaimessa ei ole natiivisiltaa', ilman.silta === 'undefined', ilman.silta);
+vaadi('jakonappi on merkinnässä mutta piilossa ilman siltaa',
+  ilman.jakonappiOlemassa === true && ilman.jakonappiNakyy === false, JSON.stringify(ilman));
+vaadi('pilvitallennusta ei tarjota ilman siltaa', ilman.pilviIkkunaAuki === false);
+vaadi('tallennus toimii ennallaan ilman siltaa', ilman.tallennus === true);
+vaadi('synkan aikaleimoja ei kirjoiteta ilman siltaa',
+  ilman.synkkaLeimoja === null, String(ilman.synkkaLeimoja));
+vaadi('ilman siltaa ei tule yhtään konsolivirhettä', siltatonVirheet.length === 0,
+  siltatonVirheet.slice(0, 3).join(' | '));
+await siltatonCtx.close();
+
+/* ================================================================== */
+/* 24) Kuoren kytkennät: haptiikka, synkka, widget, jako, saavutukset  */
+/* ================================================================== */
+
+/*
+ * Sama peli valesillan kanssa. Tässä mitataan, että kytkentä on
+ * oikeassa kohdassa eikä vain olemassa: tärähdys tulee nopasta ja
+ * vastauksesta, widget saa kaupungin, tallennus lähtee pilveen
+ * aikaleiman kanssa ja voittoruudussa on jakonappi.
+ */
+const kuoriCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
+const { sivu: kuoriSivu, virheet: kuoriVirheet } = await avaaPeli(kuoriCtx, { silta: true });
+const kuori = await kuoriSivu.evaluate(async () => {
+  const { game, ui } = window.matkakirja;
+  window.__tarinat = [];
+  await ui.animateDie(3);
+  const nopanTarinat = window.__tarinat.slice();
+
+  game.winner = game.player;
+  ui.showWinner();
+  await new Promise((r) => setTimeout(r, 300));
+  const jaa = document.getElementById('winner-jaa');
+  const jakoNakyy = Boolean(jaa && !jaa.hidden);
+  jaa?.click();
+  await new Promise((r) => setTimeout(r, 200));
+  document.getElementById('winner-dialog').close();
+  return {
+    nopanTarinat,
+    jakoNakyy,
+    jaettu: window.__jaettu ?? '',
+    widget: window.__widget ?? null,
+    viedyt: (window.__viedyt ?? []).map((v) => v.avain),
+    aikaleimat: (window.__viedyt ?? []).every((v) => typeof v.aika === 'number' && v.aika > 0),
+    saavutukset: window.__saavutukset ?? [],
+    kutsut: window.matkakirjaNatiivi.__kutsut.slice(),
+  };
+});
+vaadi('nopanheitto tärähtää kahdesti (lähtö ja pysähdys)',
+  kuori.nopanTarinat.length === 2 && kuori.nopanTarinat[0] === 'kevyt'
+  && kuori.nopanTarinat[1] === 'keskitaso', JSON.stringify(kuori.nopanTarinat));
+vaadi('kuoressa kirjaudutaan Game Centeriin kerran',
+  kuori.kutsut.filter((k) => k === 'pelikeskus.kirjaudu').length === 1,
+  kuori.kutsut.join(' | '));
+vaadi('widget saa kaupungin, maan, päivän ja kassan',
+  Boolean(kuori.widget?.kaupunki) && typeof kuori.widget?.paiva === 'number'
+  && /^£/.test(String(kuori.widget?.raha ?? '')), JSON.stringify(kuori.widget));
+vaadi('pelitallennus viedään pilveen', kuori.viedyt.includes('matkakirja-save-v1'),
+  kuori.viedyt.join(' | '));
+vaadi('jokaisen viennin mukana kulkee aikaleima', kuori.aikaleimat === true);
+vaadi('läpipeluu kirjaa saavutuksen',
+  kuori.saavutukset.includes('fi.matkakirja.peli.saavutus.lapipeluu'),
+  kuori.saavutukset.join(' | '));
+vaadi('voittoruudussa on jakonappi kuoressa', kuori.jakoNakyy === true);
+vaadi('jaettu teksti on matkan yhteenveto',
+  /^Matkakirja: \d+ päivä/.test(kuori.jaettu), kuori.jaettu);
+vaadi('kuoren kytkennät eivät kirjoita konsoliin', kuoriVirheet.length === 0,
+  kuoriVirheet.slice(0, 3).join(' | '));
+await kuoriCtx.close();
 
 vaadi('ei sivuvirheitä pääajossa', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
