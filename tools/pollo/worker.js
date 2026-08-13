@@ -161,15 +161,24 @@ kysymyksiä — ei pelin tehtäviin, pisteisiin tai juoneen liittyviä. \
  * Jos merkinnät jäävät tulematta tai ovat rikki, asiakas näyttää tekstin
  * puhtaana — hakasulkeet eivät saa näkyä pelaajalle missään tilanteessa.
  */
+/*
+ * Omistajan linjaus 13.8.2026: "Kaikki paikat ja erisnimet, kuten
+ * Beethoven, olisi kiva saada jatkokysymyspainikkeeksi tekstiin."
+ * Aiempi "yhdestä kolmeen" tuotti vastauksia, joissa ei ollut yhtään
+ * merkintää — nyt jokainen paikannimi ja erisnimi merkitään, ja katto
+ * pitää tiheyden kurissa (asiakas sietää kaksitoista).
+ */
 const KASITEKEHOTE = `AVAINKÄSITTEET
-Merkitse vastauksesi sisään yhdestä kolmeen avainkäsitettä \
-kaksoishakasulkeilla: [[käsite]]. Käsite on paikka, ilmiö, henkilö tai \
-asia, josta pelaaja voisi haluta kuulla lisää. Merkintä kirjoitetaan \
-suoraan lauseeseen sen luonnollisella taivutusmuodolla ([[höyryveturit]] \
-vetivät junia), ei erilliselle riville eikä luetteloksi. Älä merkitse \
-samaa käsitettä kahdesti, älä merkitse pelaajan omaa kysymystä äläkä \
-mainitse merkintöjä vastauksessasi. Jos mikään käsite ei ole \
-luonnollinen, jätä merkinnät kokonaan pois.`;
+Merkitse vastauksesi sisään avainkäsitteet kaksoishakasulkeilla: \
+[[käsite]]. Merkitse JOKAINEN paikannimi, henkilö ja muu erisnimi \
+([[Beethoven]], [[Schönbrunn]], [[Tonava]]) sekä ilmiöt ja asiat, \
+joista pelaaja voisi haluta kuulla lisää ([[höyryveturit]] vetivät \
+junia) — käytännössä jokaisessa vastauksessa on useita merkintöjä. \
+Merkintä kirjoitetaan suoraan lauseeseen sen luonnollisella \
+taivutusmuodolla, ei erilliselle riville eikä luetteloksi. Merkitse \
+kukin käsite vain ensimmäisellä esiintymällään, korkeintaan kahdeksan \
+merkintää vastausta kohden. Älä merkitse pelaajan omaa kysymystä äläkä \
+mainitse merkintöjä vastauksessasi.`;
 
 /** Ehdotuskehote: erillinen, koska tehtävä on aivan toinen. */
 const EHDOTUSKEHOTE = `Keksi kaksi lyhyttä kysymystä, jotka pelaaja voisi \
