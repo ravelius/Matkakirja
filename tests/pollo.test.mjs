@@ -873,6 +873,27 @@ test('käsitemerkinnät eivät koskaan näy pelaajalle', () => {
   assert.equal(poistaKasiteMerkinnat(null), '');
 });
 
+/*
+ * Putkimerkintä [[perusmuoto|taivutus]] on kehotteessa kielletty, mutta
+ * malli lipsuu wiki-tapoihinsa (omistajan kaappaus 13.8.2026:
+ * "juutalaisuus|juutalaisuudelle" näkyi raakana pelaajalle). Pelaajalle
+ * näytetään taivutus, kysymys tehdään perusmuodosta — eikä pystyviiva
+ * näy KOSKAAN, tuli merkintä missä muodossa tahansa.
+ */
+test('putkimerkintä puretaan: taivutus näkyy, perusmuoto kysytään', () => {
+  assert.equal(
+    poistaKasiteMerkinnat('Pyhin paikka on [[juutalaisuus|juutalaisuudelle]] tärkeä.'),
+    'Pyhin paikka on juutalaisuudelle tärkeä.');
+  const palat = jasennaKasitteet('Paikka on [[juutalaisuus|juutalaisuudelle]] pyhin.');
+  const kasite = palat.find((p) => p.kasite);
+  assert.equal(kasite.teksti, 'juutalaisuudelle');
+  assert.equal(kasite.aihe, 'juutalaisuus');
+  assert.ok(!palat.some((p) => p.teksti.includes('|')), JSON.stringify(palat));
+  // Rikkinäiset muodot eivät kaada: tyhjä puolisko korvautuu toisella.
+  assert.equal(jasennaKasitteet('[[|taivutus]]').find((p) => p.kasite).aihe, 'taivutus');
+  assert.equal(jasennaKasitteet('[[perus|]]').find((p) => p.kasite).teksti, 'perus');
+});
+
 /* ---------------------------------------------------------------- */
 /* Luenta striimin rinnalla                                          */
 /* ---------------------------------------------------------------- */
@@ -914,7 +935,7 @@ test('vastaus jäsentyy paloiksi, joista käsitteet ovat omiaan', () => {
   const palat = jasennaKasitteet('Metro avattiin 1863, ja [[höyryveturit]] vetivät junia.');
   assert.deepEqual(palat, [
     { teksti: 'Metro avattiin 1863, ja ', kasite: false },
-    { teksti: 'höyryveturit', kasite: true },
+    { teksti: 'höyryveturit', kasite: true, aihe: 'höyryveturit' },
     { teksti: ' vetivät junia.', kasite: false },
   ]);
   /*
