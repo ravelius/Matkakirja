@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 621, teksti: 'iOS-kuoreen haptiikka, iCloud-synkka, widget ja Game Center' },
   { v: 620, teksti: 'Sanelun mikrofoni vapautuu aina; työhuoneen taulut' },
   { v: 619, teksti: 'Lehden mitta varmistetaan avattaessa; kaiutin jälkikäteen' },
   { v: 618, teksti: 'Lukija: kartan esittely luetaan, päiväys ja uutisnimiö ei' },
