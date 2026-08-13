@@ -2571,6 +2571,35 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kisanin portti', lat: 33.5065, lon: 36.3157 },
     ],
   },
+  teheran: {
+    polku: 'assets/kartat/teheran-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 35.692, etela: 35.6715, lansi: 51.4115, ita: 51.4365,
+    },
+    esittely: 'Teheranin vanha ydin on kartalla ruutu, jonka halki '
+      + 'kulkee kaksi pitkää suoraa väylää pohjoisesta etelään. '
+      + 'Vasemmassa laidassa on laaja puisto, jonka sisäiset polut '
+      + 'kiertävät soikioina, ja sen alapuolella korttelit ovat suuria '
+      + 'ja harvakatuisia.\n\n'
+      + 'Idässä ja etelässä kuva muuttuu toisenlaiseksi: siellä on '
+      + 'tiheä kujaverkko, jossa viivat ovat ohuita ja lyhyitä. '
+      + 'Eteläreunan tiheä tilkku on basaari — se ei ole yksi halli '
+      + 'vaan katettujen kujien kortteli, ja juuri siksi sen kujat '
+      + 'näkyvät kartalla jalankulkureitteinä eivätkä katuina. '
+      + 'Kohteet nousevat etelästä pohjoiseen: basaari alimpana, sen '
+      + 'yläpuolella Golestanin palatsi ja Dar al-Fonun, ja ylimpänä '
+      + 'kansallismuseo lännessä sekä Masoudiehin talo ja '
+      + 'Sepahsalarin moskeija idässä.',
+    kohteet: [
+      { nimi: 'Teheranin basaari', lat: 35.675, lon: 51.4194 },
+      { nimi: 'Golestanin palatsi', lat: 35.6797, lon: 51.4203 },
+      { nimi: 'Dar al-Fonun', lat: 35.6838, lon: 51.4219 },
+      { nimi: 'Iranin kansallismuseo', lat: 35.687, lon: 51.4146 },
+      { nimi: 'Masoudiehin talo', lat: 35.689, lon: 51.4281 },
+      { nimi: 'Sepahsalarin moskeija', lat: 35.6888, lon: 51.4329 },
+    ],
+  },
   tabriz: {
     polku: 'assets/kartat/tabriz-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
