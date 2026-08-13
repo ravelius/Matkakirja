@@ -2526,10 +2526,11 @@ export const KAUPUNKIKARTAT = {
       + 'oikeassa laidassa, ja sen juurella kortteleita, joissa on '
       + 'roomalaisia, bysanttilaisia ja ottomaanisia kerroksia '
       + 'päällekkäin.\n\n'
-      + 'Linnan muurit on ladottu osin vanhoista rakennuksista: '
-      + 'kiviaineksen joukossa on roomalaisia pylväitä ja hautakiviä. '
       + 'Kaupunki oli pitkään pieni maakuntakeskus, ja juuri siksi '
-      + 'antiikin kerros säilyi — sitä ei rakennettu pois.',
+      + 'antiikin kerros säilyi — sitä ei rakennettu pois. Kartan '
+      + 'pohjoisreunassa on roomalaisen kylpylän pohjakaava, keskellä '
+      + 'Augustuksen temppeli ja idässä linnavuori, ja niiden välit '
+      + 'kävelee alle puolessa tunnissa.',
     kohteet: [
       { nimi: 'Ankaran linna', lat: 39.9415, lon: 32.8654 },
       { nimi: 'Augustuksen temppeli', lat: 39.9442, lon: 32.8583 },
