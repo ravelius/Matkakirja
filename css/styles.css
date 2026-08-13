@@ -369,7 +369,9 @@ button, .brand, .turn-pill, .fact-card h2 {
 .paavalikko .linssi-valikko,
 .paavalikko .kertoja-valikko {
   align-items: center;
-  justify-content: center;
+  /* Rivi täyttää valikon leveyden tasavälein — keskitetty nippu jätti
+   * reunoille tyhjää (omistaja 13.8.2026). */
+  justify-content: space-evenly;
   position: static;
   width: auto;
   max-width: none;
@@ -411,7 +413,8 @@ button, .brand, .turn-pill, .fact-card h2 {
 .paavalikko .kertoja-valikko button {
   flex-direction: column;
   gap: 0.15rem;
-  width: auto;
+  width: 44px;
+  height: 44px;
   aspect-ratio: 1;
   padding: 0;
   justify-content: center;
@@ -440,7 +443,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 .valikko-alarivi {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 0.4rem;
   /*
    * Rivi mittaa itsensä sisällöstään ja venyttää valikon tarvittaessa,
@@ -464,8 +467,8 @@ button, .brand, .turn-pill, .fact-card h2 {
   /* Täsmälleen sama mitta ja tausta kuin Äänet-rivin kuvakenapeilla
    * (mitattu 40×40) — rivit ovat päällekkäin ja eri koko näyttäisi
    * virheeltä (omistaja 13.8.2026). */
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   min-height: 0;
   padding: 0;
   justify-content: center;
