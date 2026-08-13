@@ -3949,13 +3949,15 @@ body.radio-tila .actions {
  * Loppuvälähdys jatkaa siitä, mihin piirron aikainen paisuminen jäi
  * (js/ui.js: piirto nostaa viivan lineaarisesti ~70 prosenttiin,
  * leveys 5.4 ja väri rgba(182,61,42,0.8)) — 0 % on täsmälleen nämä
- * arvot, ettei vaiheiden saumaa näy. Nopea huippu 70→100, pieni pito
+ * arvot, ettei vaiheiden saumaa näy. Nopea huippu 70→80, pieni pito
  * ja pehmeä häivytys lepoon (omistajan tarkennus 13.8.2026 ilta).
  */
+/* Huippu on maltillinen 70→80 (omistajan tarkennus 13.8.2026 ilta:
+   "rajan väläys voisi olla vain 70=>80" — aiempi 70→100 oli liikaa). */
 @keyframes maa-aariviivan-valahdys {
   0% { stroke: rgba(182, 61, 42, 0.8); stroke-width: 5.4; }
-  12% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
-  26% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
+  12% { stroke: rgba(188, 61, 42, 0.85); stroke-width: 5.8; }
+  26% { stroke: rgba(188, 61, 42, 0.85); stroke-width: 5.8; }
   100% { stroke: rgba(150, 60, 45, 0.62); stroke-width: 3.5; }
 }
 
@@ -158901,6 +158903,18 @@ class UI {
         sfx.play('swipe');
         return;
       }
+      /*
+       * Napautus matkakirjaan EI sulje valokuvaa (omistajan havainto
+       * 13.8.2026 iPadilla: "yläreunan matkakirja sulkee kuvan jos
+       * sitä painaa"). Kuva kuuluu päiväkirjamerkintään: merkinnän
+       * oma käsittely (avaus, vieritys, kuuntelunappi) tai yläpalkin
+       * painikkeet eivät ole se "napauta karttaa" -ele, jolla kuvasta
+       * poistutaan. Kartan tai muun ulkopuolen napautus sulkee yhä.
+       */
+      const polku = e.composedPath?.() ?? [];
+      const matkakirjassa = polku.some((osa) => osa?.classList
+        && (osa.classList.contains('fact-card') || osa.classList.contains('topbar')));
+      if (matkakirjassa) return;
       this.suljePostikortti();
     };
 
@@ -159657,6 +159671,15 @@ class UI {
     this.peruValintavihje();
     // Sama koskee ääriviivan välähdyksen loppuajastinta.
     clearTimeout(this.aariviivaAjastin);
+    /*
+     * Maapilleri pois DOM:ista (omistajan kaappaus 13.8.2026: "Jordania
+     * jäi maalehtipainikkeen taakse"). Pilleri on mapPanen suora lapsi
+     * eikä kuulu kartan piirtoon, joten uusi peli ei pyyhi sitä muun
+     * mukana — ilman tätä vanhan pelin maa jää kummittelemaan uuden
+     * pillerin alle.
+     */
+    this.maaPilleri?.remove();
+    this.maaPilleri = null;
     // Sama koskee alanappirivin liukua sulkevaa karttanapautusta.
     if (this.liukuKuuntelija) {
       document.removeEventListener('pointerdown', this.liukuKuuntelija);
@@ -162822,6 +162845,10 @@ class UI {
       return;
     }
     if (!nappi || !nappi.isConnected) {
+      // Varmistus kaksoiskappaleita vastaan: jos mapPanessa asuu vielä
+      // jonkin aiemman elämän pilleri (esim. purkamatta jäänyt UI),
+      // se siivotaan ennen uuden luontia — pillereitä on aina yksi.
+      for (const vanha of this.mapPane.querySelectorAll('.maa-pilleri')) vanha.remove();
       nappi = document.createElement('button');
       nappi.type = 'button';
       nappi.className = 'maa-pilleri';
@@ -172473,6 +172500,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 633, teksti: 'Kuva ei sulkeudu matkakirjasta; pilleri- ja välähdyskorjaus' },
   { v: 632, teksti: 'Pöllö väljemmäksi; vuosisäägraafi elää; vuosiennuste-linkki' },
   { v: 631, teksti: 'Raja jää vahvempana; mikki rehellinen; iPad-lehti leveäksi' },
   { v: 630, teksti: 'Sanan, Adenin, Salalahin ja Mosulin kaupunkilehdet' },
@@ -173200,7 +173228,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.632';
+const APP_VERSION = '2026-08-09.633';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
