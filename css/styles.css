@@ -474,7 +474,10 @@ button, .brand, .turn-pill, .fact-card h2 {
 .paavalikko .valikko-alarivi .viiva-ikoni svg { width: 26px; height: 26px; }
 
 .paavalikko .valikko-alarivi .palaute-kulma {
-  font-size: 1.15rem;
+  /* Huutomerkki on tekstiä, ei 26 px:n viivakuvake — pienempi koko
+   * näytti vajaalta naapuriensa rinnalla (omistaja 13.8.2026). */
+  font-size: 1.55rem;
+  font-weight: 600;
   line-height: 1;
 }
 
