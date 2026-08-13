@@ -2115,8 +2115,17 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  * Kaupunki ja maa vierekkäin (omistajan toive): leveällä ruudulla kortti
  * levenee kahteen palstaan, kapealla palstat putoavat allekkain. Ilman
  * maaosiota (muut laudat) kortti pysyy kapeana yksipalstaisena.
+ *
+ * KATTO EI KOSKE TUTKI-ARKKIIN (omistajan iPad-havainto 13.8.2026:
+ * *"Lehti näkyy vieläkin liian kapeana iPadilla."*). Saapumiskortti
+ * avataan nykyään aina arkkina, jonka leveys on oma sääntönsä
+ * (.dialog.arkki .dialog-card). Tämä 700 pikselin katto on siitä
+ * vanhempi, ja se on kumottu arkissa vain :has()-valitsimen suuremmalla
+ * tarkkuudella — hauras tapa, koska se kaatuu heti jos selain ei tue
+ * :has():ia. Nyt katto on rajattu suoraan pois arkista, eikä arkin omien
+ * mittojen tarvitse enää voittaa mitään.
  */
-.arrival-card:has(#arrival-maa:not([hidden])) {
+.dialog:not(.arkki) .arrival-card:has(#arrival-maa:not([hidden])) {
   max-width: min(92vw, 700px);
 }
 
@@ -7388,8 +7397,18 @@ body.katselu #newgame-btn { display: none; }
   max-height: calc(100dvh - 1.6rem);
 }
 
-.dialog.arkki .dialog-card,
-.dialog.arkki .dialog-card:has(#arrival-maa:not([hidden])) {
+/*
+ * ARKIN MITAT OVAT YHDESSÄ SÄÄNNÖSSÄ ILMAN :has():ia (omistajan
+ * iPad-havainto 13.8.2026). Tässä oli mukana kaksoiskappale
+ * `.dialog.arkki .dialog-card:has(#arrival-maa:not([hidden]))`, jonka
+ * ainoa tehtävä oli voittaa saapumiskortin vanha 700 px:n katto. Koko
+ * sääntö — myös tavallinen valitsin — kaatuu selaimessa, joka ei
+ * jäsennä :has():ia, ja silloin arkki putoaa .dialogin oletusleveyteen
+ * eli 620 pikselin palstaksi keskelle isoa iPadin ruutua. Katto on nyt
+ * rajattu arkin ulkopuolelle (ks. .dialog:not(.arkki) .arrival-card),
+ * joten tämä sääntö on taas pelkkää arkkia.
+ */
+.dialog.arkki .dialog-card {
   width: calc(100vw - 1.6rem);
   max-width: none;
   max-height: calc(100dvh - 1.6rem);
@@ -7494,8 +7513,7 @@ body.katselu #newgame-btn { display: none; }
 .dialog.arkki .arrival-palstat[hidden] ~ #arrival-kategoria { padding-top: var(--arkki-yla); }
 
 @media (min-width: 700px) {
-  .dialog.arkki .dialog-card,
-  .dialog.arkki .dialog-card:has(#arrival-maa:not([hidden])) {
+  .dialog.arkki .dialog-card {
     --arkki-reunus: 2.2rem;
     --arkki-yla: 2rem;
     padding: 0 var(--arkki-reunus) 2.2rem;
@@ -7554,8 +7572,7 @@ body.katselu #newgame-btn { display: none; }
 
 @media (min-width: 700px) {
   .dialog.arkki,
-  .dialog.arkki .dialog-card,
-  .dialog.arkki .dialog-card:has(#arrival-maa:not([hidden])) {
+  .dialog.arkki .dialog-card {
     /* Työpöydällä kartta saa näkyä leveämmältä: arkki ei kasva
      * ruudun mukana loputtomiin, koska rivi pitenisi lukukelvottomaksi.
      * Katto 960 px = sama taitto kuin isolla iPadilla (omistajan toive
@@ -7568,6 +7585,37 @@ body.katselu #newgame-btn { display: none; }
      * (omistajan toive 5.8.2026) — kartta jää näkyviin sivuille. */
     height: 100dvh;
     max-height: 100dvh;
+  }
+
+  /*
+   * LYHYT KORTTI ON LYHYT (omistajan iPad-havainto 13.8.2026: kortin
+   * *"alaosa on pelkkää tyhjää pergamenttia"*).
+   *
+   * Koko ruudun korkeus on LEHDEN mitta: lehtikaupungin sivu on aina
+   * pidempi kuin ruutu, ja täysi korkeus tekee siitä sivun kädessä.
+   * Lehdettömässä kaupungissa kortilla on vain otsikko, kuva, esittely
+   * ja napit — iPadilla se on kolmasosa ruudusta, ja loput kaksi
+   * kolmasosaa oli tyhjää paperia. Sisällön mittainen kortti on sama
+   * paperi, vain oikean kokoisena; katto pitää pitkänkin kortin ruudulla
+   * ja vieritys hoitaa lopun.
+   *
+   * Dialogi itse jää ruudun korkuiseksi läpinäkyväksi kehykseksi ja
+   * keskittää lyhyen kortin. Ilman keskitystä kortti liimautuisi
+   * yläreunaan: `position: fixed` -laatikko, jolla on sekä top että
+   * bottom, venyy korkeudeltaan täyteen mittaan vaikka korkeus olisi
+   * auto. Flex koskee vain korttia — sivunavigointi, lukijan kaiutin ja
+   * pohjaan vievä väkänen ovat absoluuttisia. Valitsimessa on [open],
+   * koska suljetun dialogin display on selaimen oma `none`.
+   */
+  .dialog.arkki:not(.lehti)[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dialog.arkki:not(.lehti) .dialog-card {
+    height: auto;
+    max-height: calc(100dvh - 2.4rem);
   }
 }
 
@@ -7703,8 +7751,7 @@ body.katselu #newgame-btn { display: none; }
     inset: 0;
   }
 
-  .dialog.arkki .dialog-card,
-  .dialog.arkki .dialog-card:has(#arrival-maa:not([hidden])) {
+  .dialog.arkki .dialog-card {
     width: 100vw;
     max-width: 100vw;
     height: 100dvh;

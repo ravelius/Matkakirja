@@ -3093,6 +3093,103 @@ vaadi('vihjekoe ei kirjoita konsoliin', vihjeVirheet.length === 0,
   vihjeVirheet.slice(0, 3).join(' | '));
 await vihjeCtx.close();
 
+/* ================================================================== */
+/* 19) Tutki-arkki iPadilla: leveys ja sisällön mittainen korkeus       */
+/* ================================================================== */
+
+/*
+ * Omistajan iPad-kaappaus 13.8.2026: *"Lehti näkyy vieläkin liian
+ * kapeana iPadilla."* Kaappauksessa lehdettömän kaupungin Tutki-kortti
+ * oli kapea palsta keskellä isoa ruutua, ja kortin alaosa oli pelkkää
+ * tyhjää pergamenttia.
+ *
+ * Kaksi vartiota:
+ *   a) arkki käyttää iPadin leveyden (vähintään 85 % ruudusta) — juuri
+ *      sen menettäisi, jos arkin mittasääntö kaatuisi ja kortti putoaisi
+ *      .dialogin 620 pikselin oletukseen
+ *   b) lehdettömän kaupungin kortti on sisältönsä mittainen: alle
+ *      ruudun korkuinen eikä alla ole kuin pehmuste
+ *
+ * Puhelin mitataan samalla: siellä arkki on omistajan tilauksesta koko
+ * ruutu, eikä tämä korjaus saa muuttaa sitä.
+ */
+async function tutkiArkinMitat(leveys, korkeus) {
+  const oma = await selain.newContext({
+    viewport: { width: leveys, height: korkeus }, serviceWorkers: 'block',
+  });
+  const { sivu: s, virheet: v } = await avaaPeli(oma);
+  const tulos = await s.evaluate(async () => {
+    const { game, ui } = window.matkakirja;
+    /*
+     * Etsitään lehdetön kaupunki: sen kortilla on vain otsikko, esittely
+     * ja napit — juuri se kortti, joka jätti iPadille tyhjän hännän.
+     * Lehtikaupungin sivu on aina ruutua pidempi eikä kerro tästä mitään.
+     */
+    let lehdeton = null;
+    for (const c of game.board.cities) {
+      game.actionKehittajaSiirto(c.id);
+      ui.openArrival(game.cityOf());
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((r) => setTimeout(r, 200));
+      if (!document.getElementById('arrival-dialog').classList.contains('lehti')) {
+        lehdeton = c.id;
+        break;
+      }
+      ui.closeArrival();
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((r) => setTimeout(r, 80));
+    }
+    // Kortin avausanimaatio kutistaa sitä hetkeksi: mitataan vasta sen jälkeen.
+    await new Promise((r) => setTimeout(r, 900));
+    const dialogi = document.getElementById('arrival-dialog');
+    const kortti = dialogi.querySelector('.dialog-card');
+    const k = kortti.getBoundingClientRect();
+    const nakyva = (el) => el && !el.hidden && el.getBoundingClientRect().height > 0;
+    const pohja = [...kortti.querySelectorAll('*')].filter(nakyva)
+      .reduce((m, el) => Math.max(m, el.getBoundingClientRect().bottom), 0);
+    return {
+      ruutu: window.innerWidth,
+      korkeusRuutu: window.innerHeight,
+      lehti: dialogi.classList.contains('lehti'),
+      kaupunki: lehdeton,
+      leveys: Math.round(k.width),
+      korkeus: Math.round(k.height),
+      // Tyhjä paperi sisällön alla: pelkkä pehmuste on hyväksyttävä.
+      hanta: Math.round(k.bottom - pohja),
+      ylaVara: Math.round(k.top),
+      alaVara: Math.round(window.innerHeight - k.bottom),
+    };
+  });
+  await oma.close();
+  return { tulos, virheet: v };
+}
+
+const ipad = await tutkiArkinMitat(1024, 1366);
+vaadi('iPadilla Tutki-kortti käyttää ruudun leveyden',
+  ipad.tulos.leveys >= ipad.tulos.ruutu * 0.85, JSON.stringify(ipad.tulos));
+vaadi('lehdettömän kaupungin kortti on sisältönsä mittainen',
+  ipad.tulos.lehti === false && ipad.tulos.korkeus < ipad.tulos.korkeusRuutu * 0.8,
+  JSON.stringify(ipad.tulos));
+vaadi('kortin alle ei jää tyhjää pergamenttia',
+  ipad.tulos.hanta < 80, JSON.stringify(ipad.tulos));
+vaadi('lyhyt kortti on pystysuunnassa keskellä',
+  Math.abs(ipad.tulos.ylaVara - ipad.tulos.alaVara) < 40, JSON.stringify(ipad.tulos));
+vaadi('iPad-mittaus ei kirjoita konsoliin', ipad.virheet.length === 0,
+  ipad.virheet.slice(0, 3).join(' | '));
+
+const ipadPieni = await tutkiArkinMitat(834, 1194);
+vaadi('pienemmällä iPadilla kortti käyttää ruudun leveyden',
+  ipadPieni.tulos.leveys >= ipadPieni.tulos.ruutu * 0.85, JSON.stringify(ipadPieni.tulos));
+vaadi('pienemmällä iPadilla kortti on sisältönsä mittainen',
+  ipadPieni.tulos.korkeus < ipadPieni.tulos.korkeusRuutu * 0.8
+  && ipadPieni.tulos.hanta < 80, JSON.stringify(ipadPieni.tulos));
+
+const puhelinArkki = await tutkiArkinMitat(390, 844);
+vaadi('puhelimella arkki on yhä koko ruutu',
+  puhelinArkki.tulos.leveys === puhelinArkki.tulos.ruutu
+  && puhelinArkki.tulos.korkeus === puhelinArkki.tulos.korkeusRuutu,
+  JSON.stringify(puhelinArkki.tulos));
+
 vaadi('ei sivuvirheitä pääajossa', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
 await selain.close();
