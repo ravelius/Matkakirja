@@ -6206,7 +6206,9 @@ body.katselu #newgame-btn { display: none; }
 .versio-kulma { transition: font-size 0.6s ease, color 0.6s ease; }
 
 .versio-kulma.tuore {
-  font-size: 1.4em;
+  /* Koko ei enää kasva (omistaja 13.8.2026: "versionumero pienellä") —
+   * julkaisuja tulee niin tiheään, että isompi koko näytti pysyvältä.
+   * Tuoreus näkyy pelkkänä kullan välähdyksenä. */
   color: var(--accent);
   font-weight: 700;
 }

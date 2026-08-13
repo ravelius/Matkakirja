@@ -391,9 +391,9 @@ document.getElementById('app-version').textContent = APP_VERSION;
 const versioKulma = document.getElementById('versio-kulma');
 function paivitaVersioKulma() {
   const numero = `v${APP_VERSION.split('.').pop()}`;
-  // Pelkkä numero myös kehittäjätilassa (omistajan päätös 8.8.2026:
-  // "Kehittäjä tekstin voi ottaa pois. Tunnistan tilan kyllä itse").
-  versioKulma.textContent = numero;
+  // Kehittäjätila merkitään numeron perään (omistajan päätös 13.8.2026,
+  // kumoaa 8.8. linjan): valikossa merkintä ei häiritse pelinäkymää.
+  versioKulma.textContent = kehittajaTilaPaalla() ? `${numero} · kehittäjä` : numero;
 }
 paivitaVersioKulma();
 
