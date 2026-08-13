@@ -106,4 +106,47 @@ export const SAATIEDOT = {
     keskilampo: [20.7, 21.9, 24.4, 28.6, 32.5, 33.5, 33, 31.9, 30.8, 29, 25.3, 22.2],
     sade: [18, 11, 18, 7, 1, 10, 4, 1, 0, 1, 12, 14],
   },
+  // Bagdad on nipun kuivin ja kuumin: heinä-elokuun keskilämpö on yli
+  // 38 astetta, ja kesäkuusta lokakuuhun sadetta ei tule lainkaan.
+  bagdad: {
+    lat: 33.315,
+    lon: 44.366,
+    keskilampo: [10.8, 13.1, 18.3, 24.6, 31.1, 35.9, 38.3, 38.1, 34, 27.7, 18.1, 12.5],
+    sade: [25, 21, 19, 13, 4, 0, 0, 0, 0, 8, 21, 23],
+  },
+  // İzmir on ainoa Välimeren rannalla: sade painottuu talveen ja on
+  // moninkertainen muihin nipun kaupunkeihin verrattuna, heinäkuussa
+  // sitä ei käytännössä tule.
+  izmir: {
+    lat: 38.419,
+    lon: 27.128,
+    keskilampo: [7.5, 8.5, 11.1, 15.2, 20.5, 25.6, 28.7, 28.6, 24, 18.7, 13.2, 9],
+    sade: [108, 100, 83, 62, 40, 15, 3, 4, 24, 63, 94, 109],
+  },
+  // Ankara on Anatolian ylängöllä noin 900 metrissä, ja se näkyy
+  // suoraan käyrässä: tammikuun keskilämpö on nollan tuntumassa, kun
+  // rannikon İzmirissä se on 7,5 astetta.
+  ankara: {
+    lat: 39.942,
+    lon: 32.86,
+    keskilampo: [1, 2.5, 6.4, 11.5, 16.7, 20.8, 24.4, 24.6, 20.2, 14.5, 7.6, 2.9],
+    sade: [50, 44, 53, 46, 44, 31, 9, 10, 13, 28, 39, 54],
+  },
+  // Aleppo ja Damaskos ovat molemmat kuivan ja kostean rajalla: sade
+  // tulee marraskuun ja maaliskuun välissä, ja kesä on täysin kuiva.
+  halab: {
+    lat: 36.2,
+    lon: 37.157,
+    keskilampo: [6.5, 7.9, 11.8, 16.7, 21.9, 26.2, 28.6, 28.7, 25.8, 20.8, 13, 7.9],
+    sade: [55, 49, 39, 25, 18, 3, 1, 1, 3, 19, 33, 54],
+  },
+  // Damaskos on Aleppoa hieman lämpimämpi ja selvästi kuivempi:
+  // vuoret pysäyttävät mereltä tulevan sateen, ja kaupunki elää
+  // keitaan varassa.
+  damaskos: {
+    lat: 33.511,
+    lon: 36.306,
+    keskilampo: [5.9, 7.3, 11, 15.8, 20.9, 24.8, 27.1, 27, 24.4, 19.6, 12.4, 7.7],
+    sade: [40, 35, 25, 11, 7, 0, 0, 0, 1, 7, 23, 31],
+  },
 };
