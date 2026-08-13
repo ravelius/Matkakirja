@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 626, teksti: 'Avauslennon luenta aiemmin ja kuulutus kuuluviin' },
   { v: 625, teksti: 'Isfahanin kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 624, teksti: 'Sanelun uusinta esiavaa mikrofonin; virherivi diagnosoi' },
   { v: 623, teksti: 'Sanelun ajaksi äänet taukoon: mikrofoni vapautuu iOS:lla' },
