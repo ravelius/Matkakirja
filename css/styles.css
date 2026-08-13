@@ -50,9 +50,25 @@
 }
 
 /* Pelin oma runko pysyy piilossa, kunnes se on rakennettu: puoliksi
-   valmis näkymä ei saa vilkkua päivitysruudun alta. */
+   valmis näkymä ei saa vilkkua latausruudun alta. */
 body.paivittyy .app,
 body.paivittyy .rotate-guard { visibility: hidden; }
+
+/*
+ * Häivytys valmiin näkymän päältä (js/main.js paataPaivitysruutu).
+ * Kesto on sama luku kuin siellä: LATAUSRUUDUN_HAIPYMA_MS. Peli on jo
+ * maalattu ruudun alla, joten häivytyksen läpi paljastuu valmis
+ * kartta eikä rakentumaton runko.
+ */
+.paivitysruutu.latausruutu-haipyy {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 280ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paivitysruutu.latausruutu-haipyy { transition: none; }
+}
 
 :root {
   /* Sovelluksen kehys */

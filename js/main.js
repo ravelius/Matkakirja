@@ -51,19 +51,61 @@ function merkitsePaivitys() {
   // Ruutu esiin jo ennen latausta, jottei vanha näkymä jää tuijottamaan.
   document.body.classList.add('paivittyy');
   const ruutu = document.getElementById('paivitysruutu');
-  if (ruutu) ruutu.hidden = false;
+  if (!ruutu) return;
+  // Ruutu on tässä vaiheessa jo kertaalleen häivytetty pois (peli on
+  // ollut pelattavissa), joten häivytys perutaan ja teksti vaihtuu
+  // päivityksen omaksi: se kestää kauemmin kuin tavallinen avaus.
+  ruutu.classList.remove('latausruutu-haipyy');
+  ruutu.hidden = false;
+  const teksti = ruutu.querySelector('.paivitysruutu-teksti');
+  if (teksti) teksti.textContent = 'Päivitetään, odota hetki…';
 }
 
-/** Päivitysruutu pois, kun peli on rakennettu. */
+/** Latausruudun häivytys millisekunteina. Sama luku on css:ssä. */
+const LATAUSRUUDUN_HAIPYMA_MS = 280;
+
+/**
+ * Latausruutu pois — VASTA kun pelin oma näkymä on maalattu.
+ *
+ * OMISTAJAN HAVAINTO 13.8.2026 (iPhone): "näkyy ensin siisti Avataan
+ * matkakirjaa -ruutu, mutta sen jälkeen vilahtaa vielä vanha ruma
+ * välitila ennen kuin peli piirtyy."
+ *
+ * Syy oli järjestyksessä. Ruutu piilotettiin heti pelin rakentamisen
+ * jälkeen samassa synkronisessa lohkossa, jossa peli rakennettiin:
+ * selain ei ollut vielä maalannut kertaakaan, ja ensimmäinen maalaus
+ * osui hetkeen, jolloin asettelu oli vasta valmistumassa. Pelaaja näki
+ * siis täsmälleen sen rungon, jonka peittämiseksi ruutu on olemassa.
+ *
+ * Nyt vaiheet erotetaan:
+ *
+ *   1. body.paivittyy pois — peli tulee näkyviin ruudun ALLE, mutta
+ *      ruutu on yhä läpinäkymätön sen päällä eikä pelaaja näe mitään.
+ *   2. Kaksi requestAnimationFramea. Ensimmäisen jälkeen selain on
+ *      laskenut asettelun, toisen jälkeen se on myös maalannut sen.
+ *      Vasta silloin ruudun alla on valmis näkymä.
+ *   3. Häivytys, ettei vaihdos nytkähdä, ja piilotus sen päätteeksi.
+ *
+ * Kaksi kehystä on halpa hinta: käynnistys ei hidastu mitattavasti,
+ * eikä mikään odota verkkoa tai kuvia.
+ */
 function paataPaivitysruutu() {
   try {
     sessionStorage.removeItem(PAIVITYS_LIPPU);
   } catch {
     /* ei mitään siivottavaa */
   }
+  // Peli näkyviin ruudun alle. Ruutu itse on yhä täysin peittävä.
   document.body.classList.remove('paivittyy');
   const ruutu = document.getElementById('paivitysruutu');
-  if (ruutu) ruutu.hidden = true;
+  if (!ruutu || ruutu.hidden) return;
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    ruutu.classList.add('latausruutu-haipyy');
+    setTimeout(() => {
+      ruutu.hidden = true;
+      ruutu.classList.remove('latausruutu-haipyy');
+    }, LATAUSRUUDUN_HAIPYMA_MS);
+  }));
 }
 
 /**

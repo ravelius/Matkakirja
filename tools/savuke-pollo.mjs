@@ -39,6 +39,8 @@
  *      näkymän tarkkuudessa
  *  16. ALANAPPIRIVI on puhelimella kapea ja keskitetty, ja pöllönappi
  *      palaa riviin myös ladatussa pelissä
+ *  17. LATAUSRUUTU näkyy myös kylmäkäynnistyksessä ja väistyy vasta kun
+ *      pelinäkymä on rakennettu ja maalattu (osio 11)
  *
  *   node tools/savuke-pollo.mjs
  *
@@ -1695,6 +1697,101 @@ vaadi('päivitysruutu väistyy kun peli on rakennettu',
   && paivitysLoppu.peliNakyy === true, JSON.stringify(paivitysLoppu));
 vaadi('päivityslippu siivotaan latauksen jälkeen', paivitysLoppu.lippuPois === true);
 await paivitysLoppuCtx.close();
+
+/*
+ * KYLMÄKÄYNNISTYS: sama ruutu ilman päivityslippua, ja se väistyy vasta
+ * kun peli on rakennettu.
+ *
+ * Omistajan havainto 13.8.2026 (iPhone): natiivikuoren "Avataan
+ * matkakirjaa…" väistyi, ja sen JÄLKEEN vilahti vielä pelin
+ * rakentumaton runko. Ruutu näytettiin vain päivityslatauksessa, ja
+ * silloinkin se piilotettiin samassa synkronisessa lohkossa, jossa peli
+ * rakennettiin — eli ennen ensimmäistä maalausta.
+ *
+ * Jälki kerätään ennen sivun skriptejä: joka kerta kun ruudun hidden
+ * tai class muuttuu, kirjataan mitä ruudun alla sillä hetkellä on.
+ * Näin nähdään SE hetki, jona ruutu alkaa väistyä, eikä vain
+ * lopputulos.
+ */
+const LATAUSJALKI = `
+window.__latausJalki = [];
+(function seuraa() {
+  var ruutu = document.getElementById('paivitysruutu');
+  if (!ruutu) { requestAnimationFrame(seuraa); return; }
+  function kirjaa() {
+    var app = document.querySelector('.app');
+    window.__latausJalki.push({
+      piilossa: ruutu.hidden,
+      haipyy: ruutu.classList.contains('latausruutu-haipyy'),
+      peli: Boolean(window.matkakirja),
+      kartta: Boolean(document.querySelector('.map-pane svg')),
+      appNakyy: Boolean(app) && getComputedStyle(app).visibility !== 'hidden',
+    });
+  }
+  new MutationObserver(kirjaa).observe(ruutu, {
+    attributes: true, attributeFilter: ['hidden', 'class'],
+  });
+  kirjaa();
+}());
+`;
+
+/*
+ * Ensin itse ruutu ilman päivityslippua. js/main.js korvataan tyhjällä
+ * samalla tavalla kuin päivitysruudun kaappauksessa yllä: paikallinen
+ * palvelin rakentaa pelin muuten nopeammin kuin kaappaus ehtii, ja
+ * mitattavana on nimenomaan se tila, jonka pelaaja näkee ennen kuin
+ * moduuli on ajettu.
+ */
+const kylmaKaappausCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
+const kylmaKaappausSivu = await kylmaKaappausCtx.newPage();
+await kylmaKaappausSivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+await kylmaKaappausSivu.route(/js\/main\.js$/, (route) => route.fulfill({
+  status: 200, contentType: 'text/javascript', body: '',
+}));
+await kylmaKaappausSivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await kylmaKaappausSivu.waitForTimeout(300);
+await kylmaKaappausSivu.screenshot({ path: join(ULOS, 'latausruutu-kylma-390.png') });
+const kylmaKesken = await kylmaKaappausSivu.evaluate(() => ({
+  ruutuNakyy: !document.getElementById('paivitysruutu').hidden,
+  peliPiilossa: getComputedStyle(document.querySelector('.app')).visibility === 'hidden',
+  teksti: document.querySelector('.paivitysruutu-teksti')?.textContent ?? '',
+}));
+vaadi('kylmäkäynnistyksessä ruutu peittää rakentumattoman rungon',
+  kylmaKesken.ruutuNakyy === true && kylmaKesken.peliPiilossa === true,
+  JSON.stringify(kylmaKesken));
+vaadi('teksti on sama kuin natiivikuoren latausnäkymässä',
+  /Avataan matkakirjaa/.test(kylmaKesken.teksti), kylmaKesken.teksti);
+await kylmaKaappausCtx.close();
+
+// Sitten oikea lataus: milloin ruutu väistyy ja mitä sen alla on.
+const kylmaCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
+const kylmaSivu = await kylmaCtx.newPage();
+await kylmaSivu.addInitScript(LATAUSJALKI);
+await kylmaSivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+await kylmaSivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
+await kylmaSivu.waitForTimeout(3500);
+const kylma = await kylmaSivu.evaluate(() => ({
+  jalki: window.__latausJalki,
+  ruutuPiilossa: document.getElementById('paivitysruutu').hidden,
+  peliNakyy: getComputedStyle(document.querySelector('.app')).visibility !== 'hidden',
+  kartta: Boolean(document.querySelector('.map-pane svg')),
+}));
+const alku = kylma.jalki[0] ?? {};
+// Ensimmäinen kirjaus, jossa ruutu alkaa väistyä (häivytys tai piilotus).
+const vaistyy = kylma.jalki.find((v) => v.haipyy || v.piilossa) ?? {};
+vaadi('latausruutu näkyy myös ilman päivityslippua',
+  alku.piilossa === false && alku.peli === false && alku.appNakyy === false,
+  JSON.stringify(alku));
+vaadi('latausruutu väistyy vasta kun pelinäkymä on rakennettu',
+  vaistyy.peli === true && vaistyy.kartta === true && vaistyy.appNakyy === true,
+  JSON.stringify(vaistyy));
+vaadi('latausruutu väistyy häivyttäen eikä nytkähtäen', vaistyy.haipyy === true,
+  JSON.stringify(vaistyy));
+vaadi('latausruutu on lopulta poissa ja peli näkyvissä',
+  kylma.ruutuPiilossa === true && kylma.peliNakyy === true && kylma.kartta === true,
+  JSON.stringify({ ruutuPiilossa: kylma.ruutuPiilossa, peliNakyy: kylma.peliNakyy }));
+await kylmaSivu.screenshot({ path: join(ULOS, 'latausruutu-jalkeen-390.png') });
+await kylmaCtx.close();
 
 /* ================================================================== */
 /* 12) Näkymän elvytys taustalta palatessa                             */

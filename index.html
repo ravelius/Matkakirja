@@ -17,33 +17,53 @@
 </head>
 <body>
   <!--
-    PÄIVITYSRUUTU (omistajan havainto 13.8.2026).
+    LATAUSRUUTU (omistajan havainto 13.8.2026, tarkennettu samana
+    päivänä iPhonella).
 
-    Kun palvelutyöntekijä vaihtaa version, sivu ladataan uudelleen. Sen
-    aikana ruudulla vilahti pelin rakentumaton runko: tyhjiä tummia
-    kehyksiä ilman karttaa, ilman logoa, ilman selitystä. Nyt sen
-    tilalla on siisti tumma ruutu, jossa on pelin logo ja yksi rivi
-    tekstiä.
+    Sivun rakentumaton runko on ruma: tyhjiä tummia kehyksiä ilman
+    karttaa, ilman logoa, ilman selitystä. Sen tilalla on siisti tumma
+    ruutu, jossa on pelin logo ja yksi rivi tekstiä.
 
-    Ruutu on oletuksena piilossa eikä se hidasta tavallista
-    käynnistystä millään tavalla: alla oleva pikkuskripti näyttää sen
-    VAIN jos päivitys merkitsi lipun sessionStorageen ennen
-    uudelleenlatausta (js/main.js merkitsePaivitys). Skripti on tässä
-    eikä moduulissa, koska sen on ehdittävä ruudulle ennen kuin
-    js/main.js on edes ladattu.
+    RUUTU NÄYTETÄÄN AINA, EI VAIN PÄIVITYKSESSÄ. Ensin se oli vain
+    palvelutyöntekijän version vaihdolle, mutta omistaja näki iPhonella
+    saman rakentumattoman rungon myös tavallisessa kylmäkäynnistyksessä
+    — natiivikuoren "Avataan matkakirjaa…" väistyi ja sen jälkeen
+    vilahti vielä vanha välitila. Siksi teksti on kylmäkäynnistyksessä
+    sama kuin kuoressa (ios/.../PeliNakyma.swift LatausNakyma): kuoresta
+    selaimeen siirtyminen ei enää näy pelaajalle lainkaan. Päivityksessä
+    teksti kertoo päivityksestä, koska se kestää kauemmin.
+
+    Ruutu ei hidasta käynnistystä: se on yksi näytä/piilota-pari ilman
+    latauksia (logo on samassa välimuistissa kuin pelin muutkin kuvat).
+    Skripti on tässä eikä moduulissa, koska sen on ehdittävä ruudulle
+    ennen kuin js/main.js on edes ladattu.
+
+    Poiston hoitaa js/main.js paataPaivitysruutu VASTA kun pelin oma
+    näkymä on rakennettu ja maalattu. Varaventtiili alla on sitä
+    varten, ettei ruutu jää peittämään peliä, jos moduuli ei koskaan
+    lataudu (verkkovirhe, rikkinäinen välimuisti).
   -->
   <div id="paivitysruutu" class="paivitysruutu" role="status" hidden>
     <img class="paivitysruutu-logo" src="assets/logo.png" width="720" height="176"
          alt="Matkakirja ja unohdettu aarre" decoding="async">
-    <p class="paivitysruutu-teksti">Päivitetään, odota hetki…</p>
+    <p class="paivitysruutu-teksti">Avataan matkakirjaa…</p>
   </div>
   <script>
-    try {
-      if (sessionStorage.getItem('matkakirja-paivittyy') === '1') {
-        document.body.classList.add('paivittyy');
-        document.getElementById('paivitysruutu').hidden = false;
-      }
-    } catch (e) { /* yksityinen selaus: ruutu jää näyttämättä */ }
+    (function () {
+      var ruutu = document.getElementById('paivitysruutu');
+      document.body.classList.add('paivittyy');
+      ruutu.hidden = false;
+      try {
+        if (sessionStorage.getItem('matkakirja-paivittyy') === '1') {
+          ruutu.querySelector('.paivitysruutu-teksti').textContent = 'Päivitetään, odota hetki…';
+        }
+      } catch (e) { /* yksityinen selaus: teksti jää oletukseen */ }
+      setTimeout(function () {
+        if (ruutu.hidden) return;
+        ruutu.hidden = true;
+        document.body.classList.remove('paivittyy');
+      }, 10000);
+    }());
   </script>
   <!--
     iOS ei tue screen.orientation.lockia, joten vaaka-asento estetään
