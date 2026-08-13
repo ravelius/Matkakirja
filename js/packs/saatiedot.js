@@ -193,8 +193,8 @@ export const SAATIEDOT = {
   // kuukausi jää seitsemääntoista. Vuoden summa on noin 98 mm, eli alle
   // kolmasosa Tabrizin luvusta.
   // Tokio on lehtikaupungeista sateisin: vuoden summa on noin 1 455 mm,
-  // eli yli neljätoista kertaa Isfahanin luku. Kuivinkin kuukausi
-  // (joulukuu, 60 mm) on sateisempi kuin Tabrizin sateisin.
+  // eli lähes viisitoista kertaa Isfahanin luku. Kuivinkin kuukausi
+  // (joulukuu, 60 mm) on sateisempi kuin Bagdadin tai Riadin sateisin.
   tokio: {
     lat: 35.71,
     lon: 139.78,
