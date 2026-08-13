@@ -1249,22 +1249,14 @@ body.aloitus-zoom .kiikari {
   cursor: default;
 }
 
-.board-hint {
-  position: absolute;
-  left: 50%;
-  bottom: 0.6rem;
-  transform: translateX(-50%);
-  background: rgba(28, 20, 12, 0.82);
-  border: 1px solid var(--line);
-  padding: 0.3rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  pointer-events: none;
-  max-width: 90%;
-  text-align: center;
-}
-
-.board-hint:empty { display: none; }
+/*
+ * Kartan oma ohjerivi (.board-hint) ja vuorolaatikon tilarivi
+ * (.turn-status) on poistettu 13.8.2026 (omistaja: *"kartan päälle ei
+ * tule enää mitään ohjetekstiä"*). Molemmat kelluivat kartan päällä.
+ * Kehotus tulee kartalta itseltään: valittavat kohteet korostuvat
+ * renkailla (.target-ring), ja pitkän hiljaisuuden jälkeen pöllö
+ * vinkkaa omassa kuplassaan (.pollo-vihje).
+ */
 
 /* --- laudalla lepäävä 3D-noppa --- */
 
@@ -1437,43 +1429,13 @@ body.aloitus-zoom .kiikari {
   min-width: 0;
 }
 
-/* --- vuorolaatikko --- */
-
-.turn-row {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 0.5rem;
-}
-
-.turn-status {
-  font-size: 0.9rem;
-  color: var(--muted);
-  min-width: 0;
-}
-
-.die {
-  font-size: 1.8rem;
-  line-height: 1;
-  color: var(--accent);
-  display: inline-block;
-  font-variant-numeric: tabular-nums;
-}
-
-.die.rolling { animation: die-shake 0.14s linear infinite; }
-.die.landed { animation: die-land 0.26s ease-out; }
-
-@keyframes die-shake {
-  0% { transform: rotate(-12deg) translateY(0); }
-  50% { transform: rotate(12deg) translateY(-4px); }
-  100% { transform: rotate(-12deg) translateY(0); }
-}
-
-@keyframes die-land {
-  0% { transform: scale(1.45); }
-  60% { transform: scale(0.94); }
-  100% { transform: scale(1); }
-}
+/* --- vuorolaatikko ---
+ *
+ * Laatikossa on enää napit. Tilarivi (.turn-status), sen rivi
+ * (.turn-row) ja vanha tekstinoppa (.die) poistuivat 13.8.2026:
+ * kortti kelluu kartan päällä, joten jokainen niiden näyttämä sana oli
+ * tekstiä kartan päällä. Silmäluku näkyy laudalle jäävässä nopassa
+ * (.die-layer). */
 
 .actions {
   display: grid;
@@ -3906,8 +3868,7 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
  * kartan asettelu ei hyppää radion syttyessä eikä sammuessa.
  */
 body.radio-tila .fact-card,
-body.radio-tila .actions,
-body.radio-tila .board-hint {
+body.radio-tila .actions {
   visibility: hidden;
   pointer-events: none;
 }
@@ -3958,6 +3919,37 @@ body.radio-tila .board-hint {
   stroke-width: 3;
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+
+/*
+ * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI (omistajan tilaus 13.8.2026:
+ * ääriviiva piirtyy parissa sekunnissa, välähtää kerran voimakkaampana
+ * ja paksumpana ja häipyy pehmeästi rajaviivan omaan sävyyn).
+ *
+ * Piirtovaihe on JS:n puolella (js/ui.js animoiMaanAariviiva: polun
+ * pituus viiva-aukkokuvioksi ja dashoffset nollaan). Välähdys ja sen
+ * häivytys ovat tässä yhtenä animaationa: väri ja paksuus liukuvat
+ * samaa tahtia takaisin lepoarvoihin, joten viivan ei tarvitse tietää
+ * lepoarvoja kahdessa paikassa.
+ *
+ * Ei transitionia vaan keyframes: siirtymä vaatisi kaksi peräkkäistä
+ * tyylinvaihtoa (ensin vahvaksi, sitten takaisin), eikä sitä voi tehdä
+ * pakottamatta asettelun lukua kesken animaation.
+ */
+@keyframes maa-aariviivan-valahdys {
+  0% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
+  14% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
+  100% { stroke: rgba(150, 60, 45, 0.45); stroke-width: 3; }
+}
+
+.country-borders.maa-valahtaa .country-korostus {
+  animation: maa-aariviivan-valahdys 880ms ease-out;
+}
+
+/* Liikeherkkyys: viiva on heti valmis eikä välähdä (js/ui.js ohittaa
+   koko animaation, tämä on varmistus tyylin puolella). */
+@media (prefers-reduced-motion: reduce) {
+  .country-borders.maa-valahtaa .country-korostus { animation: none; }
 }
 
 /*
@@ -5621,15 +5613,6 @@ body[data-mode] .stage { padding-bottom: var(--gap); }
 body[data-mode] .rail { bottom: calc(var(--gap) * 2); }
 
 /*
- * Kartan oma ohjerivi nousee ylös keskelle: alhaalla keskellä on nyt kelluva
- * toimintokortti, jonka alle rivi jäisi piiloon.
- */
-body[data-mode] .board-hint {
-  top: 0.6rem;
-  bottom: auto;
-}
-
-/*
  * Alarivi: päiväkirja vasemmalla, toiminnot sen oikealla puolella. Rivi
  * katkeaa, kun kortit eivät mahdu rinnakkain — silloin päiväkirja nousee
  * omalle rivilleen nappien yläpuolelle eikä peitä niitä. Ilman tätä
@@ -5896,8 +5879,7 @@ body[data-mode] .fact-card h2 {
   color: #7a5514; /* tumma kulta erottuu pergamentilta, kirkas ei */
 }
 
-body[data-mode] .fact-place,
-body[data-mode] .turn-status {
+body[data-mode] .fact-place {
   color: var(--map-ink-soft);
 }
 
@@ -6017,9 +5999,6 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
 @media (max-width: 560px) {
   :root { --gap: 0.45rem; }
 
-  .turn-row { margin-bottom: 0.35rem; }
-  .turn-status { font-size: 0.82rem; }
-
   .actions button {
     font-size: 0.82rem;
     padding: 0.4rem 0.4rem;
@@ -6120,7 +6099,6 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
     min-width: 40px;
   }
 
-  .board-hint { font-size: 0.76rem; padding: 0.25rem 0.6rem; }
   .event-toast { font-size: 0.92rem; padding: 0.55rem 0.8rem; top: 10%; }
   .event-toast .toast-icon { font-size: 1.3rem; }
 
@@ -6140,7 +6118,7 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .target-ring, .die.rolling, .die.landed { animation: none; }
+  .target-ring { animation: none; }
 }
 
 /* Maailmankartta */
@@ -8997,8 +8975,7 @@ button.lukija-nappi.lukee,
  * kun linssi sammuu jotain muuta kautta.
  */
 body.vertailu-tila .fact-card,
-body.vertailu-tila .actions,
-body.vertailu-tila .board-hint {
+body.vertailu-tila .actions {
   visibility: hidden;
   pointer-events: none;
 }
@@ -10156,8 +10133,7 @@ body.maatiedot-tila .tokens,
 body.maatiedot-tila .targets,
 body.maatiedot-tila .pawns { display: none; }
 
-body.maatiedot-tila .fact-card,
-body.maatiedot-tila .board-hint {
+body.maatiedot-tila .fact-card {
   visibility: hidden;
   pointer-events: none;
 }
@@ -10860,6 +10836,64 @@ button.pikkuseloste-sulje:hover { color: var(--map-ink); }
 .pollo-nappi.pollo-kelluu .icon-label { display: none; }
 .pollo-nappi.pollo-kelluu .viiva-ikoni svg { width: 1.7rem; height: 1.7rem; }
 .pollo-nappi.auki { color: var(--accent); }
+
+/*
+ * PÖLLÖN VIHJEKUPLA (omistajan toive 13.8.2026: *"Pöllö voi tarpeen
+ * mukaan vinkata, jos pelaaja ei osaa painaa mitään nappia."*).
+ *
+ * Sama paperi ja muste kuin pöllöpaneelissa, mutta kupla on pieni ja
+ * kiinteä lause — ei keskustelua. Se asuu bodyssa ja asemoidaan JS:stä
+ * pöllönapin päälle (js/pollo.js asetaVihjeenPaikka), koska nappi
+ * vaihtaa paikkaa rivin, kartan ja lehden välillä.
+ *
+ * pointer-events: none — kupla ei saa varastaa kartalta yhtään
+ * napautusta, sillä juuri napautusta se pyytää.
+ */
+.pollo-vihje {
+  position: fixed;
+  z-index: 40;
+  pointer-events: none;
+  max-width: min(17rem, calc(100vw - 1.6rem));
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  background: #f5f0e2;
+  color: #211d18;
+  font-family: var(--font-luku, Georgia, serif);
+  font-size: 0.92rem;
+  line-height: 1.35;
+  /* Pergamentin oma varjo; kortin vaalea hehkuvarjo ei periydy tänne,
+     koska kupla ei ole vuorolaatikon sisällä. */
+  text-shadow: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.28);
+  animation: pollo-vihje-saapuu 220ms ease-out;
+}
+
+.pollo-vihje[hidden] { display: none; }
+
+/* Pieni kärki alaspäin kohti pöllönappia. */
+.pollo-vihje::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  right: 1.1rem;
+  width: 12px;
+  height: 12px;
+  background: #f5f0e2;
+  border-right: 1px solid rgba(122, 85, 20, 0.32);
+  border-bottom: 1px solid rgba(122, 85, 20, 0.32);
+  transform: rotate(45deg);
+}
+
+@keyframes pollo-vihje-saapuu {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Liikeherkkyys: kupla vain ilmestyy. */
+@media (prefers-reduced-motion: reduce) {
+  .pollo-vihje { animation: none; }
+}
 
 .pollo-paneeli {
   /*

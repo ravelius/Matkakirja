@@ -1058,6 +1058,69 @@ class Pollo {
     const nakyy = this.nakyyko();
     this.nappi.hidden = !nakyy;
     if (!nakyy && this.auki) this.sulje();
+    if (!nakyy) this.piilotaVihje();
+  }
+
+  /* --- paikallinen vihjekupla ------------------------------------- */
+
+  /**
+   * VIHJE ILMAN TEKOÄLYÄ (omistajan toive 13.8.2026: *"Pöllö voi
+   * tarpeen mukaan vinkata, jos pelaaja ei osaa painaa mitään
+   * nappia."*).
+   *
+   * Kupla on kiinteä teksti: se ei kysy palvelimelta mitään eikä avaa
+   * keskustelua, vaan ilmestyy pöllönapin viereen, kun peli on jäänyt
+   * odottamaan pelaajan valintaa (js/ui.js paivitaValintavihje).
+   *
+   * Kupla asuu bodyssa ja asemoidaan napin senhetkisen paikan mukaan,
+   * koska nappi vaihtaa paikkaa kolmen kodin välillä: alanappirivi,
+   * kelluva nappi kartalla ja lehden sisällä kelluva nappi. Napautus
+   * menee kuplan LÄPI (css: pointer-events: none), jotta se ei varasta
+   * kartalta yhtään osumaa.
+   */
+  naytaVihje(teksti) {
+    if (!teksti || this.auki || this.nappi.hidden) return;
+    /*
+     * Siirtovaiheessa alanappiriviä ei piirretä lainkaan (js/ui.js
+     * renderActions), joten napin ankkuripaikka on irronnut puusta ja
+     * nappi on sen mukana poissa ruudulta. kiinnita() palauttaa napin
+     * kelluvaan muotoonsa — muuten vihje osoittaisi tyhjään kohtaan, ja
+     * pöllö olisi juuri sillä hetkellä tavoittamattomissa, kun pelaaja
+     * eniten kaipaa apua. Rivin seuraava piirto vie napin takaisin
+     * paikalleen itsestään (polloAnkkuri).
+     */
+    this.kiinnita();
+    if (!this.vihje) {
+      this.vihje = polloElementti('div', 'pollo-vihje');
+      // role="status": ruudunlukija kertoo vihjeen ilman että se
+      // sieppaa kohdistuksen kesken vuoron.
+      this.vihje.setAttribute('role', 'status');
+      this.doc.body.appendChild(this.vihje);
+    }
+    this.vihje.textContent = teksti;
+    this.vihje.hidden = false;
+    this.asetaVihjeenPaikka();
+  }
+
+  /** Kupla napin yläpuolelle, ruudun reunojen sisään. */
+  asetaVihjeenPaikka() {
+    const kupla = this.vihje;
+    if (!kupla || kupla.hidden) return;
+    const ikkuna = this.doc.defaultView ?? window;
+    const nappi = this.nappi.getBoundingClientRect();
+    const leveys = kupla.getBoundingClientRect().width;
+    const marginaali = 8;
+    const keskitetty = nappi.left + nappi.width / 2 - leveys / 2;
+    const vasen = Math.max(marginaali,
+      Math.min(keskitetty, (ikkuna.innerWidth || 0) - leveys - marginaali));
+    kupla.style.left = `${Math.round(vasen)}px`;
+    kupla.style.bottom = `${Math.round((ikkuna.innerHeight || 0) - nappi.top + 10)}px`;
+  }
+
+  /** Kupla pois: pelaaja teki valinnan, koski karttaa tai vaihe vaihtui. */
+  piilotaVihje() {
+    if (!this.vihje) return;
+    this.vihje.hidden = true;
   }
 
   /**
@@ -1136,6 +1199,8 @@ class Pollo {
   avaa() {
     // Liuku peittäisi pöllön napin: se väistyy, kun chat aukeaa.
     this.haeUi?.()?.suljeLiuku?.();
+    // Keskustelu korvaa vihjeen: kupla ei jää paneelin viereen.
+    this.piilotaVihje();
     this.kiinnita();
     this.auki = true;
     // Edellisen vastauksen tyhjä varaus pois ennen kuin paneeli näkyy:
@@ -2550,6 +2615,20 @@ export function polloAuki() {
 /** Sulkee chatin. Alanappirivin liuku peittää pöllön, joten se sulkee myös chatin. */
 export function polloSulje() {
   nykyinenPollo?.sulje();
+}
+
+/**
+ * Näyttää pöllönapin vieressä kiinteän vihjekuplan (js/ui.js
+ * paivitaValintavihje). Ei tekoälykutsua eikä keskustelun avausta —
+ * pelkkä lause siitä, mitä pelaajalta odotetaan.
+ */
+export function polloVihje(teksti) {
+  nykyinenPollo?.naytaVihje(teksti);
+}
+
+/** Vihjekupla pois. */
+export function polloVihjePois() {
+  nykyinenPollo?.piilotaVihje();
 }
 
 /**
