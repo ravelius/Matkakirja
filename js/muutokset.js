@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 623, teksti: 'Sanelun ajaksi äänet taukoon: mikrofoni vapautuu iOS:lla' },
   { v: 622, teksti: 'Teheranin kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 621, teksti: 'iOS-kuoreen haptiikka, iCloud-synkka, widget ja Game Center' },
   { v: 620, teksti: 'Sanelun mikrofoni vapautuu aina; työhuoneen taulut' },
