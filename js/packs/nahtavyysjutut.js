@@ -12017,4 +12017,421 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Tabrizin nähtävyysjutut (nippu 2, 13.8.2026). Kuusi kohdetta
+   * jakautuu kahteen ryhmään kartalla: basaari ja perustuslakitalo
+   * pohjoisessa, Arg, Saat-torni, museo ja Sininen moskeija samalla
+   * itä-länsi-linjalla etelässä. Kolme vanhinta kohdetta ovat kaikki
+   * tiilirakennuksia, joten kulmat on tietoisesti eriytetty: basaari
+   * kertoo valosta ja ilmanvaihdosta, Arg kattamisen mitoista ja
+   * Sininen moskeija laattatekniikasta.
+   */
+  tabriz: {
+    'Tabrizin basaari': {
+      teksti: 'Isfahanissa ja Teheranissa basaari kasvaa yhden pitkän '
+        + 'kauppakadun varteen, josta sivukadut haarautuvat. Tabrizissa '
+        + 'kaava on toinen: laaja suorakaiteen muotoinen alue, jonka läpi '
+        + 'kulkee ruudukko rinnakkaisia ja risteäviä kauppakatuja. Katuja '
+        + 'reunustavat yksi- ja kaksikerroksiset rakennukset, joissa on '
+        + 'myymälätilat. Katot ovat tiiliholveja, ja holveihin on '
+        + 'puhkaistu aukkoja: niistä tulee valo sisään ja ilma vaihtuu. '
+        + 'Aluetta on noin 29 hehtaaria.'
+        + '\n\n'
+        + 'Alue jakautuu riveihin, ja monella rivillä on oma tavaransa ja '
+        + 'oma nimensä. Amirin rivillä myydään kultaa ja koruja, '
+        + 'Mozaffariyehissa mattoja lajiteltuina solmun koon ja tyypin '
+        + 'mukaan, Bashmakhchissa kenkiä ja Rahlissa maan antimia.'
+        + '\n\n'
+        + 'Mozaffariyeh on timcheh eli pienoisbasaari suuren sisällä. '
+        + 'Nimen alkuosa tim viittaa karavaaniseraajiin ja -cheh on '
+        + 'deminutiivipääte: pieni karavaaniseraaji. Timchehin toinen pää '
+        + 'liittyy pääkujaan ja toinen avautuu lastauspihaan tai '
+        + 'karavaaniseraajiin, jonka nimen loppuosa saray tarkoittaa '
+        + 'pihan ympärille rakennettua taloa. Keskellä on allas, sen '
+        + 'ympärillä kahdessa tai kolmessa kerroksessa kauppiaiden '
+        + 'huoneita, ja katossa usein suuri keskikupoli, jota koristavat '
+        + 'laatat, stukko ja puuleikkaukset. Pohjamuoto voi olla neliö, '
+        + 'suorakaide, ympyrä, soikio, kuusi- tai kahdeksankulmio, ja '
+        + 'rakennusaine useimmiten tiili.',
+      kuvat: [
+        {
+          tiedosto: 'Mozaffariyeh, Grand Bazzar of Tabriz, IRAN.jpg',
+          selite: 'Mozaffariyehin holvikäytävä sisältä: tiilikaton kupolien '
+            + 'laella on monikulmainen valoaukko ja niiden kylkiin on '
+            + 'puhkaistu kaari-ikkunoita, tiilet on ladottu '
+            + 'kalanruotokuvioon ja holvin harjat maalattu valkoisiksi. '
+            + 'Molemmin puolin nousee kaksi kerrosta myymälöitä, joiden '
+            + 'ovet ja ikkunat ovat valkoiseksi maalattua lasitettua '
+            + 'puuta; yläkerran kaiteet ovat valkoista viuhkakuvioista '
+            + 'metallia, ja seinillä on mustia lampetteja ja '
+            + 'ilmastointilaitteita. Katosta riippuu ketjuissa '
+            + 'pallolamppuja. Käytävän keskellä kasvaa ruukussa vihreä '
+            + 'pensas, lattialla on vaaleaan kankaaseen käärittyjä '
+            + 'kääröjä ja vasemmalla kuviollinen pino, muutama mies istuu '
+            + 'ja seisoo käytävällä, ja perällä on tumma oviaukko ja sen '
+            + 'yllä musta kyltti.',
+          lahde: 'Navid Alizadeh Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '1241.JewelryBazaar.Tabriz (1470548513).jpg',
+          selite: 'Kultasepänrivi tiiliholvin alla: käytävän molemmin puolin '
+            + 'on lasivitriinejä, joiden kehyksissä palaa punainen '
+            + 'neonputki ja joissa riippuu telineissä kultaketjuja ja '
+            + '-koruja. Käytävä on täynnä ihmisiä, suurin osa miehiä, '
+            + 'mukana valkohuivinen nainen ja mustaan chadoriin '
+            + 'pukeutunut nainen; etualalla kävelee vastaan raidallisessa '
+            + 'paidassa oleva mies. Vitriinien takana seisoo myyjiä, '
+            + 'holvin alla roikkuu kaapeleita ja pyöreä valkoinen lamppu, '
+            + 'ja seinillä on ilmastointilaitteita.',
+          lahde: 'Ensie & Matthias from San Diego, California, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Perustuslakitalo': {
+      aika: '1868',
+      teksti: 'Talon rakennutti vuonna 1868 Haj Mehdi Koozekonani, Tabrizin '
+        + 'basaarin kauppias; rakentajaksi mainitaan Haj Vali Me’mar-e '
+        + 'Tabrizi. Se on tavallinen qajar-kauden asuintalo aivan '
+        + 'basaarin kyljessä: kaksi kerrosta ja tyylin mukaan erilliset '
+        + 'sisä- ja ulko-osat.'
+        + '\n\n'
+        + 'Perustuslakivallankumous alkoi 1905 ja päättyi 1911, ja Tabriz '
+        + 'oli sen keskuksia. Mozaffar ad-Din Shah antoi 5. elokuuta 1906 '
+        + 'julistuksen, joka teki maasta perustuslaillisen monarkian, ja '
+        + 'allekirjoitti perustuslain vähän ennen kuolemaansa; teksti on '
+        + 'päivätty 30. joulukuuta 1906. Koozekonani liittyi liikkeeseen '
+        + 'ja oli sen suurimpia rahoittajia; aikalaiset kutsuivat häntä '
+        + 'nimellä Abolmele, kansan isä. Talossa kokoontuivat liikkeen '
+        + 'johtajat, aktivistit ja kannattajat, heidän joukossaan Sattar '
+        + 'Khan ja Bagher Khan, ja samassa talossa painettiin liikkeen '
+        + 'maanalaisia lehtiä.'
+        + '\n\n'
+        + 'Talo merkittiin Iranin kulttuuriperintöluetteloon 1975. '
+        + 'Museossa on esillä vallankumouksellisten veistoksia ja heidän '
+        + 'henkilökohtaisia tavaroitaan: aseita, maanalaisia lehtiä ja '
+        + 'shabnameja eli yökirjeitä, nimettömiä lentolehtisiä, joita '
+        + 'jaettiin salaa. Esillä on myös painokone, jolla lehdet talossa '
+        + 'tehtiin, sekä joukko vallankumouksen aikaisia valokuvia.',
+      kuvat: [
+        {
+          tiedosto: 'ConstitutionHouseTabrizIran.jpg',
+          selite: 'Talon sisäpihan julkisivu pilvettömän taivaan alla: '
+            + 'ylhäällä viisi kaarta, joiden reunassa on turkoosia '
+            + 'laattaa, ja kaaret lepäävät hoikkien pyöreiden pylväiden '
+            + 'varassa, joissa on tummat lehtikoristeiset kapiteelit. '
+            + 'Kaarten takana on yhtenäinen ikkunaseinä: alhaalla '
+            + 'pieniruutuisia kaari-ikkunoita puukehyksissä, niiden '
+            + 'yläpuolella viuhkakuvioisia puuristikoita. Pylväiden '
+            + 'välissä on takorautakaiteet ja oikealla erillinen '
+            + 'kaari-ikkuna valkoisine verhoineen. Alakerta on vaaleaa '
+            + 'tiiltä kuvioituine muurauksineen ja kaarisyvennyksineen; '
+            + 'siellä seisoo kaksi kullattua miespatsasta ja puiset '
+            + 'kaksoisovet. Pihalla kukkii ruusupensaita, oikealla on '
+            + 'musta tykki puolapyörillä, vasemmassa alanurkassa näkyy '
+            + 'turkoosin altaan reuna ja polulla kulkee kävijöitä.',
+          lahde: 'AmirAK, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Mashrute5.jpg',
+          selite: 'Näkymä yläkerran ikkunasta pihalle: ylin ruutu on '
+            + 'värillistä lasia, punaista, vihreää, sinistä ja valkoista '
+            + 'mustien lyijylankojen välissä kukkakuviona, ja sen alla '
+            + 'ovat kirkasruutuiset kaari-ikkunat, joiden kaarenkulmissa '
+            + 'on punaista lasia. Lasin takana avautuu tiilinen sisäpiha: '
+            + 'seinissä matalia kaarisyvennyksiä, puuovi, nuori puu, '
+            + 'kukkapenkkejä ja turkoosi suorakaiteen muotoinen allas. '
+            + 'Keskellä kuvaa nousee vaalea rapattu pylväs, karmiin on '
+            + 'liimattu pieniä valkoisia paperilappuja, ja koko aukkoa '
+            + 'kehystää tumma veistetty puu.',
+          lahde: 'Amir.fila, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Constitution House, interior1.jpg',
+          selite: 'Kattoikkuna alhaalta katsottuna: valkoiseksi rapattu '
+            + 'neliön muotoinen kuilu, jonka pohjassa on puinen ristikko. '
+            + 'Keskellä on ympyrä neliön sisällä, ja ympyrän täyttää '
+            + 'tiheä kiemurteleva kuviointi, jonka keskipisteessä on '
+            + 'pieni säteittäinen ruusuke; ristikon takaa näkyy '
+            + 'tummansinistä ja vaaleaa lasia. Kuilun sivut on lasitettu '
+            + 'pienillä ruuduilla, joista tulee päivänvalo. Kuvan '
+            + 'neljässä nurkassa on valkoinen pyöreä pylväs, jonka '
+            + 'kapiteeli on koristeltu kipsisin akantuslehdin, ja muu '
+            + 'katto on paljasta ruskeahkoa rappausta.',
+          lahde: 'Meisam, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Arg': {
+      teksti: 'Arg ei ole linnoitus vaan moskeijan jäänne. Ilkhanidien '
+        + 'vesiiri Ali Shah rakennutti paikalle 1310–1320 suuren '
+        + 'rukoushuoneen; arkkitehti oli Falaki Tabrizi. Ylpeydenaihe oli '
+        + 'holvi: sen piti olla suurempi kuin Ktesifonin Taq Kasra. '
+        + 'Iwanin tynnyriholvi oli 30,5 metriä leveä ja 48 metriä syvä, '
+        + 'portilta mihrabille kertyi 65,5 metriä, ja holvin laki nousi '
+        + 'yli 45,7 metriin — 21,7 metriä 24 metriä korkean jalustan '
+        + 'yläpuolelle. Taq Kasran halli on noin 37 metriä korkea ja 26 '
+        + 'leveä.'
+        + '\n\n'
+        + 'Holvi sortui kesken rakennustyön, ja työ pysähtyi. Syyksi '
+        + 'kerrotaan vaikeus kattaa näin suuri tila ilman pilareita; '
+        + 'samaan aikaan kaupungin käskynhaltija kuoli äkillisesti, ja '
+        + 'mausoleumi jäi kesken. Samalta 24 metrin jalustalta nousi '
+        + 'kaksi minareettia vielä 35,4 metriä eli 61 metriin; kumpaakaan '
+        + 'ei ole jäljellä. Marmoripihaa oli 286 × 229 metriä, ja '
+        + 'keskellä oli kahdeksankulmainen allas, jossa neljä '
+        + 'kivileijonaa syöksi vettä. Maanjäristys vaurioitti rakennusta '
+        + 'pahoin helmikuussa 1641.'
+        + '\n\n'
+        + '1800-luvulla, Iranin ja Venäjän välien kiristyessä, jäänteestä '
+        + 'tehtiin varuskunta: tykkivalimo, kasarmi, esikunta ja pieni '
+        + 'palatsi. Nimi Arg tarkoittaa linnaketta. 1900-luvulla '
+        + 'sotilasrakennukset purettiin ja ympäristöstä tehtiin puisto. '
+        + 'Tarkoitus oli paljastaa alkuperäinen rakennus, mutta mukana '
+        + 'meni vanhaakin: pystyssä on enää pala qiblamuuria, jossa on '
+        + 'mihrab ja sen yllä kolme keventävää kaarta.',
+      kuvat: [
+        {
+          tiedosto: 'Arg Alishah4.JPG',
+          selite: 'Jäänne kokonaisuudessaan: leveä tiiliseinämä, jonka läpi '
+            + 'on kaksi korkeaa suippokaarista aukkoa, ja niiden välissä '
+            + 'koko korkeuden nouseva pyöreä muuripaksunnos. Yläreunaa '
+            + 'kiertää metallikaide, ja takana kohoaa korkeampi lohko, '
+            + 'jonka päällä on koppi ja mastoja; ylhäällä kulkee rivi '
+            + 'pieniä kaarisyvennyksiä. Tiilipinnassa on vaaleita '
+            + 'rappauksen jäänteitä, pitkiä halkeamia ja pieniä reikiä. '
+            + 'Vasemman aukon täyttävät telineet ja metalliportaat, '
+            + 'oikeasta näkyy läpi kaupunkia, kaukaisia kukkuloita ja '
+            + 'ihmisiä. Edessä on kivetty käytävä, kuivaa nurmea ja '
+            + 'pensaita, oikeassa laidassa pylväsjulkisivuinen '
+            + 'nykyrakennus.',
+          lahde: 'Elmju, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Arg of Tabriz 01.jpg',
+          selite: 'Lähikuva muurista: vasemmalla korkea suippokaarinen aukko, '
+            + 'josta näkyy nykyinen Tabriz — tiilitalo kaarevine '
+            + 'ikkunoineen, betonipintaisia rakennuksia, puu, '
+            + 'viuhkakuvioisin ritilöin varustettu aita, valkoisia '
+            + 'työmaa-aitoja ja auto. Oikealla seinässä on umpinainen '
+            + 'suippokaarinen syvennys. Tiilipinnassa on tiheässä pieniä '
+            + 'neliömäisiä reikiä ja vaaleita paikkauksia. Muurin '
+            + 'juurella on kivetty taso, jolla seisoo rivi mustia '
+            + 'valonheittimiä, ja sen alla matala tiilireunus.',
+          lahde: 'Valen1988, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Saat-torni': {
+      aika: '1934',
+      teksti: 'Sa\'at tarkoittaa persiaksi kelloa, ja nimi tulee tornin '
+        + 'yläosan nelitauluisesta kellosta: kellot lyövät tasatunnein. '
+        + 'Kellotorni on 30,5 metriä korkea, ja se nousee keskeltä taloa, '
+        + 'joka valmistui vuonna 1934 Tabrizin kaupungintaloksi. '
+        + 'Julkisivu on veistettyä kiveä. Piirtäjäksi mainitaan Avedis '
+        + 'Ohanjanian, rakennuttajaksi tuolloinen pormestari Arfa al-Molk '
+        + 'Jalili.'
+        + '\n\n'
+        + 'Talossa on sali, kellotorni ja pieni puutarha. Alaa on noin 9 '
+        + '600 neliömetriä ja rakennettua alaa 6 500 neliömetriä kolmessa '
+        + 'kerroksessa. Ylhäältä katsottuna pohjakaava muistuttaa '
+        + 'lentävää kotkaa, ja muoto vastaa Saksassa ennen toista '
+        + 'maailmansotaa rakennettujen talojen esimerkkiä.'
+        + '\n\n'
+        + 'Tornin alkuperäinen soittokello vaurioitui toisen '
+        + 'maailmansodan aikaisessa venäläisten hyökkäyksessä Tabriziin, '
+        + 'ja tilalle asennettiin uusi. Osa talosta otettiin '
+        + 'kaupunginmuseoksi 2000-luvun alussa, ja museon aloitusvuodeksi '
+        + 'ilmoitetaan myös 2007; esillä on muun muassa Tabrizin '
+        + 'kultainen avain. Iranilaisen uudenvuoden alkaessa 20. '
+        + 'maaliskuuta tornin taakse katetaan suuri haft sin -pöytä.',
+      kuvat: [
+        {
+          tiedosto: 'Saat Tower (16722122147).jpg',
+          selite: 'Talon pääjulkisivu edestä: keskeltä kohoaa kellotorni, '
+            + 'jonka kapeat kaari-ikkunat on ladottu pystyriveiksi ja '
+            + 'jonka yläosassa on vaalea kellotaulu roomalaisine '
+            + 'numeroineen. Tornin harjalla on hammaskaide ja neljä '
+            + 'nurkkatornia, keskellä matala vaalea kattokupu ja sen '
+            + 'päällä lipputanko lippuineen. Kellotaulun alapuolella on '
+            + 'parveke, jonka valkoisessa kaiteessa on maljakkoaiheiset '
+            + 'pylväät, ja pääoven yläpuolella kaari-ikkuna säteittäisine '
+            + 'ruoduineen. Molemmin puolin jatkuu kaksikerroksinen '
+            + 'kiviseinä, ja vasemmalla katonharjalla seisoo tumma laite '
+            + 'ohuine mastoineen. Edessä kasvaa havupuita ja lehdettömiä '
+            + 'puita, alareunassa kävelee pari ihmistä, ja taivas on '
+            + 'sininen hajanaisine valkoisine pilvineen.',
+          lahde: 'Frode Ramone from Oslo, Norway, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Saat Tower 2016-12.jpg',
+          selite: 'Porrastasanne talon sisällä: kaarevalla valkoisella '
+            + 'seinällä on kolme korkeaa kaari-ikkunaa, joiden lasit ovat '
+            + 'punaisia ja vihreitä — ylhäällä pyörän muotoinen ruusuke, '
+            + 'alempana pystyraidat kirkkaiden ruutujen välissä. Katosta '
+            + 'riippuu ketjussa tumma kristallikruunu. Etualalla kaartuu '
+            + 'kaide, jossa on vaaleita sorvattuja pylväitä ja tumma '
+            + 'puinen käsijohde, ja sen keskellä seisoo iso kivimaljakko '
+            + 'jalustalla. Kaiteen takaa laskeutuvat portaat alempaan '
+            + 'tilaan, jossa kasvaa köynnöksiä; lattia on tummaa kirjavaa '
+            + 'kiveä.',
+          lahde: 'AmirAK, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Azerbaidžanin museo': {
+      aika: '1958',
+      teksti: 'Museo avattiin huhtikuussa 1958 Sinisen moskeijan viereen. Sen '
+        + 'piirsi ranskalainen André Godard (1881–1965), joka johti '
+        + 'Iranin arkeologista tutkimuslaitosta vuosina 1928–1953 ja '
+        + 'uudelleen 1956–1960 ja suunnitteli Teheranin kansallismuseon. '
+        + 'Talossa on kolme näyttelysalia, sivupiha, toimistohuoneita ja '
+        + 'kirjasto, jossa on yli 2 500 käsin kirjoitettua ja painettua '
+        + 'kirjaa historiasta, arkeologiasta, taiteesta ja Iranin '
+        + 'kulttuurista.'
+        + '\n\n'
+        + 'Ensimmäinen sali etenee aikajärjestyksessä: vanhimmat löydöt '
+        + 'ovat 5. vuosituhannelta eaa., sitten seuraavat Urartu, '
+        + 'akhaimenidien valtakunta ja lopuksi sasanidikausi 224–651 jaa. '
+        + 'Toinen sali on kahtia: toisessa päässä islamilaisen ajan '
+        + 'arkeologiaa, toisessa kolikot ja sinetit. Kolmannessa on '
+        + 'tabrizilaisen Ahad Hosseinin (s. 1944) veistoksia. Hosseini '
+        + 'opiskeli Firenzen taideakatemiassa, teki paluunsa jälkeen '
+        + 'viisi vuotta kellarissaan kaksitoista veistosta — sarjan '
+        + 'Misery Around the World — ja lahjoitti ne museolle.'
+        + '\n\n'
+        + 'Esineet on enimmäkseen kaivettu Iranin Azerbaidžanista, mutta '
+        + 'kokoelmassa on löytöjä koko maasta: sasanidikauden '
+        + 'hopealautasia ja lasia, akaattisinettejä, 1200-luvun '
+        + 'keramiikkaa Gorganista ja marmoriin kaiverrettu '
+        + 'bismillah-kalligrafia vuodelta 1845. Museo on Luoteis-Iranin '
+        + 'vanhin. Toukokuun 7. päivänä 2013 kokoelmasta vietiin viisi '
+        + 'sasanidikauden hopealautasta; varkaat pidätettiin saman vuoden '
+        + 'marraskuussa, mutta lautasia ei saatu takaisin.',
+      kuvat: [
+        {
+          tiedosto: 'Azerbaijan Museum, Tabriz, Iran, and stone lions in entrance.jpg',
+          selite: 'Museon julkisivu vaaleanruskeaa tiiltä: koko etusivun '
+            + 'levyinen syvä kaarisyvennys, jonka takaseinässä on '
+            + 'korkealla suippokaarinen ikkuna puuritilöineen ja sen alla '
+            + 'pienempi suippokaariportti. Portin puisessa kaarikentässä '
+            + 'on museon nimi persialaisin kirjaimin ja sen alla '
+            + 'AZARBAIJAN MUSEUM latinalaisin; alakulmissa on pientä '
+            + 'tekstiä ja vuosiluku. Kaksilehtisestä puuovesta toinen '
+            + 'puolisko on auki ja sisällä näkyy hämärää salia. Oven '
+            + 'kummallakin puolella seisoo matalalla jalustalla kulunut '
+            + 'vaalea kivieläin. Ovelle nousee kiviportaat, vasemmalla '
+            + 'seinässä on valvontakamera, ja kuvan yläreunaan roikkuu '
+            + 'puun lehviä.',
+          lahde: 'Navid Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Azerbaijan Museum, Tabriz, Iran, 1st. floor.jpg',
+          selite: 'Pitkä näyttelysali: lattiassa on parkettia pienten '
+            + 'ruutujen kuviona, katossa tummia puurimoja ja upotettuja '
+            + 'kohdevaloja. Keskellä seisoo rivi vapaita lasivitriinejä '
+            + 'mustilla jalustoilla ja oikealla seinustalla toinen rivi; '
+            + 'vitriineissä on muun muassa tummia savikulhoja punaisella '
+            + 'kankaalla. Vasemmalla on verhotut ikkunat, seinässä '
+            + 'punertava kohokuvapaneeli, jossa on kaariporttinen '
+            + 'julkisivu, ja sen alla ilmastointilaite. Sali päättyy '
+            + 'valoisaan oviaukkoon, jonka edessä on matala penkki.',
+          lahde: 'Navid Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Detail of Anxiety - Sculpture by Ahad Hosseini - Azerbaijan Museum - Tabriz - Iranian Azerbaijan - Iran (7421593886).jpg',
+          selite: 'Ahad Hosseinin veistosryhmä museon salissa: vasemmalta '
+            + 'työntyy kolme suomupintaista lohikäärmeen kaulaa, kidat '
+            + 'auki ja hampaat näkyvissä. Oikealla on tiivis ihmisjoukko '
+            + '— yksi konttaa etualalla, toiset nostavat käsiään, '
+            + 'lakkipäinen hahmo heiluttaa keppiä, ja joukko jatkuu '
+            + 'taakse kauas. Hahmot ovat ruskeanharmaita kullanhohtoisin '
+            + 'kohokohdin ja seisovat karkealla harmaalla alustalla. '
+            + 'Taustalla on valkoisia pilareita, upotettuja kattovaloja, '
+            + 'parkettilattia ja oviaukkoja; vasemmassa reunassa näkyy '
+            + 'köysiaidan tolppa.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sininen moskeija': {
+      aika: '1465',
+      teksti: 'Moskeija valmistui lokakuussa 1465; rakennuttaja oli Qara '
+        + 'Qoyunlu -hallitsijan Jahanshahin puoliso Khatun Jan Begom. '
+        + 'Virallinen nimi on Mozaffariya, mutta se tunnetaan pelkästä '
+        + 'väristä: Masjed-e Kabud, sininen moskeija. Tiiliseinät '
+        + 'peitettiin laatalla sisältä ja ulkoa lähes kokonaan. '
+        + 'Tekniikkaa on kaksi: mosaiikki, jossa jokainen pala leikataan '
+        + 'erikseen muotoonsa, ja seitsemän värin laatta, johon värit '
+        + 'poltetaan pintaan. Kuvioina on geometrisia verkkoja, '
+        + 'kasviaiheita sekä kufi- ja thuluth-kalligrafiaa. Qibla-puolen '
+        + 'kupolisali on tummansinistä kuusikulmaista laattaa, jonka '
+        + 'kultaus on painettu kaavan läpi.'
+        + '\n\n'
+        + 'Moskeija kuului laitokseen, jossa oli medresa, sufiluostari, '
+        + 'kylpylöitä ja puutarhoja. Vuosiluvut hajoavat: moskeija '
+        + 'valmistui 1465, mutta mausoleumia jatkettiin 1478–1490 Aq '
+        + 'Qoyunlu -kaudella. Valmiiksi se ei tullut.'
+        + '\n\n'
+        + '8. tammikuuta 1780 sattui Pohjois-Tabrizin siirroksessa '
+        + 'arviolta 7,4 magnitudin maanjäristys, joka tuhosi kaupungin '
+        + 'lähes kokonaan; uhriarviot vaihtelevat 40 000:sta 200 000:een. '
+        + 'Moskeijasta jäi pystyyn vain iwan, holvattu sisäänkäynti. '
+        + 'Kunnosta sitä ennen lähteet kiistelevät: 1600-luvulta on '
+        + 'maininta rakennuksesta autiona raunioina. Uudelleenrakennus '
+        + 'alkoi 1973. Kaksikuorinen kupoli, matalat minareetit ja '
+        + 'porttiosa ovat uusia, ja puuttuvien laattojen tilalle '
+        + 'muurattiin tiiltä — tahallaan hieman erinäköistä, jotta uuden '
+        + 'erottaa vanhasta.',
+      kuvat: [
+        {
+          tiedosto: 'Tabriz Blue Mosque, northern view (entrance, in 2023).jpg',
+          selite: 'Pohjoisjulkisivu lumisena päivänä: keskellä kohoaa korkea '
+            + 'kärjekäs sisäänkäyntiholvi, jonka pinnassa on jäljellä '
+            + 'laikkuja tummansinistä laattaa, muualla on paljasta '
+            + 'tiiltä. Holvin suulla seisoo keltainen työteline, ja sen '
+            + 'takaa näkyy lumen peittämä kupoli. Julkisivun molemmilla '
+            + 'puolilla ulottuu matala tiilimuuri, joka päättyy pyöreään '
+            + 'nurkkatorniin, ja muurin takaa pilkistää kaksi pienempää '
+            + 'kupolia. Etualalla laskeutuu portaita puistoon, jossa on '
+            + 'puisia istutuslaatikoita, penkkejä ja lumen peittämä '
+            + 'käytävä; vasemmalla kävelee yksinäinen ihminen, oikealla '
+            + 'seisoo lehdetön puu ja reunoilla näkyy kaupungin taloja.',
+          lahde: 'Ahad Nejad Ebrahimi, Aylar Javadpour, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Portico of Blue (Kabud) Mosque - Tabriz - Iranian Azerbaijan - Iran (7421677298).jpg',
+          selite: 'Sisäänkäyntiholvin laatoitus jyrkästi alaviistosta '
+            + 'kuvattuna, taustalla pilvetön taivas. Tummansinistä pohjaa '
+            + 'peittää tiheä vaaleansininen ja kullanruskea kasviköynnös, '
+            + 'ja sen poikki kulkee leveä nauha valkoista kaarevaa '
+            + 'kalligrafiaa sinisellä pohjalla. Alanurkassa kaartuu '
+            + 'kennomainen muqarnas-puolikupu ja holvin reunassa juoksee '
+            + 'kierteinen pylväslista. Laatoituksesta puuttuu suuria '
+            + 'aloja, joiden kohdalla näkyy sileä vaalea rappauspinta.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Interior of Blue Mosque, Tabriz, Iran.jpg',
+          selite: 'Pääsali laajakulmasta: yläpuolella kaartuu paljas '
+            + 'tiilikupoli ilman laatoitusta, ja sen alla avautuu joka '
+            + 'suuntaan kärjekkäitä holvikaaria. Pilarien ja alaseinien '
+            + 'laatoituksessa on sinistä, turkoosia ja valkoista '
+            + 'geometrista ruudustoa, kasvikuvioita ja kirjoitusnauhoja, '
+            + 'ja välissä on laajoja aukkoja, joista laatta puuttuu. '
+            + 'Keskellä johtaa holvattu aukko pieneen tiilipintaiseen '
+            + 'tilaan, jossa on ikkuna ja puiset portaat. Lattian peittää '
+            + 'turkoosi rukousmatto toistuvine kuvioineen, pilareissa on '
+            + 'kohdevalot, oikealla riippuu ruskea verho ja vasemmassa '
+            + 'alakulmassa on valokuvaajan vaalea nimimerkki.',
+          lahde: 'Navid Alizadeh Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
