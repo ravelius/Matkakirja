@@ -11225,6 +11225,33 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
 .pollo-viesti.pollo-odottaa { color: var(--pollo-muste-himmea); font-style: italic; }
 
 /*
+ * ── PÖLLÖ IRTI REUNASTA JA VÄLJEMPI ISOLLA RUUDULLA (omistaja
+ * 13.8.2026 ilta: "Pöllö saisi olla hieman irti reunasta. Teksti
+ * aavistuksen isompaa ja aavistuksen isompi marginaali"). ──
+ *
+ * Koskee tablettia ja työpöytää. Puhelimen mitat (max-width: 560px
+ * -lohko yllä) on viritetty erikseen omien havaintojen pohjalta, eikä
+ * niihin kosketa: kapealla ruudulla jokainen pikseli ja kirjasinkoon
+ * askel on jo käytetty tarkkaan. Lohko on tekstisääntöjen JÄLKEEN,
+ * koska samanvahvuisista valitsimista myöhempi voittaa — ennen niitä
+ * media queryn koot eivät koskaan pääsisi voimaan.
+ */
+@media (min-width: 561px) {
+  .pollo-paneeli {
+    right: calc(1.5rem + env(safe-area-inset-right, 0px));
+  }
+
+  /* Aavistuksen isompi marginaali: teksti irti paneelin laidoista. */
+  .pollo-virta { padding: 1rem 0.95rem; }
+
+  /* Aavistuksen isompi teksti — samat suhteet, kaikki askeleen ylös. */
+  .pollo-viesti { font-size: 0.97rem; }
+  .pollo-pollo { font-size: 1.02rem; }
+  .pollo-kayttaja { font-size: 0.9rem; }
+  button.pollo-ehdotus { font-size: 0.9rem; }
+}
+
+/*
  * ALLEVIIVATTU LINKKI KESKELLÄ VASTAUSTA (omistajan tilaus 12.8.2026).
  *
  * Kun paikallishaku löytää osuvan jutun, vastaustekstin oma maininta
