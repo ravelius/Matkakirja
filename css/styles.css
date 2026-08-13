@@ -903,6 +903,11 @@ button, .brand, .turn-pill, .fact-card h2 {
   display: block;
   /* Kartta on staattinen: koko lauta näkyy kerralla ilman zoomausta. */
   touch-action: manipulation;
+  /* Nipistys voi alkaa myös kokonäkymästä, ja sen muunnoslaskenta
+     (js/ui.js paivitaNipistys) olettaa origon vasempaan yläkulmaan.
+     Oletusorigo (50 % 50 %) veisi eleen ankkurin keskelle ja kartta
+     karkaisi sormien alta heti ensimmäisellä liikkeellä. */
+  transform-origin: 0 0;
 }
 
 /*
