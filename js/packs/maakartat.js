@@ -2571,6 +2571,33 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kisanin portti', lat: 33.5065, lon: 36.3157 },
     ],
   },
+  isfahan: {
+    polku: 'assets/kartat/isfahan-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 32.6725, etela: 32.6485, lansi: 51.666, ita: 51.689,
+    },
+    esittely: 'Isfahanin vanha kaupunki on kartalla tiheä kujaverkko, '
+      + 'jonka läpi vedetään kaksi eri-ikäistä viivastoa. Vanhempi on '
+      + 'orgaaninen: lyhyitä mutkittelevia kujia, jotka kiertävät '
+      + 'kortteleita eivätkä noudata mitään ruudukkoa. Uudempi on '
+      + 'suora, ja se näkyy leveinä väylinä, jotka halkovat kuvan '
+      + 'luoteesta kaakkoon ja lännestä itään.\n\n'
+      + 'Keskellä kuvaa erottuu pieni vaalea suorakaide, joka ei ole '
+      + 'rakennus vaan vesiallas: se on kaupungin suuren aukion '
+      + 'keskellä. Aukion laidoilla ovat Ali Qapu ja Shaahin moskeija, '
+      + 'ja niistä pohjoiseen johtaa basaari, joka päättyy '
+      + 'Jameh-moskeijaan kartan yläosassa. Etelässä ovat Hasht '
+      + 'Behesht ja Chahar Baghin koulu leveän puistokadun varrella.',
+    kohteet: [
+      { nimi: 'Jameh-moskeija', lat: 32.6697, lon: 51.6853 },
+      { nimi: 'Isfahanin basaari', lat: 32.6631, lon: 51.6753 },
+      { nimi: 'Ali Qapu', lat: 32.6572, lon: 51.6767 },
+      { nimi: 'Shaahin moskeija', lat: 32.6544, lon: 51.6775 },
+      { nimi: 'Hasht Behesht', lat: 32.6534, lon: 51.6702 },
+      { nimi: 'Chahar Baghin koulu', lat: 32.6513, lon: 51.6693 },
+    ],
+  },
   teheran: {
     polku: 'assets/kartat/teheran-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

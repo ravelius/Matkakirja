@@ -867,6 +867,31 @@ const KAUPUNGIT = {
     palvelutiet: true,
     jalkakaydat: true,
   },
+  isfahan: {
+    // Isfahanin vanha ydin: Jameh-moskeija pohjoisessa, basaari sen
+    // eteläpuolella, Ali Qapu ja Shaahin moskeija Naqsh-e Jahanin
+    // laidoilla ja etelässä Hasht Behesht ja Chahar Baghin koulu.
+    // Ruutu on 2,7 x 2,2 km.
+    //
+    // KOHTEET TARKISTETTIIN LÄHTEISTÄ ENNEN PIIRTOA. Oikeat
+    // artikkelinimet eivät olleet ne, joita ensin kokeilin — sama
+    // ansa kuin Riadissa. Toimivat nimet ja coord-mallien pisteet:
+    //   Jameh Mosque of Isfahan  32,6697 / 51,6853
+    //   Grand Bazaar, Isfahan    32,6631 / 51,6753
+    //   Ali Qapu                 32,6572 / 51,6767
+    //   Shah Mosque (Isfahan)    32,6544 / 51,6775
+    //   Hasht Behesht            32,6534 / 51,6702
+    //   Chaharbagh School        32,6513 / 51,6693
+    // Qeysarie Gate on lähteellinen varakohde. Khaju-silta, Vankin
+    // katedraali ja Monar Jonban jäävät ulos: ne ovat 2,5–8 km
+    // etelässä ja lännessä, ja mukaan ottaminen kaksinkertaistaisi
+    // rajauksen. Naqsh-e Jahanin aukio itse on varattu IRN-maalehdelle.
+    //
+    // EI palvelutiet- eikä jalkakaydat-lippua, ja se on mitattu:
+    // ruudussa on 1 754 residential-tietä mutta vain 68 service-tietä,
+    // eli katuverkko on jo valmiiksi tiheä ilman lippuja.
+    rajat: { pohjoinen: 32.6725, etela: 32.6485, lansi: 51.666, ita: 51.689 },
+  },
   riad: {
     // Riad: vanhankaupungin ydin etelässä, Murabban hallintokortteli
     // pohjoisessa. Ruutu on lähes neliö (2,4 x 2,0 km).

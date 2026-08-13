@@ -178,4 +178,14 @@ export const SAATIEDOT = {
     keskilampo: [-1.5, 0.1, 4.7, 10.4, 15.8, 21, 23.9, 23.9, 19.6, 13.4, 5.3, 0.1],
     sade: [30, 41, 57, 66, 50, 21, 14, 8, 7, 22, 38, 33],
   },
+  // Teheranissa sade osuu talveen ja kevääseen: heinä-, elo- ja
+  // syyskuussa normaali on yksi millimetri. Sama ERA5:n ja sääaseman
+  // ero kuin Tabrizissa, joskin pienempi — ruutuun osuu Alborzin
+  // rinnettä, joten se on asemaa hieman viileämpi ja sateisempi.
+  teheran: {
+    lat: 35.68,
+    lon: 51.42,
+    keskilampo: [0.4, 2.5, 8.1, 14.8, 21.4, 27.8, 31, 29.9, 25, 18, 9.1, 3.1],
+    sade: [38, 40, 50, 37, 14, 2, 1, 1, 1, 14, 40, 40],
+  },
 };
