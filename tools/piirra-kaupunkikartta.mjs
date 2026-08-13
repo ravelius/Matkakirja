@@ -808,6 +808,19 @@ const KAUPUNGIT = {
     // koska vanhakaupunki on itä-länsi-suuntainen suorakaide.
     rajat: { pohjoinen: 33.516, etela: 33.5045, lansi: 36.299, ita: 36.32 },
   },
+  riad: {
+    // Riadin vanhakaupunki: Masmakin linnoitus keskellä, Imam Turkin
+    // suurmoskeija lännessä, Thumairin portti idässä ja Zal-suuki
+    // etelässä. Ruutu on pieni, koska vanhakaupunki on pieni — neljä
+    // kohdetta mahtuu 250 metrin säteelle.
+    //
+    // Itäreuna on venytetty 46,7220:een, jotta kuudes kohde (Hillan
+    // kansansuuki) mahtuu mukaan. Ilman sitä nimettyjä kohteita on
+    // OSM:ssä vain viisi: Qasr al-Hukm ja Deeran aukio eivät ole
+    // kartalla nimettyinä lainkaan, ja Punainen palatsi on 1,3 km
+    // pohjoisessa eli oman ruutunsa päässä.
+    rajat: { pohjoinen: 24.6345, etela: 24.6265, lansi: 46.708, ita: 46.722 },
+  },
   luxor: {
     // Luxor: Niilin itäranta Luxorin temppeliltä Karnakille. Kohteiden
     // väli on poikkeuksellisen pitkä (2,3 km temppelistä temppelille),

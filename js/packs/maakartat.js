@@ -2571,6 +2571,30 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kisanin portti', lat: 33.5065, lon: 36.3157 },
     ],
   },
+  riad: {
+    polku: 'assets/kartat/riad-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 24.6345, etela: 24.6265, lansi: 46.708, ita: 46.722,
+    },
+    esittely: 'Riadin vanhan ytimen kohteet ovat kartalla lähellä '
+      + 'toisiaan: Masmakin linnoituksen, Imam Turkin suurmoskeijan ja '
+      + 'Zal-suukin väli on vain parisataa metriä, ja kaikki kolme '
+      + 'mahtuvat samaan kortteliin. Thumairin portti on niistä idässä, '
+      + 'vanhan kaupunginmuurin kohdalla.\n\n'
+      + 'Muualla kartalla kadut ovat leveitä ja suoria ja korttelit '
+      + 'isoja. Mittakaavaero ytimen ja ympäristön välillä näkyy '
+      + 'kartalla suoraan, ja itälaidan leveän väylän takana on '
+      + 'Hillan kansansuuki runsaan kilometrin päässä.',
+    kohteet: [
+      { nimi: 'Masmakin linnoitus', lat: 24.6312, lon: 46.7133 },
+      { nimi: 'Imam Turkin suurmoskeija', lat: 24.6308, lon: 46.7108 },
+      { nimi: 'Thumairin portti', lat: 24.6311, lon: 46.7155 },
+      { nimi: 'Zal-suuki', lat: 24.629, lon: 46.7122 },
+      { nimi: 'Sheikh Mohammed bin Ibrahimin moskeija', lat: 24.6275, lon: 46.7124 },
+      { nimi: 'Hillan kansansuuki', lat: 24.6275, lon: 46.7204 },
+    ],
+  },
   luxor: {
     polku: 'assets/kartat/luxor-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
