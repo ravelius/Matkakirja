@@ -474,3 +474,23 @@ Kahdeksasta v407:n uudesta minitehtävästä kaikki kahdeksan hylättiin
 ensimmäisellä kierroksella. Riippumaton tarkistaja, joka ei näe
 kirjoittajan perusteluja ja jolle sanotaan "oleta että jotain on
 pielessä", löytää nämä. Pelkkä kirjoittajan oma tarkistus ei löydä.
+
+## Venäjän kaupungit ja Kabul: mukaan, mutta ilman uutisosiota (omistajan linjaus 13.8.2026)
+
+Aasian laudalla on kahdeksan venäläistä kaupunkia (Jekaterinburg,
+Novosibirsk, Irkutsk, Jakutsk, Magadan, Kamtšatka, Sahalin,
+Vladivostok) sekä Kabul. Ne tehdään normaalisti, neljällä ehdolla:
+
+1. **Ei nykysotasisältöä eikä nykypolitiikkaa missään muodossa.** Sama
+   sääntö kuin muualla pelissä. Historialliset tapahtumat ja taistelut
+   ovat tavallista historiaa ja sallittuja.
+2. **Painotus 1873-henkiseen historiaan, kulttuuriin, maantieteeseen
+   ja arkkitehtuuriin.** Isoisän aikakauden näkökulma kantaa nämä
+   kaupungit luontevasti.
+3. **Uutisosio jätetään pois** Venäjän kaupungeista ja Kabulista:
+   valtiollista tai sensuroitua mediaa ei oteta uutislähteeksi, eikä
+   korvaavaa riippumatonta paikallislähdettä ole. Lehti toimii ilman
+   uutisosiota täsmälleen kuten ei-lehtimaissakin.
+4. **Neutraalit maantieteelliset nykytosiasiat saavat näkyä**
+   wiki-tiivisteissä, esimerkiksi hallinnollinen asema — sama
+   ennakkopäätös kuin Nikosiassa ("Antaa olla").

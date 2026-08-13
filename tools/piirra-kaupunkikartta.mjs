@@ -867,6 +867,47 @@ const KAUPUNGIT = {
     palvelutiet: true,
     jalkakaydat: true,
   },
+  tokio: {
+    // Tokion vanha shitamachi: Asakusan temppelipiiri idässä ja Uenon
+    // kukkula lännessä, väliin jää Kappabashi ja vanhan kaupungin
+    // ruutukaava. Ruutu on leveä ja matala (3,1 x 2,1 km), koska nämä
+    // kaksi ryhmää ovat itä-länsi-linjalla.
+    //
+    // MIKSI JUURI TÄMÄ NURKKA TOKIOSTA. Tokion maamerkit ovat
+    // hajallaan kymmenien kilometrien alueella — keisarillinen
+    // palatsi, Meiji-pyhäkkö, Tokyo Tower ja Skytree eivät mahdu
+    // mihinkään yhteen kaupunkikartan ruutuun. Shitamachi on ainoa
+    // nurkka, jossa kuusi lähteellistä kohdetta on kävelymatkan
+    // päässä toisistaan, ja se on myös se Tokio, joka on vanhin.
+    //
+    // KOHTEET TARKISTETTIIN LÄHTEISTÄ ENNEN PIIRTOA. Artikkelinimien
+    // makronit kaatoivat ensin haun (Sensō-ji, Ueno Tōshō-gū,
+    // Yushima Tenmangū) — sama ansa kuin Riadissa ja Isfahanissa,
+    // eli nimi on haettava hakukoneella eikä arvattava. Pisteet ovat
+    // artikkelien coord-malleista:
+    //   Kaminarimon        35,7111 / 139,7964
+    //   Sensō-ji           35,7147 / 139,7968
+    //   Kan'ei-ji          35,7214 / 139,7743
+    //   Tokyo Nat. Museum  35,7191 / 139,7758  (Overpassista, ks. alla)
+    //   Ueno Park          35,7122 / 139,7711
+    //   Shitamachi Museum  35,7102 / 139,7726
+    // Hōzōmon ja Asakusa Shrine ovat lähteellisiä varakohteita, mutta
+    // molemmat ovat alle 200 metrin päässä Sensō-jistä, joten
+    // numeroympyrät menisivät päällekkäin.
+    //
+    // KAKSI MITATTUA KORJAUSTA ENSIMMÄISEEN RAJAUKSEEN. Ensimmäinen
+    // ruutu (35,7055-35,724 / 139,7655-139,7995) piirtyi hyvin, mutta
+    // tarkista-karttapisteet löysi kaksi vikaa: Yushima Tenmangū
+    // (8,2 % / 87,6 %) peitti mittakaavajanan, ja Asakusan pari oli
+    // 91-92 %:n kohdalla eli kiinni oikeassa reunassa. Yushima
+    // vaihdettiin kansallismuseoon ja ruutua levennettiin.
+    //
+    // Kansallismuseon piste EI ole artikkelin coord-mallista, koska
+    // sitä ei ole: artikkelissa on {{Coord|format=dms|display=it}} ja
+    // koordinaatti tulee Wikidatasta. Piste on siksi haettu
+    // Overpassista (way 東京国立博物館 / Tokyo National Museum).
+    rajat: { pohjoinen: 35.7245, etela: 35.705, lansi: 139.7645, ita: 139.801 },
+  },
   isfahan: {
     // Isfahanin vanha ydin: Jameh-moskeija pohjoisessa, basaari sen
     // eteläpuolella, Ali Qapu ja Shaahin moskeija Naqsh-e Jahanin
