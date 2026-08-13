@@ -106,6 +106,19 @@ export const LUKIJAN_OHITETTAVAT = [
   '.maa-tunnusrivi',
   '.tervehdys',
 
+  /*
+   * KAUPUNGIN KOHDEKARTTA KOKONAAN (omistajan havainto 13.8.2026:
+   * "lehden lukija lukee vielä kartan tekstit — siihen voisi ohjata
+   * vain ja ainoastaan artikkelin tekstin"). Selitteet olivat jo
+   * ohituksissa, mutta lohkon otsikko, esittelykappaleet ja karttojen
+   * numeropisteet luettiin yhä. Kartta on silmälle, ei korvalle:
+   * ääneen luettuna siitä tulee irrallinen numero- ja nimilitania.
+   */
+  '.kaupunkikartta',
+  '.maakartta-kotelo',
+  '.maakartta-piste',
+  '.kartta-mittajana',
+
   // Kuvatekstit, selitteet ja karttojen numeroselitykset.
   '.kuvateksti',
   '.nahtavyys-kuvateksti',
