@@ -26,10 +26,14 @@ settings:
   base:
     SWIFT_VERSION: "5.0"
     # Näkyvä versionumero. Tätä nostetaan käsin, kun kuoreen tulee jotain
-    # kerrottavaa — esimerkiksi "0.2.0". Kuoren versionumero EI liity pelin
-    # versionumeroon (docs/roolitus.md): peli päivittyy verkosta, kuori vain
-    # harvoin App Storen kautta.
-    MARKETING_VERSION: "0.1.0"
+    # kerrottavaa. Kuoren versionumero EI liity pelin versionumeroon
+    # (docs/roolitus.md): peli päivittyy verkosta, kuori vain harvoin App
+    # Storen kautta.
+    #
+    # 0.2.0: kuusi uutta natiivisiltaa (tallennussynkka, haptiikka, jako,
+    # Game Center, widget-data, ilmoitusrekisteröinti), kotinäyttöwidget ja
+    # Siri-aikeet.
+    MARKETING_VERSION: "0.2.0"
     # Buildnumero. Tämä on vain paikallista käännöstä varten: TestFlight-ajo
     # korvaa sen GitHub-ajon numerolla (CURRENT_PROJECT_VERSION=<ajon numero>),
     # koska App Store Connect hylkää saman version+buildnumeron kahdesti.
@@ -40,14 +44,19 @@ targets:
     type: application
     platform: iOS
     sources:
-      # Info.plist ja siltaskripti luetellaan erikseen alempana, jotta ne
-      # eivät päädy vahingossa väärään käännösvaiheeseen.
+      # Info.plist, entitlements ja siltaskripti luetellaan erikseen alempana,
+      # jotta ne eivät päädy vahingossa väärään käännösvaiheeseen.
       - path: Matkakirja
         excludes:
           - "Resurssit/Info.plist"
           - "Resurssit/Config.plist"
+          - "Resurssit/Matkakirja.entitlements"
           - "Selain/natiivi-silta.js"
       - path: Matkakirja/Resurssit/Info.plist
+        buildPhase: none
+      # Oikeudet luetaan allekirjoituksessa, ei ajon aikana: tiedosto ei saa
+      # päätyä sovelluspakettiin resurssina.
+      - path: Matkakirja/Resurssit/Matkakirja.entitlements
         buildPhase: none
       # Pelin osoite luetaan tästä ajon aikana, joten sen on oltava paketissa.
       - path: Matkakirja/Resurssit/Config.plist
@@ -56,6 +65,15 @@ targets:
       # window.matkakirjaNatiivi ei synny. Käännösajuri tarkistaa tämän.
       - path: Matkakirja/Selain/natiivi-silta.js
         buildPhase: resources
+      # Sovelluksen ja widgetin yhteinen koodi. Samat tiedostot käännetään
+      # molempiin kohteisiin — laajennus on oma prosessinsa eikä voi kutsua
+      # sovelluksen koodia ajon aikana.
+      - path: Yhteinen
+    dependencies:
+      # Widget kulkee sovelluksen mukana: XcodeGen tekee tästä
+      # "Embed Foundation Extensions" -vaiheen ja käännösjärjestyksen.
+      - target: MatkakirjaWidget
+        embed: true
     settings:
       base:
         # Sovelluksen pysyvä tunniste. TÄTÄ EI VAIHDETA sen jälkeen kun se on
@@ -68,6 +86,9 @@ targets:
         GENERATE_INFOPLIST_FILE: NO
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         TARGETED_DEVICE_FAMILY: "1,2"
+        # Oikeudet: iCloudin avain–arvo-varasto, App Group, Game Center ja
+        # push-rekisteröinti. Tiedosto kertoo mitä kukin rivi tarkoittaa.
+        CODE_SIGN_ENTITLEMENTS: Matkakirja/Resurssit/Matkakirja.entitlements
         # Allekirjoitus on automaattinen: Apple luo ja uusii varmenteet ja
         # profiilit itse, kun xcodebuild saa App Store Connect -API-avaimen
         # (.github/workflows/ios-testflight.yml).
@@ -80,8 +101,45 @@ targets:
         # simulaattorille CODE_SIGNING_ALLOWED=NO.
         DEVELOPMENT_TEAM: ""
 
+  # Kotinäyttöwidget. Oma kohteensa, koska widget on iOS:ssä aina erillinen
+  # laajennus: se ajetaan omassa prosessissaan, sillä on oma paketti ja oma
+  # allekirjoitus. Widget ei siksi voi kutsua sovelluksen koodia — yhteinen
+  # osa (Yhteinen/JaettuPelitila.swift) käännetään molempiin.
+  MatkakirjaWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: MatkakirjaWidget
+        excludes:
+          - "Info.plist"
+          - "MatkakirjaWidget.entitlements"
+      - path: MatkakirjaWidget/Info.plist
+        buildPhase: none
+      - path: MatkakirjaWidget/MatkakirjaWidget.entitlements
+        buildPhase: none
+      # Yhteinen tila-varasto ja pelin värit. Nämä ovat samat tiedostot kuin
+      # sovelluksella; Xcode kääntää ne kumpaankin kohteeseen erikseen.
+      - path: Yhteinen
+      - path: Matkakirja/Nakymat/Ulkoasu.swift
+    settings:
+      base:
+        # Laajennuksen tunnisteen ON alettava sovelluksen tunnisteella.
+        PRODUCT_BUNDLE_IDENTIFIER: fi.matkakirja.peli.widget
+        PRODUCT_NAME: MatkakirjaWidget
+        INFOPLIST_FILE: MatkakirjaWidget/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        # Widget tarvitsee vain App Groupin — ei iCloudia, ei Game Centeriä.
+        CODE_SIGN_ENTITLEMENTS: MatkakirjaWidget/MatkakirjaWidget.entitlements
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        TARGETED_DEVICE_FAMILY: "1,2"
+        # Laajennusta ei asenneta erikseen: se kulkee sovelluksen sisällä.
+        SKIP_INSTALL: YES
+
 # Skeema kirjataan tässä, jotta sekä käännösajuri (`xcodebuild -scheme
 # Matkakirja`) että Xcoden käynnistysnappi löytävät saman kohteen.
+# Widget-kohdetta ei luetella erikseen: sovellus riippuu siitä, joten se
+# kääntyy ja paketoituu mukaan itsestään.
 schemes:
   Matkakirja:
     build:

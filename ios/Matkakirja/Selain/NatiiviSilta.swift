@@ -9,13 +9,19 @@ protocol SiltaTapahtumat: AnyObject {
 
 /// Natiivisillat pelille: `window.matkakirjaNatiivi`.
 ///
-/// Yksi viestikanava, jonka takana on kaksi palvelua — luenta ja sanelu.
-/// Sivu lähettää komennon ja saa lupauksen (WKScriptMessageHandlerWithReply);
-/// pitkäkestoiset asiat, kuten sanelun osittaiset tulokset, tulevat
-/// tapahtumina takaisin.
+/// Yksi viestikanava, jonka takana on joukko palveluita — luenta, sanelu,
+/// tallennussynkka, haptiikka, jako, Game Center, widget-data ja
+/// ilmoitusrekisteröinti. Sivu lähettää komennon ja saa lupauksen
+/// (WKScriptMessageHandlerWithReply); pitkäkestoiset asiat, kuten sanelun
+/// osittaiset tulokset tai iCloudin muutokset, tulevat tapahtumina takaisin.
 ///
 /// Rajapinta on tarkoituksella pelin oma eikä Applen: kun SFSpeechRecognizer
 /// joskus vaihtuu SpeechAnalyzeriin, pelin koodiin ei tarvitse koskea.
+///
+/// Yksi sääntö kaikille silloille: **vastaus tulee aina**. Puuttuva
+/// ominaisuus, kieltäytynyt pelaaja tai kaatunut palvelu vastaa siitä
+/// kertovalla tilalla eikä hylätyllä lupauksella — hylkäys varataan
+/// oikeille virheille (väärä parametri, liian iso tallennus).
 final class NatiiviSilta: NSObject, WKScriptMessageHandlerWithReply, SiltaTapahtumat {
 
     /// Viestikanavan nimi. Sama nimi on natiivi-silta.js:ssä.
@@ -23,15 +29,34 @@ final class NatiiviSilta: NSObject, WKScriptMessageHandlerWithReply, SiltaTapaht
     /// Oletuskieli, kun sivu ei kerro parempaa.
     static let oletuskieli = "fi-FI"
 
-    weak var selain: WKWebView?
+    /// Selain, jolle tapahtumat lähetetään ja jonka päälle jako- ja
+    /// Game Center -ikkunat ankkuroidaan.
+    weak var selain: WKWebView? {
+        didSet {
+            jako.nakyma = selain
+            pelikeskus.nakyma = selain
+        }
+    }
 
     private let luenta = LuentaSilta()
     private let sanelu = SaneluSilta()
+    private let talle = TalleSilta()
+    private let haptiikka = HaptiikkaSilta()
+    private let jako = JakoSilta()
+    private let pelikeskus = PelikeskusSilta()
+    private let widget = WidgetSilta()
+    /// Ilmoitussilta on jaettu: APNs-tunnus saapuu UIApplicationDelegaten
+    /// kautta, joka ei tiedä tästä oliosta mitään.
+    private let ilmoitukset = IlmoitusSilta.jaettu
 
     override init() {
         super.init()
         luenta.tapahtumat = self
         sanelu.tapahtumat = self
+        talle.tapahtumat = self
+        pelikeskus.tapahtumat = self
+        ilmoitukset.tapahtumat = self
+        talle.kaynnista()
     }
 
     // MARK: - Kytkentä
@@ -67,13 +92,35 @@ final class NatiiviSilta: NSObject, WKScriptMessageHandlerWithReply, SiltaTapaht
             "versio": Asetukset.sillanVersio,
             "kuorenVersio": versio,
             "jarjestelma": UIDevice.current.systemVersion,
+            // Peli kysyy näiltä, mitä se saa käyttää. Vanha kuori ei tunne
+            // uusia avaimia, joten pelin on aina luettava puuttuva arvo
+            // epätodeksi eikä oletettava mitään.
             "ominaisuudet": [
                 "luenta": true,
                 "sanelu": SaneluSilta.tuettu(kieli: NatiiviSilta.oletuskieli),
                 "luennanKorostus": true,
-                "aktivoitumisviesti": true
+                "aktivoitumisviesti": true,
+                "talle": true,
+                // Onko laitteessa iCloud-tili. Varasto toimii ilmankin,
+                // mutta silloin vain paikallisesti.
+                "talleSynkka": TalleSilta.pilviKaytossa,
+                "haptiikka": true,
+                "jako": true,
+                "pelikeskus": true,
+                "widget": JaettuPelitila.varasto != nil,
+                // Vain rekisteröinti. Lähetyspäätä ei ole. Ks. IlmoitusSilta.
+                "ilmoitukset": true,
+                "aikeet": true
             ]
         ]
+    }
+
+    // MARK: - Elinkaari
+
+    /// Sovellus palasi etualalle.
+    func aktivoitui() {
+        talle.synkronoi()
+        haptiikka.lammita()
     }
 
     // MARK: - Komennot sivulta
@@ -133,6 +180,97 @@ final class NatiiviSilta: NSObject, WKScriptMessageHandlerWithReply, SiltaTapaht
 
         case "sanelu.kuunteleeko":
             replyHandler(["kuuntelee": sanelu.kuuntelee], nil)
+
+        // MARK: Tallennussynkka
+
+        case "talle.vie":
+            guard let avain = data["avain"] as? String else {
+                replyHandler(nil, "talle.vie vaatii avaimen")
+                return
+            }
+            guard let arvo = data["arvo"] as? String else {
+                replyHandler(nil, "talle.vie vaatii arvon merkkijonona — sarjallista tallennus pelin puolella")
+                return
+            }
+            talle.vie(avain: avain,
+                      arvo: arvo,
+                      aika: NatiiviSilta.luku(data["aika"]),
+                      vastaus: replyHandler)
+
+        case "talle.tuo":
+            guard let avain = data["avain"] as? String else {
+                replyHandler(nil, "talle.tuo vaatii avaimen")
+                return
+            }
+            talle.tuo(avain: avain, vastaus: replyHandler)
+
+        case "talle.poista":
+            guard let avain = data["avain"] as? String else {
+                replyHandler(nil, "talle.poista vaatii avaimen")
+                return
+            }
+            talle.poista(avain: avain, vastaus: replyHandler)
+
+        case "talle.avaimet":
+            talle.avaimet(vastaus: replyHandler)
+
+        // MARK: Haptiikka
+
+        case "haptiikka.nayta":
+            haptiikka.nayta(laji: (data["laji"] as? String) ?? "kevyt", vastaus: replyHandler)
+
+        // MARK: Jako
+
+        case "jaa.teksti":
+            guard let teksti = data["teksti"] as? String else {
+                replyHandler(nil, "jaa.teksti vaatii tekstin")
+                return
+            }
+            jako.teksti(teksti, vastaus: replyHandler)
+
+        case "jaa.kuva":
+            guard let osoite = data["kuva"] as? String else {
+                replyHandler(nil, "jaa.kuva vaatii data:-osoitteen")
+                return
+            }
+            jako.kuva(dataUrl: osoite, teksti: data["teksti"] as? String, vastaus: replyHandler)
+
+        // MARK: Game Center
+
+        case "pelikeskus.kirjaudu":
+            pelikeskus.kirjaudu(vastaus: replyHandler)
+
+        case "pelikeskus.saavutus":
+            guard let tunnus = data["tunnus"] as? String else {
+                replyHandler(nil, "pelikeskus.saavutus vaatii tunnuksen")
+                return
+            }
+            pelikeskus.saavutus(tunnus: tunnus,
+                                prosentti: NatiiviSilta.luku(data["osuus"]),
+                                vastaus: replyHandler)
+
+        case "pelikeskus.nayta":
+            pelikeskus.nayta(vastaus: replyHandler)
+
+        // MARK: Widget
+
+        case "widget.paivita":
+            let tila = (data["tila"] as? [String: Any]) ?? data
+            widget.paivita(tila: tila, vastaus: replyHandler)
+
+        case "widget.tyhjenna":
+            widget.tyhjenna(vastaus: replyHandler)
+
+        case "widget.lue":
+            widget.lue(vastaus: replyHandler)
+
+        // MARK: Ilmoitukset
+
+        case "ilmoitukset.pyydaLupa":
+            ilmoitukset.pyydaLupa(vastaus: replyHandler)
+
+        case "ilmoitukset.tila":
+            ilmoitukset.tila(vastaus: replyHandler)
 
         default:
             replyHandler(nil, "Tuntematon komento: \(komento)")

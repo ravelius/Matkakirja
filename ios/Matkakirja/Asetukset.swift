@@ -39,7 +39,14 @@ enum Asetukset {
 
     /// Sillan versionumero. Peli voi tarkistaa tämän ennen kuin luottaa
     /// johonkin uuteen komentoon: `window.matkakirjaNatiivi.versio`.
-    static let sillanVersio = "1.0.0"
+    ///
+    /// Käytännössä pelin kannattaa kysyä `ominaisuudet`-oliolta eikä
+    /// versionumerolta — ominaisuuslista kertoo myös sen, mikä on tässä
+    /// laitteessa oikeasti käytettävissä.
+    ///
+    /// 1.0.0 luenta ja sanelu
+    /// 1.1.0 talle (iCloud), haptiikka, jaa, pelikeskus, widget, ilmoitukset
+    static let sillanVersio = "1.1.0"
 
     private static let asetuskirja: [String: Any] = {
         guard let polku = Bundle.main.url(forResource: "Config", withExtension: "plist"),

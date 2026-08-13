@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  Sovelluksen oikeudet (entitlements).
+
+	  Nämä eivät ole pelkkiä koodin asetuksia: jokainen rivi vastaa
+	  Applen puolella "capabilityä", joka on oltava päällä sovelluksen
+	  tunnisteessa (App ID). Pilviallekirjoitus (-allowProvisioningUpdates
+	  App Store Connect -avaimella) osaa kytkeä ne päälle itse, mutta jos
+	  se ei jostain syystä onnistu, käännös kaatuu virheeseen
+	  "provisioning profile doesn't include entitlement" ja oikeus
+	  kytketään käsin: developer.apple.com/account → Identifiers →
+	  fi.matkakirja.peli. Ks. ios/OHJE.md.
+	-->
+
+	<!-- iCloudin avain–arvo-varasto: pelin tallennus siirtyy laitteesta
+	     toiseen samalla Apple-tilillä. TeamIdentifierPrefix ja
+	     CFBundleIdentifier täyttyvät käännöksessä; arvoa ei kirjoiteta
+	     käsin, koska tiimitunnus on GitHubin salaisuus eikä kuulu repoon. -->
+	<key>com.apple.developer.ubiquity-kvstore-identifier</key>
+	<string>$(TeamIdentifierPrefix)$(CFBundleIdentifier)</string>
+
+	<!-- App Group: yhteinen varasto sovelluksen, widgetin ja Siri-aikeiden
+	     kesken. Sama tunnus on MatkakirjaWidget.entitlementsissä ja
+	     Yhteinen/JaettuPelitila.swift:issä. -->
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.fi.matkakirja.peli</string>
+	</array>
+
+	<!-- Game Center: saavutukset. -->
+	<key>com.apple.developer.game-center</key>
+	<true/>
+
+	<!-- Push-ilmoitukset. "production" on oikea arvo App Store- ja
+	     TestFlight-paketeille; kehitysallekirjoituksessa Xcode käyttää
+	     silti kehitysympäristöä, joten tämä ei estä laitetestausta.
+	     HUOM: kuoressa on vain rekisteröinti — lähetyspäätä ei ole. -->
+	<key>aps-environment</key>
+	<string>production</string>
+</dict>
+</plist>
