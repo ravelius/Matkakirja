@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 614, teksti: 'Pöllön äänet, striimiluenta ja linkit; lukijaan ohitukset' },
   { v: 613, teksti: 'Pöllö isompana ja vakaana, sanelunappi, valikkorivit' },
   { v: 612, teksti: 'Riadin kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 611, teksti: 'Päivityksen jälkeen popup kahden version muutoksista' },
