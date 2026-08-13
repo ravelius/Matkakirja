@@ -19,10 +19,14 @@ const luku = (nimi) => Number(UI.match(new RegExp(`const ${nimi} = (\\d+)`))[1])
 
 test('kertojan luenta alkaa aiemmin kuin ennen, mutta moottorin noustua', () => {
   const puhe = luku('LENNON_PUHE_MS');
-  // Ennen 4200 ms. Aikaistus on aavistus, ei loikka: liian aikaisin
-  // kertoja puhuisi nousevan moottoriäänen päälle.
-  assert.ok(puhe >= 3600 && puhe <= 3950,
-    `luennan viive ${puhe} ms ei ole 300–500 ms entistä 4200:aa aiemmin`);
+  /*
+   * Ajoituksen historia: 4200 → 3800 (12.8. "aavistus aiemmin") →
+   * 2300 (13.8. omistaja: "aikaista ensimmäisen lennon luentaa
+   * puolella toista sekunnilla"). Alaraja pitää huolen, ettei kertoja
+   * silti ala ennen kuin moottori on ehtinyt kuuluviin.
+   */
+  assert.ok(puhe >= 2100 && puhe <= 2500,
+    `luennan viive ${puhe} ms ei ole noin 1,5 s entistä 3800:aa aiemmin`);
   assert.match(UI, /\}, LENNON_PUHE_MS\);/, 'luennan ajastin käyttää yhä kovakoodattua lukua');
 });
 
