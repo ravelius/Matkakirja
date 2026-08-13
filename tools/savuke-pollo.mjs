@@ -1181,8 +1181,16 @@ vaadi('kaiutin merkitään päälle näkyvästi ja saavutettavasti',
   kaiutinTila.luokka === true && kaiutinTila.aria === 'true', JSON.stringify(kaiutinTila));
 vaadi('vipu muistetaan laitteella', kaiutinTila.talletettu === '1',
   String(kaiutinTila.talletettu));
-vaadi('vivun kytkeminen ei itsessään lue mitään',
-  kaiutinTila.puhuttuaEnnenVastausta === 0);
+/*
+ * Jälkikäteisluenta (omistaja 13.8.2026): vipu päälle valmiin
+ * vastauksen JÄLKEEN lukee viimeisimmän vastauksen — ennen se ei
+ * lukenut mitään ennen seuraavaa kysymystä. Edellisen osion pitkä
+ * koevastaus on juuri annettu, joten sen kuuluu alkaa puhua heti.
+ */
+vaadi('vipu päälle lukee viimeisimmän vastauksen jälkikäteen',
+  kaiutinTila.puhuttuaEnnenVastausta > 0
+  && /Ensimmäinen rivi alkaa/.test(kaiutinTila.puhutut[0] ?? ''),
+  JSON.stringify(kaiutinTila.puhutut[0]));
 vaadi('uusi vastaus luetaan ääneen',
   kaiutinTila.puhutut.join(' ').includes('Lontoon metro avattiin'),
   JSON.stringify(kaiutinTila.puhutut));

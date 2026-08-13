@@ -958,6 +958,18 @@ class Pollo {
       // Kesken striimin sammutettu kaiutin palauttaa naputuksen: se
       // vaikeni vain siksi, että puhe soi sen päällä.
       if (this.kesken) this.aloitaNaputus();
+    } else if (!this.kesken) {
+      /*
+       * Jälkikäteen päälle käännetty vipu lukee viimeisimmän vastauksen
+       * (omistajan havainto 13.8.2026: "jos vastaus on annettu, se ei
+       * lue sitä tekstiä vaan vasta kun tehdään uusi kysymys"). Kesken
+       * vastauksen tätä ei tehdä: striimissä syotaLuennalle aloittaa
+       * saapuneen tekstin alusta, eikä edellinen vastaus saa puhua
+       * uuden päälle.
+       */
+      const viimeisin = [...this.historia].reverse()
+        .find((viesti) => viesti.rooli === 'pollo');
+      if (viimeisin) this.lueVastaus(viimeisin.teksti);
     }
     this.merkitseKaiutin();
   }
