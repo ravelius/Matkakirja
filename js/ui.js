@@ -6659,7 +6659,8 @@ export class UI {
   paivitaMaaPilleriPuoli() {
     const nappi = this.maaPilleri;
     if (!nappi) return;
-    nappi.dataset.kirja = String(!(document.getElementById('maalehti-nappi')?.hidden ?? true));
+    // Kirjanappi asuu nykyään vasemmassa reunassa (14.8.2026), joten
+    // sivuttaisväistöä ei enää tarvita — vain päiväkirjakortin väistö.
     nappi.dataset.kortti = String(this.factCard?.dataset.corner === 'tr');
   }
 
@@ -13715,10 +13716,12 @@ export class UI {
    * ovat napautettavia — mutta ele tarkoittaa eri asiaa: vertailu
    * KERÄÄ maita listalle, tämä AVAA yhden maan luettavaksi.
    *
-   * Napautus valitsee maan: sen rajat korostuvat ja nimen viereen
-   * ilmestyy "i", josta maan lehti aukeaa. Kaksi vaihetta yhden sijaan
-   * siksi, että kartalla osuu helposti väärään maahan — ensimmäinen
-   * napautus näyttää mihin osui, vasta "i" avaa lehden.
+   * Napautus valitsee maan: sen rajat korostuvat ja oikean yläkulman
+   * maakyltti näyttää nimen ja lipun — kyltistä maan lehti aukeaa
+   * (omistajan tarkennus 14.8.2026; aiemmin nimi ja "i" piirtyivät
+   * kartalle). Kaksi vaihetta yhden sijaan siksi, että kartalla osuu
+   * helposti väärään maahan — ensimmäinen napautus näyttää mihin
+   * osui, vasta kyltti avaa lehden.
    */
   tahdistaMaatiedot(halutaan) {
     const paalla = document.body.classList.contains('maatiedot-tila');
@@ -13731,8 +13734,19 @@ export class UI {
       this.maatiedotKerros?.remove();
       this.maatiedotKerros = null;
       this.maatiedotValittu = null;
+      // Selailu on voinut viedä pillerin toiseen maahan — takaisin
+      // pelaajan omaan, kun tila suljetaan.
+      this.palautaPilleriPelaajalle();
     }
     this.drawTargets();
+  }
+
+  /** Pilleri takaisin pelaajan nykyiseen maahan (maaselaimen jäljiltä). */
+  palautaPilleriPelaajalle() {
+    const map = this.game.pack.map;
+    const city = this.game.cityOf?.();
+    const iso = city ? map.cityCountry?.[city.id] : null;
+    this.paivitaMaaPilleri(iso ? map.countryShapes?.[iso] : null, iso ?? null);
   }
 
   /** Maiden muodot napautettavina; valitulle nimi ja "i". */
@@ -13759,27 +13773,18 @@ export class UI {
         sfx.play('paper');
         this.piirraMaatiedotMaat();
       });
-      if (!valittu) continue;
-      /*
-       * Nimi ja "i" vain valitulle maalle. Jos kaikkien maiden nimet
-       * piirrettäisiin, kartta täyttyisi tekstistä eikä valinta
-       * erottuisi mitenkään — ja juuri valinnan näkyminen on tämän
-       * kahden vaiheen koko tarkoitus.
-       */
-      const koko = Math.max(12, Math.min(24, (maa.leveys * 0.8) / Math.max(4, maa.nimi.length)));
-      const nimi = el('text', {
-        x: maa.keskus[0],
-        y: maa.keskus[1],
-        class: 'maatiedot-nimi',
-        'text-anchor': 'middle',
-        'font-size': koko.toFixed(0),
-      }, this.maatiedotKerros);
-      nimi.textContent = `${maa.nimi} ⓘ`;
-      nimi.addEventListener('click', (e) => {
-        e.stopPropagation();
-        this.avaaMaalehti(iso);
-      });
     }
+    /*
+     * Valitun maan nimi ja lippu MAAKYLTTIIN, ei kartalle (omistaja
+     * 14.8.2026: "oikealla saisi näkyä sama maakyltti kuin normaali-
+     * tilassa"). Kartalle jää vain rajakorostus; kyltti kertoo mihin
+     * osui, ja kyltin napautus avaa maan lehden — sama nappi, sama
+     * ele kuin normaalitilassa. Ilman valintaa kyltti näyttää pelaajan
+     * oman maan kuten muulloinkin.
+     */
+    const valittuIso = this.maatiedotValittu;
+    if (valittuIso) this.paivitaMaaPilleri(muodot[valittuIso], valittuIso);
+    else this.palautaPilleriPelaajalle();
   }
 
   /** Maa valintaan tai pois siitä. Täysi lista ei ota enempää. */

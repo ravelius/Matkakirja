@@ -1164,7 +1164,9 @@ body.aloitus-zoom .kiikari {
  */
 .maalehti-nappi {
   position: absolute;
-  right: 0.5rem;
+  /* Vasempaan reunaan (omistaja 14.8.2026): oikea yläkulma kuuluu
+     maapillerille, joka näkyy maaselaimessakin. */
+  left: 0.5rem;
   top: 0.6rem;
   z-index: 3;
   width: 2.15rem;
@@ -4021,7 +4023,8 @@ body.radio-tila .actions {
 .maa-pilleri:hover,
 .maa-pilleri:focus-visible { background: rgba(245, 231, 200, 0.97); }
 
-.maa-pilleri[data-kirja='true'] { right: 3.2rem; }
+/* Kirjanappi muutti vasempaan reunaan (14.8.2026), joten pillerin ei
+   tarvitse enää väistää sitä sivusuunnassa. */
 
 .maa-pilleri[data-kortti='true'] { top: 3.4rem; }
 
@@ -4036,10 +4039,12 @@ body.radio-tila .actions {
 
 .maa-pilleri-lippu[hidden] { display: none; }
 
-/* Vertailu-, maatiedot- ja radiotila omistavat kartan itse — pilleri
- * pois tieltä samoin kuin päiväkirjakortti ja toimintonapit. */
+/* Vertailu- ja radiotila omistavat kartan itse — pilleri pois tieltä
+ * samoin kuin päiväkirjakortti ja toimintonapit. MAASELAIMESSA pilleri
+ * sen sijaan NÄKYY (omistaja 14.8.2026: "oikealla saisi näkyä sama
+ * maakyltti kuin normaalitilassa") — se näyttää valitun maan nimen ja
+ * lipun, ja kyltistä aukeaa maan lehti. */
 body.vertailu-tila .maa-pilleri,
-body.maatiedot-tila .maa-pilleri,
 body.radio-tila .maa-pilleri { display: none; }
 
 .wave { fill: none; stroke: var(--sea-ink); stroke-width: 2; opacity: 0.45; stroke-linecap: round; }
@@ -10344,17 +10349,8 @@ body.maatiedot-tila .fact-card {
   stroke-width: 2.2;
 }
 
-/* Nimi ja "i" vain valitulle maalle; koko lasketaan maan leveydestä. */
-.maatiedot-nimi {
-  fill: #46331f;
-  font-family: var(--font-type);
-  letter-spacing: 0.06em;
-  paint-order: stroke;
-  stroke: rgba(246, 238, 218, 0.85);
-  stroke-width: 3.5;
-  stroke-linejoin: round;
-  cursor: pointer;
-}
+/* Kartalle piirretty nimi + "i" poistui 14.8.2026: valitun maan nimi
+   ja lippu näkyvät maakyltissä (maa-pilleri), josta lehti aukeaa. */
 
 /* ── MAALEHDEN SISÄLLYSLUETTELO ────────────────────────────────────────
  *
