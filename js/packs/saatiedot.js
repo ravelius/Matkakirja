@@ -192,6 +192,15 @@ export const SAATIEDOT = {
   // syyskuussa normaali sademäärä on nolla millimetriä, ja sateisinkin
   // kuukausi jää seitsemääntoista. Vuoden summa on noin 98 mm, eli alle
   // kolmasosa Tabrizin luvusta.
+  // Tokio on lehtikaupungeista sateisin: vuoden summa on noin 1 455 mm,
+  // eli yli neljätoista kertaa Isfahanin luku. Kuivinkin kuukausi
+  // (joulukuu, 60 mm) on sateisempi kuin Tabrizin sateisin.
+  tokio: {
+    lat: 35.71,
+    lon: 139.78,
+    keskilampo: [4, 4.7, 8.2, 13.2, 17.9, 21.2, 25, 26.3, 23, 17.5, 12, 6.7],
+    sade: [67, 63, 115, 113, 130, 162, 150, 113, 183, 208, 91, 60],
+  },
   isfahan: {
     lat: 32.65,
     lon: 51.67,
