@@ -155080,7 +155080,16 @@ const NAPUTUS_MAX_MS = 210;
 const NAPUTUS_TAUKO_VALI = 6;
 const NAPUTUS_TAUKO_MS = 420;
 /** Taustanaputus on selvästi hiljaisempi kuin etusivun kirjoituskone. */
-const NAPUTUS_VOIMA = 0.4;
+const NAPUTUS_VOIMA = 0.55;
+/*
+ * PUHEEN ALLA NAPUTUS VAIMENEE MUTTEI VAIKENE (omistaja 13.8.2026
+ * ilta: "pöllön kirjoituskone ei kuulu" — aiempi linja hiljensi
+ * naputuksen kokonaan kaiuttimen lukiessa, ja kaiutinta käyttävälle
+ * kone katosi kokonaan). Nyt kone naputtaa luennan taustalla selvästi
+ * vaimeampana — kuin kirjoituskone radiohaastattelun taustalla:
+ * läsnä, ei pääosassa.
+ */
+const NAPUTUS_VOIMA_PUHEEN_ALLA = 0.22;
 
 /*
  * ── LUENTA ALKAA ENSIMMÄISESTÄ VIRKKEESTÄ (omistaja 13.8.2026) ───────
@@ -155245,6 +155254,9 @@ class Pollo {
     // aloitaNaputus). null tarkoittaa, ettei naputus ole käynnissä.
     this.naputusAjastin = null;
     this.naputuksia = 0;
+    // Puheen alla naputus soi vaimeana (ks. NAPUTUS_VOIMA_PUHEEN_ALLA);
+    // lippu päivittyy joka striimipalasta ja luetaan joka lyönnillä.
+    this.naputusVaimeana = false;
     /*
      * Striimin virtaluenta (ks. luettavaRaja). `luentaVirta` on
      * js/lukija.js:n lueVirtana-kahva ja `luettuun` kertoo, mihin
@@ -156583,7 +156595,9 @@ class Pollo {
       // Mykistys tarkistuu sfx.play():n sisällä (SoundKit.enabled), joten
       // äänet pois -asetus vaientaa naputuksen samalla tavalla kuin
       // kaikki muutkin tehosteet.
-      sfx.play('pen', { voima: NAPUTUS_VOIMA });
+      sfx.play('pen', {
+        voima: this.naputusVaimeana ? NAPUTUS_VOIMA_PUHEEN_ALLA : NAPUTUS_VOIMA,
+      });
       this.naputuksia += 1;
       const hengahdys = this.naputuksia % NAPUTUS_TAUKO_VALI === 0 ? NAPUTUS_TAUKO_MS : 0;
       const vali = NAPUTUS_MIN_MS + Math.random() * (NAPUTUS_MAX_MS - NAPUTUS_MIN_MS);
@@ -156601,6 +156615,7 @@ class Pollo {
    * sulje():n ensimmäisiä tehtäviä.
    */
   lopetaNaputus() {
+    this.naputusVaimeana = false;
     if (this.naputusAjastin === null) return;
     clearTimeout(this.naputusAjastin);
     this.naputusAjastin = null;
@@ -156782,15 +156797,16 @@ class Pollo {
         tulos = await this.pyydaStriimi(runko, (kertynyt) => {
           kertyma = kertynyt;
           /*
-           * PUHE JA NAPUTUS EIVÄT SOI YHTÄ AIKAA. Kaiuttimen ollessa
-           * päällä vastaus kuuluu ääneen, ja naputus sen päällä olisi
-           * puuroa. Kello saa silti soida valmistuessa — se on
-           * tapahtuma, ei tausta.
+           * PUHE JA NAPUTUS SOIVAT KERROKSINA (omistajan tarkennus
+           * 13.8.2026 ilta: "pöllön kirjoituskone ei kuulu" — aiempi
+           * linja hiljensi naputuksen kokonaan luennan ajaksi). Puheen
+           * alla naputus soi vaimeana taustana, ilman puhetta täydellä
+           * taustavoimallaan. Kello soi valmistuessa kuten ennenkin.
            */
-          if (this.syotaLuennalle(kertynyt)) this.lopetaNaputus();
+          this.naputusVaimeana = this.syotaLuennalle(kertynyt);
           // Naputus alkaa ENSIMMÄISESTÄ palasta eikä pyynnön
           // lähtiessä: kirjoituskone ei naputa tyhjää paperia.
-          else this.aloitaNaputus();
+          this.aloitaNaputus();
           avaaKupla().textContent = poistaKasiteMerkinnat(kertynyt);
           // Näkymä on jo ankkuroitu: uusi teksti syö varattua tyhjää
           // alhaalta, joten virran vierityskohta ei muutu riviäkään.
@@ -166111,6 +166127,18 @@ class UI {
   naytaKulttuuriKuva(nosto, { teokset = null, kohdalla = 0 } = {}) {
     this.suljeKulttuuriKuva();
     const kortti = html('div', 'postikortti kulttuuri-suurennos');
+    /*
+     * Leveys pikseleinä MITATUSTA näkymästä, ei vw-yksiköistä
+     * (omistajan oivallus 13.8.2026: sama jumiutuneen asettelu-
+     * viewportin ilmiö kuin kapeassa lehdessä voi kutistaa myös
+     * suurennoksen — CSS:n 96vw lukee jumittunutta viewporttia,
+     * mittaaNakyma ristiintarkistaa visuaalisen ja saa oikean
+     * leveyden). Sama vyö ja henkselit kuin arkilla (mitoitaArkki).
+     */
+    const nakyma = this.nakymanLeveys || this.mittaaNakyma();
+    if (nakyma >= NAKYMAN_VAHIMMAISLEVEYS) {
+      kortti.style.width = `${Math.min(Math.round(nakyma * 0.96), 1600)}px`;
+    }
     // Kuva omaan koteloonsa, jotta nuolet ja laskuri asemoituvat
     // täsmälleen kuvan päälle myös kapean pystykuvan kohdalla.
     const kotelo = html('div', 'suurennos-kuvakotelo');
@@ -173296,6 +173324,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 637, teksti: 'Kirjoituskone kuuluu taas; suurennos oikean levyiseksi' },
   { v: 636, teksti: 'Suurennos täysikokoiseksi; kirjakuvake keskelle' },
   { v: 635, teksti: 'Tokion kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 634, teksti: 'Kuvasarja selaa napautuksella; pöllö ja päivitys valikoista' },
@@ -174027,7 +174056,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.636';
+const APP_VERSION = '2026-08-09.637';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
