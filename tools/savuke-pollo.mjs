@@ -53,6 +53,9 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+// Striimikokeen palvelin käyttää workerin OMIA suodattimia, jottei se
+// mittaisi savukkeen jäljitelmää vaan sitä koodia, joka on tuotannossa.
+import { luoJatkoSuodatin, poimiJatkot } from './pollo/rajat.js';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ULOS = process.env.KAAPPAUSKANSIO ?? '/tmp/matkakirja-kaappaukset';
@@ -74,11 +77,67 @@ const MIME = {
  * tilat, joten palvelin korvaa tiedoston sisällön lennossa: polloPaalla
  * ratkaisee, saako sivu osoitteen vai tyhjän merkkijonon.
  */
+/*
+ * STRIIMIKOKEEN VASTAUS.
+ *
+ * Sama pitkä teksti kuin vieritystestissä, mutta perässä ne kaksi asiaa,
+ * jotka eivät saa vilahtaa ruudulla: [[käsitemerkintä]] ja JATKOT-lohko.
+ * Teksti ajetaan workerin oman suodattimen läpi (rajat.js
+ * luoJatkoSuodatin) täsmälleen kuten tuotannossa.
+ */
+const STRIIMI_VASTAUS = () => `${PITKA_VASTAUS} Satamassa purettiin `
+  + '[[hiililastit]] käsipelillä aamusta iltaan.';
+const STRIIMI_RAAKA = () => `${STRIIMI_VASTAUS()}\nJATKOT:\n`
+  + 'Miten tunnelit kaivettiin?\nKuka maksoi rakentamisen?\n';
+
+/** Savukkeen oma pikku-worker: sama SSE-muoto kuin tools/pollo/worker.js. */
+function striimiPalvelin(req, res) {
+  let runko = '';
+  req.on('data', (pala) => { runko += pala; });
+  req.on('end', async () => {
+    let pyynto = {};
+    try { pyynto = JSON.parse(runko || '{}'); } catch { pyynto = {}; }
+    if (pyynto.tehtava === 'ehdotukset' || !pyynto.striimi) {
+      res.writeHead(200, { 'content-type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ ehdotukset: [], vastaus: STRIIMI_VASTAUS(), jatkot: [] }));
+      return;
+    }
+    res.writeHead(200, {
+      'content-type': 'text/event-stream; charset=utf-8',
+      'cache-control': 'no-store',
+    });
+    const laheta = (laji, data) => res.write(`event: ${laji}\ndata: ${JSON.stringify(data)}\n\n`);
+    const suodatin = luoJatkoSuodatin();
+    const raaka = STRIIMI_RAAKA();
+    // Palat ovat pieniä ja hitaita, jotta kirjoittuminen näkyy oikeasti.
+    for (let i = 0; i < raaka.length; i += 24) {
+      const nakyva = suodatin.lisaa(raaka.slice(i, i + 24));
+      if (nakyva) laheta('pala', { teksti: nakyva });
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((r) => setTimeout(r, 18));
+    }
+    const { hanta } = suodatin.loppu();
+    if (hanta) laheta('pala', { teksti: hanta });
+    const { vastaus, jatkot } = poimiJatkot(raaka);
+    laheta('loppu', { vastaus, jatkot });
+    res.end();
+  });
+}
+
 let polloPaalla = true;
+/*
+ * Mihin osoitteeseen peli puhuu. Tavallisesti mockattu .invalid-osoite
+ * (route-fulfill), mutta striimikokeessa savukkeen OMA palvelin: sen
+ * kautta vastaus tulee oikeana SSE-virtana pala kerrallaan, jolloin
+ * myös vieritys ja suodatus mitataan aidosti. route.fulfill lähettäisi
+ * koko rungon kerralla eikä striimiä syntyisi lainkaan.
+ */
+let polloOsoite = POLLO_URL;
 const palvelin = createServer((req, res) => {
   const polku = join(JUURI, decodeURIComponent(req.url.split('?')[0]).replace(/^\/+/, '') || 'index.html');
+  if (req.url.startsWith('/pollo-striimi')) { striimiPalvelin(req, res); return; }
   if (polku.endsWith('js/packs/pollo-asetukset.js')) {
-    const arvo = polloPaalla ? POLLO_URL : '';
+    const arvo = polloPaalla ? polloOsoite : '';
     res.writeHead(200, { 'content-type': 'text/javascript' });
     res.end(`export const POLLOPALVELIN = '${arvo}';\n`);
     return;
@@ -222,9 +281,16 @@ Object.defineProperty(window, 'speechSynthesis', {
 });
 `;
 
-/** Mockattu SpeechRecognition. Headless-selaimessa ei ole mikrofonia. */
+/**
+ * Mockattu SpeechRecognition. Headless-selaimessa ei ole mikrofonia.
+ *
+ * HIDAS TILA (window.__saneluHidas) jättää tunnistuksen päälle: vain
+ * silloin mikkinapin sanelutilan ehtii mitata ja kuvata. Tavallisesti
+ * tunnistus päättyy 30 ms:ssä, jolloin nappi on jo palannut lepoon.
+ */
 const SANELU_MOCK = `
 window.__saneluAloituksia = 0;
+window.__saneluHidas = false;
 class TestiTunnistus {
   constructor() { this.lang = ''; this.interimResults = false; this.continuous = false; }
   start() {
@@ -232,7 +298,7 @@ class TestiTunnistus {
     window.__sanelu = this;
     setTimeout(() => {
       this.onresult?.({ results: [[{ transcript: window.__saneluTeksti ?? '' }]] });
-      this.onend?.();
+      if (!window.__saneluHidas) this.onend?.();
     }, 30);
   }
   stop() { this.onend?.(); }
@@ -252,6 +318,31 @@ const PITKA_VASTAUS = 'Ensimmäinen rivi alkaa tästä. '
     `Thamesin varrella riitti ${i + 1}. vuosikymmenellä satamatyötä, `
     + 'ja jokilaivat toivat hiiltä, viljaa ja teetä kaupungin varastoihin '
     + 'aamusta iltaan.').join(' ');
+
+/*
+ * KOESANAT. Mock valitsee vastauksen kysymyksen perusteella, jotta yksi
+ * ajo voi mitata monta eri sääntöä. Sanat eivät ole pelin sanastoa vaan
+ * savukkeen omia kahvoja.
+ */
+const KASITEVASTAUS = 'Lontoon [[höyryveturit]] vetivät junia, ja '
+  + '[[Thames]] kuljetti hiilen satamiin.';
+const NAHTAVYYSVASTAUS = 'Tower Bridge avattiin vuonna 1894, ja sen '
+  + 'maalattu teräsrunko piiloutuu kivikuoren sisään.';
+
+function vastausTekstiin(kysymys) {
+  // "varapolku": vastauksessa ei ole yhtään pelin indeksin sanaa, joten
+  // linkille ei löydy ankkuria tekstistä.
+  if (/varapolku/i.test(kysymys)) {
+    return 'Tästä ei ole pelissä juttua, mutta yleisesti ottaen kyse on vanhasta ilmiöstä.';
+  }
+  // "pitkä": vastaus ei mahdu paneeliin kerralla (vierityssääntö, 3f).
+  if (/pitkä/i.test(kysymys)) return PITKA_VASTAUS;
+  // "käsite": pöllölinkit eli [[avainkäsitteet]] keskellä vastausta.
+  if (/käsite/i.test(kysymys)) return KASITEVASTAUS;
+  // "Tower": nähtävyysjuttu, jolla on kuva → kevyt kuvapopup.
+  if (/tower/i.test(kysymys)) return NAHTAVYYSVASTAUS;
+  return 'Lontoon metro avattiin vuonna 1863 ja se oli maailman ensimmäinen.';
+}
 
 /**
  * Rajapinnan mock: ehdotukset ja vastaus. Pyyntörungot jäävät talteen.
@@ -281,13 +372,7 @@ async function kytkeRajapinta(sivu, rungot) {
          * löydy ankkuria tekstistä ja sen pitää ilmestyä napiksi
          * vastauksen alle.
          */
-        vastaus: /varapolku/i.test(runko.kysymys ?? '')
-          ? 'Tästä ei ole pelissä juttua, mutta yleisesti ottaen kyse on vanhasta ilmiöstä.'
-          // "pitkä" on toinen koesana: se antaa vastauksen, joka ei mahdu
-          // paneeliin kerralla (vierityssääntö, osio 3f).
-          : /pitkä/i.test(runko.kysymys ?? '')
-            ? PITKA_VASTAUS
-            : 'Lontoon metro avattiin vuonna 1863 ja se oli maailman ensimmäinen.',
+        vastaus: vastausTekstiin(runko.kysymys ?? ''),
         jatkot: [
           'Miten tunnelit kaivettiin?',
           'Kuka maksoi rakentamisen?',
@@ -1428,6 +1513,230 @@ vaadi('puheesta tulee kysymys keskusteluun',
 
 await sivu.screenshot({ path: join(ULOS, 'pollo-sanelu-390.png') });
 
+/* ================================================================== */
+/* 18) Sanelutila näkyy napissa                                        */
+/* ================================================================== */
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026: sanelun aikana mikkinappi oli täysin
+ * tyhjä, ja ainoa merkki kuuntelusta oli tilarivin "Kuuntelen…". Nyt
+ * napissa on pysäytysneliö ja sana "Lopeta", ja se sykkii kevyesti.
+ * Hidas mock pitää tunnistuksen päällä niin kauan, että tilan ehtii
+ * mitata ja kuvata.
+ */
+const sanelutila = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  window.__saneluHidas = true;
+  window.__saneluTeksti = '';
+  if (document.querySelector('.pollo-paneeli').hidden) {
+    document.querySelector('.pollo-nappi').click();
+    await odota(600);
+  }
+  const mikki = document.querySelector('.pollo-mikki');
+  const lepo = {
+    teksti: mikki.textContent.trim(),
+    label: mikki.getAttribute('aria-label') ?? '',
+    neliota: mikki.querySelectorAll('rect').length,
+  };
+  mikki.click();
+  await odota(250);
+  const sykeNimi = getComputedStyle(mikki).animationName;
+  return {
+    lepo,
+    sanelussa: {
+      teksti: mikki.textContent.trim(),
+      label: mikki.getAttribute('aria-label') ?? '',
+      painettu: mikki.getAttribute('aria-pressed'),
+      // Mikrofonikuvake on <rect>-runkoinen, joten pelkkä neliöiden
+      // määrä ei riitä: pysäytysneliö on täytetty (.taytto).
+      taytettyja: mikki.querySelectorAll('.viiva-ikoni .taytto').length,
+      polkuja: mikki.querySelectorAll('.viiva-ikoni path').length,
+      syke: sykeNimi,
+      tilarivi: document.querySelector('.pollo-sanelu-tila').textContent.trim(),
+    },
+  };
+});
+vaadi('lepotilassa mikissä ei ole tekstiä eikä pysäytysneliötä',
+  sanelutila.lepo.teksti === '' && /ääneen/i.test(sanelutila.lepo.label),
+  JSON.stringify(sanelutila.lepo));
+vaadi('sanelun aikana napissa lukee Lopeta',
+  /lopeta/i.test(sanelutila.sanelussa.teksti), JSON.stringify(sanelutila.sanelussa));
+vaadi('sanelun aikana napissa on täytetty pysäytysneliö',
+  sanelutila.sanelussa.taytettyja === 1 && sanelutila.sanelussa.polkuja === 0,
+  JSON.stringify(sanelutila.sanelussa));
+vaadi('sanelunapin aria-label kertoo lopettamisesta',
+  /lopeta/i.test(sanelutila.sanelussa.label) && sanelutila.sanelussa.painettu === 'true',
+  JSON.stringify(sanelutila.sanelussa));
+vaadi('sanelunappi sykkii kuunnellessaan',
+  sanelutila.sanelussa.syke === 'pollo-syke', String(sanelutila.sanelussa.syke));
+vaadi('tilarivi kertoo yhä kuuntelusta',
+  /kuuntelen/i.test(sanelutila.sanelussa.tilarivi), sanelutila.sanelussa.tilarivi);
+
+await sivu.screenshot({ path: join(ULOS, 'pollo-sanelutila-390.png') });
+
+// Sanelu kiinni ja mock takaisin nopeaksi: seuraavat osiot kysyvät
+// kirjoittamalla.
+await sivu.evaluate(async () => {
+  document.querySelector('.pollo-mikki').click();
+  window.__saneluHidas = false;
+  await new Promise((r) => setTimeout(r, 300));
+});
+
+/* ================================================================== */
+/* 19) Pöllölinkit: [[avainkäsitteet]] vastauksen sisällä              */
+/* ================================================================== */
+
+/*
+ * Toinen linkkilaji (omistajan tilaus 13.8.2026). Malli merkitsee 1–3
+ * käsitettä muodossa [[käsite]], palvelin jättää merkinnät tekstiin ja
+ * peli jäsentää ne linkeiksi. Hakasulkeet eivät saa näkyä missään, ja
+ * napautus lähettää kysymyksen "Kerro lisää: X".
+ */
+const kasitelinkit = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  if (document.querySelector('.pollo-paneeli').hidden) {
+    document.querySelector('.pollo-nappi').click();
+    await odota(600);
+  }
+  document.querySelector('.pollo-kirjoita').click();
+  await odota(150);
+  document.querySelector('.pollo-kentta').value = 'Kerro käsite Lontoon liikenteestä';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  await odota(900);
+  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  const kasitteet = [...(vastaus?.querySelectorAll('a.pollo-kasitelinkki') ?? [])];
+  const tyyli = kasitteet[0] ? getComputedStyle(kasitteet[0]) : null;
+  const artikkeli = vastaus?.querySelector('a.pollo-tekstilinkki');
+  return {
+    maara: kasitteet.length,
+    tekstit: kasitteet.map((k) => k.textContent),
+    sulkeita: /\[\[|\]\]/.test(document.querySelector('.pollo-virta').textContent),
+    koko: vastaus?.textContent ?? '',
+    tyyli: tyyli ? tyyli.textDecorationStyle : '',
+    tyyliVari: tyyli ? tyyli.color : '',
+    artikkelinTyyli: artikkeli ? getComputedStyle(artikkeli).textDecorationStyle : '',
+    artikkelinVari: artikkeli ? getComputedStyle(artikkeli).color : '',
+  };
+});
+vaadi('vastaukseen syntyy 1–3 pöllölinkkiä',
+  kasitelinkit.maara >= 1 && kasitelinkit.maara <= 3,
+  `${kasitelinkit.maara} kpl: ${kasitelinkit.tekstit.join(' | ')}`);
+vaadi('hakasulkeet eivät näy pelaajalle', kasitelinkit.sulkeita === false,
+  kasitelinkit.koko.slice(0, 80));
+vaadi('käsite näkyy tekstissä ilman merkintää',
+  /höyryveturit vetivät junia/.test(kasitelinkit.koko), kasitelinkit.koko.slice(0, 80));
+vaadi('pöllölinkki on pisteviiva', kasitelinkit.tyyli === 'dotted', kasitelinkit.tyyli);
+
+const pollolinkki = await sivu.evaluate(async () => {
+  const linkki = [...document.querySelectorAll('a.pollo-kasitelinkki')].at(-1);
+  const kasite = linkki?.textContent ?? '';
+  linkki?.click();
+  await new Promise((r) => setTimeout(r, 900));
+  return {
+    kasite,
+    kysytty: [...document.querySelectorAll('.pollo-kayttaja')]
+      .some((v) => v.textContent === `Kerro lisää: ${kasite}`),
+    viimeisin: [...document.querySelectorAll('.pollo-kayttaja')].at(-1)?.textContent ?? '',
+  };
+});
+vaadi('pöllölinkin napautus kysyy lisää samasta käsitteestä',
+  pollolinkki.kysytty === true, JSON.stringify(pollolinkki));
+
+await sivu.screenshot({ path: join(ULOS, 'pollo-pollolinkki-390.png') });
+
+/* ================================================================== */
+/* 20) Kuvapopup nähtävyyslinkin päällä                                */
+/* ================================================================== */
+
+/*
+ * Nähtävyysjutun linkki avaa ensin kevyen kortin: kuva, jutun oma
+ * kuvateksti ja "Avaa juttu" -nappi. Kortti sulkeutuu napauttamalla
+ * ulkopuolelle, eikä se sulje chattia allaan.
+ *
+ * Commonsin kuvat on katkaistu koko ajosta (verkkoriippumattomuus),
+ * joten niiden tilalle tarjoillaan paikallinen paikanpitäjä. Kuvateksti
+ * on jutun oikea teksti.
+ */
+const PAIKANPITAJA = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 3" width="640" '
+  + 'height="480"><rect width="4" height="3" fill="#cbbb95"/>'
+  + '<text x="2" y="1.7" font-size="0.4" text-anchor="middle" fill="#6b5a45">kuva</text></svg>';
+await sivu.route(/Special:FilePath/, (route) => route.fulfill({
+  status: 200, contentType: 'image/svg+xml', body: PAIKANPITAJA,
+}));
+
+const kuvapopup = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  if (document.querySelector('.pollo-paneeli').hidden) {
+    document.querySelector('.pollo-nappi').click();
+    await odota(600);
+  }
+  document.querySelector('.pollo-kirjoita').click();
+  await odota(150);
+  document.querySelector('.pollo-kentta').value = 'Mikä on Tower Bridge?';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  await odota(900);
+  const linkki = [...document.querySelectorAll('.pollo-pollo a.pollo-tekstilinkki')].at(-1);
+  if (!linkki) return { linkkia: false };
+  linkki.click();
+  await odota(600);
+  const popup = document.querySelector('.pollo-kuvatausta');
+  return {
+    linkkia: true,
+    auki: Boolean(popup),
+    kuvia: popup?.querySelectorAll('img.pollo-kuva').length ?? 0,
+    kuvateksti: popup?.querySelector('.pollo-kuvateksti')?.textContent ?? '',
+    nappi: popup?.querySelector('.pollo-kuvanappi')?.textContent ?? '',
+    // Kevyt popup EI vie koko juttuun eikä sulje chattia allaan.
+    juttuAuki: Boolean(document.querySelector('#nahtavyys-dialog[open]')),
+    chatAuki: !document.querySelector('.pollo-paneeli').hidden,
+  };
+});
+vaadi('nähtävyyslinkki löytyi vastauksesta', kuvapopup.linkkia === true);
+vaadi('nähtävyyslinkki avaa kevyen kuvapopupin',
+  kuvapopup.auki === true && kuvapopup.kuvia === 1, JSON.stringify(kuvapopup));
+vaadi('popupissa on jutun oma kuvateksti', kuvapopup.kuvateksti.length > 20,
+  kuvapopup.kuvateksti.slice(0, 60));
+vaadi('popupissa on Avaa juttu -nappi', /avaa juttu/i.test(kuvapopup.nappi), kuvapopup.nappi);
+vaadi('popup ei vielä avaa koko juttua eikä sulje chattia',
+  kuvapopup.juttuAuki === false && kuvapopup.chatAuki === true, JSON.stringify(kuvapopup));
+
+await sivu.screenshot({ path: join(ULOS, 'pollo-kuvapopup-390.png') });
+
+const popupSulku = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const tausta = document.querySelector('.pollo-kuvatausta');
+  // Napautus kortin ulkopuolelle: kohteena tausta itse.
+  tausta.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
+  tausta.click();
+  await odota(300);
+  const sulkeutui = !document.querySelector('.pollo-kuvatausta');
+  const chatAuki = !document.querySelector('.pollo-paneeli').hidden;
+  // Uudelleen auki ja tällä kertaa napista koko juttuun.
+  [...document.querySelectorAll('.pollo-pollo a.pollo-tekstilinkki')].at(-1)?.click();
+  await odota(500);
+  document.querySelector('.pollo-kuvanappi')?.click();
+  await odota(800);
+  return {
+    sulkeutui,
+    chatAuki,
+    popupPois: !document.querySelector('.pollo-kuvatausta'),
+    juttuAuki: Boolean(document.querySelector('#nahtavyys-dialog[open]')),
+    otsikko: document.getElementById('nahtavyys-otsikko')?.textContent ?? '',
+  };
+});
+vaadi('napautus popupin ulkopuolelle sulkee sen',
+  popupSulku.sulkeutui === true, JSON.stringify(popupSulku));
+vaadi('popupin sulku jättää chatin auki', popupSulku.chatAuki === true);
+vaadi('Avaa juttu vie nähtävyysjuttuun',
+  popupSulku.popupPois === true && popupSulku.juttuAuki === true
+  && /tower bridge/i.test(popupSulku.otsikko), JSON.stringify(popupSulku));
+
+await sivu.evaluate(async () => {
+  document.getElementById('nahtavyys-dialog')?.close();
+  await new Promise((r) => setTimeout(r, 300));
+});
+await sivu.unroute(/Special:FilePath/);
+
 /* Leveä ruutu: samat kaappaukset 900 pikselillä. */
 const leveaCtx = await selain.newContext({ viewport: { width: 900, height: 900 }, serviceWorkers: 'block' });
 const { sivu: leveaSivu } = await avaaPeli(leveaCtx);
@@ -2017,6 +2326,119 @@ vaadi('pöllönappi palaa alanappiriviin ladatussa pelissä',
 vaadi('sumennuskoe ei kirjoita konsoliin', sumennusVirheet.length === 0,
   sumennusVirheet.slice(0, 3).join(' | '));
 await sumennusCtx.close();
+
+/* ================================================================== */
+/* 21) Suoratoisto: teksti kirjoittuu, näkymä pysyy paikallaan          */
+/* ================================================================== */
+
+/*
+ * OMISTAJAN TILAUS 13.8.2026. Vastaus striimataan, mutta neljä
+ * reunaehtoa ovat ehdottomia:
+ *   a) näkymä ankkuroituu kysymykseen eikä rullaa itsestään —
+ *      teksti kirjoittuu alas piiloon,
+ *   b) JATKOT-lohko ei vilahda kertaakaan,
+ *   c) [[merkinnät]] suodattuvat lennossa eivätkä näy koskaan,
+ *   d) valmis vastaus saa lopulliset linkit ja jatkokysymykset.
+ *
+ * Vastaus tulee savukkeen omalta palvelimelta oikeana SSE-virtana ja
+ * kulkee workerin oman suodattimen läpi (rajat.js), joten tämä mittaa
+ * samaa koodia, joka on tuotannossa.
+ */
+polloOsoite = 'http://127.0.0.1:8734/pollo-striimi';
+const striimiCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
+const { sivu: striimiSivu, virheet: striimiVirheet } = await avaaPeli(striimiCtx);
+
+const striimi = await striimiSivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  document.querySelector('.pollo-nappi').click();
+  await odota(700);
+  document.querySelector('.pollo-kirjoita').click();
+  await odota(150);
+  const virta = document.querySelector('.pollo-virta');
+  document.querySelector('.pollo-kentta').value = 'Kerro Thamesin satamasta';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+
+  let sulkeita = false;
+  let jatkoja = false;
+  let kasvuja = 0;
+  let edellinen = -1;
+  let pohjassa = 0;
+  let mittauksia = 0;
+  let suurinScroll = 0;
+  for (let i = 0; i < 160; i += 1) {
+    await odota(40);
+    const kaikki = virta.textContent;
+    if (/\[\[|\]\]/.test(kaikki)) sulkeita = true;
+    if (/JATKOT/i.test(kaikki)) jatkoja = true;
+    const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+    const pituus = vastaus?.textContent.length ?? 0;
+    if (pituus > 0) {
+      if (edellinen >= 0 && pituus > edellinen) kasvuja += 1;
+      edellinen = pituus;
+      suurinScroll = Math.max(suurinScroll, virta.scrollTop);
+      /*
+       * Pohjaan kelaaminen mitataan vasta kun kelattavaa on selvästi.
+       * Aivan ensimmäisillä paloilla vastaus on vielä lyhyt, ja näkymä
+       * on pohjassa siksi, että kysymys juuri lisättiin virtaan — se on
+       * ankkurointi, ei tekstin perässä juoksemista.
+       */
+      const pohja = virta.scrollHeight - virta.clientHeight;
+      if (pohja > 150) {
+        mittauksia += 1;
+        if (pohja - virta.scrollTop < 4) pohjassa += 1;
+      }
+    }
+    if (document.querySelector('.pollo-jatkot')) break;
+  }
+  const kysymys = [...document.querySelectorAll('.pollo-kayttaja')].at(-1);
+  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  const v = virta.getBoundingClientRect();
+  return {
+    kasvuja,
+    sulkeita,
+    jatkoja,
+    pohjassa,
+    mittauksia,
+    suurinScroll,
+    kysymysYlhaalla: kysymys.getBoundingClientRect().top - v.top,
+    vastauksenKorkeus: vastaus.getBoundingClientRect().height,
+    virranKorkeus: v.height,
+    scrollTop: virta.scrollTop,
+    pohja: virta.scrollHeight - virta.clientHeight,
+    kasitteita: vastaus.querySelectorAll('a.pollo-kasitelinkki').length,
+    kasite: vastaus.querySelector('a.pollo-kasitelinkki')?.textContent ?? '',
+    jatkonappeja: document.querySelectorAll('.pollo-jatkot .pollo-jatko').length,
+    loppuu: vastaus.textContent.slice(-40),
+    virrassaSulkeita: /\[\[|\]\]/.test(virta.textContent),
+  };
+});
+vaadi('vastaus kirjoittuu useassa palassa', striimi.kasvuja >= 3,
+  `${striimi.kasvuja} kasvua`);
+vaadi('koevastaus on paneelia korkeampi (muuten vieritystä ei mitata)',
+  striimi.vastauksenKorkeus > striimi.virranKorkeus, JSON.stringify(striimi));
+vaadi('striimi ei rullaa näkymää pohjaan', striimi.mittauksia > 3 && striimi.pohjassa === 0,
+  `${striimi.pohjassa}/${striimi.mittauksia} näytettä pohjassa`);
+vaadi('näkymä ei liiku ankkurin jälkeen',
+  striimi.suurinScroll <= striimi.scrollTop + 2,
+  `suurin ${striimi.suurinScroll}, lopussa ${striimi.scrollTop}`);
+vaadi('näkymä ankkuroituu kysymykseen',
+  striimi.kysymysYlhaalla >= -2 && striimi.kysymysYlhaalla <= 30,
+  String(striimi.kysymysYlhaalla));
+vaadi('teksti kirjoittuu alas piiloon (loppu jää näkymän alle)',
+  striimi.pohja - striimi.scrollTop > 20, JSON.stringify(striimi));
+vaadi('JATKOT-lohko ei vilahda ruudulla kertaakaan', striimi.jatkoja === false);
+vaadi('hakasulkeet eivät vilahda striimin aikana',
+  striimi.sulkeita === false && striimi.virrassaSulkeita === false);
+vaadi('käsitemerkinnästä tulee pöllölinkki vasta valmiiseen vastaukseen',
+  striimi.kasitteita === 1 && /hiililastit/.test(striimi.kasite), JSON.stringify(striimi));
+vaadi('jatkokysymykset tulevat lopputapahtumasta', striimi.jatkonappeja === 2,
+  `${striimi.jatkonappeja} kpl`);
+vaadi('striimikoe ei kirjoita konsoliin', striimiVirheet.length === 0,
+  striimiVirheet.slice(0, 3).join(' | '));
+
+await striimiSivu.screenshot({ path: join(ULOS, 'pollo-striimi-390.png') });
+await striimiCtx.close();
+polloOsoite = POLLO_URL;
 
 vaadi('ei sivuvirheitä pääajossa', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 

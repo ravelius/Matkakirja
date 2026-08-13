@@ -52,6 +52,9 @@ import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
+import { KAUPUNKIKARTAT } from './packs/maakartat.js';
+import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
+import { asetaKuva } from './media.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
 import { lueAaneen, lukijaTuettu, pysaytaLukija } from './lukija.js';
 
@@ -363,6 +366,67 @@ export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [
 }
 
 /* ------------------------------------------------------------------ */
+/* Pöllölinkit: [[avainkäsitteet]] vastaustekstissä                     */
+/* ------------------------------------------------------------------ */
+
+/**
+ * PÖLLÖLINKIT (omistajan tilaus 13.8.2026).
+ *
+ * Vastauksissa on kahdenlaisia linkkejä. Artikkelilinkki vie pelin omaan
+ * juttuun ja se rakennetaan paikallisen haun tuloksista (korostaLinkit).
+ * Pöllölinkki on toinen laji: pöllö merkitsee vastaukseensa 1–3
+ * avainkäsitettä, ja niitä napauttamalla se kertoo lisää samasta
+ * asiasta. Merkintä tulee mallilta muodossa [[käsite]], ja se on
+ * TARKOITUKSELLA jätetty palvelimella paikalleen — vain sijainti kertoo,
+ * mihin kohtaan lausetta linkki kuuluu.
+ *
+ * Kaksi sääntöä, jotka eivät jousta:
+ *
+ *   1. Hakasulkeet eivät saa näkyä pelaajalle KOSKAAN. Kaikki teksti
+ *      kulkee poistaKasiteMerkinnat-suodattimen läpi, myös kesken
+ *      striimin ja myös silloin kun merkintä jää rikki.
+ *   2. Vastausta ei tulkita merkkauksena. Solmut rakennetaan käsin ja
+ *      teksti asetetaan tekstisisältönä, kuten artikkelilinkeissäkin.
+ */
+const KASITTEIDEN_KATTO = 3;
+
+/** Yhden käsitemerkinnän kuvio. Rivinvaihto katkaisee: se on jo virhe. */
+const KASITE_KUVIO = /\[\[([^[\]\n]{1,60})\]\]/g;
+
+/** Teksti ilman merkintöjä. Myös keskeneräinen "[[" katoaa striimissä. */
+export function poistaKasiteMerkinnat(teksti) {
+  return String(teksti ?? '')
+    .replace(KASITE_KUVIO, '$1')
+    // Rikkinäiset ja keskeneräiset jäänteet pois: pelaaja näkee vain
+    // tekstin, ei koskaan sulkeita.
+    .replace(/\[\[|\]\]/g, '')
+    .replace(/\[$/, '');
+}
+
+/**
+ * Jäsentää vastauksen paloiksi: tavallinen teksti ja käsitteet.
+ *
+ * @returns {Array<{teksti: string, kasite: boolean}>}
+ */
+export function jasennaKasitteet(teksti, katto = KASITTEIDEN_KATTO) {
+  const koko = String(teksti ?? '');
+  const palat = [];
+  let kohta = 0;
+  let loydetty = 0;
+  for (const osuma of koko.matchAll(KASITE_KUVIO)) {
+    if (loydetty >= katto) break;
+    const kasite = osuma[1].trim();
+    if (!kasite) continue;
+    palat.push({ teksti: poistaKasiteMerkinnat(koko.slice(kohta, osuma.index)), kasite: false });
+    palat.push({ teksti: kasite, kasite: true });
+    kohta = osuma.index + osuma[0].length;
+    loydetty += 1;
+  }
+  palat.push({ teksti: poistaKasiteMerkinnat(koko.slice(kohta)), kasite: false });
+  return palat.filter((pala) => pala.teksti);
+}
+
+/* ------------------------------------------------------------------ */
 /* Käyttöliittymä                                                      */
 /* ------------------------------------------------------------------ */
 
@@ -391,6 +455,18 @@ const MIKKI_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
   + '</svg>';
 
 /**
+ * Pysäytysneliö sanelun ajaksi (omistajan tilaus 13.8.2026).
+ *
+ * Sanelun aikana mikrofonikuvake vaihtuu neliöksi ja napin viereen tulee
+ * teksti "Lopeta": ennen nappi oli kuunnellessaan täysin tyhjä, ja
+ * ainoa merkki sanelusta oli tilarivin "Kuuntelen…". Neliö on täytetty
+ * (.taytto), koska pelkkä ääriviiva luettaisiin toiseksi mikrofoniksi.
+ */
+const PYSAYTYS_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<rect class="taytto" x="7.2" y="7.2" width="9.6" height="9.6" rx="1.6"/>'
+  + '</svg>';
+
+/**
  * Näppäimistö samalla viivakynällä. Näppäimet ovat pyöreäpäisiä
  * pistemäisiä vetoja (h.01), jolloin ne piirtyvät pisteinä eivätkä
  * vaadi omaa täyttöä.
@@ -415,6 +491,33 @@ const POLLO_KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
   + '<path d="M14.8 9.4a3.7 3.7 0 0 1 0 5.2"/>'
   + '<path d="M17.4 6.9a7.3 7.3 0 0 1 0 10.2"/>'
   + '</svg>';
+
+/**
+ * Yksi SSE-tapahtuma tyhjän rivin erottamasta lohkosta.
+ *
+ * Muoto on palvelimen oma ja tarkoituksella suppea (tools/pollo/worker.js):
+ * rivi "event:" kertoo lajin ja rivi "data:" JSON-rungon. Rikkinäinen
+ * lohko palauttaa nullin — yksi hukattu pala ei saa kaataa virtaa.
+ */
+function polloTapahtuma(lohko) {
+  let laji = 'viesti';
+  const rivit = [];
+  for (const rivi of String(lohko ?? '').split('\n')) {
+    if (rivi.startsWith('event:')) laji = rivi.slice(6).trim();
+    else if (rivi.startsWith('data:')) rivit.push(rivi.slice(5).trim());
+  }
+  if (!rivit.length) return null;
+  try {
+    return { laji, data: JSON.parse(rivit.join('\n')) };
+  } catch {
+    return null;
+  }
+}
+
+/** Osaako tämä selain lukea vastauksen virtana? */
+function polloStriimiTuettu() {
+  return typeof TextDecoder === 'function' && typeof ReadableStream === 'function';
+}
 
 /** Laitteelle talletettu asetus. Yksityinen selaus ei saa kaataa mitään. */
 function polloAsetus(avain) {
@@ -514,6 +617,16 @@ class Pollo {
     // Kaiuttimen vipu muistetaan laitteella (ks. POLLO_AANI_AVAIN).
     this.aaniPaalla = polloAsetus(POLLO_AANI_AVAIN) === '1';
     this.viimeisetKatkelmat = [];
+    // Kevyt kuvapopup nähtävyyslinkin päällä (avaaKuvapopup).
+    this.kuvapopup = null;
+    /*
+     * Striimin vieritysankkuri. odotettuVieritys on se kohta, johon
+     * ankkurointi viimeksi jätti virran; jos pelaaja on sen jälkeen
+     * vierittänyt itse, ankkurointi lukitaan eikä näkymä enää liiku
+     * (omistajan reunaehto: vastaus ei koskaan rullaa itsestään).
+     */
+    this.odotettuVieritys = null;
+    this.vieritysLukossa = false;
     // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
     this.tila = saneluTuettu() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
@@ -676,11 +789,10 @@ class Pollo {
 
     const mikki = polloElementti('button', 'pollo-nappula pollo-mikki');
     mikki.type = 'button';
-    mikki.title = 'Kysy ääneen';
-    mikki.setAttribute('aria-label', 'Kysy ääneen');
-    mikki.innerHTML = `<span class="icon-glyph viiva-ikoni">${MIKKI_IKONI}</span>`;
     mikki.addEventListener('click', () => this.vaihdaSanelu());
     this.mikki = mikki;
+    // Sisältö, nimi ja tila tulevat samasta paikasta kuin sanelun aikana.
+    this.merkitseMikki(false);
     rivi.appendChild(mikki);
 
     this.saneluOsa = rivi;
@@ -862,7 +974,16 @@ class Pollo {
       this.sulje();
     });
     this.doc.addEventListener('keydown', (e) => {
-      if (!this.auki || e.key !== 'Escape') return;
+      if (e.key !== 'Escape') return;
+      // Kuvapopup on chatin päällä: Esc sulkee ensin sen, ja vasta
+      // toinen painallus koskee keskusteluun.
+      if (this.kuvapopup) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.suljeKuvapopup();
+        return;
+      }
+      if (!this.auki) return;
       e.preventDefault();
       e.stopPropagation();
       this.sulje();
@@ -902,6 +1023,7 @@ class Pollo {
 
   sulje() {
     this.lopetaSanelu();
+    this.suljeKuvapopup();
     // Chatin sulkeutuminen hiljentää myös luennan: pöllön ääni ei jää
     // puhumaan tyhjälle kartalle. Vipu jää päälle seuraavaa kertaa
     // varten.
@@ -934,6 +1056,9 @@ class Pollo {
         kulttuuri: KULTTUURI_KATEGORIAT,
         maat: MAA_KATEGORIAT,
         nahtavyydet: NAHTAVYYSJUTUT,
+        // Kohdekartan pisteiden nimet: niistä tulee merkintöjen
+        // nimiankkurit (js/pollo-haku.js liitaKohdenimet).
+        kohdekartat: KAUPUNKIKARTAT,
       });
     } catch {
       // Aineiston puuttuminen ei saa estää kysymistä.
@@ -994,6 +1119,108 @@ class Pollo {
       return true;
     }
     return false;
+  }
+
+  /* --- kuvapopup nähtävyyslinkeille -------------------------------- */
+
+  /**
+   * KEVYT KUVAPOPUP (omistajan tilaus 13.8.2026).
+   *
+   * Kun pöllön linkki osoittaa nähtävyysjuttuun, jolla on kuva, ei
+   * hypätä suoraan koko juttuun: ensin avautuu paperikortti, jossa on
+   * pelkkä kuva, jutun oma valmis kuvateksti ja pieni "Avaa juttu"
+   * -nappi. Se on vilkaisu, ei lukusessio — ja sen sulkee napauttamalla
+   * kortin ulkopuolelle.
+   *
+   * Linkit muihin kohteisiin (lehtisivut, kuvattomat jutut) avautuvat
+   * kuten ennenkin suoraan.
+   */
+  avaaLinkki(reitti) {
+    if (this.avaaKuvapopup(reitti)) return true;
+    return this.avaaKohde(reitti);
+  }
+
+  /** Nähtävyysjutun ensimmäinen kuva, jos sellainen on. */
+  jutunKuva(reitti) {
+    if (reitti?.tyyppi !== 'nahtavyys') return null;
+    const juttu = NAHTAVYYSJUTUT[reitti.tunniste]?.[reitti.kohde];
+    const kuva = juttu?.kuvat?.[0];
+    return kuva?.tiedosto ? kuva : null;
+  }
+
+  avaaKuvapopup(reitti) {
+    const kuva = this.jutunKuva(reitti);
+    if (!kuva || !this.reittiAvattavissa(reitti)) return false;
+    this.suljeKuvapopup();
+
+    /*
+     * POPUP ON OMA MODAALINSA, EI PANEELIN LAPSI.
+     *
+     * Ensimmäinen versio oli position: fixed -kerros pöllöpaneelin
+     * vieressä, ja se asettui ruudun sijasta alanappirivin sisään:
+     * rivillä on muunnos (transform), ja muunnettu esivanhempi tekee
+     * itsestään kiinteän asemoinnin kiinnityskohdan. Sama ansa on
+     * kaikkialla pelissä ratkaistu <dialog>-elementillä, joka elää
+     * selaimen ylimmässä kerroksessa — myös silloin kun lehti on auki
+     * modaalina allaan.
+     */
+    const tausta = this.doc.createElement('dialog');
+    tausta.className = 'pollo-kuvatausta';
+    // Chat jää auki popupin taakse: napautus kortin ulkopuolelle
+    // palauttaa keskusteluun eikä sulje sitä (seuraaSulkemista).
+    tausta.addEventListener('pointerdown', (e) => e.stopPropagation());
+    tausta.addEventListener('click', (e) => {
+      if (e.target === tausta) this.suljeKuvapopup();
+    });
+    // Selaimen oma sulku (Esc) siivoaa elementin samalla tavalla.
+    tausta.addEventListener('close', () => {
+      tausta.remove();
+      if (this.kuvapopup === tausta) this.kuvapopup = null;
+    });
+
+    const kortti = polloElementti('figure', 'pollo-kuvakortti');
+    const el = this.doc.createElement('img');
+    el.className = 'pollo-kuva';
+    el.alt = kuva.selite ?? reitti.kohde ?? '';
+    el.decoding = 'async';
+    el.draggable = false;
+    asetaKuva(el, valokuvaUrl(kuva.tiedosto, 640), valokuvaVara(kuva.tiedosto, 640));
+    kortti.appendChild(el);
+
+    // Kuvateksti on jutun oma, valmiiksi kirjoitettu ja tarkistettu.
+    if (kuva.selite) kortti.appendChild(polloElementti('figcaption', 'pollo-kuvateksti', kuva.selite));
+
+    const nappi = polloElementti('button', 'pollo-kuvanappi', 'Avaa juttu');
+    nappi.type = 'button';
+    nappi.addEventListener('click', () => {
+      this.suljeKuvapopup();
+      this.avaaKohde(reitti);
+    });
+    kortti.appendChild(nappi);
+
+    tausta.appendChild(kortti);
+    this.doc.body.appendChild(tausta);
+    this.kuvapopup = tausta;
+    try {
+      tausta.showModal();
+    } catch {
+      // Vanha selain ilman modaalitukea: kortti näkyy silti sivulla.
+      tausta.setAttribute('open', '');
+    }
+    nappi.focus?.({ preventScroll: true });
+    return true;
+  }
+
+  suljeKuvapopup() {
+    const tausta = this.kuvapopup;
+    this.kuvapopup = null;
+    if (!tausta) return;
+    try {
+      tausta.close();
+    } catch {
+      /* ei ollut modaalina auki */
+    }
+    tausta.remove();
   }
 
   /** Lehden sivunvaihto: sivu 0 on kansi, siksi +1. */
@@ -1087,7 +1314,7 @@ class Pollo {
       linkki.title = `Lue: ${reitti.leima ?? reitti.otsikko}`;
       linkki.addEventListener('click', (e) => {
         e.preventDefault();
-        this.avaaKohde(reitti);
+        this.avaaLinkki(reitti);
       });
       const jalki = viesti.ownerDocument.createTextNode(teksti.slice(osuma.loppu));
       solmu.data = teksti.slice(0, osuma.alku);
@@ -1125,8 +1352,12 @@ class Pollo {
       nappi.addEventListener('click', () => this.kysy(teksti));
       laatikko.appendChild(nappi);
     }
+    /*
+     * Laatikko ei kelaa virtaa. Vieritys on kysy():n asia: striimissä
+     * näkymä on ankkuroitu kysymykseen, eikä jatkojen ilmestyminen saa
+     * napata sitä pohjaan (omistajan reunaehto 13.8.2026).
+     */
     this.virta.appendChild(laatikko);
-    this.virta.scrollTop = this.virta.scrollHeight;
   }
 
   /** Osuvimmat katkelmat pelin omasta aineistosta. */
@@ -1187,6 +1418,61 @@ class Pollo {
     }
   }
 
+  /**
+   * STRIIMIN ANKKURI (omistajan reunaehto 13.8.2026).
+   *
+   * Suoratoistossa näkymä kiinnitetään kysymykseen ja sitä seuraavan
+   * vastauksen alkuun — ja siihen se jää. Teksti kirjoittuu alaspäin
+   * ruudun ulkopuolelle, eikä näkymä koskaan hyppää perässä: pelaaja voi
+   * lukea alusta rauhassa, kun loppu on vielä syntymässä.
+   *
+   * Kaksi lukkoa pitävät lupauksen. Vieritys menee vain ALASPÄIN
+   * (ankkuria kohti), eikä koskaan takaisin. Ja jos pelaaja vierittää
+   * itse, ankkurointi lakkaa siltä vastaukselta kokonaan.
+   */
+  ankkuroiAlkuun(el, pehmuste = 8) {
+    if (this.vieritysLukossa) return;
+    if (!el?.getBoundingClientRect || !this.virta?.getBoundingClientRect) return;
+    try {
+      const virta = this.virta;
+      if (this.odotettuVieritys !== null && Math.abs(virta.scrollTop - this.odotettuVieritys) > 2) {
+        this.vieritysLukossa = true;
+        return;
+      }
+      const ero = el.getBoundingClientRect().top - virta.getBoundingClientRect().top - pehmuste;
+      if (ero > 1) virta.scrollTop += ero;
+      this.odotettuVieritys = virta.scrollTop;
+    } catch {
+      /* asettelua ei ole käytettävissä — ankkurointi jää tekemättä */
+    }
+  }
+
+  /**
+   * Vastausteksti viestin sisään: pöllölinkit omiksi solmuikseen.
+   *
+   * TURVALLISUUS: mallin tekstiä ei tulkita merkkauksena missään
+   * vaiheessa. Käsitteet ovat omia elementtejään ja kaikki teksti
+   * asetetaan tekstisisältönä — sama takuu kuin artikkelilinkeissä.
+   */
+  taytaVastaus(viesti, teksti) {
+    viesti.replaceChildren();
+    for (const pala of jasennaKasitteet(teksti)) {
+      if (!pala.kasite) {
+        viesti.appendChild(this.doc.createTextNode(pala.teksti));
+        continue;
+      }
+      const linkki = polloElementti('a', 'pollo-kasitelinkki', pala.teksti);
+      linkki.href = '#';
+      linkki.title = `Kerro lisää: ${pala.teksti}`;
+      linkki.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.kysy(`Kerro lisää: ${pala.teksti}`);
+      });
+      viesti.appendChild(linkki);
+    }
+    return viesti;
+  }
+
   /** Kevyt jarru: yksi pyyntö kerrallaan. */
   asetaKesken(kesken) {
     this.kesken = kesken;
@@ -1226,17 +1512,9 @@ class Pollo {
    * puhelimessa eikä se ole pelin vika.
    */
   async pyyda(runko) {
-    const otsakkeet = { 'content-type': 'application/json' };
-    /*
-     * Kehittäjäkoodi mukaan vain jos se on laitteelle talletettu.
-     * Ilman koodia otsaketta ei lähetetä lainkaan, ja ilman workerin
-     * salaisuutta se ei tekisi mitään vaikka lähetettäisiinkin.
-     */
-    const koodi = polloAsetus(POLLO_KEHITTAJAKOODI_AVAIN).trim();
-    if (koodi) otsakkeet[POLLO_KEHITTAJA_OTSAKE] = koodi;
     const vastaus = await fetch(this.palvelin, {
       method: 'POST',
-      headers: otsakkeet,
+      headers: this.otsakkeet(),
       body: JSON.stringify(runko),
     });
     const data = await vastaus.json().catch(() => ({}));
@@ -1246,6 +1524,98 @@ class Pollo {
       throw virhe;
     }
     return data;
+  }
+
+  /**
+   * Pyynnön otsakkeet.
+   *
+   * Kehittäjäkoodi mukaan vain jos se on laitteelle talletettu. Ilman
+   * koodia otsaketta ei lähetetä lainkaan, ja ilman workerin salaisuutta
+   * se ei tekisi mitään vaikka lähetettäisiinkin.
+   */
+  otsakkeet(lisat = {}) {
+    const ulos = { 'content-type': 'application/json', ...lisat };
+    const koodi = polloAsetus(POLLO_KEHITTAJAKOODI_AVAIN).trim();
+    if (koodi) ulos[POLLO_KEHITTAJA_OTSAKE] = koodi;
+    return ulos;
+  }
+
+  /**
+   * SUORATOISTETTU VASTAUS (omistajan tilaus 13.8.2026).
+   *
+   * Sama pyyntö kuin ennen, mutta lippu `striimi` päällä. Palvelin
+   * vastaa SSE-virralla, jossa on kolme tapahtumaa: `pala` (näytettävä
+   * lisä), `loppu` (koko vastaus ja jatkokysymykset) ja `virhe`.
+   * JATKOT-lohkoa ei tule paloissa koskaan — worker pidättää sen
+   * (tools/pollo/rajat.js luoJatkoSuodatin).
+   *
+   * VARAPOLKU. Jos palvelin vastaa tavallisella JSONilla — vanha
+   * worker, välityspalvelin joka ei osaa virtoja — vastaus luetaan
+   * sellaisenaan EIKÄ kysytä uudelleen: pyyntö on jo laskettu rajaan.
+   *
+   * @returns {Promise<{vastaus: string, jatkot: string[], katkesi: boolean}>}
+   */
+  async pyydaStriimi(runko, onPala) {
+    const vastaus = await fetch(this.palvelin, {
+      method: 'POST',
+      headers: this.otsakkeet({ accept: 'text/event-stream' }),
+      body: JSON.stringify({ ...runko, striimi: true }),
+    });
+    if (!vastaus.ok) {
+      const data = await vastaus.json().catch(() => ({}));
+      const virhe = new Error(data?.virhe ?? 'virhe');
+      virhe.viesti = data?.viesti ?? null;
+      throw virhe;
+    }
+    const laji = vastaus.headers?.get?.('content-type') ?? '';
+    if (!/text\/event-stream/i.test(laji) || typeof vastaus.body?.getReader !== 'function') {
+      const data = await vastaus.json().catch(() => ({}));
+      return {
+        vastaus: String(data?.vastaus ?? ''),
+        jatkot: Array.isArray(data?.jatkot) ? data.jatkot : [],
+        katkesi: false,
+      };
+    }
+
+    const lukija = vastaus.body.getReader();
+    const purkaja = new TextDecoder();
+    let jono = '';
+    let kertynyt = '';
+    let tulos = null;
+    let katkesi = false;
+    for (;;) {
+      // eslint-disable-next-line no-await-in-loop
+      const { value, done } = await lukija.read();
+      if (done) break;
+      jono += purkaja.decode(value, { stream: true });
+      let raja = jono.indexOf('\n\n');
+      while (raja >= 0) {
+        const tapahtuma = polloTapahtuma(jono.slice(0, raja));
+        jono = jono.slice(raja + 2);
+        raja = jono.indexOf('\n\n');
+        if (!tapahtuma) continue;
+        if (tapahtuma.laji === 'pala') {
+          const teksti = String(tapahtuma.data?.teksti ?? '');
+          if (teksti) {
+            kertynyt += teksti;
+            onPala?.(kertynyt);
+          }
+        } else if (tapahtuma.laji === 'loppu') {
+          tulos = tapahtuma.data;
+        } else if (tapahtuma.laji === 'virhe') {
+          katkesi = true;
+        }
+      }
+    }
+    if (tulos) {
+      return {
+        vastaus: String(tulos.vastaus ?? kertynyt),
+        jatkot: Array.isArray(tulos.jatkot) ? tulos.jatkot : [],
+        katkesi: false,
+      };
+    }
+    // Virta loppui kesken: näytetään se, mitä ehti tulla.
+    return { vastaus: kertynyt, jatkot: [], katkesi: true };
   }
 
   async haeEhdotukset() {
@@ -1299,34 +1669,80 @@ class Pollo {
     // tuoreimman vastauksen alla, muuten ne kasautuvat pinoksi
     // (omistajan huomio 13.8.2026).
     for (const vanha of this.virta.querySelectorAll('.pollo-jatkot')) vanha.remove();
-    this.lisaaViesti('kayttaja', kysymys);
+    this.suljeKuvapopup();
+    const kysymysViesti = this.lisaaViesti('kayttaja', kysymys);
     const odotus = this.lisaaViesti('odottaa', 'Pöllö miettii…');
     this.asetaKesken(true);
     this.viimeisetKatkelmat = [];
-    try {
-      const data = await this.pyyda({
-        tehtava: 'vastaus',
-        kysymys,
-        konteksti: this.konteksti(kysymys),
-        historia: this.historia.slice(-HISTORIAN_KATTO),
-      });
-      const teksti = String(data?.vastaus ?? '').trim() || 'En osaa vastata tähän.';
+    // Uusi vastaus, uusi ankkuri: edellisen lukko ei koske tähän.
+    this.odotettuVieritys = null;
+    this.vieritysLukossa = false;
+    const runko = {
+      tehtava: 'vastaus',
+      kysymys,
+      konteksti: this.konteksti(kysymys),
+      historia: this.historia.slice(-HISTORIAN_KATTO),
+    };
+    /*
+     * Vastauskupla syntyy vasta ensimmäisestä palasta: siihen asti
+     * ruudulla on "Pöllö miettii…". Kupla luodaan tyhjänä, ja striimin
+     * teksti kirjoitetaan siihen suodatettuna (hakasulkeet pois).
+     */
+    let viesti = null;
+    const avaaKupla = () => {
+      if (viesti) return viesti;
       odotus.remove();
-      const viesti = this.lisaaViesti('pollo', teksti);
+      viesti = this.lisaaViesti('pollo', '');
+      return viesti;
+    };
+    try {
+      let tulos = null;
+      if (polloStriimiTuettu()) {
+        tulos = await this.pyydaStriimi(runko, (kertynyt) => {
+          avaaKupla().textContent = poistaKasiteMerkinnat(kertynyt);
+          // Näkymä kiinnittyy kysymykseen; teksti kasvaa sen alle.
+          this.ankkuroiAlkuun(kysymysViesti);
+        });
+      } else {
+        const data = await this.pyyda(runko);
+        tulos = {
+          vastaus: String(data?.vastaus ?? ''),
+          jatkot: Array.isArray(data?.jatkot) ? data.jatkot : [],
+          katkesi: false,
+        };
+      }
+      const raaka = String(tulos?.vastaus ?? '').trim();
+      const striimattiin = Boolean(viesti);
+      // Katkennutkin virta näyttää sen, mitä ehti tulla.
+      const teksti = raaka || (tulos?.katkesi ? '' : 'En osaa vastata tähän.');
+      avaaKupla();
       /*
-       * Järjestys: ensin linkit tekstin sisään, sitten varapolun napit,
-       * viimeisenä jatkokysymykset. Luenta saa VAIN vastaustekstin —
-       * linkit ja jatkot ovat käyttöliittymää.
+       * Järjestys: ensin vastausteksti pöllölinkkeineen, sitten
+       * artikkelilinkit tekstin sisään, viimeisenä jatkokysymykset.
+       * Luenta saa VAIN vastaustekstin — linkit ja jatkot ovat
+       * käyttöliittymää.
        */
+      this.taytaVastaus(viesti, teksti);
       const linkit = this.poimiLinkit(this.viimeisetKatkelmat);
       this.korostaLinkit(viesti, linkit);
-      this.naytaJatkot(data?.jatkot);
-      // Vasta kun koko vastaus liitteineen on virrassa: nyt sen alkuun
-      // voi vierittää, koska sisältöä on riittävästi alapuolella.
-      this.vieritaAlkuun(viesti);
-      this.lueVastaus(teksti);
+      if (tulos?.katkesi) {
+        this.lisaaViesti('virherivi', 'Ajatus katkesi kesken lauseen.');
+      } else {
+        this.naytaJatkot(tulos?.jatkot);
+      }
+      if (striimattiin) {
+        // Striimi on jo ankkuroinut näkymän — sitä ei napata uudelleen.
+        this.ankkuroiAlkuun(kysymysViesti);
+      } else {
+        // Vasta kun koko vastaus liitteineen on virrassa: nyt sen alkuun
+        // voi vierittää, koska sisältöä on riittävästi alapuolella.
+        this.vieritaAlkuun(viesti);
+      }
+      // Kaiutin lukee vasta valmiin vastauksen, ei kesken striimin.
+      const puhdas = poistaKasiteMerkinnat(teksti);
+      this.lueVastaus(puhdas);
       this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
-      this.historia.push({ rooli: 'pollo', teksti });
+      this.historia.push({ rooli: 'pollo', teksti: puhdas });
       this.historia = this.historia.slice(-HISTORIAN_KATTO);
     } catch (virhe) {
       odotus.remove();
@@ -1349,10 +1765,28 @@ class Pollo {
     this.aloitaSanelu();
   }
 
-  /** Mikkinapin ulkoasu: kuunteleva vai lepäävä. */
+  /**
+   * Mikkinapin ulkoasu: kuunteleva vai lepäävä.
+   *
+   * SANELUTILALLA ON OMA SISÄLTÖNSÄ (omistajan tilaus 13.8.2026).
+   * Kuunnellessaan nappi näyttää pysäytysneliön ja sanan "Lopeta" — se
+   * on sekä tilan merkki että ohje siitä, mitä napautus nyt tekee.
+   * Lepotilassa nappi on entisellään pelkkä mikrofoni. Saavutettava
+   * nimi seuraa mukana, koska sen kertoma toiminto vaihtuu.
+   */
   merkitseMikki(kuuntelee) {
-    this.mikki.classList.toggle('kuuntelee', Boolean(kuuntelee));
-    this.mikki.setAttribute('aria-pressed', kuuntelee ? 'true' : 'false');
+    const paalla = Boolean(kuuntelee);
+    this.mikki.classList.toggle('kuuntelee', paalla);
+    this.mikki.setAttribute('aria-pressed', paalla ? 'true' : 'false');
+    const nimi = paalla ? 'Lopeta sanelu' : 'Kysy ääneen';
+    this.mikki.setAttribute('aria-label', nimi);
+    this.mikki.title = nimi;
+    const ikoni = polloElementti('span', 'icon-glyph viiva-ikoni');
+    // Kuvake on tämän tiedoston oma vakio, ei koskaan mallin tai
+    // aineiston tekstiä — merkkaus tulee vain täältä.
+    ikoni.innerHTML = paalla ? PYSAYTYS_IKONI : MIKKI_IKONI;
+    this.mikki.replaceChildren(ikoni);
+    if (paalla) this.mikki.appendChild(polloElementti('span', 'pollo-mikki-teksti', 'Lopeta'));
   }
 
   /** Natiivisanelun tapahtumakuuntelijat pois. */

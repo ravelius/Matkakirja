@@ -188,6 +188,82 @@ export function poimiJatkot(teksti, maara = 3) {
 }
 
 /**
+ * STRIIMIN JATKOSUODATIN — JATKOT-lohko ei saa vilahtaa ruudulla.
+ *
+ * Suoratoistossa teksti välitetään pelaajalle sitä mukaa kuin se
+ * syntyy, joten vastauksen perässä oleva "JATKOT:"-merkintä
+ * kysymyksineen kirjoittuisi hetkeksi näkyviin ennen kuin se
+ * poistetaan. Omistajan reunaehto 13.8.2026: sitä ei saa nähdä
+ * kertaakaan.
+ *
+ * Suodatin pidättää siksi rivin verran tekstiä. Se päästää läpi vain
+ * sen, mikä VARMASTI ei ole jatkorivin alku:
+ *
+ *   - Valmis rivi (rivinvaihtoon asti) tarkistetaan merkintää vastaan.
+ *     Jos se on "JATKOT:", loppu striimistä menee jatkopuskuriin eikä
+ *     asiakkaalle mene siitä enää mitään.
+ *   - Keskeneräinen rivi päästetään heti, jos se ei voi enää kasvaa
+ *     merkinnäksi ("Lontoon" ei ole "jatkot:"-alkuinen). Sen jälkeen
+ *     rivi on "vapaa" ja loppuosa virtaa suoraan läpi.
+ *   - Alku, joka voisi vielä kasvaa merkinnäksi ("J", "jat"), jää
+ *     odottamaan seuraavaa palaa.
+ *
+ * Kokonainen vastaus jäsennetään lopuksi silti poimiJatkoilla
+ * (worker.js), joten merkintä ei voi vuotaa vaikka suodatin
+ * erehtyisikin.
+ */
+function voisiAlkaaJatkot(rivi) {
+  const t = rivi.replace(/^\s+/, '').toLowerCase();
+  return 'jatkot:'.startsWith(t) || /^jatkot\s*:?\s*$/.test(t);
+}
+
+export function luoJatkoSuodatin() {
+  let jono = '';
+  let vapaa = false;
+  let jatkoissa = false;
+  let jatkot = '';
+  return {
+    /** Uusi pala mallilta. Palauttaa sen tekstin, jonka saa näyttää. */
+    lisaa(pala) {
+      const teksti = String(pala ?? '');
+      if (!teksti) return '';
+      if (jatkoissa) { jatkot += teksti; return ''; }
+      jono += teksti;
+      let ulos = '';
+      for (;;) {
+        const i = jono.indexOf('\n');
+        if (i >= 0) {
+          if (!vapaa && JATKOT_MERKKI.test(jono.slice(0, i))) {
+            jatkoissa = true;
+            jatkot = jono.slice(i + 1);
+            jono = '';
+            return ulos;
+          }
+          ulos += jono.slice(0, i + 1);
+          jono = jono.slice(i + 1);
+          vapaa = false;
+          continue;
+        }
+        if (vapaa || !voisiAlkaaJatkot(jono)) {
+          vapaa = true;
+          ulos += jono;
+          jono = '';
+        }
+        return ulos;
+      }
+    },
+    /** Striimin loppu: viimeinen pidätetty pala ja jatkojen raakateksti. */
+    loppu() {
+      if (jatkoissa) return { hanta: '', jatkot };
+      if (!vapaa && JATKOT_MERKKI.test(jono)) return { hanta: '', jatkot: '' };
+      const hanta = jono;
+      jono = '';
+      return { hanta, jatkot: '' };
+    },
+  };
+}
+
+/**
  * Mallin vastauksesta kysymysehdotuksiksi.
  *
  * Malli ohjeistetaan kirjoittamaan yksi kysymys riville, mutta pieni

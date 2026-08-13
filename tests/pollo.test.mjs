@@ -23,10 +23,12 @@ import { readFileSync } from 'node:fs';
 
 import {
   KONTEKSTIN_ENIMMAISPITUUS,
+  jasennaKasitteet,
   kokoaKonteksti,
   lueNakyma,
   pelinTila,
   poimiLohkot,
+  poistaKasiteMerkinnat,
   tekstiIlmanSpoilereita,
 } from '../js/pollo.js';
 
@@ -34,6 +36,7 @@ import {
   KYSYMYKSEN_KATTO,
   lueLista,
   lueLuku,
+  luoJatkoSuodatin,
   paivaAvain,
   poimiEhdotukset,
   poimiJatkot,
@@ -549,8 +552,10 @@ const { KULTTUURI_KATEGORIAT } = await import('../js/packs/kulttuuri-kategoriat.
 const { MAA_KATEGORIAT } = await import('../js/packs/maa-kategoriat.js');
 const { NAHTAVYYSJUTUT } = await import('../js/packs/nahtavyysjutut.js');
 const { EUROPE_QUESTIONS } = await import('../js/packs/europe-questions.js');
+const { KAUPUNKIKARTAT } = await import('../js/packs/maakartat.js');
 const {
-  POLLON_LINKKIKATTO, ankkuriSanat, etsiAnkkuri, haeKatkelmat, hakusanat, rakennaIndeksi,
+  POLLON_LINKKIKATTO, ankkuriSanat, etsiAnkkuri, haeKatkelmat, hakusanat,
+  kohteenNimiSanat, rakennaIndeksi,
 } = await import('../js/pollo-haku.js');
 
 /** Koko pelin aineistosta rakennettu indeksi. Jaetaan testien kesken. */
@@ -558,6 +563,7 @@ const INDEKSI = rakennaIndeksi({
   kulttuuri: KULTTUURI_KATEGORIAT,
   maat: MAA_KATEGORIAT,
   nahtavyydet: NAHTAVYYSJUTUT,
+  kohdekartat: KAUPUNKIKARTAT,
 });
 
 test('indeksi rakentuu ja on kokoluokaltaan järkevä', () => {
@@ -758,6 +764,158 @@ test('hakusanoista karsitaan sidesanat', () => {
   assert.deepEqual(hakusanat('Mikä on Stonehenge ja miksi se rakennettiin?'),
     ['stonehenge', 'rakennettiin']);
   assert.deepEqual(hakusanat(''), []);
+});
+
+/* ---------------------------------------------------------------- */
+/* Nähtävyysnimet ankkureina                                         */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN HAVAINTO 13.8.2026 (Wien): pöllön vastaus mainitsi
+ * Stephansdomin, Hofburgin ja Schönbrunnin, ja kaikista kolmesta on
+ * juttu Wienin lehdessä — mutta yksikään ei linkittynyt. Syy oli
+ * indeksissä: tunnistesanat tulivat pelkästä otsikosta, ja
+ * Schönbrunnista kertovan noston otsikko on "Keisarin aamiaishuone
+ * eläintarhan keskellä". Nyt kohdekartan pisteiden nimet liitetään
+ * niihin merkintöihin, jotka puhuvat kyseisestä kohteesta.
+ */
+
+test('kohteen nimestä poimitaan tunnistavat sanat, ei yleissanoja', () => {
+  assert.deepEqual(kohteenNimiSanat('Stephansdom'), [['stephansdom']]);
+  // Yhdysviiva pilkkoo, ja "torni" yksin ei nimeä mitään.
+  assert.deepEqual(kohteenNimiSanat('Eiffel-torni'), [['eiffel']]);
+  // Sulkumuoto on oma nimensä: kumpi tahansa kelpaa ankkuriksi.
+  assert.deepEqual(kohteenNimiSanat('Pyhän Tapanin kirkko (Stephansdom)'),
+    [['pyhän', 'tapanin'], ['stephansdom']]);
+  // Pelkkä yleissana ei tuota nimeä lainkaan.
+  assert.deepEqual(kohteenNimiSanat('Tv-torni'), []);
+  assert.deepEqual(kohteenNimiSanat(''), []);
+});
+
+test('Schönbrunn ankkuroituu Wienin juttuun, vaikka otsikko ei nimeä sitä', () => {
+  const wienissa = { kaupunki: 'wien', maa: 'AUT' };
+  const { katkelmat } = haeKatkelmat(INDEKSI, 'Mikä Schönbrunn on?', {
+    maara: 4, sijainti: wienissa,
+  });
+  assert.ok(katkelmat.length > 0, 'Schönbrunn ei löytynyt aineistosta lainkaan');
+  const osuma = katkelmat.find((k) => k.ankkurit.includes('schönbrunn'));
+  assert.ok(osuma, `nimiankkuri puuttuu: ${katkelmat.map((k) => k.leima).join(' | ')}`);
+  assert.ok(/wien/i.test(osuma.leima), osuma.leima);
+  // Vartiotesti: pöllön vastauksesta löytyy kohta, joka voi olla linkki.
+  const vastaus = 'Wienissä kannattaa nähdä myös Schönbrunnin kesäpalatsi.';
+  const kohta = etsiAnkkuri(vastaus, osuma.ankkurit);
+  assert.ok(kohta, 'ankkuria ei löytynyt vastaustekstistä');
+  assert.equal(vastaus.slice(kohta.alku, kohta.loppu), 'Schönbrunnin');
+});
+
+test('nähtävyysjuttu ankkuroituu omaan nimeensä ennen muita', () => {
+  const { katkelmat } = haeKatkelmat(INDEKSI, 'Mitä Stephansdomista tiedetään?', {
+    maara: 4, sijainti: { kaupunki: 'wien', maa: 'AUT' },
+  });
+  const juttu = katkelmat.find((k) => k.reitti?.tyyppi === 'nahtavyys');
+  assert.ok(juttu, 'Wienin nähtävyysjuttu ei löytynyt');
+  // Oma nimi on ensimmäisenä: naapurikohteen nimi ei saa napata linkkiä.
+  assert.equal(juttu.ankkurit[0], 'stephansdom', juttu.ankkurit.join(','));
+});
+
+test('kaupungin oma nimi ei kelpaa kohteen nimiankkuriksi', () => {
+  // "Kuwait-tornit" kaupungissa kuwait osuisi kaupungin joka juttuun.
+  for (const m of INDEKSI.merkinnat) {
+    if (m.omistaja !== 'kuwait') continue;
+    assert.ok(!m.nimiSanat.includes('kuwait'), `kaupungin nimi ankkurina: ${m.otsikko}`);
+  }
+});
+
+/* ---------------------------------------------------------------- */
+/* Pöllölinkit: [[avainkäsitteet]]                                   */
+/* ---------------------------------------------------------------- */
+
+test('käsitemerkinnät eivät koskaan näy pelaajalle', () => {
+  assert.equal(poistaKasiteMerkinnat('Junia veti [[höyryveturi]] vuonna 1863.'),
+    'Junia veti höyryveturi vuonna 1863.');
+  // Kesken striimin katkennut merkintä: sulkeet pois, teksti jää.
+  assert.equal(poistaKasiteMerkinnat('Junia veti [[höyryvet'), 'Junia veti höyryvet');
+  assert.equal(poistaKasiteMerkinnat('Junia veti ['), 'Junia veti ');
+  // Rikkinäinen merkintä (rivinvaihto keskellä) purkautuu tekstiksi.
+  assert.equal(poistaKasiteMerkinnat('[[rikki\nmenee]]'), 'rikki\nmenee');
+  assert.equal(poistaKasiteMerkinnat(null), '');
+});
+
+test('vastaus jäsentyy paloiksi, joista käsitteet ovat omiaan', () => {
+  const palat = jasennaKasitteet('Metro avattiin 1863, ja [[höyryveturit]] vetivät junia.');
+  assert.deepEqual(palat, [
+    { teksti: 'Metro avattiin 1863, ja ', kasite: false },
+    { teksti: 'höyryveturit', kasite: true },
+    { teksti: ' vetivät junia.', kasite: false },
+  ]);
+  // Yli katon menevät merkinnät purkautuvat tavalliseksi tekstiksi.
+  const monta = jasennaKasitteet('[[a-käsite]] [[b-käsite]] [[c-käsite]] [[d-käsite]]');
+  assert.equal(monta.filter((p) => p.kasite).length, 3);
+  assert.ok(!monta.some((p) => /\[|\]/.test(p.teksti)), JSON.stringify(monta));
+  // Merkinnätön vastaus on yksi pala, eikä tyhjästä synny mitään.
+  assert.deepEqual(jasennaKasitteet('Pelkkä vastaus.'),
+    [{ teksti: 'Pelkkä vastaus.', kasite: false }]);
+  assert.deepEqual(jasennaKasitteet(''), []);
+});
+
+test('workerin kehotteessa pyydetään käsitemerkinnät ja jätetään ne tekstiin', () => {
+  const kehote = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
+  assert.ok(/\[\[käsite\]\]/.test(kehote), 'käsitemerkinnän muoto puuttuu kehotteesta');
+  assert.ok(/KASITEKEHOTE/.test(kehote), 'käsitekehotetta ei liitetä järjestelmäkehotteeseen');
+  assert.ok(/stream: true/.test(kehote), 'striimipyyntöä ei ole workerissa');
+});
+
+/* ---------------------------------------------------------------- */
+/* Striimin jatkosuodatin                                            */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN REUNAEHTO 13.8.2026: JATKOT-lohko ei saa vilahtaa ruudulla
+ * kertaakaan. Suodatin pidättää rivin verran tekstiä ja päästää sen
+ * vasta, kun rivi ei voi enää olla merkintä.
+ */
+
+/** Ajaa tekstin suodattimen läpi paloina ja palauttaa näytetyn tekstin. */
+function suodata(palat) {
+  const suodatin = luoJatkoSuodatin();
+  let ulos = '';
+  for (const pala of palat) ulos += suodatin.lisaa(pala);
+  const { hanta, jatkot } = suodatin.loppu();
+  return { nakyva: ulos + hanta, jatkot };
+}
+
+test('striimistä ei koskaan välity JATKOT-riviä eikä sen jälkeistä', () => {
+  const kokonainen = 'Metro avattiin 1863.\nSe oli ensimmäinen.\n'
+    + 'JATKOT:\nMiten tunnelit kaivettiin?\nKuka maksoi?\n';
+  // Sama teksti kolmella eri palajaolla: rajat eivät saa muuttaa mitään.
+  const jaot = [
+    [kokonainen],
+    kokonainen.split(''),
+    ['Metro avattiin 1863.\nSe oli ', 'ensimmäinen.\nJAT', 'KOT:\nMiten tunnelit ',
+      'kaivettiin?\nKuka maksoi?\n'],
+  ];
+  for (const palat of jaot) {
+    const { nakyva, jatkot } = suodata(palat);
+    assert.ok(!/JATKOT|jatkot/i.test(nakyva), `merkintä vuoti: ${JSON.stringify(nakyva)}`);
+    assert.ok(!/tunnelit/.test(nakyva), `jatkokysymys vuoti: ${JSON.stringify(nakyva)}`);
+    assert.equal(nakyva.trim(), 'Metro avattiin 1863.\nSe oli ensimmäinen.');
+    assert.deepEqual(poimiEhdotukset(jatkot, 3), ['Miten tunnelit kaivettiin?', 'Kuka maksoi?']);
+  }
+});
+
+test('tavallinen teksti virtaa läpi myös ilman rivinvaihtoja', () => {
+  const { nakyva } = suodata(['Metro ', 'avattiin ', 'vuonna 1863.']);
+  assert.equal(nakyva, 'Metro avattiin vuonna 1863.');
+  // "J"-alkuinen sana ei jää roikkumaan rivin loppuun asti.
+  const yksi = luoJatkoSuodatin();
+  assert.equal(yksi.lisaa('Ja'), '');
+  assert.equal(yksi.lisaa('rrua veti veturi'), 'Jarrua veti veturi');
+});
+
+test('merkintä ilman rivinvaihtoa lopussa ei päädy näkyviin', () => {
+  const { nakyva, jatkot } = suodata(['Vastaus tähän.\n', 'JATKOT:']);
+  assert.equal(nakyva.trim(), 'Vastaus tähän.');
+  assert.equal(jatkot, '');
 });
 
 test('konteksti pysyy katossa myös aineiston kanssa', () => {

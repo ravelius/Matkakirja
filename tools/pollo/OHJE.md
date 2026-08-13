@@ -242,6 +242,23 @@ uudelleen) tai kun ajetaan `npx wrangler deploy` komentoriviltä.
 Ylityksestä pelaaja saa siistin viestin ("Pöllö on vastannut sinulle jo
 monta kertaa tänään"), ei virhettä.
 
+**Laskuri kasvaa pyynnöstä, ei tokeneista.** Suoratoistettu vastaus (ks.
+alla) on yksi pyyntö kuten ennenkin, vaikka teksti tulee monessa
+palassa.
+
+## Suoratoisto (13.8.2026)
+
+Peli pyytää vastauksen virtana: pyynnön rungossa on `striimi: true`, ja
+worker vastaa `text/event-stream`-virralla, jossa on kolme tapahtumaa —
+`pala` (näytettävä lisä), `loppu` (koko vastaus ja jatkokysymykset) ja
+`virhe`. Jatkokysymysten `JATKOT:`-lohko pidätetään virrasta kokonaan,
+joten se ei voi vilahtaa pelaajan ruudulla.
+
+Vanha kertavastaus toimii yhä: jos worker on vanha tai virta ei aukea,
+peli lukee saman vastauksen tavallisena JSONina eikä kysy uudelleen.
+Päivitä siis worker samaan aikaan kuin peli, niin saat suoratoiston —
+mutta mikään ei rikkoudu, vaikka päivittäisit vain toisen.
+
 ## Kehittäjäkoodi: rajaton käyttö omalla laitteella
 
 Päiväraja tulee ensimmäisenä vastaan sinulle itsellesi, koska testaat
