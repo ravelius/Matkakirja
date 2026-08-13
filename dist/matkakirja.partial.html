@@ -3921,56 +3921,49 @@ body.radio-tila .actions {
 
 .country-korostus {
   fill: none;
-  /* Lepotila aavistuksen vahvempi (omistaja 13.8.2026: "raja voi
-     jäädä vähän voimakkaammin näkyviin") — sama arvopari myös
-     välähdyksen 100 %:ssa ja js/ui.js:n paisumisen lähtöarvoissa. */
-  stroke: rgba(150, 60, 45, 0.62);
-  stroke-width: 3.5;
+  /* Lepotila on LÄHES piirron loppuvoima (omistaja 13.8.2026 ilta:
+     "otetaan rajan väläytys pois mutta raja voisi jäädä lähes yhtä
+     voimakkaana näkyviin kuin se on piirron lopussa") — piirto päättyy
+     arvoihin 5.4 / 0.8, ja lepo on hivenen sen alla. Sama arvopari
+     myös asettumisanimaation 100 %:ssa. */
+  stroke: rgba(160, 58, 42, 0.72);
+  stroke-width: 5;
   stroke-linejoin: round;
   stroke-linecap: round;
 }
 
 /*
- * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI (omistajan tilaus 13.8.2026:
- * ääriviiva piirtyy parissa sekunnissa, välähtää kerran voimakkaampana
- * ja paksumpana ja häipyy pehmeästi rajaviivan omaan sävyyn).
+ * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI: ääriviiva piirtyy parissa
+ * sekunnissa ja paisuu piirtyessään täyteen voimaansa (js/ui.js
+ * animoiMaanAariviiva: polun pituus viiva-aukkokuvioksi, dashoffset
+ * nollaan ja rinnalla paisuminen 5.4:ään / 0.8:aan).
  *
- * Piirtovaihe on JS:n puolella (js/ui.js animoiMaanAariviiva: polun
- * pituus viiva-aukkokuvioksi ja dashoffset nollaan). Välähdys ja sen
- * häivytys ovat tässä yhtenä animaationa: väri ja paksuus liukuvat
- * samaa tahtia takaisin lepoarvoihin, joten viivan ei tarvitse tietää
- * lepoarvoja kahdessa paikassa.
+ * VÄLÄYS POISTUI (omistaja 13.8.2026 ilta: "otetaan rajan väläytys
+ * pois mutta raja voisi jäädä lähes yhtä voimakkaana näkyviin kuin se
+ * on piirron lopussa"). Kokeiltiin huippuja 70→100 ja 70→80 — kumpikin
+ * pois. Piirron perään jää vain lyhyt PEHMEÄ ASETTUMINEN piirron
+ * loppuarvoista lepoon, joka on hivenen niiden alla: silmä ei näe
+ * hyppyä eikä väläystä, ja raja jää vahvana näkyviin.
  *
  * Ei transitionia vaan keyframes: siirtymä vaatisi kaksi peräkkäistä
- * tyylinvaihtoa (ensin vahvaksi, sitten takaisin), eikä sitä voi tehdä
- * pakottamatta asettelun lukua kesken animaation.
+ * tyylinvaihtoa, eikä sitä voi tehdä pakottamatta asettelun lukua
+ * kesken animaation. 0 % on täsmälleen piirron loppuarvot, ettei
+ * vaiheiden saumaa näy.
  */
-/*
- * Loppuvälähdys jatkaa siitä, mihin piirron aikainen paisuminen jäi
- * (js/ui.js: piirto nostaa viivan lineaarisesti ~70 prosenttiin,
- * leveys 5.4 ja väri rgba(182,61,42,0.8)) — 0 % on täsmälleen nämä
- * arvot, ettei vaiheiden saumaa näy. Nopea huippu 70→80, pieni pito
- * ja pehmeä häivytys lepoon (omistajan tarkennus 13.8.2026 ilta).
- */
-/* Huippu on maltillinen 70→80 (omistajan tarkennus 13.8.2026 ilta:
-   "rajan väläys voisi olla vain 70=>80" — aiempi 70→100 oli liikaa). */
-@keyframes maa-aariviivan-valahdys {
+@keyframes maa-aariviivan-asettuminen {
   0% { stroke: rgba(182, 61, 42, 0.8); stroke-width: 5.4; }
-  12% { stroke: rgba(188, 61, 42, 0.85); stroke-width: 5.8; }
-  26% { stroke: rgba(188, 61, 42, 0.85); stroke-width: 5.8; }
-  100% { stroke: rgba(150, 60, 45, 0.62); stroke-width: 3.5; }
+  100% { stroke: rgba(160, 58, 42, 0.72); stroke-width: 5; }
 }
 
-/* Kesto seuraa js/ui.js AARIVIIVAN_VALAHDYS_MS:ää (omistajan tarkennus
-   13.8.2026: hitaampi välähdys ja häivytys, piirtonopeus ennallaan). */
-.country-borders.maa-valahtaa .country-korostus {
-  animation: maa-aariviivan-valahdys 1880ms ease-out;
+/* Kesto seuraa js/ui.js AARIVIIVAN_ASETTUMIS_MS:ää. */
+.country-borders.maa-asettuu .country-korostus {
+  animation: maa-aariviivan-asettuminen 730ms ease-out;
 }
 
-/* Liikeherkkyys: viiva on heti valmis eikä välähdä (js/ui.js ohittaa
+/* Liikeherkkyys: viiva on heti valmis lepoarvoissaan (js/ui.js ohittaa
    koko animaation, tämä on varmistus tyylin puolella). */
 @media (prefers-reduced-motion: reduce) {
-  .country-borders.maa-valahtaa .country-korostus { animation: none; }
+  .country-borders.maa-asettuu .country-korostus { animation: none; }
 }
 
 /*
@@ -6294,6 +6287,53 @@ body.katselu #newgame-btn { display: none; }
      vaimeaan vaaleaan, jotta numero pysyy luettavana. */
   color: var(--muted);
   cursor: pointer;
+}
+
+/*
+ * Pieni tekstinkorkuinen päivitysnappi versionumeron vasemmalla
+ * puolella (omistaja 13.8.2026: "versionumeron vasemmalle laitaan
+ * voisi tehdä pienen päivitysnapin, tekstin korkuisen"). Sama
+ * kirjasinkoko kuin numerolla ja ohut reunus, jotta se lukee napiksi
+ * muttei kilpaile valikon isompien painikkeiden kanssa.
+ */
+.versio-paivitys {
+  min-height: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.15rem 0.45rem;
+  background: none;
+  border: 1px solid rgba(230, 214, 178, 0.3);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.versio-paivitys .viiva-ikoni { display: inline-flex; }
+.versio-paivitys .viiva-ikoni svg { width: 1em; height: 1em; }
+
+/* Haun aikana kuvake pyörii — pelkän kuvakkeen napissa ei ole
+   tekstiriviä, joka kertoisi "Päivitetään…". */
+.versio-paivitys.paivittaa .viiva-ikoni svg {
+  animation: versio-paivitys-kierto 900ms linear infinite;
+}
+
+@keyframes versio-paivitys-kierto {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .versio-paivitys.paivittaa .viiva-ikoni svg { animation: none; }
+}
+
+.paavalikko .versio-paivitys:hover:not(:disabled),
+.paavalikko .versio-paivitys:focus-visible {
+  background: none;
+  color: var(--ink-light);
+  border-color: var(--accent);
 }
 
 /*
@@ -11911,6 +11951,17 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
               mitä nappi tekee.
             -->
             <div class="valikko-pohjarivi">
+              <!-- Pieni tekstinkorkuinen päivitysnappi versionumeron
+                   vasemmalla puolella (omistajan toive 13.8.2026):
+                   uusimman version saa hakea suoraan valikosta ilman
+                   päivityslokin avaamista. Sama toiminto kuin
+                   sääntöjen Päivitä-napilla (js/main.js). -->
+              <!-- Pelkkä kuvake ilman tekstiä (omistajan tarkennus
+                   13.8.2026) — nimi jää title- ja aria-labeliin. -->
+              <button id="versio-paivitys" class="versio-paivitys" type="button"
+                      title="Hae uusin versio" aria-label="Hae uusin versio">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.4 4.8v3.7h-3.7"/><path d="M19.2 8.4a7.4 7.4 0 1 0 1 5.4"/></svg></span>
+              </button>
               <button id="versio-kulma" class="versio-kulma" type="button"
                       aria-haspopup="dialog" title="Mitä uutta?"
                       aria-label="Mitä uutta, päivitys ja kehittäjätila"></button>
@@ -154779,8 +154830,18 @@ class Pollo {
    * palaavat alanappirivin keskimmäiseen paikkaan.
    */
   kiinnitysKohde() {
-    const lehti = this.doc.getElementById('arrival-dialog');
-    if (lehti?.open) return lehti;
+    /*
+     * Myös artikkeli-ikkunat (Lue lisää -wiki ja nähtävyysarkki) ovat
+     * modaaleja, ja pöllön pitää olla saatavilla niissäkin (omistaja
+     * 13.8.2026: "Pöllö saisi olla sivussa näkyvissä näissä myös").
+     * Järjestys on pinojärjestys: wiki voi aueta nähtävyyden tai
+     * lehden päälle, joten se tarkistetaan ensin — pöllön on asuttava
+     * PÄÄLLIMMÄISESSÄ modaalissa ollakseen napautettavissa.
+     */
+    for (const id of ['wiki-dialog', 'nahtavyys-dialog', 'arrival-dialog']) {
+      const dialogi = this.doc.getElementById(id);
+      if (dialogi?.open) return dialogi;
+    }
     return this.ankkuri?.isConnected ? this.ankkuri : this.doc.body;
   }
 
@@ -154889,17 +154950,19 @@ class Pollo {
    * luetaan attribuuteista.
    */
   seuraaNakymaa() {
-    const lehti = this.doc.getElementById('arrival-dialog');
     const intro = this.doc.getElementById('intro');
     if (typeof MutationObserver !== 'function') return;
-    if (lehti) {
+    // Sama seuranta kaikille modaaleille, joissa pöllö voi asua
+    // (ks. kiinnitysKohde): avautuminen siirtää napin ikkunan sisään,
+    // sulkeutuminen palauttaa sen — ja sulkee auki jääneen paneelin,
+    // ettei keskustelu jää leijumaan siirtymän päälle.
+    for (const id of ['arrival-dialog', 'wiki-dialog', 'nahtavyys-dialog']) {
+      const dialogi = this.doc.getElementById(id);
+      if (!dialogi) continue;
       new MutationObserver(() => {
         this.kiinnita();
-        // Lehden sulkeutuminen sulkee myös pöllön: paneeli siirtyy
-        // takaisin kartalle, eikä keskustelun pidä jäädä leijumaan
-        // siirtymän päälle.
-        if (!lehti.open && this.auki) this.sulje();
-      }).observe(lehti, { attributes: true, attributeFilter: ['open'] });
+        if (!dialogi.open && this.auki) this.sulje();
+      }).observe(dialogi, { attributes: true, attributeFilter: ['open'] });
     }
     if (intro) {
       new MutationObserver(() => this.paivitaNakyvyys())
@@ -157324,13 +157387,14 @@ const VALINTAVIHJEEN_VIIVE = 15000;
 const VALINTAVIHJEEN_TEKSTI = 'Napauta korostettua kohdetta kartalla, niin matka jatkuu.';
 /*
  * Maan ääriviivan piirtoanimaatio (animoiMaanAariviiva). Piirto on
- * omistajan toivomat "parisen sekuntia". Välähdys ja häivytys
- * hidastuivat 900 → 1900 ms (omistajan tarkennus 13.8.2026 illalla:
- * "välähdys ja feidaus voisi olla hitaampi, mutta rajan piirtonopeus
- * on hyvä") — sama kesto myös CSS:ssä (maa-aariviivan-valahdys).
+ * omistajan toivomat "parisen sekuntia". Väläys poistui kokonaan
+ * (omistaja 13.8.2026 ilta: "otetaan rajan väläytys pois mutta raja
+ * voisi jäädä lähes yhtä voimakkaana näkyviin kuin se on piirron
+ * lopussa") — piirron perään jää vain lyhyt pehmeä asettuminen
+ * lepoarvoihin, sama kesto myös CSS:ssä (maa-aariviivan-asettuminen).
  */
 const AARIVIIVAN_PIIRTO_MS = 2000;
-const AARIVIIVAN_VALAHDYS_MS = 1900;
+const AARIVIIVAN_ASETTUMIS_MS = 750;
 /*
  * NÄKYMÄN KOKOVAHDIN RAJAT (ks. UI vahdiNakymanKokoa).
  *
@@ -159669,7 +159733,7 @@ class UI {
     clearTimeout(this.lehtiMittaJalkiajastin);
     // Pöllön vihjekupla ei saa ilmestyä kuolleen pelin ajastimesta.
     this.peruValintavihje();
-    // Sama koskee ääriviivan välähdyksen loppuajastinta.
+    // Sama koskee ääriviivan asettumisen loppuajastinta.
     clearTimeout(this.aariviivaAjastin);
     /*
      * Maapilleri pois DOM:ista (omistajan kaappaus 13.8.2026: "Jordania
@@ -162715,7 +162779,7 @@ class UI {
     this.viimeMaa = key;
     this.countryKey = key;
     this.countryLayer.textContent = '';
-    this.countryLayer.classList.remove('maa-piirtyy', 'maa-valahtaa');
+    this.countryLayer.classList.remove('maa-piirtyy', 'maa-asettuu');
     this.countryNameLayer.textContent = '';
     const maa = map.countryShapes?.[iso];
     this.paivitaMaaPilleri(maa, iso);
@@ -162739,22 +162803,19 @@ class UI {
   }
 
   /**
-   * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI (omistajan tilaus 13.8.2026:
-   * *"maan kartan punaisen ääriviivan animoisi niin että tultaessa
-   * uuteen maahan peli piirtäisi parissa sekunnissa ääriviivan ja kun se
-   * valmistuisi punainen välähtäisi yhden kerran hieman voimakkaampana
-   * ja feidautuisi sitten pehmeästi nykyisen rajaviivan sävyyn"* sekä
-   * *"maan raja voisi siinä välähdyksessä levitä paksummaksi ja kutistua
-   * sitten feidauksen aikana"*).
+   * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI (omistajan tilaus 13.8.2026;
+   * väläys poistui saman päivän iltana: "otetaan rajan väläytys pois
+   * mutta raja voisi jäädä lähes yhtä voimakkaana näkyviin kuin se on
+   * piirron lopussa").
    *
-   * Kolme vaihetta:
+   * Kaksi vaihetta:
    *   1. viiva piirtyy päästä päähän (stroke-dasharray = polun pituus,
-   *      dashoffset pituudesta nollaan) noin kahdessa sekunnissa
-   *   2. valmistuessa yksi välähdys: voimakkaampi punainen ja kaksin-
-   *      kertainen paksuus
-   *   3. molemmat liukuvat takaisin rajaviivan omaan sävyyn ja mittaan
+   *      dashoffset pituudesta nollaan) noin kahdessa sekunnissa ja
+   *      paisuu samalla täyteen voimaansa (5.4 / 0.8)
+   *   2. valmistuessa lyhyt pehmeä asettuminen lepoarvoihin, jotka
+   *      ovat hivenen piirron loppua alempana (5 / 0.72) — ei väläystä
    *
-   * Vaiheet 2–3 ovat yksi CSS-animaatio (.maa-valahtaa), vaihe 1
+   * Vaihe 2 on yksi CSS-animaatio (.maa-asettuu), vaihe 1
    * Web Animations API — kummassakaan ei ole kehyskohtaista silmukkaa,
    * eikä kumpikaan koske näkymään (fitViewBox), joten kartan
    * bittikarttaa ei rasteroida uudelleen animaation takia.
@@ -162780,11 +162841,11 @@ class UI {
         { duration: AARIVIIVAN_PIIRTO_MS, easing: 'ease-in-out', fill: 'forwards' },
       ));
       /*
-       * Viiva paisuu ja voimistuu TASAISESTI jo piirtyessään noin 70
-       * prosenttiin huipusta (omistajan tarkennus 13.8.2026 ilta:
-       * "tasaisesti levittää ja voimistaa viivaa jo matkalla") —
-       * loppuvälähdys jatkaa tästä 70→100 (css: maa-aariviivan-
-       * valahdys alkaa täsmälleen näistä arvoista, ettei sauma näy).
+       * Viiva paisuu ja voimistuu TASAISESTI jo piirtyessään täyteen
+       * voimaansa (omistajan tarkennus 13.8.2026 ilta: "tasaisesti
+       * levittää ja voimistaa viivaa jo matkalla") — asettuminen
+       * jatkaa tästä lepoon (css: maa-aariviivan-asettuminen alkaa
+       * täsmälleen näistä arvoista, ettei sauma näy).
        */
       liikkeet.push(polku.animate(
         [
@@ -162804,7 +162865,7 @@ class UI {
       jaljella -= 1;
       if (jaljella > 0) return;
       // Maa on voinut vaihtua kesken piirron: silloin nämä polut ovat jo
-      // poissa eikä välähdys kuulu uudelle maalle.
+      // poissa eikä asettuminen kuulu uudelle maalle.
       if (this.dead || this.countryKey !== avain || !kerros.isConnected) return;
       /*
        * Viiva-aukkokuvio pois ENNEN animaatioiden perumista: fill:
@@ -162818,11 +162879,11 @@ class UI {
       }
       for (const liike of liikkeet) liike.cancel();
       kerros.classList.remove('maa-piirtyy');
-      kerros.classList.add('maa-valahtaa');
+      kerros.classList.add('maa-asettuu');
       clearTimeout(this.aariviivaAjastin);
       this.aariviivaAjastin = setTimeout(() => {
-        kerros.classList.remove('maa-valahtaa');
-      }, AARIVIIVAN_VALAHDYS_MS);
+        kerros.classList.remove('maa-asettuu');
+      }, AARIVIIVAN_ASETTUMIS_MS);
     };
     for (const liike of liikkeet) liike.addEventListener('finish', valmis, { once: true });
   }
@@ -165408,8 +165469,22 @@ class UI {
         ohitaSulku = true;
       }
     });
-    kortti.addEventListener('click', () => {
+    kortti.addEventListener('click', (e) => {
       if (ohitaSulku) { ohitaSulku = false; return; }
+      /*
+       * Sarjassa napautus KUVAAN siirtyy seuraavaan (omistaja
+       * 13.8.2026: "kuva sulkeutui myös sitä painettaessa vaikka
+       * pitäisi vaihtaa seuraavaan kuvaan") — sama ele kuin
+       * päiväkirjan kuvapinossa. Kuvan ulkopuolinen napautus sulkee
+       * kuten ennenkin, samoin yhden kuvan katselimessa napautus
+       * mihin tahansa.
+       */
+      if (lista && e.composedPath?.().includes(kotelo)) {
+        indeksi = (indeksi + 1) % lista.length;
+        sfx.play('paper');
+        nayta();
+        return;
+      }
       this.suljeKulttuuriKuva();
     });
     this.rekisteroiSuurennosNappaimet(lista ? (suunta) => {
@@ -172500,6 +172575,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 634, teksti: 'Kuvasarja selaa napautuksella; pöllö ja päivitys valikoista' },
   { v: 633, teksti: 'Kuva ei sulkeudu matkakirjasta; pilleri- ja välähdyskorjaus' },
   { v: 632, teksti: 'Pöllö väljemmäksi; vuosisäägraafi elää; vuosiennuste-linkki' },
   { v: 631, teksti: 'Raja jää vahvempana; mikki rehellinen; iPad-lehti leveäksi' },
@@ -173228,7 +173304,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.633';
+const APP_VERSION = '2026-08-09.634';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -173723,9 +173799,17 @@ document.addEventListener('pointerdown', (event) => {
  * sivun uudelleen. Kesken oleva peli säilyy, koska se on tallennettu erikseen.
  */
 const updateBtn = document.getElementById('update-btn');
-updateBtn.addEventListener('click', async () => {
-  updateBtn.disabled = true;
-  updateBtn.textContent = 'Päivitetään…';
+async function haeUusinVersio(nappi) {
+  nappi.disabled = true;
+  /*
+   * Tekstiosa vaihtuu, jos nappilla on tekstiä; pelkän kuvakkeen
+   * nappi (valikon pieni päivitysnappi) saa .paivittaa-luokan, joka
+   * pyörittää kuvaketta CSS:ssä — tekstiä ei kirjoiteta kuvakkeen
+   * päälle.
+   */
+  const nimio = nappi.querySelector('span:not(.viiva-ikoni)');
+  if (nimio) nimio.textContent = 'Päivitetään…';
+  nappi.classList.add('paivittaa');
   merkitsePaivitys();
   try {
     if ('serviceWorker' in navigator) {
@@ -173746,7 +173830,17 @@ updateBtn.addEventListener('click', async () => {
   const osoite = new URL(location.href);
   osoite.searchParams.set('paivitys', String(Date.now()));
   location.replace(osoite.toString());
-});
+}
+updateBtn.addEventListener('click', () => haeUusinVersio(updateBtn));
+
+/*
+ * Pieni päivitysnappi versionumeron vieressä hampurilaisvalikossa
+ * (omistajan toive 13.8.2026: "versionumeron vasemmalle laitaan voisi
+ * tehdä pienen päivitysnapin, tekstin korkuisen") — sama haku kuin
+ * sääntöjen Päivitä-napilla, ilman päivityslokin avaamista.
+ */
+const versioPaivitys = document.getElementById('versio-paivitys');
+versioPaivitys?.addEventListener('click', () => haeUusinVersio(versioPaivitys));
 
 document.getElementById('app-version').textContent = APP_VERSION;
 
