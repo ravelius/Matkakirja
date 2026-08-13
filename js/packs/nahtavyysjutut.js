@@ -13337,4 +13337,420 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Tokion nähtävyysjutut (nippu 2, 13.8.2026). Aasian toinen
+   * kaupunkilehti. Kohteet ovat shitamachissa eli Tokion
+   * vanhimmassa nurkassa: Asakusan temppelipiiri idässä ja Uenon
+   * kukkula lännessä. Kolme kohdetta on Uenon puistossa tai sen
+   * laidalla, joten kulmat on eriytetty tietoisesti — Kan'ei-ji
+   * kertoo temppelin ja maan tarinan, ja Uenon puisto viittaa
+   * siihen vain yhdellä lauseella.
+   */
+  tokio: {
+    'Kaminarimon': {
+      aika: '941',
+      teksti: 'Portin keskellä riippuu punainen paperilyhty. Se on 3,9 metriä '
+        + 'korkea, 3,3 metriä leveä ja painaa noin 700 kiloa. Etupuolella '
+        + 'lukee portin nimi Kaminarimon, ukkosenportti, ja takapuolelle '
+        + 'on maalattu virallinen nimi Fūraijinmon. Pohjan '
+        + 'metallikehyksen sisällä on puuhun veistetty lohikäärme, ja '
+        + 'kehyksessä on nimikilpi, jossa lukee Matsushita Denki. Sanja '
+        + 'Matsurin kaltaisissa juhlissa lyhty painetaan kokoon, jotta '
+        + 'korkeat kulkueen esineet mahtuvat portista läpi.'
+        + '\n\n'
+        + 'Nimi tarkoittaa ukkosenporttia, ja portin kahdessa '
+        + 'etusyvennyksessä seisoo kaksi jumalaa: Fūjin, tuulen jumala, '
+        + 'itäpuolella ja Raijin, ukkosen jumala, länsipuolella. Kuvasto '
+        + 'on vakiintunut: Fūjin kantaa harteillaan pullistunutta '
+        + 'tuulisäkkiä, Raijin lyö ympärilleen kaartuvaa rumpukehää '
+        + 'vasaroilla, jotka ovat kummassakin kädessä. Portin takana on '
+        + 'kaksi muuta veistosta, Tenryū ja Kinryū; ne lahjoitettiin '
+        + '1978, ja veistäjä oli 106-vuotias Hirakushi Denchū.'
+        + '\n\n'
+        + 'Ensimmäisen portin rakennutti sotapäällikkö Taira no Kinmasa '
+        + 'vuonna 941; nykyiselle paikalleen se siirrettiin 1635. Portti '
+        + 'on palanut monta kertaa, viimeksi 1865. Nykyinen rakennus on '
+        + 'siis paljon porttia nuorempi: se vihittiin joulukuussa 1960, '
+        + '95 vuotta viimeisen palon jälkeen, ja rahat lahjoitti '
+        + 'Panasonicin edeltäjän Matsushita Denkin perustaja Kōnosuke '
+        + 'Matsushita. Vanhoista jumalankuvista säilyivät palossa vain '
+        + 'päät. Portti on 11,7 metriä korkea ja 11,4 metriä leveä.',
+      kuvat: [
+        {
+          tiedosto: 'Kaminarimon 2020-04-19.jpg',
+          selite: 'Portin etupuoli aamuvalossa. Harmaa tiilikatto kaartuu '
+            + 'päädyistään ylös, ja punaisten pylväiden välissä riippuu '
+            + 'suuri punainen lyhty, jossa on kaksi mustaa '
+            + 'kirjoitusmerkkiä ja alareunassa pieni kultainen kilpi; '
+            + 'lyhdyn yläpuolella on tummanvihreä taulu, jossa on kolme '
+            + 'kultaista merkkiä. Vasemmanpuoleisessa syvennyksessä '
+            + 'veistoksen ympäri kaartuu rivi pieniä pyöreitä rumpuja, '
+            + 'oikeanpuoleisessa veistoksen harteilla lepää pussimainen '
+            + 'taakka; molempien edessä on tumma verkko ja alla vihreä '
+            + 'pystyritilä. Portin aukosta näkyy Nakamise-kadun kojurivi '
+            + 'ja muutama kaukainen kulkija. Vasemmalla kaksi '
+            + 'kasvomaskiin pukeutunutta ihmistä seisoo kaiteen vieressä '
+            + 'polkupyörän luona, portin edessä kävelee vaaleatakkinen '
+            + 'nainen ja toinen ihminen kurottaa kättään pylvästä kohti.',
+          lahde: 'Asanagi, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Dragon wood-carving in Kaminarimon, Sensōji.jpg',
+          selite: 'Lyhdyn pohja suoraan alhaalta kuvattuna: kullanvärisen '
+            + 'metallirenkaan sisällä on pyöreä puureliefi, jossa '
+            + 'lohikäärme kiertyy veistettyjen pilvikiehkuroiden '
+            + 'keskellä. Pää on kuvan keskellä vasemmalle kääntyneenä, '
+            + 'suu auki ja punainen kieli ulkona, toinen silmä vaaleana '
+            + 'pisteenä, ja alempana erottuvat suomuinen ruumis ja yksi '
+            + 'kynsijalka; punareunaiset liekinmuotoiset evät kaartuvat '
+            + 'oikealle. Renkaan kulmissa on neljä vaaleaa läpimurrettua '
+            + 'kiinnityslevyä ja ylhäällä kaksi metallilenkkiä, ja '
+            + 'ympärillä näkyy lyhdyn punainen kangas valkoisen '
+            + 'suojaverkon alla.',
+          lahde: 'Puchku, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sensō-ji': {
+      aika: '628',
+      teksti: 'Sensō-ji on Tokion vanhin temppeli. Perimätiedon mukaan '
+        + 'veljekset Hinokuma Hamanari ja Takenari nostivat vuonna 628 '
+        + 'Sumida-joesta kalastaessaan Kannon-bodhisattvan patsaan. Kylän '
+        + 'päämies Haji no Nakatomo ryhtyi munkiksi ja teki omasta '
+        + 'talostaan temppelin. Vuonna 645 munkki kunnosti paikan ja '
+        + 'julisti unennäön jälkeen patsaan hibutsuksi, kätketyksi '
+        + 'kuvaksi: sen sanotaan olevan kultaa ja noin 5,5 senttiä '
+        + 'korkea, mutta sitä ei näytetä yleisölle koskaan. Ensimmäinen '
+        + 'kirjallinen maininta temppelistä on vuodelta 1181.'
+        + '\n\n'
+        + 'Kaminarimonin portilta temppelille johtaa Nakamise-dōri, noin '
+        + '250 metriä pitkä kauppakuja, jonka varrella on noin 72 '
+        + 'kauppaa. Kaupat sallittiin lähteen mukaan joko jo 1100-luvun '
+        + 'alussa tai vasta 1685. Kujan päässä on Hōzōmon, '
+        + 'kaksikerroksinen portti: 22,7 metriä korkea, 21 leveä ja 8 '
+        + 'syvä. Alakerrassa on kaksi 5,45-metristä Niō-vartijapatsasta '
+        + 'ja kolme lyhtyä, takasivulla kaksi 4,5 metrin olkisandaalia, '
+        + 'kumpikin 400 kiloa. Yläkerrassa säilytetään temppelin sutrat.'
+        + '\n\n'
+        + 'Päähalli, pagodi ja Hōzōmon ovat kaikki jälleenrakennettuja. '
+        + 'Viisikerroksinen pagodi ja päähalli nousivat uudelleen 1648 ja '
+        + '1649, kun tulipalot olivat vieneet ne 1631 ja 1642, ja ne '
+        + 'tuhoutuivat 10. maaliskuuta 1945 pommituksessa. Nykyinen '
+        + 'päähalli on vuosilta 1951–1958, Hōzōmon vuodelta 1964 ja '
+        + 'pagodi vuodelta 1973. Päähallin katolla on titaanitiilet. '
+        + 'Kävijöitä lasketaan yli 30 miljoonaa vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'Sensoji 2023.jpg',
+          selite: 'Päähalli edestä: leveä harmaa tiilikatto, jonka keskellä '
+            + 'kaartuu jyrkkä päätykolmio, ja sen alla punaiset pilarit '
+            + 'ja punainen kaide. Keskiaukossa riippuu suuri punainen '
+            + 'lyhty mustin kirjoitusmerkein, molemmin puolin kapeat '
+            + 'pystylaudat mustin merkein. Portaiden edessä nousee savua '
+            + 'suitsutusastiasta. Etualalla on kymmeniä ihmisiä selin '
+            + 'kameraan, ja oikeassa reunassa matalampi rakennus, jonka '
+            + 'kuparikatto on hapettunut vihreäksi.',
+          lahde: 'Akonnchiroll, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Hozomon on an overcast day dllu.jpg',
+          selite: 'Hōzōmon suoraan edestä pilvisellä säällä: kaksikerroksinen '
+            + 'portti, kaksi harmaata tiilikattoa, punaiset pilarit ja '
+            + 'valkoiset seinäpinnat. Keskellä riippuu suuri punamusta '
+            + 'lyhty ja sen kummallakin puolella metallilyhty, kaikkiaan '
+            + 'kolme. Uloimmissa aukoissa seisoo kaksi tummaa '
+            + 'vartijapatsasta, ja ylemmän kerroksen keskellä on kyltti '
+            + 'kultaisin merkein. Portin edessä on tiivis ihmisjoukko, '
+            + 'oikealla näkyy vaalea kerrostalo.',
+          lahde: 'Daniel L. Lu (user:dllu), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Nakamise in Asakusa, Tokyo.jpg',
+          selite: 'Nakamise-dōri päiväsaikaan: oikealla rivi vihreäkattoisia '
+            + 'kauppoja, joiden räystäillä on pyöreitä valkoisia '
+            + 'lamppuja, punaisia kylttejä ja tekovihreää lehvästöä. '
+            + 'Kujan päässä kohoaa punainen Hōzōmon harmaine kattoineen. '
+            + 'Vasemmalla on puita ja pensasaita mustan rautakaiteen '
+            + 'takana. Kujalla kulkee väkeä, etualalla kulkija vetää '
+            + 'valkoista matkalaukkua, ja takana kohoaa ruskea tiilitalo.',
+          lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kan\'ei-ji': {
+      aika: '1625',
+      teksti: 'Munkki Tenkai halusi Edoon uskonnollisen keskuksen ja '
+        + 'rakennutti sen Kioton mahtavan Enryaku-jin malliin. Paikaksi '
+        + 'valittiin Edon linnan koillispuoli: koillinen oli epäonnen '
+        + 'suunta, kimon eli demonien portti, jonka kautta pahojen '
+        + 'henkien uskottiin tulevan. Tokugawa Hidetada lahjoitti maan '
+        + '1622, ja kolmen daimion esikaupunkitalot pakkolunastettiin sen '
+        + 'tieltä. Ylipapin talo Honbō valmistui 1625, ja sitä vuotta '
+        + 'pidetään temppelin perustamisvuotena.'
+        + '\n\n'
+        + 'Laitoksesta kasvoi valtava. Rakennuksia oli yli kolmekymmentä, '
+        + 'ja alue kattoi Shinobazu-lammen pohjois- ja itäpuoliset '
+        + 'kukkulat sekä tasangon, jolla Uenon rautatieasema nyt seisoo. '
+        + 'Lampi ja sen saarella oleva Bentendō kuuluivat temppeliin. '
+        + 'Kan\'ei-jistä tuli Tokugawa-suvun hautatemppeli Zōjō-jin '
+        + 'rinnalle, ja shogunit haudattiin vuoroin kumpaankin: '
+        + 'viidestätoista shogunista kuusi lepää täällä ja kuusi '
+        + 'Zōjō-jissä.'
+        + '\n\n'
+        + 'Boshin-sodan Uenon taistelussa 4. heinäkuuta 1868 noin 2 000 '
+        + 'shogunin miestä linnoittautui temppelialueelle. Tykistö ampui '
+        + 'Hongōn kukkuloilta, ja suurin osa laukauksista meni harhaan ja '
+        + 'sytytti tulipaloja, joissa koko Kan\'ei-ji ja jopa tuhat taloa '
+        + 'paloi. Temppeliä ei rakennettu ennalleen ja maat '
+        + 'takavarikoitiin; niillä on nyt Uenon puisto. Nykyinen päähalli '
+        + 'tuotiin Kawagoesta Kita-inin temppelistä entisen sivutemppelin '
+        + 'paikalle. Vanhasta piiristä ovat yhä pystyssä viisikerroksinen '
+        + 'pagodi ja Ueno Tōshō-gū -pyhäkkö.',
+      kuvat: [
+        {
+          tiedosto: 'Kaneiji 2012.JPG',
+          selite: 'Päähalli Konponchūdō edestä: harmaa tiilikatto kaartuu '
+            + 'kahtena kerroksena, ja ylemmän räystään mustalla laudalla '
+            + 'on kolme kullanväristä pyöreää vaakunaa. Alapuolella on '
+            + 'tummaksi petsattu puurunko, jonka pylväiden välissä on '
+            + 'valkoisia paperiseinäruutuja ja keskellä lasiovet; oven '
+            + 'yläpuolella riippuu tumma lyhty. Oikealla seinustalla '
+            + 'seisoo korkea valkoinen kyltti, jossa lukee mustin merkein '
+            + '根本中堂. Hallin eteen nousee leveät kiviportaat, ja niiden '
+            + 'edessä on matala puinen aitaus. Etualalla on kaksi suurta '
+            + 'pronssilyhtyä, joiden pinta on patinoitunut vihreäksi ja '
+            + 'jotka seisovat kivijalustoilla. Vasemmalla roikkuu setrin '
+            + 'oksia ja oikealla kohoaa paksurunkoinen lehdetön puu; '
+            + 'taivas on sininen, ja siinä on muutama pieni valkoinen '
+            + 'pilvi. Ihmisiä ei näy.',
+          lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: '20181124 Ueno Park pagoda.jpg',
+          selite: 'Viisikerroksinen pagodi kokonaisuudessaan: viisi kaartuvaa '
+            + 'tiilikattoa päällekkäin, ja ylimmästä nousee ohut '
+            + 'vihertäväksi patinoitunut metallihuippu renkaineen. Neljä '
+            + 'ylintä kerrosta ovat tummanruskeaa puuta ja niiden '
+            + 'räystäslistoissa on kullattuja koristeita. Alin kerros on '
+            + 'kirkkaan punainen: keskellä on kullalla helatut '
+            + 'kaksoisovet ja niiden kummallakin puolella vihreäksi '
+            + 'maalattu ristikkoikkuna. Rakennus seisoo punaisella '
+            + 'jalustalla, jonka eteen johtaa kiviportaat ja jonka '
+            + 'oikeaan reunaan nousevat toiset portaat. Etualan '
+            + 'nurmikolla on harmaa kivilyhty, vasemmalla on punalehtinen '
+            + 'vaahtera ja oikealla vihreitä puita. Taivas on valkoisen '
+            + 'pilviverhon peitossa. Ihmisiä ei näy.',
+          lahde: 'Balon Greyjoy, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tokion kansallismuseo': {
+      aika: '1872',
+      teksti: 'Tokion kansallismuseo on Japanin vanhin kansallinen museo ja '
+        + 'maan suurin taidemuseo. Se laskee alkunsa näyttelystä, joka '
+        + 'oli auki Yushima Seidōn entisessä temppelisalissa 10. '
+        + 'maaliskuuta – 30. huhtikuuta 1872 ja johon tuli noin 150 000 '
+        + 'kävijää. Uenon puisto luovutettiin museolle 1876, ja museo '
+        + 'avattiin siellä 20. maaliskuuta 1882.'
+        + '\n\n'
+        + 'Huhtikuussa 2023 kokoelmassa oli noin 120 000 '
+        + 'kulttuuriesinettä, mutta artikkelin tietolaatikko antaa kooksi '
+        + '110 000 — luvut eivät täsmää. Kansallisaarteiksi on luokiteltu '
+        + '89 esinettä ja tärkeiksi kulttuuriesineiksi 649. Koko maassa '
+        + 'kansallisaarteeksi on nimetty 902 taide- ja käsityöteosta, '
+        + 'joten museolla on niistä noin kymmenesosa. Esillä on kerralla '
+        + 'noin 3 000, kukin neljästä kahdeksaan viikkoa.'
+        + '\n\n'
+        + 'Rakennuksia luetellaan seitsemän. Honkanissa on Japanin taide '
+        + 'esihistoriasta 1800-luvun loppuun, kahdessa kerroksessa ja '
+        + 'kellarissa, kerrosalaa 21 500 neliömetriä; nykyinen talo '
+        + 'valmistui 1938 edeltäjänsä tilalle, jonka vuoden 1923 Kanton '
+        + 'maanjäristys runteli. Tōyōkanissa (1968) on Kiinan, Korean, '
+        + 'Intian sekä Kaakkois- ja Keski-Aasian taidetta kolmessa '
+        + 'kerroksessa, jotka välitasot jakavat kuudeksi tasoksi. '
+        + 'Heiseikanissa (1999) ovat suuret erikoisnäyttelyt ja '
+        + 'arkeologian galleria, Hyōkeikan (1909) avataan vain '
+        + 'erikoisnäyttelyjä varten, ja Hōryū-ji-aarteiden galleria '
+        + '(1999) on kaksikerroksinen. Loput kaksi ovat Kuroda-muistosali '
+        + 'ja tutkimuskeskus.',
+      kuvat: [
+        {
+          tiedosto: 'Tokyo National Museum, Honkan 2010.jpg',
+          selite: 'Honkan talvipäivänä: vaalea kivijulkisivu, jonka päällä on '
+            + 'tummanruskea tiilikatto ylöspäin kaartuvine räystäineen, '
+            + 'ja keskellä sisäänkäynnin päällä oma harjakattoinen katos. '
+            + 'Julkisivulla riippuu kaksi pystybanneria — valkoisessa on '
+            + 'mustia kanji-merkkejä ja kuva ruskeasta savifiguurista, '
+            + 'punareunaisessa maalattu lintu. Edessä on suorakaiteen '
+            + 'muotoinen allas, joka heijastaa koko rakennuksen, sen '
+            + 'molemmin puolin leikattuja pensasmättäitä ja '
+            + 'hiekkakäytävä. Vasemmalla seisoo kaksi ihmistä '
+            + 'roska-astioiden vieressä lehdettömän puun alla, oikealla '
+            + 'kävelee kaksi kohti kameraa, toinen vaaleassa toppatakissa '
+            + 'ja toinen tummassa.',
+          lahde: 'Wiiii, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Hyokeikan - Tokyo National Museum.jpg',
+          selite: 'Hyōkeikan pilvettömän sinisen taivaan alla: valkoinen '
+            + 'kivijulkisivu, jonka keskellä nousee vihreäksi '
+            + 'patinoitunut kupoli pylväikköineen ja ohuine huippuineen, '
+            + 'ja kummassakin päädyssä on pienempi vihreä kupoli. Pääoven '
+            + 'edessä on pylväsaula, ja portaiden molemmin puolin istuu '
+            + 'kivijalustalla vihreäksi hapettunut pronssileijona. '
+            + 'Julkisivun yläosassa on kivireliefejä ja päätykolmioita, '
+            + 'edessä havupuita ja leikattua pensasaitaa. Etualan '
+            + 'asfaltille on aseteltu rivi vihreitä liikennekartioita ja '
+            + 'niiden väliin vihervalkoisia puomeja.',
+          lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Uenon puisto': {
+      aika: '1873',
+      teksti: 'Puisto avattiin 19. lokakuuta 1873, ja se oli Japanin '
+        + 'ensimmäisiä julkisia puistoja. Maa oli ollut '
+        + 'Kan\'ei-ji-temppelin, ja kukkula siirtyi kaupungille '
+        + 'joulukuussa 1868. Paikalle esitettiin lääkärikoulua ja '
+        + 'sairaalaa, mutta hollantilainen lääkäri Bauduin vaati siihen '
+        + 'puistoa. Tammikuussa 1873 Dajō-kan määräsi julkisten puistojen '
+        + 'perustamisesta, ja samana vuonna avattiin Uenon lisäksi neljä '
+        + 'muuta.'
+        + '\n\n'
+        + 'Shinobazun lampi on 16 hehtaaria: laajoja lootuskasvustoja ja '
+        + 'suota. Se on lintujen talvehtimispaikka — tukkasotka, haapana, '
+        + 'jouhisorsa, punasotka, merimetso — ja keskisaarella on '
+        + 'onnenjumalatar Benzaitenin pyhäkkö. Tyynenmeren sodan jälkeen '
+        + 'lampi laskettiin kuivaksi ja pohjalla kasvatettiin viljaa; '
+        + 'lootuslampi palautettiin 1949, ja 1968 se tyhjeni taas '
+        + 'vahingossa metrotyömaan takia.'
+        + '\n\n'
+        + 'Puiston 8 800 puusta noin 800 on kirsikkapuita; Ueno Tōshō-gūn '
+        + 'ja temppelirakennusten omat mukaan lukien luku nousee noin 1 '
+        + '200:aan. Puistossa ovat Tokion kansallismuseo ja '
+        + 'luonnontieteen museo, kaupungin taidemuseo vuodelta 1926 ja '
+        + 'länsimaisen taiteen museo 1959, jonka Le Corbusier\'n rakennus '
+        + 'on maailmanperintökohde. Puistossa on myös eläintarha ja Ueno '
+        + 'Tōshō-gū vuodelta 1651. Kävijöitä on yli kymmenen miljoonaa '
+        + 'vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'Sakura (cherry trees) blooming in Ueno Park in Tokyo, Japan 20140404023022 (26290773175).jpg',
+          selite: 'Kirsikkakuja täydessä kukassa: oksat kaartuvat polun yli '
+            + 'molemmilta puolilta, kukinta on vaaleanpunaista ja '
+            + 'valkoista, ja latvojen raosta näkyy sinistä taivasta. '
+            + 'Kuvan alaosan täyttää tiheä väkijoukko, enimmäkseen selin '
+            + 'kameraan; yksi kohottaa puhelinta pään yläpuolelle, '
+            + 'keskellä näkyy vaalea olkihattu ja edempänä mies '
+            + 'valkoisessa paidassa ja tummassa solmiossa. Etualalla '
+            + 'erottuu punainen reppu ja aurinkolasit. Vasemmalla puiden '
+            + 'alla riippuu rivi pieniä lyhtyjä ja pystysuoria viirejä, '
+            + 'ja polun laidassa on musta lyhtypylväs.',
+          lahde: 'Yiannis Theologos Michellis, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Shinobazu pond Tokyo 2017.jpg',
+          selite: 'Shinobazun lampi kesällä: koko vesipinta on yhtenäisen '
+            + 'lootuslehtimaton peitossa, ja lehtien seasta erottuu kaksi '
+            + 'vaaleanpunaista kukkaa. Lammen poikki kulkee kävelytie '
+            + 'mustine metallikaiteineen, ja kaiteessa roikkuu oranssi '
+            + 'pelastusrengas. Kaiteen ääressä on kolme ihmistä: '
+            + 'vasemmalla yksi nojaa kaiteeseen, keskellä kaksi seisoo '
+            + 'selin katsomassa lammelle. Takarantaa reunustavat puut ja '
+            + 'riippuva paju, ja niiden takana nousee rivi korkeita '
+            + 'asuintorneja.',
+          lahde: 'Alexandar Vujadinovic, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Shitamachi-museo': {
+      aika: '1980',
+      teksti: 'Shitamachi tarkoittaa alakaupunkia. Epävirallinen nimi kattaa '
+        + 'Tokion matalan tasangon Sumida-joen tuntumassa, alueen joka '
+        + 'ulottuu Taitōsta Chiyodaan ja Chūōhun. Siellä asuivat '
+        + 'käsityöläiset, kalastajat, merimiehet ja kauppiaat, ja se oli '
+        + 'kaupungin huvien ja kaupankäynnin keskus. Museo avattiin 1980 '
+        + 'Uenon puistoon Shinobazu-lammen rantaan, kuusi vuotta ennen '
+        + 'Fukagawan Edo-museota ja kolmetoista vuotta ennen '
+        + 'Edo-Tokio-museota.'
+        + '\n\n'
+        + 'Esineitä ei ole aseteltu vitriineihin vaan rakennettu takaisin '
+        + 'huoneiksi. Alakerrassa on sisäänkäynnin oikealla puolella '
+        + 'luonnollisen kokoinen kopio kauppiaan talosta, jossa tehdään '
+        + 'ja myydään geta-puukenkiä; oven edessä seisovat riksa ja käsin '
+        + 'vedettävä kärry. Vasemmalla on pieni vuokratalo, jonka kaksi '
+        + 'perhettä jakaa ja jonka kummallakin puoliskolla on oma '
+        + 'puotinsa. Toisella puolella äiti ja tytär myyvät halpoja '
+        + 'karkkeja asuinhuoneen viereisestä kojusta, toisella vaskiseppä '
+        + 'tekee ja myy työnsä samassa tilassa. Talon viereinen kaivo ja '
+        + 'pyykkilauta ovat alkuperäisiä alakaupungin esineitä.'
+        + '\n\n'
+        + 'Yläkerta on sekalaisempi: leluja, nukkeja, valokuvia, '
+        + 'keittiövälineitä, lauta- ja korttipelejä sekä juhliin '
+        + 'liittyvää tavaraa. Siellä on myös yleisen kylpylän '
+        + 'sisäänkäynti, jonka omistaja lahjoitti museolle. Kaikki esillä '
+        + 'olevat esineet on saatu lahjoituksina alakaupungin asukkailta, '
+        + 'ja ne olivat käytössä Taishō-kaudella 1912–1926.',
+      kuvat: [
+        {
+          tiedosto: 'Alley - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08717.JPG',
+          selite: 'Alakerran rakennettu kuja: kapea kivilaattapolku kulkee '
+            + 'kahden tummaksi patinoituneen puutalon välissä. Vasemmalla '
+            + 'on liukuovia, valkoinen kangas roikkuu bambusalossa, '
+            + 'seinässä on pystykirjoitettu puukyltti, ja seinustaa '
+            + 'reunustavat pyöreät kivet sekä yksi sinivihreä ruukku, '
+            + 'jossa kasvaa terävälehtinen kasvi. Oikealla on '
+            + 'pystylaudoitettu seinä, siihen ripustettu naru runsaan '
+            + 'kymmenen kuivatun hedelmänpuolikkaan kanssa ja niiden '
+            + 'vieressä oranssien paperimaisten siemenkotelojen terttu; '
+            + 'ylhäällä näkyy tiilikaton räystäs. Kuja ei jatku pitkälle: '
+            + 'se päättyy suureen mustavalkoiseen valokuvaan, jossa lapsi '
+            + 'kyykkii samanlaisen kujan kiveyksellä ja polun reunalla on '
+            + 'ruukkukasveja.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Coppersmith - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08719.JPG',
+          selite: 'Vaskisepän asunto ja työtila samassa huoneessa. Oikealla '
+            + 'on kivireunainen ahjo, jonka pohjalla on mustaa hiiltä, ja '
+            + 'sen edessä puutelineillä kolme kuparista vesipannua '
+            + 'puisine kantokahvoineen sekä kuparinen putki. Työpöydällä '
+            + 'on kannellinen kupariastia, seinän vaakatangossa riippuu '
+            + 'toistakymmentä pitkää talttaa ja puikkoa, pöydän reunassa '
+            + 'on metallinen ruuvipenkki pitkine kampineen ja sen alla '
+            + 'musta kulho pienen lipaston päällä. Vasemmalla erottuu '
+            + 'asuinpuoli: tatamilattia, nelilaatikkoinen puinen lipasto, '
+            + 'seinäkello puukotelossa, lasiovinen kaappi valkoisine '
+            + 'kulhoineen, rautainen teepannu hiilipannun päällä ja '
+            + 'lattialla avattu esite telineessä. Perällä on shōji-ovi ja '
+            + 'katossa yksi kupumainen lamppu.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Corner - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08740.JPG',
+          selite: 'Museoon siirretty yleisen kylpylän sisäänkäynti: '
+            + 'puukorokkeella seisoo korkea puinen vahtikoju '
+            + 'porrastettuine pöytätasoineen, ja sen takana on '
+            + 'huurrelasiovia, joihin on kaiverrettu bambua. Kojun '
+            + 'yläpuolella on kaksi lasitettua kilpeä, toisessa '
+            + 'kirjoitusmerkki ja toisessa keltainen kolmihaarainen '
+            + 'höyrymerkki valkoisella pohjalla. Korokkeen vasemmassa '
+            + 'reunassa on rottinkituoli valkoisine istuintyynyineen, sen '
+            + 'vieressä punottu bambukori ja lattialla olkimatto; puiseen '
+            + 'oveen on kiinnitetty kaksi pientä mainosjulistetta. '
+            + 'Oikealla korokkeen ulkopuolella seisoo tummanpunainen '
+            + 'lattiavaaka pyöreine osoitintauluineen, ja takaseinän '
+            + 'peittää kaksikerroksinen rivistö puisia kenkälokeroita, '
+            + 'joiden juurella on pieni punainen jakkara.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
