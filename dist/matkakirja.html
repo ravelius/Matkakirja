@@ -1176,6 +1176,14 @@ body.aloitus-zoom .kiikari {
   min-height: 40px;
   display: grid;
   place-items: center;
+  /*
+   * Pehmuste nollaan (omistajan havainto 13.8.2026: "kuvake sivussa
+   * ympyrään nähden"). Nappien yleissääntö antaa 0.5rem/0.8rem
+   * pehmusteen, jolloin 20 px:n kuvake ei mahdu 40 px:n ympyrän
+   * sisältöalueeseen ja gridin keskitys vääntyy sivuun — pyöreässä
+   * kuvakenapissa keskitys hoituu gridillä, ei pehmusteella.
+   */
+  padding: 0;
   border-radius: 50%;
   border: 1px solid var(--line);
   background: rgba(239, 220, 180, 0.9);
@@ -95577,6 +95585,23 @@ function valokuvaVara(tiedosto, leveys) {
 }
 
 /**
+ * SUURENNOKSEN osoite: aina Commonsista pyydetyllä leveydellä.
+ *
+ * valokuvaUrl palauttaa ensisijaisesti repon paikalliskopion, joka on
+ * tallennettu lehden palstaleveydelle (≤1280 px, osa pienempiä) —
+ * leveysparametri ei vaikuta siihen lainkaan. Lehden sivulla CSS
+ * venyttää pikkukopion palstan täyteen, mutta suurennos näyttää
+ * tiedoston luonnollisessa koossaan, jolloin "koko ruudun" kuva oli
+ * iPadilla PIENEMPI kuin sivulla (omistajan havainto 13.8.2026).
+ * Suurennos hakee siksi ison version suoraan Commonsista; kutsuja
+ * antaa varaksi valokuvaUrl:n, jotta kuva näkyy myös yhteydettä —
+ * pienempänä, mutta näkyy.
+ */
+function valokuvaSuurennos(tiedosto, leveys) {
+  return commonsUrl(tiedosto, leveys);
+}
+
+/**
  * Lipun osoite samoissa portaissa. Liput ovat repossa
  * (tools/fetch-flags.mjs), koska saapumiskortti näyttää niitä useita
  * kerralla ja Commons alkoi rajoittaa peräkkäisiä pyyntöjä — silloin
@@ -166110,7 +166135,13 @@ class UI {
     let laskuri = null;
     const nayta = () => {
       const teos = lista ? lista[indeksi] : nosto;
-      asetaKuva(kuva, valokuvaUrl(teos.tiedosto, 1400), valokuvaVara(teos.tiedosto, 1400));
+      /*
+       * Iso versio Commonsista, EI paikallista palstakopiota
+       * (ks. valokuvaSuurennos): suurennoksen pitää olla vähintään
+       * yhtä iso kuin kuva lehden sivulla. Vara on paikallinen/peili-
+       * reitti, jotta kuva näkyy myös yhteydettä.
+       */
+      asetaKuva(kuva, valokuvaSuurennos(teos.tiedosto, 1600), valokuvaUrl(teos.tiedosto, 1600));
       kuva.alt = teos.otsikko ?? teos.selite ?? '';
       kuvateksti.textContent = teos.selite ?? '';
       kuvateksti.hidden = !teos.selite;
@@ -173271,6 +173302,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 636, teksti: 'Suurennos täysikokoiseksi; kirjakuvake keskelle' },
   { v: 635, teksti: 'Tokion kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 634, teksti: 'Kuvasarja selaa napautuksella; pöllö ja päivitys valikoista' },
   { v: 633, teksti: 'Kuva ei sulkeudu matkakirjasta; pilleri- ja välähdyskorjaus' },
@@ -174001,7 +174033,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.635';
+const APP_VERSION = '2026-08-09.636';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
