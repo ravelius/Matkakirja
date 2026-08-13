@@ -2571,6 +2571,30 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kisanin portti', lat: 33.5065, lon: 36.3157 },
     ],
   },
+  riad: {
+    polku: 'assets/kartat/riad-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 24.65, etela: 24.628, lansi: 46.7, ita: 46.722,
+    },
+    esittely: 'Riadin kartalla on kaksi päätä. Alalaidassa on vanha '
+      + 'ydin: Masmakin linnoitus ja Imam Turkin suurmoskeija ovat '
+      + 'parinsadan metrin päässä toisistaan, ja niiden ympärillä '
+      + 'korttelit ovat pieniä. Ylälaidassa on Murabban kortteli, jonne '
+      + 'hallinto siirtyi vanhan ytimen ulkopuolelle.\n\n'
+      + 'Kahden pään väli on runsaat kaksi kilometriä, ja se näkyy '
+      + 'kartalla leveinä suorina väylinä. Korttelit ovat ympärillä '
+      + 'isoja, ja mittakaavaero vanhan ytimen ja muun kartan välillä '
+      + 'erottuu suoraan.',
+    kohteet: [
+      { nimi: 'Masmakin linnoitus', lat: 24.6311, lon: 46.7133 },
+      { nimi: 'Imam Turkin suurmoskeija', lat: 24.6307, lon: 46.7108 },
+      { nimi: 'Punainen palatsi', lat: 24.6425, lon: 46.7092 },
+      { nimi: 'Riadin vesitorni', lat: 24.645, lon: 46.7122 },
+      { nimi: 'Murabban palatsi', lat: 24.6465, lon: 46.7093 },
+      { nimi: 'Saudi-Arabian kansallismuseo', lat: 24.6472, lon: 46.7108 },
+    ],
+  },
   luxor: {
     polku: 'assets/kartat/luxor-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

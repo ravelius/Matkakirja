@@ -158,4 +158,13 @@ export const SAATIEDOT = {
     keskilampo: [14.4, 16.6, 20.8, 26, 30.6, 32.8, 33.5, 33.4, 31.1, 27.2, 20.9, 15.9],
     sade: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
+  // Riadissa sade on talven asia ja kesällä sitä ei tule lainkaan:
+  // kesäkuusta syyskuuhun normaali on nolla millimetriä. Huhtikuu on
+  // sateisin kuukausi, ja silloinkin vettä tulee 14 millimetriä.
+  riad: {
+    lat: 24.633,
+    lon: 46.716,
+    keskilampo: [14, 16.8, 21.1, 26.8, 32.4, 35, 36.1, 36, 32.8, 27.6, 20.5, 15.4],
+    sade: [11, 7, 12, 14, 2, 0, 0, 0, 0, 1, 12, 9],
+  },
 };

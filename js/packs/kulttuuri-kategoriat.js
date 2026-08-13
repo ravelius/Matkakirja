@@ -8923,4 +8923,236 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * RIADIN KANSISIVU (nippu 2, 13.8.2026). SAU-maalehdellä on
+   * kalliot, vuoret, meri ja luonto, joten kaupungille jää arki.
+   */
+  riad: [
+    {
+      id: 'kaupunki',
+      nimi: 'Riad',
+      johdanto: 'Riadia kiersi 1740-luvulta lähtien savimuuri, joka purettiin '
+        + 'vuonna 1950, ja al-Olayan kaupunginosaan valmistuivat vuonna '
+        + '2000 Saudi-Arabian ensimmäinen pilvenpiirtäjä ja vuonna 2002 '
+        + 'sitä runsaat 35 metriä korkeampi torni.',
+      kansikuvat: [
+        {
+          tiedosto: '413 of \'Narrative of a Year\'s Journey through Central and Eastern Arabia (1862-63), etc. (With maps and plans.)\' (11069861105).jpg',
+          selite: 'Riadin pohjapiirros 1800-luvun matkakirjasta. Otsikkona on '
+            + 'PLAN OF RIAD, ja kaupunkia kiertää katkoviivalla piirretty '
+            + 'muuri, joka on ylälaidasta pyöreä ja alalaidasta '
+            + 'suorakulmainen. Sisäpuolella kulkevat kadut ja korttelit, '
+            + 'keskellä lukee Great Street ja sen varrella Shops. '
+            + 'Ulkopuolelle on merkitty joka suuntaan Gardens, vasempaan '
+            + 'alakulmaan Wadi Haneefah sekä teitä, joiden kohdalla lukee '
+            + 'Road to Derëeyah, Road to Melha, Road to Hasa ja Road to '
+            + 'Yemamah. Oikeassa alanurkassa on kompassiruusu ja '
+            + 'alalaidassa numeroitu selitys, jossa mainitaan muun muassa '
+            + 'Great Square & Market Place, Mosque, Principal gate ja '
+            + 'other gates. Paperi on kellastunut.',
+          lahde: 'The British Library, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Downtown Riyadh through a dusty windshield (12753645435).jpg',
+          selite: 'Riadilainen katu matalassa illansuun auringossa, kuvattuna '
+            + 'auton tuulilasin läpi: lasissa näkyy pyyhkimen jättämiä '
+            + 'juovia. Vasemmalla on korkea asuintalo, jonka julkisivussa '
+            + 'on rivi parvekkeita ja ilmastointilaitteita ja katolla '
+            + 'mastoja. Kadun poikki työntää polkupyörää raidallisessa '
+            + 'paidassa oleva mies, ja hänen takanaan ajaa vaaleita '
+            + 'autoja. Oikealla on betonitalo, arabiankielisiä '
+            + 'liikekylttejä ja optikon mainos; kadun päässä on rivi '
+            + 'palmuja ja punaisena palava liikennevalo.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'King Fahd Road, Riyadh.jpg',
+          selite: 'King Fahd Road sillalta katsottuna. Keskellä kulkee maan '
+            + 'tason alle painettu moottorikatu, jonka yli menee silta; '
+            + 'ajoradalla on muutama auto ja moottoripyöräilijä, ja '
+            + 'kaistojen välissä kasvaa matalia viuhkapalmuja. Reunoilla '
+            + 'ovat valkoiset betonikaiteet. Oikealla nousee lieriön '
+            + 'muotoinen sinipeilinen torni ja sen vieressä toinen '
+            + 'lasitalo, vasemmalla on pysäköityjä autoja ja rivi '
+            + 'lehtipuita. Taivas on sininen, ja siinä on ohuita pilviä.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Aukko nostaa talon määräyksen yli',
+          tiedosto: 'Kingdom Centre Riyadh 2024.jpeg',
+          teksti: 'Kingdom Centre valmistui al-Olayan kaupunginosaan vuonna '
+            + '2002. Kerroksia on 99 ja korkeutta 302,3 metriä, mutta '
+            + 'Riadin korkein rakennus se ei ole: vuonna 2014 valmistunut '
+            + 'Burj Rafal yltää 307,9 metriin. Pohja on mantelin '
+            + 'muotoinen, ja kapeat päädyt osoittavat itään ja länteen, '
+            + 'missä aurinko lämmittää seinää eniten. Ylimmässä '
+            + 'kolmanneksessa on ylösalaisin käännetty kaari, jonka yli '
+            + 'kulkee 65 metrin pituinen silta: teräsrakenne painaa 300 '
+            + 'tonnia, ja siinä on ikkunat molemmilla sivuilla. Aukolla '
+            + 'on toinenkin tehtävä. Paikallinen määräys rajaa '
+            + 'käyttökerrosten määrän kolmeenkymmeneen, ja tyhjä kaari '
+            + 'nostaa talon sen rajan yläpuolelle.',
+          selite: 'Kingdom Centre yöllä. Torni kohoaa tummana pilviselle '
+            + 'taivaalle, ja sen yläosassa on valaistu kaari, jonka '
+            + 'poikki kulkee silta; kaaren alle laskeutuu ohuita '
+            + 'vaijereita. Ikkunarivit palavat keltaisina ja sinisinä ja '
+            + 'kaartuvat tornin kylkeä pitkin. Edessä kasvaa alhaalta '
+            + 'valaistuja taatelipalmuja ja leikattuja pensaita, oikealla '
+            + 'on korkea katuvalopylväs ja matala rakennus, jonka '
+            + 'reunassa hohtaa violettia valoa. Alalaidassa näkyy '
+            + 'pysäköityjä autoja.',
+          lahde: 'Hamza A. Durrani, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kärki kapenee, pallossa on ravintola',
+          tiedosto: 'All Faisaliah Tower Riyadh, 2023.jpeg',
+          teksti: 'Al Faisaliah oli valmistuessaan toukokuussa 2000 '
+            + 'Saudi-Arabian ensimmäinen pilvenpiirtäjä. Suunnittelijaksi '
+            + 'kutsuttiin Foster + Partners vuonna 1994, ja rakentaminen '
+            + 'alkoi 1997. Torni on 267 metriä korkea, kerroksia on 44 ja '
+            + 'niistä 30 on toimistoja. Neljä sivua kapenee ylöspäin '
+            + 'kärjeksi, ja esikuvaksi mainitaan Umar ibn al-Khattabin '
+            + 'moskeija al-Joufissa. Kahdensadan metrin korkeudella on '
+            + 'näköalataso ja sen yläpuolella lasipallo, jonka sisällä on '
+            + 'ravintola. Hotellin ja tornin väliseen aulaan tilattiin '
+            + 'vuonna 1999 Brian Clarken lasitaideseinä, jonka pinta-ala '
+            + 'on 22 000 neliöjalkaa eli noin 2 000 neliömetriä.',
+          selite: 'Al Faisaliah -torni keskipäivän valossa. Rakennus kapenee '
+            + 'neljältä sivulta kärjeksi, ja kulmissa nousevat valkoiset '
+            + 'teräspilarit, joiden väliin on kiinnitetty vinotukia. '
+            + 'Ikkunanauhat ovat tummia ja vaakasuoria. Huipun alla on '
+            + 'kultainen lasipallo, sen yläpuolella terävä piikki. '
+            + 'Etualalla kasvaa rivi palmuja, molemmilla sivuilla on '
+            + 'matalampia vaaleita rakennuksia, joista vasemmanpuoleisen '
+            + 'julkisivu on pyöreä, ja alhaalla näkyy pysäköintialueen '
+            + 'metallikatos ja valkoinen auto.',
+          lahde: 'Hamza A. Durrani, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Portin nimi on lainattu persiasta',
+          tiedosto: 'Riyadh walled town remains.jpg',
+          teksti: 'Vanhaa Riadia kiersi savesta rakennettu muuri, jossa oli '
+            + 'vartiotorneja ja portteja. Sen pystytti 1740-luvun '
+            + 'tienoilla kaupungin hallitsija Daham bin Dawas, ja Turki '
+            + 'al-Saud rakennutti sen uudelleen vuoden 1824 jälkeen; '
+            + 'viimeisen kerran muuri uusittiin vuoden 1902 Riadin '
+            + 'taistelun jälkeen. Portteja luetellaan nimeltä yhdeksän ja '
+            + 'vartiotorneja noin kaksikymmentä, mutta portteja sanotaan '
+            + 'olleen myös kymmenkunta. Niitä kutsuttiin sanalla darawiz, '
+            + 'joka on persian portin darvaza arabialaistettu monikko. '
+            + 'Muuri purettiin vuonna 1950, jotta kaupunki pääsi '
+            + 'kasvamaan sen ulkopuolelle.',
+          selite: 'Kaupunginmuurin säilynyt pätkä nykyisessä Riadissa. '
+            + 'Vasemmalla on pyöreä torni, jonka yläreunassa on '
+            + 'kolmiohampainen harja ja seinässä pieniä reikiä. Torniin '
+            + 'liittyy paksu savipintainen muuri, joka kapenee ylöspäin '
+            + 'ja jonka pinnassa erottuvat vaakasuorat kerrokset; '
+            + 'alareunassa on kivijalka. Muurin viertä nousevat '
+            + 'kiviportaat, joiden edessä on metalliaita ja oranssi '
+            + 'liikennekartio. Etuala on tiililaatoitettu aukio, jossa on '
+            + 'pyöreä kaivonkansi. Oikealla näkyy katulyhty, katu ja '
+            + 'nykyisiä taloja, ja muurin yli lankeaa palmun varjo.',
+          lahde: 'Hamza A. Durrani, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki ja metro',
+      johdanto: 'Riadin metrossa junat kulkevat ilman kuljettajaa. Verkko '
+        + 'avattiin osissa joulukuun 2024 ja tammikuun 2025 välillä, ja '
+        + 'ensimmäisen viikon aikana matkustajia oli 1,9 miljoonaa.',
+      nostot: [
+        {
+          otsikko: 'Kolme avajaispäivää viidessä viikossa',
+          tiedosto: 'リヤドメトロ アルマタールT5駅(空港ターミナル5駅)のホーム.jpg',
+          teksti: 'Riadin metro avattiin kolmessa erässä: linjat 1, 4 ja 6 '
+            + 'aloittivat 1. joulukuuta 2024, linjat 2 ja 5 kaksi viikkoa '
+            + 'myöhemmin ja linja 3 vasta 5. tammikuuta 2025. Rataa on '
+            + '176 kilometriä ja asemia 85. Linjat tunnetaan väreinä, ja '
+            + 'pituudet ovat sininen 38 kilometriä, punainen 25,3, '
+            + 'oranssi 40,7, keltainen 29,6, vihreä 12,9 ja violetti '
+            + '29,9. Linjakohtaiset asemaluvut antavat yhteensä 94, koska '
+            + 'vaihtoasema lasketaan kullekin linjalle erikseen. Guinness '
+            + 'kirjasi verkon vuonna 2025 maailman pisimmäksi täysin '
+            + 'automaattiseksi metroksi. Rakentaminen maksoi 22,5 '
+            + 'miljardia dollaria.',
+          selite: 'Metroaseman laituri maan alla. Oikealla kulkee koko '
+            + 'pituudelta lasinen laituriovien seinä, ja sen takana '
+            + 'rataosuus on pimeä — junaa ei ole. Tumma lasi heijastaa '
+            + 'vastapäisen seinän kolmiokuviota, sinistä valojuovaa ja '
+            + 'liukuportailla kulkevia ihmisiä. Vasemmalla nousee kolme '
+            + 'liukuporrasta, ja katosta riippuu opasteita, joissa lukee '
+            + 'arabiaksi ja englanniksi muun muassa To Airport T1-2 ja '
+            + 'Exit. Katto on ripalevyä ja lattia vaaleaa laattaa. '
+            + 'Laituri itse on tyhjä.',
+          lahde: 'Virtual trip, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Kuusi raidetta saman katon alla',
+          tiedosto: 'KAFD Metro Station Riyadh Saudi Arabia 006.jpg',
+          teksti: 'KAFD-asema on al-Aqeeqin kaupunginosassa '
+            + 'rahoituskaupunginosan kupeessa. Suunnittelukilpailun '
+            + 'voitti Zaha Hadid Architects vuonna 2013, rakennustyöt '
+            + 'alkoivat 2014 ja tunnelin louhinta heinäkuussa 2015. Asema '
+            + 'kattaa 8 150 neliömetriä, ja raiteita on kuusi: sen kautta '
+            + 'kulkevat sininen, keltainen ja violetti linja sekä '
+            + 'rahoituskorttelin oma monorail. Julkisivun kuvioinnin '
+            + 'aiheiksi kerrotaan mashrabiya-ristikot ja jäljet, joita '
+            + 'tuuli piirtää hiekkaan. Vuonna 2019 rakennus oli '
+            + 'kaupunkikuvassa vielä paljas teräsrunko, ja asema avattiin '
+            + 'joulukuussa 2024.',
+          selite: 'KAFD-aseman sisäseinä. Valkoisen holvin keskellä on soikea '
+            + 'aukko, joka on täytetty vinoneliöiden verkolla: jokainen '
+            + 'silmä on pehmeästi pyöristetty, ja niiden takana on lasia, '
+            + 'jonka läpi näkyy yön valoja ja aseman rakenteita. Verkon '
+            + 'pinta on vaaleaa betonia, ja sen ympärillä kaartuu '
+            + 'reikälevyä. Oikeassa reunassa alkaa toinen samanlainen '
+            + 'ristikko, ja alhaalla erottuu kaareva kaide ja portaikon '
+            + 'suu.',
+          lahde: 'Kolaiel, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Teräskatos lepää vinon seinän varassa',
+          tiedosto: 'Qasr Al Hokm Metro Station - Riyadh - Saudi Arabia 160.jpg',
+          teksti: 'Qasr al-Hukmin asema on Al-Qirin kaupunginosassa vanhan '
+            + 'ytimen eteläpuolella. Piirustukset teki vuonna 2012 '
+            + 'norjalainen Snøhetta, ja rakennusta kuvataan '
+            + 'ruostumattomasta teräksestä tehdyksi katokseksi, joka '
+            + 'lepää suuren vinon seinän varassa; seinässä on najdilaisen '
+            + 'rakennustavan piirteitä. Pinta-alaksi ilmoitetaan '
+            + 'lähteestä riippuen 19 600 tai 22 500 neliömetriä. Asemalla '
+            + 'on neljä raidetta, ja se on yksi metron neljästä '
+            + 'vaihtoasemasta: siinä kohtaavat sininen ja oranssi linja. '
+            + 'Matkustajille asema avattiin 26. helmikuuta 2025.',
+          selite: 'Qasr al-Hukmin metroasema illalla kadun toiselta puolelta. '
+            + 'Soikea teräskatos kelluu maanpinnan yläpuolella, ja sen '
+            + 'kiiltävä alapinta heijastaa valot pitkinä vaaleina '
+            + 'juovina. Katoksen alla erottuu tumma seinälinja ja sen '
+            + 'edessä matala kivipintainen muuri. Ympärillä on korkeita '
+            + 'valopylväitä ja valvontakamera, edessä punaiseksi maalattu '
+            + 'saattoalue, jolla seisoo maasturi, ja metron tunnuksella '
+            + 'varustettuja työmaa-aitoja. Vasemmalla on vaalea '
+            + 'kivipintainen rakennus, etualalla monikaistainen katu ja '
+            + 'keskikaistan pensaat. Taivas on tummansininen, ja oikeassa '
+            + 'yläkulmassa loistaa kuu.',
+          lahde: 'Kolaiel, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä Riadin metron värilinjoista on lyhin?',
+        vaihtoehdot: [
+          'vihreä',
+          'sininen',
+          'oranssi',
+          'violetti',
+        ],
+        oikea: 0,
+        fakta: 'Vihreä linja on 12,9 kilometriä pitkä. Pisin on oranssi '
+          + '40,7 kilometrillään, ja koko verkkoa on 176 kilometriä.',
+      },
+    },
+  ],
 };
