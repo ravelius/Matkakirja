@@ -16,7 +16,16 @@
  * eikä heti sen jälkeen, mutta väärä mittakaava korjautuu yhä kun
  * kartta jää rauhaan.
  *
- *   node tools/savuke-kartan-sujuvuus.mjs
+ *   node tools/savuke-kartan-sujuvuus.mjs             # Chromium
+ *   WEBKIT=1 node tools/savuke-kartan-sujuvuus.mjs    # WebKit
+ *
+ * KAKSI MOOTTORIA (iPad-kierros 13.8.2026): omistajan laitteet ovat
+ * WebKit-pohjaisia, ja Grönlanti-hyppy sekä pakkaustökkiminen näkyivät
+ * vain siellä. WebKitissä ei ole CDP:tä, joten eleet syötetään
+ * synteettisinä Pointer/Touch-tapahtumina sivun sisällä; lisäksi
+ * headless-WebKitin requestAnimationFrame ei tikitä ilman piirrettävää,
+ * joten kehysväleihin nojaavat väitteet ohitetaan siellä (aikamittaus
+ * ei kertoisi selaimesta vaan ajoympäristöstä).
  *
  * serviceWorkers: 'block' on pakollinen — muuten sw sieppaa pyynnöt ja
  * ajo mittaa välimuistia eikä koodia. Ulkopuoliset osoitteet (kuvat)
@@ -45,8 +54,14 @@ await new Promise((r) => palvelin.listen(8747, r));
 
 const paketti = await import(process.env.PLAYWRIGHT_JS
   ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const WEBKIT = process.env.WEBKIT === '1';
+const selain = WEBKIT
+  ? await (paketti.webkit ?? paketti.default?.webkit).launch({
+    executablePath: process.env.WEBKIT_BIN ?? '/opt/pw-browsers/webkit-2336/pw_run.sh',
+  })
+  : await (paketti.chromium ?? paketti.default?.chromium).launch({
+    executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+  });
 const ctx = await selain.newContext({
   viewport: { width: 390, height: 844 },
   hasTouch: true,
@@ -157,8 +172,36 @@ const suhde = () => sivu.evaluate(() => {
 });
 
 // --- eleet -------------------------------------------------------------
+/*
+ * Chromiumissa eleet syötetään CDP:llä (aidot, luotetut tapahtumat,
+ * joista selain johtaa myös pointer-tapahtumat). WebKitissä CDP:tä ei
+ * ole, joten samat eleet rakennetaan synteettisinä tapahtumina sivun
+ * sisällä: panorointi Pointer-tapahtumina (raahaus kuuntelee niitä) ja
+ * nipistys kosketustapahtumina (nipistys kuuntelee niitä). WebKit-GTK:n
+ * `new Touch()` on "Illegal constructor", joten kosketuslista
+ * kirjoitetaan geneerisen Eventin päälle — käsittelijät lukevat vain
+ * touches[i].clientX/Y:n ja lengthin.
+ */
 /** Yhden sormen pyyhkäisy kartalla. */
 async function panoroi(matka = 200, askelia = 20) {
+  if (WEBKIT) {
+    await sivu.evaluate(async ({ matka: m, askelia: n }) => {
+      const pane = window.matkakirja.ui.svg.parentElement;
+      const x = 195; const y = 500;
+      const laheta = (tyyppi, px, py, lisa = {}) => pane.dispatchEvent(new PointerEvent(tyyppi, {
+        pointerId: 7, pointerType: 'touch', isPrimary: true,
+        clientX: px, clientY: py, bubbles: true, cancelable: true, ...lisa,
+      }));
+      laheta('pointerdown', x, y, { buttons: 1 });
+      for (let i = 1; i <= n; i++) {
+        laheta('pointermove', x - (m * i) / n, y - (m * i) / (n * 4), { buttons: 1 });
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((r) => setTimeout(r, 16));
+      }
+      laheta('pointerup', x - m, y - m / 4);
+    }, { matka, askelia });
+    return;
+  }
   const cdp = await ctx.newCDPSession(sivu);
   const x = 195; const y = 500;
   await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y, id: 1 }] });
@@ -175,6 +218,31 @@ async function panoroi(matka = 200, askelia = 20) {
 
 /** Kahden sormen nipistys annetulla kertoimella. */
 async function nipista(kerroin) {
+  if (WEBKIT) {
+    await sivu.evaluate(async ({ kerroin: k }) => {
+      const pane = window.matkakirja.ui.svg.parentElement;
+      const kx = 195; const ky = 420; const alku = 120; const n = 14;
+      const sormi = (id, x, y) => ({ identifier: id, clientX: x, clientY: y, pageX: x, pageY: y });
+      const parit = (d) => [sormi(1, kx - d / 2, ky), sormi(2, kx + d / 2, ky)];
+      const laheta = (tyyppi, koskee, muuttuneet) => {
+        const e = new Event(tyyppi, { bubbles: true, cancelable: true });
+        Object.defineProperty(e, 'touches', { value: koskee });
+        Object.defineProperty(e, 'targetTouches', { value: koskee });
+        Object.defineProperty(e, 'changedTouches', { value: muuttuneet });
+        pane.dispatchEvent(e);
+      };
+      let p = parit(alku);
+      laheta('touchstart', p, p);
+      for (let i = 1; i <= n; i++) {
+        p = parit(alku * (1 + (k - 1) * (i / n)));
+        laheta('touchmove', p, p);
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((r) => setTimeout(r, 16));
+      }
+      laheta('touchend', [], p);
+    }, { kerroin });
+    return;
+  }
   const cdp = await ctx.newCDPSession(sivu);
   const kx = 195; const ky = 420; const alku = 120; const askelia = 14;
   const pisteet = (d) => [{ x: kx - d / 2, y: ky, id: 1 }, { x: kx + d / 2, y: ky, id: 2 }];
@@ -277,11 +345,17 @@ await panoroi();
 const kehykset = await sivu.evaluate(() => {
   cancelAnimationFrame(window.__valiPyynto);
   const v = window.__valit;
-  return { pisin: Math.round(Math.max(...v)), yli100: v.filter((x) => x > 100).length, kehyksia: v.length };
+  return { pisin: Math.round(Math.max(0, ...v)), yli100: v.filter((x) => x > 100).length, kehyksia: v.length };
 });
 const nipistyksenJalkeen = await mittarit();
-vaadi('nipistyksen jälkeinen panorointi ei jumita ruudunpäivitystä',
-  kehykset.pisin < 600, `pisin kehysväli ${kehykset.pisin} ms, ${kehykset.yli100} yli 100 ms`);
+// Headless-WebKitin rAF ei tikitä luotettavasti ilman piirrettävää,
+// joten kehysväli mittaisi ajoympäristöä eikä selainta (ks. otsikko).
+if (WEBKIT) {
+  console.log(`ohit  nipistyksen jälkeinen panorointi ei jumita ruudunpäivitystä — WebKit headless, kehyksiä ${kehykset.kehyksia}`);
+} else {
+  vaadi('nipistyksen jälkeinen panorointi ei jumita ruudunpäivitystä',
+    kehykset.pisin < 600, `pisin kehysväli ${kehykset.pisin} ms, ${kehykset.yli100} yli 100 ms`);
+}
 vaadi('nipistyksen jälkeisen panoroinnin aikana ei pakoteta rasterointia',
   nipistyksenJalkeen.pakotus === 0, JSON.stringify(nipistyksenJalkeen));
 vaadi('edellisen eleen sarja ei jatka piirtoa seuraavan sormen alla',
