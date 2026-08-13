@@ -2571,6 +2571,32 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kisanin portti', lat: 33.5065, lon: 36.3157 },
     ],
   },
+  luxor: {
+    polku: 'assets/kartat/luxor-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 25.7225, etela: 25.693, lansi: 32.6335, ita: 32.6625,
+    },
+    esittely: 'Luxorin kartta on kapea kaistale Niilin itärantaa, ja '
+      + 'sillä on kaksi päätä. Eteläpäässä on Luxorin temppeli aivan '
+      + 'rannan tuntumassa, pohjoispäässä Karnakin laaja temppelialue '
+      + 'omine muureineen. Väli on runsaat kaksi kilometriä, ja se '
+      + 'kuljettiin ennen suoraan: temppeliltä toiselle vei sfinksien '
+      + 'reunustama kuja.\n\n'
+      + 'Karnakin ulkomuuri erottuu kartalla paksuna suorakaiteena, ja '
+      + 'sen sisällä näkyvät temppelin pihat ja salit. Eteläpuolella on '
+      + 'oma muurinsa ympäröimä Mutin alue, jonka pyhä järvi on '
+      + 'hevosenkengän muotoinen. Nykyinen kaupunki on kasvanut '
+      + 'temppelien väliin ja ympärille.',
+    kohteet: [
+      { nimi: 'Luxorin temppeli', lat: 25.6996, lon: 32.6394 },
+      { nimi: 'Luxorin museo', lat: 25.7077, lon: 32.6445 },
+      { nimi: 'Sfinksikuja', lat: 25.7084, lon: 32.6485 },
+      { nimi: 'Mutin temppeli', lat: 25.7111, lon: 32.656 },
+      { nimi: 'Khonsun temppeli', lat: 25.7168, lon: 32.6559 },
+      { nimi: 'Karnakin suuri pylvässali', lat: 25.7186, lon: 32.6579 },
+    ],
+  },
   halab: {
     polku: 'assets/kartat/halab-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

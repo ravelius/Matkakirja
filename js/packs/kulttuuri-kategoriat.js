@@ -8668,4 +8668,259 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * LUXORIN KANSISIVU (nippu 2, 13.8.2026). EGY-maalehdellä on
+   * historia, ruoka, kuvataide, luonto, tiede, musiikki, rakennukset
+   * ja elaimet, joten kaupungille jää arki.
+   */
+  luxor: [
+    {
+      id: 'kaupunki',
+      nimi: 'Luxor',
+      johdanto: 'Luxorin itärannalle mahtuu runsaan kahden kilometrin matkalle '
+        + 'vuonna 640 perustettu moskeija, tammikuussa 1907 avattu '
+        + 'hotelli ja pyhä järvi, jonka rannalla makaa kahtia katkennut '
+        + 'obeliski.',
+      kansikuvat: [
+        {
+          tiedosto: 'Rivier met wadende buffels aan de rand van Luxor E 71. Het plaatsje Luxor (Arabisch kwartier). Opper-Egypte. (titel op object), RP-F-1997-28-6.jpg',
+          selite: 'Ruskeasävyinen 1800-luvun valokuva pahville liimattuna. '
+            + 'Kuvassa on matala vesiuoma Luxorin laidalla: keskellä '
+            + 'uomaa seisoo vesipuhveli polviaan myöten vedessä, ja '
+            + 'lähemmällä rannalla juo aasi. Rantatörmällä kävelee mies '
+            + 'kantaen astiaa olalla, ja kivimuurin päällä on suuri '
+            + 'saviruukku. Vastarannalla on savitiilitaloja, joiden '
+            + 'yläreunassa on hammastettu kuvio, ja niiden takana tiheä '
+            + 'palmulehto. Vasemmalla kaartuu suuri lehtipuu. Pahville on '
+            + 'painettu teksti E 71. Het plaatsje Luxor (Arabisch '
+            + 'kwartier). Opper-Egypte.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Gezicht op de bouw van een boot langs de Nijl te Luxor Louqsor (titel op object) Egypte (serietitel), RP-F-2001-7-1540-7.jpg',
+          selite: 'Albumin aukeama, jossa on vaaleaharmaa painokuva Luxorin '
+            + 'rannasta. Keskellä on rakenteilla oleva vene: rungon '
+            + 'kaaret törröttävät ylöspäin kuin kylkiluut, ja ympärillä '
+            + 'on puutavaraa ja telineitä. Vasemmalla on kiinnitettynä '
+            + 'kolme purjevenettä, joiden pitkät raakapuut nojaavat '
+            + 'viistosti taivaalle. Takana on valkoisia tasakattoisia '
+            + 'taloja, muuri ja tiheä palmurivi, oikealla kohoaa '
+            + 'minareetti. Etualalla kahlaa kaksi ihmistä matalassa '
+            + 'vedessä. Kuvan yläpuolelle on painettu EGYPTE ja '
+            + 'alapuolelle LOUQSOR sekä kolmen pariisilaisen kustantajan '
+            + 'nimet. Oikeassa reunassa näkyy albumin tumma selkämys.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Luxor New Corniche R02.jpg',
+          selite: 'Luxorin uusi rantapromenadi keskipäivällä. Etualalla on '
+            + 'leikattua nurmikkoa, pieniä pensaita ja sorakaistale, ja '
+            + 'niiden välistä kulkee laatoitettu kävelytie mustine '
+            + 'pollarivalaisimineen. Rannan reunaa seuraa matala '
+            + 'kivimuuri, jonka takana Niili levittäytyy vaaleana ja '
+            + 'tyynenä; kauempana usvassa erottuu risteilylaivan '
+            + 'valkoinen kylki. Vasemmalla on mustia lyhtypylväitä, '
+            + 'joissa on kolme pallovalaisinta, ja pieniä '
+            + 'lehmuksenkokoisia puita. Oikealla kohoaa vaalea kiviportti '
+            + 'kaariaukkoineen, balustradikaiteineen ja lyhtyineen, ja '
+            + 'sen vieressä nousevat leveät portaat. Kaukana kävelee '
+            + 'muutama ihminen ja seisoo puinen pergola.',
+          lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Moskeija seisoo temppelin pylväiden päällä',
+          tiedosto: 'Abu el-Haggag R02.jpg',
+          teksti: 'Luxorin temppelistä se osa, joka on Ramses II:n pihaa, '
+            + 'muutettiin vuonna 395 kirkoksi ja vuonna 640 moskeijaksi. '
+            + 'Nykyinen rakennus on 1200-luvulta ajjubidisulttaani '
+            + 'as-Salih Ayyubin ajalta, ja se seisoo suoraan muinaisten '
+            + 'pylväiden päällä: temppelin päälle oli kertynyt '
+            + 'keskiajalta lähtien asutusta ja sen jätettä niin paljon, '
+            + 'että syntyi 14,5–15 metriä korkea keinotekoinen kukkula. '
+            + 'Gaston Maspero alkoi kaivaa sitä pois vuoden 1884 jälkeen, '
+            + 'mutta moskeijaa ei purettu. Kupolin alla on sheikki Yusuf '
+            + 'Abu al-Haggagin (1150–1245) hauta, ja savitiilisiä '
+            + 'minareetteja on kaksi. Moulid-juhlassa suvun jäsenet '
+            + 'kantavat veneitä temppelin ympäri kolmen päivän ajan.',
+          selite: 'Abu al-Haggagin moskeija Luxorin temppelin kyljessä. '
+            + 'Vasemmalla kohoaa valkoiseksi rapattu minareetti, jonka '
+            + 'parvekkeen alla on värikkäitä kaarikuvioita ja huipulla '
+            + 'kuunsirppi. Keskellä on valkoinen kupoli ja sen edessä '
+            + 'kaarikuisti, ja niiden oikealla puolella nousee vanha '
+            + 'ruskea tiiliminareetti kiinni temppelin viistoon pyloniin, '
+            + 'jonka pinnassa on suorakaiteen muotoisia aukkoja. Aluetta '
+            + 'rajaa matala kivimuuri, jossa on lyhtyjä, ruskeita ovia ja '
+            + 'rautaristikoita; portin takana seisoo moottoripyörä ja '
+            + 'portaat nousevat pyloniin. Muurin vierellä istuu muutama '
+            + 'ihminen, vasemmassa laidassa on vihreä metallirakennelma, '
+            + 'ja oikeassa alakulmassa on punagraniittinen jalusta. Aukio '
+            + 'on laatoitettu, ja molemmissa laidoissa kasvaa palmuja.',
+          lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Hotelli avattiin lauantaina 19. tammikuuta 1907',
+          tiedosto: 'Egypt. Luxor. Winter Palace Hotel; front view from north west LOC matpc.00281.jpg',
+          teksti: 'Niilin rantaan rakennettiin Winter Palace -hotelli, joka '
+            + 'avattiin lauantaina 19. tammikuuta 1907 eväsretkellä, '
+            + 'illallisella ja puheilla. Rakennuttaja oli Benjamin Herbst '
+            + 'yhtiöstä Upper Egypt Hotels Co, jonka kairolaiset '
+            + 'hotellinpitäjät Charles Baehler ja George Nungovich '
+            + 'perustivat 1905 yhdessä matkatoimisto Thomas Cook & Sonin '
+            + 'Egyptin-yhtiön kanssa. Piirustukset teki Leon Stienon, ja '
+            + 'työn toteutti italialainen teräsbetoniin erikoistunut '
+            + 'rakennusliike G. Garozzo & Figli. Huoneita on 86 ja '
+            + 'sviittejä kuusi. Egyptologi Howard Carter kiinnitti '
+            + 'tiedotteitaan talon ilmoitustaululle, ja hänen '
+            + 'rahoittajansa lordi Carnarvon oli vakioasiakas vuodesta '
+            + '1907.',
+          selite: 'Winter Palace -hotelli mustavalkoisessa lasinegatiivissa. '
+            + 'Kolmikerroksisen vaalean rakennuksen keskellä on '
+            + 'koristeellinen päätykilpi, jossa lukee WINTER PALACE, ja '
+            + 'sen päällä on lippusalko. Julkisivussa on rivi ikkunoita '
+            + 'säleluukkuineen ja pieniä kaidereunaisia parvekkeita, ja '
+            + 'pääovelle nousee kaksi kaartuvaa portaikkoa kaiteineen. '
+            + 'Sisäänkäynnin edessä on pylväskatos, jonka väliin on '
+            + 'ripustettu kuviollisia mattoja. Puutarhassa on matalia '
+            + 'koristeellisia rautakaiteita, pensasaitoja, agaaveja ja '
+            + 'palmuja. Nurmikolla istuu tuoleilla ryhmä ihmisiä ja '
+            + 'hieman erillään seisoo mies pitkässä tummassa viitassa ja '
+            + 'valkoisessa päähineessä; toinen mies kävelee portaita '
+            + 'kohti. Oikealla on katulyhty ja negatiivin oikeaan reunaan '
+            + 'on kirjoitettu käsin tekstiä ja numero.',
+          lahde: 'Matson Collection, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Järvi, jossa papit peseytyivät',
+          tiedosto: 'Karnak Heiliger See 02.JPG',
+          teksti: 'Karnakin temppelialueella on kivireunainen allas, pyhä '
+            + 'järvi, jossa papit peseytyivät ennen temppelimenoja. '
+            + 'Nykyään sen laidalla on katsomo, josta seurataan alueen '
+            + 'ääni- ja valonäytöstä. Rannalla makaa katkennut obeliski. '
+            + 'Hatshepsut pystytti temppelin sisäänkäynnille kaksi '
+            + 'obeliskia, jotka olivat valmistuessaan maailman '
+            + 'korkeimmat, ja myöhemmät kuninkaat muurasivat pystyyn '
+            + 'jääneen ympärille seinät, niin ettei sitä näy maan '
+            + 'tasalta. Se on 29,56 metriä ja maailman toiseksi korkein '
+            + 'yhä pystyssä oleva muinainen obeliski; pari makaa järven '
+            + 'rannalla kahtena kappaleena. Lähellä on myös Thutmosis I:n '
+            + 'obeliski, 21,20 metriä ja lähes 150 tonnia.',
+          selite: 'Karnakin pyhä järvi keskipäivän valossa. Altaan reuna on '
+            + 'muurattu tasaisista vaaleista kivilohkareista, ja tyyni '
+            + 'vedenpinta heijastaa koko takana olevan rakennusrivin. '
+            + 'Keskellä kohoaa viisto pylonin seinä, jossa on kaksi riviä '
+            + 'suorakaiteen muotoisia aukkoja, ja sen edessä on '
+            + 'matalampia muureja, irrallisia kivilohkareita ja tumma '
+            + 'oviaukko. Rannalla kasvaa yksi korkea palmu ja yksi '
+            + 'matala, jonka runko on kääritty ruskeaan suojukseen. '
+            + 'Rannan yläpuolisella tasanteella on rivi vaaleita '
+            + 'suorakaiteen muotoisia levyjä ja pieni koju, jonka seinä '
+            + 'on verhoiltu palmunrungoilla. Taivas on pilvetön ja hieman '
+            + 'utuinen.',
+          lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki ja kulkeminen',
+      johdanto: 'Luxorissa kuljetaan joen yli lautalla tai moottoriveneellä, '
+        + 'kaduilla nelipyöräisillä hevosvaunuilla ja peltojen poikki '
+        + 'kapearaiteisella radalla, jonka kiskoväli on 610 millimetriä.',
+      nostot: [
+        {
+          otsikko: 'Lautta maksaa vähän, vene enemmän',
+          tiedosto: 'The Baladi Ferry to the West Bank ... (36518913795).jpg',
+          teksti: 'Osa Luxorin joukkoliikenteestä kulkee vettä pitkin. Suuret '
+            + 'lautat vievät maakunnan asukkaita ja matkailijoita '
+            + 'rannalta toiselle nimellistä maksua vastaan. Niiden '
+            + 'rinnalla molempien rantojen edustalla päivystää koko '
+            + 'päivän moottoriveneitä, joilla ylitys käy nopeammin mutta '
+            + 'maksaa enemmän. Jokiliikenteeseen kuuluvat lisäksi '
+            + 'laivaväylä, Niilin laiturit ja sulut sekä Luxorin ja '
+            + 'Assuanin väliä kulkevat matkustaja-alukset ja '
+            + 'tavaraproomut. Maitse rannalta toiselle pääsee vuonna 1998 '
+            + 'avattua siltaa pitkin, joka rakennettiin muutama kilometri '
+            + 'kaupungin yläpuolelle. Itärannalla on lisäksi useita '
+            + 'bussilinjoja, joita käyttävät lähinnä paikalliset.',
+          selite: 'Lautta ylittää Niiliä hämärässä. Matalalla puurunkoisella '
+            + 'aluksella on keltainen katos ja avoimet kyljet, ja '
+            + 'kannella seisoo tiiviissä rivissä kymmeniä matkustajia. '
+            + 'Kylkeä kiertää rivi renkaita lepuuttajina, ja kannen '
+            + 'keskellä on lyhyt masto. Vesi on tyyni ja heijastaa '
+            + 'aluksen valot pitkinä juovina. Takana häämöttävät sumun '
+            + 'läpi rannan puurivi ja matala vuorijono, ja taivas on '
+            + 'sinisenharmaa.',
+          lahde: 'Bernard DUPONT from FRANCE, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Vaunun malli on nimetty kuningattaren mukaan',
+          tiedosto: 'Egypt (Luxor) Caleches, horse carriages, waiting for travellers (25709030843).jpg',
+          teksti: 'Luxorissa ajetaan hevosvaunuilla, joita sanotaan arabiaksi '
+            + 'hantouriksi. Malli on englantilainen victoria: '
+            + 'nelipyöräinen avovaunu, jossa on edessä korotettu ajajan '
+            + 'istuin ja sen takana kahden matkustajan penkki taitettavan '
+            + 'kuomun alla. Vaunu kehitettiin Ranskassa, tuotiin '
+            + 'Englantiin vuonna 1869 ja nimettiin kuningatar Victorian '
+            + 'mukaan, minkä jälkeen siitä tuli muotiajoneuvo '
+            + 'puistoajeluille. Kyytiin noustaan matalalta askelmalta, ja '
+            + 'pyörien päällä on leveät kaarevat lokasuojat, jotka '
+            + 'suojaavat matkustajia mudalta ja roiskeilta. Egyptissä ja '
+            + 'Levantissa hantour on vuokra-ajoneuvo.',
+          selite: 'Kaksi hevosvaunua odottaa ruokokattoisen katoksen alla '
+            + 'Luxorissa. Etummaisessa vaunussa on siniset ja violetit '
+            + 'puiset pinnapyörät, mustaksi maalattu runko, kuvioitu '
+            + 'istuinverhoilu ja taakse taitettu kuomu. Eteen on '
+            + 'valjastettu kaksi valkoista hevosta, joista toisen kuono '
+            + 'on peitetty vaalealla säkillä. Katos on rakennettu '
+            + 'mustista metallitolpista ja paksusta ruokokerroksesta. '
+            + 'Etualalla on laaja vesilammikko, joka heijastaa pyörät ja '
+            + 'hevoset. Taustalla näkyy keltaisia ja ruskeita '
+            + 'kerrostaloja, katulyhty kolmine lamppuineen, palmuja ja '
+            + 'kyltti, jossa lukee EGYPTIA.',
+          lahde: 'Güldem Üstün from Istanbul, TURKEY, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kaksi rataverkkoa, sama raideleveys',
+          tiedosto: 'Luxor Narrow-Gauge Railway R01.jpg',
+          teksti: 'Luxorin ympärillä on kaksi erillistä kapearaiteista '
+            + 'rataverkkoa. Suurempi on länsirannalla Kurnassa ja '
+            + 'pienempi itärannalla kaupungin eteläisillä laitamilla, ja '
+            + 'molemmissa raideleveys on kaksi jalkaa eli 610 '
+            + 'millimetriä. Valtion pääradan kiskoväli on 1 435 '
+            + 'millimetriä. Radat on rakennettu yhtä kuormaa varten: '
+            + 'niillä ajetaan sokeriruokoa pelloilta tehtaille. Moni '
+            + 'luxorilainen työskentelee maataloudessa, ja seudun tärkein '
+            + 'viljelykasvi on juuri se. Valtion rata saapui Luxoriin '
+            + 'vuonna 1898, kun linjaa oli jatkettu Qenasta etelään.',
+          selite: 'Kapearaiteinen rata ylittää hiekkaisen kadun Luxorin '
+            + 'länsirannalla. Kiskot kulkevat kuvan halki oikealta '
+            + 'vasemmalle ja jatkuvat kapean betonisillan yli ojan '
+            + 'poikki. Sillan takana kasvaa vihreää ruokoa ja pensaikkoa, '
+            + 'ja edessä on matala punatiilinen muuri. Oikealla seisoo '
+            + 'keltamusta kolmipyöräinen tuk-tuk metallikaiteen vieressä, '
+            + 'ja kauempana lähestyy mies moottoripyörällä. Taustalla on '
+            + 'savitiilitaloja, joiden katoille on kasattu kuivunutta '
+            + 'kasvimassaa, sekä keskeneräinen tiilikerrostalo '
+            + 'betonipilareineen ja rivi sähkölankoja. Etualan hiekassa '
+            + 'makaa muutama pitkä kuivunut lehti.',
+          lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Luxorin kapearaiteisilla radoilla kuljetetaan?',
+        vaihtoehdot: [
+          'sokeriruokoa',
+          'kalkkikiveä',
+          'taateleita',
+          'puuvillaa',
+        ],
+        oikea: 0,
+        fakta: 'Radat vievät sadon pelloilta tehtaille, ja niiden '
+          + 'raideleveys on kaksi jalkaa eli 610 millimetriä — valtion '
+          + 'päärata on yli kaksi kertaa leveämpi.',
+      },
+    },
+  ],
 };

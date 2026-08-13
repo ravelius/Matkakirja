@@ -149,4 +149,13 @@ export const SAATIEDOT = {
     keskilampo: [5.9, 7.3, 11, 15.8, 20.9, 24.8, 27.1, 27, 24.4, 19.6, 12.4, 7.7],
     sade: [40, 35, 25, 11, 7, 0, 0, 0, 1, 7, 23, 31],
   },
+  // Luxor on koko pelin kuivin kaupunki: ERA5:n normaaleissa sadetta
+  // tulee tammikuussa ja joulukuussa yksi millimetri, ja kymmenenä
+  // kuukautena kahdestatoista ei lainkaan. Kesä on Bagdadin luokkaa.
+  luxor: {
+    lat: 25.699,
+    lon: 32.639,
+    keskilampo: [14.4, 16.6, 20.8, 26, 30.6, 32.8, 33.5, 33.4, 31.1, 27.2, 20.9, 15.9],
+    sade: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+  },
 };
