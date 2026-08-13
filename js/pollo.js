@@ -601,28 +601,12 @@ class Pollo {
     const syote = polloElementti('div', 'pollo-syote');
 
     /*
-     * KEHITTÄJÄKOODI. Näkyy vain pelin kehittäjätilassa (sama
-     * localStorage-lippu kuin muullakin kehittäjätilalla). Koodi jää
-     * laitteelle ja lähtee otsakkeessa välityspalvelimelle, joka
-     * ohittaa sillä käyttörajat. Koodia ei ole repossa eikä pelin
-     * koodissa — tämä on pelkkä kenttä sen syöttämiseen.
+     * Erillistä kehittäjäkoodikenttää ei enää ole (omistajan päätös
+     * 13.8.2026): kehittäjätilan avauskoodi talletetaan kytkennän
+     * yhteydessä (js/main.js) ja lähtee otsakkeessa automaattisesti.
+     * Rajattu koodi 1122 avaa kehittäjätilan ilman pöllön rajojen
+     * ohitusta, eikä se koskaan päädy otsakkeeseen.
      */
-    const koodiRivi = polloElementti('div', 'pollo-kehittaja');
-    koodiRivi.hidden = true;
-    const koodi = polloElementti('input', 'pollo-kehittaja-kentta');
-    koodi.type = 'password';
-    koodi.autocomplete = 'off';
-    koodi.placeholder = 'kehittäjäkoodi';
-    koodi.setAttribute('aria-label', 'Pöllön kehittäjäkoodi');
-    koodi.maxLength = 100;
-    koodi.value = polloAsetus(POLLO_KEHITTAJAKOODI_AVAIN);
-    koodi.addEventListener('input', () => {
-      polloTallenna(POLLO_KEHITTAJAKOODI_AVAIN, koodi.value.trim());
-    });
-    koodiRivi.appendChild(koodi);
-    this.kehittajaRivi = koodiRivi;
-    this.kehittajaKentta = koodi;
-    syote.appendChild(koodiRivi);
 
     /*
      * Tilarivi kertoo vain sen mitä juuri nyt tapahtuu: "Kuuntelen…",
@@ -909,7 +893,6 @@ class Pollo {
     if (!this.virta.querySelector('.pollo-viesti')) this.lisaaViesti('pollo', TERVEHDYS);
     // Kehittäjätila voi vaihtua kesken pelin, joten kenttä katsotaan
     // joka avauksella eikä kerran käynnistyksessä.
-    this.kehittajaRivi.hidden = !polloKehittajaTila();
     this.naytaSyote();
     // Indeksi rakennetaan laiskasti ensimmäisellä avauksella, ei pelin
     // käynnistyksessä. Ehdotushaku odottaa sen valmistumista.

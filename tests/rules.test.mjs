@@ -3613,9 +3613,12 @@ test('kehittäjätila on salasanan takana ja pois päältä oletuksena', () => {
   const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
   // Salasana on kevyt lukko: se estää vahingossa avaamisen. Jos tarkistus
   // katoaa, tila aukeaa yhdellä napautuksella kenen tahansa käsissä.
-  assert.match(main, /KEHITTAJA_SALASANA = '5545'/, 'salasana puuttuu');
-  assert.match(main, /kehittajaSalasana\.value\.trim\(\) !== KEHITTAJA_SALASANA/,
-    'salasanaa ei tarkisteta');
+  // Koodit ovat lähdekoodissa vain tiivisteinä (13.8.2026): plaintext
+  // ei saa palata koodiin, ja kumpikin tiiviste tarkistetaan.
+  assert.doesNotMatch(main, /'5545'|'1122'/, 'koodi on selkokielisenä koodissa');
+  assert.match(main, /KEHITTAJA_TIIVISTE = '2f7f15d0/, 'pääkoodin tiiviste puuttuu');
+  assert.match(main, /KEHITTAJA_TIIVISTE_RAJATTU = 'b3282a2f/, 'rajatun koodin tiiviste puuttuu');
+  assert.match(main, /tiiviste !== KEHITTAJA_TIIVISTE_RAJATTU/, 'tiivistettä ei tarkisteta');
   // Oletus on pois päältä: tila kytkeytyy vain, kun se on nimenomaan
   // tallennettu — puuttuva arvo ei saa tarkoittaa päällä.
   assert.match(ui, /localStorage\.getItem\(KEHITTAJA_AVAIN\) === '1'/,
