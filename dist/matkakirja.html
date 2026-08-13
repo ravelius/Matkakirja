@@ -3953,9 +3953,17 @@ body.radio-tila .actions {
  * tyylinvaihtoa (ensin vahvaksi, sitten takaisin), eikä sitä voi tehdä
  * pakottamatta asettelun lukua kesken animaation.
  */
+/*
+ * Loppuvälähdys jatkaa siitä, mihin piirron aikainen paisuminen jäi
+ * (js/ui.js: piirto nostaa viivan lineaarisesti ~70 prosenttiin,
+ * leveys 5.4 ja väri rgba(182,61,42,0.8)) — 0 % on täsmälleen nämä
+ * arvot, ettei vaiheiden saumaa näy. Nopea huippu 70→100, pieni pito
+ * ja pehmeä häivytys lepoon (omistajan tarkennus 13.8.2026 ilta).
+ */
 @keyframes maa-aariviivan-valahdys {
-  0% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
-  14% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
+  0% { stroke: rgba(182, 61, 42, 0.8); stroke-width: 5.4; }
+  12% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
+  26% { stroke: rgba(196, 62, 40, 0.95); stroke-width: 6.4; }
   100% { stroke: rgba(150, 60, 45, 0.45); stroke-width: 3; }
 }
 
@@ -144499,17 +144507,28 @@ function vapautaSoitin(audio) {
   audio.aaniMittari = null;
 }
 
+/*
+ * VOLUME-POLUN KORVAUSKERROIN (omistajan havainto 13.8.2026 ilta:
+ * "iPadilla taustaääni kuuluu paljon hiljempaa kuin iPhonella
+ * etusivulla"). Reititetty polku kulkee kompressorin läpi, joka
+ * nostaa äänitteen hiljaisia kohtia; suora volume-polku (mm.
+ * hiljaisuusvahdin varareitti, jolle iPad tyypillisesti päätyy) soi
+ * ilman sitä ja kuulostaa samalla tavoitetasolla selvästi
+ * hiljaisemmalta. Kerroin kuroo eron umpeen — kuulokokeen nuppi.
+ */
+const VOLUME_POLUN_KORVAUS = 1.8;
+
 /** Soittimen nykyinen taso riippumatta siitä, kumpi reitti on käytössä. */
 const lueTaso = (audio) => (audio.aaniVahvistin
   ? audio.aaniVahvistin.gain.value
-  : audio.volume);
+  : audio.volume / VOLUME_POLUN_KORVAUS);
 
 /** Asettaa tason oikeaan paikkaan. Vahvistin sallii yli ykkösen. */
 function asetaTaso(audio, arvo) {
   if (audio.aaniVahvistin) {
     audio.aaniVahvistin.gain.value = Math.max(0, arvo);
   } else {
-    audio.volume = Math.min(1, Math.max(0, arvo));
+    audio.volume = Math.min(1, Math.max(0, arvo * VOLUME_POLUN_KORVAUS));
   }
 }
 
@@ -161521,6 +161540,20 @@ class UI {
         [{ strokeDashoffset: `${pituus}` }, { strokeDashoffset: '0' }],
         { duration: AARIVIIVAN_PIIRTO_MS, easing: 'ease-in-out', fill: 'forwards' },
       ));
+      /*
+       * Viiva paisuu ja voimistuu TASAISESTI jo piirtyessään noin 70
+       * prosenttiin huipusta (omistajan tarkennus 13.8.2026 ilta:
+       * "tasaisesti levittää ja voimistaa viivaa jo matkalla") —
+       * loppuvälähdys jatkaa tästä 70→100 (css: maa-aariviivan-
+       * valahdys alkaa täsmälleen näistä arvoista, ettei sauma näy).
+       */
+      liikkeet.push(polku.animate(
+        [
+          { strokeWidth: '3', stroke: 'rgba(150, 60, 45, 0.45)' },
+          { strokeWidth: '5.4', stroke: 'rgba(182, 61, 42, 0.8)' },
+        ],
+        { duration: AARIVIIVAN_PIIRTO_MS, easing: 'linear', fill: 'forwards' },
+      ));
     }
     if (!liikkeet.length) {
       kerros.classList.remove('maa-piirtyy');
@@ -171210,6 +171243,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 629, teksti: 'Ääriviiva paisuu piirtyessään; iPadin tausta kuuluviin' },
   { v: 628, teksti: 'Rajan välähdys hitaammin, nopan tärähdys pysähtyessä' },
   { v: 627, teksti: 'Pöllön mikki heti käyttöön; lähderivi kertoo oman tekstin' },
   { v: 626, teksti: 'Avauslennon luenta aiemmin ja kuulutus kuuluviin' },
@@ -171933,7 +171967,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.628';
+const APP_VERSION = '2026-08-09.629';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
