@@ -8454,4 +8454,218 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * DAMASKOKSEN KANSISIVU (nippu 2, 13.8.2026). SYR-maalehdellä on
+   * historia, kasityo ja ruoka, joten kaupunki ottaa oman aiheensa.
+   */
+  damaskos: [
+    {
+      id: 'kaupunki',
+      nimi: 'Damaskos',
+      johdanto: 'Damaskoksen keskustassa seisovat rinnakkain 1550-luvun '
+        + 'rakennusryhmä joen rannalla, vuonna 1749 valmistunut '
+        + 'kuvernöörin palatsi ja vuonna 1913 tilattu rautatieasema.',
+      kansikuvat: [
+        {
+          tiedosto: 'Panorama de Damas - Bonfils. LCCN2004670447.jpg',
+          selite: 'Damaskoksen kattomeri 1800-luvun valokuvassa. '
+            + 'Tasakattoisia matalia taloja on satoja peräkkäin, keskellä '
+            + 'kohoaa suuren moskeijan kupoli ja kolme minareettia, ja '
+            + 'takana nousee karu vuorijono. Etualalla on muurin päällä '
+            + 'kattoterassi, sen kaide ja pieni katettu kioski. Kuvan '
+            + 'alareunaan on kirjoitettu 793 – Panorama de Damas ja nimi '
+            + 'Bonfils.',
+          lahde: 'Maison Bonfils (Beirut, Lebanon), photographer, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'View of Mount Qasioun from Damascus Orchards.jpg',
+          selite: 'Damaskoksen hedelmätarhoja ja niiden takana Qasioun-vuori. '
+            + 'Etualalla on valkoisenaan kukkiva kenttä ja vanhoja '
+            + 'oliivipuita, joista kaksi on kuivunut pelkiksi rungoiksi. '
+            + 'Vuoren rinnettä peittää tiiviisti rakennettu kaupunginosa, '
+            + 'harjanteella seisoo mastoja, ja taivaalla on pilviä. Kuvan '
+            + 'värit on säädetty voimakkaiksi.',
+          lahde: 'Mohamad Emad Basha, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Interieur van een woonhuis (SyrieIntérieur de Maison - Damas) Architecture antique Égypte, Grèce, Asie Mineure album de photographies (serietitel), BI-F-B-SCHOLEN-0098-28.jpg',
+          selite: 'Damaskoslaisen talon piha 1800-luvun valokuvassa. Korkea '
+            + 'suippokaari on muurattu vuorotellen vaaleasta ja tummasta '
+            + 'kivestä, ja sen sisäseinä on täynnä kaiverrettua ja '
+            + 'upotettua koristelua. Pihan poikki kulkee kapea vesiallas, '
+            + 'jonka suihku sumuaa. Oikealla on kaksikerroksinen '
+            + 'kaarikäytävä, vasemmalla tiilikattoinen katos, ja '
+            + 'pylväiden ympärille on kierretty köynnöksiä. Alareunassa '
+            + 'lukee SYRIE, Intérieur de Maison (Damas) ja Bonfils Phot.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Parturi kirjasi, mistä marmori tuli',
+          tiedosto: 'Azm Palace - Damascus.jpg',
+          teksti: 'Damaskoksen kuvernööri As\'ad Pasha al-Azm rakennutti '
+            + 'itselleen asuintalon Buzurijjan maustekujan '
+            + 'pohjoispuolelle vuonna 1749. Työmiehiä oli 800 ja työ '
+            + 'kesti kolme vuotta. Pinta-alaa on 6 400 neliömetriä, ja '
+            + 'rakennukset jakautuvat kolmeen osaan: perheen puoli, '
+            + 'vieraiden puoli ja palvelusväen puoli. Perheen puolella on '
+            + 'oma kylpylä, pienoiskoossa sama tilasarja kuin kaupungin '
+            + 'julkisissa kylpylöissä. Damaskoslainen parturi Ahmad '
+            + 'al-Budairi kirjasi päiväkirjaansa, että kun kuvernööri '
+            + 'kuuli harvinaisesta marmorista tai posliinista, hän '
+            + 'lähetti hakemaan sen omistajan luvalla tai ilman. Talossa '
+            + 'on nykyään kansanperinteen museo.',
+          selite: 'Azm-palatsin julkisivu pihan puolelta. Kivi on ladottu '
+            + 'vuorotellen vaaleana ja mustana kerroksena, ja '
+            + 'ikkunarivien väliin on upotettu erivärisistä kivistä '
+            + 'geometrisia paneeleja. Ikkunoissa on mustat rautaristikot, '
+            + 'ovea kehystää kaiverrettu kaari, ja oviaukkoon nousee '
+            + 'leveät portaat. Etualalla on matala kivijalusta ja sen '
+            + 'edessä pyöreän altaan reuna, jonka keskellä on pieni '
+            + 'maljasuihkulähde.',
+          lahde: 'Bassel Khabbaz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Keittiö, majatalo ja moskeija samalla pihalla',
+          tiedosto: 'دمشق التكية السليمانية.jpg',
+          teksti: 'Sulttaani Suleiman I:n käskystä joen rannalle rakennettiin '
+            + 'vuosina 1554–1559 rakennusryhmä, jonka piirustukset laati '
+            + 'hoviarkkitehti Mimar Sinan. Se toi ottomaanien '
+            + 'rakennustyylin Damaskokseen: moskeijan päällä on '
+            + 'ottomaanikupolit ja sen kulmilla kaksi ohutta minareettia, '
+            + 'mutta seinien vaalean ja tumman kiven vuorottelu on '
+            + 'paikallista työtä. Pihan lounaislaidalla on moskeija ja '
+            + 'vastapäätä keittiörakennus eli imaret, jonka kummallakin '
+            + 'sivulla on majoitussiipi. Itäpuolelle nousi vuosina '
+            + '1566–1567 medrese. Ryhmästä tuli Mekkaan matkaavien '
+            + 'pyhiinvaeltajien kokoontumispaikka: karavaani varustettiin '
+            + 'täällä ennen lähtöä etelään.',
+          selite: 'Tekkiye Süleymaniyen majoitussiipi. Kaarikäytävän päällä '
+            + 'on rivi matalia kivikupoleja, ja kaarien kiilakivet ovat '
+            + 'vuorotellen vaaleita ja tummia. Takana kohoaa kaksi ohutta '
+            + 'minareettia, joiden kärjet ovat tummaa lyijyä. Kaarien '
+            + 'editse kiipeää muratti, ja niiden väliin on ripustettu '
+            + 'naru pieniä lamppuja.',
+          lahde: 'Khaled ajlani, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Aseman piirsi espanjalainen arkkitehti',
+          tiedosto: 'Damascus Hejaz railway station 7614.jpg',
+          teksti: 'Hijaz-asema on Damaskoksen keskustassa Marjehin aukion '
+            + 'kupeessa. Se otettiin käyttöön vuonna 1907, kun radan '
+            + 'ensimmäinen eteläinen osuus avattiin, ja vuodesta 1909 '
+            + 'junat kulkivat säännöllisesti Medinaan asti. '
+            + 'Matkustajarakennus tilattiin vasta myöhemmin, vuonna 1913, '
+            + 'ja sen suunnitteli espanjalainen arkkitehti Fernando de '
+            + 'Aranda, joka piirsi Damaskokseen useita muitakin sen ajan '
+            + 'rakennuksia. Julkisivu on symmetrinen ja kiveä, '
+            + 'ikkunakaaret suippoja, ja sisällä on koristeltu katto. '
+            + 'Rakennuksen edessä on näytteillä sveitsiläisvalmisteinen '
+            + 'höyryveturi.',
+          selite: 'Hijaz-aseman matkustajarakennus kadun toiselta puolelta. '
+            + 'Julkisivu on kaksikerroksinen ja symmetrinen, keskellä on '
+            + 'kello ja sen alla rivi suippokaari-ikkunoita, ja katolla '
+            + 'liehuu lippu salossa. Oven edessä on portaat ja kaksi '
+            + 'palmua, oikealla seisoo tummanvihreä höyryveturi, ja '
+            + 'tyhjän asfalttiaukion poikki kävelee kaksi miestä.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki ja tavat',
+      johdanto: 'Damaskoslainen talo kääntää selkänsä kadulle: ovi vie '
+        + 'umpipihalle, jossa on allas ja hedelmäpuita. Saman korttelin '
+        + 'kujilla ovat kylpylä, joka on lämmennyt samassa paikassa yli '
+        + '800 vuotta, ja kauppa, josta haetaan kuivattua ruokaa.',
+      nostot: [
+        {
+          otsikko: 'Talo ei näytä kadulle mitään',
+          tiedosto: 'Damascus Beit Khalid al-Azem 1336.jpg',
+          teksti: 'Vanhankaupungin asuintalon ulkoseinässä on muutama ikkuna '
+            + 'eikä juuri koristeita. Kaikki on käännetty sisäänpäin: '
+            + 'keskellä on avoin piha, hosh, ja sen ympärillä huoneet. '
+            + 'Pihalla on suihkulähde, hedelmäpuita ja varjoisa '
+            + 'istumapaikka, ja huoneet on jaettu niin, että vieraita '
+            + 'otetaan vastaan eri puolella kuin missä perhe asuu. '
+            + 'Alaseinät ovat vuorotellen vaaleaa kalkkikiveä ja tummaa '
+            + 'basalttia. Paksu kivi pitää sisällä viileän, ja piha panee '
+            + 'ilman kiertämään. Ikkunoiden edessä on puiset ristikot, '
+            + 'mashrabiyat, jotka päästävät ilman läpi mutta pitävät '
+            + 'katseet ulkona.',
+          selite: 'Damaskoslaisen talon umpipiha. Alaseinät ovat vuorotellen '
+            + 'vaaleaa ja mustaa kiveä, niiden yläpuolella kiertää kapea '
+            + 'koristevyö, ja ylempi kerros on valkoiseksi rapattu ja '
+            + 'ikkunat puuta. Pihalla kasvaa kaksi nuorta '
+            + 'sitrushedelmäpuuta ja ruukuissa yrttejä, kiveys on '
+            + 'shakkiruudukkoa, ja vasemmalla näkyy pyöreän vesialtaan '
+            + 'reuna. Seinää pitkin laskeutuu peltinen syöksytorvi.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Neljä huonetta samassa järjestyksessä',
+          tiedosto: 'Damascus Hammam Nur al-Din 5369.jpg',
+          teksti: 'Kylpylöitä on Damaskoksessa laskettu monta kertaa. Ibn '
+            + 'Asakir luetteli 1100-luvulla 77 toimivaa hammamia, Ibn '
+            + 'Shaddad 114 vuonna 1250, ja ottomaanien aikaan niitä oli '
+            + '365. Parhaiten säilynyt on Nur al-Din al-Shahidin kylpylä '
+            + 'Buzurijjan kujalla, joka on ollut käytössä noin vuodesta '
+            + '1160. Kylpijä kulkee huoneesta toiseen aina samassa '
+            + 'järjestyksessä: ensin sali, jossa riisuudutaan, sitten '
+            + 'viileä huone, lämmin huone ja kuuma huone. Lämpö tulee '
+            + 'uunista seinän takaa, ja kuuma ilma kiertää lattian alla. '
+            + 'Polttoaineena on käytetty puusepiltä saatuja lastuja ja '
+            + 'öljypuristamoiden oliivinkiviä.',
+          selite: 'Nur al-Dinin kylpylän etusali, jossa riisuudutaan ja '
+            + 'levätään. Korkeaa kupolia kannattavat kaaret on muurattu '
+            + 'vuorotellen mustasta ja vaaleasta kivestä, holvien '
+            + 'pinnassa on maalattuja kukkakiehkuroita ja seinissä '
+            + 'värilasi-ikkunoita. Katosta riippuu ketjuissa lyhtyjä ja '
+            + 'tupsullisia lamppuja. Alhaalla istuu ja seisoo miehiä '
+            + 'pyyhkeet vyötäröllä, pyyhkeitä kuivuu narulla ja penkillä '
+            + 'on pino puhtaita liinoja.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Hedelmä keitetään levyksi ja kuivataan auringossa',
+          tiedosto: 'Syrian apricot paste 01.jpg',
+          teksti: 'Qamar al-din tarkoittaa uskon kuuta, ja se on aprikoosista '
+            + 'tehty kuivattu levy. Aprikoosit ja sokeri keitetään, massa '
+            + 'siivilöidään oliiviöljyyn kastetun puusiivilän läpi ja '
+            + 'levitetään kuivumaan suoraan aurinkoon. Levy on paksumpi '
+            + 'ja maultaan voimakkaampi kuin tavallinen hedelmälevy. '
+            + 'Juomaksi se muuttuu, kun sekaan sekoitetaan ruusuvettä tai '
+            + 'appelsiininkukkavettä ja jäitä; levyä syödään myös '
+            + 'sellaisenaan, usein saksanpähkinän ympärille käärittynä. '
+            + 'Lajike, josta levy tehdään, kasvoi ensimmäisenä '
+            + 'Damaskoksen ympäristön viljelyksillä. Reseptin kirjasi '
+            + 'lääkäri Dawud al-Antaki vuonna 1599.',
+          selite: 'Kuivattua aprikoosipastaa myyntipakkauksissa. Keltaisissa '
+            + 'laatikoissa on vihreä etiketti, jossa on kuva neljästä '
+            + 'aprikoosista ja teksti Dried Apricot Paste, Made in Syria '
+            + 'ja paino 500 g; valmistajaksi on merkitty damaskoslainen '
+            + 'yritys. Laatikoiden päällä on vaaleanpunaiset hintalaput, '
+            + 'joissa lukee 4.00, ja vasemmalla on pusseissa kuivattuja '
+            + 'rusinoita.',
+          lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Damaskoksen kylpylöiden uuneissa on poltettu puun '
+          + 'ohella?',
+        vaihtoehdot: [
+          'Oliivinkiviä',
+          'Taatelinkiviä',
+          'Kuivaa ruohoa',
+          'Ruokohiiltä',
+        ],
+        oikea: 0,
+        fakta: 'Kylpylän uuni pidettiin käynnissä koko aukioloajan, ja '
+          + 'polttoaine tuli muiden ammattien jätteestä: puusepän '
+          + 'lastuista ja öljypuristamon kivistä.',
+      },
+    },
+  ],
 };
