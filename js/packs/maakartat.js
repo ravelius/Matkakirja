@@ -2571,6 +2571,30 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kisanin portti', lat: 33.5065, lon: 36.3157 },
     ],
   },
+  tabriz: {
+    polku: 'assets/kartat/tabriz-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 38.085, etela: 38.07, lansi: 46.286, ita: 46.304,
+    },
+    esittely: 'Tabrizin keskusta on kartalla ruutu, jonka poikki kulkee '
+      + 'kaksi leveää väylää ja jonka koillisnurkassa mutkittelee joen '
+      + 'uoma tienpenkereiden välissä. Pohjoisosassa kujaverkko tihenee '
+      + 'ja rakennusten ääriviivoja on tiheässä: siellä on basaari, joka '
+      + 'ei ole yksi halli vaan katettujen kujien ja pihojen verkosto.\n\n'
+      + 'Muualla kadut ovat pitkiä ja suoria ja liikenneympyrät '
+      + 'erottuvat selvästi. Kohteet jakautuvat kahteen ryhmään: '
+      + 'basaari ja perustuslakitalo ylhäällä, ja alempana Arg, '
+      + 'Saat-torni, museo ja Sininen moskeija samalla itä-länsi-linjalla.',
+    kohteet: [
+      { nimi: 'Tabrizin basaari', lat: 38.0808, lon: 46.2922 },
+      { nimi: 'Perustuslakitalo', lat: 38.0829, lon: 46.2899 },
+      { nimi: 'Arg', lat: 38.0724, lon: 46.2886 },
+      { nimi: 'Saat-torni', lat: 38.0736, lon: 46.2954 },
+      { nimi: 'Azerbaidžanin museo', lat: 38.0735, lon: 46.299 },
+      { nimi: 'Sininen moskeija', lat: 38.0736, lon: 46.3011 },
+    ],
+  },
   riad: {
     polku: 'assets/kartat/riad-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
