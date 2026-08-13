@@ -324,8 +324,15 @@ const PITKA_VASTAUS = 'Ensimmäinen rivi alkaa tästä. '
  * ajo voi mitata monta eri sääntöä. Sanat eivät ole pelin sanastoa vaan
  * savukkeen omia kahvoja.
  */
+/*
+ * Kuusi merkintää, koska asiakkaan katto nousi kolmesta kahteentoista
+ * (omistaja 13.8.2026: "kaikki paikat ja erisnimet, kuten Beethoven,
+ * olisi kiva saada jatkokysymyspainikkeeksi tekstiin"). Vanhalla
+ * katolla puolet näistä olisi purkautunut tavalliseksi tekstiksi.
+ */
 const KASITEVASTAUS = 'Lontoon [[höyryveturit]] vetivät junia, ja '
-  + '[[Thames]] kuljetti hiilen satamiin.';
+  + '[[Thames]] kuljetti hiilen satamiin. [[Paddington]], [[Euston]], '
+  + '[[Waterloo]] ja [[Beethoven]] mainitaan samassa lauseessa.';
 const NAHTAVYYSVASTAUS = 'Tower Bridge avattiin vuonna 1894, ja sen '
   + 'maalattu teräsrunko piiloutuu kivikuoren sisään.';
 
@@ -998,14 +1005,19 @@ vaadi('paneelissa ei ole omaa yläosaa ehdotuksille',
   asemointi.paneelinLapset.join(' | '));
 
 /* ================================================================== */
-/* 3f) Pitkä vastaus alkaa näkymän yläreunasta                          */
+/* 3f) Pitkä vastaus: kysymys yläreunaan, loppu piiloon alas            */
 /* ================================================================== */
 
 /*
  * OMISTAJAN HAVAINTO 13.8.2026: pitkän vastauksen jälkeen virta kelasi
- * pohjaan, joten lukeminen olisi pitänyt aloittaa kelaamalla ylös. Uusi
- * sääntö: vastauksen ENSIMMÄINEN rivi tuodaan näkyviin, loput jäävät
- * pelaajan itsensä vieritettäväksi.
+ * pohjaan, joten lukeminen olisi pitänyt aloittaa kelaamalla ylös.
+ *
+ * Sääntö tarkentui samana päivänä (osa 1): näkymä ankkuroidaan
+ * KYSYMYKSEEN, ja sen alle varataan paneelin korkeuden verran tyhjää.
+ * Vastaus kirjoittuu tyhjään eikä vierityskohta liiku. Varapolku
+ * (ei-striimattu vastaus) noudattaa samaa sääntöä kuin suoratoisto,
+ * joten kysymys on yläreunassa myös täällä ja vastauksen alku heti sen
+ * alla.
  */
 const vieritys = await sivu.evaluate(async () => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -1022,9 +1034,11 @@ const vieritys = await sivu.evaluate(async () => {
   await odota(900);
   const virta = document.querySelector('.pollo-virta');
   const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  const kysymys = [...document.querySelectorAll('.pollo-kayttaja')].at(-1);
   const v = virta.getBoundingClientRect();
   const k = vastaus.getBoundingClientRect();
   return {
+    kysymysYlhaalla: kysymys.getBoundingClientRect().top - v.top,
     alkuNakyvissa: k.top - v.top,
     ensimmainenLause: vastaus.textContent.slice(0, 28),
     vastauksenKorkeus: k.height,
@@ -1035,8 +1049,12 @@ const vieritys = await sivu.evaluate(async () => {
 });
 vaadi('koevastaus on paneelia korkeampi (muuten vieritystä ei mitata)',
   vieritys.vastauksenKorkeus > vieritys.virranKorkeus, JSON.stringify(vieritys));
-vaadi('vastauksen ensimmäinen rivi on näkymän yläosassa',
-  vieritys.alkuNakyvissa >= -2 && vieritys.alkuNakyvissa <= 26
+vaadi('kysymys on näkymän yläreunassa myös varapolussa',
+  vieritys.kysymysYlhaalla >= -2 && vieritys.kysymysYlhaalla <= 30,
+  JSON.stringify(vieritys));
+vaadi('vastauksen ensimmäinen rivi on heti kysymyksen alla',
+  vieritys.alkuNakyvissa > vieritys.kysymysYlhaalla
+  && vieritys.alkuNakyvissa < vieritys.virranKorkeus / 2
   && /Ensimmäinen rivi alkaa/.test(vieritys.ensimmainenLause), JSON.stringify(vieritys));
 vaadi('virta ei kelaa pohjaan vastauksen tullessa',
   vieritys.pohja - vieritys.scrollTop > 20, JSON.stringify(vieritys));
@@ -1618,9 +1636,16 @@ const kasitelinkit = await sivu.evaluate(async () => {
     artikkelinVari: artikkeli ? getComputedStyle(artikkeli).color : '',
   };
 });
-vaadi('vastaukseen syntyy 1–3 pöllölinkkiä',
-  kasitelinkit.maara >= 1 && kasitelinkit.maara <= 3,
+/*
+ * ASIAKAS EI LEIKKAA PALVELIMEN LINKKEJÄ (omistaja 13.8.2026).
+ * Kolmen katto jätti pitkän vastauksen lopun linkittömäksi; nyt kaikki
+ * kuusi merkintää muuttuvat napautettaviksi.
+ */
+vaadi('jokainen käsitemerkintä muuttuu pöllölinkiksi',
+  kasitelinkit.maara === 6,
   `${kasitelinkit.maara} kpl: ${kasitelinkit.tekstit.join(' | ')}`);
+vaadi('myös vastauksen viimeinen merkintä linkittyy',
+  kasitelinkit.tekstit.includes('Beethoven'), kasitelinkit.tekstit.join(' | '));
 vaadi('hakasulkeet eivät näy pelaajalle', kasitelinkit.sulkeita === false,
   kasitelinkit.koko.slice(0, 80));
 vaadi('käsite näkyy tekstissä ilman merkintää',
@@ -2024,10 +2049,9 @@ await paivitysLoppuCtx.close();
  */
 const LATAUSJALKI = `
 window.__latausJalki = [];
-(function seuraa() {
-  var ruutu = document.getElementById('paivitysruutu');
-  if (!ruutu) { requestAnimationFrame(seuraa); return; }
-  function kirjaa() {
+(function () {
+  var seurattu = null;
+  function kirjaa(ruutu) {
     var app = document.querySelector('.app');
     window.__latausJalki.push({
       piilossa: ruutu.hidden,
@@ -2037,10 +2061,29 @@ window.__latausJalki = [];
       appNakyy: Boolean(app) && getComputedStyle(app).visibility !== 'hidden',
     });
   }
-  new MutationObserver(kirjaa).observe(ruutu, {
-    attributes: true, attributeFilter: ['hidden', 'class'],
-  });
-  kirjaa();
+  function tartu() {
+    var ruutu = document.getElementById('paivitysruutu');
+    if (!ruutu) return false;
+    if (seurattu === ruutu) return true;
+    seurattu = ruutu;
+    new MutationObserver(function () { kirjaa(ruutu); }).observe(ruutu, {
+      attributes: true, attributeFilter: ['hidden', 'class'],
+    });
+    kirjaa(ruutu);
+    return true;
+  }
+  /*
+   * Elementtiin tartutaan sillä hetkellä kun se ilmestyy jäsennykseen.
+   * Ennen tässä oli requestAnimationFrame-kysely, ja kuormitetulla
+   * koneella se ehti myöhästyä: ruutu oli jo piilotettu, jälki alkoi
+   * väärästä hetkestä ja ajo hälytti turhaan (ajoittainen väärä
+   * hälytys 13.8.2026). Dokumenttitason vahti ei voi myöhästyä, koska
+   * se herää samasta lisäyksestä.
+   */
+  if (!tartu()) {
+    var vahti = new MutationObserver(function () { if (tartu()) vahti.disconnect(); });
+    vahti.observe(document, { childList: true, subtree: true });
+  }
 }());
 `;
 
@@ -2085,9 +2128,18 @@ const kylma = await kylmaSivu.evaluate(() => ({
   peliNakyy: getComputedStyle(document.querySelector('.app')).visibility !== 'hidden',
   kartta: Boolean(document.querySelector('.map-pane svg')),
 }));
-const alku = kylma.jalki[0] ?? {};
-// Ensimmäinen kirjaus, jossa ruutu alkaa väistyä (häivytys tai piilotus).
-const vaistyy = kylma.jalki.find((v) => v.haipyy || v.piilossa) ?? {};
+/*
+ * Jälki alkaa nyt sivun omasta lähtötilasta: index.html:ssä ruutu on
+ * `hidden`, ja sivun oma inline-skripti näyttää sen. Ensimmäinen
+ * kirjaus on siis "vielä piilossa", eikä se ole se hetki, jota tässä
+ * mitataan — haettava kohta on ensimmäinen kirjaus, jossa ruutu on
+ * NÄKYVISSÄ, ja väistyminen vasta sen jälkeen. Näin mittaus ei riipu
+ * siitä, minä hetkenä vahti ehti kiinnittyä.
+ */
+const alkuKohta = kylma.jalki.findIndex((v) => v.piilossa === false);
+const alku = kylma.jalki[alkuKohta] ?? {};
+// Ensimmäinen kirjaus näkymisen JÄLKEEN, jossa ruutu alkaa väistyä.
+const vaistyy = kylma.jalki.slice(alkuKohta + 1).find((v) => v.haipyy || v.piilossa) ?? {};
 vaadi('latausruutu näkyy myös ilman päivityslippua',
   alku.piilossa === false && alku.peli === false && alku.appNakyy === false,
   JSON.stringify(alku));
@@ -2365,6 +2417,14 @@ const striimi = await striimiSivu.evaluate(async () => {
   let pohjassa = 0;
   let mittauksia = 0;
   let suurinScroll = 0;
+  /*
+   * ANKKUROINNIN JÄLKEEN VIERITYSKOHTA EI MUUTU (omistajan tilaus,
+   * osa 1). Ensimmäinen näyte otetaan heti kun vastauskupla on
+   * syntynyt; sen jälkeen jokainen poikkeama siitä on ruudun hyppy.
+   */
+  let ankkuri = null;
+  let poikkeamia = 0;
+  let suurinPoikkeama = 0;
   for (let i = 0; i < 160; i += 1) {
     await odota(40);
     const kaikki = virta.textContent;
@@ -2375,6 +2435,10 @@ const striimi = await striimiSivu.evaluate(async () => {
     if (pituus > 0) {
       if (edellinen >= 0 && pituus > edellinen) kasvuja += 1;
       edellinen = pituus;
+      if (ankkuri === null) ankkuri = virta.scrollTop;
+      const poikkeama = Math.abs(virta.scrollTop - ankkuri);
+      if (poikkeama > 1) poikkeamia += 1;
+      suurinPoikkeama = Math.max(suurinPoikkeama, poikkeama);
       suurinScroll = Math.max(suurinScroll, virta.scrollTop);
       /*
        * Pohjaan kelaaminen mitataan vasta kun kelattavaa on selvästi.
@@ -2400,6 +2464,9 @@ const striimi = await striimiSivu.evaluate(async () => {
     pohjassa,
     mittauksia,
     suurinScroll,
+    poikkeamia,
+    suurinPoikkeama,
+    tyhjaaAlla: Number.parseFloat(getComputedStyle(virta).paddingBottom) || 0,
     kysymysYlhaalla: kysymys.getBoundingClientRect().top - v.top,
     vastauksenKorkeus: vastaus.getBoundingClientRect().height,
     virranKorkeus: v.height,
@@ -2421,6 +2488,9 @@ vaadi('striimi ei rullaa näkymää pohjaan', striimi.mittauksia > 3 && striimi.
 vaadi('näkymä ei liiku ankkurin jälkeen',
   striimi.suurinScroll <= striimi.scrollTop + 2,
   `suurin ${striimi.suurinScroll}, lopussa ${striimi.scrollTop}`);
+vaadi('vierityskohta pysyy täsmälleen paikallaan koko striimin ajan',
+  striimi.poikkeamia === 0 && striimi.suurinPoikkeama <= 1,
+  `${striimi.poikkeamia} poikkeamaa, suurin ${striimi.suurinPoikkeama} px`);
 vaadi('näkymä ankkuroituu kysymykseen',
   striimi.kysymysYlhaalla >= -2 && striimi.kysymysYlhaalla <= 30,
   String(striimi.kysymysYlhaalla));
@@ -2439,6 +2509,150 @@ vaadi('striimikoe ei kirjoita konsoliin', striimiVirheet.length === 0,
 await striimiSivu.screenshot({ path: join(ULOS, 'pollo-striimi-390.png') });
 await striimiCtx.close();
 polloOsoite = POLLO_URL;
+
+/* ================================================================== */
+/* 22) Paneelin mitat: puhelin ja tabletti                             */
+/* ================================================================== */
+
+/*
+ * OMISTAJAN TILAUS 13.8.2026 iPhone-testauksesta:
+ *
+ *   *"Pöllö voisi iPhonessa ainakin tulla tai alkaa alanappien päältä
+ *   peittäen ne. Ja koko pop-up-ikkuna voisi olla korkeampi. — iPadilla
+ *   pöllönäkymä voisi olla myös korkeampi ja hieman leveämpi, mutta sen
+ *   ei tarvitse peittää alanappeja. Lisäksi pöllönäkymä voisi heti aueta
+ *   täyteen korkeuteensa, kun ensimmäinen kysymys tulee. Se nimittäin
+ *   myös häiritsee, kun korkeus pikkuhiljalleen kasvaa."*
+ *
+ * Tarkennus samana päivänä kaappauksien jälkeen: *"iPhonen
+ * kuvakaappauksessa näyttää, että pöllöikkuna on hassusti vasemmassa
+ * reunassa"*, *"eikä napit peity kokonaan alhaalla"* ja *"kartta saa
+ * jäädä näkyviin hieman alhaalla ja sivuilla, mutta alanapit pitää
+ * peittyä kokonaan ja sitten vähän enemmän ylhäälle voi jäädä tilaa."*
+ *
+ * Mitattavat asiat: korkeus ei kasva vastauksen mukana, puhelimella
+ * reunavälit ovat symmetriset ja yläreunaan jää selvästi tilaa,
+ * alanappirivi on piilossa keskustelun ajan ja palaa sulkiessa,
+ * tabletilla napit näkyvät koko ajan, ja paneelin oma syöterivi mahtuu
+ * kokonaan paneelin sisään (kiinteä korkeus + iso varattu tyhjä
+ * leikkasi sen kerran puoliksi).
+ */
+async function paneelinMitat(leveys, korkeus) {
+  const oma = await selain.newContext({
+    viewport: { width: leveys, height: korkeus }, serviceWorkers: 'block',
+  });
+  const { sivu: s, virheet: v } = await avaaPeli(oma);
+  await kytkeRajapinta(s, []);
+  const tulos = await s.evaluate(async () => {
+    const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+    const kortti = document.querySelector('.turn-card');
+    const nakyyko = () => getComputedStyle(kortti).visibility === 'visible';
+    const napitEnnen = nakyyko();
+    document.querySelector('.pollo-nappi').click();
+    await odota(800);
+    const paneeli = document.querySelector('.pollo-paneeli');
+    const avattuna = paneeli.getBoundingClientRect().height;
+    const napitAuki = nakyyko();
+    document.querySelector('.pollo-kirjoita').click();
+    await odota(150);
+    document.querySelector('.pollo-kentta').value = 'Kerro pitkä tarina Thamesista';
+    document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+    await odota(900);
+    const p = paneeli.getBoundingClientRect();
+    const syote = document.querySelector('.pollo-syote').getBoundingClientRect();
+    const mitat = {
+      avattuna: Math.round(avattuna),
+      vastauksessa: Math.round(p.height),
+      leveys: Math.round(p.width),
+      // Reunavälit ruudusta, eivät esivanhemmasta: juuri tämä paljasti
+      // .turn-cardin transformin, joka vei fixed-ankkurin ruudulta.
+      vasen: Math.round(p.left),
+      oikea: Math.round(window.innerWidth - p.right),
+      yla: Math.round(p.top),
+      ala: Math.round(window.innerHeight - p.bottom),
+      napitEnnen,
+      napitAuki,
+      // Positiivinen luku tarkoittaa, että syöterivi jää paneelin sisään.
+      syoteMahtuu: Math.round(p.bottom - syote.bottom),
+      /*
+       * Yksikään esivanhempi ei saa luoda containing blockia: transform,
+       * filter, backdrop-filter, perspective, will-change ja contain
+       * kaappaavat `position: fixed`in itselleen, ja juuri siihen paneeli
+       * kompastui (.turn-card translateX(-50%)). Lista kertoo syyllisen
+       * nimeltä, jos ansa palaa.
+       */
+      ankkurit: (() => {
+        const nimet = [];
+        for (let el = paneeli.parentElement; el; el = el.parentElement) {
+          const st = getComputedStyle(el);
+          const syy = [
+            st.transform !== 'none' && 'transform',
+            st.filter !== 'none' && 'filter',
+            st.backdropFilter && st.backdropFilter !== 'none' && 'backdrop-filter',
+            st.perspective !== 'none' && 'perspective',
+            st.willChange !== 'auto' && `will-change: ${st.willChange}`,
+            !/^(none|style)$/.test(st.contain) && `contain: ${st.contain}`,
+          ].filter(Boolean);
+          if (syy.length) nimet.push(`${el.className || el.tagName} (${syy.join(', ')})`);
+        }
+        return nimet;
+      })(),
+    };
+    // Sulku palauttaa napit: piilotus ei saa jäädä päälle.
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    await odota(300);
+    mitat.napitSulun = nakyyko();
+    return mitat;
+  });
+  await oma.close();
+  return { tulos, virheet: v };
+}
+
+const puhelin = await paneelinMitat(390, 844);
+vaadi('puhelimen paneeli on koko korkeutensa jo avattaessa',
+  puhelin.tulos.avattuna === puhelin.tulos.vastauksessa,
+  JSON.stringify(puhelin.tulos));
+vaadi('puhelimen paneeli on selvästi entistä korkeampi (yli 500 px)',
+  puhelin.tulos.vastauksessa > 500, JSON.stringify(puhelin.tulos));
+vaadi('puhelimen paneeli on keskellä: reunavälit yhtä suuret',
+  Math.abs(puhelin.tulos.vasen - puhelin.tulos.oikea) <= 2
+  && puhelin.tulos.vasen > 0, JSON.stringify(puhelin.tulos));
+// JUURISYYN VARTIO: paneelin fixed-asemoinnin on ankkuroiduttava ruutuun.
+vaadi('yksikään esivanhempi ei kaappaa paneelin fixed-ankkuria',
+  puhelin.tulos.ankkurit.length === 0, puhelin.tulos.ankkurit.join(' | '));
+vaadi('kartta näkyy paneelin alta ja sivuilta',
+  puhelin.tulos.ala > 0 && puhelin.tulos.ala < 30, JSON.stringify(puhelin.tulos));
+vaadi('yläreunaan jää tilaa kartalle ja matkakirjan kaistaleelle',
+  puhelin.tulos.yla > 180, JSON.stringify(puhelin.tulos));
+vaadi('alanappirivi on piilossa keskustelun ajan',
+  puhelin.tulos.napitEnnen === true && puhelin.tulos.napitAuki === false,
+  JSON.stringify(puhelin.tulos));
+vaadi('alanappirivi palaa näkyviin paneelin sulkeuduttua',
+  puhelin.tulos.napitSulun === true, JSON.stringify(puhelin.tulos));
+vaadi('paneelin syöterivi mahtuu paneelin sisään puhelimella',
+  puhelin.tulos.syoteMahtuu >= 0 && puhelin.tulos.syoteMahtuu < 8,
+  JSON.stringify(puhelin.tulos));
+vaadi('puhelinmittaus ei kirjoita konsoliin', puhelin.virheet.length === 0,
+  puhelin.virheet.slice(0, 3).join(' | '));
+
+const tabletti = await paneelinMitat(834, 1194);
+vaadi('tabletin paneeli on koko korkeutensa jo avattaessa',
+  tabletti.tulos.avattuna === tabletti.tulos.vastauksessa,
+  JSON.stringify(tabletti.tulos));
+vaadi('tabletin paneeli on korkeampi ja leveämpi kuin ennen (432 × 336)',
+  tabletti.tulos.vastauksessa > 432 && tabletti.tulos.leveys > 336,
+  JSON.stringify(tabletti.tulos));
+vaadi('tabletin paneeli on oikeassa reunassa, mitattuna ruudusta',
+  tabletti.tulos.oikea > 0 && tabletti.tulos.oikea < 20
+  && tabletti.tulos.vasen > tabletti.tulos.oikea, JSON.stringify(tabletti.tulos));
+vaadi('tabletilla alanapit näkyvät koko ajan',
+  tabletti.tulos.napitEnnen === true && tabletti.tulos.napitAuki === true
+  && tabletti.tulos.napitSulun === true, JSON.stringify(tabletti.tulos));
+vaadi('paneelin syöterivi mahtuu paneelin sisään tabletilla',
+  tabletti.tulos.syoteMahtuu >= 0 && tabletti.tulos.syoteMahtuu < 8,
+  JSON.stringify(tabletti.tulos));
+vaadi('tablettimittaus ei kirjoita konsoliin', tabletti.virheet.length === 0,
+  tabletti.virheet.slice(0, 3).join(' | '));
 
 vaadi('ei sivuvirheitä pääajossa', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
