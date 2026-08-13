@@ -161,6 +161,13 @@ const MODULES = [
   'js/packs/linssi-topografia-kuva.js',
   'js/pack.js',
   'js/passport.js',
+  /*
+   * iOS-kuoren kytkennät. Yhden tiedoston versiossa siltaa ei ole
+   * koskaan olemassa, mutta moduuli tulee mukaan, koska sekä ui.js että
+   * main.js tuovat sen staattisesti — ja koska se on pelkkiä vartioituja
+   * funktioita, se ei tee levyversiossa mitään.
+   */
+  'js/natiivi.js',
   // Matkalaukun "Unohdettu aarre": tekijänoikeus ja lähdeluettelo.
   // Pelkkää dataa, jonka js/ui.js tuo staattisesti.
   'js/lahteet.js',

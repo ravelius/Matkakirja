@@ -16,6 +16,7 @@ const SHELL = [
   './js/rules.js',
   './js/pack.js',
   './js/passport.js',
+  './js/natiivi.js',
   './js/lahteet.js',
   './js/wiki.js',
   './js/media.js',
