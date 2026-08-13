@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 638, teksti: 'Maailmankartalle 49 uutta maata maasivuineen' },
   { v: 637, teksti: 'Kirjoituskone kuuluu taas; suurennos oikean levyiseksi' },
   { v: 636, teksti: 'Suurennos täysikokoiseksi; kirjakuvake keskelle' },
   { v: 635, teksti: 'Tokion kaupunkilehti, kohdekartta ja saatiedot' },
