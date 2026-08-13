@@ -938,6 +938,19 @@ const PAPERI = '#f6eeda';
 // Muuri on kartan tummin viiva: pääkartan musteen sävy (.city-label),
 // jotta se erottuu vaaleista kaduista mutta pysyy pergamentissa.
 const MUURI = '#6f5a3c';
+/*
+ * Arkeologiset alueet ovat paperia lämpimämpi laikku ja saavat ohuen
+ * reunaviivan. Sävy on veden ja puiston välistä: kaivausalue ei ole
+ * puisto eikä vesi, ja Luxorissa se on koko kartan aihe.
+ *
+ * MIKSI OMA TASO. Luxorin ja Karnakin temppelit EIVÄT ole OSM:ssä
+ * rakennuksia vaan historic=ruins- ja historic=archaeological_site
+ * -alueita. Ilman tätä tasoa kartalle jää pelkkä katuverkko ja
+ * kohteiden kohdalla on tyhjää paperia — mitattiin Luxorissa
+ * 13.8.2026 kahdella ajolla ennen kuin syy löytyi.
+ */
+const RAUNIO = '#ece0c2';
+const RAUNIOREUNA = '#c4b189';
 
 async function haeOverpass(rajat, palvelutiet = false) {
   const alue = `(${rajat.etela},${rajat.lansi},${rajat.pohjoinen},${rajat.ita})`;
@@ -999,6 +1012,14 @@ async function haeOverpass(rajat, palvelutiet = false) {
      */
     way["barrier"="city_wall"]${alue};
     way["historic"="citywalls"]${alue};
+    /*
+     * ARKEOLOGISET ALUEET. Antiikin kohteet ovat OSM:ssä omalla
+     * merkinnällään eivätkä rakennuksina: Karnakin pylvässalit,
+     * Luxorin temppelin piha ja agorat ovat historic=ruins tai
+     * historic=archaeological_site. Ilman tätä riviä ne eivät ole
+     * kartalla millään tavalla.
+     */
+    way["historic"~"^(ruins|archaeological_site)$"]${alue};
     /*
      * Isot järvet ja lahdet ovat OSM:ssä monikulmiorelaatioita, ja
      * niiden jäsenpoluilla ei ole omia merkintöjä — pelkkä
@@ -1381,6 +1402,7 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
   const pisteet = (geom) => geom.map((p) => `${x(p.lon)},${y(p.lat)}`).join(' ');
   const kerrokset = {
     meri: [], saaret: [], puistot: [], vedet: [], joet: [], radat: [], muurit: [],
+    rauniot: [], raunioviivat: [],
     kadut: KADUT.map(() => []),
   };
   const rantaviivat = [];
@@ -1493,6 +1515,17 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
       kerrokset.radat.push(`<polyline points="${pisteet(e.geometry)}"/>`);
     } else if (t.barrier === 'city_wall' || t.historic === 'citywalls') {
       kerrokset.muurit.push(`<polyline points="${pisteet(e.geometry)}"/>`);
+    } else if (t.historic === 'ruins' || t.historic === 'archaeological_site') {
+      /*
+       * Suljettu polku on alue ja täytetään; avoin polku on muuri tai
+       * pylväsrivi ja piirtyy viivana. Ero luetaan geometriasta eikä
+       * merkinnöistä, koska OSM ei erottele näitä tageilla.
+       */
+      const g = e.geometry;
+      const suljettu = g.length > 3
+        && g[0].lat === g[g.length - 1].lat && g[0].lon === g[g.length - 1].lon;
+      if (suljettu) kerrokset.rauniot.push(`<polygon points="${pisteet(g)}"/>`);
+      else kerrokset.raunioviivat.push(`<polyline points="${pisteet(g)}"/>`);
     } else {
       kerrokset.puistot.push(`<polygon points="${pisteet(e.geometry)}"/>`);
     }
@@ -1568,6 +1601,9 @@ function kerrosKuvaus(kerrokset, mitta = 1) {
   <g fill="${VESI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.meri.join('')}</g>
   <g fill="${PAPERI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.saaret.join('')}</g>
   <g fill="${PUISTO}" stroke="none">${kerrokset.puistot.join('')}</g>
+  <g fill="${RAUNIO}" stroke="${RAUNIOREUNA}" stroke-width="${v(1.2)}">${kerrokset.rauniot.join('')}</g>
+  <g fill="none" stroke="${RAUNIOREUNA}" stroke-width="${v(1.6)}"
+     stroke-linecap="round" stroke-linejoin="round">${kerrokset.raunioviivat.join('')}</g>
   <!-- Joen reunaviiva: leveämpi tumma veto alle, vesi päälle — jokeen
        tulee sama ohut ranta kuin vesialtaiden stroke-reunaan. -->
   <g fill="none" stroke="${VESIREUNA}" stroke-width="${v(16.4)}" stroke-linecap="round"
