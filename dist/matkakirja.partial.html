@@ -149153,17 +149153,23 @@ const LUKIJAN_OHITETTAVAT = [
   '.tervehdys',
 
   /*
-   * KAUPUNGIN KOHDEKARTTA KOKONAAN (omistajan havainto 13.8.2026:
-   * "lehden lukija lukee vielä kartan tekstit — siihen voisi ohjata
-   * vain ja ainoastaan artikkelin tekstin"). Selitteet olivat jo
-   * ohituksissa, mutta lohkon otsikko, esittelykappaleet ja karttojen
-   * numeropisteet luettiin yhä. Kartta on silmälle, ei korvalle:
-   * ääneen luettuna siitä tulee irrallinen numero- ja nimilitania.
+   * KOHDEKARTAN KARTTAOSAT, EI ESITTELYÄ (omistajan tarkennus
+   * 13.8.2026 iltapäivällä). Ensin ohitettiin koko .kaupunkikartta,
+   * mutta silloin luenta loppui Venetsiassa ensimmäiseen kappaleeseen:
+   * "Kaupunki kartalla" -otsikko ja esittelykappaleet OVAT juttua ja
+   * ne luetaan. Vain itse kartta pisteineen, selitteineen ja
+   * mittajanoineen on silmälle eikä korvalle.
    */
-  '.kaupunkikartta',
   '.maakartta-kotelo',
   '.maakartta-piste',
   '.kartta-mittajana',
+
+  // Lehden päivämäärä on taittoa, ei juttua (omistajan toive).
+  '#arrival-lehti-pvm',
+
+  // "Uutisissa tänään (lähde)" -nimiö samoin (omistajan toive) —
+  // uutisotsikot itse ovat nappeja ja jäävät pois jo tagilistalla.
+  '.uutiset-nimio',
 
   // Kuvatekstit, selitteet ja karttojen numeroselitykset.
   '.kuvateksti',
@@ -168678,6 +168684,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 618, teksti: 'Lukija: kartan esittely luetaan, päiväys ja uutisnimiö ei' },
   { v: 617, teksti: 'Ei ohjetekstiä kartalle, pöllön vihje, maan raja piirtyy' },
   { v: 616, teksti: 'Etusivun taustaääni elpyy iPadilla; pöllölinkit siistiksi' },
   { v: 615, teksti: 'Tabrizin kaupunkilehti, kohdekartta ja saatiedot' },
@@ -169379,7 +169386,7 @@ const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.617';
+const APP_VERSION = '2026-08-09.618';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
