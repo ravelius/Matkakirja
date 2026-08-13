@@ -2538,6 +2538,39 @@ export const KAUPUNKIKARTAT = {
    * kulttuurijuttua ilman että lähde vie sotaan. Valitut kuusi
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
+  /*
+   * Damaskoksen vanhakaupunki (nippu 2, 13.8.2026). Sama rajaus kuin
+   * Aleppossa: peli ei käsittele nykykonflikteja, ja syyrialaiset
+   * kohteet ovat kulttuurikohteita. Lehti kertoo roomalaisesta,
+   * ajjubidien, mamelukkien ja ottomaanien Damaskoksesta.
+   *
+   * Suora katu (Via Recta) on VARATTU: siitä on jo kuvateksti
+   * asia-valokuvat.js:ssä, joten se ei ole karttakohde eikä jutun aihe.
+   */
+  damaskos: {
+    polku: 'assets/kartat/damaskos-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 33.516, etela: 33.5045, lansi: 36.299, ita: 36.32,
+    },
+    esittely: 'Damaskoksen vanhakaupunki on suorakaide, ja sen muoto '
+      + 'on roomalainen: kaupunki kaavoitettiin ruutuun, ja itä-länsi- '
+      + 'akseli kulkee yhä läpi koko kartan. Muurit ovat paikoin samoja '
+      + 'kuin roomalaisaikana, ja portit ovat niissä samoissa kohdissa.\n\n'
+      + 'Keskellä on suuri suorakaiteen muotoinen piha-alue, joka on '
+      + 'ollut pyhä paikka kolmella eri tavalla: siinä seisoi ensin '
+      + 'aramealainen temppeli, sitten roomalainen Jupiterin temppeli, '
+      + 'sitten kirkko ja lopulta moskeija. Sama muuri on kiertänyt '
+      + 'niitä kaikkia.',
+    kohteet: [
+      { nimi: 'Damaskoksen linnoitus', lat: 33.5119, lon: 36.3021 },
+      { nimi: 'Umaijadien moskeija', lat: 33.5116, lon: 36.3067 },
+      { nimi: 'Hamidiyyan suuki', lat: 33.5114, lon: 36.3082 },
+      { nimi: "Khan As'ad Pashan", lat: 33.5093, lon: 36.3067 },
+      { nimi: 'Itäportti', lat: 33.5094, lon: 36.3179 },
+      { nimi: 'Kisanin portti', lat: 33.5065, lon: 36.3157 },
+    ],
+  },
   halab: {
     polku: 'assets/kartat/halab-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
