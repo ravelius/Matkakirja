@@ -620,7 +620,7 @@ const avaus = await sivu.evaluate(async () => {
   };
 });
 vaadi('paneeli aukeaa napautuksesta', avaus.nakyy === true);
-vaadi('ehdotukset renderöityvät', avaus.ehdotuksia === 3, `${avaus.ehdotuksia} kpl`);
+vaadi('ehdotukset renderöityvät', avaus.ehdotuksia === 2, `${avaus.ehdotuksia} kpl`);
 vaadi('sanelunappi on ensisijainen syöte', avaus.mikki === true && avaus.kenttaPiilossa === true,
   JSON.stringify(avaus));
 

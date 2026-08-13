@@ -1138,7 +1138,7 @@ class Pollo {
    * Kaiutin ei lue näitä — ne ovat käyttöliittymää, eivät pöllön puhetta.
    */
   naytaJatkot(lista) {
-    const jatkot = (Array.isArray(lista) ? lista : []).slice(0, 3);
+    const jatkot = (Array.isArray(lista) ? lista : []).slice(0, 2);
     if (!jatkot.length) return;
     const laatikko = polloElementti('div', 'pollo-jatkot');
     for (const teksti of jatkot) {
@@ -1289,7 +1289,7 @@ class Pollo {
 
   naytaEhdotukset(lista) {
     this.ehdotukset.replaceChildren();
-    for (const teksti of lista.slice(0, 3)) {
+    for (const teksti of lista.slice(0, 2)) {
       const nappi = polloElementti('button', 'pollo-ehdotus', teksti);
       nappi.type = 'button';
       nappi.addEventListener('click', () => this.kysy(teksti));
@@ -1313,6 +1313,10 @@ class Pollo {
     this.saneluTila.textContent = '';
     this.ehdotukset.replaceChildren();
     this.ehdotukset.hidden = true;
+    // Vanhat jatkokysymykset pois virrasta: ehdotuksia näkyy vain
+    // tuoreimman vastauksen alla, muuten ne kasautuvat pinoksi
+    // (omistajan huomio 13.8.2026).
+    for (const vanha of this.virta.querySelectorAll('.pollo-jatkot')) vanha.remove();
     this.lisaaViesti('kayttaja', kysymys);
     const odotus = this.lisaaViesti('odottaa', 'Pöllö miettii…');
     this.asetaKesken(true);
