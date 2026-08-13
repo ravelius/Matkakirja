@@ -97,6 +97,14 @@
     </div>
     <button id="muutokset-sulje" class="muutokset-sulje" type="button">Sulje</button>
   </dialog>
+  <!-- Päivityksen jälkeinen pieni ilmoitus: kahden uusimman version
+       muutosrivit. Täytetään ja avataan main.js:stä vain, kun laitteella
+       oli aiempi versio. Sama ulkoasu kuin muutoslokilla. -->
+  <dialog id="paivitys-dialog" class="muutokset-dialog">
+    <h2 class="muutokset-otsikko">Peli päivittyi</h2>
+    <ol id="paivitys-lista" class="muutokset-lista"></ol>
+    <button id="paivitys-sulje" class="muutokset-sulje" type="button">Jatka</button>
+  </dialog>
   <div class="app">
     <header class="topbar">
       <!-- Nimilogo (omistajan toive): Matkakirja, pitkä viiva ja sen
