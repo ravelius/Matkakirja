@@ -148,10 +148,17 @@ export class BoardDie {
    * @param {number} value silmäluku, joka jää päälle
    * @param {{x:number,y:number}} from mistä noppa lähtee (paneelin pikselit)
    * @param {{x:number,y:number}} to mihin se jää lepäämään
-   * @param {{onTick?:Function, onLand?:Function, onBounce?:Function, reduced?:boolean}} hooks
+   * @param {{onTick?:Function, onLand?:Function, onBounce?:Function,
+   *          onSettle?:Function, reduced?:boolean}} hooks
+   *
+   * onSettle laukeaa sillä hetkellä, kun noppa lakkaa liikkumasta ja
+   * kallahtaa lopulliselle silmäluvulleen — EI vasta kun koko
+   * animaatiolupaus ratkeaa. Ero on lähes sekunti, ja pysähtymiseen
+   * sidottu haptiikka tuntui juuri sen verran myöhässä (omistajan
+   * havainto 13.8.2026).
    */
   async roll(value, from, to, hooks = {}) {
-    const { onTick, onLand, onBounce, reduced } = hooks;
+    const { onTick, onLand, onBounce, onSettle, reduced } = hooks;
     this.layer.hidden = false;
     const [faceX, faceY] = FACE_ROTATION[value] ?? [0, 0];
 
@@ -160,6 +167,7 @@ export class BoardDie {
       this.applyRotation(0);
       this.place(to);
       onLand?.();
+      onSettle?.();
       return;
     }
 
@@ -244,6 +252,9 @@ export class BoardDie {
 
         if (!settled && t >= settleAt) {
           settled = true;
+          // Noppa pysähtyy tässä — pysähtymiseen sidotut koukut (esim.
+          // haptiikka) kuuluvat tähän hetkeen, eivät lupausten häntään.
+          onSettle?.();
           // Lähin vastaava asento, jotta kallahdus on lyhyt ja luonteva.
           const restX = faceX + tilt.x;
           const restY = faceY + tilt.y;

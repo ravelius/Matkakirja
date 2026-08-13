@@ -3951,8 +3951,10 @@ body.radio-tila .actions {
   100% { stroke: rgba(150, 60, 45, 0.45); stroke-width: 3; }
 }
 
+/* Kesto seuraa js/ui.js AARIVIIVAN_VALAHDYS_MS:ää (omistajan tarkennus
+   13.8.2026: hitaampi välähdys ja häivytys, piirtonopeus ennallaan). */
 .country-borders.maa-valahtaa .country-korostus {
-  animation: maa-aariviivan-valahdys 880ms ease-out;
+  animation: maa-aariviivan-valahdys 1880ms ease-out;
 }
 
 /* Liikeherkkyys: viiva on heti valmis eikä välähdä (js/ui.js ohittaa
