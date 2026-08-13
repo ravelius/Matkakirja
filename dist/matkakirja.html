@@ -144301,6 +144301,16 @@ const VOIMA = 0.14;
  * toiseen.
  */
 const ETUSIVUN_VOIMA = 1.4;
+/*
+ * Avauslennon oma kerroin (omistajan havainto 13.8.2026: "lentokoneen
+ * kuulutus ei ole enää kuulunut taustalla"). Matkustamoäänitteen
+ * kuulutus hukkui, kun kertojan väistö (VAISTO_PUHE 0,25) painaa
+ * taustan neljäsosaan juuri repliikin ajaksi — ja luenta alkaa nyt
+ * entistä aiemmin. Kerroin nostaa lennon taustan sekä vapaan että
+ * väistetyn tason; lopullinen lukema on kuulokokeen nuppi kuten
+ * etusivullakin.
+ */
+const LENNON_VOIMA = 1.6;
 const HAIVYTYS_MS = 1800;
 // Sama äänite alkaa joka kerta eri kohdasta, jottei paikka kuulosta
 // itseään toistavalta kun sinne palaa. Loppuun jätetään varaa, ettei
@@ -144594,7 +144604,8 @@ function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = null) {
   // siellä ääni soi yksin. Lentomatka on vakiopaikka vain
   // aloituskohtansa puolesta, ja kabiini on jo kertaalleen kalibroitu
   // täydelle voimalleen.
-  const paikanVoima = cityId === 'etusivu' ? ETUSIVUN_VOIMA : 1;
+  const paikanVoima = cityId === 'etusivu' ? ETUSIVUN_VOIMA
+    : (cityId === 'lentomatka' ? LENNON_VOIMA : 1);
   const oma = {
     cityId,
     url,
@@ -156081,8 +156092,12 @@ const LENNON_LUKUAIKA_MS = 1600;
  * Kirjoituksen viive on erillinen luku eikä osa typeTextiä, koska
  * lennon kesto lasketaan siitä: lennonKesto lisää saman viiveen
  * kirjoituksen kestoon, jottei kone laskeudu kesken lauseen.
+ *
+ * 13.8.2026: omistaja aikaisti luentaa vielä puolellatoista sekunnilla
+ * (3800 → 2300) — moottorin ei tarvitse nousta yhtä pitkään ennen kuin
+ * kertoja aloittaa.
  */
-const LENNON_PUHE_MS = 3800;
+const LENNON_PUHE_MS = 2300;
 const LENNON_TEKSTI_VIIVE_MS = 400;
 /*
  * Varoventtiili sille odotukselle, jolla kalvo varmistaa ettei kone
@@ -171146,6 +171161,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 626, teksti: 'Avauslennon luenta aiemmin ja kuulutus kuuluviin' },
   { v: 625, teksti: 'Isfahanin kaupunkilehti, kohdekartta ja saatiedot' },
   { v: 624, teksti: 'Sanelun uusinta esiavaa mikrofonin; virherivi diagnosoi' },
   { v: 623, teksti: 'Sanelun ajaksi äänet taukoon: mikrofoni vapautuu iOS:lla' },
@@ -171866,7 +171882,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.625';
+const APP_VERSION = '2026-08-09.626';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
