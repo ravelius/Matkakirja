@@ -530,9 +530,17 @@ document.addEventListener('pointerdown', (event) => {
  * sivun uudelleen. Kesken oleva peli säilyy, koska se on tallennettu erikseen.
  */
 const updateBtn = document.getElementById('update-btn');
-updateBtn.addEventListener('click', async () => {
-  updateBtn.disabled = true;
-  updateBtn.textContent = 'Päivitetään…';
+async function haeUusinVersio(nappi) {
+  nappi.disabled = true;
+  /*
+   * Tekstiosa vaihtuu, jos nappilla on tekstiä; pelkän kuvakkeen
+   * nappi (valikon pieni päivitysnappi) saa .paivittaa-luokan, joka
+   * pyörittää kuvaketta CSS:ssä — tekstiä ei kirjoiteta kuvakkeen
+   * päälle.
+   */
+  const nimio = nappi.querySelector('span:not(.viiva-ikoni)');
+  if (nimio) nimio.textContent = 'Päivitetään…';
+  nappi.classList.add('paivittaa');
   merkitsePaivitys();
   try {
     if ('serviceWorker' in navigator) {
@@ -553,7 +561,17 @@ updateBtn.addEventListener('click', async () => {
   const osoite = new URL(location.href);
   osoite.searchParams.set('paivitys', String(Date.now()));
   location.replace(osoite.toString());
-});
+}
+updateBtn.addEventListener('click', () => haeUusinVersio(updateBtn));
+
+/*
+ * Pieni päivitysnappi versionumeron vieressä hampurilaisvalikossa
+ * (omistajan toive 13.8.2026: "versionumeron vasemmalle laitaan voisi
+ * tehdä pienen päivitysnapin, tekstin korkuisen") — sama haku kuin
+ * sääntöjen Päivitä-napilla, ilman päivityslokin avaamista.
+ */
+const versioPaivitys = document.getElementById('versio-paivitys');
+versioPaivitys?.addEventListener('click', () => haeUusinVersio(versioPaivitys));
 
 document.getElementById('app-version').textContent = APP_VERSION;
 

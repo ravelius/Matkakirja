@@ -859,13 +859,14 @@ const VALINTAVIHJEEN_VIIVE = 15000;
 const VALINTAVIHJEEN_TEKSTI = 'Napauta korostettua kohdetta kartalla, niin matka jatkuu.';
 /*
  * Maan ääriviivan piirtoanimaatio (animoiMaanAariviiva). Piirto on
- * omistajan toivomat "parisen sekuntia". Välähdys ja häivytys
- * hidastuivat 900 → 1900 ms (omistajan tarkennus 13.8.2026 illalla:
- * "välähdys ja feidaus voisi olla hitaampi, mutta rajan piirtonopeus
- * on hyvä") — sama kesto myös CSS:ssä (maa-aariviivan-valahdys).
+ * omistajan toivomat "parisen sekuntia". Väläys poistui kokonaan
+ * (omistaja 13.8.2026 ilta: "otetaan rajan väläytys pois mutta raja
+ * voisi jäädä lähes yhtä voimakkaana näkyviin kuin se on piirron
+ * lopussa") — piirron perään jää vain lyhyt pehmeä asettuminen
+ * lepoarvoihin, sama kesto myös CSS:ssä (maa-aariviivan-asettuminen).
  */
 const AARIVIIVAN_PIIRTO_MS = 2000;
-const AARIVIIVAN_VALAHDYS_MS = 1900;
+const AARIVIIVAN_ASETTUMIS_MS = 750;
 /*
  * NÄKYMÄN KOKOVAHDIN RAJAT (ks. UI vahdiNakymanKokoa).
  *
@@ -3204,7 +3205,7 @@ export class UI {
     clearTimeout(this.lehtiMittaJalkiajastin);
     // Pöllön vihjekupla ei saa ilmestyä kuolleen pelin ajastimesta.
     this.peruValintavihje();
-    // Sama koskee ääriviivan välähdyksen loppuajastinta.
+    // Sama koskee ääriviivan asettumisen loppuajastinta.
     clearTimeout(this.aariviivaAjastin);
     /*
      * Maapilleri pois DOM:ista (omistajan kaappaus 13.8.2026: "Jordania
@@ -6250,7 +6251,7 @@ export class UI {
     this.viimeMaa = key;
     this.countryKey = key;
     this.countryLayer.textContent = '';
-    this.countryLayer.classList.remove('maa-piirtyy', 'maa-valahtaa');
+    this.countryLayer.classList.remove('maa-piirtyy', 'maa-asettuu');
     this.countryNameLayer.textContent = '';
     const maa = map.countryShapes?.[iso];
     this.paivitaMaaPilleri(maa, iso);
@@ -6274,22 +6275,19 @@ export class UI {
   }
 
   /**
-   * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI (omistajan tilaus 13.8.2026:
-   * *"maan kartan punaisen ääriviivan animoisi niin että tultaessa
-   * uuteen maahan peli piirtäisi parissa sekunnissa ääriviivan ja kun se
-   * valmistuisi punainen välähtäisi yhden kerran hieman voimakkaampana
-   * ja feidautuisi sitten pehmeästi nykyisen rajaviivan sävyyn"* sekä
-   * *"maan raja voisi siinä välähdyksessä levitä paksummaksi ja kutistua
-   * sitten feidauksen aikana"*).
+   * UUTEEN MAAHAN SAAVUTAAN NÄYTTÄVÄSTI (omistajan tilaus 13.8.2026;
+   * väläys poistui saman päivän iltana: "otetaan rajan väläytys pois
+   * mutta raja voisi jäädä lähes yhtä voimakkaana näkyviin kuin se on
+   * piirron lopussa").
    *
-   * Kolme vaihetta:
+   * Kaksi vaihetta:
    *   1. viiva piirtyy päästä päähän (stroke-dasharray = polun pituus,
-   *      dashoffset pituudesta nollaan) noin kahdessa sekunnissa
-   *   2. valmistuessa yksi välähdys: voimakkaampi punainen ja kaksin-
-   *      kertainen paksuus
-   *   3. molemmat liukuvat takaisin rajaviivan omaan sävyyn ja mittaan
+   *      dashoffset pituudesta nollaan) noin kahdessa sekunnissa ja
+   *      paisuu samalla täyteen voimaansa (5.4 / 0.8)
+   *   2. valmistuessa lyhyt pehmeä asettuminen lepoarvoihin, jotka
+   *      ovat hivenen piirron loppua alempana (5 / 0.72) — ei väläystä
    *
-   * Vaiheet 2–3 ovat yksi CSS-animaatio (.maa-valahtaa), vaihe 1
+   * Vaihe 2 on yksi CSS-animaatio (.maa-asettuu), vaihe 1
    * Web Animations API — kummassakaan ei ole kehyskohtaista silmukkaa,
    * eikä kumpikaan koske näkymään (fitViewBox), joten kartan
    * bittikarttaa ei rasteroida uudelleen animaation takia.
@@ -6315,11 +6313,11 @@ export class UI {
         { duration: AARIVIIVAN_PIIRTO_MS, easing: 'ease-in-out', fill: 'forwards' },
       ));
       /*
-       * Viiva paisuu ja voimistuu TASAISESTI jo piirtyessään noin 70
-       * prosenttiin huipusta (omistajan tarkennus 13.8.2026 ilta:
-       * "tasaisesti levittää ja voimistaa viivaa jo matkalla") —
-       * loppuvälähdys jatkaa tästä 70→100 (css: maa-aariviivan-
-       * valahdys alkaa täsmälleen näistä arvoista, ettei sauma näy).
+       * Viiva paisuu ja voimistuu TASAISESTI jo piirtyessään täyteen
+       * voimaansa (omistajan tarkennus 13.8.2026 ilta: "tasaisesti
+       * levittää ja voimistaa viivaa jo matkalla") — asettuminen
+       * jatkaa tästä lepoon (css: maa-aariviivan-asettuminen alkaa
+       * täsmälleen näistä arvoista, ettei sauma näy).
        */
       liikkeet.push(polku.animate(
         [
@@ -6339,7 +6337,7 @@ export class UI {
       jaljella -= 1;
       if (jaljella > 0) return;
       // Maa on voinut vaihtua kesken piirron: silloin nämä polut ovat jo
-      // poissa eikä välähdys kuulu uudelle maalle.
+      // poissa eikä asettuminen kuulu uudelle maalle.
       if (this.dead || this.countryKey !== avain || !kerros.isConnected) return;
       /*
        * Viiva-aukkokuvio pois ENNEN animaatioiden perumista: fill:
@@ -6353,11 +6351,11 @@ export class UI {
       }
       for (const liike of liikkeet) liike.cancel();
       kerros.classList.remove('maa-piirtyy');
-      kerros.classList.add('maa-valahtaa');
+      kerros.classList.add('maa-asettuu');
       clearTimeout(this.aariviivaAjastin);
       this.aariviivaAjastin = setTimeout(() => {
-        kerros.classList.remove('maa-valahtaa');
-      }, AARIVIIVAN_VALAHDYS_MS);
+        kerros.classList.remove('maa-asettuu');
+      }, AARIVIIVAN_ASETTUMIS_MS);
     };
     for (const liike of liikkeet) liike.addEventListener('finish', valmis, { once: true });
   }
@@ -8944,8 +8942,22 @@ export class UI {
         ohitaSulku = true;
       }
     });
-    kortti.addEventListener('click', () => {
+    kortti.addEventListener('click', (e) => {
       if (ohitaSulku) { ohitaSulku = false; return; }
+      /*
+       * Sarjassa napautus KUVAAN siirtyy seuraavaan (omistaja
+       * 13.8.2026: "kuva sulkeutui myös sitä painettaessa vaikka
+       * pitäisi vaihtaa seuraavaan kuvaan") — sama ele kuin
+       * päiväkirjan kuvapinossa. Kuvan ulkopuolinen napautus sulkee
+       * kuten ennenkin, samoin yhden kuvan katselimessa napautus
+       * mihin tahansa.
+       */
+      if (lista && e.composedPath?.().includes(kotelo)) {
+        indeksi = (indeksi + 1) % lista.length;
+        sfx.play('paper');
+        nayta();
+        return;
+      }
       this.suljeKulttuuriKuva();
     });
     this.rekisteroiSuurennosNappaimet(lista ? (suunta) => {
