@@ -11,6 +11,9 @@
  *   - kaupunkilehtien aihesivut (KULTTUURI_KATEGORIAT): johdannot ja nostot
  *   - maalehtien aihesivut (MAA_KATEGORIAT): johdannot ja nostot
  *   - kohdekarttojen nähtävyysjutut (NAHTAVYYSJUTUT) lainauksineen
+ *   - kohdekarttojen pisteiden NIMET (KAUPUNKIKARTAT): ne liitetään
+ *     niihin merkintöihin, jotka puhuvat kyseisestä kohteesta
+ *     (ks. liitaKohdenimet)
  *   - aihesivun minitehtävän fakta VAIN jos pelaaja on jo vastannut
  *     siihen (ks. onVastattu alla)
  *
@@ -117,6 +120,25 @@ const OHITETTAVAT = new Set([
   'tuolla', 'ihan',
 ]);
 
+/**
+ * Nähtävyysnimien yleissanat.
+ *
+ * Kohdekartan pisteiden nimet liitetään merkintöihin nimiankkureiksi
+ * (liitaKohdenimet), mutta pelkkä "torni" tai "museo" ei nimeä mitään:
+ * se tarttuisi vastaustekstissä ensimmäiseen torniin maailmassa.
+ * Moniosaisissa nimissä yleissana saa jäädä pois, koska nimestä
+ * vaaditaan kaikkien JÄLJELLE JÄÄVIEN sanojen osuma — "Prahan
+ * kansallismuseo" tunnistuu yhä sanasta "prahan".
+ */
+const KOHTEEN_YLEISSANAT = new Set([
+  'torni', 'tornit', 'museo', 'museon', 'kirkko', 'kirkot', 'silta', 'sillat',
+  'satama', 'satamat', 'teatteri', 'asema', 'linna', 'linnake', 'linnoitus',
+  'palatsi', 'puisto', 'aukio', 'portti', 'katedraali', 'moskeija', 'temppeli',
+  'basaari', 'koulu', 'panimo', 'laituri', 'laiturit', 'hautausmaa', 'majakka',
+  'kirjasto', 'yliopisto', 'sairaala', 'tuomiokirkko', 'raatihuone',
+  'eläintarha', 'elaintarha', 'kaupungintalo',
+]);
+
 /** Merkkijono sanoiksi: pienet kirjaimet, vain kirjaimet ja numerot. */
 export function sanoita(teksti) {
   return String(teksti ?? '')
@@ -157,6 +179,9 @@ function merkinta({
     reitti,
     otsikkoSanat: [...new Set(sanoita(otsikko))],
     tekstiSanat: [...new Set(sanoita(puhdas))],
+    // Kohdekartan pisteiden nimet, joista tämä merkintä puhuu. Täytetään
+    // indeksin lopuksi (liitaKohdenimet).
+    nimiSanat: [],
   };
 }
 
@@ -233,16 +258,109 @@ function lisaaNahtavyydet(ulos, taulu) {
 }
 
 /**
+ * Nähtävyyskohteen nimen tunnistavat sanat, nimimuoto kerrallaan.
+ *
+ * Sulkumuoto on oma nimensä: "Pyhän Tapanin kirkko (Stephansdom)"
+ * tunnistuu kummastakin puolikkaasta erikseen, koska pöllö voi käyttää
+ * vastauksessaan kumpaa tahansa. Yhdysviiva ja muut välimerkit
+ * pilkkovat nimen sanoiksi (sanoita), joten "Eiffel-torni" tunnistuu
+ * sanasta "eiffel" ja yleissana "torni" jää pois.
+ *
+ * @returns {string[][]} lista sanaryhmiä; ryhmä osuu vain kokonaan
+ */
+export function kohteenNimiSanat(nimi) {
+  const ryhmat = [];
+  for (const osa of String(nimi ?? '').split(/[()[\]]/)) {
+    const sanat = sanoita(osa).filter((sana) => sana.length >= ANKKURIN_VAHIMMAISPITUUS
+      && !OHITETTAVAT.has(sana) && !KOHTEEN_YLEISSANAT.has(sana));
+    if (sanat.length) ryhmat.push([...new Set(sanat)]);
+  }
+  return ryhmat;
+}
+
+/**
+ * Kohdekarttojen pisteiden nimet kaupungeittain.
+ *
+ * Lähteitä on kaksi ja ne täydentävät toisiaan: kartan pisteet
+ * (KAUPUNKIKARTAT) kattavat myös ne kohteet, joilla ei ole omaa juttua
+ * — kuten Wienin Schönbrunn, joka on kartan kainalossa mutta jonka
+ * juttu asuu kaupunkilehden sivulla.
+ *
+ * Kaupungin oman nimen kokoinen yksisanainen nimi jätetään pois
+ * ("Kuwait-tornit" kaupungissa kuwait): se osuisi kaupungin jokaiseen
+ * juttuun eikä kertoisi mistään yhdestä kohteesta.
+ */
+function keraaKohdenimet(kohdekartat = {}, nahtavyydet = {}) {
+  const ulos = {};
+  const lisaa = (kaupunki, nimi) => {
+    for (const ryhma of kohteenNimiSanat(nimi)) {
+      if (ryhma.length === 1 && yhteinenAlku(ryhma[0], String(kaupunki)) >= Math.min(5, ryhma[0].length)) {
+        continue;
+      }
+      const avain = ryhma.join(' ');
+      const lista = (ulos[kaupunki] ??= []);
+      if (!lista.some((r) => r.join(' ') === avain)) lista.push(ryhma);
+    }
+  };
+  for (const [kaupunki, kartta] of Object.entries(kohdekartat ?? {})) {
+    for (const kohde of kartta?.kohteet ?? []) lisaa(kaupunki, kohde?.nimi);
+  }
+  for (const [kaupunki, kohteet] of Object.entries(nahtavyydet ?? {})) {
+    for (const nimi of Object.keys(kohteet ?? {})) lisaa(kaupunki, nimi);
+  }
+  return ulos;
+}
+
+/**
+ * Liittää kohteiden nimet niihin merkintöihin, jotka puhuvat niistä.
+ *
+ * OMISTAJAN HAVAINTO 13.8.2026 (Wien): vastaus mainitsi Stephansdomin,
+ * Hofburgin ja Schönbrunnin, mutta yksikään ei linkittynyt. Syy oli
+ * indeksissä: merkinnän tunnistesanat tulivat pelkästä OTSIKOSTA, ja
+ * Schönbrunnista kertovan noston otsikko on "Keisarin aamiaishuone
+ * eläintarhan keskellä" — nimeä ei ollut missään, mihin linkin olisi
+ * voinut sitoa.
+ *
+ * Nyt kohteen nimi liitetään merkintään, jonka tekstissä se esiintyy.
+ * Nimi menee sekä otsikkosanoihin (se painaa haussa kuin otsikko —
+ * kohteen nimi on juuri se, mistä juttu kertoo) että nimiankkureihin,
+ * joista linkki sidotaan vastaustekstiin.
+ *
+ * Nähtävyysjutut jätetään väliin: niiden otsikko ON kohteen nimi, ja
+ * naapurikohteen nimen liittäminen tekisi linkistä väärään juttuun
+ * osoittavan.
+ */
+function liitaKohdenimet(merkinnat, kohdenimet) {
+  for (const m of merkinnat) {
+    if (m.tyyppi === 'nahtavyys') continue;
+    const ryhmat = kohdenimet[m.omistaja];
+    if (!ryhmat?.length) continue;
+    for (const ryhma of ryhmat) {
+      const osuuKaikki = ryhma.every((sana) => osuu(m.tekstiSanat, sana)
+        || osuu(m.otsikkoSanat, sana));
+      if (!osuuKaikki) continue;
+      for (const sana of ryhma) {
+        if (!m.nimiSanat.includes(sana)) m.nimiSanat.push(sana);
+        if (!m.otsikkoSanat.includes(sana)) m.otsikkoSanat.push(sana);
+      }
+    }
+  }
+}
+
+/**
  * Rakentaa hakuindeksin. Kutsutaan kerran, laiskasti.
  *
  * @returns {{merkinnat: Array, kesto: number, sanoja: number}}
  */
-export function rakennaIndeksi({ kulttuuri = {}, maat = {}, nahtavyydet = {} } = {}) {
+export function rakennaIndeksi({
+  kulttuuri = {}, maat = {}, nahtavyydet = {}, kohdekartat = {},
+} = {}) {
   const alku = (globalThis.performance ?? Date).now();
   const merkinnat = [];
   lisaaKategoriat(merkinnat, kulttuuri, 'kaupunki');
   lisaaKategoriat(merkinnat, maat, 'maa');
   lisaaNahtavyydet(merkinnat, nahtavyydet);
+  liitaKohdenimet(merkinnat, keraaKohdenimet(kohdekartat, nahtavyydet));
   const kesto = (globalThis.performance ?? Date).now() - alku;
   const sanoja = merkinnat.reduce((s, m) => s + m.tekstiSanat.length, 0);
   return { merkinnat, kesto, sanoja };
@@ -292,12 +410,16 @@ export function lahdeLeima(m, nimet = {}) {
  *
  * Pöllön vastauksesta etsitään kohta, joka puhuu samasta asiasta, ja se
  * kohta muutetaan linkiksi (js/pollo.js korostaLinkit). Sanat tulevat
- * VAIN pelin omasta indeksistä — merkinnän otsikosta ja aiheen nimestä
- * — eivät koskaan mallin tekstistä. Lyhyet ja yleiset sanat jätetään
- * pois, jottei linkki tarttuisi sanaan "ruoka" keskellä lausetta.
+ * VAIN pelin omasta indeksistä — merkinnän nimisanoista, otsikosta ja
+ * aiheen nimestä — eivät koskaan mallin tekstistä. Lyhyet ja yleiset
+ * sanat jätetään pois, jottei linkki tarttuisi sanaan "ruoka" keskellä
+ * lausetta.
  *
- * Järjestys on tarkkuusjärjestys: otsikon sanat ensin (ne nimeävät
- * juuri tämän jutun), aiheen nimi vasta perässä.
+ * Järjestys on tarkkuusjärjestys. Nähtävyysjutussa otsikko ON kohteen
+ * nimi, joten se tulee ensin; muissa merkinnöissä ensimmäisenä ovat
+ * kohdekartalta liitetyt nimet (liitaKohdenimet), koska "Schönbrunn"
+ * nimeää kohteen tarkemmin kuin otsikko "Keisarin aamiaishuone
+ * eläintarhan keskellä". Aiheen nimi on aina viimeisenä.
  */
 export function ankkuriSanat(m) {
   const ulos = [];
@@ -308,7 +430,16 @@ export function ankkuriSanat(m) {
       if (!ulos.includes(sana)) ulos.push(sana);
     }
   };
-  lisaa(m?.otsikko);
+  const nimet = () => {
+    for (const sana of m?.nimiSanat ?? []) if (!ulos.includes(sana)) ulos.push(sana);
+  };
+  if (m?.tyyppi === 'nahtavyys') {
+    lisaa(m?.otsikko);
+    nimet();
+  } else {
+    nimet();
+    lisaa(m?.otsikko);
+  }
   lisaa(m?.aiheNimi);
   return ulos;
 }

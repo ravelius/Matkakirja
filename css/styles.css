@@ -10954,6 +10954,128 @@ a.pollo-tekstilinkki {
 
 a.pollo-tekstilinkki:hover { background: rgba(122, 85, 20, 0.12); }
 
+/*
+ * PÖLLÖLINKKI: [[avainkäsite]] keskellä vastausta (omistajan tilaus
+ * 13.8.2026).
+ *
+ * Toinen linkkilaji, joten se on myös näytettävä toisenlaisena:
+ * artikkelilinkki vie pelin omaan juttuun ja on YHTENÄINEN viiva kullan
+ * sävyssä, pöllölinkki kysyy pöllöltä lisää ja on PISTEVIIVA himmeässä
+ * musteessa. Ero näkyy silloinkin, kun molemmat ovat samassa lauseessa.
+ */
+a.pollo-kasitelinkki {
+  color: var(--pollo-muste-himmea);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+a.pollo-kasitelinkki:hover { color: var(--pollo-muste); background: rgba(107, 90, 69, 0.12); }
+
+/* Katkennut striimi: yksi hienovarainen rivi vastauksen alla. Se ei ole
+   pöllön puhetta vaan tilatieto, joten se on kursiivia ja himmeää. */
+.pollo-virherivi {
+  color: var(--pollo-muste-himmea);
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------------
+   KEVYT KUVAPOPUP nähtävyyslinkin päällä (js/pollo.js avaaKuvapopup).
+
+   Linkki nähtävyysjuttuun avaa ensin pelkän kuvan ja sen valmiin
+   kuvatekstin — vilkaisun, ei lukusessiota. Kortti on samaa paperia kuin
+   chat-paneeli, ja se sulkeutuu napauttamalla kortin ulkopuolelle. Chat
+   jää auki taustalle, joten paluu keskusteluun ei vaadi mitään.
+   --------------------------------------------------------------------- */
+
+/*
+ * Popup on <dialog> eikä paneelin sisään asemoitu kerros: alanappirivi
+ * on muunnettu (transform), ja muunnettu esivanhempi nappaa
+ * position: fixed -kerroksen itseensä — kortti asettui ruudun sijasta
+ * rivin sisään. Ylin kerros ratkaisee sen ja pitää kortin myös auki
+ * olevan lehden päällä.
+ */
+dialog.pollo-kuvatausta {
+  margin: auto;
+  max-width: 100vw;
+  max-height: 100dvh;
+  padding: 1rem;
+  border: none;
+  background: transparent;
+  overflow: visible;
+}
+
+dialog.pollo-kuvatausta[open] {
+  display: grid;
+  place-items: center;
+}
+
+dialog.pollo-kuvatausta::backdrop { background: rgba(20, 16, 10, 0.55); }
+
+dialog.pollo-kuvatausta:focus,
+dialog.pollo-kuvatausta:focus-visible { outline: none; }
+
+.pollo-kuvakortti {
+  --pollo-paperi: #f5f0e2;
+  --pollo-paperi-2: #ece2c8;
+  --pollo-muste: #211d18;
+  --pollo-muste-himmea: #6b5a45;
+  --pollo-korostus: #7a5514;
+  --pollo-viiva: rgba(122, 85, 20, 0.32);
+
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: min(20rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  padding: 0.6rem;
+  border: 1px solid var(--pollo-viiva);
+  border-radius: var(--radius);
+  background-color: var(--pollo-paperi);
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+  color: var(--pollo-muste);
+  font-family: var(--font-luku);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
+}
+
+img.pollo-kuva {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  /* Sama seepiasävytys kuin lehden kuvilla ei kuulu tänne: kuva on
+     popupin ainoa sisältö ja saa näkyä sellaisenaan. */
+}
+
+.pollo-kuvateksti {
+  margin: 0;
+  color: var(--pollo-muste-himmea);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+button.pollo-kuvanappi {
+  align-self: flex-start;
+  min-height: 0;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--pollo-korostus);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--pollo-korostus);
+  font-family: var(--font-type);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+button.pollo-kuvanappi:hover { background: rgba(122, 85, 20, 0.12); }
+
 /* Jatkokysymykset vastauksen alla. Samaa muotoa kuin avausruudun
    ehdotukset (.pollo-ehdotus), mutta virran sisällä: ne kuuluvat juuri
    siihen vastaukseen, jonka perässä ne ovat. */
@@ -11099,11 +11221,28 @@ input.pollo-kehittaja-kentta {
 
 input.pollo-kehittaja-kentta::placeholder { color: var(--pollo-muste-himmea); opacity: 0.7; }
 
+/*
+ * SANELUTILA NÄKYY NAPISSA (omistajan tilaus 13.8.2026). Kuunnellessaan
+ * nappi on täyteinen, siinä on pysäytysneliö ja sana "Lopeta", ja se
+ * sykkii kevyesti. Sisältö on kahdessa sarakkeessa, koska lepotilan
+ * nappi on yhden kuvakkeen ruutu (place-items: center).
+ */
 .pollo-paneeli button.pollo-mikki.kuuntelee {
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
   background: var(--pollo-korostus);
   color: #f7f1e2;
   border-color: var(--pollo-korostus);
   animation: pollo-syke 1.4s ease-in-out infinite;
+}
+
+.pollo-mikki-teksti {
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
 }
 
 @keyframes pollo-syke {

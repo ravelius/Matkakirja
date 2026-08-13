@@ -27,6 +27,7 @@ import {
   kuukausiAvain,
   lueLista,
   lueLuku,
+  luoJatkoSuodatin,
   paivaAvain,
   poimiEhdotukset,
   poimiJatkot,
@@ -145,6 +146,31 @@ pitää liittyä juuri antamaasi vastaukseen ja olla tosimaailman \
 kysymyksiä — ei pelin tehtäviin, pisteisiin tai juoneen liittyviä. \
 Älä viittaa vastauksessasi näihin riveihin äläkä selitä niitä.`;
 
+/*
+ * PÖLLÖLINKIT — avainkäsitteet vastaustekstissä (omistajan tilaus
+ * 13.8.2026).
+ *
+ * Vastauksessa voi olla 1–3 käsitettä, joita napauttamalla pelaaja saa
+ * pöllöltä lisää samasta asiasta. Malli merkitsee ne suoraan tekstiin
+ * kaksoishakasulkeisiin, ja PALVELIN JÄTTÄÄ MERKINNÄT PAIKALLEEN: vain
+ * asiakas tietää, mihin kohtaan tekstiä linkki kuuluu, joten sijainti
+ * on säilytettävä. Asiakas jäsentää merkinnät tekstisolmuista
+ * turvallisesti (js/pollo.js jasennaKasitteet) eikä koskaan tulkitse
+ * vastausta merkkauksena.
+ *
+ * Jos merkinnät jäävät tulematta tai ovat rikki, asiakas näyttää tekstin
+ * puhtaana — hakasulkeet eivät saa näkyä pelaajalle missään tilanteessa.
+ */
+const KASITEKEHOTE = `AVAINKÄSITTEET
+Merkitse vastauksesi sisään yhdestä kolmeen avainkäsitettä \
+kaksoishakasulkeilla: [[käsite]]. Käsite on paikka, ilmiö, henkilö tai \
+asia, josta pelaaja voisi haluta kuulla lisää. Merkintä kirjoitetaan \
+suoraan lauseeseen sen luonnollisella taivutusmuodolla ([[höyryveturit]] \
+vetivät junia), ei erilliselle riville eikä luetteloksi. Älä merkitse \
+samaa käsitettä kahdesti, älä merkitse pelaajan omaa kysymystä äläkä \
+mainitse merkintöjä vastauksessasi. Jos mikään käsite ei ole \
+luonnollinen, jätä merkinnät kokonaan pois.`;
+
 /** Ehdotuskehote: erillinen, koska tehtävä on aivan toinen. */
 const EHDOTUSKEHOTE = `Keksi kaksi lyhyttä kysymystä, jotka pelaaja voisi \
 haluta kysyä sinulta juuri nyt. Nojaa alla olevaan tilannekuvaukseen: hyvä \
@@ -231,9 +257,9 @@ async function kasvataLaskuri(kv, avain, elinaikaS) {
   return arvo;
 }
 
-/** Yksi kutsu Anthropicin rajapintaan. Palauttaa pelkän tekstin. */
-async function kysyMallilta(env, { jarjestelma, viestit, maxTokens }) {
-  const vastaus = await fetch(RAJAPINTA, {
+/** Yksi kutsu Anthropicin rajapintaan. `striimi` avaa SSE-vastauksen. */
+async function kutsuRajapintaa(env, { jarjestelma, viestit, maxTokens, striimi = false }) {
+  return fetch(RAJAPINTA, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
@@ -245,8 +271,14 @@ async function kysyMallilta(env, { jarjestelma, viestit, maxTokens }) {
       max_tokens: maxTokens,
       system: jarjestelma,
       messages: viestit,
+      ...(striimi ? { stream: true } : {}),
     }),
   });
+}
+
+/** Yksi kutsu Anthropicin rajapintaan. Palauttaa pelkän tekstin. */
+async function kysyMallilta(env, { jarjestelma, viestit, maxTokens }) {
+  const vastaus = await kutsuRajapintaa(env, { jarjestelma, viestit, maxTokens });
   if (!vastaus.ok) {
     /*
      * Virhevastauksen runkoa EI lokiteta eikä välitetä pelaajalle:
@@ -269,6 +301,129 @@ async function kysyMallilta(env, { jarjestelma, viestit, maxTokens }) {
     .map((lohko) => lohko.text)
     .join('\n')
     .trim();
+}
+
+/* ------------------------------------------------------------------ */
+/* Suoratoisto                                                         */
+/* ------------------------------------------------------------------ */
+
+/*
+ * SUORATOISTO (omistajan tilaus 13.8.2026).
+ *
+ * Pöllön vastaus kirjoittuu ruudulle sitä mukaa kuin se syntyy, jotta
+ * odotus ei ole tyhjä ruutu. Ketju on kaksiosainen:
+ *
+ *   1. Worker pyytää mallilta stream: true ja lukee Anthropicin oman
+ *      SSE-virran. Jokainen tekstinpala kulkee JATKOSUODATTIMEN läpi
+ *      (rajat.js luoJatkoSuodatin), joka pidättää rivin verran tekstiä
+ *      eikä päästä jatkokysymysten merkintää koskaan läpi.
+ *   2. Asiakkaalle lähetetään oma, yksinkertaisempi SSE:
+ *        event: pala   {"teksti": "..."}   — näytettävä lisä
+ *        event: loppu  {"vastaus": "...", "jatkot": [...]}
+ *        event: virhe  {"viesti": "..."}
+ *      Lopputapahtuman vastaus on koko teksti jäsennettynä
+ *      poimiJatkoilla, joten asiakas voi rakentaa lopullisen sisällön
+ *      siitä eikä paloista — silloin myös rikkoutunut palaraja korjautuu.
+ *
+ * Rajat toimivat kuten ennen: laskuri kasvaa PYYNNÖSTÄ eikä tokeneista,
+ * ja se on kasvatettu jo ennen tätä kutsua.
+ */
+const SSE_OTSAKKEET = {
+  'content-type': 'text/event-stream; charset=utf-8',
+  'cache-control': 'no-store',
+  connection: 'keep-alive',
+  // Välityspalvelimet eivät saa puskuroida virtaa omaan tahtiinsa.
+  'x-accel-buffering': 'no',
+};
+
+/** Yksi Anthropicin SSE-rivi tekstinpalaksi. Tuntemattomat ohitetaan. */
+function striimiPala(rivi) {
+  if (!rivi.startsWith('data:')) return null;
+  const runko = rivi.slice(5).trim();
+  if (!runko || runko === '[DONE]') return null;
+  try {
+    const tieto = JSON.parse(runko);
+    if (tieto?.type === 'content_block_delta' && tieto?.delta?.type === 'text_delta') {
+      return tieto.delta.text ?? '';
+    }
+  } catch {
+    /* rikkinäinen rivi ohitetaan: virta jatkuu seuraavasta */
+  }
+  return null;
+}
+
+/**
+ * Avaa suoratoistovastauksen asiakkaalle.
+ *
+ * Mallin kutsu tehdään ENNEN virran avaamista: jos rajapinta vastaa
+ * virheellä, pelaajalle voidaan yhä lähettää tavallinen JSON-virhe eikä
+ * puolityhjä striimi.
+ */
+async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
+  const ylavirta = await kutsuRajapintaa(env, {
+    jarjestelma, viestit, maxTokens, striimi: true,
+  });
+  if (!ylavirta.ok || !ylavirta.body) {
+    const virhe = new Error(`rajapinta ${ylavirta.status}`);
+    virhe.status = ylavirta.status;
+    throw virhe;
+  }
+
+  const koodaaja = new TextEncoder();
+  const { readable, writable } = new TransformStream();
+  const kirjoitin = writable.getWriter();
+  const laheta = (laji, data) => kirjoitin.write(
+    koodaaja.encode(`event: ${laji}\ndata: ${JSON.stringify(data)}\n\n`),
+  );
+
+  (async () => {
+    const lukija = ylavirta.body.getReader();
+    const purkaja = new TextDecoder();
+    const suodatin = luoJatkoSuodatin();
+    let raaka = '';
+    let jono = '';
+    try {
+      for (;;) {
+        const { value, done } = await lukija.read();
+        if (done) break;
+        jono += purkaja.decode(value, { stream: true });
+        let i = jono.indexOf('\n');
+        while (i >= 0) {
+          const rivi = jono.slice(0, i).trim();
+          jono = jono.slice(i + 1);
+          const pala = striimiPala(rivi);
+          if (pala) {
+            raaka += pala;
+            const nakyva = suodatin.lisaa(pala);
+            if (nakyva) await laheta('pala', { teksti: nakyva });
+          }
+          i = jono.indexOf('\n');
+        }
+      }
+      // Viimeinen pidätetty rivi mukaan, sitten koko vastaus kerralla.
+      const { hanta } = suodatin.loppu();
+      if (hanta) await laheta('pala', { teksti: hanta });
+      const { vastaus, jatkot } = poimiJatkot(raaka);
+      await laheta('loppu', {
+        vastaus: vastaus || 'En osaa vastata tähän. Kysytkö jotain muuta?',
+        jatkot,
+      });
+    } catch {
+      // Katkennut virta: asiakas näyttää siihen asti tulleen tekstin ja
+      // hienovaraisen virherivin. Mitään pyynnön sisältöä ei lokiteta.
+      console.log('pollo: striimi katkesi');
+      await laheta('virhe', {
+        viesti: 'Pöllön ajatus katkesi kesken lauseen.',
+      }).catch(() => { /* virta oli jo kiinni */ });
+    } finally {
+      await kirjoitin.close().catch(() => { /* suljettu jo */ });
+    }
+  })();
+
+  return new Response(readable, {
+    status: 200,
+    headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut) },
+  });
 }
 
 export default {
@@ -363,8 +518,22 @@ export default {
       }
       viestit.push({ role: 'user', content: kysymys });
 
+      const kehote = `${JARJESTELMAKEHOTE}\n\n${KASITEKEHOTE}\n\n${JATKOKEHOTE}`;
+      /*
+       * Suoratoisto vain pyydettäessä. Vanha kertavastaus jää polulle
+       * varalle: jos asiakas ei osaa lukea SSE:tä tai virta ei aukea,
+       * peli pyytää saman vastauksen tavallisena JSONina.
+       */
+      if (runko?.striimi) {
+        return await striimaaVastaus(env, kors, {
+          jarjestelma: kehote,
+          viestit,
+          maxTokens: MAX_TOKENS,
+        });
+      }
+
       const teksti = await kysyMallilta(env, {
-        jarjestelma: `${JARJESTELMAKEHOTE}\n\n${JATKOKEHOTE}`,
+        jarjestelma: kehote,
         viestit,
         maxTokens: MAX_TOKENS,
       });
