@@ -801,7 +801,8 @@ const KAUPUNGIT = {
     // jäi pelkkää esikaupunkia. Nyt tähtimuoto on keskellä.
     rajat: { pohjoinen: 35.184, etela: 35.166, lansi: 33.350, ita: 33.378 },
   },
-  aleppo: {
+  halab: {
+    // Aleppo. Avain on halab, koska laudan kaupunki-id on halab.
     // Aleppon muurien sisäinen vanhakaupunki: linnoitus idässä,
     // kaupunginportit lännessä ja etelässä, suukin khanit keskellä.
     // Rajaus on tiukka, koska vanhakaupunki on tiivis ja kujaverkko

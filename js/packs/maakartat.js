@@ -2515,7 +2515,13 @@ export const KAUPUNKIKARTAT = {
    * antiikin, bysantin ja ottomaanien kerroksina.
    */
   /*
-   * Aleppon vanhakaupunki (nippu 2, 13.8.2026). Linnoitus omalla
+   * Aleppon vanhakaupunki (nippu 2, 13.8.2026). AVAIN ON halab eikä
+   * aleppo: laudan kaupunki-id on halab (js/packs/middleeast.js), ja
+   * KAUPUNKIKARTAT haetaan sillä id:llä. Väärällä avaimella kartta ei
+   * renderöidy lainkaan eikä virhettä näy missään — tämä huomattiin
+   * vasta selaintarkistuksessa ("aleppo ei laudalla").
+   *
+   * Linnoitus omalla
    * kummullaan idässä, kaupunginportit lännessä ja etelässä, khanit
    * keskellä. Rajaus on tiukka, koska kujaverkko on tiheä.
    *
@@ -2532,8 +2538,8 @@ export const KAUPUNKIKARTAT = {
    * kulttuurijuttua ilman että lähde vie sotaan. Valitut kuusi
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
-  aleppo: {
-    polku: 'assets/kartat/aleppo-keskusta.png',
+  halab: {
+    polku: 'assets/kartat/halab-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: {
       pohjoinen: 36.2075, etela: 36.193, lansi: 37.146, ita: 37.168,
