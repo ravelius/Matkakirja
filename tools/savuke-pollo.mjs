@@ -1122,21 +1122,16 @@ vaadi('talletettu koodi lähtee otsakkeessa',
   && (koodillinen.__otsakkeet ?? {})['x-pollo-kehittaja'] === 'testikoodi-123',
   JSON.stringify((koodillinen.__otsakkeet ?? {})['x-pollo-kehittaja']));
 
-// Kehittäjäkoodin kenttä näkyy vain kehittäjätilassa.
-const koodikentta = await sivu.evaluate(async () => {
-  const pollo = window.matkakirjaPollo;
-  const ennen = pollo.kehittajaRivi.hidden;
-  localStorage.setItem('matkakirja-kehittaja', '1');
-  pollo.sulje();
-  await new Promise((r) => setTimeout(r, 150));
-  pollo.avaa();
-  await new Promise((r) => setTimeout(r, 400));
-  const jalkeen = pollo.kehittajaRivi.hidden;
-  localStorage.removeItem('matkakirja-kehittaja');
-  return { ennen, jalkeen };
-});
-vaadi('kehittäjäkoodin kenttä näkyy vain kehittäjätilassa',
-  koodikentta.ennen === true && koodikentta.jalkeen === false, JSON.stringify(koodikentta));
+/*
+ * Erillistä koodikenttää ei enää ole (13.8.2026): koodi talletetaan
+ * kehittäjätilan kytkennässä (js/main.js). Paneelissa ei saa olla
+ * kenttää lainkaan.
+ */
+const koodikentta = await sivu.evaluate(() => ({
+  kenttia: document.querySelectorAll('.pollo-kehittaja, .pollo-kehittaja-kentta').length,
+}));
+vaadi('erillistä kehittäjäkoodikenttää ei ole paneelissa',
+  koodikentta.kenttia === 0, JSON.stringify(koodikentta));
 
 /* ================================================================== */
 /* 4) Spoilerisuoja ja paikallinen aineisto oikeasta pyyntörungosta     */

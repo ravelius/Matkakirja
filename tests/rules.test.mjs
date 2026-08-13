@@ -3614,8 +3614,11 @@ test('kehittäjätila on salasanan takana ja pois päältä oletuksena', () => {
   // Salasana on kevyt lukko: se estää vahingossa avaamisen. Jos tarkistus
   // katoaa, tila aukeaa yhdellä napautuksella kenen tahansa käsissä.
   assert.match(main, /KEHITTAJA_SALASANA = '5545'/, 'salasana puuttuu');
-  assert.match(main, /kehittajaSalasana\.value\.trim\(\) !== KEHITTAJA_SALASANA/,
+  // Kaksi koodia (13.8.2026): pääkoodi ja rajattu 1122 — kumpikin
+  // tarkistetaan, ja väärä syöte kaatuu virheeseen.
+  assert.match(main, /syote !== KEHITTAJA_SALASANA && syote !== KEHITTAJA_SALASANA_RAJATTU/,
     'salasanaa ei tarkisteta');
+  assert.match(main, /KEHITTAJA_SALASANA_RAJATTU = '1122'/, 'rajattu koodi puuttuu');
   // Oletus on pois päältä: tila kytkeytyy vain, kun se on nimenomaan
   // tallennettu — puuttuva arvo ei saa tarkoittaa päällä.
   assert.match(ui, /localStorage\.getItem\(KEHITTAJA_AVAIN\) === '1'/,

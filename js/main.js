@@ -679,6 +679,19 @@ paataPaivitysruutu();
  * suojattavaa.
  */
 const KEHITTAJA_SALASANA = '5545';
+/*
+ * Rajattu kehittäjäkoodi (omistajan päätös 13.8.2026): avaa saman
+ * kehittäjätilan, mutta pöllön käyttörajat jäävät voimaan — pääkoodi
+ * talletetaan pöllön otsakkeeseen, tämä ei.
+ */
+const KEHITTAJA_SALASANA_RAJATTU = '1122';
+const POLLO_KOODIAVAIN = 'matkakirja-pollo-kehittajakoodi';
+function talletaPolloKoodi(koodi) {
+  try {
+    if (koodi) localStorage.setItem(POLLO_KOODIAVAIN, koodi);
+    else localStorage.removeItem(POLLO_KOODIAVAIN);
+  } catch { /* yksityistila: pöllön ohitus jää pois, muu toimii */ }
+}
 const kehittajaDialog = document.getElementById('kehittaja-dialog');
 const kehittajaSalasana = document.getElementById('kehittaja-salasana');
 const kehittajaVirhe = document.getElementById('kehittaja-virhe');
@@ -737,17 +750,22 @@ function avaaKehittajaIkkuna() {
 function kytkeKehittaja() {
   if (kehittajaTilaPaalla()) {
     asetaKehittajaTila(false);
+    talletaPolloKoodi('');
     ui?.paivitaKehittajaTila();
     paivitaVersioKulma();
     kehittajaDialog.close();
     return;
   }
-  if (kehittajaSalasana.value.trim() !== KEHITTAJA_SALASANA) {
+  const syote = kehittajaSalasana.value.trim();
+  if (syote !== KEHITTAJA_SALASANA && syote !== KEHITTAJA_SALASANA_RAJATTU) {
     kehittajaVirhe.hidden = false;
     kehittajaSalasana.value = '';
     kehittajaSalasana.focus();
     return;
   }
+  // Pääkoodi kulkee pöllölle otsakkeessa (worker vertaa salaisuuteensa
+  // ja ohittaa rajat); rajattu koodi 1122 ei koskaan lähde otsakkeessa.
+  talletaPolloKoodi(syote === KEHITTAJA_SALASANA ? syote : '');
   asetaKehittajaTila(true);
   ui?.paivitaKehittajaTila();
   paivitaVersioKulma();
