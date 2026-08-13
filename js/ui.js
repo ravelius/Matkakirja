@@ -810,8 +810,12 @@ const LENNON_LUKUAIKA_MS = 1600;
  * Kirjoituksen viive on erillinen luku eikä osa typeTextiä, koska
  * lennon kesto lasketaan siitä: lennonKesto lisää saman viiveen
  * kirjoituksen kestoon, jottei kone laskeudu kesken lauseen.
+ *
+ * 13.8.2026: omistaja aikaisti luentaa vielä puolellatoista sekunnilla
+ * (3800 → 2300) — moottorin ei tarvitse nousta yhtä pitkään ennen kuin
+ * kertoja aloittaa.
  */
-const LENNON_PUHE_MS = 3800;
+const LENNON_PUHE_MS = 2300;
 const LENNON_TEKSTI_VIIVE_MS = 400;
 /*
  * Varoventtiili sille odotukselle, jolla kalvo varmistaa ettei kone

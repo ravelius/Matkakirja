@@ -84,6 +84,16 @@ const VOIMA = 0.14;
  * toiseen.
  */
 const ETUSIVUN_VOIMA = 1.4;
+/*
+ * Avauslennon oma kerroin (omistajan havainto 13.8.2026: "lentokoneen
+ * kuulutus ei ole enää kuulunut taustalla"). Matkustamoäänitteen
+ * kuulutus hukkui, kun kertojan väistö (VAISTO_PUHE 0,25) painaa
+ * taustan neljäsosaan juuri repliikin ajaksi — ja luenta alkaa nyt
+ * entistä aiemmin. Kerroin nostaa lennon taustan sekä vapaan että
+ * väistetyn tason; lopullinen lukema on kuulokokeen nuppi kuten
+ * etusivullakin.
+ */
+const LENNON_VOIMA = 1.6;
 const HAIVYTYS_MS = 1800;
 // Sama äänite alkaa joka kerta eri kohdasta, jottei paikka kuulosta
 // itseään toistavalta kun sinne palaa. Loppuun jätetään varaa, ettei
@@ -377,7 +387,8 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
   // siellä ääni soi yksin. Lentomatka on vakiopaikka vain
   // aloituskohtansa puolesta, ja kabiini on jo kertaalleen kalibroitu
   // täydelle voimalleen.
-  const paikanVoima = cityId === 'etusivu' ? ETUSIVUN_VOIMA : 1;
+  const paikanVoima = cityId === 'etusivu' ? ETUSIVUN_VOIMA
+    : (cityId === 'lentomatka' ? LENNON_VOIMA : 1);
   const oma = {
     cityId,
     url,
