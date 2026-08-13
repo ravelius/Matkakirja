@@ -2571,6 +2571,62 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kisanin portti', lat: 33.5065, lon: 36.3157 },
     ],
   },
+  isfahan: {
+    polku: 'assets/kartat/isfahan-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 32.6725, etela: 32.6485, lansi: 51.666, ita: 51.689,
+    },
+    esittely: 'Isfahanin vanha kaupunki on kartalla tiheä kujaverkko, '
+      + 'jonka läpi vedetään kaksi eri-ikäistä viivastoa. Vanhempi on '
+      + 'orgaaninen: lyhyitä mutkittelevia kujia, jotka kiertävät '
+      + 'kortteleita eivätkä noudata mitään ruudukkoa. Uudempi on '
+      + 'suora, ja se näkyy leveinä väylinä, jotka halkovat kuvan '
+      + 'luoteesta kaakkoon ja lännestä itään.\n\n'
+      + 'Keskellä kuvaa erottuu pieni vaalea suorakaide, joka ei ole '
+      + 'rakennus vaan vesiallas: se on kaupungin suuren aukion '
+      + 'keskellä. Aukion laidoilla ovat Ali Qapu ja Shaahin moskeija, '
+      + 'ja niistä pohjoiseen johtaa basaari, joka päättyy '
+      + 'Jameh-moskeijaan kartan yläosassa. Etelässä ovat Hasht '
+      + 'Behesht ja Chahar Baghin koulu leveän puistokadun varrella.',
+    kohteet: [
+      { nimi: 'Jameh-moskeija', lat: 32.6697, lon: 51.6853 },
+      { nimi: 'Isfahanin basaari', lat: 32.6631, lon: 51.6753 },
+      { nimi: 'Ali Qapu', lat: 32.6572, lon: 51.6767 },
+      { nimi: 'Shaahin moskeija', lat: 32.6544, lon: 51.6775 },
+      { nimi: 'Hasht Behesht', lat: 32.6534, lon: 51.6702 },
+      { nimi: 'Chahar Baghin koulu', lat: 32.6513, lon: 51.6693 },
+    ],
+  },
+  teheran: {
+    polku: 'assets/kartat/teheran-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 35.692, etela: 35.6715, lansi: 51.4115, ita: 51.4365,
+    },
+    esittely: 'Teheranin vanha ydin on kartalla ruutu, jonka halki '
+      + 'kulkee kaksi pitkää suoraa väylää pohjoisesta etelään. '
+      + 'Vasemmassa laidassa on laaja puisto, jonka sisäiset polut '
+      + 'kiertävät soikioina, ja sen alapuolella korttelit ovat suuria '
+      + 'ja harvakatuisia.\n\n'
+      + 'Idässä ja etelässä kuva muuttuu toisenlaiseksi: siellä on '
+      + 'tiheä kujaverkko, jossa viivat ovat ohuita ja lyhyitä. '
+      + 'Eteläreunan tiheä tilkku on basaari — se ei ole yksi halli '
+      + 'vaan katettujen kujien kortteli, ja juuri siksi sen kujat '
+      + 'näkyvät kartalla jalankulkureitteinä eivätkä katuina. '
+      + 'Kohteet nousevat etelästä pohjoiseen: basaari alimpana, sen '
+      + 'yläpuolella Golestanin palatsi ja Dar al-Fonun, ja ylimpänä '
+      + 'kansallismuseo lännessä sekä Masoudiehin talo ja '
+      + 'Sepahsalarin moskeija idässä.',
+    kohteet: [
+      { nimi: 'Teheranin basaari', lat: 35.675, lon: 51.4194 },
+      { nimi: 'Golestanin palatsi', lat: 35.6797, lon: 51.4203 },
+      { nimi: 'Dar al-Fonun', lat: 35.6838, lon: 51.4219 },
+      { nimi: 'Iranin kansallismuseo', lat: 35.687, lon: 51.4146 },
+      { nimi: 'Masoudiehin talo', lat: 35.689, lon: 51.4281 },
+      { nimi: 'Sepahsalarin moskeija', lat: 35.6888, lon: 51.4329 },
+    ],
+  },
   tabriz: {
     polku: 'assets/kartat/tabriz-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

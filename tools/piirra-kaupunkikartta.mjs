@@ -821,6 +821,77 @@ const KAUPUNGIT = {
     // menisivät päällekkäin.
     rajat: { pohjoinen: 38.085, etela: 38.07, lansi: 46.286, ita: 46.304 },
   },
+  teheran: {
+    // Teheranin vanha ydin: basaari etelässä, Golestanin palatsi ja
+    // Dar al-Fonun sen pohjoispuolella, kansallismuseo lännessä sekä
+    // Masoudiehin talo ja Sepahsalarin moskeija idässä. Ruutu on lähes
+    // neliö (2,6 x 2,4 km).
+    //
+    // KOHTEET TARKISTETTIIN LÄHTEISTÄ ENNEN PIIRTOA (Riadin opetus).
+    // Koordinaatit ovat artikkelien coord-malleista:
+    //   Grand Bazaar, Tehran      35,6750 / 51,4194
+    //   Golestan Palace           35,6797 / 51,4203  (Unesco)
+    //   Dar al-Fonun              35,6838 / 51,4219
+    //   National Museum of Iran   35,6870 / 51,4146
+    //   Masoudieh Mansion         35,6890 / 51,4281
+    //   Sepahsalar Mosque         35,6888 / 51,4329
+    // Shams-ol-Emareh jätettiin pois, koska se on Golestanin palatsin
+    // sisällä. Abginehin lasimuseo, National Garden ja Park-e Shahr
+    // ovat lähteellisiä varakohteita, jos jokin näistä osoittautuu
+    // ongelmalliseksi.
+    //
+    // palvelutiet: true, ja syy on MITATTU Bagdadin ohjeen mukaan.
+    // Ensimmäinen ajo (2,6 x 2,4 km ilman lippua) antoi 1 636
+    // elementtiä, mutta juuri basaarin kortteli jäi tyhjäksi paperiksi.
+    // Overpassin laskenta samalle ruudulle:
+    //   highway=residential  1 307 way
+    //   highway=service        262 way
+    //   highway=footway        720 way
+    //   building               447 way
+    // Basaarin katetut kujat ovat service- ja footway-teitä, eivät
+    // residentialia. Työkalu ei piirrä footwaytä lainkaan (sama
+    // rajoitus kuin Tallinnassa), joten servicen mukaanotto on se osa,
+    // joka on saatavissa. Rakennuksia työkalu ei piirrä millään
+    // kaupungilla, joten niiden 447 ei ole tässä ratkaisevaa.
+    // jalkakaydat: true — ja tämä on koko työkalun uusi taso, joka
+    // lisättiin juuri Teheranin takia (13.8.2026). Palvelutiet yksin
+    // eivät riittäneet: toisella ajolla basaarin kortteli oli yhä
+    // tyhjää paperia, vaikka se on kartan tärkein kohde. Syy on sama
+    // kuin Tallinnassa mitattiin, mutta Tallinnassa se hyväksyttiin,
+    // koska kartan juoni oli muurirengas — täällä juoni on basaari.
+    // Teheranin katetut kujat ovat OSM:ssä footway-teitä (720 kpl
+    // ruudussa), eikä työkalu piirtänyt niitä millään kaupungilla.
+    // Taso on lippujen takana kuten palvelutiet, joten yksikään vanha
+    // kartta ei muutu.
+    rajat: { pohjoinen: 35.692, etela: 35.6715, lansi: 51.4115, ita: 51.4365 },
+    palvelutiet: true,
+    jalkakaydat: true,
+  },
+  isfahan: {
+    // Isfahanin vanha ydin: Jameh-moskeija pohjoisessa, basaari sen
+    // eteläpuolella, Ali Qapu ja Shaahin moskeija Naqsh-e Jahanin
+    // laidoilla ja etelässä Hasht Behesht ja Chahar Baghin koulu.
+    // Ruutu on 2,7 x 2,2 km.
+    //
+    // KOHTEET TARKISTETTIIN LÄHTEISTÄ ENNEN PIIRTOA. Oikeat
+    // artikkelinimet eivät olleet ne, joita ensin kokeilin — sama
+    // ansa kuin Riadissa. Toimivat nimet ja coord-mallien pisteet:
+    //   Jameh Mosque of Isfahan  32,6697 / 51,6853
+    //   Grand Bazaar, Isfahan    32,6631 / 51,6753
+    //   Ali Qapu                 32,6572 / 51,6767
+    //   Shah Mosque (Isfahan)    32,6544 / 51,6775
+    //   Hasht Behesht            32,6534 / 51,6702
+    //   Chaharbagh School        32,6513 / 51,6693
+    // Qeysarie Gate on lähteellinen varakohde. Khaju-silta, Vankin
+    // katedraali ja Monar Jonban jäävät ulos: ne ovat 2,5–8 km
+    // etelässä ja lännessä, ja mukaan ottaminen kaksinkertaistaisi
+    // rajauksen. Naqsh-e Jahanin aukio itse on varattu IRN-maalehdelle.
+    //
+    // EI palvelutiet- eikä jalkakaydat-lippua, ja se on mitattu:
+    // ruudussa on 1 754 residential-tietä mutta vain 68 service-tietä,
+    // eli katuverkko on jo valmiiksi tiheä ilman lippuja.
+    rajat: { pohjoinen: 32.6725, etela: 32.6485, lansi: 51.666, ita: 51.689 },
+  },
   riad: {
     // Riad: vanhankaupungin ydin etelässä, Murabban hallintokortteli
     // pohjoisessa. Ruutu on lähes neliö (2,4 x 2,0 km).
@@ -951,6 +1022,11 @@ const KAUPUNGIT = {
  * kapeammat mutta kaikki viisi luokkaa erottuvat yhä toisistaan.
  */
 const KADUT = [
+  // Jalkakäytävät ja polut kaikkein ohuimpana ja haaleimpana. Ne
+  // piirtyvät vain kaupungeissa, joilla on `jalkakaydat: true` —
+  // useimmissa ne ovat suojateitä ja puistopolkuja, jotka siroittavat
+  // kuvan. Teheranissa ne ovat basaarin katetut kujat.
+  { luokat: ['footway', 'path'], vari: '#ded6c0', leveys: 0.7 },
   // Palvelutiet ohuimpana ja haaleimpana: ne ovat kujia eivätkä katuja,
   // ja ne piirtyvät vain kaupungeissa, joilla on `palvelutiet: true`.
   { luokat: ['service'], vari: '#d2c7ac', leveys: 0.9 },
@@ -990,7 +1066,7 @@ const MUURI = '#6f5a3c';
 const RAUNIO = '#ece0c2';
 const RAUNIOREUNA = '#c4b189';
 
-async function haeOverpass(rajat, palvelutiet = false) {
+async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false) {
   const alue = `(${rajat.etela},${rajat.lansi},${rajat.pohjoinen},${rajat.ita})`;
   /*
    * PALVELUTIET VAIN PYYDETTÄESSÄ (`palvelutiet: true`).
@@ -1011,9 +1087,11 @@ async function haeOverpass(rajat, palvelutiet = false) {
    * suodatetaan siksi pois kyselystä, ellei kaupunki sitä pyydä;
    * silloin sen piirtokerros jää tyhjäksi eikä mitään piirry.
    */
+  const JALKA = ['footway', 'path'];
   const luokat = KADUT
     .flatMap((k) => k.luokat)
     .filter((l) => l !== 'service' || palvelutiet)
+    .filter((l) => !JALKA.includes(l) || jalkakaydat)
     .join('|');
   const kysely = `[out:json][timeout:120];(
     way["highway"~"^(${luokat})$"]${alue};
@@ -1085,10 +1163,10 @@ async function haeOverpass(rajat, palvelutiet = false) {
  * minuutti, jonka kysely ehti kestää. Kolme yritystä kasvavalla
  * odotuksella riitti kaikkiin tässä kohdattuihin katkoihin.
  */
-async function haeOverpassSitkeasti(rajat, palvelutiet = false, yrityksia = 3) {
+async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 3) {
   for (let i = 1; ; i++) {
     try {
-      return await haeOverpass(rajat, palvelutiet);
+      return await haeOverpass(rajat, palvelutiet, jalkakaydat);
     } catch (virhe) {
       if (i >= yrityksia) throw virhe;
       const odotus = 15000 * i;
@@ -1750,6 +1828,7 @@ console.log('Haetaan OpenStreetMap-aineisto (Overpass)…');
 const elementit = await haeOverpassSitkeasti(
   KAUPUNGIT[kaupunki].rajat,
   KAUPUNGIT[kaupunki].palvelutiet ?? false,
+  KAUPUNGIT[kaupunki].jalkakaydat ?? false,
 );
 console.log(`${elementit.length} elementtiä.`);
 /*

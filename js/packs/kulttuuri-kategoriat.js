@@ -9414,4 +9414,256 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * TEHERANIN KANSISIVU (nippu 2, 13.8.2026). IRN-maalehti vie
+   * historian, rakennukset, puutarhat, ruoan ja käsityön, ja
+   * Tabrizin kaupunkilehti vei luonnon.
+   */
+  teheran: [
+    {
+      id: 'kaupunki',
+      nimi: 'Teheran',
+      johdanto: 'Qajar-kaudella Teheranissa kerrotaan olleen jopa viisikymmentä '
+        + 'takyeh-taloa, kaupungin ensimmäisen yksityisen museon '
+        + 'kokoelmassa on 19 000 käsikirjoitusta, ja Daneshjoo-puiston '
+        + 'kulmassa seisoo halkaisijaltaan 34-metrinen pyöreä '
+        + 'teatteritalo.',
+      kansikuvat: [
+        {
+          tiedosto: 'National Garden Gate Tehran.jpg',
+          selite: 'Bagh-e Mellin portti sateen jälkeen. Keskellä on tiilinen '
+            + 'porttirakennus, jonka kaarevan puuoven yläpuolella on '
+            + 'värillisiä kaakelitauluja ja persiankielisiä kirjoituksia; '
+            + 'oven sivuilla on kaksi pienempää kaariaukkoa ja ylhäällä '
+            + 'kaksi tornia, joiden huipulla on tumma katos ja terävä '
+            + 'piikki. Vasemmalla jatkuu pitkä tiilitalo, jonka '
+            + 'julkisivussa on pilastereita, kaakelinauha ja rautainen '
+            + 'aita; oikealla on toinen talo ja sen edessä lipputankoja. '
+            + 'Kadulla erottuvat suojatien raidat, keltainen sulkupuomi, '
+            + 'rivi oransseja liikennekartioita ja puna-valko-vihreäksi '
+            + 'maalattu reunakivi. Nuoret puut ovat lähes lehdettömiä, '
+            + 'asfaltti on märkä ja taivas harmaa.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+        {
+          tiedosto: 'Irán (RPS 10-10-2019) Aprendiendo de los mayores.jpg',
+          selite: 'Ruokakoju Teheranissa. Etualalla on kaksi suurta '
+            + 'kuparipataa, joiden suulla on leveä teräsrengas: '
+            + 'vasemmassa on vihreää yrttikeittoa, oikeassa vaaleaa '
+            + 'keitosta, ja siitä nostaa kauhalla harmaaseen '
+            + 'collegepaitaan pukeutunut mies, jonka toisessa kädessä on '
+            + 'valkoinen kulho. Miehen kasvot jäävät kuvan ulkopuolelle. '
+            + 'Vasemmalla seisoo sinipaitainen poika ja katsoo patoja. '
+            + 'Takana näkyy myymälän hyllyjä, kaksi samovaaria, '
+            + 'kehystettyjä kuvia, taulutelevisio ja tarjotin, jolla on '
+            + 'kasoittain vaaleanruskeita palleroita sekä keltaista ja '
+            + 'oranssia jauhetta.',
+          lahde: 'Raimundo Pastor y Pilar Pastor, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '30 Tir street in Tehran 2019 by Mardetanha (101).jpg',
+          selite: 'Katukoju 30 Tir -kadulla Teheranissa. Tummaan esiliinaan '
+            + 'pukeutunut myyjä pitää toisessa kädessä kuviollista '
+            + 'pahvivuokaa ja lappaa siihen leveällä lastalla paistettuja '
+            + 'perunanlohkoja; kasvot jäävät kuvan ulkopuolelle. Edessä '
+            + 'on metallilaatikko täynnä samoja lohkoja ja sen oikealla '
+            + 'puolella matala pelti tummaksi grillattua ruokaa sekä '
+            + 'valkokahvainen työkalu. Taustalla on pinoja oransseja '
+            + 'muovirasioita ja lasipurkki. Valo on illan keinovaloa.',
+          lahde: 'Mardetanha, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaksikymmentätuhatta katsojaa saman kehän ympärille',
+          tiedosto: 'Antoin-Sevruguin-Blick-auf-die-zentrale-Bühne-und-Zuschauerränge-des-Staatstheaters-(Takya-Dawlat)-in-Teheran-Museum-Rietberg-2023.00010.68.jpg',
+          teksti: 'Naser al-Din Shahin käskystä Teheraniin valmistui vuonna '
+            + '1868 takyeh eli talo, johon kokoonnutaan muharram-kuun '
+            + 'ta\'ziyeh-esitysten ääreen. Takyeh Dowlatiin mahtui 20 000 '
+            + 'ihmistä, ja se oli Iranin historian suurin '
+            + 'teatterirakennus. Arkkitehdiksi mainitaan Hossein-Ali '
+            + 'Mehrin. Talolla oli aluksi 24 metriä korkea pyöreä yläosa '
+            + 'ja teräskupoli, mutta molemmat purettiin 1800-luvun '
+            + 'lopulla, koska painon pelättiin vaurioittavan salin '
+            + 'kattoa. Samuel Benjamin vertasi taloa Veronan areenaan. '
+            + 'Itse rakennusta ei ole enää: sen paikalle nousi '
+            + '1940-luvulla pankkitalo. Qajar-kaudella koko Teheranissa '
+            + 'kerrotaan olleen jopa viisikymmentä takyeh-taloa.',
+          selite: 'Takyeh Dowlatin sisusta 1800-luvun lopulla. Kaartuvassa '
+            + 'seinässä on kolme kerrosta kaariaukkoja, ja pinnat on '
+            + 'peitetty kuviolaatoin ja kipsikoristein; ylimmän kerroksen '
+            + 'päällä kulkee läpimurrettu kaide, jonka takaa näkyy taivas '
+            + 'ja yksi lehdetön puu. Seinän edestä laskeutuvat leveät '
+            + 'kiviportaat, joilla seisoo kolme pitkätakkista miestä ja '
+            + 'ylempänä istuu neljäs. Kuvan poikki kulkee vinosti tummia '
+            + 'puomeja ja ohuita vaijereita, ja portaiden juurella on '
+            + 'rivi matalia pylväitä. Vedos on liimattu albuminlehdelle, '
+            + 'jonka alareunaan on kirjoitettu käsin Teheran.',
+          lahde: 'Antoin Sevruguin, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Pylvään poikkileikkaus on kolmisakarainen tähti',
+          tiedosto: 'Tatershahr, Tehran.jpg',
+          teksti: 'Daneshjoo-puiston kulmassa korokkeen päällä seisoo Teatr-e '
+            + 'Shahr, kaupunginteatteri. Rakennus on lieriö: halkaisijaa '
+            + '34 metriä, korkeutta 15 metriä, tonttia noin 3 000 '
+            + 'neliömetriä ja kerrosalaa noin 5 600. Suunnittelija oli '
+            + 'Ali Sardar Afkhami, ja työ tehtiin vuosina 1967–1972. '
+            + 'Aukot on nostettu ylös julkisivuun, jottei sisältä ole '
+            + 'suoraa näköyhteyttä puistoon. Katsomo on oma lieriönsä '
+            + 'ison lieriön sisällä, ja niiden väliin jäävä rengas on '
+            + 'lämpiö. Ulkona kiertää pylväsrivi, jonka pylväiden '
+            + 'poikkileikkaus on kolmisakarainen tähti; pylväät '
+            + 'kannattavat kaartuvia palkkeja, jotka muodostavat '
+            + 'ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.',
+          selite: 'Kaupunginteatteri päivänvalossa. Pyöreä rakennus seisoo '
+            + 'matalalla korokkeella, ja sitä kiertää pylväsrivi, jonka '
+            + 'kärjekkäät kaaret kannattavat ulkonevaa katosta; katoksen '
+            + 'alapinnassa on vinoneliökuviota ja reunassa sahalaitainen '
+            + 'harja. Seinä on peitetty vaalealla ja turkoosilla laatalla '
+            + 'vinoruudukoksi, ja keskellä on leveä kaksiosainen ovi, '
+            + 'jonka pinta on jaettu vinoneliöruutuihin. Katoksen alla '
+            + 'kiertää rivi tummia ikkunoita. Edessä on kivipenkkejä, '
+            + 'ruukuissa kasvavia pieniä puita ja aaltoina ladottu '
+            + 'laatoitus, vasemmassa alakulmassa pyöreä allas ja '
+            + 'vasemmassa reunassa mainostaulu. Taivas on pilvetön eikä '
+            + 'pihalla näy ihmisiä.',
+          lahde: 'A 1999 2, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kokoelma oli tutkijoille auki maksutta',
+          tiedosto: 'Irnc024-Teheran- Na Mashaq Square.jpg',
+          teksti: 'Hossein Agha Malek (1871–1972) perusti 1908 kirjaston '
+            + 'Mashhadiin ja siirsi kokoelman myöhemmin kotitaloonsa '
+            + 'Teheranin suuren basaarin kupeeseen, jossa se oli '
+            + 'tutkijoiden käytettävissä maksutta. Lahjakirjaan hän '
+            + 'kirjasi, ettei laitos tavoittele voittoa ja että kokoelma '
+            + 'on avoin sekä iranilaisille että ulkomaisille lukijoille. '
+            + 'Malekin kirjasto ja museo on Iranin ensimmäinen yksityinen '
+            + 'museo: käsikirjoituksia on 19 000 ja kirjoja 70 000. '
+            + 'Vuonna 1996 kokoelma muutti basaarin laidalta Bagh-e '
+            + 'Mellin alueelle kuusikerroksiseen taloon. Kadun varrella '
+            + 'on kaksi kirkkoa, tulitemppeli sekä synagoga moskeijan '
+            + 'vieressä, ja siksi sitä sanotaan uskontojen kaduksi.',
+          selite: 'Malekin kirjaston ja museon rakennus Mashqin kentän '
+            + 'laidalla. Keltatiilisessä julkisivussa on kaksi riviä '
+            + 'korkeita kärjekkäitä ikkunoita ruskein puukarmein, ja '
+            + 'ikkunoiden väliin on ladottu sinivalkoisia kaakelitauluja. '
+            + 'Oikealla nousee korkea kaariportti, joka on peitetty '
+            + 'sinisellä ja turkoosilla laatalla ja jonka holvissa on '
+            + 'tippukivimäinen kuviointi. Takana kohoaa umpinainen osa, '
+            + 'jonka yläreunassa kiertää rivi pieniä kaaria. Etualalla on '
+            + 'laatoitettu piha, jonka neliönmuotoisesta altaasta nousee '
+            + 'vesisuihku, sekä leikattuja kartiopensaita, keltaisia '
+            + 'kukkapenkkejä, penkkejä ja metallikaide. Taivas on '
+            + 'kirkkaan sininen.',
+          lahde: 'Wojciech Kocot, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki ja ruokapöytä',
+      johdanto: 'Iranin kansallisruokana pidetään chelow kababia, ja '
+        + 'Encyclopaedia Iranican mukaan yhdistelmä syntyi '
+        + 'todennäköisesti qajar-kaudella. Teheranin pöydässä sen '
+        + 'rinnalla ovat lihaliemi abgusht ja rapea riisikuori.',
+      nostot: [
+        {
+          otsikko: 'Varras vedetään pois leivän alta',
+          tiedosto: 'Traditional restaurant, Tehran (42453566164).jpg',
+          teksti: 'Chelow kabab on höyrytettyä riisiä ja vartaassa paistettua '
+            + 'lihaa, ja sitä pidetään Iranin kansallisruokana. Pöytään '
+            + 'kuuluvat voi, sumakkijauhe, basilika, sipuli ja grillattu '
+            + 'tomaatti, ja juomaksi otetaan doogh eli suolainen '
+            + 'jogurttijuoma. Vanha basaaritapa on tarkka: riisi ja '
+            + 'lisukkeet tuodaan ensin ja vartaat heti perään, ja mukana '
+            + 'on pala ohutta lavash-leipää. Varras lasketaan suoraan '
+            + 'riisin päälle, liha painetaan leivällä paikalleen ja '
+            + 'varras vedetään nopeasti pois. Lihaa on monta lajia: barg '
+            + 'on marinoitua kokolihaa, koobideh jauhettua lihaa sipulin '
+            + 'ja persiljan kanssa ja jujeh kanaa.',
+          selite: 'Ateria levitettynä punaiselle matolle teheranilaisessa '
+            + 'ravintolassa. Soikealla sinikuvioisella lautasella on '
+            + 'pitkä jauhelihavarras, sen päissä kaksi grillattua '
+            + 'tomaattia sekä sitruunanviipale, porkkanaa, oliiveja ja '
+            + 'vaaleanpunaisia pikkelssejä. Oikealla on kivinen ruukku, '
+            + 'jonka suulta näkyy oranssia keitosta, ja sen vieressä '
+            + 'valkoinen kulho, jossa seisoo survin. Keskellä on '
+            + 'kuvioidulla liinalla viisi juomalasia, joihin on taiteltu '
+            + 'lautasliinat, vihreä lasikarahvi, ruokailuvälineitä, kaksi '
+            + 'teelasia aluslautasineen, kulhollinen sokeripaloja, '
+            + 'lautasellinen yrttejä ja retiisi, kaksi puista sirotinta '
+            + 'sekä pussitettua leipää. Vasemmalla seisoo musta lyhty. '
+            + 'Ylhäällä istuu ristissä jaloin yksi ihminen, josta näkyvät '
+            + 'kädet ja polvet, vasemmassa yläkulmassa on kengät ja '
+            + 'alalaidassa toisen ihmisen jalka.',
+          lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Ateria syödään kahdessa vaiheessa',
+          tiedosto: 'Dizi 3 by Mardetanha.jpg',
+          teksti: 'Abgusht tarkoittaa lihalientä. Sama ruoka tunnetaan '
+            + 'nimellä dizi, ja nimi on lainattu astiasta: kivisavesta '
+            + 'tehdystä ruukusta, jossa keitos tuodaan pöytään. Aineksina '
+            + 'ovat lammas, kikherneet, valkoiset pavut, sipuli, peruna, '
+            + 'tomaatti, kurkuma ja kuivattu lime. Kypsä keitos '
+            + 'siivilöidään, ja ateria syödään kahdessa vaiheessa: ensin '
+            + 'liemi, johon revitään leipää, sitten kiinteä osa '
+            + 'survottuna. Survoksen nimi on gusht-e kubideh eli survottu '
+            + 'liha, ja se syödään leivän, sipulin ja pikkelssien kanssa. '
+            + 'Kaukasuksen ja Keski-Aasian piti on saman ruoan muunnelma.',
+          selite: 'Abgusht-ateria metallitarjottimella ylhäältä kuvattuna. '
+            + 'Keskellä on kuparipata, jossa on punaista lientä, '
+            + 'lihanpaloja, kikherneitä ja peruna. Ympärillä on pieniä '
+            + 'kuparireunaisia kulhoja: säilöttyä kukkakaalia, porkkanaa '
+            + 'ja palkoja sekä ruskea muna, sinisessä kulhossa vihreitä '
+            + 'oliiveja, jogurttia kuivattujen yrttien kera, jogurttia '
+            + 'ruusunnuppujen kera ja terttu pieniä punaisia tomaatteja. '
+            + 'Ylhäällä on kaksi metallikuorista juomalasia, pystyssä '
+            + 'seisova kirkas lasisurvin ja pitkävartinen lusikka. '
+            + 'Oikealla ovat kaksi tyhjää kulhoa ja nippu lusikoita, '
+            + 'alhaalla korillinen ohutta leipää ja lasituoppi, jossa on '
+            + 'jäitä ja tummia yrttihiutaleita.',
+          lahde: 'Mardetanha, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Perunaviipaleet paistuvat riisin alla',
+          tiedosto: 'Chelow With tadig.jpg',
+          teksti: 'Iranilainen riisi kypsennetään niin, että padan pohjalle '
+            + 'jää rapea kuori. Sen nimi on tahdig: tah on pohja ja dig '
+            + 'pata. Kuori kuuluu jokaiseen riisiruokaan, ja '
+            + 'perinteisesti se tarjotaan vieraalle. Usein pataan '
+            + 'kaadetaan ensin öljyä tai lampaanrasvaa ja pohjalle '
+            + 'ladotaan jotain muuta kuin riisiä, jolloin juuri se '
+            + 'paistuu rapeaksi: ohutta leipää, perunaviipaleita, '
+            + 'jogurttia, kurpitsaa, porkkanaa, pinaattia, punajuurta, '
+            + 'munakoisoa tai hapankirsikoita. Samaa keinoa sovelletaan '
+            + 'Iranissa myös spagettiin, joka saa pohjalleen kovan '
+            + 'kannen.',
+          selite: 'Riisiannos vaaleanpunareunaisella lautasella puupöydällä. '
+            + 'Keskellä on kukkurallinen pitkäjyväistä valkoista riisiä, '
+            + 'jonka laella on kirkkaan keltaiseksi värjätty läiskä. '
+            + 'Riisikeon ympärillä kiertää rivi paistuneita '
+            + 'perunanviipaleita, joiden reunat ovat ruskistuneet ja '
+            + 'pinta kiiltää rasvasta. Lautanen on aseteltu vaaleaan '
+            + 'puupintaan, eikä kuvassa ole muita astioita.',
+          lahde: 'Roozitaa, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä tahdig tarkoittaa persiaksi?',
+        vaihtoehdot: [
+          'padan pohja',
+          'tulen kieli',
+          'kolme kättä',
+          'vuoren maito',
+        ],
+        oikea: 0,
+        fakta: 'Tah on pohja ja dig pata. Tahdig on riisipadan pohjalle '
+          + 'paistunut rapea kuori, ja pohjalle ladotaan usein '
+          + 'perunaviipaleita tai ohutta leipää.',
+      },
+    },
+  ],
 };
