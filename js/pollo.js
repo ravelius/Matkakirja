@@ -2154,16 +2154,24 @@ class Pollo {
     if (this.kesken || !this.palvelin) return;
     this.ehdotukset.replaceChildren();
     this.ehdotukset.hidden = true;
-    this.asetaKesken(true);
+    /*
+     * Ehdotushaku EI lukitse syöteriviä (omistaja 13.8.2026: "saisiko
+     * pöllön mikrofonin käyttöön heti? Nyt se odottaa muutaman
+     * sekunnin ennen kuin esimerkkikysymykset valmistuvat"). Ehdotukset
+     * ovat lisuke — mikki, näppäimistö ja lähetys toimivat heti, ja
+     * pelaajan oma kysymys ohittaa haun. Poletti mitätöi haun, jos
+     * kysymys ehtii ensin: myöhässä saapuvat ehdotukset eivät saa
+     * putkahtaa uuden keskustelun päälle (kysy kasvattaa polettia).
+     */
+    const poletti = (this.ehdotusPoletti = (this.ehdotusPoletti ?? 0) + 1);
     try {
       const data = await this.pyyda({ tehtava: 'ehdotukset', konteksti: this.konteksti() });
+      if (poletti !== this.ehdotusPoletti || this.kesken) return;
       this.naytaEhdotukset(Array.isArray(data?.ehdotukset) ? data.ehdotukset : []);
     } catch {
       // Ehdotukset ovat lisä, eivät välttämättömiä: jos ne eivät tule,
       // sanelu ja kirjoituskenttä riittävät eikä pelaajalle valiteta.
       this.ehdotukset.hidden = true;
-    } finally {
-      this.asetaKesken(false);
     }
   }
 
@@ -2191,6 +2199,9 @@ class Pollo {
   async kysy(raakaKysymys) {
     const kysymys = String(raakaKysymys ?? '').trim();
     if (!kysymys || this.kesken || !this.palvelin) return;
+    // Kesken oleva ehdotushaku mitätöidään: pelaajan kysymys voittaa,
+    // eivätkä myöhässä valmistuvat ehdotukset putkahda vastauksen alle.
+    this.ehdotusPoletti = (this.ehdotusPoletti ?? 0) + 1;
     this.kentta.value = '';
     // Tilarivi tyhjenee: kysymys on jo keskustelussa, eikä sanelun
     // väliaikainen teksti saa jäädä vastauksen alle.
