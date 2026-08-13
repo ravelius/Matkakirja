@@ -9666,4 +9666,270 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * ISFAHANIN KANSISIVU (nippu 2, 13.8.2026). IRN-maalehti vie
+   * historian, rakennukset, puutarhat, ruoan ja käsityön, Tabriz
+   * vei luonnon ja Teheran arjen.
+   */
+  isfahan: [
+    {
+      id: 'kaupunki',
+      nimi: 'Isfahan',
+      johdanto: '1600-luvulla eurooppalainen matkaaja laski Isfahanin seudulta '
+        + 'jopa 3 000 kyyhkystornia, kaupungin länsipuolella kohoaa '
+        + 'kukkula 210 metriä tasangon ylle, ja erään 1300-luvun '
+        + 'hautarakennuksen kaksi 17,5-metristä minareettia liikkuvat '
+        + 'yhdessä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Isfahan to the north side by Eugène Flandin.jpg',
+          selite: 'Isfahan pohjoisesta piirrettynä vuonna 1840. Etualalla on '
+            + 'paljas tasanko, jonka poikki kulkee vaaleita ajouria; '
+            + 'siinä ratsastaja on selin katsojaan ja pitää kädessään '
+            + 'pitkää suoraa vartta, ja kauempana kävelee kaksi ihmistä '
+            + 'pitkä sauva kädessä. Taustalla on matala savimuuri, jossa '
+            + 'on teräväkärkinen porttiaukko, ja sen edessä ratsastaja ja '
+            + 'pienempi eläin sekä oikeampana kolme eläintä ja niiden '
+            + 'vieressä kävelevä ihminen. Muurin takaa alkaa tumma '
+            + 'puurivistö, ja puiden yläpuolelle nousee ohuita '
+            + 'minareetteja sekä matalia kupoleita. Kaukana takana on '
+            + 'jyrkkä sahalaitainen vuorijono, ja taivas on jätetty '
+            + 'vaaleaksi ja tyhjäksi.',
+          lahde: 'Eugène Flandin, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Esfahán.jpg',
+          selite: 'Isfahan kuvattuna korkealta hyvin leveänä panoraamana. '
+            + 'Vasemmassa reunassa on savitiilisen muurin jäänne, jonka '
+            + 'päällä seisoo yksi ihminen, ja oikeassa reunassa kohoaa '
+            + 'vaalea kallio. Niiden välissä avautuu tasanko: tiheitä '
+            + 'puuryhmiä, hedelmätarhoja, suoria poppelirivejä tien '
+            + 'varressa, peltokaistaleita, valkoinen laaja rakennus ja '
+            + 'paljas sorakenttä. Kauempana talot tihenevät kaupungiksi, '
+            + 'ja horisontissa on rivi paljaita kuivia vuoria. '
+            + 'Alareunassa kulkee leveä väylä, jonka varteen on pysäköity '
+            + 'autoja. Taivas on kirkas ja alhaalta utuinen.',
+          lahde: 'I, Ondřej Žváček, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          tiedosto: 'Iran Teahouse in Isfahan, Iran (3573969242).jpg',
+          selite: 'Teehuoneen sisusta Isfahanissa. Kaaret ja seinät on '
+            + 'verhottu painokankailla, joissa toistuvat rivit ihmis- ja '
+            + 'lintuhahmoja sekä tummanpunainen kukkakuvio; katosta '
+            + 'riippuu lävistetty messinkilyhty. Vasemmalla seisoo mies '
+            + 'vaaleansinisessä paidassa, aurinkolasit päälaella ja musta '
+            + 'laukku vyöllä. Hänen edessään istuu kaksi naista: toisella '
+            + 'on huivi, silmälasit ja kädessä auki taitettu esite, '
+            + 'toisella vaaleanpunainen huivi ja musta laukku sylissä. '
+            + 'Oikeassa reunassa istuu kolmas nainen kuviollisessa '
+            + 'takissa, edessään tarjotin ja pieni teekannu. Pöydillä on '
+            + 'painokuvioidut liinat, teelaseja ja metallinen teekannu '
+            + 'tarjottimella. Etualan matalalla pöydällä on matto ja sen '
+            + 'päällä kolme kiiltävää metallikannua, turkoosi saviruukku '
+            + 'ja läpimurrettu messinkiteline. Penkit on peitetty '
+            + 'matoilla, seinillä on kehystettyjä kuvia ja lattia on '
+            + 'kivilaattaa.',
+          lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Neljätoistatuhatta lintua yhden tornin sisällä',
+          tiedosto: 'IranÖstlichIsfahanTaubenhäuser1.jpg',
+          teksti: 'Isfahanin ympärillä seisoo kyyhkystorneja, ja ne '
+            + 'rakennettiin lannan takia: kaupungin puutarhaviljelmät '
+            + 'tarvitsivat väkevää lannoitetta. Torni on umpinainen '
+            + 'lieriö, jonka sisäseinät on ladottu täyteen pesäkoloja, ja '
+            + 'suurimpiin niistä mahtui 14 000 lintua. Ulkopintaan '
+            + 'maalattiin punaisia vöitä, jotta lintu tunnistaisi oman '
+            + 'torninsa muiden joukosta. 1600-luvulla eurooppalainen '
+            + 'matkaaja laski Isfahanin seudulta jopa 3 000 tornia. '
+            + 'Isfahanin maakunnasta on nykyään tunnistettu yli 300 '
+            + 'vanhaa kyyhkystornia, ja niistä 65 on merkitty Iranin '
+            + 'kansalliseen kulttuuriperintöluetteloon.',
+          selite: 'Kaksi savitiilistä kyyhkystornia vihreällä pellolla. '
+            + 'Etummainen on leveä lieriö, jonka kylkiin on liitetty '
+            + 'kapeampia puolilieriöitä ja jonka päälle nousee pienempi '
+            + 'torni; sen yläreunassa kiertää läpimurrettu tiilinauha ja '
+            + 'laella on kaksi pientä huippua. Seinissä on tasavälein '
+            + 'pieniä neliömäisiä reikiä, alhaalla holvikaarinen ovi ja '
+            + 'ylempänä repeytynyt aukko, ja pinnan halki kulkee '
+            + 'pystysuora halkeama. Takana on toinen, matalampi torni, '
+            + 'jonka juuresta on lohjennut iso pala. Maa tornien '
+            + 'ympärillä on paljasta soraa, etualalla kasvaa tiheää '
+            + 'matalaa vihreää kasvustoa, ja taivas on pilvetön.',
+          lahde: 'Ziegler175, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kun toista tornia keinuttaa, toinenkin liikkuu',
+          tiedosto: 'Monar Jonban Isfahan Aarash (22).jpg',
+          teksti: 'Monar Jonban tarkoittaa heiluvia minareetteja. Rakennus on '
+            + 'hautarakennus askeetti Amu Abdullah Suqlan haudan päällä, '
+            + 'ja hautaholvi tehtiin vuonna 1316 ilkhanidihallitsija '
+            + 'Öljaitün käskystä. Minareetteja ei alun perin ollut '
+            + 'lainkaan: safavidit lisäsivät ne, ja työn vei loppuun '
+            + 'oppinut Baha al-Din al-Amili. Kumpikin minareetti on 17,5 '
+            + 'metriä korkea ja päättyy siniseen sipulikupoliin. Nimi '
+            + 'tulee siitä, että kun toista minareettia keinutetaan, myös '
+            + 'toinen alkaa liikkua samaan tahtiin. Ylös vievät portaat, '
+            + 'mutta niitä käyttää nykyään vain talon hoitaja, joka käy '
+            + 'keinuttamassa minareetteja. Kohde merkittiin suojeltujen '
+            + 'luetteloon 10. kesäkuuta 1942.',
+          selite: 'Monar Jonbanin julkisivu alaviistosta. Keltaisesta '
+            + 'tiilestä muurattua seinää halkoo suuri teräväkärkinen '
+            + 'holvikaari, jonka reunaa seuraa tummansininen laattanauha; '
+            + 'kaaren sisällä on kuvioitu tiiliholvi, sinireunainen '
+            + 'yläparvi, jossa on tumma ristikko ja valkoinen tähtiaukko, '
+            + 'sekä alempi kaarisyvennys. Katon reunassa kulkee '
+            + 'läpimurrettu tiilikaide. Julkisivun molemmista päistä '
+            + 'nousee kapea minareetti, jonka kyljessä on vaaleansinistä '
+            + 'siksakkikuviota ja jonka huipulla on avoin lyhty; '
+            + 'molempien varresta pistää ulos tummia puuparruja. Edessä '
+            + 'seisoo mies violetissa pikeepaidassa ja hänen vieressään '
+            + 'nainen mustassa chadorissa, ja vasemmasta reunasta näkyy '
+            + 'kolmas ihminen puoliksi. Pihalla on ruukussa kasvava '
+            + 'pensas, sininen muovituoli ja valkoinen pöytä, sivuilla '
+            + 'mäntyjä ja sypressejä.',
+          lahde: 'آرش, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaksikymmentä huonetta kukkulan kyljessä',
+          tiedosto: 'Atashgah Isfahan Zoroastrian fire temple.jpg',
+          teksti: 'Kaupungin keskustasta kahdeksan kilometriä länteen kohoaa '
+            + 'kukkula noin 210 metriä ympäröivän tasangon yläpuolelle. '
+            + 'Sen etelärinteessä on noin kahdenkymmenen rakennuksen tai '
+            + 'huoneen ryhmä, ja alarinteessä osa niistä erottuu enää '
+            + 'perustusten viivoina. Useassa on chahartaq eli neljän '
+            + 'kaaren pohjakaava, joka tunnetaan zarathustralaisista '
+            + 'tulitemppeleistä 200-luvulta alkaen. Laella on pyöreä '
+            + 'torni, joka oli kerran ainakin kaksikymmentä metriä '
+            + 'korkea. Ajoitus jakaa tutkijat: André Godard luki rauniot '
+            + 'sasanidikaudelle 1937, mutta Alireza Jafari Zand esitti '
+            + '2002 radiohiiliajoituksiin nojaten, että paikka on sitäkin '
+            + 'vanhempi, elamilainen.',
+          selite: 'Kukkulan laen pyöreä raunio. Savitiilestä muurattu lieriö '
+            + 'seisoo paljaan vaalean kallion päällä, ja sen seinässä on '
+            + 'kolme kapeaa pystyaukkoa paksujen pilarien välissä; '
+            + 'yläreuna on murtunut epätasaiseksi, ja muurauksen '
+            + 'vaakasuorat kerrokset näkyvät selvästi. Ympärillä on '
+            + 'matalampia sortuneita muureja ja perustuksia kivisellä '
+            + 'maalla. Alempana vasemmalla avautuu tasanko, jolla on '
+            + 'matalia vaaleita taloja ja lehdettömiä puita, ja kauimpana '
+            + 'horisontti häviää utuun. Taivas on harmaa ja pilvinen, '
+            + 'eikä kuvassa näy ihmisiä.',
+          lahde: 'Ivan Mlinaric from Slovenia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'taide',
+      nimi: 'Taide ja kirjapaino',
+      johdanto: 'Joen eteläpuolella on Uusi Julfa, vuonna 1606 perustettu '
+        + 'armenialaiskortteli. Sen katedraali on ulkoa paljasta tiiltä '
+        + 'mutta sisältä maalattu kauttaaltaan, ja samasta korttelista '
+        + 'lähti liikkeelle Iranin ensimmäinen kirjapaino.',
+      nostot: [
+        {
+          otsikko: 'Kauppaverkosto ulottui Amsterdamista Manilaan',
+          tiedosto: 'New Julfa, Isfahan, Iran (53810429655).jpg',
+          teksti: 'Uusi Julfa perustettiin vuonna 1606 Abbas Suuren '
+            + 'määräyksellä armenialaisten kaupunginosaksi joen '
+            + 'etelärannalle. Vanhasta Julfan kaupungista siirrettiin '
+            + 'sinne yli 150 000 armenialaista. Syystä lähteet ovat eri '
+            + 'mieltä: iranilaisten lähteiden mukaan tulijat pakenivat '
+            + 'osmanien vainoa, kun taas historiantutkimus kuvaa '
+            + 'pakkosiirtoa, jossa Julfan asukkaita kohdeltiin hyvin, '
+            + 'koska shaahi toivoi heidän silkkikaupan taitojensa '
+            + 'hyödyttävän Irania. Fernand Braudel kirjoitti 1947, että '
+            + 'armenialaisten kauppaverkosto ulottui Amsterdamista '
+            + 'Manilaan. Korttelissa on kuusitoista kirkkoa ja '
+            + 'armenialainen koulu, ja siellä puhutaan omaa Uuden Julfan '
+            + 'murretta.',
+          selite: 'Aukio Uudessa Julfassa. Oikealla seisoo suuri '
+            + 'aurinkokello: kivijalustan päällä on musta kaareva malja '
+            + 'ja sen vieressä valkoinen viuhkamainen taulu, johon on '
+            + 'merkitty asteikko ja persialaiset numerot, ja niiden läpi '
+            + 'kulkee vino metallivarsi. Jalusta nousee matalasta '
+            + 'kivialtaasta, jonka reunassa on sinistä laattaa. '
+            + 'Vasemmalla kävelee poispäin kolme nuorta naista: yksi '
+            + 'mustassa asussa musta kassi kädessä, toinen mustassa '
+            + 'tunikassa harmaa laukku olalla ja kolmas valkoisessa '
+            + 'huppupaidassa vihreä reppu selässä. Taustalla on '
+            + 'keltatiilisiä pilareita, valkoinen markiisi, metallinen '
+            + 'rullaovi ja mustaksi maalattu lyhtypylväs, ja puiden alla '
+            + 'erottuu yksi kaukainen ihminen.',
+          lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Ulkoa koruton, sisältä joka pinta maalattu',
+          tiedosto: 'Catedral Vank, Isfahán, Irán, 2016-09-20, DD 115-117 HDR.jpg',
+          teksti: 'Korttelin katedraalin nimi on Pyhän Vapahtajan katedraali, '
+            + 'mutta se tunnetaan sanasta vank, joka tarkoittaa '
+            + 'armeniaksi luostaria. Se perustettiin 1606 ja sai '
+            + 'lopullisen muotonsa vuosina 1655–1664 arkkipiispa Davidin '
+            + 'valvonnassa. Pohjakaava yhdistää kahta perinnettä: '
+            + 'kupolisali on kuin iranilaisessa moskeijassa, mutta siihen '
+            + 'liittyy puolikkaan kahdeksankulmion muotoinen apsis ja '
+            + 'koroke, jollainen kuuluu länsimaiseen kirkkoon. Ulkoa talo '
+            + 'on paljasta tiiltä ja koruton. Sisällä kupolin keskiössä '
+            + 'on luomiskertomus, holvikulmissa kerubin pää siipien '
+            + 'välissä ja seinillä kaksi kuvanauhaa päällekkäin. Pihalla '
+            + 'seisoo erillinen kellotorni.',
+          selite: 'Katedraalin katto suoraan alhaalta kuvattuna. Vierekkäin '
+            + 'näkyy kaksi kupolia: vasen on kullanruskea ja sen pinta on '
+            + 'täynnä tiheää kasviornamenttia, jonka lomassa on pyöreitä '
+            + 'kuvakenttiä ihmishahmoineen; oikea on tummansininen, ja '
+            + 'siinä kiertää säteittäinen kiilakuvio kultaisin reunuksin. '
+            + 'Kupolien välissä ja ympärillä kulkee kapeita kullattuja '
+            + 'koristenauhoja, ja holvikaarten kulmissa toistuu siipien '
+            + 'ympäröimä kasvokuva. Seinillä on suorakaiteen muotoisia '
+            + 'kuvakenttiä ihmisryhmineen sekä valkoruutuisia ikkunoita. '
+            + 'Molempien kupolien keskeltä riippuu messinkinen '
+            + 'kruunukynttilänjalka, jonka lamput palavat.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Painokone on yhä esillä pihan museossa',
+          tiedosto: 'A copy of the Psalms in Armenian. Printed by Khachatur Kesaratsi in Isfahan in 1638.jpg',
+          teksti: 'Khachatur Kesaratsi (1590–1646) oli Uuden Julfan '
+            + 'armenialainen arkkipiispa, ja hänen ansiokseen luetaan '
+            + 'Iranin ensimmäinen kirjapaino. Perustamisvuodesta lähteet '
+            + 'ovat eri mieltä: Houri Berberian ajoittaa sen vuoteen '
+            + '1633, Hacikyanin toimittama armenialaisen kirjallisuuden '
+            + 'historia vuoteen 1636. Ensimmäinen kirja valmistui 1638, '
+            + 'ja se oli Saghmosaran eli psalttari. Katedraalin pihalla '
+            + 'on vuodesta 1905 toiminut museo, joka on nimetty '
+            + 'Kesaratsin mukaan; siellä ovat esillä vanha painokone ja '
+            + 'Iranissa ensimmäisenä painettu kirja. Kirjastossa on yli '
+            + '700 käsin kirjoitettua kirjaa.',
+          selite: 'Vuoden 1638 kirja auki tummalla kankaalla; kuvassa on '
+            + 'oikeanpuoleinen sivu. Sen yläosassa on suorakaiteen '
+            + 'muotoinen puupiirroskehys, jonka sisällä toistuu rivi '
+            + 'tyyliteltyjä lehti- ja palmettikuvioita. Sen alla alkaa '
+            + 'teksti armenialaisin kirjaimin, kolmetoista riviä, joista '
+            + 'neljä ylintä on sisennetty. Sisennyksen kohdalla on '
+            + 'koristealkukirjain, joka on piirretty kahdeksi linnuksi: '
+            + 'ylempi lintu istuu pystyssä ja alempi kaartuu silmukaksi. '
+            + 'Muste kuultaa lehden läpi toiselta puolelta harmaina '
+            + 'riveinä. Sivun alaosa on tyhjä, ja vasemmassa reunassa '
+            + 'näkyy kirjan selkä ja ruskea nahkakulma.',
+          lahde: 'digital.bodleian.ox.ac.uk, Wikimedia Commons (PD)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä kirja painettiin Iranissa ensimmäisenä?',
+        vaihtoehdot: [
+          'psalttari',
+          'sanakirja',
+          'lakikirja',
+          'karttakirja',
+        ],
+        oikea: 0,
+        fakta: 'Uuden Julfan kirjapaino sai ensimmäisen kirjansa valmiiksi '
+          + 'vuonna 1638, ja se oli Saghmosaran eli psalttari. '
+          + 'Kirjapainon perustamisvuodeksi mainitaan lähteestä '
+          + 'riippuen 1633 tai 1636.',
+      },
+    },
+  ],
 };

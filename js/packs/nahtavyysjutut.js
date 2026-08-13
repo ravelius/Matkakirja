@@ -12910,4 +12910,431 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * Isfahanin nähtävyysjutut (nippu 2, 13.8.2026). Kaupungin viisi
+   * tunnetuinta asiaa on varattu muualle pelissä — Naqsh-e Jahan,
+   * Si-o-se-pol, Sheikh Lotfollah, Chehel Sotoun ja chahar bagh
+   * ovat IRN-maalehdessä, ja pelin omat Isfahan-kuvatekstit
+   * kertovat jo Ali Qapun poolokatsomon, Shaahin moskeijan kaiun
+   * ja Qeysarien portin soittajat. Jutut on siksi kirjoitettu
+   * tarkoituksella toisista kulmista.
+   */
+  isfahan: {
+    'Jameh-moskeija': {
+      teksti: 'Perjantaimoskeija ei ole yhden kauden rakennus vaan pino '
+        + 'niitä. Ensimmäinen moskeija nousi paikalle noin vuonna 771 '
+        + 'savitiilestä, pohjaltaan noin 52 × 90 metriä; jäänteet '
+        + 'kaivettiin esiin 1970-luvulla. Vuosina 840–841 tilalle tehtiin '
+        + 'suurempi, noin 88 × 128 metriä, ja rukoussuunta käännettiin '
+        + 'toiseen kulmaan. Unesco otti moskeijan '
+        + 'maailmanperintöluetteloon 2012 omana kohteenaan, ei osana '
+        + 'aukiota.'
+        + '\n\n'
+        + 'Seldžukit lisäsivät kaksi kupolia kahdessa vuodessa. Malik '
+        + 'Shaahin vesiiri Nizam al-Mulk korvasi mihrabin edestä pilarit '
+        + 'kupolisalilla 1086–1087; se oli valmistuessaan islamilaisen '
+        + 'maailman suurin muurattu kupoli, ja siinä on kahdeksan kaarta. '
+        + 'Kilpailija Taj al-Mulk rakensi 1088–1089 toisen kupolin '
+        + 'pohjoispäähän, moskeijan silloisten rajojen ulkopuolelle. '
+        + 'Juuri sitä pidetään keskiaikaisen iranilaisen rakennustaiteen '
+        + 'mestarityönä: kaaret kulkevat ristiin ja muodostavat '
+        + 'viisikulmioita ja viisisakaraisia tähtiä.'
+        + '\n\n'
+        + '1100-luvun alussa, todennäköisesti vuosien 1121–1122 tulipalon '
+        + 'jälkeen, kupolisalin ja pihan väliin rakennettiin iwan eli '
+        + 'toiselta sivultaan avoin holvisali, ja kolme muuta muiden '
+        + 'sivujen keskelle. Näin syntyi neljän iwanin pohjakaava, '
+        + 'iranilaisen perjantaimoskeijan perusmuoto. Talvisaleja on '
+        + 'kaksi: Uljaytun 1300-luvun alussa läntisen iwanin viereen '
+        + 'rakennuttama, jonka mihrab on veistetty stukkoon vuonna 1310, '
+        + 'ja safavidien aikainen suurempi sali leveine mataline '
+        + 'kaarineen.',
+      kuvat: [
+        {
+          tiedosto: '20180301124354 IMG 4179And6more Interior 3.jpg',
+          selite: 'Sisäpiha maan tasalta, yllä sininen taivas ja suuria '
+            + 'valkoisia pilviä. Vasemmalla iwanin kaari on paljasta '
+            + 'tiiltä ja sen puolikupoli täynnä kennomaista muqarnasia, '
+            + 'keskellä on kaakeloitu iwan, jonka kummallakin puolella '
+            + 'nousee tiiliminareetti, ja oikealla kolmas iwan, jonka '
+            + 'pinnassa on kulmikasta kufi-kirjoitusta sini-valkoisin '
+            + 'laatoin. Pihaa kiertää kaksikerroksinen kaarikäytävä. '
+            + 'Kivetyn pihan keskellä on liuskareunainen allas kirkkaan '
+            + 'sinisenä, sen takana pitkä suorakaiteen muotoinen allas ja '
+            + 'keskimmäisen iwanin edessä matala kaariaukkoinen '
+            + 'rakennelma. Kaarikäytävien edustalla istuu ja seisoo '
+            + 'hajallaan pieniä ryhmiä ihmisiä.',
+          lahde: 'Hamidespanani, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ceiling of Jameh Mosque of Isfahan.jpg',
+          selite: 'Nizam al-Mulkin eteläkupoli suoraan alhaalta kuvattuna: '
+            + 'koko pinta on paljasta tiiltä ilman laattaa tai maalia, ja '
+            + 'kupolin lakeen kokoontuu kahdeksan kaarta, jotka jakavat '
+            + 'pinnan kahdeksaan lohkoon. Kulmissa on puolikupolit ja '
+            + 'niiden yllä holvit, jotka kääntävät neliömäisen salin '
+            + 'ympyräksi. Vasemmalla ja oikealla seinässä on pieni '
+            + 'ristikkoikkuna, ja alareunassa aukeaa suippokaarinen '
+            + 'syvennys.',
+          lahde: 'Amir Pashaei, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Gran Mezquita de Isfahán, Isfahan, Irán, 2016-09-19, DD 43-45 HDR Alt.jpg',
+          selite: 'Taj al-Mulkin pohjoiskupoli alhaalta: sekin on paljasta '
+            + 'tiiltä, mutta kaaret kulkevat ristiin ja piirtävät pintaan '
+            + 'viisisakaraisia tähtiä ja viisikulmioita, ja keskellä on '
+            + 'pieni pyöreä ruusuke. Kupolin jalustaa kiertää hammastettu '
+            + 'tiilivyö, ja siinä on pieniä ristikkoikkunoita. Oikealta '
+            + 'sivuaukosta lankeaa terävä valokiila poikki kupolin. '
+            + 'Nurkissa nousevat puolikupolit, joiden tiilet on ladottu '
+            + 'kalanruotokuvioon.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Isfahanin basaari': {
+      teksti: 'Basaari on käytävä kahden eri-ikäisen kaupungin välillä. '
+        + 'Eteläpää aukeaa Naqsh-e Jahanille, joka rakennettiin vuosina '
+        + '1598–1629, ja pohjoispää vie Kohneh- eli Vanhalle aukiolle '
+        + 'vanhan kaupungin ytimeen. Väliin jää holvattua, katettua katua '
+        + 'noin kaksi kilometriä. Se on Lähi-idän vanhimpia ja suurimpia '
+        + 'basaareja.'
+        + '\n\n'
+        + 'Osat ovat eri-ikäisiä. Nykyinen rakennus on safavidien ajalta, '
+        + 'ja rakennusvuodeksi Naqsh-e Jahanin pohjoislaidalle merkitään '
+        + '1620. Vanhin osa on 1000-luvulta, seldžukkien ajalta: se '
+        + 'syntyi Jameh-moskeijan lounaiskyljelle ja Kohneh-aukion '
+        + 'laitaan, ja kaarikäytäviä ja huoneita liitettiin siihen '
+        + 'myöhemmin lisää. Tarkkoja vuosia näille osille ei anneta, vain '
+        + 'se, että ne ovat yli tuhat vuotta vanhoja.'
+        + '\n\n'
+        + 'Lähi-idässä basaari rakennettiin tavallisesti moskeijan '
+        + 'viereen, eikä Isfahan ole poikkeus. Pohjoispään Jameh-moskeija '
+        + 'on kaupungin vanhin ja Iranin vanhimpia; ja sitä rakennettiin '
+        + 'vaiheittain yli tuhannen vuoden ajan. Kohneh-aukio taas oli '
+        + '1000-luvulla, Isfahanin ollessa seldžukkien pääkaupunki, '
+        + 'kaupungin pääaukio ja kaupan ja seuraelämän keskus: '
+        + 'pohjoisessa Jameh-moskeija, lännessä basaari, etelässä Harun '
+        + 'Velayatin mausoleumi ja Alin moskeija, idässä seldžukkien '
+        + 'palatsit. Juuri se oli myöhemmän suuraukion esikuva.',
+      kuvat: [
+        {
+          tiedosto: 'Bricks, pillars, and vaults (2966769898).jpg',
+          selite: 'Basaarin katettua käytävää: järeät tiilipilarit, '
+            + 'kärjekkäät kaaret peräkkäin ja tiiliholvit, joiden tiilet '
+            + 'on ladottu vinoriveihin. Vasemmassa reunassa hohtaa '
+            + 'keltainen ikkuna, holvien poikki on vedetty sähköjohto, '
+            + 'eikä käytävällä näy ketään.',
+          lahde: 'dynamosquito from France, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: '201312 iran esfahan 61 (12468516185).jpg',
+          selite: 'Kohneh-aukio basaarin pohjoispäässä. Aukiota reunustaa '
+            + 'kaksikerroksinen kaarikäytävä, jonka varjossa seisoo '
+            + 'ihmisiä, ja edessä on sinipohjainen allas, jossa on '
+            + 'kymmeniä pystysuihkuja. Oikealla mies ajaa aukion poikki '
+            + 'moottoripyörällä.',
+          lahde: 'Franco Pecchio from Milano, Italy, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ali Qapu': {
+      teksti: 'Nimi tarkoittaa korkeaa porttia: ālī on arabiaa, ylhäinen, ja '
+        + 'qāpū vanhaa turkkia, ovi. Portti se olikin ensin: sisäänkäynti '
+        + 'hovin ja hallinnon alueelle, ja kanslia oli ensimmäisessä '
+        + 'kerroksessa. Alkuvaihe oli kuutiomainen kaksikerroksinen '
+        + 'portti, 20 × 19 metriä ja 13 metriä korkea. Sen päälle tuli '
+        + 'sali, salin päälle musiikkihuone, sitten aukiolle työntyvä '
+        + 'parveke ja viimeisenä parvekkeen puukatto 18 puupylvään '
+        + 'varassa. Vaiheita oli kuusi ja työ kesti katkoineen noin 70 '
+        + 'vuotta. Talo on 48 metriä korkea ja kuusikerroksinen, ja '
+        + 'kerroksiin noustaan kierreportaita.'
+        + '\n\n'
+        + 'Ylimmän kerroksen huoneet ovat talon suurimmat, ja yksi '
+        + 'tunnetaan musiikkihuoneena. Seiniin ja holveihin on leikattu '
+        + 'stukkiin syviä pyöreitä syvennyksiä, joiden muodot esittävät '
+        + 'ruukkuja, astioita ja maljoja. Kaappeja ne eivät ole: stukko '
+        + 'on niin ohutta, että se murtuu kevyestä kosketuksesta. Lähde '
+        + 'pitää työtä koristeena mutta kertoo myös vaikutuksen: ontot '
+        + 'syvennykset pidättivät kaiun, ja laulu ja soitto kuuluivat '
+        + 'niiden ansiosta selvinä huoneen joka kohtaan. Lähde sijoittaa '
+        + 'huoneen sekä viidenteen että kuudenteen kerrokseen.'
+        + '\n\n'
+        + 'Rakennuttaja oli Abbas Suuri, joka vietti talossa persialaisen '
+        + 'uudenvuoden 1597. Pohjoissivulle muurattiin vesitorni, josta '
+        + 'vesi johdettiin parvekkeen kupariselle altaalle. '
+        + 'Koristelluista ovista ja ikkunoista on jäljellä yksi ikkuna '
+        + 'kolmannessa kerroksessa.',
+      kuvat: [
+        {
+          tiedosto: 'Mur et plafond de la terrasse d\'Ali Qāpu.jpg',
+          selite: 'Parvekkeen katto ja takaseinä alaviistosta: puukatto on '
+            + 'jaettu kenttiin, joissa toistuu monisakaraisista tähdistä '
+            + 'ja monikulmioista koottu kuvio punaisena, '
+            + 'kullankeltaisena, mustana ja valkoisena. Kuvan molemmissa '
+            + 'reunoissa nousee vaalea puupylväs, jonka kapiteeli on '
+            + 'veistetty kennomaisiin kerroksiin. Takaseinän keskellä on '
+            + 'korkea suippokaarinen syvennys, jonka oranssinpunaista '
+            + 'pintaa peittää vaalea kasviköynnös; perällä on pieni '
+            + 'ristikkoikkuna ja sen alla rivi kaari-ikkunoita '
+            + 'puuristikoineen. Molemmin puolin on kaksi kerrosta '
+            + 'kaarisyvennyksiä, joista osassa on tiheä puuristikko ja '
+            + 'osa on paljasta rappausta. Vasemmassa alanurkassa näkyy '
+            + 'valkoisen näytön yläreuna.',
+          lahde: 'Zythème, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ali-Qapu 13920419 (18).JPG',
+          selite: 'Musiikkihuoneen yläseinä ja holvi: stukkiin on leikattu '
+            + 'läpi kymmeniä syvennyksiä, joiden muodot ovat '
+            + 'kapeakaulaisia pulloja, pulleita ruukkuja, pieniä maljoja '
+            + 'ja suippokaaria, ja aukot näkyvät tummina. Holvin '
+            + 'ripakaaret on maalattu vaaleansinisiksi ja niiden väliset '
+            + 'pinnat oranssinpunaisiksi haalistunein kasvikuvioin. '
+            + 'Holvin alla jatkuu kaarisyvennyksiä, joissa on samoja '
+            + 'muotoja riveittäin. Keskeltä oikealta avautuu oviaukko '
+            + 'toiseen tilaan, jossa näkyy valoisa suippokaari-ikkuna, ja '
+            + 'oikeassa reunassa on toinen kirkas ikkuna. Rappaus on '
+            + 'kulunut ja väri haalistunut; vasemmassa alanurkassa on '
+            + 'pieni valkoinen kyltti persiankielisine teksteineen.',
+          lahde: 'Mohsen Ghasemee, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Music hall of Ali Qapu Isfahan 2014.jpg',
+          selite: 'Musiikkihuone kokonaisuudessaan: vasemmalla seinässä on '
+            + 'kaksi kerrosta syvennyskenttiä ja niiden yllä holvi, jonka '
+            + 'pinnat ovat oranssinpunaiset ja kaaret vaaleansiniset; '
+            + 'oikealla holvin stukko on harmaata ja maalaamatonta, ja '
+            + 'sen alla on kolme korkeaa suippokaari-ikkunaa, joista '
+            + 'tulvii päivänvaloa. Seinien edessä seisoo lasisia '
+            + 'suojalevyjä metallitelineissä, vasemmalla on ruskea '
+            + 'puuristikko-ovi ja keskellä valkoinen ilmastointilaite. '
+            + 'Huoneessa on kuusi ihmistä: vasemmalla neljän ryhmä — '
+            + 'lippalakkinen mies, valkohuivinen nainen, raidalliseen '
+            + 'tunikaan pukeutunut selin seisova kävijä ja '
+            + 'silmälasipäinen mies — ja oikealla kaksi miestä, joista '
+            + 'toisella on kamera kädessä ja toinen katsoo puhelintaan. '
+            + 'Lattia on vaaleaa laattaa.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Shaahin moskeija': {
+      aika: '1611',
+      teksti: 'Aukio ei ole Mekan suunnassa, mutta rukoussalin on oltava. '
+        + 'Ristiriita ratkaistiin heti portin takana: aukiolta astutaan '
+        + 'sisään suoraan, ja holvattu eteistila kääntää kulkijan noin 45 '
+        + 'astetta lounaaseen, minkä jälkeen loput rakennuksesta on '
+        + 'qiblan suunnassa. Donald Wilber on esittänyt, että käännös oli '
+        + 'myös laskelmoitu näkymä: omalle akselilleen jäävä kupoli näkyy '
+        + 'aukiolle, kun taas samalla akselilla portti olisi peittänyt '
+        + 'sen.'
+        + '\n\n'
+        + 'Työ alkoi 1611, parikymmentä vuotta aukiota myöhemmin; '
+        + 'viivettä selitetään tonttikaupoilla. Piirtokirjoitusten '
+        + 'perusteella rakennus valmistui noin 1630–31, jo Abbas Suuren '
+        + 'seuraajan Safin aikana. Päärakennus on noin 100 × 130 metriä, '
+        + 'portti noin 27,5 metriä korkea ja sen kaksi minareettia 33,5. '
+        + 'Kupoli nousee ulkoa 52 metriin ja sisältä 38:aan, ja se on '
+        + 'kaksikuorinen. Minareetteja on neljä, mutta rukouskutsua '
+        + 'varten on guldasta, pieni koroke länsi-iwanin katolla.'
+        + '\n\n'
+        + 'Abbas halusi nähdä rakennuksen valmiina, ja kiire näkyy '
+        + 'tekotavassa. Laatat tehtiin haft rangilla eli seitsemällä '
+        + 'värillä: värit maalataan samalle laatalle ja poltetaan '
+        + 'kerralla, mikä on nopeampaa ja halvempaa kuin mosaiikki. '
+        + 'Portin laatoissa värit ovat tummansininen, vaaleansininen, '
+        + 'valkoinen, musta, keltainen, vihreä ja beige. Kiire näkyi myös '
+        + 'perustuksissa: arkkitehti Abu\'l Qasim varoitti maan '
+        + 'painumisesta, shaahi rakennutti silti eteenpäin, ja 1662 '
+        + 'rakennus tarvitsi suuret korjaukset.',
+      kuvat: [
+        {
+          tiedosto: 'Naghshejahan3.jpg',
+          selite: 'Ilmakuva etelästä. Etualalla on Shaahin moskeijan piha '
+            + 'altaineen ja iwaneineen, ja sen seinälinjat kulkevat eri '
+            + 'kulmassa kuin aukio, joka jatkuu vinosti oikealle ylös '
+            + 'nurmikenttinä, puuriveinä ja pitkänä turkoosina '
+            + 'suihkulähdealtaana. Moskeijan neljä minareettia ovat '
+            + 'turkoosia laattaa, ja aukiolla liikkuu paljon väkeä. '
+            + 'Vasemmalla aukion laidalla seisoo Ali Qapu, oikealla '
+            + 'laidalla Sheikh Lotfollahin kuvioitu kupoli.',
+          lahde: 'Pedram forouzanfar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Mosque Shah Portal.jpg',
+          selite: 'Pääportti alaviistosta kuvattuna: kaaren sisus on täynnä '
+            + 'muqarnas-kennoja, kaarta kiertää valkoinen kirjoitusnauha '
+            + 'tummansinisellä pohjalla ja reunassa kulkee turkoosi '
+            + 'kierrelista. Kummallakin puolella nousee laatoitettu '
+            + 'minareetti parvekkeineen, alhaalla keskellä on '
+            + 'kivikehyksinen pieni oviaukko, ja taivaalla näkyy kaksi '
+            + 'objektiivin heijastuspilkkua.',
+          lahde: 'Farhad Tafreshi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hasht Behesht': {
+      aika: '1669',
+      teksti: 'Hasht behesht tarkoittaa persiaksi kahdeksaa paratiisia, ja '
+        + 'Iranissa sana on myös pohjakaavan nimi: keskussali, jonka '
+        + 'ympärille sijoittuu kahdeksan huonetta. Isfahanin paviljonki '
+        + 'on kaavan safavidilainen esimerkki, ja sen rakennutti '
+        + 'dynastian kahdeksas hallitsija, shaahi Suleiman I. Se oli '
+        + 'hallitsijan yksityinen huvimaja. Vuosiluvut hajoavat: '
+        + 'valmistumisvuodeksi merkitään 1669, samasta talosta esitetään '
+        + 'myös vuotta 1671, ja väljimmin 1600-luvun loppupuoli.'
+        + '\n\n'
+        + 'Talo on kahdeksankulmainen ja kaksikerroksinen, ja siihen '
+        + 'johtaa kaksi pääovea. Umpinainen se ei ole: neljällä '
+        + 'leveimmällä sivulla on suuri holvattu parveke eli iwan, ja '
+        + 'parvekkeiden alla nousee ohuita puupylväitä. Keskellä on sali '
+        + 'kupolin alla, ja sitä ympäröivien pienten huoneiden matalat '
+        + 'holvit on päällystetty peililasilla: pinta näyttää liikkuvan '
+        + 'katsojan mukana. Muuta koristelua ovat seinämaalaukset, '
+        + 'läpileikattu puutyö, kaakeli ja stukko; ulkokaakelissa on '
+        + 'poikkeuksellisen paljon keltaista.'
+        + '\n\n'
+        + 'Talo seisoo Chahar Baghin puistokadun varrella, ja sen edessä '
+        + 'on allas. Puutarha on taloa vanhempi: Abbas Suuren '
+        + 'kaupunkikaavassa uuden aukion ja puistokadun väliin jäi laaja '
+        + 'puutarha, ja siitä on tänään jäljellä Hasht Beheshtin puisto. '
+        + 'Talossa toimi myöhemmin Isfahanin ensimmäinen moderni koulu, '
+        + 'Madrese-ye Homayouni eli Hänen majesteettinsa koulu. Iranin '
+        + 'kulttuuriperintöluetteloon rakennus merkittiin 1934 numerolla '
+        + '227.',
+      kuvat: [
+        {
+          tiedosto: 'Hasht Behesht Palace, Isfahan 01.jpg',
+          selite: 'Julkisivu suorakaiteen muotoisen altaan takana. Altaan '
+            + 'reunat on maalattu siniseksi, ja vedessä seisoo '
+            + 'suihkulähteen putkia. Keskellä on korkea kaari, joka on '
+            + 'auki läpi talon: siitä näkyy puita toiselle puolelle. '
+            + 'Kaaren yläpuolella on ohuiden puupylväiden kannattama '
+            + 'parveke ja pitkä räystäs. Altaan reunalla on leikattuja '
+            + 'pensaita ja valkoinen kukkapenkki, molemmin puolin '
+            + 'korkeita puita, ja talon edustalla liikkuu kävijöitä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Hasht-Behesht, North-Western View.jpg',
+          selite: 'Kahdeksankulmion nurkka luoteesta: keskellä on kapea '
+            + 'nurkkasivu ja sen molemmin puolin leveä julkisivu, '
+            + 'kerroksia kaksi. Ylemmän kerroksen kaaren sisällä riippuu '
+            + 'porrastettu stukkoholvi, jonka kärki on rei\'itetty, ja sen '
+            + 'alla on puukaiteinen parveke. Kaarien yläpuolella kulkee '
+            + 'sinistä, turkoosia ja keltaista kaakelinauhaa, muuten '
+            + 'seinä on paljasta vaaleaa tiiltä. Alakerran kaariin on '
+            + 'asennettu lasiseiniä, joiden takana näkyy ihmisiä. '
+            + 'Räystästä kannattavat puiset orret, ja katolla on '
+            + 'metalliantenni.',
+          lahde: 'Meincluded, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Hasht Behesht, Plan and section by Pascal Coste.jpg',
+          selite: 'Pascal Costen piirros vuodelta 1840. Ylhäällä on leikkaus '
+            + 'talon läpi puurivien keskellä, ja siinä näkyy keskussalin '
+            + 'kupoli; alhaalla on pohjapiirros ja sitä ympäröivä '
+            + 'puutarha. Pohjassa kahdeksankulmion keskellä on sali, '
+            + 'jonka keskellä on kahdeksankulmainen allas, ja nurkissa '
+            + 'neljä pyöreää huonetta. Ranskankielinen luettelo nimeää '
+            + 'muun muassa lepohuoneet, suihkualtaat, kanavan, '
+            + 'nurmikentät, hedelmätarhat ja plataanikujat, ja '
+            + 'mittakaavajana ulottuu 20 metriin.',
+          lahde: 'Pascal Coste, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chahar Baghin koulu': {
+      aika: '1710',
+      teksti: 'Chahar Baghin puistokadun itäpuolelle nousi safavidien '
+        + 'viimeinen suuri rakennushanke: uskonoppineiden koulu, jonka '
+        + 'rakennutti shaahi Soltan Hoseyn (hallitsi 1694–1722). Se oli '
+        + 'suurin rakennus, joka Isfahaniin oli pystytetty sitten Abbas '
+        + 'I:n hallituskauden (1588–1629). Toinen nimi on Madrese-ye '
+        + 'Madar-e Shah, shaahin äidin koulu. Lähteet ajoittavat työn eri '
+        + 'tavoin: rakennusaika 1706–1714, valmistumisvuosi 1714, '
+        + 'väljemmin 1600- ja 1700-luvun taite.'
+        + '\n\n'
+        + 'Vihkiäiset pidettiin 4. syyskuuta 1710. Shaahin käskystä '
+        + 'paikalle kutsuttiin maan käskynhaltijat, ylimykset, '
+        + 'uskonoppineet ja opettajat, ja tilaisuutta on kuvattu yhdeksi '
+        + 'safavidien ajan komeimmista. Läsnäolleiksi luetellaan muun '
+        + 'muassa Mohammad Bagher Sabzevari ja veljekset Mohammad Jafar '
+        + 'ja Mohammad Hadi.'
+        + '\n\n'
+        + 'Pohjakaavassa on neljä iwania, ja kupoli muistuttaa shaahin '
+        + 'moskeijan kupolia: ulkopinnassa on samaa monikerroksista '
+        + 'lasitettua arabeskia, mutta pohjana vaaleansininen laatta. '
+        + 'Koristelu on korostetun geometrista, ja väreissä hallitsevat '
+        + 'keltainen, vihreä ja kulta. Samalla kadulla on Madar-e Shahin '
+        + 'karavaaniseraaji, joka rakennettiin saman shaahin aikana '
+        + 'matkalaisten majapaikaksi ja on nykyään hotelli. Vihkiäisistä '
+        + 'oli kulunut kaksitoista vuotta, kun Mahmud Hotakin joukot '
+        + 'piirittivät Isfahania ja nälänhätä pakotti Soltan Hoseynin '
+        + 'antautumaan 21. lokakuuta 1722. Se on Iranin kansallisessa '
+        + 'kulttuuriperintöluettelossa numerolla 116.',
+      kuvat: [
+        {
+          tiedosto: 'Chahar bagh school drawing.jpg',
+          selite: 'Pascal Costen 1800-luvun piirros koulusta puistokadun '
+            + 'puolelta. Vasemmalla jatkuu kaksikerroksinen julkisivu, '
+            + 'jossa on pitkä rivi suippokaarisia syvennyksiä ja keskellä '
+            + 'korkeampi koristeltu portti; katolla on pieni paviljonki '
+            + 'telttakattoineen, ja julkisivun eteen nousee kiviterassi '
+            + 'portaineen, jolla istuu ja seisoo ihmisiä puiden alla. '
+            + 'Oikealla kohoaa muurin takaa sipulimainen kupoli, jonka '
+            + 'pintaa peittää kiemurteleva köynnöskuvio ja jonka rumpua '
+            + 'kiertää kalligrafianauha; kupolin alla on nelikulmainen '
+            + 'jalusta kaaripaneeleineen ja vieressä kaksi minareettia, '
+            + 'korkeampi parvekkeineen ja pienempi kupolin takana. '
+            + 'Etualan kivikäytävällä seisoo viittaan pukeutunut hahmo '
+            + 'kävelykepin varassa, ja muurin vierellä ratsastaa kaksi '
+            + 'korkeapäähineistä miestä pitkää sauvaa kantavan kulkijan '
+            + 'perässä. Ympärillä kasvaa korkeita puita, nurmea ja '
+            + 'pensaita.',
+          lahde: 'Pascal Coste, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'مدرسه چهارباغ اصفهان 03.jpg',
+          selite: 'Sisäpiha aurinkoisena päivänä: keskellä kulkee pitkä '
+            + 'matala vesiallas, jonka reunoilta nousee rivi suihkuja, ja '
+            + 'allasta reunustavat kiviportaat sekä ruukuissa kasvavat '
+            + 'punaiset ja violetit kukat. Pihalla on korkeita plataaneja '
+            + 'ja tummia sypressejä, valkoisia lyhtypylväitä, yksi '
+            + 'sinisellä mosaiikilla päällystetty pylväs, puisia penkkejä '
+            + 'ja pyöreä valkoinen kello tangon päässä. Vasemmalla ja '
+            + 'oikealla kohoaa iwan, jonka kaari ja kehykset on peitetty '
+            + 'tiheällä sinisellä mosaiikilla; oikeanpuoleisen kaaren '
+            + 'perällä on kalligrafiapaneeli, ja aukosta näkyy vihreää '
+            + 'kasvillisuutta, punaisia kukkia ja yksi ihminen '
+            + 'käytävässä. Saman iwanin katolla seisoo puinen paviljonki, '
+            + 'jonka telttakatto on turkoosi.',
+          lahde: 'Alimalekzadehfar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Chaharbagh Madrasa.jpg',
+          selite: 'Iwanin laatoitus alaviistosta pilvetöntä taivasta vasten. '
+            + 'Kaarta kehystää leveä kobolttisininen nauha, jossa juoksee '
+            + 'valkoista kalligrafiaa, ja kaaren sisäpinnan täyttää tiheä '
+            + 'köynnöskuvio sinisen, turkoosin, valkoisen ja '
+            + 'kullankeltaisen sävyissä; perällä on kennomainen '
+            + 'muqarnas-syvennys ja sen alla pienempi kaariaukko. '
+            + 'Vasemmalla seinässä on turkoosia ja sinistä geometrista '
+            + 'ruudustoa keltaisin tähtinuppuin, ja ylhäällä vaalea '
+            + 'rappauspintainen puolikupu, johon on piirretty sinisin '
+            + 'viivoin tähtikuvio. Seinistä riippuu kaksi mustaa '
+            + 'kangasta, ja oikealla julkisivu jatkuu kahtena '
+            + 'kaarisyvennyksenä.',
+          lahde: 'Moe Alian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
