@@ -96,15 +96,23 @@ export async function haeSaaTanaan(lat, lon) {
 }
 
 /**
- * Koko vuoden graafi: sadepalkit (muste, himmeä) ja keskilämpökäyrä
- * (kulta) päällekkäin. Asteikot molemmin puolin, kuukausien
- * alkukirjaimet alhaalla. Mitoitus on kiinteä viewBox — SVG skaalautuu
- * koteloonsa, ja tekstikoot on valittu sen mukaan.
+ * Koko vuoden graafi: sadepalkit (sateensininen) ja keskilämpökäyrä
+ * (kulta, pehmeästi kaartuva) päällekkäin. Asteikot molemmin puolin,
+ * kuukausien alkukirjaimet alhaalla. Mitoitus on kiinteä viewBox —
+ * SVG skaalautuu koteloonsa, ja tekstikoot on valittu sen mukaan.
+ *
+ * ELÄVÖITYS (omistajan tilaus 13.8.2026): käyrä on kulmikkaan
+ * murtoviivan sijaan pehmeä (Catmull–Rom → bezier), sen alla on
+ * haalea kultaliuku, lämpimin ja kylmin kuukausi saavat lukemansa
+ * käyrälle ja sateisin kuukausi palkkinsa päälle, kuluva kuukausi
+ * korostuu haalealla kaistalla ja lihavoidulla kirjaimella — ja
+ * avautuessaan palkit kasvavat ja käyrä piirtyy (CSS-animaatiot,
+ * liikeherkkyys sammuttaa ne tyylin puolella).
  */
 export function piirraVuosiSaa({ keskilampo, sade }) {
   const NS = 'http://www.w3.org/2000/svg';
-  const L = 300; const K = 170;
-  const vasen = 30; const oikea = 268; const yla = 14; const ala = 140;
+  const L = 300; const K = 176;
+  const vasen = 30; const oikea = 268; const yla = 20; const ala = 146;
   const svg = document.createElementNS(NS, 'svg');
   svg.setAttribute('viewBox', `0 0 ${L} ${K}`);
   svg.setAttribute('class', 'vuosisaa');
@@ -125,16 +133,50 @@ export function piirraVuosiSaa({ keskilampo, sade }) {
   const lampoY = (aste) => ala - ((aste - lampoAla) / (lampoYla - lampoAla)) * (ala - yla);
   const sadeY = (mm) => ala - (mm / sadeYla) * (ala - yla);
   const askel = (oikea - vasen) / 12;
+  const keskiX = (i) => vasen + i * askel + askel / 2;
 
-  // Sadepalkit ensin, jotta käyrä piirtyy niiden päälle.
+  /*
+   * Käyrän alle jäävä kultaliuku tarvitsee liukuvärin <defs>iin.
+   * Tunniste on kiinteä: graafi on ruudulla vain yksi kerrallaan.
+   */
+  const defs = el('defs', {});
+  const liuku = document.createElementNS(NS, 'linearGradient');
+  liuku.setAttribute('id', 'vuosisaa-liuku');
+  liuku.setAttribute('x1', '0'); liuku.setAttribute('y1', '0');
+  liuku.setAttribute('x2', '0'); liuku.setAttribute('y2', '1');
+  const pysakki = (offset, vari) => {
+    const p = document.createElementNS(NS, 'stop');
+    p.setAttribute('offset', offset);
+    p.setAttribute('stop-color', vari);
+    liuku.appendChild(p);
+  };
+  pysakki('0%', 'rgba(164, 105, 28, 0.22)');
+  pysakki('100%', 'rgba(164, 105, 28, 0)');
+  defs.appendChild(liuku);
+
+  // Kuluvan kuukauden haalea kaista taustimmaksi.
+  const kuluva = new Date().getMonth();
+  el('rect', {
+    class: 'saa-kuluva-kaista',
+    x: (vasen + kuluva * askel).toFixed(1),
+    y: yla - 6,
+    width: askel.toFixed(1),
+    height: (ala - yla + 6).toFixed(1),
+    rx: 2,
+  });
+
+  // Sadepalkit ennen käyrää, jotta käyrä piirtyy niiden päälle.
+  // Kasvuanimaation porrastus kulkee kuukausijärjestyksessä.
   sade.forEach((mm, i) => {
-    el('rect', {
+    const palkki = el('rect', {
       class: 'saa-palkki',
       x: (vasen + i * askel + askel * 0.18).toFixed(1),
       y: sadeY(mm).toFixed(1),
       width: (askel * 0.64).toFixed(1),
-      height: (ala - sadeY(mm)).toFixed(1),
+      height: Math.max(0, ala - sadeY(mm)).toFixed(1),
+      rx: 1.4,
     });
+    palkki.style.animationDelay = `${i * 45}ms`;
   });
 
   // Apuviivat ja lämpöasteikko vasemmalle.
@@ -151,23 +193,73 @@ export function piirraVuosiSaa({ keskilampo, sade }) {
   }
   el('text', { class: 'saa-akseli', x: oikea + 4, y: ala + 3 }, 'mm');
 
-  // Keskilämpökäyrä pisteineen.
-  const pisteet = keskilampo.map((aste, i) => `${(vasen + i * askel + askel / 2).toFixed(1)},${lampoY(aste).toFixed(1)}`);
-  el('polyline', { class: 'saa-viiva', points: pisteet.join(' ') });
+  /*
+   * Keskilämpökäyrä pehmeänä: Catmull–Rom-pisteistä bezier-segmentit.
+   * Sama polku kahdesti — ensin liukuväritäyttönä pohjaviivaan
+   * suljettuna, sitten itse viivana, jotta täyttö ei muuta viivan
+   * piirtoanimaatiota.
+   */
+  const pts = keskilampo.map((aste, i) => [keskiX(i), lampoY(aste)]);
+  let polku = `M ${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+  for (let i = 0; i < pts.length - 1; i += 1) {
+    const p0 = pts[Math.max(0, i - 1)];
+    const p1 = pts[i];
+    const p2 = pts[i + 1];
+    const p3 = pts[Math.min(pts.length - 1, i + 2)];
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    polku += ` C ${c1[0].toFixed(1)} ${c1[1].toFixed(1)}, ${c2[0].toFixed(1)} ${c2[1].toFixed(1)}, ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+  }
+  el('path', {
+    class: 'saa-alue',
+    d: `${polku} L ${pts[11][0].toFixed(1)} ${ala} L ${pts[0][0].toFixed(1)} ${ala} Z`,
+  });
+  el('path', { class: 'saa-viiva', d: polku, pathLength: 1 });
   keskilampo.forEach((aste, i) => {
-    el('circle', {
+    const piste = el('circle', {
       class: 'saa-piste',
-      cx: (vasen + i * askel + askel / 2).toFixed(1),
+      cx: keskiX(i).toFixed(1),
       cy: lampoY(aste).toFixed(1),
       r: 2.1,
     });
+    piste.style.animationDelay = `${250 + i * 70}ms`;
   });
 
-  // Kuukausien alkukirjaimet.
+  /*
+   * Ääripäiden lukemat käyrälle: lämpimin ja kylmin kuukausi kertovat
+   * arvonsa ilman että asteikkoa tarvitsee lukea. Sateisin kuukausi
+   * saa millimetrinsä palkin päälle. Halo (paint-order CSS:ssä) pitää
+   * luvut luettavina palkkien ja apuviivojen päällä.
+   */
+  const maxI = keskilampo.indexOf(Math.max(...keskilampo));
+  const minI = keskilampo.indexOf(Math.min(...keskilampo));
+  el('text', {
+    class: 'saa-arvo',
+    x: keskiX(maxI).toFixed(1),
+    y: (lampoY(keskilampo[maxI]) - 6).toFixed(1),
+    'text-anchor': 'middle',
+  }, `${Math.round(keskilampo[maxI])}°`);
+  el('text', {
+    class: 'saa-arvo',
+    x: keskiX(minI).toFixed(1),
+    y: (lampoY(keskilampo[minI]) - 6).toFixed(1),
+    'text-anchor': 'middle',
+  }, `${Math.round(keskilampo[minI])}°`);
+  const sadeI = sade.indexOf(Math.max(...sade));
+  if (sade[sadeI] > 0 && sadeI !== maxI && sadeI !== minI) {
+    el('text', {
+      class: 'saa-arvo saa-arvo-sade',
+      x: keskiX(sadeI).toFixed(1),
+      y: (sadeY(sade[sadeI]) - 3).toFixed(1),
+      'text-anchor': 'middle',
+    }, `${Math.round(sade[sadeI])}`);
+  }
+
+  // Kuukausien alkukirjaimet; kuluva kuukausi korostuu.
   'THMHTKHESLMJ'.split('').forEach((kirjain, i) => {
     el('text', {
-      class: 'saa-akseli',
-      x: (vasen + i * askel + askel / 2).toFixed(1),
+      class: i === kuluva ? 'saa-akseli saa-kuluva' : 'saa-akseli',
+      x: keskiX(i).toFixed(1),
       y: ala + 12,
       'text-anchor': 'middle',
     }, kirjain);

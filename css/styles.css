@@ -8354,7 +8354,32 @@ button.lukija-nappi.lukee,
   border-radius: 6px;
 }
 
-.vuosisaa .saa-palkki { fill: rgba(70, 51, 31, 0.3); }
+/*
+ * ── ELÄVÖITETTY VUOSIGRAAFI (omistajan tilaus 13.8.2026) ─────────────
+ *
+ * Sade on sateensinistä eikä mustetta: palkit erottuvat kultakäyrästä
+ * yhdellä silmäyksellä ja lukevat vedeksi. Avautuessa palkit kasvavat
+ * pohjaviivasta ylös porrastetusti (viive tulee JS:stä kuukausi-
+ * järjestyksessä), käyrä piirtyy vasemmalta oikealle ja pisteet
+ * ilmestyvät sen vanaan. Liikeherkkyys sammuttaa kaiken alla.
+ */
+.vuosisaa .saa-palkki {
+  fill: rgba(96, 118, 142, 0.55);
+  transform-box: fill-box;
+  transform-origin: bottom;
+  animation: saa-palkki-kasvu 600ms ease-out backwards;
+}
+
+@keyframes saa-palkki-kasvu {
+  from { transform: scaleY(0); }
+}
+
+/* Haalea kultaliuku käyrän alla (liukuväri SVG:n defsissä). */
+.vuosisaa .saa-alue {
+  fill: url(#vuosisaa-liuku);
+  opacity: 0;
+  animation: saa-ilmesty 900ms ease-out 450ms forwards;
+}
 
 .vuosisaa .saa-viiva {
   fill: none;
@@ -8362,9 +8387,62 @@ button.lukija-nappi.lukee,
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
+  /* pathLength="1" JS:ssä: piirto vasemmalta oikealle. */
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: saa-viiva-piirto 1100ms ease-out 150ms forwards;
 }
 
-.vuosisaa .saa-piste { fill: #a4691c; }
+@keyframes saa-viiva-piirto {
+  to { stroke-dashoffset: 0; }
+}
+
+.vuosisaa .saa-piste {
+  fill: #a4691c;
+  opacity: 0;
+  animation: saa-ilmesty 300ms ease-out forwards;
+}
+
+@keyframes saa-ilmesty {
+  to { opacity: 1; }
+}
+
+/* Ääripäiden lukemat: halo pitää luvut luettavina palkkien päällä. */
+.vuosisaa .saa-arvo {
+  font-family: var(--font-type);
+  font-size: 8.5px;
+  font-weight: 700;
+  fill: #8a5a12;
+  paint-order: stroke;
+  stroke: rgba(245, 240, 226, 0.9);
+  stroke-width: 2.5px;
+  opacity: 0;
+  animation: saa-ilmesty 400ms ease-out 1100ms forwards;
+}
+
+.vuosisaa .saa-arvo-sade { fill: #4c6478; }
+
+/* Kuluva kuukausi: haalea kaista pystyyn ja lihavoitu kirjain. */
+.vuosisaa .saa-kuluva-kaista { fill: rgba(164, 105, 28, 0.09); }
+
+.vuosisaa .saa-kuluva {
+  font-weight: 700;
+  fill: #7a5514;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vuosisaa .saa-palkki,
+  .vuosisaa .saa-alue,
+  .vuosisaa .saa-viiva,
+  .vuosisaa .saa-piste,
+  .vuosisaa .saa-arvo { animation: none; }
+
+  .vuosisaa .saa-viiva { stroke-dashoffset: 0; }
+
+  .vuosisaa .saa-alue,
+  .vuosisaa .saa-piste,
+  .vuosisaa .saa-arvo { opacity: 1; }
+}
 
 .vuosisaa .saa-apuviiva {
   stroke: rgba(70, 51, 31, 0.18);

@@ -10072,7 +10072,7 @@ export class UI {
   asetaSaaRivi(kuvake, teksti) {
     this.arrivalSaa.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">'
       + `${SAA_IKONIT[kuvake] ?? SAA_IKONIT.pilvi}</svg>`
-      + '<span class="saa-teksti"></span><span class="saa-vihje">koko vuosi ›</span>';
+      + '<span class="saa-teksti"></span><span class="saa-vihje">vuosiennuste ›</span>';
     this.arrivalSaa.querySelector('.saa-teksti').textContent = teksti;
   }
 
