@@ -24,10 +24,10 @@
  * maakartat.js:stä. Toisena argumenttina voi antaa JSON-listan
  * [[nimi, lat, lon], ...], kun pistettä vasta etsitään.
  *
- * TÄMÄ EI KORVAA SILMÄTARKISTUSTA. Työkalu kertoo, onko piste vedessä
- * ja osuuko se mittakaavajanan päälle. Se ei näe, meneekö numeroympyrä
- * toisen numeroympyrän päälle, jääkö kohde kuvan reunaan tai onko
- * rajaus mielekäs — ne katsotaan kuvasta niin kuin ennenkin.
+ * TÄMÄ EI KORVAA SILMÄTARKISTUSTA. Työkalu kertoo kolme asiaa: onko
+ * piste vedessä, osuuko se mittakaavajanan päälle ja menevätkö kahden
+ * kohteen numeroympyrät päällekkäin. Se ei näe, jääkö kohde kuvan
+ * reunaan tai onko rajaus mielekäs — ne katsotaan kuvasta kuten ennen.
  *
  * "VESI" EI AINA OLE VIRHE, joten paluuarvo on lippu ihmiselle eikä
  * tuomio. Silta on vedellä määritelmän mukaan (Rialto, Ha'penny),
@@ -277,6 +277,60 @@ if (!jana) {
     }
   }
   console.log(janalla ? `\n${janalla} pistettä janan päällä.` : '  yksikään piste ei peitä janaa');
+}
+
+/*
+ * MENEEKÖ NUMEROYMPYRÄ TOISEN PÄÄLLE — TIEDOKSI, EI TUOMIOKSI.
+ *
+ * Tämä osa EI vaikuta paluuarvoon, ja siihen on mitattu syy. Kun
+ * tarkistus kirjoitettiin (13.8.2026, Bagdadin Mutanabbin katu ja
+ * Bagdadin museo 110 metrin päässä toisistaan), koko kartaston ajo
+ * löysi päällekkäisiä pareja YHDESTÄTOISTA jo julkaistusta
+ * kaupungista: Istanbulin Hagia Sofia ja Sininen moskeija, Moskovan
+ * Punainen tori ja Vasilin katedraali, Lontoon Big Ben ja silmä,
+ * Dohan Souq Waqif ja Al Koot, Sarajevon Baščaršija ja Vijećnica ja
+ * niin edelleen. Osa niistä menee syvemmälle päällekkäin kuin Bagdad.
+ *
+ * Päällekkäisyys on siis pelissä tavallista eikä vika: kuuluisat
+ * kohteet ovat vanhoissa kaupungeissa naapureita, ja se on kartan
+ * totuus eikä sen virhe. Ympyrät ovat läpinäkymättömiä mutta
+ * numerot pysyvät luettavina, koska ne eivät osu keskeltä päällekkäin.
+ *
+ * Työkalu kertoo silti mitat, koska raja kulkee jossain: jos kaksi
+ * ympyrää olisi lähes täysin sisäkkäin, kannattaa harkita toisen
+ * kohteen vaihtoa. Koordinaattia ei saa siirtää — piste on siellä
+ * missä kohde on.
+ */
+let paallekkain = 0;
+{
+  const laatikot = pisteet.map(([nimi, lat, lon]) => {
+    const { x, y } = karttapiste(kartta, lat, lon);
+    const korkeus = KOTELO * (kuva.korkeus / kuva.leveys);
+    return {
+      nimi,
+      x: (x / 100) * KOTELO - YMPYRA / 2,
+      y: (y / 100) * korkeus - YMPYRA / 2,
+    };
+  });
+  console.log('\nnumeroympyröiden keskinäinen etäisyys:');
+  for (let i = 0; i < laatikot.length; i += 1) {
+    for (let j = i + 1; j < laatikot.length; j += 1) {
+      const a = laatikot[i];
+      const b = laatikot[j];
+      const dx = Math.abs(a.x - b.x);
+      const dy = Math.abs(a.y - b.y);
+      if (dx < YMPYRA && dy < YMPYRA) {
+        paallekkain += 1;
+        // Peittoaste: kuinka suuri osa 24 × 24 px:n ympyrästä jää toisen alle.
+        const osuus = ((YMPYRA - dx) * (YMPYRA - dy)) / (YMPYRA * YMPYRA);
+        const paino = osuus > 0.6 ? 'HARKITSE KOHTEEN VAIHTOA' : 'tavallista, ei toimenpidettä';
+        console.log(`  ${a.nimi} ja ${b.nimi}: ${Math.round(osuus * 100)} % `
+          + `(${Math.round(dx)} × ${Math.round(dy)} px) — ${paino}`);
+      }
+    }
+  }
+  if (!paallekkain) console.log('  yksikään pari ei mene päällekkäin');
+  // Ei vaikuta paluuarvoon, ks. yllä oleva perustelu.
 }
 
 process.exitCode = (vedessa || janalla) ? 1 : 0;
