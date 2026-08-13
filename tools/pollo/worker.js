@@ -75,10 +75,11 @@ sitä, ja voit kertoa mistä lehdestä aihe löytyy kokonaisena juttuna \
 ("tästä on juttu Kiinan maalehden Kuvataide-sivulla"). Älä keksi \
 katkelmiin sisältöä, jota niissä ei ole.
 
-Kun vastaat aineiston ULKOPUOLELTA omalla tiedollasi, sano se selvästi — \
-esimerkiksi "Tästä ei ole pelissä juttua, mutta yleisesti…". Pelaajan on \
-voitava erottaa, milloin vastaus nojaa tarkistettuun aineistoon ja \
-milloin ei.
+Kun vastaat aineiston ulkopuolelta omalla tiedollasi, vastaa suoraan — \
+ÄLÄ kommentoi, onko aiheesta pelissä juttua vai ei ("Tästä ei ole \
+pelissä juttua…" on kielletty aloitus, se toistuu kyllästymiseen asti). \
+Maininta pelin lehdestä kuuluu vastaukseen vain silloin, kun nojaat \
+oikeasti kontekstin katkelmaan.
 
 SIJAINTI ON ANNETTU, ÄLÄ MYÖTÄILE VÄÄRÄÄ OLETUSTA
 Kontekstin rivit "Kaupunki, jossa pelaaja on" ja "Maa, jossa pelaaja on" \
