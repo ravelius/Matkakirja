@@ -898,6 +898,12 @@ button, .brand, .turn-pill, .fact-card h2 {
   background: #241a12;
   overflow: hidden;
   display: flex;
+  /* Myös säiliölle, ei vain SVG:lle: WebKitin touch-action-tuki on
+     SVG-elementeillä puutteellinen, ja pelkkä #boardin sääntö jätti
+     Safarille raon aloittaa oma sivun zoomaus kartan eleistä (iPadin
+     "kartta hyppää" -havainnon toinen puoli). Div-säiliöllä sääntö
+     pitää kaikissa moottoreissa. */
+  touch-action: none;
 }
 
 #board {
@@ -150418,8 +150424,82 @@ function kokoaRuudunTaide(pilkottu, ikkuna) {
 const RUUTU_TYHJA = 'tyhjä';
 
 /*
+ * PAKKAUSMUODON VALINTA MITATAAN, EI ARVATA (iPad-kierros 13.8.2026).
+ *
+ * "WebP eikä PNG" valittiin aikanaan Chromium-mittauksin, ja siellä
+ * se on yhä oikein: aidolla peliruudulla WebP 301 ms, JPEG 1126 ms,
+ * PNG 1154 ms. WebKitissä järjestys on PÄINVASTAINEN: WebP 196 ms,
+ * PNG 399 ms — ja JPEG 16 ms. Omistajan iPadilla juuri pakkaus oli
+ * ruutuputken suurin yksittäinen pääsäietukos (mitattuna 500–1400 ms
+ * per ruutu), ja se tuntui zoomin tökkimisenä jokaisen eleen perään.
+ *
+ * Siksi nopein muoto mitataan kerran istunnossa pienellä
+ * kohinakankaalla ja JPEG otetaan käyttöön vain, jos se on selvästi
+ * (yli kaksi kertaa) WebP:tä nopeampi — moottorihaistelun sijaan
+ * mitataan sitä mitä oikeasti käytetään. JPEG ei osaa läpinäkyvyyttä,
+ * joten se kelpaa vain ruudulle, jonka joka pikseli on peittävä;
+ * se tarkistetaan ruutukohtaisesti (taysinPeittava), ja muut ruudut
+ * pakataan WebP:nä kuten ennenkin. Laatu 0.90 vastaa silmämääräisesti
+ * WebP:n 0.92:ta pergamenttikartalla, ja tiedostokoko on samaa
+ * luokkaa (mitattu 194 kt vs 164 kt).
+ */
+const PAKKAUS_KOE_PX = 256;
+let pakkausvalintaLupaus = null;
+
+function nopeinPakkausmuoto() {
+  if (pakkausvalintaLupaus) return pakkausvalintaLupaus;
+  pakkausvalintaLupaus = (async () => {
+    try {
+      const koekangas = document.createElement('canvas');
+      koekangas.width = PAKKAUS_KOE_PX;
+      koekangas.height = PAKKAUS_KOE_PX;
+      const ctx = koekangas.getContext('2d');
+      if (!ctx || !koekangas.toBlob) return 'image/webp';
+      // Kohinaa kuten kartalla: tasainen väri pakkautuisi kaikilla
+      // muodoilla hetkessä eikä kertoisi eroista mitään.
+      ctx.fillStyle = '#ecd8ae';
+      ctx.fillRect(0, 0, PAKKAUS_KOE_PX, PAKKAUS_KOE_PX);
+      for (let i = 0; i < 1500; i++) {
+        ctx.fillStyle = `rgba(${(i * 7) % 120},60,30,0.3)`;
+        ctx.fillRect((i * 37) % PAKKAUS_KOE_PX, (i * 91) % PAKKAUS_KOE_PX, 3, 3);
+      }
+      const aika = (tyyppi, laatu) => new Promise((valmis) => {
+        const alku = performance.now();
+        koekangas.toBlob((b) => valmis(b && b.type === tyyppi
+          ? performance.now() - alku : Infinity), tyyppi, laatu);
+      });
+      const webp = await aika('image/webp', 0.92);
+      const jpeg = await aika('image/jpeg', 0.9);
+      return jpeg * 2 < webp ? 'image/jpeg' : 'image/webp';
+    } catch {
+      return 'image/webp';
+    }
+  })();
+  return pakkausvalintaLupaus;
+}
+
+/**
+ * Onko kankaan jokainen pikseli täysin peittävä? JPEG hukkaa
+ * läpinäkyvyyden, ja esimerkiksi meriruudussa, jossa on vain yksi
+ * saari, läpinäkyvä osa muuttuisi mustaksi. Koko kankaan luku maksaa
+ * muutaman millisekunnin — murto-osan siitä, mitä väärä pakkausmuoto
+ * maksaisi joka ruudulla.
+ */
+function taysinPeittava(piirturi, leveys, korkeus) {
+  try {
+    const data = piirturi.getImageData(0, 0, leveys, korkeus).data;
+    for (let i = 3; i < data.length; i += 4) {
+      if (data[i] < 255) return false;
+    }
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/*
  * `keskeyta` on vapaaehtoinen luovutusehto. Ruudun kallein osa —
- * SVG:n maalaus kanvakselle ja WebP-pakkaus — on jakamatonta
+ * SVG:n maalaus kanvakselle ja pakkaus — on jakamatonta
  * pääsäietyötä, ja jos sormi ehtii kartalle kesken kuvan latauksen,
  * juuri se työ tuntuisi nykäyksenä eleen alla. Kun ehto palaa toteen,
  * loput vaiheet jätetään tekemättä ja palautetaan null; kutsuja
@@ -150496,7 +150576,12 @@ async function rasteroiRuutu(taide, ikkuna, skaala, tarkkuus = 1, keskeyta = nul
       if (!canvas.toBlob) { valmis(null); return; }
       canvas.toBlob((b) => valmis(b && b.type === tyyppi ? b : null), tyyppi, laatu);
     });
-    const png = await pakkaa('image/webp', 0.92) ?? await pakkaa('image/png');
+    // JPEG vain jos se on TÄSSÄ selaimessa mitatusti nopein JA ruutu
+    // on kauttaaltaan peittävä (ks. nopeinPakkausmuoto).
+    const jpegKelpaa = (await nopeinPakkausmuoto()) === 'image/jpeg'
+      && taysinPeittava(piirturi, leveysPx, korkeusPx);
+    const png = (jpegKelpaa ? await pakkaa('image/jpeg', 0.9) : null)
+      ?? await pakkaa('image/webp', 0.92) ?? await pakkaa('image/png');
     const osoite = png ? URL.createObjectURL(png) : canvas.toDataURL('image/png');
 
     /*
@@ -162725,6 +162810,23 @@ class UI {
         aloitaNipistys(e);
       }],
       ['touchmove', (e) => {
+        /*
+         * ALOITUS MYÖS LIIKKEESTÄ (omistajan iPad-havainto v639:
+         * "zoomi hyppii edelleen"). Kun sormet laskeutuvat alle
+         * aloituskynnyksen (24 px) päähän toisistaan — tavallinen
+         * tapa aloittaa nipistys — aloitaNipistys palasi tyhjin käsin
+         * EIKÄ elettä yritetty enää koskaan uudestaan. Kosketuksia ei
+         * silloin myöskään estetty, joten Safari otti eleen itselleen
+         * ja zoomasi koko sivua: kartta "hyppäsi" aivan muualle.
+         * Nyt kahden sormen liike estetään aina selaimelta ja aloitus
+         * yritetään joka liikkeellä, kunnes sormet ovat kyllin
+         * etäällä — ele alkaa siitä asennosta, ei alkuperäisestä.
+         */
+        if (!nipistys && e.touches.length === 2) {
+          e.preventDefault();
+          aloitaNipistys(e);
+          return;
+        }
         if (!nipistys) return;
         e.preventDefault();
         paivitaNipistys(e);
@@ -162923,7 +163025,10 @@ class UI {
         liikkui = true;
         this.kartanRaahaus = true;
         document.body.classList.add('kartta-raahaus');
-        pane.setPointerCapture?.(e.pointerId);
+        // Kaappaus voi heittää NotFoundErrorin, jos osoitin ehti
+        // peruuntua (iOS peruu osoittimet oman eleensä alta) — raahaus
+        // toimii silloinkin, kaappaus vain jää tekemättä.
+        try { pane.setPointerCapture?.(e.pointerId); } catch { /* ei kaappausta */ }
         /*
          * Päiväkirja yhdelle riville heti kun kartta lähtee liikkeelle
          * — ja vain kerran eleen aikana (omistajan toive: kortti ei saa
@@ -162943,7 +163048,8 @@ class UI {
 
     const paata = (e) => {
       if (!alku || (e && e.pointerId !== alku.id)) return;
-      if (liikkui) pane.releasePointerCapture?.(alku.id);
+      // Sama varautuminen kuin kaappauksessa: peruuntunut osoitin heittää.
+      if (liikkui) { try { pane.releasePointerCapture?.(alku.id); } catch { /* ei ollut */ } }
       alku = null;
       // Raahauksen päättävä napautus ei saa valita kaupunkia: lippu
       // luetaan click-vaiheessa (alla) ja nollataan vasta sen jälkeen.
@@ -173680,6 +173786,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 641, teksti: 'Zoomi ei enää putoa Safarin syliin; ruudut pakkautuvat heti' },
   { v: 640, teksti: 'Maaselain: kirjanappi vasemmalle, maakyltti oikealle' },
   { v: 639, teksti: 'Zoomi ei hypi eikä töki; kartta liukuu sormen perässä' },
   { v: 638, teksti: 'Maailmankartalle 49 uutta maata maasivuineen' },
@@ -174415,7 +174522,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.640';
+const APP_VERSION = '2026-08-09.641';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
