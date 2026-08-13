@@ -213,6 +213,38 @@ vaadi('nipistyksen aikana ei aloiteta yhtään rasterointia',
   `${nipistys.aloituksetEleessa}/${nipistys.aloitukset} aloitusta eleen aikana`);
 
 /*
+ * 2b) ANKKURI PITÄÄ (omistajan havainto iPadilta 13.8.2026: "hyppää
+ * ihan eri kohtaan, yleensä Grönlantiin"). Nipistyksen alla ollut
+ * kartan piste on eleen ja sen viimeistelyn jälkeen yhä sormien
+ * kohdalla. Jos ankkuri romahtaa nollapisteeseen (laudan vasen
+ * ylänurkka = Grönlanti), ero kasvaa satoihin pikseleihin.
+ * Kiertävällä kartalla vaakaero normalisoidaan jakson yli, ettei
+ * kierron kopio näyttäisi valheellista loikkaa.
+ */
+const ankkurinSiirtyma = (p, kx, ky) => sivu.evaluate(({ piste, x, y }) => {
+  const ui = window.matkakirja.ui;
+  const r = ui.svg.getBoundingClientRect();
+  const vb = ui.svg.viewBox.baseVal;
+  const px = r.width / vb.width;
+  let dx = (piste.x - vb.x) * px + r.left - x;
+  const dy = (piste.y - vb.y) * px + r.top - y;
+  if (ui.kiertava()) {
+    const jakso = window.matkakirja.game.pack.map.width * px;
+    dx = ((dx % jakso) + jakso) % jakso;
+    dx = Math.min(dx, jakso - dx);
+  }
+  return { dx: Math.round(dx), dy: Math.round(dy) };
+}, { piste: p, x: kx, y: ky });
+
+await sivu.waitForTimeout(1500);
+const ankkuriEnnen = await sivu.evaluate(() => window.matkakirja.ui.kartanKohta(195, 420));
+await nipista(1.3);
+await sivu.waitForTimeout(400);
+const ankkuri = await ankkurinSiirtyma(ankkuriEnnen, 195, 420);
+vaadi('nipistyksen ankkuri pysyy sormien alla',
+  Math.abs(ankkuri.dx) < 40 && Math.abs(ankkuri.dy) < 40, JSON.stringify(ankkuri));
+
+/*
  * 3) NIPISTYS JA HETI PERÄÄN PANOROINTI — se ele, jossa tökkiminen
  * tuntui. Mitattavana on ruudunpäivitys: pisin väli kahden kehyksen
  * välillä panoroinnin aikana.
@@ -287,6 +319,16 @@ vaadi('yksikään pakotus ei osunut eleen kohdalle',
 
 // 7) LATAUKSENJÄLKEINEN ENSITARKISTUS: ilman eleitä korjaus tulee heti
 // näkymän asetuttua — juuri se korjaa mountin 10 %:n mittakaavavirheen.
+// Edellisen osion pakotus voi vielä piirtää ruutujaan (liukupanorointi
+// siirtää eleen lepohetkeä ja siten koko sarjaa myöhemmäksi), ja
+// kesken piirron ensitarkistus siirtyy — tässä mitataan vain sen omaa
+// viivettä, joten piirron annetaan ensin valmistua.
+for (let i = 0; i < 40; i++) {
+  const kesken = await sivu.evaluate(() => window.matkakirja.ui.taidePiirtyy === true);
+  if (!kesken) break;
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(250);
+}
 await nollaa();
 await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
@@ -434,6 +476,18 @@ vaadi('samaan maahan palatessa ääriviivaa ei piirretä uudelleen',
  * syy on animaatiossa.
  */
 await sivu.waitForTimeout(1500);
+// Puskurirengas tyhjäksi ennen vertailua: rengas piirtää ruutuja
+// joutohetkinä, ja sen sattumanvarainen jakautuminen kahden
+// mittausikkunan välille näkyisi erona, joka ei kerro animaatiosta
+// mitään (mitattu välkkyväksi: väliin 2 leporuutua ja 3
+// animaatioruutua samasta jonosta).
+for (let i = 0; i < 60; i++) {
+  const kesken = await sivu.evaluate(() => Boolean(window.matkakirja.ui.taideRengas)
+    || window.matkakirja.ui.taidePiirtyy === true);
+  if (!kesken) break;
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(250);
+}
 // Vertailuluku: yhtä pitkä lepojakso ilman animaatiota. Kartta täydentää
 // ruutujaan joutohetkinä muutenkin, joten pelkkä ruutujen määrä ei
 // kertoisi mitään ilman tätä.
@@ -460,6 +514,88 @@ vaadi('ääriviiva-animaatio ei pakota uudelleenrasterointia',
 vaadi('ääriviiva-animaatio ei lisää rasterointia levon yli',
   animaationAikana.aloitukset <= lepo.aloitukset,
   `animaatio ${animaationAikana.aloitukset}, lepo ${lepo.aloitukset}`);
+
+/*
+ * 9) KOKONÄKYMÄSTÄ NIPISTYS EI LOIKI. Ennen korjausta ele sytytti
+ * lähikuvatilan heti kahden sormen osuessa ruutuun: näkymä hyppäsi
+ * saapumisportaaseen pelaajan nappulan kohdalle kesken eleen. Nyt ele
+ * lähtee kokonäkymän omasta mittakaavasta ja ankkuroituu sormiin, ja
+ * lähikuvatilaan siirrytään vasta sormien irrotessa. Pystysuunnassa
+ * sallitaan asettelun vaihdoksen siirtymä (lähikuvan kartta kiinnittyy
+ * yläreunaan), vaakasuunnassa ankkurin on pidettävä.
+ */
+await sivu.waitForTimeout(2000);
+await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  ui.nollaaAloitusZoom();
+  ui.fitViewBox();
+  ui.paivitaZoomiNapit();
+});
+await sivu.waitForTimeout(2500);
+const yleisEnnen = await sivu.evaluate(() => ({
+  kohta: window.matkakirja.ui.kartanKohta(195, 420),
+  manner: window.matkakirja.ui.mannerZoom,
+}));
+await nipista(1.5);
+await sivu.waitForTimeout(400);
+const yleisSiirtyma = await ankkurinSiirtyma(yleisEnnen.kohta, 195, 420);
+const yleisJalkeen = await sivu.evaluate(() => ({
+  manner: window.matkakirja.ui.mannerZoom,
+  kerroin: Math.round((window.matkakirja.ui.zoomiVapaa || 0) * 100) / 100,
+}));
+vaadi('kokonäkymän nipistys alkaa kokonäkymästä eikä hyppää eleen alussa',
+  yleisEnnen.manner === false && yleisJalkeen.manner === true,
+  JSON.stringify({ yleisEnnen, yleisJalkeen }));
+vaadi('kokonäkymän nipistyksen ankkuri ei karkaa (ei Grönlanti-hyppyä)',
+  Math.abs(yleisSiirtyma.dx) < 80 && Math.abs(yleisSiirtyma.dy) < 320,
+  JSON.stringify(yleisSiirtyma));
+
+/*
+ * 10) LIUKUPANOROINTI (omistajan toive 13.8.2026: "Earthissa vieritys
+ * ei lopu heti kun sormi irtoaa vaan hidastuu pehmeästi"). Nopean
+ * pyyhkäisyn jälkeen kartta liukuu vielä eteenpäin — mutta liuku EI
+ * rasteroi kesken liikkeen: kartanRaahaus pysyy liu'un ajan pystyssä
+ * ja rasterointi (loppukirjaus) tulee vasta pysähdyttyä.
+ */
+await sivu.waitForTimeout(2500);
+await nollaa();
+const panEnnenLiukua = await sivu.evaluate(() => window.matkakirja.ui.panX);
+/*
+ * Pyyhkäisy uusitaan tarvittaessa: CDP:n kosketustapahtumien ajoitus
+ * elää ajokoneen kuorman mukana, ja liian tiheään niputtuneista
+ * tapahtumista ei kerry nopeusikkunaan näytteitä (alle 30 ms:n
+ * mittausväli hylätään kohinana myös oikealla laitteella). Vartioitava
+ * asia on "nopea pyyhkäisy liukuu", ei "jokainen synteettinen
+ * tapahtumasarja tulkitaan nopeaksi".
+ */
+let liukuHeti = { raahaus: false, panX: null };
+for (let yritys = 0; yritys < 3 && !liukuHeti.raahaus; yritys++) {
+  // eslint-disable-next-line no-await-in-loop
+  await panoroi(220, 8);
+  // eslint-disable-next-line no-await-in-loop
+  liukuHeti = await sivu.evaluate(() => ({
+    raahaus: window.matkakirja.ui.kartanRaahaus,
+    panX: window.matkakirja.ui.panX,
+  }));
+  // eslint-disable-next-line no-await-in-loop
+  if (!liukuHeti.raahaus) await sivu.waitForTimeout(400);
+}
+await sivu.waitForTimeout(250);
+const liukuKesken = await sivu.evaluate(() => ({
+  panX: window.matkakirja.ui.panX,
+}));
+await sivu.waitForTimeout(2000);
+const liukuMittarit = await mittarit();
+const liukuLopussa = await sivu.evaluate(() => ({
+  raahaus: window.matkakirja.ui.kartanRaahaus,
+}));
+vaadi('pyyhkäisyn jälkeen kartta liukuu pehmeästi eteenpäin',
+  liukuHeti.raahaus === true && liukuKesken.panX !== liukuHeti.panX
+  && liukuLopussa.raahaus === false,
+  JSON.stringify({ panEnnenLiukua, liukuHeti, liukuKesken, liukuLopussa }));
+vaadi('liuku ei aloita rasterointia kesken liikkeen',
+  liukuMittarit.aloituksetEleessa === 0 && liukuMittarit.pakotus === 0,
+  JSON.stringify(liukuMittarit));
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 

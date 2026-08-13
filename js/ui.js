@@ -1519,6 +1519,33 @@ const TARKKUUS_LEPO_MS = 1600;
 // Osoitinlippu on jumissa, jos se on ollut pystyssä näin kauan ilman
 // yhtään tapahtumaa (ks. tarkkuusOdotus).
 const TARKKUUS_JUMI_MS = 5000;
+/*
+ * Rasterointiruudun yläraja laudan yksiköissä (ks. taydennaTaide).
+ *
+ * Ruudun koko lasketaan pikselibudjetista (1100 px / mittakaava), ja
+ * loitonnetussa näkymässä se kasvaa rajatta: yhdistetyllä vanhalla
+ * maailmalla (12000 yksikköä) yleiskuvan ruuduksi tuli koko lauta.
+ * Pikseleitä siinä on vähän, mutta piirrettävää vektoria KAIKKI —
+ * yksi drawImage maalaa silloin jokaisen mantereen taiteen kerralla,
+ * ja se on jakamaton pääsäikeen tukos. Mitattuna (Chromium, 4x
+ * CPU-kuristus eli suunnilleen iPad): 6,3 sekuntia, joka osui suoraan
+ * nipistyseleen alle — juuri se "zoomaus tökkii iPadilla".
+ *
+ * Eleiden keskeytysvahti (eleKesken) toimii vain RUUTUJEN VÄLISSÄ,
+ * joten ainoa tapa pitää kartta sormessa kiinni on pitää yksittäinen
+ * ruutu pienenä. Raja on yksiköissä eikä pikseleissä, koska maalaus-
+ * työn määrä seuraa katettua lauta-alaa, ei kuvan kokoa: palojen
+ * XML:ää on maailmanlaudalla yhteensä ~8 Mt, ja ruutuun kootaan vain
+ * siihen osuvat palat. Kaikki laudat on piirretty samaan tiheyteen
+ * (~1000 yksikköä per manner), joten 2000 tarkoittaa kaikkialla samaa
+ * määrää piirrettävää. Pienillä laudoilla (~1000–1200 yksikköä)
+ * pikseleistä laskettu koko jää tämän alle eikä mikään muutu; raja
+ * puree vain isoon lautaan. Mitattuna samalla kuristuksella: koko
+ * laudan ruudun SVG-kuvan lataus kesti 21 sekuntia yhtenä pötkönä,
+ * 2000 yksikön ruudun 1,4–1,8 sekuntia — ja ruutujen välissä ele
+ * pääsee nyt väliin.
+ */
+const RUUDUN_YKSIKOT_ENINTAAN = 2000;
 // Aloituskartan lähikuvan suurennos yleiskuvaan nähden.
 const ALOITUS_ZOOM = 3.1;
 /*
@@ -3670,7 +3697,9 @@ export class UI {
     if (this.dead || !this.svg) return false;
     // Painike ja rulla ovat yhtä lailla kartan käsittelyä: tarkkuuden
     // uudelleenrasterointi odottaa niiden jälkeen saman levon kuin
-    // sormeneleen jälkeen (ks. tarkistaTarkkuus).
+    // sormeneleen jälkeen (ks. tarkistaTarkkuus). Liukuva kartta
+    // pysähtyy, ettei liuku kirjoita siirtoa uuden näkymän päälle.
+    this.pysaytaLiuku?.(true);
     this.merkitseKartanEle();
     // Avausnäkymässä kartalla on oma lähikuvansa ja avausteksti; sinne
     // painikkeet eivät kuulu. Katselutila (?lauta=) näyttää laudan kuin
@@ -4041,6 +4070,14 @@ export class UI {
       this.taideTarkkuus = piirtotarkkuus(pane?.clientWidth ?? 400, pane?.clientHeight ?? 800);
       this.taideRuutu = ruudunKoko(nakyva.skaala, this.taideTarkkuus);
       /*
+       * Yläraja ENNEN kierron tasajakoa: ilman sitä loitonnettu näkymä
+       * niputtaa ison laudan yhteen jättiruutuun, jonka maalaus jumittaa
+       * pääsäikeen sekunneiksi kesken zoomieleen (ks. vakion selostus).
+       * Tasajako pyöristää rajatun koon vielä laudan jaolliseksi osaksi,
+       * joten kierron kopio ei riko mitään.
+       */
+      this.taideRuutu = Math.min(this.taideRuutu, RUUDUN_YKSIKOT_ENINTAAN);
+      /*
        * Kiertävällä kartalla ruudun on jaettava maailma tasan.
        *
        * Ruudun koko lasketaan pikselirajasta, ja loitonnetulla
@@ -4206,10 +4243,15 @@ export class UI {
           break;
         }
         const ikkuna = { x: rx * koko, y: ry * koko, w: koko, h: koko };
-        const kuva = await rasteroiRuutu(this.taide, ikkuna, skaala, this.taideTarkkuus);
+        // Luovutusehto: jos ele alkaa kesken ruudun, kalleimmat vaiheet
+        // (maalaus, pakkaus) jäävät tekemättä eivätkä nykäise sormen alla.
+        const kuva = await rasteroiRuutu(this.taide, ikkuna, skaala, this.taideTarkkuus,
+          () => this.dead || this.eleKesken());
         if (this.dead || skaala !== this.taideSkaala) continue;
         // Tyhjä ruutu kirjataan tyhjänä: sitä ei piirretä eikä pyydetä uudestaan.
         if (kuva === RUUTU_TYHJA) { this.taideTyhjat.add(avain); continue; }
+        // Eleen takia luovutettu ruutu pyydetään uudestaan eleen jälkeen.
+        if (!kuva && this.eleKesken()) { this.taideOdottaa = true; break; }
         if (!kuva) continue;
         this.taideRuudut.set(avain, kuva);
         // Uusi ruutu alimmaiseksi: vanhan mittakaavan ruudut jäävät
@@ -4284,13 +4326,21 @@ export class UI {
       const { avain, rx, ry } = jono.shift();
       if (!this.taideRuudut.has(avain) && !this.taideTyhjat.has(avain)) {
         const ikkuna = { x: rx * koko, y: ry * koko, w: koko, h: koko };
-        const kuva = await rasteroiRuutu(this.taide, ikkuna, skaala, tarkkuus);
+        // Sama luovutusehto kuin näkyvillä ruuduilla: ele voittaa.
+        const kuva = await rasteroiRuutu(this.taide, ikkuna, skaala, tarkkuus,
+          () => this.dead || this.eleKesken());
         if (this.dead || this.taideRengas !== tyo || skaala !== this.taideSkaala) return;
         if (kuva === RUUTU_TYHJA) this.taideTyhjat.add(avain);
         else if (kuva) {
           this.taideRuudut.set(avain, kuva);
           // Alimmaiseksi, kuten näkyvätkin: vanhat jäävät päälle.
           this.taideRyhma.insertBefore(kuva, this.taideRyhma.firstChild);
+        } else if (this.eleKesken()) {
+          // Luovutettu ruutu takaisin jonon kärkeen: se piirretään
+          // seuraavalla joutohetkellä, kun sormi on irronnut.
+          jono.unshift({ avain, rx, ry });
+          tyo.id = pyyda(askel);
+          return;
         }
       }
       if (jono.length) { tyo.id = pyyda(askel); return; }
@@ -4502,6 +4552,9 @@ export class UI {
 
   /** Palauttaa kartan tavalliseen kokoonsa (uusi peli, laudan vaihto). */
   nollaaAloitusZoom() {
+    // Liukuva kartta ei saa jäädä kirjoittamaan siirtoa nollatun
+    // näkymän päälle.
+    this.pysaytaLiuku?.(true);
     this.aloitusZoom = false;
     this.mannerZoom = false;
     // Porras oletukselle: seuraava lähikuva alkaa taas saapumistasolta.
@@ -5013,6 +5066,8 @@ export class UI {
       osoittimet.add(e.pointerId);
       this.osoitinKartalla = true;
       this.merkitseKartanEle();
+      // Sormi kartalle = liukuva kartta pysähtyy siihen paikkaan.
+      pysaytaLiuku(true);
       // Pöllön vihjekupla katoaa heti, kun kartalla tapahtuu jotain.
       this.kartallaKosketettu();
     }, paalla);
@@ -5050,6 +5105,9 @@ export class UI {
     pane.addEventListener('touchstart', () => {
       this.osoitinKartalla = true;
       this.merkitseKartanEle();
+      // iOS voi perua osoitintapahtumat (ks. yllä), joten liuku
+      // pysäytetään myös kosketuksesta.
+      pysaytaLiuku(true);
       this.kartallaKosketettu();
     }, paalla);
     pane.addEventListener('touchmove', () => this.merkitseKartanEle(), paalla);
@@ -5118,37 +5176,80 @@ export class UI {
       return { r, vb, pxPerYks: r.width / vb.width };
     };
 
-    /** Asiakaskoordinaatti laudan koordinaatiksi. */
+    /**
+     * Asiakaskoordinaatti laudan koordinaatiksi — tai null, jos lautaa
+     * ei juuri nyt voi mitata.
+     *
+     * EI KOSKAAN nollapistettä. Aiempi versio palautti virhetilassa
+     * { x: 0, y: 0 }, ja se on laudalla oikea paikka: maailmankartan
+     * vasen ylänurkka. Kun mittaus petti kesken nipistyksen, eleen
+     * ankkuriksi tuli origo ja koko näkymä sinkosi sinne (omistajan
+     * havainto iPadilta 13.8.2026: "hyppää ihan eri kohtaan, yleensä
+     * Grönlantiin"). Null pakottaa kutsujan valitsemaan järkevän
+     * varapisteen sen sijaan, että virhe naamioituisi koordinaatiksi.
+     */
     const laudalle = (asiakas) => {
       const k = laudanKuvaus();
-      if (!k) return { x: 0, y: 0 };
-      return {
+      if (!k || !Number.isFinite(asiakas?.x) || !Number.isFinite(asiakas?.y)) return null;
+      const p = {
         x: k.vb.x + (asiakas.x - k.r.left) / k.pxPerYks,
         y: k.vb.y + (asiakas.y - k.r.top) / k.pxPerYks,
       };
+      return Number.isFinite(p.x) && Number.isFinite(p.y) ? p : null;
+    };
+
+    /** Onko piste olemassa ja molemmat koordinaatit äärellisiä lukuja? */
+    const kelpaa = (p) => Boolean(p) && Number.isFinite(p.x) && Number.isFinite(p.y);
+
+    /**
+     * Eleen ankkuri: sormien alla oleva laudan piste, tai jos sitä ei
+     * saada mitattua, NÄKYMÄN KESKIPISTE. Keskipiste on ainoa varapiste,
+     * joka ei koskaan heitä näkymää minnekään — zoomi vain syvenee
+     * siihen mitä pelaaja jo katsoo.
+     */
+    const varmaAnkkuri = (asiakas) => {
+      const suora = laudalle(asiakas);
+      if (suora) return suora;
+      const n = this.nakyvaAlue();
+      if (n) return { x: n.x + n.w / 2, y: n.y + n.h / 2 };
+      const box = this.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+      return { x: box.x + box.w / 2, y: box.y + box.h / 2 };
     };
 
     const aloitaNipistys = (e) => {
       const { etaisyys, keski } = kaksiSormea(e);
       if (etaisyys < 24) return;
-      // Kokonäkymästä nipistettäessä siirrytään ensin lähikuvatilaan,
-      // muuten mittakaavaa ei ole mistä jatkaa.
-      if (!this.mannerZoom && !this.aloitusZoom) {
-        this.mannerZoom = true;
-        document.body.classList.add('manner-zoom');
-        this.zoomKohde = this.pelaajanKohta() ?? null;
-        this.panX = null;
-        this.panY = null;
-        this.fitViewBox();
-      }
+      /*
+       * Kokonäkymästä nipistettäessä EI enää hypätä lähikuvatilaan
+       * eleen alussa. Aiempi versio teki juuri sen: se sytytti
+       * mannerZoomin ja ajoi fitViewBoxin heti kahden sormen osuessa
+       * ruutuun, jolloin näkymä loikkasi saapumisportaaseen pelaajan
+       * nappulan kohdalle — kesken pelaajan oman eleen ja yleensä aivan
+       * muualle kuin minne sormet osoittivat (omistajan havainto:
+       * "sisään zoomattaessa kartta saattaa hypätä kokonaan eri
+       * kohtaan"). Kerroin ei hyppyä tarvitse: kokonäkymässä
+       * zoomiKerroin on portaikon pohja (1), ja ele piirtyy CSS-
+       * muunnoksena siitä eteenpäin. Lähikuvatilaan siirrytään vasta
+       * paataNipistyksessä, kun tiedetään mihin kohtaan ja kuinka
+       * syvälle ele päätyi.
+       */
       nipistys = {
         etaisyys,
         keski,
-        kohde: laudalle(keski),
+        kohde: varmaAnkkuri(keski),
         panX: this.panX ?? 0,
         panY: this.panY ?? 0,
         kerroin: this.zoomiKerroin,
         suhde: 1,
+        /*
+         * Paneelin sijainti mitataan KERRAN eleen alussa. Paneeli ei
+         * liiku nipistyksen aikana (muunnos kohdistuu karttaan, ei
+         * paneeliin), mutta getBoundingClientRect pakottaa asettelun
+         * laskennan — ja ison laudan asettelu maksaa kymmeniä
+         * millisekunteja. Joka touchmovella se söi kehysbudjetin
+         * (mitattuna profiilissa suurin JS-kuluerä eleen aikana).
+         */
+        laatikko: pane.getBoundingClientRect(),
       };
       alku = null;
       liikkui = false;
@@ -5167,10 +5268,14 @@ export class UI {
       // mistä ele alkoi.
       const kerroin = Math.min(suurin, Math.max(pienin, nipistys.kerroin * (etaisyys / nipistys.etaisyys)));
       nipistys.suhde = kerroin / nipistys.kerroin;
-      const laatikko = pane.getBoundingClientRect();
+      // Eleen alussa mitattu paneelin sijainti (ks. aloitaNipistys).
+      const laatikko = nipistys.laatikko ?? pane.getBoundingClientRect();
       const m = { x: nipistys.keski.x - laatikko.left, y: nipistys.keski.y - laatikko.top };
       const tx = m.x - (m.x - nipistys.panX) * nipistys.suhde;
       const ty = m.y - (m.y - nipistys.panY) * nipistys.suhde;
+      // Kelvoton luku muunnoksessa hylkäisi koko tyylin ja kartta
+      // nykäisisi takaisin — parempi jättää edellinen asento voimaan.
+      if (!Number.isFinite(tx) || !Number.isFinite(ty)) return;
       this.svg.style.transform =
         `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${nipistys.suhde.toFixed(4)})`;
     };
@@ -5196,6 +5301,12 @@ export class UI {
         this.paivitaZoomiNapit();
         return;
       }
+      // Kokonäkymästä alkanut ele astuu lähikuvatilaan vasta tässä,
+      // kun eleen lopputulos tunnetaan (ks. aloitaNipistys).
+      if (!this.mannerZoom && !this.aloitusZoom) {
+        this.mannerZoom = true;
+        document.body.classList.add('manner-zoom');
+      }
       /*
        * Uusi mittakaava — ja sen jälkeen ankkuri takaisin sormien alle.
        *
@@ -5207,14 +5318,18 @@ export class UI {
        *
        * Siksi vieritys lasketaan tässä uudelleen suoraan ankkurista:
        * piste, joka oli sormien alla, on siellä yhä.
+       *
+       * Kelvoton ankkuri EI kelpaa kohteeksi: silloin zoomKohde jää
+       * tyhjäksi ja sovitaMannerZoom keskittää pelaajan nappulaan —
+       * ei koskaan laudan origoon (Grönlanti-hyppy, ks. laudalle).
        */
       this.zoomiVapaa = kerroin;
-      this.zoomKohde = kohde;
+      this.zoomKohde = kelpaa(kohde) ? kohde : null;
       this.panX = null;
       this.panY = null;
       this.fitViewBox();
       const k = laudanKuvaus();
-      if (k) {
+      if (k && kelpaa(kohde) && kelpaa(keski)) {
         // Elementin asettelusijainti = nykyinen kulma miinus nykyinen siirto.
         const asetteluX = k.r.left - (this.panX ?? 0);
         const asetteluY = k.r.top - (this.panY ?? 0);
@@ -5296,6 +5411,109 @@ export class UI {
     /** Onko nipistys kesken? Siirto ei saa sekaantua siihen. */
     const nipistetaan = () => nipistys !== null;
 
+    /*
+     * --- liukupanorointi -------------------------------------------
+     *
+     * Omistajan toive (13.8.2026): "Earthissa vieritys ei lopu heti
+     * kun sormi irtoaa vaan hidastuu pehmeästi."
+     *
+     * Liuku on samaa elettä kuin raahaus, vain ilman sormea: se elää
+     * kokonaan asetaPanissa eli CSS-muunnoksessa, ja kartanRaahaus
+     * pidetään pystyssä koko liu'un ajan. Niin rasterointi ja
+     * tarkkuusvahti kohtelevat liukua kuin sormi olisi yhä kartalla —
+     * kumpikaan ei pääse tökkäisemään kesken liikkeen, ja bittikartta
+     * täydennetään vasta kun kartta on oikeasti pysähtynyt. Sama
+     * sääntö kuin sormella: "lataus aina vain juuri kun sormi irtoaa."
+     *
+     * Nopeus mitataan viimeisten ~120 ms:n näytteistä eikä kahdesta
+     * viimeisestä tapahtumasta: kosketuksen viime parit värähtelevät,
+     * ja pelkästä parista laskettu suunta heittelehtii.
+     */
+    const LIUKU_IKKUNA_MS = 120; // nopeus mitataan tältä hännältä
+    const LIUKU_KYNNYS = 0.25; // px/ms — hitaampi irrotus ei liu'u
+    const LIUKU_SAMMUU = 0.02; // px/ms — tässä liuku katsotaan ohi
+    const LIUKU_KATTO = 2.5; // px/ms — hurjinkin heitto pysyy aisoissa
+    const LIUKU_PUOLIINTUMIS_MS = 190; // kitka: vauhti puolittuu tässä ajassa
+    let liuku = null;
+    const naytteet = [];
+
+    /**
+     * Sammuttaa liu'un. Keskeytys (uusi sormi, zoomi, laudan nollaus)
+     * jättää täydennyksen odottamaan seuraavaa sopivaa hetkeä —
+     * rasterointia ei koskaan aloiteta juuri kun sormi laskeutuu.
+     */
+    const pysaytaLiuku = (keskeytys = false) => {
+      if (!liuku) return;
+      cancelAnimationFrame(liuku.pyynto);
+      liuku = null;
+      this.kartanRaahaus = false;
+      document.body.classList.remove('kartta-raahaus');
+      if (keskeytys) this.taideOdottaa = true;
+    };
+    // Laudan nollaus ja zoomipainikkeet pysäyttävät liu'un tästä.
+    this.pysaytaLiuku = pysaytaLiuku;
+
+    const liukuAskel = (t) => {
+      if (!liuku || this.dead) return;
+      // Katto askeleelle: taustavälilehden jälkeinen jättikehys ei saa
+      // singota karttaa.
+      const dt = Math.min(64, Math.max(1, t - liuku.viime));
+      liuku.viime = t;
+      const ennenX = this.panX ?? 0;
+      const ennenY = this.panY ?? 0;
+      this.asetaPan(ennenX + liuku.vx * dt, ennenY + liuku.vy * dt);
+      /*
+       * Pehmeä pysäytys reunalle: asetaPan rajaa siirron, ja jos
+       * akseli ei enää liikkunut edes puolta pyydetystä, ollaan
+       * laidassa — sen suunnan vauhti sammutetaan heti eikä jäädä
+       * puskemaan rajaa vasten. Kiertävällä kartalla vaakasuunnalla
+       * ei ole laitaa (arvo kiertää), joten tarkistus ohitetaan.
+       */
+      if (liuku.vx && !this.panJakso
+          && Math.abs((this.panX ?? 0) - ennenX) < Math.abs(liuku.vx * dt) / 2) liuku.vx = 0;
+      if (liuku.vy
+          && Math.abs((this.panY ?? 0) - ennenY) < Math.abs(liuku.vy * dt) / 2) liuku.vy = 0;
+      // Eksponentiaalinen kitka: aikapohjainen, jotta tuntuma ei
+      // riipu ruudun virkistystaajuudesta.
+      const vaimennus = 0.5 ** (dt / LIUKU_PUOLIINTUMIS_MS);
+      liuku.vx *= vaimennus;
+      liuku.vy *= vaimennus;
+      if (Math.hypot(liuku.vx, liuku.vy) < LIUKU_SAMMUU) {
+        pysaytaLiuku();
+        // Liuku päättyi: lepo alkaa nyt, ja kuva täydennetään kuten
+        // sormen irrotessa — täsmälleen yksi loppukirjaus.
+        this.merkitseKartanEle();
+        this.taydennaTaide({ heti: true });
+        return;
+      }
+      liuku.pyynto = requestAnimationFrame(liukuAskel);
+    };
+
+    /** Käynnistää liu'un raahauksen päätteeksi. Tosi, jos lähti. */
+    const aloitaLiuku = () => {
+      if (this.reducedMotion || this.dead) return false;
+      const nyt = performance.now();
+      while (naytteet.length && nyt - naytteet[0].t > LIUKU_IKKUNA_MS + 40) naytteet.shift();
+      if (naytteet.length < 2) return false;
+      const eka = naytteet[0];
+      const vika = naytteet[naytteet.length - 1];
+      const dt = vika.t - eka.t;
+      if (dt < 30) return false;
+      let vx = (vika.x - eka.x) / dt;
+      // Pystyvauhti vain siellä, missä pystysuuntaan voi panoroida —
+      // aloituskartalla liike on yksiulotteista kuten raahauskin.
+      let vy = this.panVaraY ? (vika.y - eka.y) / dt : 0;
+      const vauhti = Math.hypot(vx, vy);
+      if (vauhti < LIUKU_KYNNYS) return false;
+      if (vauhti > LIUKU_KATTO) {
+        vx *= LIUKU_KATTO / vauhti;
+        vy *= LIUKU_KATTO / vauhti;
+      }
+      liuku = { vx, vy, viime: nyt, pyynto: 0 };
+      liuku.pyynto = requestAnimationFrame(liukuAskel);
+      return true;
+    };
+
     pane.addEventListener('pointerdown', (e) => {
       if (nipistetaan()) return;
       if (!this.aloitusZoom && !this.mannerZoom) return;
@@ -5304,6 +5522,8 @@ export class UI {
         x: e.clientX, y: e.clientY, pan: this.panX ?? 0, panY: this.panY ?? 0, id: e.pointerId,
       };
       liikkui = false;
+      // Uusi ele, uusi nopeushistoria.
+      naytteet.length = 0;
       // Kesken oleva zoomausliuku ei saa jarruttaa raahausta.
       clearTimeout(this.zoomAjastin);
       this.svg.style.transition = '';
@@ -5337,6 +5557,11 @@ export class UI {
          */
         this.asetaPaivakirjanKoko(true);
       }
+      // Nopeusnäyte liukua varten; vanhat putoavat ikkunan takaa pois.
+      naytteet.push({ t: e.timeStamp || performance.now(), x: e.clientX, y: e.clientY });
+      while (naytteet.length > 2 && naytteet[naytteet.length - 1].t - naytteet[0].t > LIUKU_IKKUNA_MS) {
+        naytteet.shift();
+      }
       this.asetaPan(alku.pan + dx, alku.panY + dy);
     });
 
@@ -5344,14 +5569,23 @@ export class UI {
       if (!alku || (e && e.pointerId !== alku.id)) return;
       if (liikkui) pane.releasePointerCapture?.(alku.id);
       alku = null;
-      // Sykähdykset palaavat heti kun sormi irtoaa.
-      document.body.classList.remove('kartta-raahaus');
       // Raahauksen päättävä napautus ei saa valita kaupunkia: lippu
       // luetaan click-vaiheessa (alla) ja nollataan vasta sen jälkeen.
       this.raahattiin = liikkui;
       if (liikkui) setTimeout(() => { this.raahattiin = false; }, 0);
       /*
-       * Bittikartta täydennetään VAIN tässä: heti kun sormi irtoaa.
+       * Vauhdikas irrotus jatkaa liukuna (omistajan toive): kartta
+       * hidastuu pehmeästi eikä pysähdy kuin seinään. Liuku on samaa
+       * elettä — kartanRaahaus ja luokka jäävät pystyyn, ja lataus
+       * odottaa liu'un loppua.
+       */
+      if (liikkui && aloitaLiuku()) return;
+      // Sykähdykset palaavat heti kun sormi irtoaa.
+      document.body.classList.remove('kartta-raahaus');
+      /*
+       * Bittikartta täydennetään VAIN tässä: heti kun sormi irtoaa
+       * (tai liukuAskeleessa, kun liuku on pysähtynyt — se on saman
+       * eleen loppu).
        *
        * Omistajan linjaus: "lataus siis aina vain juuri kun sormi
        * irtoaa, ei muulloin." Ele saa kulkea täysin valmiin kuvan

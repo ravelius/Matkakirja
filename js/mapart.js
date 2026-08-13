@@ -2553,7 +2553,17 @@ export function kokoaRuudunTaide(pilkottu, ikkuna) {
  */
 export const RUUTU_TYHJA = 'tyhjä';
 
-export async function rasteroiRuutu(taide, ikkuna, skaala, tarkkuus = 1) {
+/*
+ * `keskeyta` on vapaaehtoinen luovutusehto. Ruudun kallein osa —
+ * SVG:n maalaus kanvakselle ja WebP-pakkaus — on jakamatonta
+ * pääsäietyötä, ja jos sormi ehtii kartalle kesken kuvan latauksen,
+ * juuri se työ tuntuisi nykäyksenä eleen alla. Kun ehto palaa toteen,
+ * loput vaiheet jätetään tekemättä ja palautetaan null; kutsuja
+ * pyytää ruudun uudestaan eleen jälkeen. Tarkistus on latauksen
+ * KALTAISTEN odotusten jälkeen, koska juuri niiden aikana ele ehtii
+ * alkaa.
+ */
+export async function rasteroiRuutu(taide, ikkuna, skaala, tarkkuus = 1, keskeyta = null) {
   if (!taide || !window.Blob || !URL.createObjectURL) return null;
   try {
     const sisalto = typeof taide === 'string' ? taide : kokoaRuudunTaide(taide, ikkuna);
@@ -2579,6 +2589,11 @@ export async function rasteroiRuutu(taide, ikkuna, skaala, tarkkuus = 1) {
       URL.revokeObjectURL(lahdeOsoite);
       return null;
     }
+    // Ele alkoi latauksen aikana: maalaus ja pakkaus jäävät tekemättä.
+    if (keskeyta?.()) {
+      URL.revokeObjectURL(lahdeOsoite);
+      return null;
+    }
 
     const canvas = document.createElement('canvas');
     canvas.width = leveysPx;
@@ -2590,6 +2605,10 @@ export async function rasteroiRuutu(taide, ikkuna, skaala, tarkkuus = 1) {
     // Paperin pinta ruudun omissa pikseleissä, ks. GRAIN_RUUDULLA_PX.
     const ruudullaPx = ikkuna.w * skaala;
     if (ruudullaPx > 0) piirraRakeisuus(piirturi, leveysPx, korkeusPx, leveysPx / ruudullaPx);
+
+    // Ele alkoi maalauksen aikana: pakkaus (mitattuna pisin yksittäinen
+    // pääsäievaihe) jää tekemättä ja ruutu pyydetään myöhemmin uudestaan.
+    if (keskeyta?.()) return null;
 
     /*
      * WebP eikä PNG.
