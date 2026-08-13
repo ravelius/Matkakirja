@@ -2864,13 +2864,20 @@ const luenta = await luentaSivu.evaluate(async () => {
 
   let puheAlkoiKesken = 0;
   let naputuksiaPuheenAikana = 0;
+  let vaimeitaPuheenAikana = 0;
+  let kovinPuheenAikana = 0;
   let virtaKesken = false;
   for (let i = 0; i < 200; i += 1) {
     await odota(40);
     if (document.querySelector('.pollo-jatkot')) break;
     // Vastaus on vielä kesken: mitataan, alkoiko puhe jo.
     puheAlkoiKesken = Math.max(puheAlkoiKesken, window.__puhutut.length);
-    naputuksiaPuheenAikana = window.__naputukset().length;
+    // Mockin puhe alkaa heti ensimmäisestä palasta, joten kaikkien
+    // striimin lyöntien kuuluu olla vaimeita.
+    const lyonnit = window.__naputukset();
+    naputuksiaPuheenAikana = lyonnit.length;
+    vaimeitaPuheenAikana = lyonnit.filter((l) => l.voima < 0.3).length;
+    kovinPuheenAikana = lyonnit.reduce((m, l) => Math.max(m, l.voima), 0);
     if (window.matkakirjaPollo?.luentaVirta) virtaKesken = true;
   }
   await odota(600);
@@ -2878,6 +2885,8 @@ const luenta = await luentaSivu.evaluate(async () => {
   return {
     puheAlkoiKesken,
     naputuksiaPuheenAikana,
+    vaimeitaPuheenAikana,
+    kovinPuheenAikana,
     virtaKesken,
     aaniPaalla: Boolean(window.matkakirjaPollo?.aaniPaalla),
     lausumia: lausumat.length,
@@ -2896,8 +2905,13 @@ vaadi('hakasulkeet eivät koskaan päädy luettavaan',
   luenta.sulkeitaLuennassa === false, JSON.stringify(luenta));
 vaadi('jatkokysymyksiä ei lueta ääneen',
   luenta.jatkojaLuennassa === false, JSON.stringify(luenta));
-vaadi('naputus vaikenee, kun kaiutin lukee vastausta',
-  luenta.naputuksiaPuheenAikana === 0, `${luenta.naputuksiaPuheenAikana} lyöntiä`);
+// Omistajan tarkennus 13.8.2026 ilta: "pöllön kirjoituskone ei kuulu"
+// — puheen alla naputus SOI vaimeana, ei vaikene (aiempi linja kumottu).
+vaadi('naputus jatkuu puheen alla',
+  luenta.naputuksiaPuheenAikana >= 1, `${luenta.naputuksiaPuheenAikana} lyöntiä`);
+vaadi('puheen alla naputus on vaimeaa (voima < 0.3)',
+  luenta.vaimeitaPuheenAikana >= 1 && luenta.kovinPuheenAikana < 0.3,
+  JSON.stringify({ vaimeita: luenta.vaimeitaPuheenAikana, kovin: luenta.kovinPuheenAikana }));
 
 /*
  * SAMMUTUS KESKEN LUENNAN. Hidas tila jättää lausuman "puhumaan",

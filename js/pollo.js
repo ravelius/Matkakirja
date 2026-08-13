@@ -577,7 +577,16 @@ const NAPUTUS_MAX_MS = 210;
 const NAPUTUS_TAUKO_VALI = 6;
 const NAPUTUS_TAUKO_MS = 420;
 /** Taustanaputus on selvästi hiljaisempi kuin etusivun kirjoituskone. */
-const NAPUTUS_VOIMA = 0.4;
+const NAPUTUS_VOIMA = 0.55;
+/*
+ * PUHEEN ALLA NAPUTUS VAIMENEE MUTTEI VAIKENE (omistaja 13.8.2026
+ * ilta: "pöllön kirjoituskone ei kuulu" — aiempi linja hiljensi
+ * naputuksen kokonaan kaiuttimen lukiessa, ja kaiutinta käyttävälle
+ * kone katosi kokonaan). Nyt kone naputtaa luennan taustalla selvästi
+ * vaimeampana — kuin kirjoituskone radiohaastattelun taustalla:
+ * läsnä, ei pääosassa.
+ */
+const NAPUTUS_VOIMA_PUHEEN_ALLA = 0.22;
 
 /*
  * ── LUENTA ALKAA ENSIMMÄISESTÄ VIRKKEESTÄ (omistaja 13.8.2026) ───────
@@ -742,6 +751,9 @@ class Pollo {
     // aloitaNaputus). null tarkoittaa, ettei naputus ole käynnissä.
     this.naputusAjastin = null;
     this.naputuksia = 0;
+    // Puheen alla naputus soi vaimeana (ks. NAPUTUS_VOIMA_PUHEEN_ALLA);
+    // lippu päivittyy joka striimipalasta ja luetaan joka lyönnillä.
+    this.naputusVaimeana = false;
     /*
      * Striimin virtaluenta (ks. luettavaRaja). `luentaVirta` on
      * js/lukija.js:n lueVirtana-kahva ja `luettuun` kertoo, mihin
@@ -2080,7 +2092,9 @@ class Pollo {
       // Mykistys tarkistuu sfx.play():n sisällä (SoundKit.enabled), joten
       // äänet pois -asetus vaientaa naputuksen samalla tavalla kuin
       // kaikki muutkin tehosteet.
-      sfx.play('pen', { voima: NAPUTUS_VOIMA });
+      sfx.play('pen', {
+        voima: this.naputusVaimeana ? NAPUTUS_VOIMA_PUHEEN_ALLA : NAPUTUS_VOIMA,
+      });
       this.naputuksia += 1;
       const hengahdys = this.naputuksia % NAPUTUS_TAUKO_VALI === 0 ? NAPUTUS_TAUKO_MS : 0;
       const vali = NAPUTUS_MIN_MS + Math.random() * (NAPUTUS_MAX_MS - NAPUTUS_MIN_MS);
@@ -2098,6 +2112,7 @@ class Pollo {
    * sulje():n ensimmäisiä tehtäviä.
    */
   lopetaNaputus() {
+    this.naputusVaimeana = false;
     if (this.naputusAjastin === null) return;
     clearTimeout(this.naputusAjastin);
     this.naputusAjastin = null;
@@ -2279,15 +2294,16 @@ class Pollo {
         tulos = await this.pyydaStriimi(runko, (kertynyt) => {
           kertyma = kertynyt;
           /*
-           * PUHE JA NAPUTUS EIVÄT SOI YHTÄ AIKAA. Kaiuttimen ollessa
-           * päällä vastaus kuuluu ääneen, ja naputus sen päällä olisi
-           * puuroa. Kello saa silti soida valmistuessa — se on
-           * tapahtuma, ei tausta.
+           * PUHE JA NAPUTUS SOIVAT KERROKSINA (omistajan tarkennus
+           * 13.8.2026 ilta: "pöllön kirjoituskone ei kuulu" — aiempi
+           * linja hiljensi naputuksen kokonaan luennan ajaksi). Puheen
+           * alla naputus soi vaimeana taustana, ilman puhetta täydellä
+           * taustavoimallaan. Kello soi valmistuessa kuten ennenkin.
            */
-          if (this.syotaLuennalle(kertynyt)) this.lopetaNaputus();
+          this.naputusVaimeana = this.syotaLuennalle(kertynyt);
           // Naputus alkaa ENSIMMÄISESTÄ palasta eikä pyynnön
           // lähtiessä: kirjoituskone ei naputa tyhjää paperia.
-          else this.aloitaNaputus();
+          this.aloitaNaputus();
           avaaKupla().textContent = poistaKasiteMerkinnat(kertynyt);
           // Näkymä on jo ankkuroitu: uusi teksti syö varattua tyhjää
           // alhaalta, joten virran vierityskohta ei muutu riviäkään.
