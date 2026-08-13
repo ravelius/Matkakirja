@@ -116,8 +116,15 @@ function paataPaivitysruutu() {
  * päivityksen jälkeiseen nollaukseen (nollaaValitila).
  */
 let paivitysTapahtui = false;
+/*
+ * Aiemmin nähty versio erikseen: paivitysTapahtui on tosi myös aivan
+ * ensimmäisellä käynnillä (mitään ei ole nähty), mutta päivitysilmoitus
+ * kuuluu vain pelaajalle, jonka laitteella oli oikeasti vanhempi versio.
+ */
+let edellinenVersio = null;
 try {
-  paivitysTapahtui = localStorage.getItem(NAHTY_VERSIO_AVAIN) !== APP_VERSION;
+  edellinenVersio = localStorage.getItem(NAHTY_VERSIO_AVAIN);
+  paivitysTapahtui = edellinenVersio !== APP_VERSION;
 } catch {
   paivitysTapahtui = false;
 }
@@ -466,18 +473,20 @@ const muutoksetDialog = document.getElementById('muutokset-dialog');
 const muutoksetLista = document.getElementById('muutokset-lista');
 let lokiRakennettu = false;
 
+function muutosRivi(m) {
+  const rivi = document.createElement('li');
+  const numero = document.createElement('span');
+  numero.className = 'muutos-versio';
+  numero.textContent = `v${m.v}`;
+  const teksti = document.createElement('span');
+  teksti.textContent = m.teksti;
+  rivi.append(numero, teksti);
+  return rivi;
+}
+
 function avaaMuutokset() {
   if (!lokiRakennettu) {
-    for (const m of MUUTOKSET) {
-      const rivi = document.createElement('li');
-      const numero = document.createElement('span');
-      numero.className = 'muutos-versio';
-      numero.textContent = `v${m.v}`;
-      const teksti = document.createElement('span');
-      teksti.textContent = m.teksti;
-      rivi.append(numero, teksti);
-      muutoksetLista.appendChild(rivi);
-    }
+    for (const m of MUUTOKSET) muutoksetLista.appendChild(muutosRivi(m));
     lokiRakennettu = true;
   }
   muutoksetDialog.showModal();
@@ -709,6 +718,26 @@ if (katseluPack) {
 
 // Peli on rakennettu: päivitysruutu väistyy.
 paataPaivitysruutu();
+
+/*
+ * Päivityksen jälkeen pieni ilmoitus (omistajan toive 13.8.2026):
+ * kahden uusimman version muutosrivit heti pelin auettua. Vain kun
+ * laitteella oli oikeasti aiempi versio — uudelle pelaajalle rivit
+ * eivät kerro mitään — eikä katselutilassa, joka on työhuoneen
+ * esikatselu. Koko loki on edelleen versionumeron takana.
+ */
+if (paivitysTapahtui && edellinenVersio && !katseluPack) {
+  const paivitysDialog = document.getElementById('paivitys-dialog');
+  const paivitysLista = document.getElementById('paivitys-lista');
+  for (const m of MUUTOKSET.slice(0, 2)) paivitysLista.appendChild(muutosRivi(m));
+  document.getElementById('paivitys-sulje')
+    .addEventListener('click', () => paivitysDialog.close());
+  // Napautus kortin ulkopuolelle sulkee, kuten muissakin ikkunoissa.
+  paivitysDialog.addEventListener('click', (e) => {
+    if (e.target === paivitysDialog) paivitysDialog.close();
+  });
+  paivitysDialog.showModal();
+}
 
 /*
  * Kehittäjätila (omistajan toive). Muutoslokista aukeaa salasanaikkuna, ja
