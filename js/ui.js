@@ -11965,6 +11965,14 @@ export class UI {
       { otsikko: nosto.otsikko, tiedosto: nosto.tiedosto, selite: nosto.selite, lahde: nosto.lahde },
       ...nosto.galleria,
     ];
+    /*
+     * Sarjan kaikki kuvat latautuvat taustalla heti kun galleria on
+     * sivulla (omistajan tarkennus 14.8.2026: ensimmäinen erä kattoi
+     * vain avattavat katselimet, mutta lehden sivulla pyörivä
+     * nostogalleria jäi lataamaan kuvat vasta nuolesta). Sama osoite
+     * ja leveys kuin nayta():ssa, jotta välimuisti osuu.
+     */
+    esilataaKuvat(teokset.map((t) => valokuvaUrl(t.tiedosto, 900)));
     let kohdalla = 0;
     const laskuri = html('span', 'arrival-kuva-laskuri', `1 / ${teokset.length}`);
     // Suurennos avaa kohdalla olevan teoksen JA koko sarjan selattavana
@@ -12562,6 +12570,9 @@ export class UI {
     if (lista?.length) {
       kuvat = lista;
       kohdalla = Math.max(0, lista.findIndex((k) => k.src === aloitusSrc));
+      // Sarjan kaikkien kuvien ylin suurennusporras latautuu taustalla
+      // heti (omistajan tilaus 14.8.2026) — selaus ei odota verkkoa.
+      esilataaKuvat(kuvat.map((k) => suurennusportaat(k.src)[0] ?? k.src));
       nayta();
       return;
     }
@@ -12585,6 +12596,8 @@ export class UI {
     const nykyinen = kuvat[0]?.src ?? null;
     kuvat = haettu;
     kohdalla = Math.max(0, haettu.findIndex((k) => k.src === nykyinen));
+    // Haettu galleria esiladataan samalla tavalla kuin valmis lista.
+    esilataaKuvat(kuvat.map((k) => suurennusportaat(k.src)[0] ?? k.src));
     nayta();
   }
 
