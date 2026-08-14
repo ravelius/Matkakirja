@@ -8183,6 +8183,89 @@ button.lukija-nappi.lukee,
   text-transform: uppercase;
 }
 
+/*
+ * ── NIMIÖ TARTTUU YLÄREUNAAN (omistaja 14.8.2026) ───────────────────
+ *
+ * "Yläotsikko saisi jäädä yläreunaan näkyviin vieritettäessä, mutta
+ * unohdettu aarre ja muut saisi jäädä piiloon." Vain iso nimi tarttuu:
+ * kicker-rivi ja päiväysrivi vierivät sen alle. Sama sääntö kattaa
+ * myös maalehden etusivun otsikon (sama #arrival-city-elementti).
+ *
+ * Tekniikka on sama kuin aihesivujen otsikolla (.aihe-nimi): tarttuma
+ * --arkki-tarttumaan (paperin piirretty reuna / puhelimen turvakaista),
+ * oma piirtokerros translateZ:llä (iOS:n vieritys nyki blend-modea)
+ * ja paperitausta, jottei alta vierivä teksti kuulla läpi. Sivuun
+ * levitys negatiivisella marginaalilla peittää palstan reunat.
+ */
+.dialog.arkki #arrival-city {
+  position: sticky;
+  top: var(--arkki-tarttuma, 0px);
+  z-index: 3;
+  transform: translateZ(0);
+  margin-inline: calc(var(--arkki-reunus) * -1);
+  padding: 0.28rem var(--arkki-reunus) 0.3rem;
+  background-color: var(--arkki-paperi, #f5f0e2);
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+}
+
+/*
+ * ── YLÄLAIDAN HAMPURILAINEN (omistaja 14.8.2026) ────────────────────
+ *
+ * Pysyvä valikkonappi lehden vasemmassa yläkulmassa, tarttuvan
+ * otsikon rinnalla. Nappi on dialogin (ei vierivän kortin) lapsi,
+ * joten se pysyy paikallaan vierityksestä ja sivunvaihdosta
+ * riippumatta. Siitä sisällys aukeaa yläreunaan; maalehden alapalkin
+ * hampurilainen jää ennalleen.
+ */
+.lehti-hampurilainen {
+  position: absolute;
+  top: calc(var(--arkki-tarttuma, 0px) + 0.3rem);
+  left: 0.55rem;
+  /* Sisällyslevyn (z 6) alla ei saa jäädä: nappi toimii myös levyn
+     sulkevana vipuna. */
+  z-index: 7;
+  width: 2.1rem;
+  height: 2.1rem;
+  min-width: 40px;
+  min-height: 40px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(70, 51, 31, 0.4);
+  border-radius: 50%;
+  background: rgba(245, 240, 226, 0.92);
+  color: #46331f;
+  cursor: pointer;
+}
+
+.lehti-hampurilainen[hidden] { display: none; }
+
+.lehti-hampurilainen svg { display: block; }
+
+/* Ylhäältä avattu sisällys laskeutuu yläreunaan (omistaja 14.8.2026);
+   alhaalta avattu nousee kuten ennenkin. */
+.sisallys-levy.ylhaalla {
+  inset: 0 0 auto 0;
+  border-top: 0;
+  border-bottom: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 0 0 0.7rem 0.7rem;
+  box-shadow: 0 0.6rem 1.4rem rgba(28, 20, 12, 0.28);
+  /* Hampurilainen jää levyn ylle — otsikkorivi väistää sitä. */
+  padding-top: calc(var(--arkki-tarttuma, 0px) + 0.6rem);
+  padding-left: 3rem;
+  animation: sisallys-laskeutuu 180ms ease-out;
+}
+
+@keyframes sisallys-laskeutuu {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sisallys-levy.ylhaalla { animation: none; }
+}
+
 /* Päiväysrivi tuplaviivan ja ohuen viivan välissä kuin sanomalehdessä. */
 .lehti-alarivi {
   /* Ankkuri liitelinkille, joka tasataan rivin oikeaan reunaan. */
