@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 652, teksti: 'wikin kuvasuurennos täyteen kokoon iPadilla' },
   { v: 651, teksti: 'myös lehtisivun galleriat esilataavat kuvansa' },
   { v: 650, teksti: 'kuvakarusellit esilataavat kuvansa taustalla' },
   { v: 649, teksti: 'sisällysvalikkoon pääsy lehden etusivulle' },
