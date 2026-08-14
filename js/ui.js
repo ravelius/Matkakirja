@@ -704,7 +704,6 @@ import {
   drawTerrain,
   drawTokenIcon,
   drawWaves,
-  isOnLand,
   revealFaceSvg,
   revealRaysSvg,
   tokenIconSvg,
@@ -1571,8 +1570,6 @@ function peliVersio() {
   return document.getElementById('app-version')?.textContent?.trim() ?? '?';
 }
 
-// Päiväkirjakortin nurkkahaku: kuinka suuri osa kartasta on "nurkka".
-const FACT_CORNER = 0.34;
 const FACT_WIDTH = 340; // pidettävä samana kuin .fact-card css:ssä
 const TURN_WIDTH = 560; // pidettävä samana kuin .turn-card css:ssä
 
@@ -4722,8 +4719,6 @@ export class UI {
     // toimii varusteen pikakatkaisijana.
     nappi.hidden = !rajat || this.avausNakymassa() || !this.maatiedotHalutaan();
     nappi.setAttribute('aria-pressed', String(this.maatiedotHalutaan()));
-    // Pillerin väistöt päivittyvät kirjanapin mukana.
-    this.paivitaMaaPilleriPuoli();
   }
 
   paivitaZoomiNapit() {
@@ -6084,57 +6079,23 @@ export class UI {
    * silloin ne peittäisivät toisensa.
    */
   placeFactCard(paneW, paneH) {
-    const vb = this.svg.viewBox.baseVal;
-    if (!vb || !vb.width) return;
-    const { map } = this.game.pack;
-
-    // Nurkan kokoinen otos: kolmannes leveydestä ja korkeudesta.
-    const meriosuus = (kx, ky) => {
-      let meri = 0;
-      let kaikki = 0;
-      for (let i = 0; i <= 6; i++) {
-        for (let j = 0; j <= 6; j++) {
-          const x = vb.x + vb.width * (kx + (i / 6) * FACT_CORNER);
-          const y = vb.y + vb.height * (ky + (j / 6) * FACT_CORNER);
-          kaikki++;
-          if (!isOnLand([x, y], map)) meri++;
-        }
-      }
-      return meri / kaikki;
-    };
-
-    const loppu = 1 - FACT_CORNER;
     /*
-     * MATKAKIRJA ON AINA KARTAN YLÄREUNASSA.
+     * MATKAKIRJA ON AINA VASEMMASSA YLÄNURKASSA.
      *
      * Omistaja 5.8.2026: *"Matkakirja saisi olla aina kartan
-     * yläreunassa. Nyt nimittäin isommalla iPad-ruudulla se menee
-     * alareunan nappien kanssa päällekkäin, mutta ylhäällä se ei olisi
-     * tiellä. Enkä haittaa, vaikka laukku tai hampurilainen
-     * väliaikaisesti avautuisi sen päälle."*
+     * yläreunassa."* — alanurkat kiellettiin, koska siellä ovat
+     * toimintonapit.
      *
-     * Alanurkat olivat mukana valinnassa, ja niitä yritettiin karsia
-     * kahdella painotuksella: alanurkat viimeisiksi kun kortit eivät
-     * mahdu riville, ja yläreunalle 0,15:n etu tasatilanteessa. Kumpikin
-     * oli kiertotie sen ympäri, että alanurkka on aina väärin — siellä
-     * ovat toimintonapit. Painotus voi hävitä, kielto ei.
-     *
-     * Vasen vai oikea ratkeaa yhä merenpinta-alan mukaan, jottei kortti
-     * peitä mannerta ja kaupunkien nimiä.
+     * Omistaja 14.8.2026: kortti hyppi zoomatessa oikeaan reunaan,
+     * koska vasen/oikea ratkaistiin näkyvän viewBoxin merenpinta-alan
+     * mukaan ja zoomi muutti laskentaa. *"Saisiko sen korjattua
+     * pysymään aina vasemmassa yläreunassa?"* — valinta poistettiin
+     * kokonaan; kiinteä paikka voittaa kelluvan optimoinnin.
      */
-    const nurkat = [
-      { id: 'tl', kx: 0, ky: 0 },
-      { id: 'tr', kx: loppu, ky: 0 },
-    ];
-
-    for (const n of nurkat) n.meri = meriosuus(n.kx, n.ky);
-    nurkat.sort((a, b) => b.meri - a.meri);
-    this.factCard.dataset.corner = nurkat[0].id;
+    this.factCard.dataset.corner = 'tl';
     // Linssin selitekortti väistää päiväkirjaa: se saa oman nurkkansa
     // vasta kun päiväkirjan nurkka on tiedossa.
     this.sijoitaLinssiSelite();
-    // Maapilleri on kortin peilikuva — puoli tarkistetaan samalla.
-    this.paivitaMaaPilleriPuoli();
   }
 
   /** Kartan koordinaatit kartta-alueen pikseleiksi. */
@@ -6859,21 +6820,6 @@ export class UI {
       lippu.removeAttribute('src');
     }
     nappi.hidden = false;
-    this.paivitaMaaPilleriPuoli();
-  }
-
-  /**
-   * Pilleri asuu aina oikeassa reunassa (omistajan tarkennus
-   * 10.8.2026 ilta): kirjanappia väistetään sivusuunnassa ja
-   * päiväkirjakorttia pystysuunnassa, jos kortti on samassa
-   * nurkassa. Kutsutaan renderistä ja placeFactCardista.
-   */
-  paivitaMaaPilleriPuoli() {
-    const nappi = this.maaPilleri;
-    if (!nappi) return;
-    // Kirjanappi asuu nykyään vasemmassa reunassa (14.8.2026), joten
-    // sivuttaisväistöä ei enää tarvita — vain päiväkirjakortin väistö.
-    nappi.dataset.kortti = String(this.factCard?.dataset.corner === 'tr');
   }
 
   /** Kartalla näkyvät vain käännetyt laatat omina kuvakkeinaan. */
