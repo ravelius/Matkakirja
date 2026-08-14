@@ -8,7 +8,9 @@ const paketti = await import('playwright')
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
-const KUVAT = '/tmp/claude-0/-home-user-Matkakirja/c5b894db-1cea-56f5-9739-4e6b1ebb57bd/scratchpad';
+// Sama kaappauskansio kuin muilla savukkeilla (Opus 7:n havainto
+// 14.8.2026: vanha polku osoitti päättyneen session scratchpadiin).
+const KUVAT = '/tmp/matkakirja-kaappaukset';
 const TYYPIT = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.css': 'text/css; charset=utf-8', '.json': 'application/json',
