@@ -8240,18 +8240,20 @@ button.lukija-nappi.lukee,
 }
 
 /*
- * SUMEA KAISTA NIMIÖN YLLE LEVEILLÄ RUUDUILLA (omistaja 14.8.2026):
+ * PAPERIKAISTA NIMIÖN YLLE LEVEILLÄ RUUDUILLA (omistaja 14.8.2026):
  * iPadilla tarttuvan otsikon yläpuolelle jää --arkki-tarttuman
- * korkuinen rako, jossa vierivä teksti näkyi terävänä. Puhelimessa
- * saman hoitaa koko ruudun levyinen kiinteä kaista
- * (.dialog.arkki::before media-lohkossa), mutta leveällä ruudulla
- * kortti ei täytä ruutua, joten kaista asuu kortin SISÄLLÄ tarttuvana
- * ensimmäisenä laatikkona: se pysyy vieritysalueen yläreunassa ja
- * sumentaa alle jäävän tekstin kuten iPhonella. Negatiivinen
- * alamarginaali kumoaa kaistan flow'ssa viemän tilan; ::before on
- * vapaa, koska arkki piilottaa kortin kiertyneen reunaviivan (ks.
- * "display: none" -sääntö ylempänä), jonka tämä leveillä ruuduilla
- * korvaa.
+ * korkuinen rako, jossa vierivä teksti näkyi terävänä. Kaista asuu
+ * kortin SISÄLLÄ tarttuvana ensimmäisenä laatikkona: se pysyy
+ * vieritysalueen yläreunassa ja peittää raon SAMALLA paperilla kuin
+ * otsikon tausta (omistajan tarkennus 14.8.2026: "sumennuksen voi
+ * poistaa ja vaihtaa vain sen pienen palan yläreunasta saman
+ * väriseksi taustaksi kuin otsikon takana" — ensin kokeiltu sumennus
+ * poistui). Negatiivinen alamarginaali kumoaa kaistan flow'ssa
+ * viemän tilan; ::before on vapaa, koska arkki piilottaa kortin
+ * kiertyneen reunaviivan (ks. "display: none" -sääntö ylempänä).
+ * Puhelin pitää oman koko ruudun sumennuskaistansa
+ * (.dialog.arkki::before media-lohkossa, Dynamic Island -päätös
+ * 6.8.2026).
  */
 @media (min-width: 700px) {
   .dialog.arkki .dialog-card::before {
@@ -8266,9 +8268,9 @@ button.lukija-nappi.lukee,
     border: 0;
     border-radius: 0;
     transform: none;
-    background: rgba(245, 240, 226, 0.3);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
+    background-color: var(--arkki-paperi, #f5f0e2);
+    background-image: var(--paper-noise);
+    background-blend-mode: multiply;
     pointer-events: none;
   }
 }
@@ -8297,7 +8299,7 @@ button.lukija-nappi.lukee,
 .dialog button.lehti-hampurilainen {
   position: absolute;
   top: 50%;
-  left: 0.45rem;
+  left: 0;
   transform: translateY(-50%);
   /* Nimiön oman pinon päällimmäiseksi (avattu sisällyslevy peittää
      napin — ulkopuolinen napautus sulkee levyn, ks. ui.js). */
@@ -8307,7 +8309,12 @@ button.lukija-nappi.lukee,
   min-width: 40px;
   min-height: 40px;
   display: grid;
-  place-items: center;
+  /* Viivat alkavat napin VASEMMASTA reunasta, eivät keskeltä:
+     kuvakkeen on alettava täsmälleen samasta kohdasta kuin tekstin
+     ja kuvien (omistajan tarkennus 14.8.2026) — osuma-alue jatkuu
+     oikealle. Aihe-nimi alkaa valmiiksi sisällön reunasta (left 0);
+     nimiö levittyy paperin reunaan asti, joten sille oma siirto. */
+  place-items: center start;
   padding: 0;
   border: 0;
   border-radius: 8px;
@@ -8321,6 +8328,10 @@ button.lukija-nappi.lukee,
   width: 24px;
   height: 24px;
 }
+
+/* Nimiö ulottuu negatiivisilla marginaaleilla paperin reunaan asti —
+   sisällön vasen reuna on sen laatikossa --arkki-reunuksen kohdalla. */
+#arrival-city > .lehti-hampurilainen { left: var(--arkki-reunus, 0.95rem); }
 
 .lehti-hampurilainen[hidden] { display: none; }
 
