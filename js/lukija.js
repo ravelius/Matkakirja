@@ -420,6 +420,7 @@ export function pysaytaLukija() {
     /* taustajärjestelmä oli jo hiljaa */
   }
   merkitseTila(nyt.nappi, false);
+  suljeOhjain();
   // Loppukoukku myös pysäytettäessä: kutsuja (esim. taustamusiikin
   // vaimennus) tarvitsee signaalin JOKAISESTA loppupolusta.
   nyt.kunLoppuu?.();
@@ -484,23 +485,26 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
     merkitseTila(nappi, false);
+    suljeOhjain();
     kunLoppuu?.();
   };
   const soitin = luoPuheSoitin({
     persoona,
     sailio,
     onLoppu: loppui,
+    onTila: (t) => paivitaOhjain(merkki, t),
     onVirhe: (vaihe) => {
       if (ajossa?.merkki !== merkki) return;
       ajossa = null;
       merkitseTila(nappi, false);
+      suljeOhjain();
       if (vaihe === 'alku' && lueLaitteella(puhuttava, nappi, kunLoppuu)) return;
       kunLoppuu?.();
     },
   });
   if (!soitin) return false;
   ajossa = {
-    nappi, merkki, kunLoppuu, lopeta: () => soitin.pysayta(),
+    nappi, merkki, kunLoppuu, soitin, lopeta: () => soitin.pysayta(),
   };
   soitin.lisaa(puhuttava);
   soitin.paata();
@@ -779,6 +783,112 @@ const KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
 const LUE_OTSIKKO = 'Kuuntele sivu';
 const SEIS_OTSIKKO = 'Lopeta kuuntelu';
 
+/* ------------------------------------------------------------------ */
+/* Lukijan ohjauspaneeli (omistajan tilaus 14.8.2026)                  */
+/* ------------------------------------------------------------------ */
+
+/*
+ * Kaiutinnapin painallus avaa lukijaäänellä pienen ohjauspaneelin
+ * napin alle: tauko/jatka, kappale taakse ja eteen, kappalelaskuri ja
+ * lopetus. Paneeli elää vain luennan ajan — se sulkeutuu, kun luenta
+ * päättyy, pysäytetään tai dialogi sulkeutuu. Laitteen oman äänen
+ * varapolulla paneelia ei ole (sillä ei ole taukoa eikä kappaleita) —
+ * nappi toimii silloin entiseen tapaan kytkimenä.
+ */
+const OHJAIN_PIIRROT = {
+  tauko: '<path d="M8.6 6.4v11.2"/><path d="M15.4 6.4v11.2"/>',
+  jatka: '<path d="M8.6 6.2 17.2 12l-8.6 5.8z"/>',
+  edellinen: '<path d="M7.4 6.6v10.8"/><path d="M17 6.8 10.2 12l6.8 5.2z"/>',
+  seuraava: '<path d="M16.6 6.6v10.8"/><path d="M7 6.8l6.8 5.2L7 17.2z"/>',
+  sulje: '<path d="M7.2 7.2l9.6 9.6"/><path d="M16.8 7.2 7.2 16.8"/>',
+};
+
+function ohjainIkoni(nimi) {
+  return '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
+    + ' stroke="currentColor" stroke-width="1.6" stroke-linecap="round"'
+    + ` stroke-linejoin="round">${OHJAIN_PIIRROT[nimi]}</svg>`;
+}
+
+/** Avoin paneeli: { elementti, merkki, taukoNappi, kappaleRivi, … } tai null. */
+let ohjain = null;
+
+function suljeOhjain() {
+  if (!ohjain) return;
+  ohjain.elementti.remove();
+  ohjain = null;
+}
+
+/** Paneelin tila soittimen ilmoituksesta (tauko/jatka, kappalelaskuri). */
+function paivitaOhjain(merkki, t) {
+  if (!ohjain || ohjain.merkki !== merkki) return;
+  const nimi = t.tauolla ? 'Jatka kuuntelua' : 'Tauko';
+  ohjain.taukoNappi.innerHTML = '<span class="icon-glyph viiva-ikoni">'
+    + `${ohjainIkoni(t.tauolla ? 'jatka' : 'tauko')}</span>`;
+  ohjain.taukoNappi.title = nimi;
+  ohjain.taukoNappi.setAttribute('aria-label', nimi);
+  // Kappalehypyt ja laskuri vain, kun kappaleita on useampi — yhden
+  // kappaleen merkinnällä nuolet olisivat kuollutta pintaa.
+  const monta = t.kappaleita > 1;
+  ohjain.edellinen.hidden = !monta;
+  ohjain.seuraava.hidden = !monta;
+  ohjain.kappaleRivi.hidden = !monta;
+  if (monta) ohjain.kappaleRivi.textContent = `${t.kappale + 1}/${t.kappaleita}`;
+}
+
+/**
+ * Avaa ohjauspaneelin napin viereen. Tekee jotain vain, jos juuri
+ * käynnistetty luenta kulkee lukijaäänellä (ajossa.soitin on olemassa
+ * ja kuuluu tälle napille).
+ */
+function avaaOhjain(isanta, nappi) {
+  const nyt = ajossa;
+  if (!nyt?.soitin || nyt.nappi !== nappi) return;
+  suljeOhjain();
+  const doc = isanta.ownerDocument;
+  const paneeli = doc.createElement('div');
+  paneeli.className = 'lukija-paneeli';
+  // Paneelin napautus ei saa valua taustalle (dialogin sulkijat ym.).
+  paneeli.addEventListener('click', (e) => e.stopPropagation());
+  const tee = (nimi, otsikko, toiminto) => {
+    const b = doc.createElement('button');
+    b.type = 'button';
+    b.className = 'lukija-paneeli-nappi';
+    b.title = otsikko;
+    b.setAttribute('aria-label', otsikko);
+    b.innerHTML = `<span class="icon-glyph viiva-ikoni">${ohjainIkoni(nimi)}</span>`;
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toiminto();
+    });
+    paneeli.appendChild(b);
+    return b;
+  };
+  // Toiminnot lukevat soittimen ajosta joka painalluksella: paneeli ei
+  // saa ohjata jo vaihtunutta luentaa.
+  const oma = () => (ajossa?.merkki === nyt.merkki ? ajossa.soitin : null);
+  const edellinen = tee('edellinen', 'Edellinen kappale', () => oma()?.siirryKappale(-1));
+  const taukoNappi = tee('tauko', 'Tauko', () => {
+    const soitin = oma();
+    if (!soitin) return;
+    if (soitin.tauolla()) soitin.jatka();
+    else soitin.tauko();
+  });
+  const seuraava = tee('seuraava', 'Seuraava kappale', () => oma()?.siirryKappale(1));
+  const kappaleRivi = doc.createElement('span');
+  kappaleRivi.className = 'lukija-kappalerivi';
+  kappaleRivi.hidden = true;
+  paneeli.appendChild(kappaleRivi);
+  tee('sulje', SEIS_OTSIKKO, () => pysaytaLukija());
+  isanta.appendChild(paneeli);
+  ohjain = {
+    elementti: paneeli, merkki: nyt.merkki, taukoNappi, kappaleRivi, edellinen, seuraava,
+  };
+  // Ensipiirto heti: soittimen oma ilmoitus ehti jo mennä ohi ennen
+  // paneelin syntyä, ja seuraava tulisi vasta palan vaihtuessa.
+  const alku = nyt.soitin.tilanne?.();
+  if (alku) paivitaOhjain(nyt.merkki, alku);
+}
+
 /** Napin ulkoasu ja saavutettava nimi seuraavat luennan tilaa. */
 function merkitseTila(nappi, lukee) {
   if (!nappi) return;
@@ -833,7 +943,11 @@ export function liitaLukija(isanta, lahde, { luokka = '', nimi = LUE_OTSIKKO, se
         return;
       }
       const teksti = napinTeksti(nappi);
-      if (teksti) lueAaneen(teksti, nappi);
+      if (!teksti) return;
+      lueAaneen(teksti, nappi);
+      // Lukijaäänellä nappi avaa myös ohjauspaneelin (tauko ja
+      // kappalehypyt); laitteen omalla äänellä paneelia ei tule.
+      avaaOhjain(isanta, nappi);
     });
     isanta.appendChild(nappi);
     /*
