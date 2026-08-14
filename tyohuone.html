@@ -32,6 +32,7 @@
       <button data-tab="pelit">Pelit</button>
       <button data-tab="kaupungit">Kaupungit</button>
       <button data-tab="studio">Studio</button>
+      <button data-tab="lukijaaani">Lukijaääni</button>
       <button data-tab="arkisto">Arkisto</button>
     </nav>
   </header>
@@ -149,6 +150,13 @@
     </section>
 
     <!-- STUDIO: äänistudio samassa sivussa, ei omana sivunaan -->
+    <!-- LUKIJAÄÄNI: äänen generoinnin säätö (omistajan tilaus
+         14.8.2026). Sisältö js/tyohuone-lukijaaani.js:stä; laiska
+         käynnistys kuten Studiolla. -->
+    <section id="tab-lukijaaani" hidden>
+      <div id="lukijaaani"></div>
+    </section>
+
     <section id="tab-studio" hidden>
       <div class="ylapalkki">
         <div class="soitin">
@@ -874,6 +882,7 @@
       }
       // Raskaat kehykset ladataan vasta avattaessa.
       if (loytyi === 'studio') kaynnistaStudio();
+      if (loytyi === 'lukijaaani') kaynnistaLukijaaaniValilehti();
       if (loytyi === 'pelit') kaynnistaPelidemotKerran();
       history.replaceState(null, '', `#${loytyi}`);
       window.scrollTo(0, 0);
@@ -896,6 +905,21 @@
         studioKaynnissa = false;
         $('tab-studio').prepend(Object.assign(document.createElement('p'),
           { className: 'puuttuu', textContent: `Äänistudiota ei saatu ladattua: ${virhe.message}` }));
+      }
+    }
+
+    // Lukijaääni-välilehti: sama laiska käynnistys kuin Studiolla.
+    let lukijaaaniKaynnissa = false;
+    async function kaynnistaLukijaaaniValilehti() {
+      if (lukijaaaniKaynnissa) return;
+      lukijaaaniKaynnissa = true;
+      try {
+        const { kaynnistaLukijaaani } = await import('./js/tyohuone-lukijaaani.js');
+        kaynnistaLukijaaani($('lukijaaani'));
+      } catch (virhe) {
+        lukijaaaniKaynnissa = false;
+        $('tab-lukijaaani').prepend(Object.assign(document.createElement('p'),
+          { className: 'puuttuu', textContent: `Lukijaääntä ei saatu ladattua: ${virhe.message}` }));
       }
     }
 

@@ -36,7 +36,40 @@
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 
 /** Persoonat, jotka worker tuntee. Muu arvo lukee kertojan äänellä. */
-export const PUHE_PERSOONAT = ['kertoja', 'pollo'];
+export const PUHE_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
+
+/*
+ * LAITEKOHTAISET ÄÄNISÄÄDÖT (työhuoneen Lukijaääni-välilehti,
+ * omistajan tilaus 14.8.2026). Työhuone tallettaa localStorageen
+ * persoonittain äänen ja ohjeen sekä kehittäjäkoodin; peli lähettää ne
+ * puhepyynnön mukana. Worker tottelee säätöjä VAIN oikealla
+ * kehittäjäkoodilla — muiden pelaajien laitteilla nämä avaimet eivät
+ * tee mitään. Säädetyt äänet säilötään vain omalle laitteelle
+ * (välimuistiavain kattaa säädöt), ei jaettuihin säilöihin.
+ */
+export const PUHE_ASETUS_AVAIN = 'matkakirja-puhe-persoonat';
+export const PUHE_KOODI_AVAIN = 'matkakirja-puhe-kehittaja';
+
+function puheenSaadot(persoona) {
+  try {
+    const kaikki = JSON.parse(window.localStorage?.getItem(PUHE_ASETUS_AVAIN) ?? '{}');
+    const oma = kaikki?.[persoona];
+    if (!oma || typeof oma !== 'object') return null;
+    const aani = typeof oma.aani === 'string' && oma.aani ? oma.aani : null;
+    const ohje = typeof oma.ohje === 'string' && oma.ohje.trim() ? oma.ohje.trim() : null;
+    return aani || ohje ? { aani, ohje } : null;
+  } catch {
+    return null;
+  }
+}
+
+function kehittajaKoodi() {
+  try {
+    return window.localStorage?.getItem(PUHE_KOODI_AVAIN) || null;
+  } catch {
+    return null;
+  }
+}
 
 /**
  * Yhden pyynnön merkkikatto. Workerin kova raja on 1000
@@ -359,13 +392,17 @@ async function sailioAvain(persoona, teksti) {
  * @param {string|null} sailio pysyvän säilön lohko, null = ei säilötä
  */
 async function haePala(teksti, persoona, sailio = null) {
-  const avain = `${persoona}|${teksti}`;
+  // Laitekohtaiset säädöt mukaan avaimeen ja pyyntöön: säädetty ääni ei
+  // saa soida vanhan äänen välimuistista eikä päinvastoin.
+  const saadot = puheenSaadot(persoona);
+  const saatoTunniste = saadot ? `${saadot.aani ?? ''}|${saadot.ohje ?? ''}` : '';
+  const avain = `${persoona}|${saatoTunniste}|${teksti}`;
   if (puheMuisti.has(avain)) return puheMuisti.get(avain);
 
   let kansio = null;
   let osoiteAvain = null;
   if (sailio && typeof caches !== 'undefined') {
-    osoiteAvain = await sailioAvain(persoona, teksti);
+    osoiteAvain = await sailioAvain(`${persoona}|${saatoTunniste}`, teksti);
     if (osoiteAvain) {
       try {
         kansio = await caches.open(sailionNimi(sailio));
@@ -383,10 +420,22 @@ async function haePala(teksti, persoona, sailio = null) {
 
   // Lohko kulkee workerille asti: lohkollinen pala säilötään myös
   // reunalle ja R2-ämpäriin (puhe/<lohko>/…), lohkoton ei minnekään.
+  // Säädöt ja kehittäjäkoodi mukaan vain jos niitä on — muiden
+  // pelaajien pyynnöt pysyvät täsmälleen entisellään.
+  const otsakkeet = { 'content-type': 'application/json' };
+  const koodi = saadot ? kehittajaKoodi() : null;
+  if (koodi) otsakkeet['x-pollo-kehittaja'] = koodi;
   const vastaus = await fetch(POLLOPALVELIN, {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ tehtava: 'puhe', teksti, persoona, lohko: sailio || undefined }),
+    headers: otsakkeet,
+    body: JSON.stringify({
+      tehtava: 'puhe',
+      teksti,
+      persoona,
+      lohko: sailio || undefined,
+      aani: saadot?.aani || undefined,
+      ohje: saadot?.ohje || undefined,
+    }),
   });
   if (!vastaus.ok) {
     if ([403, 404, 503].includes(vastaus.status)) estaPuhe();
