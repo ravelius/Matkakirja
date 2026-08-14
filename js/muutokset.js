@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 659, teksti: 'Siperian kaupunkilehdet: Jekaterinburg, Novosibirsk, Irkutsk' },
   { v: 658, teksti: 'Berliinin kaupunkikartalle vipu: piirros tai satelliittikuva' },
   { v: 657, teksti: 'Lukija: napsahdus ja turhat otsikot pois; asetukset säilyvät' },
   { v: 656, teksti: 'Työhuoneeseen Lukijaääni-välilehti äänten säätöön' },
