@@ -11194,9 +11194,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'halunnut kantaa taskussaan puolentoista kilon kuparilevyä. '
             + 'Rahaa otettiin vastaan nurisen, ja väärentäjille laatta oli '
             + 'vain sopivan kokoinen aihio, josta sai lyötyä tavallisia '
-            + 'pyöreitä kolikoita. Katariina I lopetti työn määräyksellä '
-            + '30. joulukuuta 1726. Ruplan laattoja ehdittiin lyödä vuosina '
-            + '1726–1727 kaikkiaan 1 687 kappaletta.',
+            + 'pyöreitä kolikoita. Lyönti alkoi 1. joulukuuta 1725, ja '
+            + 'Katariina I lopetti sen määräyksellä 30. joulukuuta 1726; '
+            + 'ruplan laattoja ehdittiin antaa ulos vuosina 1726–1727 '
+            + 'kaikkiaan 1 687 kappaletta.',
           selite: 'Neliön muotoinen kuparilaatta suoraan ylhäältä kuvattuna. '
             + 'Metalli on tummunut ruskeanharmaaksi, pinta on kuoppainen ja '
             + 'reunat rosoiset ja paikoin taipuneet. Jokaiseen kulmaan on '
@@ -11205,8 +11206,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lukee neljällä rivillä kyrillisin kirjaimin hinta, rupla, '
             + 'Jekaterinburg ja vuosiluku 1725. Laatan poikki kulkee kaksi '
             + 'ohutta vaakasuoraa naarmua. Laatta lepää oranssinpunaisella '
-            + 'kankaalla, ja oikeasta reunasta pistää esiin toisen tumman '
-            + 'esineen kulma.',
+            + 'kankaalla; yläreunasta pistää esiin toisen tumman laatan '
+            + 'kulma, ja oikeaan reunaan jää museon vaalea selostekortti, '
+            + 'josta näkyy vain painetun tekstin reuna.',
           lahde: 'putnik, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -11228,14 +11230,15 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hirsitalo seisoo matalalla vaaleanpunaiseksi maalatulla '
             + 'sokkelilla, ja pyöreät hirret näkyvät nurkissa salvoksineen. '
             + 'Katto on punaruskea pelti, ja siitä nousee kaksi valkoista '
-            + 'savupiippua. Kadun puolella on neljä ikkunaa tummanpunaisin '
-            + 'kehyksin, ja seinässä on vaalea muistolaatta, jossa lukee '
-            + 'kyrillisin kirjaimin P. P. Bažov, sekä sen yläpuolella '
+            + 'savupiippua. Kadun puolella on kaksi ikkunaa tummanpunaisin '
+            + 'kehyksin, ja niiden välissä on vaalea muistolaatta, jossa '
+            + 'lukee kyrillisin kirjaimin P. P. Bažov, sekä sen yläpuolella '
             + 'pyöreä reliefi. Vasemmalla on katettu kuisti, jonka luo '
             + 'nousee muutama porras ja jonka ovi on tummanpunainen. '
-            + 'Oikealla jatkuu korkea vihreäksi maalattu lauta-aita. '
-            + 'Taustalla näkyy sinilasinen liiketalo ja lehdettömiä puita, '
-            + 'ja taivas on kirkkaan sininen.',
+            + 'Oikealla talon sivuseinässä näkyy neljä ikkunaa vaalein '
+            + 'kehyksin, ja sen edessä jatkuu korkea vihreäksi maalattu '
+            + 'lauta-aita. Taustalla näkyy sinilasinen liiketalo ja '
+            + 'lehdettömiä puita, ja taivas on kirkkaan sininen.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Pavel Bažov',
           musiikki: 'https://music.apple.com/fi/album/the-tale-of-the-stone-flower-op-118-act-ii-scene/1761674907?i=1761675040',
@@ -11292,15 +11295,14 @@ export const KULTTUURI_KATEGORIAT = {
             + '1797 siinä olevan uusi alkuaine ja eristi metallin 1798; '
             + 'nimeksi tuli kromi. Berjozovskin kaivokset olivat pitkään '
             + 'maailman ainoa lähde tälle kiteelle.',
-          selite: 'Lähikuva kivinäytteestä; kuvattu ala on noin puolitoista '
-            + 'senttimetriä leveä. Tummalla, kiiltävällä kivipinnalla '
-            + 'kasvaa tiheä matto ruohonvihreitä neulamaisia kiteitä. '
-            + 'Niiden lomasta työntyy esiin muutama lyhyt ja paksu kide, '
-            + 'joka on väriltään oranssinpunainen ja pinnaltaan lasimaisen '
-            + 'kiiltävä; suurin niistä on kuvan yläosassa keskellä. '
-            + 'Alareunassa on lisää samanvärisiä siruja ja mustaa karkeaa '
-            + 'ainesta. Vasemmassa yläkulmassa kimaltaa läpikuultava harmaa '
-            + 'kidepinta.',
+          selite: 'Lähikuva kivinäytteestä. Tummalla, kiiltävällä '
+            + 'kivipinnalla kasvaa tiheä matto ruohonvihreitä neulamaisia '
+            + 'kiteitä. Niiden lomasta työntyy esiin muutama lyhyt ja paksu '
+            + 'kide, joka on väriltään oranssinpunainen ja pinnaltaan '
+            + 'lasimaisen kiiltävä; suurin niistä on kuvan yläosassa '
+            + 'keskellä. Alareunassa on lisää samanvärisiä siruja ja mustaa '
+            + 'karkeaa ainesta. Vasemmassa yläkulmassa kimaltaa '
+            + 'läpikuultava harmaa kidepinta.',
           lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Kromi',
         },
@@ -11322,10 +11324,12 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaariaukkojen rivi ja katto on loivaa peltiä. Vasemmalla on '
             + 'kaksikerroksisia kivitaloja ja rivi puita kadun reunassa. '
             + 'Kadun takana levittäytyy matalien talojen meri, jonka katot '
-            + 'ovat vaaleaa peltiä. Oikealla kohoaa korkea monikerroksinen '
-            + 'kellotorni, jolla on terävä huippu. Kaukana taustalla '
-            + 'kaupunki häviää vaaleaan usvaan. Kuva on sepianruskea ja sen '
-            + 'reunat ovat kuluneet.',
+            + 'ovat vaaleaa peltiä. Oikealla kohoaa suuri kirkko, jonka '
+            + 'yllä on useita kupoleita ja jonka vieressä nousee '
+            + 'monikerroksinen kellotorni; sen huipulla on pieni '
+            + 'sipulikupoli ja risti. Kaukana taustalla kaupunki häviää '
+            + 'vaaleaan usvaan. Kuva on sepianruskea ja sen reunat ovat '
+            + 'kuluneet.',
           lahde: 'В.П.Метенков, Wikimedia Commons (PD)',
         },
       ],
@@ -11414,7 +11418,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kohta, jossa joki on talonpoikien sanoin putkessa, sillä '
             + 'molemmat rannat ja uoma ovat kalliota. Kolyvanissa joki '
             + 'leviää tulvalla kahdentoista virstan levyiseksi, tässä vain '
-            + 'neljänsadan syllän. Elokuussa 1891 Bolšoje Krivoštšokovon '
+            + 'neljänsadan sylen. Elokuussa 1891 Bolšoje Krivoštšokovon '
             + 'kylässä pidettiin maastokokous, jossa ylityspaikka lyötiin '
             + 'lukkoon. Osa tutkijoista antaa kunnian retkikunnan '
             + 'kenttäinsinöörille Vikenti Roetskille.',
@@ -11434,7 +11438,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kupoli on kuusikymmentä metriä leveä',
           tiedosto: 'RU Novosibirsk Novosibirsk opera and ballet theatre.jpg',
-          teksti: 'Teatterin paikaksi valittiin vanha Bazarnaja plostšad eli '
+          teksti: 'Teatterin paikaksi valittiin vanha Bazarnaja ploštšad eli '
             + 'torikenttä, ja työt alkoivat vuonna 1931. Talo valmistui '
             + 'helmikuussa 1944, mutta ensimmäinen esitys nähtiin vasta 12. '
             + 'toukokuuta 1945. Rakennuksen pääosa on kupoli, joka on 60 '
@@ -11598,25 +11602,26 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Irkutsk',
-      johdanto: 'Kiinan-teen ja Lenan kullan varassa vaurastunutta Irkutskia '
-        + 'sanottiin 1900-luvun alkuun mennessä Siperian Pariisiksi. '
-        + 'Heinäkuun 4. ja 6. päivänä 1879 kaksi tulipaloa tuhosi arviolta '
-        + 'puolet kaupungista, yli 4 000 rakennusta noin 1 100 '
-        + 'pihapiirissä.',
+      johdanto: 'Kiinan-teen ja Siperian kaupan varassa vaurastunutta '
+        + 'Irkutskia sanottiin 1900-luvun alkuun mennessä Siperian '
+        + 'Pariisiksi. Heinäkuun 4. ja 6. päivänä 1879 kaksi tulipaloa '
+        + 'tuhosi arviolta puolet kaupungista, yli 4 000 rakennusta noin 1 '
+        + '100 pihapiirissä.',
       kansikuvat: [
         {
           tiedosto: 'Irkutsk, Russia.jpg',
           selite: 'Näkymä Irkutskin ylle korkealta. Keskellä kaartuu leveä '
-            + 'monikaistainen katu, jolla ajaa muutama auto ja jonka '
-            + 'keskellä on matala betonikaide. Vasemmalla virtaa Angara; '
-            + 'rannassa on kivetty kävelyväylä lyhtypylväineen, '
-            + 'nurmikaistaleita ja tumma patsas vaalealla jalustalla. '
-            + 'Vastarannalla erottuu matalia taloja ja niiden takana loivia '
-            + 'harjanteita. Oikealla puiden takaa nousee valkoinen kirkko, '
-            + 'jonka listat ovat punaoranssit ja kupolit kullanhohtoiset ja '
-            + 'jonka vieressä kohoaa korkea kellotorni; taempana on '
-            + 'vaaleita kerrostaloja. Taivas on sininen ja pilvet ohuita, '
-            + 'ja illan varjot venyvät kadun poikki.',
+            + 'monikaistainen katu, jolla ajaa muutama auto ja jota '
+            + 'reunustavat korkeat betoniset tukimuurit. Vasemmalla virtaa '
+            + 'Angara; rannassa on kivetty kävelyväylä lyhtypylväineen, '
+            + 'nurmikaistaleita ja tumma patsas punaruskealla '
+            + 'graniittijalustalla. Vastarannalla erottuu matalia taloja ja '
+            + 'niiden takana loivia harjanteita. Oikealla puiden takaa '
+            + 'nousee valkoinen kirkko, jonka listat ovat punaoranssit ja '
+            + 'kupolit kullanhohtoiset ja jonka vieressä kohoaa korkea '
+            + 'kellotorni; taempana on vaaleita kerrostaloja. Taivas on '
+            + 'sininen ja pilvet ohuita, ja illan varjot venyvät kadun '
+            + 'poikki.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -11648,7 +11653,7 @@ export const KULTTUURI_KATEGORIAT = {
       ],
       nostot: [
         {
-          otsikko: 'Teetä Kiinasta, kultaa Lenalta',
+          otsikko: 'Tee ja silkki tulivat Kjahtan kautta',
           tiedosto: 'Irkutsk market, 19th century.jpg',
           teksti: 'Ensimmäinen maantie Moskovasta Irkutskiin, Siperian '
             + 'valtatie, valmistui vuonna 1760, ja se vauhditti kaupungin '
@@ -11690,15 +11695,16 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennettiin 1838 Urikin kylään ja siirrettiin Irkutskiin '
             + '1847; se oli ruhtinaan koti vuoteen 1856, jolloin '
             + 'Aleksanteri II salli dekabristien palata.',
-          selite: 'Volkonskin talo syysaamun valossa. Kaksikerroksinen '
-            + 'puutalo on maalattu vaaleansiniharmaaksi, ja ikkunoiden '
-            + 'ympärillä sekä nurkissa on valkoisia veistettyjä listoja ja '
-            + 'pylväitä. Toisen kerroksen keskeltä työntyy ulos '
-            + 'monikulmainen erkkeri, jonka alla on koristeellinen '
-            + 'kannatin. Päädyssä on loiva kolmiopääty. Talon edessä kulkee '
-            + 'harmaa lauta-aita, ja sen vieressä seisoo yksi ihminen selin '
-            + 'kameraan. Vasemmalla on keltalehtisiä puita, oikealla '
-            + 'korkeampi aita, ja taivas on pilvetön ja sininen.',
+          selite: 'Volkonskin talo syysauringossa. Kaksikerroksinen puutalo '
+            + 'on maalattu vaaleansiniharmaaksi, ja ikkunoiden ympärillä '
+            + 'sekä nurkissa on valkoisia veistettyjä listoja ja pylväitä. '
+            + 'Toisen kerroksen keskeltä työntyy ulos monikulmainen '
+            + 'erkkeri, jonka alla on koristeellinen kannatin. Päädyssä on '
+            + 'loiva kolmiopääty. Talon oikeasta nurkasta lähtee harmaa '
+            + 'lauta-aita, jonka edessä seisoo yksi ihminen selin kameraan '
+            + 'lukemassa siihen kiinnitettyä opastetta. Vasemmalla on '
+            + 'keltalehtisiä puita, oikealla korkeampi aita, ja taivas on '
+            + 'pilvetön ja sininen.',
           lahde: 'Chernyshova Irina, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Dekabristikapina',
         },
@@ -11718,15 +11724,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siitä tuli pyhä, svjaštšennyi.',
           selite: 'Andrei Martynovin maalaus Baikalin rannalta 1800-luvun '
             + 'alusta. Etualalla nousee vihreä rinne, jolla seisoo kaksi '
-            + 'hattupäistä miestä; toinen kurottaa kättään järvelle päin, '
-            + 'ja heidän jalkojensa juuressa on pieni koira. Rinteellä '
-            + 'kasvaa tuuheita lehtipuita ja vasemmalla yksi kuusi. Järven '
-            + 'pinta on tyyni ja vaalea, ja sillä lipuu kaksimastoinen '
-            + 'purjealus sekä pienempiä veneitä. Vastarannalla on matalia '
-            + 'vaaleita rakennuksia puurivin takana; maalauksen nimen '
-            + 'mukaan ne ovat Nikolskin luostari. Kauempana kohoavat '
-            + 'harmaat vuoret, taivas on vaaleankeltainen ja siinä lentää '
-            + 'kaksi lintujonoa.',
+            + 'hattupäistä metsästäjää: vasemmanpuoleinen pitelee '
+            + 'pitkäpiippuista pyssyä vaakasuorassa kyljellään, ja '
+            + 'oikeanpuoleinen on nostanut oman aseensa poskelle ja tähtää '
+            + 'sillä järven yllä lentäviä lintuja. Heidän jalkojensa '
+            + 'juuressa seisoo pieni koira. Alempana vasemmalla rinteellä '
+            + 'kaksi pienempää hahmoa vetää köyttä rantaan päin. Rinteellä '
+            + 'kasvaa tuuheita lehtipuita ja vasemmassa laidassa pari '
+            + 'kuusta. Järven pinta on tyyni ja vaalea, ja sillä lipuu '
+            + 'kaksimastoinen purjealus sekä pienempiä veneitä. '
+            + 'Vastarannalla on matalia vaaleita rakennuksia puurivin '
+            + 'takana; maalauksen nimen mukaan ne ovat Nikolskin luostari. '
+            + 'Kauempana kohoavat harmaat vuoret, taivas on '
+            + 'vaaleankeltainen ja siinä lentää kaksi lintujonoa.',
           lahde: 'Andrey Yefimovich Martynov, Wikimedia Commons (PD)',
           musiikki: 'https://music.apple.com/fi/album/%D1%81%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B5-%D0%BC%D0%BE%D1%80%D0%B5-%D1%81%D0%B2%D1%8F%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B1%D0%B0%D0%B9%D0%BA%D0%B0%D0%BB-feat-%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9-%D1%8F%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2/1292643610?i=1292643818',
           musiikkiNimi: 'Slavnoje more — svjaštšennyi Baikal Apple Musicissa',
@@ -11753,16 +11763,16 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kilometriä sedimenttiä. Talvella vesi on avoimilla selillä '
             + 'paikoin niin kirkasta, että näkyvyys yltää 30–40 metriin; '
             + 'kesällä se on 5–8 metriä. Jääkansi on 0,5–1,4 metriä paksu, '
-            + 'ahtaumissa yli kaksi metriä.',
-          selite: 'Jäätynyt Baikal Olhonin saaren lähellä. Etualan jääkansi '
-            + 'on halkeillut suuriksi laatoiksi, joiden reunat kohoavat '
-            + 'vinoon ja joiden pinnalla on ohutta lunta ja pitkiä '
-            + 'valkoisia murtumaviivoja; laattojen välissä jää näkyy '
-            + 'tummansinisenä. Keskellä kohoaa lumen pilkuttama niemi, '
-            + 'jonka rinteillä kasvaa harvaa metsää ja jonka kalliot ovat '
-            + 'paljaat. Vasemmalla horisontti jatkuu tasaisena jäänä. '
-            + 'Taivas on pilvinen, pilvet venyvät pitkiksi juoviksi, ja '
-            + 'niiden takaa hohtaa matala keltainen valo.',
+            + 'ahtojäissä yli kaksi metriä.',
+          selite: 'Jäätynyt Baikal Olhonin saaren lähellä. Etualan jää on '
+            + 'sileä ja lähes musta, ja siinä risteilee pitkiä valkoisia '
+            + 'halkeamia ja jäätyneitä painesaumoja. Paikoin pinnalla on '
+            + 'kenttiä pieniä litteitä jäänsiruja ja ohutta huurretta, ja '
+            + 'niiden alta pohjajää kuultaa tummansinisenä. Keskellä kohoaa '
+            + 'lumen pilkuttama niemi, jonka rinteillä kasvaa harvaa metsää '
+            + 'ja jonka kalliot ovat paljaat. Vasemmalla horisontti jatkuu '
+            + 'tasaisena jäänä. Taivas on pilvinen, pilvet venyvät pitkiksi '
+            + 'juoviksi, ja niiden takaa hohtaa matala keltainen valo.',
           lahde: 'Sergey Pesterev, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Baikaljärvi',
         },
@@ -11784,8 +11794,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'viikset pitkät ja etuevän kynnet erottuvat. Takimmainen '
             + 'makaa sen takana ja nostaa päätään samaan suuntaan. Kallio '
             + 'on karkea ja punertavan ruskea, ja sen reunoilla kasvaa '
-            + 'vihreää levää. Ympärillä on tyyni vihertävä vesi, jossa käy '
-            + 'loivia laineita.',
+            + 'vihreää levää. Ympärillä on tyyni vesi, joka on kallion '
+            + 'juurella sinivihreä ja vaalenee taustalla kirkkaan '
+            + 'siniseksi; pinnalla käy loivia laineita.',
           lahde: 'Nina Zhavoronkova, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Baikalinhylje',
         },
