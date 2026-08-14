@@ -7853,6 +7853,14 @@ body.katselu #newgame-btn { display: none; }
     padding: 0 var(--arkki-reunus) calc(2.6rem + env(safe-area-inset-bottom));
   }
 
+  /* Sama tarttuma myös DIALOGIN tasolle: ylälaidan hampurilainen on
+   * dialogin (ei kortin) lapsi eikä perisi kortin muuttujaa — ilman
+   * tätä nappi putosi puhelimen tilarivin päälle (omistajan kaappaus
+   * 14.8.2026). */
+  .dialog.arkki {
+    --arkki-tarttuma: calc(env(safe-area-inset-top, 0px) + 0.55rem);
+  }
+
   /*
    * UMPINAINEN KAISTA YLÄREUNAAN.
    *
@@ -8221,10 +8229,23 @@ button.lukija-nappi.lukee,
  * riippumatta. Siitä sisällys aukeaa yläreunaan; maalehden alapalkin
  * hampurilainen jää ennalleen.
  */
-.lehti-hampurilainen {
+/*
+ * Pelkät kolme viivaa ilman nappikehystä (omistajan tarkennus
+ * 14.8.2026: "se voi olla kokonaan ilman ympäröivää nappia. Riittää,
+ * että on vain se kolme viivaa") — osuma-alue on silti täydet 40 px,
+ * kehys vain ei piirry. Pystysijainti tasataan tarttuvan nimiörivin
+ * kanssa: dialogitason --arkki-tarttuma (ks. media-lohko) pitää
+ * kuvakkeen samalla rivillä otsikon kanssa myös puhelimen
+ * turvakaistan alla.
+ */
+/* Valitsimessa on .dialog button mukana, koska dialogin yleinen
+   nappisääntö (piirretty kehys ja vaalea pohja) voittaisi muuten
+   pelkän luokan — kuvakkeen ympärille piirtyi laatikko (omistajan
+   kaappaus 14.8.2026). */
+.dialog button.lehti-hampurilainen {
   position: absolute;
-  top: calc(var(--arkki-tarttuma, 0px) + 0.3rem);
-  left: 0.55rem;
+  top: calc(var(--arkki-tarttuma, 0.85rem) + 0.3rem);
+  left: 0.45rem;
   /* Sisällyslevyn (z 6) alla ei saa jäädä: nappi toimii myös levyn
      sulkevana vipuna. */
   z-index: 7;
@@ -8235,11 +8256,17 @@ button.lukija-nappi.lukee,
   display: grid;
   place-items: center;
   padding: 0;
-  border: 1px solid rgba(70, 51, 31, 0.4);
-  border-radius: 50%;
-  background: rgba(245, 240, 226, 0.92);
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  box-shadow: none;
   color: #46331f;
   cursor: pointer;
+}
+
+.lehti-hampurilainen svg {
+  width: 24px;
+  height: 24px;
 }
 
 .lehti-hampurilainen[hidden] { display: none; }
@@ -174335,6 +174362,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 644, teksti: 'Hampurilainen otsikkoriville pelkkinä viivoina' },
   { v: 643, teksti: 'Lehden nimi tarttuu ylös; hampurilainen molempiin lehtiin' },
   { v: 642, teksti: 'Kartta piirtyy heti eikä ruutuja jäsennellä — zoomi valmis' },
   { v: 641, teksti: 'Zoomi ei enää putoa Safarin syliin; ruudut pakkautuvat heti' },
@@ -175073,7 +175101,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.643';
+const APP_VERSION = '2026-08-09.644';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
