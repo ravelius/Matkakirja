@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 649, teksti: 'sisällysvalikkoon pääsy lehden etusivulle' },
   { v: 648, teksti: 'hampurilainen tekstin reunaan; maalehden nappi takaisin' },
   { v: 647, teksti: 'lehtiotsikko pitää radiorivin yli; hampurilainen otsikossa' },
   { v: 646, teksti: 'kartan väriläikät pois: rae kattaa koko pohjatason' },

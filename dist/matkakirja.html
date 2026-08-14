@@ -168327,7 +168327,17 @@ class UI {
     x.addEventListener('click', sulje);
     otsikkoRivi.appendChild(x);
     levy.appendChild(otsikkoRivi);
-    levy.appendChild(this.rakennaSisallysLista(sisallys, { suljeValikko: sulje }));
+    /*
+     * Kaupunkilehdessä listaan kuuluu myös ETUSIVU (omistajan havainto
+     * 14.8.2026: "kaupungin hampurilaisessa ei näy kaupunkilehden
+     * etusivua") — aihesivulta ei muuten pääse takaisin kanteen kuin
+     * selaamalla. Maalehdessä riviä ei ole, koska maalehti alkaa
+     * suoraan aihesivulta (tutkiEkaSivu 1) eikä kantta ole.
+     */
+    levy.appendChild(this.rakennaSisallysLista(sisallys, {
+      suljeValikko: sulje,
+      etusivuRivi: this.tutkiEkaSivu() === 0,
+    }));
     levy.addEventListener('click', (e) => { if (e.target === levy) sulje(); });
     this.arrivalDialog.appendChild(levy);
   }
@@ -168893,8 +168903,22 @@ class UI {
   }
 
   /** Sisällysluettelon rivit. Käytetään sekä etusivulla että valikossa. */
-  rakennaSisallysLista(sisallys, { suljeValikko = null } = {}) {
+  rakennaSisallysLista(sisallys, { suljeValikko = null, etusivuRivi = false } = {}) {
     const lista = html('div', 'sisallys');
+    // Etusivurivi vain valikkoon (etusivulla lista on jo etusivulla).
+    if (etusivuRivi) {
+      const rivi = html('button', 'sisallys-rivi');
+      rivi.type = 'button';
+      const teksti = html('div', 'sisallys-teksti');
+      teksti.appendChild(html('span', 'sisallys-otsikko', 'Etusivu'));
+      teksti.appendChild(html('span', 'sisallys-ingressi', 'Lehden kansi.'));
+      rivi.appendChild(teksti);
+      rivi.addEventListener('click', () => {
+        suljeValikko?.();
+        this.naytaTutkiSivu(0, { suunta: -1 });
+      });
+      lista.appendChild(rivi);
+    }
     for (const osa of sisallys ?? []) {
       const { kuva, ingressi } = this.sisallysTiedot(osa);
       const rivi = html('button', 'sisallys-rivi');
@@ -174432,6 +174456,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 649, teksti: 'sisällysvalikkoon pääsy lehden etusivulle' },
   { v: 648, teksti: 'hampurilainen tekstin reunaan; maalehden nappi takaisin' },
   { v: 647, teksti: 'lehtiotsikko pitää radiorivin yli; hampurilainen otsikossa' },
   { v: 646, teksti: 'kartan väriläikät pois: rae kattaa koko pohjatason' },
@@ -175175,7 +175200,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.648';
+const APP_VERSION = '2026-08-09.649';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
