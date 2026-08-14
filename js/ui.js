@@ -10346,14 +10346,21 @@ export class UI {
   /** Ylälaidan pysyvä valikkonappi lehteen; piiloon yksisivuisesta. */
   varmistaLehtiHampurilainen(nakyviin) {
     /*
-     * Nappi asuu tarttuvan nimiön SISÄLLÄ (omistaja 14.8.2026): vain
-     * niin se pysyy täsmälleen otsikon rivillä ja otsikon viivojen
-     * sisäpuolella myös silloin, kun otsikko liikkuu tarttumisen
-     * ääripäissä. Nimiön textContent-päivitys pyyhkii napin — se
-     * luodaan tässä uudelleen, ja tämä ajetaan joka sivunäytöllä
-     * (naytaTutkiSivu → paivitaTutkiNavi → paivitaTutkiAlapalkki).
+     * Nappi asuu SEN SIVUN tarttuvan otsikon sisällä (omistaja
+     * 14.8.2026): vain niin se pysyy täsmälleen otsikkorivillä ja
+     * otsikon viivojen sisäpuolella myös tarttumisen ääripäissä.
+     * Etusivulla otsikko on nimiö (#arrival-city), aihesivuilla
+     * aihe-nimi — nimiö on niillä piilossa palstojen mukana, ja
+     * maalehti alkaa suoraan aihesivulta, joten nimiöön naulattu
+     * nappi ei näkynyt maalehdessä lainkaan (omistajan havainto
+     * 14.8.2026). Sivunpiirto pyyhkii otsikot, joten nappi luodaan
+     * tai siirretään joka sivunäytöllä (naytaTutkiSivu →
+     * paivitaTutkiNavi → paivitaTutkiAlapalkki).
      */
-    let nappi = this.arrivalCity.querySelector(':scope > .lehti-hampurilainen');
+    const etusivulla = (this.tutkiSivu ?? 0) === 0;
+    const koti = (etusivulla ? this.arrivalCity
+      : this.arrivalKategoria?.querySelector('.aihe-nimi')) ?? this.arrivalCity;
+    let nappi = this.arrivalDialog.querySelector('.lehti-hampurilainen');
     if (!nappi && nakyviin) {
       nappi = html('button', 'lehti-hampurilainen');
       nappi.type = 'button';
@@ -10363,8 +10370,8 @@ export class UI {
         + ' stroke="currentColor" stroke-width="1.8" stroke-linecap="round">'
         + '<path d="M4 7h16M4 12h16M4 17h16"/></svg>';
       nappi.addEventListener('click', () => this.avaaSisallysvalikko({ ylhaalla: true }));
-      this.arrivalCity.appendChild(nappi);
     }
+    if (nappi && nappi.parentElement !== koti) koti.appendChild(nappi);
     if (nappi) nappi.hidden = !nakyviin;
   }
 
