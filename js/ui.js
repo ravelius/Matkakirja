@@ -10388,6 +10388,30 @@ export class UI {
      */
     palkki.querySelector('.sisallysnappi').hidden = !maalehti || sivuja - this.tutkiEkaSivu() < 3;
     palkki.hidden = sivuja - this.tutkiEkaSivu() < 2;
+    /*
+     * Ylälaidan hampurilainen (omistaja 14.8.2026): vasempaan reunaan
+     * pysyvä valikkonappi, joka näkyy tarttuvan otsikon rinnalla koko
+     * ajan — molemmissa lehdissä. Siitä sisällys aukeaa YLÄREUNAAN;
+     * maalehden alapalkin hampurilainen jää ennalleen (aukeaa alas).
+     */
+    this.varmistaLehtiHampurilainen(sivuja - this.tutkiEkaSivu() >= 2);
+  }
+
+  /** Ylälaidan pysyvä valikkonappi lehteen; piiloon yksisivuisesta. */
+  varmistaLehtiHampurilainen(nakyviin) {
+    let nappi = this.arrivalDialog.querySelector(':scope > .lehti-hampurilainen');
+    if (!nappi && nakyviin) {
+      nappi = html('button', 'lehti-hampurilainen');
+      nappi.type = 'button';
+      nappi.title = 'Sisällys';
+      nappi.setAttribute('aria-label', 'Sisällys');
+      nappi.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none"'
+        + ' stroke="currentColor" stroke-width="1.8" stroke-linecap="round">'
+        + '<path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+      nappi.addEventListener('click', () => this.avaaSisallysvalikko({ ylhaalla: true }));
+      this.arrivalDialog.appendChild(nappi);
+    }
+    if (nappi) nappi.hidden = !nakyviin;
   }
 
   /**
@@ -10397,12 +10421,15 @@ export class UI {
    * uutta dialogia: lehti on jo dialogissa, ja sisäkkäiset modaalit
    * sotkevat sekä näppäimistön että paluunapin.
    */
-  avaaSisallysvalikko() {
+  avaaSisallysvalikko({ ylhaalla = false } = {}) {
     const vanha = this.arrivalDialog.querySelector(':scope > .sisallys-levy');
     if (vanha) { vanha.remove(); return; }
     // Sisällyssivua ei enää ole: lehden sivut OVAT sisällys.
     const sisallys = this.tutkiSivut ?? [];
-    const levy = html('div', 'sisallys-levy');
+    // Ylälaidan hampurilaisesta levy laskeutuu YLÄREUNAAN (omistaja
+    // 14.8.2026); alapalkin hampurilaisesta se nousee alhaalta kuten
+    // ennenkin.
+    const levy = html('div', `sisallys-levy${ylhaalla ? ' ylhaalla' : ''}`);
     const sulje = () => levy.remove();
     const otsikkoRivi = html('div', 'sisallys-levy-ylä');
     otsikkoRivi.appendChild(html('span', '', 'Sisällys'));
