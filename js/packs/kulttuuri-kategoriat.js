@@ -12535,6 +12535,188 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  sahalin: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sahalin',
+      johdanto: 'Sahalin on Venäjän suurin saari: 948 kilometriä pitkä '
+        + 'kaistale, joka on kapeimmillaan vain 25 kilometriä leveä. '
+        + 'Mantereesta sen erottaa Tatarinsalmi, jonka kapein kohta on '
+        + 'runsaat seitsemän kilometriä.',
+      kansikuvat: [
+        {
+          tiedosto: 'Скалы мыса Великан.jpg',
+          selite: 'Velikanin niemen kalliot Sahalinin kaakkoisrannikolla. '
+            + 'Merestä kohoaa vaalea kekurikallio, ja laskuveden jättämässä '
+            + 'altaassa näkyy sen peilikuva. Niemi sijaitsee Toninon–Anivan '
+            + 'niemimaalla Korsakovin piirissä.',
+          lahde: 'Rost.galis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'The frozen southeastern coast of Russia’s Sakhalin Island (iss074e0312749).jpg',
+          selite: 'Jäätynyt Terpenijanlahti Sahalinin kaakkoisrannikolla '
+            + 'kansainväliseltä avaruusasemalta kuvattuna. Lahtea peittää '
+            + 'rikkonainen ajojää, ja saaren vuoriselänteet ovat lumen alla. '
+            + 'Kuva on otettu helmikuussa 2026.',
+          lahde: 'NASA Johnson Space Center, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: '2024-09-29-Sakhalin-panorama.jpg',
+          selite: 'Južno-Sahalinsk syyskuussa 2024 Bolševikin vuoren '
+            + 'rinteeltä nähtynä. Kaupunki täyttää vuorten väliin jäävän '
+            + 'laakson, ja rinteellä seisoo köysiradan pylväs. Japanin '
+            + 'hallinnon aikana kaupungin nimi oli Toyohara.',
+          lahde: 'I13Robin, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Saari vai mantereen jatke',
+          tiedosto: 'Map of Karafuto and the Amur estuary by Mamiya Rinzo (1810)／間宮林蔵『黒竜江中州并天度』（文化7年）.jpg',
+          teksti: 'Kartanpiirtäjät epäröivät pitkään, onko Sahalin saari vai '
+            + 'mantereesta työntyvä niemi. Japanilainen Mamiya Rinzō esitti '
+            + 'vuonna 1809, että kyseessä on saari. Venäläinen Gennadi '
+            + 'Nevelskoi osoitti 1849, että Tatarinsalmi yhtyy Amurin '
+            + 'suistoon ja on siis kuljettava salmi eikä umpilahti. Salmi on '
+            + '632 kilometriä pitkä ja seitsemästä 23 kilometriin leveä, ja '
+            + 'matalimmillaan sen syvyys on neljä metriä. Pohjoisin '
+            + 'kuristuskohta nimettiin Nevelskoin salmeksi: se on 56 '
+            + 'kilometriä pitkä ja kapeimmillaan 7,3 kilometriä.',
+          selite: 'Mamiya Rinzōn vuonna 1810 piirtämä kartta Amurin '
+            + 'suistosta ja Sahalinista. Se on ensimmäinen kartta, jossa '
+            + 'Sahalin on esitetty saarena. Käsin väritetylle paperille on '
+            + 'merkitty rantaviivat, jokiuomat ja punaisia leimoja.',
+          lahde: 'Mamiya Rinzo 間宮林蔵, Wikimedia Commons (CC0)',
+          wiki: 'Sahalin',
+        },
+        {
+          otsikko: 'Kala kuivattiin ilman suolaa',
+          tiedosto: 'Stilt house of Nivkh people.jpg',
+          teksti: 'Saaren pohjoisosassa asuvat nivkhit, keskiosassa uiltat '
+            + 'eli orokit ja etelässä ainut. Nivkhien vuosi rakentui kalan '
+            + 'varaan: joista saatiin kyttyrä- ja koiralohta, taimenta, '
+            + 'madetta ja haukea, mereltä navagaa, kampelaa ja tokkoja. '
+            + 'Saalis säilöttiin jukolaksi eli leikattiin liuskoiksi ja '
+            + 'kuivattiin pakkasilmassa ilman suolaa. Talvimaja ryv oli noin '
+            + '7,5 metriä leveä kuoppa, joka tuettiin puurangoilla ja '
+            + 'katettiin maalla ja heinällä. Metsästys- ja matkareissuilla '
+            + 'kuljettiin koiravaljakolla.',
+          selite: 'Nivkhien paaluille nostettu aitta Sahalinilla vuonna '
+            + '1903. Lautaseinäisen rakennuksen räystäiltä riippuu kuivumaan '
+            + 'ripustettua tavaraa, ja lattian alle jää avoin tila. '
+            + 'Rakennuksen luona on kaksi turkkiin pukeutunutta ihmistä ja '
+            + 'koira.',
+          lahde: 'Internet Archive Book Images, Wikimedia Commons (CC0)',
+          wiki: 'Nivkhit',
+        },
+        {
+          otsikko: 'Pakkotyövanki, josta tuli kielentutkija',
+          tiedosto: 'Russischer Photograph - Die Ainu, die Ureinwohner der Insel Sachalin (1) (Zeno Fotografie).jpg',
+          teksti: 'Bronisław Piłsudski joutui vuonna 1887 syytteeseen '
+            + 'osallisuudesta salaliittoon keisari Aleksanteri III:ta '
+            + 'vastaan. Kuolemantuomio lievennettiin viidentoista vuoden '
+            + 'pakkotyöksi Sahalinilla, ja vangista tuli vähitellen saaren '
+            + 'kansojen tutkija. Hän laati ainun kielen sanakirjan, jossa '
+            + 'oli 10 000 sanaa, sekä 6 000 sanan nivkhin ja 2 000 sanan '
+            + 'oroksin sanastot. Kylään hän rakensi alkeiskoulun ja opetti '
+            + 'siellä venäjää ja laskentoa. Vuonna 1903 hän äänitti ainun '
+            + 'kieltä vahasylintereille. Hän oli Józef Piłsudskin vanhempi '
+            + 'veli.',
+          selite: 'Bronisław Piłsudskin ottama valokuva Sahalinin ainuista. '
+            + 'Neljä nuorta istuu maassa inau-rivin ääressä; inaut ovat '
+            + 'vuolluista lastuista tehtyjä uhripuikkoja. Yksi heistä on '
+            + 'juhlapuvussa, muut arkivaatteissa.',
+          lahde: 'Pilsudski, Bronislaw, Wikimedia Commons (PD)',
+          wiki: 'Ainut',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Sahalin oli lähes neljäkymmentä vuotta Venäjän '
+        + 'pakkotyösiirtola, ja saaren eteläpuolisko kuului välillä '
+        + 'Japanille. Kesällä 1890 saarelle saapui Anton Tšehov ja teki '
+        + 'siellä oman väestölaskentansa.',
+      nostot: [
+        {
+          otsikko: 'Kymmenentuhatta kortistokorttia',
+          tiedosto: 'Tschechow, Anton - Eine Gruppe von Ainus, Ureinwohner Südsachalins (Zeno Fotografie).jpg',
+          teksti: 'Anton Tšehov oli kolmenkymmenen ikäinen ja '
+            + 'koulutukseltaan lääkäri, kun hän lähti Moskovasta Sahalinille '
+            + 'keväällä 1890. Saarelle hän saapui 11. heinäkuuta ja viipyi '
+            + 'kolme kuukautta. Hän painatti itselleen kortistokortteja ja '
+            + 'kiersi asutuksesta toiseen kysymässä nimen, iän, säädyn ja '
+            + 'ammatin; kortteja täyttyi yli kymmenentuhatta. Poliittisten '
+            + 'vankien haastattelu oli häneltä kielletty. Matkasta syntyi '
+            + 'kirja Sahalin, jonka luvut ilmestyivät Russkaja mysl '
+            + '-lehdessä 1893–1894 ja kokonaisena teoksena 1895.',
+          selite: 'Anton Tšehovin ottama valokuva eteläisen Sahalinin '
+            + 'ainuista. Neljä aikuista istuu lautaseinän edustalla, ja '
+            + 'heidän kanssaan on kaksi lasta. Miehillä on pitkä parta ja '
+            + 'yllään paksusta kankaasta ommeltu kaapu.',
+          lahde: 'Tschechow, Anton, Wikimedia Commons (PD)',
+          wiki: 'Anton Tšehov',
+        },
+        {
+          otsikko: 'Kahdeksansataa vankia vuodessa',
+          tiedosto: 'Pavlovskij, I.I. - Gefangene bei der Arbeit. Sachalin (Zeno Fotografie).jpg',
+          teksti: 'Ensimmäiset kolmisensataa pakkotyövankia tuotiin '
+            + 'Sahalinille Nertšinskistä vuonna 1859 kaivamaan kivihiiltä. '
+            + 'Keisari Aleksanteri II vahvisti 18. huhtikuuta 1869 '
+            + 'määräyksen, jonka mukaan saarelle oli lähetettävä jopa '
+            + 'kahdeksansataa pakkotyövankia vuodessa. Vankilat avattiin '
+            + 'Aleksandrovskiin ja Korsakoviin vuonna 1880. Vangit louhivat '
+            + 'hiiltä ja rautamalmia, rakensivat taloja, teitä ja '
+            + 'lennätinlinjoja, kuivattivat soita ja kaatoivat talvisin '
+            + 'metsää. Kaikkiaan järjestelmän läpi kulki yli '
+            + 'kolmekymmentätuhatta tuomittua.',
+          selite: 'Sahalinin pakkotyövankeja työssä. Parikymmentä miestä '
+            + 'lapioi maata ja työntää kottikärryjä juuri raivatulla '
+            + 'tienpohjalla. Useimmilla on yllään vaalea paita ja päässä '
+            + 'lakki.',
+          lahde: 'Pavlovskij, I.I., Wikimedia Commons (PD)',
+          wiki: 'Katorga',
+        },
+        {
+          otsikko: 'Saari vaihdettiin saariketjuun',
+          tiedosto: 'Маяк Анива.jpg',
+          teksti: 'Vuoden 1855 Shimodan sopimus veti Venäjän ja Japanin '
+            + 'rajan Iturupin ja Urupin väliin mutta jätti Sahalinin '
+            + 'jakamatta. Pietarissa allekirjoitettiin 7. toukokuuta 1875 '
+            + 'sopimus, jossa Japani luopui osuudestaan Sahaliniin ja sai '
+            + 'vastineeksi Venäjän hallussa olleet Kuriilit; '
+            + 'allekirjoittajina olivat Aleksandr Gortšakov ja Enomoto '
+            + 'Takeaki. Portsmouthin rauhassa 1905 saaren 50. leveyspiirin '
+            + 'eteläpuoli siirtyi Japanille, joka hallitsi sitä Karafuton '
+            + 'prefektuurina. Pääkaupunki oli Toyohara, nykyinen '
+            + 'Južno-Sahalinsk. Elokuussa 1945 koko saari siirtyi '
+            + 'Neuvostoliitolle.',
+          selite: 'Anivan majakka Sahalinin eteläkärjen edustalla. '
+            + 'Betonitorni valmistui 1939, kun saaren eteläosa oli Japanin '
+            + 'Karafutoa, ja sen korkeus on runsaat 31 metriä. Torni on '
+            + 'nykyään autio, ja kallion yllä kiertää lokkiparvi.',
+          lahde: 'Yaroslav Shuraev, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Karafuto',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä saariryhmän Japani sai Venäjältä vuoden 1875 '
+          + 'Pietarin sopimuksessa, kun se luopui Sahalinista?',
+        vaihtoehdot: [
+          'Kuriilit',
+          'Komandorskit',
+          'Aleutit',
+          'Šantarsaaret',
+        ],
+        oikea: 0,
+        fakta: 'Sopimus allekirjoitettiin Pietarissa 7. toukokuuta 1875. '
+          + 'Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Venäjän '
+          + 'hallussa olleet Kuriilit, jolloin koko Sahalin jäi Venäjälle ja '
+          + 'koko Kuriilien ketju Japanille.',
+      },
+    },
+  ],
   vladivostok: [
     {
       id: 'kaupunki',
