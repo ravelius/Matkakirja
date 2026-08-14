@@ -12,6 +12,16 @@ tarvittaessa) ja tulostaa OK/FAIL-rivit; poistumiskoodi 0 = kaikki
 läpi. `savuke-lehtiotsikko` kirjoittaa kuvakaappauksen hakemistoon
 `/tmp/matkakirja-kaappaukset/` (luo se ensin: `mkdir -p`).
 
+**Playwright haetaan kahdesta paikasta** (sama kaava kuin
+`tools/kuvaa-etusivu.mjs`): ensin repon omasta `node_modules`-kansiosta
+ja jos sitä ei ole, kontin globaalista asennuksesta
+`/opt/node22/lib/node_modules/playwright`. Aiemmin savukkeet tuotiin
+kiinteästä `../../node_modules`-polusta, ja koska repossa ei ole
+`node_modules`-kansiota, ne kaatuivat uudessa sessiossa jo tuontiin
+(`ERR_MODULE_NOT_FOUND`) ennen kuin ehtivät käynnistää mitään. Uutta
+savuketta kirjoittaessa kopioi tuontilohko olemassa olevasta — älä
+kirjoita `import ... from '../../node_modules/...'`.
+
 | Savuke | Vartioi |
 | --- | --- |
 | savuke-lehtiotsikko | Lehden tarttuva nimiö, ylähampurilainen (sijainti + tasaus), sisällyslevy (ylös/ulkosulku/Etusivu-rivi), iPadin paperikaista |

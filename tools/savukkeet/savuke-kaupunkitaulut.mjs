@@ -1,9 +1,11 @@
-import pw from '../../node_modules/playwright/index.js';
-
-const { chromium } = pw;
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
+
+// Playwright repon node_modulesista, muuten kontin globaalista (README).
+const paketti = await import('playwright')
+  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAT = '/tmp/claude-0/-home-user-Matkakirja/c5b894db-1cea-56f5-9739-4e6b1ebb57bd/scratchpad';
