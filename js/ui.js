@@ -10418,7 +10418,17 @@ export class UI {
     x.addEventListener('click', sulje);
     otsikkoRivi.appendChild(x);
     levy.appendChild(otsikkoRivi);
-    levy.appendChild(this.rakennaSisallysLista(sisallys, { suljeValikko: sulje }));
+    /*
+     * Kaupunkilehdessä listaan kuuluu myös ETUSIVU (omistajan havainto
+     * 14.8.2026: "kaupungin hampurilaisessa ei näy kaupunkilehden
+     * etusivua") — aihesivulta ei muuten pääse takaisin kanteen kuin
+     * selaamalla. Maalehdessä riviä ei ole, koska maalehti alkaa
+     * suoraan aihesivulta (tutkiEkaSivu 1) eikä kantta ole.
+     */
+    levy.appendChild(this.rakennaSisallysLista(sisallys, {
+      suljeValikko: sulje,
+      etusivuRivi: this.tutkiEkaSivu() === 0,
+    }));
     levy.addEventListener('click', (e) => { if (e.target === levy) sulje(); });
     this.arrivalDialog.appendChild(levy);
   }
@@ -10985,8 +10995,22 @@ export class UI {
   }
 
   /** Sisällysluettelon rivit. Käytetään sekä etusivulla että valikossa. */
-  rakennaSisallysLista(sisallys, { suljeValikko = null } = {}) {
+  rakennaSisallysLista(sisallys, { suljeValikko = null, etusivuRivi = false } = {}) {
     const lista = html('div', 'sisallys');
+    // Etusivurivi vain valikkoon (etusivulla lista on jo etusivulla).
+    if (etusivuRivi) {
+      const rivi = html('button', 'sisallys-rivi');
+      rivi.type = 'button';
+      const teksti = html('div', 'sisallys-teksti');
+      teksti.appendChild(html('span', 'sisallys-otsikko', 'Etusivu'));
+      teksti.appendChild(html('span', 'sisallys-ingressi', 'Lehden kansi.'));
+      rivi.appendChild(teksti);
+      rivi.addEventListener('click', () => {
+        suljeValikko?.();
+        this.naytaTutkiSivu(0, { suunta: -1 });
+      });
+      lista.appendChild(rivi);
+    }
     for (const osa of sisallys ?? []) {
       const { kuva, ingressi } = this.sisallysTiedot(osa);
       const rivi = html('button', 'sisallys-rivi');
