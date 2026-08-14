@@ -4032,7 +4032,6 @@ body.radio-tila .actions {
 /* Kirjanappi muutti vasempaan reunaan (14.8.2026), joten pillerin ei
    tarvitse enää väistää sitä sivusuunnassa. */
 
-.maa-pilleri[data-kortti='true'] { top: 3.4rem; }
 
 .maa-pilleri[hidden] { display: none; }
 
