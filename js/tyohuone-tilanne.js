@@ -131,6 +131,17 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
+    otsikko: 'Luennan äänenlaatu ja kertojaluennat (v672–v678)',
+    ohje: 'Kuuntele lehden luenta: saumojen pitäisi kulkea tasaisella '
+      + 'virkevälillä ilman nykäyksiä (puskurisoitin leikkaa '
+      + 'hiljaisuudet palojen päistä), nopeus generoidaan OpenAI:n '
+      + 'omalla säädöllä ja soitin piiloutuu itsestään — kaiutin '
+      + 'vipuaa sen esiin luentaa katkaisematta. Uutta: kohtaamisten '
+      + 'tervehdykset, löytörepliikit ja tarinakaaren aarretekstit '
+      + 'luetaan nyt lukijaäänellä (äänite varapolkuna) — myös '
+      + 'kaupungeissa, joille äänitettä ei koskaan nauhoitettu.',
+  },
+  {
     otsikko: 'Lukijan seuranta (v668)',
     ohje: 'Vieritä lehden sivua alas ja paina kaiutinta: luenta alkaa '
       + 'näytöllä olevasta kohdasta, kuuluvat virkkeet maalautuvat '
