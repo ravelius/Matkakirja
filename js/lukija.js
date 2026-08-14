@@ -483,12 +483,37 @@ function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
   const win = doc?.defaultView ?? (typeof window !== 'undefined' ? window : null);
   const maalaus = Boolean(win && typeof win.Highlight === 'function' && win.CSS?.highlights);
   let kohdalla = -1;
+  let vieritysAjastin = null;
   const luokitellut = new Set();
   const puraLuokat = () => {
     for (const el of luokitellut) {
       el.classList?.remove('lukija-kohdalla', 'lukija-korostus', 'lukija-eka-kirjain');
     }
     luokitellut.clear();
+  };
+  /*
+   * Vieritys vain tarpeeseen ja äänen alun ohi (omistajan havainto
+   * 15.8.2026: "vielä tökkii alussa sekä kun uusi värillä korostettu
+   * kappale vaihtuu"). Rullaus osui täsmälleen samaan hetkeen kuin
+   * uuden kappaleen äänen aloitus, ja iPadilla raskas vieritys + äänen
+   * käynnistys yhdessä nyki. Nyt: jos kohdan alku on jo mukavasti
+   * näkyvissä (ruudun yläpuoliskolla), ei vieritetä lainkaan — luennan
+   * alussa se on aina, koska luenta alkaa näytöllä olevasta kohdasta.
+   * Kun vieritystä tarvitaan, se tehdään vasta ~350 ms äänen alun
+   * jälkeen, jolloin toisto on jo tasaisessa vauhdissa.
+   */
+  const vierita = (solmu) => {
+    if (!solmu?.scrollIntoView) return;
+    const rect = solmu.getBoundingClientRect?.();
+    const korkeus = win?.innerHeight || 0;
+    if (rect && korkeus && rect.top >= -4 && rect.top <= korkeus * 0.55) return;
+    clearTimeout(vieritysAjastin);
+    vieritysAjastin = setTimeout(() => {
+      solmu.scrollIntoView({
+        block: 'start',
+        behavior: vahennettyLiike() ? 'auto' : 'smooth',
+      });
+    }, 350);
   };
   const paivita = (t) => {
     const kohta = kohdat[t.kappale];
@@ -504,10 +529,7 @@ function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
       }
       // Kohdan alku näkyviin: scroll-margin (CSS) pitää tarttuvan
       // otsikkorivin poissa päältä.
-      kohta.osat?.[0]?.solmu?.scrollIntoView?.({
-        block: 'start',
-        behavior: vahennettyLiike() ? 'auto' : 'smooth',
-      });
+      vierita(kohta.osat?.[0]?.solmu);
     }
     if (maalaus && t.teksti) {
       const alueet = osoitaAlueet(kohta, t.alku, t.alku + t.teksti.length, ohita);
@@ -531,6 +553,7 @@ function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
     }
   };
   const pura = () => {
+    clearTimeout(vieritysAjastin);
     puraLuokat();
     if (maalaus) {
       try {

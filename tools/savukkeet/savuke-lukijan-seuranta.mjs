@@ -135,18 +135,22 @@ const seuranta = await sivu.evaluate(async () => {
   const napit = [...document.querySelectorAll('.lukija-paneeli .lukija-paneeli-nappi')];
   const seuraava = napit.find((b) => /Seuraava kappale/.test(b.title));
   seuraava?.click();
-  await odota(1600);
+  // Vieritys tapahtuu ~350 ms äänen alun jälkeen, ja piilotetun sivun
+  // ajastimet laahaavat headlessissa — odotus reilusti yli.
+  await odota(3200);
   const kohdalla = document.querySelector('.lukija-kohdalla');
   const r = kohdalla?.getBoundingClientRect?.();
+  // Uusi sopimus (v676): vieritetään vain jos kohta EI ole ruudun
+  // yläpuoliskolla — riittää siis, että kohta on näkyvissä kaistalla.
   return {
     hyppasi: Boolean(seuraava),
-    kohdallaYlhaalla: Boolean(r) && r.top > -20 && r.top < 260,
+    kohdallaKaistalla: Boolean(r) && r.top > -20 && r.top < window.innerHeight * 0.56,
     scrollTop: Math.round(kortti.scrollTop),
     laskuri: document.querySelector('.lukija-paneeli .lukija-kappalerivi')?.textContent ?? '',
   };
 });
-vaadi('kappalehypyn jälkeen kuuluva kohta on näkymän yläosassa (sivu seuraa lukijaa)',
-  seuranta.hyppasi && seuranta.kohdallaYlhaalla, JSON.stringify(seuranta));
+vaadi('kappalehypyn jälkeen kuuluva kohta on näkyvissä (sivu seuraa lukijaa)',
+  seuranta.hyppasi && seuranta.kohdallaKaistalla, JSON.stringify(seuranta));
 
 mkdirSync('/tmp/matkakirja-kaappaukset', { recursive: true });
 await sivu.screenshot({ path: '/tmp/matkakirja-kaappaukset/lukijan-seuranta.png' });
