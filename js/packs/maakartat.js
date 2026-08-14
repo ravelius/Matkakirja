@@ -3722,6 +3722,18 @@ export const KAUPUNKIKARTAT = {
      */
     polku: 'assets/kartat/berliini-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
+    /*
+     * Satelliittinäkymä samasta rajauksesta (omistajan tilaus
+     * 14.8.2026: kartalle vipu, joka vaihtaa piirroksen
+     * satelliittikuvaksi). Haettu tools/hae-satelliittikartat.mjs:llä,
+     * joka pyytää kuvan samassa kuvasuhteessa kuin piirretty PNG —
+     * siksi kohdepisteet, selitteet ja mittajana kelpaavat molemmille
+     * näkymille sellaisenaan. Lehti näyttää vivun vain, jos nämä kaksi
+     * kenttää ovat olemassa; Berliini on pilotti.
+     */
+    satelliitti: 'assets/kartat/berliini-satelliitti.jpg',
+    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
+      + '(muokattua Copernicus Sentinel -dataa)',
     rajat: { pohjoinen: 52.54, etela: 52.485, lansi: 13.34, ita: 13.46 },
     esittely: 'Berliini on rakennettu veden ja metsän keskelle: '
       + 'siltoja on noin 1 700 — moninkertaisesti Venetsian verran — '

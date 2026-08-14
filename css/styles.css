@@ -10056,6 +10056,50 @@ body.vertailu-tila .pawns { display: none; }
 .kaupunkikartta-kotelo { margin: 0.3rem 0 0.55rem; }
 
 /*
+ * Kartan näkymävipu (omistajan tilaus 14.8.2026): piirretty juliste
+ * ja satelliittikuva samasta rajauksesta. Rivi on kartan yllä oikeassa
+ * reunassa ja kirjoituskoneen kokoa, koska se on kartan asetus eikä
+ * lehden juttu — samalla logiikalla kuin lähderivi kartan alla.
+ */
+.kartta-vipu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  margin: 0 0 0.15rem;
+}
+
+.dialog .kartta-vipu button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  min-height: 0;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.85);
+  background: rgba(255, 250, 238, 0.6);
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  /* Yleinen nappisääntö toisi käsinpiirretyn kulmapyöristyksen; tämä
+   * rivi on kartan reunassa ja pysyy siistinä pillerinä. */
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+.dialog .kartta-vipu button:hover:not(:disabled) {
+  border-color: rgba(70, 51, 31, 0.75);
+  background: rgba(255, 250, 238, 0.95);
+}
+
+/* Valittu näkymä on painettu musteella: se ei ole enää tarjous. */
+.dialog .kartta-vipu button[aria-pressed="true"] {
+  color: #fdf6e5;
+  background: #46331f;
+  border-color: #2c2318;
+}
+
+/*
  * OSM-merkintä pieneksi mutta EI pois (omistajan palaute 8.8.2026:
  * "paljon pienemmällä"). Merkintä on OpenStreetMapin lisenssiehto
  * (ODbL), joten se ei ole koriste vaan velvoite — siksi se pienenee
