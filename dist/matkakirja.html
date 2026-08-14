@@ -170009,6 +170009,10 @@ class UI {
     this.arrivalLiuskat.replaceChildren();
     this.arrivalLiuskat.hidden = true;
     this.tutkiSivut = kategoriat;
+    // Kansi talteen sisällysvalikkoa varten: Etusivu-rivi saa siitä
+    // pikkukuvan ja ingressin kuten muutkin rivit (omistajan havainto
+    // 14.8.2026: "Kannesta puuttuu kuva ja tekstit").
+    this.tutkiKansi = kansi ?? null;
     // Kaupunkilehti aukeaa aina kaupunkitilassa; maalehti on oma
     // näkymänsä, joka avataan kartalta (avaaMaalehti).
     this.tutkiTila = 'kaupunki';
@@ -170229,6 +170233,7 @@ class UI {
     this.tutkiTila = 'maa';
     this.tutkiMaaLehti = iso;
     this.tutkiSivut = sivut;
+    this.tutkiKansi = null;
     this.tutkiLehti = true;
     this.tutkiMaaEtusivu = false;
     this.arrivalDialog.classList.add('lehti', 'arkki');
@@ -171163,9 +171168,29 @@ class UI {
     if (etusivuRivi) {
       const rivi = html('button', 'sisallys-rivi');
       rivi.type = 'button';
+      /*
+       * Kansi saa saman kohtelun kuin muutkin rivit (omistajan
+       * havainto 14.8.2026: "Kannesta puuttuu kuva ja tekstit"):
+       * pikkukuvana kannen pääkuva ja ingressinä kansiosion johdannon
+       * ensimmäinen virke. Ilman kansidataa rivi näkyy entisellään.
+       */
+      const kansi = this.tutkiKansi;
+      const kansikuva = kansi?.kansikuvat?.[0]?.tiedosto ?? null;
+      if (kansikuva) {
+        const img = document.createElement('img');
+        img.className = 'sisallys-kuva';
+        img.alt = '';
+        img.decoding = 'async';
+        asetaKuva(img, valokuvaUrl(kansikuva, 320), valokuvaVara(kansikuva, 320));
+        rivi.appendChild(img);
+      }
+      const johdanto = kansi?.johdanto ?? '';
+      const ingressi = johdanto
+        ? (johdanto.match(/[^.!?]+[.!?]/) ?? [johdanto])[0].trim()
+        : 'Lehden kansi.';
       const teksti = html('div', 'sisallys-teksti');
       teksti.appendChild(html('span', 'sisallys-otsikko', 'Etusivu'));
-      teksti.appendChild(html('span', 'sisallys-ingressi', 'Lehden kansi.'));
+      teksti.appendChild(html('span', 'sisallys-ingressi', ingressi));
       rivi.appendChild(teksti);
       rivi.addEventListener('click', () => {
         suljeValikko?.();
@@ -176846,6 +176871,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 665, teksti: 'Sisällyksen Etusivu-rivi sai kannen kuvan ja ingressin' },
   { v: 664, teksti: 'Lehden hampurilaiseen Palaa kartalle -rivi' },
   { v: 663, teksti: 'Siperian lehtien kuvatekstikorjaukset' },
   { v: 662, teksti: 'Lukijaäänen säädin peliin kehittäjätilan taakse' },
@@ -177607,7 +177633,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.664';
+const APP_VERSION = '2026-08-09.665';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
