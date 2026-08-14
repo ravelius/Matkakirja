@@ -131,6 +131,15 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
+    otsikko: 'Lehden asettelu-uudistus (v666)',
+    ohje: 'Avaa maa- tai kaupunkilehti: lippu on keskitetty otsikon '
+      + 'perään, lukijan kaiutin lukittu otsikkorivin oikeaan reunaan '
+      + 'molemmissa lehdissä, alalaidan sivupilleri ja alanuoli ovat '
+      + 'poissa. Napauta ruudun alareunaa (sivu vierii pohjaan) ja '
+      + 'yläreunaa tai otsikkoa (takaisin alkuun). Sivut vaihtuvat '
+      + 'pyyhkäisyllä, sivun lopun napeilla ja sisällysvalikosta.',
+  },
+  {
     otsikko: 'Satelliittinäkymä Berliinin kartalla (v658) — PILOTTI',
     ohje: 'Avaa Berliinin lehden Kaupunki kartalla -sivu: kartan yllä '
       + 'on kaksi nappia, Piirros ja Satelliitti. Vaihda näkymää — '

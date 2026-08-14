@@ -958,7 +958,10 @@ function napinTeksti(nappi) {
  */
 export function liitaLukija(isanta, lahde, { luokka = '', nimi = LUE_OTSIKKO, seuraa = false } = {}) {
   if (!isanta || !lukijaTuettu()) return null;
-  let nappi = isanta.querySelector?.(':scope > .lukija-nappi') ?? null;
+  // Haku ulottuu isännän koko puuhun, ei vain suoriin lapsiin: lehdessä
+  // nappi siirretään tarttuvan otsikkorivin sisään (ui.js
+  // sijoitaLehtiKaiutin), ja suora-lapsi-haku loisi silloin kaksosen.
+  let nappi = isanta.querySelector?.('.lukija-nappi') ?? null;
   if (!nappi) {
     nappi = isanta.ownerDocument.createElement('button');
     nappi.type = 'button';
@@ -981,11 +984,18 @@ export function liitaLukija(isanta, lahde, { luokka = '', nimi = LUE_OTSIKKO, se
     /*
      * Pelitilaan poistuminen pysäyttää: dialogin sulkeutuminen on se
      * hetki, jolloin pelaaja palaa kartalle. Kuuntelija kytketään
-     * kerran napin luonnin yhteydessä.
+     * kerran ISÄNTÄÄ kohti eikä nappia: lehden sivunpiirto pyyhkii
+     * otsikkoriviin siirretyn napin ja luo uuden, eikä jokainen
+     * sivunäyttö saa kasata dialogiin uutta kuuntelijaa. Nappi
+     * haetaan sulkemishetkellä, jotta kuuntelija ohjaa aina sitä
+     * nappia, joka dialogissa silloin on.
      */
-    if (typeof isanta.addEventListener === 'function' && isanta.tagName === 'DIALOG') {
+    if (typeof isanta.addEventListener === 'function' && isanta.tagName === 'DIALOG'
+      && !isanta.__lukijaSulkija) {
+      isanta.__lukijaSulkija = true;
       isanta.addEventListener('close', () => {
-        if (lukijaLukee(nappi)) pysaytaLukija();
+        const nykyinen = isanta.querySelector?.('.lukija-nappi');
+        if (nykyinen && lukijaLukee(nykyinen)) pysaytaLukija();
       });
     }
   }
