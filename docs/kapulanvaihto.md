@@ -42,7 +42,10 @@ Muut avoimet asiat (eivät kaanonia, mutta odottavat omistajaa):
    vartioista odottaa inline-linkkejä — päivitettävä samalla.
    Omistaja keskeytti työn; varmista ennen jatkamista, että se on
    yhä haluttu.
-2. **Reaaliaikainen puhe (TTS) — PÄÄTETTY, toteutus tekemättä.**
+2. **Reaaliaikainen puhe (TTS) — TOTEUTUS ALOITETTU 14.8.2026**
+   (omistajan tilaus: openai.fm-ääni lukijaääneksi; PR 1 = worker-
+   reitti + js/puhe.js + lukijan integraatio; PR 2 tulossa =
+   saapumisluentojen ElevenLabs-korvaus). Alkuperäinen päätöskirjaus:
    Omistaja valitsi OpenAI:n (gpt-4o-mini-tts; openai.fm on sen demo)
    ja **lisäsi OpenAI:n API-avaimen repon secreteihin 14.8.2026** —
    äänen lennossa generointi voidaan aloittaa. Suunniteltu toteutus:

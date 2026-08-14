@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.652';
+const CACHE = 'matkakirja-2026-08-09.653';
 const SHELL = [
   './',
   './index.html',
@@ -10,6 +10,7 @@ const SHELL = [
   './js/ui.js',
   './js/lukija.js',
   './js/pollo.js',
+  './js/puhe.js',
   './js/pollo-haku.js',
   './js/game.js',
   './js/ai.js',
@@ -778,7 +779,10 @@ self.addEventListener('activate', (event) => {
     caches
       .keys()
       .then((keys) => Promise.all(
-        keys.filter((k) => k !== CACHE && k !== KUVACACHE).map((k) => caches.delete(k))))
+        keys.filter((k) => k !== CACHE && k !== KUVACACHE
+          // Lukijaäänen pysyvät säilöt (js/puhe.js) eivät ole tämän
+          // workerin omia — siivous ei saa tuhota niitä versionvaihdossa.
+          && !k.startsWith('matkakirja-puhe-')).map((k) => caches.delete(k))))
       .then(() => self.clients.claim()),
   );
 });

@@ -36,4 +36,15 @@
    *
    * "kv_namespaces": [{ "binding": "POLLO_KV", "id": "<KV-säilön tunnus>" }]
    */
+  /*
+   * Lukijaäänen pysyvä säilö (R2): generoidut äänet lohkoittain
+   * avaimilla puhe/<lohko>/<tiiviste>.mp3. Ota käyttöön poistamalla
+   * kommentit; ämpäri luodaan `npx wrangler r2 bucket create
+   * matkakirja-puhe`. Ilman ämpäriä lukijaääni toimii, mutta pala
+   * generoidaan uudelleen aina kun se putoaa reunavälimuistista.
+   * Vanhentuneen lohkon poisto: Cloudflaren dashboardista tai
+   * `npx wrangler r2 object delete matkakirja-puhe --prefix puhe/<lohko>/`.
+   *
+   * "r2_buckets": [{ "binding": "PUHE_R2", "bucket_name": "matkakirja-puhe" }]
+   */
 }

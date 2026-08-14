@@ -157,6 +157,31 @@ jobs:
           # mutta ei sitä silti tarvitse lokiin tulostaa.
           echo "KV_TUNNUS=$tunnus" >> "$GITHUB_ENV"
 
+      # Lukijaäänen pysyvä säilö: R2-ämpäri, jossa generoidut äänet
+      # asuvat lohkoittain (puhe/merkinnat/…, puhe/kertoja/…). Vaihe on
+      # EI-KRIITTINEN: jos API-tunnukselta puuttuu R2-oikeus (vanha
+      # "Edit Cloudflare Workers" -pohja ei sisällä sitä), ämpäri jää
+      # pois ja worker pärjää reunavälimuistilla — julkaisu ei kaadu.
+      # Oikeuden saa lisäämällä tunnukselle "Workers R2 Storage: Edit".
+      - name: Etsi tai luo puheämpäri (jos oikeudet riittävät)
+        working-directory: ${{ runner.temp }}
+        run: |
+          set -euo pipefail
+          ampari="matkakirja-puhe"
+          if "$WRANGLER" r2 bucket list > "$RUNNER_TEMP/r2-lista.txt" 2>/dev/null; then
+            # Väljä täsmäys riittää: nimi on yksikäsitteinen. Luonnin
+            # epäonnistuminen (esim. kilpaileva ajo ehti ensin) ei
+            # pudota ämpäriä pois, jos se on listalla.
+            if ! grep -q "$ampari" "$RUNNER_TEMP/r2-lista.txt"; then
+              "$WRANGLER" r2 bucket create "$ampari" \
+                || { echo "::notice title=Puheämpärin luonti epäonnistui::Lukijaääni toimii ilman pysyvää säilöä."; ampari=""; }
+            fi
+          else
+            echo "::notice title=Puheämpäri ohitettu::API-tunnukselta puuttuu R2-oikeus — lukijaääni toimii ilman pysyvää säilöä."
+            ampari=""
+          fi
+          echo "PUHE_AMPARI=$ampari" >> "$GITHUB_ENV"
+
       # Repon wrangler.jsonc pysyy ennallaan; tähän kirjoitetaan sen
       # täytetty kopio. Kopio menee samaan kansioon, jotta "main":
       # "worker.js" osoittaa yhä oikeaan tiedostoon.
@@ -167,6 +192,7 @@ jobs:
             --lahde tools/pollo/wrangler.jsonc \
             --ulos tools/pollo/wrangler.ci.json \
             --kv "$KV_TUNNUS" \
+            --r2 "${PUHE_AMPARI:-}" \
             --originit "$POLLO_ORIGINIT"
           echo "POLLO_ASETUS=tools/pollo/wrangler.ci.json" >> "$GITHUB_ENV"
 
@@ -192,6 +218,23 @@ jobs:
           set -euo pipefail
           set +x
           printf '%s' "$ANTHROPIC_API_KEY" | "$WRANGLER" secret put ANTHROPIC_API_KEY --config "$POLLO_ASETUS"
+
+      # LUKIJAÄÄNEN AVAIN (omistajan päätös 14.8.2026): OpenAI:n
+      # puhesynteesi (gpt-4o-mini-tts) tarvitsee oman avaimensa. Avain
+      # on vapaaehtoinen: ilman sitä worker vastaa puhepyyntöihin
+      # siistillä 503:lla ja peli lukee laitteen omalla äänellä — mikään
+      # ei mene rikki. Avain kulkee putkessa kuten muutkin salaisuudet.
+      - name: Aseta lukijaäänen avain workerin salaisuudeksi (jos on)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          set -euo pipefail
+          set +x
+          if [ -z "${OPENAI_API_KEY:-}" ]; then
+            echo "OPENAI_API_KEY ei ole asetettu — ohitetaan (lukijaääni jää pois)."
+            exit 0
+          fi
+          printf '%s' "$OPENAI_API_KEY" | "$WRANGLER" secret put OPENAI_API_KEY --config "$POLLO_ASETUS"
 
       # KEHITTÄJÄKOODI on vapaaehtoinen: jos salaisuutta ei ole asetettu,
       # tämä vaihe ohitetaan eikä worker tunne koodia lainkaan — silloin

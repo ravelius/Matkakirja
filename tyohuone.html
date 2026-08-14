@@ -51,6 +51,30 @@
     <section id="tab-tilanne">
       <div id="tilannetaulu"></div>
 
+      <!-- TILA HETI KÄRKEEN (omistajan tilaus 14.8.2026): peilin
+           tilankäyttö jaoteltuna ääniin, kuviin ym. näkyviin heti. -->
+      <h2>Tila</h2>
+      <p>Peili on Cloudflare R2 -ämpäri, johon kaikki ulkopuolinen aineisto
+         kopioidaan. Luvut luetaan peilin omasta manifestista, joten ne
+         kertovat mitä siellä juuri nyt on.</p>
+      <div class="kortti" id="tila"></div>
+
+      <!-- LAUDAT JA KAUPUNKILEHDET HETI TILAN ALLA (omistajan tilaus
+           14.8.2026): rakennustyön kokonaiskuva sivun yläosaan. -->
+      <h2>Laudat</h2>
+      <div class="kortti" id="laudat"></div>
+
+      <!-- KAUPUNKILEHDET MANTEREITTAIN (omistajan tilaus 12.8.2026):
+           yksi pudotusvalikko mannerta kohti, sisällä laudan KAIKKI
+           kaupungit ja se mitä kullekin on tehty. Lähi-itä auki, koska
+           työ on juuri siellä. Luvut lasketaan pelipaketeista samalla
+           logiikalla kuin peli sivut piirtää — käsin ylläpidettyjä
+           lukuja ei ole. -->
+      <h2>Kaupunkilehdet mantereittain</h2>
+      <p>Avaa manner nuolesta. Sivumäärä on sama kuin pelissä: etusivu
+         ja sen jälkeen yksi sivu aihetta kohti.</p>
+      <div id="kaupunkilehdet"></div>
+
       <h2>Viimeisimmät muutokset</h2>
       <div id="muutosloki-tiivis"></div>
 
@@ -66,26 +90,6 @@
       <p>Lasketaan suoraan paketeista joka latauksella, joten lista ei voi
          vanhentua. Suurin puute ensin.</p>
       <div class="kortti" id="puutteet"></div>
-
-      <h2>Laudat</h2>
-      <div class="kortti" id="laudat"></div>
-
-      <!-- KAUPUNKILEHDET MANTEREITTAIN (omistajan tilaus 12.8.2026):
-           yksi pudotusvalikko mannerta kohti, sisällä laudan KAIKKI
-           kaupungit ja se mitä kullekin on tehty. Lähi-itä auki, koska
-           työ on juuri siellä. Luvut lasketaan pelipaketeista samalla
-           logiikalla kuin peli sivut piirtää — käsin ylläpidettyjä
-           lukuja ei ole. -->
-      <h2>Kaupunkilehdet mantereittain</h2>
-      <p>Avaa manner nuolesta. Sivumäärä on sama kuin pelissä: etusivu
-         ja sen jälkeen yksi sivu aihetta kohti.</p>
-      <div id="kaupunkilehdet"></div>
-
-      <h2>Tila</h2>
-      <p>Peili on Cloudflare R2 -ämpäri, johon kaikki ulkopuolinen aineisto
-         kopioidaan. Luvut luetaan peilin omasta manifestista, joten ne
-         kertovat mitä siellä juuri nyt on.</p>
-      <div class="kortti" id="tila"></div>
 
     </section>
 
@@ -255,7 +259,7 @@
       afrikkaArt, europeArt, asiaArt,
       europeKielet, asiaMaat, afrikkaMaat, europeMaat, radiot, kuvaApu,
       naSaap, saSaap, oceSaap, kannet, maaKategoriat,
-      kohdekartat, nahtavyysjutut,
+      kohdekartat, nahtavyysjutut, saatiedot, kohtaamisTaulu,
     ] = await Promise.all([
       import('./js/packs/africa-saapumiset.js').then((m) => m.AFRICA_SAAPUMISET),
       import('./js/packs/europe-saapumiset.js').then((m) => m.EUROPE_SAAPUMISET),
@@ -286,6 +290,10 @@
        */
       import('./js/packs/maakartat.js').then((m) => m.KAUPUNKIKARTAT).catch(() => ({})),
       import('./js/packs/nahtavyysjutut.js').then((m) => m.NAHTAVYYSJUTUT).catch(() => ({})),
+      // Laudat-taulun uudet rakennusosasarakkeet (omistajan tilaus
+      // 14.8.2026: "osuus pitäisi näyttää koko työn tilanteen").
+      import('./js/packs/saatiedot.js').then((m) => m.SAATIEDOT).catch(() => ({})),
+      import('./js/packs/kohtaamiset.js').then((m) => m.KOHTAAMISET).catch(() => ({})),
     ]);
 
     /*
@@ -1159,7 +1167,8 @@
       /* Osuus heti Laudan jälkeen (omistajan tarkennus 13.8.2026 illalla,
        * kumoaa aamun "ensimmäiseksi"-linjan): nimi ensin, edistymä sen
        * rinnalla. Lukusarakkeet näyttävät maksiminsa kauttaviivalla. */
-      for (const t of ['Lauta', 'Osuus', 'Kaupunkeja', 'Tekstit', 'Kaupunkilehdet', 'Maalehdet', 'Kaikki osat']) {
+      for (const t of ['Lauta', 'Osuus', 'Kaupunkeja', 'Tekstit', 'Kaupunkilehdet',
+        'Maalehdet', 'Säät', 'Kohtaamiset', 'Kohdekartat', 'Nähtävyysjutut', 'Kaikki osat']) {
         const th = el('th', t === 'Lauta' ? '' : 'num', t);
         otsikko.append(th);
       }
@@ -1188,17 +1197,42 @@
           .map((c) => p.map?.cityCountry?.[c.id] ?? ccVara[c.id]).filter(Boolean));
         const lehtimaat = [...maat].filter((iso) => (maaKategoriat[iso] ?? []).length > 0).length;
         const valmiit = p.cities.filter((c) => puuttuvat(c, p).length === 0).length;
+        const saat = p.cities.filter((c) => saatiedot[c.id]).length;
+        const kohtaamiset = p.cities.filter((c) => kohtaamisTaulu[c.id]).length;
+        const kartat = p.cities.filter((c) => kohdekartat[c.id]).length;
+        // Nähtävyysjutut: montako kohdekarttojen kohdetta avaa oman
+        // jutun / montako kohdetta kartoissa on kaikkiaan. Sama ehto
+        // kuin lehtiLuvut-funktiossa alempana.
+        let kohteita = 0;
+        let juttuja = 0;
+        for (const c of p.cities) {
+          for (const k of kohdekartat[c.id]?.kohteet ?? []) {
+            kohteita += 1;
+            if (nahtavyysjutut[c.id]?.[k.nimi]?.teksti || k.teksti) juttuja += 1;
+          }
+        }
         /*
-         * Osuus on painotettu kokonaisedistymä (omistajan tilaus
-         * 13.8.2026): kaikkien kaupunkien koossa olevat osat jaettuna
-         * kaikilla mahdollisilla. Vanha kaikki-tai-ei-mitään-mitta
-         * näytti nollaa, vaikka Lähi-idän lehdet ja tekstit olivat jo
-         * pitkällä — sadassa prosentissa ollaan vasta, kun jokaisella
-         * kaupungilla on jokainen osa.
+         * Osuus on KOKO TYÖN painotettu edistymä (omistajan korjaus
+         * 14.8.2026: "afrikka ei voi mitenkään olla 99 % kun siellä on
+         * vasta yksi kaupunki- ja maalehti"). Vanha mitta jakoi vain
+         * yhdeksän perusosan summat, jolloin lehtityö ei painanut
+         * mitään. Nyt jokainen rakennusosa saa työmääränsä mukaisen
+         * painon yksikköinä:
+         *
+         *   perusosa 1/osa (9 osaa/kaupunki), sää 1, kohtaaminen 2,
+         *   kaupunkilehden kansi 6 (3 kuvaa + 3 nostoa),
+         *   maalehti 20/maa (5 aihetta × 4 nostoa).
+         *
+         * Kohdekartat ja nähtävyysjutut EIVÄT kuulu osuuteen, koska
+         * niiden tavoitejoukkoa ei ole päätetty (kaikki kaupungit eivät
+         * saa karttaa) — ne näkyvät silti omina sarakkeinaan.
          */
-        const osiaYhteensa = p.cities.length * OSAT.length;
-        const osiaKoossa = p.cities.reduce(
+        const kaupunkeja = p.cities.length;
+        const perusKoossa = p.cities.reduce(
           (summa, c) => summa + (OSAT.length - puuttuvat(c, p).length), 0);
+        const osiaYhteensa = kaupunkeja * (OSAT.length + 1 + 2 + 6) + maat.size * 20;
+        const osiaKoossa = perusKoossa + saat * 1 + kohtaamiset * 2
+          + lehdet * 6 + lehtimaat * 20;
         const osuus = osiaYhteensa ? Math.round((osiaKoossa / osiaYhteensa) * 100) : 0;
         const tr = el('tr');
         tr.append(el('td', '', p.id));
@@ -1215,11 +1249,14 @@
          * 13.8.2026): pelkkä "15" ei kerro, onko työ puolivälissä vai
          * lopussa. Kaupunkeja-sarake on itse maksimi ja jää paljaaksi.
          */
-        const kaupunkeja = p.cities.length;
         tr.append(el('td', 'num', String(kaupunkeja)));
         tr.append(el('td', 'num', `${tekstit}/${kaupunkeja}`));
         tr.append(el('td', 'num', `${lehdet}/${kaupunkeja}`));
         tr.append(el('td', 'num', maat.size ? `${lehtimaat}/${maat.size}` : '—'));
+        tr.append(el('td', 'num', `${saat}/${kaupunkeja}`));
+        tr.append(el('td', 'num', `${kohtaamiset}/${kaupunkeja}`));
+        tr.append(el('td', 'num', `${kartat}/${kaupunkeja}`));
+        tr.append(el('td', 'num', kohteita ? `${juttuja}/${kohteita}` : '—'));
         tr.append(el('td', 'num', `${valmiit}/${kaupunkeja}`));
         runko.append(tr);
       }
@@ -1227,12 +1264,19 @@
       const selite = el('p', 'pieni', 'Tekstit = kaupungilla on '
         + 'matkakirjamerkintä (Lähi-idän luonnokset mukana). '
         + 'Kaupunkilehdet = kaupungilla on lehtikansi. Maalehdet = '
-        + 'monellako laudan maista on lehtiaiheet. Kaikki osat = kaupungit, '
-        + 'joilla on jokainen yhdeksästä osasta: merkintä, artikkeli, '
-        + 'kuvakortti, kulttuurinostot, visakysymykset, äänimaisema, '
-        + 'maatunnus, tunnusluvut ja kielinäyte tai radio. Osuus = '
-        + 'laudan kaikkien kaupunkien koossa olevat osat jaettuna '
-        + 'kaikilla mahdollisilla — 100 % vasta kun kaikki on valmista.');
+        + 'monellako laudan maista on lehtiaiheet. Säät = kaupungilla on '
+        + 'säärivi, Kohtaamiset = kaupungilla on kohtaamishahmo, '
+        + 'Kohdekartat = kaupungilla on piirretty kohdekartta, '
+        + 'Nähtävyysjutut = montako karttojen kohdetta avaa oman jutun. '
+        + 'Kaikki osat = kaupungit, joilla on jokainen yhdeksästä '
+        + 'perusosasta: merkintä, artikkeli, kuvakortti, kulttuurinostot, '
+        + 'visakysymykset, äänimaisema, maatunnus, tunnusluvut ja '
+        + 'kielinäyte tai radio. Osuus = KOKO työn painotettu edistymä: '
+        + 'perusosa 1, sää 1, kohtaaminen 2, kaupunkilehden kansi 6 ja '
+        + 'maalehti 20 yksikköä — koossa olevat jaettuna kaikilla '
+        + 'mahdollisilla. Kohdekartat ja nähtävyysjutut eivät kuulu '
+        + 'osuuteen, koska niiden tavoitejoukkoa ei ole päätetty. '
+        + '100 % vasta kun kaikki on valmista.');
       /*
        * Seitsemän saraketta ei mahdu puhelimeen: ilman vierityskoteloa
        * taulu venytti koko sivun leveämmäksi kuin ruutu (havaittu 390 px

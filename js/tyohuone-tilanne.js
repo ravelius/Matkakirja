@@ -26,9 +26,12 @@ export const TILANNE = {
         + 'luettu, lehdettömät maat ja kaupungit kartoitettu ajamalla, '
         + 'Siperia-erät speksattu ja delegoitu Opus 6:lle '
         + '(ultracode, omistajan ohje 14.8.).',
-      seuraavaksi: 'Vahtii Opus 6:n eriä (katselmointi + julkaisun '
-        + 'valvonta); avoimet päätökset odottavat omistajaa '
-        + '(kapulanvaihto.md: pöllön linkit, TTS-toteutus).',
+      seuraavaksi: 'Lukijaääni julkaistu (v653): OpenAI-puhesynteesi '
+        + 'kaiutinnappeihin ja pöllöön, äänet talteen laitteelle, '
+        + 'reunalle ja R2-ämpäriin lohkoittain. Seuraavaksi '
+        + 'saapumisluentojen TTS-vaihto (PR 2) omistajan kanssa '
+        + 'hioen; vahtii Opus 6:n eriä. Avoin: pöllön '
+        + 'Matkakirja-linkit (kapulanvaihto.md).',
     },
     {
       tekija: 'Opus 6',
@@ -114,6 +117,18 @@ export const TILANNE = {
  * siivotaan pois kun ne on katsottu tai ne vanhenevat.
  */
 export const TESTATTAVAA = [
+  {
+    otsikko: 'Lukijaääni lennossa (v653)',
+    ohje: 'Avaa mikä tahansa lehtisivu ja paina kaiutinta: luennan '
+      + 'pitäisi alkaa parissa sekunnissa uudella lukijaäänellä '
+      + '(OpenAI, kertoja-persoona). Kysy sitten pöllöltä jotain '
+      + 'kaiutinvipu päällä — vastaus luetaan striimin tahdissa pöllön '
+      + 'omalla äänellä, myös iPadin kuoressa. Sama sivu toiseen '
+      + 'kertaan alkaa heti (säilöt). Jos worker-avainta ei ole vielä '
+      + 'viety, kaiutin lukee laitteen omalla äänellä kuten ennenkin. '
+      + 'Työhuoneen Tilanne-välilehden kärjessä näkyy nyt myös peilin '
+      + 'tilankäyttö jaoteltuna.',
+  },
   {
     otsikko: 'Kertojan ääni palasi saapumisiin (v577)',
     ohje: 'Saavu mihin tahansa Euroopan kaupunkiin: saapumiskortti '

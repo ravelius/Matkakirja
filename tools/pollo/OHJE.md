@@ -1,5 +1,26 @@
 # Viisaan Pöllön käyttöönotto (omistajalle, n. 10 min puhelimella)
 
+> **Päivitys 14.8.2026 (lukijaääni):** sama worker välittää nyt myös
+> pelin lukijaäänen (OpenAI gpt-4o-mini-tts, `tehtava: 'puhe'`).
+> Se tarvitsee neljännen salaisuuden `OPENAI_API_KEY`
+> (<https://platform.openai.com> → API keys). Avain on VAPAAEHTOINEN:
+> ilman sitä worker vastaa puhepyyntöihin siistillä 503:lla ja peli
+> lukee laitteen omalla äänellä — mikään ei mene rikki. Kun avain on
+> GitHubin salaisuuksissa, "Pöllön julkaisu" -ajo vie sen workerille
+> automaattisesti. Persoonat ja äänivalinnat: tools/pollo/worker.js
+> (`PUHE_PERSOONAT`); rajat merkkeinä: tools/pollo/rajat.js. Sama
+> kehittäjäkoodi ohittaa myös puherajat.
+>
+> **Vakioteksti generoidaan vain kerran:** valmis ääni tallentuu
+> kolmeen kerrokseen — pelaajan laitteelle (CacheStorage, lohkoittain
+> niin että esim. matkakirjan äänet voi tuhota erikseen), Cloudflaren
+> reunalle ja R2-ämpäriin `matkakirja-puhe` (pysyvä, avaimet
+> `puhe/<lohko>/…`). Ämpärin luonti vaatii API-tunnukselle oikeuden
+> **Workers R2 Storage: Edit** — ilman sitä julkaisu onnistuu silti ja
+> lukijaääni toimii, mutta pala generoidaan uudelleen pudottuaan
+> reunavälimuistista. Vanhentuneen lohkon poisto: dashboardin R2-näkymä
+> tai `wrangler r2 object delete matkakirja-puhe --prefix puhe/<lohko>/`.
+
 Pöllö on pelin pieni tietokumppani: kartan kulmassa oleva pöllökuvake,
 jota napauttamalla aukeaa chat. Sen takana on maksullinen tekoäly, ja
 sinne pääsee vain **oman välityspalvelimen** kautta.

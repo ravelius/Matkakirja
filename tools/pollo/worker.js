@@ -24,6 +24,9 @@ import {
   KUUKAUSIRAJA_OLETUS,
   KYSYMYKSEN_KATTO,
   PAIVARAJA_OLETUS,
+  PUHE_KUUKAUSIRAJA_OLETUS,
+  PUHE_PAIVARAJA_OLETUS,
+  PUHE_TEKSTIN_KATTO,
   kuukausiAvain,
   lueLista,
   lueLuku,
@@ -31,9 +34,12 @@ import {
   paivaAvain,
   poimiEhdotukset,
   poimiJatkot,
+  puheKuukausiAvain,
+  puhePaivaAvain,
   sallittuOrigin,
   siivoaHistoria,
   siivoaTeksti,
+  tarkistaPuheRajat,
   tarkistaRajat,
   vertaaSalaisuus,
 } from './rajat.js';
@@ -47,6 +53,44 @@ const MALLI_OLETUS = 'claude-haiku-4-5-20251001';
 const MAX_TOKENS = 700;
 const RAJAPINTA = 'https://api.anthropic.com/v1/messages';
 const RAJAPINNAN_VERSIO = '2023-06-01';
+
+/*
+ * LUKIJAÄÄNI (omistajan päätös 14.8.2026): pelin luennat generoidaan
+ * lennossa OpenAI:n puhesynteesillä (gpt-4o-mini-tts — openai.fm on sen
+ * demo). Sama välitysmalli kuin pöllön chat-kutsuissa: avain elää VAIN
+ * workerin salaisuudessa (OPENAI_API_KEY), peli lähettää pelkän tekstin
+ * ja saa äänen takaisin. Persoonat ja ohjeistus omistetaan täällä
+ * palvelimella kuten pöllön järjestelmäkehote — asiakas valitsee vain
+ * persoonan nimen, ei ääntä eikä ohjetta, joten välitystä ei voi
+ * käyttää yleisenä puhesyntetisaattorina omille teksteille kuin pelin
+ * mitalla ja pelin äänillä.
+ */
+const PUHE_RAJAPINTA = 'https://api.openai.com/v1/audio/speech';
+const PUHE_MALLI_OLETUS = 'gpt-4o-mini-tts';
+
+/*
+ * Persoonien ohjeet englanniksi: gpt-4o-mini-tts seuraa englanninkielistä
+ * ohjeistusta luotettavimmin, ja puhuttava kieli määräytyy silti tekstin
+ * mukaan (suomi). Äänivalinnat: kertojalle matala ja rauhallinen 'onyx',
+ * pöllölle lämmin ja kirkkaampi 'sage'. Näitä hiotaan omistajan kanssa —
+ * vaihto on yhden rivin muutos tähän tauluun.
+ */
+const PUHE_PERSOONAT = {
+  kertoja: {
+    aani: 'onyx',
+    ohje: 'Speak Finnish. You are a wise, warm storyteller reading aloud '
+      + 'from an adventure travel journal and its newspaper. Calm, '
+      + 'unhurried pace with a hint of wonder; clear articulation; '
+      + 'natural pauses at sentence boundaries. Never theatrical.',
+  },
+  pollo: {
+    aani: 'sage',
+    ohje: 'Speak Finnish. You are a knowledgeable, friendly owl companion '
+      + 'answering a curious traveller. Warm and bright conversational '
+      + 'tone, a little quicker than a narrator, clear articulation. '
+      + 'Never childish or theatrical.',
+  },
+};
 
 /*
  * JÄRJESTELMÄKEHOTE — pöllön koko luonne ja kaikki kiellot.
@@ -262,11 +306,194 @@ async function lueLaskuri(kv, avain) {
   return muisti.get(avain) ?? 0;
 }
 
-async function kasvataLaskuri(kv, avain, elinaikaS) {
-  const arvo = (await lueLaskuri(kv, avain)) + 1;
+async function kasvataLaskuri(kv, avain, elinaikaS, maara = 1) {
+  const arvo = (await lueLaskuri(kv, avain)) + maara;
   if (kv) await kv.put(avain, String(arvo), { expirationTtl: elinaikaS });
   else muisti.set(avain, arvo);
   return arvo;
+}
+
+/* ------------------------------------------------------------------ */
+/* Lukijaääni                                                          */
+/* ------------------------------------------------------------------ */
+
+/** Puheäänen otsakkeet asiakkaalle. Selain ei säilö POST-vastausta
+ * (max-age on sille kuollut kirjain), mutta pelin oma puhesäilö
+ * (js/puhe.js) ja Cloudflaren reuna pitävät — pysyvyys asuu niissä. */
+function puheOtsakkeet(kors) {
+  return {
+    'content-type': 'audio/mpeg',
+    'cache-control': 'private, max-age=3600',
+    ...korsOtsakkeet(kors.origin, kors.sallitut),
+  };
+}
+
+/**
+ * Saman tekstin osoite reunavälimuistissa. Osoite on synteettinen —
+ * mihinkään ei oikeasti yhdistetä — ja tiiviste kattaa mallin,
+ * persoonan ja tekstin: minkä tahansa muuttuessa syntyy uusi avain ja
+ * vanha tallenne vanhenee itsestään pois tieltä.
+ */
+async function puheenAvain(malli, persoonaNimi, teksti) {
+  const data = new TextEncoder().encode(`${malli}|${persoonaNimi}|${teksti}`);
+  const tiiviste = await crypto.subtle.digest('SHA-256', data);
+  const hex = [...new Uint8Array(tiiviste)].map((t) => t.toString(16).padStart(2, '0')).join('');
+  return new Request(`https://puhe.valimuisti.matkakirja/${hex}`);
+}
+
+/**
+ * Yksi puhepyyntö: teksti sisään, mp3-virta ulos.
+ *
+ * VAKIOTEKSTI GENEROIDAAN VAIN KERRAN (omistajan kysymys 14.8.2026).
+ * Sama pala tarkistetaan ensin Cloudflaren reunavälimuistista, ja
+ * generoitu ääni pannaan sinne talteen 60 päiväksi — pelin vakiotekstit
+ * (lehtien sivut, merkinnät) maksavat siis generoinnin kerran ja
+ * soivat sen jälkeen välimuistista kaikille saman reunan pelaajille.
+ * Osuma ei kuluta käyttörajoja, koska se ei maksa mitään. Laitteen oma
+ * pysyvä säilö on tämän lisäksi pelin puolella (js/puhe.js).
+ *
+ * Ohivirtaava vastaus välitetään asiakkaalle sitä mukaa kuin OpenAI
+ * sitä tuottaa (tee-haara kirjoittaa saman virran talteen), joten
+ * luenta alkaa kuulua ennen kuin koko pala on generoitu. Virherunkoja
+ * ei lokiteta eikä välitetä — sama sääntö kuin pöllön chat-kutsuissa.
+ */
+async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
+  if (!env.OPENAI_API_KEY) {
+    return vastaa({
+      virhe: 'asetus',
+      viesti: 'Lukijaääni ei ole vielä käytössä.',
+    }, { status: 503, ...kors });
+  }
+
+  const teksti = siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO);
+  if (!teksti) {
+    return vastaa({ virhe: 'kysely', viesti: 'Teksti puuttuu.' }, { status: 400, ...kors });
+  }
+  const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
+  const persoona = PUHE_PERSOONAT[persoonaNimi];
+  const malli = env.PUHE_MALLI || PUHE_MALLI_OLETUS;
+
+  /*
+   * Lohko kertoo, MITÄ tekstilajia pala on ('merkinnat', 'kertoja'…),
+   * ja vain lohkollinen pala säilötään — pöllön vastaukset ovat
+   * kertakäyttöisiä eikä niitä kannata tallettaa minnekään. Lohko on
+   * myös R2-avaimen etuliite, joten vanhentuneen tekstilajin äänet voi
+   * tuhota yhdellä prefiksipoistolla (omistajan ohje 14.8.2026:
+   * matkakirjan äänet erilleen, jotta tila ei lopu kesken).
+   */
+  const lohko = /^[a-z0-9-]{1,24}$/.test(String(runko?.lohko ?? '')) ? runko.lohko : null;
+
+  let avain = null;
+  let r2Avain = null;
+  if (lohko) {
+    try {
+      avain = await puheenAvain(malli, persoonaNimi, teksti);
+      r2Avain = `puhe/${lohko}/${avain.url.split('/').pop()}.mp3`;
+      const osuma = await caches.default.match(avain);
+      if (osuma) {
+        return new Response(osuma.body, { status: 200, headers: puheOtsakkeet(kors) });
+      }
+      /*
+       * R2-ÄMPÄRI ON PYSYVÄ KERROS (omistajan kysymys 14.8.2026):
+       * reunavälimuisti haihtuu ja on alueellinen, mutta ämpäriin
+       * generoitu pala jää — vakioteksti maksaa generoinnin KERRAN
+       * koko maailmalle. Osuma nostetaan samalla takaisin reunalle.
+       */
+      if (env.PUHE_R2) {
+        const talle = await env.PUHE_R2.get(r2Avain);
+        if (talle) {
+          const data = await talle.arrayBuffer();
+          ctx?.waitUntil?.(caches.default.put(avain, new Response(data, {
+            headers: {
+              'content-type': 'audio/mpeg',
+              'cache-control': 'public, max-age=5184000',
+            },
+          })).catch(() => {}));
+          return new Response(data, { status: 200, headers: puheOtsakkeet(kors) });
+        }
+      }
+    } catch {
+      // Säilöt ovat optimointi: ilman niitä generoidaan normaalisti.
+      avain = null;
+      r2Avain = null;
+    }
+  }
+
+  // Rajat lasketaan merkkeinä (ks. rajat.js). Kehittäjäkoodi ohittaa
+  // rajat mutta laskurit kasvavat silti — sama käytäntö kuin chatissa.
+  const kv = env.POLLO_KV ?? null;
+  const nyt = new Date();
+  const pAvain = puhePaivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt);
+  const kAvain = puheKuukausiAvain(nyt);
+  const kehittaja = kehittajaOhitus(pyynto, env);
+  const raja = kehittaja ? { ok: true } : tarkistaPuheRajat({
+    paiva: await lueLaskuri(kv, pAvain),
+    kuukausi: await lueLaskuri(kv, kAvain),
+    paivaraja: lueLuku(env.PUHE_PAIVARAJA, PUHE_PAIVARAJA_OLETUS),
+    kuukausiraja: lueLuku(env.PUHE_KUUKAUSIRAJA, PUHE_KUUKAUSIRAJA_OLETUS),
+  });
+  if (!raja.ok) {
+    return vastaa({ virhe: raja.syy, viesti: raja.viesti }, { status: 429, ...kors });
+  }
+  await kasvataLaskuri(kv, pAvain, 60 * 60 * 30, teksti.length);
+  await kasvataLaskuri(kv, kAvain, 60 * 60 * 24 * 40, teksti.length);
+
+  try {
+    const ylavirta = await fetch(PUHE_RAJAPINTA, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        authorization: `Bearer ${env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: malli,
+        input: teksti,
+        voice: persoona.aani,
+        instructions: persoona.ohje,
+        response_format: 'mp3',
+      }),
+    });
+    if (!ylavirta.ok || !ylavirta.body) {
+      const virhe = new Error(`puherajapinta ${ylavirta.status}`);
+      virhe.status = ylavirta.status;
+      throw virhe;
+    }
+    /*
+     * Sama virta kahtia: toinen haara asiakkaalle heti, toinen talteen
+     * taustalla (waitUntil pitää workerin hengissä kunnes tallennus
+     * valmistuu). Talteenpano puskuroi haaransa muistiin — R2 vaatii
+     * tunnetun pituuden — mutta se ei viivytä asiakasta, joka lukee
+     * omaa haaraansa suoraan OpenAI:n tahdissa.
+     */
+    if (avain && ctx?.waitUntil) {
+      const [asiakkaalle, talteen] = ylavirta.body.tee();
+      ctx.waitUntil((async () => {
+        const data = await new Response(talteen).arrayBuffer();
+        await Promise.all([
+          caches.default.put(avain, new Response(data, {
+            headers: {
+              'content-type': 'audio/mpeg',
+              'cache-control': 'public, max-age=5184000',
+            },
+          })).catch(() => {}),
+          r2Avain && env.PUHE_R2
+            ? env.PUHE_R2.put(r2Avain, data, {
+              httpMetadata: { contentType: 'audio/mpeg' },
+            }).catch(() => {})
+            : null,
+        ]);
+      })().catch(() => { /* täysi tai estetty säilö ei kaada luentaa */ }));
+      return new Response(asiakkaalle, { status: 200, headers: puheOtsakkeet(kors) });
+    }
+    return new Response(ylavirta.body, { status: 200, headers: puheOtsakkeet(kors) });
+  } catch (virhe) {
+    // Vain tilakoodi lokiin — ei avainta eikä luettavaa tekstiä.
+    console.log(`puhe: kutsu epäonnistui (${virhe?.status ?? 'verkko'})`);
+    return vastaa({
+      virhe: 'palvelin',
+      viesti: 'Lukijaääni ei saanut sanoista kiinni. Yritä hetken päästä uudelleen.',
+    }, { status: 502, ...kors });
+  }
 }
 
 /** Yksi kutsu Anthropicin rajapintaan. `striimi` avaa SSE-vastauksen. */
@@ -439,7 +666,7 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
 }
 
 export default {
-  async fetch(pyynto, env) {
+  async fetch(pyynto, env, ctx) {
     const sallitut = lueLista(env.POLLO_ORIGINIT);
     const origin = pyynto.headers.get('origin');
     const kors = { origin, sallitut };
@@ -456,18 +683,28 @@ export default {
       // tämä on väärinkäytön esto eikä pelaajalle näkyvä tila.
       return new Response('Origin ei ole sallittu', { status: 403 });
     }
-    if (!env.ANTHROPIC_API_KEY) {
-      return vastaa({
-        virhe: 'asetus',
-        viesti: 'Pöllö ei ole vielä hereillä.',
-      }, { status: 503, ...kors });
-    }
-
     let runko;
     try {
       runko = await pyynto.json();
     } catch {
       return vastaa({ virhe: 'kysely', viesti: 'Pyyntö ei ollut JSONia.' }, { status: 400, ...kors });
+    }
+
+    /*
+     * Lukijaääni kulkee samasta ovesta (sama origin-tarkistus, sama
+     * kehittäjäkoodi, sama KV), mutta eri rajapintaan ja eri avaimella —
+     * siksi se haarautuu ennen pöllön ANTHROPIC-avaintarkistusta:
+     * lukijaääni voi olla käytössä, vaikka pöllö nukkuisi, ja toisinpäin.
+     */
+    if (runko?.tehtava === 'puhe') {
+      return hoidaPuhe(pyynto, env, kors, runko, ctx);
+    }
+
+    if (!env.ANTHROPIC_API_KEY) {
+      return vastaa({
+        virhe: 'asetus',
+        viesti: 'Pöllö ei ole vielä hereillä.',
+      }, { status: 503, ...kors });
     }
 
     const tehtava = runko?.tehtava === 'ehdotukset' ? 'ehdotukset' : 'vastaus';
