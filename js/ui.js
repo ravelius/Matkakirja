@@ -1974,6 +1974,19 @@ const VIIVA_IKONIT = {
   mitali: '<path d="M9.6 3.6 8.2 9.2M14.4 3.6l1.4 5.6"/><circle cx="12" cy="14.4" r="5.2"/><circle class="taytto" cx="12" cy="14.4" r="1.1"/>',
   // Kaiutin ääniaaltoineen — aloitussivun ääniviihje.
   kaiutin: '<path d="M4.2 9.3h3.2l4.4-3.6v12.6l-4.4-3.6H4.2z"/><path d="M14.8 9.4a3.7 3.7 0 0 1 0 5.2"/><path d="M17.4 6.9a7.3 7.3 0 0 1 0 10.2"/>',
+  /*
+   * Kaupunkikartan näkymävivun kaksi kuvaketta (14.8.2026). Taitettu
+   * kartta on se, mitä lehdessä on ennenkin ollut: käsin piirretty
+   * juliste. Satelliitti on paneelit ja lautasantenni — kiertoradan
+   * rengasta ei käytetä, koska se näyttää tällä koolla pallolta.
+   */
+  taitekartta: '<path d="M3.6 6.6 9 4.4v13l-5.4 2.2z"/><path d="M9 4.4 15 6.6v13L9 17.4z"/>'
+    + '<path d="M15 6.6l5.4-2.2v13L15 19.6z"/>',
+  satelliitti: '<rect x="2.8" y="9.7" width="5.4" height="4.6" rx="0.7"/>'
+    + '<rect x="15.8" y="9.7" width="5.4" height="4.6" rx="0.7"/>'
+    + '<rect x="9.9" y="9.3" width="4.2" height="5.4" rx="1"/>'
+    + '<path d="M8.2 12h1.7M14.1 12h1.7"/>'
+    + '<path d="M12 9.3V6.4"/><path d="M9.7 5.5a3.4 3.4 0 0 1 4.6 0"/>',
 };
 
 /*
@@ -2322,6 +2335,14 @@ export class UI {
     // tarkennus 7.8.2026: "kartta pitäisi olla jo ihan ensimmäisellä
     // sivulla" — aiemmin se oli kaupunki-aihesivun pohjalla).
     this.arrivalKaupunkiKartta = document.getElementById('arrival-kaupunkikartta');
+    /*
+     * Kohdekartan satelliittinäkymä on päällä tässä kaupungissa
+     * (null = kaikissa piirros). Kartta piirretään uusiksi joka
+     * sivunkäännöllä, joten valinnan on asuttava piirtofunktion
+     * ulkopuolella — muuten se nollautuisi sivua vaihtaessa. Ei mene
+     * tallennukseen: lehti aukeaa aina piirroksena.
+     */
+    this.satelliittiNakyma = null;
     // Kaupunki- ja maapalstat: näkyvät vain lehden etusivulla.
     this.arrivalPalstat = document.querySelector('#arrival-dialog .arrival-palstat');
     // Uutiset ja mediarivi yhteisessä kääreessä (siirtyy maa-etusivulle
@@ -11481,9 +11502,67 @@ export class UI {
       kotelo.appendChild(piste);
       selitteet.appendChild(selite);
     });
+    /*
+     * Näkymävipu piirroksen ja satelliittikuvan välillä (omistajan
+     * tilaus 14.8.2026). Näkyy vain kaupungilla, jolle satelliittikuva
+     * on haettu — muut kartat piirtyvät ennallaan ilman vipua.
+     * Berliini on pilotti.
+     *
+     * Vaihto koskee VAIN taustakuvaa ja lähderiviä. Kohdepisteet,
+     * selitteet ja mittajana lasketaan rajauksesta (karttapiste,
+     * mittakaava), ja tools/hae-satelliittikartat.mjs hakee kuvan
+     * samalla rajauksella ja samassa kuvasuhteessa kuin piirretty PNG
+     * — siksi ne osuvat kohdalleen kummassakin näkymässä ilman omaa
+     * koodia.
+     *
+     * Kaksi nappia eikä yksi vuorottelija: yhden napin teksti
+     * valehtelee kumpaan suuntaan tahansa, koska "Satelliitti"
+     * tarkoittaisi kerran kohdetta ja kerran nykytilaa.
+     *
+     * Valinta on istuntokohtainen eikä mene tallennukseen — se on
+     * katselutapa, ei pelitilanne. Muistissa on kaupungin tunnus eikä
+     * pelkkä totuusarvo, jottei toisen kaupungin lehti aukea
+     * satelliittinäkymään sitten kun näitä on useampia.
+     */
+    const lahderivi = html('p', 'lahde', kartta.lahde);
+    if (kartta.satelliitti && kartta.polku) {
+      const nakymat = [
+        { satelliitissa: false, nimi: 'Piirros', ikoni: VIIVA_IKONIT.taitekartta },
+        { satelliitissa: true, nimi: 'Satelliitti', ikoni: VIIVA_IKONIT.satelliitti },
+      ];
+      const vipu = html('div', 'kartta-vipu');
+      vipu.setAttribute('role', 'group');
+      vipu.setAttribute('aria-label', 'Kartan näkymä');
+      const napit = nakymat.map((nakyma) => {
+        const nappi = html('button', 'kartta-vipu-nappi');
+        nappi.type = 'button';
+        nappi.appendChild(viivaIkoniSvg(nakyma.ikoni, 14));
+        nappi.appendChild(html('span', 'kartta-vipu-nimi', nakyma.nimi));
+        vipu.appendChild(nappi);
+        return nappi;
+      });
+      const naytaNakyma = (satelliitissa) => {
+        this.satelliittiNakyma = satelliitissa ? kaupunki : null;
+        // Mittajana on piirretty paperin väreillä ja katoaa
+        // satelliittikuvan tummaan metsään — luokka vahvistaa sen
+        // taustan. Jana itse (pituus ja teksti) on sama molemmissa.
+        kotelo.classList.toggle('satelliittinakyma', satelliitissa);
+        kuva.src = satelliitissa ? kartta.satelliitti : kartta.polku;
+        kuva.alt = satelliitissa ? 'Kaupunki satelliittikuvassa' : 'Kaupungin kartta';
+        lahderivi.textContent = satelliitissa ? kartta.satelliittiLahde : kartta.lahde;
+        napit.forEach((nappi, i) => {
+          nappi.setAttribute('aria-pressed', String(nakymat[i].satelliitissa === satelliitissa));
+        });
+      };
+      napit.forEach((nappi, i) => {
+        nappi.addEventListener('click', () => naytaNakyma(nakymat[i].satelliitissa));
+      });
+      naytaNakyma(this.satelliittiNakyma === kaupunki);
+      lohko.appendChild(vipu);
+    }
     lohko.appendChild(kotelo);
     lohko.appendChild(selitteet);
-    lohko.appendChild(html('p', 'lahde', kartta.lahde));
+    lohko.appendChild(lahderivi);
     kohde.appendChild(lohko);
   }
 
