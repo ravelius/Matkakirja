@@ -6,10 +6,14 @@
  *     jälkitarkistuksesta.
  *  3. Tapahtumapolku (oikea resize) sivuttaa leveäksi kuten ennenkin.
  */
-import { chromium } from '../../node_modules/playwright/index.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
+
+// Playwright repon node_modulesista, muuten kontin globaalista (README).
+const paketti = await import('playwright')
+  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp' };

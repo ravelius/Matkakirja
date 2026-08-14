@@ -1,6 +1,11 @@
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
-import { chromium } from '../../node_modules/playwright-core/index.mjs';
+
+// Playwright repon node_modulesista, muuten kontin globaalista (README).
+const paketti = await import('playwright')
+  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+const chromium = paketti.chromium ?? paketti.default?.chromium;
+
 const palvelin = createServer(async (req, res) => {
   const data = await readFile(new URL('../../dist/matkakirja.html', import.meta.url));
   res.writeHead(200, { 'content-type': 'text/html' }); res.end(data);
