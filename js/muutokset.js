@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 668, teksti: 'lukija seuraa: maalaus, aloitus näkyvästä, otsikot niputettu' },
   { v: 667, teksti: 'kaiutin hampurilaisen ilmeeseen, sisällyksen paluu esiin' },
   { v: 666, teksti: 'lehtiasettelu: lippu ja kaiutin otsikkoriviin, reunanapautus' },
   { v: 665, teksti: 'Sisällyksen Etusivu-rivi sai kannen kuvan ja ingressin' },

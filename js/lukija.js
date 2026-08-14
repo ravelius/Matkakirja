@@ -234,42 +234,43 @@ function paate(teksti) {
 const OTSIKKOTAGIT = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6']);
 
 /**
- * Kokoaa luettavan tekstin elementin sisältä.
+ * Kerää luettavat kohdat elementin sisältä lohkoelementteineen.
  *
- * Palauttaa palat rivinvaihdoilla eroteltuina: otsikko, kappale,
- * kappale. Rivinvaihto on molemmille taustajärjestelmille se merkki,
- * josta ne pitävät tauon.
+ * Kohta = {teksti, osat, otsikko}, jossa osat kertovat mistä
+ * lohkoelementeistä teksti tuli ja millä merkkiväleillä — sillä
+ * lukija maalaa kuuluvat virkkeet ruudulle ja vierittää sivua
+ * luennan perässä (omistajan tilaukset 14.8.2026).
  *
  * LUENTA ALKAA AINA LEIPÄTEKSTISTÄ (omistajan tarkennus 14.8.2026:
  * "aloita aina vain leipätekstistä"). KAIKKI otsikot ennen
  * ensimmäistä leipätekstipalaa ohitetaan — masto, sivuotsikko ja
  * mahdollinen alaotsikko ovat samaa taittoa, jonka lukija juuri näki
- * avatessaan sivun. Kun leipäteksti on alkanut, väliotsikot luetaan —
- * ne jäsentävät kuunneltavaa.
- *
- * @param {Element} juuri elementti, jonka sisältö luetaan
- * @param {{ ohita?: string[], katto?: number, ohitaEkaOtsikko?: boolean }} asetukset
- * @returns {string} luettava teksti tai tyhjä merkkijono
+ * avatessaan sivun.
  */
-export function kokoaLuettavaTeksti(juuri, {
-  ohita = LUKIJAN_OHITETTAVAT, katto = LUETTAVAN_KATTO, ohitaEkaOtsikko = true,
-} = {}) {
-  if (!juuri) return '';
-  const palat = [];
+function keraaKohdat(juuri, { ohita, ohitaEkaOtsikko }) {
+  const kohdat = [];
   let kertyma = [];
+  let kertymaLohko = null;
   // "Leipäteksti on alkanut" — sitä ennen jokainen otsikko ohitetaan.
   let leipaAlkoi = !ohitaEkaOtsikko;
   const katkaise = () => {
     const teksti = siisti(kertyma.join(' '));
-    if (teksti) {
-      palat.push(paate(teksti));
-      leipaAlkoi = true;
-    }
+    const lohko = kertymaLohko;
     kertyma = [];
+    kertymaLohko = null;
+    if (!teksti) return;
+    const tagi = String(lohko?.nodeName ?? lohko?.tagName ?? '').toUpperCase();
+    kohdat.push({
+      teksti: paate(teksti),
+      osat: [{ solmu: lohko, alku: 0, pituus: teksti.length }],
+      otsikko: OTSIKKOTAGIT.has(tagi),
+    });
+    leipaAlkoi = true;
   };
-  const kavele = (solmu) => {
+  const kavele = (solmu, lohkoEl) => {
     if (solmu.nodeType === 3) {
       kertyma.push(solmu.data ?? solmu.textContent ?? '');
+      kertymaLohko = kertymaLohko ?? lohkoEl;
       return;
     }
     if (solmu.nodeType !== 1) return;
@@ -278,18 +279,265 @@ export function kokoaLuettavaTeksti(juuri, {
     if (!leipaAlkoi && OTSIKKOTAGIT.has(tagi)) return;
     const lohko = LOHKOTAGIT.has(tagi);
     if (lohko) katkaise();
-    for (const lapsi of solmu.childNodes ?? []) kavele(lapsi);
+    for (const lapsi of solmu.childNodes ?? []) kavele(lapsi, lohko ? solmu : lohkoEl);
     if (lohko) katkaise();
   };
-  kavele(juuri);
+  kavele(juuri, juuri);
   katkaise();
-  const kaikki = palat.join('\n');
-  if (kaikki.length <= katto) return kaikki;
-  // Katkaisu virkkeen rajalta: kesken sanaa loppuva luenta kuulostaa
-  // rikkinäiseltä, vaikka syy olisikin vain pituus.
-  const leikattu = kaikki.slice(0, katto);
-  const raja = Math.max(leikattu.lastIndexOf('.'), leikattu.lastIndexOf('\n'));
-  return (raja > katto * 0.5 ? leikattu.slice(0, raja + 1) : leikattu).trim();
+  return kohdat;
+}
+
+/**
+ * VÄLIOTSIKKO LIITETÄÄN SEURAAVAAN LEIPÄTEKSTIIN (omistajan tilaus
+ * 14.8.2026: "Yhdistä väliotsikko sitä seuraavaan leipätekstiin
+ * lukijassa — siis siihen kun lukijan säätimellä hypitään kohtien
+ * välissä"). Otsikko ei ole oma pysähdyspaikkansa vaan kohdan
+ * esirivi: hyppy laskeutuu otsikkoon ja jatkaa suoraan kappaleeseen.
+ * Peräkkäiset otsikot (osasto + alaotsikko) liitetään samaan kohtaan.
+ * Hännäksi jäänyt otsikko ilman leipätekstiä jää omaksi kohdakseen.
+ */
+function niputaOtsikot(kohdat) {
+  const tulos = [];
+  let odottavat = [];
+  for (const kohta of kohdat) {
+    if (kohta.otsikko) {
+      odottavat.push(kohta);
+      continue;
+    }
+    if (!odottavat.length) {
+      tulos.push(kohta);
+      continue;
+    }
+    let teksti = '';
+    const osat = [];
+    for (const osa of [...odottavat, kohta]) {
+      const siirto = teksti ? teksti.length + 1 : 0;
+      teksti = teksti ? `${teksti} ${osa.teksti}` : osa.teksti;
+      for (const pala of osa.osat) osat.push({ ...pala, alku: pala.alku + siirto });
+    }
+    tulos.push({ teksti, osat, otsikko: false });
+    odottavat = [];
+  }
+  tulos.push(...odottavat);
+  return tulos;
+}
+
+/** Kokonaispituuden katto: leikkaus virkkeen rajalta kuten ennenkin. */
+function rajaaKattoon(kohdat, katto) {
+  const tulos = [];
+  let pituus = 0;
+  for (const kohta of kohdat) {
+    const lisays = (tulos.length ? 1 : 0) + kohta.teksti.length;
+    if (pituus + lisays <= katto) {
+      tulos.push(kohta);
+      pituus += lisays;
+      continue;
+    }
+    // Katkaisu virkkeen rajalta: kesken sanaa loppuva luenta
+    // kuulostaa rikkinäiseltä, vaikka syy olisikin vain pituus.
+    const tilaa = katto - pituus - (tulos.length ? 1 : 0);
+    if (tilaa > 40) {
+      const leikattu = kohta.teksti.slice(0, tilaa);
+      const raja = leikattu.lastIndexOf('.');
+      if (raja > tilaa * 0.5) {
+        tulos.push({ ...kohta, teksti: leikattu.slice(0, raja + 1).trim() });
+      }
+    }
+    break;
+  }
+  return tulos;
+}
+
+/**
+ * Kokoaa luettavat kohdat elementin sisältä.
+ *
+ * @param {Element} juuri elementti, jonka sisältö luetaan
+ * @param {{ ohita?: string[], katto?: number, ohitaEkaOtsikko?: boolean }} asetukset
+ * @returns {{teksti: string, osat: {solmu: Element, alku: number, pituus: number}[]}[]}
+ */
+export function kokoaLuettavatKohdat(juuri, {
+  ohita = LUKIJAN_OHITETTAVAT, katto = LUETTAVAN_KATTO, ohitaEkaOtsikko = true,
+} = {}) {
+  if (!juuri) return [];
+  return rajaaKattoon(niputaOtsikot(keraaKohdat(juuri, { ohita, ohitaEkaOtsikko })), katto);
+}
+
+/**
+ * Kokoaa luettavan tekstin elementin sisältä.
+ *
+ * Palauttaa kohdat rivinvaihdoilla eroteltuina: rivinvaihto on
+ * molemmille taustajärjestelmille se merkki, josta ne pitävät tauon,
+ * ja lukijaäänelle kappaleen (hyppy-yksikön) raja.
+ *
+ * @param {Element} juuri elementti, jonka sisältö luetaan
+ * @param {{ ohita?: string[], katto?: number, ohitaEkaOtsikko?: boolean }} asetukset
+ * @returns {string} luettava teksti tai tyhjä merkkijono
+ */
+export function kokoaLuettavaTeksti(juuri, asetukset = {}) {
+  return kokoaLuettavatKohdat(juuri, asetukset).map((k) => k.teksti).join('\n');
+}
+
+/* ------------------------------------------------------------------ */
+/* Luennan seuranta ruudulla: maalaus ja vieritys                      */
+/* ------------------------------------------------------------------ */
+
+/** Liikkeen välttäjälle vieritys hyppää, muille liukuu. */
+function vahennettyLiike() {
+  try {
+    return Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Kartta normalisoidun tekstin merkeistä DOM-tekstisolmujen kohtiin.
+ *
+ * Kerääjä liittää tekstisolmut välilyönnillä ja siisti() luhistaa
+ * tyhjätilan — kartta toistaa täsmälleen saman kävelyn ja kirjaa
+ * jokaiselle normalisoidulle merkille lähdesolmun ja -kohdan. Sillä
+ * soivan palan merkkiväli osoitetaan takaisin ruudun tekstiin.
+ * Sisäkkäiset lohkot ohitetaan: niiden teksti on omissa kohdissaan.
+ */
+function kartoitaOsa(osa, ohita) {
+  const paikat = [];
+  let valiEdella = true;
+  let liimavali = false;
+  const tekstisolmu = (solmu) => {
+    const data = solmu.data ?? '';
+    for (let i = 0; i < data.length; i += 1) {
+      const merkki = data[i];
+      if (/\s/.test(merkki)) {
+        if (!valiEdella) {
+          paikat.push({ solmu, kohta: i, vali: true });
+          valiEdella = true;
+        }
+      } else {
+        if (liimavali && !valiEdella) {
+          paikat.push({ solmu, kohta: i, vali: true });
+        }
+        liimavali = false;
+        paikat.push({ solmu, kohta: i });
+        valiEdella = false;
+      }
+    }
+    liimavali = true;
+  };
+  const kavele = (el) => {
+    for (const lapsi of el.childNodes ?? []) {
+      if (lapsi.nodeType === 3) {
+        tekstisolmu(lapsi);
+        continue;
+      }
+      if (lapsi.nodeType !== 1) continue;
+      if (ohitetaanko(lapsi, ohita)) continue;
+      const tagi = String(lapsi.nodeName ?? lapsi.tagName ?? '').toUpperCase();
+      if (LOHKOTAGIT.has(tagi)) continue;
+      kavele(lapsi);
+    }
+  };
+  if (osa.solmu?.childNodes) kavele(osa.solmu);
+  while (paikat.length && paikat[paikat.length - 1].vali) paikat.pop();
+  return paikat;
+}
+
+/**
+ * Soivan palan merkkiväli [alku, loppu) kohdan tekstissä → DOM-alueet.
+ * Väli voi ulottua usean osan yli (väliotsikko + kappale samassa
+ * kohdassa), joten tulos on lista alueita. Kerääjän lisäämä
+ * päätepiste (paate) ei ole DOM:issa — indeksit puristetaan kartan
+ * mittaan.
+ */
+function osoitaAlueet(kohta, alku, loppu, ohita) {
+  const alueet = [];
+  for (const osa of kohta.osat ?? []) {
+    const osaAlku = Math.max(alku, osa.alku);
+    const osaLoppu = Math.min(loppu, osa.alku + osa.pituus);
+    if (osaLoppu <= osaAlku || !osa.solmu) continue;
+    if (!osa.kartta) osa.kartta = kartoitaOsa(osa, ohita);
+    if (!osa.kartta.length) continue;
+    const a = Math.min(osaAlku - osa.alku, osa.kartta.length - 1);
+    const b = Math.min(osaLoppu - osa.alku, osa.kartta.length) - 1;
+    const eka = osa.kartta[a];
+    const vika = osa.kartta[b];
+    if (!eka || !vika) continue;
+    try {
+      const alue = osa.solmu.ownerDocument.createRange();
+      alue.setStart(eka.solmu, eka.kohta);
+      alue.setEnd(vika.solmu, vika.kohta + 1);
+      alueet.push(alue);
+    } catch { /* solmu ehti irrota — maalaus vain jää väliin */ }
+  }
+  return alueet;
+}
+
+/**
+ * LUENNAN SEURANTA (omistajan tilaukset 14.8.2026): sivu vierii
+ * automaattisesti lukijan perässä kun kohta vaihtuu, ja kuuluvat
+ * virkkeet maalataan kevyesti CSS Highlight -rajapinnalla. Ilman
+ * rajapintaa (vanhempi selain) koko kohta saa kevyen korostusluokan.
+ */
+function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
+  const eka = kohdat.find((k) => k.osat?.[0]?.solmu)?.osat[0].solmu;
+  const doc = eka?.ownerDocument ?? (typeof document !== 'undefined' ? document : null);
+  const win = doc?.defaultView ?? (typeof window !== 'undefined' ? window : null);
+  const maalaus = Boolean(win && typeof win.Highlight === 'function' && win.CSS?.highlights);
+  let kohdalla = -1;
+  const luokitellut = new Set();
+  const puraLuokat = () => {
+    for (const el of luokitellut) el.classList?.remove('lukija-kohdalla', 'lukija-korostus');
+    luokitellut.clear();
+  };
+  const paivita = (t) => {
+    const kohta = kohdat[t.kappale];
+    if (!kohta) return;
+    if (t.kappale !== kohdalla) {
+      kohdalla = t.kappale;
+      puraLuokat();
+      for (const osa of kohta.osat ?? []) {
+        if (!osa.solmu?.classList) continue;
+        osa.solmu.classList.add('lukija-kohdalla');
+        if (!maalaus) osa.solmu.classList.add('lukija-korostus');
+        luokitellut.add(osa.solmu);
+      }
+      // Kohdan alku näkyviin: scroll-margin (CSS) pitää tarttuvan
+      // otsikkorivin poissa päältä.
+      kohta.osat?.[0]?.solmu?.scrollIntoView?.({
+        block: 'start',
+        behavior: vahennettyLiike() ? 'auto' : 'smooth',
+      });
+    }
+    if (maalaus && t.teksti) {
+      const alueet = osoitaAlueet(kohta, t.alku, t.alku + t.teksti.length, ohita);
+      try {
+        win.CSS.highlights.set('lukija-luenta', new win.Highlight(...alueet));
+      } catch { /* maalaus on koriste — luenta jatkuu ilman */ }
+    }
+  };
+  const pura = () => {
+    puraLuokat();
+    if (maalaus) {
+      try {
+        win.CSS.highlights.delete('lukija-luenta');
+      } catch { /* ei maalattua */ }
+    }
+  };
+  return { paivita, pura };
+}
+
+/**
+ * Ensimmäinen kohta, joka on näytöllä: luenta alkaa siitä (omistajan
+ * tilaus 14.8.2026: "Lukija saisi aloittaa sen kohdan alusta joka on
+ * näytöllä"). Yläraja jättää tarttuvan otsikkorivin huomiotta.
+ */
+function nakyvaKohta(kohdat) {
+  if (typeof window === 'undefined') return 0;
+  const ylaraja = Math.max(90, (window.innerHeight || 0) * 0.12);
+  for (let i = 0; i < kohdat.length; i += 1) {
+    const rect = kohdat[i].osat?.[0]?.solmu?.getBoundingClientRect?.();
+    if (rect && rect.bottom > ylaraja + 1) return i;
+  }
+  return 0;
 }
 
 /* ------------------------------------------------------------------ */
@@ -447,6 +695,7 @@ export function pysaytaLukija() {
   } catch {
     /* taustajärjestelmä oli jo hiljaa */
   }
+  nyt.seuranta?.pura();
   merkitseTila(nyt.nappi, false);
   suljeOhjain();
   // Loppukoukku myös pysäytettäessä: kutsuja (esim. taustamusiikin
@@ -482,18 +731,28 @@ function kerran(fn) {
  * pysäytettynä tai virheeseen. Kutsuja voi nojata siihen esim.
  * taustamusiikin vaimennuksen vapautuksessa.
  *
+ * `kohdat` ja `aloitusKappale` kytkevät luennan seurannan (lukijaääni):
+ * kuuluvat virkkeet maalataan, sivu vierii luennan perässä ja luenta
+ * alkaa näytöllä olevasta kohdasta. Laitteen oma ääni lukee ilman
+ * seurantaa — sillä ei ole palatarkkaa tilaa.
+ *
  * @param {string} teksti luettava teksti
  * @param {Element|null} nappi nappi, jonka tila seuraa luentaa
- * @param {{ persoona?: string, sailio?: string|null, onLoppu?: () => void }} asetukset
+ * @param {{ persoona?: string, sailio?: string|null, onLoppu?: () => void,
+ *   kohdat?: object[]|null, aloitusKappale?: number }} asetukset
  * @returns {boolean} lähtikö luenta käyntiin
  */
-export function lueAaneen(teksti, nappi = null, { persoona = 'kertoja', sailio, onLoppu } = {}) {
+export function lueAaneen(teksti, nappi = null, {
+  persoona = 'kertoja', sailio, onLoppu, kohdat = null, aloitusKappale = 0,
+} = {}) {
   pysaytaLukija();
   const puhuttava = String(teksti ?? '').trim();
   if (!puhuttava) return false;
   const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
   const kunLoppuu = kerran(onLoppu);
-  if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko, kunLoppuu)) return true;
+  if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko, kunLoppuu, {
+    kohdat, aloitusKappale,
+  })) return true;
   return lueLaitteella(puhuttava, nappi, kunLoppuu);
 }
 
@@ -506,12 +765,16 @@ export function lueAaneen(teksti, nappi = null, { persoona = 'kertoja', sailio, 
  * oikein. Myöhempi virhe päättää luennan siististi (teksti on ruudulla,
  * ja seuraava painallus yrittää uudestaan).
  */
-function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu = null) {
+function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu = null, {
+  kohdat = null, aloitusKappale = 0,
+} = {}) {
   if (!puheTuettu()) return false;
   const merkki = {};
+  const seuranta = kohdat?.length ? luoLuennanSeuranta(kohdat) : null;
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
+    seuranta?.pura();
     merkitseTila(nappi, false);
     suljeOhjain();
     kunLoppuu?.();
@@ -519,11 +782,16 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
   const soitin = luoPuheSoitin({
     persoona,
     sailio,
+    aloitusKappale,
     onLoppu: loppui,
-    onTila: (t) => paivitaOhjain(merkki, t),
+    onTila: (t) => {
+      paivitaOhjain(merkki, t);
+      seuranta?.paivita(t);
+    },
     onVirhe: (vaihe) => {
       if (ajossa?.merkki !== merkki) return;
       ajossa = null;
+      seuranta?.pura();
       merkitseTila(nappi, false);
       suljeOhjain();
       if (vaihe === 'alku' && lueLaitteella(puhuttava, nappi, kunLoppuu)) return;
@@ -532,7 +800,7 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
   });
   if (!soitin) return false;
   ajossa = {
-    nappi, merkki, kunLoppuu, soitin, lopeta: () => soitin.pysayta(),
+    nappi, merkki, kunLoppuu, soitin, seuranta, lopeta: () => soitin.pysayta(),
   };
   soitin.lisaa(puhuttava);
   soitin.paata();
@@ -973,9 +1241,27 @@ export function liitaLukija(isanta, lahde, { luokka = '', nimi = LUE_OTSIKKO, se
         pysaytaLukija();
         return;
       }
-      const teksti = napinTeksti(nappi);
+      /*
+       * Elementtilähteestä kootaan kohdat lohkoelementteineen: niillä
+       * luenta alkaa näytöllä olevasta kohdasta, sivu vierii luennan
+       * perässä ja kuuluvat virkkeet maalataan (omistajan tilaukset
+       * 14.8.2026). Merkkijonolähde luetaan entiseen tapaan.
+       */
+      const lahdeNyt = nappi.__lukijaLahde;
+      const kohde = typeof lahdeNyt === 'function' ? lahdeNyt() : lahdeNyt;
+      let kohdat = null;
+      let teksti = '';
+      if (kohde && typeof kohde !== 'string' && kohde.nodeType === 1) {
+        kohdat = kokoaLuettavatKohdat(kohde);
+        teksti = kohdat.map((k) => k.teksti).join('\n');
+      } else {
+        teksti = napinTeksti(nappi);
+      }
       if (!teksti) return;
-      lueAaneen(teksti, nappi);
+      lueAaneen(teksti, nappi, {
+        kohdat,
+        aloitusKappale: kohdat ? nakyvaKohta(kohdat) : 0,
+      });
       // Lukijaäänellä nappi avaa myös ohjauspaneelin (tauko ja
       // kappalehypyt); laitteen omalla äänellä paneelia ei tule.
       avaaOhjain(isanta, nappi);
