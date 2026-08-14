@@ -13398,6 +13398,45 @@ export class UI {
     return true;
   }
 
+  /**
+   * KERTOJAN LUENTA LUKIJAÄÄNELLÄ (omistajan päätös 14.8.2026:
+   * ElevenLabs-äänitteet pois käytöstä toistaiseksi, tilalle
+   * striimattu ääni). Kohtaamisten tervehdykset, löytöhetken
+   * repliikit ja tarinakaaren aarretekstit luetaan samalla lukijalla
+   * kuin lehdet — persoona 'kertoja' ja kertojan oma äänisäilö,
+   * joten vakiotekstit generoidaan kerran ja soivat sen jälkeen
+   * säilöistä. Tausta väistyy kuten äänitteillä (puheAlkoi/-Loppui).
+   *
+   * Sivuvaikutuksena luennan saavat myös kohtaamiset, joille
+   * äänitettä ei koskaan nauhoitettu (uudet kaupungit).
+   *
+   * @returns {boolean} lähtikö luenta (tai sen ajastus) käyntiin —
+   *   false pudottaa kutsujan äänitevarapolulle
+   */
+  lueKertojana(teksti, { viive = 0, onLoppu = null } = {}) {
+    if (this.radioModuuli && !this.radioModuuli.luentaSallittu()) return false;
+    const puhuttava = String(teksti ?? '').trim();
+    if (!puhuttava || !puheTuettu()) return false;
+    const aloita = () => {
+      puheAlkoi();
+      const lahti = lueAaneen(puhuttava, null, {
+        persoona: 'kertoja',
+        sailio: 'kertoja',
+        onLoppu: () => {
+          puheLoppui();
+          onLoppu?.();
+        },
+      });
+      if (!lahti) {
+        puheLoppui();
+        onLoppu?.();
+      }
+    };
+    if (viive > 0) setTimeout(aloita, viive);
+    else aloita();
+    return true;
+  }
+
   playDiaryVoice(url, { ekaLauseeseen = false, osuus = null, viive = 0 } = {}) {
     this.stopDiaryVoice();
     if (this.radioModuuli && !this.radioModuuli.luentaSallittu()) return;
@@ -15329,19 +15368,22 @@ export class UI {
         this.kohtaamisetNahty.add(tervehdysAvain);
         // Tervehdys luetaan ääneen kirjoituskoneen rinnalla (omistajan
         // rajaus 7.8.2026: "riittää vain alkutarinan luenta"). Kertoja
-        // lukee kehyksen ja hahmo repliikkinsä omalla äänellään —
-        // playDiaryVoice hiljentää musiikin puheen ajaksi.
-        // Tarinakaaren kohtaamisella on oma luentansa joka kohteelle.
-        if (kaariTarina && kaariLuentaSoi(kaariTarina, 'kohtaaminen') && kertojaTila() !== 'ei') {
-          this.playDiaryVoice(
-            `assets/audio/puhe-kaari-kohtaaminen-${quiz.cityId}.mp3`,
-            { viive: 300 },
-          );
-        } else if (!kaariTarina && KOHTAAMISLUENNAT.has(quiz.cityId) && kertojaTila() !== 'ei') {
-          this.playDiaryVoice(
-            `assets/audio/puhe-kohtaaminen-${quiz.cityId}-tervehdys.mp3`,
-            { viive: 300 },
-          );
+        // lukee kehyksen ja hahmo repliikkinsä omalla äänellään.
+        // Lukijaääni ensin (14.8.2026) — se kattaa myös kohtaamiset,
+        // joille äänitettä ei ole; äänite on varapolku.
+        if (kertojaTila() !== 'ei'
+          && !this.lueKertojana(tervehdys, { viive: 300 })) {
+          if (kaariTarina && kaariLuentaSoi(kaariTarina, 'kohtaaminen')) {
+            this.playDiaryVoice(
+              `assets/audio/puhe-kaari-kohtaaminen-${quiz.cityId}.mp3`,
+              { viive: 300 },
+            );
+          } else if (!kaariTarina && KOHTAAMISLUENNAT.has(quiz.cityId)) {
+            this.playDiaryVoice(
+              `assets/audio/puhe-kohtaaminen-${quiz.cityId}-tervehdys.mp3`,
+              { viive: 300 },
+            );
+          }
         }
         this.typeText(this.quizKohtaaminen, tervehdys, 'quiz', () => {
           /*
@@ -15452,13 +15494,16 @@ export class UI {
             katko.onerror = () => katko.remove();
             body.appendChild(katko);
             body.appendChild(html('span', 'kohtaaminen-repliikki', kaariAarre));
-            if (this.aarreLuentaFor !== quiz && kaariLuentaSoi(TARINAKAARI[quiz.cityId], 'aarre')
-              && kertojaTila() !== 'ei') {
+            if (this.aarreLuentaFor !== quiz && kertojaTila() !== 'ei') {
               this.aarreLuentaFor = quiz;
-              this.playDiaryVoice(
-                `assets/audio/puhe-kaari-aarre-${quiz.cityId}.mp3`,
-                { viive: 600 },
-              );
+              // Lukijaääni ensin (14.8.2026); äänite varapolkuna.
+              if (!this.lueKertojana(kaariAarre, { viive: 600 })
+                && kaariLuentaSoi(TARINAKAARI[quiz.cityId], 'aarre')) {
+                this.playDiaryVoice(
+                  `assets/audio/puhe-kaari-aarre-${quiz.cityId}.mp3`,
+                  { viive: 600 },
+                );
+              }
             }
           }
         } else if (quiz.right) {
@@ -15489,12 +15534,16 @@ export class UI {
            * kertaa, joten vahti pitää luennan yhdessä aloituksessa.
            */
           if (repliikki === kohtaaminen.loyto && this.loytoLuentaFor !== quiz
-            && KOHTAAMISLUENNAT.has(quiz.cityId) && kertojaTila() !== 'ei') {
+            && kertojaTila() !== 'ei') {
             this.loytoLuentaFor = quiz;
-            this.playDiaryVoice(
-              `assets/audio/puhe-kohtaaminen-${quiz.cityId}-loyto.mp3`,
-              { viive: 300 },
-            );
+            // Lukijaääni ensin (14.8.2026); äänite varapolkuna.
+            if (!this.lueKertojana(repliikki, { viive: 300 })
+              && KOHTAAMISLUENNAT.has(quiz.cityId)) {
+              this.playDiaryVoice(
+                `assets/audio/puhe-kohtaaminen-${quiz.cityId}-loyto.mp3`,
+                { viive: 300 },
+              );
+            }
           }
         }
         if (quiz.fact) body.appendChild(html('span', 'muted', quiz.fact));
@@ -15865,13 +15914,25 @@ export class UI {
     const hihkaisu = (huudahdus && sfx.enabled && kertojaTila() !== 'ei')
       ? huudahdus.tiedosto : null;
     let luenta = null;
+    let lukijaValmis = null;
     if (kaari?.aarre) {
       caption.appendChild(html('p', 'reveal-isoisa', kaari.aarre));
-      if (kaariLuentaSoi(kaari, 'aarre') && kertojaTila() !== 'ei') {
+      if (kertojaTila() !== 'ei') {
         // Viive hihkaisun jälkeen: 2600 ms alkoi hieman ennen kuin
         // hihkaisu ehti laskeutua (omistajan havainto 10.8.2026) —
         // 3400 ms antaa huudahduksen soida loppuun ja hengähtää.
-        luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 3400 : 900 }) ?? null;
+        // Lukijaääni ensin (14.8.2026); sen loppu välittyy kortin
+        // odotukseen onLoppu-koukusta. Äänite on varapolku.
+        let luentaPaattyi = null;
+        const tts = this.lueKertojana(kaari.aarre, {
+          viive: hihkaisu ? 3400 : 900,
+          onLoppu: () => luentaPaattyi?.(),
+        });
+        if (tts) {
+          lukijaValmis = new Promise((resolve) => { luentaPaattyi = resolve; });
+        } else if (kaariLuentaSoi(kaari, 'aarre')) {
+          luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 3400 : 900 }) ?? null;
+        }
       }
     }
     /*
@@ -15923,7 +15984,7 @@ export class UI {
         for (const nimi of ['ended', 'error', 'pause']) luenta.addEventListener(nimi, resolve, { once: true });
       }),
       this.wait(30000),
-    ]) : Promise.resolve();
+    ]) : (lukijaValmis ? Promise.race([lukijaValmis, this.wait(30000)]) : Promise.resolve());
     const odota = (min) => Promise.race([Promise.all([this.wait(min), luentaValmis]), napautus]);
 
     if (this.reducedMotion) {
