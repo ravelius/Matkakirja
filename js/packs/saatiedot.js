@@ -207,4 +207,35 @@ export const SAATIEDOT = {
     keskilampo: [2.2, 5.1, 10.1, 16.2, 22, 27.6, 30.3, 28.9, 24.3, 17.6, 9.5, 4.2],
     sade: [17, 12, 17, 11, 7, 1, 0, 0, 0, 3, 16, 14],
   },
+  // Jekaterinburg on Uralin itärinteellä, ja sen käyrä on pelin
+  // ensimmäinen aito mannerilmasto: tammikuun ja heinäkuun ero on 32
+  // astetta. Sade painottuu kesään, koska talvella Siperian
+  // korkeapaine pitää kostean ilman poissa — heinäkuussa vettä tulee
+  // 87 mm, tammikuussa 17.
+  jekaterinburg: {
+    lat: 56.84,
+    lon: 60.61,
+    keskilampo: [-14.1, -12.6, -5.3, 3, 10.8, 16.2, 18.1, 15.7, 9.9, 2.9, -6.3, -12],
+    sade: [17, 15, 25, 35, 57, 74, 87, 73, 52, 43, 29, 21],
+  },
+  // Novosibirsk on Länsi-Siperian tasangolla kaukana joka mereltä:
+  // tammikuun keskilämpö on −17 astetta, kolme astetta kylmempi kuin
+  // Uralin takana Jekaterinburgissa. Sade jakautuu tasaisemmin kuin
+  // Irkutskissa, ja marras-tammikuun 114 mm tulee lumena.
+  novosibirsk: {
+    lat: 55.03,
+    lon: 82.92,
+    keskilampo: [-17, -14.1, -6.7, 2.5, 11, 17.3, 19.4, 17, 10.3, 2.7, -7.3, -13.9],
+    sade: [27, 20, 26, 32, 41, 55, 70, 55, 49, 48, 46, 41],
+  },
+  // Irkutsk on nipun kuivin ja talvella lähes sateeton: tammi- ja
+  // helmikuussa normaali on kuusi millimetriä, kun elokuussa se on
+  // 102. Kesä-syyskuun neljä kuukautta tuovat 328 mm eli lähes kolme
+  // neljäsosaa koko vuoden 457 millimetristä.
+  irkutsk: {
+    lat: 52.29,
+    lon: 104.3,
+    keskilampo: [-19.1, -15, -6.4, 3, 10, 16.7, 19.2, 17, 10.2, 1.9, -7.7, -15.9],
+    sade: [6, 6, 11, 22, 38, 67, 98, 102, 61, 23, 13, 10],
+  },
 };
