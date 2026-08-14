@@ -23,6 +23,7 @@ import {
   LUETTAVAN_VAHIMMAIS,
   LUKIJAN_OHITETTAVAT,
   kokoaLuettavaTeksti,
+  kokoaLuettavatKohdat,
 } from '../js/lukija.js';
 
 /* ---------------------------------------------------------------- */
@@ -222,7 +223,45 @@ test('kaikki alun otsikot ohitetaan — luenta alkaa leipätekstistä (omistajan
     el('p', {}, t('Jatkoa.')));
   const teksti = kokoaLuettavaTeksti(sivu);
   assert.ok(!/Kairo|Egyptin historia|Alaotsikko/.test(teksti), teksti);
-  assert.equal(teksti, 'Niili tulvi joka kesä.\nVäliotsikko.\nJatkoa.');
+  // Väliotsikko liittyy seuraavaan leipätekstiin (omistajan tilaus
+  // 14.8.2026): otsikko ei ole oma hyppy-yksikkönsä vaan kohdan alku.
+  assert.equal(teksti, 'Niili tulvi joka kesä.\nVäliotsikko. Jatkoa.');
+});
+
+test('väliotsikko ja sen leipäteksti ovat yksi kohta — myös peräkkäiset otsikot', () => {
+  const sivu = el('div', {},
+    el('h3', {}, t('Sivun otsikko')),
+    el('p', {}, t('Ensimmäinen kappale.')),
+    el('h3', {}, t('Osasto')),
+    el('h4', {}, t('Alaotsikko')),
+    el('p', {}, t('Toinen kappale.')),
+    el('p', {}, t('Kolmas kappale.')));
+  assert.equal(kokoaLuettavaTeksti(sivu),
+    'Ensimmäinen kappale.\nOsasto. Alaotsikko. Toinen kappale.\nKolmas kappale.');
+});
+
+test('kokoaLuettavatKohdat: osat kantavat lohkoelementit ja merkkivälit', () => {
+  const otsikko = el('h3', {}, t('Väliotsikko'));
+  const kappale = el('p', {}, t('Kappaleen teksti.'));
+  const sivu = el('div', {},
+    el('p', {}, t('Avaus.')),
+    otsikko,
+    kappale);
+  const kohdat = kokoaLuettavatKohdat(sivu);
+  assert.equal(kohdat.length, 2);
+  assert.equal(kohdat[0].teksti, 'Avaus.');
+  assert.equal(kohdat[0].osat.length, 1);
+  assert.equal(kohdat[1].teksti, 'Väliotsikko. Kappaleen teksti.');
+  // Yhdistetyssä kohdassa osat osoittavat otsikkoon ja kappaleeseen
+  // omilla merkkiväleillään — maalaus ja vieritys osuvat oikeisiin
+  // elementteihin.
+  assert.equal(kohdat[1].osat.length, 2);
+  assert.equal(kohdat[1].osat[0].solmu, otsikko);
+  assert.equal(kohdat[1].osat[0].alku, 0);
+  assert.equal(kohdat[1].osat[0].pituus, 'Väliotsikko'.length);
+  assert.equal(kohdat[1].osat[1].solmu, kappale);
+  assert.equal(kohdat[1].osat[1].alku, 'Väliotsikko. '.length);
+  assert.equal(kohdat[1].osat[1].pituus, 'Kappaleen teksti.'.length);
 });
 
 test('pitkä sivu katkaistaan virkkeen rajalta', () => {

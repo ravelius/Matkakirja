@@ -8005,6 +8005,32 @@ button.lukija-nappi.lukee,
   box-shadow: 0 0 0 2px rgba(70, 51, 31, 0.28);
 }
 
+/*
+ * ── Luennan seuranta (omistajan tilaukset 14.8.2026) ──────────────
+ *
+ * Kuuluvat virkkeet maalataan kevyesti CSS Highlight -rajapinnalla
+ * ("Saisiko tekstin kevyesti maalattua lause kerrallaan lukijan
+ * rytmissä?"). Ilman rajapintaa koko kohta saa kevyen korostuksen
+ * (.lukija-korostus). Meripihka on sama sävy kuin kaiuttimen
+ * luentatilassa — yksi väri kertoo kaikkialla "tätä luetaan".
+ */
+::highlight(lukija-luenta) {
+  background-color: rgba(234, 184, 78, 0.32);
+}
+
+.lukija-korostus {
+  background: rgba(234, 184, 78, 0.16);
+  border-radius: 2px;
+}
+
+/* Sivu vierii luennan perässä kohdan alkuun; tarttuva otsikkorivi ei
+ * saa jäädä kohdan päälle. */
+.lukija-kohdalla { scroll-margin-top: 3rem; }
+
+.dialog.arkki .lukija-kohdalla {
+  scroll-margin-top: calc(var(--arkki-tarttuma, 0px) + 3.4rem);
+}
+
 /* ── Lukijan ohjauspaneeli (omistajan tilaus 14.8.2026) ───────────
  * Aukeaa kaiutinnapin alle luennan ajaksi: tauko/jatka, kappale
  * taakse ja eteen, kappalelaskuri ja lopetus. Sama paperinen sävy

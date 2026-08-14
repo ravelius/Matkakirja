@@ -560,7 +560,9 @@ async function haePala(teksti, persoona, sailio = null) {
  *   sailio?: string|null pysyvän säilön lohko; null = ei säilötä
  *   onLoppu?: () => void,
  *   onVirhe?: (vaihe: 'alku'|'kesken') => void,
- *   onTila?: (t: {tauolla: boolean, kappale: number, kappaleita: number}) => void,
+ *   onTila?: (t: {tauolla: boolean, kappale: number, kappaleita: number,
+ *     teksti: string|null, alku: number}) => void,
+ *   aloitusKappale?: number ensimmäisenä soitettava kappale (oletus 0)
  * }} asetukset
  * @returns {{
  *   lisaa(teksti: string): void,
@@ -574,12 +576,13 @@ async function haePala(teksti, persoona, sailio = null) {
  */
 export function luoPuheSoitin({
   persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
+  aloitusKappale = 0,
 } = {}) {
   if (!puheTuettu()) return null;
   const audio = haeElementti();
   if (!audio) return null;
 
-  const palat = []; // { teksti, kappale }
+  const palat = []; // { teksti, kappale, alku (merkkikohta kappaleessa) }
   const haut = new Map(); // palaindeksi → Promise<blob-osoite>
   const tila = {
     peruttu: false,
@@ -594,9 +597,18 @@ export function luoPuheSoitin({
 
   const ilmoita = () => {
     if (!onTila || tila.peruttu) return;
-    const kappale = palat[tila.soiva]?.kappale ?? palat[tila.kohdalla]?.kappale ?? 0;
+    const pala = palat[tila.soiva] ?? palat[tila.kohdalla] ?? null;
     try {
-      onTila({ tauolla: tila.tauolla, kappale, kappaleita: tila.kappaleita });
+      onTila({
+        tauolla: tila.tauolla,
+        kappale: pala?.kappale ?? 0,
+        kappaleita: tila.kappaleita,
+        // Soiva pala tekstinä ja merkkikohtanaan kappaleessa: lukija
+        // maalaa juuri kuuluvat virkkeet ruudulle (omistajan toive
+        // 14.8.2026 "tekstin kevyesti maalattua lukijan rytmissä").
+        teksti: palat[tila.soiva]?.teksti ?? null,
+        alku: palat[tila.soiva]?.alku ?? 0,
+      });
     } catch { /* paneelin virhe ei saa kaataa luentaa */ }
   };
 
@@ -694,35 +706,54 @@ export function luoPuheSoitin({
     }
   };
 
-  /** Pilkkoo lisätyn tekstin kappaleiksi ja paloiksi kappaletiedolla. */
+  /**
+   * Pilkkoo lisätyn tekstin kappaleiksi ja paloiksi kappaletiedolla.
+   *
+   * Porrastus on KAPPALEKOHTAINEN (14.8.2026): jokaisen kappaleen
+   * ensimmäinen virke kulkee omana palanaan ja palakoko kasvaa siitä
+   * portaittain. Ennen porrastus katsoi koko jonoa, jolloin luennan
+   * alku oli nopea mutta kappalehyppy ja keskeltä sivua aloittaminen
+   * osuivat isoon palaan ja odotuttivat monta sekuntia. Kappaleen
+   * ensipala on hypyn laskeutumispaikka, joten sen on oltava kevyt.
+   * Lisäpyyntöjä tulee yksi per kappale; välimuistit (laite, reuna,
+   * R2) sulattavat sen.
+   *
+   * Jokainen pala muistaa myös merkkikohtansa kappaleessa (alku):
+   * lukija maalaa sillä juuri kuuluvat virkkeet ruudulle.
+   */
   const pilkoPaloiksi = (teksti) => {
     const uudet = [];
     for (const rivi of String(teksti ?? '').split('\n')) {
       if (!rivi.trim()) continue;
       const kappale = tila.kappaleita;
       tila.kappaleita += 1;
-      // Porrastus katsoo KOKO jonon pituutta: alun palat pieniä,
-      // loput täysiä (ks. niputaRampilla — sama porrastus käsin,
-      // koska kappaleraja ei saa kadota niputuksessa).
       const portaat = [240, 480];
+      let kappaleessa = 0; // valmiita paloja tässä kappaleessa
+      let kohta = 0; // seuraavan virkkeen merkkikohta kappaleessa
       let kertyma = '';
+      let kertymanAlku = 0;
       const tyonna = () => {
         if (!kertyma) return;
-        uudet.push({ teksti: kertyma, kappale });
+        uudet.push({ teksti: kertyma, kappale, alku: kertymanAlku });
+        kappaleessa += 1;
         kertyma = '';
       };
       for (const virke of paloitteleVirkkeiksi(rivi)) {
-        const jonossa = palat.length + uudet.length;
-        if (!jonossa && !kertyma) {
-          uudet.push({ teksti: virke, kappale });
+        const virkkeenAlku = kohta;
+        kohta += virke.length + 1;
+        if (!kappaleessa && !kertyma) {
+          uudet.push({ teksti: virke, kappale, alku: virkkeenAlku });
+          kappaleessa += 1;
           continue;
         }
-        const raja = portaat[jonossa - 1] ?? PUHE_PALA_KATTO;
+        const raja = portaat[kappaleessa - 1] ?? PUHE_PALA_KATTO;
         if (kertyma && kertyma.length + virke.length + 1 > raja) {
           tyonna();
           kertyma = virke;
+          kertymanAlku = virkkeenAlku;
           continue;
         }
+        if (!kertyma) kertymanAlku = virkkeenAlku;
         kertyma = kertyma ? `${kertyma} ${virke}` : virke;
       }
       tyonna();
@@ -736,6 +767,16 @@ export function luoPuheSoitin({
       const uudet = pilkoPaloiksi(teksti);
       if (!uudet.length) return;
       palat.push(...uudet);
+      /*
+       * Aloitus keskeltä (omistajan toive 14.8.2026: "Lukija saisi
+       * aloittaa sen kohdan alusta joka on näytöllä"): ennen
+       * ensimmäistäkään soittoa jono kelataan pyydetyn kappaleen
+       * alkuun. Jos kappaletta ei (vielä) ole, aloitetaan alusta.
+       */
+      if (aloitusKappale > 0 && !tila.soi && tila.soiva < 0 && tila.kohdalla === 0) {
+        const indeksi = palat.findIndex((p) => p.kappale === aloitusKappale);
+        if (indeksi > 0) tila.kohdalla = indeksi;
+      }
       if (!tila.soi && !tila.tauolla) soitaSeuraava();
       else hae(tila.kohdalla); // varmista että seuraava on jo tulossa
     },

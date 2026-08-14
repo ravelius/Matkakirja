@@ -35,7 +35,16 @@ await new Promise((ok) => palvelin.listen(0, ok));
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
-const sivu = await (await selain.newContext({ viewport: { width: 390, height: 844 } })).newPage();
+const konteksti = await selain.newContext({ viewport: { width: 390, height: 844 } });
+/*
+ * Lukijaääni pois pelistä: kaiuttimen napautus käynnistäisi muuten
+ * luennan ja sen seurantavieritys sotkisi reunanapautustestin.
+ * Tämä savuke mittaa asettelua, ei luentaa (ks.
+ * savuke-lukijan-seuranta.mjs) — puhepyynnöt katkaistaan, jolloin
+ * luenta putoaa laitteen omalle äänelle, joka ei vieritä.
+ */
+await konteksti.route('**samireivinen.workers.dev/**', (route) => route.abort());
+const sivu = await konteksti.newPage();
 await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1800);
 await sivu.evaluate(() => {
@@ -129,26 +138,31 @@ const ylhaalla = await sivu.evaluate(
 );
 vaadi('otsikon napautus vierittää takaisin alkuun', ylhaalla === 0,
   JSON.stringify({ scrollTop: ylhaalla }));
-// Napautus napin päällä ei saa vierittää: alanapit sivun lopussa.
+/*
+ * Napautus napin päällä ei saa laukaista reunakaistaa: hampurilainen
+ * istuu keskellä yläkaistaa, mutta napit voittavat kaistan.
+ * (Kaiutinta ei käytetä tähän — sen napautus käynnistää luennan, ja
+ * luennan seuranta vierittää tarkoituksella kohdan alkuun.)
+ */
 await sivu.evaluate(() => {
   const kortti = document.querySelector('#arrival-dialog .dialog-card');
   kortti.scrollTop = 40;
 });
-const nappiKohta = await sivu.evaluate(() => {
-  const r = document.querySelector('#arrival-dialog .lukija-nappi').getBoundingClientRect();
+const hampurilaisKohta = await sivu.evaluate(() => {
+  const r = document.querySelector('#arrival-dialog .lehti-hampurilainen').getBoundingClientRect();
   return { x: (r.left + r.right) / 2, y: (r.top + r.bottom) / 2 };
 });
-await sivu.mouse.click(nappiKohta.x, nappiKohta.y);
-await sivu.waitForTimeout(400);
-const nappiJalkeen = await sivu.evaluate(() => {
-  window.matkakirja.ui.render; // ei-op
-  return document.querySelector('#arrival-dialog .dialog-card').scrollTop;
-});
-vaadi('napautus kaiuttimen päällä ei vieritä', nappiJalkeen === 40,
-  JSON.stringify({ scrollTop: nappiJalkeen }));
+await sivu.mouse.click(hampurilaisKohta.x, hampurilaisKohta.y);
+await sivu.waitForTimeout(600);
+const nappiJalkeen = await sivu.evaluate(() => ({
+  scrollTop: document.querySelector('#arrival-dialog .dialog-card').scrollTop,
+  levyAuki: Boolean(document.querySelector('#arrival-dialog > .sisallys-levy')),
+}));
+vaadi('napautus napin päällä ei vieritä (hampurilainen avaa valikon, kaista ei laukea)',
+  nappiJalkeen.scrollTop === 40 && nappiJalkeen.levyAuki,
+  JSON.stringify(nappiJalkeen));
 await sivu.evaluate(() => {
-  // Kaiuttimen napautus saattoi käynnistää luennan — seis ennen jatkoa.
-  document.querySelector('#arrival-dialog .lukija-nappi.lukee')?.click();
+  document.querySelector('#arrival-dialog > .sisallys-levy')?.remove();
 });
 
 mkdirSync('/tmp/matkakirja-kaappaukset', { recursive: true });

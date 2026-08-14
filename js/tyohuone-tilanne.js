@@ -131,6 +131,15 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
+    otsikko: 'Lukijan seuranta (v668)',
+    ohje: 'Vieritä lehden sivua alas ja paina kaiutinta: luenta alkaa '
+      + 'näytöllä olevasta kohdasta, kuuluvat virkkeet maalautuvat '
+      + 'kevyesti ja sivu vierii luennan perässä. Väliotsikko kuuluu '
+      + 'nyt samaan kohtaan seuraavan kappaleen kanssa — säätimen '
+      + 'kappalehyppy laskeutuu otsikkoon ja jatkaa suoraan tekstiin. '
+      + 'Kappaleen vaihdot käynnistyvät myös entistä nopeammin.',
+  },
+  {
     otsikko: 'Lehden asettelu-uudistus (v666)',
     ohje: 'Avaa maa- tai kaupunkilehti: lippu on keskitetty otsikon '
       + 'perään, lukijan kaiutin lukittu otsikkorivin oikeaan reunaan '
