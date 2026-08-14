@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 673, teksti: 'Siperian kaupunkilehdet: Jakutsk ja Magadan' },
   { v: 672, teksti: 'palanvaihdon nykäisy pois: vähemmän rajoja, pehmeä alku' },
   { v: 671, teksti: 'nopeus generoidaan OpenAI:lla, anfangi maalautuu luennassa' },
   { v: 670, teksti: 'nopeutus ilman hännänleikkausta, säädin suorakaiteeksi' },
