@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 662, teksti: 'Lukijaäänen säädin peliin kehittäjätilan taakse' },
   { v: 661, teksti: 'Lukunopeussäädin ja sivuotsikon ohitus lehdillä kuntoon' },
   { v: 660, teksti: 'Baikal-fakta, Venäjän radio pois linjauksen mukaisesti' },
   { v: 659, teksti: 'Siperian kaupunkilehdet: Jekaterinburg, Novosibirsk, Irkutsk' },
