@@ -9988,6 +9988,10 @@ export class UI {
     this.arrivalLiuskat.replaceChildren();
     this.arrivalLiuskat.hidden = true;
     this.tutkiSivut = kategoriat;
+    // Kansi talteen sisällysvalikkoa varten: Etusivu-rivi saa siitä
+    // pikkukuvan ja ingressin kuten muutkin rivit (omistajan havainto
+    // 14.8.2026: "Kannesta puuttuu kuva ja tekstit").
+    this.tutkiKansi = kansi ?? null;
     // Kaupunkilehti aukeaa aina kaupunkitilassa; maalehti on oma
     // näkymänsä, joka avataan kartalta (avaaMaalehti).
     this.tutkiTila = 'kaupunki';
@@ -10208,6 +10212,7 @@ export class UI {
     this.tutkiTila = 'maa';
     this.tutkiMaaLehti = iso;
     this.tutkiSivut = sivut;
+    this.tutkiKansi = null;
     this.tutkiLehti = true;
     this.tutkiMaaEtusivu = false;
     this.arrivalDialog.classList.add('lehti', 'arkki');
@@ -11143,9 +11148,29 @@ export class UI {
     if (etusivuRivi) {
       const rivi = html('button', 'sisallys-rivi');
       rivi.type = 'button';
+      /*
+       * Kansi saa saman kohtelun kuin muutkin rivit (omistajan
+       * havainto 14.8.2026: "Kannesta puuttuu kuva ja tekstit"):
+       * pikkukuvana kannen pääkuva ja ingressinä kansiosion johdannon
+       * ensimmäinen virke. Ilman kansidataa rivi näkyy entisellään.
+       */
+      const kansi = this.tutkiKansi;
+      const kansikuva = kansi?.kansikuvat?.[0]?.tiedosto ?? null;
+      if (kansikuva) {
+        const img = document.createElement('img');
+        img.className = 'sisallys-kuva';
+        img.alt = '';
+        img.decoding = 'async';
+        asetaKuva(img, valokuvaUrl(kansikuva, 320), valokuvaVara(kansikuva, 320));
+        rivi.appendChild(img);
+      }
+      const johdanto = kansi?.johdanto ?? '';
+      const ingressi = johdanto
+        ? (johdanto.match(/[^.!?]+[.!?]/) ?? [johdanto])[0].trim()
+        : 'Lehden kansi.';
       const teksti = html('div', 'sisallys-teksti');
       teksti.appendChild(html('span', 'sisallys-otsikko', 'Etusivu'));
-      teksti.appendChild(html('span', 'sisallys-ingressi', 'Lehden kansi.'));
+      teksti.appendChild(html('span', 'sisallys-ingressi', ingressi));
       rivi.appendChild(teksti);
       rivi.addEventListener('click', () => {
         suljeValikko?.();
