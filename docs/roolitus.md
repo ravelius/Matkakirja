@@ -73,6 +73,7 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 | --- | --- | --- |
 | Fable | session_018vkp6HxpLR4gxZJFGscSan (uuden tilin päätoimittajasessio, kapulanvaihdon jatkaja; edellinen: session_01BPysCfxscsVyzAEYmb88Zr) | 14.8.2026 |
 | Opus 6 (Siperia-lehdet) | session_01R7LDPk5Kte4FonJcBzX2QS (ultracode; Siperian 8 kaupunkikannen erät 1–3 haaralla claude/opus6-siperia-lehdet; EI uutis-/mediaosioita, EI kohtaamisia; raportoi Fablelle) | 14.8.2026 |
+| Opus 7 (satelliittikartta) | session_01CA61p6y5V2MxmUJt8ovndj (kaupunkikartan satelliittivipu, PILOTTI Berliini haaralla claude/opus7-satelliittikartta; EOX Sentinel-2 -resepti Fablelta; raportoi Fablelle ennen skaalausta) | 14.8.2026 |
 | Fable max (apusessio) | session_01NQpicvHRAzUpX4NfcYwsyv (Fable max 2; EI vastaanota viestejä tilinvaihdon jälkeen — uusi tili perustaa oman Max-session tarvittaessa. Vanha session_01U8Nqxu… arkistoitu 11.8. konttivian takia) | 11.8.2026 |
 | Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |

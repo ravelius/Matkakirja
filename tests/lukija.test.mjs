@@ -111,12 +111,31 @@ function visa() {
         el('button', {}, t('1901')))));
 }
 
-test('otsikko ja kappaleet luetaan omina paloinaan', () => {
+test('kappaleet luetaan, mutta sivun ensimmäistä otsikkoa ei (omistajan toive 14.8.2026)', () => {
   const teksti = kokoaLuettavaTeksti(aihesivu());
   const rivit = teksti.split('\n');
-  assert.ok(rivit.includes('Lontoon historia.'), teksti);
+  // Ensimmäinen otsikko on sama, jonka lukija näki avatessaan sivun —
+  // luenta menee suoraan asiaan.
+  assert.ok(!rivit.includes('Lontoon historia.'), teksti);
   assert.ok(rivit.includes('Kaupunki kasvoi joen varrella.'), teksti);
   assert.ok(rivit.includes('Sama venetsialainen maalasi myös Lontoon.'), teksti);
+});
+
+test('myöhemmät otsikot luetaan — vain ensimmäinen ohitetaan', () => {
+  const sivu = el('div', {},
+    el('h3', {}, t('Ensimmäinen otsikko')),
+    el('p', {}, t('Alkukappale.')),
+    el('h3', {}, t('Väliotsikko')),
+    el('p', {}, t('Jatkokappale.')));
+  const teksti = kokoaLuettavaTeksti(sivu);
+  assert.ok(!/Ensimmäinen otsikko/.test(teksti), teksti);
+  assert.match(teksti, /Väliotsikko/);
+  assert.match(teksti, /Jatkokappale/);
+});
+
+test('ohitaEkaOtsikko: false palauttaa vanhan käytöksen', () => {
+  const teksti = kokoaLuettavaTeksti(aihesivu(), { ohitaEkaOtsikko: false });
+  assert.match(teksti, /Lontoon historia/);
 });
 
 test('lähdemerkinnät jäävät lukematta', () => {
@@ -143,7 +162,7 @@ test('SPOILERISUOJA: visan kysymys eikä vastausvaihtoehdot päädy luentaan', (
   assert.ok(!/1863/.test(teksti), teksti);
   assert.ok(!/1901/.test(teksti), teksti);
   // Itse juttu on silti mukana — suoja ei saa syödä sivua.
-  assert.match(teksti, /Lontoon historia/);
+  assert.match(teksti, /Kaupunki kasvoi joen varrella/);
 });
 
 test('piilotettu sivu ohitetaan: lehden kaikki sivut ovat samassa dialogissa', () => {
@@ -153,7 +172,7 @@ test('piilotettu sivu ohitetaan: lehden kaikki sivut ovat samassa dialogissa', (
     aihesivu());
   const teksti = kokoaLuettavaTeksti(kortti);
   assert.ok(!/ei ole auki/.test(teksti), teksti);
-  assert.match(teksti, /Lontoon historia/);
+  assert.match(teksti, /Kaupunki kasvoi joen varrella/);
 });
 
 test('aria-hidden ja data-lukija="ei" ohitetaan', () => {
@@ -166,7 +185,11 @@ test('aria-hidden ja data-lukija="ei" ohitetaan', () => {
 });
 
 test('jokainen pala saa päätemerkin, jotta lukija pitää tauon', () => {
-  const sivu = el('div', {}, el('h3', {}, t('Otsikko')), el('p', {}, t('Kappale?')));
+  // Väliotsikko (toinen otsikko) saa pisteen — ensimmäinen ohitetaan.
+  const sivu = el('div', {},
+    el('h3', {}, t('Sivun otsikko')),
+    el('h3', {}, t('Otsikko')),
+    el('p', {}, t('Kappale?')));
   assert.equal(kokoaLuettavaTeksti(sivu), 'Otsikko.\nKappale?');
 });
 

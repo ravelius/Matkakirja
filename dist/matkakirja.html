@@ -154091,8 +154091,21 @@ function kytkeVahvistin() {
       const lahde = piiri.createMediaElementSource(audio);
       vahvistin = piiri.createGain();
       vahvistin.gain.value = puheenVoima();
+      /*
+       * Kompressori vahvistimen perään: yli yhden nouseva vahvistus voi
+       * leikata äänekkäimmät kohdat säröksi, ja kompressori pyöristää
+       * huiput kuulumattomiin. Kevyet asetukset — puhe ei saa alkaa
+       * pumpata.
+       */
+      const kompressori = piiri.createDynamicsCompressor();
+      kompressori.threshold.value = -10;
+      kompressori.knee.value = 18;
+      kompressori.ratio.value = 4;
+      kompressori.attack.value = 0.003;
+      kompressori.release.value = 0.25;
       lahde.connect(vahvistin);
-      vahvistin.connect(piiri.destination);
+      vahvistin.connect(kompressori);
+      kompressori.connect(piiri.destination);
       kytketty = true;
     } catch { /* elementti oli jo kytketty tai piiri kuoli */ }
   };
@@ -154405,7 +154418,23 @@ function luoPuheSoitin({
     // Nukahtanut äänipiiri hereille (iOS taustalta paluu) ja tuore
     // voimakkuus joka palaan — säätö osuu myös kesken luennan.
     if (piiri?.state === 'suspended') piiri.resume?.().catch?.(() => {});
-    if (vahvistin) vahvistin.gain.value = puheenVoima();
+    if (vahvistin) {
+      /*
+       * NAPSAHDUS POIS (omistajan havainto 14.8.2026: "ääni lähtee
+       * napsahtaen käyntiin"): luennan ensimmäinen pala nostetaan
+       * kuuluviin lyhyellä rampilla nollasta. Myöhemmät palat soivat
+       * täydellä voimalla heti — ne jatkavat puhetta virkerajalta,
+       * eikä keskelle luentaa saa tulla voimakkuuskuoppia.
+       */
+      const nyt = piiri.currentTime;
+      vahvistin.gain.cancelScheduledValues(nyt);
+      if (indeksi === 0) {
+        vahvistin.gain.setValueAtTime(0, nyt);
+        vahvistin.gain.linearRampToValueAtTime(puheenVoima(), nyt + 0.09);
+      } else {
+        vahvistin.gain.setValueAtTime(puheenVoima(), nyt);
+      }
+    }
     audio.src = osoite;
     const valmis = () => {
       audio.removeEventListener('ended', valmis);
@@ -154630,6 +154659,11 @@ const LUETTAVAN_VAHIMMAIS = 80;
 const LUKIJAN_OHITETTAVAT = [
   '[data-lukija="ei"]',
 
+  // Lehden nimi mastossa (omistajan toive 14.8.2026: "lehden nimeä ei
+  // tarvitse lukea") — se on taittoa, ei juttua.
+  '#arrival-lehti-yla',
+  '.lehti-ylarivi',
+
   // Lähdemerkinnät ja krediitit.
   '.lahde',
   '.kuvalahde',
@@ -154772,6 +154806,9 @@ function paate(teksti) {
   return /[.!?:;…]$/.test(teksti) ? teksti : `${teksti}.`;
 }
 
+/** Otsikkotagit ensimmäisen otsikon ohitusta varten. */
+const OTSIKKOTAGIT = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6']);
+
 /**
  * Kokoaa luettavan tekstin elementin sisältä.
  *
@@ -154779,14 +154816,22 @@ function paate(teksti) {
  * kappale. Rivinvaihto on molemmille taustajärjestelmille se merkki,
  * josta ne pitävät tauon.
  *
+ * SIVUN ENSIMMÄISTÄ OTSIKKOA EI LUETA (omistajan toive 14.8.2026):
+ * se on sama otsikko, jonka lukija juuri näki avatessaan sivun, ja
+ * luenta pääsee suoraan asiaan. Myöhemmät otsikot (nostojen ja
+ * osioiden väliotsikot) luetaan — ne jäsentävät kuunneltavaa.
+ *
  * @param {Element} juuri elementti, jonka sisältö luetaan
- * @param {{ ohita?: string[], katto?: number }} asetukset
+ * @param {{ ohita?: string[], katto?: number, ohitaEkaOtsikko?: boolean }} asetukset
  * @returns {string} luettava teksti tai tyhjä merkkijono
  */
-function kokoaLuettavaTeksti(juuri, { ohita = LUKIJAN_OHITETTAVAT, katto = LUETTAVAN_KATTO } = {}) {
+function kokoaLuettavaTeksti(juuri, {
+  ohita = LUKIJAN_OHITETTAVAT, katto = LUETTAVAN_KATTO, ohitaEkaOtsikko = true,
+} = {}) {
   if (!juuri) return '';
   const palat = [];
   let kertyma = [];
+  let ekaOtsikkoOhitettu = !ohitaEkaOtsikko;
   const katkaise = () => {
     const teksti = siisti(kertyma.join(' '));
     if (teksti) palat.push(paate(teksti));
@@ -154799,7 +154844,12 @@ function kokoaLuettavaTeksti(juuri, { ohita = LUKIJAN_OHITETTAVAT, katto = LUETT
     }
     if (solmu.nodeType !== 1) return;
     if (ohitetaanko(solmu, ohita)) return;
-    const lohko = LOHKOTAGIT.has(String(solmu.nodeName ?? solmu.tagName ?? '').toUpperCase());
+    const tagi = String(solmu.nodeName ?? solmu.tagName ?? '').toUpperCase();
+    if (!ekaOtsikkoOhitettu && OTSIKKOTAGIT.has(tagi)) {
+      ekaOtsikkoOhitettu = true;
+      return;
+    }
+    const lohko = LOHKOTAGIT.has(tagi);
     if (lohko) katkaise();
     for (const lapsi of solmu.childNodes ?? []) kavele(lapsi);
     if (lohko) katkaise();
@@ -175649,6 +175699,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 657, teksti: 'Napsahdus pois, lehden nimi ja 1. otsikko ei lueta' },
   { v: 656, teksti: 'Työhuoneeseen Lukijaääni-välilehti äänten säätöön' },
   { v: 655, teksti: 'Lukijalle säätöpaneeli: tauko ja kappalehypyt' },
   { v: 654, teksti: 'Merkinnät lukijaäänellä, äänitteet varalle, ääni ylös' },
@@ -176400,7 +176451,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.656';
+const APP_VERSION = '2026-08-09.657';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

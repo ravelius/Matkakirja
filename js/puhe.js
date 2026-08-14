@@ -252,8 +252,21 @@ function kytkeVahvistin() {
       const lahde = piiri.createMediaElementSource(audio);
       vahvistin = piiri.createGain();
       vahvistin.gain.value = puheenVoima();
+      /*
+       * Kompressori vahvistimen perään: yli yhden nouseva vahvistus voi
+       * leikata äänekkäimmät kohdat säröksi, ja kompressori pyöristää
+       * huiput kuulumattomiin. Kevyet asetukset — puhe ei saa alkaa
+       * pumpata.
+       */
+      const kompressori = piiri.createDynamicsCompressor();
+      kompressori.threshold.value = -10;
+      kompressori.knee.value = 18;
+      kompressori.ratio.value = 4;
+      kompressori.attack.value = 0.003;
+      kompressori.release.value = 0.25;
       lahde.connect(vahvistin);
-      vahvistin.connect(piiri.destination);
+      vahvistin.connect(kompressori);
+      kompressori.connect(piiri.destination);
       kytketty = true;
     } catch { /* elementti oli jo kytketty tai piiri kuoli */ }
   };
@@ -566,7 +579,23 @@ export function luoPuheSoitin({
     // Nukahtanut äänipiiri hereille (iOS taustalta paluu) ja tuore
     // voimakkuus joka palaan — säätö osuu myös kesken luennan.
     if (piiri?.state === 'suspended') piiri.resume?.().catch?.(() => {});
-    if (vahvistin) vahvistin.gain.value = puheenVoima();
+    if (vahvistin) {
+      /*
+       * NAPSAHDUS POIS (omistajan havainto 14.8.2026: "ääni lähtee
+       * napsahtaen käyntiin"): luennan ensimmäinen pala nostetaan
+       * kuuluviin lyhyellä rampilla nollasta. Myöhemmät palat soivat
+       * täydellä voimalla heti — ne jatkavat puhetta virkerajalta,
+       * eikä keskelle luentaa saa tulla voimakkuuskuoppia.
+       */
+      const nyt = piiri.currentTime;
+      vahvistin.gain.cancelScheduledValues(nyt);
+      if (indeksi === 0) {
+        vahvistin.gain.setValueAtTime(0, nyt);
+        vahvistin.gain.linearRampToValueAtTime(puheenVoima(), nyt + 0.09);
+      } else {
+        vahvistin.gain.setValueAtTime(puheenVoima(), nyt);
+      }
+    }
     audio.src = osoite;
     const valmis = () => {
       audio.removeEventListener('ended', valmis);
