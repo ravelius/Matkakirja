@@ -232,6 +232,51 @@ export function asetaPuheenVoima(arvo) {
   return voima;
 }
 
+/*
+ * LUKUNOPEUS (omistajan tilaus 14.8.2026). Nopeus tehdään toistossa
+ * (playbackRate + sävelkorkeuden säilytys), EI generoinnissa: se osuu
+ * silloin myös säilöistä soiviin paloihin, ei maksa mitään eikä
+ * pirsto välimuistiavaimia. Laitekohtainen asetus kuten voimakkuus.
+ */
+const NOPEUS_AVAIN = 'matkakirja-puhe-nopeus';
+const NOPEUS_OLETUS = 1;
+const NOPEUS_MIN = 0.6;
+const NOPEUS_MAX = 1.6;
+
+/** Lukijaäänen nopeus (1 = normaali). */
+export function puheenNopeus() {
+  try {
+    const arvo = Number.parseFloat(window.localStorage?.getItem(NOPEUS_AVAIN));
+    if (Number.isFinite(arvo)) return Math.min(NOPEUS_MAX, Math.max(NOPEUS_MIN, arvo));
+  } catch { /* yksityistila estää localStoragen */ }
+  return NOPEUS_OLETUS;
+}
+
+/** Asettaa nopeuden ja vie sen heti soivaan ääneen. */
+export function asetaPuheenNopeus(arvo) {
+  const nopeus = Math.min(NOPEUS_MAX, Math.max(NOPEUS_MIN, Number(arvo) || NOPEUS_OLETUS));
+  try {
+    window.localStorage?.setItem(NOPEUS_AVAIN, String(nopeus));
+  } catch { /* ei tallennu — istunnon ajan silti voimassa */ }
+  if (puheElementti) {
+    try {
+      puheElementti.playbackRate = nopeus;
+    } catch { /* elementti ei soi */ }
+  }
+  return nopeus;
+}
+
+/** Nopeus ja sävelkorkeuden säilytys elementtiin (src-vaihto nollaa ne). */
+function asetaToistonopeus(audio) {
+  const nopeus = puheenNopeus();
+  try {
+    audio.defaultPlaybackRate = nopeus;
+    audio.playbackRate = nopeus;
+    if ('preservesPitch' in audio) audio.preservesPitch = true;
+    else if ('webkitPreservesPitch' in audio) audio.webkitPreservesPitch = true;
+  } catch { /* vanha selain: nopeus jää normaaliksi */ }
+}
+
 /** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
 function kytkeVahvistin() {
   if (kytketty || typeof window === 'undefined') return;
@@ -597,6 +642,7 @@ export function luoPuheSoitin({
       }
     }
     audio.src = osoite;
+    asetaToistonopeus(audio);
     const valmis = () => {
       audio.removeEventListener('ended', valmis);
       audio.removeEventListener('error', valmis);

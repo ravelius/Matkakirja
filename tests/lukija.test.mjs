@@ -138,6 +138,22 @@ test('ohitaEkaOtsikko: false palauttaa vanhan käytöksen', () => {
   assert.match(teksti, /Lontoon historia/);
 });
 
+test('maston kaupunkinimi ei kuluta otsikko-ohitusta (omistajan havainto 14.8.2026)', () => {
+  // Lehtidialogin kortissa maston kaupunkinimi (#arrival-city) on
+  // DOM-järjestyksessä ennen sivun otsikkoa. Ilman ohituslistariviä se
+  // söi ensimmäisen otsikon ohituksen, ja sivuotsikko luettiin silti.
+  const kortti = el('div', { luokat: ['dialog-card'] },
+    el('h2', { id: 'arrival-city' }, t('Kairo')),
+    el('h3', { luokat: ['aihe-nimi'] }, t('Egyptin historia')),
+    el('p', {}, t('Niili tulvi joka kesä.')),
+    el('h3', {}, t('Väliotsikko')));
+  const teksti = kokoaLuettavaTeksti(kortti);
+  assert.ok(!/Kairo/.test(teksti), teksti);
+  assert.ok(!/Egyptin historia/.test(teksti), teksti);
+  assert.match(teksti, /Väliotsikko/);
+  assert.match(teksti, /Niili tulvi/);
+});
+
 test('lähdemerkinnät jäävät lukematta', () => {
   const teksti = kokoaLuettavaTeksti(aihesivu());
   assert.ok(!/Canaletto/.test(teksti), teksti);

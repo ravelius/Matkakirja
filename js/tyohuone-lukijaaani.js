@@ -21,7 +21,8 @@
  */
 
 import {
-  PUHE_ASETUS_AVAIN, PUHE_KOODI_AVAIN, asetaPuheenVoima, puheenVoima,
+  PUHE_ASETUS_AVAIN, PUHE_KOODI_AVAIN, asetaPuheenNopeus, asetaPuheenVoima,
+  puheenNopeus, puheenVoima,
 } from './puhe.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 
@@ -115,6 +116,8 @@ async function kuuntele({ persoona, aani, ohje, teksti }, tilaRivi) {
     koeAudio.pause();
     koeAudio.src = osoite;
     koeAudio.volume = Math.min(1, puheenVoima());
+    koeAudio.playbackRate = puheenNopeus();
+    if ('preservesPitch' in koeAudio) koeAudio.preservesPitch = true;
     await koeAudio.play();
     tilaRivi.textContent = (aani || ohje) && !koodi
       ? 'Soi — HUOM: ilman kehittäjäkoodia kuulet pelin oletusäänen.'
@@ -147,6 +150,32 @@ function voimakkuusOsio() {
   liuku.addEventListener('input', () => {
     const voima = asetaPuheenVoima(Number(liuku.value));
     arvo.textContent = `${voima.toFixed(2)}×`;
+  });
+  rivi.append(liuku, arvo);
+  kortti.append(rivi);
+  return kortti;
+}
+
+function nopeusOsio() {
+  const kortti = el('div', 'kortti');
+  kortti.append(el('h3', '', 'Lukunopeus'));
+  kortti.append(el('p', 'pieni', 'Toistonopeus tällä laitteella '
+    + '(sävelkorkeus säilyy). Vaikuttaa heti kaikkiin lukijaääniin — '
+    + 'myös jo säilöttyihin, koska säätö tehdään toistossa eikä '
+    + 'generoinnissa. Pelin oletus on 1,00×.'));
+  const rivi = el('div', 'lukijaaani-rivi');
+  const liuku = el('input');
+  liuku.type = 'range';
+  liuku.min = '0.6';
+  liuku.max = '1.6';
+  liuku.step = '0.05';
+  liuku.value = String(puheenNopeus());
+  const arvo = el('b', '', `${puheenNopeus().toFixed(2)}×`);
+  liuku.addEventListener('input', () => {
+    const nopeus = asetaPuheenNopeus(Number(liuku.value));
+    arvo.textContent = `${nopeus.toFixed(2)}×`;
+    // Säätö kuuluu myös käynnissä olevaan koekuunteluun.
+    koeAudio.playbackRate = nopeus;
   });
   rivi.append(liuku, arvo);
   kortti.append(rivi);
@@ -273,6 +302,7 @@ export function kaynnistaLukijaaani(kohde) {
       + 'asetettu — kuuntelu ei toimi.'));
   }
   kohde.append(voimakkuusOsio());
+  kohde.append(nopeusOsio());
   kohde.append(koodiOsio());
   for (const persoona of PERSOONAT) kohde.append(persoonaOsio(persoona));
 }

@@ -80,9 +80,13 @@ export const LUKIJAN_OHITETTAVAT = [
   '[data-lukija="ei"]',
 
   // Lehden nimi mastossa (omistajan toive 14.8.2026: "lehden nimeä ei
-  // tarvitse lukea") — se on taittoa, ei juttua.
+  // tarvitse lukea") — se on taittoa, ei juttua. Sama koskee maston
+  // kaupunkinimeä: ilman tätä se kulutti ensimmäisen otsikon
+  // ohituksen, ja varsinainen sivuotsikko luettiin silti (omistajan
+  // havainto 14.8.2026 illalla kaupunki- ja maalehdillä).
   '#arrival-lehti-yla',
   '.lehti-ylarivi',
+  '#arrival-city',
 
   // Lähdemerkinnät ja krediitit.
   '.lahde',

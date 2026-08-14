@@ -154915,6 +154915,51 @@ function asetaPuheenVoima(arvo) {
   return voima;
 }
 
+/*
+ * LUKUNOPEUS (omistajan tilaus 14.8.2026). Nopeus tehdään toistossa
+ * (playbackRate + sävelkorkeuden säilytys), EI generoinnissa: se osuu
+ * silloin myös säilöistä soiviin paloihin, ei maksa mitään eikä
+ * pirsto välimuistiavaimia. Laitekohtainen asetus kuten voimakkuus.
+ */
+const NOPEUS_AVAIN = 'matkakirja-puhe-nopeus';
+const NOPEUS_OLETUS = 1;
+const NOPEUS_MIN = 0.6;
+const NOPEUS_MAX = 1.6;
+
+/** Lukijaäänen nopeus (1 = normaali). */
+function puheenNopeus() {
+  try {
+    const arvo = Number.parseFloat(window.localStorage?.getItem(NOPEUS_AVAIN));
+    if (Number.isFinite(arvo)) return Math.min(NOPEUS_MAX, Math.max(NOPEUS_MIN, arvo));
+  } catch { /* yksityistila estää localStoragen */ }
+  return NOPEUS_OLETUS;
+}
+
+/** Asettaa nopeuden ja vie sen heti soivaan ääneen. */
+function asetaPuheenNopeus(arvo) {
+  const nopeus = Math.min(NOPEUS_MAX, Math.max(NOPEUS_MIN, Number(arvo) || NOPEUS_OLETUS));
+  try {
+    window.localStorage?.setItem(NOPEUS_AVAIN, String(nopeus));
+  } catch { /* ei tallennu — istunnon ajan silti voimassa */ }
+  if (puheElementti) {
+    try {
+      puheElementti.playbackRate = nopeus;
+    } catch { /* elementti ei soi */ }
+  }
+  return nopeus;
+}
+
+/** Nopeus ja sävelkorkeuden säilytys elementtiin (src-vaihto nollaa ne). */
+function asetaToistonopeus(audio) {
+  const nopeus = puheenNopeus();
+  try {
+    audio.defaultPlaybackRate = nopeus;
+    audio.playbackRate = nopeus;
+    if ('preservesPitch' in audio) audio.preservesPitch = true;
+    else if ('webkitPreservesPitch' in audio) audio.webkitPreservesPitch = true;
+  } catch { /* vanha selain: nopeus jää normaaliksi */ }
+}
+
 /** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
 function kytkeVahvistin() {
   if (kytketty || typeof window === 'undefined') return;
@@ -155280,6 +155325,7 @@ function luoPuheSoitin({
       }
     }
     audio.src = osoite;
+    asetaToistonopeus(audio);
     const valmis = () => {
       audio.removeEventListener('ended', valmis);
       audio.removeEventListener('error', valmis);
@@ -155504,9 +155550,13 @@ const LUKIJAN_OHITETTAVAT = [
   '[data-lukija="ei"]',
 
   // Lehden nimi mastossa (omistajan toive 14.8.2026: "lehden nimeä ei
-  // tarvitse lukea") — se on taittoa, ei juttua.
+  // tarvitse lukea") — se on taittoa, ei juttua. Sama koskee maston
+  // kaupunkinimeä: ilman tätä se kulutti ensimmäisen otsikon
+  // ohituksen, ja varsinainen sivuotsikko luettiin silti (omistajan
+  // havainto 14.8.2026 illalla kaupunki- ja maalehdillä).
   '#arrival-lehti-yla',
   '.lehti-ylarivi',
+  '#arrival-city',
 
   // Lähdemerkinnät ja krediitit.
   '.lahde',
@@ -176622,6 +176672,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 661, teksti: 'Lukunopeussäädin ja sivuotsikon ohitus lehdillä kuntoon' },
   { v: 660, teksti: 'Baikal-fakta, Venäjän radio pois linjauksen mukaisesti' },
   { v: 659, teksti: 'Siperian kaupunkilehdet: Jekaterinburg, Novosibirsk, Irkutsk' },
   { v: 658, teksti: 'Berliinin kaupunkikartalle vipu: piirros tai satelliittikuva' },
@@ -177377,7 +177428,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.660';
+const APP_VERSION = '2026-08-09.661';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -178024,6 +178075,7 @@ const SAILYVAT_ASETUKSET = new Set([
   'matkakirja-pollo-kehittajakoodi',
   'matkakirja-puhe-kehittaja',
   'matkakirja-puhe-voima',
+  'matkakirja-puhe-nopeus',
   'matkakirja-puhe-persoonat',
 ]);
 
