@@ -118,3 +118,87 @@ test('vanhat ruudut poistetaan vasta renkaan valmistuttua', () => {
   assert.match(rengas, /if \(!jono\?\.length\) \{ this\.poistaVanhatRuudut\(\); return; \}/,
     'tyhjä rengasjono ei siivoa vanhoja ruutuja');
 });
+
+/*
+ * --- vaihe 2: tiilipyramidi ja kerran jäsennetty taidelähde ---------------
+ *
+ * Mitattu tausta (13.8.2026, maailmankartta lähikuvassa, 1027 px ruutu):
+ * ruutukohtainen SVG-blobi maksoi WebKitissä jäsennyksenä 169 ms,
+ * peittävyyden pikselilukuna 230 ms ja pakkauksena 196 ms PER RUUTU;
+ * kuristetussa Chromiumissa pelkkä jäsennys oli 1886 ms. Kerran
+ * jäsennetystä lähteestä leikattu ruutu maksaa murto-osan, ja koko
+ * laudan pohjataso takaa, ettei ele koskaan piirrä tyhjää pergamenttia.
+ * Nämä testit vahtivat, ettei mikään noista rakenteista katoa hiljaa.
+ */
+
+const art = readFileSync(new URL('../js/mapart.js', import.meta.url), 'utf8');
+
+test('ruudut leikataan kerran jäsennetystä lähteestä, ei blobista', () => {
+  // mapart: nopea reitti on olemassa ja saa lähteen parametrina.
+  assert.match(art, /export async function avaaTaidelahde/,
+    'kerran jäsennetty taidelähde puuttuu');
+  assert.match(art, /rasteroiRuutu\(taide, ikkuna, skaala, tarkkuus = 1, keskeyta = null, lahde = null\)/,
+    'rasteroiRuutu ei ota lähdettä vastaan');
+  assert.match(art, /lahde\.kuva,\n\s*\(ikkuna\.x - lahde\.alue\.x\) \/ lahde\.jako/,
+    'ruutua ei leikata lähteestä drawImagen lähderajauksella');
+  // ui: MOLEMMAT kutsupaikat (näkyvä sarja ja rengas) antavat lähteen.
+  // Luovutusehto on nuolifunktio sulkuineen, joten haku ulottuu rivien
+  // yli lyhimpään taideLahteen asti.
+  const kutsut = ui.match(/rasteroiRuutu\(this\.taide,[\s\S]{0,200}?this\.taideLahde\)/g) ?? [];
+  assert.ok(kutsut.length >= 2,
+    `lähde puuttuu rasteroiRuutu-kutsusta (${kutsut.length}/2)`);
+  // Sarja odottaa lähdettä eikä tee työtä, joka heitettäisiin pois.
+  assert.match(metodi('taydennaTaide'), /this\.taideLahdeTulossa/,
+    'sarja ei odota kerran jäsennettyä lähdettä');
+});
+
+test('nopea reitti päättelee peittävyyden paperista eikä lue pikseleitä', () => {
+  /*
+   * taysinPeittava lukee koko kankaan takaisin näytönohjaimelta —
+   * mitattuna 230 ms (WebKit) / 631 ms (Chromium 4x) per ruutu. Nopealla
+   * reitillä sama tieto on pelkkää geometriaa: pergamentti on yksi
+   * suorakaide, ja sen sisällä ruutu on aina peittävä.
+   */
+  assert.match(art, /function ikkunaPaperilla/, 'paperipäättely puuttuu');
+  assert.match(art, /peittava = ikkunaPaperilla\(ikkuna, lahde\.alue\)/,
+    'nopea reitti ei käytä paperipäättelyä');
+  // Varareitti saa yhä lukea pikseleistä: sillä ei ole lähteen aluetta.
+  assert.match(art, /peittava \?\? taysinPeittava\(/,
+    'varareitin pikselitarkistus on kadonnut');
+});
+
+test('pyramidin pohjataso rakennetaan ja pidetään ruutujen alla', () => {
+  assert.match(art, /export async function rasteroiPohja/, 'pohjataso puuttuu');
+  assert.match(art, /export function pohjanMitat/,
+    'pohjan mitat on voitava laskea ennen rakentamista');
+  // Pohja on taideRyhmän EDELTÄVÄ sisarus: ruudut lisätään taideRyhmän
+  // alkuun, joten ryhmän sisällä pohja nousisi ruutujen päälle.
+  assert.match(ui, /insertBefore\(ryhmaPohjalle, this\.taideRyhma\)/,
+    'pohja ei asetu ruutujen alle');
+  // Yleiskuvassa pohja korvaa ruudut kokonaan.
+  assert.match(metodi('taydennaTaide'),
+    /this\.taidePohja && nakyva\.skaala \* this\.nykyinenTarkkuus\(\) <= this\.pohjaTeho/,
+    'yleiskuva ei nojaa pohjatasoon');
+  // Pohjan valmistuminen vapauttaa raskaan vektorikerroksen heti —
+  // hitaalla koneella sarjan loppua ei ehkä koskaan tule (ks.
+  // poistaVektorit-metodin selostus).
+  assert.match(metodi('poistaVektorit'), /this\.taidePohja/,
+    'pohja ei kelpaa vektorien poiston perusteeksi');
+  const rasterointi = ui.slice(ui.indexOf('rasteroiPohja(lahde'), ui.indexOf('rasteroiPohja(lahde') + 2400);
+  assert.match(rasterointi, /this\.poistaVektorit\(\)/,
+    'pohjan valmistuminen ei poista vektoreita');
+});
+
+test('sarja hengähtää kehyksen verran ruutujen välissä', () => {
+  /*
+   * Nopealla reitillä ruudun maalaus on synkronista (drawImage
+   * lähteestä), ja ilman hengähdystä monta ruutua niputtui samaan
+   * kehykseen: eleiden väliin osuva kehys venyi yli sekuntiin.
+   * Ajastin on rinnalla, koska rAF ei tikitä taustavälilehdessä.
+   */
+  const runko = metodi('taydennaTaide');
+  assert.match(runko, /requestAnimationFrame\(\(\) => \{ clearTimeout\(vara\); jatka\(\); \}\)/,
+    'ruutujen välistä puuttuu kehyksen hengähdys');
+  assert.match(runko, /setTimeout\(\(\) => \{ cancelAnimationFrame\(kehys\); jatka\(\); \}, \d+\)/,
+    'hengähdykseltä puuttuu taustavälilehden varareitti');
+});

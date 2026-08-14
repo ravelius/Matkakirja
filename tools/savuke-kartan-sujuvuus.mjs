@@ -114,7 +114,7 @@ await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
   const m = {
     ruudut: 0, ruudutEleessa: 0, aloitukset: 0, aloituksetEleessa: 0,
-    tarkistus: 0, pakotus: 0, pakotusEleessa: 0, loki: [],
+    tarkistus: 0, pakotus: 0, pakotusEleessa: 0, pakotusLepo: null, loki: [],
   };
   window.__sujuvuus = m;
   const eleKesken = () => Boolean(ui.osoitinKartalla || ui.kartanRaahaus);
@@ -153,7 +153,16 @@ await sivu.evaluate(() => {
     if (ennen && this.taideSkaala !== ennen) {
       m.pakotus += 1;
       if (eleessa) m.pakotusEleessa += 1;
-      m.loki.push(`pakotus suhde ${(this.nakyvaAlue().skaala / ennen).toFixed(3)}`);
+      /*
+       * Lepo pakotushetkellä: montako millisekuntia viimeisestä eleestä.
+       * Vahti saa korjata mittakaavan vasta todellisen levon jälkeen
+       * (TARKKUUS_LEPO_MS = 1600), ja juuri sitä tässä vartioidaan —
+       * seinäkelloikkuna ("ei 700 ms:n sisällä") valehteli hitaalla
+       * ajokoneella, jossa itse ele venyy sekunteihin.
+       */
+      const lepo = Math.round(performance.now() - (this.kartanEleHetki ?? -1e9));
+      m.pakotusLepo = m.pakotusLepo === null ? lepo : Math.min(m.pakotusLepo, lepo);
+      m.loki.push(`pakotus suhde ${(this.nakyvaAlue().skaala / ennen).toFixed(3)} lepo=${lepo}`);
     }
     return tulos;
   };
@@ -161,7 +170,7 @@ await sivu.evaluate(() => {
 const nollaa = () => sivu.evaluate(() => {
   Object.assign(window.__sujuvuus, {
     ruudut: 0, ruudutEleessa: 0, aloitukset: 0, aloituksetEleessa: 0,
-    tarkistus: 0, pakotus: 0, pakotusEleessa: 0, loki: [],
+    tarkistus: 0, pakotus: 0, pakotusEleessa: 0, pakotusLepo: null, loki: [],
   });
 });
 const mittarit = () => sivu.evaluate(() => ({ ...window.__sujuvuus }));
@@ -267,15 +276,25 @@ vaadi('panoroinnin aikana ei aloiteta yhtään rasterointia',
   panorointi.aloituksetEleessa === 0,
   `${panorointi.aloituksetEleessa}/${panorointi.aloitukset} aloitusta eleen aikana`);
 
-// 2) NIPISTYS ei pakota rasterointia eleen aikana eikä heti perään.
-// Ennen korjausta tässä oli aina yksi pakotus (suhde 1,150) 350 ms:ssä.
+/*
+ * 2) NIPISTYS ei pakota rasterointia eleen aikana eikä heti perään.
+ * Ennen v607:n korjausta tässä oli aina yksi pakotus (suhde 1,150)
+ * 350 ms:ssä. Ehto on lepoaika eikä seinäkello: hitaalla ajokoneella
+ * itse ele venyy sekunteihin, ja kiinteä "ei 700 ms:n sisällä" alkoi
+ * kaatua heti kun ruutuputki nopeutui niin paljon, että vahti EHTI
+ * tehdä laillisen leponsa jälkeisen korjauksen mittausikkunassa.
+ * Vartioitava asia on: korjaus vasta todellisen levon (1600 ms ilman
+ * elettä) jälkeen, ei koskaan sormen alla.
+ */
 await sivu.waitForTimeout(2000);
 await nollaa();
 await nipista(1.15);
 await sivu.waitForTimeout(700);
 const nipistys = await mittarit();
-vaadi('nipistys ei pakota rasterointia 700 ms:n sisällä',
-  nipistys.pakotus === 0, JSON.stringify(nipistys));
+vaadi('nipistyksen pakotus tulee vasta todellisen levon jälkeen',
+  nipistys.pakotusEleessa === 0
+  && (nipistys.pakotusLepo === null || nipistys.pakotusLepo >= 1500),
+  JSON.stringify(nipistys));
 vaadi('nipistyksen aikana ei aloiteta yhtään rasterointia',
   nipistys.aloituksetEleessa === 0,
   `${nipistys.aloituksetEleessa}/${nipistys.aloitukset} aloitusta eleen aikana`);
@@ -356,8 +375,12 @@ if (WEBKIT) {
   vaadi('nipistyksen jälkeinen panorointi ei jumita ruudunpäivitystä',
     kehykset.pisin < 600, `pisin kehysväli ${kehykset.pisin} ms, ${kehykset.yli100} yli 100 ms`);
 }
-vaadi('nipistyksen jälkeisen panoroinnin aikana ei pakoteta rasterointia',
-  nipistyksenJalkeen.pakotus === 0, JSON.stringify(nipistyksenJalkeen));
+// Pakotus saa osua vetojen VÄLIIN vain todellisen levon jälkeen —
+// hitaalla ajokoneella CDP-vetojen väliin jää helposti yli 1600 ms.
+vaadi('nipistyksen jälkeisen panoroinnin aikana ei pakoteta rasterointia sormen alla',
+  nipistyksenJalkeen.pakotusEleessa === 0
+  && (nipistyksenJalkeen.pakotusLepo === null || nipistyksenJalkeen.pakotusLepo >= 1500),
+  JSON.stringify(nipistyksenJalkeen));
 vaadi('edellisen eleen sarja ei jatka piirtoa seuraavan sormen alla',
   nipistyksenJalkeen.aloituksetEleessa === 0,
   `${nipistyksenJalkeen.aloituksetEleessa}/${nipistyksenJalkeen.aloitukset} aloitusta eleen aikana`);
@@ -374,8 +397,10 @@ await sivu.evaluate(() => { window.matkakirja.ui.taideSkaala *= 0.88; });
 await sivu.evaluate(() => { window.matkakirja.ui.fitViewBox(); });
 for (let i = 0; i < 3; i++) { await panoroi(160, 16); await sivu.waitForTimeout(200); }
 const sarjanAikana = await mittarit();
-vaadi('elesarjan aikana ei pakoteta rasterointia',
-  sarjanAikana.pakotus === 0, JSON.stringify(sarjanAikana));
+vaadi('elesarjan aikana ei pakoteta rasterointia sormen alla',
+  sarjanAikana.pakotusEleessa === 0
+  && (sarjanAikana.pakotusLepo === null || sarjanAikana.pakotusLepo >= 1500),
+  JSON.stringify(sarjanAikana));
 vaadi('elesarjan aikana ei aloiteta rasterointia sormen alla',
   sarjanAikana.aloituksetEleessa === 0,
   `${sarjanAikana.aloituksetEleessa}/${sarjanAikana.aloitukset} aloitusta eleen aikana`);
@@ -670,6 +695,73 @@ vaadi('pyyhkäisyn jälkeen kartta liukuu pehmeästi eteenpäin',
 vaadi('liuku ei aloita rasterointia kesken liikkeen',
   liukuMittarit.aloituksetEleessa === 0 && liukuMittarit.pakotus === 0,
   JSON.stringify(liukuMittarit));
+
+/*
+ * 11) RUUTUPUTKEN VAIHE 2 (tiilipyramidi): kolme takuuta.
+ *
+ *   a) Taidelähde on jäsennetty KERRAN ja pyramidin pohjataso — koko
+ *      laudan karkea bittikartta — on syntynyt laudan luonnissa.
+ *      pohjaValmisMs on aika laudan luonnista pohjan valmistumiseen;
+ *      raja on väljä, koska ajokoneiden nopeus vaihtelee, mutta
+ *      "ei koskaan" ei mahdu siihen millään koneella.
+ *   b) Pohja on aina tarkkojen ruutujen ALLA (edeltävä sisarus), ja
+ *      siksi ele piirtää aina valmista bittikarttaa — myös siellä,
+ *      minne tarkkoja ruutuja ei vielä ole ehditty tehdä.
+ *   c) Ruudun piirto EI jäsennä SVG:tä: kokonainen pakotettu
+ *      ruutusarja syntyy ilman yhtäkään ruutukohtaista SVG-blobia
+ *      (aloitukset lasketaan createObjectURL-koukusta, ks. mittarit).
+ */
+const pyramidi = await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  return {
+    lahde: Boolean(ui.taideLahde),
+    pohja: Boolean(ui.taidePohja),
+    pohjaValmisMs: Math.round(ui.pohjaValmisMs ?? -1),
+    pohjaAllaRuutujen: Boolean(ui.pohjaRyhma && ui.taideRyhma
+      // eslint-disable-next-line no-bitwise
+      && (ui.pohjaRyhma.compareDocumentPosition(ui.taideRyhma) & Node.DOCUMENT_POSITION_FOLLOWING)),
+  };
+});
+vaadi('taidelähde on jäsennetty ja pohjataso syntyi laudan luonnissa',
+  pyramidi.lahde && pyramidi.pohja
+  && pyramidi.pohjaValmisMs > 0 && pyramidi.pohjaValmisMs < 60000,
+  JSON.stringify(pyramidi));
+vaadi('pohjataso on tarkkojen ruutujen alla',
+  pyramidi.pohjaAllaRuutujen, JSON.stringify(pyramidi));
+
+// c) pakotettu sarja lähizoomissa: ruutuja syntyy, SVG-blobeja ei.
+await nollaa();
+await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  const vb = ui.svg.viewBox.baseVal;
+  const kx = vb.x + vb.width / 2;
+  const ky = vb.y + vb.height / 2;
+  vb.width /= 8;
+  vb.height /= 8;
+  vb.x = kx - vb.width / 2;
+  vb.y = ky - vb.height / 2;
+  await new Promise((r) => requestAnimationFrame(r));
+  ui.kartanEleHetki = null;
+  ui.osoitinKartalla = false;
+  ui.taideSkaala = 0;
+  ui.taideRuudut = new Map();
+  ui.taideTyhjat = new Set();
+  ui.taydennaTaide({ heti: true });
+});
+for (let i = 0; i < 240; i++) {
+  const valmis = await sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    return Boolean(ui.taideSkaala) && ui.taidePiirtyy === false && ui.taideRuudut.size > 0;
+  });
+  if (valmis) break;
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(250);
+}
+const sarjaJalkeen = await mittarit();
+const sarjanRuudut = await sivu.evaluate(() => window.matkakirja.ui.taideRuudut.size);
+vaadi('ruudun piirto ei jäsennä SVG:tä (leikkaus jäsennetystä lähteestä)',
+  sarjanRuudut > 0 && sarjaJalkeen.aloitukset === 0,
+  `ruutuja ${sarjanRuudut}, svg-blobeja ${sarjaJalkeen.aloitukset}`);
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
