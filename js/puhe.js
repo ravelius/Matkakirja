@@ -703,7 +703,17 @@ export function luoPuheSoitin({
       tila.soi = false;
       tila.peruttu = true;
       onVirhe?.(indeksi === 0 ? 'alku' : 'kesken');
+      return;
     }
+    /*
+     * Nopeus UUDELLEEN vasta kun toisto on käynnissä (omistajan
+     * havainto 14.8.2026: "Nopeussäädin ei taida toimia oikein"):
+     * iOS/Safari nollaa playbackRaten lähteen latauksessa eikä
+     * kunnioita defaultPlaybackRatea, joten ennen play()-kutsua
+     * asetettu nopeus katosi jokaisen palan alussa. Käynnissä olevaan
+     * toistoon asetus tarttuu.
+     */
+    if (!tila.peruttu) asetaToistonopeus(audio);
   };
 
   /**
