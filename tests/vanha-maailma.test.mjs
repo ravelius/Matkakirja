@@ -302,7 +302,14 @@ test('jokaisella vanhan maailman maalla on radiolähetys', async () => {
   const { RADIOT } = await import('../js/packs/radiot.js');
   const { pack, kaupungit } = await vanhanMaailmanKaupungit();
   const maat = [...new Set(kaupungit.map((c) => pack.map.cityCountry?.[c.id]).filter(Boolean))];
-  const ilman = maat.filter((m) => !RADIOT[m]).sort();
+  /*
+   * RUS on ILMAN radiota tarkoituksella (omistajan linjaus 13.8.2026:
+   * valtiollista tai sensuroitua mediaa ei oteta lähteeksi; Fable
+   * poisti Vesti FM:n 14.8.2026 — ks. js/packs/radiot.js). Muille
+   * maille puuttuva lähetys on yhä virhe.
+   */
+  const tarkoituksella = new Set(['RUS']);
+  const ilman = maat.filter((m) => !RADIOT[m] && !tarkoituksella.has(m)).sort();
   assert.deepEqual(ilman, [], 'näiltä mailta puuttuu suora lähetys');
 });
 
