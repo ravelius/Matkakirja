@@ -194,6 +194,22 @@ sen jälkeen SUORAAN Lähi-idän kaupunki- ja maalehdet — ei erillistä
 testiporttia välissä. Matkakirjan tarinapuoli on parkissa. Omistaja
 delegoi 9.8. päätökset ja tehtävänjaon Fablelle.**
 
+**Avoimet asiat kapulanvaihdosta 14.8.2026** (siirretty tänne, kun
+docs/kapulanvaihto.md arkistoitiin 15.8. — odottavat omistajaa):
+
+1. **Pöllön Matkakirja-linkit**: sisäiset linkit vastaustekstin
+   LOPPUUN muotoon "Matkakirja: linkki", enintään kaksi per vastaus;
+   tekstin sisään vain pöllön kysymyslinkit. Kohta: js/pollo.js
+   korostaLinkit/sidoLinkki + savuke-pollo-vartijat. Omistaja
+   keskeytti työn 14.8. — varmista ennen jatkamista, että yhä haluttu.
+2. **TestFlight build 7** (sanelukorjaus #943 kuoreen) ja **Game
+   Center -saavutukset** ASC:ssä — ideoita, eivät aloitettuja.
+3. **Zoomin jäännösriskit** (kierros 3): aidon Safarin erittäin
+   nopeiden nipistysten harvinainen hyppy vaatii laitetodennuksen.
+4. Kaanon: **matkakirjamerkintöjä EI generoida** ennen kuin
+   tekstityyli on määritelty omistajan kanssa (isoisan-raamattu.md,
+   "AVOIMET PÄÄTÖKSET").
+
 Ajantasainen tilannetaulu on `js/tyohuone-tilanne.js` (työhuoneen
 etusivu) ja Fablen jono `docs/fable-tilanne.md`. Tiivistetysti:
 

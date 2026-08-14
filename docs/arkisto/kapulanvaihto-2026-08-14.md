@@ -1,3 +1,9 @@
+> **ARKISTOITU 15.8.2026 (Fable).** Kapulanvaihto on viety loppuun:
+> lehtityö jatkuu (Siperia-erät), TTS-lukijaääni on toteutettu
+> kokonaan (v653–v678), ja jäljellä olleet avoimet asiat on
+> siirretty docs/roolitus.md:n työjonoon. Tämä dokumentti on
+> historiaa — älä lue tästä ohjeita.
+
 # Kapulanvaihto 14.8.2026 — kehitys siirtyy toiselle tilille
 
 Edellisen tilin kreditit loppuivat. Tämä dokumentti on kirjoitettu,
