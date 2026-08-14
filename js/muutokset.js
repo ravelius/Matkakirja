@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 657, teksti: 'Napsahdus pois, lehden nimi ja 1. otsikko ei lueta' },
+  { v: 657, teksti: 'Lukija: napsahdus ja turhat otsikot pois; asetukset säilyvät' },
   { v: 656, teksti: 'Työhuoneeseen Lukijaääni-välilehti äänten säätöön' },
   { v: 655, teksti: 'Lukijalle säätöpaneeli: tauko ja kappalehypyt' },
   { v: 654, teksti: 'Merkinnät lukijaäänellä, äänitteet varalle, ääni ylös' },

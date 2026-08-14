@@ -175693,7 +175693,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
-  { v: 657, teksti: 'Napsahdus pois, lehden nimi ja 1. otsikko ei lueta' },
+  { v: 657, teksti: 'Lukija: napsahdus ja turhat otsikot pois; asetukset säilyvät' },
   { v: 656, teksti: 'Työhuoneeseen Lukijaääni-välilehti äänten säätöön' },
   { v: 655, teksti: 'Lukijalle säätöpaneeli: tauko ja kappalehypyt' },
   { v: 654, teksti: 'Merkinnät lukijaäänellä, äänitteet varalle, ääni ylös' },
@@ -177080,12 +177080,28 @@ const nollaaDialog = document.getElementById('nollaa-dialog');
  * Avaimet poistetaan etuliitteen perusteella eikä listana, jotta uusi
  * asetus ei jää siivouksen ulkopuolelle sitä mukaa kun niitä lisätään.
  */
+/*
+ * LAITTEEN ASETUKSET SÄILYVÄT TYHJENNYKSESSÄ (omistajan tilaus
+ * 14.8.2026: "jos aloitan uuden pelin, kehittäjätila saisi pysyä
+ * päällä"). Nämä eivät ole pelin muistia vaan laitteen asetuksia:
+ * kehittäjätila koodeineen ja lukijaäänen säädöt. Kaikki muu
+ * matkakirja-alkuinen pyyhkiytyy kuten ennenkin.
+ */
+const SAILYVAT_ASETUKSET = new Set([
+  'matkakirja-kehittaja',
+  'matkakirja-pollo-kehittajakoodi',
+  'matkakirja-puhe-kehittaja',
+  'matkakirja-puhe-voima',
+  'matkakirja-puhe-persoonat',
+]);
+
 async function tyhjennaMuistit() {
   try {
     const poistettavat = [];
     for (let i = 0; i < localStorage.length; i += 1) {
       const avain = localStorage.key(i);
-      if (avain && (avain.startsWith('matkakirja') || avain.startsWith('afrikan-tahti'))) {
+      if (avain && (avain.startsWith('matkakirja') || avain.startsWith('afrikan-tahti'))
+        && !SAILYVAT_ASETUKSET.has(avain)) {
         poistettavat.push(avain);
       }
     }
@@ -177282,9 +177298,21 @@ paataPaivitysruutu();
  * se ei ole pelaajan matka, eikä sen pidä kirjautua Game Centeriin
  * eikä tarjota tallennusta pilvestä.
  */
+/*
+ * PILVITALLENNUKSEN KYSELY POIS PÄÄLTÄ (omistajan tilaus 14.8.2026:
+ * "Ota game center synkkakysely pois päältä"). Toisen laitteen
+ * tallennusta ei enää tarjota dialogilla — kuuntelija jää kytkemättä.
+ * Passin leimat yhdistyvät yhä hiljaa (se ei kysy mitään), ja
+ * paikallinen tallennus synkataan pilveen kuten ennenkin. Vipu on
+ * vakiona tässä, jotta kyselyn saa takaisin yhdellä rivillä.
+ */
+const PILVIKYSELY_KAYTOSSA = false;
+
 if (!katseluPack) {
   natiiviKirjauduPelikeskukseen();
-  natiiviKuunteleSynkka(SAVE_KEY, (raaka) => tarjoaPilviTallennus(raaka));
+  if (PILVIKYSELY_KAYTOSSA) {
+    natiiviKuunteleSynkka(SAVE_KEY, (raaka) => tarjoaPilviTallennus(raaka));
+  }
   natiiviKuunteleSynkka(STAMP_KEY, (raaka) => yhdistaPilviPassi(raaka));
 }
 
