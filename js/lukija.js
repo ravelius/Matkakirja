@@ -1094,6 +1094,7 @@ const KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
 
 const LUE_OTSIKKO = 'Kuuntele sivu';
 const SEIS_OTSIKKO = 'Lopeta kuuntelu';
+const OHJAIN_OTSIKKO = 'Luentasoitin';
 
 /* ------------------------------------------------------------------ */
 /* Lukijan ohjauspaneeli (omistajan tilaus 14.8.2026)                  */
@@ -1126,8 +1127,44 @@ let ohjain = null;
 
 function suljeOhjain() {
   if (!ohjain) return;
+  clearTimeout(ohjain.ajastin);
   ohjain.elementti.remove();
   ohjain = null;
+}
+
+/*
+ * AUTOMAATTINEN PIILOUTUMINEN (omistajan tilaus 15.8.2026:
+ * "Luentasoitin voisi piiloutua automaattisesti ja sen saisi samasta
+ * napista näkyviin ja pois ilman että luenta katkeaa"). Paneeli
+ * piiloutuu muutaman sekunnin käyttämättömyyden jälkeen; kaiutin
+ * vipuaa sen näkyviin ja piiloon luentaa katkaisematta. Tauolla
+ * paneeli ei piiloudu — pysäytetty luenta ilman näkyvää säädintä
+ * näyttäisi loppuneelta.
+ */
+const OHJAIMEN_PIILOAIKA = 4000;
+
+function ajastaOhjaimenPiilotus() {
+  if (!ohjain) return;
+  clearTimeout(ohjain.ajastin);
+  ohjain.ajastin = setTimeout(() => {
+    if (!ohjain) return;
+    if (ajossa?.soitin?.tauolla?.()) {
+      ajastaOhjaimenPiilotus();
+      return;
+    }
+    ohjain.elementti.hidden = true;
+  }, OHJAIMEN_PIILOAIKA);
+}
+
+function vipuaOhjain() {
+  if (!ohjain) return;
+  if (ohjain.elementti.hidden) {
+    ohjain.elementti.hidden = false;
+    ajastaOhjaimenPiilotus();
+  } else {
+    clearTimeout(ohjain.ajastin);
+    ohjain.elementti.hidden = true;
+  }
 }
 
 /** Paneelin tila soittimen ilmoituksesta (tauko/jatka, kappalelaskuri). */
@@ -1161,6 +1198,9 @@ function avaaOhjain(isanta, nappi) {
   paneeli.className = 'lukija-paneeli';
   // Paneelin napautus ei saa valua taustalle (dialogin sulkijat ym.).
   paneeli.addEventListener('click', (e) => e.stopPropagation());
+  // Käyttö pitää paneelin näkyvissä — piiloutumislaskuri alkaa alusta
+  // jokaisesta kosketuksesta.
+  paneeli.addEventListener('pointerdown', () => ajastaOhjaimenPiilotus());
   const tee = (nimi, otsikko, toiminto) => {
     const b = doc.createElement('button');
     b.type = 'button';
@@ -1194,7 +1234,9 @@ function avaaOhjain(isanta, nappi) {
   isanta.appendChild(paneeli);
   ohjain = {
     elementti: paneeli, merkki: nyt.merkki, taukoNappi, kappaleRivi, edellinen, seuraava,
+    ajastin: null,
   };
+  ajastaOhjaimenPiilotus();
   // Ensipiirto heti: soittimen oma ilmoitus ehti jo mennä ohi ennen
   // paneelin syntyä, ja seuraava tulisi vasta palan vaihtuessa.
   const alku = nyt.soitin.tilanne?.();
@@ -1205,7 +1247,12 @@ function avaaOhjain(isanta, nappi) {
 function merkitseTila(nappi, lukee) {
   if (!nappi) return;
   nappi.classList?.toggle('lukee', Boolean(lukee));
-  const nimi = lukee ? SEIS_OTSIKKO : (nappi.dataset?.lukijaNimi || LUE_OTSIKKO);
+  // Lukijaäänellä nappi vipuaa soittimen (pysäytys on paneelissa);
+  // laitteen omalla äänellä se pysäyttää.
+  const soittimella = lukee && Boolean(ajossa?.soitin) && ajossa?.nappi === nappi;
+  const nimi = lukee
+    ? (soittimella ? OHJAIN_OTSIKKO : SEIS_OTSIKKO)
+    : (nappi.dataset?.lukijaNimi || LUE_OTSIKKO);
   nappi.setAttribute?.('aria-pressed', lukee ? 'true' : 'false');
   nappi.setAttribute?.('aria-label', nimi);
   if ('title' in nappi) nappi.title = nimi;
@@ -1254,6 +1301,20 @@ export function liitaLukija(isanta, lahde, { luokka = '', nimi = LUE_OTSIKKO, se
     nappi.addEventListener('click', (tapahtuma) => {
       tapahtuma.stopPropagation();
       if (lukijaLukee(nappi)) {
+        /*
+         * Lukijaäänellä nappi VIPUAA soittimen näkyviin ja piiloon
+         * luentaa katkaisematta (omistajan tilaus 15.8.2026) —
+         * pysäytys tapahtuu paneelin rastista. Laitteen omalla
+         * äänellä paneelia ei ole, joten nappi pysäyttää kuten ennen.
+         */
+        if (ajossa?.soitin && ohjain?.merkki === ajossa.merkki) {
+          vipuaOhjain();
+          return;
+        }
+        if (ajossa?.soitin) {
+          avaaOhjain(isanta, nappi);
+          return;
+        }
         pysaytaLukija();
         return;
       }
