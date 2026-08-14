@@ -10006,7 +10006,7 @@ export class UI {
    * Sivumäärä: etusivu ja sen jälkeen yksi sivu aihetta kohti.
    *
    * Etusivu on aina olemassa, aiheita voi olla nolla — silloin sivuja on
-   * yksi eikä navigaatiota piirretä lainkaan (paivitaTutkiNavi).
+   * yksi eikä alanappeja piirretä lainkaan (paivitaTutkiAlapalkki).
    */
   tutkiSivuja() {
     return 1 + (this.tutkiSivut?.length ?? 0);
@@ -10037,13 +10037,6 @@ export class UI {
     const sivuja = this.tutkiSivuja();
     const i = Math.min(Math.max(indeksi, this.tutkiEkaSivu()), sivuja - 1);
     this.tutkiSivu = i;
-    /*
-     * Väkäsen näkyvyys lasketaan vasta kun sivun sisältö on
-     * asettunut: ilman tätä nappi jäi piiloon lehteä avattaessa,
-     * koska tila oli laskettu edellisen (lyhyen) sisällön mukaan
-     * eikä mikään vieritys ollut vielä päivittänyt sitä.
-     */
-    setTimeout(() => this.tutkiVakanen?.(), 120);
     const etusivu = i === 0;
     if (this.arrivalPalstat) this.arrivalPalstat.hidden = !etusivu;
     /*
@@ -10141,7 +10134,24 @@ export class UI {
      * jälkeen kun sivu on jo kääntynyt.
      */
     pysaytaLukija();
-    this.varustaLukija(this.arrivalDialog, () => this.arrivalDialog.querySelector('.dialog-card'));
+    const kaiutin = this.varustaLukija(this.arrivalDialog, () => this.arrivalDialog.querySelector('.dialog-card'));
+    this.sijoitaLehtiKaiutin(kaiutin);
+  }
+
+  /**
+   * Kaiutin asuu tarttuvan otsikkorivin SISÄLLÄ kuten hampurilainen
+   * (omistaja 14.8.2026: "lukita lukija napin oikeaan reunaan samalle
+   * korkeudelle") — dialogiin kiinnitettynä se jäi eri korkeudelle
+   * kuin otsikko, ja korkeusero vaihteli lehtityypin mukaan.
+   * Sivunpiirto pyyhkii aihe-otsikot, joten siirto tehdään joka
+   * sivunäytöllä; ks. varmistaLehtiHampurilainen, jossa sama syy.
+   */
+  sijoitaLehtiKaiutin(nappi) {
+    if (!nappi) return;
+    const etusivulla = (this.tutkiSivu ?? 0) === 0;
+    const koti = (etusivulla ? this.arrivalCity
+      : this.arrivalKategoria?.querySelector('.aihe-nimi')) ?? this.arrivalCity;
+    if (koti && nappi.parentElement !== koti) koti.appendChild(nappi);
   }
 
   /**
@@ -10296,43 +10306,14 @@ export class UI {
   }
 
   /**
-   * Sivunuolet ja sivunumero. Ne ovat dialogin lapsia eivätkä kortin:
-   * kortti vierii, ja sen sisällä ne katoaisivat heti kun tekstiä lukee
-   * — sama syy kuin arkin reunakerroksilla.
+   * Alalaidan sivupilleri ‹ 2/7 › poistui (omistaja 14.8.2026: "Nuoli
+   * alas ja ala navigointi pois kokonaan") — sivut vaihtuvat
+   * pyyhkäisyllä, sivun lopun alanapeilla ja sisällysvalikosta.
+   * Poisto siivoaa vanhan pillerin myös ennen v666:tta avatusta
+   * dialogista.
    */
   paivitaTutkiNavi() {
-    const sivuja = this.tutkiSivuja();
-    let navi = this.arrivalDialog.querySelector(':scope > .tutki-navi');
-    if (!navi) {
-      navi = html('div', 'tutki-navi');
-      const nuoli = (luokka, nimi, d) => {
-        const nappi = html('button', `tutki-nuoli ${luokka}`);
-        nappi.type = 'button';
-        nappi.title = nimi;
-        nappi.setAttribute('aria-label', nimi);
-        nappi.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"
-             stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-             stroke-linejoin="round"><path d="${d}"/></svg>`;
-        nappi.addEventListener('click', () => this.vaihdaTutkiSivu(luokka === 'seuraava' ? 1 : -1));
-        navi.appendChild(nappi);
-        return nappi;
-      };
-      nuoli('edellinen', 'Edellinen sivu', 'M15 5 8 12l7 7');
-      nuoli('seuraava', 'Seuraava sivu', 'M9 5l7 7-7 7');
-      navi.appendChild(html('p', 'tutki-sivunumero'));
-      this.arrivalDialog.appendChild(navi);
-    }
-    const edellinen = navi.querySelector('.edellinen');
-    const seuraava = navi.querySelector('.seuraava');
-    const numero = navi.querySelector('.tutki-sivunumero');
-    // Numerointi alkaa ensimmäisestä selattavasta sivusta: maalehden
-    // kannettomuus ei saa näkyä lukijalle tyhjänä sivuna 1/9.
-    const eka = this.tutkiEkaSivu();
-    // Yhden sivun kaupungissa ei ole mitään selattavaa: koko navi pois.
-    navi.hidden = sivuja - eka < 2;
-    edellinen.hidden = this.tutkiSivu <= eka;
-    seuraava.hidden = this.tutkiSivu >= sivuja - 1;
-    numero.textContent = `${(this.tutkiSivu ?? 0) - eka + 1} / ${sivuja - eka}`;
+    this.arrivalDialog.querySelector(':scope > .tutki-navi')?.remove();
     this.paivitaTutkiAlapalkki();
   }
 
@@ -10626,49 +10607,49 @@ export class UI {
     });
 
     /*
-     * RUUDUN YLÄ- JA ALAREUNA VIERITTÄVÄT PÄÄHÄN.
+     * RUUDUN YLÄ- JA ALAREUNAN NAPAUTUS VIERITTÄÄ PÄÄHÄN (omistaja
+     * 14.8.2026: "Ala ja yläreunan napautus scrollaamaan alas ja
+     * ylös") — pohjaan vievä väkänen poistui samalla.
      *
-     * Omistajan toive: "Tutkissivu voisi scrollautua kokonaan ylös ja
-     * alas painamalla näytön ihan yläreunaa ja vastaavasti ihan
-     * alareunaa." Artikkeli on pitkä, ja puhelimessa alkuun palaaminen
-     * vaatii muuten monta pyyhkäisyä.
+     * Kaistan historia: napautuskaista poistui 9.8.2026, koska
+     * iPadilla vierityksen pysäyttävä sormi laukaisi sen 350 ms:n
+     * vahdista huolimatta — kuuntelija oli pointer-tapahtumissa.
+     * Nyt kuunnellaan click-tapahtumaa: selain ei tuota clickiä
+     * vierityksen pysäyttävästä kosketuksesta eikä raahauksesta,
+     * joten vahtia ei tarvita. Napit, linkit ja kuvat voittavat
+     * kaistan, ja pyyhkäisyn perään lisätty kertakäyttöinen
+     * click-tulppa (yllä) estää sivunvaihdon jälkilaukauksen.
      *
-     * Kaista on ohut ja se reagoi vain napautukseen, joka EI ole
-     * pyyhkäisy eikä osu mihinkään nappiin — muuten se veisi
-     * napautukset kuvilta ja linkeiltä, jotka ovat sivun ylälaidassa.
+     * Tarttuva otsikkorivi lasketaan yläkaistaan koko leveydeltään:
+     * se on aina näkyvissä ylälaidassa, ja otsikon napautus alkuun
+     * palaamiseksi on tuttu ele (iOS:n tilarivi).
      */
-    /*
-     * Väkänen alareunaan kertomassa, että sieltä pääsee pohjaan.
-     * Piiloutuu kun ollaan jo pohjassa, ettei se osoita sinne missä
-     * ollaan. Se on pelkkä vihje: napautuksen ottaa vastaan alakaista,
-     * ei väkänen itse (pointer-events: none).
-     */
-    /*
-     * Väkänen on nyt ITSE nappi (omistajan päätös 9.8.2026:
-     * "ota alareunan napautus pois. Sen sijaan kevyt kelluva nuoli
-     * väkänen alaspäin jolla pääsisi sivun loppuun") — napautuskaista
-     * poistui kokonaan, koska iPadilla vierityksen pysäyttävä sormi
-     * laukaisi sen yhä 350 ms:n vahdista huolimatta.
-     */
-    const vakanen = html('button', 'tutki-pohjaan');
-    vakanen.type = 'button';
-    vakanen.setAttribute('aria-label', 'Vieritä sivun loppuun');
-    vakanen.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9 L12 15 L18 9" fill="none"'
-      + ' stroke="currentColor" stroke-width="2" stroke-linecap="round"'
-      + ' stroke-linejoin="round"/></svg>';
-    this.arrivalDialog.appendChild(vakanen);
-    vakanen.addEventListener('click', (e) => {
-      e.stopPropagation();
-      kortti.scrollTo({ top: kortti.scrollHeight, behavior: this.reducedMotion ? 'auto' : 'smooth' });
-    });
-    const paivitaVakanen = () => {
-      const pohjassa = kortti.scrollTop + kortti.clientHeight >= kortti.scrollHeight - 8;
-      vakanen.hidden = pohjassa || kortti.scrollHeight <= kortti.clientHeight + 8;
+    const vierita = (ylos) => {
+      const tapa = this.reducedMotion ? 'auto' : 'smooth';
+      const lahto = kortti.scrollTop;
+      const perilla = () => (ylos ? kortti.scrollTop <= 0
+        : kortti.scrollTop + kortti.clientHeight >= kortti.scrollHeight - 1);
+      kortti.scrollTo({ top: ylos ? 0 : kortti.scrollHeight, behavior: tapa });
+      if (tapa === 'auto') return;
+      // Eräissä ympäristöissä syötteen perään käynnistetty pehmeä
+      // vieritys peruuntuu eikä lähde liikkeelle lainkaan (mitattu
+      // headless-Chromiumissa). Jos liike ei alkanut, hypätään
+      // suoraan — parempi äkkinäinen kuin olematon.
+      setTimeout(() => {
+        if (kortti.scrollTop === lahto && !perilla()) {
+          kortti.scrollTo({ top: ylos ? 0 : kortti.scrollHeight, behavior: 'auto' });
+        }
+      }, 220);
     };
-    kortti.addEventListener('scroll', paivitaVakanen, { passive: true });
-    this.arrivalDialog.addEventListener('close', () => { vakanen.hidden = true; });
-    this.tutkiVakanen = paivitaVakanen;
-    paivitaVakanen();
+    kortti.addEventListener('click', (e) => {
+      if (e.target.closest?.('button, a, input, select, textarea, img, svg')) return;
+      const korkeus = window.innerHeight || kortti.clientHeight || 0;
+      if (!korkeus) return;
+      const kaista = Math.max(56, korkeus * 0.06);
+      const otsikossa = Boolean(e.target.closest?.('#arrival-city, .aihe-nimi'));
+      if (otsikossa || e.clientY <= kaista) vierita(true);
+      else if (e.clientY >= korkeus - kaista) vierita(false);
+    });
   }
 
 
