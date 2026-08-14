@@ -1573,6 +1573,35 @@ function peliVersio() {
 const FACT_WIDTH = 340; // pidettävä samana kuin .fact-card css:ssä
 const TURN_WIDTH = 560; // pidettävä samana kuin .turn-card css:ssä
 
+/*
+ * KARUSELLIN ESILATAUS (omistajan tilaus 14.8.2026): "kun sivulle
+ * aukeaa mikä tahansa kuvakaruselli, kuvat pitäisi ladata taustalla
+ * heti valmiiksi, jotta kuvien selaus olisi mahdollisimman nopeaa."
+ *
+ * Selain lataa kuvan heti kun Image-oliolle annetaan osoite; olio
+ * pidetään joukossa latauksen ajan, ettei keräilijä pääse perumaan
+ * kesken jäänyttä latausta. Sama osoite esiladataan vain kerran per
+ * istunto — karusellit avataan usein uudelleen, eikä välimuistissa
+ * jo olevaa kannata edes pyytää. Muistikirjanpito katkaistaan tuhannen
+ * osoitteen kohdalla; se on kirjanpidon raja, ei latauksen.
+ */
+const esiladatut = new Set();
+const esilataukset = new Set();
+function esilataaKuvat(osoitteet) {
+  for (const osoite of osoitteet ?? []) {
+    if (!osoite || esiladatut.has(osoite)) continue;
+    if (esiladatut.size >= 1000) esiladatut.clear();
+    esiladatut.add(osoite);
+    const kuva = new Image();
+    kuva.decoding = 'async';
+    esilataukset.add(kuva);
+    const valmis = () => esilataukset.delete(kuva);
+    kuva.addEventListener('load', valmis, { once: true });
+    kuva.addEventListener('error', valmis, { once: true });
+    kuva.src = osoite;
+  }
+}
+
 // Tapahtumakuplien äänet.
 const EVENT_SOUND = { fare: 'ferry', flight: 'flight', aid: 'coin', stuck: 'stuck' };
 
@@ -8691,6 +8720,8 @@ export class UI {
           this.arrivalKuvat = lista;
           this.arrivalKuvaKohdalla = Math.max(0, lista.findIndex((k) => k.src === image));
           this.paivitaKuvaLaskuri();
+          // Koko galleria latautuu taustalla heti — selaus ei odota verkkoa.
+          esilataaKuvat(lista.map((k) => k.src));
         });
       }
       // Oma lyhytnosto voittaa wikin automaattikatkelman (pilottikaupungit).
@@ -9290,6 +9321,9 @@ export class UI {
     const lista = (teokset?.length ?? 0) > 1 ? teokset : null;
     let indeksi = Math.max(0, Math.min(kohdalla, (lista?.length ?? 1) - 1));
     let laskuri = null;
+    // Sarjan kaikki suurennokset latautuvat taustalla heti, jotta
+    // selaus ei odota verkkoa (omistajan tilaus 14.8.2026).
+    if (lista) esilataaKuvat(lista.map((t) => valokuvaSuurennos(t.tiedosto, 1600)));
     const nayta = () => {
       const teos = lista ? lista[indeksi] : nosto;
       /*
@@ -11762,6 +11796,9 @@ export class UI {
     const kehys = html('figure', 'nahtavyys-kuvakehys nahtavyys-karuselli');
     const ikkuna = html('div', 'karuselli-ikkuna');
     const teksti = html('figcaption', 'nahtavyys-kuvateksti');
+    // Sarjan kaikki kuvat latautuvat taustalla heti — sama osoite ja
+    // leveys kuin varustaNostonKuvassa, jotta välimuisti osuu.
+    esilataaKuvat(kuvat.map((k) => valokuvaUrl(k.tiedosto, 900)));
     let kohta = 0;
     let el = null;
 
@@ -12168,6 +12205,8 @@ export class UI {
       this.wikiImage.hidden = false;
       this.wikiKuvakotelo.hidden = false;
       this.paivitaWikiKuvaLaskuri();
+      // Loput karusellin kuvat latautuvat taustalla heti.
+      esilataaKuvat(this.wikiKuvat.map((k) => k.src));
     }
     /*
      * Käsin kirjoitettu maastoartikkeli (js/packs/maasto-tekstit.js)
@@ -12227,6 +12266,8 @@ export class UI {
           this.wikiKuvat = lista;
           this.wikiKuvaKohdalla = Math.max(0, lista.findIndex((k) => k.src === image));
           this.paivitaWikiKuvaLaskuri();
+          // Koko galleria latautuu taustalla heti — selaus ei odota verkkoa.
+          esilataaKuvat(lista.map((k) => k.src));
         });
       });
     }
