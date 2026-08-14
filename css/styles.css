@@ -8054,6 +8054,57 @@ button.lukija-nappi.lukee,
   box-shadow: 0 0 0 2px rgba(70, 51, 31, 0.28);
 }
 
+/* ── Lukijan ohjauspaneeli (omistajan tilaus 14.8.2026) ───────────
+ * Aukeaa kaiutinnapin alle luennan ajaksi: tauko/jatka, kappale
+ * taakse ja eteen, kappalelaskuri ja lopetus. Sama paperinen sävy
+ * kuin kaiuttimella, selvästi napakammat osumapinnat. */
+.lukija-paneeli {
+  position: absolute;
+  top: calc(max(0.45rem, env(safe-area-inset-top, 0px)) + 2rem);
+  right: max(0.5rem, env(safe-area-inset-right, 0px));
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 1.4rem;
+  background: rgba(246, 231, 198, 0.94);
+  box-shadow: 0 3px 12px rgba(40, 28, 14, 0.24);
+}
+
+.lukija-paneeli .lukija-paneeli-nappi {
+  width: 2.1rem;
+  height: 2.1rem;
+  min-height: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: rgba(70, 51, 31, 0.82);
+  box-shadow: none;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.lukija-paneeli .lukija-paneeli-nappi:hover:not(:disabled),
+.lukija-paneeli .lukija-paneeli-nappi:focus-visible {
+  background: rgba(234, 184, 78, 0.3);
+  color: rgba(70, 51, 31, 1);
+}
+
+.lukija-paneeli .viiva-ikoni svg { width: 1.2rem; height: 1.2rem; }
+
+.lukija-paneeli .lukija-kappalerivi {
+  min-width: 2.3rem;
+  text-align: center;
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  color: rgba(70, 51, 31, 0.72);
+  user-select: none;
+}
+
 /* ── Isoisän sitaatit visassa ja aarteessa ────────────────────────
  * Matkakirja lainaa pelkkää isoisän tarinaa (omistajan päätös
  * 8.8.2026); nimiö kertoo kehyksen, sitaatti on kursiivia kuin

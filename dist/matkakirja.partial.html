@@ -8057,6 +8057,57 @@ button.lukija-nappi.lukee,
   box-shadow: 0 0 0 2px rgba(70, 51, 31, 0.28);
 }
 
+/* ── Lukijan ohjauspaneeli (omistajan tilaus 14.8.2026) ───────────
+ * Aukeaa kaiutinnapin alle luennan ajaksi: tauko/jatka, kappale
+ * taakse ja eteen, kappalelaskuri ja lopetus. Sama paperinen sävy
+ * kuin kaiuttimella, selvästi napakammat osumapinnat. */
+.lukija-paneeli {
+  position: absolute;
+  top: calc(max(0.45rem, env(safe-area-inset-top, 0px)) + 2rem);
+  right: max(0.5rem, env(safe-area-inset-right, 0px));
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 1.4rem;
+  background: rgba(246, 231, 198, 0.94);
+  box-shadow: 0 3px 12px rgba(40, 28, 14, 0.24);
+}
+
+.lukija-paneeli .lukija-paneeli-nappi {
+  width: 2.1rem;
+  height: 2.1rem;
+  min-height: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: rgba(70, 51, 31, 0.82);
+  box-shadow: none;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.lukija-paneeli .lukija-paneeli-nappi:hover:not(:disabled),
+.lukija-paneeli .lukija-paneeli-nappi:focus-visible {
+  background: rgba(234, 184, 78, 0.3);
+  color: rgba(70, 51, 31, 1);
+}
+
+.lukija-paneeli .viiva-ikoni svg { width: 1.2rem; height: 1.2rem; }
+
+.lukija-paneeli .lukija-kappalerivi {
+  min-width: 2.3rem;
+  text-align: center;
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  color: rgba(70, 51, 31, 0.72);
+  user-select: none;
+}
+
 /* ── Isoisän sitaatit visassa ja aarteessa ────────────────────────
  * Matkakirja lainaa pelkkää isoisän tarinaa (omistajan päätös
  * 8.8.2026); nimiö kertoo kehyksen, sitaatti on kursiivia kuin
@@ -154198,11 +154249,18 @@ async function haePala(teksti, persoona, sailio = null) {
  * soittaa palat järjestyksessä jaetulla audioelementillä. Seuraavaa
  * palaa haetaan edellisen soidessa (yksi etuhaku kerrallaan).
  *
+ * KAPPALEET JA OHJAUS (omistajan tilaus 14.8.2026: lukijalle
+ * säätöpaneeli, "pause ja kappaleen vaihdot"). Rivinvaihto luettavassa
+ * tekstissä on kappaleen raja (lukija erottaa otsikot ja kappaleet
+ * rivinvaihdoilla), ja jokainen pala muistaa kappaleensa — tauko,
+ * jatko ja kappalehypyt toimivat palarajojen tarkkuudella.
+ *
  * @param {{
  *   persoona?: string,
  *   sailio?: string|null pysyvän säilön lohko; null = ei säilötä
  *   onLoppu?: () => void,
  *   onVirhe?: (vaihe: 'alku'|'kesken') => void,
+ *   onTila?: (t: {tauolla: boolean, kappale: number, kappaleita: number}) => void,
  * }} asetukset
  * @returns {{
  *   lisaa(teksti: string): void,
@@ -154210,27 +154268,41 @@ async function haePala(teksti, persoona, sailio = null) {
  *   pysayta(): void,
  *   tauko(): void,
  *   jatka(): void,
+ *   tauolla(): boolean,
+ *   siirryKappale(askel: number): void,
  * }|null}
  */
 function luoPuheSoitin({
-  persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null,
+  persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
 } = {}) {
   if (!puheTuettu()) return null;
   const audio = haeElementti();
   if (!audio) return null;
 
-  const palat = [];
+  const palat = []; // { teksti, kappale }
   const haut = new Map(); // palaindeksi → Promise<blob-osoite>
   const tila = {
     peruttu: false,
     paatetty: false,
     soi: false,
+    tauolla: false,
     kohdalla: 0, // seuraavaksi soitettavan palan indeksi
+    soiva: -1, // parhaillaan soivan palan indeksi
+    kappaleita: 0,
+    puraKuuntelijat: null, // soivan palan ended/error-kuuntelijat irti
+  };
+
+  const ilmoita = () => {
+    if (!onTila || tila.peruttu) return;
+    const kappale = palat[tila.soiva]?.kappale ?? palat[tila.kohdalla]?.kappale ?? 0;
+    try {
+      onTila({ tauolla: tila.tauolla, kappale, kappaleita: tila.kappaleita });
+    } catch { /* paneelin virhe ei saa kaataa luentaa */ }
   };
 
   const hae = (indeksi) => {
     if (indeksi >= palat.length || haut.has(indeksi)) return;
-    haut.set(indeksi, haePala(palat[indeksi], persoona, sailio));
+    haut.set(indeksi, haePala(palat[indeksi].teksti, persoona, sailio));
     // Hylkäys käsitellään soittovuorossa; tämä estää vain
     // "unhandled rejection" -kohinan konsoliin.
     haut.get(indeksi).catch(() => {});
@@ -154243,20 +154315,23 @@ function luoPuheSoitin({
   };
 
   const soitaSeuraava = async () => {
-    if (tila.peruttu) return;
+    if (tila.peruttu || tila.tauolla) return;
     if (tila.kohdalla >= palat.length) {
       tila.soi = false;
+      tila.soiva = -1;
       if (tila.paatetty) loppu();
       return;
     }
     tila.soi = true;
     const indeksi = tila.kohdalla;
     tila.kohdalla += 1;
+    tila.soiva = indeksi;
     hae(indeksi);
     // Kaksi palaa etukäteen: alun lyhyet palat soivat nopeasti, eikä
     // generointi saa jäädä niistä jälkeen (outo tauko otsikon perässä).
     hae(indeksi + 1);
     hae(indeksi + 2);
+    ilmoita();
     let osoite;
     try {
       osoite = await haut.get(indeksi);
@@ -154271,7 +154346,7 @@ function luoPuheSoitin({
       onVirhe?.(vaihe);
       return;
     }
-    if (tila.peruttu) return;
+    if (tila.peruttu || tila.tauolla || tila.soiva !== indeksi) return;
     // Nukahtanut äänipiiri hereille (iOS taustalta paluu) ja tuore
     // voimakkuus joka palaan — säätö osuu myös kesken luennan.
     if (piiri?.state === 'suspended') piiri.resume?.().catch?.(() => {});
@@ -154283,6 +154358,11 @@ function luoPuheSoitin({
       if (tila.peruttu) return;
       soitaSeuraava();
     };
+    tila.puraKuuntelijat = () => {
+      audio.removeEventListener('ended', valmis);
+      audio.removeEventListener('error', valmis);
+      tila.puraKuuntelijat = null;
+    };
     audio.addEventListener('ended', valmis);
     audio.addEventListener('error', valmis);
     try {
@@ -154290,36 +154370,67 @@ function luoPuheSoitin({
     } catch {
       // Soittolupa puuttui (ele ehti vanheta). Ei estolippua — kyse ei
       // ole palvelusta — mutta luenta päättyy, ettei jono pyöri tyhjää.
-      audio.removeEventListener('ended', valmis);
-      audio.removeEventListener('error', valmis);
+      tila.puraKuuntelijat?.();
       tila.soi = false;
       tila.peruttu = true;
       onVirhe?.(indeksi === 0 ? 'alku' : 'kesken');
     }
   };
 
+  /** Pilkkoo lisätyn tekstin kappaleiksi ja paloiksi kappaletiedolla. */
+  const pilkoPaloiksi = (teksti) => {
+    const uudet = [];
+    for (const rivi of String(teksti ?? '').split('\n')) {
+      if (!rivi.trim()) continue;
+      const kappale = tila.kappaleita;
+      tila.kappaleita += 1;
+      // Porrastus katsoo KOKO jonon pituutta: alun palat pieniä,
+      // loput täysiä (ks. niputaRampilla — sama porrastus käsin,
+      // koska kappaleraja ei saa kadota niputuksessa).
+      const portaat = [240, 480];
+      let kertyma = '';
+      const tyonna = () => {
+        if (!kertyma) return;
+        uudet.push({ teksti: kertyma, kappale });
+        kertyma = '';
+      };
+      for (const virke of paloitteleVirkkeiksi(rivi)) {
+        const jonossa = palat.length + uudet.length;
+        if (!jonossa && !kertyma) {
+          uudet.push({ teksti: virke, kappale });
+          continue;
+        }
+        const raja = portaat[jonossa - 1] ?? PUHE_PALA_KATTO;
+        if (kertyma && kertyma.length + virke.length + 1 > raja) {
+          tyonna();
+          kertyma = virke;
+          continue;
+        }
+        kertyma = kertyma ? `${kertyma} ${virke}` : virke;
+      }
+      tyonna();
+    }
+    return uudet;
+  };
+
   return {
     lisaa(teksti) {
       if (tila.peruttu || tila.paatetty) return;
-      // Porrastettu palakoko vain luennan alkuun: myöhemmät lisäykset
-      // (striimi) niputetaan täydellä katolla, koska ääni on jo
-      // etumatkalla.
-      const uudet = palat.length
-        ? niputaPalat(paloitteleVirkkeiksi(teksti))
-        : niputaRampilla(paloitteleVirkkeiksi(teksti));
+      const uudet = pilkoPaloiksi(teksti);
       if (!uudet.length) return;
       palat.push(...uudet);
-      if (!tila.soi) soitaSeuraava();
+      if (!tila.soi && !tila.tauolla) soitaSeuraava();
       else hae(tila.kohdalla); // varmista että seuraava on jo tulossa
     },
     paata() {
       if (tila.peruttu || tila.paatetty) return;
       tila.paatetty = true;
-      if (!tila.soi && tila.kohdalla >= palat.length) loppu();
+      if (!tila.soi && !tila.tauolla && tila.kohdalla >= palat.length) loppu();
     },
     pysayta() {
       if (tila.peruttu) return;
       tila.peruttu = true;
+      tila.puraKuuntelijat?.();
       try {
         audio.pause();
         audio.removeAttribute('src');
@@ -154327,13 +154438,59 @@ function luoPuheSoitin({
       } catch { /* puheElementti oli jo tyhjä */ }
     },
     tauko() {
+      if (tila.peruttu || tila.tauolla) return;
+      tila.tauolla = true;
       try {
         audio.pause();
       } catch { /* ei soinut */ }
+      ilmoita();
     },
     jatka() {
-      if (tila.peruttu) return;
-      audio.play().catch(() => {});
+      if (tila.peruttu || !tila.tauolla) return;
+      tila.tauolla = false;
+      ilmoita();
+      // Kesken palan pysäytetty jatkuu samasta kohdasta; palojen
+      // välissä pysäytetty jatkaa seuraavasta palasta.
+      if (tila.soi && audio.paused && audio.currentTime > 0 && !audio.ended) {
+        audio.play().catch(() => {});
+      } else {
+        soitaSeuraava();
+      }
+    },
+    tauolla() {
+      return tila.tauolla;
+    },
+    /** Sen hetkinen tila paneelin ensipiirtoa varten. */
+    tilanne() {
+      const kappale = palat[tila.soiva]?.kappale
+        ?? palat[Math.min(tila.kohdalla, palat.length - 1)]?.kappale ?? 0;
+      return { tauolla: tila.tauolla, kappale, kappaleita: tila.kappaleita };
+    },
+    /**
+     * Kappalehyppy: +1 seuraavan kappaleen alkuun, -1 nykyisen
+     * kappaleen alkuun (tai edelliseen, jos ollaan jo alussa) —
+     * sama logiikka kuin levysoittimen kelauksessa.
+     */
+    siirryKappale(askel) {
+      if (tila.peruttu || !palat.length) return;
+      const nykyinen = palat[tila.soiva]?.kappale
+        ?? palat[Math.min(tila.kohdalla, palat.length - 1)]?.kappale ?? 0;
+      let kohde = nykyinen + (askel > 0 ? 1 : 0);
+      if (askel < 0) {
+        const alku = palat.findIndex((p) => p.kappale === nykyinen);
+        kohde = (tila.soiva === alku && nykyinen > 0) ? nykyinen - 1 : nykyinen;
+      }
+      const indeksi = palat.findIndex((p) => p.kappale === kohde);
+      if (indeksi < 0) return; // kohdekappaletta ei (vielä) ole
+      tila.puraKuuntelijat?.();
+      try {
+        audio.pause();
+      } catch { /* ei soinut */ }
+      tila.kohdalla = indeksi;
+      tila.soiva = -1;
+      tila.soi = false;
+      tila.tauolla = false;
+      soitaSeuraava();
     },
   };
 }
@@ -154759,6 +154916,7 @@ function pysaytaLukija() {
     /* taustajärjestelmä oli jo hiljaa */
   }
   merkitseTila(nyt.nappi, false);
+  suljeOhjain();
   // Loppukoukku myös pysäytettäessä: kutsuja (esim. taustamusiikin
   // vaimennus) tarvitsee signaalin JOKAISESTA loppupolusta.
   nyt.kunLoppuu?.();
@@ -154823,23 +154981,26 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
     merkitseTila(nappi, false);
+    suljeOhjain();
     kunLoppuu?.();
   };
   const soitin = luoPuheSoitin({
     persoona,
     sailio,
     onLoppu: loppui,
+    onTila: (t) => paivitaOhjain(merkki, t),
     onVirhe: (vaihe) => {
       if (ajossa?.merkki !== merkki) return;
       ajossa = null;
       merkitseTila(nappi, false);
+      suljeOhjain();
       if (vaihe === 'alku' && lueLaitteella(puhuttava, nappi, kunLoppuu)) return;
       kunLoppuu?.();
     },
   });
   if (!soitin) return false;
   ajossa = {
-    nappi, merkki, kunLoppuu, lopeta: () => soitin.pysayta(),
+    nappi, merkki, kunLoppuu, soitin, lopeta: () => soitin.pysayta(),
   };
   soitin.lisaa(puhuttava);
   soitin.paata();
@@ -155118,6 +155279,112 @@ const KAIUTIN_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
 const LUE_OTSIKKO = 'Kuuntele sivu';
 const SEIS_OTSIKKO = 'Lopeta kuuntelu';
 
+/* ------------------------------------------------------------------ */
+/* Lukijan ohjauspaneeli (omistajan tilaus 14.8.2026)                  */
+/* ------------------------------------------------------------------ */
+
+/*
+ * Kaiutinnapin painallus avaa lukijaäänellä pienen ohjauspaneelin
+ * napin alle: tauko/jatka, kappale taakse ja eteen, kappalelaskuri ja
+ * lopetus. Paneeli elää vain luennan ajan — se sulkeutuu, kun luenta
+ * päättyy, pysäytetään tai dialogi sulkeutuu. Laitteen oman äänen
+ * varapolulla paneelia ei ole (sillä ei ole taukoa eikä kappaleita) —
+ * nappi toimii silloin entiseen tapaan kytkimenä.
+ */
+const OHJAIN_PIIRROT = {
+  tauko: '<path d="M8.6 6.4v11.2"/><path d="M15.4 6.4v11.2"/>',
+  jatka: '<path d="M8.6 6.2 17.2 12l-8.6 5.8z"/>',
+  edellinen: '<path d="M7.4 6.6v10.8"/><path d="M17 6.8 10.2 12l6.8 5.2z"/>',
+  seuraava: '<path d="M16.6 6.6v10.8"/><path d="M7 6.8l6.8 5.2L7 17.2z"/>',
+  sulje: '<path d="M7.2 7.2l9.6 9.6"/><path d="M16.8 7.2 7.2 16.8"/>',
+};
+
+function ohjainIkoni(nimi) {
+  return '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
+    + ' stroke="currentColor" stroke-width="1.6" stroke-linecap="round"'
+    + ` stroke-linejoin="round">${OHJAIN_PIIRROT[nimi]}</svg>`;
+}
+
+/** Avoin paneeli: { elementti, merkki, taukoNappi, kappaleRivi, … } tai null. */
+let ohjain = null;
+
+function suljeOhjain() {
+  if (!ohjain) return;
+  ohjain.elementti.remove();
+  ohjain = null;
+}
+
+/** Paneelin tila soittimen ilmoituksesta (tauko/jatka, kappalelaskuri). */
+function paivitaOhjain(merkki, t) {
+  if (!ohjain || ohjain.merkki !== merkki) return;
+  const nimi = t.tauolla ? 'Jatka kuuntelua' : 'Tauko';
+  ohjain.taukoNappi.innerHTML = '<span class="icon-glyph viiva-ikoni">'
+    + `${ohjainIkoni(t.tauolla ? 'jatka' : 'tauko')}</span>`;
+  ohjain.taukoNappi.title = nimi;
+  ohjain.taukoNappi.setAttribute('aria-label', nimi);
+  // Kappalehypyt ja laskuri vain, kun kappaleita on useampi — yhden
+  // kappaleen merkinnällä nuolet olisivat kuollutta pintaa.
+  const monta = t.kappaleita > 1;
+  ohjain.edellinen.hidden = !monta;
+  ohjain.seuraava.hidden = !monta;
+  ohjain.kappaleRivi.hidden = !monta;
+  if (monta) ohjain.kappaleRivi.textContent = `${t.kappale + 1}/${t.kappaleita}`;
+}
+
+/**
+ * Avaa ohjauspaneelin napin viereen. Tekee jotain vain, jos juuri
+ * käynnistetty luenta kulkee lukijaäänellä (ajossa.soitin on olemassa
+ * ja kuuluu tälle napille).
+ */
+function avaaOhjain(isanta, nappi) {
+  const nyt = ajossa;
+  if (!nyt?.soitin || nyt.nappi !== nappi) return;
+  suljeOhjain();
+  const doc = isanta.ownerDocument;
+  const paneeli = doc.createElement('div');
+  paneeli.className = 'lukija-paneeli';
+  // Paneelin napautus ei saa valua taustalle (dialogin sulkijat ym.).
+  paneeli.addEventListener('click', (e) => e.stopPropagation());
+  const tee = (nimi, otsikko, toiminto) => {
+    const b = doc.createElement('button');
+    b.type = 'button';
+    b.className = 'lukija-paneeli-nappi';
+    b.title = otsikko;
+    b.setAttribute('aria-label', otsikko);
+    b.innerHTML = `<span class="icon-glyph viiva-ikoni">${ohjainIkoni(nimi)}</span>`;
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toiminto();
+    });
+    paneeli.appendChild(b);
+    return b;
+  };
+  // Toiminnot lukevat soittimen ajosta joka painalluksella: paneeli ei
+  // saa ohjata jo vaihtunutta luentaa.
+  const oma = () => (ajossa?.merkki === nyt.merkki ? ajossa.soitin : null);
+  const edellinen = tee('edellinen', 'Edellinen kappale', () => oma()?.siirryKappale(-1));
+  const taukoNappi = tee('tauko', 'Tauko', () => {
+    const soitin = oma();
+    if (!soitin) return;
+    if (soitin.tauolla()) soitin.jatka();
+    else soitin.tauko();
+  });
+  const seuraava = tee('seuraava', 'Seuraava kappale', () => oma()?.siirryKappale(1));
+  const kappaleRivi = doc.createElement('span');
+  kappaleRivi.className = 'lukija-kappalerivi';
+  kappaleRivi.hidden = true;
+  paneeli.appendChild(kappaleRivi);
+  tee('sulje', SEIS_OTSIKKO, () => pysaytaLukija());
+  isanta.appendChild(paneeli);
+  ohjain = {
+    elementti: paneeli, merkki: nyt.merkki, taukoNappi, kappaleRivi, edellinen, seuraava,
+  };
+  // Ensipiirto heti: soittimen oma ilmoitus ehti jo mennä ohi ennen
+  // paneelin syntyä, ja seuraava tulisi vasta palan vaihtuessa.
+  const alku = nyt.soitin.tilanne?.();
+  if (alku) paivitaOhjain(nyt.merkki, alku);
+}
+
 /** Napin ulkoasu ja saavutettava nimi seuraavat luennan tilaa. */
 function merkitseTila(nappi, lukee) {
   if (!nappi) return;
@@ -155172,7 +155439,11 @@ function liitaLukija(isanta, lahde, { luokka = '', nimi = LUE_OTSIKKO, seuraa = 
         return;
       }
       const teksti = napinTeksti(nappi);
-      if (teksti) lueAaneen(teksti, nappi);
+      if (!teksti) return;
+      lueAaneen(teksti, nappi);
+      // Lukijaäänellä nappi avaa myös ohjauspaneelin (tauko ja
+      // kappalehypyt); laitteen omalla äänellä paneelia ei tule.
+      avaaOhjain(isanta, nappi);
     });
     isanta.appendChild(nappi);
     /*
@@ -175323,6 +175594,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 655, teksti: 'Lukijalle säätöpaneeli: tauko ja kappalehypyt' },
   { v: 654, teksti: 'Merkinnät lukijaäänellä, äänitteet varalle, ääni ylös' },
   { v: 653, teksti: 'Lukijaääni: puhesynteesi kaiuttimiin ja pöllöön' },
   { v: 652, teksti: 'wikin kuvasuurennos täyteen kokoon iPadilla' },
@@ -176072,7 +176344,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.654';
+const APP_VERSION = '2026-08-09.655';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

@@ -416,11 +416,18 @@ async function haePala(teksti, persoona, sailio = null) {
  * soittaa palat järjestyksessä jaetulla audioelementillä. Seuraavaa
  * palaa haetaan edellisen soidessa (yksi etuhaku kerrallaan).
  *
+ * KAPPALEET JA OHJAUS (omistajan tilaus 14.8.2026: lukijalle
+ * säätöpaneeli, "pause ja kappaleen vaihdot"). Rivinvaihto luettavassa
+ * tekstissä on kappaleen raja (lukija erottaa otsikot ja kappaleet
+ * rivinvaihdoilla), ja jokainen pala muistaa kappaleensa — tauko,
+ * jatko ja kappalehypyt toimivat palarajojen tarkkuudella.
+ *
  * @param {{
  *   persoona?: string,
  *   sailio?: string|null pysyvän säilön lohko; null = ei säilötä
  *   onLoppu?: () => void,
  *   onVirhe?: (vaihe: 'alku'|'kesken') => void,
+ *   onTila?: (t: {tauolla: boolean, kappale: number, kappaleita: number}) => void,
  * }} asetukset
  * @returns {{
  *   lisaa(teksti: string): void,
@@ -428,27 +435,41 @@ async function haePala(teksti, persoona, sailio = null) {
  *   pysayta(): void,
  *   tauko(): void,
  *   jatka(): void,
+ *   tauolla(): boolean,
+ *   siirryKappale(askel: number): void,
  * }|null}
  */
 export function luoPuheSoitin({
-  persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null,
+  persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
 } = {}) {
   if (!puheTuettu()) return null;
   const audio = haeElementti();
   if (!audio) return null;
 
-  const palat = [];
+  const palat = []; // { teksti, kappale }
   const haut = new Map(); // palaindeksi → Promise<blob-osoite>
   const tila = {
     peruttu: false,
     paatetty: false,
     soi: false,
+    tauolla: false,
     kohdalla: 0, // seuraavaksi soitettavan palan indeksi
+    soiva: -1, // parhaillaan soivan palan indeksi
+    kappaleita: 0,
+    puraKuuntelijat: null, // soivan palan ended/error-kuuntelijat irti
+  };
+
+  const ilmoita = () => {
+    if (!onTila || tila.peruttu) return;
+    const kappale = palat[tila.soiva]?.kappale ?? palat[tila.kohdalla]?.kappale ?? 0;
+    try {
+      onTila({ tauolla: tila.tauolla, kappale, kappaleita: tila.kappaleita });
+    } catch { /* paneelin virhe ei saa kaataa luentaa */ }
   };
 
   const hae = (indeksi) => {
     if (indeksi >= palat.length || haut.has(indeksi)) return;
-    haut.set(indeksi, haePala(palat[indeksi], persoona, sailio));
+    haut.set(indeksi, haePala(palat[indeksi].teksti, persoona, sailio));
     // Hylkäys käsitellään soittovuorossa; tämä estää vain
     // "unhandled rejection" -kohinan konsoliin.
     haut.get(indeksi).catch(() => {});
@@ -461,20 +482,23 @@ export function luoPuheSoitin({
   };
 
   const soitaSeuraava = async () => {
-    if (tila.peruttu) return;
+    if (tila.peruttu || tila.tauolla) return;
     if (tila.kohdalla >= palat.length) {
       tila.soi = false;
+      tila.soiva = -1;
       if (tila.paatetty) loppu();
       return;
     }
     tila.soi = true;
     const indeksi = tila.kohdalla;
     tila.kohdalla += 1;
+    tila.soiva = indeksi;
     hae(indeksi);
     // Kaksi palaa etukäteen: alun lyhyet palat soivat nopeasti, eikä
     // generointi saa jäädä niistä jälkeen (outo tauko otsikon perässä).
     hae(indeksi + 1);
     hae(indeksi + 2);
+    ilmoita();
     let osoite;
     try {
       osoite = await haut.get(indeksi);
@@ -489,7 +513,7 @@ export function luoPuheSoitin({
       onVirhe?.(vaihe);
       return;
     }
-    if (tila.peruttu) return;
+    if (tila.peruttu || tila.tauolla || tila.soiva !== indeksi) return;
     // Nukahtanut äänipiiri hereille (iOS taustalta paluu) ja tuore
     // voimakkuus joka palaan — säätö osuu myös kesken luennan.
     if (piiri?.state === 'suspended') piiri.resume?.().catch?.(() => {});
@@ -501,6 +525,11 @@ export function luoPuheSoitin({
       if (tila.peruttu) return;
       soitaSeuraava();
     };
+    tila.puraKuuntelijat = () => {
+      audio.removeEventListener('ended', valmis);
+      audio.removeEventListener('error', valmis);
+      tila.puraKuuntelijat = null;
+    };
     audio.addEventListener('ended', valmis);
     audio.addEventListener('error', valmis);
     try {
@@ -508,36 +537,67 @@ export function luoPuheSoitin({
     } catch {
       // Soittolupa puuttui (ele ehti vanheta). Ei estolippua — kyse ei
       // ole palvelusta — mutta luenta päättyy, ettei jono pyöri tyhjää.
-      audio.removeEventListener('ended', valmis);
-      audio.removeEventListener('error', valmis);
+      tila.puraKuuntelijat?.();
       tila.soi = false;
       tila.peruttu = true;
       onVirhe?.(indeksi === 0 ? 'alku' : 'kesken');
     }
   };
 
+  /** Pilkkoo lisätyn tekstin kappaleiksi ja paloiksi kappaletiedolla. */
+  const pilkoPaloiksi = (teksti) => {
+    const uudet = [];
+    for (const rivi of String(teksti ?? '').split('\n')) {
+      if (!rivi.trim()) continue;
+      const kappale = tila.kappaleita;
+      tila.kappaleita += 1;
+      // Porrastus katsoo KOKO jonon pituutta: alun palat pieniä,
+      // loput täysiä (ks. niputaRampilla — sama porrastus käsin,
+      // koska kappaleraja ei saa kadota niputuksessa).
+      const portaat = [240, 480];
+      let kertyma = '';
+      const tyonna = () => {
+        if (!kertyma) return;
+        uudet.push({ teksti: kertyma, kappale });
+        kertyma = '';
+      };
+      for (const virke of paloitteleVirkkeiksi(rivi)) {
+        const jonossa = palat.length + uudet.length;
+        if (!jonossa && !kertyma) {
+          uudet.push({ teksti: virke, kappale });
+          continue;
+        }
+        const raja = portaat[jonossa - 1] ?? PUHE_PALA_KATTO;
+        if (kertyma && kertyma.length + virke.length + 1 > raja) {
+          tyonna();
+          kertyma = virke;
+          continue;
+        }
+        kertyma = kertyma ? `${kertyma} ${virke}` : virke;
+      }
+      tyonna();
+    }
+    return uudet;
+  };
+
   return {
     lisaa(teksti) {
       if (tila.peruttu || tila.paatetty) return;
-      // Porrastettu palakoko vain luennan alkuun: myöhemmät lisäykset
-      // (striimi) niputetaan täydellä katolla, koska ääni on jo
-      // etumatkalla.
-      const uudet = palat.length
-        ? niputaPalat(paloitteleVirkkeiksi(teksti))
-        : niputaRampilla(paloitteleVirkkeiksi(teksti));
+      const uudet = pilkoPaloiksi(teksti);
       if (!uudet.length) return;
       palat.push(...uudet);
-      if (!tila.soi) soitaSeuraava();
+      if (!tila.soi && !tila.tauolla) soitaSeuraava();
       else hae(tila.kohdalla); // varmista että seuraava on jo tulossa
     },
     paata() {
       if (tila.peruttu || tila.paatetty) return;
       tila.paatetty = true;
-      if (!tila.soi && tila.kohdalla >= palat.length) loppu();
+      if (!tila.soi && !tila.tauolla && tila.kohdalla >= palat.length) loppu();
     },
     pysayta() {
       if (tila.peruttu) return;
       tila.peruttu = true;
+      tila.puraKuuntelijat?.();
       try {
         audio.pause();
         audio.removeAttribute('src');
@@ -545,13 +605,59 @@ export function luoPuheSoitin({
       } catch { /* puheElementti oli jo tyhjä */ }
     },
     tauko() {
+      if (tila.peruttu || tila.tauolla) return;
+      tila.tauolla = true;
       try {
         audio.pause();
       } catch { /* ei soinut */ }
+      ilmoita();
     },
     jatka() {
-      if (tila.peruttu) return;
-      audio.play().catch(() => {});
+      if (tila.peruttu || !tila.tauolla) return;
+      tila.tauolla = false;
+      ilmoita();
+      // Kesken palan pysäytetty jatkuu samasta kohdasta; palojen
+      // välissä pysäytetty jatkaa seuraavasta palasta.
+      if (tila.soi && audio.paused && audio.currentTime > 0 && !audio.ended) {
+        audio.play().catch(() => {});
+      } else {
+        soitaSeuraava();
+      }
+    },
+    tauolla() {
+      return tila.tauolla;
+    },
+    /** Sen hetkinen tila paneelin ensipiirtoa varten. */
+    tilanne() {
+      const kappale = palat[tila.soiva]?.kappale
+        ?? palat[Math.min(tila.kohdalla, palat.length - 1)]?.kappale ?? 0;
+      return { tauolla: tila.tauolla, kappale, kappaleita: tila.kappaleita };
+    },
+    /**
+     * Kappalehyppy: +1 seuraavan kappaleen alkuun, -1 nykyisen
+     * kappaleen alkuun (tai edelliseen, jos ollaan jo alussa) —
+     * sama logiikka kuin levysoittimen kelauksessa.
+     */
+    siirryKappale(askel) {
+      if (tila.peruttu || !palat.length) return;
+      const nykyinen = palat[tila.soiva]?.kappale
+        ?? palat[Math.min(tila.kohdalla, palat.length - 1)]?.kappale ?? 0;
+      let kohde = nykyinen + (askel > 0 ? 1 : 0);
+      if (askel < 0) {
+        const alku = palat.findIndex((p) => p.kappale === nykyinen);
+        kohde = (tila.soiva === alku && nykyinen > 0) ? nykyinen - 1 : nykyinen;
+      }
+      const indeksi = palat.findIndex((p) => p.kappale === kohde);
+      if (indeksi < 0) return; // kohdekappaletta ei (vielä) ole
+      tila.puraKuuntelijat?.();
+      try {
+        audio.pause();
+      } catch { /* ei soinut */ }
+      tila.kohdalla = indeksi;
+      tila.soiva = -1;
+      tila.soi = false;
+      tila.tauolla = false;
+      soitaSeuraava();
     },
   };
 }
