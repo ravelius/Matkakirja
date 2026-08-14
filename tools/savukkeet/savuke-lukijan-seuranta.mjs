@@ -151,19 +151,41 @@ vaadi('kappalehypyn jälkeen kuuluva kohta on näkymän yläosassa (sivu seuraa 
 mkdirSync('/tmp/matkakirja-kaappaukset', { recursive: true });
 await sivu.screenshot({ path: '/tmp/matkakirja-kaappaukset/lukijan-seuranta.png' });
 
-// 4. Pysäytys siivoaa maalauksen.
+// 4. Kaiutin vipuaa soittimen piiloon ja näkyviin luentaa katkaisematta.
+//    (Paneeli voi olla jo piiloutunut itsekseen — testataan tilan
+//    kääntyminen kahdesti, ei tiettyä alkutilaa.)
+const vipu = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const nappi = document.querySelector('#arrival-dialog .lukija-nappi.lukee');
+  const tila = () => document.querySelector('.lukija-paneeli')?.hidden === true;
+  const alku = tila();
+  nappi?.click();
+  await odota(250);
+  const kaantyi = tila() === !alku;
+  const lukeeYha = Boolean(document.querySelector('#arrival-dialog .lukija-nappi.lukee'));
+  nappi?.click();
+  await odota(250);
+  const palasi = tila() === alku;
+  return { alku, kaantyi, lukeeYha, palasi };
+});
+vaadi('kaiutin piilottaa ja näyttää soittimen luentaa katkaisematta',
+  vipu.kaantyi && vipu.lukeeYha && vipu.palasi, JSON.stringify(vipu));
+
+// 5. Pysäytys (paneelin rasti) siivoaa maalauksen.
 const siivous = await sivu.evaluate(async () => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
-  document.querySelector('#arrival-dialog .lukija-nappi.lukee')?.click();
+  const napit = [...document.querySelectorAll('.lukija-paneeli .lukija-paneeli-nappi')];
+  napit.find((b) => /Lopeta kuuntelu/.test(b.title))?.click();
   await odota(400);
   return {
     kohdallaJaljella: Boolean(document.querySelector('.lukija-kohdalla')),
     maalattu: Boolean(window.CSS?.highlights?.has?.('lukija-luenta')),
     paneeli: Boolean(document.querySelector('.lukija-paneeli')),
+    lukee: Boolean(document.querySelector('#arrival-dialog .lukija-nappi.lukee')),
   };
 });
-vaadi('pysäytys poistaa maalauksen, kohtaluokan ja paneelin',
-  !siivous.kohdallaJaljella && !siivous.maalattu && !siivous.paneeli,
+vaadi('pysäytys (paneelin rasti) poistaa maalauksen, kohtaluokan ja paneelin',
+  !siivous.kohdallaJaljella && !siivous.maalattu && !siivous.paneeli && !siivous.lukee,
   JSON.stringify(siivous));
 
 await selain.close();

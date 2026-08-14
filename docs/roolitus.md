@@ -48,13 +48,26 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 
 ## Viestintä sessioiden välillä
 
-- Kanava: `mcp__Claude_Code_Remote__create_trigger` +
-  `fire_trigger`, kohteena vastaanottajan `persistent_session_id`.
-- **Joutilaalle sessiolle viesti voi laukaista heti; työskentelevälle
-  ajastetaan `run_once_at` ~2 min päähän** — käsilaukaisu kesken
-  vuoron polkaisee irtosession, joka ei tavoita ketään.
-- Varareitti, jos työkalut puuttuvat vuorosta: kirjoita
-  `docs/viesti-<vastaanottaja>.md` omalle haaralle ja pushaa.
+**TYÖSESSIOT EIVÄT KÄYTÄ TRIGGER-TYÖKALUJA (omistajan sitova ohje
+15.8.2026).** Opus 6 jumittui kahdesti tunneiksi, koska sen
+lupaluokitin pysäytti jokaisen `create_trigger`-kutsun omistajan
+hyväksyttäväksi — omistaja ei halua hyväksyä näitä kyselyitä.
+Työtapa on siksi tämä:
+
+- **Työsessio (Opus/Sonnet) raportoi Fablelle VAIN gitillä**:
+  kirjoita `docs/viesti-fable.md` omalle haaralle, committaa ja
+  pushaa. Vuoron saa myös päättää toteavasti pelkkään pushattuun
+  PR:ään — Fablen vahtikierros (~45 min välein) lukee haarat ja
+  PR:t. ÄLÄ kutsu `create_trigger`- tai `fire_trigger`-työkaluja
+  kertaakaan, älä edes "vain tämän kerran" — kutsu ei mene läpi,
+  se jumittaa session ja tuottaa omistajalle lupakyselyn.
+- **Fable viestii työsessioille omilla triggereillään**
+  (`fire_trigger`, kohteena vastaanottajan `persistent_session_id`) —
+  Fablen kutsut eivät tuota lupakyselyitä. Joutilaalle sessiolle
+  heti; työskentelevälle `run_once_at` ~2 min päähän.
+- Jos työsessio jää silti lupakyselyyn jumiin, Fable purkaa sen
+  `interrupt_session`-kutsulla ja herättää triggerillä (todennettu
+  15.8.2026).
 - Raportointi: Opus ja Sonnet raportoivat vain Fablelle (valmistunut
   erä, esteet, päätöstä vaativat kysymykset). Fable raportoi
   omistajalle.
@@ -73,7 +86,8 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 | --- | --- | --- |
 | Fable | session_018vkp6HxpLR4gxZJFGscSan (uuden tilin päätoimittajasessio, kapulanvaihdon jatkaja; edellinen: session_01BPysCfxscsVyzAEYmb88Zr) | 14.8.2026 |
 | Opus 6 (Siperia-lehdet) | session_01R7LDPk5Kte4FonJcBzX2QS (ultracode; Siperian 8 kaupunkikannen erät 1–3 haaralla claude/opus6-siperia-lehdet; EI uutis-/mediaosioita, EI kohtaamisia; raportoi Fablelle) | 14.8.2026 |
-| Opus 7 (satelliittikartta) | session_01CA61p6y5V2MxmUJt8ovndj (kaupunkikartan satelliittivipu, PILOTTI Berliini haaralla claude/opus7-satelliittikartta; EOX Sentinel-2 -resepti Fablelta; raportoi Fablelle ennen skaalausta) | 14.8.2026 |
+| Opus 7 (satelliittikartta) | session_01CA61p6y5V2MxmUJt8ovndj (kaupunkikartan satelliittivipu, pilotti 1 mainissa v658; pilotti 2 työn alla 15.8.: zoom + panorointi + laajempi alue + terävämpi kuva, haara claude/opus7-satelliittikartta; skaalaus 52 kaupunkiin vasta omistajan kuittauksella) | 15.8.2026 |
+| Opus 8 (kuvatekstit) | session_01WjBxrL24e4uZ7wsSXNDwne (kuvatekstiauditointi: 551 ylipitkää selitettä 3582:sta, korjaus 5 erässä haaralla claude/opus8-kuvatekstit; sääntö ≤3 virkettä / ~260 mrk, lähteet ja alt-tekstit rauhaan; raportoi Fablelle viesti-fable.md:llä) | 15.8.2026 |
 | Fable max (apusessio) | session_01NQpicvHRAzUpX4NfcYwsyv (Fable max 2; EI vastaanota viestejä tilinvaihdon jälkeen — uusi tili perustaa oman Max-session tarvittaessa. Vanha session_01U8Nqxu… arkistoitu 11.8. konttivian takia) | 11.8.2026 |
 | Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |

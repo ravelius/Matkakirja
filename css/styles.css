@@ -8081,6 +8081,10 @@ button.lukija-nappi.lukee,
   box-shadow: 0 3px 12px rgba(40, 28, 14, 0.24);
 }
 
+/* Piiloutunut soitin (automaattinen piilotus / kaiuttimen vipu) —
+ * display: flex voittaisi hidden-attribuutin ilman tätä. */
+.lukija-paneeli[hidden] { display: none; }
+
 /* Lehdessä kaiutin istuu tarttuvassa otsikkorivissä, joten paneeli
  * laskeutuu otsikkorivin ALLE eikä ruudun yläkulmaan napin päälle.
  * Mitta kattaa korkeimmankin otsikon (etusivun nimiö ~3.4rem).
