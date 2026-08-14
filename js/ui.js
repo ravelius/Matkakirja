@@ -10541,10 +10541,16 @@ export class UI {
     }));
     /*
      * PALUU KARTALLE (omistajan tilaus 14.8.2026): hampurilaisen takaa
-     * pääsee myös suoraan pois lehdestä. Rivi painaa samaa Poistu-
+     * pääsee myös suoraan pois lehdestä. Nappi painaa samaa Poistu-
      * nappia kuin alapalkki, joten sulkemisen erikoistapaukset
      * (tarjousvaiheen vuoronpäätös ym.) käyttäytyvät täsmälleen samoin.
+     *
+     * Nappi on omalla rivillään listan ULKOPUOLELLA: lista vierii,
+     * mutta paluu pysyy aina näkyvissä levyn pohjalla (omistajan
+     * kaappaus 14.8.2026 — nappi jäi listan alle piiloon). Kunnollinen
+     * nappi oikeassa reunassa, peukalon ulottuvilla (omistajan toive).
      */
+    const paluuRivi = html('div', 'sisallys-paluurivi');
     const paluu = html('button', 'sisallys-paluu');
     paluu.type = 'button';
     paluu.innerHTML = '<span class="viiva-ikoni" aria-hidden="true">'
@@ -10556,7 +10562,8 @@ export class UI {
       sulje();
       document.getElementById('arrival-no')?.click();
     });
-    levy.appendChild(paluu);
+    paluuRivi.appendChild(paluu);
+    levy.appendChild(paluuRivi);
     levy.addEventListener('click', (e) => { if (e.target === levy) sulje(); });
     this.arrivalDialog.appendChild(levy);
   }

@@ -7971,12 +7971,32 @@ button.lukija-nappi:focus-visible,
  * riville — omistaja 14.8.2026: "lukita lukija napin oikeaan
  * reunaan samalle korkeudelle". Dialogiin kiinnitettynä nappi jäi
  * eri korkeudelle kuin otsikko, ja ero vaihteli lehtityypin mukaan.
+ *
+ * Ilme ja mitat samat kuin hampurilaisella (omistaja 14.8.2026:
+ * "Kaiutinnappi saisi olla saman tyylinen ja kokoinen kuin
+ * hampurilainen"): pelkkä mustepiirros ilman nappikehystä, 40 px:n
+ * osuma-alue. Kuvake tarttuu napin OIKEAAN reunaan (peilikuva
+ * hampurilaisen vasemmasta) — osuma-alue jatkuu vasemmalle.
  */
 .wiki-kategoria .aihe-nimi > button.lukija-nappi,
 .dialog #arrival-city > button.lukija-nappi {
   top: 50%;
   right: 0.15rem;
   transform: translateY(-50%);
+  width: 2.1rem;
+  height: 2.1rem;
+  min-width: 40px;
+  min-height: 40px;
+  place-items: center end;
+  background: none;
+  box-shadow: none;
+  color: #46331f;
+}
+
+.wiki-kategoria .aihe-nimi > button.lukija-nappi .viiva-ikoni svg,
+.dialog #arrival-city > button.lukija-nappi .viiva-ikoni svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* Nimiö levittyy negatiivisilla marginaaleilla paperin reunaan asti —
@@ -10712,8 +10732,11 @@ body.maatiedot-tila .fact-card {
   display: flex;
   flex-direction: column;
   padding: 0.75rem 1.1rem 1rem;
-  max-height: 52%;
-  overflow-y: auto;
+  /* Levy saa venyä pitkälle (omistajan palaute 14.8.2026: "saisi
+   * venyä enemmän, jotta palaa kartalle -nappi näkyisi") — LISTA
+   * vierii levyn sisällä ja paluurivi pysyy aina levyn pohjalla. */
+  max-height: 76%;
+  overflow: hidden;
   background: rgba(247, 240, 224, 0.98);
   border-top: 1px solid rgba(70, 51, 31, 0.35);
   border-radius: 0.7rem 0.7rem 0 0;
@@ -10754,29 +10777,38 @@ body.maatiedot-tila .fact-card {
   cursor: pointer;
 }
 
-/* Paluu kartalle -rivi levyn pohjalla (omistajan tilaus 14.8.2026):
- * erottuu sisällysriveistä yläviivalla ja nuoli-ikonilla. */
-.dialog .sisallys-paluu {
+/* Vain lista vierii — paluurivi jää aina näkyviin levyn pohjalle
+ * (omistajan kaappaus 14.8.2026: nappi jäi listan alle piiloon). */
+.sisallys-levy > .sisallys {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Paluu kartalle levyn pohjalla (omistajan tilaus 14.8.2026):
+ * täysleveä erotinviiva ja KUNNOLLINEN nappi oikeassa reunassa,
+ * peukalon ulottuvilla (omistajan tarkennus 14.8.2026). Nappi saa
+ * dialogin yleisen pergamentti-ilmeen — vain rivitys omaa. */
+.sisallys-paluurivi {
+  flex: 0 0 auto;
   display: flex;
+  justify-content: flex-end;
+  margin-top: 0.55rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(70, 51, 31, 0.35);
+}
+
+.dialog .sisallys-paluu {
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.55rem;
-  padding: 0.5rem 0.2rem 0.15rem;
-  background: none;
-  border: 0;
-  border-top: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: 0;
-  box-shadow: none;
-  min-height: 0;
-  font: inherit;
-  color: rgba(70, 51, 31, 0.9);
-  cursor: pointer;
-  text-align: left;
+  padding: 0.5rem 0.9rem;
 }
 
 .dialog .sisallys-paluu .viiva-ikoni svg {
   width: 1.05rem;
   height: 1.05rem;
+  display: block;
 }
 
 /*
@@ -170491,10 +170523,16 @@ class UI {
     }));
     /*
      * PALUU KARTALLE (omistajan tilaus 14.8.2026): hampurilaisen takaa
-     * pääsee myös suoraan pois lehdestä. Rivi painaa samaa Poistu-
+     * pääsee myös suoraan pois lehdestä. Nappi painaa samaa Poistu-
      * nappia kuin alapalkki, joten sulkemisen erikoistapaukset
      * (tarjousvaiheen vuoronpäätös ym.) käyttäytyvät täsmälleen samoin.
+     *
+     * Nappi on omalla rivillään listan ULKOPUOLELLA: lista vierii,
+     * mutta paluu pysyy aina näkyvissä levyn pohjalla (omistajan
+     * kaappaus 14.8.2026 — nappi jäi listan alle piiloon). Kunnollinen
+     * nappi oikeassa reunassa, peukalon ulottuvilla (omistajan toive).
      */
+    const paluuRivi = html('div', 'sisallys-paluurivi');
     const paluu = html('button', 'sisallys-paluu');
     paluu.type = 'button';
     paluu.innerHTML = '<span class="viiva-ikoni" aria-hidden="true">'
@@ -170506,7 +170544,8 @@ class UI {
       sulje();
       document.getElementById('arrival-no')?.click();
     });
-    levy.appendChild(paluu);
+    paluuRivi.appendChild(paluu);
+    levy.appendChild(paluuRivi);
     levy.addEventListener('click', (e) => { if (e.target === levy) sulje(); });
     this.arrivalDialog.appendChild(levy);
   }
@@ -176781,6 +176820,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 667, teksti: 'kaiutin hampurilaisen ilmeeseen, sisällyksen paluu esiin' },
   { v: 666, teksti: 'lehtiasettelu: lippu ja kaiutin otsikkoriviin, reunanapautus' },
   { v: 665, teksti: 'Sisällyksen Etusivu-rivi sai kannen kuvan ja ingressin' },
   { v: 664, teksti: 'Lehden hampurilaiseen Palaa kartalle -rivi' },
@@ -177544,7 +177584,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.666';
+const APP_VERSION = '2026-08-09.667';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
