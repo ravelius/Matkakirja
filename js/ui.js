@@ -2539,7 +2539,10 @@ export class UI {
         pysaytaLukija();
         return;
       }
-      lueAaneen(kokoaLuettavaTeksti(this.factText), this.factKuuntele);
+      // Merkinnät omaan äänisäilöönsä (omistajan ohje 14.8.2026): kun
+      // matkakirjan tekstit kirjoitetaan uusiksi, lohko 'merkinnat'
+      // tuhotaan yhdellä kutsulla eikä laitteen tila lopu kesken.
+      lueAaneen(kokoaLuettavaTeksti(this.factText), this.factKuuntele, { sailio: 'merkinnat' });
     });
 
     this.eventDialog = document.getElementById('event-dialog');

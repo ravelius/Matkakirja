@@ -184,7 +184,9 @@ const MODULES = [
    * js/pollo.js tuo siitä kaiutinvivun luentafunktiot (lueAaneen,
    * lukijaTuettu, pysaytaLukija). Niputus on yhtä näkyvyysaluetta,
    * joten lukija on turvallisinta ladata ennen sen käyttäjiä.
+   * Lukijaääni (js/puhe.js) ennen lukijaa samasta syystä.
    */
+  'js/puhe.js',
   'js/lukija.js',
   /*
    * Viisas Pöllö ENNEN ui.js:ää: ui.js tuo polloAnkkurin ja polloSuljen

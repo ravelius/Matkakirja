@@ -1006,7 +1006,9 @@ class Pollo {
   lueVastaus(teksti) {
     if (!this.aaniPaalla || !teksti) return;
     try {
-      lueAaneen(teksti);
+      // Pöllö puhuu omalla persoonallaan (js/puhe.js → workerin
+      // persoonataulu); laitteen ääni jää varapoluksi lukijan sisällä.
+      lueAaneen(teksti, null, { persoona: 'pollo' });
     } catch {
       /* laitteen puheääni ei ole käytettävissä — vastaus jää luettavaksi */
     }
@@ -2139,10 +2141,12 @@ class Pollo {
   syotaLuennalle(kertynyt) {
     if (!this.aaniPaalla) return false;
     if (!this.luentaVirta) {
-      // Ilman selaimen puhesyntetisaattoria (tai natiivisillalla)
-      // virtaluentaa ei ole: vastaus luetaan valmiina, kuten ennenkin.
+      // Virtaluenta kulkee ensisijaisesti lukijaäänellä (js/puhe.js),
+      // joka toimii myös iOS-kuoressa. Ilman sitä ja ilman selaimen
+      // puhesyntetisaattoria (natiivisilta) virtaluentaa ei ole:
+      // vastaus luetaan valmiina, kuten ennenkin.
       try {
-        this.luentaVirta = lueVirtana();
+        this.luentaVirta = lueVirtana(null, { persoona: 'pollo' });
       } catch {
         this.luentaVirta = null;
       }

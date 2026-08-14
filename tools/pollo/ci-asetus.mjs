@@ -146,11 +146,17 @@ export function poimiKvTunnus(tuloste, nimi = KV_SIDOS) {
   return (tarkka ?? osumat[0])?.id ?? null;
 }
 
-/** Täydentää asetusolion: KV-sidos ja sallitut originit. */
-export function taydennaAsetus(asetus, { kv = null, originit = null } = {}) {
+/** R2-sidoksen nimi, jota worker.js odottaa (lukijaäänen pysyvä säilö). */
+const R2_SIDOS = 'PUHE_R2';
+
+/** Täydentää asetusolion: KV-sidos, R2-ämpäri ja sallitut originit. */
+export function taydennaAsetus(asetus, { kv = null, originit = null, r2 = null } = {}) {
   const tulos = { ...asetus };
   if (kv) {
     tulos.kv_namespaces = [{ binding: KV_SIDOS, id: kv }];
+  }
+  if (r2) {
+    tulos.r2_buckets = [{ binding: R2_SIDOS, bucket_name: r2 }];
   }
   if (originit !== null && originit !== undefined) {
     tulos.vars = { ...(tulos.vars ?? {}), POLLO_ORIGINIT: String(originit) };
@@ -194,6 +200,7 @@ function main() {
     const asetus = lueJsonc(readFileSync(arg.lahde, 'utf8'));
     const taydennetty = taydennaAsetus(asetus, {
       kv: arg.kv || null,
+      r2: arg.r2 || null,
       originit: arg.originit ?? null,
     });
     writeFileSync(arg.ulos, `${JSON.stringify(taydennetty, null, 2)}\n`, 'utf8');
@@ -201,6 +208,7 @@ function main() {
     process.stdout.write(`Asetus kirjoitettu: ${arg.ulos}\n`);
     process.stdout.write(`  POLLO_ORIGINIT = ${taydennetty.vars?.POLLO_ORIGINIT ?? '(ei asetettu)'}\n`);
     process.stdout.write(`  kv_namespaces  = ${taydennetty.kv_namespaces ? 'on' : 'ei'}\n`);
+    process.stdout.write(`  r2_buckets     = ${taydennetty.r2_buckets ? 'on' : 'ei'}\n`);
     return;
   }
 

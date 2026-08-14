@@ -11,6 +11,22 @@
 export const PAIVARAJA_OLETUS = 30;
 export const KUUKAUSIRAJA_OLETUS = 1500;
 
+/*
+ * LUKIJAÄÄNEN (puhesynteesin) RAJAT — merkkejä, ei pyyntöjä.
+ *
+ * Puhe laskutetaan tekstin pituudesta, ja yksi sivun luenta on kymmeniä
+ * pieniä pyyntöjä (lause tai kappale kerrallaan). Pyyntöjen laskeminen
+ * rankaisisi lyhyitä lauseita ja päästäisi pitkät ilmaiseksi, joten
+ * laskuri kasvaa luetun tekstin merkkimäärällä. Mittakaava: puhetta
+ * syntyy noin tuhat merkkiä minuutissa, eli päiväraja 60 000 on noin
+ * tunti puhetta per vierailija ja kuukausikatto 900 000 noin 15 tuntia
+ * — kustannuksena (gpt-4o-mini-tts ~1,5 snt/min) noin 13,5 €/kk
+ * enimmillään.
+ */
+export const PUHE_TEKSTIN_KATTO = 1000;
+export const PUHE_PAIVARAJA_OLETUS = 60000;
+export const PUHE_KUUKAUSIRAJA_OLETUS = 900000;
+
 /** Kontekstipaketin katto merkkeinä (sama luku kuin pelin puolella). */
 export const KONTEKSTIN_KATTO = 5000;
 
@@ -43,6 +59,46 @@ export function paivaAvain(ip, nyt = new Date()) {
 /** Kuukausibudjetin avain. Kuukausi vaihtuu UTC-kuukauden vaihtuessa. */
 export function kuukausiAvain(nyt = new Date()) {
   return `pollo:k:${nyt.toISOString().slice(0, 7)}`;
+}
+
+/** Lukijaäänen laskuriavaimet — oma etuliite, etteivät ne sekoitu pöllön
+ * kysymyslaskureihin (eri yksikkö: merkkejä, ei pyyntöjä). */
+export function puhePaivaAvain(ip, nyt = new Date()) {
+  return `puhe:p:${nyt.toISOString().slice(0, 10)}:${tiiviste(String(ip ?? 'tuntematon'))}`;
+}
+
+export function puheKuukausiAvain(nyt = new Date()) {
+  return `puhe:k:${nyt.toISOString().slice(0, 7)}`;
+}
+
+/**
+ * Lukijaäänen käyttörajojen tarkistus. Sama muoto kuin tarkistaRajat,
+ * mutta viestit puhuvat lukijaäänestä eivätkä pöllöstä — ne näkyvät
+ * pelissä sellaisinaan, jos raja tulee vastaan.
+ */
+export function tarkistaPuheRajat({
+  paiva = 0,
+  kuukausi = 0,
+  paivaraja = PUHE_PAIVARAJA_OLETUS,
+  kuukausiraja = PUHE_KUUKAUSIRAJA_OLETUS,
+} = {}) {
+  if (kuukausiraja > 0 && kuukausi >= kuukausiraja) {
+    return {
+      ok: false,
+      syy: 'kuukausiraja',
+      viesti: 'Lukijaääni on käyttänyt tämän kuukauden puheajan. '
+        + 'Se palaa ensi kuun alussa.',
+    };
+  }
+  if (paivaraja > 0 && paiva >= paivaraja) {
+    return {
+      ok: false,
+      syy: 'paivaraja',
+      viesti: 'Lukijaääni on lukenut sinulle jo pitkään tänään. '
+        + 'Jatketaan huomenna.',
+    };
+  }
+  return { ok: true, syy: null, viesti: null };
 }
 
 /**

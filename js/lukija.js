@@ -7,16 +7,20 @@
  * pienen kaiuttimen, joka lukee sivun ääneen ilman että yhtään
  * mp3-tiedostoa tarvitsee generoida.
  *
- * KAKSI TAUSTAJÄRJESTELMÄÄ, TÄRKEYSJÄRJESTYKSESSÄ
+ * KOLME TAUSTAJÄRJESTELMÄÄ, TÄRKEYSJÄRJESTYKSESSÄ
  *
- *   1. window.matkakirjaNatiivi.luenta (iOS-kuori,
+ *   1. Lennossa generoitu lukijaääni (js/puhe.js — OpenAI:n
+ *      puhesynteesi pöllön välityspalvelimen kautta, omistajan päätös
+ *      14.8.2026). Vaatii verkon ja workerin, jolla on avain; jos
+ *      jompikumpi puuttuu, tästä ei jää jälkeä vaan pudotaan alas.
+ *   2. window.matkakirjaNatiivi.luenta (iOS-kuori,
  *      ios/Matkakirja/Selain/natiivi-silta.js). Kuori valitsee
  *      parhaan suomenkielisen äänen itse, joten pelin ei tarvitse
  *      tuntea ääniluetteloa. Luennan loppu kuullaan sillan
  *      'luenta-loppui'-tapahtumasta.
- *   2. window.speechSynthesis fi-FI-äänellä (Safari, Chrome, työpöytä).
- *   3. Ei kumpaakaan → nappia ei näytetä lainkaan. Piilotettu nappi on
- *      parempi kuin nappi, joka tuottaa hiljaisuuden.
+ *   3. window.speechSynthesis fi-FI-äänellä (Safari, Chrome, työpöytä).
+ *   4. Ei mitään näistä → nappia ei näytetä lainkaan. Piilotettu nappi
+ *      on parempi kuin nappi, joka tuottaa hiljaisuuden.
  *
  * MITÄ LUETAAN — JA MITÄ EI
  *
@@ -40,7 +44,9 @@
  * sulkeutuminen pysäyttävät edellisen.
  */
 
-/** Luennan kieli. Sama luku molemmilla taustajärjestelmillä. */
+import { luoPuheSoitin, puheTuettu } from './puhe.js';
+
+/** Luennan kieli. Sama luku laitteen omilla taustajärjestelmillä. */
 export const LUENNAN_KIELI = 'fi-FI';
 
 /**
@@ -303,7 +309,7 @@ function suomiAani(synth) {
 
 /** Onko luenta ylipäätään mahdollista tällä laitteella? */
 export function lukijaTuettu() {
-  return Boolean(natiiviLuenta() || selainPuhe());
+  return Boolean(puheTuettu() || natiiviLuenta() || selainPuhe());
 }
 
 /**
@@ -419,15 +425,68 @@ export function pysaytaLukija() {
 /**
  * Aloittaa luennan. Edellinen luenta pysähtyy aina ensin.
  *
+ * Lukijaäänen `sailio` on pysyvän äänisäilön lohko (js/puhe.js):
+ * oletuksena persoonan oma, paitsi pöllöllä ei mitään — pöllön
+ * vastaukset ovat kertakäyttöisiä. Matkakirjan merkinnät annetaan
+ * omassa lohkossaan ('merkinnat'), jotta ne voi tuhota erikseen, kun
+ * tekstit kirjoitetaan uusiksi.
+ *
  * @param {string} teksti luettava teksti
  * @param {Element|null} nappi nappi, jonka tila seuraa luentaa
+ * @param {{ persoona?: string, sailio?: string|null }} asetukset
  * @returns {boolean} lähtikö luenta käyntiin
  */
-export function lueAaneen(teksti, nappi = null) {
+export function lueAaneen(teksti, nappi = null, { persoona = 'kertoja', sailio } = {}) {
   pysaytaLukija();
   const puhuttava = String(teksti ?? '').trim();
   if (!puhuttava) return false;
+  const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
+  if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko)) return true;
+  return lueLaitteella(puhuttava, nappi);
+}
 
+/**
+ * Lennossa generoitu lukijaääni (js/puhe.js). Palauttaa false, jos
+ * puhe ei ole käytössä — silloin kutsuja jatkaa laitteen omaan ääneen.
+ *
+ * Ensimmäisen palan virhe pudottaa laitteen omalle äänelle KOKO
+ * tekstillä: mitään ei ole vielä kuultu, joten alusta aloittaminen on
+ * oikein. Myöhempi virhe päättää luennan siististi (teksti on ruudulla,
+ * ja seuraava painallus yrittää uudestaan).
+ */
+function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null) {
+  if (!puheTuettu()) return false;
+  const merkki = {};
+  const loppui = () => {
+    if (ajossa?.merkki !== merkki) return;
+    ajossa = null;
+    merkitseTila(nappi, false);
+  };
+  const soitin = luoPuheSoitin({
+    persoona,
+    sailio,
+    onLoppu: loppui,
+    onVirhe: (vaihe) => {
+      if (ajossa?.merkki !== merkki) return;
+      ajossa = null;
+      merkitseTila(nappi, false);
+      if (vaihe === 'alku') lueLaitteella(puhuttava, nappi);
+    },
+  });
+  if (!soitin) return false;
+  ajossa = { nappi, merkki, lopeta: () => soitin.pysayta() };
+  soitin.lisaa(puhuttava);
+  soitin.paata();
+  merkitseTila(nappi, true);
+  return true;
+}
+
+/**
+ * Luenta laitteen omalla äänellä (iOS-kuoren silta tai selaimen
+ * puhesyntetisaattori). Tämä oli lueAaneen-funktion koko runko ennen
+ * lukijaääntä; sisältö on ennallaan.
+ */
+function lueLaitteella(puhuttava, nappi = null) {
   const merkki = {};
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
@@ -551,10 +610,17 @@ export function lueAaneen(teksti, nappi = null) {
  * kutsut keskeyttäisivät toisensa. Tällöin palautuu null, ja kutsuja
  * lukee valmiin vastauksen entiseen tapaan.
  *
+ * LUKIJAÄÄNI ENSIN: puhesoitin (js/puhe.js) on itsessään jono, joten se
+ * sopii virtaluentaan suoraan — ja koska se soittaa tavallista ääntä
+ * eikä puhesyntetisaattoria, virtaluenta toimii sen kautta MYÖS
+ * iOS-kuoressa, jossa selainlukijaa ei ole.
+ *
  * @returns {{lisaa(teksti: string): void, paata(): void}|null}
  */
-export function lueVirtana(nappi = null) {
+export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
   pysaytaLukija();
+  const puhe = puheVirtana(nappi, persoona);
+  if (puhe) return puhe;
   if (natiiviLuenta()) return null;
   const synth = selainPuhe();
   if (!synth) return null;
@@ -621,6 +687,43 @@ export function lueVirtana(nappi = null) {
       tila.paatetty = true;
       // Jos jono ehti tyhjentyä ennen päätöstä, luenta loppuu tästä.
       if (tila.lepaa) loppui();
+    },
+  };
+}
+
+/**
+ * Virtaluenta lukijaäänellä. Palauttaa null, jos puhe ei ole käytössä.
+ *
+ * Virhe kesken virran päättää luennan siististi ilman varapolkua:
+ * striimattua tekstiä ei puskuroida uudelleen luettavaksi, koska
+ * vastaus on joka tapauksessa ruudulla ja valmiin vastauksen voi
+ * kuunnella kaiuttimesta uudestaan (se polku kulkee lueAaneen kautta
+ * varapolkuineen).
+ */
+function puheVirtana(nappi, persoona) {
+  if (!puheTuettu()) return null;
+  const merkki = {};
+  const loppui = () => {
+    if (ajossa?.merkki !== merkki) return;
+    ajossa = null;
+    merkitseTila(nappi, false);
+  };
+  const soitin = luoPuheSoitin({
+    persoona,
+    // Virtaluenta on aina kertakäyttöistä (pöllön striimi) — ei säilöä.
+    sailio: null,
+    onLoppu: loppui,
+    onVirhe: () => loppui(),
+  });
+  if (!soitin) return null;
+  ajossa = { nappi, merkki, lopeta: () => soitin.pysayta() };
+  merkitseTila(nappi, true);
+  return {
+    lisaa(teksti) {
+      soitin.lisaa(teksti);
+    },
+    paata() {
+      soitin.paata();
     },
   };
 }
