@@ -687,7 +687,7 @@ export const ASIA_ARTIKKELIT = {
   Irkutsk: {
     intro: 'Irkutsk on Itä-Siperian vanha kauppakaupunki Baikalin '
       + 'lähellä. Baikal on maailman syvin järvi, ja siinä on noin '
-      + 'viidesosa kaikesta maailman juoksevasta makeasta vedestä.',
+      + 'viidesosa maailman jäätymättömästä pintamakeasta vedestä.',
     teksti: 'Irkutsk on Angara-joen varrella noin 70 kilometrin päässä '
       + 'Baikaljärvestä. Kaupunki perustettiin 1661 turkiskaupan '
       + 'tukikohdaksi, ja siitä tuli Itä-Siperian hallinnollinen '

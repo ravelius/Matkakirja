@@ -188,10 +188,6 @@ export const SAATIEDOT = {
     keskilampo: [0.4, 2.5, 8.1, 14.8, 21.4, 27.8, 31, 29.9, 25, 18, 9.1, 3.1],
     sade: [38, 40, 50, 37, 14, 2, 1, 1, 1, 14, 40, 40],
   },
-  // Isfahan on Iranin kolmesta lehtikaupungista kuivin: heinä-, elo- ja
-  // syyskuussa normaali sademäärä on nolla millimetriä, ja sateisinkin
-  // kuukausi jää seitsemääntoista. Vuoden summa on noin 98 mm, eli alle
-  // kolmasosa Tabrizin luvusta.
   // Tokio on lehtikaupungeista sateisin: vuoden summa on noin 1 455 mm,
   // eli lähes viisitoista kertaa Isfahanin luku. Kuivinkin kuukausi
   // (joulukuu, 60 mm) on sateisempi kuin Bagdadin tai Riadin sateisin.
@@ -201,6 +197,10 @@ export const SAATIEDOT = {
     keskilampo: [4, 4.7, 8.2, 13.2, 17.9, 21.2, 25, 26.3, 23, 17.5, 12, 6.7],
     sade: [67, 63, 115, 113, 130, 162, 150, 113, 183, 208, 91, 60],
   },
+  // Isfahan on Iranin kolmesta lehtikaupungista kuivin: heinä-, elo- ja
+  // syyskuussa normaali sademäärä on nolla millimetriä, ja sateisinkin
+  // kuukausi jää seitsemääntoista. Vuoden summa on noin 98 mm, eli alle
+  // kolmasosa Tabrizin luvusta.
   isfahan: {
     lat: 32.65,
     lon: 51.67,

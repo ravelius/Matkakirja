@@ -22442,7 +22442,7 @@ const ASIA_ARTIKKELIT = {
   Irkutsk: {
     intro: 'Irkutsk on Itä-Siperian vanha kauppakaupunki Baikalin '
       + 'lähellä. Baikal on maailman syvin järvi, ja siinä on noin '
-      + 'viidesosa kaikesta maailman juoksevasta makeasta vedestä.',
+      + 'viidesosa maailman jäätymättömästä pintamakeasta vedestä.',
     teksti: 'Irkutsk on Angara-joen varrella noin 70 kilometrin päässä '
       + 'Baikaljärvestä. Kaupunki perustettiin 1661 turkiskaupan '
       + 'tukikohdaksi, ja siitä tuli Itä-Siperian hallinnollinen '
@@ -31341,7 +31341,13 @@ const RADIOT = {
   PRT: { url: 'https://radiocast.rtp.pt/rdpint80a.mp3', asema: 'RDP Internacional - Main', virallinen: true },
   QAT: { url: 'https://l3.itworkscdn.net/alarabyradiolive/alarabyradio_audio/icecast.audio', asema: 'Al Araby Radio (Doha/Lusail)' },
   ROU: { url: 'https://edge76.rcs-rds.ro/digifm/digi24fm.mp3', asema: 'Digi24 FM' },
-  RUS: { url: 'https://icecast-vgtrk.cdnvideo.ru/vestifm_mp3_64kbps', asema: 'Вести ФМ', virallinen: true },
+  /*
+   * RUS poistettu 14.8.2026 (Fable, omistajan 13.8. linjauksen
+   * mukaisesti: valtiollista tai sensuroitua mediaa ei oteta
+   * lähteeksi — Vesti FM on valtion VGTRK:n kanava). Venäjän lehdet
+   * toimivat ilman mediaosioita kuten ei-lehtimaissakin; riippumatonta
+   * paikalliskanavaa ei ole tarjolla korvaajaksi.
+   */
   SAU: { url: 'https://stream-154.zeno.fm/pdeizhgrtrstv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZGVpemhncnRyc3R2IiwiaG9zdCI6InN0cmVhbS0xNTQuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Im9vbng2V1J3UXJ5Q0k5TVV0N01heEEiLCJpYXQiOjE3MjgyMjQ1MTYsImV4cCI6MTcyODIyNDU3Nn0.gpUIWkDBFNNFjqCg2R-xQN4LXT4z8_Ivs7d2UkeFE_8', asema: 'SBA Riyadh Radio 91.5 FM', virallinen: true },
   SDN: { url: 'https://a13.asurahosting.com/listen/al_masaa_fm_101/radio.mp3', asema: 'Al Masaa FM 101 (Khartum)' },
   SDS: { url: 'https://stream.zeno.fm/w3lic6qp9eouv', asema: 'Freedom FM' },
@@ -88197,10 +88203,6 @@ const SAATIEDOT = {
     keskilampo: [0.4, 2.5, 8.1, 14.8, 21.4, 27.8, 31, 29.9, 25, 18, 9.1, 3.1],
     sade: [38, 40, 50, 37, 14, 2, 1, 1, 1, 14, 40, 40],
   },
-  // Isfahan on Iranin kolmesta lehtikaupungista kuivin: heinä-, elo- ja
-  // syyskuussa normaali sademäärä on nolla millimetriä, ja sateisinkin
-  // kuukausi jää seitsemääntoista. Vuoden summa on noin 98 mm, eli alle
-  // kolmasosa Tabrizin luvusta.
   // Tokio on lehtikaupungeista sateisin: vuoden summa on noin 1 455 mm,
   // eli lähes viisitoista kertaa Isfahanin luku. Kuivinkin kuukausi
   // (joulukuu, 60 mm) on sateisempi kuin Bagdadin tai Riadin sateisin.
@@ -88210,6 +88212,10 @@ const SAATIEDOT = {
     keskilampo: [4, 4.7, 8.2, 13.2, 17.9, 21.2, 25, 26.3, 23, 17.5, 12, 6.7],
     sade: [67, 63, 115, 113, 130, 162, 150, 113, 183, 208, 91, 60],
   },
+  // Isfahan on Iranin kolmesta lehtikaupungista kuivin: heinä-, elo- ja
+  // syyskuussa normaali sademäärä on nolla millimetriä, ja sateisinkin
+  // kuukausi jää seitsemääntoista. Vuoden summa on noin 98 mm, eli alle
+  // kolmasosa Tabrizin luvusta.
   isfahan: {
     lat: 32.65,
     lon: 51.67,
@@ -176616,6 +176622,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 660, teksti: 'Baikal-fakta, Venäjän radio pois linjauksen mukaisesti' },
   { v: 659, teksti: 'Siperian kaupunkilehdet: Jekaterinburg, Novosibirsk, Irkutsk' },
   { v: 658, teksti: 'Berliinin kaupunkikartalle vipu: piirros tai satelliittikuva' },
   { v: 657, teksti: 'Lukija: napsahdus ja turhat otsikot pois; asetukset säilyvät' },
@@ -177370,7 +177377,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.659';
+const APP_VERSION = '2026-08-09.660';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
