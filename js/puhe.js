@@ -292,14 +292,23 @@ export function asetaPuheenNopeus(arvo) {
   return nopeus;
 }
 
-/** Nopeus ja sävelkorkeuden säilytys elementtiin (src-vaihto nollaa ne). */
+/** Nopeus elementtiin (src-vaihto nollaa asetuksen). */
 function asetaToistonopeus(audio) {
   const nopeus = puheenNopeus();
   try {
     audio.defaultPlaybackRate = nopeus;
     audio.playbackRate = nopeus;
-    if ('preservesPitch' in audio) audio.preservesPitch = true;
-    else if ('webkitPreservesPitch' in audio) audio.webkitPreservesPitch = true;
+    /*
+     * Sävelkorkeuden säilytys POIS (omistajan havainto 15.8.2026:
+     * nopeutettu luenta "leikkaa pätkän lopusta aina pienen palan
+     * pois ja hyppää eteenpäin"). Safarin sävelkorkeuden säilyttävä
+     * venytin prosessoi ääntä lohkoissa ja pudotti palan hännän —
+     * kuulosti leikkaukselta jokaisen palan lopussa. Selaimen
+     * natiivi nopeutus (nauhurimainen, sävel elää nopeuden mukana)
+     * toistaa palan loppuun asti ehjänä.
+     */
+    if ('preservesPitch' in audio) audio.preservesPitch = false;
+    else if ('webkitPreservesPitch' in audio) audio.webkitPreservesPitch = false;
   } catch { /* vanha selain: nopeus jää normaaliksi */ }
 }
 

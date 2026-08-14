@@ -7973,7 +7973,7 @@ button.lukija-nappi:focus-visible,
 .wiki-kategoria .aihe-nimi > button.lukija-nappi,
 .dialog #arrival-city > button.lukija-nappi {
   top: 50%;
-  right: 0.15rem;
+  right: 0;
   transform: translateY(-50%);
   width: 2.1rem;
   height: 2.1rem;
@@ -7983,6 +7983,27 @@ button.lukija-nappi:focus-visible,
   background: none;
   box-shadow: none;
   color: #46331f;
+}
+
+/*
+ * Ei ympyrää minkään tilan takana (omistajan tarkennus 15.8.2026:
+ * "Poista pyöreä tausta kaiuttimen takaa"): myös luenta käynnissä
+ * -tila ja osoitin näyttävät pelkän piirroksen. Luennan tilan kertoo
+ * kuvakkeen meripihkainen muste — ja avoin säätöpaneeli napin alla.
+ */
+.wiki-kategoria .aihe-nimi > button.lukija-nappi:hover:not(:disabled),
+.wiki-kategoria .aihe-nimi > button.lukija-nappi:focus-visible,
+.dialog #arrival-city > button.lukija-nappi:hover:not(:disabled),
+.dialog #arrival-city > button.lukija-nappi:focus-visible {
+  background: none;
+  color: rgba(70, 51, 31, 1);
+}
+
+.wiki-kategoria .aihe-nimi > button.lukija-nappi.lukee,
+.dialog #arrival-city > button.lukija-nappi.lukee {
+  background: none;
+  box-shadow: none;
+  color: #a8741a;
 }
 
 .wiki-kategoria .aihe-nimi > button.lukija-nappi .viiva-ikoni svg,
@@ -8035,6 +8056,8 @@ button.lukija-nappi.lukee,
  * Aukeaa kaiutinnapin alle luennan ajaksi: tauko/jatka, kappale
  * taakse ja eteen, kappalelaskuri ja lopetus. Sama paperinen sävy
  * kuin kaiuttimella, selvästi napakammat osumapinnat. */
+/* Suorakaide, ei pilleri (omistajan tarkennus 15.8.2026: "Muuta
+ * pillerisäädin äänelle suorakaiteen muotoon"). */
 .lukija-paneeli {
   position: absolute;
   top: calc(max(0.45rem, env(safe-area-inset-top, 0px)) + 2rem);
@@ -8044,16 +8067,21 @@ button.lukija-nappi.lukee,
   align-items: center;
   gap: 0.25rem;
   padding: 0.3rem 0.45rem;
-  border-radius: 1.4rem;
+  border-radius: 0.3rem;
   background: rgba(246, 231, 198, 0.94);
   box-shadow: 0 3px 12px rgba(40, 28, 14, 0.24);
 }
 
 /* Lehdessä kaiutin istuu tarttuvassa otsikkorivissä, joten paneeli
  * laskeutuu otsikkorivin ALLE eikä ruudun yläkulmaan napin päälle.
- * Mitta kattaa korkeimmankin otsikon (etusivun nimiö ~3.4rem). */
+ * Mitta kattaa korkeimmankin otsikon (etusivun nimiö ~3.4rem).
+ * Oikea reuna samaan linjaan kaiuttimen kanssa (omistajan tarkennus
+ * 15.8.2026: "tasaa oikeaan laitaan napin kanssa") — kaiutin istuu
+ * sisällön oikeassa reunassa eli --arkki-reunuksen päässä paperin
+ * reunasta. */
 #arrival-dialog .lukija-paneeli {
   top: calc(var(--arkki-tarttuma, 0px) + 3.6rem);
+  right: var(--arkki-reunus, 0.95rem);
 }
 
 .lukija-paneeli .lukija-paneeli-nappi {
