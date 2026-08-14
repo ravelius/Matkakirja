@@ -12362,4 +12362,357 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  kamtsatka: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kamtšatka',
+      johdanto: 'Niemimaa Ohotanmeren ja Tyynenmeren välissä on noin 1 200 '
+        + 'kilometriä pitkä ja pinta-alaltaan hieman Suomea suurempi. Sen '
+        + 'satamakaupunki Petropavlovsk sai nimensä kahdesta laivasta, jotka '
+        + 'tulivat lahdelle talvehtimaan 1740.',
+      kansikuvat: [
+        {
+          tiedosto: 'Petropavlovsk-Kamchatsky, 2025 - 54824368776.jpg',
+          selite: 'Petropavlovsk Avatšanlahden rannalla. Kaupunki kiertää '
+            + 'Kultutšnoje-järveä ja nousee kukkuloiden rinteille, ja '
+            + 'sataman laiturit ovat lahden puolella. Avatšanlahti on 24 '
+            + 'kilometriä pitkä, mutta sen suu vain kolme kilometriä leveä.',
+          lahde: 'Nikita Zhuravlev, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Памятник мореплавателю В. Берингу.jpg',
+          selite: 'Vitus Beringin muistomerkki Petropavlovskissa. Tumman '
+            + 'kivipylvään päällä on kypärän muotoinen huippu, ja jalustan '
+            + 'kullatussa kilvessä on omistus Petropavlovskin perustajalle, '
+            + 'merenkulkija Beringille, ja vuosiluku 1740.',
+          lahde: 'NadezhdaKhaustova, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Бухта Авачинская Три брата.jpg',
+          selite: 'Kolmen veljen kalliot Avatšanlahden suulla. Kolme '
+            + 'kivipaadetta seisoo salmessa, jonka kautta laivat tulevat '
+            + 'satamaan. Paikallisen tarinan mukaan ne ovat veljeksiä, jotka '
+            + 'lähtivät suojaamaan kaupunkia hyökyaallolta ja kivettyivät.',
+          lahde: 'Анна Руденко-Гринащук, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaksi pakettivenettä antoi satamalle nimen',
+          tiedosto: 'An engraving of Petropavlovsk-Kamchatsky, 18th century.jpg',
+          teksti: 'Merenkulkija Ivan Jelagin lähti Ohotskista syyskuussa '
+            + '1739 Vitus Beringin käskystä ja saapui 10. kesäkuuta 1740 '
+            + 'Avatšanlahdelle aluksellaan Pyhä arkkienkeli Gabriel. '
+            + 'Syyskuun 20. päivänä hän ilmoitti, että rantaan oli '
+            + 'valmistunut viisi asuinrakennusta, kolme kasarmia ja kolme '
+            + 'varastoa. Lokakuun 17. päivänä 1740 lahdelle tulivat '
+            + 'talvehtimaan pakettiveneet Pyhä Pietari ja Pyhä Paavali, '
+            + 'joita komensivat Bering ja Aleksei Tširikov. Satama sai '
+            + 'nimensä alusten mukaan, ja tuota päivää pidetään kaupungin '
+            + 'perustamispäivänä.',
+          selite: 'Petropavlovskin satama 1740-luvulla. Redillä on Martin '
+            + 'Spanbergin laivueen aluksia ja rannoilla matalia '
+            + 'hirsirakennuksia. Kuparipiirros ilmestyi Krašeninnikovin '
+            + 'Kamtšatkan maan kuvauksen ensimmäisessä painoksessa.',
+          lahde: 'Stepan Krasheninnikov, Wikimedia Commons (PD)',
+          wiki: 'Petropavlovsk-Kamtšatski',
+        },
+        {
+          otsikko: 'Kirja valmistui sinä päivänä, jona tekijä kuoli',
+          tiedosto: 'Карта Курильских островов 1755 года.jpg',
+          teksti: 'Stepan Krašeninnikov syntyi Moskovassa 1711 ja lähti '
+            + 'Toisen Kamtšatkan retkikunnan mukaan opiskelijana. '
+            + 'Retkikunnan professorit lähettivät hänet edeltä Ohotskiin ja '
+            + 'Kamtšatkaan, ja hän tutki niemimaata vuosina 1737–1741: '
+            + 'kasveja, eläimiä, kivilajeja, tulivuoria, kieliä ja tapoja. '
+            + 'Kamtšatkan maan kuvaus ilmestyi vuonna 1755. Krašeninnikov '
+            + 'kuoli Pietarissa helmikuussa samana vuonna, ja Nikolai '
+            + 'Karamzinin mukaan hän kuoli sinä päivänä, jona kirjan '
+            + 'viimeinen arkki painettiin.',
+          selite: 'Kuriilien kartta Krašeninnikovin Kamtšatkan maan '
+            + 'kuvauksesta vuodelta 1755. Kartalla ovat Kamtšatkan '
+            + 'eteläkärki, Sahalin, koko Kuriilien saariketju ja Japanin '
+            + 'pohjoisosa. Nimet on kaiverrettu kyrillisin kirjaimin.',
+          lahde: 'Stepan Krasheninnikov, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Korppi teki liikaa vuoria',
+          tiedosto: 'DEMIDOV(1904) p176 A GROUP OF KAMCHADALES AT NATCHIKI (14779338771).jpg',
+          teksti: 'Itelmeenien oma nimitys tarkoittaa suunnilleen olevaa tai '
+            + 'elävää; venäläiset kutsuivat heitä kamtšadaaleiksi. Kalastus '
+            + 'oli tärkein elinkeino, ja lohi halkaistiin ja kuivattiin '
+            + 'telineillä jukolaksi, jota söivät sekä ihmiset että '
+            + 'vetokoirat. Luojahahmo oli korppi Kutkh, ja Krašeninnikov '
+            + 'pani merkille, että itelmeenit moittivat tätä siitä, että se '
+            + 'oli tehnyt liikaa vuoria, jyrkänteitä, kareja, hiekkasärkkiä '
+            + 'ja vuolaita jokia. Väkeä laskettiin vuonna 1697 kaikkiaan 12 '
+            + '680 ja vuonna 1738 enää 8 448.',
+          selite: 'Kamtšadaaleja Natšikin kylässä vuonna 1904. Aikuiset ja '
+            + 'lapset seisovat puisen kuivaustelineen edessä, jonka '
+            + 'riu\'uilla riippuu tiheässä halkaistuja kaloja. Kuva on Jelim '
+            + 'Demidovin Kamtšatkan-matkakirjasta.',
+          lahde: 'DEMIDOV, Elim Pavlovich (1867-1943), Wikimedia Commons (PD)',
+          wiki: 'Itelmeenit',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Tulivuoret',
+      johdanto: 'Kamtšatkalla on 127 tulivuorta, joista 27 on toimivia. '
+        + 'Niemimaa kuuluu Tyynenmeren tulirenkaaseen, jossa Tyynenmeren '
+        + 'laatta painuu Euraasian laatan alle noin kahdeksan senttimetriä '
+        + 'vuodessa.',
+      nostot: [
+        {
+          otsikko: 'Euraasian korkein toimiva tulivuori',
+          tiedosto: 'Klyuchevskaya Sopka eruption - Kamchatka, Russian Federation - Summer 1993 02.jpg',
+          teksti: 'Kljutševskaja sopka kohoaa 4 750 metriin: se on Siperian '
+            + 'korkein vuori ja Euraasian korkein toimiva tulivuori. '
+            + 'Ensimmäinen kirjattu purkaus on vuodelta 1697, ja siitä '
+            + 'lähtien vuori on ollut lähes yhtäjaksoisesti toiminnassa. '
+            + 'Huipulle kiipesivät ensimmäisinä Daniel Gauss ja kaksi '
+            + 'Billingsin retkikunnan jäsentä vuonna 1788. Seuraava tunnettu '
+            + 'nousu tehtiin vasta 1931, ja siltä retkikunnalta kuoli useita '
+            + 'jäseniä ylärinteillä lentäneisiin laavapalloihin.',
+          selite: 'Kljutševskaja sopka purkauksessa kesällä 1993. '
+            + 'Lumijuovainen kartio nousee pilvivyön yläpuolelle, ja '
+            + 'huipulta kohoaa tumma tuhkapatsas. Vuori on Euraasian korkein '
+            + 'toimiva tulivuori.',
+          lahde: 'Giorgio Galeotti, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kljutševskaja sopka',
+        },
+        {
+          otsikko: 'Kotivuoret kaupungin takana',
+          tiedosto: 'Kamchatka Petropavlovsk-Kamchatsky and its Volcanoes (25022593335).jpg',
+          teksti: 'Petropavlovskilaiset kutsuvat kaupungin takana kohoavia '
+            + 'tulivuoria kotivuoriksi. Korjakskaja sopka on 3 456 metriä '
+            + 'korkea ja noin 35 kilometriä kaupungista pohjoiseen, '
+            + 'Avatšinskaja sopka 2 741 metriä ja sammunut Kozelskaja 2 189 '
+            + 'metriä; viimeksi mainitulta on löytynyt harvinaista mustaa '
+            + 'timanttia eli karbonadoa. James Cookin viimeisen retkikunnan '
+            + 'miehet kutsuivat kahta vuorta Pietariksi ja Paavaliksi, ja '
+            + 'John Ledyard kirjasi päiväkirjaansa Avatšinskajan purkauksen '
+            + '15. kesäkuuta 1779.',
+          selite: 'Korjakskaja, Avatšinskaja ja Kozelskaja Petropavlovskin '
+            + 'takana. Kaupungin talot peittävät kukkulat metsänrajaan asti, '
+            + 'ja tulivuoret kohoavat metsävyöhykkeen takaa selväpiirteisinä '
+            + 'kartioina. Korjakskaja on niistä korkein, 3 456 metriä.',
+          lahde: 'kuhnmi, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Korjakskaja',
+        },
+        {
+          otsikko: 'Gejsirit löytyivät koiravaljakolla',
+          tiedosto: 'Smouldering valley of geysers (53160752870).jpg',
+          teksti: 'Kronotskin luonnonpuiston geologi Tatjana Ustinova ja '
+            + 'itelmeeniopas Anisifor Krupenin löysivät Gejsirien laakson '
+            + 'huhtikuussa 1941. Kuukausi oli valittu siksi, että matka '
+            + 'tehtiin koiravaljakoilla ja lumi peitti kesällä '
+            + 'läpipääsemättömät pensaikot. Ensimmäinen heidän näkemänsä '
+            + 'gejsiri sai nimen Pervenets eli esikoinen. Aasiasta ei ollut '
+            + 'siihen asti tunnettu ainuttakaan gejsiriä: niitä tunnettiin '
+            + 'vain Islannista, Yhdysvalloista ja Uudesta-Seelannista.',
+          selite: 'Gejsirien laakso Kronotskin luonnonpuistossa. '
+            + 'Höyrysuihkut nousevat jokikanjonin rinteiltä, jotka ovat '
+            + 'kesällä vihreät ja kukkivat. Gejsernaja-joen alajuoksulla on '
+            + 'parisenkymmentä suurta gejsiriä ja satoja kuumia lähteitä.',
+          lahde: 'Kandukuru Nagarjun from Bangalore, India, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka löysi Kamtšatkan Gejsirien laakson vuonna 1941?',
+        vaihtoehdot: [
+          'Geologi Tatjana Ustinova',
+          'Luonnontutkija Georg Steller',
+          'Merenkulkija Vitus Bering',
+          'Tutkimusmatkailija Stepan Krašeninnikov',
+        ],
+        oikea: 0,
+        fakta: 'Kronotskin luonnonpuiston geologi Tatjana Ustinova ja '
+          + 'itelmeeniopas Anisifor Krupenin tulivat laaksoon huhtikuussa '
+          + '1941 koiravaljakoilla. Ensimmäinen heidän näkemänsä gejsiri sai '
+          + 'nimen Pervenets eli esikoinen.',
+      },
+    },
+  ],
+  vladivostok: [
+    {
+      id: 'kaupunki',
+      nimi: 'Vladivostok',
+      johdanto: 'Kenraalikuvernööri Nikolai Muravjov-Amurski nimesi vuonna '
+        + '1859 poukaman Kultaiseksi sarveksi ja niemen Vladivostokiksi, '
+        + 'idän hallitsijaksi. Seuraavana kesänä rantaan jätettiin '
+        + 'sotilasosasto.',
+      kansikuvat: [
+        {
+          tiedosto: 'Golden Horn bay and Egersheld peninsula.jpg',
+          selite: 'Kultaisen sarven lahti ja Egeršeldin niemi ilmasta '
+            + 'nähtynä. Kapea vesiväylä johtaa satamalaitureille, joita '
+            + 'reunustavat nosturit. Lahden syvyys on 20–27 metriä, ja sen '
+            + 'suoja teki paikasta Venäjän tärkeimmän Tyynenmeren sataman.',
+          lahde: 'Russian.dissident, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Vladivostok, 1898.jpg',
+          selite: 'Vladivostok vuonna 1898. Puutalot ja varastot nousevat '
+            + 'rinteessä lahden yläpuolella, ja redillä on purjelaivoja. '
+            + 'Kaupunki oli tuolloin vajaan neljänkymmenen vuoden ikäinen.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Vladivostok Funicular (October 2024)-0 3.jpg',
+          selite: 'Funikulaarin yläasema Suhanovin kadun päässä. Kaksi '
+            + 'vaunua kulkee 183 metrin mittaista rataa ja nousee 66,5 '
+            + 'metriä puolessatoista minuutissa. Rata avattiin 5. toukokuuta '
+            + '1962.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Nimi lupasi vallan idässä',
+          tiedosto: 'Владивосток. Порт (фотография В. В. Ланина).jpg',
+          teksti: 'Nikolai Muravjov-Amurski antoi vuonna 1859 löytämälleen '
+            + 'syvälle poukamalle nimen Kultainen sarvi, koska se muistutti '
+            + 'häntä Konstantinopolin samannimisestä satamasta. Niemi sai '
+            + 'nimen Vladivostok, joka rakentuu vallitsemista tarkoittavasta '
+            + 'sanasta ja idästä. Nimi siirtyi lahdelta asutukselle, kun '
+            + 'Siperian sotilaslaivaston kuljetusalus Mandžur laski ankkurin '
+            + 'poukamaan Aleksei Šefnerin komennossa ja jätti rantaan '
+            + 'sotilasosaston. Päivä oli vanhan lukutavan mukaan 20. '
+            + 'kesäkuuta 1860. Lahti on seitsemän kilometriä pitkä ja noin '
+            + 'kaksi kilometriä leveä.',
+          selite: 'Näkymä Kultaisen sarven lahdelle 1870-luvulla. '
+            + 'Vastarannalla on rivi matalia rakennuksia lähes puuttomien '
+            + 'kukkuloiden juurella, ja lahdella höyrylaiva. Kuva on '
+            + 'Vladimir Laninin albumista Amurin ja Ussurin seudulta.',
+          lahde: 'Владимир Васильевич Ланин, Wikimedia Commons (PD)',
+          wiki: 'Vladivostok',
+        },
+        {
+          otsikko: 'Radan viimeinen kilometri on 9288',
+          tiedosto: 'Vladivostok Railway station P8050426 2200.jpg',
+          teksti: 'Transsiperian radan itäpään perustuskivi laskettiin 19. '
+            + 'toukokuuta 1891 kruununprinssi Nikolai Aleksandrovitšin läsnä '
+            + 'ollessa. Asema vihittiin käyttöön 2. marraskuuta 1893. P. J. '
+            + 'Basilevskin piirtämä kivitalo kävi pian pieneksi, ja '
+            + 'insinööri V. A. Planson suunnitteli vuosina 1910–1912 sen '
+            + 'tilalle rakennuksen, joka toistaa Moskovan Jaroslavlin aseman '
+            + 'muotokieltä; näin radan molemmissa päissä on toisiaan '
+            + 'muistuttava asema. Laiturin päässä seisoo kilometripylväs, '
+            + 'johon on merkitty luku 9288 — matka Moskovaan.',
+          selite: 'Vladivostokin rautatieasema, Transsiperian radan itäinen '
+            + 'pääte. Vuosina 1910–1912 valmistunut talo jäljittelee '
+            + 'Moskovan Jaroslavlin aseman vanhavenäläistä tyyliä. Radan '
+            + 'pituudeksi on merkitty 9288 kilometriä.',
+          lahde: 'Alexxx1979, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Siperian rata',
+        },
+        {
+          otsikko: 'Kauppahuoneen pojasta tuli kuningas',
+          tiedosto: 'Brynner\'s Plaque.jpg',
+          teksti: 'Juli Borisovitš Briner syntyi Vladivostokissa 11. '
+            + 'heinäkuuta 1920. Hänen isoisänsä Jules Briner oli '
+            + 'sveitsiläinen, joka muutti kaupunkiin 1870-luvulla ja perusti '
+            + 'sinne tuonti- ja vientiliikkeen; suku vaurastui ja asui '
+            + 'nelikerroksisessa talossa. Poika päätyi Kiinan ja Pariisin '
+            + 'kautta Yhdysvaltoihin, otti nimen Yul Brynner ja näytteli '
+            + 'Siamin kuningasta näyttämöllä ja valkokankaalla. Hän piti '
+            + 'itseään äitinsä puolelta romanien jälkeläisenä ja levytti '
+            + 'vuonna 1967 Aljoša Dimitrijevitšin kanssa levyn The Gypsy and '
+            + 'I, jolla hän laulaa romanikielisiä lauluja.',
+          selite: 'Muistolaatta Brynnerin syntymätalon seinässä '
+            + 'Vladivostokissa. Pronssiin on valettu näyttelijän kasvot ja '
+            + 'teksti venäjäksi ja englanniksi. Briner-suvun kauppahuone '
+            + 'toimi kaupungissa 1800-luvun lopulta.',
+          lahde: 'Michael Goodine from Incheon, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Yul Brynner',
+          musiikki: 'https://music.apple.com/fi/album/two-guitars/351069215?i=351069234',
+          musiikkiNimi: 'Yul Brynner: Two Guitars Apple Musicissa',
+          esikuuntelu: 'Yul Brynner gypsy',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Ussurin taiga',
+      johdanto: 'Vladivostokin takamailla alkaa metsä, jossa pohjoisen '
+        + 'havupuut ja etelän köynnökset kasvavat samassa rinteessä. Sen '
+        + 'suurin asukas on amurintiikeri, ja sen parhaana tuntijana '
+        + 'pidettiin nanaimetsästäjää.',
+      nostot: [
+        {
+          otsikko: 'Maailman suurin kissaeläin',
+          tiedosto: 'Siberian Tiger enjoying snow 10.jpg',
+          teksti: 'Amurintiikeriä pidetään tiikerin alalajeista suurimpana. '
+            + 'Vanhoissa mittauksissa urosten keskipaino oli 215 '
+            + 'kilogrammaa, kun taas nykyisin luonnosta mitattujen urosten '
+            + 'keskipaino on noin 176 kilogrammaa ja naaraiden 118 '
+            + 'kilogrammaa. Laji elää Venäjän Kaukoidässä: alue ulottuu '
+            + 'lähes tuhat kilometriä etelästä pohjoiseen Primorjen halki ja '
+            + 'jatkuu Amurin taakse Habarovskin puolelle. Tärkeintä '
+            + 'elinympäristöä ovat koreansembran metsät Sihote-Alinin '
+            + 'vuoristossa. Yksi naaras tarvitsee reviirikseen jopa 450 '
+            + 'neliökilometriä, urokset vielä enemmän.',
+          selite: 'Amurintiikeri lumisen havumetsän reunassa. Aikuinen uros '
+            + 'painaa nykyisin luonnossa keskimäärin noin 176 kilogrammaa. '
+            + 'Kuva on otettu eläintarhassa.',
+          lahde: 'albinfo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Amurintiikeri',
+        },
+        {
+          otsikko: 'Havupuu ja köynnös samassa metsässä',
+          tiedosto: 'Горы Среднего Сихотэ-Алиня, огромные нетронутые территории.jpg',
+          teksti: 'Ussurin sekametsä peittää noin 187 000 neliökilometriä '
+            + 'Primorjen ja Habarovskin alueilla Amurin ja Ussurin varsilla '
+            + 'sekä Sihote-Alinin länsirinteillä. Valtapuita ovat '
+            + 'koreansembra ja mongoliantammi. Koreansembra kasvaa jopa '
+            + 'viisikymmenmetriseksi, sen neulaset ovat viiden kimpuissa ja '
+            + 'kävyt 9–14 senttimetriä pitkiä. Runkoja kiipeää '
+            + 'kiinanlimppuköynnös, joka voi venyä 25 metrin mittaiseksi ja '
+            + 'kantaa hedelmiä, joita kutsutaan viiden maun marjoiksi. '
+            + 'Aluetta pidetään Pohjois-Aasian lajirikkaimpana.',
+          selite: 'Sihote-Alinin vuoristoa keskiosastaan. Rinteitä peittää '
+            + 'yhtenäinen hakkaamaton havu- ja sekametsä. Juuri tällainen '
+            + 'metsä on amurintiikerin tärkeintä elinaluetta.',
+          lahde: 'Olga Ukhvatkina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Koreansembra',
+        },
+        {
+          otsikko: 'Opas, joka luki taigaa',
+          tiedosto: 'В.К. Арсеньев, Дерсу Узала, неустановленное лицо и Чжан Бао (слева направо) в походе по бассейну реки Такема.jpg',
+          teksti: 'Vladimir Arsenjev (1872–1930) tutki Kaukoidän maastoja '
+            + 'vuodesta 1902 ja teki Sihote-Alinille retkiä muun muassa '
+            + 'vuosina 1906 ja 1907–1908. Oppaakseen hän palkkasi '
+            + 'nanaimetsästäjän nimeltä Dersu Uzala (noin 1849–1908), joka '
+            + 'luki taigan merkit ja tunsi eläinten kulun. Keväällä 1908 '
+            + 'Dersu pyysi päästä takaisin metsään, ja Arsenjev antoi '
+            + 'hänelle lähtiessä uuden kiväärin; pian sen jälkeen mies '
+            + 'surmattiin. Retkistä syntyivät kirjat Po Ussurijskomu kraju '
+            + 'vuonna 1921 ja Dersu Uzala vuonna 1923. Arsenjev kuoli '
+            + 'Vladivostokissa, ja hänen kotitalonsa on nykyään museo.',
+          selite: 'Arsenjevin retkikunta Takeman jokilaaksossa. Miehet '
+            + 'seisovat kantamuksineen leiripaikalla keskellä taigaa. '
+            + 'Kuvassa ovat Arsenjev, Dersu Uzala, tunnistamaton henkilö ja '
+            + 'Tšžan Bao.',
+          lahde: 'Владимир Клавдиевич Арсеньев., Wikimedia Commons (PD)',
+          wiki: 'Dersu Uzala',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä vuoristossa sijaitsevat amurintiikerin tärkeimmät '
+          + 'elinympäristöt, koreansembran metsät?',
+        vaihtoehdot: [
+          'Sihote-Alinilla',
+          'Uralilla',
+          'Altailla',
+          'Verhojanskin vuoristossa',
+        ],
+        oikea: 0,
+        fakta: 'Amurintiikerin tärkeintä elinympäristöä ovat Sihote-Alinin '
+          + 'koreansembran metsät. Sama sekametsävyöhyke jatkuu Primorjen ja '
+          + 'Habarovskin alueilla Amurin ja Ussurin varsilla.',
+      },
+    },
+  ],
 };
