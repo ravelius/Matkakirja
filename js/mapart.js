@@ -2558,22 +2558,33 @@ export const RUUTU_TYHJA = 'tyhjä';
  *
  * "WebP eikä PNG" valittiin aikanaan Chromium-mittauksin, ja siellä
  * se on yhä oikein: aidolla peliruudulla WebP 301 ms, JPEG 1126 ms,
- * PNG 1154 ms. WebKitissä järjestys on PÄINVASTAINEN: WebP 196 ms,
- * PNG 399 ms — ja JPEG 16 ms. Omistajan iPadilla juuri pakkaus oli
- * ruutuputken suurin yksittäinen pääsäietukos (mitattuna 500–1400 ms
- * per ruutu), ja se tuntui zoomin tökkimisenä jokaisen eleen perään.
+ * PNG 1154 ms. WebKitissä järjestys voi olla toinen, ja omistajan
+ * iPadilla juuri pakkaus oli ruutuputken suurin yksittäinen
+ * pääsäietukos (mitattuna 500–1400 ms per ruutu). Siksi nopein muoto
+ * mitataan kerran istunnossa siinä selaimessa, jossa pelataan.
  *
- * Siksi nopein muoto mitataan kerran istunnossa pienellä
- * kohinakankaalla ja JPEG otetaan käyttöön vain, jos se on selvästi
- * (yli kaksi kertaa) WebP:tä nopeampi — moottorihaistelun sijaan
- * mitataan sitä mitä oikeasti käytetään. JPEG ei osaa läpinäkyvyyttä,
- * joten se kelpaa vain ruudulle, jonka joka pikseli on peittävä;
- * se tarkistetaan ruutukohtaisesti (taysinPeittava), ja muut ruudut
- * pakataan WebP:nä kuten ennenkin. Laatu 0.90 vastaa silmämääräisesti
- * WebP:n 0.92:ta pergamenttikartalla, ja tiedostokoko on samaa
- * luokkaa (mitattu 194 kt vs 164 kt).
+ * KAKSI KORJAUSTA ENSIMMÄISEEN KOKEESEEN (vaihe 2, 13.8.2026 ilta):
+ *
+ * 1. LÄMMITTELY. Ensimmäinen toBlob-kutsu maksaa pakkausmoottorin
+ *    alustuksen, ja ilman lämmittelyä koe mittasi alustusta eikä
+ *    pakkausta. WebKit-GTK:ssa kylmä 256 px koe antoi WebP 196 ms ja
+ *    JPEG 16 ms — mutta OIKEALLA 1027 px ruudulla lämpimänä JPEG on
+ *    287 ms ja WebP 131 ms eli järjestys on päinvastainen. Vanha koe
+ *    valitsi siis hitaamman muodon joka ruudulle.
+ * 2. TODELLINEN KOKO. Pakkausaika kasvaa pinta-alan mukana muttei
+ *    tasaisesti muotojen kesken, joten koe tehdään 512 px kankaalla —
+ *    riittävän isolla kertomaan ison ruudun järjestyksen, riittävän
+ *    pienellä ettei kertamittaus tunnu (yhteensä ~200 ms joutoaikana).
+ *
+ * JPEG otetaan käyttöön vain, jos se on selvästi (yli kaksi kertaa)
+ * WebP:tä nopeampi. JPEG ei osaa läpinäkyvyyttä, joten se kelpaa vain
+ * ruudulle, jonka joka pikseli on peittävä; nopealla reitillä se
+ * päätellään pergamentin alueesta (ikkunaPaperilla) ja varareitillä
+ * luetaan pikseleistä (taysinPeittava). Laatu 0.90 vastaa
+ * silmämääräisesti WebP:n 0.92:ta pergamenttikartalla, ja tiedostokoko
+ * on samaa luokkaa (mitattu 194 kt vs 164 kt).
  */
-const PAKKAUS_KOE_PX = 256;
+const PAKKAUS_KOE_PX = 512;
 let pakkausvalintaLupaus = null;
 
 function nopeinPakkausmuoto() {
@@ -2589,7 +2600,7 @@ function nopeinPakkausmuoto() {
       // muodoilla hetkessä eikä kertoisi eroista mitään.
       ctx.fillStyle = '#ecd8ae';
       ctx.fillRect(0, 0, PAKKAUS_KOE_PX, PAKKAUS_KOE_PX);
-      for (let i = 0; i < 1500; i++) {
+      for (let i = 0; i < 6000; i++) {
         ctx.fillStyle = `rgba(${(i * 7) % 120},60,30,0.3)`;
         ctx.fillRect((i * 37) % PAKKAUS_KOE_PX, (i * 91) % PAKKAUS_KOE_PX, 3, 3);
       }
@@ -2598,6 +2609,10 @@ function nopeinPakkausmuoto() {
         koekangas.toBlob((b) => valmis(b && b.type === tyyppi
           ? performance.now() - alku : Infinity), tyyppi, laatu);
       });
+      // Lämmittelykierros alustaa molemmat moottorit; vasta toinen
+      // kierros mittaa itse pakkausta (ks. korjaus 1 yllä).
+      await aika('image/webp', 0.92);
+      await aika('image/jpeg', 0.9);
       const webp = await aika('image/webp', 0.92);
       const jpeg = await aika('image/jpeg', 0.9);
       return jpeg * 2 < webp ? 'image/jpeg' : 'image/webp';
@@ -2628,6 +2643,164 @@ function taysinPeittava(piirturi, leveys, korkeus) {
 }
 
 /*
+ * --- kerran jäsennetty taidelähde (tiilipyramidin ydin) ---------------------
+ *
+ * RUUDUN PIIRTO EI ENÄÄ JÄSENNÄ SVG:TÄ. Vanha putki rakensi joka
+ * ruudulle oman SVG-blobin ja antoi sen <img>-elementille, jolloin
+ * selain jäsensi saman taiteen yhä uudelleen. MITATTU (iPad-kierros
+ * 13.8.2026, maailmankartta lähikuvassa, 1027 px ruutu):
+ *
+ *   WebKit:   jäsennys+lataus 169 ms/ruutu, peittävyyden luku
+ *             pikseleistä 230 ms, pakkaus 196 ms — yhteensä ~600 ms
+ *   Chromium (4x CPU-kuristus ≈ iPad): lataus 1886 ms/ruutu
+ *
+ * Sama taide jäsennetään nyt KERRAN yhdeksi SVG-kuvaksi, ja jokainen
+ * ruutu leikataan siitä canvas.drawImagen lähderajauksella (sx,sy,sw,sh).
+ * Selaimet piirtävät SVG-kuvan vektorina piirtohetken muunnoksella,
+ * joten leikattu ruutu on täsmälleen yhtä terävä kuin erikseen
+ * jäsennetty — mitattu pikselintarkasti samaksi (ero 0,00–0,01/px) ja
+ * reunaterävyys samaksi molemmilla moottoreilla myös silloin, kun
+ * luonnollinen koko on murto-osa piirtokoosta. MITATTU:
+ *
+ *   WebKit:   jäsennys kerran 881 ms, sitten 5,6 ms/ruutu
+ *   Chromium (4x): jäsennys kerran 4101 ms, sitten 58 ms/ruutu
+ *
+ * Lähde pidetään muistissa laudan eliniän: se korvaa jäsennystyön,
+ * jonka vanha putki teki joka ruudulle. Jos lataus ei onnistu, kutsuja
+ * saa nullin ja ruudut piirretään vanhaa reittiä — hitaammin mutta
+ * oikein.
+ */
+
+/*
+ * Luonnollisen koon yläraja. SVG-kuvan luonnollinen koko ei vaikuta
+ * terävyyteen (vektoripiirto, ks. yllä), mutta yli ~32 000 pikselin
+ * mitat osuvat selainten sisäisiin rajoihin. Maailmankartan pergamentti
+ * on 33 820 yksikköä korkea, joten mitat jaetaan tarvittaessa.
+ */
+const LAHTEEN_MITTA_ENINTAAN = 16000;
+
+export async function avaaTaidelahde(taide, map) {
+  if (!taide || typeof document === 'undefined' || !window.Blob || !URL.createObjectURL) return null;
+  try {
+    const alue = paperi(map);
+    // Ikkuna reilusti paperia isompi: mukaan tulevat kaikki palat,
+    // myös kierron siirretyt kaksoiskappaleet.
+    const sisalto = typeof taide === 'string' ? taide
+      : kokoaRuudunTaide(taide, {
+        x: alue.x - REUNAVARA, y: alue.y - REUNAVARA,
+        w: alue.w + REUNAVARA * 2, h: alue.h + REUNAVARA * 2,
+      });
+    if (!sisalto) return null;
+    const jako = Math.max(1, Math.ceil(Math.max(alue.w, alue.h) / LAHTEEN_MITTA_ENINTAAN));
+    const xml = `<svg xmlns="${NS}" viewBox="${alue.x} ${alue.y} ${alue.w} ${alue.h}"`
+      + ` width="${(alue.w / jako).toFixed(1)}" height="${(alue.h / jako).toFixed(1)}">${sisalto}</svg>`;
+    const osoite = URL.createObjectURL(new Blob([xml], { type: 'image/svg+xml;charset=utf-8' }));
+    try {
+      const kuva = await new Promise((valmis, virhe) => {
+        const k = new Image();
+        k.onload = () => valmis(k);
+        k.onerror = () => virhe(new Error('taidelähde ei latautunut'));
+        k.src = osoite;
+      });
+      return { kuva, alue, jako };
+    } finally {
+      // Kuvadokumentti on jäsennetty; osoitetta ei tarvita enää.
+      URL.revokeObjectURL(osoite);
+    }
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Onko ruudussa yhtään palaa? Sama rajaustesti kuin kokoaRuudunTaide,
+ * mutta ilman merkkijonojen kokoamista: nopea reitti ei kokoa mitään,
+ * ja silti tyhjä ruutu on muistettava tyhjänä (ks. RUUTU_TYHJA).
+ */
+function ruutuOnTyhja(taide, ikkuna) {
+  if (typeof taide === 'string' || !taide?.palat) return false;
+  const x0 = ikkuna.x - REUNAVARA;
+  const y0 = ikkuna.y - REUNAVARA;
+  const x1 = ikkuna.x + ikkuna.w + REUNAVARA;
+  const y1 = ikkuna.y + ikkuna.h + REUNAVARA;
+  return !taide.palat.some((p) => !(p.x0 > x1 || p.x1 < x0 || p.y0 > y1 || p.y1 < y0));
+}
+
+/*
+ * Peittävyys PÄÄTELLÄÄN, EI LUETA PIKSELEISTÄ.
+ *
+ * taysinPeittava lukee koko kankaan takaisin näytönohjaimelta, ja se
+ * oli mitattuna nopean reitin kallein vaihe: WebKitissä 230 ms ja
+ * kuristetussa Chromiumissa 631 ms per 1027 px ruutu — enemmän kuin
+ * kaikki muut vaiheet yhteensä. Lukua ei tarvita: ruudun ainoa
+ * läpinäkyvyys tulee pergamentin ULKOPUOLELLE jäävästä osasta, ja
+ * pergamentti on yksi akselinsuuntainen suorakaide (paperi()). Ruutu,
+ * joka on kokonaan sen sisällä, on varmasti peittävä; muu pakataan
+ * WebP:nä kuten ennenkin. Vanha reitti pitää pikselitarkistuksensa,
+ * koska sillä ei ole lähteen aluetta käytettävissään.
+ */
+function ikkunaPaperilla(ikkuna, alue) {
+  return ikkuna.x >= alue.x && ikkuna.y >= alue.y
+    && ikkuna.x + ikkuna.w <= alue.x + alue.w
+    && ikkuna.y + ikkuna.h <= alue.y + alue.h;
+}
+
+/*
+ * Kankaan pakkaus, purku ja kääriminen <image>-elementiksi — sama
+ * loppupää nopealle reitille, vanhalle reitille ja pohjatasolle.
+ *
+ * WebP eikä PNG: PNG-pakkaus oli mitattuna ruudun toiseksi kallein
+ * vaihe heti SVG:n jäsennyksen jälkeen. Se on häviötön ja siksi hidas,
+ * ja kartta on juuri sellaista kuvaa — laajoja tasaisia sävyjä ja
+ * ohuita viivoja — jota se pakkaa huonoiten. WebP laadulla 0.92 on
+ * samaa luokkaa tarkka mutta moninkertaisesti nopeampi. JPEG vain jos
+ * se on TÄSSÄ selaimessa mitatusti nopein JA ruutu on kauttaaltaan
+ * peittävä (ks. nopeinPakkausmuoto). Vanha PNG jää varareitiksi:
+ * toBlob palauttaa null tuntemattomalle tyypille joissakin selaimissa,
+ * ja silloin on parempi olla hidas kuin tyhjä.
+ */
+async function kangasKuvaksi(canvas, ikkuna, peittava, puraOdottaen = true) {
+  const pakkaa = (tyyppi, laatu) => new Promise((valmis) => {
+    if (!canvas.toBlob) { valmis(null); return; }
+    canvas.toBlob((b) => valmis(b && b.type === tyyppi ? b : null), tyyppi, laatu);
+  });
+  const jpegKelpaa = (await nopeinPakkausmuoto()) === 'image/jpeg' && peittava;
+  const blobi = (jpegKelpaa ? await pakkaa('image/jpeg', 0.9) : null)
+    ?? await pakkaa('image/webp', 0.92) ?? await pakkaa('image/png');
+  const osoite = blobi ? URL.createObjectURL(blobi) : canvas.toDataURL('image/png');
+
+  /*
+   * Kuva puretaan valmiiksi ennen kuin se pannaan karttaan. Ilman tätä
+   * kuva välkkyi vaihtuessaan: <image> hakee ja purkaa blobin vasta
+   * kun elementti on puussa, ja siinä välissä ehtii tyhjä kehys.
+   *
+   * Purkua EI odoteta, kun kutsuja tietää ettei tyhjää kehystä voi
+   * tulla (puraOdottaen = false): pyramidin pohjataso on aina uuden
+   * ruudun alla, joten purkamaton ruutu näyttää hetken pohjan sumeampaa
+   * karttaa eikä koskaan tyhjää. Odotus oli mitattuna ruutusarjan
+   * pisin vaihe (WebKit 280 ms per ruutu, sarjassa 20 ruutua = 5,6 s),
+   * ja se tehtiin sarjassa peräkkäin — purku itse tapahtuu purkajan
+   * säikeessä, joten käynnistys riittää.
+   */
+  const purku = (async () => {
+    try {
+      const valmis = new Image();
+      valmis.src = osoite;
+      if (valmis.decode) await valmis.decode();
+      else await new Promise((r) => { valmis.onload = r; valmis.onerror = r; });
+    } catch { /* purku ei onnistunut; kuva piirtyy silti, vain hitaammin */ }
+  })();
+  if (puraOdottaen) await purku;
+
+  const kuva = el('image', {
+    x: ikkuna.x, y: ikkuna.y, width: ikkuna.w, height: ikkuna.h,
+    href: osoite, preserveAspectRatio: 'none',
+  });
+  if (blobi) kuva.dataset.osoite = osoite;
+  return kuva;
+}
+
+/*
  * `keskeyta` on vapaaehtoinen luovutusehto. Ruudun kallein osa —
  * SVG:n maalaus kanvakselle ja pakkaus — on jakamatonta
  * pääsäietyötä, ja jos sormi ehtii kartalle kesken kuvan latauksen,
@@ -2637,44 +2810,77 @@ function taysinPeittava(piirturi, leveys, korkeus) {
  * KALTAISTEN odotusten jälkeen, koska juuri niiden aikana ele ehtii
  * alkaa.
  */
-export async function rasteroiRuutu(taide, ikkuna, skaala, tarkkuus = 1, keskeyta = null) {
+/**
+ * @param lahde  avaaTaidelahde:n palauttama kerran jäsennetty lähde tai
+ *               null. Lähteen kanssa ruutu leikataan drawImagella eikä
+ *               SVG:tä jäsennetä lainkaan (ks. avaaTaidelahde); ilman
+ *               sitä käytetään vanhaa ruutukohtaista blobireittiä.
+ */
+export async function rasteroiRuutu(taide, ikkuna, skaala, tarkkuus = 1, keskeyta = null, lahde = null) {
   if (!taide || !window.Blob || !URL.createObjectURL) return null;
   try {
-    const sisalto = typeof taide === 'string' ? taide : kokoaRuudunTaide(taide, ikkuna);
-    // Pergamentti tulee kartan taustasta, joten tyhjää ei tarvitse
-    // rasteroida lainkaan — mutta se on muistettava tyhjänä.
-    if (!sisalto) return RUUTU_TYHJA;
     const teho = skaala * tarkkuus;
     const leveysPx = Math.min(RUUDUN_PIKSELIT, Math.max(32, Math.round(ikkuna.w * teho)));
     const korkeusPx = Math.min(RUUDUN_PIKSELIT, Math.max(32, Math.round(ikkuna.h * teho)));
-    const xml = `<svg xmlns="${NS}" viewBox="${ikkuna.x} ${ikkuna.y} ${ikkuna.w} ${ikkuna.h}"`
-      + ` width="${leveysPx}" height="${korkeusPx}">${sisalto}</svg>`;
-
-    const lahdeOsoite = URL.createObjectURL(new Blob([xml], { type: 'image/svg+xml;charset=utf-8' }));
-    let kuvalahde;
-    try {
-      kuvalahde = await new Promise((valmis, virhe) => {
-        const koe = new Image();
-        koe.onload = () => valmis(koe);
-        koe.onerror = () => virhe(new Error('kuvaa ei voitu ladata'));
-        koe.src = lahdeOsoite;
-      });
-    } catch {
-      URL.revokeObjectURL(lahdeOsoite);
-      return null;
-    }
-    // Ele alkoi latauksen aikana: maalaus ja pakkaus jäävät tekemättä.
-    if (keskeyta?.()) {
-      URL.revokeObjectURL(lahdeOsoite);
-      return null;
-    }
-
     const canvas = document.createElement('canvas');
     canvas.width = leveysPx;
     canvas.height = korkeusPx;
     const piirturi = canvas.getContext('2d');
-    piirturi.drawImage(kuvalahde, 0, 0, leveysPx, korkeusPx);
-    URL.revokeObjectURL(lahdeOsoite);
+    let peittava;
+
+    if (lahde?.kuva) {
+      // --- NOPEA REITTI: leikkaus kerran jäsennetystä lähteestä. ---
+      // Pergamentti tulee kartan taustasta, joten tyhjää ei tarvitse
+      // rasteroida lainkaan — mutta se on muistettava tyhjänä.
+      if (ruutuOnTyhja(taide, ikkuna)) return RUUTU_TYHJA;
+      /*
+       * Suoraan lähteestä, EI väliin puskuroitua kaistaa. Kokeiltiin
+       * myös kolmen ruudun rivikaistaa, josta ruudut olisivat pelkkiä
+       * pikselikopioita — mutta WebKitissä lähteen toistokustannus
+       * kasvaa piirretyn LÄHDEALUEEN mukana, joten leveä kaista maksoi
+       * kolmen ruudun verran eikä säästänyt mitään (mitattu sarja:
+       * suoraan 340 ms/ruutu, kaistalla 568 ms/ruutu).
+       */
+      piirturi.drawImage(
+        lahde.kuva,
+        (ikkuna.x - lahde.alue.x) / lahde.jako,
+        (ikkuna.y - lahde.alue.y) / lahde.jako,
+        ikkuna.w / lahde.jako,
+        ikkuna.h / lahde.jako,
+        0, 0, leveysPx, korkeusPx,
+      );
+      peittava = ikkunaPaperilla(ikkuna, lahde.alue);
+    } else {
+      // --- VARAREITTI: ruutukohtainen SVG-blobi kuten ennen. ---
+      const sisalto = typeof taide === 'string' ? taide : kokoaRuudunTaide(taide, ikkuna);
+      if (!sisalto) return RUUTU_TYHJA;
+      const xml = `<svg xmlns="${NS}" viewBox="${ikkuna.x} ${ikkuna.y} ${ikkuna.w} ${ikkuna.h}"`
+        + ` width="${leveysPx}" height="${korkeusPx}">${sisalto}</svg>`;
+
+      const lahdeOsoite = URL.createObjectURL(new Blob([xml], { type: 'image/svg+xml;charset=utf-8' }));
+      let kuvalahde;
+      try {
+        kuvalahde = await new Promise((valmis, virhe) => {
+          const koe = new Image();
+          koe.onload = () => valmis(koe);
+          koe.onerror = () => virhe(new Error('kuvaa ei voitu ladata'));
+          koe.src = lahdeOsoite;
+        });
+      } catch {
+        URL.revokeObjectURL(lahdeOsoite);
+        return null;
+      }
+      // Ele alkoi latauksen aikana: maalaus ja pakkaus jäävät tekemättä.
+      if (keskeyta?.()) {
+        URL.revokeObjectURL(lahdeOsoite);
+        return null;
+      }
+      piirturi.drawImage(kuvalahde, 0, 0, leveysPx, korkeusPx);
+      URL.revokeObjectURL(lahdeOsoite);
+      // Varareitillä peittävyys luetaan pikseleistä kuten ennenkin —
+      // lähteen aluetta ei ole, josta sen voisi päätellä.
+      peittava = null;
+    }
 
     // Paperin pinta ruudun omissa pikseleissä, ks. GRAIN_RUUDULLA_PX.
     const ruudullaPx = ikkuna.w * skaala;
@@ -2684,54 +2890,99 @@ export async function rasteroiRuutu(taide, ikkuna, skaala, tarkkuus = 1, keskeyt
     // pääsäievaihe) jää tekemättä ja ruutu pyydetään myöhemmin uudestaan.
     if (keskeyta?.()) return null;
 
-    /*
-     * WebP eikä PNG.
-     *
-     * PNG-pakkaus oli mitattuna ruudun toiseksi kallein vaihe heti
-     * SVG:n jäsennyksen jälkeen. Se on häviötön ja siksi hidas, ja
-     * kartta on juuri sellaista kuvaa — laajoja tasaisia sävyjä ja
-     * ohuita viivoja — jota se pakkaa huonoiten.
-     *
-     * WebP laadulla 0.92 on samaa luokkaa tarkka mutta moninkertaisesti
-     * nopeampi, ja tiedosto on murto-osa. Kuvaa ei suurenneta pikselin
-     * tarkkuudella eikä siitä lueta värejä takaisin, joten häviöllisyys
-     * ei näy: ruutu piirretään täsmälleen siihen kokoon, johon se
-     * rasteroitiin.
-     *
-     * Vanha PNG jää varareitiksi. toBlob palauttaa null tuntemattomalle
-     * tyypille joissakin selaimissa, ja silloin on parempi olla hidas
-     * kuin tyhjä.
-     */
-    const pakkaa = (tyyppi, laatu) => new Promise((valmis) => {
-      if (!canvas.toBlob) { valmis(null); return; }
-      canvas.toBlob((b) => valmis(b && b.type === tyyppi ? b : null), tyyppi, laatu);
-    });
-    // JPEG vain jos se on TÄSSÄ selaimessa mitatusti nopein JA ruutu
-    // on kauttaaltaan peittävä (ks. nopeinPakkausmuoto).
-    const jpegKelpaa = (await nopeinPakkausmuoto()) === 'image/jpeg'
-      && taysinPeittava(piirturi, leveysPx, korkeusPx);
-    const png = (jpegKelpaa ? await pakkaa('image/jpeg', 0.9) : null)
-      ?? await pakkaa('image/webp', 0.92) ?? await pakkaa('image/png');
-    const osoite = png ? URL.createObjectURL(png) : canvas.toDataURL('image/png');
+    // Nopealla reitillä pohjataso on ruudun alla, joten purkua ei
+    // tarvitse odottaa (ks. kangasKuvaksi); varareitillä odotetaan.
+    return await kangasKuvaksi(canvas, ikkuna,
+      peittava ?? taysinPeittava(piirturi, leveysPx, korkeusPx), !lahde?.kuva);
+  } catch {
+    return null;
+  }
+}
 
-    /*
-     * PNG puretaan valmiiksi ennen kuin se pannaan karttaan. Ilman tätä
-     * kuva välkkyi vaihtuessaan: <image> hakee ja purkaa blobin vasta
-     * kun elementti on puussa, ja siinä välissä ehtii tyhjä kehys.
-     */
-    try {
-      const valmis = new Image();
-      valmis.src = osoite;
-      if (valmis.decode) await valmis.decode();
-      else await new Promise((r) => { valmis.onload = r; valmis.onerror = r; });
-    } catch { /* purku ei onnistunut; kuva piirtyy silti, vain hitaammin */ }
+/*
+ * --- pyramidin pohjataso ----------------------------------------------------
+ *
+ * Koko laudan karkea bittikartta yhtenä kuvana, leikattuna samasta
+ * kerran jäsennetystä lähteestä. Kaksi tehtävää:
+ *
+ * 1. LAUDAN LUONTIHETKI. Raskas vektorikerros (maailmankartalla ~12 500
+ *    elementtiä, panorointikehys 236 ms) voidaan piilottaa heti kun
+ *    pohja on olemassa — sitä ei tarvitse odottaa, että kokonainen
+ *    ruutusarja valmistuu. Pohjan maalaus lähteestä on mitattu:
+ *    WebKit 48 ms, Chromium (4x kuristus) 128 ms.
+ * 2. ELE PIIRTÄÄ AINA VALMISTA BITTIKARTTAA. Pohja on aina ruutujen
+ *    alla koko laudan alueella, joten nipistys tai pyyhkäisy alueelle,
+ *    jonka tarkkoja ruutuja ei vielä ole, näyttää sumeahkon kartan
+ *    eikä paljasta tyhjää pergamenttia.
+ *
+ * Mitoitus muistibudjetista: 2200 pikselin leveys riittää iPadin
+ * yleiskuvaan (1100 css-pikseliä × 2), ja pikselikatto pitää korkean
+ * laudan kurissa. Maailmankartalla pohja on 2200 × ~700 px ≈ 6 Mt
+ * purettuna. Toista, tarkempaa kokolaudan tasoa EI rakenneta: se olisi
+ * maailmankartalla nelinkertainen (~25 Mt pysyvää muistia iPadilla),
+ * ja mittausten jälkeen tarkat ruudut syntyvät niin nopeasti (ks.
+ * avaaTaidelahde), ettei välitasolle jäänyt tehtävää.
+ */
+const POHJAN_LEVEYS_PX = 2200;
+const POHJAN_PIKSELIKATTO = 4.2e6;
 
-    const kuva = el('image', {
-      x: ikkuna.x, y: ikkuna.y, width: ikkuna.w, height: ikkuna.h,
-      href: osoite, preserveAspectRatio: 'none',
-    });
-    if (png) kuva.dataset.osoite = osoite;
-    return kuva;
+/**
+ * Pohjatason ikkuna ja koko lasketaan laudasta, ei kuvasta — joten ne
+ * tiedetään jo ENNEN kuin pohja on rakennettu. Kutsuja käyttää tätä
+ * päättämään, kannattaako ruutuja edes rakentaa vai odottaa pohjaa
+ * (ks. js/ui.js taydennaTaide).
+ *
+ * Pohja kattaa laudan ja kaistaleen sen ympäriltä, EI koko
+ * pergamenttia: paperi jatkuu yli kymmenkertaisena laudan ylä- ja
+ * alapuolelle, ja sen kattava pohja olisi lähes pelkkää tyhjää
+ * paperia muistissa. Reunan yli panoroitaessa tarkat ruudut
+ * piirtyvät sinne kuten ennenkin.
+ */
+export function pohjanMitat(map) {
+  const w = map?.width ?? 1000;
+  const h = map?.height ?? 1000;
+  const alue = paperi(map);
+  const vara = Math.max(w, h) * 0.12;
+  const x0 = map?.kiertava ? 0 : Math.max(alue.x, -vara);
+  const x1 = map?.kiertava ? w : Math.min(alue.x + alue.w, w + vara);
+  const y0 = Math.max(alue.y, -vara);
+  const y1 = Math.min(alue.y + alue.h, h + vara);
+  const ikkuna = { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+  const leveysPx = Math.min(POHJAN_LEVEYS_PX,
+    Math.max(64, Math.floor(Math.sqrt((POHJAN_PIKSELIKATTO * ikkuna.w) / ikkuna.h))));
+  const korkeusPx = Math.max(32, Math.round((leveysPx * ikkuna.h) / ikkuna.w));
+  // teho = pikseliä per laudan yksikkö: vertailukelpoinen näkymän
+  // tarpeeseen (skaala * piirtotarkkuus).
+  return { ikkuna, leveysPx, korkeusPx, teho: leveysPx / ikkuna.w };
+}
+
+export async function rasteroiPohja(lahde, map) {
+  if (!lahde?.kuva || typeof document === 'undefined') return null;
+  try {
+    const { ikkuna, leveysPx, korkeusPx } = pohjanMitat(map);
+
+    const canvas = document.createElement('canvas');
+    canvas.width = leveysPx;
+    canvas.height = korkeusPx;
+    const piirturi = canvas.getContext('2d');
+    piirturi.drawImage(
+      lahde.kuva,
+      (ikkuna.x - lahde.alue.x) / lahde.jako,
+      (ikkuna.y - lahde.alue.y) / lahde.jako,
+      ikkuna.w / lahde.jako,
+      ikkuna.h / lahde.jako,
+      0, 0, leveysPx, korkeusPx,
+    );
+    /*
+     * Rae pohjan omissa pikseleissä suhteella 1: pohja on näkyvin
+     * kerros juuri yleiskuvassa, jossa sen pikselit vastaavat suunnilleen
+     * ruudun pikseleitä. Lähempänä pohja vilahtaa vain eleen aikana
+     * tarkkojen ruutujen alta, eikä raekoon hetkellinen ero ehdi näkyä.
+     */
+    piirraRakeisuus(piirturi, leveysPx, korkeusPx, 1);
+    const kuva = await kangasKuvaksi(canvas, ikkuna, ikkunaPaperilla(ikkuna, lahde.alue));
+    // Pikseliä per laudan yksikkö: kutsuja vertaa tätä näkymän tarpeeseen.
+    return kuva ? { kuva, teho: leveysPx / ikkuna.w } : null;
   } catch {
     return null;
   }

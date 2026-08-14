@@ -712,6 +712,9 @@ import {
   kasinPiirretty,
   rasteroiRuutu,
   RUUTU_TYHJA,
+  avaaTaidelahde,
+  rasteroiPohja,
+  pohjanMitat,
   piirtotarkkuus,
   ruudunKoko,
   valmisteleTaide,
@@ -3251,6 +3254,11 @@ export class UI {
     // Puskurirenkaan jono elää joutohetkien varassa: ilman perumista se
     // piirtäisi kuolleen pelin ruutuja uuden kartan päälle.
     this.peruutaRengas();
+    // Kerran jäsennetty taidelähde ja pohjataso irti: lähteen kuva on
+    // laudan raskain yksittäinen muistinvaraus, eikä kuolleen pelin
+    // pidä pitää sitä hengissä uuden rinnalla.
+    this.vapautaPohja();
+    this.taideLahde = null;
     stopPlaceStream();
     stopQuizMusic();
     sfx.stopFlight();
@@ -3801,11 +3809,104 @@ export class UI {
     this.taideRuutu = 0;
     this.taideRengas = null;
     this.taideVektorit = ryhma.firstElementChild ? [...ryhma.children] : [];
+    /*
+     * Kerran jäsennetty taidelähde ja pyramidin pohjataso.
+     *
+     * Ruudut leikataan lähteestä drawImagella eikä SVG:tä jäsennetä
+     * enää ruutu kerrallaan — se oli mitattuna ruudun kallein vaihe
+     * (WebKit 169 ms + peittävyysluku 230 ms + pakkaus 196 ms per
+     * ruutu; lähteestä leikattuna 5,6 ms per ruutu, ks. js/mapart.js
+     * avaaTaidelahde). Lähteen jäsennys maksaa kerran (WebKit ~0,9 s).
+     * Sen valmistuttua käynnistyvät rinnakkain ruutusarja ja koko
+     * laudan karkea pohjataso; pohja asettuu kaiken alle ja takaa,
+     * että ele piirtää aina valmista bittikarttaa, vaikka tarkat
+     * ruudut puuttuisivat.
+     */
+    this.vapautaPohja();
+    this.taideLahde = null;
+    this.taideLahdeTulossa = true;
+    this.taideLuotu = performance.now();
+    this.pohjaValmisMs = null;
+    /*
+     * Pohjan tarkkuus tiedetään jo ennen kuin pohja on rakennettu
+     * (pelkkää geometriaa), ja sillä tiedolla yleiskuva voi odottaa
+     * pohjaa sen sijaan, että rakentaisi ison ruutusarjan, jonka pohja
+     * heti korvaa — maailmankartan yleiskuva on yli sata ruutua
+     * paperia ja merta.
+     */
+    this.pohjaTulossa = true;
+    this.pohjaTehoOdotus = pohjanMitat(this.game.pack.map).teho;
+    const taide = this.taide;
+    avaaTaidelahde(taide, this.game.pack.map).then((lahde) => {
+      if (this.dead || this.taide !== taide) return;
+      this.taideLahde = lahde;
+      this.taideLahdeTulossa = false;
+      // Ilman lähdettä ei tule pohjaakaan — lippu alas ENNEN
+      // täydennystä, ettei yleiskuva jää odottamaan pohjaa ikuisesti.
+      if (!lahde) this.pohjaTulossa = false;
+      // Ruutusarja odotti lähdettä (ks. taydennaTaide); nyt se saa alkaa.
+      // Pohjatasoa EI odoteta: sen pakkaus vie ison laudan kokoisena
+      // sekunteja (mitattu Chromium ~5 s), ja ruudut blokkaava odotus
+      // piti koko kartan vektoreina sen ajan.
+      this.taydennaTaide();
+      if (!lahde) return;
+      rasteroiPohja(lahde, this.game.pack.map).then((pohja) => {
+        if (this.dead || this.taide !== taide) return;
+        this.pohjaTulossa = false;
+        if (!pohja) { this.taydennaTaide(); return; }
+        /*
+         * Pohja OMAAN ryhmäänsä taideRyhmän EDELLE, ei taideRyhmän
+         * sisään: uudet ruudut lisätään taideRyhmän alkuun
+         * (insertBefore firstChild), joten ryhmän sisällä pohja
+         * valuisi ruutujen PÄÄLLE heti ensimmäisen ruudun tullessa.
+         * Edeltävänä sisaruksena se on aina kaiken tarkan alla, ja
+         * kiertävän kartan <use>-kopio monistaa sen siinä missä
+         * muunkin juuriryhmän sisällön.
+         */
+        const ryhmaPohjalle = el('g', { class: 'taide-pohja' });
+        this.taideRyhma.parentElement?.insertBefore(ryhmaPohjalle, this.taideRyhma);
+        ryhmaPohjalle.appendChild(pohja.kuva);
+        this.pohjaRyhma = ryhmaPohjalle;
+        this.taidePohja = pohja.kuva;
+        this.pohjaTeho = pohja.teho;
+        // Aika laudan luonnista koko laudan kattavaan bittikarttaan —
+        // savuke vartioi tätä (tools/savuke-kartan-sujuvuus.mjs).
+        this.pohjaValmisMs = performance.now() - this.taideLuotu;
+        // Raskas vektorikerros pois HETI: pohja kattaa koko laudan,
+        // eikä poisto odota ruutusarjaa, jonka raskaat vektorikehykset
+        // itse pitäisivät ikuisesti kesken (ks. poistaVektorit).
+        this.poistaVektorit();
+        // Yleiskuvassa pohja korvaa ruudut (ks. taydennaTaide), joten
+        // näkymä saa tilaisuuden vapauttaa ne heti.
+        this.taydennaTaide();
+      });
+    });
     // Ensimmäinen piirto vasta seuraavalla kehyksellä: laudan
     // luontihetkellä viewBox on vielä oletusarvoinen eikä paneelin koko
     // ole tiedossa.
     requestAnimationFrame(() => this.taydennaTaide());
     this.vahdiTarkkuutta();
+  }
+
+  /** Poistaa pohjatason ja vapauttaa sen blob-osoitteen. */
+  vapautaPohja() {
+    if (this.taidePohja?.dataset?.osoite) URL.revokeObjectURL(this.taidePohja.dataset.osoite);
+    this.pohjaRyhma?.remove();
+    this.pohjaRyhma = null;
+    this.taidePohja = null;
+    this.pohjaTeho = 0;
+    this.pohjaTulossa = false;
+  }
+
+  /**
+   * Piirtotarkkuus tälle näkymälle myös ennen ensimmäistä ruutusarjaa.
+   * Sarja tallettaa arvon taideTarkkuuteen; sitä ennen se lasketaan
+   * paneelista samalla kaavalla kuin sarja laskisi.
+   */
+  nykyinenTarkkuus() {
+    if (this.taideTarkkuus) return this.taideTarkkuus;
+    const pane = this.svg?.parentElement;
+    return piirtotarkkuus(pane?.clientWidth ?? 400, pane?.clientHeight ?? 800);
   }
 
   /**
@@ -4051,8 +4152,28 @@ export class UI {
     // Kesken eleen ei ladata. Merkitään vain, että päättyessä pitää.
     if (this.kartanRaahaus && !heti) { this.taideOdottaa = true; return; }
     if (this.taidePiirtyy) { this.taideOdottaa = true; return; }
+    /*
+     * Ruutusarja odottaa kerran jäsennettyä lähdettä. Ilman lähdettä
+     * jokainen ruutu jäsentäisi SVG:n itse (mitattuna 169–1886 ms per
+     * ruutu moottorista riippuen), ja se työ heitettäisiin pois heti
+     * kun lähde valmistuu. Lähteen valmistuminen kutsuu tätä uudestaan;
+     * jos lataus epäonnistuu, lippu laskee ja ruudut piirtyvät
+     * varareittiä.
+     */
+    if (this.taideLahdeTulossa) { this.taideOdottaa = true; return; }
     const nakyva = this.nakyvaAlue();
     if (!nakyva) return;
+    /*
+     * Pohjataso on tulossa ja kattaa tämän mittakaavan: odotetaan sitä
+     * eikä rakenneta ruutusarjaa, jonka pohja korvaisi saman tien.
+     * Pohjan valmistuminen kutsuu tätä uudestaan. Jos pohja jää
+     * syntymättä, pohjaTulossa laskee ja ruudut rakennetaan silloin.
+     */
+    if (!this.taidePohja && this.pohjaTulossa
+        && nakyva.skaala * this.nykyinenTarkkuus() <= (this.pohjaTehoOdotus || 0)) {
+      this.taideOdottaa = true;
+      return;
+    }
     /*
      * Vanha rengastyö pois ennen uutta laskentaa.
      *
@@ -4107,6 +4228,27 @@ export class UI {
       this.taideVanhat = [...this.taideRuudut.values()];
       this.taideRuudut = new Map();
       this.taideTyhjat = new Set();
+    }
+
+    /*
+     * POHJATASO RIITTÄÄ YLEISKUVASSA — RUUTUJA EI RAKENNETA LAINKAAN.
+     *
+     * Pohja on koko laudan kuva 2200 pikselin leveydellä (js/mapart.js
+     * rasteroiPohja), ja loitonnetussa näkymässä se on vähintään yhtä
+     * tarkka kuin ruudut olisivat. Ennen yleiskuva rakensi silti
+     * parikymmentä pientä ruutua joka kerta kun mittakaava vaihtui.
+     * Nyt ne jäävät pois: vanhan mittakaavan ruudut vapautuvat
+     * (poistaVanhatRuudut) ja pohja jää yksin näkyviin.
+     *
+     * taideSkaala pidetään näkymän mukana, jottei tarkkuusvahti
+     * (tarkistaTarkkuus, kynnys 2 %) pakottaisi sarjaa, jota tämä
+     * haara juuri päätti olla rakentamatta.
+     */
+    if (this.taidePohja && nakyva.skaala * this.nykyinenTarkkuus() <= this.pohjaTeho) {
+      this.taideSkaala = nakyva.skaala;
+      this.taideOdottaa = false;
+      this.poistaVanhatRuudut();
+      return;
     }
 
     const koko = this.taideRuutu;
@@ -4226,6 +4368,13 @@ export class UI {
          * Sarja jatkuu, kun sormi irtoaa (paata ja irrota).
          */
         if (this.eleKesken()) { this.taideOdottaa = true; break; }
+        // Pohjataso ehti valmistua kesken sarjan ja kattaa tämän
+        // mittakaavan: loput ruudut ovat turhia, ja jatko (skip-haara)
+        // vapauttaa jo tehdytkin.
+        if (this.taidePohja && skaala * this.taideTarkkuus <= this.pohjaTeho) {
+          this.taideOdottaa = true;
+          break;
+        }
         /*
          * Mittakaava luetaan RUUDULTA joka ruudun välissä, ei
          * this.taideSkaalasta.
@@ -4245,8 +4394,9 @@ export class UI {
         const ikkuna = { x: rx * koko, y: ry * koko, w: koko, h: koko };
         // Luovutusehto: jos ele alkaa kesken ruudun, kalleimmat vaiheet
         // (maalaus, pakkaus) jäävät tekemättä eivätkä nykäise sormen alla.
+        // Lähde mukaan: ruutu leikataan kerran jäsennetystä kuvasta.
         const kuva = await rasteroiRuutu(this.taide, ikkuna, skaala, this.taideTarkkuus,
-          () => this.dead || this.eleKesken());
+          () => this.dead || this.eleKesken(), this.taideLahde);
         if (this.dead || skaala !== this.taideSkaala) continue;
         // Tyhjä ruutu kirjataan tyhjänä: sitä ei piirretä eikä pyydetä uudestaan.
         if (kuva === RUUTU_TYHJA) { this.taideTyhjat.add(avain); continue; }
@@ -4257,6 +4407,24 @@ export class UI {
         // Uusi ruutu alimmaiseksi: vanhan mittakaavan ruudut jäävät
         // päälle siihen asti, kunnes koko näkymä on katettu.
         this.taideRyhma.insertBefore(kuva, this.taideRyhma.firstChild);
+        /*
+         * Kehyksen mittainen hengähdys ruutujen väliin. Nopealla
+         * reitillä ruudun maalaus on synkronista työtä (drawImage
+         * lähteestä, mitattu ~110–380 ms), ja ilman tätä kaksi kolme
+         * ruutua niputtui samaan kehykseen: sormenvedon ensimmäinen
+         * kehys eleiden välissä venyi yli sekuntiin (savukkeen mittari
+         * "nipistyksen jälkeinen panorointi"). Vanhalla reitillä saman
+         * hengähdyksen antoi vahingossa ruutukohtaisen SVG:n lataus.
+         *
+         * Ajastin rinnalle, koska requestAnimationFrame ei tikitä
+         * taustavälilehdessä — pelkkä rAF jäädyttäisi sarjan sinne ja
+         * taidePiirtyy jäisi pystyyn estämään kaiken muun.
+         */
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((jatka) => {
+          const kehys = requestAnimationFrame(() => { clearTimeout(vara); jatka(); });
+          const vara = setTimeout(() => { cancelAnimationFrame(kehys); jatka(); }, 100);
+        });
       }
       this.taidePiirtyy = false;
       if (this.taideOdottaa && !this.eleKesken()) {
@@ -4311,6 +4479,13 @@ export class UI {
     const askel = async () => {
       // Vanhentunut työ: mittakaava vaihtui tai peli vaihtui alta.
       if (this.dead || this.taideRengas !== tyo || skaala !== this.taideSkaala) return;
+      // Pohjataso kattaa tämän mittakaavan: rengas on turha, ja
+      // vanhat ruudut saavat siivoutua saman tien.
+      if (this.taidePohja && skaala * tarkkuus <= this.pohjaTeho) {
+        this.taideRengas = null;
+        this.poistaVanhatRuudut();
+        return;
+      }
       /*
        * Samat kolme kieltoa kuin täydennyksellä: eleen, lennon ja
        * zoomiliu'un aikana ei rasteroida. Ero on, ettei tässä
@@ -4328,7 +4503,7 @@ export class UI {
         const ikkuna = { x: rx * koko, y: ry * koko, w: koko, h: koko };
         // Sama luovutusehto kuin näkyvillä ruuduilla: ele voittaa.
         const kuva = await rasteroiRuutu(this.taide, ikkuna, skaala, tarkkuus,
-          () => this.dead || this.eleKesken());
+          () => this.dead || this.eleKesken(), this.taideLahde);
         if (this.dead || this.taideRengas !== tyo || skaala !== this.taideSkaala) return;
         if (kuva === RUUTU_TYHJA) this.taideTyhjat.add(avain);
         else if (kuva) {
@@ -4484,10 +4659,26 @@ export class UI {
       if (solmu.dataset?.osoite) URL.revokeObjectURL(solmu.dataset.osoite);
     }
     this.taideVanhat = [];
-    if (this.taideRuudut?.size) {
-      for (const solmu of this.taideVektorit ?? []) solmu.remove();
-      this.taideVektorit = [];
-    }
+    this.poistaVektorit();
+  }
+
+  /**
+   * Poistaa alkuperäiset vektorit heti kun bittikarttaa on: ruutuja
+   * TAI pohjataso. Oma metodinsa eikä osa poistaVanhatRuuduista,
+   * koska tämän on voitava tapahtua myös KESKEN ruutusarjan ja heti
+   * pohjan valmistuttua: hitaalla koneella vektorikerros (12 500
+   * elementtiä, mitattu 236–1400 ms per panorointikehys) teki
+   * jokaisesta eleestä niin raskaan, että eleet keskeyttivät sarjan
+   * loputtomiin eikä poisto sarjan lopussa tullut koskaan — kartta
+   * jumitti minuutteja (savukkeen kehysvälimittari). Pohja kattaa
+   * koko laudan, joten poisto ei voi paljastaa tyhjää; tarkkuus
+   * palaa ruutujen mukana.
+   */
+  poistaVektorit() {
+    if (!this.taideVektorit?.length) return;
+    if (!this.taideRuudut?.size && !this.taidePohja) return;
+    for (const solmu of this.taideVektorit) solmu.remove();
+    this.taideVektorit = [];
   }
 
   /** Vuorossa olevan pelaajan nappulan kohta laudan koordinaateissa. */
