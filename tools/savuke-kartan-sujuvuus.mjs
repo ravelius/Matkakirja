@@ -226,11 +226,11 @@ async function panoroi(matka = 200, askelia = 20) {
 }
 
 /** Kahden sormen nipistys annetulla kertoimella. */
-async function nipista(kerroin) {
+async function nipista(kerroin, askelia = 14, viiveMs = 16) {
   if (WEBKIT) {
-    await sivu.evaluate(async ({ kerroin: k }) => {
+    await sivu.evaluate(async ({ kerroin: k, askelia: n, viiveMs: v }) => {
       const pane = window.matkakirja.ui.svg.parentElement;
-      const kx = 195; const ky = 420; const alku = 120; const n = 14;
+      const kx = 195; const ky = 420; const alku = 120;
       const sormi = (id, x, y) => ({ identifier: id, clientX: x, clientY: y, pageX: x, pageY: y });
       const parit = (d) => [sormi(1, kx - d / 2, ky), sormi(2, kx + d / 2, ky)];
       const laheta = (tyyppi, koskee, muuttuneet) => {
@@ -246,20 +246,20 @@ async function nipista(kerroin) {
         p = parit(alku * (1 + (k - 1) * (i / n)));
         laheta('touchmove', p, p);
         // eslint-disable-next-line no-await-in-loop
-        await new Promise((r) => setTimeout(r, 16));
+        await new Promise((r) => setTimeout(r, v));
       }
       laheta('touchend', [], p);
-    }, { kerroin });
+    }, { kerroin, askelia, viiveMs });
     return;
   }
   const cdp = await ctx.newCDPSession(sivu);
-  const kx = 195; const ky = 420; const alku = 120; const askelia = 14;
+  const kx = 195; const ky = 420; const alku = 120;
   const pisteet = (d) => [{ x: kx - d / 2, y: ky, id: 1 }, { x: kx + d / 2, y: ky, id: 2 }];
   await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: pisteet(alku) });
   for (let i = 1; i <= askelia; i++) {
     const d = alku * (1 + (kerroin - 1) * (i / askelia));
     await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: pisteet(d) });
-    await sivu.waitForTimeout(16);
+    await sivu.waitForTimeout(viiveMs);
   }
   await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
   await cdp.detach();
@@ -762,6 +762,139 @@ const sarjanRuudut = await sivu.evaluate(() => window.matkakirja.ui.taideRuudut.
 vaadi('ruudun piirto ei jäsennä SVG:tä (leikkaus jäsennetystä lähteestä)',
   sarjanRuudut > 0 && sarjaJalkeen.aloitukset === 0,
   `ruutuja ${sarjanRuudut}, svg-blobeja ${sarjaJalkeen.aloitukset}`);
+
+/*
+ * 12) POHJATASON RAE KATTAA KOKO POHJAN (omistajan iPad-havainto
+ * 14.8.2026: "kartta on eri väriinen joistain kohdista"). Rae
+ * piirrettiin yhtenä laattana, joka on 1100 px — mutta pohja on
+ * 2200 px leveä, joten rae jäi vasempaan ylänurkkaan ja loppu pohja
+ * oli mitatusti ~11/255 vaaleampi. Vartio mittaa kapeat kaistat
+ * laatan rajan (1100 px) molemmin puolin: sisältö on rajan
+ * ympäristössä tilastollisesti sama, joten iso hyppy voi tulla vain
+ * rakeen katkeamisesta.
+ */
+const pohjanRae = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  if (!ui.taidePohja) return { virhe: 'ei pohjaa' };
+  const img = new Image();
+  await new Promise((r, j) => {
+    img.onload = r;
+    img.onerror = j;
+    img.src = ui.taidePohja.getAttribute('href');
+  });
+  const W = img.naturalWidth;
+  const H = img.naturalHeight;
+  const c = document.createElement('canvas');
+  c.width = W; c.height = H;
+  const p = c.getContext('2d');
+  p.drawImage(img, 0, 0);
+  const keskiarvo = (x0, y0, w, h) => {
+    const d = p.getImageData(x0, y0, w, h).data;
+    let r = 0; let g = 0; let b = 0; let n = 0;
+    for (let i = 0; i < d.length; i += 4) { r += d[i]; g += d[i + 1]; b += d[i + 2]; n++; }
+    return [r / n, g / n, b / n];
+  };
+  const hyppy = (a, b) => Math.max(...a.map((v, i) => Math.abs(v - b[i])));
+  const RAJA = 1100; // grainLaatoitettu-laatan koko (RUUDUN_PIKSELIT)
+  /*
+   * Vaakaraja mitataan pohjan ALAREUNAN varakaistalta: se on laudan
+   * eteläpuolista pelkkää pergamenttia, joten kaistojen ero voi tulla
+   * vain rakeesta. Koko korkeuden kaista osuisi keskelle maailmaa,
+   * jossa sisältö itsessään vaihtelee kymmenen yksikön verran.
+   */
+  const pohjakaista = Math.max(0, H - 140);
+  return {
+    kokoPx: `${W}x${H}`,
+    vaaka: W > RAJA + 100 ? Math.round(hyppy(
+      keskiarvo(RAJA - 100, pohjakaista, 100, H - pohjakaista),
+      keskiarvo(RAJA, pohjakaista, 100, H - pohjakaista),
+    ) * 10) / 10 : 0,
+    pysty: H > RAJA + 100 ? Math.round(hyppy(
+      keskiarvo(0, RAJA - 100, Math.min(W, RAJA), 100),
+      keskiarvo(0, RAJA, Math.min(W, RAJA), 100),
+    ) * 10) / 10 : 0,
+  };
+});
+vaadi('pohjatason rae kattaa koko pohjan (ei sävyrajaa laatan reunalla)',
+  !pohjanRae.virhe && pohjanRae.vaaka < 7 && pohjanRae.pysty < 7,
+  JSON.stringify(pohjanRae));
+
+/*
+ * 13) SALAMASARJA: viisi alle 100 ms:n nipistystä peräkkäin
+ * (omistajan iPad-havainto 14.8.2026: "oikein nopeissa zoomauksissa
+ * saattaa edelleen hypätä, tai joku osa karttaa jää piirtymättä").
+ * Vartioitavat asiat: ankkuri ei loiki yli toleranssin, ja levon
+ * jälkeen jokainen näkyvä ruutu on olemassa oikealla tarkkuudella
+ * eikä vanhentuneita ruutuja jää roikkumaan.
+ */
+// Osion 11c viewBox-käpälöinti pois alta: palautetaan oikea näkymä.
+await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  ui.kartanEleHetki = null;
+  ui.fitViewBox();
+});
+await sivu.waitForTimeout(2500);
+const salamaEnnen = await sivu.evaluate(() => window.matkakirja.ui.kartanKohta(195, 420));
+for (const k of [1.7, 0.65, 1.5, 0.7, 1.6]) {
+  // eslint-disable-next-line no-await-in-loop
+  await nipista(k, 4, 8);
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(40);
+}
+const salamaSiirtyma = await ankkurinSiirtyma(salamaEnnen, 195, 420);
+// Lepo: sarjan ruudut valmiiksi (WebKitissä ~0,3 s/ruutu). Loitolla
+// näkymää palvelee pohjataso ilman ruutuja — se on suunniteltu tila
+// (ks. ui.js taydennaTaide), joten sitä ei odoteta ruuduiksi.
+for (let i = 0; i < 60; i++) {
+  const valmis = await sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    const n = ui.nakyvaAlue();
+    const pohjanVaraan = ui.taidePohja
+      && n && n.skaala * ui.nykyinenTarkkuus() <= ui.pohjaTeho;
+    return ui.taidePiirtyy === false && !ui.taideOdottaa
+      && n && (pohjanVaraan
+        || (ui.taideSkaala && Math.abs(n.skaala / ui.taideSkaala - 1) <= 0.02));
+  });
+  if (valmis) break;
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(400);
+}
+const salamaTila = await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const nakyva = ui.nakyvaAlue();
+  const pohjanVaraan = Boolean(ui.taidePohja
+    && nakyva && nakyva.skaala * ui.nykyinenTarkkuus() <= ui.pohjaTeho);
+  const koko = ui.taideRuutu;
+  const W = window.matkakirja.game.pack.map.width;
+  const kiertava = ui.kiertava();
+  const sarakkeita = kiertava ? Math.max(1, Math.round(W / koko)) : 0;
+  let puuttuu = 0;
+  if (!pohjanVaraan) {
+    for (let ry = Math.floor(nakyva.y / koko); ry <= Math.floor((nakyva.y + nakyva.h - 0.001) / koko); ry++) {
+      for (let rx = Math.floor(nakyva.x / koko); rx <= Math.floor((nakyva.x + nakyva.w - 0.001) / koko); rx++) {
+        const sarake = kiertava ? ((rx % sarakkeita) + sarakkeita) % sarakkeita : rx;
+        const avain = `${sarake},${ry}`;
+        if (!ui.taideRuudut.has(avain) && !ui.taideTyhjat.has(avain)) puuttuu++;
+      }
+    }
+  }
+  return {
+    pohjanVaraan,
+    suhde: nakyva && ui.taideSkaala
+      ? Math.round((nakyva.skaala / ui.taideSkaala) * 1000) / 1000 : null,
+    puuttuu,
+    vanhoja: ui.taideVanhat?.length ?? 0,
+    kerroin: Math.round((ui.zoomiVapaa || ui.zoomiKerroin) * 100) / 100,
+  };
+});
+vaadi('salamasarjan ankkuri ei loiki',
+  Math.abs(salamaSiirtyma.dx) < 60 && Math.abs(salamaSiirtyma.dy) < 60,
+  JSON.stringify(salamaSiirtyma));
+vaadi('salamasarjan jälkeen jokainen näkyvä ruutu piirtyy oikealla tarkkuudella',
+  (salamaTila.pohjanVaraan
+    || (salamaTila.suhde !== null && Math.abs(salamaTila.suhde - 1) <= 0.02))
+  && salamaTila.puuttuu === 0 && salamaTila.vanhoja === 0,
+  JSON.stringify(salamaTila));
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 

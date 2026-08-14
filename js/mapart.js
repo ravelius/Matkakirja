@@ -337,14 +337,30 @@ function piirraRakeisuus(ctx, leveysPx, korkeusPx, kanvaksiaPerCss) {
   const koko = Math.max(24, Math.round(GRAIN_RUUDULLA_PX * kanvaksiaPerCss / 8) * 8);
   const laatta = grainLaatoitettu(koko);
   if (!laatta) return;
-  const w = Math.min(leveysPx, laatta.width);
-  const h = Math.min(korkeusPx, laatta.height);
   ctx.save();
   ctx.globalCompositeOperation = 'multiply';
   ctx.globalAlpha = 0.5;
-  // Lähdealue 1:1, ei skaalausta: rae pysyy juuri sen kokoisena kuin se
-  // laatoitettiin.
-  ctx.drawImage(laatta, 0, 0, w, h, 0, 0, w, h);
+  /*
+   * Laatta TOISTETAAN koko kankaan yli. Yksi drawImage riitti niin
+   * kauan kuin jokainen rasteroitava kangas oli enintään laatan
+   * kokoinen (RUUDUN_PIKSELIT) — mutta pyramidin pohjataso on 2200
+   * pikseliä leveä, ja rae jäi siinä vasempaan ylänurkkaan. Rajan yli
+   * sävy hyppäsi mitatusti ~11/255: juuri se "kartta on eri väriinen
+   * joistain kohdista", jonka omistaja näki iPadilla — rakeeton osa
+   * pohjaa on vaaleampi kuin rakeiset tarkat ruudut, ja nopean zoomin
+   * jälkeen näkymä on sekunteja pelkän pohjan varassa. Laatan sauma ei
+   * piirry näkyviin: rae on matala-alfaista kohinaa ilman kohdistuvia
+   * kuvioita.
+   */
+  for (let y = 0; y < korkeusPx; y += laatta.height) {
+    for (let x = 0; x < leveysPx; x += laatta.width) {
+      const w = Math.min(leveysPx - x, laatta.width);
+      const h = Math.min(korkeusPx - y, laatta.height);
+      // Lähdealue 1:1, ei skaalausta: rae pysyy juuri sen kokoisena
+      // kuin se laatoitettiin.
+      ctx.drawImage(laatta, 0, 0, w, h, x, y, w, h);
+    }
+  }
   ctx.restore();
 }
 
