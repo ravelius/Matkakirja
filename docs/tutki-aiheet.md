@@ -483,6 +483,18 @@ ensimmäisellä kierroksella. Riippumaton tarkistaja, joka ei näe
 kirjoittajan perusteluja ja jolle sanotaan "oleta että jotain on
 pielessä", löytää nämä. Pelkkä kirjoittajan oma tarkistus ei löydä.
 
+4. **Tyhjä tai muodollinen katsottu-kenttä** (Siperian erät 1–2,
+   Opus 6:n havainto 14.–15.8.2026). Kirjoittaja-agentti merkitsee
+   kuvan katsotuksi kirjaamalla pelkän pikselileveyden tai
+   päivämäärän — eli ei ole oikeasti katsonut kuvaa, ja selitteeseen
+   jää näkemättä jääneitä asioita (Martynovin pyssyt, kotkan saalis).
+   Sääntö: katsottu-kenttään kirjataan MITÄ KUVASSA NÄKYY omin
+   sanoin; koneellinen tarkistin hylkää tyhjän tai muodollisen
+   merkinnän vikana, ja erävastaava katsoo kuvat silti itse ennen
+   PR:ää. Sama silmätarkistus paljasti myöhästyneiden linssien
+   15 kuvatekstivirhettä erässä 1 — linssit ajetaan LOPPUUN ennen
+   PR:ää, ei sen jälkeen.
+
 ## Venäjän kaupungit ja Kabul: mukaan, mutta ilman uutisosiota (omistajan linjaus 13.8.2026)
 
 Aasian laudalla on kahdeksan venäläistä kaupunkia (Jekaterinburg,
