@@ -41,8 +41,10 @@ export const TILANNE = {
         + 'vipu piirros ↔ satelliittikuva (EOX Sentinel-2, sama '
         + 'bbox — pisteet paikoillaan), hakutyökalu ja lähderivi. '
         + 'Ei skaalattu — odottaa omistajan hyväksyntää.',
-      seuraavaksi: 'Pikkutehtävä: savukkeet /opt-polkuun. Skaalaus '
-        + '52 kaupunkiin omistajan luvalla (yksi ajo per kaupunki).',
+      seuraavaksi: 'Savukkeiden /opt-polkukorjaus valmis (#1011, '
+        + '12/12 savuketta vihreänä ilman npm installia). Valmiudessa: '
+        + 'skaalaus 52 kaupunkiin omistajan luvalla (yksi ajo per '
+        + 'kaupunki).',
     },
     {
       tekija: 'Opus 6',
