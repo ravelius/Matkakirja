@@ -10827,6 +10827,31 @@ body.maatiedot-tila .fact-card {
   cursor: pointer;
 }
 
+/* Paluu kartalle -rivi levyn pohjalla (omistajan tilaus 14.8.2026):
+ * erottuu sisällysriveistä yläviivalla ja nuoli-ikonilla. */
+.dialog .sisallys-paluu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+  padding: 0.5rem 0.2rem 0.15rem;
+  background: none;
+  border: 0;
+  border-top: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 0;
+  box-shadow: none;
+  min-height: 0;
+  font: inherit;
+  color: rgba(70, 51, 31, 0.9);
+  cursor: pointer;
+  text-align: left;
+}
+
+.dialog .sisallys-paluu .viiva-ikoni svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
 /*
  * "Lue X-liite" kaupunkilehden viimeisellä sivulla: täysleveä matala
  * palkki alanappien alla, samaan tapaan kuin etusivun Tapaa X

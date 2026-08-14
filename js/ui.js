@@ -10553,6 +10553,24 @@ export class UI {
       suljeValikko: sulje,
       etusivuRivi: this.tutkiEkaSivu() === 0,
     }));
+    /*
+     * PALUU KARTALLE (omistajan tilaus 14.8.2026): hampurilaisen takaa
+     * pääsee myös suoraan pois lehdestä. Rivi painaa samaa Poistu-
+     * nappia kuin alapalkki, joten sulkemisen erikoistapaukset
+     * (tarjousvaiheen vuoronpäätös ym.) käyttäytyvät täsmälleen samoin.
+     */
+    const paluu = html('button', 'sisallys-paluu');
+    paluu.type = 'button';
+    paluu.innerHTML = '<span class="viiva-ikoni" aria-hidden="true">'
+      + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"'
+      + ' stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'
+      + '<path d="M13.5 5.5 7 12l6.5 6.5"/><path d="M7 12h10.5"/></svg></span>'
+      + 'Palaa kartalle';
+    paluu.addEventListener('click', () => {
+      sulje();
+      document.getElementById('arrival-no')?.click();
+    });
+    levy.appendChild(paluu);
     levy.addEventListener('click', (e) => { if (e.target === levy) sulje(); });
     this.arrivalDialog.appendChild(levy);
   }
