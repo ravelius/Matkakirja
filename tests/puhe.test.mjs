@@ -13,6 +13,7 @@ import assert from 'node:assert/strict';
 import {
   PUHE_PALA_KATTO,
   niputaPalat,
+  niputaRampilla,
   paloitteleVirkkeiksi,
   puheTuettu,
 } from '../js/puhe.js';
@@ -73,6 +74,21 @@ test('nippu ei ylitä kattoa, ja ylipitkä virke kulkee omanaan', () => {
 
 test('pelin palakatto mahtuu workerin kovaan rajaan', () => {
   assert.ok(PUHE_PALA_KATTO < PUHE_TEKSTIN_KATTO);
+});
+
+test('porrastettu niputus: eka virke yksin, palakoko kasvaa portaittain', () => {
+  const virkkeet = ['Otsikko',
+    ...Array.from({ length: 60 }, (_, i) => `Virke numero ${i} kertoo asiansa tässä.`)];
+  const palat = niputaRampilla(virkkeet);
+  assert.equal(palat[0], 'Otsikko');
+  // Toinen pala on pieni ja kolmas keskikokoinen — luenta ei jää
+  // odottamaan ison palan generointia otsikon jälkeen.
+  assert.ok(palat[1].length <= 240, `palat[1] ${palat[1].length} mrk`);
+  assert.ok(palat[2].length <= 480, `palat[2] ${palat[2].length} mrk`);
+  // Loput täyttyvät täyteen kattoon asti, eikä mikään pala ylitä sitä.
+  for (const pala of palat) assert.ok(pala.length <= PUHE_PALA_KATTO);
+  // Häntäpalat ovat isompia kuin alun portaat (niputus tiivistyy).
+  assert.ok(palat[3].length > 240);
 });
 
 test('puheTuettu on Nodessa false eikä kaadu', () => {

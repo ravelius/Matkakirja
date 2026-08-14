@@ -75,13 +75,27 @@ const PUHE_MALLI_OLETUS = 'gpt-4o-mini-tts';
  * pöllölle lämmin ja kirkkaampi 'sage'. Näitä hiotaan omistajan kanssa —
  * vaihto on yhden rivin muutos tähän tauluun.
  */
+/*
+ * Kolme persoonaa (omistajan tilaus 14.8.2026): matkakirjan merkinnät,
+ * pöllö ja kaikki muut lukuäänet erikseen, jotta niihin voi halutessaan
+ * panna eri äänen. Merkinnät ja kertoja aloittavat samalla äänellä —
+ * ero on olemassa, jotta vaihto on yhden rivin muutos.
+ */
 const PUHE_PERSOONAT = {
   kertoja: {
     aani: 'onyx',
     ohje: 'Speak Finnish. You are a wise, warm storyteller reading aloud '
-      + 'from an adventure travel journal and its newspaper. Calm, '
+      + 'from an adventure newspaper and its articles. Calm, '
       + 'unhurried pace with a hint of wonder; clear articulation; '
       + 'natural pauses at sentence boundaries. Never theatrical.',
+  },
+  merkinnat: {
+    aani: 'onyx',
+    ohje: 'Speak Finnish. You are reading aloud entries from a Victorian '
+      + "explorer's travel journal, as a grandfather sharing his own "
+      + 'memories. Calm, intimate and slightly weathered narration; '
+      + 'unhurried pace; natural pauses at sentence boundaries. '
+      + 'Never theatrical.',
   },
   pollo: {
     aani: 'sage',

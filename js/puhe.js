@@ -119,6 +119,36 @@ export function niputaPalat(virkkeet, katto = PUHE_PALA_KATTO) {
   return palat;
 }
 
+/**
+ * Niputus PORRASTETULLA palakoolla (omistajan havainto 14.8.2026:
+ * "lukija pitää oudon tauon otsikon jälkeen lehdessä").
+ *
+ * Syy: ensimmäinen pala on lyhyt otsikko, joka soi sekunnissa, mutta
+ * seuraava täysimittainen pala oli vasta generoitavana — väliin jäi
+ * hiljaisuus. Nyt palakoko kasvaa portaittain (eka virke → pieni →
+ * keskikoko → täysi), jolloin lyhyiden alkupalojen soidessa generointi
+ * ehtii aina seuraavan palan edelle.
+ */
+export function niputaRampilla(virkkeet, portaat = [240, 480], katto = PUHE_PALA_KATTO) {
+  const palat = [];
+  let kertyma = '';
+  const rajaNyt = () => portaat[palat.length - 1] ?? katto;
+  for (const virke of virkkeet) {
+    if (!palat.length && !kertyma) {
+      palat.push(virke);
+      continue;
+    }
+    if (kertyma && kertyma.length + virke.length + 1 > rajaNyt()) {
+      palat.push(kertyma);
+      kertyma = virke;
+      continue;
+    }
+    kertyma = kertyma ? `${kertyma} ${virke}` : virke;
+  }
+  if (kertyma) palat.push(kertyma);
+  return palat;
+}
+
 /* ------------------------------------------------------------------ */
 /* Jaettu audioelementti ja viritys                                    */
 /* ------------------------------------------------------------------ */
@@ -129,6 +159,76 @@ const HILJAINEN_WAV = 'data:audio/wav;base64,'
 
 let puheElementti = null;
 let viritetty = false;
+
+/*
+ * VAHVISTUS (omistajan tilaus 14.8.2026: "laita lukijan ääntä
+ * kovemmalle"). <audio>-elementin volume ei ylitä yhtä, joten korotus
+ * tehdään WebAudio-vahvistimella: elementti kytketään GainNodeen, kun
+ * äänipiiri on käynnissä (vaatii käyttäjän eleen — kytkentä tehdään
+ * virityksen yhteydessä). Ilman WebAudiota ääni soi entiseen tapaan
+ * suoraan elementistä täydellä voimalla.
+ *
+ * Voimakkuus on laitekohtainen asetus (localStorage), jotta työhuoneen
+ * säätövälilehti voi ohjata sitä; oletus on reilusti yli yhden.
+ */
+const VOIMA_AVAIN = 'matkakirja-puhe-voima';
+const VOIMA_OLETUS = 1.6;
+const VOIMA_MIN = 0.25;
+const VOIMA_MAX = 2.5;
+
+let piiri = null;
+let vahvistin = null;
+let kytketty = false;
+
+/** Lukijaäänen voimakkuus (1 = elementin täysi voima). */
+export function puheenVoima() {
+  try {
+    const arvo = Number.parseFloat(window.localStorage?.getItem(VOIMA_AVAIN));
+    if (Number.isFinite(arvo)) return Math.min(VOIMA_MAX, Math.max(VOIMA_MIN, arvo));
+  } catch { /* yksityistila estää localStoragen */ }
+  return VOIMA_OLETUS;
+}
+
+/** Asettaa voimakkuuden ja vie sen heti soivaan ääneen. */
+export function asetaPuheenVoima(arvo) {
+  const voima = Math.min(VOIMA_MAX, Math.max(VOIMA_MIN, Number(arvo) || VOIMA_OLETUS));
+  try {
+    window.localStorage?.setItem(VOIMA_AVAIN, String(voima));
+  } catch { /* ei tallennu — istunnon ajan silti voimassa gainissa */ }
+  if (vahvistin) vahvistin.gain.value = voima;
+  return voima;
+}
+
+/** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
+function kytkeVahvistin() {
+  if (kytketty || typeof window === 'undefined') return;
+  const audio = haeElementti();
+  if (!audio) return;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) return;
+  try {
+    piiri = piiri ?? new AC();
+  } catch {
+    return;
+  }
+  const yrita = () => {
+    if (kytketty || piiri.state !== 'running') return;
+    try {
+      // createMediaElementSource onnistuu vain kerran per elementti —
+      // kytketty-lippu estää toisen yrityksen.
+      const lahde = piiri.createMediaElementSource(audio);
+      vahvistin = piiri.createGain();
+      vahvistin.gain.value = puheenVoima();
+      lahde.connect(vahvistin);
+      vahvistin.connect(piiri.destination);
+      kytketty = true;
+    } catch { /* elementti oli jo kytketty tai piiri kuoli */ }
+  };
+  try {
+    piiri.resume?.().then(yrita).catch(() => {});
+  } catch { /* vanha selain ilman resumea */ }
+  yrita();
+}
 
 function haeElementti() {
   if (!puheElementti && typeof window !== 'undefined' && typeof window.Audio === 'function') {
@@ -147,6 +247,9 @@ function virita() {
   viritetty = true;
   const audio = haeElementti();
   if (!audio) return;
+  // Vahvistin kytketään samasta eleestä: äänipiiri käynnistyy vain
+  // käyttäjän kosketuksesta, ja kerran kytkettynä se pysyy.
+  kytkeVahvistin();
   try {
     audio.src = HILJAINEN_WAV;
     const lupaus = audio.play();
@@ -368,7 +471,10 @@ export function luoPuheSoitin({
     const indeksi = tila.kohdalla;
     tila.kohdalla += 1;
     hae(indeksi);
-    hae(indeksi + 1); // etuhaku edellisen soidessa
+    // Kaksi palaa etukäteen: alun lyhyet palat soivat nopeasti, eikä
+    // generointi saa jäädä niistä jälkeen (outo tauko otsikon perässä).
+    hae(indeksi + 1);
+    hae(indeksi + 2);
     let osoite;
     try {
       osoite = await haut.get(indeksi);
@@ -384,6 +490,10 @@ export function luoPuheSoitin({
       return;
     }
     if (tila.peruttu) return;
+    // Nukahtanut äänipiiri hereille (iOS taustalta paluu) ja tuore
+    // voimakkuus joka palaan — säätö osuu myös kesken luennan.
+    if (piiri?.state === 'suspended') piiri.resume?.().catch?.(() => {});
+    if (vahvistin) vahvistin.gain.value = puheenVoima();
     audio.src = osoite;
     const valmis = () => {
       audio.removeEventListener('ended', valmis);
@@ -409,7 +519,12 @@ export function luoPuheSoitin({
   return {
     lisaa(teksti) {
       if (tila.peruttu || tila.paatetty) return;
-      const uudet = niputaPalat(paloitteleVirkkeiksi(teksti));
+      // Porrastettu palakoko vain luennan alkuun: myöhemmät lisäykset
+      // (striimi) niputetaan täydellä katolla, koska ääni on jo
+      // etumatkalla.
+      const uudet = palat.length
+        ? niputaPalat(paloitteleVirkkeiksi(teksti))
+        : niputaRampilla(paloitteleVirkkeiksi(teksti));
       if (!uudet.length) return;
       palat.push(...uudet);
       if (!tila.soi) soitaSeuraava();

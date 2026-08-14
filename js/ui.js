@@ -690,6 +690,11 @@ import {
   kokoaLuettavaTeksti, liitaLukija, lueAaneen, lukijaLukee, lukijaTuettu,
   paivitaLukija, pysaytaLukija,
 } from './lukija.js';
+// Lukijaäänen saatavuus ohjaa merkintöjen luentapolkua: kun lennossa
+// generoitu ääni on käytössä, ElevenLabs-äänitteet ohitetaan
+// (omistajan päätös 14.8.2026 — "toistaiseksi", kunnes tekstit
+// kirjoitetaan uusiksi).
+import { puheTuettu } from './puhe.js';
 import {
   el,
   hash01,
@@ -2539,10 +2544,21 @@ export class UI {
         pysaytaLukija();
         return;
       }
-      // Merkinnät omaan äänisäilöönsä (omistajan ohje 14.8.2026): kun
-      // matkakirjan tekstit kirjoitetaan uusiksi, lohko 'merkinnat'
-      // tuhotaan yhdellä kutsulla eikä laitteen tila lopu kesken.
-      lueAaneen(kokoaLuettavaTeksti(this.factText), this.factKuuntele, { sailio: 'merkinnat' });
+      /*
+       * Lyhyen autoluennan jatko: autoluenta luki vain ensimmäisen
+       * virkkeen ja pani loput talteen — nappi jatkaa siitä, ei
+       * alusta. Seuraava painallus (jatko kulutettu) lukee taas koko
+       * merkinnän.
+       */
+      const jatko = this.merkintaJatko;
+      this.merkintaJatko = null;
+      const teksti = jatko ?? kokoaLuettavaTeksti(this.factText);
+      // Merkinnät omalla persoonalla ja omassa äänisäilössä (omistajan
+      // ohje 14.8.2026): säilön voi tuhota erikseen, kun tekstit
+      // kirjoitetaan uusiksi, ja äänen voi vaihtaa muista lukuäänistä
+      // riippumatta.
+      if (this.lueMerkinta(teksti)) return;
+      lueAaneen(teksti, this.factKuuntele, { persoona: 'merkinnat', sailio: 'merkinnat' });
     });
 
     this.eventDialog = document.getElementById('event-dialog');
@@ -8011,7 +8027,9 @@ export class UI {
    */
   uusiFactKey(key) {
     this.factKey = key;
-    // Uusi merkintä, uusi teksti: edellisen luenta ei saa jatkua.
+    // Uusi merkintä, uusi teksti: edellisen luenta ei saa jatkua,
+    // eikä edellisen merkinnän jatko-osa saa soida uuden alla.
+    this.merkintaJatko = null;
     if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
     if (this.factText) this.factText.scrollTop = 0;
     this.asetaPaivakirjanKoko(false);
@@ -8176,6 +8194,38 @@ export class UI {
             if (rivi) this.factText.appendChild(rivi);
           });
         });
+        /*
+         * LUKIJAÄÄNI ENSIN (omistajan päätös 14.8.2026): kun lennossa
+         * generoitu ääni on käytössä, ElevenLabs-äänite ohitetaan ja
+         * merkintä luetaan striimaten suoraan tekstistä — myös
+         * kaupungeissa, joille äänitettä ei koskaan tehty, ja
+         * mykistetyistä kaariosista (mykistys koski vanhentunutta
+         * äänitettä, ei nykyistä tekstiä). Äänitteet jäävät
+         * varapoluksi, kun lukijaääni ei ole saatavilla.
+         */
+        if (puheTuettu()) {
+          this.diaryFullUrl = null;
+          this.naytaMerkinnanKaiutin(false);
+          if (this.luettuSaapuminen !== luentaAvain) {
+            this.luettuSaapuminen = luentaAvain;
+            this.stopDiaryVoice();
+            // Kertojan tila (yläpalkin valikko): pitkä lukee koko
+            // merkinnän, lyhyt vain ensimmäisen lauseen — kaiutinnappi
+            // jatkaa loput. Ei kertojaa → ei autoluentaa.
+            const tila = kertojaTila();
+            if (tila === 'lyhyt') {
+              this.merkintaJatko = jatkoTeksti || null;
+              this.lueMerkinta(eka, { viive: 1000 });
+            } else if (tila === 'pitka') {
+              this.lueMerkinta([uusi.kuvaus, uusi.nosto].filter(Boolean).join(' '), { viive: 1000 });
+            }
+          } else {
+            // Sama merkintä uudelleen ruudulle (vihje, aikataulu) —
+            // mahdollinen vanha äänite kiinni, luentaa ei aloiteta.
+            this.stopDiaryVoice();
+          }
+          return;
+        }
         // Kaiutin ja luenta vain kaupungeille, joille luenta on generoitu.
         // Ilman tätä nappi näkyi kaikilla ja tuotti hiljaisuutta.
         // Kaaren kohteilla luenta on aina: puhe-kaari-saapuminen-<id>.mp3.
@@ -8247,6 +8297,22 @@ export class UI {
         // Luenta pysähtyy ensimmäisen virkkeen jälkeiseen hengähdykseen —
         // kaiutin jatkaa samasta kohdasta. Vihjeen tai aikataulun väläys
         // ei käynnistä luentaa uudelleen samassa kaupungissa.
+        //
+        // Lukijaääni ensin (14.8.2026): havainto luetaan striimaten
+        // tekstistä — ensimmäinen virke heti, loput kaiuttimesta.
+        if (puheTuettu()) {
+          this.diaryFullUrl = null;
+          this.naytaMerkinnanKaiutin(false);
+          if (this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
+            this.luettuSaapuminen = luentaAvain;
+            this.stopDiaryVoice();
+            this.merkintaJatko = loput || null;
+            this.lueMerkinta(eka, { viive: 1000 });
+          } else {
+            this.stopDiaryVoice();
+          }
+          return;
+        }
         const havaintoLauta = luentaLauta(HAVAINTOLUENNAT, saapuminen.packId, saapuminen.cityId);
         this.diaryFullUrl = havaintoLauta
           ? `assets/audio/puhe-${havaintoLauta}-havainto-${saapuminen.cityId}.mp3`
@@ -13179,6 +13245,49 @@ export class UI {
    * sekasotku. Yksi tarkistus kattaa kaikki kuusi luennan
    * aloituskohtaa, koska ne kaikki kulkevat tästä.
    */
+  /**
+   * MERKINNÄN LUENTA LUKIJAÄÄNELLÄ (omistajan päätös 14.8.2026:
+   * ElevenLabs-äänitteet pois käytöstä toistaiseksi, tilalle
+   * striimattu ääni).
+   *
+   * Sama lukija kuin kaiutinnapilla (js/lukija.js), persoona
+   * 'merkinnat' ja oma äänisäilö. Tausta väistyy luennan ajaksi kuten
+   * äänitteillä: puheAlkoi ennen aloitusta ja puheLoppui lukijan
+   * loppukoukusta — koukku laukeaa myös pysäytyksestä ja virheestä,
+   * joten tausta ei voi jäädä vaimeaksi.
+   *
+   * Lyhyttä tilaa (vain ensimmäinen virke) varten kutsuja antaa
+   * tekstiksi pelkän ensimmäisen virkkeen ja panee loput talteen
+   * this.merkintaJatko-kenttään — kaiutinnappi jatkaa siitä.
+   *
+   * @returns {boolean} lähtikö luenta (tai sen ajastus) käyntiin
+   */
+  lueMerkinta(teksti, { viive = 0 } = {}) {
+    if (this.radioModuuli && !this.radioModuuli.luentaSallittu()) return false;
+    const puhuttava = String(teksti ?? '').trim();
+    if (!puhuttava || !lukijaTuettu()) return false;
+    const aloita = () => {
+      puheAlkoi();
+      const lahti = lueAaneen(puhuttava, this.factKuuntele, {
+        persoona: 'merkinnat',
+        sailio: 'merkinnat',
+        onLoppu: () => puheLoppui(),
+      });
+      if (!lahti) puheLoppui();
+    };
+    if (viive > 0) {
+      // Sama hengähdys kuin äänitteillä; merkinnän vaihtuminen kesken
+      // odotuksen peruu aloituksen (factKey on jo ehtinyt vaihtua).
+      const avain = this.factKey;
+      setTimeout(() => {
+        if (this.factKey === avain) aloita();
+      }, viive);
+    } else {
+      aloita();
+    }
+    return true;
+  }
+
   playDiaryVoice(url, { ekaLauseeseen = false, osuus = null, viive = 0 } = {}) {
     this.stopDiaryVoice();
     if (this.radioModuuli && !this.radioModuuli.luentaSallittu()) return;
