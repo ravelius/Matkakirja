@@ -238,4 +238,24 @@ export const SAATIEDOT = {
     keskilampo: [-19.1, -15, -6.4, 3, 10, 16.7, 19.2, 17, 10.2, 1.9, -7.7, -15.9],
     sade: [6, 6, 11, 22, 38, 67, 98, 102, 61, 23, 13, 10],
   },
+  // Jakutskin käyrä on koko pelin jyrkin: tammikuun −35,9 ja heinäkuun
+  // +20,0 asteen välillä on 56 astetta. Sadetta tulee vain 230 mm
+  // vuodessa, vähemmän kuin Madridissa — mutta ikirouta estää veden
+  // imeytymisen, joten kuivuus ei näy maisemassa.
+  jakutsk: {
+    lat: 62.03,
+    lon: 129.73,
+    keskilampo: [-35.9, -31.3, -17.8, -4, 7.7, 16.9, 20, 16, 6.6, -6.3, -24.9, -36],
+    sade: [2, 3, 4, 10, 26, 32, 44, 43, 38, 17, 9, 2],
+  },
+  // Magadanissa meri näkyy käyrässä: Ohotanmeri pitää talven
+  // Jakutskiin verrattuna lauhana (−19,5 vastaan −35,9) mutta jättää
+  // kesän 13 asteeseen. Vuoden sade 538 mm on yli kaksinkertainen
+  // Jakutskiin nähden, ja sateisin kuukausi on elokuu.
+  magadan: {
+    lat: 59.56,
+    lon: 150.8,
+    keskilampo: [-19.5, -19.1, -13.6, -5.9, 1.8, 8.4, 12.4, 12.8, 7.9, -1.2, -11.7, -17.9],
+    sade: [17, 14, 25, 30, 42, 51, 56, 87, 76, 64, 54, 22],
+  },
 };
