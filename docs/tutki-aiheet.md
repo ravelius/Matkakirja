@@ -438,6 +438,14 @@ virhettä — kuva on oikea ja lisenssi kunnossa kummassakin paikassa.
    jäi ennalleen. Jos tämä korjataan, korvaajan pitää olla yhtä
    luettava pienenä — huono kuva on pahempi kuin toisto.
 
+3. **Surun maski kahdesti Magadanissa** (Fablen päätös 15.8.2026,
+   Siperian erä 2). Lehden nosto käyttää tiedostoa `Маска Скорби.jpg`
+   ja asia-valokuvat.js:n magadan-lohkossa on `Memorial magadan -
+   panoramio.jpg` samasta muistomerkistä. Eri tiedostot, sama kohde.
+   Noston kuvan on pakko olla maski (teksti kertoo juuri siitä),
+   joten toisto hyväksytään samalla linjalla kuin Vasa ja
+   kattohaikara.
+
 Tarkistus, joka kannattaa ajaa QA:ssa: koko paketin duplikaattihaku
 (kansikuvat + nostot + galleriat + listat) löytää nämä ja kaikki
 myöhemmin syntyvät. Skripti on scratchpadissa, mutta sen voi kirjoittaa
