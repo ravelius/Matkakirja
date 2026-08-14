@@ -9,6 +9,9 @@ luettelon unohdettuja aarteita. Selainpeli ilman build-vaihetta
 
 ## Lue ensin
 
+- **docs/kapulanvaihto.md** — KAPULANVAIHTO 14.8.2026: kehitys siirtyi
+  uudelle tilille kreditien loputtua. Tila, avoimet päätökset ja
+  aloitusprompti lehtityön jatkajalle. (Arkistoi, kun viety loppuun.)
 - **docs/roolitus.md** — TYÖNJAKO KOLMEN SESSION KESKEN (Fable =
   tarina + koordinaatio, Opus = lehdet + koodi, Sonnet = QA).
   Omistaja kehittää kahdella tilillä ja ohjaa kaikkea Fablen kautta;
