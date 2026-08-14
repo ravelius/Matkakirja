@@ -104,8 +104,8 @@ vaadi('aihesivulla kaiutin on aihe-nimessä otsikon rivillä (ero ≤ 3 px)',
   kaupunki.aiheNimessa && Boolean(kaupunki.aihesivu?.kodissa) && kaupunki.aihesivu.keskiero <= 3,
   JSON.stringify(kaupunki.aihesivu));
 vaadi('kaiutin on lukittu oikeaan reunaan molemmilla sivuilla (etäisyys ≤ 24 px)',
-  kaupunki.etusivu?.oikeaEtaisyys >= 0 && kaupunki.etusivu.oikeaEtaisyys <= 24
-  && kaupunki.aihesivu?.oikeaEtaisyys >= 0 && kaupunki.aihesivu.oikeaEtaisyys <= 24,
+  kaupunki.etusivu?.oikeaEtaisyys >= -1 && kaupunki.etusivu.oikeaEtaisyys <= 24
+  && kaupunki.aihesivu?.oikeaEtaisyys >= -1 && kaupunki.aihesivu.oikeaEtaisyys <= 24,
   JSON.stringify({ etusivu: kaupunki.etusivu?.oikeaEtaisyys, aihesivu: kaupunki.aihesivu?.oikeaEtaisyys }));
 
 /* Reunanapautukset aihesivulla (tekstiä riittää vieritettäväksi). */

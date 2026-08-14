@@ -348,8 +348,11 @@ function puheOtsakkeet(kors) {
  * ohjeen ja tekstin: minkä tahansa muuttuessa syntyy uusi avain ja
  * vanha tallenne vanhenee itsestään pois tieltä.
  */
-async function puheenAvain(malli, aani, ohje, teksti) {
-  const data = new TextEncoder().encode(`${malli}|${aani}|${ohje}|${teksti}`);
+async function puheenAvain(malli, aani, ohje, teksti, nopeus = 1) {
+  // Nopeus liitetään avaimeen vain kun se poikkeaa normaalista, jotta
+  // kaikki ennen nopeusparametria säilötyt palat pysyvät osumina.
+  const hanta = nopeus !== 1 ? `|${nopeus}` : '';
+  const data = new TextEncoder().encode(`${malli}|${aani}|${ohje}|${teksti}${hanta}`);
   const tiiviste = await crypto.subtle.digest('SHA-256', data);
   const hex = [...new Uint8Array(tiiviste)].map((t) => t.toString(16).padStart(2, '0')).join('');
   return new Request(`https://puhe.valimuisti.matkakirja/${hex}`);
@@ -426,11 +429,25 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   const lohko = !saadetty && /^[a-z0-9-]{1,24}$/.test(String(runko?.lohko ?? ''))
     ? runko.lohko : null;
 
+  /*
+   * LUKUNOPEUS GENEROINNISSA (omistajan tilaus 15.8.2026: "Nopeus
+   * säätö ei muuta nopeutta generointimoottorissa... Käytä sitä
+   * natiivia ennemmin"): nopeus välitetään OpenAI:n omana
+   * speed-parametrina, jolloin puhe generoidaan halutussa tahdissa
+   * eikä selaimen tarvitse venyttää sitä toistossa. Askel 0,05 pitää
+   * välimuistiavaimet tiheinä; 1,0 ei muuta mitään.
+   */
+  const nopeus = (() => {
+    const n = Number(runko?.nopeus);
+    if (!Number.isFinite(n)) return 1;
+    return Math.min(1.6, Math.max(0.6, Math.round(n * 20) / 20));
+  })();
+
   let avain = null;
   let r2Avain = null;
   if (lohko) {
     try {
-      avain = await puheenAvain(malli, aani, ohje, teksti);
+      avain = await puheenAvain(malli, aani, ohje, teksti, nopeus);
       r2Avain = `puhe/${lohko}/${avain.url.split('/').pop()}.mp3`;
       const osuma = await caches.default.match(avain);
       if (osuma) {
@@ -494,6 +511,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
         voice: aani,
         instructions: ohje,
         response_format: 'mp3',
+        ...(nopeus !== 1 ? { speed: nopeus } : {}),
       }),
     });
     if (!ylavirta.ok || !ylavirta.body) {
