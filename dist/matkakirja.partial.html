@@ -155358,13 +155358,15 @@ function chooseDuelAnswer(game) {
  * soimassa parissa sekunnissa — ja loput kulkevat isompina nippuina,
  * joita haetaan valmiiksi edellisen soidessa (yksi etuhaku).
  *
- * YKSI JAETTU AUDIOELEMENTTI. iPadin Safari sallii audio.play():n
+ * KAKSI JAETTUA AUDIOELEMENTTIÄ. iPadin Safari sallii audio.play():n
  * vain elementille, joka on kertaalleen käynnistetty käyttäjän
- * eleestä. Siksi moduuli luo yhden <audio>-elementin ja "virittää"
- * sen ensimmäisestä kosketuksesta (hiljainen tyhjä wav) — sen jälkeen
- * sama puheElementti saa soittaa haettuja paloja myös ilman elettä, esim.
- * pöllön striimivastauksen tahdissa. Yksi puheElementti riittää, koska
- * lukija sallii vain yhden luennan kerrallaan.
+ * eleestä. Siksi moduuli luo kaksi <audio>-elementtiä ja "virittää"
+ * molemmat ensimmäisestä kosketuksesta (hiljainen tyhjä wav) — sen
+ * jälkeen ne saavat soittaa haettuja paloja myös ilman elettä, esim.
+ * pöllön striimivastauksen tahdissa. Elementit vuorottelevat: toinen
+ * soi ja toiseen esiladataan seuraava pala, jolloin palanvaihto on
+ * saumaton (ks. luoPuheSoitin). Luentoja on silti vain yksi
+ * kerrallaan.
  *
  * VARAPOLKU ON KUTSUJAN. Jos worker vastaa "ei käytössä" (avain
  * puuttuu, origin väärä), moduuli merkitsee puheen istunnon ajaksi
@@ -155553,7 +155555,17 @@ function niputaRampilla(virkkeet, portaat = [240, 480], katto = PUHE_PALA_KATTO)
 const HILJAINEN_WAV = 'data:audio/wav;base64,'
   + 'UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=';
 
-let puheElementti = null;
+/*
+ * KAKSI VUOROTTELEVAA ELEMENTTIÄ (omistajan palaute 15.8.2026:
+ * "tauko lauseiden välissä on häiritsevä"): yhdellä elementillä
+ * seuraava pala pääsi soimaan vasta kun edellinen oli loppunut ja
+ * uusi lähde ladattu — jokaiseen saumaan syntyi ylimääräinen tauko.
+ * Nyt seuraava pala esiladataan vapaana olevaan elementtiin ja
+ * käynnistetään hieman ennen edellisen loppua, jolloin palojen
+ * hännät ja alut limittyvät ja sauma kuulostaa luonnolliselta
+ * virkevälin tauolta. Molemmat elementit viritetään samasta eleestä.
+ */
+let puheElementit = null;
 let viritetty = false;
 
 /*
@@ -155645,8 +155657,8 @@ function nopeusTunniste() {
 /** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
 function kytkeVahvistin() {
   if (kytketty || typeof window === 'undefined') return;
-  const audio = haeElementti();
-  if (!audio) return;
+  const elementit = haeElementit();
+  if (!elementit) return;
   const AC = window.AudioContext || window.webkitAudioContext;
   if (!AC) return;
   try {
@@ -155659,7 +155671,7 @@ function kytkeVahvistin() {
     try {
       // createMediaElementSource onnistuu vain kerran per elementti —
       // kytketty-lippu estää toisen yrityksen.
-      const lahde = piiri.createMediaElementSource(audio);
+      const lahteet = elementit.map((a) => piiri.createMediaElementSource(a));
       /*
        * VIIVELINJA ENNEN VAHVISTINTA (omistajan idea 15.8.2026:
        * "Voiko alkuun generoida tyhjää niin että ei häviä mitään
@@ -155687,7 +155699,7 @@ function kytkeVahvistin() {
       kompressori.ratio.value = 4;
       kompressori.attack.value = 0.003;
       kompressori.release.value = 0.25;
-      lahde.connect(viive);
+      for (const lahde of lahteet) lahde.connect(viive);
       viive.connect(vahvistin);
       vahvistin.connect(kompressori);
       kompressori.connect(piiri.destination);
@@ -155700,12 +155712,12 @@ function kytkeVahvistin() {
   yrita();
 }
 
-function haeElementti() {
-  if (!puheElementti && typeof window !== 'undefined' && typeof window.Audio === 'function') {
-    puheElementti = new window.Audio();
-    puheElementti.preload = 'auto';
+function haeElementit() {
+  if (!puheElementit && typeof window !== 'undefined' && typeof window.Audio === 'function') {
+    puheElementit = [new window.Audio(), new window.Audio()];
+    for (const a of puheElementit) a.preload = 'auto';
   }
-  return puheElementti;
+  return puheElementit;
 }
 
 /**
@@ -155715,21 +155727,26 @@ function haeElementti() {
 function virita() {
   if (viritetty) return;
   viritetty = true;
-  const audio = haeElementti();
-  if (!audio) return;
+  const elementit = haeElementit();
+  if (!elementit) return;
   // Vahvistin kytketään samasta eleestä: äänipiiri käynnistyy vain
   // käyttäjän kosketuksesta, ja kerran kytkettynä se pysyy.
   kytkeVahvistin();
-  try {
-    audio.src = HILJAINEN_WAV;
-    const lupaus = audio.play();
-    lupaus?.then?.(() => audio.pause()).catch(() => {
-      // Esto ei kaada mitään: seuraava soitto yritetään silti, ja
-      // useimmiten se osuu itsekin eleeseen (kaiutinnapin painallus).
+  // MOLEMMAT elementit viritetään samasta eleestä — iOS sallii
+  // play()-kutsut myöhemmin vain elementeille, jotka ovat kerran
+  // soineet käyttäjän eleessä.
+  for (const audio of elementit) {
+    try {
+      audio.src = HILJAINEN_WAV;
+      const lupaus = audio.play();
+      lupaus?.then?.(() => audio.pause()).catch(() => {
+        // Esto ei kaada mitään: seuraava soitto yritetään silti, ja
+        // useimmiten se osuu itsekin eleeseen (kaiutinnapin painallus).
+        viritetty = false;
+      });
+    } catch {
       viritetty = false;
-    });
-  } catch {
-    viritetty = false;
+    }
   }
 }
 
@@ -155936,11 +155953,12 @@ function luoPuheSoitin({
   aloitusKappale = 0,
 } = {}) {
   if (!puheTuettu()) return null;
-  const audio = haeElementti();
-  if (!audio) return null;
+  const elementit = haeElementit();
+  if (!elementit) return null;
 
   const palat = []; // { teksti, kappale, alku (merkkikohta kappaleessa) }
   const haut = new Map(); // palaindeksi → Promise<blob-osoite>
+  let esiladattu = -1; // palaindeksi, jonka ääni on jo vapaassa elementissä
   const tila = {
     peruttu: false,
     paatetty: false,
@@ -155949,7 +155967,21 @@ function luoPuheSoitin({
     kohdalla: 0, // seuraavaksi soitettavan palan indeksi
     soiva: -1, // parhaillaan soivan palan indeksi
     kappaleita: 0,
+    vuoro: 0, // kumpi elementti ottaa seuraavan palan
+    soivaAudio: null, // parhaillaan soiva elementti
     puraKuuntelijat: null, // soivan palan ended/error-kuuntelijat irti
+  };
+  /** Kaikki toisto seis — molemmat elementit hiljaisiksi. */
+  const pysaytaElementit = ({ tyhjenna = false } = {}) => {
+    for (const a of elementit) {
+      try {
+        a.pause();
+        if (tyhjenna) {
+          a.removeAttribute('src');
+          a.load();
+        }
+      } catch { /* elementti oli jo tyhjä */ }
+    }
   };
 
   const ilmoita = () => {
@@ -156016,56 +156048,93 @@ function luoPuheSoitin({
       return;
     }
     if (tila.peruttu || tila.tauolla || tila.soiva !== indeksi) return;
-    // Nukahtanut äänipiiri hereille (iOS taustalta paluu) ja tuore
-    // voimakkuus joka palaan — säätö osuu myös kesken luennan.
-    if (piiri?.state === 'suspended') piiri.resume?.().catch?.(() => {});
+    /*
+     * Nukahtanut äänipiiri hereille ODOTETUSTI ennen toistoa
+     * (omistajan havainto 15.8.2026: "nykäys kuuluu yhä tekstin
+     * alussa"): resume on asynkroninen, ja ilman odotusta pala alkoi
+     * soida ennen kuin piiri prosessoi — luennan alusta katosi pätkä
+     * ja loppu kuului nykäyksenä.
+     */
+    if (piiri?.state === 'suspended') {
+      try {
+        await piiri.resume?.();
+      } catch { /* piiri jäi kiinni — elementti soi silti */ }
+      if (tila.peruttu || tila.tauolla || tila.soiva !== indeksi) return;
+    }
+    const audio = elementit[tila.vuoro];
+    tila.vuoro = 1 - tila.vuoro;
+    const edellinen = elementit[tila.vuoro];
+    // Soiko edellinen pala vielä? Limittäisessä saumassa sen häntä
+    // jatkuu uuden palan alun alla, eikä vahvistinta saa silloin
+    // rampata — kuoppa osuisi edellisen hännän päälle.
+    const limittain = edellinen !== audio && !edellinen.paused && !edellinen.ended
+      && Boolean(edellinen.currentSrc);
     if (vahvistin) {
-      /*
-       * NAPSAHDUS POIS (omistajan havainto 14.8.2026: "ääni lähtee
-       * napsahtaen käyntiin"): luennan ensimmäinen pala nostetaan
-       * kuuluviin lyhyellä rampilla nollasta. Myöhemmät palat soivat
-       * täydellä voimalla heti — ne jatkavat puhetta virkerajalta,
-       * eikä keskelle luentaa saa tulla voimakkuuskuoppia.
-       */
       const nyt = piiri.currentTime;
       vahvistin.gain.cancelScheduledValues(nyt);
       if (indeksi === 0) {
         /*
-         * Ramppi mahtuu viivelinjan (60 ms) sisään: se on valmis
-         * ennen kuin puheen ensimmäinen näyte astuu vahvistimeen,
-         * joten napsahdus puuttuu EIKÄ ensimmäisestä kirjaimesta
-         * katoa mitään (omistajan havainto 15.8.2026 — vanha 90 ms:n
+         * NAPSAHDUS POIS (14.8.2026): luennan ensimmäinen pala
+         * nostetaan kuuluviin lyhyellä rampilla nollasta. Ramppi
+         * mahtuu viivelinjan (60 ms) sisään, joten ensimmäisestä
+         * kirjaimesta ei katoa mitään (15.8.2026 — vanha 90 ms:n
          * ramppi söi alun).
          */
         vahvistin.gain.setValueAtTime(0, nyt);
         vahvistin.gain.linearRampToValueAtTime(puheenVoima(), nyt + 0.05);
-      } else {
-        /*
-         * Lyhyt häivytys myös palan vaihtoon (omistajan havainto
-         * 15.8.2026: "ääni nykäisee jokaisen lauseen alussa"):
-         * jokainen pala on erillinen mp3, jonka dekoodauksen alku
-         * voi napsahtaa. Ramppi on valmis ennen kuin uuden palan
-         * ääni ehtii viivelinjan (60 ms) läpi vahvistimeen, joten
-         * puheesta ei katoa mitään — vain sauman särmä pyöristyy.
-         */
+      } else if (!limittain) {
+        // Tauon jälkeinen sauma: lyhyt häivytys pyöristää dekoodauksen
+        // alun napsun; mahtuu viivelinjaan eikä syö puhetta.
         vahvistin.gain.setValueAtTime(0, nyt);
         vahvistin.gain.linearRampToValueAtTime(puheenVoima(), nyt + 0.025);
+      } else {
+        // Limittäinen sauma: täysi voima koko ajan.
+        vahvistin.gain.setValueAtTime(puheenVoima(), nyt);
       }
     }
-    audio.src = osoite;
+    tila.soivaAudio = audio;
+    // Esiladattu lähde on jo elementissä — src-vaihto vain tarpeeseen.
+    if (audio.src !== osoite) audio.src = osoite;
+    let siirrytty = false;
+    const seuraavaan = () => {
+      if (siirrytty || tila.peruttu) return;
+      siirrytty = true;
+      soitaSeuraava();
+    };
+    /*
+     * LIMITTÄINEN SAUMA (omistajan palaute 15.8.2026: "tauko
+     * lauseiden välissä on häiritsevä"): seuraava pala käynnistetään
+     * ~140 ms ennen edellisen loppua, kun sen ääni on jo esiladattu
+     * vapaaseen elementtiin. Palan lopussa on generoinnin jättämää
+     * hiljaisuutta ja alussa enkooderin tyhjää, joten limitys ei
+     * mene puheen päälle — sauma lyhenee luonnollisen virkevälin
+     * mittaiseksi.
+     */
+    const ennakko = () => {
+      if (siirrytty || tila.peruttu || tila.tauolla) return;
+      if (esiladattu !== tila.kohdalla) return;
+      const kesto = audio.duration;
+      if (!Number.isFinite(kesto) || !kesto) return;
+      if (kesto - audio.currentTime <= 0.14) {
+        audio.removeEventListener('timeupdate', ennakko);
+        seuraavaan();
+      }
+    };
     const valmis = () => {
       audio.removeEventListener('ended', valmis);
       audio.removeEventListener('error', valmis);
-      if (tila.peruttu) return;
-      soitaSeuraava();
+      audio.removeEventListener('timeupdate', ennakko);
+      seuraavaan();
     };
     tila.puraKuuntelijat = () => {
       audio.removeEventListener('ended', valmis);
       audio.removeEventListener('error', valmis);
+      audio.removeEventListener('timeupdate', ennakko);
       tila.puraKuuntelijat = null;
     };
     audio.addEventListener('ended', valmis);
     audio.addEventListener('error', valmis);
+    audio.addEventListener('timeupdate', ennakko);
     try {
       await audio.play();
     } catch {
@@ -156075,7 +156144,22 @@ function luoPuheSoitin({
       tila.soi = false;
       tila.peruttu = true;
       onVirhe?.(indeksi === 0 ? 'alku' : 'kesken');
+      return;
     }
+    /*
+     * Esilataus: heti kun seuraavan palan ääni on haettu, se pannaan
+     * vapaaseen elementtiin latautumaan — sauman kohdalla play()
+     * lähtee ilman lataustaukoa.
+     */
+    const seuraava = indeksi + 1;
+    haut.get(seuraava)?.then((seuraavaOsoite) => {
+      if (tila.peruttu || tila.kohdalla !== seuraava) return;
+      const vapaa = elementit[tila.vuoro];
+      if (vapaa !== tila.soivaAudio) {
+        if (vapaa.src !== seuraavaOsoite) vapaa.src = seuraavaOsoite;
+        esiladattu = seuraava;
+      }
+    }).catch(() => {});
   };
 
   /**
@@ -156168,18 +156252,14 @@ function luoPuheSoitin({
       if (tila.peruttu) return;
       tila.peruttu = true;
       tila.puraKuuntelijat?.();
-      try {
-        audio.pause();
-        audio.removeAttribute('src');
-        audio.load();
-      } catch { /* puheElementti oli jo tyhjä */ }
+      pysaytaElementit({ tyhjenna: true });
     },
     tauko() {
       if (tila.peruttu || tila.tauolla) return;
       tila.tauolla = true;
-      try {
-        audio.pause();
-      } catch { /* ei soinut */ }
+      // Molemmat elementit tauolle — limittäisessä saumassa myös
+      // edellisen palan häntä voi vielä soida.
+      pysaytaElementit();
       ilmoita();
     },
     jatka() {
@@ -156188,7 +156268,8 @@ function luoPuheSoitin({
       ilmoita();
       // Kesken palan pysäytetty jatkuu samasta kohdasta; palojen
       // välissä pysäytetty jatkaa seuraavasta palasta.
-      if (tila.soi && audio.paused && audio.currentTime > 0 && !audio.ended) {
+      const audio = tila.soivaAudio;
+      if (tila.soi && audio && audio.paused && audio.currentTime > 0 && !audio.ended) {
         audio.play().catch(() => {});
       } else {
         soitaSeuraava();
@@ -156220,9 +156301,8 @@ function luoPuheSoitin({
       const indeksi = palat.findIndex((p) => p.kappale === kohde);
       if (indeksi < 0) return; // kohdekappaletta ei (vielä) ole
       tila.puraKuuntelijat?.();
-      try {
-        audio.pause();
-      } catch { /* ei soinut */ }
+      pysaytaElementit();
+      esiladattu = -1; // vanha esilataus ei kelpaa hypyn jälkeen
       tila.kohdalla = indeksi;
       tila.soiva = -1;
       tila.soi = false;
@@ -177781,6 +177861,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 674, teksti: 'saumaton palanvaihto: kaksi elementtiä, esilataus, limitys' },
   { v: 673, teksti: 'Siperian kaupunkilehdet: Jakutsk ja Magadan' },
   { v: 672, teksti: 'palanvaihdon nykäisy pois: vähemmän rajoja, pehmeä alku' },
   { v: 671, teksti: 'nopeus generoidaan OpenAI:lla, anfangi maalautuu luennassa' },
@@ -178551,7 +178632,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.673';
+const APP_VERSION = '2026-08-09.674';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
