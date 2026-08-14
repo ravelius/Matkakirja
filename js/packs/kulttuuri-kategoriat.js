@@ -11098,4 +11098,729 @@ export const KULTTUURI_KATEGORIAT = {
       },
     },
   ],
+  jekaterinburg: [
+    {
+      id: 'kaupunki',
+      nimi: 'Jekaterinburg',
+      johdanto: 'Kaupunki alkoi padosta: 18. marraskuuta 1723 Iset-joen '
+        + 'rannalla koeajettiin rautaruukin vasarapaja, ja siitä päivästä '
+        + 'lasketaan Jekaterinburgin ikä. Pari vuotta myöhemmin täällä '
+        + 'lyötiin rupla, joka oli neliskulmainen kuparilaatta ja painoi 1 '
+        + '638 grammaa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Views of Yekaterinburg (Aug-Sept 2024) - 3.jpg',
+          selite: 'Näkymä kaupunginlammen yli korkealta kuvattuna. Etualalla '
+            + 'on leveä harmaansininen vesi, jonka vasempaan reunaan '
+            + 'työntyy puiden peittämä niemeke; sen kärjessä seisoo '
+            + 'valkoinen, sinisin nauhoin raidoitettu tornimainen rakennus. '
+            + 'Vastarantaa reunustaa suora kivipenger ja sen takana '
+            + 'yhtenäinen puurivi. Rannan keskellä kohoaa valkoinen kirkko, '
+            + 'jolla on kullattuja sipulikupoleita ja kullattu kellotorni. '
+            + 'Oikealla kaartuu pitkä vaaleanvihreäkattoinen rakennus. '
+            + 'Taempana nousee tiheä rivi asuintaloja ja lasipintaisia '
+            + 'tornitaloja, ja niiden keskellä erottuu ohut ristikkomasto. '
+            + 'Taivas on siniharmaa ja pilvinen.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Yekaterinburg LeninAvenue35 005 2817.jpg',
+          selite: 'Sevastjanovin talo Leninin valtakadun varrella. Julkisivu '
+            + 'on maalattu kirkkaan turkoosiksi, ja sen päälle on ladottu '
+            + 'valkoisia ja tiilenpunaisia koristeita: teräväkärkisiä '
+            + 'kaaria, ohuita pylväitä ja ristikuvioita. Kadunkulmassa on '
+            + 'pyöreä torniosa, jonka toisessa kerroksessa on rivi korkeita '
+            + 'teräväkärkisiä kaaria ja jonka päällä lepää vaaleanvihreä '
+            + 'kupoli valkoisen pylväikön varassa. Katonreunaa kiertää '
+            + 'läpimurrettu kaide. Talon edessä on musta valurauta-aita, '
+            + 'koristeellisia lyhtypylväitä ja rivi pieniä punalehtisiä '
+            + 'puita. Oikeassa reunassa on korkea monilamppuinen '
+            + 'valaisinpylväs ja valkoinen auto. Taivas on syvänsininen.',
+          lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vainera Street in Yekaterinburg (July 2023) - 7.jpg',
+          selite: 'Vainerin kävelykatu keskikaupungilla. Kadun keskellä '
+            + 'kulkee pitkä teräksinen kaarikatos, jonka läpinäkyvän '
+            + 'katteen alla on penkkejä. Katoksen molemmin puolin seisoo '
+            + 'rivi koristeellisia lyhtypylväitä, joissa riippuu pyöreitä '
+            + 'liikekilpiä. Ihmisiä kävelee kadulla pareittain ja yksin, '
+            + 'muutama istuu penkeillä. Oikealla on vanhoja kivitaloja, '
+            + 'joiden katutasossa on kauppojen ja kahviloiden kylttejä, ja '
+            + 'niiden takana lasijulkisivuinen liiketalo. Kadun päässä '
+            + 'kohoaa sinilasinen tornitalo. Etualalla on matala '
+            + 'betonimuuri ja metallinen kaide, ja vasemmassa reunassa '
+            + 'kivijalusta on peitetty vihreällä suojaverkolla.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Pato tuli ensin, kaupunki vasta sen jälkeen',
+          tiedosto: 'Plotinka in Yekaterinburg (September 2023) - 1.jpg',
+          teksti: 'Vasili Tatištšev etsi vuonna 1721 Uralilta paikkaa, jossa '
+            + 'olisi sekä malmia että metsää, ja valitsi Iset-joen rannan '
+            + 'seitsemän virstan päästä Uktusin ruukista. Työ keskeytyi, '
+            + 'kun hänet erotettiin, ja jatkui vasta 12. maaliskuuta 1723 '
+            + 'Georg Wilhelm de Genninin johdolla. Kesäkuussa de Gennin '
+            + 'lähetti Katariina I:lle tarjottimen, joka oli taottu '
+            + 'ensimmäisestä kuparisulatuksesta, ja pyysi saada nimetä '
+            + 'ruukin keisarinnan mukaan. Syntymäpäiväksi merkittiin 18. '
+            + 'marraskuuta 1723, jolloin vasarapajaa koeajettiin '
+            + 'ensimmäisen kerran. Ruukki otettiin käyttöön kuusi päivää '
+            + 'myöhemmin.',
+          selite: 'Kaupunginlammen pato alavirran puolelta. Poikittain kulkee '
+            + 'vaaleista kivilohkareista muurattu seinä, jonka keskellä on '
+            + 'holvikaarinen aukko ja vasemmalla matalampi suorakulmainen '
+            + 'aukko sekä kiveen hakattu reliefi. Muurin harjalla on musta '
+            + 'koristekaide ja rivi valkoisia lyhtypylväitä. Muurin '
+            + 'juurella on kapea nurmikaistale. Edessä levittäytyy laaja '
+            + 'kivetty aukio, jolla kävelee kymmenkunta ihmistä, yksi '
+            + 'koiran kanssa. Oikeassa etualassa on kukkapenkki punaisin ja '
+            + 'valkoisin kukin sekä graniittiportaita. Taustalla kohoaa '
+            + 'lasipintaisia tornitaloja ja nostokurki, ja taivas on '
+            + 'kirkkaan sininen.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jekaterinburg',
+        },
+        {
+          otsikko: 'Rupla, joka painoi puolitoista kiloa',
+          tiedosto: 'Медный рубль 1725 года.jpg',
+          teksti: 'Senaatin päätös 14. kesäkuuta 1725 käski lyödä Siperian '
+            + 'valtionruukeissa puhtaasta kuparista laattoja, joiden '
+            + 'keskelle leimattaisiin arvo ja jokaiseen kulmaan vaakuna. '
+            + 'Malli oli katsottu Ruotsista. Yhden ruplan laatta painoi '
+            + 'kymmenesosan puudasta eli 1 638 grammaa, ja sellaista rahaa '
+            + 'oli hankala kantaa: väki otti sen vastaan vastahakoisesti ja '
+            + 'väärentäjät löivät laatoista pyöreitä kolikoita. Katariina I '
+            + 'lopetti työn määräyksellä 30. joulukuuta 1726. Ruplan '
+            + 'laattoja ehdittiin lyödä vuosina 1726–1727 kaikkiaan 1 687 '
+            + 'kappaletta.',
+          selite: 'Neliön muotoinen kuparilaatta suoraan ylhäältä kuvattuna. '
+            + 'Metalli on tummunut ruskeanharmaaksi, pinta on kuoppainen ja '
+            + 'reunat rosoiset ja paikoin taipuneet. Jokaiseen kulmaan on '
+            + 'lyöty pyöreä leima, jonka sisällä on siivet levällään oleva '
+            + 'kaksipäinen kotka. Keskellä on suurempi pyöreä leima, jossa '
+            + 'lukee neljällä rivillä kyrillisin kirjaimin hinta, rupla, '
+            + 'Jekaterinburg ja vuosiluku 1725. Laatan poikki kulkee kaksi '
+            + 'ohutta vaakasuoraa naarmua. Laatta lepää oranssinpunaisella '
+            + 'kankaalla, ja oikeasta reunasta pistää esiin toisen tumman '
+            + 'esineen kulma.',
+          lahde: 'putnik, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Malakiittilippaasta tuli baletti',
+          tiedosto: 'Pavel Bazhov Memorial House-Museum - 1.jpeg',
+          teksti: 'Pavel Bažov syntyi 1879 Sysertin ruukkikylässä, jossa '
+            + 'hänen isänsä työskenteli mestarina rautaruukin pajassa. Hän '
+            + 'kirjasi ylös Uralin kaivosmiesten ja kullanhuuhtojien '
+            + 'suullisia tarinoita ja julkaisi niistä kokoelman '
+            + 'Malakiittilipas 28. tammikuuta 1939. Ensimmäisessä '
+            + 'painoksessa oli neljätoista tarinaa, myöhemmissä yli '
+            + 'neljäkymmentä. Tunnetuimpiin kuuluu Kivikukka, jossa kisälli '
+            + 'Danila etsii Kuparivuoren emännän valtakunnasta kukkaa, joka '
+            + 'on hakattu kivestä. Sergei Prokofjev sävelsi tarinasta '
+            + 'kahdeksannen ja viimeisen balettinsa; se kantaesitettiin '
+            + '1954 säveltäjän kuoleman jälkeen.',
+          selite: 'Bažovin muistotalo Jekaterinburgissa. Yksikerroksinen '
+            + 'hirsitalo seisoo matalalla vaaleanpunaiseksi maalatulla '
+            + 'sokkelilla, ja pyöreät hirret näkyvät nurkissa salvoksineen. '
+            + 'Katto on punaruskea pelti, ja siitä nousee kaksi valkoista '
+            + 'savupiippua. Kadun puolella on neljä ikkunaa tummanpunaisin '
+            + 'kehyksin, ja seinässä on vaalea muistolaatta, jossa lukee '
+            + 'kyrillisin kirjaimin P. P. Bažov, sekä sen yläpuolella '
+            + 'pyöreä reliefi. Vasemmalla on katettu kuisti, jonka luo '
+            + 'nousee muutama porras ja jonka ovi on tummanpunainen. '
+            + 'Oikealla jatkuu korkea vihreäksi maalattu lauta-aita. '
+            + 'Taustalla näkyy sinilasinen liiketalo ja lehdettömiä puita, '
+            + 'ja taivas on kirkkaan sininen.',
+          lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pavel Bažov',
+          musiikki: 'https://music.apple.com/fi/album/the-tale-of-the-stone-flower-op-118-act-ii-scene/1761674907?i=1761675040',
+          musiikkiNimi: 'Prokofjev: Kertomus kivikukasta Apple Musicissa',
+          esikuuntelu: 'Prokofiev The Stone Flower',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupungin museossa seisoo lasikaapissa yli yksitoistatuhatta '
+        + 'vuotta vanha lehtikuusesta veistetty hahmo, ja kaupungin '
+        + 'kupeesta löytyi vuonna 1745 Venäjän ensimmäinen tunnettu '
+        + 'kultaesiintymä.',
+      nostot: [
+        {
+          otsikko: 'Maailman vanhin puuveistos nousi suosta',
+          tiedosto: 'The Big Shigir idol - The Museum of History and Archeology of the Urals.jpg',
+          teksti: 'Šigirin suosta noin sadan kilometrin päässä '
+            + 'Jekaterinburgista kaivettiin 24. tammikuuta 1890 neljän '
+            + 'metrin syvyydestä kymmenen puukappaletta. Professori D. I. '
+            + 'Lobanov liitti pääkappaleet 2,8 metrin korkuiseksi hahmoksi, '
+            + 'ja arkeologi Vladimir Tolmatšov esitti 1914, että '
+            + 'alkuperäinen veistos oli 5,3 metriä korkea. Hahmo on '
+            + 'veistetty lehtikuusesta kivityökaluilla, ja puu oli '
+            + 'kaadettaessa vähintään 159 vuotta vanha. Se on maailman '
+            + 'vanhin tunnettu puuveistos, noin 11 500 vuoden takaa. '
+            + 'Kaivauksiin oli ryhdytty, koska avoimesta kultakaivoksesta '
+            + 'oli löytynyt esihistoriallisia esineitä.',
+          selite: 'Šigirin veistos museon lasikaapissa. Kapea, pitkä puuhahmo '
+            + 'seisoo pystyssä kaapin keskellä. Ylimpänä on soikea '
+            + 'kasvotaulu, johon on veistetty silmät, nenä ja suu. Sen alla '
+            + 'runko jatkuu litteänä lankkuna, jonka pintaan on kaiverrettu '
+            + 'vaakasuoria viivarivejä ja vinoja kuvioita. Runko koostuu '
+            + 'useasta erillisestä palasta, ja alimmat osat ovat kapeampia '
+            + 'ja rosoisia. Kaappi on lasia ja mustaa metallia, ympäröivät '
+            + 'seinät ovat vihreät ja katto tumma, ja katossa palaa rivi '
+            + 'pieniä kohdevaloja. Oikealla seinällä on kaksi selostetaulua '
+            + 'ja oikeassa reunassa toinen vitriini.',
+          lahde: 'Лапоть, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kultakaivos, jonka kivestä löytyi uusi alkuaine',
+          tiedosto: 'Berezov-crocoite.jpg',
+          teksti: 'Vanhauskoinen Jerofei Markov löysi vuonna 1745 kultaa '
+            + 'kaupungin kupeesta, ja siitä tuli Venäjän ensimmäinen '
+            + 'tunnettu kultaesiintymä. Ensimmäinen kaivos avattiin 1747, '
+            + 'ja vuonna 1752 perustetusta kaivoskylästä kasvoi '
+            + 'Berjozovskin kaupunki. Kultaa kantavista kvartsijuonista '
+            + 'löytyi myös oranssinpunainen kide, jonka Johann Gottlob '
+            + 'Lehmann kuvasi 1766. Louis Nicolas Vauquelin sai siitä '
+            + 'näytteitä ja eristi 1797 alkuaineen, jonka nimeksi tuli '
+            + 'kromi. Berjozovskin kaivokset olivat pitkään maailman ainoa '
+            + 'lähde tälle kiteelle ja siitä valmistetulle keltaiselle '
+            + 'väripigmentille.',
+          selite: 'Lähikuva kivinäytteestä; kuvattu ala on noin puolitoista '
+            + 'senttimetriä leveä. Tummalla, kiiltävällä kivipinnalla '
+            + 'kasvaa tiheä matto ruohonvihreitä neulamaisia kiteitä. '
+            + 'Niiden lomasta työntyy esiin muutama lyhyt ja paksu kide, '
+            + 'joka on väriltään oranssinpunainen ja pinnaltaan lasimaisen '
+            + 'kiiltävä; suurin niistä on kuvan yläosassa keskellä. '
+            + 'Alareunassa on lisää samanvärisiä siruja ja mustaa karkeaa '
+            + 'ainesta. Vasemmassa yläkulmassa kimaltaa läpikuultava harmaa '
+            + 'kidepinta.',
+          lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kromi',
+        },
+        {
+          otsikko: 'Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki',
+          tiedosto: 'Екатеринбург. Панорама. Юго-запад. В.П.Метенков 1898г 299208jpg e1.jpg',
+          teksti: 'Siperian valtatie avautui 1763 ja kulki kaupungin läpi. '
+            + 'Jekaterinburgista tuli idän ja lännen välisen kaupan '
+            + 'solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. '
+            + 'Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna '
+            + '1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli '
+            + 'vuoriruukkien päällikön, valtiovarainministerin ja keisarin '
+            + 'alainen eikä kuvernöörin. Kaupan ja hallinnon kasvaessa '
+            + 'ruukin merkitys väheni, ja tärkeimmät talot alettiin '
+            + 'rakentaa kalliista kivestä.',
+          selite: 'Jekaterinburg kuvattuna korkealta lounaaseen vuonna 1898. '
+            + 'Etualalla kulkee leveä katu, jonka toisella puolella on '
+            + 'pitkä matala kauppahalli: sen julkisivussa toistuu kymmenien '
+            + 'kaariaukkojen rivi ja katto on loivaa peltiä. Vasemmalla on '
+            + 'kaksikerroksisia kivitaloja ja rivi puita kadun reunassa. '
+            + 'Kadun takana levittäytyy matalien talojen meri, jonka katot '
+            + 'ovat vaaleaa peltiä. Oikealla kohoaa korkea monikerroksinen '
+            + 'kellotorni, jolla on terävä huippu. Kaukana taustalla '
+            + 'kaupunki häviää vaaleaan usvaan. Kuva on sepianruskea ja sen '
+            + 'reunat ovat kuluneet.',
+          lahde: 'В.П.Метенков, Wikimedia Commons (PD)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä alkuaine eristettiin Berjozovskin kaivosten '
+          + 'oranssinpunaisesta kiteestä?',
+        vaihtoehdot: [
+          'Kromi',
+          'Koboltti',
+          'Nikkeli',
+          'Volframi',
+        ],
+        oikea: 0,
+        fakta: 'Louis Nicolas Vauquelin eristi kromin vuonna 1797 kiteestä, '
+          + 'jota nostettiin Berjozovskin kultakaivosten kvartsijuonista. '
+          + 'Samat kaivokset olivat pitkään maailman ainoa lähde '
+          + 'keltaiselle kromipigmentille.',
+      },
+    },
+  ],
+  novosibirsk: [
+    {
+      id: 'kaupunki',
+      nimi: 'Novosibirsk',
+      johdanto: 'Vuonna 1873 tällä kohdalla Ob-jokea ei ollut kaupunkia eikä '
+        + 'siltaa. Novosibirsk sai alkunsa vuonna 1893 rautatiesillan '
+        + 'työmaasta, ja 69 vuotta myöhemmin se ylitti miljoonan asukkaan '
+        + 'rajan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Novosibirsk morning. road bridge across the Ob river (9250673741).jpg',
+          selite: 'Aamu Obin rannalla. Kuvan poikki kaartuu betoninen '
+            + 'maantiesilta, jonka loivat holvikaaret nojaavat leveisiin '
+            + 'pilareihin keskellä jokea; sillan reunassa kulkee rivi '
+            + 'valaisinpylväitä, ja kannella erottuu tumma ajoneuvo. '
+            + 'Aurinko on noussut sillan yläpuolelle ja häikäisee ohuiden '
+            + 'pilvien läpi. Vasemmalla rannalla kohoaa kaupungin siluetti '
+            + 'kerrostaloineen ja rakennusnostureineen, veden rajassa '
+            + 'kulkee tiheä puurivi, ja oikealla taempana kulkee toinen '
+            + 'silta. Etualalla on leveä vaalea hiekkaranta, ja tyyni vesi '
+            + 'heijastaa sillan tummana viivana ja auringon valojuovana. '
+            + 'Taivas on kirkkaan sininen ja horisontissa utuinen.',
+          lahde: 'Dmitry Karyshev from Novosibirsk, Russia, Wikimedia Commons '
+            + '(CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Transib Novosibirsk.jpg',
+          selite: 'Novosibirsk-Glavnyin rautatieasema ratapihan yli '
+            + 'katsottuna. Vaaleanvihreän asemarakennuksen keskellä on '
+            + 'korkea puoliympyräinen kaari-ikkuna, jonka molemmin puolin '
+            + 'nousee valkoisia pilastereita ja matalampia siipiä '
+            + 'ikkunariveineen; katon harjalla lukee kohokirjaimin '
+            + 'NOVOSIBIRSK. Etualan ratapihalla seisoo useilla raiteilla '
+            + 'vihreitä matkustajavaunuja, ja niiden yllä kulkee ajolankoja '
+            + 'kannattavia pylväitä ja poikkipuomeja. Oikeassa reunassa '
+            + 'ylittää raiteet teräksinen kävelysilta kaiteineen ja '
+            + 'portaineen. Aseman takana näkyy valkoisia kerrostaloja ja '
+            + 'yksi nostokurki. Aurinko paistaa, ja kaukaisuus on utuinen.',
+          lahde: 'User:Aladux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Novosibirsk traditional-house-at-city-crossing.JPG',
+          selite: 'Yksikerroksinen hirsitalo katujen kulmassa keskellä '
+            + 'talvea. Salvotut hirret ovat tummuneet, katolla on paksu '
+            + 'lumikerros, ja seinässä näkyy kaksi ikkunaa, joiden '
+            + 'koristepielet on maalattu vaaleansinisiksi. Talon edessä ja '
+            + 'takana kasvaa lehdettömiä puita, ja pihaa rajaa matala '
+            + 'ruskea lauta-aita umpinaisine portteineen. Kadun puolella on '
+            + 'korkea auratun lumen valli, ja asfaltti on jäisen kiiltävä. '
+            + 'Talon editse nousee betoninen pylväs, ja ilmassa risteilee '
+            + 'useita johtoja. Oikealla taustalla on vaaleanruskea '
+            + 'monikerroksinen rakennus, liikennevalo, liikennemerkkejä ja '
+            + 'aidan takana kaksi tummiin pukeutunutta kulkijaa. Taivas on '
+            + 'kalpean sininen, ja kaukana leijuu pakkasutua.',
+          lahde: 'Stesso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Ainoa kohta, jossa joki on putkessa',
+          tiedosto: '001 Мост через реку Обь (cropped).jpg',
+          teksti: 'Radan piti alun perin kulkea Kolyvanin ja Tomskin kautta, '
+            + 'mutta siellä Ob tulvii keväisin leveälle. Retkikuntaa '
+            + 'johtanut Nikolai Garin-Mihailovski perusteli toista paikkaa '
+            + 'näin: sadankuudenkymmenen virstan matkalla tämä on ainoa '
+            + 'kohta, jossa joki on talonpoikien sanoin putkessa, sillä '
+            + 'molemmat rannat ja uoma ovat kalliota. Kolyvanissa joki '
+            + 'leviää tulvalla kahdentoista virstan levyiseksi, tässä vain '
+            + 'neljänsadan syllän. Elokuussa 1891 Bolšoje Krivoštšokovon '
+            + 'kylässä pidettiin maastokokous, jossa ylityspaikka lyötiin '
+            + 'lukkoon. Osa tutkijoista antaa kunnian retkikunnan '
+            + 'kenttäinsinöörille Vikenti Roetskille.',
+          selite: 'Vanha valokuva Obin rautatiesillasta. Vasemmalla, aivan '
+            + 'sillan päässä, seisoo höyryveturi vaunuineen kannella, ja '
+            + 'sekä kannella että penkereen rinteellä on joukko ihmisiä. '
+            + 'Penkereen kylkeen on rakennettu pitkät puiset portaat, ja '
+            + 'rinteen laella on lautarakennus ja korkea harustettu masto. '
+            + 'Sillan ristikot kaartuvat oikealle yhä pienemmiksi, ja niitä '
+            + 'kantavat kivipilarit, joiden virranpuoleiset kärjet ovat '
+            + 'viistot. Joen pinta on tyyni, ja vastaranta on matala ja '
+            + 'puuton. Oikealla hiekkarannalla seisoo yksinäinen ihminen, '
+            + 'ja kauempana on matalia rakennuksia. Kuva on ruskeansävyinen '
+            + 'ja taivas vaalea.',
+          lahde: 'Иван Робертович Томашкевич, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kupoli on kuusikymmentä metriä leveä',
+          tiedosto: 'RU Novosibirsk Novosibirsk opera and ballet theatre.jpg',
+          teksti: 'Teatterin paikaksi valittiin vanha Bazarnaja plostšad eli '
+            + 'torikenttä, ja työt alkoivat vuonna 1931. Talo valmistui '
+            + 'helmikuussa 1944, mutta ensimmäinen esitys nähtiin vasta 12. '
+            + 'toukokuuta 1945. Rakennuksen pääosa on kupoli, joka on 60 '
+            + 'metriä leveä ja 35 metriä korkea. Näyttämö on 30 metriä '
+            + 'syvä, ja sen yläpuolinen ristikko on 29,5 metrin '
+            + 'korkeudessa. Suureen saliin mahtuu 1 774 katsojaa, '
+            + 'konserttisaliin 375 ja pieneen saliin 150. Tilojen '
+            + 'yhteispinta-ala on 40 663 neliömetriä ja rakennuksen '
+            + 'tilavuus 294 340 kuutiometriä.',
+          selite: 'Teatterin kupoli alaviistosta ilta-auringossa. Kupoli on '
+            + 'matala, ja sen pinta on jaettu tiheään vinoruutukuvioon; '
+            + 'laella on ohut masto. Kupolin alla kiertää kapea ikkunarivi '
+            + 'ja sen alla leveä kaareva räystäslista sekä rivi '
+            + 'puoliympyräisiä ikkunoita. Oikeassa reunassa näkyy '
+            + 'pylväikkö, jonka pylväiden päät ovat tummat ja jonka '
+            + 'räystästä kannattavat tiheät konsolit. Vasemmalla kohoaa '
+            + 'suorakulmainen torniosa. Etualalla on lehtipuun latva ja '
+            + 'vasemmassa yläkulmassa kuusen oksa. Taivas on harmaa ja '
+            + 'pilvinen, mutta julkisivu hehkuu keltaisena matalassa '
+            + 'auringossa.',
+          lahde: 'Alexander Klink, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Puoli vuotta soittotunteja, sitten yleisö',
+          tiedosto: 'Vadim Repin and Zubin Mehta TA 2011.jpg',
+          teksti: 'Vadim Repin syntyi Novosibirskissä 31. elokuuta 1971 ja '
+            + 'aloitti viulunsoiton viisivuotiaana Zahar Bronin oppilaana. '
+            + 'Puolen vuoden opiskelun jälkeen hän esiintyi ensimmäisen '
+            + 'kerran yleisölle. Neljätoistavuotiaana vuonna 1985 hän '
+            + 'debytoi Tokiossa, Münchenissä, Berliinissä ja Helsingissä ja '
+            + 'seuraavana vuonna Carnegie Hallissa. '
+            + 'Seitsemäntoistavuotiaana hänestä tuli Brysselin Kuningatar '
+            + 'Elisabetin kilpailun viuluosuuden nuorin voittaja. Bron '
+            + 'opetti Novosibirskin konservatoriossa vuodesta 1974, ja '
+            + 'hänen oppilaisiinsa kuului myös Maksim Vengerov. Vuodesta '
+            + '2015 Repin soittaa vuonna 1733 valmistunutta Stradivariusta.',
+          selite: 'Kaksi frakkipukuista miestä seisoo näyttämöllä '
+            + 'suosionosoitusten aikana. Vasemmanpuoleinen pitää oikeassa '
+            + 'kädessään sekä viulua että jousta ja kohottaa vasemman '
+            + 'kätensä avoimena; oikeanpuoleinen seisoo korokkeella ja '
+            + 'ojentaa kätensä häntä kohti. Heidän takanaan istuu '
+            + 'orkesterin soittajia nuottitelineiden ääressä, ja '
+            + 'näyttämöllä on mikrofonitelineitä ja mustia tuoleja. '
+            + 'Takaseinään on heijastettu värikäs kuvio ja tekstiä. '
+            + 'Näyttämön etureunassa kukkii rivi valkoisia ja violetteja '
+            + 'syklaameja saniaisten seassa. Kuva on Tel Avivista vuodelta '
+            + '2011, ja korokkeella seisoo kapellimestari Zubin Mehta.',
+          lahde: 'Levg, Wikimedia Commons (CC BY-SA 3.0)',
+          musiikki: 'https://music.apple.com/fi/album/violin-concerto-in-d-op-35-i-allegro-moderato/1452575214?i=1452575811',
+          musiikkiNimi: 'Vadim Repinin levytyksiä Apple Musicissa',
+          esikuuntelu: 'Vadim Repin Tchaikovsky',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupungin ensimmäinen nimi oli Novonikolajevsk ja sen '
+        + 'rautatieaseman nimi pelkkä Ob. Vuonna 1957 kaupungin eteläpuolen '
+        + 'metsään rakennettiin oma tiedekaupunki, jossa asui '
+        + 'parhaimmillaan 65 000 tutkijaa perheineen.',
+      nostot: [
+        {
+          otsikko: 'Asema nimeltä Ob, kaupunki nimeltä Novonikolajevsk',
+          tiedosto: '008 Пассажирское здание станции Обь (cropped).jpg',
+          teksti: 'Kun silta valmistui keväällä 1897, Novonikolajevskissa '
+            + 'asui 7 800 ihmistä. Nimensä paikka oli saanut vuonna 1895 '
+            + 'pyhän Nikolauksen ja hallitsija Nikolai II:n mukaan, mutta '
+            + 'rautatieasema kulki nimellä Ob vuoteen 1909 asti. Vuonna '
+            + '1907 asukkaita oli jo yli 47 000, ja paikka sai '
+            + 'kaupunkioikeudet ja täyden itsehallinnon. Ensimmäinen pankki '
+            + 'avattiin 1906, ja vuoteen 1915 mennessä niitä oli viisi. '
+            + 'Vuonna 1913 Novonikolajevsk oli maan ensimmäisiä paikkoja, '
+            + 'joissa alkeisopetuksesta tehtiin pakollista. Nykyisen '
+            + 'nimensä kaupunki sai 12. syyskuuta 1926.',
+          selite: 'Aseman puinen matkustajarakennus vanhassa valokuvassa. '
+            + 'Talo on pitkä ja yksikerroksinen, ja sen vaaleaksi '
+            + 'maalatuissa seinissä on tiheä rivi ikkunoita koristeellisin '
+            + 'pielilaudoin. Keskellä kohoaa koristeleikattu päätykolmio, '
+            + 'jonka harjalla on rautainen koristeristikko ja ohut '
+            + 'lipputanko. Katto on peltinen, ja siitä nousee useita '
+            + 'savupiippuja. Laiturilla seisoo kaksi tummiin takkeihin '
+            + 'pukeutunutta miestä, ja heidän takanaan on penkkejä. '
+            + 'Oikealla kulkee valkoinen säleaita, vasemmalla näkyy '
+            + 'matalampi rakennus, ja talon takana on havumetsää. Etualalla '
+            + 'on useita raidepareja soraisella maalla.',
+          lahde: 'Иван Робертович Томашкевич, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Yksi jänne jäi seisomaan rannalle',
+          tiedosto: 'Ферма старого моста, Новосибирск 01.jpg',
+          teksti: 'Sillan suunnitteli professori Nikolai Beleljubski, ja se '
+            + 'rakennettiin vuosina 1893–1897. Siinä oli yhdeksän jännettä '
+            + 'ja pituutta 983,5 metriä. Kannattimina olivat '
+            + 'puoliparaboliset ristikot, joiden teräsosat painoivat '
+            + 'yhteensä 4 423 tonnia ja valmistettiin Uralilla Votkinskin '
+            + 'tehtaalla. Pilarit muurattiin lähiseudun graniitista. Vuonna '
+            + '1896 silta koekuormitettiin ajamalla sen yli neljällä '
+            + 'veturilla, ja 31. maaliskuuta 1897 se avattiin liikenteelle. '
+            + 'Vanhan sillan liikenne loppui 1991 ja purkaminen alkoi 2000. '
+            + 'Yksi jänteistä säästettiin museoesineeksi rantapuistoon, '
+            + 'jonka nimi on Gorodskoje natšalo.',
+          selite: 'Vanhan sillan jänne pystytettynä muistomerkiksi joen '
+            + 'rantaan. Harmaa teräsristikko lepää kahden betonipilarin '
+            + 'päällä, ja sen yläreuna kaartuu loivasti; tukien päällä '
+            + 'olevat laakerit on maalattu punaisiksi. Ristikon sisällä '
+            + 'riippuu vaalea suorakaiteen muotoinen taulu. Alla on kivetty '
+            + 'aukio, jolla kävelee kaksi punatakkista miestä, ja '
+            + 'nurmikaistaleella on kivi, johon on kiinnitetty laatta. '
+            + 'Taustalla virtaa leveä joki, jonka rantaa reunustaa '
+            + 'valkoinen kaide; vastarannalla näkyy kerrostaloja ja masto. '
+            + 'Taivas on harmaa ja pilvinen.',
+          lahde: 'К.Артём.1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Metsään rakennettu tiedekaupunki',
+          tiedosto: 'Morskoy Prospekt, Akademgorodok, Novosibirsk.JPG',
+          teksti: 'Keskustasta kolmisenkymmentä kilometriä etelään, koivu- ja '
+            + 'mäntymetsän keskellä Obin tekojärven rannalla, perustettiin '
+            + 'vuonna 1957 Neuvostoliiton tiedeakatemian alainen '
+            + 'Akademgorodok. Sen synnyssä oli keskeinen osuus mekaniikan '
+            + 'ja matematiikan tutkijalla Mihail Lavrentjevilla. Alueella '
+            + 'on 35 tutkimuslaitosta, lääketieteen akatemia ja '
+            + 'Novosibirskin valtionyliopisto. Parhaimmillaan siellä asui '
+            + '65 000 tutkijaa perheineen. Alkuvuosina siellä tutkittiin '
+            + 'kybernetiikkaa ja genetiikkaa, joita Moskovassa pidettiin '
+            + 'vaarallisena valetieteenä, ja kulttuurikeskus esitteli '
+            + 'neuvostotaiteilijoita, joiden työt olivat muualla '
+            + 'kiellettyjä.',
+          selite: 'Leveä katu Akademgorodokissa talvella. Oikealla seisoo '
+            + 'keltainen kerrostalo, jonka julkisivua jakavat punatiiliset '
+            + 'pystyraidat; seinässä on sininen numerokilpi. Talon edessä '
+            + 'kasvaa rivi korkeita koivuja ja mäntyjä, joiden oksilla on '
+            + 'lunta, ja niiden juurella kulkee kapea auratun lumen läpi '
+            + 'kaivettu jalkakäytävä. Kauempana käytävällä näkyy muutama '
+            + 'kulkija. Vasemmalla erottuu ajorata, jolla on muutamia '
+            + 'autoja, ja sen takana lisää puita ja rakennuksia. Lumi '
+            + 'peittää kaiken, ja taivas on tasaisen harmaa.',
+          lahde: 'Pather alexiy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta jännettä alkuperäisessä Obin rautatiesillassa '
+          + 'oli?',
+        vaihtoehdot: [
+          'yhdeksän',
+          'neljä',
+          'kaksitoista',
+          'kaksikymmentä',
+        ],
+        oikea: 0,
+        fakta: 'Nikolai Beleljubskin suunnittelemassa sillassa oli yhdeksän '
+          + 'jännettä ja pituutta 983,5 metriä. Yksi jänteistä säästettiin, '
+          + 'ja se seisoo nykyään Gorodskoje natšalo -puistossa Obin '
+          + 'rannalla.',
+      },
+    },
+  ],
+  irkutsk: [
+    {
+      id: 'kaupunki',
+      nimi: 'Irkutsk',
+      johdanto: 'Kiinan-teen ja Lenan kullan varassa vaurastunutta Irkutskia '
+        + 'sanottiin 1900-luvun alkuun mennessä Siperian Pariisiksi. '
+        + 'Heinäkuussa 1879 kaupungista paloi kahdessa päivässä kolme '
+        + 'neljäsosaa, noin 4 000 taloa.',
+      kansikuvat: [
+        {
+          tiedosto: 'Irkutsk, Russia.jpg',
+          selite: 'Näkymä Irkutskin ylle korkealta. Keskellä kaartuu leveä '
+            + 'monikaistainen katu, jolla ajaa muutama auto ja jonka '
+            + 'keskellä on matala betonikaide. Vasemmalla virtaa Angara; '
+            + 'rannassa on kivetty kävelyväylä lyhtypylväineen, '
+            + 'nurmikaistaleita ja tumma patsas vaalealla jalustalla. '
+            + 'Vastarannalla erottuu matalia taloja ja niiden takana loivia '
+            + 'harjanteita. Oikealla puiden takaa nousee valkoinen kirkko, '
+            + 'jonka listat ovat punaoranssit ja kupolit kullanhohtoiset ja '
+            + 'jonka vieressä kohoaa korkea kellotorni; taempana on '
+            + 'vaaleita kerrostaloja. Taivas on sininen ja pilvet ohuita, '
+            + 'ja illan varjot venyvät kadun poikki.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Cerkiew Kazańska w Irkucku 05.JPG',
+          selite: 'Kazanin Jumalanäidin kirkko alaviistosta kuvattuna. Seinät '
+            + 'ovat punatiiltä, ja niitä kiertävät valkoiseksi maalatut '
+            + 'kaarilistat, pylväät ja hammastetut reunanauhat. Katolta '
+            + 'nousee useita sipulikupoleita, jotka on ruudutettu sinisellä '
+            + 'ja valkoisella ja joiden huipuilla on kullatut ristit. '
+            + 'Keskimmäisessä tornissa on kaariaukkoja ja niiden alla '
+            + 'parvekemainen kaide. Taivas on syvänsininen, ja siihen '
+            + 'piirtyy ohuita valkoisia pilviä.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '130 kvartal Irkutsk 1.jpg',
+          selite: 'Kesäpäivä 130. korttelin kävelykadulla. Oikealla seisoo '
+            + 'tummaksi maalattu hirsitalo, jonka ikkunanpielet ja '
+            + 'räystäslistat on koristeltu vaalealla puuleikkauksella ja '
+            + 'jonka päädyssä kohoaa pieni torni; seinässä on punainen '
+            + 'kyltti kyrillisin kirjaimin. Talon edessä on puinen terassi, '
+            + 'portaat ja pystyyn nostettu mainostaulu. Kadulla kävelee '
+            + 'ihmisiä kesävaatteissa, ja katu on päällystetty vaalealla '
+            + 'laatalla. Vasemmalla jatkuu toinen puutalo ja sen takana '
+            + 'rivi kojuja. Taivas on kirkas ja kadun yllä risteilee '
+            + 'sähköjohtoja.',
+          lahde: 'Trasprd, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Teetä Kiinasta, kultaa Lenalta',
+          tiedosto: 'Irkutsk market, 19th century.jpg',
+          teksti: 'Ensimmäinen maantie Moskovasta Irkutskiin, Siperian '
+            + 'valtatie, valmistui vuonna 1760. Sitä pitkin kaupunkiin tuli '
+            + 'laajasti myyntiin tavaraa, jota siellä ei ennen ollut '
+            + 'saanut: kultaa, timantteja, turkiksia, puuta, silkkiä ja '
+            + 'teetä. Tee kulki Kiinasta rajakauppapaikka Kjahtan kautta, '
+            + 'joka oli perustettu vuonna 1727. Vuonna 1821 Irkutskista '
+            + 'tuli Itä-Siperian kenraalikuvernöörin istuin, ja vuoden 1897 '
+            + 'väenlaskussa asukkaita oli 51 473. Sähköt vedettiin 1896, '
+            + 'ensimmäinen teatteri valmistui 1897 ja ensimmäinen juna '
+            + 'saapui Irkutskiin 16. elokuuta 1898.',
+          selite: 'Värillinen painokuva Irkutskin markkinoilta 1800-luvun '
+            + 'puolivälistä. Aukio on täynnä väkeä: keskellä seisoo tiivis '
+            + 'ihmisjoukko, ja etualalla on rivi hevosten eteen '
+            + 'valjastettuja kärryjä, joista osan päällä on valkoinen '
+            + 'kangaskuomu. Vasemmalla kulkee pitkiä vihreäkattoisia '
+            + 'markkinahalleja pylväiden varassa, ja niiden päässä on '
+            + 'hirsirakennus pyöreän vihreän katon alla. Oikealla on '
+            + 'kaksikerroksinen keltainen talo vihreine kattoineen ja '
+            + 'kylttirivistöineen, sen edessä puiset portaat ja aidake sekä '
+            + 'kaksi lennätinpylvästä poikkipuineen. Taustalla kohoaa suuri '
+            + 'kirkko kupolien ja tornien kanssa, ja sen ympärillä on '
+            + 'matalia kattoja. Taivas on vaaleansininen ja pilvinen.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Kjahta',
+        },
+        {
+          otsikko: 'Ruhtinas kaivoksesta ja talo Volkonskin kujalla',
+          tiedosto: 'Chernyshova I13.jpg',
+          teksti: 'Sergei Volkonski oli ainoa palveluksessa ollut kenraali, '
+            + 'joka osallistui joulukuun 1825 kapinaan. Hänet tuomittiin '
+            + 'mestattavaksi, mutta tuomio lievennettiin elinkautiseksi '
+            + 'vankeudeksi: hän joutui kaivostöihin Irkutskin lähelle ja '
+            + 'vietti Siperiassa kolmekymmentä vuotta. Vaimo Maria '
+            + 'Rajevskaja seurasi häntä ja jätti pienen poikansa isänsä '
+            + 'huostaan. Maria oli taitava pianonsoittaja ja lauloi '
+            + 'puoliammattilaisena. Volkonskin kujalla seisova siniharmaa '
+            + 'puutalo oli ruhtinaan koti karkotusvuosina 1844–1856. Vuonna '
+            + '1856 Aleksanteri II salli dekabristien palata Siperiasta.',
+          selite: 'Volkonskin talo syysaamun valossa. Kaksikerroksinen '
+            + 'puutalo on maalattu vaaleansiniharmaaksi, ja ikkunoiden '
+            + 'ympärillä sekä nurkissa on valkoisia veistettyjä listoja ja '
+            + 'pylväitä. Toisen kerroksen keskeltä työntyy ulos '
+            + 'monikulmainen erkkeri, jonka alla on koristeellinen '
+            + 'kannatin. Päädyssä on loiva kolmiopääty. Talon edessä kulkee '
+            + 'harmaa lauta-aita, ja sen vieressä seisoo yksi ihminen selin '
+            + 'kameraan. Vasemmalla on keltalehtisiä puita, oikealla '
+            + 'korkeampi aita, ja taivas on pilvetön ja sininen.',
+          lahde: 'Chernyshova Irina, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dekabristikapina',
+        },
+        {
+          otsikko: 'Laulun loistava laiva on omulitynnyri',
+          tiedosto: 'Andrey Martynov - View of the Nikolsky Monastery on Lake Baikal.JPG',
+          teksti: 'Dmitri Davydov kirjoitti vuonna 1848 Ulan-Udessa käytyään '
+            + 'yksitoistasäkeistöisen runon Karkurin mietteitä Baikalilla. '
+            + 'Viisi säkeistöä päätyi lauluun Slavnoje more — svjaštšennyi '
+            + 'Baikal eli Loistava meri, pyhä Baikal, jonka sävelmän '
+            + 'tekijää ei tiedetä. Ensimmäisessä säkeistössä karkurin '
+            + 'loistava laiva on omulitynnyri, ja hän kehottaa '
+            + 'barguzin-tuulta liikuttamaan aaltoa, koska matkaa ei ole '
+            + 'pitkälti. Davydovin omassa tekstissä Baikal oli vapaa, '
+            + 'privolnyi; laulettuna siitä tuli pyhä, svjaštšennyi.',
+          selite: 'Andrei Martynovin maalaus Baikalin rannalta 1800-luvun '
+            + 'alusta. Etualalla nousee vihreä rinne, jolla seisoo kaksi '
+            + 'hattupäistä miestä; toinen kurottaa kättään järvelle päin, '
+            + 'ja heidän jalkojensa juuressa on pieni koira. Rinteellä '
+            + 'kasvaa tuuheita lehtipuita ja vasemmalla yksi kuusi. Järven '
+            + 'pinta on tyyni ja vaalea, ja sillä lipuu kaksimastoinen '
+            + 'purjealus sekä pienempiä veneitä. Vastarannalla on matalia '
+            + 'vaaleita rakennuksia puurivin takana; maalauksen nimen '
+            + 'mukaan ne ovat Nikolskin luostari. Kauempana kohoavat '
+            + 'harmaat vuoret, taivas on vaaleankeltainen ja siinä lentää '
+            + 'kaksi lintujonoa.',
+          lahde: 'Andrey Yefimovich Martynov, Wikimedia Commons (PD)',
+          musiikki: 'https://music.apple.com/fi/album/%D1%81%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B5-%D0%BC%D0%BE%D1%80%D0%B5-%D1%81%D0%B2%D1%8F%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B1%D0%B0%D0%B9%D0%BA%D0%B0%D0%BB-feat-%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9-%D1%8F%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2/1292643610?i=1292643818',
+          musiikkiNimi: 'Slavnoje more — svjaštšennyi Baikal Apple Musicissa',
+          esikuuntelu: 'Славное море священный Байкал',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Baikal',
+      johdanto: 'Kaupungista 72 kilometriä ylävirtaan Angara lähtee '
+        + 'Baikalista ainoana jokena, vaikka järveen laskee jopa 330 jokea. '
+        + 'Baikal on 25–30 miljoonaa vuotta vanha, maailman vanhin järvi.',
+      nostot: [
+        {
+          otsikko: 'Pohja on merenpinnan alapuolella',
+          tiedosto: 'Lake Baikal in winter.jpg',
+          teksti: 'Baikal on 636 kilometriä pitkä ja 79 kilometriä leveä, ja '
+            + 'sen syvin kohta on 1 642 metriä. Vettä siinä on 23 615 '
+            + 'kuutiokilometriä, enemmän kuin Pohjois-Amerikan Suurissa '
+            + 'järvissä yhteensä. Pinta on 455 metriä merenpinnan '
+            + 'yläpuolella, mutta pohja ulottuu 1 186 metriä merenpinnan '
+            + 'alapuolelle, ja pohjan alla on vielä noin seitsemän '
+            + 'kilometriä sedimenttiä. Talvella vesi on avoimilla selillä '
+            + 'paikoin niin kirkasta, että näkyvyys yltää 30–40 metriin; '
+            + 'kesällä se on 5–8 metriä. Jääkansi on 0,5–1,4 metriä paksu, '
+            + 'ahtaumissa yli kaksi metriä.',
+          selite: 'Jäätynyt Baikal Olhonin saaren lähellä. Etualan jääkansi '
+            + 'on halkeillut suuriksi laatoiksi, joiden reunat kohoavat '
+            + 'vinoon ja joiden pinnalla on ohutta lunta ja pitkiä '
+            + 'valkoisia murtumaviivoja; laattojen välissä jää näkyy '
+            + 'tummansinisenä. Keskellä kohoaa lumen pilkuttama niemi, '
+            + 'jonka rinteillä kasvaa harvaa metsää ja jonka kalliot ovat '
+            + 'paljaat. Vasemmalla horisontti jatkuu tasaisena jäänä. '
+            + 'Taivas on pilvinen, pilvet venyvät pitkiksi juoviksi, ja '
+            + 'niiden takaa hohtaa matala keltainen valo.',
+          lahde: 'Sergey Pesterev, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Baikaljärvi',
+        },
+        {
+          otsikko: 'Norppa, joka sukeltaa neljäänsataan metriin',
+          tiedosto: 'Из жизни байкальской нерпы близ Ушканьих островов 02.jpg',
+          teksti: 'Baikalinnorppa on maailman pienimpiä hylkeitä: aikuinen on '
+            + '1,1–1,4 metriä pitkä ja painaa 63–70 kiloa. Se sukeltaa jopa '
+            + '400 metrin syvyyteen ja pysyy pinnan alla yli 40 minuuttia, '
+            + 'säikähtäneenä jopa 70, vaikka tavallinen sukellus kestää 2–4 '
+            + 'minuuttia. Selitys on veressä: samankokoiseen hylkeeseen '
+            + 'verrattuna sillä on kaksi litraa enemmän verta. Poikanen '
+            + 'syntyy valkoisessa untuvaturkissa, joka vaihtuu pian '
+            + 'tummempaan. Talvella ja keväällä yli 90 prosenttia norpan '
+            + 'ravinnosta on golomjankaa. Yksilöitä arvioidaan olevan 80 '
+            + '000–100 000.',
+          selite: 'Kaksi baikalinnorppaa lepää matalalla kalliolla aivan '
+            + 'vedenrajassa. Etummainen on kohottanut ylävartalonsa ja '
+            + 'katsoo suoraan kameraan; turkki on täplikäs ja märkä, '
+            + 'viikset pitkät ja etuevän kynnet erottuvat. Takimmainen '
+            + 'makaa sen takana ja nostaa päätään samaan suuntaan. Kallio '
+            + 'on karkea ja punertavan ruskea, ja sen reunoilla kasvaa '
+            + 'vihreää levää. Ympärillä on tyyni vihertävä vesi, jossa käy '
+            + 'loivia laineita.',
+          lahde: 'Nina Zhavoronkova, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Baikalinhylje',
+        },
+        {
+          otsikko: 'Läpikuultava kala, joka ei kude',
+          tiedosto: 'Korotneff expedition to Lake Baikal 1900-1902, plate I (Comephorus dybowskii 3).jpg',
+          teksti: 'Golomjanka elää vain Baikalissa. Sen ruumis on '
+            + 'läpikuultava eikä siinä ole suomuja, ja rintaevät ovat '
+            + 'pitkät kuin viuhkat. Suurempi laji kasvaa 21-senttiseksi, ja '
+            + 'sen painosta lähes 39 prosenttia on rasvaa; se yhdessä '
+            + 'huokoisten luiden kanssa pitää kalan kellumassa ilman '
+            + 'uimarakkoa. Golomjanka ei kude mätiä vaan synnyttää eläviä '
+            + 'poikasia, 2 000–3 000 kerrallaan, ja emo kuolee useimmiten '
+            + 'synnytyksen jälkeen. Kalaa ei pyydetä kaupallisesti, mutta '
+            + 'myrskyn rannalle heittämien yksilöiden rasvaa poltettiin '
+            + 'ennen lampuissa ja käytettiin lääkkeenä. Järven kaloista '
+            + 'arviolta 70 prosenttia on golomjankoja.',
+          selite: 'Golomjanka kuvattuna 1900-luvun alun tutkimusjulkaisun '
+            + 'kuvataulussa sivulta ja tummaa taustaa vasten. Kala on '
+            + 'pitkulainen ja taaksepäin kapeneva, ja sen pinta on vaalean '
+            + 'kellertävä ja niin läpikuultava, että selkäranka ja ruodot '
+            + 'erottuvat. Pää on leveä ja litteä, silmä suuri ja tumma, ja '
+            + 'suu ulottuu pitkälle taaksepäin. Rintaevät ovat '
+            + 'poikkeuksellisen pitkät ja viuhkamaiset. Selkä- ja peräevä '
+            + 'jatkuvat ohuina liuskoina pyrstöön asti, ja pyrstöevässä '
+            + 'näkyvät hennot tukiruodot.',
+          lahde: 'Biodiversity Heritage Library, Wikimedia Commons (PD)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten golomjanka saa jälkeläisiä?',
+        vaihtoehdot: [
+          'se synnyttää eläviä poikasia',
+          'se kutee mätiä rantakivikkoon',
+          'se hautoo mätimunia suussaan',
+          'se laskee mätinsä jään alapintaan',
+        ],
+        oikea: 0,
+        fakta: 'Golomjanka synnyttää kerralla 2 000–3 000 elävää poikasta, ja '
+          + 'emo kuolee useimmiten synnytyksen jälkeen. Kalan ruumis on '
+          + 'läpikuultava eikä siinä ole suomuja.',
+      },
+    },
+  ],
 };
