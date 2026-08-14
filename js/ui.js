@@ -10345,7 +10345,15 @@ export class UI {
 
   /** Ylälaidan pysyvä valikkonappi lehteen; piiloon yksisivuisesta. */
   varmistaLehtiHampurilainen(nakyviin) {
-    let nappi = this.arrivalDialog.querySelector(':scope > .lehti-hampurilainen');
+    /*
+     * Nappi asuu tarttuvan nimiön SISÄLLÄ (omistaja 14.8.2026): vain
+     * niin se pysyy täsmälleen otsikon rivillä ja otsikon viivojen
+     * sisäpuolella myös silloin, kun otsikko liikkuu tarttumisen
+     * ääripäissä. Nimiön textContent-päivitys pyyhkii napin — se
+     * luodaan tässä uudelleen, ja tämä ajetaan joka sivunäytöllä
+     * (naytaTutkiSivu → paivitaTutkiNavi → paivitaTutkiAlapalkki).
+     */
+    let nappi = this.arrivalCity.querySelector(':scope > .lehti-hampurilainen');
     if (!nappi && nakyviin) {
       nappi = html('button', 'lehti-hampurilainen');
       nappi.type = 'button';
@@ -10355,7 +10363,7 @@ export class UI {
         + ' stroke="currentColor" stroke-width="1.8" stroke-linecap="round">'
         + '<path d="M4 7h16M4 12h16M4 17h16"/></svg>';
       nappi.addEventListener('click', () => this.avaaSisallysvalikko({ ylhaalla: true }));
-      this.arrivalDialog.appendChild(nappi);
+      this.arrivalCity.appendChild(nappi);
     }
     if (nappi) nappi.hidden = !nakyviin;
   }
@@ -10376,7 +10384,25 @@ export class UI {
     // 14.8.2026); alapalkin hampurilaisesta se nousee alhaalta kuten
     // ennenkin.
     const levy = html('div', `sisallys-levy${ylhaalla ? ' ylhaalla' : ''}`);
-    const sulje = () => levy.remove();
+    /*
+     * Levy sulkeutuu myös mistä tahansa sen ULKOPUOLELTA (omistaja
+     * 14.8.2026: "Hampurilainen saisi sulkeutua missä tahansa, jos
+     * painaa sen ulkopuolelta"). Kuuntelija on dialogissa
+     * kaappausvaiheessa, jotta se näkee myös kortin sisällön
+     * napautukset; hampurilaiset ohitetaan, jotta niiden oma
+     * click-vipu saa hoitaa sulkemisen eikä levy avaudu heti
+     * uudelleen samasta painalluksesta.
+     */
+    const ulkosulku = (e) => {
+      if (levy.contains(e.target)) return;
+      if (e.target.closest?.('.lehti-hampurilainen, .sisallysnappi')) return;
+      sulje();
+    };
+    const sulje = () => {
+      levy.remove();
+      this.arrivalDialog.removeEventListener('pointerdown', ulkosulku, true);
+    };
+    this.arrivalDialog.addEventListener('pointerdown', ulkosulku, true);
     const otsikkoRivi = html('div', 'sisallys-levy-ylä');
     otsikkoRivi.appendChild(html('span', '', 'Sisällys'));
     const x = html('button', 'sisallys-sulje', '×');
