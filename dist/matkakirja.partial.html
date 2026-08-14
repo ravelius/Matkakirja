@@ -8163,6 +8163,29 @@ button.lukija-nappi.lukee,
 /* Palstat allekkain: lehti luetaan ylhäältä alas, ei rinnakkain. */
 .dialog.lehti .arrival-palstat { display: block; }
 
+/*
+ * PALSTAT LÄPINÄKYVIKSI ASETTELULLE (omistaja 14.8.2026): tarttuva
+ * nimiö voi tarttua vain vanhempansa laatikon sisällä, ja
+ * kaupunkilehden etusivulla radiorivi ja kohdekartta asuvat palstojen
+ * ULKOPUOLELLA — palsta loppui kesken ja otsikko "vetäytyi ylös" heti
+ * kun radiorivi ilmestyi. display: contents nostaa nimiön suoraan
+ * vierivän kortin lapseksi, jolloin tarttuma kattaa koko sivun.
+ * Rajaus :not([hidden]):lla: [hidden]-piilotus (display: none
+ * !important) ei saa kumoutua. Vain lehtitaitto — perinteinen
+ * saapumiskortti pitää palstansa.
+ */
+.dialog.lehti .arrival-palstat:not([hidden]),
+.dialog.lehti .arrival-palstat:not([hidden]) > .arrival-palsta {
+  display: contents;
+}
+
+/* display: contents pudottaa palstojen padding-topin (--arkki-yla) —
+ * sama hengitystila annetaan ensimmäiselle riville (lehtitaitossa
+ * masto on aina näkyvissä, ks. arrivalLehtiYla). */
+.dialog.lehti .arrival-palstat:not([hidden]) > .arrival-palsta > :first-child {
+  margin-top: var(--arkki-yla);
+}
+
 .lehti-ylarivi {
   margin: 0 0 0.1rem;
   font-family: var(--font-type);
@@ -8220,22 +8243,55 @@ button.lukija-nappi.lukee,
 }
 
 /*
+ * SUMEA KAISTA NIMIÖN YLLE LEVEILLÄ RUUDUILLA (omistaja 14.8.2026):
+ * iPadilla tarttuvan otsikon yläpuolelle jää --arkki-tarttuman
+ * korkuinen rako, jossa vierivä teksti näkyi terävänä. Puhelimessa
+ * saman hoitaa koko ruudun levyinen kiinteä kaista
+ * (.dialog.arkki::before media-lohkossa), mutta leveällä ruudulla
+ * kortti ei täytä ruutua, joten kaista asuu kortin SISÄLLÄ tarttuvana
+ * ensimmäisenä laatikkona: se pysyy vieritysalueen yläreunassa ja
+ * sumentaa alle jäävän tekstin kuten iPhonella. Negatiivinen
+ * alamarginaali kumoaa kaistan flow'ssa viemän tilan; ::before on
+ * vapaa, koska arkki piilottaa kortin kiertyneen reunaviivan (ks.
+ * "display: none" -sääntö ylempänä), jonka tämä leveillä ruuduilla
+ * korvaa.
+ */
+@media (min-width: 700px) {
+  .dialog.arkki .dialog-card::before {
+    content: '';
+    display: block;
+    position: sticky;
+    inset: auto;
+    top: 0;
+    z-index: 4;
+    height: var(--arkki-tarttuma);
+    margin: 0 calc(var(--arkki-reunus) * -1) calc(var(--arkki-tarttuma) * -1);
+    border: 0;
+    border-radius: 0;
+    transform: none;
+    background: rgba(245, 240, 226, 0.3);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    pointer-events: none;
+  }
+}
+
+/*
  * ── YLÄLAIDAN HAMPURILAINEN (omistaja 14.8.2026) ────────────────────
  *
- * Pysyvä valikkonappi lehden vasemmassa yläkulmassa, tarttuvan
- * otsikon rinnalla. Nappi on dialogin (ei vierivän kortin) lapsi,
- * joten se pysyy paikallaan vierityksestä ja sivunvaihdosta
- * riippumatta. Siitä sisällys aukeaa yläreunaan; maalehden alapalkin
- * hampurilainen jää ennalleen.
+ * Pysyvä valikkonappi lehden vasemmassa yläkulmassa. Nappi asuu
+ * tarttuvan nimiön (#arrival-city) SISÄLLÄ ja keskitetään sen
+ * riville: näin se on täsmälleen otsikon korkeudella ja otsikon ylä-
+ * ja alaviivan sisäpuolella myös silloin, kun otsikko liikkuu
+ * tarttumisen ääripäissä (omistajan tarkennus 14.8.2026 — dialogiin
+ * kiinnitettynä nappi jäi väärälle korkeudelle). Siitä sisällys
+ * aukeaa yläreunaan; maalehden alapalkin hampurilainen jää ennalleen.
  */
 /*
  * Pelkät kolme viivaa ilman nappikehystä (omistajan tarkennus
  * 14.8.2026: "se voi olla kokonaan ilman ympäröivää nappia. Riittää,
  * että on vain se kolme viivaa") — osuma-alue on silti täydet 40 px,
- * kehys vain ei piirry. Pystysijainti tasataan tarttuvan nimiörivin
- * kanssa: dialogitason --arkki-tarttuma (ks. media-lohko) pitää
- * kuvakkeen samalla rivillä otsikon kanssa myös puhelimen
- * turvakaistan alla.
+ * kehys vain ei piirry.
  */
 /* Valitsimessa on .dialog button mukana, koska dialogin yleinen
    nappisääntö (piirretty kehys ja vaalea pohja) voittaisi muuten
@@ -8243,11 +8299,12 @@ button.lukija-nappi.lukee,
    kaappaus 14.8.2026). */
 .dialog button.lehti-hampurilainen {
   position: absolute;
-  top: calc(var(--arkki-tarttuma, 0.85rem) + 0.3rem);
+  top: 50%;
   left: 0.45rem;
-  /* Sisällyslevyn (z 6) alla ei saa jäädä: nappi toimii myös levyn
-     sulkevana vipuna. */
-  z-index: 7;
+  transform: translateY(-50%);
+  /* Nimiön oman pinon päällimmäiseksi (avattu sisällyslevy peittää
+     napin — ulkopuolinen napautus sulkee levyn, ks. ui.js). */
+  z-index: 1;
   width: 2.1rem;
   height: 2.1rem;
   min-width: 40px;
@@ -8280,9 +8337,10 @@ button.lukija-nappi.lukee,
   border-bottom: 1px solid rgba(70, 51, 31, 0.35);
   border-radius: 0 0 0.7rem 0.7rem;
   box-shadow: 0 0.6rem 1.4rem rgba(28, 20, 12, 0.28);
-  /* Hampurilainen jää levyn ylle — otsikkorivi väistää sitä. */
+  /* Puhelimen turvakaista ei saa peittää otsikkoriviä. Hampurilainen
+     jää levyn ALLE (nappi asuu nykyään nimiön sisällä kortissa) —
+     sulku hoituu napauttamalla levyn ulkopuolelta. */
   padding-top: calc(var(--arkki-tarttuma, 0px) + 0.6rem);
-  padding-left: 3rem;
   animation: sisallys-laskeutuu 180ms ease-out;
 }
 
@@ -168179,7 +168237,15 @@ class UI {
 
   /** Ylälaidan pysyvä valikkonappi lehteen; piiloon yksisivuisesta. */
   varmistaLehtiHampurilainen(nakyviin) {
-    let nappi = this.arrivalDialog.querySelector(':scope > .lehti-hampurilainen');
+    /*
+     * Nappi asuu tarttuvan nimiön SISÄLLÄ (omistaja 14.8.2026): vain
+     * niin se pysyy täsmälleen otsikon rivillä ja otsikon viivojen
+     * sisäpuolella myös silloin, kun otsikko liikkuu tarttumisen
+     * ääripäissä. Nimiön textContent-päivitys pyyhkii napin — se
+     * luodaan tässä uudelleen, ja tämä ajetaan joka sivunäytöllä
+     * (naytaTutkiSivu → paivitaTutkiNavi → paivitaTutkiAlapalkki).
+     */
+    let nappi = this.arrivalCity.querySelector(':scope > .lehti-hampurilainen');
     if (!nappi && nakyviin) {
       nappi = html('button', 'lehti-hampurilainen');
       nappi.type = 'button';
@@ -168189,7 +168255,7 @@ class UI {
         + ' stroke="currentColor" stroke-width="1.8" stroke-linecap="round">'
         + '<path d="M4 7h16M4 12h16M4 17h16"/></svg>';
       nappi.addEventListener('click', () => this.avaaSisallysvalikko({ ylhaalla: true }));
-      this.arrivalDialog.appendChild(nappi);
+      this.arrivalCity.appendChild(nappi);
     }
     if (nappi) nappi.hidden = !nakyviin;
   }
@@ -168210,7 +168276,25 @@ class UI {
     // 14.8.2026); alapalkin hampurilaisesta se nousee alhaalta kuten
     // ennenkin.
     const levy = html('div', `sisallys-levy${ylhaalla ? ' ylhaalla' : ''}`);
-    const sulje = () => levy.remove();
+    /*
+     * Levy sulkeutuu myös mistä tahansa sen ULKOPUOLELTA (omistaja
+     * 14.8.2026: "Hampurilainen saisi sulkeutua missä tahansa, jos
+     * painaa sen ulkopuolelta"). Kuuntelija on dialogissa
+     * kaappausvaiheessa, jotta se näkee myös kortin sisällön
+     * napautukset; hampurilaiset ohitetaan, jotta niiden oma
+     * click-vipu saa hoitaa sulkemisen eikä levy avaudu heti
+     * uudelleen samasta painalluksesta.
+     */
+    const ulkosulku = (e) => {
+      if (levy.contains(e.target)) return;
+      if (e.target.closest?.('.lehti-hampurilainen, .sisallysnappi')) return;
+      sulje();
+    };
+    const sulje = () => {
+      levy.remove();
+      this.arrivalDialog.removeEventListener('pointerdown', ulkosulku, true);
+    };
+    this.arrivalDialog.addEventListener('pointerdown', ulkosulku, true);
     const otsikkoRivi = html('div', 'sisallys-levy-ylä');
     otsikkoRivi.appendChild(html('span', '', 'Sisällys'));
     const x = html('button', 'sisallys-sulje', '×');
@@ -174324,6 +174408,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 647, teksti: 'lehtiotsikko pitää radiorivin yli; hampurilainen otsikossa' },
   { v: 646, teksti: 'kartan väriläikät pois: rae kattaa koko pohjatason' },
   { v: 645, teksti: 'matkakirja pysyy vasemmassa yläkulmassa zoomatessa' },
   { v: 644, teksti: 'Hampurilainen otsikkoriville pelkkinä viivoina' },
@@ -175065,7 +175150,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.646';
+const APP_VERSION = '2026-08-09.647';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
