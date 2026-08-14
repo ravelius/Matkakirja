@@ -10,25 +10,37 @@
  */
 
 export const TILANNE = {
-  paivitetty: '11.8.2026 (myöhäisilta) — Raamattu 2.0 -päivä',
-  tavoite: 'Raamattu 2.0 rakennetaan yhdessä työhuoneessa (15 '
-    + 'osiota; isot linjaukset 11.8.: paikallisaarteet, '
-    + 'varustekauppa, pelin loppu, tekstien vetovoimakeinot). '
-    + 'Vanhat saapumismerkinnät luentoineen palautettu peliin '
-    + '(v577) kunnes tekstit kirjoitetaan uusiksi. Opukset '
-    + 'jatkavat Lähi-idän ja Aasian maalehtiä taustalla.',
+  paivitetty: '14.8.2026 — kapulanvaihto uudelle tilille (v652)',
+  tavoite: 'Kehitys jatkuu uudella tilillä (kapulanvaihto 14.8., '
+    + 'docs/kapulanvaihto.md). Ensisijainen työ: maa- ja '
+    + 'kaupunkilehtien jatko — Siperian kahdeksan kaupunkikannen '
+    + 'erät käynnissä. Kartoitus 14.8.: 62 laudan maata ilman '
+    + 'maalehteä, 185 kaupunkia ilman kantta. '
+    + 'Matkakirjamerkintöjä EI generoida ennen tekstityylipäätöstä.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
       tila: 'tyossa',
-      tehtava: 'Tilinvaihto tehty: uusi koordinaattori luki kaanonin '
-        + 'ja luovutuksen. Raamattu luettavaksi työhuoneeseen (#820). '
-        + 'Opus 5:n mekaniikkaerä katselmoitu, tekstit kirjoitettu '
-        + '(lentotarjous, mannernapit, Säännöt) ja julkaistu v576.',
-      seuraavaksi: 'Ottaa omistajan Eurooppa-tekstikommentit vastaan; '
-        + 'pääaarteen paljastusteksti kun hoitaja/kerääjä on '
-        + 'päätetty.',
+      tehtava: 'Uuden tilin päätoimittaja: kaanon ja kapulanvaihto '
+        + 'luettu, lehdettömät maat ja kaupungit kartoitettu ajamalla, '
+        + 'Siperia-erät speksattu ja delegoitu Opus 6:lle '
+        + '(ultracode, omistajan ohje 14.8.).',
+      seuraavaksi: 'Vahtii Opus 6:n eriä (katselmointi + julkaisun '
+        + 'valvonta); avoimet päätökset odottavat omistajaa '
+        + '(kapulanvaihto.md: pöllön linkit, TTS-toteutus).',
+    },
+    {
+      tekija: 'Opus 6',
+      rooli: 'lehdet (Siperia)',
+      tila: 'tyossa',
+      tehtava: 'Siperian kaupunkikannet kolmena eränä: 1) '
+        + 'Jekaterinburg, Novosibirsk, Irkutsk; 2) Jakutsk, Magadan; '
+        + '3) Kamtšatka, Sahalin, Vladivostok. Kansi + sää per '
+        + 'kaupunki; EI uutis-/mediaosioita (linjaus 13.8.), ei '
+        + 'kohtaamisia (tarinatekstit Fablella).',
+      seuraavaksi: 'Erä kerrallaan PR:ksi; raportti Fablelle joka '
+        + 'erästä.',
     },
     {
       tekija: 'Fable max 2',
