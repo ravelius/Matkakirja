@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 677, teksti: 'puskurisoitin: hiljaisuudet pois, tasaiset saumat' },
   { v: 676, teksti: 'seurantavieritys vain tarpeeseen ja äänen alun ohi' },
   { v: 675, teksti: 'luentasoitin piiloutuu itsestään, kaiutin vipuaa sen' },
   { v: 674, teksti: 'saumaton palanvaihto: kaksi elementtiä, esilataus, limitys' },
