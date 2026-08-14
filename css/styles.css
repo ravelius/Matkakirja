@@ -10100,6 +10100,23 @@ body.vertailu-tila .pawns { display: none; }
 }
 
 /*
+ * Mittajana satelliittikuvan päällä. Jana on piirretty paperin
+ * väreillä vaalean julisteen päälle, ja satelliittikuvan tummassa
+ * puistossa se katosi lähes kokonaan. Pituus ja teksti pysyvät
+ * samoina — vahvistetaan vain tausta, jotta jana kelpaa molemmilla
+ * pohjilla.
+ */
+.kaupunkikartta-kotelo.satelliittinakyma .kartta-mittajana {
+  border-color: rgba(247, 240, 222, 0.9);
+  background: linear-gradient(rgba(247, 240, 222, 0) 40%, rgba(247, 240, 222, 0.85) 40%);
+}
+
+.kaupunkikartta-kotelo.satelliittinakyma .kartta-mittajana-teksti {
+  color: #2c2318;
+  background: rgba(247, 240, 222, 0.92);
+}
+
+/*
  * OSM-merkintä pieneksi mutta EI pois (omistajan palaute 8.8.2026:
  * "paljon pienemmällä"). Merkintä on OpenStreetMapin lisenssiehto
  * (ODbL), joten se ei ole koriste vaan velvoite — siksi se pienenee

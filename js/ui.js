@@ -11543,6 +11543,10 @@ export class UI {
       });
       const naytaNakyma = (satelliitissa) => {
         this.satelliittiNakyma = satelliitissa ? kaupunki : null;
+        // Mittajana on piirretty paperin väreillä ja katoaa
+        // satelliittikuvan tummaan metsään — luokka vahvistaa sen
+        // taustan. Jana itse (pituus ja teksti) on sama molemmissa.
+        kotelo.classList.toggle('satelliittinakyma', satelliitissa);
         kuva.src = satelliitissa ? kartta.satelliitti : kartta.polku;
         kuva.alt = satelliitissa ? 'Kaupunki satelliittikuvassa' : 'Kaupungin kartta';
         lahderivi.textContent = satelliitissa ? kartta.satelliittiLahde : kartta.lahde;
