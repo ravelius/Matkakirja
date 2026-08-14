@@ -8,6 +8,11 @@ import { packById } from './pack.js';
 import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-stream.js';
 import { kertojaTila, asetaKertojaTila } from './aani-ehdokkaat.js';
 import { asennaPollo } from './pollo.js';
+// Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
+import {
+  asetaPuheenNopeus, luePuheAsetukset, puheenNopeus, tallennaPuheAsetukset,
+} from './puhe.js';
+import { lueAaneen, pysaytaLukija } from './lukija.js';
 // iOS-kuoren kytkennät. Selaimessa jokainen näistä on mykkä (js/natiivi.js).
 import {
   natiiviKirjauduPelikeskukseen, natiiviKuunteleSynkka, natiiviMerkitseAika,
@@ -35,7 +40,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.661';
+const APP_VERSION = '2026-08-09.662';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1021,6 +1026,7 @@ async function kytkeKehittaja() {
     talletaPolloKoodi('');
     ui?.paivitaKehittajaTila();
     paivitaVersioKulma();
+    paivitaPuheSaadin();
     kehittajaDialog.close();
     return;
   }
@@ -1039,6 +1045,7 @@ async function kytkeKehittaja() {
   asetaKehittajaTila(true);
   ui?.paivitaKehittajaTila();
   paivitaVersioKulma();
+  paivitaPuheSaadin();
   kehittajaDialog.close();
 }
 
@@ -1050,6 +1057,106 @@ kehittajaLomake.addEventListener('submit', (e) => {
   e.preventDefault();
   kytkeKehittaja();
 });
+
+/* --- Lukijaäänen säädin (kehittäjätila, omistajan tilaus 14.8.2026) ------- */
+
+/*
+ * Valikon Äänet-osiossa on kehittäjätilassa nappi, josta lukijaäänen
+ * äänen, promptin ja nopeuden voi säätää suoraan pelistä. Säädöt
+ * tallentuvat laitteelle heti (sama localStorage kuin työhuoneen
+ * Lukijaääni-välilehdellä), ja worker tottelee ääni-/promptisäätöjä
+ * vain kehittäjäkoodilla — joka on laitteella jo kehittäjätilan
+ * avaamisesta (js/puhe.js lukee sen varapolkuna).
+ */
+const puheDialog = document.getElementById('puhe-dialog');
+const puheSaadinNappi = document.getElementById('puhe-saadin-btn');
+const puhePersoonaValinta = document.getElementById('puhe-persoona');
+const puheAaniValinta = document.getElementById('puhe-aani');
+const puheOhjeKentta = document.getElementById('puhe-ohje');
+const puheNopeusLiuku = document.getElementById('puhe-nopeus');
+const puheNopeusArvo = document.getElementById('puhe-nopeus-arvo');
+
+const PUHE_AANIVAIHTOEHDOT = ['alloy', 'ash', 'ballad', 'coral', 'echo',
+  'fable', 'nova', 'onyx', 'sage', 'shimmer', 'verse'];
+const PUHE_OLETUSAANET = { merkinnat: 'onyx', kertoja: 'onyx', pollo: 'sage' };
+const PUHE_NAYTTEET = {
+  merkinnat: 'Saavuimme kaupunkiin illansuussa, ja teekaravaanin kellot '
+    + 'kilisivät kadulla vielä pimeän tultua.',
+  kertoja: 'Niilin tulva toi mudan pelloille joka kesä, ja koko '
+    + 'valtakunnan verokalenteri laskettiin sen mukaan.',
+  pollo: 'Hyvä kysymys! Baikal on maailman syvin järvi — sen syvin '
+    + 'kohta on yli tuhat kuusisataa metriä.',
+};
+
+/** Napin näkyvyys seuraa kehittäjätilaa. */
+function paivitaPuheSaadin() {
+  if (puheSaadinNappi) puheSaadinNappi.hidden = !kehittajaTilaPaalla();
+}
+
+/** Täyttää kentät valitun lukijan tallennetuista säädöistä. */
+function lataaPuheKentat() {
+  const persoona = puhePersoonaValinta.value;
+  const oma = luePuheAsetukset()[persoona] ?? {};
+  // Oletusvaihtoehdon nimi kertoo, mikä pelin oletusääni on.
+  puheAaniValinta.replaceChildren();
+  const oletus = document.createElement('option');
+  oletus.value = '';
+  oletus.textContent = `(pelin oletus: ${PUHE_OLETUSAANET[persoona] ?? 'onyx'})`;
+  puheAaniValinta.appendChild(oletus);
+  for (const aani of PUHE_AANIVAIHTOEHDOT) {
+    const o = document.createElement('option');
+    o.value = aani;
+    o.textContent = aani;
+    puheAaniValinta.appendChild(o);
+  }
+  puheAaniValinta.value = PUHE_AANIVAIHTOEHDOT.includes(oma.aani) ? oma.aani : '';
+  puheOhjeKentta.value = oma.ohje ?? '';
+  puheNopeusLiuku.value = String(puheenNopeus());
+  puheNopeusArvo.textContent = `${puheenNopeus().toFixed(2)}×`;
+}
+
+/** Tallettaa äänen ja promptin heti muutoksesta — ei erillistä nappia. */
+function tallennaPuheKentat() {
+  const kaikki = luePuheAsetukset();
+  kaikki[puhePersoonaValinta.value] = {
+    aani: puheAaniValinta.value || null,
+    ohje: puheOhjeKentta.value.trim() || null,
+  };
+  tallennaPuheAsetukset(kaikki);
+}
+
+if (puheDialog && puheSaadinNappi) {
+  puheSaadinNappi.addEventListener('click', () => {
+    lataaPuheKentat();
+    puheDialog.showModal();
+  });
+  puhePersoonaValinta.addEventListener('change', lataaPuheKentat);
+  puheAaniValinta.addEventListener('change', tallennaPuheKentat);
+  puheOhjeKentta.addEventListener('change', tallennaPuheKentat);
+  puheNopeusLiuku.addEventListener('input', () => {
+    const nopeus = asetaPuheenNopeus(Number(puheNopeusLiuku.value));
+    puheNopeusArvo.textContent = `${nopeus.toFixed(2)}×`;
+  });
+  document.getElementById('puhe-oletus').addEventListener('click', () => {
+    const kaikki = luePuheAsetukset();
+    delete kaikki[puhePersoonaValinta.value];
+    tallennaPuheAsetukset(kaikki);
+    lataaPuheKentat();
+  });
+  document.getElementById('puhe-nayte').addEventListener('click', () => {
+    tallennaPuheKentat();
+    const persoona = puhePersoonaValinta.value;
+    // Näyte ilman säilöä: kokeilut eivät saa täyttää äänisäilöjä.
+    lueAaneen(PUHE_NAYTTEET[persoona] ?? PUHE_NAYTTEET.kertoja, null,
+      { persoona, sailio: null });
+  });
+  document.getElementById('puhe-sulje').addEventListener('click', () => {
+    tallennaPuheKentat();
+    pysaytaLukija();
+    puheDialog.close();
+  });
+  paivitaPuheSaadin();
+}
 
 /*
  * Viisas Pöllö: kartan kulman tietokumppani (js/pollo.js).

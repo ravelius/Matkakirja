@@ -185,6 +185,10 @@
             <div class="kertoja-kotelo">
               <p class="valikko-otsikko">Äänet</p>
               <div id="kertoja-valikko" class="kertoja-valikko"></div>
+              <!-- Lukijaäänen säädin (omistajan tilaus 14.8.2026):
+                   näkyy vain kehittäjätilassa (js/main.js näyttää). -->
+              <button id="puhe-saadin-btn" class="ghost puhe-saadin-nappi"
+                      type="button" hidden>Lukijaääni…</button>
             </div>
             <!-- Säännöt, uusi peli ja palaute kuvakkeina yhdellä
                  keskitetyllä rivillä (omistajan päätös 13.8.2026);
@@ -672,6 +676,47 @@
     <div class="dialog-actions">
       <button id="kehittaja-peru" class="ghost" type="button">Sulje</button>
       <button id="kehittaja-ok" class="primary" type="button">Kytke päälle</button>
+    </div>
+   </div>
+  </dialog>
+
+  <!--
+    Lukijaäänen säädin (kehittäjätila, omistajan tilaus 14.8.2026):
+    ääni, prompti ja nopeus suoraan pelistä. Säädöt tallentuvat tälle
+    laitteelle heti (sama localStorage kuin työhuoneen Lukijaääni-
+    välilehdellä); worker tottelee ääni-/promptisäätöjä vain
+    kehittäjäkoodilla, joka on jo laitteella kehittäjätilan avaamisesta.
+  -->
+  <dialog id="puhe-dialog" class="dialog">
+   <div class="dialog-card" tabindex="-1" autofocus>
+    <h2>Lukijaääni</h2>
+    <p class="dialog-teksti">Säädöt tallentuvat tälle laitteelle heti.
+      Kaikille pelaajille valinta viedään workerin persoonatauluun —
+      kerro Fablelle mitä valitsit.</p>
+    <div class="puhe-saadin-rivi">
+      <label for="puhe-persoona">Lukija</label>
+      <select id="puhe-persoona">
+        <option value="merkinnat">Matkakirja — merkinnät</option>
+        <option value="kertoja">Lehdet ja sivut</option>
+        <option value="pollo">Viisas Pöllö</option>
+      </select>
+    </div>
+    <div class="puhe-saadin-rivi">
+      <label for="puhe-aani">Ääni</label>
+      <select id="puhe-aani"></select>
+    </div>
+    <label class="puhe-saadin-label" for="puhe-ohje">Prompti (tyhjä = pelin oletus)</label>
+    <textarea id="puhe-ohje" class="puhe-saadin-ohje" rows="3"
+              placeholder="esim. Speak Finnish. Calm, low voice of an old explorer…"></textarea>
+    <div class="puhe-saadin-rivi">
+      <label for="puhe-nopeus">Nopeus</label>
+      <input id="puhe-nopeus" type="range" min="0.6" max="1.6" step="0.05" />
+      <b id="puhe-nopeus-arvo"></b>
+    </div>
+    <div class="dialog-actions">
+      <button id="puhe-oletus" class="ghost" type="button">Palauta oletus</button>
+      <button id="puhe-nayte" class="ghost" type="button">Kuuntele näyte</button>
+      <button id="puhe-sulje" class="primary" type="button">Valmis</button>
     </div>
    </div>
   </dialog>

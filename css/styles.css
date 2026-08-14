@@ -12046,3 +12046,29 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
 @media (prefers-reduced-motion: reduce) {
   button.pollo-mikki.kuuntelee { animation: none; }
 }
+
+/* ── Lukijaäänen säädin (kehittäjätila, 14.8.2026) ────────────────
+ * Valikon Äänet-osion nappi ja dialogin kentät. Dialogi perii
+ * .dialog-kortin ulkoasun; tässä vain rivien asettelu. */
+.puhe-saadin-nappi { margin-top: 0.35rem; }
+
+.puhe-saadin-rivi {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.5rem 0;
+}
+
+.puhe-saadin-rivi label { min-width: 4.2rem; }
+.puhe-saadin-rivi select { flex: 1 1 auto; font: inherit; padding: 0.3rem 0.4rem; }
+.puhe-saadin-rivi input[type="range"] { flex: 1 1 auto; }
+.puhe-saadin-rivi b { min-width: 3.2rem; text-align: right; font-variant-numeric: tabular-nums; }
+
+.puhe-saadin-label { display: block; margin: 0.5rem 0 0.25rem; }
+
+.puhe-saadin-ohje {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 0.4rem 0.5rem;
+}

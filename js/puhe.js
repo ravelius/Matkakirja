@@ -50,22 +50,48 @@ export const PUHE_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
 export const PUHE_ASETUS_AVAIN = 'matkakirja-puhe-persoonat';
 export const PUHE_KOODI_AVAIN = 'matkakirja-puhe-kehittaja';
 
-function puheenSaadot(persoona) {
+/** Lukee koko laitekohtaisen persoonasäätötaulun (jaettu apuri —
+ * sama luku työhuoneen välilehdellä ja pelin kehittäjäsäätimellä). */
+export function luePuheAsetukset() {
   try {
-    const kaikki = JSON.parse(window.localStorage?.getItem(PUHE_ASETUS_AVAIN) ?? '{}');
-    const oma = kaikki?.[persoona];
-    if (!oma || typeof oma !== 'object') return null;
-    const aani = typeof oma.aani === 'string' && oma.aani ? oma.aani : null;
-    const ohje = typeof oma.ohje === 'string' && oma.ohje.trim() ? oma.ohje.trim() : null;
-    return aani || ohje ? { aani, ohje } : null;
+    const arvo = JSON.parse(window.localStorage?.getItem(PUHE_ASETUS_AVAIN) ?? '{}');
+    return arvo && typeof arvo === 'object' ? arvo : {};
   } catch {
-    return null;
+    return {};
   }
+}
+
+/** Tallettaa persoonasäätötaulun; tyhjät persoonat siivotaan pois. */
+export function tallennaPuheAsetukset(asetukset) {
+  const siivottu = {};
+  for (const [avain, arvo] of Object.entries(asetukset ?? {})) {
+    if (arvo && (arvo.aani || (arvo.ohje ?? '').trim())) siivottu[avain] = arvo;
+  }
+  try {
+    if (Object.keys(siivottu).length) {
+      window.localStorage?.setItem(PUHE_ASETUS_AVAIN, JSON.stringify(siivottu));
+    } else {
+      window.localStorage?.removeItem(PUHE_ASETUS_AVAIN);
+    }
+  } catch { /* yksityistila: säädöt elävät vain istunnon */ }
+}
+
+function puheenSaadot(persoona) {
+  const oma = luePuheAsetukset()?.[persoona];
+  if (!oma || typeof oma !== 'object') return null;
+  const aani = typeof oma.aani === 'string' && oma.aani ? oma.aani : null;
+  const ohje = typeof oma.ohje === 'string' && oma.ohje.trim() ? oma.ohje.trim() : null;
+  return aani || ohje ? { aani, ohje } : null;
 }
 
 function kehittajaKoodi() {
   try {
-    return window.localStorage?.getItem(PUHE_KOODI_AVAIN) || null;
+    // Oma avain ensin; varalla pöllön kehittäjätilan koodi — pelin
+    // kehittäjätilassa säädöt toimivat silloin ilman koodin
+    // syöttämistä toiseen kertaan (sama salaisuus workerissa).
+    return window.localStorage?.getItem(PUHE_KOODI_AVAIN)
+      || window.localStorage?.getItem('matkakirja-pollo-kehittajakoodi')
+      || null;
   } catch {
     return null;
   }
