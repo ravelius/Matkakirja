@@ -12467,8 +12467,23 @@ export class UI {
     const overlay = html('div', 'lightbox');
     const img = html('img', 'lightbox-img');
     img.alt = alt;
+    /*
+     * Leveys pikseleinä MITATUSTA näkymästä, ei vw-yksiköistä: iPadin
+     * jumiutunut asetteluviewportti (sama ilmiö kuin kapeassa lehdessä
+     * ja kulttuurisuurennoksessa) sai CSS:n 94vw:n lukemaan iPhonen
+     * leveyttä, ja wikin kuvat rajautuivat iPhonen kokoon koko näytön
+     * galleriassa (omistajan havainto 14.8.2026). Sama vyö ja
+     * henkselit kuin mitoitaArkissa ja naytaKulttuuriKuvassa.
+     */
+    const nakyma = this.nakymanLeveys || this.mittaaNakyma();
+    if (nakyma >= NAKYMAN_VAHIMMAISLEVEYS) {
+      img.style.maxWidth = `${Math.round(nakyma * 0.94)}px`;
+    }
     const lataus = html('div', 'lightbox-loading', 'Ladataan…');
     const kuvateksti = html('div', 'lightbox-caption');
+    if (nakyma >= NAKYMAN_VAHIMMAISLEVEYS) {
+      kuvateksti.style.maxWidth = `${Math.min(640, Math.round(nakyma * 0.88))}px`;
+    }
     const prev = html('button', 'lightbox-nav prev', '‹');
     const next = html('button', 'lightbox-nav next', '›');
     const counter = html('div', 'lightbox-counter');
