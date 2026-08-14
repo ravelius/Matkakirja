@@ -8191,6 +8191,89 @@ button.lukija-nappi.lukee,
   text-transform: uppercase;
 }
 
+/*
+ * ── NIMIÖ TARTTUU YLÄREUNAAN (omistaja 14.8.2026) ───────────────────
+ *
+ * "Yläotsikko saisi jäädä yläreunaan näkyviin vieritettäessä, mutta
+ * unohdettu aarre ja muut saisi jäädä piiloon." Vain iso nimi tarttuu:
+ * kicker-rivi ja päiväysrivi vierivät sen alle. Sama sääntö kattaa
+ * myös maalehden etusivun otsikon (sama #arrival-city-elementti).
+ *
+ * Tekniikka on sama kuin aihesivujen otsikolla (.aihe-nimi): tarttuma
+ * --arkki-tarttumaan (paperin piirretty reuna / puhelimen turvakaista),
+ * oma piirtokerros translateZ:llä (iOS:n vieritys nyki blend-modea)
+ * ja paperitausta, jottei alta vierivä teksti kuulla läpi. Sivuun
+ * levitys negatiivisella marginaalilla peittää palstan reunat.
+ */
+.dialog.arkki #arrival-city {
+  position: sticky;
+  top: var(--arkki-tarttuma, 0px);
+  z-index: 3;
+  transform: translateZ(0);
+  margin-inline: calc(var(--arkki-reunus) * -1);
+  padding: 0.28rem var(--arkki-reunus) 0.3rem;
+  background-color: var(--arkki-paperi, #f5f0e2);
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+}
+
+/*
+ * ── YLÄLAIDAN HAMPURILAINEN (omistaja 14.8.2026) ────────────────────
+ *
+ * Pysyvä valikkonappi lehden vasemmassa yläkulmassa, tarttuvan
+ * otsikon rinnalla. Nappi on dialogin (ei vierivän kortin) lapsi,
+ * joten se pysyy paikallaan vierityksestä ja sivunvaihdosta
+ * riippumatta. Siitä sisällys aukeaa yläreunaan; maalehden alapalkin
+ * hampurilainen jää ennalleen.
+ */
+.lehti-hampurilainen {
+  position: absolute;
+  top: calc(var(--arkki-tarttuma, 0px) + 0.3rem);
+  left: 0.55rem;
+  /* Sisällyslevyn (z 6) alla ei saa jäädä: nappi toimii myös levyn
+     sulkevana vipuna. */
+  z-index: 7;
+  width: 2.1rem;
+  height: 2.1rem;
+  min-width: 40px;
+  min-height: 40px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(70, 51, 31, 0.4);
+  border-radius: 50%;
+  background: rgba(245, 240, 226, 0.92);
+  color: #46331f;
+  cursor: pointer;
+}
+
+.lehti-hampurilainen[hidden] { display: none; }
+
+.lehti-hampurilainen svg { display: block; }
+
+/* Ylhäältä avattu sisällys laskeutuu yläreunaan (omistaja 14.8.2026);
+   alhaalta avattu nousee kuten ennenkin. */
+.sisallys-levy.ylhaalla {
+  inset: 0 0 auto 0;
+  border-top: 0;
+  border-bottom: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 0 0 0.7rem 0.7rem;
+  box-shadow: 0 0.6rem 1.4rem rgba(28, 20, 12, 0.28);
+  /* Hampurilainen jää levyn ylle — otsikkorivi väistää sitä. */
+  padding-top: calc(var(--arkki-tarttuma, 0px) + 0.6rem);
+  padding-left: 3rem;
+  animation: sisallys-laskeutuu 180ms ease-out;
+}
+
+@keyframes sisallys-laskeutuu {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sisallys-levy.ylhaalla { animation: none; }
+}
+
 /* Päiväysrivi tuplaviivan ja ohuen viivan välissä kuin sanomalehdessä. */
 .lehti-alarivi {
   /* Ankkuri liitelinkille, joka tasataan rivin oikeaan reunaan. */
@@ -168102,6 +168185,30 @@ class UI {
      */
     palkki.querySelector('.sisallysnappi').hidden = !maalehti || sivuja - this.tutkiEkaSivu() < 3;
     palkki.hidden = sivuja - this.tutkiEkaSivu() < 2;
+    /*
+     * Ylälaidan hampurilainen (omistaja 14.8.2026): vasempaan reunaan
+     * pysyvä valikkonappi, joka näkyy tarttuvan otsikon rinnalla koko
+     * ajan — molemmissa lehdissä. Siitä sisällys aukeaa YLÄREUNAAN;
+     * maalehden alapalkin hampurilainen jää ennalleen (aukeaa alas).
+     */
+    this.varmistaLehtiHampurilainen(sivuja - this.tutkiEkaSivu() >= 2);
+  }
+
+  /** Ylälaidan pysyvä valikkonappi lehteen; piiloon yksisivuisesta. */
+  varmistaLehtiHampurilainen(nakyviin) {
+    let nappi = this.arrivalDialog.querySelector(':scope > .lehti-hampurilainen');
+    if (!nappi && nakyviin) {
+      nappi = html('button', 'lehti-hampurilainen');
+      nappi.type = 'button';
+      nappi.title = 'Sisällys';
+      nappi.setAttribute('aria-label', 'Sisällys');
+      nappi.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none"'
+        + ' stroke="currentColor" stroke-width="1.8" stroke-linecap="round">'
+        + '<path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+      nappi.addEventListener('click', () => this.avaaSisallysvalikko({ ylhaalla: true }));
+      this.arrivalDialog.appendChild(nappi);
+    }
+    if (nappi) nappi.hidden = !nakyviin;
   }
 
   /**
@@ -168111,12 +168218,15 @@ class UI {
    * uutta dialogia: lehti on jo dialogissa, ja sisäkkäiset modaalit
    * sotkevat sekä näppäimistön että paluunapin.
    */
-  avaaSisallysvalikko() {
+  avaaSisallysvalikko({ ylhaalla = false } = {}) {
     const vanha = this.arrivalDialog.querySelector(':scope > .sisallys-levy');
     if (vanha) { vanha.remove(); return; }
     // Sisällyssivua ei enää ole: lehden sivut OVAT sisällys.
     const sisallys = this.tutkiSivut ?? [];
-    const levy = html('div', 'sisallys-levy');
+    // Ylälaidan hampurilaisesta levy laskeutuu YLÄREUNAAN (omistaja
+    // 14.8.2026); alapalkin hampurilaisesta se nousee alhaalta kuten
+    // ennenkin.
+    const levy = html('div', `sisallys-levy${ylhaalla ? ' ylhaalla' : ''}`);
     const sulje = () => levy.remove();
     const otsikkoRivi = html('div', 'sisallys-levy-ylä');
     otsikkoRivi.appendChild(html('span', '', 'Sisällys'));
@@ -174231,6 +174341,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 643, teksti: 'Lehden nimi tarttuu ylös; hampurilainen molempiin lehtiin' },
   { v: 642, teksti: 'Kartta piirtyy heti eikä ruutuja jäsennellä — zoomi valmis' },
   { v: 641, teksti: 'Zoomi ei enää putoa Safarin syliin; ruudut pakkautuvat heti' },
   { v: 640, teksti: 'Maaselain: kirjanappi vasemmalle, maakyltti oikealle' },
@@ -174968,7 +175079,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.642';
+const APP_VERSION = '2026-08-09.643';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
