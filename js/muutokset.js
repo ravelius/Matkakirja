@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 645, teksti: 'matkakirja pysyy vasemmassa yläkulmassa zoomatessa' },
   { v: 644, teksti: 'Hampurilainen otsikkoriville pelkkinä viivoina' },
   { v: 643, teksti: 'Lehden nimi tarttuu ylös; hampurilainen molempiin lehtiin' },
   { v: 642, teksti: 'Kartta piirtyy heti eikä ruutuja jäsennellä — zoomi valmis' },
