@@ -35,7 +35,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.656';
+const APP_VERSION = '2026-08-09.657';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -670,12 +670,28 @@ const nollaaDialog = document.getElementById('nollaa-dialog');
  * Avaimet poistetaan etuliitteen perusteella eikä listana, jotta uusi
  * asetus ei jää siivouksen ulkopuolelle sitä mukaa kun niitä lisätään.
  */
+/*
+ * LAITTEEN ASETUKSET SÄILYVÄT TYHJENNYKSESSÄ (omistajan tilaus
+ * 14.8.2026: "jos aloitan uuden pelin, kehittäjätila saisi pysyä
+ * päällä"). Nämä eivät ole pelin muistia vaan laitteen asetuksia:
+ * kehittäjätila koodeineen ja lukijaäänen säädöt. Kaikki muu
+ * matkakirja-alkuinen pyyhkiytyy kuten ennenkin.
+ */
+const SAILYVAT_ASETUKSET = new Set([
+  'matkakirja-kehittaja',
+  'matkakirja-pollo-kehittajakoodi',
+  'matkakirja-puhe-kehittaja',
+  'matkakirja-puhe-voima',
+  'matkakirja-puhe-persoonat',
+]);
+
 async function tyhjennaMuistit() {
   try {
     const poistettavat = [];
     for (let i = 0; i < localStorage.length; i += 1) {
       const avain = localStorage.key(i);
-      if (avain && (avain.startsWith('matkakirja') || avain.startsWith('afrikan-tahti'))) {
+      if (avain && (avain.startsWith('matkakirja') || avain.startsWith('afrikan-tahti'))
+        && !SAILYVAT_ASETUKSET.has(avain)) {
         poistettavat.push(avain);
       }
     }
@@ -872,9 +888,21 @@ paataPaivitysruutu();
  * se ei ole pelaajan matka, eikä sen pidä kirjautua Game Centeriin
  * eikä tarjota tallennusta pilvestä.
  */
+/*
+ * PILVITALLENNUKSEN KYSELY POIS PÄÄLTÄ (omistajan tilaus 14.8.2026:
+ * "Ota game center synkkakysely pois päältä"). Toisen laitteen
+ * tallennusta ei enää tarjota dialogilla — kuuntelija jää kytkemättä.
+ * Passin leimat yhdistyvät yhä hiljaa (se ei kysy mitään), ja
+ * paikallinen tallennus synkataan pilveen kuten ennenkin. Vipu on
+ * vakiona tässä, jotta kyselyn saa takaisin yhdellä rivillä.
+ */
+const PILVIKYSELY_KAYTOSSA = false;
+
 if (!katseluPack) {
   natiiviKirjauduPelikeskukseen();
-  natiiviKuunteleSynkka(SAVE_KEY, (raaka) => tarjoaPilviTallennus(raaka));
+  if (PILVIKYSELY_KAYTOSSA) {
+    natiiviKuunteleSynkka(SAVE_KEY, (raaka) => tarjoaPilviTallennus(raaka));
+  }
   natiiviKuunteleSynkka(STAMP_KEY, (raaka) => yhdistaPilviPassi(raaka));
 }
 

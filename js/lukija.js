@@ -79,6 +79,11 @@ export const LUETTAVAN_VAHIMMAIS = 80;
 export const LUKIJAN_OHITETTAVAT = [
   '[data-lukija="ei"]',
 
+  // Lehden nimi mastossa (omistajan toive 14.8.2026: "lehden nimeä ei
+  // tarvitse lukea") — se on taittoa, ei juttua.
+  '#arrival-lehti-yla',
+  '.lehti-ylarivi',
+
   // Lähdemerkinnät ja krediitit.
   '.lahde',
   '.kuvalahde',
@@ -221,6 +226,9 @@ function paate(teksti) {
   return /[.!?:;…]$/.test(teksti) ? teksti : `${teksti}.`;
 }
 
+/** Otsikkotagit ensimmäisen otsikon ohitusta varten. */
+const OTSIKKOTAGIT = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6']);
+
 /**
  * Kokoaa luettavan tekstin elementin sisältä.
  *
@@ -228,14 +236,22 @@ function paate(teksti) {
  * kappale. Rivinvaihto on molemmille taustajärjestelmille se merkki,
  * josta ne pitävät tauon.
  *
+ * SIVUN ENSIMMÄISTÄ OTSIKKOA EI LUETA (omistajan toive 14.8.2026):
+ * se on sama otsikko, jonka lukija juuri näki avatessaan sivun, ja
+ * luenta pääsee suoraan asiaan. Myöhemmät otsikot (nostojen ja
+ * osioiden väliotsikot) luetaan — ne jäsentävät kuunneltavaa.
+ *
  * @param {Element} juuri elementti, jonka sisältö luetaan
- * @param {{ ohita?: string[], katto?: number }} asetukset
+ * @param {{ ohita?: string[], katto?: number, ohitaEkaOtsikko?: boolean }} asetukset
  * @returns {string} luettava teksti tai tyhjä merkkijono
  */
-export function kokoaLuettavaTeksti(juuri, { ohita = LUKIJAN_OHITETTAVAT, katto = LUETTAVAN_KATTO } = {}) {
+export function kokoaLuettavaTeksti(juuri, {
+  ohita = LUKIJAN_OHITETTAVAT, katto = LUETTAVAN_KATTO, ohitaEkaOtsikko = true,
+} = {}) {
   if (!juuri) return '';
   const palat = [];
   let kertyma = [];
+  let ekaOtsikkoOhitettu = !ohitaEkaOtsikko;
   const katkaise = () => {
     const teksti = siisti(kertyma.join(' '));
     if (teksti) palat.push(paate(teksti));
@@ -248,7 +264,12 @@ export function kokoaLuettavaTeksti(juuri, { ohita = LUKIJAN_OHITETTAVAT, katto 
     }
     if (solmu.nodeType !== 1) return;
     if (ohitetaanko(solmu, ohita)) return;
-    const lohko = LOHKOTAGIT.has(String(solmu.nodeName ?? solmu.tagName ?? '').toUpperCase());
+    const tagi = String(solmu.nodeName ?? solmu.tagName ?? '').toUpperCase();
+    if (!ekaOtsikkoOhitettu && OTSIKKOTAGIT.has(tagi)) {
+      ekaOtsikkoOhitettu = true;
+      return;
+    }
+    const lohko = LOHKOTAGIT.has(tagi);
     if (lohko) katkaise();
     for (const lapsi of solmu.childNodes ?? []) kavele(lapsi);
     if (lohko) katkaise();
