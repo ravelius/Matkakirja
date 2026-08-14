@@ -577,3 +577,22 @@ vanhaan maailmaansa, ei koskaan maihin tai ihmisiin.
 Järjestys: Afrikka → Lähi-itä → maailmankartta → loput. Jokainen
 lauta saa oman kaupunkijakotaulunsa tähän dokumenttiin ENNEN
 kirjoittamista — sama kaava kuin Euroopan suunnitelmassa yllä.
+
+## AVOIMET PÄÄTÖKSET (kirjattu kapulanvaihdossa 14.8.2026)
+
+Nämä ovat kaanonpäätöksiä, jotka tehdään OMISTAJAN KANSSA ennen kuin
+niitä koskevaa sisältöä kirjoitetaan. Uusi sessio: älä ratkaise näitä
+itse.
+
+1. **Matkakirjamerkintöjen tekstityyli.** Omistaja 14.8.2026:
+   *"tekstityyli on vielä määrittämättä"* — uusia saapumismerkintöjä
+   EI generoida ennen kuin tyyli on määritelty omistajan kanssa
+   (esim. 2–3 näytemerkintää Lähi-idän "Imu aikuiselle" -mitalla,
+   omistajan hyväksyntä, vasta sitten erät). Tämä kielto annettiin,
+   koska lehtisessio oli alkanut generoida merkintöjä ohi kaanontyön.
+   Merkinnät ovat päätoimittajasession (Fable) kaanontyötä.
+2. **Grimshaw'n sateenvarjon paljastus** maailmankartalla — päätetään
+   omistajan kanssa (kirjattu jo yllä maailmankartan kohdassa).
+3. **Lautakohtaiset kaupunkijakotaulut** (Lähi-itä ja siitä
+   eteenpäin) tehdään tähän dokumenttiin ENNEN merkintöjen
+   kirjoittamista — ei siis myöskään näitä ilman omistajaa.
