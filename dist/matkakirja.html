@@ -153907,6 +153907,36 @@ function niputaPalat(virkkeet, katto = PUHE_PALA_KATTO) {
   return palat;
 }
 
+/**
+ * Niputus PORRASTETULLA palakoolla (omistajan havainto 14.8.2026:
+ * "lukija pitää oudon tauon otsikon jälkeen lehdessä").
+ *
+ * Syy: ensimmäinen pala on lyhyt otsikko, joka soi sekunnissa, mutta
+ * seuraava täysimittainen pala oli vasta generoitavana — väliin jäi
+ * hiljaisuus. Nyt palakoko kasvaa portaittain (eka virke → pieni →
+ * keskikoko → täysi), jolloin lyhyiden alkupalojen soidessa generointi
+ * ehtii aina seuraavan palan edelle.
+ */
+function niputaRampilla(virkkeet, portaat = [240, 480], katto = PUHE_PALA_KATTO) {
+  const palat = [];
+  let kertyma = '';
+  const rajaNyt = () => portaat[palat.length - 1] ?? katto;
+  for (const virke of virkkeet) {
+    if (!palat.length && !kertyma) {
+      palat.push(virke);
+      continue;
+    }
+    if (kertyma && kertyma.length + virke.length + 1 > rajaNyt()) {
+      palat.push(kertyma);
+      kertyma = virke;
+      continue;
+    }
+    kertyma = kertyma ? `${kertyma} ${virke}` : virke;
+  }
+  if (kertyma) palat.push(kertyma);
+  return palat;
+}
+
 /* ------------------------------------------------------------------ */
 /* Jaettu audioelementti ja viritys                                    */
 /* ------------------------------------------------------------------ */
@@ -153917,6 +153947,76 @@ const HILJAINEN_WAV = 'data:audio/wav;base64,'
 
 let puheElementti = null;
 let viritetty = false;
+
+/*
+ * VAHVISTUS (omistajan tilaus 14.8.2026: "laita lukijan ääntä
+ * kovemmalle"). <audio>-elementin volume ei ylitä yhtä, joten korotus
+ * tehdään WebAudio-vahvistimella: elementti kytketään GainNodeen, kun
+ * äänipiiri on käynnissä (vaatii käyttäjän eleen — kytkentä tehdään
+ * virityksen yhteydessä). Ilman WebAudiota ääni soi entiseen tapaan
+ * suoraan elementistä täydellä voimalla.
+ *
+ * Voimakkuus on laitekohtainen asetus (localStorage), jotta työhuoneen
+ * säätövälilehti voi ohjata sitä; oletus on reilusti yli yhden.
+ */
+const VOIMA_AVAIN = 'matkakirja-puhe-voima';
+const VOIMA_OLETUS = 1.6;
+const VOIMA_MIN = 0.25;
+const VOIMA_MAX = 2.5;
+
+let piiri = null;
+let vahvistin = null;
+let kytketty = false;
+
+/** Lukijaäänen voimakkuus (1 = elementin täysi voima). */
+function puheenVoima() {
+  try {
+    const arvo = Number.parseFloat(window.localStorage?.getItem(VOIMA_AVAIN));
+    if (Number.isFinite(arvo)) return Math.min(VOIMA_MAX, Math.max(VOIMA_MIN, arvo));
+  } catch { /* yksityistila estää localStoragen */ }
+  return VOIMA_OLETUS;
+}
+
+/** Asettaa voimakkuuden ja vie sen heti soivaan ääneen. */
+function asetaPuheenVoima(arvo) {
+  const voima = Math.min(VOIMA_MAX, Math.max(VOIMA_MIN, Number(arvo) || VOIMA_OLETUS));
+  try {
+    window.localStorage?.setItem(VOIMA_AVAIN, String(voima));
+  } catch { /* ei tallennu — istunnon ajan silti voimassa gainissa */ }
+  if (vahvistin) vahvistin.gain.value = voima;
+  return voima;
+}
+
+/** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
+function kytkeVahvistin() {
+  if (kytketty || typeof window === 'undefined') return;
+  const audio = haeElementti();
+  if (!audio) return;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) return;
+  try {
+    piiri = piiri ?? new AC();
+  } catch {
+    return;
+  }
+  const yrita = () => {
+    if (kytketty || piiri.state !== 'running') return;
+    try {
+      // createMediaElementSource onnistuu vain kerran per elementti —
+      // kytketty-lippu estää toisen yrityksen.
+      const lahde = piiri.createMediaElementSource(audio);
+      vahvistin = piiri.createGain();
+      vahvistin.gain.value = puheenVoima();
+      lahde.connect(vahvistin);
+      vahvistin.connect(piiri.destination);
+      kytketty = true;
+    } catch { /* elementti oli jo kytketty tai piiri kuoli */ }
+  };
+  try {
+    piiri.resume?.().then(yrita).catch(() => {});
+  } catch { /* vanha selain ilman resumea */ }
+  yrita();
+}
 
 function haeElementti() {
   if (!puheElementti && typeof window !== 'undefined' && typeof window.Audio === 'function') {
@@ -153935,6 +154035,9 @@ function virita() {
   viritetty = true;
   const audio = haeElementti();
   if (!audio) return;
+  // Vahvistin kytketään samasta eleestä: äänipiiri käynnistyy vain
+  // käyttäjän kosketuksesta, ja kerran kytkettynä se pysyy.
+  kytkeVahvistin();
   try {
     audio.src = HILJAINEN_WAV;
     const lupaus = audio.play();
@@ -154156,7 +154259,10 @@ function luoPuheSoitin({
     const indeksi = tila.kohdalla;
     tila.kohdalla += 1;
     hae(indeksi);
-    hae(indeksi + 1); // etuhaku edellisen soidessa
+    // Kaksi palaa etukäteen: alun lyhyet palat soivat nopeasti, eikä
+    // generointi saa jäädä niistä jälkeen (outo tauko otsikon perässä).
+    hae(indeksi + 1);
+    hae(indeksi + 2);
     let osoite;
     try {
       osoite = await haut.get(indeksi);
@@ -154172,6 +154278,10 @@ function luoPuheSoitin({
       return;
     }
     if (tila.peruttu) return;
+    // Nukahtanut äänipiiri hereille (iOS taustalta paluu) ja tuore
+    // voimakkuus joka palaan — säätö osuu myös kesken luennan.
+    if (piiri?.state === 'suspended') piiri.resume?.().catch?.(() => {});
+    if (vahvistin) vahvistin.gain.value = puheenVoima();
     audio.src = osoite;
     const valmis = () => {
       audio.removeEventListener('ended', valmis);
@@ -154197,7 +154307,12 @@ function luoPuheSoitin({
   return {
     lisaa(teksti) {
       if (tila.peruttu || tila.paatetty) return;
-      const uudet = niputaPalat(paloitteleVirkkeiksi(teksti));
+      // Porrastettu palakoko vain luennan alkuun: myöhemmät lisäykset
+      // (striimi) niputetaan täydellä katolla, koska ääni on jo
+      // etumatkalla.
+      const uudet = palat.length
+        ? niputaPalat(paloitteleVirkkeiksi(teksti))
+        : niputaRampilla(paloitteleVirkkeiksi(teksti));
       if (!uudet.length) return;
       palat.push(...uudet);
       if (!tila.soi) soitaSeuraava();
@@ -154650,6 +154765,24 @@ function pysaytaLukija() {
     /* taustajärjestelmä oli jo hiljaa */
   }
   merkitseTila(nyt.nappi, false);
+  // Loppukoukku myös pysäytettäessä: kutsuja (esim. taustamusiikin
+  // vaimennus) tarvitsee signaalin JOKAISESTA loppupolusta.
+  nyt.kunLoppuu?.();
+}
+
+/** Kääre, joka takaa että loppukoukku laukeaa korkeintaan kerran. */
+function kerran(fn) {
+  if (typeof fn !== 'function') return null;
+  let tehty = false;
+  return () => {
+    if (tehty) return;
+    tehty = true;
+    try {
+      fn();
+    } catch {
+      /* koukun virhe ei saa kaataa luentaa */
+    }
+  };
 }
 
 /**
@@ -154661,18 +154794,23 @@ function pysaytaLukija() {
  * omassa lohkossaan ('merkinnat'), jotta ne voi tuhota erikseen, kun
  * tekstit kirjoitetaan uusiksi.
  *
+ * `onLoppu` kutsutaan täsmälleen kerran, kun luenta päättyy — myös
+ * pysäytettynä tai virheeseen. Kutsuja voi nojata siihen esim.
+ * taustamusiikin vaimennuksen vapautuksessa.
+ *
  * @param {string} teksti luettava teksti
  * @param {Element|null} nappi nappi, jonka tila seuraa luentaa
- * @param {{ persoona?: string, sailio?: string|null }} asetukset
+ * @param {{ persoona?: string, sailio?: string|null, onLoppu?: () => void }} asetukset
  * @returns {boolean} lähtikö luenta käyntiin
  */
-function lueAaneen(teksti, nappi = null, { persoona = 'kertoja', sailio } = {}) {
+function lueAaneen(teksti, nappi = null, { persoona = 'kertoja', sailio, onLoppu } = {}) {
   pysaytaLukija();
   const puhuttava = String(teksti ?? '').trim();
   if (!puhuttava) return false;
   const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
-  if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko)) return true;
-  return lueLaitteella(puhuttava, nappi);
+  const kunLoppuu = kerran(onLoppu);
+  if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko, kunLoppuu)) return true;
+  return lueLaitteella(puhuttava, nappi, kunLoppuu);
 }
 
 /**
@@ -154684,13 +154822,14 @@ function lueAaneen(teksti, nappi = null, { persoona = 'kertoja', sailio } = {}) 
  * oikein. Myöhempi virhe päättää luennan siististi (teksti on ruudulla,
  * ja seuraava painallus yrittää uudestaan).
  */
-function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null) {
+function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu = null) {
   if (!puheTuettu()) return false;
   const merkki = {};
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
     merkitseTila(nappi, false);
+    kunLoppuu?.();
   };
   const soitin = luoPuheSoitin({
     persoona,
@@ -154700,11 +154839,14 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null) {
       if (ajossa?.merkki !== merkki) return;
       ajossa = null;
       merkitseTila(nappi, false);
-      if (vaihe === 'alku') lueLaitteella(puhuttava, nappi);
+      if (vaihe === 'alku' && lueLaitteella(puhuttava, nappi, kunLoppuu)) return;
+      kunLoppuu?.();
     },
   });
   if (!soitin) return false;
-  ajossa = { nappi, merkki, lopeta: () => soitin.pysayta() };
+  ajossa = {
+    nappi, merkki, kunLoppuu, lopeta: () => soitin.pysayta(),
+  };
   soitin.lisaa(puhuttava);
   soitin.paata();
   merkitseTila(nappi, true);
@@ -154716,12 +154858,13 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null) {
  * puhesyntetisaattori). Tämä oli lueAaneen-funktion koko runko ennen
  * lukijaääntä; sisältö on ennallaan.
  */
-function lueLaitteella(puhuttava, nappi = null) {
+function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null) {
   const merkki = {};
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
     merkitseTila(nappi, false);
+    kunLoppuu?.();
   };
 
   const natiivi = natiiviLuenta();
@@ -154736,6 +154879,7 @@ function lueLaitteella(puhuttava, nappi = null) {
     ajossa = {
       nappi,
       merkki,
+      kunLoppuu,
       lopeta: () => {
         irrota?.();
         try {
@@ -154801,6 +154945,7 @@ function lueLaitteella(puhuttava, nappi = null) {
   ajossa = {
     nappi,
     merkki,
+    kunLoppuu,
     lopeta: () => {
       tila.peruttu = true;
       // Kuulijat irti ensin: peruminen laukaisee onend/onerror, eikä se
@@ -159188,6 +159333,11 @@ async function cachedGallery(title) {
  * selaimen puhesyntetisaattoriin.
  */
 
+// Lukijaäänen saatavuus ohjaa merkintöjen luentapolkua: kun lennossa
+// generoitu ääni on käytössä, ElevenLabs-äänitteet ohitetaan
+// (omistajan päätös 14.8.2026 — "toistaiseksi", kunnes tekstit
+// kirjoitetaan uusiksi).
+
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
 const BOT_QUIZ_DELAY = 1500; // botin kysymys jää hetkeksi näkyviin luettavaksi
@@ -160996,10 +161146,21 @@ class UI {
         pysaytaLukija();
         return;
       }
-      // Merkinnät omaan äänisäilöönsä (omistajan ohje 14.8.2026): kun
-      // matkakirjan tekstit kirjoitetaan uusiksi, lohko 'merkinnat'
-      // tuhotaan yhdellä kutsulla eikä laitteen tila lopu kesken.
-      lueAaneen(kokoaLuettavaTeksti(this.factText), this.factKuuntele, { sailio: 'merkinnat' });
+      /*
+       * Lyhyen autoluennan jatko: autoluenta luki vain ensimmäisen
+       * virkkeen ja pani loput talteen — nappi jatkaa siitä, ei
+       * alusta. Seuraava painallus (jatko kulutettu) lukee taas koko
+       * merkinnän.
+       */
+      const jatko = this.merkintaJatko;
+      this.merkintaJatko = null;
+      const teksti = jatko ?? kokoaLuettavaTeksti(this.factText);
+      // Merkinnät omalla persoonalla ja omassa äänisäilössä (omistajan
+      // ohje 14.8.2026): säilön voi tuhota erikseen, kun tekstit
+      // kirjoitetaan uusiksi, ja äänen voi vaihtaa muista lukuäänistä
+      // riippumatta.
+      if (this.lueMerkinta(teksti)) return;
+      lueAaneen(teksti, this.factKuuntele, { persoona: 'merkinnat', sailio: 'merkinnat' });
     });
 
     this.eventDialog = document.getElementById('event-dialog');
@@ -166467,7 +166628,9 @@ class UI {
    */
   uusiFactKey(key) {
     this.factKey = key;
-    // Uusi merkintä, uusi teksti: edellisen luenta ei saa jatkua.
+    // Uusi merkintä, uusi teksti: edellisen luenta ei saa jatkua,
+    // eikä edellisen merkinnän jatko-osa saa soida uuden alla.
+    this.merkintaJatko = null;
     if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
     if (this.factText) this.factText.scrollTop = 0;
     this.asetaPaivakirjanKoko(false);
@@ -166632,6 +166795,38 @@ class UI {
             if (rivi) this.factText.appendChild(rivi);
           });
         });
+        /*
+         * LUKIJAÄÄNI ENSIN (omistajan päätös 14.8.2026): kun lennossa
+         * generoitu ääni on käytössä, ElevenLabs-äänite ohitetaan ja
+         * merkintä luetaan striimaten suoraan tekstistä — myös
+         * kaupungeissa, joille äänitettä ei koskaan tehty, ja
+         * mykistetyistä kaariosista (mykistys koski vanhentunutta
+         * äänitettä, ei nykyistä tekstiä). Äänitteet jäävät
+         * varapoluksi, kun lukijaääni ei ole saatavilla.
+         */
+        if (puheTuettu()) {
+          this.diaryFullUrl = null;
+          this.naytaMerkinnanKaiutin(false);
+          if (this.luettuSaapuminen !== luentaAvain) {
+            this.luettuSaapuminen = luentaAvain;
+            this.stopDiaryVoice();
+            // Kertojan tila (yläpalkin valikko): pitkä lukee koko
+            // merkinnän, lyhyt vain ensimmäisen lauseen — kaiutinnappi
+            // jatkaa loput. Ei kertojaa → ei autoluentaa.
+            const tila = kertojaTila();
+            if (tila === 'lyhyt') {
+              this.merkintaJatko = jatkoTeksti || null;
+              this.lueMerkinta(eka, { viive: 1000 });
+            } else if (tila === 'pitka') {
+              this.lueMerkinta([uusi.kuvaus, uusi.nosto].filter(Boolean).join(' '), { viive: 1000 });
+            }
+          } else {
+            // Sama merkintä uudelleen ruudulle (vihje, aikataulu) —
+            // mahdollinen vanha äänite kiinni, luentaa ei aloiteta.
+            this.stopDiaryVoice();
+          }
+          return;
+        }
         // Kaiutin ja luenta vain kaupungeille, joille luenta on generoitu.
         // Ilman tätä nappi näkyi kaikilla ja tuotti hiljaisuutta.
         // Kaaren kohteilla luenta on aina: puhe-kaari-saapuminen-<id>.mp3.
@@ -166703,6 +166898,22 @@ class UI {
         // Luenta pysähtyy ensimmäisen virkkeen jälkeiseen hengähdykseen —
         // kaiutin jatkaa samasta kohdasta. Vihjeen tai aikataulun väläys
         // ei käynnistä luentaa uudelleen samassa kaupungissa.
+        //
+        // Lukijaääni ensin (14.8.2026): havainto luetaan striimaten
+        // tekstistä — ensimmäinen virke heti, loput kaiuttimesta.
+        if (puheTuettu()) {
+          this.diaryFullUrl = null;
+          this.naytaMerkinnanKaiutin(false);
+          if (this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
+            this.luettuSaapuminen = luentaAvain;
+            this.stopDiaryVoice();
+            this.merkintaJatko = loput || null;
+            this.lueMerkinta(eka, { viive: 1000 });
+          } else {
+            this.stopDiaryVoice();
+          }
+          return;
+        }
         const havaintoLauta = luentaLauta(HAVAINTOLUENNAT, saapuminen.packId, saapuminen.cityId);
         this.diaryFullUrl = havaintoLauta
           ? `assets/audio/puhe-${havaintoLauta}-havainto-${saapuminen.cityId}.mp3`
@@ -171634,6 +171845,49 @@ class UI {
    * sekasotku. Yksi tarkistus kattaa kaikki kuusi luennan
    * aloituskohtaa, koska ne kaikki kulkevat tästä.
    */
+  /**
+   * MERKINNÄN LUENTA LUKIJAÄÄNELLÄ (omistajan päätös 14.8.2026:
+   * ElevenLabs-äänitteet pois käytöstä toistaiseksi, tilalle
+   * striimattu ääni).
+   *
+   * Sama lukija kuin kaiutinnapilla (js/lukija.js), persoona
+   * 'merkinnat' ja oma äänisäilö. Tausta väistyy luennan ajaksi kuten
+   * äänitteillä: puheAlkoi ennen aloitusta ja puheLoppui lukijan
+   * loppukoukusta — koukku laukeaa myös pysäytyksestä ja virheestä,
+   * joten tausta ei voi jäädä vaimeaksi.
+   *
+   * Lyhyttä tilaa (vain ensimmäinen virke) varten kutsuja antaa
+   * tekstiksi pelkän ensimmäisen virkkeen ja panee loput talteen
+   * this.merkintaJatko-kenttään — kaiutinnappi jatkaa siitä.
+   *
+   * @returns {boolean} lähtikö luenta (tai sen ajastus) käyntiin
+   */
+  lueMerkinta(teksti, { viive = 0 } = {}) {
+    if (this.radioModuuli && !this.radioModuuli.luentaSallittu()) return false;
+    const puhuttava = String(teksti ?? '').trim();
+    if (!puhuttava || !lukijaTuettu()) return false;
+    const aloita = () => {
+      puheAlkoi();
+      const lahti = lueAaneen(puhuttava, this.factKuuntele, {
+        persoona: 'merkinnat',
+        sailio: 'merkinnat',
+        onLoppu: () => puheLoppui(),
+      });
+      if (!lahti) puheLoppui();
+    };
+    if (viive > 0) {
+      // Sama hengähdys kuin äänitteillä; merkinnän vaihtuminen kesken
+      // odotuksen peruu aloituksen (factKey on jo ehtinyt vaihtua).
+      const avain = this.factKey;
+      setTimeout(() => {
+        if (this.factKey === avain) aloita();
+      }, viive);
+    } else {
+      aloita();
+    }
+    return true;
+  }
+
   playDiaryVoice(url, { ekaLauseeseen = false, osuus = null, viive = 0 } = {}) {
     this.stopDiaryVoice();
     if (this.radioModuuli && !this.radioModuuli.luentaSallittu()) return;
@@ -175075,6 +175329,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 654, teksti: 'Merkinnät lukijaäänellä, äänitteet varalle, ääni ylös' },
   { v: 653, teksti: 'Lukijaääni: puhesynteesi kaiuttimiin ja pöllöön' },
   { v: 652, teksti: 'wikin kuvasuurennos täyteen kokoon iPadilla' },
   { v: 651, teksti: 'myös lehtisivun galleriat esilataavat kuvansa' },
@@ -175823,7 +176078,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.653';
+const APP_VERSION = '2026-08-09.654';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

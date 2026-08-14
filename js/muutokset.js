@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 654, teksti: 'Merkinnät lukijaäänellä, äänitteet varalle, ääni ylös' },
   { v: 653, teksti: 'Lukijaääni: puhesynteesi kaiuttimiin ja pöllöön' },
   { v: 652, teksti: 'wikin kuvasuurennos täyteen kokoon iPadilla' },
   { v: 651, teksti: 'myös lehtisivun galleriat esilataavat kuvansa' },

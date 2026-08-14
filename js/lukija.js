@@ -420,6 +420,24 @@ export function pysaytaLukija() {
     /* taustajärjestelmä oli jo hiljaa */
   }
   merkitseTila(nyt.nappi, false);
+  // Loppukoukku myös pysäytettäessä: kutsuja (esim. taustamusiikin
+  // vaimennus) tarvitsee signaalin JOKAISESTA loppupolusta.
+  nyt.kunLoppuu?.();
+}
+
+/** Kääre, joka takaa että loppukoukku laukeaa korkeintaan kerran. */
+function kerran(fn) {
+  if (typeof fn !== 'function') return null;
+  let tehty = false;
+  return () => {
+    if (tehty) return;
+    tehty = true;
+    try {
+      fn();
+    } catch {
+      /* koukun virhe ei saa kaataa luentaa */
+    }
+  };
 }
 
 /**
@@ -431,18 +449,23 @@ export function pysaytaLukija() {
  * omassa lohkossaan ('merkinnat'), jotta ne voi tuhota erikseen, kun
  * tekstit kirjoitetaan uusiksi.
  *
+ * `onLoppu` kutsutaan täsmälleen kerran, kun luenta päättyy — myös
+ * pysäytettynä tai virheeseen. Kutsuja voi nojata siihen esim.
+ * taustamusiikin vaimennuksen vapautuksessa.
+ *
  * @param {string} teksti luettava teksti
  * @param {Element|null} nappi nappi, jonka tila seuraa luentaa
- * @param {{ persoona?: string, sailio?: string|null }} asetukset
+ * @param {{ persoona?: string, sailio?: string|null, onLoppu?: () => void }} asetukset
  * @returns {boolean} lähtikö luenta käyntiin
  */
-export function lueAaneen(teksti, nappi = null, { persoona = 'kertoja', sailio } = {}) {
+export function lueAaneen(teksti, nappi = null, { persoona = 'kertoja', sailio, onLoppu } = {}) {
   pysaytaLukija();
   const puhuttava = String(teksti ?? '').trim();
   if (!puhuttava) return false;
   const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
-  if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko)) return true;
-  return lueLaitteella(puhuttava, nappi);
+  const kunLoppuu = kerran(onLoppu);
+  if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko, kunLoppuu)) return true;
+  return lueLaitteella(puhuttava, nappi, kunLoppuu);
 }
 
 /**
@@ -454,13 +477,14 @@ export function lueAaneen(teksti, nappi = null, { persoona = 'kertoja', sailio }
  * oikein. Myöhempi virhe päättää luennan siististi (teksti on ruudulla,
  * ja seuraava painallus yrittää uudestaan).
  */
-function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null) {
+function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu = null) {
   if (!puheTuettu()) return false;
   const merkki = {};
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
     merkitseTila(nappi, false);
+    kunLoppuu?.();
   };
   const soitin = luoPuheSoitin({
     persoona,
@@ -470,11 +494,14 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null) {
       if (ajossa?.merkki !== merkki) return;
       ajossa = null;
       merkitseTila(nappi, false);
-      if (vaihe === 'alku') lueLaitteella(puhuttava, nappi);
+      if (vaihe === 'alku' && lueLaitteella(puhuttava, nappi, kunLoppuu)) return;
+      kunLoppuu?.();
     },
   });
   if (!soitin) return false;
-  ajossa = { nappi, merkki, lopeta: () => soitin.pysayta() };
+  ajossa = {
+    nappi, merkki, kunLoppuu, lopeta: () => soitin.pysayta(),
+  };
   soitin.lisaa(puhuttava);
   soitin.paata();
   merkitseTila(nappi, true);
@@ -486,12 +513,13 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null) {
  * puhesyntetisaattori). Tämä oli lueAaneen-funktion koko runko ennen
  * lukijaääntä; sisältö on ennallaan.
  */
-function lueLaitteella(puhuttava, nappi = null) {
+function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null) {
   const merkki = {};
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
     merkitseTila(nappi, false);
+    kunLoppuu?.();
   };
 
   const natiivi = natiiviLuenta();
@@ -506,6 +534,7 @@ function lueLaitteella(puhuttava, nappi = null) {
     ajossa = {
       nappi,
       merkki,
+      kunLoppuu,
       lopeta: () => {
         irrota?.();
         try {
@@ -571,6 +600,7 @@ function lueLaitteella(puhuttava, nappi = null) {
   ajossa = {
     nappi,
     merkki,
+    kunLoppuu,
     lopeta: () => {
       tila.peruttu = true;
       // Kuulijat irti ensin: peruminen laukaisee onend/onerror, eikä se
