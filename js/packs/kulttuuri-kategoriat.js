@@ -11104,9 +11104,9 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Jekaterinburg',
       johdanto: 'Kaupunki alkoi padosta: 18. marraskuuta 1723 Iset-joen '
         + 'rannalla koeajettiin rautaruukin vasarapaja, ja siitä päivästä '
-        + 'lasketaan Jekaterinburgin ikä. Pari vuotta myöhemmin täällä '
-        + 'lyötiin rupla, joka oli neliskulmainen kuparilaatta ja painoi 1 '
-        + '638 grammaa.',
+        + 'lasketaan Jekaterinburgin ikä. Kaksi vuotta myöhemmin ruukissa '
+        + 'alettiin lyödä ruplaa, joka oli neliskulmainen kuparilaatta ja '
+        + 'painoi 1 638 grammaa.',
       kansikuvat: [
         {
           tiedosto: 'Views of Yekaterinburg (Aug-Sept 2024) - 3.jpg',
@@ -11160,15 +11160,15 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Plotinka in Yekaterinburg (September 2023) - 1.jpg',
           teksti: 'Vasili Tatištšev etsi vuonna 1721 Uralilta paikkaa, jossa '
             + 'olisi sekä malmia että metsää, ja valitsi Iset-joen rannan '
-            + 'seitsemän virstan päästä Uktusin ruukista. Työ keskeytyi, '
-            + 'kun hänet erotettiin, ja jatkui vasta 12. maaliskuuta 1723 '
-            + 'Georg Wilhelm de Genninin johdolla. Kesäkuussa de Gennin '
-            + 'lähetti Katariina I:lle tarjottimen, joka oli taottu '
-            + 'ensimmäisestä kuparisulatuksesta, ja pyysi saada nimetä '
-            + 'ruukin keisarinnan mukaan. Syntymäpäiväksi merkittiin 18. '
-            + 'marraskuuta 1723, jolloin vasarapajaa koeajettiin '
-            + 'ensimmäisen kerran. Ruukki otettiin käyttöön kuusi päivää '
-            + 'myöhemmin.',
+            + 'muutaman virstan päästä Uktusin ruukista. Berg-kollegio ei '
+            + 'hyväksynyt hanketta, työ pysähtyi ja Tatištšev menetti '
+            + 'Uralin vuoritoimen johdon; rakentaminen jatkui vasta 12. '
+            + 'maaliskuuta 1723 Georg Wilhelm de Genninin johdolla. Ensin '
+            + 'padottiin joki, vasta sitten nousi ruukki. Kesäkuun 8. '
+            + 'päivänä de Gennin lähetti keisarin puolisolle Katariinalle '
+            + 'tarjottimen, joka oli taottu ensimmäisestä '
+            + 'kuparisulatuksesta, ja pyysi saada nimetä ruukin tämän '
+            + 'mukaan. Vasarapajaa koeajettiin 18. marraskuuta 1723.',
           selite: 'Kaupunginlammen pato alavirran puolelta. Poikittain kulkee '
             + 'vaaleista kivilohkareista muurattu seinä, jonka keskellä on '
             + 'holvikaarinen aukko ja vasemmalla matalampi suorakulmainen '
@@ -11190,12 +11190,13 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valtionruukeissa puhtaasta kuparista laattoja, joiden '
             + 'keskelle leimattaisiin arvo ja jokaiseen kulmaan vaakuna. '
             + 'Malli oli katsottu Ruotsista. Yhden ruplan laatta painoi '
-            + 'kymmenesosan puudasta eli 1 638 grammaa, ja sellaista rahaa '
-            + 'oli hankala kantaa: väki otti sen vastaan vastahakoisesti ja '
-            + 'väärentäjät löivät laatoista pyöreitä kolikoita. Katariina I '
-            + 'lopetti työn määräyksellä 30. joulukuuta 1726. Ruplan '
-            + 'laattoja ehdittiin lyödä vuosina 1726–1727 kaikkiaan 1 687 '
-            + 'kappaletta.',
+            + 'kymmenesosan puudasta eli 1 638 grammaa, eikä kukaan '
+            + 'halunnut kantaa taskussaan puolentoista kilon kuparilevyä. '
+            + 'Rahaa otettiin vastaan nurisen, ja väärentäjille laatta oli '
+            + 'vain sopivan kokoinen aihio, josta sai lyötyä tavallisia '
+            + 'pyöreitä kolikoita. Katariina I lopetti työn määräyksellä '
+            + '30. joulukuuta 1726. Ruplan laattoja ehdittiin lyödä vuosina '
+            + '1726–1727 kaikkiaan 1 687 kappaletta.',
           selite: 'Neliön muotoinen kuparilaatta suoraan ylhäältä kuvattuna. '
             + 'Metalli on tummunut ruskeanharmaaksi, pinta on kuoppainen ja '
             + 'reunat rosoiset ja paikoin taipuneet. Jokaiseen kulmaan on '
@@ -11213,15 +11214,16 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Pavel Bazhov Memorial House-Museum - 1.jpeg',
           teksti: 'Pavel Bažov syntyi 1879 Sysertin ruukkikylässä, jossa '
             + 'hänen isänsä työskenteli mestarina rautaruukin pajassa. Hän '
-            + 'kirjasi ylös Uralin kaivosmiesten ja kullanhuuhtojien '
-            + 'suullisia tarinoita ja julkaisi niistä kokoelman '
-            + 'Malakiittilipas 28. tammikuuta 1939. Ensimmäisessä '
-            + 'painoksessa oli neljätoista tarinaa, myöhemmissä yli '
-            + 'neljäkymmentä. Tunnetuimpiin kuuluu Kivikukka, jossa kisälli '
-            + 'Danila etsii Kuparivuoren emännän valtakunnasta kukkaa, joka '
-            + 'on hakattu kivestä. Sergei Prokofjev sävelsi tarinasta '
-            + 'kahdeksannen ja viimeisen balettinsa; se kantaesitettiin '
-            + '1954 säveltäjän kuoleman jälkeen.',
+            + 'kokosi Uralin kaivosmiesten ja kullanhuuhtojien kertomuksia '
+            + 'ja muokkasi niistä omat tarinansa, jotka ilmestyivät '
+            + 'kokoelmana Malakiittilipas 28. tammikuuta 1939. '
+            + 'Ensimmäisessä painoksessa oli neljätoista tarinaa, '
+            + 'myöhemmissä yli neljäkymmentä. Tunnetuimpiin kuuluu '
+            + 'Kivikukka, jossa kiviseppä Danila hylkää oman työnsä ja '
+            + 'pyytää Kuparivuoren emäntää näyttämään kivikukan, joka '
+            + 'kasvaa tämän valtakunnassa. Sergei Prokofjev sävelsi '
+            + 'tarinasta kahdeksannen ja viimeisen balettinsa; se '
+            + 'kantaesitettiin 1954 säveltäjän kuoleman jälkeen.',
           selite: 'Bažovin muistotalo Jekaterinburgissa. Yksikerroksinen '
             + 'hirsitalo seisoo matalalla vaaleanpunaiseksi maalatulla '
             + 'sokkelilla, ja pyöreät hirret näkyvät nurkissa salvoksineen. '
@@ -11248,12 +11250,12 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Kaupungin museossa seisoo lasikaapissa yli yksitoistatuhatta '
         + 'vuotta vanha lehtikuusesta veistetty hahmo, ja kaupungin '
         + 'kupeesta löytyi vuonna 1745 Venäjän ensimmäinen tunnettu '
-        + 'kultaesiintymä.',
+        + 'kultamalmiesiintymä.',
       nostot: [
         {
           otsikko: 'Maailman vanhin puuveistos nousi suosta',
           tiedosto: 'The Big Shigir idol - The Museum of History and Archeology of the Urals.jpg',
-          teksti: 'Šigirin suosta noin sadan kilometrin päässä '
+          teksti: 'Šigirin suosta vajaan sadan kilometrin päässä '
             + 'Jekaterinburgista kaivettiin 24. tammikuuta 1890 neljän '
             + 'metrin syvyydestä kymmenen puukappaletta. Professori D. I. '
             + 'Lobanov liitti pääkappaleet 2,8 metrin korkuiseksi hahmoksi, '
@@ -11261,7 +11263,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'alkuperäinen veistos oli 5,3 metriä korkea. Hahmo on '
             + 'veistetty lehtikuusesta kivityökaluilla, ja puu oli '
             + 'kaadettaessa vähintään 159 vuotta vanha. Se on maailman '
-            + 'vanhin tunnettu puuveistos, noin 11 500 vuoden takaa. '
+            + 'vanhin tunnettu puuveistos, yli 11 000 vuoden takaa. '
             + 'Kaivauksiin oli ryhdytty, koska avoimesta kultakaivoksesta '
             + 'oli löytynyt esihistoriallisia esineitä.',
           selite: 'Šigirin veistos museon lasikaapissa. Kapea, pitkä puuhahmo '
@@ -11281,15 +11283,15 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Berezov-crocoite.jpg',
           teksti: 'Vanhauskoinen Jerofei Markov löysi vuonna 1745 kultaa '
             + 'kaupungin kupeesta, ja siitä tuli Venäjän ensimmäinen '
-            + 'tunnettu kultaesiintymä. Ensimmäinen kaivos avattiin 1747, '
-            + 'ja vuonna 1752 perustetusta kaivoskylästä kasvoi '
+            + 'tunnettu kultamalmiesiintymä. Ensimmäinen kaivos avattiin '
+            + '1747, ja vuonna 1752 perustetusta kaivoskylästä kasvoi '
             + 'Berjozovskin kaupunki. Kultaa kantavista kvartsijuonista '
             + 'löytyi myös oranssinpunainen kide, jonka Johann Gottlob '
-            + 'Lehmann kuvasi 1766. Louis Nicolas Vauquelin sai siitä '
-            + 'näytteitä ja eristi 1797 alkuaineen, jonka nimeksi tuli '
-            + 'kromi. Berjozovskin kaivokset olivat pitkään maailman ainoa '
-            + 'lähde tälle kiteelle ja siitä valmistetulle keltaiselle '
-            + 'väripigmentille.',
+            + 'Lehmann löysi 1761 ja nimesi siperialaiseksi punalyijyksi. '
+            + 'Louis Nicolas Vauquelin sai siitä näytteitä 1794, osoitti '
+            + '1797 siinä olevan uusi alkuaine ja eristi metallin 1798; '
+            + 'nimeksi tuli kromi. Berjozovskin kaivokset olivat pitkään '
+            + 'maailman ainoa lähde tälle kiteelle.',
           selite: 'Lähikuva kivinäytteestä; kuvattu ala on noin puolitoista '
             + 'senttimetriä leveä. Tummalla, kiiltävällä kivipinnalla '
             + 'kasvaa tiheä matto ruohonvihreitä neulamaisia kiteitä. '
@@ -11311,9 +11313,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna '
             + '1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli '
             + 'vuoriruukkien päällikön, valtiovarainministerin ja keisarin '
-            + 'alainen eikä kuvernöörin. Kaupan ja hallinnon kasvaessa '
-            + 'ruukin merkitys väheni, ja tärkeimmät talot alettiin '
-            + 'rakentaa kalliista kivestä.',
+            + 'alainen ja pitkälti vapaa kuvernöörin vallasta — näin '
+            + 'vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, '
+            + 'ja komeimmat talot alettiin muurata kivestä puun sijaan.',
           selite: 'Jekaterinburg kuvattuna korkealta lounaaseen vuonna 1898. '
             + 'Etualalla kulkee leveä katu, jonka toisella puolella on '
             + 'pitkä matala kauppahalli: sen julkisivussa toistuu kymmenien '
@@ -11328,7 +11330,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       tehtava: {
-        kysymys: 'Mikä alkuaine eristettiin Berjozovskin kaivosten '
+        kysymys: 'Mikä alkuaine löydettiin Berjozovskin kaivosten '
           + 'oranssinpunaisesta kiteestä?',
         vaihtoehdot: [
           'Kromi',
@@ -11337,10 +11339,10 @@ export const KULTTUURI_KATEGORIAT = {
           'Volframi',
         ],
         oikea: 0,
-        fakta: 'Louis Nicolas Vauquelin eristi kromin vuonna 1797 kiteestä, '
-          + 'jota nostettiin Berjozovskin kultakaivosten kvartsijuonista. '
-          + 'Samat kaivokset olivat pitkään maailman ainoa lähde '
-          + 'keltaiselle kromipigmentille.',
+        fakta: 'Berjozovskin kultakaivosten kvartsijuonista nostettu kide '
+          + 'tunnettiin ensin siperialaisena punalyijynä. Vauquelin osoitti '
+          + '1797, että siinä on uusi alkuaine, ja eristi metallin 1798; '
+          + 'nimi kromi tulee kreikan väriä tarkoittavasta sanasta chroma.',
       },
     },
   ],
@@ -11598,8 +11600,9 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Irkutsk',
       johdanto: 'Kiinan-teen ja Lenan kullan varassa vaurastunutta Irkutskia '
         + 'sanottiin 1900-luvun alkuun mennessä Siperian Pariisiksi. '
-        + 'Heinäkuussa 1879 kaupungista paloi kahdessa päivässä kolme '
-        + 'neljäsosaa, noin 4 000 taloa.',
+        + 'Heinäkuun 4. ja 6. päivänä 1879 kaksi tulipaloa tuhosi arviolta '
+        + 'puolet kaupungista, yli 4 000 rakennusta noin 1 100 '
+        + 'pihapiirissä.',
       kansikuvat: [
         {
           tiedosto: 'Irkutsk, Russia.jpg',
@@ -11648,15 +11651,15 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Teetä Kiinasta, kultaa Lenalta',
           tiedosto: 'Irkutsk market, 19th century.jpg',
           teksti: 'Ensimmäinen maantie Moskovasta Irkutskiin, Siperian '
-            + 'valtatie, valmistui vuonna 1760. Sitä pitkin kaupunkiin tuli '
-            + 'laajasti myyntiin tavaraa, jota siellä ei ennen ollut '
-            + 'saanut: kultaa, timantteja, turkiksia, puuta, silkkiä ja '
-            + 'teetä. Tee kulki Kiinasta rajakauppapaikka Kjahtan kautta, '
-            + 'joka oli perustettu vuonna 1727. Vuonna 1821 Irkutskista '
-            + 'tuli Itä-Siperian kenraalikuvernöörin istuin, ja vuoden 1897 '
+            + 'valtatie, valmistui vuonna 1760, ja se vauhditti kaupungin '
+            + 'taloutta. Samaan aikaan Kjahtan rajakauppapaikan kautta '
+            + 'Kiinasta tuodut tavarat — tee ja silkki etunenässä — tulivat '
+            + 'Irkutskissa ensi kertaa laajalti saataville; Kjahta oli '
+            + 'perustettu vuonna 1727. Vuonna 1821 Irkutskista tuli '
+            + 'Itä-Siperian kenraalikuvernöörin istuin, ja vuoden 1897 '
             + 'väenlaskussa asukkaita oli 51 473. Sähköt vedettiin 1896, '
-            + 'ensimmäinen teatteri valmistui 1897 ja ensimmäinen juna '
-            + 'saapui Irkutskiin 16. elokuuta 1898.',
+            + 'draamateatteri sai kivitalonsa 1897 ja ensimmäinen juna '
+            + 'saapui kaupunkiin 16. elokuuta 1898.',
           selite: 'Värillinen painokuva Irkutskin markkinoilta 1800-luvun '
             + 'puolivälistä. Aukio on täynnä väkeä: keskellä seisoo tiivis '
             + 'ihmisjoukko, ja etualalla on rivi hevosten eteen '
@@ -11677,14 +11680,16 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Chernyshova I13.jpg',
           teksti: 'Sergei Volkonski oli ainoa palveluksessa ollut kenraali, '
             + 'joka osallistui joulukuun 1825 kapinaan. Hänet tuomittiin '
-            + 'mestattavaksi, mutta tuomio lievennettiin elinkautiseksi '
-            + 'vankeudeksi: hän joutui kaivostöihin Irkutskin lähelle ja '
-            + 'vietti Siperiassa kolmekymmentä vuotta. Vaimo Maria '
-            + 'Rajevskaja seurasi häntä ja jätti pienen poikansa isänsä '
-            + 'huostaan. Maria oli taitava pianonsoittaja ja lauloi '
-            + 'puoliammattilaisena. Volkonskin kujalla seisova siniharmaa '
-            + 'puutalo oli ruhtinaan koti karkotusvuosina 1844–1856. Vuonna '
-            + '1856 Aleksanteri II salli dekabristien palata Siperiasta.',
+            + 'mestattavaksi, mutta tuomio lievennettiin kahdenkymmenen '
+            + 'vuoden pakkotyöksi ja sitä seuraavaksi ikuiseksi '
+            + 'karkotukseksi; pakkotyöaika lyhennettiin myöhemmin kymmeneen '
+            + 'vuoteen. Työhön hänet lähetettiin Nertšinskin kaivoksille '
+            + 'Baikalin taakse, ja Siperiassa hän vietti kolmekymmentä '
+            + 'vuotta. Vaimo Maria Rajevskaja seurasi häntä ja jätti pienen '
+            + 'poikansa isänsä huostaan. Volkonskin kujan puutalo '
+            + 'rakennettiin 1838 Urikin kylään ja siirrettiin Irkutskiin '
+            + '1847; se oli ruhtinaan koti vuoteen 1856, jolloin '
+            + 'Aleksanteri II salli dekabristien palata.',
           selite: 'Volkonskin talo syysaamun valossa. Kaksikerroksinen '
             + 'puutalo on maalattu vaaleansiniharmaaksi, ja ikkunoiden '
             + 'ympärillä sekä nurkissa on valkoisia veistettyjä listoja ja '
@@ -11700,15 +11705,17 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Laulun loistava laiva on omulitynnyri',
           tiedosto: 'Andrey Martynov - View of the Nikolsky Monastery on Lake Baikal.JPG',
-          teksti: 'Dmitri Davydov kirjoitti vuonna 1848 Ulan-Udessa käytyään '
+          teksti: 'Verhneudinskin — nykyisen Ulan-Uden — piirikoulun '
+            + 'tarkastaja Dmitri Davydov kirjoitti vuonna 1848 '
             + 'yksitoistasäkeistöisen runon Karkurin mietteitä Baikalilla. '
-            + 'Viisi säkeistöä päätyi lauluun Slavnoje more — svjaštšennyi '
-            + 'Baikal eli Loistava meri, pyhä Baikal, jonka sävelmän '
-            + 'tekijää ei tiedetä. Ensimmäisessä säkeistössä karkurin '
-            + 'loistava laiva on omulitynnyri, ja hän kehottaa '
-            + 'barguzin-tuulta liikuttamaan aaltoa, koska matkaa ei ole '
-            + 'pitkälti. Davydovin omassa tekstissä Baikal oli vapaa, '
-            + 'privolnyi; laulettuna siitä tuli pyhä, svjaštšennyi.',
+            + 'Siitä tuli laulu Slavnoje more — svjaštšennyi Baikal eli '
+            + 'Loistava meri, pyhä Baikal, jonka sävelmän tekijää ei '
+            + 'tiedetä; nykyisin laulettavassa versiossa säkeistöjä on '
+            + 'viisi. Ensimmäisessä säkeistössä karkurin loistava laiva on '
+            + 'omulitynnyri, ja hän huutaa barguzin-tuulelle: liikuttele '
+            + 'aaltoa, nuorukaisella ei ole pitkälti matkaa. Davydovin '
+            + 'omassa tekstissä Baikal oli vapaa, privolnyi; laulettuna '
+            + 'siitä tuli pyhä, svjaštšennyi.',
           selite: 'Andrei Martynovin maalaus Baikalin rannalta 1800-luvun '
             + 'alusta. Etualalla nousee vihreä rinne, jolla seisoo kaksi '
             + 'hattupäistä miestä; toinen kurottaa kättään järvelle päin, '
@@ -11766,12 +11773,11 @@ export const KULTTUURI_KATEGORIAT = {
             + '1,1–1,4 metriä pitkä ja painaa 63–70 kiloa. Se sukeltaa jopa '
             + '400 metrin syvyyteen ja pysyy pinnan alla yli 40 minuuttia, '
             + 'säikähtäneenä jopa 70, vaikka tavallinen sukellus kestää 2–4 '
-            + 'minuuttia. Selitys on veressä: samankokoiseen hylkeeseen '
-            + 'verrattuna sillä on kaksi litraa enemmän verta. Poikanen '
-            + 'syntyy valkoisessa untuvaturkissa, joka vaihtuu pian '
-            + 'tummempaan. Talvella ja keväällä yli 90 prosenttia norpan '
-            + 'ravinnosta on golomjankaa. Yksilöitä arvioidaan olevan 80 '
-            + '000–100 000.',
+            + 'minuuttia. Verta sillä on kaksi litraa enemmän kuin '
+            + 'samankokoisilla hylkeillä. Poikanen syntyy valkoisessa '
+            + 'untuvaturkissa, joka vaihtuu pian tummempaan. Talvella ja '
+            + 'keväällä yli 90 prosenttia norpan ravinnosta on golomjankaa. '
+            + 'Yksilöitä arvioidaan olevan 80 000–100 000.',
           selite: 'Kaksi baikalinnorppaa lepää matalalla kalliolla aivan '
             + 'vedenrajassa. Etummainen on kohottanut ylävartalonsa ja '
             + 'katsoo suoraan kameraan; turkki on täplikäs ja märkä, '
@@ -11784,19 +11790,20 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Baikalinhylje',
         },
         {
-          otsikko: 'Läpikuultava kala, joka ei kude',
+          otsikko: 'Kala, joka paloi lampussa',
           tiedosto: 'Korotneff expedition to Lake Baikal 1900-1902, plate I (Comephorus dybowskii 3).jpg',
-          teksti: 'Golomjanka elää vain Baikalissa. Sen ruumis on '
-            + 'läpikuultava eikä siinä ole suomuja, ja rintaevät ovat '
-            + 'pitkät kuin viuhkat. Suurempi laji kasvaa 21-senttiseksi, ja '
-            + 'sen painosta lähes 39 prosenttia on rasvaa; se yhdessä '
-            + 'huokoisten luiden kanssa pitää kalan kellumassa ilman '
-            + 'uimarakkoa. Golomjanka ei kude mätiä vaan synnyttää eläviä '
-            + 'poikasia, 2 000–3 000 kerrallaan, ja emo kuolee useimmiten '
-            + 'synnytyksen jälkeen. Kalaa ei pyydetä kaupallisesti, mutta '
-            + 'myrskyn rannalle heittämien yksilöiden rasvaa poltettiin '
-            + 'ennen lampuissa ja käytettiin lääkkeenä. Järven kaloista '
-            + 'arviolta 70 prosenttia on golomjankoja.',
+          teksti: 'Baikalin runsain kala on samalla sen oudoin: järven '
+            + 'kaloista arviolta 70 prosenttia on golomjankoja, eikä lajia '
+            + 'tapaa mistään muualta. Vedestä nostettuna se on lähes '
+            + 'läpikuultava, suomuton ja pitkäeväinen. Suuremman lajin '
+            + '21-senttisen ruumiin painosta lähes 39 prosenttia on rasvaa; '
+            + 'se ja huokoiset luut tekevät kalasta vedessä lähes '
+            + 'painottoman, ja koska uimarakkoa ei ole, paineen vaihtelu '
+            + 'syvyydestä toiseen ei haittaa. Mätiä golomjanka ei laske '
+            + 'lainkaan: naaras synnyttää kerralla 2 000–3 000 elävää '
+            + 'poikasta ja kuolee useimmiten siihen. Pyyntiä ei ole, mutta '
+            + 'rantaan huuhtoutuneiden kalojen rasva paloi ennen lampuissa '
+            + 'ja kelpasi lääkkeeksi.',
           selite: 'Golomjanka kuvattuna 1900-luvun alun tutkimusjulkaisun '
             + 'kuvataulussa sivulta ja tummaa taustaa vasten. Kala on '
             + 'pitkulainen ja taaksepäin kapeneva, ja sen pinta on vaalean '
@@ -11818,9 +11825,10 @@ export const KULTTUURI_KATEGORIAT = {
           'se laskee mätinsä jään alapintaan',
         ],
         oikea: 0,
-        fakta: 'Golomjanka synnyttää kerralla 2 000–3 000 elävää poikasta, ja '
-          + 'emo kuolee useimmiten synnytyksen jälkeen. Kalan ruumis on '
-          + 'läpikuultava eikä siinä ole suomuja.',
+        fakta: 'Golomjanka on harvinaisuus kalojen joukossa: se ei laske '
+          + 'mätiä lainkaan, vaan naaras synnyttää kerralla 2 000–3 000 '
+          + 'elävää poikasta. Useimmat naaraat kuolevat poikimiseen, ja '
+          + 'järven kaloista arviolta 70 prosenttia on golomjankoja.',
       },
     },
   ],
