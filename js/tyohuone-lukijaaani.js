@@ -105,6 +105,9 @@ async function kuuntele({ persoona, aani, ohje, teksti }, tilaRivi) {
         persoona,
         aani: aani || undefined,
         ohje: ohje || undefined,
+        // Nopeus generoidaan OpenAI:n speed-parametrilla (15.8.2026)
+        // — sama polku kuin pelissä, jotta koekuuntelu vastaa peliä.
+        nopeus: puheenNopeus() !== 1 ? puheenNopeus() : undefined,
       }),
     });
     if (!vastaus.ok) {
@@ -116,8 +119,6 @@ async function kuuntele({ persoona, aani, ohje, teksti }, tilaRivi) {
     koeAudio.pause();
     koeAudio.src = osoite;
     koeAudio.volume = Math.min(1, puheenVoima());
-    koeAudio.playbackRate = puheenNopeus();
-    if ('preservesPitch' in koeAudio) koeAudio.preservesPitch = true;
     await koeAudio.play();
     tilaRivi.textContent = (aani || ohje) && !koodi
       ? 'Soi — HUOM: ilman kehittäjäkoodia kuulet pelin oletusäänen.'
@@ -159,10 +160,11 @@ function voimakkuusOsio() {
 function nopeusOsio() {
   const kortti = el('div', 'kortti');
   kortti.append(el('h3', '', 'Lukunopeus'));
-  kortti.append(el('p', 'pieni', 'Toistonopeus tällä laitteella '
-    + '(sävelkorkeus säilyy). Vaikuttaa heti kaikkiin lukijaääniin — '
-    + 'myös jo säilöttyihin, koska säätö tehdään toistossa eikä '
-    + 'generoinnissa. Pelin oletus on 1,00×.'));
+  kortti.append(el('p', 'pieni', 'Puhe generoidaan valitussa tahdissa '
+    + '(OpenAI:n oma speed-parametri, sävelkorkeus säilyy). Uusi arvo '
+    + 'kuuluu seuraavasta generoitavasta palasta alkaen; poikkeava '
+    + 'nopeus säilötään omiin välimuistipaikkoihinsa. Pelin oletus '
+    + 'on 1,00×.'));
   const rivi = el('div', 'lukijaaani-rivi');
   const liuku = el('input');
   liuku.type = 'range';
@@ -174,8 +176,6 @@ function nopeusOsio() {
   liuku.addEventListener('input', () => {
     const nopeus = asetaPuheenNopeus(Number(liuku.value));
     arvo.textContent = `${nopeus.toFixed(2)}×`;
-    // Säätö kuuluu myös käynnissä olevaan koekuunteluun.
-    koeAudio.playbackRate = nopeus;
   });
   rivi.append(liuku, arvo);
   kortti.append(rivi);

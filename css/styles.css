@@ -8044,6 +8044,15 @@ button.lukija-nappi.lukee,
   border-radius: 2px;
 }
 
+/* Anfangin iso alkukirjain piirtyy omana ::first-letter-
+ * fragmenttinaan, johon ::highlight ei osu (omistajan havainto
+ * 15.8.2026: "korostus hyppää ensimmäisen kirjaimen yli") — se
+ * maalataan siksi omalla säännöllään, kun soiva pala kattaa kohdan
+ * alun. Tavallisessa kappaleessa sama väri kahdesti ei erotu. */
+.lukija-eka-kirjain::first-letter {
+  background-color: rgba(234, 184, 78, 0.32);
+}
+
 /* Sivu vierii luennan perässä kohdan alkuun; tarttuva otsikkorivi ei
  * saa jäädä kohdan päälle. */
 .lukija-kohdalla { scroll-margin-top: 3rem; }

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 671, teksti: 'nopeus generoidaan OpenAI:lla, anfangi maalautuu luennassa' },
   { v: 670, teksti: 'nopeutus ilman hännänleikkausta, säädin suorakaiteeksi' },
   { v: 669, teksti: 'lukunopeus tarttuu myös iPadilla (playbackRate palan alussa)' },
   { v: 668, teksti: 'lukija seuraa: maalaus, aloitus näkyvästä, otsikot niputettu' },

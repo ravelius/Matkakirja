@@ -485,7 +485,9 @@ function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
   let kohdalla = -1;
   const luokitellut = new Set();
   const puraLuokat = () => {
-    for (const el of luokitellut) el.classList?.remove('lukija-kohdalla', 'lukija-korostus');
+    for (const el of luokitellut) {
+      el.classList?.remove('lukija-kohdalla', 'lukija-korostus', 'lukija-eka-kirjain');
+    }
     luokitellut.clear();
   };
   const paivita = (t) => {
@@ -512,6 +514,20 @@ function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
       try {
         win.CSS.highlights.set('lukija-luenta', new win.Highlight(...alueet));
       } catch { /* maalaus on koriste — luenta jatkuu ilman */ }
+      /*
+       * Anfangi maalataan erikseen (omistajan havainto 15.8.2026:
+       * "korostus hyppää ensimmäisen kirjaimen yli"): ::first-letter
+       * piirtyy omana fragmenttinaan, johon ::highlight ei osu, joten
+       * iso alkukirjain jäi maalaamatta. Kun soiva pala kattaa kohdan
+       * alun, ensimmäinen lohko saa luokan, jonka ::first-letter-
+       * sääntö maalaa samalla värillä — tavallisessa kappaleessa
+       * kaksinkertainen maalaus samalla värillä ei näy.
+       */
+      const eka = kohta.osat?.[0]?.solmu;
+      if (eka?.classList) {
+        eka.classList.toggle('lukija-eka-kirjain', t.alku === 0);
+        luokitellut.add(eka);
+      }
     }
   };
   const pura = () => {

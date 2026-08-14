@@ -259,10 +259,18 @@ export function asetaPuheenVoima(arvo) {
 }
 
 /*
- * LUKUNOPEUS (omistajan tilaus 14.8.2026). Nopeus tehdään toistossa
- * (playbackRate + sävelkorkeuden säilytys), EI generoinnissa: se osuu
- * silloin myös säilöistä soiviin paloihin, ei maksa mitään eikä
- * pirsto välimuistiavaimia. Laitekohtainen asetus kuten voimakkuus.
+ * LUKUNOPEUS (omistajan tilaus 14.8.2026; tarkennus 15.8.2026:
+ * "Käytä vain openai:n nopeutussäätöä, ei mitään muuta"). Nopeus
+ * tehdään GENEROINNISSA: worker välittää sen OpenAI:n omana
+ * speed-parametrina, joten puhe syntyy halutussa tahdissa eikä
+ * toistoa venytetä selaimessa lainkaan. Toistopuolen venytys kokeili
+ * kahta muotoa ja molemmat olivat rikki: iOS nollasi playbackRaten
+ * palan vaihdossa, ja Safarin sävelkorkeuden säilyttävä venytin
+ * leikkasi palan hännän. Tuki todennettu julkaistulla workerilla
+ * 15.8.2026 (sama teksti: 0,6× 143 kt, 1,0× 114 kt, 1,6× 57 kt).
+ * Poikkeava nopeus laajentaa välimuistiavaimet nopeudella — normaali
+ * 1,0 pitää kaikki vanhat säilöt osumina. Laitekohtainen asetus;
+ * uusi arvo tarttuu seuraavasta generoitavasta palasta.
  */
 const NOPEUS_AVAIN = 'matkakirja-puhe-nopeus';
 const NOPEUS_OLETUS = 1;
@@ -278,38 +286,23 @@ export function puheenNopeus() {
   return NOPEUS_OLETUS;
 }
 
-/** Asettaa nopeuden ja vie sen heti soivaan ääneen. */
+/**
+ * Asettaa nopeuden. Nopeus toteutuu generoinnissa (haePala vie sen
+ * workerille), joten uusi arvo kuuluu seuraavasta palasta alkaen —
+ * jo haettuja paloja ei venytetä.
+ */
 export function asetaPuheenNopeus(arvo) {
   const nopeus = Math.min(NOPEUS_MAX, Math.max(NOPEUS_MIN, Number(arvo) || NOPEUS_OLETUS));
   try {
     window.localStorage?.setItem(NOPEUS_AVAIN, String(nopeus));
   } catch { /* ei tallennu — istunnon ajan silti voimassa */ }
-  if (puheElementti) {
-    try {
-      puheElementti.playbackRate = nopeus;
-    } catch { /* elementti ei soi */ }
-  }
   return nopeus;
 }
 
-/** Nopeus elementtiin (src-vaihto nollaa asetuksen). */
-function asetaToistonopeus(audio) {
+/** Nopeus välimuistiavainten häntään; normaali 1,0 ei muuta avaimia. */
+function nopeusTunniste() {
   const nopeus = puheenNopeus();
-  try {
-    audio.defaultPlaybackRate = nopeus;
-    audio.playbackRate = nopeus;
-    /*
-     * Sävelkorkeuden säilytys POIS (omistajan havainto 15.8.2026:
-     * nopeutettu luenta "leikkaa pätkän lopusta aina pienen palan
-     * pois ja hyppää eteenpäin"). Safarin sävelkorkeuden säilyttävä
-     * venytin prosessoi ääntä lohkoissa ja pudotti palan hännän —
-     * kuulosti leikkaukselta jokaisen palan lopussa. Selaimen
-     * natiivi nopeutus (nauhurimainen, sävel elää nopeuden mukana)
-     * toistaa palan loppuun asti ehjänä.
-     */
-    if ('preservesPitch' in audio) audio.preservesPitch = false;
-    else if ('webkitPreservesPitch' in audio) audio.webkitPreservesPitch = false;
-  } catch { /* vanha selain: nopeus jää normaaliksi */ }
+  return nopeus !== 1 ? `|${nopeus}` : '';
 }
 
 /** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
@@ -488,7 +481,7 @@ async function haePala(teksti, persoona, sailio = null) {
   // Laitekohtaiset säädöt mukaan avaimeen ja pyyntöön: säädetty ääni ei
   // saa soida vanhan äänen välimuistista eikä päinvastoin.
   const saadot = puheenSaadot(persoona);
-  const saatoTunniste = saadot ? `${saadot.aani ?? ''}|${saadot.ohje ?? ''}` : '';
+  const saatoTunniste = `${saadot ? `${saadot.aani ?? ''}|${saadot.ohje ?? ''}` : ''}${nopeusTunniste()}`;
   const avain = `${persoona}|${saatoTunniste}|${teksti}`;
   if (puheMuisti.has(avain)) return puheMuisti.get(avain);
 
@@ -528,6 +521,10 @@ async function haePala(teksti, persoona, sailio = null) {
       lohko: sailio || undefined,
       aani: saadot?.aani || undefined,
       ohje: saadot?.ohje || undefined,
+      // Nopeus generoidaan OpenAI:n omalla speed-parametrilla
+      // (omistajan tarkennus 15.8.2026); 1,0 jätetään pois, jotta
+      // pyyntö ja workerin välimuistiavain pysyvät entisellään.
+      nopeus: puheenNopeus() !== 1 ? puheenNopeus() : undefined,
     }),
   });
   if (!vastaus.ok) {
@@ -689,7 +686,6 @@ export function luoPuheSoitin({
       }
     }
     audio.src = osoite;
-    asetaToistonopeus(audio);
     const valmis = () => {
       audio.removeEventListener('ended', valmis);
       audio.removeEventListener('error', valmis);
@@ -712,17 +708,7 @@ export function luoPuheSoitin({
       tila.soi = false;
       tila.peruttu = true;
       onVirhe?.(indeksi === 0 ? 'alku' : 'kesken');
-      return;
     }
-    /*
-     * Nopeus UUDELLEEN vasta kun toisto on käynnissä (omistajan
-     * havainto 14.8.2026: "Nopeussäädin ei taida toimia oikein"):
-     * iOS/Safari nollaa playbackRaten lähteen latauksessa eikä
-     * kunnioita defaultPlaybackRatea, joten ennen play()-kutsua
-     * asetettu nopeus katosi jokaisen palan alussa. Käynnissä olevaan
-     * toistoon asetus tarttuu.
-     */
-    if (!tila.peruttu) asetaToistonopeus(audio);
   };
 
   /**
