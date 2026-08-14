@@ -323,6 +323,19 @@ function kytkeVahvistin() {
       // createMediaElementSource onnistuu vain kerran per elementti —
       // kytketty-lippu estää toisen yrityksen.
       const lahde = piiri.createMediaElementSource(audio);
+      /*
+       * VIIVELINJA ENNEN VAHVISTINTA (omistajan idea 15.8.2026:
+       * "Voiko alkuun generoida tyhjää niin että ei häviä mitään
+       * siinä nykäisyssä? Nyt ens. kirjain katoaa kuuluvista"):
+       * 60 ms viive toimii jokaisen palan alkuun generoituna tyhjänä.
+       * Palan ensimmäiset näytteet istuvat viivelinjassa sillä aikaa,
+       * kun häivytys nousee nollasta täyteen — puhe astuu ulos vasta
+       * täydellä voimalla, eikä ensimmäisestä kirjaimesta katoa
+       * mitään. Vakioviive ei kuulu tahtina, se vain siirtää kaikkea
+       * 60 ms myöhemmäksi.
+       */
+      const viive = piiri.createDelay(0.2);
+      viive.delayTime.value = 0.06;
       vahvistin = piiri.createGain();
       vahvistin.gain.value = puheenVoima();
       /*
@@ -337,7 +350,8 @@ function kytkeVahvistin() {
       kompressori.ratio.value = 4;
       kompressori.attack.value = 0.003;
       kompressori.release.value = 0.25;
-      lahde.connect(vahvistin);
+      lahde.connect(viive);
+      viive.connect(vahvistin);
       vahvistin.connect(kompressori);
       kompressori.connect(piiri.destination);
       kytketty = true;
@@ -679,10 +693,26 @@ export function luoPuheSoitin({
       const nyt = piiri.currentTime;
       vahvistin.gain.cancelScheduledValues(nyt);
       if (indeksi === 0) {
+        /*
+         * Ramppi mahtuu viivelinjan (60 ms) sisään: se on valmis
+         * ennen kuin puheen ensimmäinen näyte astuu vahvistimeen,
+         * joten napsahdus puuttuu EIKÄ ensimmäisestä kirjaimesta
+         * katoa mitään (omistajan havainto 15.8.2026 — vanha 90 ms:n
+         * ramppi söi alun).
+         */
         vahvistin.gain.setValueAtTime(0, nyt);
-        vahvistin.gain.linearRampToValueAtTime(puheenVoima(), nyt + 0.09);
+        vahvistin.gain.linearRampToValueAtTime(puheenVoima(), nyt + 0.05);
       } else {
-        vahvistin.gain.setValueAtTime(puheenVoima(), nyt);
+        /*
+         * Lyhyt häivytys myös palan vaihtoon (omistajan havainto
+         * 15.8.2026: "ääni nykäisee jokaisen lauseen alussa"):
+         * jokainen pala on erillinen mp3, jonka dekoodauksen alku
+         * voi napsahtaa. Ramppi on valmis ennen kuin uuden palan
+         * ääni ehtii viivelinjan (60 ms) läpi vahvistimeen, joten
+         * puheesta ei katoa mitään — vain sauman särmä pyöristyy.
+         */
+        vahvistin.gain.setValueAtTime(0, nyt);
+        vahvistin.gain.linearRampToValueAtTime(puheenVoima(), nyt + 0.025);
       }
     }
     audio.src = osoite;
@@ -714,14 +744,20 @@ export function luoPuheSoitin({
   /**
    * Pilkkoo lisätyn tekstin kappaleiksi ja paloiksi kappaletiedolla.
    *
-   * Porrastus on KAPPALEKOHTAINEN (14.8.2026): jokaisen kappaleen
-   * ensimmäinen virke kulkee omana palanaan ja palakoko kasvaa siitä
-   * portaittain. Ennen porrastus katsoi koko jonoa, jolloin luennan
-   * alku oli nopea mutta kappalehyppy ja keskeltä sivua aloittaminen
-   * osuivat isoon palaan ja odotuttivat monta sekuntia. Kappaleen
-   * ensipala on hypyn laskeutumispaikka, joten sen on oltava kevyt.
-   * Lisäpyyntöjä tulee yksi per kappale; välimuistit (laite, reuna,
-   * R2) sulattavat sen.
+   * Porrastus on KAPPALEKOHTAINEN (14.8.2026): kappaleen alkupää
+   * kulkee kevyinä paloina ja koko kasvaa portaittain, jotta
+   * kappalehyppy ja keskeltä sivua aloittaminen eivät odotuta ison
+   * palan generointia. Koko jonon ensimmäinen virke kulkee YKSIN,
+   * jotta luenta alkaa heti.
+   *
+   * Muiden kappaleiden ensimmäistä virkettä EI enää pakoteta omaksi
+   * palakseen (omistajan havainto 15.8.2026: "ääni nykäisee jokaisen
+   * lauseen alussa") — virkekohtaiset palat toivat palanvaihdon lähes
+   * joka lauseen väliin, ja jokainen vaihto on erillinen mp3, jonka
+   * alku kuuluu pienenä nykäisynä. Kappaleen ensipala on nyt enintään
+   * ensimmäinen porras (240 mrk) — hyppy laskeutuu yhä kevyeen
+   * palaan, mutta tavallinen 2–4 virkkeen kappale soi enimmäkseen
+   * yhtenä tai kahtena palana.
    *
    * Jokainen pala muistaa myös merkkikohtansa kappaleessa (alku):
    * lukija maalaa sillä juuri kuuluvat virkkeet ruudulle.
@@ -746,12 +782,13 @@ export function luoPuheSoitin({
       for (const virke of paloitteleVirkkeiksi(rivi)) {
         const virkkeenAlku = kohta;
         kohta += virke.length + 1;
-        if (!kappaleessa && !kertyma) {
+        // Koko jonon ensimmäinen virke yksin — luenta käyntiin heti.
+        if (!(palat.length + uudet.length) && !kertyma) {
           uudet.push({ teksti: virke, kappale, alku: virkkeenAlku });
           kappaleessa += 1;
           continue;
         }
-        const raja = portaat[kappaleessa - 1] ?? PUHE_PALA_KATTO;
+        const raja = portaat[kappaleessa] ?? PUHE_PALA_KATTO;
         if (kertyma && kertyma.length + virke.length + 1 > raja) {
           tyonna();
           kertyma = virke;
