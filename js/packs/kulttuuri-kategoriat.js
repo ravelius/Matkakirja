@@ -11490,7 +11490,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
-      johdanto: 'Kaupungin ensimmäinen nimi oli Novonikolajevsk ja sen '
+      johdanto: 'Kaupungin vanha nimi oli Novonikolajevsk ja sen '
         + 'rautatieaseman nimi pelkkä Ob. Vuonna 1957 kaupungin eteläpuolen '
         + 'metsään rakennettiin oma tiedekaupunki, jossa asui '
         + 'parhaimmillaan 65 000 tutkijaa perheineen.',
@@ -11498,16 +11498,16 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Asema nimeltä Ob, kaupunki nimeltä Novonikolajevsk',
           tiedosto: '008 Пассажирское здание станции Обь (cropped).jpg',
-          teksti: 'Kun silta valmistui keväällä 1897, Novonikolajevskissa '
-            + 'asui 7 800 ihmistä. Nimensä paikka oli saanut vuonna 1895 '
-            + 'pyhän Nikolauksen ja hallitsija Nikolai II:n mukaan, mutta '
-            + 'rautatieasema kulki nimellä Ob vuoteen 1909 asti. Vuonna '
-            + '1907 asukkaita oli jo yli 47 000, ja paikka sai '
-            + 'kaupunkioikeudet ja täyden itsehallinnon. Ensimmäinen pankki '
-            + 'avattiin 1906, ja vuoteen 1915 mennessä niitä oli viisi. '
-            + 'Vuonna 1913 Novonikolajevsk oli maan ensimmäisiä paikkoja, '
-            + 'joissa alkeisopetuksesta tehtiin pakollista. Nykyisen '
-            + 'nimensä kaupunki sai 12. syyskuuta 1926.',
+          teksti: 'Aseman nimi oli pitkään vanhempi kuin kaupungin. Kun '
+            + 'rautatiesilta valmistui keväällä 1897, sen kupeessa asui 7 '
+            + '800 ihmistä paikassa, joka oli kaksi vuotta aiemmin nimetty '
+            + 'Novonikolajevskiksi pyhän Nikolauksen ja hallitsija Nikolai '
+            + 'II:n mukaan — mutta aikatauluissa pysäkki oli yhä pelkkä Ob, '
+            + 'ja niin se pysyi vuoteen 1909. Kaupungiksi paikka '
+            + 'korotettiin joulukuussa 1903, ja vuonna 1907 asukkaita oli '
+            + 'jo yli 47 000. 1910-luvun alussa se oli maan ensimmäisiä '
+            + 'paikkoja, joissa alkeisopetuksesta tehtiin pakollista. '
+            + 'Nykyisen nimensä kaupunki sai vuonna 1926.',
           selite: 'Aseman puinen matkustajarakennus vanhassa valokuvassa. '
             + 'Talo on pitkä ja yksikerroksinen, ja sen vaaleaksi '
             + 'maalatuissa seinissä on tiheä rivi ikkunoita koristeellisin '
@@ -11526,15 +11526,16 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Ферма старого моста, Новосибирск 01.jpg',
           teksti: 'Sillan suunnitteli professori Nikolai Beleljubski, ja se '
             + 'rakennettiin vuosina 1893–1897. Siinä oli yhdeksän jännettä '
-            + 'ja pituutta 983,5 metriä. Kannattimina olivat '
-            + 'puoliparaboliset ristikot, joiden teräsosat painoivat '
+            + '— seitsemän viidenkymmenen ja kaksi kymmenen sylen mittaista '
+            + '— ja pituutta 372,5 syltä eli noin 795 metriä. Kannattimina '
+            + 'olivat puoliparaboliset ristikot, joiden teräsosat painoivat '
             + 'yhteensä 4 423 tonnia ja valmistettiin Uralilla Votkinskin '
-            + 'tehtaalla. Pilarit muurattiin lähiseudun graniitista. Vuonna '
-            + '1896 silta koekuormitettiin ajamalla sen yli neljällä '
-            + 'veturilla, ja 31. maaliskuuta 1897 se avattiin liikenteelle. '
-            + 'Vanhan sillan liikenne loppui 1991 ja purkaminen alkoi 2000. '
-            + 'Yksi jänteistä säästettiin museoesineeksi rantapuistoon, '
-            + 'jonka nimi on Gorodskoje natšalo.',
+            + 'tehtaalla. Vuonna 1896 silta koekuormitettiin ajamalla sen '
+            + 'yli neljällä veturilla, ja 31. maaliskuuta 1897 se avattiin '
+            + 'liikenteelle. Vanhan sillan liikenne loppui 1991 ja '
+            + 'purkaminen alkoi 2000. Yksi jänteistä säästettiin '
+            + 'museoesineeksi rantapuistoon, jonka nimi on Gorodskoje '
+            + 'natšalo.',
           selite: 'Vanhan sillan jänne pystytettynä muistomerkiksi joen '
             + 'rantaan. Harmaa teräsristikko lepää kahden betonipilarin '
             + 'päällä, ja sen yläreuna kaartuu loivasti; tukien päällä '
@@ -11557,11 +11558,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja matematiikan tutkijalla Mihail Lavrentjevilla. Alueella '
             + 'on 35 tutkimuslaitosta, lääketieteen akatemia ja '
             + 'Novosibirskin valtionyliopisto. Parhaimmillaan siellä asui '
-            + '65 000 tutkijaa perheineen. Alkuvuosina siellä tutkittiin '
-            + 'kybernetiikkaa ja genetiikkaa, joita Moskovassa pidettiin '
-            + 'vaarallisena valetieteenä, ja kulttuurikeskus esitteli '
-            + 'neuvostotaiteilijoita, joiden työt olivat muualla '
-            + 'kiellettyjä.',
+            + '65 000 tutkijaa perheineen. Etäisyys pääkaupunkiin antoi '
+            + 'liikkumavaraa: alkuvuosina tutkimusaiheiksi kelpasivat '
+            + 'kybernetiikka ja genetiikka, joiden maine oli Moskovassa '
+            + 'pilalla, ja kulttuuritalossa nähtiin taidetta, jota muualla '
+            + 'ei olisi asetettu näytteille.',
           selite: 'Leveä katu Akademgorodokissa talvella. Oikealla seisoo '
             + 'keltainen kerrostalo, jonka julkisivua jakavat punatiiliset '
             + 'pystyraidat; seinässä on sininen numerokilpi. Talon edessä '
@@ -11584,10 +11585,10 @@ export const KULTTUURI_KATEGORIAT = {
           'kaksikymmentä',
         ],
         oikea: 0,
-        fakta: 'Nikolai Beleljubskin suunnittelemassa sillassa oli yhdeksän '
-          + 'jännettä ja pituutta 983,5 metriä. Yksi jänteistä säästettiin, '
-          + 'ja se seisoo nykyään Gorodskoje natšalo -puistossa Obin '
-          + 'rannalla.',
+        fakta: 'Beleljubskin sillassa oli yhdeksän jännettä: seitsemän '
+          + 'viidenkymmenen ja kaksi kymmenen sylen mittaista. Kun vanha '
+          + 'silta purettiin, yksi jänne jätettiin pystyyn Obin rantaan, ja '
+          + 'se seisoo siellä yhä Gorodskoje natšalo -puistossa.',
       },
     },
   ],
