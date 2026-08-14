@@ -344,16 +344,29 @@ function puheOtsakkeet(kors) {
 
 /**
  * Saman tekstin osoite reunavälimuistissa. Osoite on synteettinen —
- * mihinkään ei oikeasti yhdistetä — ja tiiviste kattaa mallin,
- * persoonan ja tekstin: minkä tahansa muuttuessa syntyy uusi avain ja
+ * mihinkään ei oikeasti yhdistetä — ja tiiviste kattaa mallin, äänen,
+ * ohjeen ja tekstin: minkä tahansa muuttuessa syntyy uusi avain ja
  * vanha tallenne vanhenee itsestään pois tieltä.
  */
-async function puheenAvain(malli, persoonaNimi, teksti) {
-  const data = new TextEncoder().encode(`${malli}|${persoonaNimi}|${teksti}`);
+async function puheenAvain(malli, aani, ohje, teksti) {
+  const data = new TextEncoder().encode(`${malli}|${aani}|${ohje}|${teksti}`);
   const tiiviste = await crypto.subtle.digest('SHA-256', data);
   const hex = [...new Uint8Array(tiiviste)].map((t) => t.toString(16).padStart(2, '0')).join('');
   return new Request(`https://puhe.valimuisti.matkakirja/${hex}`);
 }
+
+/*
+ * SÄÄTÖOHITUKSET VAIN KEHITTÄJÄKOODILLA (työhuoneen Lukijaääni-
+ * välilehti, omistajan tilaus 14.8.2026). Asiakas voi antaa äänen ja
+ * ohjeen pyynnössä, mutta ne otetaan huomioon VAIN jos pyynnössä on
+ * oikea kehittäjäkoodi — julkinen rajapinta pysyy pelin persoonissa,
+ * eikä välitystä voi käyttää yleisenä puhesyntetisaattorina. Säädetyt
+ * pyynnöt eivät myöskään koske jaettuja säilöjä (reuna + R2): kokeilut
+ * eivät saa sotkea kaanonääniä eikä täyttää ämpäriä.
+ */
+const PUHE_AANET = ['alloy', 'ash', 'ballad', 'coral', 'echo', 'fable',
+  'nova', 'onyx', 'sage', 'shimmer', 'verse'];
+const PUHE_OHJEEN_KATTO = 600;
 
 /**
  * Yksi puhepyyntö: teksti sisään, mp3-virta ulos.
@@ -387,21 +400,37 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   const persoona = PUHE_PERSOONAT[persoonaNimi];
   const malli = env.PUHE_MALLI || PUHE_MALLI_OLETUS;
 
+  // Ääni ja ohje: persoonan oletukset, joiden yli kehittäjäkoodillinen
+  // pyyntö saa kirjoittaa (työhuoneen säätövälilehti).
+  let aani = persoona.aani;
+  let ohje = persoona.ohje;
+  let saadetty = false;
+  if (kehittajaOhitus(pyynto, env)) {
+    if (PUHE_AANET.includes(runko?.aani)) {
+      aani = runko.aani;
+    }
+    const omaOhje = siivoaTeksti(runko?.ohje, PUHE_OHJEEN_KATTO);
+    if (omaOhje) ohje = omaOhje;
+    saadetty = aani !== persoona.aani || ohje !== persoona.ohje;
+  }
+
   /*
    * Lohko kertoo, MITÄ tekstilajia pala on ('merkinnat', 'kertoja'…),
    * ja vain lohkollinen pala säilötään — pöllön vastaukset ovat
    * kertakäyttöisiä eikä niitä kannata tallettaa minnekään. Lohko on
    * myös R2-avaimen etuliite, joten vanhentuneen tekstilajin äänet voi
    * tuhota yhdellä prefiksipoistolla (omistajan ohje 14.8.2026:
-   * matkakirjan äänet erilleen, jotta tila ei lopu kesken).
+   * matkakirjan äänet erilleen, jotta tila ei lopu kesken). Säädetyt
+   * pyynnöt eivät säilö mitään.
    */
-  const lohko = /^[a-z0-9-]{1,24}$/.test(String(runko?.lohko ?? '')) ? runko.lohko : null;
+  const lohko = !saadetty && /^[a-z0-9-]{1,24}$/.test(String(runko?.lohko ?? ''))
+    ? runko.lohko : null;
 
   let avain = null;
   let r2Avain = null;
   if (lohko) {
     try {
-      avain = await puheenAvain(malli, persoonaNimi, teksti);
+      avain = await puheenAvain(malli, aani, ohje, teksti);
       r2Avain = `puhe/${lohko}/${avain.url.split('/').pop()}.mp3`;
       const osuma = await caches.default.match(avain);
       if (osuma) {
@@ -462,8 +491,8 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
       body: JSON.stringify({
         model: malli,
         input: teksti,
-        voice: persoona.aani,
-        instructions: persoona.ohje,
+        voice: aani,
+        instructions: ohje,
         response_format: 'mp3',
       }),
     });

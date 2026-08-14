@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 656, teksti: 'Työhuoneeseen Lukijaääni-välilehti äänten säätöön' },
   { v: 655, teksti: 'Lukijalle säätöpaneeli: tauko ja kappalehypyt' },
   { v: 654, teksti: 'Merkinnät lukijaäänellä, äänitteet varalle, ääni ylös' },
   { v: 653, teksti: 'Lukijaääni: puhesynteesi kaiuttimiin ja pöllöön' },

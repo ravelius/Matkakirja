@@ -640,3 +640,27 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 }
 
 .pelidemo-uusi { margin-top: 0.3rem; }
+
+/* ── Lukijaääni-välilehti (14.8.2026) ────────────────────────────── */
+.lukijaaani-rivi {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0.4rem 0;
+}
+
+.lukijaaani-rivi input[type="range"] { flex: 1 1 12rem; max-width: 20rem; }
+
+.lukijaaani-persoona textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 0.4rem 0.5rem;
+}
+
+.lukijaaani-persoona select,
+.lukijaaani-rivi input[type="password"] {
+  font: inherit;
+  padding: 0.3rem 0.4rem;
+}
