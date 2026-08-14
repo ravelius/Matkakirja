@@ -10,28 +10,39 @@
  */
 
 export const TILANNE = {
-  paivitetty: '14.8.2026 — kapulanvaihto uudelle tilille (v652)',
+  paivitetty: '14.8.2026 ilta — lukijaäänipäivä (v653–v658)',
   tavoite: 'Kehitys jatkuu uudella tilillä (kapulanvaihto 14.8., '
-    + 'docs/kapulanvaihto.md). Ensisijainen työ: maa- ja '
-    + 'kaupunkilehtien jatko — Siperian kahdeksan kaupunkikannen '
-    + 'erät käynnissä. Kartoitus 14.8.: 62 laudan maata ilman '
-    + 'maalehteä, 185 kaupunkia ilman kantta. '
+    + 'docs/kapulanvaihto.md). Päivän sato: lukijaääni lennossa '
+    + 'säätöineen (v653–v657) ja Berliinin satelliittikarttapilotti '
+    + '(v658). Lehtityö: Siperian kahdeksan kaupunkikannen erät '
+    + 'käynnissä. Kartoitus 14.8.: 62 laudan maata ilman maalehteä, '
+    + '185 kaupunkia ilman kantta. '
     + 'Matkakirjamerkintöjä EI generoida ennen tekstityylipäätöstä.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'tarina + koordinaatio',
       tila: 'tyossa',
-      tehtava: 'Uuden tilin päätoimittaja: kaanon ja kapulanvaihto '
-        + 'luettu, lehdettömät maat ja kaupungit kartoitettu ajamalla, '
-        + 'Siperia-erät speksattu ja delegoitu Opus 6:lle '
-        + '(ultracode, omistajan ohje 14.8.).',
-      seuraavaksi: 'Lukijaääni julkaistu (v653): OpenAI-puhesynteesi '
-        + 'kaiutinnappeihin ja pöllöön, äänet talteen laitteelle, '
-        + 'reunalle ja R2-ämpäriin lohkoittain. Seuraavaksi '
-        + 'saapumisluentojen TTS-vaihto (PR 2) omistajan kanssa '
-        + 'hioen; vahtii Opus 6:n eriä. Avoin: pöllön '
-        + 'Matkakirja-linkit (kapulanvaihto.md).',
+      tehtava: 'Lukijaääniuudistus julkaistu (v653–v657): OpenAI-'
+        + 'puhesynteesi kaikkiin luentoihin (myös merkinnät, '
+        + 'ElevenLabs varalle), säätöpaneeli, työhuoneen Lukijaääni-'
+        + 'välilehti, äänisäilöt (laite+reuna+R2), synkkakysely pois, '
+        + 'kehittäjätila säilyy. Satelliittiselvitys tehty ja pilotti '
+        + 'delegoitu Opus 7:lle (valmis v658).',
+      seuraavaksi: 'Vahtii Opus 6:n Siperia-eriä ja katselmoi ne; '
+        + 'satelliittiskaalaus 52 kaupunkiin odottaa omistajan '
+        + 'hyväksyntää pilotille. Avoin: pöllön Matkakirja-linkit.',
+    },
+    {
+      tekija: 'Opus 7',
+      rooli: 'kartat (satelliitti)',
+      tila: 'valmis',
+      tehtava: 'PILOTTI VALMIS (v658): Berliinin kaupunkikartalla '
+        + 'vipu piirros ↔ satelliittikuva (EOX Sentinel-2, sama '
+        + 'bbox — pisteet paikoillaan), hakutyökalu ja lähderivi. '
+        + 'Ei skaalattu — odottaa omistajan hyväksyntää.',
+      seuraavaksi: 'Pikkutehtävä: savukkeet /opt-polkuun. Skaalaus '
+        + '52 kaupunkiin omistajan luvalla (yksi ajo per kaupunki).',
     },
     {
       tekija: 'Opus 6',
@@ -117,6 +128,23 @@ export const TILANNE = {
  * siivotaan pois kun ne on katsottu tai ne vanhenevat.
  */
 export const TESTATTAVAA = [
+  {
+    otsikko: 'Satelliittinäkymä Berliinin kartalla (v658) — PILOTTI',
+    ohje: 'Avaa Berliinin lehden Kaupunki kartalla -sivu: kartan yllä '
+      + 'on kaksi nappia, Piirros ja Satelliitti. Vaihda näkymää — '
+      + 'kohdepisteet ja mittajana pysyvät paikoillaan, lähderivi '
+      + 'vaihtuu. Jos näkymä kelpaa, sano niin: skaalaus kaikkiin '
+      + '52 muuhun karttakaupunkiin on yhden ajon työ per kaupunki.',
+  },
+  {
+    otsikko: 'Lukijan säätöpaneeli ja äänikorjaukset (v655–v657)',
+    ohje: 'Paina lehtisivun kaiutinta: napin alle aukeaa paneeli '
+      + '(tauko, kappale eteen/taakse, laskuri, lopetus). Luenta ei '
+      + 'enää napsahda alussa, ei lue lehden nimeä eikä sivun '
+      + 'ensimmäistä otsikkoa, eikä pidä outoa taukoa otsikon '
+      + 'jälkeen. Äänten säätö: työhuoneen Lukijaääni-välilehti '
+      + '(vaatii kehittäjäkoodin säätöihin).',
+  },
   {
     otsikko: 'Lukijaääni lennossa (v653)',
     ohje: 'Avaa mikä tahansa lehtisivu ja paina kaiutinta: luennan '
