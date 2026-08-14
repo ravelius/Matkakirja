@@ -85,9 +85,12 @@ Työtapa on siksi tämä:
 | Rooli | Sessio-id | Kirjattu |
 | --- | --- | --- |
 | Fable | session_018vkp6HxpLR4gxZJFGscSan (uuden tilin päätoimittajasessio, kapulanvaihdon jatkaja; edellinen: session_01BPysCfxscsVyzAEYmb88Zr) | 14.8.2026 |
-| Opus 6 (Siperia-lehdet) | session_01R7LDPk5Kte4FonJcBzX2QS (ultracode; Siperian 8 kaupunkikannen erät 1–3 haaralla claude/opus6-siperia-lehdet; EI uutis-/mediaosioita, EI kohtaamisia; raportoi Fablelle) | 14.8.2026 |
-| Opus 7 (satelliittikartta) | session_01CA61p6y5V2MxmUJt8ovndj (kaupunkikartan satelliittivipu, pilotti 1 mainissa v658; pilotti 2 työn alla 15.8.: zoom + panorointi + laajempi alue + terävämpi kuva, haara claude/opus7-satelliittikartta; skaalaus 52 kaupunkiin vasta omistajan kuittauksella) | 15.8.2026 |
-| Opus 8 (kuvatekstit) | session_01WjBxrL24e4uZ7wsSXNDwne (kuvatekstiauditointi: 551 ylipitkää selitettä 3582:sta, korjaus 5 erässä haaralla claude/opus8-kuvatekstit; sääntö ≤3 virkettä / ~260 mrk, lähteet ja alt-tekstit rauhaan; raportoi Fablelle viesti-fable.md:llä) | 15.8.2026 |
+| Opus 6 (Siperia-lehdet) | — ARKISTOITU 15.8. klo 23:05Z: erät 1–2 mainissa (v659/v663/v673), mutta sessio ei enää herännyt trigger-viesteihin (toimitusvika). Erä 3 siirtyi Opus 9:lle. | 15.8.2026 |
+| Opus 7 (satelliittikartta) | — ARKISTOITU 15.8.: pilotti 1 mainissa (v658), zoom-toimeksianto ei koskaan tavoittanut (toimitusvika). Pilotti 2 siirtyi Opus 11:lle. | 15.8.2026 |
+| Opus 8 (kuvatekstit) | — ARKISTOITU 15.8.: vaiheen 1 kartoitus valmis haaralla claude/opus8-kuvatekstit (551/3582 yli rajan, mittatyökalu tools/kuvateksti-audit.mjs), herätykset eivät tavoittaneet. Korjauserät siirtyivät Opus 10:lle. | 15.8.2026 |
+| Opus 9 (Siperia erä 3) | session_015mZjGUdxeUyykSgPhqYKnd (Kamtšatka + Sahalin + Vladivostok haaralla claude/opus9-siperia-era3; uusi kuvatekstisääntö suoraan; EI uutisia/kohtaamisia; raportointi viesti-fable.md:llä, EI trigger-työkaluja) | 15.8.2026 |
+| Opus 10 (kuvatekstit) | session_01JWXLysPFyGDg5tQN4QFKKb (korjauserät 1–5 Opus 8:n kartoituksen pohjalta haaralla claude/opus8-kuvatekstit; ≤3 virkettä / ~260 mrk, lähteet ja alt-tekstit rauhaan; raportointi viesti-fable.md:llä) | 15.8.2026 |
+| Opus 11 (zoom-pilotti) | session_01EkYbtyhoS3YVFFUMsvomid (zoomattava/panoroitava kaupunkikartta, pilotti 2 VAIN Berliini haaralla claude/opus11-zoom; skaalaus 52 kaupunkiin vasta omistajan kuittauksella; raportointi viesti-fable.md:llä) | 15.8.2026 |
 | Fable max (apusessio) | session_01NQpicvHRAzUpX4NfcYwsyv (Fable max 2; EI vastaanota viestejä tilinvaihdon jälkeen — uusi tili perustaa oman Max-session tarvittaessa. Vanha session_01U8Nqxu… arkistoitu 11.8. konttivian takia) | 11.8.2026 |
 | Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |
