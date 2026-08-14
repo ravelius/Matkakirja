@@ -80,9 +80,13 @@ export const LUKIJAN_OHITETTAVAT = [
   '[data-lukija="ei"]',
 
   // Lehden nimi mastossa (omistajan toive 14.8.2026: "lehden nimeä ei
-  // tarvitse lukea") — se on taittoa, ei juttua.
+  // tarvitse lukea") — se on taittoa, ei juttua. Sama koskee maston
+  // kaupunkinimeä: ilman tätä se kulutti ensimmäisen otsikon
+  // ohituksen, ja varsinainen sivuotsikko luettiin silti (omistajan
+  // havainto 14.8.2026 illalla kaupunki- ja maalehdillä).
   '#arrival-lehti-yla',
   '.lehti-ylarivi',
+  '#arrival-city',
 
   // Lähdemerkinnät ja krediitit.
   '.lahde',
@@ -236,10 +240,12 @@ const OTSIKKOTAGIT = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6']);
  * kappale. Rivinvaihto on molemmille taustajärjestelmille se merkki,
  * josta ne pitävät tauon.
  *
- * SIVUN ENSIMMÄISTÄ OTSIKKOA EI LUETA (omistajan toive 14.8.2026):
- * se on sama otsikko, jonka lukija juuri näki avatessaan sivun, ja
- * luenta pääsee suoraan asiaan. Myöhemmät otsikot (nostojen ja
- * osioiden väliotsikot) luetaan — ne jäsentävät kuunneltavaa.
+ * LUENTA ALKAA AINA LEIPÄTEKSTISTÄ (omistajan tarkennus 14.8.2026:
+ * "aloita aina vain leipätekstistä"). KAIKKI otsikot ennen
+ * ensimmäistä leipätekstipalaa ohitetaan — masto, sivuotsikko ja
+ * mahdollinen alaotsikko ovat samaa taittoa, jonka lukija juuri näki
+ * avatessaan sivun. Kun leipäteksti on alkanut, väliotsikot luetaan —
+ * ne jäsentävät kuunneltavaa.
  *
  * @param {Element} juuri elementti, jonka sisältö luetaan
  * @param {{ ohita?: string[], katto?: number, ohitaEkaOtsikko?: boolean }} asetukset
@@ -251,10 +257,14 @@ export function kokoaLuettavaTeksti(juuri, {
   if (!juuri) return '';
   const palat = [];
   let kertyma = [];
-  let ekaOtsikkoOhitettu = !ohitaEkaOtsikko;
+  // "Leipäteksti on alkanut" — sitä ennen jokainen otsikko ohitetaan.
+  let leipaAlkoi = !ohitaEkaOtsikko;
   const katkaise = () => {
     const teksti = siisti(kertyma.join(' '));
-    if (teksti) palat.push(paate(teksti));
+    if (teksti) {
+      palat.push(paate(teksti));
+      leipaAlkoi = true;
+    }
     kertyma = [];
   };
   const kavele = (solmu) => {
@@ -265,10 +275,7 @@ export function kokoaLuettavaTeksti(juuri, {
     if (solmu.nodeType !== 1) return;
     if (ohitetaanko(solmu, ohita)) return;
     const tagi = String(solmu.nodeName ?? solmu.tagName ?? '').toUpperCase();
-    if (!ekaOtsikkoOhitettu && OTSIKKOTAGIT.has(tagi)) {
-      ekaOtsikkoOhitettu = true;
-      return;
-    }
+    if (!leipaAlkoi && OTSIKKOTAGIT.has(tagi)) return;
     const lohko = LOHKOTAGIT.has(tagi);
     if (lohko) katkaise();
     for (const lapsi of solmu.childNodes ?? []) kavele(lapsi);

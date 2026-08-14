@@ -138,6 +138,22 @@ test('ohitaEkaOtsikko: false palauttaa vanhan käytöksen', () => {
   assert.match(teksti, /Lontoon historia/);
 });
 
+test('maston kaupunkinimi ei kuluta otsikko-ohitusta (omistajan havainto 14.8.2026)', () => {
+  // Lehtidialogin kortissa maston kaupunkinimi (#arrival-city) on
+  // DOM-järjestyksessä ennen sivun otsikkoa. Ilman ohituslistariviä se
+  // söi ensimmäisen otsikon ohituksen, ja sivuotsikko luettiin silti.
+  const kortti = el('div', { luokat: ['dialog-card'] },
+    el('h2', { id: 'arrival-city' }, t('Kairo')),
+    el('h3', { luokat: ['aihe-nimi'] }, t('Egyptin historia')),
+    el('p', {}, t('Niili tulvi joka kesä.')),
+    el('h3', {}, t('Väliotsikko')));
+  const teksti = kokoaLuettavaTeksti(kortti);
+  assert.ok(!/Kairo/.test(teksti), teksti);
+  assert.ok(!/Egyptin historia/.test(teksti), teksti);
+  assert.match(teksti, /Väliotsikko/);
+  assert.match(teksti, /Niili tulvi/);
+});
+
 test('lähdemerkinnät jäävät lukematta', () => {
   const teksti = kokoaLuettavaTeksti(aihesivu());
   assert.ok(!/Canaletto/.test(teksti), teksti);
@@ -185,12 +201,28 @@ test('aria-hidden ja data-lukija="ei" ohitetaan', () => {
 });
 
 test('jokainen pala saa päätemerkin, jotta lukija pitää tauon', () => {
-  // Väliotsikko (toinen otsikko) saa pisteen — ensimmäinen ohitetaan.
+  // Väliotsikko leipätekstin jälkeen saa pisteen; alun otsikko ohitetaan.
   const sivu = el('div', {},
     el('h3', {}, t('Sivun otsikko')),
-    el('h3', {}, t('Otsikko')),
-    el('p', {}, t('Kappale?')));
-  assert.equal(kokoaLuettavaTeksti(sivu), 'Otsikko.\nKappale?');
+    el('p', {}, t('Kappale?')),
+    el('h3', {}, t('Otsikko')));
+  assert.equal(kokoaLuettavaTeksti(sivu), 'Kappale?\nOtsikko.');
+});
+
+test('kaikki alun otsikot ohitetaan — luenta alkaa leipätekstistä (omistajan tarkennus 14.8.2026)', () => {
+  // Mastossa voi olla useampi otsikkoelementti peräkkäin (kaupunki,
+  // sivuotsikko, alaotsikko) — jokainen ohitetaan, kunnes leipäteksti
+  // alkaa. Sen jälkeen väliotsikot luetaan.
+  const sivu = el('div', {},
+    el('h2', {}, t('Kairo')),
+    el('h3', {}, t('Egyptin historia')),
+    el('h4', {}, t('Alaotsikko')),
+    el('p', {}, t('Niili tulvi joka kesä.')),
+    el('h3', {}, t('Väliotsikko')),
+    el('p', {}, t('Jatkoa.')));
+  const teksti = kokoaLuettavaTeksti(sivu);
+  assert.ok(!/Kairo|Egyptin historia|Alaotsikko/.test(teksti), teksti);
+  assert.equal(teksti, 'Niili tulvi joka kesä.\nVäliotsikko.\nJatkoa.');
 });
 
 test('pitkä sivu katkaistaan virkkeen rajalta', () => {
