@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v744 — R2-palkki megatavuina; Eleven-lukema tiiviiksi',
   'v743 — pöllön kuva: ei enää kaimakyliä; epävarmana ei kuvaa',
   'v742 — lukija seis joka pop-upista (kartta, maalehti, pöllö)',
   'v741 — Mac-Safari: striimiluennan ääni (testaa Macilla!)',
