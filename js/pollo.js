@@ -56,7 +56,7 @@ import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
-import { BAD_IMAGE, fetchSummary, suurennusportaat } from './wiki.js';
+import { haeKuvallinenArtikkeli, suurennusportaat } from './wiki.js';
 import { lueAaneen, lueVirtana, lukijaTuettu, pysaytaLukija } from './lukija.js';
 import { sfx } from './sound.js';
 import {
@@ -1572,14 +1572,14 @@ class Pollo {
     }
     const aihe = vastauskuvanAihe(teksti, kysymys);
     if (!aihe) return;
-    fetchSummary(aihe).then((summary) => {
+    // Suora nimi ensin, haku varalle (js/wiki.js): kysymyslause tai
+    // taivutettu käsite löytää silti kuvallisen artikkelin.
+    haeKuvallinenArtikkeli(aihe).then((summary) => {
       if (poletti !== this.vastausKuvaPoletti) return;
       if (!viesti?.isConnected) return;
-      const kuva = summary?.image && !BAD_IMAGE.test(summary.image)
-        ? summary.image : null;
-      if (!kuva) return;
+      if (!summary?.image) return;
       this.naytaVastausKuva(viesti, {
-        esikatselu: kuva,
+        esikatselu: summary.image,
         seloste: summary.title ?? aihe,
         avaa: () => this.avaaWikiKuva(summary),
       });
