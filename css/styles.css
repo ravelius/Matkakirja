@@ -11197,13 +11197,6 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   }
 }
 
-/* Työhuoneen lähdediagnoosi: pienempi ja vaisumpi kuin kulurivi. */
-.tyohuone-diagnoosi {
-  margin-top: 0.15rem;
-  font-size: 0.72rem;
-  opacity: 0.75;
-}
-
 /* Vuosiluku ja kohdenumero otsikon yllä: pieni kirjasinkokoinen
  * leimarivi, joka kertoo ajan ennen kuin nimi ehtii kertoa paikan. */
 .nahtavyys-aika {
