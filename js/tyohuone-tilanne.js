@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v750 — paluunuoli Engel-jutusta; kulurivin oikea syy',
   'v749 — karttateksti 2 palstaan; Matkailijalle- ja opaskuvat',
   'v748 — ison piirroksen klikki: vain kuvan keskiosa avaa',
   'v747 — lippusivut: Lähi-itä (8 maata)',

@@ -11712,6 +11712,34 @@ body.maatiedot-tila .fact-card {
   background: rgba(246, 231, 198, 1);
 }
 
+/* Paluunuoli yläreunassa (omistajan tilaus 15.8.2026): näkyy vain
+ * kun henkilölinkki on vaihtanut jutun ja pinossa on paluupaikka.
+ * Kortin sisarus kuten selausnuolet, joten se pysyy paikallaan
+ * pitkääkin juttua rullatessa. */
+.dialog.nahtavyys-arkki .nahtavyys-takaisin {
+  position: absolute;
+  top: 0.55rem;
+  left: 0.6rem;
+  z-index: 8;
+  width: 2.1rem;
+  height: 2.1rem;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 999px;
+  background: rgba(246, 231, 198, 0.92);
+  color: rgba(70, 51, 31, 0.85);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dialog.nahtavyys-arkki .nahtavyys-takaisin:hover {
+  color: rgba(70, 51, 31, 1);
+  background: rgba(246, 231, 198, 1);
+}
+
 /*
  * Kapealla ruudulla nuoli RATSASTAA kortin reunalla: puolet napista on
  * taustan päällä, puolet kortin omassa sivupehmusteessa. Näin se on

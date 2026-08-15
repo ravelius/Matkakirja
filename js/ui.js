@@ -12974,9 +12974,42 @@ export class UI {
    * vuosiluku korostuksia"), ja lainaus nostetaan kappaleiden väliin
    * omaksi lohkokseen silloin kun se on mielekäs — ei väkisin.
    */
-  avaaNahtavyys(kohde, numero, { henkilolinkit = null } = {}) {
+  avaaNahtavyys(kohde, numero, {
+    henkilolinkit = null, muista = false, palaa = false, rulla = 0,
+  } = {}) {
     const dialogi = document.getElementById('nahtavyys-dialog');
     if (!dialogi) return;
+    /*
+     * PALUUPOLKU (omistajan tilaus 15.8.2026: "engelin artikkelista
+     * ei pääse takaisin edelliseen artikkeliin ... nuoli taaksepäin").
+     * Henkilölinkki vaihtaa saman dialogin sisällön (muista: true),
+     * jolloin edellinen juttu vieritysasentoineen menee pinoon ja
+     * yläreunaan ilmestyy paluunuoli. Nuoli-, valikko- ja tuore avaus
+     * tyhjentävät pinon — paluu koskee vain linkkipolkua, jolla ei
+     * ole muuta reittiä takaisin.
+     */
+    this.nahtavyysPino ??= [];
+    const kortti = dialogi.querySelector('.nahtavyys-kortti');
+    if (!palaa) {
+      if (muista && dialogi.open && this.nahtavyysAuki) {
+        this.nahtavyysPino.push({ ...this.nahtavyysAuki, rulla: kortti?.scrollTop ?? 0 });
+      } else this.nahtavyysPino = [];
+    }
+    this.nahtavyysAuki = { kohde, numero, henkilolinkit };
+    const takaisin = document.getElementById('nahtavyys-takaisin');
+    if (takaisin) {
+      if (!takaisin.dataset.kytketty) {
+        takaisin.dataset.kytketty = '1';
+        takaisin.addEventListener('click', () => {
+          const edellinen = this.nahtavyysPino.pop();
+          if (!edellinen) return;
+          this.avaaNahtavyys(edellinen.kohde, edellinen.numero, {
+            henkilolinkit: edellinen.henkilolinkit, palaa: true, rulla: edellinen.rulla,
+          });
+        });
+      }
+      takaisin.hidden = !this.nahtavyysPino.length;
+    }
     /*
      * Nähtävyystekstissä mainittu henkilö linkitetään omaan juttuunsa
      * (omistajan tilaus 10.8.2026, pilotti: Engel Helsingissä).
@@ -13078,6 +13111,9 @@ export class UI {
     }
     if (!dialogi.open) dialogi.showModal();
     this.nollaaDialoginVieritys(dialogi);
+    // Paluu palauttaa lukukohdan: juttu jatkuu siitä mihin se jäi,
+    // ei alusta. rAF, koska korkeus on olemassa vasta taiton jälkeen.
+    if (palaa && rulla && kortti) requestAnimationFrame(() => { kortti.scrollTop = rulla; });
     // Uusi juttu, uusi teksti: edellisen kohteen luenta ei saa jatkua.
     pysaytaLukija();
     this.varustaLukija(dialogi, () => dialogi.querySelector('.nahtavyys-kortti'));
@@ -13126,7 +13162,9 @@ export class UI {
       const nappi = html('button', 'henkilo-linkki', eka.osuma[0]);
       nappi.type = 'button';
       const henkilo = HENKILOT[eka.h.id];
-      nappi.addEventListener('click', () => this.avaaNahtavyys(henkilo, null, { henkilolinkit: [] }));
+      nappi.addEventListener('click', () => this.avaaNahtavyys(henkilo, null, {
+        henkilolinkit: [], muista: true,
+      }));
       p.appendChild(nappi);
       loppu = loppu.slice(eka.osuma.index + eka.osuma[0].length);
     }
