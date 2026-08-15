@@ -36,6 +36,9 @@ const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromiu
 
 const kaynnista = async (viewport) => {
   const sivu = await (await selain.newContext({ viewport })).newPage();
+  // Pöllöpalvelin katkaistaan: saapuminen esihakee lukijaäänen
+  // ensimmäisen palan, eikä savuke saa kuluttaa generointikiintiötä.
+  await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
   await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
   await sivu.waitForTimeout(1800);
   // Peli käyntiin: muodot ja maalehdet latautuvat vasta pelin alettua.

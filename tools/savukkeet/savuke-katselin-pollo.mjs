@@ -27,6 +27,14 @@ let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const sivu = await (await selain.newContext({ viewport: { width: 834, height: 1194 } })).newPage();
+/*
+ * Pöllöpalvelin katkaistaan: saapuminen esihakee lukijaäänen
+ * ensimmäisen palan (js/ui.js esilataaLehdet), eikä savuke saa
+ * kuluttaa generointikiintiötä. Katkaisu näyttää pelille tavalliselta
+ * verkkovirheeltä, jonka puskuri nielee hiljaa.
+ */
+await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
+
 await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 
