@@ -337,6 +337,44 @@ vaadi('luenta lähti käyntiin ja haki jatkopaloja',
 vaadi('esihaettua palaa ei generoida uudelleen (välimuistiavain osuu)',
   tuplat.length === 0, JSON.stringify(tuplat.map((p) => String(p.teksti).slice(0, 60))));
 
+/*
+ * 10. MAALEHDEN PUSKURI OSUU OIKEAAN SIVUUN. Etusivun luettava sisältö
+ *     rakennetaan saapuessa irralliseen elementtiin (ui.js
+ *     maalehdenEtusivuRunko), koska lehteä ei ole vielä avattu.
+ *     Verrataan sitä nyt OIKEAAN maalehden ensimmäiseen sivuun: sen
+ *     ensimmäisen palan on oltava sama teksti, joka esihaettiin.
+ */
+const maalehti = await sivu.evaluate(async (iso) => {
+  const lukija = await import('/js/lukija.js');
+  const puhe = await import('/js/puhe.js');
+  const { ui } = window.matkakirja;
+  ui.avaaMaalehti(iso);
+  const kohdat = lukija.kokoaLuettavatKohdat(document.querySelector('#arrival-dialog .dialog-card'));
+  return {
+    sivuja: kohdat.length,
+    eka: kohdat.length ? puhe.paloitteleVirkkeiksi(kohdat[0].teksti)[0] : null,
+  };
+}, odotetut.iso);
+vaadi('maalehden esihaku osui lehden oikean ensimmäisen sivun alkuun',
+  Boolean(maalehti.eka) && esihaut.includes(maalehti.eka), JSON.stringify({ maalehti, esihaut }));
+
+// 11. Maa ILMAN korkokarttaa: etusivu on aihesivu, ja se rakentuu
+//     samalla piirrolla irralliseen elementtiin ilman että lehteä
+//     avataan (Euroopan laudalla kaikilla mailla on kartta, joten
+//     tämä polku koestetaan suoraan).
+const ilmanKarttaa = await sivu.evaluate(async () => {
+  const lukija = await import('/js/lukija.js');
+  const kartat = await import('/js/packs/maakartat.js');
+  const kategoriat = await import('/js/packs/maa-kategoriat.js');
+  const { ui } = window.matkakirja;
+  const iso = Object.keys(kategoriat.MAA_KATEGORIAT).find((k) => !kartat.MAAKARTAT[k]);
+  const runko = ui.maalehdenEtusivuRunko(iso);
+  const kohdat = runko ? lukija.kokoaLuettavatKohdat(runko) : [];
+  return { iso, kohtia: kohdat.length, eka: kohdat[0]?.teksti?.slice(0, 60) ?? null };
+});
+vaadi('kartattoman maan maalehden etusivu rakentuu irralliseen elementtiin',
+  ilmanKarttaa.kohtia > 0 && Boolean(ilmanKarttaa.eka), JSON.stringify(ilmanKarttaa));
+
 await selain.close();
 palvelin.close();
 console.log(`\n${lapi}/${kaikki} läpi.`);

@@ -1607,6 +1607,29 @@ function esilataaKuvat(osoitteet) {
   }
 }
 
+/**
+ * Sama lehtisivu ilman kuvatiedostoja.
+ *
+ * Käytetään vain esikatselupiirrossa (ks. maalehdenEtusivuRunko):
+ * kuvaton kopio tuottaa saman luettavan tekstin, koska lukija ohittaa
+ * IMG-elementit ja kuvatekstit, mutta piirto ei silloin lataa
+ * kymmentä kuvaa esilatausjonon ohi.
+ */
+function kuvitukseton(kategoria) {
+  const riisu = (kohde) => {
+    const kopio = { ...kohde };
+    delete kopio.tiedosto;
+    delete kopio.galleria;
+    return kopio;
+  };
+  const sivu = { ...kategoria };
+  if (sivu.nostot) sivu.nostot = sivu.nostot.map(riisu);
+  if (sivu.lista) {
+    sivu.lista = sivu.lista.map((rivi) => ({ ...rivi, kohteet: (rivi.kohteet ?? []).map(riisu) }));
+  }
+  return sivu;
+}
+
 // Tapahtumakuplien äänet.
 const EVENT_SOUND = { fare: 'ferry', flight: 'flight', aid: 'coin', stuck: 'stuck' };
 
@@ -9093,7 +9116,13 @@ export class UI {
     if (!sivu) return null;
     const runko = html('div', 'wiki-kategoria');
     if (!sivu.kartta) {
-      this.piirraKategoria(sivu, runko);
+      /*
+       * Kuvat pois esikatselukopiosta: lukija ohittaa IMG-elementit,
+       * joten luettava teksti on sama, mutta irrallinen piirto ei
+       * käynnistä omaa kuvaryöppyään esilatausjonon ohi. Sivun kuvat
+       * kulkevat jonossa kuten muutkin (lehdenSivunKuvat).
+       */
+      this.piirraKategoria(kuvitukseton(sivu), runko);
       return runko;
     }
     if (!this.arrivalMaa) return null;
