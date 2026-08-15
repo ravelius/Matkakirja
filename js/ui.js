@@ -10667,14 +10667,18 @@ export class UI {
         otsikko: `Päivitetty ${RAAMATTU.paivitetty}`,
         teksti: RAAMATTU.johdanto,
       }],
-    }, ...RAAMATTU.osiot.map((osio, i) => ({
-      id: `raamattu-${i}`,
-      nimi: osio.otsikko,
-      nostot: [{
-        otsikko: `Tila: ${osio.tila}`,
-        teksti: (osio.kohdat ?? []).join('\n\n'),
-      }],
-    }))];
+    }, ...RAAMATTU.osiot.map((osio, i) => {
+      // Valmiusaste värichippinä otsikossa "Tila:"-rivin sijaan.
+      const valmis = (osio.tila ?? '').startsWith('hyväksytty');
+      return {
+        id: `raamattu-${i}`,
+        nimi: osio.otsikko,
+        tagi: { teksti: valmis ? 'valmis' : 'kesken', luokka: valmis ? 'valmis' : 'kesken' },
+        nostot: [{
+          teksti: (osio.kohdat ?? []).join('\n\n'),
+        }],
+      };
+    })];
     this.avaaKehittajaLehti('Raamattu', sivut);
   }
 
@@ -11637,6 +11641,12 @@ export class UI {
     // Kuvake ei kerro nimeä, joten nimi lukee sisällön yllä.
     if (otsikko) {
       const nimi = html('h3', 'aihe-nimi', kategoria.nimi);
+      // Kehittäjän liitteissä osion valmiusaste värichippinä
+      // otsikon perässä (omistajan tilaus 15.8.2026).
+      if (kategoria.tagi) {
+        nimi.appendChild(html('span', `kehittaja-tagi ${kategoria.tagi.luokka}`,
+          kategoria.tagi.teksti));
+      }
       // Maan sivun tunnisteena lippu otsikkorivin oikeassa reunassa
       // (omistajan toive 7.8.2026) — nimessä ei enää maan genetiiviä.
       if (kategoria.maaLippu) {

@@ -9869,6 +9869,34 @@ body.vertailu-tila .pawns { display: none; }
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* Kehittäjän liitteiden valmiuschippi osion otsikossa (omistajan
+ * tilaus 15.8.2026: "pienet värilliset tagit sen mukaan, onko kohta
+ * valmis vai työstö vielä kesken"). */
+.wiki-kategoria .aihe-nimi .kehittaja-tagi {
+  display: inline-block;
+  vertical-align: 0.15em;
+  margin-left: 0.5em;
+  padding: 0.1em 0.55em;
+  border-radius: 999px;
+  font-size: 0.42em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: system-ui, sans-serif;
+}
+
+.wiki-kategoria .aihe-nimi .kehittaja-tagi.valmis {
+  background: #e2efdc;
+  color: #2c5e2a;
+  border: 1px solid #8fb886;
+}
+
+.wiki-kategoria .aihe-nimi .kehittaja-tagi.kesken {
+  background: #f7ecd2;
+  color: #7a5a12;
+  border: 1px solid #d4b96a;
+}
+
 /*
  * Numeroina-sivun avaava yleisluonnehdinta (omistajan palaute
  * 10.8.2026): datasta koottu 2–3 virkkeen luonnehdinta isolla ennen
