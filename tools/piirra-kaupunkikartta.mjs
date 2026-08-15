@@ -14,8 +14,8 @@
  *
  * Käyttö:  node tools/piirra-kaupunkikartta.mjs berliini
  *          node tools/piirra-kaupunkikartta.mjs berliini --vari
- *            → värinäyte omaan tiedostoonsa, ks. PALETIT alempana.
- *              EI pelin aineistoa eikä korvaa julistetta.
+ *            → pelin värinäkymä (maakartat.js: varikartta-kenttä,
+ *              sw.js:n SHELL). Paletti hyväksytty 15.8.2026.
  * Tuloste: assets/kartat/<kaupunki>-keskusta.png ja rajat-lohko,
  *          joka liitetään js/packs/maakartat.js:n KAUPUNKIKARTAT-
  *          tauluun (pisteet asemoidaan siitä prosentteina).
@@ -2148,7 +2148,7 @@ const rajat = KAUPUNGIT[kaupunki].rajat;
 const piirto = piirretytRajat(KAUPUNGIT[kaupunki]);
 console.log(`Valmis: assets/kartat/${tiedosto}.png`);
 if (VARINAYTE) {
-  console.log('Värinäyte — EI pelin aineistoa: ei vipuun eikä sw.js:ään.');
+  console.log('Värikartta valmis — kytke maakartat.js:n varikartta-kenttään ja sw.js:n SHELLiin, ja KATSO KUVA SILMIN.');
   process.exit(0);
 }
 console.log('KAUPUNKIKARTAT-rivit:');

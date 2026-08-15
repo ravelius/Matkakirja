@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 709, teksti: 'Värikartat Helsinkiin, Pariisiin ja Lontooseen' },
   { v: 708, teksti: 'Berliinin kohteille miniatyyripiirrokset ja karttakortti' },
   { v: 707, teksti: 'Berliinin kohdekartta värein — vipu satelliitin tilalle' },
   { v: 706, teksti: 'Raamatun taitto: kappaleet, yksi palsta, sisällys ehjäksi' },

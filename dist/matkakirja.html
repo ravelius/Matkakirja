@@ -72906,16 +72906,12 @@ const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/helsinki-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     /*
-     * Satelliittinäkymä samasta rajauksesta, ks. berliini alla.
-     * KAINALO ON MUKANA MYÖS SIINÄ: tools/hae-satelliittikartat.mjs
-     * hakee Suomenlinnalle oman WMS-ruudun ja komposoi sen samoille
-     * prosenttipaikoille kuin piirtäjä. Ilman sitä vipu vaihtaisi
-     * kainalon alta pelkän avomeren, ja kohde 7 — jonka karttapiste()
-     * asemoi kainalon sisään — kelluisi tyhjällä vedellä.
+     * Värikartta satelliitin tilalle (omistajan päätös 15.8.2026, ks.
+     * berliini alla). Sama juliste samalta piirtoRajat-alueelta —
+     * Suomenlinnan kainalo piirtyy väreissä samoille
+     * prosenttipaikoille kuin piirroksessa.
      */
-    satelliitti: 'assets/kartat/helsinki-satelliitti.jpg',
-    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
-      + '(muokattua Copernicus Sentinel -dataa)',
+    varikartta: 'assets/kartat/helsinki-varikartta.png',
     /*
      * Rajaus leveni neljänneksellä 15.8.2026 (sama omistajan tilaus
      * kuin Berliinissä): 3,7 × 3,3 km → 4,7 × 4,1 km samasta
@@ -72931,9 +72927,8 @@ const KAUPUNKIKARTAT = {
      * Meilahti lännessä, Vallila ja Kumpula pohjoisessa sekä
      * Korkeasaari idässä. Juuri se avovesi, jota ydinrajaukseen ei
      * saanut ottaa, on nyt reunuksella, jossa se ei syö kuvan ydintä.
-     * SATELLIITTIKUVA ON YHÄ vanhalla rajauksella (Suomenlinnan
-     * kainalo siihen komposoituna), joten satelliittinäkymässä
-     * panorointi pysähtyy kuvan reunaan (ui.js).
+     * Värikartta on piirretty samalta piirtoRajat-alueelta ja kattaa
+     * myös reunuksen.
      */
     rajat: { pohjoinen: 60.1877, etela: 60.1508, lansi: 24.9076, ita: 24.9919 },
     piirtoRajat: { pohjoinen: 60.19877, etela: 60.13973, lansi: 24.88231, ita: 25.01719 },
@@ -73148,15 +73143,9 @@ const KAUPUNKIKARTAT = {
   pariisi: {
     polku: 'assets/kartat/pariisi-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    /*
-     * Satelliittinäkymä samasta rajauksesta, ks. berliini alla —
-     * haettu tools/hae-satelliittikartat.mjs:llä samassa
-     * kuvasuhteessa kuin piirretty PNG, joten kohdepisteet ja
-     * mittajana kelpaavat molemmille näkymille sellaisenaan.
-     */
-    satelliitti: 'assets/kartat/pariisi-satelliitti.jpg',
-    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
-      + '(muokattua Copernicus Sentinel -dataa)',
+    // Värikartta satelliitin tilalle (omistajan päätös 15.8.2026,
+    // ks. berliini alla): sama juliste samalta piirtoRajat-alueelta.
+    varikartta: 'assets/kartat/pariisi-varikartta.png',
     /*
      * Rajaus leveni neljänneksellä 15.8.2026 (sama omistajan tilaus
      * kuin Berliinissä): 6,6 × 5,0 km → 8,3 × 6,2 km samasta
@@ -73173,9 +73162,8 @@ const KAUPUNKIKARTAT = {
      * berliini alla): piirtoRajat on 1,6-kertainen ala samasta
      * keskipisteestä eli 13,3 × 10,0 km. Lepotilassa lehti näyttää
      * yhä yllä olevan rajat-alueen; reunuksella ovat muun muassa Bois
-     * de Boulognen itälaita ja Père-Lachaise. SATELLIITTIKUVA ON YHÄ
-     * vanhalla rajauksella, joten siinä panorointi pysähtyy kuvan
-     * reunaan (ui.js).
+     * de Boulognen itälaita ja Père-Lachaise. Värikartta on piirretty
+     * samalta piirtoRajat-alueelta ja kattaa myös reunuksen.
      */
     rajat: { pohjoinen: 48.8976, etela: 48.8414, lansi: 2.2657, ita: 2.3788 },
     piirtoRajat: { pohjoinen: 48.91446, etela: 48.82454, lansi: 2.23177, ita: 2.41273 },
@@ -73407,15 +73395,9 @@ const KAUPUNKIKARTAT = {
     // kohdetta mahtuvat alueelle.
     polku: 'assets/kartat/lontoo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    /*
-     * Satelliittinäkymä samasta rajauksesta, ks. berliini alla —
-     * haettu tools/hae-satelliittikartat.mjs:llä, joka pyytää kuvan
-     * samassa kuvasuhteessa kuin piirretty PNG, joten kohdepisteet ja
-     * mittajana kelpaavat molemmille näkymille sellaisenaan.
-     */
-    satelliitti: 'assets/kartat/lontoo-satelliitti.jpg',
-    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
-      + '(muokattua Copernicus Sentinel -dataa)',
+    // Värikartta satelliitin tilalle (omistajan päätös 15.8.2026,
+    // ks. berliini alla): sama juliste samalta piirtoRajat-alueelta.
+    varikartta: 'assets/kartat/lontoo-varikartta.png',
     /*
      * Rajaus leveni neljänneksellä 15.8.2026 (sama omistajan tilaus
      * kuin Berliinissä): 6,9 × 3,6 km → 8,7 × 4,5 km samasta
@@ -73429,9 +73411,8 @@ const KAUPUNKIKARTAT = {
      * berliini alla): piirtoRajat on 1,6-kertainen ala samasta
      * keskipisteestä eli 13,9 × 7,2 km. Lepotilassa lehti näyttää yhä
      * yllä olevan rajat-alueen; reunuksella on Regent's Park ja
-     * Kensington Gardens pohjoisessa ja lännessä. SATELLIITTIKUVA ON
-     * YHÄ vanhalla rajauksella, joten siinä panorointi pysähtyy kuvan
-     * reunaan (ui.js).
+     * Kensington Gardens pohjoisessa ja lännessä. Värikartta on
+     * piirretty samalta piirtoRajat-alueelta ja kattaa myös reunuksen.
      */
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
     piirtoRajat: { pohjoinen: 51.54131, etela: 51.47619, lansi: -0.21, ita: -0.01 },
@@ -108984,6 +108965,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v709 — värikartat: Helsinki, Pariisi, Lontoo',
   'v708 — Berliinin pisteet: piirroskortti + juttuun',
   'v707 — Berliinin värikartta (vipu kartalla)',
   'v706 — Raamatun taitto: kappaleet, ei palstoja',
@@ -170829,10 +170811,9 @@ class UI {
     const kohdekartta = KAUPUNKIKARTAT[cityId];
     if (kohdekartta) {
       kuvat.push(kohdekartta.polku ?? valokuvaUrl(kohdekartta.tiedosto, 1000));
-      // Vaihtoehtonäkymä (värikartta tai satelliitti) puskuriin samoin
-      // — vipu vaihtaa kuvan heti napautuksesta.
+      // Värikartta puskuriin samoin — vipu vaihtaa kuvan heti
+      // napautuksesta.
       if (kohdekartta.varikartta) kuvat.push(kohdekartta.varikartta);
-      else if (kohdekartta.satelliitti) kuvat.push(kohdekartta.satelliitti);
       // Miniatyyripiirrokset (etukäteispuskurin periaate): kortti
       // aukeaa napautuksesta, eikä piirros saa latautua vasta siinä.
       kuvat.push(...Object.values(MINIATYYRIT[cityId] ?? {}));
@@ -173768,22 +173749,20 @@ class UI {
     else asetaKuva(kuva, valokuvaUrl(kartta.tiedosto, 1000), valokuvaVara(kartta.tiedosto, 1000));
     kotelo.appendChild(kuva);
     /*
-     * KUMPI KUVA PEITTÄÄ MITÄ OSAA LAVASTA. Piirros on koko lavan
-     * kokoinen, mutta SATELLIITTIKUVA ON VANHALLA RAJAUKSELLA (uusia
-     * ei haettu, ks. naytaNakyma) — se asetetaan siksi tarkalleen
-     * ydinrajauksen päälle. Lepotilassa kumpikin näkymä täyttää
-     * kehyksen samalla tavalla; ero näkyy vasta reunuksella, jonne
-     * satelliittinäkymässä ei pääse panoroimaan.
+     * Kuva peittää koko lavan. (Satelliittinäkymän erikoistapaus —
+     * vanhan rajauksen kuva ydinrajauksen päällä — poistui v709:ssä,
+     * kun värikartta korvasi satelliitin kaikissa kaupungeissa;
+     * värikartta on piirretty samalta piirtoRajat-alueelta kuin
+     * juliste.)
      */
-    const asetaKuvanAla = (satelliitissa) => {
+    const asetaKuvanAla = () => {
       if (!laajennettu) return;
-      const a = satelliitissa ? ydin : { x: 0, y: 0, leveys: 100, korkeus: 100 };
-      kuva.style.left = `${a.x.toFixed(4)}%`;
-      kuva.style.top = `${a.y.toFixed(4)}%`;
-      kuva.style.width = `${a.leveys.toFixed(4)}%`;
-      kuva.style.height = `${a.korkeus.toFixed(4)}%`;
+      kuva.style.left = '0%';
+      kuva.style.top = '0%';
+      kuva.style.width = '100%';
+      kuva.style.height = '100%';
     };
-    asetaKuvanAla(false);
+    asetaKuvanAla();
     /*
      * Mittakaavajana kartan vasempaan alakulmaan (omistajan toive
      * 9.8.2026). Pituus ja teksti tulevat rajauksesta
@@ -173902,22 +173881,14 @@ class UI {
       selitteet.appendChild(selite);
     });
     /*
-     * Näkymävipu piirroksen ja vaihtoehtonäkymän välillä (omistajan
-     * tilaus 14.8.2026; värikartta korvasi satelliitin 15.8.2026, ks.
-     * vaihto-olio alempana). Näkyy vain kaupungilla, jolle
-     * vaihtoehtokuva on tehty — muut kartat piirtyvät ilman vipua.
+     * Näkymävipu piirroksen ja värikartan välillä (omistajan tilaus
+     * 14.8.2026 satelliitille; värikartta korvasi satelliitin
+     * 15.8.2026). Näkyy vain kaupungilla, jolle värikartta on
+     * piirretty — muut kartat piirtyvät ilman vipua.
      *
-     * SATELLIITTI EI KATA REUNUSTA: satelliittikuvat ovat vanhalla
-     * ydinrajauksella, joten kuva asetetaan tarkalleen ytimen päälle
-     * (asetaKuvanAla) ja panorointi rajataan satelliittinäkymässä
-     * kuvan reunaan (kytkeKarttaZoom lukee satelliittinakyma-luokan).
-     * Värikartta sen sijaan on piirretty koko piirtoRajat-alueelta ja
-     * käyttäytyy kuten piirros.
-     *
-     * Vaihto koskee VAIN taustakuvaa ja lähderiviä. Kohdepisteet,
-     * selitteet ja mittajana lasketaan rajauksesta (karttapiste,
-     * mittakaava), joten ne osuvat kohdalleen kummassakin näkymässä
-     * ilman omaa koodia.
+     * Vaihto koskee VAIN taustakuvaa: molemmat julisteet on piirretty
+     * samalta piirtoRajat-alueelta, joten kohdepisteet, selitteet,
+     * mittajana, zoom ja panorointi ovat yhteiset ilman omaa koodia.
      *
      * Kaksi nappia eikä yksi vuorottelija: yhden napin teksti
      * valehtelee kumpaan suuntaan tahansa, koska "Värikartta"
@@ -173926,7 +173897,7 @@ class UI {
      * Valinta on istuntokohtainen eikä mene tallennukseen — se on
      * katselutapa, ei pelitilanne. Muistissa on kaupungin tunnus eikä
      * pelkkä totuusarvo, jottei toisen kaupungin lehti aukea
-     * vaihtoehtonäkymään sitten kun näitä on useampia.
+     * värinäkymään.
      */
     const lahderivi = html('p', 'lahde', kartta.lahde);
     /*
@@ -173959,38 +173930,22 @@ class UI {
     const zoomOhjain = {};
     tyokalut.appendChild(zoomiRyhma);
     /*
-     * VÄRIKARTTA KORVAA SATELLIITIN (omistajan päätös 15.8.2026: "Joo
-     * vaihda väri berliiniin"; taustalla linjaus "Pelkät värit samaan
-     * piirros karttaan voisi olla toimivin ratkaisu ... oman togglen
-     * takana nykyisen satelliitti kartan sijalla"). Kaupunki, jolla on
-     * varikartta-kenttä, saa vivun Piirros/Värikartta; muut
-     * satelliittikaupungit pitävät vanhan vipunsa, kunnes niidenkin
-     * värikartat on piirretty ja katsottu. Värikartta on piirretty
-     * samalta piirtoRajat-alueelta kuin juliste, joten se kattaa myös
-     * reunuksen — panorointia ei rajata eikä kuvan alaa siirretä,
-     * toisin kuin satelliitissa (vanha rajaus, ks. asetaKuvanAla).
+     * VÄRIKARTTA KORVASI SATELLIITIN (omistajan päätös 15.8.2026: "Joo
+     * vaihda väri berliiniin" ja "samat kolmeen kaupunkiin"; taustalla
+     * linjaus "Pelkät värit samaan piirros karttaan voisi olla
+     * toimivin ratkaisu ... oman togglen takana nykyisen satelliitti
+     * kartan sijalla"). Kaupunki, jolla on varikartta-kenttä, saa
+     * vivun Piirros/Värikartta. Värikartta on piirretty samalta
+     * piirtoRajat-alueelta kuin juliste, joten se kattaa myös
+     * reunuksen — zoom ja panorointi toimivat täsmälleen kuten
+     * piirroksessa. Satelliittikuvat ja niiden erikoistapaukset
+     * (vanhan rajauksen kuvan ala, panoroinnin rajaus) poistuivat
+     * v709:ssä kaikista kaupungeista.
      */
-    const vaihto = kartta.varikartta
-      ? {
-        nimi: 'Värikartta',
-        ikoni: VIIVA_IKONIT.varikartta,
-        src: kartta.varikartta,
-        alt: 'Kaupungin kartta värein',
-        lahde: kartta.lahde,
-        satelliittimainen: false,
-      }
-      : (kartta.satelliitti ? {
-        nimi: 'Satelliitti',
-        ikoni: VIIVA_IKONIT.satelliitti,
-        src: kartta.satelliitti,
-        alt: 'Kaupunki satelliittikuvassa',
-        lahde: kartta.satelliittiLahde,
-        satelliittimainen: true,
-      } : null);
-    if (vaihto && kartta.polku) {
+    if (kartta.varikartta && kartta.polku) {
       const nakymat = [
         { vaihdossa: false, nimi: 'Piirros', ikoni: VIIVA_IKONIT.taitekartta },
-        { vaihdossa: true, nimi: vaihto.nimi, ikoni: vaihto.ikoni },
+        { vaihdossa: true, nimi: 'Värikartta', ikoni: VIIVA_IKONIT.varikartta },
       ];
       const vipu = html('div', 'kartta-vipu');
       vipu.setAttribute('role', 'group');
@@ -174005,20 +173960,8 @@ class UI {
       });
       const naytaNakyma = (vaihdossa) => {
         this.satelliittiNakyma = vaihdossa ? kaupunki : null;
-        // Mittajana on piirretty paperin väreillä ja katoaa
-        // satelliittikuvan tummaan metsään — luokka vahvistaa sen
-        // taustan ja rajaa panoroinnin kuvan reunaan (kytkeKarttaZoom).
-        // Värikartta ei tarvitse kumpaakaan: sävyt ovat paperia ja
-        // kuva kattaa reunuksen.
-        kotelo.classList.toggle('satelliittinakyma', vaihdossa && vaihto.satelliittimainen);
-        kuva.src = vaihdossa ? vaihto.src : kartta.polku;
-        kuva.alt = vaihdossa ? vaihto.alt : 'Kaupungin kartta';
-        lahderivi.textContent = vaihdossa ? vaihto.lahde : kartta.lahde;
-        asetaKuvanAla(vaihdossa && vaihto.satelliittimainen);
-        // Reunuksella panoroiva pelaaja voi vaihdossa olla kuvan
-        // ulkopuolella: uudet rajat pakottavat näkymän takaisin
-        // ydinrajaukseen (pehmennettynä, koska liike ei tule sormesta).
-        zoomOhjain.paivita?.();
+        kuva.src = vaihdossa ? kartta.varikartta : kartta.polku;
+        kuva.alt = vaihdossa ? 'Kaupungin kartta värein' : 'Kaupungin kartta';
         napit.forEach((nappi, i) => {
           nappi.setAttribute('aria-pressed', String(nakymat[i].vaihdossa === vaihdossa));
         });
@@ -179738,6 +179681,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 709, teksti: 'Värikartat Helsinkiin, Pariisiin ja Lontooseen' },
   { v: 708, teksti: 'Berliinin kohteille miniatyyripiirrokset ja karttakortti' },
   { v: 707, teksti: 'Berliinin kohdekartta värein — vipu satelliitin tilalle' },
   { v: 706, teksti: 'Raamatun taitto: kappaleet, yksi palsta, sisällys ehjäksi' },
@@ -180543,7 +180487,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.708';
+const APP_VERSION = '2026-08-09.709';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
