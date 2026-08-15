@@ -1,160 +1,205 @@
-# Opus 15 → Fable: kartta jatkuu reunojen yli (+ värikarttanäyte)
+# Opus 17 → Fable: neljä nähtävyysjuttua (v695)
 
-Haara `claude/opus15-karttareunus`, **PR #1060 auki (v694)**,
-rebasoitu tuoreeseen mainiin (96ed544) juuri ennen versionostoa.
-Molemmat osat valmiit, portit ajettu, kaikki uudet kuvat katsottu
-silmin.
+## Tilanne
 
-## OSA A — kartta jatkuu reunojen yli (kytketty peliin)
-
-Neljän uuden mallin kaupungin juliste on piirretty **1,6-kertaiselta
-alalta samasta keskipisteestä**. **Lepotilassa lehti näyttää
-täsmälleen entisen rajauksen** — reunus paljastuu vasta zoomatessa,
-kun panorointi jatkuu sen puolelle sen sijaan että pysähtyisi kuvan
-reunaan.
-
-| Kaupunki | Ydinrajaus (lepotila) | Piirretty ala | PNG |
-| --- | --- | --- | --- |
-| Berliini | 10,2 × 7,7 km | 16,3 × 12,3 km | 2560 × 1935, 3,5 Mt |
-| Lontoo | 8,7 × 4,5 km | 13,9 × 7,2 km | 2560 × 1339, 3,1 Mt |
-| Pariisi | 8,3 × 6,2 km | 13,3 × 10,0 km | 2560 × 1934, 4,2 Mt |
-| Helsinki | 4,7 × 4,1 km | 7,5 × 6,6 km | 2560 × 2253, 2,2 Mt |
-
-Reunukselle tuli oikeaa kaupunkia: Berliinissä Tiergartenin länsipää
-ja Kreuzberg, Lontoossa Regent's Park ja Kensington Gardens,
-Pariisissa Périphérique kokonaan, Bois de Boulognen itälaita ja
-Père-Lachaise, Helsingissä Seurasaari, Meilahti, Vallila ja
-Korkeasaari.
-
-### Miten se on tehty
-
-**maakartat.js** — kaupungille valinnainen `piirtoRajat` (koko
-piirretty ala); `rajat` säilyy leponäkymänä. Uusi `ydinAla(kartta)`
-kertoo, missä kohtaa kuvaa ydinrajaus on, ja `karttapiste`,
-`mittakaava` ja kainalot laskevat prosenttinsa piirretystä kuvasta.
-**Ilman `piirtoRajat`-lohkoa `ydinAla` palauttaa koko kuvan, jolloin
-jokainen kaava palautuu sanasta sanaan entiselleen** — 48 vanhaa
-kohdekarttaa eivät muutu millään tavalla (testi vahtii tämän).
-
-**ui.js** — lava mitoitetaan `piirtoRajat/rajat`-suhteella kehystä
-suuremmaksi ja asemoidaan niin, että ydinrajaus täyttää kehyksen.
-**Invariantti pidetty: lepotilassa (k = 1) lavalla EI ole
-transformia** — asemointi on left/top-asettelua, ja savuke mittaa
-nyt sen suoraan (`getComputedStyle(lava).transform === 'none'`).
-Kehys saa korkeutensa ydinrajauksen kuvasuhteesta (`aspect-ratio`,
-`box-sizing: content-box`, jotta reunaviiva ei vääristä sitä).
-
-**Panoroinnin rajat** yleistettiin: sallittu ala kasvaa
-ydinrajauksesta koko lavaan kertoimen mukana ja on kertoimesta 1,25
-ylöspäin koko piirretty ala. Kertoimella 1 väli kutistuu pisteeksi
-nolla, eli näkymä palaa ydinrajaukseen ja lava jää ilman muunnosta.
-Liukuma 1 → 1,25 on siellä yhtä syytä varten: ilman sitä pohjaan
-loitonnettaessa reunukselta ydinrajaukseen palattaisiin hyppäyksellä
-viimeisellä pykälällä. Zoomin yläraja (3) ja pisteiden vastaskaalaus
-(`--zoom`) ovat ennallaan.
-
-**Kuvan leveys kasvoi samassa suhteessa** (1600 → 2560 px), ja se on
-tarkoituksellista: ydinrajaus pysyy 1600 pikselinä, joten lepotilan
-terävyys ja viivojen paksuus ovat täsmälleen entiset eikä zoomin
-yläraja ala näyttää selaimen venytystä.
-
-**Suomenlinnan kainalo** (helsinki): prosentit ovat kuvasta, joten ne
-muunnettiin kaavalla `18,75 + vanha × 0,625` (mitat × 0,625):
-x 76 → 66.25, y 69.15 → 61.97, leveys 22 → 13.75, korkeus 28.81 → 18.
-Ruutu on lepotilassa pikselilleen entisessä kohdassaan ja entisen
-kokoinen, ja kohde 7 osuu sen sisään (tarkistin sanoo "maalla").
-
-### Satelliitti — ero, joka on tiedossa ja tahallinen
-
-Satelliittikuvia **ei haettu uudelleen**; ne ovat vanhalla
-rajauksella. Lepotilan kohdistus ei siitä muutu (kuva asetetaan
-tarkalleen ydinrajauksen päälle), mutta **satelliittinäkymässä
-panorointi rajataan vanhaan tapaan kuvan reunaan** — muuten reunukselle
-panoroiva pelaaja näkisi tyhjää. Savuke mittaa molemmat tapaukset
-erikseen. `tools/hae-satelliittikartat.mjs` päivitettiin vastaamaan
-tätä (hakee yhä pelkän ydinrajauksen ja muuntaa kainalon prosentit),
-**mutta sitä ei ajettu** — kuvatiedostot ovat ennallaan. Jos reunus
-joskus halutaan satelliittiinkin, muutos on yhden rivin mittainen,
-mutta kuva kasvaa 2,6-kertaiseksi eikä s2cloudless (10 m/px) siitä
-tarkennu. **Omistajan päätettäväksi.**
-
-### Portit
-
-- `node tools/tarkista-karttapisteet.mjs` × 4 → kaikki pisteet maalla,
-  yksikään ei peitä mittajanaa. Työkalu korjattiin samalla laskemaan
-  ruudulla olevat mitat lavan pikseleissä (muuten reunuksellisen
-  kartan numeroympyrät näyttivät 1,6× lähempänä toisiaan kuin ovat).
-- `node tools/savuke-karttazoom.mjs` × 4 → **SAVUKE LÄPI** kaikilla.
-  Savuketta laajennettiin: reunukselle panorointi, paluu lepotilaan
-  (kehyksessä on tarkalleen ydinrajaus), muunnoksettomuus k = 1:ssä ja
-  satelliitin oma rajaus.
-- `node --test tests/*.test.mjs` → **711 tests, 710 pass, 0 fail.**
-  Uusi `tests/karttareunus.test.mjs` (6 testiä) vahtii geometrian:
-  keskipiste, kehyksen kuvasuhde, kohdepisteiden paikka lepotilassa,
-  kainalo näkymän sisällä, janan mitta ja se, ettei laajentamaton
-  kartta muutu.
-- `node tools/tarkista-kaksoisavaimet.mjs` → puhdas.
-- `node tools/build-standalone.mjs` → dist uusittu.
-- Silmätarkistus: kaikki neljä uutta PNG:tä katsottu sekä koko
-  julisteena että lepotilan rajauksessa, ja lepotila verrattiin
-  mainin vanhaan kuvaan (Berliini ja Helsinki pikselivertailuna
-  silmällä — identtiset). Lisäksi lehden kaappaukset selaimesta.
-
-### Kaksi asiaa tiedoksi, ei korjattu
-
-1. **Kohdekarttojen PNG:t kasvoivat yhteensä ~7,2 Mt** (5,7 → 12,9 Mt
-   näillä neljällä), ja kaikki neljä ovat `sw.js`:n SHELL-listassa eli
-   jokainen asennus lataa ne. Jos tämä on liikaa, oikea korjaus on
-   siirtää kohdekartat SHELListä lennossa haettaviksi — se on oma
-   päätöksensä eikä kuulunut tähän tehtävään.
-2. **Esittelytekstien sijaintiviittaukset** ("oikeassa alanurkassa on
-   oma pieni kartta Suomenlinnasta", "kartan keskellä näkyy saari")
-   pitävät edelleen paikkansa, koska leponäkymä ei muuttunut.
-   Tarkistettu silmällä kaikista neljästä.
-
-## OSA B — värikarttanäyte (EI kytketty peliin)
-
-`tools/piirra-kaupunkikartta.mjs` sai `--vari`-lipun ja toisen
-palettinsa. Näyte: **`assets/kartat/berliini-varikartta-nayte.png`**
-(sama rajaus ja sama aineisto kuin julisteessa). **Ei vipuun eikä
-sw.js:ään** — työkalu tulostaa sen omaan tiedostoonsa eikä koske
-julisteeseen.
-
-Paletissa on:
-
-| Kohde | Juliste | Värinäyte |
+| Kaupunki | Kohde (kartan piste) | Tila |
 | --- | --- | --- |
-| Vesi | `#e8d5a9` hiekka | `#c3d5da` harmaansininen, reuna `#95afb6` |
-| Puistot | `#efe6ca` kuiskaus | `#d6dcba` salvianvihreä |
-| Pohja (korttelit) | `#f6eeda` paperi | `#f3e8ce` lämmin hiekka |
-| Radat | `#d5c9b0` | `#cec2a8` |
-| Rauniot | `#ece0c2` | `#ead9b4` |
-| Kadut ja muuri | musteruskeat | **täsmälleen samat** |
+| pariisi | Luxembourgin puisto (5/8) | **valmis** |
+| pariisi | Panthéon (7/8) | **valmis** |
+| helsinki | Linnanmäki (2/9) | **valmis** |
+| helsinki | Kallion kirkko (5/9) | **valmis** |
 
-Kadut jätettiin tahallaan julisteen sävyihin: ensimmäisessä versiossa
-myös katuja tummennettiin, ja kuva alkoi näyttää tavalliselta
-verkkokartalta. Nyt ero julisteeseen on täsmälleen se, mitä omistaja
-kysyi — vesi ja puistot saavat värin, muu pysyy paperina. Sinistä ja
-vihreää on harmaannutettu: sini kallistuu teräksiseen ja vihreä
-salviaan.
+Haara `claude/opus17-nahtavyysjutut`, versio **v695**, muutosloki­rivi
+"Panthéon, Luxembourg, Kallio ja Linnanmäki" (42 merkkiä).
 
-Työkalu ei piirrä rakennuksia (tunnettu rajoite, kirjattu useaan
-kaupunkilohkoon), joten "korttelit" tarkoittaa katujen väliin jäävää
-pohjaa. Rakennusten piirto olisi oma työnsä, ei paletin.
+Pariisilla ja Helsingillä on nyt **oma juttu jokaisella kartan
+kohteella** (8/8 ja 9/9) — yhtään wiki-ponnahdusta ei enää jää.
 
-Näyte on 3,6 Mt eikä sitä ladata pelissä. Jos omistaja hylkää idean,
-tiedoston voi poistaa yhdellä commitilla.
+## Rajaus pidettiin
 
-## Julkaisu
+Muutetut tiedostot: `js/packs/nahtavyysjutut.js` + versiotiedostot
+(`js/main.js`, `js/muutokset.js`, `sw.js`) + `dist/`-build +
+tämä raportti. **`maakartat.js`:ään ei koskettu** (Opus 15 työstää sitä
+rinnakkain), kaanoniin ei koskettu, API-avaimia ei ole repossa eikä
+lokissa.
 
-**PR #1060, versio v694.** Haara rebasoitiin tuoreeseen mainiin ennen
-versionostoa, joten muutosloki, sw.js:n CACHE ja APP_VERSION ovat
-peräkkäin eivätkä törmää. `tools/uusi-versio.mjs` ajettiin viimeisenä
-ennen buildia (`git fetch origin main` sitä ennen).
+`node tools/vertaa-sisaltodiff.mjs origin/main HEAD
+js/packs/nahtavyysjutut.js NAHTAVYYSJUTUT` → **muuttuneita kenttiä 0**.
+Muutos on puhtaasti lisäävä: yhtäkään vanhaa kenttää ei ole muokattu,
+joten pistokokeessa ei ole vanha/uusi-pareja luettavana.
 
-Jos main ehtii liikkua ennen mergeä: versionosto on ajettava uudelleen,
-mutta muut tiedostot eivät ole törmäyskurssilla — kohdekarttatyö koskee
-vain maakartat.js:n neljää kaupunkilohkoa, ui.js:n kohdekarttametodeja,
-neljää kartta-PNG:tä ja karttatyökaluja.
+Avaimet on todennettu ajonaikaisesti maakartat.js:ää vasten: kaikki
+neljä täsmäävät kohdelistan nimiin merkilleen, ja juttujen järjestys
+seuraa kartan pistenumerointia kuten tiedostossa ennenkin.
 
-Jään valmiuteen.
+## Muoto
+
+Jokaisessa: `aika`, 3 kappaletta, `lahde: 'Wikipedia'` (ei linkkiä).
+Tekstipituudet 1 205–1 427 merkkiä, samaa luokkaa kuin Pariisin vanhat
+jutut. **Lainaus vain yhdessä** (Panthéon) — muihin ei löytynyt aidosti
+lähteistettyä sitaattia, joten kenttä jätettiin pois Reuter-linjan
+mukaisesti.
+
+Kuvia 1 per juttu, paitsi kaksi siellä missä aihe kantaa: Panthéonilla
+rakennus + Foucault'n heiluri (oma kappaleensa tekstissä) ja
+Luxembourgissa nykypäivä + Edelfeltin 1887 näkymä. Peli näyttää parin
+karusellina, joten sivu ei veny.
+
+## Kuvat: lisenssi tarkistettu tiedostosivulta ja KATSOTTU silmin
+
+Jokainen ladattiin 480 px:n thumbina ja katsottiin. Alla omin sanoin
+mitä kuvassa näkyy — ei pikselileveyksiä.
+
+1. **`Panthéon, Paris 15 August 2011.jpg`** — Michal Osmenda, CC BY-SA 2.0,
+   4288×2717.
+   *Katsottu:* rakennus vinosti kadun toiselta puolen. Kupoli lepää
+   pylväskehän päällä, huipulla lyhty ja risti. Oikealla korinttilainen
+   pylväikkö ja päätykolmio; vasemmalle jatkuva pitkä sivuseinä on
+   **täysin ikkunaton** — juuri se, mistä teksti kertoo. Alhaalla katu,
+   pysäköityjä autoja, valkoinen pakettiauto ja kävelijöitä. Sininen
+   taivas ja kumpupilviä. Ei väripalkkeja, vesileimoja eikä kollaasia.
+
+2. **`Foucault pendulum at Panthéon de Paris, August 2023.JPG`** —
+   Benoît Prieur, CC0, 4032×3024.
+   *Katsottu:* ylhäältä kuvattu marmorilattian ruusuke. Heilurin
+   **kullattu pallo** riippuu vasemmassa yläkulmassa, sen alla pyöreä
+   metallikehikko. Lattian reunaan on merkitty numerot (10, 9, 8, 7
+   näkyvissä). Yläreunassa kävijöiden jalkoja. Valoisa ja terävä.
+   *(Hylättiin tilalta `Foucault pendulum at Panthéon de Paris
+   (26126608674).jpg`: hämärä, ja väkijoukko peitti kehän.)*
+
+3. **`Sunday in the Luxembourg Gardens, Paris May 2014.jpg`** —
+   missbossy, CC BY 2.0, 5204×3473.
+   *Katsottu:* aurinkoinen kesäpäivä. Taustalla Luxembourgin palatsi,
+   oikealla kaidepylväikkö ja kivimaljakot, keskellä nurmirinne, jolla
+   istuu ihmisiä. Vasemmalla väkeä puiston omilla metallituoleilla,
+   ruukkupuita, kävelijöitä. Vihreä ja eloisa.
+   *(Tekijämerkintä on Commonsin `Artist`-kentän mukaan käyttäjänimi
+   `missbossy` — en arvannut sen taakse oikeaa nimeä, ks. tutki-aiheet
+   vika 1.)*
+
+4. **`Albert Edelfelt - The Luxembourg Gardens, Paris.jpg`** —
+   Albert Edelfelt, PD, 8724×6528.
+   *Katsottu:* maalaus 1887. Naisia tummissa puvuissa puiston
+   punotuilla tuoleilla, keskellä punatukkainen tyttö valkoisessa
+   mekossa **iso puuvanne** kädessään. Edessä kaksi pikkulasta
+   kyykkimässä hiekalla, taustalla valkolakkisia lastenhoitajia,
+   lastenvaunut, lehdettömiä puita ja vaaleat kaupungintalot.
+   *(Valittu PD-tiedosto eikä Kansallisgallerian CC0-rinnakkaiskopio,
+   koska siinä `Artist` on maalari eikä skannaaja. Sama kuva, sama
+   koko.)*
+
+5. **`Kallio Church Helsinki.jpg`** — Acediscovery, CC BY 4.0, 3000×2361.
+   *Katsottu:* kirkko alaviistosta talvella. Massiivinen harmaa
+   graniittitorni syvänsinistä taivasta vasten, tornin lakiosa ja
+   alempi kupoli **patinoitunutta vihreää kuparia**, huipulla risti.
+   Etualalla lumisia kuusia, vasemmalla vaalea kerrostalo. Kirkas valo.
+   *(Hylättiin `Kallion kirkko 3.jpg`: etualaa hallitsi kirjava
+   taideteos ja kirkko jäi pieneksi taustalle.)*
+
+6. **`Linnanmäki Water Tower 2.jpg`** — Tatu Kosonen, CC BY-SA 4.0,
+   3628×2644.
+   *Katsottu:* huvipuiston **uudempi vesitorni**: valtava pyöreä
+   tummanpunainen tiilirumpu, kyljessä laitteen nimikyltti. Edessä
+   lehdettömiä koivuja, kirjavia kojuja ja iso joukko kävijöitä
+   kevätvaatteissa. Vastaa suoraan tekstin ensimmäistä kappaletta.
+
+Yksikään kuudesta ei ole ennestään käytössä näissä kaupungeissa
+(tarkistettu koko `js/`-puusta). **Vuoristoradan oma kuva jätettiin
+tarkoituksella pois:** `Linnanmäki Vuoristorata.jpg` on jo Helsingin
+kannessa (`kulttuuri-kategoriat.js`, nosto "Vuoristoradan takana
+seisoo jarrumestari"), joten juttu käyttää vesitornikuvaa ja painottaa
+tekstissä eri asioita kuin lehden nosto (väliaikaisuus, Lebechin
+piirustukset, olympialaiset, puuosien uusiminen) — ei toistoa.
+
+## Mistä faktat tarkistettiin
+
+Lähteenä en- ja fi-Wikipedia, ristiin tarkistettuna; ristiriitatapauksissa
+haettiin kolmas artikkeli. Tekstit ovat oma tiivistys, eivät käännöstä.
+
+- **Panthéon:** en `Panthéon`, fi `Panthéon`, fr `Panthéon (Paris)`.
+  *Ristiriita:* fi antaa valmistumisvuodeksi 1789, en ja fr **1790** →
+  käytettiin 1790. Zolan panteonisointi: fi sanoo 1902 (kuolinvuosi),
+  en **1908** → jätettiin vuosiluku pois. Napoleonin ajan hautausten
+  määrä 41/42 vaihtelee lähteittäin → jätettiin pois. Ikkunatieto
+  "38 neljästäkymmenestäkahdesta" on fr-artikkelista (*"il obture
+  trente-huit des quarante-deux fenêtres"*). Päätykolmion teksti ja sen
+  vaiheet (1791 → poisto → 1830) en-artikkelista.
+- **Luxembourgin puisto:** en `Jardin du Luxembourg`, fi, fr.
+  *Ristiriita:* pinta-ala 23 ha (en) vs. 25,72/21,75 ha (fi) → luku
+  jätettiin pois, hehtaarihistoria (8 → 30 → 40 → −7) on en-artikkelin
+  aikajanasta. Medici-lähteen rakennusvuosi vaihtelee en-artikkelin
+  sisällä (1620/1630) → vuosiluku jätettiin pois, kerrotaan vain
+  siirto 1860-luvulla.
+- **Kallion kirkko:** fi `Kallion kirkko`, en `Kallio Church`.
+  *Ristiriita:* istumapaikat 900 (fi) vs. 1 100 (en) → jätettiin pois.
+  Kellosävelmästä en sanoo, että se soitetaan neljällä kellolla, fi ei
+  erittele → muotoiltu erittelemättä. "Työväen kaupunginosa" on
+  lähteistetty fi-artikkelista `Kallio (Helsinki)`: *"Kallio on aiemmin
+  tunnettu työväestön asuinalueena."*
+- **Linnanmäki:** fi ja en `Linnanmäki`, en `Vuoristorata`.
+  Vuoristoradan yksityiskohdat (talvi 1950, Lebechin piirustukset,
+  avaus 13.7.1951, arvioitu 15 vuoden käyttöikä ja luvan jatkaminen,
+  olympialaiset 1952, puuosat vaihdettu ≥5 kertaa vuoteen 2015,
+  alkuperäisiä vain vaunujen tammirungot) ovat **en `Vuoristorata`**
+  -artikkelista, joka on tarkempi kuin puiston oma artikkeli.
+  Lahjoitusluvut (4,5 M€ 2023, yhteensä yli 130 M€) en-artikkelista.
+  *Ristiriita:* säätiön perustamisvuosi 1956 (fi) vs. 1957 (en) →
+  vuosiluku jätettiin pois. Karuselli 1896 / Linnanmäellä 1954 (en).
+
+Vedenneitohalli ja puiston kaksi kuolemaan johtanutta onnettomuutta
+jätettiin tarkoituksella pois: 13+ -linjan mukaan mikään ei ole liian
+rankkaa, mutta kumpikaan ei mahdu kolmeen kappaleeseen ilman että
+puiston oma tarina kärsii. **Kirjaan ne tähän, jos haluat ne mukaan.**
+
+## Portit
+
+| Portti | Tulos |
+| --- | --- |
+| `tools/kuvateksti-audit.mjs` | nahtavyysjutut **0/619 yli rajan**; uudet selitteet 137–158 mrk (raja 260) |
+| `git fetch origin main` → `tools/uusi-versio.mjs` | v695, rivi 42 mrk |
+| `node --test tests/*.test.mjs` | **# pass 710, # fail 0**, skipped 1 |
+| `tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
+| `tools/build-standalone.mjs` | dist 10 503 kt, ajettu tuoreesta mainista |
+| Playwright-savuke | 4/4 juttua aukeaa oikeasta pisteestä, kuvat 900 px, ei sivuvirheitä |
+
+Haara rebasettiin tuoreeseen mainiin (`dba4087`) **ennen** versionostoa,
+jotta dist rakentui ajantasaisesta puusta.
+
+### Savukkeen tulos
+
+Ajettiin oikealla selaimella: kartta auki → piste napautettu → mitattu
+mitä dialogiin tuli. Kaikki neljä: oma juttu auki (ei "Lue lisää"
+-wikilinkkiä), otsikko oikein, 3 kappaletta, kuva latautui 900 px:iin.
+Panthéonilla lainaus näkyy, muilla ei. Karusellilaskuri 1/2 ja 2/2
+kahden kuvan jutuissa, 1/1 muissa. Kaappaukset katsottiin silmin:
+taitto on ehjä, kuvasuhteet oikein, kuvateksti ja tekijämerkintä
+kuvan alla, teksti ei purista.
+
+**Kaksi konttihavaintoa savukkeesta** (eivät koske peliä, mutta
+säästävät seuraavalta sessiolta tunnin):
+
+1. Uudet kuvat palauttavat R2-peilistä 404:n, kunnes muutos on mainissa
+   ja `peilaa.yml` on ajanut. Savukkeessa peili kytkettiin pois
+   `sessionStorage`-katkaisijalla, jolloin kuvat tulevat Commonsista.
+   **Peilaus tapahtuu mergen jälkeen itsestään — ei toimenpiteitä.**
+2. Kaappauksissa kuvat jäivät ensin tyhjiksi, koska `sw.js` nappaa
+   kuvapyynnöt ennen Playwrightin `route()`-välitystä. Ratkaisu:
+   `newContext({ serviceWorkers: 'block' })`. Lisäksi Commonsin
+   `Special:FilePath` antaa herkästi 429:n — `w/thumb.php` ei.
+
+## Avoimet asiat
+
+Ei esteitä. Kaksi asiaa tiedoksi:
+
+1. **Pariisin ja Helsingin vanhat jutut ovat lyhyempiä ja
+   yleisluontoisempia** kuin Berliinin ja Lontoon (esim. Riemukaaren
+   kuvateksti on pelkkä "Riemukaari Pariisissa"). En koskenut niihin —
+   rajaus oli neljä uutta juttua. Jos haluat, ne voi nostaa samalle
+   tasolle omana eränään.
+2. **Linnanmäen aihe menee osin päällekkäin Helsingin kannen noston
+   kanssa** (ks. yllä). Ratkaisin sen kuvavalinnalla ja eri
+   painotuksella, mutta jos pidät toistoa liiallisena, kannen nosto
+   voisi vaihtua johonkin muuhun Helsinki-aiheeseen.
+
+Kaikki on pushattu ja PR auki. Jään valmiuteen.
