@@ -43,7 +43,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.749';
+const APP_VERSION = '2026-08-09.750';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1135,7 +1135,8 @@ async function haeTyohuoneTila() {
     // Ilmaistason 10 Gt on tilikohtainen, joten palkkiin kuuluu
     // ämpärien summa.
     (async () => {
-      const res = await fetch(`${PEILI_JUURI}manifesti.json`);
+      // no-store: vanhentunut manifesti näyttäisi väärää summaa.
+      const res = await fetch(`${PEILI_JUURI}manifesti.json`, { cache: 'no-store' });
       if (!res.ok) return null;
       const m = await res.json();
       let tavut = 0;
@@ -1144,18 +1145,32 @@ async function haeTyohuoneTila() {
       }
       return { tavut };
     })().catch(() => null),
+    /*
+     * Tila-haun epäonnistumisen SYY talteen (omistajan kysymys
+     * 15.8.2026: "miksi sanoo, että admin avaimet puuttuvat?" —
+     * ruudulla luki admin-avaimista, vaikka oikeasti koko kutsu jäi
+     * tekemättä). Rajattu kehittäjäkoodi ei talleta pöllökoodia
+     * laitteelle, jolloin syy on 'koodi' — kulurivi kertoo sen nyt
+     * suoraan sen sijaan että syyttäisi vääriä avaimia.
+     */
     (async () => {
       const koodi = window.localStorage?.getItem(POLLO_KOODIAVAIN);
-      if (!koodi) return null;
+      if (!koodi) return { syy: 'koodi' };
       const vastaus = await fetch(POLLOPALVELIN, {
         method: 'POST',
         headers: { 'content-type': 'application/json', 'x-pollo-kehittaja': koodi },
         body: JSON.stringify({ tehtava: 'tila' }),
       });
-      return vastaus.ok ? vastaus.json() : null;
-    })().catch(() => null),
+      if (!vastaus.ok) return { syy: `palvelin ${vastaus.status}` };
+      return { syy: null, tila: await vastaus.json() };
+    })().catch(() => ({ syy: 'verkko' })),
   ]);
-  return { repoKt: repo?.size ?? null, tila, peili };
+  return {
+    repoKt: repo?.size ?? null,
+    tila: tila?.tila ?? null,
+    tilaSyy: tila?.syy ?? null,
+    peili,
+  };
 }
 
 function tyohuonePalkki(nimi, osuus, arvoTeksti) {
@@ -1225,6 +1240,13 @@ function piirraTyohuonePalkit(data) {
     const claudeNimi = tila.kulut.claudeRajattu ? 'Claude/Pöllö' : 'Claude (koko org.)';
     kulut.textContent = `Kulut tässä kuussa $${tila.kulut.yhteensa.toFixed(2)} `
       + `(${osa('OpenAI', tila.kulut.openai)} · ${osa(claudeNimi, tila.kulut.claude)})`;
+  } else if (data.tilaSyy === 'koodi') {
+    // Rajattu kehittäjäkoodi ei talleta pöllökoodia — kiintiöt ja
+    // kulut näkyvät vain täydellä koodilla kirjautuneelle.
+    kulut.textContent = 'Kiintiöt ja kulut näkyvät vain täydellä '
+      + 'kehittäjäkoodilla (kytke kehittäjätila uudelleen sillä)';
+  } else if (data.tilaSyy) {
+    kulut.textContent = `Kulut: pöllöpalvelin ei vastannut (${data.tilaSyy})`;
   } else {
     kulut.textContent = 'Kulut: ei nähtävissä (admin-avaimet puuttuvat)';
   }
@@ -1233,7 +1255,10 @@ function piirraTyohuonePalkit(data) {
 
 function paivitaTyohuonePalkit() {
   if (!kehittajaTilaPaalla()) return;
-  if (tyohuoneTila) {
+  // Onnistunut tulos riittää istunnoksi; epäonnistunut tila-haku
+  // yritetään uudestaan seuraavasta avauksesta (ohimenevä verkkovika
+  // ei saa jäädä valikkoon koko istunnoksi).
+  if (tyohuoneTila && !(tyohuoneTila.tilaSyy && tyohuoneTila.tilaSyy !== 'koodi')) {
     piirraTyohuonePalkit(tyohuoneTila);
     return;
   }

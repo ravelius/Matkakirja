@@ -11720,6 +11720,34 @@ body.maatiedot-tila .fact-card {
   background: rgba(246, 231, 198, 1);
 }
 
+/* Paluunuoli yläreunassa (omistajan tilaus 15.8.2026): näkyy vain
+ * kun henkilölinkki on vaihtanut jutun ja pinossa on paluupaikka.
+ * Kortin sisarus kuten selausnuolet, joten se pysyy paikallaan
+ * pitkääkin juttua rullatessa. */
+.dialog.nahtavyys-arkki .nahtavyys-takaisin {
+  position: absolute;
+  top: 0.55rem;
+  left: 0.6rem;
+  z-index: 8;
+  width: 2.1rem;
+  height: 2.1rem;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 999px;
+  background: rgba(246, 231, 198, 0.92);
+  color: rgba(70, 51, 31, 0.85);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dialog.nahtavyys-arkki .nahtavyys-takaisin:hover {
+  color: rgba(70, 51, 31, 1);
+  background: rgba(246, 231, 198, 1);
+}
+
 /*
  * Kapealla ruudulla nuoli RATSASTAA kortin reunalla: puolet napista on
  * taustan päällä, puolet kortin omassa sivupehmusteessa. Näin se on
@@ -13584,6 +13612,10 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
         pysyvät paikallaan kun pitkä juttu rullaa kortin sisällä. -->
    <button id="nahtavyys-edellinen" class="nahtavyys-nuoli edellinen" type="button" aria-label="Edellinen nähtävyys" hidden>‹</button>
    <button id="nahtavyys-seuraava" class="nahtavyys-nuoli seuraava" type="button" aria-label="Seuraava nähtävyys" hidden>›</button>
+   <!-- Paluu edelliseen juttuun, kun henkilölinkki vaihtoi sisällön
+        (omistajan tilaus 15.8.2026). Kortin sisarus samasta syystä
+        kuin nuolet: pysyy yläreunassa kun juttu rullaa. -->
+   <button id="nahtavyys-takaisin" class="nahtavyys-takaisin" type="button" aria-label="Takaisin edelliseen juttuun" hidden>←</button>
    <span id="nahtavyys-laskuri" class="arrival-kuva-laskuri nahtavyys-laskuri" hidden></span>
   </dialog>
 
@@ -111533,6 +111565,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v750 — paluunuoli Engel-jutusta; kulurivin oikea syy',
   'v749 — karttateksti 2 palstaan; Matkailijalle- ja opaskuvat',
   'v748 — ison piirroksen klikki: vain kuvan keskiosa avaa',
   'v747 — lippusivut: Lähi-itä (8 maata)',
@@ -177463,9 +177496,42 @@ class UI {
    * vuosiluku korostuksia"), ja lainaus nostetaan kappaleiden väliin
    * omaksi lohkokseen silloin kun se on mielekäs — ei väkisin.
    */
-  avaaNahtavyys(kohde, numero, { henkilolinkit = null } = {}) {
+  avaaNahtavyys(kohde, numero, {
+    henkilolinkit = null, muista = false, palaa = false, rulla = 0,
+  } = {}) {
     const dialogi = document.getElementById('nahtavyys-dialog');
     if (!dialogi) return;
+    /*
+     * PALUUPOLKU (omistajan tilaus 15.8.2026: "engelin artikkelista
+     * ei pääse takaisin edelliseen artikkeliin ... nuoli taaksepäin").
+     * Henkilölinkki vaihtaa saman dialogin sisällön (muista: true),
+     * jolloin edellinen juttu vieritysasentoineen menee pinoon ja
+     * yläreunaan ilmestyy paluunuoli. Nuoli-, valikko- ja tuore avaus
+     * tyhjentävät pinon — paluu koskee vain linkkipolkua, jolla ei
+     * ole muuta reittiä takaisin.
+     */
+    this.nahtavyysPino ??= [];
+    const kortti = dialogi.querySelector('.nahtavyys-kortti');
+    if (!palaa) {
+      if (muista && dialogi.open && this.nahtavyysAuki) {
+        this.nahtavyysPino.push({ ...this.nahtavyysAuki, rulla: kortti?.scrollTop ?? 0 });
+      } else this.nahtavyysPino = [];
+    }
+    this.nahtavyysAuki = { kohde, numero, henkilolinkit };
+    const takaisin = document.getElementById('nahtavyys-takaisin');
+    if (takaisin) {
+      if (!takaisin.dataset.kytketty) {
+        takaisin.dataset.kytketty = '1';
+        takaisin.addEventListener('click', () => {
+          const edellinen = this.nahtavyysPino.pop();
+          if (!edellinen) return;
+          this.avaaNahtavyys(edellinen.kohde, edellinen.numero, {
+            henkilolinkit: edellinen.henkilolinkit, palaa: true, rulla: edellinen.rulla,
+          });
+        });
+      }
+      takaisin.hidden = !this.nahtavyysPino.length;
+    }
     /*
      * Nähtävyystekstissä mainittu henkilö linkitetään omaan juttuunsa
      * (omistajan tilaus 10.8.2026, pilotti: Engel Helsingissä).
@@ -177567,6 +177633,9 @@ class UI {
     }
     if (!dialogi.open) dialogi.showModal();
     this.nollaaDialoginVieritys(dialogi);
+    // Paluu palauttaa lukukohdan: juttu jatkuu siitä mihin se jäi,
+    // ei alusta. rAF, koska korkeus on olemassa vasta taiton jälkeen.
+    if (palaa && rulla && kortti) requestAnimationFrame(() => { kortti.scrollTop = rulla; });
     // Uusi juttu, uusi teksti: edellisen kohteen luenta ei saa jatkua.
     pysaytaLukija();
     this.varustaLukija(dialogi, () => dialogi.querySelector('.nahtavyys-kortti'));
@@ -177615,7 +177684,9 @@ class UI {
       const nappi = html('button', 'henkilo-linkki', eka.osuma[0]);
       nappi.type = 'button';
       const henkilo = HENKILOT[eka.h.id];
-      nappi.addEventListener('click', () => this.avaaNahtavyys(henkilo, null, { henkilolinkit: [] }));
+      nappi.addEventListener('click', () => this.avaaNahtavyys(henkilo, null, {
+        henkilolinkit: [], muista: true,
+      }));
       p.appendChild(nappi);
       loppu = loppu.slice(eka.osuma.index + eka.osuma[0].length);
     }
@@ -182774,6 +182845,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 750, teksti: 'paluunuoli henkilöjuttuun; työhuoneen kulurivin oikea syy' },
   { v: 749, teksti: 'Kööpenhamina: palstat, Matkailijalle-kuva, oppaan kuvat' },
   { v: 748, teksti: 'Suurennetun piirroksen osuma-alue 50 % kuvasta' },
   { v: 747, teksti: 'Lippusivut: Lähi-itä (8 maata)' },
@@ -183620,7 +183692,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.749';
+const APP_VERSION = '2026-08-09.750';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -184712,7 +184784,8 @@ async function haeTyohuoneTila() {
     // Ilmaistason 10 Gt on tilikohtainen, joten palkkiin kuuluu
     // ämpärien summa.
     (async () => {
-      const res = await fetch(`${PEILI_JUURI}manifesti.json`);
+      // no-store: vanhentunut manifesti näyttäisi väärää summaa.
+      const res = await fetch(`${PEILI_JUURI}manifesti.json`, { cache: 'no-store' });
       if (!res.ok) return null;
       const m = await res.json();
       let tavut = 0;
@@ -184721,18 +184794,32 @@ async function haeTyohuoneTila() {
       }
       return { tavut };
     })().catch(() => null),
+    /*
+     * Tila-haun epäonnistumisen SYY talteen (omistajan kysymys
+     * 15.8.2026: "miksi sanoo, että admin avaimet puuttuvat?" —
+     * ruudulla luki admin-avaimista, vaikka oikeasti koko kutsu jäi
+     * tekemättä). Rajattu kehittäjäkoodi ei talleta pöllökoodia
+     * laitteelle, jolloin syy on 'koodi' — kulurivi kertoo sen nyt
+     * suoraan sen sijaan että syyttäisi vääriä avaimia.
+     */
     (async () => {
       const koodi = window.localStorage?.getItem(POLLO_KOODIAVAIN);
-      if (!koodi) return null;
+      if (!koodi) return { syy: 'koodi' };
       const vastaus = await fetch(POLLOPALVELIN, {
         method: 'POST',
         headers: { 'content-type': 'application/json', 'x-pollo-kehittaja': koodi },
         body: JSON.stringify({ tehtava: 'tila' }),
       });
-      return vastaus.ok ? vastaus.json() : null;
-    })().catch(() => null),
+      if (!vastaus.ok) return { syy: `palvelin ${vastaus.status}` };
+      return { syy: null, tila: await vastaus.json() };
+    })().catch(() => ({ syy: 'verkko' })),
   ]);
-  return { repoKt: repo?.size ?? null, tila, peili };
+  return {
+    repoKt: repo?.size ?? null,
+    tila: tila?.tila ?? null,
+    tilaSyy: tila?.syy ?? null,
+    peili,
+  };
 }
 
 function tyohuonePalkki(nimi, osuus, arvoTeksti) {
@@ -184802,6 +184889,13 @@ function piirraTyohuonePalkit(data) {
     const claudeNimi = tila.kulut.claudeRajattu ? 'Claude/Pöllö' : 'Claude (koko org.)';
     kulut.textContent = `Kulut tässä kuussa $${tila.kulut.yhteensa.toFixed(2)} `
       + `(${osa('OpenAI', tila.kulut.openai)} · ${osa(claudeNimi, tila.kulut.claude)})`;
+  } else if (data.tilaSyy === 'koodi') {
+    // Rajattu kehittäjäkoodi ei talleta pöllökoodia — kiintiöt ja
+    // kulut näkyvät vain täydellä koodilla kirjautuneelle.
+    kulut.textContent = 'Kiintiöt ja kulut näkyvät vain täydellä '
+      + 'kehittäjäkoodilla (kytke kehittäjätila uudelleen sillä)';
+  } else if (data.tilaSyy) {
+    kulut.textContent = `Kulut: pöllöpalvelin ei vastannut (${data.tilaSyy})`;
   } else {
     kulut.textContent = 'Kulut: ei nähtävissä (admin-avaimet puuttuvat)';
   }
@@ -184810,7 +184904,10 @@ function piirraTyohuonePalkit(data) {
 
 function paivitaTyohuonePalkit() {
   if (!kehittajaTilaPaalla()) return;
-  if (tyohuoneTila) {
+  // Onnistunut tulos riittää istunnoksi; epäonnistunut tila-haku
+  // yritetään uudestaan seuraavasta avauksesta (ohimenevä verkkovika
+  // ei saa jäädä valikkoon koko istunnoksi).
+  if (tyohuoneTila && !(tyohuoneTila.tilaSyy && tyohuoneTila.tilaSyy !== 'koodi')) {
     piirraTyohuonePalkit(tyohuoneTila);
     return;
   }
