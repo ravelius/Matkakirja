@@ -10568,14 +10568,15 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 /*
- * VALITTU PIIRROS (omistajan tilaus 15.8.2026: "Kun kuva painaa, se
- * voisi yksinkertaisesti vain suurentua ja sen viereen voisi tulla
- * nimikyltti"). Ensimmäinen napautus lisää .valittu-luokan: piirros
- * kasvaa paikallaan ja nimikyltti aukeaa sen alle (tai ylle
- * alareunassa, .kyltti-ylle). Toinen napautus — kuva ja kyltti ovat
- * samaa nappia — avaa jutun. Skaala jakaa zoomin kuten perussääntö,
- * jotta suurennos on sama joka zoomiasennossa. Kerroin 2 (ei 1,7),
- * jotta pienennetystä 48 px:n pisteestä kasvaa yhä tutkittava kuva.
+ * VALITTU PIIRROS (omistajan tilaukset 15.8.2026: "Kun kuva painaa,
+ * se voisi yksinkertaisesti vain suurentua ja sen viereen voisi
+ * tulla nimikyltti" ja "Riittää kun saa klikattua isommaksi (kasvaa
+ * vain kokoa ilman ikkunaa)"). Napautus lisää .valittu-luokan:
+ * piirros kasvaa paikallaan ja nimikyltti aukeaa sen alle (tai ylle
+ * alareunassa, .kyltti-ylle); uusi napautus palauttaa koon —
+ * ikkunaa ei avata. Skaala jakaa zoomin kuten perussääntö, jotta
+ * suurennos on sama joka zoomiasennossa. Kerroin 2 (ei 1,7), jotta
+ * pienennetystä 48 px:n pisteestä kasvaa yhä tutkittava kuva.
  */
 .maakartta-piste.kohde-numero.kohde-piirros {
   transition: transform 160ms ease;
