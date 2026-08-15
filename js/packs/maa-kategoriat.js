@@ -20059,8 +20059,8 @@ export const MAA_KATEGORIAT = {
               + 'myydyin japanilainen vedossarja.',
           selite: 'Puupiirros harmaassa sateessa. Neljä ihmistä kiiruhtaa '
             + 'mäkeä alas: kaksi kantaa keskellään katettua kantotuolia, '
-            + 'kaksi juoksee olkiviitoissa ja yksi pitää keltaista '
-            + 'sateenvarjoa. Sade kulkee kuvan poikki tiheinä vinoina '
+            + 'kaksi juoksee olkiviitoissa. Yksi pitää keltaista '
+            + 'sateenvarjoa, ja sade kulkee kuvan poikki tiheinä vinoina '
             + 'viivoina.',
           lahde: 'Utagawa Hiroshige, Wikimedia Commons (PD)',
         },
@@ -20405,10 +20405,10 @@ export const MAA_KATEGORIAT = {
               + 'taidemuseo pitää säilynyttä versiota myöhempänä, 1500-luvulla '
               + 'tehtynä toisintona.',
           selite: 'Kapea pystysuora maalaus vaalealle silkille esittää '
-            + 'pitkäkaulaista kirahvia, jonka turkissa on kuusikulmainen '
-            + 'ruskea laikkukuvio. Vieressä seisoo pieni punapukuinen mies, '
-            + 'joka pitää päitsimistä. Maalauksessa on tiheä pystyrivi '
-            + 'kiinalaista kirjoitusta.',
+            + 'sivuttain seisovaa pitkäkaulaista kirahvia, jonka turkissa '
+            + 'on kuusikulmainen ruskea laikkukuvio. Vieressä on pieni '
+            + 'punapukuinen mies päitsimet kädessä. Maalauksessa on tiheä '
+            + 'pystyrivi kiinalaista kirjoitusta.',
           lahde: 'Shen Du, Wikimedia Commons (PD)',
         },
       ],
@@ -20865,7 +20865,8 @@ export const MAA_KATEGORIAT = {
           selite: 'Kallioon maalattu seinäpinta, jossa kulkee vaakasuora '
             + 'kuvakaista. Ruskeansävyisten kuvien sisällä istuu ja seisoo '
             + 'ihmishahmoja koruissa ja päähineissä. Kuvakaistaa kiertää '
-            + 'koristenauha, jossa toistuu vaaleita lootuskukkia.',
+            + 'koristenauha vaaleine lootuskukkineen, ja maali on kulunut '
+            + 'ja paikoin lohkeillut.',
           lahde: 'Vu2sga, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -21197,8 +21198,9 @@ export const MAA_KATEGORIAT = {
               + 'täytetään: tyhjää kohtaa ei jätetä.',
           selite: 'Kehystetty maalaus mustalla pohjalla. Soikeassa kentässä '
             + 'ui kaksi kalaa ja lintuja keltaisella taustalla. Kenttää '
-            + 'kiertää useita reunuksia täynnä pieniä kolmioita, pisteitä '
-            + 'ja kukkakuvioita punaisella, sinisellä ja keltaisella.',
+            + 'kiertää useita suorakaiteen muotoisia reunuksia täynnä '
+            + 'pieniä kolmioita, pisteitä ja kukkakuvioita punaisella, '
+            + 'sinisellä ja keltaisella.',
           lahde: 'Bhuvana Meenakshi, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -22163,7 +22165,8 @@ export const MAA_KATEGORIAT = {
           selite: 'Temppelin räystään alapuoli. Kaarevan katon alla on '
             + 'tiheä rivi puisia orsia ja kannattimia, jotka on maalattu '
             + 'vihreäksi, punaiseksi, siniseksi ja valkoiseksi geometrisin '
-            + 'ja kukkakuvioin. Pylväät ovat punaruskeat.',
+            + 'ja kukkakuvioin. Pylväät ovat punaruskeat, ja katon kulmassa '
+            + 'roikkuu koristelauta.',
           lahde: 'by eimoberg, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -22438,7 +22441,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Punatiilinen torni aukiolla kirkkaan sinisen taivaan '
             + 'alla. Tornin yläosa on lohkeillut, mutta oviaukon molemmin '
             + 'puolin seisoo yhä koristeltuja pylväitä ja portaat johtavat '
-            + 'sisään. Ympärillä erottuu matalampia raunioita.',
+            + 'sisään. Lähistöllä erottuu matalampia raunioita.',
           lahde: 'katiebordner, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -22559,8 +22562,8 @@ export const MAA_KATEGORIAT = {
               + 'Ensimmäinen lasku on väkevintä.',
           selite: 'Hallissa rivi valtavia puutynnyreitä vierekkäin. '
             + 'Tynnyrit on tehty pystylaudoista, ja jokaisen ympäri kiertää '
-            + 'useita paksuja punottuja köysivanteita. Ne lepäävät matalien '
-            + 'betonijalustojen päällä, ja kylkiin on kirjoitettu '
+            + 'useita paksuja punottuja köysivanteita. Tynnyrit lepäävät '
+            + 'matalien betonijalustojen päällä, ja kylkiin on kirjoitettu '
             + 'päivämääriä liidulla.',
           lahde: 'ntt, Wikimedia Commons (CC BY-SA 3.0)',
         },
@@ -22616,11 +22619,11 @@ export const MAA_KATEGORIAT = {
               + 'sininen kuparihilseestä tai indigosta, keltainen kukista, '
               + 'punainen puusta ja vuoren punaisesta sorasta. Jokaiselle '
               + 'värille veistettiin oma painolaatta ja ääriviivoille omansa.',
-          selite: 'Vaakasuora kansanomainen puupiirros vaalealla paperilla. '
-            + 'Kuvassa kulkee jono hiiriä: osa kantaa katettua kantotuolia '
-            + 'ja soittimia, yksi ratsastaa ruskealla hevosella. Mukana on '
-            + 'suuri keltainen kissa, jolle kaksi hiirtä ojentaa lintua ja '
-            + 'kalaa.',
+          selite: 'Kansanomainen puupiirros, jossa kulkee jono hiiriä: osa '
+            + 'kantaa katettua kantotuolia ja soittimia, yksi ratsastaa '
+            + 'ruskealla hevosella. Mukana on suuri keltainen kissa, jolle '
+            + 'kaksi hiirtä ojentaa lintua ja kalaa. Reunoissa on mustia '
+            + 'kirjoitusmerkkejä.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
         {
@@ -22817,7 +22820,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Valtavan luolan sisus hämärässä valossa. Kaksi kapeaa '
             + 'vaaleaa tippukivipatsasta kohoaa kohti pimeää kattoa, ja '
             + 'niiden ympärillä on lohkareikkoa. Seinät ovat kerroksisia ja '
-            + 'kellertäviä, ja niitä pitkin laskeutuu leveä valumapinta.',
+            + 'kellertäviä, ja alas laskeutuu leveä valumapinta.',
           lahde: 'Dave Bunnell, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -23353,11 +23356,11 @@ export const MAA_KATEGORIAT = {
               + 'kaksinkertaisena 56. Soittaja työntää molemmat kätensä viuhkan '
               + 'aukosta sisään ja näppäilee kieliä molemmin puolin kuin '
               + 'harppua.',
-          selite: 'Iäkäs mies istuu bambuseinäisessä katoksessa ja soittaa '
-            + 'suurta soitinta. Soittimen ympärillä kaartuu vaaleista '
-            + 'kuivatuista palmunlehdistä tehty leveä viuhka, ja sen '
-            + 'keskellä on pystysuora putki kielineen. Miehen kädet ovat '
-            + 'viuhkan sisällä.',
+          selite: 'Iäkäs mies soittaa suurta soitinta bambuseinäisessä '
+            + 'katoksessa, päässään korkea punottu hattu ja olallaan '
+            + 'kuviollinen kudottu huivi. Soittimen ympärillä kaartuu '
+            + 'kuivatuista palmunlehdistä tehty leveä viuhka, jonka '
+            + 'keskellä on pystysuora putki kielineen.',
           lahde: 'Fakhri Anindita, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -23459,9 +23462,9 @@ export const MAA_KATEGORIAT = {
               + 'Stadthuys on historian ja etnografian museo, ja aukiota '
               + 'kutsutaan Punaiseksi toriksi.',
           selite: 'Leveä tiilenpunainen rakennusrivi valkoisin '
-            + 'ikkunaluukuin. Punainen kellotorni, jonka kahdessa sivussa '
-            + 'on valkoinen kellotaulu, kohoaa rakennuksen yläpuolelle. '
-            + 'Talon kulmasta työntyy ulos valkoinen katettu parveke.',
+            + 'ikkunaluukuin. Rivissä kohoaa punainen kellotorni, jonka '
+            + 'kahdessa sivussa on valkoinen kellotaulu. Talon kulmasta '
+            + 'työntyy ulos valkoinen katettu parveke.',
           lahde: 'Philip Nalangan, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -24428,8 +24431,8 @@ export const MAA_KATEGORIAT = {
           selite: 'Kivirauniot vihreiden kukkuloiden välissä. Tiiviisti '
             + 'ladotun kammioiden ryhmän seinissä on suorakulmaisia '
             + 'syvennyksiä ja aukkoja. Rinteillä kasvaa pensaita ja pieniä '
-            + 'puita, kiviportaat nousevat rinnettä, ja kauempana aukeaa '
-            + 'usvainen viljelylaakso.',
+            + 'puita, kiviportaat erottuvat kivien seasta, ja kauempana '
+            + 'aukeaa usvainen viljelylaakso.',
           lahde: 'Asif Nawaz, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -24448,10 +24451,10 @@ export const MAA_KATEGORIAT = {
               + 'Muurien sisällä on asuttu siitä asti, ja kylä peittää yhä yli '
               + 'kolmanneksen linnoituksen 70 hehtaarista.',
           selite: 'Hiekankeltainen muuri kulkee jyrkän kallioharjanteen '
-            + 'päällä iltavalossa. Muurissa on sakaroita, pyöreitä '
-            + 'bastioneja ja nelikulmainen tornirakennus. Rinteillä kasvaa '
-            + 'vihreää pensaikkoa, ja tasainen viljelymaa aukeaa '
-            + 'horisonttiin asti.',
+            + 'päällä iltavalossa. Muurissa on sakaroita ja pyöreitä '
+            + 'bastioneja, ja lisäksi kohoaa nelikulmainen tornirakennus. '
+            + 'Rinteillä kasvaa vihreää pensaikkoa, ja tasainen viljelymaa '
+            + 'aukeaa horisonttiin asti.',
           lahde: 'Hussain Khalid, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -24775,8 +24778,8 @@ export const MAA_KATEGORIAT = {
           selite: 'Neljä muusikkoa istuu tilkkutäkin päällä aavikon '
             + 'reunalla. Yksi nostaa kaksin käsin kaikukopallisen '
             + 'kielisoittimen ilmaan ja laulaa, toinen lyö kämmenellä '
-            + 'kirkasta metallivatia ja kolmas soittaa pitkulaista rumpua. '
-            + 'Puvut ovat keltaiset ja oranssit.',
+            + 'metallivatia ja kolmas soittaa pitkulaista rumpua. Puvut '
+            + 'ovat keltaiset ja oranssit, päässä turbaanit.',
           lahde: 'Tahsin Shah, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -24816,8 +24819,8 @@ export const MAA_KATEGORIAT = {
           selite: 'Kuorma-auton ohjaamo on maalattu kauttaaltaan. '
             + 'Punaisella pohjalla on sinisiä ja oransseja kukkia, '
             + 'keltaisia kiehkuroita ja urdunkielinen teksti mustalle '
-            + 'palkille. Katolla kaartuu koristeltu kilpi, ja peilistä '
-            + 'roikkuu sininen tupsu.',
+            + 'palkille. Katolla kaartuu kilpi, ikkunoiden yllä on '
+            + 'kuviolistat ja peilistä roikkuu sininen tupsu.',
           lahde: 'Baharwassan, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -24874,11 +24877,11 @@ export const MAA_KATEGORIAT = {
               + 'paastoavasta Siddharthasta: kylkiluut, suonet ja kuopalle '
               + 'painuneet posket kertovat vuosista, jotka hän eli '
               + 'äärimmäisessä kieltäymyksessä ennen kuin hylkäsi sen tien.',
-          selite: 'Tummanharmaa kiviveistos istuu jalat ristissä matalalla '
+          selite: 'Tummanharmaa kiviveistos istuu jalat ristissä '
             + 'jalustalla. Vartalo on riutunut: kylkiluut, lantioluut ja '
-            + 'suonet erottuvat tarkasti, posket ovat kuopalla ja silmät '
-            + 'syvällä. Pään takana on pyöreä kehä, ja jalustaan on '
-            + 'veistetty pieniä hahmoja.',
+            + 'käsivarsien suonet erottuvat, posket ovat kuopalla ja silmät '
+            + 'syvällä. Hiukset on nutturalla, pään takana on pyöreä kehä '
+            + 'ja jalustassa pieniä hahmoja.',
           lahde: 'Patrik Germann, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
