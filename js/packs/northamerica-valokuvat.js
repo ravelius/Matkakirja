@@ -17,11 +17,10 @@ export const NORTHAMERICA_VALOKUVAT = {
     tiedosto: 'Anchorage Alaska 1 July 1915.jpg',
     vuosi: '1915',
     lahde: 'Alberta Pyatt / Anchorage Museum, Commons (PD)',
-    selite: 'Telttakaupunki Ship Creekin rannalla 1. heinäkuuta 1915, taustalla '
-      + 'Chugachin vuoret. Käsin kirjoitettu kuvateksti nimittää paikkaa '
-      + 'Valkoiseksi kaupungiksi. Anchorage alkoi rautatien rakennusleirinä, '
-      + 'ja ensimmäinen kesä asuttiin purjekankaan alla. Oikealla kohoaa jo '
-      + 'hirsistä rakennettu kaksikerroksinen talo.',
+    selite: 'Telttakaupunki Ship Creekin rannalla 1. heinäkuuta 1915, '
+      + 'taustalla Chugachin vuoret. Käsin kirjoitettu kuvateksti nimittää '
+      + 'paikkaa Valkoiseksi kaupungiksi. Anchorage alkoi rautatien '
+      + 'rakennusleirinä, ja ensimmäinen kesä asuttiin purjekankaan alla.',
     lisat: [
       {
         tiedosto: 'Seaplane base on Lake Hood, Anchorage (3574288498).jpg',
@@ -105,10 +104,11 @@ export const NORTHAMERICA_VALOKUVAT = {
     tiedosto: 'SS Trinidad and Bermudian sloops.jpg',
     vuosi: 'noin 1890',
     lahde: 'James Bell Heyl, Commons (PD)',
-    selite: 'Matkustajahöyry SS Trinidad ankkurissa Bermudan vesillä, edessään '
-      + 'paikallisia työveneitä. Trinidad kuljetti postia ja matkustajia New '
-      + 'Yorkin ja Bermudan väliä; etualan sluupeissa on bermudalaistakila, '
-      + 'joka on sama kolmiopurjeratkaisu kuin nykyisissä purjeveneissä.',
+    selite: 'Matkustajahöyry SS Trinidad ankkurissa Bermudan vesillä, '
+      + 'edessään paikallisia työveneitä. Trinidad kuljetti postia ja '
+      + 'matkustajia New Yorkin ja Bermudan väliä. Sluupeissa on '
+      + 'bermudalaistakila, sama kolmiopurjeratkaisu kuin nykyisissä '
+      + 'purjeveneissä.',
     lisat: [
       {
         tiedosto: 'Bermuda - Gombey dancers.jpg',
@@ -192,11 +192,10 @@ export const NORTHAMERICA_VALOKUVAT = {
     tiedosto: 'Royal North West Mounted Police barracks and Churchill River, Churchill, 1907 (HS85-10-18547).jpg',
     vuosi: '1907',
     lahde: 'Geraldine Moodie, Commons (PD)',
-    selite: 'Luoteisen ratsupoliisin asema Churchilljoen suulla 1907. Etualan '
-      + 'täyttää tuulen veistämä ahtojää, ja matalat rakennukset erottuvat '
-      + 'sen takana pieninä. Kuvan otti Geraldine Moodie, ja hänen '
-      + 'nimikirjoituksensa näkyy vedoksessa. Satamaa tai rautatietä ei vielä '
-      + 'ollut - kiskot ylsivät Churchilliin vasta 1929 ja viljasatama '
+    selite: 'Luoteisen ratsupoliisin asema Churchilljoen suulla 1907, '
+      + 'tuulen veistämän ahtojään takana. Kuvan otti Geraldine Moodie, '
+      + 'jonka nimikirjoitus näkyy vedoksessa. Satamaa tai rautatietä ei '
+      + 'vielä ollut: kiskot ylsivät Churchilliin 1929 ja viljasatama '
       + 'avattiin 1931.',
     lisat: [
       {
@@ -596,10 +595,10 @@ export const NORTHAMERICA_VALOKUVAT = {
         vuosi: '2023',
         lahde: 'Quincylvania, Commons (CC0)',
         selite: 'Nainin herrnhutilainen kirkko Nunatsiavutissa, Labradorin '
-          + 'pohjoisimmassa asutuskeskuksessa. Kyltissä lukee perustamisvuosi '
-          + '1771 sekä inuktituniksi että englanniksi: saksalaislähtöiset '
-          + 'herrnhutilaislähetit aloittivat täällä, ja seurakunta on yhä '
-          + 'samalla paikalla.',
+          + 'pohjoisimmassa asutuskeskuksessa. Kyltissä lukee '
+          + 'perustamisvuosi 1771 sekä inuktituniksi että englanniksi: '
+          + 'saksalaislähtöiset lähetit aloittivat täällä, ja seurakunta on '
+          + 'yhä samalla paikalla.',
       },
       {
         tiedosto: 'Nachvak Fjord on a sunny September day.jpg',
@@ -1012,11 +1011,10 @@ export const NORTHAMERICA_VALOKUVAT = {
     tiedosto: 'NYC Mulberry Street 3g04637u.jpg',
     vuosi: 'noin 1900',
     lahde: 'Library of Congress (PD)',
-    selite: 'Mulberry Street Manhattanilla noin vuonna 1900: katu on täynnä '
+    selite: 'Mulberry Street Manhattanilla noin vuonna 1900: katu täynnä '
       + 'kärryjä, kojuja ja kaupustelijoita. Kortteli oli '
-      + 'italialaissiirtolaisten keskus, ja tori levisi ajoradalle asti. Kuva '
-      + 'on photochrom-vedos eli mustavalkoisesta negatiivista '
-      + 'kivipainolevyille väritetty painate, jollaisia myytiin '
+      + 'italialaissiirtolaisten keskus, ja tori levisi ajoradalle asti. '
+      + 'Photochrom-vedoksia eli väritettyjä kivipainatteita myytiin '
       + 'matkamuistoksi.',
     lisat: [
       {
@@ -1057,12 +1055,11 @@ export const NORTHAMERICA_VALOKUVAT = {
     tiedosto: 'Nome Alaska 1900.jpg',
     vuosi: '1900',
     lahde: 'Carrie M. McLain Memorial Museum, Commons (PD)',
-    selite: 'Front Street 17. heinäkuuta 1900, keskellä kultaryntäystä. '
-      + 'Vasemmalla kohoaa Dexter Saloon, kaupungin ensimmäinen '
-      + 'kaksikerroksinen puutalo; sen omisti Wyatt Earp yhdessä Charles E. '
-      + 'Hoxien kanssa. Nomeen tultiin siksi, että kultaa löytyi myös '
-      + 'rantahiekasta, eikä kaivosmiehen tarvinnut lähteä kaupungista '
-      + 'minnekään.',
+    selite: 'Front Street 17. heinäkuuta 1900, keskellä kultaryntäystä; '
+      + 'kadun varrella kohoaa Dexter Saloon, kaupungin ensimmäinen '
+      + 'kaksikerroksinen puutalo. Sen omisti Wyatt Earp yhdessä Charles E. '
+      + 'Hoxien kanssa. Nomeen tultiin, koska kultaa löytyi myös '
+      + 'rantahiekasta.',
     lisat: [
       {
         tiedosto: 'Iditarod 2013 (8572097753).jpg',
@@ -1106,10 +1103,9 @@ export const NORTHAMERICA_VALOKUVAT = {
     vuosi: '1888–1889',
     lahde: 'Fridtjof Nansen / Norjan kansalliskirjasto, Commons (PD)',
     selite: 'Näkymä Godthåbiin: kajakkeja vedessä, ihmisryhmä kalliolla ja '
-      + 'vastarannalla kirkontorni ja puutalot. Kuvan otti Fridtjof Nansen, '
-      + 'joka hiihti seurueineen Grönlannin poikki 1888. Retkikunta joutui '
-      + 'talvehtimaan täällä, ja Nansen käytti talven tutustumalla inuiittien '
-      + 'elämään ja valokuvaamalla sitä.',
+      + 'vastarannalla kirkontorni ja puutaloja. Kuvan otti Fridtjof '
+      + 'Nansen, joka hiihti seurueineen Grönlannin poikki 1888. Retkikunta '
+      + 'talvehti täällä, ja Nansen tutustui talvella inuiittien elämään.',
     lisat: [
       {
         tiedosto: 'Hans Egede statue, old church, old hospital and other buildings in Nuuk, seen from Radiofjeldet.jpg',
@@ -1464,11 +1460,11 @@ export const NORTHAMERICA_VALOKUVAT = {
     tiedosto: 'Sternwheelers at Whitehorse, Yukon, ca. 1899 - DPLA - eb876214e43d7026043f6d4ac38db14c.jpg',
     vuosi: 'noin 1899',
     lahde: 'Arthur C. Pillsbury / Seattle Public Library, Commons (PD)',
-    selite: 'Kaksi siipiratasalusta rannassa ja telttarivi vastapäätä. Yhden '
-      + 'teltan kyltissä lukee White Horse Saloon. Whitehorse oli '
-      + 'pysähdyspaikka Klondiken kultakentille: joen yläpuoliset Miles '
-      + 'Canyon ja Whitehorsen kosket kierrettiin maitse, ja täältä '
-      + 'jatkettiin laivalla Dawsoniin.',
+    selite: 'Kaksi siipiratasalusta rannassa ja telttarivi vastapäätä, '
+      + 'yhden teltan kyltissä White Horse Saloon. Whitehorse oli '
+      + 'pysähdyspaikka Klondiken kultakentille: Miles Canyon ja '
+      + 'Whitehorsen kosket kierrettiin maitse, ja täältä jatkettiin '
+      + 'laivalla Dawsoniin.',
     lisat: [
       {
         tiedosto: 'SS Klondike paddlewheeler - National Historic Site - Whitehorse, Yukon.jpg',
@@ -1512,11 +1508,10 @@ export const NORTHAMERICA_VALOKUVAT = {
     tiedosto: 'Canadian Dog Train and Remains of Old Fort Garry, Winnipeg 1899 (HS85-10-11350).jpg',
     vuosi: '1899',
     lahde: 'Steele & Co. / British Library, Commons (PD)',
-    selite: 'Kuuden koiran valjakko ja kuormareki Fort Garryn jäljellä olevan '
-      + 'porttitornin edessä talvella 1899. Hudson\'s Bay Companyn '
-      + 'kivilinnoituksesta oli jo tuolloin jäljellä vain portti. '
-      + 'Kauppa-asema seisoi Punaisen- ja Assiniboinejoen yhtymäkohdassa, ja '
-      + 'sen ympärille kasvoi Winnipeg.',
+    selite: 'Kuuden koiran valjakko ja kuormareki Fort Garryn porttitornin '
+      + 'edessä talvella 1899; Hudson\'s Bay Companyn kivilinnoituksesta oli '
+      + 'jäljellä vain portti. Kauppa-asema seisoi Punaisen- ja '
+      + 'Assiniboinejoen yhtymäkohdassa, ja sen ympärille kasvoi Winnipeg.',
     lisat: [
       {
         tiedosto: 'The Forks Market, Winnipeg Manitoba.JPG',

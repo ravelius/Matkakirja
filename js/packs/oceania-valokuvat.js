@@ -468,10 +468,10 @@ export const OCEANIA_VALOKUVAT = {
     tiedosto: 'New iron jetty at Port Darwin, Northern Territory - SS \'Charon\' first ship to berth(GN02694).jpg',
     vuosi: 'n. 1905',
     lahde: 'Osavaltion valokuvaaja, History Trust of South Australia, Commons (CC0)',
-    selite: 'Port Darwinin uusi rautalaituri ja siihen ensimmäisenä kiinnittynyt '
-      + 'höyrylaiva Charon. Etualalla nousee rinnettä kiskoyhteys, jolla '
-      + 'lasti siirrettiin rantatörmän päälle kaupunkiin. Pohjoisterritoriota '
-      + 'hallinnoi tuolloin Etelä-Australia, ja kaupungin virallinen nimi oli '
+    selite: 'Port Darwinin uusi rautalaituri ja siihen ensimmäisenä '
+      + 'kiinnittynyt höyrylaiva Charon; rinnettä nousee kiskoyhteys, jolla '
+      + 'lasti siirrettiin rantatörmän päälle. Pohjoisterritoriota '
+      + 'hallinnoi tuolloin Etelä-Australia, ja kaupungin nimi oli '
       + 'Palmerston.',
     lisat: [
       {
@@ -643,11 +643,10 @@ export const OCEANIA_VALOKUVAT = {
     tiedosto: 'Apple cases being loaded onto ships, Hobart Wharves, Tasmania (c1900s) (31995606893).jpg',
     vuosi: '1900-luvun alku',
     lahde: 'C. P. Ray, Tasmanian Archives, Commons (ei tunnettuja tekijänoikeusrajoituksia)',
-    selite: 'Omenalaatikoita nostetaan nostoliinassa höyrylaivan lastiin Hobartin '
-      + 'laitureilla; laatikoiden kylkeen on maalattu APPLES. Laiturilla '
-      + 'seisoo satamatyöläisiä ja pikkupoikia katsomassa. Tasmaniasta lähti '
-      + 'vuosikymmeniä omenalaivoja Britanniaan asti, ja saarta alettiin '
-      + 'siksi kutsua Omenasaareksi.',
+    selite: 'Omenalaatikoita nostetaan nostoliinassa höyrylaivan lastiin '
+      + 'Hobartin laitureilla; laatikoiden kylkeen on maalattu APPLES. '
+      + 'Tasmaniasta lähti vuosikymmeniä omenalaivoja Britanniaan asti, ja '
+      + 'saarta alettiin siksi kutsua Omenasaareksi.',
     lisat: [
       {
         tiedosto: 'Salamanca Market July 2017.jpg',
@@ -687,12 +686,11 @@ export const OCEANIA_VALOKUVAT = {
     tiedosto: 'Army and Marines on KuKum Beach, Guadalcanal, circa 1942.jpg',
     vuosi: '1942',
     lahde: 'USMC History Division, Thayer Soule -kokoelma, Commons (CC BY 2.0)',
-    selite: 'Kuormaa puretaan Kukumin rannalle Guadalcanalilla 1942: '
-      + 'laatikkovuoria hiekalla, kuorma-autoja ja veneitä matalikossa. '
-      + 'Laituria ei ollut, joten kaikki tuli maihin rantaan asti. Kukum on '
-      + 'nykyään Honiaran kaupunginosa - kaupunki perustettiin 1945 '
-      + 'amerikkalaisten jättämän tukikohdan paikalle, ja siitä tuli '
-      + 'Salomonsaarten pääkaupunki Tulagin tilalle 1952.',
+    selite: 'Kuormaa puretaan Kukumin rannalle Guadalcanalilla 1942; '
+      + 'laituria ei ollut, joten kaikki tuli maihin rantaan asti. Kukum on '
+      + 'nykyään Honiaran kaupunginosa: kaupunki perustettiin 1945 '
+      + 'amerikkalaisten jättämän tukikohdan paikalle ja siitä tuli '
+      + 'pääkaupunki 1952.',
     lisat: [
       {
         tiedosto: 'Honiara Central Market.jpg',
@@ -779,11 +777,11 @@ export const OCEANIA_VALOKUVAT = {
     tiedosto: 'Collins Street, near the corner of Spring Street.jpg',
     vuosi: '1880–1900',
     lahde: 'State Library Victoria, Commons (PD-Australia)',
-    selite: 'Collins Streetin itäpää Spring Streetin kulman tuntumassa, '
-      + 'albumiinivedos. Keskellä on Grosvenor Chambers, joka rakennettiin '
-      + 'taiteilijoiden ateljeetaloksi. Kadulla odottaa hevosajuri ja '
-      + 'oikealla kulkee köysiraitiovaunu: vaunulla ei ollut omaa moottoria, '
-      + 'vaan se tarttui kadun alla lakkaamatta pyörivään teräsvaijeriin.',
+    selite: 'Collins Streetin itäpää albumiinivedoksella; keskellä on '
+      + 'Grosvenor Chambers, joka rakennettiin taiteilijoiden '
+      + 'ateljeetaloksi. Kadulla kulkee köysiraitiovaunu: sillä ei ollut '
+      + 'omaa moottoria, vaan se tarttui kadun alla pyörivään '
+      + 'teräsvaijeriin.',
     lisat: [
       {
         tiedosto: 'Melbourne (AU), Queen Victoria Market -- 2019 -- 1535.jpg',
@@ -1044,11 +1042,11 @@ export const OCEANIA_VALOKUVAT = {
     tiedosto: 'Esplanade 29011900.jpg',
     vuosi: '1900',
     lahde: 'Tuntematon kuvaaja, Commons (PD-Australia)',
-    selite: 'Länsi-Australian joukko-osasto paraatissa Perthin esplanadilla 29. '
-      + 'tammikuuta 1900, matkalla buurisotaan Etelä-Afrikkaan. Ratsastajat '
-      + 'seisovat riveissä joen puoleisella nurmikentällä ja yleisö tiiviinä '
-      + 'muurina etualalla. Kuva on säilynyt lehden rasteripainoksena, ei '
-      + 'alkuperäisenä vedoksena.',
+    selite: 'Länsi-Australian joukko-osasto paraatissa Perthin esplanadilla '
+      + '29. tammikuuta 1900, matkalla buurisotaan Etelä-Afrikkaan. '
+      + 'Ratsastajat seisovat riveissä joen puoleisella nurmikentällä, '
+      + 'yleisö tiiviinä muurina. Kuva on säilynyt lehden '
+      + 'rasteripainoksena.',
     lisat: [
       {
         tiedosto: 'Fremantle markets fruit veg gn.jpg',
@@ -1136,10 +1134,9 @@ export const OCEANIA_VALOKUVAT = {
     vuosi: '1910-luku',
     lahde: 'G. de Béchade, Nouméa, Commons (PD)',
     selite: 'Postikortti Port Vilan laiturilta: ranskalaisen partiolaivan '
-      + 'Kersaintin tuomia vankeja saatetaan maihin kapearaiteisen kiskoradan '
-      + 'viertä. Uusia Hebrideitä hallitsivat tuolloin Britannia ja Ranska '
-      + 'yhdessä, ja kummallakin oli saarilla oma poliisinsa ja oma '
-      + 'tuomioistuimensa.',
+      + 'Kersaintin tuomia vankeja saatetaan maihin kapearaiteisen '
+      + 'kiskoradan viertä. Uusia Hebrideitä hallitsivat tuolloin Britannia '
+      + 'ja Ranska yhdessä, kummallakin oma poliisi ja tuomioistuin.',
     lisat: [
       {
         tiedosto: 'PortVilaMarketHall.jpg',
@@ -1268,11 +1265,10 @@ export const OCEANIA_VALOKUVAT = {
     tiedosto: 'Sydney Harbour LCCN2017657737.jpg',
     vuosi: '1890',
     lahde: 'Photoglob Co., Library of Congress (PD)',
-    selite: 'Sydneyn satama käsinvärillisenä photochrom-vedoksena. Photochrom oli '
-      + 'sveitsiläinen painomenetelmä, jossa mustavalkoinen negatiivi '
-      + 'siirrettiin useille kivilaatoille ja painettiin väreissä; tällaisia '
-      + 'vedoksia myytiin matkailijoille aikana, jolloin värivalokuvaa ei '
-      + 'vielä ollut.',
+    selite: 'Sydneyn satama käsinvärillisenä photochrom-vedoksena. '
+      + 'Photochromissa mustavalkoinen negatiivi siirrettiin useille '
+      + 'kivilaatoille ja painettiin väreissä; vedoksia myytiin '
+      + 'matkailijoille aikana, jolloin värivalokuvaa ei vielä ollut.',
     lisat: [
       {
         tiedosto: 'SydFishMarkets.jpg',

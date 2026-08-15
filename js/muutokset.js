@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 686, teksti: 'Valokuvapakettien postikorttitekstit lyhennettiin (5/5)' },
   { v: 685, teksti: 'Tausta väistyy pehmeästi kaiken luennan ajaksi' },
   { v: 684, teksti: 'Nähtävyysjuttujen kuvatekstit lyhennettiin (erä 3/5)' },
   { v: 683, teksti: 'Jatkuva luenta, aloitusrauha ja pehmeät siirtymät' },

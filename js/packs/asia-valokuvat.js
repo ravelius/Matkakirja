@@ -60,11 +60,11 @@ export const ASIA_VALOKUVAT = {
     tiedosto: 'CH-NB - Türkei, Ankara- Festung - Annemarie Schwarzenbach - SLA-Schwarzenbach-A-5-02-053.jpg',
     vuosi: '1933-1934',
     lahde: 'Annemarie Schwarzenbach / Sveitsin kansalliskirjasto, Commons (PD)',
-    selite: 'Kantajia ja aaseja kulkee paljaalla rinteellä Ankaran linnan '
-      + 'alapuolella; ylhäällä näkyvät muurit ja niiden lomassa vanhat talot. '
-      + 'Kuva otettiin noin kymmenen vuotta sen jälkeen, kun kylästä oli '
-      + 'tullut uuden tasavallan pääkaupunki, eikä uusi kaupunginosa ollut '
-      + 'vielä ehtinyt tänne asti.',
+    selite: 'Kantajia ja aaseja paljaalla rinteellä Ankaran linnan '
+      + 'alapuolella, ylhäällä muurit ja niiden lomassa vanhat talot. Kuva '
+      + 'otettiin noin kymmenen vuotta sen jälkeen, kun kylästä tuli uuden '
+      + 'tasavallan pääkaupunki — uusi kaupunginosa ei ollut vielä ehtinyt '
+      + 'tänne.',
     lisat: [
       {
         tiedosto: 'Turkey. Ankara. Main boulevard to Yeni Shehir showing govt. (i.e., government) buildings LOC matpc.16730.jpg',
@@ -381,11 +381,10 @@ export const ASIA_VALOKUVAT = {
     tiedosto: 'ETH-BIB-Isfahan mit Meidan-e Schah Platz-Persienflug 1924-1925-LBS MH02-02-0150-AL-FL.tif',
     vuosi: '1925',
     lahde: 'Walter Mittelholzer, ETH-Bibliothek / Commons (PD)',
-    selite: 'Isfahan ilmasta helmikuussa 1925. Kuvan yläreunassa erottuvat suuren '
-      + 'aukion kupolit ja pitkä kaarikäytävärivi, muualla matalia '
-      + 'savikattoja. Kuvaaja oli sveitsiläinen lentäjä, joka lensi Persian '
-      + 'yli postikoneella — ilmakuvia kaupungista ei ollut ennen sitä juuri '
-      + 'olemassa.',
+    selite: 'Isfahan ilmasta helmikuussa 1925: suuren aukion kupolit ja '
+      + 'pitkä kaarikäytävärivi, muualla matalia savikattoja. Kuvaaja oli '
+      + 'sveitsiläinen lentäjä, joka lensi Persian yli postikoneella — '
+      + 'ilmakuvia kaupungista ei ollut ennen sitä juuri olemassa.',
     lisat: [
       {
         tiedosto: 'Ali Qapu mansion in the early morning.1.jpg',
@@ -524,10 +523,10 @@ export const ASIA_VALOKUVAT = {
         vuosi: '2009',
         lahde: 'Peretz Partensky, Commons (CC BY 2.0)',
         selite: 'Euroopan ja Aasian rajamerkki Moskovan-tien varressa '
-          + 'Jekaterinburgin länsipuolella. Kivilaattaan on kirjoitettu '
-          + 'toiselle puolelle Aasia ja toiselle Eurooppa, ja väliviivan '
-          + 'päälle asetutaan seisomaan. Rajan paikasta on kiistelty: '
-          + 'obeliskeja on Uralilla useita eikä yksikään ole ainoa oikea.',
+          + 'Jekaterinburgin länsipuolella. Kivilaatassa lukee toisella '
+          + 'puolella Aasia ja toisella Eurooppa, ja väliviivan päälle '
+          + 'asetutaan seisomaan. Obeliskeja on Uralilla useita eikä '
+          + 'yksikään ole ainoa oikea.',
       },
       {
         tiedosto: 'Volchikha Mountain (September 2023) - 5.jpg',
@@ -900,10 +899,10 @@ export const ASIA_VALOKUVAT = {
     tiedosto: 'The Persian problem; an examination of the rival positions of Russia and Great Britain in Persia, with some account of the Persian gulf and the Bagdad railway (1903) (14577292147).jpg',
     vuosi: '1903',
     lahde: 'Internet Archive Book Images, Commons (PD)',
-    selite: 'Maskat vuonna 1903 ilmestyneen matkakirjan kuvalaatassa. Kalliolla '
-      + 'seisoo portugalilaisten linnake ja sen takana kaupunki mahtuu juuri '
-      + 'ja juuri vuorten ja veden väliin. Vuoret nousevat suoraan talojen '
-      + 'takaa, joten kaupunkiin tultiin pitkään käytännössä vain mereltä.',
+    selite: 'Maskat vuonna 1903 ilmestyneen matkakirjan kuvalaatassa. '
+      + 'Kalliolla seisoo portugalilaisten linnake, ja kaupunki mahtuu '
+      + 'juuri ja juuri vuorten ja veden väliin. Vuoret nousevat suoraan '
+      + 'talojen takaa, joten kaupunkiin tultiin pitkään vain mereltä.',
     lisat: [
       {
         tiedosto: 'Fuerte de Al Jalali, Mascate, Omán, 2024-08-14, DD 34.jpg',
@@ -1167,12 +1166,11 @@ export const ASIA_VALOKUVAT = {
     tiedosto: 'Groep mannen poserend bij de Poort van alle Naties (Poort van Xerxes) in Persepolis Persepolis (titel op object), RP-F-F01048-AI.jpg',
     vuosi: 'n. 1880-1895',
     lahde: 'Antoin Sevruguin (attribuoitu) / Rijksmuseum, Commons (CC0)',
-    selite: 'Kaikkien kansojen portti Persepoliissa: pystyssä olevien pylväiden '
-      + 'ja siivekkään härkähahmon juurella seisoo ryhmä miehiä, ja vasta '
-      + 'heistä näkee kuinka korkealle raunio nousee. Albumiinivedos on '
-      + 'hollantilaisen H. Dunlopin matka-albumista, jossa Persian kuvien '
-      + 'seassa on otoksia Skotlannista, Venäjältä ja Kiinasta - Persepolis '
-      + 'oli yksi pysähdys pitkällä maailmanmatkalla.',
+    selite: 'Kaikkien kansojen portti Persepoliissa: pylväiden ja '
+      + 'siivekkään härkähahmon juurella seisova miesryhmä näyttää, kuinka '
+      + 'korkealle raunio nousee. Albumiinivedos on hollantilaisen H. '
+      + 'Dunlopin matka-albumista, jossa Persepolis oli yksi pysähdys '
+      + 'maailmanmatkalla.',
     lisat: [
       {
         tiedosto: 'IranPersepolisApadana2.jpg',
@@ -1606,11 +1604,11 @@ export const ASIA_VALOKUVAT = {
     tiedosto: 'Téhéran, le Meydan de l\'Ark.jpg',
     vuosi: '1850-luku',
     lahde: 'Luigi Pesce / Gallica, Ranskan kansalliskirjasto, Commons (PD)',
-    selite: 'Arkin aukio Teheranissa: kaksikerroksinen kaarikäytävärivi ja sen '
-      + 'edessä pitkä jono tykinlavetteja. Etualan aukiolla liikkuneet '
-      + 'ihmiset ovat jättäneet vain haaleita haamuja, koska valotus kesti '
-      + 'minuutteja. Vedos on 1850-luvulta eli runsas vuosikymmen '
-      + 'valokuvauksen keksimisen jälkeen.',
+    selite: 'Arkin aukio Teheranissa: kaksikerroksinen kaarikäytävärivi ja '
+      + 'sen edessä pitkä jono tykinlavetteja. Aukiolla liikkuneista '
+      + 'ihmisistä jäi vain haaleita haamuja, koska valotus kesti '
+      + 'minuutteja. Vedos on 1850-luvulta, vuosikymmen valokuvauksen '
+      + 'keksimisen jälkeen.',
     lisat: [
       {
         tiedosto: '981012-Damavand-South-IMG 9861-2.jpg',

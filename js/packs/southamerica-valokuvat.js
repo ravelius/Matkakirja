@@ -106,11 +106,11 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'A thousand miles in a dug-out; being the narrative of a journey of investigation among the red-skin Indians of Central Brazil (1911) (14798735293).jpg',
     vuosi: '1911',
     lahde: 'Frederick Charles Glass, Internet Archive Book Images (ei tunnettuja tekijänoikeusrajoituksia)',
-    selite: 'Karajá-ryhmä leveällä hiekkasärkällä Araguaia-joen rannassa. Kuva on '
-      + 'lähetystyöntekijä Frederick Charles Glassin kirjasta, joka kertoo '
-      + 'tuhannen mailin venematkasta jokea ylös vuonna 1911. Särkkien leveys '
-      + 'vaihtelee sen mukaan, kuinka korkealla joki kulkee, ja kuivalla '
-      + 'kaudella niille mahtuu asumaan.',
+    selite: 'Karajá-ryhmä leveällä hiekkasärkällä Araguaia-joen rannassa. '
+      + 'Kuva on lähetystyöntekijä Frederick Charles Glassin kirjasta, joka '
+      + 'kertoo tuhannen mailin venematkasta jokea ylös vuonna 1911. '
+      + 'Kuivalla kaudella särkät ovat niin leveitä, että niillä mahtuu '
+      + 'asumaan.',
     lisat: [
       {
         tiedosto: 'Rio Javaés.jpg',
@@ -237,20 +237,19 @@ export const SOUTHAMERICA_VALOKUVAT = {
     vuosi: '1890',
     lahde: 'Photoglob Co., Library of Congress (PD)',
     selite: 'Plaza Victoria eli nykyinen Plaza de Mayo käsinväritettynä '
-      + 'photochrom-vedoksena. Nurmikkokolmiot, suihkulähde ja '
-      + 'ratsastajapatsas ovat paikoillaan, mutta aukion laidalla on vielä '
-      + 'matalia kaarikäytäväisiä taloja. Vedokset painettiin Sveitsissä '
-      + 'mustavalkoisista negatiiveista ja myytiin matkailijoille muistoksi.',
+      + 'photochrom-vedoksena: suihkulähde ja ratsastajapatsas paikoillaan, '
+      + 'aukion laidalla vielä matalia kaarikäytäväisiä taloja. Vedokset '
+      + 'painettiin Sveitsissä ja myytiin matkailijoille muistoksi.',
     lisat: [
       {
         tiedosto: 'Feria de San Telmo, Buenos Aires.jpg',
         vuosi: '2005',
         lahde: 'Alexandre Campolina, Commons (CC BY 3.0)',
-        selite: 'Sunnuntaitori San Telmon mukulakivikadulla. Valkoisissa '
-          + 'teltoissa myydään vanhoja käyttöesineitä ja huonekaluja, ja '
-          + 'kadun varren talon kyltissä lukee antigüedades. San Telmo oli '
-          + '1800-luvulla varakkaiden kortteli, kunnes keltakuume ajoi heidät '
-          + 'pohjoisemmas ja vanhat talot jäivät siirtolaisperheille.',
+        selite: 'Sunnuntaitori San Telmon mukulakivikadulla; valkoisissa '
+          + 'teltoissa myydään vanhoja käyttöesineitä ja huonekaluja. San '
+          + 'Telmo oli 1800-luvulla varakkaiden kortteli, kunnes keltakuume '
+          + 'ajoi heidät pohjoisemmas ja vanhat talot jäivät '
+          + 'siirtolaisperheille.',
       },
       {
         tiedosto: 'San Telmo Plaza Dorrego.JPG',
@@ -285,11 +284,9 @@ export const SOUTHAMERICA_VALOKUVAT = {
     vuosi: '1945',
     lahde: 'Arquivo Nacional (Brasilia), Commons (PD)',
     selite: 'Campo Granden lentotukikohdan vihkiäiset 19. huhtikuuta 1945. '
-      + 'Nurmikentälle on aseteltu riviin kymmenkunta konetta, kaksitasoja ja '
-      + 'yksitasoja sekaisin, ja niiden takana seisoo sotilasosasto '
-      + 'ruoduissa. Etualan tiilikatolla ja kentän laidalla katselijat jäävät '
-      + 'pistemäisiksi hahmoiksi, joten koko juhla näkyy kuvassa pienempänä '
-      + 'kuin tasainen ruohokenttä ympärillä.',
+      + 'Nurmikentälle on aseteltu riviin kymmenkunta konetta, kaksitasoja '
+      + 'ja yksitasoja sekaisin, ja niiden takana seisoo sotilasosasto '
+      + 'ruoduissa. Katselijat jäävät pieniksi hahmoiksi kentän laidalle.',
     lisat: [
       {
         tiedosto: 'Feira Central de Campo Grande, dezembro de 2022 (1).jpg',
@@ -417,11 +414,11 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Gezicht op een plein in Cayenne, Frans Guyana Public Square, Cayenne (titel op object), RP-F-2001-7-959-2.jpg',
     vuosi: '1880-luvun loppu',
     lahde: 'W. B. Tyler / Rijksmuseum, Commons (CC0)',
-    selite: 'Aukio Cayennessa 1880-luvun lopulla: korkea palmurivi, matalia '
-      + 'puutaloja ja yksinäinen kulkija. Valokuvasta tehty painolaatta on '
-      + 'kirjassa, jossa Lick-observatorion tutkijat raportoivat joulukuun '
-      + '1889 auringonpimennyksestä — sitä varten retkikunta matkusti '
-      + 'Kaliforniasta Guayanaan asti.',
+    selite: 'Aukio Cayennessa 1880-luvun lopulla: palmurivi, matalia '
+      + 'puutaloja ja yksinäinen kulkija. Painolaatta on kirjasta, jossa '
+      + 'Lick-observatorion tutkijat raportoivat joulukuun 1889 '
+      + 'auringonpimennyksestä — sitä varten retkikunta matkusti '
+      + 'Kaliforniasta Guayanaan.',
     lisat: [
       {
         tiedosto: 'French Guiana Cayenne place du Coq magasin.jpg',
@@ -505,11 +502,10 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Preparing for the trail LCCN99472325.jpg',
     vuosi: '1903',
     lahde: 'R. H. Beck, Library of Congress (PD)',
-    selite: 'Keräysretkikunnan miehiä työssä Galápagossaarilla vuonna 1903. '
-      + 'Maassa on jättiläiskilpikonnien kilpiä, ja näytteitä valmistellaan '
-      + 'kuljetusta varten. Library of Congressin luettelossa kuvan aiheiksi '
-      + 'on merkitty kilpikonnat, Galápagossaaret ja metsästys; retkikunnat '
-      + 'keräsivät saarilta eläinnäytteitä museoiden kokoelmiin.',
+    selite: 'Keräysretkikunnan miehiä työssä Galápagossaarilla vuonna 1903: '
+      + 'maassa on jättiläiskilpikonnien kilpiä, ja näytteitä valmistellaan '
+      + 'kuljetusta varten. Retkikunnat keräsivät saarilta eläinnäytteitä '
+      + 'museoiden kokoelmiin.',
     lisat: [
       {
         tiedosto: 'PtoAyoraMercado.jpg',
@@ -593,11 +589,10 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'PERU. SCENES IN IQUITOS LCCN2016864106.jpg',
     vuosi: '1912',
     lahde: 'Harris & Ewing, Library of Congress (PD)',
-    selite: 'Iquitosin laituri vuonna 1912; kuvan alareunassa lukee The Booth '
-      + 'Pier. Höyrylaivoja on kiinni kylki kyljessä, laiturin päässä '
-      + 'nosturi. Kaupunki eli tuolloin kumibuumista, ja merikelpoiset '
-      + 'alukset pääsivät Atlantilta tuhansia kilometrejä ylös Amazonia '
-      + 'hakemaan lasteja.',
+    selite: 'Iquitosin laituri vuonna 1912; kuvan alareunassa lukee The '
+      + 'Booth Pier. Höyrylaivoja on kiinni kylki kyljessä ja laiturin '
+      + 'päässä nosturi. Kaupunki eli kumibuumista, ja merikelpoiset '
+      + 'alukset pääsivät Atlantilta tuhansia kilometrejä ylös Amazonia.',
     lisat: [
       {
         tiedosto: 'Belen, Iquitos (11473478223).jpg',
@@ -683,11 +678,10 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Lima. The Rimac Bridge LCCN2006679716.jpg',
     vuosi: '1868',
     lahde: 'Courret Hermanos, Library of Congress (PD)',
-    selite: 'Lima korkealta kuvattuna vuonna 1868. Keskellä näkyvät Puente de '
-      + 'Piedran holvit ja Rímac-joen uoma, takana paljas San Cristóbalin '
-      + 'kukkula. Kaupunki oli tuolloin matalaa, tasakattoista '
-      + 'kortteliverkkoa. Albumiinivedos on Courret\'n veljesten kuvaamosta, '
-      + 'joka dokumentoi Limaa vuosikymmeniä.',
+    selite: 'Lima korkealta kuvattuna vuonna 1868: Puente de Piedran '
+      + 'holvit, Rímac-joen uoma ja takana paljas San Cristóbalin kukkula. '
+      + 'Kaupunki oli tuolloin matalaa, tasakattoista kortteliverkkoa. '
+      + 'Albumiinivedos on Courret\'n veljesten kuvaamosta.',
     lisat: [
       {
         tiedosto: 'Lunchtime ceviche at the Mercado Central.jpg',
@@ -905,11 +899,10 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Porto Alegre, Rio Grande do Sul circa 1903.jpg',
     vuosi: 'noin 1903',
     lahde: 'Virgílio Cardoso de Oliveira, teoksesta A Patria Brazileira (PD)',
-    selite: 'Porto Alegre 1900-luvun alussa, kuvattuna kaupungin yläpuolelta. '
-      + 'Etualalla on matalia taloja ja puistokaistoja, oikealla suuri '
-      + 'kaksikerroksinen julkinen rakennus, ja takana kohoavat matalat '
-      + 'kukkulat. Kuva on painettu rasterivedoksena maantieteelliseen '
-      + 'teokseen.',
+    selite: 'Porto Alegre 1900-luvun alussa kaupungin yläpuolelta '
+      + 'kuvattuna: matalia taloja, puistokaistoja, suuri kaksikerroksinen '
+      + 'julkinen rakennus ja takana matalat kukkulat. Kuva on painettu '
+      + 'rasterivedoksena maantieteelliseen teokseen.',
     lisat: [
       {
         tiedosto: 'Mercado Público de Porto Alegre, Centro, Porto Alegre, abril de 2023 (1).jpg',
@@ -1083,11 +1076,11 @@ export const SOUTHAMERICA_VALOKUVAT = {
     tiedosto: 'Government Building and principal public square with cathedral at left, Quito, Ecuador LCCN90710775.jpg',
     vuosi: '1907',
     lahde: 'Underwood & Underwood, Library of Congress (PD)',
-    selite: 'Quiton pääaukio vuonna 1907: oikealla hallituspalatsin pitkä '
-      + 'pylväikkö, vasemmalla katedraali. Etualalla kannetaan taakkoja '
-      + 'selässä ja saviruukkua päälaella, ja mukulakivillä odottaa '
-      + 'hevosvaunu. Kuva on stereokortin puolikas — pariksi otetut vedokset '
-      + 'antoivat katselulaitteessa syvyysvaikutelman.',
+    selite: 'Quiton pääaukio vuonna 1907: hallituspalatsin pylväikkö, '
+      + 'katedraali ja aukiolla taakkojen kantajia sekä saviruukkua '
+      + 'päälaellaan kantava kulkija. Kuva on stereokortin puolikas — '
+      + 'pariksi otetut vedokset antoivat katselulaitteessa '
+      + 'syvyysvaikutelman.',
     lisat: [
       {
         tiedosto: 'Quito calle García Moreno.jpg',
@@ -1177,9 +1170,8 @@ export const SOUTHAMERICA_VALOKUVAT = {
     lahde: 'Library of Congress (PD)',
     selite: 'Laakso, jota vedoksen alkuperäinen kuvateksti kutsuu Selkirkin '
       + 'luolaksi, valokuvattuna vuonna 1874. Skotlantilainen merimies '
-      + 'Alexander Selkirk jätettiin saarelle 1704 ja hän eli siellä yksin '
-      + 'yli neljä vuotta; hänen tarinansa antoi aiheen Daniel Defoen '
-      + 'romaaniin.',
+      + 'Alexander Selkirk jätettiin saarelle 1704 ja eli siellä yksin yli '
+      + 'neljä vuotta; tarina antoi aiheen Defoen romaaniin.',
     lisat: [
       {
         tiedosto: 'Isla Juan Fernandez- Langostas (Lobsters).jpg',
@@ -1264,9 +1256,9 @@ export const SOUTHAMERICA_VALOKUVAT = {
     vuosi: '1870-luku',
     lahde: 'Guilherme Gaensly, Commons (PD)',
     selite: 'Salvador noin 1870 ylhäältä kuvattuna: alakaupungin kattoja ja '
-      + 'Kaikkien pyhien lahti täynnä purjelaivoja. Guilherme Gaensly kiersi '
-      + 'Brasiliaa suurella kameralla ja myi vedoksia; ylä- ja alakaupungin '
-      + 'väliä kuljettiin tähän aikaan vielä jyrkkiä rinnekatuja pitkin.',
+      + 'Kaikkien pyhien lahti täynnä purjelaivoja. Guilherme Gaensly '
+      + 'kiersi Brasiliaa suurella kameralla ja myi vedoksia. Ylä- ja '
+      + 'alakaupungin väliä kuljettiin tuolloin jyrkkiä rinnekatuja pitkin.',
     lisat: [
       {
         tiedosto: 'Baiana-acarajé-Salvador.jpg',
@@ -1313,10 +1305,10 @@ export const SOUTHAMERICA_VALOKUVAT = {
         vuosi: '2021',
         lahde: 'Matthias Gorny / Oceana, Commons (CC BY 4.0)',
         selite: 'Merenpohjaa Nazca-Desventuradasin merensuojelualueella, '
-          + 'kuvattuna kauko-ohjattavalla sukellusrobotilla 176 ja 200 metrin '
-          + 'syvyydessä. Pohja on karkeaa hiekkaa, jolla kasvaa merikyniä ja '
-          + 'merivuokkoja; kuvauspaikat ovat San Félixin ja San Ambrosion '
-          + 'lähellä olevia merenalaisia vuoria.',
+          + 'kuvattuna kauko-ohjattavalla sukellusrobotilla 176 ja 200 '
+          + 'metrin syvyydessä. Karkealla hiekalla kasvaa merikyniä ja '
+          + 'merivuokkoja San Félixin ja San Ambrosion merenalaisilla '
+          + 'vuorilla.',
       },
       {
         tiedosto: 'Nazca-Desventuradas Marine Park (10.7717-peerj.8279) Figure 5.png',
@@ -1345,9 +1337,9 @@ export const SOUTHAMERICA_VALOKUVAT = {
         vuosi: '2017',
         lahde: 'Dan Lundberg, Commons (CC BY-SA 2.0)',
         selite: 'Plaza 24 de Septiembre katedraalin kellotornista: palmuja, '
-          + 'kukkiva vaaleanpunainen puu ja ympärillä matalia tiilikattoisia '
-          + 'taloja, joiden takaa nousevat tornitalot. Aukion nimi muistuttaa '
-          + '24. syyskuuta 1810, jolloin kaupunkilaiset nousivat '
+          + 'kukkiva vaaleanpunainen puu ja matalia tiilikattoisia taloja, '
+          + 'joiden takaa nousevat tornitalot. Aukion nimi muistuttaa 24. '
+          + 'syyskuuta 1810, jolloin kaupunkilaiset nousivat '
           + 'siirtomaahallintoa vastaan.',
       },
       {
@@ -1365,7 +1357,7 @@ export const SOUTHAMERICA_VALOKUVAT = {
         selite: 'Ferrocarril Orientalin moottorivaunu. Runko on saksalainen '
           + 'Ferrostaal-kiskobussi, mutta se on rakennettu uudelleen Santa '
           + 'Cruzin omissa korjaamoissa. Itäinen rataverkko ei ole koskaan '
-          + 'yhdistynyt Bolivian länsiosan rataan, vaan se kulkee Brasiliaan '
+          + 'yhdistynyt Bolivian länsiosan rataan, vaan kulkee Brasiliaan '
           + 'ja Argentiinaan.',
       },
     ],
@@ -1481,11 +1473,11 @@ export const SOUTHAMERICA_VALOKUVAT = {
         tiedosto: 'Liberdade of Sao Paulo.jpg',
         vuosi: '2019',
         lahde: 'Wilfredor, Commons (CC0)',
-        selite: 'Liberdaden kaupunginosan pääkatu punaisine lyhtypylväineen ja '
-          + 'juhlaviireineen. Alue kasvoi japanilaisten siirtolaisten '
-          + 'ympärille 1900-luvun alusta lähtien, ja São Paulon osavaltiossa '
-          + 'asuu edelleen maailman suurin japanilaistaustainen yhteisö '
-          + 'Japanin ulkopuolella.',
+        selite: 'Liberdaden kaupunginosan pääkatu punaisine lyhtypylväineen '
+          + 'ja juhlaviireineen. Alue kasvoi japanilaisten siirtolaisten '
+          + 'ympärille 1900-luvun alusta, ja São Paulon osavaltiossa asuu '
+          + 'yhä maailman suurin japanilaistaustainen yhteisö Japanin '
+          + 'ulkopuolella.',
       },
       {
         tiedosto: 'Avenida Paulista aberta em Domingo.jpg',
