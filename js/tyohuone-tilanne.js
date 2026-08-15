@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v740 — Työhuone: palkit, tyylinapit, Lukijaääni',
   'v739 — piirros juttuun; klikkausalue 80 %',
   'v738 — Kööpenhamina-lehti: karuselli + Matkailijalle',
   'v737 — 6 uutta karttaa; piirrokset terävinä; lippuanimaatio',

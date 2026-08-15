@@ -12850,6 +12850,83 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
  * .dialog-kortin ulkoasun; tässä vain rivien asettelu. */
 .puhe-saadin-nappi { margin-top: 0.35rem; }
 
+/* TYÖHUONE (omistajan tilaus 15.8.2026): kolme tyylinappiin puettua
+ * riviä (kuvake + nimi) ja niiden alla tilannepalkit. Napit ovat
+ * varustenappien sukua: sama kulmapyöristys ja kultareuna, mutta
+ * täysleveinä riveinä, koska nämä ovat komentoja eivätkä tila-
+ * valintoja. */
+.tyohuone-nappi {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid rgba(198, 158, 82, 0.45);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.tyohuone-nappi .viiva-ikoni svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+/* Tilannepalkit vierekkäin (vihreä→keltainen→punainen täytön mukaan):
+ * kaksi palkkia rivissä, nimi ylhäällä, ohut ura ja lukema alla. */
+.tyohuone-palkit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.tyohuone-palkki { min-width: 0; }
+
+.palkki-nimi {
+  display: block;
+  font-family: var(--font-type);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.palkki-ura {
+  height: 6px;
+  margin: 0.2rem 0 0.15rem;
+  border-radius: 3px;
+  background: rgba(198, 158, 82, 0.18);
+  overflow: hidden;
+}
+
+.palkki-tayte {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.palkki-tayte.vihrea { background: #6f9e57; }
+.palkki-tayte.keltainen { background: #c6a23c; }
+.palkki-tayte.punainen { background: #b0523c; }
+
+.palkki-arvo {
+  display: block;
+  font-size: 0.68rem;
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.palkki-tyhja .palkki-arvo { opacity: 0.45; }
+
+.tyohuone-kulut {
+  grid-column: 1 / -1;
+  margin: 0.15rem 0 0;
+  font-size: 0.68rem;
+  opacity: 0.8;
+}
+
 .puhe-saadin-rivi {
   display: flex;
   align-items: center;

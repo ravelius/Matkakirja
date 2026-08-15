@@ -236,6 +236,30 @@ jobs:
           fi
           printf '%s' "$OPENAI_API_KEY" | "$WRANGLER" secret put OPENAI_API_KEY --config "$POLLO_ASETUS"
 
+      # TYÖHUONEEN TILANNEPALKKIEN AVAIMET (omistajan tilaus 15.8.2026):
+      # kolme vapaaehtoista salaisuutta, joilla worker näkee ElevenLabsin
+      # kuukausikiintiön ja OpenAI:n/Anthropicin kulut (tehtava:'tila').
+      # HUOM: kulut vaativat ADMIN-avaimet — pöllön ja lukijaäänen
+      # tavalliset avaimet eivät pääse kulurajapintoihin. Puuttuva avain
+      # vain ohitetaan: vastaava palkki näyttää pelissä "ei nähtävissä".
+      # Avaimet kulkevat putkessa kuten muutkin salaisuudet.
+      - name: Aseta tilannepalkkien avaimet workerin salaisuuksiksi (jos on)
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          OPENAI_ADMIN_KEY: ${{ secrets.OPENAI_ADMIN_KEY }}
+          ANTHROPIC_ADMIN_KEY: ${{ secrets.ANTHROPIC_ADMIN_KEY }}
+        run: |
+          set -euo pipefail
+          set +x
+          for nimi in ELEVEN_API_KEY OPENAI_ADMIN_KEY ANTHROPIC_ADMIN_KEY; do
+            arvo=$(eval "printf '%s' \"\${$nimi:-}\"")
+            if [ -z "$arvo" ]; then
+              echo "$nimi ei ole asetettu — ohitetaan (palkki näyttää 'ei nähtävissä')."
+              continue
+            fi
+            printf '%s' "$arvo" | "$WRANGLER" secret put "$nimi" --config "$POLLO_ASETUS"
+          done
+
       # KEHITTÄJÄKOODI on vapaaehtoinen: jos salaisuutta ei ole asetettu,
       # tämä vaihe ohitetaan eikä worker tunne koodia lainkaan — silloin
       # otsake X-Pollo-Kehittaja ei tee mitään. Koodi menee wranglerille

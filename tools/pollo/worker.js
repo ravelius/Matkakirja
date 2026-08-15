@@ -726,6 +726,140 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
   });
 }
 
+/* ------------------------------------------------------------------ */
+/* Työhuoneen tilannepalkit                                            */
+/* ------------------------------------------------------------------ */
+
+/*
+ * Työhuoneen täyttöpalkit (omistajan tilaus 15.8.2026: R2:n käyttö,
+ * ElevenLabsin kuukausikiintiö ja API-kulut "jos pystyt näkemään").
+ * Worker on ainoa paikka, josta nämä voi hakea: jokainen luku vaatii
+ * salaisuuden, eikä salaisuuksia panna koskaan selaimeen eikä repoon.
+ *
+ * Kaikki lähteet ovat valinnaisia: puuttuva sidos tai avain tuottaa
+ * kentäksi null, ja peli näyttää sen kohdalla "ei nähtävissä". Kulut
+ * vaativat ERILLISET admin-avaimet (OPENAI_ADMIN_KEY,
+ * ANTHROPIC_ADMIN_KEY) — pöllön ja lukijaäänen tavalliset avaimet
+ * eivät pääse kulurajapintoihin, eikä admin-avain osaa vastata
+ * pelaajille, joten sama avain ei voi hoitaa molempia töitä.
+ *
+ * Vastaus säilötään KV:hen tunniksi: R2-listaus ja kolme ulkoista
+ * rajapintaa ovat aivan liian raskaita ajettavaksi joka valikon
+ * avauksella, ja tunnin vanha lukema on täyttöpalkille yhtä hyvä
+ * kuin tuore.
+ */
+const TILA_VALIMUISTI_S = 3600;
+const TILA_KV_AVAIN = 'tila:v1';
+
+/** R2-ämpärin koko tavuina: listataan koko sisältö ja summataan. */
+async function haeR2Kaytto(env) {
+  if (!env.PUHE_R2) return null;
+  let tavut = 0;
+  let kohteita = 0;
+  let cursor;
+  do {
+    const sivu = await env.PUHE_R2.list({ cursor, limit: 1000 });
+    for (const kohde of sivu.objects) {
+      tavut += kohde.size;
+      kohteita += 1;
+    }
+    cursor = sivu.truncated ? sivu.cursor : undefined;
+  } while (cursor);
+  return { tavut, kohteita };
+}
+
+/** ElevenLabsin kuukausikiintiö: käytetyt ja sallitut merkit. */
+async function haeElevenTila(env) {
+  const avain = env.ELEVEN_API_KEY ?? env.ELEVENLABS_API_KEY;
+  if (!avain) return null;
+  const vastaus = await fetch('https://api.elevenlabs.io/v1/user/subscription', {
+    headers: { 'xi-api-key': avain },
+  });
+  if (!vastaus.ok) return null;
+  const data = await vastaus.json();
+  if (typeof data?.character_count !== 'number') return null;
+  return {
+    kaytetty: data.character_count,
+    raja: data.character_limit ?? null,
+    nollaus: data.next_character_count_reset_unix ?? null,
+  };
+}
+
+/** OpenAI:n kuluvan kuukauden kulut dollareina (admin-avaimella). */
+async function haeOpenaiKulut(env, kkAlku) {
+  if (!env.OPENAI_ADMIN_KEY) return null;
+  const alku = Math.floor(kkAlku.getTime() / 1000);
+  const vastaus = await fetch(
+    `https://api.openai.com/v1/organization/costs?start_time=${alku}&bucket_width=1d&limit=31`,
+    { headers: { authorization: `Bearer ${env.OPENAI_ADMIN_KEY}` } },
+  );
+  if (!vastaus.ok) return null;
+  const data = await vastaus.json();
+  let usd = 0;
+  for (const sanko of data?.data ?? []) {
+    for (const rivi of sanko?.results ?? []) {
+      usd += Number(rivi?.amount?.value ?? 0);
+    }
+  }
+  return usd;
+}
+
+/** Anthropicin kuluvan kuukauden kulut dollareina (admin-avaimella). */
+async function haeClaudeKulut(env, kkAlku) {
+  const avain = env.ANTHROPIC_ADMIN_KEY ?? env.ANTHROPIC_ADMIN_API_KEY;
+  if (!avain) return null;
+  const vastaus = await fetch(
+    `https://api.anthropic.com/v1/organizations/cost_report?starting_at=${kkAlku.toISOString()}&limit=31`,
+    { headers: { 'x-api-key': avain, 'anthropic-version': '2023-06-01' } },
+  );
+  if (!vastaus.ok) return null;
+  const data = await vastaus.json();
+  let usd = 0;
+  for (const sanko of data?.data ?? []) {
+    for (const rivi of sanko?.results ?? []) {
+      usd += Number(rivi?.amount ?? 0);
+    }
+  }
+  return usd;
+}
+
+async function hoidaTila(env, kors) {
+  const kv = env.POLLO_KV ?? null;
+  if (kv) {
+    const talletettu = await kv.get(TILA_KV_AVAIN);
+    if (talletettu) return vastaa(JSON.parse(talletettu), kors);
+  }
+  const nyt = new Date();
+  const kkAlku = new Date(Date.UTC(nyt.getUTCFullYear(), nyt.getUTCMonth(), 1));
+  // Yksittäisen lähteen kaatuminen ei kaada tilannekuvaa: siitä tulee
+  // null, ja muut palkit näkyvät silti.
+  const [r2, eleven, openaiKulut, claudeKulut, polloKuukausi] = await Promise.all([
+    haeR2Kaytto(env).catch(() => null),
+    haeElevenTila(env).catch(() => null),
+    haeOpenaiKulut(env, kkAlku).catch(() => null),
+    haeClaudeKulut(env, kkAlku).catch(() => null),
+    lueLaskuri(kv, kuukausiAvain(nyt)).catch(() => null),
+  ]);
+  const tila = {
+    r2,
+    eleven,
+    pollo: {
+      kuukausi: polloKuukausi,
+      raja: lueLuku(env.POLLO_KUUKAUSIRAJA, KUUKAUSIRAJA_OLETUS),
+    },
+    kulut: {
+      openai: openaiKulut,
+      claude: claudeKulut,
+      yhteensa: openaiKulut === null && claudeKulut === null
+        ? null
+        : (openaiKulut ?? 0) + (claudeKulut ?? 0),
+    },
+    aika: nyt.toISOString(),
+  };
+  if (kv) await kv.put(TILA_KV_AVAIN, JSON.stringify(tila), { expirationTtl: TILA_VALIMUISTI_S });
+  return vastaa(tila, kors);
+}
+
 export default {
   async fetch(pyynto, env, ctx) {
     const sallitut = lueLista(env.POLLO_ORIGINIT);
@@ -759,6 +893,19 @@ export default {
      */
     if (runko?.tehtava === 'puhe') {
       return hoidaPuhe(pyynto, env, kors, runko, ctx);
+    }
+
+    /*
+     * Työhuoneen tilannekuva vain kehittäjäkoodilla: kulut ja kiintiöt
+     * ovat omistajan tilitietoja, eivät pelisisältöä. Jos koodia ei ole
+     * asetettu workeriin, haara on kokonaan kiinni — puolivalmis
+     * asetus on kiinni, ei auki (sama periaate kuin POLLO_ORIGINIT).
+     */
+    if (runko?.tehtava === 'tila') {
+      if (!kehittajaOhitus(pyynto, env)) {
+        return vastaa({ virhe: 'koodi', viesti: 'Vain kehittäjälle.' }, { status: 403, ...kors });
+      }
+      return hoidaTila(env, kors);
     }
 
     if (!env.ANTHROPIC_API_KEY) {
