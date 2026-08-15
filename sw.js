@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.735';
+const CACHE = 'matkakirja-2026-08-09.736';
 const SHELL = [
   './',
   './index.html',
@@ -211,7 +211,6 @@ const SHELL = [
    * Helsingin ja Pariisin piirrokset lisättiin tähän 15.8.2026 samalla
    * kun ne saivat satelliittikuvan.
    */
-  './assets/kartat/berliini-keskusta.png',
   './assets/kartat/berliini-varikartta.png',
   // Berliinin miniatyyripiirrokset (kohdekartan kortit, v708).
   './assets/kartat/miniatyyrit/berliini-valtiopaivatalo.png',
@@ -293,13 +292,10 @@ const SHELL = [
   './assets/liput/tunnukset/npl-vaakuna.png',
   './assets/liput/tunnukset/bgd-vaakuna.png',
   './assets/liput/tunnukset/pak-vaakuna.png',
-  './assets/kartat/helsinki-keskusta.png',
   './assets/kartat/helsinki-varikartta.png',
   './assets/kartat/kairo-keskusta.png',
-  './assets/kartat/lontoo-keskusta.png',
   './assets/kartat/lontoo-varikartta.png',
   './assets/kartat/madrid-keskusta.png',
-  './assets/kartat/pariisi-keskusta.png',
   './assets/kartat/pariisi-varikartta.png',
   './assets/kartat/tukholma-keskusta.png',
   './assets/kartat/venetsia-keskusta.png',
