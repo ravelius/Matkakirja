@@ -47,7 +47,8 @@ jobs:
           # työhuoneen oma jää kopioimatta, sivu latautuu mutta ei
           # asennu kotivalikkoon — ja se näkyy vasta puhelimella.
           cp index.html manifest.webmanifest sw.js .nojekyll _site/
-          cp tyohuone.html tyohuone-kasikirja.html tyohuone.webmanifest _site/
+          # tyohuone-kasikirja.html poistui v698:n siivouksessa.
+          cp tyohuone.html tyohuone.webmanifest _site/
           cp -r css js assets docs _site/
           cp dist/matkakirja.html _site/dist/
 
