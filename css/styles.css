@@ -10012,11 +10012,20 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   padding: 0;
   border: none;
   border-radius: 0;
-  background: none;
-  /* appearance nollataan itse: iPadin Safari maalasi napille
-   * natiivin taustan background: nonesta huolimatta, ja läpinäkyvän
-   * vaakunan taakse ilmestyi tumma laatikko (omistajan havainnot
-   * 15.8.–16.8.2026). */
+  /*
+   * OMA LÄPIKUULTAMATON PAPERI, EI background: none (omistajan
+   * havainto 16.8.2026: "Vaakunat näkyvät vielä välillä väärin ja
+   * välillä oikein"). Appearance-nollaus ei riittänyt: sumennus-
+   * siirtymä (filter) nostaa napin omalle piirtokerrokselle, ja
+   * WebKit lyö silloin ajoittain reiän kortin multiply-sekoitettuun
+   * paperiin — napin alta paistoi dokumentin tumma pohja
+   * (color-scheme: dark). Läpinäkyvä nappi ei voi luottaa takanaan
+   * olevaan paperiin, joten se maalaa oman: sama väri ja rakeisuus
+   * kuin kortissa, jolloin levy ei erotu — ja reikä ei näy koskaan.
+   */
+  background-color: var(--arkki-paperi, #f5f0e2);
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
   -webkit-appearance: none;
   appearance: none;
   font: inherit;
@@ -10074,13 +10083,18 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   z-index: 6;
   transform: scale(1.7);
   transform-origin: center;
-  background: none;
+  /* Paperi pysyy läpikuultamattomana myös tarkennettuna: transform-
+   * kerros on juuri se paikka, jossa WebKitin reikä syntyy herkimmin.
+   * Kortin värinen levy ei erotu sumean paperin päällä laatikoksi. */
+  background-color: var(--arkki-paperi, #f5f0e2);
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
   border-color: transparent;
 }
 
 .lippu-versio.tarkennettu .lippu-versio-nimi {
   padding: 0.1rem 0.3rem;
-  background: rgba(245, 240, 226, 0.95);
+  background: var(--arkki-paperi, #f5f0e2);
   border-radius: 3px;
   align-self: center;
 }
@@ -10103,7 +10117,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   line-height: 1.4;
   text-align: left;
   color: rgba(33, 29, 24, 0.92);
-  background: rgba(245, 240, 226, 0.95);
+  background: var(--arkki-paperi, #f5f0e2);
   border-radius: 3px;
 }
 
@@ -10125,7 +10139,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .lippu-tunnus.tarkennettu .lippu-tunnus-teksti {
   padding: 0.25rem 0.4rem;
-  background: rgba(245, 240, 226, 0.95);
+  background: var(--arkki-paperi, #f5f0e2);
   border-radius: 4px;
 }
 
@@ -10196,7 +10210,10 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   padding: 0.3rem;
   border: 1px solid rgba(70, 51, 31, 0.25);
   border-radius: 6px;
-  background: rgba(255, 252, 244, 0.55);
+  /* Läpikuultamaton (entinen rgba-kuulto laskettu paperia vasten):
+   * kuultava tausta näyttäisi WebKitin kerrosreiän läpi tumman
+   * pohjan (sama vika kuin tunnusnapissa, ks. kommentti yllä). */
+  background: #faf7ec;
   /* Sama appearance-nollaus kuin tunnusnapeilla (Safari). */
   -webkit-appearance: none;
   appearance: none;
@@ -10205,7 +10222,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .lippu-kortti .lippu-versio[aria-pressed="true"] {
   border-color: rgba(150, 116, 52, 0.75);
-  background: rgba(255, 246, 222, 0.9);
+  background: #fef5de;
 }
 
 .lippu-versio-kuva {
