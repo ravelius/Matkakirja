@@ -7,9 +7,10 @@
  *
  * Sama putki kuin tools/generoi-varustekuvat.mjs: gemini-3-pro-image
  * antaa 1024×1024 PNG:n, joka pienennetään 512 px:n JPEG:ksi
- * Chromiumin kanvaasilla samassa ajossa. Tyyli on huvipuistokartan
- * pienoiskuva: yksi rakennus viistosti ylhäältä, lämmin akvarelli +
- * musteviiva, paperinvärinen tausta joka jatkuu kortin paperiin.
+ * Chromiumin kanvaasilla samassa ajossa. Tyyli (omistajan palaute
+ * 15.8.2026: "yksivärisiä ja hieman karikatyyrin omaisia,
+ * mahdollisimman yksinkertaisia"): yksivärinen seepiamusteluonnos,
+ * kevyt karikatyyri, muutama varma viiva, paperinvärinen tausta.
  *
  * Käyttö:  NODE_USE_ENV_PROXY=1 node tools/generoi-miniatyyrit.mjs [avain …]
  *          Avain on muotoa berliini-tv-torni; ilman argumentteja
@@ -47,16 +48,22 @@ if (!avain) {
  *   3. Ei karttaa rakennuksen ympärille: pienoiskuva istutetaan
  *      OIKEALLE kartalle, joten kuvan oma katuverkko valehtelisi.
  */
-const TYYLI = (aihe) => 'A miniature illustrated landmark for a vintage '
-  + `hand-drawn city map, in the style of theme-park map art: ${aihe}. `
-  + 'Drawn as a small charming three-quarter aerial view with fine warm '
-  + 'brown ink outlines and soft muted watercolor washes; gentle warm '
-  + 'colors — sand, brick, soft blues and greens — with one modest '
-  + 'accent color. The building stands alone on a plain warm cream '
+const TYYLI = (aihe) => 'A tiny landmark sketch for a vintage '
+  + `hand-drawn city map: ${aihe}. `
+  + 'Drawn as a SIMPLE MONOCHROME ink sketch in one single color only — '
+  + 'dark sepia brown ink — with no other colors, no watercolor, no '
+  + 'washes, no fills except sparse light hatching. Slightly '
+  + 'caricatured and playful: its most recognizable features gently '
+  + 'exaggerated, proportions charmingly squashed, like a quick '
+  + 'confident cartoon sketch by a travel illustrator. As simple as '
+  + 'possible: just a few clean confident ink lines, minimal detail, '
+  + 'large areas left empty paper. A small charming three-quarter '
+  + 'aerial view. The building stands alone on a plain warm cream '
   + 'paper background (like aged map paper, #f2ecd8) that fills the '
-  + 'ENTIRE square canvas edge to edge; only a soft small shadow under '
-  + 'the building. No surrounding streets or map, no text, no letters, '
-  + 'no signs, no frame, no border, no people in front. Square 1:1. '
+  + 'ENTIRE square canvas edge to edge; at most a few short hatched '
+  + 'ink strokes as a ground shadow under the building. No surrounding '
+  + 'streets or map, no text, no letters, no signs, no frame, no '
+  + 'border, no people in front. Square 1:1. '
   // Sama vartio kuin kohtaamiskuvissa: tausta on koko kanvaasi, EI
   // pöydällä makaava paperiarkki — Tower Bridgen ensimmäiseen ottoon
   // piirtyi arkin reunat ja varjo, joka lukisi kortilla kehyksenä.
@@ -84,7 +91,7 @@ const KUVAT = [
     + 'modern glass dome with a spiral walkway on its roof'],
   ['berliini-brandenburgin-portti', 'the Brandenburg Gate in Berlin: a '
     + 'sandstone neoclassical city gate with twelve Doric columns '
-    + 'forming five passages, topped by the Quadriga — a bronze-green '
+    + 'forming five passages, topped by the Quadriga — a '
     + 'four-horse chariot driven by a winged goddess'],
   ['berliini-checkpoint-charlie', 'the Checkpoint Charlie guardhouse '
     + 'in Berlin: a small white rectangular border-crossing booth with '
@@ -92,7 +99,7 @@ const KUVAT = [
     + 'simple striped barrier beside it'],
   ['berliini-museosaari', 'Museum Island in Berlin: a cluster of grand '
     + 'neoclassical museum buildings with long columned facades on a '
-    + 'small river island, beside them the green-domed Berlin Cathedral'],
+    + 'small river island, beside them the Berlin Cathedral with its grand dome'],
   ['berliini-tv-torni', 'the Berlin TV Tower (Fernsehturm): a very '
     + 'tall slender concrete tower with a shiny steel sphere near the '
     + 'top and a striped antenna spire above it'],
@@ -103,7 +110,7 @@ const KUVAT = [
    */
   ['berliini-east-side-gallery', 'a '
     + 'long straight free-standing segment of a tall concrete wall '
-    + 'covered edge to edge in colorful painted murals — only abstract '
+    + 'covered edge to edge in painted murals — only abstract '
     + 'shapes, swirls and stylized painted faces, strictly no letters, '
     + 'no words and no writing anywhere on the wall — seen at a slight '
     + 'angle so its length shows'],
@@ -126,18 +133,20 @@ const KUVAT = [
     + 'white glasshouse at the edge and a calm bay glimpsed behind '
     + 'the trees'],
   ['helsinki-kallion-kirkko', 'a grey granite church in national '
-    + 'romantic style on a hilltop: a tall massive rectangular bell '
-    + 'tower with a green copper roof, the nave lower behind it'],
+    + 'romantic style on a hilltop: a very tall MASSIVE broad square '
+    + 'stone bell tower with clock faces and a low pyramid copper cap, '
+    + 'the heavy nave lower behind it — monumental and blocky, not a '
+    + 'slender village church'],
   ['helsinki-tuomiokirkko', 'a gleaming white neoclassical cathedral '
-    + 'on top of a broad steep flight of stone steps: a tall green '
-    + 'central dome, four smaller green domes around it and columned '
+    + 'on top of a broad steep flight of stone steps: a tall '
+    + 'central dome, four smaller domes around it and columned '
     + 'porticoes on each side'],
   ['helsinki-uspenskin-katedraali', 'a red-brick orthodox cathedral '
-    + 'on a rocky outcrop: a cluster of thirteen small golden onion '
+    + 'on a rocky outcrop: a cluster of thirteen small onion '
     + 'cupolas above narrow arched windows'],
   ['helsinki-johanneksenkirkko', 'a red-brick gothic revival church '
     + 'with two identical very tall slender towers topped by pointed '
-    + 'green copper spires'],
+    + 'copper spires'],
   ['helsinki-suomenlinna', 'a sea fortress spread over small rocky '
     + 'islands: low stone bastion walls and grassy ramparts, a pale '
     + 'church tower rising above them, a few old cannons and a small '
@@ -154,7 +163,7 @@ const KUVAT = [
   ['pariisi-concorden-aukio', 'a grand paved square with a tall '
     + 'ancient Egyptian obelisk of pink granite with a small gilded '
     + 'pyramid tip, flanked by two ornate tiered fountains with '
-    + 'green-and-gold sculpted figures'],
+    + 'sculpted figures'],
   ['pariisi-louvre', 'a long classical palace with ornate stone '
     + 'facades and mansard roofs forming a courtyard, and in the '
     + 'courtyard a modern glass pyramid'],
@@ -180,22 +189,22 @@ const KUVAT = [
     + 'gates in front and a gilded winged statue on a tall column '
     + 'before it'],
   ['lontoo-trafalgar-square', 'a grand city square: one very tall '
-    + 'column with a small statue on top, four large bronze lions at '
+    + 'column with a small statue on top, four large lion statues at '
     + 'its base, two round fountains and a long columned gallery '
     + 'facade behind'],
   ['lontoo-big-ben', 'the Big Ben clock tower: a tall gothic revival '
-    + 'stone tower with a large white clock face on each side, gilded '
-    + 'details and a green pointed spire, a corner of an ornate '
+    + 'stone tower with a large white clock face on each side, a pointed '
+    + 'spire, a corner of an ornate '
     + 'parliament building at its foot'],
   ['lontoo-lontoon-silma', 'a giant white observation wheel by a '
     + 'river: slender spokes like a bicycle wheel and oval glass '
     + 'capsules along the rim, a hint of water below'],
   ['lontoo-pyhan-paavalin-katedraali', 'an English baroque cathedral: '
-    + 'a great grey-green dome with a golden cross on a colonnaded '
+    + 'a great dome with a cross on a colonnaded '
     + 'drum, twin baroque towers at the west front with a columned '
     + 'portico between them'],
   ['lontoo-tower-bridge', 'a Victorian river bridge with two tall '
-    + 'gothic stone towers, high walkways connecting them, pale blue '
+    + 'gothic stone towers, high walkways connecting them, high '
     + 'suspension chains and a twin lifting roadway between the '
     + 'towers'],
 ];

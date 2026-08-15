@@ -109444,6 +109444,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v717 — piirrokset yksivärisinä luonnoksina',
   'v716 — lippuikkuna: 2/3-korkeus, symboliikka, vaakunat',
   'v715 — piirrokset hajallaan + nuolet; klikkaus: kyltti → juttu',
   'v714 — kartan piirrokset leikattuina, numerot pois',
@@ -180479,6 +180480,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 717, teksti: 'Kartan piirrokset yksivärisinä luonnoksina' },
   { v: 716, teksti: 'Lippuikkuna: symboliikka, vaakunat, 2/3-korkeus' },
   { v: 715, teksti: 'Piirrokset hajalleen nuolin; klikkaus suurentaa' },
   { v: 714, teksti: 'Kartan piirrokset leikattuina, numerot pois' },
@@ -181292,7 +181294,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.716';
+const APP_VERSION = '2026-08-09.717';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

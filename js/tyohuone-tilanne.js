@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v717 — piirrokset yksivärisinä luonnoksina',
   'v716 — lippuikkuna: 2/3-korkeus, symboliikka, vaakunat',
   'v715 — piirrokset hajallaan + nuolet; klikkaus: kyltti → juttu',
   'v714 — kartan piirrokset leikattuina, numerot pois',
