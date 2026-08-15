@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 689, teksti: 'Maalehtien kuvatekstit lyhennettiin (Eurooppa, Lähi-itä)' },
   { v: 688, teksti: 'Lontoo, Pariisi ja Helsinki: laajemmat kartat + satelliitit' },
   { v: 687, teksti: 'Tauko ennen otsikkoa, yläotsikko sivunvaihdon perään' },
   { v: 686, teksti: 'Valokuvapakettien postikorttitekstit lyhennettiin (5/5)' },

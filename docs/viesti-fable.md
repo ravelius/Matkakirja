@@ -1,142 +1,101 @@
-# Opus 13 → Fable: karttalaajennus Lontoo, Pariisi ja Helsinki
+# Opus 14 → Fable: kuvatekstiurakan erä 4 (maa-kategoriat.js)
 
 ## Tilanne
 
-Kaikki kolme valmiina **yhdessä PR:ssä** — Helsinkiä ei tarvinnut
-erottaa omakseen, koska kainalon komposointi onnistui ensimmäisellä
-yrityksellä.
-
-| Kaupunki | Rajaus ennen | Rajaus nyt | Satelliitti |
+| Erä | Kohde | Ylityksiä | Tila |
 | --- | --- | --- | --- |
-| Lontoo | 6,9 × 3,6 km | **8,7 × 4,5 km** | uusi, 903 kt |
-| Pariisi | 6,6 × 5,0 km | **8,3 × 6,2 km** | uusi, 1 491 kt |
-| Helsinki | 3,7 × 3,3 km | **4,7 × 4,1 km** | uusi + kainalo, 885 kt |
+| 4a | maa-kategoriat.js nostot, Eurooppa + Lähi-itä | 100 → **0** | **PR auki (v689)**, haara `-e4a` |
+| 4b | maa-kategoriat.js nostot, Aasia | 105 → **0** | haara `-e4b`, PR heti 4a:n perään |
 
-Kaikissa sama Berliinin kaava (v680, c75bf30): lineaarinen ×1,25
-samasta keskipisteestä, joten kuvasuhde ja kohteiden keskinäiset
-paikat säilyvät eikä yhtäkään koordinaattia siirretty käsin.
+Erän 4 jälkeen **koko repon ylitykset ovat 0** (oli 205). Urakka on
+tällä valmis.
 
-## Portit
+## Mitä tehtiin
 
-- `tarkista-karttapisteet` × 3: **kaikki pisteet maalla**, yksikään ei
-  peitä mittakaavajanaa, yksikään numeropari ei mene päällekkäin.
-- `savuke-karttazoom` **LÄPI** neljälle: berliini (regressio), lontoo,
-  pariisi, helsinki.
-- Piirroksen ja satelliitin kohdistus tarkistettiin silmällä latomalla
-  ne päällekkäin puoliksi läpinäkyvinä (apuskripti jäi kontin
-  /tmp:hen, ei repoon). Joet, rannat, puistot ja ratapihat osuvat
-  pikselilleen kaikissa kolmessa — myös Suomenlinnan kainalo.
-- Testit, kaksoisavaimet ja build: ks. PR.
+205 nostoselitettä yli 260 merkin rajan → 0. Keskipituus 320 → 226
+merkkiä, pisin 631 → 260. Karsittu aines oli valtaosin
+sommittelukuvailua: ilmansuunnat, etuala ja tausta, kuvakulmat, taivas
+ja pilvet, ohikulkijat, väripilkut.
 
-## Helsinki: kainalo satelliittikuvaan (tehtävän vaikein kohta)
+**Lahde-kenttiin, alt-teksteihin, tiedosto-kenttiin ja kaanoniin ei ole
+koskettu. Uusia faktoja ei ole lisätty.**
 
-Ratkaistu pyytämällä WMS:ltä **toinen ruutu kainalon omalla
-rajauksella** ja latomalla se päähaun päälle Chromiumilla samoille
-prosenttipaikoille, jotka piirtäjä käyttää (x, y, leveys, korkeus
-maakartat.js:stä — ei uudelleenlaskentaa, sama luku kahdelle
-käyttäjälle). Tuki on nyt `tools/hae-satelliittikartat.mjs`:ssä ja
-kirjattu sen alkukommenttiin; se toimii automaattisesti mille tahansa
-kainalolliselle kaupungille (Wien, Budapest), jos niille joskus
-haetaan satelliittikuva.
+## Leipätekstisiirrot: 0 — ja miksi
 
-Kohde 7 seisoo nyt Suomenlinnan päällä myös satelliittinäkymässä eikä
-kellu tyhjällä merellä.
+Kirjoitusvaiheessa tuli kaksi siirtoa, mutta **molemmat peruttiin
+tarkastuksessa** ja tieto palautettiin selitteeseen. Kirjaan syyn, koska
+se on linjauskysymys sinulle:
 
-**Yksi tietoinen ero näkymien välillä:** piirroksessa kainalon yllä
-lukee "3 km kaakkoon", satelliitissa ei. Suuntateksti asuu
-piirtotyökalun omassa KAUPUNGIT-taulussa eikä maakartat.js:ssä, joten
-satelliittityökalu ei näe sitä. Kolme vaihtoehtoa, jos haluat sen:
-(a) lisätään `suunta` myös maakartat.js:n kainaloon — helpoin, mutta
-sama merkkijono kahdessa paikassa; (b) piirtäjä tulostaa sen
-KAUPUNKIKARTAT-riveihin, jolloin duplikaatti on ainakin
-konegeneroitu; (c) jätetään ennalleen, koska kehys itsessään kertoo
-saman ja nimi on joka tapauksessa selitelistassa. En tehnyt tätä
-ilman päätöstäsi.
+1. **YEM/historia/1** *(Viisi pylvästä, yksi maan alla)* — virke
+   metallikiiloista pylväiden juurella. Siirto ei ollut sanatarkka
+   ("Jokaisen juurelle" → "Jokaisen **pylvään** juurelle"), ja mikä
+   pahempaa: leipäteksti kertoo juuri ennen loppuaan, ettei pylväitä
+   ollutkaan viisi vaan kuusi ja kuudes oli maan alla. Loppuun
+   liitettynä virke luetaan kaikkia kuutta koskevaksi — myös sitä, jonka
+   juurella ei ole kiilaa. Tieto mahtui takaisin selitteeseen (221 mrk).
+2. **GBR/musiikki/2** *(Kellot soivat lukuja, ei sävelmää)* — virke
+   valajan nimestä Mears kellojen olkapäässä. Leipäteksti käsittelee
+   englantilaista kellonsoittoa yleisesti ja päättyy peal-matematiikkaan,
+   joten loppuun liitettynä virke luetaan yleisväitteeksi eikä näitä
+   kelloja koskevaksi. Tieto mahtui takaisin selitteeseen (259 mrk).
 
-## Kaupunkikohtaiset huomiot
+**Havainto linjaukseen:** siirto leipätekstin loppuun toimii, kun
+leipäteksti päättyy samaan kohteeseen, mutta ei silloin, kun se päättyy
+yleistykseen tai laajempaan joukkoon — siirretty virke perii silloin
+väärän tarkoitteen. Näissä kahdessa oli parempi tiivistää selitettä
+muualta ja pitää tieto kuvan vieressä. Jos haluat siirrot ehdottomiksi,
+se on helppo muuttaa erikseen.
 
-**Lontoo.** Suoraviivainen. Levennys korjasi vanhan vian: Tower Bridge
-oli itälaidassa 85 %:n kohdalla ja numeroympyrä hipoi reunaa — nyt
-78 %.
+## Laatuvarmistus kahdessa vaiheessa
 
-**Pariisi.** Eteläreuna 48.8414 tuo **Panthéonin ja Luxembourgin
-puutarhan** kuvaan, eli levennys maksoi takaisin sen hinnan, joka
-vanhaan rajaukseen oli kirjattu. **En lisännyt niitä kohdelistalle** —
-kohteita on yhä kuusi. Ne mahtuisivat nyt, jos haluat listan kasvavan;
-se on oma päätöksensä (numerointi, selitteet, nähtävyysjutut).
-Pariisi ei myöskään ole enää pelin laajin rajaus: Berliinin 10,2 km on.
+**Kirjoitus:** 12 rinnakkaista toimittajaa maaryhmittäin (selvärajainen
+erä, sama resepti — roolituksen kustannuskurin sallima parvi).
 
-**Helsinki.** Pohjoisrajan vanha vaihtokauppa purkautui itsestään:
-**symmetrinen** ×1,25 nostaa pohjoisrajan 60.1877:ään, joten Kallion
-kirkko (60.18425) ja Linnanmäki (60.1861) ovat kuvassa ilman
-epäsymmetriaa. Kokeilin epäsymmetriaa ja hylkäsin sen: niemen kärki
-(Kaivopuiston ranta, n. 60.1536) on nyt 92 %:n korkeudella, ja 300 m
-lisää pohjoiseen olisi painanut sen kiinni alalaitaan. Vanha rajaus
-katkaisi kärjen kokonaan, joten tämäkin on parannus.
-Sibelius-monumentti jää yhä lännessä ulkopuolelle. **Kalliota ja
-Linnanmäkeä ei lisätty kohdelistalle** samasta syystä kuin Pariisissa.
+**Tarkastus:** 7 erillistä tarkastajaa, jotka eivät kirjoittaneet
+tekstejä. Jokainen kohde käytiin läpi yksitellen, ei otantaa. Löydöksiä
+**46**, joista vakavia 4. Kaikki 46 korjattiin.
 
-Itäreuna siirtyi 465 m ja **Korkeasaari tuli kuvaan**. Vanha kommentti
-varoitti tästä ("oikeasta kolmanneksesta tulee lähes pelkkää
-avovettä"), joten katsoin sen erikseen: oikea kolmannes sisältää
-Kalasataman, Katajanokan, Korkeasaaren ja alaosassa Suomenlinnan
-kainalon, eli varoitus ei toteudu tällä siirrolla. Kommentti on
-päivitetty vastaamaan uutta tilannetta.
+- *kadonnut-tieto* 30 — pääosa löydöksistä. Aitoa asiatietoa
+  (materiaaleja, freskokohtauksia, lajituntomerkkejä, työvälineitä) oli
+  karsittu sommittelun varjolla. Palautettu selitteisiin; tilaa oli.
+- *vaara-merkitys* 7, *muoto* 4, *keksitty-fakta* 4, *leipateksti* 1.
+- Keksityt faktat olivat kaikki lieviä ja samaa lajia: tiivistys oli
+  korvannut sommittelumääreen uudella tilaväitteellä ("oikealla kohoaa"
+  → "kohoaa rakennuksen yläpuolelle"). **Yhtään uutta vuosilukua,
+  mittaa, lukumäärää, nimeä tai lajinimeä ei syntynyt** — neljä
+  tarkastajaa ajoi tämän vielä sanatason diffillä.
 
-## Esittelytekstit: tarkistettu, ei muutoksia
+Vakavat neljä: YEM/historia/1 (siirto, 2 löydöstä), JPN/kuvataide/1
+(luettelo summautui viiteen, vaikka ihmisiä on neljä), CYP/muinaisuus/2
+(selite lupasi kaksi kohtausta mutta kuvasi vain toisen).
 
-Kävin läpi kaikkien kolmen esittelyn sijaintiviittaukset. **Yksikään
-ei mennyt rikki**, joten en koskenut tekstiin:
+**Kone:** `tools/kuvateksti-tarkista-e4.mjs` (uusi) mittaa pituudet ja
+virkemäärät, varmistaa ettei leipäteksti muutu muuten kuin lisäyksellä,
+ja listaa uudessa selitteessä esiintyvät numerot ja erisnimet, joita ei
+ole vanhassa aineistossa. Lopputilassa **0 virhettä**; kuusi sanaa
+nousi tarkistettavaksi ja kaikki olivat joko virkkeen aloittavia
+tavallisia sanoja tai taivutusmuotoja.
 
-- Lontoo: ei sijaintiviittauksia (idässä/lännessä ovat maantiedettä).
-- Pariisi: "Vasemmalla … Riemukaari" 26 % ✓; "Ylhäällä oikealla …
-  Montmartre" 68 % / 19 % ✓. "Kartan keskellä näkyy saari" oli jo
-  ennestään väljä (Île de la Cité oli 81 % / 87 %), ja levennys siirsi
-  saarta **kohti** keskustaa (74 % / 79 %) — eli väite parani, ei
-  huonontunut. Jätin sen rauhaan, koska en korjaa sitä mitä en
-  rikkonut; jos haluat sen täsmälliseksi, se on sinun tekstiäsi.
-- Helsinki: "Ylhäällä oleva lahti on Töölönlahti" 24 % ✓; "Oikeassa
-  alanurkassa on oma pieni kartta Suomenlinnasta" ✓ (kainalo on
-  samassa paikassa molemmissa näkymissä).
+## Työkalut
 
-## Yksi poikkeama tehtävänannosta: sw.js
+Korjaus tehtiin id-pohjaisesti: `tools/kuvateksti-poimi-e4.mjs` antaa
+kullekin kohteelle vakaan id:n (`MAA/kategoria/#n`),
+`tools/kuvateksti-kokoa-e4.mjs` hakee vanhan tekstin aina id:llä, ja
+`tools/kuvateksti-kohdista.mjs` (Opus 12) kohdistaa vanhan tekstin
+perusteella. Todensin ennen ajoa, että kohdistajan edestakainen ajo
+palauttaa maa-kategoriat.js:n kaikki **2 182** selite- ja teksti-kenttää
+identtisinä, ja että jokainen 205 kohteen vanha arvo esiintyy tiedostossa
+**täsmälleen kerran** — väärään kenttään osuminen oli siis poissuljettu.
 
-Tehtävänannossa luki, että piirros-png:t ovat jo SHELL-listalla.
-**Se piti paikkansa vain Lontoon osalta** — Pariisin ja Helsingin
-piirroksia ei ollut listalla lainkaan (siellä on vain kuusi
-kohdekarttaa yli viidestäkymmenestä; lista jäi päivittämättä kartaston
-kasvaessa). Lisäsin siksi kolme satelliittia **ja** kaksi puuttuvaa
-piirrosta: pelkkä satelliitti tarkoittaisi, että vivun oletusnäkymä on
-se, joka EI ole offline. Yhteensä +5,1 Mt listalle, jonka koko on jo
-193 Mt. Perustelu on kirjattu sw.js:ään.
+## Portit (4a)
 
-Muut kartat eivät kärsi: sama alkuperä menee fetch-käsittelijän
-stale-while-revalidate -haaraan, eli ne päätyvät koriin ensimmäisellä
-katselulla joka tapauksessa. SHELL on vain esilataus.
+Testit **# pass 704, # fail 0**; ei kaksoisavaimia; dist 10 498 kt
+tuoreen mainin (v688) päältä; savuke-lehtiasettelu **10/10**,
+savuke-maaselain **6/6**.
 
-## Havaintoja, joita EN korjannut
+## Sinulle päätettäväksi
 
-1. **`tools/pakkaa-jpeg.mjs` ei ole olemassa.**
-   `hae-satelliittikartat.mjs`:n kommentti neuvoo pakkaamaan sillä yli
-   1,5 Mt:n kuvat. Tarvetta ei tullut (suurin on Pariisi 1 491 kt),
-   mutta neuvo osoittaa tyhjään. Kainalollisen kuvan pakkaa nyt
-   Chromium (LAATU-vakio), joten sille reitti on olemassa; muille ei.
-2. **Overpass oli koko ajon ajan ruuhkainen** ja vastasi 503:lla
-   toistuvasti — Lontoo meni läpi yhdellä yrityksellä, Pariisi vaati
-   kolme ja Helsinki kaksi. Työkalun oma kolmen yrityksen uusinta ei
-   aina riitä; jos kartastoa ajetaan joskus läpi erässä, uusintoja
-   kannattaa lisätä. En muuttanut työkalua.
-
-## Konttihavainto
-
-Sessio käynnistyi **ilman repoa**: työhakemisto oli tyhjä eikä
-`/workspace/matkakirja` ollut olemassa. Repo piti liittää istuntoon
-`add_repo`-kutsulla ja kloonata käsin ennen kuin työn saattoi
-aloittaa. Jos tämä toistuu uusilla sessioilla, se kannattaa mainita
-perustamispromptissa — muuten sessio voi päätellä, ettei tehtävää voi
-tehdä.
-
-## Haara
-
-`claude/opus13-karttalaajennus`, rebasoitu tuoreeseen mainiin juuri
-ennen versionostoa ja buildia. Jään valmiuteen.
+1. Yllä oleva siirtolinjaus (leipätekstin loppu vs. selite).
+2. En avannut kuvia, vaan luotin vanhaan selitteeseen lähteenä — työ oli
+   tiivistystä, ei uudelleenkuvausta. Jos haluat selitteiden
+   silmätarkistuksen kuvia vasten, se on oma erillinen kierroksensa.
