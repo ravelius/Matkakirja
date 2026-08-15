@@ -59,7 +59,7 @@ import { teeRadiosoitin, VIRITYKSEN_VAIHEET } from './radiosoitin.js';
 import { teePistenaytto, merkinRivit, FONTTI } from './pistenaytto.js';
 import { teeViritysaani, esilataaViritysaanet, unohdaViritysaanet } from './viritin.js';
 import { sfx } from '../sound.js';
-import { stopPlaceStream } from '../ambience-stream.js';
+import { lisaaVaistaja, stopPlaceStream } from '../ambience-stream.js';
 
 /*
  * NÄYTÖN MITAT.
@@ -344,6 +344,68 @@ let soiva = null;
 let vaistyva = null;
 let viritin = null;
 let aanenvoimakkuus = OLETUSAANI;
+
+/*
+ * ── PUHEEN VÄISTÖ (omistajan havainto 15.8.2026) ─────────────────────
+ *
+ * "Tausta ääni ei hiljene, kun pöllö puhuu." Radio soi omassa
+ * <audio>-elementissään eikä kulje js/ambience-stream.js:n soittimien
+ * kautta, joten kertojan ja pöllön puheen väistö ei koskenut sitä
+ * lainkaan — lähetys jyräsi puheen. Nyt radio rekisteröityy väistön
+ * kuulijaksi (lisaaVaistaja): sama kerroin, joka vie äänimaiseman
+ * puheen alle, vaimentaa myös lähetyksen ja viritysäänen, ja palautus
+ * nostaa ne takaisin samalla liu'ulla.
+ *
+ * Kerroin askelletaan elementin volume-arvoon ajastimella samaan
+ * tapaan kuin ristihäivytyksessä (lähetys ei kulje Web Audion läpi).
+ */
+let puheVaisto = 1;
+let puheVaistoAjastin = 0;
+
+/** Radion voimakkuus juuri nyt, väistö mukaan luettuna. */
+function tehollinenAani() {
+  return aanenvoimakkuus * puheVaisto;
+}
+
+/** Kirjoittaa voimassa olevan voimakkuuden kaikkeen, mikä nyt soi. */
+function ajaTehollinen() {
+  // Sama ehto kuin paivitaAanenvoimakkuus: vain lukittuneelle ja
+  // häivyttämättömälle asemalle saa kirjoittaa suoraan — häivytysten
+  // askeleet lukevat tehollisen arvon itse.
+  if (soiva?.lukittu && !soiva.haivytys) {
+    try {
+      soiva.audio.volume = tehollinenAani();
+    } catch {
+      /* elementti ehti vapautua — seuraava askel osuu uuteen */
+    }
+  }
+  viritin?.asetaVoimakkuus(tehollinenAani());
+}
+
+function saadaPuheVaistoa(kohde, kestoMs) {
+  if (puheVaistoAjastin) {
+    clearInterval(puheVaistoAjastin);
+    puheVaistoAjastin = 0;
+  }
+  const lahto = puheVaisto;
+  if (!kestoMs || Math.abs(kohde - lahto) < 0.001) {
+    puheVaisto = kohde;
+    ajaTehollinen();
+    return;
+  }
+  const alku = kello();
+  puheVaistoAjastin = setInterval(() => {
+    const osuus = Math.min(1, (kello() - alku) / kestoMs);
+    puheVaisto = lahto + (kohde - lahto) * osuus;
+    ajaTehollinen();
+    if (osuus >= 1) {
+      clearInterval(puheVaistoAjastin);
+      puheVaistoAjastin = 0;
+    }
+  }, HAIVYTYKSEN_ASKEL_MS);
+}
+
+lisaaVaistaja(saadaPuheVaistoa);
 
 /** Onko radiotila päällä? */
 export function paalla() {
@@ -856,8 +918,9 @@ function haivytaLahetysSisaan(virta) {
     }
     const osuus = (kello() - alku) / (LUKITUKSEN_HAIVYTYS_S * 1000);
     try {
-      // Sini vastaa virityksen kosinia, ks. RISTIHAIVYTYS.
-      virta.audio.volume = aanenvoimakkuus * RISTIHAIVYTYS.nouseva(osuus);
+      // Sini vastaa virityksen kosinia, ks. RISTIHAIVYTYS. Tehollinen
+      // arvo kantaa myös puheen väistön (ks. saadaPuheVaistoa).
+      virta.audio.volume = tehollinenAani() * RISTIHAIVYTYS.nouseva(osuus);
     } catch (syy) {
       console.warn('Lähetyksen häivytys epäonnistui.', syy);
     }
@@ -1132,7 +1195,7 @@ function aloitaVirta(cityId, kanava) {
     const audio = new Audio();
     audio.preload = 'none';
     // Lukittu asema jatkaa omalla voimakkuudellaan, virittyvä on mykkä.
-    audio.volume = oma.lukittu ? aanenvoimakkuus : 0;
+    audio.volume = oma.lukittu ? tehollinenAani() : 0;
     oma.audio = audio;
 
     // Kuuntelijat tarkistavat virran lisäksi ELEMENTIN: myöhässä tuleva
@@ -1268,8 +1331,8 @@ function paivitaAanenvoimakkuus(arvo) {
    * kääntäminen kesken vaihdon nostaisi juuri sammuvan kanavan takaisin
    * kuuluviin — vaihdon toinen puoli menisi rikki yhdestä sormenliikkeestä.
    */
-  if (soiva?.lukittu && !soiva.haivytys) soiva.audio.volume = aanenvoimakkuus;
-  viritin?.asetaVoimakkuus(aanenvoimakkuus);
+  if (soiva?.lukittu && !soiva.haivytys) soiva.audio.volume = tehollinenAani();
+  viritin?.asetaVoimakkuus(tehollinenAani());
   return aanenvoimakkuus;
 }
 
