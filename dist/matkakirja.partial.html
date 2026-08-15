@@ -10016,6 +10016,12 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   border: none;
   border-radius: 0;
   background: none;
+  /* appearance nollataan itse: iPadin Safari maalasi napille
+   * natiivin taustan background: nonesta huolimatta, ja läpinäkyvän
+   * vaakunan taakse ilmestyi tumma laatikko (omistajan havainnot
+   * 15.8.–16.8.2026). */
+  -webkit-appearance: none;
+  appearance: none;
   font: inherit;
   text-align: left;
   color: inherit;
@@ -10032,8 +10038,15 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 /* Sumennus häivyttyy pehmeästi (omistajan tilaus 15.8.2026:
  * "Lippujen ja vaakunoiden suurennoksen voisi animoida"). */
 .lippu-kortti > *,
-.lippu-kortti .lippu-versiot > *,
 .lippu-kortti .lippu-tunnukset > * { transition: filter 220ms ease; }
+
+/* Versioliput kasvavat PAIKALLAAN transformilla (omistajan tilaus
+ * 16.8.2026: "asettelu saisi pysyä paikoillaan kun yksi lippu
+ * suurenee") — transform ei muuta taittoa, joten naapurit eivät
+ * liiku. */
+.lippu-kortti .lippu-versiot > * {
+  transition: filter 220ms ease, transform 200ms ease;
+}
 
 .lippu-kortti.tarkennus > :not(.terava-haara) { filter: blur(3px); }
 .lippu-kortti.tarkennus .terava-haara > :not(.tarkennettu) { filter: blur(3px); }
@@ -10044,14 +10057,12 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   to { transform: scale(1); opacity: 1; }
 }
 
-.lippu-versio.tarkennettu,
 .lippu-tunnus.tarkennettu {
   animation: lippu-kasvu 240ms ease;
   transform-origin: center top;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .lippu-versio.tarkennettu,
   .lippu-tunnus.tarkennettu { animation: none; }
   .lippu-kortti > *,
   .lippu-kortti .lippu-versiot > *,
@@ -10062,14 +10073,12 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * 15.8.2026: "Suurenna lippu isommaksi ja ota taustalaatikko
  * pois") — vain lippu ja tekstit terävinä sumean päällä. */
 .lippu-kortti .lippu-versio.tarkennettu {
-  grid-column: 1 / -1;
+  position: relative;
+  z-index: 6;
+  transform: scale(1.7);
+  transform-origin: center;
   background: none;
   border-color: transparent;
-}
-
-.lippu-versio.tarkennettu .lippu-versio-kuva {
-  width: min(100%, 17rem);
-  margin: 0 auto;
 }
 
 .lippu-versio.tarkennettu .lippu-versio-nimi {
@@ -10081,11 +10090,19 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .lippu-versio-selite { display: none; }
 
+/* Selite kelluu laatan alla absoluuttisena, jottei sen ilmestyminen
+ * muuta laatan kokoa (asettelu pysyy paikallaan). Fontti on pieni,
+ * koska koko laatta on skaalattu 1,7-kertaiseksi. */
 .lippu-versio.tarkennettu .lippu-versio-selite {
   display: block;
+  position: absolute;
+  top: calc(100% + 0.15rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
   padding: 0.1rem 0.3rem 0.15rem;
   font-family: var(--font-luku);
-  font-size: 0.8rem;
+  font-size: 0.55rem;
   line-height: 1.4;
   text-align: left;
   color: rgba(33, 29, 24, 0.92);
@@ -10094,19 +10111,19 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 /*
- * Tarkennetulle vaakunalle sama pergamenttilevy kuin selitteellä
- * (omistajan havainto 15.8.2026: "vaakunoiden läpinäkyvyys häviää").
- * iPadin Safarissa sisarusten sumennussuodatin voi puhkaista kortin
- * maalatun taustan tarkennetun kuvan alta, jolloin läpinäkyvän
- * PNG:n takaa kuultaa himmennetty kartta — tummana laatikkona.
- * Oma peittävä tausta kuvalle tekee lopputuloksesta saman kaikilla
- * selaimilla.
+ * Tarkennettuna PELKKÄ vaakuna isona, selite sen alla (omistajan
+ * tilaus 16.8.2026: "vaakunoissa voisi näkyä pelkkä vaakuna ja
+ * vielä isompana"). v760:n pergamenttilevy poistui — tumman
+ * laatikon oikea syy oli Safarin natiivi nappimaalaus, joka on nyt
+ * nollattu appearance: nonella.
  */
+.lippu-tunnus.tarkennettu {
+  flex-direction: column;
+  align-items: center;
+}
+
 .lippu-tunnus.tarkennettu .lippu-tunnus-kuva {
-  width: 8.4rem;
-  padding: 0.35rem;
-  background: rgba(245, 240, 226, 0.95);
-  border-radius: 6px;
+  width: min(64%, 13rem);
 }
 
 .lippu-tunnus.tarkennettu .lippu-tunnus-teksti {
@@ -10183,6 +10200,9 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   border: 1px solid rgba(70, 51, 31, 0.25);
   border-radius: 6px;
   background: rgba(255, 252, 244, 0.55);
+  /* Sama appearance-nollaus kuin tunnusnapeilla (Safari). */
+  -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -112003,6 +112023,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v763 — vaakuna isona ilman laatikkoa; liput paikallaan',
   'v762 — jutun otsikko: vahti pitää yläreunan paikallaan',
   'v761 — työhuoneessa vain palkit, tekstirivit pois',
   'v760 — tarkennettu vaakuna pergamenttilevyllä, ei tummaa',
@@ -183360,6 +183381,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 763, teksti: 'lippuikkuna: iso pelkkä vaakuna; liput kasvavat paikallaan' },
   { v: 762, teksti: 'jutun yläreunan vahti: otsikko ei karkaa avauksessa' },
   { v: 761, teksti: 'työhuoneen kulu- ja lähderivit pois (palkit riittävät)' },
   { v: 760, teksti: 'tarkennetulle vaakunalle pergamenttitausta (Safari)' },
@@ -184219,7 +184241,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.762';
+const APP_VERSION = '2026-08-09.763';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
