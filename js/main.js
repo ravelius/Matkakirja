@@ -43,7 +43,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.757';
+const APP_VERSION = '2026-08-09.758';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1125,7 +1125,16 @@ let tyohuoneTila = null;
 let tyohuoneHaku = null;
 
 async function haeTyohuoneTila() {
-  const [repo, tila, peili] = await Promise.all([
+  /*
+   * HUOM: purkujärjestys seuraa listaa — repo, PEILI, PÖLLÖ. Tässä
+   * oli v746–v757 ristikkäinen purku [repo, tila, peili], jolloin
+   * peilimanifesti meni pöllömuuttujaan ja pöllön vastaus peiliin:
+   * kaikki palkit näyttivät tyhjää ja kulurivi syytti admin-avaimia,
+   * vaikka molemmat lähteet vastasivat koko ajan oikein. Löytyi
+   * v757:n diagnoosirivistä ("peili ok · pöllö ei vastausta" + R2
+   * 0 Mt — mahdoton yhdistelmä ilman ristiinmenoa).
+   */
+  const [repo, peili, tila] = await Promise.all([
     fetch('https://api.github.com/repos/ravelius/Matkakirja')
       .then((v) => (v.ok ? v.json() : null))
       .catch(() => null),
