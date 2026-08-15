@@ -42,6 +42,28 @@ test('taustaäänille on mitattu kerroin eikä oletusta', () => {
     `${oletuksella}/${osoitteet.length} äänitteellä ei ole mitattua kerrointa — aja tools/mittaa-aanet.mjs`);
 });
 
+test('jokainen taustaääni on LUFS-mitattu — uusi äänite mitataan heti', () => {
+  /*
+   * Omistajan linjaus 15.8.2026: "tulevat uudet taustaäänet mitataan
+   * heti luotaessa että ongelmaa ei tule jatkossa". Tausta: tavoitteen
+   * noston ja uusien kaupunkien jälkeen mittaus jäi ajamatta, ja
+   * efektiivisten tasojen hajonta kasvoi 35 desibeliin — osa raidoista
+   * huusi ja osa hukkui puheväistön alle (v692 korjasi).
+   *
+   * Tämä testi tekee säännöstä koneellisen: uusi äänite ei pääse
+   * mainiin ilman mittausta, koska sen URL puuttuu aanitasot.jsonista.
+   * Korjaus on aina sama komento: node tools/mittaa-aanet.mjs
+   * --kirjoita (konttiverkossa työkalu hoitaa proxyn itse).
+   */
+  const data = JSON.parse(readFileSync(new URL('../tools/aanitasot.json', import.meta.url), 'utf8'));
+  const mitatut = new Map(data.mitattu.map((m) => [m.url, m]));
+  for (const { url } of keraaOsoitteet(LAHDE)) {
+    const m = mitatut.get(url);
+    assert.ok(m && Number.isFinite(m.lufs),
+      `${url.split('/').pop()}: ei LUFS-mittausta — aja node tools/mittaa-aanet.mjs --kirjoita`);
+  }
+});
+
 test('kertoimet jakautuvat molempiin suuntiin', () => {
   // Tasaus sekä vaimentaa että vahvistaa. Jos kaikki ovat samalla
   // puolella ykköstä, tavoitetaso on valittu väärin — silloin koko

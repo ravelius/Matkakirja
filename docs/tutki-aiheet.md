@@ -227,6 +227,14 @@ naapurimaan lohkoon ennen kuin liität.
    jokainen aihe aukeaa, kuvat latautuvat, Lue lisää -napit toimivat.
 3. Kuvien tekijämerkinnät näkyvät jokaisessa nostossa.
 4. Kulttuurivisa aukeaa saapumiskortilta ja sen aihe löytyy aiheista.
+5. **Uudet taustaäänet mitataan HETI luotaessa** (omistajan linjaus
+   15.8.2026): jokainen `js/aani-ehdokkaat.js`:ään lisätty äänite
+   ajetaan `node tools/mittaa-aanet.mjs --kirjoita` -komennolla ENNEN
+   PR:ää, jotta sen voima-kerroin on LUFS-mitattu eikä korvakuulolta.
+   Tausta: mittaamattomat raidat kasvattivat tasohaitarin 35 dB:iin ja
+   osa hukkui puheväistön alle (korjattu v692). Testi
+   `tests/aanitasot.test.mjs` hylkää mittaamattoman äänitteen
+   automaattisesti — sääntö ei siis jää muistin varaan.
 
 ## Lehtimaan monistusohje (vaihe vaiheelta)
 

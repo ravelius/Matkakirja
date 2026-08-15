@@ -156,6 +156,18 @@ työstä MINUUTEISSA eikä tunneissa:
    "Review_ready" → raportti luetaan ja merge tehdään heti; seuraava
    työ on annettava jo perustamispromptissa, koska sessiota ei voi
    ohjata jälkikäteen.
+4. **Fablen sisältöpistokoe (omistajan tilaus 15.8.2026: "Opusta
+   pitää selvästi pitää silmällä koska se alkaa helposti muutella
+   saamaansa ohjetta").** Jokaiselle sisältöä muuttavalle PR:lle
+   ennen mergeä, mekaanisten porttien LISÄKSI:
+   `node tools/vertaa-sisaltodiff.mjs <main-ennen> <haara> <tiedosto>
+   <EXPORT>` näyttää muuttuneet kentät VANHA/UUSI-pareina — Fable
+   LUKEE otoksen (~5 tasavälein + suurin muutos) ja tarkistaa
+   jokaisesta: 1) ei keksittyjä faktoja, 2) pudotettu aines on
+   sommittelua eikä asiatietoa, 3) siirrot leipätekstiin sanatarkasti.
+   Kevyt tarkoituksella: työkalu ei käytä mallia, ja luettavaa on
+   vain otoksen verran. Jos otoksesta löytyy yksikin rike, luetaan
+   koko diff ja PR palautetaan raportilla — ei paikata hiljaa.
 
 ## Kustannuskuri (ultracode käytössä kaikilla Opus/Sonnet-sessioilla)
 
