@@ -12100,17 +12100,21 @@ export class UI {
       const avaaJuttu = k.teksti ? () => this.avaaNahtavyys(k, numero)
         : (k.wiki ? () => this.openWikiArticle(k.wiki, k.nimi) : null);
       /*
-       * NAPAUTUS VAIN SUURENTAA (omistajan linjaus 15.8.2026:
-       * "Riittää kun saa klikattua isommaksi (kasvaa vain kokoa
-       * ilman ikkunaa)" — kumosi saman päivän kaksivaiheisen mallin,
-       * jossa toinen napautus avasi jutun). Napautus kasvattaa
-       * piirroksen ja näyttää nimikyltin (CSS: .valittu); uusi
-       * napautus palauttaa koon. Juttuun pääsee selitelistasta, joka
-       * on toiminut niin koko ajan. Numeroympyrä (kohde ilman
-       * piirrosta) avaa jutun suoraan kuten ennenkin.
+       * NAPAUTUS SUURENTAA, KYLTTI AVAA JUTUN (omistajan linjaukset
+       * 15.8.2026: "Riittää kun saa klikattua isommaksi (kasvaa vain
+       * kokoa ilman ikkunaa)" ja "klikkaamalla avautuvaa nimikylttiä
+       * pitäisi päästä kohteen pop-up-ikkunaan"). Napautus kuvaan
+       * kasvattaa piirroksen ja näyttää nimikyltin (CSS: .valittu);
+       * uusi napautus kuvaan palauttaa koon, mutta napautus KYLTTIIN
+       * avaa jutun. Juttuun pääsee myös selitelistasta kuten ennen.
+       * Numeroympyrä (kohde ilman piirrosta) avaa jutun suoraan.
        */
       const avaa = (miniatyyri && avaaJuttu)
-        ? () => {
+        ? (tapahtuma) => {
+          if (tapahtuma?.target?.closest?.('.kohde-kyltti')) {
+            avaaJuttu();
+            return;
+          }
           const valittu = piste.classList.contains('valittu');
           kotelo.querySelectorAll('.kohde-piirros.valittu')
             .forEach((v) => v.classList.remove('valittu'));

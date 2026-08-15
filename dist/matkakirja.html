@@ -10359,6 +10359,9 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   border: 1px solid rgba(70, 51, 31, 0.4);
   border-radius: 2px;
   touch-action: pan-y;
+  /* Kokokontti, jotta valittu piirros voi mitata itsensä kartta-
+   * ikkunan korkeudesta (cqh) — ks. .kohde-piirros.valittu. */
+  container-type: size;
 }
 
 .kartta-kehys.zoomattu {
@@ -10496,6 +10499,17 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   border-color: #2c2318;
 }
 
+/*
+ * Painetun napin hover EI saa vaalentaa taustaa: yllä oleva
+ * hover-sääntö (0,4,1) voitti painetun tilan (0,3,1), jolloin iOS:n
+ * tahmeassa hoverissa vaalea teksti jäi vaalealle pohjalle ja
+ * "teksti katosi" (omistajan havainto 15.8.2026).
+ */
+.dialog .kartta-tyokalut button[aria-pressed="true"]:hover:not(:disabled) {
+  background: #46331f;
+  border-color: #2c2318;
+}
+
 /* Plus ja miinus ovat merkkejä eivätkä sanoja: merkki saa olla
  * näkymävivun tekstiä isompi, mutta painikkeen KORKEUS pysyy samana —
  * rivillä on kaksi säädinryhmää, ja eri korkuisina ne näyttäisivät
@@ -10609,23 +10623,22 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 /*
- * VALITTU PIIRROS (omistajan tilaukset 15.8.2026: "Kun kuva painaa,
- * se voisi yksinkertaisesti vain suurentua ja sen viereen voisi
- * tulla nimikyltti" ja "Riittää kun saa klikattua isommaksi (kasvaa
- * vain kokoa ilman ikkunaa)"). Napautus lisää .valittu-luokan:
- * piirros kasvaa paikallaan ja nimikyltti aukeaa sen alle (tai ylle
+ * VALITTU PIIRROS (omistajan tilaukset 15.8.2026, viimeisin:
+ * "Suurennettu kuva saisi olla aina neljäsosa kartan korkeudesta,
+ * riippumatta zoomitasosta"). Napautus lisää .valittu-luokan:
+ * piirros kasvaa neljäsosaan KARTTAIKKUNAN korkeudesta (25cqh
+ * kehyskontista) ja nimikyltti aukeaa sen alle (tai ylle
  * alareunassa, .kyltti-ylle); uusi napautus palauttaa koon —
- * ikkunaa ei avata. Suurennoskin on suhteessa KARTTAAN (ei ruutuun),
- * kuten perusasento. Kerroin 4 (omistajan tilaukset 15.8.2026: "Saa
- * kasvaa koko 3x", "vähän isompi" ja "vielä hiukan isompi";
- * 40 px → 160 px lepozoomilla).
+ * ikkunaa ei avata. Jako zoomilla kumoaa lavan skaalan, joten
+ * näkyvä koko on sama joka zoomiasennossa.
  */
 .maakartta-piste.kohde-numero.kohde-piirros {
-  transition: transform 160ms ease;
+  transition: width 160ms ease, height 160ms ease;
 }
 
 .kartta-lava .maakartta-piste.kohde-numero.kohde-piirros.valittu {
-  transform: translate(-50%, -50%) scale(4);
+  width: calc(25cqh / var(--zoom));
+  height: calc(25cqh / var(--zoom));
   z-index: 5;
 }
 
@@ -10637,25 +10650,28 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * olisi pahempi kuin ei kumpaakaan. */
 .kohde-piirros.valittu .kohde-vihje { display: none; }
 
+/* Kyltti napautuksesta juttuun (omistajan tilaus 15.8.2026:
+ * "klikkaamalla avautuvaa nimikylttiä pitäisi päästä kohteen
+ * pop-up-ikkunaan") — ks. ui.js:n napautuskäsittelijä. Vastaskaalaus
+ * zoomilla pitää kyltin näkyvän koon vakiona, koska valittu piste ei
+ * enää skaalaa lapsiaan transformilla. */
 .kohde-kyltti {
   display: none;
   position: absolute;
   left: 50%;
   top: calc(100% - 4px);
-  transform: translateX(-50%);
-  padding: 0.07rem 0.24rem;
+  transform: translateX(-50%) scale(calc(1 / var(--zoom, 1)));
+  transform-origin: top center;
+  padding: 0.16rem 0.5rem;
   white-space: nowrap;
   font-family: var(--font-type);
-  /* Kyltti perii napin 4-kertaisen skaalan — mitat ovat siksi
-   * murto-osia, jotta näkyvä koko on tavallista tekstiä ja
-   * hiusviivareunus. */
-  font-size: 0.21rem;
+  font-size: 0.74rem;
   letter-spacing: 0.03em;
   color: #2c1e07;
   background-color: #f5f0e2;
-  border: 0.5px solid rgba(70, 51, 31, 0.55);
-  border-radius: 1.5px;
-  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(70, 51, 31, 0.55);
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .kohde-piirros.valittu .kohde-kyltti { display: block; }
@@ -10663,6 +10679,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .kohde-piirros.kyltti-ylle .kohde-kyltti {
   top: auto;
   bottom: calc(100% - 4px);
+  transform-origin: bottom center;
 }
 
 /*
@@ -109948,6 +109965,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v728 — suurennos ¼ kartasta; kyltistä juttuun; vipunapin teksti',
   'v727 — lippusivut: Länsi-Eurooppa (8 maata)',
   'v726 — lippusivut: Pohjoismaat + Baltia (7 maata)',
   'v725 — lippuikkunan iso kuva reunasta reunaan',
@@ -174904,17 +174922,21 @@ class UI {
       const avaaJuttu = k.teksti ? () => this.avaaNahtavyys(k, numero)
         : (k.wiki ? () => this.openWikiArticle(k.wiki, k.nimi) : null);
       /*
-       * NAPAUTUS VAIN SUURENTAA (omistajan linjaus 15.8.2026:
-       * "Riittää kun saa klikattua isommaksi (kasvaa vain kokoa
-       * ilman ikkunaa)" — kumosi saman päivän kaksivaiheisen mallin,
-       * jossa toinen napautus avasi jutun). Napautus kasvattaa
-       * piirroksen ja näyttää nimikyltin (CSS: .valittu); uusi
-       * napautus palauttaa koon. Juttuun pääsee selitelistasta, joka
-       * on toiminut niin koko ajan. Numeroympyrä (kohde ilman
-       * piirrosta) avaa jutun suoraan kuten ennenkin.
+       * NAPAUTUS SUURENTAA, KYLTTI AVAA JUTUN (omistajan linjaukset
+       * 15.8.2026: "Riittää kun saa klikattua isommaksi (kasvaa vain
+       * kokoa ilman ikkunaa)" ja "klikkaamalla avautuvaa nimikylttiä
+       * pitäisi päästä kohteen pop-up-ikkunaan"). Napautus kuvaan
+       * kasvattaa piirroksen ja näyttää nimikyltin (CSS: .valittu);
+       * uusi napautus kuvaan palauttaa koon, mutta napautus KYLTTIIN
+       * avaa jutun. Juttuun pääsee myös selitelistasta kuten ennen.
+       * Numeroympyrä (kohde ilman piirrosta) avaa jutun suoraan.
        */
       const avaa = (miniatyyri && avaaJuttu)
-        ? () => {
+        ? (tapahtuma) => {
+          if (tapahtuma?.target?.closest?.('.kohde-kyltti')) {
+            avaaJuttu();
+            return;
+          }
           const valittu = piste.classList.contains('valittu');
           kotelo.querySelectorAll('.kohde-piirros.valittu')
             .forEach((v) => v.classList.remove('valittu'));
@@ -180952,6 +180974,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 728, teksti: 'Suurennos 1/4 kartasta; kyltista juttuun; vipunappi' },
   { v: 727, teksti: 'Lippusivut: Lansi-Eurooppa' },
   { v: 726, teksti: 'Lippusivut: Pohjoismaat ja Baltia' },
   { v: 725, teksti: 'Lippuikkunan iso kuva isommaksi' },
@@ -181776,7 +181799,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.727';
+const APP_VERSION = '2026-08-09.728';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
