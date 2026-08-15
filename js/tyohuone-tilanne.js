@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v765 — Köpiksen uusilla kohteilla piirrokset kartalla',
   'v764 — Köpiksen kartalla 9 kohdetta (uudet: 7–9, ympyröinä)',
   'v763 — vaakuna isona ilman laatikkoa; liput paikallaan',
   'v762 — jutun otsikko: vahti pitää yläreunan paikallaan',

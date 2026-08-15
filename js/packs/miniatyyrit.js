@@ -64,6 +64,9 @@ export const MINIATYYRIT = {
     Nyhavn: 'assets/kartat/miniatyyrit/kobenhavn-nyhavn.webp',
     'Christiansborgin linna': 'assets/kartat/miniatyyrit/kobenhavn-christiansborg.webp',
     Tivoli: 'assets/kartat/miniatyyrit/kobenhavn-tivoli.webp',
+    'Vapahtajan kirkko': 'assets/kartat/miniatyyrit/kobenhavn-vapahtajan-kirkko.webp',
+    'Rosenborgin linna': 'assets/kartat/miniatyyrit/kobenhavn-rosenborgin-linna.webp',
+    Kastellet: 'assets/kartat/miniatyyrit/kobenhavn-kastellet.webp',
   },
   rooma: {
     Pietarinkirkko: 'assets/kartat/miniatyyrit/rooma-pietarinkirkko.webp',

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.764';
+const CACHE = 'matkakirja-2026-08-09.765';
 const SHELL = [
   './',
   './index.html',
@@ -279,6 +279,9 @@ const SHELL = [
   './assets/kartat/miniatyyrit/kobenhavn-nyhavn.webp',
   './assets/kartat/miniatyyrit/kobenhavn-christiansborg.webp',
   './assets/kartat/miniatyyrit/kobenhavn-tivoli.webp',
+  './assets/kartat/miniatyyrit/kobenhavn-vapahtajan-kirkko.webp',
+  './assets/kartat/miniatyyrit/kobenhavn-rosenborgin-linna.webp',
+  './assets/kartat/miniatyyrit/kobenhavn-kastellet.webp',
   // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
   './assets/liput/versiot/fin-valtiolippu.png',
   './assets/liput/versiot/fin-sotalippu.png',
