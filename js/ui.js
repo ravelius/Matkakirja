@@ -12993,8 +12993,30 @@ export class UI {
     // Lainaus keskelle, kappaleiden puoliväliin.
     const lainauksenPaikka = kohde.lainaus ? Math.ceil(kappaleet.length / 2) : -1;
 
+    /*
+     * PIIRROS JUTUN AVAUKSEEN (omistajan tilaus 15.8.2026: "lisätä
+     * piirretty kuva pop up ikkunan ensimmäisen kappaleen oikealle
+     * puolelle niin että teksti kulkee sen vasempaa puolta").
+     * Sama leikattu miniatyyri kuin kartalla, float oikealle
+     * ensimmäisen kappaleen sisään; läpinäkyvä ja ilman marginaaleja
+     * (omistajan tarkennus: läpinäkyvä alue on jo leveä). Henkilö-
+     * jutut ja muut ei-karttakohteet eivät löydä piirrosta nimellään,
+     * jolloin kappale taittuu ennalleen.
+     */
+    const piirros = MINIATYYRIT[this.arrivalShownFor]?.[kohde.nimi] ?? null;
+
     kappaleet.forEach((kappale, i) => {
-      sisalto.appendChild(this.nahtavyysKappale(kappale, linkit));
+      const kpl = this.nahtavyysKappale(kappale, linkit);
+      if (i === 0 && piirros) {
+        const kuva = document.createElement('img');
+        kuva.className = 'nahtavyys-piirros';
+        kuva.src = piirros;
+        kuva.alt = '';
+        kuva.decoding = 'async';
+        kuva.draggable = false;
+        kpl.insertBefore(kuva, kpl.firstChild);
+      }
+      sisalto.appendChild(kpl);
       if (i + 1 === lainauksenPaikka) {
         const lohko = html('blockquote', 'nahtavyys-lainaus');
         lohko.appendChild(html('p', 'nahtavyys-lainaus-teksti', kohde.lainaus.teksti));
