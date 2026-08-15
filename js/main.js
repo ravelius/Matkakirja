@@ -43,7 +43,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.753';
+const APP_VERSION = '2026-08-09.754';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1247,6 +1247,12 @@ function piirraTyohuonePalkit(data) {
       + 'kehittäjäkoodilla (kytke kehittäjätila uudelleen sillä)';
   } else if (data.tilaSyy) {
     kulut.textContent = `Kulut: pöllöpalvelin ei vastannut (${data.tilaSyy})`;
+  } else if (tila?.viat && Object.keys(tila.viat).length) {
+    // Worker kertoo kaatuneen lähteen virheen (esim. "eleven: HTTP
+    // 401") — näytetään se sellaisenaan, ettei syyllistetä avaimia
+    // joita ei edes tarvittu (omistajan havainto 15.8.2026).
+    const rivit = Object.entries(tila.viat).map(([nimi, v]) => `${nimi}: ${v}`).join(' · ');
+    kulut.textContent = `Kulut: lähdevirhe (${rivit})`;
   } else {
     kulut.textContent = 'Kulut: ei nähtävissä (admin-avaimet puuttuvat)';
   }
@@ -1255,10 +1261,13 @@ function piirraTyohuonePalkit(data) {
 
 function paivitaTyohuonePalkit() {
   if (!kehittajaTilaPaalla()) return;
-  // Onnistunut tulos riittää istunnoksi; epäonnistunut tila-haku
-  // yritetään uudestaan seuraavasta avauksesta (ohimenevä verkkovika
-  // ei saa jäädä valikkoon koko istunnoksi).
-  if (tyohuoneTila && !(tyohuoneTila.tilaSyy && tyohuoneTila.tilaSyy !== 'koodi')) {
+  // Onnistunut tulos riittää istunnoksi; epäonnistunut tai vajaa
+  // tila-haku yritetään uudestaan seuraavasta avauksesta (ohimenevä
+  // verkkovika ei saa jäädä valikkoon koko istunnoksi).
+  const vajaa = tyohuoneTila
+    && ((tyohuoneTila.tilaSyy && tyohuoneTila.tilaSyy !== 'koodi')
+      || (tyohuoneTila.tila?.viat && Object.keys(tyohuoneTila.tila.viat).length));
+  if (tyohuoneTila && !vajaa) {
     piirraTyohuonePalkit(tyohuoneTila);
     return;
   }

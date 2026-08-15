@@ -749,7 +749,12 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
  * kuin tuore.
  */
 const TILA_VALIMUISTI_S = 3600;
-const TILA_KV_AVAIN = 'tila:v1';
+// Vajaa tilannekuva (jokin lähde kaatui) vanhenee nopeasti, ettei
+// ohimenevä häiriö jää tunniksi näkyviin.
+const TILA_VALIMUISTI_VAJAA_S = 300;
+// v2: avain vaihdettu 15.8.2026, jotta vanha tyhjä tilannekuva
+// mitätöityy heti julkaisussa.
+const TILA_KV_AVAIN = 'tila:v2';
 
 /** R2-ämpärin koko tavuina: listataan koko sisältö ja summataan. */
 async function haeR2Kaytto(env) {
@@ -775,9 +780,9 @@ async function haeElevenTila(env) {
   const vastaus = await fetch('https://api.elevenlabs.io/v1/user/subscription', {
     headers: { 'xi-api-key': avain },
   });
-  if (!vastaus.ok) return null;
+  if (!vastaus.ok) throw new Error(`HTTP ${vastaus.status}`);
   const data = await vastaus.json();
-  if (typeof data?.character_count !== 'number') return null;
+  if (typeof data?.character_count !== 'number') throw new Error('outo vastaus');
   return {
     kaytetty: data.character_count,
     raja: data.character_limit ?? null,
@@ -793,7 +798,7 @@ async function haeOpenaiKulut(env, kkAlku) {
     `https://api.openai.com/v1/organization/costs?start_time=${alku}&bucket_width=1d&limit=31`,
     { headers: { authorization: `Bearer ${env.OPENAI_ADMIN_KEY}` } },
   );
-  if (!vastaus.ok) return null;
+  if (!vastaus.ok) throw new Error(`HTTP ${vastaus.status}`);
   const data = await vastaus.json();
   let usd = 0;
   for (const sanko of data?.data ?? []) {
@@ -832,7 +837,7 @@ async function haeClaudeKulut(env, kkAlku) {
   const osoite = `https://api.anthropic.com/v1/organizations/cost_report?starting_at=${kkAlku.toISOString()}&limit=31`
     + (tyotila ? '&group_by[]=workspace_id' : '');
   const vastaus = await fetch(osoite, { headers: otsakkeet });
-  if (!vastaus.ok) return null;
+  if (!vastaus.ok) throw new Error(`HTTP ${vastaus.status}`);
   const data = await vastaus.json();
   let usd = 0;
   for (const sanko of data?.data ?? []) {
@@ -852,35 +857,56 @@ async function hoidaTila(env, kors) {
   }
   const nyt = new Date();
   const kkAlku = new Date(Date.UTC(nyt.getUTCFullYear(), nyt.getUTCMonth(), 1));
-  // Yksittäisen lähteen kaatuminen ei kaada tilannekuvaa: siitä tulee
-  // null, ja muut palkit näkyvät silti.
+  /*
+   * Yksittäisen lähteen kaatuminen ei kaada tilannekuvaa — mutta syy
+   * EI saa kadota (omistajan havainto 15.8.2026: paneeli syytti
+   * admin-avaimia, vaikka avaimet olivat workerilla ja vika muualla).
+   * Kaatunut lähde jättää virheensä viat-kenttään (esim. "HTTP 401"),
+   * peli näyttää sen kulurivillä, ja vajaa tilannekuva säilötään
+   * vain hetkeksi.
+   */
+  const koeta = async (tyo) => {
+    try { return { arvo: await tyo }; } catch (v) {
+      return { virhe: String(v?.message ?? v).slice(0, 60) };
+    }
+  };
   const [r2, eleven, openaiKulut, claudeKulut, polloKuukausi] = await Promise.all([
-    haeR2Kaytto(env).catch(() => null),
-    haeElevenTila(env).catch(() => null),
-    haeOpenaiKulut(env, kkAlku).catch(() => null),
-    haeClaudeKulut(env, kkAlku).catch(() => null),
-    lueLaskuri(kv, kuukausiAvain(nyt)).catch(() => null),
+    koeta(haeR2Kaytto(env)),
+    koeta(haeElevenTila(env)),
+    koeta(haeOpenaiKulut(env, kkAlku)),
+    koeta(haeClaudeKulut(env, kkAlku)),
+    koeta(lueLaskuri(kv, kuukausiAvain(nyt))),
   ]);
+  const viat = {};
+  for (const [nimi, tulos] of [
+    ['r2', r2], ['eleven', eleven], ['openai', openaiKulut], ['claude', claudeKulut],
+  ]) {
+    if (tulos.virhe) viat[nimi] = tulos.virhe;
+  }
+  const openai = openaiKulut.arvo ?? null;
+  const claude = claudeKulut.arvo ?? null;
   const tila = {
-    r2,
-    eleven,
+    r2: r2.arvo ?? null,
+    eleven: eleven.arvo ?? null,
     pollo: {
-      kuukausi: polloKuukausi,
+      kuukausi: polloKuukausi.arvo ?? null,
       raja: lueLuku(env.POLLO_KUUKAUSIRAJA, KUUKAUSIRAJA_OLETUS),
     },
     kulut: {
-      openai: openaiKulut,
-      claude: claudeKulut?.usd ?? null,
+      openai,
+      claude: claude?.usd ?? null,
       // Onko Claude-summa rajattu pöllön työtilaan vai koko
       // organisaation (peli kertoo eron kulurivillä).
-      claudeRajattu: claudeKulut?.rajattu ?? false,
-      yhteensa: openaiKulut === null && claudeKulut === null
+      claudeRajattu: claude?.rajattu ?? false,
+      yhteensa: openai === null && claude === null
         ? null
-        : (openaiKulut ?? 0) + (claudeKulut?.usd ?? 0),
+        : (openai ?? 0) + (claude?.usd ?? 0),
     },
+    viat: Object.keys(viat).length ? viat : null,
     aika: nyt.toISOString(),
   };
-  if (kv) await kv.put(TILA_KV_AVAIN, JSON.stringify(tila), { expirationTtl: TILA_VALIMUISTI_S });
+  const ttl = Object.keys(viat).length ? TILA_VALIMUISTI_VAJAA_S : TILA_VALIMUISTI_S;
+  if (kv) await kv.put(TILA_KV_AVAIN, JSON.stringify(tila), { expirationTtl: ttl });
   return vastaa(tila, kors);
 }
 
