@@ -594,6 +594,8 @@ async function haePala(teksti, persoona, sailio = null) {
  *   onTila?: (t: {tauolla: boolean, kappale: number, kappaleita: number,
  *     teksti: string|null, alku: number}) => void,
  *   aloitusKappale?: number ensimmäisenä soitettava kappale (oletus 0)
+ *   otsikkoKappaleet?: Iterable<number> otsikolla alkavat kappaleet —
+ *     niiden edellä pidetään pidempi tauko (OTSIKKOVALI)
  * }} asetukset
  * @returns {{
  *   lisaa(teksti: string): void,
@@ -607,7 +609,7 @@ async function haePala(teksti, persoona, sailio = null) {
  */
 export function luoPuheSoitin({
   persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
-  aloitusKappale = 0,
+  aloitusKappale = 0, otsikkoKappaleet = null,
 } = {}) {
   if (!puheTuettu()) return null;
   if (typeof window === 'undefined') return null;
@@ -621,6 +623,16 @@ export function luoPuheSoitin({
 
   const VIRKEVALI = 0.22; // s — palojen väli samassa kappaleessa
   const KAPPALEVALI = 0.45; // s — kappaleiden väli
+  /*
+   * Otsikolla alkavan kappaleen edellä pidetään pidempi tauko
+   * (omistajan tilaus 15.8.2026: "Lukija voisi pitää pienen tauon
+   * ennen kun tulee uusi otsikko tai väliotsikko") — hengähdys
+   * kertoo korvalle, että osasto vaihtuu, samoin kuin tyhjä tila
+   * kertoo sen silmälle. Kutsuja nimeää otsikolliset kappaleet
+   * (otsikkoKappaleet), koska soitin näkee vain paljasta tekstiä.
+   */
+  const OTSIKKOVALI = 0.95; // s — tauko ennen otsikolla alkavaa kappaletta
+  const otsikolliset = new Set(otsikkoKappaleet ?? []);
   const HAIVYTYS = 0.012; // s — mikrohäivytys sauman molemmin puolin
   const KYNNYS = 0.02; // hiljaisuuden huippuraja trimmauksessa
   const PUSKURI_S = 20; // näin pitkälle aikataulutetaan etukäteen
@@ -761,7 +773,9 @@ export function luoPuheSoitin({
         lahteet.add(lahde);
         aloitusajat[indeksi] = { alku: alkuAika, loppu: alkuAika + kesto };
         const sama = palat[indeksi + 1]?.kappale === palat[indeksi].kappale;
-        seuraavaAlku = alkuAika + kesto + (sama ? VIRKEVALI : KAPPALEVALI);
+        const vali = sama ? VIRKEVALI
+          : (otsikolliset.has(palat[indeksi + 1]?.kappale) ? OTSIKKOVALI : KAPPALEVALI);
+        seuraavaAlku = alkuAika + kesto + vali;
         vuorossa += 1;
       }
     })().finally(() => { aikataulutus = null; });

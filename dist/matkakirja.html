@@ -155189,6 +155189,8 @@ async function haePala(teksti, persoona, sailio = null) {
  *   onTila?: (t: {tauolla: boolean, kappale: number, kappaleita: number,
  *     teksti: string|null, alku: number}) => void,
  *   aloitusKappale?: number ensimmäisenä soitettava kappale (oletus 0)
+ *   otsikkoKappaleet?: Iterable<number> otsikolla alkavat kappaleet —
+ *     niiden edellä pidetään pidempi tauko (OTSIKKOVALI)
  * }} asetukset
  * @returns {{
  *   lisaa(teksti: string): void,
@@ -155202,7 +155204,7 @@ async function haePala(teksti, persoona, sailio = null) {
  */
 function luoPuheSoitin({
   persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
-  aloitusKappale = 0,
+  aloitusKappale = 0, otsikkoKappaleet = null,
 } = {}) {
   if (!puheTuettu()) return null;
   if (typeof window === 'undefined') return null;
@@ -155216,6 +155218,16 @@ function luoPuheSoitin({
 
   const VIRKEVALI = 0.22; // s — palojen väli samassa kappaleessa
   const KAPPALEVALI = 0.45; // s — kappaleiden väli
+  /*
+   * Otsikolla alkavan kappaleen edellä pidetään pidempi tauko
+   * (omistajan tilaus 15.8.2026: "Lukija voisi pitää pienen tauon
+   * ennen kun tulee uusi otsikko tai väliotsikko") — hengähdys
+   * kertoo korvalle, että osasto vaihtuu, samoin kuin tyhjä tila
+   * kertoo sen silmälle. Kutsuja nimeää otsikolliset kappaleet
+   * (otsikkoKappaleet), koska soitin näkee vain paljasta tekstiä.
+   */
+  const OTSIKKOVALI = 0.95; // s — tauko ennen otsikolla alkavaa kappaletta
+  const otsikolliset = new Set(otsikkoKappaleet ?? []);
   const HAIVYTYS = 0.012; // s — mikrohäivytys sauman molemmin puolin
   const KYNNYS = 0.02; // hiljaisuuden huippuraja trimmauksessa
   const PUSKURI_S = 20; // näin pitkälle aikataulutetaan etukäteen
@@ -155356,7 +155368,9 @@ function luoPuheSoitin({
         lahteet.add(lahde);
         aloitusajat[indeksi] = { alku: alkuAika, loppu: alkuAika + kesto };
         const sama = palat[indeksi + 1]?.kappale === palat[indeksi].kappale;
-        seuraavaAlku = alkuAika + kesto + (sama ? VIRKEVALI : KAPPALEVALI);
+        const vali = sama ? VIRKEVALI
+          : (otsikolliset.has(palat[indeksi + 1]?.kappale) ? OTSIKKOVALI : KAPPALEVALI);
+        seuraavaAlku = alkuAika + kesto + vali;
         vuorossa += 1;
       }
     })().finally(() => { aikataulutus = null; });
@@ -155871,7 +155885,10 @@ function niputaOtsikot(kohdat) {
       teksti = teksti ? `${teksti} ${osa.teksti}` : osa.teksti;
       for (const pala of osa.osat) osat.push({ ...pala, alku: pala.alku + siirto });
     }
-    tulos.push({ teksti, osat, otsikko: false });
+    // otsikollinen-lippu säilyttää tiedon otsikosta niputuksen yli:
+    // soitin pitää tällaisen kohdan edellä pidemmän tauon (omistajan
+    // tilaus 15.8.2026 — "pieni tauko ennen kun tulee uusi otsikko").
+    tulos.push({ teksti, osat, otsikko: false, otsikollinen: true });
     odottavat = [];
   }
   tulos.push(...odottavat);
@@ -156486,6 +156503,12 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
     persoona,
     sailio,
     aloitusKappale,
+    // Otsikolla alkavien kohtien edellä pidetään pidempi tauko
+    // (omistajan tilaus 15.8.2026). Häntään jäänyt paljas otsikko
+    // (kohta ilman leipätekstiä) lasketaan samaan joukkoon.
+    otsikkoKappaleet: kohdat?.length
+      ? kohdat.flatMap((k, i) => (k.otsikollinen || k.otsikko ? [i] : []))
+      : null,
     onLoppu: loppui,
     onTila: (t) => {
       paivitaOhjain(merkki, t);
@@ -157019,13 +157042,21 @@ function napinTeksti(nappi) {
  * perässä ja kuuluvat virkkeet maalataan (omistajan tilaukset
  * 14.8.2026). Merkkijonolähde luetaan entiseen tapaan.
  */
-function kaynnistaLuenta(nappi, isanta) {
+function kaynnistaLuenta(nappi, isanta, { lueOtsikko = false } = {}) {
   const lahdeNyt = nappi.__lukijaLahde;
   const kohde = typeof lahdeNyt === 'function' ? lahdeNyt() : lahdeNyt;
   let kohdat = null;
   let teksti = '';
   if (kohde && typeof kohde !== 'string' && kohde.nodeType === 1) {
-    kohdat = kokoaLuettavatKohdat(kohde);
+    /*
+     * Painalluksesta luenta alkaa leipätekstistä (omistajan tarkennus
+     * 14.8.2026), mutta jatkuvan luennan sivunvaihdon jälkeen sivun
+     * yläotsikko LUETAAN (omistajan tilaus 15.8.2026: "Lue yläotsikko
+     * sivun vaihdon jälkeen") — kuulija ei nähnyt uutta sivua, joten
+     * otsikko on hänelle uutinen eikä taittoa. Masto ja lehden nimi
+     * pysyvät ohituslistalla kummassakin tapauksessa.
+     */
+    kohdat = kokoaLuettavatKohdat(kohde, { ohitaEkaOtsikko: !lueOtsikko });
     teksti = kohdat.map((k) => k.teksti).join('\n');
   } else {
     teksti = napinTeksti(nappi);
@@ -157048,9 +157079,9 @@ function kaynnistaLuenta(nappi, isanta) {
  * tämän lukea uuden sivun alusta — sama polku kuin painalluksessa,
  * joten seuranta, paneeli ja varapolut tulevat mukana.
  */
-function kaynnistaLukija(nappi) {
+function kaynnistaLukija(nappi, { lueOtsikko = false } = {}) {
   if (!nappi || nappi.hidden || lukijaLukee()) return false;
-  return kaynnistaLuenta(nappi, nappi.__lukijaIsanta ?? nappi.parentElement);
+  return kaynnistaLuenta(nappi, nappi.__lukijaIsanta ?? nappi.parentElement, { lueOtsikko });
 }
 
 /**
@@ -170735,7 +170766,9 @@ class UI {
     for (let hyppy = 0; hyppy < sivuja; hyppy += 1) {
       if (!this.vaihdaTutkiSivu(1)) return false;
       const nappi = this.arrivalDialog.querySelector('.lukija-nappi');
-      if (nappi && !nappi.hidden) return kaynnistaLukija(nappi);
+      // Yläotsikko luetaan mukaan: kuulija ei nähnyt sivun vaihtuvan,
+      // joten otsikko kertoo minne tultiin (omistajan tilaus 15.8.2026).
+      if (nappi && !nappi.hidden) return kaynnistaLukija(nappi, { lueOtsikko: true });
     }
     return false;
   }
@@ -177822,6 +177855,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 687, teksti: 'Tauko ennen otsikkoa, yläotsikko sivunvaihdon perään' },
   { v: 686, teksti: 'Valokuvapakettien postikorttitekstit lyhennettiin (5/5)' },
   { v: 685, teksti: 'Tausta väistyy pehmeästi kaiken luennan ajaksi' },
   { v: 684, teksti: 'Nähtävyysjuttujen kuvatekstit lyhennettiin (erä 3/5)' },
@@ -178605,7 +178639,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.686';
+const APP_VERSION = '2026-08-09.687';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
