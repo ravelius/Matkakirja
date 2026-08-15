@@ -12040,7 +12040,28 @@ export class UI {
       const p = karttapiste(kartta, k.lat, k.lon);
       // Napautettava, jos kohteella on oma juttu TAI wiki-artikkeli.
       const avattava = Boolean(k.teksti || k.wiki);
-      const piste = html(avattava ? 'button' : 'span', 'maakartta-piste kaupunki-kohde kohde-numero', numero);
+      const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi] ?? null;
+      /*
+       * PIIRROS NUMERON PAIKALLA (omistajan tilaus 15.8.2026:
+       * "Piirrokset kartalla saisi näkyä numeroiden paikalla").
+       * Kohde, jolla on miniatyyri, piirtyy kartalle pienenä pyöreänä
+       * piirroksena; numero istuu badgena sen kulmassa, jotta
+       * selitelistan numerointi pysyy luettavana. Kohde ilman
+       * miniatyyriä on entinen numeroympyrä.
+       */
+      const piste = html(avattava ? 'button' : 'span',
+        'maakartta-piste kaupunki-kohde kohde-numero', miniatyyri ? '' : numero);
+      if (miniatyyri) {
+        piste.classList.add('kohde-piirros');
+        const pikku = document.createElement('img');
+        pikku.className = 'kohde-piirros-kuva';
+        pikku.alt = '';
+        pikku.decoding = 'async';
+        pikku.draggable = false;
+        pikku.src = miniatyyri;
+        piste.appendChild(pikku);
+        piste.appendChild(html('span', 'kohde-piirros-numero', numero));
+      }
       piste.style.left = `${p.x.toFixed(1)}%`;
       piste.style.top = `${p.y.toFixed(1)}%`;
       const selite = html(avattava ? 'button' : 'span', 'kartta-selite');
@@ -12063,7 +12084,6 @@ export class UI {
        * juttuun kuten ennenkin — listassa nimi ja numero kertovat jo
        * saman kuin kortti.
        */
-      const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi] ?? null;
       const avaa = (miniatyyri && avaaJuttu)
         ? () => this.naytaMiniatyyri(kehys, { kuva: miniatyyri, kohde: k, avaaJuttu })
         : avaaJuttu;

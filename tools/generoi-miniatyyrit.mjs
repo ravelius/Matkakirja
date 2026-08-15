@@ -56,7 +56,13 @@ const TYYLI = (aihe) => 'A miniature illustrated landmark for a vintage '
   + 'paper background (like aged map paper, #f2ecd8) that fills the '
   + 'ENTIRE square canvas edge to edge; only a soft small shadow under '
   + 'the building. No surrounding streets or map, no text, no letters, '
-  + 'no signs, no frame, no border, no people in front. Square 1:1.';
+  + 'no signs, no frame, no border, no people in front. Square 1:1. '
+  // Sama vartio kuin kohtaamiskuvissa: tausta on koko kanvaasi, EI
+  // pöydällä makaava paperiarkki — Tower Bridgen ensimmäiseen ottoon
+  // piirtyi arkin reunat ja varjo, joka lukisi kortilla kehyksenä.
+  + 'The cream paper fills the whole canvas edge to edge: do NOT paint '
+  + 'a sheet of paper lying on a surface, no paper edges, no drop '
+  + 'shadow around the background, no rectangular panel.';
 
 /*
  * Kohteet kaupungeittain. AVAIMEN ALKUOSA on kaupungin tunnus ja
@@ -95,6 +101,97 @@ const KUVAT = [
     + 'shapes, swirls and stylized painted faces, strictly no letters, '
     + 'no words and no writing anywhere on the wall — seen at a slight '
     + 'angle so its length shows'],
+
+  // ── Helsinki ─────────────────────────────────────────────────────
+  ['helsinki-temppeliaukion-kirkko', 'a round church sunk directly '
+    + 'into natural grey granite bedrock: a shallow circular copper '
+    + 'dome resting on a ring of skylights above rough rock walls, '
+    + 'low and wide rather than tall'],
+  ['helsinki-linnanmaki', 'a compact old amusement park on a low '
+    + 'hill: a white wooden roller coaster with lattice supports, a '
+    + 'slender panorama tower with a ring-shaped observation cabin, '
+    + 'and a small carousel with a striped roof'],
+  ['helsinki-paarautatieasema', 'a monumental granite railway '
+    + 'station in national romantic style: a tall clock tower on one '
+    + 'side, a great arched entrance, and two pairs of giant stone '
+    + 'figures holding spherical lamps flanking the doors'],
+  ['helsinki-kaisaniemen-puisto', 'a leafy northern city park: broad '
+    + 'lawns, old deciduous trees, winding gravel paths, a small '
+    + 'white glasshouse at the edge and a calm bay glimpsed behind '
+    + 'the trees'],
+  ['helsinki-kallion-kirkko', 'a grey granite church in national '
+    + 'romantic style on a hilltop: a tall massive rectangular bell '
+    + 'tower with a green copper roof, the nave lower behind it'],
+  ['helsinki-tuomiokirkko', 'a gleaming white neoclassical cathedral '
+    + 'on top of a broad steep flight of stone steps: a tall green '
+    + 'central dome, four smaller green domes around it and columned '
+    + 'porticoes on each side'],
+  ['helsinki-uspenskin-katedraali', 'a red-brick orthodox cathedral '
+    + 'on a rocky outcrop: a cluster of thirteen small golden onion '
+    + 'cupolas above narrow arched windows'],
+  ['helsinki-johanneksenkirkko', 'a red-brick gothic revival church '
+    + 'with two identical very tall slender towers topped by pointed '
+    + 'green copper spires'],
+  ['helsinki-suomenlinna', 'a sea fortress spread over small rocky '
+    + 'islands: low stone bastion walls and grassy ramparts, a pale '
+    + 'church tower rising above them, a few old cannons and a small '
+    + 'sailing boat by the shore'],
+
+  // ── Pariisi ──────────────────────────────────────────────────────
+  ['pariisi-eiffel-torni', 'the Eiffel Tower: a tall wrought-iron '
+    + 'lattice tower in warm brown, four arched legs joining into a '
+    + 'tapering spire with viewing platforms'],
+  ['pariisi-riemukaari', 'the Arc de Triomphe: a massive stone '
+    + 'triumphal arch with one grand central archway, sculpted '
+    + 'reliefs of winged figures on its pillars and a frieze band '
+    + 'near the top'],
+  ['pariisi-concorden-aukio', 'a grand paved square with a tall '
+    + 'ancient Egyptian obelisk of pink granite with a small gilded '
+    + 'pyramid tip, flanked by two ornate tiered fountains with '
+    + 'green-and-gold sculpted figures'],
+  ['pariisi-louvre', 'a long classical palace with ornate stone '
+    + 'facades and mansard roofs forming a courtyard, and in the '
+    + 'courtyard a modern glass pyramid'],
+  ['pariisi-luxembourgin-puisto', 'a formal French garden: an '
+    + 'elegant stone palace with slate roofs, a central octagonal '
+    + 'pond with tiny toy sailboats, geometric flowerbeds and neat '
+    + 'rows of clipped trees'],
+  ['pariisi-sacre-coeur', 'a gleaming white basilica on a hilltop: '
+    + 'a tall central dome flanked by smaller domes, arched '
+    + 'porticoes, and a slender square campanile behind, a long '
+    + 'flight of steps below'],
+  ['pariisi-pantheon', 'a neoclassical domed monument: a columned '
+    + 'portico with a triangular pediment in front, a tall colonnaded '
+    + 'drum and dome above'],
+  ['pariisi-notre-dame', 'a gothic cathedral on a river island: two '
+    + 'square west towers, a large round rose window between them, '
+    + 'flying buttresses along the nave and a slender spire over the '
+    + 'crossing'],
+
+  // ── Lontoo ───────────────────────────────────────────────────────
+  ['lontoo-buckinghamin-palatsi', 'a stately neoclassical palace '
+    + 'with a long symmetric stone facade, a central balcony, tall '
+    + 'gates in front and a gilded winged statue on a tall column '
+    + 'before it'],
+  ['lontoo-trafalgar-square', 'a grand city square: one very tall '
+    + 'column with a small statue on top, four large bronze lions at '
+    + 'its base, two round fountains and a long columned gallery '
+    + 'facade behind'],
+  ['lontoo-big-ben', 'the Big Ben clock tower: a tall gothic revival '
+    + 'stone tower with a large white clock face on each side, gilded '
+    + 'details and a green pointed spire, a corner of an ornate '
+    + 'parliament building at its foot'],
+  ['lontoo-lontoon-silma', 'a giant white observation wheel by a '
+    + 'river: slender spokes like a bicycle wheel and oval glass '
+    + 'capsules along the rim, a hint of water below'],
+  ['lontoo-pyhan-paavalin-katedraali', 'an English baroque cathedral: '
+    + 'a great grey-green dome with a golden cross on a colonnaded '
+    + 'drum, twin baroque towers at the west front with a columned '
+    + 'portico between them'],
+  ['lontoo-tower-bridge', 'a Victorian river bridge with two tall '
+    + 'gothic stone towers, high walkways connecting them, pale blue '
+    + 'suspension chains and a twin lifting roadway between the '
+    + 'towers'],
 ];
 
 const pyydetyt = process.argv.slice(2);
