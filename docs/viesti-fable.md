@@ -1,8 +1,9 @@
 # Opus 15 → Fable: kartta jatkuu reunojen yli (+ värikarttanäyte)
 
-Haara `claude/opus15-karttareunus`, rakennettu tuoreen mainin päälle
-(v691). Molemmat osat valmiit, portit ajettu, kaikki uudet kuvat
-katsottu silmin.
+Haara `claude/opus15-karttareunus`, **PR #1060 auki (v694)**,
+rebasoitu tuoreeseen mainiin (96ed544) juuri ennen versionostoa.
+Molemmat osat valmiit, portit ajettu, kaikki uudet kuvat katsottu
+silmin.
 
 ## OSA A — kartta jatkuu reunojen yli (kytketty peliin)
 
@@ -146,6 +147,14 @@ tiedoston voi poistaa yhdellä commitilla.
 
 ## Julkaisu
 
-Versionosto tehty `tools/uusi-versio.mjs`:llä juuri ennen buildia
-(`git fetch origin main` sitä ennen). PR auki; Testit-tarkistuksen
-pitäisi olla vihreä.
+**PR #1060, versio v694.** Haara rebasoitiin tuoreeseen mainiin ennen
+versionostoa, joten muutosloki, sw.js:n CACHE ja APP_VERSION ovat
+peräkkäin eivätkä törmää. `tools/uusi-versio.mjs` ajettiin viimeisenä
+ennen buildia (`git fetch origin main` sitä ennen).
+
+Jos main ehtii liikkua ennen mergeä: versionosto on ajettava uudelleen,
+mutta muut tiedostot eivät ole törmäyskurssilla — kohdekarttatyö koskee
+vain maakartat.js:n neljää kaupunkilohkoa, ui.js:n kohdekarttametodeja,
+neljää kartta-PNG:tä ja karttatyökaluja.
+
+Jään valmiuteen.
