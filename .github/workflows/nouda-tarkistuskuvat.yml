@@ -1,0 +1,58 @@
+# Noutaa Commons-kuvia silmätarkistukseen GitHubin ajurilla.
+#
+# MIKSI: kehityskontin IP joutuu Wikimedian ruuhkarajoihin (429/403),
+# kun kuvaeriä tarkistetaan — 15.8.2026 avauskuvaerän viisi viimeistä
+# esikatselua ei latautunut tunnissakaan. Ajurit lähtevät eri
+# osoitteista, joten sama nouto kestää siellä sekunteja. Pelaajia tämä
+# ei koske koskaan: peli näyttää kuvat omasta peilistä (peilaa.yml).
+#
+# KÄYTTÖ: Actions → "Nouda tarkistuskuvat" → Run workflow → liitä
+# tiedostonimet (ilman File:-etuliitettä), yksi per rivi. Tulos on
+# tarkistuskuvat-artefakti (1200 px:n esikatselut). Artefakti elää
+# 3 päivää — tämä on tarkistusväline, ei varasto.
+#
+# Salaisuuksia ei tarvita eikä käytetä.
+
+name: Nouda tarkistuskuvat
+
+on:
+  workflow_dispatch:
+    inputs:
+      tiedostot:
+        description: 'Commons-tiedostonimet, yksi per rivi'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  nouda:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Lataa Commonsista
+        env:
+          TIEDOSTOT: ${{ inputs.tiedostot }}
+        run: |
+          set -euo pipefail
+          mkdir -p kuvat
+          i=0
+          while IFS= read -r nimi; do
+            nimi=$(echo "$nimi" | sed 's/^ *//; s/ *$//')
+            [ -z "$nimi" ] && continue
+            i=$((i+1))
+            # Special:FilePath ohjaa thumb-palvelimelle halutulla leveydellä.
+            osoite="https://commons.wikimedia.org/wiki/Special:FilePath/$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))" "$nimi")?width=1200"
+            ulos="kuvat/$(printf '%02d' "$i")-$(echo "$nimi" | tr -c 'A-Za-z0-9.-' '_' | cut -c1-80).jpg"
+            if ! curl -sSL --fail -A "Matkakirja/1.0 (peliprojekti; yhteys: sami.reivinen@vvi.fi)" -o "$ulos" "$osoite"; then
+              echo "::warning title=Nouto epäonnistui::$nimi"
+            fi
+          done <<< "$TIEDOSTOT"
+          ls -la kuvat/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tarkistuskuvat
+          path: kuvat/
+          retention-days: 3
