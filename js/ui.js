@@ -12123,9 +12123,28 @@ export class UI {
             return;
           }
           const valittu = piste.classList.contains('valittu');
-          kotelo.querySelectorAll('.kohde-piirros.valittu')
-            .forEach((v) => v.classList.remove('valittu'));
-          if (!valittu) piste.classList.add('valittu');
+          tyhjennaValinta();
+          if (valittu) return;
+          /*
+           * KESKITYS (omistajan tilaus 15.8.2026: "Keskitä
+           * suurennettu kuva") — reunakohteen suurennos leikkautui
+           * karttaikkunan reunaan. Valittu piste siirtyy näkyvän
+           * ikkunan keskelle ja palaa paikalleen suljettaessa;
+           * alkuperäinen paikka talteen dataset-kenttiin.
+           */
+          piste.dataset.alkuLeft = piste.style.left;
+          piste.dataset.alkuTop = piste.style.top;
+          const kehysMitat = kehys.getBoundingClientRect();
+          const lavaMitat = kotelo.getBoundingClientRect();
+          if (lavaMitat.width > 0) {
+            const x = ((kehysMitat.left + kehysMitat.width / 2 - lavaMitat.left)
+              / lavaMitat.width) * 100;
+            const y = ((kehysMitat.top + kehysMitat.height / 2 - lavaMitat.top)
+              / lavaMitat.height) * 100;
+            piste.style.left = `${x.toFixed(2)}%`;
+            piste.style.top = `${y.toFixed(2)}%`;
+          }
+          piste.classList.add('valittu');
         }
         : avaaJuttu;
       /*
@@ -12176,7 +12195,12 @@ export class UI {
      * panorointiote kartan päältä sulkee valinnan.
      */
     const tyhjennaValinta = () => kotelo.querySelectorAll('.kohde-piirros.valittu')
-      .forEach((v) => v.classList.remove('valittu'));
+      .forEach((v) => {
+        v.classList.remove('valittu');
+        // Keskitetty piste palaa omalle paikalleen kartalla.
+        if (v.dataset.alkuLeft) v.style.left = v.dataset.alkuLeft;
+        if (v.dataset.alkuTop) v.style.top = v.dataset.alkuTop;
+      });
     kehys.addEventListener('pointerdown', (e) => {
       if (!e.target.closest?.('.kohde-piirros')) tyhjennaValinta();
     }, true);
