@@ -1,4 +1,4 @@
-> **ARKISTOITU 15.8.2026** — perustuslaki YHDISTETTIIN Raamattu 2.0:aan (js/tyohuone-raamattu.js, osio "Perustuslaki: viisi pilaria") omistajan päätöksellä; tekniset osat (etukäteispuskuri, laudan hyväksyminen) siirtyivät CONTRIBUTING.md:hen. Tämä tiedosto ei ole enää voimassa.
+> **ARKISTOITU 15.8.2026** — perustuslaki YHDISTETTIIN Raamattuun (js/tyohuone-raamattu.js, osio "Perustuslaki: viisi pilaria") omistajan päätöksellä; tekniset osat (etukäteispuskuri, laudan hyväksyminen) siirtyivät CONTRIBUTING.md:hen. Tämä tiedosto ei ole enää voimassa.
 
 # Pelin periaatteet
 

@@ -25,15 +25,13 @@
       <button class="ikoni-nappi" id="paivita" type="button" title="Hakee uusimman version">Päivitä</button>
     </div>
     <nav id="valilehdet">
-      <button data-tab="raamattu">Raamattu 2.0</button>
+      <button data-tab="raamattu">Raamattu</button>
       <button data-tab="tilanne">Tilanne</button>
       <button data-tab="eurotekstit">Euroopan tekstit</button>
-      <button data-tab="naytteet">Näytteet</button>
       <button data-tab="pelit">Pelit</button>
       <button data-tab="kaupungit">Kaupungit</button>
       <button data-tab="studio">Studio</button>
       <button data-tab="lukijaaani">Lukijaääni</button>
-      <button data-tab="arkisto">Arkisto</button>
     </nav>
   </header>
 
@@ -42,7 +40,7 @@
          mitä ennen oli omissa välilehdissä (Todo Samille, Suunnitelma,
          Käsikirja) yhtenä pitkänä sivuna — omistajan toive 8.8.2026:
          "näkisin kokonaistilanteen". -->
-    <!-- RAAMATTU 2.0: koko pelin idea yhdessä dokumentissa (omistajan
+    <!-- RAAMATTU: koko pelin idea yhdessä dokumentissa (omistajan
          tilaus 11.8.2026). Sisältö js/tyohuone-raamattu.js:stä; Fable
          ylläpitää, osiot hyväksytään yhdessä kohta kohdalta. -->
     <section id="tab-raamattu" hidden>
@@ -94,18 +92,9 @@
 
     </section>
 
-    <!-- ARKISTO: vanhat suunnitelmat ja dokumentit (omistajan tilaus
-         11.8.2026: Raamattu 2.0 korvaa nämä lukemisen lähteenä; sisältö
-         säilyy täällä muistina, ei ohjeena). -->
-    <section id="tab-arkisto" hidden>
-      <h2>Arkisto</h2>
-      <p>Vanhat kirjaukset: entiset Suunnitelma- ja Käsikirja-välilehdet
-         siirrettyinä Tilanne-sivulta (11.8.2026). <b>Voimassa oleva
-         kokonaiskuva on Raamattu 2.0 -välilehdellä</b> — tämä osio on
-         muistia, ei ohjetta. Repossa on lisäksi docs/arkisto/-kansio
-         vanhentuneille suunnitelmille.</p>
-      <div id="dokumentit"></div>
-    </section>
+    <!-- Arkisto-välilehti poistettiin 15.8.2026 (omistajan tilaus:
+         "työhuoneesta kaikki ylimääräinen pois") — vanha aineisto elää
+         git-historiassa ja docs/arkisto/-kansiossa. -->
 
     <!-- Testaa- ja Kehitys-välilehdet poistettiin 11.8.2026 (omistajan
          tilaus työhuoneen selkiytyksessä). -->
@@ -121,11 +110,6 @@
       <div id="eurotekstit"></div>
     </section>
 
-    <!-- NÄYTTEET: uusiksi kirjoitetut merkinnät vertailtavaksi
-         (omistajan tilaus 11.8.2026). Sisältö js/tyohuone-naytteet.js. -->
-    <section id="tab-naytteet" hidden>
-      <div id="naytteet"></div>
-    </section>
 
     <!-- PELIT: tutki kätkö -pelien katalogi (omistajan tilaus 10.8.2026:
          "tekisit työhuoneeseen oman sivun näistä pelivaihtoehdoista").
@@ -233,16 +217,12 @@
     import { PACKS } from './js/pack.js';
     import { MUUTOKSET } from './js/muutokset.js';
     import { PEILI_JUURI } from './js/media.js';
-    import {
-      AARTEET, VARUSTEET, KAUPUNKIKARTAT, LASIT, PELIT, PELITILAT, LAHTEET, MOOTTORIT,
-      LAAJENNUKSET, TODO_SAMILLE,
-    } from './js/tyohuone-data.js';
+    import { PELIT, PELITILAT, TODO_SAMILLE } from './js/tyohuone-data.js';
     import { KAARI_PAKETIT } from './js/tyohuone-kehitys-data.js';
     import { KAARI_TAGIT } from './js/tyohuone-tagit.js';
     import { TILANNE } from './js/tyohuone-tilanne.js';
     import { PELIT as KATKOPELIT } from './js/tyohuone-pelit.js';
-    import { RAAMATTU2 } from './js/tyohuone-raamattu.js';
-    import { NAYTTEET } from './js/tyohuone-naytteet.js';
+    import { RAAMATTU } from './js/tyohuone-raamattu.js';
     import { EUROPE_SAAPUMISET } from './js/packs/europe-saapumiset.js';
 
     const $ = (id) => document.getElementById(id);
@@ -625,21 +605,21 @@
       lahteet: 'tilanne', moottorit: 'tilanne',
       // Välilehdet poistuivat 8.8.2026 työhuoneen uudistuksessa (5
       // välilehteä 7:n sijaan): sisältö siirtyi Tilanteeseen tai Testaan.
-      todo: 'tilanne', kartat: 'tilanne', suunnitelma: 'arkisto', kasikirja: 'arkisto',
+      todo: 'tilanne', kartat: 'tilanne', suunnitelma: 'tilanne', kasikirja: 'tilanne',
       // Testaa ja Kehitys poistuivat 11.8.2026 työhuoneen selkiytyksessä.
       testaa: 'tilanne', kehitys: 'eurotekstit',
     };
     /* ------------------------------------------------------------------
-     * RAAMATTU 2.0: koko pelin idea (js/tyohuone-raamattu.js, Fable
+     * RAAMATTU: koko pelin idea (js/tyohuone-raamattu.js, Fable
      * ylläpitää). Osiot käydään omistajan kanssa läpi kohta kohdalta;
      * tila näkyy otsikon perässä (luonnos → hyväksytty).
      * ------------------------------------------------------------------ */
     {
       const kohde = document.getElementById('raamattu');
-      kohde.append(el('h2', null, 'Raamattu 2.0 — koko pelin idea'));
+      kohde.append(el('h2', null, 'Raamattu — koko pelin idea'));
       kohde.append(el('p', 'pieni',
-        `Päivitetty ${RAAMATTU2.paivitetty} · Fable ylläpitää · vanhat kirjaukset: Arkisto-välilehti`));
-      kohde.append(el('p', null, RAAMATTU2.johdanto));
+        `Päivitetty ${RAAMATTU.paivitetty} · Fable ylläpitää · vanhat kirjaukset: Arkisto-välilehti`));
+      kohde.append(el('p', null, RAAMATTU.johdanto));
 
       const taulukko = (otsikot, rivit) => {
         const kotelo = el('div', 'md-taulu');
@@ -711,7 +691,7 @@
         ]));
       };
 
-      RAAMATTU2.osiot.forEach((osio, i) => {
+      RAAMATTU.osiot.forEach((osio, i) => {
         const k = el('div', 'kortti');
         const ots = el('p', null);
         ots.append(el('b', null, `${i + 1}. ${osio.otsikko}`));
@@ -726,108 +706,6 @@
       });
     }
 
-    /* ------------------------------------------------------------------
-     * NÄYTTEET: uusiksi kirjoitetut merkinnät rinnakkain vanhojen
-     * kanssa (js/tyohuone-naytteet.js) — keskustelupohja tekstien
-     * uudelleenkirjoitukselle, ei pelisisältöä.
-     * ------------------------------------------------------------------ */
-    {
-      const kohde = document.getElementById('naytteet');
-      kohde.append(el('h2', null, 'Näytteet — merkinnät uusiksi vetovoimakeinoilla'));
-      kohde.append(el('p', 'pieni', `Päivitetty ${NAYTTEET.paivitetty} · Fable ylläpitää · EI pelissä`));
-      kohde.append(el('p', null, NAYTTEET.johdanto));
-      for (const n of NAYTTEET.kaupungit) {
-        const k = el('div', 'kortti');
-        const ots = el('p', null);
-        ots.append(el('b', null, n.nimi));
-        ots.append(el('span', 'pieni', ` — keinot: ${n.keinot.join(' · ')}`));
-        k.append(ots);
-        const pari = (otsikko, m) => {
-          k.append(el('p', 'pieni', otsikko));
-          const lista = el('ul');
-          for (const osa of [m.kuvaus, m.nosto].filter(Boolean)) {
-            lista.append(el('li', null, osa));
-          }
-          k.append(lista);
-        };
-        pari('Nykyinen merkintä:', n.nykyinen);
-        pari('UUSI EHDOTUS:', n.uusi);
-        k.append(el('p', 'pieni', `Perustelu: ${n.perustelu}`));
-        kohde.append(k);
-      }
-
-      kohde.append(el('h3', null, 'Vaihtelua "Isoisä kirjoitti" -johtolauseeseen'));
-      kohde.append(el('p', 'pieni', 'Kaava saa yhä esiintyä — mutta ei joka '
-        + 'kaupungissa. Jokainen tapa on samalla oma pieni kerrontakeino.'));
-      {
-        const lista = el('ul');
-        for (const j of NAYTTEET.johtolauseet) {
-          const rivi = el('li', null);
-          rivi.append(el('b', null, `${j.nimi}: `));
-          rivi.append(document.createTextNode(j.esimerkki));
-          lista.append(rivi);
-        }
-        kohde.append(lista);
-      }
-
-      {
-        const n = NAYTTEET.kohtaamisNayte;
-        kohde.append(el('h3', null, `Kohtaamisnäyte uudella mallilla — ${n.kaupunki}`));
-        const k = el('div', 'kortti');
-        k.append(el('p', 'pieni', `Henkilö: ${n.henkilo}`));
-        k.append(el('p', null, n.kohtaaminen));
-        k.append(el('p', 'pieni', `Kysymys: ${n.kysymys.q}`));
-        const vaihtoehdot = el('ul');
-        n.kysymys.vaihtoehdot.forEach((v, i) => {
-          vaihtoehdot.append(el('li', i === n.kysymys.oikea ? null : 'pieni',
-            i === n.kysymys.oikea ? `${v} ✓` : v));
-        });
-        k.append(vaihtoehdot);
-        k.append(el('p', 'pieni', `Fakta: ${n.kysymys.fakta}`));
-        k.append(el('p', null, `Aarreteksti: ${n.aarre}`));
-        k.append(el('p', 'pieni', `Perustelu: ${n.perustelu}`));
-        kohde.append(k);
-      }
-
-      kohde.append(el('h3', null, 'Aarrelöytötekstit uudella paikallisaarremallilla'));
-      for (const a of NAYTTEET.aarreNaytteet) {
-        const k = el('div', 'kortti');
-        const ots = el('p', null);
-        ots.append(el('b', null, `${a.maa}: ${a.aarre}`));
-        ots.append(el('span', 'pieni', ` — ${a.koko} · huudahdus ${a.huudahdus}`));
-        k.append(ots, el('p', null, a.teksti));
-        kohde.append(k);
-      }
-
-      /*
-       * Vanhan mallin merkinnät talteen ja luettavaksi (omistajan
-       * pyyntö 11.8. ilta: näytteiden "nykyinen merkintä" -tekstit
-       * olivat parempia kuin kaariversiot). Peli ei näytä näitä —
-       * tarinakaari syrjäyttää ne — mutta ne ovat raaka-ainetta
-       * uudelleenkirjoitukseen: lyhyt kahden äänen malli (Reginaldin
-       * havainto + isoisän nosto).
-       */
-      kohde.append(el('h3', null, 'Vanhan mallin merkinnät — koko Eurooppa (41)'));
-      kohde.append(el('p', 'pieni', 'Nämä lyhyet kahden äänen merkinnät '
-        + '(js/packs/europe-saapumiset.js) jäivät tarinakaaren alle eivätkä näy '
-        + 'pelissä. Omistajan arvio 11.8.: tämä malli on parempi kuin pitkät '
-        + 'kaaritekstit — säilytetään raaka-aineena uudelleenkirjoitukseen.'));
-      {
-        const europe = PACKS.find((p) => p.id === 'europe');
-        const nimet = Object.fromEntries((europe?.cities ?? []).map((c) => [c.id, c.name]));
-        for (const [id, m] of Object.entries(EUROPE_SAAPUMISET)) {
-          const k = el('div', 'kortti');
-          k.append(el('p', null, ''));
-          k.lastChild.append(el('b', null, nimet[id] ?? id));
-          const lista = el('ul');
-          for (const osa of [m.kuvaus, m.nosto].filter(Boolean)) {
-            lista.append(el('li', null, osa));
-          }
-          k.append(lista);
-          kohde.append(k);
-        }
-      }
-    }
 
     /* ------------------------------------------------------------------
      * PELIT: tutki kätkö -pelien katalogi js/tyohuone-pelit.js:stä.
@@ -1837,179 +1715,6 @@
       return ulos.join('\n');
     }
 
-    haitari($('dokumentit'), [
-      {
-        otsikko: 'Dokumentit',
-        maara: '6 kpl',
-        rakenna: () => {
-          const d = el('div');
-          const DOKUMENTIT = [
-            ['docs/roolitus.md', 'Roolitus: kolme sessiota, yksi peli'],
-            ['docs/tarina.md', 'Tarinan kaanon'],
-            ['docs/isoisan-raamattu.md', 'Isoisän raamattu (tunnelmapaletti, motiivibudjetit)'],
-            ['docs/periaatteet.md', 'Pelin periaatteet'],
-            ['docs/tutki-aiheet.md', 'Lehtimalli ja aihesivujen resepti'],
-            ['docs/tyolista-opukselle.md', 'Lehtityön ohjeet'],
-          ];
-          for (const [polku, nimi] of DOKUMENTIT) {
-            const p = el('p');
-            const a = el('a', '', nimi);
-            a.href = polku;
-            a.target = '_blank';
-            a.rel = 'noopener';
-            p.append(a);
-            d.append(p);
-          }
-          return [d];
-        },
-      },
-      {
-        otsikko: 'Isoisän raamattu',
-        maara: 'dekkarikaanon, luettavana',
-        rakenna: () => {
-          const d = el('div', 'md-doc');
-          d.append(el('p', '', 'Ladataan…'));
-          fetch('docs/isoisan-raamattu.md')
-            .then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); })
-            .then((md) => { d.innerHTML = mdHtml(md); })
-            .catch(() => { d.replaceChildren(el('p', 'puuttuu',
-              'Raamattua ei saatu haettua — suora linkki: docs/isoisan-raamattu.md')); });
-          return [d];
-        },
-      },
-      {
-        otsikko: 'Aarteet',
-        maara: `${AARTEET.length} kpl`,
-        rakenna: () => [
-          el('p', '', 'Yksi jokaisesta maanosasta. Nykyiset aarteet säilyvät tarinoineen. '
-            + 'Nimistö (päätetty 4.8.2026): yleistermi on "unohdettu aarre" (engl. forgotten treasure), '
-            + 'ja tarinan erisnimi kokoelmalle on "Aarnin luettelo" (Aarni\'s Catalogue) — '
-            + 'tutkimusmatkailija Aarni luetteloi aarteet, isoisä etsi niitä ja hänen matkansa jäi kesken. '
-            + 'Tähti-sanastoa ei käytetä missään. Koko tarusto: docs/tarina.md.'),
-          ...korttiLista(AARTEET.map((a) => ({ otsikko: a.aarre, meta: a.maanosa, teksti: PELITILAT[a.tila] ?? a.tila }))),
-        ],
-      },
-      {
-        otsikko: 'Varusteet',
-        maara: `${VARUSTEET.length} kpl`,
-        rakenna: () => [
-          el('p', '', 'Matkailijan varusteita, jotka helpottavat matkaa ja oppimista — '
-            + 'eivät jalokiviä, jotka ovat pelkkää rahaa.'),
-          ...korttiLista(VARUSTEET.map((v) => ({ otsikko: v.nimi, meta: [PELITILAT[v.tila] ?? v.tila, v.vaikutus].filter(Boolean).join(' · '), teksti: v.huomiot }))),
-        ],
-      },
-      {
-        otsikko: 'Kaupunkikartat',
-        maara: `${KAUPUNKIKARTAT.length} kpl`,
-        rakenna: () => [
-          el('p', '', 'Kaupungin sisällä aika kuluu hitaammin kuin mantereella, joten '
-            + 'pysähtyminen kannattaa. Sisään pääsee vasta kaupungin avaimilla: '
-            + 'kaupunki on palkinto eikä oikotie.'),
-          ...korttiLista(KAUPUNKIKARTAT.map((k) => ({ otsikko: k.nimi, meta: PELITILAT[k.tila] ?? k.tila, teksti: [k.kuvaus, k.huomiot].filter(Boolean).join(' ') }))),
-        ],
-      },
-      {
-        otsikko: 'Lasit',
-        maara: `${LASIT.length} kpl`,
-        rakenna: () => [
-          el('p', '', 'Aarteina löytyvien erikoislasien toiminnallisuudet. Nämä eivät ole '
-            + 'minipelejä vaan kerroksia kartan päällä: kartta pysyy paikallaan ja '
-            + 'lasien läpi katsottaessa sen päälle piirtyy jotain, mitä paljaalla '
-            + 'silmällä ei näe.'),
-          ...korttiLista(LASIT.map((l) => ({ otsikko: l.nimi, meta: PELITILAT[l.tila] ?? l.tila, teksti: [l.kuvaus, l.huomiot].filter(Boolean).join(' ') }))),
-        ],
-      },
-      {
-        otsikko: 'Peli-ideat',
-        maara: `${PELIT.filter((p) => p.tila === 'kaytossa').length}/${PELIT.length} käytössä`,
-        rakenna: () => [
-          el('p', '', 'Minipelit löytöjen takana. Tänne kirjataan sekä käytössä olevat '
-            + 'että ideat, joita mietitään yhdessä.'),
-          ...korttiLista(PELIT.map((p) => ({ otsikko: p.nimi, meta: PELITILAT[p.tila] ?? p.tila, teksti: p.kuvaus }))),
-        ],
-      },
-      {
-        /*
-         * Laajennussuunnat ovat viimeisenä ja omana osionaan, koska ne
-         * ovat eri kokoluokan asioita kuin muu suunnitelma: hankkeita,
-         * eivät ominaisuuksia. Kentät näytetään otsikoituina, jotta
-         * tekstin voi lukea hakemuksen jäsennyksenä eikä muistilappuna.
-         */
-        otsikko: 'Laajennussuunnat',
-        maara: `${LAAJENNUKSET.length} kpl`,
-        rakenna: () => [
-          el('p', '', 'Suuntia koko projektille: asioita, jotka vaatisivat rahoitusta '
-            + 'tai enemmän aikaa kuin yksi julkaisu. Kirjoitettu niin, että tekstin '
-            + 'voi liittää apurahahakemukseen sellaisenaan.'),
-          ...LAAJENNUKSET.map((x) => {
-            const k = el('div', 'kortti laajennus');
-            k.append(el('h3', '', x.nimi));
-            k.append(el('p', 'lahde', [PELITILAT[x.tila] ?? x.tila, x.lahde].filter(Boolean).join(' · ')));
-            for (const [otsikko, kentta] of [
-              ['Idea', 'idea'],
-              ['Miksi se opettaa', 'miksi'],
-              ['Tekoälyn osuus', 'tekoaly'],
-              ['Mikä on jo valmiina', 'valmiina'],
-              ['Mitä pitäisi rakentaa', 'puuttuu'],
-              ['Tiedossa olevat vaikeat kohdat', 'vaikeat'],
-              ['Huomioita hakemukseen', 'huomiot'],
-            ]) {
-              if (!x[kentta]) continue;
-              k.append(el('h4', '', otsikko), el('p', '', x[kentta]));
-            }
-            return k;
-          }),
-        ],
-      },
-      {
-        otsikko: 'Brändikirja',
-        maara: 'tarina, ääni, tyyli',
-        rakenna: () => {
-          const d = el('div');
-          d.append(el('p', '', 'Ladataan…'));
-          fetch('tyohuone-kasikirja.html')
-            .then((r) => r.text())
-            .then((html) => { d.innerHTML = html; })
-            .catch(() => { d.replaceChildren(el('p', 'puuttuu', 'Käsikirjaa ei saatu haettua.')); });
-          return [d];
-        },
-      },
-      {
-        otsikko: 'Lähteet',
-        maara: `${LAHTEET.length} kpl`,
-        rakenna: () => {
-          const d = el('div');
-          d.append(el('p', '', 'Avoimia aineistolähteitä: kuvia, karttoja, ääntä ja dataa. '
-            + 'Tarkista lisenssi aina aineistokohtaisesti — merkintä on lähteen pääsääntö.'));
-          for (const l of LAHTEET) {
-            const k = el('div', 'kortti');
-            const h = el('h3');
-            const a = el('a', '', l.nimi);
-            a.href = l.url;
-            a.target = '_blank';
-            a.rel = 'noopener';
-            h.append(a);
-            k.append(h, el('p', '', [l.tyyppi, l.lisenssi, l.api ? 'API' : null,
-              PELITILAT[l.tila] ?? l.tila].filter(Boolean).join(' · ')));
-            if (l.idea) k.append(el('p', '', l.idea));
-            d.append(k);
-          }
-          return [d];
-        },
-      },
-      {
-        otsikko: 'Moottorit',
-        maara: `${MOOTTORIT.length} kpl`,
-        rakenna: () => [
-          el('p', '', 'Generointi- ja palvelumoottorit. API-avaimia ei koskaan kirjata '
-            + 'tänne eikä repoon — ne ovat GitHubin salaisuuksissa.'),
-          ...korttiLista(MOOTTORIT.map((m) => ({
-            otsikko: m.nimi, meta: [PELITILAT[m.tila] ?? m.tila, m.mita].filter(Boolean).join(' · '),
-            teksti: m.huomiot,
-          }))),
-        ],
-      },
-    ]);
 
     // --- käynnistys ------------------------------------------------------
 

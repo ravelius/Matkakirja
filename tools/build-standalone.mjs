@@ -114,6 +114,11 @@ const MODULES = [
   'js/packs/europe-questions.js',
   'js/packs/europe-puzzles.js',
   'js/tyohuone-kehitys-data.js',
+  // Kehittäjän liitteet (v697): ui.js lukee Raamatun ja tilannetaulut
+  // pelin sisäisiin lehtiin, joten ne kuuluvat myös yhden tiedoston
+  // versioon.
+  'js/tyohuone-raamattu.js',
+  'js/tyohuone-tilanne.js',
   'js/packs/tarinakaari.js',
   'js/packs/europe.js',
   // middleeast-countries.js ENNEN middleeast.js:ää: niputettu koodi on yhtä

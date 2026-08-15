@@ -1,5 +1,5 @@
 /*
- * RAAMATTU 2.0 — koko pelin idea yhdessä tiedostossa.
+ * RAAMATTU — koko pelin idea yhdessä tiedostossa.
  *
  * Omistajan tilaus 11.8.2026: työhuone ja vanha raamattu olivat
  * liian sekavia — tälle sivulle kootaan pelin kaikki puolet, ja
@@ -9,21 +9,21 @@
  * luonnoksesta hyväksytyksi. VAIN FABLE kirjoittaa tähän
  * tiedostoon. Yksityiskohtaiset lähdedokumentit, joihin tiivistys
  * nojaa: docs/tarina.md ja docs/isoisan-raamattu.md —
- * ristiriidassa Raamattu 2.0 voittaa sen jälkeen, kun osio on
+ * ristiriidassa Raamattu voittaa sen jälkeen, kun osio on
  * hyväksytty yhdessä. Perustuslaki (ent. periaatteet.md) on
  * yhdistetty tähän omaksi osiokseen 15.8.2026.
  */
 
-export const RAAMATTU2 = {
+export const RAAMATTU = {
   paivitetty: '15.8.2026',
   johdanto: 'Koko pelin idea yhdessä dokumentissa. TAVOITE '
     + '(omistajan linjaus 11.8.2026): tämän lukeminen riittää '
     + 'yksinään pelin kehittämiseen ja uusien matkakirjatekstien '
     + 'kirjoittamiseen — muista muistiinpanoista luovutaan, kun '
-    + 'Raamattu 2.0 on valmis (vain tekniset toteutusohjeet jäävät '
+    + 'Raamattu on valmis (vain tekniset toteutusohjeet jäävät '
     + 'erikseen, eikä omistajan tarvitse tuntea niitä). Käydään läpi '
     + 'yhdessä kohta kohdalta; Fable täydentää itse puuttuvan '
-    + 'oleellisen. Kun Raamattu 2.0 on valmis, KAIKKI '
+    + 'oleellisen. Kun Raamattu on valmis, KAIKKI '
     + 'matkakirjamerkinnät, kohtaamiset ja aarrelöytötekstit '
     + 'kirjoitetaan uusiksi sen mukaisiksi.',
   osiot: [
@@ -688,7 +688,7 @@ export const RAAMATTU2 = {
           + 'Kun tekstiä muutetaan, äänite putoaa itsestään pois ja '
           + 'merkintä striimataan lukijaäänellä — UUSIA ÄÄNITTEITÄ '
           + 'EI GENEROIDA välivaiheessa. Kaikki matkakirjatekstit '
-          + 'uudistetaan vasta, kun Raamattu 2.0:n avoimet osiot on '
+          + 'uudistetaan vasta, kun Raamatun avoimet osiot on '
           + 'käyty omistajan kanssa valmiiksi; sen jälkeen luennat '
           + 'generoidaan uusiksi yhdellä kertaa.',
         'Lisäksi tehosteäänet, mietintämusiikki, äänimaisemat ja '
@@ -781,7 +781,7 @@ export const RAAMATTU2 = {
       kohdat: [
         'PERIAATE: kehitys vaihtuu sessiolta toiselle, ja tieto saa '
           + 'kulkea vain kirjoitettuna — ei tiivistelmien ketjuna. '
-          + 'Raamattu 2.0 on ainoa paikka oleellisille linjauksille, '
+          + 'Raamattu on ainoa paikka oleellisille linjauksille, '
           + 'ja TÄMÄ osio on täydellinen kartta kaikkiin muihin '
           + 'ohjedokumentteihin. Jos dokumenttia ei ole tällä '
           + 'listalla, se EI ole ohje. Uusi ohjedokumentti lisätään '
@@ -823,7 +823,7 @@ export const RAAMATTU2 = {
           + 'eikä muistilistaksi.',
         'TYÖHUONE INTEGROIDAAN PELIIN (omistajan linjaus 15.8.2026): '
           + 'kehittäjävivun takana pelin päävalikossa on Kehittäjä-'
-          + 'osio, josta Raamattu 2.0 ja työhuoneen tilannetaulut '
+          + 'osio, josta Raamattu ja työhuoneen tilannetaulut '
           + 'luetaan pelin sisällä lehtinä. Uudet työhuonenäkymät '
           + 'tuodaan jatkossa samaa reittiä peliin sen sijaan, että '
           + 'ne jäisivät erilliselle sivustolle.',

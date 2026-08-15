@@ -29,7 +29,7 @@ Mukana matkustaa isoisän päiväkirja vuodelta 1873: sen merkinnät ovat
 vuoroin hämmentävän tarkkoja ja vuoroin toivottoman vanhentuneita, ja juuri
 siitä jännitteestä pelin tarina syntyy. Piikki osuu aina Foggiin, klubiin
 tai imperiumiin — ei koskaan maihin ja ihmisiin, joita matkalla kohdataan
-([docs/tarina.md](docs/tarina.md), perustuslaki Raamattu 2.0:ssa: [js/tyohuone-raamattu.js](js/tyohuone-raamattu.js)).
+([docs/tarina.md](docs/tarina.md), perustuslaki Raamatussa: [js/tyohuone-raamattu.js](js/tyohuone-raamattu.js)).
 
 Peli alkaa maailmankartalta: napauta kaupunkia, ja kone lentää Lontoosta
 kohteeseen vanhan seikkailufilmin karttakohtauksena — punainen viiva piirtyy
@@ -209,7 +209,7 @@ docs/               tarina, roolitus ja työohjeet
 ## Periaatteet
 
 Projektin arvopohja — miksi peli on olemassa ja millä perusteilla sisältö
-hyväksytään — on kirjattu Raamattu 2.0:aan ([js/tyohuone-raamattu.js](js/tyohuone-raamattu.js)) ja [CONTRIBUTING.md](CONTRIBUTING.md):hen.
+hyväksytään — on kirjattu Raamattuun ([js/tyohuone-raamattu.js](js/tyohuone-raamattu.js)) ja [CONTRIBUTING.md](CONTRIBUTING.md):hen.
 Tarinan säännöt ja kirjoitusohjeet ovat tiedostossa [docs/tarina.md](docs/tarina.md).
 
 ## Uuden laudan lisääminen
