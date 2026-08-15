@@ -131,6 +131,16 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
+    otsikko: 'Otsikkotauko ja yläotsikko sivunvaihdossa (v687)',
+    ohje: 'Kuuntele sivu, jolla on väliotsikoita: ennen otsikolla '
+      + 'alkavaa kohtaa lukija pitää nyt selvästi pidemmän tauon '
+      + '(~1 s) kuin tavallisten kappaleiden välissä. Jatkuvassa '
+      + 'luennassa sivunvaihdon jälkeen luetaan ensin sivun '
+      + 'yläotsikko (esim. "Historia") — käsin käynnistetty luenta '
+      + 'alkaa yhä suoraan leipätekstistä, ja masto/lehden nimi jää '
+      + 'lukematta kummassakin.',
+  },
+  {
     otsikko: 'Taustan väistö luennan alla (v685)',
     ohje: 'Käynnistä lehden luenta äänimaiseman soidessa: taustan '
       + 'pitäisi laskea pehmeällä 650 ms feidillä selvästi puheen alle '

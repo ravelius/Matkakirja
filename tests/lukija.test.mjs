@@ -139,6 +139,27 @@ test('ohitaEkaOtsikko: false palauttaa vanhan käytöksen', () => {
   assert.match(teksti, /Lontoon historia/);
 });
 
+test('otsikolla alkava kohta saa otsikollinen-lipun (tauko ennen otsikkoa, 15.8.2026)', () => {
+  const sivu = el('div', {},
+    el('h3', {}, t('Ensimmäinen otsikko')),
+    el('p', {}, t('Alkukappale.')),
+    el('p', {}, t('Toinen kappale.')),
+    el('h3', {}, t('Väliotsikko')),
+    el('p', {}, t('Jatkokappale.')));
+  const kohdat = kokoaLuettavatKohdat(sivu);
+  // Kohta 0 on paljas alkukappale (eka otsikko ohitettu), kohta 2
+  // alkaa väliotsikolla — vain se saa pidemmän tauon edelleen.
+  assert.equal(kohdat.length, 3);
+  assert.ok(!kohdat[0].otsikollinen, JSON.stringify(kohdat[0]));
+  assert.ok(!kohdat[1].otsikollinen, JSON.stringify(kohdat[1]));
+  assert.ok(kohdat[2].otsikollinen, JSON.stringify(kohdat[2]));
+  // Sivunvaihdon jälkeen yläotsikko luetaan: silloin myös
+  // ensimmäinen kohta on otsikollinen ja saa saman hengähdyksen.
+  const kaikki = kokoaLuettavatKohdat(sivu, { ohitaEkaOtsikko: false });
+  assert.ok(kaikki[0].otsikollinen, JSON.stringify(kaikki[0]));
+  assert.match(kaikki[0].teksti, /Ensimmäinen otsikko/);
+});
+
 test('maston kaupunkinimi ei kuluta otsikko-ohitusta (omistajan havainto 14.8.2026)', () => {
   // Lehtidialogin kortissa maston kaupunkinimi (#arrival-city) on
   // DOM-järjestyksessä ennen sivun otsikkoa. Ilman ohituslistariviä se

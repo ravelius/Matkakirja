@@ -325,7 +325,10 @@ function niputaOtsikot(kohdat) {
       teksti = teksti ? `${teksti} ${osa.teksti}` : osa.teksti;
       for (const pala of osa.osat) osat.push({ ...pala, alku: pala.alku + siirto });
     }
-    tulos.push({ teksti, osat, otsikko: false });
+    // otsikollinen-lippu säilyttää tiedon otsikosta niputuksen yli:
+    // soitin pitää tällaisen kohdan edellä pidemmän tauon (omistajan
+    // tilaus 15.8.2026 — "pieni tauko ennen kun tulee uusi otsikko").
+    tulos.push({ teksti, osat, otsikko: false, otsikollinen: true });
     odottavat = [];
   }
   tulos.push(...odottavat);
@@ -940,6 +943,12 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
     persoona,
     sailio,
     aloitusKappale,
+    // Otsikolla alkavien kohtien edellä pidetään pidempi tauko
+    // (omistajan tilaus 15.8.2026). Häntään jäänyt paljas otsikko
+    // (kohta ilman leipätekstiä) lasketaan samaan joukkoon.
+    otsikkoKappaleet: kohdat?.length
+      ? kohdat.flatMap((k, i) => (k.otsikollinen || k.otsikko ? [i] : []))
+      : null,
     onLoppu: loppui,
     onTila: (t) => {
       paivitaOhjain(merkki, t);
@@ -1473,13 +1482,21 @@ function napinTeksti(nappi) {
  * perässä ja kuuluvat virkkeet maalataan (omistajan tilaukset
  * 14.8.2026). Merkkijonolähde luetaan entiseen tapaan.
  */
-function kaynnistaLuenta(nappi, isanta) {
+function kaynnistaLuenta(nappi, isanta, { lueOtsikko = false } = {}) {
   const lahdeNyt = nappi.__lukijaLahde;
   const kohde = typeof lahdeNyt === 'function' ? lahdeNyt() : lahdeNyt;
   let kohdat = null;
   let teksti = '';
   if (kohde && typeof kohde !== 'string' && kohde.nodeType === 1) {
-    kohdat = kokoaLuettavatKohdat(kohde);
+    /*
+     * Painalluksesta luenta alkaa leipätekstistä (omistajan tarkennus
+     * 14.8.2026), mutta jatkuvan luennan sivunvaihdon jälkeen sivun
+     * yläotsikko LUETAAN (omistajan tilaus 15.8.2026: "Lue yläotsikko
+     * sivun vaihdon jälkeen") — kuulija ei nähnyt uutta sivua, joten
+     * otsikko on hänelle uutinen eikä taittoa. Masto ja lehden nimi
+     * pysyvät ohituslistalla kummassakin tapauksessa.
+     */
+    kohdat = kokoaLuettavatKohdat(kohde, { ohitaEkaOtsikko: !lueOtsikko });
     teksti = kohdat.map((k) => k.teksti).join('\n');
   } else {
     teksti = napinTeksti(nappi);
@@ -1502,9 +1519,9 @@ function kaynnistaLuenta(nappi, isanta) {
  * tämän lukea uuden sivun alusta — sama polku kuin painalluksessa,
  * joten seuranta, paneeli ja varapolut tulevat mukana.
  */
-export function kaynnistaLukija(nappi) {
+export function kaynnistaLukija(nappi, { lueOtsikko = false } = {}) {
   if (!nappi || nappi.hidden || lukijaLukee()) return false;
-  return kaynnistaLuenta(nappi, nappi.__lukijaIsanta ?? nappi.parentElement);
+  return kaynnistaLuenta(nappi, nappi.__lukijaIsanta ?? nappi.parentElement, { lueOtsikko });
 }
 
 /**

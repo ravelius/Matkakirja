@@ -10191,7 +10191,9 @@ export class UI {
     for (let hyppy = 0; hyppy < sivuja; hyppy += 1) {
       if (!this.vaihdaTutkiSivu(1)) return false;
       const nappi = this.arrivalDialog.querySelector('.lukija-nappi');
-      if (nappi && !nappi.hidden) return kaynnistaLukija(nappi);
+      // Yläotsikko luetaan mukaan: kuulija ei nähnyt sivun vaihtuvan,
+      // joten otsikko kertoo minne tultiin (omistajan tilaus 15.8.2026).
+      if (nappi && !nappi.hidden) return kaynnistaLukija(nappi, { lueOtsikko: true });
     }
     return false;
   }
