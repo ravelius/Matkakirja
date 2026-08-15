@@ -89516,6 +89516,9 @@ const MINIATYYRIT = {
     Nyhavn: 'assets/kartat/miniatyyrit/kobenhavn-nyhavn.webp',
     'Christiansborgin linna': 'assets/kartat/miniatyyrit/kobenhavn-christiansborg.webp',
     Tivoli: 'assets/kartat/miniatyyrit/kobenhavn-tivoli.webp',
+    'Vapahtajan kirkko': 'assets/kartat/miniatyyrit/kobenhavn-vapahtajan-kirkko.webp',
+    'Rosenborgin linna': 'assets/kartat/miniatyyrit/kobenhavn-rosenborgin-linna.webp',
+    Kastellet: 'assets/kartat/miniatyyrit/kobenhavn-kastellet.webp',
   },
   rooma: {
     Pietarinkirkko: 'assets/kartat/miniatyyrit/rooma-pietarinkirkko.webp',
@@ -112250,6 +112253,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v765 — Köpiksen uusilla kohteilla piirrokset kartalla',
   'v764 — Köpiksen kartalla 9 kohdetta (uudet: 7–9, ympyröinä)',
   'v763 — vaakuna isona ilman laatikkoa; liput paikallaan',
   'v762 — jutun otsikko: vahti pitää yläreunan paikallaan',
@@ -183609,6 +183613,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 765, teksti: 'Köpiksen kohteet 7–9: piirrokset karttaan' },
   { v: 764, teksti: 'Kööpenhaminan kartalle 3 uutta kohdetta juttuineen (Opus 18)' },
   { v: 763, teksti: 'lippuikkuna: iso pelkkä vaakuna; liput kasvavat paikallaan' },
   { v: 762, teksti: 'jutun yläreunan vahti: otsikko ei karkaa avauksessa' },
@@ -184470,7 +184475,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.764';
+const APP_VERSION = '2026-08-09.765';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
