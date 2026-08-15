@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 711, teksti: 'Lipusta aukeaa lipun tarina — pilotti Suomi ja Saksa' },
   { v: 710, teksti: 'Miniatyyrit kolmeen kaupunkiin ja piirrokset pisteiksi' },
   { v: 709, teksti: 'Värikartat Helsinkiin, Pariisiin ja Lontooseen' },
   { v: 708, teksti: 'Berliinin kohteille miniatyyripiirrokset ja karttakortti' },

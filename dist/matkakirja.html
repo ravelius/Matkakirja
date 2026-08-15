@@ -9877,6 +9877,148 @@ body.vertailu-tila .pawns { display: none; }
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* Lipun tarina (omistajan tilaus 15.8.2026): otsikkorivin lippu on
+ * nappi, ja ikkunassa iso lippu, historia ja muut asut. */
+.dialog .aihe-lippu-nappi {
+  display: inline;
+  padding: 0;
+  min-height: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+dialog.lippu-ikkuna {
+  border: none;
+  padding: 1rem;
+  background: transparent;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+}
+
+dialog.lippu-ikkuna::backdrop { background: rgba(20, 16, 10, 0.55); }
+dialog.lippu-ikkuna:focus,
+dialog.lippu-ikkuna:focus-visible { outline: none; }
+
+.lippu-kortti {
+  width: min(24rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  padding: 0.7rem 0.8rem 0.8rem;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  border-radius: var(--radius);
+  background-color: #f5f0e2;
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+  color: #211d18;
+  font-family: var(--font-luku);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
+}
+
+.lippu-ylarivi {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.lippu-otsikko {
+  margin: 0;
+  font-family: var(--font-type);
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  color: #46331f;
+}
+
+.lippu-kortti .lippu-sulje {
+  min-height: 0;
+  padding: 0 0.35rem;
+  border: none;
+  background: none;
+  color: rgba(70, 51, 31, 0.75);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lippu-iso {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(70, 51, 31, 0.4);
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.lippu-valinta {
+  margin: 0.45rem 0 0.1rem;
+  font-family: var(--font-type);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: #46331f;
+}
+
+.lippu-valinta-selite,
+.lippu-kappale {
+  margin: 0 0 0.5rem;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: rgba(33, 29, 24, 0.9);
+}
+
+.lippu-versiot-otsikko {
+  margin: 0.6rem 0 0.35rem;
+  font-family: var(--font-type);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: #46331f;
+}
+
+.lippu-versiot {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.lippu-kortti .lippu-versio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: stretch;
+  min-height: 0;
+  padding: 0.3rem;
+  border: 1px solid rgba(70, 51, 31, 0.25);
+  border-radius: 6px;
+  background: rgba(255, 252, 244, 0.55);
+  cursor: pointer;
+}
+
+.lippu-kortti .lippu-versio[aria-pressed="true"] {
+  border-color: rgba(150, 116, 52, 0.75);
+  background: rgba(255, 246, 222, 0.9);
+}
+
+.lippu-versio-kuva {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(70, 51, 31, 0.3);
+  border-radius: 2px;
+}
+
+.lippu-versio-nimi {
+  font-family: var(--font-luku);
+  font-size: 0.68rem;
+  line-height: 1.25;
+  text-align: center;
+  color: rgba(33, 29, 24, 0.85);
+}
+
 /* Kehittäjän liitteiden valmiuschippi osion otsikossa (omistajan
  * tilaus 15.8.2026: "pienet värilliset tagit sen mukaan, onko kohta
  * valmis vai työstö vielä kesken"). */
@@ -88216,6 +88358,110 @@ const MINIATYYRIT = {
   },
 };
 
+// ===== js/packs/lipputiedot.js =====
+/*
+ * Lippuikkunan sisällöt (omistajan tilaus 15.8.2026: "Tee lipusta
+ * klikattava jolloin lippu aukeaa isompana omaan ikkunaan otsikkona
+ * maan nimi. Lipun alla tietoja ja selitys lipun historiasta ja sen
+ * merkityksistä. Alle pienempiä lippuja jos on historiallisia tai eri
+ * versioita nykyisestä lipusta (puolustusvoimat yms). Tee pilotti
+ * ensin Berliiniin ja Helsinkiin").
+ *
+ * Avain on sama Commons-tiedostonimi kuin kategoria.maaLippu — lehden
+ * lippu muuttuu napautettavaksi vain, jos maalle on rivi tässä
+ * taulussa. Tekstit kirjoittaa Fable ja faktat on tarkistettu;
+ * versioliput on ladattu Commonsista repoon (assets/liput/versiot/,
+ * viralliset liput ovat vapaita). Uusi maa = uusi rivi tähän + kuvat
+ * samaan kansioon + sw.js:n SHELL.
+ */
+
+const LIPPUTIEDOT = {
+  'Flag of Finland.svg': {
+    maa: 'Suomi',
+    kappaleet: [
+      'Siniristilippu vahvistettiin Suomen lipuksi toukokuussa 1918, '
+        + 'puoli vuotta itsenäistymisen jälkeen. Ristin muoto on sama '
+        + 'kuin muissa Pohjoismaissa — se kertoo, mihin joukkoon maa '
+        + 'katsoi kuuluvansa.',
+      'Sinivalkoisia värejä oli ehdotettu jo 1860-luvulla, ja Zachris '
+        + 'Topelius oli ajatuksen tunnetuimpia puolestapuhujia. Värit '
+        + 'on totuttu lukemaan niin, että sininen on järvien ja '
+        + 'taivaan väri ja valkoinen lumen.',
+      'Valinta ei ollut itsestään selvä: kilpailijana oli vaakunan '
+        + 'punakeltainen leijonalippu, joka ehti keväällä 1918 olla '
+        + 'muutaman kuukauden itsenäisen Suomen ensimmäinen '
+        + 'valtiolippu.',
+    ],
+    versiot: [
+      {
+        nimi: 'Valtiolippu',
+        polku: 'assets/liput/versiot/fin-valtiolippu.png',
+        selite: 'Vaakunallinen valtiolippu: ristin keskellä Suomen '
+          + 'leijonavaakuna. Valtion virastojen ja laitosten lippu.',
+      },
+      {
+        nimi: 'Sotalippu',
+        polku: 'assets/liput/versiot/fin-sotalippu.png',
+        selite: 'Kolmikielekkeinen sotalippu — puolustusvoimien '
+          + 'käyttämä valtiolipun asu.',
+      },
+      {
+        nimi: 'Presidentin lippu',
+        polku: 'assets/liput/versiot/fin-presidentinlippu.png',
+        selite: 'Tasavallan presidentin lippu: kielekkeinen sotalippu, '
+          + 'jonka yläkulmassa on sinivalkoinen vapaudenristi.',
+      },
+      {
+        nimi: 'Leijonalippu 1918',
+        polku: 'assets/liput/versiot/fin-leijonalippu-1918.png',
+        selite: 'Itsenäisen Suomen ensimmäinen valtiolippu keväällä '
+          + '1918: vaakunan punakeltaiset värit. Jäi käyttöön vain '
+          + 'muutamaksi kuukaudeksi.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD)',
+  },
+  'Flag of Germany.svg': {
+    maa: 'Saksa',
+    kappaleet: [
+      'Musta-puna-kultaisen trikolorin juuret ovat 1810-luvun '
+        + 'vapaussodissa: Lützowin vapaajoukon univormut olivat '
+        + 'mustat, käänteet punaiset ja napit kullanväriset. Vuoden '
+        + '1848 vallankumouksessa Frankfurtin parlamentti otti värit '
+        + 'yhtenäisen Saksan tunnukseksi.',
+      'Keisarikunta 1871–1918 käytti musta-valko-punaista lippua, ja '
+        + 'trikolori palasi vasta Weimarin tasavallan mukana 1919. '
+        + 'Natsihallinto poisti sen käytöstä 1933.',
+      'Vuonna 1949 sekä Länsi- että Itä-Saksa valitsivat saman '
+        + 'trikolorin. Itä-Saksa lisäsi 1959 keskelle oman '
+        + 'tunnuksensa — vasaran, harpin ja tähkäseppeleen — ja '
+        + 'yhdistymisestä 1990 lähtien koko maan lippu on taas ollut '
+        + 'puhdas trikolori.',
+    ],
+    versiot: [
+      {
+        nimi: 'Virastolippu',
+        polku: 'assets/liput/versiot/deu-virastolippu.png',
+        selite: 'Liittovaltion virastolippu (Bundesdienstflagge): '
+          + 'trikolori liittokotkan kilvellä. Vain viranomaiskäytössä.',
+      },
+      {
+        nimi: 'Keisarikunta 1871–1918',
+        polku: 'assets/liput/versiot/deu-keisarikunta.png',
+        selite: 'Saksan keisarikunnan musta-valko-punainen lippu — '
+          + 'Preussin ja hansakaupunkien värit.',
+      },
+      {
+        nimi: 'DDR 1959–1990',
+        polku: 'assets/liput/versiot/deu-ddr.png',
+        selite: 'Itä-Saksan lippu: trikolori, jonka keskellä työn ja '
+          + 'talonpoikien tunnus — vasara, harppi ja tähkäseppele.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD)',
+  },
+};
+
 // ===== js/packs/henkilot.js =====
 // Henkilöjutut: nähtävyysteksteissä mainittu henkilö saa oman
 // juttunsa, joka aukeaa nimestä (omistajan tilaus 10.8.2026:
@@ -109030,6 +109276,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v711 — lipusta lipun tarina (Saksa, Suomi)',
   'v710 — piirrokset pisteinä + kortit 4 kaupungissa',
   'v709 — värikartat: Helsinki, Pariisi, Lontoo',
   'v708 — Berliinin pisteet: piirroskortti + juttuun',
@@ -173528,7 +173775,23 @@ class UI {
         lippu.alt = kategoria.maa ?? '';
         lippu.title = kategoria.maa ?? '';
         asetaKuva(lippu, lippuUrl(kategoria.maaLippu, 96), lippuVara(kategoria.maaLippu, 96));
-        nimi.appendChild(lippu);
+        /*
+         * LIPPU ON NAPPI, JOS SILLE ON TARINA (omistajan tilaus
+         * 15.8.2026: "Tee lipusta klikattava" — pilotti Suomi ja
+         * Saksa). Maa ilman lipputietoja pitää entisen pelkän kuvan.
+         */
+        const tiedot = LIPPUTIEDOT[kategoria.maaLippu];
+        if (tiedot) {
+          const nappi = html('button', 'aihe-lippu-nappi');
+          nappi.type = 'button';
+          nappi.title = `${tiedot.maa} — lipun tarina`;
+          nappi.setAttribute('aria-label', `${tiedot.maa} — avaa lipun tarina`);
+          nappi.appendChild(lippu);
+          nappi.addEventListener('click', () => this.avaaLippuikkuna(kategoria.maaLippu));
+          nimi.appendChild(nappi);
+        } else {
+          nimi.appendChild(lippu);
+        }
       }
       kohde.appendChild(nimi);
     }
@@ -174130,6 +174393,113 @@ class UI {
     x.addEventListener('click', sulje);
     kortti.appendChild(x);
     kehys.appendChild(kortti);
+  }
+
+  /**
+   * LIPPUIKKUNA (omistajan tilaus 15.8.2026: "Tee lipusta klikattava
+   * jolloin lippu aukeaa isompana omaan ikkunaan otsikkona maan nimi.
+   * Lipun alla tietoja ja selitys lipun historiasta ja sen
+   * merkityksistä. Alle pienempiä lippuja jos on historiallisia tai
+   * eri versioita nykyisestä lipusta (puolustusvoimat yms)").
+   *
+   * Oma <dialog> selaimen ylimmässä kerroksessa (sama syy kuin pöllön
+   * kuvapopupissa: lehti on modaali, jonka päälle tavallinen kerros ei
+   * nousisi). Pikkulipun napautus nostaa sen isoon paikkaan ja näyttää
+   * sen selitteen; ensimmäinen rivi on aina nykyinen lippu. Sisällöt:
+   * js/packs/lipputiedot.js. Pilotti: Suomi ja Saksa.
+   */
+  avaaLippuikkuna(tiedosto) {
+    const tiedot = LIPPUTIEDOT[tiedosto];
+    if (!tiedot) return;
+    document.querySelector('.lippu-ikkuna')?.remove();
+    const dialogi = document.createElement('dialog');
+    dialogi.className = 'lippu-ikkuna';
+    dialogi.addEventListener('click', (e) => {
+      if (e.target === dialogi) dialogi.close();
+    });
+    dialogi.addEventListener('close', () => dialogi.remove());
+
+    const kortti = html('div', 'lippu-kortti');
+    const yla = html('div', 'lippu-ylarivi');
+    yla.appendChild(html('h2', 'lippu-otsikko', tiedot.maa));
+    const x = html('button', 'lippu-sulje', '×');
+    x.type = 'button';
+    x.title = 'Sulje';
+    x.setAttribute('aria-label', 'Sulje');
+    x.addEventListener('click', () => dialogi.close());
+    yla.appendChild(x);
+    kortti.appendChild(yla);
+
+    const iso = document.createElement('img');
+    iso.className = 'lippu-iso';
+    iso.decoding = 'async';
+    iso.draggable = false;
+    kortti.appendChild(iso);
+    // Valitun asun nimi ja selite heti ison lipun alla.
+    const valintaNimi = html('p', 'lippu-valinta', '');
+    const valintaSelite = html('p', 'lippu-valinta-selite', '');
+    kortti.appendChild(valintaNimi);
+    kortti.appendChild(valintaSelite);
+
+    // Historia ja merkitykset — sama kaikilla asuilla.
+    for (const kpl of tiedot.kappaleet ?? []) {
+      kortti.appendChild(html('p', 'lippu-kappale', kpl));
+    }
+
+    /*
+     * Asurivi: nykyinen lippu ensin, sitten versiot. Napautus nostaa
+     * asun isoon paikkaan — erillistä suurennosta ei tarvita, koska
+     * ikkunassa on kerrallaan yksi iso lippu.
+     */
+    const asut = [{
+      nimi: 'Nykyinen lippu',
+      selite: '',
+      kuvaa: (el) => asetaKuva(el, lippuUrl(tiedosto, 640), lippuVara(tiedosto, 640)),
+    }, ...(tiedot.versiot ?? []).map((versio) => ({
+      nimi: versio.nimi,
+      selite: versio.selite,
+      kuvaa: (el) => { el.src = versio.polku; },
+    }))];
+    const napit = [];
+    const valitse = (i) => {
+      asut[i].kuvaa(iso);
+      iso.alt = `${tiedot.maa} — ${asut[i].nimi}`;
+      valintaNimi.textContent = asut[i].nimi;
+      valintaSelite.textContent = asut[i].selite;
+      valintaSelite.hidden = !asut[i].selite;
+      napit.forEach((nappi, j) => nappi.setAttribute('aria-pressed', String(i === j)));
+    };
+    if (asut.length > 1) {
+      kortti.appendChild(html('h3', 'lippu-versiot-otsikko', 'Muut asut ja historialliset liput'));
+      const rivi = html('div', 'lippu-versiot');
+      asut.forEach((asu, i) => {
+        const nappi = html('button', 'lippu-versio');
+        nappi.type = 'button';
+        nappi.title = asu.nimi;
+        const pikku = document.createElement('img');
+        pikku.className = 'lippu-versio-kuva';
+        pikku.alt = asu.nimi;
+        pikku.decoding = 'async';
+        pikku.draggable = false;
+        asu.kuvaa(pikku);
+        nappi.appendChild(pikku);
+        nappi.appendChild(html('span', 'lippu-versio-nimi', asu.nimi));
+        nappi.addEventListener('click', () => valitse(i));
+        rivi.appendChild(nappi);
+        napit.push(nappi);
+      });
+      kortti.appendChild(rivi);
+    }
+    valitse(0);
+    if (tiedot.lahde) kortti.appendChild(html('p', 'lahde', tiedot.lahde));
+
+    dialogi.appendChild(kortti);
+    document.body.appendChild(dialogi);
+    try {
+      dialogi.showModal();
+    } catch {
+      dialogi.setAttribute('open', '');
+    }
   }
 
   /**
@@ -179767,6 +180137,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 711, teksti: 'Lipusta aukeaa lipun tarina — pilotti Suomi ja Saksa' },
   { v: 710, teksti: 'Miniatyyrit kolmeen kaupunkiin ja piirrokset pisteiksi' },
   { v: 709, teksti: 'Värikartat Helsinkiin, Pariisiin ja Lontooseen' },
   { v: 708, teksti: 'Berliinin kohteille miniatyyripiirrokset ja karttakortti' },
@@ -180574,7 +180945,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.710';
+const APP_VERSION = '2026-08-09.711';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
