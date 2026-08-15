@@ -131,6 +131,14 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
+    otsikko: 'Kehittäjän liitteet: Raamattu ja Tilannelehti pelissä (v697)',
+    ohje: 'Kytke kehittäjätila ja avaa pelin hampurilaisvalikko: '
+      + 'uudesta Kehittäjä-osiosta aukeavat Raamattu 2.0 ja '
+      + 'Tilannelehti luettavina lehtinä — sivunkäännöt, sisällys, '
+      + 'lukija ja puskurit toimivat kuten muissakin lehdissä. '
+      + 'Työhuone integroidaan jatkossa peliin tätä reittiä.',
+  },
+  {
     otsikko: 'ElevenLabs-äänitteet palasivat ajantasaisiin merkintöihin (v694)',
     ohje: 'Saavu kaupunkiin, jonka matkakirjateksti ei ole muuttunut '
       + '(esim. useimmat Euroopan ja Afrikan kaupungit): merkinnän '

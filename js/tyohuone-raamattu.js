@@ -821,6 +821,12 @@ export const RAAMATTU2 = {
           + 'testit (tests/) vartioivat sääntöjä koneellisesti — '
           + 'sääntö, jonka voi valvoa testillä, kirjataan testiksi '
           + 'eikä muistilistaksi.',
+        'TYÖHUONE INTEGROIDAAN PELIIN (omistajan linjaus 15.8.2026): '
+          + 'kehittäjävivun takana pelin päävalikossa on Kehittäjä-'
+          + 'osio, josta Raamattu 2.0 ja työhuoneen tilannetaulut '
+          + 'luetaan pelin sisällä lehtinä. Uudet työhuonenäkymät '
+          + 'tuodaan jatkossa samaa reittiä peliin sen sijaan, että '
+          + 'ne jäisivät erilliselle sivustolle.',
       ],
     },
   ],
