@@ -10011,15 +10011,25 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .lippu-kortti.tarkennus > :not(.terava-haara) { filter: blur(3px); }
 .lippu-kortti.tarkennus .terava-haara > :not(.tarkennettu) { filter: blur(3px); }
 
+/* Tarkennettu versio ILMAN taustalaatikkoa (omistajan palaute
+ * 15.8.2026: "Suurenna lippu isommaksi ja ota taustalaatikko
+ * pois") — vain lippu ja tekstit terävinä sumean päällä. */
 .lippu-kortti .lippu-versio.tarkennettu {
   grid-column: 1 / -1;
-  background: rgba(255, 250, 238, 0.95);
-  border-color: rgba(150, 116, 52, 0.75);
+  background: none;
+  border-color: transparent;
 }
 
 .lippu-versio.tarkennettu .lippu-versio-kuva {
-  width: min(100%, 12rem);
+  width: min(100%, 17rem);
   margin: 0 auto;
+}
+
+.lippu-versio.tarkennettu .lippu-versio-nimi {
+  padding: 0.1rem 0.3rem;
+  background: rgba(245, 240, 226, 0.95);
+  border-radius: 3px;
+  align-self: center;
 }
 
 .lippu-versio-selite { display: none; }
@@ -10679,8 +10689,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 /*
  * VALITTU PIIRROS (omistajan tilaukset 15.8.2026, viimeisin
- * täsmennys 16.48: "Se 40 prosenttia oli selvästi liian vähän.
- * Kokeillaan 65"). Napautus lisää .valittu-luokan: piirros kasvaa
+ * täsmennykset: 40 % → 65 % → "Suurenna 70"). Napautus lisää .valittu-luokan: piirros kasvaa
  * 65 %:iin KARTTAIKKUNAN korkeudesta (65cqh kehyskontista) ja nimikyltti aukeaa sen alle
  * (tai ylle alareunassa, .kyltti-ylle); uusi napautus palauttaa —
  * ikkunaa ei avata. Jako zoomilla kumoaa lavan skaalan, joten
@@ -10691,8 +10700,8 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 .kartta-lava .maakartta-piste.kohde-numero.kohde-piirros.valittu {
-  width: calc(65cqh / var(--zoom));
-  height: calc(65cqh / var(--zoom));
+  width: calc(70cqh / var(--zoom));
+  height: calc(70cqh / var(--zoom));
   z-index: 5;
 }
 
@@ -10715,8 +10724,9 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   left: 50%;
   /* Limittäin laatikon alaosaan: leikatun kuvan reunoilla on
    * läpinäkyvää tyhjää, ja 100 %:n kohdalla kyltin ja rakennuksen
-   * väliin jäi iso rako (omistajan palaute 15.8.2026). */
-  top: 87%;
+   * väliin jäi iso rako (omistajan palaute 15.8.2026; syvennetty
+   * 87 % → 79 %, kun rako näkyi yhä). */
+  top: 79%;
   transform: translateX(-50%) scale(calc(1 / var(--zoom, 1)));
   transform-origin: top center;
   padding: 0.16rem 0.5rem;
@@ -10735,7 +10745,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .kohde-piirros.kyltti-ylle .kohde-kyltti {
   top: auto;
-  bottom: 87%;
+  bottom: 79%;
   transform-origin: bottom center;
 }
 
