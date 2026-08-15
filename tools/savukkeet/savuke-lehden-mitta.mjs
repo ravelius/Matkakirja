@@ -32,6 +32,14 @@ const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; c
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const ctx = await selain.newContext({ viewport: { width: 1024, height: 1366 } });
 const sivu = await ctx.newPage();
+/*
+ * Pöllöpalvelin katkaistaan: saapuminen esihakee lukijaäänen
+ * ensimmäisen palan (js/ui.js esilataaLehdet), eikä savuke saa
+ * kuluttaa generointikiintiötä. Katkaisu näyttää pelille tavalliselta
+ * verkkovirheeltä, jonka puskuri nielee hiljaa.
+ */
+await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
+
 await sivu.goto(osoite, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 await sivu.evaluate(() => {

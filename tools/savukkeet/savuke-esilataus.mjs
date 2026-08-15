@@ -7,6 +7,23 @@
  *     suurennokset pyydetään heti.
  *  3. Sama sarja uudelleen ei aiheuta uusia esilatauspyyntöjä
  *     (kirjanpito muistaa jo pyydetyt).
+ *
+ * ETUKÄTEISPUSKURI (omistajan tilaus 15.8.2026, docs/periaatteet.md):
+ *  5. Kaupunkilehden etusivun kansikuva pyydetään jo saapumisesta, ja
+ *     piirto käyttää samaa osoitetta (sama leveys → ei tuplalatausta).
+ *  6. Maalehden etusivun kartta pyydetään jo saapumisesta — siis ennen
+ *     kuin liitelinkkiä on painettu — ja sekin samalla leveydellä.
+ *  7. Sivunvaihto ei odota verkkoa: seuraavan sivun nostokuva on
+ *     pyydetty jo silloin, kun edellinen sivu on näkyvissä — ja
+ *     sisällysvalikon hypyn jälkeen myös EDELLINEN naapuri.
+ *  8. Lukijaäänen ensimmäinen pala esihaetaan molempiin lehtiin
+ *     saapuessa (kaksi hakua, ei enempää).
+ *  9. Esihaun avain OSUU: kaiuttimen painallus ei generoi samaa palaa
+ *     uudelleen, vaan luenta jatkuu suoraan seuraavista paloista.
+ *
+ * TTS on tynkä: pöllöpalvelimen puhevastaukset korvataan hiljaisella
+ * WAV:lla (page.route), joten savuke ei kuluta kiintiötä eikä tee
+ * yhtään oikeaa generointikutsua.
  */
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
@@ -18,7 +35,7 @@ const paketti = await import('playwright')
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
-const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp' };
+const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg' };
 const palvelin = http.createServer((req, res) => {
   const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
@@ -30,8 +47,63 @@ await new Promise((ok) => palvelin.listen(0, ok));
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
-const sivu = await (await selain.newContext({ viewport: { width: 834, height: 1194 } })).newPage();
+/*
+ * 1,5 sekunnin hiljainen WAV (8 kHz, mono, 16-bit) puhetyngäksi — sama
+ * kuin savuke-lukijan-seurannassa. Riittävän pitkä, ettei luenta ehdi
+ * loppua kesken tarkistusten.
+ */
+const hiljainenWav = () => {
+  const naytteita = 12000;
+  const data = naytteita * 2;
+  const b = Buffer.alloc(44 + data);
+  b.write('RIFF', 0); b.writeUInt32LE(36 + data, 4); b.write('WAVE', 8);
+  b.write('fmt ', 12); b.writeUInt32LE(16, 16); b.writeUInt16LE(1, 20);
+  b.writeUInt16LE(1, 22); b.writeUInt32LE(8000, 24); b.writeUInt32LE(16000, 28);
+  b.writeUInt16LE(2, 32); b.writeUInt16LE(16, 34);
+  b.write('data', 36); b.writeUInt32LE(data, 40);
+  return b;
+};
+
+const selain = await chromium.launch({
+  executablePath: '/opt/pw-browsers/chromium',
+  args: ['--autoplay-policy=no-user-gesture-required'],
+});
+/*
+ * Service worker pois: sw.js nappaa peilin kuvapyynnöt omaan
+ * korikäsittelyynsä, jolloin ne eivät näy sivun pyyntötapahtumissa
+ * lainkaan (mitattu 15.8.2026). Savuke mittaa juuri sitä, mitä peli
+ * pyytää ja milloin, joten välikäsi jätetään pois.
+ */
+const konteksti = await selain.newContext({
+  viewport: { width: 834, height: 1194 },
+  serviceWorkers: 'block',
+});
+// Puhepyyntöjen rungot talteen: esihaun ja luennan välimuistiosuma
+// mitataan siitä, montako kertaa SAMA teksti pyydetään.
+const puhePyynnot = [];
+await konteksti.route('**samireivinen.workers.dev/**', (route) => {
+  try {
+    puhePyynnot.push(JSON.parse(route.request().postData() ?? '{}'));
+  } catch { /* muu kuin puhepyyntö */ }
+  route.fulfill({ status: 200, contentType: 'audio/wav', body: hiljainenWav() });
+});
+/*
+ * Kuvalähteet tyngäksi (1x1 PNG): kontissa ei ole ulkoyhteyttä, ja
+ * epäonnistuneet kuvahaut katkaisisivat peilin kolmen virheen jälkeen
+ * (media.js peiliPetti). Silloin osoitteet vaihtuisivat kesken kokeen
+ * peilistä Commonsiin eikä mitattavaa vertailua olisi. Pyynnöt
+ * kirjataan silti — juuri ne ovat kokeen kohde.
+ */
+const PIKSELI = Buffer.from(
+  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==',
+  'base64',
+);
+await konteksti.route(/r2\.dev\/|wikimedia\.org\//, (route) => route.fulfill({
+  status: 200,
+  contentType: 'image/png',
+  body: PIKSELI,
+}));
+const sivu = await konteksti.newPage();
 const pyynnot = [];
 sivu.on('request', (r) => pyynnot.push(r.url()));
 await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
@@ -115,6 +187,214 @@ const lightbox = await sivu.evaluate(async () => {
 });
 vaadi('lightbox mitoittuu mitatusta näkymästä pikseleinä',
   lightbox.maxWidth === `${lightbox.odotus}px`, JSON.stringify(lightbox));
+
+/* ------------------------------------------------------------------ */
+/* Etukäteispuskuri: lehtien etusivut, seuraava sivu ja lukijan pala   */
+/* ------------------------------------------------------------------ */
+
+// Peli käyntiin, jotta saapuminen (openArrival) toimii oikeasti.
+await sivu.evaluate(() => {
+  [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
+});
+await sivu.waitForTimeout(1200);
+await sivu.evaluate(() => {
+  const g = window.matkakirja.game;
+  if (g.phase === 'pickstart') {
+    g.actionPickStart(g.pack.cities.find((c) => c.links?.length).id, 0);
+    window.matkakirja.ui.render();
+  }
+});
+await sivu.waitForTimeout(1200);
+
+/*
+ * Odotetut osoitteet lasketaan pelin OMILLA osoitefunktioilla (peili,
+ * paikalliskopio ja leveysportaat tulevat siis samasta lähteestä kuin
+ * piirrossa), mutta leveydet on kirjoitettu tänne käsin: juuri niiden
+ * on pysyttävä piirron kanssa samoina, ja lopuksi verrataan piirretyn
+ * kuvan omaan osoitteeseen.
+ */
+const odotetut = await sivu.evaluate(async () => {
+  const kuvat = await import('/js/packs/africa-valokuvat.js');
+  const kartat = await import('/js/packs/maakartat.js');
+  const { game } = window.matkakirja;
+  const city = game.board.cityById.get('lontoo');
+  const iso = game.pack.map.cityCountry[city.id];
+  return {
+    iso,
+    // Maalehden etusivun korkokartta: 1000 (piirraMaaEtusivu).
+    maakartta: kuvat.valokuvaUrl(kartat.MAAKARTAT[iso].tiedosto, 1000),
+    // Kohdekartan oma julistekartta on paikallinen tiedosto.
+    kohdekartta: kartat.KAUPUNKIKARTAT[city.id]?.polku ?? null,
+  };
+});
+
+// Saapuminen: kaupunkilehti aukeaa ja puskurit lähtevät. Matkakirjan
+// omat merkintäluennat ehtivät alkaa jo ennen tätä, joten puhepyynnöt
+// rajataan saapumisen jälkeisiin.
+const ennenSaapumista = puhePyynnot.length;
+await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  ui.openArrival(game.board.cityById.get('lontoo'));
+  await new Promise((r) => setTimeout(r, 3500));
+});
+
+// 5. Kaupunkilehden etusivun kansikuva: pyydetty saapumisesta, ja
+//    piirretty kuva käyttää TÄSMÄLLEEN samaa osoitetta.
+const kansi = await sivu.evaluate(async () => {
+  const kuvat = await import('/js/packs/africa-valokuvat.js');
+  const { ui } = window.matkakirja;
+  const teos = ui.tutkiKansi?.kansikuvat?.[0];
+  return {
+    odotettu: teos ? kuvat.valokuvaUrl(teos.tiedosto, 1200) : null,
+    piirretty: document.querySelector('#arrival-lehti-paakuva img')?.getAttribute('src') ?? null,
+  };
+});
+vaadi('kaupunkilehden kansikuva pyydetään saapumisesta oikealla leveydellä',
+  Boolean(kansi.odotettu) && pyynnot.includes(kansi.odotettu)
+  && kansi.piirretty === kansi.odotettu, JSON.stringify(kansi));
+
+// 6. Maalehden etusivun kartta on pyydetty jo saapumisessa — lehteä ei
+//    ole avattu eikä sen DOMia ole olemassa.
+const maalehtiAuki = await sivu.evaluate(() => Boolean(document.querySelector('.maalehti')));
+vaadi('maalehden etusivun kartta pyydetään saapumisesta (lehteä avaamatta)',
+  pyynnot.includes(odotetut.maakartta) && !maalehtiAuki,
+  `${odotetut.maakartta} — maalehti auki: ${maalehtiAuki}`);
+
+// 6b. Kohdekartan kuva (kaupunkilehden etusivun pohjalla) samoin.
+vaadi('kohdekartan kuva pyydetään saapumisesta',
+  pyynnot.some((u) => u.endsWith(odotetut.kohdekartta)), odotetut.kohdekartta);
+
+// 7. Seuraava sivu valmiina: sivun 1 nostokuva on pyydetty jo silloin,
+//    kun etusivu on näkyvissä — ja piirto käyttää samaa osoitetta.
+const seuraavaSivu = await sivu.evaluate(async () => {
+  const kuvat = await import('/js/packs/africa-valokuvat.js');
+  const { ui } = window.matkakirja;
+  const nosto = (ui.tutkiSivut?.[0]?.nostot ?? []).find((n) => n.tiedosto);
+  return {
+    sivu: ui.tutkiSivu,
+    odotettu: nosto ? kuvat.valokuvaUrl(nosto.tiedosto, 900) : null,
+  };
+});
+vaadi('seuraavan sivun nostokuva on pyydetty jo etusivulla',
+  seuraavaSivu.sivu === 0 && Boolean(seuraavaSivu.odotettu)
+  && pyynnot.includes(seuraavaSivu.odotettu), JSON.stringify(seuraavaSivu));
+
+const kaannetty = await sivu.evaluate(() => {
+  const { ui } = window.matkakirja;
+  ui.vaihdaTutkiSivu(1);
+  // Osoite luetaan heti piirron jälkeen: varareitti vaihtaisi src:n
+  // vasta 700 ms:n päästä, jos peili ei vastaa.
+  return [...document.querySelectorAll('#arrival-kategoria img')]
+    .map((i) => i.getAttribute('src'));
+});
+vaadi('käännetty sivu käyttää samaa osoitetta kuin puskuri',
+  kaannetty.includes(seuraavaSivu.odotettu), JSON.stringify(kaannetty.slice(0, 3)));
+
+// 8. Lukijaäänen esihaku: tasan kaksi palaa (kaupunkilehti + maalehti).
+// Matkakirjan merkintäluenta (persoona 'merkinnat') soi omaa
+// polkuaan; lehtien puskuri on kertojan ääntä.
+const saapumisenPuheet = puhePyynnot.slice(ennenSaapumista)
+  .filter((p) => p.tehtava === 'puhe' && p.persoona === 'kertoja');
+const esihaut = saapumisenPuheet.map((p) => p.teksti);
+vaadi('lukijan ensimmäinen pala esihaetaan molempiin lehtiin (2 hakua)',
+  saapumisenPuheet.length === 2 && saapumisenPuheet.every((p) => p.persoona === 'kertoja')
+  && esihaut.every((t) => t && t.length > 1) && esihaut[0] !== esihaut[1],
+  JSON.stringify(saapumisenPuheet.map((p) => `${p.persoona}: ${String(p.teksti).slice(0, 40)}`)));
+
+/*
+ * 9. AVAINOSUMA. Kaupunkilehden etusivun luenta alkaa ensimmäisestä
+ *    leipätekstistä eli esittelykappaleesta (#arrival-intro), ja
+ *    ensimmäinen soiva pala on sen ENSIMMÄINEN VIRKE. Virke luetaan
+ *    tässä suoraan ruudulta pelin omalla virkesäännöllä — niin koe ei
+ *    nojaa samaan koodiin, jota se mittaa.
+ */
+await sivu.evaluate(() => window.matkakirja.ui.naytaTutkiSivu(0, { heti: true }));
+await sivu.waitForTimeout(400);
+const ekaVirke = await sivu.evaluate(() => {
+  const teksti = (document.querySelector('#arrival-intro')?.textContent ?? '')
+    .replace(/\s+/g, ' ').trim();
+  const virke = teksti.split(/(?<=[.!?\u2026])\s+/)[0] ?? '';
+  // Sama pääte kuin lukijalla: pisteetön kohta saa pisteen.
+  return virke && !/[.!?:;\u2026]$/.test(virke) ? `${virke}.` : virke;
+});
+vaadi('esihaku osui juuri siihen virkkeeseen, josta luenta alkaa',
+  Boolean(ekaVirke) && esihaut.includes(ekaVirke),
+  JSON.stringify({ ekaVirke, esihaut }));
+const ennenLuentaa = puhePyynnot.length;
+await sivu.evaluate(() => {
+  document.querySelector('#arrival-dialog .lukija-nappi')?.click();
+});
+await sivu.waitForTimeout(2500);
+const luenta = await sivu.evaluate(() => ({
+  lukee: Boolean(document.querySelector('#arrival-dialog .lukija-nappi.lukee')),
+}));
+// Uudelleengenerointi = luennan ensimmäinen virke pyydetään verkosta,
+// vaikka se on jo välimuistissa.
+const tuplat = puhePyynnot.slice(ennenLuentaa)
+  .filter((p) => p.teksti === ekaVirke || esihaut.includes(p.teksti));
+vaadi('luenta lähti käyntiin ja haki jatkopaloja',
+  luenta.lukee && puhePyynnot.length > ennenLuentaa,
+  JSON.stringify({ ...luenta, uusia: puhePyynnot.length - ennenLuentaa }));
+vaadi('esihaettua palaa ei generoida uudelleen (välimuistiavain osuu)',
+  tuplat.length === 0, JSON.stringify(tuplat.map((p) => String(p.teksti).slice(0, 60))));
+
+/*
+ * 10. MAALEHDEN PUSKURI OSUU OIKEAAN SIVUUN. Etusivun luettava sisältö
+ *     rakennetaan saapuessa irralliseen elementtiin (ui.js
+ *     maalehdenEtusivuRunko), koska lehteä ei ole vielä avattu.
+ *     Verrataan sitä nyt OIKEAAN maalehden ensimmäiseen sivuun: sen
+ *     ensimmäisen palan on oltava sama teksti, joka esihaettiin.
+ */
+const maalehti = await sivu.evaluate(async (iso) => {
+  const lukija = await import('/js/lukija.js');
+  const puhe = await import('/js/puhe.js');
+  const { ui } = window.matkakirja;
+  ui.avaaMaalehti(iso);
+  const kohdat = lukija.kokoaLuettavatKohdat(document.querySelector('#arrival-dialog .dialog-card'));
+  return {
+    sivuja: kohdat.length,
+    eka: kohdat.length ? puhe.paloitteleVirkkeiksi(kohdat[0].teksti)[0] : null,
+  };
+}, odotetut.iso);
+vaadi('maalehden esihaku osui lehden oikean ensimmäisen sivun alkuun',
+  Boolean(maalehti.eka) && esihaut.includes(maalehti.eka), JSON.stringify({ maalehti, esihaut }));
+
+/*
+ * 10b. EDELLINEN sivu puskuroidaan myös (omistajan tarkennus
+ *      15.8.2026): sisällysvalikosta hypätään keskelle lehteä, eikä
+ *      kumpikaan naapuri ole silloin käynyt näytöllä. Maalehti on
+ *      juuri avattu sivulle 1, joten sivun 3 kuvia ei ole pyydetty.
+ */
+const naapuri = await sivu.evaluate(async () => {
+  const kuvat = await import('/js/packs/africa-valokuvat.js');
+  const { ui } = window.matkakirja;
+  // Sivun 4 edellinen on sivu 3, jonka sisältö on tutkiSivut[2].
+  const nosto = (ui.tutkiSivut?.[2]?.nostot ?? []).find((n) => n.tiedosto);
+  return { osoite: nosto ? kuvat.valokuvaUrl(nosto.tiedosto, 900) : null, sivuja: ui.tutkiSivuja() };
+});
+const ennenHyppya = pyynnot.includes(naapuri.osoite);
+await sivu.evaluate(() => window.matkakirja.ui.naytaTutkiSivu(4, { heti: true }));
+await sivu.waitForTimeout(1500);
+vaadi('sisällysvalikon hypyn jälkeen myös EDELLINEN sivu on puskuroitu',
+  Boolean(naapuri.osoite) && naapuri.sivuja > 5 && !ennenHyppya
+  && pyynnot.includes(naapuri.osoite), JSON.stringify({ ...naapuri, ennenHyppya }));
+
+// 11. Maa ILMAN korkokarttaa: etusivu on aihesivu, ja se rakentuu
+//     samalla piirrolla irralliseen elementtiin ilman että lehteä
+//     avataan (Euroopan laudalla kaikilla mailla on kartta, joten
+//     tämä polku koestetaan suoraan).
+const ilmanKarttaa = await sivu.evaluate(async () => {
+  const lukija = await import('/js/lukija.js');
+  const kartat = await import('/js/packs/maakartat.js');
+  const kategoriat = await import('/js/packs/maa-kategoriat.js');
+  const { ui } = window.matkakirja;
+  const iso = Object.keys(kategoriat.MAA_KATEGORIAT).find((k) => !kartat.MAAKARTAT[k]);
+  const runko = ui.maalehdenEtusivuRunko(iso);
+  const kohdat = runko ? lukija.kokoaLuettavatKohdat(runko) : [];
+  return { iso, kohtia: kohdat.length, eka: kohdat[0]?.teksti?.slice(0, 60) ?? null };
+});
+vaadi('kartattoman maan maalehden etusivu rakentuu irralliseen elementtiin',
+  ilmanKarttaa.kohtia > 0 && Boolean(ilmanKarttaa.eka), JSON.stringify(ilmanKarttaa));
 
 await selain.close();
 palvelin.close();

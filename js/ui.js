@@ -687,8 +687,8 @@ import { BoardDie } from './die.js';
  * selaimen puhesyntetisaattoriin.
  */
 import {
-  kaynnistaLukija, kokoaLuettavaTeksti, liitaLukija, lueAaneen, lukijaLukee,
-  lukijaTuettu, paivitaLukija, pysaytaLukija, vieritaPehmeasti,
+  esipuskuroiLuenta, kaynnistaLukija, kokoaLuettavaTeksti, liitaLukija, lueAaneen,
+  lukijaLukee, lukijaTuettu, paivitaLukija, pysaytaLukija, vieritaPehmeasti,
 } from './lukija.js';
 // Lukijaäänen saatavuus ohjaa merkintöjen luentapolkua: kun lennossa
 // generoitu ääni on käytössä, ElevenLabs-äänitteet ohitetaan
@@ -1605,6 +1605,29 @@ function esilataaKuvat(osoitteet) {
     kuva.addEventListener('error', valmis, { once: true });
     kuva.src = osoite;
   }
+}
+
+/**
+ * Sama lehtisivu ilman kuvatiedostoja.
+ *
+ * Käytetään vain esikatselupiirrossa (ks. maalehdenEtusivuRunko):
+ * kuvaton kopio tuottaa saman luettavan tekstin, koska lukija ohittaa
+ * IMG-elementit ja kuvatekstit, mutta piirto ei silloin lataa
+ * kymmentä kuvaa esilatausjonon ohi.
+ */
+function kuvitukseton(kategoria) {
+  const riisu = (kohde) => {
+    const kopio = { ...kohde };
+    delete kopio.tiedosto;
+    delete kopio.galleria;
+    return kopio;
+  };
+  const sivu = { ...kategoria };
+  if (sivu.nostot) sivu.nostot = sivu.nostot.map(riisu);
+  if (sivu.lista) {
+    sivu.lista = sivu.lista.map((rivi) => ({ ...rivi, kohteet: (rivi.kohteet ?? []).map(riisu) }));
+  }
+  return sivu;
 }
 
 // Tapahtumakuplien äänet.
@@ -8876,6 +8899,8 @@ export class UI {
     }
 
     this.esilataaOsoitteet(kuvat, city.id);
+    // Molempien lehtien etusivut ja luentojen ensimmäiset palat.
+    this.esilataaLehdet(city);
     for (const url of aanet) {
       if (!url) continue;
       const audio = new Audio(url);
@@ -8901,6 +8926,222 @@ export class UI {
       kuva.src = url;
     };
     for (let i = 0; i < kerralla; i += 1) seuraava();
+  }
+
+  /**
+   * Jonottaa osoitteet esilatausjonoon KERTAALLEEN.
+   *
+   * Sama osoite ei lähde toistamiseen: lehteä selataan edestakaisin, ja
+   * jokainen sivunäyttö jonottaisi muuten seuraavan sivun kuvat uudelleen.
+   * Kirjanpito katkaistaan tuhannen osoitteen kohdalla kuten
+   * esilataaKuvatissa — se on kirjanpidon raja, ei latauksen.
+   *
+   * Kaupunkivartija tulee jonosta itsestään (esilataaOsoitteet vertaa
+   * `esilatattu`-tunnukseen), joten kaupungin vaihtuessa kesken jäänyt
+   * jono lakkaa etenemästä.
+   */
+  esipuskuroiKuvat(osoitteet) {
+    const muisti = (this.esipuskuroidut ??= new Set());
+    const jono = [];
+    for (const url of osoitteet ?? []) {
+      if (!url || muisti.has(url)) continue;
+      if (muisti.size >= 1000) muisti.clear();
+      muisti.add(url);
+      jono.push(url);
+    }
+    if (jono.length) this.esilataaOsoitteet(jono, this.esilatattu);
+  }
+
+  /**
+   * ETUKÄTEISPUSKURI: MOLEMPIEN LEHTIEN ETUSIVUT HETI SAAPUESSA
+   * (omistajan tilaus 15.8.2026, docs/periaatteet.md
+   * "Etukäteispuskurin periaate").
+   *
+   * Kaupunkilehden etusivu on tässä vaiheessa jo piirretty
+   * (rakennaSivut → naytaTutkiSivu(0)), joten sen kuvat ovat matkalla.
+   * Osoitteet jonotetaan silti — samoilla leveyksillä kuin piirto
+   * pyytää — jotta puskuri ei riipu piirtojärjestyksestä. Sama osoite
+   * samalla leveydellä on selaimelle sama kuva, joten tuplapyyntöä ei
+   * synny; eri leveys sen sijaan olisi eri kuva ja latautuisi kahdesti.
+   *
+   * MAALEHDEN etusivua ei ole DOMissa lainkaan ennen kuin liitelinkkiä
+   * painetaan, joten sen kuvat johdetaan samasta datasta, jota piirto
+   * käyttää (maalehdenEkaSivu + lehdenSivunKuvat).
+   *
+   * Sääosio ei tarvitse kuvia: rivin kuvakkeet ovat pelin omia
+   * SVG-piirroksia (SAA_IKONIT), ja päivän ennuste on jo haettu —
+   * naytaLehtiSaa ajetaan saapumisessa rakennaSivutin osana.
+   */
+  esilataaLehdet(city) {
+    // Vain lehtikaupungeissa on kaksi lehteä; muualla saapumiskortti on
+    // wikin varassa eikä sillä ole etusivua puskuroitavaksi.
+    if (!this.tutkiLehti) return;
+    this.esipuskuroiKuvat([
+      ...this.kaupunkilehdenEtusivunKuvat(city.id),
+      // Maalehden etusivu kokonaisuudessaan.
+      ...this.lehdenSivunKuvat(this.maalehdenEkaSivu()),
+    ]);
+    this.esipuskuroiLehtienLuennat();
+  }
+
+  /**
+   * Kaupunkilehden etusivun kuvat: kansikuvat (piirraLehtiKuvat pyytää
+   * pääkuvan 1200:lla ja enintään kaksi pikkukuvaa 640:llä), maan lippu
+   * mastossa ja kohdekartta sivun pohjalla.
+   */
+  kaupunkilehdenEtusivunKuvat(cityId = this.arrivalShownFor) {
+    const kuvat = [];
+    const kansikuvat = this.tutkiKansi?.kansikuvat ?? [];
+    if (kansikuvat[0]?.tiedosto) kuvat.push(valokuvaUrl(kansikuvat[0].tiedosto, 1200));
+    for (const teos of kansikuvat.slice(1, 3)) {
+      if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 640));
+    }
+    const lippu = this.arrivalMaaTiedot?.lippu;
+    if (lippu) kuvat.push(lippuUrl(lippu, 96));
+    /*
+     * Kohdekartta: oma julistekartta on paikallinen tiedosto, Commons-
+     * pohjainen haetaan peilin kautta 1000:lla. Satelliittinäkymä
+     * puskuroidaan mukaan, koska vipu vaihtaa kuvan heti napautuksesta.
+     * (Piirto itse on piirraKaupunkiKartassa — tähän kootaan vain
+     * osoitteet.)
+     */
+    const kohdekartta = KAUPUNKIKARTAT[cityId];
+    if (kohdekartta) {
+      kuvat.push(kohdekartta.polku ?? valokuvaUrl(kohdekartta.tiedosto, 1000));
+      if (kohdekartta.satelliitti) kuvat.push(kohdekartta.satelliitti);
+    }
+    return kuvat;
+  }
+
+  /**
+   * Maalehden ensimmäinen sivu ilman lehden avaamista: sama valinta
+   * kuin avaaMaalehti tekee — kartta niillä mailla, joilla se on,
+   * muuten ensimmäinen aihe. Puskuri hakee siis juuri sen sivun, joka
+   * liitelinkistä aukeaa.
+   */
+  maalehdenEkaSivu(iso = this.tutkiMaaIso) {
+    if (!iso) return null;
+    const maa = this.game?.pack?.map?.countryShapes?.[iso];
+    const otsikko = this.tutkiMaaNimi ?? maa?.nimi ?? '';
+    const kartta = MAAKARTAT[iso];
+    if (kartta) return { id: 'maa-etusivu', nimi: `${otsikko} kartalla`, kartta };
+    const osa = (MAA_KATEGORIAT[iso] ?? [])[0] ?? null;
+    if (!osa) return null;
+    return maa?.lippu ? { ...osa, maaLippu: maa.lippu, maa: otsikko } : osa;
+  }
+
+  /**
+   * Yhden lehtisivun kuvaosoitteet SAMOILLA LEVEYKSILLÄ kuin sivun
+   * piirto pyytää. Leveys on osa osoitetta: 640 ja 900 ovat selaimelle
+   * kaksi eri kuvaa, joten väärällä leveydellä puskuroitu sivu
+   * latautuisi kokonaan uudestaan avattaessa.
+   *
+   * Leveydet: maan korkokartta 1000 (piirraMaaEtusivu), menovinkkien
+   * avauskuva 1200 ja rivit 320 (piirraKategoria + piirraVinkkilista),
+   * litteät kulttuurinostot 640 (piirraKulttuuriNostot), tavalliset
+   * aihenostot ja niiden galleriat 900 (piirraKategoria +
+   * kaariNostoGalleria). Tilastosivu piirtyy käyristä eikä hae kuvia.
+   */
+  lehdenSivunKuvat(kategoria) {
+    if (!kategoria) return [];
+    const kuvat = [];
+    if (kategoria.maaLippu) kuvat.push(lippuUrl(kategoria.maaLippu, 96));
+    if (kategoria.kartta) {
+      kuvat.push(valokuvaUrl(kategoria.kartta.tiedosto, 1000));
+      kuvat.push(...this.nostonKuvat(kategoria.kartta.nosto, 900));
+      return kuvat;
+    }
+    if (kategoria.numerot) return kuvat;
+    if (kategoria.lista) {
+      const kohteet = (kategoria.lista ?? []).flatMap((rivi) => rivi.kohteet ?? []);
+      const hero = kohteet.find((k) => k.tiedosto);
+      if (hero) kuvat.push(valokuvaUrl(hero.tiedosto, 1200));
+      for (const kohde of kohteet) {
+        if (kohde.tiedosto) kuvat.push(valokuvaUrl(kohde.tiedosto, 320));
+      }
+      return kuvat;
+    }
+    const leveys = kategoria.litteä ? 640 : 900;
+    for (const nosto of kategoria.nostot ?? []) kuvat.push(...this.nostonKuvat(nosto, leveys));
+    return kuvat;
+  }
+
+  /**
+   * Noston oma kuva ja sen selattava galleriasarja.
+   *
+   * Galleria kuuluu vain tavalliseen aihenostoon (kaariNostoGalleria,
+   * 900); litteässä listassa gallerianuolia ei ole, joten sarjaa ei
+   * siellä myöskään haeta.
+   */
+  nostonKuvat(nosto, leveys) {
+    if (!nosto?.tiedosto) return [];
+    const kuvat = [valokuvaUrl(nosto.tiedosto, leveys)];
+    if (leveys === 900) {
+      for (const teos of nosto.galleria ?? []) {
+        if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 900));
+      }
+    }
+    return kuvat;
+  }
+
+  /**
+   * Lukijaäänen ensimmäinen pala valmiiksi molempiin lehtiin: kaksi
+   * hakua per saapuminen, ei enempää (omistajan kiintiökuri). Loput
+   * palat generoituvat ensimmäisen soidessa kuten ennenkin.
+   */
+  esipuskuroiLehtienLuennat() {
+    /*
+     * Kaupunkilehti: etusivu on jo DOMissa, joten teksti otetaan
+     * TÄSMÄLLEEN samasta koonnista, josta luentakin sen ottaa — ei
+     * datasta johdettuna. Sivu on tässä kohtaa piirretty mutta dialogi
+     * vielä auki-avaamatta; kokoaLuettavatKohdat katsoo vain
+     * hidden-tiloja, joten tulos on sama kuin painalluksen hetkellä.
+     */
+    esipuskuroiLuenta(this.arrivalDialog?.querySelector('.dialog-card'));
+    // Maalehti: etusivua ei ole DOMissa ennen liitelinkin painallusta.
+    const runko = this.maalehdenEtusivuRunko();
+    if (runko) esipuskuroiLuenta(runko);
+  }
+
+  /**
+   * Maalehden etusivun luettava sisältö IRRALLISEEN elementtiin.
+   *
+   * Sivua ei voi piirtää oikeille paikoilleen ennen aikojaan —
+   * piirraMaaEtusivu siirtää #arrival-maa-osaston sivulle ja pyyhkii
+   * aihesivun — joten tässä rakennetaan sama rakenne erilliseen
+   * elementtiin, jota ei liitetä dokumenttiin. Lukija saa siitä
+   * täsmälleen saman ensimmäisen kohdan kuin oikeasta sivusta:
+   *
+   * - karttamailla otsikko (ohitetaan), kartta (ohituslistalla) ja
+   *   maaosaston KOPIO, jonka ensimmäinen luettava rivi on maan nimi
+   * - muilla mailla ensimmäinen aihesivu samalla piirrolla
+   *   (piirraKategoria ottaa kohde-elementin parametrina)
+   */
+  maalehdenEtusivuRunko(iso = this.tutkiMaaIso) {
+    const sivu = this.maalehdenEkaSivu(iso);
+    if (!sivu) return null;
+    const runko = html('div', 'wiki-kategoria');
+    if (!sivu.kartta) {
+      /*
+       * Kuvat pois esikatselukopiosta: lukija ohittaa IMG-elementit,
+       * joten luettava teksti on sama, mutta irrallinen piirto ei
+       * käynnistä omaa kuvaryöppyään esilatausjonon ohi. Sivun kuvat
+       * kulkevat jonossa kuten muutkin (lehdenSivunKuvat).
+       */
+      this.piirraKategoria(kuvitukseton(sivu), runko);
+      return runko;
+    }
+    if (!this.arrivalMaa) return null;
+    runko.classList.add('maa-etusivu');
+    runko.appendChild(html('h3', 'aihe-nimi', sivu.nimi));
+    // Kartta itse on ohituslistalla (.maakartta-kotelo, .lahde), joten
+    // siitä ei synny luettavaa — vain maaosastosta.
+    const maa = this.arrivalMaa.cloneNode(true);
+    // Karttamaassa osasto on kaupunkilehden etusivulla piilotettuna;
+    // maalehdessä se on näkyvissä, ja lukija ohittaa piilotetun.
+    maa.hidden = false;
+    runko.appendChild(maa);
+    return runko;
   }
 
   /**
@@ -10149,6 +10390,39 @@ export class UI {
       // (paneelin kytkin) kääntää sivun ja lukee eteenpäin.
       { jatko: () => this.jatkaLehdenLuentaa() });
     this.sijoitaLehtiKaiutin(kaiutin);
+    /*
+     * VIEREISET SIVUT VALMIIKSI heti, kun tämä sivu on näkyvissä
+     * (Etukäteispuskurin periaate): sivunkääntö ei saa jäädä
+     * odottamaan verkkoa. Kutsu tulee sivun piirron JÄLKEEN, jotta
+     * näkyvä sivu saa yhteyden ensin — ja koska naytaTutkiSivu ajetaan
+     * myös lehden avautuessa, sama koukku kattaa sekä avaamisen että
+     * jokaisen käännöksen.
+     */
+    this.esilataaViereisetSivut(i);
+  }
+
+  /**
+   * Sivujen `sivu ± 1` kuvat taustalle.
+   *
+   * Sivu 0 on etusivu ja aiheet alkavat sivulta 1, joten sivun n
+   * sisältö on tutkiSivut[n - 1]. Listan päät jäävät itsestään pois.
+   *
+   * MYÖS EDELLINEN (omistajan tarkennus 15.8.2026): sisällysvalikosta
+   * voi hypätä keskelle lehteä, jolloin kumpikaan naapuri ei ole
+   * käynyt näytöllä — takaisin selaaminen olisi silloin yhtä hidasta
+   * kuin eteenpäin ilman puskuria. Jo haetut osoitteet eivät lähde
+   * uudelleen (esipuskuroiKuvat pitää kirjaa).
+   */
+  esilataaViereisetSivut(sivu) {
+    const kuvat = [...this.lehdenSivunKuvat(this.tutkiSivut?.[sivu] ?? null)];
+    if (sivu - 2 >= 0) {
+      kuvat.push(...this.lehdenSivunKuvat(this.tutkiSivut?.[sivu - 2] ?? null));
+    } else if (sivu === 1 && this.tutkiTila !== 'maa') {
+      // Ensimmäisen aihesivun edellinen on lehden etusivu; maalehdellä
+      // sitä ei ole (tutkiEkaSivu on siellä 1).
+      kuvat.push(...this.kaupunkilehdenEtusivunKuvat());
+    }
+    this.esipuskuroiKuvat(kuvat);
   }
 
   /**

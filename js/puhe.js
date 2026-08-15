@@ -560,6 +560,40 @@ async function haePala(teksti, persoona, sailio = null) {
   return osoite;
 }
 
+/**
+ * ESIHAKU VÄLIMUISTIIN (omistajan tilaus 15.8.2026, "Etukäteispuskurin
+ * periaate"): hakee yhden palan valmiiksi ilman että mitään soi.
+ *
+ * Esihaku EI käynnistä ääntä eikä vaadi käyttäjän elettä — se on
+ * pelkkä fetch, jonka tulos jää istunnon muistiin (puheMuisti) ja
+ * laitteen pysyvään säilöön. Kun pelaaja sitten painaa kaiutinta,
+ * luennan ensimmäinen pala löytyy samalla avaimella eikä generointia
+ * odoteta lainkaan.
+ *
+ * AVAIMEN ON OSUTTAVA. Avain on `persoona|säädöt|teksti` (ks.
+ * haePala), joten esihaun tekstin, persoonan, säilölohkon ja
+ * nopeusasetuksen on oltava täsmälleen samat kuin luennassa. Väärä
+ * avain maksaisi generoinnin kahdesti — se olisi pahempi kuin ei
+ * puskuria lainkaan. Siksi kutsuja ei kirjoita tekstiä itse vaan
+ * johtaa sen samasta luennan koonnista (js/lukija.js
+ * esipuskuroiLuenta).
+ *
+ * Virheet niellään: puskuri on pelkkää nopeutta, ja ilman sitä kaikki
+ * toimii kuten ennenkin.
+ *
+ * @returns {Promise<boolean>} osuiko haku talteen
+ */
+export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
+  const pala = String(teksti ?? '').trim();
+  if (!pala || !puheTuettu()) return false;
+  try {
+    await haePala(pala, persoona, sailio);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /* ------------------------------------------------------------------ */
 /* Soitin                                                              */
 /* ------------------------------------------------------------------ */
