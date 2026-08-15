@@ -12545,9 +12545,9 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kaupunki',
       nimi: 'Sahalin',
       johdanto: 'Sahalin on Venäjän suurin saari: 948 kilometriä pitkä '
-        + 'kaistale, joka on kapeimmillaan vain 25 kilometriä leveä. '
-        + 'Mantereesta sen erottaa Tatarinsalmi, jonka kapein kohta on '
-        + 'runsaat seitsemän kilometriä.',
+        + 'kaistale, joka on kapeimmillaan vain 26 kilometriä leveä. '
+        + 'Mantereesta sen erottaa Tatarinsalmi, jonka pohjoisin '
+        + 'kuristuskohta kaventuu runsaaseen seitsemään kilometriin.',
       kansikuvat: [
         {
           tiedosto: 'Скалы мыса Великан.jpg',
@@ -12579,35 +12579,38 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Saari vai mantereen jatke',
           tiedosto: 'Map of Karafuto and the Amur estuary by Mamiya Rinzo (1810)／間宮林蔵『黒竜江中州并天度』（文化7年）.jpg',
           teksti: 'Kartanpiirtäjät epäröivät pitkään, onko Sahalin saari vai '
-            + 'mantereesta työntyvä niemi. Japanilainen Mamiya Rinzō esitti '
-            + 'vuonna 1809, että kyseessä on saari. Venäläinen Gennadi '
-            + 'Nevelskoi osoitti 1849, että Tatarinsalmi yhtyy Amurin '
-            + 'suistoon ja on siis kuljettava salmi eikä umpilahti. Salmi on '
-            + '632 kilometriä pitkä ja seitsemästä 23 kilometriin leveä, ja '
-            + 'matalimmillaan sen syvyys on neljä metriä. Pohjoisin '
-            + 'kuristuskohta nimettiin Nevelskoin salmeksi: se on 56 '
-            + 'kilometriä pitkä ja kapeimmillaan 7,3 kilometriä.',
+            + 'mantereesta työntyvä niemi. Japanilainen Mamiya Rinzō kulki '
+            + '1809 saaren ja mantereen välisen väylän ja esitti sen '
+            + 'saarena. Gennadi Nevelskoi purjehti 1849 salmen läpi '
+            + 'pohjoisesta ja totesi veden jatkuvan Amurin suistoon asti: '
+            + 'umpilahdeksi luultu vesi oli kuljettava väylä. Salmi on '
+            + 'satoja kilometrejä pitkä ja tavallisesti kymmeniä kilometrejä '
+            + 'leveä, mutta sen pohjoisin kuristuskohta on nimetty '
+            + 'Nevelskoin salmeksi — 56 kilometriä pitkä ja kapeimmillaan '
+            + 'noin 7,3 kilometriä.',
           selite: 'Mamiya Rinzōn vuonna 1810 piirtämä kartta Amurin '
-            + 'suistosta ja Sahalinista. Se on ensimmäinen kartta, jossa '
-            + 'Sahalin on esitetty saarena. Käsin väritetylle paperille on '
-            + 'merkitty rantaviivat, jokiuomat ja punaisia leimoja.',
+            + 'suistosta ja Sahalinista. Se on ensimmäinen japanilainen '
+            + 'kartta, joka perustuu omaan maastomittaukseen ja esittää '
+            + 'Sahalinin saarena. Käsin väritetylle paperille on merkitty '
+            + 'rantaviivat ja jokiuomat.',
           lahde: 'Mamiya Rinzo 間宮林蔵, Wikimedia Commons (CC0)',
           wiki: 'Sahalin',
         },
         {
           otsikko: 'Kala kuivattiin ilman suolaa',
           tiedosto: 'Stilt house of Nivkh people.jpg',
-          teksti: 'Saaren pohjoisosassa asuvat nivkhit, keskiosassa uiltat '
-            + 'eli orokit ja etelässä ainut. Nivkhien vuosi rakentui kalan '
-            + 'varaan: joista saatiin kyttyrä- ja koiralohta, taimenta, '
-            + 'madetta ja haukea, mereltä navagaa, kampelaa ja tokkoja. '
-            + 'Saalis säilöttiin jukolaksi eli leikattiin liuskoiksi ja '
-            + 'kuivattiin pakkasilmassa ilman suolaa. Talvimaja ryv oli noin '
-            + '7,5 metriä leveä kuoppa, joka tuettiin puurangoilla ja '
-            + 'katettiin maalla ja heinällä. Metsästys- ja matkareissuilla '
-            + 'kuljettiin koiravaljakolla.',
-          selite: 'Nivkhien paaluille nostettu aitta Sahalinilla vuonna '
-            + '1903. Lautaseinäisen rakennuksen räystäiltä riippuu kuivumaan '
+          teksti: 'Saarella on kolme alkuperäiskansaa. Nivkhit asuivat '
+            + 'pohjoisessa, uiltat eli orokit keskiosassa ja ainut etelässä. '
+            + 'Nivkhien vuosi rakentui kalan varaan: joista saatiin kyttyrä- '
+            + 'ja koiralohta, taimenta, madetta ja haukea, mereltä navagaa, '
+            + 'kampelaa ja tokkoja. Saalis säilöttiin jukolaksi, joka '
+            + 'kuivattiin pakkasilmassa kokonaan ilman suolaa. Vanhin '
+            + 'talvitalotyyppi oli ryv: pyöreä kuoppa, halkaisijaltaan noin '
+            + '7,5 metriä, jonka seinät tuettiin pystypuilla ja katettiin '
+            + 'maalla ja heinällä. Metsässä ja matkoilla kuljettiin '
+            + 'koiravaljakolla.',
+          selite: 'Nivkhien paaluille nostettu aitta, kuva vuodelta 1903. '
+            + 'Lautaseinäisen rakennuksen räystäiltä riippuu kuivumaan '
             + 'ripustettua tavaraa, ja lattian alle jää avoin tila. '
             + 'Rakennuksen luona on kaksi turkkiin pukeutunutta ihmistä ja '
             + 'koira.',
@@ -12623,10 +12626,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pakkotyöksi Sahalinilla, ja vangista tuli vähitellen saaren '
             + 'kansojen tutkija. Hän laati ainun kielen sanakirjan, jossa '
             + 'oli 10 000 sanaa, sekä 6 000 sanan nivkhin ja 2 000 sanan '
-            + 'oroksin sanastot. Kylään hän rakensi alkeiskoulun ja opetti '
-            + 'siellä venäjää ja laskentoa. Vuonna 1903 hän äänitti ainun '
-            + 'kieltä vahasylintereille. Hän oli Józef Piłsudskin vanhempi '
-            + 'veli.',
+            + 'oroksin sanastot. Piłsudski perusti kylään koulun, jossa hän '
+            + 'opetti lapsille venäjää ja laskentoa. Vuonna 1903 hän äänitti '
+            + 'ainun kieltä vahasylintereille. Hän oli Józef Piłsudskin '
+            + 'vanhempi veli.',
           selite: 'Bronisław Piłsudskin ottama valokuva Sahalinin ainuista. '
             + 'Neljä nuorta istuu maassa inau-rivin ääressä; inaut ovat '
             + 'vuolluista lastuista tehtyjä uhripuikkoja. Yksi heistä on '
@@ -12639,7 +12642,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
-      johdanto: 'Sahalin oli lähes neljäkymmentä vuotta Venäjän '
+      johdanto: 'Sahalin oli vuodesta 1869 vuoteen 1906 Venäjän '
         + 'pakkotyösiirtola, ja saaren eteläpuolisko kuului välillä '
         + 'Japanille. Kesällä 1890 saarelle saapui Anton Tšehov ja teki '
         + 'siellä oman väestölaskentansa.',
@@ -12652,30 +12655,31 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keväällä 1890. Saarelle hän saapui 11. heinäkuuta ja viipyi '
             + 'kolme kuukautta. Hän painatti itselleen kortistokortteja ja '
             + 'kiersi asutuksesta toiseen kysymässä nimen, iän, säädyn ja '
-            + 'ammatin; kortteja täyttyi yli kymmenentuhatta. Poliittisten '
-            + 'vankien haastattelu oli häneltä kielletty. Matkasta syntyi '
-            + 'kirja Sahalin, jonka luvut ilmestyivät Russkaja mysl '
-            + '-lehdessä 1893–1894 ja kokonaisena teoksena 1895.',
-          selite: 'Anton Tšehovin ottama valokuva eteläisen Sahalinin '
-            + 'ainuista. Neljä aikuista istuu lautaseinän edustalla, ja '
-            + 'heidän kanssaan on kaksi lasta. Miehillä on pitkä parta ja '
-            + 'yllään paksusta kankaasta ommeltu kaapu.',
+            + 'ammatin; kortteja täyttyi noin kymmenentuhatta. Poliittisten '
+            + 'vankien haastattelu oli häneltä kielletty, mutta hän rikkoi '
+            + 'kieltoa. Matkasta syntyi kirja Sahalin, jonka luvut '
+            + 'ilmestyivät Russkaja mysl -lehdessä 1893–1894 ja kokonaisena '
+            + 'teoksena 1895.',
+          selite: 'Tšehovin Sahalinilta mukanaan tuoma valokuva eteläisen '
+            + 'Sahalinin ainuista. Neljä aikuista istuu lautaseinän '
+            + 'edustalla, ja heidän kanssaan on kaksi lasta. Miehillä on '
+            + 'pitkä parta ja yllään paksusta kankaasta ommeltu kaapu.',
           lahde: 'Tschechow, Anton, Wikimedia Commons (PD)',
           wiki: 'Anton Tšehov',
         },
         {
-          otsikko: 'Kahdeksansataa vankia vuodessa',
+          otsikko: 'Nertšinskistä Sahalinille',
           tiedosto: 'Pavlovskij, I.I. - Gefangene bei der Arbeit. Sachalin (Zeno Fotografie).jpg',
-          teksti: 'Ensimmäiset kolmisensataa pakkotyövankia tuotiin '
+          teksti: 'Ensimmäiset runsaat kolmesataa pakkotyövankia tuotiin '
             + 'Sahalinille Nertšinskistä vuonna 1859 kaivamaan kivihiiltä. '
             + 'Keisari Aleksanteri II vahvisti 18. huhtikuuta 1869 '
-            + 'määräyksen, jonka mukaan saarelle oli lähetettävä jopa '
-            + 'kahdeksansataa pakkotyövankia vuodessa. Vankilat avattiin '
-            + 'Aleksandrovskiin ja Korsakoviin vuonna 1880. Vangit louhivat '
-            + 'hiiltä ja rautamalmia, rakensivat taloja, teitä ja '
-            + 'lennätinlinjoja, kuivattivat soita ja kaatoivat talvisin '
-            + 'metsää. Kaikkiaan järjestelmän läpi kulki yli '
-            + 'kolmekymmentätuhatta tuomittua.',
+            + 'määräyksen, jonka mukaan Itä-Siperian kenraalikuvernöörin oli '
+            + 'heti ryhdyttävä lähettämään saarelle jopa kahdeksansataa '
+            + 'pakkotyövankia. Vankilat avattiin Aleksandrovskiin ja '
+            + 'Korsakoviin vuonna 1880. Työt olivat raskaita: hiiltä ja '
+            + 'rautamalmia, taloja ja teitä, lennätinlinjoja, soiden '
+            + 'kuivatusta ja talvista metsänkaatoa. Kaikkiaan järjestelmän '
+            + 'läpi kulki yli kolmekymmentätuhatta tuomittua.',
           selite: 'Sahalinin pakkotyövankeja työssä. Parikymmentä miestä '
             + 'lapioi maata ja työntää kottikärryjä juuri raivatulla '
             + 'tienpohjalla. Useimmilla on yllään vaalea paita ja päässä '
@@ -12697,10 +12701,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'prefektuurina. Pääkaupunki oli Toyohara, nykyinen '
             + 'Južno-Sahalinsk. Elokuussa 1945 koko saari siirtyi '
             + 'Neuvostoliitolle.',
-          selite: 'Anivan majakka Sahalinin eteläkärjen edustalla. '
+          selite: 'Anivan majakka Sahalinin kaakkoiskärjen edustalla. '
             + 'Betonitorni valmistui 1939, kun saaren eteläosa oli Japanin '
-            + 'Karafutoa, ja sen korkeus on runsaat 31 metriä. Torni on '
-            + 'nykyään autio, ja kallion yllä kiertää lokkiparvi.',
+            + 'Karafutoa, ja sen korkeus on 31 metriä. Torni on nykyään '
+            + 'autio, ja kallion yllä kiertää lokkiparvi.',
           lahde: 'Yaroslav Shuraev, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Karafuto',
         },
@@ -12716,9 +12720,9 @@ export const KULTTUURI_KATEGORIAT = {
         ],
         oikea: 0,
         fakta: 'Sopimus allekirjoitettiin Pietarissa 7. toukokuuta 1875. '
-          + 'Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Venäjän '
-          + 'hallussa olleet Kuriilit, jolloin koko Sahalin jäi Venäjälle ja '
-          + 'koko Kuriilien ketju Japanille.',
+          + 'Vaihdossa Venäjä sai koko Sahalinin ja Japani koko Kuriilien '
+          + 'ketjun; allekirjoittajina olivat Aleksandr Gortšakov ja Enomoto '
+          + 'Takeaki.',
       },
     },
   ],
