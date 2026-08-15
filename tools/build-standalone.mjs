@@ -119,6 +119,8 @@ const MODULES = [
   // versioon.
   'js/tyohuone-raamattu.js',
   'js/tyohuone-tilanne.js',
+  // Lukijaäänen oletusten näyttökopio (main.js tuo sen dialogiin).
+  'js/puhe-oletukset.js',
   'js/packs/tarinakaari.js',
   'js/packs/europe.js',
   // middleeast-countries.js ENNEN middleeast.js:ää: niputettu koodi on yhtä

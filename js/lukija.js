@@ -148,6 +148,12 @@ export const LUKIJAN_OHITETTAVAT = [
   // Lehden päivämäärä on taittoa, ei juttua (omistajan toive).
   '#arrival-lehti-pvm',
 
+  // Noston aikamerkki otsikon oikeassa reunassa ("1973", "Aamuisin")
+  // on taittoa sekin — otsikon perään luettuna se kuulostaa virheeltä
+  // (omistajan toive 15.8.2026: "Jätä tällaiset vuosilukumerkinnät
+  // lukematta").
+  '.nosto-aika',
+
   // "Uutisissa tänään (lähde)" -nimiö samoin (omistajan toive) —
   // uutisotsikot itse ovat nappeja ja jäävät pois jo tagilistalla.
   '.uutiset-nimio',

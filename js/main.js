@@ -13,6 +13,7 @@ import {
   asetaPuheenNopeus, luePuheAsetukset, puheenNopeus, tallennaPuheAsetukset,
 } from './puhe.js';
 import { lueAaneen, pysaytaLukija } from './lukija.js';
+import { PUHE_OLETUKSET } from './puhe-oletukset.js';
 // iOS-kuoren kytkennät. Selaimessa jokainen näistä on mykkä (js/natiivi.js).
 import {
   natiiviKirjauduPelikeskukseen, natiiviKuunteleSynkka, natiiviMerkitseAika,
@@ -40,7 +41,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.701';
+const APP_VERSION = '2026-08-09.702';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1078,7 +1079,6 @@ const puheNopeusArvo = document.getElementById('puhe-nopeus-arvo');
 
 const PUHE_AANIVAIHTOEHDOT = ['alloy', 'ash', 'ballad', 'coral', 'echo',
   'fable', 'nova', 'onyx', 'sage', 'shimmer', 'verse'];
-const PUHE_OLETUSAANET = { merkinnat: 'onyx', kertoja: 'onyx', pollo: 'sage' };
 const PUHE_NAYTTEET = {
   merkinnat: 'Saavuimme kaupunkiin illansuussa, ja teekaravaanin kellot '
     + 'kilisivät kadulla vielä pimeän tultua.',
@@ -1108,12 +1108,19 @@ document.getElementById('tilanne-lehti-btn')?.addEventListener('click', () => {
 function lataaPuheKentat() {
   const persoona = puhePersoonaValinta.value;
   const oma = luePuheAsetukset()[persoona] ?? {};
+  const oletukset = PUHE_OLETUKSET[persoona] ?? PUHE_OLETUKSET.kertoja;
   // Oletusvaihtoehdon nimi kertoo, mikä pelin oletusääni on.
   puheAaniValinta.replaceChildren();
   const oletus = document.createElement('option');
   oletus.value = '';
-  oletus.textContent = `(pelin oletus: ${PUHE_OLETUSAANET[persoona] ?? 'onyx'})`;
+  oletus.textContent = `(pelin oletus: ${oletukset.aani})`;
   puheAaniValinta.appendChild(oletus);
+  // Pelin oletusprompti näkyviin, jotta oman promptin voi kirjoittaa
+  // sitä silmällä pitäen (omistajan tilaus 15.8.2026). Sama teksti myös
+  // tyhjän kentän paikkamerkkinä.
+  const oletusOhje = document.getElementById('puhe-oletusohje');
+  if (oletusOhje) oletusOhje.textContent = `Pelin oletus: ${oletukset.ohje}`;
+  puheOhjeKentta.placeholder = oletukset.ohje;
   for (const aani of PUHE_AANIVAIHTOEHDOT) {
     const o = document.createElement('option');
     o.value = aani;
