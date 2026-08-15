@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 762, teksti: 'jutun yläreunan vahti: otsikko ei karkaa avauksessa' },
   { v: 761, teksti: 'työhuoneen kulu- ja lähderivit pois (palkit riittävät)' },
   { v: 760, teksti: 'tarkennetulle vaakunalle pergamenttitausta (Safari)' },
   { v: 759, teksti: 'jutun otsikko ei enää liu\'u piiloon kuvan latautuessa' },
