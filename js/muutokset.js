@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 745, teksti: 'Etusivun avauskaruselli koko palstan levyiseksi' },
   { v: 744, teksti: 'Työhuoneen R2-palkki megatavuina alle gigan' },
   { v: 743, teksti: 'Pöllön kuva: oikea artikkeli varmistetaan, kaimat hylätään' },
   { v: 742, teksti: 'Lukija vaikenee jokaisesta pop-upista (myös pöllö)' },
