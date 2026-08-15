@@ -52,7 +52,15 @@ const KAUPUNGIT = {
     // Mitte Tiergartenista East Side Gallerylle; kaikki kuusi
     // kohdetta (valtiopäivätalo, portti, Museumsinsel, tv-torni,
     // Checkpoint Charlie, East Side Gallery) osuvat alueelle.
-    rajat: { pohjoinen: 52.54, etela: 52.485, lansi: 13.34, ita: 13.46 },
+    //
+    // RAJAUS LEVENI NELJÄNNEKSELLÄ 15.8.2026 (omistajan tilaus:
+    // "voisi jatkua hieman nykyistä laajemmalle alueelle"). Vanha
+    // rajaus oli 8,1 × 6,1 km, uusi on 10,2 × 7,7 km — keskipiste on
+    // sama, joten kuvasuhde ja kohteiden keskinäiset paikat säilyvät.
+    // Laajennus on mahdollinen vain siksi, että kohdekartta on nyt
+    // zoomattava (ui.js, kartta-lava): ilman zoomia tämä olisi juuri
+    // sitä katupuuroa, josta yllä varoitetaan.
+    rajat: { pohjoinen: 52.547, etela: 52.478, lansi: 13.325, ita: 13.475 },
   },
   kairo: {
     // Niilin molemmat rannat Tahrir-aukiolta Islamilaiseen Kairoon:
