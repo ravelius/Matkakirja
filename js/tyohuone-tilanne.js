@@ -131,6 +131,17 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
+    otsikko: 'Taustan väistö luennan alla (v685)',
+    ohje: 'Käynnistä lehden luenta äänimaiseman soidessa: taustan '
+      + 'pitäisi laskea pehmeällä 650 ms feidillä selvästi puheen alle '
+      + 'ja nousta samaa liukua takaisin, kun luenta loppuu tai '
+      + 'pysäytetään. Sama väistö koskee nyt kaikkia luentapolkuja — '
+      + 'myös kaiuttimen sivuluentaa ja pöllön striimattua vastausta, '
+      + 'jotka eivät aiemmin väistäneet lainkaan. Jatkuvassa luennassa '
+      + 'tausta kohoaa hetkeksi sivunvaihdon hengähdyksen ajaksi — '
+      + 'sano, jos se häiritsee.',
+  },
+  {
     otsikko: 'Jatkuva luenta ja pehmeät siirtymät (v683)',
     ohje: 'Käynnistä lehden luenta ja paina soittimen uutta '
       + 'kiertonuolikytkintä: luennan loputtua lehden pitäisi kääntää '
