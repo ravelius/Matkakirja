@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v748 — ison piirroksen klikki: vain kuvan keskiosa avaa',
   'v747 — lippusivut: Lähi-itä (8 maata)',
   'v746 — avauskuvat 4 kaupunkiin; R2 molemmat ämpärit; kulunimiö',
   'v745 — etusivun karuselli koko palstan levyinen',

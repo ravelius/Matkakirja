@@ -10719,14 +10719,13 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * ääriviivaa, ei laatikkoa. Näkyvä koko 40 px (omistajan palautteet
  * 15.8.2026: 64 → "pienemmiksi" 48 → "vielä pienemmät" 40).
  *
- * OSUMA-ALUE ON 80 % NÄKYVÄSTÄ (omistajan tilaus 15.8.2026:
- * "pienennä klikkaus ikkunaa, koska myös läpinäkyvä osa kuvaa on
- * klikattavissa"): nappi on 32 px ja kuva vuotaa sen yli 125 %:iin
- * eli entiseen 40 px:iin (pointer-events: none — klikki osuu vain
- * napin laatikkoon, ei kuvan läpinäkyviin reunoihin sen ulkopuolella). */
+ * Pienenä koko piirros on klikattavissa (omistajan tarkennus
+ * 15.8.2026: osuma-alueen puolitus koskee vain SUURENNETTUA tilaa —
+ * "siis silloin kun nähtävyys on isona kartalla, ei silloin kun se
+ * on pienenä"). */
 .maakartta-piste.kohde-numero.kohde-piirros {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   background: none;
   border: none;
   border-radius: 0;
@@ -10748,25 +10747,33 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .kohde-piirros-kuva {
   position: absolute;
-  left: -12.5%;
-  top: -12.5%;
-  width: 125%;
-  height: 125%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
-  /* Klikki kuuluu napille, ei kuvalle: laatikon yli vuotava reuna ei
-   * saa napata napautuksia. */
+  /* Klikki kuuluu napille, ei kuvalle — suurennettuna kuva vuotaa
+   * laatikon yli, eikä ylivuoto saa napata napautuksia. */
   pointer-events: none;
 }
 
-/* Valittuna kuva täyttää laatikon tarkalleen: suurennoksen koko
- * (75cqh) on napin laatikon koko, eikä 125 %:n vuoto saa kasvattaa
- * sitä ohi karttaikkunan. */
+/*
+ * SUURENNETUN OSUMA-ALUE ON 50 % KUVASTA (omistajan tilaus
+ * 15.8.2026: "pienennä nähtävyyden klikkaus 50 prosenttiin ...
+ * silloin kun nähtävyys on isona kartalla"). Laatikko on puolet
+ * näkyvästä kuvasta (37.5cqh) ja kuva vuotaa sen yli 200 %:iin eli
+ * entiseen 75 %:n kokoon. Leikatun kuvan läpinäkyvälle reunalle
+ * osuva klikkaus menee laatikon ohi karttaan ja PALAUTTAA valinnan —
+ * juttu aukeaa vain kuvan keskiosasta tai kyltistä.
+ */
 .kohde-piirros.valittu .kohde-piirros-kuva {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  /* Globaali img { max-width: 100% } leikkaisi ylivuodon takaisin
+   * laatikon kokoon — piirros kutistuisi osuma-alueen mukana. */
+  max-width: none;
 }
 
 /*
@@ -10784,8 +10791,10 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 .kartta-lava .maakartta-piste.kohde-numero.kohde-piirros.valittu {
-  width: calc(75cqh / var(--zoom));
-  height: calc(75cqh / var(--zoom));
+  /* Laatikko on PUOLET näkyvästä kuvasta: kuva (200 %) täyttää
+   * entisen 75 %:n karttaikkunasta, osuma-alue vain keskiosan. */
+  width: calc(37.5cqh / var(--zoom));
+  height: calc(37.5cqh / var(--zoom));
   z-index: 5;
 }
 
@@ -10817,11 +10826,12 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   display: none;
   position: absolute;
   left: 50%;
-  /* Limittäin laatikon alaosaan: leikatun kuvan reunoilla on
+  /* Limittäin KUVAN alaosaan: leikatun kuvan reunoilla on
    * läpinäkyvää tyhjää, ja 100 %:n kohdalla kyltin ja rakennuksen
    * väliin jäi iso rako (omistajan palaute 15.8.2026; syvennetty
-   * 87 % → 79 % → 73 %, kun rako näkyi yhä). */
-  top: 73%;
+   * 87 % → 79 % → 73 %, kun rako näkyi yhä). Laatikko on nyt puolet
+   * kuvasta, joten kuvan 73 % on laatikon 96 % (p×2 − 50). */
+  top: 96%;
   transform: translateX(-50%) scale(calc(1 / var(--zoom, 1)));
   transform-origin: top center;
   padding: 0.16rem 0.5rem;
@@ -10840,7 +10850,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .kohde-piirros.kyltti-ylle .kohde-kyltti {
   top: auto;
-  bottom: 73%;
+  bottom: 96%;
   transform-origin: bottom center;
 }
 
@@ -111442,6 +111452,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v748 — ison piirroksen klikki: vain kuvan keskiosa avaa',
   'v747 — lippusivut: Lähi-itä (8 maata)',
   'v746 — avauskuvat 4 kaupunkiin; R2 molemmat ämpärit; kulunimiö',
   'v745 — etusivun karuselli koko palstan levyinen',
@@ -182656,6 +182667,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 748, teksti: 'Suurennetun piirroksen osuma-alue 50 % kuvasta' },
   { v: 747, teksti: 'Lippusivut: Lähi-itä (8 maata)' },
   { v: 746, teksti: 'Avauskuvat: Berliini, Helsinki, Pariisi, Lontoo; R2 summana' },
   { v: 745, teksti: 'Etusivun avauskaruselli koko palstan levyiseksi' },
@@ -183500,7 +183512,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.747';
+const APP_VERSION = '2026-08-09.748';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
