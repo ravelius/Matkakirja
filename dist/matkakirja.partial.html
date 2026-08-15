@@ -12853,6 +12853,83 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
  * .dialog-kortin ulkoasun; tässä vain rivien asettelu. */
 .puhe-saadin-nappi { margin-top: 0.35rem; }
 
+/* TYÖHUONE (omistajan tilaus 15.8.2026): kolme tyylinappiin puettua
+ * riviä (kuvake + nimi) ja niiden alla tilannepalkit. Napit ovat
+ * varustenappien sukua: sama kulmapyöristys ja kultareuna, mutta
+ * täysleveinä riveinä, koska nämä ovat komentoja eivätkä tila-
+ * valintoja. */
+.tyohuone-nappi {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid rgba(198, 158, 82, 0.45);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.tyohuone-nappi .viiva-ikoni svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+/* Tilannepalkit vierekkäin (vihreä→keltainen→punainen täytön mukaan):
+ * kaksi palkkia rivissä, nimi ylhäällä, ohut ura ja lukema alla. */
+.tyohuone-palkit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.tyohuone-palkki { min-width: 0; }
+
+.palkki-nimi {
+  display: block;
+  font-family: var(--font-type);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.palkki-ura {
+  height: 6px;
+  margin: 0.2rem 0 0.15rem;
+  border-radius: 3px;
+  background: rgba(198, 158, 82, 0.18);
+  overflow: hidden;
+}
+
+.palkki-tayte {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.palkki-tayte.vihrea { background: #6f9e57; }
+.palkki-tayte.keltainen { background: #c6a23c; }
+.palkki-tayte.punainen { background: #b0523c; }
+
+.palkki-arvo {
+  display: block;
+  font-size: 0.68rem;
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.palkki-tyhja .palkki-arvo { opacity: 0.45; }
+
+.tyohuone-kulut {
+  grid-column: 1 / -1;
+  margin: 0.15rem 0 0;
+  font-size: 0.68rem;
+  opacity: 0.8;
+}
+
 .puhe-saadin-rivi {
   display: flex;
   align-items: center;
@@ -13054,22 +13131,29 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
             <div class="kertoja-kotelo">
               <p class="valikko-otsikko">Äänet</p>
               <div id="kertoja-valikko" class="kertoja-valikko"></div>
-              <!-- Lukijaäänen säädin (omistajan tilaus 14.8.2026):
-                   näkyy vain kehittäjätilassa (js/main.js näyttää). -->
-              <button id="puhe-saadin-btn" class="ghost puhe-saadin-nappi"
-                      type="button" hidden>Lukijaääni…</button>
             </div>
-            <!-- Kehittäjän liitteet (omistajan tilaus 15.8.2026):
-                 Raamattu ja työhuoneen tilannetaulut luetaan
-                 pelin sisällä lehtinä — työhuone pidetään jatkossa
-                 integroituna peliin kehittäjävivun takana. Kotelo
-                 näkyy vain kehittäjätilassa (js/main.js näyttää). -->
+            <!-- TYÖHUONE (omistajan tilaus 15.8.2026: "lukijaääni myös
+                 kehittäjän alle. tee tyyliin sopivammat painikkeet
+                 noista kolmesta kehittäjä linkistä ja nimeä otsikko
+                 työhuoneeksi"): Raamattu, Tilannelehti ja Lukijaääni
+                 tyylinappeina + tilannepalkit (R2, repo, ElevenLabs,
+                 pöllö — js/main.js täyttää). Kotelo näkyy vain
+                 kehittäjätilassa (js/main.js näyttää). -->
             <div id="kehittaja-kotelo" class="kehittaja-kotelo" hidden>
-              <p class="valikko-otsikko">Kehittäjä</p>
-              <button id="raamattu-lehti-btn" class="ghost puhe-saadin-nappi"
-                      type="button">Raamattu…</button>
-              <button id="tilanne-lehti-btn" class="ghost puhe-saadin-nappi"
-                      type="button">Tilannelehti…</button>
+              <p class="valikko-otsikko">Työhuone</p>
+              <button id="raamattu-lehti-btn" class="ghost tyohuone-nappi" type="button">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4.5h6.5v15H6.6A1.6 1.6 0 0 1 5 17.9z"/><path d="M19 4.5h-6.5v15h4.9a1.6 1.6 0 0 0 1.6-1.6z"/></svg></span>
+                <span>Raamattu</span>
+              </button>
+              <button id="tilanne-lehti-btn" class="ghost tyohuone-nappi" type="button">
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 5.5h15v13h-15z"/><path d="M7.5 9h5.5M7.5 12h9M7.5 15h9"/><path d="M16 9h.5"/></svg></span>
+                <span>Tilannelehti</span>
+              </button>
+              <button id="puhe-saadin-btn" class="ghost tyohuone-nappi" type="button" hidden>
+                <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 10v4h3.5l4 3.5v-11L8.5 10z"/><path d="M15.5 9.5a3.6 3.6 0 0 1 0 5"/><path d="M17.5 7.5a6.4 6.4 0 0 1 0 9"/></svg></span>
+                <span>Lukijaääni</span>
+              </button>
+              <div id="tyohuone-palkit" class="tyohuone-palkit"></div>
             </div>
             <!-- Säännöt, uusi peli ja palaute kuvakkeina yhdellä
                  keskitetyllä rivillä (omistajan päätös 13.8.2026);
@@ -110933,6 +111017,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v740 — Työhuone: palkit, tyylinapit, Lukijaääni',
   'v739 — piirros juttuun; klikkausalue 80 %',
   'v738 — Kööpenhamina-lehti: karuselli + Matkailijalle',
   'v737 — 6 uutta karttaa; piirrokset terävinä; lippuanimaatio',
@@ -182056,6 +182141,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 740, teksti: 'Työhuone valikkoon: tilannepalkit, tyylinapit, Lukijaääni' },
   { v: 739, teksti: 'Piirros juttuun tekstin kiertona; klikkausalue 80 %:iin' },
   { v: 738, teksti: 'Kööpenhamina-lehti: yleisnäkymäkaruselli ja Matkailijalle' },
   { v: 737, teksti: 'Kartat 6 uuteen kaupunkiin; piirrokset terävinä (1024 px)' },
@@ -182892,7 +182978,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.739';
+const APP_VERSION = '2026-08-09.740';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -183346,6 +183432,9 @@ const suljeValikko = () => {
 menuBtn.addEventListener('click', () => {
   paavalikko.hidden = !paavalikko.hidden;
   menuBtn.setAttribute('aria-expanded', String(!paavalikko.hidden));
+  // Työhuoneen tilannepalkit täyttyvät valikon avautuessa (haku vain
+  // kehittäjätilassa ja kerran istunnossa — ks. paivitaTyohuonePalkit).
+  if (!paavalikko.hidden) paivitaTyohuonePalkit();
 });
 
 /*
@@ -183942,10 +184031,123 @@ const PUHE_NAYTTEET = {
 /** Napin näkyvyys seuraa kehittäjätilaa. */
 function paivitaPuheSaadin() {
   if (puheSaadinNappi) puheSaadinNappi.hidden = !kehittajaTilaPaalla();
-  // Kehittäjän liitteet (omistajan tilaus 15.8.2026): Raamattu ja
-  // tilannetaulut luettavina lehtinä — linkit näkyvät vain vivun takana.
+  // Työhuone (omistajan tilaus 15.8.2026): Raamattu, Tilannelehti ja
+  // Lukijaääni tyylinappeina + tilannepalkit — vain vivun takana.
   const kehittajaKotelo = document.getElementById('kehittaja-kotelo');
   if (kehittajaKotelo) kehittajaKotelo.hidden = !kehittajaTilaPaalla();
+}
+
+/*
+ * TYÖHUONEEN TILANNEPALKIT (omistajan tilaukset 15.8.2026: "tee r2 ja
+ * repon koosta hampurilaiseen yksinkertainen graafi vierekkäin
+ * (vihreä-kelt-pun) palkki" ja jatko: ElevenLabsin kuukausikiintiö,
+ * pöllön käyttö sekä OpenAI+Claude-kulut "jos pystyt näkemään").
+ *
+ * Luvut tulevat kahdesta lähteestä: repon koko GitHubin julkisesta
+ * rajapinnasta ja loput pöllö-workerin tila-haarasta, joka vaatii
+ * kehittäjäkoodin (kulut ja kiintiöt ovat omistajan tilitietoja).
+ * Workerin puolella vastaus on KV-välimuistissa tunnin; täällä
+ * riittää istunnon mittainen muisti, ettei valikon jokainen avaus
+ * hae uudestaan. Puuttuva lähde piirtyy vaisuna "ei tietoa" -palkkina
+ * — palkisto ei koskaan estä valikon käyttöä.
+ */
+const TYOHUONE_RAJAT = {
+  // R2:n ilmaistaso on 10 Gt ja GitHubin suositus repolle 1 Gt.
+  r2: 10 * 1024 ** 3,
+  repo: 1024 ** 2, // kilotavuina (GitHubin size-kenttä on kt)
+};
+let tyohuoneTila = null;
+let tyohuoneHaku = null;
+
+async function haeTyohuoneTila() {
+  const [repo, tila] = await Promise.all([
+    fetch('https://api.github.com/repos/ravelius/Matkakirja')
+      .then((v) => (v.ok ? v.json() : null))
+      .catch(() => null),
+    (async () => {
+      const koodi = window.localStorage?.getItem(POLLO_KOODIAVAIN);
+      if (!koodi) return null;
+      const vastaus = await fetch(POLLOPALVELIN, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-pollo-kehittaja': koodi },
+        body: JSON.stringify({ tehtava: 'tila' }),
+      });
+      return vastaus.ok ? vastaus.json() : null;
+    })().catch(() => null),
+  ]);
+  return { repoKt: repo?.size ?? null, tila };
+}
+
+function tyohuonePalkki(nimi, osuus, arvoTeksti) {
+  const kotelo = document.createElement('div');
+  kotelo.className = 'tyohuone-palkki';
+  const otsikko = document.createElement('span');
+  otsikko.className = 'palkki-nimi';
+  otsikko.textContent = nimi;
+  const ura = document.createElement('div');
+  ura.className = 'palkki-ura';
+  const tayte = document.createElement('div');
+  if (osuus === null) {
+    kotelo.classList.add('palkki-tyhja');
+    tayte.className = 'palkki-tayte';
+  } else {
+    const p = Math.max(0, Math.min(1, osuus));
+    tayte.className = `palkki-tayte ${p >= 0.85 ? 'punainen' : (p >= 0.6 ? 'keltainen' : 'vihrea')}`;
+    tayte.style.width = `${Math.max(2, p * 100).toFixed(1)}%`;
+  }
+  ura.appendChild(tayte);
+  const arvo = document.createElement('span');
+  arvo.className = 'palkki-arvo';
+  arvo.textContent = osuus === null ? 'ei tietoa' : arvoTeksti;
+  kotelo.appendChild(otsikko);
+  kotelo.appendChild(ura);
+  kotelo.appendChild(arvo);
+  return kotelo;
+}
+
+function piirraTyohuonePalkit(data) {
+  const kotelo = document.getElementById('tyohuone-palkit');
+  if (!kotelo) return;
+  kotelo.replaceChildren();
+  const { repoKt, tila } = data;
+  kotelo.appendChild(tyohuonePalkki('R2',
+    tila?.r2 ? tila.r2.tavut / TYOHUONE_RAJAT.r2 : null,
+    tila?.r2 ? `${(tila.r2.tavut / 1024 ** 3).toFixed(1)}/10 Gt` : ''));
+  kotelo.appendChild(tyohuonePalkki('Repo',
+    repoKt !== null ? repoKt / TYOHUONE_RAJAT.repo : null,
+    repoKt !== null ? `${(repoKt / 1024).toFixed(0)} Mt/1 Gt` : ''));
+  kotelo.appendChild(tyohuonePalkki('ElevenLabs',
+    tila?.eleven?.raja ? tila.eleven.kaytetty / tila.eleven.raja : null,
+    tila?.eleven?.raja
+      ? `${Math.round(tila.eleven.kaytetty / 1000)}/${Math.round(tila.eleven.raja / 1000)} t merkkiä`
+      : ''));
+  kotelo.appendChild(tyohuonePalkki('Pöllö/kk',
+    tila?.pollo?.raja ? (tila.pollo.kuukausi ?? 0) / tila.pollo.raja : null,
+    tila?.pollo?.raja ? `${tila.pollo.kuukausi ?? 0} / ${tila.pollo.raja}` : ''));
+  const kulut = document.createElement('p');
+  kulut.className = 'tyohuone-kulut';
+  if (tila?.kulut?.yhteensa !== null && tila?.kulut?.yhteensa !== undefined) {
+    const osa = (nimi, arvo) => (arvo === null ? `${nimi} –` : `${nimi} $${arvo.toFixed(2)}`);
+    kulut.textContent = `Kulut tässä kuussa $${tila.kulut.yhteensa.toFixed(2)} `
+      + `(${osa('OpenAI', tila.kulut.openai)} · ${osa('Claude', tila.kulut.claude)})`;
+  } else {
+    kulut.textContent = 'Kulut: ei nähtävissä (admin-avaimet puuttuvat)';
+  }
+  kotelo.appendChild(kulut);
+}
+
+function paivitaTyohuonePalkit() {
+  if (!kehittajaTilaPaalla()) return;
+  if (tyohuoneTila) {
+    piirraTyohuonePalkit(tyohuoneTila);
+    return;
+  }
+  if (tyohuoneHaku) return;
+  tyohuoneHaku = haeTyohuoneTila().then((data) => {
+    tyohuoneTila = data;
+    piirraTyohuonePalkit(data);
+  }).catch(() => { /* palkit jäävät pois — valikko toimii silti */ })
+    .finally(() => { tyohuoneHaku = null; });
 }
 
 document.getElementById('raamattu-lehti-btn')?.addEventListener('click', () => {

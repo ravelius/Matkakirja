@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 740, teksti: 'Työhuone valikkoon: tilannepalkit, tyylinapit, Lukijaääni' },
   { v: 739, teksti: 'Piirros juttuun tekstin kiertona; klikkausalue 80 %:iin' },
   { v: 738, teksti: 'Kööpenhamina-lehti: yleisnäkymäkaruselli ja Matkailijalle' },
   { v: 737, teksti: 'Kartat 6 uuteen kaupunkiin; piirrokset terävinä (1024 px)' },
