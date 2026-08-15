@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 683, teksti: 'Jatkuva luenta, aloitusrauha ja pehmeät siirtymät' },
   { v: 682, teksti: 'Kaupunkilehtien nostokuvien kuvatekstit lyhennettiin' },
   { v: 681, teksti: 'Kamtšatka, Sahalin ja Vladivostok saivat lehtensä' },
   { v: 680, teksti: 'kohdekartta zoomattavaksi, Berliini laajempi ja terävämpi' },

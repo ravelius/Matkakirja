@@ -9,6 +9,10 @@
  *  4. Sivu vierii luennan perässä: kappalehyppy siirtää näkymän
  *     kohdan alkuun.
  *  5. Pysäytys siivoaa maalauksen ja luokat.
+ *  6. Aloitusrauha (15.8.2026): luennan käynnistys ei liikuta näkymää
+ *     — vieritys herää vasta toisesta kohdasta.
+ *  7. Jatkuva luenta (15.8.2026): paneelin kytkin päälle, luenta
+ *     loppuun — lehti kääntää sivun itse ja jatkaa lukemista.
  *
  * TTS on tynkä: pöllöpalvelimen puhevastaukset korvataan lyhyellä
  * hiljaisella WAV:lla (page.route), joten savuke ei kuluta kiintiötä
@@ -108,8 +112,9 @@ await sivu.evaluate(() => {
   kortti.scrollTop = Math.floor(kortti.scrollHeight * 0.45);
 });
 await sivu.waitForTimeout(400);
-await sivu.evaluate(() => {
+const lahtoTop = await sivu.evaluate(() => {
   document.querySelector('#arrival-dialog .lukija-nappi')?.click();
+  return document.querySelector('#arrival-dialog .dialog-card').scrollTop;
 });
 await sivu.waitForTimeout(1200);
 const kaynnissa = await sivu.evaluate(() => {
@@ -120,6 +125,7 @@ const kaynnissa = await sivu.evaluate(() => {
     kohdallaOn: Boolean(kohdalla),
     maalattu: Boolean(window.CSS?.highlights?.has?.('lukija-luenta')),
     lukee: Boolean(document.querySelector('#arrival-dialog .lukija-nappi.lukee')),
+    scrollTop: document.querySelector('#arrival-dialog .dialog-card').scrollTop,
   };
 });
 const laskurinAlku = Number(kaynnissa.laskuri.split('/')[0] || 0);
@@ -127,6 +133,11 @@ vaadi('luenta käynnistyi ja alkoi näytöllä olevasta kohdasta (laskuri > 1)',
   kaynnissa.lukee && laskurinAlku > 1, JSON.stringify(kaynnissa));
 vaadi('kuuluva kohta on merkitty ja virkkeet maalattu',
   kaynnissa.kohdallaOn && kaynnissa.maalattu, JSON.stringify(kaynnissa));
+// 6. Aloitusrauha: käynnistys ei liikuta näkymää ensimmäisen kohdan
+//    aikana — vieritys herää vasta kohdan vaihtuessa.
+vaadi('luennan käynnistys ei liikuta näkymää (aloitusrauha)',
+  Math.abs(kaynnissa.scrollTop - lahtoTop) < 2,
+  `lähtö ${lahtoTop}, nyt ${kaynnissa.scrollTop}`);
 
 // 3. Kappalehyppy vie näkymän kohdan alkuun (sivu seuraa lukijaa).
 const seuranta = await sivu.evaluate(async () => {
@@ -191,6 +202,44 @@ const siivous = await sivu.evaluate(async () => {
 vaadi('pysäytys (paneelin rasti) poistaa maalauksen, kohtaluokan ja paneelin',
   !siivous.kohdallaJaljella && !siivous.maalattu && !siivous.paneeli && !siivous.lukee,
   JSON.stringify(siivous));
+
+// 7. Jatkuva luenta: kytkin päälle, hypätään viimeiseen kappaleeseen
+//    ja annetaan luennan loppua — lehden pitää kääntää sivu itse ja
+//    jatkaa lukemista uudella sivulla.
+const auto = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const { ui } = window.matkakirja;
+  const sivuAlussa = ui.tutkiSivu;
+  document.querySelector('#arrival-dialog .lukija-nappi')?.click();
+  await odota(900);
+  const autoNappi = document.querySelector('.lukija-paneeli .lukija-auto-nappi');
+  autoNappi?.click();
+  const paalla = autoNappi?.getAttribute('aria-pressed') === 'true';
+  // Viimeiseen kappaleeseen paneelin nuolella — jäljelle jää vain
+  // viimeisen kohdan äänet (tynkä-WAV 1,5 s/pala).
+  for (let i = 0; i < 40; i += 1) {
+    const rivi = document.querySelector('.lukija-paneeli .lukija-kappalerivi');
+    const [nyt, kaikki] = (rivi?.textContent ?? '').split('/').map(Number);
+    if (!kaikki || nyt >= kaikki) break;
+    [...document.querySelectorAll('.lukija-paneeli .lukija-paneeli-nappi')]
+      .find((b) => /Seuraava kappale/.test(b.title))?.click();
+    await odota(300);
+  }
+  // Luennan loppu + 650 ms hengähdys + uuden sivun käynnistys.
+  let kaantyi = false;
+  let jatkuu = false;
+  for (let i = 0; i < 60; i += 1) {
+    await odota(500);
+    kaantyi = ui.tutkiSivu === sivuAlussa + 1;
+    jatkuu = Boolean(document.querySelector('#arrival-dialog .lukija-nappi.lukee'));
+    if (kaantyi && jatkuu) break;
+  }
+  return { paalla, sivuAlussa, sivuNyt: ui.tutkiSivu, kaantyi, jatkuu };
+});
+vaadi('jatkuvan luennan kytkin löytyy paneelista ja menee päälle',
+  auto.paalla, JSON.stringify(auto));
+vaadi('luennan loputtua lehti kääntää sivun itse ja jatkaa lukemista',
+  auto.kaantyi && auto.jatkuu, JSON.stringify(auto));
 
 await selain.close();
 palvelin.close();

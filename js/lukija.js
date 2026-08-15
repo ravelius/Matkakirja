@@ -390,6 +390,69 @@ function vahennettyLiike() {
   }
 }
 
+/** Solmun lähin vierivä esivanhempi (lehdessä .dialog-card). */
+function vieritysKontti(solmu) {
+  for (let el = solmu?.parentElement; el; el = el.parentElement) {
+    if (el.scrollHeight > el.clientHeight + 4) {
+      const tyyli = el.ownerDocument?.defaultView?.getComputedStyle?.(el);
+      const ylivuoto = tyyli?.overflowY;
+      if (!ylivuoto || ylivuoto === 'auto' || ylivuoto === 'scroll') return el;
+    }
+  }
+  return solmu?.ownerDocument?.scrollingElement ?? null;
+}
+
+/*
+ * PEHMEÄ VIERITYS OMALLA KÄYRÄLLÄ (omistajan tilaus 15.8.2026:
+ * "Saisiko lehden siirtymät siirtymään pehmeästi scrollaten. Ease in
+ * ja out."). Selaimen behavior:'smooth' ei lupaa mitään käyrästä —
+ * Chromessa liike on kärkeen painottuva ja loppuu töksähtäen, ja
+ * eräissä ympäristöissä syötteen perään käynnistetty pehmeä vieritys
+ * peruuntuu kokonaan (mitattu headless-Chromiumissa; ui.js:ssä oli
+ * tälle erillinen hyppyvarmistus). Oma rAF-ajuri kirjoittaa
+ * scrollTopia suoraan, joten liike lähtee aina ja käyrä on omissa
+ * käsissä: kuutiollinen ease-in-out kiihtyy rauhassa ja pehmenee
+ * perille.
+ *
+ * Käyttäjän oma ele (rulla, kosketus, näppäin) katkaisee animaation
+ * heti — kone ei saa kiskoa näkymää takaisin, kun lukija tarttuu
+ * sivuun itse. Liikkeen välttäjälle hypätään suoraan perille.
+ */
+export function vieritaPehmeasti(kontti, kohde, { kesto = null } = {}) {
+  if (!kontti) return;
+  const doc = kontti.ownerDocument ?? (typeof document !== 'undefined' ? document : null);
+  const win = doc?.defaultView ?? (typeof window !== 'undefined' ? window : null);
+  const ylaraja = Math.max(0, kontti.scrollHeight - kontti.clientHeight);
+  const maali = Math.max(0, Math.min(kohde, ylaraja));
+  const alku = kontti.scrollTop;
+  const matka = maali - alku;
+  if (!matka) return;
+  if (vahennettyLiike() || typeof win?.requestAnimationFrame !== 'function') {
+    kontti.scrollTop = maali;
+    return;
+  }
+  // Kesto matkasta: lyhyt liu'ahdus ei saa madella eikä koko sivun
+  // mitta viedä sekuntikaupalla.
+  const ms = kesto ?? Math.min(900, Math.max(320, Math.abs(matka) * 0.55));
+  const alkoi = win.performance?.now?.() ?? Date.now();
+  const tila = { peruttu: false };
+  const eleet = ['wheel', 'touchstart', 'pointerdown', 'keydown'];
+  const peru = () => {
+    tila.peruttu = true;
+    for (const nimi of eleet) kontti.removeEventListener(nimi, peru);
+  };
+  for (const nimi of eleet) kontti.addEventListener(nimi, peru, { passive: true });
+  const kayra = (t) => (t < 0.5 ? 4 * t * t * t : 1 - ((-2 * t + 2) ** 3) / 2);
+  const askel = (nyt) => {
+    if (tila.peruttu) return;
+    const osuus = Math.min(1, ((nyt ?? Date.now()) - alkoi) / ms);
+    kontti.scrollTop = alku + matka * kayra(osuus);
+    if (osuus < 1) win.requestAnimationFrame(askel);
+    else peru();
+  };
+  win.requestAnimationFrame(askel);
+}
+
 /**
  * Kartta normalisoidun tekstin merkeistä DOM-tekstisolmujen kohtiin.
  *
@@ -503,18 +566,33 @@ function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
    * jälkeen, jolloin toisto on jo tasaisessa vauhdissa.
    */
   const vierita = (solmu) => {
-    if (!solmu?.scrollIntoView) return;
-    const rect = solmu.getBoundingClientRect?.();
+    if (!solmu?.getBoundingClientRect) return;
+    const rect = solmu.getBoundingClientRect();
     const korkeus = win?.innerHeight || 0;
     if (rect && korkeus && rect.top >= -4 && rect.top <= korkeus * 0.55) return;
     clearTimeout(vieritysAjastin);
     vieritysAjastin = setTimeout(() => {
-      solmu.scrollIntoView({
-        block: 'start',
-        behavior: vahennettyLiike() ? 'auto' : 'smooth',
-      });
+      const kontti = vieritysKontti(solmu);
+      if (!kontti) return;
+      // scrollIntoView'n scroll-margin luetaan itse: oma ajuri (ease
+      // in/out, ks. vieritaPehmeasti) ei tunne CSS:n marginaalia.
+      const r = solmu.getBoundingClientRect();
+      const k = kontti.getBoundingClientRect?.() ?? { top: 0 };
+      const marginaali = parseFloat(win?.getComputedStyle?.(solmu)?.scrollMarginTop) || 0;
+      vieritaPehmeasti(kontti, kontti.scrollTop + (r.top - (k.top ?? 0)) - marginaali);
     }, 350);
   };
+  /*
+   * ALOITUSRAUHA (omistajan tilaus 15.8.2026: "Jos lehti on
+   * yläreunassa ja kuuntelu alkaa, niin ruudun pitäisi pysyä
+   * paikoillaan seuraavaan kappaleeseen asti"). Luenta alkaa aina
+   * näytöllä olevasta kohdasta, joten käynnistyksen vieritys vain
+   * nykäisi näkymän pois siitä, mitä lukija juuri katsoi — sivun
+   * ylälaidassa se pyyhkäisi nimiön ja kannen kuvat ohi ennen kuin
+   * niitä ehti nähdä. Ensimmäinen kuuluva kohta ei siksi vieritä
+   * koskaan; seuranta tarttuu ruoriin vasta toisesta kohdasta.
+   */
+  let alkurauha = true;
   const paivita = (t) => {
     const kohta = kohdat[t.kappale];
     if (!kohta) return;
@@ -529,7 +607,8 @@ function luoLuennanSeuranta(kohdat, ohita = LUKIJAN_OHITETTAVAT) {
       }
       // Kohdan alku näkyviin: scroll-margin (CSS) pitää tarttuvan
       // otsikkorivin poissa päältä.
-      vierita(kohta.osat?.[0]?.solmu);
+      if (alkurauha) alkurauha = false;
+      else vierita(kohta.osat?.[0]?.solmu);
     }
     if (maalaus && t.teksti) {
       const alueet = osoitaAlueet(kohta, t.alku, t.alku + t.teksti.length, ohita);
@@ -782,7 +861,7 @@ function kerran(fn) {
  * @returns {boolean} lähtikö luenta käyntiin
  */
 export function lueAaneen(teksti, nappi = null, {
-  persoona = 'kertoja', sailio, onLoppu, kohdat = null, aloitusKappale = 0,
+  persoona = 'kertoja', sailio, onLoppu, kohdat = null, aloitusKappale = 0, jatko = null,
 } = {}) {
   pysaytaLukija();
   const puhuttava = String(teksti ?? '').trim();
@@ -790,7 +869,7 @@ export function lueAaneen(teksti, nappi = null, {
   const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
   const kunLoppuu = kerran(onLoppu);
   if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko, kunLoppuu, {
-    kohdat, aloitusKappale,
+    kohdat, aloitusKappale, jatko,
   })) return true;
   return lueLaitteella(puhuttava, nappi, kunLoppuu);
 }
@@ -805,7 +884,7 @@ export function lueAaneen(teksti, nappi = null, {
  * ja seuraava painallus yrittää uudestaan).
  */
 function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu = null, {
-  kohdat = null, aloitusKappale = 0,
+  kohdat = null, aloitusKappale = 0, jatko = null,
 } = {}) {
   if (!puheTuettu()) return false;
   const merkki = {};
@@ -817,6 +896,18 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
     merkitseTila(nappi, false);
     suljeOhjain();
     kunLoppuu?.();
+    /*
+     * JATKUVA LUENTA: vain luonnollinen loppu jatkaa — pysäytys ja
+     * virhe kulkevat omia polkujaan eivätkä koskaan käänna sivua.
+     * Pieni hengähdys ennen käännöstä erottaa sivut toisistaan
+     * korvakuulolta, ja vartija varmistaa, ettei väliin ehtinyt uusi
+     * luenta (esim. pelaajan oma painallus) jää käännöksen alle.
+     */
+    if (jatko && autoLuenta()) {
+      setTimeout(() => {
+        if (!ajossa) jatko();
+      }, 650);
+    }
   };
   const soitin = luoPuheSoitin({
     persoona,
@@ -839,7 +930,7 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
   });
   if (!soitin) return false;
   ajossa = {
-    nappi, merkki, kunLoppuu, soitin, seuranta, lopeta: () => soitin.pysayta(),
+    nappi, merkki, kunLoppuu, soitin, seuranta, jatko, lopeta: () => soitin.pysayta(),
   };
   soitin.lisaa(puhuttava);
   soitin.paata();
@@ -1137,7 +1228,38 @@ const OHJAIN_PIIRROT = {
   edellinen: '<path d="M7.4 6.6v10.8"/><path d="M17 6.8 10.2 12l6.8 5.2z"/>',
   seuraava: '<path d="M16.6 6.6v10.8"/><path d="M7 6.8l6.8 5.2L7 17.2z"/>',
   sulje: '<path d="M7.2 7.2l9.6 9.6"/><path d="M16.8 7.2 7.2 16.8"/>',
+  // Kiertävät nuolet: luenta jatkuu sivulta toiselle itsestään.
+  auto: '<path d="M6.6 13.5a5.6 5.6 0 0 1 9.3-5.4"/><path d="M16.2 4.6v3.6h-3.6"/>'
+    + '<path d="M17.4 10.5a5.6 5.6 0 0 1-9.3 5.4"/><path d="M7.8 19.4v-3.6h3.6"/>',
 };
+
+/*
+ * JATKUVA LUENTA (omistajan tilaus 15.8.2026: "Lisää kuuntelijaan
+ * auto moodi toggle, joka vaihtaa lehden sivua eteenpäin
+ * automaattisesti ja jatkaa lukemista"). Valinta on laitekohtainen ja
+ * säilyy luentojen yli — kytkin asuu ohjauspaneelissa ja näkyy vain,
+ * kun luettavalla sivulla on jatko (lehden sivut; yksittäisillä
+ * jutuilla ei ole minne jatkaa).
+ */
+const AUTO_AVAIN = 'matkakirja-lukija-auto';
+const AUTO_OTSIKKO = 'Jatkuva luenta — lehti kääntää sivua itse';
+
+function autoLuenta() {
+  try {
+    return window.localStorage?.getItem(AUTO_AVAIN) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function asetaAutoLuenta(paalla) {
+  try {
+    if (paalla) window.localStorage?.setItem(AUTO_AVAIN, '1');
+    else window.localStorage?.removeItem(AUTO_AVAIN);
+  } catch {
+    /* yksityistila: valinta elää vain luennan ajan */
+  }
+}
 
 function ohjainIkoni(nimi) {
   return '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"'
@@ -1253,6 +1375,18 @@ function avaaOhjain(isanta, nappi) {
   kappaleRivi.className = 'lukija-kappalerivi';
   kappaleRivi.hidden = true;
   paneeli.appendChild(kappaleRivi);
+  // Jatkuvan luennan kytkin vain, kun luennalla on minne jatkaa
+  // (lehden sivut) — yksittäisessä jutussa se olisi kuollutta pintaa.
+  if (nyt.jatko) {
+    const autoNappi = tee('auto', AUTO_OTSIKKO, () => {
+      asetaAutoLuenta(!autoLuenta());
+      autoNappi.classList.toggle('aktiivinen', autoLuenta());
+      autoNappi.setAttribute('aria-pressed', autoLuenta() ? 'true' : 'false');
+    });
+    autoNappi.classList.add('lukija-auto-nappi');
+    autoNappi.classList.toggle('aktiivinen', autoLuenta());
+    autoNappi.setAttribute('aria-pressed', autoLuenta() ? 'true' : 'false');
+  }
   tee('sulje', SEIS_OTSIKKO, () => pysaytaLukija());
   isanta.appendChild(paneeli);
   ohjain = {
@@ -1291,6 +1425,48 @@ function napinTeksti(nappi) {
 }
 
 /**
+ * Käynnistää napin luennan (kaiuttimen painalluksen luentahaara).
+ *
+ * Elementtilähteestä kootaan kohdat lohkoelementteineen: niillä
+ * luenta alkaa näytöllä olevasta kohdasta, sivu vierii luennan
+ * perässä ja kuuluvat virkkeet maalataan (omistajan tilaukset
+ * 14.8.2026). Merkkijonolähde luetaan entiseen tapaan.
+ */
+function kaynnistaLuenta(nappi, isanta) {
+  const lahdeNyt = nappi.__lukijaLahde;
+  const kohde = typeof lahdeNyt === 'function' ? lahdeNyt() : lahdeNyt;
+  let kohdat = null;
+  let teksti = '';
+  if (kohde && typeof kohde !== 'string' && kohde.nodeType === 1) {
+    kohdat = kokoaLuettavatKohdat(kohde);
+    teksti = kohdat.map((k) => k.teksti).join('\n');
+  } else {
+    teksti = napinTeksti(nappi);
+  }
+  if (!teksti) return false;
+  const alkoi = lueAaneen(teksti, nappi, {
+    kohdat,
+    aloitusKappale: kohdat ? nakyvaKohta(kohdat) : 0,
+    jatko: nappi.__lukijaJatko ?? null,
+  });
+  // Lukijaäänellä nappi avaa myös ohjauspaneelin (tauko ja
+  // kappalehypyt); laitteen omalla äänellä paneelia ei tule.
+  if (alkoi) avaaOhjain(isanta, nappi);
+  return alkoi;
+}
+
+/**
+ * Jatkuvan luennan käsi ulospäin: käynnistää napin luennan ilman
+ * painallusta. Kutsuja (ui.js) kääntää lehden sivun ensin ja antaa
+ * tämän lukea uuden sivun alusta — sama polku kuin painalluksessa,
+ * joten seuranta, paneeli ja varapolut tulevat mukana.
+ */
+export function kaynnistaLukija(nappi) {
+  if (!nappi || nappi.hidden || lukijaLukee()) return false;
+  return kaynnistaLuenta(nappi, nappi.__lukijaIsanta ?? nappi.parentElement);
+}
+
+/**
  * Kiinnittää kaiutinnapin sivun ylälaitaan.
  *
  * Nappi on isännän (yleensä <dialog>) suora lapsi eikä vierivän kortin
@@ -1305,12 +1481,20 @@ function napinTeksti(nappi) {
  * verkkohaun jälkeen ("Lue lisää"), saa kaiuttimensa näkyviin heti kun
  * artikkeli laskeutuu ruudulle.
  *
+ * `jatko` on jatkuvan luennan koukku (omistajan tilaus 15.8.2026):
+ * kun luenta päättyy omia aikojaan ja automoodi on päällä, se
+ * kutsutaan — lehdessä se kääntää sivun ja käynnistää luennan
+ * uudelleen (ui.js). Ilman koukkua paneeliin ei tule kytkintä.
+ *
  * @param {Element} isanta elementti, johon nappi lisätään
  * @param {Element|(() => Element|string)|string} lahde luettava sisältö
- * @param {{ luokka?: string, nimi?: string, seuraa?: boolean }} asetukset
+ * @param {{ luokka?: string, nimi?: string, seuraa?: boolean,
+ *   jatko?: (() => boolean)|null }} asetukset
  * @returns {Element|null} nappi
  */
-export function liitaLukija(isanta, lahde, { luokka = '', nimi = LUE_OTSIKKO, seuraa = false } = {}) {
+export function liitaLukija(isanta, lahde, {
+  luokka = '', nimi = LUE_OTSIKKO, seuraa = false, jatko = null,
+} = {}) {
   if (!isanta || !lukijaTuettu()) return null;
   // Haku ulottuu isännän koko puuhun, ei vain suoriin lapsiin: lehdessä
   // nappi siirretään tarttuvan otsikkorivin sisään (ui.js
@@ -1341,30 +1525,7 @@ export function liitaLukija(isanta, lahde, { luokka = '', nimi = LUE_OTSIKKO, se
         pysaytaLukija();
         return;
       }
-      /*
-       * Elementtilähteestä kootaan kohdat lohkoelementteineen: niillä
-       * luenta alkaa näytöllä olevasta kohdasta, sivu vierii luennan
-       * perässä ja kuuluvat virkkeet maalataan (omistajan tilaukset
-       * 14.8.2026). Merkkijonolähde luetaan entiseen tapaan.
-       */
-      const lahdeNyt = nappi.__lukijaLahde;
-      const kohde = typeof lahdeNyt === 'function' ? lahdeNyt() : lahdeNyt;
-      let kohdat = null;
-      let teksti = '';
-      if (kohde && typeof kohde !== 'string' && kohde.nodeType === 1) {
-        kohdat = kokoaLuettavatKohdat(kohde);
-        teksti = kohdat.map((k) => k.teksti).join('\n');
-      } else {
-        teksti = napinTeksti(nappi);
-      }
-      if (!teksti) return;
-      lueAaneen(teksti, nappi, {
-        kohdat,
-        aloitusKappale: kohdat ? nakyvaKohta(kohdat) : 0,
-      });
-      // Lukijaäänellä nappi avaa myös ohjauspaneelin (tauko ja
-      // kappalehypyt); laitteen omalla äänellä paneelia ei tule.
-      avaaOhjain(isanta, nappi);
+      kaynnistaLuenta(nappi, isanta);
     });
     isanta.appendChild(nappi);
     /*
@@ -1386,6 +1547,8 @@ export function liitaLukija(isanta, lahde, { luokka = '', nimi = LUE_OTSIKKO, se
     }
   }
   nappi.__lukijaLahde = lahde;
+  nappi.__lukijaJatko = jatko;
+  nappi.__lukijaIsanta = isanta;
   nappi.dataset.lukijaNimi = nimi;
   merkitseTila(nappi, lukijaLukee(nappi));
   if (seuraa && !nappi.__lukijaVahti && typeof MutationObserver === 'function') {

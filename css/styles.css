@@ -8121,6 +8121,14 @@ button.lukija-nappi.lukee,
 
 .lukija-paneeli .viiva-ikoni svg { width: 1.2rem; height: 1.2rem; }
 
+/* Jatkuva luenta (omistajan tilaus 15.8.2026): kytkin hehkuu samalla
+ * meripihkalla kuin lukeva kaiutin, jotta päällä olo näkyy yhdellä
+ * silmäyksellä. */
+.lukija-paneeli .lukija-auto-nappi.aktiivinen {
+  color: #a8741a;
+  background: rgba(234, 184, 78, 0.24);
+}
+
 .lukija-paneeli .lukija-kappalerivi {
   min-width: 2.3rem;
   text-align: center;
@@ -8191,8 +8199,10 @@ button.lukija-nappi.lukee,
   from { opacity: 0; transform: translateX(2.2rem); }
 }
 
-.wiki-kategoria.sivu-vasemmalta { animation: tutki-sivu-vasemmalta 0.22s ease-out; }
-.wiki-kategoria.sivu-oikealta { animation: tutki-sivu-oikealta 0.22s ease-out; }
+/* Sivunkääntö pehmeästi molemmista päistä (omistajan tilaus
+ * 15.8.2026: "siirtymät pehmeästi ... ease in ja out"). */
+.wiki-kategoria.sivu-vasemmalta { animation: tutki-sivu-vasemmalta 0.26s ease-in-out; }
+.wiki-kategoria.sivu-oikealta { animation: tutki-sivu-oikealta 0.26s ease-in-out; }
 
 @media (prefers-reduced-motion: reduce) {
   .wiki-kategoria.sivu-vasemmalta,
