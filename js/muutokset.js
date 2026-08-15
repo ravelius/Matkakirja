@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 723, teksti: 'Kultaneliön syy: hover-korostus pois piirroksilta' },
   { v: 722, teksti: 'Miniatyyrit PNG:iksi - varma lapinakyvyys' },
   { v: 721, teksti: 'iOS-korostusneliö pois; suurennos 3,5x' },
   { v: 720, teksti: 'Piirroksen suurennos 3x' },
