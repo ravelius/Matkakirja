@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 748, teksti: 'Suurennetun piirroksen osuma-alue 50 % kuvasta' },
   { v: 747, teksti: 'Lippusivut: Lähi-itä (8 maata)' },
   { v: 746, teksti: 'Avauskuvat: Berliini, Helsinki, Pariisi, Lontoo; R2 summana' },
   { v: 745, teksti: 'Etusivun avauskaruselli koko palstan levyiseksi' },
