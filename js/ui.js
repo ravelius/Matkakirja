@@ -697,6 +697,15 @@ import {
 // (omistajan päätös 14.8.2026 — "toistaiseksi", kunnes tekstit
 // kirjoitetaan uusiksi).
 import { puheTuettu } from './puhe.js';
+/*
+ * Kehittäjän liitteet (omistajan tilaus 15.8.2026): Raamattu 2.0 ja
+ * työhuoneen tilannetaulut luetaan pelin sisällä lehtinä, kun
+ * kehittäjävipu on päällä — työhuone pidetään jatkossa integroituna
+ * suoraan peliin. Tuonti ei kasvata pelaajan polkuja: sisältö
+ * piirretään vain kehittäjätilan valikkolinkeistä.
+ */
+import { RAAMATTU2 } from './tyohuone-raamattu.js';
+import { TILANNE, TESTATTAVAA } from './tyohuone-tilanne.js';
 import {
   el,
   hash01,
@@ -10273,7 +10282,9 @@ export class UI {
    * joten maalehti näyttää 1/8 eikä 2/9.
    */
   tutkiEkaSivu() {
-    return this.tutkiTila === 'maa' ? 1 : 0;
+    // Maalehdellä ja kehittäjän liitteillä ei ole kaupunkikantta:
+    // indeksi 0 on kaupunkilehden etusivu, jota niillä ei ole.
+    return (this.tutkiTila === 'maa' || this.tutkiTila === 'kehittaja') ? 1 : 0;
   }
 
   /**
@@ -10305,7 +10316,7 @@ export class UI {
      * paikassa — ja Maiden tiedot -varusteella sen voisi pelata
      * matkustamatta minnekään.
      */
-    const visasivu = this.tutkiTila !== 'maa'
+    const visasivu = this.tutkiTila !== 'maa' && this.tutkiTila !== 'kehittaja'
       && (this.tutkiLehti && sivuja > 1 ? i === 1 : etusivu);
     this.arrivalKulttuuri.hidden = !visasivu || !this.kulttuuriSaatavilla;
 
@@ -10606,6 +10617,89 @@ export class UI {
     // Maalehti alkaa maan etusivulta (indeksi 0 on kaupunkilehden
     // kansi, jota maalehdellä ei ole — siksi sivu 1).
     this.naytaTutkiSivu(1, { heti: true });
+  }
+
+  /**
+   * Kehittäjän liite: mikä tahansa jäsennelty sisältö luettavana
+   * lehtenä (omistajan tilaus 15.8.2026: "Tee raamatussa selattava
+   * lehti peliin ... Yritetään jatkossa pitää työhuone integroituna
+   * suoraan peliin kehittäjä vivun ollessa päällä").
+   *
+   * Sama arkki ja sivunkääntö kuin maalehdellä — sivunvaihdot,
+   * sisällysvalikko, lukija ja etukäteispuskuri tulevat ilmaiseksi.
+   * Sivut ovat synteettisiä aihekategorioita (nimi + nostot), joten
+   * piirraKategoria taittaa ne kuten minkä tahansa aihesivun.
+   */
+  avaaKehittajaLehti(otsikko, sivut) {
+    if (!kehittajaTilaPaalla() || !sivut?.length) return;
+    this.varmistaLehtiMitta();
+    this.tutkiTila = 'kehittaja';
+    this.tutkiMaaLehti = null;
+    this.tutkiSivut = sivut;
+    this.tutkiKansi = null;
+    this.tutkiLehti = true;
+    this.tutkiMaaEtusivu = false;
+    this.arrivalDialog.classList.add('lehti', 'arkki');
+    this.arrivalDialog.classList.toggle('maalehti', true);
+    this.piirraLehtiKuvat(null);
+    this.arrivalPalstat.hidden = true;
+    this.arrivalKulttuuri.hidden = true;
+    this.arrivalIntro.textContent = '';
+    this.arrivalIntro.hidden = true;
+    this.arrivalLehtiYla.hidden = false;
+    this.arrivalCity.textContent = otsikko;
+    this.arrivalLehtiPvm.textContent = 'Kehittäjän liite';
+    this.arrivalLehtiAla.hidden = false;
+    this.naytaLehtiSaa(null);
+    if (!this.arrivalDialog.open) this.arrivalDialog.showModal();
+    hiljennaAmbienssi('lehti');
+    const arkki = this.arrivalDialog.querySelector('.dialog-card');
+    if (arkki) this.kytkeTutkiSelaus(arkki);
+    this.naytaTutkiSivu(1, { heti: true });
+  }
+
+  /** Raamattu 2.0 lehtenä: johdanto + jokainen osio omana sivunaan. */
+  avaaRaamattuLehti() {
+    const sivut = [{
+      id: 'raamattu-johdanto',
+      nimi: 'Raamattu 2.0',
+      nostot: [{
+        otsikko: `Päivitetty ${RAAMATTU2.paivitetty}`,
+        teksti: RAAMATTU2.johdanto,
+      }],
+    }, ...RAAMATTU2.osiot.map((osio, i) => ({
+      id: `raamattu-${i}`,
+      nimi: osio.otsikko,
+      nostot: [{
+        otsikko: `Tila: ${osio.tila}`,
+        teksti: (osio.kohdat ?? []).join('\n\n'),
+      }],
+    }))];
+    this.avaaKehittajaLehti('Raamattu 2.0', sivut);
+  }
+
+  /** Työhuoneen tilannetaulut lehtenä: tilanne + testattavaa. */
+  avaaTilanneLehti() {
+    const sivut = [{
+      id: 'tilanne-taulu',
+      nimi: 'Tilanne',
+      nostot: [{
+        otsikko: TILANNE.paivitetty,
+        teksti: TILANNE.tavoite,
+      }, ...(TILANNE.rivit ?? []).map((rivi) => ({
+        otsikko: `${rivi.tekija} — ${rivi.rooli} (${rivi.tila})`,
+        teksti: [rivi.tehtava, rivi.seuraavaksi ? `Seuraavaksi: ${rivi.seuraavaksi}` : '']
+          .filter(Boolean).join('\n\n'),
+      }))],
+    }, {
+      id: 'tilanne-testattavaa',
+      nimi: 'Testattavaa',
+      nostot: (TESTATTAVAA ?? []).map((kohta) => ({
+        otsikko: kohta.otsikko,
+        teksti: kohta.ohje,
+      })),
+    }];
+    this.avaaKehittajaLehti('Tilannelehti', sivut);
   }
 
   /** Sivun vaihto suuntaan (+1 seuraava, -1 edellinen). */

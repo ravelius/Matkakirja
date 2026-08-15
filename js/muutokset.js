@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 697, teksti: 'Raamattu ja Tilannelehti luettavina pelissä (kehittäjä)' },
   { v: 696, teksti: 'Kohdekartat jatkuvat reunojen yli neljalla kaupungilla' },
   { v: 695, teksti: 'Lehdet ja lukijan alku latautuvat etukäteen' },
   { v: 694, teksti: 'ElevenLabs-äänitteet palasivat ajantasaisiin merkintöihin' },
