@@ -15,6 +15,7 @@ import {
 import { lueAaneen, pysaytaLukija } from './lukija.js';
 import { PUHE_OLETUKSET } from './puhe-oletukset.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
+import { PEILI_JUURI } from './media.js';
 // iOS-kuoren kytkennät. Selaimessa jokainen näistä on mykkä (js/natiivi.js).
 import {
   natiiviKirjauduPelikeskukseen, natiiviKuunteleSynkka, natiiviMerkitseAika,
@@ -42,7 +43,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.745';
+const APP_VERSION = '2026-08-09.746';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1124,10 +1125,25 @@ let tyohuoneTila = null;
 let tyohuoneHaku = null;
 
 async function haeTyohuoneTila() {
-  const [repo, tila] = await Promise.all([
+  const [repo, tila, peili] = await Promise.all([
     fetch('https://api.github.com/repos/ravelius/Matkakirja')
       .then((v) => (v.ok ? v.json() : null))
       .catch(() => null),
+    // Peiliämpärin koko manifestista (omistajan havainto 15.8.2026:
+    // "r2 sanoo työhuoneessa tilankäytöksi paljon enemmän" — palkki
+    // laski vain puheämpärin 39 Mt, mutta mediapeilissä on ~2 Gt).
+    // Ilmaistason 10 Gt on tilikohtainen, joten palkkiin kuuluu
+    // ämpärien summa.
+    (async () => {
+      const res = await fetch(`${PEILI_JUURI}manifesti.json`);
+      if (!res.ok) return null;
+      const m = await res.json();
+      let tavut = 0;
+      for (const laji of ['kuvat', 'liput', 'aanet', 'tekstit']) {
+        for (const t of Object.values(m?.[laji] ?? {})) tavut += t?.koko ?? 0;
+      }
+      return { tavut };
+    })().catch(() => null),
     (async () => {
       const koodi = window.localStorage?.getItem(POLLO_KOODIAVAIN);
       if (!koodi) return null;
@@ -1139,7 +1155,7 @@ async function haeTyohuoneTila() {
       return vastaus.ok ? vastaus.json() : null;
     })().catch(() => null),
   ]);
-  return { repoKt: repo?.size ?? null, tila };
+  return { repoKt: repo?.size ?? null, tila, peili };
 }
 
 function tyohuonePalkki(nimi, osuus, arvoTeksti) {
@@ -1173,16 +1189,21 @@ function piirraTyohuonePalkit(data) {
   const kotelo = document.getElementById('tyohuone-palkit');
   if (!kotelo) return;
   kotelo.replaceChildren();
-  const { repoKt, tila } = data;
+  const { repoKt, tila, peili } = data;
   // Mt alle gigan (omistajan havainto 15.8.2026: "R2 ei voi olla
   // oikein" — kymmenien megatavujen ämpäri pyöristyi näytöllä
   // 0,0 gigatavuun, mikä näytti tyhjältä vaikka ei ollut).
   const r2Arvo = (tavut) => (tavut >= 1024 ** 3
     ? `${(tavut / 1024 ** 3).toFixed(1)}/10 Gt`
     : `${Math.round(tavut / 1024 ** 2)} Mt/10 Gt`);
+  // Molemmat ämpärit: puheämpäri workerilta ja mediapeili
+  // manifestistaan — ilmaistason 10 Gt on tilikohtainen.
+  const r2Tavut = tila?.r2 || peili
+    ? (tila?.r2?.tavut ?? 0) + (peili?.tavut ?? 0)
+    : null;
   kotelo.appendChild(tyohuonePalkki('R2',
-    tila?.r2 ? tila.r2.tavut / TYOHUONE_RAJAT.r2 : null,
-    tila?.r2 ? r2Arvo(tila.r2.tavut) : ''));
+    r2Tavut !== null ? r2Tavut / TYOHUONE_RAJAT.r2 : null,
+    r2Tavut !== null ? r2Arvo(r2Tavut) : ''));
   kotelo.appendChild(tyohuonePalkki('Repo',
     repoKt !== null ? repoKt / TYOHUONE_RAJAT.repo : null,
     repoKt !== null ? `${(repoKt / 1024).toFixed(0)} Mt/1 Gt` : ''));
@@ -1198,8 +1219,12 @@ function piirraTyohuonePalkit(data) {
   kulut.className = 'tyohuone-kulut';
   if (tila?.kulut?.yhteensa !== null && tila?.kulut?.yhteensa !== undefined) {
     const osa = (nimi, arvo) => (arvo === null ? `${nimi} –` : `${nimi} $${arvo.toFixed(2)}`);
+    // Claude-summa on koko organisaation, ellei workerilla ole
+    // Pöllö-työtilaa rajaukseen (omistajan kysymys 15.8.2026) —
+    // nimi kertoo kumpi on kyseessä.
+    const claudeNimi = tila.kulut.claudeRajattu ? 'Claude/Pöllö' : 'Claude (koko org.)';
     kulut.textContent = `Kulut tässä kuussa $${tila.kulut.yhteensa.toFixed(2)} `
-      + `(${osa('OpenAI', tila.kulut.openai)} · ${osa('Claude', tila.kulut.claude)})`;
+      + `(${osa('OpenAI', tila.kulut.openai)} · ${osa(claudeNimi, tila.kulut.claude)})`;
   } else {
     kulut.textContent = 'Kulut: ei nähtävissä (admin-avaimet puuttuvat)';
   }
