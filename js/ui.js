@@ -11443,9 +11443,38 @@ export class UI {
     for (const kappale of (kartta.esittely ?? '').split('\n\n').filter(Boolean)) {
       lohko.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
     }
-    const kotelo = html('div', 'maakartta-kotelo kaupunkikartta-kotelo');
+    /*
+     * ZOOMATTAVA KARTTAIKKUNA (omistajan tilaus 14.8.2026: "voiko
+     * kaupunkikartasta tehdä zoomattavaa ... pyörisi nykyisessä
+     * ikkunassa").
+     *
+     * Kehys on kiinteä ikkuna, jonka koko ei muutu; lava on sen sisällä
+     * oleva liikkuva taso, jolle KAIKKI kartan osat kuuluvat — kuva,
+     * kohdepisteet ja mittajana. Siksi zoomia ei tarvitse ohjelmoida
+     * kuin yhteen paikkaan: pisteet ja jana ovat prosentteina lavasta,
+     * joten ne seuraavat muunnosta itsestään eikä yhtäkään
+     * koordinaattia lasketa uudelleen. Sama pätee näkymävipuun:
+     * piirros ja satelliittikuva ovat samassa rajauksessa, joten
+     * zoomiasento säilyy näkymää vaihdettaessa sellaisenaan.
+     */
+    const kehys = html('div', 'kartta-kehys');
+    /*
+     * Kehys on näppäimistöllä oma kohteensa, jotta zoom ei jää
+     * pelkäksi eleeksi: plus ja miinus suurentavat, nuolet siirtävät
+     * zoomattua karttaa ja nolla palauttaa koko kartan.
+     */
+    kehys.tabIndex = 0;
+    kehys.setAttribute('role', 'group');
+    kehys.setAttribute(
+      'aria-label',
+      'Kartta. Suurenna plus- ja miinusnäppäimillä, siirrä nuolilla, palauta nollalla.',
+    );
+    const kotelo = html('div', 'maakartta-kotelo kaupunkikartta-kotelo kartta-lava');
     const kuva = document.createElement('img');
     kuva.alt = 'Kaupungin kartta';
+    // Hiiren raahaus panoroi karttaa; ilman tätä selain aloittaisi
+    // sen sijaan oman kuvanvetonsa.
+    kuva.draggable = false;
     // Oma julistekartta on paikallinen tiedosto (assets/kartat/);
     // Commons-pohjainen kartta haetaan peilin kautta kuten kuvat.
     if (kartta.polku) kuva.src = kartta.polku;
@@ -11529,6 +11558,13 @@ export class UI {
       }
       const vihje = html('span', 'kohde-vihje', k.nimi);
       vihje.setAttribute('aria-hidden', 'true');
+      /*
+       * Vihje aukeaa ympyrän YLÄPUOLELLE, mutta zoomattava kartta on
+       * leikkaava ikkuna (ks. kartta-kehys) — yläreunan kohteilla
+       * vihje jäisi leikkauksen taakse. Ylimmät kohteet saavat sen
+       * siksi ympyrän alle. Raja on prosenttia kuvan korkeudesta.
+       */
+      if (p.y < 14) piste.classList.add('vihje-alle');
       piste.appendChild(vihje);
       kotelo.appendChild(piste);
       selitteet.appendChild(selite);
@@ -11556,6 +11592,29 @@ export class UI {
      * satelliittinäkymään sitten kun näitä on useampia.
      */
     const lahderivi = html('p', 'lahde', kartta.lahde);
+    /*
+     * Kartan työkalurivi: zoomipainikkeet vasemmalla, näkymävipu
+     * oikealla. Rivi on kartan yllä, koska kuvan päälle asetetut
+     * painikkeet peittäisivät juuri sen kohdan, jota katsotaan — ja
+     * koska näkymävipu on ollut siinä 14.8.2026 alkaen.
+     */
+    const tyokalut = html('div', 'kartta-tyokalut');
+    const zoomiRyhma = html('div', 'kartta-zoomi');
+    zoomiRyhma.setAttribute('role', 'group');
+    zoomiRyhma.setAttribute('aria-label', 'Kartan suurennus');
+    const zoomiNappi = (merkki, nimi) => {
+      const nappi = html('button', 'kartta-vipu-nappi kartta-zoomi-nappi', merkki);
+      nappi.type = 'button';
+      nappi.setAttribute('aria-label', nimi);
+      nappi.title = nimi;
+      zoomiRyhma.appendChild(nappi);
+      return nappi;
+    };
+    const napit = {
+      loitonna: zoomiNappi('−', 'Loitonna karttaa'),
+      lahenna: zoomiNappi('+', 'Lähennä karttaa'),
+    };
+    tyokalut.appendChild(zoomiRyhma);
     if (kartta.satelliitti && kartta.polku) {
       const nakymat = [
         { satelliitissa: false, nimi: 'Piirros', ikoni: VIIVA_IKONIT.taitekartta },
@@ -11589,12 +11648,311 @@ export class UI {
         nappi.addEventListener('click', () => naytaNakyma(nakymat[i].satelliitissa));
       });
       naytaNakyma(this.satelliittiNakyma === kaupunki);
-      lohko.appendChild(vipu);
+      tyokalut.appendChild(vipu);
     }
-    lohko.appendChild(kotelo);
+    lohko.appendChild(tyokalut);
+    kehys.appendChild(kotelo);
+    lohko.appendChild(kehys);
     lohko.appendChild(selitteet);
     lohko.appendChild(lahderivi);
     kohde.appendChild(lohko);
+    this.kytkeKarttaZoom(kehys, kotelo, napit);
+  }
+
+  /**
+   * Kohdekartan zoom ja panorointi (omistajan tilaus 14.8.2026:
+   * *"voiko kaupunkikartasta tehdä zoomattavaa (myös
+   * satelliittikartasta) ... pyörisi nykyisessä ikkunassa"*).
+   *
+   * Kartta ei aukea omaan ikkunaansa eikä kasva sivulla: lava liikkuu
+   * kiinteän kehyksen sisällä CSS-muunnoksella
+   * `translate(tx, ty) scale(k)`, origo lavan vasemmassa ylänurkassa.
+   * Kaikki eleet päätyvät samaan kolmeen lukuun, ja piirto tehdään
+   * yhdessä paikassa (piirra) — siksi rajaus ja reunojen pitely ovat
+   * varmasti samat riippumatta siitä, tuliko liike sormesta, rullasta,
+   * napista vai näppäimistöstä.
+   *
+   * ZOOMAAMATTOMANA MUUNNOSTA EI OLE LAINKAAN (tyhjä transform), ei
+   * edes `scale(1)`. Muunnos tekee elementistä oman rasterointi- ja
+   * sisältökontekstinsa, ja kartan hiusviivat piirtyvät silloin eri
+   * tavalla. Kun kerroin on 1, sivun on oltava pikselilleen sama kuin
+   * ennen tätä ominaisuutta.
+   *
+   * ELE EI SAA VUOTAA LEHDEN SELAUKSEEN. Kortilla on pyyhkäisyselaus ja
+   * ylä-/alareunan napautusvieritys (kytkeTutkiSelaus), ja molemmat
+   * lukevat samoja tapahtumia kuin tämä. Siksi:
+   *   - zoomaamaton kartta EI ota yhden sormen raahausta lainkaan,
+   *     joten lehteä selataan kartan päältäkin kuten ennen;
+   *   - zoomattuna raahaus panoroi ja tapahtuma pysäytetään kehykseen;
+   *   - nipistyksen ajan kaikki osoitintapahtumat pysäytetään kehykseen,
+   *     ettei kahden sormen liike näyttäisi pyyhkäisyltä;
+   *   - raahauksen ja tuplanapautuksen perään jätetään kertakäyttöinen
+   *     napsautustulppa, ettei ele avaa kohdetta tai vieritä sivua.
+   *
+   * NIPISTYS LUETAAN KOSKETUSTAPAHTUMISTA, ei osoitintapahtumista.
+   * Sama havainto kuin pelilaudalla (asennaPanorointi): iOS aloittaa
+   * oman sivunzoominsa `touch-action`-arvosta riippumatta ja peruu
+   * osoitintapahtumat kesken eleen — vain touchmoven preventDefault
+   * pysäyttää sen.
+   */
+  kytkeKarttaZoom(kehys, lava, napit) {
+    const PIENIN = 1;
+    // Yläraja on kolme: piirretty PNG on 1600 px leveä ja näkyy noin
+    // 600 pikselin palstalla, joten kolminkertaisenakin näytetään yhä
+    // kuvan omia pikseleitä eikä selaimen venytystä.
+    const SUURIN = 3;
+    const ASKEL = 1.5;
+    let k = 1;
+    let tx = 0;
+    let ty = 0;
+    let raahaus = null;
+    let raahattiin = false;
+    let nipistys = null;
+    let elettaKesken = false;
+    let edellinenNapautus = null;
+
+    const rajaa = (arvo, ala, yla) => Math.min(yla, Math.max(ala, arvo));
+
+    const piirra = (silea = false) => {
+      const W = lava.offsetWidth;
+      const H = lava.offsetHeight;
+      k = rajaa(k, PIENIN, SUURIN);
+      /*
+       * Panorointi rajataan kuvan reunoihin: lavan on peitettävä kehys
+       * joka asennossa, joten siirto mahtuu välille [koko*(1−k), 0].
+       * Kerroin 1 kutistaa välin nollaan — kartta palaa siis kohdalleen
+       * itsestään, kun loitonnetaan pohjaan asti.
+       */
+      tx = rajaa(tx, W * (1 - k), 0);
+      ty = rajaa(ty, H * (1 - k), 0);
+      const zoomattu = k > 1.001;
+      lava.classList.toggle('silea', silea && !this.reducedMotion);
+      lava.style.transform = zoomattu
+        ? `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px) scale(${k.toFixed(4)})`
+        : '';
+      // Pisteet, vihjeet ja mittajanan viivat vastaskaalataan tällä,
+      // jottei numeroympyrä paisu kolminkertaiseksi zoomatessa.
+      lava.style.setProperty('--zoom', k.toFixed(4));
+      kehys.classList.toggle('zoomattu', zoomattu);
+      napit.lahenna.disabled = k >= SUURIN - 0.001;
+      napit.loitonna.disabled = !zoomattu;
+    };
+
+    /**
+     * Näytön piste lavan omaan (zoomaamattomaan) koordinaatistoon.
+     * getBoundingClientRect kertoo MUUNNETUN laatikon, ja koska
+     * skaalaus tapahtuu origon ympäri, muunnoksen origo on
+     * `rect.left − tx`. Mittaus elementistä eikä asettelusta on tässä
+     * sama valinta kuin pelilaudalla: se kestää sen, että lehti on
+     * vieritetty tai kortti liikkuu.
+     */
+    const lavalle = (asiakasX, asiakasY) => {
+      const r = lava.getBoundingClientRect();
+      return { x: asiakasX - (r.left - tx), y: asiakasY - (r.top - ty) };
+    };
+
+    /** Zoomaa niin, että annettu näytön piste pysyy paikallaan. */
+    const zoomaa = (uusi, asiakasX, asiakasY, silea = false) => {
+      const kohde = rajaa(uusi, PIENIN, SUURIN);
+      if (Math.abs(kohde - k) < 0.0005) return;
+      const m = lavalle(asiakasX, asiakasY);
+      const suhde = kohde / k;
+      // t' = m − (m − t) · suhde pitää sormen (tai osoittimen) alla
+      // olevan kohdan paikallaan.
+      tx = m.x - (m.x - tx) * suhde;
+      ty = m.y - (m.y - ty) * suhde;
+      k = kohde;
+      piirra(silea);
+    };
+
+    /** Napeista ja näppäimistöstä zoomataan kehyksen keskipisteeseen. */
+    const keskelta = (uusi) => {
+      const r = kehys.getBoundingClientRect();
+      zoomaa(uusi, r.left + r.width / 2, r.top + r.height / 2, true);
+    };
+
+    const nollaa = () => { k = 1; tx = 0; ty = 0; piirra(true); };
+
+    /*
+     * Kertakäyttöinen napsautustulppa eleen perään: raahaus ei saa
+     * avata kohteen juttua eikä laukaista reunakaistan vieritystä.
+     * Tulppa puretaan ajastimella, koska napsautusta ei aina tule
+     * (sormi voi nousta kehyksen ulkopuolella) eikä se saa jäädä
+     * odottamaan seuraavaa oikeaa napautusta.
+     */
+    const nielaiseNapsautus = () => {
+      const nielu = (e) => { e.preventDefault(); e.stopPropagation(); };
+      kehys.addEventListener('click', nielu, { capture: true, once: true });
+      setTimeout(() => kehys.removeEventListener('click', nielu, true), 350);
+    };
+
+    napit.lahenna.addEventListener('click', () => keskelta(k * ASKEL));
+    napit.loitonna.addEventListener('click', () => keskelta(k / ASKEL));
+
+    /*
+     * RULLA. Kartan yli rullaaminen zoomaa, mutta rajalla tapahtuma
+     * päästetään läpi: zoomaamattoman kartan yli alaspäin rullaava
+     * lukija jatkaa juttua kuten ennenkin, ja täyteen zoomatun kartan
+     * yli sisäänpäin rullaava pääsee samoin eteenpäin. Ilman tätä
+     * poikkeusta kartta olisi lehden keskellä hiirilukko.
+     */
+    kehys.addEventListener('wheel', (e) => {
+      const sisaan = e.deltaY < 0;
+      if (sisaan ? k >= SUURIN - 0.001 : k <= PIENIN + 0.001) return;
+      e.preventDefault();
+      // deltaMode: 0 = pikseliä, 1 = riviä, 2 = sivua.
+      const kerroin = e.deltaMode === 1 ? 16 : (e.deltaMode === 2 ? 400 : 1);
+      zoomaa(k * Math.exp((-e.deltaY * kerroin) / 620), e.clientX, e.clientY);
+    }, { passive: false });
+
+    /** Osoitintapahtumat eivät saa vuotaa selaukseen kesken eleen. */
+    const suojaa = (e) => { if (elettaKesken) e.stopPropagation(); };
+
+    kehys.addEventListener('pointerdown', (e) => {
+      raahattiin = false;
+      suojaa(e);
+      // Zoomaamaton kartta ei ota raahausta: silloin lehden pyyhkäisy-
+      // selaus toimii kartan päältäkin täsmälleen kuten ennen.
+      if (elettaKesken || k <= PIENIN + 0.001) return;
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      /*
+       * Kohteen numeroympyrästä EI aloiteta panorointia. Raahaus ottaa
+       * osoittimen kiinni (setPointerCapture), ja kaapatun osoittimen
+       * napsautus ei enää osu nappiin — mitattuna: zoomatussa kartassa
+       * kohteen napautus ei avannut juttua lainkaan. Ympyrä on pieni,
+       * joten sen menettäminen panoroinnin lähtöalueena ei maksa
+       * mitään; kartta on ympärillä.
+       */
+      if (e.target.closest?.('button, a')) return;
+      raahaus = { id: e.pointerId, x: e.clientX, y: e.clientY, tx, ty };
+      kehys.setPointerCapture?.(e.pointerId);
+      e.stopPropagation();
+    });
+
+    kehys.addEventListener('pointermove', (e) => {
+      suojaa(e);
+      if (!raahaus || e.pointerId !== raahaus.id) return;
+      const dx = e.clientX - raahaus.x;
+      const dy = e.clientY - raahaus.y;
+      // Muutaman pikselin heilahdus on napautus eikä raahaus — muuten
+      // kohteen avaaminen epäonnistuisi vapisevalla sormella.
+      if (!raahattiin && Math.hypot(dx, dy) < 4) return;
+      raahattiin = true;
+      tx = raahaus.tx + dx;
+      ty = raahaus.ty + dy;
+      piirra();
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    const paataRaahaus = (e) => {
+      if (!raahaus || e.pointerId !== raahaus.id) return;
+      raahaus = null;
+      if (!raahattiin) return;
+      nielaiseNapsautus();
+      e.stopPropagation();
+    };
+    kehys.addEventListener('pointercancel', paataRaahaus);
+
+    /*
+     * TUPLANAPAUTUS ilman dblclick-tapahtumaa. Kosketuslaitteiden
+     * dblclick on epäluotettava, ja jos molempia kuunneltaisiin,
+     * lähennys ja loitonnus kumoaisivat toisensa samasta eleestä.
+     * Napautus kohteen ympyrään ei zoomaa vaan avaa jutun kuten ennen.
+     */
+    kehys.addEventListener('pointerup', (e) => {
+      suojaa(e);
+      paataRaahaus(e);
+      if (raahattiin || elettaKesken) return;
+      if (e.target.closest?.('button, a')) return;
+      const osuma = edellinenNapautus
+        && e.timeStamp - edellinenNapautus.aika < 380
+        && Math.hypot(e.clientX - edellinenNapautus.x, e.clientY - edellinenNapautus.y) < 30;
+      edellinenNapautus = osuma ? null : { aika: e.timeStamp, x: e.clientX, y: e.clientY };
+      if (!osuma) return;
+      if (k > PIENIN + 0.001) nollaa();
+      else zoomaa(2, e.clientX, e.clientY, true);
+      e.preventDefault();
+      e.stopPropagation();
+      nielaiseNapsautus();
+    });
+
+    /* --- nipistys (kosketustapahtumat, ks. metodin kommentti) --- */
+    const kaksiSormea = (e) => {
+      const [a, b] = [e.touches[0], e.touches[1]];
+      return {
+        etaisyys: Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY),
+        keski: { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 },
+      };
+    };
+
+    kehys.addEventListener('touchstart', (e) => {
+      if (e.touches.length < 2) return;
+      const { etaisyys, keski } = kaksiSormea(e);
+      // Aivan vierekkäiset sormet antaisivat jakolaskussa mitä tahansa.
+      if (etaisyys < 24) return;
+      const m = lavalle(keski.x, keski.y);
+      nipistys = {
+        etaisyys,
+        kerroin: k,
+        // Sormien alla oleva kartan piste eleen alussa. Kun se
+        // pidetään sormien alla koko eleen ajan, nipistys myös panoroi
+        // — kaksi sormea siirtää ja suurentaa samalla kertaa.
+        piste: { x: (m.x - tx) / k, y: (m.y - ty) / k },
+      };
+      elettaKesken = true;
+      raahaus = null;
+      raahattiin = true;
+      edellinenNapautus = null;
+    }, { passive: false });
+
+    kehys.addEventListener('touchmove', (e) => {
+      if (!nipistys || e.touches.length < 2) return;
+      // Vain tämä pysäyttää Safarin oman sivunzoomin (ks. metodin
+      // kommentti) — touch-action ei siihen riitä.
+      e.preventDefault();
+      e.stopPropagation();
+      const { etaisyys, keski } = kaksiSormea(e);
+      k = rajaa((nipistys.kerroin * etaisyys) / nipistys.etaisyys, PIENIN, SUURIN);
+      const m = lavalle(keski.x, keski.y);
+      tx = m.x - nipistys.piste.x * k;
+      ty = m.y - nipistys.piste.y * k;
+      piirra();
+    }, { passive: false });
+
+    const kosketusLoppui = (e) => {
+      if (e.touches.length < 2) nipistys = null;
+      // Ele on ohi vasta kun ruudulla ei ole yhtään sormea: muuten
+      // toisen sormen irrotus päästäisi lopun pyyhkäisynä läpi.
+      if (e.touches.length === 0) elettaKesken = false;
+    };
+    kehys.addEventListener('touchend', kosketusLoppui);
+    kehys.addEventListener('touchcancel', kosketusLoppui);
+
+    /*
+     * NÄPPÄIMISTÖ. Nuolet vaihtavat lehden sivua (kytkeTutkiSelaus),
+     * joten zoomattu kartta ottaa ne itselleen ja pysäyttää ne — mutta
+     * vain zoomattuna, jotta selaus toimii muuten ennallaan.
+     */
+    const NUOLET = {
+      ArrowLeft: { x: 1, y: 0 }, ArrowRight: { x: -1, y: 0 },
+      ArrowUp: { x: 0, y: 1 }, ArrowDown: { x: 0, y: -1 },
+    };
+    kehys.addEventListener('keydown', (e) => {
+      const nuoli = NUOLET[e.key];
+      if (e.key === '+' || e.key === '=') keskelta(k * ASKEL);
+      else if (e.key === '-') keskelta(k / ASKEL);
+      else if (e.key === '0') nollaa();
+      else if (nuoli && k > PIENIN + 0.001) {
+        tx += nuoli.x * 48;
+        ty += nuoli.y * 48;
+        piirra(true);
+      } else return;
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    piirra();
   }
 
   /**

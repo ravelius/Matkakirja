@@ -10062,22 +10062,116 @@ body.vertailu-tila .pawns { display: none; }
  * numeroympyrät ja selitteet tekstinä kartan alla.
  */
 
+/*
+ * ZOOMATTAVA KARTTAIKKUNA (omistajan tilaus 14.8.2026: "voiko
+ * kaupunkikartasta tehdä zoomattavaa ... pyörisi nykyisessä
+ * ikkunassa").
+ *
+ * Kehys on ikkuna, jonka koko ei muutu, ja lava on sen sisällä liikkuva
+ * taso. Reunaviiva ja leikkaus kuuluvat siksi kehykselle: kuvan omalla
+ * reunalla ne skaalautuisivat zoomatessa paksuiksi ja jäisivät
+ * panoroitaessa keskelle ruutua.
+ *
+ * `touch-action: pan-y` on tarkka valinta. Se päästää yhden sormen
+ * pystyvierityksen läpi (lehteä luetaan kartan päältäkin) mutta estää
+ * selaimen oman nipistyszoomin, jolloin kahden sormen tapahtumat
+ * tulevat kartalle asti. Zoomattuna sormi panoroi karttaa, ja silloin
+ * mitään ei päästetä läpi.
+ */
+.kartta-kehys {
+  position: relative;
+  overflow: hidden;
+  margin: 0.3rem 0 0.55rem;
+  border: 1px solid rgba(70, 51, 31, 0.4);
+  border-radius: 2px;
+  touch-action: pan-y;
+}
+
+.kartta-kehys.zoomattu {
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+}
+
+.kartta-kehys.zoomattu:active { cursor: grabbing; }
+
 .kaupunkikartta-kotelo { margin: 0.3rem 0 0.55rem; }
+
+/* Kehyksen sisällä reuna on kehyksellä ja marginaalit sen ulkopuolella
+ * — lavan on peitettävä ikkuna tarkalleen, tai zoomatessa reunaan
+ * jäisi rako. */
+.kartta-kehys > .kaupunkikartta-kotelo { margin: 0; }
+
+.kartta-kehys > .maakartta-kotelo img {
+  border: 0;
+  border-radius: 0;
+}
+
+/*
+ * Lava: kuva, kohdepisteet ja mittajana yhtenä liikkuvana tasona.
+ * Origo on vasen ylänurkka, koska koko eleen laskenta (ui.js:
+ * kytkeKarttaZoom) olettaa sen.
+ */
+.kartta-lava {
+  --zoom: 1;
+  transform-origin: 0 0;
+}
+
+/* Pehmennys vain napeista ja tuplanapautuksesta: sormen alla se
+ * tuntuisi siltä, että kartta laahaa jäljessä. */
+.kartta-lava.silea { transition: transform 0.18s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .kartta-lava.silea { transition: none; }
+}
+
+/*
+ * VASTASKAALAUS. Kaikki lavalla suurenisi zoomin mukana, myös se, mikä
+ * ei ole karttaa: numeroympyrä on merkki eikä maisema, ja
+ * kolminkertaisena se peittäisi juuri sen korttelin, jota katsotaan.
+ * Sama koskee mittajanan viivoja ja tekstiä — jana ITSE saa venyä,
+ * koska sen pituus on matka, mutta sen musteen ei pidä paksuta.
+ */
+.kartta-lava .maakartta-piste.kohde-numero {
+  transform: translate(-50%, -50%) scale(calc(1 / var(--zoom)));
+}
+
+.kartta-lava .kartta-mittajana {
+  height: calc(6px / var(--zoom));
+  border-width: calc(1px / var(--zoom));
+}
+
+.kartta-lava .kartta-mittajana-teksti {
+  transform: translateX(-50%) scale(calc(1 / var(--zoom)));
+  transform-origin: bottom center;
+}
 
 /*
  * Kartan näkymävipu (omistajan tilaus 14.8.2026): piirretty juliste
  * ja satelliittikuva samasta rajauksesta. Rivi on kartan yllä oikeassa
  * reunassa ja kirjoituskoneen kokoa, koska se on kartan asetus eikä
  * lehden juttu — samalla logiikalla kuin lähderivi kartan alla.
+ *
+ * Työkalurivi jakaa saman rivin zoomipainikkeiden kanssa: molemmat
+ * ovat kartan säätimiä, eikä niitä kannata ladota kahdelle riville.
  */
-.kartta-vipu {
+.kartta-tyokalut {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
   gap: 0.3rem;
   margin: 0 0 0.15rem;
 }
 
-.dialog .kartta-vipu button {
+.kartta-zoomi { display: flex; gap: 0.3rem; }
+
+.kartta-vipu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.3rem;
+}
+
+.dialog .kartta-tyokalut button {
   display: inline-flex;
   align-items: center;
   gap: 0.32rem;
@@ -10096,16 +10190,34 @@ body.vertailu-tila .pawns { display: none; }
   box-shadow: none;
 }
 
-.dialog .kartta-vipu button:hover:not(:disabled) {
+.dialog .kartta-tyokalut button:hover:not(:disabled) {
   border-color: rgba(70, 51, 31, 0.75);
   background: rgba(255, 250, 238, 0.95);
 }
 
 /* Valittu näkymä on painettu musteella: se ei ole enää tarjous. */
-.dialog .kartta-vipu button[aria-pressed="true"] {
+.dialog .kartta-tyokalut button[aria-pressed="true"] {
   color: #fdf6e5;
   background: #46331f;
   border-color: #2c2318;
+}
+
+/* Plus ja miinus ovat merkkejä eivätkä sanoja: merkki saa olla
+ * näkymävivun tekstiä isompi, mutta painikkeen KORKEUS pysyy samana —
+ * rivillä on kaksi säädinryhmää, ja eri korkuisina ne näyttäisivät
+ * kahdelta eri työkalulta. Siksi line-height on lukittu. */
+.dialog .kartta-tyokalut button.kartta-zoomi-nappi {
+  min-width: 2rem;
+  justify-content: center;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.92rem;
+  line-height: 0.72rem;
+  letter-spacing: 0;
+}
+
+.dialog .kartta-tyokalut button.kartta-zoomi-nappi:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 /*
@@ -10213,6 +10325,21 @@ body.vertailu-tila .pawns { display: none; }
     transform: translateX(-50%);
     border: 4px solid transparent;
     border-top-color: rgba(38, 29, 16, 0.94);
+  }
+
+  /* Yläreunan kohteilla vihje aukeaa alaspäin: zoomattava kartta on
+   * leikkaava ikkuna, ja ylöspäin aukeava vihje jäisi sen taakse
+   * (ui.js merkitsee luokan kohteen paikasta). */
+  .maakartta-piste.vihje-alle .kohde-vihje {
+    bottom: auto;
+    top: calc(100% + 7px);
+  }
+
+  .maakartta-piste.vihje-alle .kohde-vihje::after {
+    top: auto;
+    bottom: 100%;
+    border-top-color: transparent;
+    border-bottom-color: rgba(38, 29, 16, 0.94);
   }
 
   .maakartta-piste.kohde-numero:hover .kohde-vihje,
@@ -36655,11 +36782,11 @@ const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Saint Andrew\'s Church, Kyiv.jpg',
-          selite: 'Andreaksen kirkko mäen päällä Kiovassa. '
-            + 'Turkoosinvihreiden seinien yllä on tumma sipulikupoli ja '
-            + 'sen ympärillä pienempiä torneja kultaisine huippuineen. '
-            + 'Kirkko valmistui 1750-luvulla Bartolomeo Rastrellin '
-            + 'piirustusten mukaan.',
+          selite: 'Andreaksen kirkko mäen päällä. Turkoosinvihreiden seinien yllä '
+            + 'on tumma sipulikupoli ja sen ympärillä pienempiä torneja '
+            + 'kultaisine huippuineen; kirkolle noustaan leveitä portaita. '
+            + 'Kirkko valmistui 1750-luvulla italialaisen Bartolomeo '
+            + 'Rastrellin piirustusten mukaan.',
           lahde: 'Oleh Kushch, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -39602,20 +39729,22 @@ const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'A house with a palm tree in the Arab Quarter, North Nicosia, Cyprus.jpg',
-          selite: 'Kivetty kuja Nikosian Arabahmetin korttelissa. '
-            + 'Valkoiseksi rapatun talon ikkunanpuitteet ja säleluukut on '
-            + 'maalattu keltaisiksi, ja tiilikaton takaa nousee palmu. '
-            + 'Kujan toisella puolella on turkoosiksi maalattu '
-            + 'umpierkkeri.',
+          selite: 'Kivetty kuja Arabahmetin korttelissa. Vasemmalla on '
+            + 'valkoiseksi rapattu talo, jonka ikkunanpuitteet ja '
+            + 'säleluukut on maalattu keltaisiksi ja jonka tiilikaton '
+            + 'takaa nousee palmu; katoksen alle on pysäköity auto. '
+            + 'Oikealla erottuu turkoosiksi maalattu umpierkkeri ja kujan '
+            + 'päässä toinen auto.',
           lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Izgled-Old House Nicosia-6.jpg',
-          selite: 'Vanhan talon pyöristetty kulma Nikosian '
-            + 'vanhassakaupungissa. Avoimen loggian päälle työntyy '
-            + 'parveke valkoisine pylväskaiteineen, ja sitä kannattavat '
-            + 'kierrekoristeiset kivikonsolit. Ikkunoissa on puiset '
-            + 'säleluukut.',
+          selite: 'Vanhan talon pyöristetty kulma vanhassakaupungissa. '
+            + 'Alhaalla on avoin loggia, jonka perällä näkyy ovi, ja sen '
+            + 'päälle työntyy parveke valkoisine pylväskaiteineen. '
+            + 'Kannattimina on kierrekoristeisia kivikonsoleita, '
+            + 'ikkunoissa puiset säleluukut, ja julkisivun poikki kulkee '
+            + 'sähköjohtoja.',
           lahde: 'Молли, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -40144,10 +40273,12 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '001124-Alkadhemiya-Baghdad-IMG 7802-2.jpg',
-          selite: 'Al-Kadhimiyan pyhäkkö Bagdadin pohjoisosassa. '
-            + 'Rakennuksessa on kaksi kullattua kupolia ja neljä '
-            + 'kullattua minareettia, ja portti on verhottu siniseen ja '
-            + 'valkoiseen kaakeliin. Katolla liehuu vihreitä lippuja.',
+          selite: 'Al-Kadhimiyan pyhäkkö Bagdadin pohjoisosassa: kaksi '
+            + 'kullattua kupolia ja neljä kullattua minareettia. Portti '
+            + 'on verhottu siniseen ja valkoiseen kaakeliin, aidat ovat '
+            + 'vihreää metallia ja katolla liehuu vihreitä lippuja. '
+            + 'Kupolien takana seisoo rakennusnosturi, ja aukiolla kulkee '
+            + 'ihmisiä.',
           lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -40341,10 +40472,13 @@ const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Izmir Ferry ride from Pasaport terminal to Bostanlı terminal 2592.jpg',
           selite: 'İzmirin lahti lautan kannelta kuvattuna. Aallokossa '
-            + 'purjehtii kuusi pientä valkoista jollaa, joissa istuu '
-            + 'lapsia pelastusliiveissä. Vastarannan rantabulevardi on '
-            + 'täynnä kävelijöitä ja palmuja, ja sen takana nousee rinne '
-            + 'kerrostaloja.',
+            + 'purjehtii kuusi pientä valkoista jollaa, joiden purjeissa '
+            + 'lukee TUR ja numero ja joissa istuu lapsia '
+            + 'pelastusliiveissä. Takana kaartuu vastarannan '
+            + 'rantabulevardi täynnä kävelijöitä ja palmuja, sen takana '
+            + 'nousee rinne kerrostaloja, ja oikealla laiturissa on '
+            + 'valkoinen lautta. Talojen seinillä on mainostauluja ja '
+            + 'vihreä Garanti-pankin kyltti.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -40361,7 +40495,9 @@ const KULTTUURI_KATEGORIAT = {
           selite: 'Konakin aukion pieni kahdeksankulmainen Yalı-moskeija '
             + 'pilvisenä päivänä. Ikkunoita kehystävät sinivihreät '
             + 'laattapaneelit, kattona on lyijynharmaa kupoli ja vieressä '
-            + 'nousee ohut kivinen minareetti.',
+            + 'nousee ohut kivinen minareetti. Vasemmalla liehuu Turkin '
+            + 'lippuja ja kasvaa palmuja, oikealla kävelee ihmisiä ja '
+            + 'taustalla näkyy kerrostaloja.',
           lahde: 'F Mira, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -40537,26 +40673,38 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Kocatepe Camii, Sheraton, Atakule.jpg',
-          selite: 'Ankaran keskusta kattojen yli katsottuna. Keskellä '
-            + 'kohoaa Kocatepen moskeija harmaine kupoleineen ja neljine '
-            + 'valkoisine minareetteineen, ja kauempana näkyy Atakulen '
-            + 'lasipallo. Rinteet ovat täynnä punakattoisia kerrostaloja.',
+          selite: 'Ankaran keskusta kattojen yli katsottuna. Keskellä kohoaa '
+            + 'Kocatepen moskeija, jolla on harmaa kupoli ja neljä '
+            + 'valkoista minareettia mustine huippuineen, ja oikealla '
+            + 'näkyy Atakulen lasipallo sekä sen vierellä rakenteilla '
+            + 'oleva sinilasinen tornitalo nostureineen. Rinteet ovat '
+            + 'täynnä punakattoisia kerrostaloja, katoilla liehuu Turkin '
+            + 'lippuja ja talojen seinissä on kylttejä, muun muassa '
+            + 'DEMORA HOTEL ja liv HOSPITAL. Etualalla on vaalean '
+            + 'toimistotalon katto ilmastointiputkineen ja yksi '
+            + 'katulamppu.',
           lahde: 'schweinalp, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Kızılay meydanı-Ankara - panoramio.jpg',
-          selite: 'Kızılayn aukio Ankarassa pilvisenä päivänä. Aukion '
-            + 'reunassa odottaa rivi keltaisia takseja ja kaksi '
-            + 'POLİS-moottoripyörää, ja takana nousee korkea valkoinen '
-            + 'toimistotorni ja lasiseinäinen kauppakeskus.',
+          selite: 'Kızılayn aukio pilvisenä päivänä. Etualalla seisoo rivi '
+            + 'keltaisia takseja ja kaksi moottoripyörää, joiden ajajien '
+            + 'selässä lukee POLİS. Takana nousee korkea valkoinen '
+            + 'toimistotorni ja sen edessä lasiseinäinen kauppakeskus. '
+            + 'Aukiolla on liikennevaloja, kävelijöitä ja mainostauluja, '
+            + 'joissa lukee GÜNEŞ SİGORTA, Vodafone ja COLIN\'S, sekä '
+            + 'talon seinällä pitkä pystysuora Turkin lippu.',
           lahde: 'HALUK COMERTEL, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Ankara Garı, Ankara (24.03.2023) 79.jpg',
-          selite: 'Ankaran rautatieasema. Vaalean kivijulkisivun edessä '
-            + 'on rivi neliskulmaisia pilareita, katolla punainen kyltti '
-            + 'ANKARA GARI ja pyöreässä kulmatornissa valtionrautateiden '
-            + 'TCDD:n lippu.',
+          selite: 'Ankaran rautatieasema. Vaalean kivijulkisivun edessä on '
+            + 'rivi neliskulmaisia pilareita, katolla punainen kyltti '
+            + 'ANKARA GARI ja pyöreässä kulmatornissa TCDD:n lippu. '
+            + 'Aseman edustalle on aseteltu oransseja liikennekartioita, '
+            + 'sivussa on pysäköityjä moottoripyöriä ja OTOPARK-kyltti, '
+            + 'ja etualalla kasvaa leikattu pensasaita ja lehdettömiä '
+            + 'plataaneja.',
           lahde: 'Gargarapalvin, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -40738,29 +40886,38 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Aleppo 03.jpg',
-          selite: 'Aleppon kattoja korkealta katsottuna. Matalien '
-            + 'kivitalojen katoilla on kymmeniä lautasantenneja ja pieniä '
-            + 'kupoleita, ja keskellä kohoaa kivinen minareetti vihreäksi '
-            + 'maalatun kupolin vierellä. Kaupunki jatkuu tiheänä '
+          selite: 'Aleppon kattoja korkealta katsottuna. Etualalla on matalia '
+            + 'kivitaloja, joiden katoilla on kymmeniä lautasantenneja ja '
+            + 'pieniä kupoleita, ja keskellä kohoaa kivinen minareetti, '
+            + 'jonka takana on vihreäksi maalattu kupoli ja toinen '
+            + 'pienempi. Oikealla seisoo valkoinen nelikerroksinen '
+            + 'rakennus, jonka julkisivussa on korkeita kaari-ikkunoita, '
+            + 'ja horisontissa kaupunki jatkuu tiheänä matalan '
             + 'kukkulajonon juurelle.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Al-Madina Souq 02.jpg',
-          selite: 'Katettu kivinen kuja Aleppon Al-Madina-basaarissa. '
-            + 'Kaareva kivikatto häviää hämärään, ja sen alla riippuu '
+          selite: 'Katettu kivinen kuja Aleppon Al-Madina-basaarissa: kaareva '
+            + 'kivikatto häviää hämärään, ja sen alla riippuu '
             + 'rivistöittäin värikkäitä paperilippusia ja lamppuja. '
-            + 'Lihakaupan edessä roikkuu koukuissa leikattuja '
-            + 'lihanpaloja.',
+            + 'Vasemmalla lihakaupan edessä roikkuu koukuissa leikattuja '
+            + 'lihanpaloja, ja mies istuu jakkaralla kaupan ovella. '
+            + 'Käytävällä kulkee ostajia ja turisteja, muun muassa '
+            + 'keltapaitainen valkohattuinen nainen punaisine reppuineen, '
+            + 'ja oikeassa alakulmassa on laatikollinen vihreitä '
+            + 'vihanneksia. Kaupat ovat auki kujan molemmin puolin.',
           lahde: 'Folkertherlyn, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Aleppo Beit Wakil 9673.jpg',
-          selite: 'Beit Wakilin sisäpiha Aleppossa. Kiviseinässä on '
-            + 'kaiverrettuja kaarisyvennyksiä ja kapeita ikkunoita '
-            + 'sinisine ja valkoisine laseineen, ja pihan keskellä on '
-            + 'matala marmorinen suihkulähde. Pihalle on katettu pöytiä '
-            + 'valkoisin liinoin.',
+          selite: 'Beit Wakilin sisäpiha. Kiviseinässä on kaiverrettuja '
+            + 'kaarisyvennyksiä ja kapeita ikkunoita, joissa on sinistä '
+            + 'ja valkoista lasia, ja pihan keskellä on matala marmorinen '
+            + 'suihkulähde ruukkukasvien ympäröimänä. Pihalle on katettu '
+            + 'pöytiä valkoisin liinoin, ylle on pingotettu vaalea kangas '
+            + 'mustien takorautapylväiden varaan, ja perällä on koroke, '
+            + 'jolla seisoo kaiuttimia ja verhoiltuja tuoleja.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -40951,28 +41108,35 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Panorama de Damas - Bonfils. LCCN2004670447.jpg',
-          selite: 'Damaskoksen kattomeri 1800-luvun valokuvassa. Satojen '
-            + 'tasakattoisten matalien talojen keskeltä kohoaa suuren '
-            + 'moskeijan kupoli ja kolme minareettia, ja takana nousee '
-            + 'karu vuorijono.',
+          selite: 'Damaskoksen kattomeri 1800-luvun valokuvassa. '
+            + 'Tasakattoisia matalia taloja on satoja peräkkäin, keskellä '
+            + 'kohoaa suuren moskeijan kupoli ja kolme minareettia, ja '
+            + 'takana nousee karu vuorijono. Etualalla on muurin päällä '
+            + 'kattoterassi, sen kaide ja pieni katettu kioski. Kuvan '
+            + 'alareunaan on kirjoitettu 793 – Panorama de Damas ja nimi '
+            + 'Bonfils.',
           lahde: 'Maison Bonfils (Beirut, Lebanon), photographer, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'View of Mount Qasioun from Damascus Orchards.jpg',
-          selite: 'Damaskoksen hedelmätarhoja ja niiden takana '
-            + 'Qasioun-vuori. Valkoisenaan kukkivalla kentällä kasvaa '
-            + 'vanhoja oliivipuita, joista kaksi on kuivunut pelkiksi '
-            + 'rungoiksi. Vuoren rinnettä peittää tiiviisti rakennettu '
-            + 'kaupunginosa.',
+          selite: 'Damaskoksen hedelmätarhoja ja niiden takana Qasioun-vuori. '
+            + 'Etualalla on valkoisenaan kukkiva kenttä ja vanhoja '
+            + 'oliivipuita, joista kaksi on kuivunut pelkiksi rungoiksi. '
+            + 'Vuoren rinnettä peittää tiiviisti rakennettu kaupunginosa, '
+            + 'harjanteella seisoo mastoja, ja taivaalla on pilviä. Kuvan '
+            + 'värit on säädetty voimakkaiksi.',
           lahde: 'Mohamad Emad Basha, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Interieur van een woonhuis (SyrieIntérieur de Maison - Damas) Architecture antique Égypte, Grèce, Asie Mineure album de photographies (serietitel), BI-F-B-SCHOLEN-0098-28.jpg',
-          selite: 'Damaskoslaisen talon piha 1800-luvun valokuvassa. '
-            + 'Korkea suippokaari on muurattu vuorotellen vaaleasta ja '
-            + 'tummasta kivestä, ja sen sisäseinä on täynnä kaiverrettua '
-            + 'ja upotettua koristelua. Pihan poikki kulkee kapea '
-            + 'vesiallas.',
+          selite: 'Damaskoslaisen talon piha 1800-luvun valokuvassa. Korkea '
+            + 'suippokaari on muurattu vuorotellen vaaleasta ja tummasta '
+            + 'kivestä, ja sen sisäseinä on täynnä kaiverrettua ja '
+            + 'upotettua koristelua. Pihan poikki kulkee kapea vesiallas, '
+            + 'jonka suihku sumuaa. Oikealla on kaksikerroksinen '
+            + 'kaarikäytävä, vasemmalla tiilikattoinen katos, ja '
+            + 'pylväiden ympärille on kierretty köynnöksiä. Alareunassa '
+            + 'lukee SYRIE, Intérieur de Maison (Damas) ja Bonfils Phot.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
       ],
@@ -41160,28 +41324,47 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Rivier met wadende buffels aan de rand van Luxor E 71. Het plaatsje Luxor (Arabisch kwartier). Opper-Egypte. (titel op object), RP-F-1997-28-6.jpg',
-          selite: 'Ruskeasävyinen 1800-luvun valokuva Luxorin laidalta. '
-            + 'Matalassa vesiuomassa seisoo vesipuhveli polviaan myöten '
-            + 'vedessä, ja rannalla juo aasi ja kulkee mies astia olalla. '
-            + 'Vastarannalla on savitiilitaloja ja tiheä palmulehto.',
+          selite: 'Ruskeasävyinen 1800-luvun valokuva pahville liimattuna. '
+            + 'Kuvassa on matala vesiuoma Luxorin laidalla: keskellä '
+            + 'uomaa seisoo vesipuhveli polviaan myöten vedessä, ja '
+            + 'lähemmällä rannalla juo aasi. Rantatörmällä kävelee mies '
+            + 'kantaen astiaa olalla, ja kivimuurin päällä on suuri '
+            + 'saviruukku. Vastarannalla on savitiilitaloja, joiden '
+            + 'yläreunassa on hammastettu kuvio, ja niiden takana tiheä '
+            + 'palmulehto. Vasemmalla kaartuu suuri lehtipuu. Pahville on '
+            + 'painettu teksti E 71. Het plaatsje Luxor (Arabisch '
+            + 'kwartier). Opper-Egypte.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Gezicht op de bouw van een boot langs de Nijl te Luxor Louqsor (titel op object) Egypte (serietitel), RP-F-2001-7-1540-7.jpg',
-          selite: 'Luxorin ranta 1800-luvun painokuvassa. Keskellä on '
-            + 'rakenteilla oleva vene, jonka rungon kaaret törröttävät '
-            + 'ylöspäin kuin kylkiluut, ja rannassa on kiinnitettynä '
-            + 'kolme purjevenettä pitkine raakapuineen. Takana on '
-            + 'valkoisia taloja, palmurivi ja minareetti.',
+          selite: 'Albumin aukeama, jossa on vaaleaharmaa painokuva Luxorin '
+            + 'rannasta. Keskellä on rakenteilla oleva vene: rungon '
+            + 'kaaret törröttävät ylöspäin kuin kylkiluut, ja ympärillä '
+            + 'on puutavaraa ja telineitä. Vasemmalla on kiinnitettynä '
+            + 'kolme purjevenettä, joiden pitkät raakapuut nojaavat '
+            + 'viistosti taivaalle. Takana on valkoisia tasakattoisia '
+            + 'taloja, muuri ja tiheä palmurivi, oikealla kohoaa '
+            + 'minareetti. Etualalla kahlaa kaksi ihmistä matalassa '
+            + 'vedessä. Kuvan yläpuolelle on painettu EGYPTE ja '
+            + 'alapuolelle LOUQSOR sekä kolmen pariisilaisen kustantajan '
+            + 'nimet. Oikeassa reunassa näkyy albumin tumma selkämys.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Luxor New Corniche R02.jpg',
-          selite: 'Luxorin uusi rantapromenadi keskipäivällä. Laatoitettu '
-            + 'kävelytie kulkee nurmikaistaleiden välissä Niiliä '
-            + 'reunustavan matalan kivimuurin vieressä, ja usvassa '
-            + 'erottuu risteilylaivan valkoinen kylki. Rannassa on vaalea '
-            + 'kiviportti kaariaukkoineen.',
+          selite: 'Luxorin uusi rantapromenadi keskipäivällä. Etualalla on '
+            + 'leikattua nurmikkoa, pieniä pensaita ja sorakaistale, ja '
+            + 'niiden välistä kulkee laatoitettu kävelytie mustine '
+            + 'pollarivalaisimineen. Rannan reunaa seuraa matala '
+            + 'kivimuuri, jonka takana Niili levittäytyy vaaleana ja '
+            + 'tyynenä; kauempana usvassa erottuu risteilylaivan '
+            + 'valkoinen kylki. Vasemmalla on mustia lyhtypylväitä, '
+            + 'joissa on kolme pallovalaisinta, ja pieniä '
+            + 'lehmuksenkokoisia puita. Oikealla kohoaa vaalea kiviportti '
+            + 'kaariaukkoineen, balustradikaiteineen ja lyhtyineen, ja '
+            + 'sen vieressä nousevat leveät portaat. Kaukana kävelee '
+            + 'muutama ihminen ja seisoo puinen pergola.',
           lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -41395,28 +41578,43 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '413 of \'Narrative of a Year\'s Journey through Central and Eastern Arabia (1862-63), etc. (With maps and plans.)\' (11069861105).jpg',
-          selite: 'Riadin pohjapiirros 1800-luvun matkakirjasta. '
-            + 'Kaupunkia kiertää muuri, jonka sisällä kulkee Great Street '
-            + 'kauppoineen; ulkopuolelle on merkitty puutarhoja ja tiet '
-            + 'Deraiyaan, Melhaan, Hasaan ja Jemamaan. Selityksessä '
-            + 'mainitaan suuri tori, moskeija ja portit.',
+          selite: 'Riadin pohjapiirros 1800-luvun matkakirjasta. Otsikkona on '
+            + 'PLAN OF RIAD, ja kaupunkia kiertää katkoviivalla piirretty '
+            + 'muuri, joka on ylälaidasta pyöreä ja alalaidasta '
+            + 'suorakulmainen. Sisäpuolella kulkevat kadut ja korttelit, '
+            + 'keskellä lukee Great Street ja sen varrella Shops. '
+            + 'Ulkopuolelle on merkitty joka suuntaan Gardens, vasempaan '
+            + 'alakulmaan Wadi Haneefah sekä teitä, joiden kohdalla lukee '
+            + 'Road to Derëeyah, Road to Melha, Road to Hasa ja Road to '
+            + 'Yemamah. Oikeassa alanurkassa on kompassiruusu ja '
+            + 'alalaidassa numeroitu selitys, jossa mainitaan muun muassa '
+            + 'Great Square & Market Place, Mosque, Principal gate ja '
+            + 'other gates. Paperi on kellastunut.',
           lahde: 'The British Library, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Downtown Riyadh through a dusty windshield (12753645435).jpg',
-          selite: 'Riadilainen katu illansuun matalassa auringossa, '
-            + 'kuvattuna auton tuulilasin läpi. Korkean asuintalon '
-            + 'julkisivussa on rivi parvekkeita ja ilmastointilaitteita, '
-            + 'ja kadun poikki työntää polkupyörää raidallisessa paidassa '
-            + 'oleva mies.',
+          selite: 'Riadilainen katu matalassa illansuun auringossa, kuvattuna '
+            + 'auton tuulilasin läpi: lasissa näkyy pyyhkimen jättämiä '
+            + 'juovia. Vasemmalla on korkea asuintalo, jonka julkisivussa '
+            + 'on rivi parvekkeita ja ilmastointilaitteita ja katolla '
+            + 'mastoja. Kadun poikki työntää polkupyörää raidallisessa '
+            + 'paidassa oleva mies, ja hänen takanaan ajaa vaaleita '
+            + 'autoja. Oikealla on betonitalo, arabiankielisiä '
+            + 'liikekylttejä ja optikon mainos; kadun päässä on rivi '
+            + 'palmuja ja punaisena palava liikennevalo.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'King Fahd Road, Riyadh.jpg',
-          selite: 'King Fahd Road sillalta katsottuna. Maan tason alle '
-            + 'painetun moottorikadun kaistojen välissä kasvaa matalia '
-            + 'viuhkapalmuja, ja kadun varrella nousee lieriön muotoinen '
-            + 'sinipeilinen torni ja toinen lasitalo.',
+          selite: 'King Fahd Road sillalta katsottuna. Keskellä kulkee maan '
+            + 'tason alle painettu moottorikatu, jonka yli menee silta; '
+            + 'ajoradalla on muutama auto ja moottoripyöräilijä, ja '
+            + 'kaistojen välissä kasvaa matalia viuhkapalmuja. Reunoilla '
+            + 'ovat valkoiset betonikaiteet. Oikealla nousee lieriön '
+            + 'muotoinen sinipeilinen torni ja sen vieressä toinen '
+            + 'lasitalo, vasemmalla on pysäköityjä autoja ja rivi '
+            + 'lehtipuita. Taivas on sininen, ja siinä on ohuita pilviä.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -41613,28 +41811,56 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: '11 Chardin Tabriz 1673.png',
-          selite: 'Jean Chardinin piirros Tabrizista vuodelta 1673, nimi '
-            + 'kirjoitettuna muotoon TAURIS. Reunan luetteloissa '
-            + 'mainitaan kuninkaan aarrekammio, kymmenkunta moskeijaa, '
-            + 'suuri sairaala ja kapusiinien hospitaali. Matalan '
-            + 'kaupungin yllä kohoavat kupolit ja minareetit.',
+          selite: 'Mustavalkoinen piirros Tabrizista vuodelta 1673. '
+            + 'Yläreunassa on kiemuraiseksi piirretty nauha, jossa lukee '
+            + 'TAURIS ja sen vieressä sama nimi arabialaisin kirjaimin. '
+            + 'Vasemmassa yläkulmassa on ranskankielinen kirjainluettelo, '
+            + 'jossa mainitaan kuninkaan aarrekammio, kymmenkunta '
+            + 'moskeijaa, suuri sairaala ja kapusiinien hospitaali; '
+            + 'vasemmassa alakulmassa on kehystetty toinen luettelo '
+            + 'paikallisin nimin. Keskellä levittäytyy matala kaupunki: '
+            + 'tiheässä tasakattoisia taloja, kupoleita, minareetteja ja '
+            + 'puurivejä, ja kauempana avautuu suuri suorakaiteen '
+            + 'muotoinen kenttä, jonka keskellä on rakennus, sekä '
+            + 'nelikulmainen torni. Taustalla on paljaita, pyöreälakisia '
+            + 'kukkuloita. Etualan mäkien rinteillä makaa hajallaan '
+            + 'matalia, pöydän muotoisia kivilaattoja, ja niiden vieressä '
+            + 'seisoo muutama pieni ihmishahmo. Oikealla mäen laella on '
+            + 'muurien ympäröimä rakennelma, jonne nousee polku, ja '
+            + 'alempana on tumma aukko rinteessä.',
           lahde: 'Jean Chardin, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Landscape of Tabriz 03.jpg',
-          selite: 'Tabriz iltapäivän matalassa valossa, kuvattuna '
-            + 'kaupungin yllä seisovan tuulivoimalan vierestä. Matalien '
-            + 'talojen lomassa erottuu urheilukenttä ja sinikupolinen '
-            + 'rakennus. Ylhäällä talot loppuvat paljaisiin kukkuloihin.',
+          selite: 'Tabriz ylhäältä kuvattuna iltapäivän matalassa valossa. '
+            + 'Etualalla on kolmilapainen tuulivoimala niin läheltä, että '
+            + 'vain napa ja lavat mahtuvat kuvaan; konehuoneen valkoiseen '
+            + 'kylkeen on maalattu punaisella persiankielistä tekstiä. '
+            + 'Takana kaupunki täyttää rinteen: keltaisia ja harmaita '
+            + 'matalia taloja tiheässä, puukujia, laaja urheilukenttä '
+            + 'juoksuratoineen, kaareva vaalea laitosrakennus, punainen '
+            + 'liikerakennuksen julkisivu ja kaksi korkeaa asuintornia. '
+            + 'Oikeassa yläkulmassa on rakennus, jolla on suuri sininen '
+            + 'kupoli. Ylälaidassa talot loppuvat paljaisiin kukkuloihin, '
+            + 'joiden juurta seuraa tie.',
           lahde: 'Mostafameraji, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'A street in Tabriz.jpg',
-          selite: 'Hedelmäkoju Taleghanin kadulla Tabrizissa. '
-            + 'Tarjottimilla on persikoita, omenoita, luumuja, meloneita '
-            + 'ja banaaneja, ja koju valaistaan johtojen varassa '
-            + 'roikkuvilla hehkulampuilla. Kadulla odottaa keltainen '
-            + 'taksi ovi auki.',
+          selite: 'Hedelmäkoju Taleghanin kadulla Tabrizissa. Etualalla on '
+            + 'suuria pyöreitä metallitarjottimia täynnä persikoita, '
+            + 'punaisia ja vihreitä omenoita ja tummia luumuja, niiden '
+            + 'takana keltaisia meloneita ja banaanikimppuja sekä musta '
+            + 'muovilaatikko kurkkuja. Tarjottimen alla on pahvilaatikko, '
+            + 'jonka kyljessä lukee PREMIUM BANANAS, ja lattialla '
+            + 'muovilaatikoita rypäleitä ja luumuja. Ylhäältä roikkuu '
+            + 'johtojen varassa paljaita hehkulamppuja, jotka palavat. '
+            + 'Kadulla seisoo keltainen taksi takaovi auki, ja ohi kulkee '
+            + 'ihmisiä: kuviopaitainen poika, valkosukkainen tyttö, '
+            + 'kumartunut mies vaaleansinisessä paidassa, sinipaitainen '
+            + 'mies, sinihuivinen nainen ja punapaitainen poika. Seinillä '
+            + 'on persiankielisiä liikekylttejä, ilmastointilaite ja puun '
+            + 'oksia.',
           lahde: 'Monsieur_mahdi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -41845,27 +42071,45 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'National Garden Gate Tehran.jpg',
-          selite: 'Bagh-e Mellin portti Teheranissa sateen jälkeen. '
-            + 'Tiilisen porttirakennuksen kaarevan puuoven yläpuolella on '
-            + 'värillisiä kaakelitauluja ja persiankielisiä kirjoituksia, '
-            + 'ja ylhäällä kohoaa kaksi tornia. Portin sivuilla jatkuu '
-            + 'pitkä tiilitalo pilastereineen.',
+          selite: 'Bagh-e Mellin portti sateen jälkeen. Keskellä on tiilinen '
+            + 'porttirakennus, jonka kaarevan puuoven yläpuolella on '
+            + 'värillisiä kaakelitauluja ja persiankielisiä kirjoituksia; '
+            + 'oven sivuilla on kaksi pienempää kaariaukkoa ja ylhäällä '
+            + 'kaksi tornia, joiden huipulla on tumma katos ja terävä '
+            + 'piikki. Vasemmalla jatkuu pitkä tiilitalo, jonka '
+            + 'julkisivussa on pilastereita, kaakelinauha ja rautainen '
+            + 'aita; oikealla on toinen talo ja sen edessä lipputankoja. '
+            + 'Kadulla erottuvat suojatien raidat, keltainen sulkupuomi, '
+            + 'rivi oransseja liikennekartioita ja puna-valko-vihreäksi '
+            + 'maalattu reunakivi. Nuoret puut ovat lähes lehdettömiä, '
+            + 'asfaltti on märkä ja taivas harmaa.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Irán (RPS 10-10-2019) Aprendiendo de los mayores.jpg',
-          selite: 'Ruokakoju Teheranissa. Kahdessa suuressa kuparipadassa '
-            + 'on vihreää yrttikeittoa ja vaaleaa keitosta, ja mies '
-            + 'nostaa keitosta kauhalla valkoiseen kulhoon. Takana näkyy '
-            + 'myymälän hyllyjä ja kaksi samovaaria.',
+          selite: 'Ruokakoju Teheranissa. Etualalla on kaksi suurta '
+            + 'kuparipataa, joiden suulla on leveä teräsrengas: '
+            + 'vasemmassa on vihreää yrttikeittoa, oikeassa vaaleaa '
+            + 'keitosta, ja siitä nostaa kauhalla harmaaseen '
+            + 'collegepaitaan pukeutunut mies, jonka toisessa kädessä on '
+            + 'valkoinen kulho. Miehen kasvot jäävät kuvan ulkopuolelle. '
+            + 'Vasemmalla seisoo sinipaitainen poika ja katsoo patoja. '
+            + 'Takana näkyy myymälän hyllyjä, kaksi samovaaria, '
+            + 'kehystettyjä kuvia, taulutelevisio ja tarjotin, jolla on '
+            + 'kasoittain vaaleanruskeita palleroita sekä keltaista ja '
+            + 'oranssia jauhetta.',
           lahde: 'Raimundo Pastor y Pilar Pastor, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '30 Tir street in Tehran 2019 by Mardetanha (101).jpg',
-          selite: 'Katukoju 30 Tir -kadulla Teheranissa. Esiliinaan '
-            + 'pukeutunut myyjä lappaa leveällä lastalla paistettuja '
-            + 'perunanlohkoja kuviolliseen pahvivuokaan, ja vieressä on '
-            + 'matala pelti tummaksi grillattua ruokaa.',
+          selite: 'Katukoju 30 Tir -kadulla Teheranissa. Tummaan esiliinaan '
+            + 'pukeutunut myyjä pitää toisessa kädessä kuviollista '
+            + 'pahvivuokaa ja lappaa siihen leveällä lastalla paistettuja '
+            + 'perunanlohkoja; kasvot jäävät kuvan ulkopuolelle. Edessä '
+            + 'on metallilaatikko täynnä samoja lohkoja ja sen oikealla '
+            + 'puolella matala pelti tummaksi grillattua ruokaa sekä '
+            + 'valkokahvainen työkalu. Taustalla on pinoja oransseja '
+            + 'muovirasioita ja lasipurkki. Valo on illan keinovaloa.',
           lahde: 'Mardetanha, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -42079,27 +42323,52 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Isfahan to the north side by Eugène Flandin.jpg',
-          selite: 'Isfahan pohjoisesta nähtynä Eugène Flandinin '
-            + 'piirroksessa vuodelta 1840. Savimuurin takaa nousee '
-            + 'puurivistön yllä ohuita minareetteja ja matalia kupoleita, '
-            + 'ja kaukana on jyrkkä sahalaitainen vuorijono.',
+          selite: 'Isfahan pohjoisesta piirrettynä vuonna 1840. Etualalla on '
+            + 'paljas tasanko, jonka poikki kulkee vaaleita ajouria; '
+            + 'siinä ratsastaja on selin katsojaan ja pitää kädessään '
+            + 'pitkää suoraa vartta, ja kauempana kävelee kaksi ihmistä '
+            + 'pitkä sauva kädessä. Taustalla on matala savimuuri, jossa '
+            + 'on teräväkärkinen porttiaukko, ja sen edessä ratsastaja ja '
+            + 'pienempi eläin sekä oikeampana kolme eläintä ja niiden '
+            + 'vieressä kävelevä ihminen. Muurin takaa alkaa tumma '
+            + 'puurivistö, ja puiden yläpuolelle nousee ohuita '
+            + 'minareetteja sekä matalia kupoleita. Kaukana takana on '
+            + 'jyrkkä sahalaitainen vuorijono, ja taivas on jätetty '
+            + 'vaaleaksi ja tyhjäksi.',
           lahde: 'Eugène Flandin, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Esfahán.jpg',
-          selite: 'Isfahan leveänä panoraamana korkealta. Kaupungin '
-            + 'ympärillä on hedelmätarhoja, suoria poppelirivejä ja '
-            + 'peltokaistaleita, ja horisontissa on rivi paljaita kuivia '
-            + 'vuoria.',
+          selite: 'Isfahan kuvattuna korkealta hyvin leveänä panoraamana. '
+            + 'Vasemmassa reunassa on savitiilisen muurin jäänne, jonka '
+            + 'päällä seisoo yksi ihminen, ja oikeassa reunassa kohoaa '
+            + 'vaalea kallio. Niiden välissä avautuu tasanko: tiheitä '
+            + 'puuryhmiä, hedelmätarhoja, suoria poppelirivejä tien '
+            + 'varressa, peltokaistaleita, valkoinen laaja rakennus ja '
+            + 'paljas sorakenttä. Kauempana talot tihenevät kaupungiksi, '
+            + 'ja horisontissa on rivi paljaita kuivia vuoria. '
+            + 'Alareunassa kulkee leveä väylä, jonka varteen on pysäköity '
+            + 'autoja. Taivas on kirkas ja alhaalta utuinen.',
           lahde: 'I, Ondřej Žváček, Wikimedia Commons (CC BY 2.5)',
         },
         {
           tiedosto: 'Iran Teahouse in Isfahan, Iran (3573969242).jpg',
           selite: 'Teehuoneen sisusta Isfahanissa. Kaaret ja seinät on '
             + 'verhottu painokankailla, joissa toistuvat rivit ihmis- ja '
-            + 'lintuhahmoja, ja katosta riippuu lävistetty messinkilyhty. '
-            + 'Pöydillä on teelaseja ja metallisia teekannuja '
-            + 'tarjottimineen.',
+            + 'lintuhahmoja sekä tummanpunainen kukkakuvio; katosta '
+            + 'riippuu lävistetty messinkilyhty. Vasemmalla seisoo mies '
+            + 'vaaleansinisessä paidassa, aurinkolasit päälaella ja musta '
+            + 'laukku vyöllä. Hänen edessään istuu kaksi naista: toisella '
+            + 'on huivi, silmälasit ja kädessä auki taitettu esite, '
+            + 'toisella vaaleanpunainen huivi ja musta laukku sylissä. '
+            + 'Oikeassa reunassa istuu kolmas nainen kuviollisessa '
+            + 'takissa, edessään tarjotin ja pieni teekannu. Pöydillä on '
+            + 'painokuvioidut liinat, teelaseja ja metallinen teekannu '
+            + 'tarjottimella. Etualan matalalla pöydällä on matto ja sen '
+            + 'päällä kolme kiiltävää metallikannua, turkoosi saviruukku '
+            + 'ja läpimurrettu messinkiteline. Penkit on peitetty '
+            + 'matoilla, seinillä on kehystettyjä kuvia ja lattia on '
+            + 'kivilaattaa.',
           lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -42322,28 +42591,34 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Rooftops of Old Sana\'a (2286011017).jpg',
-          selite: 'Sanaan vanhankaupungin kattoja ylhäältä katsottuna. '
-            + 'Ruskeatiilisten talojen yläosat on kuvioitu valkoisella '
-            + 'kalkilla, ja tasakatoilla on vesisäiliöitä, '
-            + 'lautasantenneja ja kuivumassa olevaa pyykkiä. Keskellä '
-            + 'kohoaa valkoinen minareetti.',
+          selite: 'Vanhankaupungin kattoja ylhäältä katsottuna. Keskellä '
+            + 'kohoaa valkoinen minareetti, jonka huipulla on pieni '
+            + 'kupoli, ja kauempana erottuu kaksi muuta tornia. Talot '
+            + 'ovat ruskeaa tiiltä, ja niiden yläosat on kuvioitu '
+            + 'valkoisella kalkilla. Katot ovat tasaisia, ja niillä on '
+            + 'vesisäiliöitä, lautasantenneja ja kuivumassa olevaa '
+            + 'pyykkiä. Horisontissa on matala vuorijono.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Façades in the Old City of Sana\'a (2286046989).jpg',
-          selite: 'Kaksi sanaalaisen tornitalon julkisivua pilvetöntä '
+          selite: 'Kaksi tornitalon julkisivua alaviistosta pilvetöntä '
             + 'taivasta vasten. Valkoiset kipsivyöt kiertävät jokaisen '
             + 'kerroksen, ikkunoiden yläpuolella on läpimurrettuja '
             + 'puoliympyräikkunoita ja seinissä pyöreitä valkoisia '
-            + 'medaljonkeja.',
+            + 'medaljonkeja. Ikkunaluukut ovat puuta ja osa niistä on '
+            + 'auki. Ylimmän katon reunalla on punavalkoinen kangaskatos.',
           lahde: 'Dan from Brussels, Europe, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Beside Bab Al-Yemen (10874332564).jpg',
-          selite: 'Aukio Jemenin portin vieressä illalla. Tornitalojen '
-            + 'katutasossa on valaistuja kauppoja markiiseineen, ja '
-            + 'keskellä palaa kolmilamppuinen katulyhty. Aukiolla liikkuu '
-            + 'tiheä ihmisjoukko.',
+          selite: 'Aukio Jemenin portin vieressä illalla. Vasemmalla kohoaa '
+            + 'korkea tornitalo, jonka ikkunoissa näkyy sinistä lasia, '
+            + 'keskellä on kapea tornitalo ja oikealla leveä julkisivu. '
+            + 'Keskellä palaa katulyhty, jossa on kolme lamppua, ja '
+            + 'katutasossa on valaistuja kauppoja markiiseineen. '
+            + 'Etualalla liikkuu tiheä ihmisjoukko, ja vasemmalla on '
+            + 'sininen pressukatos.',
           lahde: 'Julian-G. Albert, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -42532,25 +42807,36 @@ const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Aden Crater.jpg',
           selite: 'Adenin Crater-kaupunginosa ylhäältä kuvattuna. Matalat '
             + 'vaaleat talot täyttävät kraatterin pohjan, ja takana '
-            + 'kohoaa kasviton ruskeanharmaa harjanne. Lahdella kelluu '
-            + 'toistakymmentä kapeaa venettä.',
+            + 'kohoaa koko kuvan levyinen ruskeanharmaa harjanne, jonka '
+            + 'rinteillä ei kasva mitään. Edessä on merenlahti, jossa '
+            + 'kelluu toistakymmentä kapeaa venettä, ja lahden ympäri '
+            + 'kulkee kivetty rantamuuri ja tie. Rannassa on kaksi '
+            + 'pyöreää paviljonkia ja puistokaistale, ja kuvan '
+            + 'alareunassa punakattoinen rakennusrivi.',
           lahde: 'Christina Hecker @ Deutsch-Jemenitische Gesellschaft, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gebouwen aan de kust van Aden in Jemen Aden. French & English consulates (titel op object), RP-F-00-5018-15.jpg',
-          selite: 'Adenin rantaviivaa 1800-luvun lopulla. Matalien '
+          selite: 'Adenin rantaviivaa 1800-luvun lopulla. Etualalla on '
+            + 'kivinen vuorovesiranta, jonka takana kaartuu hiekkainen '
+            + 'lahdenpohjukka; rannalla makaa yksi puutynnyri. Matalien '
             + 'valkoisten rakennusten rivissä on kaksikerroksinen talo, '
-            + 'jonka molemmissa kerroksissa kiertää avoin veranta. Kuvan '
-            + 'alle on kirjoitettu käsin: Aden. French & English '
-            + 'Consulates.',
+            + 'jonka molemmissa kerroksissa kiertää avoin veranta. Niiden '
+            + 'takana nousee porrasmainen kalliopenger, sen päällä lisää '
+            + 'rakennuksia ja kaksi korkeaa lipputankoa. Kuvan alle on '
+            + 'kirjoitettu käsin: Aden. French & English Consulates.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: '24 Aden (6) cisterne.jpg',
-          selite: 'Tawilan altaille johtava kuru Adenissa. Jyrkkien '
-            + 'harmaiden kallioseinämien välissä on kivestä muurattu '
-            + 'terassi valkoisine kaiteineen, ja terassilla seisoo kuuden '
-            + 'hengen ryhmä. Kurun perällä erottuu poikittainen muuri.',
+          selite: 'Tawilan altaille johtava kuru. Kummallakin puolella kohoaa '
+            + 'jyrkkä harmaa kallioseinämä, ja niiden välissä on kivestä '
+            + 'muurattu terassi valkoisine kaiteineen. Yläterassilla '
+            + 'seisoo kuusi ihmistä, joista vasemmanpuoleisin pitää '
+            + 'kameraa silmillään, ja alempana portaita nousee kaksi '
+            + 'ihmistä. Kurun perällä erottuu poikittainen muuri. '
+            + 'Taivaalla lentää useita lintuja, ja oikeassa reunassa '
+            + 'kasvaa yksi vihreä pensas.',
           lahde: 'Ljuba brank, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -42746,26 +43032,37 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Al Baleed Archaeological Park.jpg',
-          selite: 'Al-Baleedin kaivausalue iltavalossa. Hiekasta nousee '
-            + 'matalia kivimuureja ja perustusrivejä, ja niiden takana on '
-            + 'palmunlehtikatos ja tiheä palmurivistö. Kaukana hämärtyvät '
-            + 'vuoret.',
+          selite: 'Al-Baleedin kaivausalue iltavalossa. Etualalla on paljasta '
+            + 'hiekkaa ja siitä nousevia matalia kivimuureja ja '
+            + 'perustusrivejä, keskellä ladottu suorakaiteen muotoinen '
+            + 'muuri ja sen takana neljän puupilarin varaan tehty '
+            + 'palmunlehtikatos, jonka alla on punainen penkki. Taustalla '
+            + 'kulkee tiheä palmurivistö, sen takana matala vaalea '
+            + 'rakennus ja kaukana hämärtyvät vuoret. Taivas on pilvetön.',
           lahde: 'Juozas Šalna, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Darbat Waterfalls, Dhofar.jpg',
-          selite: 'Wadi Darbatin putoukset heinäkuussa khareef-kauden '
-            + 'aikaan. Vesi valuu useana leveänä verhona '
-            + 'kalkkikiviportaiden yli turkoosiin altaaseen, ja portaiden '
-            + 'välissä kasvaa tiheää vihreää ruohoa ja pensasta.',
+          selite: 'Wadi Darbatin putoukset heinäkuussa khareef-kauden aikaan. '
+            + 'Vesi valuu useana leveänä verhona kalkkikiviportaiden yli '
+            + 'turkoosiin altaaseen, ja portaiden päällä ja välissä '
+            + 'kasvaa tiheää vihreää ruohoa ja pensasta. Vasemmassa '
+            + 'reunassa on puun runko ja yläreunassa sen oksisto '
+            + 'vastavalossa, etualalla vedestä nousee kuivunut oksa ja '
+            + 'oikeassa reunassa on harmaita lohkareita. Kaukana '
+            + 'rinteellä seisoo ihmisiä ja pysäköityjä autoja.',
           lahde: 'Shobiha, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Oman, Wadi Dawkah, Land of Frankincense.jpg',
           selite: 'Wadi Dawkahin suitsukepuisto. Vaalealla sorakentällä '
-            + 'kasvaa harvassa kymmeniä matalia, leveälatvuksisia '
-            + 'suitsukepuita, ja tasanko jatkuu samanlaisena horisonttiin '
-            + 'asti. Puiden seassa kävelee kaksi ihmistä.',
+            + 'kasvaa kymmeniä matalia, leveälatvuksisia suitsukepuita '
+            + 'harvassa, ja tasanko jatkuu samanlaisena horisonttiin '
+            + 'asti. Puiden seassa kävelee kaksi ihmistä, toinen '
+            + 'valkoisessa ja toinen tummassa asussa. Oikeassa reunassa '
+            + 'on katos, jonka kaksi vaaleaa kangaskatetta nousevat '
+            + 'teräviksi kärjiksi puupilarien varaan, ja sen ympärillä '
+            + 'kiertää puinen kaide.',
           lahde: 'Dr. Thomas Liptak, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -42955,27 +43252,46 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Iraq. Mosul. Mosul bazaars and river scenes on the Tigris. The Tigris. Construction of river rafts on inflated goatskins. Mosul bridge seen in distance LOC matpc.16216.jpg',
-          selite: 'Tigrisin ranta Mosulissa vuonna 1932. Rannalla '
-            + 'sidotaan puuriu\'uista lauttaa, jonka kelluketta varten on '
-            + 'ladottu kymmeniä täyteen puhallettuja nahkasäkkejä. '
-            + 'Taustalla joen ylittää silta, joka lepää veneiden ja '
-            + 'matoilla verhottujen tukien varassa.',
+          selite: 'Tigrisin ranta Mosulissa vuonna 1932. Etualalla maassa on '
+            + 'pitkiä puuriukuja ja niistä sidottuja ristikoita, joiden '
+            + 'alle on ladottu kymmeniä täyteen puhallettuja nahkasäkkejä '
+            + 'lautan kelluketta varten. Rannalla työskentelee neljä '
+            + 'ihmistä: yksi seisoo polviaan myöten vedessä, yksi '
+            + 'kumartuu säkin yli, ja kaksi on lastin vieressä vaaleissa '
+            + 'vaatteissa ja päähuivissa. Taustalla joen yli kulkee '
+            + 'silta, joka lepää veneiden ja matoilla verhottujen tukien '
+            + 'varassa; kaiteellisella sillalla erottuu yksittäisiä '
+            + 'kulkijoita. Vastaranta on matalaa puurivistöä, ja taivas '
+            + 'on vaalea ja tyhjä.',
           lahde: 'Matson Collection, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Iraq. Mosul. A native courtyard LOC matpc.16205.jpg',
-          selite: 'Mosulilaisen talon sisäpiha vuonna 1932. Seinässä on '
-            + 'kaksi suurta teräväkärkistä holvikaarta, ja yläkerran '
-            + 'parven aukot on peitetty tiheillä puuristikoilla. Pihalla '
-            + 'seisoo kolme kartiomaista rakennelmaa muurauskerroksineen.',
+          selite: 'Mosulilaisen talon sisäpiha ylhäältä kuvattuna vuonna '
+            + '1932. Vasemmassa seinässä on kaksi suurta teräväkärkistä '
+            + 'holvikaarta, ja niiden viereen nousee kaiteeton '
+            + 'tiiliportaikko. Yläkerrassa kiertää parvi, jonka aukot on '
+            + 'peitetty tiheillä puuristikoilla, ja oikealla on korkea '
+            + 'rivi samanlaisia ristikkoikkunoita. Oikeanpuoleisen seinän '
+            + 'edessä seisoo kolme kartiomaista rakennelmaa, joiden '
+            + 'pinnassa näkyvät vaakasuorat muurauskerrokset. Niiden '
+            + 'vieressä seisoo yksi mies vaaleassa kaavussa ja tummassa '
+            + 'takissa. Pihan lattia on laattaa, ja alanurkassa on '
+            + 'saviruukku kivien päällä.',
           lahde: 'Matson Collection, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Iraq. Mosul. Mosul bazaars and river scenes on the Tigris. The vegetable market. Selling \'fakus,\' huge native cucumbers LOC matpc.16215.jpg',
-          selite: 'Vihannestori Mosulissa vuonna 1932. Maassa on '
-            + 'kasoittain pitkiä uurteisia fakus-kurkkuja, ja päähuiviin '
-            + 'pukeutunut mies leikkaa niistä yhtä veitsellä. Taustalla '
-            + 'häämöttää ihmisiä valkoisten kangaskatosten alla.',
+          selite: 'Vihannestori Mosulissa vuonna 1932. Maassa on kasa pitkiä, '
+            + 'uurteisia kurkkuja, ja vasemmalla niitä on toinen, '
+            + 'pienempi kasa. Etualalla mies ruudullisessa päähuivissa '
+            + 'kumartuu kasan yli ja leikkaa yhtä kurkkua veitsellä. '
+            + 'Hänen takanaan seisoo nuorempi mies päähuivissa pitkä '
+            + 'puuseiväs kädessä, ja hänen vierellään kaksi tummiin '
+            + 'viittoihin ja huiveihin pukeutunutta ihmistä. Oikeassa '
+            + 'reunassa kyykkii yksi ihminen. Taustalla häämöttää '
+            + 'vaaleisiin vaatteisiin pukeutuneita ihmisiä valkoisten '
+            + 'kangaskatosten alla.',
           lahde: 'Matson Collection, Wikimedia Commons (PD)',
         },
       ],
@@ -43175,26 +43491,48 @@ const KULTTUURI_KATEGORIAT = {
           tiedosto: '言問橋 - panoramio.jpg',
           selite: 'Kototoi-silta Sumida-joen yli. Turkoosiksi maalattu '
             + 'teräspalkkisilta lepää kahden kivipäällysteisen pilarin '
-            + 'varassa, ja palkin kylkeen on kiinnitetty sillan nimi '
-            + 'kolmena isona mustana merkkinä. Vastarannalla on asuin- ja '
-            + 'toimistotaloja.',
+            + 'varassa; kummankin pilarin juuressa on kaareva läpiaukko, '
+            + 'ja rannan puolella erottuu vielä kaksi matalampaa kaarta. '
+            + 'Palkin kylkeen on kiinnitetty sillan nimi kolmena isona '
+            + 'mustana merkkinä. Kannen reunassa kulkee vaaleansininen '
+            + 'kaide ja rivi kaarevia valaisinpylväitä. Vastarannalla on '
+            + 'asuintaloja, toimistotaloja ja kaksi punaista kylttiä, '
+            + 'joissa on valkoista tekstiä. Sillan alta paljastuu kivetty '
+            + 'rantapenger, jolla liikkuu pieniä kaukaisia ihmishahmoja. '
+            + 'Vesi on harmaanvihreää, taivas sininen ja pilvet '
+            + 'hattaroina.',
           lahde: 'Jun Matsuo, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Ameya-yokocho on a March morning, Tokyo, 2016.jpg',
-          selite: 'Ameya-yokochōn kuja Tokiossa maaliskuun aamuna. Kapea '
-            + 'katu on täynnä ihmisiä, ja kalatiskillä on riveittäin '
-            + 'lohifileitä ja pakattuja mereneläviä hintalappuineen. '
-            + 'Kujan yli kohoaa rautainen ratasilta.',
+          selite: 'Ameya-yokochōn kuja aamulla. Kapea katu on täynnä ihmisiä, '
+            + 'jotka kulkevat molempiin suuntiin markiisien alla. '
+            + 'Vasemmalla on kalatiski, jonka vihreällä matolla on '
+            + 'riveittäin lohifileitä ja pakattuja mereneläviä '
+            + 'hintalappuineen; tiskin takana seisoo valkoiseen '
+            + 'esiliinaan pukeutunut myyjä. Tiskin yläpuolella kohoaa '
+            + 'rautainen ratasilta ristikkoineen. Oikealla on kojuja, '
+            + 'keltaisia ja valkoisia kylttejä kanjimerkein, riippuvia '
+            + 'lamppuja ja punavalkoisia markiiseja. Etualalla kävelee '
+            + 'mies ruskeassa takissa, oranssissa lippalakissa ja '
+            + 'valkoisessa kasvomaskissa sekä nainen oliivinvihreässä '
+            + 'takissa sinistä olkalaukkua kantaen. Katu on kivetty ja '
+            + 'taivas valkoinen.',
           lahde: 'DimiTalen, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Chopsticks for sale in bulk (14163826889).jpg',
           selite: 'Syömäpuikkoja myynnissä Kappabashi-dōrin varrella. '
-            + 'Jokaisessa nipussa on oma kuviollinen paperivyö: '
-            + 'kirsikankukkia, vaahteranlehtiä, kurkia ja kaneja. '
-            + 'Japaninkielisessä kyltissä kerrotaan kotimaisesta '
-            + 'seteripuusta ja hinnasta.',
+            + 'Metallitelineellä on kolme riviä muovipusseja, joissa on '
+            + 'nippu vaaleita puisia puikkoja kärjet ylöspäin. Jokaisessa '
+            + 'nipussa on oma kuviollinen paperivyö: sinisiä pisteitä, '
+            + 'vihreää lehtikuviota, punavalkoista ruutua, vihreitä '
+            + 'vaahteranlehtiä, violettia kirsikankukkaa, punaisia '
+            + 'kaneja, valkoista havukuviota, punaisia kurkia ja '
+            + 'vaaleanpunaisia kukkia. Alareunassa on japaninkielinen '
+            + 'kyltti, jossa kerrotaan kotimaisesta seteripuusta, sekä '
+            + 'hintatieto. Teline seisoo kadun varressa, ja oikeassa '
+            + 'yläkulmassa näkyy kivetty jalkakäytävä.',
           lahde: 'Steven-L-Johnson, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -43412,28 +43750,47 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Views of Yekaterinburg (Aug-Sept 2024) - 3.jpg',
-          selite: 'Näkymä Jekaterinburgin kaupunginlammen yli. '
-            + 'Vastarannalla kohoaa valkoinen kirkko kullattuine '
-            + 'sipulikupoleineen ja kellotorneineen, ja sen takana nousee '
-            + 'tiheä rivi asuintaloja ja lasipintaisia tornitaloja.',
+          selite: 'Näkymä kaupunginlammen yli korkealta kuvattuna. Etualalla '
+            + 'on leveä harmaansininen vesi, jonka vasempaan reunaan '
+            + 'työntyy puiden peittämä niemeke; sen kärjessä seisoo '
+            + 'valkoinen, sinisin nauhoin raidoitettu tornimainen rakennus. '
+            + 'Vastarantaa reunustaa suora kivipenger ja sen takana '
+            + 'yhtenäinen puurivi. Rannan keskellä kohoaa valkoinen kirkko, '
+            + 'jolla on kullattuja sipulikupoleita ja kullattu kellotorni. '
+            + 'Oikealla kaartuu pitkä vaaleanvihreäkattoinen rakennus. '
+            + 'Taempana nousee tiheä rivi asuintaloja ja lasipintaisia '
+            + 'tornitaloja, ja niiden keskellä erottuu ohut ristikkomasto. '
+            + 'Taivas on siniharmaa ja pilvinen.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Yekaterinburg LeninAvenue35 005 2817.jpg',
-          selite: 'Sevastjanovin talo Leninin valtakadun varrella. '
-            + 'Kirkkaan turkoosin julkisivun päälle on ladottu valkoisia '
-            + 'ja tiilenpunaisia koristeita, ja kadunkulman pyöreän '
-            + 'tornin päällä lepää vaaleanvihreä kupoli pylväikön '
-            + 'varassa. Talon edessä on musta valurauta-aita.',
+          selite: 'Sevastjanovin talo Leninin valtakadun varrella. Julkisivu '
+            + 'on maalattu kirkkaan turkoosiksi, ja sen päälle on ladottu '
+            + 'valkoisia ja tiilenpunaisia koristeita: teräväkärkisiä '
+            + 'kaaria, ohuita pylväitä ja ristikuvioita. Kadunkulmassa on '
+            + 'pyöreä torniosa, jonka toisessa kerroksessa on rivi korkeita '
+            + 'teräväkärkisiä kaaria ja jonka päällä lepää vaaleanvihreä '
+            + 'kupoli valkoisen pylväikön varassa. Katonreunaa kiertää '
+            + 'läpimurrettu kaide. Talon edessä on musta valurauta-aita, '
+            + 'koristeellisia lyhtypylväitä ja rivi pieniä punalehtisiä '
+            + 'puita. Oikeassa reunassa on korkea monilamppuinen '
+            + 'valaisinpylväs ja valkoinen auto. Taivas on syvänsininen.',
           lahde: 'Ludvig14, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Vainera Street in Yekaterinburg (July 2023) - 7.jpg',
-          selite: 'Vainerin kävelykatu Jekaterinburgin keskustassa. Kadun '
-            + 'keskellä kulkee pitkä teräksinen kaarikatos, jonka alla on '
-            + 'penkkejä, ja sen molemmin puolin seisoo koristeellisia '
-            + 'lyhtypylväitä liikekilpineen. Kadun päässä kohoaa '
-            + 'sinilasinen tornitalo.',
+          selite: 'Vainerin kävelykatu keskikaupungilla. Kadun keskellä '
+            + 'kulkee pitkä teräksinen kaarikatos, jonka läpinäkyvän '
+            + 'katteen alla on penkkejä. Katoksen molemmin puolin seisoo '
+            + 'rivi koristeellisia lyhtypylväitä, joissa riippuu pyöreitä '
+            + 'liikekilpiä. Ihmisiä kävelee kadulla pareittain ja yksin, '
+            + 'muutama istuu penkeillä. Oikealla on vanhoja kivitaloja, '
+            + 'joiden katutasossa on kauppojen ja kahviloiden kylttejä, ja '
+            + 'niiden takana lasijulkisivuinen liiketalo. Kadun päässä '
+            + 'kohoaa sinilasinen tornitalo. Etualalla on matala '
+            + 'betonimuuri ja metallinen kaide, ja vasemmassa reunassa '
+            + 'kivijalusta on peitetty vihreällä suojaverkolla.',
           lahde: 'Vyacheslav Bukharov, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -43644,10 +44001,17 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Novosibirsk morning. road bridge across the Ob river (9250673741).jpg',
-          selite: 'Aamu Obin rannalla Novosibirskissa. Betoninen '
-            + 'maantiesilta kaartuu joen yli loivin holvikaarin leveiden '
-            + 'pilarien varassa, ja rannalla kohoaa kaupungin siluetti '
-            + 'kerrostaloineen ja rakennusnostureineen.',
+          selite: 'Aamu Obin rannalla. Kuvan poikki kaartuu betoninen '
+            + 'maantiesilta, jonka loivat holvikaaret nojaavat leveisiin '
+            + 'pilareihin keskellä jokea; sillan reunassa kulkee rivi '
+            + 'valaisinpylväitä, ja kannella erottuu tumma ajoneuvo. '
+            + 'Aurinko on noussut sillan yläpuolelle ja häikäisee ohuiden '
+            + 'pilvien läpi. Vasemmalla rannalla kohoaa kaupungin siluetti '
+            + 'kerrostaloineen ja rakennusnostureineen, veden rajassa '
+            + 'kulkee tiheä puurivi, ja oikealla taempana kulkee toinen '
+            + 'silta. Etualalla on leveä vaalea hiekkaranta, ja tyyni vesi '
+            + 'heijastaa sillan tummana viivana ja auringon valojuovana. '
+            + 'Taivas on kirkkaan sininen ja horisontissa utuinen.',
           lahde: 'Dmitry Karyshev from Novosibirsk, Russia, Wikimedia Commons '
             + '(CC BY 2.0)',
         },
@@ -43655,18 +44019,31 @@ const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Transib Novosibirsk.jpg',
           selite: 'Novosibirsk-Glavnyin rautatieasema ratapihan yli '
             + 'katsottuna. Vaaleanvihreän asemarakennuksen keskellä on '
-            + 'korkea puoliympyräinen kaari-ikkuna, ja katon harjalla '
-            + 'lukee kohokirjaimin NOVOSIBIRSK. Ratapihalla seisoo '
-            + 'vihreitä matkustajavaunuja.',
+            + 'korkea puoliympyräinen kaari-ikkuna, jonka molemmin puolin '
+            + 'nousee valkoisia pilastereita ja matalampia siipiä '
+            + 'ikkunariveineen; katon harjalla lukee kohokirjaimin '
+            + 'NOVOSIBIRSK. Etualan ratapihalla seisoo useilla raiteilla '
+            + 'vihreitä matkustajavaunuja, ja niiden yllä kulkee ajolankoja '
+            + 'kannattavia pylväitä ja poikkipuomeja. Oikeassa reunassa '
+            + 'ylittää raiteet teräksinen kävelysilta kaiteineen ja '
+            + 'portaineen. Aseman takana näkyy valkoisia kerrostaloja ja '
+            + 'yksi nostokurki. Aurinko paistaa, ja kaukaisuus on utuinen.',
           lahde: 'User:Aladux, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Novosibirsk traditional-house-at-city-crossing.JPG',
           selite: 'Yksikerroksinen hirsitalo katujen kulmassa keskellä '
-            + 'talvea. Salvotut hirret ovat tummuneet, ikkunoiden '
-            + 'koristepielet on maalattu vaaleansinisiksi, ja pihaa rajaa '
-            + 'matala lauta-aita. Kadun reunassa on korkea auratun lumen '
-            + 'valli.',
+            + 'talvea. Salvotut hirret ovat tummuneet, katolla on paksu '
+            + 'lumikerros, ja seinässä näkyy kaksi ikkunaa, joiden '
+            + 'koristepielet on maalattu vaaleansinisiksi. Talon edessä ja '
+            + 'takana kasvaa lehdettömiä puita, ja pihaa rajaa matala '
+            + 'ruskea lauta-aita umpinaisine portteineen. Kadun puolella on '
+            + 'korkea auratun lumen valli, ja asfaltti on jäisen kiiltävä. '
+            + 'Talon editse nousee betoninen pylväs, ja ilmassa risteilee '
+            + 'useita johtoja. Oikealla taustalla on vaaleanruskea '
+            + 'monikerroksinen rakennus, liikennevalo, liikennemerkkejä ja '
+            + 'aidan takana kaksi tummiin pukeutunutta kulkijaa. Taivas on '
+            + 'kalpean sininen, ja kaukana leijuu pakkasutua.',
           lahde: 'Stesso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -43873,29 +44250,44 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Irkutsk, Russia.jpg',
-          selite: 'Näkymä Irkutskin ylle korkealta. Angaran rannassa '
-            + 'kulkee kivetty kävelyväylä lyhtypylväineen, ja puiden '
-            + 'takaa nousee valkoinen kirkko punaoranssein listoin ja '
-            + 'kullanhohtoisin kupolein. Keskellä kaartuu leveä '
-            + 'monikaistainen katu.',
+          selite: 'Näkymä Irkutskin ylle korkealta. Keskellä kaartuu leveä '
+            + 'monikaistainen katu, jolla ajaa muutama auto ja jota '
+            + 'reunustavat korkeat betoniset tukimuurit. Vasemmalla virtaa '
+            + 'Angara; rannassa on kivetty kävelyväylä lyhtypylväineen, '
+            + 'nurmikaistaleita ja tumma patsas punaruskealla '
+            + 'graniittijalustalla. Vastarannalla erottuu matalia taloja ja '
+            + 'niiden takana loivia harjanteita. Oikealla puiden takaa '
+            + 'nousee valkoinen kirkko, jonka listat ovat punaoranssit ja '
+            + 'kupolit kullanhohtoiset ja jonka vieressä kohoaa korkea '
+            + 'kellotorni; taempana on vaaleita kerrostaloja. Taivas on '
+            + 'sininen ja pilvet ohuita, ja illan varjot venyvät kadun '
+            + 'poikki.',
           lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Cerkiew Kazańska w Irkucku 05.JPG',
-          selite: 'Kazanin Jumalanäidin kirkko Irkutskissa. Punatiilisiä '
-            + 'seiniä kiertävät valkoiseksi maalatut kaarilistat, pylväät '
-            + 'ja hammastetut reunanauhat. Katolta nousee useita '
-            + 'sinivalkoisiksi ruudutettuja sipulikupoleita kullattuine '
-            + 'risteineen.',
+          selite: 'Kazanin Jumalanäidin kirkko alaviistosta kuvattuna. Seinät '
+            + 'ovat punatiiltä, ja niitä kiertävät valkoiseksi maalatut '
+            + 'kaarilistat, pylväät ja hammastetut reunanauhat. Katolta '
+            + 'nousee useita sipulikupoleita, jotka on ruudutettu sinisellä '
+            + 'ja valkoisella ja joiden huipuilla on kullatut ristit. '
+            + 'Keskimmäisessä tornissa on kaariaukkoja ja niiden alla '
+            + 'parvekemainen kaide. Taivas on syvänsininen, ja siihen '
+            + 'piirtyy ohuita valkoisia pilviä.',
           lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '130 kvartal Irkutsk 1.jpg',
-          selite: 'Kesäpäivä Irkutskin 130. korttelin kävelykadulla. '
-            + 'Tummaksi maalatun hirsitalon ikkunanpielet ja '
-            + 'räystäslistat on koristeltu vaalealla puuleikkauksella, ja '
-            + 'päädyssä kohoaa pieni torni. Kadun varrella on puuterassi '
-            + 'ja rivi kojuja.',
+          selite: 'Kesäpäivä 130. korttelin kävelykadulla. Oikealla seisoo '
+            + 'tummaksi maalattu hirsitalo, jonka ikkunanpielet ja '
+            + 'räystäslistat on koristeltu vaalealla puuleikkauksella ja '
+            + 'jonka päädyssä kohoaa pieni torni; seinässä on punainen '
+            + 'kyltti kyrillisin kirjaimin. Talon edessä on puinen terassi, '
+            + 'portaat ja pystyyn nostettu mainostaulu. Kadulla kävelee '
+            + 'ihmisiä kesävaatteissa, ja katu on päällystetty vaalealla '
+            + 'laatalla. Vasemmalla jatkuu toinen puutalo ja sen takana '
+            + 'rivi kojuja. Taivas on kirkas ja kadun yllä risteilee '
+            + 'sähköjohtoja.',
           lahde: 'Trasprd, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -44103,29 +44495,52 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'Якутск.jpg',
-          selite: 'Jakutsk talvipäivänä korkealta kuvattuna. Lumisen '
-            + 'kadun takana leviää matalien puutalojen kortteli, ja yhtä '
-            + 'kaksikerroksista puutaloa verhoillaan parhaillaan '
-            + 'uudelleen vaalealla vinolaudalla. Taustalla nousee rivi '
-            + 'kerrostaloja ja rakennusnostureita.',
+          selite: 'Jakutsk talvipäivänä korkealta kuvattuna. Etualassa kulkee '
+            + 'luminen katu, jolla ajaa puolenkymmentä autoa ja jonka '
+            + 'reunalla seisoo neljän hengen ryhmä pysäköidyn valkoisen '
+            + 'auton vieressä; kadun ja katsojan välissä on tasainen '
+            + 'lumikenttä. Kadun takana leviää matalien puutalojen '
+            + 'kortteli, jonka katot ovat lumen peitossa ja pihat erotettu '
+            + 'pelti- ja lauta-aidoin. Keskellä erottuu kaksikerroksinen '
+            + 'puutalo, jota verhoillaan parhaillaan uudelleen: toinen '
+            + 'seinä on vanhaa tummanruskeaa lautaa, toinen vastanaulattua '
+            + 'vaaleaa vinolautaa, ja ikkunoissa on valkoiset karmit. '
+            + 'Taustalla nousee rivi kerrostaloja, keltaisia, harmaita ja '
+            + 'sinertäviä, ja niiden lomassa seisoo rakennusnostureita. '
+            + 'Oikealla kohoaa ohut valkoinen savujuova. Taivas on vaalean '
+            + 'siniharmaa ja horisontti utuinen.',
           lahde: 'Якупова Инна, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Якутский острог (восстановленный).jpg',
-          selite: 'Jakutskin ostrogin puutornin jäljennös syyspäivänä. '
-            + 'Torni on salvottu pyöreistä hirsistä, ja harmaan aumakaton '
-            + 'päällä on pieni vartiokoju. Julkisivusta työntyy ulos '
-            + 'katettu parveke, jonka kaiteessa toistuu vinoruutuinen '
-            + 'puuleikkaus.',
+          selite: 'Jakutskin ostrogin puutornin jäljennös syyspäivänä. Torni '
+            + 'on salvottu pyöreistä hirsistä, ja nurkissa hirrenpäät '
+            + 'työntyvät ristiin. Harmaan aumakaton alta pistää esiin rivi '
+            + 'teräväkärkisiä orsia. Katon päällä on pieni vartiokoju, '
+            + 'jossa on aukot joka sivulla, veistetty kaide ja terävä '
+            + 'huippu ohuine tankoineen. Julkisivun keskeltä työntyy ulos '
+            + 'katettu parveke: sen kaiteessa toistuu vinoruutuinen '
+            + 'puuleikkaus ja aukkojen yläreunat ovat aaltoilevat. '
+            + 'Parvekkeen alla on kaariaukossa kaksilehtinen lauta-ovi, '
+            + 'jossa roikkuu valkoinen ilmoituslappu, ja ovelle nousee '
+            + 'lankuista tehty luiska. Tornia ympäröivät keltalehtiset '
+            + 'koivut, ja oikealla häämöttää sinilasinen rakennus.',
           lahde: 'Prok of eva, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Вид на городской пляж, 203-мкр Якутск 18.06.2026.jpg',
-          selite: 'Jakutskin kaupungin uimaranta kesäkuussa. '
-            + 'Hiekkarannalla ja vedessä on uimapukuisia ihmisiä, ja '
-            + 'rantaa vartioi kaksi ristikkojalkaista uimavalvojan '
-            + 'tornia. Törmän takana nousee toistakymmentä vaaleaa '
-            + 'kerrostaloa.',
+          selite: 'Kaupungin uimaranta kesäkuussa. Vasemmalla lepää tyyni '
+            + 'joenhaara, ja hiekkaranta kaartuu loivana kaarena kuvan '
+            + 'poikki. Vedessä ja rantaviivalla on uimapukuisia ihmisiä, '
+            + 'hiekalla makaa punainen kumivene, ja rannan yli kulkevan '
+            + 'puisen kulkusillan varrella on rivi valkoisia '
+            + 'aurinkotuoleja. Keskellä ja oikeassa reunassa seisoo kaksi '
+            + 'samanlaista uimavalvojan tornia: vaaleat ristikkojalat ja '
+            + 'niiden päällä tummansiniset säleikkökaiteet ja katos. Törmän '
+            + 'päällä kulkee kaide, ja sen takana nousee toistakymmentä '
+            + 'vaaleaa kerrostaloa. Vasemmalla horisontissa on matalaa '
+            + 'metsää ja yksi sähkölinjan masto. Taivas on sininen ja siinä '
+            + 'on ohuita valkoisia pilviä.',
           lahde: 'SmallSonMarex, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -44340,28 +44755,52 @@ const KULTTUURI_KATEGORIAT = {
       kansikuvat: [
         {
           tiedosto: 'The Bay of Nagaev, Magadan.jpg',
-          selite: 'Nagajevanlahden ranta syyspäivänä. Nurmikummulla '
-            + 'seisoo valkoinen majakkatorni, jonka jalustaa kiertää '
-            + 'punainen nauha, ja lahden takana kohoavat siniharmaat '
-            + 'vaarat. Nurmella makaa paksuja ajopuunrunkoja.',
+          selite: 'Nagajevanlahden ranta syyspäivänä. Oikealla kohoaa '
+            + 'nurmikummulla valkoinen majakkatorni, jonka jalustan '
+            + 'alareunaa kiertää punainen nauha ja jonka kylkeen on jätetty '
+            + 'pystyriviin neljä pientä tummanvihreää ikkunaa. Tornin '
+            + 'huipulla on musta kaide ja sen sisällä tumma lyhtykoppi, '
+            + 'jalustan seinässä tummanpunainen ovi. Kummun poikki kulkee '
+            + 'kivetty polku, betoniportaita ja teräskaiteita, ja etualalla '
+            + 'nurmella makaa paksuja ajopuunrunkoja. Vasemmalla '
+            + 'levittäytyy tyyni lahti, jonka takana kohoavat siniharmaat, '
+            + 'loivakaartoiset vaarat. Rannassa kulkee kapea asfalttitie ja '
+            + 'yksi ohut lyhtypylväs. Taivas on sininen ja täynnä valkoisia '
+            + 'poutapilviä.',
           lahde: 'Евгений Пиманов, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Trinity Cathedral in Magadan.jpg',
-          selite: 'Pyhän Kolminaisuuden katedraali matalassa '
-            + 'talviauringossa. Valkoisesta rakennuksesta nousee kolme '
-            + 'kullattua sipulikupolia risteineen, ja kaarevan '
-            + 'sisäänkäyntikatoksen päällä on neljäs, pienempi kupoli. '
-            + 'Katokselle nousee leveä kiviportaikko.',
+          selite: 'Pyhän Kolminaisuuden katedraali matalassa talviauringossa. '
+            + 'Valkoisesta rakennuksesta nousee kolme suurta kullattua '
+            + 'sipulikupolia; keskimmäinen on korkein, ja jokaisen huipulla '
+            + 'on kultapallo ja koristeellinen risti, jonka alin poikkipuu '
+            + 'on vinossa. Kupolit lepäävät valkoisilla lieriötorneilla, '
+            + 'joissa on korkeita kaariaukkoja; oikeanpuoleisen aukosta '
+            + 'erottuu kello. Kattolinjan muodostaa rivi puoliympyrän '
+            + 'muotoisia kaaria. Seinät on jaettu leveisiin '
+            + 'pystypilareihin, joiden välissä on kapeita kaari-ikkunoita. '
+            + 'Keskellä on kaareva sisäänkäyntikatos, jonka päällä on '
+            + 'pienempi kullattu kupoli ja jonka otsassa on pyöreä '
+            + 'mosaiikkikuva. Katokselle nousee leveä kiviportaikko, ja sen '
+            + 'molemmin puolin kaartuu valkoinen pylväskaide.',
           lahde: 'Евгений Пиманов, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Lenin Avenue in Magadan.jpg',
-          selite: 'Leninin valtakatu Magadanissa aurinkoisena päivänä. '
-            + 'Kadun varrella seisoo pitkä rivi vaaleankeltaisia '
-            + 'nelikerroksisia taloja, joiden tummanpunaisia kattoja '
-            + 'kiertää musta kaide ja rivi kivimaljakoita. Talojen edessä '
-            + 'kasvaa havupuita toiseen kerrokseen asti.',
+          selite: 'Leninin valtakatu aurinkoisena päivänä. Kadun varrella '
+            + 'seisoo pitkä rivi vaaleankeltaisia nelikerroksisia taloja, '
+            + 'joilla on tummanpunaiset katot; katonreunaa kiertää musta '
+            + 'metallikaide, ja sen lomassa seisoo rivi valkoisia jalustoja '
+            + 'pienine kivimaljakoineen. Lähimmän talon keskiosassa on '
+            + 'korkeat pilasterit ja niiden yllä kaareva koristepääty. '
+            + 'Talojen edessä on rivi havupuita, jotka yltävät toisen '
+            + 'kerroksen ikkunoihin, ja niiden lomassa lyhtypylväitä. Kadun '
+            + 'poikki on maalattu suojatie, ja liikennemerkkien joukossa '
+            + 'erottuu nopeusrajoitus 40. Oikealla ajaa punavalkoinen '
+            + 'pikkubussi ja muutama henkilöauto. Etualalla kävelee kolme '
+            + 'ihmistä, joista yhdellä on keltainen kassi. Taivaalla on '
+            + 'valkoisia ja harmaita pilviä, ja katua halkovat sähköjohdot.',
           lahde: 'Евгений Пиманов, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -73300,7 +73739,15 @@ const KAUPUNKIKARTAT = {
     satelliitti: 'assets/kartat/berliini-satelliitti.jpg',
     satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
       + '(muokattua Copernicus Sentinel -dataa)',
-    rajat: { pohjoinen: 52.54, etela: 52.485, lansi: 13.34, ita: 13.46 },
+    /*
+     * Rajaus leveni neljänneksellä 15.8.2026 (omistajan tilaus:
+     * "voisi jatkua hieman nykyistä laajemmalle alueelle"): 8,1 × 6,1
+     * km → 10,2 × 7,7 km samasta keskipisteestä. Kohdepisteet
+     * lasketaan tästä lohkosta (karttapiste), joten ne siirtyivät
+     * kuvassa itsestään — käsin ei korjattu mitään. Sekä piirros että
+     * satelliittikuva on haettu uudelleen tällä rajauksella.
+     */
+    rajat: { pohjoinen: 52.547, etela: 52.478, lansi: 13.325, ita: 13.475 },
     esittely: 'Berliini on rakennettu veden ja metsän keskelle: '
       + 'siltoja on noin 1 700 — moninkertaisesti Venetsian verran — '
       + 'ja kolmasosa kaupungista on puistoa, metsää tai järveä. '
@@ -172216,9 +172663,38 @@ class UI {
     for (const kappale of (kartta.esittely ?? '').split('\n\n').filter(Boolean)) {
       lohko.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
     }
-    const kotelo = html('div', 'maakartta-kotelo kaupunkikartta-kotelo');
+    /*
+     * ZOOMATTAVA KARTTAIKKUNA (omistajan tilaus 14.8.2026: "voiko
+     * kaupunkikartasta tehdä zoomattavaa ... pyörisi nykyisessä
+     * ikkunassa").
+     *
+     * Kehys on kiinteä ikkuna, jonka koko ei muutu; lava on sen sisällä
+     * oleva liikkuva taso, jolle KAIKKI kartan osat kuuluvat — kuva,
+     * kohdepisteet ja mittajana. Siksi zoomia ei tarvitse ohjelmoida
+     * kuin yhteen paikkaan: pisteet ja jana ovat prosentteina lavasta,
+     * joten ne seuraavat muunnosta itsestään eikä yhtäkään
+     * koordinaattia lasketa uudelleen. Sama pätee näkymävipuun:
+     * piirros ja satelliittikuva ovat samassa rajauksessa, joten
+     * zoomiasento säilyy näkymää vaihdettaessa sellaisenaan.
+     */
+    const kehys = html('div', 'kartta-kehys');
+    /*
+     * Kehys on näppäimistöllä oma kohteensa, jotta zoom ei jää
+     * pelkäksi eleeksi: plus ja miinus suurentavat, nuolet siirtävät
+     * zoomattua karttaa ja nolla palauttaa koko kartan.
+     */
+    kehys.tabIndex = 0;
+    kehys.setAttribute('role', 'group');
+    kehys.setAttribute(
+      'aria-label',
+      'Kartta. Suurenna plus- ja miinusnäppäimillä, siirrä nuolilla, palauta nollalla.',
+    );
+    const kotelo = html('div', 'maakartta-kotelo kaupunkikartta-kotelo kartta-lava');
     const kuva = document.createElement('img');
     kuva.alt = 'Kaupungin kartta';
+    // Hiiren raahaus panoroi karttaa; ilman tätä selain aloittaisi
+    // sen sijaan oman kuvanvetonsa.
+    kuva.draggable = false;
     // Oma julistekartta on paikallinen tiedosto (assets/kartat/);
     // Commons-pohjainen kartta haetaan peilin kautta kuten kuvat.
     if (kartta.polku) kuva.src = kartta.polku;
@@ -172302,6 +172778,13 @@ class UI {
       }
       const vihje = html('span', 'kohde-vihje', k.nimi);
       vihje.setAttribute('aria-hidden', 'true');
+      /*
+       * Vihje aukeaa ympyrän YLÄPUOLELLE, mutta zoomattava kartta on
+       * leikkaava ikkuna (ks. kartta-kehys) — yläreunan kohteilla
+       * vihje jäisi leikkauksen taakse. Ylimmät kohteet saavat sen
+       * siksi ympyrän alle. Raja on prosenttia kuvan korkeudesta.
+       */
+      if (p.y < 14) piste.classList.add('vihje-alle');
       piste.appendChild(vihje);
       kotelo.appendChild(piste);
       selitteet.appendChild(selite);
@@ -172329,6 +172812,29 @@ class UI {
      * satelliittinäkymään sitten kun näitä on useampia.
      */
     const lahderivi = html('p', 'lahde', kartta.lahde);
+    /*
+     * Kartan työkalurivi: zoomipainikkeet vasemmalla, näkymävipu
+     * oikealla. Rivi on kartan yllä, koska kuvan päälle asetetut
+     * painikkeet peittäisivät juuri sen kohdan, jota katsotaan — ja
+     * koska näkymävipu on ollut siinä 14.8.2026 alkaen.
+     */
+    const tyokalut = html('div', 'kartta-tyokalut');
+    const zoomiRyhma = html('div', 'kartta-zoomi');
+    zoomiRyhma.setAttribute('role', 'group');
+    zoomiRyhma.setAttribute('aria-label', 'Kartan suurennus');
+    const zoomiNappi = (merkki, nimi) => {
+      const nappi = html('button', 'kartta-vipu-nappi kartta-zoomi-nappi', merkki);
+      nappi.type = 'button';
+      nappi.setAttribute('aria-label', nimi);
+      nappi.title = nimi;
+      zoomiRyhma.appendChild(nappi);
+      return nappi;
+    };
+    const napit = {
+      loitonna: zoomiNappi('−', 'Loitonna karttaa'),
+      lahenna: zoomiNappi('+', 'Lähennä karttaa'),
+    };
+    tyokalut.appendChild(zoomiRyhma);
     if (kartta.satelliitti && kartta.polku) {
       const nakymat = [
         { satelliitissa: false, nimi: 'Piirros', ikoni: VIIVA_IKONIT.taitekartta },
@@ -172362,12 +172868,311 @@ class UI {
         nappi.addEventListener('click', () => naytaNakyma(nakymat[i].satelliitissa));
       });
       naytaNakyma(this.satelliittiNakyma === kaupunki);
-      lohko.appendChild(vipu);
+      tyokalut.appendChild(vipu);
     }
-    lohko.appendChild(kotelo);
+    lohko.appendChild(tyokalut);
+    kehys.appendChild(kotelo);
+    lohko.appendChild(kehys);
     lohko.appendChild(selitteet);
     lohko.appendChild(lahderivi);
     kohde.appendChild(lohko);
+    this.kytkeKarttaZoom(kehys, kotelo, napit);
+  }
+
+  /**
+   * Kohdekartan zoom ja panorointi (omistajan tilaus 14.8.2026:
+   * *"voiko kaupunkikartasta tehdä zoomattavaa (myös
+   * satelliittikartasta) ... pyörisi nykyisessä ikkunassa"*).
+   *
+   * Kartta ei aukea omaan ikkunaansa eikä kasva sivulla: lava liikkuu
+   * kiinteän kehyksen sisällä CSS-muunnoksella
+   * `translate(tx, ty) scale(k)`, origo lavan vasemmassa ylänurkassa.
+   * Kaikki eleet päätyvät samaan kolmeen lukuun, ja piirto tehdään
+   * yhdessä paikassa (piirra) — siksi rajaus ja reunojen pitely ovat
+   * varmasti samat riippumatta siitä, tuliko liike sormesta, rullasta,
+   * napista vai näppäimistöstä.
+   *
+   * ZOOMAAMATTOMANA MUUNNOSTA EI OLE LAINKAAN (tyhjä transform), ei
+   * edes `scale(1)`. Muunnos tekee elementistä oman rasterointi- ja
+   * sisältökontekstinsa, ja kartan hiusviivat piirtyvät silloin eri
+   * tavalla. Kun kerroin on 1, sivun on oltava pikselilleen sama kuin
+   * ennen tätä ominaisuutta.
+   *
+   * ELE EI SAA VUOTAA LEHDEN SELAUKSEEN. Kortilla on pyyhkäisyselaus ja
+   * ylä-/alareunan napautusvieritys (kytkeTutkiSelaus), ja molemmat
+   * lukevat samoja tapahtumia kuin tämä. Siksi:
+   *   - zoomaamaton kartta EI ota yhden sormen raahausta lainkaan,
+   *     joten lehteä selataan kartan päältäkin kuten ennen;
+   *   - zoomattuna raahaus panoroi ja tapahtuma pysäytetään kehykseen;
+   *   - nipistyksen ajan kaikki osoitintapahtumat pysäytetään kehykseen,
+   *     ettei kahden sormen liike näyttäisi pyyhkäisyltä;
+   *   - raahauksen ja tuplanapautuksen perään jätetään kertakäyttöinen
+   *     napsautustulppa, ettei ele avaa kohdetta tai vieritä sivua.
+   *
+   * NIPISTYS LUETAAN KOSKETUSTAPAHTUMISTA, ei osoitintapahtumista.
+   * Sama havainto kuin pelilaudalla (asennaPanorointi): iOS aloittaa
+   * oman sivunzoominsa `touch-action`-arvosta riippumatta ja peruu
+   * osoitintapahtumat kesken eleen — vain touchmoven preventDefault
+   * pysäyttää sen.
+   */
+  kytkeKarttaZoom(kehys, lava, napit) {
+    const PIENIN = 1;
+    // Yläraja on kolme: piirretty PNG on 1600 px leveä ja näkyy noin
+    // 600 pikselin palstalla, joten kolminkertaisenakin näytetään yhä
+    // kuvan omia pikseleitä eikä selaimen venytystä.
+    const SUURIN = 3;
+    const ASKEL = 1.5;
+    let k = 1;
+    let tx = 0;
+    let ty = 0;
+    let raahaus = null;
+    let raahattiin = false;
+    let nipistys = null;
+    let elettaKesken = false;
+    let edellinenNapautus = null;
+
+    const rajaa = (arvo, ala, yla) => Math.min(yla, Math.max(ala, arvo));
+
+    const piirra = (silea = false) => {
+      const W = lava.offsetWidth;
+      const H = lava.offsetHeight;
+      k = rajaa(k, PIENIN, SUURIN);
+      /*
+       * Panorointi rajataan kuvan reunoihin: lavan on peitettävä kehys
+       * joka asennossa, joten siirto mahtuu välille [koko*(1−k), 0].
+       * Kerroin 1 kutistaa välin nollaan — kartta palaa siis kohdalleen
+       * itsestään, kun loitonnetaan pohjaan asti.
+       */
+      tx = rajaa(tx, W * (1 - k), 0);
+      ty = rajaa(ty, H * (1 - k), 0);
+      const zoomattu = k > 1.001;
+      lava.classList.toggle('silea', silea && !this.reducedMotion);
+      lava.style.transform = zoomattu
+        ? `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px) scale(${k.toFixed(4)})`
+        : '';
+      // Pisteet, vihjeet ja mittajanan viivat vastaskaalataan tällä,
+      // jottei numeroympyrä paisu kolminkertaiseksi zoomatessa.
+      lava.style.setProperty('--zoom', k.toFixed(4));
+      kehys.classList.toggle('zoomattu', zoomattu);
+      napit.lahenna.disabled = k >= SUURIN - 0.001;
+      napit.loitonna.disabled = !zoomattu;
+    };
+
+    /**
+     * Näytön piste lavan omaan (zoomaamattomaan) koordinaatistoon.
+     * getBoundingClientRect kertoo MUUNNETUN laatikon, ja koska
+     * skaalaus tapahtuu origon ympäri, muunnoksen origo on
+     * `rect.left − tx`. Mittaus elementistä eikä asettelusta on tässä
+     * sama valinta kuin pelilaudalla: se kestää sen, että lehti on
+     * vieritetty tai kortti liikkuu.
+     */
+    const lavalle = (asiakasX, asiakasY) => {
+      const r = lava.getBoundingClientRect();
+      return { x: asiakasX - (r.left - tx), y: asiakasY - (r.top - ty) };
+    };
+
+    /** Zoomaa niin, että annettu näytön piste pysyy paikallaan. */
+    const zoomaa = (uusi, asiakasX, asiakasY, silea = false) => {
+      const kohde = rajaa(uusi, PIENIN, SUURIN);
+      if (Math.abs(kohde - k) < 0.0005) return;
+      const m = lavalle(asiakasX, asiakasY);
+      const suhde = kohde / k;
+      // t' = m − (m − t) · suhde pitää sormen (tai osoittimen) alla
+      // olevan kohdan paikallaan.
+      tx = m.x - (m.x - tx) * suhde;
+      ty = m.y - (m.y - ty) * suhde;
+      k = kohde;
+      piirra(silea);
+    };
+
+    /** Napeista ja näppäimistöstä zoomataan kehyksen keskipisteeseen. */
+    const keskelta = (uusi) => {
+      const r = kehys.getBoundingClientRect();
+      zoomaa(uusi, r.left + r.width / 2, r.top + r.height / 2, true);
+    };
+
+    const nollaa = () => { k = 1; tx = 0; ty = 0; piirra(true); };
+
+    /*
+     * Kertakäyttöinen napsautustulppa eleen perään: raahaus ei saa
+     * avata kohteen juttua eikä laukaista reunakaistan vieritystä.
+     * Tulppa puretaan ajastimella, koska napsautusta ei aina tule
+     * (sormi voi nousta kehyksen ulkopuolella) eikä se saa jäädä
+     * odottamaan seuraavaa oikeaa napautusta.
+     */
+    const nielaiseNapsautus = () => {
+      const nielu = (e) => { e.preventDefault(); e.stopPropagation(); };
+      kehys.addEventListener('click', nielu, { capture: true, once: true });
+      setTimeout(() => kehys.removeEventListener('click', nielu, true), 350);
+    };
+
+    napit.lahenna.addEventListener('click', () => keskelta(k * ASKEL));
+    napit.loitonna.addEventListener('click', () => keskelta(k / ASKEL));
+
+    /*
+     * RULLA. Kartan yli rullaaminen zoomaa, mutta rajalla tapahtuma
+     * päästetään läpi: zoomaamattoman kartan yli alaspäin rullaava
+     * lukija jatkaa juttua kuten ennenkin, ja täyteen zoomatun kartan
+     * yli sisäänpäin rullaava pääsee samoin eteenpäin. Ilman tätä
+     * poikkeusta kartta olisi lehden keskellä hiirilukko.
+     */
+    kehys.addEventListener('wheel', (e) => {
+      const sisaan = e.deltaY < 0;
+      if (sisaan ? k >= SUURIN - 0.001 : k <= PIENIN + 0.001) return;
+      e.preventDefault();
+      // deltaMode: 0 = pikseliä, 1 = riviä, 2 = sivua.
+      const kerroin = e.deltaMode === 1 ? 16 : (e.deltaMode === 2 ? 400 : 1);
+      zoomaa(k * Math.exp((-e.deltaY * kerroin) / 620), e.clientX, e.clientY);
+    }, { passive: false });
+
+    /** Osoitintapahtumat eivät saa vuotaa selaukseen kesken eleen. */
+    const suojaa = (e) => { if (elettaKesken) e.stopPropagation(); };
+
+    kehys.addEventListener('pointerdown', (e) => {
+      raahattiin = false;
+      suojaa(e);
+      // Zoomaamaton kartta ei ota raahausta: silloin lehden pyyhkäisy-
+      // selaus toimii kartan päältäkin täsmälleen kuten ennen.
+      if (elettaKesken || k <= PIENIN + 0.001) return;
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      /*
+       * Kohteen numeroympyrästä EI aloiteta panorointia. Raahaus ottaa
+       * osoittimen kiinni (setPointerCapture), ja kaapatun osoittimen
+       * napsautus ei enää osu nappiin — mitattuna: zoomatussa kartassa
+       * kohteen napautus ei avannut juttua lainkaan. Ympyrä on pieni,
+       * joten sen menettäminen panoroinnin lähtöalueena ei maksa
+       * mitään; kartta on ympärillä.
+       */
+      if (e.target.closest?.('button, a')) return;
+      raahaus = { id: e.pointerId, x: e.clientX, y: e.clientY, tx, ty };
+      kehys.setPointerCapture?.(e.pointerId);
+      e.stopPropagation();
+    });
+
+    kehys.addEventListener('pointermove', (e) => {
+      suojaa(e);
+      if (!raahaus || e.pointerId !== raahaus.id) return;
+      const dx = e.clientX - raahaus.x;
+      const dy = e.clientY - raahaus.y;
+      // Muutaman pikselin heilahdus on napautus eikä raahaus — muuten
+      // kohteen avaaminen epäonnistuisi vapisevalla sormella.
+      if (!raahattiin && Math.hypot(dx, dy) < 4) return;
+      raahattiin = true;
+      tx = raahaus.tx + dx;
+      ty = raahaus.ty + dy;
+      piirra();
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    const paataRaahaus = (e) => {
+      if (!raahaus || e.pointerId !== raahaus.id) return;
+      raahaus = null;
+      if (!raahattiin) return;
+      nielaiseNapsautus();
+      e.stopPropagation();
+    };
+    kehys.addEventListener('pointercancel', paataRaahaus);
+
+    /*
+     * TUPLANAPAUTUS ilman dblclick-tapahtumaa. Kosketuslaitteiden
+     * dblclick on epäluotettava, ja jos molempia kuunneltaisiin,
+     * lähennys ja loitonnus kumoaisivat toisensa samasta eleestä.
+     * Napautus kohteen ympyrään ei zoomaa vaan avaa jutun kuten ennen.
+     */
+    kehys.addEventListener('pointerup', (e) => {
+      suojaa(e);
+      paataRaahaus(e);
+      if (raahattiin || elettaKesken) return;
+      if (e.target.closest?.('button, a')) return;
+      const osuma = edellinenNapautus
+        && e.timeStamp - edellinenNapautus.aika < 380
+        && Math.hypot(e.clientX - edellinenNapautus.x, e.clientY - edellinenNapautus.y) < 30;
+      edellinenNapautus = osuma ? null : { aika: e.timeStamp, x: e.clientX, y: e.clientY };
+      if (!osuma) return;
+      if (k > PIENIN + 0.001) nollaa();
+      else zoomaa(2, e.clientX, e.clientY, true);
+      e.preventDefault();
+      e.stopPropagation();
+      nielaiseNapsautus();
+    });
+
+    /* --- nipistys (kosketustapahtumat, ks. metodin kommentti) --- */
+    const kaksiSormea = (e) => {
+      const [a, b] = [e.touches[0], e.touches[1]];
+      return {
+        etaisyys: Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY),
+        keski: { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 },
+      };
+    };
+
+    kehys.addEventListener('touchstart', (e) => {
+      if (e.touches.length < 2) return;
+      const { etaisyys, keski } = kaksiSormea(e);
+      // Aivan vierekkäiset sormet antaisivat jakolaskussa mitä tahansa.
+      if (etaisyys < 24) return;
+      const m = lavalle(keski.x, keski.y);
+      nipistys = {
+        etaisyys,
+        kerroin: k,
+        // Sormien alla oleva kartan piste eleen alussa. Kun se
+        // pidetään sormien alla koko eleen ajan, nipistys myös panoroi
+        // — kaksi sormea siirtää ja suurentaa samalla kertaa.
+        piste: { x: (m.x - tx) / k, y: (m.y - ty) / k },
+      };
+      elettaKesken = true;
+      raahaus = null;
+      raahattiin = true;
+      edellinenNapautus = null;
+    }, { passive: false });
+
+    kehys.addEventListener('touchmove', (e) => {
+      if (!nipistys || e.touches.length < 2) return;
+      // Vain tämä pysäyttää Safarin oman sivunzoomin (ks. metodin
+      // kommentti) — touch-action ei siihen riitä.
+      e.preventDefault();
+      e.stopPropagation();
+      const { etaisyys, keski } = kaksiSormea(e);
+      k = rajaa((nipistys.kerroin * etaisyys) / nipistys.etaisyys, PIENIN, SUURIN);
+      const m = lavalle(keski.x, keski.y);
+      tx = m.x - nipistys.piste.x * k;
+      ty = m.y - nipistys.piste.y * k;
+      piirra();
+    }, { passive: false });
+
+    const kosketusLoppui = (e) => {
+      if (e.touches.length < 2) nipistys = null;
+      // Ele on ohi vasta kun ruudulla ei ole yhtään sormea: muuten
+      // toisen sormen irrotus päästäisi lopun pyyhkäisynä läpi.
+      if (e.touches.length === 0) elettaKesken = false;
+    };
+    kehys.addEventListener('touchend', kosketusLoppui);
+    kehys.addEventListener('touchcancel', kosketusLoppui);
+
+    /*
+     * NÄPPÄIMISTÖ. Nuolet vaihtavat lehden sivua (kytkeTutkiSelaus),
+     * joten zoomattu kartta ottaa ne itselleen ja pysäyttää ne — mutta
+     * vain zoomattuna, jotta selaus toimii muuten ennallaan.
+     */
+    const NUOLET = {
+      ArrowLeft: { x: 1, y: 0 }, ArrowRight: { x: -1, y: 0 },
+      ArrowUp: { x: 0, y: 1 }, ArrowDown: { x: 0, y: -1 },
+    };
+    kehys.addEventListener('keydown', (e) => {
+      const nuoli = NUOLET[e.key];
+      if (e.key === '+' || e.key === '=') keskelta(k * ASKEL);
+      else if (e.key === '-') keskelta(k / ASKEL);
+      else if (e.key === '0') nollaa();
+      else if (nuoli && k > PIENIN + 0.001) {
+        tx += nuoli.x * 48;
+        ty += nuoli.y * 48;
+        piirra(true);
+      } else return;
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    piirra();
   }
 
   /**
@@ -177673,7 +178478,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
-  { v: 679, teksti: 'Kaupunkilehtien kansikuvien kuvatekstit lyhennettiin' },
+  { v: 680, teksti: 'kohdekartta zoomattavaksi, Berliini laajempi ja terävämpi' },
   { v: 678, teksti: 'kohtaamiset ja kaariaarteet lukijaäänelle, äänite varalle' },
   { v: 677, teksti: 'puskurisoitin: hiljaisuudet pois, tasaiset saumat' },
   { v: 676, teksti: 'seurantavieritys vain tarpeeseen ja äänen alun ohi' },
@@ -178449,7 +179254,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.679';
+const APP_VERSION = '2026-08-09.680';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
