@@ -10090,7 +10090,21 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   border-radius: 3px;
 }
 
-.lippu-tunnus.tarkennettu .lippu-tunnus-kuva { width: 8.4rem; }
+/*
+ * Tarkennetulle vaakunalle sama pergamenttilevy kuin selitteellä
+ * (omistajan havainto 15.8.2026: "vaakunoiden läpinäkyvyys häviää").
+ * iPadin Safarissa sisarusten sumennussuodatin voi puhkaista kortin
+ * maalatun taustan tarkennetun kuvan alta, jolloin läpinäkyvän
+ * PNG:n takaa kuultaa himmennetty kartta — tummana laatikkona.
+ * Oma peittävä tausta kuvalle tekee lopputuloksesta saman kaikilla
+ * selaimilla.
+ */
+.lippu-tunnus.tarkennettu .lippu-tunnus-kuva {
+  width: 8.4rem;
+  padding: 0.35rem;
+  background: rgba(245, 240, 226, 0.95);
+  border-radius: 6px;
+}
 
 .lippu-tunnus.tarkennettu .lippu-tunnus-teksti {
   padding: 0.25rem 0.4rem;
