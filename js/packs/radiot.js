@@ -120,12 +120,13 @@ export const RADIOT = {
   QAT: { url: 'https://l3.itworkscdn.net/alarabyradiolive/alarabyradio_audio/icecast.audio', asema: 'Al Araby Radio (Doha/Lusail)' },
   ROU: { url: 'https://edge76.rcs-rds.ro/digifm/digi24fm.mp3', asema: 'Digi24 FM' },
   /*
-   * RUS poistettu 14.8.2026 (Fable, omistajan 13.8. linjauksen
-   * mukaisesti: valtiollista tai sensuroitua mediaa ei oteta
-   * lähteeksi — Vesti FM on valtion VGTRK:n kanava). Venäjän lehdet
-   * toimivat ilman mediaosioita kuten ei-lehtimaissakin; riippumatonta
-   * paikalliskanavaa ei ole tarjolla korvaajaksi.
+   * RUS poistettiin 14.8.2026 (13.8. linjaus: ei valtiollista mediaa;
+   * Vesti FM on valtion VGTRK:n kanava) ja PALAUTETTIIN 15.8.2026
+   * omistajan uudella linjauksella: "Venäjällä saa kuulua radio".
+   * Radio on kielinäyte, ei uutislähde — uutiset ja tv pysyvät
+   * Venäjän lehdistä poissa 13.8. linjauksen mukaisesti.
    */
+  RUS: { url: 'https://icecast-vgtrk.cdnvideo.ru/vestifm_mp3_64kbps', asema: 'Вести ФМ', virallinen: true },
   SAU: { url: 'https://stream-154.zeno.fm/pdeizhgrtrstv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZGVpemhncnRyc3R2IiwiaG9zdCI6InN0cmVhbS0xNTQuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Im9vbng2V1J3UXJ5Q0k5TVV0N01heEEiLCJpYXQiOjE3MjgyMjQ1MTYsImV4cCI6MTcyODIyNDU3Nn0.gpUIWkDBFNNFjqCg2R-xQN4LXT4z8_Ivs7d2UkeFE_8', asema: 'SBA Riyadh Radio 91.5 FM', virallinen: true },
   SDN: { url: 'https://a13.asurahosting.com/listen/al_masaa_fm_101/radio.mp3', asema: 'Al Masaa FM 101 (Khartum)' },
   SDS: { url: 'https://stream.zeno.fm/w3lic6qp9eouv', asema: 'Freedom FM' },

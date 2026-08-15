@@ -34,11 +34,30 @@
  * lukemaa alas.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 // Playwright tuodaan vasta ajossa (alempana), jottei sitä tarvita
 // pelkkien laskufunktioiden käyttöön — tests/aanitasot.test.mjs tuo
 // tämän tiedoston eikä selainta ole testiajossa saatavilla.
+
+/*
+ * Konttiympäristössä Noden fetch ei lue HTTPS_PROXYa ilman
+ * NODE_USE_ENV_PROXY=1 (sama pätkä kuin hae-satelliittikartat.mjs).
+ * Ilman tätä jokainen lataus kaatui hiljaa "ei latautunut" -riville
+ * (havaittu 15.8.2026, kun mittaus ajettiin kontista).
+ *
+ * Vartija ohitetaan testiajossa: tests/aanitasot.test.mjs tuo tämän
+ * tiedoston moduulina, eikä tuonti saa käynnistää prosessia uudelleen.
+ */
+if (process.argv[1] === fileURLToPath(import.meta.url)
+  && !process.env.NODE_USE_ENV_PROXY && (process.env.HTTPS_PROXY || process.env.https_proxy)) {
+  const ajo = spawnSync(process.execPath, [fileURLToPath(import.meta.url), ...process.argv.slice(2)], {
+    stdio: 'inherit',
+    env: { ...process.env, NODE_USE_ENV_PROXY: '1', NODE_NO_WARNINGS: '1' },
+  });
+  process.exit(ajo.status ?? 1);
+}
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const argv = process.argv.slice(2);
