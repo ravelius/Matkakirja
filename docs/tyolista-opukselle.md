@@ -1,5 +1,12 @@
 # Työlista toteuttajalle (Opus)
 
+> **LEHTITAUKO (omistajan päätös 15.8.2026):** uusien lehtien
+> kirjoitus on tauolla, kunnes nykyiset lehdet on saatu paremmiksi
+> (mm. kaupunkilehtien avauskuvat vaakayleisnäkymiksi karusellilla ja
+> etusivujen pikkukuvien laatukierros — Fable koordinoi, pilotti
+> Pariisi). Älä aloita uutta lehtipakettia ennen kuin tämä huomautus
+> on poistettu.
+
 ## Vakiokäynnistys
 
 Jos saat tehtäväksi "jatka työlistaa" (tai vastaavaa), toimi näin ilman

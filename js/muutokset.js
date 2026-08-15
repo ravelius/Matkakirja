@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 737, teksti: 'Kartat 6 uuteen kaupunkiin; piirrokset terävinä (1024 px)' },
   { v: 736, teksti: 'Vain varikartta; numero kylttiin' },
   { v: 735, teksti: 'Suurennos keskitetty; 75 %; kyltti kiinni' },
   { v: 734, teksti: 'Kartta 70 %; tarkennettu lippu ilman laatikkoa' },

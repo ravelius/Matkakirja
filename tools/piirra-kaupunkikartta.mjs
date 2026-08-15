@@ -122,6 +122,7 @@ const KAUPUNGIT = {
     // Södermalm) tulevat vasta 9.8.2026 tehdyn reikäkorjauksen
     // jälkeen oikein. Ennen sitä puoli kaupunkia oli veden alla.
     rajat: { pohjoinen: 59.342, etela: 59.313, lansi: 18.03, ita: 18.11 },
+    laajennus: 1.6,
   },
   venetsia: {
     /*
@@ -148,6 +149,7 @@ const KAUPUNGIT = {
     // Vyšehrad jää ulkopuolelle: se on 1,2 km etelämpänä, ja mukaan
     // ottaminen leventäisi kuvan niin ettei joen mutka enää erotu.
     rajat: { pohjoinen: 50.095, etela: 50.074, lansi: 14.382, ita: 14.446 },
+    laajennus: 1.6,
   },
   wien: {
     // Ring on kuvan pääpiirre: purettu kaupunginmuuri jätti soikean
@@ -162,10 +164,18 @@ const KAUPUNGIT = {
     // Karl-Marx-Hof (4,3 km pohjoiseen) jää yhä ulkopuolelle: se on
     // lehden arkisivun nosto eikä kartan kohde.
     rajat: { pohjoinen: 48.22, etela: 48.188, lansi: 16.34, ita: 16.404 },
+    laajennus: 1.6,
     kainalot: [
       {
+        // LUVUT OVAT PROSENTTEJA PIIRRETYSTÄ KUVASTA, muunnos
+        // lepotilan näkymästä kaavalla 18,75 + näkymä × 0,625 (ks.
+        // helsinki). KAINALO KIINNI KULMASSA (omistajan linjaus
+        // 15.8.2026: "mieluiten ainakin yhden reunan lähelle,
+        // mieluiten kulmaan"): vasen alakulma, 2 % marginaalit kuten
+        // Helsingin kainalossa — näkymässä x 2 %, alareuna 98 %
+        // (yla = 98 − 35,44 = 62,56 → kuvassa y 57,85).
         rajat: { pohjoinen: 48.191, etela: 48.178, lansi: 16.303, ita: 16.325 },
-        x: 2, y: 56, leveys: 30, suunta: '4 km lounaaseen',
+        x: 20, y: 57.85, leveys: 18.75, suunta: '4 km lounaaseen',
       },
     ],
   },
@@ -234,6 +244,7 @@ const KAUPUNGIT = {
     // hoitaa. Vesiveto 14 px vastaa tällä mittakaavalla noin 32 metriä
     // eli kanavien todellista leveyttä; kaaret eivät sula yhteen.
     rajat: { pohjoinen: 52.3855, etela: 52.356, lansi: 4.868, ita: 4.922 },
+    laajennus: 1.6,
   },
   dublin: {
     // Liffey kulkee vaakasuoraan kuvan halki ja jakaa sen. Ydinkeskusta
@@ -455,6 +466,7 @@ const KAUPUNGIT = {
     //
     // Ei merta — Ostia on 25 km lounaassa.
     rajat: { pohjoinen: 41.9135, etela: 41.8845, lansi: 12.4455, ita: 12.5005 },
+    laajennus: 1.6,
   },
   krakova: {
     // Planty on kuvan juoni: purettu kaupunginmuuri jätti soikean
@@ -518,6 +530,7 @@ const KAUPUNGIT = {
     // muuten mittakaavajanan päälle kuvan vasemmassa alakulmassa
     // (mitattu selaimessa).
     rajat: { pohjoinen: 55.6945, etela: 55.669, lansi: 12.5555, ita: 12.6116 },
+    laajennus: 1.6,
     meri: 'maa',
   },
   dubrovnik: {
@@ -1272,7 +1285,18 @@ const PALETTI = VARINAYTE ? PALETIT.vari : PALETIT.paperi;
 const {
   VESI, VESIREUNA, PUISTO, RATA, PAPERI, MUURI, RAUNIO, RAUNIOREUNA,
 } = PALETTI;
-async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false) {
+/*
+ * Kaksi palvelinta samaan aineistoon: päälaitos overpass-api.de ja
+ * Kumin ylläpitämä peili. 15.8.2026 päälaitos katkoi Kööpenhaminan
+ * laajaa vastausta ECONNRESETillä viidesti peräkkäin — yksi palvelin
+ * ei siis riitä, vaan uusintayritys kiertää listaa.
+ */
+const OVERPASS_PALVELIMET = [
+  'https://overpass-api.de/api/interpreter',
+  'https://overpass.kumi.systems/api/interpreter',
+];
+
+async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false, palvelin = OVERPASS_PALVELIMET[0]) {
   const alue = `(${rajat.etela},${rajat.lansi},${rajat.pohjoinen},${rajat.ita})`;
   /*
    * PALVELUTIET VAIN PYYDETTÄESSÄ (`palvelutiet: true`).
@@ -1350,7 +1374,7 @@ async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false) {
      */
     relation["natural"="water"]${alue};
   );out geom;`;
-  const vastaus = await fetch('https://overpass-api.de/api/interpreter', {
+  const vastaus = await fetch(palvelin, {
     method: 'POST',
     headers: { 'User-Agent': 'matkakirja/1.0 (opetuspeli)' },
     // Rivinvaihdot pois: Overpass vastaa monirivisille 406.
@@ -1377,8 +1401,9 @@ async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false) {
  */
 async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 5) {
   for (let i = 1; ; i++) {
+    const palvelin = OVERPASS_PALVELIMET[(i - 1) % OVERPASS_PALVELIMET.length];
     try {
-      return await haeOverpass(rajat, palvelutiet, jalkakaydat);
+      return await haeOverpass(rajat, palvelutiet, jalkakaydat, palvelin);
     } catch (virhe) {
       if (i >= yrityksia) throw virhe;
       const odotus = 15000 * i;

@@ -12122,14 +12122,18 @@ export class UI {
        * Numeroympyrä (kohde ilman piirrosta) avaa jutun suoraan.
        */
       const avaa = (miniatyyri && avaaJuttu)
-        ? (tapahtuma) => {
-          if (tapahtuma?.target?.closest?.('.kohde-kyltti')) {
+        ? () => {
+          /*
+           * Suurennetun KUVAN tai kyltin napautus avaa jutun
+           * (omistajan tilaus 15.8.2026: "Muuta koko kuva kyltin
+           * lisäksi viemään pop up juttuun"). Valinta puretaan
+           * napauttamalla kartan tyhjää kohtaa tai Escapella.
+           */
+          if (piste.classList.contains('valittu')) {
             avaaJuttu();
             return;
           }
-          const valittu = piste.classList.contains('valittu');
           tyhjennaValinta();
-          if (valittu) return;
           /*
            * KESKITYS (omistajan tilaus 15.8.2026: "Keskitä
            * suurennettu kuva") — reunakohteen suurennos leikkautui
