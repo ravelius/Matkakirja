@@ -12050,6 +12050,8 @@ export class UI {
      * sen), koska omalla jutulla ei näytetä "Lue lisää" -linkkiä.
      */
     const kaupunki = this.arrivalShownFor;
+    // Piirrospisteet kerätään hajautusta varten (ks. metodin loppu).
+    const piirrosPisteet = [];
     (kartta.kohteet ?? []).forEach((raaka, i) => {
       const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
       const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;
@@ -12065,7 +12067,8 @@ export class UI {
        * Kohde, jolla on miniatyyri, piirtyy kartalle taustattomana
        * leikkauskuvana ilman numeroa; selitelistan numerointi riittää
        * kytkemään listan ja kartan. Kohde ilman miniatyyriä on
-       * entinen numeroympyrä.
+       * entinen numeroympyrä. Nimikyltti näkyy vain valittuna
+       * (suurennettuna) — ks. valintalogiikka alempana.
        */
       const piste = html(avattava ? 'button' : 'span',
         'maakartta-piste kaupunki-kohde kohde-numero', miniatyyri ? '' : numero);
@@ -12078,6 +12081,10 @@ export class UI {
         pikku.draggable = false;
         pikku.src = miniatyyri;
         piste.appendChild(pikku);
+        const kyltti = html('span', 'kohde-kyltti', k.nimi);
+        kyltti.setAttribute('aria-hidden', 'true');
+        piste.appendChild(kyltti);
+        piirrosPisteet.push({ piste, x: p.x, y: p.y });
       }
       piste.style.left = `${p.x.toFixed(1)}%`;
       piste.style.top = `${p.y.toFixed(1)}%`;
@@ -12093,16 +12100,27 @@ export class UI {
       const avaaJuttu = k.teksti ? () => this.avaaNahtavyys(k, numero)
         : (k.wiki ? () => this.openWikiArticle(k.wiki, k.nimi) : null);
       /*
-       * MINIATYYRI VÄLIIN (omistajan tilaus 15.8.2026: "piirrokset
-       * voisi tulla ... klikkaamalla kohtaa jolloin tulisi piirros
-       * kartalle vähän isompana ja pari lausetta selityksenä. Ja
-       * piirrosta klikkaamalla pääsisi itse pop up artikkeliin").
-       * KARTAN piste avaa kortin; selitelistan rivi vie suoraan
-       * juttuun kuten ennenkin — listassa nimi ja numero kertovat jo
-       * saman kuin kortti.
+       * KAKSIVAIHEINEN NAPAUTUS (omistajan tilaus 15.8.2026: "Kun
+       * kuva painaa, se voisi yksinkertaisesti vain suurentua ja sen
+       * viereen voisi tulla nimikyltti. Ja sitten jos kuvaa vielä
+       * kerran painaa tai nimikylttiä, aukea varsinainen
+       * pop-up-artikkeli"). Ensimmäinen napautus suurentaa piirroksen
+       * ja näyttää kyltin (CSS: .valittu), toinen — kuvasta tai
+       * kyltistä, jotka ovat samaa nappia — avaa jutun. Entinen
+       * miniatyyrikortti poistui samalla tilauksella kokonaan.
+       * Selitelistan rivi vie suoraan juttuun kuten ennenkin.
        */
       const avaa = (miniatyyri && avaaJuttu)
-        ? () => this.naytaMiniatyyri(kehys, { kuva: miniatyyri, kohde: k, avaaJuttu })
+        ? () => {
+          if (piste.classList.contains('valittu')) {
+            piste.classList.remove('valittu');
+            avaaJuttu();
+            return;
+          }
+          kotelo.querySelectorAll('.kohde-piirros.valittu')
+            .forEach((v) => v.classList.remove('valittu'));
+          piste.classList.add('valittu');
+        }
         : avaaJuttu;
       /*
        * Kohteen nimi hiiren alla (omistajan toive 8.8.2026). Ympyrässä
@@ -12128,7 +12146,7 @@ export class UI {
         // Selitelistan rivi ohittaa kortin — nimi on jo rivillä.
         selite.addEventListener('click', avaaJuttu ?? avaa);
         selite.title = otsikko;
-        piste.setAttribute('aria-label', miniatyyri ? `${k.nimi} — näytä piirros` : otsikko);
+        piste.setAttribute('aria-label', miniatyyri ? `${k.nimi} — suurenna piirros` : otsikko);
       }
       const vihje = html('span', 'kohde-vihje', k.nimi);
       vihje.setAttribute('aria-hidden', 'true');
@@ -12146,6 +12164,20 @@ export class UI {
       kotelo.appendChild(piste);
       selitteet.appendChild(selite);
     });
+    /*
+     * Napautus kartan tyhjään kohtaan (tai Escape) palauttaa
+     * suurennetun piirroksen ennalleen. Kaappausvaihe, jotta myös
+     * panorointiote kartan päältä sulkee valinnan.
+     */
+    const tyhjennaValinta = () => kotelo.querySelectorAll('.kohde-piirros.valittu')
+      .forEach((v) => v.classList.remove('valittu'));
+    kehys.addEventListener('pointerdown', (e) => {
+      if (!e.target.closest?.('.kohde-piirros')) tyhjennaValinta();
+    }, true);
+    kehys.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') tyhjennaValinta();
+    });
+    this.hajautaPiirrospisteet(kotelo, piirrosPisteet, ydin);
     /*
      * Näkymävipu piirroksen ja värikartan välillä (omistajan tilaus
      * 14.8.2026 satelliitille; värikartta korvasi satelliitin
@@ -12248,68 +12280,128 @@ export class UI {
   }
 
   /**
-   * MINIATYYRIKORTTI KARTAN PÄÄLLE (omistajan tilaus 15.8.2026:
-   * "klikkaamalla kohtaa ... tulisi piirros kartalle vähän isompana
-   * ja pari lausetta selityksenä. Ja piirrosta klikkaamalla pääsisi
-   * itse pop up artikkeliin").
+   * PIIRROSTEN HAJAUTUS NUOLILLA (omistajan tilaus 15.8.2026:
+   * "Piirrokset ovat liian lähellä toisiaan. Täytyy tehdä pienet
+   * nuolet, jotta kuvat saa enemmän irralleen toisistaan").
    *
-   * Kortti on kehyksen (kiinteän karttaikkunan) lapsi eikä lavan:
-   * se pysyy paikallaan, vaikka karttaa zoomattaisiin sen alla.
-   * Lauseet ovat kohteen oman, tarkistetun jutun alku (virkkeiksi) —
-   * korttiin ei kirjoiteta uutta sisältöä. Sulkeutuu rastista,
-   * kortin ulkopuolisesta napautuksesta (myös panorointiote) ja
-   * uuden kohteen avaamisesta. Lukija ei lue korttia
-   * (data-lukija="ei") — se on kartan väline, ei sivun juttu.
+   * Liian lähekkäiset piirrokset työnnetään toisistaan erilleen
+   * yksinkertaisella rentoutuksella, ja siirtynyt piirros saa pienen
+   * nuolen, joka osoittaa kohteen oikeaan sijaintiin kartalla.
+   * Lasketaan pikseleinä vasta asettelun jälkeen (rAF), koska
+   * piirroksen koko on kiinteä 64 px mutta lavan leveys vaihtelee
+   * puhelimesta työpöytään. Tulos kirjoitetaan takaisin prosentteina
+   * ja nuolet SVG:nä lavan koordinaatistossa, joten kaikki skaalautuu
+   * ikkunan ja zoomin mukana sellaisenaan. Nuolet eivät ota
+   * napautuksia vastaan (pointer-events: none).
    */
-  naytaMiniatyyri(kehys, { kuva, kohde, avaaJuttu }) {
-    kehys.querySelector('.miniatyyrikortti')?.remove();
-    const kortti = html('div', 'miniatyyrikortti');
-    kortti.setAttribute('data-lukija', 'ei');
-    kortti.setAttribute('role', 'dialog');
-    kortti.setAttribute('aria-label', kohde.nimi);
-    const ulkosulku = (e) => {
-      if (!kortti.contains(e.target)) sulje();
+  hajautaPiirrospisteet(kotelo, pisteet, ydin) {
+    if (pisteet.length < 2) return;
+    const asettele = () => {
+      const mitat = kotelo.getBoundingClientRect();
+      // Etukäteispuskurin lehti renderöityy piilossa (leveys 0) —
+      // palautetaan epätosi ja jäädään odottamaan kokovahtia.
+      if (mitat.width < 40) return false;
+      const W = mitat.width;
+      const K = mitat.height;
+      // 72 px ≈ piirroksen laatikko + selvä ilmarako. Pienemmällä
+      // arvolla tiheimmät rykelmät jäivät yhä kiinni toisissaan
+      // (kokeiltu 58 px 15.8.2026).
+      const MIN = 72;
+      const paikat = pisteet.map((m) => ({ ...m, X: (m.x / 100) * W, Y: (m.y / 100) * K }));
+      // Piirrokset pysyvät lepotilassa näkyvällä ydinalueella.
+      const M = 30;
+      const x0 = (ydin.x / 100) * W + M;
+      const x1 = ((ydin.x + ydin.leveys) / 100) * W - M;
+      const y0 = (ydin.y / 100) * K + M;
+      const y1 = ((ydin.y + ydin.korkeus) / 100) * K - M;
+      /*
+       * Reunarajaus tehdään JOKA KIERROKSELLA eikä vasta lopuksi:
+       * muuten reunan viereinen rykelmä työntyy ensin rajan yli ja
+       * painuu rajauksessa takaisin kasaan (Pariisin oikea laita,
+       * havaittu 15.8.2026). Kierroksen sisällä rajattu piste saa
+       * seuraavalla kierroksella uuden työnnön reunaa PITKIN.
+       */
+      for (let kierros = 0; kierros < 60; kierros++) {
+        let liikkui = false;
+        for (let a = 0; a < paikat.length; a++) {
+          for (let b = a + 1; b < paikat.length; b++) {
+            const A = paikat[a];
+            const B = paikat[b];
+            let dx = B.X - A.X;
+            let dy = B.Y - A.Y;
+            let d = Math.hypot(dx, dy);
+            if (d >= MIN) continue;
+            // Täsmälleen päällekkäiset erotetaan vaakasuuntaan.
+            if (d < 0.001) { dx = 1; dy = 0; d = 1; }
+            const siirto = (MIN - d) / 2;
+            A.X -= (dx / d) * siirto;
+            A.Y -= (dy / d) * siirto;
+            B.X += (dx / d) * siirto;
+            B.Y += (dy / d) * siirto;
+            liikkui = true;
+          }
+        }
+        for (const m of paikat) {
+          m.X = Math.min(Math.max(m.X, x0), x1);
+          m.Y = Math.min(Math.max(m.Y, y0), y1);
+        }
+        if (!liikkui) break;
+      }
+      const svgns = 'http://www.w3.org/2000/svg';
+      const nuolet = document.createElementNS(svgns, 'svg');
+      nuolet.setAttribute('class', 'kartta-nuolet');
+      nuolet.setAttribute('viewBox', `0 0 ${W.toFixed(1)} ${K.toFixed(1)}`);
+      nuolet.setAttribute('preserveAspectRatio', 'none');
+      nuolet.setAttribute('aria-hidden', 'true');
+      let nuolia = 0;
+      for (const m of paikat) {
+        m.X = Math.min(Math.max(m.X, x0), x1);
+        m.Y = Math.min(Math.max(m.Y, y0), y1);
+        m.piste.style.left = `${((m.X / W) * 100).toFixed(2)}%`;
+        m.piste.style.top = `${((m.Y / K) * 100).toFixed(2)}%`;
+        // Vihje ja kyltti valitsevat puolensa siirtyneen paikan mukaan.
+        const osuus = (((m.Y / K) * 100 - ydin.y) / ydin.korkeus) * 100;
+        m.piste.classList.toggle('vihje-alle', osuus < 14);
+        m.piste.classList.toggle('kyltti-ylle', osuus > 84);
+        const ankkuriX = (m.x / 100) * W;
+        const ankkuriY = (m.y / 100) * K;
+        const dx = ankkuriX - m.X;
+        const dy = ankkuriY - m.Y;
+        const d = Math.hypot(dx, dy);
+        // Lyhyt siirtymä: piirros peittää sijaintinsa yhä, ei nuolta.
+        if (d < 26) continue;
+        const ux = dx / d;
+        const uy = dy / d;
+        const KARKI = 7;
+        const kx = ankkuriX - ux * KARKI;
+        const ky = ankkuriY - uy * KARKI;
+        const viiva = document.createElementNS(svgns, 'line');
+        viiva.setAttribute('x1', (m.X + ux * 24).toFixed(1));
+        viiva.setAttribute('y1', (m.Y + uy * 24).toFixed(1));
+        viiva.setAttribute('x2', kx.toFixed(1));
+        viiva.setAttribute('y2', ky.toFixed(1));
+        nuolet.appendChild(viiva);
+        const karki = document.createElementNS(svgns, 'polygon');
+        karki.setAttribute('points', [
+          `${ankkuriX.toFixed(1)},${ankkuriY.toFixed(1)}`,
+          `${(kx - uy * 3.5).toFixed(1)},${(ky + ux * 3.5).toFixed(1)}`,
+          `${(kx + uy * 3.5).toFixed(1)},${(ky - ux * 3.5).toFixed(1)}`,
+        ].join(' '));
+        nuolet.appendChild(karki);
+        nuolia++;
+      }
+      // Nuolet kartan päälle mutta pisteiden alle.
+      kotelo.querySelector('.kartta-nuolet')?.remove();
+      if (nuolia) kotelo.insertBefore(nuolet, kotelo.querySelector('.maakartta-piste'));
+      return true;
     };
-    const sulje = () => {
-      kortti.remove();
-      kehys.removeEventListener('pointerdown', ulkosulku, true);
-    };
-    // Kaappausvaihe: myös kartan panorointiote kortin vierestä sulkee.
-    kehys.addEventListener('pointerdown', ulkosulku, true);
-
-    const nappi = html('button', 'miniatyyri-nappi');
-    nappi.type = 'button';
-    nappi.title = `${kohde.nimi} — avaa juttu`;
-    nappi.setAttribute('aria-label', `${kohde.nimi} — avaa juttu`);
-    const el = document.createElement('img');
-    el.className = 'miniatyyri-kuva';
-    el.alt = kohde.nimi;
-    el.decoding = 'async';
-    el.draggable = false;
-    el.src = kuva;
-    nappi.appendChild(el);
-    nappi.addEventListener('click', () => {
-      sulje();
-      avaaJuttu();
+    requestAnimationFrame(() => {
+      if (asettele()) return;
+      const vahti = new ResizeObserver(() => {
+        if (asettele()) vahti.disconnect();
+      });
+      vahti.observe(kotelo);
     });
-    kortti.appendChild(nappi);
-    kortti.appendChild(html('p', 'miniatyyri-nimi', kohde.nimi));
-    // Pari lausetta jutun alusta — mutta toinen virke vain jos se
-    // mahtuu: matalassa karttaikkunassa kesken leikkautuva lause
-    // näyttäisi rikkinäiseltä, ja koko juttu on napautuksen päässä.
-    const virkkeet = virkkeiksi(String(kohde.teksti ?? ''));
-    let alku = virkkeet[0] ?? '';
-    if (virkkeet[1] && alku.length + virkkeet[1].length <= 170) {
-      alku += ` ${virkkeet[1]}`;
-    }
-    if (alku) kortti.appendChild(html('p', 'miniatyyri-teksti', alku));
-    const x = html('button', 'miniatyyri-sulje', '×');
-    x.type = 'button';
-    x.title = 'Sulje';
-    x.setAttribute('aria-label', 'Sulje');
-    x.addEventListener('click', sulje);
-    kortti.appendChild(x);
-    kehys.appendChild(kortti);
   }
 
   /**
