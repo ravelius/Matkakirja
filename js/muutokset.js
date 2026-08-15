@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 681, teksti: 'Kamtšatka, Sahalin ja Vladivostok saivat lehtensä' },
   { v: 678, teksti: 'kohtaamiset ja kaariaarteet lukijaäänelle, äänite varalle' },
   { v: 677, teksti: 'puskurisoitin: hiljaisuudet pois, tasaiset saumat' },
   { v: 676, teksti: 'seurantavieritys vain tarpeeseen ja äänen alun ohi' },
