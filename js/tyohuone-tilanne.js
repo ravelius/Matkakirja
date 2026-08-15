@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v756 — opas leveämpi iPadilla; ☰ pois oppaan yläkulmasta',
   'v755 — tyhjät palkit: sulje valikko ja avaa uudelleen',
   'v754 — kulurivi kertoo lähdevirheen; avaa valikko uudelleen',
   'v753 — Helsingin Matkailijalle: kappale, kuva, opas',

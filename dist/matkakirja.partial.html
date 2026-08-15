@@ -11157,6 +11157,15 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   }
 }
 
+/* Isolla ruudulla (iPad, työpöytä) nähtävyyskortti saa olla leveämpi
+ * (omistajan palaute 15.8.2026: "liian kapea") — teksti ja kuvat
+ * hengittävät, mutta palsta pysyy luettavana. */
+@media (min-width: 760px) {
+  .dialog.nahtavyys-arkki {
+    width: min(84vw, 840px);
+  }
+}
+
 /* Vuosiluku ja kohdenumero otsikon yllä: pieni kirjasinkokoinen
  * leimarivi, joka kertoo ajan ennen kuin nimi ehtii kertoa paikan. */
 .nahtavyys-aika {
@@ -111960,6 +111969,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v756 — opas leveämpi iPadilla; ☰ pois oppaan yläkulmasta',
   'v755 — tyhjät palkit: sulje valikko ja avaa uudelleen',
   'v754 — kulurivi kertoo lähdevirheen; avaa valikko uudelleen',
   'v753 — Helsingin Matkailijalle: kappale, kuva, opas',
@@ -177295,7 +177305,9 @@ class UI {
       nappi.type = 'button';
       // Henkilölinkit tyhjinä: artikkeli ei ole kartan kohde, eikä
       // kaupungin henkilölinkkejä sovelleta sen tekstiin.
-      nappi.addEventListener('click', () => this.avaaNahtavyys(tiedot.artikkeli, null, { henkilolinkit: [] }));
+      nappi.addEventListener('click', () => this.avaaNahtavyys(tiedot.artikkeli, null, {
+        henkilolinkit: [], valikko: false,
+      }));
       lohko.appendChild(nappi);
     }
     kohde.appendChild(lohko);
@@ -177896,7 +177908,7 @@ class UI {
    * omaksi lohkokseen silloin kun se on mielekäs — ei väkisin.
    */
   avaaNahtavyys(kohde, numero, {
-    henkilolinkit = null, muista = false, palaa = false, rulla = 0,
+    henkilolinkit = null, muista = false, palaa = false, rulla = 0, valikko = true,
   } = {}) {
     const dialogi = document.getElementById('nahtavyys-dialog');
     if (!dialogi) return;
@@ -177916,7 +177928,7 @@ class UI {
         this.nahtavyysPino.push({ ...this.nahtavyysAuki, rulla: kortti?.scrollTop ?? 0 });
       } else this.nahtavyysPino = [];
     }
-    this.nahtavyysAuki = { kohde, numero, henkilolinkit };
+    this.nahtavyysAuki = { kohde, numero, henkilolinkit, valikko };
     const takaisin = document.getElementById('nahtavyys-takaisin');
     if (takaisin) {
       if (!takaisin.dataset.kytketty) {
@@ -177925,7 +177937,8 @@ class UI {
           const edellinen = this.nahtavyysPino.pop();
           if (!edellinen) return;
           this.avaaNahtavyys(edellinen.kohde, edellinen.numero, {
-            henkilolinkit: edellinen.henkilolinkit, palaa: true, rulla: edellinen.rulla,
+            henkilolinkit: edellinen.henkilolinkit, palaa: true,
+            rulla: edellinen.rulla, valikko: edellinen.valikko ?? true,
           });
         });
       }
@@ -177954,7 +177967,7 @@ class UI {
       });
     }
     document.getElementById('nahtavyys-otsikko').textContent = kohde.nimi;
-    this.taytaNahtavyysValikko(kohde);
+    this.taytaNahtavyysValikko(kohde, valikko);
     this.varustaNahtavyysSelaus(kohde);
     const aika = document.getElementById('nahtavyys-aika');
     aika.textContent = [numero ? `Kohde ${numero}` : null, kohde.aika]
@@ -178233,10 +178246,19 @@ class UI {
    * Valikko toimii myös henkilöjutussa (esim. Engel) — se vie
    * takaisin kaupungin nähtävyyksiin.
    */
-  taytaNahtavyysValikko(nykyinen) {
+  taytaNahtavyysValikko(nykyinen, salli = true) {
     const nappi = document.getElementById('nahtavyys-valikko-nappi');
     const valikko = document.getElementById('nahtavyys-valikko');
     if (!nappi || !valikko) return;
+    // Matkailijan opas ei ole kartan kohde: valikkonappi jäi
+    // kellumaan otsikon päälle irrallisena (omistajan palaute
+    // 15.8.2026 "häiriö ylhäällä") — opas avataan ilman valikkoa.
+    if (!salli) {
+      nappi.hidden = true;
+      valikko.hidden = true;
+      nappi.setAttribute('aria-expanded', 'false');
+      return;
+    }
     const sulje = () => {
       valikko.hidden = true;
       nappi.setAttribute('aria-expanded', 'false');
@@ -183244,6 +183266,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 756, teksti: 'opas leveämmäksi isolla ruudulla; valikkonappi pois oppaasta' },
   { v: 755, teksti: 'vajaa työhuonetulos ei jää istuntoon; uusi haku avauksesta' },
   { v: 754, teksti: 'työhuoneen kulurivi kertoo lähdevirheen; välimuisti v2' },
   { v: 753, teksti: 'Helsingin Matkailijalle: kappale, kuva ja opas kuvineen' },
@@ -184096,7 +184119,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.755';
+const APP_VERSION = '2026-08-09.756';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

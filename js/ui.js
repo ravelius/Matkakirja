@@ -12374,7 +12374,9 @@ export class UI {
       nappi.type = 'button';
       // Henkilölinkit tyhjinä: artikkeli ei ole kartan kohde, eikä
       // kaupungin henkilölinkkejä sovelleta sen tekstiin.
-      nappi.addEventListener('click', () => this.avaaNahtavyys(tiedot.artikkeli, null, { henkilolinkit: [] }));
+      nappi.addEventListener('click', () => this.avaaNahtavyys(tiedot.artikkeli, null, {
+        henkilolinkit: [], valikko: false,
+      }));
       lohko.appendChild(nappi);
     }
     kohde.appendChild(lohko);
@@ -12975,7 +12977,7 @@ export class UI {
    * omaksi lohkokseen silloin kun se on mielekäs — ei väkisin.
    */
   avaaNahtavyys(kohde, numero, {
-    henkilolinkit = null, muista = false, palaa = false, rulla = 0,
+    henkilolinkit = null, muista = false, palaa = false, rulla = 0, valikko = true,
   } = {}) {
     const dialogi = document.getElementById('nahtavyys-dialog');
     if (!dialogi) return;
@@ -12995,7 +12997,7 @@ export class UI {
         this.nahtavyysPino.push({ ...this.nahtavyysAuki, rulla: kortti?.scrollTop ?? 0 });
       } else this.nahtavyysPino = [];
     }
-    this.nahtavyysAuki = { kohde, numero, henkilolinkit };
+    this.nahtavyysAuki = { kohde, numero, henkilolinkit, valikko };
     const takaisin = document.getElementById('nahtavyys-takaisin');
     if (takaisin) {
       if (!takaisin.dataset.kytketty) {
@@ -13004,7 +13006,8 @@ export class UI {
           const edellinen = this.nahtavyysPino.pop();
           if (!edellinen) return;
           this.avaaNahtavyys(edellinen.kohde, edellinen.numero, {
-            henkilolinkit: edellinen.henkilolinkit, palaa: true, rulla: edellinen.rulla,
+            henkilolinkit: edellinen.henkilolinkit, palaa: true,
+            rulla: edellinen.rulla, valikko: edellinen.valikko ?? true,
           });
         });
       }
@@ -13033,7 +13036,7 @@ export class UI {
       });
     }
     document.getElementById('nahtavyys-otsikko').textContent = kohde.nimi;
-    this.taytaNahtavyysValikko(kohde);
+    this.taytaNahtavyysValikko(kohde, valikko);
     this.varustaNahtavyysSelaus(kohde);
     const aika = document.getElementById('nahtavyys-aika');
     aika.textContent = [numero ? `Kohde ${numero}` : null, kohde.aika]
@@ -13312,10 +13315,19 @@ export class UI {
    * Valikko toimii myös henkilöjutussa (esim. Engel) — se vie
    * takaisin kaupungin nähtävyyksiin.
    */
-  taytaNahtavyysValikko(nykyinen) {
+  taytaNahtavyysValikko(nykyinen, salli = true) {
     const nappi = document.getElementById('nahtavyys-valikko-nappi');
     const valikko = document.getElementById('nahtavyys-valikko');
     if (!nappi || !valikko) return;
+    // Matkailijan opas ei ole kartan kohde: valikkonappi jäi
+    // kellumaan otsikon päälle irrallisena (omistajan palaute
+    // 15.8.2026 "häiriö ylhäällä") — opas avataan ilman valikkoa.
+    if (!salli) {
+      nappi.hidden = true;
+      valikko.hidden = true;
+      nappi.setAttribute('aria-expanded', 'false');
+      return;
+    }
     const sulje = () => {
       valikko.hidden = true;
       nappi.setAttribute('aria-expanded', 'false');

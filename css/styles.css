@@ -11154,6 +11154,15 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   }
 }
 
+/* Isolla ruudulla (iPad, työpöytä) nähtävyyskortti saa olla leveämpi
+ * (omistajan palaute 15.8.2026: "liian kapea") — teksti ja kuvat
+ * hengittävät, mutta palsta pysyy luettavana. */
+@media (min-width: 760px) {
+  .dialog.nahtavyys-arkki {
+    width: min(84vw, 840px);
+  }
+}
+
 /* Vuosiluku ja kohdenumero otsikon yllä: pieni kirjasinkokoinen
  * leimarivi, joka kertoo ajan ennen kuin nimi ehtii kertoa paikan. */
 .nahtavyys-aika {
