@@ -75440,6 +75440,25 @@ const KAUPUNKIKARTAT = {
       { nimi: 'Nyhavn', lat: 55.6802, lon: 12.59, wiki: 'Nyhavn' },
       { nimi: 'Christiansborgin linna', lat: 55.6761, lon: 12.5797, wiki: 'Christiansborgin linna' },
       { nimi: 'Tivoli', lat: 55.6737, lon: 12.5681 },
+      /*
+       * KOLME LISÄKOHDETTA (paketti K1) — kartan numerointi tulee
+       * järjestyksestä, joten nämä tulevat listan loppuun eivätkä
+       * siirrä vanhoja 1–6:ta. Ei piirroksia (miniatyyrit.js):
+       * kartalla numeroympyrät, kuten koodi tekee kohteelle ilman
+       * piirrosta.
+       *
+       * KAKSI ANSAA fi.wikipediassa, molemmat tarkistettu
+       * rajapinnasta:
+       *  - `Vapahtajan kirkko` OHJAA Kristuksen kirkastumisen
+       *    kirkkoon. Christianshavnin kirkosta kertoo
+       *    `Vapahtajamme kirkko` (tanskaksi Vor Frelsers Kirke).
+       *  - `Kastellet` yksinään on TUKHOLMAN Kastellholmenin
+       *    linnoitus. Kööpenhaminan tähtilinnoitus on
+       *    `Kastellet (Kööpenhamina)`.
+       */
+      { nimi: 'Vapahtajan kirkko', lat: 55.6729, lon: 12.594, wiki: 'Vapahtajamme kirkko' },
+      { nimi: 'Rosenborgin linna', lat: 55.6859, lon: 12.5773, wiki: 'Rosenborgin linna' },
+      { nimi: 'Kastellet', lat: 55.6912, lon: 12.5938, wiki: 'Kastellet (Kööpenhamina)' },
     ],
   },
   dubrovnik: {
@@ -84373,6 +84392,208 @@ const NAHTAVYYSJUTUT = {
             + 'aikalaispukuisia kävelijöitä ja Tanskan lippu portin '
             + 'päällä.',
           lahde: 'Photochrom Print Collection, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vapahtajan kirkko': {
+      aika: '1682–1752',
+      teksti: 'Vapahtajan kirkko (tanskaksi Vor Frelsers Kirke) seisoo '
+          + 'Christianshavnissa, Amagerin puolella satamakanavaa. Kun '
+          + 'Christian IV kaavaili Christianshavnia vuonna 1617, siitä '
+          + 'piti tulla oma kauppiaskaupunkinsa, ja sellainen tarvitsi '
+          + 'kirkon. Väliaikainen kirkko vihittiin 1639, mutta nykyisen '
+          + 'kirkon rakentaminen alkoi vasta 1682 Lambert van Havenin '
+          + 'piirustusten mukaan. Kirkko vihittiin 1695 keskeneräisenä: '
+          + 'alttari oli tilapäinen ja tornista puuttui kokonaan huippu.'
+        + '\n\n'
+        + 'Torni jäi tynkänä yli puoleksi vuosisadaksi. Vasta 1747 '
+          + 'Fredrik V:n aikana suunnitelma kaivettiin esiin, ja uusi '
+          + 'arkkitehti Lauritz de Thurah hylkäsi van Havenin ehdotuksen '
+          + 'ja piirsi oman. Kuningas hyväksyi sen 1749, ja kolme vuotta '
+          + 'myöhemmin huippu oli valmis. Kuningas kiipesi ylös juhlallisesti '
+          + '28. elokuuta 1752.'
+        + '\n\n'
+        + 'Huippu nousee 90 metriin, ja sen ympäri kiertää ulkoportaikko '
+          + 'neljä kierrosta vastapäivään. Portaita on kaikkiaan 400, ja '
+          + 'niistä viimeiset 150 kuljetaan ulkoilmassa kullatun kaiteen '
+          + 'takana. Esikuva haettiin Roomasta: Sant Ivo alla Sapienzan '
+          + 'kierrelyhty kääntyy samaan suuntaan.'
+        + '\n\n'
+        + 'Kierresuunta on synnyttänyt sitkeän tarinan, jonka mukaan '
+          + 'arkkitehti hyppäsi huipulta huomattuaan portaiden kiertävän '
+          + 'väärään suuntaan. Tarina on keksitty. Thurah kuoli vuoteeseensa '
+          + 'seitsemän vuotta tornin valmistumisen jälkeen, eikä '
+          + 'asiakirjoissa ole jälkeäkään siitä, että hän olisi ollut '
+          + 'työhönsä tyytymätön.'
+        + '\n\n'
+        + 'Kirjallisuudessa torni sai kuuluisan roolin. Jules Vernen '
+          + 'romaanissa Matka maan keskipisteeseen professori Lidenbrock '
+          + 'panee veljenpoikansa Axelin kiipeämään portaita viitenä '
+          + 'peräkkäisenä päivänä, jotta korkeanpaikankammo katoaisi ennen '
+          + 'laskeutumista tulivuoreen. Kirjan alkuperäisessä kuvituksessa '
+          + 'Édouard Riou piirsi kierteen vahingossa väärinpäin, myötäpäivään.'
+        + '\n\n'
+        + 'Tornissa soi myös Pohjois-Euroopan suurin kellopeli: 48 '
+          + 'pronssikelloa, joista suurimmat painavat yli 2 000 kiloa ja '
+          + 'pienin 10 kiloa. Yhteispaino on lähes 12 tonnia, ja peli '
+          + 'soittaa virsisävelmiä joka tunti aamukahdeksasta '
+          + 'keskiyöhön. Kirkon urut ovat vielä vanhemmat: Botzenin '
+          + 'veljekset rakensivat ne vuosina 1698–1700, niissä on yli '
+          + '4 000 pilliä, ja koko soitin lepää kahden puisen norsun '
+          + 'selässä.',
+      kuvat: [
+        {
+          tiedosto: 'Copenhagen - Church of Our Saviour - 2013.jpg',
+          selite: 'Vapahtajan kirkko kadulta nähtynä: tumma tiilirunko, '
+            + 'kellotorni ja kullattu ulkoportaikko, joka kiertyy huipun '
+            + 'kultapallolle asti.',
+          lahde: 'Avda, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'The spiral staircase of Vor Frelsers Kirke in Copenhagen, Denmark.jpg',
+          selite: 'Ulkoportaat läheltä: kullattu kaide kaartuu ylöspäin, ja '
+            + 'takana avautuu Kööpenhamina ja meri.',
+          lahde: 'Guillaume Baviere, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Voyageaucentrede00vernuoft raw 0053 1.png',
+          selite: 'Édouard Riou’n kuvitus Jules Vernen Matka maan '
+            + 'keskipisteeseen -kirjaan: pikkuruisia hahmoja kiipeää tornin '
+            + 'ulkoportaita lokkien keskellä.',
+          lahde: 'Édouard Riou, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rosenborgin linna': {
+      aika: '1606–1633',
+      teksti: 'Rosenborgin linna alkoi huvilana kaupungin ulkopuolella. '
+          + 'Christian IV osti vuonna 1606 joukon tontteja silloisen '
+          + 'Nørrevoldin takaa: sinne mahtui hänen lystilinnansa lisäksi '
+          + 'puutarha ja kyökkimaa, joka ruokki hovia. Rakennus lähti '
+          + 'liikkeelle vaatimattomana erakkomajana, mutta se laajeni '
+          + '28 vuoden aikana neljässä vaiheessa ja seisoi 1633 valmiina '
+          + 'sellaisena kuin se on yhä: hollantilaista renessanssia, '
+          + 'punatiiltä ja hiekkakiveä, tornit patinoituneen vihreinä.'
+        + '\n\n'
+        + 'Linna oli kuninkaan lempipaikka, ja se näkyi loppuun asti. '
+          + 'Kuolemansairaana Frederiksborgissa Christian IV käski kuljettaa '
+          + 'itsensä reellä Rosenborgiin päättääkseen päivänsä siellä. '
+          + 'Hän kuoli linnassa helmikuussa 1648.'
+        + '\n\n'
+        + 'Kuninkaanlinnana Rosenborg oli käytössä noin vuoteen 1710, '
+          + 'kunnes Fredrik IV vaihtoi sen ajanmukaisempiin kesäasuntoihin '
+          + 'ja teki vanhasta linnasta kuninkaallisten kokoelmien kodin. '
+          + 'Juuri siksi sisustukset ovat säilyneet niin täydellisinä. '
+          + 'Sen jälkeen linnassa asuttiin enää kahdesti, molemmilla '
+          + 'kerroilla hätätilassa: Christiansborgin palon jälkeen 1794 ja '
+          + 'brittien hyökätessä kaupunkiin 1801.'
+        + '\n\n'
+        + 'Yleisölle ovet aukesivat 1838. Kolmannen kerroksen Pitkä sali '
+          + 'valmistui jo 1624 tanssisaliksi, ja siellä ovat yhä '
+          + 'yksinvaltiaiden kruunajaistuoli ja kuningattaren valtaistuin, '
+          + 'jonka edessä seisoo kolme hopeista leijonaa. Kellarin '
+          + 'holvissa säilytetään Tanskan kruununjalokiviä ja '
+          + 'kruununregaaleja.'
+        + '\n\n'
+        + 'Linnan ympärillä on Kuninkaan puutarha, maan vanhin '
+          + 'kuninkaallinen puisto. Christian IV perusti sen juuri ennen '
+          + 'itse linnaa, ja nykyään siellä käy arviolta 2,5 miljoonaa '
+          + 'ihmistä vuodessa. Naapurissa on kasarmi: kuninkaallinen '
+          + 'henkikaarti majoittuu siinä ja vartioi linnaa.',
+      kuvat: [
+        {
+          tiedosto: 'Rosenborg Castle in Copenhagen2.jpg',
+          selite: 'Rosenborgin linna puiston puolelta: punatiiliset '
+            + 'julkisivut, hiekkakivikoristelu ja kolme vihreäksi '
+            + 'patinoitunutta tornia.',
+          lahde: 'Marco Almbauer, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Axel Schovelin - Parti fra Rosenborg slot - 1872.png',
+          selite: 'Axel Schovelinin maalaus vuodelta 1872: linna kohoaa '
+            + 'Kuninkaan puutarhan puiden takaa, etualalla tyhjä penkki ja '
+            + 'kukkiva syreeni.',
+          lahde: 'Axel Schovelin, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Crown of King Christian IV of Denmark.jpg',
+          selite: 'Christian IV:n kruunu vitriinissä: kultaa, helmiä ja '
+            + 'emalikoristeita punaisen samettimyssyn ympärillä.',
+          lahde: 'Bradley Rentz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kastellet: {
+      aika: '1660-luku',
+      teksti: 'Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja '
+          + 'yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. '
+          + 'Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: '
+          + 'Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin '
+          + 'bastioni. Vallit ja vallihaudat olivat aikanaan osa koko '
+          + 'kaupungin kiertänyttä bastionirengasta, josta on muuten '
+          + 'jäljellä vain Christianshavnin vallit.'
+        + '\n\n'
+        + 'Alku oli vaatimattomampi. Christian IV perusti paikalle '
+          + 'Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi '
+          + 'hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä '
+          + 'Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle '
+          + 'hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista '
+          + 'kunnollisen linnoituksen, joka sai nimen Citadellet '
+          + 'Frederikshavn ja valmistui 1664. Sen kaksi porttia ovat '
+          + 'vuodelta 1663: Kuninkaanportti kaupunkiin päin ja '
+          + 'Norjanportti aukealle.'
+        + '\n\n'
+        + 'Kastellet erosi muusta vallirenkaasta yhdellä epämiellyttävällä '
+          + 'tavalla: sen tykit voitiin kääntää myös kaupunkiin päin, '
+          + 'kuninkaan omia alamaisia kohti. Linnoitus toimi myös '
+          + 'sotilas- ja valtionvankilana. Vankila rakennettiin kiinni '
+          + 'kirkkoon, ja seinään porattiin reikiä, jotta vangit kuulivat '
+          + 'jumalanpalvelukset sellistään. Struensee odotti täällä '
+          + 'teloitustaan, ja englantilainen seikkailija John Norcross '
+          + 'istui muureissa 32 vuotta, joista 16 puuhäkissä.'
+        + '\n\n'
+        + 'Piiritykseen varauduttiin tosissaan. Kaksi makasiinia riitti '
+          + 'täysinäisinä ruokkimaan 1 800 miehen varuskunnan, muun '
+          + 'väen ja heidän perheensä neljäksi vuodeksi. Kuninkaan '
+          + 'bastionilla jauhoi tuulimylly, sillä piiritetty kaupunki '
+          + 'tarvitsi jauhoja. Nykyinen mylly on vuodelta 1847 ja korvasi '
+          + 'edellisen, jonka myrsky kaatoi. Vuonna 1800 Kööpenhaminan '
+          + 'valleilla pyöri 16 myllyä; Kastelletin mylly on niistä ainoa '
+          + 'yhä toimiva. Venäjän keisarinna Maria Fjodorovna, Kristian '
+          + 'IX:n tytär, tilasi ruisjauhonsa juuri tästä myllystä — armeijan '
+          + 'leipätehdas lähetti ne Pietariin, missä hänelle tarjoiltiin '
+          + 'joka aamu leipävelliä.'
+        + '\n\n'
+        + 'Taidemaalari Christen Købke kasvoi Kastelletissa, jonka myllyn '
+          + 'hänen isänsä omisti, ja maalasi portteja ja valleja yhä '
+          + 'uudestaan. Vakavampia päiviä tuli 9. huhtikuuta 1940, kun '
+          + 'saksalaiset joukot nousivat maihin Langelinien rannassa, '
+          + 'räjäyttivät Norjanportin ja ottivat linnoituksen haltuunsa '
+          + 'vankilakseen. Kastellet kunnostettiin 1989–1999, ja se on '
+          + 'edelleen sekä sotilasaluetta että kaupunkilaisten puisto.',
+      kuvat: [
+        {
+          tiedosto: 'Kastellet aerial.jpg',
+          selite: 'Ilmakuva Kastelletista: viisisakarainen vallirengas '
+            + 'vallihautoineen, punaiset kasarmirivit keskellä ja '
+            + 'Kööpenhamina taustalla.',
+          lahde: 'CucombreLibre, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Kastellet - windmill and canon.jpg',
+          selite: 'Kuninkaan bastionin tuulimylly punaisella jalustallaan, '
+            + 'edessä vanha tykki ja takana linnoituksen punaiset kasarmit.',
+          lahde: 'Klearchos Kapoutsis, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Christen Købke - The North Gate of the Citadel - Google Art Project.jpg',
+          selite: 'Christen Købken maalaus vuodelta 1834: Norjanportin '
+            + 'nostosilta, vartiomies valkoisissa housuissa ja poikia '
+            + 'kaiteella.',
+          lahde: 'Christen Købke, Wikimedia Commons (Public domain)',
         },
       ],
       lahde: 'Wikipedia',
@@ -112023,6 +112244,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v764 — Köpiksen kartalla 9 kohdetta (uudet: 7–9, ympyröinä)',
   'v763 — vaakuna isona ilman laatikkoa; liput paikallaan',
   'v762 — jutun otsikko: vahti pitää yläreunan paikallaan',
   'v761 — työhuoneessa vain palkit, tekstirivit pois',
@@ -183381,6 +183603,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 764, teksti: 'Kööpenhaminan kartalle 3 uutta kohdetta juttuineen (Opus 18)' },
   { v: 763, teksti: 'lippuikkuna: iso pelkkä vaakuna; liput kasvavat paikallaan' },
   { v: 762, teksti: 'jutun yläreunan vahti: otsikko ei karkaa avauksessa' },
   { v: 761, teksti: 'työhuoneen kulu- ja lähderivit pois (palkit riittävät)' },
@@ -184241,7 +184464,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.763';
+const APP_VERSION = '2026-08-09.764';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

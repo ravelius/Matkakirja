@@ -4733,6 +4733,25 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Nyhavn', lat: 55.6802, lon: 12.59, wiki: 'Nyhavn' },
       { nimi: 'Christiansborgin linna', lat: 55.6761, lon: 12.5797, wiki: 'Christiansborgin linna' },
       { nimi: 'Tivoli', lat: 55.6737, lon: 12.5681 },
+      /*
+       * KOLME LISÄKOHDETTA (paketti K1) — kartan numerointi tulee
+       * järjestyksestä, joten nämä tulevat listan loppuun eivätkä
+       * siirrä vanhoja 1–6:ta. Ei piirroksia (miniatyyrit.js):
+       * kartalla numeroympyrät, kuten koodi tekee kohteelle ilman
+       * piirrosta.
+       *
+       * KAKSI ANSAA fi.wikipediassa, molemmat tarkistettu
+       * rajapinnasta:
+       *  - `Vapahtajan kirkko` OHJAA Kristuksen kirkastumisen
+       *    kirkkoon. Christianshavnin kirkosta kertoo
+       *    `Vapahtajamme kirkko` (tanskaksi Vor Frelsers Kirke).
+       *  - `Kastellet` yksinään on TUKHOLMAN Kastellholmenin
+       *    linnoitus. Kööpenhaminan tähtilinnoitus on
+       *    `Kastellet (Kööpenhamina)`.
+       */
+      { nimi: 'Vapahtajan kirkko', lat: 55.6729, lon: 12.594, wiki: 'Vapahtajamme kirkko' },
+      { nimi: 'Rosenborgin linna', lat: 55.6859, lon: 12.5773, wiki: 'Rosenborgin linna' },
+      { nimi: 'Kastellet', lat: 55.6912, lon: 12.5938, wiki: 'Kastellet (Kööpenhamina)' },
     ],
   },
   dubrovnik: {
