@@ -8976,12 +8976,21 @@ export class UI {
     // Vain lehtikaupungeissa on kaksi lehteä; muualla saapumiskortti on
     // wikin varassa eikä sillä ole etusivua puskuroitavaksi.
     if (!this.tutkiLehti) return;
+    this.esipuskuroiKuvat([
+      ...this.kaupunkilehdenEtusivunKuvat(city.id),
+      // Maalehden etusivu kokonaisuudessaan.
+      ...this.lehdenSivunKuvat(this.maalehdenEkaSivu()),
+    ]);
+    this.esipuskuroiLehtienLuennat();
+  }
+
+  /**
+   * Kaupunkilehden etusivun kuvat: kansikuvat (piirraLehtiKuvat pyytää
+   * pääkuvan 1200:lla ja enintään kaksi pikkukuvaa 640:llä), maan lippu
+   * mastossa ja kohdekartta sivun pohjalla.
+   */
+  kaupunkilehdenEtusivunKuvat(cityId = this.arrivalShownFor) {
     const kuvat = [];
-    /*
-     * Kaupunkilehden etusivu: kansikuvat (piirraLehtiKuvat pyytää
-     * pääkuvan 1200:lla ja enintään kaksi pikkukuvaa 640:llä), maan
-     * lippu mastossa ja kohdekartta sivun pohjalla.
-     */
     const kansikuvat = this.tutkiKansi?.kansikuvat ?? [];
     if (kansikuvat[0]?.tiedosto) kuvat.push(valokuvaUrl(kansikuvat[0].tiedosto, 1200));
     for (const teos of kansikuvat.slice(1, 3)) {
@@ -8996,15 +9005,12 @@ export class UI {
      * (Piirto itse on piirraKaupunkiKartassa — tähän kootaan vain
      * osoitteet.)
      */
-    const kohdekartta = KAUPUNKIKARTAT[city.id];
+    const kohdekartta = KAUPUNKIKARTAT[cityId];
     if (kohdekartta) {
       kuvat.push(kohdekartta.polku ?? valokuvaUrl(kohdekartta.tiedosto, 1000));
       if (kohdekartta.satelliitti) kuvat.push(kohdekartta.satelliitti);
     }
-    // Maalehden etusivu kokonaisuudessaan.
-    kuvat.push(...this.lehdenSivunKuvat(this.maalehdenEkaSivu()));
-    this.esipuskuroiKuvat(kuvat);
-    this.esipuskuroiLehtienLuennat();
+    return kuvat;
   }
 
   /**
@@ -10385,26 +10391,38 @@ export class UI {
       { jatko: () => this.jatkaLehdenLuentaa() });
     this.sijoitaLehtiKaiutin(kaiutin);
     /*
-     * SEURAAVA SIVU VALMIIKSI heti, kun tämä sivu on näkyvissä
+     * VIEREISET SIVUT VALMIIKSI heti, kun tämä sivu on näkyvissä
      * (Etukäteispuskurin periaate): sivunkääntö ei saa jäädä
      * odottamaan verkkoa. Kutsu tulee sivun piirron JÄLKEEN, jotta
      * näkyvä sivu saa yhteyden ensin — ja koska naytaTutkiSivu ajetaan
      * myös lehden avautuessa, sama koukku kattaa sekä avaamisen että
      * jokaisen käännöksen.
      */
-    this.esilataaSeuraavaSivu(i);
+    this.esilataaViereisetSivut(i);
   }
 
   /**
-   * Sivun `sivu + 1` kuvat taustalle. Sivu 0 on etusivu ja aiheet
-   * alkavat sivulta 1, joten seuraavan sivun sisältö on
-   * tutkiSivut[sivu] — viimeisellä sivulla lista loppuu eikä haeta
-   * mitään.
+   * Sivujen `sivu ± 1` kuvat taustalle.
+   *
+   * Sivu 0 on etusivu ja aiheet alkavat sivulta 1, joten sivun n
+   * sisältö on tutkiSivut[n - 1]. Listan päät jäävät itsestään pois.
+   *
+   * MYÖS EDELLINEN (omistajan tarkennus 15.8.2026): sisällysvalikosta
+   * voi hypätä keskelle lehteä, jolloin kumpikaan naapuri ei ole
+   * käynyt näytöllä — takaisin selaaminen olisi silloin yhtä hidasta
+   * kuin eteenpäin ilman puskuria. Jo haetut osoitteet eivät lähde
+   * uudelleen (esipuskuroiKuvat pitää kirjaa).
    */
-  esilataaSeuraavaSivu(sivu) {
-    const seuraava = this.tutkiSivut?.[sivu];
-    if (!seuraava) return;
-    this.esipuskuroiKuvat(this.lehdenSivunKuvat(seuraava));
+  esilataaViereisetSivut(sivu) {
+    const kuvat = [...this.lehdenSivunKuvat(this.tutkiSivut?.[sivu] ?? null)];
+    if (sivu - 2 >= 0) {
+      kuvat.push(...this.lehdenSivunKuvat(this.tutkiSivut?.[sivu - 2] ?? null));
+    } else if (sivu === 1 && this.tutkiTila !== 'maa') {
+      // Ensimmäisen aihesivun edellinen on lehden etusivu; maalehdellä
+      // sitä ei ole (tutkiEkaSivu on siellä 1).
+      kuvat.push(...this.kaupunkilehdenEtusivunKuvat());
+    }
+    this.esipuskuroiKuvat(kuvat);
   }
 
   /**

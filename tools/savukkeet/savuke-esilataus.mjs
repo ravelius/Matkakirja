@@ -14,7 +14,8 @@
  *  6. Maalehden etusivun kartta pyydetään jo saapumisesta — siis ennen
  *     kuin liitelinkkiä on painettu — ja sekin samalla leveydellä.
  *  7. Sivunvaihto ei odota verkkoa: seuraavan sivun nostokuva on
- *     pyydetty jo silloin, kun edellinen sivu on näkyvissä.
+ *     pyydetty jo silloin, kun edellinen sivu on näkyvissä — ja
+ *     sisällysvalikon hypyn jälkeen myös EDELLINEN naapuri.
  *  8. Lukijaäänen ensimmäinen pala esihaetaan molempiin lehtiin
  *     saapuessa (kaksi hakua, ei enempää).
  *  9. Esihaun avain OSUU: kaiuttimen painallus ei generoi samaa palaa
@@ -357,6 +358,26 @@ const maalehti = await sivu.evaluate(async (iso) => {
 }, odotetut.iso);
 vaadi('maalehden esihaku osui lehden oikean ensimmäisen sivun alkuun',
   Boolean(maalehti.eka) && esihaut.includes(maalehti.eka), JSON.stringify({ maalehti, esihaut }));
+
+/*
+ * 10b. EDELLINEN sivu puskuroidaan myös (omistajan tarkennus
+ *      15.8.2026): sisällysvalikosta hypätään keskelle lehteä, eikä
+ *      kumpikaan naapuri ole silloin käynyt näytöllä. Maalehti on
+ *      juuri avattu sivulle 1, joten sivun 3 kuvia ei ole pyydetty.
+ */
+const naapuri = await sivu.evaluate(async () => {
+  const kuvat = await import('/js/packs/africa-valokuvat.js');
+  const { ui } = window.matkakirja;
+  // Sivun 4 edellinen on sivu 3, jonka sisältö on tutkiSivut[2].
+  const nosto = (ui.tutkiSivut?.[2]?.nostot ?? []).find((n) => n.tiedosto);
+  return { osoite: nosto ? kuvat.valokuvaUrl(nosto.tiedosto, 900) : null, sivuja: ui.tutkiSivuja() };
+});
+const ennenHyppya = pyynnot.includes(naapuri.osoite);
+await sivu.evaluate(() => window.matkakirja.ui.naytaTutkiSivu(4, { heti: true }));
+await sivu.waitForTimeout(1500);
+vaadi('sisällysvalikon hypyn jälkeen myös EDELLINEN sivu on puskuroitu',
+  Boolean(naapuri.osoite) && naapuri.sivuja > 5 && !ennenHyppya
+  && pyynnot.includes(naapuri.osoite), JSON.stringify({ ...naapuri, ennenHyppya }));
 
 // 11. Maa ILMAN korkokarttaa: etusivu on aihesivu, ja se rakentuu
 //     samalla piirrolla irralliseen elementtiin ilman että lehteä
