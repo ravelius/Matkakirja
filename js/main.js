@@ -43,7 +43,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.754';
+const APP_VERSION = '2026-08-09.755';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1261,12 +1261,18 @@ function piirraTyohuonePalkit(data) {
 
 function paivitaTyohuonePalkit() {
   if (!kehittajaTilaPaalla()) return;
-  // Onnistunut tulos riittää istunnoksi; epäonnistunut tai vajaa
-  // tila-haku yritetään uudestaan seuraavasta avauksesta (ohimenevä
-  // verkkovika ei saa jäädä valikkoon koko istunnoksi).
-  const vajaa = tyohuoneTila
-    && ((tyohuoneTila.tilaSyy && tyohuoneTila.tilaSyy !== 'koodi')
-      || (tyohuoneTila.tila?.viat && Object.keys(tyohuoneTila.tila.viat).length));
+  // Onnistunut tulos riittää istunnoksi; KAIKKI vajaat tulokset
+  // (virhe, lähdeviat tai kulut tyhjänä mistä syystä hyvänsä — myös
+  // vanhan workerin muotoinen vastaus ilman viat-kenttää) haetaan
+  // uudestaan seuraavasta avauksesta. Ohimenevä häiriö tai kesken
+  // ollut julkaisu ei saa jäädä valikkoon koko istunnoksi.
+  const vajaa = tyohuoneTila && (
+    tyohuoneTila.tilaSyy
+    || !tyohuoneTila.tila
+    || tyohuoneTila.tila.kulut?.yhteensa === null
+    || tyohuoneTila.tila.kulut?.yhteensa === undefined
+    || (tyohuoneTila.tila.viat && Object.keys(tyohuoneTila.tila.viat).length)
+  );
   if (tyohuoneTila && !vajaa) {
     piirraTyohuonePalkit(tyohuoneTila);
     return;
