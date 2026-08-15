@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 733, teksti: 'Lippusivut: Aasia' },
   { v: 732, teksti: 'Suurennos 65 %; kyltti kiinni rakennukseen' },
   { v: 731, teksti: 'Lippusivut: Slovenia-Azerbaidzan' },
   { v: 730, teksti: 'Lippuikkunan tarkennus; kartta 40 %' },
