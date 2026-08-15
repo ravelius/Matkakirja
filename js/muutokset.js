@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 713, teksti: 'Pöllön kuvalle sykkivä paikanpitäjä haun ajaksi' },
   { v: 712, teksti: 'Pöllön vastauskuva löytyy myös haun kautta' },
   { v: 711, teksti: 'Lipusta aukeaa lipun tarina — pilotti Suomi ja Saksa' },
   { v: 710, teksti: 'Miniatyyrit kolmeen kaupunkiin ja piirrokset pisteiksi' },

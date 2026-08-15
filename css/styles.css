@@ -12365,6 +12365,34 @@ a.pollo-kuvalahde {
   object-fit: cover;
 }
 
+/* Kuvan paikanpitäjä haun ajaksi (omistaja 15.8.2026: "place holder
+ * sen aikaa ja animaatio"): sama kelluva laatta, sisällä hiljalleen
+ * pyörivä rengas. Liikettä karttava asetus pysäyttää pyörinnän. */
+.pollo-viesti .pollo-vastauskuva.pollo-kuvapidike {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(70, 51, 31, 0.07);
+  cursor: default;
+}
+
+.pollo-kuvapidike-sykli {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 2px solid rgba(70, 51, 31, 0.35);
+  border-top-color: transparent;
+  animation: pollo-kuvapidike-pyorii 0.9s linear infinite;
+}
+
+@keyframes pollo-kuvapidike-pyorii {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pollo-kuvapidike-sykli { animation: none; border-top-color: rgba(70, 51, 31, 0.35); }
+}
+
 /* Jatkokysymykset vastauksen alla. Samaa muotoa kuin avausruudun
    ehdotukset (.pollo-ehdotus), mutta virran sisällä: ne kuuluvat juuri
    siihen vastaukseen, jonka perässä ne ovat. */
