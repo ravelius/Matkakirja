@@ -2159,8 +2159,20 @@ function virkkeiksi(teksti) {
 }
 
 function jaaKappaleiksi(teksti) {
-  const virkkeet = virkkeiksi(teksti);
-  if (virkkeet.length < 3) return [String(teksti ?? '').trim()].filter(Boolean);
+  const koko = String(teksti ?? '').trim();
+  /*
+   * KIRJOITTAJAN OMAT KAPPALERAJAT VOITTAVAT (omistaja 15.8.2026:
+   * "Käytä enemmän rivinvaihtoja. Teksti on nyt aivan liikaa yhteen
+   * putkeen"). Tyhjä rivi tekstissä on tarkoituksellinen kappaleen
+   * raja — kehittäjän liitteet taittavat Raamatun kohdat ja
+   * tilannetaulun rivit omiksi kappaleikseen sen avulla. Automaattinen
+   * puolitus koskee vain tekstiä, jossa rajoja ei ole annettu.
+   */
+  if (koko.includes('\n\n')) {
+    return koko.split(/\n{2,}/).map((k) => k.trim()).filter(Boolean);
+  }
+  const virkkeet = virkkeiksi(koko);
+  if (virkkeet.length < 3) return [koko].filter(Boolean);
   const puoli = Math.ceil(virkkeet.length / 2);
   return [virkkeet.slice(0, puoli).join(' '), virkkeet.slice(puoli).join(' ')].filter(Boolean);
 }
@@ -10663,6 +10675,7 @@ export class UI {
     const sivut = [{
       id: 'raamattu-johdanto',
       nimi: 'Raamattu',
+      yksipalsta: true,
       nostot: [{
         otsikko: `Päivitetty ${RAAMATTU.paivitetty}`,
         teksti: RAAMATTU.johdanto,
@@ -10673,7 +10686,10 @@ export class UI {
       return {
         id: `raamattu-${i}`,
         nimi: osio.otsikko,
+        yksipalsta: true,
         tagi: { teksti: valmis ? 'valmis' : 'kesken', luokka: valmis ? 'valmis' : 'kesken' },
+        // Tyhjä rivi kohtien välissä = oma kappale taitossa
+        // (jaaKappaleiksi kunnioittaa kirjoittajan kappalerajoja).
         nostot: [{
           teksti: (osio.kohdat ?? []).join('\n\n'),
         }],
@@ -10687,6 +10703,7 @@ export class UI {
     const sivut = [{
       id: 'tilanne-taulu',
       nimi: 'Tilanne',
+      yksipalsta: true,
       nostot: [{
         otsikko: TILANNE.paivitetty,
         teksti: TILANNE.tavoite,
@@ -10698,6 +10715,7 @@ export class UI {
     }, {
       id: 'tilanne-testattavaa',
       nimi: 'Testattavaa',
+      yksipalsta: true,
       // Äärimmäisen minimalistinen (omistajan linjaus 15.8.2026):
       // pelkkiä viivarivejä, rivi per kappale.
       nostot: [{
@@ -11638,6 +11656,11 @@ export class UI {
   piirraKategoria(kategoria, kohde = this.arrivalKategoria, { otsikko = true, sitaatti = true } = {}) {
     kohde.replaceChildren();
     if (!kategoria) return;
+    // Kehittäjän liitteet taitetaan yhdelle palstalle ilman lehden
+    // koristeita (omistaja 15.8.2026: "Poista palstat raamatun
+    // taitosta. Ei tarvitse näyttää lehdeltä."). Toggle, jotta luokka
+    // lähtee pois kun samaan koteloon piirtyy tavallinen sivu.
+    kohde.classList.toggle('yksipalsta', Boolean(kategoria.yksipalsta));
     // Kuvake ei kerro nimeä, joten nimi lukee sisällön yllä.
     if (otsikko) {
       const nimi = html('h3', 'aihe-nimi', kategoria.nimi);
@@ -11808,7 +11831,11 @@ export class UI {
         if (selite) lohko.appendChild(selite);
         if (lahde) lohko.appendChild(lahde);
       }
-      const leipa = piirraLeipa(lohko, nosto.teksti, { anfangi: ensimmainen });
+      // Yksipalstainen kehittäjäsivu ei saa anfangia — se on lehden
+      // koriste (omistaja 15.8.2026).
+      const leipa = piirraLeipa(lohko, nosto.teksti, {
+        anfangi: ensimmainen && !kategoria.yksipalsta,
+      });
       ensimmainen = false;
       if (nosto.wiki) {
         const nappi = html('button', 'wiki-btn', 'Lue lisää aiheesta');

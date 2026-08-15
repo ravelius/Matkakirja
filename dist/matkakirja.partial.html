@@ -9900,6 +9900,19 @@ body.vertailu-tila .pawns { display: none; }
   border: 1px solid #d4b96a;
 }
 
+/* Kehittäjän liitteiden taitto: yksi palsta, ei lehden koristeita
+ * (omistaja 15.8.2026: "Poista palstat raamatun taitosta. Ei tarvitse
+ * näyttää lehdeltä."). Anfangi estetään jo piirrossa (piirraLeipa);
+ * tässä perutaan palstat ja lihavoitu aloitus. */
+.wiki-kategoria.yksipalsta .wiki-nosto .leipa {
+  columns: 1;
+  column-rule: none;
+}
+
+.wiki-kategoria.yksipalsta .leipa-aloitus {
+  font-weight: inherit;
+}
+
 /*
  * Numeroina-sivun avaava yleisluonnehdinta (omistajan palaute
  * 10.8.2026): datasta koottu 2–3 virkkeen luonnehdinta isolla ennen
@@ -10860,6 +10873,10 @@ body.maatiedot-tila .fact-card {
   display: flex;
   gap: 0.6rem;
   align-items: flex-start;
+  /* Rivi ei saa litistyä sisältöään matalammaksi: pitkällä listalla
+   * (Raamatun 19 sivua) ruudukko jakoi korkeuden tasan ja rivit
+   * lomittuivat toistensa päälle (omistajan kaappaus 15.8.2026). */
+  height: auto;
   width: 100%;
   padding: 0.5rem 0.55rem;
   min-height: 0;
@@ -11030,6 +11047,12 @@ body.maatiedot-tila .fact-card {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
+  /* Rivit sisältönsä korkuisina ja lista ylhäältä alkaen — ilman tätä
+   * täyttä levyä pidempi lista puristui tasakorkuisiksi 18 px:n
+   * riveiksi, jotka valuivat toistensa päälle (omistajan kaappaus
+   * 15.8.2026, Raamatun sisällys). */
+  grid-auto-rows: max-content;
+  align-content: start;
 }
 
 /* Paluu kartalle levyn pohjalla (omistajan tilaus 14.8.2026):
@@ -163799,8 +163822,20 @@ function virkkeiksi(teksti) {
 }
 
 function jaaKappaleiksi(teksti) {
-  const virkkeet = virkkeiksi(teksti);
-  if (virkkeet.length < 3) return [String(teksti ?? '').trim()].filter(Boolean);
+  const koko = String(teksti ?? '').trim();
+  /*
+   * KIRJOITTAJAN OMAT KAPPALERAJAT VOITTAVAT (omistaja 15.8.2026:
+   * "Käytä enemmän rivinvaihtoja. Teksti on nyt aivan liikaa yhteen
+   * putkeen"). Tyhjä rivi tekstissä on tarkoituksellinen kappaleen
+   * raja — kehittäjän liitteet taittavat Raamatun kohdat ja
+   * tilannetaulun rivit omiksi kappaleikseen sen avulla. Automaattinen
+   * puolitus koskee vain tekstiä, jossa rajoja ei ole annettu.
+   */
+  if (koko.includes('\n\n')) {
+    return koko.split(/\n{2,}/).map((k) => k.trim()).filter(Boolean);
+  }
+  const virkkeet = virkkeiksi(koko);
+  if (virkkeet.length < 3) return [koko].filter(Boolean);
   const puoli = Math.ceil(virkkeet.length / 2);
   return [virkkeet.slice(0, puoli).join(' '), virkkeet.slice(puoli).join(' ')].filter(Boolean);
 }
@@ -172302,6 +172337,7 @@ class UI {
     const sivut = [{
       id: 'raamattu-johdanto',
       nimi: 'Raamattu',
+      yksipalsta: true,
       nostot: [{
         otsikko: `Päivitetty ${RAAMATTU.paivitetty}`,
         teksti: RAAMATTU.johdanto,
@@ -172312,7 +172348,10 @@ class UI {
       return {
         id: `raamattu-${i}`,
         nimi: osio.otsikko,
+        yksipalsta: true,
         tagi: { teksti: valmis ? 'valmis' : 'kesken', luokka: valmis ? 'valmis' : 'kesken' },
+        // Tyhjä rivi kohtien välissä = oma kappale taitossa
+        // (jaaKappaleiksi kunnioittaa kirjoittajan kappalerajoja).
         nostot: [{
           teksti: (osio.kohdat ?? []).join('\n\n'),
         }],
@@ -172326,6 +172365,7 @@ class UI {
     const sivut = [{
       id: 'tilanne-taulu',
       nimi: 'Tilanne',
+      yksipalsta: true,
       nostot: [{
         otsikko: TILANNE.paivitetty,
         teksti: TILANNE.tavoite,
@@ -172337,6 +172377,7 @@ class UI {
     }, {
       id: 'tilanne-testattavaa',
       nimi: 'Testattavaa',
+      yksipalsta: true,
       // Äärimmäisen minimalistinen (omistajan linjaus 15.8.2026):
       // pelkkiä viivarivejä, rivi per kappale.
       nostot: [{
@@ -173276,6 +173317,11 @@ class UI {
   piirraKategoria(kategoria, kohde = this.arrivalKategoria, { otsikko = true, sitaatti = true } = {}) {
     kohde.replaceChildren();
     if (!kategoria) return;
+    // Kehittäjän liitteet taitetaan yhdelle palstalle ilman lehden
+    // koristeita (omistaja 15.8.2026: "Poista palstat raamatun
+    // taitosta. Ei tarvitse näyttää lehdeltä."). Toggle, jotta luokka
+    // lähtee pois kun samaan koteloon piirtyy tavallinen sivu.
+    kohde.classList.toggle('yksipalsta', Boolean(kategoria.yksipalsta));
     // Kuvake ei kerro nimeä, joten nimi lukee sisällön yllä.
     if (otsikko) {
       const nimi = html('h3', 'aihe-nimi', kategoria.nimi);
@@ -173446,7 +173492,11 @@ class UI {
         if (selite) lohko.appendChild(selite);
         if (lahde) lohko.appendChild(lahde);
       }
-      const leipa = piirraLeipa(lohko, nosto.teksti, { anfangi: ensimmainen });
+      // Yksipalstainen kehittäjäsivu ei saa anfangia — se on lehden
+      // koriste (omistaja 15.8.2026).
+      const leipa = piirraLeipa(lohko, nosto.teksti, {
+        anfangi: ensimmainen && !kategoria.yksipalsta,
+      });
       ensimmainen = false;
       if (nosto.wiki) {
         const nappi = html('button', 'wiki-btn', 'Lue lisää aiheesta');
@@ -179440,6 +179490,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 706, teksti: 'Raamatun taitto: kappaleet, yksi palsta, sisällys ehjäksi' },
   { v: 705, teksti: 'Tilannetaulut ajan tasalle v704 asti' },
   { v: 704, teksti: 'Radio väistää puhetta kuten muukin tausta' },
   { v: 703, teksti: 'Pöllö hakee vastaukseen kuvan — pikkukuva aukeaa isoksi' },
@@ -180242,7 +180293,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.705';
+const APP_VERSION = '2026-08-09.706';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
