@@ -222,11 +222,10 @@ export const MAA_KATEGORIAT = {
             + 'yhdeksän hehtaaria eli 22 eekkeriä Thamesia muuttui kaduksi. '
             + 'Victoria Embankmentin leveä rantakatu on siis viemärin katto — '
             + 'ja saman penkereen sisällä kulkee myös metro.',
-          selite: 'Poikkileikkaus Thamesin penkereestä vuodelta 1867, Charing '
-            + 'Crossin aseman kohdalta. Kadun alle on merkitty johtotunneli '
-            + '(1), matalan tason viemäri (2), metrorata höyryvetureineen (3) '
-            + 'ja joen pohjan alle paineilmarata (4); oikealla muurataan '
-            + 'uutta rantamuuria ulos jokeen.',
+          selite: 'Poikkileikkaus Thamesin penkereestä vuodelta 1867, '
+            + 'Charing Crossin aseman kohdalta. Kadun alle on merkitty '
+            + 'johtotunneli (1), matalan tason viemäri (2), metrorata '
+            + 'höyryvetureineen (3) ja joen pohjan alle paineilmarata (4).',
           lahde: 'The Illustrated London News / Wellcome Collection, Wikimedia Commons (PD)',
           wiki: 'Thames',
         },
@@ -301,11 +300,11 @@ export const MAA_KATEGORIAT = {
             + 'kahdeksan lehden sarjansa perintönsä tuhlaavasta nuoresta '
             + 'miehestä, ja jokaisen lehden alle painettiin rivi "Publish\'d '
             + 'according to Act of Parliament".',
-          selite: 'Hogarthin kuvasarjan toinen lehti: nuori perijä seisoo salinsa '
-            + 'keskellä miekkailumestarin, viulua pitelevän tanssimestarin, '
-            + 'metsästystorven soittajan ja muiden onnenonkijoiden '
-            + 'ympäröimänä. Alareunan tekstirivi kertoo, että lehti on '
-            + 'julkaistu parlamentin lain mukaisesti 25. kesäkuuta 1735.',
+          selite: 'Hogarthin kuvasarjan toinen lehti: nuori perijä '
+            + 'salissaan miekkailumestarin, tanssimestarin, metsästystorven '
+            + 'soittajan ja muiden onnenonkijoiden ympäröimänä. Tekstirivi '
+            + 'kertoo, että lehti on julkaistu parlamentin lain mukaisesti '
+            + '25. kesäkuuta 1735.',
           lahde: 'William Hogarth / Metropolitan Museum of Art, Wikimedia Commons (CC0)',
           wiki: 'William Hogarth',
         },
@@ -407,11 +406,11 @@ export const MAA_KATEGORIAT = {
             + 'viikossa maalauksen eteen kertyi satoja saapaspareja ja '
             + 'galleriaan yli 15 000 kävijää. Talo näyttää yhä nykytaidetta, '
             + 'ja sisään pääsee ilmaiseksi.',
-          selite: 'Whitechapelin gallerian julkisivu lokakuussa 2012. Yläosaa '
+          selite: 'Whitechapelin galleria lokakuussa 2012. Yläosaa '
             + 'peittävät Rachel Whitereadin kullatut pronssilehdet, jotka '
-            + 'paljastettiin samana kesänä. Oikealla on entinen Passmore '
-            + 'Edwards -kirjasto, joka liitettiin galleriaan vuonna 2009, ja '
-            + 'sen alla Aldgate Eastin metroaseman sisäänkäynti.',
+            + 'paljastettiin samana kesänä. Naapurin entinen Passmore '
+            + 'Edwards -kirjasto liitettiin galleriaan 2009, ja sen alla on '
+            + 'Aldgate Eastin metroasema.',
           lahde: 'John Lord, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Rachel Whiteread',
         },
@@ -637,10 +636,9 @@ export const MAA_KATEGORIAT = {
             + 'sinfoniansa päässään, ilman soitinta. Se kantaesitettiin 21. '
             + 'helmikuuta 1765 Haymarketin pienessä teatterissa, ja poika '
             + 'johti esitystä itse.',
-          selite: 'Ebury Streetin talot 180 ja 182 Belgraviassa; molempien '
-            + 'pohjakerros on rapattu valkeaksi. Oikeanpuoleisessa talossa '
+          selite: 'Ebury Streetin talot 180 ja 182 Belgraviassa. Talossa '
             + '180 on ruskea pyöreä laatta, jossa lukee Wolfgang Amadeus '
-            + 'Mozart 1756–1791. Vasemmanpuoleisen naapuritalon 182 laatta on '
+            + 'Mozart 1756–1791. Naapuritalon 182 laatta on '
             + 'kirjailijapariskunnalle Harold Nicolson ja Vita '
             + 'Sackville-West.',
           lahde: 'A J Paxton, Wikimedia Commons (CC BY-SA 2.0)',
@@ -649,21 +647,20 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kellot soivat lukuja, ei sävelmää',
           tiedosto: 'Great Bells of Bow.jpg',
-          teksti: 'Englantilaisessa kellonsoitossa kello heilahtaa lähes täyden '
-            + 'ympyrän, ja jokaista kelloa vetää oma soittajansa omasta '
-            + 'köydestään. Sävelmää ei synny: kellot soitetaan joka '
+          teksti: 'Englantilaisessa kellonsoitossa kello heilahtaa lähes '
+            + 'täyden ympyrän, ja jokaista kelloa vetää oma soittajansa '
+            + 'omasta köydestään. Sävelmää ei synny: kellot soitetaan joka '
             + 'kierroksella eri järjestyksessä, eikä sama järjestys saa '
             + 'toistua kertaakaan. Kahdellatoista kellolla järjestyksiä on '
             + '479 001 600, ja niiden kaikkien läpi soittaminen veisi yli '
             + 'kolmekymmentä vuotta. Täysi peal on vähintään viisituhatta '
             + 'vaihdosta ja kestää noin kolme tuntia, kaikki ulkomuistista '
             + 'ilman nuotteja.',
-          selite: 'St Mary-le-Bow\'n kellohuone Cityssä. Kaksitoista pronssikelloa '
-            + 'lepää kehikossaan suu alaspäin, ja jokaisen kyljessä on iso '
-            + 'pyörä, jonka ympäri soittajan köysi kiertyy. Kellojen '
-            + 'olkapäähän on valettu valajan nimi Mears. Vanhastaan oikea '
-            + 'lontoolainen eli cockney on syntynyt näiden kellojen '
-            + 'kuuluvilla.',
+          selite: 'St Mary-le-Bow\'n kellohuone Cityssä: kaksitoista '
+            + 'pronssikelloa lepää kehikossaan suu alaspäin, jokaisen '
+            + 'kyljessä köyden pyörä. Kellojen olkapäähän on valettu '
+            + 'valajan nimi Mears. Vanhastaan oikea lontoolainen eli '
+            + 'cockney on syntynyt näiden kellojen kuuluvilla.',
           lahde: 'Bellminsterboy, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'St Mary-le-Bow',
         },
@@ -1070,11 +1067,11 @@ export const MAA_KATEGORIAT = {
             + 'nauhasta, jota nukettaja pitää suussaan koko näytöksen ajan. '
             + 'Punchista on jäänyt englantiin sanontakin: pleased as Punch '
             + 'tarkoittaa hyvin tyytyväistä.',
-          selite: 'Muistolaatta St Paulin kirkon seinässä Covent Gardenissa. '
-            + 'Kiveen on hakattu, että lähellä tätä paikkaa Punchin '
-            + 'nukketeatteri esitettiin ensi kerran Englannissa ja Samuel '
-            + 'Pepys näki sen vuonna 1662. Alin rivi kertoo laatan vuosiluvun '
-            + '1962, tasan kolmesataa vuotta myöhemmin.',
+          selite: 'Muistolaatta St Paulin kirkon seinässä Covent '
+            + 'Gardenissa. Kiveen on hakattu, että lähellä tätä paikkaa '
+            + 'Punchin nukketeatteri esitettiin ensi kerran Englannissa ja '
+            + 'Samuel Pepys näki sen vuonna 1662. Laatta on vuodelta 1962, '
+            + 'tasan kolmesataa vuotta myöhemmin.',
           lahde: 'Spudgun67, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Samuel Pepys',
         },
@@ -1091,11 +1088,11 @@ export const MAA_KATEGORIAT = {
             + 'muotokuvat riippuivat nälkäisten silmien edessä. Pilkka jäi '
             + 'elämään niin sitkeästi, että cartoon tarkoittaa englannissa '
             + 'yhä pilapiirrosta.',
-          selite: 'Punchin ensimmäinen cartoon heinäkuulta 1843. Yläreunassa '
-            + 'lukee CARTOON, No. 1 ja alareunassa SUBSTANCE AND SHADOW. '
-            + 'Ryysyinen väki katselee kullattuihin kehyksiin ripustettuja '
-            + 'ylhäisön muotokuvia: mukana on kepin varassa kulkeva mies, '
-            + 'lapsia rievuissa ja pyörällisellä laudalla istuva raajarikko.',
+          selite: 'Punchin ensimmäinen cartoon heinäkuulta 1843; siinä '
+            + 'lukee CARTOON, No. 1 ja SUBSTANCE AND SHADOW. Ryysyinen väki '
+            + 'katselee kullattuihin kehyksiin ripustettuja ylhäisön '
+            + 'muotokuvia: mukana on kepin varassa kulkeva mies ja lapsia '
+            + 'rievuissa.',
           lahde: 'John Leech, Wikimedia Commons (PD)',
           wiki: 'Pilapiirros',
         },
@@ -1133,12 +1130,11 @@ export const MAA_KATEGORIAT = {
             + 'queen. Croft kuoli tammikuussa 1930, ja hänen '
             + 'hautajaissaattueensa oli noin puoli mailia pitkä; siinä käveli '
             + '400 nappipukuista.',
-          selite: 'Pearly kings ja queens riviin asettuneina Guildhallin '
-            + 'edustalla sadonkorjuujuhlassa 2024. Napeista on muotoiltu '
-            + 'hevosenkenkiä, sydämiä, ankkureita ja korttikuvioita, ja '
-            + 'takkien selkämyksiin on kirjailtu tittelit: Pearly King of '
-            + 'Mile End, Pearly King of Highgate ja Pearly Queen of Royal '
-            + 'Greenwich.',
+          selite: 'Pearly kings ja queens Guildhallin edustalla '
+            + 'sadonkorjuujuhlassa 2024. Napeista on muotoiltu '
+            + 'hevosenkenkiä, sydämiä ja ankkureita, ja selkämyksiin on '
+            + 'kirjailtu tittelit Pearly King of Mile End, Pearly King of '
+            + 'Highgate ja Pearly Queen of Royal Greenwich.',
           lahde: 'Doyle of London, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -1176,9 +1172,9 @@ export const MAA_KATEGORIAT = {
             + 'pelastamassa sitä, ja talo suojeltiin huhtikuussa 1971.',
           selite: 'Wilton\'s Music Hallin sali East Endissä. Parveke kiertää '
             + 'kolmelta sivulta kierteisten valurautapylväiden varassa, ja '
-            + 'seinien rapattu pinta on jätetty kulumaan näkyviin. Lattialle '
-            + 'katetaan pitkiä juhlapöytiä samaan tapaan kuin siihen aikaan, '
-            + 'kun salissa myös syötiin.',
+            + 'rapattu seinäpinta on jätetty kulumaan näkyviin. Lattialle '
+            + 'katetaan pitkiä juhlapöytiä kuten siihen aikaan, kun salissa '
+            + 'myös syötiin.',
           lahde: 'Kbthompson at English Wikipedia, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Music hall',
         },
@@ -1311,9 +1307,8 @@ export const MAA_KATEGORIAT = {
             + 'museolle.',
           selite: 'Thamesin kivinen ranta paljastuu laskuveden aikaan '
             + 'Millennium-sillan vieressä. Rannalla liikkuu kymmenkunta '
-            + 'ihmistä, mudasta törröttää vanhojen laitureiden tummuneita '
-            + 'puupaaluja, ja takana kohoaa tiilinen varastotalo, jonka '
-            + 'alakerrassa on The Samuel Pepys -pubi.',
+            + 'ihmistä, ja mudasta törröttää vanhojen laitureiden '
+            + 'tummuneita puupaaluja.',
           lahde: 'Tim Sheerman-Chase, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Thames',
         },
@@ -1392,11 +1387,9 @@ export const MAA_KATEGORIAT = {
             + '000-12 000. Neljä vuotta myöhemmin säädettiin laki, jonka '
             + 'nojalla kaupunginosia voitiin määrätä savuttomiksi.',
           selite: 'Lontoolaista sumua The Illustrated London News -lehden '
-            + 'puukaiverruksessa 2. tammikuuta 1847, siis yli vuosisata ennen '
-            + 'vuoden 1952 savusumua. Kaksi poikaa kantaa palavaa soihtua ja '
-            + 'opastaa kulkijoita, oikealla silinteripäinen herra taluttaa '
-            + 'naista, ja takana häämöttävät hevonen, vaunut ja palava '
-            + 'kaasulyhty.',
+            + 'puukaiverruksessa 2. tammikuuta 1847, siis yli vuosisata '
+            + 'ennen vuoden 1952 savusumua. Kaksi poikaa kantaa palavaa '
+            + 'soihtua ja opastaa kulkijoita.',
           lahde: 'Henry Linton (kaiverrus, piirros Duncan), Wikimedia Commons (PD)',
           wiki: 'Lontoon suuri savusumu',
         },
@@ -1455,12 +1448,11 @@ export const MAA_KATEGORIAT = {
             + 'Britainissa. Notting Hillin karnevaalia edeltävässä '
             + 'Panorama-kisassa soittaa nykyään noin tuhat ihmistä, kaikki '
             + 'ulkomuistista.',
-          selite: 'Lontoolainen Ebony Steel Band soittaa Oxford Streetin varrella '
-            + 'House of Fraserin edustalla joulukuussa 2021 ja kerää samalla '
-            + 'rahaa lastensuojelujärjestö NSPCC:lle. Etualalla seisova '
-            + 'kerääjä pitelee vihreää keräyslipasta. Bassopanneista näkee '
-            + 'yhä tynnyrin: kiiltävät pellit seisovat pyörillä, ja kylkeen '
-            + 'on maalattu bändin nimi.',
+          selite: 'Lontoolainen Ebony Steel Band soittaa Oxford Streetillä '
+            + 'House of Fraserin edustalla joulukuussa 2021 ja kerää rahaa '
+            + 'lastensuojelujärjestö NSPCC:lle. Bassopanneista näkee yhä '
+            + 'tynnyrin: kiiltävät pellit seisovat pyörillä, ja kylkeen on '
+            + 'maalattu bändin nimi.',
           lahde: 'Philafrenzy, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Steel pan',
         },
@@ -1478,11 +1470,9 @@ export const MAA_KATEGORIAT = {
             + 'suljettiin huhtikuussa 2025, kun tuomioistuin oli määrännyt '
             + 'melun loppumaan.',
           selite: 'Kitaristi soittaa Piccadilly Circusin metroasemalla '
-            + 'maaliskuussa 2012. Hän istuu retkijakkaralla lattiaan maalatun '
-            + 'soittopaikan laidalla, kaaren reunassa lukee Mayor of London '
-            + 'ja Transport for London, ja kolikot kilahtavat auki jätettyyn '
-            + 'kitarapussiin. Vieressä olevalla kärryllä on kannettava '
-            + 'tietokone ja kaksi nukkea.',
+            + 'maaliskuussa 2012. Hän istuu lattiaan maalatun soittopaikan '
+            + 'laidalla, ja kaaren reunassa lukee Mayor of London ja '
+            + 'Transport for London.',
           lahde: 'Editor5807, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Katusoittaja',
         },
@@ -7264,9 +7254,7 @@ export const MAA_KATEGORIAT = {
             + 'tulee kobolttioksidista, joka kestää polttoa kirkkaana.',
           selite: 'Rautatieaseman odotushalli. Seinien yläosa on peitetty '
             + 'sinivalkoisilla laattakuvilla, joissa näkyy ihmisiä ja '
-            + 'hevosia. Kattolista on valkoista kipsikoristelua ja katto '
-            + 'keltainen. Oikealla on suuri kaari-ikkuna, kello ja sininen '
-            + 'aikataulunäyttö, ja hallissa liikkuu matkustajia.',
+            + 'hevosia. Hallissa liikkuu matkustajia.',
           lahde: 'Michael Gaylard, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -7698,11 +7686,11 @@ export const MAA_KATEGORIAT = {
             + 'maalle nimen Ikaria pojan muistoksi. Ikaria on todellinen '
             + 'Kreikan saari Samoksesta lounaaseen, ja sen ympärillä oleva '
             + 'merialue on yhä nimeltään Ikarianmeri.',
-          selite: 'Louvren kattomaalauksen pyöreä kenttä koristereunuksen '
-            + 'sisällä. Ylhäällä ajaa punaviittainen hahmo vaunuissa, joita '
-            + 'vetää valkoisten hevosten valjakko. Alhaalla putoaa nuori mies '
-            + 'pää edellä siivet levällään, ja irronneita höyheniä leijuu '
-            + 'ympärillä. Kummallakin puolella lentää siivekäs hahmo.',
+          selite: 'Louvren kattomaalauksen pyöreässä kentässä ajaa '
+            + 'punaviittainen hahmo vaunuissa, joita vetää valkoisten '
+            + 'hevosten valjakko. Nuori mies putoaa pää edellä siivet '
+            + 'levällään, ja irronneita höyheniä leijuu ympärillä. Lähellä '
+            + 'lentää kaksi siivekästä hahmoa.',
           lahde: 'Marie-Lan Nguyen, Wikimedia Commons (Public domain)',
           wiki: 'Ikaros',
         },
@@ -7721,9 +7709,9 @@ export const MAA_KATEGORIAT = {
             + 'suomeksikin puhutaan yhä Pandoran lippaasta.',
           selite: '1600-luvun maalaus. Punaviittainen nuori nainen ja '
             + 'turbaanipäinen vanha nainen pitävät molemmat kättään suuren '
-            + 'vaalean kiviastian päällä; astian kylkeen on veistetty pässin '
-            + 'pääkallo. Vanhuksen toisessa kädessä on kultainen malja, ja '
-            + 'takaa kurkistaa kolmas kasvo varjosta.',
+            + 'vaalean kiviastian päällä; astian kylkeen on veistetty '
+            + 'pässin pääkallo. Vanhuksen toisessa kädessä on kultainen '
+            + 'malja.',
           lahde: 'Didier Descouens, Wikimedia Commons (Public domain)',
           wiki: 'Pandora',
         },
@@ -9353,11 +9341,11 @@ export const MAA_KATEGORIAT = {
             + 'tuli Correspondenz-Karte, kooltaan 8,5 kertaa 12,2 senttiä ja '
             + 'hinnaltaan kaksi kreutzeria. Sanarajan posti jätti pois. '
             + 'Ensimmäisessä kuukaudessa kortteja myytiin 1,4 miljoonaa.',
-          selite: 'Vaaleanruskea kortti, jonka yläreunassa lukee koristekirjaimin '
-            + 'Correspondenz-Karte ja sen alla on pieni kaksipäinen kotka. '
-            + 'Oikeassa yläkulmassa on keltainen postimerkki. Pyöreitä '
-            + 'leimoja on kaksi: vasemmassa lukee WIEN ja oikeassa LINZ. '
-            + 'Osoite on kirjoitettu käsin vanhalla kaunokirjoituksella.',
+          selite: 'Vaaleanruskea kortti, jossa lukee koristekirjaimin '
+            + 'Correspondenz-Karte ja jonka yläreunassa on pieni '
+            + 'kaksipäinen kotka sekä keltainen postimerkki. Kahdessa '
+            + 'pyöreässä leimassa lukee WIEN ja LINZ. Osoite on kirjoitettu '
+            + 'käsin vanhalla kaunokirjoituksella.',
           lahde: 'austrian-hungarian postal service, Wikimedia Commons (Public domain)',
           wiki: 'Postikortti',
         },
@@ -9554,11 +9542,10 @@ export const MAA_KATEGORIAT = {
             + 'patentoinut keksintöään, joten kopioita tuli heti. Riidat '
             + 'päättyivät sopimuksiin: tehtaista vain yksi saa tehdä täysin '
             + 'pyöreitä palloja, muiden on litistettävä pohja.',
-          selite: 'Kolme asiaa vaalealla pöydällä. Ylhäällä vasemmalla on '
-            + 'kääreessä oleva pallo, jonka paperissa on soikea Mozartin '
-            + 'muotokuva. Sen alla on puoliksi syöty pallo, jonka sisältä '
-            + 'näkyy vaaleanvihreä ydin ja ruskeat kerrokset. Oikealla on '
-            + 'auki levitetty kultainen kääre.',
+          selite: 'Pöydällä on kolme asiaa. Kääreessä olevan pallon '
+            + 'paperissa on soikea Mozartin muotokuva, puoliksi syödyn '
+            + 'pallon sisältä näkyy vaaleanvihreä ydin ja ruskeat '
+            + 'kerrokset, ja kolmantena on auki levitetty kultainen kääre.',
           lahde: 'Riki1979, Wikimedia Commons (Public domain)',
           wiki: 'Salzburg',
         },
@@ -10162,11 +10149,10 @@ export const MAA_KATEGORIAT = {
             + 'Tehdas rakensi työntekijöilleen kokonaisen kaupungin, ja sen '
             + 'konttoritalo numero 21 nousi 77,5 metriin — valmistuessaan '
             + '1938 Euroopan toiseksi korkein moderni rakennus.',
-          selite: 'Baťan konttoritalo Zlínissä: kuusitoistakerroksinen torni, '
-            + 'jossa punatiiliset pystyjuovat vuorottelevat leveiden '
-            + 'ikkunarivien kanssa. Vieressä kohoaa kapeampi porrastorni ja '
-            + 'huipulla on matala kattokerros. Edustalla on betoninen '
-            + 'pysäköintikansi ja rivi nuoria puita.',
+          selite: 'Baťan konttoritalo Zlínissä: kuusitoistakerroksinen '
+            + 'torni, jossa punatiiliset pystyjuovat vuorottelevat leveiden '
+            + 'ikkunarivien kanssa. Tornin vieressä kohoaa kapeampi '
+            + 'porrastorni, ja huipulla on matala kattokerros.',
           lahde: 'Bjalek Michal, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -10225,11 +10211,10 @@ export const MAA_KATEGORIAT = {
             + 'maadoitetuista ukkosenjohdattimista — vaikka Diviš itse luuli '
             + 'tekevänsä aivan muuta. Kuivana kesänä 1759 kyläläiset '
             + 'syyttivät konetta sateen puutteesta ja purkivat sen.',
-          selite: 'Ukkosenjohdatin Prokop Divišin syntymätalon luona Žamberkissa: '
-            + 'ohut punaruskea masto seisoo niityllä kahden vaijerin varassa, '
-            + 'ja sen huipulla on ristikko, jonka varsissa roikkuu '
-            + 'toistakymmentä pientä metallilaatikkoa. Takana on metsänreuna '
-            + 'ja yllä pilvetön taivas.',
+          selite: 'Ukkosenjohdatin Prokop Divišin syntymätalon luona '
+            + 'Žamberkissa: ohut punaruskea masto seisoo niityllä kahden '
+            + 'vaijerin varassa, ja sen huipulla on ristikko, jonka '
+            + 'varsissa roikkuu toistakymmentä pientä metallilaatikkoa.',
           lahde: 'Palickap, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -10288,11 +10273,11 @@ export const MAA_KATEGORIAT = {
             + 'Wichterle kokeili niitä omiin silmiinsä. Seuraavan vuoden '
             + 'neljässä ensimmäisessä kuukaudessa hän ja hänen vaimonsa Linda '
             + 'tekivät 5 500 linssiä.',
-          selite: 'Wichterlen valukone Police nad Metujín museossa: punaisista, '
-            + 'sinisistä ja vihreistä reikälevyistä koottu teline, jossa on '
-            + 'rivi pieniä valkoisia muotteja. Ohuet valkoiset letkut '
-            + 'kaartuvat niiden yli, hihna kulkee kartiomaisen kelan ympäri '
-            + 'ja oikeassa reunassa roikkuu pistotulppa.',
+          selite: 'Wichterlen valukone Police nad Metujín museossa: '
+            + 'punaisista, sinisistä ja vihreistä reikälevyistä koottu '
+            + 'teline, jossa on rivi pieniä valkoisia muotteja. Ohuet '
+            + 'valkoiset letkut kaartuvat niiden yli, ja hihna kulkee '
+            + 'kartiomaisen kelan ympäri.',
           lahde: 'JanSuchy, Wikimedia Commons (public domain)',
         },
       ],
@@ -10389,11 +10374,11 @@ export const MAA_KATEGORIAT = {
             + 'Škopek maalasi 28 vaakunaa: ne kuuluvat kaupungeille, joiden '
             + 'ohi joki matkallaan merelle virtaa. Todellinen lähde on '
             + 'parisataa metriä lännempänä, eikä sinne päästetä ketään.',
-          selite: 'Laben lähde Krkonošen harjulla sumuisena päivänä: kivetyn '
-            + 'aukion keskellä on pyöreä kivirengas, jonka reunalla seisoo '
-            + 'kaksi retkeilijää reput selässä. Takana kaartuu matala muuri, '
-            + 'jonka päälle on maalattu rivi värikkäitä kilpiä, ja vasemmalla '
-            + 'erottuu tumma veistos.',
+          selite: 'Laben lähde Krkonošen harjulla sumuisena päivänä: '
+            + 'kivetyn aukion keskellä on pyöreä kivirengas, jonka reunalla '
+            + 'seisoo kaksi retkeilijää reput selässä. Sen vieressä kaartuu '
+            + 'matala muuri, jonka päälle on maalattu rivi värikkäitä '
+            + 'kilpiä.',
           lahde: 'cs:ŠJů, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Labe',
         },
@@ -10452,11 +10437,10 @@ export const MAA_KATEGORIAT = {
             + 'matkustaa Mexico Cityn olympialaisiin tuli vasta viime '
             + 'hetkellä — ja siellä hän voitti mitalin kaikista kuudesta '
             + 'lajista.',
-          selite: 'Čáslavská nostetaan ilmaan Euroopan mestaruuskisoissa 1967. '
-            + 'Hän hymyilee tummassa voimistelupuvussa joukkuetovereidensa '
-            + 'käsivarsilla; ympärillä seisoo vaaleisiin pukuihin '
-            + 'pukeutuneita voimistelijoita, joiden selässä on numerot 26 ja '
-            + '13. Takana kohoaa täysi katsomo.',
+          selite: 'Čáslavská nostetaan ilmaan Euroopan mestaruuskisoissa '
+            + '1967. Hän hymyilee tummassa voimistelupuvussa '
+            + 'joukkuetovereidensa käsivarsilla, ympärillään vaaleisiin '
+            + 'pukuihin pukeutuneita voimistelijoita. Katsomo on täynnä.',
           lahde: 'Kroon, Ron / Anefo, Wikimedia Commons (CC0)',
           wiki: 'Věra Čáslavská',
         },
@@ -10690,11 +10674,11 @@ export const MAA_KATEGORIAT = {
             + 'pitkin kammioon noin seitsemäntoista minuuttia. Muina päivinä '
             + 'kammio on pimeä. Katsojat arvotaan sisään, koska tilaa on vain '
             + 'parillekymmenelle.',
-          selite: 'Newgrangen hautakummun sisäänkäynti. Tummasta kivestä ladotun '
-            + 'muurin keskellä on valkoisesta kvartsista tehty pinta, ja sen '
-            + 'alla aukeaa matala oviaukko. Oven yläpuolella on kapea '
-            + 'suorakaiteen muotoinen aukko. Etualalla makaa suuri kivi, '
-            + 'johon on hakattu kolmoiskierteitä ja spiraaleja.',
+          selite: 'Newgrangen hautakummun sisäänkäynti: muurin keskellä on '
+            + 'valkoisesta kvartsista tehty pinta ja sen alla matala '
+            + 'oviaukko. Oven yläpuolella on kapea suorakaiteen muotoinen '
+            + 'aukko. Edessä makaa suuri kivi, johon on hakattu '
+            + 'kolmoiskierteitä ja spiraaleja.',
           lahde: 'jemartin03, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Newgrange',
         },
@@ -10732,10 +10716,9 @@ export const MAA_KATEGORIAT = {
             + 'tunnustanut Elisabetia Irlannin kuningattareksi. Poika '
             + 'päästettiin silti vapaaksi.',
           selite: 'Vanha kaiverrus Gráinne Ní Mháillen ja Elisabet I:n '
-            + 'tapaamisesta. Vasemmalla seisoo pitkään viittaan pukeutunut '
-            + 'Gráinne, oikealla istuu kuningatar leveässä hameessa ja '
-            + 'kaulusröyhelössä. Heidän välissään on koristeltu takka, ja '
-            + 'taustalla seisoo hoviväkeä röyhelökauluksissa.',
+            + 'tapaamisesta. Gráinne seisoo pitkään viittaan pukeutuneena, '
+            + 'kuningatar istuu leveässä hameessa ja kaulusröyhelössä, ja '
+            + 'ympärillä on hoviväkeä.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
         },
         {
@@ -10751,11 +10734,10 @@ export const MAA_KATEGORIAT = {
             + 'kuluttua enää noin kuusi ja puoli miljoonaa. Muutto jatkui '
             + 'vuosikymmeniä, eikä väkiluku ole vieläkään noussut takaisin '
             + 'vuoden 1841 tasolle.',
-          selite: 'Nälänhädän muistomerkki Dublinin jokirannassa. Pronssiset '
-            + 'ihmishahmot kävelevät jonossa laihoina ja repaleisissa '
-            + 'vaatteissa, käsissään mytyt ja lapsi. Vasemmalla kulkee laiha '
-            + 'koira. Taustalla kohoaa nykyaikainen lasijulkisivuinen '
-            + 'toimistotalo ja rivi puita, ja katu on märkä.',
+          selite: 'Nälänhädän muistomerkki Dublinin jokirannassa. '
+            + 'Pronssiset ihmishahmot kävelevät jonossa laihoina ja '
+            + 'repaleisissa vaatteissa, käsissään mytyt ja lapsi, ja mukana '
+            + 'kulkee laiha koira.',
           lahde: 'Kaihsu Tai, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -11039,12 +11021,10 @@ export const MAA_KATEGORIAT = {
             + 'vähän, ja pelaajat ovat paikallisia. Ottelut pelataan usein '
             + 'lainatulla kentällä, jonka viivat on maalattu aivan toista '
             + 'lajia varten, ja maalitolpat pystytetään vain ottelun ajaksi.',
-          selite: 'Gaelilaisen jalkapallon ottelu Yhdysvalloissa. Keltapaitainen '
-            + 'pelaaja juoksee pallon kanssa nurmikentällä, jonka poikki '
-            + 'kulkevat amerikkalaisen jalkapallon valkoiset jaardiviivat ja '
-            + 'suuri numero. Oikealla alhaalla seisoo toinen pelaaja '
-            + 'valkoisessa paidassa, ja taustalla on verkkoaita ja '
-            + 'ruohorinne.',
+          selite: 'Gaelilaisen jalkapallon ottelu Yhdysvalloissa. '
+            + 'Keltapaitainen pelaaja juoksee pallon kanssa nurmikentällä, '
+            + 'jonka poikki kulkevat amerikkalaisen jalkapallon valkoiset '
+            + 'jaardiviivat.',
           lahde: 'Michael Barera, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12271,12 +12251,11 @@ export const MAA_KATEGORIAT = {
             + 'honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, '
             + 'sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta '
             + 'satoja vuosia myöhemmin, kuvitettuun kronikkaan.',
-          selite: 'Sivu keskiaikaisesta kuvitetusta kronikasta. Ylälaidan kuvassa '
+          selite: 'Sivu keskiaikaisesta kuvitetusta kronikasta: kuvassa '
             + 'ratsastajia ja jalkaväkeä kulkee kivisen solan läpi kohti '
-            + 'linnaa; tausta on kullattu. Alla on kaksi koristeltua '
-            + 'alkukirjainta, joiden sisällä seisoo kruunattu hahmo, ja '
-            + 'kahdessa palstassa on latinankielistä tekstiä. Reunuksessa '
-            + 'kiertää kukkakoriste.',
+            + 'linnaa, ja tausta on kullattu. Kahden koristellun '
+            + 'alkukirjaimen sisällä seisoo kruunattu hahmo, ja teksti on '
+            + 'latinaa kahdessa palstassa.',
           lahde: 'Márk Kálti, Wikimedia Commons (public domain)',
         },
         {
@@ -12291,12 +12270,11 @@ export const MAA_KATEGORIAT = {
             + 'pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli '
             + 'erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, '
             + 'ellei häntä kruunattu juuri tällä esineellä.',
-          selite: 'Unkarin pyhä kruunu mustaa taustaa vasten. Kullattu vanne on '
-            + 'koristeltu helmiriveillä, punaisilla ja sinisillä kivillä sekä '
-            + 'pienillä emalikuvilla, joissa on ihmishahmoja. Vanteen yli '
-            + 'kaartuu kaksi kultaista kaarta, ja niiden risteyksessä on '
-            + 'pieni risti, joka nojaa vinoon. Reunoilta riippuu ohuita '
-            + 'ketjuja.',
+          selite: 'Unkarin pyhä kruunu: kullattu vanne on koristeltu '
+            + 'helmiriveillä, punaisilla ja sinisillä kivillä sekä pienillä '
+            + 'emalikuvilla, joissa on ihmishahmoja. Vanteen yli kaartuu '
+            + 'kaksi kultaista kaarta, ja niiden risteyksessä oleva pieni '
+            + 'risti nojaa vinoon.',
           lahde: 'Tolfavi, Wikimedia Commons (public domain)',
         },
         {
@@ -12312,11 +12290,11 @@ export const MAA_KATEGORIAT = {
             + 'soitto ei loppunut voittoon vaan jäi voimaan sen muistoksi, ja '
             + 'siksi monessa maassa kirkonkellot soivat yhä puolenpäivän '
             + 'aikaan.',
-          selite: 'Maalaus linnoituksen puolustuksesta. Etualalla ratsumiehet ja '
+          selite: 'Maalaus linnoituksen puolustuksesta: ratsumiehet ja '
             + 'jalkaväki taistelevat linnanmuurin edustalla, ja keskellä '
-            + 'kohoaa valkoisella hevosella istuva ratsastaja. Ilmassa liehuu '
-            + 'useita lippuja, muun muassa valkoinen lippu punaisella '
-            + 'ristillä. Taustalla nousee vaalea linnoitus savun keskeltä.',
+            + 'kohoaa valkoisella hevosella istuva ratsastaja. Ilmassa '
+            + 'liehuu useita lippuja, muun muassa valkoinen lippu '
+            + 'punaisella ristillä.',
           lahde: 'Anton Bogner, Wikimedia Commons (public domain)',
         },
         {
@@ -12331,11 +12309,11 @@ export const MAA_KATEGORIAT = {
             + 'marraskuun alussa. Noin kaksisataatuhatta ihmistä pakeni '
             + 'maasta. Reikälippu on yhä maan kansallispäivän tunnus, ja sitä '
             + 'nostetaan salkoon joka lokakuu.',
-          selite: 'Vanha valokuva, johon on jälkikäteen väritetty lippu. Talon '
-            + 'seinästä työntyvässä tangossa riippuu puna-valko-vihreä lippu, '
-            + 'jonka keskeltä on revitty pyöreähkö reikä. Ympäröivä '
-            + 'katunäkymä on mustavalkoinen: parvekkeita, seiniä ja kaksi '
-            + 'kilpeä, joissa lukee SZABÓ ja CIPÉSZ.',
+          selite: 'Vanha valokuva, johon on jälkikäteen väritetty lippu: '
+            + 'talon seinästä työntyvässä tangossa riippuu '
+            + 'puna-valko-vihreä lippu, jonka keskeltä on revitty pyöreähkö '
+            + 'reikä. Ympäröivä katunäkymä on mustavalkoinen, ja kilvissä '
+            + 'lukee SZABÓ ja CIPÉSZ.',
           lahde: 'Pesti Srác2, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -12371,11 +12349,11 @@ export const MAA_KATEGORIAT = {
             + 'mustetta. Ensimmäinen patentti tehtiin vuonna 1938. Kynästä '
             + 'tuli suosittu lentäjien keskuudessa, koska se ei vuotanut '
             + 'korkealla, missä ilmanpaine on matala.',
-          selite: 'Patenttihakemuksen piirroslehti. Kaksi viivapiirrosta esittää '
-            + 'kynää: vasemmalla se on halkaistuna, niin että sisällä oleva '
-            + 'mustesäiliö ja kärki näkyvät, oikealla kokonaisena. '
-            + 'Ylälaidassa lukee keksijän nimi ja päiväys, alalaidassa on '
-            + 'käsin kirjoitettu allekirjoitus.',
+          selite: 'Patenttihakemuksen piirroslehti. Kaksi viivapiirrosta '
+            + 'esittää kynää: toisessa se on halkaistuna niin, että sisällä '
+            + 'oleva mustesäiliö ja kärki näkyvät, toisessa kokonaisena. '
+            + 'Lehdessä lukee keksijän nimi ja päiväys sekä käsin '
+            + 'kirjoitettu allekirjoitus.',
           lahde: 'László ja György Bíró, Wikimedia Commons (public domain)',
         },
         {
@@ -12560,11 +12538,10 @@ export const MAA_KATEGORIAT = {
             + 'näkyvät silti vanhimmissa sanoissa: kéz on käsi, vér on veri, '
             + 'hal on kala, méz on mesi ja szem on silmä. Erot syntyivät, kun '
             + 'kansat erosivat toisistaan tuhansia vuosia sitten.',
-          selite: 'Kielikartta Pohjois-Euroopasta ja Venäjältä. Eri kieliryhmien '
-            + 'alueet on väritetty: unkari vihreänä lounaassa, '
+          selite: 'Kielikartta Pohjois-Euroopasta ja Venäjältä. Eri '
+            + 'kieliryhmien alueet on väritetty: unkari vihreänä lounaassa, '
             + 'itämerensuomalaiset kielet oransseina Itämeren '
-            + 'pohjoispuolella, saame punaisena ja useita ryhmiä idempänä. '
-            + 'Meret ovat vaaleansinisiä ja nimet mustalla tekstillä.',
+            + 'pohjoispuolella, saame punaisena ja useita ryhmiä idempänä.',
           lahde: 'Timo Rantanen ym., Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -12618,11 +12595,10 @@ export const MAA_KATEGORIAT = {
             + 'vuosikymmeninä useisiin kyliin ja kaupunkeihin on pystytetty '
             + 'tienvarsipylväs, jossa paikan nimi on kaiverrettu vanhoin '
             + 'merkein.',
-          selite: 'Tienvarsi kesällä. Pystyyn on pystytetty veistetty puupylväs, '
-            + 'jonka kylkeen on kaiverrettu allekkain kulmikkaita merkkejä ja '
-            + 'jonka päässä on pieni katos. Pylvään takana on tavallinen '
-            + 'valkoinen paikannimikilpi, jossa lukee Ráckeve, ja ympärillä '
-            + 'kasvaa puita ja pensaita.',
+          selite: 'Tienvarteen on pystytetty veistetty puupylväs, jonka '
+            + 'kylkeen on kaiverrettu allekkain kulmikkaita merkkejä ja '
+            + 'jonka päässä on pieni katos. Sen vieressä on tavallinen '
+            + 'valkoinen paikannimikilpi, jossa lukee Ráckeve.',
           lahde: 'Globetrotter19, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -12869,12 +12845,10 @@ export const MAA_KATEGORIAT = {
             + 'eivätkä viljelleet peltoa. Kukkulaa luultiin pitkään '
             + 'keskiaikaiseksi hautausmaaksi, ja kunnolliset kaivaukset '
             + 'alkoivat vasta vuonna 1995.',
-          selite: 'Göbekli Tepen pylväs pystytettynä kaivausalueella. Vaalea '
-            + 'kivipaasi on T:n muotoinen: leveä poikkikivi lepää kapean '
-            + 'rungon päällä. Runkoon on veistetty matalana kuviona '
-            + 'pitkäselkäinen eläin, jolla on iso häntä. Pylvästä tukevat '
-            + 'vinot puu- ja teräsorret, ja ympärillä on kuivakiviseinää ja '
-            + 'kellastunutta ruohoa.',
+          selite: 'Göbekli Tepen pylväs pystytettynä kaivausalueella. '
+            + 'Vaalea kivipaasi on T:n muotoinen: leveä poikkikivi lepää '
+            + 'kapean rungon päällä. Runkoon on veistetty matalana kuviona '
+            + 'pitkäselkäinen eläin, jolla on iso häntä.',
           lahde: 'Guérin Nicolas, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Göbekli Tepe',
         },
@@ -12933,11 +12907,9 @@ export const MAA_KATEGORIAT = {
             + 'opetti kirjaimia toreilla ja kylissä. Samana syksynä hänelle '
             + 'annettiin nimitys başöğretmen, pääopettaja. Koko maa opetteli '
             + 'lukemaan uudestaan muutamassa vuodessa.',
-          selite: 'Mustafa Kemal Atatürk opettaa uusia kirjaimia ulkosalla. Hän '
-            + 'seisoo tummassa puvussa liitutaulun vieressä ja osoittaa '
-            + 'sormellaan taululle kirjoitettuja kirjaimia. Taustalla riippuu '
-            + 'useita lippuja, joissa on puolikuu ja tähti, ja oikealla '
-            + 'seisoo joukko miehiä, yksi heistä univormussa. Kuva on '
+          selite: 'Mustafa Kemal Atatürk opettaa uusia kirjaimia ulkosalla. '
+            + 'Hän seisoo tummassa puvussa liitutaulun vieressä ja osoittaa '
+            + 'sormellaan taululle kirjoitettuja kirjaimia. Kuva on '
             + 'mustavalkoinen.',
           lahde: 'Turkin tasavallan presidentin kanslia, Wikimedia Commons (public domain)',
         },
@@ -13038,11 +13010,10 @@ export const MAA_KATEGORIAT = {
             + 'Aikuisen flamingon vaaleanpunainen väri tulee ravinnosta, '
             + 'pikkuäyriäisistä ja levistä, joita lintu siivilöi vedestä '
             + 'nokallaan. Poikaset ovat ensin harmaita.',
-          selite: 'Flamingoparvi matalassa vedessä Tuz Gölüllä. Osa linnuista '
-            + 'seisoo pitkillä punaisilla jaloilla, osa on juuri noussut '
-            + 'lentoon ja levittänyt siivet, joissa on mustaa ja voimakkaan '
-            + 'punaista. Vesi heijastaa lintujen hahmot, ja taustalla '
-            + 'häämöttää sinertävä vuorenrinne.',
+          selite: 'Flamingoparvi matalassa vedessä Tuz Gölüllä. Osa '
+            + 'linnuista seisoo pitkillä punaisilla jaloilla, osa on juuri '
+            + 'noussut lentoon ja levittänyt siivet, joissa on mustaa ja '
+            + 'voimakkaan punaista.',
           lahde: 'Mustafa Tor, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13084,8 +13055,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Kutoja työssään mattokaupan edessä. Nainen istuu jalat '
             + 'ristissä tyynyllä suuren pystykangaspuun ääressä; pingotetut '
             + 'loimilangat kulkevat ylhäältä alas, ja niiden yläosaan on jo '
-            + 'kudottu kuviollista mattoa. Seinillä ja lattialla on kymmeniä '
-            + 'punaisia ja sinisiä mattoja ja kilimejä.',
+            + 'kudottu kuviollista mattoa.',
           lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -13140,12 +13110,10 @@ export const MAA_KATEGORIAT = {
             + 'ovat suorapuheinen Karagöz ja oppinut Hacivat, jotka '
             + 'ymmärtävät toisensa aina väärin. Yksi nukettaja puhuu kaikki '
             + 'roolit eri äänillä.',
-          selite: 'Karagöz-nukke, joka on muutettu sammakoksi. Läpikuultavaan '
-            + 'nahkaan on maalattu vihreä sammakon ruumis takajalkoineen, ja '
-            + 'siitä nousee ihmisen pää sivulta katsottuna: iso nenä, parta '
-            + 'ja puna-vihreä suippolakki. Ääriviivat on merkitty valkoisin '
-            + 'katkoviivoin, ja hartian kohdalla näkyy pyöreä nivelen '
-            + 'kiinnike.',
+          selite: 'Karagöz-nukke, joka on muutettu sammakoksi. '
+            + 'Läpikuultavaan nahkaan on maalattu vihreä sammakon ruumis '
+            + 'takajalkoineen, ja siitä nousee ihmisen pää sivulta '
+            + 'katsottuna: iso nenä, parta ja puna-vihreä suippolakki.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
       ],
@@ -13185,8 +13153,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Neljä saz-perheen soitinta nojaa seinään pienimmästä '
             + 'suurimpaan. Jokaisessa on päärynän muotoinen puinen runko ja '
             + 'pitkä kapea kaula, jonka päässä ovat viritystapit. Kolmen '
-            + 'soittimen kansi on vaalea ja yhden tummanruskea. Alla on '
-            + 'lankkulattia ja takana karkeaksi veistetty puupalkki.',
+            + 'soittimen kansi on vaalea ja yhden tummanruskea.',
           lahde: 'Sven Kraus, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -13204,9 +13171,8 @@ export const MAA_KATEGORIAT = {
             + 'ääni on tarkoituksella hengittävä.',
           selite: 'Pyörivä dervissi lavalla. Valkoinen hame on levinnyt '
             + 'pyörimisen voimasta leveäksi kellon muotoiseksi, kädet ovat '
-            + 'sivuille ojennettuina ja päässä on korkea lakki. Koko kuva on '
-            + 'voimakkaan sinisen lavavalon värjäämä, ja taustalla erottuu '
-            + 'hämärä yleisö ja puiden oksia.',
+            + 'sivuille ojennettuina ja päässä on korkea lakki. Koko kuva '
+            + 'on voimakkaan sinisen lavavalon värjäämä.',
           lahde: 'Kıvanç, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -13242,10 +13208,10 @@ export const MAA_KATEGORIAT = {
             + 'Kalastajakylissä kerrotaan, että tärinä on opittu sardellilta, '
             + 'joka pyristelee verkosta nostettuna. Sardelli on rannikon '
             + 'tärkein kala.',
-          selite: 'Vanha värillinen postikortti Trabzonista, otsikkona Salut de '
-            + 'Trebizonde. Aukiolla seisoo suuri väkijoukko laajassa '
-            + 'piirissä, ja keskellä on kaksi soittajaa, joista toisella on '
-            + 'iso rumpu. Piirin etureunassa rivi miehiä on kumartunut syvään '
+          selite: 'Vanha värillinen postikortti Trabzonista, otsikkona '
+            + 'Salut de Trebizonde. Aukiolla seisoo suuri väkijoukko '
+            + 'laajassa piirissä, ja keskellä on kaksi soittajaa, joista '
+            + 'toisella on iso rumpu. Rivi miehiä on kumartunut syvään '
             + 'eteenpäin tanssiliikkeessä.',
           lahde: 'Osman Nuri, Wikimedia Commons (public domain)',
         },
@@ -15623,11 +15589,11 @@ export const MAA_KATEGORIAT = {
               + 'pitämään suihkut käynnissä. Yhdeksän iranilaista puutarhaa '
               + 'otettiin yhdessä maailmanperintöluetteloon vuonna 2011, ja Fin on '
               + 'niistä yksi.',
-          selite: 'Pitkä matala vesikanava johtaa suoraan katsojasta poispäin. Vesi '
-              + 'on kirkkaan turkoosia, koska allas on laatoitettu, ja siitä nousee '
-              + 'rivi pieniä suihkuja. Kanavan molemmin puolin on leikattu '
-              + 'pensasaita ja korkeita sypressejä, ja päädyssä on vaalea '
-              + 'holvikaarinen paviljonki.',
+          selite: 'Pitkän matalan vesikanavan vesi on kirkkaan turkoosia, '
+            + 'koska allas on laatoitettu, ja siitä nousee rivi pieniä '
+            + 'suihkuja. Kanavan molemmin puolin on leikattu pensasaita ja '
+            + 'korkeita sypressejä, ja päädyssä on vaalea holvikaarinen '
+            + 'paviljonki.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -15651,10 +15617,10 @@ export const MAA_KATEGORIAT = {
               + 'muurarit jättivät työn kesken: sisääntuloportissa näkyy yhä '
               + 'viimeistelemättömiä kohtia.',
           selite: 'Shazdehin puutarha ylhäältä kuvattuna syksyllä. Muurien '
-              + 'rajaama suorakaide on täynnä oranssia ja vihreää puustoa, '
-              + 'keskellä kulkee suora vesiakseli, molemmissa päissä on '
-              + 'rakennus, ja muurin ulkopuolella on joka suuntaan paljasta '
-              + 'vaaleanruskeaa maata ja hiekkateitä.',
+            + 'rajaama suorakaide on täynnä oranssia ja vihreää puustoa, '
+            + 'keskellä kulkee suora vesiakseli, molemmissa päissä on '
+            + 'rakennus, ja muurin ulkopuolella on paljasta vaaleanruskeaa '
+            + 'maata ja hiekkateitä.',
           lahde: 'Mohammad Sadegh Ebrahimi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -15668,11 +15634,10 @@ export const MAA_KATEGORIAT = {
               + 'vastaanottopaikka. Puutarha on samaa chahar bagh -kaavaa kuin '
               + 'Finissä, mutta allas on tehty leveäksi eikä kapeaksi kanavaksi — '
               + 'juuri sitä heijastusta varten.',
-          selite: 'Suorakaiteen muotoinen allas kivetyn aukion laidassa, vesi '
-              + 'vihertävää. Altaan takana on hiekanvärinen paviljonki, jonka '
-              + 'julkisivussa on suuri holvikaari ja sen molemmin puolin matalampia '
-              + 'kaaria. Vasemmalla on tuuheita puita ja altaan reunalla rivi '
-              + 'kivisiä kukkaruukkuja.',
+          selite: 'Suorakaiteen muotoinen allas kivetyn aukion laidassa, '
+            + 'vesi vihertävää. Altaan takana on hiekanvärinen paviljonki, '
+            + 'jonka julkisivussa on suuri holvikaari ja sen molemmin '
+            + 'puolin matalampia kaaria.',
           lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -15686,11 +15651,11 @@ export const MAA_KATEGORIAT = {
               + 'Sypressit ovat puutarhan tunnusmerkki — yhtä niistä on kutsuttu '
               + 'Shirazin komeimmaksi puuksi. Eram kuuluu samaan yhdeksän puutarhan '
               + 'maailmanperintökohteeseen kuin Fin.',
-          selite: 'Kapea sinilaattainen vesikanava johtaa suoraan kolmikerroksiselle '
-              + 'paviljongille. Kanavan molemmin puolin on tiheät rivit punaisia, '
-              + 'valkoisia ja violetteja kukkia sekä leikattu pensasaita. Taustalla '
-              + 'kohoaa palmuja ja sypressejä, ja paviljongin kaaret on koristeltu '
-              + 'värillisin laatoin.',
+          selite: 'Kapea sinilaattainen vesikanava johtaa suoraan '
+            + 'kolmikerroksiselle paviljongille. Kanavan molemmin puolin on '
+            + 'tiheät rivit punaisia, valkoisia ja violetteja kukkia sekä '
+            + 'leikattu pensasaita. Paviljongin kaaret on koristeltu '
+            + 'värillisin laatoin.',
           lahde: 'Mostafameraji, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -15729,10 +15694,10 @@ export const MAA_KATEGORIAT = {
               + 'sahramista, ja suurin osa kasvaa maan koillisosassa Khorasanin '
               + 'maakunnissa.',
           selite: 'Neljä poimijaa kyykkii pellolla valkoisissa haalareissa, '
-              + 'leveälierisissä olkihatuissa ja valkoisissa hengityssuojaimissa. '
-              + 'Keskellä kaksi käsinepukuista kättä pitelee pientä violettia '
-              + 'kukkaa. Edessä maassa on rivi punottuja koreja, ja ruskeasta '
-              + 'mullasta nousee tiheä matto vaaleanvioletteja kukkia.',
+            + 'leveälierisissä olkihatuissa ja valkoisissa '
+            + 'hengityssuojaimissa. Kaksi käsinepukuista kättä pitelee '
+            + 'pientä violettia kukkaa. Ruskeasta mullasta nousee tiheä '
+            + 'matto vaaleanvioletteja kukkia.',
           lahde: 'Safa Daneshvar, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -15783,11 +15748,10 @@ export const MAA_KATEGORIAT = {
               + 'kasvoi 300 000 teepensasta. Tarjoiluastia on vyötäröltä kapea '
               + 'lasi. Sokeria ei sekoiteta joukkoon: kidesokeripala pidetään '
               + 'suussa ja tee juodaan sen läpi.',
-          selite: 'Kaksi vyötäröltä kapenevaa, kultareunuksista lasia seisoo '
-              + 'valkoisilla lautasilla, joissa on oranssit raidat. Lasissa on '
-              + 'kirkkaan ruskeaa teetä, ja nesteen sisällä törröttää kiteinen '
-              + 'sokerinpala puutikun päässä. Taustalla näkyy epätarkkana '
-              + 'punaisia servettejä ja kuvioitu pöytäliina.',
+          selite: 'Kaksi vyötäröltä kapenevaa, kultareunuksista lasia '
+            + 'seisoo valkoisilla lautasilla, joissa on oranssit raidat. '
+            + 'Lasissa on kirkkaan ruskeaa teetä, ja nesteen sisällä '
+            + 'törröttää kiteinen sokerinpala puutikun päässä.',
           lahde: 'Zereshk, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -15861,12 +15825,11 @@ export const MAA_KATEGORIAT = {
               + 'jolloin värit kiinnittyvät lasittuneeseen pintaan. Isfahan on '
               + 'työn tärkein keskus, ja samaa kuviokieltä näkee kaupungin '
               + 'kupolien laatoissa.',
-          selite: 'Pieni pullomainen maljakko seisoo raidallisella matolla. Kaula '
-              + 'on syvän sininen ja koristeltu vaalein kiehkuroin, ja '
-              + 'valkoisella vartalolla on punaisia ja turkooseja kukka-aiheita. '
-              + 'Keskellä on vinoneliön muotoinen sininen ruutu, sen alla kaksi '
-              + 'pyöreää medaljonkia ja pieni riikinkukkamainen lintu. Suuaukko '
-              + 'on poimureunainen ja sisältä valkoinen.',
+          selite: 'Pieni pullomainen maljakko seisoo raidallisella matolla. '
+            + 'Kaula on syvän sininen ja koristeltu vaalein kiehkuroin, ja '
+            + 'valkoisella vartalolla on punaisia ja turkooseja '
+            + 'kukka-aiheita, kaksi medaljonkia ja riikinkukkamainen lintu. '
+            + 'Suuaukko on poimureunainen.',
           lahde: 'Reza Hajipour, Wikimedia Commons (CC BY 3.0)',
         },
         {
@@ -15922,11 +15885,11 @@ export const MAA_KATEGORIAT = {
               + 'Nannan pyhäkkö. Uusbabylonialainen kuningas Nabonidus korjasi '
               + 'tornin 500-luvulla eaa., ja julkisivu ja portaikko muurattiin '
               + 'uudelleen 1980-luvulla.',
-          selite: 'Leveä, tasakattoinen tiilirakennelma keskellä hiekkatasankoa. '
-              + 'Etusivulla nousee kolme portaikkoa, joista kaksi viistosti '
-              + 'sivuilta ja yksi suoraan keskeltä; ne kohtaavat ylätasanteella, '
-              + 'jolla seisoo muutama pieni ihmishahmo. Seinissä on kapeita '
-              + 'pystysyvennyksiä ja pieniä reikiä.',
+          selite: 'Leveä, tasakattoinen tiilirakennelma keskellä '
+            + 'hiekkatasankoa. Etusivulla nousee kolme portaikkoa, joista '
+            + 'kaksi viistosti sivuilta ja yksi suoraan keskeltä; ne '
+            + 'kohtaavat ylätasanteella. Seinissä on kapeita '
+            + 'pystysyvennyksiä ja pieniä reikiä.',
           lahde: 'Hardnfast, Wikimedia Commons (CC BY 3.0)',
         },
         {
@@ -15975,11 +15938,11 @@ export const MAA_KATEGORIAT = {
               + 'kaariholvi. Suurimman temppelin holvit kohosivat noin '
               + 'kolmenkymmenen metrin korkeuteen. Hatra otettiin '
               + 'maailmanperintöluetteloon vuonna 1985.',
-          selite: 'Hiekankeltainen pylväikkö autiomaassa kirkkaan sinistä taivasta '
-              + 'vasten. Keskellä on kolmiopäätyinen julkisivu, jonka keskellä '
-              + 'aukeaa korkea pyöreä kaari; sen molemmin puolin nousee rivi '
-              + 'paksuja pylväitä. Portaat johtavat julkisivulle, ja edustan '
-              + 'hiekassa kasvaa harvaa pensasta.',
+          selite: 'Hiekankeltainen pylväikkö autiomaassa kirkkaan sinistä '
+            + 'taivasta vasten. Keskellä on kolmiopäätyinen julkisivu, '
+            + 'jonka keskellä aukeaa korkea pyöreä kaari; sen molemmin '
+            + 'puolin nousee rivi paksuja pylväitä. Portaat johtavat '
+            + 'julkisivulle.',
           lahde: 'TomicMarija, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -16121,11 +16084,11 @@ export const MAA_KATEGORIAT = {
               + 'yhdistyvät käytävillä ja kaaririveillä. Vastakohta on '
               + 'tahallinen — ulkoa mahtava mittakaava, sisältä ahtaat '
               + 'asuinhuoneet.',
-          selite: 'Laaja suorakaiteen muotoinen raunioalue hiekkatasangolla. '
-              + 'Etualalla on paksu muuri, jota jäsentävät puolipyöreät '
-              + 'tornimaiset pilarit; sisäpuolella näkyy katottomia huoneita '
-              + 'ruudukossa. Takana kohoaa korkeampi muuri, jonka pinnassa on '
-              + 'kahdessa kerroksessa kaarikäytäviä.',
+          selite: 'Laaja suorakaiteen muotoinen raunioalue '
+            + 'hiekkatasangolla. Paksua muuria jäsentävät puolipyöreät '
+            + 'tornimaiset pilarit, ja sen sisäpuolella näkyy katottomia '
+            + 'huoneita ruudukossa. Toisessa, korkeammassa muurissa on '
+            + 'kaarikäytäviä kahdessa kerroksessa.',
           lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -16140,12 +16103,11 @@ export const MAA_KATEGORIAT = {
               + 'asunnon, vaatteet ja kuukausirahan. Pihalle valmistui vuonna '
               + '1235 vesikello, joka ilmoitti rukoushetket. Rakennus kuuluu '
               + 'nykyään Mustansiriyan yliopistolle.',
-          selite: 'Suorakaiteen muotoinen sisäpiha, jota kiertää kaksikerroksinen '
-              + 'kaarikäytävä hiekanvärisestä koristetiilestä. Päädyssä avautuu '
-              + 'korkea suippokaarinen porttiholvi, sen takana näkyy '
-              + 'turkoosikuvioinen minareetti ja sininen kupoli. Pihan poikki '
-              + 'kasvaa taatelipalmu, ja etualan vesialtaasta koko julkisivu '
-              + 'heijastuu ylösalaisin.',
+          selite: 'Suorakaiteen muotoinen sisäpiha, jota kiertää '
+            + 'kaksikerroksinen kaarikäytävä hiekanvärisestä '
+            + 'koristetiilestä. Päädyssä avautuu korkea suippokaarinen '
+            + 'porttiholvi, sen takana näkyy turkoosikuvioinen minareetti '
+            + 'ja sininen kupoli. Pihan poikki kasvaa taatelipalmu.',
           lahde: 'Taisir Mahdi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16221,10 +16183,9 @@ export const MAA_KATEGORIAT = {
               + 'Urukin kivikaiverrukseen noin vuonna 3300 eaa., joten muoto on '
               + 'lähes viisituhatta vuotta vanha.',
           selite: 'Ruokomajan sisänäkymä. Peräkkäiset kaaret muodostavat '
-              + 'holvikäytävän, jonka seinät ja katto ovat tiiviisti sidottua '
-              + 'ruokoa. Päädyssä on ristikkokuvioisia mattoseiniä, joiden '
-              + 'lomitse paistaa päivänvalo, ja aukosta näkyy ulos. Lattialla '
-              + 'on irtonaista olkea ja yksi ihminen seisoo pylvään vieressä.',
+            + 'holvikäytävän, jonka seinät ja katto ovat tiiviisti sidottua '
+            + 'ruokoa. Päädyssä on ristikkokuvioisia mattoseiniä, joiden '
+            + 'lomitse paistaa päivänvalo.',
           lahde: 'Hassan Al-Jarrah, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16289,12 +16250,10 @@ export const MAA_KATEGORIAT = {
               + 'Noin 40 kylää kahdeksassa arkeologisessa puistossa otettiin '
               + 'maailmanperintöluetteloon vuonna 2011.',
           selite: 'Kaksikerroksinen kivitalo seisoo katottomana keskellä '
-              + 'kivikenttää. Sekä ala- että yläkerran ovet ja ikkunat on '
-              + 'kehystetty listoilla, ja kerrosten välissä kulkee rivi '
-              + 'pieniä neliöreikiä, joihin välipohjan palkit aikanaan '
-              + 'tukeutuivat. Seinän yläreuna päättyy suoraan kivilistaan. '
-              + 'Ympärillä on kaatuneita muureja ja irtolohkareita, ja '
-              + 'vasemmassa alalaidassa seisoo pieni ihmisryhmä.',
+            + 'kivikenttää. Molempien kerrosten ovet ja ikkunat on '
+            + 'kehystetty listoilla, ja kerrosten välissä kulkee rivi '
+            + 'pieniä neliöreikiä, joihin välipohjan palkit tukeutuivat. '
+            + 'Seinän yläreuna päättyy kivilistaan.',
           lahde: 'Gerhard Haubold, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16314,12 +16273,10 @@ export const MAA_KATEGORIAT = {
               + '1947–1970. Bosra otettiin maailmanperintöluetteloon vuonna '
               + '1980.',
           selite: 'Puolikaaren muotoinen katsomo tummanharmaasta kivestä. '
-              + 'Istuinrivit laskeutuvat tasaisina kaarina alas '
-              + 'puoliympyrän muotoiselle vaalealle lattialle, ja niiden '
-              + 'väliin nousee kapeita porrasrivejä. Yläreunassa on jäljellä '
-              + 'muutama pylväs alkuperäisestä pylväiköstä, vasemmassa '
-              + 'laidassa ja keskellä; muualla kohoaa karkeatekoista '
-              + 'muuria. Taivas on pilvinen.',
+            + 'Istuinrivit laskeutuvat tasaisina kaarina alas puoliympyrän '
+            + 'muotoiselle vaalealle lattialle, ja niiden väliin nousee '
+            + 'kapeita porrasrivejä. Yläreunassa on jäljellä muutama pylväs '
+            + 'alkuperäisestä pylväiköstä.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16338,12 +16295,10 @@ export const MAA_KATEGORIAT = {
               + 'vanhin suora todiste siitä, että kirjaimilla on vakiintunut '
               + 'järjestys — sama, joka jatkuu foinikialaisen kirjoituksen '
               + 'kautta kreikkaan ja latinaan.',
-          selite: 'Paksu savipala mustalla taustalla, ohuiden '
-              + 'metallilankojen varassa. Pintaan on painettu vaakariveihin '
-              + 'kiilanmuotoisia jälkiä, jotka ovat kooltaan ja asennoltaan '
-              + 'erilaisia; alin rivi kiertyy taulun alareunaan. Reunat ovat '
-              + 'lohkeilleet epätasaisiksi, ja oikeassa laidassa kulkee '
-              + 'halkeama.',
+          selite: 'Paksu savipala ohuiden metallilankojen varassa. Pintaan '
+            + 'on painettu vaakariveihin kiilanmuotoisia jälkiä, jotka ovat '
+            + 'kooltaan ja asennoltaan erilaisia; alin rivi kiertyy taulun '
+            + 'alareunaan. Reunat ovat lohkeilleet epätasaisiksi.',
           lahde: 'Rama, Wikimedia Commons (CC BY-SA 3.0 fr)',
         },
         {
@@ -16362,12 +16317,10 @@ export const MAA_KATEGORIAT = {
               + 'kristikunnan suurin kirkko siihen asti, kun Hagia Sofia '
               + 'valmistui Konstantinopoliin vuonna 537.',
           selite: 'Vaaleasta kivestä muurattu julkisivu ilman kattoa. '
-              + 'Keskellä aukeaa leveä pyöreä kaari, jonka alta näkyy '
-              + 'sisäpihalle ja pienempien kaarien läpi taivaalle. Kaaren '
-              + 'yläpuolella on rivi kapeita kaari-ikkunoita ja molemmin '
-              + 'puolin matalampi kolmiopäätyinen siipi. Alaosassa on '
-              + 'hoikkia pylväitä koristeltuine päineen, edessä leveät '
-              + 'portaat ja oikeassa laidassa tumma havupuu.',
+            + 'Keskellä aukeaa leveä pyöreä kaari, jonka alta näkyy '
+            + 'sisäpihalle, ja sen kummallakin puolella on matalampi '
+            + 'kolmiopäätyinen siipi. Ylempänä on rivi kaari-ikkunoita, '
+            + 'alaosassa hoikkia pylväitä koristepäineen.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -16407,13 +16360,11 @@ export const MAA_KATEGORIAT = {
               + 'uudelleen New Yorkiin. Vanhoissa huoneissa '
               + 'värit näyttävät nykyään tummilta, koska pintaan sivelty '
               + 'lakka on kellastunut kerros kerrokselta.',
-          selite: 'Huoneen seinä on paneloitu puulla kokonaan lattiasta '
-              + 'kattoon. Paneeleissa vuorottelevat kullalla kirjoitetut '
-              + 'tekstinauhat ja tummanvihreät kuviokentät, ja seinään on '
-              + 'upotettu kolme kaarevaa hyllysyvennystä, joissa on '
-              + 'sinivalkoisia astioita. Seinustalla kiertää matala '
-              + 'punainen istuinpenkki, ja lattia on valkoista marmoria '
-              + 'ruskein kuvioinnein.',
+          selite: 'Seinä on paneloitu puulla lattiasta kattoon. Paneeleissa '
+            + 'vuorottelevat kullalla kirjoitetut tekstinauhat ja '
+            + 'tummanvihreät kuviokentät, ja seinään on upotettu kolme '
+            + 'hyllysyvennystä sinivalkoisine astioineen. Lattia on '
+            + 'valkoista marmoria ruskein kuvioinnein.',
           lahde: 'Joyofmuseums, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16430,13 +16381,10 @@ export const MAA_KATEGORIAT = {
               + 'ilman koneita ja ilman kaavaa, joten kahta samanlaista '
               + 'kappaletta ei synny.',
           selite: 'Silmälasipäinen mies maalaa ohuella siveltimellä '
-              + 'kaarevaa lasimaljaa, jonka pintaan on jo tehty kullanruskeat '
-              + 'ääriviivat ja keltaisia kukkia. Edessä pöydällä on rivi '
-              + 'valmiita töitä: iso keltapohjainen maljakko vihrein '
-              + 'lehdin, musta valkokukallinen maljakko, ruskea ruukku '
-              + 'valkoisin lintukuvioin, pieni vaaleanpunainen purkki ja '
-              + 'muutama lasi. '
-              + 'Taustalla riippuu raidallisia kankaita.',
+            + 'kaarevaa lasimaljaa, jonka pintaan on jo tehty kullanruskeat '
+            + 'ääriviivat ja keltaisia kukkia. Edessä pöydällä on valmiita '
+            + 'töitä: maljakoita lehti- ja kukkakuvioin, ruukku valkoisin '
+            + 'lintukuvioin ja muutama lasi.',
           lahde: 'AlUmawi, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -16450,12 +16398,11 @@ export const MAA_KATEGORIAT = {
               + 'vuoden välein — asiakas ei osta uutta vaan korjauttaa '
               + 'vanhan. Aleppon vanhassakaupungissa metallipajoilla on oma '
               + 'kujansa, kuten muillakin ammateilla.',
-          selite: 'Harmaahiuksinen mies kumartuu matalan työpöydän yli. '
-              + 'Hänen edessään palaa avotuli metallilevyn päällä ja siinä '
-              + 'lämpiää kaatonokkainen kannu. Miehellä on pihdit oikeassa '
-              + 'ja ohut puikko vasemmassa kädessä. Pöydällä on valkoinen '
-              + 'pumpulitukko, ympärillä kuparisia tarjottimia ja vateja, '
-              + 'joiden sisäpinta hohtaa vaaleana.',
+          selite: 'Harmaahiuksinen mies kumartuu työpöydän yli, pihdit '
+            + 'toisessa ja ohut puikko toisessa kädessä. Edessä palaa '
+            + 'avotuli metallilevyn päällä, ja siinä lämpiää kaatonokkainen '
+            + 'kannu. Pöydällä on valkoinen pumpulitukko, ympärillä '
+            + 'kuparisia tarjottimia ja vateja.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -16472,11 +16419,10 @@ export const MAA_KATEGORIAT = {
               + 'korkeus ilmoitetaan pisteinä, ja yksi piste on kynän '
               + 'kärjen levyinen jälki.',
           selite: 'Vanhempi mies pipo päässä ja silmälasit nenällä piirtää '
-              + 'kynällä valkoiselle paperille arabiankielistä tekstiä. '
-              + 'Pöydällä on tölkillinen vaaleita ruokokyniä, avoin '
-              + 'mustepullo, siveltimiä ja laatikko täynnä värejä ja '
-              + 'työkaluja. Takana lasivitriinissä on rivi puulaatikoita, '
-              + 'joiden kannet on koristeltu vaalealla upotuskuviolla.',
+            + 'kynällä valkoiselle paperille arabiankielistä tekstiä. '
+            + 'Pöydällä on tölkillinen vaaleita ruokokyniä, avoin '
+            + 'mustepullo, siveltimiä ja laatikko täynnä värejä ja '
+            + 'työkaluja.',
           lahde: 'AlUmawi, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -16514,12 +16460,9 @@ export const MAA_KATEGORIAT = {
               + 'Damaskoksen al-Hamidiyan basaarissa toimiva '
               + 'Bakdash on tehnyt boozaa 1800-luvun lopulta asti.',
           selite: 'Valkopaitainen mies otsanauha päässä pitelee pitkää '
-              + 'puusurvinta, joka ulottuu työtasoon upotettuun '
-              + 'metallisaaviin. Etualan toinen saavi on täynnä sileää '
-              + 'valkoista massaa. Miehen paidan rinnassa on liikkeen '
-              + 'tunnus, toisessa kädessä valkoinen käsine ja tason päällä '
-              + 'vaaleanpunainen liina. Takaseinää kiertää peililista, '
-              + 'jonka takana näkyy vanhoja mustavalkoisia valokuvia.',
+            + 'puusurvinta, joka ulottuu työtasoon upotettuun '
+            + 'metallisaaviin. Toinen saavi on täynnä sileää valkoista '
+            + 'massaa, ja miehen paidan rinnassa on liikkeen tunnus.',
           lahde: 'AlUmawi, Wikimedia Commons (CC BY 4.0)',
         },
         {
@@ -16536,12 +16479,9 @@ export const MAA_KATEGORIAT = {
               + 'Kuvan mausteet ovat Aleppon Suq al-Attarinesta, jonka nimi '
               + 'tarkoittaa mausteiden ja hajusteiden kauppakujaa.',
           selite: 'Lähikuva leveästä mausteläjästä. Pohja on hienoa '
-              + 'sinapinkeltaista jauhetta, johon on kaivettu vinoneliöiden '
-              + 'ruudukko. Noin puolet ruuduista on tyhjiä; muissa on kasa '
-              + 'toista erää: tummanpunaista karkeaa sumakkia, ruskeita '
-              + 'seoksia ja vihertäviä kasoja, joissa erottuvat vaaleat '
-              + 'seesaminsiemenet. Alalaidassa pari ruutua hehkuu '
-              + 'kirkkaanoranssina.',
+            + 'sinapinkeltaista jauhetta, johon on kaivettu vinoneliöiden '
+            + 'ruudukko. Osassa ruuduista on toista erää: karkeaa sumakkia, '
+            + 'ruskeita seoksia ja vihertäviä kasoja seesaminsiemenineen.',
           lahde: 'yeowatzup, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -16556,12 +16496,10 @@ export const MAA_KATEGORIAT = {
               + 'samaan lasiin. Hedelmät roikkuvat katoksen alla '
               + 'näytteillä, ja niitä otetaan suoraan tiskin yläpuolelta.',
           selite: 'Rivi mehukojuja kadun varressa. Katoksien alla riippuu '
-              + 'suuria kimppuja banaaneja ja appelsiineja verkoissa, ja '
-              + 'kylteissä lukee arabiaksi ja englanniksi AL-Asmar Vitamin '
-              + 'ja The King of the Vitamin. Tiskin edessä seisoo miehiä '
-              + 'odottamassa, katolla on rivi lautasantenneja, ja ajorata on '
-              + 'autoton mutta jalkakäytävällä seisoskelee väkeä pitkin '
-              + 'katua.',
+            + 'suuria kimppuja banaaneja ja appelsiineja verkoissa, ja '
+            + 'kylteissä lukee arabiaksi ja englanniksi AL-Asmar Vitamin ja '
+            + 'The King of the Vitamin. Tiskin edessä seisoo miehiä '
+            + 'odottamassa.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18430,8 +18368,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Okrankeltainen talo, jonka yläkerran seinä on täynnä '
             + 'kipsiristikkoisia ikkunoita ja punaruskeita koristekuvioita. '
             + 'Katon reunassa on hammasmainen harja. Edessä kohoaa vanha '
-            + 'minareetti, jonka kylkeen on kiinnitetty kaiuttimet, ja '
-            + 'alareunassa näkyy nykyinen sininen kadunnimikyltti.',
+            + 'minareetti, jonka kylkeen on kiinnitetty kaiuttimet.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -18781,40 +18718,34 @@ export const MAA_KATEGORIAT = {
               + 'Kasteltua maata oli noin 9 600 hehtaaria. Pato murtui ja '
               + 'korjattiin useasti — vuosina 449, 450, 542 ja 548 — ja vuoden '
               + '570 tienoilla sitä ei enää korjattu.',
-          selite: 'Kallioon tukeutuva korkea kivimuuri, jonka pintaa jäsentävät '
-              + 'pystyt pilarimaiset tuet ja niiden välissä rivit pieniä '
-              + 'neliöreikiä. Muurin alapuolella paljas kallio on veistetty '
-              + 'portaiksi ja altaiksi, ja oikealla erillään kohoaa toinen '
-              + 'muurinpätkä. Yhteen etualan lohkareeseen on maalattu valkoisella '
-              + 'arabiankielinen teksti. Alhaalla on matalaa vettä ja leveä '
-              + 'hiekkasärkkä, taustalla paljaita ruskeita kukkuloita. Kuvan '
-              + 'vasemmassa reunassa kalliotasanteella seisoo yksi ihminen.',
+          selite: 'Kallioon tukeutuva korkea kivimuuri, jonka pintaa '
+            + 'jäsentävät pystyt pilarimaiset tuet ja niiden välissä rivit '
+            + 'pieniä neliöreikiä. Muurin alapuolella paljas kallio on '
+            + 'veistetty portaiksi ja altaiksi, ja erillään kohoaa toinen '
+            + 'muurinpätkä.',
           lahde: 'H. Grobe, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Viisi pylvästä, yksi maan alla',
           tiedosto: 'Barran Temple.jpg',
-          teksti: 'Maribin keitaan reunalla seisoo rivi hoikkia kivipylväitä. Ne '
-              + 'kuuluivat Almaqah-jumalalle pyhitettyyn temppeliin, jota '
-              + 'kutsutaan Bar\'anin temppeliksi ja kansanomaisesti Bilqiksen '
-              + 'valtaistuimeksi. Wendell Phillipsin retkikunta kaivoi paikkaa '
-              + 'vuosina 1951–1952, ja työtä jatkettiin vuonna 1988. Silloin '
-              + 'selvisi, ettei pylväitä ollut viisi vaan kuusi: kuudennen '
-              + 'pylvään jäännökset olivat maan alla. Pihan keskellä on kaivo, ja '
-              + 'seiniin on hakattu piirtokirjoituksia, joissa kerrotaan Saban '
-              + 'valtakunnan tapahtumia — temppeli oli myös paikka, jossa asiat '
-              + 'pantiin muistiin. Lähistöllä on samalle jumalalle omistettu '
-              + 'Awwamin temppeli, Etelä-Arabian suurin tunnettu temppelialue. '
-              + 'Maribin sabalaiskohteet otettiin maailmanperintöluetteloon '
-              + 'vuonna 2023.',
-          selite: 'Kaivauskenttä, jonka keskellä nousee viisi kapeaa nelisärmäistä '
-              + 'pylvästä. Kivi on okranoranssia, ja pylväiden yläosassa kiertää '
-              + 'koristeltu ruutunauha. Jokaisen juurelle on asetettu harmaa '
-              + 'nykyaikainen metallikiila tueksi. Pylväiden edessä on leveä '
-              + 'porrasrivi ja kivilaatoitettu taso, ympärillä matalia '
-              + 'muurinjäännöksiä ja irtolohkareita suorina riveinä. '
-              + 'Kaivauskentän takareunaa kiertää harmaa teräsaita, ja sen takana '
-              + 'on vihreitä peltoja ja puurivi.',
+          teksti: 'Maribin keitaan reunalla seisoo rivi hoikkia '
+            + 'kivipylväitä. Ne kuuluivat Almaqah-jumalalle pyhitettyyn '
+            + 'temppeliin, jota kutsutaan Bar\'anin temppeliksi ja '
+            + 'kansanomaisesti Bilqiksen valtaistuimeksi. Wendell '
+            + 'Phillipsin retkikunta kaivoi paikkaa vuosina 1951–1952, ja '
+            + 'työtä jatkettiin vuonna 1988. Silloin selvisi, ettei '
+            + 'pylväitä ollut viisi vaan kuusi: kuudennen pylvään '
+            + 'jäännökset olivat maan alla. Pihan keskellä on kaivo, ja '
+            + 'seiniin on hakattu piirtokirjoituksia, joissa kerrotaan '
+            + 'Saban valtakunnan tapahtumia — temppeli oli myös paikka, '
+            + 'jossa asiat pantiin muistiin. Lähistöllä on samalle '
+            + 'jumalalle omistettu Awwamin temppeli, Etelä-Arabian suurin '
+            + 'tunnettu temppelialue. Maribin sabalaiskohteet otettiin '
+            + 'maailmanperintöluetteloon vuonna 2023.',
+          selite: 'Kaivauskenttä, jonka keskellä nousee viisi kapeaa '
+            + 'nelisärmäistä pylvästä. Kivi on okranoranssia, ja pylväiden '
+            + 'yläosassa kiertää koristeltu ruutunauha. Jokaisen juurelle '
+            + 'on asetettu harmaa nykyaikainen metallikiila tueksi.',
           lahde: 'Ali Mohamed, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -18829,13 +18760,11 @@ export const MAA_KATEGORIAT = {
               + '1900-luvun kuluessa, ja asukkaat siirtyivät tasangolle uuteen '
               + 'Maribiin noin kolmen kilometrin päähän. Vanhat talot jäivät '
               + 'paikoilleen ilman kattoja.',
-          selite: 'Savitiilikaupunki loivan kummun laella, kuvattuna alhaalta. '
-              + 'Talot ovat kolmesta viiteen kerrosta korkeita ja saman värisiä '
-              + 'kuin maa; useasta on jäljellä vain seinät ja tyhjät '
-              + 'ikkuna-aukot, ja muutama on romahtanut kasaksi. Kummun rinne on '
-              + 'paljasta hiekansekaista maata. Juurella on matalia uudempia '
-              + 'rakennuksia, oikeassa laidassa pylväskäytävällinen talo. '
-              + 'Etualalla on tasaista soraa ja renkaanjälkiä.',
+          selite: 'Savitiilikaupunki loivan kummun laella. Talot ovat '
+            + 'kolmesta viiteen kerrosta korkeita ja saman värisiä kuin '
+            + 'maa; useasta on jäljellä vain seinät ja tyhjät ikkuna-aukot, '
+            + 'ja muutama on romahtanut kasaksi. Kummun rinne on paljasta '
+            + 'hiekansekaista maata.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -18854,14 +18783,11 @@ export const MAA_KATEGORIAT = {
               + 'maailmanperintöluetteloon vuonna 1993 ja siirrettiin '
               + 'vaarantuneen maailmanperinnön luetteloon vuonna 2000 maan omasta '
               + 'pyynnöstä.',
-          selite: 'Tiilestä muurattu kaupunginportti, jonka molemmin puolin on '
-              + 'pyöreä torni; oikeanpuoleinen on selvästi järeämpi ja korkeampi '
-              + 'kuin vasen. Keskellä on korkea suippokaari, ja sen läpi näkyy '
-              + 'vihreä puu toisella puolella. Tiilipinta on kulunut ja paikoin '
-              + 'peittynyt vaaleaan laastiin, ja muurissa on rivejä pieniä '
-              + 'neliömäisiä aukkoja. Kaaren alta roikkuu köysi. Maa on hiekkaa, '
-              + 'ja vasemman tornin juurella on roskaa. Taivas on ylivalottunut '
-              + 'valkoiseksi.',
+          selite: 'Tiilestä muurattu kaupunginportti, jonka molemmin puolin '
+            + 'on pyöreä torni; toinen niistä on järeämpi ja korkeampi. '
+            + 'Keskellä on korkea suippokaari. Tiilipinta on kulunut ja '
+            + 'paikoin peittynyt vaaleaan laastiin, ja muurissa on rivejä '
+            + 'pieniä neliömäisiä aukkoja.',
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -18901,13 +18827,11 @@ export const MAA_KATEGORIAT = {
               + 'eli kuivan jokiuoman tulvatasankoa, ja tiiviin muurin sisällä '
               + 'oltiin turvassa myös kilpailevilta suvuilta. Shibam otettiin '
               + 'maailmanperintöluetteloon vuonna 1982.',
-          selite: 'Tiivis kortteli korkeita savitiilitaloja iltavalossa. Talot ovat '
-              + 'kullanruskeita ja monen yläosa on kalkittu valkoiseksi; ikkunat '
-              + 'ovat pieniä ja säännöllisissä riveissä. Kortteli päättyy '
-              + 'jyrkkään reunaan, jonka takana on hiekkaista tasankoa ja '
-              + 'palmuja. Taustalla on pitkä pöytävuoren reuna vaakasuorine '
-              + 'kerroksineen. Alalaidassa näkyy tie, autoja, matalampia '
-              + 'valkoisia taloja ja hiekkakentällä kymmeniä pieniä ihmishahmoja.',
+          selite: 'Tiivis kortteli korkeita savitiilitaloja iltavalossa. '
+            + 'Talot ovat kullanruskeita ja monen yläosa on kalkittu '
+            + 'valkoiseksi; ikkunat ovat pieniä ja säännöllisissä riveissä. '
+            + 'Kortteli päättyy jyrkkään reunaan, jonka takana on '
+            + 'hiekkaista tasankoa ja palmuja.',
           lahde: 'Jialiang Gao, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -18925,11 +18849,10 @@ export const MAA_KATEGORIAT = {
               + 'Alimmat kerrokset on muurattu mustasta basaltista ja ylemmät '
               + 'poltetusta tiilestä. Kallion sisässä on kaivo, josta talo sai '
               + 'vetensä. Palatsi on nykyään museo.',
-          selite: 'Dar al-Hajarin palatsi alaviistosta kuvattuna '
-              + 'tummansinistä taivasta vasten. Rakennus seisoo pyöreän '
-              + 'hiekkakivipaaden päällä ja kapenee ylöspäin portaittain; '
-              + 'julkisivun ikkunat on kehystetty valkoisin kaari- ja '
-              + 'hammaskuvioin, ja kallion kyljessä erottuu kaksi aukkoa.',
+          selite: 'Dar al-Hajarin palatsi seisoo pyöreän hiekkakivipaaden '
+            + 'päällä ja kapenee ylöspäin portaittain. Julkisivun ikkunat '
+            + 'on kehystetty valkoisin kaari- ja hammaskuvioin, ja kallion '
+            + 'kyljessä erottuu kaksi aukkoa.',
           lahde: 'yeowatzup, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -18943,14 +18866,11 @@ export const MAA_KATEGORIAT = {
               + 'katsottuna on vaikea sanoa, missä kallio loppuu ja seinä alkaa. '
               + 'Kiviseinä on paksu, mikä pitää sisätilat viileinä päivällä ja '
               + 'lämpiminä yöllä. Kylään kuljetaan kapeita kivikujia pitkin.',
-          selite: 'Kivikylä jyrkän kallion päällä. Alaosa on karkeaa harmaata '
-              + 'luonnonkiveä, jonka pinnassa on pieniä aukkoja; ylempänä '
-              + 'julkisivut vaalenevat ja ikkunoiden ympärille on maalattu '
-              + 'valkoisia kaaria ja kuvioita. Kalliosta on hakattu portaita ja '
-              + 'kivetty polku, jolla on hajallaan vuohia ja lampaita. '
-              + 'Keskivasemmalla seisoo ihmisryhmä ja kuormattu aasi. Talojen '
-              + 'välissä kulkee sähkökaapeleita, katoilla on vesisäiliö ja '
-              + 'antenni, ja etualan kallio on paljasta ja pyöreäksi kulunutta.',
+          selite: 'Kivikylä jyrkän kallion päällä. Alaosa on karkeaa '
+            + 'harmaata luonnonkiveä, jonka pinnassa on pieniä aukkoja; '
+            + 'ylempänä julkisivut vaalenevat ja ikkunoiden ympärille on '
+            + 'maalattu valkoisia kaaria ja kuvioita. Kalliosta on hakattu '
+            + 'portaita ja kivetty polku.',
           lahde: 'H. Grobe, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -18969,12 +18889,9 @@ export const MAA_KATEGORIAT = {
               + 'vuodessa noin 380 millimetriä, enemmän kuin lähelle jäävään '
               + 'Sanaaseen.',
           selite: 'Savenvärinen kaupunki aivan pystysuoran kalliojyrkänteen '
-              + 'reunalla. Kallio putoaa satoja metrejä alempaan laaksoon, ja sen '
-              + 'seinämässä erottuu vaakasuoria hiekkakivikerroksia ja pensaita '
-              + 'halkeamissa. Etualalla on rikkonaista kalliota ja kuivia '
-              + 'palmunlehtiä, vasemmalla rivi sähkötolppia johtoineen. Taustalla '
-              + 'on loivempia vuoria ja tasankoa, ja taivaalla suuria valkoisia '
-              + 'kumpupilviä.',
+            + 'reunalla. Kallio putoaa satoja metrejä alempaan laaksoon, ja '
+            + 'sen seinämässä erottuu vaakasuoria hiekkakivikerroksia ja '
+            + 'pensaita halkeamissa.',
           lahde: 'Ayah Alakwaa, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19016,13 +18933,11 @@ export const MAA_KATEGORIAT = {
               + 'toisin kuin vuorilla: talo on pyöreä ja sen katto on oljesta '
               + 'kartion muotoon sidottu, mikä muistuttaa enemmän Afrikan puolta '
               + 'kuin Arabiaa.',
-          selite: 'Tasainen tomuinen tasanko, jonka reunalla on kylä pyöreitä '
-              + 'majoja. Majojen katot ovat korkeita olkikartioita, ja niiden '
-              + 'ympärillä on risuaitoja. Kylän takana maa jatkuu vielä tasaisena '
-              + 'ja kohoaa matalina esivuorina, joiden takaa nousee jyrkkä ja '
-              + 'terävähuippuinen vuorijono sinertävään utuun. Oikeassa laidassa '
-              + 'on kyläläisiä ja valkoinen lammaslauma, ja tietä pitkin kävelee '
-              + 'poispäin yksi valkoasuinen ihminen.',
+          selite: 'Tasainen tomuinen tasanko, jonka reunalla on kylä '
+            + 'pyöreitä majoja. Majojen katot ovat korkeita olkikartioita, '
+            + 'ja niiden ympärillä on risuaitoja. Kylän takana maa kohoaa '
+            + 'matalina esivuorina, joiden takaa nousee jyrkkä ja '
+            + 'terävähuippuinen vuorijono.',
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19038,14 +18953,11 @@ export const MAA_KATEGORIAT = {
               + 'Kahdensadan kilometrin päässä koilliseen alkaa Ramlat '
               + 'as-Sabatayn, hiekka-aavikko jossa sataa muutama kymmenen '
               + 'millimetriä vuodessa.',
-          selite: 'Loivien vuorten ympäröimä laakso, joka on kokonaan vihreiden '
-              + 'peltojen peitossa. Pellot ovat epäsäännöllisiä, rinteen muotoja '
-              + 'seuraavia terassikaistaleita, ja niiden keskellä kaartaa leveä '
-              + 'asfalttitie. Rinteillä on valkoisia taloja hajallaan, '
-              + 'harjanteella kaksi suurta ristikkorakenteista sähköpylvästä ja '
-              + 'tien varressa rivi katuvaloja. Etualan alalaidassa on '
-              + 'savenvärinen kaksikerroksinen talo, taustalla kaupunki rinteen '
-              + 'päällä.',
+          selite: 'Loivien vuorten ympäröimä laakso, joka on kokonaan '
+            + 'vihreiden peltojen peitossa. Pellot ovat epäsäännöllisiä, '
+            + 'rinteen muotoja seuraavia terassikaistaleita, ja niiden '
+            + 'keskellä kaartaa leveä asfalttitie. Rinteillä on valkoisia '
+            + 'taloja hajallaan.',
           lahde: 'المصور أنس الحاج, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
@@ -19063,14 +18975,11 @@ export const MAA_KATEGORIAT = {
               + 'yksiköt liittyvät klaaneiksi, klaanit joukoiksi ja joukot '
               + 'satojen yksilöiden laumoiksi. Yönsä lauma nukkuu '
               + 'kallioseinämillä.',
-          selite: 'Parikymmentä paviaania paljaalla, loivasti viettävällä '
-              + 'kalliopinnalla. Ne ovat harmaanruskeita ja pitkähäntäisiä; osa '
-              + 'istuu, osa kävelee ylös rinnettä, ja muutamalla naaraalla on '
-              + 'poikanen kyydissä. Usealla naaraalla takapuoli on turvonnut '
-              + 'kirkkaanpunaiseksi, mikä kuuluu lajin kiima-aikaan. Matala '
-              + 'aurinko heittää eläimistä pitkiä teräviä varjoja vasemmalle. '
-              + 'Kallion pinta on karkea ja täplikäs, ja oikeassa alanurkassa '
-              + 'kasvaa yksi vihreä kasvitupsu.',
+          selite: 'Parikymmentä harmaanruskeaa, pitkähäntäistä paviaania '
+            + 'paljaalla kalliopinnalla. Osa istuu, osa kävelee ylös '
+            + 'rinnettä, ja muutamalla naaraalla on poikanen kyydissä. '
+            + 'Usealla naaraalla takapuoli on turvonnut punaiseksi, mikä '
+            + 'kuuluu lajin kiima-aikaan.',
           lahde: 'Manuel Schwarz, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -19109,12 +19018,11 @@ export const MAA_KATEGORIAT = {
               + 'ja yrteistä survottu tahna. Ateria syödään ohuella '
               + 'mulawah-leivällä, jota revitään pala kerrallaan ja käytetään '
               + 'lusikkana.',
-          selite: 'Musta kivipata pyöreällä keltaisella puualustalla, joka on '
-              + 'nokeentunut padan ympäriltä mustaksi. Padassa on oranssinruskeaa '
-              + 'keittoa, ja sen pinnalla kelluu vaaleaa kuohuvaa vaahtoa. Padan '
-              + 'reuna on karkea ja epätasainen, ja alla näkyy toinen '
-              + 'kivilautanen. Vasemmalla ylhäällä on kasa ohutta rakkulaista '
-              + 'leipää. Kuva on otettu himmeässä valossa.',
+          selite: 'Musta kivipata pyöreällä keltaisella puualustalla, joka '
+            + 'on nokeentunut padan ympäriltä mustaksi. Padassa on '
+            + 'oranssinruskeaa keittoa, ja sen pinnalla kelluu vaaleaa '
+            + 'kuohuvaa vaahtoa. Vieressä on kasa ohutta rakkulaista '
+            + 'leipää.',
           lahde: 'غسان السقاف, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -19127,11 +19035,11 @@ export const MAA_KATEGORIAT = {
               + 'pähkinöitä tai juustoa. Annos tarjoillaan isolta vadilta, ja '
               + 'siitä syödään yhdessä. Ruokalajia sanotaan myös malikiaksi, ja '
               + 'sitä syödään yhtä lailla Saudi-Arabian länsiosissa.',
-          selite: 'Valkoinen kulmikas kulho vaaleanruskealla marmoripöydällä. '
-              + 'Kulhossa on ruskeaa murumaista massaa, jonka päälle on kaadettu '
-              + 'paksua valkoista kermaa ja kirkasta ruskeaa hunajaa niin, että '
-              + 'ne valuvat rinnakkain reunoja kohti. Pinta kiiltää, ja hunaja on '
-              + 'kerääntynyt lammikoksi kulhon oikeaan reunaan.',
+          selite: 'Valkoinen kulmikas kulho vaaleanruskealla '
+            + 'marmoripöydällä. Kulhossa on ruskeaa murumaista massaa, '
+            + 'jonka päälle on kaadettu paksua valkoista kermaa ja kirkasta '
+            + 'ruskeaa hunajaa niin, että ne valuvat rinnakkain reunoja '
+            + 'kohti.',
           lahde: 'SharabSalam, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19146,12 +19054,11 @@ export const MAA_KATEGORIAT = {
               + 'ripotellaan mustakuminan siemeniä. Sama leivonnainen tunnetaan '
               + 'myös nimellä sabaya. Se tarjoillaan juhlissa ja usein aterian '
               + 'yhteydessä eikä vasta jälkiruokana.',
-          selite: 'Kolmion muotoinen pala kerrosleivonnaista, irtileikattuna '
-              + 'valkoista taustaa vasten. Leikkauspinnasta erottuu '
-              + 'toistakymmentä ohutta taikinalevyä päällekkäin. Pinta on '
-              + 'paistunut kullanruskeaksi ja aaltoilee, sen päällä kiiltää '
-              + 'kirkas hunaja, ja hunajassa on mustia soikeita siemeniä. Palan '
-              + 'kärki osoittaa vasemmalle ylös.',
+          selite: 'Kolmion muotoinen pala kerrosleivonnaista. '
+            + 'Leikkauspinnasta erottuu toistakymmentä ohutta taikinalevyä '
+            + 'päällekkäin. Pinta on paistunut kullanruskeaksi ja '
+            + 'aaltoilee, sen päällä kiiltää kirkas hunaja, ja hunajassa on '
+            + 'mustia soikeita siemeniä.',
           lahde: 'Rukn950, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -19194,14 +19101,11 @@ export const MAA_KATEGORIAT = {
               + 'otettiin maailmanperintöluetteloon 1998. Ranskalainen '
               + 'tutkimusryhmä on kaivanut paikkaa vuodesta 1976, eikä suurinta '
               + 'osaa kylästä ole vieläkään avattu.',
-          selite: 'Kolme rekonstruoitua pyöreää majaa rinteessä. Seinät ovat '
-              + 'lieriömäisiä ja rapattu vaaleiksi, ja litteän katon reunaa '
-              + 'kiertää ladottu kivikehä. Kahden majan seinässä on pieni '
-              + 'neliömäinen aukko. Majojen edessä kulkee kahtena tasona paksu '
-              + 'kivimuuri, jonka kivet ovat pyöristyneitä jokikiviä ja '
-              + 'lohkareita. Ympärillä kasvaa tiheää tummanvihreää pensaikkoa. '
-              + 'Takana rinteessä pilkottaa puiden välistä nykyaikainen ajoneuvo, '
-              + 'jonka katolla on oranssi vilkkuvalo.',
+          selite: 'Kolme rekonstruoitua pyöreää majaa rinteessä. Seinät '
+            + 'ovat lieriömäisiä ja rapattu vaaleiksi, litteän katon reunaa '
+            + 'kiertää ladottu kivikehä, ja kahden majan seinässä on pieni '
+            + 'neliömäinen aukko. Edessä kulkee kahtena tasona paksu '
+            + 'kivimuuri jokikivistä.',
           lahde: 'Ophelia2, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -19221,15 +19125,11 @@ export const MAA_KATEGORIAT = {
               + 'takaisin teatteriksi, ja alimmat karkeasti hakatut rivit ovat '
               + 'siitä jälleenrakennuksesta. Katsomo koottiin uudelleen 1961, ja '
               + 'siellä pidetään taas esityksiä.',
-          selite: 'Puolikaaren muotoinen kivikatsomo kuvattuna ylhäältä viistosti. '
-              + 'Toistakymmentä kaarevaa penkkiriviä laskeutuu portaittain kohti '
-              + 'alhaalla olevaa laatoitettua tasoa, ja rivien välissä erottuu '
-              + 'kapeita porrasväyliä. Katsomon takaa avautuu meri, joka täyttää '
-              + 'kuvan oikean yläosan; rannalla on kapea viljelty tasanko ja '
-              + 'kuivaa pensasrinnettä. Ylimmän rivin päällä vasemmalla on '
-              + 'nykyaikainen valonheitinteline. Oikeassa alalaidassa, näyttämön '
-              + 'takana olevalla asfaltoidulla tasanteella, on puutolppa- ja '
-              + 'vaijerikaide sekä valkoinen aurinkopurje.',
+          selite: 'Puolikaaren muotoinen kivikatsomo kuvattuna ylhäältä '
+            + 'viistosti. Toistakymmentä kaarevaa penkkiriviä laskeutuu '
+            + 'portaittain kohti alhaalla olevaa laatoitettua tasoa, ja '
+            + 'rivien välissä erottuu kapeita porrasväyliä. Katsomon takaa '
+            + 'avautuu meri.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
         },
         {
@@ -19248,17 +19148,11 @@ export const MAA_KATEGORIAT = {
               + 'tunnetaan vain kaksi, molemmat Syyriasta. Lattian erikoisuus on '
               + 'se, että lähes jokaisen hahmon yläpuolelle on ladottu tämän nimi '
               + 'kreikkalaisin kirjaimin.',
-          selite: 'Värikäs lattiamosaiikki kahdesta kohtauksesta. Ylemmässä istuu '
-              + 'kuvan oikealla puolella hahmo, joka pitelee sylissään '
-              + 'vastasyntynyttä lasta liinan päällä; keskellä on parrakas '
-              + 'silenoshahmo ja seppelepäisiä naisia, ja lasta pitelevän takana '
-              + 'kättään kohottava hahmo. Päiden yläpuolella lukee kreikkalaisin '
-              + 'kirjaimin muun muassa ΕΡΜΗC, ΔΙΟΝΥCΟC, ΝΕΚΤΑΡ ja ΑΜΒΡΟCΙΑ. '
-              + 'Alempi kaistale on toisesta kohtauksesta: siinä on vedessä '
-              + 'olevia hahmoja ja merenolentoja nimillä ΖΕΥC, ΑΘΗΝΑ, ΘΕΤΙC ja '
-              + 'ΓΑΛΑΤΙΑ. Ylhäällä kiertää leveä lehtikiehkuroista ladottu '
-              + 'reunus. Vasemmassa reunassa ja alanurkassa on vaaleita '
-              + 'kipsipaikkauksia.',
+          selite: 'Värikäs lattiamosaiikki kahdesta kohtauksesta. Ylemmässä '
+            + 'hahmo pitelee vastasyntynyttä Dionysosta, ja lähellä on '
+            + 'parrakas silenoshahmo ja seppelepäisiä naisia; alemmassa on '
+            + 'hahmoja ja merenolentoja vedessä. Nimet on ladottu kreikaksi '
+            + 'päiden yläpuolelle.',
           lahde: 'George M. Groutas from Dali, Nicosia, Cyprus, Wikimedia Commons '
               + '(CC BY 2.0)',
         },
@@ -19277,14 +19171,10 @@ export const MAA_KATEGORIAT = {
               + 'pohjasta kartiona kapeaan huippuun. Alttarilla ei uhrattu verta '
               + 'vaan pelkkiä rukouksia ja puhdasta liekkiä.',
           selite: 'Avoin kivinen raunioalue. Etualalla seisoo kaksi järeää '
-              + 'katkaistua kalkkikivipylvästä porrastetuilla nelikulmaisilla '
-              + 'jalustoilla, ja niiden takana oikealla on kolmas, rapautunut '
-              + 'kivipaasi. Vasemmalla taustalla kulkee matala muuri, joka on '
-              + 'ladottu isoista työstetyistä lohkareista; niissä on pyöreitä '
-              + 'reikiä. Maassa on hajallaan lohkottuja rakennuskiviä ja matalia '
-              + 'muurinjäänteitä kuivalla soraisella maalla, ja vasemmalla kasvaa '
-              + 'yksi lehdetön puu. Taustalla näkyy kapea sinisen meren kaistale. '
-              + 'Kulttikivi ei ole kuvassa.',
+            + 'katkaistua kalkkikivipylvästä porrastetuilla jalustoilla, ja '
+            + 'taustalla kulkee matala muuri isoista työstetyistä '
+            + 'lohkareista, joissa on pyöreitä reikiä. Kulttikivi ei ole '
+            + 'kuvassa.',
           lahde: 'Nikodem Nijaki, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -19327,16 +19217,11 @@ export const MAA_KATEGORIAT = {
               + 'eteishuone sai yhtenäisen ohjelmansa vuonna 1332 tai 1333. Sen '
               + 'omistuskirjoituksen mukaan työ tehtiin luostarin ja tavallisen '
               + 'kansan tuella.',
-          selite: 'Kirkon holvi kuvattuna alhaalta ylöspäin. Koko pinta on maalattu '
-              + 'freskoin syvänsinistä pohjaa vasten ja jaettu punaruskein '
-              + 'kehysnauhoin ruutuihin: vasemmalla ristiinnaulitseminen, '
-              + 'keskellä Kristuksen syntymä luolassa, oikealla makaava hahmo '
-              + 'vuoteella ja rivi pyöreitä medaljonkeja, joissa on pyhimysten '
-              + 'kasvot. Alareunassa kaaren keskellä on pieni pyöreä '
-              + 'Kristus-medaljonki ja sen molemmin puolin siivekäs enkeli. '
-              + 'Holvin poikki kulkee vaalea puinen vetopalkki, johon on maalattu '
-              + 'kolmiofriisi, ja holvin harjaa myöten toinen palkki. Palkkeihin '
-              + 'on kiinnitetty kaksi valkoista pyöreää lamppua.',
+          selite: 'Kirkon holvi kuvattuna alhaalta ylöspäin. Koko pinta on '
+            + 'maalattu freskoin syvänsinistä pohjaa vasten ja jaettu '
+            + 'punaruskein kehysnauhoin ruutuihin: ristiinnaulitseminen, '
+            + 'Kristuksen syntymä luolassa, makaava hahmo vuoteella sekä '
+            + 'medaljonkeja pyhimysten kasvoin.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19355,16 +19240,11 @@ export const MAA_KATEGORIAT = {
               + '1200-luvulle. Kate on erikoisvalmisteista litteää koukkutiiltä, '
               + 'ja kukin tiili peittää seuraavasta kaksi kolmasosaa, joten '
               + 'pystysuora leikkaus osuu aina kolmeen tiileen.',
-          selite: 'Matala kivikirkko, jonka päälle on rakennettu iso satulakatto. '
-              + 'Kate on litteää, tiiviisti limitettyä tiiltä, ja harjalla on '
-              + 'isommat harjatiilet; räystäät ulottuvat alas seinien yli. Katon '
-              + 'alta pilkottaa kaksi vanhempaa tiilikatteista kaarevaa pintaa — '
-              + 'alkuperäistä kattoa, joka jäi uuden alle. Seinissä vuorottelevat '
-              + 'vaalea laasti ja tummat mukulakivet, ja niissä on kaari-ikkuna, '
-              + 'puoliympyrän muotoinen ikkuna kuudella pyöreällä aukolla ja '
-              + 'tumma avoin oviaukko. Vasemmassa laidassa on verkkoaita, '
-              + 'kiviportaat ja musta metalliportti, oikeassa kivimuuri ja '
-              + 'metallikaide. Taustalla nousee mäntyinen rinne.',
+          selite: 'Matala kivikirkko, jonka päälle on rakennettu iso '
+            + 'satulakatto; räystäät ulottuvat alas seinien yli. Seinissä '
+            + 'vuorottelevat vaalea laasti ja tummat mukulakivet. Katon '
+            + 'alta pilkottaa kaksi vanhempaa tiilikaarta — alkuperäistä '
+            + 'kattoa, joka jäi uuden alle.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19383,16 +19263,11 @@ export const MAA_KATEGORIAT = {
               + 'lisättiin luultavasti vasta 1300-luvulla — sen alla holvien '
               + 'päällä ovat yhä alkuperäiset kattotiilet. Kirkkoa käytetään yhä, '
               + 'ja sen juhlapäivä on 8. syyskuuta.',
-          selite: 'Kirkon holvi alhaalta kuvattuna. Keskellä kulkee leveä '
-              + 'kullankeltainen nauha, jossa on neljä pyöreää medaljonkia; '
-              + 'kahdessa ylimmässä on parrakas pyhimys, kahdessa alimmassa '
-              + 'parraton nuorukainen, ja kunkin vieressä on nimi kreikkalaisin '
-              + 'kirjaimin. Nauhan vasemmalla puolella on syvänsinisellä pohjalla '
-              + 'Kristuksen syntymä: makaava Neitsyt Maria punaisessa viitassa ja '
-              + 'rivi enkeleitä. Oikealla on kultapohjainen kohtaus, jossa hahmo '
-              + 'pitelee suurta ristiä. Kohtausten nimet on maalattu valkoisella '
-              + 'siniselle pohjalle. Värit ovat säilyneet kirkkaina, eikä kuvassa '
-              + 'näy valaisimia eikä ihmisiä.',
+          selite: 'Kirkon holvi alhaalta kuvattuna. Keskellä kulkee '
+            + 'kullankeltainen nauha, jossa on neljä medaljonkia '
+            + 'parrakkaine pyhimyksineen ja parrattomine nuorukaisineen. '
+            + 'Sivuilla ovat Kristuksen syntymä sinisellä pohjalla ja '
+            + 'kultapohjainen kohtaus suurine risteineen.',
           lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19410,17 +19285,11 @@ export const MAA_KATEGORIAT = {
               + 'holvikaareen. Rakennuksessa on vielä yksi piirre, jota ei ole '
               + 'muualla saarella: jyrkkä puukatto jatkuu seinien ulkopuolelle '
               + 'kaikilla neljällä sivulla ja muodostaa kiertävän kuistin.',
-          selite: 'Kirkon länsiseinä maalattuna kokonaan freskoin, kuvattuna '
-              + 'kuistin alta; ylhäällä näkyy kuistin puisia kattopalkkeja. '
-              + 'Kolmiopäätyisen seinän yläosassa on tiheä viimeisen tuomion '
-              + 'kuvaelma: rivistöjä ihmisiä, enkeleitä, oikealla punaruskea '
-              + 'tulinen virta pikkuhahmoineen ja meren eläimiä. Oven yläpuolella '
-              + 'on kaarevassa syvennyksessä kohtaus, jossa ristiä pitelevä hahmo '
-              + 'nostaa ihmisiä ylös. Alarivissä seisoo lähes luonnollisen '
-              + 'kokoisia pyhimyksiä: vasemmalla kolme naishahmoa, oikealla '
-              + 'siunaava Kristus avoin kirja kädessään sekä kaksi hahmoa suuren '
-              + 'ristin molemmin puolin. Keskellä on tumma avoin ovi, josta näkyy '
-              + 'hämärä kirkkosali.',
+          selite: 'Kirkon länsiseinä on maalattu kokonaan freskoin. '
+            + 'Yläosassa on tiheä viimeisen tuomion kuvaelma: ihmisiä, '
+            + 'enkeleitä, punaruskea tulinen virta ja meren eläimiä; oven '
+            + 'yllä ristiä pitelevä hahmo nostaa ihmisiä ylös. Alarivissä '
+            + 'on pyhimyksiä ja siunaava Kristus.',
           lahde: 'Croquemort Nestor, Wikimedia Commons (CC0)',
         },
       ],
@@ -19462,13 +19331,11 @@ export const MAA_KATEGORIAT = {
               + 'Pafoksen metsä rauhoitettiin. Kanta on siitä lähtien noussut, ja '
               + 'viranomaiset ilmoittavat nyt yli kolmetuhatta yksilöä — tarkin '
               + 'julkaistu laskenta on silti vuodelta 2007.',
-          selite: 'Ruskeaturkkinen muflonipässi seisoo kuivalla kivikkorinteellä ja '
-              + 'katsoo suoraan kameraan. Sarvet kaartuvat leveinä renkaina '
-              + 'taaksepäin korvien ohi, ja kuonon alaosa, vatsa ja jalkojen '
-              + 'alaosat ovat vaaleat. Ympärillä on kellastunutta heinää, '
-              + 'lohkeilevaa ruskeaa kalliota ja muutama vihreä pensas. Eläin on '
-              + 'vapaana: aitaa, pantaa tai korvamerkkiä ei näy. Valo on matalaa '
-              + 'ja lämmintä, eikä taustassa ole rakennuksia tai ihmisiä.',
+          selite: 'Ruskeaturkkinen muflonipässi seisoo kuivalla '
+            + 'kivikkorinteellä ja katsoo suoraan kameraan. Sarvet '
+            + 'kaartuvat leveinä renkaina taaksepäin, ja kuonon alaosa, '
+            + 'vatsa ja jalkojen alaosat ovat vaaleat. Eläin on vapaana: '
+            + 'aitaa, pantaa tai korvamerkkiä ei näy.',
           lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19486,15 +19353,11 @@ export const MAA_KATEGORIAT = {
               + 'miljoonaa vuotta sitten. Puu kukkii syys–lokakuussa, ja käpy '
               + 'kypsyy vasta seuraavan vuoden loppukesällä. Vanhimmat puut ovat '
               + 'yli 500-vuotiaita.',
-          selite: 'Yksittäinen setri kohoaa kuvan vasemmalla puoliskolla '
-              + 'syvänsinistä taivasta vasten. Alaoksat lähtevät rungosta '
-              + 'vaakasuorina kerroksina, ja latvus kapenee ylöspäin kartioksi, '
-              + 'jonka huippu on vielä terävä. Puun takana laskeutuu laakso, '
-              + 'jonka rinteillä kasvaa lisää setrejä ja mäntyjä, ja kaukana '
-              + 'horisontissa on valkoinen pilvimuodostelma. Oikeassa laidassa on '
-              + 'varjoinen kallioleikkaus ja tummia havunoksia, alalaidassa '
-              + 'kulkee sorapintainen metsätie. Ihmisiä, ajoneuvoja tai kylttejä '
-              + 'ei näy.',
+          selite: 'Yksittäinen setri kohoaa syvänsinistä taivasta vasten. '
+            + 'Alaoksat lähtevät rungosta vaakasuorina kerroksina, ja '
+            + 'latvus kapenee ylöspäin kartioksi, jonka huippu on vielä '
+            + 'terävä. Puun takana laskeutuu laakso, jonka rinteillä kasvaa '
+            + 'lisää setrejä ja mäntyjä.',
           lahde: 'Gerda Arendt, Wikimedia Commons (CC0)',
         },
         {
@@ -19514,14 +19377,10 @@ export const MAA_KATEGORIAT = {
               + 'korkeimman huipun ympäriltä ja nuoremmat alempaa rinteiltä. '
               + 'Korkein huippu Chionistra on 1 952 metriä.',
           selite: 'Näkymä korkealta Troodoksen rinteeltä yli metsäisten '
-              + 'harjanteiden, jotka haalistuvat siniharmaiksi utuista '
-              + 'horisonttia kohti. Etualan vasemmassa laidassa törröttää '
-              + 'paljasta kalliota, jonka pinta on ruosteenruskeaa ja '
-              + 'vihertävänharmaata, ja sen päällä kasvaa hajanaisia mäntyjä. '
-              + 'Laakson pohjalla näkyy pieni kylä vaaleine taloineen ja rinnettä '
-              + 'kiertävä mutkainen tie; oikeassa reunassa on lisää tietä ja '
-              + 'muutama rakennus. Taivas on sininen, ja siinä on muutama '
-              + 'valkoinen pilvi.',
+            + 'harjanteiden, jotka haalistuvat siniharmaiksi utuista '
+            + 'horisonttia kohti. Etualalla törröttää paljasta kalliota, '
+            + 'jonka pinta on ruosteenruskeaa. Laakson pohjalla näkyy pieni '
+            + 'kylä ja mutkainen tie.',
           lahde: 'Michal Osmenda from Brussels, Belgium, Wikimedia Commons (CC BY '
               + '2.0)',
         },
@@ -19540,14 +19399,11 @@ export const MAA_KATEGORIAT = {
               + 'Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä '
               + 'vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on '
               + 'Ramsar-kosteikko ja rauhoitettiin 1997.',
-          selite: 'Kymmeniä vaaleanpunertavan valkoisia flamingoja seisoo matalassa '
-              + 'harmaanvihreässä vedessä kahtena epämääräisenä rivinä; osa '
-              + 'kahlaa, osa on työntänyt päänsä veteen ruokailemaan. Punaiset '
-              + 'jalat ja mustakärkiset kaarevat nokat erottuvat selvästi. '
-              + 'Vedenpinta väreilee kevyesti. Takana kulkee kapea vihreä '
-              + 'kaistale ja hiekkainen penger, ja niiden takana näkyy Larnakan '
-              + 'matala valkoinen kaupunkisiluetti utuisessa ilmassa. Kuvan '
-              + 'alaosa on pelkkää vettä.',
+          selite: 'Kymmeniä vaaleanpunertavan valkoisia flamingoja seisoo '
+            + 'matalassa harmaanvihreässä vedessä; osa kahlaa, osa on '
+            + 'työntänyt päänsä veteen ruokailemaan. Punaiset jalat ja '
+            + 'mustakärkiset kaarevat nokat erottuvat selvästi. Takana '
+            + 'näkyy Larnakan siluetti.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19588,15 +19444,11 @@ export const MAA_KATEGORIAT = {
               + 'Leonardo da Vinci olisi ostanut sieltä liinan Milanon '
               + 'tuomiokirkolle vuonna 1481, mutta aikalaislähdettä siitä ei ole: '
               + 'tarina ilmestyi painettuna vasta noin 1930.',
-          selite: 'Terävä lähikuva valkoisen pellavaliinan kulmasta mustaa alustaa '
-              + 'vasten, jolloin jokainen reikä erottuu. Liinassa on tiheä '
-              + 'ruudukko työtä, jossa kankaasta on poistettu lankoja ja jäljelle '
-              + 'jääneet reunat on päärmätty; aukot muodostavat vinoneliöitä ja '
-              + 'porrasmaisia raitoja. Keskellä kulkee siksak-nauha, jonka '
-              + 'molemmin puolin on lehtimäisiä tiiviitä pistoja ja pieniä '
-              + 'pyöreitä reikiä. Ulkoreunaa kiertää käsin tehty pykäreunus, '
-              + 'jonka silmukat erottuvat mustaa taustaa vasten helminauhana. '
-              + 'Muuta esineistöä tai ihmisiä ei ole kuvassa.',
+          selite: 'Lähikuva valkoisen pellavaliinan kulmasta mustaa alustaa '
+            + 'vasten, jolloin jokainen reikä erottuu. Liinassa on tiheä '
+            + 'ruudukko työtä, jossa kankaasta on poistettu lankoja ja '
+            + 'jäljelle jääneet reunat on päärmätty; aukot muodostavat '
+            + 'vinoneliöitä ja raitoja.',
           lahde: 'LaceDemo1, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19612,15 +19464,11 @@ export const MAA_KATEGORIAT = {
               + 'oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä '
               + 'käsissä. Lefkaritika merkittiin Unescon aineettoman '
               + 'kulttuuriperinnön luetteloon vuonna 2009.',
-          selite: 'Okrankeltaiseksi rapattu kylätalo, jonka alakerrassa on kaksi '
-              + 'avointa oviaukkoa ja niiden yllä valkoiset markiisit. '
-              + 'Oviaukkojen pieliin ja seinään on ripustettu myytäviä liinoja: '
-              + 'suuria pöytäliinoja reunapitseineen, kapeita kaitaliinoja, '
-              + 'kirjottuja neliöitä ja oikeassa reunassa iso kolmioksi taiteltu '
-              + 'pitsihuivi. Oikeassa laidassa on lisäksi suljettu puuovi. '
-              + 'Vasemmalla on kulmapeili, kivimuuria ja pala punavalkoista '
-              + 'työmaanauhaa, yläikkunoissa ruskeat puuluukut. Katu edustalla on '
-              + 'tyhjä, eikä ihmisiä näy.',
+          selite: 'Okrankeltaiseksi rapattu kylätalo, jonka alakerrassa on '
+            + 'kaksi avointa oviaukkoa. Oviaukkojen pieliin ja seinään on '
+            + 'ripustettu myytäviä liinoja: suuria pöytäliinoja '
+            + 'reunapitseineen, kapeita kaitaliinoja, kirjottuja neliöitä '
+            + 'ja iso pitsihuivi.',
           lahde: 'דוד שי, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19640,15 +19488,11 @@ export const MAA_KATEGORIAT = {
               + 'trahanas-keittoa. Foinin tuotanto loppui 1970-luvun alussa; '
               + 'Kornoksessa työ jatkuu yhä, mutta perinnesavenvalajia on '
               + 'jäljellä vain muutamia kymmeniä, enimmäkseen naisia.',
-          selite: 'Kymmenkunta jättimäistä pallomaista saviruukkua makaa kyljellään '
-              + 'kyläpihan soraisella maalla. Ruukut ovat lasittamatonta '
-              + 'vaaleanruskeaa savea — yksi takimmainen on lähes musta — ja '
-              + 'niissä on leveä pyöreä suuaukko paksuine reunuksineen. Taustalla '
-              + 'on valkoiseksi kalkittu talo, jonka ikkunoissa on kirkkaan '
-              + 'siniset säleluukut, ja sen edessä kiviportaat. Vasemmalla näkyy '
-              + 'romahtaneen kivitalon aukko suorine betonikamanoineen. Pihaa '
-              + 'reunustavat matalat kuivamuurit, joiden päällä kasvaa '
-              + 'viikunanvesoja. Ihmisiä ei näy.',
+          selite: 'Kymmenkunta jättimäistä pallomaista saviruukkua makaa '
+            + 'kyljellään kyläpihan soraisella maalla. Ruukut ovat '
+            + 'lasittamatonta vaaleanruskeaa savea, ja niissä on leveä '
+            + 'pyöreä suuaukko. Taustalla on valkoiseksi kalkittu talo '
+            + 'sinisine säleluukkuineen.',
           lahde: 'Charisc, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -19665,16 +19509,11 @@ export const MAA_KATEGORIAT = {
               + 'oranssi ja vihreä tulivat myöhemmin. Kudonta kuului taloihin, '
               + 'joissa tytöt valmistivat vuosien ajan tekstiilejä omiin '
               + 'myötäjäisiinsä. Kylässä on nykyään kudontamuseo.',
-          selite: 'Suuret puiset kangaspuut keskellä vaaleaa laattalattiaista '
-              + 'museohuonetta. Kangaspuissa on kesken oleva kapea raitakangas, '
-              + 'jonka päällä lepää sakset ja tumma metallinen työkalu; raidat '
-              + 'ovat vaaleanpunaisia, kermanvalkoisia, oransseja ja '
-              + 'harmaanvihreitä. Loimen yläpuolella riippuu nippuja värjättyjä '
-              + 'lankoja sekä puisia niisiä ja narupyöriä. Takaseinällä on esillä '
-              + 'valmiita kudonnaisia geometrisine raitakuvioineen. Nykyaika '
-              + 'näkyy kuvassa kolmesti: penkin jalassa roikkuu sininen '
-              + 'kertakäyttöinen kasvomaski, oikealla on kaksi tyhjää valkoista '
-              + 'muovikoria ja niiden yllä pahvilaatikko tuotemerkkiteksteineen.',
+          selite: 'Suuret puiset kangaspuut museohuoneessa. Kangaspuissa on '
+            + 'kesken oleva kapea raitakangas, jonka raidat ovat '
+            + 'vaaleanpunaisia, oransseja ja harmaanvihreitä. Loimen '
+            + 'yläpuolella riippuu nippuja värjättyjä lankoja sekä puisia '
+            + 'niisiä ja narupyöriä.',
           lahde: 'Mboesch, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -19715,15 +19554,11 @@ export const MAA_KATEGORIAT = {
               + 'niitä haudutetaan vedessä suuressa astiassa muutaman tunnin, '
               + 'minkä jälkeen neste siivilöidään ja siitä tehdään '
               + 'pastelli-nimistä makeista.',
-          selite: 'Alaviistosta otettu kuva johanneksenleipäpuun oksistoon. Oksilta '
-              + 'roikkuu tiheinä rypäleinä kymmeniä pitkiä, litteitä ja hieman '
-              + 'kaarevia palkoja, jotka ovat kypsyneet tummanruskeiksi ja '
-              + 'violetinmustiksi; osa on vielä vihertäviä. Palot täyttävät kuvan '
-              + 'keskiosan. Ympärillä on puun pyöreähköjä, nahkeita ja '
-              + 'tummanvihreitä lehtiä sekä paksuja harmaanruskeita oksia, ja '
-              + 'vasemmalla muutama punertava kuivunut lehti. Lehtien välistä '
-              + 'pilkottaa vaalea taivas ja oikealla kirkkaan keltainen pinta, '
-              + 'joka jää epätarkkana tunnistamatta. Ihmisiä ei näy.',
+          selite: 'Alaviistosta otettu kuva johanneksenleipäpuun oksistoon. '
+            + 'Oksilta roikkuu tiheinä rypäleinä kymmeniä pitkiä, litteitä '
+            + 'palkoja, jotka ovat kypsyneet tummanruskeiksi ja '
+            + 'violetinmustiksi; osa on vielä vihertäviä. Ympärillä on '
+            + 'nahkeita tummanvihreitä lehtiä.',
           lahde: 'Маслова Людмила, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19742,14 +19577,9 @@ export const MAA_KATEGORIAT = {
               + 'grilliperinne on souvla, jossa suuret lihapalat pyörivät '
               + 'pitkässä vartaassa kauempana hiilloksesta ja kypsyvät hitaasti.',
           selite: 'Valkoisella lautasella on rivissä kuusi grillattua, '
-              + 'tummanruskeaksi paahtunutta makkaraa vaalealla puupöydällä. '
-              + 'Vasemmanpuoleisin on selvästi muita tummempi. Takana lautasella '
-              + 'on suikaloitua valkokaalia, hienonnettua persiljaa, '
-              + 'sipulinlohko, puolikas sitruuna ja kolme tomaattilohkoa. '
-              + 'Lautasen oikealla puolella on lautasliina, veitsi ja haarukka. '
-              + 'Kuvan yläreunassa näkyy toisen lautasen reuna samoja makkaroita '
-              + 'ja oikeassa yläkulmassa kromattu leipäkori. Kuvassa ei ole '
-              + 'ihmisiä.',
+            + 'tummanruskeaksi paahtunutta makkaraa. Takana lautasella on '
+            + 'suikaloitua valkokaalia, hienonnettua persiljaa, '
+            + 'sipulinlohko, puolikas sitruuna ja kolme tomaattilohkoa.',
           lahde: 'Pampos1997, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -19769,14 +19599,11 @@ export const MAA_KATEGORIAT = {
               + 'EU:n suojattu alkuperänimitys vuodesta 2006, ja Guinnessin '
               + 'ennätyskirja pitää sitä maailman vanhimpana yhä valmistettavana '
               + 'nimettynä viininä.',
-          selite: 'Lähikuva viiniköynnöksen alta ylöspäin. Paksusta, ryppyisestä ja '
-              + 'harmaanruskeasta rungosta roikkuu kymmeniä suuria tiiviitä '
-              + 'rypäleterttuja pitkinä kartioina. Marjat ovat vaaleanvihreitä ja '
-              + 'kellertäviä, ja monissa on auringon polttama vaaleanpunainen tai '
-              + 'persikanvärinen poski. Tertut täyttävät koko kuva-alan, ja '
-              + 'väleistä näkyy suuria kämmenmäisiä viininlehtiä, joiden läpi '
-              + 'valo siivilöityy. Kuvassa ei ole ihmisiä, rakennuksia eikä '
-              + 'tekstejä.',
+          selite: 'Lähikuva viiniköynnöksen alta ylöspäin. Paksusta ja '
+            + 'harmaanruskeasta rungosta roikkuu kymmeniä suuria tiiviitä '
+            + 'rypäleterttuja pitkinä kartioina. Marjat ovat '
+            + 'vaaleanvihreitä ja kellertäviä, ja monissa on auringon '
+            + 'polttama vaaleanpunainen poski.',
           lahde: 'GOC53, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -19793,16 +19620,11 @@ export const MAA_KATEGORIAT = {
               + 'altaiden ja vesimyllyjen verkosto. Sokeri oli keskiajan '
               + 'Euroopassa kallis ylellisyystuote, ja saaren sokeri myytiin '
               + 'sinne mausteen tapaan.',
-          selite: 'Massiivinen keltahiekkakivinen raunioseinä alaviistosta '
-              + 'kuvattuna pilvettömän sinisen taivaan alla. Seinässä on kolme '
-              + 'peräkkäistä suippokaarista holviaukkoa; lähin on teräväkärkinen '
-              + 'ja hyvin säilynyt, keskimmäinen murentunein. Holvien sisällä '
-              + 'näkyy karkeaa kivimuurausta, ja toisen aukon läpi erottuu '
-              + 'nykyaikainen suojakatos: harmaansininen peltikatto mustine '
-              + 'teräspilareineen. Muurin harja on rikkonainen, ja siitä työntyy '
-              + 'esiin irtokiviä. Vasemmalla on matalampia raunioperustuksia ja '
-              + 'vihreä puu, alhaalla kulkee vaalea kivilaatoitettu polku. '
-              + 'Ihmisiä ei näy.',
+          selite: 'Keltahiekkakivinen raunioseinä, jossa on kolme '
+            + 'suippokaarista holviaukkoa; lähin on teräväkärkinen ja hyvin '
+            + 'säilynyt, keskimmäinen murentunein. Holvien sisällä näkyy '
+            + 'karkeaa kivimuurausta. Muurin harja on rikkonainen, ja siitä '
+            + 'työntyy irtokiviä.',
           lahde: 'Chris06, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
