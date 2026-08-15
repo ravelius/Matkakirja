@@ -10689,19 +10689,21 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 /*
  * VALITTU PIIRROS (omistajan tilaukset 15.8.2026, viimeisin
- * täsmennykset: 40 % → 65 % → "Suurenna 70"). Napautus lisää .valittu-luokan: piirros kasvaa
+ * täsmennykset: 40 % → 65 % → 70 % → "75 koko"; keskitys ja paluu
+ * paikalleen hoidetaan ui.js:ssä). Napautus lisää .valittu-luokan: piirros kasvaa
  * 65 %:iin KARTTAIKKUNAN korkeudesta (65cqh kehyskontista) ja nimikyltti aukeaa sen alle
  * (tai ylle alareunassa, .kyltti-ylle); uusi napautus palauttaa —
  * ikkunaa ei avata. Jako zoomilla kumoaa lavan skaalan, joten
  * näkyvä koko on sama joka zoomiasennossa.
  */
 .maakartta-piste.kohde-numero.kohde-piirros {
-  transition: width 160ms ease, height 160ms ease;
+  transition: width 160ms ease, height 160ms ease,
+    left 160ms ease, top 160ms ease;
 }
 
 .kartta-lava .maakartta-piste.kohde-numero.kohde-piirros.valittu {
-  width: calc(70cqh / var(--zoom));
-  height: calc(70cqh / var(--zoom));
+  width: calc(75cqh / var(--zoom));
+  height: calc(75cqh / var(--zoom));
   z-index: 5;
 }
 
@@ -10725,8 +10727,8 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   /* Limittäin laatikon alaosaan: leikatun kuvan reunoilla on
    * läpinäkyvää tyhjää, ja 100 %:n kohdalla kyltin ja rakennuksen
    * väliin jäi iso rako (omistajan palaute 15.8.2026; syvennetty
-   * 87 % → 79 %, kun rako näkyi yhä). */
-  top: 79%;
+   * 87 % → 79 % → 73 %, kun rako näkyi yhä). */
+  top: 73%;
   transform: translateX(-50%) scale(calc(1 / var(--zoom, 1)));
   transform-origin: top center;
   padding: 0.16rem 0.5rem;
@@ -10745,7 +10747,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .kohde-piirros.kyltti-ylle .kohde-kyltti {
   top: auto;
-  bottom: 79%;
+  bottom: 73%;
   transform-origin: bottom center;
 }
 
