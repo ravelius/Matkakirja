@@ -3979,6 +3979,83 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (lehtimallin toinen kaupunki Kööpenhaminan
+       * rinnalle — omistajan ohje 15.8.2026: nämä kaksi valmiiksi,
+       * sitten monistus Opukselle). Taustatiedot fi.wikipediasta,
+       * teksti omaa. Lisenssit tarkistettu Commonsin API:sta
+       * 15.8.2026, kuvat katsottu silmin.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Allas Sea Pool 2.jpg',
+          selite: 'Allas-merikylpylän altaat kelluvat meressä keskellä '
+            + 'kaupunkia, ja taustalla kohoaa Uspenskin katedraali.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Helsinki on merikaupunki, jonka keskustan kiertää '
+          + 'jalan: satama, torit ja puistot ovat muutaman korttelin '
+          + 'sisällä, ja vihreä raitiovaunu hoitaa loput matkat. Vesi on '
+          + 'aina lähellä — Kauppatorilta pääsee lautalla '
+          + 'merilinnoitukseen vartissa, ja kesällä meressä myös uidaan '
+          + 'keskellä kaupunkia. Illan kruunaa sauna: julkisia saunoja '
+          + 'on rannoilla jokaiselle avoinna.',
+        artikkeli: {
+          nimi: 'Matkailijan Helsinki',
+          teksti: 'Helsinkiä ei tarvitse suunnitella pitkälle. Keskusta '
+            + 'on niin tiivis, että tärkeimmät paikat kiertää jalan, ja '
+            + 'loput matkat hoitaa raitiovaunu — vihreät vaunut ovat '
+            + 'kulkeneet kaduilla vuodesta 1891, ja keskustan ympyrää '
+            + 'kulkevaa linjaa käytetään kiertoajeluna, jolla '
+            + 'nähtävyydet vilistävät ohi tavallisen lipun hinnalla.'
+            + '\n\n'
+            + 'Meri on helsinkiläisten toinen katu. Kauppatorin '
+            + 'laiturilta lähtee lautta Suomenlinnaan, kahdeksalle '
+            + 'saarelle rakennettuun merilinnoitukseen, jota alettiin '
+            + 'muurata 1748 ja joka on nykyään Unescon '
+            + 'maailmanperintökohde. Matka kestää vartin ja kuuluu '
+            + 'tavalliseen joukkoliikennelippuun; kesäisin saarten '
+            + 'nurmilla istutaan eväiden kanssa iltaan asti.'
+            + '\n\n'
+            + 'Uiminen ei lopu kesään eikä rantaan. Keskustan satamassa '
+            + 'voi pulahtaa merikylpylän altaisiin, ja julkiset saunat '
+            + 'ovat palanneet rannoille — löylyn jälkeen mennään '
+            + 'mereen, talvellakin. Sauna on täällä arkinen paikka, '
+            + 'jonne poiketaan yhtä luontevasti kuin kahville.'
+            + '\n\n'
+            + 'Kävelijän reitti kulkee Esplanadin puiston läpi: sen '
+            + 'nurmella on istuttu 1800-luvun alusta asti, ja kesäisin '
+            + 'lavalta soi ilmaiskonsertteja. Toisessa päässä odottavat '
+            + 'Kauppatori ja satama, toisessa design-liikkeiden '
+            + 'korttelit. Oodin kirjastoon kannattaa poiketa, vaikkei '
+            + 'lainaisi mitään — vuonna 2018 avattu puinen talo on '
+            + 'olohuone koko kaupungille.'
+            + '\n\n'
+            + 'Nälkään Helsinki tarjoaa kauppahallin: Vanhassa '
+            + 'kauppahallissa on myyty kalaa, juustoa ja leipää '
+            + 'vuodesta 1889. Torilta ostetaan kesällä herneitä ja '
+            + 'mansikoita, lokakuussa silakkaa suoraan veneistä — ja '
+            + 'kahvia juodaan joka väliin, sillä suomalaiset juovat '
+            + 'sitä henkeä kohti enemmän kuin juuri kukaan muu.',
+          kuvat: [
+            {
+              tiedosto: 'Kings-gate-A12.jpg',
+              selite: 'Suomenlinnan Kuninkaanportti ja Kustaanmiekan '
+                + 'kivimuurit. Portti rakennettiin 1750-luvulla '
+                + 'linnoituksen juhlasisäänkäynniksi.',
+              lahde: 'Jisis, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Allas Sea Pool in September 2019.jpg',
+              selite: 'Merikylpylän kannet ja altaat sataman laidalla; '
+                + 'taustalla pyörii maailmanpyörä ja laituriin on '
+                + 'kiinnittynyt matkustajalaiva.',
+              lahde: 'WanderingTrad, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+          ],
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Vuoristoradan takana seisoo jarrumestari',
