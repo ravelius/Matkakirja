@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.707';
+const CACHE = 'matkakirja-2026-08-09.708';
 const SHELL = [
   './',
   './index.html',
@@ -101,6 +101,7 @@ const SHELL = [
   './js/packs/maa-kategoriat.js',
   './js/packs/maakartat.js',
   './js/packs/nahtavyysjutut.js',
+  './js/packs/miniatyyrit.js',
   './js/packs/henkilot.js',
   './js/packs/saatiedot.js',
   './js/packs/kohtaamiset.js',
@@ -211,6 +212,13 @@ const SHELL = [
    */
   './assets/kartat/berliini-keskusta.png',
   './assets/kartat/berliini-varikartta.png',
+  // Berliinin miniatyyripiirrokset (kohdekartan kortit, v708).
+  './assets/kartat/miniatyyrit/berliini-valtiopaivatalo.jpg',
+  './assets/kartat/miniatyyrit/berliini-brandenburgin-portti.jpg',
+  './assets/kartat/miniatyyrit/berliini-checkpoint-charlie.jpg',
+  './assets/kartat/miniatyyrit/berliini-museosaari.jpg',
+  './assets/kartat/miniatyyrit/berliini-tv-torni.jpg',
+  './assets/kartat/miniatyyrit/berliini-east-side-gallery.jpg',
   './assets/kartat/helsinki-keskusta.png',
   './assets/kartat/helsinki-satelliitti.jpg',
   './assets/kartat/kairo-keskusta.png',

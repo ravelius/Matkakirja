@@ -10143,6 +10143,92 @@ body.vertailu-tila .pawns { display: none; }
   touch-action: pan-y;
 }
 
+/* Miniatyyrikortti kartan päällä (omistajan tilaus 15.8.2026):
+ * piirros vähän isompana + jutun alku; piirroksesta juttuun.
+ * Kortti on kehyksen lapsi, joten se ei liiku zoomin mukana. */
+.kartta-kehys .miniatyyrikortti {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(74%, 250px);
+  max-height: 92%;
+  overflow-y: auto;
+  padding: 0.45rem 0.55rem 0.55rem;
+  background-color: #f5f0e2;
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+  border: 1px solid rgba(122, 85, 20, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.38);
+  color: #211d18;
+  text-align: left;
+  z-index: 6;
+}
+
+/* Piirros on kortin katseenvangitsija muttei koko kortti: korkeus on
+ * rajattu, jotta nimi ja jutun alku mahtuvat matalaankin
+ * karttaikkunaan ilman vieritystä. */
+.miniatyyri-nappi {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 0;
+  border: 1px solid rgba(70, 51, 31, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+}
+
+.miniatyyri-kuva {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 8.5rem;
+}
+
+.miniatyyri-nimi {
+  margin: 0.4rem 1.2rem 0.15rem 0;
+  font-family: var(--font-type);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: #46331f;
+}
+
+.miniatyyri-teksti {
+  margin: 0;
+  font-family: var(--font-luku);
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: rgba(33, 29, 24, 0.85);
+  text-shadow: none;
+  /* Pitkä avausvirke leikkautuu siististi kolmella pisteellä sen
+   * sijaan, että kortti vuotaisi matalan karttaikkunan yli — koko
+   * juttu on piirroksen napautuksen päässä. */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dialog .miniatyyri-sulje {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.15rem;
+  min-height: 0;
+  padding: 0.15rem 0.45rem;
+  border: none;
+  background: none;
+  color: rgba(70, 51, 31, 0.75);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .kartta-kehys.zoomattu {
   touch-action: none;
   cursor: grab;
@@ -88054,6 +88140,36 @@ const NAHTAVYYSJUTUT = {
   },
 };
 
+// ===== js/packs/miniatyyrit.js =====
+/*
+ * Kohdekartan miniatyyripiirrokset (omistajan tilaus 15.8.2026:
+ * "miniatyyrikuvat piirrettynä nähtävyyksistä ... Sama idea kuin
+ * huvipuisto kartoissa"; "Tee piirrokset sinne [Berliiniin] ensin
+ * sekä samat kolmeen kaupunkiin hki. Pariisi. Lontoo").
+ *
+ * Avaimet ovat samat kuin NAHTAVYYSJUTUT-taulussa: kaupungin tunnus →
+ * kohteen NIMI → piirroksen polku. Numeropisteen napautus avaa kartan
+ * päälle kortin (piirros + jutun alku), ja piirroksen napautus vie
+ * itse juttuun (js/ui.js naytaMiniatyyri). Kaupunki tai kohde ilman
+ * miniatyyriä toimii entiseen tapaan: napautus suoraan juttuun.
+ *
+ * Kuvat generoidaan tools/generoi-miniatyyrit.mjs:llä ja KATSOTAAN
+ * SILMIN ennen tähän tauluun lisäämistä — tests/miniatyyrit.test.mjs
+ * valvoo, että jokainen polku on olemassa ja jokainen nimi vastaa
+ * kartan kohdetta.
+ */
+
+const MINIATYYRIT = {
+  berliini: {
+    Valtiopäivätalo: 'assets/kartat/miniatyyrit/berliini-valtiopaivatalo.jpg',
+    'Brandenburgin portti': 'assets/kartat/miniatyyrit/berliini-brandenburgin-portti.jpg',
+    'Checkpoint Charlie': 'assets/kartat/miniatyyrit/berliini-checkpoint-charlie.jpg',
+    Museosaari: 'assets/kartat/miniatyyrit/berliini-museosaari.jpg',
+    'Tv-torni': 'assets/kartat/miniatyyrit/berliini-tv-torni.jpg',
+    'East Side Gallery': 'assets/kartat/miniatyyrit/berliini-east-side-gallery.jpg',
+  },
+};
+
 // ===== js/packs/henkilot.js =====
 // Henkilöjutut: nähtävyysteksteissä mainittu henkilö saa oman
 // juttunsa, joka aukeaa nimestä (omistajan tilaus 10.8.2026:
@@ -108868,6 +108984,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v708 — Berliinin pisteet: piirroskortti + juttuun',
   'v707 — Berliinin värikartta (vipu kartalla)',
   'v706 — Raamatun taitto: kappaleet, ei palstoja',
   'v704 — radio hiljenee pöllön/lukijan puhuessa',
@@ -170716,6 +170833,9 @@ class UI {
       // — vipu vaihtaa kuvan heti napautuksesta.
       if (kohdekartta.varikartta) kuvat.push(kohdekartta.varikartta);
       else if (kohdekartta.satelliitti) kuvat.push(kohdekartta.satelliitti);
+      // Miniatyyripiirrokset (etukäteispuskurin periaate): kortti
+      // aukeaa napautuksesta, eikä piirros saa latautua vasta siinä.
+      kuvat.push(...Object.values(MINIATYYRIT[cityId] ?? {}));
     }
     return kuvat;
   }
@@ -173724,8 +173844,21 @@ class UI {
        * wikin kuten ennenkin, ja ilman kumpaakaan piste on pelkkä
        * merkki — vanhat kaupungit toimivat siis ennallaan.
        */
-      const avaa = k.teksti ? () => this.avaaNahtavyys(k, numero)
+      const avaaJuttu = k.teksti ? () => this.avaaNahtavyys(k, numero)
         : (k.wiki ? () => this.openWikiArticle(k.wiki, k.nimi) : null);
+      /*
+       * MINIATYYRI VÄLIIN (omistajan tilaus 15.8.2026: "piirrokset
+       * voisi tulla ... klikkaamalla kohtaa jolloin tulisi piirros
+       * kartalle vähän isompana ja pari lausetta selityksenä. Ja
+       * piirrosta klikkaamalla pääsisi itse pop up artikkeliin").
+       * KARTAN piste avaa kortin; selitelistan rivi vie suoraan
+       * juttuun kuten ennenkin — listassa nimi ja numero kertovat jo
+       * saman kuin kortti.
+       */
+      const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi] ?? null;
+      const avaa = (miniatyyri && avaaJuttu)
+        ? () => this.naytaMiniatyyri(kehys, { kuva: miniatyyri, kohde: k, avaaJuttu })
+        : avaaJuttu;
       /*
        * Kohteen nimi hiiren alla (omistajan toive 8.8.2026). Ympyrässä
        * lukee vain numero, ja selitelista on kartan alla — työpöydällä
@@ -173744,12 +173877,13 @@ class UI {
        */
       if (avaa) {
         const otsikko = k.teksti ? `${k.nimi} — lue lisää` : `${k.nimi} — avaa artikkelin`;
-        for (const el of [piste, selite]) {
-          el.type = 'button';
-          el.addEventListener('click', avaa);
-        }
+        piste.type = 'button';
+        piste.addEventListener('click', avaa);
+        selite.type = 'button';
+        // Selitelistan rivi ohittaa kortin — nimi on jo rivillä.
+        selite.addEventListener('click', avaaJuttu ?? avaa);
         selite.title = otsikko;
-        piste.setAttribute('aria-label', otsikko);
+        piste.setAttribute('aria-label', miniatyyri ? `${k.nimi} — näytä piirros` : otsikko);
       }
       const vihje = html('span', 'kohde-vihje', k.nimi);
       vihje.setAttribute('aria-hidden', 'true');
@@ -173902,6 +174036,71 @@ class UI {
     lohko.appendChild(lahderivi);
     kohde.appendChild(lohko);
     this.kytkeKarttaZoom(kehys, kotelo, napit, ydin, zoomOhjain);
+  }
+
+  /**
+   * MINIATYYRIKORTTI KARTAN PÄÄLLE (omistajan tilaus 15.8.2026:
+   * "klikkaamalla kohtaa ... tulisi piirros kartalle vähän isompana
+   * ja pari lausetta selityksenä. Ja piirrosta klikkaamalla pääsisi
+   * itse pop up artikkeliin").
+   *
+   * Kortti on kehyksen (kiinteän karttaikkunan) lapsi eikä lavan:
+   * se pysyy paikallaan, vaikka karttaa zoomattaisiin sen alla.
+   * Lauseet ovat kohteen oman, tarkistetun jutun alku (virkkeiksi) —
+   * korttiin ei kirjoiteta uutta sisältöä. Sulkeutuu rastista,
+   * kortin ulkopuolisesta napautuksesta (myös panorointiote) ja
+   * uuden kohteen avaamisesta. Lukija ei lue korttia
+   * (data-lukija="ei") — se on kartan väline, ei sivun juttu.
+   */
+  naytaMiniatyyri(kehys, { kuva, kohde, avaaJuttu }) {
+    kehys.querySelector('.miniatyyrikortti')?.remove();
+    const kortti = html('div', 'miniatyyrikortti');
+    kortti.setAttribute('data-lukija', 'ei');
+    kortti.setAttribute('role', 'dialog');
+    kortti.setAttribute('aria-label', kohde.nimi);
+    const ulkosulku = (e) => {
+      if (!kortti.contains(e.target)) sulje();
+    };
+    const sulje = () => {
+      kortti.remove();
+      kehys.removeEventListener('pointerdown', ulkosulku, true);
+    };
+    // Kaappausvaihe: myös kartan panorointiote kortin vierestä sulkee.
+    kehys.addEventListener('pointerdown', ulkosulku, true);
+
+    const nappi = html('button', 'miniatyyri-nappi');
+    nappi.type = 'button';
+    nappi.title = `${kohde.nimi} — avaa juttu`;
+    nappi.setAttribute('aria-label', `${kohde.nimi} — avaa juttu`);
+    const el = document.createElement('img');
+    el.className = 'miniatyyri-kuva';
+    el.alt = kohde.nimi;
+    el.decoding = 'async';
+    el.draggable = false;
+    el.src = kuva;
+    nappi.appendChild(el);
+    nappi.addEventListener('click', () => {
+      sulje();
+      avaaJuttu();
+    });
+    kortti.appendChild(nappi);
+    kortti.appendChild(html('p', 'miniatyyri-nimi', kohde.nimi));
+    // Pari lausetta jutun alusta — mutta toinen virke vain jos se
+    // mahtuu: matalassa karttaikkunassa kesken leikkautuva lause
+    // näyttäisi rikkinäiseltä, ja koko juttu on napautuksen päässä.
+    const virkkeet = virkkeiksi(String(kohde.teksti ?? ''));
+    let alku = virkkeet[0] ?? '';
+    if (virkkeet[1] && alku.length + virkkeet[1].length <= 170) {
+      alku += ` ${virkkeet[1]}`;
+    }
+    if (alku) kortti.appendChild(html('p', 'miniatyyri-teksti', alku));
+    const x = html('button', 'miniatyyri-sulje', '×');
+    x.type = 'button';
+    x.title = 'Sulje';
+    x.setAttribute('aria-label', 'Sulje');
+    x.addEventListener('click', sulje);
+    kortti.appendChild(x);
+    kehys.appendChild(kortti);
   }
 
   /**
@@ -179539,6 +179738,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 708, teksti: 'Berliinin kohteille miniatyyripiirrokset ja karttakortti' },
   { v: 707, teksti: 'Berliinin kohdekartta värein — vipu satelliitin tilalle' },
   { v: 706, teksti: 'Raamatun taitto: kappaleet, yksi palsta, sisällys ehjäksi' },
   { v: 705, teksti: 'Tilannetaulut ajan tasalle v704 asti' },
@@ -180343,7 +180543,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.707';
+const APP_VERSION = '2026-08-09.708';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

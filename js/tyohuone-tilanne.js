@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v708 — Berliinin pisteet: piirroskortti + juttuun',
   'v707 — Berliinin värikartta (vipu kartalla)',
   'v706 — Raamatun taitto: kappaleet, ei palstoja',
   'v704 — radio hiljenee pöllön/lukijan puhuessa',
