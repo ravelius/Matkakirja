@@ -647,4 +647,251 @@ export const LIPPUTIEDOT = {
     ],
     lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
   },
+  'Flag of Poland.svg': {
+    maa: 'Puola',
+    symboliikka: [
+      { osa: 'Valkoinen', selite: 'vaakunan valkoinen kotka.' },
+      { osa: 'Punainen', selite: 'kotkan kilven punainen kenttä.' },
+    ],
+    kappaleet: [
+      'Valko-punainen on johdettu suoraan vaakunasta: valkoinen '
+        + 'kotka punaisella kentällä. Viralliseksi lipuksi se '
+        + 'vahvistettiin 1919, itsenäistymisen jälkeen.',
+      'Tarun mukaan valtakunnan perustaja Lech näki valkoisen kotkan '
+        + 'pesällään auringonlaskun punaa vasten ja otti näyn '
+        + 'merkikseen.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Valkoinen kotka',
+        polku: 'assets/liput/tunnukset/pol-vaakuna.png',
+        selite: 'Kruunupäinen valkoinen kotka punaisella kentällä — '
+          + 'tunnus tunnetaan kuninkaan sinetistä 1200-luvulta. '
+          + 'Kommunistihallinto poisti kruunun 1944; se palasi '
+          + 'kotkalle 1990.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of the Czech Republic.svg': {
+    maa: 'Tšekki',
+    symboliikka: [
+      {
+        osa: 'Valkoinen ja punainen',
+        selite: 'Böömin värit — hopeinen leijona punaisella.',
+      },
+      {
+        osa: 'Sininen kiila',
+        selite: 'lisättiin 1920 erottamaan lippu Puolasta ja tuomaan '
+          + 'mukaan Määrin ja Slovakian sini.',
+      },
+    ],
+    kappaleet: [
+      'Tšekkoslovakia sai lippunsa 1920, kun Böömin valko-punaiseen '
+        + 'lisättiin sininen kiila.',
+      'Liiton hajotessa 1993 Tšekki piti lipun itsellään, vaikka '
+        + 'erosopimus kielsi yhteisten tunnusten käytön — Slovakia '
+        + 'sai tyytyä vastalauseeseen.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Tšekin vaakuna',
+        polku: 'assets/liput/tunnukset/cze-vaakuna.png',
+        selite: 'Nelijakoisessa kilvessä kahdesti Böömin '
+          + 'kaksihäntäinen hopealeijona sekä Määrin ja Sleesian '
+          + 'ruudulliset kotkat.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of Slovakia.svg': {
+    maa: 'Slovakia',
+    symboliikka: [
+      {
+        osa: 'Valko-sini-punainen',
+        selite: 'panslaaviset värit vuoden 1848 heräämisestä.',
+      },
+      {
+        osa: 'Kaksoisristi',
+        selite: 'bysanttilainen perintö Kyrilloksen ja Methodioksen '
+          + 'lähetystyöstä.',
+      },
+    ],
+    kappaleet: [
+      'Slovakian värit ovat panslaavilaiset, vuoden 1848 kansallisen '
+        + 'heräämisen perintöä. Nykyinen lippu vaakunoineen '
+        + 'vahvistettiin 1992.',
+      'Vaakunan kolme kukkulaa ovat Tatra, Fatra ja Mátra — joista '
+        + 'viimeinen jäi nykyisen Unkarin puolelle.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Slovakian vaakuna',
+        polku: 'assets/liput/tunnukset/svk-vaakuna.png',
+        selite: 'Hopeinen kaksoisristi kolmen sinisen kukkulan '
+          + 'päällä punaisella kentällä.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of Hungary.svg': {
+    maa: 'Unkari',
+    symboliikka: [
+      { osa: 'Punainen', selite: 'voima.' },
+      { osa: 'Valkoinen', selite: 'uskollisuus.' },
+      { osa: 'Vihreä', selite: 'toivo.' },
+    ],
+    kappaleet: [
+      'Trikolori nousi vuosien 1848–49 vallankumouksessa Ranskan '
+        + 'mallin mukaan; värit poimittiin keskiaikaisista '
+        + 'vaakunatunnuksista.',
+      'Vuoden 1956 kansannousun tunnukseksi tuli reikälippu: '
+        + 'kommunistinen vaakuna leikattiin lipun keskeltä pois.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Unkarin vaakuna',
+        polku: 'assets/liput/tunnukset/hun-vaakuna.png',
+        selite: 'Árpádien puna-hopeaiset raidat ja apostolinen '
+          + 'kaksoisristi kolmella kukkulalla; päällä Pyhän Tapanin '
+          + 'kruunu, jonka risti on vinossa — se vääntyi '
+          + 'vuosisatojen säilytyksessä ja vinous päätettiin '
+          + 'säilyttää.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of Romania.svg': {
+    maa: 'Romania',
+    symboliikka: [
+      {
+        osa: 'Sininen, keltainen ja punainen',
+        selite: 'Valakian ja Moldovan ruhtinaskuntien värit.',
+      },
+    ],
+    kappaleet: [
+      'Trikolori nousi vuoden 1848 vallankumouksessa; yhdistyneen '
+        + 'Romanian lipuksi se tuli ruhtinaskuntien liityttyä yhteen '
+        + '1859, pystyraitaisena 1866.',
+      'Vuoden 1989 vallankumouksessa kansa leikkasi Ceaușescun ajan '
+        + 'vaakunan lipun keskeltä pois — reikälippu, kuten '
+        + 'Unkarissa 1956.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Romanian vaakuna',
+        polku: 'assets/liput/tunnukset/rou-vaakuna.png',
+        selite: 'Kultainen kotka risti nokassaan kantaa kilvessä '
+          + 'Valakian, Moldovan, Banaatin, Transilvanian ja '
+          + 'Dobrogean tunnuksia.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of Bulgaria.svg': {
+    maa: 'Bulgaria',
+    symboliikka: [
+      { osa: 'Valkoinen', selite: 'rauha.' },
+      { osa: 'Vihreä', selite: 'maan hedelmällisyys.' },
+      { osa: 'Punainen', selite: 'rohkeus.' },
+    ],
+    kappaleet: [
+      'Lippu vahvistettiin 1879 Tǎrnovon perustuslaissa, kun maa '
+        + 'oli vapautunut osmanivallasta. Malli on panslaavilainen, '
+        + 'mutta sininen vaihdettiin vihreään.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Bulgarian vaakuna',
+        polku: 'assets/liput/tunnukset/bgr-vaakuna.png',
+        selite: 'Kolme kruunattua kultaleijonaa: yksi kilvessä ja '
+          + 'kaksi kilvenkannattajina. Nauhassa tunnuslause '
+          + '"Yhtenäisyys tekee voiman".',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of Greece.svg': {
+    maa: 'Kreikka',
+    symboliikka: [
+      { osa: 'Sininen ja valkoinen', selite: 'meri ja aallot, taivas.' },
+      { osa: 'Risti', selite: 'ortodoksinen kristinusko.' },
+      {
+        osa: 'Yhdeksän raitaa',
+        selite: 'tarun mukaan vapaushuudon "Vapaus tai kuolema" '
+          + 'yhdeksän tavua.',
+      },
+    ],
+    kappaleet: [
+      'Lippu syntyi vapaussodassa: kansalliskokous vahvisti 1822 '
+        + 'ristilipun maalle ja raidallisen merelle. Raidallinen asu '
+        + 'jäi ainoaksi lipuksi 1978.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kreikan vaakuna',
+        polku: 'assets/liput/tunnukset/grc-vaakuna.png',
+        selite: 'Valkoinen risti sinisellä kilvellä '
+          + 'laakeriseppeleen ympäröimänä — antiikin voitonseppele '
+          + 'ristin ympärillä.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of Serbia.svg': {
+    maa: 'Serbia',
+    symboliikka: [
+      {
+        osa: 'Puna-sini-valkoinen',
+        selite: 'panslaaviset värit — Venäjän lipun järjestys '
+          + 'käännettynä.',
+      },
+    ],
+    kappaleet: [
+      'Kolmiväri juontaa 1830-luvun autonomiseen ruhtinaskuntaan; '
+        + 'nykyinen vaakunallinen asu vahvistettiin 2000-luvulla.',
+      'Vaakunan neljä tulusrautaa luetaan kyrillisinä S-kirjaimina: '
+        + '"Samo sloga Srbina spasava" — vain yksimielisyys pelastaa '
+        + 'serbin.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Serbian vaakuna',
+        polku: 'assets/liput/tunnukset/srb-vaakuna.png',
+        selite: 'Valkoinen kaksipäinen kotka Nemanjić-dynastian '
+          + 'perintönä; kilvessä risti ja neljä tulusrautaa.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of Croatia.svg': {
+    maa: 'Kroatia',
+    symboliikka: [
+      {
+        osa: 'Puna-valko-sininen',
+        selite: 'panslaaviset värit vuodelta 1848.',
+      },
+      {
+        osa: 'Šahovnica',
+        selite: 'punavalkoinen shakkiruudukko, Kroatian tunnus '
+          + '1500-luvulta.',
+      },
+    ],
+    kappaleet: [
+      'Trikolori nousi vuoden 1848 kansallisliikkeessä; itsenäisen '
+        + 'Kroatian lippu vaakunoineen vahvistettiin 1990.',
+      'Šahovnican yllä on kruunu viidestä pikkuvaakunasta: vanhin '
+        + 'tunnettu Kroatian tunnus, Dubrovnik, Dalmatia, Istria ja '
+        + 'Slavonia.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kroatian vaakuna',
+        polku: 'assets/liput/tunnukset/hrv-vaakuna.png',
+        selite: 'Punavalkoinen shakkiruudukko eli šahovnica, jonka '
+          + 'kruununa on viisi historiallisten alueiden pikkukilpeä.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
 };
