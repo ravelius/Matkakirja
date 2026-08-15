@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 693, teksti: 'Panthéon, Luxembourg, Kallio ja Linnanmäki kartoille' },
   { v: 692, teksti: 'Taustaäänet tasattiin: hajonta 35 dB -> 4 dB (125 raitaa)' },
   { v: 691, teksti: 'Venäjän radio palasi kuuluviin (omistajan linjaus)' },
   { v: 690, teksti: 'Maalehtien kuvatekstit lyhennettiin (erä 4b) — urakka valmis' },

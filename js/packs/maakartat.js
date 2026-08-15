@@ -3323,12 +3323,23 @@ export const KAUPUNKIKARTAT = {
        * Kallion kirkko jäi ennen 22 metriä pohjoisrajan ulkopuolelle,
        * eikä rajaa nostettu, koska 60,187 olisi vaatinut 4,3 km
        * leveän kuvan. Levennys 15.8.2026 teki juuri sen (4,7 km), ja
-       * kirkko sekä Linnanmäki ovat nyt kuvassa. Ne EIVÄT silti ole
-       * tällä listalla: rajausta muutettiin, ei kohdevalikoimaa.
+       * omistajan päätöksellä (15.8.) Kallion kirkko ja Linnanmäki
+       * ovat nyt myös kohdelistalla.
        */
       { nimi: 'Temppeliaukion kirkko', lat: 60.1731, lon: 24.9253, wiki: 'Temppeliaukion kirkko' },
+      /*
+       * Wikipedian piste (60,1884) on huvipuiston keskellä 78 m
+       * rajauksen yläpuolella; ympyrä seisoo siksi puiston
+       * eteläosassa pääportin puolella rajauksen sisällä — sama
+       * ratkaisu kuin London Eyellä, jonka keskipiste osui jokeen.
+       * Piste on aivan ylälaidassa, joten ympyrä voi leikkautua
+       * lepotilassa hieman; reunuslaajennus (piirtoRajat) väljentää
+       * tämän aikanaan.
+       */
+      { nimi: 'Linnanmäki', lat: 60.1869, lon: 24.9401, wiki: 'Linnanmäki' },
       { nimi: 'Päärautatieasema', lat: 60.1719, lon: 24.9414, wiki: 'Helsingin päärautatieasema' },
       { nimi: 'Kaisaniemen puisto', lat: 60.1747, lon: 24.9458, wiki: 'Kaisaniemen puisto' },
+      { nimi: 'Kallion kirkko', lat: 60.1842, lon: 24.9492, wiki: 'Kallion kirkko' },
       { nimi: 'Tuomiokirkko', lat: 60.1703, lon: 24.9522, wiki: 'Helsingin tuomiokirkko' },
       { nimi: 'Uspenskin katedraali', lat: 60.1683, lon: 24.96, wiki: 'Uspenskin katedraali' },
       { nimi: 'Johanneksenkirkko', lat: 60.1618, lon: 24.9447, wiki: 'Johanneksenkirkko (Helsinki)' },
@@ -3514,17 +3525,21 @@ export const KAUPUNKIKARTAT = {
        * kuva ei silti mene puuroksi.
        *
        * Vanha hinta oli etelälaita: Panthéon ja Luxembourgin
-       * puutarha jäivät ulkopuolelle. Levennyksen jälkeen ne ovat
-       * kuvassa — mutta EIVÄT tällä listalla. Kohteita on kuusi, ja
-       * listan kasvattaminen on oma päätöksensä (numerointi,
-       * selitteet ja nähtävyysjutut seuraavat siitä); tässä
-       * muutettiin rajausta, ei sisältöä.
+       * puutarha jäivät ulkopuolelle. Levennys 15.8.2026 toi ne
+       * kuvaan, ja omistajan päätöksellä (15.8.) ne ovat nyt myös
+       * kohdelistalla — järjestys kulkee edelleen lännestä itään.
+       * Panthéonin fi-artikkelilla ei ole koordinaatteja;
+       * 48,8462/2,3464 on rakennuksen tunnettu sijainti.
        */
       { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni' },
       { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
       { nimi: 'Concorden aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       { nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre' },
+      // Puiston keskipiste on suuri kahdeksankulmainen allas
+      // (vesitarkistin nappasi) — piste seisoo länsinurmikoilla.
+      { nimi: 'Luxembourgin puisto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
       { nimi: 'Sacré-Cœur', lat: 48.8868, lon: 2.343, wiki: 'Sacré-Cœur' },
+      { nimi: 'Panthéon', lat: 48.8462, lon: 2.3464, wiki: 'Panthéon' },
       { nimi: 'Notre-Dame', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali' },
     ],
   },
