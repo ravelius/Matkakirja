@@ -2457,6 +2457,25 @@ export const MAAKARTAT = {
  * keskitetty eikä tunnista reunoja (css/styles.css:8833). Lupaus
  * ehti harhauttaa useaa sessiota ehdottamaan kenttää, joten se on
  * kirjattu tähän eikä vain poistettu. Löytö: Sonnet 1:n QA.
+ *
+ * KAKSI RAJAUSTA, KUN KARTTA JATKUU REUNOJEN YLI (omistajan tilaus
+ * 15.8.2026: "sitä voisi lisätä piirroksessa että kartta jatkuisi
+ * pidemmälle"):
+ *
+ *   rajat        ydinrajaus — se, minkä lehti näyttää LEPOTILASSA.
+ *                Sama luku kuin ennen; esittelytekstien sijainti-
+ *                viittaukset ("oikeassa alanurkassa") tarkoittavat
+ *                tätä näkymää.
+ *   piirtoRajat  koko piirretty alue samasta keskipisteestä
+ *                (nykyisillä kaupungeilla 1,6-kertainen). Vapaaehtoinen:
+ *                ilman sitä kartta toimii kuten ennen.
+ *
+ * Kaikki prosenttiluvut — kohdepisteet (karttapiste), mittajana
+ * (mittakaava) ja kainalot — ovat prosentteja PIIRRETYSTÄ KUVASTA eli
+ * piirtoRajat-alueesta silloin kun se on olemassa. Lehti asemoi lavan
+ * niin, että ydinrajaus täyttää kehyksen (ui.js: ydinAla), joten
+ * lepotilan näkymä pysyy pikselilleen entisenä ja reunus paljastuu
+ * vasta zoomatessa.
  */
 export const KAUPUNKIKARTAT = {
   /*
@@ -3274,8 +3293,20 @@ export const KAUPUNKIKARTAT = {
      * on kirjattu tools/piirra-kaupunkikartta.mjs:n helsinki-lohkoon.
      * Lyhyesti: symmetrinen laajennus riitti tuomaan Kallion kirkon
      * ja Linnanmäen kuvaan, ja niemen kärki pysyi irti alalaidasta.
+     *
+     * JA JULISTE JATKUU TÄMÄN YLI (omistajan tilaus 15.8.2026, ks.
+     * berliini alla): piirtoRajat on 1,6-kertainen ala samasta
+     * keskipisteestä eli 7,5 × 6,6 km. Lepotilassa lehti näyttää yhä
+     * yllä olevan rajat-alueen; reunuksella ovat Seurasaari ja
+     * Meilahti lännessä, Vallila ja Kumpula pohjoisessa sekä
+     * Korkeasaari idässä. Juuri se avovesi, jota ydinrajaukseen ei
+     * saanut ottaa, on nyt reunuksella, jossa se ei syö kuvan ydintä.
+     * SATELLIITTIKUVA ON YHÄ vanhalla rajauksella (Suomenlinnan
+     * kainalo siihen komposoituna), joten satelliittinäkymässä
+     * panorointi pysähtyy kuvan reunaan (ui.js).
      */
     rajat: { pohjoinen: 60.1877, etela: 60.1508, lansi: 24.9076, ita: 24.9919 },
+    piirtoRajat: { pohjoinen: 60.19877, etela: 60.13973, lansi: 24.88231, ita: 25.01719 },
     /*
      * Kainalokartta Suomenlinnasta. Se on lehden historiaosion
      * pääkohde eikä mahdu mihinkään järkevään päärajaukseen — 3 km
@@ -3287,10 +3318,20 @@ export const KAUPUNKIKARTAT = {
      * kainalon kuvasuhde); älä muuta sitä käsin. Levennys 15.8.2026
      * muutti pääkuvan kuvasuhdetta hitusen, ja luku päivittyi
      * 28.85 → 28.81.
+     *
+     * LUVUT OVAT PROSENTTEJA PIIRRETYSTÄ KUVASTA, ja reunus 15.8.2026
+     * muutti ne kaikki. Ruutu on lepotilan näkymässä täsmälleen
+     * entisessä kohdassaan: ydinrajaus alkaa laajennetussa kuvassa
+     * kohdasta 18,75 % ja on 62,5 % leveä ja korkea, joten vanhat
+     * luvut muuntuivat kaavalla 18,75 + vanha × 0,625 (mitat ×
+     * 0,625): x 76 → 66.25, y 69.15 → 61.97, leveys 22 → 13.75,
+     * korkeus 28.81 → 18 (tarkka arvo 18,0042; vanha 28.81 oli
+     * pyöristetty luvusta 28,8067). Ruudun koko pikseleinä ei muutu,
+     * koska kuvakin leveni samassa suhteessa.
      */
     kainalot: [
       { rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
-        x: 76, y: 69.15, leveys: 22, korkeus: 28.81 },
+        x: 66.25, y: 61.97, leveys: 13.75, korkeus: 18 },
     ],
     esittely: 'Helsinki ei ole aina ollut tässä. Kustaa Vaasa perusti '
       + 'sen vuonna 1550 Vantaanjoen suulle Tallinnan kilpailijaksi, '
@@ -3497,8 +3538,17 @@ export const KAUPUNKIKARTAT = {
      * Eteläreuna maksoi takaisin sen, minkä vanha rajaus joutui
      * jättämään: Panthéon ja Luxembourgin puutarha ovat nyt kuvassa
      * (ks. kohteet-lohkon kommentti).
+     *
+     * JA JULISTE JATKUU TÄMÄN YLI (omistajan tilaus 15.8.2026, ks.
+     * berliini alla): piirtoRajat on 1,6-kertainen ala samasta
+     * keskipisteestä eli 13,3 × 10,0 km. Lepotilassa lehti näyttää
+     * yhä yllä olevan rajat-alueen; reunuksella ovat muun muassa Bois
+     * de Boulognen itälaita ja Père-Lachaise. SATELLIITTIKUVA ON YHÄ
+     * vanhalla rajauksella, joten siinä panorointi pysähtyy kuvan
+     * reunaan (ui.js).
      */
     rajat: { pohjoinen: 48.8976, etela: 48.8414, lansi: 2.2657, ita: 2.3788 },
+    piirtoRajat: { pohjoinen: 48.91446, etela: 48.82454, lansi: 2.23177, ita: 2.41273 },
     esittely: 'Pariisi alkoi saarelta. Seine haarautuu keskellä '
       + 'kaupunkia kahdeksi kapeaksi uomaksi, ja niiden väliin jää '
       + 'Île de la Cité — saari, joka on kymmenen katua pitkä ja viisi '
@@ -3744,8 +3794,17 @@ export const KAUPUNKIKARTAT = {
      * korjattu mitään. Tower Bridge oli ennen itälaidassa 85 %:n
      * kohdalla, nyt 78 %:ssa. Sekä piirros että satelliittikuva on
      * haettu uudelleen tällä rajauksella.
+     *
+     * JA JULISTE JATKUU TÄMÄN YLI (omistajan tilaus 15.8.2026, ks.
+     * berliini alla): piirtoRajat on 1,6-kertainen ala samasta
+     * keskipisteestä eli 13,9 × 7,2 km. Lepotilassa lehti näyttää yhä
+     * yllä olevan rajat-alueen; reunuksella on Regent's Park ja
+     * Kensington Gardens pohjoisessa ja lännessä. SATELLIITTIKUVA ON
+     * YHÄ vanhalla rajauksella, joten siinä panorointi pysähtyy kuvan
+     * reunaan (ui.js).
      */
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
+    piirtoRajat: { pohjoinen: 51.54131, etela: 51.47619, lansi: -0.21, ita: -0.01 },
     esittely: 'Lontoo ei ole yksi kaupunki vaan kaksi, jotka kasvoivat '
       + 'yhteen: idässä City of London, roomalaisten muurien rajaama '
       + 'neliökilometri, jossa tehdään rahaa, ja lännessä Westminster, '
@@ -3827,8 +3886,23 @@ export const KAUPUNKIKARTAT = {
      * lasketaan tästä lohkosta (karttapiste), joten ne siirtyivät
      * kuvassa itsestään — käsin ei korjattu mitään. Sekä piirros että
      * satelliittikuva on haettu uudelleen tällä rajauksella.
+     *
+     * JA JULISTE JATKUU TÄMÄN YLI (omistajan tilaus 15.8.2026: "sitä
+     * voisi lisätä piirroksessa että kartta jatkuisi pidemmälle").
+     * piirtoRajat on 1,6-kertainen ala samasta keskipisteestä eli
+     * 16,3 × 12,3 km, ja PNG on piirretty siitä. Lepotilassa lehti
+     * näyttää yhä tarkalleen yllä olevan rajat-alueen; reunus tulee
+     * näkyviin vasta zoomatessa, kun panorointi jatkuu sen puolelle.
+     * Kohdepisteet ovat prosentteina piirretystä kuvasta (karttapiste),
+     * joten ne siirtyivät kuvassa itsestään — ruudulla ne ovat samassa
+     * kohdassa kuin ennen.
+     *
+     * SATELLIITTIKUVA ON YHÄ YLLÄ OLEVALLA rajat-ALUEELLA: uusia ei
+     * haettu, ja siksi satelliittinäkymässä panorointi pysähtyy
+     * vanhaan tapaan kuvan reunaan (ui.js).
      */
     rajat: { pohjoinen: 52.547, etela: 52.478, lansi: 13.325, ita: 13.475 },
+    piirtoRajat: { pohjoinen: 52.5677, etela: 52.4573, lansi: 13.28, ita: 13.52 },
     esittely: 'Berliini on rakennettu veden ja metsän keskelle: '
       + 'siltoja on noin 1 700 — moninkertaisesti Venetsian verran — '
       + 'ja kolmasosa kaupungista on puistoa, metsää tai järveä. '
@@ -5009,9 +5083,21 @@ export function mittakaava(kartta) {
   const r = kartta?.rajat;
   if (!r) return null;
   const keskileveys = ((r.pohjoinen + r.etela) / 2) * (Math.PI / 180);
-  const metria = (r.ita - r.lansi) * 111320 * Math.cos(keskileveys);
+  /*
+   * KAKSI LEVEYTTÄ, KUN KUVA ON YDINRAJAUSTA LAAJEMPI (piirtoRajat,
+   * ks. ydinAla). Janan PITUUS valitaan siitä, mitä lepotilassa
+   * näkyy — ydinrajauksen leveydestä — jotta jana on kuvassa saman
+   * mittainen kuin ennen laajennusta. Sen OSUUS taas lasketaan koko
+   * piirretystä kuvasta, koska lehti antaa janalle leveyden
+   * prosentteina lavasta eli kuvasta. Ilman tätä jakoa jana olisi
+   * lepotilassa 1,6-kertainen: neljäsosa laajemmasta kuvasta on
+   * reilusti yli neljäsosa siitä, mikä kehyksessä näkyy.
+   */
+  const p = kartta.piirtoRajat ?? r;
+  const metria = (p.ita - p.lansi) * 111320 * Math.cos(keskileveys);
+  const ydinMetria = (r.ita - r.lansi) * 111320 * Math.cos(keskileveys);
   if (!Number.isFinite(metria) || metria <= 0) return null;
-  const tavoite = metria * 0.25;
+  const tavoite = ydinMetria * 0.25;
   let paras = JANAN_PITUUDET[0];
   for (const pituus of JANAN_PITUUDET) {
     if (Math.abs(pituus - tavoite) < Math.abs(paras - tavoite)) paras = pituus;
@@ -5020,6 +5106,11 @@ export function mittakaava(kartta) {
   return {
     metria: paras,
     osuus,
+    // Sama jana osuutena SIITÄ, MITÄ LEPOTILASSA NÄKYY. Osuus on
+    // lehden CSS-leveys, ydinOsuus on se mitta, jolla janan koko
+    // arvioidaan (tests/mittakaava.test.mjs). Laajentamattomalla
+    // kartalla ne ovat sama luku.
+    ydinOsuus: (paras / ydinMetria) * 100,
     // Teksti valmiina: alle kilometrin metreinä, muuten kilometreinä
     // ja pilkulla, koska peli on suomeksi ("1,5 km" eikä "1.5 km").
     teksti: paras < 1000
@@ -5040,5 +5131,53 @@ export function karttapiste(kartta, lat, lon) {
       };
     }
   }
-  return suoraPiste(kartta.rajat, lat, lon);
+  // Prosentit ovat aina PIIRRETYSTÄ KUVASTA. Kun kuva on ydinrajausta
+  // laajempi (piirtoRajat, ks. ydinAla), sama piste on kuvassa eri
+  // kohdassa kuin ydinrajauksessa — mutta lehden lava on silloin
+  // yhtä paljon kehystä suurempi, joten piste osuu ruudulla samaan
+  // paikkaan kuin ennen.
+  return suoraPiste(kartta.piirtoRajat ?? kartta.rajat, lat, lon);
+}
+
+/**
+ * Ydinrajauksen paikka piirretyssä kuvassa prosentteina (x, y,
+ * leveys, korkeus).
+ *
+ * KARTTA JATKUU REUNOJEN YLI (omistajan tilaus 15.8.2026: "sitä
+ * voisi lisätä piirroksessa että kartta jatkuisi pidemmälle").
+ * Juliste piirretään ydinrajausta laajemmalta alueelta samasta
+ * keskipisteestä (piirtoRajat), mutta lepotilassa lehti näyttää
+ * täsmälleen ydinrajauksen (rajat) — reunus paljastuu vasta
+ * zoomatessa ja panoroitaessa. Tämä funktio kertoo, missä kohtaa
+ * kuvaa ydinrajaus on, ja siitä lasketaan sekä lavan koko ja
+ * asemointi (ui.js) että panoroinnin rajat.
+ *
+ * Ilman piirtoRajat-lohkoa vastaus on koko kuva, jolloin kaikki
+ * laskenta palautuu sanasta sanaan entiselleen — vanhat kartat eivät
+ * siis muutu millään tavalla.
+ */
+/**
+ * Rajauksen kuvasuhde: leveys yhtä korkeusyksikköä kohden.
+ *
+ * Sama kaava kuin piirtäjässä (tools/piirra-kaupunkikartta.mjs), ja
+ * sen on pysyttävä samana: lehti mitoittaa kehyksen ja lavan tällä,
+ * ja piirtäjä valitsi kuvan korkeuden samalla luvulla. Leveyspiirit
+ * kapenevat pohjoiseen, joten venytys otetaan rajauksen
+ * keskileveydeltä.
+ */
+export function karttaKuvasuhde(rajat) {
+  const venytys = 1 / Math.cos(((rajat.pohjoinen + rajat.etela) / 2) * (Math.PI / 180));
+  return (rajat.ita - rajat.lansi) / ((rajat.pohjoinen - rajat.etela) * venytys);
+}
+
+export function ydinAla(kartta) {
+  const p = kartta?.piirtoRajat;
+  const r = kartta?.rajat;
+  if (!p || !r) return { x: 0, y: 0, leveys: 100, korkeus: 100 };
+  return {
+    x: ((r.lansi - p.lansi) / (p.ita - p.lansi)) * 100,
+    y: ((p.pohjoinen - r.pohjoinen) / (p.pohjoinen - p.etela)) * 100,
+    leveys: ((r.ita - r.lansi) / (p.ita - p.lansi)) * 100,
+    korkeus: ((r.pohjoinen - r.etela) / (p.pohjoinen - p.etela)) * 100,
+  };
 }

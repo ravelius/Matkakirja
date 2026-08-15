@@ -13,6 +13,9 @@
  * eikä riipu Commonsin tiedostoista.
  *
  * Käyttö:  node tools/piirra-kaupunkikartta.mjs berliini
+ *          node tools/piirra-kaupunkikartta.mjs berliini --vari
+ *            → värinäyte omaan tiedostoonsa, ks. PALETIT alempana.
+ *              EI pelin aineistoa eikä korvaa julistetta.
  * Tuloste: assets/kartat/<kaupunki>-keskusta.png ja rajat-lohko,
  *          joka liitetään js/packs/maakartat.js:n KAUPUNKIKARTAT-
  *          tauluun (pisteet asemoidaan siitä prosentteina).
@@ -20,6 +23,20 @@
  * Uusi kaupunki: lisää KAUPUNGIT-tauluun rajaus, joka kattaa vain
  * ydinkeskustan kuuluisimmat kohteet (n. 5–8 km leveä alue — laajempi
  * muuttuu puuroksi). Aja työkalu ja KATSO kuva silmin ennen käyttöä.
+ *
+ * KARTTA JATKUU REUNOJEN YLI (omistajan tilaus 15.8.2026: "sitä voisi
+ * lisätä piirroksessa että kartta jatkuisi pidemmälle"). Kaupungille
+ * annetaan `laajennus`, ja työkalu piirtää sen verran laajemman alueen
+ * samasta keskipisteestä. Lehti näyttää lepotilassa yhä pelkän
+ * `rajat`-alueen; reunus paljastuu vasta zoomatessa ja panoroitaessa
+ * (js/packs/maakartat.js: piirtoRajat ja ydinAla, ui.js: kartta-lava).
+ *
+ * KUVAN LEVEYS KASVAA SAMASSA SUHTEESSA (1600 → 1600 × laajennus), ja
+ * se on tarkoituksellista eikä sattumaa. Ydinrajaus säilyy silloin
+ * 1600 pikselinä, eli lepotilan terävyys ja viivojen paksuus ovat
+ * täsmälleen entiset — muuten reunuksen hinta olisi suttuisempi
+ * ydinkuva, ja zoomin yläraja (SUURIN = 3, ui.js) näyttäisi selaimen
+ * venytystä kuvan omien pikselien sijaan.
  *
  * KATSO MYÖS VASEN ALAKULMA. Lehti piirtää sinne mittakaavajanan
  * (ui.js), eikä työkalu tiedä siitä mitään. Kööpenhaminassa Tivolin
@@ -60,7 +77,15 @@ const KAUPUNGIT = {
     // Laajennus on mahdollinen vain siksi, että kohdekartta on nyt
     // zoomattava (ui.js, kartta-lava): ilman zoomia tämä olisi juuri
     // sitä katupuuroa, josta yllä varoitetaan.
+    //
+    // JA KARTTA JATKUU VIELÄ TÄMÄNKIN YLI (omistajan tilaus
+    // 15.8.2026): piirretty alue on 1,6-kertainen eli 16,3 × 12,3 km,
+    // mutta lepotilassa lehti näyttää yhä tarkalleen alla olevan
+    // rajat-alueen. Reunuksella on Tiergartenin länsipää,
+    // Prenzlauer Bergin eteläkulma ja Kreuzbergin katuverkko —
+    // aluetta, jonne panorointi jatkuu, kun karttaa suurentaa.
     rajat: { pohjoinen: 52.547, etela: 52.478, lansi: 13.325, ita: 13.475 },
+    laajennus: 1.6,
   },
   kairo: {
     // Niilin molemmat rannat Tahrir-aukiolta Islamilaiseen Kairoon:
@@ -188,7 +213,13 @@ const KAUPUNGIT = {
     // — kohteita on kuusi eikä listaa kasvateta ilman eri päätöstä.
     // Pariisi ei myöskään ole enää pelin laajin rajaus: Berliini on
     // 10,2 km.
+    //
+    // REUNUS 15.8.2026 (ks. berliini yllä): piirretty alue on
+    // 1,6-kertainen eli 13,3 × 10,0 km, lepotila yhä alla oleva
+    // rajat-alue. Reunukselle osuvat muun muassa Bois de Boulognen
+    // itälaita, Père-Lachaise ja Butte-aux-Caillesin kortteli.
     rajat: { pohjoinen: 48.8976, etela: 48.8414, lansi: 2.2657, ita: 2.3788 },
+    laajennus: 1.6,
   },
   amsterdam: {
     // Kanavakehä on hevosenkengän muotoinen, ei soikea, joten rajaus on
@@ -251,7 +282,15 @@ const KAUPUNGIT = {
     // (Kaivopuiston ranta, n. 60.155) on nyt 88 %:n korkeudella; 300 m
     // lisää pohjoiseen painaisi sen 94 %:iin eli kiinni alalaitaan.
     // Sibelius-monumentti (lon 24.883) jää yhä lännessä ulkopuolelle.
+    //
+    // REUNUS 15.8.2026 (ks. berliini yllä): piirretty alue on
+    // 1,6-kertainen eli 7,5 × 6,6 km, lepotila yhä alla oleva
+    // rajat-alue. Reunukselle osuvat Seurasaari ja Meilahti lännessä,
+    // Vallila ja Kumpula pohjoisessa sekä Korkeasaari idässä — juuri
+    // se avovesi, jota yllä varotaan ottamasta ydinrajaukseen, on nyt
+    // reunuksella, jossa se ei syö kuvan ydintä.
     rajat: { pohjoinen: 60.1877, etela: 60.1508, lansi: 24.9076, ita: 24.9919 },
+    laajennus: 1.6,
     meri: true,
     kainalot: [
       {
@@ -262,8 +301,17 @@ const KAUPUNGIT = {
         // Marginaali on 2 % kummallakin sivulla, sama kuin Budapestin
         // kainalossa — täysin reunaan asti vietynä ruudun oma
         // reunaviiva jäisi puoliksi kuvan ulkopuolelle.
+        //
+        // LUVUT OVAT PROSENTTEJA PIIRRETYSTÄ KUVASTA, ja reunus
+        // 15.8.2026 muutti ne. Ruutu istuu edelleen tarkalleen samassa
+        // kohdassa lepotilan näkymää: ydinrajaus alkaa laajennetussa
+        // kuvassa kohdasta 18,75 % ja on 62,5 % leveä, joten vanhat
+        // ydinprosentit muuntuivat kaavalla 18,75 + vanha × 0,625:
+        // x 76 → 66.25, y 69.15 → 61.97, leveys 22 → 13.75. Ruudun
+        // koko pikseleinä ei siis muutu (352 px), koska kuvakin
+        // leveni samassa suhteessa.
         rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
-        x: 76, y: 69.15, leveys: 22, suunta: '3 km kaakkoon', meri: true,
+        x: 66.25, y: 61.97, leveys: 13.75, suunta: '3 km kaakkoon', meri: true,
       },
     ],
   },
@@ -385,7 +433,13 @@ const KAUPUNGIT = {
     // Levennys korjaa samalla vanhan vian: Tower Bridge oli itälaidassa
     // 85 %:n kohdalla ja sen numeroympyrä hipoi kuvan reunaa. Nyt se on
     // 78 %:ssa, eli silta piirtyy kokonaan ja ympyrälle jää tilaa.
+    //
+    // REUNUS 15.8.2026 (ks. berliini yllä): piirretty alue on
+    // 1,6-kertainen eli 13,9 × 7,2 km, lepotila yhä alla oleva
+    // rajat-alue. Reunukselle osuvat Regent's Park ja Kensington
+    // Gardens pohjoisessa ja lännessä sekä Bermondsey idässä.
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
+    laajennus: 1.6,
   },
   rooma: {
     // Tiber tulee kuvaan alhaalta, kaartaa Vatikaanin ohi ja poistuu
@@ -1134,28 +1188,90 @@ const KADUT = [
  * vesireuna sama #b99a68 kuin pääkartan meriviivoissa (.sea-echo).
  * Puistot ovat pelkkä kuiskaus paperia tummempaa — ei vihreää.
  */
-const VESI = '#e8d5a9';
-const VESIREUNA = '#b99a68';
-const PUISTO = '#efe6ca';
-const RATA = '#d5c9b0';
-const PAPERI = '#f6eeda';
-// Muuri on kartan tummin viiva: pääkartan musteen sävy (.city-label),
-// jotta se erottuu vaaleista kaduista mutta pysyy pergamentissa.
-const MUURI = '#6f5a3c';
 /*
- * Arkeologiset alueet ovat paperia lämpimämpi laikku ja saavat ohuen
- * reunaviivan. Sävy on veden ja puiston välistä: kaivausalue ei ole
- * puisto eikä vesi, ja Luxorissa se on koko kartan aihe.
+ * VÄRIPALETTI ON NÄYTE EIKÄ KÄYTÖSSÄ (omistajan kysymys 15.8.2026:
+ * satelliittinäkymä on suttuinen, koska s2cloudlessin pohjatarkkuus
+ * on 10 m/px — "voisiko sen sijaan olla esim. väritetty kartta").
  *
- * MIKSI OMA TASO. Luxorin ja Karnakin temppelit EIVÄT ole OSM:ssä
- * rakennuksia vaan historic=ruins- ja historic=archaeological_site
- * -alueita. Ilman tätä tasoa kartalle jää pelkkä katuverkko ja
- * kohteiden kohdalla on tyhjää paperia — mitattiin Luxorissa
- * 13.8.2026 kahdella ajolla ennen kuin syy löytyi.
+ *   node tools/piirra-kaupunkikartta.mjs berliini --vari
+ *   → assets/kartat/berliini-varikartta-nayte.png
+ *
+ * Sama aineisto, sama rajaus ja samat viivat kuin julisteessa; vain
+ * sävyt vaihtuvat. Väri tulee sinne, missä maastossa ON väriä — vesi
+ * sävytettyyn siniseen ja puistot vihreään — ja kaikki muu pysyy
+ * pelin pergamentissa: korttelit lämpimänä hiekkana, kadut samana
+ * ruskeana musteperheenä hitusen tummempana, jotta ne erottuvat
+ * syvemmästä pohjasta. Sävyt ovat harmaannutettuja (sininen kallistuu
+ * teräksiseen, vihreä salvianvihreään), koska kirkas web-kartan
+ * sini-vihreä ei kuulu tähän peliin.
+ *
+ * HUOM: työkalu EI piirrä rakennuksia (ks. KADUT ja kaupunkien
+ * kommentit) — "korttelit" tarkoittaa siis katujen väliin jäävää
+ * pohjaa. Rakennusten piirtäminen olisi oma työnsä, ei paletin.
  */
-const RAUNIO = '#ece0c2';
-const RAUNIOREUNA = '#c4b189';
-
+const PALETIT = {
+  /*
+   * Sävyt pääkartan pergamenttipaletista (omistajan tarkennus
+   * 7.8.2026: "pääkartan sävyinen, eli siniset ja vihreät pois"):
+   * vesi on järvien #ecd9ae-perhettä hieman tummempana, jotta se
+   * erottuu paperista, ja vesireuna sama #b99a68 kuin pääkartan
+   * meriviivoissa (.sea-echo). Puistot ovat pelkkä kuiskaus paperia
+   * tummempaa — ei vihreää. TÄMÄ ON PELIN PALETTI.
+   */
+  paperi: {
+    VESI: '#e8d5a9',
+    VESIREUNA: '#b99a68',
+    PUISTO: '#efe6ca',
+    RATA: '#d5c9b0',
+    PAPERI: '#f6eeda',
+    // Muuri on kartan tummin viiva: pääkartan musteen sävy
+    // (.city-label), jotta se erottuu vaaleista kaduista mutta pysyy
+    // pergamentissa.
+    MUURI: '#6f5a3c',
+    /*
+     * Arkeologiset alueet ovat paperia lämpimämpi laikku ja saavat
+     * ohuen reunaviivan. Sävy on veden ja puiston välistä: kaivausalue
+     * ei ole puisto eikä vesi, ja Luxorissa se on koko kartan aihe.
+     *
+     * MIKSI OMA TASO. Luxorin ja Karnakin temppelit EIVÄT ole OSM:ssä
+     * rakennuksia vaan historic=ruins- ja historic=archaeological_site
+     * -alueita. Ilman tätä tasoa kartalle jää pelkkä katuverkko ja
+     * kohteiden kohdalla on tyhjää paperia — mitattiin Luxorissa
+     * 13.8.2026 kahdella ajolla ennen kuin syy löytyi.
+     */
+    RAUNIO: '#ece0c2',
+    RAUNIOREUNA: '#c4b189',
+  },
+  /*
+   * Näyte, ks. yllä. Ei käytössä pelissä.
+   *
+   * KADUT PIDETÄÄN JULISTEEN SÄVYISSÄ (ei kadut-riviä), ja se on
+   * mitattu valinta: ensimmäisessä versiossa myös katuja tummennettiin,
+   * ja kuva alkoi näyttää tavalliselta verkkokartalta. Kun muste on
+   * sama, ero julisteeseen on täsmälleen se, mitä omistaja kysyi —
+   * vesi ja puistot saavat värin, muu pysyy paperina.
+   *
+   * Sävyt ovat harmaannutettuja: sini kallistuu teräksiseen ja vihreä
+   * salviaan, eli molemmat ovat pergamentin päällä pölyisiä eivätkä
+   * kirkkaita. Pohja on julisteen paperia hitusen syvempi hiekka,
+   * jotta korttelit lukevat lämpiminä pintoina eivätkä tyhjänä.
+   */
+  vari: {
+    VESI: '#c3d5da',
+    VESIREUNA: '#95afb6',
+    PUISTO: '#d6dcba',
+    RATA: '#cec2a8',
+    PAPERI: '#f3e8ce',
+    MUURI: '#6f5a3c',
+    RAUNIO: '#ead9b4',
+    RAUNIOREUNA: '#c4ad82',
+  },
+};
+const VARINAYTE = process.argv.includes('--vari');
+const PALETTI = VARINAYTE ? PALETIT.vari : PALETIT.paperi;
+const {
+  VESI, VESIREUNA, PUISTO, RATA, PAPERI, MUURI, RAUNIO, RAUNIOREUNA,
+} = PALETTI;
 async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false) {
   const alue = `(${rajat.etela},${rajat.lansi},${rajat.pohjoinen},${rajat.ita})`;
   /*
@@ -1252,8 +1368,14 @@ async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false) {
  * ja koska aineisto haetaan ennen piirtoa, hukkaan menee myös se
  * minuutti, jonka kysely ehti kestää. Kolme yritystä kasvavalla
  * odotuksella riitti kaikkiin tässä kohdattuihin katkoihin.
+ *
+ * VIISI YRITYSTÄ 15.8.2026 ALKAEN. Reunuksellisen kartan kysely
+ * kattaa 2,6-kertaisen alan (laajennus 1,6 molempiin suuntiin), ja
+ * Lontoon ajo katkesi kolmesti peräkkäin ECONNRESETiin kesken
+ * vastauksen — ei siis 429:ään vaan pitkän vastauksen katkeamiseen.
+ * Neljäs yritys meni läpi.
  */
-async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 3) {
+async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 5) {
   for (let i = 1; ; i++) {
     try {
       return await haeOverpass(rajat, palvelutiet, jalkakaydat);
@@ -1598,6 +1720,35 @@ function kuvasuhde(rajat) {
 }
 
 /**
+ * PIIRRETTÄVÄ ALUE: ydinrajaus laajennettuna samasta keskipisteestä.
+ *
+ * Keskipiste säilyy, joten myös keskileveysaste — ja siten
+ * kuvasuhteen venytyskerroin — on sama kuin ydinrajauksella. Sen
+ * ansiosta ydinrajaus on laajemmassa kuvassa tarkalleen
+ * `1 / laajennus` sekä leveydestä että korkeudesta, ja lehti saa
+ * lepotilassa kehykseensä pikselilleen entisen näkymän.
+ *
+ * Luvut pyöristetään viiteen desimaaliin (noin metri), jotta
+ * maakartat.js:ään kirjattavat rajat pysyvät luettavina. Nykyisillä
+ * kaupungeilla pyöristys on tarkka: kaikki neljä laajennettua rajausta
+ * osuvat viiteen desimaaliin ilman jäännöstä.
+ */
+function piirretytRajat({ rajat, laajennus = 1 }) {
+  if (laajennus === 1) return rajat;
+  const lat = ((rajat.pohjoinen - rajat.etela) * laajennus) / 2;
+  const lon = ((rajat.ita - rajat.lansi) * laajennus) / 2;
+  const keskiLat = (rajat.pohjoinen + rajat.etela) / 2;
+  const keskiLon = (rajat.ita + rajat.lansi) / 2;
+  const p = (n) => +n.toFixed(5);
+  return {
+    pohjoinen: p(keskiLat + lat),
+    etela: p(keskiLat - lat),
+    lansi: p(keskiLon - lon),
+    ita: p(keskiLon + lon),
+  };
+}
+
+/**
  * Kokoaa piirtokerrokset elementeistä annetulla koordinaattimuunnoksella.
  *
  * Muunnos on parametri, koska sama koodi piirtää sekä pääkartan että
@@ -1798,7 +1949,7 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
  */
 function kerrosKuvaus(kerrokset, mitta = 1) {
   const v = (n) => (n * mitta).toFixed(2);
-  const katuryhmat = KADUT.map((k, i) => `<g fill="none" stroke="${k.vari}" stroke-width="${v(k.leveys)}"
+  const katuryhmat = KADUT.map((k, i) => `<g fill="none" stroke="${PALETTI.kadut?.[i] ?? k.vari}" stroke-width="${v(k.leveys)}"
     stroke-linecap="round" stroke-linejoin="round">${kerrokset.kadut[i].join('')}</g>`).join('\n');
   return `
   <!-- Meri pohjimmaiseksi, saaret sen päälle: saaren ranta on
@@ -1845,7 +1996,7 @@ function kerrosKuvaus(kerrokset, mitta = 1) {
  * EI ANNETA vaan se lasketaan kainalon omasta kuvasuhteesta — muuten
  * minikartta venyisi ja sen kadut valehtelisivat.
  */
-function piirraKainalo(kainalo, elementit, W, H) {
+function piirraKainalo(kainalo, elementit, W, H, ydinW) {
   const x0 = (kainalo.x / 100) * W;
   const y0 = (kainalo.y / 100) * H;
   const w = (kainalo.leveys / 100) * W;
@@ -1853,9 +2004,15 @@ function piirraKainalo(kainalo, elementit, W, H) {
   const r = kainalo.rajat;
   const x = (lon) => (x0 + ((lon - r.lansi) / (r.ita - r.lansi)) * w).toFixed(1);
   const y = (lat) => (y0 + ((r.pohjoinen - lat) / (r.pohjoinen - r.etela)) * h).toFixed(1);
-  // Viivat kainalon mittakaavaan: sama suhde kuin ruudun leveys
-  // pääkuvan leveyteen, pohjalla 0,45 jottei kaikki katoa.
-  const mitta = Math.max(0.45, w / W);
+  /*
+   * Viivat kainalon mittakaavaan: sama suhde kuin ruudun leveys
+   * YDINRAJAUKSEN leveyteen, pohjalla 0,45 jottei kaikki katoa.
+   * Ydinrajaus eikä koko kuva, koska reunuksen leventämässä kuvassa
+   * (laajennus) sekä ruutu että pääkartta piirtyvät samalla px/km:llä
+   * kuin ennen — pelkkä w/W kutistuisi laajennuksen verran ilman että
+   * mikään kuvassa muuttuu.
+   */
+  const mitta = Math.max(0.45, w / ydinW);
   const kerrokset = kokoaKerrokset(elementit, x, y, kainalo.rajat, kainalo.meri);
   const tunnus = `kainalo${Math.round(x0)}_${Math.round(y0)}`;
   /*
@@ -1867,8 +2024,13 @@ function piirraKainalo(kainalo, elementit, W, H) {
    * luettavissa. Siksi myös teksti pidetään lyhyenä ("4 km
    * lounaaseen"): kohteen nimi on joka tapauksessa kartan alla
    * selitelistassa, jossa se on aina luettava.
+   *
+   * Mitta on YDINRAJAUKSEN leveys eikä koko kuvan: lehti sovittaa
+   * kehykseen juuri ydinrajauksen, joten reunuksen leventämässä
+   * kuvassa (laajennus) W/35 kasvattaisi tekstin ruudulla samassa
+   * suhteessa.
    */
-  const koko = Math.round(W / 35);
+  const koko = Math.round(ydinW / 35);
   /*
    * Teksti ruudun ylle, paitsi jos ruutu on liian lähellä ylälaitaa —
    * silloin se leikkautuisi kuvan reunaan. Budapestissa kävi juuri
@@ -1894,14 +2056,17 @@ function piirraKainalo(kainalo, elementit, W, H) {
 }
 
 function piirra(kaupunki, elementit, kainaloAineistot = []) {
-  const { rajat, kainalot = [], meri = false } = KAUPUNGIT[kaupunki];
-  const W = 1600;
+  const { kainalot = [], meri = false, laajennus = 1 } = KAUPUNGIT[kaupunki];
+  const rajat = piirretytRajat(KAUPUNGIT[kaupunki]);
+  // Ydinrajaus pysyy 1600 pikselinä myös laajennetussa kuvassa, ks.
+  // tiedoston alun kommentti.
+  const W = Math.round(1600 * laajennus);
   const H = Math.round(W / kuvasuhde(rajat));
   const x = (lon) => (((lon - rajat.lansi) / (rajat.ita - rajat.lansi)) * W).toFixed(1);
   const y = (lat) => (((rajat.pohjoinen - lat) / (rajat.pohjoinen - rajat.etela)) * H).toFixed(1);
   const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri);
   const kainaloKuvat = kainalot
-    .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H)).join('\n');
+    .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H, W / laajennus)).join('\n');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
   <rect width="${W}" height="${H}" fill="${PAPERI}"/>
   ${kerrosKuvaus(kerrokset)}
@@ -1916,7 +2081,9 @@ if (!KAUPUNGIT[kaupunki]) {
 }
 console.log('Haetaan OpenStreetMap-aineisto (Overpass)…');
 const elementit = await haeOverpassSitkeasti(
-  KAUPUNGIT[kaupunki].rajat,
+  // Haku koskee koko piirrettävää alaa, myös reunusta — muuten
+  // laajennetun kartan laidoille jäisi tyhjää paperia.
+  piirretytRajat(KAUPUNGIT[kaupunki]),
   KAUPUNGIT[kaupunki].palvelutiet ?? false,
   KAUPUNGIT[kaupunki].jalkakaydat ?? false,
 );
@@ -1936,11 +2103,16 @@ for (const [i, kainalo] of (KAUPUNGIT[kaupunki].kainalot ?? []).entries()) {
 }
 const svg = piirra(kaupunki, elementit, kainaloAineistot);
 mkdirSync(resolve(JUURI, 'assets/kartat'), { recursive: true });
-const svgPolku = resolve(JUURI, `assets/kartat/${kaupunki}-keskusta.svg`);
+/*
+ * Värinäyte EI korvaa julistetta vaan menee omaan tiedostoonsa
+ * (--vari, ks. PALETIT). Pelin kartta on aina <kaupunki>-keskusta.png.
+ */
+const tiedosto = VARINAYTE ? `${kaupunki}-varikartta-nayte` : `${kaupunki}-keskusta`;
+const svgPolku = resolve(JUURI, `assets/kartat/${tiedosto}.svg`);
 writeFileSync(svgPolku, svg);
 // Rasterointi PNG:ksi pelin Chromiumilla: SVG:n koko katuverkko on
 // selaimelle raskas joka avauksella — PNG piirtyy heti.
-const pngPolku = resolve(JUURI, `assets/kartat/${kaupunki}-keskusta.png`);
+const pngPolku = resolve(JUURI, `assets/kartat/${tiedosto}.png`);
 const skripti = `
 const { chromium } = require('playwright');
 (async () => {
@@ -1971,11 +2143,20 @@ execFileSync('node', ['-e', skripti], {
   },
 });
 const rajat = KAUPUNGIT[kaupunki].rajat;
-console.log(`Valmis: assets/kartat/${kaupunki}-keskusta.png`);
+const piirto = piirretytRajat(KAUPUNGIT[kaupunki]);
+console.log(`Valmis: assets/kartat/${tiedosto}.png`);
+if (VARINAYTE) {
+  console.log('Värinäyte — EI pelin aineistoa: ei vipuun eikä sw.js:ään.');
+  process.exit(0);
+}
 console.log('KAUPUNKIKARTAT-rivit:');
 console.log(`    polku: 'assets/kartat/${kaupunki}-keskusta.png',`);
 console.log(`    lahde: '© OpenStreetMap-tekijät (ODbL)',`);
 console.log(`    rajat: { pohjoinen: ${rajat.pohjoinen}, etela: ${rajat.etela}, lansi: ${rajat.lansi}, ita: ${rajat.ita} },`);
+if (piirto !== rajat) {
+  console.log(`    piirtoRajat: { pohjoinen: ${piirto.pohjoinen}, etela: ${piirto.etela},`
+    + ` lansi: ${piirto.lansi}, ita: ${piirto.ita} },`);
+}
 /*
  * Kainalon KORKEUS lasketaan tässä eikä kirjoiteta käsin: peli tarvitsee
  * sen asemoidakseen kainalon kohteet, ja jos luku poikkeaisi piirretystä,
@@ -1985,7 +2166,9 @@ const kainalot = KAUPUNGIT[kaupunki].kainalot ?? [];
 if (kainalot.length) {
   console.log('    kainalot: [');
   for (const k of kainalot) {
-    const korkeus = +((k.leveys * kuvasuhde(rajat)) / kuvasuhde(k.rajat)).toFixed(2);
+    // Kainalon mitat ovat prosentteja PIIRRETYSTÄ kuvasta, joten myös
+    // korkeus lasketaan piirretyn kuvan kuvasuhteesta.
+    const korkeus = +((k.leveys * kuvasuhde(piirto)) / kuvasuhde(k.rajat)).toFixed(2);
     console.log(`      { rajat: { pohjoinen: ${k.rajat.pohjoinen}, etela: ${k.rajat.etela},`
       + ` lansi: ${k.rajat.lansi}, ita: ${k.rajat.ita} },`);
     console.log(`        x: ${k.x}, y: ${k.y}, leveys: ${k.leveys}, korkeus: ${korkeus} },`);
