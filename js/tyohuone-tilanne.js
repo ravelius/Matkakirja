@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v713 — pöllön kuvalle paikanpitäjä + animaatio',
   'v712 — pöllön kuva löytyy myös hakusanalla',
   'v711 — lipusta lipun tarina (Saksa, Suomi)',
   'v710 — piirrokset pisteinä + kortit 4 kaupungissa',

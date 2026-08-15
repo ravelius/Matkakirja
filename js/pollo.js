@@ -1572,9 +1572,24 @@ class Pollo {
     }
     const aihe = vastauskuvanAihe(teksti, kysymys);
     if (!aihe) return;
+    /*
+     * PAIKANPITÄJÄ HAUN AJAKSI (omistaja 15.8.2026: "Kuvan voi hakea
+     * vaikka sitten vasta kun teksti valmis. Voi olla joku place
+     * holder sen aikaa ja animaatio"). Kuvan paikka varautuu heti
+     * tekstin valmistuttua sykkivänä laattana; kuva liukuu tilalle
+     * saapuessaan, ja tulokseton haku vie laatan hiljaa pois.
+     * Aikavahti siivoaa laatan myös jos haku jää roikkumaan.
+     */
+    const pidike = this.naytaVastausKuvanPidike(viesti);
+    const vahti = setTimeout(() => pidike?.remove(), 12000);
+    const pois = () => {
+      clearTimeout(vahti);
+      pidike?.remove();
+    };
     // Suora nimi ensin, haku varalle (js/wiki.js): kysymyslause tai
     // taivutettu käsite löytää silti kuvallisen artikkelin.
     haeKuvallinenArtikkeli(aihe).then((summary) => {
+      pois();
       if (poletti !== this.vastausKuvaPoletti) return;
       if (!viesti?.isConnected) return;
       if (!summary?.image) return;
@@ -1584,7 +1599,8 @@ class Pollo {
         avaa: () => this.avaaWikiKuva(summary),
       });
     }).catch(() => {
-      /* ei yhteyttä — kuvaton vastaus on kelvollinen */
+      // Ei yhteyttä — kuvaton vastaus on kelvollinen.
+      pois();
     });
   }
 
@@ -1604,8 +1620,25 @@ class Pollo {
    * vastauksen renderöintiin, koska striimi kirjoittaa kuplan
    * textContentin yli palasta toiseen.
    */
+  /**
+   * Sykkivä paikanpitäjä kuvan paikalle haun ajaksi. Sama kelluva
+   * paikka kuin valmiilla kuvalla, joten teksti ei nytkähdä kuvan
+   * saapuessa. Palauttaa elementin, jonka kutsuja poistaa.
+   */
+  naytaVastausKuvanPidike(viesti) {
+    if (!viesti) return null;
+    viesti.querySelector('.pollo-kuvapidike')?.remove();
+    const pidike = polloElementti('span', 'pollo-vastauskuva pollo-kuvapidike');
+    pidike.setAttribute('aria-hidden', 'true');
+    pidike.appendChild(polloElementti('span', 'pollo-kuvapidike-sykli'));
+    viesti.insertBefore(pidike, viesti.firstChild);
+    this.paivitaTyhjaTila();
+    return pidike;
+  }
+
   naytaVastausKuva(viesti, { esikatselu, vara = null, seloste = '', avaa }) {
-    if (!viesti || viesti.querySelector('.pollo-vastauskuva')) return;
+    if (!viesti || viesti.querySelector('.pollo-vastauskuva:not(.pollo-kuvapidike)')) return;
+    viesti.querySelector('.pollo-kuvapidike')?.remove();
     const nappi = polloElementti('button', 'pollo-vastauskuva');
     nappi.type = 'button';
     nappi.title = 'Näytä kuva isompana';
