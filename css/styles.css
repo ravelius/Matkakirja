@@ -10059,22 +10059,116 @@ body.vertailu-tila .pawns { display: none; }
  * numeroympyrät ja selitteet tekstinä kartan alla.
  */
 
+/*
+ * ZOOMATTAVA KARTTAIKKUNA (omistajan tilaus 14.8.2026: "voiko
+ * kaupunkikartasta tehdä zoomattavaa ... pyörisi nykyisessä
+ * ikkunassa").
+ *
+ * Kehys on ikkuna, jonka koko ei muutu, ja lava on sen sisällä liikkuva
+ * taso. Reunaviiva ja leikkaus kuuluvat siksi kehykselle: kuvan omalla
+ * reunalla ne skaalautuisivat zoomatessa paksuiksi ja jäisivät
+ * panoroitaessa keskelle ruutua.
+ *
+ * `touch-action: pan-y` on tarkka valinta. Se päästää yhden sormen
+ * pystyvierityksen läpi (lehteä luetaan kartan päältäkin) mutta estää
+ * selaimen oman nipistyszoomin, jolloin kahden sormen tapahtumat
+ * tulevat kartalle asti. Zoomattuna sormi panoroi karttaa, ja silloin
+ * mitään ei päästetä läpi.
+ */
+.kartta-kehys {
+  position: relative;
+  overflow: hidden;
+  margin: 0.3rem 0 0.55rem;
+  border: 1px solid rgba(70, 51, 31, 0.4);
+  border-radius: 2px;
+  touch-action: pan-y;
+}
+
+.kartta-kehys.zoomattu {
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+}
+
+.kartta-kehys.zoomattu:active { cursor: grabbing; }
+
 .kaupunkikartta-kotelo { margin: 0.3rem 0 0.55rem; }
+
+/* Kehyksen sisällä reuna on kehyksellä ja marginaalit sen ulkopuolella
+ * — lavan on peitettävä ikkuna tarkalleen, tai zoomatessa reunaan
+ * jäisi rako. */
+.kartta-kehys > .kaupunkikartta-kotelo { margin: 0; }
+
+.kartta-kehys > .maakartta-kotelo img {
+  border: 0;
+  border-radius: 0;
+}
+
+/*
+ * Lava: kuva, kohdepisteet ja mittajana yhtenä liikkuvana tasona.
+ * Origo on vasen ylänurkka, koska koko eleen laskenta (ui.js:
+ * kytkeKarttaZoom) olettaa sen.
+ */
+.kartta-lava {
+  --zoom: 1;
+  transform-origin: 0 0;
+}
+
+/* Pehmennys vain napeista ja tuplanapautuksesta: sormen alla se
+ * tuntuisi siltä, että kartta laahaa jäljessä. */
+.kartta-lava.silea { transition: transform 0.18s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .kartta-lava.silea { transition: none; }
+}
+
+/*
+ * VASTASKAALAUS. Kaikki lavalla suurenisi zoomin mukana, myös se, mikä
+ * ei ole karttaa: numeroympyrä on merkki eikä maisema, ja
+ * kolminkertaisena se peittäisi juuri sen korttelin, jota katsotaan.
+ * Sama koskee mittajanan viivoja ja tekstiä — jana ITSE saa venyä,
+ * koska sen pituus on matka, mutta sen musteen ei pidä paksuta.
+ */
+.kartta-lava .maakartta-piste.kohde-numero {
+  transform: translate(-50%, -50%) scale(calc(1 / var(--zoom)));
+}
+
+.kartta-lava .kartta-mittajana {
+  height: calc(6px / var(--zoom));
+  border-width: calc(1px / var(--zoom));
+}
+
+.kartta-lava .kartta-mittajana-teksti {
+  transform: translateX(-50%) scale(calc(1 / var(--zoom)));
+  transform-origin: bottom center;
+}
 
 /*
  * Kartan näkymävipu (omistajan tilaus 14.8.2026): piirretty juliste
  * ja satelliittikuva samasta rajauksesta. Rivi on kartan yllä oikeassa
  * reunassa ja kirjoituskoneen kokoa, koska se on kartan asetus eikä
  * lehden juttu — samalla logiikalla kuin lähderivi kartan alla.
+ *
+ * Työkalurivi jakaa saman rivin zoomipainikkeiden kanssa: molemmat
+ * ovat kartan säätimiä, eikä niitä kannata ladota kahdelle riville.
  */
-.kartta-vipu {
+.kartta-tyokalut {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
   gap: 0.3rem;
   margin: 0 0 0.15rem;
 }
 
-.dialog .kartta-vipu button {
+.kartta-zoomi { display: flex; gap: 0.3rem; }
+
+.kartta-vipu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.3rem;
+}
+
+.dialog .kartta-tyokalut button {
   display: inline-flex;
   align-items: center;
   gap: 0.32rem;
@@ -10093,16 +10187,34 @@ body.vertailu-tila .pawns { display: none; }
   box-shadow: none;
 }
 
-.dialog .kartta-vipu button:hover:not(:disabled) {
+.dialog .kartta-tyokalut button:hover:not(:disabled) {
   border-color: rgba(70, 51, 31, 0.75);
   background: rgba(255, 250, 238, 0.95);
 }
 
 /* Valittu näkymä on painettu musteella: se ei ole enää tarjous. */
-.dialog .kartta-vipu button[aria-pressed="true"] {
+.dialog .kartta-tyokalut button[aria-pressed="true"] {
   color: #fdf6e5;
   background: #46331f;
   border-color: #2c2318;
+}
+
+/* Plus ja miinus ovat merkkejä eivätkä sanoja: merkki saa olla
+ * näkymävivun tekstiä isompi, mutta painikkeen KORKEUS pysyy samana —
+ * rivillä on kaksi säädinryhmää, ja eri korkuisina ne näyttäisivät
+ * kahdelta eri työkalulta. Siksi line-height on lukittu. */
+.dialog .kartta-tyokalut button.kartta-zoomi-nappi {
+  min-width: 2rem;
+  justify-content: center;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.92rem;
+  line-height: 0.72rem;
+  letter-spacing: 0;
+}
+
+.dialog .kartta-tyokalut button.kartta-zoomi-nappi:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 /*
@@ -10210,6 +10322,21 @@ body.vertailu-tila .pawns { display: none; }
     transform: translateX(-50%);
     border: 4px solid transparent;
     border-top-color: rgba(38, 29, 16, 0.94);
+  }
+
+  /* Yläreunan kohteilla vihje aukeaa alaspäin: zoomattava kartta on
+   * leikkaava ikkuna, ja ylöspäin aukeava vihje jäisi sen taakse
+   * (ui.js merkitsee luokan kohteen paikasta). */
+  .maakartta-piste.vihje-alle .kohde-vihje {
+    bottom: auto;
+    top: calc(100% + 7px);
+  }
+
+  .maakartta-piste.vihje-alle .kohde-vihje::after {
+    top: auto;
+    bottom: 100%;
+    border-top-color: transparent;
+    border-bottom-color: rgba(38, 29, 16, 0.94);
   }
 
   .maakartta-piste.kohde-numero:hover .kohde-vihje,

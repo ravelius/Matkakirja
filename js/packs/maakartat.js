@@ -3734,7 +3734,15 @@ export const KAUPUNKIKARTAT = {
     satelliitti: 'assets/kartat/berliini-satelliitti.jpg',
     satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
       + '(muokattua Copernicus Sentinel -dataa)',
-    rajat: { pohjoinen: 52.54, etela: 52.485, lansi: 13.34, ita: 13.46 },
+    /*
+     * Rajaus leveni neljänneksellä 15.8.2026 (omistajan tilaus:
+     * "voisi jatkua hieman nykyistä laajemmalle alueelle"): 8,1 × 6,1
+     * km → 10,2 × 7,7 km samasta keskipisteestä. Kohdepisteet
+     * lasketaan tästä lohkosta (karttapiste), joten ne siirtyivät
+     * kuvassa itsestään — käsin ei korjattu mitään. Sekä piirros että
+     * satelliittikuva on haettu uudelleen tällä rajauksella.
+     */
+    rajat: { pohjoinen: 52.547, etela: 52.478, lansi: 13.325, ita: 13.475 },
     esittely: 'Berliini on rakennettu veden ja metsän keskelle: '
       + 'siltoja on noin 1 700 — moninkertaisesti Venetsian verran — '
       + 'ja kolmasosa kaupungista on puistoa, metsää tai järveä. '

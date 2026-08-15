@@ -21,9 +21,28 @@
  * pelkistä asteista laskettu suhde venyttäisi satelliittikuvan
  * pystysuunnassa puolitoistakertaiseksi.
  *
- * Leveys on 1600 pikseliä kuten piirretyissä kartoissa. Enempää ei
- * kannata: kuva näytetään palstan levyisenä, ja JPEG kasvaa nopeasti
- * — Berliini on tällä koolla noin puoli megatavua.
+ * Leveys on 3200 pikseliä eli kaksi kertaa piirretyn kartan leveys
+ * (omistajan palaute 14.8.2026: "satelliittikuva oli vähän
+ * suttuinen"). Kohdekartta on zoomattava (ui.js), joten kuvaa
+ * katsotaan myös kolminkertaisena — 1600 pikselillä zoomi näytti
+ * selaimen venytyksen eikä kuvaa.
+ *
+ * TÄMÄ EI TEE KUVASTA TERÄVÄÄ MITEN SYVÄLLE TAHANSA. s2cloudless-
+ * aineiston pohjaresoluutio on 10 metriä/pikseli, eli Berliinin
+ * 10,2 km:n rajaus sisältää noin 1 020 pikselin verran oikeaa dataa.
+ * Sen yli mennessä palvelin tulkitsee välipikselit, ja kuva pehmenee
+ * — perusnäkymä terävöityy selvästi, syvä zoomi ei. Se on datalähteen
+ * raja, ei hakuparametri.
+ *
+ * Leveyden nostaminen kannattaa silti, koska se pakottaa palvelimen
+ * hakemaan ruudun laattapyramidin tarkimmalta tasolta ja koska
+ * yhtenäinen JPEG-pakkaus tekee vähemmän tuhoa kuin selaimen
+ * venytys pienestä kuvasta.
+ *
+ * TARKISTA TIEDOSTOKOKO. JPEG nelinkertaistuu pikselimäärän mukana;
+ * jos kuva ylittää ~1,5 Mt, sitä ei pidä viedä sw.js:n SHELL-listaan
+ * sellaisenaan (jokainen asennus lataa listan kokonaan) — pakkaa se
+ * silloin uudelleen tools/pakkaa-jpeg.mjs:llä.
  *
  * --- lähde ja lisenssi ---
  *
@@ -59,7 +78,7 @@ const { KAUPUNKIKARTAT } = await import('../js/packs/maakartat.js');
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PALVELIN = 'https://tiles.maps.eox.at/wms';
 const TASO = 's2cloudless-2024';
-const LEVEYS = 1600;
+const LEVEYS = 3200;
 // Kohtelias tauko peräkkäisten hakujen välissä: yksi kaupunki on yksi
 // pyyntö, mutta skaalatessa niitä tulee kymmeniä samalta palvelimelta.
 const TAUKO_MS = 3000;
