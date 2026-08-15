@@ -44,6 +44,28 @@
  * sellaisenaan (jokainen asennus lataa listan kokonaan) — pakkaa se
  * silloin uudelleen tools/pakkaa-jpeg.mjs:llä.
  *
+ * --- kainalokartat satelliittikuvaan (15.8.2026) ---
+ *
+ * Jos kaupungilla on kainalokartta (maakartat.js:n kainalot-lohko),
+ * työkalu hakee JOKAISELLE kainalolle oman WMS-ruudun ja komposoi ne
+ * päähaun päälle samoille prosenttipaikoille, joihin piirtäjä piirtää
+ * omansa. Ilman tätä satelliittinäkymä rikkoutuisi: Helsingissä
+ * Suomenlinnan kainalon paikalla olisi pelkkää avomerta, ja kohde 7 —
+ * jonka karttapiste() asemoi kainalon sisään — kelluisi tyhjällä
+ * merellä. Kainalo EI ole koriste vaan osa kohteiden koordinaatistoa,
+ * joten sen on oltava molemmissa näkymissä.
+ *
+ * Mitat luetaan maakartat.js:n kainalosta (x, y, leveys, korkeus)
+ * eikä lasketa tässä uudelleen. Ne ovat prosentteja, ja piirtäjä on
+ * laskenut korkeuden kainalon omasta kuvasuhteesta — sama luku, kaksi
+ * käyttäjää, joten ruudut osuvat päällekkäin pikselilleen.
+ *
+ * Komposointi tehdään pelin omalla Chromiumilla samaan tapaan kuin
+ * piirtäjän rasterointi (tools/piirra-kaupunkikartta.mjs): kuvat
+ * ladotaan HTML-sivulle ja sivusta otetaan JPEG-kaappaus. Se on syy
+ * siihen, että kainalollisen kaupungin kuva on Chromiumin pakkaama
+ * eikä WMS:n — LAATU-vakio alla.
+ *
  * --- lähde ja lisenssi ---
  *
  * Sentinel-2 cloudless 2024 (s2maps.eu, EOX): muokattua Copernicus
@@ -60,8 +82,9 @@
  * (ks. tools/hae-yonkartta.mjs). Skripti käynnistää itsensä
  * uudelleen, jos muuttuja puuttuu.
  */
-import { spawnSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { spawnSync, execFileSync } from 'node:child_process';
+import { readFileSync, writeFileSync, mkdtempSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -84,6 +107,18 @@ const LEVEYS = 3200;
 const TAUKO_MS = 3000;
 const LAHDERIVI = 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
   + '(muokattua Copernicus Sentinel -dataa)';
+/*
+ * Kainalollisen kuvan pakkaa Chromium, ei WMS. 82 on mitattu eikä
+ * arvattu: Helsinki on tällä 1,1 Mt eli SHELL-listan 1,5 Mt:n rajan
+ * alla, ja satelliittikuvassa ei ole teräviä reunoja, joissa JPEGin
+ * artefaktit näkyisivät. Jos jokin kaupunki ylittää rajan, laske tätä
+ * ennen kuin kajoat leveyteen — leveys on se, joka pitää zoomin
+ * terävänä.
+ */
+const LAATU = 82;
+// Kainalon reunus samoissa sävyissä kuin piirtäjän oma (VESIREUNA,
+// 2,5 px 1600:n levyisellä kuvalla) mutta tämän kuvan mittakaavassa.
+const REUNUS = '#b99a68';
 
 /** Piirretyn PNG:n mitat IHDR-lohkosta ilman kirjastoja. */
 function pngMitat(polku) {
@@ -111,17 +146,9 @@ function wmsOsoite(rajat, leveys, korkeus) {
   return `${PALVELIN}?${p}`;
 }
 
-async function haeKaupunki(id) {
-  const kartta = KAUPUNKIKARTAT[id];
-  if (!kartta) throw new Error(`tuntematon kaupunki: ${id}`);
-  if (!kartta.rajat) throw new Error(`${id}: rajat puuttuvat (laea tai kainalokartta?)`);
-  if (!kartta.polku) throw new Error(`${id}: ei piirrettyä PNG:tä (polku puuttuu)`);
-
-  const piirretty = pngMitat(join(JUURI, kartta.polku));
-  const korkeus = Math.round((LEVEYS * piirretty.korkeus) / piirretty.leveys);
-  const osoite = wmsOsoite(kartta.rajat, LEVEYS, korkeus);
-
-  const vastaus = await fetch(osoite);
+/** Yksi WMS-ruutu tavuina. Heittää, jos vastaus ei ole JPEG. */
+async function haeRuutu(id, rajat, leveys, korkeus) {
+  const vastaus = await fetch(wmsOsoite(rajat, leveys, korkeus));
   if (!vastaus.ok) throw new Error(`${id}: WMS vastasi ${vastaus.status}`);
   const tavut = Buffer.from(await vastaus.arrayBuffer());
   /*
@@ -132,10 +159,103 @@ async function haeKaupunki(id) {
   if (tavut[0] !== 0xff || tavut[1] !== 0xd8) {
     throw new Error(`${id}: vastaus ei ole JPEG — ${tavut.subarray(0, 200)}`);
   }
+  return tavut;
+}
+
+/*
+ * Latoo päähaun ja kainaloruudut yhdeksi JPEGiksi pelin Chromiumilla.
+ *
+ * Paikat ovat prosentteja, koska piirtäjä käyttää samoja prosentteja —
+ * silloin kahden näkymän kainalot ovat päällekkäin riippumatta siitä,
+ * että satelliittikuva on kaksi kertaa piirretyn kokoinen.
+ *
+ * NODE_PATH kuten piirtäjässä: playwright ei ole pelin riippuvuus vaan
+ * ympäristön (/opt/node22/lib/node_modules).
+ */
+function komposoi(pohja, ruudut, leveys, korkeus, kohde) {
+  const paja = mkdtempSync(join(tmpdir(), 'satelliitti-'));
+  try {
+    const pohjaPolku = join(paja, 'pohja.jpg');
+    writeFileSync(pohjaPolku, pohja);
+    const palat = ruudut.map((ruutu, i) => {
+      const polku = join(paja, `kainalo${i}.jpg`);
+      writeFileSync(polku, ruutu.tavut);
+      // Reunus ja pyöristys piirtäjän mitoissa tämän kuvan
+      // mittakaavaan: 2,5 px ja rx 6 kuvalla, jonka leveys on 1600.
+      const viiva = (2.5 * leveys) / 1600;
+      const pyoristys = (6 * leveys) / 1600;
+      return `<img src="file://${polku}" style="position:absolute;`
+        + `left:${ruutu.x}%;top:${ruutu.y}%;width:${ruutu.leveys}%;height:${ruutu.korkeus}%;`
+        + `box-sizing:border-box;border:${viiva}px solid ${REUNUS};border-radius:${pyoristys}px">`;
+    }).join('');
+    const html = join(paja, 'kooste.html');
+    writeFileSync(html, `<!doctype html><style>html,body{margin:0}`
+      + `#pohja{position:relative;width:${leveys}px;height:${korkeus}px}`
+      + `#pohja>img{display:block}</style>`
+      + `<div id="pohja"><img src="file://${pohjaPolku}" style="width:100%;height:100%">${palat}</div>`);
+    const skripti = `
+const { chromium } = require('playwright');
+(async () => {
+  const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+  const sivu = await (await selain.newContext({
+    viewport: { width: ${leveys}, height: ${korkeus} }, deviceScaleFactor: 1,
+  })).newPage();
+  await sivu.goto('file://${html}');
+  await sivu.waitForLoadState('networkidle');
+  await sivu.locator('#pohja').screenshot({ path: '${kohde}', type: 'jpeg', quality: ${LAATU} });
+  await selain.close();
+})();`;
+    execFileSync('node', ['-e', skripti], {
+      cwd: JUURI,
+      stdio: 'inherit',
+      env: {
+        ...process.env,
+        NODE_PATH: [process.env.NODE_PATH, '/opt/node22/lib/node_modules']
+          .filter(Boolean).join(':'),
+      },
+    });
+  } finally {
+    rmSync(paja, { recursive: true, force: true });
+  }
+}
+
+async function haeKaupunki(id) {
+  const kartta = KAUPUNKIKARTAT[id];
+  if (!kartta) throw new Error(`tuntematon kaupunki: ${id}`);
+  if (!kartta.rajat) throw new Error(`${id}: rajat puuttuvat (laea tai kainalokartta?)`);
+  if (!kartta.polku) throw new Error(`${id}: ei piirrettyä PNG:tä (polku puuttuu)`);
+
+  const piirretty = pngMitat(join(JUURI, kartta.polku));
+  const korkeus = Math.round((LEVEYS * piirretty.korkeus) / piirretty.leveys);
+  const tavut = await haeRuutu(id, kartta.rajat, LEVEYS, korkeus);
+
+  /*
+   * Kainaloruudut pyydetään siinä pikselikoossa, jonka ne kuvassa
+   * saavat. Pienempi haku pehmenisi venytyksessä ja isompi olisi
+   * turhaa dataa — ja koska kainalo on tiukka rajaus, se on joka
+   * tapauksessa s2cloudlessin 10 m/px -rajan yläpuolella (ks. yllä).
+   */
+  const kainalot = kartta.kainalot ?? [];
+  const ruudut = [];
+  for (const kainalo of kainalot) {
+    await new Promise((r) => setTimeout(r, TAUKO_MS));
+    ruudut.push({
+      ...kainalo,
+      tavut: await haeRuutu(
+        id,
+        kainalo.rajat,
+        Math.round((kainalo.leveys / 100) * LEVEYS),
+        Math.round((kainalo.korkeus / 100) * korkeus),
+      ),
+    });
+  }
 
   const kohde = join(JUURI, 'assets', 'kartat', `${id}-satelliitti.jpg`);
-  writeFileSync(kohde, tavut);
-  console.log(`${id}: ${LEVEYS} x ${korkeus} px, ${Math.round(tavut.length / 1024)} kt -> ${kohde}`);
+  if (ruudut.length) komposoi(tavut, ruudut, LEVEYS, korkeus, kohde);
+  else writeFileSync(kohde, tavut);
+  const koko = readFileSync(kohde).length;
+  const lisa = ruudut.length ? `, ${ruudut.length} kainaloa` : '';
+  console.log(`${id}: ${LEVEYS} x ${korkeus} px${lisa}, ${Math.round(koko / 1024)} kt -> ${kohde}`);
   console.log(`  satelliitti: 'assets/kartat/${id}-satelliitti.jpg',`);
   console.log(`  satelliittiLahde: '${LAHDERIVI}',`);
 }

@@ -170,11 +170,25 @@ const KAUPUNGIT = {
     // korttelit ovat isoja, joten katutiheys on pienempi kuin
     // Lontoossa, jonka kartta on jo julkaistu.
     //
-    // Hinta on etelälaita: Panthéon ja Luxembourgin puutarha jäävät
+    // Hinta oli etelälaita: Panthéon ja Luxembourgin puutarha jäivät
     // ulos. Vaihtoehto oli tiukempi rajaus ilman Montmartrea, mutta
     // silloin lapsen kaksi tunnetuinta kohdetta eivät olisi samassa
     // kuvassa.
-    rajat: { pohjoinen: 48.892, etela: 48.847, lansi: 2.277, ita: 2.3675 },
+    //
+    // RAJAUS LEVENI NELJÄNNEKSELLÄ 15.8.2026 (sama omistajan tilaus
+    // kuin Berliinissä, ks. berliini yllä). Vanha rajaus oli
+    // 6,6 × 5,0 km, uusi on 8,3 × 6,2 km — keskipiste on sama, joten
+    // kuvasuhde ja kohteiden keskinäiset paikat säilyvät. Laajennus on
+    // mahdollinen vain zoomattavan kohdekartan takia (ui.js,
+    // kartta-lava).
+    //
+    // JA SE MAKSAA TAKAISIN YLLÄ MAINITUN HINNAN: eteläreuna 48.8414
+    // on Panthéonin (48.8462) ja Luxembourgin puutarhan alapuolella,
+    // eli molemmat ovat nyt kuvassa. Ne EIVÄT ole numeroituja kohteita
+    // — kohteita on kuusi eikä listaa kasvateta ilman eri päätöstä.
+    // Pariisi ei myöskään ole enää pelin laajin rajaus: Berliini on
+    // 10,2 km.
+    rajat: { pohjoinen: 48.8976, etela: 48.8414, lansi: 2.2657, ita: 2.3788 },
   },
   amsterdam: {
     // Kanavakehä on hevosenkengän muotoinen, ei soikea, joten rajaus on
@@ -218,11 +232,26 @@ const KAUPUNGIT = {
     // Itäreunaa EI saa siirtää Korkeasaareen asti: silloin oikeasta
     // kolmanneksesta tulee lähes pelkkää avovettä.
     //
-    // Kolme lehden kohdetta jää alle puolen kilometrin päähän reunasta
-    // mutta eri suuntiin: Sibelius-monumentti lännessä, Linnanmäki ja
-    // Kotiharjun sauna pohjoisessa. Yksikään venytys ei saa niitä
-    // kaikkia sisään ilman että kuva paisuu yli neljän kilometrin.
-    rajat: { pohjoinen: 60.184, etela: 60.1545, lansi: 24.916, ita: 24.9835 },
+    // RAJAUS LEVENI NELJÄNNEKSELLÄ 15.8.2026 (sama omistajan tilaus
+    // kuin Berliinissä, ks. berliini yllä). Vanha rajaus oli
+    // 3,7 × 3,3 km, uusi on 4,7 × 4,1 km samasta keskipisteestä.
+    //
+    // POHJOISRAJASTA ERIKSEEN. Yllä oleva vanha huomautus sanoi, ettei
+    // yksikään venytys saa kaikkia kolmea lähikohdetta sisään "ilman
+    // että kuva paisuu yli neljän kilometrin" — ja juuri se paisuminen
+    // on nyt sallittua, koska kartta on zoomattava (ui.js,
+    // kartta-lava). Vaihtokauppa purkautui itsestään: SYMMETRINEN
+    // laajennus nostaa pohjoisrajan 60.1877:ään, eli Kallion kirkko
+    // (60.18425) ja Linnanmäki (60.1861) ovat nyt kuvassa ilman
+    // epäsymmetriaa. Kumpikaan ei ole kartan numeroitu kohde — niitä
+    // ei lisätä ilman eri päätöstä.
+    //
+    // Epäsymmetristä venytystä pohjoiseen HARKITTIIN ja se hylättiin:
+    // se maksaisi juuri sen, mistä yllä varoitetaan. Niemen kärki
+    // (Kaivopuiston ranta, n. 60.155) on nyt 88 %:n korkeudella; 300 m
+    // lisää pohjoiseen painaisi sen 94 %:iin eli kiinni alalaitaan.
+    // Sibelius-monumentti (lon 24.883) jää yhä lännessä ulkopuolelle.
+    rajat: { pohjoinen: 60.1877, etela: 60.1508, lansi: 24.9076, ita: 24.9919 },
     meri: true,
     kainalot: [
       {
@@ -344,7 +373,19 @@ const KAUPUNGIT = {
     // (Buckinghamin palatsi, Trafalgar Square, Big Ben, Lontoon silmä,
     // Pyhän Paavalin katedraali, Tower Bridge) osuvat alueelle, ja
     // Thames kaartaa kuvan halki tunnistettavana.
-    rajat: { pohjoinen: 51.525, etela: 51.4925, lansi: -0.16, ita: -0.06 },
+    //
+    // RAJAUS LEVENI NELJÄNNEKSELLÄ 15.8.2026 (sama omistajan tilaus
+    // kuin Berliinissä, ks. berliini yllä). Vanha rajaus oli
+    // 6,9 × 3,6 km, uusi on 8,7 × 4,5 km — keskipiste on sama, joten
+    // kuvasuhde ja kohteiden keskinäiset paikat säilyvät. Laajennus on
+    // mahdollinen vain zoomattavan kohdekartan takia (ui.js,
+    // kartta-lava); Lontoon katutiheys on pelin suurin, ja ilman
+    // zoomia tämä olisi juuri sitä puuroa, josta yllä varoitetaan.
+    //
+    // Levennys korjaa samalla vanhan vian: Tower Bridge oli itälaidassa
+    // 85 %:n kohdalla ja sen numeroympyrä hipoi kuvan reunaa. Nyt se on
+    // 78 %:ssa, eli silta piirtyy kokonaan ja ympyrälle jää tilaa.
+    rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
   },
   rooma: {
     // Tiber tulee kuvaan alhaalta, kaartaa Vatikaanin ohi ja poistuu

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.687';
+const CACHE = 'matkakirja-2026-08-09.688';
 const SHELL = [
   './',
   './index.html',
@@ -196,12 +196,28 @@ const SHELL = [
   './assets/aarteet/aarre-northamerica-star.jpg',
   './assets/aarteet/aarre-southamerica-star.jpg',
   './assets/aarteet/aarre-oceania-star.jpg',
+  /*
+   * Kohdekartat. Tämä ei ole koko kartasto (niitä on yli 50) vaan se
+   * kourallinen, joka on ollut listalla alusta asti — muut tulevat
+   * koriin ensimmäisellä katselulla, koska sama alkuperä menee
+   * fetch-käsittelijän stale-while-revalidate -haaraan.
+   *
+   * PARI KUULUU YHTEEN. Kaupungilla, jolla on näkymävipu, listalla on
+   * sekä piirros että satelliitti: pelkkä satelliitti tarkoittaisi,
+   * että vivun oletusnäkymä on se, joka EI ole offline. Siksi
+   * Helsingin ja Pariisin piirrokset lisättiin tähän 15.8.2026 samalla
+   * kun ne saivat satelliittikuvan.
+   */
   './assets/kartat/berliini-keskusta.png',
-  // Saman kartan satelliittinäkymä (kartan vipu) — offline sekin.
   './assets/kartat/berliini-satelliitti.jpg',
+  './assets/kartat/helsinki-keskusta.png',
+  './assets/kartat/helsinki-satelliitti.jpg',
   './assets/kartat/kairo-keskusta.png',
   './assets/kartat/lontoo-keskusta.png',
+  './assets/kartat/lontoo-satelliitti.jpg',
   './assets/kartat/madrid-keskusta.png',
+  './assets/kartat/pariisi-keskusta.png',
+  './assets/kartat/pariisi-satelliitti.jpg',
   './assets/kartat/tukholma-keskusta.png',
   './assets/kartat/venetsia-keskusta.png',
   './assets/audio/intro-puhe.mp3',
