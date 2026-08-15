@@ -46,6 +46,48 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
+## Paketti M1: Matkailijalle-monistus, erä 1 (Opus 19, tilattu 16.8.2026)
+
+Omistajan kuittaus 16.8.2026: "Voit monistaa" — Kööpenhaminan ja
+Helsingin lehtimalli monistetaan muihin kaupunkeihin. Erä 1 kattaa
+kolme kaupunkia, joilla avauskuvat jo ovat: **Berliini, Pariisi,
+Lontoo**. (Erä M2 tuo koko paketin Roomalle, Wienille, Prahalle,
+Amsterdamille ja Tukholmalle — sitä EI aloiteta tässä erässä.)
+
+**Haara:** `claude/opus19-matkailijalle-era1`
+
+1. Jokaiselle kolmelle kaupungille `js/packs/kulttuuri-kategoriat.js`
+   → kaupunki-kategoriaan `matkailijalle`-kenttä TÄSMÄLLEEN
+   Kööpenhaminan ja Helsingin mallilla (katso `kobenhavn` ja
+   `helsinki` — rakenne, pituudet ja sävy):
+   - `kappale`: 4–5 lausetta turistin näkökulmasta — millainen
+     kaupunki on kokea, mikä siinä on omaa. Ei nähtävyyslistaa.
+   - `kuva`: yksi laadukas valokuva (tiedosto/selite/lahde), aihe
+     kappaleen kärjestä. Osio näyttää sen otsikon alla oikealla.
+   - `artikkeli`: `nimi: 'Matkailijan <kaupunki>'`, ~5 kappaletta
+     ('\n\n'), tiedot Wikivoyagesta/Wikipediasta MUTTA lauseet
+     omat, `lahde: 'Wikipedia'`. Teemoja tyyliin: miten kaupunkia
+     kuljetaan, mikä on paikallisten oma tapa, ruoka, ilta —
+     konkretiaa ja tarinaa, ei esitettä.
+   - `artikkeli.kuvat`: 2 kuvaa ERI aiheista (ei osiokuvan toistoa).
+2. Silmätarkista samalla näiden kolmen kaupungin KAIKKI
+   etusivukuvat (kansikuvat + avauskuvat) ja VAIHDA visuaalisesti
+   heikot (omistajan linjaus 15.8.2026; hylkäysesimerkki: pääosassa
+   varjo tai yksityiskohta, kaupunki ei näy). Vaihdot samoilla
+   lisenssisäännöillä.
+3. Kuvasäännöt: vain PD/CC, lisenssi + tekijä Commonsin API:sta,
+   JOKAINEN kuva katsottava silmin (ruuhkassa
+   nouda-tarkistuskuvat.yml + artefakti). Tekijä nimetään
+   lähderivillä.
+4. Portit: `node --test tests/*.test.mjs` ja
+   `node tools/tarkista-kaksoisavaimet.mjs`. ÄLÄ aja
+   uusi-versio.mjs:ää äläkä koske dist/-kansioon.
+5. Checkpoint-commit ≥ 30 min välein. Kun valmis: push, EI PR:ää
+   eikä mergeä — raportti `viesti-fable.md`:hen (kuvien lisenssit,
+   vaihdetut etusivukuvat perusteluineen, mitä jäi auki).
+   Kosketa vain tiedostoja js/packs/kulttuuri-kategoriat.js ja
+   viesti-fable.md.
+
 ## Paketti K1: Kööpenhaminan nähtävyydet 6 → 9 (Opus 18, tilattu 15.8.2026)
 
 **✅ VALMIS (Opus 18, katselmoitu ja julkaistu v764:ssä 16.8.2026):**
