@@ -45,6 +45,16 @@
  */
 
 import { luoPuheSoitin, puheTuettu } from './puhe.js';
+/*
+ * Taustaäänen väistö luennan ajaksi (omistajan tilaus 15.8.2026:
+ * "Hiljennä taustaääntä hieman lukijan ajaksi. Pehmeä feidi").
+ * Väistö tehdään TÄSSÄ eikä kutsujissa, jotta jokainen luentapolku —
+ * kaiuttimen sivuluenta, virtaluenta ja laitteen oma ääni — väistää
+ * samalla tavalla. Laskuri (puhujia) sietää sisäkkäiset kutsut, joten
+ * ui.js:n kertojaluentojen oma väistöpari ei mene tämän kanssa
+ * ristiin.
+ */
+import { puheAlkoi, puheLoppui } from './ambience-stream.js';
 
 /** Luennan kieli. Sama luku laitteen omilla taustajärjestelmillä. */
 export const LUENNAN_KIELI = 'fi-FI';
@@ -867,11 +877,28 @@ export function lueAaneen(teksti, nappi = null, {
   const puhuttava = String(teksti ?? '').trim();
   if (!puhuttava) return false;
   const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
-  const kunLoppuu = kerran(onLoppu);
+  /*
+   * Tausta väistyy pehmeällä feidillä luennan ajaksi; vapautus on
+   * omassa kerran-kääreessään, koska siihen johtaa kaksi eri polkua:
+   * loppukoukku (luonnollinen loppu, pysäytys, virhe) ja alla oleva
+   * käynnistyksen epäonnistuminen. Laitepolun poikkeushaara ehtii
+   * kutsua loppukoukun ENNEN kuin palauttaa false — ilman käärettä
+   * väistö vapautuisi silloin kahdesti ja veisi laskurin muiden
+   * puhujien alta.
+   */
+  const vapautaVaisto = kerran(puheLoppui);
+  const kunLoppuu = kerran(() => {
+    vapautaVaisto();
+    if (typeof onLoppu === 'function') onLoppu();
+  });
+  puheAlkoi();
   if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko, kunLoppuu, {
     kohdat, aloitusKappale, jatko,
   })) return true;
-  return lueLaitteella(puhuttava, nappi, kunLoppuu);
+  if (lueLaitteella(puhuttava, nappi, kunLoppuu)) return true;
+  // Mikään taustajärjestelmä ei ottanut luentaa — väistö heti pois.
+  vapautaVaisto();
+  return false;
 }
 
 /**
@@ -1079,11 +1106,19 @@ function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null) {
  */
 export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
   pysaytaLukija();
-  const puhe = puheVirtana(nappi, persoona);
+  // Sama pehmeä taustan väistö kuin valmiin tekstin luennassa
+  // (lueAaneen) — kerran-kääre kattaa kaikki loppupolut.
+  const vapautaVaisto = kerran(puheLoppui);
+  puheAlkoi();
+  const puhe = puheVirtana(nappi, persoona, vapautaVaisto);
   if (puhe) return puhe;
-  if (natiiviLuenta()) return null;
+  const eiVirtaa = () => {
+    vapautaVaisto();
+    return null;
+  };
+  if (natiiviLuenta()) return eiVirtaa();
   const synth = selainPuhe();
-  if (!synth) return null;
+  if (!synth) return eiVirtaa();
   vaimennaSynth(synth);
   const aani = suomiAani(synth);
 
@@ -1094,6 +1129,7 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
     merkitseTila(nappi, false);
+    vapautaVaisto();
   };
 
   const puhuPala = () => {
@@ -1121,6 +1157,8 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
   ajossa = {
     nappi,
     merkki,
+    // Väistön vapautus myös pysäytettäessä (pysaytaLukija kutsuu tämän).
+    kunLoppuu: vapautaVaisto,
     lopeta: () => {
       tila.peruttu = true;
       // Jono tyhjäksi, jottei peruttu luenta jatku seuraavasta palasta.
@@ -1160,13 +1198,14 @@ export function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
  * kuunnella kaiuttimesta uudestaan (se polku kulkee lueAaneen kautta
  * varapolkuineen).
  */
-function puheVirtana(nappi, persoona) {
+function puheVirtana(nappi, persoona, vapautaVaisto = null) {
   if (!puheTuettu()) return null;
   const merkki = {};
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
     merkitseTila(nappi, false);
+    vapautaVaisto?.();
   };
   const soitin = luoPuheSoitin({
     persoona,
@@ -1176,7 +1215,9 @@ function puheVirtana(nappi, persoona) {
     onVirhe: () => loppui(),
   });
   if (!soitin) return null;
-  ajossa = { nappi, merkki, lopeta: () => soitin.pysayta() };
+  ajossa = {
+    nappi, merkki, kunLoppuu: vapautaVaisto, lopeta: () => soitin.pysayta(),
+  };
   merkitseTila(nappi, true);
   return {
     lisaa(teksti) {

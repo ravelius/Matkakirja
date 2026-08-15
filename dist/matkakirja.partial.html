@@ -146461,7 +146461,7 @@ class Sound {
    * Häivytys on nopeampi kuin maiseman oma vaihto — väistön pitää ehtiä
    * ennen puheen ensimmäistä tavua, ei sen jälkeen.
    */
-  vaimennaAmbienssi(kerroin) {
+  vaimennaAmbienssi(kerroin, liukuS = 0.35) {
     this.ambienssiVaisto = Math.max(0, Math.min(1, kerroin));
     const maisema = this.ambience;
     if (!this.ctx || !maisema || maisema.loppuu) return;
@@ -146469,8 +146469,10 @@ class Sound {
     try {
       maisema.out.gain.cancelScheduledValues(t);
       maisema.out.gain.setValueAtTime(Math.max(maisema.out.gain.value, 0.0001), t);
+      // Liuku tulee kutsujalta (ambience-stream ajaVaisto), jotta
+      // nauhoitettu ja syntetisoitu tausta feidaavat samaa tahtia.
       maisema.out.gain.exponentialRampToValueAtTime(
-        Math.max(0.0001, this.ambienssiVaisto), t + 0.35,
+        Math.max(0.0001, this.ambienssiVaisto), t + Math.max(0.05, liukuS),
       );
     } catch {
       /* solmu oli jo purettu */
@@ -148092,6 +148094,17 @@ function startQuizMusic(lauta) {
 const VAISTO_NAYTE = 0.15;
 const VAISTO_PUHE = 0.25;
 
+/*
+ * Väistön liuku (omistajan tilaus 15.8.2026: "Hiljennä taustaääntä
+ * hieman lukijan ajaksi. Pehmeä feidi"). Aiemmin nauhoitettu tausta
+ * liukui väistöön maisemanvaihdon hitaalla mitalla (1,8 s) ja pelin
+ * oma maisema 0,35 sekunnissa — kaksi eri feidiä samaan väistöön.
+ * Nyt molemmat kulkevat samaa 650 ms liukua: tarpeeksi nopea, että
+ * tausta on matalalla ennen ensimmäistä virkettä, ja tarpeeksi hidas,
+ * ettei lasku kuulosta pudotukselta.
+ */
+const VAISTO_LIUKU_MS = 650;
+
 function vaimennaTausta(kerroin = VAISTO_NAYTE) {
   saadaVaistoa(kerroin);
 }
@@ -148239,16 +148252,17 @@ const voimassaVaisto = () => (hiljennykset.size
 /** Asettaa väistökertoimen ja ajaa kaikki soivat kierrokset sen mukaiseksi. */
 function saadaVaistoa(kerroin) {
   pyydettyVaisto = kerroin;
-  ajaVaisto();
+  ajaVaisto(VAISTO_LIUKU_MS);
 }
 
 /** Ajaa voimassa olevan kertoimen kaikkiin soiviin raitoihin. */
 function ajaVaisto(kesto = HAIVYTYS_MS) {
   const kerroin = voimassaVaisto();
-  // Syntetisoitu äänimaisema väistyy samalla. Aiemmin väistö koski vain
-  // nauhoitettua taustaa, ja pelin oma maisema jäi soimaan täydellä
-  // voimalla näytteen ja kertojan päälle (omistajan havainto).
-  sfx.vaimennaAmbienssi?.(kerroin);
+  // Syntetisoitu äänimaisema väistyy samalla ja samalla liu'ulla.
+  // Aiemmin väistö koski vain nauhoitettua taustaa, ja pelin oma
+  // maisema jäi soimaan täydellä voimalla näytteen ja kertojan päälle
+  // (omistajan havainto).
+  sfx.vaimennaAmbienssi?.(kerroin, kesto / 1000);
   // Tietovisan musiikki on oma raitansa: se ei saa jäädä jyräämään
   // ääninäytettä, mutta ei myöskään kokonaan vaieta kysymyksen ajaksi.
   if (musiikki && kerroin < 1) haivyta(musiikki, MUSIIKKI_VOIMA * kerroin, undefined, kesto);
@@ -155596,6 +155610,16 @@ function luoPuheSoitin({
  * sulkeutuminen pysäyttävät edellisen.
  */
 
+/*
+ * Taustaäänen väistö luennan ajaksi (omistajan tilaus 15.8.2026:
+ * "Hiljennä taustaääntä hieman lukijan ajaksi. Pehmeä feidi").
+ * Väistö tehdään TÄSSÄ eikä kutsujissa, jotta jokainen luentapolku —
+ * kaiuttimen sivuluenta, virtaluenta ja laitteen oma ääni — väistää
+ * samalla tavalla. Laskuri (puhujia) sietää sisäkkäiset kutsut, joten
+ * ui.js:n kertojaluentojen oma väistöpari ei mene tämän kanssa
+ * ristiin.
+ */
+
 /** Luennan kieli. Sama luku laitteen omilla taustajärjestelmillä. */
 const LUENNAN_KIELI = 'fi-FI';
 
@@ -156417,11 +156441,28 @@ function lueAaneen(teksti, nappi = null, {
   const puhuttava = String(teksti ?? '').trim();
   if (!puhuttava) return false;
   const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
-  const kunLoppuu = kerran(onLoppu);
+  /*
+   * Tausta väistyy pehmeällä feidillä luennan ajaksi; vapautus on
+   * omassa kerran-kääreessään, koska siihen johtaa kaksi eri polkua:
+   * loppukoukku (luonnollinen loppu, pysäytys, virhe) ja alla oleva
+   * käynnistyksen epäonnistuminen. Laitepolun poikkeushaara ehtii
+   * kutsua loppukoukun ENNEN kuin palauttaa false — ilman käärettä
+   * väistö vapautuisi silloin kahdesti ja veisi laskurin muiden
+   * puhujien alta.
+   */
+  const vapautaVaisto = kerran(puheLoppui);
+  const kunLoppuu = kerran(() => {
+    vapautaVaisto();
+    if (typeof onLoppu === 'function') onLoppu();
+  });
+  puheAlkoi();
   if (aloitaPuheLuenta(puhuttava, nappi, persoona, lohko, kunLoppuu, {
     kohdat, aloitusKappale, jatko,
   })) return true;
-  return lueLaitteella(puhuttava, nappi, kunLoppuu);
+  if (lueLaitteella(puhuttava, nappi, kunLoppuu)) return true;
+  // Mikään taustajärjestelmä ei ottanut luentaa — väistö heti pois.
+  vapautaVaisto();
+  return false;
 }
 
 /**
@@ -156629,11 +156670,19 @@ function lueLaitteella(puhuttava, nappi = null, kunLoppuu = null) {
  */
 function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
   pysaytaLukija();
-  const puhe = puheVirtana(nappi, persoona);
+  // Sama pehmeä taustan väistö kuin valmiin tekstin luennassa
+  // (lueAaneen) — kerran-kääre kattaa kaikki loppupolut.
+  const vapautaVaisto = kerran(puheLoppui);
+  puheAlkoi();
+  const puhe = puheVirtana(nappi, persoona, vapautaVaisto);
   if (puhe) return puhe;
-  if (natiiviLuenta()) return null;
+  const eiVirtaa = () => {
+    vapautaVaisto();
+    return null;
+  };
+  if (natiiviLuenta()) return eiVirtaa();
   const synth = selainPuhe();
-  if (!synth) return null;
+  if (!synth) return eiVirtaa();
   vaimennaSynth(synth);
   const aani = suomiAani(synth);
 
@@ -156644,6 +156693,7 @@ function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
     merkitseTila(nappi, false);
+    vapautaVaisto();
   };
 
   const puhuPala = () => {
@@ -156671,6 +156721,8 @@ function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
   ajossa = {
     nappi,
     merkki,
+    // Väistön vapautus myös pysäytettäessä (pysaytaLukija kutsuu tämän).
+    kunLoppuu: vapautaVaisto,
     lopeta: () => {
       tila.peruttu = true;
       // Jono tyhjäksi, jottei peruttu luenta jatku seuraavasta palasta.
@@ -156710,13 +156762,14 @@ function lueVirtana(nappi = null, { persoona = 'kertoja' } = {}) {
  * kuunnella kaiuttimesta uudestaan (se polku kulkee lueAaneen kautta
  * varapolkuineen).
  */
-function puheVirtana(nappi, persoona) {
+function puheVirtana(nappi, persoona, vapautaVaisto = null) {
   if (!puheTuettu()) return null;
   const merkki = {};
   const loppui = () => {
     if (ajossa?.merkki !== merkki) return;
     ajossa = null;
     merkitseTila(nappi, false);
+    vapautaVaisto?.();
   };
   const soitin = luoPuheSoitin({
     persoona,
@@ -156726,7 +156779,9 @@ function puheVirtana(nappi, persoona) {
     onVirhe: () => loppui(),
   });
   if (!soitin) return null;
-  ajossa = { nappi, merkki, lopeta: () => soitin.pysayta() };
+  ajossa = {
+    nappi, merkki, kunLoppuu: vapautaVaisto, lopeta: () => soitin.pysayta(),
+  };
   merkitseTila(nappi, true);
   return {
     lisaa(teksti) {
@@ -177785,6 +177840,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 685, teksti: 'Tausta väistyy pehmeästi kaiken luennan ajaksi' },
   { v: 684, teksti: 'Nähtävyysjuttujen kuvatekstit lyhennettiin (erä 3/5)' },
   { v: 683, teksti: 'Jatkuva luenta, aloitusrauha ja pehmeät siirtymät' },
   { v: 682, teksti: 'Kaupunkilehtien nostokuvien kuvatekstit lyhennettiin' },
@@ -178566,7 +178622,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.684';
+const APP_VERSION = '2026-08-09.685';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

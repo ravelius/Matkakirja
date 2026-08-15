@@ -516,7 +516,7 @@ class Sound {
    * Häivytys on nopeampi kuin maiseman oma vaihto — väistön pitää ehtiä
    * ennen puheen ensimmäistä tavua, ei sen jälkeen.
    */
-  vaimennaAmbienssi(kerroin) {
+  vaimennaAmbienssi(kerroin, liukuS = 0.35) {
     this.ambienssiVaisto = Math.max(0, Math.min(1, kerroin));
     const maisema = this.ambience;
     if (!this.ctx || !maisema || maisema.loppuu) return;
@@ -524,8 +524,10 @@ class Sound {
     try {
       maisema.out.gain.cancelScheduledValues(t);
       maisema.out.gain.setValueAtTime(Math.max(maisema.out.gain.value, 0.0001), t);
+      // Liuku tulee kutsujalta (ambience-stream ajaVaisto), jotta
+      // nauhoitettu ja syntetisoitu tausta feidaavat samaa tahtia.
       maisema.out.gain.exponentialRampToValueAtTime(
-        Math.max(0.0001, this.ambienssiVaisto), t + 0.35,
+        Math.max(0.0001, this.ambienssiVaisto), t + Math.max(0.05, liukuS),
       );
     } catch {
       /* solmu oli jo purettu */

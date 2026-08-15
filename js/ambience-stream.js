@@ -880,6 +880,17 @@ export function startQuizMusic(lauta) {
 const VAISTO_NAYTE = 0.15;
 const VAISTO_PUHE = 0.25;
 
+/*
+ * Väistön liuku (omistajan tilaus 15.8.2026: "Hiljennä taustaääntä
+ * hieman lukijan ajaksi. Pehmeä feidi"). Aiemmin nauhoitettu tausta
+ * liukui väistöön maisemanvaihdon hitaalla mitalla (1,8 s) ja pelin
+ * oma maisema 0,35 sekunnissa — kaksi eri feidiä samaan väistöön.
+ * Nyt molemmat kulkevat samaa 650 ms liukua: tarpeeksi nopea, että
+ * tausta on matalalla ennen ensimmäistä virkettä, ja tarpeeksi hidas,
+ * ettei lasku kuulosta pudotukselta.
+ */
+const VAISTO_LIUKU_MS = 650;
+
 export function vaimennaTausta(kerroin = VAISTO_NAYTE) {
   saadaVaistoa(kerroin);
 }
@@ -1027,16 +1038,17 @@ const voimassaVaisto = () => (hiljennykset.size
 /** Asettaa väistökertoimen ja ajaa kaikki soivat kierrokset sen mukaiseksi. */
 function saadaVaistoa(kerroin) {
   pyydettyVaisto = kerroin;
-  ajaVaisto();
+  ajaVaisto(VAISTO_LIUKU_MS);
 }
 
 /** Ajaa voimassa olevan kertoimen kaikkiin soiviin raitoihin. */
 function ajaVaisto(kesto = HAIVYTYS_MS) {
   const kerroin = voimassaVaisto();
-  // Syntetisoitu äänimaisema väistyy samalla. Aiemmin väistö koski vain
-  // nauhoitettua taustaa, ja pelin oma maisema jäi soimaan täydellä
-  // voimalla näytteen ja kertojan päälle (omistajan havainto).
-  sfx.vaimennaAmbienssi?.(kerroin);
+  // Syntetisoitu äänimaisema väistyy samalla ja samalla liu'ulla.
+  // Aiemmin väistö koski vain nauhoitettua taustaa, ja pelin oma
+  // maisema jäi soimaan täydellä voimalla näytteen ja kertojan päälle
+  // (omistajan havainto).
+  sfx.vaimennaAmbienssi?.(kerroin, kesto / 1000);
   // Tietovisan musiikki on oma raitansa: se ei saa jäädä jyräämään
   // ääninäytettä, mutta ei myöskään kokonaan vaieta kysymyksen ajaksi.
   if (musiikki && kerroin < 1) haivyta(musiikki, MUSIIKKI_VOIMA * kerroin, undefined, kesto);
