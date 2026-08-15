@@ -687,8 +687,8 @@ import { BoardDie } from './die.js';
  * selaimen puhesyntetisaattoriin.
  */
 import {
-  kokoaLuettavaTeksti, liitaLukija, lueAaneen, lukijaLukee, lukijaTuettu,
-  paivitaLukija, pysaytaLukija,
+  kaynnistaLukija, kokoaLuettavaTeksti, liitaLukija, lueAaneen, lukijaLukee,
+  lukijaTuettu, paivitaLukija, pysaytaLukija, vieritaPehmeasti,
 } from './lukija.js';
 // Lukijaäänen saatavuus ohjaa merkintöjen luentapolkua: kun lennossa
 // generoitu ääni on käytössä, ElevenLabs-äänitteet ohitetaan
@@ -10134,7 +10134,11 @@ export class UI {
      * jälkeen kun sivu on jo kääntynyt.
      */
     pysaytaLukija();
-    const kaiutin = this.varustaLukija(this.arrivalDialog, () => this.arrivalDialog.querySelector('.dialog-card'));
+    const kaiutin = this.varustaLukija(this.arrivalDialog,
+      () => this.arrivalDialog.querySelector('.dialog-card'),
+      // Lehden sivuilla luennalla on minne jatkaa: jatkuva luenta
+      // (paneelin kytkin) kääntää sivun ja lukee eteenpäin.
+      { jatko: () => this.jatkaLehdenLuentaa() });
     this.sijoitaLehtiKaiutin(kaiutin);
   }
 
@@ -10164,10 +10168,32 @@ export class UI {
    * Piilotettu sivu jää pois itsestään, koska valinta ohittaa
    * [hidden]-elementit — lehden kaikki sivut asuvat samassa dialogissa.
    */
-  varustaLukija(dialogi, haeJuuri, { seuraa = false } = {}) {
-    const nappi = liitaLukija(dialogi, haeJuuri, { luokka: 'lukija-sivu', seuraa });
+  varustaLukija(dialogi, haeJuuri, { seuraa = false, jatko = null } = {}) {
+    const nappi = liitaLukija(dialogi, haeJuuri, { luokka: 'lukija-sivu', seuraa, jatko });
     paivitaLukija(nappi);
     return nappi;
+  }
+
+  /**
+   * Jatkuvan luennan sivunvaihto (omistajan tilaus 15.8.2026: "auto
+   * moodi toggle, joka vaihtaa lehden sivua eteenpäin automaattisesti
+   * ja jatkaa lukemista"). Kutsutaan lukijasta, kun sivun luenta
+   * päättyi omia aikojaan ja automoodi on päällä.
+   *
+   * Sivut, joilla ei ole luettavaa (pelkkä kartta- tai kuvasivu,
+   * kaiutin piilossa), ohitetaan — luenta jatkuu seuraavalta
+   * tekstisivulta. Viimeisen sivun jälkeen palautetaan false ja
+   * luenta jää siihen: lehti ei ala alusta itsekseen.
+   */
+  jatkaLehdenLuentaa() {
+    if (!this.arrivalDialog?.open) return false;
+    const sivuja = this.tutkiSivuja();
+    for (let hyppy = 0; hyppy < sivuja; hyppy += 1) {
+      if (!this.vaihdaTutkiSivu(1)) return false;
+      const nappi = this.arrivalDialog.querySelector('.lukija-nappi');
+      if (nappi && !nappi.hidden) return kaynnistaLukija(nappi);
+    }
+    return false;
   }
 
   /**
@@ -10631,22 +10657,17 @@ export class UI {
      * se on aina näkyvissä ylälaidassa, ja otsikon napautus alkuun
      * palaamiseksi on tuttu ele (iOS:n tilarivi).
      */
+    /*
+     * Liuku omalla ease-in-out-ajurilla (js/lukija.js
+     * vieritaPehmeasti; omistajan tilaus 15.8.2026 "pehmeästi
+     * scrollaten, ease in ja out"). Sama ajuri korvasi aiemman
+     * behavior:'smooth' + hyppyvarmistus -parin: selaimen pehmeä
+     * vieritys ei luvannut käyrää eikä headlessissä edes lähtenyt
+     * liikkeelle syötteen perään. Liikkeen välttäjän hyppy on ajurin
+     * sisällä.
+     */
     const vierita = (ylos) => {
-      const tapa = this.reducedMotion ? 'auto' : 'smooth';
-      const lahto = kortti.scrollTop;
-      const perilla = () => (ylos ? kortti.scrollTop <= 0
-        : kortti.scrollTop + kortti.clientHeight >= kortti.scrollHeight - 1);
-      kortti.scrollTo({ top: ylos ? 0 : kortti.scrollHeight, behavior: tapa });
-      if (tapa === 'auto') return;
-      // Eräissä ympäristöissä syötteen perään käynnistetty pehmeä
-      // vieritys peruuntuu eikä lähde liikkeelle lainkaan (mitattu
-      // headless-Chromiumissa). Jos liike ei alkanut, hypätään
-      // suoraan — parempi äkkinäinen kuin olematon.
-      setTimeout(() => {
-        if (kortti.scrollTop === lahto && !perilla()) {
-          kortti.scrollTo({ top: ylos ? 0 : kortti.scrollHeight, behavior: 'auto' });
-        }
-      }, 220);
+      vieritaPehmeasti(kortti, ylos ? 0 : kortti.scrollHeight);
     };
     kortti.addEventListener('click', (e) => {
       if (e.target.closest?.('button, a, input, select, textarea, img, svg')) return;

@@ -131,6 +131,17 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
+    otsikko: 'Jatkuva luenta ja pehmeät siirtymät (v683)',
+    ohje: 'Käynnistä lehden luenta ja paina soittimen uutta '
+      + 'kiertonuolikytkintä: luennan loputtua lehden pitäisi kääntää '
+      + 'sivu itse ja jatkaa lukemista (tekstittömät sivut ohitetaan, '
+      + 'viimeiseen sivuun luenta päättyy). Käynnistys ei enää liikuta '
+      + 'näkymää — sivu lähtee seuraamaan vasta toisesta kappaleesta. '
+      + 'Reunanapautusten ja luennan seurannan vieritykset kulkevat '
+      + 'nyt omalla ease-in-out-käyrällä: liike kiihtyy ja pehmenee '
+      + 'molemmista päistä, ja oma sormi katkaisee koneen liikkeen.',
+  },
+  {
     otsikko: 'Luennan äänenlaatu ja kertojaluennat (v672–v678)',
     ohje: 'Kuuntele lehden luenta: saumojen pitäisi kulkea tasaisella '
       + 'virkevälillä ilman nykäyksiä (puskurisoitin leikkaa '
