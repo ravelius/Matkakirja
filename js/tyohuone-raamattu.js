@@ -289,6 +289,9 @@ export const RAAMATTU = {
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
           + 'kuvataitto, sää, media — sekä kohdekartta '
           + 'numeropisteineen ja omat nähtävyysjutut.',
+        'Kohdekartan vipu: piirros + värikartta samasta julisteesta '
+          + '(paletti hyväksytty 15.8.2026, pilotti Berliini). '
+          + 'Satelliitti poistuu kaupungeittain värikartan valmistuessa.',
         'Valmiustilanne kaupungeittain: Tilanne-välilehti, ei tämä.',
       ],
     },

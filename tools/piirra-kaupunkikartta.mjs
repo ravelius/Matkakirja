@@ -1194,7 +1194,7 @@ const KADUT = [
  * on 10 m/px — "voisiko sen sijaan olla esim. väritetty kartta").
  *
  *   node tools/piirra-kaupunkikartta.mjs berliini --vari
- *   → assets/kartat/berliini-varikartta-nayte.png
+ *   → assets/kartat/berliini-varikartta.png (pelin värinäkymä)
  *
  * Sama aineisto, sama rajaus ja samat viivat kuin julisteessa; vain
  * sävyt vaihtuvat. Väri tulee sinne, missä maastossa ON väriä — vesi
@@ -2107,7 +2107,9 @@ mkdirSync(resolve(JUURI, 'assets/kartat'), { recursive: true });
  * Värinäyte EI korvaa julistetta vaan menee omaan tiedostoonsa
  * (--vari, ks. PALETIT). Pelin kartta on aina <kaupunki>-keskusta.png.
  */
-const tiedosto = VARINAYTE ? `${kaupunki}-varikartta-nayte` : `${kaupunki}-keskusta`;
+// Paletti hyväksyttiin 15.8.2026 ("Joo vaihda väri berliiniin"),
+// joten --vari kirjoittaa suoraan pelin käyttämän tiedoston.
+const tiedosto = VARINAYTE ? `${kaupunki}-varikartta` : `${kaupunki}-keskusta`;
 const svgPolku = resolve(JUURI, `assets/kartat/${tiedosto}.svg`);
 writeFileSync(svgPolku, svg);
 // Rasterointi PNG:ksi pelin Chromiumilla: SVG:n koko katuverkko on

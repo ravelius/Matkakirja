@@ -23,12 +23,11 @@ export const TILANNE = {
       tila: 'tyossa',
       tehtava: 'Koordinointi, merget pistokokein, omat lukija- ja '
         + 'äänityöt. Työsessiot vain perustamisprompteilla.',
-      seuraavaksi: 'Värikartan kytkentä + miniatyyripilotti '
-        + 'palettipäätöksen jälkeen.',
+      seuraavaksi: 'Värikartat muihin karttakaupunkeihin + '
+        + 'miniatyyripilotti (paletti hyväksytty 15.8.).',
     },
   ],
   odottaaPaatosta: [
-    'Värikarttapaletti (näyte toimitettu 15.8.)',
     'Kartta- ja zoomiskaalaus ~49 kaupunkiin',
     'Raamatun luonnososioiden läpikäynti',
     'Kainalon suuntateksti satelliittiin — vai ei',
@@ -45,6 +44,8 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v707 — Berliinin värikartta (vipu kartalla)',
+  'v706 — Raamatun taitto: kappaleet, ei palstoja',
   'v704 — radio hiljenee pöllön/lukijan puhuessa',
   'v703 — pöllön vastauskuva; klikkaus isoksi',
   'v702 — oletusprompti näkyvissä; vuosiluvut ei lueta',
