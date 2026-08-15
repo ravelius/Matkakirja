@@ -131,6 +131,16 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
+    otsikko: 'ElevenLabs-äänitteet palasivat ajantasaisiin merkintöihin (v694)',
+    ohje: 'Saavu kaupunkiin, jonka matkakirjateksti ei ole muuttunut '
+      + '(esim. useimmat Euroopan ja Afrikan kaupungit): merkinnän '
+      + 'lukee taas Viisas Kertoja -äänite. Muuttuneet tekstit '
+      + '(Madrid, Berliini, Tukholma) ja äänitteettömät kaupungit '
+      + 'striimataan lukijaäänellä kuten ennen. 39/42 äänitettä oli '
+      + 'ajan tasalla. Uusia äänitteitä ei generoida ennen '
+      + 'matkakirjatekstien uudistusta.',
+  },
+  {
     otsikko: 'Taustaäänet tasattu (v692)',
     ohje: 'Kierrä muutamaa kaupunkia ja kuuntele taustaääniä: tasot '
       + 'mitattiin K-painotetulla LUFS-mittarilla ja kaikki 125 raitaa '

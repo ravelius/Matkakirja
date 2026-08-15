@@ -633,8 +633,19 @@ export const RAAMATTU2 = {
           + 'aarretekstit (ElevenLabs v3); teksti ja luenta '
           + 'vastaavat toisiaan sanasta sanaan, siksi arvottavia '
           + 'pulmia ei lueta.',
+        'MATKAKIRJAN LUENTAPOLKU (omistajan linjaus 15.8.2026, '
+          + 'sitoo myös työsessiot): ElevenLabs-äänite soi, kun '
+          + 'merkinnän luenta-kenttä vastaa nykyistä näyttötekstiä '
+          + '(vertailu: luentaVastaaTekstia, aani-ehdokkaat.js). '
+          + 'Kun tekstiä muutetaan, äänite putoaa itsestään pois ja '
+          + 'merkintä striimataan lukijaäänellä — UUSIA ÄÄNITTEITÄ '
+          + 'EI GENEROIDA välivaiheessa. Kaikki matkakirjatekstit '
+          + 'uudistetaan vasta, kun Raamattu 2.0:n avoimet osiot on '
+          + 'käyty omistajan kanssa valmiiksi; sen jälkeen luennat '
+          + 'generoidaan uusiksi yhdellä kertaa.',
         'Lisäksi tehosteäänet, mietintämusiikki, äänimaisemat ja '
-          + 'musiikkinäytteet lehtikaupungeissa.',
+          + 'musiikkinäytteet lehtikaupungeissa. Uudet taustaäänet '
+          + 'LUFS-mitataan heti luotaessa (testi valvoo).',
       ],
     },
     {
