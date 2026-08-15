@@ -1048,9 +1048,40 @@ function saadaVaistoa(kerroin) {
   ajaVaisto(VAISTO_LIUKU_MS);
 }
 
+/*
+ * ULKOISET VÄISTÄJÄT (omistajan havainto 15.8.2026: "tausta ääni ei
+ * hiljene, kun pöllö puhuu" — maailmanradion suora lähetys soi täydellä
+ * voimalla puheen päälle, koska se ei soi tämän moduulin soittimissa).
+ *
+ * Muualla soiva äänilähde rekisteröi tähän kutsun, joka saa voimassa
+ * olevan kertoimen ja liu'un keston aina kun väistö muuttuu. Näin
+ * puheen väistö, ääninäytteen väistö ja lukunäkymän hiljennys koskevat
+ * myös sitä — yhdestä ja samasta totuudesta.
+ */
+const vaistajat = new Set();
+
+export function lisaaVaistaja(fn) {
+  vaistajat.add(fn);
+  // Nykytila heti: kesken luennan käynnistyvä lähde ei saa aloittaa
+  // täydellä voimalla.
+  try {
+    fn(voimassaVaisto(), 0);
+  } catch {
+    /* väistäjä ei saa kaataa äänipolkua */
+  }
+  return () => vaistajat.delete(fn);
+}
+
 /** Ajaa voimassa olevan kertoimen kaikkiin soiviin raitoihin. */
 function ajaVaisto(kesto = HAIVYTYS_MS) {
   const kerroin = voimassaVaisto();
+  for (const vaistaja of vaistajat) {
+    try {
+      vaistaja(kerroin, kesto);
+    } catch {
+      /* väistäjä ei saa kaataa äänipolkua */
+    }
+  }
   // Syntetisoitu äänimaisema väistyy samalla ja samalla liu'ulla.
   // Aiemmin väistö koski vain nauhoitettua taustaa, ja pelin oma
   // maisema jäi soimaan täydellä voimalla näytteen ja kertojan päälle

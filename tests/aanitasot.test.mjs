@@ -119,6 +119,41 @@ test('kertoja väistää taustan ja laskuri palautuu', async () => {
   assert.doesNotThrow(() => { puheLoppui(); puheAlkoi(); puheLoppui(); });
 });
 
+test('ulkoinen väistäjä saa puheen väistön ja palautuksen (radio)', async () => {
+  /*
+   * Omistajan havainto 15.8.2026: "tausta ääni ei hiljene, kun pöllö
+   * puhuu." Maailmanradion lähetys soi omassa elementissään, joten
+   * puheen väistö ei koskenut sitä lainkaan. lisaaVaistaja on se
+   * mekanismi, jolla radio (js/linssit/radio.js) kytkeytyy väistöön —
+   * tämä testi varmistaa, että kutsu tulee heti, väistössä ja
+   * palautuksessa, ja että rekisteröinnin purku pitää.
+   */
+  const {
+    lisaaVaistaja, puheAlkoi, puheLoppui, nollaaPuhujat,
+  } = await import('../js/ambience-stream.js');
+  nollaaPuhujat();
+  const kutsut = [];
+  const pura = lisaaVaistaja((kerroin, kesto) => kutsut.push({ kerroin, kesto }));
+  // Nykytila heti rekisteröitäessä: lähde ei aloita täydellä voimalla
+  // kesken luennan.
+  assert.equal(kutsut.length, 1);
+  assert.equal(kutsut[0].kerroin, 1);
+  puheAlkoi();
+  assert.equal(kutsut.at(-1).kerroin, 0.25, 'puheen väistö ei tullut väistäjälle');
+  assert.ok(kutsut.at(-1).kesto > 0, 'väistöllä pitää olla liuku');
+  puheLoppui();
+  assert.equal(kutsut.at(-1).kerroin, 1, 'palautus ei tullut väistäjälle');
+  const ennen = kutsut.length;
+  pura();
+  puheAlkoi();
+  puheLoppui();
+  assert.equal(kutsut.length, ennen, 'purettu väistäjä sai yhä kutsuja');
+  // Radio on oikeasti rekisteröitynyt ja kirjoittaa tehollisen arvon.
+  const radio = readFileSync(new URL('../js/linssit/radio.js', import.meta.url), 'utf8');
+  assert.match(radio, /lisaaVaistaja\(saadaPuheVaistoa\)/);
+  assert.match(radio, /tehollinenAani\(\)/);
+});
+
 test('jokainen luennan lopetus vapauttaa myös puhujan', () => {
   /*
    * v342: tausta katosi kehittäjätilassa, kun kartalla hyppi (omistajan

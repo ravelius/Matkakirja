@@ -149010,9 +149010,40 @@ function saadaVaistoa(kerroin) {
   ajaVaisto(VAISTO_LIUKU_MS);
 }
 
+/*
+ * ULKOISET VÄISTÄJÄT (omistajan havainto 15.8.2026: "tausta ääni ei
+ * hiljene, kun pöllö puhuu" — maailmanradion suora lähetys soi täydellä
+ * voimalla puheen päälle, koska se ei soi tämän moduulin soittimissa).
+ *
+ * Muualla soiva äänilähde rekisteröi tähän kutsun, joka saa voimassa
+ * olevan kertoimen ja liu'un keston aina kun väistö muuttuu. Näin
+ * puheen väistö, ääninäytteen väistö ja lukunäkymän hiljennys koskevat
+ * myös sitä — yhdestä ja samasta totuudesta.
+ */
+const vaistajat = new Set();
+
+function lisaaVaistaja(fn) {
+  vaistajat.add(fn);
+  // Nykytila heti: kesken luennan käynnistyvä lähde ei saa aloittaa
+  // täydellä voimalla.
+  try {
+    fn(voimassaVaisto(), 0);
+  } catch {
+    /* väistäjä ei saa kaataa äänipolkua */
+  }
+  return () => vaistajat.delete(fn);
+}
+
 /** Ajaa voimassa olevan kertoimen kaikkiin soiviin raitoihin. */
 function ajaVaisto(kesto = HAIVYTYS_MS) {
   const kerroin = voimassaVaisto();
+  for (const vaistaja of vaistajat) {
+    try {
+      vaistaja(kerroin, kesto);
+    } catch {
+      /* väistäjä ei saa kaataa äänipolkua */
+    }
+  }
   // Syntetisoitu äänimaisema väistyy samalla ja samalla liu'ulla.
   // Aiemmin väistö koski vain nauhoitettua taustaa, ja pelin oma
   // maisema jäi soimaan täydellä voimalla näytteen ja kertojan päälle
@@ -179405,6 +179436,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 704, teksti: 'Radio väistää puhetta kuten muukin tausta' },
   { v: 703, teksti: 'Pöllö hakee vastaukseen kuvan — pikkukuva aukeaa isoksi' },
   { v: 702, teksti: 'Oletusprompti näkyviin ja aikamerkit pois luennasta' },
   { v: 701, teksti: 'Raamattu uusiksi tiiviinä + valmis/kesken-tagit lehteen' },
@@ -180205,7 +180237,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.703';
+const APP_VERSION = '2026-08-09.704';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
