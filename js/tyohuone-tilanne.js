@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v761 — työhuoneessa vain palkit, tekstirivit pois',
   'v760 — tarkennettu vaakuna pergamenttilevyllä, ei tummaa',
   'v759 — jutun otsikko pysyy näkyvissä kuvan latautuessa',
   'v758 — työhuoneen palkit: pitäisi VIHDOIN näyttää luvut',

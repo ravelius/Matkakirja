@@ -43,7 +43,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.760';
+const APP_VERSION = '2026-08-09.761';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1239,47 +1239,13 @@ function piirraTyohuonePalkit(data) {
   kotelo.appendChild(tyohuonePalkki('Pöllö/kk',
     tila?.pollo?.raja ? (tila.pollo.kuukausi ?? 0) / tila.pollo.raja : null,
     tila?.pollo?.raja ? `${tila.pollo.kuukausi ?? 0} / ${tila.pollo.raja}` : ''));
-  const kulut = document.createElement('p');
-  kulut.className = 'tyohuone-kulut';
-  if (tila?.kulut?.yhteensa !== null && tila?.kulut?.yhteensa !== undefined) {
-    const osa = (nimi, arvo) => (arvo === null ? `${nimi} –` : `${nimi} $${arvo.toFixed(2)}`);
-    // Claude-summa on koko organisaation, ellei workerilla ole
-    // Pöllö-työtilaa rajaukseen (omistajan kysymys 15.8.2026) —
-    // nimi kertoo kumpi on kyseessä.
-    const claudeNimi = tila.kulut.claudeRajattu ? 'Claude/Pöllö' : 'Claude (koko org.)';
-    kulut.textContent = `Kulut tässä kuussa $${tila.kulut.yhteensa.toFixed(2)} `
-      + `(${osa('OpenAI', tila.kulut.openai)} · ${osa(claudeNimi, tila.kulut.claude)})`;
-  } else if (data.tilaSyy === 'koodi') {
-    // Rajattu kehittäjäkoodi ei talleta pöllökoodia — kiintiöt ja
-    // kulut näkyvät vain täydellä koodilla kirjautuneelle.
-    kulut.textContent = 'Kiintiöt ja kulut näkyvät vain täydellä '
-      + 'kehittäjäkoodilla (kytke kehittäjätila uudelleen sillä)';
-  } else if (data.tilaSyy) {
-    kulut.textContent = `Kulut: pöllöpalvelin ei vastannut (${data.tilaSyy})`;
-  } else if (tila?.viat && Object.keys(tila.viat).length) {
-    // Worker kertoo kaatuneen lähteen virheen (esim. "eleven: HTTP
-    // 401") — näytetään se sellaisenaan, ettei syyllistetä avaimia
-    // joita ei edes tarvittu (omistajan havainto 15.8.2026).
-    const rivit = Object.entries(tila.viat).map(([nimi, v]) => `${nimi}: ${v}`).join(' · ');
-    kulut.textContent = `Kulut: lähdevirhe (${rivit})`;
-  } else {
-    kulut.textContent = 'Kulut: ei nähtävissä (admin-avaimet puuttuvat)';
-  }
-  kotelo.appendChild(kulut);
   /*
-   * Lähdediagnoosi (omistajan vianetsintä 15.8.2026: "eivät
-   * vieläkään näy" ilman että syytä näkyi mistään): yksi pieni rivi
-   * kertoo jokaisen lähteen tilan, jolloin kuvakaappaus riittää
-   * diagnoosiksi. Ei arvoja, vain tilat.
+   * Kulurivi ja lähdediagnoosi POISTETTU (omistajan tilaus 15.8.2026
+   * "Poista nämä tekstit" — palkit riittävät). Diagnoosirivi ehti
+   * tehdä tehtävänsä: se paljasti peili/pöllö-muuttujien ristiinmenon
+   * (v758). Workerin tila-vastauksessa kulut ja viat kulkevat yhä,
+   * jos niitä joskus taas halutaan näyttää.
    */
-  const diagnoosi = document.createElement('p');
-  diagnoosi.className = 'tyohuone-kulut tyohuone-diagnoosi';
-  diagnoosi.textContent = 'Lähteet: '
-    + `repo ${repoKt !== null ? 'ok' : 'virhe'}`
-    + ` · peili ${peili ? 'ok' : 'virhe'}`
-    + ` · pöllö ${tila ? 'ok' : (data.tilaSyy ?? 'ei vastausta')}`
-    + (tila?.aika ? ` · kuva ${tila.aika.slice(11, 16)} UTC` : '');
-  kotelo.appendChild(diagnoosi);
 }
 
 function paivitaTyohuonePalkit() {
