@@ -14,6 +14,15 @@ ymmärrystä siitä, että maailma on suurempi kuin oma ympäristö. Väline on
 koukuttava ja mielenkiintoinen peli, jonka kanssa pidetään hauskaa; oppiminen
 syntyy sivutuotteena.
 
+## Laatu on aina tärkein prioriteetti
+
+Omistajan linjaus 15.8.2026, ja se käy kaiken muun edellä: kun laatu ja
+mikä tahansa muu tavoite — vauhti, määrä, kustannus, aikataulu — ovat
+vastakkain, laatu voittaa. Mieluummin vähemmän ja viimeisteltyä kuin
+paljon ja puolivillaista: yksi hyvin kirjoitettu juttu, tarkistettu kuva
+ja mitattu ääni kerrallaan. Tämä ei kumoa pilareita alla, vaan on niiden
+lukuohje.
+
 ## Viisi pilaria
 
 ### 1. Peli edellä
