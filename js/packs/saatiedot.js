@@ -258,4 +258,34 @@ export const SAATIEDOT = {
     keskilampo: [-19.5, -19.1, -13.6, -5.9, 1.8, 8.4, 12.4, 12.8, 7.9, -1.2, -11.7, -17.9],
     sade: [17, 14, 25, 30, 42, 51, 56, 87, 76, 64, 54, 22],
   },
+  // Kamtšatka (Petropavlovsk) on koko pelin sateisin Siperia-kohde:
+  // 1 231 mm vuodessa, yli viisi kertaa Jakutskin verran. Meri pitää
+  // talven −10 asteessa mutta kesän 13:ssa, ja sateisin kuukausi on
+  // lokakuu — talven osuus tulee lumena, jota kertyy metrikaupalla.
+  kamtsatka: {
+    lat: 53.02,
+    lon: 158.65,
+    keskilampo: [-10.3, -9.2, -5.7, -1.3, 3, 8.8, 13, 13.4, 9.9, 3.8, -3.5, -9.4],
+    sade: [116, 93, 115, 97, 68, 64, 72, 107, 107, 139, 135, 118],
+  },
+  // Sahalinia ympäröi meri joka suunnalta, mutta se ei lämmitä:
+  // Ohotanmeri jäätyy talveksi, ja tammikuun −11,4 on kylmempi kuin
+  // Kamtšatkan tai Vladivostokin. Kesä jää 18 asteeseen, ja elo-
+  // syyskuun 207 mm tulee myöhäiskesän matalapaineista.
+  sahalin: {
+    lat: 46.96,
+    lon: 142.74,
+    keskilampo: [-11.4, -10.7, -5.1, 1.6, 7.8, 12.7, 16.6, 18, 14.5, 7.5, -0.8, -8.5],
+    sade: [55, 40, 64, 70, 69, 62, 81, 103, 104, 90, 73, 66],
+  },
+  // Vladivostokin käyrä on monsuunin käyrä: talvi on mantereen kylmää
+  // ilmaa ja lähes sateeton (tammikuussa 11 mm), kesä merituulen
+  // sumua ja kaatosadetta (elokuussa 150 mm). Kaupunki on samalla
+  // leveysasteella kuin Sotši Mustallamerellä, mutta tammikuu on −11.
+  vladivostok: {
+    lat: 43.12,
+    lon: 131.89,
+    keskilampo: [-11, -7.8, -1.7, 3.8, 8.9, 14, 18.6, 20.6, 17.1, 10.1, 0.5, -8.2],
+    sade: [11, 15, 28, 43, 84, 70, 131, 150, 94, 70, 36, 18],
+  },
 };
