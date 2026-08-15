@@ -10388,6 +10388,50 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   color: #2d2010;
 }
 
+/* Kaupunki kartalla -esittely kahdessa palstassa (omistajan tilaus
+ * 15.8.2026). Kapealla ruudulla palsta ei mahdu lukemaan mukavasti,
+ * joten alle 640 px palataan yhteen. */
+.kaupunkikartta-palstat {
+  columns: 2;
+  column-gap: 1.6rem;
+}
+
+@media (max-width: 640px) {
+  .kaupunkikartta-palstat { columns: 1; }
+}
+
+/* Matkailijalle-osion valokuva otsikon alla oikeassa laidassa
+ * (omistajan tilaus 15.8.2026): teksti kiertää vasemmalta. */
+.matkailijalle-kuva {
+  float: right;
+  width: clamp(10rem, 42%, 17rem);
+  margin: 0.15rem 0 0.5rem 1rem;
+}
+
+.matkailijalle-kuva img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  cursor: zoom-in;
+}
+
+.matkailijalle-kuva .kuvateksti {
+  margin-top: 0.3rem;
+}
+
+/* Kelluva kuva ei saa vuotaa osion alle — opasnappi ja seuraava
+ * lohko alkavat aina puhtaalta riviltä. */
+.matkailijalle .wiki-btn,
+.matkailijalle::after {
+  clear: both;
+}
+
+.matkailijalle::after {
+  content: "";
+  display: block;
+}
+
 /* Kohdepiste on nappi, kun siitä aukeaa artikkeli: yleisen
  * nappisäännön mitat ja tausta nollataan täplän kokoon. */
 .dialog button.maakartta-piste {
@@ -40332,13 +40376,9 @@ const KULTTUURI_KATEGORIAT = {
             + 'korkeuksilla.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
-        {
-          tiedosto: 'Two of Kongelige livgarde Amalienborg Copenhagen Denmark.jpg',
-          selite: 'Kuninkaan henkivartija seisoo vahdissa Amalienborgin linnan '
-            + 'seinustalla. Karvalakki ja tumma takki heittävät pitkän varjon '
-            + 'vaaleaan seinään.',
-          lahde: 'Jebulon, Wikimedia Commons (CC0)',
-        },
+        // Henkivartijakuva poistettu (omistajan palaute 15.8.2026:
+        // "oikean alareunan kuva on visuaalisesti huono" — pääosassa
+        // oli varjo, ei kaupunki). Kanaalivene nousi tilalle.
         {
           tiedosto: 'Canal Tours at Christianshavn.jpg',
           selite: 'Matala kanaalivene täynnä matkustajia kulkee leveällä '
@@ -40387,6 +40427,18 @@ const KULTTUURI_KATEGORIAT = {
        * Rosenborgin puutarha, jazzmuusikot, teatteri) — teksti omaa.
        */
       matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää
+         * (omistajan tilaus 15.8.2026). Lisenssit tarkistettu
+         * Commonsin API:sta 15.8.2026, kuvat katsottu silmin.
+         */
+        kuva: {
+          tiedosto: 'Copenhagen Cyclists (19200075809).jpg',
+          selite: 'Pyöräilijöitä ylittämässä risteystä sinistä pyöräkaistaa '
+            + 'pitkin — arkinen näky, sillä yli puolet kaupunkilaisten '
+            + 'matkoista taittuu pyörällä.',
+          lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
+        },
         kappale: 'Kööpenhamina on rento kaupunki, joka koetaan parhaiten '
           + 'satulasta: yli puolet kaupunkilaisten matkoista taittuu '
           + 'pyörällä, ja leveät pyörätiet vievät vierailijankin turvallisesti '
@@ -40432,6 +40484,29 @@ const KULTTUURI_KATEGORIAT = {
             + 'veitsellä ja haarukalla. Vanhoissa lounasravintoloissa '
             + 'leipiä on listalla kymmeniä, ja järjestyskin on tarkka — '
             + 'ensin kala, sitten liha, viimeisenä juusto.',
+          /*
+           * Artikkelin kuvakaruselli (omistajan tilaus 15.8.2026:
+           * "lisää myös kuvia pop up juttuun matkailijalle") —
+           * avaaNahtavyys näyttää nämä ensimmäisen kappaleen jälkeen.
+           * Lisenssit tarkistettu Commonsin API:sta 15.8.2026, kuvat
+           * katsottu silmin.
+           */
+          kuvat: [
+            {
+              tiedosto: 'Harbour Bath, Islands Brygge.jpg',
+              selite: 'Islands Bryggen satamakylpylä kesäpäivänä: puiset '
+                + 'laiturikannet, punavalkoinen hengenpelastajien torni ja '
+                + 'uimareita sataman vedessä keskellä kaupunkia.',
+              lahde: 'milgrammer, Wikimedia Commons (CC BY 2.0)',
+            },
+            {
+              tiedosto: 'Havnebad Islands Brygge summer Copenhagen.jpg',
+              selite: 'Rohkein hyppää: sukeltaja kiepsahtaa satamakylvyn '
+                + 'puiselta korokkeelta ilta-auringossa, ja jono seuraavia '
+                + 'odottaa vuoroaan kaiteen takana.',
+              lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+          ],
           lahde: 'Wikipedia',
         },
       },
@@ -111452,6 +111527,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v749 — karttateksti 2 palstaan; Matkailijalle- ja opaskuvat',
   'v748 — ison piirroksen klikki: vain kuvan keskiosa avaa',
   'v747 — lippusivut: Lähi-itä (8 maata)',
   'v746 — avauskuvat 4 kaupunkiin; R2 molemmat ämpärit; kulunimiö',
@@ -176363,9 +176439,14 @@ class UI {
     if (!kartta) return;
     const lohko = html('div', 'kaupunkikartta');
     lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Kaupunki kartalla'));
+    // Esittely kahdessa palstassa (omistajan tilaus 15.8.2026:
+    // "kaupunki kartalla teksti voisi olla kahdessa palstassa");
+    // kapealla ruudulla CSS palauttaa yhden palstan.
+    const palstat = html('div', 'kaupunkikartta-palstat');
     for (const kappale of (kartta.esittely ?? '').split('\n\n').filter(Boolean)) {
-      lohko.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
+      palstat.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
     }
+    lohko.appendChild(palstat);
     /*
      * ZOOMATTAVA KARTTAIKKUNA (omistajan tilaus 14.8.2026: "voiko
      * kaupunkikartasta tehdä zoomattavaa ... pyörisi nykyisessä
@@ -176748,6 +176829,26 @@ class UI {
     if (!tiedot?.kappale) return;
     const lohko = html('div', 'matkailijalle');
     lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Matkailijalle'));
+    /*
+     * Valokuva otsikon alla oikeassa laidassa, teksti kiertää
+     * vasemmalta (omistajan tilaus 15.8.2026). Sama latausputki ja
+     * napautussuurennos kuin nostojen kuvilla; kaupunki ilman
+     * kuva-kenttää taittuu ennalleen.
+     */
+    if (tiedot.kuva?.tiedosto) {
+      const kotelo = html('figure', 'matkailijalle-kuva');
+      const kuva = document.createElement('img');
+      this.varustaNostonKuva(kuva, tiedot.kuva, 640);
+      kotelo.appendChild(kuva);
+      if (tiedot.kuva.selite) {
+        const teksti = html('figcaption', 'kuvateksti', tiedot.kuva.selite);
+        if (tiedot.kuva.lahde) {
+          teksti.appendChild(html('span', 'lehti-kuvalahde', ` ${tiedot.kuva.lahde}`));
+        }
+        kotelo.appendChild(teksti);
+      }
+      lohko.appendChild(kotelo);
+    }
     for (const kappale of tiedot.kappale.split('\n\n').filter(Boolean)) {
       lohko.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
     }
@@ -182667,6 +182768,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 749, teksti: 'Kööpenhamina: palstat, Matkailijalle-kuva, oppaan kuvat' },
   { v: 748, teksti: 'Suurennetun piirroksen osuma-alue 50 % kuvasta' },
   { v: 747, teksti: 'Lippusivut: Lähi-itä (8 maata)' },
   { v: 746, teksti: 'Avauskuvat: Berliini, Helsinki, Pariisi, Lontoo; R2 summana' },
@@ -183512,7 +183614,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.748';
+const APP_VERSION = '2026-08-09.749';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

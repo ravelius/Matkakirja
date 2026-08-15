@@ -10385,6 +10385,50 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   color: #2d2010;
 }
 
+/* Kaupunki kartalla -esittely kahdessa palstassa (omistajan tilaus
+ * 15.8.2026). Kapealla ruudulla palsta ei mahdu lukemaan mukavasti,
+ * joten alle 640 px palataan yhteen. */
+.kaupunkikartta-palstat {
+  columns: 2;
+  column-gap: 1.6rem;
+}
+
+@media (max-width: 640px) {
+  .kaupunkikartta-palstat { columns: 1; }
+}
+
+/* Matkailijalle-osion valokuva otsikon alla oikeassa laidassa
+ * (omistajan tilaus 15.8.2026): teksti kiertää vasemmalta. */
+.matkailijalle-kuva {
+  float: right;
+  width: clamp(10rem, 42%, 17rem);
+  margin: 0.15rem 0 0.5rem 1rem;
+}
+
+.matkailijalle-kuva img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  cursor: zoom-in;
+}
+
+.matkailijalle-kuva .kuvateksti {
+  margin-top: 0.3rem;
+}
+
+/* Kelluva kuva ei saa vuotaa osion alle — opasnappi ja seuraava
+ * lohko alkavat aina puhtaalta riviltä. */
+.matkailijalle .wiki-btn,
+.matkailijalle::after {
+  clear: both;
+}
+
+.matkailijalle::after {
+  content: "";
+  display: block;
+}
+
 /* Kohdepiste on nappi, kun siitä aukeaa artikkeli: yleisen
  * nappisäännön mitat ja tausta nollataan täplän kokoon. */
 .dialog button.maakartta-piste {

@@ -11956,9 +11956,14 @@ export class UI {
     if (!kartta) return;
     const lohko = html('div', 'kaupunkikartta');
     lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Kaupunki kartalla'));
+    // Esittely kahdessa palstassa (omistajan tilaus 15.8.2026:
+    // "kaupunki kartalla teksti voisi olla kahdessa palstassa");
+    // kapealla ruudulla CSS palauttaa yhden palstan.
+    const palstat = html('div', 'kaupunkikartta-palstat');
     for (const kappale of (kartta.esittely ?? '').split('\n\n').filter(Boolean)) {
-      lohko.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
+      palstat.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
     }
+    lohko.appendChild(palstat);
     /*
      * ZOOMATTAVA KARTTAIKKUNA (omistajan tilaus 14.8.2026: "voiko
      * kaupunkikartasta tehdä zoomattavaa ... pyörisi nykyisessä
@@ -12341,6 +12346,26 @@ export class UI {
     if (!tiedot?.kappale) return;
     const lohko = html('div', 'matkailijalle');
     lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Matkailijalle'));
+    /*
+     * Valokuva otsikon alla oikeassa laidassa, teksti kiertää
+     * vasemmalta (omistajan tilaus 15.8.2026). Sama latausputki ja
+     * napautussuurennos kuin nostojen kuvilla; kaupunki ilman
+     * kuva-kenttää taittuu ennalleen.
+     */
+    if (tiedot.kuva?.tiedosto) {
+      const kotelo = html('figure', 'matkailijalle-kuva');
+      const kuva = document.createElement('img');
+      this.varustaNostonKuva(kuva, tiedot.kuva, 640);
+      kotelo.appendChild(kuva);
+      if (tiedot.kuva.selite) {
+        const teksti = html('figcaption', 'kuvateksti', tiedot.kuva.selite);
+        if (tiedot.kuva.lahde) {
+          teksti.appendChild(html('span', 'lehti-kuvalahde', ` ${tiedot.kuva.lahde}`));
+        }
+        kotelo.appendChild(teksti);
+      }
+      lohko.appendChild(kotelo);
+    }
     for (const kappale of tiedot.kappale.split('\n\n').filter(Boolean)) {
       lohko.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
     }
