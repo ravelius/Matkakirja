@@ -43,6 +43,36 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Colin Smith, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
+      /*
+       * Avauskuvat (omistajan linjaukset 15.8.2026: korkean paikan
+       * näkymiä JA muita kuvakulmia, useampi karusellissa). Bussikuva
+       * siirtyi pikkuriviltä karuselliin — pikkurivi näyttää kaksi
+       * ensimmäistä kansikuvaa. Lisenssit tarkistettu Commonsin
+       * API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'London, Greenwich, Blick vom Hügel des Royal Greenwich Observatory -- 2016 -- 4730.jpg',
+          selite: 'Näkymä Greenwichin observatorion mäeltä: alhaalla vanhan '
+            + 'laivastoakatemian valkoiset paviljongit ja Queen\'s House, '
+            + 'takana Canary Wharfin tornit myrskypilvien alla.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Red London Buses - geograph.org.uk - 2792011.jpg',
+          selite: 'Kaksi punaista kaksikerrosbussia Regent Streetillä '
+            + 'kivijulkisivujen välissä — lontoolainen katunäkymä '
+            + 'tiiviimmillään.',
+          lahde: 'Colin Smith, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'More London Office Development at Dusk, London, UK - Diliff.jpg',
+          selite: 'Sinisen hetken Lontoo Thamesin etelärannalla: lasiset '
+            + 'toimistotalot hehkuvat keltaisina ja Shard-torni nousee '
+            + 'niiden takaa. Oikealla häämöttää Tower Bridge.',
+          lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Canaletto maalasi myös Lontoon',
@@ -1081,6 +1111,34 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ank Kumar, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Avauskuvat (omistajan linjaukset 15.8.2026: korkean paikan
+       * näkymiä JA muita kuvakulmia, useampi karusellissa). Lisenssit
+       * tarkistettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Berlin Panorama von der Siegessäule 2021.jpg',
+          selite: 'Näkymä Voitonpylvään huipulta Tiergartenin ruskan yli: '
+            + 'suora bulevardi johtaa Brandenburgin portille, vasemmalla '
+            + 'on valtiopäivätalon lasikupoli ja keskellä kohoaa '
+            + 'tv-torni.',
+          lahde: 'Lear 21, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Skyline Berlin - Das Humboldt-Forum mit Fernsehturm.jpg',
+          selite: 'Ilta-aurinko kultaa Humboldt Forumin — uudelleen '
+            + 'rakennetun kaupunkilinnan — julkisivun Spreen rannalla. '
+            + 'Vasemmalla tv-torni, ja tyyni joki peilaa kaiken.',
+          lahde: 'abbilder, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Berliner Dom, 170409, ako (2).jpg',
+          selite: 'Tuomiokirkon kupolit ja Vanhan kansallisgallerian '
+            + 'pylväikkö peilautuvat Spreestä Museosaaren rannassa.',
+          lahde: 'Ansgar Koreng, Wikimedia Commons (CC BY 3.0 DE)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Gaertner maalasi Berliinin talo talolta',
@@ -1745,6 +1803,33 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Ympärillä kiveen on hakattu sanat POINT ZERO — tästä kohdasta '
             + 'mitataan kaikkien Ranskan maanteiden kilometrit.',
           lahde: 'Jean-Pierre Bazard, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * Avauskuvat (omistajan linjaukset 15.8.2026: korkean paikan
+       * näkymiä JA muita kuvakulmia, useampi karusellissa). Lisenssit
+       * tarkistettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Rooftops seen from Notre-Dame de Paris, 29 May 2009.jpg',
+          selite: 'Pariisin katot Notre-Damen tornista: sinkkipeltiä, '
+            + 'kattoikkunoita ja punasavisia savupiippurivistöjä niin '
+            + 'pitkälle kuin silmä kantaa.',
+          lahde: 'Sharon Mollerus, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Paris la nuit 2016 09 06 (72) (33553876733).jpg',
+          selite: 'Seine yöllä: katulyhtyjen kulta väreilee virrassa, kaksi '
+            + 'jokilaivaa kohtaa Île Saint-Louis\'n rantamuurin edustalla.',
+          lahde: 'Carl Campbell, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Paris - Jardin des Tuileries - Arc de Triomphe du Carrousel - PA00085992 - 003.jpg',
+          selite: 'Carrousel-riemukaari Tuileries\'n puistossa. Napoleonin '
+            + 'voitonmuistomerkin marmoripylväät hohtavat auringossa, ja '
+            + 'kävelijät kulkevat holvien ali Louvrelle.',
+          lahde: 'Thesupermat, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       nostot: [
@@ -3863,6 +3948,35 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lumiselle rannalle talviaamuna. Oikealla on lautta '
             + 'laiturissa, takana Uspenskin katedraalin vihreät kupolit.',
           lahde: 'Pekka Vyhtinen, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      /*
+       * Avauskuvat (omistajan linjaukset 15.8.2026: korkean paikan
+       * näkymiä JA muita kuvakulmia, useampi karusellissa). Lisenssit
+       * tarkistettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg',
+          selite: 'Ilmakuva keskustasta merelle: Tuomiokirkko ja '
+            + 'Senaatintori keskellä, oikealla Esplanadin vihreä nauha ja '
+            + 'edessä Eteläsatama laivoineen. Horisontissa saaristo '
+            + 'jatkuu sinisenä.',
+          lahde: 'Suomen Ilmakuva Oy, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Helsingin Tuomiokirkko ja Senaatintori - D672 - hkm.HKMS000005-km002mzn.jpg',
+          selite: 'Vanha ilmakuva Tuomiokirkosta ja Senaatintorista: torin '
+            + 'laidalla pysäköi menneiden vuosikymmenten autoja, ja takana '
+            + 'näkyvät Uspenskin katedraali ja satama nosturirivistöineen.',
+          lahde: 'SKY-FOTO Möller, Helsingin kaupunginmuseo, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Market Square in Helsinki, Finland, 2024 May.jpg',
+          selite: 'Kauppatori kesäiltana: saaristolaiva laiturissa, '
+            + 'oranssit torikatokset ja kävelijöitä rantalaiturilla. '
+            + 'Takana vasemmalla erottuu Kolera-altaan kaari.',
+          lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       nostot: [

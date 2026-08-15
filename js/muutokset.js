@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 746, teksti: 'Avauskuvat: Berliini, Helsinki, Pariisi, Lontoo; R2 summana' },
   { v: 745, teksti: 'Etusivun avauskaruselli koko palstan levyiseksi' },
   { v: 744, teksti: 'Työhuoneen R2-palkki megatavuina alle gigan' },
   { v: 743, teksti: 'Pöllön kuva: oikea artikkeli varmistetaan, kaimat hylätään' },

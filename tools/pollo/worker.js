@@ -804,23 +804,44 @@ async function haeOpenaiKulut(env, kkAlku) {
   return usd;
 }
 
-/** Anthropicin kuluvan kuukauden kulut dollareina (admin-avaimella). */
+/**
+ * Anthropicin kuluvan kuukauden kulut dollareina (admin-avaimella).
+ *
+ * VAIN PÖLLÖN TYÖTILA, JOS SELLAINEN ON (omistajan kysymys 15.8.2026:
+ * "saisiko clauden kuluihin pelkät api kutsut pöllölle?"). Kulu-
+ * rajapinta erittelee työtiloittain, ei avaimittain: jos
+ * organisaatiossa on työtila nimeltä "Pöllö" (tai POLLO_TYOTILA-
+ * muuttujan nimeämä), summataan vain sen kulut ja vastaus merkitään
+ * rajatuksi. Ilman työtilaa summa on koko organisaation, kuten ennen —
+ * pöllön avaimen pitää silloin asua siinä työtilassa, jotta rajaus
+ * tarkoittaa jotain.
+ */
 async function haeClaudeKulut(env, kkAlku) {
   const avain = env.ANTHROPIC_ADMIN_KEY ?? env.ANTHROPIC_ADMIN_API_KEY;
   if (!avain) return null;
-  const vastaus = await fetch(
-    `https://api.anthropic.com/v1/organizations/cost_report?starting_at=${kkAlku.toISOString()}&limit=31`,
-    { headers: { 'x-api-key': avain, 'anthropic-version': '2023-06-01' } },
-  );
+  const otsakkeet = { 'x-api-key': avain, 'anthropic-version': '2023-06-01' };
+  const haluttu = (env.POLLO_TYOTILA ?? 'Pöllö').toLowerCase();
+  let tyotila = null;
+  try {
+    const vastaus = await fetch('https://api.anthropic.com/v1/organizations/workspaces?limit=100', { headers: otsakkeet });
+    if (vastaus.ok) {
+      const lista = (await vastaus.json())?.data ?? [];
+      tyotila = lista.find((t) => String(t?.name ?? '').toLowerCase() === haluttu)?.id ?? null;
+    }
+  } catch { /* työtilalistaus kaatui — koko organisaation summa */ }
+  const osoite = `https://api.anthropic.com/v1/organizations/cost_report?starting_at=${kkAlku.toISOString()}&limit=31`
+    + (tyotila ? '&group_by[]=workspace_id' : '');
+  const vastaus = await fetch(osoite, { headers: otsakkeet });
   if (!vastaus.ok) return null;
   const data = await vastaus.json();
   let usd = 0;
   for (const sanko of data?.data ?? []) {
     for (const rivi of sanko?.results ?? []) {
+      if (tyotila && rivi?.workspace_id !== tyotila) continue;
       usd += Number(rivi?.amount ?? 0);
     }
   }
-  return usd;
+  return { usd, rajattu: Boolean(tyotila) };
 }
 
 async function hoidaTila(env, kors) {
@@ -849,10 +870,13 @@ async function hoidaTila(env, kors) {
     },
     kulut: {
       openai: openaiKulut,
-      claude: claudeKulut,
+      claude: claudeKulut?.usd ?? null,
+      // Onko Claude-summa rajattu pöllön työtilaan vai koko
+      // organisaation (peli kertoo eron kulurivillä).
+      claudeRajattu: claudeKulut?.rajattu ?? false,
       yhteensa: openaiKulut === null && claudeKulut === null
         ? null
-        : (openaiKulut ?? 0) + (claudeKulut ?? 0),
+        : (openaiKulut ?? 0) + (claudeKulut?.usd ?? 0),
     },
     aika: nyt.toISOString(),
   };
