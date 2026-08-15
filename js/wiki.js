@@ -146,19 +146,73 @@ export async function haeKuvallinenArtikkeli(aihe, {
   const kelpaa = (s) => Boolean(s?.image && !BAD_IMAGE.test(s.image));
   const suora = await fetchSummary(aihe, { fetchImpl, langs });
   if (kelpaa(suora)) return suora;
+  /*
+   * OIKEA ARTIKKELI, KELVOTON PÄÄKUVA (omistajan kuvakaappaus
+   * 15.8.2026: Pariisi-kysymykseen luminen suomalaistie). Kaupunkien
+   * pääkuva on usein montaasi, jonka BAD_IMAGE hylkää — ja vanha
+   * polku hyppäsi silloin HAKUUN, joka vaihtoi aiheen kokonaan
+   * (fi-wikin paras "Pariisi"-hakuosuma voi olla samanniminen kylä).
+   * Nyt parempi kuva haetaan SAMAN artikkelin kuvalistalta; jos
+   * sielläkään ei ole kelvollista valokuvaa, vastaus jää kuvattomaksi.
+   * Väärä kuva on pahempi kuin ei kuvaa.
+   */
+  if (suora) {
+    const kuva = await mediaListKuva(suora, fetchImpl);
+    return kuva ? { ...suora, image: kuva } : null;
+  }
+  // Haku vain kun suoraa artikkelia ei ole (kysymyslause,
+  // taivutusmuoto) — ja osuman on vastattava aihetta nimeltään:
+  // pelkkä "paras osuma" toi väärän aiheen kuvia.
   for (const lang of langs) {
     try {
       const res = await fetchImpl(searchUrl(lang, aihe));
       if (!res?.ok) continue;
       const osuma = (await res.json())?.query?.search?.[0]?.title;
-      if (!osuma) continue;
+      if (!osuma || !otsikkoVastaa(aihe, osuma)) continue;
       const s = await fetchSummary(osuma, { fetchImpl, langs: [lang] });
       if (kelpaa(s)) return s;
+      if (s) {
+        const kuva = await mediaListKuva(s, fetchImpl);
+        if (kuva) return { ...s, image: kuva };
+      }
     } catch {
       /* ei yhteyttä — kokeillaan seuraavaa kieltä */
     }
   }
   return null;
+}
+
+/**
+ * Vastaako hakuosuman otsikko aihetta? Portti hakupolulle: osuma
+ * kelpaa vain, jos se on sama nimi, sisältyy aiheeseen (kysymyslause
+ * sisältää artikkelin nimen) tai eroaa vain taivutuspäätteeltään.
+ * Sulkutarkenteinen otsikko ("Pariisi (Ylöjärvi)") hylätään, ellei
+ * aiheessa itsessään ole sulkeita — kaimakylät ovat juuri se väärien
+ * kuvien lähde, jota tämä portti vartioi.
+ */
+export function otsikkoVastaa(aihe, otsikko) {
+  const a = String(aihe ?? '').toLowerCase().trim();
+  const o = String(otsikko ?? '').toLowerCase().trim();
+  if (!a || !o) return false;
+  if (/\(.+\)/.test(o) && !/\(.+\)/.test(a)) return false;
+  if (a === o || a.includes(o) || o.includes(a)) return true;
+  // Taivutusmuoto ilman sisältyvyyttä (esim. "kirkot" / "kirkko"):
+  // yhteinen alku vähintään 4 merkkiä ja 70 % lyhyemmästä.
+  let i = 0;
+  while (i < a.length && i < o.length && a[i] === o[i]) i += 1;
+  const lyhin = Math.min(a.length, o.length);
+  return lyhin >= 4 && i >= Math.max(4, Math.ceil(lyhin * 0.7));
+}
+
+/** Artikkelin oman kuvalistan ensimmäinen kelvollinen valokuva. */
+async function mediaListKuva(summary, fetchImpl = globalThis.fetch) {
+  try {
+    const res = await fetchImpl(mediaListUrl(summary.lang, summary.title));
+    if (!res?.ok) return null;
+    return pickImage((await res.json())?.items);
+  } catch {
+    return null;
+  }
 }
 
 /**
