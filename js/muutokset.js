@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 751, teksti: 'lippusivut: Kaakkois- ja Etelä-Aasia (10 maata)' },
   { v: 750, teksti: 'paluunuoli henkilöjuttuun; työhuoneen kulurivin oikea syy' },
   { v: 749, teksti: 'Kööpenhamina: palstat, Matkailijalle-kuva, oppaan kuvat' },
   { v: 748, teksti: 'Suurennetun piirroksen osuma-alue 50 % kuvasta' },
