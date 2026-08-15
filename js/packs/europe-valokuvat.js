@@ -1430,15 +1430,11 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Txllxt TxllxT, Commons (CC BY-SA 4.0)',
 
-        selite: 'Hochstrahlbrunnen-suihkulähde Schwarzenbergplatzilla. Se '
-
+        selite: 'Hochstrahlbrunnen Schwarzenbergplatzilla. Suihkulähde '
           + 'otettiin käyttöön 24. lokakuuta 1873 juhlistamaan Wienin '
-
-          + 'ensimmäisen vuoristovesijohdon valmistumista — sen samaisen, '
-
-          + 'jonka avaamisen isoisä merkitsi muistiin. Suihku nousee ilman '
-
-          + 'pumppuja, pelkän korkeuseron voimalla.',
+          + 'ensimmäisen vuoristovesijohdon valmistumista — sen, jonka '
+          + 'avaamisen isoisä merkitsi muistiin. Suihku nousee pelkän '
+          + 'korkeuseron voimalla.',
 
       },
 

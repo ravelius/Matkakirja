@@ -408,11 +408,10 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'A street in Old Town, Karachi, India. Photograph, 1897. Wellcome V0029261.jpg',
     vuosi: '1897',
     lahde: 'R. Jalbhoy / Wellcome Collection, Commons (CC BY 4.0)',
-    selite: 'Rampart Row Karachin vanhassakaupungissa: leveä päällystämätön katu, '
-      + 'kivitaloja ja niiden julkisivuilla riveittäin veistettyjä '
+    selite: 'Rampart Row Karachin vanhassakaupungissa: leveä päällystämätön '
+      + 'katu ja kivitaloja, joiden julkisivuilla on riveittäin veistettyjä '
       + 'puuparvekkeita. Vedos on kaupungin ruttokomitean teettämästä '
-      + 'sarjasta, ja korttelit näyttivät yhä samalta kun isoisä nousi '
-      + 'maihin runsaat kaksikymmentä vuotta myöhemmin.',
+      + 'sarjasta, ja korttelit näyttivät samalta isoisän noustessa maihin.',
     lisat: [
       {
         tiedosto: 'Rustpauze bij de oase van Malir bij Karachi, Bestanddeelnr 255-8196.jpg',
@@ -465,11 +464,11 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'Kurt boeck indien nepal 265A.jpg',
     vuosi: '1898',
     lahde: 'Kurt Boeck, Commons (PD)',
-    selite: 'Puuleikkauksin koristeltu newar-temppeli kuninkaanpalatsin edustalla '
-      + 'Kathmandussa vuonna 1898. Saksalainen Kurt Boeck julkaisi kuvan '
-      + 'kirjassa, jonka nimi kuului suomeksi suunnilleen \'Intian kautta '
-      + 'suljettuun maahan Nepaliin\' — ulkomaalaisia päästettiin maahan '
-      + 'tuolloin vain harvoin.',
+    selite: 'Puuleikkauksin koristeltu newar-temppeli kuninkaanpalatsin '
+      + 'edustalla Kathmandussa 1898. Saksalainen Kurt Boeck julkaisi kuvan '
+      + 'kirjassa, jonka nimi kuuluu suomeksi \'Intian kautta suljettuun '
+      + 'maahan Nepaliin\' — ulkomaalaisia päästettiin maahan tuolloin '
+      + 'harvoin.',
     lisat: [
       {
         tiedosto: 'Asan Spice Market,Kathmandu,Nepal.jpg',
@@ -902,11 +901,11 @@ export const ASIA_LISAT_VALOKUVAT = {
     tiedosto: 'De Nijûbashi-brug bij het Edo-kasteel van Tokyo Nijûbashi (titel op object), RP-F-F01177-AC.jpg',
     vuosi: '1870–1900',
     lahde: 'Rijksmuseum, Commons (CC0)',
-    selite: 'Nijūbashin silta Edon linnan vallihaudan yli, kuvattuna 1800-luvun '
-      + 'jälkipuoliskolla. Linnasta tuli keisarin palatsi, kun hovi siirtyi '
-      + 'Kiotosta tänne 1868 ja Edon nimi vaihtui Tokioksi. Vedos on osa '
-      + 'hollantilaista matka-albumia, johon oli koottu kolmisenkymmentä '
-      + 'näkymää Japanista.',
+    selite: 'Nijūbashin silta Edon linnan vallihaudan yli 1800-luvun '
+      + 'jälkipuoliskolta. Linnasta tuli keisarin palatsi, kun hovi siirtyi '
+      + 'Kiotosta tänne 1868 ja Edon nimi vaihtui Tokioksi. Vedos on '
+      + 'hollantilaisesta matka-albumista, johon koottiin näkymiä '
+      + 'Japanista.',
     lisat: [
       {
         tiedosto: 'Tsukiji Market.jpg',
