@@ -1928,6 +1928,89 @@ await sivu.evaluate(async () => {
   document.getElementById('nahtavyys-dialog')?.close();
   await new Promise((r) => setTimeout(r, 300));
 });
+
+/* ================================================================== */
+/* 3i) Vastauksen kuva kuplan kulmassa (omistajan tilaus 15.8.2026)    */
+/* ================================================================== */
+
+/*
+ * "Olisiko pöllön mahdollista hakea aina yksi kuva per vastaus, joka
+ * näkyisi ensin suhteellisen pienenä oikeassa yläreunassa ja jonka
+ * voisi klikata sitten auki isommaksi?"
+ *
+ * Kaksi polkua: paikallinen nähtävyyskuva (Tower-vastaus yllä sai
+ * sellaisen) ja Wikipedian pääkuva, jonka summary-rajapinta mockataan.
+ */
+const pikkukuvaOma = await sivu.evaluate(() => {
+  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  const nappi = vastaus?.querySelector('.pollo-vastauskuva');
+  if (!nappi) return { loytyi: false };
+  const kuva = nappi.getBoundingClientRect();
+  const kupla = vastaus.getBoundingClientRect();
+  return {
+    loytyi: true,
+    pieni: kuva.width <= 120 && kuva.height <= 120,
+    oikealla: Math.abs(kuva.right - kupla.right) < 48,
+    ylhaalla: kuva.top - kupla.top < 48,
+  };
+});
+vaadi('paikallinen pikkukuva on vastauskuplan oikeassa yläkulmassa',
+  pikkukuvaOma.loytyi === true && pikkukuvaOma.pieni === true
+  && pikkukuvaOma.oikealla === true && pikkukuvaOma.ylhaalla === true,
+  JSON.stringify(pikkukuvaOma));
+
+// Wikipedia-polku: kuvattomaan vastaukseen haetaan artikkelin pääkuva.
+await sivu.route('**wikipedia.org/api/rest_v1/page/summary/**', (route) => route.fulfill({
+  status: 200,
+  contentType: 'application/json; charset=utf-8',
+  body: JSON.stringify({
+    title: 'Koekuva',
+    extract: 'K'.repeat(220),
+    // Tiedostonimi ei saa osua BAD_IMAGE-suodattimeen (logo, icon, …).
+    thumbnail: { source: 'http://127.0.0.1:8734/assets/tyohuone-192.png' },
+    content_urls: { desktop: { page: 'https://fi.wikipedia.org/wiki/Koekuva' } },
+  }),
+}));
+const pikkukuvaWiki = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  if (document.querySelector('.pollo-paneeli').hidden) {
+    document.querySelector('.pollo-nappi').click();
+    await odota(600);
+  }
+  document.querySelector('.pollo-kirjoita').click();
+  await odota(150);
+  // "varapolku": vastauksessa ei ole pelin indeksin sanoja eikä kuvaa.
+  document.querySelector('.pollo-kentta').value = 'Kerro varapolku höpöhöpö kummallisuudesta';
+  document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
+  await odota(1400);
+  const vastaus = [...document.querySelectorAll('.pollo-pollo')].at(-1);
+  const nappi = vastaus?.querySelector('.pollo-vastauskuva');
+  if (!nappi) return { loytyi: false };
+  nappi.click();
+  await odota(500);
+  const popup = document.querySelector('.pollo-kuvatausta');
+  const tulos = {
+    loytyi: true,
+    isoAuki: Boolean(popup),
+    lahde: popup?.querySelector('.pollo-kuvalahde')?.textContent ?? '',
+    linkki: popup?.querySelector('.pollo-kuvalahde')?.getAttribute('href') ?? '',
+  };
+  // Napautus kortin ulkopuolelle sulkee ison kuvan.
+  popup?.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
+  popup?.click();
+  await odota(300);
+  tulos.sulkeutui = !document.querySelector('.pollo-kuvatausta');
+  return tulos;
+});
+vaadi('Wikipedian pikkukuva ilmestyy kuvattomaan vastaukseen',
+  pikkukuvaWiki.loytyi === true, JSON.stringify(pikkukuvaWiki));
+vaadi('napautus avaa ison kuvan Wikipedia-lähdelinkillä',
+  pikkukuvaWiki.isoAuki === true && /Wikipedia/.test(pikkukuvaWiki.lahde)
+  && /wikipedia\.org/.test(pikkukuvaWiki.linkki), JSON.stringify(pikkukuvaWiki));
+vaadi('napautus ulkopuolelle sulkee ison kuvan', pikkukuvaWiki.sulkeutui === true,
+  JSON.stringify(pikkukuvaWiki));
+await sivu.screenshot({ path: join(ULOS, 'pollo-vastauskuva-390.png') });
+await sivu.unroute('**wikipedia.org/api/rest_v1/page/summary/**');
 await sivu.unroute(/Special:FilePath/);
 
 /* Leveä ruutu: samat kaappaukset 900 pikselillä. */

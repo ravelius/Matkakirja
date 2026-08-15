@@ -12046,6 +12046,38 @@ button.pollo-kuvanappi {
 
 button.pollo-kuvanappi:hover { background: rgba(122, 85, 20, 0.12); }
 
+/* Lähdelinkki Wikipedian kuvan alla (pollo.js avaaWikiKuva):
+   ulkopuolinen kuva ei koskaan esiinny ilman lähdettään. */
+a.pollo-kuvalahde {
+  margin: 0;
+  color: var(--pollo-muste-himmea);
+  font-size: 0.75rem;
+  text-decoration: underline;
+}
+
+/* Vastauksen pikkukuva kuplan oikeassa yläkulmassa (omistajan tilaus
+   15.8.2026): teksti kiertää kuvan, napautus avaa ison version. */
+.pollo-viesti .pollo-vastauskuva {
+  float: right;
+  width: 5.2rem;
+  height: 5.2rem;
+  margin: 0.1rem 0 0.35rem 0.55rem;
+  padding: 0;
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  border-radius: 6px;
+  overflow: hidden;
+  background: none;
+  cursor: zoom-in;
+  min-height: 0;
+}
+
+.pollo-vastauskuva img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Jatkokysymykset vastauksen alla. Samaa muotoa kuin avausruudun
    ehdotukset (.pollo-ehdotus), mutta virran sisällä: ne kuuluvat juuri
    siihen vastaukseen, jonka perässä ne ovat. */

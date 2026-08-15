@@ -56,6 +56,7 @@ import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
+import { BAD_IMAGE, fetchSummary, suurennusportaat } from './wiki.js';
 import { lueAaneen, lueVirtana, lukijaTuettu, pysaytaLukija } from './lukija.js';
 import { sfx } from './sound.js';
 import {
@@ -455,6 +456,25 @@ export function jasennaKasitteet(teksti, katto = KASITTEIDEN_KATTO) {
   }
   palat.push({ teksti: poistaKasiteMerkinnat(koko.slice(kohta)), kasite: false });
   return palat.filter((pala) => pala.teksti);
+}
+
+/**
+ * VASTAUKSEN KUVAN HAKUAIHE (omistajan tilaus 15.8.2026: "pöllö hakisi
+ * aina yksi kuva per vastaus").
+ *
+ * Paras aihe on pöllön oma ensimmäinen käsitemerkintä: pöllö on jo
+ * poiminut vastauksensa avainkäsitteet, ja ensimmäinen niistä on
+ * yleensä vastauksen pääaihe. Ilman merkintöjä aiheeksi kelpaa
+ * pelaajan kysymys sellaisenaan — Wikipedian haku sietää kokonaisen
+ * lauseen. Katkenneessa striimissä puolikas merkintä ei kelpaa
+ * aiheeksi: jasennaKasitteet tunnistaa vain kokonaiset [[...]]-parit.
+ */
+export function vastauskuvanAihe(teksti, kysymys = '') {
+  for (const pala of jasennaKasitteet(teksti)) {
+    if (pala.kasite && pala.aihe) return pala.aihe;
+  }
+  const siisti = polloSiisti(kysymys).replace(/[?!.]+$/, '').trim();
+  return siisti || null;
 }
 
 /* ------------------------------------------------------------------ */
@@ -1514,6 +1534,155 @@ class Pollo {
     tausta.remove();
   }
 
+  /* --- vastauksen kuva (omistajan tilaus 15.8.2026) ----------------- */
+
+  /*
+   * "Olisiko pöllön mahdollista hakea aina yksi kuva per vastaus, joka
+   * näkyisi ensin suhteellisen pienenä oikeassa yläreunassa ja jonka
+   * voisi klikata sitten auki isommaksi?"
+   *
+   * Kuva valitaan kahdesta lähteestä tässä järjestyksessä:
+   *
+   *   1. PELIN OMA AINEISTO. Jos paikallinen haku osui nähtävyysjuttuun,
+   *      jolla on kuva, käytetään sitä: kuva on tarkistettu, kuvateksti
+   *      valmis ja napautus avaa tutun kuvapopupin "Avaa juttu"
+   *      -nappeineen.
+   *   2. WIKIPEDIA. Muuten haetaan vastauksen ensimmäisen käsitteen
+   *      (tai kysymyksen) artikkelin pääkuva samalla rajapinnalla kuin
+   *      Lue lisää -ikkunassa (js/wiki.js). Montaasit, kartat ja logot
+   *      karsii sama BAD_IMAGE-suodatin. Napautus avaa kuvan isompana
+   *      lähdelinkin kera.
+   *
+   * Ilman verkkoa tai osumaa vastaus jää kuvattomaksi — se on
+   * kelvollinen lopputulos, ei virhe.
+   */
+  liitaVastausKuva(viesti, teksti, kysymys) {
+    // Poletti mitätöi myöhässä valmistuvan haun, jos uusi kysymys on
+    // jo lähtenyt (sama malli kuin ehdotuksilla).
+    const poletti = (this.vastausKuvaPoletti = (this.vastausKuvaPoletti ?? 0) + 1);
+    const oma = this.paikallinenVastausKuva();
+    if (oma) {
+      this.naytaVastausKuva(viesti, {
+        esikatselu: valokuvaUrl(oma.kuva.tiedosto, 320),
+        vara: valokuvaVara(oma.kuva.tiedosto, 320),
+        seloste: oma.kuva.selite ?? oma.reitti.kohde ?? '',
+        avaa: () => this.avaaLinkki(oma.reitti),
+      });
+      return;
+    }
+    const aihe = vastauskuvanAihe(teksti, kysymys);
+    if (!aihe) return;
+    fetchSummary(aihe).then((summary) => {
+      if (poletti !== this.vastausKuvaPoletti) return;
+      if (!viesti?.isConnected) return;
+      const kuva = summary?.image && !BAD_IMAGE.test(summary.image)
+        ? summary.image : null;
+      if (!kuva) return;
+      this.naytaVastausKuva(viesti, {
+        esikatselu: kuva,
+        seloste: summary.title ?? aihe,
+        avaa: () => this.avaaWikiKuva(summary),
+      });
+    }).catch(() => {
+      /* ei yhteyttä — kuvaton vastaus on kelvollinen */
+    });
+  }
+
+  /** Paikallisen haun osumista ensimmäinen, jolla on kuva. */
+  paikallinenVastausKuva() {
+    for (const katkelma of this.viimeisetKatkelmat ?? []) {
+      const reitti = katkelma?.reitti;
+      const kuva = this.jutunKuva(reitti);
+      if (kuva && this.reittiAvattavissa(reitti)) return { reitti, kuva };
+    }
+    return null;
+  }
+
+  /**
+   * Pieni kuva vastauskuplan oikeaan yläkulmaan. Teksti kiertää sen
+   * (float), ja napautus avaa ison version. Kuva lisätään vasta valmiin
+   * vastauksen renderöintiin, koska striimi kirjoittaa kuplan
+   * textContentin yli palasta toiseen.
+   */
+  naytaVastausKuva(viesti, { esikatselu, vara = null, seloste = '', avaa }) {
+    if (!viesti || viesti.querySelector('.pollo-vastauskuva')) return;
+    const nappi = polloElementti('button', 'pollo-vastauskuva');
+    nappi.type = 'button';
+    nappi.title = 'Näytä kuva isompana';
+    nappi.setAttribute('aria-label', seloste
+      ? `Näytä kuva isompana: ${seloste}` : 'Näytä kuva isompana');
+    const el = this.doc.createElement('img');
+    el.alt = seloste;
+    el.decoding = 'async';
+    el.draggable = false;
+    // Kuvan latautuminen kasvattaa kuplaa: varattu tyhjä elää mukana,
+    // ettei ankkuroitu näkymä nytkähdä.
+    el.addEventListener('load', () => this.paivitaTyhjaTila());
+    if (vara) asetaKuva(el, esikatselu, vara);
+    else el.src = esikatselu;
+    nappi.appendChild(el);
+    nappi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      avaa?.();
+    });
+    viesti.insertBefore(nappi, viesti.firstChild);
+    this.paivitaTyhjaTila();
+  }
+
+  /**
+   * Wikipedian kuva isompana: sama paperikortti kuin nähtävyyksien
+   * kuvapopupissa, mutta napin tilalla lähdelinkki artikkeliin —
+   * ulkopuolinen kuva ei koskaan esiinny ilman lähdettään.
+   */
+  avaaWikiKuva(summary) {
+    this.suljeKuvapopup();
+    const tausta = this.doc.createElement('dialog');
+    tausta.className = 'pollo-kuvatausta';
+    tausta.addEventListener('pointerdown', (e) => e.stopPropagation());
+    tausta.addEventListener('click', (e) => {
+      if (e.target === tausta) this.suljeKuvapopup();
+    });
+    tausta.addEventListener('close', () => {
+      tausta.remove();
+      if (this.kuvapopup === tausta) this.kuvapopup = null;
+    });
+
+    const kortti = polloElementti('figure', 'pollo-kuvakortti');
+    const el = this.doc.createElement('img');
+    el.className = 'pollo-kuva';
+    el.alt = summary.title ?? '';
+    el.decoding = 'async';
+    el.draggable = false;
+    // Suurin ensin, pikkukuva viimeisenä varana (js/wiki.js:n portaat).
+    const portaat = suurennusportaat(summary.image);
+    let porras = 0;
+    el.addEventListener('error', () => {
+      porras += 1;
+      if (porras < portaat.length) el.src = portaat[porras];
+    });
+    el.src = portaat[0] ?? summary.image;
+    kortti.appendChild(el);
+
+    if (summary.title) {
+      kortti.appendChild(polloElementti('figcaption', 'pollo-kuvateksti', summary.title));
+    }
+    const lahde = polloElementti('a', 'pollo-kuvalahde', `Kuva: Wikipedia — ${summary.title ?? ''}`);
+    lahde.href = summary.url ?? '#';
+    lahde.target = '_blank';
+    lahde.rel = 'noopener noreferrer';
+    kortti.appendChild(lahde);
+
+    tausta.appendChild(kortti);
+    this.doc.body.appendChild(tausta);
+    this.kuvapopup = tausta;
+    try {
+      tausta.showModal();
+    } catch {
+      tausta.setAttribute('open', '');
+    }
+    return true;
+  }
+
   /** Lehden sivunvaihto: sivu 0 on kansi, siksi +1. */
   siirraSivulle(ui, sivuId) {
     if (!sivuId) return;
@@ -2367,6 +2536,10 @@ class Pollo {
           // vastauksen alla on vain sitä koskevat ehdotukset.
           this.naytaJatkot(tulos?.jatkot);
         }
+        // Kuva vastauksen oikeaan yläkulmaan (omistajan tilaus
+        // 15.8.2026). Paikallinen kuva tulee heti; Wikipedian haku
+        // valmistuu omaan tahtiinsa eikä koske näkymän ankkuriin.
+        this.liitaVastausKuva(viesti, teksti, kysymys);
         /*
          * Näkymään ei kosketa: ankkuri asetettiin kysymyksen kohdalla.
          * Valmis vastaus, sen linkit ja jatkokysymykset kirjoittuvat
