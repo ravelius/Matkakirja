@@ -10439,6 +10439,42 @@ body.vertailu-tila .pawns { display: none; }
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Piirros numeron paikalla (omistajan tilaus 15.8.2026): pyöreä
+ * pikkupiirros, numero badgena kulmassa selitelistaa varten. Sama
+ * vastaskaalaus kuin numeroympyrällä (.kartta-lava-sääntö yllä). */
+.maakartta-piste.kohde-numero.kohde-piirros {
+  width: 46px;
+  height: 46px;
+  background: #f2ecd8;
+  overflow: visible;
+}
+
+.kohde-piirros-kuva {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.kohde-piirros-numero {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e8d3a0;
+  border: 1.5px solid #2c2318;
+  color: #2c1e07;
+  font-size: 0.62rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 /*
  * Kohteen nimi hiiren alla — VAIN osoitinlaitteella.
  *
@@ -88149,6 +88185,35 @@ const MINIATYYRIT = {
     'Tv-torni': 'assets/kartat/miniatyyrit/berliini-tv-torni.jpg',
     'East Side Gallery': 'assets/kartat/miniatyyrit/berliini-east-side-gallery.jpg',
   },
+  helsinki: {
+    'Temppeliaukion kirkko': 'assets/kartat/miniatyyrit/helsinki-temppeliaukion-kirkko.jpg',
+    Linnanmäki: 'assets/kartat/miniatyyrit/helsinki-linnanmaki.jpg',
+    Päärautatieasema: 'assets/kartat/miniatyyrit/helsinki-paarautatieasema.jpg',
+    'Kaisaniemen puisto': 'assets/kartat/miniatyyrit/helsinki-kaisaniemen-puisto.jpg',
+    'Kallion kirkko': 'assets/kartat/miniatyyrit/helsinki-kallion-kirkko.jpg',
+    Tuomiokirkko: 'assets/kartat/miniatyyrit/helsinki-tuomiokirkko.jpg',
+    'Uspenskin katedraali': 'assets/kartat/miniatyyrit/helsinki-uspenskin-katedraali.jpg',
+    Johanneksenkirkko: 'assets/kartat/miniatyyrit/helsinki-johanneksenkirkko.jpg',
+    Suomenlinna: 'assets/kartat/miniatyyrit/helsinki-suomenlinna.jpg',
+  },
+  pariisi: {
+    'Eiffel-torni': 'assets/kartat/miniatyyrit/pariisi-eiffel-torni.jpg',
+    Riemukaari: 'assets/kartat/miniatyyrit/pariisi-riemukaari.jpg',
+    'Concorden aukio': 'assets/kartat/miniatyyrit/pariisi-concorden-aukio.jpg',
+    Louvre: 'assets/kartat/miniatyyrit/pariisi-louvre.jpg',
+    'Luxembourgin puisto': 'assets/kartat/miniatyyrit/pariisi-luxembourgin-puisto.jpg',
+    'Sacré-Cœur': 'assets/kartat/miniatyyrit/pariisi-sacre-coeur.jpg',
+    Panthéon: 'assets/kartat/miniatyyrit/pariisi-pantheon.jpg',
+    'Notre-Dame': 'assets/kartat/miniatyyrit/pariisi-notre-dame.jpg',
+  },
+  lontoo: {
+    'Buckinghamin palatsi': 'assets/kartat/miniatyyrit/lontoo-buckinghamin-palatsi.jpg',
+    'Trafalgar Square': 'assets/kartat/miniatyyrit/lontoo-trafalgar-square.jpg',
+    'Big Ben': 'assets/kartat/miniatyyrit/lontoo-big-ben.jpg',
+    'Lontoon silmä': 'assets/kartat/miniatyyrit/lontoo-lontoon-silma.jpg',
+    'Pyhän Paavalin katedraali': 'assets/kartat/miniatyyrit/lontoo-pyhan-paavalin-katedraali.jpg',
+    'Tower Bridge': 'assets/kartat/miniatyyrit/lontoo-tower-bridge.jpg',
+  },
 };
 
 // ===== js/packs/henkilot.js =====
@@ -108965,6 +109030,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v710 — piirrokset pisteinä + kortit 4 kaupungissa',
   'v709 — värikartat: Helsinki, Pariisi, Lontoo',
   'v708 — Berliinin pisteet: piirroskortti + juttuun',
   'v707 — Berliinin värikartta (vipu kartalla)',
@@ -173811,7 +173877,28 @@ class UI {
       const p = karttapiste(kartta, k.lat, k.lon);
       // Napautettava, jos kohteella on oma juttu TAI wiki-artikkeli.
       const avattava = Boolean(k.teksti || k.wiki);
-      const piste = html(avattava ? 'button' : 'span', 'maakartta-piste kaupunki-kohde kohde-numero', numero);
+      const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi] ?? null;
+      /*
+       * PIIRROS NUMERON PAIKALLA (omistajan tilaus 15.8.2026:
+       * "Piirrokset kartalla saisi näkyä numeroiden paikalla").
+       * Kohde, jolla on miniatyyri, piirtyy kartalle pienenä pyöreänä
+       * piirroksena; numero istuu badgena sen kulmassa, jotta
+       * selitelistan numerointi pysyy luettavana. Kohde ilman
+       * miniatyyriä on entinen numeroympyrä.
+       */
+      const piste = html(avattava ? 'button' : 'span',
+        'maakartta-piste kaupunki-kohde kohde-numero', miniatyyri ? '' : numero);
+      if (miniatyyri) {
+        piste.classList.add('kohde-piirros');
+        const pikku = document.createElement('img');
+        pikku.className = 'kohde-piirros-kuva';
+        pikku.alt = '';
+        pikku.decoding = 'async';
+        pikku.draggable = false;
+        pikku.src = miniatyyri;
+        piste.appendChild(pikku);
+        piste.appendChild(html('span', 'kohde-piirros-numero', numero));
+      }
       piste.style.left = `${p.x.toFixed(1)}%`;
       piste.style.top = `${p.y.toFixed(1)}%`;
       const selite = html(avattava ? 'button' : 'span', 'kartta-selite');
@@ -173834,7 +173921,6 @@ class UI {
        * juttuun kuten ennenkin — listassa nimi ja numero kertovat jo
        * saman kuin kortti.
        */
-      const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi] ?? null;
       const avaa = (miniatyyri && avaaJuttu)
         ? () => this.naytaMiniatyyri(kehys, { kuva: miniatyyri, kohde: k, avaaJuttu })
         : avaaJuttu;
@@ -179681,6 +179767,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 710, teksti: 'Miniatyyrit kolmeen kaupunkiin ja piirrokset pisteiksi' },
   { v: 709, teksti: 'Värikartat Helsinkiin, Pariisiin ja Lontooseen' },
   { v: 708, teksti: 'Berliinin kohteille miniatyyripiirrokset ja karttakortti' },
   { v: 707, teksti: 'Berliinin kohdekartta värein — vipu satelliitin tilalle' },
@@ -180487,7 +180574,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.709';
+const APP_VERSION = '2026-08-09.710';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

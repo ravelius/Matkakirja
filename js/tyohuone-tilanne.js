@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v710 — piirrokset pisteinä + kortit 4 kaupungissa',
   'v709 — värikartat: Helsinki, Pariisi, Lontoo',
   'v708 — Berliinin pisteet: piirroskortti + juttuun',
   'v707 — Berliinin värikartta (vipu kartalla)',

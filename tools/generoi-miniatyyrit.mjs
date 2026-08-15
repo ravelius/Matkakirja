@@ -56,7 +56,13 @@ const TYYLI = (aihe) => 'A miniature illustrated landmark for a vintage '
   + 'paper background (like aged map paper, #f2ecd8) that fills the '
   + 'ENTIRE square canvas edge to edge; only a soft small shadow under '
   + 'the building. No surrounding streets or map, no text, no letters, '
-  + 'no signs, no frame, no border, no people in front. Square 1:1.';
+  + 'no signs, no frame, no border, no people in front. Square 1:1. '
+  // Sama vartio kuin kohtaamiskuvissa: tausta on koko kanvaasi, EI
+  // pöydällä makaava paperiarkki — Tower Bridgen ensimmäiseen ottoon
+  // piirtyi arkin reunat ja varjo, joka lukisi kortilla kehyksenä.
+  + 'The cream paper fills the whole canvas edge to edge: do NOT paint '
+  + 'a sheet of paper lying on a surface, no paper edges, no drop '
+  + 'shadow around the background, no rectangular panel.';
 
 /*
  * Kohteet kaupungeittain. AVAIMEN ALKUOSA on kaupungin tunnus ja
