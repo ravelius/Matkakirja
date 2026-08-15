@@ -44,6 +44,20 @@
  * sellaisenaan (jokainen asennus lataa listan kokonaan) — pakkaa se
  * silloin uudelleen tools/pakkaa-jpeg.mjs:llä.
  *
+ * --- reunuksellinen juliste (15.8.2026) ---
+ *
+ * Kun kartalla on piirtoRajat (juliste jatkuu ydinrajauksen yli, ks.
+ * maakartat.js), satelliittikuva haetaan YHÄ PELKÄSTÄ
+ * YDINRAJAUKSESTA. Se on tietoinen valinta eikä puute: lehti asettaa
+ * satelliittikuvan tarkalleen ydinrajauksen päälle ja rajaa
+ * panoroinnin satelliittinäkymässä siihen (ui.js), joten reunusta ei
+ * satelliitissa ole. Kuvasuhde luetaan siis PNG:n ydinosasta ja
+ * kainaloiden prosentit muunnetaan kuvan prosenteista ydinrajauksen
+ * prosenteiksi. Jos reunus joskus halutaan myös satelliittiin, muutos
+ * on tässä yksi rivi (kartta.piirtoRajat ?? kartta.rajat) — mutta se
+ * on omistajan päätös, koska kuva kasvaa 2,6-kertaiseksi eikä
+ * s2cloudlessin 10 m/px tarkennu siitä.
+ *
  * --- kainalokartat satelliittikuvaan (15.8.2026) ---
  *
  * Jos kaupungilla on kainalokartta (maakartat.js:n kainalot-lohko),
@@ -96,7 +110,7 @@ if (!process.env.NODE_USE_ENV_PROXY && (process.env.HTTPS_PROXY || process.env.h
   process.exit(ajo.status ?? 1);
 }
 
-const { KAUPUNKIKARTAT } = await import('../js/packs/maakartat.js');
+const { KAUPUNKIKARTAT, ydinAla } = await import('../js/packs/maakartat.js');
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PALVELIN = 'https://tiles.maps.eox.at/wms';
@@ -225,8 +239,21 @@ async function haeKaupunki(id) {
   if (!kartta.rajat) throw new Error(`${id}: rajat puuttuvat (laea tai kainalokartta?)`);
   if (!kartta.polku) throw new Error(`${id}: ei piirrettyä PNG:tä (polku puuttuu)`);
 
+  /*
+   * REUNUKSELLINEN JULISTE (maakartat.js: piirtoRajat, 15.8.2026).
+   * Piirretty PNG kattaa silloin ydinrajausta laajemman alan, mutta
+   * SATELLIITTIKUVA HAETAAN YHÄ PELKÄSTÄ YDINRAJAUKSESTA — lehti
+   * asettaa sen tarkalleen ydinrajauksen päälle ja rajaa panoroinnin
+   * satelliittinäkymässä siihen (ui.js). Kuvasuhde luetaan siis
+   * PNG:n ydinosasta eikä koko kuvasta, ja kainaloiden prosentit
+   * muunnetaan kuvan prosenteista ydinrajauksen prosenteiksi.
+   * Laajentamattomalla kartalla molemmat ovat entisellään.
+   */
   const piirretty = pngMitat(join(JUURI, kartta.polku));
-  const korkeus = Math.round((LEVEYS * piirretty.korkeus) / piirretty.leveys);
+  const ydin = ydinAla(kartta);
+  const ydinLeveysPx = (piirretty.leveys * ydin.leveys) / 100;
+  const ydinKorkeusPx = (piirretty.korkeus * ydin.korkeus) / 100;
+  const korkeus = Math.round((LEVEYS * ydinKorkeusPx) / ydinLeveysPx);
   const tavut = await haeRuutu(id, kartta.rajat, LEVEYS, korkeus);
 
   /*
@@ -235,7 +262,14 @@ async function haeKaupunki(id) {
    * turhaa dataa — ja koska kainalo on tiukka rajaus, se on joka
    * tapauksessa s2cloudlessin 10 m/px -rajan yläpuolella (ks. yllä).
    */
-  const kainalot = kartta.kainalot ?? [];
+  const kainalot = (kartta.kainalot ?? []).map((kainalo) => ({
+    ...kainalo,
+    // Kuvan prosentit → ydinrajauksen prosentit (ks. yllä).
+    x: ((kainalo.x - ydin.x) / ydin.leveys) * 100,
+    y: ((kainalo.y - ydin.y) / ydin.korkeus) * 100,
+    leveys: (kainalo.leveys / ydin.leveys) * 100,
+    korkeus: (kainalo.korkeus / ydin.korkeus) * 100,
+  }));
   const ruudut = [];
   for (const kainalo of kainalot) {
     await new Promise((r) => setTimeout(r, TAUKO_MS));

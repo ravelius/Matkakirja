@@ -10124,6 +10124,26 @@ body.vertailu-tila .pawns { display: none; }
   transform-origin: 0 0;
 }
 
+/*
+ * KARTTA JATKUU REUNOJEN YLI (omistajan tilaus 15.8.2026). Juliste on
+ * piirretty ydinrajausta laajemmalta alueelta, ja lava on siksi
+ * kehystä suurempi: leveys, kuvasuhde ja negatiivinen siirto tulevat
+ * datasta (ui.js: piirraKaupunkiKartta, maakartat.js: ydinAla).
+ *
+ * Lava irtoaa virrasta, joten kehys tarvitsee oman korkeutensa —
+ * aspect-ratio ydinrajauksesta. `content-box` on tarkka valinta eikä
+ * tyyliseikka: reunaviiva on kehyksellä, ja border-box-laskennassa
+ * kuvasuhde koskisi reunoja myöten, jolloin lepotilan korkeus
+ * poikkeaisi ydinrajauksesta reunan paksuuden verran.
+ */
+.kartta-kehys.kartta-laajennettu { box-sizing: content-box; }
+
+.kartta-lava.kartta-laajennettu { position: absolute; }
+
+/* Piirros peittää koko lavan, satelliittikuva vain ydinrajauksen;
+ * kumpikin saa paikkansa ui.js:stä (asetaKuvanAla). */
+.kartta-lava.kartta-laajennettu img { position: absolute; }
+
 /* Pehmennys vain napeista ja tuplanapautuksesta: sormen alla se
  * tuntuisi siltä, että kartta laahaa jäljessä. */
 .kartta-lava.silea { transition: transform 0.18s ease-out; }

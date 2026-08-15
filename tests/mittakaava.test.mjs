@@ -30,11 +30,15 @@ test('jana on 15-35 % kartan leveydestä', () => {
   // Alle 15 % ei erotu janaksi, yli 35 % vie kuvasta liikaa. Sarjan
   // pyöreät luvut eivät osu neljäsosaan tarkalleen, ja se on oikein:
   // "700 m" olisi tarkempi mutta ei mittakaavajana.
+  //
+  // Mitta on ydinOsuus eikä osuus: reunuksellisella kartalla
+  // (piirtoRajat) osuus lasketaan koko piirretystä kuvasta, mutta
+  // vaatimus koskee sitä, miltä jana näyttää KEHYKSESSÄ.
   for (const [avain, kartta] of Object.entries(KAUPUNKIKARTAT)) {
-    const { osuus, teksti } = mittakaava(kartta);
+    const { ydinOsuus, teksti } = mittakaava(kartta);
     assert.ok(
-      osuus >= 15 && osuus <= 35,
-      `${avain}: jana ${teksti} on ${osuus.toFixed(1)} % kartan leveydestä`,
+      ydinOsuus >= 15 && ydinOsuus <= 35,
+      `${avain}: jana ${teksti} on ${ydinOsuus.toFixed(1)} % kartan leveydestä`,
     );
   }
 });
