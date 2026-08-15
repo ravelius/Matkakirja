@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 726, teksti: 'Lippusivut: Pohjoismaat ja Baltia' },
   { v: 725, teksti: 'Lippuikkunan iso kuva isommaksi' },
   { v: 724, teksti: 'Piirrokset kartan mittakaavassa; peruskoko 40 px' },
   { v: 723, teksti: 'Kultaneliön syy: hover-korostus pois piirroksilta' },
