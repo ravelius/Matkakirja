@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 706, teksti: 'Raamatun taitto: kappaleet, yksi palsta, sisällys ehjäksi' },
   { v: 705, teksti: 'Tilannetaulut ajan tasalle v704 asti' },
   { v: 704, teksti: 'Radio väistää puhetta kuten muukin tausta' },
   { v: 703, teksti: 'Pöllö hakee vastaukseen kuvan — pikkukuva aukeaa isoksi' },

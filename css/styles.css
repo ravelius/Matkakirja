@@ -9897,6 +9897,19 @@ body.vertailu-tila .pawns { display: none; }
   border: 1px solid #d4b96a;
 }
 
+/* Kehittäjän liitteiden taitto: yksi palsta, ei lehden koristeita
+ * (omistaja 15.8.2026: "Poista palstat raamatun taitosta. Ei tarvitse
+ * näyttää lehdeltä."). Anfangi estetään jo piirrossa (piirraLeipa);
+ * tässä perutaan palstat ja lihavoitu aloitus. */
+.wiki-kategoria.yksipalsta .wiki-nosto .leipa {
+  columns: 1;
+  column-rule: none;
+}
+
+.wiki-kategoria.yksipalsta .leipa-aloitus {
+  font-weight: inherit;
+}
+
 /*
  * Numeroina-sivun avaava yleisluonnehdinta (omistajan palaute
  * 10.8.2026): datasta koottu 2–3 virkkeen luonnehdinta isolla ennen
@@ -10857,6 +10870,10 @@ body.maatiedot-tila .fact-card {
   display: flex;
   gap: 0.6rem;
   align-items: flex-start;
+  /* Rivi ei saa litistyä sisältöään matalammaksi: pitkällä listalla
+   * (Raamatun 19 sivua) ruudukko jakoi korkeuden tasan ja rivit
+   * lomittuivat toistensa päälle (omistajan kaappaus 15.8.2026). */
+  height: auto;
   width: 100%;
   padding: 0.5rem 0.55rem;
   min-height: 0;
@@ -11027,6 +11044,12 @@ body.maatiedot-tila .fact-card {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
+  /* Rivit sisältönsä korkuisina ja lista ylhäältä alkaen — ilman tätä
+   * täyttä levyä pidempi lista puristui tasakorkuisiksi 18 px:n
+   * riveiksi, jotka valuivat toistensa päälle (omistajan kaappaus
+   * 15.8.2026, Raamatun sisällys). */
+  grid-auto-rows: max-content;
+  align-content: start;
 }
 
 /* Paluu kartalle levyn pohjalla (omistajan tilaus 14.8.2026):
