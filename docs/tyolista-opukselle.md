@@ -6,6 +6,14 @@
 > etusivujen pikkukuvien laatukierros — Fable koordinoi, pilotti
 > Pariisi). Älä aloita uutta lehtipakettia ennen kuin tämä huomautus
 > on poistettu.
+>
+> **Kuvien silmätarkistus monistusvaiheessa (omistajan linjaus
+> 15.8.2026):** kun Kööpenhaminan lehtimalli on valmis ja sitä
+> aletaan kopioida muihin kaupunkeihin, Opus käy samalla läpi
+> jokaisen lehden KAIKKI etusivukuvat silmin (esikatselu ladataan ja
+> katsotaan — ruuhkassa .github/workflows/nouda-tarkistuskuvat.yml)
+> ja vaihtaa visuaalisesti heikot. Esimerkki hylättävästä: kuva jossa
+> pääosassa on varjo tai yksityiskohta eikä itse kaupunki.
 
 ## Vakiokäynnistys
 

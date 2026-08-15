@@ -6855,13 +6855,9 @@ export const KULTTUURI_KATEGORIAT = {
             + 'korkeuksilla.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
-        {
-          tiedosto: 'Two of Kongelige livgarde Amalienborg Copenhagen Denmark.jpg',
-          selite: 'Kuninkaan henkivartija seisoo vahdissa Amalienborgin linnan '
-            + 'seinustalla. Karvalakki ja tumma takki heittävät pitkän varjon '
-            + 'vaaleaan seinään.',
-          lahde: 'Jebulon, Wikimedia Commons (CC0)',
-        },
+        // Henkivartijakuva poistettu (omistajan palaute 15.8.2026:
+        // "oikean alareunan kuva on visuaalisesti huono" — pääosassa
+        // oli varjo, ei kaupunki). Kanaalivene nousi tilalle.
         {
           tiedosto: 'Canal Tours at Christianshavn.jpg',
           selite: 'Matala kanaalivene täynnä matkustajia kulkee leveällä '
@@ -6910,6 +6906,18 @@ export const KULTTUURI_KATEGORIAT = {
        * Rosenborgin puutarha, jazzmuusikot, teatteri) — teksti omaa.
        */
       matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää
+         * (omistajan tilaus 15.8.2026). Lisenssit tarkistettu
+         * Commonsin API:sta 15.8.2026, kuvat katsottu silmin.
+         */
+        kuva: {
+          tiedosto: 'Copenhagen Cyclists (19200075809).jpg',
+          selite: 'Pyöräilijöitä ylittämässä risteystä sinistä pyöräkaistaa '
+            + 'pitkin — arkinen näky, sillä yli puolet kaupunkilaisten '
+            + 'matkoista taittuu pyörällä.',
+          lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
+        },
         kappale: 'Kööpenhamina on rento kaupunki, joka koetaan parhaiten '
           + 'satulasta: yli puolet kaupunkilaisten matkoista taittuu '
           + 'pyörällä, ja leveät pyörätiet vievät vierailijankin turvallisesti '
@@ -6955,6 +6963,29 @@ export const KULTTUURI_KATEGORIAT = {
             + 'veitsellä ja haarukalla. Vanhoissa lounasravintoloissa '
             + 'leipiä on listalla kymmeniä, ja järjestyskin on tarkka — '
             + 'ensin kala, sitten liha, viimeisenä juusto.',
+          /*
+           * Artikkelin kuvakaruselli (omistajan tilaus 15.8.2026:
+           * "lisää myös kuvia pop up juttuun matkailijalle") —
+           * avaaNahtavyys näyttää nämä ensimmäisen kappaleen jälkeen.
+           * Lisenssit tarkistettu Commonsin API:sta 15.8.2026, kuvat
+           * katsottu silmin.
+           */
+          kuvat: [
+            {
+              tiedosto: 'Harbour Bath, Islands Brygge.jpg',
+              selite: 'Islands Bryggen satamakylpylä kesäpäivänä: puiset '
+                + 'laiturikannet, punavalkoinen hengenpelastajien torni ja '
+                + 'uimareita sataman vedessä keskellä kaupunkia.',
+              lahde: 'milgrammer, Wikimedia Commons (CC BY 2.0)',
+            },
+            {
+              tiedosto: 'Havnebad Islands Brygge summer Copenhagen.jpg',
+              selite: 'Rohkein hyppää: sukeltaja kiepsahtaa satamakylvyn '
+                + 'puiselta korokkeelta ilta-auringossa, ja jono seuraavia '
+                + 'odottaa vuoroaan kaiteen takana.',
+              lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+          ],
           lahde: 'Wikipedia',
         },
       },
