@@ -62,7 +62,13 @@ const TYYLI = (aihe) => 'A miniature illustrated landmark for a vintage '
   // piirtyi arkin reunat ja varjo, joka lukisi kortilla kehyksenä.
   + 'The cream paper fills the whole canvas edge to edge: do NOT paint '
   + 'a sheet of paper lying on a surface, no paper edges, no drop '
-  + 'shadow around the background, no rectangular panel.';
+  + 'shadow around the background, no rectangular panel. '
+  // Taustanpoisto (tools/leikkaa-miniatyyrit.mjs) vaatii TASAISEN
+  // taustan: valkoinen akvarellipesu rakennuksen ympärillä esti
+  // leikkauksen kolmessa ensimmäisen erän kuvassa.
+  + 'Do NOT paint any white halo, glow or watercolor wash around the '
+  + 'building: the flat cream background color continues completely '
+  + 'unchanged right up to the building outline on every side.';
 
 /*
  * Kohteet kaupungeittain. AVAIMEN ALKUOSA on kaupungin tunnus ja
