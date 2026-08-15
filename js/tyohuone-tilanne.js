@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v734 — kartta 70 %; kyltti tiiviimmin; lippu ilman laatikkoa',
   'v733 — lippusivut: Aasia (8 maata)',
   'v732 — suurennos 65 %; kyltti kiinni rakennukseen',
   'v731 — lippusivut: Slovenia–Azerbaidžan (6 maata)',
