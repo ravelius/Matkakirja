@@ -30,6 +30,11 @@ export const RAAMATTU2 = {
       otsikko: 'Ydinajatus ja kohderyhmä',
       tila: 'hyväksytty 11.8.2026',
       kohdat: [
+        'LAATU ON AINA TÄRKEIN PRIORITEETTI (omistajan linjaus '
+          + '15.8.2026): kun laatu ja mikä tahansa muu tavoite — '
+          + 'vauhti, määrä, kustannus, aikataulu — ovat vastakkain, '
+          + 'laatu voittaa. Mieluummin vähemmän ja viimeisteltyä '
+          + 'kuin paljon ja puolivillaista.',
         'Suomenkielinen selainseikkailu: nuori herra Reginald Fogg '
           + 'matkustaa isoisänsä vuoden 1873 matkapäiväkirjan '
           + 'jäljillä maailman ympäri ja etsii Aarnin luettelon '
