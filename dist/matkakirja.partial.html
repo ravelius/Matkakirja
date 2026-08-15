@@ -9901,7 +9901,7 @@ dialog.lippu-ikkuna:focus,
 dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .lippu-kortti {
-  width: min(24rem, calc(100vw - 2rem));
+  width: min(27rem, calc(100vw - 1.4rem));
   /* Kaksi kolmasosaa ruudun korkeudesta (omistajan tilaus 15.8.2026:
    * "Tee pop-up-ikkunasta kaksi kolmasosaa korkuinen") — loppu
    * vierittyy kortin sisällä. */
@@ -9946,12 +9946,16 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   cursor: pointer;
 }
 
+/* Iso lippu reunasta reunaan (omistajan tilaus 15.8.2026: "Iso kuva
+ * isommaksi"): kuva ohittaa kortin sivupehmusteet negatiivisella
+ * marginaalilla, ja kortti itse leveni 24 → 27 remiin. */
 .lippu-iso {
   display: block;
-  width: 100%;
+  width: calc(100% + 1.6rem);
+  margin: 0 -0.8rem;
   height: auto;
-  border: 1px solid rgba(70, 51, 31, 0.4);
-  border-radius: 3px;
+  border: solid rgba(70, 51, 31, 0.4);
+  border-width: 1px 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.6);
 }
@@ -109457,6 +109461,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v725 — lippuikkunan iso kuva reunasta reunaan',
   'v724 — piirrokset skaalautuvat zoomissa; peruskoko 40 px',
   'v723 — kultaneliön OIKEA syy: hover-korostus; koko 4×',
   'v722 — piirrokset PNG:inä: neliö varmasti pois',
@@ -180458,6 +180463,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 725, teksti: 'Lippuikkunan iso kuva isommaksi' },
   { v: 724, teksti: 'Piirrokset kartan mittakaavassa; peruskoko 40 px' },
   { v: 723, teksti: 'Kultaneliön syy: hover-korostus pois piirroksilta' },
   { v: 722, teksti: 'Miniatyyrit PNG:iksi - varma lapinakyvyys' },
@@ -181279,7 +181285,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.724';
+const APP_VERSION = '2026-08-09.725';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

@@ -9898,7 +9898,7 @@ dialog.lippu-ikkuna:focus,
 dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .lippu-kortti {
-  width: min(24rem, calc(100vw - 2rem));
+  width: min(27rem, calc(100vw - 1.4rem));
   /* Kaksi kolmasosaa ruudun korkeudesta (omistajan tilaus 15.8.2026:
    * "Tee pop-up-ikkunasta kaksi kolmasosaa korkuinen") — loppu
    * vierittyy kortin sisällä. */
@@ -9943,12 +9943,16 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   cursor: pointer;
 }
 
+/* Iso lippu reunasta reunaan (omistajan tilaus 15.8.2026: "Iso kuva
+ * isommaksi"): kuva ohittaa kortin sivupehmusteet negatiivisella
+ * marginaalilla, ja kortti itse leveni 24 → 27 remiin. */
 .lippu-iso {
   display: block;
-  width: 100%;
+  width: calc(100% + 1.6rem);
+  margin: 0 -0.8rem;
   height: auto;
-  border: 1px solid rgba(70, 51, 31, 0.4);
-  border-radius: 3px;
+  border: solid rgba(70, 51, 31, 0.4);
+  border-width: 1px 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.6);
 }
