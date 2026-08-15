@@ -79,6 +79,30 @@ Automaattiset testit ovat osa perustuslakia: ne valvovat koneellisesti
 mitattavan osan (laudan eheys, kysymysten muoto), jotta ihmisten arviointi
 voi keskittyä siihen, missä ihmistä tarvitaan — pilareihin 1–4.
 
+## Etukäteispuskurin periaate
+
+Omistajan linjaus 15.8.2026: **jokainen pelin vaihe lataa seuraavan
+askeleen sisällön valmiiksi taustalla heti, kun se on tiedettävissä.**
+Pelaaja ei koskaan odota sisältöä, jonka peli olisi voinut arvata.
+
+Sovellus nykyisiin toimintoihin:
+
+- Kaupunkiin saavuttaessa ladataan molempien lehtien (kaupunki ja maa)
+  etusivut kokonaan taustalla — kuvat, lippu, kartta — ja generoidaan
+  lukijaäänen ensimmäinen pala kumpaankin lehteen valmiiksi.
+- Lehteä luettaessa seuraava sivu ladataan aina kokonaan valmiiksi heti,
+  kun nykyinen sivu on auki.
+- Sama koskee kaikkia UUSIA toimintoja jatkossa: kun toiminto lisätään,
+  siihen suunnitellaan samalla etukäteispuskuri (mitä seuraavaksi
+  todennäköisesti tarvitaan ja mistä hetkestä sen voi alkaa ladata).
+  PR-kuvauksessa kerrotaan, mitä puskuroidaan ja milloin — tai miksi
+  puskuroitavaa ei ole.
+
+Rajat: puskurointi ei saa tukkia yhteyttä (lataukset jonossa muutama
+kerrallaan, ks. ui.js esilataaOsoitteet) eikä kuluttaa generointikiintiöitä
+sisältöön, jota pelaaja tuskin tarvitsee — puskuroidaan todennäköinen
+seuraava askel, ei kaikkea mahdollista.
+
 ## Uuden laudan hyväksyminen
 
 Lauta hyväksytään, kun molemmat puolet ovat kunnossa:
