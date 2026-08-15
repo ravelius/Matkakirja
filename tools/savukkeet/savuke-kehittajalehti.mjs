@@ -64,6 +64,8 @@ const raamattu = await sivu.evaluate(async () => {
   ui.vaihdaTutkiSivu(1);
   await odota(400);
   const toinen = document.querySelector('#arrival-dialog .aihe-nimi')?.textContent ?? '';
+  // Hyväksytyn osion (Ydinajatus) otsikossa vihreä valmis-chippi.
+  const tagi = document.querySelector('#arrival-dialog .aihe-nimi .kehittaja-tagi.valmis')?.textContent ?? '';
   return {
     auki: Boolean(dialogi?.open),
     otsikko,
@@ -72,13 +74,15 @@ const raamattu = await sivu.evaluate(async () => {
     ekaOk: /Raamattu/.test(eka),
     sisaltoOk: runko.includes('Koko pelin idea yhdessä dokumentissa'),
     toinenOk: /Ydinajatus/.test(toinen),
+    tagiOk: tagi === 'valmis',
   };
 });
 vaadi('Raamattu aukeaa lehtenä ja sivuja on johdanto + osiot',
   raamattu.auki && raamattu.otsikko === 'Raamattu' && raamattu.sivuja === raamattu.odotus,
   JSON.stringify(raamattu));
 vaadi('Raamatun sisältö tulee datasta ja sivunvaihto toimii',
-  raamattu.ekaOk && raamattu.sisaltoOk && raamattu.toinenOk, JSON.stringify(raamattu));
+  raamattu.ekaOk && raamattu.sisaltoOk && raamattu.toinenOk && raamattu.tagiOk,
+  JSON.stringify(raamattu));
 
 // 3. Tilannelehti.
 const tilanne = await sivu.evaluate(async () => {

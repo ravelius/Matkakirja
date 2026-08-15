@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 701, teksti: 'Raamattu uusiksi tiiviinä + valmis/kesken-tagit lehteen' },
   { v: 700, teksti: 'Raamattu ja tilannetaulut tiiviiksi (selkeys ensin)' },
   { v: 699, teksti: 'Omat jutut Panthéonille, Lucolle, Kalliolle, Lintsille' },
   { v: 698, teksti: 'Raamattu ilman 2.0:aa ja tyohuoneen suursiivous' },
