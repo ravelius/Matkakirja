@@ -11137,6 +11137,15 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   max-height: inherit;
   overflow-y: auto;
   overscroll-behavior: contain;
+  /*
+   * Vieritysankkurointi POIS (omistajan havainto 15.8.2026: "otsikko
+   * jää puoliksi piiloon"): kun karusellin kuva latautuu avauksen
+   * jälkeen, selain ankkuroi näkymän alempaan kappaleeseen ja juttu
+   * liukuu alas — otsikko katoaa yläreunan taakse, vaikka kukaan ei
+   * vierittänyt. Juttu avataan aina alusta, joten ankkuroinnista ei
+   * ole tässä kortissa mitään hyötyä.
+   */
+  overflow-anchor: none;
   padding: 1.2rem 1.15rem 1rem;
 }
 

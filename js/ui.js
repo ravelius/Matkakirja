@@ -13121,6 +13121,19 @@ export class UI {
     // Paluu palauttaa lukukohdan: juttu jatkuu siitä mihin se jäi,
     // ei alusta. rAF, koska korkeus on olemassa vasta taiton jälkeen.
     if (palaa && rulla && kortti) requestAnimationFrame(() => { kortti.scrollTop = rulla; });
+    /*
+     * Vyö henkselien lisäksi (overflow-anchor: none yllä CSS:ssä):
+     * jos kuvan latautuminen silti liu'uttaa jutun alkua piiloon
+     * (Safarin oma ankkurointi), pieni ajastettu tarkistus palauttaa
+     * yläreunan. Vain pieni liukuma nollataan — käyttäjän oma
+     * vieritys on jo ehtinyt pidemmälle eikä siihen kosketa.
+     */
+    if (!palaa && kortti) {
+      clearTimeout(this.nahtavyysYlaVahti);
+      const oikaise = () => { if (kortti.scrollTop > 0 && kortti.scrollTop <= 80) kortti.scrollTop = 0; };
+      this.nahtavyysYlaVahti = setTimeout(() => { oikaise(); }, 350);
+      setTimeout(oikaise, 1200);
+    }
     // Uusi juttu, uusi teksti: edellisen kohteen luenta ei saa jatkua.
     pysaytaLukija();
     this.varustaLukija(dialogi, () => dialogi.querySelector('.nahtavyys-kortti'));
