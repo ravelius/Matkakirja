@@ -232,23 +232,36 @@ console.log(vedessa ? `\n${vedessa} pistettä vedessä — siirrä ne rannalle.`
  * Masqatissa eteläreunaa vietiin alemmas, jolloin piste nousi 90 %:sta
  * 80 %:iin ja irtosi janasta.
  */
-const KOTELO = 360;   // px, mitattu 390 px:n näytöllä
+/*
+ * REUNUKSELLINEN KARTTA (piirtoRajat) mitataan samalla puhelin-
+ * leveydellä, mutta silloin KEHYKSEEN mahtuu vain ydinrajaus ja kuva
+ * itse on sitä leveämpi. Kaikki alla oleva laskenta tapahtuu siksi
+ * KUVAN pikseleissä (LAVA), ja kehyksen kulmat haetaan ydinAlan
+ * prosenteista. Laajentamattomalla kartalla LAVA = KOTELO, eli luvut
+ * ovat samat kuin ennen.
+ */
+const KOTELO = 360;   // px, mitattu 390 px:n näytöllä (kehys)
 const YMPYRA = 24;    // px, .maakartta-piste.kohde-numero
 const JANA_H = 6;     // px, .kartta-mittajana
 const TEKSTI_H = 10;  // px, .kartta-mittajana-teksti rivikorkeus
 const tekstinLeveys = (t) => t.length * 5.5 + 6;  // px, keskitettynä janalle
 
-const { mittakaava } = await import(`${JUURI}/js/packs/maakartat.js`);
+const { mittakaava, ydinAla } = await import(`${JUURI}/js/packs/maakartat.js`);
+const ydin = ydinAla(kartta);
+const LAVA = (KOTELO * 100) / ydin.leveys;
+const LAVA_H = LAVA * (kuva.korkeus / kuva.leveys);
 const jana = mittakaava(kartta);
 let janalla = 0;
 if (!jana) {
   console.log('\nkartalla ei ole mittakaavajanaa — janatarkistus ohitettu');
 } else {
-  const korkeus = KOTELO * (kuva.korkeus / kuva.leveys);
+  const korkeus = LAVA_H;
+  // Jana on kehyksen vasemmassa alakulmassa eli ydinrajauksen sisällä
+  // (ui.js: piirraKaupunkiKartta).
   const janaLaatikko = {
-    x: KOTELO * 0.032,
-    y: korkeus * 0.95 - JANA_H,
-    w: KOTELO * (jana.osuus / 100),
+    x: (ydin.x / 100) * LAVA + KOTELO * 0.032,
+    y: ((ydin.y + 0.95 * ydin.korkeus) / 100) * LAVA_H - JANA_H,
+    w: LAVA * (jana.osuus / 100),
     h: JANA_H,
   };
   const tekstiW = tekstinLeveys(jana.teksti);
@@ -259,11 +272,11 @@ if (!jana) {
     h: TEKSTI_H,
   };
   const osuu = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
-  console.log(`\nmittakaavajana ${jana.teksti} (${jana.osuus.toFixed(1)} % kuvan leveydestä):`);
+  console.log(`\nmittakaavajana ${jana.teksti} (${jana.ydinOsuus.toFixed(1)} % näkymän leveydestä):`);
   for (const [nimi, lat, lon] of pisteet) {
     const { x, y } = karttapiste(kartta, lat, lon);
     const ympyra = {
-      x: (x / 100) * KOTELO - YMPYRA / 2,
+      x: (x / 100) * LAVA - YMPYRA / 2,
       y: (y / 100) * korkeus - YMPYRA / 2,
       w: YMPYRA,
       h: YMPYRA,
@@ -305,11 +318,10 @@ let paallekkain = 0;
 {
   const laatikot = pisteet.map(([nimi, lat, lon]) => {
     const { x, y } = karttapiste(kartta, lat, lon);
-    const korkeus = KOTELO * (kuva.korkeus / kuva.leveys);
     return {
       nimi,
-      x: (x / 100) * KOTELO - YMPYRA / 2,
-      y: (y / 100) * korkeus - YMPYRA / 2,
+      x: (x / 100) * LAVA - YMPYRA / 2,
+      y: (y / 100) * LAVA_H - YMPYRA / 2,
     };
   });
   console.log('\nnumeroympyröiden keskinäinen etäisyys:');

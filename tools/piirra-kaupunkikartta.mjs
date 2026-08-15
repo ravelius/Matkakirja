@@ -21,6 +21,20 @@
  * ydinkeskustan kuuluisimmat kohteet (n. 5–8 km leveä alue — laajempi
  * muuttuu puuroksi). Aja työkalu ja KATSO kuva silmin ennen käyttöä.
  *
+ * KARTTA JATKUU REUNOJEN YLI (omistajan tilaus 15.8.2026: "sitä voisi
+ * lisätä piirroksessa että kartta jatkuisi pidemmälle"). Kaupungille
+ * annetaan `laajennus`, ja työkalu piirtää sen verran laajemman alueen
+ * samasta keskipisteestä. Lehti näyttää lepotilassa yhä pelkän
+ * `rajat`-alueen; reunus paljastuu vasta zoomatessa ja panoroitaessa
+ * (js/packs/maakartat.js: piirtoRajat ja ydinAla, ui.js: kartta-lava).
+ *
+ * KUVAN LEVEYS KASVAA SAMASSA SUHTEESSA (1600 → 1600 × laajennus), ja
+ * se on tarkoituksellista eikä sattumaa. Ydinrajaus säilyy silloin
+ * 1600 pikselinä, eli lepotilan terävyys ja viivojen paksuus ovat
+ * täsmälleen entiset — muuten reunuksen hinta olisi suttuisempi
+ * ydinkuva, ja zoomin yläraja (SUURIN = 3, ui.js) näyttäisi selaimen
+ * venytystä kuvan omien pikselien sijaan.
+ *
  * KATSO MYÖS VASEN ALAKULMA. Lehti piirtää sinne mittakaavajanan
  * (ui.js), eikä työkalu tiedä siitä mitään. Kööpenhaminassa Tivolin
  * numeroympyrä osui janan päälle, ja se korjattiin laskemalla
@@ -60,7 +74,15 @@ const KAUPUNGIT = {
     // Laajennus on mahdollinen vain siksi, että kohdekartta on nyt
     // zoomattava (ui.js, kartta-lava): ilman zoomia tämä olisi juuri
     // sitä katupuuroa, josta yllä varoitetaan.
+    //
+    // JA KARTTA JATKUU VIELÄ TÄMÄNKIN YLI (omistajan tilaus
+    // 15.8.2026): piirretty alue on 1,6-kertainen eli 16,3 × 12,3 km,
+    // mutta lepotilassa lehti näyttää yhä tarkalleen alla olevan
+    // rajat-alueen. Reunuksella on Tiergartenin länsipää,
+    // Prenzlauer Bergin eteläkulma ja Kreuzbergin katuverkko —
+    // aluetta, jonne panorointi jatkuu, kun karttaa suurentaa.
     rajat: { pohjoinen: 52.547, etela: 52.478, lansi: 13.325, ita: 13.475 },
+    laajennus: 1.6,
   },
   kairo: {
     // Niilin molemmat rannat Tahrir-aukiolta Islamilaiseen Kairoon:
@@ -188,7 +210,13 @@ const KAUPUNGIT = {
     // — kohteita on kuusi eikä listaa kasvateta ilman eri päätöstä.
     // Pariisi ei myöskään ole enää pelin laajin rajaus: Berliini on
     // 10,2 km.
+    //
+    // REUNUS 15.8.2026 (ks. berliini yllä): piirretty alue on
+    // 1,6-kertainen eli 13,3 × 10,0 km, lepotila yhä alla oleva
+    // rajat-alue. Reunukselle osuvat muun muassa Bois de Boulognen
+    // itälaita, Père-Lachaise ja Butte-aux-Caillesin kortteli.
     rajat: { pohjoinen: 48.8976, etela: 48.8414, lansi: 2.2657, ita: 2.3788 },
+    laajennus: 1.6,
   },
   amsterdam: {
     // Kanavakehä on hevosenkengän muotoinen, ei soikea, joten rajaus on
@@ -251,7 +279,15 @@ const KAUPUNGIT = {
     // (Kaivopuiston ranta, n. 60.155) on nyt 88 %:n korkeudella; 300 m
     // lisää pohjoiseen painaisi sen 94 %:iin eli kiinni alalaitaan.
     // Sibelius-monumentti (lon 24.883) jää yhä lännessä ulkopuolelle.
+    //
+    // REUNUS 15.8.2026 (ks. berliini yllä): piirretty alue on
+    // 1,6-kertainen eli 7,5 × 6,6 km, lepotila yhä alla oleva
+    // rajat-alue. Reunukselle osuvat Seurasaari ja Meilahti lännessä,
+    // Vallila ja Kumpula pohjoisessa sekä Korkeasaari idässä — juuri
+    // se avovesi, jota yllä varotaan ottamasta ydinrajaukseen, on nyt
+    // reunuksella, jossa se ei syö kuvan ydintä.
     rajat: { pohjoinen: 60.1877, etela: 60.1508, lansi: 24.9076, ita: 24.9919 },
+    laajennus: 1.6,
     meri: true,
     kainalot: [
       {
@@ -262,8 +298,17 @@ const KAUPUNGIT = {
         // Marginaali on 2 % kummallakin sivulla, sama kuin Budapestin
         // kainalossa — täysin reunaan asti vietynä ruudun oma
         // reunaviiva jäisi puoliksi kuvan ulkopuolelle.
+        //
+        // LUVUT OVAT PROSENTTEJA PIIRRETYSTÄ KUVASTA, ja reunus
+        // 15.8.2026 muutti ne. Ruutu istuu edelleen tarkalleen samassa
+        // kohdassa lepotilan näkymää: ydinrajaus alkaa laajennetussa
+        // kuvassa kohdasta 18,75 % ja on 62,5 % leveä, joten vanhat
+        // ydinprosentit muuntuivat kaavalla 18,75 + vanha × 0,625:
+        // x 76 → 66.25, y 69.15 → 61.97, leveys 22 → 13.75. Ruudun
+        // koko pikseleinä ei siis muutu (352 px), koska kuvakin
+        // leveni samassa suhteessa.
         rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
-        x: 76, y: 69.15, leveys: 22, suunta: '3 km kaakkoon', meri: true,
+        x: 66.25, y: 61.97, leveys: 13.75, suunta: '3 km kaakkoon', meri: true,
       },
     ],
   },
@@ -385,7 +430,13 @@ const KAUPUNGIT = {
     // Levennys korjaa samalla vanhan vian: Tower Bridge oli itälaidassa
     // 85 %:n kohdalla ja sen numeroympyrä hipoi kuvan reunaa. Nyt se on
     // 78 %:ssa, eli silta piirtyy kokonaan ja ympyrälle jää tilaa.
+    //
+    // REUNUS 15.8.2026 (ks. berliini yllä): piirretty alue on
+    // 1,6-kertainen eli 13,9 × 7,2 km, lepotila yhä alla oleva
+    // rajat-alue. Reunukselle osuvat Regent's Park ja Kensington
+    // Gardens pohjoisessa ja lännessä sekä Bermondsey idässä.
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
+    laajennus: 1.6,
   },
   rooma: {
     // Tiber tulee kuvaan alhaalta, kaartaa Vatikaanin ohi ja poistuu
@@ -1598,6 +1649,35 @@ function kuvasuhde(rajat) {
 }
 
 /**
+ * PIIRRETTÄVÄ ALUE: ydinrajaus laajennettuna samasta keskipisteestä.
+ *
+ * Keskipiste säilyy, joten myös keskileveysaste — ja siten
+ * kuvasuhteen venytyskerroin — on sama kuin ydinrajauksella. Sen
+ * ansiosta ydinrajaus on laajemmassa kuvassa tarkalleen
+ * `1 / laajennus` sekä leveydestä että korkeudesta, ja lehti saa
+ * lepotilassa kehykseensä pikselilleen entisen näkymän.
+ *
+ * Luvut pyöristetään viiteen desimaaliin (noin metri), jotta
+ * maakartat.js:ään kirjattavat rajat pysyvät luettavina. Nykyisillä
+ * kaupungeilla pyöristys on tarkka: kaikki neljä laajennettua rajausta
+ * osuvat viiteen desimaaliin ilman jäännöstä.
+ */
+function piirretytRajat({ rajat, laajennus = 1 }) {
+  if (laajennus === 1) return rajat;
+  const lat = ((rajat.pohjoinen - rajat.etela) * laajennus) / 2;
+  const lon = ((rajat.ita - rajat.lansi) * laajennus) / 2;
+  const keskiLat = (rajat.pohjoinen + rajat.etela) / 2;
+  const keskiLon = (rajat.ita + rajat.lansi) / 2;
+  const p = (n) => +n.toFixed(5);
+  return {
+    pohjoinen: p(keskiLat + lat),
+    etela: p(keskiLat - lat),
+    lansi: p(keskiLon - lon),
+    ita: p(keskiLon + lon),
+  };
+}
+
+/**
  * Kokoaa piirtokerrokset elementeistä annetulla koordinaattimuunnoksella.
  *
  * Muunnos on parametri, koska sama koodi piirtää sekä pääkartan että
@@ -1845,7 +1925,7 @@ function kerrosKuvaus(kerrokset, mitta = 1) {
  * EI ANNETA vaan se lasketaan kainalon omasta kuvasuhteesta — muuten
  * minikartta venyisi ja sen kadut valehtelisivat.
  */
-function piirraKainalo(kainalo, elementit, W, H) {
+function piirraKainalo(kainalo, elementit, W, H, ydinW) {
   const x0 = (kainalo.x / 100) * W;
   const y0 = (kainalo.y / 100) * H;
   const w = (kainalo.leveys / 100) * W;
@@ -1853,9 +1933,15 @@ function piirraKainalo(kainalo, elementit, W, H) {
   const r = kainalo.rajat;
   const x = (lon) => (x0 + ((lon - r.lansi) / (r.ita - r.lansi)) * w).toFixed(1);
   const y = (lat) => (y0 + ((r.pohjoinen - lat) / (r.pohjoinen - r.etela)) * h).toFixed(1);
-  // Viivat kainalon mittakaavaan: sama suhde kuin ruudun leveys
-  // pääkuvan leveyteen, pohjalla 0,45 jottei kaikki katoa.
-  const mitta = Math.max(0.45, w / W);
+  /*
+   * Viivat kainalon mittakaavaan: sama suhde kuin ruudun leveys
+   * YDINRAJAUKSEN leveyteen, pohjalla 0,45 jottei kaikki katoa.
+   * Ydinrajaus eikä koko kuva, koska reunuksen leventämässä kuvassa
+   * (laajennus) sekä ruutu että pääkartta piirtyvät samalla px/km:llä
+   * kuin ennen — pelkkä w/W kutistuisi laajennuksen verran ilman että
+   * mikään kuvassa muuttuu.
+   */
+  const mitta = Math.max(0.45, w / ydinW);
   const kerrokset = kokoaKerrokset(elementit, x, y, kainalo.rajat, kainalo.meri);
   const tunnus = `kainalo${Math.round(x0)}_${Math.round(y0)}`;
   /*
@@ -1867,8 +1953,13 @@ function piirraKainalo(kainalo, elementit, W, H) {
    * luettavissa. Siksi myös teksti pidetään lyhyenä ("4 km
    * lounaaseen"): kohteen nimi on joka tapauksessa kartan alla
    * selitelistassa, jossa se on aina luettava.
+   *
+   * Mitta on YDINRAJAUKSEN leveys eikä koko kuvan: lehti sovittaa
+   * kehykseen juuri ydinrajauksen, joten reunuksen leventämässä
+   * kuvassa (laajennus) W/35 kasvattaisi tekstin ruudulla samassa
+   * suhteessa.
    */
-  const koko = Math.round(W / 35);
+  const koko = Math.round(ydinW / 35);
   /*
    * Teksti ruudun ylle, paitsi jos ruutu on liian lähellä ylälaitaa —
    * silloin se leikkautuisi kuvan reunaan. Budapestissa kävi juuri
@@ -1894,14 +1985,17 @@ function piirraKainalo(kainalo, elementit, W, H) {
 }
 
 function piirra(kaupunki, elementit, kainaloAineistot = []) {
-  const { rajat, kainalot = [], meri = false } = KAUPUNGIT[kaupunki];
-  const W = 1600;
+  const { kainalot = [], meri = false, laajennus = 1 } = KAUPUNGIT[kaupunki];
+  const rajat = piirretytRajat(KAUPUNGIT[kaupunki]);
+  // Ydinrajaus pysyy 1600 pikselinä myös laajennetussa kuvassa, ks.
+  // tiedoston alun kommentti.
+  const W = Math.round(1600 * laajennus);
   const H = Math.round(W / kuvasuhde(rajat));
   const x = (lon) => (((lon - rajat.lansi) / (rajat.ita - rajat.lansi)) * W).toFixed(1);
   const y = (lat) => (((rajat.pohjoinen - lat) / (rajat.pohjoinen - rajat.etela)) * H).toFixed(1);
   const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri);
   const kainaloKuvat = kainalot
-    .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H)).join('\n');
+    .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H, W / laajennus)).join('\n');
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
   <rect width="${W}" height="${H}" fill="${PAPERI}"/>
   ${kerrosKuvaus(kerrokset)}
@@ -1916,7 +2010,9 @@ if (!KAUPUNGIT[kaupunki]) {
 }
 console.log('Haetaan OpenStreetMap-aineisto (Overpass)…');
 const elementit = await haeOverpassSitkeasti(
-  KAUPUNGIT[kaupunki].rajat,
+  // Haku koskee koko piirrettävää alaa, myös reunusta — muuten
+  // laajennetun kartan laidoille jäisi tyhjää paperia.
+  piirretytRajat(KAUPUNGIT[kaupunki]),
   KAUPUNGIT[kaupunki].palvelutiet ?? false,
   KAUPUNGIT[kaupunki].jalkakaydat ?? false,
 );
@@ -1971,11 +2067,16 @@ execFileSync('node', ['-e', skripti], {
   },
 });
 const rajat = KAUPUNGIT[kaupunki].rajat;
+const piirto = piirretytRajat(KAUPUNGIT[kaupunki]);
 console.log(`Valmis: assets/kartat/${kaupunki}-keskusta.png`);
 console.log('KAUPUNKIKARTAT-rivit:');
 console.log(`    polku: 'assets/kartat/${kaupunki}-keskusta.png',`);
 console.log(`    lahde: '© OpenStreetMap-tekijät (ODbL)',`);
 console.log(`    rajat: { pohjoinen: ${rajat.pohjoinen}, etela: ${rajat.etela}, lansi: ${rajat.lansi}, ita: ${rajat.ita} },`);
+if (piirto !== rajat) {
+  console.log(`    piirtoRajat: { pohjoinen: ${piirto.pohjoinen}, etela: ${piirto.etela},`
+    + ` lansi: ${piirto.lansi}, ita: ${piirto.ita} },`);
+}
 /*
  * Kainalon KORKEUS lasketaan tässä eikä kirjoiteta käsin: peli tarvitsee
  * sen asemoidakseen kainalon kohteet, ja jos luku poikkeaisi piirretystä,
@@ -1985,7 +2086,9 @@ const kainalot = KAUPUNGIT[kaupunki].kainalot ?? [];
 if (kainalot.length) {
   console.log('    kainalot: [');
   for (const k of kainalot) {
-    const korkeus = +((k.leveys * kuvasuhde(rajat)) / kuvasuhde(k.rajat)).toFixed(2);
+    // Kainalon mitat ovat prosentteja PIIRRETYSTÄ kuvasta, joten myös
+    // korkeus lasketaan piirretyn kuvan kuvasuhteesta.
+    const korkeus = +((k.leveys * kuvasuhde(piirto)) / kuvasuhde(k.rajat)).toFixed(2);
     console.log(`      { rajat: { pohjoinen: ${k.rajat.pohjoinen}, etela: ${k.rajat.etela},`
       + ` lansi: ${k.rajat.lansi}, ita: ${k.rajat.ita} },`);
     console.log(`        x: ${k.x}, y: ${k.y}, leveys: ${k.leveys}, korkeus: ${korkeus} },`);
