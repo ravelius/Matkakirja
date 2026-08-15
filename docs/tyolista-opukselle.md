@@ -48,6 +48,10 @@ lisäohjeita:
 
 ## Paketti K1: Kööpenhaminan nähtävyydet 6 → 9 (Opus 18, tilattu 15.8.2026)
 
+**✅ VALMIS (Opus 18, katselmoitu ja julkaistu v764:ssä 16.8.2026):**
+kohteet 7–9 + jutut + 9 kuvaa; Fable todensi kaikki lisenssit API:sta
+ja katsoi kuvat silmin. Piirrokset tehdään karttaerän 2 yhteydessä.
+
 Omistajan tilaus: "Laita opus agentti lisäämään nähtävyyksiä
 köpikseen." Kööpenhaminan kartalla on 6 kohdetta — Helsingin taso on
 9. LEHTITAUKO ei koske tätä: kyse on nähtävyystyöstä, ei uudesta

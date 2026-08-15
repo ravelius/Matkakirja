@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 764, teksti: 'Kööpenhaminan kartalle 3 uutta kohdetta juttuineen (Opus 18)' },
   { v: 763, teksti: 'lippuikkuna: iso pelkkä vaakuna; liput kasvavat paikallaan' },
   { v: 762, teksti: 'jutun yläreunan vahti: otsikko ei karkaa avauksessa' },
   { v: 761, teksti: 'työhuoneen kulu- ja lähderivit pois (palkit riittävät)' },
