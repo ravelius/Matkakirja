@@ -1242,18 +1242,29 @@ const PALETIT = {
     RAUNIO: '#ece0c2',
     RAUNIOREUNA: '#c4b189',
   },
-  /* Näyte, ks. yllä. Ei käytössä pelissä. */
+  /*
+   * Näyte, ks. yllä. Ei käytössä pelissä.
+   *
+   * KADUT PIDETÄÄN JULISTEEN SÄVYISSÄ (ei kadut-riviä), ja se on
+   * mitattu valinta: ensimmäisessä versiossa myös katuja tummennettiin,
+   * ja kuva alkoi näyttää tavalliselta verkkokartalta. Kun muste on
+   * sama, ero julisteeseen on täsmälleen se, mitä omistaja kysyi —
+   * vesi ja puistot saavat värin, muu pysyy paperina.
+   *
+   * Sävyt ovat harmaannutettuja: sini kallistuu teräksiseen ja vihreä
+   * salviaan, eli molemmat ovat pergamentin päällä pölyisiä eivätkä
+   * kirkkaita. Pohja on julisteen paperia hitusen syvempi hiekka,
+   * jotta korttelit lukevat lämpiminä pintoina eivätkä tyhjänä.
+   */
   vari: {
-    VESI: '#b4ccd6',
-    VESIREUNA: '#7f9fac',
-    PUISTO: '#cbd7ae',
-    RATA: '#cabb9f',
-    PAPERI: '#f2e6cb',
-    MUURI: '#6b5637',
-    RAUNIO: '#e9d7ac',
-    RAUNIOREUNA: '#c2a878',
-    // Kadut samassa järjestyksessä kuin KADUT-taulu.
-    kadut: ['#e1d5b7', '#d7c9a6', '#cab895', '#c1ae87', '#b19c72', '#a48d61', '#977f52'],
+    VESI: '#c3d5da',
+    VESIREUNA: '#95afb6',
+    PUISTO: '#d6dcba',
+    RATA: '#cec2a8',
+    PAPERI: '#f3e8ce',
+    MUURI: '#6f5a3c',
+    RAUNIO: '#ead9b4',
+    RAUNIOREUNA: '#c4ad82',
   },
 };
 const VARINAYTE = process.argv.includes('--vari');

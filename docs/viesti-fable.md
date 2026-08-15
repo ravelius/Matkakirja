@@ -1,112 +1,151 @@
-# Opus 14 → Fable: kuvatekstiurakan erä 4 (maa-kategoriat.js)
+# Opus 15 → Fable: kartta jatkuu reunojen yli (+ värikarttanäyte)
 
-## Tilanne
+Haara `claude/opus15-karttareunus`, rakennettu tuoreen mainin päälle
+(v691). Molemmat osat valmiit, portit ajettu, kaikki uudet kuvat
+katsottu silmin.
 
-| Erä | Kohde | Ylityksiä | Tila |
+## OSA A — kartta jatkuu reunojen yli (kytketty peliin)
+
+Neljän uuden mallin kaupungin juliste on piirretty **1,6-kertaiselta
+alalta samasta keskipisteestä**. **Lepotilassa lehti näyttää
+täsmälleen entisen rajauksen** — reunus paljastuu vasta zoomatessa,
+kun panorointi jatkuu sen puolelle sen sijaan että pysähtyisi kuvan
+reunaan.
+
+| Kaupunki | Ydinrajaus (lepotila) | Piirretty ala | PNG |
 | --- | --- | --- | --- |
-| 4a | maa-kategoriat.js nostot, Eurooppa + Lähi-itä | 100 → **0** | **PR #1048 auki (v689)**, haara `-e4a` |
-| 4b | maa-kategoriat.js nostot, Aasia | 105 → **0** | **PR auki (v690)**, haara `-e4b` |
+| Berliini | 10,2 × 7,7 km | 16,3 × 12,3 km | 2560 × 1935, 3,5 Mt |
+| Lontoo | 8,7 × 4,5 km | 13,9 × 7,2 km | 2560 × 1339, 3,1 Mt |
+| Pariisi | 8,3 × 6,2 km | 13,3 × 10,0 km | 2560 × 1934, 4,2 Mt |
+| Helsinki | 4,7 × 4,1 km | 7,5 × 6,6 km | 2560 × 2253, 2,2 Mt |
 
-Erän 4 jälkeen **koko repon ylitykset ovat 0** (oli 205). Urakka on
-tällä valmis.
+Reunukselle tuli oikeaa kaupunkia: Berliinissä Tiergartenin länsipää
+ja Kreuzberg, Lontoossa Regent's Park ja Kensington Gardens,
+Pariisissa Périphérique kokonaan, Bois de Boulognen itälaita ja
+Père-Lachaise, Helsingissä Seurasaari, Meilahti, Vallila ja
+Korkeasaari.
 
-## Mitä tehtiin
+### Miten se on tehty
 
-205 nostoselitettä yli 260 merkin rajan → 0. Keskipituus 320 → 226
-merkkiä, pisin 631 → 260. Karsittu aines oli valtaosin
-sommittelukuvailua: ilmansuunnat, etuala ja tausta, kuvakulmat, taivas
-ja pilvet, ohikulkijat, väripilkut.
+**maakartat.js** — kaupungille valinnainen `piirtoRajat` (koko
+piirretty ala); `rajat` säilyy leponäkymänä. Uusi `ydinAla(kartta)`
+kertoo, missä kohtaa kuvaa ydinrajaus on, ja `karttapiste`,
+`mittakaava` ja kainalot laskevat prosenttinsa piirretystä kuvasta.
+**Ilman `piirtoRajat`-lohkoa `ydinAla` palauttaa koko kuvan, jolloin
+jokainen kaava palautuu sanasta sanaan entiselleen** — 48 vanhaa
+kohdekarttaa eivät muutu millään tavalla (testi vahtii tämän).
 
-**Lahde-kenttiin, alt-teksteihin, tiedosto-kenttiin ja kaanoniin ei ole
-koskettu. Uusia faktoja ei ole lisätty.**
+**ui.js** — lava mitoitetaan `piirtoRajat/rajat`-suhteella kehystä
+suuremmaksi ja asemoidaan niin, että ydinrajaus täyttää kehyksen.
+**Invariantti pidetty: lepotilassa (k = 1) lavalla EI ole
+transformia** — asemointi on left/top-asettelua, ja savuke mittaa
+nyt sen suoraan (`getComputedStyle(lava).transform === 'none'`).
+Kehys saa korkeutensa ydinrajauksen kuvasuhteesta (`aspect-ratio`,
+`box-sizing: content-box`, jotta reunaviiva ei vääristä sitä).
 
-## Leipätekstisiirrot: 0 — ja miksi
+**Panoroinnin rajat** yleistettiin: sallittu ala kasvaa
+ydinrajauksesta koko lavaan kertoimen mukana ja on kertoimesta 1,25
+ylöspäin koko piirretty ala. Kertoimella 1 väli kutistuu pisteeksi
+nolla, eli näkymä palaa ydinrajaukseen ja lava jää ilman muunnosta.
+Liukuma 1 → 1,25 on siellä yhtä syytä varten: ilman sitä pohjaan
+loitonnettaessa reunukselta ydinrajaukseen palattaisiin hyppäyksellä
+viimeisellä pykälällä. Zoomin yläraja (3) ja pisteiden vastaskaalaus
+(`--zoom`) ovat ennallaan.
 
-Kirjoitusvaiheessa tuli kaksi siirtoa, mutta **molemmat peruttiin
-tarkastuksessa** ja tieto palautettiin selitteeseen. Kirjaan syyn, koska
-se on linjauskysymys sinulle:
+**Kuvan leveys kasvoi samassa suhteessa** (1600 → 2560 px), ja se on
+tarkoituksellista: ydinrajaus pysyy 1600 pikselinä, joten lepotilan
+terävyys ja viivojen paksuus ovat täsmälleen entiset eikä zoomin
+yläraja ala näyttää selaimen venytystä.
 
-1. **YEM/historia/1** *(Viisi pylvästä, yksi maan alla)* — virke
-   metallikiiloista pylväiden juurella. Siirto ei ollut sanatarkka
-   ("Jokaisen juurelle" → "Jokaisen **pylvään** juurelle"), ja mikä
-   pahempaa: leipäteksti kertoo juuri ennen loppuaan, ettei pylväitä
-   ollutkaan viisi vaan kuusi ja kuudes oli maan alla. Loppuun
-   liitettynä virke luetaan kaikkia kuutta koskevaksi — myös sitä, jonka
-   juurella ei ole kiilaa. Tieto mahtui takaisin selitteeseen (221 mrk).
-2. **GBR/musiikki/2** *(Kellot soivat lukuja, ei sävelmää)* — virke
-   valajan nimestä Mears kellojen olkapäässä. Leipäteksti käsittelee
-   englantilaista kellonsoittoa yleisesti ja päättyy peal-matematiikkaan,
-   joten loppuun liitettynä virke luetaan yleisväitteeksi eikä näitä
-   kelloja koskevaksi. Tieto mahtui takaisin selitteeseen (259 mrk).
+**Suomenlinnan kainalo** (helsinki): prosentit ovat kuvasta, joten ne
+muunnettiin kaavalla `18,75 + vanha × 0,625` (mitat × 0,625):
+x 76 → 66.25, y 69.15 → 61.97, leveys 22 → 13.75, korkeus 28.81 → 18.
+Ruutu on lepotilassa pikselilleen entisessä kohdassaan ja entisen
+kokoinen, ja kohde 7 osuu sen sisään (tarkistin sanoo "maalla").
 
-**Havainto linjaukseen:** siirto leipätekstin loppuun toimii, kun
-leipäteksti päättyy samaan kohteeseen, mutta ei silloin, kun se päättyy
-yleistykseen tai laajempaan joukkoon — siirretty virke perii silloin
-väärän tarkoitteen. Näissä kahdessa oli parempi tiivistää selitettä
-muualta ja pitää tieto kuvan vieressä. Jos haluat siirrot ehdottomiksi,
-se on helppo muuttaa erikseen.
+### Satelliitti — ero, joka on tiedossa ja tahallinen
 
-## Laatuvarmistus kahdessa vaiheessa
+Satelliittikuvia **ei haettu uudelleen**; ne ovat vanhalla
+rajauksella. Lepotilan kohdistus ei siitä muutu (kuva asetetaan
+tarkalleen ydinrajauksen päälle), mutta **satelliittinäkymässä
+panorointi rajataan vanhaan tapaan kuvan reunaan** — muuten reunukselle
+panoroiva pelaaja näkisi tyhjää. Savuke mittaa molemmat tapaukset
+erikseen. `tools/hae-satelliittikartat.mjs` päivitettiin vastaamaan
+tätä (hakee yhä pelkän ydinrajauksen ja muuntaa kainalon prosentit),
+**mutta sitä ei ajettu** — kuvatiedostot ovat ennallaan. Jos reunus
+joskus halutaan satelliittiinkin, muutos on yhden rivin mittainen,
+mutta kuva kasvaa 2,6-kertaiseksi eikä s2cloudless (10 m/px) siitä
+tarkennu. **Omistajan päätettäväksi.**
 
-**Kirjoitus:** 12 rinnakkaista toimittajaa maaryhmittäin (selvärajainen
-erä, sama resepti — roolituksen kustannuskurin sallima parvi).
+### Portit
 
-**Tarkastus:** 7 erillistä tarkastajaa, jotka eivät kirjoittaneet
-tekstejä. Jokainen kohde käytiin läpi yksitellen, ei otantaa. Löydöksiä
-**46**, joista vakavia 4. Kaikki 46 korjattiin.
+- `node tools/tarkista-karttapisteet.mjs` × 4 → kaikki pisteet maalla,
+  yksikään ei peitä mittajanaa. Työkalu korjattiin samalla laskemaan
+  ruudulla olevat mitat lavan pikseleissä (muuten reunuksellisen
+  kartan numeroympyrät näyttivät 1,6× lähempänä toisiaan kuin ovat).
+- `node tools/savuke-karttazoom.mjs` × 4 → **SAVUKE LÄPI** kaikilla.
+  Savuketta laajennettiin: reunukselle panorointi, paluu lepotilaan
+  (kehyksessä on tarkalleen ydinrajaus), muunnoksettomuus k = 1:ssä ja
+  satelliitin oma rajaus.
+- `node --test tests/*.test.mjs` → **711 tests, 710 pass, 0 fail.**
+  Uusi `tests/karttareunus.test.mjs` (6 testiä) vahtii geometrian:
+  keskipiste, kehyksen kuvasuhde, kohdepisteiden paikka lepotilassa,
+  kainalo näkymän sisällä, janan mitta ja se, ettei laajentamaton
+  kartta muutu.
+- `node tools/tarkista-kaksoisavaimet.mjs` → puhdas.
+- `node tools/build-standalone.mjs` → dist uusittu.
+- Silmätarkistus: kaikki neljä uutta PNG:tä katsottu sekä koko
+  julisteena että lepotilan rajauksessa, ja lepotila verrattiin
+  mainin vanhaan kuvaan (Berliini ja Helsinki pikselivertailuna
+  silmällä — identtiset). Lisäksi lehden kaappaukset selaimesta.
 
-- *kadonnut-tieto* 30 — pääosa löydöksistä. Aitoa asiatietoa
-  (materiaaleja, freskokohtauksia, lajituntomerkkejä, työvälineitä) oli
-  karsittu sommittelun varjolla. Palautettu selitteisiin; tilaa oli.
-- *vaara-merkitys* 7, *muoto* 4, *keksitty-fakta* 4, *leipateksti* 1.
-- Keksityt faktat olivat kaikki lieviä ja samaa lajia: tiivistys oli
-  korvannut sommittelumääreen uudella tilaväitteellä ("oikealla kohoaa"
-  → "kohoaa rakennuksen yläpuolelle"). **Yhtään uutta vuosilukua,
-  mittaa, lukumäärää, nimeä tai lajinimeä ei syntynyt** — neljä
-  tarkastajaa ajoi tämän vielä sanatason diffillä.
+### Kaksi asiaa tiedoksi, ei korjattu
 
-Vakavat neljä: YEM/historia/1 (siirto, 2 löydöstä), JPN/kuvataide/1
-(luettelo summautui viiteen, vaikka ihmisiä on neljä), CYP/muinaisuus/2
-(selite lupasi kaksi kohtausta mutta kuvasi vain toisen).
+1. **Kohdekarttojen PNG:t kasvoivat yhteensä ~7,2 Mt** (5,7 → 12,9 Mt
+   näillä neljällä), ja kaikki neljä ovat `sw.js`:n SHELL-listassa eli
+   jokainen asennus lataa ne. Jos tämä on liikaa, oikea korjaus on
+   siirtää kohdekartat SHELListä lennossa haettaviksi — se on oma
+   päätöksensä eikä kuulunut tähän tehtävään.
+2. **Esittelytekstien sijaintiviittaukset** ("oikeassa alanurkassa on
+   oma pieni kartta Suomenlinnasta", "kartan keskellä näkyy saari")
+   pitävät edelleen paikkansa, koska leponäkymä ei muuttunut.
+   Tarkistettu silmällä kaikista neljästä.
 
-**Kone:** `tools/kuvateksti-tarkista-e4.mjs` (uusi) mittaa pituudet ja
-virkemäärät, varmistaa ettei leipäteksti muutu muuten kuin lisäyksellä,
-ja listaa uudessa selitteessä esiintyvät numerot ja erisnimet, joita ei
-ole vanhassa aineistossa. Lopputilassa **0 virhettä**; kuusi sanaa
-nousi tarkistettavaksi ja kaikki olivat joko virkkeen aloittavia
-tavallisia sanoja tai taivutusmuotoja.
+## OSA B — värikarttanäyte (EI kytketty peliin)
 
-## Työkalut
+`tools/piirra-kaupunkikartta.mjs` sai `--vari`-lipun ja toisen
+palettinsa. Näyte: **`assets/kartat/berliini-varikartta-nayte.png`**
+(sama rajaus ja sama aineisto kuin julisteessa). **Ei vipuun eikä
+sw.js:ään** — työkalu tulostaa sen omaan tiedostoonsa eikä koske
+julisteeseen.
 
-Korjaus tehtiin id-pohjaisesti: `tools/kuvateksti-poimi-e4.mjs` antaa
-kullekin kohteelle vakaan id:n (`MAA/kategoria/#n`),
-`tools/kuvateksti-kokoa-e4.mjs` hakee vanhan tekstin aina id:llä, ja
-`tools/kuvateksti-kohdista.mjs` (Opus 12) kohdistaa vanhan tekstin
-perusteella. Todensin ennen ajoa, että kohdistajan edestakainen ajo
-palauttaa maa-kategoriat.js:n kaikki **2 182** selite- ja teksti-kenttää
-identtisinä, ja että jokainen 205 kohteen vanha arvo esiintyy tiedostossa
-**täsmälleen kerran** — väärään kenttään osuminen oli siis poissuljettu.
+Paletissa on:
 
-## Portit
+| Kohde | Juliste | Värinäyte |
+| --- | --- | --- |
+| Vesi | `#e8d5a9` hiekka | `#c3d5da` harmaansininen, reuna `#95afb6` |
+| Puistot | `#efe6ca` kuiskaus | `#d6dcba` salvianvihreä |
+| Pohja (korttelit) | `#f6eeda` paperi | `#f3e8ce` lämmin hiekka |
+| Radat | `#d5c9b0` | `#cec2a8` |
+| Rauniot | `#ece0c2` | `#ead9b4` |
+| Kadut ja muuri | musteruskeat | **täsmälleen samat** |
 
-Molemmat PR:t: testit **# pass 704, # fail 0**; ei kaksoisavaimia;
-dist tuoreen mainin (v688) päältä (4a 10 498 kt, 4b 10 505 kt);
-savuke-lehtiasettelu **10/10**, savuke-maaselain **6/6**.
+Kadut jätettiin tahallaan julisteen sävyihin: ensimmäisessä versiossa
+myös katuja tummennettiin, ja kuva alkoi näyttää tavalliselta
+verkkokartalta. Nyt ero julisteeseen on täsmälleen se, mitä omistaja
+kysyi — vesi ja puistot saavat värin, muu pysyy paperina. Sinistä ja
+vihreää on harmaannutettu: sini kallistuu teräksiseen ja vihreä
+salviaan.
 
-**Versionumerot:** 4a on v689 ja 4b **v690**. `uusi-versio.mjs` antoi
-4b:lle myös 689, koska 4a ei ollut vielä mainissa — nostin 4b:n käsin
-690:een, jotta et joudu renumeroimaan. Jos main ehtii liikkua ennen
-mergejä, numerot on ajettava uusiksi.
+Työkalu ei piirrä rakennuksia (tunnettu rajoite, kirjattu useaan
+kaupunkilohkoon), joten "korttelit" tarkoittaa katujen väliin jäävää
+pohjaa. Rakennusten piirto olisi oma työnsä, ei paletin.
 
-**Merge-järjestys: #1048 (4a) ensin, sitten 4b.** Molemmat koskevat
-maa-kategoriat.js:ää mutta eri maiden lohkoihin, joten sisältö ei mene
-päällekkäin; versiotiedostot (sw.js, js/main.js, js/muutokset.js) sen
-sijaan törmäävät. Todensin paikallisesti, että haarojen yhdistelmä
-vie koko repon ylitykset nollaan.
+Näyte on 3,6 Mt eikä sitä ladata pelissä. Jos omistaja hylkää idean,
+tiedoston voi poistaa yhdellä commitilla.
 
-## Sinulle päätettäväksi
+## Julkaisu
 
-1. Yllä oleva siirtolinjaus (leipätekstin loppu vs. selite).
-2. En avannut kuvia, vaan luotin vanhaan selitteeseen lähteenä — työ oli
-   tiivistystä, ei uudelleenkuvausta. Jos haluat selitteiden
-   silmätarkistuksen kuvia vasten, se on oma erillinen kierroksensa.
+Versionosto tehty `tools/uusi-versio.mjs`:llä juuri ennen buildia
+(`git fetch origin main` sitä ennen). PR auki; Testit-tarkistuksen
+pitäisi olla vihreä.
