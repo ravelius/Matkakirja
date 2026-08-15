@@ -11106,7 +11106,16 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   inset: 0;
   margin: auto;
   width: min(90vw, 640px);
-  height: auto;
+  /*
+   * fit-content, EI auto: .dialog on flex, ja auto-korkuinen dialogi
+   * venyi maksimikorkeuteen, jolloin kortti keskittyi sen sisällä ja
+   * dialogiin ankkuroidut napit (laskuri, kaiutin, paluunuoli) jäivät
+   * ruudun yläreunaan irralleen kortista — ja hyppivät kortin
+   * korkeuden eläessä (omistajan havainto 15.8.2026 iPadilla:
+   * "yläosa hyppii"). fit-contentilla dialogi syleilee korttia ja
+   * napit istuvat aina kortin yläkulmassa.
+   */
+  height: fit-content;
   /* Safe area mukaan: iOS:n loveus ja kotipalkki eivät saa syödä
    * kortin reunoja, joten pystyvara lasketaan niiden yli. */
   max-height: calc(100dvh - 3rem
@@ -11156,11 +11165,20 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 /* Isolla ruudulla (iPad, työpöytä) nähtävyyskortti saa olla leveämpi
  * (omistajan palaute 15.8.2026: "liian kapea") — teksti ja kuvat
- * hengittävät, mutta palsta pysyy luettavana. */
+ * hengittävät, mutta palsta pysyy luettavana. JS asettaa saman mitan
+ * myös pikseleinä (mitoitaNahtavyysDialogi), koska WKWebView'n
+ * jämähtänyt viewportti voi valehdella tälle media querylle. */
 @media (min-width: 760px) {
   .dialog.nahtavyys-arkki {
     width: min(84vw, 840px);
   }
+}
+
+/* Työhuoneen lähdediagnoosi: pienempi ja vaisumpi kuin kulurivi. */
+.tyohuone-diagnoosi {
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  opacity: 0.75;
 }
 
 /* Vuosiluku ja kohdenumero otsikon yllä: pieni kirjasinkokoinen

@@ -3176,6 +3176,9 @@ export class UI {
     const meta = document.querySelector('meta[name="viewport"]');
     if (meta) meta.setAttribute('content', meta.getAttribute('content'));
     this.fitViewBox();
+    // Avoin nähtävyysjuttu mitoitetaan uusiksi samasta syystä kuin
+    // lehti alla: vanhentunut viewportti oli voinut kaventaa sen.
+    if (document.getElementById('nahtavyys-dialog')?.open) this.mitoitaNahtavyysDialogi();
     if (!this.arrivalDialog?.open) return;
     // Avoinna oleva lehti sivutetaan uudelleen: kortin leveys on nyt
     // oikea, joten palstat, kohdekartta ja käyrät piirtyvät sen mukaan.
@@ -13112,6 +13115,7 @@ export class UI {
       // sanamuoto kertoo tekstin omaksi, ks. lahdemerkinta).
       sisalto.appendChild(html('p', 'nahtavyys-lahderivi', lahdemerkinta(kohde.lahde)));
     }
+    this.mitoitaNahtavyysDialogi();
     if (!dialogi.open) dialogi.showModal();
     this.nollaaDialoginVieritys(dialogi);
     // Paluu palauttaa lukukohdan: juttu jatkuu siitä mihin se jäi,
@@ -13361,6 +13365,28 @@ export class UI {
       });
       valikko.appendChild(rivi);
     }
+  }
+
+  /**
+   * Nähtävyysdialogin leveys PIKSELEINÄ mitatusta näkymästä, ei
+   * media querystä (omistajan havainto 15.8.2026 iPadilla: "jos käy
+   * toisessa ohjelmassa välillä niin sivun leveys palaa iphone
+   * muotoon"). WKWebView voi taustalta palatessa pitää asettelu-
+   * viewportin vanhassa kapeassa mitassa, jolloin CSS:n
+   * min-width-ehto ei laukea ja kortti kapenee — sama vika, jonka
+   * lehti sai 13.8. (varmistaLehtiMitta). mittaaNakyma tunnistaa
+   * jämähtäneen mitan visualViewportin ristiintarkistuksella, ja
+   * pikselileveys ohittaa vanhentuneen media queryn kokonaan.
+   * Kapealla ruudulla inline-leveys tyhjennetään ja CSS:n
+   * min(90vw, 640px) hoitaa asian ennallaan.
+   */
+  mitoitaNahtavyysDialogi() {
+    const dialogi = document.getElementById('nahtavyys-dialog');
+    if (!dialogi) return;
+    const mitta = this.mittaaNakyma() || 0;
+    dialogi.style.width = mitta >= 760
+      ? `${Math.min(Math.round(mitta * 0.84), 840)}px`
+      : '';
   }
 
   /** Yksi nähtävyysjutun kuva selitteineen ja lähteineen. */
