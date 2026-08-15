@@ -3717,7 +3717,7 @@ ja katso lauta oikeasti (Playwright on asennettu scratchpadiin, malli
 aiemmista skripteistä; selain `/opt/pw-browsers/chromium-*/chrome-linux/chrome`).
 
 Sävy- ja sisältösäännöt ovat tiedostoissa `docs/tarina.md` ja
-`docs/periaatteet.md` — lue molemmat ennen tarinatekstien kirjoittamista.
+Raamattu 2.0:n Perustuslaki-osio (js/tyohuone-raamattu.js) — lue molemmat ennen tarinatekstien kirjoittamista.
 
 ## Rinnakkaiset sessiot (työnjako)
 

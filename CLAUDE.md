@@ -26,7 +26,8 @@ luettelon unohdettuja aarteita. Selainpeli ilman build-vaihetta
   (sitova kaikessa sisällössä; vain Fable kirjoittaa näihin).
 - docs/kaariteksti-sapluuna.md — miten uuden laudan kaaritekstit
   kirjoitetaan (prosessi, kiintiöt, tarkistuslistat).
-- docs/periaatteet.md — pelin periaatteet.
+- Perustuslaki (viisi pilaria) on Raamattu 2.0:n osiossa "Perustuslaki";
+  tekniset jatkeet (laudan hyväksyminen, etukäteispuskuri) CONTRIBUTING.md:ssä.
 - docs/tutki-aiheet.md ja docs/tyolista-opukselle.md — lehtimalli
   ja lehtityön ohjeet.
 
