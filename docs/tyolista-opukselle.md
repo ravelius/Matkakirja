@@ -37,6 +37,50 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
+## Paketti K1: Kööpenhaminan nähtävyydet 6 → 9 (Opus 18, tilattu 15.8.2026)
+
+Omistajan tilaus: "Laita opus agentti lisäämään nähtävyyksiä
+köpikseen." Kööpenhaminan kartalla on 6 kohdetta — Helsingin taso on
+9. LEHTITAUKO ei koske tätä: kyse on nähtävyystyöstä, ei uudesta
+lehdestä.
+
+**Haara:** `claude/opus18-kobenhavn-nahtavyydet`
+
+1. Lisää `js/packs/maakartat.js` → `kobenhavn.kohteet`-listan
+   LOPPUUN kolme kohdetta (järjestys = numerointi; vanhat 1–6 eivät
+   saa siirtyä): **Vapahtajan kirkko** (spiraalitorni, 1752),
+   **Rosenborgin linna** (1600-luku, Kuninkaan puutarha),
+   **Kastellet** (tähtilinnoitus, 1660-luku). Muoto kuten muilla:
+   `{ nimi, lat, lon, wiki }` — koordinaatit Wikipediasta, ja
+   varmista että testi karttareunuksesta menee läpi (kohteen pitää
+   mahtua piirtoRajoihin; kaikki kolme ovat ydinkeskustassa).
+2. Kirjoita jokaiselle juttu `js/packs/nahtavyysjutut.js` →
+   `kobenhavn`-lohkoon samalla tyylillä kuin olemassa olevat kuusi:
+   `aika`-kenttä, 4–6 kappaletta ('\n\n'), tiedot en/da-Wikipediasta
+   MUTTA lauseet omat, lähteeksi `lahde: 'Wikipedia'`. Konkretiaa ja
+   tarinaa, ei esitetekstiä — katso mallia Tivolin ja Rundetårnin
+   jutuista.
+3. Kuvat 1–3 per juttu (`kuvat`-lista: tiedosto/selite/lahde):
+   vain PD/CC, lisenssi tarkistettu Commonsin API:sta, tekijä
+   nimettynä lähderivillä ('Tekijä, Wikimedia Commons (CC BY-SA
+   4.0)'). JOKAINEN kuva on katsottava silmin ennen kytkemistä —
+   jos Commons ruuhkauttaa kontin, aja
+   `.github/workflows/nouda-tarkistuskuvat.yml` (workflow_dispatch,
+   tiedostonimet yksi per rivi) ja lataa artefakti. Visuaalisesti
+   heikko kuva hylätään (esim. pelkkä varjo tai yksityiskohta,
+   kaupunki/kohde ei näy).
+4. Uudet kohteet EIVÄT saa piirrosta tässä paketissa — ne näkyvät
+   kartalla numeroympyröinä (koodi tukee tätä valmiiksi); piirrokset
+   teetetään myöhemmin karttaerän yhteydessä.
+5. Portit: `node --test tests/*.test.mjs` ja
+   `node tools/tarkista-kaksoisavaimet.mjs`. ÄLÄ aja
+   uusi-versio.mjs:ää äläkä koske dist/-kansioon — Fable katselmoi,
+   julkaisee ja numeroi version.
+6. Checkpoint-commit vähintään 30 min välein omalle haaralle. Kun
+   valmis: push, ÄLÄ mergeä — kirjoita raportti tiedostoon
+   `viesti-fable.md` (repon juureen, commit + push samalle
+   haaralle): mitä tehtiin, kuvien lisenssit, mitä jäi auki.
+
 ## TILANNE
 
 Kaikki alkuperäiset paketit ovat valmiit. Kuittaukset jäivät matkan
