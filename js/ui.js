@@ -83,6 +83,7 @@ import {
   MAAKARTAT, KAUPUNKIKARTAT, karttapiste, mittakaava, ydinAla, karttaKuvasuhde,
 } from './packs/maakartat.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
+import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { polloAnkkuri, polloSulje, polloVihje, polloVihjePois } from './pollo.js';
 import { HENKILOT, HENKILOLINKIT } from './packs/henkilot.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
@@ -9042,6 +9043,9 @@ export class UI {
       // — vipu vaihtaa kuvan heti napautuksesta.
       if (kohdekartta.varikartta) kuvat.push(kohdekartta.varikartta);
       else if (kohdekartta.satelliitti) kuvat.push(kohdekartta.satelliitti);
+      // Miniatyyripiirrokset (etukäteispuskurin periaate): kortti
+      // aukeaa napautuksesta, eikä piirros saa latautua vasta siinä.
+      kuvat.push(...Object.values(MINIATYYRIT[cityId] ?? {}));
     }
     return kuvat;
   }
@@ -12051,8 +12055,21 @@ export class UI {
        * wikin kuten ennenkin, ja ilman kumpaakaan piste on pelkkä
        * merkki — vanhat kaupungit toimivat siis ennallaan.
        */
-      const avaa = k.teksti ? () => this.avaaNahtavyys(k, numero)
+      const avaaJuttu = k.teksti ? () => this.avaaNahtavyys(k, numero)
         : (k.wiki ? () => this.openWikiArticle(k.wiki, k.nimi) : null);
+      /*
+       * MINIATYYRI VÄLIIN (omistajan tilaus 15.8.2026: "piirrokset
+       * voisi tulla ... klikkaamalla kohtaa jolloin tulisi piirros
+       * kartalle vähän isompana ja pari lausetta selityksenä. Ja
+       * piirrosta klikkaamalla pääsisi itse pop up artikkeliin").
+       * KARTAN piste avaa kortin; selitelistan rivi vie suoraan
+       * juttuun kuten ennenkin — listassa nimi ja numero kertovat jo
+       * saman kuin kortti.
+       */
+      const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi] ?? null;
+      const avaa = (miniatyyri && avaaJuttu)
+        ? () => this.naytaMiniatyyri(kehys, { kuva: miniatyyri, kohde: k, avaaJuttu })
+        : avaaJuttu;
       /*
        * Kohteen nimi hiiren alla (omistajan toive 8.8.2026). Ympyrässä
        * lukee vain numero, ja selitelista on kartan alla — työpöydällä
@@ -12071,12 +12088,13 @@ export class UI {
        */
       if (avaa) {
         const otsikko = k.teksti ? `${k.nimi} — lue lisää` : `${k.nimi} — avaa artikkelin`;
-        for (const el of [piste, selite]) {
-          el.type = 'button';
-          el.addEventListener('click', avaa);
-        }
+        piste.type = 'button';
+        piste.addEventListener('click', avaa);
+        selite.type = 'button';
+        // Selitelistan rivi ohittaa kortin — nimi on jo rivillä.
+        selite.addEventListener('click', avaaJuttu ?? avaa);
         selite.title = otsikko;
-        piste.setAttribute('aria-label', otsikko);
+        piste.setAttribute('aria-label', miniatyyri ? `${k.nimi} — näytä piirros` : otsikko);
       }
       const vihje = html('span', 'kohde-vihje', k.nimi);
       vihje.setAttribute('aria-hidden', 'true');
@@ -12229,6 +12247,71 @@ export class UI {
     lohko.appendChild(lahderivi);
     kohde.appendChild(lohko);
     this.kytkeKarttaZoom(kehys, kotelo, napit, ydin, zoomOhjain);
+  }
+
+  /**
+   * MINIATYYRIKORTTI KARTAN PÄÄLLE (omistajan tilaus 15.8.2026:
+   * "klikkaamalla kohtaa ... tulisi piirros kartalle vähän isompana
+   * ja pari lausetta selityksenä. Ja piirrosta klikkaamalla pääsisi
+   * itse pop up artikkeliin").
+   *
+   * Kortti on kehyksen (kiinteän karttaikkunan) lapsi eikä lavan:
+   * se pysyy paikallaan, vaikka karttaa zoomattaisiin sen alla.
+   * Lauseet ovat kohteen oman, tarkistetun jutun alku (virkkeiksi) —
+   * korttiin ei kirjoiteta uutta sisältöä. Sulkeutuu rastista,
+   * kortin ulkopuolisesta napautuksesta (myös panorointiote) ja
+   * uuden kohteen avaamisesta. Lukija ei lue korttia
+   * (data-lukija="ei") — se on kartan väline, ei sivun juttu.
+   */
+  naytaMiniatyyri(kehys, { kuva, kohde, avaaJuttu }) {
+    kehys.querySelector('.miniatyyrikortti')?.remove();
+    const kortti = html('div', 'miniatyyrikortti');
+    kortti.setAttribute('data-lukija', 'ei');
+    kortti.setAttribute('role', 'dialog');
+    kortti.setAttribute('aria-label', kohde.nimi);
+    const ulkosulku = (e) => {
+      if (!kortti.contains(e.target)) sulje();
+    };
+    const sulje = () => {
+      kortti.remove();
+      kehys.removeEventListener('pointerdown', ulkosulku, true);
+    };
+    // Kaappausvaihe: myös kartan panorointiote kortin vierestä sulkee.
+    kehys.addEventListener('pointerdown', ulkosulku, true);
+
+    const nappi = html('button', 'miniatyyri-nappi');
+    nappi.type = 'button';
+    nappi.title = `${kohde.nimi} — avaa juttu`;
+    nappi.setAttribute('aria-label', `${kohde.nimi} — avaa juttu`);
+    const el = document.createElement('img');
+    el.className = 'miniatyyri-kuva';
+    el.alt = kohde.nimi;
+    el.decoding = 'async';
+    el.draggable = false;
+    el.src = kuva;
+    nappi.appendChild(el);
+    nappi.addEventListener('click', () => {
+      sulje();
+      avaaJuttu();
+    });
+    kortti.appendChild(nappi);
+    kortti.appendChild(html('p', 'miniatyyri-nimi', kohde.nimi));
+    // Pari lausetta jutun alusta — mutta toinen virke vain jos se
+    // mahtuu: matalassa karttaikkunassa kesken leikkautuva lause
+    // näyttäisi rikkinäiseltä, ja koko juttu on napautuksen päässä.
+    const virkkeet = virkkeiksi(String(kohde.teksti ?? ''));
+    let alku = virkkeet[0] ?? '';
+    if (virkkeet[1] && alku.length + virkkeet[1].length <= 170) {
+      alku += ` ${virkkeet[1]}`;
+    }
+    if (alku) kortti.appendChild(html('p', 'miniatyyri-teksti', alku));
+    const x = html('button', 'miniatyyri-sulje', '×');
+    x.type = 'button';
+    x.title = 'Sulje';
+    x.setAttribute('aria-label', 'Sulje');
+    x.addEventListener('click', sulje);
+    kortti.appendChild(x);
+    kehys.appendChild(kortti);
   }
 
   /**
