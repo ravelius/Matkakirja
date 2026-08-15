@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 743, teksti: 'Pöllön kuva: oikea artikkeli varmistetaan, kaimat hylätään' },
   { v: 742, teksti: 'Lukija vaikenee jokaisesta pop-upista (myös pöllö)' },
   { v: 741, teksti: 'Striimiluennan ääni kuuluu Macin Safarissa (piirin herätys)' },
   { v: 740, teksti: 'Työhuone valikkoon: tilannepalkit, tyylinapit, Lukijaääni' },

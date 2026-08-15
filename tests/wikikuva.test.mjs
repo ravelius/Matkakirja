@@ -9,7 +9,9 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { haeKuvallinenArtikkeli, searchUrl, summaryUrl } from '../js/wiki.js';
+import {
+  haeKuvallinenArtikkeli, mediaListUrl, otsikkoVastaa, searchUrl, summaryUrl,
+} from '../js/wiki.js';
 
 const KUVA = 'https://upload.wikimedia.org/thumb/x/Metro.jpg/320px-Metro.jpg';
 
@@ -70,4 +72,58 @@ test('montaasi-nimiset kuvat karsitaan myös hakupolulla', async () => {
 test('ilman osumaa palautuu null eikä mikään heitä', async () => {
   const s = await haeKuvallinenArtikkeli('höpöhöpö', { fetchImpl: teeFetch() });
   assert.equal(s, null);
+});
+
+/*
+ * Osumatarkkuus (omistajan kuvakaappaus 15.8.2026: Pariisi-kysymykseen
+ * tuli suomalaisen Pariisi-kylän luminen tie). Kaksi porttia:
+ * montaasipääkuvan tilalle etsitään kuva SAMASTA artikkelista eikä
+ * hakuosumasta, ja hakuosuman nimen on vastattava aihetta.
+ */
+test('montaasin tilalle kuva saman artikkelin kuvalistalta, ei hausta', async () => {
+  const montaasi = { ...ARTIKKELI, title: 'Pariisi', thumbnail: { source: 'https://x/Paris_montage.jpg' } };
+  const loki = [];
+  const pohja = teeFetch({
+    artikkelit: { Pariisi: montaasi },
+    haku: { Pariisi: 'Pariisi (Ylöjärvi)' },
+  }, loki);
+  const fetchImpl = async (url) => {
+    if (url === mediaListUrl('fi', 'Pariisi')) {
+      return {
+        ok: true,
+        json: async () => ({
+          items: [
+            { type: 'image', title: 'Paris_montage.jpg', srcset: [{ src: '//x/montage.jpg' }] },
+            { type: 'image', title: 'Tour_Eiffel.jpg', srcset: [{ src: '//x/eiffel.jpg' }] },
+          ],
+        }),
+      };
+    }
+    return pohja(url);
+  };
+  const s = await haeKuvallinenArtikkeli('Pariisi', { fetchImpl });
+  assert.equal(s?.image, 'https://x/eiffel.jpg');
+  assert.ok(!loki.some((u) => u.includes('list=search')), 'haku vaihtaisi aiheen');
+});
+
+test('sulkutarkenteinen kaimaosuma hylätään: mieluummin ei kuvaa', async () => {
+  const kyla = {
+    title: 'Pariisi (Ylöjärvi)',
+    extract: 'K'.repeat(220),
+    thumbnail: { source: 'https://x/Luminen_tie.jpg' },
+  };
+  const fetchImpl = teeFetch({
+    artikkelit: { 'Pariisi (Ylöjärvi)': kyla },
+    haku: { 'Kerro Pariisista tarkemmin': 'Pariisi (Ylöjärvi)' },
+  });
+  const s = await haeKuvallinenArtikkeli('Kerro Pariisista tarkemmin', { fetchImpl });
+  assert.equal(s, null, 'kaimakylän kuva ei kelpaa');
+});
+
+test('otsikkoVastaa: sisältyvyys ja taivutus kelpaavat, kaima ei', () => {
+  assert.ok(otsikkoVastaa('Milloin Lontoon metro avattiin', 'Lontoon metro'));
+  assert.ok(otsikkoVastaa('Jeesuksen', 'Jeesus'));
+  assert.ok(otsikkoVastaa('höyryveturit', 'höyryveturi'));
+  assert.ok(!otsikkoVastaa('Pariisi', 'Pariisi (Ylöjärvi)'));
+  assert.ok(!otsikkoVastaa('Kalliomoskeija', 'Temppelivuori'));
 });
