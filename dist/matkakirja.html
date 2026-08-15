@@ -12309,6 +12309,15 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
   padding: 0.4rem 0.5rem;
 }
 
+/* Pelin oletusprompti kentän alla vertailua varten (omistajan tilaus
+ * 15.8.2026): pieni ja vaimea, ettei se kilpaile itse kentän kanssa. */
+.puhe-oletusohje {
+  margin: 0.3rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  opacity: 0.72;
+}
+
 </style>
 </head>
 <body>
@@ -13014,8 +13023,10 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
       <select id="puhe-aani"></select>
     </div>
     <label class="puhe-saadin-label" for="puhe-ohje">Prompti (tyhjä = pelin oletus)</label>
-    <textarea id="puhe-ohje" class="puhe-saadin-ohje" rows="3"
-              placeholder="esim. Speak Finnish. Calm, low voice of an old explorer…"></textarea>
+    <textarea id="puhe-ohje" class="puhe-saadin-ohje" rows="3"></textarea>
+    <!-- Pelin oletusprompti näkyvissä vertailua varten; js/main.js
+         täyttää valitun lukijan mukaan (js/puhe-oletukset.js). -->
+    <p id="puhe-oletusohje" class="puhe-oletusohje"></p>
     <div class="puhe-saadin-rivi">
       <label for="puhe-nopeus">Nopeus</label>
       <input id="puhe-nopeus" type="range" min="0.6" max="1.6" step="0.05" />
@@ -108806,6 +108817,43 @@ const TESTATTAVAA = [
   'v683–v687 — lukijan automoodi, otsikkotauot, väistö',
 ];
 
+// ===== js/puhe-oletukset.js =====
+/*
+ * Lukijaäänen persoonien OLETUKSET näytettäväksi pelin säätimessä.
+ *
+ * Totuus asuu workerissa (tools/pollo/worker.js PUHE_PERSOONAT):
+ * asiakas ei voi muuttaa oletuksia, mutta omistajan pitää nähdä ne
+ * säätödialogissa, jotta oma prompti osataan kirjoittaa oletusta
+ * silmällä pitäen (omistajan tilaus 15.8.2026). Tämä tiedosto on
+ * NÄYTTÖKOPIO — tests/puheohjeet.test.mjs valvoo, että se vastaa
+ * workerin taulua merkilleen. Muuta aina molempia yhdessä.
+ */
+
+const PUHE_OLETUKSET = {
+  kertoja: {
+    aani: 'onyx',
+    ohje: 'Speak Finnish. You are a wise, warm storyteller reading aloud '
+      + 'from an adventure newspaper and its articles. Calm, '
+      + 'unhurried pace with a hint of wonder; clear articulation; '
+      + 'natural pauses at sentence boundaries. Never theatrical.',
+  },
+  merkinnat: {
+    aani: 'onyx',
+    ohje: 'Speak Finnish. You are reading aloud entries from a Victorian '
+      + "explorer's travel journal, as a grandfather sharing his own "
+      + 'memories. Calm, intimate and slightly weathered narration; '
+      + 'unhurried pace; natural pauses at sentence boundaries. '
+      + 'Never theatrical.',
+  },
+  pollo: {
+    aani: 'sage',
+    ohje: 'Speak Finnish. You are a knowledgeable, friendly owl companion '
+      + 'answering a curious traveller. Warm and bright conversational '
+      + 'tone, a little quicker than a narrator, clear articulation. '
+      + 'Never childish or theatrical.',
+  },
+};
+
 // ===== js/packs/tarinakaari.js =====
 /*
  * Euroopan tarinakaari pelissä (omistajan tilaus 9.8.2026: "Julkaiset
@@ -156439,6 +156487,12 @@ const LUKIJAN_OHITETTAVAT = [
   // Lehden päivämäärä on taittoa, ei juttua (omistajan toive).
   '#arrival-lehti-pvm',
 
+  // Noston aikamerkki otsikon oikeassa reunassa ("1973", "Aamuisin")
+  // on taittoa sekin — otsikon perään luettuna se kuulostaa virheeltä
+  // (omistajan toive 15.8.2026: "Jätä tällaiset vuosilukumerkinnät
+  // lukematta").
+  '.nosto-aika',
+
   // "Uutisissa tänään (lähde)" -nimiö samoin (omistajan toive) —
   // uutisotsikot itse ovat nappeja ja jäävät pois jo tagilistalla.
   '.uutiset-nimio',
@@ -179153,6 +179207,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 702, teksti: 'Oletusprompti näkyviin ja aikamerkit pois luennasta' },
   { v: 701, teksti: 'Raamattu uusiksi tiiviinä + valmis/kesken-tagit lehteen' },
   { v: 700, teksti: 'Raamattu ja tilannetaulut tiiviiksi (selkeys ensin)' },
   { v: 699, teksti: 'Omat jutut Panthéonille, Lucolle, Kalliolle, Lintsille' },
@@ -179951,7 +180006,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.701';
+const APP_VERSION = '2026-08-09.702';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -180989,7 +181044,6 @@ const puheNopeusArvo = document.getElementById('puhe-nopeus-arvo');
 
 const PUHE_AANIVAIHTOEHDOT = ['alloy', 'ash', 'ballad', 'coral', 'echo',
   'fable', 'nova', 'onyx', 'sage', 'shimmer', 'verse'];
-const PUHE_OLETUSAANET = { merkinnat: 'onyx', kertoja: 'onyx', pollo: 'sage' };
 const PUHE_NAYTTEET = {
   merkinnat: 'Saavuimme kaupunkiin illansuussa, ja teekaravaanin kellot '
     + 'kilisivät kadulla vielä pimeän tultua.',
@@ -181019,12 +181073,19 @@ document.getElementById('tilanne-lehti-btn')?.addEventListener('click', () => {
 function lataaPuheKentat() {
   const persoona = puhePersoonaValinta.value;
   const oma = luePuheAsetukset()[persoona] ?? {};
+  const oletukset = PUHE_OLETUKSET[persoona] ?? PUHE_OLETUKSET.kertoja;
   // Oletusvaihtoehdon nimi kertoo, mikä pelin oletusääni on.
   puheAaniValinta.replaceChildren();
   const oletus = document.createElement('option');
   oletus.value = '';
-  oletus.textContent = `(pelin oletus: ${PUHE_OLETUSAANET[persoona] ?? 'onyx'})`;
+  oletus.textContent = `(pelin oletus: ${oletukset.aani})`;
   puheAaniValinta.appendChild(oletus);
+  // Pelin oletusprompti näkyviin, jotta oman promptin voi kirjoittaa
+  // sitä silmällä pitäen (omistajan tilaus 15.8.2026). Sama teksti myös
+  // tyhjän kentän paikkamerkkinä.
+  const oletusOhje = document.getElementById('puhe-oletusohje');
+  if (oletusOhje) oletusOhje.textContent = `Pelin oletus: ${oletukset.ohje}`;
+  puheOhjeKentta.placeholder = oletukset.ohje;
   for (const aani of PUHE_AANIVAIHTOEHDOT) {
     const o = document.createElement('option');
     o.value = aani;

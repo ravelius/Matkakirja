@@ -176,6 +176,22 @@ test('maston kaupunkinimi ei kuluta otsikko-ohitusta (omistajan havainto 14.8.20
   assert.match(teksti, /Niili tulvi/);
 });
 
+test('noston aikamerkki otsikon reunassa jää lukematta (omistajan toive 15.8.2026)', () => {
+  // "Jyrkänne, jonka voi raapia kynnellä    1973" — vuosiluku on
+  // taittoa, ja otsikon perään luettuna se kuulostaa virheeltä.
+  const sivu = el('div', {},
+    el('h3', {}, t('Ensimmäinen otsikko')),
+    el('p', {}, t('Alkukappale.')),
+    el('h4', {},
+      t('Jyrkänne, jonka voi raapia kynnellä'),
+      el('span', { luokat: ['nosto-aika'] }, t('1973'))),
+    el('p', {}, t('Gaujan laaksossa joki on kuluttanut jyrkänteitä.')));
+  const teksti = kokoaLuettavaTeksti(sivu);
+  assert.ok(!/1973/.test(teksti), teksti);
+  assert.match(teksti, /raapia kynnellä/);
+  assert.match(teksti, /Gaujan laaksossa/);
+});
+
 test('lähdemerkinnät jäävät lukematta', () => {
   const teksti = kokoaLuettavaTeksti(aihesivu());
   assert.ok(!/Canaletto/.test(teksti), teksti);

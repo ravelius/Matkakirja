@@ -12300,3 +12300,12 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
   font: inherit;
   padding: 0.4rem 0.5rem;
 }
+
+/* Pelin oletusprompti kentän alla vertailua varten (omistajan tilaus
+ * 15.8.2026): pieni ja vaimea, ettei se kilpaile itse kentän kanssa. */
+.puhe-oletusohje {
+  margin: 0.3rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  opacity: 0.72;
+}

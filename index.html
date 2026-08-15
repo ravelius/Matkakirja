@@ -718,8 +718,10 @@
       <select id="puhe-aani"></select>
     </div>
     <label class="puhe-saadin-label" for="puhe-ohje">Prompti (tyhjä = pelin oletus)</label>
-    <textarea id="puhe-ohje" class="puhe-saadin-ohje" rows="3"
-              placeholder="esim. Speak Finnish. Calm, low voice of an old explorer…"></textarea>
+    <textarea id="puhe-ohje" class="puhe-saadin-ohje" rows="3"></textarea>
+    <!-- Pelin oletusprompti näkyvissä vertailua varten; js/main.js
+         täyttää valitun lukijan mukaan (js/puhe-oletukset.js). -->
+    <p id="puhe-oletusohje" class="puhe-oletusohje"></p>
     <div class="puhe-saadin-rivi">
       <label for="puhe-nopeus">Nopeus</label>
       <input id="puhe-nopeus" type="range" min="0.6" max="1.6" step="0.05" />
