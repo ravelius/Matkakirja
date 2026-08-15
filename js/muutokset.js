@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 721, teksti: 'iOS-korostusneliö pois; suurennos 3,5x' },
   { v: 720, teksti: 'Piirroksen suurennos 3x' },
   { v: 719, teksti: 'Piirroksen klikkaus vain suurentaa' },
   { v: 718, teksti: 'Piirrokset pienemmiksi, nuolet pois' },

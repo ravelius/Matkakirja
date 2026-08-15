@@ -9767,6 +9767,10 @@ body.vertailu-tila .pawns { display: none; }
   background: #2c2318;
   border: 1.5px solid #f7efdc;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  /* iOS maalaa napautuskorostuksen koko napin laatikolle — leikatulla
+   * piirroksella se näkyi umpinaisena neliönä kuvan takana (omistajan
+   * havainto 15.8.2026). Bodyn estosääntö ei periydy napeille. */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .maakartta-piste.paa {
@@ -10575,15 +10579,16 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * piirros kasvaa paikallaan ja nimikyltti aukeaa sen alle (tai ylle
  * alareunassa, .kyltti-ylle); uusi napautus palauttaa koon —
  * ikkunaa ei avata. Skaala jakaa zoomin kuten perussääntö, jotta
- * suurennos on sama joka zoomiasennossa. Kerroin 3 (omistajan
- * tilaus 15.8.2026: "Saa kasvaa koko 3x"; 48 px → 144 px).
+ * suurennos on sama joka zoomiasennossa. Kerroin 3,5 (omistajan
+ * tilaukset 15.8.2026: "Saa kasvaa koko 3x" ja "vähän isompi";
+ * 48 px → 168 px).
  */
 .maakartta-piste.kohde-numero.kohde-piirros {
   transition: transform 160ms ease;
 }
 
 .kartta-lava .maakartta-piste.kohde-numero.kohde-piirros.valittu {
-  transform: translate(-50%, -50%) scale(calc(3 / var(--zoom)));
+  transform: translate(-50%, -50%) scale(calc(3.5 / var(--zoom)));
   z-index: 5;
 }
 
@@ -10604,10 +10609,10 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   padding: 0.07rem 0.24rem;
   white-space: nowrap;
   font-family: var(--font-type);
-  /* Kyltti perii napin 3-kertaisen skaalan — mitat ovat siksi
-   * kolmasosia, jotta näkyvä koko on tavallista tekstiä ja
+  /* Kyltti perii napin 3,5-kertaisen skaalan — mitat ovat siksi
+   * murto-osia, jotta näkyvä koko on tavallista tekstiä ja
    * hiusviivareunus. */
-  font-size: 0.28rem;
+  font-size: 0.24rem;
   letter-spacing: 0.03em;
   color: #2c1e07;
   background-color: #f5f0e2;
