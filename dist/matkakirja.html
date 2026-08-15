@@ -10576,14 +10576,15 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 /*
- * VALITTU PIIRROS (omistajan tilaus 15.8.2026: "Kun kuva painaa, se
- * voisi yksinkertaisesti vain suurentua ja sen viereen voisi tulla
- * nimikyltti"). Ensimmäinen napautus lisää .valittu-luokan: piirros
- * kasvaa paikallaan ja nimikyltti aukeaa sen alle (tai ylle
- * alareunassa, .kyltti-ylle). Toinen napautus — kuva ja kyltti ovat
- * samaa nappia — avaa jutun. Skaala jakaa zoomin kuten perussääntö,
- * jotta suurennos on sama joka zoomiasennossa. Kerroin 2 (ei 1,7),
- * jotta pienennetystä 48 px:n pisteestä kasvaa yhä tutkittava kuva.
+ * VALITTU PIIRROS (omistajan tilaukset 15.8.2026: "Kun kuva painaa,
+ * se voisi yksinkertaisesti vain suurentua ja sen viereen voisi
+ * tulla nimikyltti" ja "Riittää kun saa klikattua isommaksi (kasvaa
+ * vain kokoa ilman ikkunaa)"). Napautus lisää .valittu-luokan:
+ * piirros kasvaa paikallaan ja nimikyltti aukeaa sen alle (tai ylle
+ * alareunassa, .kyltti-ylle); uusi napautus palauttaa koon —
+ * ikkunaa ei avata. Skaala jakaa zoomin kuten perussääntö, jotta
+ * suurennos on sama joka zoomiasennossa. Kerroin 2 (ei 1,7), jotta
+ * pienennetystä 48 px:n pisteestä kasvaa yhä tutkittava kuva.
  */
 .maakartta-piste.kohde-numero.kohde-piirros {
   transition: transform 160ms ease;
@@ -109431,6 +109432,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v719 — piirroksen klikkaus vain suurentaa, ei ikkunaa',
   'v718 — piirrokset pienempinä, nuolet pois',
   'v717 — piirrokset yksivärisinä luonnoksina',
   'v716 — lippuikkuna: 2/3-korkeus, symboliikka, vaakunat',
@@ -174378,26 +174380,21 @@ class UI {
       const avaaJuttu = k.teksti ? () => this.avaaNahtavyys(k, numero)
         : (k.wiki ? () => this.openWikiArticle(k.wiki, k.nimi) : null);
       /*
-       * KAKSIVAIHEINEN NAPAUTUS (omistajan tilaus 15.8.2026: "Kun
-       * kuva painaa, se voisi yksinkertaisesti vain suurentua ja sen
-       * viereen voisi tulla nimikyltti. Ja sitten jos kuvaa vielä
-       * kerran painaa tai nimikylttiä, aukea varsinainen
-       * pop-up-artikkeli"). Ensimmäinen napautus suurentaa piirroksen
-       * ja näyttää kyltin (CSS: .valittu), toinen — kuvasta tai
-       * kyltistä, jotka ovat samaa nappia — avaa jutun. Entinen
-       * miniatyyrikortti poistui samalla tilauksella kokonaan.
-       * Selitelistan rivi vie suoraan juttuun kuten ennenkin.
+       * NAPAUTUS VAIN SUURENTAA (omistajan linjaus 15.8.2026:
+       * "Riittää kun saa klikattua isommaksi (kasvaa vain kokoa
+       * ilman ikkunaa)" — kumosi saman päivän kaksivaiheisen mallin,
+       * jossa toinen napautus avasi jutun). Napautus kasvattaa
+       * piirroksen ja näyttää nimikyltin (CSS: .valittu); uusi
+       * napautus palauttaa koon. Juttuun pääsee selitelistasta, joka
+       * on toiminut niin koko ajan. Numeroympyrä (kohde ilman
+       * piirrosta) avaa jutun suoraan kuten ennenkin.
        */
       const avaa = (miniatyyri && avaaJuttu)
         ? () => {
-          if (piste.classList.contains('valittu')) {
-            piste.classList.remove('valittu');
-            avaaJuttu();
-            return;
-          }
+          const valittu = piste.classList.contains('valittu');
           kotelo.querySelectorAll('.kohde-piirros.valittu')
             .forEach((v) => v.classList.remove('valittu'));
-          piste.classList.add('valittu');
+          if (!valittu) piste.classList.add('valittu');
         }
         : avaaJuttu;
       /*
@@ -180430,6 +180427,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 719, teksti: 'Piirroksen klikkaus vain suurentaa' },
   { v: 718, teksti: 'Piirrokset pienemmiksi, nuolet pois' },
   { v: 717, teksti: 'Kartan piirrokset yksivärisinä luonnoksina' },
   { v: 716, teksti: 'Lippuikkuna: symboliikka, vaakunat, 2/3-korkeus' },
@@ -181245,7 +181243,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.718';
+const APP_VERSION = '2026-08-09.719';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

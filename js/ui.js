@@ -12100,26 +12100,21 @@ export class UI {
       const avaaJuttu = k.teksti ? () => this.avaaNahtavyys(k, numero)
         : (k.wiki ? () => this.openWikiArticle(k.wiki, k.nimi) : null);
       /*
-       * KAKSIVAIHEINEN NAPAUTUS (omistajan tilaus 15.8.2026: "Kun
-       * kuva painaa, se voisi yksinkertaisesti vain suurentua ja sen
-       * viereen voisi tulla nimikyltti. Ja sitten jos kuvaa vielä
-       * kerran painaa tai nimikylttiä, aukea varsinainen
-       * pop-up-artikkeli"). Ensimmäinen napautus suurentaa piirroksen
-       * ja näyttää kyltin (CSS: .valittu), toinen — kuvasta tai
-       * kyltistä, jotka ovat samaa nappia — avaa jutun. Entinen
-       * miniatyyrikortti poistui samalla tilauksella kokonaan.
-       * Selitelistan rivi vie suoraan juttuun kuten ennenkin.
+       * NAPAUTUS VAIN SUURENTAA (omistajan linjaus 15.8.2026:
+       * "Riittää kun saa klikattua isommaksi (kasvaa vain kokoa
+       * ilman ikkunaa)" — kumosi saman päivän kaksivaiheisen mallin,
+       * jossa toinen napautus avasi jutun). Napautus kasvattaa
+       * piirroksen ja näyttää nimikyltin (CSS: .valittu); uusi
+       * napautus palauttaa koon. Juttuun pääsee selitelistasta, joka
+       * on toiminut niin koko ajan. Numeroympyrä (kohde ilman
+       * piirrosta) avaa jutun suoraan kuten ennenkin.
        */
       const avaa = (miniatyyri && avaaJuttu)
         ? () => {
-          if (piste.classList.contains('valittu')) {
-            piste.classList.remove('valittu');
-            avaaJuttu();
-            return;
-          }
+          const valittu = piste.classList.contains('valittu');
           kotelo.querySelectorAll('.kohde-piirros.valittu')
             .forEach((v) => v.classList.remove('valittu'));
-          piste.classList.add('valittu');
+          if (!valittu) piste.classList.add('valittu');
         }
         : avaaJuttu;
       /*
