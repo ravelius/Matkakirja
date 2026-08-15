@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v729 — lippusivut: Itä-Eurooppa + Balkan (9 maata)',
   'v728 — suurennos ¼ kartasta; kyltistä juttuun; vipunapin teksti',
   'v727 — lippusivut: Länsi-Eurooppa (8 maata)',
   'v726 — lippusivut: Pohjoismaat + Baltia (7 maata)',
