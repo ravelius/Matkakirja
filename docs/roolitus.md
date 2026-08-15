@@ -102,7 +102,7 @@ Työtapa on siksi tämä:
 | Opus 16 (etukäteispuskuri) | — VALMIS JA ARKISTOITU 15.8.: lehtien ja lukijaäänen esipuskurit mainissa (v695); TTS-avainosuma todennettu savukkeella negatiivikokeineen. | 15.8.2026 |
 | Opus 17 (nähtävyysjutut) | — VALMIS JA ARKISTOITU 15.8.: neljä laatujuttua mainissa (v699; Fable renumeroi ja todensi 6 Commons-lisenssiä API:sta). | 15.8.2026 |
 | Opus 18 (Kööpenhaminan nähtävyydet) | — VALMIS 16.8.: paketti K1 mainissa (v764; Fable todensi 9 lisenssiä ja katsoi kuvat). Esimerkillinen raportti: bongasi kaksi fi-wikin nimiansaa. Sessio session_01JDTLbjWJz6UCAayjpJQb5c valmiudessa. | 16.8.2026 |
-| Opus 19 (Matkailijalle-monistus erä 1) | session_016wkEJc5LFhbFeo2YKKtbeM (paketti M1: Berliini, Pariisi, Lontoo — matkailijalle-kentät + etusivukuvien silmätarkistus haaralla claude/opus19-matkailijalle-era1; EI mergeä itse; raportointi viesti-fable.md:llä) | 16.8.2026 |
+| Opus 19 (Matkailijalle-monistus erä 1) | session_016wkEJc5LFhbFeo2YKKtbeM — KESKEYTETTY 16.8.2026 omistajan päätöksellä ("Älä vielä monista": lehtimalliin tuli v766:n ripoteltu-kuvataitto ensin). Paketti M1 tauolla työlistalla; monistus tilataan uudelleen mallin hyväksynnän jälkeen. | 16.8.2026 |
 | Fable max (apusessio) | session_01NQpicvHRAzUpX4NfcYwsyv (Fable max 2; EI vastaanota viestejä tilinvaihdon jälkeen — uusi tili perustaa oman Max-session tarvittaessa. Vanha session_01U8Nqxu… arkistoitu 11.8. konttivian takia) | 11.8.2026 |
 | Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/arkisto/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |

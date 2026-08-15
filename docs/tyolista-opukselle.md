@@ -48,6 +48,13 @@ lisäohjeita:
 
 ## Paketti M1: Matkailijalle-monistus, erä 1 (Opus 19, tilattu 16.8.2026)
 
+> **⏸ TAUOLLA (omistaja 16.8.2026): "Älä vielä monista. Tämä sama
+> sivu tarvitsee muokkausta."** Opus 19 keskeytetty ennen
+> ensimmäistä checkpointia. Malliin tuli v766:ssa uusi
+> ripoteltu-kuvataitto (kuvat kelluvat tekstin lomassa, ks.
+> Kööpenhaminan artikkeli) — kun omistaja hyväksyy mallin, tämä
+> paketti päivitetään sen mukaiseksi ja tilataan uudelleen.
+
 Omistajan kuittaus 16.8.2026: "Voit monistaa" — Kööpenhaminan ja
 Helsingin lehtimalli monistetaan muihin kaupunkeihin. Erä 1 kattaa
 kolme kaupunkia, joilla avauskuvat jo ovat: **Berliini, Pariisi,
