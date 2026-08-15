@@ -10334,27 +10334,6 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   touch-action: pan-y;
 }
 
-/* Hajautusnuolet (omistajan tilaus 15.8.2026): siirtynyt piirros saa
- * pienen nuolen kohteen oikeaan sijaintiin. SVG elää lavan
- * koordinaatistossa, joten se skaalautuu zoomin mukana kartan
- * piirtoviivojen tavoin. */
-.kartta-nuolet {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.kartta-nuolet line {
-  stroke: rgba(44, 35, 24, 0.75);
-  stroke-width: 1.6;
-}
-
-.kartta-nuolet polygon {
-  fill: rgba(44, 35, 24, 0.8);
-}
-
 .kartta-kehys.zoomattu {
   touch-action: none;
   cursor: grab;
@@ -10570,10 +10549,11 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * numerobadgea. Laatikko on ympyrää suurempi, koska leikatun kuvan
  * reunoilla on läpinäkyvää tyhjää; drop-shadow seuraa piirroksen
  * ääriviivaa, ei laatikkoa. Sama vastaskaalaus kuin numeroympyrällä
- * (.kartta-lava-sääntö yllä). */
+ * (.kartta-lava-sääntö yllä). Koko 48 px (omistajan palaute
+ * 15.8.2026: "Tee sittenkin pienemmiksi"; oli 64 px). */
 .maakartta-piste.kohde-numero.kohde-piirros {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   background: none;
   border: none;
   border-radius: 0;
@@ -10597,14 +10577,15 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * kasvaa paikallaan ja nimikyltti aukeaa sen alle (tai ylle
  * alareunassa, .kyltti-ylle). Toinen napautus — kuva ja kyltti ovat
  * samaa nappia — avaa jutun. Skaala jakaa zoomin kuten perussääntö,
- * jotta suurennos on sama joka zoomiasennossa.
+ * jotta suurennos on sama joka zoomiasennossa. Kerroin 2 (ei 1,7),
+ * jotta pienennetystä 48 px:n pisteestä kasvaa yhä tutkittava kuva.
  */
 .maakartta-piste.kohde-numero.kohde-piirros {
   transition: transform 160ms ease;
 }
 
 .kartta-lava .maakartta-piste.kohde-numero.kohde-piirros.valittu {
-  transform: translate(-50%, -50%) scale(calc(1.7 / var(--zoom)));
+  transform: translate(-50%, -50%) scale(calc(2 / var(--zoom)));
   z-index: 5;
 }
 
@@ -10625,9 +10606,9 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   padding: 0.1rem 0.35rem;
   white-space: nowrap;
   font-family: var(--font-type);
-  /* Kyltti perii napin 1,7-kertaisen skaalan — pieni fontti on
+  /* Kyltti perii napin 2-kertaisen skaalan — pieni fontti on
    * tarkoituksella, jotta näkyvä koko on tavallista tekstiä. */
-  font-size: 0.5rem;
+  font-size: 0.42rem;
   letter-spacing: 0.03em;
   color: #2c1e07;
   background-color: #f5f0e2;
@@ -109444,6 +109425,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v718 — piirrokset pienempinä, nuolet pois',
   'v717 — piirrokset yksivärisinä luonnoksina',
   'v716 — lippuikkuna: 2/3-korkeus, symboliikka, vaakunat',
   'v715 — piirrokset hajallaan + nuolet; klikkaus: kyltti → juttu',
@@ -174570,19 +174552,17 @@ class UI {
   }
 
   /**
-   * PIIRROSTEN HAJAUTUS NUOLILLA (omistajan tilaus 15.8.2026:
-   * "Piirrokset ovat liian lähellä toisiaan. Täytyy tehdä pienet
-   * nuolet, jotta kuvat saa enemmän irralleen toisistaan").
+   * PIIRROSTEN HAJAUTUS (omistajan tilaus 15.8.2026: "Piirrokset
+   * ovat liian lähellä toisiaan" — ja saman päivän jatko "Tee
+   * sittenkin pienemmiksi ja ota nuolet pois": sijaintinuolet
+   * ehtivät elää vain v715–v717).
    *
    * Liian lähekkäiset piirrokset työnnetään toisistaan erilleen
-   * yksinkertaisella rentoutuksella, ja siirtynyt piirros saa pienen
-   * nuolen, joka osoittaa kohteen oikeaan sijaintiin kartalla.
-   * Lasketaan pikseleinä vasta asettelun jälkeen (rAF), koska
-   * piirroksen koko on kiinteä 64 px mutta lavan leveys vaihtelee
-   * puhelimesta työpöytään. Tulos kirjoitetaan takaisin prosentteina
-   * ja nuolet SVG:nä lavan koordinaatistossa, joten kaikki skaalautuu
-   * ikkunan ja zoomin mukana sellaisenaan. Nuolet eivät ota
-   * napautuksia vastaan (pointer-events: none).
+   * yksinkertaisella rentoutuksella. Lasketaan pikseleinä vasta
+   * asettelun jälkeen (rAF), koska piirroksen koko on kiinteä 48 px
+   * mutta lavan leveys vaihtelee puhelimesta työpöytään. Tulos
+   * kirjoitetaan takaisin prosentteina, joten se skaalautuu ikkunan
+   * ja zoomin mukana sellaisenaan.
    */
   hajautaPiirrospisteet(kotelo, pisteet, ydin) {
     if (pisteet.length < 2) return;
@@ -174593,13 +174573,13 @@ class UI {
       if (mitat.width < 40) return false;
       const W = mitat.width;
       const K = mitat.height;
-      // 72 px ≈ piirroksen laatikko + selvä ilmarako. Pienemmällä
-      // arvolla tiheimmät rykelmät jäivät yhä kiinni toisissaan
-      // (kokeiltu 58 px 15.8.2026).
-      const MIN = 72;
+      // 54 px ≈ 48 px:n laatikko + ilmarako. (64 px:n laatikolla
+      // vastaava luku oli 72; pienempi väli tarkoittaa myös
+      // pienempiä siirtymiä, mikä sopii nuolettomaan karttaan.)
+      const MIN = 54;
       const paikat = pisteet.map((m) => ({ ...m, X: (m.x / 100) * W, Y: (m.y / 100) * K }));
       // Piirrokset pysyvät lepotilassa näkyvällä ydinalueella.
-      const M = 30;
+      const M = 24;
       const x0 = (ydin.x / 100) * W + M;
       const x1 = ((ydin.x + ydin.leveys) / 100) * W - M;
       const y0 = (ydin.y / 100) * K + M;
@@ -174637,13 +174617,6 @@ class UI {
         }
         if (!liikkui) break;
       }
-      const svgns = 'http://www.w3.org/2000/svg';
-      const nuolet = document.createElementNS(svgns, 'svg');
-      nuolet.setAttribute('class', 'kartta-nuolet');
-      nuolet.setAttribute('viewBox', `0 0 ${W.toFixed(1)} ${K.toFixed(1)}`);
-      nuolet.setAttribute('preserveAspectRatio', 'none');
-      nuolet.setAttribute('aria-hidden', 'true');
-      let nuolia = 0;
       for (const m of paikat) {
         m.X = Math.min(Math.max(m.X, x0), x1);
         m.Y = Math.min(Math.max(m.Y, y0), y1);
@@ -174653,36 +174626,7 @@ class UI {
         const osuus = (((m.Y / K) * 100 - ydin.y) / ydin.korkeus) * 100;
         m.piste.classList.toggle('vihje-alle', osuus < 14);
         m.piste.classList.toggle('kyltti-ylle', osuus > 84);
-        const ankkuriX = (m.x / 100) * W;
-        const ankkuriY = (m.y / 100) * K;
-        const dx = ankkuriX - m.X;
-        const dy = ankkuriY - m.Y;
-        const d = Math.hypot(dx, dy);
-        // Lyhyt siirtymä: piirros peittää sijaintinsa yhä, ei nuolta.
-        if (d < 26) continue;
-        const ux = dx / d;
-        const uy = dy / d;
-        const KARKI = 7;
-        const kx = ankkuriX - ux * KARKI;
-        const ky = ankkuriY - uy * KARKI;
-        const viiva = document.createElementNS(svgns, 'line');
-        viiva.setAttribute('x1', (m.X + ux * 24).toFixed(1));
-        viiva.setAttribute('y1', (m.Y + uy * 24).toFixed(1));
-        viiva.setAttribute('x2', kx.toFixed(1));
-        viiva.setAttribute('y2', ky.toFixed(1));
-        nuolet.appendChild(viiva);
-        const karki = document.createElementNS(svgns, 'polygon');
-        karki.setAttribute('points', [
-          `${ankkuriX.toFixed(1)},${ankkuriY.toFixed(1)}`,
-          `${(kx - uy * 3.5).toFixed(1)},${(ky + ux * 3.5).toFixed(1)}`,
-          `${(kx + uy * 3.5).toFixed(1)},${(ky - ux * 3.5).toFixed(1)}`,
-        ].join(' '));
-        nuolet.appendChild(karki);
-        nuolia++;
       }
-      // Nuolet kartan päälle mutta pisteiden alle.
-      kotelo.querySelector('.kartta-nuolet')?.remove();
-      if (nuolia) kotelo.insertBefore(nuolet, kotelo.querySelector('.maakartta-piste'));
       return true;
     };
     requestAnimationFrame(() => {
@@ -180480,6 +180424,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 718, teksti: 'Piirrokset pienemmiksi, nuolet pois' },
   { v: 717, teksti: 'Kartan piirrokset yksivärisinä luonnoksina' },
   { v: 716, teksti: 'Lippuikkuna: symboliikka, vaakunat, 2/3-korkeus' },
   { v: 715, teksti: 'Piirrokset hajalleen nuolin; klikkaus suurentaa' },
@@ -181294,7 +181239,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.717';
+const APP_VERSION = '2026-08-09.718';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

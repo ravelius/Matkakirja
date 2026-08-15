@@ -12280,19 +12280,17 @@ export class UI {
   }
 
   /**
-   * PIIRROSTEN HAJAUTUS NUOLILLA (omistajan tilaus 15.8.2026:
-   * "Piirrokset ovat liian lähellä toisiaan. Täytyy tehdä pienet
-   * nuolet, jotta kuvat saa enemmän irralleen toisistaan").
+   * PIIRROSTEN HAJAUTUS (omistajan tilaus 15.8.2026: "Piirrokset
+   * ovat liian lähellä toisiaan" — ja saman päivän jatko "Tee
+   * sittenkin pienemmiksi ja ota nuolet pois": sijaintinuolet
+   * ehtivät elää vain v715–v717).
    *
    * Liian lähekkäiset piirrokset työnnetään toisistaan erilleen
-   * yksinkertaisella rentoutuksella, ja siirtynyt piirros saa pienen
-   * nuolen, joka osoittaa kohteen oikeaan sijaintiin kartalla.
-   * Lasketaan pikseleinä vasta asettelun jälkeen (rAF), koska
-   * piirroksen koko on kiinteä 64 px mutta lavan leveys vaihtelee
-   * puhelimesta työpöytään. Tulos kirjoitetaan takaisin prosentteina
-   * ja nuolet SVG:nä lavan koordinaatistossa, joten kaikki skaalautuu
-   * ikkunan ja zoomin mukana sellaisenaan. Nuolet eivät ota
-   * napautuksia vastaan (pointer-events: none).
+   * yksinkertaisella rentoutuksella. Lasketaan pikseleinä vasta
+   * asettelun jälkeen (rAF), koska piirroksen koko on kiinteä 48 px
+   * mutta lavan leveys vaihtelee puhelimesta työpöytään. Tulos
+   * kirjoitetaan takaisin prosentteina, joten se skaalautuu ikkunan
+   * ja zoomin mukana sellaisenaan.
    */
   hajautaPiirrospisteet(kotelo, pisteet, ydin) {
     if (pisteet.length < 2) return;
@@ -12303,13 +12301,13 @@ export class UI {
       if (mitat.width < 40) return false;
       const W = mitat.width;
       const K = mitat.height;
-      // 72 px ≈ piirroksen laatikko + selvä ilmarako. Pienemmällä
-      // arvolla tiheimmät rykelmät jäivät yhä kiinni toisissaan
-      // (kokeiltu 58 px 15.8.2026).
-      const MIN = 72;
+      // 54 px ≈ 48 px:n laatikko + ilmarako. (64 px:n laatikolla
+      // vastaava luku oli 72; pienempi väli tarkoittaa myös
+      // pienempiä siirtymiä, mikä sopii nuolettomaan karttaan.)
+      const MIN = 54;
       const paikat = pisteet.map((m) => ({ ...m, X: (m.x / 100) * W, Y: (m.y / 100) * K }));
       // Piirrokset pysyvät lepotilassa näkyvällä ydinalueella.
-      const M = 30;
+      const M = 24;
       const x0 = (ydin.x / 100) * W + M;
       const x1 = ((ydin.x + ydin.leveys) / 100) * W - M;
       const y0 = (ydin.y / 100) * K + M;
@@ -12347,13 +12345,6 @@ export class UI {
         }
         if (!liikkui) break;
       }
-      const svgns = 'http://www.w3.org/2000/svg';
-      const nuolet = document.createElementNS(svgns, 'svg');
-      nuolet.setAttribute('class', 'kartta-nuolet');
-      nuolet.setAttribute('viewBox', `0 0 ${W.toFixed(1)} ${K.toFixed(1)}`);
-      nuolet.setAttribute('preserveAspectRatio', 'none');
-      nuolet.setAttribute('aria-hidden', 'true');
-      let nuolia = 0;
       for (const m of paikat) {
         m.X = Math.min(Math.max(m.X, x0), x1);
         m.Y = Math.min(Math.max(m.Y, y0), y1);
@@ -12363,36 +12354,7 @@ export class UI {
         const osuus = (((m.Y / K) * 100 - ydin.y) / ydin.korkeus) * 100;
         m.piste.classList.toggle('vihje-alle', osuus < 14);
         m.piste.classList.toggle('kyltti-ylle', osuus > 84);
-        const ankkuriX = (m.x / 100) * W;
-        const ankkuriY = (m.y / 100) * K;
-        const dx = ankkuriX - m.X;
-        const dy = ankkuriY - m.Y;
-        const d = Math.hypot(dx, dy);
-        // Lyhyt siirtymä: piirros peittää sijaintinsa yhä, ei nuolta.
-        if (d < 26) continue;
-        const ux = dx / d;
-        const uy = dy / d;
-        const KARKI = 7;
-        const kx = ankkuriX - ux * KARKI;
-        const ky = ankkuriY - uy * KARKI;
-        const viiva = document.createElementNS(svgns, 'line');
-        viiva.setAttribute('x1', (m.X + ux * 24).toFixed(1));
-        viiva.setAttribute('y1', (m.Y + uy * 24).toFixed(1));
-        viiva.setAttribute('x2', kx.toFixed(1));
-        viiva.setAttribute('y2', ky.toFixed(1));
-        nuolet.appendChild(viiva);
-        const karki = document.createElementNS(svgns, 'polygon');
-        karki.setAttribute('points', [
-          `${ankkuriX.toFixed(1)},${ankkuriY.toFixed(1)}`,
-          `${(kx - uy * 3.5).toFixed(1)},${(ky + ux * 3.5).toFixed(1)}`,
-          `${(kx + uy * 3.5).toFixed(1)},${(ky - ux * 3.5).toFixed(1)}`,
-        ].join(' '));
-        nuolet.appendChild(karki);
-        nuolia++;
       }
-      // Nuolet kartan päälle mutta pisteiden alle.
-      kotelo.querySelector('.kartta-nuolet')?.remove();
-      if (nuolia) kotelo.insertBefore(nuolet, kotelo.querySelector('.maakartta-piste'));
       return true;
     };
     requestAnimationFrame(() => {
