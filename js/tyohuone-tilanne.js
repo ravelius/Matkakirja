@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v721 — iOS-neliö pois suurennoksesta; koko 3,5×',
   'v720 — piirroksen suurennos 3×',
   'v719 — piirroksen klikkaus vain suurentaa, ei ikkunaa',
   'v718 — piirrokset pienempinä, nuolet pois',
