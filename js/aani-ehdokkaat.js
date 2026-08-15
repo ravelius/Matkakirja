@@ -52,9 +52,9 @@ export const TYYPPI_EHDOKKAAT = {
   // Lentoasema on etusivun oma maisema (omistajan toive 10.8.2026:
   // Lontoon lentokentän lähtöaulan häly ainoaksi taustaääneksi).
   lentoasema: [
-    { url: 'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6', nimi: 'Gatwickin lähtöaula aamulla (Lontoo) — soundandmelodies, CC0' },
-    { url: 'https://cdn.freesound.org/previews/731/731247_10924423-lq.mp3#voima=0.6', nimi: 'Gatwickin lähtöaula iltapäivällä (Lontoo) — soundandmelodies, CC0' },
-    { url: 'https://cdn.freesound.org/previews/340/340276_2669559-lq.mp3#voima=0.6', nimi: 'Gatwickin odotusaula ja kuulutus (Lontoo) — andriiperevodchyk, CC0' },
+    { url: 'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=3.04', nimi: 'Gatwickin lähtöaula aamulla (Lontoo) — soundandmelodies, CC0' },
+    { url: 'https://cdn.freesound.org/previews/731/731247_10924423-lq.mp3#voima=2.84', nimi: 'Gatwickin lähtöaula iltapäivällä (Lontoo) — soundandmelodies, CC0' },
+    { url: 'https://cdn.freesound.org/previews/340/340276_2669559-lq.mp3#voima=0.23', nimi: 'Gatwickin odotusaula ja kuulutus (Lontoo) — andriiperevodchyk, CC0' },
   ],
   // Avauslennon kalvo: äänimaisema lentokoneen sisältä (omistajan
   // toive 10.8.2026). Voimat kalibroitu RMS-mittauksella aulan äänen
@@ -65,9 +65,9 @@ export const TYYPPI_EHDOKKAAT = {
   // äänite, jossa on moottorin lisäksi matkustajien puheensorinaa ja
   // kuulutus (omistajan toive: "pitäisi löytää puheääntä taustalle").
   lentokone: [
-    { url: 'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=3.6', nimi: 'Matkustamo, puheensorinaa ja kuulutus — drewhalasz, CC0' },
-    { url: 'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.3', nimi: 'Matkustamo lennolla, A330 — FillSoko, CC0' },
-    { url: 'https://cdn.freesound.org/previews/245/245691_2047664-lq.mp3#voima=0.22', nimi: 'Matkustamon tasainen humina — TicAshfield, CC0' },
+    { url: 'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=2.69', nimi: 'Matkustamo, puheensorinaa ja kuulutus — drewhalasz, CC0' },
+    { url: 'https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3#voima=0.18', nimi: 'Matkustamo lennolla, A330 — FillSoko, CC0' },
+    { url: 'https://cdn.freesound.org/previews/245/245691_2047664-lq.mp3#voima=0.15', nimi: 'Matkustamon tasainen humina — TicAshfield, CC0' },
   ],
   basaari: [
     { url: 'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23', nimi: 'Basaarin hälinä (Khan el-Khalili) — 3bagbrew, CC0' },
@@ -111,7 +111,7 @@ export const TYYPPI_EHDOKKAAT = {
     { url: 'https://cdn.freesound.org/previews/411/411996_7037-lq.mp3#voima=0.92', nimi: 'Ukkosmyrsky Etelä-Afrikassa — tim.kahn, CC BY-NC' },
   ],
   ylanko: [
-    { url: 'https://archive.org/download/aporee_68991_80056/almaporeejochbergalm12uhr30.mp3#voima=0.48', nimi: 'Alppilaidun (Reit im Winkl, Baijeri) — sam auinger, CC BY-SA' },
+    { url: 'https://archive.org/download/aporee_68991_80056/almaporeejochbergalm12uhr30.mp3#voima=0.5', nimi: 'Alppilaidun (Reit im Winkl, Baijeri) — sam auinger, CC BY-SA' },
     { url: 'https://cdn.freesound.org/previews/543/543449_3377875-lq.mp3#voima=0.22', nimi: 'Ulvova tuuli — Kostas17, CC BY' },
   ],
 
@@ -137,7 +137,7 @@ export const TYYPPI_EHDOKKAAT = {
     { url: 'https://cdn.freesound.org/previews/635/635103_10065335-lq.mp3#voima=0.15', nimi: 'Tyyni aallokko — Eatyourburger, CC0' },
   ],
   vuoristo: [
-    { url: 'https://archive.org/download/aporee_68991_80056/almaporeejochbergalm12uhr30.mp3#voima=0.48', nimi: 'Alppilaidun (Reit im Winkl, Baijeri) — sam auinger, CC BY-SA' },
+    { url: 'https://archive.org/download/aporee_68991_80056/almaporeejochbergalm12uhr30.mp3#voima=0.5', nimi: 'Alppilaidun (Reit im Winkl, Baijeri) — sam auinger, CC BY-SA' },
     { url: 'https://cdn.freesound.org/previews/543/543449_3377875-lq.mp3#voima=0.22', nimi: 'Ulvova tuuli — Kostas17, CC BY' },
   ],
   metsa: [
@@ -553,10 +553,10 @@ const TYYPPIKORI_AVAIN = 'matkakirja-tyyppivalinnat';
 // perii nämä, kunnes omistaja rastii sille omat äänensä.
 const OLETUSKORIT = {
   lentoasema: [
-    'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=0.6',
+    'https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3#voima=3.04',
   ],
   lentokone: [
-    'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=3.6',
+    'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=2.69',
   ],
   basaari: [
     'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55',
@@ -606,7 +606,7 @@ const OLETUSKORIT = {
     'https://cdn.freesound.org/previews/635/635103_10065335-lq.mp3#voima=0.15',
   ],
   vuoristo: [
-    'https://archive.org/download/aporee_68991_80056/almaporeejochbergalm12uhr30.mp3#voima=0.48',
+    'https://archive.org/download/aporee_68991_80056/almaporeejochbergalm12uhr30.mp3#voima=0.5',
     'https://cdn.freesound.org/previews/543/543449_3377875-lq.mp3#voima=0.22',
   ],
   metsa: [

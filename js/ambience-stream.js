@@ -82,8 +82,15 @@ const VOIMA = 0.14;
  * mikä on kuultavissa läppärin kaiuttimista — omistaja kuulee sen
  * ensimmäisenä oikeasta laitteesta ja saa siirtää lukemaa suuntaan tai
  * toiseen.
+ *
+ * 1,4 → 0,28 tasauksen yhteydessä 15.8.2026: LUFS-mittaus nosti
+ * lähtöaularaidan oman kertoimen 0,6 → 3,04 (raita on aidosti
+ * hiljainen), joten sama etusivutaso vaatii viidesosan entisestä
+ * lisäkertoimesta. Efektiivinen taso on lukujen vaihdon jälkeen
+ * täsmälleen sama, jonka omistaja hyväksyi 12.8. kuulokokeessa
+ * (0,14 × 3,04 × 0,28 ≈ 0,119 ≈ 0,14 × 0,6 × 1,4).
  */
-const ETUSIVUN_VOIMA = 1.4;
+const ETUSIVUN_VOIMA = 0.28;
 /*
  * Avauslennon oma kerroin (omistajan havainto 13.8.2026: "lentokoneen
  * kuulutus ei ole enää kuulunut taustalla"). Matkustamoäänitteen

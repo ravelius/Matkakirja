@@ -131,6 +131,15 @@ export const TILANNE = {
  */
 export const TESTATTAVAA = [
   {
+    otsikko: 'Taustaäänet tasattu (v692)',
+    ohje: 'Kierrä muutamaa kaupunkia ja kuuntele taustaääniä: tasot '
+      + 'mitattiin K-painotetulla LUFS-mittarilla ja kaikki 125 raitaa '
+      + 'ajettiin -33 LUFSin tavoitteeseen — hajonta oli 35 dB, nyt '
+      + '4 dB. Kova raita ei enää huuda eikä hiljainen huku puheen '
+      + 'väistön alle. Etusivun lähtöaula soi entisellä tasollaan. '
+      + 'Venäjän kaupungeissa radio kuuluu taas (v691).',
+  },
+  {
     otsikko: 'Otsikkotauko ja yläotsikko sivunvaihdossa (v687)',
     ohje: 'Kuuntele sivu, jolla on väliotsikoita: ennen otsikolla '
       + 'alkavaa kohtaa lukija pitää nyt selvästi pidemmän tauon '
