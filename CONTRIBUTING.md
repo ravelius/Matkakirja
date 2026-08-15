@@ -1,6 +1,6 @@
 # Osallistuminen
 
-Kiitos kiinnostuksesta! Lue ensin [pelin periaatteet](docs/periaatteet.md) —
+Kiitos kiinnostuksesta! Lue ensin pelin perustuslaki: Raamattu 2.0:n osio "Perustuslaki: viisi pilaria" (js/tyohuone-raamattu.js, työhuoneen Raamattu-välilehti) —
 ne kertovat, millä perusteilla sisältö hyväksytään peliin. Tämä peli on rakennettu niin, että uusien lautojen ja
 kysymysten lisääminen on mahdollisimman helppoa — myös ilman syvää
 ohjelmointikokemusta. Kaikki muutokset tehdään pull requesteina, ja testit
@@ -286,3 +286,47 @@ node tools/source-report.mjs    # lähteiden kattavuus
 
 Kerro pull requestin kuvauksessa lyhyesti, mistä lähteistä tarkistit
 kysymysten faktat.
+
+## Etukäteispuskurin periaate
+
+Omistajan linjaus 15.8.2026: **jokainen pelin vaihe lataa seuraavan
+askeleen sisällön valmiiksi taustalla heti, kun se on tiedettävissä.**
+Pelaaja ei koskaan odota sisältöä, jonka peli olisi voinut arvata.
+
+- Kaupunkiin saavuttaessa ladataan molempien lehtien etusivut kokonaan
+  taustalla ja generoidaan lukijaäänen ensimmäinen pala kumpaankin.
+- Lehteä luettaessa VIEREISET sivut ladataan valmiiksi — seuraava ja
+  myös edellinen, jos se ei jo ole ladattu (sisällysluettelosta voi
+  hypätä keskelle lehteä).
+- Jokaiseen UUTEEN toimintoon suunnitellaan etukäteispuskuri samalla
+  kun toiminto lisätään; PR-kuvauksessa kerrotaan mitä puskuroidaan ja
+  milloin — tai miksi puskuroitavaa ei ole.
+
+Rajat: puskurointi ei saa tukkia yhteyttä (lataukset jonossa muutama
+kerrallaan, ks. ui.js esilataaOsoitteet) eikä kuluttaa
+generointikiintiöitä sisältöön, jota pelaaja tuskin tarvitsee.
+
+## Uuden laudan hyväksyminen
+
+Lauta hyväksytään, kun molemmat puolet ovat kunnossa:
+
+**Koneellisesti valvottava osa** (`npm test` on vihreä):
+
+- reittiverkko on yhtenäinen ja jokaiseen kaupunkiin pääsee
+- laivareitit kulkevat veden päällä ja kaupungit ovat maalla
+- laattoja on täsmälleen yksi jokaiseen aarrekaupunkiin, tähtiä tasan yksi
+- jokaisella aarrekaupungilla on kysymyksiä ja jokaisella kaupungilla
+  Tiesitkö että -tietoja; vihjeet eivät paljasta vastausta
+- botit pystyvät pelaamaan laudalla kokonaisen pelin loppuun
+
+**Ihmisen arvioima osa** (Raamattu 2.0:n pilarit 1–4):
+
+- pelaako lauta hyvin: onko reiteissä valinnanvaraa, ovatko etäisyydet
+  tasapainossa, onko meri- ja lentoreiteillä merkitystä?
+- ovatko faktat tarkistettuja ja lähteet kerrottu?
+- kuvataanko alue kunnioittavasti ja monipuolisesti — myös arkea?
+- ovatko kiistanalaiset asiat toteavasti ja tasapuolisesti esitettyjä?
+- sopiiko sisältö pelin yleisölle (13+) ja onko vaikeustasoja käytetty
+  oikein?
+
+Sama lista pienemmässä koossa koskee yksittäistä kysymystä tai kaupunkia.

@@ -8,13 +8,14 @@
  * kanssa läpi kohta kohdalta, ja hyväksytyn osion tila vaihdetaan
  * luonnoksesta hyväksytyksi. VAIN FABLE kirjoittaa tähän
  * tiedostoon. Yksityiskohtaiset lähdedokumentit, joihin tiivistys
- * nojaa: docs/tarina.md, docs/isoisan-raamattu.md,
- * docs/periaatteet.md — ristiriidassa Raamattu 2.0 voittaa sen
- * jälkeen, kun osio on hyväksytty yhdessä.
+ * nojaa: docs/tarina.md ja docs/isoisan-raamattu.md —
+ * ristiriidassa Raamattu 2.0 voittaa sen jälkeen, kun osio on
+ * hyväksytty yhdessä. Perustuslaki (ent. periaatteet.md) on
+ * yhdistetty tähän omaksi osiokseen 15.8.2026.
  */
 
 export const RAAMATTU2 = {
-  paivitetty: '12.8.2026',
+  paivitetty: '15.8.2026',
   johdanto: 'Koko pelin idea yhdessä dokumentissa. TAVOITE '
     + '(omistajan linjaus 11.8.2026): tämän lukeminen riittää '
     + 'yksinään pelin kehittämiseen ja uusien matkakirjatekstien '
@@ -73,6 +74,53 @@ export const RAAMATTU2 = {
           + 'yrittää ymmärtää, mitä isoisä koki ja mitä ihmettä '
           + 'hän kirjaansa kirjoitti; siinä on pelin kauneus, ja '
           + 'siihen pelin loppu päättyy.',
+      ],
+    },
+    {
+      otsikko: 'Perustuslaki: viisi pilaria',
+      tila: 'hyväksytty (siirretty periaatteet.md:stä omistajan päätöksellä 15.8.2026)',
+      kohdat: [
+        'MIKSI PELI ON OLEMASSA: edistämme nuorten ja aikuisten '
+          + 'tietoa eri maiden elinoloista, kulttuurista, '
+          + 'maantieteestä, geopolitiikasta ja poliittisesta '
+          + 'tilanteesta — ja ymmärrystä siitä, että maailma on '
+          + 'suurempi kuin oma ympäristö. Väline on koukuttava peli; '
+          + 'oppiminen syntyy sivutuotteena. Pilareita muutetaan '
+          + 'vain yhteisellä päätöksellä.',
+        '1. PELI EDELLÄ: seikkailupeli, jonka sivutuotteena opitaan '
+          + '— ei oppikirja, johon on liimattu noppa. Sisältö, joka '
+          + 'ei ole hauskaa pelata, ei kuulu peliin, vaikka olisi '
+          + 'kuinka opettavaista. Kysymyksen pitää olla kiinnostava '
+          + 'myös väärin vastatessa.',
+        '2. TOTUUS JA LÄHTEET: jokainen väittämä on '
+          + 'tarkistettavissa. Epävarmaa ei väitetä, kiistanalaista '
+          + 'ei esitetä varmana. PR kertoo mistä faktat on '
+          + 'tarkistettu; erimielisyydet ratkaistaan lähteillä, ei '
+          + 'äänekkyydellä.',
+        '2b. PAIKKA ENNEN LAJIA: ääni ja kuva haetaan niin läheltä '
+          + 'kuin mahdollista — kaupungista itsestään, sitten '
+          + 'maasta, vasta viimeisenä lajista (basaari, satama). '
+          + 'Sama basaarinauha kolmessa kaupungissa kertoisi, että '
+          + 'paikat ovat vaihtokelpoisia — ja juuri paikkojen ero '
+          + 'on osa sitä, mitä peli opettaa.',
+        '3. KUNNIOITUS JA TASAPUOLISUUS: jokainen maa kuvataan '
+          + 'asukkaidensa silmin, ei ulkopuolisen kummasteluna — ei '
+          + 'stereotypioita, pilkkaa eikä säälittelyä; myös arkea, '
+          + 'ruokaa, kieltä ja elinkeinoja, ei pelkkiä '
+          + 'turistikliseitä. Geopolitiikka KUVATAAN, EI TUOMITA: '
+          + 'kerrotaan mitä on ja miksi, ei kenen pitäisi voittaa; '
+          + 'kiistanalaiset alueet toteavasti molempien osapuolten '
+          + 'olemassaolo tunnustaen.',
+        '4. IKÄSOPIVUUS: 13+ ja aikuiset (täsmennetty 10.8.2026) — '
+          + 'ei lastenpeli; myöhemmin sovitus koulukäyttöön. '
+          + 'Vaikeita aiheita ei kaunistella eikä kauhistella; '
+          + 'mitään ei lisätä pelottelemaan tai järkyttämään.',
+        '5. AVOIMUUS: sisältö vapaasti lisensoitua, päätökset '
+          + 'julkisesti pull requesteissa. Automaattiset testit '
+          + 'ovat osa perustuslakia: kone valvoo mitattavan, jotta '
+          + 'ihminen voi keskittyä pilareihin 1–4.',
+        'Tekniset jatkeet (uuden laudan hyväksymislista ja '
+          + 'etukäteispuskurin toteutusohje) ovat CONTRIBUTING.md:ssä.',
       ],
     },
     {
@@ -745,10 +793,10 @@ export const RAAMATTU2 = {
           + 'docs/tarina.md (hahmot, Aarnin luettelo, sävysäännöt) '
           + 'ja docs/isoisan-raamattu.md (matkakirjamerkintöjen '
           + 'dekkarisäännöt, imu aikuiselle).',
-        'PELIN PERUSTUSLAKI: docs/periaatteet.md (viisi pilaria, '
-          + 'laudan hyväksyminen, etukäteispuskurin tekninen '
-          + 'periaate). Ristiriidassa hyväksytty Raamattu-osio '
-          + 'voittaa.',
+        'PELIN PERUSTUSLAKI: Raamatun oma osio "Perustuslaki: '
+          + 'viisi pilaria" (yhdistetty tänne 15.8.2026); tekniset '
+          + 'jatkeet — laudan hyväksymislista ja etukäteispuskurin '
+          + 'toteutusohje — CONTRIBUTING.md:ssä.',
         'TYÖNJAKO JA PROSESSI: docs/roolitus.md (Fable/Opus/Sonnet, '
           + 'viestintä, julkaisusäännöt, sessiotaulu, Fablen '
           + 'sisältöpistokoe) — työsessioiden tärkein dokumentti.',

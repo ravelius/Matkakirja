@@ -13346,7 +13346,7 @@ export class UI {
 
   /**
    * Pelin periaatteet omana ikkunanaan aloitussivulta (omistajan toive).
-   * Sisältö on tiivistys README:stä ja docs/periaatteet.md:stä: miksi peli
+   * Sisältö on tiivistys README:stä ja Raamattu 2.0:n perustuslaista: miksi peli
    * on olemassa ja millä säännöillä sisältöä siihen tehdään.
    */
   naytaPeriaatteet() {
