@@ -677,7 +677,7 @@ import {
   hiljennaAmbienssi, palautaAmbienssi,
 } from './ambience-stream.js';
 import {
-  puheVoima, jaaAlku, kertojaTila, HUUDAHDUKSET,
+  puheVoima, jaaAlku, kertojaTila, luentaVastaaTekstia, HUUDAHDUKSET,
 } from './aani-ehdokkaat.js';
 import { BoardDie } from './die.js';
 /*
@@ -8216,15 +8216,24 @@ export class UI {
           });
         });
         /*
-         * LUKIJAÄÄNI ENSIN (omistajan päätös 14.8.2026): kun lennossa
-         * generoitu ääni on käytössä, ElevenLabs-äänite ohitetaan ja
-         * merkintä luetaan striimaten suoraan tekstistä — myös
-         * kaupungeissa, joille äänitettä ei koskaan tehty, ja
-         * mykistetyistä kaariosista (mykistys koski vanhentunutta
-         * äänitettä, ei nykyistä tekstiä). Äänitteet jäävät
-         * varapoluksi, kun lukijaääni ei ole saatavilla.
+         * ÄÄNITE ENSIN, KUN TEKSTI TÄSMÄÄ (omistajan linjaus
+         * 15.8.2026, korvaa 14.8. "lukijaääni ensin" -päätöksen):
+         * ElevenLabs-äänite soi, jos merkinnän luenta-kenttä vastaa
+         * nykyistä näyttötekstiä (luentaVastaaTekstia) — 39/42
+         * äänitteestä täsmäsi linjauksen hetkellä. Muuttunut teksti
+         * striimataan lukijaäänellä, samoin merkinnät joille
+         * äänitettä ei koskaan tehty ja mykistetyt kaariosat.
+         * UUSIA ÄÄNITTEITÄ EI GENEROIDA ennen kuin matkakirjatekstit
+         * uudistetaan Raamattu 2.0:n valmistuttua — striimaus kattaa
+         * välivaiheen. Kaariosilla ajantasaisuuden kirjanpito on
+         * mykistyslistassa (kaariLuentaSoi), ei tekstivertailussa.
          */
-        if (puheTuettu()) {
+        const saapumisAanite = kaariMerkinta
+          ? (kaariLuentaSoi(kaariMerkinta, 'saapuminen') ? 'kaari' : null)
+          : (luentaVastaaTekstia(uusi)
+            ? luentaLauta(SAAPUMISLUENNAT, saapuminen.packId, saapuminen.cityId)
+            : null);
+        if (puheTuettu() && !saapumisAanite) {
           this.diaryFullUrl = null;
           this.naytaMerkinnanKaiutin(false);
           if (this.luettuSaapuminen !== luentaAvain) {
@@ -8247,14 +8256,14 @@ export class UI {
           }
           return;
         }
-        // Kaiutin ja luenta vain kaupungeille, joille luenta on generoitu.
-        // Ilman tätä nappi näkyi kaikilla ja tuotti hiljaisuutta.
-        // Kaaren kohteilla luenta on aina: puhe-kaari-saapuminen-<id>.mp3.
-        // Mykistetty osa (teksti uudistettu, luentaa ei vielä generoitu)
-        // käyttäytyy kuin luentaa ei olisi — kaiutinnappikin piiloutuu.
-        const saapumisLauta = kaariMerkinta
-          ? (kaariLuentaSoi(kaariMerkinta, 'saapuminen') ? 'kaari' : null)
-          : luentaLauta(SAAPUMISLUENNAT, saapuminen.packId, saapuminen.cityId);
+        // Kaiutin ja luenta vain merkinnöille, joiden äänite on ajan
+        // tasalla (saapumisAanite yllä). Ilman lukijaääntä myös
+        // eritekstinen äänite kelpaa varapoluksi — parempi vanha
+        // luenta kuin hiljaisuus.
+        const saapumisLauta = saapumisAanite
+          ?? (kaariMerkinta
+            ? null
+            : luentaLauta(SAAPUMISLUENNAT, saapuminen.packId, saapuminen.cityId));
         this.diaryFullUrl = saapumisLauta
           ? `assets/audio/puhe-${saapumisLauta}-saapuminen-${saapuminen.cityId}.mp3`
           : null;

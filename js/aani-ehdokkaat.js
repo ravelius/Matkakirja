@@ -516,6 +516,38 @@ for (const pack of PACKS) {
  * äänitteen 20 sekunnin kohdalta puolitoistakertaisella voimakkuudella.
  * Tämä purkaa muodon soittimia varten. Vanha muoto ('#alku=20') toimii.
  */
+/*
+ * ÄÄNITE SOI VAIN, KUN TEKSTI TÄSMÄÄ (omistajan linjaus 15.8.2026:
+ * "Palauta ElevenLabs-äänet matkakirjoihin joissa ääni ja teksti ajan
+ * tasalla. Mutta kun muutoksia tulee niin niihin nykyinen striimausääni.
+ * Ei generoida uusia lukuääniä kuin vasta myöhemmin.")
+ *
+ * Merkinnän luenta-kenttä on täsmälleen se teksti, josta äänite
+ * generoitiin — vertaamalla sitä nykyiseen näyttötekstiin tiedetään
+ * koneellisesti, onko äänite ajan tasalla. Vertailu ohittaa kaiken,
+ * mikä ei kuulu puheessa: tunnetagit [curious], taukotagit <break>,
+ * luennan taukopisteet (…), lainausmerkkien kirjon ja kirjainkoon
+ * (sähkeet ovat näytössä KAPITEELEIN, puheessa eroa ei ole).
+ * Sanamuutos sen sijaan pudottaa äänitteen heti pois käytöstä ja
+ * merkintä striimataan lukijaäänellä — uusia äänitteitä EI generoida
+ * ennen kuin matkakirjatekstit uudistetaan Raamattu 2.0:n valmistuttua.
+ */
+export function luentaVastaaTekstia(merkinta) {
+  if (!merkinta?.luenta || !merkinta?.kuvaus) return false;
+  const puheeksi = (s) => String(s ?? '')
+    .replace(/\[[^\]]+\]/g, ' ')
+    .replace(/<break[^>]*\/?>/g, ' ')
+    .replace(/\.{3}|…/g, ' ')
+    .replace(/[„“”"']/g, '"')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+  const luettu = puheeksi(merkinta.luenta);
+  if (!luettu) return false;
+  return luettu === puheeksi(merkinta.kuvaus)
+    || luettu === puheeksi([merkinta.kuvaus, merkinta.nosto].filter(Boolean).join(' '));
+}
+
 export function jaaAlku(arvo) {
   const teksti = arvo ?? '';
   const risu = teksti.indexOf('#');

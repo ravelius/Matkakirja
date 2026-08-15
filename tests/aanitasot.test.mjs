@@ -245,3 +245,51 @@ test('kompressointi on ennen voimakkuussäätöä ja varareitti on olemassa', ()
   assert.match(virta, /ilmanKompressoria = true/,
     'ilman varareittiä CORS-ongelma veisi taustan kokonaan');
 });
+
+test('luentaVastaaTekstia: äänite soi vain kun teksti täsmää (15.8.2026)', async () => {
+  const { luentaVastaaTekstia } = await import('../js/aani-ehdokkaat.js');
+  // Tunnetagit, taukotagit, taukopisteet, lainausmerkit ja
+  // kirjainkoko eivät kuulu puheessa — ne eivät erota.
+  assert.ok(luentaVastaaTekstia({
+    luenta: '[curious] Sähke odotti: "PALATKAA HETI." … Jatkoin matkaa. <break time="1.0s" />',
+    kuvaus: 'Sähke odotti: „Palatkaa heti.” Jatkoin matkaa.',
+  }));
+  // Nosto lasketaan mukaan, kun luenta kattaa sen.
+  assert.ok(luentaVastaaTekstia({
+    luenta: 'Ensimmäinen virke. Toinen virke.',
+    kuvaus: 'Ensimmäinen virke.',
+    nosto: 'Toinen virke.',
+  }));
+  // Sanamuutos pudottaa äänitteen pois — juuri tätä varten vertailu on.
+  assert.ok(!luentaVastaaTekstia({
+    luenta: 'Kirjoitin merkinnän satamassa.',
+    kuvaus: 'Kirjoitin merkinnän rautatieasemalla.',
+  }));
+  // Ilman luentaa tai kuvausta ei ole mitään verrattavaa.
+  assert.ok(!luentaVastaaTekstia({ kuvaus: 'Teksti.' }));
+  assert.ok(!luentaVastaaTekstia(null));
+});
+
+test('saapumisäänitteiden enemmistö on ajan tasalla (kanarialintu)', async () => {
+  /*
+   * Linjauksen hetkellä 39/42 äänitteellisestä merkinnästä täsmäsi.
+   * Jos tämä luku romahtaa, joku on muuttanut tekstejä kirjaamatta —
+   * se ei ole virhe sinänsä (muutokset striimataan), mutta iso
+   * pudotus ansaitsee katseen. Raja on väljä tahallaan.
+   */
+  const { luentaVastaaTekstia } = await import('../js/aani-ehdokkaat.js');
+  const { EUROPE_SAAPUMISET } = await import('../js/packs/europe-saapumiset.js');
+  const { AFRICA_SAAPUMISET } = await import('../js/packs/africa-saapumiset.js');
+  let luennallisia = 0;
+  let tasalla = 0;
+  for (const pakka of [EUROPE_SAAPUMISET, AFRICA_SAAPUMISET]) {
+    for (const m of Object.values(pakka)) {
+      if (!m.luenta) continue;
+      luennallisia += 1;
+      if (luentaVastaaTekstia(m)) tasalla += 1;
+    }
+  }
+  assert.ok(luennallisia >= 40, `luennallisia merkintöjä vain ${luennallisia}`);
+  assert.ok(tasalla / luennallisia > 0.5,
+    `vain ${tasalla}/${luennallisia} äänitettä ajan tasalla — tekstejä muutettu laajasti?`);
+});
