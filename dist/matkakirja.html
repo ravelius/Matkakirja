@@ -8482,6 +8482,15 @@ button.lukija-nappi.lukee,
  * rajataan samaan suhteeseen, jotta rivi pysyy tasakorkuisena. */
 .lehti-paakuva .lehti-kuva img { max-height: 360px; object-fit: cover; }
 
+/* Avauskuvakaruselli etusivun isossa kuvapaikassa (omistajan tilaus
+ * 15.8.2026): panoraama saa olla pääkuvaa korkeampi muttei viedä koko
+ * ruutua — leveys täyteen ja korkeus katossa kuten pääkuvallakin. */
+.lehti-paakuva .nahtavyys-kuva {
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+}
+
 .lehti-kuvarivi .lehti-kuva img { aspect-ratio: 4 / 3; object-fit: cover; }
 
 .lehti-kuva .kuvateksti {
@@ -10340,6 +10349,21 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   margin-top: 1.1rem;
   padding-top: 0.7rem;
   border-top: 3px double rgba(70, 51, 31, 0.75);
+}
+
+/* Matkailijalle-osio kartan perässä (omistajan tilaus 15.8.2026):
+ * sama kaksoisviivaerotin ja otsikkotyyli kuin karttalohkolla, ja
+ * opasnappi keskitetään omalle rivilleen. */
+.matkailijalle {
+  clear: both;
+  margin-top: 1.1rem;
+  padding-top: 0.7rem;
+  border-top: 3px double rgba(70, 51, 31, 0.75);
+}
+
+.matkailijalle .wiki-btn {
+  display: block;
+  margin: 0.2rem auto 0;
 }
 
 .kaupunkikartta-otsikko {
@@ -40027,6 +40051,94 @@ const KULTTUURI_KATEGORIAT = {
           lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Avauskuvat (omistajan tilaus 15.8.2026: "laadukas vaakakuva
+       * jossa näkyy itse kaupunkia enemmän, sellainen yleisnäkymä.
+       * ja niitä voisi olla useampi karusellissa"): etusivun iso
+       * kuvapaikka selaa näitä yleisnäkymiä; kansikuvat siirtyvät
+       * pikkuriville. Lisenssit tarkistettu Commonsin API:sta
+       * 15.8.2026, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Panorama view on Copenhagen from Church of Our Saviour (2).jpg',
+          selite: 'Ilta-aurinko kattojen yllä Vapahtajan kirkon tornista '
+            + 'katsottuna. Keskellä kohoaa Christiansborgin torni, oikealla '
+            + 'vihreä Nikolain kirkon torni, ja talorivit jatkuvat '
+            + 'tasaisina horisonttiin — korkeita taloja ei näy missään.',
+          lahde: 'Erwin Verbruggen, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Copenhagen, view from Rundetårn with Rosenborg Castle, 20220617 1004 6716.jpg',
+          selite: 'Näkymä Rundetårnin huipulta: punatiilikattojen takana '
+            + 'Rosenborgin linna vihreine kupolikattoineen ja Kuninkaan '
+            + 'puutarhan puut. Taustalla erottuvat voimalan kolme piippua '
+            + 'ja Juutinrauman salmi.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Panorama of Nyhavn (24047322088).jpg',
+          selite: 'Nyhavnin kanaali: siniset, keltaiset ja punaiset talot '
+            + 'seisovat rivissä rantalaiturin takana, ja kanaalissa on '
+            + 'kiinni vanhoja purjelaivoja mastoineen.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * Matkailijalle (omistajan tilaus 15.8.2026: kaupunki turistin
+       * näkökulmasta kartan jälkeen + pidempi pop-up-artikkeli).
+       * Taustatiedot fi.wikipediasta (pyöräilyosuus, Strøget,
+       * Rosenborgin puutarha, jazzmuusikot, teatteri) — teksti omaa.
+       */
+      matkailijalle: {
+        kappale: 'Kööpenhamina on rento kaupunki, joka koetaan parhaiten '
+          + 'satulasta: yli puolet kaupunkilaisten matkoista taittuu '
+          + 'pyörällä, ja leveät pyörätiet vievät vierailijankin turvallisesti '
+          + 'joka kortteliin. Etäisyydet ovat lyhyitä, vesi on aina '
+          + 'lähellä, ja illalla vanhan Tivolin lyhdyt syttyvät keskellä '
+          + 'kaupunkia. Nyhavnin värikkäät talot, Strøgetin kävelykatu ja '
+          + 'kuninkaanlinnojen puistot ehtii kiertää jalan yhdessä päivässä.',
+        artikkeli: {
+          nimi: 'Matkailijan Kööpenhamina',
+          teksti: 'Kööpenhaminaan ei tulla jonottamaan yhtä suurta '
+            + 'nähtävyyttä vaan kuljeskelemaan. Kaupunki on matala ja '
+            + 'tiivis, ja sen paras kulkuneuvo on polkupyörä: pyöräteitä '
+            + 'on satoja kilometrejä, ja kaupunki on valittu toistuvasti '
+            + 'maailman parhaaksi pyöräilykaupungiksi. Vuokrapyörän saa '
+            + 'kaikkialta, ja kuljettajaton metro paikkaa sateiset päivät.'
+            + '\n\n'
+            + 'Kävelijän päivä alkaa luontevasti Strøgetiltä, vuonna 1962 '
+            + 'avatulta kävelykadulta, joka halkoo koko vanhan keskustan. '
+            + 'Sen varrelta poiketaan Rundetårnin spiraalirampille ja '
+            + 'Rosenborgin linnan puutarhaan, joka on ollut kaupunkilaisten '
+            + 'eväsretkipaikka 1600-luvulta asti. Kanaalikierros veneellä '
+            + 'näyttää saman kaupungin vedestä käsin: Nyhavnin värikkäät '
+            + 'talot, oopperatalon ja Christianshavnin makasiinit.'
+            + '\n\n'
+            + 'Vesi on kööpenhaminalaisille uimapaikka, ei pelkkä maisema. '
+            + 'Sataman vesi on puhdistettu niin, että keskellä kaupunkia '
+            + 'voi uida yleisissä satamakylvyissä kesäisin — rohkein '
+            + 'pulahtaa jo aamiaisen jälkeen ja paikalliset pitävät sitä '
+            + 'aivan tavallisena. Viheralueita on niin tiheässä, että '
+            + 'lähes jokainen asukas asuu alle kilometrin päässä puistosta.'
+            + '\n\n'
+            + 'Illalla valitaan Tivolin ja jazzin väliltä — tai otetaan '
+            + 'molemmat. Tivoli on huvittanut kaupunkia vuodesta 1843, ja '
+            + 'sen lyhtyjen alla kävellään yhtä mielellään kuin ajetaan '
+            + 'laitteilla. Jazzilla on kaupungissa oma historiansa: '
+            + '1950- ja 1960-luvuilla moni amerikkalainen huippumuusikko '
+            + 'muutti Kööpenhaminaan, ja klubiperinne elää yhä. '
+            + 'Kuninkaallisessa teatterissa taas soittaa orkesteri, joka '
+            + 'laskee ikänsä vuodesta 1448.'
+            + '\n\n'
+            + 'Nälkäänsä matkailija syö smørrebrødin: avoin ruisleipä '
+            + 'katetaan kalalla, lihalla tai juustolla ja syödään '
+            + 'veitsellä ja haarukalla. Vanhoissa lounasravintoloissa '
+            + 'leipiä on listalla kymmeniä, ja järjestyskin on tarkka — '
+            + 'ensin kala, sitten liha, viimeisenä juusto.',
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           tyyppi: 'kuva',
@@ -110796,6 +110908,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v738 — Kööpenhamina-lehti: karuselli + Matkailijalle',
   'v737 — 6 uutta karttaa; piirrokset terävinä; lippuanimaatio',
   'v736 — vain värikartta; numero kylttiin',
   'v735 — suurennos keskitetty, 75 %; kyltti kiinni',
@@ -172687,8 +172800,17 @@ class UI {
   kaupunkilehdenEtusivunKuvat(cityId = this.arrivalShownFor) {
     const kuvat = [];
     const kansikuvat = this.tutkiKansi?.kansikuvat ?? [];
-    if (kansikuvat[0]?.tiedosto) kuvat.push(valokuvaUrl(kansikuvat[0].tiedosto, 1200));
-    for (const teos of kansikuvat.slice(1, 3)) {
+    const avauskuvat = this.tutkiKansi?.avauskuvat ?? [];
+    // Avauskuvakaupungissa iso paikka on panoraamakaruselli (900,
+    // sama leveys kuin nahtavyydenKarusellissa) ja pikkurivillä ovat
+    // kansikuvien kaksi ensimmäistä; muuten entinen taitto.
+    for (const teos of avauskuvat) {
+      if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 900));
+    }
+    if (!avauskuvat.length && kansikuvat[0]?.tiedosto) {
+      kuvat.push(valokuvaUrl(kansikuvat[0].tiedosto, 1200));
+    }
+    for (const teos of kansikuvat.slice(avauskuvat.length ? 0 : 1, avauskuvat.length ? 2 : 3)) {
       if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 640));
     }
     const lippu = this.arrivalMaaTiedot?.lippu;
@@ -173912,7 +174034,7 @@ class UI {
     // Liitelinkki päiväysrivillä: "Suomi-liite" (omistajan taitto-ohje 9.8.2026).
     this.arrivalMaaLinkki.textContent = maakartta ? `${otsikonMaa}-liite` : '';
     this.arrivalDialog.classList.toggle('lehti', lehti);
-    this.piirraLehtiKuvat(kansi?.kansikuvat);
+    this.piirraLehtiKuvat(kansi?.kansikuvat, kansi?.avauskuvat);
     // Lehdessä ei ole Lue lisää -nappeja eikä wikin kuvakarusellia:
     // etusivun tekstit riittävät alkuun, ja syventyminen tapahtuu
     // sivuja kääntämällä. Kuvat ovat omia, tarkistettuja valintoja.
@@ -174025,7 +174147,12 @@ class UI {
       && KAUPUNKIKARTAT[this.arrivalShownFor];
     this.arrivalKaupunkiKartta.hidden = !karttaEtusivulla;
     this.arrivalKaupunkiKartta.replaceChildren();
-    if (karttaEtusivulla) this.piirraKaupunkiKartta(this.arrivalKaupunkiKartta);
+    if (karttaEtusivulla) {
+      this.piirraKaupunkiKartta(this.arrivalKaupunkiKartta);
+      // Matkailijalle-osio kartan JÄLKEEN (omistajan sijoituspäätös
+      // 15.8.2026: "se voisi olla itseasissa kartan jälkeen").
+      this.piirraMatkailijalle(this.arrivalKaupunkiKartta);
+    }
 
     /*
      * Kaupunkilehden radiorivi asuu palstojen ulkopuolella kohdekartan
@@ -174775,13 +174902,14 @@ class UI {
    * (kansikuvat-kenttä) — eivät wikin satunnaiskaruselli. Napautus
    * avaa selattavan suurennoksen, jossa koko sarja kulkee nuolilla.
    */
-  piirraLehtiKuvat(kuvat) {
+  piirraLehtiKuvat(kuvat, avauskuvat = null) {
     const lista = kuvat ?? [];
+    const panoraamat = avauskuvat ?? [];
     this.arrivalLehtiPaakuva.replaceChildren();
     this.arrivalLehtiKuvat.replaceChildren();
-    this.arrivalLehtiPaakuva.hidden = !lista.length;
-    this.arrivalLehtiKuvat.hidden = lista.length < 2;
-    if (!lista.length) return;
+    this.arrivalLehtiPaakuva.hidden = !lista.length && !panoraamat.length;
+    this.arrivalLehtiKuvat.hidden = panoraamat.length ? !lista.length : lista.length < 2;
+    if (!lista.length && !panoraamat.length) return;
     const teeKuva = (teos, indeksi, leveys) => {
       const kotelo = html('figure', 'lehti-kuva');
       const kuva = document.createElement('img');
@@ -174800,6 +174928,25 @@ class UI {
       }
       return kotelo;
     };
+    /*
+     * AVAUSKUVAT (omistajan tilaus 15.8.2026: "saisi olla laadukas
+     * vaakakuva jossa näkyy itse kaupunkia enemmän, sellainen
+     * yleisnäkymä. ja niitä voisi olla useampi karusellissa"): iso
+     * kuvapaikka on yleisnäkymien karuselli — sama komponentti kuin
+     * nähtävyysjutuissa, joten nuolet, laskuri, pyyhkäisy ja
+     * suurennos toimivat tutusti. Pikkuriville vapautuvat silloin
+     * kansikuvien KAKSI ENSIMMÄISTÄ, koska iso paikka ei enää syö
+     * niistä ensimmäistä. Kaupunki ilman avauskuvia taittuu ennalleen.
+     */
+    if (panoraamat.length) {
+      this.arrivalLehtiPaakuva.appendChild(panoraamat.length > 1
+        ? this.nahtavyydenKaruselli(panoraamat)
+        : this.nahtavyydenKuva(panoraamat[0]));
+      for (let i = 0; i < Math.min(lista.length, 2); i += 1) {
+        this.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
+      }
+      return;
+    }
     this.arrivalLehtiPaakuva.appendChild(teeKuva(lista[0], 0, 1200));
     for (let i = 1; i < Math.min(lista.length, 3); i += 1) {
       this.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
@@ -175944,6 +176091,38 @@ class UI {
     lohko.appendChild(lahderivi);
     kohde.appendChild(lohko);
     this.kytkeKarttaZoom(kehys, kotelo, napit, ydin, zoomOhjain);
+  }
+
+  /**
+   * Matkailijalle-osio kartan perään (omistajan tilaus 15.8.2026:
+   * "kaupunkilehden etusivulla olisi hyvä kuvailla kaupunkia myös
+   * turistin näkökulmasta, millainen ilmapiiri siellä on ja mikä
+   * siellä on mielenkiintoista ... oma otsikko ... kartan jälkeen.
+   * Siitä voisi avautua oma pidempi pop-up artikkeli matkailijalle").
+   *
+   * Kappale on kansikategorian omaa, tarkistettua sisältöä
+   * (kulttuuri-kategoriat.js: matkailijalle-kenttä), ja nappi avaa
+   * pidemmän artikkelin SAMASSA nähtävyysikkunassa kuin kartan
+   * kohteet — sama kortti, samat eleet, ei uutta ikkunatyyppiä.
+   * Kaupunki ilman matkailijalle-kenttää ei näytä osiota.
+   */
+  piirraMatkailijalle(kohde) {
+    const tiedot = this.tutkiKansi?.matkailijalle;
+    if (!tiedot?.kappale) return;
+    const lohko = html('div', 'matkailijalle');
+    lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Matkailijalle'));
+    for (const kappale of tiedot.kappale.split('\n\n').filter(Boolean)) {
+      lohko.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
+    }
+    if (tiedot.artikkeli?.teksti) {
+      const nappi = html('button', 'wiki-btn', 'Matkailijan opas');
+      nappi.type = 'button';
+      // Henkilölinkit tyhjinä: artikkeli ei ole kartan kohde, eikä
+      // kaupungin henkilölinkkejä sovelleta sen tekstiin.
+      nappi.addEventListener('click', () => this.avaaNahtavyys(tiedot.artikkeli, null, { henkilolinkit: [] }));
+      lohko.appendChild(nappi);
+    }
+    kohde.appendChild(lohko);
   }
 
   /**
@@ -181829,6 +182008,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 738, teksti: 'Kööpenhamina-lehti: yleisnäkymäkaruselli ja Matkailijalle' },
   { v: 737, teksti: 'Kartat 6 uuteen kaupunkiin; piirrokset terävinä (1024 px)' },
   { v: 736, teksti: 'Vain varikartta; numero kylttiin' },
   { v: 735, teksti: 'Suurennos keskitetty; 75 %; kyltti kiinni' },
@@ -182663,7 +182843,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.737';
+const APP_VERSION = '2026-08-09.738';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

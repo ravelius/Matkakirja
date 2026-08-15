@@ -9024,8 +9024,17 @@ export class UI {
   kaupunkilehdenEtusivunKuvat(cityId = this.arrivalShownFor) {
     const kuvat = [];
     const kansikuvat = this.tutkiKansi?.kansikuvat ?? [];
-    if (kansikuvat[0]?.tiedosto) kuvat.push(valokuvaUrl(kansikuvat[0].tiedosto, 1200));
-    for (const teos of kansikuvat.slice(1, 3)) {
+    const avauskuvat = this.tutkiKansi?.avauskuvat ?? [];
+    // Avauskuvakaupungissa iso paikka on panoraamakaruselli (900,
+    // sama leveys kuin nahtavyydenKarusellissa) ja pikkurivillä ovat
+    // kansikuvien kaksi ensimmäistä; muuten entinen taitto.
+    for (const teos of avauskuvat) {
+      if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 900));
+    }
+    if (!avauskuvat.length && kansikuvat[0]?.tiedosto) {
+      kuvat.push(valokuvaUrl(kansikuvat[0].tiedosto, 1200));
+    }
+    for (const teos of kansikuvat.slice(avauskuvat.length ? 0 : 1, avauskuvat.length ? 2 : 3)) {
       if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 640));
     }
     const lippu = this.arrivalMaaTiedot?.lippu;
@@ -10249,7 +10258,7 @@ export class UI {
     // Liitelinkki päiväysrivillä: "Suomi-liite" (omistajan taitto-ohje 9.8.2026).
     this.arrivalMaaLinkki.textContent = maakartta ? `${otsikonMaa}-liite` : '';
     this.arrivalDialog.classList.toggle('lehti', lehti);
-    this.piirraLehtiKuvat(kansi?.kansikuvat);
+    this.piirraLehtiKuvat(kansi?.kansikuvat, kansi?.avauskuvat);
     // Lehdessä ei ole Lue lisää -nappeja eikä wikin kuvakarusellia:
     // etusivun tekstit riittävät alkuun, ja syventyminen tapahtuu
     // sivuja kääntämällä. Kuvat ovat omia, tarkistettuja valintoja.
@@ -10362,7 +10371,12 @@ export class UI {
       && KAUPUNKIKARTAT[this.arrivalShownFor];
     this.arrivalKaupunkiKartta.hidden = !karttaEtusivulla;
     this.arrivalKaupunkiKartta.replaceChildren();
-    if (karttaEtusivulla) this.piirraKaupunkiKartta(this.arrivalKaupunkiKartta);
+    if (karttaEtusivulla) {
+      this.piirraKaupunkiKartta(this.arrivalKaupunkiKartta);
+      // Matkailijalle-osio kartan JÄLKEEN (omistajan sijoituspäätös
+      // 15.8.2026: "se voisi olla itseasissa kartan jälkeen").
+      this.piirraMatkailijalle(this.arrivalKaupunkiKartta);
+    }
 
     /*
      * Kaupunkilehden radiorivi asuu palstojen ulkopuolella kohdekartan
@@ -11113,13 +11127,14 @@ export class UI {
    * (kansikuvat-kenttä) — eivät wikin satunnaiskaruselli. Napautus
    * avaa selattavan suurennoksen, jossa koko sarja kulkee nuolilla.
    */
-  piirraLehtiKuvat(kuvat) {
+  piirraLehtiKuvat(kuvat, avauskuvat = null) {
     const lista = kuvat ?? [];
+    const panoraamat = avauskuvat ?? [];
     this.arrivalLehtiPaakuva.replaceChildren();
     this.arrivalLehtiKuvat.replaceChildren();
-    this.arrivalLehtiPaakuva.hidden = !lista.length;
-    this.arrivalLehtiKuvat.hidden = lista.length < 2;
-    if (!lista.length) return;
+    this.arrivalLehtiPaakuva.hidden = !lista.length && !panoraamat.length;
+    this.arrivalLehtiKuvat.hidden = panoraamat.length ? !lista.length : lista.length < 2;
+    if (!lista.length && !panoraamat.length) return;
     const teeKuva = (teos, indeksi, leveys) => {
       const kotelo = html('figure', 'lehti-kuva');
       const kuva = document.createElement('img');
@@ -11138,6 +11153,25 @@ export class UI {
       }
       return kotelo;
     };
+    /*
+     * AVAUSKUVAT (omistajan tilaus 15.8.2026: "saisi olla laadukas
+     * vaakakuva jossa näkyy itse kaupunkia enemmän, sellainen
+     * yleisnäkymä. ja niitä voisi olla useampi karusellissa"): iso
+     * kuvapaikka on yleisnäkymien karuselli — sama komponentti kuin
+     * nähtävyysjutuissa, joten nuolet, laskuri, pyyhkäisy ja
+     * suurennos toimivat tutusti. Pikkuriville vapautuvat silloin
+     * kansikuvien KAKSI ENSIMMÄISTÄ, koska iso paikka ei enää syö
+     * niistä ensimmäistä. Kaupunki ilman avauskuvia taittuu ennalleen.
+     */
+    if (panoraamat.length) {
+      this.arrivalLehtiPaakuva.appendChild(panoraamat.length > 1
+        ? this.nahtavyydenKaruselli(panoraamat)
+        : this.nahtavyydenKuva(panoraamat[0]));
+      for (let i = 0; i < Math.min(lista.length, 2); i += 1) {
+        this.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
+      }
+      return;
+    }
     this.arrivalLehtiPaakuva.appendChild(teeKuva(lista[0], 0, 1200));
     for (let i = 1; i < Math.min(lista.length, 3); i += 1) {
       this.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
@@ -12282,6 +12316,38 @@ export class UI {
     lohko.appendChild(lahderivi);
     kohde.appendChild(lohko);
     this.kytkeKarttaZoom(kehys, kotelo, napit, ydin, zoomOhjain);
+  }
+
+  /**
+   * Matkailijalle-osio kartan perään (omistajan tilaus 15.8.2026:
+   * "kaupunkilehden etusivulla olisi hyvä kuvailla kaupunkia myös
+   * turistin näkökulmasta, millainen ilmapiiri siellä on ja mikä
+   * siellä on mielenkiintoista ... oma otsikko ... kartan jälkeen.
+   * Siitä voisi avautua oma pidempi pop-up artikkeli matkailijalle").
+   *
+   * Kappale on kansikategorian omaa, tarkistettua sisältöä
+   * (kulttuuri-kategoriat.js: matkailijalle-kenttä), ja nappi avaa
+   * pidemmän artikkelin SAMASSA nähtävyysikkunassa kuin kartan
+   * kohteet — sama kortti, samat eleet, ei uutta ikkunatyyppiä.
+   * Kaupunki ilman matkailijalle-kenttää ei näytä osiota.
+   */
+  piirraMatkailijalle(kohde) {
+    const tiedot = this.tutkiKansi?.matkailijalle;
+    if (!tiedot?.kappale) return;
+    const lohko = html('div', 'matkailijalle');
+    lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Matkailijalle'));
+    for (const kappale of tiedot.kappale.split('\n\n').filter(Boolean)) {
+      lohko.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
+    }
+    if (tiedot.artikkeli?.teksti) {
+      const nappi = html('button', 'wiki-btn', 'Matkailijan opas');
+      nappi.type = 'button';
+      // Henkilölinkit tyhjinä: artikkeli ei ole kartan kohde, eikä
+      // kaupungin henkilölinkkejä sovelleta sen tekstiin.
+      nappi.addEventListener('click', () => this.avaaNahtavyys(tiedot.artikkeli, null, { henkilolinkit: [] }));
+      lohko.appendChild(nappi);
+    }
+    kohde.appendChild(lohko);
   }
 
   /**
