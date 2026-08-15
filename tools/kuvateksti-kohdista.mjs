@@ -79,12 +79,14 @@ export function kentat(src) {
 // --- Uuden literaalin muotoilu -----------------------------------------
 
 function lainaa(pala) {
-  return `'${pala.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
+  return `'${pala
+    .replace(/\\/g, '\\\\')
+    .replace(/'/g, "\\'")
+    .replace(/\n/g, '\\n')
+    .replace(/\t/g, '\\t')}'`;
 }
 
-export function muotoile(teksti, sisennys, kentta) {
-  const ekaAlku = `${sisennys}${kentta}: `;
-  const jatkoAlku = `${sisennys}  + `;
+function rivita(teksti, ekaAlku, jatkoAlku) {
   const sanat = teksti.split(' ');
   const rivit = [];
   let pala = '';
@@ -106,6 +108,24 @@ export function muotoile(teksti, sisennys, kentta) {
   return rivit
     .map((r, i) => (i === 0 ? ekaAlku : jatkoAlku) + lainaa(r))
     .join('\n');
+}
+
+export function muotoile(teksti, sisennys, kentta) {
+  const kappaleet = teksti.split('\n\n');
+  if (kappaleet.length === 1) {
+    // Yksi kappale: jatkorivi sisennys + 2, kuten lehtipakkauksissa.
+    return rivita(teksti, `${sisennys}${kentta}: `, `${sisennys}  + `);
+  }
+  // Monikappaleinen teksti (nähtävyysjutut): kappaleen jatkorivi
+  // sisennys + 4 ja kappaleiden väliin oma '\n\n' -pala sisennys + 2.
+  const palat = [];
+  kappaleet.forEach((kpl, i) => {
+    if (i > 0) palat.push(`${sisennys}  + ${lainaa('\n\n')}`);
+    palat.push(
+      rivita(kpl, i === 0 ? `${sisennys}${kentta}: ` : `${sisennys}  + `, `${sisennys}    + `),
+    );
+  });
+  return palat.join('\n');
 }
 
 // --- Pääohjelma --------------------------------------------------------
