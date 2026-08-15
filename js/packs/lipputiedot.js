@@ -391,4 +391,260 @@ export const LIPPUTIEDOT = {
     ],
     lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
   },
+  'Flag of France.svg': {
+    maa: 'Ranska',
+    symboliikka: [
+      { osa: 'Sininen ja punainen', selite: 'Pariisin kaupungin värit.' },
+      { osa: 'Valkoinen', selite: 'kuninkaan väri niiden välissä.' },
+      {
+        osa: 'Yhdessä',
+        selite: 'vallankumouksen trikolori — vapauden tunnus.',
+      },
+    ],
+    kappaleet: [
+      'Trikolori syntyi vallankumouksessa, kun Pariisin sinipunaiseen '
+        + 'kokardiin yhdistettiin kuninkaan valkoinen. Valtiolipuksi '
+        + 'se vahvistettiin 1794.',
+      'Malli levisi maailmalle: kymmenet uudet tasavallat ottivat '
+        + 'kolmiraitaisen lipun vapauden merkiksi.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Tasavallan tunnus',
+        polku: 'assets/liput/tunnukset/fra-vaakuna.png',
+        selite: 'Liktorinvihko tammen- ja laakerinlehvien keskellä, '
+          + 'nauhassa Liberté, Égalité, Fraternité. Ranskalla ei ole '
+          + 'virallista vaakunaa — tasavalta käyttää tätä tunnusta '
+          + 'muun muassa passeissa, ja epävirallisena tunnuksena '
+          + 'elävät myös Marianne ja gallialainen kukko.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of the United Kingdom.svg': {
+    maa: 'Iso-Britannia',
+    symboliikka: [
+      {
+        osa: 'Pyhän Yrjön risti',
+        selite: 'Englanti — punainen risti valkoisella.',
+      },
+      {
+        osa: 'Pyhän Andreaan risti',
+        selite: 'Skotlanti — valkoinen vinoristi sinisellä.',
+      },
+      {
+        osa: 'Pyhän Patrikin risti',
+        selite: 'Irlanti — punainen vinoristi.',
+      },
+    ],
+    kappaleet: [
+      'Union Jack yhdistää kolmen suojeluspyhimyksen ristit. '
+        + 'Ensimmäinen unionilippu tehtiin 1606, kun Englannilla ja '
+        + 'Skotlannilla oli yhteinen kuningas; nykyasu on vuodelta '
+        + '1801, jolloin Irlanti liittyi unioniin.',
+      'Wales ei näy lipussa — se oli liitetty Englantiin jo ennen '
+        + 'ensimmäistä unionilippua. Walesilaiset ovat aika ajoin '
+        + 'ehdottaneet punaisen lohikäärmeensä lisäämistä.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kuninkaalliset vaakunat',
+        polku: 'assets/liput/tunnukset/gbr-vaakuna.png',
+        selite: 'Englannin leijona ja Skotlannin yksisarvinen '
+          + 'kannattelevat kilpeä; nauhassa Dieu et mon droit. '
+          + 'Yksisarvinen on kahleissa — tarun mukaan vapaana se '
+          + 'olisi vaarallinen.',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Wikimedia '
+      + 'Commons (CC BY-SA 3.0)',
+  },
+  'Flag of the Netherlands.svg': {
+    maa: 'Alankomaat',
+    symboliikka: [
+      {
+        osa: 'Punainen, valkoinen ja sininen',
+        selite: 'Oranian prinssin väreistä; alkuperäinen oranssi '
+          + 'tummui punaiseksi 1600-luvulla.',
+      },
+      {
+        osa: 'Oranssi',
+        selite: 'kuningashuoneen väri — juhlapäivinä lipun yllä '
+          + 'liehuu oranssi viiri.',
+      },
+    ],
+    kappaleet: [
+      'Oranssi-valko-sininen "prinssinlippu" oli kapinan tunnus '
+        + 'Espanjan valtaa vastaan 1500-luvulla. Oranssi vaihtui '
+        + 'punaiseen 1600-luvulla — väri haalistui merellä ja '
+        + 'punainen erottui kauemmas.',
+      'Lippu on maailman vanhimpia trikoloreja, ja sen '
+        + 'väriyhdistelmä kiersi Pietari Suuren mukana Venäjälle ja '
+        + 'sieltä edelleen slaavilaisiin lippuihin.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Kuningaskunnan vaakuna',
+        polku: 'assets/liput/tunnukset/nld-vaakuna.png',
+        selite: 'Kruunattu kultaleijona kantaa miekkaa ja seitsemän '
+          + 'nuolen kimppua — muisto tasavallan seitsemästä '
+          + 'maakunnasta. Nauhassa Je maintiendrai, "minä pysyn".',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Sodacan / '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Spain.svg': {
+    maa: 'Espanja',
+    symboliikka: [
+      {
+        osa: 'Punainen ja keltainen',
+        selite: '"rojigualda" — valittu 1785 näkyvyyden takia '
+          + 'merellä.',
+      },
+      {
+        osa: 'Vaakuna',
+        selite: 'neljä kuningaskuntaa: Kastilian linna, Leónin '
+          + 'leijona, Aragonian raidat ja Navarran kahleet.',
+      },
+    ],
+    kappaleet: [
+      'Kaarle III valitsi puna-kelta-punaisen merilipuksi 1785, '
+        + 'jotta se erottuisi Bourbon-valtioiden valkoisista lipuista '
+        + 'merellä. Asu vakiintui valtiolipuksi 1800-luvulla.',
+      'Tasavallan vuosina 1931–1939 alaraita oli violetti. Nykyinen '
+        + 'vaakunallinen asu vahvistettiin 1981.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Espanjan vaakuna',
+        polku: 'assets/liput/tunnukset/esp-vaakuna.png',
+        selite: 'Kilvessä Kastilian linna, Leónin leijona, Aragonian '
+          + 'raidat, Navarran kahleet ja Granadan granaattiomena; '
+          + 'keskellä Bourbonien liljat. Herkuleen pylväiden nauhassa '
+          + 'Plus Ultra — "yhä edemmäs".',
+      },
+    ],
+    lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Heralder / '
+      + 'Wikimedia Commons (CC BY-SA 3.0)',
+  },
+  'Flag of Portugal.svg': {
+    maa: 'Portugali',
+    symboliikka: [
+      { osa: 'Vihreä', selite: 'toivo.' },
+      { osa: 'Punainen', selite: 'taisteluissa vuodatettu veri.' },
+      {
+        osa: 'Armillaaripallo',
+        selite: 'löytöretkien merenkulkukoje vaakunan takana.',
+      },
+    ],
+    kappaleet: [
+      'Viher-punainen nousi tasavaltalaisten lipuksi ja '
+        + 'valtiolipuksi 1911, kun monarkia oli kaatunut — sitä ennen '
+        + 'lippu oli sinivalkoinen.',
+      'Keskellä on armillaaripallo, löytöretkien ajan '
+        + 'merenkulkukoje, ja sen päällä vanha kilpi: viisi pientä '
+        + 'sinistä kilpeä ja seitsemän linnaa.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Portugalin vaakuna',
+        polku: 'assets/liput/tunnukset/prt-vaakuna.png',
+        selite: 'Viisi sinistä kilpeä ristinä (quinas) muistuttavat '
+          + 'tarun mukaan viidestä voitetusta maurikuninkaasta; '
+          + 'reunalla seitsemän kultaista linnaa. Takana '
+          + 'löytöretkien armillaaripallo.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of Italy.svg': {
+    maa: 'Italia',
+    symboliikka: [
+      {
+        osa: 'Vihreä, valkoinen ja punainen',
+        selite: 'Ranskan trikolorin malli italialaisin värein; kansa '
+          + 'lukee niihin maiseman, Alppien lumen ja veren.',
+      },
+    ],
+    kappaleet: [
+      'Trikolori syntyi Napoleonin ajan Cispadaanisessa '
+        + 'tasavallassa 1797 Reggio Emiliassa, Ranskan lipun '
+        + 'mallista.',
+      'Yhdistyneen Italian lipuksi se tuli 1861 Savoijin vaakunalla '
+        + 'varustettuna; tasavalta poisti vaakunan 1946.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Italian tunnus',
+        polku: 'assets/liput/tunnukset/ita-vaakuna.png',
+        selite: 'Italian tähti, työn tasavaltaa merkitsevä '
+          + 'hammasratas sekä oliivin- ja tammenoksat — rauha ja '
+          + 'kansan voima. Tunnus valittiin suunnittelukilpailulla '
+          + '1948.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of Switzerland.svg': {
+    maa: 'Sveitsi',
+    symboliikka: [
+      {
+        osa: 'Valkoinen risti',
+        selite: 'valaliiton sotajoukkojen tunnus keskiajalta.',
+      },
+      {
+        osa: 'Neliömuoto',
+        selite: 'maailman lipuista vain Sveitsin ja Vatikaanin liput '
+          + 'ovat neliöitä.',
+      },
+    ],
+    kappaleet: [
+      'Valkoinen risti punaisessa kentässä kulki valaliiton '
+        + 'joukkojen mukana jo 1300-luvulla. Liittovaltion lipuksi '
+        + 'asu vahvistui 1800-luvulla.',
+      'Punainen Risti käänsi värit toisin päin: järjestön tunnus on '
+        + 'kunnianosoitus perustajan Henry Dunantin kotimaalle.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Sveitsin vaakuna',
+        polku: 'assets/liput/tunnukset/che-vaakuna.png',
+        selite: 'Valaliiton risti kilpimuodossa. Kantonien omat '
+          + 'kirjavat vaakunat elävät rinnalla — liittovaltion '
+          + 'tunnus on tarkoituksella yksinkertainen.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
+  'Flag of Austria.svg': {
+    maa: 'Itävalta',
+    symboliikka: [
+      {
+        osa: 'Puna-valko-punainen',
+        selite: 'Babenberg-herttuoiden vaakunan värit — tarun mukaan '
+          + 'herttuan valkoinen viitta värjäytyi taistelussa verestä '
+          + 'paitsi vyön kohdalta.',
+      },
+    ],
+    kappaleet: [
+      'Puna-valko-punainen tunnetaan Babenberg-herttuoiden '
+        + 'vaakunasta 1200-luvulta, ja se on Euroopan vanhimpia '
+        + 'lippuaiheita. Taru kytkee sen Leopold V:n veriseen '
+        + 'viittaan Akkonin piirityksessä 1191.',
+      'Tasavallan lipuksi se tuli 1918 keisarikunnan '
+        + 'musta-keltaisen jälkeen ja palasi käyttöön 1945.',
+    ],
+    tunnukset: [
+      {
+        nimi: 'Liittokotka',
+        polku: 'assets/liput/tunnukset/aut-vaakuna.png',
+        selite: 'Musta kotka kantaa sirppiä ja vasaraa — talonpojat '
+          + 'ja työläiset — sekä muurikruunua, porvaristoa. '
+          + 'Katkennut kahle jaloissa lisättiin 1945 vapautumisen '
+          + 'merkiksi.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
+  },
 };
