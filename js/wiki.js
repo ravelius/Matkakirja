@@ -113,6 +113,54 @@ export function mediaListUrl(lang, title) {
   return `https://${lang}.wikipedia.org/api/rest_v1/page/media-list/${encodeURIComponent(title)}`;
 }
 
+/** Hakuosoite: paras artikkeliosuma vapaalle tekstille. */
+export function searchUrl(lang, teksti) {
+  const params = new URLSearchParams({
+    action: 'query',
+    list: 'search',
+    srsearch: teksti,
+    srlimit: '1',
+    srnamespace: '0',
+    format: 'json',
+    origin: '*',
+  });
+  return `https://${lang}.wikipedia.org/w/api.php?${params}`;
+}
+
+/**
+ * KUVALLINEN ARTIKKELI VAPAALLE AIHEELLE (pöllön vastauskuva,
+ * omistajan tilaus 15.8.2026: "hakea aina yksi kuva per vastaus").
+ *
+ * Suora nimihaku ensin: pöllön käsite on usein täsmälleen artikkelin
+ * nimi, ja REST-summary seuraa uudelleenohjaukset. Jos suora nimi ei
+ * tuota kelvollista kuvaa — aihe on kysymyslause tai taivutusmuoto —
+ * kysytään hakua parhaasta osumasta ja luetaan sen tiivistelmä.
+ * Montaasit, kartat ja logot karsii sama BAD_IMAGE kuin muuallakin.
+ *
+ * Ei koskaan heitä; null tarkoittaa, ettei kuvallista artikkelia
+ * löytynyt, ja se on kelvollinen vastaus.
+ */
+export async function haeKuvallinenArtikkeli(aihe, {
+  fetchImpl = globalThis.fetch, langs = WIKI_LANGS,
+} = {}) {
+  const kelpaa = (s) => Boolean(s?.image && !BAD_IMAGE.test(s.image));
+  const suora = await fetchSummary(aihe, { fetchImpl, langs });
+  if (kelpaa(suora)) return suora;
+  for (const lang of langs) {
+    try {
+      const res = await fetchImpl(searchUrl(lang, aihe));
+      if (!res?.ok) continue;
+      const osuma = (await res.json())?.query?.search?.[0]?.title;
+      if (!osuma) continue;
+      const s = await fetchSummary(osuma, { fetchImpl, langs: [lang] });
+      if (kelpaa(s)) return s;
+    } catch {
+      /* ei yhteyttä — kokeillaan seuraavaa kieltä */
+    }
+  }
+  return null;
+}
+
 /**
  * Kelvottomat kuvat: kaupunkiartikkelin pääkuva on usein monen kuvan
  * montaasi, joka pienessä kortissa näyttää köntältä. Myös liput, vaakunat,

@@ -13728,6 +13728,54 @@ function mediaListUrl(lang, title) {
   return `https://${lang}.wikipedia.org/api/rest_v1/page/media-list/${encodeURIComponent(title)}`;
 }
 
+/** Hakuosoite: paras artikkeliosuma vapaalle tekstille. */
+function searchUrl(lang, teksti) {
+  const params = new URLSearchParams({
+    action: 'query',
+    list: 'search',
+    srsearch: teksti,
+    srlimit: '1',
+    srnamespace: '0',
+    format: 'json',
+    origin: '*',
+  });
+  return `https://${lang}.wikipedia.org/w/api.php?${params}`;
+}
+
+/**
+ * KUVALLINEN ARTIKKELI VAPAALLE AIHEELLE (pöllön vastauskuva,
+ * omistajan tilaus 15.8.2026: "hakea aina yksi kuva per vastaus").
+ *
+ * Suora nimihaku ensin: pöllön käsite on usein täsmälleen artikkelin
+ * nimi, ja REST-summary seuraa uudelleenohjaukset. Jos suora nimi ei
+ * tuota kelvollista kuvaa — aihe on kysymyslause tai taivutusmuoto —
+ * kysytään hakua parhaasta osumasta ja luetaan sen tiivistelmä.
+ * Montaasit, kartat ja logot karsii sama BAD_IMAGE kuin muuallakin.
+ *
+ * Ei koskaan heitä; null tarkoittaa, ettei kuvallista artikkelia
+ * löytynyt, ja se on kelvollinen vastaus.
+ */
+async function haeKuvallinenArtikkeli(aihe, {
+  fetchImpl = globalThis.fetch, langs = WIKI_LANGS,
+} = {}) {
+  const kelpaa = (s) => Boolean(s?.image && !BAD_IMAGE.test(s.image));
+  const suora = await fetchSummary(aihe, { fetchImpl, langs });
+  if (kelpaa(suora)) return suora;
+  for (const lang of langs) {
+    try {
+      const res = await fetchImpl(searchUrl(lang, aihe));
+      if (!res?.ok) continue;
+      const osuma = (await res.json())?.query?.search?.[0]?.title;
+      if (!osuma) continue;
+      const s = await fetchSummary(osuma, { fetchImpl, langs: [lang] });
+      if (kelpaa(s)) return s;
+    } catch {
+      /* ei yhteyttä — kokeillaan seuraavaa kieltä */
+    }
+  }
+  return null;
+}
+
 /**
  * Kelvottomat kuvat: kaupunkiartikkelin pääkuva on usein monen kuvan
  * montaasi, joka pienessä kortissa näyttää köntältä. Myös liput, vaakunat,
@@ -109270,6 +109318,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v712 — pöllön kuva löytyy myös hakusanalla',
   'v711 — lipusta lipun tarina (Saksa, Suomi)',
   'v710 — piirrokset pisteinä + kortit 4 kaupungissa',
   'v709 — värikartat: Helsinki, Pariisi, Lontoo',
@@ -160725,14 +160774,14 @@ class Pollo {
     }
     const aihe = vastauskuvanAihe(teksti, kysymys);
     if (!aihe) return;
-    fetchSummary(aihe).then((summary) => {
+    // Suora nimi ensin, haku varalle (js/wiki.js): kysymyslause tai
+    // taivutettu käsite löytää silti kuvallisen artikkelin.
+    haeKuvallinenArtikkeli(aihe).then((summary) => {
       if (poletti !== this.vastausKuvaPoletti) return;
       if (!viesti?.isConnected) return;
-      const kuva = summary?.image && !BAD_IMAGE.test(summary.image)
-        ? summary.image : null;
-      if (!kuva) return;
+      if (!summary?.image) return;
       this.naytaVastausKuva(viesti, {
-        esikatselu: kuva,
+        esikatselu: summary.image,
         seloste: summary.title ?? aihe,
         avaa: () => this.avaaWikiKuva(summary),
       });
@@ -180131,6 +180180,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 712, teksti: 'Pöllön vastauskuva löytyy myös haun kautta' },
   { v: 711, teksti: 'Lipusta aukeaa lipun tarina — pilotti Suomi ja Saksa' },
   { v: 710, teksti: 'Miniatyyrit kolmeen kaupunkiin ja piirrokset pisteiksi' },
   { v: 709, teksti: 'Värikartat Helsinkiin, Pariisiin ja Lontooseen' },
@@ -180939,7 +180989,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.711';
+const APP_VERSION = '2026-08-09.712';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
