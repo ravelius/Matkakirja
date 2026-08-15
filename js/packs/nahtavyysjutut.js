@@ -8658,11 +8658,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Falcon souq 03.jpg',
-          selite: 'Haukkasuukin liike Souq Waqifissa: lattiana on hiekka, sen '
-            + 'yli kulkee vihreäpäällysteisiä orsirimoja ja niillä istuu '
-            + 'haukkoja ilman huppua. Takaseinällä on varustevitriini, ja '
-            + 'asiakkaat seisovat korotetulla kivilattialla; takaseinällä '
-            + 'on liikkeen sisustuksena suuria muotokuvia.',
+          selite: 'Haukkasuukin liike Souq Waqifissa: hiekkalattian yli '
+            + 'kulkee vihreäpäällysteisiä orsirimoja, joilla istuu '
+            + 'huputtomia haukkoja. Liikkeessä on myytävien varusteiden '
+            + 'vitriini ja sisustuksena suuria muotokuvia.',
           lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -9001,11 +9000,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hamam baths, Cyprus.jpg',
-          selite: 'Hamamin matalat valkoiset kupolit karkean kalkkikivimuurin '
-            + 'takaa: kupolien pintaan on upotettu rivi pyöreitä '
-            + 'lasitäpliä ja yksi suorakaiteen muotoinen valoluukku. '
-            + 'Takana kohoaa kaksi rapattua hormia, joiden yläosassa on '
-            + 'aukko, ja kauempana moskeijan minareetti.',
+          selite: 'Hamamin matalat valkoiset kupolit karkean '
+            + 'kalkkikivimuurin takaa: kupoleihin on upotettu rivi pyöreitä '
+            + 'lasitäpliä ja yksi suorakaiteen muotoinen valoluukku. Niiden '
+            + 'takaa kohoaa kaksi rapattua hormia, joiden yläosassa on '
+            + 'aukko, ja moskeijan minareetti.',
           lahde: 'Mikettg at English Wikipedia, Wikimedia Commons (PD)',
         },
         {
@@ -9734,12 +9733,11 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'مقهى الشابندر ببغداد.jpg',
-          selite: 'Shabandarin kahvilan kulmatalo kadulta nähtynä: kaarevan '
-            + 'oven yllä vihreä arabiankielinen kyltti, yläkerrassa '
-            + 'kiertää puinen parvekekaide, ja jalkakäytävällä on rivi '
-            + 'mustia valurautaruukkuja. Ovensuussa istuu miehiä pöydän '
-            + 'ääressä, vieressä videokamera kolmijalalla ja oikealla '
-            + 'hedelmäkärry.',
+          selite: 'Shabandarin kahvilan kulmatalo Mutanabbin kadun '
+            + 'varrella. Kaarevan oven yllä on vihreä arabiankielinen '
+            + 'kyltti ja yläkerrassa kiertää puinen parvekekaide. '
+            + 'Ovensuussa istuu miehiä pöydän ääressä; kahvila on Bagdadin '
+            + 'vanhimpia yhä toimivia.',
           lahde: 'Mondalawy, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -9824,22 +9822,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'القصر العباسي قلب الحكم والفخامة في العصر الإسلامي.jpg',
-          selite: 'Sisäpiha ja sen keskellä matalalla jalustalla lepäävä '
-            + 'kivinen allas, jonka ympärille on vedetty köysiaita. Pihaa '
-            + 'kiertää kaksi kerrosta suippokaarikäytäviä, alakerran '
-            + 'syvennysten holveissa on muqarnas-kennostoa, ja takaseinän '
-            + 'keskellä avautuu muita suurempi iwan. Oikealla '
-            + 'vierailijoita, joista kaksi valmistujaisviitoissa.',
+          selite: 'Abbasidipalatsin sisäpiha ja sen keskellä matalalla '
+            + 'jalustalla lepäävä kivinen allas. Pihaa kiertää kaksi '
+            + 'kerrosta käytäviä, jotka avautuvat pihalle suippokaarina, ja '
+            + 'alakerran holveissa on muqarnas-kennostoa. Takaseinän '
+            + 'keskellä avautuu muita suurempi iwan.',
           lahde: 'Montzr 1, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'القصر العباسي رمز السلطة والفن في بغداد التاريخية.jpg',
-          selite: 'Kaarikäytävän holvi alhaalta kuvattuna: muqarnas-kennot '
-            + 'lomittuvat toisiinsa ja laskeutuvat portaittain, kunkin '
-            + 'pohjaan on veistetty kasvikuvio tai kirjoituskoriste, ja '
-            + 'keskellä erottuu kahdeksansakarainen tähti. Alempana '
-            + 'kulkee rivi suippokaaria ja paljasta tiilimuuria, oikeassa '
-            + 'yläkulmassa näkyy taivas.',
+          selite: 'Abbasidipalatsin kaarikäytävän holvi alhaalta: '
+            + 'muqarnas-kennot lomittuvat toisiinsa ja laskeutuvat '
+            + 'portaittain. Kunkin pohjaan on veistetty kasvikuvio tai '
+            + 'kirjoituskoriste, ja keskellä erottuu kahdeksansakarainen '
+            + 'tähti. Muu muuripinta on paljasta tiiltä.',
           lahde: 'Montzr 1, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -9876,12 +9872,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'خان مرجان.jpg',
-          selite: 'Khan Mirjanin katettu keskussali. Rivi teräväkärkisiä '
-            + 'tiilikaaria jaksottaa katon, alaseinässä on kapeita '
-            + 'suippokaarisia oviaukkoja ja ylhäällä kiertää parveke '
-            + 'tummine puukaiteineen; päätyseinässä on kolme kapeaa '
-            + 'ikkunaa. Sali on tyhjä, vasemmalla seisoo tumma puuseinäke '
-            + 'lasimaalauksineen sekä pöytä ja tuoli.',
+          selite: 'Khan Mirjanin katettu keskussali, jonka pohjakaavaan ei '
+            + 'kuulu avointa keskuspihaa. Rivi teräväkärkisiä tiilikaaria '
+            + 'jaksottaa kattoa, ja alaseinässä on kapeita suippokaarisia '
+            + 'oviaukkoja. Ylhäällä kiertää parveke tummine puukaiteineen.',
           lahde: 'Zaid isam, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -9972,21 +9966,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'مدخل المتحف البغدادي.jpg',
-          selite: 'Museon julkisivu kadulta ylöspäin kuvattuna: vasemmalla '
-            + 'ulkoneva puinen shanashil-parveke pylväineen ja '
-            + 'ruutuikkunoineen, sen alla rautakoristeinen kaide ja '
-            + 'seinälyhtyjä. Oikealla on kaiverrettu suippokaariovi ja '
-            + 'sen yllä arabiankielinen kivilaatta; taustalla kohoaa '
-            + 'naapuritalon paljas betoniseinä.',
+          selite: 'Bagdadin museon julkisivu kadulta: ulkoneva puinen '
+            + 'shanashil-parveke pylväineen ja ruutuikkunoineen, sen alla '
+            + 'rautakoristeinen kaide ja seinälyhtyjä. Kaiverretun '
+            + 'suippokaarioven yllä on arabiankielinen kivilaatta.',
           lahde: 'Ayat Jaryan, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Photos from the Al Baghdadi Museum- Baghdadi cafe.jpg',
-          selite: 'Kahvilan kohtaus: toistakymmentä täysikokoista hahmoa '
-            + 'istuu penkeillä ja tuoleilla valkoisen puukaiteen takana, '
-            + 'päässä ruudullisia huiveja ja valkoisia kalotteja. '
-            + 'Keltatiilisellä seinällä on kehystettyjä valokuvia ja '
-            + 'pieniä hyllyjä, perällä tarjoilutiski kannuineen.',
+          selite: 'Museon kahvilakohtaus: toistakymmentä täysikokoista '
+            + 'hahmoa istuu penkeillä ja tuoleilla valkoisen puukaiteen '
+            + 'takana, päässä ruudullisia huiveja ja valkoisia kalotteja. '
+            + 'Keltatiilisellä seinällä on kehystettyjä valokuvia, ja '
+            + 'tarjoilutiskillä kannuja.',
           lahde: 'Mustafa alsalhi, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10033,24 +10025,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'İzmir Clock Tower, 2026.jpg',
-          selite: 'Kellotorni keskellä Konakin aukiota: kahdeksankulmainen '
-            + 'kaarigalleria jalustana, sen päältä nousee kapeneva torni, '
-            + 'kellotaulu ja ylimpänä avoin pylväikkökamari. Vasemmalla '
-            + 'Yalı-moskeijan kupoli ja minareetti, oikealla '
-            + 'kuvernöörinkonak keltaisine julkisivuineen ja Turkin lippu '
-            + 'salossa. Aukiolla kävelee ihmisiä, jalkakäytävällä on '
-            + 'opastetaulu ja kiveyksellä satoja kyyhkyjä.',
+          selite: 'Kellotorni Konakin aukiolla: kahdeksankulmaisen '
+            + 'kaarigallerian päältä nousee kapeneva torni, kellotaulu ja '
+            + 'ylimpänä avoin pylväikkökamari. Lähellä kohoavat '
+            + 'Yalı-moskeijan kupoli ja minareetti sekä kuvernöörinkonak '
+            + 'keltaisine julkisivuineen.',
           lahde: 'Koray, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Izmir Clock tower 5864.jpg',
-          selite: 'Jalusta lähempää: hevosenkenkäkaaret lepäävät parittaisten '
-            + 'hoikkien pylväiden päällä, ja kaarien alla on kaksi '
-            + 'neljästä marmorisuihkulähteestä maljoineen ja altaineen. '
-            + 'Keskellä on rautaristikolla suljettu ovi, jonka molemmin '
-            + 'puolin on ympyrämedaljonki tähtineen ja puolikuineen. '
-            + 'Kaarien läpi näkyy aukion kävelijöitä ja taustalla '
-            + 'moskeijan turkoosi laattapinta.',
+          selite: 'Jalusta lähempää: hevosenkenkäkaaret lepäävät '
+            + 'parittaisten hoikkien pylväiden päällä, ja kaarien alla on '
+            + 'kaksi neljästä marmorisuihkulähteestä altaineen. '
+            + 'Rautaristikolla suljetun oven kummallakin puolella on '
+            + 'ympyrämedaljonki tähtineen ja puolikuineen.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10086,11 +10074,10 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kemeraltı daytime.jpg',
-          selite: 'Kemeraltın kivetty kuja keskipäivällä: molemmin puolin '
-            + 'markiisien alla myymälöitä, kylteissä lukee turkiksi '
-            + 'berber, kahvesi ja aksesuar, ja katua varjostaa iso '
-            + 'plataani. Penkeillä istuu miehiä, ohi kävelee ostoksilla '
-            + 'olevia ihmisiä ja puun takana roikkuu punainen lippu.',
+          selite: 'Kemeraltın kivetty kuja keskipäivällä: markiisien alla '
+            + 'on rivissä myymälöitä, joiden kylteissä lukee turkiksi '
+            + 'berber, kahvesi ja aksesuar. Katua varjostaa iso plataani, '
+            + 'ja kujalla liikkuu ostoksilla olevia ihmisiä.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
         {
@@ -10132,36 +10119,28 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Hisar Mosque (October 2018).jpg',
-          selite: 'Moskeija viereisen kauppakorttelin katolta: vasemmalla '
-            + 'minareetti, jonka ainoalla parvekkeella on kaiuttimet, '
-            + 'oikealla lyijynharmaa pääkupoli kuunsirppihuippuineen ja '
-            + 'sen ympärillä pienempiä kupoleita valkoisin, rei\'itetyin '
-            + 'kaari-ikkunoin. Etualan tiili- ja kiviraidallisen '
-            + 'rakennuksen katolla on punatiilisiä hormeja, lasikupuja ja '
-            + 'ilmastointikoneita, ja alhaalla Kemeraltın kujalla näkyvät '
-            + 'kauppojen markiisit, kyltit KAOS SILVER ja Halıcılık, '
-            + 'mallinukkeja ja pöydän ääressä istuvia ihmisiä.',
+          selite: 'Hisarin moskeija kauppakorttelin katolta: lyijynharmaa '
+            + 'pääkupoli kuunsirppihuippuineen, ympärillä pienempiä '
+            + 'kupoleita valkoisin, rei\'itetyin kaari-ikkunoin, ja '
+            + 'minareetti, jonka ainoalla parvekkeella on kaiuttimet. '
+            + 'Alhaalla on Kemeraltın kuja markiiseineen.',
           lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Hisar Camii 2025 Şubat 1.jpg',
           selite: 'Pääkupoli alhaalta: kehä kehältä soikeita medaljonkeja, '
             + 'joissa on kullattuja kukkakimppuja vaalean liilalla '
-            + 'pohjalla, keskellä tumma pyörylä kullattuine '
-            + 'ruusukkeineen. Reunoilla kiertää kullattu kipsikoriste, '
-            + 'seinillä on mustia pyöreitä kalligrafiakilpiä ja '
-            + 'kaari-ikkunoita, ja kupolin poikki kulkee kattokruunujen '
-            + 'mustia ripustusvaijereita.',
+            + 'pohjalla, ja keskellä tumma pyörylä kullattuine '
+            + 'ruusukkeineen. Reunoja kiertää kullattu kipsikoriste ja '
+            + 'seinillä on mustia kalligrafiakilpiä.',
           lahde: 'Satirdan kahraman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hisar Camii 2025 Şubat 14.jpg',
-          selite: 'Yksi kupolia kannattavista paksuista pylväistä '
-            + 'alaviistosta kuvattuna: kapiteeli on veistetty kullatuiksi '
-            + 'lehtikoristeiksi. Taustalla näkyvät sivukupolit ja kapeat '
-            + 'kaari-ikkunat, vasemmalla riippuu iso messinkinen '
-            + 'kynttiläkruunu ja kuvan poikki kulkee useita mustia '
-            + 'ripustusvaijereita.',
+          selite: 'Yksi kupolia kannattavista järeistä pylväistä: kapiteeli '
+            + 'on veistetty kullatuiksi lehtikoristeiksi. Ympärillä '
+            + 'avautuvat sivukupolit ja kapeat kaari-ikkunat, ja salissa '
+            + 'riippuu iso messinkinen kynttiläkruunu.',
           lahde: 'Satirdan kahraman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10247,47 +10226,42 @@ export const NAHTAVYYSJUTUT = {
     'Salepçioğlun moskeija': {
       aika: '1905',
       teksti: 'Rukoussali on pohjaltaan neliö, ja sen päällä lepää yksi '
-        + 'kupoli. Siirtymä neliöstä ympyrään on tehty pendentiiveillä '
-        + 'eli kolmiomaisilla kaarevilla pinnoilla salin kulmissa. '
-        + 'Kupolin sisäpinta on veistoskoristeltu, ja värit ovat '
-        + 'punainen, vihreä ja ruskea. Pääkupolin lisäksi rakennuksessa '
-        + 'on kolme pienempää kupolia sisäänkäynnin puolella. Ulkoseinät '
-        + 'on verhottu vihreällä marmorilla ja kivellä, ja saliin tulee '
-        + 'valoa kahdesta ikkunarivistä, alemmasta ja ylemmästä.'
+          + 'kupoli. Siirtymä neliöstä ympyrään on tehty pendentiiveillä '
+          + 'eli kolmiomaisilla kaarevilla pinnoilla salin kulmissa. '
+          + 'Kupolin sisäpinta on veistoskoristeltu, ja värit ovat '
+          + 'punainen, vihreä ja ruskea. Pääkupolin lisäksi rakennuksessa '
+          + 'on kolme pienempää kupolia sisäänkäynnin puolella. Ulkoseinät '
+          + 'on verhottu vihreällä marmorilla ja kivellä, ja saliin tulee '
+          + 'valoa kahdesta ikkunarivistä, alemmasta ja ylemmästä. '
+          + 'Ikkunoiden edessä on valkoiset rautaparvekkeet.'
         + '\n\n'
         + 'Minareetti ei liity rakennukseen kiinni. Se seisoo '
-        + 'koillispuolella omalla kivijalustallaan, runko on pyöreä ja '
-        + 'parvekkeita on yksi. Muoto on poikkeuksellisen hoikka. '
-        + 'Minareetti on korjattu kahdesti, 1927 ja 1974.'
+          + 'koillispuolella omalla kivijalustallaan, runko on pyöreä ja '
+          + 'parvekkeita on yksi. Muoto on poikkeuksellisen hoikka. '
+          + 'Minareetti on korjattu kahdesti, 1927 ja 1974.'
         + '\n\n'
         + 'Moskeija valmistui vuonna 1905 keskelle Kemeraltın '
-        + 'basaarikorttelia, ja se on nimetty rakennuttajansa Salepçizade '
-        + 'Hoca Ahmed Efendin mukaan. Mihrab on pyöreä syvennys valkoista '
-        + 'ja harmaata marmoria, ja saarnatuoli on niin ikään marmoria, '
-        + 'yläosassaan geometrista kuviointia.',
+          + 'basaarikorttelia, ja se on nimetty rakennuttajansa Salepçizade '
+          + 'Hoca Ahmed Efendin mukaan. Mihrab on pyöreä syvennys valkoista '
+          + 'ja harmaata marmoria, ja saarnatuoli on niin ikään marmoria, '
+          + 'yläosassaan geometrista kuviointia.',
       kuvat: [
         {
           tiedosto: 'Salepçioğlu Mosque, October 2018.jpg',
-          selite: 'Moskeija kadulta alaviistosta: keskellä kohoaa harmaa '
-            + 'pääkupoli puolikuukoristeineen, sen sivuilla pienemmät '
-            + 'kupolit, seinät ovat tummanvihreää kiveä valkoisin '
-            + 'marmorikehyksin ja ikkunoiden edessä on valkoiset '
-            + 'rautaparvekkeet. Vasemmalla nousee hyvin hoikka '
-            + 'minareetti, jossa on yksi parveke ja joka seisoo erillään '
-            + 'rakennuksesta. Aidan edessä on valkoinen kyltti moskeijan '
-            + 'nimellä, kuvan reunaan osuvat katuvalon varsi ja '
-            + 'palmunlehtiä.',
+          selite: 'Salepçioğlun moskeija kadulta: keskellä kohoaa harmaa '
+            + 'pääkupoli puolikuukoristeineen, sivuilla pienemmät kupolit, '
+            + 'ja seinät ovat tummanvihreää kiveä valkoisin '
+            + 'marmorikehyksin. Erillään rakennuksesta nousee hyvin hoikka '
+            + 'minareetti, jossa on yksi parveke.',
           lahde: 'BSRF, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Salepçioğlu Camii Kubbesi.jpg',
-          selite: 'Kupoli alhaalta kuvattuna: vaaleansiniseltä pohjalta '
-            + 'säteilee kullanruskeita ripoja keskusmedaljonkiin asti, ja '
-            + 'väleihin on maalattu tähti- ja kasviaiheita. Kupolin '
-            + 'juurella kiertää rivi kaari-ikkunoita värillisine '
-            + 'laseineen, ja kulmien pendentiiveissä on mustat '
-            + 'kahdeksankulmaiset kalligrafialevyt. Kuvan halki kulkee '
-            + 'vaalea vaijeri, jossa kattokruunu riippuu.',
+          selite: 'Kupoli alhaalta: vaaleansiniseltä pohjalta säteilee '
+            + 'kullanruskeita ripoja keskusmedaljonkiin, ja väleissä on '
+            + 'tähti- ja kasviaiheita. Kupolin juurella kiertää '
+            + 'kaari-ikkunoita värillisin lasein ja pendentiiveissä on '
+            + 'mustat kahdeksankulmaiset kalligrafialevyt.',
           lahde: 'Canercangul, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10331,23 +10305,18 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Castillo de Ankara, Ankara, Turquía, 2024-10-02, DD 11-13 HDR.jpg',
           selite: 'Linnavuoren laki iltavalossa: sisemmän kehän hammastettu '
-            + 'muuri seisoo kalliojyrkänteen päällä, ja muurin takaa '
-            + 'nousee korkea salko, jossa liehuu Turkin lippu. Parapetin '
-            + 'tuntumassa on tv-antenneja ja muuria vasten rakennettu '
-            + 'peltikattoinen talo. Rinteessä on tiheässä '
-            + 'punatiilikattoisia vanhoja taloja, ja horisontissa erottuu '
-            + 'nykyinen keskusta tornitaloineen.',
+            + 'muuri seisoo kalliojyrkänteen päällä, ja sen takaa nousee '
+            + 'salko Turkin lippuineen. Rinteessä on tiheässä vanhoja '
+            + 'punatiilikattoisia taloja, ja kauempana kohoaa nykyinen '
+            + 'keskusta tornitaloineen.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ankara Ickale street view in 2011 01.jpg',
-          selite: 'Kuja muurien sisäpuolella: molemmin puolin valkoiseksi '
-            + 'rapattuja taloja, joissa on ristikkosäleiköllä suojatut '
-            + 'ikkunat, ruskea puuovi ja kuvioitu peltiovi. Kauempana '
-            + 'yläkerrat työntyvät kadun päälle ja katot ovat punaista '
-            + 'tiiltä. Sähkölangat kulkevat puupylväiden varassa, '
-            + 'seinässä on sähkömittarin kotelo, ja poika ajaa '
-            + 'pikkupyörällä kameraa kohti.',
+          selite: 'Kuja muurien sisäpuolella: kapean kadun molemmin puolin '
+            + 'on valkoiseksi rapattuja taloja, joiden ikkunoita suojaavat '
+            + 'ristikkosäleiköt. Kauempana yläkerrat työntyvät kadun päälle '
+            + 'ja katot ovat punaista tiiltä.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10384,12 +10353,10 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Ankara Temple of Augustus and Rome exterior from S in 2019 02.jpg',
           selite: 'Temppelin cellan seinä etelästä: vaaleaa kalkkikiveä '
-            + 'ladottuna kerroksiin, seinässä pieniä ristikkoikkunoita ja '
-            + 'lohkeamia. Vasemmalla nousee Hacı Bayramin moskeijan '
-            + 'tiiliminareetti valkoisine vöineen ja sen takana moskeijan '
-            + 'punatiilinen katto, oikeassa reunassa seinää vasten '
-            + 'teräksinen tukiteline. Nurmikolla edessä on pylväänpaloja '
-            + 'ja kivilohkareita sekä matala kiviaita.',
+            + 'kerroksittain ladottuna, pinnassa pieniä ristikkoikkunoita '
+            + 'ja lohkeamia. Vieressä kohoaa Hacı Bayramin moskeijan '
+            + 'tiiliminareetti ja punatiilinen katto, nurmella edessä '
+            + 'pylväänpaloja ja kivilohkareita.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -10444,22 +10411,18 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'The Roman Baths of Ancyra, constructed in the third century during the reign of Roman Emperor Caracalla by a wealthy citizen of Ancyra called Tiberius Julius Justus Junianus, Ankara, Turkey (26211723132).jpg',
           selite: 'Hypokaustin pilarit paikoillaan: pyöreistä ja '
-            + 'neliskulmaisista tiilistä ladotut pinot seisovat '
-            + 'tasaisissa riveissä nurmettuneella pohjalla, ympärillä '
-            + 'kiveä ja tiiltä vuorottelevat perustusmuurit ja oikealla '
-            + 'rivi tiilikaaria. Takana on metalliaita, paljaita puita ja '
-            + 'Ankaran rinteille nouseva nykykaupunki keltaisine '
-            + 'nostokurkineen.',
+            + 'neliskulmaisista tiilistä ladotut pinot seisovat tasaisissa '
+            + 'riveissä nurmettuneella pohjalla, ympärillä kiveä ja tiiltä '
+            + 'vuorottelevat perustusmuurit ja rivi tiilikaaria. Takana '
+            + 'nykykaupunki nousee rinteille.',
           lahde: 'Carole Raddato from Frankfurt, Germany, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Ankara Thermen13.jpg',
           selite: 'Ulkoilmamuseon kivilöytöjä nurmella: korinttilaisia '
-            + 'pylväänkapiteeleja akantinlehtineen, hakattu kivitaulu, '
-            + 'jonka syvennyksessä seisoo ihmishahmo, ja etualalla maahan '
-            + 'laskettuja harmaita pylväänvarsia. Kuvaa reunustavat '
-            + 'männyn ja oliivipuun oksat, ja taustalla näkyy '
-            + 'lasiseinäinen toimistotalo.',
+            + 'pylväänkapiteeleja akantinlehtineen ja hakattu kivitaulu, '
+            + 'jonka syvennyksessä seisoo ihmishahmo. Maassa on lisäksi '
+            + 'harmaita pylväänvarsia.',
           lahde: 'Ingeborg Simon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10497,28 +10460,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Julian Column, Ankara 2024.jpg',
-          selite: 'Pylväs kokonaisuudessaan aamuvalossa: profiloitu vaalea '
-            + 'kivijalusta seisoo karkeasta punaruskeasta kivestä '
-            + 'muuratun perustan päällä nurmisaarekkeella, ja jalustan '
-            + 'eteen on asetettu kaksi mustaa valonheitintä. Varsi '
-            + 'kapenee ylöspäin, ja sen pinta on uurrettu tiheiksi '
-            + 'vaakarenkaiksi. Kapiteelissa erottuvat lehtikuvio ja '
-            + 'soikea medaljonki, ja sen yläreunasta on lohjennut pala. '
-            + 'Oikealla on leikattu pensasaita, takana matala kiviaita ja '
-            + 'musta rautakaide, edessä asfalttitie ja vasemmalla '
-            + 'kaksikerroksinen rakennus tiilikattoineen ja '
-            + 'ristikkoikkunoineen.',
+          selite: 'Julianuksen pylväs aamuvalossa: vaalea kivijalusta '
+            + 'seisoo karkeasta punaruskeasta kivestä muuratulla perustalla '
+            + 'nurmisaarekkeella. Ylöspäin kapeneva varsi on uurrettu '
+            + 'tiheiksi vaakarenkaiksi, ja lehtikoristeisessa kapiteelissa '
+            + 'erottuu soikea medaljonki.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Ankara - Julianus Sütunu 0366.jpg',
-          selite: 'Pylvään latva talvella: kapiteelin päällä on iso risuista '
-            + 'kyhätty pesä, ja irtorisuja roikkuu kapiteelin reunojen '
-            + 'yli. Kapiteeliin on veistetty akantinlehtiä muistuttavat '
-            + 'lehdet ja pyöreä medaljonki, ja sen yläkulmista on '
-            + 'lohjennut kiveä. Kapiteelin alapuolella varsi on uurrettu '
-            + 'kymmeniksi kapeiksi vaakarenkaiksi. Ympärillä on '
-            + 'lehdettömiä oksia ja taustalla harmaa pilvitaivas.',
+          selite: 'Pylvään latva talvella: kapiteelin päälle on kertynyt '
+            + 'iso risuista kyhätty pesä. Kapiteeliin on veistetty '
+            + 'akantinlehtiä muistuttavat lehdet ja pyöreä medaljonki, ja '
+            + 'sen alapuolella varsi on uurrettu kymmeniksi kapeiksi '
+            + 'vaakarenkaiksi.',
           lahde: 'Phyrexian, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10557,36 +10512,26 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Museum of Anatolian Civilizations 2024.jpg',
           selite: 'Museon sisäänkäynti pihalta: luonnonkiviseinässä on '
             + 'valkoinen marmorikaari, johon on hakattu ANADOLU '
-            + 'MEDENİYETLERİ MÜZESİ, ja oven kummallakin puolen pyöreä '
-            + 'museomedaljonki sekä keltainen opastekilpi. Takana kohoaa '
-            + 'bedestenin kaksi lyijykupolia lyhtyineen, vasemmalla näkyy '
-            + 'hanin kaarikäytävä, ja pihan reunoilla seisoo rivi '
-            + 'kivileijonia ja torsoja. Portaiden vieressä on luiska ja '
-            + 'piha on ladottu harmaalla betonikivellä.',
+            + 'MEDENİYETLERİ MÜZESİ. Takana kohoavat bedestenin '
+            + 'lyijykupolit lyhtyineen ja vieressä avautuu hanin '
+            + 'kaarikäytävä. Pihalla seisoo kivileijonia ja torsoja.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Museo de las Civilizaciones Anatólicas. Interior.jpg',
-          selite: 'Keskihalli tiiliholvien alla: vasemmalla seinustalla '
-            + 'jatkuu rivi kivireliefejä, joissa kulkee pitkäkaapuisia '
-            + 'hahmoja sauva ja jousi kädessä, ja rivin jatkona on '
-            + 'hieroglyfein kirjoitettu kivipaasi. Oikealla kaksi tummaa '
-            + 'basalttileijonaa on nostettu korokkeille ja '
-            + 'lasivitriinissä on marmoripää. Holvissa on pieniä '
-            + 'kaari-ikkunoita, katosta riippuu valkoinen kangasbanneri, '
-            + 'seinällä on selitystauluja piirroksineen ja reliefien '
-            + 'edessä kulkee köysiaita messinkitolpissa.',
+          selite: 'Kymmenkupolinen keskihalli tiiliholvien alla: '
+            + 'seinustalla jatkuu rivi kivireliefejä, joissa kulkee '
+            + 'pitkäkaapuisia hahmoja sauva ja jousi kädessä, ja rivin '
+            + 'jatkona on hieroglyfein kirjoitettu kivipaasi. Kaksi tummaa '
+            + 'basalttileijonaa on nostettu korokkeille.',
           lahde: 'José Luis Filpo Cabana, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Museum Ankara 04.jpg',
-          selite: 'Esihistorian sivusali: oikealla seinällä on valaistuissa '
-            + 'syvennyksissä Çatalhöyükin seinämaalausten rappauspaloja, '
-            + 'joihin on maalattu punaruskeita eläin- ja ihmishahmoja, ja '
-            + 'niiden alla on selitekilpiä. Salin keskellä on '
-            + 'lasivitriinejä pienlöytöineen, katto on tummaa puurimaa ja '
-            + 'kiskovalot on suunnattu vitriineihin. Vasemmalla yksi '
-            + 'kävijä kumartuu vitriinin ääreen, musta reppu olalla.',
+          selite: 'Esihistorian sivusali: valaistuissa syvennyksissä on '
+            + 'Çatalhöyükin seinämaalausten rappauspaloja, joihin on '
+            + 'maalattu punaruskeita eläin- ja ihmishahmoja. Salin keskellä '
+            + 'on lasivitriinejä pienlöytöineen.',
           lahde: 'Ingeborg Simon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10595,60 +10540,51 @@ export const NAHTAVYYSJUTUT = {
     'Linnanportin kellotorni': {
       aika: '1884',
       teksti: 'Linnaan mennään yhä samasta paikasta kuin ennen: ulomman '
-        + 'muurin pääportista. Portille noustaan jyrkkää katua, sillä '
-        + 'kukkula kohoaa 150 metriä Ankarajoen rannan yläpuolelle. '
-        + 'Portin vieressä kohoaa pyöreä muuritorni, ja sen päälle on '
-        + 'rakennettu kellotorni — torni tornin päälle, vanhan '
-        + 'varustuksen jatkoksi.'
+          + 'muurin pääportista. Portille noustaan jyrkkää katua, sillä '
+          + 'kukkula kohoaa 150 metriä Ankarajoen rannan yläpuolelle. '
+          + 'Portin vieressä kohoaa pyöreä muuritorni, ja sen päälle on '
+          + 'rakennettu kellotorni — torni tornin päälle, vanhan '
+          + 'varustuksen jatkoksi. Itse porttiaukon kaari on ladottu '
+          + 'vuorotellen vaaleista ja tummista kivistä.'
         + '\n\n'
         + 'Kellotorni on vuodelta 1884. Turkin vanhin pystyssä oleva '
-        + 'kellotorni on Safranbolussa vuodelta 1797, ja Keski-Anatolia '
-        + 'on maan kellotornirikkain alue. Osmanien kellotornit tehtiin '
-        + 'kolmiosaisiksi: jalusta, runko ja ylin kamari. Jalustassa on '
-        + 'huone ja portaat, rungossa kierre- tai siksakportaikko, '
-        + 'ylhäällä koneisto. Kaksi teräsvaijeria kantaa painoja, joista '
-        + 'toinen pyörittää viisareita ja toinen heiluttaa soittokellon '
-        + 'vasaraa. Kamarin seiniin jätettiin aukkoja, jotta ääni '
-        + 'kantaisi kauas.'
+          + 'kellotorni on Safranbolussa vuodelta 1797, ja Keski-Anatolia '
+          + 'on maan kellotornirikkain alue. Osmanien kellotornit tehtiin '
+          + 'kolmiosaisiksi: jalusta, runko ja ylin kamari. Jalustassa on '
+          + 'huone ja portaat, rungossa kierre- tai siksakportaikko, '
+          + 'ylhäällä koneisto. Kaksi teräsvaijeria kantaa painoja, joista '
+          + 'toinen pyörittää viisareita ja toinen heiluttaa soittokellon '
+          + 'vasaraa. Kamarin seiniin jätettiin aukkoja, jotta ääni '
+          + 'kantaisi kauas.'
         + '\n\n'
-        + 'Kellotorni tuli ottomaanien kaupunkeihin myöhään. Ajatus '
-        + 'syntyi Euroopassa 1200-luvulla ja levisi ottomaanien alueelle '
-        + '1500-luvun lopulla, mutta julkisia torneja rakennettiin vasta '
-        + 'paljon myöhemmin. Syyksi on esitetty huolta siitä, että '
-        + 'muezzinit ja ajanlaskijat menettäisivät merkityksensä — ja '
-        + 'sitä, että koneisto saattoi näyttää väärin, kun ajanlaskija '
-        + 'osasi laskea rukoushetken tarkasti. Leviämisen kynnyksenä '
-        + 'pidetään Abdülhamid II:n valtaannousun 25-vuotisjuhlan '
-        + 'määräyksiä; Ankaran torni on niitä vanhempi. Linnan päälle '
-        + 'nostettuja kellotorneja on Turkissa muitakin: Niğde, Sinop ja '
-        + 'Zile.',
+        + 'Kellotorni tuli ottomaanien kaupunkeihin myöhään. Ajatus syntyi '
+          + 'Euroopassa 1200-luvulla ja levisi ottomaanien alueelle '
+          + '1500-luvun lopulla, mutta julkisia torneja rakennettiin vasta '
+          + 'paljon myöhemmin. Syyksi on esitetty huolta siitä, että '
+          + 'muezzinit ja ajanlaskijat menettäisivät merkityksensä — ja '
+          + 'sitä, että koneisto saattoi näyttää väärin, kun ajanlaskija '
+          + 'osasi laskea rukoushetken tarkasti. Leviämisen kynnyksenä '
+          + 'pidetään Abdülhamid II:n valtaannousun 25-vuotisjuhlan '
+          + 'määräyksiä; Ankaran torni on niitä vanhempi. Linnan päälle '
+          + 'nostettuja kellotorneja on Turkissa muitakin: Niğde, Sinop ja '
+          + 'Zile.',
       kuvat: [
         {
           tiedosto: 'Ankara Aug 2023 13 39 04 215000.jpeg',
-          selite: 'Kellotorni ja linnan pääportti samassa kuvassa. Vasemmalla '
-            + 'vaaleanpunaiseksi rapattu torni nousee pyöreän tiili- ja '
-            + 'kivimuuritornin päältä: ylinnä on leveäräystäinen '
-            + 'kahdeksankulmainen kamari kaariaukkoineen, sen alla '
-            + 'valkoinen kellotaulu roomalaisin numeroin ja pieni '
-            + 'kaari-ikkuna. Oikealla muurissa on kaariportti, jonka '
-            + 'kaari on ladottu vuorotellen vaaleista ja tummista '
-            + 'kivistä, ja portin läpi näkyy kauppakatu markiiseineen. '
-            + 'Portin edessä on mustia katulyhtyjä vihrein banderollein, '
-            + 'punainen paloposti, betonipollareita ja opastetaulu, jossa '
-            + 'lukee Ankara Kalesi. Vasemmalla muurin juurella on puinen '
-            + 'luukkukoju ja sen päällä kyltti PARK ETMEK YASAKTIR, ja '
-            + 'oikealla muurin takaa pilkistää talo, jonka katolla on '
-            + 'punainen PANORAMA-kyltti.',
+          selite: 'Vaaleanpunaiseksi rapattu kellotorni nousee linnan '
+            + 'pääportin vierestä pyöreän tiili- ja kivimuuritornin päältä. '
+            + 'Ylinnä on kahdeksankulmainen kamari kaariaukkoineen, '
+            + 'alempana valkoinen kellotaulu roomalaisin numeroin. Portin '
+            + 'läpi näkyy kauppakatu.',
           lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Old Turkish Houses Ankara.jpg',
-          selite: 'Ottomaanitalo linnan kaupunginosassa: kivestä ladotun '
+          selite: 'Ottomaanitalo linnan kaupunginosassa: kivisen '
             + 'pohjakerroksen päällä yläkerta työntyy ulos puupalkin '
-            + 'varassa, ja sen puurunko on täytetty kalanruotokuvioon '
+            + 'varassa, ja puurunko on täytetty kalanruotokuvioon '
             + 'ladotuilla tiilillä. Ikkunat ovat puukehyksisiä ja '
-            + 'pieniruutuisia, seinällä on pieni lyhty, ja julkisivun yli '
-            + 'kiipeää villiviini punaisine lehtineen.',
+            + 'pieniruutuisia, ja julkisivun yli kiipeää villiviini.',
           lahde: 'Pivox, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10695,26 +10631,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'John Henry Haynes. Gate of castle of Aleppo (id.13993458).jpg',
-          selite: 'Linnoituksen sisäänkäynti vuonna 1887. Vasemmalla seisoo '
-            + 'matala hammaslaitainen ulkotorni, siitä lähtee '
-            + 'kaarijalkojen varaan muurattu silta vallihaudan yli, ja '
-            + 'sillan päässä kohoaa korkea porttirakennus, jonka '
-            + 'julkisivulla on rivi ulkonevia kivikoteloita ja keskellä '
-            + 'teräväkaarinen syvennys. Oikealla rinnettä peittää '
-            + 'suurista lohkareista ladottu kivetys, ja etualalla on '
-            + 'tyhjä hiekkainen aukio.',
+          selite: 'Linnoituksen sisäänkäynti vuonna 1887: hammaslaitaisesta '
+            + 'ulkotornista lähtee kaarien varaan muurattu kivisilta '
+            + 'vallihaudan yli korkeaan porttirakennukseen, jonka '
+            + 'julkisivulla on rivi ulkonevia kivikoteloita. Rinnettä '
+            + 'peittää lohkareista ladottu kivetys.',
           lahde: 'John Henry Haynes, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'In de citadel van Aleppo Zicht op de hoofdpoort vanuit een binnenplaats, Bestanddeelnr 255-5951.jpg',
-          selite: 'Näkymä ulomman portin holvikaaren alta porttirakennukseen '
-            + 'vuonna 1950. Kiviportaat nousevat suoraan ovelle, '
-            + 'julkisivulla on rivi kannattimien varaan muurattuja '
-            + 'kivikoteloita ja niiden välissä kapeita pystyaukkoja. '
-            + 'Ylempänä on ristikkoikkuna koristeellisessa '
-            + 'kehyspaneelissa ja pieniä ikkunoita, ja oikeassa '
-            + 'yläkulmassa näkyy muurin harja, ohut vaijeri ja kaistale '
-            + 'taivasta.',
+          selite: 'Näkymä ulomman portin holvikaaren alta '
+            + 'porttirakennukseen vuonna 1950. Kiviportaat nousevat suoraan '
+            + 'ovelle, ja julkisivulla vuorottelevat kannattimien varaan '
+            + 'muuratut kivikotelot ja kapeat pystyaukot. Ylempänä on '
+            + 'ristikkoikkuna koristekehyksessä.',
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
@@ -10750,26 +10680,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Aleppo Bab Antakya 9065.jpg',
-          selite: 'Porttikokonaisuus ulkoa: kaksi järeää kivimassaa nousee '
-            + 'rinnakkain, ja oikealle jatkuu korkea muuri, jonka päällä '
-            + 'ja takana on asuintaloja. Muurin juurella on pieni '
-            + 'kärkikaarinen oviaukko ja sen vieressä opastetaulu '
-            + 'nuolineen, ja julkisivua pitkin laskeutuu metallinen '
-            + 'syöksytorvi. Kadun laidassa on punainen kielletty '
-            + 'ajosuunta -merkki ja sähköpylväitä, ja aukiolla seisoo '
-            + 'ihmisiä, käsikärry ja pysäköityjä autoja, joukossa '
-            + 'keltainen taksi.',
+          selite: 'Antiokian portti ulkoa: kaksi järeää kivimassaa nousee '
+            + 'rinnakkain, ja niiden jatkeena kulkee vanhankaupungin korkea '
+            + 'muuri, jonka päällä ja takana on asuintaloja. Muurin '
+            + 'juurella on pieni kärkikaarinen oviaukko, ja portin edessä '
+            + 'avautuu aukio.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Aleppo Bab Antakya 9106.jpg',
           selite: 'Portin aukko lähempää: syvän kärkikaaren sisällä avautuu '
             + 'toinen, matalampi kaari, ja yläpuolella kiertää kiveen '
-            + 'hakattu arabiankielinen kirjoitusnauha. Kiveyksen poikki '
-            + 'kulkee ihmisiä, vasemmalla kaksi kantaa valkoisia myttyjä '
-            + 'olallaan, ja etualalla mies istuu maassa myymässä muovin '
-            + 'päälle levitettyjä punaisia paprikoita ja vihreitä varsia. '
-            + 'Seinään on kiinnitetty katuvalo ja sähköjohtoja.',
+            + 'hakattu arabiankielinen kirjoitusnauha. Kaaren alla käydään '
+            + 'kauppaa: maahan on levitetty myytäviksi punaisia paprikoita '
+            + 'ja vihreitä varsia.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10807,15 +10731,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bab Qinnasrin2010.jpg',
-          selite: 'Portin kivinen julkisivu kadun tasolta: korkea suippokaari '
-            + 'kehystää holvattua porttikäytävää, ja seinässä '
-            + 'vuorottelevat vaaleat ja lähes mustat kivikerrokset. '
-            + 'Oikealla on arabiankielinen kaiverruspaneeli ja pyöreä '
-            + 'medaljonki, ylhäällä ulkoneva kivikannatin. Kaaren alla '
-            + 'seisoo kaksi ihmistä ja seinillä on kaksi pientä '
-            + 'opastetaulua, käytävän perällä näkyy vihreä '
-            + 'arabiankielinen kyltti ja ristikkoikkunoita, ja oikeassa '
-            + 'laidassa on nykyaikaisia taloja, palmu ja pysäköity auto.',
+          selite: 'Qinnasrinin portin kivinen julkisivu kadun tasolta: '
+            + 'korkea suippokaari kehystää holvattua porttikäytävää, ja '
+            + 'seinässä vuorottelevat vaaleat ja lähes mustat '
+            + 'kivikerrokset. Julkisivussa on arabiankielinen '
+            + 'kaiverruspaneeli ja pyöreä medaljonki.',
           lahde: 'Nicholas Johnson, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -10848,29 +10768,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Aleppo Khan al-Sabun 9310.jpg',
-          selite: 'Julkisivu alaviistosta: keskellä rautaristikkoinen ikkuna, '
-            + 'jonka ympärillä mustaa, vaaleaa ja kellertävää kiveä on '
-            + 'ladottu lomittain, sivuilla kierrepintaiset pylväät ja '
-            + 'yllä rivi veistettyjä kennoja sekä kuvioitu medaljonki. '
-            + 'Molemmin puolin kulkee leveä punottu koristevyö ja kaksi '
-            + 'pienempää ristikkoikkunaa, alhaalla kaartuu portin holvi '
-            + 'kasviaiheineen ja sen alla erottuu varjossa suuri puuovi. '
-            + 'Kuvan poikki kulkee sähköjohtoja, katonreunalta työntyy '
-            + 'teräspalkki ja oikeassa alakulmassa roikkuu tummansininen '
-            + 'matto kultaisella kuviolla; katolla kasvaa pieniä '
-            + 'pensaita.',
+          selite: 'Khanin tunnetuin yksityiskohta: rautaristikkoinen '
+            + 'ikkuna, jonka ympärillä mustaa, vaaleaa ja kellertävää kiveä '
+            + 'on ladottu lomittain, sivuilla kierrepintaiset pylväät ja '
+            + 'yllä rivi veistettyjä kennoja. Alempana kaartuu portin holvi '
+            + 'kasviaiheineen.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Aleppo Khan al-Sabun 9331.jpg',
-          selite: 'Yläkerran kaarikäytävä: teräväkärkiset kivikaaret lepäävät '
-            + 'massiivisten pilareiden päällä, katossa on paljaat '
-            + 'puupalkit ja lattiassa suuret kivilaatat. Oikealla '
-            + 'seinustalla on pinoissa valkoisia ja raidallisia säkkejä, '
-            + 'lattialla pahvilaatikko, ja yhdestä kaaresta roikkuu pieni '
-            + 'musta arabiankielinen kyltti. Kaarien läpi näkyy pihalle: '
-            + 'pieni lehtipuu, alemman kerroksen kaaririvi, pylväskaide '
-            + 'ja pihalla seisova mies.',
+          selite: 'Khanin yläkerran kaarikäytävä: teräväkärkiset kivikaaret '
+            + 'lepäävät massiivisten pilareiden päällä, katossa on paljaat '
+            + 'puupalkit ja lattiassa suuret kivilaatat. Käytävällä on '
+            + 'pinoissa valkoisia ja raidallisia säkkejä, ja kaarien läpi '
+            + 'näkyy pihalle.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -10906,13 +10817,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Bimaristan Argun 03.jpg',
-          selite: 'Yksi sisäpihoista: keskellä on kivireunainen suorakaiteen '
-            + 'muotoinen vesiallas ja sen ympärillä istutettuja pensaita. '
-            + 'Perällä avautuu holvattu sali, jonka kaari on ladottu '
-            + 'vuorotellen vaaleasta ja mustasta kivestä, ja sen takaa '
-            + 'nousee matala kupoli. Sivuilla kiertää kaarikäytävä '
-            + 'pylväineen; vasemmalla varjossa istuu kaksi miestä, ja '
-            + 'seinillä on opastetauluja.',
+          selite: 'Yksi bimaristanin sisäpihoista: keskellä on '
+            + 'kivireunainen suorakaiteen muotoinen vesiallas ja ympärillä '
+            + 'istutettuja pensaita. Perällä avautuu holvattu sali, jonka '
+            + 'kaari on ladottu vuorotellen vaaleasta ja mustasta kivestä '
+            + 'ja jonka takaa nousee kupoli.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
@@ -10920,9 +10829,8 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Pienemmän pihan keskellä on kahdeksankulmainen kivinen '
             + 'allas, jonka keskeltä nousee metalliputken päässä '
             + 'maljamainen suihkulähde. Pihaa kiertää rivi kapeita '
-            + 'oviaukkoja, jotka johtavat pieniin kammioihin, ja aukkojen '
-            + 'yläpuolella on puolikupolimaisia syvennyksiä. Vasemmalla '
-            + 'seinässä on vaalea opastelaatta.',
+            + 'oviaukkoja, jotka johtavat pieniin kammioihin, ja niiden '
+            + 'yläpuolella on puolikupolimaisia syvennyksiä.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -10959,24 +10867,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Aleppo Beit Ajiqbash 9348.jpg',
-          selite: 'Beit Ajiqbashin sisäpiha: kaksi kerrosta ikkunoita, ja '
-            + 'niiden ylle on veistetty kiveen viuhkamaisia '
-            + 'koristekenttiä, pitkiä kasviaiheisia nauhoja ja pyöreitä '
-            + 'ruusukkeita. Vasemmalla on mustavalkoraidallinen kaariovi, '
-            + 'pihalla kasvaa puita ja ruukkukasveja, oikealla näkyy '
-            + 'kivinen allas, ja kattojen yllä kulkee antenni ja '
-            + 'sähkölanka.',
+          selite: 'Beit Ajiqbashin sisäpiha: kahden ikkunakerroksen '
+            + 'aukkojen ylle on veistetty kiveen viuhkamaisia '
+            + 'koristekenttiä, kasviaiheisia nauhoja ja ruusukkeita. '
+            + 'Pihalla kasvaa puita ja ruukkukasveja, ja reunalla on '
+            + 'kivinen allas ja mustavalkoraidallinen kaariovi.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Aleppo Beit Ajiqbash 9363.jpg',
           selite: 'Pihan iwan eli holvisali, jonka koko etusivu on auki '
-            + 'pihalle. Kaaren kivet ovat vuoroin vaaleita ja tummia, '
-            + 'reunalla on puinen räystäs ja seinillä riippuu lyhtyjä. '
-            + 'Salin edessä on mustavalkoinen ruutukuvioinen '
-            + 'marmorilattia ja pihalla pyöreä suihkulähde '
-            + 'vesisuihkuineen, ympärillä ruukkukasveja. Seinien pienet '
-            + 'keltaiset kyltit ovat museon opasteita.',
+            + 'pihalle ja joka on talon kesähuone. Kaaren kivet ovat '
+            + 'vuoroin vaaleita ja tummia, reunalla on puinen räystäs ja '
+            + 'seinillä riippuu lyhtyjä. Salin edessä on ruutukuvioinen '
+            + 'marmorilattia ja pyöreä suihkulähde.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11023,13 +10927,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus Citadel western wall right 7926.jpg',
-          selite: 'Linnoituksen länsimuuri nousee suoraan kadun tasosta: '
-            + 'oikealla kalkkikivinen muuri ampuma-aukkoineen, sen '
-            + 'juurella pensasaita ja rautakaide, ja vasemmalla '
-            + 'mustavalkoraidalliseksi kivetty kävelykatu, jolla kulkee '
-            + 'ihmisiä. Kadun päässä näkyy Saladinin tumma '
-            + 'ratsastajapatsas, vasemmalla kadunvarren kahvila ja '
-            + 'liikennemerkkejä.',
+          selite: 'Linnoitus seisoo tasamaalla, samassa tasossa kuin muu '
+            + 'kaupunki, ja sen kalkkikivinen länsimuuri ampuma-aukkoineen '
+            + 'nousee suoraan kadun tasosta. Muurin vierellä kulkee '
+            + 'mustavalkoraidalliseksi kivetty kävelykatu, jonka päässä '
+            + 'seisoo Saladinin ratsastajapatsas.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
@@ -11075,38 +10977,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus east and south side of courtyard of Umayyad Mosque 8078.jpg',
-          selite: 'Moskeijan piha idän ja etelän suuntaan: vasemmalla '
-            + 'kaksikerroksinen kaarikäytävä ja sen edessä matala '
-            + 'kupolipaviljonki pylväiden päällä, oikealla rukoussalin '
-            + 'seinä ristikkoikkunoineen ja punaruskeine oviaukkoineen. '
-            + 'Yläoikealla kohoaa kapea minareetti parvekkeineen. '
-            + 'Keskellä seisoo kivipylväs, jonka päässä on kullattu '
-            + 'ristikkopallo. Kiveyksellä kävelee ihmisiä pienissä '
-            + 'ryhmissä, ja oikeassa alanurkassa pikkutyttö kurottautuu '
-            + 'maahan.',
+          selite: 'Umaijadien moskeijan kivetyn pihan itä- ja eteläsivu: '
+            + 'kaksikerroksinen kaarikäytävä ja pylväiden varassa lepäävä '
+            + 'matala kupolipaviljonki. Rukoussalin seinä avautuu pihalle '
+            + 'ristikkoikkunoin ja punaruskein oviaukoin, ja pihan yllä '
+            + 'kohoaa kapea minareetti.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Damascus Barada Panel of Umayyad Mosque 8130.jpg',
-          selite: 'Pihan mosaiikkia lähietäisyydeltä: kultainen pohja, jota '
-            + 'vasten kasvaa isolehtisiä puita, ja niiden alla '
-            + 'pylväikköjä, kaarigallerioita ja pieniä kaksikerroksisia '
-            + 'taloja. Alareunassa virtaa vihertävä joki, ja kenttää '
-            + 'reunustavat ylhäältä ja alhaalta kukkakuvioiset '
-            + 'mosaiikkinauhat. Yhtään ihmistä tai eläintä ei ole '
-            + 'kuvattu.',
+          selite: 'Pihan kultapohjaista mosaiikkia lähietäisyydeltä: '
+            + 'isolehtisiä puita, pylväiköitä, kaarigallerioita ja pieniä '
+            + 'kaksikerroksisia taloja vihertävän joen varrella. Kenttää '
+            + 'reunustavat kukkakuvioiset mosaiikkinauhat, eikä yhtään '
+            + 'ihmistä tai eläintä ole kuvattu.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The Great Umayyed Mosque of Damascus, Syria, and Khazne (Treasury).jpg',
-          selite: 'Aarrekammion kahdeksankulmainen runko alaviistosta: '
-            + 'kultapohjaista mosaiikkia, jossa kiertyy vihreitä '
-            + 'lehtiköynnöksiä ja maljakkoaiheita, ja vasemmassa reunassa '
-            + 'pala talo- ja palmumaisemaa. Rakennus lepää roomalaisten '
-            + 'pylväiden korinttilaisten kapiteelien päällä. Taustalla '
-            + 'tummansinistä taivasta vasten nousee vaalea minareetti '
-            + 'kaiteellisine parvekkeineen ja sipulinmuotoisine '
-            + 'huippuineen.',
+          selite: 'Aarrekammion kahdeksankulmainen runko lepää roomalaisten '
+            + 'pylväiden korinttilaisten kapiteelien päällä. Sen pintaa '
+            + 'peittää kultapohjainen mosaiikki, jossa kiertyy vihreitä '
+            + 'lehtiköynnöksiä ja maljakkoaiheita ja jossa on myös pala '
+            + 'talo- ja palmumaisemaa.',
           lahde: 'James Gordon from Los Angeles, California, USA, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -11139,26 +11032,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus Propylaeum at west of Umayyad Mosque 1420.jpg',
-          selite: 'Kujan itäpää: kauppakatu päättyy roomalaiseen '
+          selite: 'Hamidiyyan suukin itäpää päättyy roomalaiseen '
             + 'porttikaareen, jonka läpi näkyy Umaijadien moskeijan '
-            + 'sisäänkäynti värillisine viuhkaikkunoineen. Oikealla '
-            + 'nousevat korinttilaiskapiteelein kruunatut kivipilarit, '
-            + 'kaarella ja ilmassa on kymmeniä kyyhkyjä, ja vasemmalla '
-            + 'varjostavat valkoiset kangaskatokset ja myyntikojut '
-            + 'hopeanauhoineen. Väkijoukko kulkee kujaa pitkin kohti '
-            + 'aukiota.',
+            + 'sisäänkäynti värillisine viuhkaikkunoineen. Kaarta '
+            + 'reunustavat korinttilaiskapiteelein kruunatut kivipilarit, '
+            + 'ja väkijoukko virtaa kohti aukiota.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ingang van suq Hamidieh, Bestanddeelnr 255-5877.jpg',
-          selite: 'Suukin länsipää vuonna 1950 ylhäältä kuvattuna: holvin '
+          selite: 'Suukin länsipää vuonna 1950: metalliholvin '
             + 'puoliympyräinen pääty kaareutuu sisäänkäynnin yllä, ja '
             + 'siihen on ripustettu suuria käsin maalattuja '
-            + 'elokuvajulisteita arabiankielisin tekstein. Portista '
-            + 'virtaa sisään ja ulos tiivis väkijoukko, vasemmalla on '
-            + 'raidalliset markiisit ja kojuja, oikealla puinen '
-            + 'sähköpylväs, kauppojen kylttejä ja seinää vasten nojaava '
-            + 'polkupyörä.',
+            + 'elokuvajulisteita arabiankielisin tekstein. Portista virtaa '
+            + 'sisään ja ulos tiivis väkijoukko.',
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
@@ -11195,26 +11082,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Khan As\'ad Pasha Panorama.jpg',
-          selite: 'Katettu piha holvikäytävän alta: etualalla massiivinen '
-            + 'mustavalkoraidallinen nelikulmapilari, sen molemmin puolin '
-            + 'kaksi suurta kupolia ikkunarenkaineen ja maalattuine '
-            + 'medaljonkeineen, ja keskellä kirkkaanvalkoinen soikea '
-            + 'aukko taivaalle. Ympärillä kiertää kaksi kerrosta '
-            + 'kaariaukkoja ja puisia ristikkoparvekkeita, keskellä on '
-            + 'kivinen suihkuallas vesisuihkuineen. Vasemmalla on matala '
-            + 'musta esiintymislava, pihalla kolmijalkoja ja '
-            + 'valonheittimiä, ja oikealla sekä altaan luona seisoo '
-            + 'muutamia ihmisiä.',
+          selite: 'Khanin katettu piha holvikäytävän alta: '
+            + 'mustavalkoraidallinen nelikulmapilari, kupolit '
+            + 'ikkunarenkaineen ja maalattuine medaljonkeineen sekä niiden '
+            + 'välissä soikea aukko taivaalle. Pihaa kiertävät kaariaukot '
+            + 'ja puiset ristikkoparvekkeet, keskellä suihkuallas.',
           lahde: 'Bassel Khabbaz, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'A Dome in Khan As\'ad Pasha- قبة في خان أسعد باشا.jpg',
-          selite: 'Yksi kupoleista suoraan alhaalta kuvattuna: kehä kehän '
-            + 'perään maalattuja pisara- ja neliapilamedaljonkeja okran, '
-            + 'harmaan ja violetin sävyissä. Kupolin juurta kiertää '
-            + 'rengas ristikkoikkunoita, kulmissa näkyy mustavalkoinen '
-            + 'ablaq-raidoitus, ja aivan keskellä on tumma pyöreä aukko, '
-            + 'jonka takana erottuu vinoon ladottua puuritilää.',
+          selite: 'Yksi khanin kahdeksasta kupolista alhaalta kuvattuna: '
+            + 'kehä kehän perään maalattuja pisara- ja '
+            + 'neliapilamedaljonkeja okran, harmaan ja violetin sävyissä. '
+            + 'Kupolin juurta kiertää rengas ristikkoikkunoita, ja kulmissa '
+            + 'erottuu mustavalkoinen ablaq-raidoitus.',
           lahde: 'Hani Zaitoun, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -11250,23 +11131,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus Bab Sharqi (Eastern Gate) 8210.jpg',
-          selite: 'Itäportti ulkoa: keskellä korkea holvikaari, jonka läpi '
-            + 'näkyy puuerkkerinen talo ja tumma auto, ja sen kummallakin '
-            + 'puolella matalampi kaari. Vasemmasta kulkee ulos '
-            + 'koululaisryhmä, oikeanpuoleinen aukeaa vanhemman '
-            + 'kivimuurin puolella. Portin takaa kohoaa valkoinen '
-            + 'minareetti, ja edustalla on kiveys, pensasistutuksia ja '
-            + 'rivi valkoisia kivipalloja.',
+          selite: 'Itäportti ulkoa: korkea keskikaari ja sen kummallakin '
+            + 'puolella matalampi jalankulkijoiden aukko, eli portin '
+            + 'alkuperäinen kolmiaukkoinen muoto. Keskikaaren läpi näkyy '
+            + 'puuerkkerinen talo, ja portin takaa kohoaa valkoinen '
+            + 'minareetti.',
           lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'De Bab Sharqi (Oostpoort) in de stadsmuur van Damascus, Bestanddeelnr 255-5863.jpg',
-          selite: 'Sama portti vuonna 1950: käytössä on yksi kaari, jonka '
-            + 'läpi ihmiset kävelevät kapealle kujalle. Portin vierestä '
+          selite: 'Sama portti vuonna 1950: käytössä on vain yksi kaari, '
+            + 'jonka läpi kuljetaan kapealle kujalle. Portin vierestä '
             + 'nousee vaalea nelikulmainen minareetti, jossa on puinen '
-            + 'parveke ja kartiohuippu. Vasemmalla on suuri eukalyptus, '
-            + 'oikealla puuparvekkeisia taloja ja antiikkiliikkeiden '
-            + 'kyltit, ja kadunreunassa polkupyörä ja avoauto.',
+            + 'parveke ja kartiohuippu; kujaa reunustavat puuparvekkeiset '
+            + 'talot ja antiikkiliikkeet.',
           lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
         },
       ],
@@ -11300,30 +11178,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Damascus-Bab Kisan.jpg',
-          selite: 'Kisanin portti edestä: kaksi ulkonevaa kivitornia, joiden '
-            + 'yläreunassa kulkee pienten kaarien muodostama lista ja '
-            + 'pinnassa on punoskoristeinen pyöreä kivimedaljonki. '
-            + 'Tornien välissä on umpeen muurattu suorakaiteen muotoinen '
-            + 'aukko ja sen alla esiin työntyvä kivihylly, alempana '
-            + 'koristereunainen pyöröholvi ja tumma puuovi. Muurissa '
-            + 'näkyy kapeita pystyrakoja ja puolipallon muotoisia '
-            + 'kivinystyjä. Edustalla on matala vaalea kaide '
-            + 'kuviorei\'ityksin, rautaportti ja pensaita; vasemmalla '
-            + 'pylväs ja tumma metalliveistos jalustalla, oikealla '
-            + 'asuintaloja ja puita, alareunassa auton katto.',
+          selite: 'Kisanin portti edestä: kaksi ulkonevaa kivitornia, '
+            + 'joiden yläreunassa kulkee pienten kaarien lista ja pinnassa '
+            + 'on punoskoristeinen pyöreä kivimedaljonki. Tornien välissä '
+            + 'on umpeen muurattu porttiaukko ja sen alla koristereunainen '
+            + 'pyöröholvi ja tumma puuovi.',
           lahde: 'Heretiq, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Szent Pál kapuja és kápolnája.jpg',
-          selite: 'Sama rakennus viistosti alaviistosta: kulmatornin '
-            + 'lohkareet ovat eri kokoisia ja käsin hakattuja, ja saumat '
-            + 'kulkevat epätasaisina rivistöinä. Oikealla nousee '
-            + 'portaikko mustine kaiteineen holvatulle ovelle, jonka '
-            + 'yläpuolella riippuu tummanpunainen viiri; portaiden '
-            + 'vieressä on ruukkukasveja. Vasemmalla on jalustallaan '
-            + 'tumma pronssiveistos ja sen edessä vaalea marmorinen '
-            + 'pylväänkapiteeli, taustalla puita ja matala tummista '
-            + 'kivistä ladottu muuri.',
+          selite: 'Sama rakennus viistosti: kulmatornin lohkareet ovat eri '
+            + 'kokoisia ja käsin hakattuja, ja saumat kulkevat epätasaisina '
+            + 'rivistöinä. Portaikko mustine kaiteineen johtaa holvatulle '
+            + 'ovelle, jonka yläpuolella riippuu tummanpunainen viiri.',
           lahde: 'Kocsis Fülöp, Hajdúdorogi Főegyházmegye, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11368,29 +11235,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Louksor (Thèbes), Construction Antérieure - Pylône Colosses et Obélisque MET DP144527.jpg',
-          selite: 'Pylonin edusta 1850-luvun alussa. Vasemmalla seisoo '
-            + 'hieroglyfien peittämä obeliski, jonka jalusta on hiekan '
-            + 'alla; oikealla kohoavat pylonin kaksi tornia, joiden '
-            + 'kiveen on hakattu ihmishahmoja ja joiden harjalla on '
-            + 'ulkoneva kruunulista. Porttiaukon edestä pistää hiekasta '
-            + 'esiin kahden istuvan kolossin kruunupää ja hartiat, muu '
-            + 'patsas on maan alla. Tornien seinissä on suorakaiteen '
-            + 'muotoisia aukkoja, portin vasen kylki on romahtanut, ja '
-            + 'vasemmassa laidassa näkyy matalia savitiiliraunioita. '
-            + 'Etuala on tyhjää hiekkaa.',
+          selite: 'Luxorin temppelin pyloni 1850-luvun alussa: hieroglyfien '
+            + 'peittämä obeliski, jonka jalusta on hiekan alla, ja kaksi '
+            + 'tornia, joiden kiveen on hakattu ihmishahmoja. Hiekasta '
+            + 'pistää esiin kahden istuvan kolossin kruunupäät ja hartiat, '
+            + 'muu osa on maan alla.',
           lahde: 'Félix Teynard, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Louksor (Thèbes). Construction Centrale - Grande Colonnade MET DP71345.jpg',
-          selite: 'Saman matkan kuva suuresta pylväskäytävästä: viisi järeää '
-            + 'pylvästä nousee vinoon riviin, avonaiset '
-            + 'papyruskukkakapiteelit ovat osin lohjenneet, ja niiden '
-            + 'päällä lepäävät massiiviset kivipalkit. Pylväiden juuret '
-            + 'ovat hiekkakinoksen peitossa, ja pylväiden välissä seisoo '
-            + 'savitiilirakennus, jossa on pieni kaariaukko ja '
-            + 'suorakaiteen muotoinen ovi. Alareunassa on painetut '
-            + 'tekstit kuvaajasta ja kustantajasta sekä punainen '
-            + 'kokoelmaleima.',
+          selite: 'Luxorin temppelin suuri pylväskäytävä samalla matkalla '
+            + 'kuvattuna: viisi järeää pylvästä vinossa rivissä, avonaiset '
+            + 'papyruskukkakapiteelit osin lohjenneina ja niiden päällä '
+            + 'massiiviset kivipalkit. Pylväiden juuret ovat hiekkakinoksen '
+            + 'peitossa.',
           lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
         },
       ],
@@ -11399,67 +11257,59 @@ export const NAHTAVYYSJUTUT = {
     'Luxorin museo': {
       aika: '1975',
       teksti: 'Museo avattiin 1975 Niilin itärannalle rantakadun varteen. '
-        + 'Kaksikerroksisen talon piirsi Mahmud El Hakim jo 1962, ja '
-        + 'esineet aseteltiin 1972–1975. Esillä on tarkoituksella paljon '
-        + 'vähemmän kuin Kairon egyptiläisessä museossa: vähän esineitä, '
-        + 'väljä ripustus ja monikieliset selitteet.'
+          + 'Kaksikerroksisen talon piirsi Mahmud El Hakim jo 1962, ja '
+          + 'esineet aseteltiin 1972–1975. Esillä on tarkoituksella paljon '
+          + 'vähemmän kuin Kairon egyptiläisessä museossa: vähän esineitä, '
+          + 'väljä ripustus ja monikieliset selitteet.'
         + '\n\n'
         + 'Vuonna 1989 Luxorin temppelin aurinkopihan alta kaivettiin 26 '
-        + 'patsaan kätkö. Ne oli haudattu, kun roomalaiset muuttivat '
-        + 'alueen sotilasleiriksi; ensimmäiset viisi löytyivät noin '
-        + 'metrin syvyydestä. Joukossa oli Amenhotep III:n '
-        + 'kvartsiittipatsas kaksoiskruunuineen, kelkka jalustanaan; '
-        + 'korkeudeksi ilmoitetaan 2,49 metriä, osassa lähteitä 1,8. '
-        + 'Kartušeista on hakattu pois yksi ainoa sana, Amunin nimi — '
-        + 'Ekhnatonin jälki isänsä jumalaa vastaan. Samasta kätköstä tuli '
-        + 'Thutmosis III alabasterisfinksinä.'
+          + 'patsaan kätkö. Ne oli haudattu, kun roomalaiset muuttivat '
+          + 'alueen sotilasleiriksi; ensimmäiset viisi löytyivät noin '
+          + 'metrin syvyydestä. Joukossa oli Amenhotep III:n '
+          + 'kvartsiittipatsas kaksoiskruunuineen, kelkka jalustanaan; '
+          + 'korkeudeksi ilmoitetaan 2,49 metriä, osassa lähteitä 1,8. '
+          + 'Patsaan viereen seinään on kaiverrettu selite: Amenhotep III, '
+          + '18. dynastia, 1405–1367 eaa. Kartušeista on hakattu pois yksi '
+          + 'ainoa sana, Amunin nimi — Ekhnatonin jälki isänsä jumalaa '
+          + 'vastaan. Samasta kätköstä tuli Thutmosis III '
+          + 'alabasterisfinksinä.'
         + '\n\n'
         + 'Ekhnaton itse on museossa seinänä. Hänen Karnakiin '
-        + 'rakennuttamansa Aten-temppelit purettiin, ja vakiokokoiset '
-        + 'talatat-lohkot — 27 × 27 × 54 senttiä, puoli kertaa puoli '
-        + 'kertaa yksi kyynärä — muurattiin pyloonien täytteeksi. '
-        + 'Yhdeksännestä pyloonista saadut kivet on tunnistettu ja koottu '
-        + 'takaisin seinäksi kuin palapeli. Muumioita on kaksi, esillä '
-        + 'maaliskuusta 2004: Ahmose I, joka löytyi 1881 Deir el-Bahrin '
-        + 'kätköstä, ja Ramses I, joka seisoi yli 130 vuotta Niagara '
-        + 'Fallsin museossa nimellä Egyptin ruhtinas. Emoryn yliopiston '
-        + 'museo osti sen 1999 ja palautti Egyptiin 2003. Kummankaan '
-        + 'tunnistusta ei pidetä varmana.',
+          + 'rakennuttamansa Aten-temppelit purettiin, ja vakiokokoiset '
+          + 'talatat-lohkot — 27 × 27 × 54 senttiä, puoli kertaa puoli '
+          + 'kertaa yksi kyynärä — muurattiin pyloonien täytteeksi. '
+          + 'Yhdeksännestä pyloonista saadut kivet on tunnistettu ja koottu '
+          + 'takaisin seinäksi kuin palapeli. Muumioita on kaksi, esillä '
+          + 'maaliskuusta 2004: Ahmose I, joka löytyi 1881 Deir el-Bahrin '
+          + 'kätköstä, ja Ramses I, joka seisoi yli 130 vuotta Niagara '
+          + 'Fallsin museossa nimellä Egyptin ruhtinas. Emoryn yliopiston '
+          + 'museo osti sen 1999 ja palautti Egyptiin 2003. Kummankaan '
+          + 'tunnistusta ei pidetä varmana.',
       kuvat: [
         {
           tiedosto: 'Luxor Museum 1.JPG',
-          selite: 'Museo rantakadun toiselta puolelta: matala punaruskea '
-            + 'seinä ilman ikkunoita, vain kapeita pystyrakoja rivissä. '
-            + 'Aidatulla nurmikolla seisoo kaksi tummaa kivipatsasta, '
-            + 'edessä palmuja ja lehdetön puu, oikealla tyhjä valkoinen '
-            + 'opastetaulu pylväässä. Muutama ihminen kävelee pihalla, ja '
-            + 'etualalla on kukkaistutuksia ja tyhjä asfalttitie '
-            + 'pilvettömän taivaan alla.',
+          selite: 'Luxorin museo rantakadun varrella Niilin itärannalla: '
+            + 'matala punaruskea seinä ilman ikkunoita, vain kapeita '
+            + 'pystyrakoja rivissä. Aidatulla nurmikolla seisoo kaksi '
+            + 'tummaa kivipatsasta palmujen keskellä.',
           lahde: 'Charlesdrakew at English Wikipedia, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Luxor Museum Amenophis III. Statue 05.jpg',
-          selite: 'Amenhotep III:n patsas yksin salissa: punertavaa '
-            + 'kvartsiittia, päässä kaksoiskruunu, leuassa seremoniaparta '
-            + 'ja takana kaareva selkäpilari kartušeineen. Jalusta lepää '
-            + 'kelkalla, jonka jalakset työntyvät edessä esiin. Seinä on '
-            + 'paljas, ja siihen on kaiverrettu vasemmalle AMENHOTEP III, '
-            + 'XVIII. DYN., 1405–1367 B.C. ja oikealle sama arabiaksi. '
-            + 'Katossa palaa kaksi kohdevaloa, lattia on vaaleaa kiveä ja '
-            + 'porrastuu matalina tasoina.',
+          selite: 'Amenhotep III:n kvartsiittipatsas Luxorin museossa: '
+            + 'päässä kaksoiskruunu, leuassa seremoniaparta ja takana '
+            + 'kaareva selkäpilari kartušeineen. Jalustana on kelkka, jonka '
+            + 'jalakset työntyvät edessä esiin, ja patsas seisoo yksin '
+            + 'paljasseinäisessä salissa.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
         {
           tiedosto: 'Luxor Museum Relief Talatat 06.jpg',
-          selite: 'Talatat-seinä koottuna: pieniä suorakaiteen muotoisia '
-            + 'kivilohkoja riveissä vaalealla taustalla kuin tiilimuuri. '
-            + 'Kuvat kulkevat vyöhykkeittäin — ylimpänä nautoja ja '
-            + 'uhrikasoja, alempana valkoisiin lannevaatteisiin puettuja '
-            + 'miehiä kantotankoineen ja työhön kumartuneina, välissä '
-            + 'hieroglyfipaneeleja. Ihon punaruskeaa maalia on paikoin '
-            + 'jäljellä. Riveissä on suuria aukkoja, ja alimmat rivit '
-            + 'ovat sirpaleisia: yksittäisiä lohkoja seisoo erillään '
-            + 'tyhjän kohdan keskellä.',
+          selite: 'Talatat-seinä koottuna Luxorin museossa: pieniä '
+            + 'kivilohkoja riveissä kuin tiilimuuri. Kuvavyöhykkeissä on '
+            + 'nautoja ja uhrikasoja, lannevaatteisiin puettuja miehiä '
+            + 'kantotankoineen ja hieroglyfipaneeleja, ja ihon punaruskeaa '
+            + 'maalia on paikoin jäljellä.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -11495,38 +11345,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Luxor Temple Avenue of Sphinxes (9794899133).jpg',
-          selite: 'Kuja Luxorin temppelin päästä katsottuna: vaalea kivetty '
-            + 'väylä kulkee suorana kohti taivaanrantaa, ja molemmin '
-            + 'puolin seisoo ihmispäisiä sfinksejä matalilla suorakaiteen '
-            + 'muotoisilla jalustoilla. Jalustojen edessä on pieniä '
-            + 'maavalaisimia, kujan reunoilla soraa ja hiekkaa. Taustalla '
-            + 'on palmurivejä, matalia okranvärisiä taloja ja kapea '
-            + 'minareetti. Kujan keskellä kävelee yksi ihminen '
-            + 'oranssinpunaisessa asussa, ja taivas on pilvetön.',
+          selite: 'Sfinksikuja Luxorin temppelin päästä: vaalea kivetty '
+            + 'väylä kulkee suorana kohti taivaanrantaa, ja sen molemmin '
+            + 'puolin seisoo ihmispäisiä sfinksejä matalilla jalustoilla. '
+            + 'Kujan takana kohoaa palmurivejä, matalia okranvärisiä taloja '
+            + 'ja kapea minareetti.',
           lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Theban region, Temple Complex of Amon in Karnak, 19th century pictures, 1870-1888, photo 2 of 91 - Archivio fotografico Museo Egizio, Turin INV08 005.jpg',
-          selite: 'Ruskeasävyinen valokuva Karnakin pässinpäisistä '
-            + 'sfinkseistä: rivi patsaita korkeilla kivijalustoilla, ja '
-            + 'etualan suurimman leuan alla seisoo pieni kuninkaanhahmo. '
-            + 'Keskellä kuvaa seisoo jalustan vieressä mies tummassa '
-            + 'kaavussa ja valkoisessa päähineessä. Edustalla on '
-            + 'irtolohkareita ja kivimurskaa, takana kuivamuuri ja tiheä '
-            + 'palmulehto. Paperissa näkyy taitteita ja yläreunassa kaksi '
-            + 'neulanreikää.',
+          selite: 'Karnakin pässinpäisiä sfinksejä ruskeasävyisessä '
+            + 'valokuvassa: rivi patsaita korkeilla kivijalustoilla, ja '
+            + 'suurimman patsaan leuan alla seisoo pieni kuninkaanhahmo. '
+            + 'Patsaiden ympärillä on irtolohkareita ja kivimurskaa, takana '
+            + 'kuivamuuri ja tiheä palmulehto.',
           lahde: 'Antonio Beato, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Karnak (Thèbes), Sphinx a Tête Humaine et a Tête de Bélier, en Y MET DP71386.jpg',
-          selite: 'Kaksi kujan patsasta maahan vajonneina: etualalla '
+          selite: 'Kujan kaksi patsaslajia rinnakkain maahan vajonneina: '
             + 'pässinpäinen sfinksi, jonka leuan alla on pieni seisova '
-            + 'hahmo, ja sen takana ihmispäinen sfinksi '
-            + 'nemes-päähineessään hartioita myöten mullassa. Oikeassa '
-            + 'reunassa erottuu kolmas kivinen ruumis. Ympärillä nousee '
-            + 'tupsuheinän ja pensaiden peittämä rinne, ja taivas on '
-            + 'tyhjä ja vaalea. Alareunan marginaalissa on painetut '
-            + 'tekstit ja pieni pyöreä leima.',
+            + 'hahmo, ja sen takana ihmispäinen sfinksi nemes-päähineessään '
+            + 'hartioita myöten mullassa. Patsaita ympäröi tupsuheinän ja '
+            + 'pensaiden peittämä rinne.',
           lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
         },
       ],
@@ -11561,28 +11402,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Egipto, 1882 "Las Estatuas on cabeza de Leon en Karnak" (21683939911).jpg',
-          selite: 'Mutin alueen pyhä allas vuoden 1882 kirjan värilehdellä: '
-            + 'vihertävä vesi kaartuu etualalla, ja sen oikealla rannalla '
-            + 'istuu rivi tummia leijonapäisiä patsaita punertavien '
-            + 'kivilohkareiden seassa. Vasemmalla rannassa makaa kaatunut '
-            + 'patsas puoliksi hiekan peitossa, keskellä kohoaa '
-            + 'taatelipalmu ja rannalla seisoo valkoinen kahlaajalintu. '
-            + 'Taustalla on vihreää peltoa ja autiomaan pöytävuoria. '
-            + 'Kuvan alla on espanjankielinen kuvateksti ja kustantajan '
-            + 'nimi, vasemmassa alakulmassa signeeraus C. Werner.',
+          selite: 'Mutin alueen pyhä allas vuoden 1882 kirjan värilehdellä, '
+            + 'jonka on signeerannut C. Werner: vihertävän veden rannalla '
+            + 'istuu rivi tummia leijonapäisiä patsaita, ja yksi makaa '
+            + 'kaatuneena puoliksi hiekassa. Altaan takana on vihreää '
+            + 'peltoa ja autiomaan pöytävuoria.',
           lahde: 'Fondo Antiguo de la Biblioteca de la Universidad de Sevilla from Sevilla, España, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Ruines du temple de Mout - A3167.jpg',
           selite: 'Mutin temppelin raunioalue vuoden 1914 autokromilevyllä: '
-            + 'etualalla on kaatuneita hiekkakivilohkareita ja matalia '
-            + 'muurinjäännöksiä, ja niiden seassa seisoo päättömiä '
-            + 'patsastorsoja. Oikealla kulkee hiekkainen polku, jolla '
-            + 'seisoo kaksi miestä, toinen tummassa kaavussa ja '
-            + 'valkoisessa turbaanissa, toinen vaaleassa galabiyassa. '
-            + 'Takana on kuiva kumpu, savitiilimuuri ja tiheä palmulehto. '
-            + 'Lasilevyn kehys näkyy kuvan reunoilla, ja vasemmassa '
-            + 'reunassa on käsin kirjoitettu merkintä EGYPTE A 3167.',
+            + 'kaatuneita hiekkakivilohkareita ja matalia muurinjäännöksiä, '
+            + 'niiden seassa päättömiä patsastorsoja. Raunioiden takana on '
+            + 'savitiilimuuri ja tiheä palmulehto; levyyn on kirjoitettu '
+            + 'käsin EGYPTE A 3167.',
           lahde: 'Léon Auguste, Wikimedia Commons (CC0)',
         },
       ],
@@ -11618,28 +11451,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Théodule Devéria (French - (Portal of the Temple of Khonsu, Karnak) - Google Art Project.jpg',
-          selite: 'Euergetes-portti edestäpäin noin vuonna 1860. Ovenpielet '
-            + 'on jaettu ruutuihin, joissa kuningas seisoo jumalten '
-            + 'edessä, ja päällä on siivekäs aurinkokiekko ja uurrettu '
-            + 'kourulista. Portin takaa nousevat molemmin puolin Khonsun '
-            + 'temppelin pylonin viistot tornit, ja niiden välissä '
-            + 'erottuu temppelin oma matala oviaukko. Oikealla makaa '
-            + 'hiekkaan puoliksi hautautunut sfinksi ja kauempana kohoaa '
-            + 'matala raunioseinä aukkoineen; vasemmalla on romahtanutta '
-            + 'muuria ja irtolohkareita.',
+          selite: 'Ptolemaios III Euergeteen portti edestäpäin noin vuonna '
+            + '1860: ovenpielet on jaettu ruutuihin, joissa kuningas seisoo '
+            + 'jumalten edessä, ja päällä on siivekäs aurinkokiekko ja '
+            + 'uurrettu kourulista. Portin takaa nousevat Khonsun temppelin '
+            + 'pylonin viistot tornit.',
           lahde: 'Théodule Devéria, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Karnak Tempel Chons 06.jpg',
-          selite: 'Pylväspiha sisältä pylonia kohti. Keskellä on oviaukko, '
-            + 'jonka pielet ovat muuta seinää vaaleammat, ja käytävän '
-            + 'päässä näkyy toinen kehys hahmoineen ja sen takana puu, '
-            + 'metallinen kaide ja aurinkoinen aukio. Oviaukon yllä '
-            + 'kulkee kourulista, jonka keskellä on siivekäs '
-            + 'aurinkokiekko, ja sen yläpuolelle kohoavat pylonin kaksi '
-            + 'tornia, kummassakin neliömäinen aukko. Kummallakin sivulla '
-            + 'seisoo pylväsrivi kattopalkkeineen, ja oikeanpuoleisissa '
-            + 'pylväissä ja palkissa on maalit yhä jäljellä.',
+          selite: 'Khonsun temppelin pylväspiha sisältä pylonia kohti: '
+            + 'oviaukon yllä kulkee kourulista siivekkäine '
+            + 'aurinkokiekkoineen, ja sen yläpuolelle kohoavat pylonin '
+            + 'kaksi tornia. Pihan kummallakin sivulla seisoo pylväsrivi, '
+            + 'ja osassa pylväitä on maalit yhä jäljellä.',
           lahde: 'Olaf Tausch, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -11676,27 +11501,19 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Karnak (Thèbes), Palais - Salle Hypostyle - Fenêtre et Chapiteaux des Galeries Latérales MET DP71376.jpg',
           selite: 'Félix Teynardin valokuva vuosilta 1851–52 sivulaivan '
-            + 'yläpuolelle nousevasta ikkunaseinästä. Seinässä on kolme '
-            + 'suorakaiteen muotoista aukkoa, ja keskimmäisessä on yhä '
-            + 'paikallaan pystysuorista kivipuikoista veistetty ritilä. '
-            + 'Aukkojen pielet ja niiden yllä kulkeva palkki ovat täynnä '
-            + 'hieroglyfejä, ja seinän alaosa on lohjennut. Kuvan '
-            + 'alalaidassa näkyy rivi sivulaivan pylväitä, joiden '
-            + 'nupinmuotoisiin kapiteeleihin on kaiverrettu kartusseja; '
-            + 'keskellä on pyöreä punainen leima ja aivan alareunassa '
-            + 'painetut kustantajan rivit.',
+            + 'yllä kohoavasta ikkunaseinästä: kolmesta aukosta '
+            + 'keskimmäisessä on yhä paikallaan kivipuikoista veistetty '
+            + 'ritilä. Seinän alla seisoo pylväitä, joiden nupinmuotoisiin '
+            + 'kapiteeleihin on kaiverrettu kartusseja.',
           lahde: 'Félix Teynard / Imprimerie photographique H. de Fonteny et Cie, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Hall of columns, Karnac, RP-F-F25403-AG.jpg',
-          selite: 'Francis Frithin valokuva vuodelta 1857. Pylväitä katsotaan '
-            + 'kaatuneiden kivilohkareiden täyttämältä maalta: yläpäät '
-            + 'ovat murtuneet, muutamassa on yhä leveä kapiteeli, ja '
-            + 'vasemmalla lepää järeitä kivipalkkeja pilarien päällä. '
-            + 'Alhaalla keskellä seisoo kaksi pitkiin viittoihin '
-            + 'pukeutunutta miestä lohkareiden seassa, oikealla on '
-            + 'suorakaiteen muotoinen oviaukko, ja kuvan alakulmiin on '
-            + 'merkitty valokuvaajan nimi ja vuosiluku.',
+          selite: 'Francis Frithin valokuva vuodelta 1857 suuresta '
+            + 'pylvässalista: pylväiden yläpäät ovat murtuneet, muutamassa '
+            + 'on yhä leveä kapiteeli, ja maa on kaatuneiden '
+            + 'kivilohkareiden peitossa. Osassa pilareita lepää vielä '
+            + 'järeitä kivipalkkeja.',
           lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
         },
       ],
@@ -11714,60 +11531,51 @@ export const NAHTAVYYSJUTUT = {
   riad: {
     'Masmakin linnoitus': {
       aika: '1902',
-      teksti: 'Linnoitus on savitiiltä ja savilaastia, ja perustus on ladottu '
-        + 'kivilohkareista. Rakennus jakautuu kuuteen osaan: portti, '
-        + 'moskeija, majlis, kaivo, tornit ja sisäpiha. Nurkissa on neljä '
-        + 'tornia, kukin noin 18 metriä korkea, ja niiden seinät ovat '
-        + '1,25 metriä paksut; ylös noustaan tornin sisäisiä portaita. '
-        + 'Muodosta lähteet ovat eri mieltä: tornit kuvataan joko '
-        + 'kartiomaisiksi tai sylinterimäisiksi. Kaivo ei ole pihan '
-        + 'keskellä vaan koillisnurkassa. Pihaa kiertävät pylväshuoneet, '
-        + 'ja itäsivun portaat vievät yläkertaan ja katoille. Asuintiloja '
-        + 'on kolme: hallitsijan oma, valtionkassa bayt al-mal ja '
-        + 'vierasmaja.'
+      teksti: 'Linnoitus on savitiiltä ja savilaastia, ja perustus on '
+          + 'ladottu kivilohkareista. Rakennus jakautuu kuuteen osaan: '
+          + 'portti, moskeija, majlis, kaivo, tornit ja sisäpiha. Nurkissa '
+          + 'on neljä tornia, kukin noin 18 metriä korkea, ja niiden seinät '
+          + 'ovat 1,25 metriä paksut; ylös noustaan tornin sisäisiä '
+          + 'portaita. Muodosta lähteet ovat eri mieltä: tornit kuvataan '
+          + 'joko kartiomaisiksi tai sylinterimäisiksi. Kaivo ei ole pihan '
+          + 'keskellä vaan koillisnurkassa. Pihaa kiertävät pylväshuoneet, '
+          + 'ja itäsivun portaat vievät yläkertaan ja katoille. Asuintiloja '
+          + 'on kolme: hallitsijan oma, valtionkassa bayt al-mal ja '
+          + 'vierasmaja.'
         + '\n\n'
-        + 'Pääportti on länsimuurissa. Ovi on 3,6 metriä korkea, 2,65 '
-        + 'leveä ja kymmenen senttiä paksu, ja se on tehty palmupuusta. '
-        + 'Keskellä on aukko nimeltä al-Khokha, juuri yhden ihmisen '
-        + 'kokoinen. Se on puolustusrakenne: väki kulkee sisään ja ulos '
-        + 'ilman että porttia avataan.'
+        + 'Pääportti on länsimuurissa. Ovi on 3,6 metriä korkea, 2,65 leveä '
+          + 'ja kymmenen senttiä paksu, ja se on tehty palmupuusta. '
+          + 'Keskellä on aukko nimeltä al-Khokha, juuri yhden ihmisen '
+          + 'kokoinen. Se on puolustusrakenne: väki kulkee sisään ja ulos '
+          + 'ilman että porttia avataan. Portin yläpuolella työntyy '
+          + 'muurista kolme pyöreäpäistä ulkonemaa, joiden alapinnassa on '
+          + 'reikä.'
         + '\n\n'
-        + 'Työ alkoi 1865 ja valmistui 1895. 13. tammikuuta 1902 '
-        + 'Abdulaziz ibn Saud palasi Kuwaitin maanpaosta ja otti Masmakin '
-        + 'yöllisessä iskussa; Riadin päällikkö Ajlan bin Mohammed '
-        + 'kaatui. Joukon kooksi kerrotaan noin 40 miestä, mutta luku on '
-        + 'epävarma: neljäkymmentä on beduiinien tapa sanoa pieni joukko. '
-        + 'Muualla luvut ovat 68 hyökkääjää ja 80 puolustajaa, kaatuneita '
-        + '7 ja 30. Linnoitus oli asevarastona vuoteen 1938, ja 1995 se '
-        + 'avattiin museona yleisölle.',
+        + 'Työ alkoi 1865 ja valmistui 1895. 13. tammikuuta 1902 Abdulaziz '
+          + 'ibn Saud palasi Kuwaitin maanpaosta ja otti Masmakin '
+          + 'yöllisessä iskussa; Riadin päällikkö Ajlan bin Mohammed '
+          + 'kaatui. Joukon kooksi kerrotaan noin 40 miestä, mutta luku on '
+          + 'epävarma: neljäkymmentä on beduiinien tapa sanoa pieni joukko. '
+          + 'Muualla luvut ovat 68 hyökkääjää ja 80 puolustajaa, kaatuneita '
+          + '7 ja 30. Linnoitus oli asevarastona vuoteen 1938, ja 1995 se '
+          + 'avattiin museona yleisölle.',
       kuvat: [
         {
           tiedosto: 'Masmak Fortress (6329473680).jpg',
-          selite: 'Linnoituksen pääjulkisivu aukiolta palmujen välistä: sileä '
-            + 'savimuuri, jossa kulkee rivi pieniä nelikulmaisia aukkoja, '
-            + 'ja sen kummassakin päässä ylöspäin kapeneva pyöreä '
-            + 'nurkkatorni kolmiohampaisine harjoineen. Muurin takaa '
-            + 'kohoaa matalampi nelikulmainen torni, ja sen vieressä '
-            + 'liehuu vihreä lippu. Portin yläpuolella työntyy seinästä '
-            + 'kolme pyöreäpäistä ulkonemaa, joiden alapinnassa on reikä, '
-            + 'ja muurista pistää esiin puisia parruja. Syvennyksessä on '
-            + 'tumma kaksilehtinen puuovi naulanpäineen ja kaiverrettuine '
-            + 'alapaneeleineen, ja sen eteen nousee tiili- ja '
-            + 'kiviportaita. Aukiolla on lohkareita, ovelle on pysähtynyt '
-            + 'oranssipaitainen kävijä valokuvaamaan, ja reunoilla näkyy '
-            + 'kerrostaloja.',
+          selite: 'Linnoituksen pääjulkisivu: sileää savimuuria, jossa on '
+            + 'rivi nelikulmaisia aukkoja, ja päissä ylöspäin kapenevat '
+            + 'pyöreät nurkkatornit kolmiohampaisine harjoineen. Portin '
+            + 'syvennyksessä on kaksilehtinen puuovi naulanpäineen ja '
+            + 'kaiverrettuine alapaneeleineen.',
           lahde: 'Sammy Six, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Masmak Citadel, Riyadh (14372839641).jpg',
-          selite: 'Sisäpihan reunakäytävä alaviistosta: keskellä avoin '
-            + 'taivas, ympärillä valkoiseksi rapattuja nelikulmaisia '
-            + 'pilareita porrastettuine kannatinpäineen. Kattona on '
-            + 'tiiviisti vierekkäin ladottuja pyöreitä puunrunkoja, ja '
-            + 'pihalle työntyy savipinnan läpi kaksi järeää parrua. '
-            + 'Seinät ovat savipintaisia, takaseinässä on '
-            + 'kolmionmuotoisia syvennyksiä ja tumma oviaukko, ja '
-            + 'katonrajassa palaa museon kohdevaloja.',
+          selite: 'Sisäpihaa kiertävä pylväskäytävä: valkoiseksi rapattuja '
+            + 'nelikulmaisia pilareita porrastettuine kannatinpäineen ja '
+            + 'kattona tiiviisti vierekkäin ladottuja pyöreitä puunrunkoja. '
+            + 'Savipintaisissa seinissä on kolmionmuotoisia syvennyksiä ja '
+            + 'tumma oviaukko.',
           lahde: 'Rick McCharles from Calgary, Canada, Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -11799,32 +11607,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Deera Square and Imam Turki bin Abdullah Mosque (1).jpg',
-          selite: 'Moskeija Deeran aukion laidalta heinäkuussa 2024: pitkä '
-            + 'kalkkikiviseinä, jossa on pieniä neliöikkunoita ja niiden '
-            + 'yläpuolella kolmion muotoisia tummia aukkoja, alhaalla '
-            + 'rivi syviä oviaukkoja tummine puuristikkoineen. Vasemmalla '
-            + 'nousee suorakulmainen minareetti, jonka huipussa on '
-            + 'hammasmainen harja, ja taempana keskellä toinen '
-            + 'samanlainen; seinän harjalla on valonheittimiä ja '
-            + 'kaiuttimia. Vasemmassa laidassa on palmuja ja '
-            + 'pylväskäytävä, oikealla toinen kivitalo, jonka katolla on '
-            + 'antennimastoja ja seinässä arabiankielinen kyltti. Aukio '
-            + 'on tyhjä ja kivetty vaalealla laatalla, johon on ladottu '
-            + 'tummia suoria kuvioita; kaksi valkoisiin pukeutunutta '
-            + 'ihmistä kävelee seinustalla.',
+          selite: 'Imam Turkin moskeija Deeran aukion laidalta heinäkuussa '
+            + '2024: pitkä kalkkikiviseinä, jossa on pieniä neliöikkunoita, '
+            + 'kolmion muotoisia tummia aukkoja ja rivi syviä oviaukkoja '
+            + 'tummine puuristikkoineen. Suorakulmaiset minareetit '
+            + 'päättyvät hammasmaiseen harjaan.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Qasr Al Hukm Palace, 2022.jpg',
-          selite: 'Aukion vastakkainen laita joulukuussa 2022: '
-            + 'hallintopalatsi Qasr al-Hukm, jonka kalkkikiviseinän '
-            + 'harjassa on hammasmainen sahalaita ja seinässä pieniä '
-            + 'kolmioaukkoja. Keskeltä työntyy ulos ylempi kerros, jossa '
-            + 'on kaksi suurta tummaa aukkoa, ja oikealla on pylväiden '
-            + 'kannattama katos ja sen yläpuolella vaalea ulkoneva '
-            + 'palkkirakenne. Palmurivi kulkee seinustalla, aukiolla '
-            + 'liikkuu ihmisiä, lapsi potkulaudalla ja valkoinen '
-            + 'maastoauto, ja kiveystä reunustavat metalliaidat.',
+          selite: 'Aukion vastakkaisella laidalla hallintopalatsi Qasr '
+            + 'al-Hukm joulukuussa 2022: kalkkikiviseinän harjassa on '
+            + 'hammasmainen sahalaita ja seinässä pieniä kolmioaukkoja. '
+            + 'Keskeltä työntyy ulos ylempi kerros, jossa on kaksi suurta '
+            + 'tummaa aukkoa.',
           lahde: 'Geektaker, Wikimedia Commons (CC0)',
         },
       ],
@@ -11921,26 +11717,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Murabba Palace (1).jpg',
-          selite: 'Palatsialueen savitiilimuuri kulmasta katsottuna: pinnassa '
-            + 'kulkee pystysuora harjattu kuviointi ja harjalla on '
+          selite: 'Palatsialueen savitiilimuuri kulmasta katsottuna: '
+            + 'pinnassa kulkee pystysuora harjattu kuviointi ja harjalla on '
             + 'valkoiseksi maalattu kolmiohampainen reunus. Muurin takaa '
             + 'nousee savitiilinen rakennus, jossa on kaari-ikkuna ja '
-            + 'samanlainen hampainen harja, sen vieressä kohoaa palmu ja '
-            + 'vasemmalla näkyy minareetin huippu. Etualalla on kivetty '
-            + 'kuja varjoineen, oikealla pilarikäytävä ja pensaita, ja '
-            + 'taivas on pilvetön.',
+            + 'samanlainen hampainen harja.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
         {
           tiedosto: 'Murabba Palace7.jpg',
           selite: 'Palatsin sali museokäytössä: pyöreät pylväät on maalattu '
             + 'marmorikuvioisiksi ja niiden päissä on koristellut '
-            + 'kapiteelit. Katto on vaaleanvihreä, ja siitä riippuu '
-            + 'kupulamppuja ja kattotuulettimia. Seinien vierillä '
-            + 'kiertävät matalat istuinpenkit punakuvioisin patjoin ja '
-            + 'tyynyin, ikkunoissa on punaiset verhot ja vihreät karmit, '
-            + 'ja lattian peittää tummakuvioinen kokolattiamatto. '
-            + 'Oikeassa reunassa näkyy ilmastointilaite ja puinen kaappi.',
+            + 'kapiteelit. Vaaleanvihreästä katosta riippuu kupulamppuja, '
+            + 'ja seinien vierillä kiertävät matalat istuinpenkit '
+            + 'punakuvioisin patjoin ja tyynyin.',
           lahde: 'saudipics, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -11979,38 +11769,27 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'National Museum Riyadh (6781666263).jpg',
           selite: 'Museon sisäänkäynti illalla: valonheittimet nostavat '
-            + 'hiekankeltaisen kiviverhouksen esiin mustaa taivasta '
-            + 'vasten. Vasemmalla seinä kapenee teräväksi kärjeksi kuin '
-            + 'veneen keula, keskellä kaartuu katos lasiseinäisen aulan '
-            + 'yllä, ja oikealla julkisivussa on rivi ristikkoisia '
-            + 'ikkunasäleikköjä. Lasin takaa näkyy aulan '
-            + 'pystybanderolleja ja ruukkukasveja, edessä kävelee kaksi '
-            + 'ihmistä, ja vasemmassa reunassa on puu.',
+            + 'hiekankeltaisen kiviverhouksen esiin mustaa taivasta vasten. '
+            + 'Seinä kapenee teräväksi kärjeksi kuin veneen keula, kaartuva '
+            + 'katos peittää lasiseinäisen aulan ja julkisivussa on '
+            + 'ristikkoisia ikkunasäleikköjä.',
           lahde: 'Sammy Six, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'National Museum of Saudi Arabia 01.jpg',
-          selite: 'Rautameteoriitti graniittijalustalla: tumma, kuoppainen ja '
-            + 'paikoin kiiltävä möhkäle on aikuisen ihmisen levyinen ja '
-            + 'rinnan korkuinen. Jalustan kyltissä lukee arabiaksi ja '
-            + 'englanniksi ”Meteorite: Found in the Empty Quarter (2.75 '
-            + 'tons)”. Takana on tekokallio, johon on kirjoitettu salin '
-            + 'nimi MAN AND THE UNIVERSE arabiaksi ja englanniksi, ja sen '
-            + 'vieressä on selitetaulu. Vasemmalla kaksi naista ja lapsi '
-            + 'katsovat kalliota, oikealla mies valkoisessa asussa ja '
-            + 'punavalkoisessa päähineessä kävelee ohi puhelin kädessä.',
+          selite: 'Rautameteoriitti graniittijalustalla: tumma ja '
+            + 'kuoppainen möhkäle on aikuisen ihmisen levyinen ja rinnan '
+            + 'korkuinen. Jalustan kyltissä lukee ”Meteorite: Found in the '
+            + 'Empty Quarter (2.75 tons)”, ja takana tekokalliossa on salin '
+            + 'nimi MAN AND THE UNIVERSE.',
           lahde: 'Gryffindor, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'National Museum of Saudi Arabia 02.jpg',
           selite: 'Ihminen ja maailmankaikkeus -sali: tekokalliolla seisoo '
             + 'norsun kokoinen luuranko, jonka päästä työntyvät eteenpäin '
-            + 'suorat syöksyhampaat ja pitkä alaleuka. Vasemmalla '
-            + 'vaalealla kaarevalla seinällä on kalaliskon luuranko '
-            + 'laattaan asetettuna ja sen alla selitekyltti. Etualalla '
-            + 'mies valkoisessa asussa ja kolme lasta katsovat vinoa '
-            + 'lattiavitriiniä; katto on musta ja siinä näkyvät '
-            + 'valoraiteet ja putkisto.',
+            + 'suorat syöksyhampaat ja pitkä alaleuka. Vaalealla kaarevalla '
+            + 'seinällä on kalaliskon luuranko laattaan asetettuna.',
           lahde: 'Gryffindor, Wikimedia Commons (CC0)',
         },
       ],
@@ -12056,33 +11835,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mozaffariyeh, Grand Bazzar of Tabriz, IRAN.jpg',
-          selite: 'Mozaffariyehin holvikäytävä sisältä: tiilikaton kupolien '
-            + 'laella on monikulmainen valoaukko ja niiden kylkiin on '
-            + 'puhkaistu kaari-ikkunoita, tiilet on ladottu '
-            + 'kalanruotokuvioon ja holvin harjat maalattu valkoisiksi. '
-            + 'Molemmin puolin nousee kaksi kerrosta myymälöitä, joiden '
-            + 'ovet ja ikkunat ovat valkoiseksi maalattua lasitettua '
-            + 'puuta; yläkerran kaiteet ovat valkoista viuhkakuvioista '
-            + 'metallia, ja seinillä on mustia lampetteja ja '
-            + 'ilmastointilaitteita. Katosta riippuu ketjuissa '
-            + 'pallolamppuja. Käytävän keskellä kasvaa ruukussa vihreä '
-            + 'pensas, lattialla on vaaleaan kankaaseen käärittyjä '
-            + 'kääröjä ja vasemmalla kuviollinen pino, muutama mies istuu '
-            + 'ja seisoo käytävällä, ja perällä on tumma oviaukko ja sen '
-            + 'yllä musta kyltti.',
+          selite: 'Mozaffariyehin holvikäytävä sisältä: tiilikupolien '
+            + 'laella on valoaukko ja kylkiin puhkaistuja kaari-ikkunoita, '
+            + 'ja tiilet on ladottu kalanruotokuvioon. Molemmin puolin '
+            + 'nousee kaksi kerrosta myymälöitä valkoiseksi maalatuin '
+            + 'lasitetuin puuovin ja -ikkunoin.',
           lahde: 'Navid Alizadeh Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: '1241.JewelryBazaar.Tabriz (1470548513).jpg',
-          selite: 'Kultasepänrivi tiiliholvin alla: käytävän molemmin puolin '
-            + 'on lasivitriinejä, joiden kehyksissä palaa punainen '
-            + 'neonputki ja joissa riippuu telineissä kultaketjuja ja '
-            + '-koruja. Käytävä on täynnä ihmisiä, suurin osa miehiä, '
-            + 'mukana valkohuivinen nainen ja mustaan chadoriin '
-            + 'pukeutunut nainen; etualalla kävelee vastaan raidallisessa '
-            + 'paidassa oleva mies. Vitriinien takana seisoo myyjiä, '
-            + 'holvin alla roikkuu kaapeleita ja pyöreä valkoinen lamppu, '
-            + 'ja seinillä on ilmastointilaitteita.',
+          selite: 'Kultasepänrivi tiiliholvin alla: käytävää reunustavat '
+            + 'lasivitriinit, joiden kehyksissä palaa punainen neonputki ja '
+            + 'joissa riippuu telineissä kultaketjuja ja -koruja. '
+            + 'Vitriinien takana seisoo myyjiä, ja käytävä on täynnä '
+            + 'ihmisiä.',
           lahde: 'Ensie & Matthias from San Diego, California, USA, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -12091,73 +11857,55 @@ export const NAHTAVYYSJUTUT = {
     'Perustuslakitalo': {
       aika: '1868',
       teksti: 'Talon rakennutti vuonna 1868 Haj Mehdi Koozekonani, Tabrizin '
-        + 'basaarin kauppias; rakentajaksi mainitaan Haj Vali Me’mar-e '
-        + 'Tabrizi. Se on tavallinen qajar-kauden asuintalo aivan '
-        + 'basaarin kyljessä: kaksi kerrosta ja tyylin mukaan erilliset '
-        + 'sisä- ja ulko-osat.'
+          + 'basaarin kauppias; rakentajaksi mainitaan Haj Vali Me’mar-e '
+          + 'Tabrizi. Se on tavallinen qajar-kauden asuintalo aivan '
+          + 'basaarin kyljessä: kaksi kerrosta ja tyylin mukaan erilliset '
+          + 'sisä- ja ulko-osat.'
         + '\n\n'
         + 'Perustuslakivallankumous alkoi 1905 ja päättyi 1911, ja Tabriz '
-        + 'oli sen keskuksia. Mozaffar ad-Din Shah antoi 5. elokuuta 1906 '
-        + 'julistuksen, joka teki maasta perustuslaillisen monarkian, ja '
-        + 'allekirjoitti perustuslain vähän ennen kuolemaansa; teksti on '
-        + 'päivätty 30. joulukuuta 1906. Koozekonani liittyi liikkeeseen '
-        + 'ja oli sen suurimpia rahoittajia; aikalaiset kutsuivat häntä '
-        + 'nimellä Abolmele, kansan isä. Talossa kokoontuivat liikkeen '
-        + 'johtajat, aktivistit ja kannattajat, heidän joukossaan Sattar '
-        + 'Khan ja Bagher Khan, ja samassa talossa painettiin liikkeen '
-        + 'maanalaisia lehtiä.'
+          + 'oli sen keskuksia. Mozaffar ad-Din Shah antoi 5. elokuuta 1906 '
+          + 'julistuksen, joka teki maasta perustuslaillisen monarkian, ja '
+          + 'allekirjoitti perustuslain vähän ennen kuolemaansa; teksti on '
+          + 'päivätty 30. joulukuuta 1906. Koozekonani liittyi liikkeeseen '
+          + 'ja oli sen suurimpia rahoittajia; aikalaiset kutsuivat häntä '
+          + 'nimellä Abolmele, kansan isä. Talossa kokoontuivat liikkeen '
+          + 'johtajat, aktivistit ja kannattajat, heidän joukossaan Sattar '
+          + 'Khan ja Bagher Khan, ja samassa talossa painettiin liikkeen '
+          + 'maanalaisia lehtiä.'
         + '\n\n'
-        + 'Talo merkittiin Iranin kulttuuriperintöluetteloon 1975. '
-        + 'Museossa on esillä vallankumouksellisten veistoksia ja heidän '
-        + 'henkilökohtaisia tavaroitaan: aseita, maanalaisia lehtiä ja '
-        + 'shabnameja eli yökirjeitä, nimettömiä lentolehtisiä, joita '
-        + 'jaettiin salaa. Esillä on myös painokone, jolla lehdet talossa '
-        + 'tehtiin, sekä joukko vallankumouksen aikaisia valokuvia.',
+        + 'Talo merkittiin Iranin kulttuuriperintöluetteloon 1975. Museossa '
+          + 'on esillä vallankumouksellisten veistoksia ja heidän '
+          + 'henkilökohtaisia tavaroitaan: aseita, maanalaisia lehtiä ja '
+          + 'shabnameja eli yökirjeitä, nimettömiä lentolehtisiä, joita '
+          + 'jaettiin salaa. Esillä on myös painokone, jolla lehdet talossa '
+          + 'tehtiin, sekä joukko vallankumouksen aikaisia valokuvia. '
+          + 'Sisäpihalla on lisäksi tykki.',
       kuvat: [
         {
           tiedosto: 'ConstitutionHouseTabrizIran.jpg',
-          selite: 'Talon sisäpihan julkisivu pilvettömän taivaan alla: '
-            + 'ylhäällä viisi kaarta, joiden reunassa on turkoosia '
-            + 'laattaa, ja kaaret lepäävät hoikkien pyöreiden pylväiden '
-            + 'varassa, joissa on tummat lehtikoristeiset kapiteelit. '
-            + 'Kaarten takana on yhtenäinen ikkunaseinä: alhaalla '
-            + 'pieniruutuisia kaari-ikkunoita puukehyksissä, niiden '
-            + 'yläpuolella viuhkakuvioisia puuristikoita. Pylväiden '
-            + 'välissä on takorautakaiteet ja oikealla erillinen '
-            + 'kaari-ikkuna valkoisine verhoineen. Alakerta on vaaleaa '
-            + 'tiiltä kuvioituine muurauksineen ja kaarisyvennyksineen; '
-            + 'siellä seisoo kaksi kullattua miespatsasta ja puiset '
-            + 'kaksoisovet. Pihalla kukkii ruusupensaita, oikealla on '
-            + 'musta tykki puolapyörillä, vasemmassa alanurkassa näkyy '
-            + 'turkoosin altaan reuna ja polulla kulkee kävijöitä.',
+          selite: 'Perustuslakitalon sisäpihan julkisivu: viisi '
+            + 'turkoosilaattaista kaarta lepää hoikkien pylväiden varassa, '
+            + 'ja takana on ikkunaseinä pieniruutuisine kaari-ikkunoineen '
+            + 'ja puuristikoineen. Vaaleatiilisessä alakerrassa seisoo '
+            + 'kaksi kullattua miespatsasta.',
           lahde: 'AmirAK, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mashrute5.jpg',
-          selite: 'Näkymä yläkerran ikkunasta pihalle: ylin ruutu on '
-            + 'värillistä lasia, punaista, vihreää, sinistä ja valkoista '
-            + 'mustien lyijylankojen välissä kukkakuviona, ja sen alla '
-            + 'ovat kirkasruutuiset kaari-ikkunat, joiden kaarenkulmissa '
-            + 'on punaista lasia. Lasin takana avautuu tiilinen sisäpiha: '
-            + 'seinissä matalia kaarisyvennyksiä, puuovi, nuori puu, '
-            + 'kukkapenkkejä ja turkoosi suorakaiteen muotoinen allas. '
-            + 'Keskellä kuvaa nousee vaalea rapattu pylväs, karmiin on '
-            + 'liimattu pieniä valkoisia paperilappuja, ja koko aukkoa '
-            + 'kehystää tumma veistetty puu.',
+          selite: 'Näkymä Perustuslakitalon yläkerran ikkunasta: ylin ruutu '
+            + 'on värillistä lasia, punaista, vihreää, sinistä ja valkoista '
+            + 'lyijylankojen välissä kukkakuviona, alempana kirkasruutuisia '
+            + 'kaari-ikkunoita. Lasin takana avautuu tiilinen sisäpiha '
+            + 'turkooseine altaineen.',
           lahde: 'Amir.fila, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Constitution House, interior1.jpg',
-          selite: 'Kattoikkuna alhaalta katsottuna: valkoiseksi rapattu '
-            + 'neliön muotoinen kuilu, jonka pohjassa on puinen ristikko. '
-            + 'Keskellä on ympyrä neliön sisällä, ja ympyrän täyttää '
-            + 'tiheä kiemurteleva kuviointi, jonka keskipisteessä on '
-            + 'pieni säteittäinen ruusuke; ristikon takaa näkyy '
-            + 'tummansinistä ja vaaleaa lasia. Kuilun sivut on lasitettu '
-            + 'pienillä ruuduilla, joista tulee päivänvalo. Kuvan '
-            + 'neljässä nurkassa on valkoinen pyöreä pylväs, jonka '
-            + 'kapiteeli on koristeltu kipsisin akantuslehdin, ja muu '
-            + 'katto on paljasta ruskeahkoa rappausta.',
+          selite: 'Perustuslakitalon kattoikkuna alhaalta: valkoiseksi '
+            + 'rapatun neliökuilun pohjassa on puinen ristikko, jonka '
+            + 'keskiympyrän täyttävät tiheä kiemurteleva kuviointi ja pieni '
+            + 'säteittäinen ruusuke. Kuilun lasitetut sivut päästävät '
+            + 'päivänvalon sisään.',
           lahde: 'Meisam, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -12194,31 +11942,19 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Arg Alishah4.JPG',
-          selite: 'Jäänne kokonaisuudessaan: leveä tiiliseinämä, jonka läpi '
-            + 'on kaksi korkeaa suippokaarista aukkoa, ja niiden välissä '
-            + 'koko korkeuden nouseva pyöreä muuripaksunnos. Yläreunaa '
-            + 'kiertää metallikaide, ja takana kohoaa korkeampi lohko, '
-            + 'jonka päällä on koppi ja mastoja; ylhäällä kulkee rivi '
-            + 'pieniä kaarisyvennyksiä. Tiilipinnassa on vaaleita '
-            + 'rappauksen jäänteitä, pitkiä halkeamia ja pieniä reikiä. '
-            + 'Vasemman aukon täyttävät telineet ja metalliportaat, '
-            + 'oikeasta näkyy läpi kaupunkia, kaukaisia kukkuloita ja '
-            + 'ihmisiä. Edessä on kivetty käytävä, kuivaa nurmea ja '
-            + 'pensaita, oikeassa laidassa pylväsjulkisivuinen '
-            + 'nykyrakennus.',
+          selite: 'Argista jäljellä oleva muurinpala: leveässä '
+            + 'tiiliseinämässä on kaksi korkeaa suippokaarista aukkoa, ja '
+            + 'niiden välissä nousee koko korkeuden pyöreä muuripaksunnos. '
+            + 'Tiilipinnassa on rappauksen jäänteitä, pitkiä halkeamia ja '
+            + 'pieniä reikiä.',
           lahde: 'Elmju, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Arg of Tabriz 01.jpg',
-          selite: 'Lähikuva muurista: vasemmalla korkea suippokaarinen aukko, '
-            + 'josta näkyy nykyinen Tabriz — tiilitalo kaarevine '
-            + 'ikkunoineen, betonipintaisia rakennuksia, puu, '
-            + 'viuhkakuvioisin ritilöin varustettu aita, valkoisia '
-            + 'työmaa-aitoja ja auto. Oikealla seinässä on umpinainen '
-            + 'suippokaarinen syvennys. Tiilipinnassa on tiheässä pieniä '
-            + 'neliömäisiä reikiä ja vaaleita paikkauksia. Muurin '
-            + 'juurella on kivetty taso, jolla seisoo rivi mustia '
-            + 'valonheittimiä, ja sen alla matala tiilireunus.',
+          selite: 'Argin muuri läheltä: korkeasta suippokaarisesta aukosta '
+            + 'näkyy nykyinen Tabriz taloineen, ja viereisessä seinässä on '
+            + 'umpinainen suippokaarinen syvennys. Tiilipinta on täynnä '
+            + 'pieniä neliömäisiä reikiä ja vaaleita paikkauksia.',
           lahde: 'Valen1988, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12250,33 +11986,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Saat Tower (16722122147).jpg',
-          selite: 'Talon pääjulkisivu edestä: keskeltä kohoaa kellotorni, '
-            + 'jonka kapeat kaari-ikkunat on ladottu pystyriveiksi ja '
-            + 'jonka yläosassa on vaalea kellotaulu roomalaisine '
-            + 'numeroineen. Tornin harjalla on hammaskaide ja neljä '
-            + 'nurkkatornia, keskellä matala vaalea kattokupu ja sen '
-            + 'päällä lipputanko lippuineen. Kellotaulun alapuolella on '
-            + 'parveke, jonka valkoisessa kaiteessa on maljakkoaiheiset '
-            + 'pylväät, ja pääoven yläpuolella kaari-ikkuna säteittäisine '
-            + 'ruoduineen. Molemmin puolin jatkuu kaksikerroksinen '
-            + 'kiviseinä, ja vasemmalla katonharjalla seisoo tumma laite '
-            + 'ohuine mastoineen. Edessä kasvaa havupuita ja lehdettömiä '
-            + 'puita, alareunassa kävelee pari ihmistä, ja taivas on '
-            + 'sininen hajanaisine valkoisine pilvineen.',
+          selite: 'Saat-tornin talo edestä: julkisivun keskeltä kohoaa '
+            + 'kellotorni, jonka kapeat kaari-ikkunat on ladottu '
+            + 'pystyriveiksi ja jonka yläosassa on vaalea kellotaulu '
+            + 'roomalaisine numeroineen. Tornin harjalla on hammaskaide, '
+            + 'neljä nurkkatornia ja matala kattokupu.',
           lahde: 'Frode Ramone from Oslo, Norway, Wikimedia Commons (CC BY 2.0)',
         },
         {
           tiedosto: 'Saat Tower 2016-12.jpg',
-          selite: 'Porrastasanne talon sisällä: kaarevalla valkoisella '
-            + 'seinällä on kolme korkeaa kaari-ikkunaa, joiden lasit ovat '
-            + 'punaisia ja vihreitä — ylhäällä pyörän muotoinen ruusuke, '
-            + 'alempana pystyraidat kirkkaiden ruutujen välissä. Katosta '
-            + 'riippuu ketjussa tumma kristallikruunu. Etualalla kaartuu '
-            + 'kaide, jossa on vaaleita sorvattuja pylväitä ja tumma '
-            + 'puinen käsijohde, ja sen keskellä seisoo iso kivimaljakko '
-            + 'jalustalla. Kaiteen takaa laskeutuvat portaat alempaan '
-            + 'tilaan, jossa kasvaa köynnöksiä; lattia on tummaa kirjavaa '
-            + 'kiveä.',
+          selite: 'Porrastasanne Saat-tornin talon sisällä: kaarevalla '
+            + 'valkoisella seinällä on kolme kaari-ikkunaa punaisine ja '
+            + 'vihreine laseineen, ylimpänä pyörän muotoinen ruusuke. '
+            + 'Tasanteen reunassa on kaide, jossa on vaaleita sorvattuja '
+            + 'pylväitä ja tumma puinen käsijohde.',
           lahde: 'AmirAK, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12314,45 +12037,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Azerbaijan Museum, Tabriz, Iran, and stone lions in entrance.jpg',
-          selite: 'Museon julkisivu vaaleanruskeaa tiiltä: koko etusivun '
-            + 'levyinen syvä kaarisyvennys, jonka takaseinässä on '
-            + 'korkealla suippokaarinen ikkuna puuritilöineen ja sen alla '
-            + 'pienempi suippokaariportti. Portin puisessa kaarikentässä '
-            + 'on museon nimi persialaisin kirjaimin ja sen alla '
-            + 'AZARBAIJAN MUSEUM latinalaisin; alakulmissa on pientä '
-            + 'tekstiä ja vuosiluku. Kaksilehtisestä puuovesta toinen '
-            + 'puolisko on auki ja sisällä näkyy hämärää salia. Oven '
-            + 'kummallakin puolella seisoo matalalla jalustalla kulunut '
-            + 'vaalea kivieläin. Ovelle nousee kiviportaat, vasemmalla '
-            + 'seinässä on valvontakamera, ja kuvan yläreunaan roikkuu '
-            + 'puun lehviä.',
+          selite: 'Azerbaidžanin museon tiilijulkisivu: kaarisyvennyksen '
+            + 'takaseinässä on suippokaarinen ikkuna puuritilöineen ja sen '
+            + 'alla portti, jonka kaarikentässä on museon nimi persialaisin '
+            + 'kirjaimin ja alla AZARBAIJAN MUSEUM. Ovea reunustaa kaksi '
+            + 'kulunutta kivieläintä.',
           lahde: 'Navid Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Azerbaijan Museum, Tabriz, Iran, 1st. floor.jpg',
-          selite: 'Pitkä näyttelysali: lattiassa on parkettia pienten '
-            + 'ruutujen kuviona, katossa tummia puurimoja ja upotettuja '
-            + 'kohdevaloja. Keskellä seisoo rivi vapaita lasivitriinejä '
-            + 'mustilla jalustoilla ja oikealla seinustalla toinen rivi; '
-            + 'vitriineissä on muun muassa tummia savikulhoja punaisella '
-            + 'kankaalla. Vasemmalla on verhotut ikkunat, seinässä '
+          selite: 'Museon pitkä näyttelysali: vapaita lasivitriinejä seisoo '
+            + 'mustilla jalustoilla kahdessa rivissä, ja niissä on muun '
+            + 'muassa tummia savikulhoja punaisella kankaalla. Seinässä on '
             + 'punertava kohokuvapaneeli, jossa on kaariporttinen '
-            + 'julkisivu, ja sen alla ilmastointilaite. Sali päättyy '
-            + 'valoisaan oviaukkoon, jonka edessä on matala penkki.',
+            + 'julkisivu.',
           lahde: 'Navid Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Detail of Anxiety - Sculpture by Ahad Hosseini - Azerbaijan Museum - Tabriz - Iranian Azerbaijan - Iran (7421593886).jpg',
-          selite: 'Ahad Hosseinin veistosryhmä museon salissa: vasemmalta '
-            + 'työntyy kolme suomupintaista lohikäärmeen kaulaa, kidat '
-            + 'auki ja hampaat näkyvissä. Oikealla on tiivis ihmisjoukko '
-            + '— yksi konttaa etualalla, toiset nostavat käsiään, '
-            + 'lakkipäinen hahmo heiluttaa keppiä, ja joukko jatkuu '
-            + 'taakse kauas. Hahmot ovat ruskeanharmaita kullanhohtoisin '
-            + 'kohokohdin ja seisovat karkealla harmaalla alustalla. '
-            + 'Taustalla on valkoisia pilareita, upotettuja kattovaloja, '
-            + 'parkettilattia ja oviaukkoja; vasemmassa reunassa näkyy '
-            + 'köysiaidan tolppa.',
+          selite: 'Ahad Hosseinin ruskeanharmaa veistosryhmä museon '
+            + 'salissa: kolme suomupintaista lohikäärmeen kaulaa työntyy '
+            + 'kidat auki, ja vieressä on tiivis ihmisjoukko, jossa yksi '
+            + 'konttaa, toiset nostavat käsiään ja yksi heiluttaa keppiä. '
+            + 'Kohokohdat hohtavat kullalta.',
           lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
@@ -12390,44 +12097,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tabriz Blue Mosque, northern view (entrance, in 2023).jpg',
-          selite: 'Pohjoisjulkisivu lumisena päivänä: keskellä kohoaa korkea '
-            + 'kärjekäs sisäänkäyntiholvi, jonka pinnassa on jäljellä '
-            + 'laikkuja tummansinistä laattaa, muualla on paljasta '
-            + 'tiiltä. Holvin suulla seisoo keltainen työteline, ja sen '
-            + 'takaa näkyy lumen peittämä kupoli. Julkisivun molemmilla '
-            + 'puolilla ulottuu matala tiilimuuri, joka päättyy pyöreään '
-            + 'nurkkatorniin, ja muurin takaa pilkistää kaksi pienempää '
-            + 'kupolia. Etualalla laskeutuu portaita puistoon, jossa on '
-            + 'puisia istutuslaatikoita, penkkejä ja lumen peittämä '
-            + 'käytävä; vasemmalla kävelee yksinäinen ihminen, oikealla '
-            + 'seisoo lehdetön puu ja reunoilla näkyy kaupungin taloja.',
+          selite: 'Sinisen moskeijan pohjoisjulkisivu lumessa: korkean '
+            + 'kärjekkään sisäänkäyntiholvin pinnassa on jäljellä vain '
+            + 'laikkuja tummansinistä laattaa, muualla paljasta tiiltä. Sen '
+            + 'takaa kohoaa lumen peittämä kupoli, ja sivuille jatkuu '
+            + 'matala tiilimuuri nurkkatorneineen.',
           lahde: 'Ahad Nejad Ebrahimi, Aylar Javadpour, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Portico of Blue (Kabud) Mosque - Tabriz - Iranian Azerbaijan - Iran (7421677298).jpg',
-          selite: 'Sisäänkäyntiholvin laatoitus jyrkästi alaviistosta '
-            + 'kuvattuna, taustalla pilvetön taivas. Tummansinistä pohjaa '
-            + 'peittää tiheä vaaleansininen ja kullanruskea kasviköynnös, '
-            + 'ja sen poikki kulkee leveä nauha valkoista kaarevaa '
-            + 'kalligrafiaa sinisellä pohjalla. Alanurkassa kaartuu '
-            + 'kennomainen muqarnas-puolikupu ja holvin reunassa juoksee '
-            + 'kierteinen pylväslista. Laatoituksesta puuttuu suuria '
-            + 'aloja, joiden kohdalla näkyy sileä vaalea rappauspinta.',
+          selite: 'Sinisen moskeijan sisäänkäyntiholvin laatoitusta: '
+            + 'tummansinistä pohjaa peittää vaaleansininen ja kullanruskea '
+            + 'kasviköynnös, jonka poikki kulkee nauha valkoista '
+            + 'kalligrafiaa. Alaosassa on kennomainen muqarnas-puolikupu, '
+            + 'ja laatoitusta puuttuu laajalti.',
           lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
           tiedosto: 'Interior of Blue Mosque, Tabriz, Iran.jpg',
-          selite: 'Pääsali laajakulmasta: yläpuolella kaartuu paljas '
-            + 'tiilikupoli ilman laatoitusta, ja sen alla avautuu joka '
-            + 'suuntaan kärjekkäitä holvikaaria. Pilarien ja alaseinien '
-            + 'laatoituksessa on sinistä, turkoosia ja valkoista '
-            + 'geometrista ruudustoa, kasvikuvioita ja kirjoitusnauhoja, '
-            + 'ja välissä on laajoja aukkoja, joista laatta puuttuu. '
-            + 'Keskellä johtaa holvattu aukko pieneen tiilipintaiseen '
-            + 'tilaan, jossa on ikkuna ja puiset portaat. Lattian peittää '
-            + 'turkoosi rukousmatto toistuvine kuvioineen, pilareissa on '
-            + 'kohdevalot, oikealla riippuu ruskea verho ja vasemmassa '
-            + 'alakulmassa on valokuvaajan vaalea nimimerkki.',
+          selite: 'Sinisen moskeijan pääsali: yläpuolella kaartuu '
+            + 'laatoittamaton tiilikupoli ja sen alla kärjekkäitä '
+            + 'holvikaaria. Pilarien ja seinien laatoituksessa on sinistä, '
+            + 'turkoosia ja valkoista geometriaa, kasvikuvioita ja '
+            + 'kirjoitusnauhoja, ja laattaa puuttuu laajalti.',
           lahde: 'Navid Alizadeh Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12474,61 +12166,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'بازار تهران 2.jpg',
-          selite: 'Kadkhodan kuja: pitkä käytävä, jonka kattona on '
-            + 'peräkkäisiä tiiliholveja, ja niiden alla palaa pyöreitä '
-            + 'kattolamppuja sekä yksi katulampun mallinen valaisin. '
-            + 'Sähkökaapeleita kulkee pitkin seiniä. Oikean seinän '
-            + 'rappauksessa on tummansininen emalikilpi, jossa lukee '
-            + 'persiaksi كوچه كدخدا ja sen alla latinalaisin kirjaimin '
-            + 'KADKHODA ALLEY; kilven alapuolella on musta valvontakamera '
-            + 'ja kaksi tiiliseinään liimattua paperi-ilmoitusta. '
-            + 'Vasemmalla riippuu telineessä housuja ja t-paitoja, ja '
-            + 'niiden yläpuolella on kaakeloitu kalligrafiakyltti '
-            + 'kukkakuvioisessa kehyksessä; oikealla myymälän ikkunan '
-            + 'takana on punaista kangastavaraa ristikon takana. '
-            + 'Etualalla kaksi vaaleapaitaista miestä seisoo selin, '
-            + 'keskeltä kävelee kameraa kohti puhelintaan katsova nuori '
-            + 'mies mustassa paidassa, ja poispäin loittonee joukko: '
-            + 'vihreäpaitainen mies, huivipäisiä naisia käsilaukkuineen '
-            + 'ja vaaleansiniseen paitaan pukeutunut poika.',
+          selite: 'Kadkhodan kuja, yksi basaarin nimetyistä käytävistä: '
+            + 'kattona peräkkäisiä tiiliholveja ja niiden alla pyöreitä '
+            + 'kattolamppuja. Seinän tummansinisessä emalikilvessä lukee '
+            + 'كوچه كدخدا ja KADKHODA ALLEY. Kujan myymälöissä riippuu '
+            + 'vaatteita ja kangastavaraa.',
           lahde: 'Hamidreza Hasani, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Tehran farsh bazar.jpg',
-          selite: 'Mattojen osa iltavalaistuksessa: keskellä on korkea pino '
-            + 'litteäksi taiteltuja mattoja, punaisia ja vaaleita '
-            + 'medaljonkikuvioita, ja hapsut roikkuvat reunan yli; '
-            + 'oikealla on toinen pino ja lattialla käärittyjä mattoja. '
-            + 'Ruskeaan tikkitakkiin pukeutunut mies seisoo pinon päällä '
-            + 'kumartuneena, ja pinon vasemmalla puolella kaksi miestä '
-            + 'nostaa ylintä mattoa. Taustalla on kirkkaasti valaistuja '
-            + 'myymälöitä, joiden seinät on peitetty kuviollisilla '
-            + 'matoilla, sekä yläkerran parveke mustine kaiteineen; '
-            + 'ylhäällä vasemmalla loistaa valkoinen valokyltti, jossa on '
-            + 'punainen kukkalogo ja persiankielistä tekstiä. Vasemmalla '
-            + 'lasioven takana seisoo mies harmaissa työvaatteissa ja '
-            + 'hänen takanaan istuu kaksi ihmistä hämärässä, vasemmassa '
-            + 'reunassa seisoo tummapukuinen mies ja oikeassa reunassa '
-            + 'kaksi miestä, joista toisella on neulottu pipo. Lattialla '
-            + 'on suojakankaita ja matalia metallitelineitä.',
+          selite: 'Basaarin mattojen osa iltavalaistuksessa: keskellä '
+            + 'korkea pino litteäksi taiteltuja mattoja punaisine ja '
+            + 'vaaleine medaljonkikuvioineen, ja mies seisoo pinon päällä '
+            + 'kahden muun nostaessa ylintä mattoa. Myymälöiden seinät on '
+            + 'peitetty kuviollisilla matoilla.',
           lahde: 'Fabienkhan, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
           tiedosto: 'Mosquée du Shah, Téhéran (2).jpg',
-          selite: 'Shaahin moskeijan yläosa pilvettömän sinisen taivaan alla: '
-            + 'kaksi pyöreää minareettia, joiden kyljet on peitetty '
-            + 'kelta-, turkoosi- ja sinikuvioisilla laatoilla '
-            + 'vinoraidoiksi ladottuina, ja kummankin huipulla on ruskea '
-            + 'puinen kaarikatos ja sen päällä nuppimainen huippu. '
-            + 'Minareettien välissä nousee kellotorni: kaakeloidussa '
-            + 'rungossa on kolme korkeaa suippokaarta, niiden yllä '
-            + 'parveke metallikaiteineen ja kalligrafianauhoineen, sitten '
-            + 'vaaleanturkoosi kellotaulu, jossa tunnit on merkitty '
-            + 'mustilla kiiloilla ilman numeroita, ja päällä leveä tumma '
-            + 'katos. Kellotornin ympärillä seisoo ruosteisia '
-            + 'metallitelineitä. Alareunassa näkyy tiilijulkisivun '
-            + 'yläreuna ja sen sinikeltainen laattakehys, ja oikeassa '
-            + 'laidassa on muutama valkoinen pilvi.',
+          selite: 'Shaahin moskeijan yläosa: kahden pyöreän minareetin '
+            + 'kyljet on ladottu kelta-, turkoosi- ja sinilaatoista '
+            + 'vinoraidoiksi, ja huipulla on puinen kaarikatos. Välissä '
+            + 'nousee kaakeloitu kellotorni, jonka kellotaulussa tunnit on '
+            + 'merkitty kiiloilla ilman numeroita.',
           lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12537,69 +12197,49 @@ export const NAHTAVYYSJUTUT = {
     'Golestanin palatsi': {
       aika: '1865',
       teksti: 'Naser al-Din Shah halusi pääkaupunkiinsa talon, joka '
-        + 'kilpailisi Isfahanin Ali Qapun kanssa: korkean rakennuksen, '
-        + 'jonka katolta hän näkisi koko Teheranin. Työ alkoi hänen '
-        + 'käskystään 1865 ja valmistui kahdessa vuodessa. '
-        + 'Shams-ol-Emareh eli auringon rakennus on 35 metriä korkea, '
-        + 'siinä on viisi kerrosta ja kaksi samanmuotoista tornia. Se oli '
-        + 'valmistuessaan Teheranin korkein rakennus. Suunnittelijana '
-        + 'mainitaan Moayer ol-Mamalek ja arkkitehtina Ali Mohammed '
-        + 'Kashi.'
+          + 'kilpailisi Isfahanin Ali Qapun kanssa: korkean rakennuksen, '
+          + 'jonka katolta hän näkisi koko Teheranin. Työ alkoi hänen '
+          + 'käskystään 1865 ja valmistui kahdessa vuodessa. '
+          + 'Shams-ol-Emareh eli auringon rakennus on 35 metriä korkea, '
+          + 'siinä on viisi kerrosta ja kaksi samanmuotoista tornia. Se oli '
+          + 'valmistuessaan Teheranin korkein rakennus. Suunnittelijana '
+          + 'mainitaan Moayer ol-Mamalek ja arkkitehtina Ali Mohammed '
+          + 'Kashi. Kuistin alla kulkee kaakelipaneeli, jossa seisoo rivi '
+          + 'tummiin takkeihin ja päähineisiin puettuja hahmoja.'
         + '\n\n'
         + 'Se oli myös ensimmäinen talo kaupungissa, jonka rakenteissa '
-        + 'käytettiin metallia: ylempien kerrosten pylväät ovat kaikki '
-        + 'valurautaa. Shaahi vei vieraansa katolle katsomaan '
-        + 'pääkaupunkia. Qajar-ministerit pitivät talossa istuntonsa ja '
-        + 'kulkivat yhdestä tietystä ovesta, jonka eteen pääministerin '
-        + 'vaunut seitsemine vartijoineen pysähtyivät; siitä nimi '
-        + 'ministerien ovi. Se on ainoa ovi, jonka qajar-ajan julkisivu '
-        + 'on tallella.'
+          + 'käytettiin metallia: ylempien kerrosten pylväät ovat kaikki '
+          + 'valurautaa. Shaahi vei vieraansa katolle katsomaan '
+          + 'pääkaupunkia. Qajar-ministerit pitivät talossa istuntonsa ja '
+          + 'kulkivat yhdestä tietystä ovesta, jonka eteen pääministerin '
+          + 'vaunut seitsemine vartijoineen pysähtyivät; siitä nimi '
+          + 'ministerien ovi. Se on ainoa ovi, jonka qajar-ajan julkisivu '
+          + 'on tallella.'
         + '\n\n'
-        + 'Katolle asennettiin kello, jonka Britannian kuningatar '
-        + 'Viktoria lahjoitti Naser al-Din Shahille. Sen tehtävä oli '
-        + 'kertoa tuolloin pienen Teheranin asukkaille paikallinen aika. '
-        + 'Lyönti oli kova ja palatsin asukkaat valittivat siitä, joten '
-        + 'shaahi määräsi äänen vaimennettavaksi. Kelloon tehty työ ei '
-        + 'auttanut, ja kello vaikeni. Se oli hiljaa yli sata vuotta, ja '
-        + 'lyönti kuului taas 12. marraskuuta 2012.',
+        + 'Katolle asennettiin kello, jonka Britannian kuningatar Viktoria '
+          + 'lahjoitti Naser al-Din Shahille. Sen tehtävä oli kertoa '
+          + 'tuolloin pienen Teheranin asukkaille paikallinen aika. Lyönti '
+          + 'oli kova ja palatsin asukkaat valittivat siitä, joten shaahi '
+          + 'määräsi äänen vaimennettavaksi. Kelloon tehty työ ei auttanut, '
+          + 'ja kello vaikeni. Se oli hiljaa yli sata vuotta, ja lyönti '
+          + 'kuului taas 12. marraskuuta 2012.',
       kuvat: [
         {
           tiedosto: 'Palacio de Golestán, Teherán, Irán, 2016-09-17, DD 15-19 PAN.jpg',
           selite: 'Shams-ol-Emarehin julkisivu palatsin pihalta: keskellä '
-            + 'avoin kuisti, jota kannattaa neljä pylvästä ja jonka '
-            + 'takaseinä ja katto ovat kauttaaltaan peililasia; keskellä '
-            + 'on kaariovi ja sen sivuilla kaksi pienempää. Kuistin alla '
-            + 'kulkee kaakelipaneeli, jossa seisoo vihreällä pohjalla '
-            + 'rivi tummiin takkeihin ja päähineisiin puettuja hahmoja. '
-            + 'Molemmin puolin on korkea kaarisyvennys ja sen alla tumma '
-            + 'ovi, ja kaarien yläpuolella keltainen leijona turkoosilla '
-            + 'kaakelikentällä. Takaa nousee kaksi samanmuotoista tornia, '
-            + 'joissa on kaksi kerrosta kaari-ikkunoita ja parvekkeita, '
-            + 'ja tornien välissä pieni nelikulmainen kellotorni '
-            + 'valkoisine kellotauluineen; kattoterassia kiertää musta '
-            + 'metallikaide. Julkisivua vasten nojaa molemmin puolin '
-            + 'vinoja tankoja. Vasemmalla jatkuu pitkä kaarikäytävä, '
-            + 'jonka edessä kävelee kaksi ihmistä ja seinustalla istuu '
-            + 'yksi, oikealla näkyy turkoosikuvioinen minareetti ja '
-            + 'aukiolla liikkuu kävijöitä.',
+            + 'on kuisti, jonka takaseinä ja katto ovat peililasia, '
+            + 'molemmin puolin korkea kaarisyvennys ja sen yllä keltainen '
+            + 'leijona turkoosilla kaakelikentällä. Takaa nousee kaksi '
+            + 'tornia ja niiden välissä kellotorni.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Shams ol Emareh Building01.jpg',
-          selite: 'Tornit alaviistosta sinistä taivasta ja hajanaisia pilviä '
-            + 'vasten. Etummaisessa tornissa on kaksi kerrosta avoimia '
-            + 'parvekkeita, kummassakin kolme hoikkaa pylvästä: ylemmässä '
-            + 'ne on maalattu keltaisiksi, alemmassa oransseiksi, ja '
-            + 'kaiteet ovat tummaa ristikkometallia. Tornin huipulla on '
-            + 'avoin kattokoju leveän tumman räystään alla ja ohut '
-            + 'mastopiikki. Seinät on peitetty sinisin ja keltaisin '
-            + 'kukkakaakelein, ikkunoiden kaarissa on turkoosia '
-            + 'ristikkoa, ja alempana kaakelikentässä seisoo keltainen '
-            + 'leijona, jonka takaa nousee säteilevä aurinko. Vasemmassa '
-            + 'alanurkassa näkyy kuistin pylväikkö, oikealla vaalea '
-            + 'kivijulkisivu kaari-ikkunoineen ja sen seinällä riippuvia '
-            + 'kaapeleita; tornin kyljessä on ilmastointilaite. '
-            + 'Vasemmasta yläkulmasta työntyy kuvaan puun oksia.',
+          selite: 'Shams-ol-Emarehin tornit: kaksi kerrosta parvekkeita, '
+            + 'joiden hoikat pylväät on maalattu keltaisiksi ja '
+            + 'oransseiksi, ja huipulla avoin kattokoju. Seinien sinisissä '
+            + 'ja keltaisissa kukkakaakeleissa seisoo keltainen leijona, '
+            + 'jonka takaa nousee säteilevä aurinko.',
           lahde: 'Maziar Abidian, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12637,35 +12277,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Dar ul-Funun Courtyard 20120326-112041.jpg',
-          selite: 'Koulun sisäpiha: kaksikerroksinen vaaleantiilinen siipi, '
-            + 'jonka yläkerrassa on pitkä rivi suippokaarisia '
-            + 'syvennysikkunoita ja alakerrassa suorakulmaisia ikkunoita, '
-            + 'ja ovien yläpuolella on sinisiä kylttejä. Pihalla kasvaa '
-            + 'korkeita mäntyjä ja lehdettömiä puita, yksi valkoisena '
-            + 'kukkiva pensas, leikattuja pensasaitoja ja nurmikkoa. '
-            + 'Kivetty polku johtaa keskellä olevalle kuivalle '
-            + 'kahdeksankulmaiselle altaalle, jonka pohjalla seisoo yksi '
-            + 'ihminen työvälineen kanssa; oikealla vihreällä penkillä '
-            + 'istuu kaksi ihmistä, joista toisella on vaaleanpunainen '
-            + 'takki. Lipputangossa liehuu vihreä-valko-punainen lippu, '
-            + 'ja rakennuksen takana kohoaa korkea nykyaikainen '
-            + 'toimistotalo.',
+          selite: 'Dar al-Fonunin sisäpiha: kaksikerroksisen '
+            + 'vaaleantiilisen siiven yläkerrassa on pitkä rivi '
+            + 'suippokaarisia syvennysikkunoita ja alakerrassa '
+            + 'suorakulmaisia ikkunoita. Pihalla kasvaa korkeita mäntyjä ja '
+            + 'pensasaitoja, ja polku johtaa kahdeksankulmaiselle altaalle.',
           lahde: 'Sanaei Mehdi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'سر در ورودی دارالفنون.jpg',
-          selite: 'Sisäänkäyntiportin holvi alaviistosta kuvattuna: kaaren '
-            + 'sisäpinta on peitetty laatoilla, joissa on '
-            + 'kahdeksansakaraisia tähtiä, geometrista verkkoa ja '
-            + 'turkooseja kasvikuvioita, ja keskeltä laskeutuu '
-            + 'kennomainen muqarnas-kuvio. Kaaren alla on puinen '
-            + 'ikkunaristikko, jonka tähtikuvion aukoissa on sinisiä, '
-            + 'vihreitä ja punaisia laseja. Alimpana on kobolttisininen '
-            + 'laattapaneeli, jossa lukee valkoisella kalligrafialla Dar '
-            + 'al-Fonun ja sen alla pienemmällä vuosiluku 1268 hijri. '
-            + 'Paneelin reunoja kiertää vaaleapohjainen kukkakuvio, '
-            + 'ympärillä on paljasta vaaleaa tiiltä, ja ylänurkissa näkyy '
-            + 'kaksi kennokoristeista pilarinpäätä.',
+          selite: 'Dar al-Fonunin portin holvi: kaaren sisäpinta on '
+            + 'laatoitettu kahdeksansakaraisin tähdin ja turkoosein '
+            + 'kasvikuvioin, ja keskeltä laskeutuu kennomainen muqarnas. '
+            + 'Kobolttisinisessä laattapaneelissa lukee kalligrafialla Dar '
+            + 'al-Fonun ja alla vuosiluku 1268 hijri.',
           lahde: 'Ania Mardrosyan, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12703,50 +12328,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'National museum of Iran, Tehran (2024).jpg',
-          selite: 'Muinaisen Iranin museon julkisivu edestä: punertavaa '
-            + 'tiiltä, ja keskellä koko seinän korkuinen kaarisyvennys, '
-            + 'jonka kaari on ladottu sisäkkäisiksi renkaiksi ja jonka '
-            + 'ulkoreunaa kiertää hammastettu tiilirivi. Kaaren molemmin '
-            + 'puolin nousee pystyjä puolipylväitä, joissa vuorottelevat '
-            + 'sileät ja porrastetut tiilikerrokset, ja katon reunassa '
-            + 'kulkee punainen nauha. Holvin sisällä riippuu ketjussa '
-            + 'yksi lyhty, ja perällä on tumma kaksilehtinen ovi, sen '
-            + 'yllä pieni kaari ja tumma laattavyö. Ovelle nousevat '
-            + 'leveät portaat, mutta koko edusta on aidattu '
-            + 'mustanvihreällä ristikkoaidalla ja suljetulla '
-            + 'kaksoisportilla. Vasemmalla kasvaa sypressi, ja etualalla '
-            + 'on laattakiveystä.',
+          selite: 'Muinaisen Iranin museon julkisivu punertavaa tiiltä: '
+            + 'keskellä on koko seinän korkuinen kaarisyvennys, jonka kaari '
+            + 'on ladottu sisäkkäisiksi renkaiksi. Kaaren molemmin puolin '
+            + 'nousee puolipylväitä, ja holvin perällä on tumma '
+            + 'kaksilehtinen ovi leveine portaineen.',
           lahde: 'Parsa 2au, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'The Islamic Museum Of National Museum of Iran Darafsh (05).jpg',
           selite: 'Islamilaisen ajan museon sisäänkäynti: vaaleaa '
-            + 'travertiinia oleva julkisivu, jonka keskellä on kaksi '
-            + 'kiillotettua tummanharmaata kivipilaria ja niiden välissä '
-            + 'kapea, koko korkeuden mittainen ruudukkoikkuna. Ikkunan '
-            + 'puolivälissä on museon nimi kullanvärisin persialaisin '
-            + 'kirjaimin. Alhaalla on lasiovi metallikehyksessä, ja sen '
-            + 'eteen laskeutuvat leveät portaat; portaiden kummallakin '
-            + 'puolella on kaksi palmua ruukussa. Matalammissa '
-            + 'sivusiivissä on pieniä neliöikkunoita, katon reunassa '
-            + 'näkyy pieni pallo tangon päässä, oikealla kohoaa sypressi, '
-            + 'ja taivas on pilvetön.',
+            + 'travertiinia olevan julkisivun keskellä kaksi kiillotettua '
+            + 'tummanharmaata kivipilaria kehystää koko korkeuden mittaista '
+            + 'ruudukkoikkunaa. Ikkunan puolivälissä on museon nimi '
+            + 'kullanvärisin persialaisin kirjaimin.',
           lahde: 'Darafsh, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Musée de l\'Ère Islamique, Téhéran (2).jpg',
-          selite: 'Islamilaisen ajan museon pääsali: kiiltävä ruskea '
-            + 'parkettilattia, jonka keskellä on valaistuista '
-            + 'lasiruuduista ladottu matala koroke ja sen päällä '
-            + 'valkoisessa kehyksessä pystyssä oleva vaalea kivilaatta, '
-            + 'jonka pinta on täynnä kaiverrettua kalligrafiaa. Salia '
-            + 'kiertää parvi, jonka kaidepinta on yhtenäistä koholla '
-            + 'olevaa beigeä kalligrafianauhaa. Seinustoilla on '
-            + 'mustapintaisia näyttelypöytiä ja matalia vitriinejä, '
-            + 'perällä seinässä pitkä vaakasuora kaiverrettu paneeli, '
-            + 'katossa kohdevaloja ja keskellä suuri valaistu kaukalo. '
-            + 'Perällä kävelee vaaleansiniseen paitaan pukeutunut mies ja '
-            + 'oikealla seisoo toinen kävijä vitriinin äärellä.',
+          selite: 'Islamilaisen ajan museon pääsali: keskellä valaistuista '
+            + 'lasiruuduista ladotulla korokkeella seisoo pystyssä vaalea '
+            + 'kivilaatta, jonka pinta on täynnä kaiverrettua kalligrafiaa. '
+            + 'Salia kiertävän parven kaide on yhtenäistä koholla olevaa '
+            + 'kalligrafianauhaa.',
           lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12755,94 +12359,59 @@ export const NAHTAVYYSJUTUT = {
     'Masoudiehin talo': {
       aika: '1878',
       teksti: 'Talon rakennutti Mas\'ud Mirza Zell-e Soltan, Naser al-Din '
-        + 'Shahin vanhin poika ja Isfahanin kuvernööri vuosina 1872–1907; '
-        + 'shaahiksi hän ei voinut nousta, koska hänen äitinsä ei ollut '
-        + 'qajar-sukua. Rakennus valmistui vuonna 1878 Baharestanin '
-        + 'aukion laidalle, ja rakentajaksi mainitaan Reza Qoli Khan, '
-        + 'lisänimeltään Siraj al-Mulk. Tonttia on noin 4 000 '
-        + 'neliömetriä. Talo jakautuu qajar-tapaan ulko-osaan eli '
-        + 'divanhuoneeseen ja sisäosaan, ja näiden lisäksi on '
-        + 'sivurakennuksia. Tyyliksi merkitään qajar-ajan uusbarokki.'
+          + 'Shahin vanhin poika ja Isfahanin kuvernööri vuosina 1872–1907; '
+          + 'shaahiksi hän ei voinut nousta, koska hänen äitinsä ei ollut '
+          + 'qajar-sukua. Rakennus valmistui vuonna 1878 Baharestanin '
+          + 'aukion laidalle, ja rakentajaksi mainitaan Reza Qoli Khan, '
+          + 'lisänimeltään Siraj al-Mulk. Tonttia on noin 4 000 '
+          + 'neliömetriä. Talo jakautuu qajar-tapaan ulko-osaan eli '
+          + 'divanhuoneeseen ja sisäosaan, ja näiden lisäksi on '
+          + 'sivurakennuksia. Tyyliksi merkitään qajar-ajan uusbarokki. '
+          + 'Julkisivujen koristeluun kuuluu myös turkoosinvihreää '
+          + 'reikälaattaa, ja keskeltä nousevassa kaarevassa päätykentässä '
+          + 'on persiankielinen kirjoituslaatta.'
         + '\n\n'
         + 'Talo on ollut monessa käytössä. Sekä Iranin ensimmäinen '
-        + 'kansalliskirjasto että ensimmäinen kansallismuseo mainitaan '
-        + 'perustetuiksi tähän taloon. Museon alkukokoelma — 270 '
-        + 'esinettä, muun muassa keramiikkaa, lasia, kolikoita, '
-        + 'sinettejä, vanhoja aseita ja tekstiilejä — oli kuitenkin '
-        + 'koottu yhteen huoneeseen opetusministeriössä Dar al-Fonunin '
-        + 'koulun pohjoispuolella, ja se siirrettiin Masoudiehiin vasta '
-        + 'vuonna 1925. Myöhemmin talo luovutettiin opetusministeriölle, '
-        + 'ja vuosina 1963–1964 siinä toimi sotilasopisto.'
+          + 'kansalliskirjasto että ensimmäinen kansallismuseo mainitaan '
+          + 'perustetuiksi tähän taloon. Museon alkukokoelma — 270 '
+          + 'esinettä, muun muassa keramiikkaa, lasia, kolikoita, '
+          + 'sinettejä, vanhoja aseita ja tekstiilejä — oli kuitenkin '
+          + 'koottu yhteen huoneeseen opetusministeriössä Dar al-Fonunin '
+          + 'koulun pohjoispuolella, ja se siirrettiin Masoudiehiin vasta '
+          + 'vuonna 1925. Myöhemmin talo luovutettiin opetusministeriölle, '
+          + 'ja vuosina 1963–1964 siinä toimi sotilasopisto.'
         + '\n\n'
-        + 'Maaliskuun 1. päivänä 1998 rakennus annettiin Iranin '
-        + 'kansallisen kulttuuriperinnön seuralle, ja 17. tammikuuta 1999 '
-        + 'se merkittiin Iranin kansalliseen kulttuuriperintöluetteloon '
-        + 'numerolla 2190. Vuosina 2011–2013 arkeologi Naser Norouzadeh '
-        + 'Chegini tutki tontin qajar-kautisia jäänteitä.',
+        + 'Maaliskuun 1. päivänä 1998 rakennus annettiin Iranin kansallisen '
+          + 'kulttuuriperinnön seuralle, ja 17. tammikuuta 1999 se '
+          + 'merkittiin Iranin kansalliseen kulttuuriperintöluetteloon '
+          + 'numerolla 2190. Vuosina 2011–2013 arkeologi Naser Norouzadeh '
+          + 'Chegini tutki tontin qajar-kautisia jäänteitä.',
       kuvat: [
         {
           tiedosto: '2018-12-31 Iran, Tehran, Masoudieh Palace.jpg',
-          selite: 'Päärakennus vinosti mukulakivipihalta: kaksikerroksinen '
-            + 'vaaleanruskea tiilitalo, jonka yläkerran korkeat '
-            + 'suippokaari-ikkunat ovat ruskeaa puuta ja joiden yläosassa '
-            + 'on kukka-aiheista ristikkoa; vasemmanpuoleisimmassa '
-            + 'ikkunassa on värillistä lasia ja yksi aukko on peitetty '
-            + 'harmaalla suojalla. Ikkunoiden välissä ja yläpuolella on '
-            + 'vihreitä ja punaruskeita laattakenttiä, joissa on tiheää '
-            + 'kasvikuviota ja vinoneliön sisään asetettuja valkoisia '
-            + 'ruusukkeita. Räystäslista on maalattu vihreäksi, ja '
-            + 'keskeltä nousee kaareva päätykenttä, jonka laatoituksessa '
-            + 'on pyöreä ruusuke ja sen alla persiankielinen '
-            + 'kirjoituslaatta. Keskellä työntyy esiin kuisti, jossa '
-            + 'parittain asetetut kiviset pylväät jalustoineen '
-            + 'kannattavat pyöreitä kaaria ja pyöreistä kohokuvioista '
-            + 'koottua vyötä; kuistin takana on suippokaarinen oviaukko '
-            + 'ja veistetty kaksilehtinen puuovi. Alakerrassa on rivi '
-            + 'kaarisyvennyksiä, joissa on kipsikoristelua ja ruskeat '
-            + 'puuovet. Oikealla siipi jatkuu pylväsjulkisivuna, '
-            + 'taustalla näkyy nykyrakennuksia ja ristikkomasto, ja '
-            + 'vasemmassa alanurkassa on tummanvihreä jäteastia.',
+          selite: 'Masoudiehin talon päärakennus: kaksikerroksisen '
+            + 'tiilitalon yläkerran korkeita suippokaari-ikkunoita '
+            + 'ympäröivät vihreät ja punaruskeat kasvikuviolaatat. Keskeltä '
+            + 'työntyy esiin kuisti, jonka parittain asetetut kivipylväät '
+            + 'kannattavat pyöreitä kaaria.',
           lahde: 'Laurens R. Krol, Wikimedia Commons (CC BY 4.0)',
         },
         {
           tiedosto: 'Mansión Masoudieh, Teherán, Irán, 2016-09-17, DD 58.jpg',
-          selite: 'Sisäpiha altaan takaa: etualalla on suuri pyöreäpäätyinen '
-            + 'vesiallas, jonka vihertävästä pinnasta rakennus heijastuu '
-            + 'kokonaisena. Altaan takana on paviljonki, jonka hoikat '
-            + 'vaaleat pylväät päättyvät lehtikoristeisiin kapiteeleihin '
-            + 'ja kannattavat tasakattoa; pylväiden välissä on korkeita '
-            + 'kaari-ikkunoita oranssinruskeissa puukarmeissa, '
-            + 'kaarikentät on täytetty tiheällä ristikolla ja seinäpinnat '
-            + 'ovat veistettyä vaaleaa kipsiä. Jalustassa on '
-            + 'turkoosinvihreää reikälaattaa ja terassin reunassa rivi '
-            + 'pyöreitä kohokuvioita. Molemmin puolin jatkuu '
-            + 'vaaleankeltainen tiiliarkadi pyörein kaarin; vasemmalla '
-            + 'sen takana on valkoinen metalliportti, maassa tummia '
-            + 'peitteitä ja oranssi liikennekartio. Pihalla kasvaa '
-            + 'hedelmäpuita ja pensaita, joissa kukkii vaaleanpunaisia ja '
-            + 'valkoisia ruusuja, ja oikealla ylhäällä kohoaa tumma '
-            + 'havupuu. Oikeanpuoleisen arkadin kohdalla on kaksi '
-            + 'ihmistä: toisella on vihreä paita ja reppu, toinen seisoo '
-            + 'mustissa vaatteissa pensaiden takana.',
+          selite: 'Masoudiehin sisäpiha: suuren vesialtaan takana on '
+            + 'paviljonki, jonka hoikat pylväät päättyvät lehtikoristeisiin '
+            + 'kapiteeleihin ja jonka kaari-ikkunoita kehystää veistetty '
+            + 'vaalea kipsi. Molemmin puolin jatkuu vaaleankeltainen '
+            + 'tiiliarkadi pyörein kaarin.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mansión Masoudieh, Teherán, Irán, 2016-09-17, DD 63.jpg',
-          selite: 'Sama julkisivu lähempää suoraan edestä: neljä uurrettua '
-            + 'pylvästä nousee kivijalustoilta räystäslistaan, ja niiden '
-            + 'kapiteeleissa on akantuslehtiä ja kiertyviä voluutteja. '
-            + 'Pylväiden takana avautuu kaari-ikkunoita, joiden '
-            + 'kaarikentässä on ohut ristikko värillisine laseineen ja '
-            + 'sen alla ruskeat pikkuruutuiset puuikkunat. Ikkunoiden '
-            + 'väliset seinäkaistat ja kaarien kehykset ovat kauttaaltaan '
-            + 'veistettyä vaaleaa kipsiä. Alaosassa on turkoosinvihreää '
-            + 'reikälaattaa kaaren muotoisina kenttinä, kenttien välissä '
-            + 'kipsikoristeisia paneeleja, kaarten kulmissa pieniä '
-            + 'sinikeltaisia kuviolaattoja ja kehyksinä vaaleankeltaista '
-            + 'tiiltä. Etualalla kulkee vaalea kiviterassi, jonka '
-            + 'reunassa on rivi soikeita kohokuvioita; terassin '
-            + 'kummassakin päässä seisoo punavalkoinen liikennekartio, ja '
-            + 'niiden välissä on pingotettu keltainen naru.',
+          selite: 'Masoudiehin julkisivu lähempää: neljä uurrettua pylvästä '
+            + 'nousee kivijalustoilta räystäslistaan, ja kapiteeleissa on '
+            + 'akantuslehtiä ja kiertyviä voluutteja. Pylväiden takana on '
+            + 'kaari-ikkunoita, joiden kaarikentässä on ristikkoa '
+            + 'värillisine laseineen.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12879,31 +12448,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Antoin-Sevruguin-Sipahsalar-Moschee-in-Teheran-im-Bau-mit-Arbeitern-Museum-Rietberg-2023.00010.73.jpg',
-          selite: 'Moskeija rakenteilla mustavalkoisessa valokuvassa: '
-            + 'tiilipinta on paljas ja laatoiton, ja kolme paksua pyöreää '
-            + 'tiilitornia on kesken. Keskellä avautuu suuren iwanin '
-            + 'terävä kaari, jota tuetaan ristikkäin asetetuilla '
-            + 'puuriu\'uilla. Katolla ja sen takana kohoavan matalan '
-            + 'kupolin päällä seisoo rivi miehiä, ja katon reunalla on '
-            + 'puinen nostopuomi köysineen. Alhaalla tikkaat nojaavat '
-            + 'tiilitorniin, miehiä seisoo telinelankuilla, ja '
-            + 'hiekkapihalla on tiilikasoja, lankkuja ja seisoskelevia '
-            + 'työmiehiä; vasemmalla näkyy kaksi kerrosta holvattuja '
-            + 'kaarisyvennyksiä.',
+          selite: 'Sepahsalarin moskeija rakenteilla mustavalkoisessa '
+            + 'valokuvassa: tiilipinta on yhä laatoiton, ja suuren iwanin '
+            + 'terävää kaarta tuetaan ristikkäin asetetuilla puuriu\'uilla. '
+            + 'Katolla ja kupolin päällä seisoo rivi miehiä, ja pihalla on '
+            + 'tiilikasoja ja työmiehiä.',
           lahde: 'Antoin Sevruguin, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'گلدسته های ابی و ساعت تاریخی مدرسه ودانشگاه مطهری.jpg',
-          selite: 'Kellotorni iwanin yläpuolella: laattapintaisen tornin '
-            + 'keskellä on valkoinen kellotaulu roomalaisin numeroin, sen '
-            + 'ympärillä sinikeltainen kukkakuvio, ja tornin päällä '
-            + 'puinen avoin lyhty tummine kattoineen. Molemmin puolin '
-            + 'nousee laatoitettu minareetti, jonka parveketta '
-            + 'kannattavat puiset kannattimet ja jonka huipussa on '
-            + 'tummanharmaa sipulikupoli. Julkisivun poikki kulkee '
-            + 'sininen kalligrafianauha, sen alla näkyy iwanin kaaren '
-            + 'yläosa kukkakuvioisine laattoineen, oikeassa reunassa on '
-            + 'männyn oksia ja taivas on pilvetön.',
+          selite: 'Sepahsalarin moskeijan kellotorni iwanin yläpuolella: '
+            + 'laattapintaisen tornin keskellä on valkoinen kellotaulu '
+            + 'roomalaisin numeroin ja sen ympärillä sinikeltainen '
+            + 'kukkakuvio. Molemmin puolin nousee laatoitettu minareetti '
+            + 'tummanharmaine sipulikupoleineen.',
           lahde: '0936mastali, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -12952,42 +12510,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: '20180301124354 IMG 4179And6more Interior 3.jpg',
-          selite: 'Sisäpiha maan tasalta, yllä sininen taivas ja suuria '
-            + 'valkoisia pilviä. Vasemmalla iwanin kaari on paljasta '
-            + 'tiiltä ja sen puolikupoli täynnä kennomaista muqarnasia, '
-            + 'keskellä on kaakeloitu iwan, jonka kummallakin puolella '
-            + 'nousee tiiliminareetti, ja oikealla kolmas iwan, jonka '
-            + 'pinnassa on kulmikasta kufi-kirjoitusta sini-valkoisin '
-            + 'laatoin. Pihaa kiertää kaksikerroksinen kaarikäytävä. '
-            + 'Kivetyn pihan keskellä on liuskareunainen allas kirkkaan '
-            + 'sinisenä, sen takana pitkä suorakaiteen muotoinen allas ja '
-            + 'keskimmäisen iwanin edessä matala kaariaukkoinen '
-            + 'rakennelma. Kaarikäytävien edustalla istuu ja seisoo '
-            + 'hajallaan pieniä ryhmiä ihmisiä.',
+          selite: 'Neljän iwanin piha: yhden kaari on paljasta tiiltä ja '
+            + 'sen puolikupolissa kennomaista muqarnasia, toisen sivuilla '
+            + 'nousevat tiiliminareetit ja kolmannen pintaa peittää '
+            + 'kulmikas kufi-kirjoitus sini-valkoisin laatoin. Pihaa '
+            + 'kiertää kaksikerroksinen kaarikäytävä.',
           lahde: 'Hamidespanani, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ceiling of Jameh Mosque of Isfahan.jpg',
-          selite: 'Nizam al-Mulkin eteläkupoli suoraan alhaalta kuvattuna: '
-            + 'koko pinta on paljasta tiiltä ilman laattaa tai maalia, ja '
-            + 'kupolin lakeen kokoontuu kahdeksan kaarta, jotka jakavat '
-            + 'pinnan kahdeksaan lohkoon. Kulmissa on puolikupolit ja '
-            + 'niiden yllä holvit, jotka kääntävät neliömäisen salin '
-            + 'ympyräksi. Vasemmalla ja oikealla seinässä on pieni '
-            + 'ristikkoikkuna, ja alareunassa aukeaa suippokaarinen '
-            + 'syvennys.',
+          selite: 'Nizam al-Mulkin eteläkupoli suoraan alhaalta: koko pinta '
+            + 'on paljasta tiiltä ilman laattaa tai maalia, ja lakeen '
+            + 'kokoontuu kahdeksan kaarta, jotka jakavat pinnan kahdeksaan '
+            + 'lohkoon. Kulmien puolikupolit ja holvit kääntävät '
+            + 'neliömäisen salin ympyräksi.',
           lahde: 'Amir Pashaei, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Gran Mezquita de Isfahán, Isfahan, Irán, 2016-09-19, DD 43-45 HDR Alt.jpg',
-          selite: 'Taj al-Mulkin pohjoiskupoli alhaalta: sekin on paljasta '
-            + 'tiiltä, mutta kaaret kulkevat ristiin ja piirtävät pintaan '
-            + 'viisisakaraisia tähtiä ja viisikulmioita, ja keskellä on '
-            + 'pieni pyöreä ruusuke. Kupolin jalustaa kiertää hammastettu '
-            + 'tiilivyö, ja siinä on pieniä ristikkoikkunoita. Oikealta '
-            + 'sivuaukosta lankeaa terävä valokiila poikki kupolin. '
-            + 'Nurkissa nousevat puolikupolit, joiden tiilet on ladottu '
-            + 'kalanruotokuvioon.',
+          selite: 'Taj al-Mulkin pohjoiskupoli alhaalta: paljasta tiiltä '
+            + 'sekin, mutta ristiin kulkevat kaaret piirtävät pintaan '
+            + 'viisisakaraisia tähtiä ja viisikulmioita. Jalustaa kiertää '
+            + 'hammastettu tiilivyö, ja nurkkien puolikupoleissa tiilet on '
+            + 'ladottu kalanruotokuvioon.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13070,53 +12615,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Mur et plafond de la terrasse d\'Ali Qāpu.jpg',
-          selite: 'Parvekkeen katto ja takaseinä alaviistosta: puukatto on '
-            + 'jaettu kenttiin, joissa toistuu monisakaraisista tähdistä '
-            + 'ja monikulmioista koottu kuvio punaisena, '
-            + 'kullankeltaisena, mustana ja valkoisena. Kuvan molemmissa '
-            + 'reunoissa nousee vaalea puupylväs, jonka kapiteeli on '
-            + 'veistetty kennomaisiin kerroksiin. Takaseinän keskellä on '
-            + 'korkea suippokaarinen syvennys, jonka oranssinpunaista '
-            + 'pintaa peittää vaalea kasviköynnös; perällä on pieni '
-            + 'ristikkoikkuna ja sen alla rivi kaari-ikkunoita '
-            + 'puuristikoineen. Molemmin puolin on kaksi kerrosta '
-            + 'kaarisyvennyksiä, joista osassa on tiheä puuristikko ja '
-            + 'osa on paljasta rappausta. Vasemmassa alanurkassa näkyy '
-            + 'valkoisen näytön yläreuna.',
+          selite: 'Parvekkeen puukatto on jaettu kenttiin, joissa toistuu '
+            + 'tähdistä ja monikulmioista koottu kuvio punaisena, '
+            + 'kullankeltaisena, mustana ja valkoisena. Puupylväiden '
+            + 'kapiteelit on veistetty kennomaisiin kerroksiin, ja '
+            + 'takaseinän suippokaarta peittää kasviköynnös.',
           lahde: 'Zythème, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Ali-Qapu 13920419 (18).JPG',
-          selite: 'Musiikkihuoneen yläseinä ja holvi: stukkiin on leikattu '
-            + 'läpi kymmeniä syvennyksiä, joiden muodot ovat '
-            + 'kapeakaulaisia pulloja, pulleita ruukkuja, pieniä maljoja '
-            + 'ja suippokaaria, ja aukot näkyvät tummina. Holvin '
-            + 'ripakaaret on maalattu vaaleansinisiksi ja niiden väliset '
-            + 'pinnat oranssinpunaisiksi haalistunein kasvikuvioin. '
-            + 'Holvin alla jatkuu kaarisyvennyksiä, joissa on samoja '
-            + 'muotoja riveittäin. Keskeltä oikealta avautuu oviaukko '
-            + 'toiseen tilaan, jossa näkyy valoisa suippokaari-ikkuna, ja '
-            + 'oikeassa reunassa on toinen kirkas ikkuna. Rappaus on '
-            + 'kulunut ja väri haalistunut; vasemmassa alanurkassa on '
-            + 'pieni valkoinen kyltti persiankielisine teksteineen.',
+          selite: 'Musiikkihuoneen yläseinään ja holviin on leikattu '
+            + 'stukkiin kymmeniä syvennyksiä, joiden muodot ovat pulloja, '
+            + 'ruukkuja, maljoja ja suippokaaria. Holvin ripakaaret on '
+            + 'maalattu vaaleansinisiksi ja niiden väliset pinnat '
+            + 'oranssinpunaisiksi kasvikuvioin.',
           lahde: 'Mohsen Ghasemee, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Music hall of Ali Qapu Isfahan 2014.jpg',
-          selite: 'Musiikkihuone kokonaisuudessaan: vasemmalla seinässä on '
-            + 'kaksi kerrosta syvennyskenttiä ja niiden yllä holvi, jonka '
-            + 'pinnat ovat oranssinpunaiset ja kaaret vaaleansiniset; '
-            + 'oikealla holvin stukko on harmaata ja maalaamatonta, ja '
-            + 'sen alla on kolme korkeaa suippokaari-ikkunaa, joista '
-            + 'tulvii päivänvaloa. Seinien edessä seisoo lasisia '
-            + 'suojalevyjä metallitelineissä, vasemmalla on ruskea '
-            + 'puuristikko-ovi ja keskellä valkoinen ilmastointilaite. '
-            + 'Huoneessa on kuusi ihmistä: vasemmalla neljän ryhmä — '
-            + 'lippalakkinen mies, valkohuivinen nainen, raidalliseen '
-            + 'tunikaan pukeutunut selin seisova kävijä ja '
-            + 'silmälasipäinen mies — ja oikealla kaksi miestä, joista '
-            + 'toisella on kamera kädessä ja toinen katsoo puhelintaan. '
-            + 'Lattia on vaaleaa laattaa.',
+          selite: 'Musiikkihuone kokonaisuutena: seinässä on kaksi kerrosta '
+            + 'syvennyskenttiä, holvin pinnat ovat oranssinpunaiset ja '
+            + 'kaaret vaaleansiniset, toisaalla stukko on harmaata ja '
+            + 'maalaamatonta. Kolmesta korkeasta suippokaari-ikkunasta '
+            + 'tulvii päivänvaloa.',
           lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
         },
       ],
@@ -13154,25 +12675,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Naghshejahan3.jpg',
-          selite: 'Ilmakuva etelästä. Etualalla on Shaahin moskeijan piha '
-            + 'altaineen ja iwaneineen, ja sen seinälinjat kulkevat eri '
-            + 'kulmassa kuin aukio, joka jatkuu vinosti oikealle ylös '
-            + 'nurmikenttinä, puuriveinä ja pitkänä turkoosina '
-            + 'suihkulähdealtaana. Moskeijan neljä minareettia ovat '
-            + 'turkoosia laattaa, ja aukiolla liikkuu paljon väkeä. '
-            + 'Vasemmalla aukion laidalla seisoo Ali Qapu, oikealla '
-            + 'laidalla Sheikh Lotfollahin kuvioitu kupoli.',
+          selite: 'Ilmakuva etelästä: Shaahin moskeijan piha altaineen, '
+            + 'iwaneineen ja turkoosilaattaisine minareetteineen kääntyy '
+            + 'eri kulmaan kuin aukio, joka jatkuu vinosti nurmikenttinä ja '
+            + 'puuriveinä. Aukion laidoilla erottuvat Ali Qapu ja Sheikh '
+            + 'Lotfollahin kuvioitu kupoli.',
           lahde: 'Pedram forouzanfar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Mosque Shah Portal.jpg',
-          selite: 'Pääportti alaviistosta kuvattuna: kaaren sisus on täynnä '
+          selite: 'Pääportti alaviistosta: kaaren sisus on täynnä '
             + 'muqarnas-kennoja, kaarta kiertää valkoinen kirjoitusnauha '
             + 'tummansinisellä pohjalla ja reunassa kulkee turkoosi '
             + 'kierrelista. Kummallakin puolella nousee laatoitettu '
-            + 'minareetti parvekkeineen, alhaalla keskellä on '
-            + 'kivikehyksinen pieni oviaukko, ja taivaalla näkyy kaksi '
-            + 'objektiivin heijastuspilkkua.',
+            + 'minareetti parvekkeineen.',
           lahde: 'Farhad Tafreshi, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13181,70 +12697,61 @@ export const NAHTAVYYSJUTUT = {
     'Hasht Behesht': {
       aika: '1669',
       teksti: 'Hasht behesht tarkoittaa persiaksi kahdeksaa paratiisia, ja '
-        + 'Iranissa sana on myös pohjakaavan nimi: keskussali, jonka '
-        + 'ympärille sijoittuu kahdeksan huonetta. Isfahanin paviljonki '
-        + 'on kaavan safavidilainen esimerkki, ja sen rakennutti '
-        + 'dynastian kahdeksas hallitsija, shaahi Suleiman I. Se oli '
-        + 'hallitsijan yksityinen huvimaja. Vuosiluvut hajoavat: '
-        + 'valmistumisvuodeksi merkitään 1669, samasta talosta esitetään '
-        + 'myös vuotta 1671, ja väljimmin 1600-luvun loppupuoli.'
+          + 'Iranissa sana on myös pohjakaavan nimi: keskussali, jonka '
+          + 'ympärille sijoittuu kahdeksan huonetta. Isfahanin paviljonki '
+          + 'on kaavan safavidilainen esimerkki, ja sen rakennutti '
+          + 'dynastian kahdeksas hallitsija, shaahi Suleiman I. Se oli '
+          + 'hallitsijan yksityinen huvimaja. Vuosiluvut hajoavat: '
+          + 'valmistumisvuodeksi merkitään 1669, samasta talosta esitetään '
+          + 'myös vuotta 1671, ja väljimmin 1600-luvun loppupuoli.'
         + '\n\n'
-        + 'Talo on kahdeksankulmainen ja kaksikerroksinen, ja siihen '
-        + 'johtaa kaksi pääovea. Umpinainen se ei ole: neljällä '
-        + 'leveimmällä sivulla on suuri holvattu parveke eli iwan, ja '
-        + 'parvekkeiden alla nousee ohuita puupylväitä. Keskellä on sali '
-        + 'kupolin alla, ja sitä ympäröivien pienten huoneiden matalat '
-        + 'holvit on päällystetty peililasilla: pinta näyttää liikkuvan '
-        + 'katsojan mukana. Muuta koristelua ovat seinämaalaukset, '
-        + 'läpileikattu puutyö, kaakeli ja stukko; ulkokaakelissa on '
-        + 'poikkeuksellisen paljon keltaista.'
+        + 'Talo on kahdeksankulmainen ja kaksikerroksinen, ja siihen johtaa '
+          + 'kaksi pääovea. Umpinainen se ei ole: neljällä leveimmällä '
+          + 'sivulla on suuri holvattu parveke eli iwan, ja parvekkeiden '
+          + 'alla nousee ohuita puupylväitä. Keskellä on sali kupolin alla, '
+          + 'ja sitä ympäröivien pienten huoneiden matalat holvit on '
+          + 'päällystetty peililasilla: pinta näyttää liikkuvan katsojan '
+          + 'mukana. Muuta koristelua ovat seinämaalaukset, läpileikattu '
+          + 'puutyö, kaakeli ja stukko; ulkokaakelissa on poikkeuksellisen '
+          + 'paljon keltaista.'
         + '\n\n'
-        + 'Talo seisoo Chahar Baghin puistokadun varrella, ja sen edessä '
-        + 'on allas. Puutarha on taloa vanhempi: Abbas Suuren '
-        + 'kaupunkikaavassa uuden aukion ja puistokadun väliin jäi laaja '
-        + 'puutarha, ja siitä on tänään jäljellä Hasht Beheshtin puisto. '
-        + 'Talossa toimi myöhemmin Isfahanin ensimmäinen moderni koulu, '
-        + 'Madrese-ye Homayouni eli Hänen majesteettinsa koulu. Iranin '
-        + 'kulttuuriperintöluetteloon rakennus merkittiin 1934 numerolla '
-        + '227.',
+        + 'Talo seisoo Chahar Baghin puistokadun varrella, ja sen edessä on '
+          + 'allas. Puutarha on taloa vanhempi: Abbas Suuren '
+          + 'kaupunkikaavassa uuden aukion ja puistokadun väliin jäi laaja '
+          + 'puutarha, ja siitä on tänään jäljellä Hasht Beheshtin puisto. '
+          + 'Pascal Costen vuonna 1840 piirtämä pohjapiirros nimeää '
+          + 'puutarhan osat ranskaksi: lepohuoneet, suihkualtaat, kanavan, '
+          + 'nurmikentät, hedelmätarhat ja plataanikujat. Talossa toimi '
+          + 'myöhemmin Isfahanin ensimmäinen moderni koulu, Madrese-ye '
+          + 'Homayouni eli Hänen majesteettinsa koulu. Iranin '
+          + 'kulttuuriperintöluetteloon rakennus merkittiin 1934 numerolla '
+          + '227.',
       kuvat: [
         {
           tiedosto: 'Hasht Behesht Palace, Isfahan 01.jpg',
-          selite: 'Julkisivu suorakaiteen muotoisen altaan takana. Altaan '
-            + 'reunat on maalattu siniseksi, ja vedessä seisoo '
-            + 'suihkulähteen putkia. Keskellä on korkea kaari, joka on '
-            + 'auki läpi talon: siitä näkyy puita toiselle puolelle. '
-            + 'Kaaren yläpuolella on ohuiden puupylväiden kannattama '
-            + 'parveke ja pitkä räystäs. Altaan reunalla on leikattuja '
-            + 'pensaita ja valkoinen kukkapenkki, molemmin puolin '
-            + 'korkeita puita, ja talon edustalla liikkuu kävijöitä.',
+          selite: 'Hasht Beheshtin julkisivu altaan takana: keskellä on '
+            + 'korkea kaari, joka on auki läpi talon, ja siitä näkyy puita '
+            + 'toiselle puolelle. Yläpuolella on ohuiden puupylväiden '
+            + 'kannattama parveke ja pitkä räystäs, ja sinireunaisessa '
+            + 'altaassa on suihkulähteen putkia.',
           lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hasht-Behesht, North-Western View.jpg',
-          selite: 'Kahdeksankulmion nurkka luoteesta: keskellä on kapea '
-            + 'nurkkasivu ja sen molemmin puolin leveä julkisivu, '
-            + 'kerroksia kaksi. Ylemmän kerroksen kaaren sisällä riippuu '
-            + 'porrastettu stukkoholvi, jonka kärki on rei\'itetty, ja sen '
-            + 'alla on puukaiteinen parveke. Kaarien yläpuolella kulkee '
-            + 'sinistä, turkoosia ja keltaista kaakelinauhaa, muuten '
-            + 'seinä on paljasta vaaleaa tiiltä. Alakerran kaariin on '
-            + 'asennettu lasiseiniä, joiden takana näkyy ihmisiä. '
-            + 'Räystästä kannattavat puiset orret, ja katolla on '
-            + 'metalliantenni.',
+          selite: 'Kahdeksankulmion nurkka luoteesta: ylemmän kerroksen '
+            + 'kaaressa riippuu porrastettu stukkoholvi, jonka kärki on '
+            + 'rei\'itetty, ja sen alla on puukaiteinen parveke. Kaarien '
+            + 'yllä kulkee sinistä, turkoosia ja keltaista kaakelinauhaa, '
+            + 'muuten seinä on paljasta tiiltä.',
           lahde: 'Meincluded, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Hasht Behesht, Plan and section by Pascal Coste.jpg',
-          selite: 'Pascal Costen piirros vuodelta 1840. Ylhäällä on leikkaus '
-            + 'talon läpi puurivien keskellä, ja siinä näkyy keskussalin '
-            + 'kupoli; alhaalla on pohjapiirros ja sitä ympäröivä '
-            + 'puutarha. Pohjassa kahdeksankulmion keskellä on sali, '
+          selite: 'Pascal Costen piirros vuodelta 1840: ylhäällä leikkaus '
+            + 'talon ja keskussalin kupolin läpi, alhaalla pohjapiirros ja '
+            + 'sitä ympäröivä puutarha. Kahdeksankulmion keskellä on sali, '
             + 'jonka keskellä on kahdeksankulmainen allas, ja nurkissa '
-            + 'neljä pyöreää huonetta. Ranskankielinen luettelo nimeää '
-            + 'muun muassa lepohuoneet, suihkualtaat, kanavan, '
-            + 'nurmikentät, hedelmätarhat ja plataanikujat, ja '
-            + 'mittakaavajana ulottuu 20 metriin.',
+            + 'neljä pyöreää huonetta.',
           lahde: 'Pascal Coste, Wikimedia Commons (PD)',
         },
       ],
@@ -13283,54 +12790,28 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Chahar bagh school drawing.jpg',
           selite: 'Pascal Costen 1800-luvun piirros koulusta puistokadun '
-            + 'puolelta. Vasemmalla jatkuu kaksikerroksinen julkisivu, '
-            + 'jossa on pitkä rivi suippokaarisia syvennyksiä ja keskellä '
-            + 'korkeampi koristeltu portti; katolla on pieni paviljonki '
-            + 'telttakattoineen, ja julkisivun eteen nousee kiviterassi '
-            + 'portaineen, jolla istuu ja seisoo ihmisiä puiden alla. '
-            + 'Oikealla kohoaa muurin takaa sipulimainen kupoli, jonka '
-            + 'pintaa peittää kiemurteleva köynnöskuvio ja jonka rumpua '
-            + 'kiertää kalligrafianauha; kupolin alla on nelikulmainen '
-            + 'jalusta kaaripaneeleineen ja vieressä kaksi minareettia, '
-            + 'korkeampi parvekkeineen ja pienempi kupolin takana. '
-            + 'Etualan kivikäytävällä seisoo viittaan pukeutunut hahmo '
-            + 'kävelykepin varassa, ja muurin vierellä ratsastaa kaksi '
-            + 'korkeapäähineistä miestä pitkää sauvaa kantavan kulkijan '
-            + 'perässä. Ympärillä kasvaa korkeita puita, nurmea ja '
-            + 'pensaita.',
+            + 'puolelta: kaksikerroksisessa julkisivussa on '
+            + 'suippokaarisyvennyksiä ja keskellä korkeampi portti. Muurin '
+            + 'takaa kohoavat kaksi minareettia ja köynnöskuvioinen '
+            + 'sipulimainen kupoli kalligrafianauhoineen.',
           lahde: 'Pascal Coste, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'مدرسه چهارباغ اصفهان 03.jpg',
-          selite: 'Sisäpiha aurinkoisena päivänä: keskellä kulkee pitkä '
-            + 'matala vesiallas, jonka reunoilta nousee rivi suihkuja, ja '
-            + 'allasta reunustavat kiviportaat sekä ruukuissa kasvavat '
-            + 'punaiset ja violetit kukat. Pihalla on korkeita plataaneja '
-            + 'ja tummia sypressejä, valkoisia lyhtypylväitä, yksi '
-            + 'sinisellä mosaiikilla päällystetty pylväs, puisia penkkejä '
-            + 'ja pyöreä valkoinen kello tangon päässä. Vasemmalla ja '
-            + 'oikealla kohoaa iwan, jonka kaari ja kehykset on peitetty '
-            + 'tiheällä sinisellä mosaiikilla; oikeanpuoleisen kaaren '
-            + 'perällä on kalligrafiapaneeli, ja aukosta näkyy vihreää '
-            + 'kasvillisuutta, punaisia kukkia ja yksi ihminen '
-            + 'käytävässä. Saman iwanin katolla seisoo puinen paviljonki, '
-            + 'jonka telttakatto on turkoosi.',
+          selite: 'Sisäpihan halki kulkee pitkä matala vesiallas '
+            + 'suihkuineen, ja pihalla kasvaa plataaneja ja tummia '
+            + 'sypressejä. Iwanien kaaret ja kehykset on peitetty tiheällä '
+            + 'sinisellä mosaiikilla, ja katolla seisoo puinen paviljonki '
+            + 'turkoosine telttakattoineen.',
           lahde: 'Alimalekzadehfar, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Chaharbagh Madrasa.jpg',
-          selite: 'Iwanin laatoitus alaviistosta pilvetöntä taivasta vasten. '
-            + 'Kaarta kehystää leveä kobolttisininen nauha, jossa juoksee '
-            + 'valkoista kalligrafiaa, ja kaaren sisäpinnan täyttää tiheä '
-            + 'köynnöskuvio sinisen, turkoosin, valkoisen ja '
-            + 'kullankeltaisen sävyissä; perällä on kennomainen '
-            + 'muqarnas-syvennys ja sen alla pienempi kaariaukko. '
-            + 'Vasemmalla seinässä on turkoosia ja sinistä geometrista '
-            + 'ruudustoa keltaisin tähtinuppuin, ja ylhäällä vaalea '
-            + 'rappauspintainen puolikupu, johon on piirretty sinisin '
-            + 'viivoin tähtikuvio. Seinistä riippuu kaksi mustaa '
-            + 'kangasta, ja oikealla julkisivu jatkuu kahtena '
-            + 'kaarisyvennyksenä.',
+          selite: 'Iwanin laatoitus alaviistosta: kaarta kehystää leveä '
+            + 'kobolttisininen nauha valkoisine kalligrafioineen, ja kaaren '
+            + 'sisäpintaa täyttää tiheä köynnöskuvio sinisen, turkoosin, '
+            + 'valkoisen ja kullankeltaisen sävyissä. Perällä on '
+            + 'kennomainen muqarnas-syvennys.',
           lahde: 'Moe Alian, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13378,35 +12859,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kaminarimon 2020-04-19.jpg',
-          selite: 'Portin etupuoli aamuvalossa. Harmaa tiilikatto kaartuu '
-            + 'päädyistään ylös, ja punaisten pylväiden välissä riippuu '
-            + 'suuri punainen lyhty, jossa on kaksi mustaa '
-            + 'kirjoitusmerkkiä ja alareunassa pieni kultainen kilpi; '
-            + 'lyhdyn yläpuolella on tummanvihreä taulu, jossa on kolme '
-            + 'kultaista merkkiä. Vasemmanpuoleisessa syvennyksessä '
-            + 'veistoksen ympäri kaartuu rivi pieniä pyöreitä rumpuja, '
-            + 'oikeanpuoleisessa veistoksen harteilla lepää pussimainen '
-            + 'taakka; molempien edessä on tumma verkko ja alla vihreä '
-            + 'pystyritilä. Portin aukosta näkyy Nakamise-kadun kojurivi '
-            + 'ja muutama kaukainen kulkija. Vasemmalla kaksi '
-            + 'kasvomaskiin pukeutunutta ihmistä seisoo kaiteen vieressä '
-            + 'polkupyörän luona, portin edessä kävelee vaaleatakkinen '
-            + 'nainen ja toinen ihminen kurottaa kättään pylvästä kohti.',
+          selite: 'Kaminarimonin etupuoli aamuvalossa: harmaan tiilikaton '
+            + 'alla punaisten pylväiden välissä riippuu punainen lyhty, '
+            + 'jossa on portin nimi mustin merkein ja alareunassa pieni '
+            + 'kultainen kilpi. Syvennyksissä seisovat Raijin rumpukehineen '
+            + 'ja Fūjin tuulisäkkeineen.',
           lahde: 'Asanagi, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Dragon wood-carving in Kaminarimon, Sensōji.jpg',
-          selite: 'Lyhdyn pohja suoraan alhaalta kuvattuna: kullanvärisen '
-            + 'metallirenkaan sisällä on pyöreä puureliefi, jossa '
-            + 'lohikäärme kiertyy veistettyjen pilvikiehkuroiden '
-            + 'keskellä. Pää on kuvan keskellä vasemmalle kääntyneenä, '
-            + 'suu auki ja punainen kieli ulkona, toinen silmä vaaleana '
-            + 'pisteenä, ja alempana erottuvat suomuinen ruumis ja yksi '
-            + 'kynsijalka; punareunaiset liekinmuotoiset evät kaartuvat '
-            + 'oikealle. Renkaan kulmissa on neljä vaaleaa läpimurrettua '
-            + 'kiinnityslevyä ja ylhäällä kaksi metallilenkkiä, ja '
-            + 'ympärillä näkyy lyhdyn punainen kangas valkoisen '
-            + 'suojaverkon alla.',
+          selite: 'Lyhdyn pohja alhaalta: kullanvärisen metallikehyksen '
+            + 'sisällä kiertyy puuhun veistetty lohikäärme '
+            + 'pilvikiehkuroiden keskellä, suu auki ja punainen kieli '
+            + 'ulkona. Suomuinen ruumis, kynsijalka ja punareunaiset '
+            + 'liekinmuotoiset evät erottuvat reliefissä.',
           lahde: 'Puchku, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
@@ -13443,37 +12909,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sensoji 2023.jpg',
-          selite: 'Päähalli edestä: leveä harmaa tiilikatto, jonka keskellä '
-            + 'kaartuu jyrkkä päätykolmio, ja sen alla punaiset pilarit '
-            + 'ja punainen kaide. Keskiaukossa riippuu suuri punainen '
-            + 'lyhty mustin kirjoitusmerkein, molemmin puolin kapeat '
-            + 'pystylaudat mustin merkein. Portaiden edessä nousee savua '
-            + 'suitsutusastiasta. Etualalla on kymmeniä ihmisiä selin '
-            + 'kameraan, ja oikeassa reunassa matalampi rakennus, jonka '
-            + 'kuparikatto on hapettunut vihreäksi.',
+          selite: 'Sensō-jin päähalli edestä: leveän harmaan tiilikaton '
+            + 'keskellä kaartuu jyrkkä päätykolmio, ja sen alla ovat '
+            + 'punaiset pilarit ja punainen kaide. Keskiaukossa riippuu '
+            + 'punainen lyhty mustin kirjoitusmerkein, ja portaiden edessä '
+            + 'nousee savua suitsutusastiasta.',
           lahde: 'Akonnchiroll, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Hozomon on an overcast day dllu.jpg',
-          selite: 'Hōzōmon suoraan edestä pilvisellä säällä: kaksikerroksinen '
+          selite: 'Hōzōmon edestä pilvisellä säällä: kaksikerroksinen '
             + 'portti, kaksi harmaata tiilikattoa, punaiset pilarit ja '
-            + 'valkoiset seinäpinnat. Keskellä riippuu suuri punamusta '
-            + 'lyhty ja sen kummallakin puolella metallilyhty, kaikkiaan '
-            + 'kolme. Uloimmissa aukoissa seisoo kaksi tummaa '
-            + 'vartijapatsasta, ja ylemmän kerroksen keskellä on kyltti '
-            + 'kultaisin merkein. Portin edessä on tiivis ihmisjoukko, '
-            + 'oikealla näkyy vaalea kerrostalo.',
+            + 'valkoiset seinäpinnat. Keskellä riippuu punamusta lyhty ja '
+            + 'sen kummallakin puolella metallilyhty, uloimmissa aukoissa '
+            + 'seisovat Niō-vartijapatsaat.',
           lahde: 'Daniel L. Lu (user:dllu), Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Nakamise in Asakusa, Tokyo.jpg',
-          selite: 'Nakamise-dōri päiväsaikaan: oikealla rivi vihreäkattoisia '
-            + 'kauppoja, joiden räystäillä on pyöreitä valkoisia '
-            + 'lamppuja, punaisia kylttejä ja tekovihreää lehvästöä. '
-            + 'Kujan päässä kohoaa punainen Hōzōmon harmaine kattoineen. '
-            + 'Vasemmalla on puita ja pensasaita mustan rautakaiteen '
-            + 'takana. Kujalla kulkee väkeä, etualalla kulkija vetää '
-            + 'valkoista matkalaukkua, ja takana kohoaa ruskea tiilitalo.',
+          selite: 'Nakamise-dōri päiväsaikaan: rivi vihreäkattoisia '
+            + 'kauppoja, joiden räystäillä on pyöreitä valkoisia lamppuja, '
+            + 'punaisia kylttejä ja tekovihreää lehvästöä. Kujan päässä '
+            + 'kohoaa punainen Hōzōmon harmaine kattoineen, ja kujalla '
+            + 'kulkee väkeä.',
           lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13511,37 +12969,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Kaneiji 2012.JPG',
-          selite: 'Päähalli Konponchūdō edestä: harmaa tiilikatto kaartuu '
-            + 'kahtena kerroksena, ja ylemmän räystään mustalla laudalla '
-            + 'on kolme kullanväristä pyöreää vaakunaa. Alapuolella on '
-            + 'tummaksi petsattu puurunko, jonka pylväiden välissä on '
-            + 'valkoisia paperiseinäruutuja ja keskellä lasiovet; oven '
-            + 'yläpuolella riippuu tumma lyhty. Oikealla seinustalla '
-            + 'seisoo korkea valkoinen kyltti, jossa lukee mustin merkein '
-            + '根本中堂. Hallin eteen nousee leveät kiviportaat, ja niiden '
-            + 'edessä on matala puinen aitaus. Etualalla on kaksi suurta '
-            + 'pronssilyhtyä, joiden pinta on patinoitunut vihreäksi ja '
-            + 'jotka seisovat kivijalustoilla. Vasemmalla roikkuu setrin '
-            + 'oksia ja oikealla kohoaa paksurunkoinen lehdetön puu; '
-            + 'taivas on sininen, ja siinä on muutama pieni valkoinen '
-            + 'pilvi. Ihmisiä ei näy.',
+          selite: 'Kan\'ei-jin päähalli Konponchūdō: harmaa tiilikatto '
+            + 'kaartuu kahtena kerroksena, ja ylemmän räystään mustalla '
+            + 'laudalla on kolme kullanväristä vaakunaa. Tummaksi petsatun '
+            + 'puurungon pylväiden välissä on valkoisia paperiseinäruutuja '
+            + 'ja keskellä lasiovet.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: '20181124 Ueno Park pagoda.jpg',
-          selite: 'Viisikerroksinen pagodi kokonaisuudessaan: viisi kaartuvaa '
-            + 'tiilikattoa päällekkäin, ja ylimmästä nousee ohut '
-            + 'vihertäväksi patinoitunut metallihuippu renkaineen. Neljä '
-            + 'ylintä kerrosta ovat tummanruskeaa puuta ja niiden '
-            + 'räystäslistoissa on kullattuja koristeita. Alin kerros on '
-            + 'kirkkaan punainen: keskellä on kullalla helatut '
-            + 'kaksoisovet ja niiden kummallakin puolella vihreäksi '
-            + 'maalattu ristikkoikkuna. Rakennus seisoo punaisella '
-            + 'jalustalla, jonka eteen johtaa kiviportaat ja jonka '
-            + 'oikeaan reunaan nousevat toiset portaat. Etualan '
-            + 'nurmikolla on harmaa kivilyhty, vasemmalla on punalehtinen '
-            + 'vaahtera ja oikealla vihreitä puita. Taivas on valkoisen '
-            + 'pilviverhon peitossa. Ihmisiä ei näy.',
+          selite: 'Kan\'ei-jin viisikerroksinen pagodi: viisi kaartuvaa '
+            + 'tiilikattoa päällekkäin, ja ylimmästä nousee vihertäväksi '
+            + 'patinoitunut metallihuippu renkaineen. Neljä ylintä kerrosta '
+            + 'ovat tummanruskeaa puuta, alin kirkkaan punainen kullalla '
+            + 'helattuine kaksoisovineen.',
           lahde: 'Balon Greyjoy, Wikimedia Commons (CC0)',
         },
       ],
@@ -13579,32 +13020,20 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Tokyo National Museum, Honkan 2010.jpg',
-          selite: 'Honkan talvipäivänä: vaalea kivijulkisivu, jonka päällä on '
-            + 'tummanruskea tiilikatto ylöspäin kaartuvine räystäineen, '
-            + 'ja keskellä sisäänkäynnin päällä oma harjakattoinen katos. '
-            + 'Julkisivulla riippuu kaksi pystybanneria — valkoisessa on '
-            + 'mustia kanji-merkkejä ja kuva ruskeasta savifiguurista, '
-            + 'punareunaisessa maalattu lintu. Edessä on suorakaiteen '
-            + 'muotoinen allas, joka heijastaa koko rakennuksen, sen '
-            + 'molemmin puolin leikattuja pensasmättäitä ja '
-            + 'hiekkakäytävä. Vasemmalla seisoo kaksi ihmistä '
-            + 'roska-astioiden vieressä lehdettömän puun alla, oikealla '
-            + 'kävelee kaksi kohti kameraa, toinen vaaleassa toppatakissa '
-            + 'ja toinen tummassa.',
+          selite: 'Honkan talvipäivänä: vaalean kivijulkisivun päällä on '
+            + 'tummanruskea tiilikatto ylöspäin kaartuvine räystäineen ja '
+            + 'sisäänkäynnin kohdalla harjakattoinen katos. Julkisivulla '
+            + 'riippuu kaksi pystybanneria, ja rakennus heijastuu '
+            + 'suorakaiteen muotoiseen altaaseen.',
           lahde: 'Wiiii, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Hyokeikan - Tokyo National Museum.jpg',
-          selite: 'Hyōkeikan pilvettömän sinisen taivaan alla: valkoinen '
-            + 'kivijulkisivu, jonka keskellä nousee vihreäksi '
-            + 'patinoitunut kupoli pylväikköineen ja ohuine huippuineen, '
-            + 'ja kummassakin päädyssä on pienempi vihreä kupoli. Pääoven '
-            + 'edessä on pylväsaula, ja portaiden molemmin puolin istuu '
-            + 'kivijalustalla vihreäksi hapettunut pronssileijona. '
-            + 'Julkisivun yläosassa on kivireliefejä ja päätykolmioita, '
-            + 'edessä havupuita ja leikattua pensasaitaa. Etualan '
-            + 'asfaltille on aseteltu rivi vihreitä liikennekartioita ja '
-            + 'niiden väliin vihervalkoisia puomeja.',
+          selite: 'Hyōkeikan edestä: valkoisen kivijulkisivun keskeltä '
+            + 'nousee vihreäksi patinoitunut kupoli pylväikköineen, ja '
+            + 'kummassakin päädyssä on pienempi vihreä kupoli. Pääoven '
+            + 'pylväsaulan portaiden molemmin puolin istuu kivijalustalla '
+            + 'pronssileijona.',
           lahde: 'Kakidai, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13640,16 +13069,11 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Sakura (cherry trees) blooming in Ueno Park in Tokyo, Japan 20140404023022 (26290773175).jpg',
-          selite: 'Kirsikkakuja täydessä kukassa: oksat kaartuvat polun yli '
-            + 'molemmilta puolilta, kukinta on vaaleanpunaista ja '
-            + 'valkoista, ja latvojen raosta näkyy sinistä taivasta. '
-            + 'Kuvan alaosan täyttää tiheä väkijoukko, enimmäkseen selin '
-            + 'kameraan; yksi kohottaa puhelinta pään yläpuolelle, '
-            + 'keskellä näkyy vaalea olkihattu ja edempänä mies '
-            + 'valkoisessa paidassa ja tummassa solmiossa. Etualalla '
-            + 'erottuu punainen reppu ja aurinkolasit. Vasemmalla puiden '
-            + 'alla riippuu rivi pieniä lyhtyjä ja pystysuoria viirejä, '
-            + 'ja polun laidassa on musta lyhtypylväs.',
+          selite: 'Uenon puiston kirsikkakuja täydessä kukassa: oksat '
+            + 'kaartuvat polun yli molemmilta puolilta, ja kukinta on '
+            + 'vaaleanpunaista ja valkoista. Polkua täyttää tiivis '
+            + 'väkijoukko, ja puiden alla riippuu rivi pieniä lyhtyjä ja '
+            + 'pystysuoria viirejä.',
           lahde: 'Yiannis Theologos Michellis, Wikimedia Commons (CC0)',
         },
         {
@@ -13657,12 +13081,8 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Shinobazun lampi kesällä: koko vesipinta on yhtenäisen '
             + 'lootuslehtimaton peitossa, ja lehtien seasta erottuu kaksi '
             + 'vaaleanpunaista kukkaa. Lammen poikki kulkee kävelytie '
-            + 'mustine metallikaiteineen, ja kaiteessa roikkuu oranssi '
-            + 'pelastusrengas. Kaiteen ääressä on kolme ihmistä: '
-            + 'vasemmalla yksi nojaa kaiteeseen, keskellä kaksi seisoo '
-            + 'selin katsomassa lammelle. Takarantaa reunustavat puut ja '
-            + 'riippuva paju, ja niiden takana nousee rivi korkeita '
-            + 'asuintorneja.',
+            + 'mustine metallikaiteineen, ja takarannan puiden takana '
+            + 'nousee rivi korkeita asuintorneja.',
           lahde: 'Alexandar Vujadinovic, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -13699,54 +13119,29 @@ export const NAHTAVYYSJUTUT = {
       kuvat: [
         {
           tiedosto: 'Alley - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08717.JPG',
-          selite: 'Alakerran rakennettu kuja: kapea kivilaattapolku kulkee '
-            + 'kahden tummaksi patinoituneen puutalon välissä. Vasemmalla '
-            + 'on liukuovia, valkoinen kangas roikkuu bambusalossa, '
-            + 'seinässä on pystykirjoitettu puukyltti, ja seinustaa '
-            + 'reunustavat pyöreät kivet sekä yksi sinivihreä ruukku, '
-            + 'jossa kasvaa terävälehtinen kasvi. Oikealla on '
-            + 'pystylaudoitettu seinä, siihen ripustettu naru runsaan '
-            + 'kymmenen kuivatun hedelmänpuolikkaan kanssa ja niiden '
-            + 'vieressä oranssien paperimaisten siemenkotelojen terttu; '
-            + 'ylhäällä näkyy tiilikaton räystäs. Kuja ei jatku pitkälle: '
-            + 'se päättyy suureen mustavalkoiseen valokuvaan, jossa lapsi '
-            + 'kyykkii samanlaisen kujan kiveyksellä ja polun reunalla on '
-            + 'ruukkukasveja.',
+          selite: 'Museoon rakennettu alakaupungin kuja: kapea '
+            + 'kivilaattapolku kulkee kahden tummaksi patinoituneen '
+            + 'puutalon välissä; toisessa on liukuovia ja toisen seinällä '
+            + 'kuivuu narulla hedelmänpuolikkaita. Kuja päättyy '
+            + 'mustavalkoiseen valokuvaan samanlaisesta kujasta.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Coppersmith - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08719.JPG',
-          selite: 'Vaskisepän asunto ja työtila samassa huoneessa. Oikealla '
-            + 'on kivireunainen ahjo, jonka pohjalla on mustaa hiiltä, ja '
-            + 'sen edessä puutelineillä kolme kuparista vesipannua '
-            + 'puisine kantokahvoineen sekä kuparinen putki. Työpöydällä '
-            + 'on kannellinen kupariastia, seinän vaakatangossa riippuu '
-            + 'toistakymmentä pitkää talttaa ja puikkoa, pöydän reunassa '
-            + 'on metallinen ruuvipenkki pitkine kampineen ja sen alla '
-            + 'musta kulho pienen lipaston päällä. Vasemmalla erottuu '
-            + 'asuinpuoli: tatamilattia, nelilaatikkoinen puinen lipasto, '
-            + 'seinäkello puukotelossa, lasiovinen kaappi valkoisine '
-            + 'kulhoineen, rautainen teepannu hiilipannun päällä ja '
-            + 'lattialla avattu esite telineessä. Perällä on shōji-ovi ja '
-            + 'katossa yksi kupumainen lamppu.',
+          selite: 'Vaskisepän työtila ja asunto samassa huoneessa: '
+            + 'kivireunaisen ahjon edessä on puutelineillä kolme kuparista '
+            + 'vesipannua puisine kantokahvoineen, ja seinätangossa riippuu '
+            + 'toistakymmentä talttaa ja puikkoa. Asuinpuolella on '
+            + 'tatamilattia, puulipasto ja shōji-ovi.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
         {
           tiedosto: 'Corner - Shitamachi Museum- Ueno, Taito, Tokyo, Japan - DSC08740.JPG',
           selite: 'Museoon siirretty yleisen kylpylän sisäänkäynti: '
-            + 'puukorokkeella seisoo korkea puinen vahtikoju '
-            + 'porrastettuine pöytätasoineen, ja sen takana on '
-            + 'huurrelasiovia, joihin on kaiverrettu bambua. Kojun '
-            + 'yläpuolella on kaksi lasitettua kilpeä, toisessa '
-            + 'kirjoitusmerkki ja toisessa keltainen kolmihaarainen '
-            + 'höyrymerkki valkoisella pohjalla. Korokkeen vasemmassa '
-            + 'reunassa on rottinkituoli valkoisine istuintyynyineen, sen '
-            + 'vieressä punottu bambukori ja lattialla olkimatto; puiseen '
-            + 'oveen on kiinnitetty kaksi pientä mainosjulistetta. '
-            + 'Oikealla korokkeen ulkopuolella seisoo tummanpunainen '
-            + 'lattiavaaka pyöreine osoitintauluineen, ja takaseinän '
-            + 'peittää kaksikerroksinen rivistö puisia kenkälokeroita, '
-            + 'joiden juurella on pieni punainen jakkara.',
+            + 'puukorokkeella seisoo korkea puinen vahtikoju, jonka '
+            + 'yläpuolella on kaksi lasitettua kilpeä, toisessa keltainen '
+            + 'kolmihaarainen höyrymerkki. Takaseinän peittää '
+            + 'kaksikerroksinen rivistö puisia kenkälokeroita.',
           lahde: 'Daderot, Wikimedia Commons (CC0)',
         },
       ],
