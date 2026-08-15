@@ -1,6 +1,6 @@
 # Osallistuminen
 
-Kiitos kiinnostuksesta! Lue ensin pelin perustuslaki: Raamattu 2.0:n osio "Perustuslaki: viisi pilaria" (js/tyohuone-raamattu.js, työhuoneen Raamattu-välilehti) —
+Kiitos kiinnostuksesta! Lue ensin pelin perustuslaki: Raamatun osio "Perustuslaki: viisi pilaria" (js/tyohuone-raamattu.js, työhuoneen Raamattu-välilehti) —
 ne kertovat, millä perusteilla sisältö hyväksytään peliin. Tämä peli on rakennettu niin, että uusien lautojen ja
 kysymysten lisääminen on mahdollisimman helppoa — myös ilman syvää
 ohjelmointikokemusta. Kaikki muutokset tehdään pull requesteina, ja testit
@@ -319,7 +319,7 @@ Lauta hyväksytään, kun molemmat puolet ovat kunnossa:
   Tiesitkö että -tietoja; vihjeet eivät paljasta vastausta
 - botit pystyvät pelaamaan laudalla kokonaisen pelin loppuun
 
-**Ihmisen arvioima osa** (Raamattu 2.0:n pilarit 1–4):
+**Ihmisen arvioima osa** (Raamatun pilarit 1–4):
 
 - pelaako lauta hyvin: onko reiteissä valinnanvaraa, ovatko etäisyydet
   tasapainossa, onko meri- ja lentoreiteillä merkitystä?

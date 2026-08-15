@@ -14,11 +14,11 @@ luettelon unohdettuja aarteita. Selainpeli ilman build-vaihetta
   Omistaja kehittää kahdella tilillä ja ohjaa kaikkea Fablen kautta;
   katso dokumentista oma roolisi, viestintäkanava ja julkaisusäännöt
   ennen kuin teet mitään.
-- **js/tyohuone-raamattu.js (RAAMATTU 2.0)** — koko pelin idea ja
+- **js/tyohuone-raamattu.js (RAAMATTU)** — koko pelin idea ja
   kaikki oleelliset linjaukset YHDESSÄ tiiviissä paketissa (omistajan
   linjaus 15.8.2026: uudet oleelliset linjaukset kirjataan VAIN tänne;
   tekniset toteutusohjeet saavat asua muualla). Vain Fable kirjoittaa;
-  ristiriidassa hyväksytty Raamattu 2.0 -osio voittaa muut dokumentit.
+  ristiriidassa hyväksytty Raamattu-osio voittaa muut dokumentit.
   Raamatun viimeinen osio on TÄYDELLINEN KARTTA kaikkiin muihin
   ohjedokumentteihin — jos dokumenttia ei ole kartalla, se ei ole
   ohje (tests/dokumentit.test.mjs valvoo tätä koneellisesti).
@@ -26,7 +26,7 @@ luettelon unohdettuja aarteita. Selainpeli ilman build-vaihetta
   (sitova kaikessa sisällössä; vain Fable kirjoittaa näihin).
 - docs/kaariteksti-sapluuna.md — miten uuden laudan kaaritekstit
   kirjoitetaan (prosessi, kiintiöt, tarkistuslistat).
-- Perustuslaki (viisi pilaria) on Raamattu 2.0:n osiossa "Perustuslaki";
+- Perustuslaki (viisi pilaria) on Raamatun osiossa "Perustuslaki";
   tekniset jatkeet (laudan hyväksyminen, etukäteispuskuri) CONTRIBUTING.md:ssä.
 - docs/tutki-aiheet.md ja docs/tyolista-opukselle.md — lehtimalli
   ja lehtityön ohjeet.

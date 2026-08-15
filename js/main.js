@@ -40,7 +40,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.697';
+const APP_VERSION = '2026-08-09.698';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1091,7 +1091,7 @@ const PUHE_NAYTTEET = {
 /** Napin näkyvyys seuraa kehittäjätilaa. */
 function paivitaPuheSaadin() {
   if (puheSaadinNappi) puheSaadinNappi.hidden = !kehittajaTilaPaalla();
-  // Kehittäjän liitteet (omistajan tilaus 15.8.2026): Raamattu 2.0 ja
+  // Kehittäjän liitteet (omistajan tilaus 15.8.2026): Raamattu ja
   // tilannetaulut luettavina lehtinä — linkit näkyvät vain vivun takana.
   const kehittajaKotelo = document.getElementById('kehittaja-kotelo');
   if (kehittajaKotelo) kehittajaKotelo.hidden = !kehittajaTilaPaalla();

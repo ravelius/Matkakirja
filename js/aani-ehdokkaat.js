@@ -530,7 +530,7 @@ for (const pack of PACKS) {
  * (sähkeet ovat näytössä KAPITEELEIN, puheessa eroa ei ole).
  * Sanamuutos sen sijaan pudottaa äänitteen heti pois käytöstä ja
  * merkintä striimataan lukijaäänellä — uusia äänitteitä EI generoida
- * ennen kuin matkakirjatekstit uudistetaan Raamattu 2.0:n valmistuttua.
+ * ennen kuin matkakirjatekstit uudistetaan Raamatun valmistuttua.
  */
 export function luentaVastaaTekstia(merkinta) {
   if (!merkinta?.luenta || !merkinta?.kuvaus) return false;

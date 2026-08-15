@@ -1,7 +1,7 @@
 /*
  * Savuke: kehittäjän liitteet (omistajan tilaus 15.8.2026).
  *  1. Kehittäjä-kotelo näkyy valikossa vain kehittäjätilassa.
- *  2. Raamattu 2.0 aukeaa lehtenä: sivuja johdanto + jokainen osio,
+ *  2. Raamattu aukeaa lehtenä: sivuja johdanto + jokainen osio,
  *     sisältö oikeasta datasta, sivunvaihto toimii.
  *  3. Tilannelehti aukeaa: Tilanne- ja Testattavaa-sivut riveineen.
  *
@@ -50,7 +50,7 @@ const kotelo = await sivu.evaluate(() => {
 });
 vaadi('Kehittäjä-kotelo näkyy valikossa kehittäjätilassa', kotelo.nakyy, JSON.stringify(kotelo));
 
-// 2. Raamattu 2.0 -lehti.
+// 2. Raamattu -lehti.
 const raamattu = await sivu.evaluate(async () => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
   document.getElementById('raamattu-lehti-btn')?.click();
@@ -68,14 +68,14 @@ const raamattu = await sivu.evaluate(async () => {
     auki: Boolean(dialogi?.open),
     otsikko,
     sivuja: ui.tutkiSivuja(),
-    odotus: m.RAAMATTU2.osiot.length + 2, // kansi-indeksi 0 + johdanto + osiot
-    ekaOk: /Raamattu 2.0/.test(eka),
+    odotus: m.RAAMATTU.osiot.length + 2, // kansi-indeksi 0 + johdanto + osiot
+    ekaOk: /Raamattu/.test(eka),
     sisaltoOk: runko.includes('Koko pelin idea yhdessä dokumentissa'),
     toinenOk: /Ydinajatus/.test(toinen),
   };
 });
-vaadi('Raamattu 2.0 aukeaa lehtenä ja sivuja on johdanto + osiot',
-  raamattu.auki && raamattu.otsikko === 'Raamattu 2.0' && raamattu.sivuja === raamattu.odotus,
+vaadi('Raamattu aukeaa lehtenä ja sivuja on johdanto + osiot',
+  raamattu.auki && raamattu.otsikko === 'Raamattu' && raamattu.sivuja === raamattu.odotus,
   JSON.stringify(raamattu));
 vaadi('Raamatun sisältö tulee datasta ja sivunvaihto toimii',
   raamattu.ekaOk && raamattu.sisaltoOk && raamattu.toinenOk, JSON.stringify(raamattu));

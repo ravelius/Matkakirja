@@ -6,7 +6,7 @@
  * välillä ja rikkinäinen puhelin on kaikkein pahin."
  *
  * Nämä testit tekevät linjauksesta koneellisen: docs/-kansioon ei voi
- * ilmestyä ohjedokumenttia, jota Raamattu 2.0:n kartta ei tunne, eikä
+ * ilmestyä ohjedokumenttia, jota Raamatun kartta ei tunne, eikä
  * kartalta voi kadota tiedostoa, joka on yhä olemassa. Arkisto ja
  * raportit ovat kartan ulkopuolella tarkoituksella — ne eivät ole
  * ohjeita, ja arkistoidut tiedostot kantavat otsikkohuomautusta.
@@ -23,7 +23,7 @@ test('jokainen docs/-ohjedokumentti on Raamatun kartalla', () => {
     .filter((n) => n.endsWith('.md'));
   for (const nimi of tiedostot) {
     assert.ok(RAAMATTU.includes(`docs/${nimi}`),
-      `docs/${nimi} puuttuu Raamattu 2.0:n ohjedokumenttikartalta `
+      `docs/${nimi} puuttuu Raamatun ohjedokumenttikartalta `
       + '(js/tyohuone-raamattu.js) — lisää se karttaan tai arkistoi '
       + 'tiedosto docs/arkisto/-kansioon otsikkohuomautuksella.');
   }

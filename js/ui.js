@@ -698,13 +698,13 @@ import {
 // kirjoitetaan uusiksi).
 import { puheTuettu } from './puhe.js';
 /*
- * Kehittäjän liitteet (omistajan tilaus 15.8.2026): Raamattu 2.0 ja
+ * Kehittäjän liitteet (omistajan tilaus 15.8.2026): Raamattu ja
  * työhuoneen tilannetaulut luetaan pelin sisällä lehtinä, kun
  * kehittäjävipu on päällä — työhuone pidetään jatkossa integroituna
  * suoraan peliin. Tuonti ei kasvata pelaajan polkuja: sisältö
  * piirretään vain kehittäjätilan valikkolinkeistä.
  */
-import { RAAMATTU2 } from './tyohuone-raamattu.js';
+import { RAAMATTU } from './tyohuone-raamattu.js';
 import { TILANNE, TESTATTAVAA } from './tyohuone-tilanne.js';
 import {
   el,
@@ -8211,7 +8211,7 @@ export class UI {
        * TILAPÄINEN (omistajan päätös 11.8.2026 ilta): vanhan mallin
        * lyhyt kahden äänen merkintä luentoineen on palautettu
        * kaaritekstin tilalle, kunnes tekstit kirjoitetaan uusiksi
-       * Raamattu 2.0:n mukaan — omistajan arvio: vanha malli on
+       * Raamatun mukaan — omistajan arvio: vanha malli on
        * parempi, ja kaaritekstien luentoja ei ehditty generoida.
        * Kaarimerkintää käytetään vain, jos vanhaa ei ole; kohtaaminen
        * ja aarre tulevat yhä kaaresta. Nosto jää kaaritekstistä pois:
@@ -8258,7 +8258,7 @@ export class UI {
          * striimataan lukijaäänellä, samoin merkinnät joille
          * äänitettä ei koskaan tehty ja mykistetyt kaariosat.
          * UUSIA ÄÄNITTEITÄ EI GENEROIDA ennen kuin matkakirjatekstit
-         * uudistetaan Raamattu 2.0:n valmistuttua — striimaus kattaa
+         * uudistetaan Raamatun valmistuttua — striimaus kattaa
          * välivaiheen. Kaariosilla ajantasaisuuden kirjanpito on
          * mykistyslistassa (kaariLuentaSoi), ei tekstivertailussa.
          */
@@ -10658,16 +10658,16 @@ export class UI {
     this.naytaTutkiSivu(1, { heti: true });
   }
 
-  /** Raamattu 2.0 lehtenä: johdanto + jokainen osio omana sivunaan. */
+  /** Raamattu lehtenä: johdanto + jokainen osio omana sivunaan. */
   avaaRaamattuLehti() {
     const sivut = [{
       id: 'raamattu-johdanto',
-      nimi: 'Raamattu 2.0',
+      nimi: 'Raamattu',
       nostot: [{
-        otsikko: `Päivitetty ${RAAMATTU2.paivitetty}`,
-        teksti: RAAMATTU2.johdanto,
+        otsikko: `Päivitetty ${RAAMATTU.paivitetty}`,
+        teksti: RAAMATTU.johdanto,
       }],
-    }, ...RAAMATTU2.osiot.map((osio, i) => ({
+    }, ...RAAMATTU.osiot.map((osio, i) => ({
       id: `raamattu-${i}`,
       nimi: osio.otsikko,
       nostot: [{
@@ -10675,7 +10675,7 @@ export class UI {
         teksti: (osio.kohdat ?? []).join('\n\n'),
       }],
     }))];
-    this.avaaKehittajaLehti('Raamattu 2.0', sivut);
+    this.avaaKehittajaLehti('Raamattu', sivut);
   }
 
   /** Työhuoneen tilannetaulut lehtenä: tilanne + testattavaa. */
@@ -13847,7 +13847,7 @@ export class UI {
 
   /**
    * Pelin periaatteet omana ikkunanaan aloitussivulta (omistajan toive).
-   * Sisältö on tiivistys README:stä ja Raamattu 2.0:n perustuslaista: miksi peli
+   * Sisältö on tiivistys README:stä ja Raamatun perustuslaista: miksi peli
    * on olemassa ja millä säännöillä sisältöä siihen tehdään.
    */
   naytaPeriaatteet() {
