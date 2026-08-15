@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 759, teksti: 'jutun otsikko ei enää liu\'u piiloon kuvan latautuessa' },
   { v: 758, teksti: 'työhuoneen lähteet oikeisiin muuttujiin (peili↔pöllö)' },
   { v: 757, teksti: 'jutun napit seuraavat korttia; leveys kestää sovellusvaihdon' },
   { v: 756, teksti: 'opas leveämmäksi isolla ruudulla; valikkonappi pois oppaasta' },

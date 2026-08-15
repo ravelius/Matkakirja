@@ -11140,6 +11140,15 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   max-height: inherit;
   overflow-y: auto;
   overscroll-behavior: contain;
+  /*
+   * Vieritysankkurointi POIS (omistajan havainto 15.8.2026: "otsikko
+   * jää puoliksi piiloon"): kun karusellin kuva latautuu avauksen
+   * jälkeen, selain ankkuroi näkymän alempaan kappaleeseen ja juttu
+   * liukuu alas — otsikko katoaa yläreunan taakse, vaikka kukaan ei
+   * vierittänyt. Juttu avataan aina alusta, joten ankkuroinnista ei
+   * ole tässä kortissa mitään hyötyä.
+   */
+  overflow-anchor: none;
   padding: 1.2rem 1.15rem 1rem;
 }
 
@@ -111987,6 +111996,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v759 — jutun otsikko pysyy näkyvissä kuvan latautuessa',
   'v758 — työhuoneen palkit: pitäisi VIHDOIN näyttää luvut',
   'v757 — jutun napit kortissa kiinni; leveys kestää appivaihdon',
   'v756 — opas leveämpi iPadilla; ☰ pois oppaan yläkulmasta',
@@ -178072,6 +178082,19 @@ class UI {
     // Paluu palauttaa lukukohdan: juttu jatkuu siitä mihin se jäi,
     // ei alusta. rAF, koska korkeus on olemassa vasta taiton jälkeen.
     if (palaa && rulla && kortti) requestAnimationFrame(() => { kortti.scrollTop = rulla; });
+    /*
+     * Vyö henkselien lisäksi (overflow-anchor: none yllä CSS:ssä):
+     * jos kuvan latautuminen silti liu'uttaa jutun alkua piiloon
+     * (Safarin oma ankkurointi), pieni ajastettu tarkistus palauttaa
+     * yläreunan. Vain pieni liukuma nollataan — käyttäjän oma
+     * vieritys on jo ehtinyt pidemmälle eikä siihen kosketa.
+     */
+    if (!palaa && kortti) {
+      clearTimeout(this.nahtavyysYlaVahti);
+      const oikaise = () => { if (kortti.scrollTop > 0 && kortti.scrollTop <= 80) kortti.scrollTop = 0; };
+      this.nahtavyysYlaVahti = setTimeout(() => { oikaise(); }, 350);
+      setTimeout(oikaise, 1200);
+    }
     // Uusi juttu, uusi teksti: edellisen kohteen luenta ei saa jatkua.
     pysaytaLukija();
     this.varustaLukija(dialogi, () => dialogi.querySelector('.nahtavyys-kortti'));
@@ -183312,6 +183335,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 759, teksti: 'jutun otsikko ei enää liu\'u piiloon kuvan latautuessa' },
   { v: 758, teksti: 'työhuoneen lähteet oikeisiin muuttujiin (peili↔pöllö)' },
   { v: 757, teksti: 'jutun napit seuraavat korttia; leveys kestää sovellusvaihdon' },
   { v: 756, teksti: 'opas leveämmäksi isolla ruudulla; valikkonappi pois oppaasta' },
@@ -184167,7 +184191,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.758';
+const APP_VERSION = '2026-08-09.759';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
