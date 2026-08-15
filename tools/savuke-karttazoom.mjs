@@ -14,6 +14,12 @@
  *      jos se pettää, numeroympyrä osoittaa väärää korttelia.
  *   2. PANOROINTI PYSYY REUNOISSA. Kartan reunan yli ei saa raahata:
  *      lavan on peitettävä kehys joka asennossa.
+ *   2b. REUNUS (15.8.2026, kartat joilla on piirtoRajat). Juliste on
+ *      ydinrajausta laajempi, joten panorointi jatkuu reunuksen
+ *      puolelle — mutta VAIN piirrosnäkymässä, ja lepotilaan
+ *      palattaessa näkymän on oltava tarkalleen ydinrajaus ilman
+ *      muunnosta lavalla. Satelliittikuva on vanhalla rajauksella,
+ *      joten siinä panorointi pysähtyy ydinrajauksen reunaan.
  *   3. YMPYRÄ EI PAISU. Vastaskaalauksen jälkeen numeroympyrän on
  *      oltava ruudulla suunnilleen saman kokoinen zoomatessakin.
  *   4. ELE EI VUODA LEHTEEN. Zoomattu raahaus ei saa vaihtaa lehden
@@ -95,6 +101,29 @@ await sivu.waitForFunction(() => {
   return i && i.naturalWidth > 0;
 }, null, { timeout: 20000 });
 
+/*
+ * Ydinrajauksen paikka kuvassa: lepotilassa juuri tämän on täytettävä
+ * kehys, ja satelliittikuva kattaa vain tämän alan. Luvut haetaan
+ * pelin omasta datasta, jottei savuke arvaa geometriaa uudelleen.
+ */
+const ydin = await sivu.evaluate(async (id) => {
+  const m = await import('/js/packs/maakartat.js');
+  return m.ydinAla(m.KAUPUNKIKARTAT[id]);
+}, KAUPUNKI);
+const laajennettu = ydin.leveys < 99.9;
+console.log(laajennettu
+  ? `\nydinrajaus kuvassa: ${ydin.x.toFixed(1)} % / ${ydin.y.toFixed(1)} %, `
+    + `${ydin.leveys.toFixed(1)} × ${ydin.korkeus.toFixed(1)} % (kartta jatkuu reunoille)`
+  : '\n(kartalla ei ole reunusta — piirtoRajat puuttuu)');
+
+/** Ydinrajauksen laatikko ruudulla mittauksesta (lava on jo skaalattu). */
+const ydinLaatikko = (m) => ({
+  x: m.lava.x + (m.lava.w * ydin.x) / 100,
+  y: m.lava.y + (m.lava.h * ydin.y) / 100,
+  w: (m.lava.w * ydin.leveys) / 100,
+  h: (m.lava.h * ydin.korkeus) / 100,
+});
+
 /** Mittaa pisteiden paikat SUHTEESSA lavaan — sen on pysyttävä samana. */
 const mittaa = () => sivu.evaluate(() => {
   const kehys = document.querySelector('.kartta-kehys');
@@ -111,6 +140,9 @@ const mittaa = () => sivu.evaluate(() => {
       w: kehys.clientWidth, h: kehys.clientHeight,
     },
     lava: { x: l.x, y: l.y, w: l.width, h: l.height },
+    // Lepotilan invariantti: kertoimella 1 lavalla ei ole muunnosta
+    // lainkaan (ks. kytkeKarttaZoom — hiusviivojen rasterointi).
+    muunnos: getComputedStyle(lava).transform,
     // Piste kuvan omassa koordinaatistossa, 0–1. Sama luku joka asennossa.
     pisteet: [...piste].map((p) => {
       const r = p.getBoundingClientRect();
@@ -140,6 +172,15 @@ const pohja = await mittaa();
 console.log(`  kehys ${Math.round(pohja.kehys.w)}×${Math.round(pohja.kehys.h)}, `
   + `pisteitä ${pohja.pisteet.length}, ympyrä ${pohja.pisteet[0]?.koko.toFixed(1)} px`);
 vaadi(pohja.zoom === 1, 'alkutila on zoomaamaton (--zoom = 1)');
+vaadi(pohja.muunnos === 'none', 'alkutilassa lavalla ei ole muunnosta');
+{
+  const y = ydinLaatikko(pohja);
+  vaadi(
+    Math.abs(y.x - pohja.kehys.x) < 1 && Math.abs(y.y - pohja.kehys.y) < 1
+      && Math.abs(y.w - pohja.kehys.w) < 1 && Math.abs(y.h - pohja.kehys.h) < 1,
+    'alkutilassa kehyksessä on tarkalleen ydinrajaus',
+  );
+}
 await sivu.screenshot({ path: join(ULOS, `zoom-${KAUPUNKI}-1-piirros-perus.png`), clip: laatikko });
 // Koko lehden näkymä: työkalurivi, kartta ja selitteet yhdessä kuvassa.
 await sivu.screenshot({
@@ -153,7 +194,7 @@ await sivu.screenshot({
 });
 
 /** Yksi testikierros: rulla, raahaus, tuplanapautus, nipistys. */
-async function kierros(nimi) {
+async function kierros(nimi, { satelliitissa = false } = {}) {
   // --- rulla lähentää osoittimen kohdalta ---
   await sivu.mouse.move(keski.x, keski.y);
   for (let i = 0; i < 6; i += 1) await sivu.mouse.wheel(0, -120);
@@ -193,18 +234,52 @@ async function kierros(nimi) {
   vaadi(sivuEnnen === sivuJalkeen, 'raahaus ei vaihda lehden sivua');
   await sivu.screenshot({ path: join(ULOS, `zoom-${KAUPUNKI}-3-${nimi}-panoroitu.png`), clip: laatikko });
 
-  // --- reunan yli raahaaminen ei irrota karttaa kehyksestä ---
-  await sivu.mouse.move(keski.x, keski.y);
-  await sivu.mouse.down();
-  for (let i = 1; i <= 10; i += 1) await sivu.mouse.move(keski.x + i * 60, keski.y + i * 40);
-  await sivu.mouse.up();
-  await sivu.waitForTimeout(300);
+  /*
+   * REUNAN YLI RAAHAAMINEN EI IRROTA KARTTAA KEHYKSESTÄ. Raja on
+   * SALLITTU ALA, joka on piirrosnäkymässä koko lava ja
+   * satelliittinäkymässä pelkkä ydinrajaus (satelliittikuvaa ei ole
+   * reunukselle). Laajentamattomalla kartalla nämä ovat sama asia.
+   */
+  // Kolme vetoa peräkkäin: yksi veto mahtuu ikkunaan vain 600
+  // pikseliä, ja reunuksellisella kartalla matkaa nurkkaan on
+  // enemmän kuin sen verran.
+  for (let veto = 0; veto < 3; veto += 1) {
+    await sivu.mouse.move(keski.x - 200, keski.y - 150);
+    await sivu.mouse.down();
+    for (let i = 1; i <= 10; i += 1) {
+      await sivu.mouse.move(keski.x - 200 + i * 50, keski.y - 150 + i * 35);
+    }
+    await sivu.mouse.up();
+    await sivu.waitForTimeout(200);
+  }
+  await sivu.waitForTimeout(200);
   const reunassa = await mittaa();
+  const raja = satelliitissa ? ydinLaatikko(reunassa) : reunassa.lava;
   vaadi(
-    Math.abs(reunassa.lava.x - reunassa.kehys.x) < 0.6
-      && Math.abs(reunassa.lava.y - reunassa.kehys.y) < 0.6,
-    'reunan yli raahattaessa kartta pysähtyy reunaan',
+    Math.abs(raja.x - reunassa.kehys.x) < 0.6 && Math.abs(raja.y - reunassa.kehys.y) < 0.6,
+    `reunan yli raahattaessa kartta pysähtyy ${satelliitissa ? 'ydinrajauksen' : 'kuvan'} reunaan`,
   );
+  if (laajennettu) {
+    const ydinNyt = ydinLaatikko(reunassa);
+    if (satelliitissa) {
+      // Satelliitissa reunusta ei saa näkyä: ydinrajauksen on
+      // peitettävä kehys joka asennossa.
+      vaadi(
+        ydinNyt.x <= reunassa.kehys.x + 0.6 && ydinNyt.y <= reunassa.kehys.y + 0.6
+          && ydinNyt.x + ydinNyt.w >= reunassa.kehys.x + reunassa.kehys.w - 0.6,
+        'satelliittinäkymässä panorointi ei mene kuvan reunan yli',
+      );
+    } else {
+      // Piirroksessa panoroinnin on jatkuttava reunukselle: kehyksen
+      // vasen laita on nyt ydinrajauksen ULKOPUOLELLA.
+      vaadi(ydinNyt.x > reunassa.kehys.x + 5,
+        'piirroksessa panorointi jatkuu reunuksen puolelle');
+    }
+    await sivu.screenshot({
+      path: join(ULOS, `zoom-${KAUPUNKI}-3b-${nimi}-reunus.png`),
+      clip: laatikko,
+    });
+  }
 
   // --- nipistys kahdella sormella ---
   await sivu.evaluate(() => { window.matkakirja.ui.kartanZoomTesti = null; });
@@ -220,6 +295,20 @@ async function kierros(nimi) {
   const tupla = await mittaa();
   vaadi(tupla.zoom === 1, 'tuplanapautus zoomatulla kartalla palauttaa koko kartan');
   vaadi(ero(pohja, tupla) < 0.002, 'palautettu kartta on täsmälleen alkutila');
+  /*
+   * LEPOTILAN KAKSI EHTOA. Kartta on juuri palannut pohjaan
+   * reunukselta, ja silloin mitataan se, mitä koko ominaisuus lupaa:
+   * kehyksessä on tarkalleen ydinrajaus, eikä lavalla ole muunnosta.
+   * Jälkimmäinen ei ole muotoseikka — muunnos rasteroi kartan
+   * hiusviivat eri tavalla (ks. kytkeKarttaZoom).
+   */
+  vaadi(tupla.muunnos === 'none', 'lepotilassa lavalla ei ole muunnosta');
+  const ydinLepo = ydinLaatikko(tupla);
+  vaadi(
+    Math.abs(ydinLepo.x - tupla.kehys.x) < 1 && Math.abs(ydinLepo.y - tupla.kehys.y) < 1
+      && Math.abs(ydinLepo.w - tupla.kehys.w) < 1 && Math.abs(ydinLepo.h - tupla.kehys.h) < 1,
+    'lepotilassa kehyksessä on tarkalleen ydinrajaus',
+  );
 
   // --- ja toinen tuplanapautus lähentää napautettuun kohtaan ---
   await sivu.mouse.dblclick(keski.x, keski.y);
@@ -318,7 +407,7 @@ if (onSatelliitti) {
   vaadi(satPohja.zoom === 1, 'näkymän vaihto ei jätä karttaa zoomatuksi');
   vaadi(ero(pohja, satPohja) < 0.002, 'kohdepisteet ovat samassa kohdassa satelliittikuvassa');
   await sivu.screenshot({ path: join(ULOS, `zoom-${KAUPUNKI}-5-satelliitti-perus.png`), clip: laatikko });
-  await kierros('satelliitti');
+  await kierros('satelliitti', { satelliitissa: true });
   await sivu.screenshot({ path: join(ULOS, `zoom-${KAUPUNKI}-6-satelliitti-zoom.png`), clip: laatikko });
 } else {
   console.log('\n(ei satelliittinäkymää tällä kaupungilla)');

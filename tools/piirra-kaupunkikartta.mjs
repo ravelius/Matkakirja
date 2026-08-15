@@ -1303,8 +1303,14 @@ async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false) {
  * ja koska aineisto haetaan ennen piirtoa, hukkaan menee myös se
  * minuutti, jonka kysely ehti kestää. Kolme yritystä kasvavalla
  * odotuksella riitti kaikkiin tässä kohdattuihin katkoihin.
+ *
+ * VIISI YRITYSTÄ 15.8.2026 ALKAEN. Reunuksellisen kartan kysely
+ * kattaa 2,6-kertaisen alan (laajennus 1,6 molempiin suuntiin), ja
+ * Lontoon ajo katkesi kolmesti peräkkäin ECONNRESETiin kesken
+ * vastauksen — ei siis 429:ään vaan pitkän vastauksen katkeamiseen.
+ * Neljäs yritys meni läpi.
  */
-async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 3) {
+async function haeOverpassSitkeasti(rajat, palvelutiet = false, jalkakaydat = false, yrityksia = 5) {
   for (let i = 1; ; i++) {
     try {
       return await haeOverpass(rajat, palvelutiet, jalkakaydat);

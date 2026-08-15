@@ -3293,8 +3293,20 @@ export const KAUPUNKIKARTAT = {
      * on kirjattu tools/piirra-kaupunkikartta.mjs:n helsinki-lohkoon.
      * Lyhyesti: symmetrinen laajennus riitti tuomaan Kallion kirkon
      * ja Linnanmäen kuvaan, ja niemen kärki pysyi irti alalaidasta.
+     *
+     * JA JULISTE JATKUU TÄMÄN YLI (omistajan tilaus 15.8.2026, ks.
+     * berliini alla): piirtoRajat on 1,6-kertainen ala samasta
+     * keskipisteestä eli 7,5 × 6,6 km. Lepotilassa lehti näyttää yhä
+     * yllä olevan rajat-alueen; reunuksella ovat Seurasaari ja
+     * Meilahti lännessä, Vallila ja Kumpula pohjoisessa sekä
+     * Korkeasaari idässä. Juuri se avovesi, jota ydinrajaukseen ei
+     * saanut ottaa, on nyt reunuksella, jossa se ei syö kuvan ydintä.
+     * SATELLIITTIKUVA ON YHÄ vanhalla rajauksella (Suomenlinnan
+     * kainalo siihen komposoituna), joten satelliittinäkymässä
+     * panorointi pysähtyy kuvan reunaan (ui.js).
      */
     rajat: { pohjoinen: 60.1877, etela: 60.1508, lansi: 24.9076, ita: 24.9919 },
+    piirtoRajat: { pohjoinen: 60.19877, etela: 60.13973, lansi: 24.88231, ita: 25.01719 },
     /*
      * Kainalokartta Suomenlinnasta. Se on lehden historiaosion
      * pääkohde eikä mahdu mihinkään järkevään päärajaukseen — 3 km
@@ -3306,10 +3318,20 @@ export const KAUPUNKIKARTAT = {
      * kainalon kuvasuhde); älä muuta sitä käsin. Levennys 15.8.2026
      * muutti pääkuvan kuvasuhdetta hitusen, ja luku päivittyi
      * 28.85 → 28.81.
+     *
+     * LUVUT OVAT PROSENTTEJA PIIRRETYSTÄ KUVASTA, ja reunus 15.8.2026
+     * muutti ne kaikki. Ruutu on lepotilan näkymässä täsmälleen
+     * entisessä kohdassaan: ydinrajaus alkaa laajennetussa kuvassa
+     * kohdasta 18,75 % ja on 62,5 % leveä ja korkea, joten vanhat
+     * luvut muuntuivat kaavalla 18,75 + vanha × 0,625 (mitat ×
+     * 0,625): x 76 → 66.25, y 69.15 → 61.97, leveys 22 → 13.75,
+     * korkeus 28.81 → 18 (tarkka arvo 18,0042; vanha 28.81 oli
+     * pyöristetty luvusta 28,8067). Ruudun koko pikseleinä ei muutu,
+     * koska kuvakin leveni samassa suhteessa.
      */
     kainalot: [
       { rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
-        x: 76, y: 69.15, leveys: 22, korkeus: 28.81 },
+        x: 66.25, y: 61.97, leveys: 13.75, korkeus: 18 },
     ],
     esittely: 'Helsinki ei ole aina ollut tässä. Kustaa Vaasa perusti '
       + 'sen vuonna 1550 Vantaanjoen suulle Tallinnan kilpailijaksi, '
@@ -3516,8 +3538,17 @@ export const KAUPUNKIKARTAT = {
      * Eteläreuna maksoi takaisin sen, minkä vanha rajaus joutui
      * jättämään: Panthéon ja Luxembourgin puutarha ovat nyt kuvassa
      * (ks. kohteet-lohkon kommentti).
+     *
+     * JA JULISTE JATKUU TÄMÄN YLI (omistajan tilaus 15.8.2026, ks.
+     * berliini alla): piirtoRajat on 1,6-kertainen ala samasta
+     * keskipisteestä eli 13,3 × 10,0 km. Lepotilassa lehti näyttää
+     * yhä yllä olevan rajat-alueen; reunuksella ovat muun muassa Bois
+     * de Boulognen itälaita ja Père-Lachaise. SATELLIITTIKUVA ON YHÄ
+     * vanhalla rajauksella, joten siinä panorointi pysähtyy kuvan
+     * reunaan (ui.js).
      */
     rajat: { pohjoinen: 48.8976, etela: 48.8414, lansi: 2.2657, ita: 2.3788 },
+    piirtoRajat: { pohjoinen: 48.91446, etela: 48.82454, lansi: 2.23177, ita: 2.41273 },
     esittely: 'Pariisi alkoi saarelta. Seine haarautuu keskellä '
       + 'kaupunkia kahdeksi kapeaksi uomaksi, ja niiden väliin jää '
       + 'Île de la Cité — saari, joka on kymmenen katua pitkä ja viisi '
@@ -3763,8 +3794,17 @@ export const KAUPUNKIKARTAT = {
      * korjattu mitään. Tower Bridge oli ennen itälaidassa 85 %:n
      * kohdalla, nyt 78 %:ssa. Sekä piirros että satelliittikuva on
      * haettu uudelleen tällä rajauksella.
+     *
+     * JA JULISTE JATKUU TÄMÄN YLI (omistajan tilaus 15.8.2026, ks.
+     * berliini alla): piirtoRajat on 1,6-kertainen ala samasta
+     * keskipisteestä eli 13,9 × 7,2 km. Lepotilassa lehti näyttää yhä
+     * yllä olevan rajat-alueen; reunuksella on Regent's Park ja
+     * Kensington Gardens pohjoisessa ja lännessä. SATELLIITTIKUVA ON
+     * YHÄ vanhalla rajauksella, joten siinä panorointi pysähtyy kuvan
+     * reunaan (ui.js).
      */
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
+    piirtoRajat: { pohjoinen: 51.54131, etela: 51.47619, lansi: -0.21, ita: -0.01 },
     esittely: 'Lontoo ei ole yksi kaupunki vaan kaksi, jotka kasvoivat '
       + 'yhteen: idässä City of London, roomalaisten muurien rajaama '
       + 'neliökilometri, jossa tehdään rahaa, ja lännessä Westminster, '
