@@ -42,7 +42,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.743';
+const APP_VERSION = '2026-08-09.744';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1174,16 +1174,22 @@ function piirraTyohuonePalkit(data) {
   if (!kotelo) return;
   kotelo.replaceChildren();
   const { repoKt, tila } = data;
+  // Mt alle gigan (omistajan havainto 15.8.2026: "R2 ei voi olla
+  // oikein" — kymmenien megatavujen ämpäri pyöristyi näytöllä
+  // 0,0 gigatavuun, mikä näytti tyhjältä vaikka ei ollut).
+  const r2Arvo = (tavut) => (tavut >= 1024 ** 3
+    ? `${(tavut / 1024 ** 3).toFixed(1)}/10 Gt`
+    : `${Math.round(tavut / 1024 ** 2)} Mt/10 Gt`);
   kotelo.appendChild(tyohuonePalkki('R2',
     tila?.r2 ? tila.r2.tavut / TYOHUONE_RAJAT.r2 : null,
-    tila?.r2 ? `${(tila.r2.tavut / 1024 ** 3).toFixed(1)}/10 Gt` : ''));
+    tila?.r2 ? r2Arvo(tila.r2.tavut) : ''));
   kotelo.appendChild(tyohuonePalkki('Repo',
     repoKt !== null ? repoKt / TYOHUONE_RAJAT.repo : null,
     repoKt !== null ? `${(repoKt / 1024).toFixed(0)} Mt/1 Gt` : ''));
   kotelo.appendChild(tyohuonePalkki('ElevenLabs',
     tila?.eleven?.raja ? tila.eleven.kaytetty / tila.eleven.raja : null,
     tila?.eleven?.raja
-      ? `${Math.round(tila.eleven.kaytetty / 1000)}/${Math.round(tila.eleven.raja / 1000)} t merkkiä`
+      ? `${Math.round(tila.eleven.kaytetty / 1000)}/${Math.round(tila.eleven.raja / 1000)} t`
       : ''));
   kotelo.appendChild(tyohuonePalkki('Pöllö/kk',
     tila?.pollo?.raja ? (tila.pollo.kuukausi ?? 0) / tila.pollo.raja : null,
