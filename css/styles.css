@@ -11156,7 +11156,32 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
     - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
 }
 
-.dialog.nahtavyys-arkki .nahtavyys-kortti {
+/*
+ * OTSIKON PEITON JUURISYY (löytyi 16.8.2026, omistajan kolmas
+ * havainto "otsikko jää puoliksi piiloon"): lehden tarttuva
+ * paperikaista (.dialog.arkki .dialog-card::before, ≥700 px) osuu
+ * myös nähtävyyskorttiin, koska dialogilla on sama arkki-luokka —
+ * kaista maalasi paperia jutun otsikon yläosan PÄÄLLE heti
+ * avauksesta asti. Vika ei siis ollut vieritystä laisinkaan
+ * (scrollTop pysyi nollassa), minkä vuoksi v759:n ja v762:n
+ * vieritysnollaukset eivät auttaneet. Nähtävyyskortissa ei ole
+ * tarttuvaa nimiötä, joten kaistaa ei tarvita lainkaan.
+ */
+.dialog.arkki.nahtavyys-arkki .nahtavyys-kortti::before {
+  content: none;
+}
+
+/*
+ * Valitsimessa on .arkki mukana erottelutarkkuuden takia:
+ * .dialog.arkki:not(.lehti) .dialog-card (0,4,0 — :not:n sisältö
+ * lasketaan) voitti aiemman .dialog.nahtavyys-arkki-muodon (0,3,0),
+ * jolloin max-height: inherit EI päässyt voimaan ja kortti sai
+ * lehtisäännön katon calc(100dvh - 2.4rem). Se on 0,6rem korkeampi
+ * kuin dialogin oma katto (100dvh - 3rem), joten kortti pisti
+ * flex-keskitettynä ~5 px yli dialogin molemmista päistä (mitattu
+ * 16.8.2026 otsikkopeittoa jäljittäessä).
+ */
+.dialog.arkki.nahtavyys-arkki .nahtavyys-kortti {
   width: auto;
   max-width: none;
   height: auto;
@@ -11290,6 +11315,31 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  */
 .nahtavyys-ensikuva.kuva-vaaka { max-width: 100%; }
 .nahtavyys-ensikuva.kuva-pysty { max-width: min(46%, 240px); }
+
+/*
+ * Tekstin lomaan taitetut kelluvat pikkukuvat (omistajan tilaus
+ * 16.8.2026 opasartikkeliin: "Kuvia pitää lisätä näkymään
+ * taitettuna sivulle eri kohtiin"). Kuvat kelluvat vuorotellen
+ * oikeassa ja vasemmassa laidassa ja teksti kiertää ne — sivu ei
+ * veny, toisin kuin peräkkäin ladotuilla kuvilla kävisi. Selite ja
+ * lähde kulkevat kuvan alla tavallista pienemmällä, jotta kapea
+ * kehys ei kasva tekstiä korkeammaksi.
+ */
+.nahtavyys-taittokuva {
+  max-width: min(46%, 260px);
+  margin: 0.25rem 0 0.7rem;
+}
+.nahtavyys-taittokuva.oikea { float: right; margin-left: 1.1rem; }
+.nahtavyys-taittokuva.vasen { float: left; margin-right: 1.1rem; }
+.nahtavyys-taittokuva .nahtavyys-selite { font-size: 0.76rem; }
+.nahtavyys-taittokuva .nahtavyys-lahde { font-size: 0.6rem; }
+
+/* Kellunta ei saa vuotaa jutun lopun nappien tai lähderivin alle. */
+.nahtavyys-kortti .wiki-btn,
+.nahtavyys-lahderivi,
+.nahtavyys-lainaus {
+  clear: both;
+}
 
 .nahtavyys-kuva {
   display: block;
