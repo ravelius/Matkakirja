@@ -61,13 +61,17 @@ Työtapa on siksi tämä:
   PR:t. ÄLÄ kutsu `create_trigger`- tai `fire_trigger`-työkaluja
   kertaakaan, älä edes "vain tämän kerran" — kutsu ei mene läpi,
   se jumittaa session ja tuottaa omistajalle lupakyselyn.
-- **Fable viestii työsessioille omilla triggereillään**
-  (`fire_trigger`, kohteena vastaanottajan `persistent_session_id`) —
-  Fablen kutsut eivät tuota lupakyselyitä. Joutilaalle sessiolle
-  heti; työskentelevälle `run_once_at` ~2 min päähän.
-- Jos työsessio jää silti lupakyselyyn jumiin, Fable purkaa sen
-  `interrupt_session`-kutsulla ja herättää triggerillä (todennettu
-  15.8.2026).
+- **Trigger-toimitus työsessioihin EI TOIMI (todettu 15.8.2026 yöllä):**
+  `fire_trigger` ei herätä joutilasta/katkennutta sessiota — viesti jää
+  jonoon lukemattomana. Vika koski ensin vanhoja sessioita (Opus 6–8)
+  ja varmistui sitten myös uusiin (Opus 10). **Ainoa luotettava kanava
+  työsessiolle on perustamisprompti** (`create_session` + täydellinen
+  tehtävänanto). Kun sessio pitää ohjata uudelleen: arkistoi vanha
+  ensin (estää tuplatyön) ja perusta korvaaja täydellä promptilla.
+  Siksi checkpoint-push 30 min välein on sitova — pushaamaton työ
+  katoaa kontin mukana (näin kävi Opus 10:n erille 2–3).
+- `interrupt_session` purkaa lupakyselyjumin vain kytkeytyneestä
+  sessiosta (todennettu kerran 15.8.2026); katkenneeseen se ei auta.
 - Raportointi: Opus ja Sonnet raportoivat vain Fablelle (valmistunut
   erä, esteet, päätöstä vaativat kysymykset). Fable raportoi
   omistajalle.
@@ -89,8 +93,9 @@ Työtapa on siksi tämä:
 | Opus 7 (satelliittikartta) | — ARKISTOITU 15.8.: pilotti 1 mainissa (v658), zoom-toimeksianto ei koskaan tavoittanut (toimitusvika). Pilotti 2 siirtyi Opus 11:lle. | 15.8.2026 |
 | Opus 8 (kuvatekstit) | — ARKISTOITU 15.8.: vaiheen 1 kartoitus valmis haaralla claude/opus8-kuvatekstit (551/3582 yli rajan, mittatyökalu tools/kuvateksti-audit.mjs), herätykset eivät tavoittaneet. Korjauserät siirtyivät Opus 10:lle. | 15.8.2026 |
 | Opus 9 (Siperia erä 3) | session_015mZjGUdxeUyykSgPhqYKnd (Kamtšatka + Sahalin + Vladivostok haaralla claude/opus9-siperia-era3; uusi kuvatekstisääntö suoraan; EI uutisia/kohtaamisia; raportointi viesti-fable.md:llä, EI trigger-työkaluja) | 15.8.2026 |
-| Opus 10 (kuvatekstit) | session_01JWXLysPFyGDg5tQN4QFKKb (korjauserät 1–5 Opus 8:n kartoituksen pohjalta haaralla claude/opus8-kuvatekstit; ≤3 virkettä / ~260 mrk, lähteet ja alt-tekstit rauhaan; raportointi viesti-fable.md:llä) | 15.8.2026 |
+| Opus 10 (kuvatekstit) | — ARKISTOITU 15.8. klo 01:50Z: erä 1 mainissa (v679), mutta sessio ei herännyt herätetriggeriin (toimitusvika koskee siis myös uusia sessioita — herätteet eivät toimi lainkaan, vain perustamispromptit). Erien 2–3 pushaamaton valmistelu menetettiin konttiin. Erät 2–5 siirtyivät Opus 12:lle. | 15.8.2026 |
 | Opus 11 (zoom-pilotti) | session_01EkYbtyhoS3YVFFUMsvomid (zoomattava/panoroitava kaupunkikartta, pilotti 2 VAIN Berliini haaralla claude/opus11-zoom; skaalaus 52 kaupunkiin vasta omistajan kuittauksella; raportointi viesti-fable.md:llä) | 15.8.2026 |
+| Opus 12 (kuvatekstit) | session_01N6p1tsHZEvvqTa3Hf3MEsN (korjauserät 2–5 puhtaalta pöydältä, erä per haara claude/opus12-kuvatekstit-eN; ≤3 virkettä / ≤260 mrk, siirrot leipätekstiin, lähteet ja alt-tekstit rauhaan; checkpoint-push 30 min välein; raportointi viesti-fable.md:llä, EI trigger-työkaluja) | 15.8.2026 |
 | Fable max (apusessio) | session_01NQpicvHRAzUpX4NfcYwsyv (Fable max 2; EI vastaanota viestejä tilinvaihdon jälkeen — uusi tili perustaa oman Max-session tarvittaessa. Vanha session_01U8Nqxu… arkistoitu 11.8. konttivian takia) | 11.8.2026 |
 | Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |
@@ -133,14 +138,15 @@ työstä MINUUTEISSA eikä tunneissa:
    vain, jos vanhan raportin LOPPUUN kirjoitetaan ensin minne työ
    siirtyy (Opus 1:n oppi 10.8.: haaranvaihto kesken erän näytti
    kahden tunnin jumilta, vaikka työ eteni koko ajan).
-3. **Fablen jatkuva vahti.** Fable pitää git-monitoria, joka herättää
-   sen HETI kun mikä tahansa tiimihaara liikahtaa (ei odoteta
-   vahtikierrosta), ja tarkistaa joka kierroksella list_sessions-
-   tilat (post_turn_summary + updated_at): "working" yli 45 min ilman
-   committia → herätystrigger sessiolle; "review_ready" → raportti
-   luetaan ja SEURAAVA TYÖ annetaan heti, ettei sessio jää tyhjän
-   panttina valmiuteen; trigger laukaistaan aina heti fire_triggerillä
-   (ajastin viivästeli tänään ~15 min).
+3. **Fablen jatkuva vahti.** Fable tarkistaa joka vahtikierroksella
+   (~45 min) tiimihaarat (`git fetch`) ja sessiotilat
+   (post_turn_summary + updated_at). "Working" yli 45 min ilman
+   committia tai joutilas sessio, jolla pitäisi olla työtä → koska
+   herätteet eivät toimi (ks. Viestintä), ainoa keino on arkistoida
+   sessio ja perustaa korvaaja täydellä tehtäväpromptilla.
+   "Review_ready" → raportti luetaan ja merge tehdään heti; seuraava
+   työ on annettava jo perustamispromptissa, koska sessiota ei voi
+   ohjata jälkikäteen.
 
 ## Kustannuskuri (ultracode käytössä kaikilla Opus/Sonnet-sessioilla)
 
