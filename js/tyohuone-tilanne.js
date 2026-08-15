@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v753 — Helsingin Matkailijalle: kappale, kuva, opas',
   'v751 — lippusivut: Kaakkois- ja Etelä-Aasia (10 maata)',
   'v750 — paluunuoli Engel-jutusta; kulurivin oikea syy',
   'v749 — karttateksti 2 palstaan; Matkailijalle- ja opaskuvat',
