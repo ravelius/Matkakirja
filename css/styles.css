@@ -10138,11 +10138,11 @@ body.vertailu-tila .pawns { display: none; }
  */
 .kartta-kehys.kartta-laajennettu { box-sizing: content-box; }
 
-.kartta-lava.laajennettu { position: absolute; }
+.kartta-lava.kartta-laajennettu { position: absolute; }
 
 /* Piirros peittää koko lavan, satelliittikuva vain ydinrajauksen;
  * kumpikin saa paikkansa ui.js:stä (asetaKuvanAla). */
-.kartta-lava.laajennettu img { position: absolute; }
+.kartta-lava.kartta-laajennettu img { position: absolute; }
 
 /* Pehmennys vain napeista ja tuplanapautuksesta: sormen alla se
  * tuntuisi siltä, että kartta laahaa jäljessä. */

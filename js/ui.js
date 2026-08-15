@@ -11526,11 +11526,14 @@ export class UI {
      * ja asettelu jää entiselleen.
      */
     const ydin = ydinAla(kartta);
+    // Luokan nimi on kartta-laajennettu eikä laajennettu: pelkkä
+    // `laajennettu` on varattu päiväkirjan poistuneelle välikoolle,
+    // eikä se saa palata (tests/rules.test.mjs).
     const laajennettu = Boolean(kartta.piirtoRajat);
     if (laajennettu) {
       kehys.classList.add('kartta-laajennettu');
       kehys.style.aspectRatio = String(karttaKuvasuhde(kartta.rajat));
-      kotelo.classList.add('laajennettu');
+      kotelo.classList.add('kartta-laajennettu');
       kotelo.style.aspectRatio = String(karttaKuvasuhde(kartta.piirtoRajat));
       kotelo.style.width = `${(10000 / ydin.leveys).toFixed(4)}%`;
       kotelo.style.left = `${((-ydin.x * 100) / ydin.leveys).toFixed(4)}%`;

@@ -13,6 +13,9 @@
  * eikä riipu Commonsin tiedostoista.
  *
  * Käyttö:  node tools/piirra-kaupunkikartta.mjs berliini
+ *          node tools/piirra-kaupunkikartta.mjs berliini --vari
+ *            → värinäyte omaan tiedostoonsa, ks. PALETIT alempana.
+ *              EI pelin aineistoa eikä korvaa julistetta.
  * Tuloste: assets/kartat/<kaupunki>-keskusta.png ja rajat-lohko,
  *          joka liitetään js/packs/maakartat.js:n KAUPUNKIKARTAT-
  *          tauluun (pisteet asemoidaan siitä prosentteina).
@@ -1185,28 +1188,79 @@ const KADUT = [
  * vesireuna sama #b99a68 kuin pääkartan meriviivoissa (.sea-echo).
  * Puistot ovat pelkkä kuiskaus paperia tummempaa — ei vihreää.
  */
-const VESI = '#e8d5a9';
-const VESIREUNA = '#b99a68';
-const PUISTO = '#efe6ca';
-const RATA = '#d5c9b0';
-const PAPERI = '#f6eeda';
-// Muuri on kartan tummin viiva: pääkartan musteen sävy (.city-label),
-// jotta se erottuu vaaleista kaduista mutta pysyy pergamentissa.
-const MUURI = '#6f5a3c';
 /*
- * Arkeologiset alueet ovat paperia lämpimämpi laikku ja saavat ohuen
- * reunaviivan. Sävy on veden ja puiston välistä: kaivausalue ei ole
- * puisto eikä vesi, ja Luxorissa se on koko kartan aihe.
+ * VÄRIPALETTI ON NÄYTE EIKÄ KÄYTÖSSÄ (omistajan kysymys 15.8.2026:
+ * satelliittinäkymä on suttuinen, koska s2cloudlessin pohjatarkkuus
+ * on 10 m/px — "voisiko sen sijaan olla esim. väritetty kartta").
  *
- * MIKSI OMA TASO. Luxorin ja Karnakin temppelit EIVÄT ole OSM:ssä
- * rakennuksia vaan historic=ruins- ja historic=archaeological_site
- * -alueita. Ilman tätä tasoa kartalle jää pelkkä katuverkko ja
- * kohteiden kohdalla on tyhjää paperia — mitattiin Luxorissa
- * 13.8.2026 kahdella ajolla ennen kuin syy löytyi.
+ *   node tools/piirra-kaupunkikartta.mjs berliini --vari
+ *   → assets/kartat/berliini-varikartta-nayte.png
+ *
+ * Sama aineisto, sama rajaus ja samat viivat kuin julisteessa; vain
+ * sävyt vaihtuvat. Väri tulee sinne, missä maastossa ON väriä — vesi
+ * sävytettyyn siniseen ja puistot vihreään — ja kaikki muu pysyy
+ * pelin pergamentissa: korttelit lämpimänä hiekkana, kadut samana
+ * ruskeana musteperheenä hitusen tummempana, jotta ne erottuvat
+ * syvemmästä pohjasta. Sävyt ovat harmaannutettuja (sininen kallistuu
+ * teräksiseen, vihreä salvianvihreään), koska kirkas web-kartan
+ * sini-vihreä ei kuulu tähän peliin.
+ *
+ * HUOM: työkalu EI piirrä rakennuksia (ks. KADUT ja kaupunkien
+ * kommentit) — "korttelit" tarkoittaa siis katujen väliin jäävää
+ * pohjaa. Rakennusten piirtäminen olisi oma työnsä, ei paletin.
  */
-const RAUNIO = '#ece0c2';
-const RAUNIOREUNA = '#c4b189';
-
+const PALETIT = {
+  /*
+   * Sävyt pääkartan pergamenttipaletista (omistajan tarkennus
+   * 7.8.2026: "pääkartan sävyinen, eli siniset ja vihreät pois"):
+   * vesi on järvien #ecd9ae-perhettä hieman tummempana, jotta se
+   * erottuu paperista, ja vesireuna sama #b99a68 kuin pääkartan
+   * meriviivoissa (.sea-echo). Puistot ovat pelkkä kuiskaus paperia
+   * tummempaa — ei vihreää. TÄMÄ ON PELIN PALETTI.
+   */
+  paperi: {
+    VESI: '#e8d5a9',
+    VESIREUNA: '#b99a68',
+    PUISTO: '#efe6ca',
+    RATA: '#d5c9b0',
+    PAPERI: '#f6eeda',
+    // Muuri on kartan tummin viiva: pääkartan musteen sävy
+    // (.city-label), jotta se erottuu vaaleista kaduista mutta pysyy
+    // pergamentissa.
+    MUURI: '#6f5a3c',
+    /*
+     * Arkeologiset alueet ovat paperia lämpimämpi laikku ja saavat
+     * ohuen reunaviivan. Sävy on veden ja puiston välistä: kaivausalue
+     * ei ole puisto eikä vesi, ja Luxorissa se on koko kartan aihe.
+     *
+     * MIKSI OMA TASO. Luxorin ja Karnakin temppelit EIVÄT ole OSM:ssä
+     * rakennuksia vaan historic=ruins- ja historic=archaeological_site
+     * -alueita. Ilman tätä tasoa kartalle jää pelkkä katuverkko ja
+     * kohteiden kohdalla on tyhjää paperia — mitattiin Luxorissa
+     * 13.8.2026 kahdella ajolla ennen kuin syy löytyi.
+     */
+    RAUNIO: '#ece0c2',
+    RAUNIOREUNA: '#c4b189',
+  },
+  /* Näyte, ks. yllä. Ei käytössä pelissä. */
+  vari: {
+    VESI: '#b4ccd6',
+    VESIREUNA: '#7f9fac',
+    PUISTO: '#cbd7ae',
+    RATA: '#cabb9f',
+    PAPERI: '#f2e6cb',
+    MUURI: '#6b5637',
+    RAUNIO: '#e9d7ac',
+    RAUNIOREUNA: '#c2a878',
+    // Kadut samassa järjestyksessä kuin KADUT-taulu.
+    kadut: ['#e1d5b7', '#d7c9a6', '#cab895', '#c1ae87', '#b19c72', '#a48d61', '#977f52'],
+  },
+};
+const VARINAYTE = process.argv.includes('--vari');
+const PALETTI = VARINAYTE ? PALETIT.vari : PALETIT.paperi;
+const {
+  VESI, VESIREUNA, PUISTO, RATA, PAPERI, MUURI, RAUNIO, RAUNIOREUNA,
+} = PALETTI;
 async function haeOverpass(rajat, palvelutiet = false, jalkakaydat = false) {
   const alue = `(${rajat.etela},${rajat.lansi},${rajat.pohjoinen},${rajat.ita})`;
   /*
@@ -1884,7 +1938,7 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
  */
 function kerrosKuvaus(kerrokset, mitta = 1) {
   const v = (n) => (n * mitta).toFixed(2);
-  const katuryhmat = KADUT.map((k, i) => `<g fill="none" stroke="${k.vari}" stroke-width="${v(k.leveys)}"
+  const katuryhmat = KADUT.map((k, i) => `<g fill="none" stroke="${PALETTI.kadut?.[i] ?? k.vari}" stroke-width="${v(k.leveys)}"
     stroke-linecap="round" stroke-linejoin="round">${kerrokset.kadut[i].join('')}</g>`).join('\n');
   return `
   <!-- Meri pohjimmaiseksi, saaret sen päälle: saaren ranta on
@@ -2038,11 +2092,16 @@ for (const [i, kainalo] of (KAUPUNGIT[kaupunki].kainalot ?? []).entries()) {
 }
 const svg = piirra(kaupunki, elementit, kainaloAineistot);
 mkdirSync(resolve(JUURI, 'assets/kartat'), { recursive: true });
-const svgPolku = resolve(JUURI, `assets/kartat/${kaupunki}-keskusta.svg`);
+/*
+ * Värinäyte EI korvaa julistetta vaan menee omaan tiedostoonsa
+ * (--vari, ks. PALETIT). Pelin kartta on aina <kaupunki>-keskusta.png.
+ */
+const tiedosto = VARINAYTE ? `${kaupunki}-varikartta-nayte` : `${kaupunki}-keskusta`;
+const svgPolku = resolve(JUURI, `assets/kartat/${tiedosto}.svg`);
 writeFileSync(svgPolku, svg);
 // Rasterointi PNG:ksi pelin Chromiumilla: SVG:n koko katuverkko on
 // selaimelle raskas joka avauksella — PNG piirtyy heti.
-const pngPolku = resolve(JUURI, `assets/kartat/${kaupunki}-keskusta.png`);
+const pngPolku = resolve(JUURI, `assets/kartat/${tiedosto}.png`);
 const skripti = `
 const { chromium } = require('playwright');
 (async () => {
@@ -2074,7 +2133,11 @@ execFileSync('node', ['-e', skripti], {
 });
 const rajat = KAUPUNGIT[kaupunki].rajat;
 const piirto = piirretytRajat(KAUPUNGIT[kaupunki]);
-console.log(`Valmis: assets/kartat/${kaupunki}-keskusta.png`);
+console.log(`Valmis: assets/kartat/${tiedosto}.png`);
+if (VARINAYTE) {
+  console.log('Värinäyte — EI pelin aineistoa: ei vipuun eikä sw.js:ään.');
+  process.exit(0);
+}
 console.log('KAUPUNKIKARTAT-rivit:');
 console.log(`    polku: 'assets/kartat/${kaupunki}-keskusta.png',`);
 console.log(`    lahde: '© OpenStreetMap-tekijät (ODbL)',`);
