@@ -44,7 +44,9 @@
  * sulkeutuminen pysäyttävät edellisen.
  */
 
-import { luoPuheSoitin, puheTuettu } from './puhe.js';
+import {
+  esihaePala, luoPuheSoitin, paloitteleVirkkeiksi, puheTuettu,
+} from './puhe.js';
 /*
  * Taustaäänen väistö luennan ajaksi (omistajan tilaus 15.8.2026:
  * "Hiljennä taustaääntä hieman lukijan ajaksi. Pehmeä feidi").
@@ -388,6 +390,53 @@ export function kokoaLuettavatKohdat(juuri, {
  */
 export function kokoaLuettavaTeksti(juuri, asetukset = {}) {
   return kokoaLuettavatKohdat(juuri, asetukset).map((k) => k.teksti).join('\n');
+}
+
+/**
+ * LUENNAN ENSIMMÄINEN PALA VALMIIKSI (omistajan tilaus 15.8.2026,
+ * docs/periaatteet.md "Etukäteispuskurin periaate"): hakee sivun
+ * luennan ensimmäisen palan välimuistiin, jotta kaiuttimen painallus
+ * aloittaa äänen ilman generointiviivettä.
+ *
+ * Mitään ei soi eikä käyttäjän elettä tarvita — pelkkä haku.
+ *
+ * MIKSI TÄSSÄ EIKÄ KUTSUJASSA: puskuri hyödyttää vain, jos se osuu
+ * samaan välimuistiavaimeen kuin luenta. Avain on `persoona|säädöt|
+ * teksti`, joten teksti on johdettava täsmälleen samalla ketjulla:
+ *
+ *   1. kokoaLuettavatKohdat — sama valinta kuin kaynnistaLuenta tekee
+ *      (samat ohitukset, sama ohitaEkaOtsikko)
+ *   2. kohdat[0] on ensimmäinen kappale; sivu avataan aina ylhäältä,
+ *      joten luenta alkaa siitä (nakyvaKohta palauttaa 0)
+ *   3. puheen pilkonta antaa koko jonon ENSIMMÄISEN VIRKKEEN omana
+ *      palanaan (js/puhe.js pilkoPaloiksi), jotta luenta alkaa heti —
+ *      juuri se virke haetaan tässä
+ *
+ * Persoona ja säilölohko ratkaistaan samalla säännöllä kuin
+ * lueAaneen, ja nopeusasetus tulee mukaan avaimeen puhe.js:ssä.
+ *
+ * @param {Element} juuri sivun juuri (voi olla irrallinen elementti)
+ * @returns {string|null} esihaettu pala, tai null jos ei haettu
+ */
+export function esipuskuroiLuenta(juuri, {
+  persoona = 'kertoja', sailio, vahimmais = LUETTAVAN_VAHIMMAIS,
+} = {}) {
+  if (!juuri || !puheTuettu()) return null;
+  const kohdat = kokoaLuettavatKohdat(juuri);
+  if (!kohdat.length) return null;
+  /*
+   * Sama raja kuin kaiuttimen näkyvyydellä (paivitaLukija): sivu, jolla
+   * ei ole tarpeeksi luettavaa, ei saa kaiutinta eikä siis tarvitse
+   * puskuriakaan. Pituus lasketaan kuten kokoaLuettavaTeksti liittää
+   * kohdat — rivinvaihto kohtien väliin.
+   */
+  const pituus = kohdat.reduce((summa, k) => summa + k.teksti.length, kohdat.length - 1);
+  if (pituus < vahimmais) return null;
+  const eka = paloitteleVirkkeiksi(kohdat[0].teksti)[0];
+  if (!eka) return null;
+  const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
+  esihaePala(eka, persoona, lohko);
+  return eka;
 }
 
 /* ------------------------------------------------------------------ */
