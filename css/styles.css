@@ -10563,17 +10563,28 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * kuva suoraan kartan päällä — ei ympyrää, taustaa, reunaa eikä
  * numerobadgea. Laatikko on ympyrää suurempi, koska leikatun kuvan
  * reunoilla on läpinäkyvää tyhjää; drop-shadow seuraa piirroksen
- * ääriviivaa, ei laatikkoa. Sama vastaskaalaus kuin numeroympyrällä
- * (.kartta-lava-sääntö yllä). Koko 48 px (omistajan palaute
- * 15.8.2026: "Tee sittenkin pienemmiksi"; oli 64 px). */
+ * ääriviivaa, ei laatikkoa. Koko 40 px (omistajan palautteet
+ * 15.8.2026: 64 → "pienemmiksi" 48 → "vielä pienemmät" 40). */
 .maakartta-piste.kohde-numero.kohde-piirros {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   background: none;
   border: none;
   border-radius: 0;
   box-shadow: none;
   overflow: visible;
+}
+
+/*
+ * PIIRROS SKAALAUTUU KARTAN MUKANA (omistajan tilaus 15.8.2026:
+ * "Kuvat pitäisi pysyä saman kokoisina suhteessa karttaan kun
+ * zoomataan"). Piirros on kartan maamerkki eikä käyttöliittymän
+ * nappi, joten se EI saa numeroympyrän vastaskaalausta (yllä oleva
+ * .kartta-lava-sääntö kumotaan tässä) — zoomatessa se kasvaa kartan
+ * piirtoviivojen tahdissa.
+ */
+.kartta-lava .maakartta-piste.kohde-numero.kohde-piirros {
+  transform: translate(-50%, -50%);
 }
 
 .kohde-piirros-kuva {
@@ -10592,17 +10603,17 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * vain kokoa ilman ikkunaa)"). Napautus lisää .valittu-luokan:
  * piirros kasvaa paikallaan ja nimikyltti aukeaa sen alle (tai ylle
  * alareunassa, .kyltti-ylle); uusi napautus palauttaa koon —
- * ikkunaa ei avata. Skaala jakaa zoomin kuten perussääntö, jotta
- * suurennos on sama joka zoomiasennossa. Kerroin 4 (omistajan
- * tilaukset 15.8.2026: "Saa kasvaa koko 3x", "vähän isompi" ja
- * "vielä hiukan isompi"; 48 px → 192 px).
+ * ikkunaa ei avata. Suurennoskin on suhteessa KARTTAAN (ei ruutuun),
+ * kuten perusasento. Kerroin 4 (omistajan tilaukset 15.8.2026: "Saa
+ * kasvaa koko 3x", "vähän isompi" ja "vielä hiukan isompi";
+ * 40 px → 160 px lepozoomilla).
  */
 .maakartta-piste.kohde-numero.kohde-piirros {
   transition: transform 160ms ease;
 }
 
 .kartta-lava .maakartta-piste.kohde-numero.kohde-piirros.valittu {
-  transform: translate(-50%, -50%) scale(calc(4 / var(--zoom)));
+  transform: translate(-50%, -50%) scale(4);
   z-index: 5;
 }
 
