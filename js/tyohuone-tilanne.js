@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v758 — työhuoneen palkit: pitäisi VIHDOIN näyttää luvut',
   'v757 — jutun napit kortissa kiinni; leveys kestää appivaihdon',
   'v756 — opas leveämpi iPadilla; ☰ pois oppaan yläkulmasta',
   'v755 — tyhjät palkit: sulje valikko ja avaa uudelleen',
