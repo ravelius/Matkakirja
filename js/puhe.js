@@ -402,6 +402,28 @@ function virita() {
 // Viritys ensimmäisestä kosketuksesta — vain selaimessa.
 if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
   document.addEventListener('pointerdown', virita, { once: true, capture: true, passive: true });
+  /*
+   * PIIRI HEREILLE JOKAISESTA ELEESTÄ (Mac-Safarin havainto 15.8.2026:
+   * "striimi ääni ei kuulu macin selaimella"). Safari epää piirin
+   * resume-kutsun käyttäjän eleen ULKOPUOLELLA, ja striimiluenta
+   * (pöllön vastaus, lehtiluenta) käynnistyy vasta verkkovastauksen
+   * saavuttua — eli eleen jälkeen. Piiri jäi suspended-tilaan ja
+   * kaikki aikajanalle liitetyt palat "soivat" äänettöminä.
+   *
+   * Siksi pysyvä kuuntelija: jokainen kosketus herättää piirin, jos
+   * se ei ole käynnissä. Käytännössä jo se klikkaus, joka lähettää
+   * kysymyksen tai avaa luennan, herättää piirin ennen kuin ääntä
+   * edes tarvitaan. Running-tilassa kuuntelija ei tee mitään, joten
+   * se on ilmainen — ja se kattaa myös Safarin interrupted-tilan
+   * (puhelu, toinen välilehti), josta kerran viritetty once-polku ei
+   * enää auttanut.
+   */
+  document.addEventListener('pointerdown', () => {
+    if (!piiri || piiri.state === 'running') return;
+    try {
+      piiri.resume?.().catch(() => { /* seuraava ele yrittää taas */ });
+    } catch { /* piiri kuoli — luoPuheSoitin tekee uuden */ }
+  }, { capture: true, passive: true });
 }
 
 /* ------------------------------------------------------------------ */

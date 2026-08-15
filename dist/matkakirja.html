@@ -111023,6 +111023,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v741 — Mac-Safari: striimiluennan ääni (testaa Macilla!)',
   'v740 — Työhuone: palkit, tyylinapit, Lukijaääni',
   'v739 — piirros juttuun; klikkausalue 80 %',
   'v738 — Kööpenhamina-lehti: karuselli + Matkailijalle',
@@ -158028,6 +158029,28 @@ function virita() {
 // Viritys ensimmäisestä kosketuksesta — vain selaimessa.
 if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
   document.addEventListener('pointerdown', virita, { once: true, capture: true, passive: true });
+  /*
+   * PIIRI HEREILLE JOKAISESTA ELEESTÄ (Mac-Safarin havainto 15.8.2026:
+   * "striimi ääni ei kuulu macin selaimella"). Safari epää piirin
+   * resume-kutsun käyttäjän eleen ULKOPUOLELLA, ja striimiluenta
+   * (pöllön vastaus, lehtiluenta) käynnistyy vasta verkkovastauksen
+   * saavuttua — eli eleen jälkeen. Piiri jäi suspended-tilaan ja
+   * kaikki aikajanalle liitetyt palat "soivat" äänettöminä.
+   *
+   * Siksi pysyvä kuuntelija: jokainen kosketus herättää piirin, jos
+   * se ei ole käynnissä. Käytännössä jo se klikkaus, joka lähettää
+   * kysymyksen tai avaa luennan, herättää piirin ennen kuin ääntä
+   * edes tarvitaan. Running-tilassa kuuntelija ei tee mitään, joten
+   * se on ilmainen — ja se kattaa myös Safarin interrupted-tilan
+   * (puhelu, toinen välilehti), josta kerran viritetty once-polku ei
+   * enää auttanut.
+   */
+  document.addEventListener('pointerdown', () => {
+    if (!piiri || piiri.state === 'running') return;
+    try {
+      piiri.resume?.().catch(() => { /* seuraava ele yrittää taas */ });
+    } catch { /* piiri kuoli — luoPuheSoitin tekee uuden */ }
+  }, { capture: true, passive: true });
 }
 
 /* ------------------------------------------------------------------ */
@@ -182147,6 +182170,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 741, teksti: 'Striimiluennan ääni kuuluu Macin Safarissa (piirin herätys)' },
   { v: 740, teksti: 'Työhuone valikkoon: tilannepalkit, tyylinapit, Lukijaääni' },
   { v: 739, teksti: 'Piirros juttuun tekstin kiertona; klikkausalue 80 %:iin' },
   { v: 738, teksti: 'Kööpenhamina-lehti: yleisnäkymäkaruselli ja Matkailijalle' },
@@ -182984,7 +183008,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.740';
+const APP_VERSION = '2026-08-09.741';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v741 — Mac-Safari: striimiluennan ääni (testaa Macilla!)',
   'v740 — Työhuone: palkit, tyylinapit, Lukijaääni',
   'v739 — piirros juttuun; klikkausalue 80 %',
   'v738 — Kööpenhamina-lehti: karuselli + Matkailijalle',
