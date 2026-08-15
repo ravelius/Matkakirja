@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v720 — piirroksen suurennos 3×',
   'v719 — piirroksen klikkaus vain suurentaa, ei ikkunaa',
   'v718 — piirrokset pienempinä, nuolet pois',
   'v717 — piirrokset yksivärisinä luonnoksina',

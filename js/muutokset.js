@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 720, teksti: 'Piirroksen suurennos 3x' },
   { v: 719, teksti: 'Piirroksen klikkaus vain suurentaa' },
   { v: 718, teksti: 'Piirrokset pienemmiksi, nuolet pois' },
   { v: 717, teksti: 'Kartan piirrokset yksivärisinä luonnoksina' },
