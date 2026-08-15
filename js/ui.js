@@ -12059,12 +12059,13 @@ export class UI {
       const avattava = Boolean(k.teksti || k.wiki);
       const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi] ?? null;
       /*
-       * PIIRROS NUMERON PAIKALLA (omistajan tilaus 15.8.2026:
-       * "Piirrokset kartalla saisi näkyä numeroiden paikalla").
-       * Kohde, jolla on miniatyyri, piirtyy kartalle pienenä pyöreänä
-       * piirroksena; numero istuu badgena sen kulmassa, jotta
-       * selitelistan numerointi pysyy luettavana. Kohde ilman
-       * miniatyyriä on entinen numeroympyrä.
+       * PIIRROS NUMERON PAIKALLA (omistajan tilaukset 15.8.2026:
+       * "Piirrokset kartalla saisi näkyä numeroiden paikalla" ja
+       * "Ota numerot pois kartalta ja tee piirroksista leikattuja").
+       * Kohde, jolla on miniatyyri, piirtyy kartalle taustattomana
+       * leikkauskuvana ilman numeroa; selitelistan numerointi riittää
+       * kytkemään listan ja kartan. Kohde ilman miniatyyriä on
+       * entinen numeroympyrä.
        */
       const piste = html(avattava ? 'button' : 'span',
         'maakartta-piste kaupunki-kohde kohde-numero', miniatyyri ? '' : numero);
@@ -12077,7 +12078,6 @@ export class UI {
         pikku.draggable = false;
         pikku.src = miniatyyri;
         piste.appendChild(pikku);
-        piste.appendChild(html('span', 'kohde-piirros-numero', numero));
       }
       piste.style.left = `${p.x.toFixed(1)}%`;
       piste.style.top = `${p.y.toFixed(1)}%`;
