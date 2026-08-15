@@ -9898,7 +9898,10 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .lippu-kortti {
   width: min(24rem, calc(100vw - 2rem));
-  max-height: calc(100vh - 3rem);
+  /* Kaksi kolmasosaa ruudun korkeudesta (omistajan tilaus 15.8.2026:
+   * "Tee pop-up-ikkunasta kaksi kolmasosaa korkuinen") — loppu
+   * vierittyy kortin sisällä. */
+  max-height: 66vh;
   overflow-y: auto;
   padding: 0.7rem 0.8rem 0.8rem;
   border: 1px solid rgba(122, 85, 20, 0.32);
@@ -9947,6 +9950,57 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   border-radius: 3px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.6);
+}
+
+/* Symboliikka boldatuin otsikoin (sininen =, valkoinen =, …). */
+.lippu-symbolit { margin: 0.55rem 0 0.15rem; }
+
+.lippu-symboli {
+  margin: 0.18rem 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.lippu-symboli strong {
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: #46331f;
+}
+
+/* Vaakunat ja tunnukset: kuva vasemmalla, nimi + selite oikealla. */
+.lippu-tunnukset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.lippu-tunnus {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+}
+
+.lippu-tunnus-kuva {
+  width: 4.2rem;
+  height: auto;
+  flex: none;
+}
+
+.lippu-tunnus-nimi {
+  margin: 0;
+  font-family: var(--font-type);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: #46331f;
+}
+
+.lippu-tunnus-selite {
+  margin: 0.15rem 0 0;
+  font-size: 0.83rem;
+  line-height: 1.45;
+  color: rgba(33, 29, 24, 0.88);
 }
 
 .lippu-valinta {
@@ -88420,11 +88474,28 @@ const MINIATYYRIT = {
  * versioliput on ladattu Commonsista repoon (assets/liput/versiot/,
  * viralliset liput ovat vapaita). Uusi maa = uusi rivi tähän + kuvat
  * samaan kansioon + sw.js:n SHELL.
+ *
+ * symboliikka (omistajan tilaus 15.8.2026: "Voisi olla boldattuna
+ * otsikot: sininen =, valkoinen =, ja niin edelleen, riippuen mitä
+ * elementtejä kussakin lipussa on") — lipun elementit boldatuin
+ * otsikoin. tunnukset (sama tilaus: "Maan vaakuna olisi kiva lisätä
+ * myös sekä mikäli maalla on joitain muitakin mielenkiintoisia
+ * vastaavia") — vaakunat assets/liput/tunnukset/-kansiosta, lisenssit
+ * tarkistettu Commonsista (kaikki PD).
  */
 
 const LIPPUTIEDOT = {
   'Flag of Finland.svg': {
     maa: 'Suomi',
+    symboliikka: [
+      { osa: 'Sininen', selite: 'järvien ja taivaan väri.' },
+      { osa: 'Valkoinen', selite: 'lumen väri.' },
+      {
+        osa: 'Risti',
+        selite: 'pohjoismainen ristilippu — sama ristin muoto kuin '
+          + 'Tanskalla, Ruotsilla, Norjalla ja Islannilla.',
+      },
+    ],
     kappaleet: [
       'Siniristilippu vahvistettiin Suomen lipuksi toukokuussa 1918, '
         + 'puoli vuotta itsenäistymisen jälkeen. Ristin muoto on sama '
@@ -88466,10 +88537,43 @@ const LIPPUTIEDOT = {
           + 'muutamaksi kuukaudeksi.',
       },
     ],
-    lahde: 'Liput: Wikimedia Commons (PD)',
+    tunnukset: [
+      {
+        nimi: 'Suomen vaakuna',
+        polku: 'assets/liput/tunnukset/fin-vaakuna.png',
+        selite: 'Kruunupäinen leijona punaisella kentällä yhdeksän '
+          + 'hopearuusun keskellä; haarniskoitu käsi kohottaa miekkaa '
+          + 'ja jalat tallaavat käyrää sapelia. Kuva on totuttu '
+          + 'lukemaan idän ja lännen väliin jääneen maan tunnukseksi. '
+          + 'Leijona piirrettiin jo 1580-luvulla Kustaa Vaasan '
+          + 'hautamuistomerkkiin Uppsalaan.',
+      },
+      {
+        nimi: 'Helsingin vaakuna',
+        polku: 'assets/liput/tunnukset/fin-helsinki-vaakuna.png',
+        selite: 'Kultainen vene ja sen yllä kruunu sinisellä kentällä, '
+          + 'alla hopeinen aallokko. Vene kertoo merikaupungista, '
+          + 'kruunu kaupungin perustamisesta kuninkaan käskyllä 1550.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
   },
   'Flag of Germany.svg': {
     maa: 'Saksa',
+    symboliikka: [
+      {
+        osa: 'Musta',
+        selite: 'Lützowin vapaajoukon mustat univormutakit 1810-luvun '
+          + 'vapaussodista.',
+      },
+      { osa: 'Punainen', selite: 'takkien punaiset käänteet.' },
+      { osa: 'Kulta', selite: 'takkien kullanväriset messinkinapit.' },
+      {
+        osa: 'Yhdessä',
+        selite: 'yhtenäisyyden ja vapauden värit vuoden 1848 '
+          + 'vallankumouksesta asti.',
+      },
+    ],
     kappaleet: [
       'Musta-puna-kultaisen trikolorin juuret ovat 1810-luvun '
         + 'vapaussodissa: Lützowin vapaajoukon univormut olivat '
@@ -88505,7 +88609,24 @@ const LIPPUTIEDOT = {
           + 'talonpoikien tunnus — vasara, harppi ja tähkäseppele.',
       },
     ],
-    lahde: 'Liput: Wikimedia Commons (PD)',
+    tunnukset: [
+      {
+        nimi: 'Saksan liittokotka',
+        polku: 'assets/liput/tunnukset/deu-vaakuna.png',
+        selite: 'Musta kotka kultaisella kentällä, nokka ja jalat '
+          + 'punaiset. Yksi Euroopan vanhimmista valtiotunnuksista — '
+          + 'juuret keskiajan keisarien kotkassa.',
+      },
+      {
+        nimi: 'Berliinin karhu',
+        polku: 'assets/liput/tunnukset/deu-berliini-vaakuna.png',
+        selite: 'Musta karhu hopeakentällä, kilven päällä kultainen '
+          + 'kruunu. Karhu on kulkenut Berliinin sineteissä '
+          + '1200-luvulta asti, ja kaupungin nimi ja Bär-sana ovat '
+          + 'kietoutuneet kansan mielessä yhteen.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
   },
 };
 
@@ -109323,6 +109444,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v716 — lippuikkuna: 2/3-korkeus, symboliikka, vaakunat',
   'v715 — piirrokset hajallaan + nuolet; klikkaus: kyltti → juttu',
   'v714 — kartan piirrokset leikattuina, numerot pois',
   'v713 — pöllön kuvalle paikanpitäjä + animaatio',
@@ -174617,6 +174739,23 @@ class UI {
     kortti.appendChild(valintaNimi);
     kortti.appendChild(valintaSelite);
 
+    /*
+     * Symboliikka boldatuin otsikoin ENNEN historiakappaleita
+     * (omistajan tilaus 15.8.2026: "Symboliikka saisi tulla
+     * selkeämmin. Voisi olla boldattuna otsikot: sininen =,
+     * valkoinen =, ja niin edelleen").
+     */
+    if ((tiedot.symboliikka ?? []).length) {
+      const symbolit = html('div', 'lippu-symbolit');
+      for (const s of tiedot.symboliikka) {
+        const rivi = html('p', 'lippu-symboli');
+        rivi.appendChild(html('strong', '', `${s.osa} = `));
+        rivi.appendChild(document.createTextNode(s.selite));
+        symbolit.appendChild(rivi);
+      }
+      kortti.appendChild(symbolit);
+    }
+
     // Historia ja merkitykset — sama kaikilla asuilla.
     for (const kpl of tiedot.kappaleet ?? []) {
       kortti.appendChild(html('p', 'lippu-kappale', kpl));
@@ -174667,6 +174806,33 @@ class UI {
       kortti.appendChild(rivi);
     }
     valitse(0);
+
+    /*
+     * Vaakunat ja muut tunnukset (omistajan tilaus 15.8.2026: "Maan
+     * vaakuna olisi kiva lisätä myös sekä mikäli maalla on joitain
+     * muitakin mielenkiintoisia vastaavia"). Kuva + nimi + selite
+     * riveinä; kuvat repossa, lisenssit tarkistettu Commonsista.
+     */
+    if ((tiedot.tunnukset ?? []).length) {
+      kortti.appendChild(html('h3', 'lippu-versiot-otsikko', 'Vaakunat ja tunnukset'));
+      const tunnukset = html('div', 'lippu-tunnukset');
+      for (const t of tiedot.tunnukset) {
+        const kohta = html('div', 'lippu-tunnus');
+        const kuvaEl = document.createElement('img');
+        kuvaEl.className = 'lippu-tunnus-kuva';
+        kuvaEl.alt = t.nimi;
+        kuvaEl.decoding = 'async';
+        kuvaEl.draggable = false;
+        kuvaEl.src = t.polku;
+        kohta.appendChild(kuvaEl);
+        const teksti = html('div', 'lippu-tunnus-teksti');
+        teksti.appendChild(html('p', 'lippu-tunnus-nimi', t.nimi));
+        teksti.appendChild(html('p', 'lippu-tunnus-selite', t.selite));
+        kohta.appendChild(teksti);
+        tunnukset.appendChild(kohta);
+      }
+      kortti.appendChild(tunnukset);
+    }
     if (tiedot.lahde) kortti.appendChild(html('p', 'lahde', tiedot.lahde));
 
     dialogi.appendChild(kortti);
@@ -180313,6 +180479,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 716, teksti: 'Lippuikkuna: symboliikka, vaakunat, 2/3-korkeus' },
   { v: 715, teksti: 'Piirrokset hajalleen nuolin; klikkaus suurentaa' },
   { v: 714, teksti: 'Kartan piirrokset leikattuina, numerot pois' },
   { v: 713, teksti: 'Pöllön kuvalle sykkivä paikanpitäjä haun ajaksi' },
@@ -181125,7 +181292,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.715';
+const APP_VERSION = '2026-08-09.716';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

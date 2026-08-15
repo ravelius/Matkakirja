@@ -12,11 +12,28 @@
  * versioliput on ladattu Commonsista repoon (assets/liput/versiot/,
  * viralliset liput ovat vapaita). Uusi maa = uusi rivi tähän + kuvat
  * samaan kansioon + sw.js:n SHELL.
+ *
+ * symboliikka (omistajan tilaus 15.8.2026: "Voisi olla boldattuna
+ * otsikot: sininen =, valkoinen =, ja niin edelleen, riippuen mitä
+ * elementtejä kussakin lipussa on") — lipun elementit boldatuin
+ * otsikoin. tunnukset (sama tilaus: "Maan vaakuna olisi kiva lisätä
+ * myös sekä mikäli maalla on joitain muitakin mielenkiintoisia
+ * vastaavia") — vaakunat assets/liput/tunnukset/-kansiosta, lisenssit
+ * tarkistettu Commonsista (kaikki PD).
  */
 
 export const LIPPUTIEDOT = {
   'Flag of Finland.svg': {
     maa: 'Suomi',
+    symboliikka: [
+      { osa: 'Sininen', selite: 'järvien ja taivaan väri.' },
+      { osa: 'Valkoinen', selite: 'lumen väri.' },
+      {
+        osa: 'Risti',
+        selite: 'pohjoismainen ristilippu — sama ristin muoto kuin '
+          + 'Tanskalla, Ruotsilla, Norjalla ja Islannilla.',
+      },
+    ],
     kappaleet: [
       'Siniristilippu vahvistettiin Suomen lipuksi toukokuussa 1918, '
         + 'puoli vuotta itsenäistymisen jälkeen. Ristin muoto on sama '
@@ -58,10 +75,43 @@ export const LIPPUTIEDOT = {
           + 'muutamaksi kuukaudeksi.',
       },
     ],
-    lahde: 'Liput: Wikimedia Commons (PD)',
+    tunnukset: [
+      {
+        nimi: 'Suomen vaakuna',
+        polku: 'assets/liput/tunnukset/fin-vaakuna.png',
+        selite: 'Kruunupäinen leijona punaisella kentällä yhdeksän '
+          + 'hopearuusun keskellä; haarniskoitu käsi kohottaa miekkaa '
+          + 'ja jalat tallaavat käyrää sapelia. Kuva on totuttu '
+          + 'lukemaan idän ja lännen väliin jääneen maan tunnukseksi. '
+          + 'Leijona piirrettiin jo 1580-luvulla Kustaa Vaasan '
+          + 'hautamuistomerkkiin Uppsalaan.',
+      },
+      {
+        nimi: 'Helsingin vaakuna',
+        polku: 'assets/liput/tunnukset/fin-helsinki-vaakuna.png',
+        selite: 'Kultainen vene ja sen yllä kruunu sinisellä kentällä, '
+          + 'alla hopeinen aallokko. Vene kertoo merikaupungista, '
+          + 'kruunu kaupungin perustamisesta kuninkaan käskyllä 1550.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
   },
   'Flag of Germany.svg': {
     maa: 'Saksa',
+    symboliikka: [
+      {
+        osa: 'Musta',
+        selite: 'Lützowin vapaajoukon mustat univormutakit 1810-luvun '
+          + 'vapaussodista.',
+      },
+      { osa: 'Punainen', selite: 'takkien punaiset käänteet.' },
+      { osa: 'Kulta', selite: 'takkien kullanväriset messinkinapit.' },
+      {
+        osa: 'Yhdessä',
+        selite: 'yhtenäisyyden ja vapauden värit vuoden 1848 '
+          + 'vallankumouksesta asti.',
+      },
+    ],
     kappaleet: [
       'Musta-puna-kultaisen trikolorin juuret ovat 1810-luvun '
         + 'vapaussodissa: Lützowin vapaajoukon univormut olivat '
@@ -97,6 +147,23 @@ export const LIPPUTIEDOT = {
           + 'talonpoikien tunnus — vasara, harppi ja tähkäseppele.',
       },
     ],
-    lahde: 'Liput: Wikimedia Commons (PD)',
+    tunnukset: [
+      {
+        nimi: 'Saksan liittokotka',
+        polku: 'assets/liput/tunnukset/deu-vaakuna.png',
+        selite: 'Musta kotka kultaisella kentällä, nokka ja jalat '
+          + 'punaiset. Yksi Euroopan vanhimmista valtiotunnuksista — '
+          + 'juuret keskiajan keisarien kotkassa.',
+      },
+      {
+        nimi: 'Berliinin karhu',
+        polku: 'assets/liput/tunnukset/deu-berliini-vaakuna.png',
+        selite: 'Musta karhu hopeakentällä, kilven päällä kultainen '
+          + 'kruunu. Karhu on kulkenut Berliinin sineteissä '
+          + '1200-luvulta asti, ja kaupungin nimi ja Bär-sana ovat '
+          + 'kietoutuneet kansan mielessä yhteen.',
+      },
+    ],
+    lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
   },
 };

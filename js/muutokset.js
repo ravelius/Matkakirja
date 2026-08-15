@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 716, teksti: 'Lippuikkuna: symboliikka, vaakunat, 2/3-korkeus' },
   { v: 715, teksti: 'Piirrokset hajalleen nuolin; klikkaus suurentaa' },
   { v: 714, teksti: 'Kartan piirrokset leikattuina, numerot pois' },
   { v: 713, teksti: 'Pöllön kuvalle sykkivä paikanpitäjä haun ajaksi' },

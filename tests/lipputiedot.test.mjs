@@ -14,13 +14,13 @@ import { LIPUT_PAIKALLISET } from '../js/packs/liput-paikalliset.js';
 
 const SW = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
 
-test('jokainen versiolippu osoittaa olemassa olevaan tiedostoon', () => {
+test('jokainen versiolippu ja tunnus osoittaa olemassa olevaan tiedostoon', () => {
   for (const [avain, tiedot] of Object.entries(LIPPUTIEDOT)) {
-    for (const versio of tiedot.versiot ?? []) {
-      assert.ok(existsSync(new URL(`../${versio.polku}`, import.meta.url)),
-        `${avain}/${versio.nimi}: tiedostoa ${versio.polku} ei ole`);
-      assert.ok(SW.includes(`'./${versio.polku}'`),
-        `${versio.polku} puuttuu sw.js:n SHELL-listalta`);
+    for (const kohta of [...(tiedot.versiot ?? []), ...(tiedot.tunnukset ?? [])]) {
+      assert.ok(existsSync(new URL(`../${kohta.polku}`, import.meta.url)),
+        `${avain}/${kohta.nimi}: tiedostoa ${kohta.polku} ei ole`);
+      assert.ok(SW.includes(`'./${kohta.polku}'`),
+        `${kohta.polku} puuttuu sw.js:n SHELL-listalta`);
     }
     assert.ok(tiedot.maa && (tiedot.kappaleet ?? []).length >= 1,
       `${avain}: maa ja vähintään yksi historia-kappale vaaditaan`);

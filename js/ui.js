@@ -12450,6 +12450,23 @@ export class UI {
     kortti.appendChild(valintaNimi);
     kortti.appendChild(valintaSelite);
 
+    /*
+     * Symboliikka boldatuin otsikoin ENNEN historiakappaleita
+     * (omistajan tilaus 15.8.2026: "Symboliikka saisi tulla
+     * selkeämmin. Voisi olla boldattuna otsikot: sininen =,
+     * valkoinen =, ja niin edelleen").
+     */
+    if ((tiedot.symboliikka ?? []).length) {
+      const symbolit = html('div', 'lippu-symbolit');
+      for (const s of tiedot.symboliikka) {
+        const rivi = html('p', 'lippu-symboli');
+        rivi.appendChild(html('strong', '', `${s.osa} = `));
+        rivi.appendChild(document.createTextNode(s.selite));
+        symbolit.appendChild(rivi);
+      }
+      kortti.appendChild(symbolit);
+    }
+
     // Historia ja merkitykset — sama kaikilla asuilla.
     for (const kpl of tiedot.kappaleet ?? []) {
       kortti.appendChild(html('p', 'lippu-kappale', kpl));
@@ -12500,6 +12517,33 @@ export class UI {
       kortti.appendChild(rivi);
     }
     valitse(0);
+
+    /*
+     * Vaakunat ja muut tunnukset (omistajan tilaus 15.8.2026: "Maan
+     * vaakuna olisi kiva lisätä myös sekä mikäli maalla on joitain
+     * muitakin mielenkiintoisia vastaavia"). Kuva + nimi + selite
+     * riveinä; kuvat repossa, lisenssit tarkistettu Commonsista.
+     */
+    if ((tiedot.tunnukset ?? []).length) {
+      kortti.appendChild(html('h3', 'lippu-versiot-otsikko', 'Vaakunat ja tunnukset'));
+      const tunnukset = html('div', 'lippu-tunnukset');
+      for (const t of tiedot.tunnukset) {
+        const kohta = html('div', 'lippu-tunnus');
+        const kuvaEl = document.createElement('img');
+        kuvaEl.className = 'lippu-tunnus-kuva';
+        kuvaEl.alt = t.nimi;
+        kuvaEl.decoding = 'async';
+        kuvaEl.draggable = false;
+        kuvaEl.src = t.polku;
+        kohta.appendChild(kuvaEl);
+        const teksti = html('div', 'lippu-tunnus-teksti');
+        teksti.appendChild(html('p', 'lippu-tunnus-nimi', t.nimi));
+        teksti.appendChild(html('p', 'lippu-tunnus-selite', t.selite));
+        kohta.appendChild(teksti);
+        tunnukset.appendChild(kohta);
+      }
+      kortti.appendChild(tunnukset);
+    }
     if (tiedot.lahde) kortti.appendChild(html('p', 'lahde', tiedot.lahde));
 
     dialogi.appendChild(kortti);

@@ -9895,7 +9895,10 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .lippu-kortti {
   width: min(24rem, calc(100vw - 2rem));
-  max-height: calc(100vh - 3rem);
+  /* Kaksi kolmasosaa ruudun korkeudesta (omistajan tilaus 15.8.2026:
+   * "Tee pop-up-ikkunasta kaksi kolmasosaa korkuinen") — loppu
+   * vierittyy kortin sisällä. */
+  max-height: 66vh;
   overflow-y: auto;
   padding: 0.7rem 0.8rem 0.8rem;
   border: 1px solid rgba(122, 85, 20, 0.32);
@@ -9944,6 +9947,57 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   border-radius: 3px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.6);
+}
+
+/* Symboliikka boldatuin otsikoin (sininen =, valkoinen =, …). */
+.lippu-symbolit { margin: 0.55rem 0 0.15rem; }
+
+.lippu-symboli {
+  margin: 0.18rem 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.lippu-symboli strong {
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: #46331f;
+}
+
+/* Vaakunat ja tunnukset: kuva vasemmalla, nimi + selite oikealla. */
+.lippu-tunnukset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.lippu-tunnus {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+}
+
+.lippu-tunnus-kuva {
+  width: 4.2rem;
+  height: auto;
+  flex: none;
+}
+
+.lippu-tunnus-nimi {
+  margin: 0;
+  font-family: var(--font-type);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: #46331f;
+}
+
+.lippu-tunnus-selite {
+  margin: 0.15rem 0 0;
+  font-size: 0.83rem;
+  line-height: 1.45;
+  color: rgba(33, 29, 24, 0.88);
 }
 
 .lippu-valinta {
