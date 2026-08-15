@@ -7041,12 +7041,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'leipiä on listalla kymmeniä, ja järjestyskin on tarkka — '
             + 'ensin kala, sitten liha, viimeisenä juusto.',
           /*
-           * Artikkelin kuvakaruselli (omistajan tilaus 15.8.2026:
-           * "lisää myös kuvia pop up juttuun matkailijalle") —
-           * avaaNahtavyys näyttää nämä ensimmäisen kappaleen jälkeen.
-           * Lisenssit tarkistettu Commonsin API:sta 15.8.2026, kuvat
-           * katsottu silmin.
+           * Artikkelin kuvat TAITETTUINA tekstin lomaan (omistajan
+           * tilaus 16.8.2026: "Kuvia pitää lisätä näkymään taitettuna
+           * sivulle eri kohtiin muutama lisää" — korvasi 15.8. tehdyn
+           * karusellin). Ensimmäinen kuva avauskappaleen jälkeen,
+           * loput kelluvat tasajaolla: järjestys on viritetty niin,
+           * että kukin kuva osuu aiheensa kappaleen kohdalle
+           * (kävelykatu, satamakylpy, Tivoli, smørrebrød).
+           * Lisenssit tarkistettu Commonsin API:sta 15.–16.8.2026,
+           * kuvat katsottu silmin. HUOM nimiansa: Commonsin pelkkä
+           * "Strøget.jpg" on AARHUSIN Strøget — Kööpenhaminan kuvat
+           * on varmistettava kuvaustekstistä.
            */
+          taitto: 'ripoteltu',
           kuvat: [
             {
               tiedosto: 'Harbour Bath, Islands Brygge.jpg',
@@ -7056,11 +7063,30 @@ export const KULTTUURI_KATEGORIAT = {
               lahde: 'milgrammer, Wikimedia Commons (CC BY 2.0)',
             },
             {
+              tiedosto: 'Strøget, Copenhagen, Denmark (9280358703).jpg',
+              selite: 'Kävelykadun päässä häämöttää Rundetårnin pyöreä '
+                + 'torni — Strøgetin seudulla nähtävyydet odottavat '
+                + 'kulman takana.',
+              lahde: 'Aram Zucker-Scharff, Wikimedia Commons (CC BY 2.0)',
+            },
+            {
               tiedosto: 'Havnebad Islands Brygge summer Copenhagen.jpg',
               selite: 'Rohkein hyppää: sukeltaja kiepsahtaa satamakylvyn '
                 + 'puiselta korokkeelta ilta-auringossa, ja jono seuraavia '
                 + 'odottaa vuoroaan kaiteen takana.',
               lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Tivoli at night - Tivoli Søen.JPG',
+              selite: 'Tivolin järvi illalla: pagodin ja vuoristoradan '
+                + 'valot heijastuvat veteen lyhtyketjujen alla.',
+              lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Smørrebrød at Kastrup IMG 8275 C.JPG',
+              selite: 'Kaksi klassikkoa odottaa veistä ja haarukkaa: '
+                + 'paahtopaistia raasteella ja katkarapuja munalla.',
+              lahde: 'Anneli Salo, Wikimedia Commons (CC BY-SA 3.0)',
             },
           ],
           lahde: 'Wikipedia',

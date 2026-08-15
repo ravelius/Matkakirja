@@ -11159,7 +11159,32 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
     - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
 }
 
-.dialog.nahtavyys-arkki .nahtavyys-kortti {
+/*
+ * OTSIKON PEITON JUURISYY (löytyi 16.8.2026, omistajan kolmas
+ * havainto "otsikko jää puoliksi piiloon"): lehden tarttuva
+ * paperikaista (.dialog.arkki .dialog-card::before, ≥700 px) osuu
+ * myös nähtävyyskorttiin, koska dialogilla on sama arkki-luokka —
+ * kaista maalasi paperia jutun otsikon yläosan PÄÄLLE heti
+ * avauksesta asti. Vika ei siis ollut vieritystä laisinkaan
+ * (scrollTop pysyi nollassa), minkä vuoksi v759:n ja v762:n
+ * vieritysnollaukset eivät auttaneet. Nähtävyyskortissa ei ole
+ * tarttuvaa nimiötä, joten kaistaa ei tarvita lainkaan.
+ */
+.dialog.arkki.nahtavyys-arkki .nahtavyys-kortti::before {
+  content: none;
+}
+
+/*
+ * Valitsimessa on .arkki mukana erottelutarkkuuden takia:
+ * .dialog.arkki:not(.lehti) .dialog-card (0,4,0 — :not:n sisältö
+ * lasketaan) voitti aiemman .dialog.nahtavyys-arkki-muodon (0,3,0),
+ * jolloin max-height: inherit EI päässyt voimaan ja kortti sai
+ * lehtisäännön katon calc(100dvh - 2.4rem). Se on 0,6rem korkeampi
+ * kuin dialogin oma katto (100dvh - 3rem), joten kortti pisti
+ * flex-keskitettynä ~5 px yli dialogin molemmista päistä (mitattu
+ * 16.8.2026 otsikkopeittoa jäljittäessä).
+ */
+.dialog.arkki.nahtavyys-arkki .nahtavyys-kortti {
   width: auto;
   max-width: none;
   height: auto;
@@ -11293,6 +11318,31 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  */
 .nahtavyys-ensikuva.kuva-vaaka { max-width: 100%; }
 .nahtavyys-ensikuva.kuva-pysty { max-width: min(46%, 240px); }
+
+/*
+ * Tekstin lomaan taitetut kelluvat pikkukuvat (omistajan tilaus
+ * 16.8.2026 opasartikkeliin: "Kuvia pitää lisätä näkymään
+ * taitettuna sivulle eri kohtiin"). Kuvat kelluvat vuorotellen
+ * oikeassa ja vasemmassa laidassa ja teksti kiertää ne — sivu ei
+ * veny, toisin kuin peräkkäin ladotuilla kuvilla kävisi. Selite ja
+ * lähde kulkevat kuvan alla tavallista pienemmällä, jotta kapea
+ * kehys ei kasva tekstiä korkeammaksi.
+ */
+.nahtavyys-taittokuva {
+  max-width: min(46%, 260px);
+  margin: 0.25rem 0 0.7rem;
+}
+.nahtavyys-taittokuva.oikea { float: right; margin-left: 1.1rem; }
+.nahtavyys-taittokuva.vasen { float: left; margin-right: 1.1rem; }
+.nahtavyys-taittokuva .nahtavyys-selite { font-size: 0.76rem; }
+.nahtavyys-taittokuva .nahtavyys-lahde { font-size: 0.6rem; }
+
+/* Kellunta ei saa vuotaa jutun lopun nappien tai lähderivin alle. */
+.nahtavyys-kortti .wiki-btn,
+.nahtavyys-lahderivi,
+.nahtavyys-lainaus {
+  clear: both;
+}
 
 .nahtavyys-kuva {
   display: block;
@@ -40657,12 +40707,19 @@ const KULTTUURI_KATEGORIAT = {
             + 'leipiä on listalla kymmeniä, ja järjestyskin on tarkka — '
             + 'ensin kala, sitten liha, viimeisenä juusto.',
           /*
-           * Artikkelin kuvakaruselli (omistajan tilaus 15.8.2026:
-           * "lisää myös kuvia pop up juttuun matkailijalle") —
-           * avaaNahtavyys näyttää nämä ensimmäisen kappaleen jälkeen.
-           * Lisenssit tarkistettu Commonsin API:sta 15.8.2026, kuvat
-           * katsottu silmin.
+           * Artikkelin kuvat TAITETTUINA tekstin lomaan (omistajan
+           * tilaus 16.8.2026: "Kuvia pitää lisätä näkymään taitettuna
+           * sivulle eri kohtiin muutama lisää" — korvasi 15.8. tehdyn
+           * karusellin). Ensimmäinen kuva avauskappaleen jälkeen,
+           * loput kelluvat tasajaolla: järjestys on viritetty niin,
+           * että kukin kuva osuu aiheensa kappaleen kohdalle
+           * (kävelykatu, satamakylpy, Tivoli, smørrebrød).
+           * Lisenssit tarkistettu Commonsin API:sta 15.–16.8.2026,
+           * kuvat katsottu silmin. HUOM nimiansa: Commonsin pelkkä
+           * "Strøget.jpg" on AARHUSIN Strøget — Kööpenhaminan kuvat
+           * on varmistettava kuvaustekstistä.
            */
+          taitto: 'ripoteltu',
           kuvat: [
             {
               tiedosto: 'Harbour Bath, Islands Brygge.jpg',
@@ -40672,11 +40729,30 @@ const KULTTUURI_KATEGORIAT = {
               lahde: 'milgrammer, Wikimedia Commons (CC BY 2.0)',
             },
             {
+              tiedosto: 'Strøget, Copenhagen, Denmark (9280358703).jpg',
+              selite: 'Kävelykadun päässä häämöttää Rundetårnin pyöreä '
+                + 'torni — Strøgetin seudulla nähtävyydet odottavat '
+                + 'kulman takana.',
+              lahde: 'Aram Zucker-Scharff, Wikimedia Commons (CC BY 2.0)',
+            },
+            {
               tiedosto: 'Havnebad Islands Brygge summer Copenhagen.jpg',
               selite: 'Rohkein hyppää: sukeltaja kiepsahtaa satamakylvyn '
                 + 'puiselta korokkeelta ilta-auringossa, ja jono seuraavia '
                 + 'odottaa vuoroaan kaiteen takana.',
               lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Tivoli at night - Tivoli Søen.JPG',
+              selite: 'Tivolin järvi illalla: pagodin ja vuoristoradan '
+                + 'valot heijastuvat veteen lyhtyketjujen alla.',
+              lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Smørrebrød at Kastrup IMG 8275 C.JPG',
+              selite: 'Kaksi klassikkoa odottaa veistä ja haarukkaa: '
+                + 'paahtopaistia raasteella ja katkarapuja munalla.',
+              lahde: 'Anneli Salo, Wikimedia Commons (CC BY-SA 3.0)',
             },
           ],
           lahde: 'Wikipedia',
@@ -112247,6 +112323,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v766 — opas: otsikko VIHDOIN näkyviin; kuvat tekstin lomaan',
   'v765 — Köpiksen uusilla kohteilla piirrokset kartalla',
   'v764 — Köpiksen kartalla 9 kohdetta (uudet: 7–9, ympyröinä)',
   'v763 — vaakuna isona ilman laatikkoa; liput paikallaan',
@@ -178274,9 +178351,33 @@ class UI {
      * venyttivät sivun liian pitkäksi). Kehys tulee heti
      * avauskappaleen jälkeen — juttu ei ala eikä lopu kuvaan.
      */
-    const kuvaKehys = kuvat.length > 1
+    /*
+     * TAITETUT KUVAT (omistajan tilaus 16.8.2026 opasartikkeliin:
+     * "Kuvia pitää lisätä näkymään taitettuna sivulle eri kohtiin").
+     * Kun jutulle on merkitty taitto: 'ripoteltu', karusellia ei
+     * tehdä: ensimmäinen kuva tulee entiseen tapaan avauskappaleen
+     * jälkeen ja loput kelluvat pikkukuvina tekstin lomassa
+     * vuorotellen oikeassa ja vasemmassa laidassa, tasavälein pitkin
+     * juttua. Kelluvina ne eivät venytä sivua — karusellin alkusyy
+     * (palaute 10.8.2026) ei koske tätä taittoa.
+     */
+    const ripoteltu = kohde.taitto === 'ripoteltu' && kuvat.length > 1;
+    const kuvaKehys = kuvat.length > 1 && !ripoteltu
       ? this.nahtavyydenKaruselli(kuvat)
       : (kuvat.length ? this.nahtavyydenKuva(kuvat[0]) : null);
+    // Kappaleindeksi → sen edelle taitettava kelluva kuva.
+    const taittokuvat = new Map();
+    if (ripoteltu) {
+      kuvat.slice(1).forEach((kuva, j, lisat) => {
+        const kehys = this.nahtavyydenKuva(kuva);
+        kehys.classList.add('nahtavyys-taittokuva', j % 2 ? 'vasen' : 'oikea');
+        // Tasajako kappaleiden kesken; ei ennen avauskappaletta eikä
+        // kahta samaan väliin.
+        let paikka = Math.max(1, Math.round(((j + 1) * kappaleet.length) / (lisat.length + 1)));
+        while (taittokuvat.has(paikka)) paikka += 1;
+        taittokuvat.set(paikka, kehys);
+      });
+    }
     // Lainaus keskelle, kappaleiden puoliväliin.
     const lainauksenPaikka = kohde.lainaus ? Math.ceil(kappaleet.length / 2) : -1;
 
@@ -178303,6 +178404,8 @@ class UI {
         kuva.draggable = false;
         kpl.insertBefore(kuva, kpl.firstChild);
       }
+      // Kelluva kuva ennen kappaletta, jotta teksti kiertää sen.
+      if (taittokuvat.has(i)) sisalto.appendChild(taittokuvat.get(i));
       sisalto.appendChild(kpl);
       if (i + 1 === lainauksenPaikka) {
         const lohko = html('blockquote', 'nahtavyys-lainaus');
@@ -178317,6 +178420,11 @@ class UI {
     // Kappaleeton juttu (ei pitäisi olla, mutta data voi yllättää):
     // kuva ei saa kadota.
     if (!kappaleet.length && kuvaKehys) sisalto.appendChild(kuvaKehys);
+    // Väliin mahtumattomat taittokuvat (enemmän kuvia kuin
+    // kappaleväliä) päätyvät loppuun eivätkä katoa.
+    for (const [paikka, kehys] of taittokuvat) {
+      if (paikka >= kappaleet.length) sisalto.appendChild(kehys);
+    }
 
     // Jutun ensimmäinen kuva saa oman luokkansa: vaakana se levenee
     // koko palstalle, pystynä se pysyy pienenä (omistajan ohje).
@@ -178347,7 +178455,17 @@ class UI {
      * tai Safarin fokusvierityksen myötä). Juttu avataan AINA
      * alusta, joten avausikkunan ajan mikä tahansa ohjelmallinen
      * liukuma nollataan heti — kunnes käyttäjä itse tarttuu korttiin
-     * (kosketus, rulla tai näppäin) tai 2,5 sekuntia on kulunut.
+     * (kosketus, rulla tai näppäin).
+     *
+     * HUOM 16.8.2026: omistajan kolmesti näkemän "otsikko puoliksi
+     * piilossa" -vian JUURISYY ei ollut vieritys laisinkaan, vaan
+     * lehden tarttuva paperikaista, joka maalautui otsikon päälle
+     * (korjattu CSS:ssä, ks. .nahtavyys-kortti::before). Vahti jää
+     * silti varmistukseksi oikeita liukumia vastaan, ja sen ikä EI
+     * ole enää kiinteä: ruuhkainen Commons/peili voi tuoda jutun
+     * kuvan vasta monen sekunnin päästä, ja liukuma tulisi vasta
+     * silloin — vahti elää, kunnes JOKAINEN kortin kuva on
+     * latautunut ja hetki siitä yli (vähintään 2,5 s, enintään 15 s).
      */
     // Edellisen avauksen vahti sammuu aina — myös paluupolulla,
     // ettei se nollaa juuri palautettua lukukohtaa.
@@ -178359,8 +178477,14 @@ class UI {
         kortti.addEventListener(laji, irrota, { once: true, passive: true });
       }
       const alku = performance.now();
+      let rauhassa = null; // hetki, jolloin joka kuva oli valmis
       this.nahtavyysYlaVahti = setInterval(() => {
-        if (kayttajaOtti || performance.now() - alku > 2500) {
+        const nyt = performance.now();
+        const kesken = [...kortti.querySelectorAll('img')].some((k) => !k.complete);
+        if (kesken) rauhassa = null;
+        else rauhassa ??= nyt;
+        const valmis = nyt - alku > 2500 && rauhassa !== null && nyt - rauhassa > 700;
+        if (kayttajaOtti || valmis || nyt - alku > 15000) {
           clearInterval(this.nahtavyysYlaVahti);
           return;
         }
@@ -183607,6 +183731,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 766, teksti: 'Opas: otsikko esiin, kuvat taitettu tekstin lomaan' },
   { v: 765, teksti: 'Köpiksen kohteet 7–9: piirrokset karttaan' },
   { v: 764, teksti: 'Kööpenhaminan kartalle 3 uutta kohdetta juttuineen (Opus 18)' },
   { v: 763, teksti: 'lippuikkuna: iso pelkkä vaakuna; liput kasvavat paikallaan' },
@@ -184469,7 +184594,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.765';
+const APP_VERSION = '2026-08-09.766';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

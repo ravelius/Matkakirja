@@ -13056,9 +13056,33 @@ export class UI {
      * venyttivät sivun liian pitkäksi). Kehys tulee heti
      * avauskappaleen jälkeen — juttu ei ala eikä lopu kuvaan.
      */
-    const kuvaKehys = kuvat.length > 1
+    /*
+     * TAITETUT KUVAT (omistajan tilaus 16.8.2026 opasartikkeliin:
+     * "Kuvia pitää lisätä näkymään taitettuna sivulle eri kohtiin").
+     * Kun jutulle on merkitty taitto: 'ripoteltu', karusellia ei
+     * tehdä: ensimmäinen kuva tulee entiseen tapaan avauskappaleen
+     * jälkeen ja loput kelluvat pikkukuvina tekstin lomassa
+     * vuorotellen oikeassa ja vasemmassa laidassa, tasavälein pitkin
+     * juttua. Kelluvina ne eivät venytä sivua — karusellin alkusyy
+     * (palaute 10.8.2026) ei koske tätä taittoa.
+     */
+    const ripoteltu = kohde.taitto === 'ripoteltu' && kuvat.length > 1;
+    const kuvaKehys = kuvat.length > 1 && !ripoteltu
       ? this.nahtavyydenKaruselli(kuvat)
       : (kuvat.length ? this.nahtavyydenKuva(kuvat[0]) : null);
+    // Kappaleindeksi → sen edelle taitettava kelluva kuva.
+    const taittokuvat = new Map();
+    if (ripoteltu) {
+      kuvat.slice(1).forEach((kuva, j, lisat) => {
+        const kehys = this.nahtavyydenKuva(kuva);
+        kehys.classList.add('nahtavyys-taittokuva', j % 2 ? 'vasen' : 'oikea');
+        // Tasajako kappaleiden kesken; ei ennen avauskappaletta eikä
+        // kahta samaan väliin.
+        let paikka = Math.max(1, Math.round(((j + 1) * kappaleet.length) / (lisat.length + 1)));
+        while (taittokuvat.has(paikka)) paikka += 1;
+        taittokuvat.set(paikka, kehys);
+      });
+    }
     // Lainaus keskelle, kappaleiden puoliväliin.
     const lainauksenPaikka = kohde.lainaus ? Math.ceil(kappaleet.length / 2) : -1;
 
@@ -13085,6 +13109,8 @@ export class UI {
         kuva.draggable = false;
         kpl.insertBefore(kuva, kpl.firstChild);
       }
+      // Kelluva kuva ennen kappaletta, jotta teksti kiertää sen.
+      if (taittokuvat.has(i)) sisalto.appendChild(taittokuvat.get(i));
       sisalto.appendChild(kpl);
       if (i + 1 === lainauksenPaikka) {
         const lohko = html('blockquote', 'nahtavyys-lainaus');
@@ -13099,6 +13125,11 @@ export class UI {
     // Kappaleeton juttu (ei pitäisi olla, mutta data voi yllättää):
     // kuva ei saa kadota.
     if (!kappaleet.length && kuvaKehys) sisalto.appendChild(kuvaKehys);
+    // Väliin mahtumattomat taittokuvat (enemmän kuvia kuin
+    // kappaleväliä) päätyvät loppuun eivätkä katoa.
+    for (const [paikka, kehys] of taittokuvat) {
+      if (paikka >= kappaleet.length) sisalto.appendChild(kehys);
+    }
 
     // Jutun ensimmäinen kuva saa oman luokkansa: vaakana se levenee
     // koko palstalle, pystynä se pysyy pienenä (omistajan ohje).
@@ -13129,7 +13160,17 @@ export class UI {
      * tai Safarin fokusvierityksen myötä). Juttu avataan AINA
      * alusta, joten avausikkunan ajan mikä tahansa ohjelmallinen
      * liukuma nollataan heti — kunnes käyttäjä itse tarttuu korttiin
-     * (kosketus, rulla tai näppäin) tai 2,5 sekuntia on kulunut.
+     * (kosketus, rulla tai näppäin).
+     *
+     * HUOM 16.8.2026: omistajan kolmesti näkemän "otsikko puoliksi
+     * piilossa" -vian JUURISYY ei ollut vieritys laisinkaan, vaan
+     * lehden tarttuva paperikaista, joka maalautui otsikon päälle
+     * (korjattu CSS:ssä, ks. .nahtavyys-kortti::before). Vahti jää
+     * silti varmistukseksi oikeita liukumia vastaan, ja sen ikä EI
+     * ole enää kiinteä: ruuhkainen Commons/peili voi tuoda jutun
+     * kuvan vasta monen sekunnin päästä, ja liukuma tulisi vasta
+     * silloin — vahti elää, kunnes JOKAINEN kortin kuva on
+     * latautunut ja hetki siitä yli (vähintään 2,5 s, enintään 15 s).
      */
     // Edellisen avauksen vahti sammuu aina — myös paluupolulla,
     // ettei se nollaa juuri palautettua lukukohtaa.
@@ -13141,8 +13182,14 @@ export class UI {
         kortti.addEventListener(laji, irrota, { once: true, passive: true });
       }
       const alku = performance.now();
+      let rauhassa = null; // hetki, jolloin joka kuva oli valmis
       this.nahtavyysYlaVahti = setInterval(() => {
-        if (kayttajaOtti || performance.now() - alku > 2500) {
+        const nyt = performance.now();
+        const kesken = [...kortti.querySelectorAll('img')].some((k) => !k.complete);
+        if (kesken) rauhassa = null;
+        else rauhassa ??= nyt;
+        const valmis = nyt - alku > 2500 && rauhassa !== null && nyt - rauhassa > 700;
+        if (kayttajaOtti || valmis || nyt - alku > 15000) {
           clearInterval(this.nahtavyysYlaVahti);
           return;
         }
