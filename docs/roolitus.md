@@ -95,8 +95,9 @@ Työtapa on siksi tämä:
 | Opus 9 (Siperia erä 3) | session_015mZjGUdxeUyykSgPhqYKnd (Kamtšatka + Sahalin + Vladivostok haaralla claude/opus9-siperia-era3; uusi kuvatekstisääntö suoraan; EI uutisia/kohtaamisia; raportointi viesti-fable.md:llä, EI trigger-työkaluja) | 15.8.2026 |
 | Opus 10 (kuvatekstit) | — ARKISTOITU 15.8. klo 01:50Z: erä 1 mainissa (v679), mutta sessio ei herännyt herätetriggeriin (toimitusvika koskee siis myös uusia sessioita — herätteet eivät toimi lainkaan, vain perustamispromptit). Erien 2–3 pushaamaton valmistelu menetettiin konttiin. Erät 2–5 siirtyivät Opus 12:lle. | 15.8.2026 |
 | Opus 11 (zoom-pilotti) | session_01EkYbtyhoS3YVFFUMsvomid (zoomattava/panoroitava kaupunkikartta, pilotti 2 VAIN Berliini haaralla claude/opus11-zoom; skaalaus 52 kaupunkiin vasta omistajan kuittauksella; raportointi viesti-fable.md:llä) | 15.8.2026 |
-| Opus 12 (kuvatekstit) | session_01N6p1tsHZEvvqTa3Hf3MEsN (korjauserät 2–5 puhtaalta pöydältä, erä per haara claude/opus12-kuvatekstit-eN; ≤3 virkettä / ≤260 mrk, siirrot leipätekstiin, lähteet ja alt-tekstit rauhaan; checkpoint-push 30 min välein; raportointi viesti-fable.md:llä, EI trigger-työkaluja) | 15.8.2026 |
+| Opus 12 (kuvatekstit) | — ARKISTOITU 15.8. klo 03:35Z: erät 2, 3 ja 5 valmiit (v682/v684/v686; Fable renumeroi 3:n ja viimeisteli 5:n), mutta sessio päätti vuoronsa "jatkan erää 4" -aikeella — joutilas sessio ei jatka itsestään eikä herätteitä ole. Erä 4 siirtyi Opus 14:lle. | 15.8.2026 |
 | Opus 13 (karttalaajennus) | session_01XKRoJcmFPijFE4b6hkkyZD (omistajan tilaus 15.8.: Berliinin v680-mallin uusi kartta Lontoolle, Pariisille ja Helsingille — laajempi rajaus, terävä piirros, satelliittivipu; Helsingissä Suomenlinnan kainalo komposoitava satelliittikuvaan; haara claude/opus13-karttalaajennus; checkpoint-push 30 min välein; raportointi viesti-fable.md:llä, EI trigger-työkaluja) | 15.8.2026 |
+| Opus 14 (kuvatekstierä 4) | session_016nZqzoL8ZEtfDVTPrZ5ua6 (urakan viimeinen erä: maa-kategoriat.js:n nostot, 205 ylitystä, saa jakaa 4a/4b; haarat claude/opus14-kuvatekstit-e4*; sitova ohje: vuoroa EI päätetä ennen kuin kaikki on PR:issä — Opus 12:n oppi; raportointi viesti-fable.md:llä, EI trigger-työkaluja) | 15.8.2026 |
 | Fable max (apusessio) | session_01NQpicvHRAzUpX4NfcYwsyv (Fable max 2; EI vastaanota viestejä tilinvaihdon jälkeen — uusi tili perustaa oman Max-session tarvittaessa. Vanha session_01U8Nqxu… arkistoitu 11.8. konttivian takia) | 11.8.2026 |
 | Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |
@@ -135,6 +136,11 @@ työstä MINUUTEISSA eikä tunneissa:
 1. **Checkpoint-commitit.** Työsessio committaa keskeneräisenkin työn
    omalle haaralleen vähintään ~30 minuutin välein ("wip: erä X,
    7/13 tehty"). Hiljainen haara + väite "työn alla" ei kelpaa.
+   **Vuoroa ei päätetä aikeeseen** (Opus 12:n oppi 15.8.2026):
+   joutilas sessio ei jatka itsestään eikä sitä voi herättää, joten
+   "päätän vuoron ja jatkan erää N" tarkoittaa, ettei erää N tehdä
+   koskaan. Vuoro päätetään vasta, kun kaikki annettu työ on
+   pushattu ja PR:t auki.
 2. **Raporttihaara ei vaihdu ilmoittamatta.** Uusi haara perustetaan
    vain, jos vanhan raportin LOPPUUN kirjoitetaan ensin minne työ
    siirtyy (Opus 1:n oppi 10.8.: haaranvaihto kesken erän näytti
