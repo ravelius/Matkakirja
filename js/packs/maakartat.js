@@ -3256,17 +3256,41 @@ export const KAUPUNKIKARTAT = {
   helsinki: {
     polku: 'assets/kartat/helsinki-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 60.184, etela: 60.1545, lansi: 24.916, ita: 24.9835 },
+    /*
+     * Satelliittinäkymä samasta rajauksesta, ks. berliini alla.
+     * KAINALO ON MUKANA MYÖS SIINÄ: tools/hae-satelliittikartat.mjs
+     * hakee Suomenlinnalle oman WMS-ruudun ja komposoi sen samoille
+     * prosenttipaikoille kuin piirtäjä. Ilman sitä vipu vaihtaisi
+     * kainalon alta pelkän avomeren, ja kohde 7 — jonka karttapiste()
+     * asemoi kainalon sisään — kelluisi tyhjällä vedellä.
+     */
+    satelliitti: 'assets/kartat/helsinki-satelliitti.jpg',
+    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
+      + '(muokattua Copernicus Sentinel -dataa)',
+    /*
+     * Rajaus leveni neljänneksellä 15.8.2026 (sama omistajan tilaus
+     * kuin Berliinissä): 3,7 × 3,3 km → 4,7 × 4,1 km samasta
+     * keskipisteestä. Perustelut ja hylätty epäsymmetrinen vaihtoehto
+     * on kirjattu tools/piirra-kaupunkikartta.mjs:n helsinki-lohkoon.
+     * Lyhyesti: symmetrinen laajennus riitti tuomaan Kallion kirkon
+     * ja Linnanmäen kuvaan, ja niemen kärki pysyi irti alalaidasta.
+     */
+    rajat: { pohjoinen: 60.1877, etela: 60.1508, lansi: 24.9076, ita: 24.9919 },
     /*
      * Kainalokartta Suomenlinnasta. Se on lehden historiaosion
      * pääkohde eikä mahdu mihinkään järkevään päärajaukseen — 3 km
      * kaakkoon. Ruutu on sijoitettu kuvan kaakkoiskulman avomerelle,
      * eli se peittää samalla sen alueen, jossa muuten olisi vähiten
      * katsottavaa, ja se on oikea suunta.
+     *
+     * Korkeus on työkalun laskema (leveys × pääkuvan kuvasuhde /
+     * kainalon kuvasuhde); älä muuta sitä käsin. Levennys 15.8.2026
+     * muutti pääkuvan kuvasuhdetta hitusen, ja luku päivittyi
+     * 28.85 → 28.81.
      */
     kainalot: [
       { rajat: { pohjoinen: 60.152, etela: 60.1368, lansi: 24.969, ita: 24.9955 },
-        x: 76, y: 69.15, leveys: 22, korkeus: 28.85 },
+        x: 76, y: 69.15, leveys: 22, korkeus: 28.81 },
     ],
     esittely: 'Helsinki ei ole aina ollut tässä. Kustaa Vaasa perusti '
       + 'sen vuonna 1550 Vantaanjoen suulle Tallinnan kilpailijaksi, '
@@ -3296,9 +3320,11 @@ export const KAUPUNKIKARTAT = {
        * Senaatintorin ja Katajanokan väliin. Se mainitaan esittelyssä
        * nimeltä, ja silakkamarkkinat ovat lehdessä omana nostonaan.
        *
-       * Kallion kirkko jää 22 metriä pohjoisrajan ulkopuolelle. Rajaa
-       * ei nostettu, koska 60,187 olisi vaatinut 4,3 km leveän kuvan
-       * ja työntänyt niemen kärjen alalaitaan.
+       * Kallion kirkko jäi ennen 22 metriä pohjoisrajan ulkopuolelle,
+       * eikä rajaa nostettu, koska 60,187 olisi vaatinut 4,3 km
+       * leveän kuvan. Levennys 15.8.2026 teki juuri sen (4,7 km), ja
+       * kirkko sekä Linnanmäki ovat nyt kuvassa. Ne EIVÄT silti ole
+       * tällä listalla: rajausta muutettiin, ei kohdevalikoimaa.
        */
       { nimi: 'Temppeliaukion kirkko', lat: 60.1731, lon: 24.9253, wiki: 'Temppeliaukion kirkko' },
       { nimi: 'Päärautatieasema', lat: 60.1719, lon: 24.9414, wiki: 'Helsingin päärautatieasema' },
@@ -3440,7 +3466,28 @@ export const KAUPUNKIKARTAT = {
   pariisi: {
     polku: 'assets/kartat/pariisi-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 48.892, etela: 48.847, lansi: 2.277, ita: 2.3675 },
+    /*
+     * Satelliittinäkymä samasta rajauksesta, ks. berliini alla —
+     * haettu tools/hae-satelliittikartat.mjs:llä samassa
+     * kuvasuhteessa kuin piirretty PNG, joten kohdepisteet ja
+     * mittajana kelpaavat molemmille näkymille sellaisenaan.
+     */
+    satelliitti: 'assets/kartat/pariisi-satelliitti.jpg',
+    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
+      + '(muokattua Copernicus Sentinel -dataa)',
+    /*
+     * Rajaus leveni neljänneksellä 15.8.2026 (sama omistajan tilaus
+     * kuin Berliinissä): 6,6 × 5,0 km → 8,3 × 6,2 km samasta
+     * keskipisteestä. Kohdepisteet lasketaan tästä lohkosta
+     * (karttapiste), joten ne siirtyivät kuvassa itsestään. Sekä
+     * piirros että satelliittikuva on haettu uudelleen tällä
+     * rajauksella.
+     *
+     * Eteläreuna maksoi takaisin sen, minkä vanha rajaus joutui
+     * jättämään: Panthéon ja Luxembourgin puutarha ovat nyt kuvassa
+     * (ks. kohteet-lohkon kommentti).
+     */
+    rajat: { pohjoinen: 48.8976, etela: 48.8414, lansi: 2.2657, ita: 2.3788 },
     esittely: 'Pariisi alkoi saarelta. Seine haarautuu keskellä '
       + 'kaupunkia kahdeksi kapeaksi uomaksi, ja niiden väliin jää '
       + 'Île de la Cité — saari, joka on kymmenen katua pitkä ja viisi '
@@ -3459,13 +3506,19 @@ export const KAUPUNKIKARTAT = {
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
-       * Pelin laajin kaupunkirajaus, 6,6 km. Se on tietoinen
-       * poikkeus tiiviiseen ydinkeskustaan: Eiffel-torni ja
-       * Sacré-Cœur ovat 4,8 km:n päässä toisistaan, ja lapsen kaksi
-       * tunnetuinta kohdetta kuuluvat samaan kuvaan. Pariisin
-       * korttelit ovat isoja, joten kuva ei silti mene puuroksi.
-       * Hinta on etelälaita: Panthéon ja Luxembourgin puutarha
-       * jäävät ulkopuolelle.
+       * Laaja rajaus, 15.8.2026 alkaen 8,3 km (pelin laajin on nyt
+       * Berliinin 10,2 km). Se on tietoinen poikkeus tiiviiseen
+       * ydinkeskustaan: Eiffel-torni ja Sacré-Cœur ovat 4,8 km:n
+       * päässä toisistaan, ja lapsen kaksi tunnetuinta kohdetta
+       * kuuluvat samaan kuvaan. Pariisin korttelit ovat isoja, joten
+       * kuva ei silti mene puuroksi.
+       *
+       * Vanha hinta oli etelälaita: Panthéon ja Luxembourgin
+       * puutarha jäivät ulkopuolelle. Levennyksen jälkeen ne ovat
+       * kuvassa — mutta EIVÄT tällä listalla. Kohteita on kuusi, ja
+       * listan kasvattaminen on oma päätöksensä (numerointi,
+       * selitteet ja nähtävyysjutut seuraavat siitä); tässä
+       * muutettiin rajausta, ei sisältöä.
        */
       { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni' },
       { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
@@ -3659,7 +3712,25 @@ export const KAUPUNKIKARTAT = {
     // kohdetta mahtuvat alueelle.
     polku: 'assets/kartat/lontoo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 51.525, etela: 51.4925, lansi: -0.16, ita: -0.06 },
+    /*
+     * Satelliittinäkymä samasta rajauksesta, ks. berliini alla —
+     * haettu tools/hae-satelliittikartat.mjs:llä, joka pyytää kuvan
+     * samassa kuvasuhteessa kuin piirretty PNG, joten kohdepisteet ja
+     * mittajana kelpaavat molemmille näkymille sellaisenaan.
+     */
+    satelliitti: 'assets/kartat/lontoo-satelliitti.jpg',
+    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
+      + '(muokattua Copernicus Sentinel -dataa)',
+    /*
+     * Rajaus leveni neljänneksellä 15.8.2026 (sama omistajan tilaus
+     * kuin Berliinissä): 6,9 × 3,6 km → 8,7 × 4,5 km samasta
+     * keskipisteestä. Kohdepisteet lasketaan tästä lohkosta
+     * (karttapiste), joten ne siirtyivät kuvassa itsestään — käsin ei
+     * korjattu mitään. Tower Bridge oli ennen itälaidassa 85 %:n
+     * kohdalla, nyt 78 %:ssa. Sekä piirros että satelliittikuva on
+     * haettu uudelleen tällä rajauksella.
+     */
+    rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
     esittely: 'Lontoo ei ole yksi kaupunki vaan kaksi, jotka kasvoivat '
       + 'yhteen: idässä City of London, roomalaisten muurien rajaama '
       + 'neliökilometri, jossa tehdään rahaa, ja lännessä Westminster, '
