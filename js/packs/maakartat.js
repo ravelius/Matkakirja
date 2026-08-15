@@ -3868,17 +3868,19 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/berliini-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     /*
-     * Satelliittinäkymä samasta rajauksesta (omistajan tilaus
-     * 14.8.2026: kartalle vipu, joka vaihtaa piirroksen
-     * satelliittikuvaksi). Haettu tools/hae-satelliittikartat.mjs:llä,
-     * joka pyytää kuvan samassa kuvasuhteessa kuin piirretty PNG —
-     * siksi kohdepisteet, selitteet ja mittajana kelpaavat molemmille
-     * näkymille sellaisenaan. Lehti näyttää vivun vain, jos nämä kaksi
-     * kenttää ovat olemassa; Berliini on pilotti.
+     * VÄRIKARTTA SATELLIITIN TILALLE (omistajan päätös 15.8.2026:
+     * "Joo vaihda väri berliiniin" — satelliitti oli liian epäselvä,
+     * ja "pelkät värit samaan piirros karttaan voisi olla toimivin
+     * ratkaisu"). Sama juliste samoista OSM-aineistoista ja SAMALTA
+     * piirtoRajat-alueelta (tools/piirra-kaupunkikartta.mjs --vari),
+     * joten zoomi, panorointi ja reunus toimivat täsmälleen kuten
+     * piirroksessa — vain paletti vaihtuu: siniset vedet, vihreät
+     * puistot, ruskeat kadut. Berliini on pilotti; muut
+     * satelliittikaupungit vaihdetaan, kun paletti on todettu hyväksi
+     * pelissä. Lehti näyttää vivun Piirros/Värikartta, kun tämä
+     * kenttä on olemassa (ui.js).
      */
-    satelliitti: 'assets/kartat/berliini-satelliitti.jpg',
-    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
-      + '(muokattua Copernicus Sentinel -dataa)',
+    varikartta: 'assets/kartat/berliini-varikartta.png',
     /*
      * Rajaus leveni neljänneksellä 15.8.2026 (omistajan tilaus:
      * "voisi jatkua hieman nykyistä laajemmalle alueelle"): 8,1 × 6,1
@@ -3897,9 +3899,9 @@ export const KAUPUNKIKARTAT = {
      * joten ne siirtyivät kuvassa itsestään — ruudulla ne ovat samassa
      * kohdassa kuin ennen.
      *
-     * SATELLIITTIKUVA ON YHÄ YLLÄ OLEVALLA rajat-ALUEELLA: uusia ei
-     * haettu, ja siksi satelliittinäkymässä panorointi pysähtyy
-     * vanhaan tapaan kuvan reunaan (ui.js).
+     * Värikartta on piirretty samalta piirtoRajat-alueelta, joten se
+     * kattaa myös reunuksen — panorointi toimii siinä kuten
+     * piirroksessa.
      */
     rajat: { pohjoinen: 52.547, etela: 52.478, lansi: 13.325, ita: 13.475 },
     piirtoRajat: { pohjoinen: 52.5677, etela: 52.4573, lansi: 13.28, ita: 13.52 },
