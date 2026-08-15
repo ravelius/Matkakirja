@@ -7,6 +7,15 @@
 > Pariisi). Älä aloita uutta lehtipakettia ennen kuin tämä huomautus
 > on poistettu.
 >
+> **Piirrosputken kustannussääntö (omistajan päätös 16.8.2026,
+> budjetti nostettu tätä vastaan):** miniatyyripiirrokset
+> generoidaan kiristetyllä putkella — YKSI otto per kohde
+> (tools/generoi-miniatyyrit.mjs ohittaa valmiit tiedostot
+> automaattisesti), hylätyt kirjataan ja generoidaan uudelleen
+> täsmäavaimilla vasta katselmoinnin jälkeen. Ei koskaan
+> "generoi kunnes kelpaa" -silmukkaa eikä koko listan
+> uusinta-ajoja. Jokainen generointi maksaa ~0,04 €.
+>
 > **Kuvien silmätarkistus monistusvaiheessa (omistajan linjaus
 > 15.8.2026):** kun Kööpenhaminan lehtimalli on valmis ja sitä
 > aletaan kopioida muihin kaupunkeihin, Opus käy samalla läpi

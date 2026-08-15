@@ -18,6 +18,19 @@
  *          ennen peliin kytkemistä (js/packs/miniatyyrit.js).
  * Ulos:    assets/kartat/miniatyyrit/<avain>.jpg
  *
+ * KUSTANNUSSÄÄNTÖ (omistajan päätös 16.8.2026, kun 30 €:n raja
+ * täyttyi: "Aika arvokasta tehdä sillä kuvia" → budjetti nostettu
+ * kiristettyä putkea vastaan): jokainen generointi maksaa ~0,04 €,
+ * ja hukka tuli uusinta-ajoista. Siksi:
+ *   1. OLEMASSA OLEVA TIEDOSTO OHITETAAN aina — kohteen saa
+ *      uusiksi vain nimeämällä sen argumenttina JA lisäämällä
+ *      --uusiksi. Koko listan uusinta-ajo ei ole enää mahdollinen
+ *      vahingossa.
+ *   2. YKSI otto per kohde. Hylätyt kirjataan ja generoidaan
+ *      uudelleen vasta katselmoinnin jälkeen täsmäavaimilla — ei
+ *      "generoi kunnes kelpaa" -silmukkaa.
+ *   3. Ajon loppuun tulostuu generointien määrä ja kustannusarvio.
+ *
  * API-avainta EI koskaan repoon eikä lokiin.
  */
 
@@ -352,11 +365,25 @@ const KUVAT = [
     + 'trees'],
 ];
 
-const pyydetyt = process.argv.slice(2);
-const jono = KUVAT.filter(([k]) => !pyydetyt.length || pyydetyt.includes(k));
+const uusiksi = process.argv.includes('--uusiksi');
+const pyydetyt = process.argv.slice(2).filter((a) => a !== '--uusiksi');
+const { existsSync } = await import('node:fs');
+let jono = KUVAT.filter(([k]) => !pyydetyt.length || pyydetyt.includes(k));
 if (!jono.length) {
   console.error('Ei kohteita. Tunnetut:', KUVAT.map(([k]) => k).join(', '));
   process.exit(1);
+}
+// Kustannussääntö 1: valmis tiedosto ohitetaan. Uusinta vaatii sekä
+// täsmäavaimen että --uusiksi-lipun.
+const ohitetut = jono.filter(([k]) => existsSync(resolve(JUURI, `assets/kartat/miniatyyrit/${k}.jpg`))
+  && !(uusiksi && pyydetyt.includes(k)));
+jono = jono.filter(([k]) => !ohitetut.some(([o]) => o === k));
+if (ohitetut.length) {
+  console.log(`Ohitetaan ${ohitetut.length} valmista kuvaa (uusinta: nimeä avain + --uusiksi).`);
+}
+if (!jono.length) {
+  console.log('Kaikki pyydetyt on jo generoitu — ei yhtään API-kutsua.');
+  process.exit(0);
 }
 
 mkdirSync(resolve(JUURI, 'assets/kartat/miniatyyrit'), { recursive: true });
@@ -427,4 +454,5 @@ for (const [tunnus, aihe] of jono) {
   await new Promise((r) => setTimeout(r, 2000));
 }
 await pienentaja.sulje();
-console.log(`Valmis: ${onnistui}/${jono.length}.`);
+// Kustannussääntö 3: näkyvä hinta-arvio joka ajosta (~0,04 €/kuva).
+console.log(`Valmis: ${onnistui}/${jono.length}. Generointeja ${jono.length} ≈ ${(jono.length * 0.04).toFixed(2)} €.`);
