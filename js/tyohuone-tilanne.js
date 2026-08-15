@@ -10,30 +10,34 @@
  */
 
 export const TILANNE = {
-  paivitetty: '15.8.2026 — v679–v704',
-  tavoite: 'Kuvatekstiurakka valmis (569 → 0). Siperia valmis (8 '
-    + 'kaupunkia). Reunuskartat + satelliitit 4 kaupungilla. Lukijan '
-    + 'automoodi, otsikkotauot, väistö. Äänet tasattu. Esipuskurit. '
-    + 'Raamattu (tiivis + tagit) ja Tilannelehti pelissä. Pöllön '
-    + 'vastauskuvat. Matkakirjatekstit odottavat Raamatun läpikäyntiä.',
+  paivitetty: '15.8.2026 — v705–v751',
+  tavoite: 'Kartat: 10 kaupungilla värikartta + piirrospisteet '
+    + '(suurennos, kyltit, osuma-alue hiottu). Lippusivut 58/118. '
+    + 'Kööpenhaminan lehtimalli valmis: avauskuvakaruselli, 2 palstan '
+    + 'karttateksti, Matkailijalle kuvineen, opasartikkeli. '
+    + 'Avauskuvat myös Berliini, Helsinki, Pariisi, Lontoo. Työhuoneen '
+    + 'palkit (R2, repo, Eleven, pöllö, kulut). Paluunuoli '
+    + 'henkilöjuttuihin. LEHTITAUKO: uusia lehtiä ei kirjoiteta ennen '
+    + 'nykyisten parannusta.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'päätoimittaja',
       tila: 'tyossa',
-      tehtava: 'Koordinointi, merget pistokokein, omat lukija- ja '
-        + 'äänityöt. Työsessiot vain perustamisprompteilla.',
-      seuraavaksi: 'Värikartat muihin karttakaupunkeihin + '
-        + 'miniatyyripilotti (paletti hyväksytty 15.8.).',
+      tehtava: 'Lehtimallin pilotti, avauskuvaerät, lippusivut, '
+        + 'kartan ja työhuoneen hionta omistajan palautteista.',
+      seuraavaksi: 'Avauskuvaerä 2 (Rooma, Wien, Praha, Amsterdam, '
+        + 'Tukholma); Matkailijalle-monistus Opukselle omistajan '
+        + 'tsekin jälkeen; lippuerä 8.',
     },
   ],
   odottaaPaatosta: [
-    'Kartta- ja zoomiskaalaus ~49 kaupunkiin',
-    'Raamatun luonnososioiden läpikäynti',
-    'Kainalon suuntateksti satelliittiin — vai ei',
-    'v685: taustan aaltoliike sivunvaihdossa',
-    'v692: ylikuumien raitojen vaihto',
-    'Balladiääni ja lukunopeus — kuuntelu',
+    'Kööpenhaminan lehtimallin hyväksyntä (monistuksen aloitus)',
+    'Mac-Safari-äänikorjauksen testi Macilla (v741)',
+    'Kehittäjätilan kytkentä täydellä koodilla (työhuoneen palkit)',
+    'Pöllö-työtila Anthropic-konsoliin (kulujen rajaus)',
+    'Karttaerien 2–5 kaupunkilistat',
+    'Kazakstanin ja Syyrian lippusivut (erikseen)',
   ],
 };
 
