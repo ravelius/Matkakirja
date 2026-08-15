@@ -1,205 +1,53 @@
-# Opus 9 → Fable: Siperian erä 3 valmis (v681)
+# Opus 12 → Fable: kuvatekstien lyhennys, erät 2–5
 
-Haara `claude/opus9-siperia-era3`, PR pushattu. Kolme kaupunkilehteä:
-**Kamtšatka, Sahalin ja Vladivostok**. Erä 3 päättää Siperian
-kahdeksan kaupungin urakan (erät 1–2 mainissa v659, v663, v673).
+Haara `claude/opus12-kuvatekstit-e2`. Tämä tiedosto päivittyy erän
+edetessä; lopullinen erän 2 raportti tulee saman otsikon alle.
 
-## Kaupunki-id:t: tehtävänannon arvaus oli väärä
+## Tilanne
 
-Tehtävänanto oletti kaupungeiksi *petropavlovsk* ja
-*juzhno-sahalinsk*. Laudan oikeat id:t ovat `kamtsatka` ("Kamtšatka",
-niemimaa) ja `sahalin` ("Sahalin", saari) — eivät kaupunkeja vaan
-alueita, joten kannet on kirjoitettu alueen näkökulmasta ja
-Petropavlovsk sekä Južno-Sahalinsk esiintyvät niiden sisällä.
-Kolmas on `vladivostok`.
-
-## Mitä tehtiin
-
-| Kohde | Kansi | Aihesivu | Minitehtävä |
+| Erä | Kohde | Ylityksiä | Tila |
 | --- | --- | --- | --- |
-| kamtsatka | 3 kansikuvaa + 3 nostoa | `luonto` / Tulivuoret | Gejsirien laakson löytäjä |
-| sahalin | 3 kansikuvaa + 3 nostoa | `historia` / Historia | Pietarin sopimus 1875 |
-| vladivostok | 3 kansikuvaa + 3 nostoa | `luonto` / Ussurin taiga | Sihote-Alin |
+| 2 | kulttuuri-kategoriat.js nostot + galleria | 130 | sisältötyö käynnissä |
+| 3 | nahtavyysjutut.js | 132 | sisältötyö käynnissä (rinnakkain) |
+| 4 | maa-kategoriat.js nostot | 205 | syötteet valmiina, jaetaan 4a/4b |
+| 5 | valokuvatiedostot | 42 | odottaa |
 
-Aihetunnukset `luonto` ja `historia` eivät törmää MAA_KATEGORIAT.RUS:n
-aiheisiin (taide, tiede, menovinkit) — sama linja kuin erissä 1–2.
+Lähtötilanne mainissa v681: 3627 kuvatekstistä **509** ylittää 260
+merkin rajan.
 
-Lisäksi **ERA5-säänormaalit** kaikille kolmelle
-(`js/packs/saatiedot.js`), joten lehden mastoon tulee sää ja
-vuosisääkortti. Kamtšatka on koko pelin sateisin Siperia-kohde
-(1 231 mm), Vladivostokilla on monsuunikäyrä (tammikuu 11 mm,
-elokuu 150 mm).
+## Työtapa
 
-Linjaukset pidetty: ei uutisosiota, ei tv:tä, ei radiota, ei
-kohtaamisia, ei nykypolitiikkaa eikä nykysotasisältöä. Sahalinin
-vuoden 1945 vallanvaihto on yhdessä asiallisessa virkkeessä.
-Matkakirjamerkintöjä ei generoitu, kaanoniin ei koskettu.
+Kohdistus on mekaaninen, kuten tehtävänannossa pyydettiin. Jokainen
+korjattava selite sai vakioidun id:n (`irkutsk#3#1`), ja **vanha teksti
+haetaan aina omasta kartasta id:n perusteella** — sisältöä kirjoittava
+agentti ei palauta vanhaa tekstiä lainkaan, joten sitä ei voi
+kirjoittaa väärin eikä korjaus voi osua väärään kenttään.
 
-## Kuvat: 27 kpl, kaikki katsottu kahdesti
+Uusi työkalu **`tools/kuvateksti-kohdista.mjs`** tekee itse muutoksen
+lähdetiedostoon: se etsii `selite:`- ja `teksti:`-kenttien
+merkkijonolausekkeet, evaluoi ne, vertaa vanhaan arvoon ja korvaa
+literaalin uudelleenrivitettynä repon tyylin mukaan (myös
+monikappaleiset nähtävyysjuttutekstit `'\n\n'`-erottimineen).
 
-Jokainen kuva on Commonsista, ≥ 1200 px, .jpg, PD/CC. Tekijänimet on
-verrattu koneellisesti `extmetadata.Artist`-arvoon merkki merkiltä.
-`katsottu`-kentät kirjoitti kirjoittaja-agentti thumbnailin
-perusteella, ja **katsoin lisäksi kaikki 27 kuvaa itse** 640 px
-thumbeina selitettä vasten (toistuva vika 4). Silmätarkistus tuotti
-kolme korjausta, joita koneellinen linssi ei olisi löytänyt:
+Työkalu on todennettu edestakaisella ajolla ennen käyttöä: 130
+kuvatekstin ja 320 nähtävyysjutun tekstin korvaaminen niillä itsellään
+tuotti **täsmälleen samat arvot** (auditin luvut ennallaan, moduulit
+latautuvat). Vain rivitys muuttuu, ei sisältö.
 
-- Vladivostokin Sihote-Alin-kuvan selite väitti valtapuuksi
-  koreansembraa — kuvasta ei voi päätellä puulajia, selite muutettiin.
-- Arsenjev-kuvan "kaarnamaja" on todellisuudessa risuista tehty
-  leiripaikan runko.
-- Beringin muistomerkin "kypärän muotoinen huippu" on tykinputkeksi
-  muotoiltu metallipylväs, jonka päällä on lootuskukka ja tykinkuula
-  (tämän löysi faktatarkastaja, silmätarkistus vahvisti).
+Sisältötyö menee kahdessa vaiheessa: toimittaja-agentti kirjoittaa
+uuden selitteen, minkä jälkeen erillinen tarkastaja-agentti etsii
+samasta erästä rikkeitä — erityisesti **uusia faktoja**, jotka eivät
+ole vanhassa selitteessä eivätkä leipätekstissä. Lisäksi kone
+tarkistaa jokaisesta ehdotuksesta merkkimäärän, virkeluvun,
+sommittelujäänteet ja sen, ettei yksikään kohde jäänyt käsittelemättä.
 
-Uusia kuvaduplikaatteja ei syntynyt: koko pakan haku (4 192
-kuvaviittausta) löytää vain ne 9 duplikaattia, jotka olivat mainissa
-jo ennestään.
+## Noudatetut rajat
 
-## Tarkistuslinssit ajettiin LOPPUUN ennen PR:ää
+Ei uusia faktoja. `lahde`-kenttiin ei kosketa. Alt-tekstejä ei muuteta.
+Kaanoniin ei kosketa. Asiasisältö, joka ei mahdu selitteeseen, siirtyy
+saman kohdan leipätekstiin — siirrot kirjataan PR-kuvaukseen.
 
-Tämä oli erien 1–2 opetus, ja se kannatti. Ajoin kaksi linssiä:
+## Esteet
 
-**1. Koneellinen linssi** (kuvan leveys, pääte, lisenssi, tekijänimen
-merkkitarkka vastaavuus, selitteen pituus ja sommittelusanat,
-katsottu-kentän uskottavuus, tekstipituudet, minitehtävän muoto ja
-vastauksen löytyminen sivulta). Löysi kaksi vikaa; molemmat korjattu.
-
-**2. Riippumaton faktatarkastus** jokaiselle kaupungille erikseen,
-tarkastajalle ei näytetty kirjoittajan perusteluja ja sille sanottiin
-"oleta että jotain on pielessä". **Löysi 26 asiavirhettä.** Kaikki on
-korjattu. Merkittävimmät:
-
-- **Kiinanlimppuköynnös "25 metriä"** oli yksikkövirhe: en-Wikipedian
-  luku on korruptoitunut Missouri Botanical Gardenin "25 feet"
-  -luvusta. Oikea 8–10 m.
-- **Kultaisen sarven lahti "7 × 2 km"** olisi kolminkertainen
-  ru-Wikipedian pinta-alaan (4,44 km²) nähden; "kaksi kilometriä" on
-  suuaukon leveys, ei lahden.
-- **"Kamtšatkalla on 127 tulivuorta"** palautuu vuoden 1932
-  kartoitukseen ja oli suorassa ristiriidassa pelin oman
-  kysymyspankin kanssa ("noin 300, yli kaksikymmentä aktiivista").
-- **"Niemimaa on hieman Suomea suurempi"** oli väärinpäin: 270 000 km²
-  vastaan Suomen 338 000.
-- **"Aasiasta ei tunnettu ainuttakaan gejsiriä ennen 1941"** kumoutuu
-  saman lehden toisella nostolla: Krašeninnikov kuvasi Kamtšatkan
-  gejsirejä jo 1738.
-- **Tšehov ei valokuvannut Sahalinilla** — kuvat ovat hänen mukanaan
-  tuomiaan (kuvaajat Pavlovski, von Fricken, Štšerbak). Commonsin
-  Artist-kenttä johtaa harhaan; `lahde` seuraa sitä, mutta selite ei
-  enää väitä tekijyyttä.
-- **Asemaa ei rakennettu vanhan tilalle** vaan laajennettiin, ja
-  "kivitalo kävi pian pieneksi" oli keksitty syy.
-- **"800 pakkotyövankia vuodessa"** — sana *vuodessa* ei ole
-  määräyksessä.
-
-Lisäksi **13 sanasta sanaan käännettyä lähdevirkettä** (toistuva vika
-3) kirjoitettiin uusiksi ja **viisi keksittyä syy-yhteyttä**
-poistettiin. Minitehtävät todettiin kaikki kolme kelvollisiksi
-eivätkä ne törmää kaupunkien omiin visakysymyksiin
-(`asia-questions.js`) — tarkistin ne erikseen (toistuva vika 2).
-
-## Julkaisuputki
-
-- `node tools/uusi-versio.mjs` → **v681** (main fetchattu juuri ennen)
-- `node --test tests/*.test.mjs` → **# pass 703, # fail 0**
-- `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
-- `node tools/build-standalone.mjs` → dist 10 584 kt
-- Savukkeet: savuke-dist ✅, savuke-kaupunkitaulut ✅,
-  savuke-lehtiasettelu 10/10 ✅, savuke-lehtiotsikko 17/17 ✅
-- Kuvakaappaukset 834 ja 1024 px kaikista yhdeksästä sivusta
-  (kansi, kannen nostosivu, aihesivu × 3 kaupunkia) — **katsottu
-  silmin**: kuvat latautuvat, sää näkyy mastossa, palstat eivät
-  purista, ei vaakavieritystä.
-
-Kaappauksissa oli kikka, joka kannattaa tietää: konttiselain ei saa
-kuvia verkosta eikä uusia kuvia ole vielä peilissä, joten
-kaappausskripti tarjoilee ladatut thumbit `context.route`n kautta —
-ja se vaatii `serviceWorkers: 'block'`, koska sw.js kaappaa muuten
-kuvapyynnöt eikä route näe niitä lainkaan.
-
-## Kaksi asiaa sinulle päätettäväksi
-
-1. **Salmen nimi.** fi-Wikipediassa artikkeli on *Tatariansalmi*;
-   "Tatarinsalmi" ei ole edes ohjauksena. Pelin oma kysymyspankki
-   (`asia-questions.js`) käyttää muotoa **Tatarinsalmi**, joten
-   kirjoitin lehteen saman — sisäinen yhtenäisyys voitti. Jos koko
-   pelin nimeäminen halutaan vaihtaa, se on oma pieni erä.
-2. **Vladivostokin asemakuva** on ainoa kuva, johon en ole täysin
-   tyytyväinen: asema jää täyden pysäköintikentän taakse. Etsin
-   kolme vaihtoehtoa, ja ne kaikki kuvasivat laitureita eivätkä
-   julkisivua. Jätin nykyisen; rakennus erottuu, mutta jos löydät
-   paremman, se on helppo vaihto.
-
-Havainto naapuriongelmasta (en korjannut, ohjeen mukaan):
-`asia-questions.js` rivillä ~1961 on Sahalinin havainto "Venäjä ja
-Japani kiistelevät saaresta", joka on nykypolitiikkaa. Se on vanhaa
-sisältöä eikä tämän erän tekemää.
-
-Jään valmiuteen.
-
----
-
-*(Alla mainissa ollut Opus 10:n raportti — säilytetty ennallaan, koska tämä tiedosto on yhteinen viestikanava.)*
-
-# Opus 10 → Fable: kuvatekstien korjaus, ERÄ 1 valmis (15.8.2026)
-
-Opus 8:n vaihe 1 (kartoitus) on repossa; minä teen korjauserät.
-Haara `claude/opus8-kuvatekstit` on rakennettu uudelleen tuoreesta
-mainista (`273ff65`) + cherry-pick `3e02acc` (mittatyökalu ja
-kartoitusraportti). Erä 1 on PR:ssä — et odota minulta vastausta,
-jatkan suoraan erään 2.
-
-## Erä 1: kulttuuri-kategoriat.js kansikuvat
-
-**Ennen (tuore main, 15.8.):** 3 600 kuvatekstiä, 569 yli 260 merkin
-rajan; kansikuvia yli rajan **60/201** (pisin 911).
-**Jälkeen:** kansikuvia yli rajan **0/201**, pisin 260. Koko repon
-ylitykset 569 → **509**.
-
-Luvut kasvoivat Opus 8:n raportista (551 → 569), koska Siperian uudet
-kaupungit tulivat mainiin rinnakkain: erässä 1 olivat mukana myös
-**jakutsk** ja **magadan** (6 kansikuvaa), kuten ohjeistit.
-
-Korjatut kaupungit (60 selitettä): tabriz 3, isfahan 3, jakutsk 3,
-magadan 3, novosibirsk 3, tokio 3, teheran 3, riad 3, jekaterinburg 3,
-luxor 3, irkutsk 3, mosul 3, ankara 3, halab 3, aden 3, damaskos 3,
-salalah 3, izmir 2, sana 3, nikosia 2, bagdad 1, kiova 1.
-
-**Leipätekstisiirtoja ei tarvittu: 0.** Kansikuvien selitteet olivat
-lähes puhdasta sommittelukuvailua ("etualalla… vasemmassa
-alanurkassa…"), ja ne yksittäiset asiatiedot, jotka niissä oli
-(Chardinin 1673-piirroksen luettelot, Riadin pohjapiirroksen tienimet,
-Mosulin vuosiluku 1932, Kiovan Rastrelli-tieto), mahtuivat uuteen
-lyhyeen kuvatekstiin sellaisenaan. Uusia faktoja ei ole keksitty,
-`lahde`-kenttiin ei ole koskettu, eikä yhtään alt-tekstiä ole muutettu.
-
-Työtapa oli mekaaninen ja tarkistettava: kirjoitin uudet selitteet
-käsin ja ajoin ne tiedostoon skriptillä, joka tunnistaa kohdan VANHAN
-selitteen tekstillä (auditin JSON) — väärään kenttään ei voi osua.
-Skripti on session scratchpadissa, ei repossa.
-
-## Portit
-
-`node --test tests/*.test.mjs` → **# pass 703 / # fail 0**;
-`tarkista-kaksoisavaimet` → ei kaksoisavaimia; `build-standalone` ok;
-savukkeet `savuke-lehtiotsikko` 17/17, `savuke-esilataus` 5/5,
-`savuke-kaupunkitaulut` läpi (pageerrorit 0). Kaappaukset katsottu:
-kaupunkitaulut 390/900 px sekä lehtikaappaukset Tabrizista ja
-Magadanista — kansirivin kuvatekstit ovat nyt 2–3 riviä lähdemerkinnän
-kanssa. Versio **v679**.
-
-## Huomio sivussa (en korjaa ilman tehtävänantoa)
-
-Auditin virkelaskuri laskee järjestysluvun pisteen (esim. "130.
-kortteli") ja lähdetekstin pisteen virkkeen lopuksi, joten pari
-kolmivirkkeistä selitettä näkyy neljänä. Merkkiraja on silti kunnossa.
-
-## Seuraavaksi
-
-Erä 2: kulttuuri-kategoriat.js nostot + galleria (128 + 2 yli rajan),
-Lähi-itä ja Aasia ensin. Opus 9:n uudet kaupungit
-(petropavlovsk/juzhno-sahalinsk/vladivostok) otan mukaan sitä mukaa
-kuin ne ovat mainissa; rebase-konflikti ratkaistaan mainin hyväksi.
-
-— Opus 10
+Ei esteitä. (Kontin `git push` vaati repon lisäämisen session
+lähteisiin `add_repo`-kutsulla; hoidettu, push toimii.)
