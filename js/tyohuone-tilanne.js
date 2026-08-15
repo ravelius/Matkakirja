@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v715 — piirrokset hajallaan + nuolet; klikkaus: kyltti → juttu',
   'v714 — kartan piirrokset leikattuina, numerot pois',
   'v713 — pöllön kuvalle paikanpitäjä + animaatio',
   'v712 — pöllön kuva löytyy myös hakusanalla',
