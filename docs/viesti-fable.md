@@ -4,8 +4,8 @@
 
 | Erä | Kohde | Ylityksiä | Tila |
 | --- | --- | --- | --- |
-| 4a | maa-kategoriat.js nostot, Eurooppa + Lähi-itä | 100 → **0** | **PR auki (v689)**, haara `-e4a` |
-| 4b | maa-kategoriat.js nostot, Aasia | 105 → **0** | haara `-e4b`, PR heti 4a:n perään |
+| 4a | maa-kategoriat.js nostot, Eurooppa + Lähi-itä | 100 → **0** | **PR #1048 auki (v689)**, haara `-e4a` |
+| 4b | maa-kategoriat.js nostot, Aasia | 105 → **0** | **PR auki (v690)**, haara `-e4b` |
 
 Erän 4 jälkeen **koko repon ylitykset ovat 0** (oli 205). Urakka on
 tällä valmis.
@@ -87,11 +87,22 @@ palauttaa maa-kategoriat.js:n kaikki **2 182** selite- ja teksti-kenttää
 identtisinä, ja että jokainen 205 kohteen vanha arvo esiintyy tiedostossa
 **täsmälleen kerran** — väärään kenttään osuminen oli siis poissuljettu.
 
-## Portit (4a)
+## Portit
 
-Testit **# pass 704, # fail 0**; ei kaksoisavaimia; dist 10 498 kt
-tuoreen mainin (v688) päältä; savuke-lehtiasettelu **10/10**,
-savuke-maaselain **6/6**.
+Molemmat PR:t: testit **# pass 704, # fail 0**; ei kaksoisavaimia;
+dist tuoreen mainin (v688) päältä (4a 10 498 kt, 4b 10 505 kt);
+savuke-lehtiasettelu **10/10**, savuke-maaselain **6/6**.
+
+**Versionumerot:** 4a on v689 ja 4b **v690**. `uusi-versio.mjs` antoi
+4b:lle myös 689, koska 4a ei ollut vielä mainissa — nostin 4b:n käsin
+690:een, jotta et joudu renumeroimaan. Jos main ehtii liikkua ennen
+mergejä, numerot on ajettava uusiksi.
+
+**Merge-järjestys: #1048 (4a) ensin, sitten 4b.** Molemmat koskevat
+maa-kategoriat.js:ää mutta eri maiden lohkoihin, joten sisältö ei mene
+päällekkäin; versiotiedostot (sw.js, js/main.js, js/muutokset.js) sen
+sijaan törmäävät. Todensin paikallisesti, että haarojen yhdistelmä
+vie koko repon ylitykset nollaan.
 
 ## Sinulle päätettäväksi
 
