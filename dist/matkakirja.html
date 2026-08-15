@@ -108806,12 +108806,12 @@ const RAAMATTU = {
  */
 
 const TILANNE = {
-  paivitetty: '15.8.2026 — v679–v699',
+  paivitetty: '15.8.2026 — v679–v704',
   tavoite: 'Kuvatekstiurakka valmis (569 → 0). Siperia valmis (8 '
     + 'kaupunkia). Reunuskartat + satelliitit 4 kaupungilla. Lukijan '
     + 'automoodi, otsikkotauot, väistö. Äänet tasattu. Esipuskurit. '
-    + 'Raamattu ja Tilannelehti pelissä. Matkakirjatekstit odottavat '
-    + 'Raamatun läpikäyntiä.',
+    + 'Raamattu (tiivis + tagit) ja Tilannelehti pelissä. Pöllön '
+    + 'vastauskuvat. Matkakirjatekstit odottavat Raamatun läpikäyntiä.',
   rivit: [
     {
       tekija: 'Fable',
@@ -108841,6 +108841,10 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v704 — radio hiljenee pöllön/lukijan puhuessa',
+  'v703 — pöllön vastauskuva; klikkaus isoksi',
+  'v702 — oletusprompti näkyvissä; vuosiluvut ei lueta',
+  'v701 — Raamattu tiiviinä + valmis/kesken-tagit',
   'v699 — nähtävyysjutut: Panthéon, Luco, Kallio, Lintsi',
   'v697 — Kehittäjä-valikko: Raamattu- ja Tilannelehti',
   'v695/v696 — esipuskurit; reunuskartat 4 kaupunkia',
@@ -179442,6 +179446,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 705, teksti: 'Tilannetaulut ajan tasalle v704 asti' },
   { v: 704, teksti: 'Radio väistää puhetta kuten muukin tausta' },
   { v: 703, teksti: 'Pöllö hakee vastaukseen kuvan — pikkukuva aukeaa isoksi' },
   { v: 702, teksti: 'Oletusprompti näkyviin ja aikamerkit pois luennasta' },
@@ -180243,7 +180248,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.704';
+const APP_VERSION = '2026-08-09.705';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

@@ -10,12 +10,12 @@
  */
 
 export const TILANNE = {
-  paivitetty: '15.8.2026 — v679–v699',
+  paivitetty: '15.8.2026 — v679–v704',
   tavoite: 'Kuvatekstiurakka valmis (569 → 0). Siperia valmis (8 '
     + 'kaupunkia). Reunuskartat + satelliitit 4 kaupungilla. Lukijan '
     + 'automoodi, otsikkotauot, väistö. Äänet tasattu. Esipuskurit. '
-    + 'Raamattu ja Tilannelehti pelissä. Matkakirjatekstit odottavat '
-    + 'Raamatun läpikäyntiä.',
+    + 'Raamattu (tiivis + tagit) ja Tilannelehti pelissä. Pöllön '
+    + 'vastauskuvat. Matkakirjatekstit odottavat Raamatun läpikäyntiä.',
   rivit: [
     {
       tekija: 'Fable',
@@ -45,6 +45,10 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v704 — radio hiljenee pöllön/lukijan puhuessa',
+  'v703 — pöllön vastauskuva; klikkaus isoksi',
+  'v702 — oletusprompti näkyvissä; vuosiluvut ei lueta',
+  'v701 — Raamattu tiiviinä + valmis/kesken-tagit',
   'v699 — nähtävyysjutut: Panthéon, Luco, Kallio, Lintsi',
   'v697 — Kehittäjä-valikko: Raamattu- ja Tilannelehti',
   'v695/v696 — esipuskurit; reunuskartat 4 kaupunkia',
