@@ -10707,11 +10707,17 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * kuva suoraan kartan päällä — ei ympyrää, taustaa, reunaa eikä
  * numerobadgea. Laatikko on ympyrää suurempi, koska leikatun kuvan
  * reunoilla on läpinäkyvää tyhjää; drop-shadow seuraa piirroksen
- * ääriviivaa, ei laatikkoa. Koko 40 px (omistajan palautteet
- * 15.8.2026: 64 → "pienemmiksi" 48 → "vielä pienemmät" 40). */
+ * ääriviivaa, ei laatikkoa. Näkyvä koko 40 px (omistajan palautteet
+ * 15.8.2026: 64 → "pienemmiksi" 48 → "vielä pienemmät" 40).
+ *
+ * OSUMA-ALUE ON 80 % NÄKYVÄSTÄ (omistajan tilaus 15.8.2026:
+ * "pienennä klikkaus ikkunaa, koska myös läpinäkyvä osa kuvaa on
+ * klikattavissa"): nappi on 32 px ja kuva vuotaa sen yli 125 %:iin
+ * eli entiseen 40 px:iin (pointer-events: none — klikki osuu vain
+ * napin laatikkoon, ei kuvan läpinäkyviin reunoihin sen ulkopuolella). */
 .maakartta-piste.kohde-numero.kohde-piirros {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background: none;
   border: none;
   border-radius: 0;
@@ -10733,11 +10739,25 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .kohde-piirros-kuva {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  left: -12.5%;
+  top: -12.5%;
+  width: 125%;
+  height: 125%;
   object-fit: contain;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+  /* Klikki kuuluu napille, ei kuvalle: laatikon yli vuotava reuna ei
+   * saa napata napautuksia. */
+  pointer-events: none;
+}
+
+/* Valittuna kuva täyttää laatikon tarkalleen: suurennoksen koko
+ * (75cqh) on napin laatikon koko, eikä 125 %:n vuoto saa kasvattaa
+ * sitä ohi karttaikkunan. */
+.kohde-piirros.valittu .kohde-piirros-kuva {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*
@@ -10767,6 +10787,17 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 /* Valitun kyltti korvaa hover-vihjeen — kaksi nimeä päällekkäin
  * olisi pahempi kuin ei kumpaakaan. */
 .kohde-piirros.valittu .kohde-vihje { display: none; }
+
+/* Piirros nähtävyysjutun avauskappaleen oikeassa laidassa (omistajan
+ * tilaus 15.8.2026): teksti kiertää vasemmalta. Marginaalit nollassa
+ * tarkoituksella — leikatun kuvan oma läpinäkyvä reuna on jo väljä. */
+.nahtavyys-piirros {
+  float: right;
+  width: clamp(7rem, 34%, 11rem);
+  height: auto;
+  margin: 0;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
+}
 
 /* Kyltti napautuksesta juttuun (omistajan tilaus 15.8.2026:
  * "klikkaamalla avautuvaa nimikylttiä pitäisi päästä kohteen
@@ -110902,6 +110933,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v739 — piirros juttuun; klikkausalue 80 %',
   'v738 — Kööpenhamina-lehti: karuselli + Matkailijalle',
   'v737 — 6 uutta karttaa; piirrokset terävinä; lippuanimaatio',
   'v736 — vain värikartta; numero kylttiin',
@@ -176762,8 +176794,30 @@ class UI {
     // Lainaus keskelle, kappaleiden puoliväliin.
     const lainauksenPaikka = kohde.lainaus ? Math.ceil(kappaleet.length / 2) : -1;
 
+    /*
+     * PIIRROS JUTUN AVAUKSEEN (omistajan tilaus 15.8.2026: "lisätä
+     * piirretty kuva pop up ikkunan ensimmäisen kappaleen oikealle
+     * puolelle niin että teksti kulkee sen vasempaa puolta").
+     * Sama leikattu miniatyyri kuin kartalla, float oikealle
+     * ensimmäisen kappaleen sisään; läpinäkyvä ja ilman marginaaleja
+     * (omistajan tarkennus: läpinäkyvä alue on jo leveä). Henkilö-
+     * jutut ja muut ei-karttakohteet eivät löydä piirrosta nimellään,
+     * jolloin kappale taittuu ennalleen.
+     */
+    const piirros = MINIATYYRIT[this.arrivalShownFor]?.[kohde.nimi] ?? null;
+
     kappaleet.forEach((kappale, i) => {
-      sisalto.appendChild(this.nahtavyysKappale(kappale, linkit));
+      const kpl = this.nahtavyysKappale(kappale, linkit);
+      if (i === 0 && piirros) {
+        const kuva = document.createElement('img');
+        kuva.className = 'nahtavyys-piirros';
+        kuva.src = piirros;
+        kuva.alt = '';
+        kuva.decoding = 'async';
+        kuva.draggable = false;
+        kpl.insertBefore(kuva, kpl.firstChild);
+      }
+      sisalto.appendChild(kpl);
       if (i + 1 === lainauksenPaikka) {
         const lohko = html('blockquote', 'nahtavyys-lainaus');
         lohko.appendChild(html('p', 'nahtavyys-lainaus-teksti', kohde.lainaus.teksti));
@@ -182002,6 +182056,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 739, teksti: 'Piirros juttuun tekstin kiertona; klikkausalue 80 %:iin' },
   { v: 738, teksti: 'Kööpenhamina-lehti: yleisnäkymäkaruselli ja Matkailijalle' },
   { v: 737, teksti: 'Kartat 6 uuteen kaupunkiin; piirrokset terävinä (1024 px)' },
   { v: 736, teksti: 'Vain varikartta; numero kylttiin' },
@@ -182837,7 +182892,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.738';
+const APP_VERSION = '2026-08-09.739';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

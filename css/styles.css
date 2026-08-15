@@ -10704,11 +10704,17 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * kuva suoraan kartan päällä — ei ympyrää, taustaa, reunaa eikä
  * numerobadgea. Laatikko on ympyrää suurempi, koska leikatun kuvan
  * reunoilla on läpinäkyvää tyhjää; drop-shadow seuraa piirroksen
- * ääriviivaa, ei laatikkoa. Koko 40 px (omistajan palautteet
- * 15.8.2026: 64 → "pienemmiksi" 48 → "vielä pienemmät" 40). */
+ * ääriviivaa, ei laatikkoa. Näkyvä koko 40 px (omistajan palautteet
+ * 15.8.2026: 64 → "pienemmiksi" 48 → "vielä pienemmät" 40).
+ *
+ * OSUMA-ALUE ON 80 % NÄKYVÄSTÄ (omistajan tilaus 15.8.2026:
+ * "pienennä klikkaus ikkunaa, koska myös läpinäkyvä osa kuvaa on
+ * klikattavissa"): nappi on 32 px ja kuva vuotaa sen yli 125 %:iin
+ * eli entiseen 40 px:iin (pointer-events: none — klikki osuu vain
+ * napin laatikkoon, ei kuvan läpinäkyviin reunoihin sen ulkopuolella). */
 .maakartta-piste.kohde-numero.kohde-piirros {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background: none;
   border: none;
   border-radius: 0;
@@ -10730,11 +10736,25 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .kohde-piirros-kuva {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  left: -12.5%;
+  top: -12.5%;
+  width: 125%;
+  height: 125%;
   object-fit: contain;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+  /* Klikki kuuluu napille, ei kuvalle: laatikon yli vuotava reuna ei
+   * saa napata napautuksia. */
+  pointer-events: none;
+}
+
+/* Valittuna kuva täyttää laatikon tarkalleen: suurennoksen koko
+ * (75cqh) on napin laatikon koko, eikä 125 %:n vuoto saa kasvattaa
+ * sitä ohi karttaikkunan. */
+.kohde-piirros.valittu .kohde-piirros-kuva {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*
@@ -10764,6 +10784,17 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 /* Valitun kyltti korvaa hover-vihjeen — kaksi nimeä päällekkäin
  * olisi pahempi kuin ei kumpaakaan. */
 .kohde-piirros.valittu .kohde-vihje { display: none; }
+
+/* Piirros nähtävyysjutun avauskappaleen oikeassa laidassa (omistajan
+ * tilaus 15.8.2026): teksti kiertää vasemmalta. Marginaalit nollassa
+ * tarkoituksella — leikatun kuvan oma läpinäkyvä reuna on jo väljä. */
+.nahtavyys-piirros {
+  float: right;
+  width: clamp(7rem, 34%, 11rem);
+  height: auto;
+  margin: 0;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
+}
 
 /* Kyltti napautuksesta juttuun (omistajan tilaus 15.8.2026:
  * "klikkaamalla avautuvaa nimikylttiä pitäisi päästä kohteen
