@@ -1,112 +1,85 @@
-# Opus 14 → Fable: kuvatekstiurakan erä 4 (maa-kategoriat.js)
+# Opus 16 → Fable: etukäteispuskuri (v695)
 
 ## Tilanne
 
-| Erä | Kohde | Ylityksiä | Tila |
-| --- | --- | --- | --- |
-| 4a | maa-kategoriat.js nostot, Eurooppa + Lähi-itä | 100 → **0** | **PR #1048 auki (v689)**, haara `-e4a` |
-| 4b | maa-kategoriat.js nostot, Aasia | 105 → **0** | **PR auki (v690)**, haara `-e4b` |
+**Valmis, PR auki.** Haara `claude/opus16-esipuskuri`, rebasattu
+tuoreeseen mainiin juuri ennen versionostoa (v695; main ehti ottaa
+v694:n PR:ssä #1062, joten numero nostettiin uudelleen työkalulla).
 
-Erän 4 jälkeen **koko repon ylitykset ovat 0** (oli 205). Urakka on
-tällä valmis.
+Portit ajettu: `node --test tests/*.test.mjs` → **711 testiä, pass 710,
+fail 0**; `tarkista-kaksoisavaimet` → ei kaksoisavaimia;
+`build-standalone` → dist 10 507 kt; savukkeet
+`esilataus 17/17`, `lukijan-seuranta 9/9`, `dist`, `lehtiasettelu 10/10`,
+`lehtiotsikko 17/17`, `lehden-mitta 4/4`, `vuosisaa 8/8`,
+`katselin-pollo 6/6`.
 
-## Mitä tehtiin
+## Mitä puskuroidaan ja milloin
 
-205 nostoselitettä yli 260 merkin rajan → 0. Keskipituus 320 → 226
-merkkiä, pisin 631 → 260. Karsittu aines oli valtaosin
-sommittelukuvailua: ilmansuunnat, etuala ja tausta, kuvakulmat, taivas
-ja pilvet, ohikulkijat, väripilkut.
+| Hetki | Mitä | Missä |
+| --- | --- | --- |
+| Saapuminen (openArrival → `esilataaKaupunki`) | Kaupunkilehden etusivu: kansikuvat 1200 + 640, maan lippu 96, kohdekartta (juliste tai 1000) ja satelliitti | `esilataaLehdet` / `kaupunkilehdenEtusivunKuvat` |
+| Saapuminen | **Maalehden** etusivu kokonaan: korkokartta 1000, kartan kuvanosto 900 galleria mukaan lukien, lippu — lehteä avaamatta | `maalehdenEkaSivu` + `lehdenSivunKuvat` |
+| Saapuminen | Lukijaäänen **ensimmäinen pala** kumpaankin lehteen (2 hakua, ei enempää) | `esipuskuroiLehtienLuennat` → `esipuskuroiLuenta` |
+| Lehden avaus ja jokainen sivunvaihto (`naytaTutkiSivu`) | **Viereiset** sivut kokonaan: seuraava ja myös edellinen, jos sitä ei ole vielä haettu | `esilataaViereisetSivut` |
 
-**Lahde-kenttiin, alt-teksteihin, tiedosto-kenttiin ja kaanoniin ei ole
-koskettu. Uusia faktoja ei ole lisätty.**
+Kaikki kuvat kulkevat vanhan `esilataaOsoitteet`-jonon läpi (kolme
+kerrallaan, `dead`- ja kaupunkivartijat ennallaan). Uusi
+`esipuskuroiKuvat` pitää kirjaa jo pyydetyistä osoitteista, joten
+edestakainen selailu ei jonota samaa kuvaa uudelleen.
 
-## Leipätekstisiirrot: 0 — ja miksi
+**Leveydet on kopioitu piirrosta yksi yhteen** (1200/640/1000/900/640/
+320/96): eri leveys on selaimelle eri kuva, ja väärä leveys olisi
+tuplannut latauksen sen sijaan että poistaa sen.
 
-Kirjoitusvaiheessa tuli kaksi siirtoa, mutta **molemmat peruttiin
-tarkastuksessa** ja tieto palautettiin selitteeseen. Kirjaan syyn, koska
-se on linjauskysymys sinulle:
+## TTS-avainosuma — miten se varmistettiin
 
-1. **YEM/historia/1** *(Viisi pylvästä, yksi maan alla)* — virke
-   metallikiiloista pylväiden juurella. Siirto ei ollut sanatarkka
-   ("Jokaisen juurelle" → "Jokaisen **pylvään** juurelle"), ja mikä
-   pahempaa: leipäteksti kertoo juuri ennen loppuaan, ettei pylväitä
-   ollutkaan viisi vaan kuusi ja kuudes oli maan alla. Loppuun
-   liitettynä virke luetaan kaikkia kuutta koskevaksi — myös sitä, jonka
-   juurella ei ole kiilaa. Tieto mahtui takaisin selitteeseen (221 mrk).
-2. **GBR/musiikki/2** *(Kellot soivat lukuja, ei sävelmää)* — virke
-   valajan nimestä Mears kellojen olkapäässä. Leipäteksti käsittelee
-   englantilaista kellonsoittoa yleisesti ja päättyy peal-matematiikkaan,
-   joten loppuun liitettynä virke luetaan yleisväitteeksi eikä näitä
-   kelloja koskevaksi. Tieto mahtui takaisin selitteeseen (259 mrk).
+Esihaku on `js/puhe.js esihaePala`, joka kutsuu samaa `haePala`-
+funktiota kuin luenta: sama muistiavain (`persoona|säädöt|teksti`,
+nopeus mukana), sama pysyvä säilölohko, ei ääntä eikä elettä.
 
-**Havainto linjaukseen:** siirto leipätekstin loppuun toimii, kun
-leipäteksti päättyy samaan kohteeseen, mutta ei silloin, kun se päättyy
-yleistykseen tai laajempaan joukkoon — siirretty virke perii silloin
-väärän tarkoitteen. Näissä kahdessa oli parempi tiivistää selitettä
-muualta ja pitää tieto kuvan vieressä. Jos haluat siirrot ehdottomiksi,
-se on helppo muuttaa erikseen.
+Teksti johdetaan `js/lukija.js esipuskuroiLuenta`:ssa samasta ketjusta
+kuin luennassa — `kokoaLuettavatKohdat` → kohta 0 → `paloitteleVirkkeiksi`
+→ ensimmäinen virke (juuri se pala, jonka `pilkoPaloiksi` lähettää
+yksin, jotta luenta alkaa heti).
 
-## Laatuvarmistus kahdessa vaiheessa
+- **Kaupunkilehti:** etusivu on saapuessa jo piirretty, joten teksti
+  otetaan oikeasta DOMista — ei datasta johdettuna.
+- **Maalehti:** etusivua ei ole DOMissa, joten se rakennetaan
+  irralliseen elementtiin (`maalehdenEtusivuRunko`): karttamailla
+  otsikko + maaosaston kopio, kartattomilla mailla sama
+  `piirraKategoria`-piirto kuvattomasta kopiosta (lukija ohittaa
+  IMG:t, joten teksti on sama, mutta irrallinen piirto ei ohita
+  esilatausjonoa).
 
-**Kirjoitus:** 12 rinnakkaista toimittajaa maaryhmittäin (selvärajainen
-erä, sama resepti — roolituksen kustannuskurin sallima parvi).
+Savuke mittaa osuman kolmella vartiolla: esihakuja on tasan kaksi ja
+molemmat kertojan ääntä; esihaettu virke on sama kuin ruudulta
+riippumattomasti luettu etusivun ensimmäinen virke; ja kaiuttimen
+painalluksen jälkeen samaa palaa **ei** pyydetä uudelleen (luenta hakee
+vain jatkopalat). Negatiivikokeella varmistettu, että vartiot
+kaatuvat, jos esihaun teksti muuttuu (kaksi FAILia).
 
-**Tarkastus:** 7 erillistä tarkastajaa, jotka eivät kirjoittaneet
-tekstejä. Jokainen kohde käytiin läpi yksitellen, ei otantaa. Löydöksiä
-**46**, joista vakavia 4. Kaikki 46 korjattiin.
+Maalehden rekonstruktio verrataan savukkeessa **oikeaan** avattuun
+maalehteen: sen ensimmäisen palan on oltava sama teksti, joka
+esihaettiin.
 
-- *kadonnut-tieto* 30 — pääosa löydöksistä. Aitoa asiatietoa
-  (materiaaleja, freskokohtauksia, lajituntomerkkejä, työvälineitä) oli
-  karsittu sommittelun varjolla. Palautettu selitteisiin; tilaa oli.
-- *vaara-merkitys* 7, *muoto* 4, *keksitty-fakta* 4, *leipateksti* 1.
-- Keksityt faktat olivat kaikki lieviä ja samaa lajia: tiivistys oli
-  korvannut sommittelumääreen uudella tilaväitteellä ("oikealla kohoaa"
-  → "kohoaa rakennuksen yläpuolelle"). **Yhtään uutta vuosilukua,
-  mittaa, lukumäärää, nimeä tai lajinimeä ei syntynyt** — neljä
-  tarkastajaa ajoi tämän vielä sanatason diffillä.
+## Kaksi asiaa tiedoksi
 
-Vakavat neljä: YEM/historia/1 (siirto, 2 löydöstä), JPN/kuvataide/1
-(luettelo summautui viiteen, vaikka ihmisiä on neljä), CYP/muinaisuus/2
-(selite lupasi kaksi kohtausta mutta kuvasi vain toisen).
+1. **Muut lehtisavukkeet eivät enää kuluta kiintiötä.** Koska saapuminen
+   nyt esihakee puhetta, jokainen lehden avaava savuke olisi tehnyt
+   kaksi oikeaa generointikutsua per ajo. Lisäsin
+   `katselin-pollo`-, `lehden-mitta`-, `lehtiotsikko`- ja
+   `vuosisaa`-savukkeisiin saman pöllöpalvelimen katkaisun, joka
+   `lukijan-seurannassa` jo oli.
+2. **Sääosio ei tarvinnut kuvapuskuria:** säärivin kuvakkeet ovat pelin
+   omia SVG-piirroksia ja päivän ennuste haetaan jo saapumisessa
+   (`naytaLehtiSaa` ajetaan `rakennaSivut`in osana). Ei siis
+   puskuroitavaa — kirjattu koodikommenttiin.
 
-**Kone:** `tools/kuvateksti-tarkista-e4.mjs` (uusi) mittaa pituudet ja
-virkemäärät, varmistaa ettei leipäteksti muutu muuten kuin lisäyksellä,
-ja listaa uudessa selitteessä esiintyvät numerot ja erisnimet, joita ei
-ole vanhassa aineistossa. Lopputilassa **0 virhettä**; kuusi sanaa
-nousi tarkistettavaksi ja kaikki olivat joko virkkeen aloittavia
-tavallisia sanoja tai taivutusmuotoja.
+Sivukohtaista TTS-puskuria **ei** tehty (vain lehtien ensimmäiset palat
+saapuessa) — kiintiökurin mukaisesti. Jos haluat sivunvaihdolle saman,
+se on yksi kutsu `naytaTutkiSivu`:ssa, mutta se maksaisi generoinnin
+jokaisesta selatusta sivusta.
 
-## Työkalut
-
-Korjaus tehtiin id-pohjaisesti: `tools/kuvateksti-poimi-e4.mjs` antaa
-kullekin kohteelle vakaan id:n (`MAA/kategoria/#n`),
-`tools/kuvateksti-kokoa-e4.mjs` hakee vanhan tekstin aina id:llä, ja
-`tools/kuvateksti-kohdista.mjs` (Opus 12) kohdistaa vanhan tekstin
-perusteella. Todensin ennen ajoa, että kohdistajan edestakainen ajo
-palauttaa maa-kategoriat.js:n kaikki **2 182** selite- ja teksti-kenttää
-identtisinä, ja että jokainen 205 kohteen vanha arvo esiintyy tiedostossa
-**täsmälleen kerran** — väärään kenttään osuminen oli siis poissuljettu.
-
-## Portit
-
-Molemmat PR:t: testit **# pass 704, # fail 0**; ei kaksoisavaimia;
-dist tuoreen mainin (v688) päältä (4a 10 498 kt, 4b 10 505 kt);
-savuke-lehtiasettelu **10/10**, savuke-maaselain **6/6**.
-
-**Versionumerot:** 4a on v689 ja 4b **v690**. `uusi-versio.mjs` antoi
-4b:lle myös 689, koska 4a ei ollut vielä mainissa — nostin 4b:n käsin
-690:een, jotta et joudu renumeroimaan. Jos main ehtii liikkua ennen
-mergejä, numerot on ajettava uusiksi.
-
-**Merge-järjestys: #1048 (4a) ensin, sitten 4b.** Molemmat koskevat
-maa-kategoriat.js:ää mutta eri maiden lohkoihin, joten sisältö ei mene
-päällekkäin; versiotiedostot (sw.js, js/main.js, js/muutokset.js) sen
-sijaan törmäävät. Todensin paikallisesti, että haarojen yhdistelmä
-vie koko repon ylitykset nollaan.
-
-## Sinulle päätettäväksi
-
-1. Yllä oleva siirtolinjaus (leipätekstin loppu vs. selite).
-2. En avannut kuvia, vaan luotin vanhaan selitteeseen lähteenä — työ oli
-   tiivistystä, ei uudelleenkuvausta. Jos haluat selitteiden
-   silmätarkistuksen kuvia vasten, se on oma erillinen kierroksensa.
+Opus 15:n karttafunktioihin (`piirraKaupunkiKartta`, `kytkeKarttaZoom`)
+ei koskettu; `KAUPUNKIKARTAT`-dataa vain luetaan osoitteiden
+kokoamiseen.
