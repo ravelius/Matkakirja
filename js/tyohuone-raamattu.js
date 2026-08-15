@@ -289,9 +289,14 @@ export const RAAMATTU = {
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
           + 'kuvataitto, sää, media — sekä kohdekartta '
           + 'numeropisteineen ja omat nähtävyysjutut.',
-        'Kohdekartan vipu: piirros + värikartta samasta julisteesta '
-          + '(paletti hyväksytty 15.8.2026, pilotti Berliini). '
-          + 'Satelliitti poistuu kaupungeittain värikartan valmistuessa.',
+        'Kohdekartta on PELKKÄ VÄRIKARTTA (linjaus 15.8.2026: '
+          + '"Piirroskartan voi ottaa kokonaan pois ja pitää vain '
+          + 'värillisen"). Kohteet leikattuina piirroksina kartalla; '
+          + 'klikkaus keskittää ja suurentaa 75 %:iin, numerokyltistä '
+          + 'juttuun.',
+        'Kohteita saa olla entistä enemmän per kaupunki — kartta on '
+          + 'zoomattava (linjaus 15.8.2026). Uudet kaupunkikartat '
+          + 'tehdään 5 kaupungin erissä omistajan tsekattavaksi.',
         'Valmiustilanne kaupungeittain: Tilanne-välilehti, ei tämä.',
       ],
     },

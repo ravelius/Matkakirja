@@ -11998,7 +11998,10 @@ export class UI {
     kuva.draggable = false;
     // Oma julistekartta on paikallinen tiedosto (assets/kartat/);
     // Commons-pohjainen kartta haetaan peilin kautta kuten kuvat.
-    if (kartta.polku) kuva.src = kartta.polku;
+    // Värikartta ohittaa piirrosjulisteen (omistajan päätös
+    // 15.8.2026: "pitää vain värillisen").
+    const karttapohja = kartta.varikartta ?? kartta.polku;
+    if (karttapohja) kuva.src = karttapohja;
     else asetaKuva(kuva, valokuvaUrl(kartta.tiedosto, 1000), valokuvaVara(kartta.tiedosto, 1000));
     kotelo.appendChild(kuva);
     /*
@@ -12088,7 +12091,9 @@ export class UI {
         pikku.draggable = false;
         pikku.src = miniatyyri;
         piste.appendChild(pikku);
-        const kyltti = html('span', 'kohde-kyltti', k.nimi);
+        // Numero kylttiin (omistajan tilaus 15.8.2026: "Nimikyltissä
+        // saisi olla numero näkyvissä") — kytkee kyltin selitelistaan.
+        const kyltti = html('span', 'kohde-kyltti', `${numero} · ${k.nimi}`);
         kyltti.setAttribute('aria-hidden', 'true');
         piste.appendChild(kyltti);
         piirrosPisteet.push({ piste, x: p.x, y: p.y });
@@ -12258,48 +12263,14 @@ export class UI {
     const zoomOhjain = {};
     tyokalut.appendChild(zoomiRyhma);
     /*
-     * VÄRIKARTTA KORVASI SATELLIITIN (omistajan päätös 15.8.2026: "Joo
-     * vaihda väri berliiniin" ja "samat kolmeen kaupunkiin"; taustalla
-     * linjaus "Pelkät värit samaan piirros karttaan voisi olla
-     * toimivin ratkaisu ... oman togglen takana nykyisen satelliitti
-     * kartan sijalla"). Kaupunki, jolla on varikartta-kenttä, saa
-     * vivun Piirros/Värikartta. Värikartta on piirretty samalta
-     * piirtoRajat-alueelta kuin juliste, joten se kattaa myös
-     * reunuksen — zoom ja panorointi toimivat täsmälleen kuten
-     * piirroksessa. Satelliittikuvat ja niiden erikoistapaukset
-     * (vanhan rajauksen kuvan ala, panoroinnin rajaus) poistuivat
-     * v709:ssä kaikista kaupungeista.
+     * VAIN VÄRIKARTTA (omistajan päätös 15.8.2026: "Piirroskartan voi
+     * ottaa kokonaan pois ja pitää vain värillisen. Se on todella
+     * hieno nyt!"). Piirros/Värikartta-vipu eli v707–v735; kaupunki,
+     * jolla on varikartta-kenttä, näyttää nyt suoraan värikartan —
+     * se on piirretty samalta piirtoRajat-alueelta kuin juliste,
+     * joten zoom, panorointi ja pisteet toimivat sellaisinaan.
+     * (Kuvan lähde asetetaan kuvan luonnissa ylempänä.)
      */
-    if (kartta.varikartta && kartta.polku) {
-      const nakymat = [
-        { vaihdossa: false, nimi: 'Piirros', ikoni: VIIVA_IKONIT.taitekartta },
-        { vaihdossa: true, nimi: 'Värikartta', ikoni: VIIVA_IKONIT.varikartta },
-      ];
-      const vipu = html('div', 'kartta-vipu');
-      vipu.setAttribute('role', 'group');
-      vipu.setAttribute('aria-label', 'Kartan näkymä');
-      const napit = nakymat.map((nakyma) => {
-        const nappi = html('button', 'kartta-vipu-nappi');
-        nappi.type = 'button';
-        nappi.appendChild(viivaIkoniSvg(nakyma.ikoni, 14));
-        nappi.appendChild(html('span', 'kartta-vipu-nimi', nakyma.nimi));
-        vipu.appendChild(nappi);
-        return nappi;
-      });
-      const naytaNakyma = (vaihdossa) => {
-        this.satelliittiNakyma = vaihdossa ? kaupunki : null;
-        kuva.src = vaihdossa ? kartta.varikartta : kartta.polku;
-        kuva.alt = vaihdossa ? 'Kaupungin kartta värein' : 'Kaupungin kartta';
-        napit.forEach((nappi, i) => {
-          nappi.setAttribute('aria-pressed', String(nakymat[i].vaihdossa === vaihdossa));
-        });
-      };
-      napit.forEach((nappi, i) => {
-        nappi.addEventListener('click', () => naytaNakyma(nakymat[i].vaihdossa));
-      });
-      naytaNakyma(this.satelliittiNakyma === kaupunki);
-      tyokalut.appendChild(vipu);
-    }
     lohko.appendChild(tyokalut);
     kehys.appendChild(kotelo);
     lohko.appendChild(kehys);
