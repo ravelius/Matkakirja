@@ -31,6 +31,7 @@ import {
   poimiLohkot,
   poistaKasiteMerkinnat,
   tekstiIlmanSpoilereita,
+  vastauskuvanAihe,
 } from '../js/pollo.js';
 
 import {
@@ -1029,4 +1030,27 @@ test('konteksti pysyy katossa myös aineiston kanssa', () => {
   assert.ok(konteksti.length <= KONTEKSTIN_ENIMMAISPITUUS,
     `paketti oli ${konteksti.length} merkkiä`);
   assert.ok(konteksti.includes('PELIN TARKISTETTUA AINEISTOA'));
+});
+
+/* ---------------------------------------------------------------- */
+/* Vastauksen kuvan hakuaihe (omistajan tilaus 15.8.2026)            */
+/* ---------------------------------------------------------------- */
+
+test('vastauskuvanAihe poimii ensimmäisen käsitteen perusmuodossa', () => {
+  const teksti = 'Baikal on [[Baikal|Baikalin]] syvin kohta. Myös [[Siperia]] mainitaan.';
+  assert.equal(vastauskuvanAihe(teksti, 'Kerro Baikalista'), 'Baikal');
+});
+
+test('vastauskuvanAihe: ilman käsitteitä aihe on siistitty kysymys', () => {
+  assert.equal(vastauskuvanAihe('Vastaus ilman merkintöjä.', ' Mikä on Eiffel-torni? '),
+    'Mikä on Eiffel-torni');
+});
+
+test('vastauskuvanAihe: puolikas merkintä ei kelpaa aiheeksi', () => {
+  // Katkennut striimi voi jättää avoimen "[["-merkinnän häntään.
+  assert.equal(vastauskuvanAihe('Pariisissa on [[Eiffel', 'Kysymys?'), 'Kysymys');
+});
+
+test('vastauskuvanAihe: tyhjästä tulee null', () => {
+  assert.equal(vastauskuvanAihe('', ''), null);
 });
