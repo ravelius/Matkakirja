@@ -363,6 +363,20 @@ const KUVAT = [
     + 'Moorish-style palace with onion domes and slender minarets, '
     + 'a wooden roller coaster and strings of garden lanterns among '
     + 'trees'],
+  // ── Kööpenhamina, kohteet 7–9 (paketti K1, 16.8.2026) ────────────
+  ['kobenhavn-vapahtajan-kirkko', 'a tall dark-brick baroque church '
+    + 'whose slender spire is wrapped by an EXTERNAL gilded spiral '
+    + 'staircase winding four turns anticlockwise up to a golden '
+    + 'globe at the very top'],
+  ['kobenhavn-rosenborgin-linna', 'a Dutch renaissance castle of '
+    + 'red brick with sandstone trim: three slender copper-green '
+    + 'spired towers of different heights, ornate gables, a small '
+    + 'moat and clipped garden hedges in front'],
+  ['kobenhavn-kastellet', 'a star-shaped 17th-century fortress from '
+    + 'a slight aerial three-quarter view: grassy zigzag ramparts '
+    + 'ringed by a moat, neat parallel rows of long red-roofed '
+    + 'barracks inside, and a small dark windmill standing on one '
+    + 'bastion'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
@@ -373,10 +387,14 @@ if (!jono.length) {
   console.error('Ei kohteita. Tunnetut:', KUVAT.map(([k]) => k).join(', '));
   process.exit(1);
 }
-// Kustannussääntö 1: valmis tiedosto ohitetaan. Uusinta vaatii sekä
-// täsmäavaimen että --uusiksi-lipun.
-const ohitetut = jono.filter(([k]) => existsSync(resolve(JUURI, `assets/kartat/miniatyyrit/${k}.jpg`))
-  && !(uusiksi && pyydetyt.includes(k)));
+// Kustannussääntö 1: valmis tiedosto ohitetaan. Repossa asuu vain
+// leikattu .webp (jpg-välivaihe ei ole versionhallinnassa), joten
+// KUMPI TAHANSA riittää ohitukseen — muuten tuore klooni (esim.
+// GitHub-ajuri) generoisi koko listan uudestaan. Uusinta vaatii
+// sekä täsmäavaimen että --uusiksi-lipun.
+const valmis = (k) => existsSync(resolve(JUURI, `assets/kartat/miniatyyrit/${k}.jpg`))
+  || existsSync(resolve(JUURI, `assets/kartat/miniatyyrit/${k}.webp`));
+const ohitetut = jono.filter(([k]) => valmis(k) && !(uusiksi && pyydetyt.includes(k)));
 jono = jono.filter(([k]) => !ohitetut.some(([o]) => o === k));
 if (ohitetut.length) {
   console.log(`Ohitetaan ${ohitetut.length} valmista kuvaa (uusinta: nimeä avain + --uusiksi).`);

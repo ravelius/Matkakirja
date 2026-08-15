@@ -1,0 +1,92 @@
+# Generoi miniatyyripiirrokset GitHubin ajurilla.
+#
+# MIKSI: GOOGLE_API_KEY asuu repon salaisuutena eikä kehityskontissa,
+# joten generointi ei onnistu sieltä käsin. Ajuri ajaa saman putken
+# (tools/generoi-miniatyyrit.mjs → tools/leikkaa-miniatyyrit.mjs) ja
+# jättää tulokset artefaktiksi — Fable lataa, KATSOO SILMIN ja
+# committaa hyväksytyt.
+#
+# KUSTANNUSSÄÄNTÖ (omistajan päätös 16.8.2026): avaimet on AINA
+# annettava käsin — koko listan ajo ei ole mahdollinen täältä, ja
+# työkalu ohittaa joka tapauksessa kohteet, joiden .jpg tai .webp on
+# jo repossa. Yksi generointi ≈ 0,04 €.
+#
+# KÄYTTÖ: Actions → "Generoi miniatyyrit" → Run workflow → avaimet
+# välilyönnein eroteltuina (esim. "kobenhavn-kastellet
+# kobenhavn-rosenborgin-linna"). Uusinta: lisää kenttään myös
+# --uusiksi. Tulos on miniatyyrit-artefakti (jpg + leikattu webp),
+# elää 3 päivää.
+
+name: Generoi miniatyyrit
+
+on:
+  workflow_dispatch:
+    inputs:
+      avaimet:
+        description: 'Kohdeavaimet välilyönnein (esim. kobenhavn-kastellet); lisää --uusiksi uusintaan'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Playwright tulee repon omasta package.jsonista (työkalut
+      # importtaavat sen ESM:llä repon juuresta) — Chromium vain
+      # kuvien pienennykseen ja leikkaukseen.
+      - name: Asenna riippuvuudet ja Chromium
+        run: |
+          set -euo pipefail
+          npm install --no-fund --no-audit
+          npx playwright install --with-deps chromium
+          echo "CHROMIUM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' -type f | head -1)" >> "$GITHUB_ENV"
+
+      # Avain kulkee vain ympäristömuuttujana; työkalu peittää sen
+      # virheviesteistä eikä tulosta sitä koskaan.
+      - name: Generoi ja leikkaa
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          AVAIMET: ${{ inputs.avaimet }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GOOGLE_API_KEY:-}" ]; then
+            echo "::error title=GOOGLE_API_KEY puuttuu::Lisää salaisuus Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          # Chromiumin polku: playwrightin oletusasennus ajurilla.
+          if [ -z "${CHROMIUM:-}" ]; then
+            CHROMIUM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' | head -1)
+            export CHROMIUM
+          fi
+          # shellcheck disable=SC2086
+          node tools/generoi-miniatyyrit.mjs $AVAIMET
+          uudet=$(git status --porcelain assets/kartat/miniatyyrit/ | awk '{print $2}' | grep '\.jpg$' || true)
+          if [ -z "$uudet" ]; then
+            echo "Ei uusia kuvia (kaikki pyydetyt oli jo tehty?)."
+            exit 0
+          fi
+          # shellcheck disable=SC2086
+          node tools/leikkaa-miniatyyrit.mjs $uudet
+          mkdir -p ulos
+          for f in $uudet; do
+            cp "$f" ulos/
+            cp "${f%.jpg}.webp" ulos/ 2>/dev/null || echo "::warning title=Leikkaus puuttuu::${f%.jpg}.webp"
+          done
+          ls -la ulos/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: miniatyyrit
+          path: ulos/
+          retention-days: 3
+          if-no-files-found: warn
