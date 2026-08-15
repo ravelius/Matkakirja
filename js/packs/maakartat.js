@@ -3276,16 +3276,12 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/helsinki-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     /*
-     * Satelliittinäkymä samasta rajauksesta, ks. berliini alla.
-     * KAINALO ON MUKANA MYÖS SIINÄ: tools/hae-satelliittikartat.mjs
-     * hakee Suomenlinnalle oman WMS-ruudun ja komposoi sen samoille
-     * prosenttipaikoille kuin piirtäjä. Ilman sitä vipu vaihtaisi
-     * kainalon alta pelkän avomeren, ja kohde 7 — jonka karttapiste()
-     * asemoi kainalon sisään — kelluisi tyhjällä vedellä.
+     * Värikartta satelliitin tilalle (omistajan päätös 15.8.2026, ks.
+     * berliini alla). Sama juliste samalta piirtoRajat-alueelta —
+     * Suomenlinnan kainalo piirtyy väreissä samoille
+     * prosenttipaikoille kuin piirroksessa.
      */
-    satelliitti: 'assets/kartat/helsinki-satelliitti.jpg',
-    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
-      + '(muokattua Copernicus Sentinel -dataa)',
+    varikartta: 'assets/kartat/helsinki-varikartta.png',
     /*
      * Rajaus leveni neljänneksellä 15.8.2026 (sama omistajan tilaus
      * kuin Berliinissä): 3,7 × 3,3 km → 4,7 × 4,1 km samasta
@@ -3301,9 +3297,8 @@ export const KAUPUNKIKARTAT = {
      * Meilahti lännessä, Vallila ja Kumpula pohjoisessa sekä
      * Korkeasaari idässä. Juuri se avovesi, jota ydinrajaukseen ei
      * saanut ottaa, on nyt reunuksella, jossa se ei syö kuvan ydintä.
-     * SATELLIITTIKUVA ON YHÄ vanhalla rajauksella (Suomenlinnan
-     * kainalo siihen komposoituna), joten satelliittinäkymässä
-     * panorointi pysähtyy kuvan reunaan (ui.js).
+     * Värikartta on piirretty samalta piirtoRajat-alueelta ja kattaa
+     * myös reunuksen.
      */
     rajat: { pohjoinen: 60.1877, etela: 60.1508, lansi: 24.9076, ita: 24.9919 },
     piirtoRajat: { pohjoinen: 60.19877, etela: 60.13973, lansi: 24.88231, ita: 25.01719 },
@@ -3518,15 +3513,9 @@ export const KAUPUNKIKARTAT = {
   pariisi: {
     polku: 'assets/kartat/pariisi-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    /*
-     * Satelliittinäkymä samasta rajauksesta, ks. berliini alla —
-     * haettu tools/hae-satelliittikartat.mjs:llä samassa
-     * kuvasuhteessa kuin piirretty PNG, joten kohdepisteet ja
-     * mittajana kelpaavat molemmille näkymille sellaisenaan.
-     */
-    satelliitti: 'assets/kartat/pariisi-satelliitti.jpg',
-    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
-      + '(muokattua Copernicus Sentinel -dataa)',
+    // Värikartta satelliitin tilalle (omistajan päätös 15.8.2026,
+    // ks. berliini alla): sama juliste samalta piirtoRajat-alueelta.
+    varikartta: 'assets/kartat/pariisi-varikartta.png',
     /*
      * Rajaus leveni neljänneksellä 15.8.2026 (sama omistajan tilaus
      * kuin Berliinissä): 6,6 × 5,0 km → 8,3 × 6,2 km samasta
@@ -3543,9 +3532,8 @@ export const KAUPUNKIKARTAT = {
      * berliini alla): piirtoRajat on 1,6-kertainen ala samasta
      * keskipisteestä eli 13,3 × 10,0 km. Lepotilassa lehti näyttää
      * yhä yllä olevan rajat-alueen; reunuksella ovat muun muassa Bois
-     * de Boulognen itälaita ja Père-Lachaise. SATELLIITTIKUVA ON YHÄ
-     * vanhalla rajauksella, joten siinä panorointi pysähtyy kuvan
-     * reunaan (ui.js).
+     * de Boulognen itälaita ja Père-Lachaise. Värikartta on piirretty
+     * samalta piirtoRajat-alueelta ja kattaa myös reunuksen.
      */
     rajat: { pohjoinen: 48.8976, etela: 48.8414, lansi: 2.2657, ita: 2.3788 },
     piirtoRajat: { pohjoinen: 48.91446, etela: 48.82454, lansi: 2.23177, ita: 2.41273 },
@@ -3777,15 +3765,9 @@ export const KAUPUNKIKARTAT = {
     // kohdetta mahtuvat alueelle.
     polku: 'assets/kartat/lontoo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    /*
-     * Satelliittinäkymä samasta rajauksesta, ks. berliini alla —
-     * haettu tools/hae-satelliittikartat.mjs:llä, joka pyytää kuvan
-     * samassa kuvasuhteessa kuin piirretty PNG, joten kohdepisteet ja
-     * mittajana kelpaavat molemmille näkymille sellaisenaan.
-     */
-    satelliitti: 'assets/kartat/lontoo-satelliitti.jpg',
-    satelliittiLahde: 'Sentinel-2 cloudless 2024 — s2maps.eu, EOX '
-      + '(muokattua Copernicus Sentinel -dataa)',
+    // Värikartta satelliitin tilalle (omistajan päätös 15.8.2026,
+    // ks. berliini alla): sama juliste samalta piirtoRajat-alueelta.
+    varikartta: 'assets/kartat/lontoo-varikartta.png',
     /*
      * Rajaus leveni neljänneksellä 15.8.2026 (sama omistajan tilaus
      * kuin Berliinissä): 6,9 × 3,6 km → 8,7 × 4,5 km samasta
@@ -3799,9 +3781,8 @@ export const KAUPUNKIKARTAT = {
      * berliini alla): piirtoRajat on 1,6-kertainen ala samasta
      * keskipisteestä eli 13,9 × 7,2 km. Lepotilassa lehti näyttää yhä
      * yllä olevan rajat-alueen; reunuksella on Regent's Park ja
-     * Kensington Gardens pohjoisessa ja lännessä. SATELLIITTIKUVA ON
-     * YHÄ vanhalla rajauksella, joten siinä panorointi pysähtyy kuvan
-     * reunaan (ui.js).
+     * Kensington Gardens pohjoisessa ja lännessä. Värikartta on
+     * piirretty samalta piirtoRajat-alueelta ja kattaa myös reunuksen.
      */
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
     piirtoRajat: { pohjoinen: 51.54131, etela: 51.47619, lansi: -0.21, ita: -0.01 },

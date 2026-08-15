@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.708';
+const CACHE = 'matkakirja-2026-08-09.709';
 const SHELL = [
   './',
   './index.html',
@@ -220,13 +220,13 @@ const SHELL = [
   './assets/kartat/miniatyyrit/berliini-tv-torni.jpg',
   './assets/kartat/miniatyyrit/berliini-east-side-gallery.jpg',
   './assets/kartat/helsinki-keskusta.png',
-  './assets/kartat/helsinki-satelliitti.jpg',
+  './assets/kartat/helsinki-varikartta.png',
   './assets/kartat/kairo-keskusta.png',
   './assets/kartat/lontoo-keskusta.png',
-  './assets/kartat/lontoo-satelliitti.jpg',
+  './assets/kartat/lontoo-varikartta.png',
   './assets/kartat/madrid-keskusta.png',
   './assets/kartat/pariisi-keskusta.png',
-  './assets/kartat/pariisi-satelliitti.jpg',
+  './assets/kartat/pariisi-varikartta.png',
   './assets/kartat/tukholma-keskusta.png',
   './assets/kartat/venetsia-keskusta.png',
   './assets/audio/intro-puhe.mp3',

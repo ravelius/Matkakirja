@@ -9039,10 +9039,9 @@ export class UI {
     const kohdekartta = KAUPUNKIKARTAT[cityId];
     if (kohdekartta) {
       kuvat.push(kohdekartta.polku ?? valokuvaUrl(kohdekartta.tiedosto, 1000));
-      // Vaihtoehtonäkymä (värikartta tai satelliitti) puskuriin samoin
-      // — vipu vaihtaa kuvan heti napautuksesta.
+      // Värikartta puskuriin samoin — vipu vaihtaa kuvan heti
+      // napautuksesta.
       if (kohdekartta.varikartta) kuvat.push(kohdekartta.varikartta);
-      else if (kohdekartta.satelliitti) kuvat.push(kohdekartta.satelliitti);
       // Miniatyyripiirrokset (etukäteispuskurin periaate): kortti
       // aukeaa napautuksesta, eikä piirros saa latautua vasta siinä.
       kuvat.push(...Object.values(MINIATYYRIT[cityId] ?? {}));
@@ -11979,22 +11978,20 @@ export class UI {
     else asetaKuva(kuva, valokuvaUrl(kartta.tiedosto, 1000), valokuvaVara(kartta.tiedosto, 1000));
     kotelo.appendChild(kuva);
     /*
-     * KUMPI KUVA PEITTÄÄ MITÄ OSAA LAVASTA. Piirros on koko lavan
-     * kokoinen, mutta SATELLIITTIKUVA ON VANHALLA RAJAUKSELLA (uusia
-     * ei haettu, ks. naytaNakyma) — se asetetaan siksi tarkalleen
-     * ydinrajauksen päälle. Lepotilassa kumpikin näkymä täyttää
-     * kehyksen samalla tavalla; ero näkyy vasta reunuksella, jonne
-     * satelliittinäkymässä ei pääse panoroimaan.
+     * Kuva peittää koko lavan. (Satelliittinäkymän erikoistapaus —
+     * vanhan rajauksen kuva ydinrajauksen päällä — poistui v709:ssä,
+     * kun värikartta korvasi satelliitin kaikissa kaupungeissa;
+     * värikartta on piirretty samalta piirtoRajat-alueelta kuin
+     * juliste.)
      */
-    const asetaKuvanAla = (satelliitissa) => {
+    const asetaKuvanAla = () => {
       if (!laajennettu) return;
-      const a = satelliitissa ? ydin : { x: 0, y: 0, leveys: 100, korkeus: 100 };
-      kuva.style.left = `${a.x.toFixed(4)}%`;
-      kuva.style.top = `${a.y.toFixed(4)}%`;
-      kuva.style.width = `${a.leveys.toFixed(4)}%`;
-      kuva.style.height = `${a.korkeus.toFixed(4)}%`;
+      kuva.style.left = '0%';
+      kuva.style.top = '0%';
+      kuva.style.width = '100%';
+      kuva.style.height = '100%';
     };
-    asetaKuvanAla(false);
+    asetaKuvanAla();
     /*
      * Mittakaavajana kartan vasempaan alakulmaan (omistajan toive
      * 9.8.2026). Pituus ja teksti tulevat rajauksesta
@@ -12113,22 +12110,14 @@ export class UI {
       selitteet.appendChild(selite);
     });
     /*
-     * Näkymävipu piirroksen ja vaihtoehtonäkymän välillä (omistajan
-     * tilaus 14.8.2026; värikartta korvasi satelliitin 15.8.2026, ks.
-     * vaihto-olio alempana). Näkyy vain kaupungilla, jolle
-     * vaihtoehtokuva on tehty — muut kartat piirtyvät ilman vipua.
+     * Näkymävipu piirroksen ja värikartan välillä (omistajan tilaus
+     * 14.8.2026 satelliitille; värikartta korvasi satelliitin
+     * 15.8.2026). Näkyy vain kaupungilla, jolle värikartta on
+     * piirretty — muut kartat piirtyvät ilman vipua.
      *
-     * SATELLIITTI EI KATA REUNUSTA: satelliittikuvat ovat vanhalla
-     * ydinrajauksella, joten kuva asetetaan tarkalleen ytimen päälle
-     * (asetaKuvanAla) ja panorointi rajataan satelliittinäkymässä
-     * kuvan reunaan (kytkeKarttaZoom lukee satelliittinakyma-luokan).
-     * Värikartta sen sijaan on piirretty koko piirtoRajat-alueelta ja
-     * käyttäytyy kuten piirros.
-     *
-     * Vaihto koskee VAIN taustakuvaa ja lähderiviä. Kohdepisteet,
-     * selitteet ja mittajana lasketaan rajauksesta (karttapiste,
-     * mittakaava), joten ne osuvat kohdalleen kummassakin näkymässä
-     * ilman omaa koodia.
+     * Vaihto koskee VAIN taustakuvaa: molemmat julisteet on piirretty
+     * samalta piirtoRajat-alueelta, joten kohdepisteet, selitteet,
+     * mittajana, zoom ja panorointi ovat yhteiset ilman omaa koodia.
      *
      * Kaksi nappia eikä yksi vuorottelija: yhden napin teksti
      * valehtelee kumpaan suuntaan tahansa, koska "Värikartta"
@@ -12137,7 +12126,7 @@ export class UI {
      * Valinta on istuntokohtainen eikä mene tallennukseen — se on
      * katselutapa, ei pelitilanne. Muistissa on kaupungin tunnus eikä
      * pelkkä totuusarvo, jottei toisen kaupungin lehti aukea
-     * vaihtoehtonäkymään sitten kun näitä on useampia.
+     * värinäkymään.
      */
     const lahderivi = html('p', 'lahde', kartta.lahde);
     /*
@@ -12170,38 +12159,22 @@ export class UI {
     const zoomOhjain = {};
     tyokalut.appendChild(zoomiRyhma);
     /*
-     * VÄRIKARTTA KORVAA SATELLIITIN (omistajan päätös 15.8.2026: "Joo
-     * vaihda väri berliiniin"; taustalla linjaus "Pelkät värit samaan
-     * piirros karttaan voisi olla toimivin ratkaisu ... oman togglen
-     * takana nykyisen satelliitti kartan sijalla"). Kaupunki, jolla on
-     * varikartta-kenttä, saa vivun Piirros/Värikartta; muut
-     * satelliittikaupungit pitävät vanhan vipunsa, kunnes niidenkin
-     * värikartat on piirretty ja katsottu. Värikartta on piirretty
-     * samalta piirtoRajat-alueelta kuin juliste, joten se kattaa myös
-     * reunuksen — panorointia ei rajata eikä kuvan alaa siirretä,
-     * toisin kuin satelliitissa (vanha rajaus, ks. asetaKuvanAla).
+     * VÄRIKARTTA KORVASI SATELLIITIN (omistajan päätös 15.8.2026: "Joo
+     * vaihda väri berliiniin" ja "samat kolmeen kaupunkiin"; taustalla
+     * linjaus "Pelkät värit samaan piirros karttaan voisi olla
+     * toimivin ratkaisu ... oman togglen takana nykyisen satelliitti
+     * kartan sijalla"). Kaupunki, jolla on varikartta-kenttä, saa
+     * vivun Piirros/Värikartta. Värikartta on piirretty samalta
+     * piirtoRajat-alueelta kuin juliste, joten se kattaa myös
+     * reunuksen — zoom ja panorointi toimivat täsmälleen kuten
+     * piirroksessa. Satelliittikuvat ja niiden erikoistapaukset
+     * (vanhan rajauksen kuvan ala, panoroinnin rajaus) poistuivat
+     * v709:ssä kaikista kaupungeista.
      */
-    const vaihto = kartta.varikartta
-      ? {
-        nimi: 'Värikartta',
-        ikoni: VIIVA_IKONIT.varikartta,
-        src: kartta.varikartta,
-        alt: 'Kaupungin kartta värein',
-        lahde: kartta.lahde,
-        satelliittimainen: false,
-      }
-      : (kartta.satelliitti ? {
-        nimi: 'Satelliitti',
-        ikoni: VIIVA_IKONIT.satelliitti,
-        src: kartta.satelliitti,
-        alt: 'Kaupunki satelliittikuvassa',
-        lahde: kartta.satelliittiLahde,
-        satelliittimainen: true,
-      } : null);
-    if (vaihto && kartta.polku) {
+    if (kartta.varikartta && kartta.polku) {
       const nakymat = [
         { vaihdossa: false, nimi: 'Piirros', ikoni: VIIVA_IKONIT.taitekartta },
-        { vaihdossa: true, nimi: vaihto.nimi, ikoni: vaihto.ikoni },
+        { vaihdossa: true, nimi: 'Värikartta', ikoni: VIIVA_IKONIT.varikartta },
       ];
       const vipu = html('div', 'kartta-vipu');
       vipu.setAttribute('role', 'group');
@@ -12216,20 +12189,8 @@ export class UI {
       });
       const naytaNakyma = (vaihdossa) => {
         this.satelliittiNakyma = vaihdossa ? kaupunki : null;
-        // Mittajana on piirretty paperin väreillä ja katoaa
-        // satelliittikuvan tummaan metsään — luokka vahvistaa sen
-        // taustan ja rajaa panoroinnin kuvan reunaan (kytkeKarttaZoom).
-        // Värikartta ei tarvitse kumpaakaan: sävyt ovat paperia ja
-        // kuva kattaa reunuksen.
-        kotelo.classList.toggle('satelliittinakyma', vaihdossa && vaihto.satelliittimainen);
-        kuva.src = vaihdossa ? vaihto.src : kartta.polku;
-        kuva.alt = vaihdossa ? vaihto.alt : 'Kaupungin kartta';
-        lahderivi.textContent = vaihdossa ? vaihto.lahde : kartta.lahde;
-        asetaKuvanAla(vaihdossa && vaihto.satelliittimainen);
-        // Reunuksella panoroiva pelaaja voi vaihdossa olla kuvan
-        // ulkopuolella: uudet rajat pakottavat näkymän takaisin
-        // ydinrajaukseen (pehmennettynä, koska liike ei tule sormesta).
-        zoomOhjain.paivita?.();
+        kuva.src = vaihdossa ? kartta.varikartta : kartta.polku;
+        kuva.alt = vaihdossa ? 'Kaupungin kartta värein' : 'Kaupungin kartta';
         napit.forEach((nappi, i) => {
           nappi.setAttribute('aria-pressed', String(nakymat[i].vaihdossa === vaihdossa));
         });
