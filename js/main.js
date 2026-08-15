@@ -43,7 +43,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.756';
+const APP_VERSION = '2026-08-09.757';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1257,6 +1257,20 @@ function piirraTyohuonePalkit(data) {
     kulut.textContent = 'Kulut: ei nähtävissä (admin-avaimet puuttuvat)';
   }
   kotelo.appendChild(kulut);
+  /*
+   * Lähdediagnoosi (omistajan vianetsintä 15.8.2026: "eivät
+   * vieläkään näy" ilman että syytä näkyi mistään): yksi pieni rivi
+   * kertoo jokaisen lähteen tilan, jolloin kuvakaappaus riittää
+   * diagnoosiksi. Ei arvoja, vain tilat.
+   */
+  const diagnoosi = document.createElement('p');
+  diagnoosi.className = 'tyohuone-kulut tyohuone-diagnoosi';
+  diagnoosi.textContent = 'Lähteet: '
+    + `repo ${repoKt !== null ? 'ok' : 'virhe'}`
+    + ` · peili ${peili ? 'ok' : 'virhe'}`
+    + ` · pöllö ${tila ? 'ok' : (data.tilaSyy ?? 'ei vastausta')}`
+    + (tila?.aika ? ` · kuva ${tila.aika.slice(11, 16)} UTC` : '');
+  kotelo.appendChild(diagnoosi);
 }
 
 function paivitaTyohuonePalkit() {

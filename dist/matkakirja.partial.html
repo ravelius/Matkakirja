@@ -11109,7 +11109,16 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   inset: 0;
   margin: auto;
   width: min(90vw, 640px);
-  height: auto;
+  /*
+   * fit-content, EI auto: .dialog on flex, ja auto-korkuinen dialogi
+   * venyi maksimikorkeuteen, jolloin kortti keskittyi sen sisällä ja
+   * dialogiin ankkuroidut napit (laskuri, kaiutin, paluunuoli) jäivät
+   * ruudun yläreunaan irralleen kortista — ja hyppivät kortin
+   * korkeuden eläessä (omistajan havainto 15.8.2026 iPadilla:
+   * "yläosa hyppii"). fit-contentilla dialogi syleilee korttia ja
+   * napit istuvat aina kortin yläkulmassa.
+   */
+  height: fit-content;
   /* Safe area mukaan: iOS:n loveus ja kotipalkki eivät saa syödä
    * kortin reunoja, joten pystyvara lasketaan niiden yli. */
   max-height: calc(100dvh - 3rem
@@ -11159,11 +11168,20 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 /* Isolla ruudulla (iPad, työpöytä) nähtävyyskortti saa olla leveämpi
  * (omistajan palaute 15.8.2026: "liian kapea") — teksti ja kuvat
- * hengittävät, mutta palsta pysyy luettavana. */
+ * hengittävät, mutta palsta pysyy luettavana. JS asettaa saman mitan
+ * myös pikseleinä (mitoitaNahtavyysDialogi), koska WKWebView'n
+ * jämähtänyt viewportti voi valehdella tälle media querylle. */
 @media (min-width: 760px) {
   .dialog.nahtavyys-arkki {
     width: min(84vw, 840px);
   }
+}
+
+/* Työhuoneen lähdediagnoosi: pienempi ja vaisumpi kuin kulurivi. */
+.tyohuone-diagnoosi {
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  opacity: 0.75;
 }
 
 /* Vuosiluku ja kohdenumero otsikon yllä: pieni kirjasinkokoinen
@@ -111969,6 +111987,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v757 — jutun napit kortissa kiinni; leveys kestää appivaihdon',
   'v756 — opas leveämpi iPadilla; ☰ pois oppaan yläkulmasta',
   'v755 — tyhjät palkit: sulje valikko ja avaa uudelleen',
   'v754 — kulurivi kertoo lähdevirheen; avaa valikko uudelleen',
@@ -168109,6 +168128,9 @@ class UI {
     const meta = document.querySelector('meta[name="viewport"]');
     if (meta) meta.setAttribute('content', meta.getAttribute('content'));
     this.fitViewBox();
+    // Avoin nähtävyysjuttu mitoitetaan uusiksi samasta syystä kuin
+    // lehti alla: vanhentunut viewportti oli voinut kaventaa sen.
+    if (document.getElementById('nahtavyys-dialog')?.open) this.mitoitaNahtavyysDialogi();
     if (!this.arrivalDialog?.open) return;
     // Avoinna oleva lehti sivutetaan uudelleen: kortin leveys on nyt
     // oikea, joten palstat, kohdekartta ja käyrät piirtyvät sen mukaan.
@@ -178043,6 +178065,7 @@ class UI {
       // sanamuoto kertoo tekstin omaksi, ks. lahdemerkinta).
       sisalto.appendChild(html('p', 'nahtavyys-lahderivi', lahdemerkinta(kohde.lahde)));
     }
+    this.mitoitaNahtavyysDialogi();
     if (!dialogi.open) dialogi.showModal();
     this.nollaaDialoginVieritys(dialogi);
     // Paluu palauttaa lukukohdan: juttu jatkuu siitä mihin se jäi,
@@ -178292,6 +178315,28 @@ class UI {
       });
       valikko.appendChild(rivi);
     }
+  }
+
+  /**
+   * Nähtävyysdialogin leveys PIKSELEINÄ mitatusta näkymästä, ei
+   * media querystä (omistajan havainto 15.8.2026 iPadilla: "jos käy
+   * toisessa ohjelmassa välillä niin sivun leveys palaa iphone
+   * muotoon"). WKWebView voi taustalta palatessa pitää asettelu-
+   * viewportin vanhassa kapeassa mitassa, jolloin CSS:n
+   * min-width-ehto ei laukea ja kortti kapenee — sama vika, jonka
+   * lehti sai 13.8. (varmistaLehtiMitta). mittaaNakyma tunnistaa
+   * jämähtäneen mitan visualViewportin ristiintarkistuksella, ja
+   * pikselileveys ohittaa vanhentuneen media queryn kokonaan.
+   * Kapealla ruudulla inline-leveys tyhjennetään ja CSS:n
+   * min(90vw, 640px) hoitaa asian ennallaan.
+   */
+  mitoitaNahtavyysDialogi() {
+    const dialogi = document.getElementById('nahtavyys-dialog');
+    if (!dialogi) return;
+    const mitta = this.mittaaNakyma() || 0;
+    dialogi.style.width = mitta >= 760
+      ? `${Math.min(Math.round(mitta * 0.84), 840)}px`
+      : '';
   }
 
   /** Yksi nähtävyysjutun kuva selitteineen ja lähteineen. */
@@ -183266,6 +183311,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 757, teksti: 'jutun napit seuraavat korttia; leveys kestää sovellusvaihdon' },
   { v: 756, teksti: 'opas leveämmäksi isolla ruudulla; valikkonappi pois oppaasta' },
   { v: 755, teksti: 'vajaa työhuonetulos ei jää istuntoon; uusi haku avauksesta' },
   { v: 754, teksti: 'työhuoneen kulurivi kertoo lähdevirheen; välimuisti v2' },
@@ -184119,7 +184165,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.756';
+const APP_VERSION = '2026-08-09.757';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -185333,6 +185379,20 @@ function piirraTyohuonePalkit(data) {
     kulut.textContent = 'Kulut: ei nähtävissä (admin-avaimet puuttuvat)';
   }
   kotelo.appendChild(kulut);
+  /*
+   * Lähdediagnoosi (omistajan vianetsintä 15.8.2026: "eivät
+   * vieläkään näy" ilman että syytä näkyi mistään): yksi pieni rivi
+   * kertoo jokaisen lähteen tilan, jolloin kuvakaappaus riittää
+   * diagnoosiksi. Ei arvoja, vain tilat.
+   */
+  const diagnoosi = document.createElement('p');
+  diagnoosi.className = 'tyohuone-kulut tyohuone-diagnoosi';
+  diagnoosi.textContent = 'Lähteet: '
+    + `repo ${repoKt !== null ? 'ok' : 'virhe'}`
+    + ` · peili ${peili ? 'ok' : 'virhe'}`
+    + ` · pöllö ${tila ? 'ok' : (data.tilaSyy ?? 'ei vastausta')}`
+    + (tila?.aika ? ` · kuva ${tila.aika.slice(11, 16)} UTC` : '');
+  kotelo.appendChild(diagnoosi);
 }
 
 function paivitaTyohuonePalkit() {
