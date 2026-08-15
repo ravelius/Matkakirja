@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 756, teksti: 'opas leveämmäksi isolla ruudulla; valikkonappi pois oppaasta' },
   { v: 755, teksti: 'vajaa työhuonetulos ei jää istuntoon; uusi haku avauksesta' },
   { v: 754, teksti: 'työhuoneen kulurivi kertoo lähdevirheen; välimuisti v2' },
   { v: 753, teksti: 'Helsingin Matkailijalle: kappale, kuva ja opas kuvineen' },
