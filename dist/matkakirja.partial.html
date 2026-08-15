@@ -111017,6 +111017,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v742 — lukija seis joka pop-upista (kartta, maalehti, pöllö)',
   'v741 — Mac-Safari: striimiluennan ääni (testaa Macilla!)',
   'v740 — Työhuone: palkit, tyylinapit, Lukijaääni',
   'v739 — piirros juttuun; klikkausalue 80 %',
@@ -160338,6 +160339,57 @@ function paivitaLukija(nappi, { vahimmais = LUETTAVAN_VAHIMMAIS } = {}) {
   if (!riittaa && lukijaLukee(nappi)) pysaytaLukija();
 }
 
+/*
+ * LUENTA SEIS JOKAISESTA PONNAHDUSIKKUNASTA (omistajan tilaus
+ * 15.8.2026: "matkakirjan luenta pitäisi pysähtyä aina jos mikä vain
+ * pop up ikkuna avataan" — vuoriston lisätietoikkuna, maalehti ja
+ * pöllö eivät pysäyttäneet, vain Tutki-nappi). Sääntö on KESKITETTY:
+ * tarkkailija pysäyttää lukijan, kun mikä tahansa <dialog> aukeaa tai
+ * postikortti (kuvasuurennos, vuosisää, uutiskortti, merkintä)
+ * ilmestyy — yksittäisiä avauspisteitä ei tarvitse muistaa kytkeä,
+ * eikä uusi ikkunatyyppi unohdu säännön ulkopuolelle, kunhan se on
+ * dialog tai postikortti.
+ *
+ * Lukijan omat pinnat (lukija-paneeli, kelluva kaiutin) eivät ole
+ * kumpaakaan lajia, joten ne eivät osu sääntöön — ja automoodin
+ * sivunkäännöt vaihtavat sisältöä jo auki olevassa dialogissa, joten
+ * nekään eivät osu. Kaksi ikkunaa ei näy tarkkailijalle ja kutsuu
+ * pysäytystä itse: maalehti (sisältö vaihtuu auki olevaan dialogiin,
+ * ui.js avaaMaalehti) ja pöllön paneeli (oma elementti, pollo.js
+ * avaa).
+ */
+if (typeof document !== 'undefined' && typeof MutationObserver === 'function') {
+  const onPostikortti = (solmu) => solmu.nodeType === 1
+    && (solmu.classList?.contains('postikortti')
+      || Boolean(solmu.querySelector?.('.postikortti')));
+  const tarkkailija = new MutationObserver((muutokset) => {
+    if (!lukijaLukee()) return;
+    for (const muutos of muutokset) {
+      if (muutos.type === 'attributes') {
+        if (muutos.target.tagName === 'DIALOG' && muutos.target.open) {
+          pysaytaLukija();
+          return;
+        }
+        continue;
+      }
+      for (const solmu of muutos.addedNodes) {
+        if (onPostikortti(solmu)) {
+          pysaytaLukija();
+          return;
+        }
+      }
+    }
+  });
+  const aloitaTarkkailu = () => tarkkailija.observe(document.body, {
+    subtree: true,
+    childList: true,
+    attributes: true,
+    attributeFilter: ['open'],
+  });
+  if (document.body) aloitaTarkkailu();
+  else document.addEventListener('DOMContentLoaded', aloitaTarkkailu, { once: true });
+}
+
 // ===== js/pollo-haku.js =====
 /*
  * VIISAAN PÖLLÖN PAIKALLINEN TIETOHAKU.
@@ -162218,6 +162270,11 @@ class Pollo {
   }
 
   avaa() {
+    // Pöllön paneeli on ponnahdusikkuna siinä missä muutkin: lukija
+    // vaikenee (omistajan tilaus 15.8.2026 "eikä pöllö [pysäytä]").
+    // Paneeli on oma elementtinsä eikä dialog/postikortti, joten
+    // lukija.js:n keskitetty tarkkailija ei näe sitä — kutsu tässä.
+    pysaytaLukija();
     // Liuku peittäisi pöllön napin: se väistyy, kun chat aukeaa.
     this.haeUi?.()?.suljeLiuku?.();
     // Keskustelu korvaa vihjeen: kupla ei jää paneelin viereen.
@@ -174459,6 +174516,11 @@ class UI {
   avaaMaalehti(iso, { nimi = null } = {}) {
     const maa = this.game?.pack?.map?.countryShapes?.[iso];
     if (!maa) return;
+    // Maalehti vaihtaa sisällön JO AUKI OLEVAAN dialogiin, joten
+    // lukija.js:n keskitetty ponnahdusikkunasääntö ei näe avausta —
+    // kaupunkilehden luenta vaiennetaan tässä (omistajan tilaus
+    // 15.8.2026: "myös maalehden aukaisu ei pysäytä lukijaa").
+    pysaytaLukija();
     // Mitta kuntoon ennen sivutusta, kuten kaupunkilehdessäkin.
     this.varmistaLehtiMitta();
     const otsikko = nimi ?? maa.nimi;
@@ -182164,6 +182226,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 742, teksti: 'Lukija vaikenee jokaisesta pop-upista (myös pöllö)' },
   { v: 741, teksti: 'Striimiluennan ääni kuuluu Macin Safarissa (piirin herätys)' },
   { v: 740, teksti: 'Työhuone valikkoon: tilannepalkit, tyylinapit, Lukijaääni' },
   { v: 739, teksti: 'Piirros juttuun tekstin kiertona; klikkausalue 80 %:iin' },
@@ -183002,7 +183065,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.741';
+const APP_VERSION = '2026-08-09.742';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

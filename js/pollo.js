@@ -1266,6 +1266,11 @@ class Pollo {
   }
 
   avaa() {
+    // Pöllön paneeli on ponnahdusikkuna siinä missä muutkin: lukija
+    // vaikenee (omistajan tilaus 15.8.2026 "eikä pöllö [pysäytä]").
+    // Paneeli on oma elementtinsä eikä dialog/postikortti, joten
+    // lukija.js:n keskitetty tarkkailija ei näe sitä — kutsu tässä.
+    pysaytaLukija();
     // Liuku peittäisi pöllön napin: se väistyy, kun chat aukeaa.
     this.haeUi?.()?.suljeLiuku?.();
     // Keskustelu korvaa vihjeen: kupla ei jää paneelin viereen.

@@ -10549,6 +10549,11 @@ export class UI {
   avaaMaalehti(iso, { nimi = null } = {}) {
     const maa = this.game?.pack?.map?.countryShapes?.[iso];
     if (!maa) return;
+    // Maalehti vaihtaa sisällön JO AUKI OLEVAAN dialogiin, joten
+    // lukija.js:n keskitetty ponnahdusikkunasääntö ei näe avausta —
+    // kaupunkilehden luenta vaiennetaan tässä (omistajan tilaus
+    // 15.8.2026: "myös maalehden aukaisu ei pysäytä lukijaa").
+    pysaytaLukija();
     // Mitta kuntoon ennen sivutusta, kuten kaupunkilehdessäkin.
     this.varmistaLehtiMitta();
     const otsikko = nimi ?? maa.nimi;

@@ -1697,3 +1697,54 @@ export function paivitaLukija(nappi, { vahimmais = LUETTAVAN_VAHIMMAIS } = {}) {
   nappi.hidden = !riittaa;
   if (!riittaa && lukijaLukee(nappi)) pysaytaLukija();
 }
+
+/*
+ * LUENTA SEIS JOKAISESTA PONNAHDUSIKKUNASTA (omistajan tilaus
+ * 15.8.2026: "matkakirjan luenta pitäisi pysähtyä aina jos mikä vain
+ * pop up ikkuna avataan" — vuoriston lisätietoikkuna, maalehti ja
+ * pöllö eivät pysäyttäneet, vain Tutki-nappi). Sääntö on KESKITETTY:
+ * tarkkailija pysäyttää lukijan, kun mikä tahansa <dialog> aukeaa tai
+ * postikortti (kuvasuurennos, vuosisää, uutiskortti, merkintä)
+ * ilmestyy — yksittäisiä avauspisteitä ei tarvitse muistaa kytkeä,
+ * eikä uusi ikkunatyyppi unohdu säännön ulkopuolelle, kunhan se on
+ * dialog tai postikortti.
+ *
+ * Lukijan omat pinnat (lukija-paneeli, kelluva kaiutin) eivät ole
+ * kumpaakaan lajia, joten ne eivät osu sääntöön — ja automoodin
+ * sivunkäännöt vaihtavat sisältöä jo auki olevassa dialogissa, joten
+ * nekään eivät osu. Kaksi ikkunaa ei näy tarkkailijalle ja kutsuu
+ * pysäytystä itse: maalehti (sisältö vaihtuu auki olevaan dialogiin,
+ * ui.js avaaMaalehti) ja pöllön paneeli (oma elementti, pollo.js
+ * avaa).
+ */
+if (typeof document !== 'undefined' && typeof MutationObserver === 'function') {
+  const onPostikortti = (solmu) => solmu.nodeType === 1
+    && (solmu.classList?.contains('postikortti')
+      || Boolean(solmu.querySelector?.('.postikortti')));
+  const tarkkailija = new MutationObserver((muutokset) => {
+    if (!lukijaLukee()) return;
+    for (const muutos of muutokset) {
+      if (muutos.type === 'attributes') {
+        if (muutos.target.tagName === 'DIALOG' && muutos.target.open) {
+          pysaytaLukija();
+          return;
+        }
+        continue;
+      }
+      for (const solmu of muutos.addedNodes) {
+        if (onPostikortti(solmu)) {
+          pysaytaLukija();
+          return;
+        }
+      }
+    }
+  });
+  const aloitaTarkkailu = () => tarkkailija.observe(document.body, {
+    subtree: true,
+    childList: true,
+    attributes: true,
+    attributeFilter: ['open'],
+  });
+  if (document.body) aloitaTarkkailu();
+  else document.addEventListener('DOMContentLoaded', aloitaTarkkailu, { once: true });
+}
