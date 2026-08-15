@@ -46,27 +46,23 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
-## Paketti M1: Matkailijalle-monistus, erä 1 (Opus 19, tilattu 16.8.2026)
+## Paketti M1: Matkailijalle-monistus viiteen kaupunkiin (Opus 20, tilattu 16.8.2026)
 
-> **⏸ TAUOLLA (omistaja 16.8.2026): "Älä vielä monista. Tämä sama
-> sivu tarvitsee muokkausta."** Opus 19 keskeytetty ennen
-> ensimmäistä checkpointia. Malliin tuli v766:ssa uusi
-> ripoteltu-kuvataitto (kuvat kelluvat tekstin lomassa, ks.
-> Kööpenhaminan artikkeli) — kun omistaja hyväksyy mallin, tämä
-> paketti päivitetään sen mukaiseksi ja tilataan uudelleen.
+Omistajan tilaus 16.8.2026: "Monista viiteen" — Kööpenhaminan
+lehtimalli (v766:n muodossa, jossa opasartikkelin kuvat on
+TAITETTU tekstin lomaan) monistetaan viiteen kaupunkiin:
+**Berliini, Pariisi, Lontoo, Rooma, Wien**. (Opus 19:n aiempi
+kolmen kaupungin versio peruttiin ennen aloitusta; tämä korvaa
+sen. Praha, Amsterdam ja Tukholma tulevat seuraavassa erässä —
+niitä EI aloiteta tässä.)
 
-Omistajan kuittaus 16.8.2026: "Voit monistaa" — Kööpenhaminan ja
-Helsingin lehtimalli monistetaan muihin kaupunkeihin. Erä 1 kattaa
-kolme kaupunkia, joilla avauskuvat jo ovat: **Berliini, Pariisi,
-Lontoo**. (Erä M2 tuo koko paketin Roomalle, Wienille, Prahalle,
-Amsterdamille ja Tukholmalle — sitä EI aloiteta tässä erässä.)
+**Haara:** `claude/opus20-matkailijalle-era1`
 
-**Haara:** `claude/opus19-matkailijalle-era1`
-
-1. Jokaiselle kolmelle kaupungille `js/packs/kulttuuri-kategoriat.js`
+1. Jokaiselle viidelle kaupungille `js/packs/kulttuuri-kategoriat.js`
    → kaupunki-kategoriaan `matkailijalle`-kenttä TÄSMÄLLEEN
-   Kööpenhaminan ja Helsingin mallilla (katso `kobenhavn` ja
-   `helsinki` — rakenne, pituudet ja sävy):
+   Kööpenhaminan mallilla (katso `kobenhavn` — rakenne, pituudet,
+   sävy; Helsinki on toinen esimerkki mutta Kööpenhamina on
+   tuorein):
    - `kappale`: 4–5 lausetta turistin näkökulmasta — millainen
      kaupunki on kokea, mikä siinä on omaa. Ei nähtävyyslistaa.
    - `kuva`: yksi laadukas valokuva (tiedosto/selite/lahde), aihe
@@ -76,16 +72,29 @@ Amsterdamille ja Tukholmalle — sitä EI aloiteta tässä erässä.)
      omat, `lahde: 'Wikipedia'`. Teemoja tyyliin: miten kaupunkia
      kuljetaan, mikä on paikallisten oma tapa, ruoka, ilta —
      konkretiaa ja tarinaa, ei esitettä.
-   - `artikkeli.kuvat`: 2 kuvaa ERI aiheista (ei osiokuvan toistoa).
-2. Silmätarkista samalla näiden kolmen kaupungin KAIKKI
-   etusivukuvat (kansikuvat + avauskuvat) ja VAIHDA visuaalisesti
-   heikot (omistajan linjaus 15.8.2026; hylkäysesimerkki: pääosassa
-   varjo tai yksityiskohta, kaupunki ei näy). Vaihdot samoilla
+   - `artikkeli.taitto: 'ripoteltu'` ja `artikkeli.kuvat`: **5
+     kuvaa**. Renderöijä näyttää ensimmäisen kuvan avauskappaleen
+     jälkeen koko palstan levyisenä ja kelluttaa loput neljä
+     pikkukuvina tekstin lomaan TASAVÄLEIN — viidellä kappaleella
+     kuva j osuu kappaleen j edelle. **Kirjoita siis kappaleet ja
+     valitse kuvat YHDESSÄ niin, että jokainen kuva osuu aiheensa
+     kappaleen kohdalle** (malli: kobenhavn — kävelykatu, kylpijä,
+     Tivoli ja smørrebrød istuvat kukin omaan kappaleeseensa).
+     Ei osiokuvan toistoa.
+2. Silmätarkista samalla näiden viiden kaupungin KAIKKI olemassa
+   olevat etusivukuvat (kansikuvat + avauskuvat; Roomalla ja
+   Wienillä ei vielä ole avauskuvakarusellia — ÄLÄ lisää sitä,
+   se tulee erikseen) ja VAIHDA visuaalisesti heikot (omistajan
+   linjaus 15.8.2026; hylkäysesimerkki: pääosassa varjo tai
+   yksityiskohta, kaupunki ei näy). Vaihdot samoilla
    lisenssisäännöillä.
 3. Kuvasäännöt: vain PD/CC, lisenssi + tekijä Commonsin API:sta,
    JOKAINEN kuva katsottava silmin (ruuhkassa
    nouda-tarkistuskuvat.yml + artefakti). Tekijä nimetään
-   lähderivillä.
+   lähderivillä. **VARO NIMIANSOJA**: Commonsin tiedostonimi ei
+   todista sijaintia — "Strøget.jpg" osoittautui AARHUSIN kaduksi.
+   Varmista kuvaustekstistä/kategorioista, että kuva on oikeasta
+   kaupungista.
 4. Portit: `node --test tests/*.test.mjs` ja
    `node tools/tarkista-kaksoisavaimet.mjs`. ÄLÄ aja
    uusi-versio.mjs:ää äläkä koske dist/-kansioon.
