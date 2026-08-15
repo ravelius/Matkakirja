@@ -11093,8 +11093,15 @@ export class UI {
       if (!korkeus) return;
       const kaista = Math.max(56, korkeus * 0.06);
       const otsikossa = Boolean(e.target.closest?.('#arrival-city, .aihe-nimi'));
-      if (otsikossa || e.clientY <= kaista) vierita(true);
-      else if (e.clientY >= korkeus - kaista) vierita(false);
+      /*
+       * Ylhäällä ollessa yläkaistan napautus EI tee mitään (omistajan
+       * havainto 15.8.2026: lippunapin viereen osunut napautus "söi"
+       * ensimmäisen painalluksen, kun rullaus nollaan käynnistyi
+       * turhaan jo valmiiksi ylhäällä).
+       */
+      if (otsikossa || e.clientY <= kaista) {
+        if (kortti.scrollTop > 4) vierita(true);
+      } else if (e.clientY >= korkeus - kaista) vierita(false);
     });
   }
 
@@ -12401,16 +12408,18 @@ export class UI {
     yla.appendChild(x);
     kortti.appendChild(yla);
 
+    /*
+     * Iso lippu on AINA nykyinen lippu (omistajan linjaus 15.8.2026:
+     * "muut liput eivät aukeaisi päänlipun paikalle koskaan").
+     */
     const iso = document.createElement('img');
     iso.className = 'lippu-iso';
     iso.decoding = 'async';
     iso.draggable = false;
+    asetaKuva(iso, lippuUrl(tiedosto, 640), lippuVara(tiedosto, 640));
+    iso.alt = `${tiedot.maa} — nykyinen lippu`;
     kortti.appendChild(iso);
-    // Valitun asun nimi ja selite heti ison lipun alla.
-    const valintaNimi = html('p', 'lippu-valinta', '');
-    const valintaSelite = html('p', 'lippu-valinta-selite', '');
-    kortti.appendChild(valintaNimi);
-    kortti.appendChild(valintaSelite);
+    kortti.appendChild(html('p', 'lippu-valinta', 'Nykyinen lippu'));
 
     /*
      * Symboliikka boldatuin otsikoin ENNEN historiakappaleita
@@ -12435,50 +12444,52 @@ export class UI {
     }
 
     /*
-     * Asurivi: nykyinen lippu ensin, sitten versiot. Napautus nostaa
-     * asun isoon paikkaan — erillistä suurennosta ei tarvita, koska
-     * ikkunassa on kerrallaan yksi iso lippu.
+     * TARKENNUS (omistajan linjaus 15.8.2026): versiolipun tai
+     * vaakunan napautus kasvattaa sen paikallaan ja näyttää selitteen
+     * sen alla; muu kortti sumenee (CSS: .tarkennus + .tarkennettu +
+     * .terava-haara). Uusi napautus tai napautus sumeaan palauttaa.
      */
-    const asut = [{
-      nimi: 'Nykyinen lippu',
-      selite: '',
-      kuvaa: (el) => asetaKuva(el, lippuUrl(tiedosto, 640), lippuVara(tiedosto, 640)),
-    }, ...(tiedot.versiot ?? []).map((versio) => ({
-      nimi: versio.nimi,
-      selite: versio.selite,
-      kuvaa: (el) => { el.src = versio.polku; },
-    }))];
-    const napit = [];
-    const valitse = (i) => {
-      asut[i].kuvaa(iso);
-      iso.alt = `${tiedot.maa} — ${asut[i].nimi}`;
-      valintaNimi.textContent = asut[i].nimi;
-      valintaSelite.textContent = asut[i].selite;
-      valintaSelite.hidden = !asut[i].selite;
-      napit.forEach((nappi, j) => nappi.setAttribute('aria-pressed', String(i === j)));
+    const tyhjennaTarkennus = () => {
+      kortti.classList.remove('tarkennus');
+      kortti.querySelectorAll('.tarkennettu, .terava-haara')
+        .forEach((t) => t.classList.remove('tarkennettu', 'terava-haara'));
     };
-    if (asut.length > 1) {
+    const tarkenna = (elementti) => {
+      const auki = elementti.classList.contains('tarkennettu');
+      tyhjennaTarkennus();
+      if (auki) return;
+      kortti.classList.add('tarkennus');
+      elementti.classList.add('tarkennettu');
+      elementti.parentElement.classList.add('terava-haara');
+      requestAnimationFrame(() => elementti.scrollIntoView({ block: 'nearest', behavior: 'smooth' }));
+    };
+    kortti.addEventListener('click', (e) => {
+      if (!kortti.classList.contains('tarkennus')) return;
+      if (e.target.closest?.('.lippu-versio, .lippu-tunnus, .lippu-sulje')) return;
+      tyhjennaTarkennus();
+    });
+
+    if ((tiedot.versiot ?? []).length) {
       kortti.appendChild(html('h3', 'lippu-versiot-otsikko', 'Muut asut ja historialliset liput'));
       const rivi = html('div', 'lippu-versiot');
-      asut.forEach((asu, i) => {
+      for (const versio of tiedot.versiot) {
         const nappi = html('button', 'lippu-versio');
         nappi.type = 'button';
-        nappi.title = asu.nimi;
+        nappi.title = versio.nimi;
         const pikku = document.createElement('img');
         pikku.className = 'lippu-versio-kuva';
-        pikku.alt = asu.nimi;
+        pikku.alt = versio.nimi;
         pikku.decoding = 'async';
         pikku.draggable = false;
-        asu.kuvaa(pikku);
+        pikku.src = versio.polku;
         nappi.appendChild(pikku);
-        nappi.appendChild(html('span', 'lippu-versio-nimi', asu.nimi));
-        nappi.addEventListener('click', () => valitse(i));
+        nappi.appendChild(html('span', 'lippu-versio-nimi', versio.nimi));
+        nappi.appendChild(html('span', 'lippu-versio-selite', versio.selite));
+        nappi.addEventListener('click', () => tarkenna(nappi));
         rivi.appendChild(nappi);
-        napit.push(nappi);
-      });
+      }
       kortti.appendChild(rivi);
     }
-    valitse(0);
 
     /*
      * Vaakunat ja muut tunnukset (omistajan tilaus 15.8.2026: "Maan
@@ -12490,7 +12501,11 @@ export class UI {
       kortti.appendChild(html('h3', 'lippu-versiot-otsikko', 'Vaakunat ja tunnukset'));
       const tunnukset = html('div', 'lippu-tunnukset');
       for (const t of tiedot.tunnukset) {
-        const kohta = html('div', 'lippu-tunnus');
+        // Nappi (omistajan tilaus 15.8.2026: "klikkaamalla vaakunoita
+        // ne voisivat suurentua omalla paikallaan").
+        const kohta = html('button', 'lippu-tunnus');
+        kohta.type = 'button';
+        kohta.title = t.nimi;
         const kuvaEl = document.createElement('img');
         kuvaEl.className = 'lippu-tunnus-kuva';
         kuvaEl.alt = t.nimi;
@@ -12502,6 +12517,7 @@ export class UI {
         teksti.appendChild(html('p', 'lippu-tunnus-nimi', t.nimi));
         teksti.appendChild(html('p', 'lippu-tunnus-selite', t.selite));
         kohta.appendChild(teksti);
+        kohta.addEventListener('click', () => tarkenna(kohta));
         tunnukset.appendChild(kohta);
       }
       kortti.appendChild(tunnukset);

@@ -9877,7 +9877,11 @@ body.vertailu-tila .pawns { display: none; }
  * nappi, ja ikkunassa iso lippu, historia ja muut asut. */
 .dialog .aihe-lippu-nappi {
   display: inline;
-  padding: 0;
+  /* Pehmuste + vastamarginaali kasvattavat osuma-alueen sormen
+   * kokoiseksi asettelua muuttamatta (omistajan havainto 15.8.2026:
+   * lippua joutui painamaan kahdesti — napautus osui napin viereen). */
+  padding: 0.55rem;
+  margin: -0.55rem;
   min-height: 0;
   border: none;
   background: none;
@@ -9943,16 +9947,16 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   cursor: pointer;
 }
 
-/* Iso lippu reunasta reunaan (omistajan tilaus 15.8.2026: "Iso kuva
- * isommaksi"): kuva ohittaa kortin sivupehmusteet negatiivisella
- * marginaalilla, ja kortti itse leveni 24 → 27 remiin. */
+/* Iso lippu kortin levyisenä mutta pehmusteiden SISÄLLÄ (omistajan
+ * palautteet 15.8.2026: ensin "Iso kuva isommaksi" — kortti leveni
+ * 24 → 27 remiin — ja sitten "lippu saisi olla vähän pienemmällä,
+ * jotta ei osu marginaaleihin"). */
 .lippu-iso {
   display: block;
-  width: calc(100% + 1.6rem);
-  margin: 0 -0.8rem;
+  width: 100%;
   height: auto;
-  border: solid rgba(70, 51, 31, 0.4);
-  border-width: 1px 0;
+  border: 1px solid rgba(70, 51, 31, 0.4);
+  border-radius: 3px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.6);
 }
@@ -9973,7 +9977,8 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   color: #46331f;
 }
 
-/* Vaakunat ja tunnukset: kuva vasemmalla, nimi + selite oikealla. */
+/* Vaakunat ja tunnukset: kuva vasemmalla, nimi + selite oikealla.
+ * Rivi on nappi (napautus tarkentaa), joten nappioletukset nollataan. */
 .lippu-tunnukset {
   display: flex;
   flex-direction: column;
@@ -9981,10 +9986,68 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   margin-top: 0.4rem;
 }
 
-.lippu-tunnus {
+.lippu-kortti .lippu-tunnus {
   display: flex;
   gap: 0.65rem;
   align-items: flex-start;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
+/*
+ * TARKENNUS (omistajan tilaus 15.8.2026): napautettu versiolippu
+ * tai vaakuna kasvaa paikallaan noin kaksinkertaiseksi ja sen
+ * selite näkyy terävänä; MUU kortti sumenee — ei erillistä
+ * ikkunaa. Sumennus tehdään sisällölle (filter), koska kortti on
+ * vierityskontti eikä kiinteä peittokerros kata sen koko sisältöä.
+ */
+.lippu-kortti.tarkennus > :not(.terava-haara) { filter: blur(3px); }
+.lippu-kortti.tarkennus .terava-haara > :not(.tarkennettu) { filter: blur(3px); }
+
+.lippu-kortti .lippu-versio.tarkennettu {
+  grid-column: 1 / -1;
+  background: rgba(255, 250, 238, 0.95);
+  border-color: rgba(150, 116, 52, 0.75);
+}
+
+.lippu-versio.tarkennettu .lippu-versio-kuva {
+  width: min(100%, 12rem);
+  margin: 0 auto;
+}
+
+.lippu-versio-selite { display: none; }
+
+.lippu-versio.tarkennettu .lippu-versio-selite {
+  display: block;
+  padding: 0.1rem 0.3rem 0.15rem;
+  font-family: var(--font-luku);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-align: left;
+  color: rgba(33, 29, 24, 0.92);
+  background: rgba(245, 240, 226, 0.95);
+  border-radius: 3px;
+}
+
+.lippu-tunnus.tarkennettu .lippu-tunnus-kuva { width: 8.4rem; }
+
+.lippu-tunnus.tarkennettu .lippu-tunnus-teksti {
+  padding: 0.25rem 0.4rem;
+  background: rgba(245, 240, 226, 0.95);
+  border-radius: 4px;
+}
+
+.lippu-tunnus-kuva { transition: width 160ms ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lippu-tunnus-kuva { transition: none; }
 }
 
 .lippu-tunnus-kuva {
@@ -10615,12 +10678,12 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 /*
- * VALITTU PIIRROS (omistajan tilaukset 15.8.2026, viimeisin:
- * "Suurennettu kuva saisi olla aina neljäsosa kartan korkeudesta,
- * riippumatta zoomitasosta"). Napautus lisää .valittu-luokan:
- * piirros kasvaa neljäsosaan KARTTAIKKUNAN korkeudesta (25cqh
- * kehyskontista) ja nimikyltti aukeaa sen alle (tai ylle
- * alareunassa, .kyltti-ylle); uusi napautus palauttaa koon —
+ * VALITTU PIIRROS (omistajan tilaukset 15.8.2026, viimeisin
+ * täsmennys: "Suurennettu kuva saisi siis olla aina 40 prosenttia
+ * kartan korkeudesta", riippumatta zoomitasosta). Napautus lisää
+ * .valittu-luokan: piirros kasvaa 40 %:iin KARTTAIKKUNAN
+ * korkeudesta (40cqh kehyskontista) ja nimikyltti aukeaa sen alle
+ * (tai ylle alareunassa, .kyltti-ylle); uusi napautus palauttaa —
  * ikkunaa ei avata. Jako zoomilla kumoaa lavan skaalan, joten
  * näkyvä koko on sama joka zoomiasennossa.
  */
@@ -10629,8 +10692,8 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 }
 
 .kartta-lava .maakartta-piste.kohde-numero.kohde-piirros.valittu {
-  width: calc(25cqh / var(--zoom));
-  height: calc(25cqh / var(--zoom));
+  width: calc(40cqh / var(--zoom));
+  height: calc(40cqh / var(--zoom));
   z-index: 5;
 }
 
