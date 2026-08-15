@@ -90,8 +90,11 @@ Sovellus nykyisiin toimintoihin:
 - Kaupunkiin saavuttaessa ladataan molempien lehtien (kaupunki ja maa)
   etusivut kokonaan taustalla — kuvat, lippu, kartta — ja generoidaan
   lukijaäänen ensimmäinen pala kumpaankin lehteen valmiiksi.
-- Lehteä luettaessa seuraava sivu ladataan aina kokonaan valmiiksi heti,
-  kun nykyinen sivu on auki.
+- Lehteä luettaessa VIEREISET sivut ladataan aina kokonaan valmiiksi
+  heti, kun nykyinen sivu on auki — seuraava ja myös edellinen, jos se
+  ei jo ole ladattu (omistajan tarkennus 15.8.2026: sisällysluettelon
+  kautta voi hypätä keskelle lehteä, jolloin kumpikaan naapuri ei ole
+  käynyt näytöllä).
 - Sama koskee kaikkia UUSIA toimintoja jatkossa: kun toiminto lisätään,
   siihen suunnitellaan samalla etukäteispuskuri (mitä seuraavaksi
   todennäköisesti tarvitaan ja mistä hetkestä sen voi alkaa ladata).
