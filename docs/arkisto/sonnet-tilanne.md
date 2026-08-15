@@ -1,3 +1,5 @@
+> **ARKISTOITU 15.8.2026** — kertaluontoinen tilannekuva tai toteutettu suunnitelma. Ei sisällä voimassa olevia ohjeita; ne ovat Raamattu 2.0:ssa (js/tyohuone-raamattu.js) ja sen dokumenttikartan tiedostoissa.
+
 # Sonnet 1:n tilannekuva — luovutuskuntoinen (kirjoitettu 10.8.2026 ilta)
 
 *Käsittelykuva tilinvaihtoa varten. Kirjoitettu niin, että toisen

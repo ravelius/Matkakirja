@@ -19,6 +19,9 @@ luettelon unohdettuja aarteita. Selainpeli ilman build-vaihetta
   linjaus 15.8.2026: uudet oleelliset linjaukset kirjataan VAIN tänne;
   tekniset toteutusohjeet saavat asua muualla). Vain Fable kirjoittaa;
   ristiriidassa hyväksytty Raamattu 2.0 -osio voittaa muut dokumentit.
+  Raamatun viimeinen osio on TÄYDELLINEN KARTTA kaikkiin muihin
+  ohjedokumentteihin — jos dokumenttia ei ole kartalla, se ei ole
+  ohje (tests/dokumentit.test.mjs valvoo tätä koneellisesti).
 - docs/tarina.md ja docs/isoisan-raamattu.md — tarinan kaanon
   (sitova kaikessa sisällössä; vain Fable kirjoittaa näihin).
 - docs/kaariteksti-sapluuna.md — miten uuden laudan kaaritekstit

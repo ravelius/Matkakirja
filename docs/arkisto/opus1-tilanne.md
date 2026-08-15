@@ -1,3 +1,5 @@
+> **ARKISTOITU 15.8.2026** — kertaluontoinen tilannekuva tai toteutettu suunnitelma. Ei sisällä voimassa olevia ohjeita; ne ovat Raamattu 2.0:ssa (js/tyohuone-raamattu.js) ja sen dokumenttikartan tiedostoissa.
+
 # Opus 1:n tilanne (päivitetty 11.8.2026 aamulla)
 
 Tämä on **luovutuspaperi**: seuraava Opus-sessio toisella tilillä voi

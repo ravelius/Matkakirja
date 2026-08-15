@@ -1,3 +1,5 @@
+> **ARKISTOITU 15.8.2026** — kertaluontoinen tilannekuva tai toteutettu suunnitelma. Ei sisällä voimassa olevia ohjeita; ne ovat Raamattu 2.0:ssa (js/tyohuone-raamattu.js) ja sen dokumenttikartan tiedostoissa.
+
 # Kuvaduplikaattien vaihtolista (Sonnet 1:n QA 9.8.2026, Fable päätti)
 
 Sonnet 1 kävi kaikki kahdesti esiintyvät kuvat läpi lukemalla molemmat
