@@ -108318,16 +108318,12 @@ const KAARI_PAKETIT = {
 
 const RAAMATTU = {
   paivitetty: '15.8.2026',
-  johdanto: 'Koko pelin idea yhdessä dokumentissa. TAVOITE '
-    + '(omistajan linjaus 11.8.2026): tämän lukeminen riittää '
-    + 'yksinään pelin kehittämiseen ja uusien matkakirjatekstien '
-    + 'kirjoittamiseen — muista muistiinpanoista luovutaan, kun '
-    + 'Raamattu on valmis (vain tekniset toteutusohjeet jäävät '
-    + 'erikseen, eikä omistajan tarvitse tuntea niitä). Käydään läpi '
-    + 'yhdessä kohta kohdalta; Fable täydentää itse puuttuvan '
-    + 'oleellisen. Kun Raamattu on valmis, KAIKKI '
-    + 'matkakirjamerkinnät, kohtaamiset ja aarrelöytötekstit '
-    + 'kirjoitetaan uusiksi sen mukaisiksi.',
+  johdanto: 'Koko pelin idea yhdessä dokumentissa: tämän lukeminen '
+    + 'riittää pelin kehittämiseen (tekniset ohjeet erikseen). '
+    + 'Käydään läpi omistajan kanssa osio kerrallaan; valmis '
+    + 'Raamattu laukaisee kaikkien matkakirjatekstien uudistuksen. '
+    + 'ILMAISU: mahdollisimman lyhyt ja yksiselitteinen — selkeys '
+    + 'tärkeintä (omistaja 15.8.2026).',
   osiot: [
     {
       otsikko: 'Ydinajatus ja kohderyhmä',
@@ -108983,16 +108979,12 @@ const RAAMATTU = {
           + 'aarretekstit (ElevenLabs v3); teksti ja luenta '
           + 'vastaavat toisiaan sanasta sanaan, siksi arvottavia '
           + 'pulmia ei lueta.',
-        'MATKAKIRJAN LUENTAPOLKU (omistajan linjaus 15.8.2026, '
-          + 'sitoo myös työsessiot): ElevenLabs-äänite soi, kun '
-          + 'merkinnän luenta-kenttä vastaa nykyistä näyttötekstiä '
-          + '(vertailu: luentaVastaaTekstia, aani-ehdokkaat.js). '
-          + 'Kun tekstiä muutetaan, äänite putoaa itsestään pois ja '
-          + 'merkintä striimataan lukijaäänellä — UUSIA ÄÄNITTEITÄ '
-          + 'EI GENEROIDA välivaiheessa. Kaikki matkakirjatekstit '
-          + 'uudistetaan vasta, kun Raamatun avoimet osiot on '
-          + 'käyty omistajan kanssa valmiiksi; sen jälkeen luennat '
-          + 'generoidaan uusiksi yhdellä kertaa.',
+        'MATKAKIRJAN LUENTAPOLKU (omistaja 15.8.2026): äänite soi '
+          + 'kun luenta-kenttä vastaa näyttötekstiä '
+          + '(luentaVastaaTekstia); muuttunut teksti striimataan. '
+          + 'Uusia äänitteitä EI generoida — kaikki luennat '
+          + 'uusitaan kerralla, kun Raamattu on valmis ja tekstit '
+          + 'kirjoitettu uusiksi.',
         'Lisäksi tehosteäänet, mietintämusiikki, äänimaisemat ja '
           + 'musiikkinäytteet lehtikaupungeissa. Uudet taustaäänet '
           + 'LUFS-mitataan heti luotaessa (testi valvoo).',
@@ -109078,57 +109070,29 @@ const RAAMATTU = {
       ],
     },
     {
-      otsikko: 'Ohjedokumenttien kartta (rikkinäistä puhelinta vastaan)',
+otsikko: 'Ohjedokumenttien kartta (rikkinäistä puhelinta vastaan)',
       tila: 'luonnos (omistajan tilaus 15.8.2026)',
       kohdat: [
-        'PERIAATE: kehitys vaihtuu sessiolta toiselle, ja tieto saa '
-          + 'kulkea vain kirjoitettuna — ei tiivistelmien ketjuna. '
-          + 'Raamattu on ainoa paikka oleellisille linjauksille, '
-          + 'ja TÄMÄ osio on täydellinen kartta kaikkiin muihin '
-          + 'ohjedokumentteihin. Jos dokumenttia ei ole tällä '
-          + 'listalla, se EI ole ohje. Uusi ohjedokumentti lisätään '
-          + 'tähän samassa PR:ssä, jossa se syntyy — testi '
-          + '(tests/dokumentit.test.mjs) valvoo tätä koneellisesti.',
-        'SISÄÄNTULO: CLAUDE.md — jokaisen session ensimmäinen '
-          + 'luettava; osoittaa tänne.',
-        'TARINAN KAANON (sitova, vain Fable kirjoittaa): '
-          + 'docs/tarina.md (hahmot, Aarnin luettelo, sävysäännöt) '
-          + 'ja docs/isoisan-raamattu.md (matkakirjamerkintöjen '
-          + 'dekkarisäännöt, imu aikuiselle).',
-        'PELIN PERUSTUSLAKI: Raamatun oma osio "Perustuslaki: '
-          + 'viisi pilaria" (yhdistetty tänne 15.8.2026); tekniset '
-          + 'jatkeet — laudan hyväksymislista ja etukäteispuskurin '
-          + 'toteutusohje — CONTRIBUTING.md:ssä.',
-        'TYÖNJAKO JA PROSESSI: docs/roolitus.md (Fable/Opus/Sonnet, '
-          + 'viestintä, julkaisusäännöt, sessiotaulu, Fablen '
-          + 'sisältöpistokoe) — työsessioiden tärkein dokumentti.',
-        'SISÄLTÖRESEPTIT: docs/tutki-aiheet.md (lehtimalli, '
-          + 'toistuvat viat, julkaisutarkistuslista) · '
-          + 'docs/tyolista-opukselle.md (lehtityön työjono) · '
-          + 'docs/kaariteksti-sapluuna.md (kaaritekstien prosessi) · '
-          + 'docs/mantereen-resepti.md (uuden mantereen '
-          + 'työjärjestys).',
-        'AVOIN LÄHDEKOODI: CONTRIBUTING.md (ulkopuolisen '
-          + 'kontribuution ohjeet) ja README.md (esittely).',
-        'VIESTIKANAVA, EI OHJE: docs/viesti-fable.md — työsession '
-          + 'tuorein raportti Fablelle; sisältö vaihtuu jatkuvasti.',
-        'EI OHJEITA: docs/arkisto/ (vanhentuneet tilannekuvat ja '
-          + 'toteutetut suunnitelmat — arkistoitu otsikkohuomautuksin) '
-          + 'ja docs/raportit/ (kertaraportit). Tilannekuva '
-          + 'arkistoidaan HETI kun sen sessio päättyy tai suunnitelma '
-          + 'on toteutettu — vanhentunut "lue tämä ensin" -paperi on '
-          + 'rikkinäisen puhelimen pahin muoto.',
-        'TEKNINEN ITSEDOKUMENTAATIO: työkalujen (tools/*.mjs) '
-          + 'alkukommentit ovat kunkin työkalun käyttöohje, ja '
-          + 'testit (tests/) vartioivat sääntöjä koneellisesti — '
-          + 'sääntö, jonka voi valvoa testillä, kirjataan testiksi '
-          + 'eikä muistilistaksi.',
-        'TYÖHUONE INTEGROIDAAN PELIIN (omistajan linjaus 15.8.2026): '
-          + 'kehittäjävivun takana pelin päävalikossa on Kehittäjä-'
-          + 'osio, josta Raamattu ja työhuoneen tilannetaulut '
-          + 'luetaan pelin sisällä lehtinä. Uudet työhuonenäkymät '
-          + 'tuodaan jatkossa samaa reittiä peliin sen sijaan, että '
-          + 'ne jäisivät erilliselle sivustolle.',
+        'Tieto kulkee sessiolta toiselle vain kirjoitettuna. Tämä '
+          + 'kartta on täydellinen: dokumentti, jota ei ole listalla, '
+          + 'ei ole ohje. Testi valvoo (tests/dokumentit.test.mjs).',
+        'CLAUDE.md — sisääntulo, osoittaa tänne.',
+        'docs/tarina.md + docs/isoisan-raamattu.md — tarinan kaanon '
+          + '(vain Fable kirjoittaa).',
+        'docs/roolitus.md — työnjako, viestintä, julkaisusäännöt, '
+          + 'pistokokeet.',
+        'docs/tutki-aiheet.md, docs/tyolista-opukselle.md, '
+          + 'docs/kaariteksti-sapluuna.md, docs/mantereen-resepti.md '
+          + '— sisältöreseptit.',
+        'CONTRIBUTING.md — avoin lähdekoodi + tekniset periaatteet. '
+          + 'README.md — esittely.',
+        'docs/viesti-fable.md — viestikanava, ei ohje. docs/arkisto/ '
+          + 'ja docs/raportit/ — ei ohjeita; tilannekuva arkistoidaan '
+          + 'heti kun se vanhenee.',
+        'Työkalujen alkukommentit ovat käyttöohjeita; sääntö, jonka '
+          + 'kone voi valvoa, kirjataan testiksi.',
+        'Työhuone integroidaan peliin kehittäjävivun taakse '
+          + '(Kehittäjä-valikko) — ei erillisiä näkymiä.',
       ],
     },
   ],
@@ -109147,114 +109111,47 @@ const RAAMATTU = {
  */
 
 const TILANNE = {
-  paivitetty: '15.8.2026 — suururakkapäivä (v679–v697)',
-  tavoite: 'Vuorokauden sato: kuvatekstiurakka KOKONAAN valmis '
-    + '(3 627 selitettä, ylitykset 569 → 0), Siperian kahdeksan '
-    + 'kaupunkia mainissa, neljä zoomattavaa reunuskarttaa '
-    + '(Berliini, Lontoo, Pariisi, Helsinki) satelliitteineen, '
-    + 'lukijan automoodi + otsikkotauot + taustan väistö, '
-    + 'taustaäänet tasattu (-33 LUFS), ElevenLabs-äänitteet takaisin '
-    + 'ajantasaisiin merkintöihin, etukäteispuskurit, ja Raamattu + '
-    + 'Tilannelehti luettavina pelissä. Matkakirjatekstien uudistus '
-    + 'odottaa Raamatun avointen osioiden läpikäyntiä omistajan '
-    + 'kanssa.',
+  paivitetty: '15.8.2026 — v679–v699',
+  tavoite: 'Kuvatekstiurakka valmis (569 → 0). Siperia valmis (8 '
+    + 'kaupunkia). Reunuskartat + satelliitit 4 kaupungilla. Lukijan '
+    + 'automoodi, otsikkotauot, väistö. Äänet tasattu. Esipuskurit. '
+    + 'Raamattu ja Tilannelehti pelissä. Matkakirjatekstit odottavat '
+    + 'Raamatun läpikäyntiä.',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'päätoimittaja',
       tila: 'tyossa',
-      tehtava: 'Koordinoi työsessiot (perustamisprompteilla — '
-        + 'herätteet eivät toimi), mergeää PR:t pistokokeineen '
-        + '(vertaa-sisaltodiff), julkaisee omat lukija-, ääni- ja '
-        + 'integraatiotyöt. Valvontajärjestelmä: sisältöpistokoe + '
-        + 'konetestit (äänimittaus, dokumenttikartta).',
-      seuraavaksi: 'Opus 17:n nähtävyysjuttujen merge; sitten '
-        + 'värikartan kytkentä ja miniatyyripilotti omistajan '
+      tehtava: 'Koordinointi, merget pistokokein, omat lukija- ja '
+        + 'äänityöt. Työsessiot vain perustamisprompteilla.',
+      seuraavaksi: 'Värikartan kytkentä + miniatyyripilotti '
         + 'palettipäätöksen jälkeen.',
-    },
-    {
-      tekija: 'Opus 17',
-      rooli: 'nähtävyysjutut',
-      tila: 'tyossa',
-      tehtava: 'Neljä uutta nähtävyysjuttua (Panthéon, Luxembourgin '
-        + 'puisto, Kallion kirkko, Linnanmäki) v693:n uusille '
-        + 'kartakohteille — laatu ensin, Commons-kuvat tarkistuksin.',
-      seuraavaksi: 'PR → Fablen sisältöpistokoe (kaikki 4 juttua '
-        + 'luetaan kokonaan) → merge → sessio arkistoidaan.',
     },
   ],
   odottaaPaatosta: [
-    'Värikarttapaletti (Berliinin näyte toimitettu 15.8.): '
-      + 'kytketäänkö togglen taakse satelliitin tilalle + '
-      + 'miniatyyripilotti klikkausmallilla.',
-    'Zoom- ja reunuskarttojen skaalaus lopuille ~49 kaupungille.',
-    'Raamatun luonnososioiden läpikäynti yhdessä — sen jälkeen '
-      + 'kaikki matkakirjatekstit uusiksi ja luennat uudelleen.',
-    'Suomenlinnan kainalon suuntateksti satelliittinäkymään (3 '
-      + 'vaihtoehtoa Opus 13:n raportissa) — vai jätetään.',
-    'v685: taustan pieni aaltoliike jatkuvan luennan '
-      + 'sivunvaihdossa — pidetäänkö väistö pohjassa sivujen yli?',
-    'v692: muutama luonnostaan ylikuuma taustaraita jäi ~3 dB '
-      + 'tavoitteen yli (kerroinraja) — vaihdetaanko raidat?',
-    'Balladiääni ja lukunopeuden tuntuma — omistajan kuuntelu.',
+    'Värikarttapaletti (näyte toimitettu 15.8.)',
+    'Kartta- ja zoomiskaalaus ~49 kaupunkiin',
+    'Raamatun luonnososioiden läpikäynti',
+    'Kainalon suuntateksti satelliittiin — vai ei',
+    'v685: taustan aaltoliike sivunvaihdossa',
+    'v692: ylikuumien raitojen vaihto',
+    'Balladiääni ja lukunopeus — kuuntelu',
   ],
 };
 
 /**
- * Testattavaa juuri nyt: uusimmat ominaisuudet ja mistä ne löytää.
- * Fable päivittää tätä julkaisujen tahdissa — Testaa-välilehti
- * näyttää listan pelilinkkien vieressä. Uusin ensin. Vanhat rivit
- * siivotaan pois kun ne on katsottu tai ne vanhenevat.
+ * Testattavaa juuri nyt. ÄÄRIMMÄISEN MINIMALISTINEN (omistajan
+ * linjaus 15.8.2026: "tavuviiva ja muutama sana per kohta
+ * korkeintaan — muistan itse kyllä suurimman osan"). Uusin ensin;
+ * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
-  {
-    otsikko: 'Kehittäjän liitteet: Raamattu ja Tilannelehti pelissä (v697)',
-    ohje: 'Kytke kehittäjätila ja avaa pelin hampurilaisvalikko: '
-      + 'uudesta Kehittäjä-osiosta aukeavat Raamattu ja '
-      + 'Tilannelehti luettavina lehtinä — sivunkäännöt, sisällys, '
-      + 'lukija ja puskurit toimivat kuten muissakin lehdissä. '
-      + 'Työhuone integroidaan jatkossa peliin tätä reittiä.',
-  },
-  {
-    otsikko: 'ElevenLabs-äänitteet palasivat ajantasaisiin merkintöihin (v694)',
-    ohje: 'Saavu kaupunkiin, jonka matkakirjateksti ei ole muuttunut '
-      + '(esim. useimmat Euroopan ja Afrikan kaupungit): merkinnän '
-      + 'lukee taas Viisas Kertoja -äänite. Muuttuneet tekstit '
-      + '(Madrid, Berliini, Tukholma) ja äänitteettömät kaupungit '
-      + 'striimataan lukijaäänellä kuten ennen. 39/42 äänitettä oli '
-      + 'ajan tasalla. Uusia äänitteitä ei generoida ennen '
-      + 'matkakirjatekstien uudistusta.',
-  },
-  {
-    otsikko: 'Taustaäänet tasattu (v692)',
-    ohje: 'Kierrä muutamaa kaupunkia ja kuuntele taustaääniä: tasot '
-      + 'mitattiin K-painotetulla LUFS-mittarilla ja kaikki 125 raitaa '
-      + 'ajettiin -33 LUFSin tavoitteeseen — hajonta oli 35 dB, nyt '
-      + '4 dB. Kova raita ei enää huuda eikä hiljainen huku puheen '
-      + 'väistön alle. Etusivun lähtöaula soi entisellä tasollaan. '
-      + 'Venäjän kaupungeissa radio kuuluu taas (v691).',
-  },
-  {
-    otsikko: 'Otsikkotauko ja yläotsikko sivunvaihdossa (v687)',
-    ohje: 'Kuuntele sivu, jolla on väliotsikoita: ennen otsikolla '
-      + 'alkavaa kohtaa lukija pitää nyt selvästi pidemmän tauon '
-      + '(~1 s) kuin tavallisten kappaleiden välissä. Jatkuvassa '
-      + 'luennassa sivunvaihdon jälkeen luetaan ensin sivun '
-      + 'yläotsikko (esim. "Historia") — käsin käynnistetty luenta '
-      + 'alkaa yhä suoraan leipätekstistä, ja masto/lehden nimi jää '
-      + 'lukematta kummassakin.',
-  },
-  {
-    otsikko: 'Taustan väistö luennan alla (v685)',
-    ohje: 'Käynnistä lehden luenta äänimaiseman soidessa: taustan '
-      + 'pitäisi laskea pehmeällä 650 ms feidillä selvästi puheen alle '
-      + 'ja nousta samaa liukua takaisin, kun luenta loppuu tai '
-      + 'pysäytetään. Sama väistö koskee nyt kaikkia luentapolkuja — '
-      + 'myös kaiuttimen sivuluentaa ja pöllön striimattua vastausta, '
-      + 'jotka eivät aiemmin väistäneet lainkaan. Jatkuvassa luennassa '
-      + 'tausta kohoaa hetkeksi sivunvaihdon hengähdyksen ajaksi — '
-      + 'sano, jos se häiritsee.',
-  },
+  'v699 — nähtävyysjutut: Panthéon, Luco, Kallio, Lintsi',
+  'v697 — Kehittäjä-valikko: Raamattu- ja Tilannelehti',
+  'v695/v696 — esipuskurit; reunuskartat 4 kaupunkia',
+  'v694 — ElevenLabs-äänitteet takaisin merkintöihin',
+  'v692 — taustaäänet tasattu; v691 Venäjän radio',
+  'v683–v687 — lukijan automoodi, otsikkotauot, väistö',
 ];
 
 // ===== js/packs/tarinakaari.js =====
@@ -172497,10 +172394,11 @@ class UI {
     }, {
       id: 'tilanne-testattavaa',
       nimi: 'Testattavaa',
-      nostot: (TESTATTAVAA ?? []).map((kohta) => ({
-        otsikko: kohta.otsikko,
-        teksti: kohta.ohje,
-      })),
+      // Äärimmäisen minimalistinen (omistajan linjaus 15.8.2026):
+      // pelkkiä viivarivejä, rivi per kappale.
+      nostot: [{
+        teksti: (TESTATTAVAA ?? []).map((rivi) => `— ${rivi}`).join('\n\n'),
+      }],
     }];
     this.avaaKehittajaLehti('Tilannelehti', sivut);
   }
@@ -179593,6 +179491,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 700, teksti: 'Raamattu ja tilannetaulut tiiviiksi (selkeys ensin)' },
   { v: 699, teksti: 'Omat jutut Panthéonille, Lucolle, Kalliolle, Lintsille' },
   { v: 698, teksti: 'Raamattu ilman 2.0:aa ja tyohuoneen suursiivous' },
   { v: 697, teksti: 'Raamattu ja Tilannelehti luettavina pelissä (kehittäjä)' },
@@ -180389,7 +180288,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.699';
+const APP_VERSION = '2026-08-09.700';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

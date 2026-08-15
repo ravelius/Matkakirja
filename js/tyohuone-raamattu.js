@@ -16,16 +16,12 @@
 
 export const RAAMATTU = {
   paivitetty: '15.8.2026',
-  johdanto: 'Koko pelin idea yhdessä dokumentissa. TAVOITE '
-    + '(omistajan linjaus 11.8.2026): tämän lukeminen riittää '
-    + 'yksinään pelin kehittämiseen ja uusien matkakirjatekstien '
-    + 'kirjoittamiseen — muista muistiinpanoista luovutaan, kun '
-    + 'Raamattu on valmis (vain tekniset toteutusohjeet jäävät '
-    + 'erikseen, eikä omistajan tarvitse tuntea niitä). Käydään läpi '
-    + 'yhdessä kohta kohdalta; Fable täydentää itse puuttuvan '
-    + 'oleellisen. Kun Raamattu on valmis, KAIKKI '
-    + 'matkakirjamerkinnät, kohtaamiset ja aarrelöytötekstit '
-    + 'kirjoitetaan uusiksi sen mukaisiksi.',
+  johdanto: 'Koko pelin idea yhdessä dokumentissa: tämän lukeminen '
+    + 'riittää pelin kehittämiseen (tekniset ohjeet erikseen). '
+    + 'Käydään läpi omistajan kanssa osio kerrallaan; valmis '
+    + 'Raamattu laukaisee kaikkien matkakirjatekstien uudistuksen. '
+    + 'ILMAISU: mahdollisimman lyhyt ja yksiselitteinen — selkeys '
+    + 'tärkeintä (omistaja 15.8.2026).',
   osiot: [
     {
       otsikko: 'Ydinajatus ja kohderyhmä',
@@ -681,16 +677,12 @@ export const RAAMATTU = {
           + 'aarretekstit (ElevenLabs v3); teksti ja luenta '
           + 'vastaavat toisiaan sanasta sanaan, siksi arvottavia '
           + 'pulmia ei lueta.',
-        'MATKAKIRJAN LUENTAPOLKU (omistajan linjaus 15.8.2026, '
-          + 'sitoo myös työsessiot): ElevenLabs-äänite soi, kun '
-          + 'merkinnän luenta-kenttä vastaa nykyistä näyttötekstiä '
-          + '(vertailu: luentaVastaaTekstia, aani-ehdokkaat.js). '
-          + 'Kun tekstiä muutetaan, äänite putoaa itsestään pois ja '
-          + 'merkintä striimataan lukijaäänellä — UUSIA ÄÄNITTEITÄ '
-          + 'EI GENEROIDA välivaiheessa. Kaikki matkakirjatekstit '
-          + 'uudistetaan vasta, kun Raamatun avoimet osiot on '
-          + 'käyty omistajan kanssa valmiiksi; sen jälkeen luennat '
-          + 'generoidaan uusiksi yhdellä kertaa.',
+        'MATKAKIRJAN LUENTAPOLKU (omistaja 15.8.2026): äänite soi '
+          + 'kun luenta-kenttä vastaa näyttötekstiä '
+          + '(luentaVastaaTekstia); muuttunut teksti striimataan. '
+          + 'Uusia äänitteitä EI generoida — kaikki luennat '
+          + 'uusitaan kerralla, kun Raamattu on valmis ja tekstit '
+          + 'kirjoitettu uusiksi.',
         'Lisäksi tehosteäänet, mietintämusiikki, äänimaisemat ja '
           + 'musiikkinäytteet lehtikaupungeissa. Uudet taustaäänet '
           + 'LUFS-mitataan heti luotaessa (testi valvoo).',
@@ -776,57 +768,29 @@ export const RAAMATTU = {
       ],
     },
     {
-      otsikko: 'Ohjedokumenttien kartta (rikkinäistä puhelinta vastaan)',
+otsikko: 'Ohjedokumenttien kartta (rikkinäistä puhelinta vastaan)',
       tila: 'luonnos (omistajan tilaus 15.8.2026)',
       kohdat: [
-        'PERIAATE: kehitys vaihtuu sessiolta toiselle, ja tieto saa '
-          + 'kulkea vain kirjoitettuna — ei tiivistelmien ketjuna. '
-          + 'Raamattu on ainoa paikka oleellisille linjauksille, '
-          + 'ja TÄMÄ osio on täydellinen kartta kaikkiin muihin '
-          + 'ohjedokumentteihin. Jos dokumenttia ei ole tällä '
-          + 'listalla, se EI ole ohje. Uusi ohjedokumentti lisätään '
-          + 'tähän samassa PR:ssä, jossa se syntyy — testi '
-          + '(tests/dokumentit.test.mjs) valvoo tätä koneellisesti.',
-        'SISÄÄNTULO: CLAUDE.md — jokaisen session ensimmäinen '
-          + 'luettava; osoittaa tänne.',
-        'TARINAN KAANON (sitova, vain Fable kirjoittaa): '
-          + 'docs/tarina.md (hahmot, Aarnin luettelo, sävysäännöt) '
-          + 'ja docs/isoisan-raamattu.md (matkakirjamerkintöjen '
-          + 'dekkarisäännöt, imu aikuiselle).',
-        'PELIN PERUSTUSLAKI: Raamatun oma osio "Perustuslaki: '
-          + 'viisi pilaria" (yhdistetty tänne 15.8.2026); tekniset '
-          + 'jatkeet — laudan hyväksymislista ja etukäteispuskurin '
-          + 'toteutusohje — CONTRIBUTING.md:ssä.',
-        'TYÖNJAKO JA PROSESSI: docs/roolitus.md (Fable/Opus/Sonnet, '
-          + 'viestintä, julkaisusäännöt, sessiotaulu, Fablen '
-          + 'sisältöpistokoe) — työsessioiden tärkein dokumentti.',
-        'SISÄLTÖRESEPTIT: docs/tutki-aiheet.md (lehtimalli, '
-          + 'toistuvat viat, julkaisutarkistuslista) · '
-          + 'docs/tyolista-opukselle.md (lehtityön työjono) · '
-          + 'docs/kaariteksti-sapluuna.md (kaaritekstien prosessi) · '
-          + 'docs/mantereen-resepti.md (uuden mantereen '
-          + 'työjärjestys).',
-        'AVOIN LÄHDEKOODI: CONTRIBUTING.md (ulkopuolisen '
-          + 'kontribuution ohjeet) ja README.md (esittely).',
-        'VIESTIKANAVA, EI OHJE: docs/viesti-fable.md — työsession '
-          + 'tuorein raportti Fablelle; sisältö vaihtuu jatkuvasti.',
-        'EI OHJEITA: docs/arkisto/ (vanhentuneet tilannekuvat ja '
-          + 'toteutetut suunnitelmat — arkistoitu otsikkohuomautuksin) '
-          + 'ja docs/raportit/ (kertaraportit). Tilannekuva '
-          + 'arkistoidaan HETI kun sen sessio päättyy tai suunnitelma '
-          + 'on toteutettu — vanhentunut "lue tämä ensin" -paperi on '
-          + 'rikkinäisen puhelimen pahin muoto.',
-        'TEKNINEN ITSEDOKUMENTAATIO: työkalujen (tools/*.mjs) '
-          + 'alkukommentit ovat kunkin työkalun käyttöohje, ja '
-          + 'testit (tests/) vartioivat sääntöjä koneellisesti — '
-          + 'sääntö, jonka voi valvoa testillä, kirjataan testiksi '
-          + 'eikä muistilistaksi.',
-        'TYÖHUONE INTEGROIDAAN PELIIN (omistajan linjaus 15.8.2026): '
-          + 'kehittäjävivun takana pelin päävalikossa on Kehittäjä-'
-          + 'osio, josta Raamattu ja työhuoneen tilannetaulut '
-          + 'luetaan pelin sisällä lehtinä. Uudet työhuonenäkymät '
-          + 'tuodaan jatkossa samaa reittiä peliin sen sijaan, että '
-          + 'ne jäisivät erilliselle sivustolle.',
+        'Tieto kulkee sessiolta toiselle vain kirjoitettuna. Tämä '
+          + 'kartta on täydellinen: dokumentti, jota ei ole listalla, '
+          + 'ei ole ohje. Testi valvoo (tests/dokumentit.test.mjs).',
+        'CLAUDE.md — sisääntulo, osoittaa tänne.',
+        'docs/tarina.md + docs/isoisan-raamattu.md — tarinan kaanon '
+          + '(vain Fable kirjoittaa).',
+        'docs/roolitus.md — työnjako, viestintä, julkaisusäännöt, '
+          + 'pistokokeet.',
+        'docs/tutki-aiheet.md, docs/tyolista-opukselle.md, '
+          + 'docs/kaariteksti-sapluuna.md, docs/mantereen-resepti.md '
+          + '— sisältöreseptit.',
+        'CONTRIBUTING.md — avoin lähdekoodi + tekniset periaatteet. '
+          + 'README.md — esittely.',
+        'docs/viesti-fable.md — viestikanava, ei ohje. docs/arkisto/ '
+          + 'ja docs/raportit/ — ei ohjeita; tilannekuva arkistoidaan '
+          + 'heti kun se vanhenee.',
+        'Työkalujen alkukommentit ovat käyttöohjeita; sääntö, jonka '
+          + 'kone voi valvoa, kirjataan testiksi.',
+        'Työhuone integroidaan peliin kehittäjävivun taakse '
+          + '(Kehittäjä-valikko) — ei erillisiä näkymiä.',
       ],
     },
   ],

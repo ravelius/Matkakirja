@@ -10694,10 +10694,11 @@ export class UI {
     }, {
       id: 'tilanne-testattavaa',
       nimi: 'Testattavaa',
-      nostot: (TESTATTAVAA ?? []).map((kohta) => ({
-        otsikko: kohta.otsikko,
-        teksti: kohta.ohje,
-      })),
+      // Äärimmäisen minimalistinen (omistajan linjaus 15.8.2026):
+      // pelkkiä viivarivejä, rivi per kappale.
+      nostot: [{
+        teksti: (TESTATTAVAA ?? []).map((rivi) => `— ${rivi}`).join('\n\n'),
+      }],
     }];
     this.avaaKehittajaLehti('Tilannelehti', sivut);
   }

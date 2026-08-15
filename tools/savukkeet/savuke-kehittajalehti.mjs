@@ -97,19 +97,18 @@ const tilanne = await sivu.evaluate(async () => {
   ui.vaihdaTutkiSivu(1);
   await odota(400);
   const toinen = document.querySelector('#arrival-dialog .aihe-nimi')?.textContent ?? '';
-  const testirivit = document.querySelectorAll('#arrival-dialog .leipa').length;
+  const testiSivu = document.querySelector('#arrival-dialog .leipa')?.textContent ?? '';
   return {
     auki: document.getElementById('arrival-dialog')?.open ?? false,
     ekaOk: /Tilanne/.test(eka),
     riveja: otsikot.length,
     odotus: m.TILANNE.rivit.length,
     toinenOk: /Testattavaa/.test(toinen),
-    testattavia: m.TESTATTAVAA.length,
-    testirivit,
+    ekaRiviOk: testiSivu.includes(m.TESTATTAVAA[0]),
   };
 });
 vaadi('Tilannelehti aukeaa ja Testattavaa-sivu seuraa',
-  tilanne.auki && tilanne.ekaOk && tilanne.toinenOk && tilanne.testirivit >= tilanne.testattavia,
+  tilanne.auki && tilanne.ekaOk && tilanne.toinenOk && tilanne.ekaRiviOk,
   JSON.stringify(tilanne));
 
 mkdirSync('/tmp/matkakirja-kaappaukset', { recursive: true });
