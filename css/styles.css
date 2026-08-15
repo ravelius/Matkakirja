@@ -10287,6 +10287,20 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   border-color: #2c2318;
 }
 
+/*
+ * PIIRROSPISTE PYSYY TAUSTATTOMANA MYÖS HOVERISSA. Yllä oleva
+ * korostus (0,4,1) voittaa piirrossäännön background: nonen (0,3,0),
+ * ja iOS jättää napautetun napin tahmeaan hover-tilaan — leikatun
+ * kuvan taakse ilmestyi kullanvärinen neliö, joka katosi vasta kun
+ * hover siirtyi toiseen nappiin (omistajan havainto 15.8.2026;
+ * työpöydällä ei näy, koska ohjelmallinen klikkaus ei aseta hoveria).
+ */
+.dialog button.maakartta-piste.kohde-piirros:hover:not(:disabled),
+.dialog button.maakartta-piste.kohde-piirros:focus-visible {
+  background: none;
+  border-color: transparent;
+}
+
 /* Kohdekartan pisteet erottuvat kaupunkipisteistä kullalla —
  * huvipuistokartan merkkejä, joista useimmat voi avata. */
 .maakartta-piste.kaupunki-kohde {
@@ -10579,16 +10593,16 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * piirros kasvaa paikallaan ja nimikyltti aukeaa sen alle (tai ylle
  * alareunassa, .kyltti-ylle); uusi napautus palauttaa koon —
  * ikkunaa ei avata. Skaala jakaa zoomin kuten perussääntö, jotta
- * suurennos on sama joka zoomiasennossa. Kerroin 3,5 (omistajan
- * tilaukset 15.8.2026: "Saa kasvaa koko 3x" ja "vähän isompi";
- * 48 px → 168 px).
+ * suurennos on sama joka zoomiasennossa. Kerroin 4 (omistajan
+ * tilaukset 15.8.2026: "Saa kasvaa koko 3x", "vähän isompi" ja
+ * "vielä hiukan isompi"; 48 px → 192 px).
  */
 .maakartta-piste.kohde-numero.kohde-piirros {
   transition: transform 160ms ease;
 }
 
 .kartta-lava .maakartta-piste.kohde-numero.kohde-piirros.valittu {
-  transform: translate(-50%, -50%) scale(calc(3.5 / var(--zoom)));
+  transform: translate(-50%, -50%) scale(calc(4 / var(--zoom)));
   z-index: 5;
 }
 
@@ -10609,10 +10623,10 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   padding: 0.07rem 0.24rem;
   white-space: nowrap;
   font-family: var(--font-type);
-  /* Kyltti perii napin 3,5-kertaisen skaalan — mitat ovat siksi
+  /* Kyltti perii napin 4-kertaisen skaalan — mitat ovat siksi
    * murto-osia, jotta näkyvä koko on tavallista tekstiä ja
    * hiusviivareunus. */
-  font-size: 0.24rem;
+  font-size: 0.21rem;
   letter-spacing: 0.03em;
   color: #2c1e07;
   background-color: #f5f0e2;
