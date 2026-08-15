@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 699, teksti: 'Omat jutut Panthéonille, Lucolle, Kalliolle, Lintsille' },
   { v: 698, teksti: 'Raamattu ilman 2.0:aa ja tyohuoneen suursiivous' },
   { v: 697, teksti: 'Raamattu ja Tilannelehti luettavina pelissä (kehittäjä)' },
   { v: 696, teksti: 'Kohdekartat jatkuvat reunojen yli neljalla kaupungilla' },

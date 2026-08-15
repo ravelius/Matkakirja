@@ -1790,6 +1790,51 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    'Luxembourgin puisto': {
+      aika: '1612',
+      teksti: 'Kun kuningas Henrik IV murhattiin 1610, hänen leskensä Maria '
+          + 'de’ Medici jäi hallitsemaan Ranskaa poikansa puolesta — eikä '
+          + 'viihtynyt Louvressa. Hän osti vuonna 1612 Luxembourgin '
+          + 'kartanon ja rakennutti sen viereen palatsin, joka jäljitteli '
+          + 'hänen kotikaupunkinsa Firenzen Palazzo Pittiä. Puistoon '
+          + 'istutettiin 2 000 jalavaa, ja firenzeläinen '
+          + 'suihkulähdemestari Tommaso Francini muotoili maisemasta '
+          + 'sellaisen, jollaisen kuningatar oli lapsena tuntenut.'
+        + '\n\n'
+        + 'Puisto on kasvanut ja kutistunut vallanpitäjien mukana. Alun '
+          + 'kahdeksasta hehtaarista se laajeni kolmeenkymmeneen 1630-'
+          + 'luvulla ja vallankumouksen jälkeen neljäänkymmeneen, kun '
+          + 'naapuriluostarin maat takavarikoitiin. Napoleon III:n '
+          + 'katutyöt veivät 1860-luvulla noin seitsemän hehtaaria, ja '
+          + 'Medici-suihkulähde jouduttiin purkamaan ja kokoamaan '
+          + 'uudelleen toiseen paikkaan. Nykyään puiston omistaa senaatti, '
+          + 'joka kokoontuu palatsissa.'
+        + '\n\n'
+        + 'Pariisilaiset sanovat puistoa lyhyesti Lucoksi. '
+          + 'Kahdeksankulmaisella altaalla lapset uittavat purjeveneitä, '
+          + 'nukketeatteri on toiminut puistossa vuodesta 1933, ja '
+          + 'patsaita on toista sataa — niiden joukossa kaksikymmentä '
+          + 'Ranskan kuningatarta ja Bartholdin ensimmäinen pieni malli '
+          + 'Vapaudenpatsaasta. Victor Hugo pani Kurjissa Mariuksen ja '
+          + 'Cosetten kohtaamaan juuri täällä.',
+      kuvat: [
+        {
+          tiedosto: 'Sunday in the Luxembourg Gardens, Paris May 2014.jpg',
+          selite: 'Kesäsunnuntai puistossa: väkeä nurmella ja puiston omilla '
+            + 'metallituoleilla, oikealla kaidepylväikkö kivimaljakkoineen '
+            + 'ja taustalla senaatin palatsi.',
+          lahde: 'missbossy, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Albert Edelfelt - The Luxembourg Gardens, Paris.jpg',
+          selite: 'Albert Edelfeltin näkymä puistosta vuodelta 1887: naisia '
+            + 'tummissa puvuissa puiston tuoleilla, punatukkainen tyttö '
+            + 'vanteineen ja lapsia leikkimässä hiekalla.',
+          lahde: 'Albert Edelfelt, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
     'Sacré-Cœur': {
       aika: '1875–1914',
       teksti: 'Basilika Sacré-Cœur eli Pyhän sydämen kirkko rakennettiin '
@@ -1814,6 +1859,59 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Paris - Basilique du Sacré-Cœur de Montmartre - 2025-09-30 23-31-57 001.jpg',
           selite: 'Sacré-Cœurin basilika Montmartren kukkulalla.',
           lahde: 'Giò Terra, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Panthéon: {
+      aika: '1758–1790',
+      teksti: 'Kuningas Ludvig XV sairastui vakavasti sotaretkellä 1744 ja '
+          + 'lupasi, että jos hän toipuu, Pariisin suojeluspyhimys '
+          + 'Geneviève saa rappeutuneen kirkkonsa tilalle uuden. Kuningas '
+          + 'toipui, ja Jacques-Germain Soufflot’n suunnitteleman kirkon '
+          + 'perustukset laskettiin 1758. Rahapula venytti työtä '
+          + 'vuosikymmeniä: Soufflot kuoli 1780, ja hänen oppilaansa '
+          + 'Jean-Baptiste Rondelet sai rakennuksen valmiiksi vasta 1790. '
+          + 'Kumpikaan, ei kuningas eikä arkkitehti, ehtinyt nähdä sitä.'
+        + '\n\n'
+        + 'Kirkko valmistui juuri kun vallankumous oli alkanut, ja 1791 '
+          + 'kansalliskokous määräsi sen suurmiesten hautapaikaksi. '
+          + 'Ensimmäisenä kryptaan kannettiin kreivi Mirabeau — ja '
+          + 'muutamaa kuukautta myöhemmin hänet kannettiin ulos, kun '
+          + 'hänen salaiset yhteytensä hoviin paljastuivat. Voltairen '
+          + 'tuhkat tuotiin heinäkuussa 1791. Jotta sisätila tuntuisi '
+          + 'hautaholvilta eikä kirkolta, arkkitehti Quatremère de Quincy '
+          + 'muurasi umpeen 38 rakennuksen 42 ikkunasta — valoisaksi '
+          + 'suunniteltu sali muuttui hämäräksi.'
+        + '\n\n'
+        + 'Vuonna 1851 fyysikko Léon Foucault ripusti kupolista 67 metriä '
+          + 'pitkän heilurin ja näytti yleisölle, ettei heilahdustaso '
+          + 'käänny vaan maa kääntyy sen alla. Kirkon vaatimuksesta laite '
+          + 'purettiin jo saman vuoden joulukuussa, mutta kopio heiluu '
+          + 'holvin alla edelleen. Kryptassa lepäävät muiden muassa '
+          + 'Voltaire, Rousseau, Victor Hugo, Émile Zola ja pistekirjoituksen '
+          + 'keksijä Louis Braille; Marie Curie siirrettiin sinne 1995 '
+          + 'ensimmäisenä naisena omien ansioidensa perusteella.',
+      lainaus: {
+        teksti: 'AUX GRANDS HOMMES LA PATRIE RECONNAISSANTE — Suurmiehille '
+          + 'kiitollinen isänmaa.',
+        lahde: 'Päätykolmion alle hakattu omistuskirjoitus, joka lisättiin '
+          + '1791, poistettiin kuningasvallan palattua ja palautettiin 1830',
+      },
+      kuvat: [
+        {
+          tiedosto: 'Panthéon, Paris 15 August 2011.jpg',
+          selite: 'Kupoli lepää pylväskehän päällä, ja oikealla kohoaa '
+            + 'korinttilainen pylväikkö päätykolmioineen. Pitkä sivuseinä '
+            + 'on umpinainen — sieltä ikkunat muurattiin pois.',
+          lahde: 'Michal Osmenda, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Foucault pendulum at Panthéon de Paris, August 2023.JPG',
+          selite: 'Heilurin kullattu pallo liikkuu marmorilattian yllä. '
+            + 'Lattian kehälle merkityt numerot näyttävät, miten '
+            + 'heilahdustaso kiertää päivän mittaan.',
+          lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -1879,6 +1977,43 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    Linnanmäki: {
+      aika: '1950',
+      teksti: 'Kuusi lastensuojelujärjestöä vuokrasi vuonna 1950 '
+          + 'Alppiharjun kallioisen mäen — aluksi vain kolmeksi vuodeksi '
+          + '— ja perusti sinne huvipuiston kerätäkseen rahaa työhönsä. '
+          + 'Mäki oli saanut nimensä kahdesta vesitornista eli '
+          + 'vesilinnasta, ja Vesilinnanmäestä lyheni Linnanmäki. Tornit '
+          + 'seisovat paikallaan yhä: vanhemmassa on varasto, uudemman '
+          + 'sisään on rakennettu vuoristorata Linnunrata.'
+        + '\n\n'
+        + 'Puiston tunnetuimman laitteen piti olla väliaikainen. Puinen '
+          + 'Vuoristorata rakennettiin talvella 1950 puiston omin voimin '
+          + 'tanskalaisen Valdemar Lebechin piirustusten mukaan, ja se '
+          + 'avattiin 13. heinäkuuta 1951 osaksi siksi, että se '
+          + 'houkuttelisi väkeä Helsingin olympialaisiin 1952. Käyttöiäksi '
+          + 'arvioitiin viisitoista vuotta, mutta väliaikaista lupaa '
+          + 'jatkettiin kerta toisensa jälkeen, kunnes rata katsottiin '
+          + 'pysyväksi. Puuosia on uusittu niin ahkerasti, että vuoteen '
+          + '2015 mennessä jokainen oli vaihdettu ainakin viidesti — '
+          + 'alkuperäisiä ovat enää vaunujen tammirungot.'
+        + '\n\n'
+        + 'Tuotot menevät yhä lastensuojeluun. Lasten Päivän Säätiö jakoi '
+          + 'perustajajärjestöilleen vuonna 2023 noin 4,5 miljoonaa euroa '
+          + 'ja kaikkiaan jo yli 130 miljoonaa. Vanhin laite on Saksassa '
+          + '1896 valmistettu Karuselli, joka on pyörinyt Linnanmäellä '
+          + 'vuodesta 1954, ja kävijöitä on noin miljoona vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'Linnanmäki Water Tower 2.jpg',
+          selite: 'Uudempi vesitorni, jonka sisään vuoristorata Linnunrata '
+            + 'on rakennettu. Tiiliseinässä lukee laitteen nimi, ja '
+            + 'tornin juurella kulkee huvipuistoyleisöä.',
+          lahde: 'Tatu Kosonen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
     Päärautatieasema: {
       aika: '1919',
       teksti: 'Nykyinen asemarakennus syntyi arkkitehti Eliel Saarisen '
@@ -1937,6 +2072,44 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Kasvitieteellisen puutarhan lampi ilta-auringossa, '
             + 'kaupungin talot kuvastuvat veteen.',
           lahde: 'Marit Henriksson, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kallion kirkko': {
+      aika: '1908–1912',
+      teksti: 'Kallion kirkko nousee jyrkän mäen päälle keskelle vanhaa '
+          + 'työväen kaupunginosaa. Lars Sonck suunnitteli sen '
+          + 'kansallisromantiikan hengessä: kantavat seinät muurattiin '
+          + 'punatiilestä ja verhoiltiin karkeaksi jätetyllä '
+          + 'suomalaisella graniitilla, jota louhittiin Uudenkaupungin '
+          + 'seudulta. Peruskivi laskettiin 13. heinäkuuta 1908, ja '
+          + 'kirkko vihittiin käyttöön 1. syyskuuta 1912. Torni on 65 '
+          + 'metriä korkea ja ristin huippu 94 metriä merenpinnan '
+          + 'yläpuolella.'
+        + '\n\n'
+        + 'Kirkko sulkee 2,5 kilometrin pituisen suoran katulinjan, joka '
+          + 'kulkee etelästä Unioninkatua ja Siltasaarenkatua pitkin '
+          + 'suoraan kirkon ovelle. Torni on ollut muutakin kuin '
+          + 'kellotapuli: itsenäistymisen aikoihin tolstoilaiset ottivat '
+          + 'kirkon tukikohdakseen, sotavuosina tornissa oli yksi '
+          + 'Helsingin ilmavalvontapisteistä, ja 1970-luvulle asti se '
+          + 'palveli kaupungin maanmittauksen kiintopisteenä. Selkeällä '
+          + 'säällä sieltä näkee Viroon asti.'
+        + '\n\n'
+        + 'Tornissa on seitsemän saksalaista pronssikelloa, ja niillä '
+          + 'soitetaan joka päivä kello 12 ja 18 sävelmä, jonka Jean '
+          + 'Sibelius sävelsi varta vasten kirkon vihkiäisiin. '
+          + 'Alttaritauluna on Hannes Autereen vuonna 1956 veistämä '
+          + 'puureliefi, jonka aiheena on kutsu "Tulkaa minun tyköni" — '
+          + 'hahmojen malleina olivat kalliolaiset itse.',
+      kuvat: [
+        {
+          tiedosto: 'Kallio Church Helsinki.jpg',
+          selite: 'Graniittitorni talvitaivasta vasten: kuparikatot ovat '
+            + 'patinoituneet vihreiksi ja huipulla on risti. Mäen '
+            + 'rinteessä kasvaa lumisia kuusia.',
+          lahde: 'Acediscovery, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       lahde: 'Wikipedia',
