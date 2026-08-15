@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v725 — lippuikkunan iso kuva reunasta reunaan',
   'v724 — piirrokset skaalautuvat zoomissa; peruskoko 40 px',
   'v723 — kultaneliön OIKEA syy: hover-korostus; koko 4×',
   'v722 — piirrokset PNG:inä: neliö varmasti pois',
