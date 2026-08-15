@@ -8474,6 +8474,15 @@ button.lukija-nappi.lukee,
  * rajataan samaan suhteeseen, jotta rivi pysyy tasakorkuisena. */
 .lehti-paakuva .lehti-kuva img { max-height: 360px; object-fit: cover; }
 
+/* Avauskuvakaruselli etusivun isossa kuvapaikassa (omistajan tilaus
+ * 15.8.2026): panoraama saa olla pääkuvaa korkeampi muttei viedä koko
+ * ruutua — leveys täyteen ja korkeus katossa kuten pääkuvallakin. */
+.lehti-paakuva .nahtavyys-kuva {
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+}
+
 .lehti-kuvarivi .lehti-kuva img { aspect-ratio: 4 / 3; object-fit: cover; }
 
 .lehti-kuva .kuvateksti {
@@ -10332,6 +10341,21 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   margin-top: 1.1rem;
   padding-top: 0.7rem;
   border-top: 3px double rgba(70, 51, 31, 0.75);
+}
+
+/* Matkailijalle-osio kartan perässä (omistajan tilaus 15.8.2026):
+ * sama kaksoisviivaerotin ja otsikkotyyli kuin karttalohkolla, ja
+ * opasnappi keskitetään omalle rivilleen. */
+.matkailijalle {
+  clear: both;
+  margin-top: 1.1rem;
+  padding-top: 0.7rem;
+  border-top: 3px double rgba(70, 51, 31, 0.75);
+}
+
+.matkailijalle .wiki-btn {
+  display: block;
+  margin: 0.2rem auto 0;
 }
 
 .kaupunkikartta-otsikko {

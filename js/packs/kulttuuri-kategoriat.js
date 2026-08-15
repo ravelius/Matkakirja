@@ -6756,6 +6756,94 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Avauskuvat (omistajan tilaus 15.8.2026: "laadukas vaakakuva
+       * jossa näkyy itse kaupunkia enemmän, sellainen yleisnäkymä.
+       * ja niitä voisi olla useampi karusellissa"): etusivun iso
+       * kuvapaikka selaa näitä yleisnäkymiä; kansikuvat siirtyvät
+       * pikkuriville. Lisenssit tarkistettu Commonsin API:sta
+       * 15.8.2026, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Panorama view on Copenhagen from Church of Our Saviour (2).jpg',
+          selite: 'Ilta-aurinko kattojen yllä Vapahtajan kirkon tornista '
+            + 'katsottuna. Keskellä kohoaa Christiansborgin torni, oikealla '
+            + 'vihreä Nikolain kirkon torni, ja talorivit jatkuvat '
+            + 'tasaisina horisonttiin — korkeita taloja ei näy missään.',
+          lahde: 'Erwin Verbruggen, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Copenhagen, view from Rundetårn with Rosenborg Castle, 20220617 1004 6716.jpg',
+          selite: 'Näkymä Rundetårnin huipulta: punatiilikattojen takana '
+            + 'Rosenborgin linna vihreine kupolikattoineen ja Kuninkaan '
+            + 'puutarhan puut. Taustalla erottuvat voimalan kolme piippua '
+            + 'ja Juutinrauman salmi.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Panorama of Nyhavn (24047322088).jpg',
+          selite: 'Nyhavnin kanaali: siniset, keltaiset ja punaiset talot '
+            + 'seisovat rivissä rantalaiturin takana, ja kanaalissa on '
+            + 'kiinni vanhoja purjelaivoja mastoineen.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * Matkailijalle (omistajan tilaus 15.8.2026: kaupunki turistin
+       * näkökulmasta kartan jälkeen + pidempi pop-up-artikkeli).
+       * Taustatiedot fi.wikipediasta (pyöräilyosuus, Strøget,
+       * Rosenborgin puutarha, jazzmuusikot, teatteri) — teksti omaa.
+       */
+      matkailijalle: {
+        kappale: 'Kööpenhamina on rento kaupunki, joka koetaan parhaiten '
+          + 'satulasta: yli puolet kaupunkilaisten matkoista taittuu '
+          + 'pyörällä, ja leveät pyörätiet vievät vierailijankin turvallisesti '
+          + 'joka kortteliin. Etäisyydet ovat lyhyitä, vesi on aina '
+          + 'lähellä, ja illalla vanhan Tivolin lyhdyt syttyvät keskellä '
+          + 'kaupunkia. Nyhavnin värikkäät talot, Strøgetin kävelykatu ja '
+          + 'kuninkaanlinnojen puistot ehtii kiertää jalan yhdessä päivässä.',
+        artikkeli: {
+          nimi: 'Matkailijan Kööpenhamina',
+          teksti: 'Kööpenhaminaan ei tulla jonottamaan yhtä suurta '
+            + 'nähtävyyttä vaan kuljeskelemaan. Kaupunki on matala ja '
+            + 'tiivis, ja sen paras kulkuneuvo on polkupyörä: pyöräteitä '
+            + 'on satoja kilometrejä, ja kaupunki on valittu toistuvasti '
+            + 'maailman parhaaksi pyöräilykaupungiksi. Vuokrapyörän saa '
+            + 'kaikkialta, ja kuljettajaton metro paikkaa sateiset päivät.'
+            + '\n\n'
+            + 'Kävelijän päivä alkaa luontevasti Strøgetiltä, vuonna 1962 '
+            + 'avatulta kävelykadulta, joka halkoo koko vanhan keskustan. '
+            + 'Sen varrelta poiketaan Rundetårnin spiraalirampille ja '
+            + 'Rosenborgin linnan puutarhaan, joka on ollut kaupunkilaisten '
+            + 'eväsretkipaikka 1600-luvulta asti. Kanaalikierros veneellä '
+            + 'näyttää saman kaupungin vedestä käsin: Nyhavnin värikkäät '
+            + 'talot, oopperatalon ja Christianshavnin makasiinit.'
+            + '\n\n'
+            + 'Vesi on kööpenhaminalaisille uimapaikka, ei pelkkä maisema. '
+            + 'Sataman vesi on puhdistettu niin, että keskellä kaupunkia '
+            + 'voi uida yleisissä satamakylvyissä kesäisin — rohkein '
+            + 'pulahtaa jo aamiaisen jälkeen ja paikalliset pitävät sitä '
+            + 'aivan tavallisena. Viheralueita on niin tiheässä, että '
+            + 'lähes jokainen asukas asuu alle kilometrin päässä puistosta.'
+            + '\n\n'
+            + 'Illalla valitaan Tivolin ja jazzin väliltä — tai otetaan '
+            + 'molemmat. Tivoli on huvittanut kaupunkia vuodesta 1843, ja '
+            + 'sen lyhtyjen alla kävellään yhtä mielellään kuin ajetaan '
+            + 'laitteilla. Jazzilla on kaupungissa oma historiansa: '
+            + '1950- ja 1960-luvuilla moni amerikkalainen huippumuusikko '
+            + 'muutti Kööpenhaminaan, ja klubiperinne elää yhä. '
+            + 'Kuninkaallisessa teatterissa taas soittaa orkesteri, joka '
+            + 'laskee ikänsä vuodesta 1448.'
+            + '\n\n'
+            + 'Nälkäänsä matkailija syö smørrebrødin: avoin ruisleipä '
+            + 'katetaan kalalla, lihalla tai juustolla ja syödään '
+            + 'veitsellä ja haarukalla. Vanhoissa lounasravintoloissa '
+            + 'leipiä on listalla kymmeniä, ja järjestyskin on tarkka — '
+            + 'ensin kala, sitten liha, viimeisenä juusto.',
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           tyyppi: 'kuva',
