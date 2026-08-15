@@ -84,6 +84,7 @@ import {
 } from './packs/maakartat.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
+import { LIPPUTIEDOT } from './packs/lipputiedot.js';
 import { polloAnkkuri, polloSulje, polloVihje, polloVihjePois } from './pollo.js';
 import { HENKILOT, HENKILOLINKIT } from './packs/henkilot.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
@@ -11691,7 +11692,23 @@ export class UI {
         lippu.alt = kategoria.maa ?? '';
         lippu.title = kategoria.maa ?? '';
         asetaKuva(lippu, lippuUrl(kategoria.maaLippu, 96), lippuVara(kategoria.maaLippu, 96));
-        nimi.appendChild(lippu);
+        /*
+         * LIPPU ON NAPPI, JOS SILLE ON TARINA (omistajan tilaus
+         * 15.8.2026: "Tee lipusta klikattava" — pilotti Suomi ja
+         * Saksa). Maa ilman lipputietoja pitää entisen pelkän kuvan.
+         */
+        const tiedot = LIPPUTIEDOT[kategoria.maaLippu];
+        if (tiedot) {
+          const nappi = html('button', 'aihe-lippu-nappi');
+          nappi.type = 'button';
+          nappi.title = `${tiedot.maa} — lipun tarina`;
+          nappi.setAttribute('aria-label', `${tiedot.maa} — avaa lipun tarina`);
+          nappi.appendChild(lippu);
+          nappi.addEventListener('click', () => this.avaaLippuikkuna(kategoria.maaLippu));
+          nimi.appendChild(nappi);
+        } else {
+          nimi.appendChild(lippu);
+        }
       }
       kohde.appendChild(nimi);
     }
@@ -12293,6 +12310,113 @@ export class UI {
     x.addEventListener('click', sulje);
     kortti.appendChild(x);
     kehys.appendChild(kortti);
+  }
+
+  /**
+   * LIPPUIKKUNA (omistajan tilaus 15.8.2026: "Tee lipusta klikattava
+   * jolloin lippu aukeaa isompana omaan ikkunaan otsikkona maan nimi.
+   * Lipun alla tietoja ja selitys lipun historiasta ja sen
+   * merkityksistä. Alle pienempiä lippuja jos on historiallisia tai
+   * eri versioita nykyisestä lipusta (puolustusvoimat yms)").
+   *
+   * Oma <dialog> selaimen ylimmässä kerroksessa (sama syy kuin pöllön
+   * kuvapopupissa: lehti on modaali, jonka päälle tavallinen kerros ei
+   * nousisi). Pikkulipun napautus nostaa sen isoon paikkaan ja näyttää
+   * sen selitteen; ensimmäinen rivi on aina nykyinen lippu. Sisällöt:
+   * js/packs/lipputiedot.js. Pilotti: Suomi ja Saksa.
+   */
+  avaaLippuikkuna(tiedosto) {
+    const tiedot = LIPPUTIEDOT[tiedosto];
+    if (!tiedot) return;
+    document.querySelector('.lippu-ikkuna')?.remove();
+    const dialogi = document.createElement('dialog');
+    dialogi.className = 'lippu-ikkuna';
+    dialogi.addEventListener('click', (e) => {
+      if (e.target === dialogi) dialogi.close();
+    });
+    dialogi.addEventListener('close', () => dialogi.remove());
+
+    const kortti = html('div', 'lippu-kortti');
+    const yla = html('div', 'lippu-ylarivi');
+    yla.appendChild(html('h2', 'lippu-otsikko', tiedot.maa));
+    const x = html('button', 'lippu-sulje', '×');
+    x.type = 'button';
+    x.title = 'Sulje';
+    x.setAttribute('aria-label', 'Sulje');
+    x.addEventListener('click', () => dialogi.close());
+    yla.appendChild(x);
+    kortti.appendChild(yla);
+
+    const iso = document.createElement('img');
+    iso.className = 'lippu-iso';
+    iso.decoding = 'async';
+    iso.draggable = false;
+    kortti.appendChild(iso);
+    // Valitun asun nimi ja selite heti ison lipun alla.
+    const valintaNimi = html('p', 'lippu-valinta', '');
+    const valintaSelite = html('p', 'lippu-valinta-selite', '');
+    kortti.appendChild(valintaNimi);
+    kortti.appendChild(valintaSelite);
+
+    // Historia ja merkitykset — sama kaikilla asuilla.
+    for (const kpl of tiedot.kappaleet ?? []) {
+      kortti.appendChild(html('p', 'lippu-kappale', kpl));
+    }
+
+    /*
+     * Asurivi: nykyinen lippu ensin, sitten versiot. Napautus nostaa
+     * asun isoon paikkaan — erillistä suurennosta ei tarvita, koska
+     * ikkunassa on kerrallaan yksi iso lippu.
+     */
+    const asut = [{
+      nimi: 'Nykyinen lippu',
+      selite: '',
+      kuvaa: (el) => asetaKuva(el, lippuUrl(tiedosto, 640), lippuVara(tiedosto, 640)),
+    }, ...(tiedot.versiot ?? []).map((versio) => ({
+      nimi: versio.nimi,
+      selite: versio.selite,
+      kuvaa: (el) => { el.src = versio.polku; },
+    }))];
+    const napit = [];
+    const valitse = (i) => {
+      asut[i].kuvaa(iso);
+      iso.alt = `${tiedot.maa} — ${asut[i].nimi}`;
+      valintaNimi.textContent = asut[i].nimi;
+      valintaSelite.textContent = asut[i].selite;
+      valintaSelite.hidden = !asut[i].selite;
+      napit.forEach((nappi, j) => nappi.setAttribute('aria-pressed', String(i === j)));
+    };
+    if (asut.length > 1) {
+      kortti.appendChild(html('h3', 'lippu-versiot-otsikko', 'Muut asut ja historialliset liput'));
+      const rivi = html('div', 'lippu-versiot');
+      asut.forEach((asu, i) => {
+        const nappi = html('button', 'lippu-versio');
+        nappi.type = 'button';
+        nappi.title = asu.nimi;
+        const pikku = document.createElement('img');
+        pikku.className = 'lippu-versio-kuva';
+        pikku.alt = asu.nimi;
+        pikku.decoding = 'async';
+        pikku.draggable = false;
+        asu.kuvaa(pikku);
+        nappi.appendChild(pikku);
+        nappi.appendChild(html('span', 'lippu-versio-nimi', asu.nimi));
+        nappi.addEventListener('click', () => valitse(i));
+        rivi.appendChild(nappi);
+        napit.push(nappi);
+      });
+      kortti.appendChild(rivi);
+    }
+    valitse(0);
+    if (tiedot.lahde) kortti.appendChild(html('p', 'lahde', tiedot.lahde));
+
+    dialogi.appendChild(kortti);
+    document.body.appendChild(dialogi);
+    try {
+      dialogi.showModal();
+    } catch {
+      dialogi.setAttribute('open', '');
+    }
   }
 
   /**

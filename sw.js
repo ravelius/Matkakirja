@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.710';
+const CACHE = 'matkakirja-2026-08-09.711';
 const SHELL = [
   './',
   './index.html',
@@ -102,6 +102,7 @@ const SHELL = [
   './js/packs/maakartat.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
+  './js/packs/lipputiedot.js',
   './js/packs/henkilot.js',
   './js/packs/saatiedot.js',
   './js/packs/kohtaamiset.js',
@@ -242,6 +243,14 @@ const SHELL = [
   './assets/kartat/miniatyyrit/lontoo-lontoon-silma.jpg',
   './assets/kartat/miniatyyrit/lontoo-pyhan-paavalin-katedraali.jpg',
   './assets/kartat/miniatyyrit/lontoo-tower-bridge.jpg',
+  // Lippuikkunan versioliput (pilotti Suomi + Saksa, v711).
+  './assets/liput/versiot/fin-valtiolippu.png',
+  './assets/liput/versiot/fin-sotalippu.png',
+  './assets/liput/versiot/fin-presidentinlippu.png',
+  './assets/liput/versiot/fin-leijonalippu-1918.png',
+  './assets/liput/versiot/deu-virastolippu.png',
+  './assets/liput/versiot/deu-keisarikunta.png',
+  './assets/liput/versiot/deu-ddr.png',
   './assets/kartat/helsinki-keskusta.png',
   './assets/kartat/helsinki-varikartta.png',
   './assets/kartat/kairo-keskusta.png',
