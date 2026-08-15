@@ -13122,17 +13122,32 @@ export class UI {
     // ei alusta. rAF, koska korkeus on olemassa vasta taiton jälkeen.
     if (palaa && rulla && kortti) requestAnimationFrame(() => { kortti.scrollTop = rulla; });
     /*
-     * Vyö henkselien lisäksi (overflow-anchor: none yllä CSS:ssä):
-     * jos kuvan latautuminen silti liu'uttaa jutun alkua piiloon
-     * (Safarin oma ankkurointi), pieni ajastettu tarkistus palauttaa
-     * yläreunan. Vain pieni liukuma nollataan — käyttäjän oma
-     * vieritys on jo ehtinyt pidemmälle eikä siihen kosketa.
+     * YLÄREUNAN VAHTI (omistajan havainto 15.8.2026 kahdesti:
+     * "otsikko jää puoliksi piiloon" — v759:n kaksi ajastettua
+     * nollausta eivät riittäneet iPadilla, koska liukuma voi tulla
+     * vasta niiden jälkeen, esim. hitaasti peilistä latautuvan kuvan
+     * tai Safarin fokusvierityksen myötä). Juttu avataan AINA
+     * alusta, joten avausikkunan ajan mikä tahansa ohjelmallinen
+     * liukuma nollataan heti — kunnes käyttäjä itse tarttuu korttiin
+     * (kosketus, rulla tai näppäin) tai 2,5 sekuntia on kulunut.
      */
+    // Edellisen avauksen vahti sammuu aina — myös paluupolulla,
+    // ettei se nollaa juuri palautettua lukukohtaa.
+    clearInterval(this.nahtavyysYlaVahti);
     if (!palaa && kortti) {
-      clearTimeout(this.nahtavyysYlaVahti);
-      const oikaise = () => { if (kortti.scrollTop > 0 && kortti.scrollTop <= 80) kortti.scrollTop = 0; };
-      this.nahtavyysYlaVahti = setTimeout(() => { oikaise(); }, 350);
-      setTimeout(oikaise, 1200);
+      let kayttajaOtti = false;
+      const irrota = () => { kayttajaOtti = true; };
+      for (const laji of ['wheel', 'touchstart', 'pointerdown', 'keydown']) {
+        kortti.addEventListener(laji, irrota, { once: true, passive: true });
+      }
+      const alku = performance.now();
+      this.nahtavyysYlaVahti = setInterval(() => {
+        if (kayttajaOtti || performance.now() - alku > 2500) {
+          clearInterval(this.nahtavyysYlaVahti);
+          return;
+        }
+        if (kortti.scrollTop !== 0) kortti.scrollTop = 0;
+      }, 100);
     }
     // Uusi juttu, uusi teksti: edellisen kohteen luenta ei saa jatkua.
     pysaytaLukija();
