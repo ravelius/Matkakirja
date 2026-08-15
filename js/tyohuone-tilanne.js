@@ -44,6 +44,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v724 — piirrokset skaalautuvat zoomissa; peruskoko 40 px',
   'v723 — kultaneliön OIKEA syy: hover-korostus; koko 4×',
   'v722 — piirrokset PNG:inä: neliö varmasti pois',
   'v721 — iOS-neliö pois suurennoksesta; koko 3,5×',

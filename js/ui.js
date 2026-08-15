@@ -12296,10 +12296,11 @@ export class UI {
       if (mitat.width < 40) return false;
       const W = mitat.width;
       const K = mitat.height;
-      // 54 px ≈ 48 px:n laatikko + ilmarako. (64 px:n laatikolla
-      // vastaava luku oli 72; pienempi väli tarkoittaa myös
-      // pienempiä siirtymiä, mikä sopii nuolettomaan karttaan.)
-      const MIN = 54;
+      // 46 px ≈ 40 px:n laatikko + ilmarako (koko on elänyt
+      // omistajan palautteiden mukana: 64 → 48 → 40 px; väli
+      // vastaavasti 72 → 54 → 46). Pieni väli tarkoittaa pieniä
+      // siirtymiä, mikä sopii nuolettomaan karttaan.
+      const MIN = 46;
       const paikat = pisteet.map((m) => ({ ...m, X: (m.x / 100) * W, Y: (m.y / 100) * K }));
       // Piirrokset pysyvät lepotilassa näkyvällä ydinalueella.
       const M = 24;
