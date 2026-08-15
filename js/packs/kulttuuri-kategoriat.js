@@ -12464,8 +12464,8 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'luonto',
       nimi: 'Tulivuoret',
-      johdanto: 'Kamtšatkalla on satoja tulivuoria, ja niistä noin '
-        + 'kolmekymmentä on toimivia. Niemimaa kuuluu Tyynenmeren '
+      johdanto: 'Kamtšatkalla on satoja tulivuoria, ja niistä yli '
+        + 'kaksikymmentä on toimivia. Niemimaa kuuluu Tyynenmeren '
         + 'tulirenkaaseen: Tyynenmeren laatta painuu täällä Euraasian laatan '
         + 'alle noin kahdeksan senttimetriä vuodessa.',
       nostot: [
