@@ -3433,6 +3433,10 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/amsterdam-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 52.3855, etela: 52.356, lansi: 4.868, ita: 4.922 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, Eurooppa-erä 1 15.8.2026).
+    piirtoRajat: { pohjoinen: 52.39435, etela: 52.34715, lansi: 4.8518, ita: 4.9382 },
+    varikartta: 'assets/kartat/amsterdam-varikartta.png',
     esittely: 'Amsterdam syntyi padosta. Amstel-joki laski ennen '
       + 'suoraan IJ-lahteen, ja lahdesta pääsi merelle. Noin vuonna '
       + '1270 joki padottiin, ja padon päälle kasvoi kylä Amstelredam '
@@ -3634,6 +3638,10 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/praha-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.095, etela: 50.074, lansi: 14.382, ita: 14.446 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, Eurooppa-erä 1 15.8.2026).
+    piirtoRajat: { pohjoinen: 50.1013, etela: 50.0677, lansi: 14.3628, ita: 14.4652 },
+    varikartta: 'assets/kartat/praha-varikartta.png',
     esittely: 'Praha kasvoi Vltavan mutkaan. Joki on Tšekin pisin, 430 '
       + 'kilometriä, ja Prahan kohdalla se kaartaa jyrkän '
       + 'kallioharjanteen ympäri. Harjanteen päälle perustettiin '
@@ -3672,6 +3680,10 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/wien-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 48.22, etela: 48.188, lansi: 16.34, ita: 16.404 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, Eurooppa-erä 1 15.8.2026).
+    piirtoRajat: { pohjoinen: 48.2296, etela: 48.1784, lansi: 16.3208, ita: 16.4232 },
+    varikartta: 'assets/kartat/wien-varikartta.png',
     /*
      * Kainalokartta Schönbrunnista. Palatsi on lehden kansikuva mutta
      * 4 km lounaaseen, ja päärajaukseen ottaminen olisi vaatinut 7,2
@@ -3682,7 +3694,7 @@ export const KAUPUNKIKARTAT = {
      */
     kainalot: [
       { rajat: { pohjoinen: 48.191, etela: 48.178, lansi: 16.303, ita: 16.325 },
-        x: 2, y: 56, leveys: 30, korkeus: 35.44 },
+        x: 20, y: 57.85, leveys: 18.75, korkeus: 22.15 },
     ],
     esittely: 'Wien seisoo kohdassa, jossa Tonava tulee ulos vuorten '
       + 'välistä. Lännessä nousee Wienerwald, Alppien viimeinen '
@@ -3962,6 +3974,10 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/tukholma-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.342, etela: 59.313, lansi: 18.03, ita: 18.11 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, Eurooppa-erä 1 15.8.2026).
+    piirtoRajat: { pohjoinen: 59.3507, etela: 59.3043, lansi: 18.006, ita: 18.134 },
+    varikartta: 'assets/kartat/tukholma-varikartta.png',
     esittely: 'Tukholma seisoo siinä, missä Mälaren-järvi purkautuu '
       + 'Itämereen. Kapeikossa vesi virtaa kuin joessa — sen nimi on '
       + 'Strömmen, ja siinä saa onkia lohta keskellä kaupunkia. Juuri '
@@ -4036,6 +4052,10 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/rooma-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 41.9135, etela: 41.8845, lansi: 12.4455, ita: 12.5005 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, Eurooppa-erä 1 15.8.2026).
+    piirtoRajat: { pohjoinen: 41.9222, etela: 41.8758, lansi: 12.429, ita: 12.517 },
+    varikartta: 'assets/kartat/rooma-varikartta.png',
     esittely: 'Rooma syntyi Tiberin mutkaan noin 25 kilometriä merestä '
       + 'ylävirtaan, ja paikan valitsi joki. Keskellä virtaa on saari, '
       + 'Isola Tiberina, joka jakaa uoman kahdeksi kapeaksi haaraksi. '
@@ -4669,6 +4689,10 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kobenhavn-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.6945, etela: 55.669, lansi: 12.5555, ita: 12.6116 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, Eurooppa-erä 1 15.8.2026).
+    piirtoRajat: { pohjoinen: 55.70215, etela: 55.66135, lansi: 12.53867, ita: 12.62843 },
+    varikartta: 'assets/kartat/kobenhavn-varikartta.png',
     esittely: 'Kööpenhamina on satamakaupunki kahden saaren välissä. '
       + 'Vanha kaupunki on Sjællandin puolella ja sen vastarannalla on '
       + 'Amager, ja niiden välissä kulkee satamakanava, jota pitkin '

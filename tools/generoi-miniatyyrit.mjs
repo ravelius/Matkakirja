@@ -27,7 +27,13 @@ import { fileURLToPath } from 'node:url';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const MALLI = process.env.MINIATYYRI_MALLI ?? 'gemini-3-pro-image';
-const LEVEYS = 512;
+/*
+ * TÄYSI 1024 — EI PIENENNYSTÄ (omistajan palaute 15.8.2026:
+ * "piirroksen resoluutio ei riitä"). Suurennettu piirros on 75 %
+ * karttaikkunan korkeudesta eli ~900 px, joten 512→384-kutistus
+ * näkyi sumeutena. Malli antaa 1024×1024, ja se pidetään sellaisenaan.
+ */
+const LEVEYS = 1024;
 const LAATU = 0.85;
 
 // Ympäristössä avain on toisinaan kirjoitusvirheellisellä nimellä
@@ -207,6 +213,143 @@ const KUVAT = [
     + 'gothic stone towers, high walkways connecting them, high '
     + 'suspension chains and a twin lifting roadway between the '
     + 'towers'],
+
+  // ── Rooma (Eurooppa-erä 1, 15.8.2026) ────────────────────────────
+  ['rooma-pietarinkirkko', 'a vast Renaissance basilica with a great '
+    + 'ribbed dome on a colonnaded drum, a long columned facade with '
+    + 'statues along the roofline, and two sweeping curved colonnades '
+    + 'embracing an oval square with an obelisk'],
+  ['rooma-castel-santangelo', 'a massive round drum-shaped fortress '
+    + 'on a square base beside a river, a sword-bearing angel statue '
+    + 'on its top and a stone bridge lined with statues leading to '
+    + 'its gate'],
+  ['rooma-espanjalaiset-portaat', 'a wide baroque outdoor staircase '
+    + 'cascading down a hillside in curved terraces, a twin-towered '
+    + 'church with an obelisk at the top and a low boat-shaped '
+    + 'fountain in the small square below'],
+  ['rooma-trevin-suihkulahde', 'a grand baroque fountain built '
+    + 'against a palace facade: a sea god in a central niche, tritons '
+    + 'and rearing winged horses among carved rocks over a wide '
+    + 'water basin'],
+  ['rooma-pantheon', 'an ancient Roman round temple with a shallow '
+    + 'dome pierced by a central round opening, and a deep porch of '
+    + 'monolithic columns under a triangular pediment'],
+  ['rooma-colosseum', 'a vast ancient elliptical amphitheatre with '
+    + 'three tiers of arched arcades, its outer ring partly broken '
+    + 'away on one side to reveal the inner walls'],
+
+  // ── Wien ─────────────────────────────────────────────────────────
+  ['wien-raatihuone', 'a neo-gothic city hall with a tall central '
+    + 'tower carrying a slender openwork spire and a small statue on '
+    + 'top, four smaller towers and an arcaded facade with pointed '
+    + 'windows'],
+  ['wien-hofburg', 'an imperial palace with a long curved wing: a '
+    + 'central dome over a grand arched gate, columned facades '
+    + 'sweeping to both sides and equestrian statues in front'],
+  ['wien-valtionooppera', 'a neo-renaissance opera house with a '
+    + 'two-storey arched loggia across the front, a shallow hipped '
+    + 'roof and arched windows along the sides'],
+  ['wien-stephansdom', 'a gothic cathedral with one immensely tall '
+    + 'slender south spire, a steep roof patterned with zigzag '
+    + 'diamond tiles and two lower octagonal towers at the front'],
+  ['wien-belvedere', 'a wide baroque garden palace with domed '
+    + 'octagonal corner pavilions, a gently stepped roofline and a '
+    + 'formal terraced garden with fountains descending in front'],
+  ['wien-jattiratas', 'a giant historic ferris wheel: a spoked steel '
+    + 'wheel on tall lattice pylons with a ring of small boxy cabin '
+    + 'gondolas hanging along the rim'],
+  ['wien-schonbrunn', 'a very long baroque summer palace with rows '
+    + 'of tall windows, a central section with a columned portico '
+    + 'and double staircase, and a vast formal courtyard in front'],
+
+  // ── Praha ────────────────────────────────────────────────────────
+  ['praha-petrinin-nakotorni', 'a small lattice steel lookout tower '
+    + 'on a wooded hilltop, like a slender miniature of a famous '
+    + 'iron tower, with an observation cabin near its top'],
+  ['praha-prahan-linna', 'a long castle complex along a ridge: '
+    + 'palace wings and a basilica with two slim towers, and rising '
+    + 'from their middle a gothic cathedral with twin openwork '
+    + 'spires and a great tower with a rounded cap'],
+  ['praha-kaarlensilta', 'a medieval stone arch bridge over a river, '
+    + 'lined with statues of saints along both parapets, with a '
+    + 'tall pointed gothic gate tower at its end'],
+  ['praha-vanhauusi-synagoga', 'a small medieval synagogue with '
+    + 'thick buttressed walls and a very steep sawtooth brick gable '
+    + 'rising above its tiled roof'],
+  ['praha-astronominen-kello', 'an ornate medieval astronomical '
+    + 'clock on a gothic town-hall tower: two large stacked dials '
+    + 'with rings and pointers, small carved figures flanking them'],
+  ['praha-kansallismuseo', 'a monumental neo-renaissance museum on '
+    + 'a rise: a central tower with a gilt-free lantern dome, long '
+    + 'symmetrical wings with corner pavilions and a fountain '
+    + 'terrace below'],
+
+  // ── Amsterdam ────────────────────────────────────────────────────
+  ['amsterdam-keskusrautatieasema', 'a long neo-renaissance railway '
+    + 'palace with a richly decorated brick facade, two ornate '
+    + 'clock towers and a great arched entrance in the middle'],
+  ['amsterdam-anne-frankin-talo', 'a narrow Dutch canal house with '
+    + 'tall sash windows and a plain warehouse gable with a '
+    + 'hoisting beam, standing in a row of stepped-gable houses at '
+    + 'the edge of a canal'],
+  ['amsterdam-kuninkaanpalatsi', 'a monumental classical palace on '
+    + 'a city square: a wide sandstone facade with a central '
+    + 'pediment full of sculpture and a domed cupola tower with a '
+    + 'ship weathervane'],
+  ['amsterdam-rembrandtin-talo', 'a 17th-century Dutch townhouse '
+    + 'with tall shuttered windows in pairs, a triangular cornice '
+    + 'gable and stone steps to a raised front door'],
+  ['amsterdam-artis-elaintarha', 'a historic zoo garden entrance: '
+    + 'two stone pillars topped by eagle sculptures, an ornate '
+    + '19th-century pavilion and large trees behind the gates'],
+  ['amsterdam-rijksmuseum', 'a grand museum palace mixing gothic '
+    + 'and renaissance: two ornate towers with pointed roofs, '
+    + 'gabled wings and a monumental arched passage running through '
+    + 'the middle'],
+
+  // ── Tukholma ─────────────────────────────────────────────────────
+  ['tukholma-kaupungintalo', 'a massive brick city hall on a '
+    + 'waterfront: a long arcaded wing and a tall square corner '
+    + 'tower topped by an open lantern and a slender spire carrying '
+    + 'three small crowns'],
+  ['tukholma-riddarholmenin-kirkko', 'a medieval brick church with '
+    + 'a tall openwork cast-iron lattice spire, pointed gables and '
+    + 'burial chapels clustered around its sides'],
+  ['tukholma-sergelin-tori', 'a modernist sunken city plaza with a '
+    + 'bold triangle-patterned floor, surrounded by glass office '
+    + 'facades, and a tall slender glass obelisk rising from a '
+    + 'fountain roundabout'],
+  ['tukholma-kuninkaanlinna', 'a vast severe baroque royal palace: '
+    + 'a huge rectangular block with a long flat roofline, rows of '
+    + 'tall windows and a rusticated base, standing at the water '
+    + 'edge of an old town island'],
+  ['tukholma-vasa-museo', 'a dark modern museum hall shaped around '
+    + 'a great ship: stylized hull walls and three tall ship masts '
+    + 'with crow’s nests and rigging rising through the roof'],
+  ['tukholma-skansen', 'an open-air museum on a wooded hill: a '
+    + 'cluster of historic timber farmhouses with turf and shingle '
+    + 'roofs, a wooden bell tower and a windmill among the trees'],
+
+  // ── Kööpenhamina ─────────────────────────────────────────────────
+  ['kobenhavn-pieni-merenneito', 'a small statue of a mermaid '
+    + 'sitting pensively on a rounded boulder at the water edge, '
+    + 'gentle ripples around the stone'],
+  ['kobenhavn-amalienborg', 'a royal palace square: four identical '
+    + 'rococo palace facades around an octagonal cobbled courtyard '
+    + 'with an equestrian statue in the middle'],
+  ['kobenhavn-rundetarn', 'a stout round brick tower with sparse '
+    + 'small windows and a lattice railing around its flat top, '
+    + 'attached to a steep-roofed church'],
+  ['kobenhavn-nyhavn', 'a canalside row of tall narrow gabled '
+    + 'townhouses of varied heights, with old wooden sailing ships '
+    + 'and masts moored along the quay'],
+  ['kobenhavn-christiansborg', 'a grand severe palace with a tall '
+    + 'central tower carrying a spire topped by two crowns, long '
+    + 'symmetrical wings and an arched gateway'],
+  ['kobenhavn-tivoli', 'a historic pleasure garden: an ornate '
+    + 'Moorish-style palace with onion domes and slender minarets, '
+    + 'a wooden roller coaster and strings of garden lanterns among '
+    + 'trees'],
 ];
 
 const pyydetyt = process.argv.slice(2);

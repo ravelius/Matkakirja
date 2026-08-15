@@ -10008,8 +10008,34 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  * ikkunaa. Sumennus tehdään sisällölle (filter), koska kortti on
  * vierityskontti eikä kiinteä peittokerros kata sen koko sisältöä.
  */
+/* Sumennus häivyttyy pehmeästi (omistajan tilaus 15.8.2026:
+ * "Lippujen ja vaakunoiden suurennoksen voisi animoida"). */
+.lippu-kortti > *,
+.lippu-kortti .lippu-versiot > *,
+.lippu-kortti .lippu-tunnukset > * { transition: filter 220ms ease; }
+
 .lippu-kortti.tarkennus > :not(.terava-haara) { filter: blur(3px); }
 .lippu-kortti.tarkennus .terava-haara > :not(.tarkennettu) { filter: blur(3px); }
+
+/* Tarkennettu kasvaa paikalleen pienestä. */
+@keyframes lippu-kasvu {
+  from { transform: scale(0.55); opacity: 0.4; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.lippu-versio.tarkennettu,
+.lippu-tunnus.tarkennettu {
+  animation: lippu-kasvu 240ms ease;
+  transform-origin: center top;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lippu-versio.tarkennettu,
+  .lippu-tunnus.tarkennettu { animation: none; }
+  .lippu-kortti > *,
+  .lippu-kortti .lippu-versiot > *,
+  .lippu-kortti .lippu-tunnukset > * { transition: none; }
+}
 
 /* Tarkennettu versio ILMAN taustalaatikkoa (omistajan palaute
  * 15.8.2026: "Suurenna lippu isommaksi ja ota taustalaatikko

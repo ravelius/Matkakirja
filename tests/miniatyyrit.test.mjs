@@ -15,7 +15,6 @@ import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 import { MINIATYYRIT } from '../js/packs/miniatyyrit.js';
 import { KAUPUNKIKARTAT } from '../js/packs/maakartat.js';
-import { NAHTAVYYSJUTUT } from '../js/packs/nahtavyysjutut.js';
 
 const SW = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
 
@@ -28,15 +27,19 @@ test('jokainen miniatyyri osoittaa olemassa olevaan tiedostoon', () => {
   }
 });
 
-test('jokainen miniatyyrin nimi vastaa kartan kohdetta ja juttua', () => {
+/*
+ * Nimen on vastattava kartan kohdetta — piirros asemoidaan ja
+ * kytketään nimellä. Juttuvaatimus poistui 15.8.2026: miniatyyrikortti
+ * (jonka lauseet tulivat jutusta) poistettiin v730:ssä, ja kyltin
+ * napautus avaa jutun TAI wikin — kohde ilman kumpaakaan näyttää
+ * piirroksen ilman napautusta, kuten sen numeroympyräkin teki.
+ */
+test('jokainen miniatyyrin nimi vastaa kartan kohdetta', () => {
   for (const [kaupunki, kohteet] of Object.entries(MINIATYYRIT)) {
     const kartalla = new Set((KAUPUNKIKARTAT[kaupunki]?.kohteet ?? []).map((k) => k.nimi));
     for (const nimi of Object.keys(kohteet)) {
       assert.ok(kartalla.has(nimi),
         `${kaupunki}: "${nimi}" ei ole kartan kohde (maakartat.js)`);
-      assert.ok(NAHTAVYYSJUTUT[kaupunki]?.[nimi],
-        `${kaupunki}: "${nimi}" ilman nähtävyysjuttua — kortin lauseet `
-        + 'ja piirroksen linkki tarvitsevat jutun');
     }
   }
 });
