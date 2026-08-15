@@ -1,3 +1,5 @@
+> **ARKISTOITU 15.8.2026** — kertaluontoinen tilannekuva tai toteutettu suunnitelma. Ei sisällä voimassa olevia ohjeita; ne ovat Raamattu 2.0:ssa (js/tyohuone-raamattu.js) ja sen dokumenttikartan tiedostoissa.
+
 # Fablen tilannekuva — jatka tästä /clearin tai TILINVAIHDON jälkeen
 
 *Käsittelykuva, jotta työ jatkuu kontekstin nollauksen — tai kokonaan

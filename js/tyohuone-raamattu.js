@@ -716,5 +716,53 @@ export const RAAMATTU2 = {
           + 'lehti · työhuone = tämä sivusto.',
       ],
     },
+    {
+      otsikko: 'Ohjedokumenttien kartta (rikkinäistä puhelinta vastaan)',
+      tila: 'luonnos (omistajan tilaus 15.8.2026)',
+      kohdat: [
+        'PERIAATE: kehitys vaihtuu sessiolta toiselle, ja tieto saa '
+          + 'kulkea vain kirjoitettuna — ei tiivistelmien ketjuna. '
+          + 'Raamattu 2.0 on ainoa paikka oleellisille linjauksille, '
+          + 'ja TÄMÄ osio on täydellinen kartta kaikkiin muihin '
+          + 'ohjedokumentteihin. Jos dokumenttia ei ole tällä '
+          + 'listalla, se EI ole ohje. Uusi ohjedokumentti lisätään '
+          + 'tähän samassa PR:ssä, jossa se syntyy — testi '
+          + '(tests/dokumentit.test.mjs) valvoo tätä koneellisesti.',
+        'SISÄÄNTULO: CLAUDE.md — jokaisen session ensimmäinen '
+          + 'luettava; osoittaa tänne.',
+        'TARINAN KAANON (sitova, vain Fable kirjoittaa): '
+          + 'docs/tarina.md (hahmot, Aarnin luettelo, sävysäännöt) '
+          + 'ja docs/isoisan-raamattu.md (matkakirjamerkintöjen '
+          + 'dekkarisäännöt, imu aikuiselle).',
+        'PELIN PERUSTUSLAKI: docs/periaatteet.md (viisi pilaria, '
+          + 'laudan hyväksyminen, etukäteispuskurin tekninen '
+          + 'periaate). Ristiriidassa hyväksytty Raamattu-osio '
+          + 'voittaa.',
+        'TYÖNJAKO JA PROSESSI: docs/roolitus.md (Fable/Opus/Sonnet, '
+          + 'viestintä, julkaisusäännöt, sessiotaulu, Fablen '
+          + 'sisältöpistokoe) — työsessioiden tärkein dokumentti.',
+        'SISÄLTÖRESEPTIT: docs/tutki-aiheet.md (lehtimalli, '
+          + 'toistuvat viat, julkaisutarkistuslista) · '
+          + 'docs/tyolista-opukselle.md (lehtityön työjono) · '
+          + 'docs/kaariteksti-sapluuna.md (kaaritekstien prosessi) · '
+          + 'docs/mantereen-resepti.md (uuden mantereen '
+          + 'työjärjestys).',
+        'AVOIN LÄHDEKOODI: CONTRIBUTING.md (ulkopuolisen '
+          + 'kontribuution ohjeet) ja README.md (esittely).',
+        'VIESTIKANAVA, EI OHJE: docs/viesti-fable.md — työsession '
+          + 'tuorein raportti Fablelle; sisältö vaihtuu jatkuvasti.',
+        'EI OHJEITA: docs/arkisto/ (vanhentuneet tilannekuvat ja '
+          + 'toteutetut suunnitelmat — arkistoitu otsikkohuomautuksin) '
+          + 'ja docs/raportit/ (kertaraportit). Tilannekuva '
+          + 'arkistoidaan HETI kun sen sessio päättyy tai suunnitelma '
+          + 'on toteutettu — vanhentunut "lue tämä ensin" -paperi on '
+          + 'rikkinäisen puhelimen pahin muoto.',
+        'TEKNINEN ITSEDOKUMENTAATIO: työkalujen (tools/*.mjs) '
+          + 'alkukommentit ovat kunkin työkalun käyttöohje, ja '
+          + 'testit (tests/) vartioivat sääntöjä koneellisesti — '
+          + 'sääntö, jonka voi valvoa testillä, kirjataan testiksi '
+          + 'eikä muistilistaksi.',
+      ],
+    },
   ],
 };

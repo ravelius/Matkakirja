@@ -102,9 +102,9 @@ Työtapa on siksi tämä:
 | Opus 16 (etukäteispuskuri) | session_011GRm3rKWYQwEyaTVyjutam (omistajan tilaus 15.8.: molempien lehtien etusivut + lukijaäänen 1. pala puskuriin saavuttaessa, seuraava sivu valmiiksi lehteä luettaessa; periaate kirjattu docs/periaatteet.md:hen; haara claude/opus16-esipuskuri; EI kosketa Opus 15:n karttafunktioihin; ei vuoron päätöstä ennen PR:ää; raportointi viesti-fable.md:llä, EI trigger-työkaluja) | 15.8.2026 |
 | Opus 15 (karttareunus) | session_01Rr7DbZXER9mDzHfL5mafM3 (omistajan tilaus 15.8.: juliste piirretään ~1,6× alueelta ja zoomin panorointi jatkuu reunuksen yli neljällä uuden mallin kaupungilla; lepotila pikselintarkasti ennallaan, k=1 ilman transformia; + Berliinin värikarttanäyte satelliitin vaihtoehdoksi (EI kytketä peliin); haara claude/opus15-karttareunus; ei vuoron päätöstä ennen PR:ää; raportointi viesti-fable.md:llä, EI trigger-työkaluja) | 15.8.2026 |
 | Fable max (apusessio) | session_01NQpicvHRAzUpX4NfcYwsyv (Fable max 2; EI vastaanota viestejä tilinvaihdon jälkeen — uusi tili perustaa oman Max-session tarvittaessa. Vanha session_01U8Nqxu… arkistoitu 11.8. konttivian takia) | 11.8.2026 |
-| Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
+| Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/arkisto/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |
-| Sonnet 1 | session_0184WdPeGzjAbnuXjWvquN8Q | 10.8.2026 (5. yritys; aiemmat kaatuivat source_url-vikaan, ks. fable-tilanne) |
+| Sonnet 1 | session_0184WdPeGzjAbnuXjWvquN8Q | 10.8.2026 (5. yritys; aiemmat kaatuivat source_url-vikaan, ks. arkisto/fable-tilanne) |
 | Sonnet 2 | — (perustetaan kun ME-jono aukeaa) | 10.8.2026 |
 | Opus 3 (aarrekuvat) | — (valmis ja arkistoitu: 7 pääaarteen kuvat mainissa v524) | 10.8.2026 |
 | Opus 4 (varustekuvat) | — (valmis ja arkistoitu: 5 varustekuvaa mainissa v541) | 10.8.2026 |
@@ -242,7 +242,7 @@ docs/kapulanvaihto.md arkistoitiin 15.8. — odottavat omistajaa):
    "AVOIMET PÄÄTÖKSET").
 
 Ajantasainen tilannetaulu on `js/tyohuone-tilanne.js` (työhuoneen
-etusivu) ja Fablen jono `docs/fable-tilanne.md`. Tiivistetysti:
+etusivu) ja Fablen jono `docs/arkisto/fable-tilanne.md` (arkistoitu). Tiivistetysti:
 
 - **Opus 1:** vaihe B loppuun (Helsinki/Suomi-sisältökorjaus ensin,
   sitten Granada/Rooma/Pariisi omina sivuina, Lontoo viimeisenä) →

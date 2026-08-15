@@ -1,3 +1,5 @@
+> **ARKISTOITU 15.8.2026** — kertaluontoinen tilannekuva tai toteutettu suunnitelma. Ei sisällä voimassa olevia ohjeita; ne ovat Raamattu 2.0:ssa (js/tyohuone-raamattu.js) ja sen dokumenttikartan tiedostoissa.
+
 # TOTEUTETTU 10.8.2026 (v536) — kuuden kohtaamisen uudet tekstit
 
 *Omistaja hyväksyi erän ja Fable maxin auditin ehdotukset yhdessä;
