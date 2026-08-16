@@ -5,7 +5,8 @@ Suomenkielinen seikkailupeli, jossa samalla oppii (kohderyhmä
 Fogg matkustaa
 isoisänsä vuoden 1873 matkapäiväkirjan jäljillä ja etsii Aarnin
 luettelon unohdettuja aarteita. Selainpeli ilman build-vaihetta
-(ES-moduulit, service worker, yhden tiedoston versio dist/-kansiossa).
+(ES-moduulit, service worker; yhden tiedoston versio rakennetaan
+Pages-julkaisussa — dist/-kansiota EI committoida, historia paisuisi).
 
 ## Lue ensin
 
