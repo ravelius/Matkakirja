@@ -46,6 +46,58 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
+## Paketti O2: Matkailijan opas 2.1 — kainalo, paletti, otsikko (Opus 26, tilattu 16.8.2026)
+
+Omistajan palaute Pariisin opas 2.0:sta 16.8.2026: sivulle kaivataan
+kainalonostot (parasta + varjopuolet), koko sivun väripaletti on
+"hieman kökkö" ja vaatii uudelleenajattelun, otsikko isommaksi ja
+avauskuva lämpimän sävyiseksi. Omistaja delegoi kokonaisuuden
+miettimisen Opukselle — tässä paketissa on siis tavallista enemmän
+suunnitteluvapautta, mutta jokainen valinta PERUSTELLAAN raportissa.
+
+**Haara:** `claude/opus26-opas21`
+
+1. **KAINALONOSTOT heti oikeaan reunaan** (ingressin jälkeen, ennen
+   ensimmäistä jaksoa; kapealla ruudulla täysleveinä allekkain):
+   - **"Parasta täällä"** LÄMPIMÄLLÄ pohjavärillä: 4–6 riviä muodossa
+     aihe + tähdet (1–3 ★) + puolilauseen perustelu. Aiheet valitaan
+     kaupungin mukaan (museot, ruoka, ranta, kävely, ilta,
+     lapsiystävällisyys, edullisuus…). Pariisi: museot ★★★,
+     ruoka ★★★, kävely-ympäristö ★★★, iltatunnelma — sinun
+     harkintasi täydentää.
+   - **"Hyvä tietää"** VIILEÄLLÄ pohjavärillä: 3–4 rehellistä
+     varjopuolta ilman pelottelua (Pariisi: korkea hintataso,
+     taskuvarkaat metrossa ja nähtävyyksillä, kärkikohteiden jonot,
+     elokuussa moni paikka kiinni). Kunnioitus-pilari pätee: faktoja,
+     ei kaupungin mollausta.
+   - Datamalli: matkailu.parasta = [{mita, tahdet, selite}] ja
+     matkailu.hyvaTietaa = [teksti]. Ei tähtiä miinuksiin.
+2. **VÄRIPALETTI UUSIKSI koko oppaaseen.** Nykyinen kolmen aksentin
+   paletti on omistajan silmään sekava. Suunnittele harmonisempi
+   kokonaisuus: lämmin perusvire, aksentteja säästeliäämmin ja
+   selvällä roolijaolla (esim. yksi pääaksentti otsikoille, lämmin ja
+   viileä pohja kainaloille, laatikot samasta perheestä). Edelleen
+   vanhan matkajulisteen henki, ei neonia; paperikohina jää.
+   Perustele raportissa mitä hylkäsit ja miksi.
+3. **Otsikko isommaksi**: 'Matkailijan Pariisi' selvästi nykyistä
+   suurempi (display-kokoluokka), ingressi sen alla erottuvana.
+4. **Avauskuva lämpimäksi**: jakson 1 kuva (sininen Montparnasse-
+   panoraama) vaihdetaan LÄMMINSÄVYISEEN näkymään (kultainen hetki /
+   auringonlasku lämpimin sävyin). Haku FP/QI-kategorioista, lisenssi
+   + tekijä API:sta, sijainti kuvaustekstistä, kuva silmin —
+   Montparnasse-kuvan saa siirtää myöhempään jaksoon tai pois.
+   HUOM: etusivukarusellin Orsay-kuvaa ei saa toistaa oppaassa.
+5. Silmätarkistus omin kaappauksin (leveä + kapea; kuvat paikallisesti
+   tarjoiltuina kuten Opus 25 teki); arviot raporttiin, kaappauksia EI
+   committoida.
+6. RAJAUS: kosketa vain js/ui.js:ää, css/styles.css:ää,
+   js/packs/kulttuuri-kategoriat.js:n pariisi-osuutta ja
+   viesti-fable.md:tä (repon juureen). Ripoteltu-taitto ja muut
+   kaupungit eivät saa muuttua (aja sama regressiotarkistus kuin
+   Opus 25). ÄLÄ aja uusi-versio.mjs:ää, EI PR:ää eikä mergeä.
+   Portit: node --test tests/*.test.mjs + tarkista-kaksoisavaimet.
+   Checkpoint-push ≥ 30 min välein.
+
 ## Paketti A1: Äänet R2:een + hybridivälimuisti (Opus 24, tilattu 16.8.2026)
 
 **✅ VALMIS (Opus 24, katselmoitu ja julkaistu v774:ssä 16.8.2026):**
