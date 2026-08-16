@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v775 — äänet poistettu repostä: luennat + taustat R2:sta',
   'v774 — äänet R2:sta; asennus kevenee 180 Mt (testaa äänet!)',
   'v773 — Maxin työlista huomiselle (moduulit + docs-remontti)',
   'v772 — Raamatussa: äänet R2, oppaan ilme, speksioppi, remontti',

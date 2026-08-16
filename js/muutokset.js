@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 775, teksti: 'Poistoerä: 455 ääntä pois repostä, jakelu R2:sta' },
   { v: 774, teksti: 'Äänet R2-jakeluun; esilataus 242 Mt → 62 Mt' },
   { v: 773, teksti: 'Maxin työlista: moduulirakenne + dokumenttiremontti' },
   { v: 772, teksti: 'Raamattuun: äänet R2:sta, oppaan ilme, speksioppi' },
