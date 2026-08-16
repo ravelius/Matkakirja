@@ -13572,10 +13572,15 @@ export class UI {
       p.classList.add('opas-ingressi');
       sisalto.appendChild(p);
     }
-    // Kainalot heti ingressin jälkeen, ennen ensimmäistä jaksoa: ne
-    // ovat lukijan pikasilmäys kaupunkiin ennen kuin juttu alkaa.
-    const kainalot = this.opasKainalot(matkailu);
-    if (kainalot) sisalto.appendChild(kainalot);
+    /*
+     * Kainalotaulu kelluu ENSIMMÄISEN JAKSON leipätekstin oikealla
+     * puolella (omistajan palaute 16.8.2026), joten se annetaan jaksolle
+     * mukaan eikä ladota omaksi lohkokseen ingressin alle. Jos
+     * kaupungille ei ole kirjoitettu yhtään jaksoa, taulu tulee silti
+     * näkyviin — ingressin perään, ettei tieto katoa taittosäännön takia.
+     */
+    const kainalo = this.opasKainalot(matkailu);
+    if (kainalo && !jaksot.length) sisalto.appendChild(kainalo);
     // Jakson indeksi → lohko, joka tulee sen JÄLKEEN.
     const valiin = new Map();
     if (matkailu?.parasAika || matkailu?.kaudet?.length) {
@@ -13586,7 +13591,7 @@ export class UI {
       valiin.set(2, () => this.opasKassa(matkailu));
     }
     jaksot.forEach((jakso, i) => {
-      sisalto.appendChild(this.opasJakso(jakso, linkit));
+      sisalto.appendChild(this.opasJakso(jakso, linkit, i === 0 ? kainalo : null));
       const lohko = valiin.get(i);
       if (lohko) sisalto.appendChild(lohko());
     });
@@ -13597,71 +13602,151 @@ export class UI {
   }
 
   /**
-   * Oppaan aihejakso: pieni väliotsikko → kappale(et) → KOKO PALSTAN
-   * levyinen kuva kuvatekstillä. Ei kellukkeita — omistajan havainto
-   * 16.8.2026 oli, että ripoteltu kuvataitto on opasjutussa levoton.
+   * Oppaan aihejakso: pieni väliotsikko → kappale(et) → kuva
+   * kuvatekstillä. Kuva on oletuksena KOKO PALSTAN levyinen — omistajan
+   * havainto 16.8.2026 oli, että ripoteltu kuvataitto on opasjutussa
+   * levoton, eikä oletusta muuteta.
+   *
+   * KAKSI POIKKEUSTA, molemmat omistajan tilauksesta 16.8.2026:
+   *
+   *   1. `kuva.asettelu === 'kapea'` ("Leipomokuva voisi olla pienemmällä
+   *      ja teksti vasemmalla"): kuva kelluu oikealla ja jakson teksti
+   *      kiertää sen vasemmalta. Jakso saa silloin oman
+   *      lohkomuotoiluympäristön (opas-jakso-kapea → display: flow-root),
+   *      jotta kelluke pysyy OMASSA jaksossaan eikä vuoda seuraavan
+   *      väliotsikon päälle. Sama tehdään luokalla eikä :has-valitsimella,
+   *      koska taittosääntö on rakenteen tosiasia — se ei saa riippua
+   *      siitä, tukeeko selain :has-valitsinta.
+   *   2. `kuva` saa olla myös LISTA (paketti O3, osa 3): useamman kuvan
+   *      jakso saa saman karusellin kuin nähtävyysjutut ja lehden
+   *      avauskuvat. Karuselli on jo olemassa nuolineen, laskureineen,
+   *      pyyhkäisyineen ja koko sarjan suurennoksineen — oma kevyt
+   *      toteutus olisi tuonut neljännen selauskoneiston samaan peliin
+   *      ilman, että se tekisi mitään uutta.
+   *
+   * Asetteluvalinta luetaan sarjan ENSIMMÄISESTÄ kuvasta: karuselli on
+   * yksi kehys, joten asettelu on kehyksen eikä yksittäisen kuvan asia.
    */
-  opasJakso(jakso, linkit) {
+  opasJakso(jakso, linkit, kainalo = null) {
     const osa = html('section', 'opas-jakso');
     if (jakso.otsikko) osa.appendChild(html('h3', 'opas-valiotsikko', jakso.otsikko));
+    /*
+     * Kainalotaulu ennen leipätekstiä, väliotsikon JÄLKEEN: näin
+     * väliotsikon alaviiva jää koko palstan levyiseksi ja vain teksti
+     * kiertää taulun. Kapealla ruudulla taulu nousee tehtävänannon
+     * mukaisesti ingressin alle — se tehdään sarakejärjestyksellä
+     * (opas-jakso-kainalo), koska DOM-järjestys palvelee leveää näkymää.
+     */
+    if (kainalo) {
+      osa.classList.add('opas-jakso-kainalo');
+      osa.appendChild(kainalo);
+    }
+    const kuvat = (Array.isArray(jakso.kuva) ? jakso.kuva : [jakso.kuva])
+      .filter((k) => k?.tiedosto);
+    const kapea = kuvat[0]?.asettelu === 'kapea';
+    let kehys = null;
+    if (kuvat.length) {
+      kehys = kuvat.length > 1
+        ? this.nahtavyydenKaruselli(kuvat)
+        : this.nahtavyydenKuva(kuvat[0]);
+      kehys.classList.add('opas-kuva');
+      if (kapea) {
+        kehys.classList.add('opas-kuva-kapea');
+        osa.classList.add('opas-jakso-kapea');
+        // Kelluke ENNEN leipätekstiä: kellukkeen ohittanut teksti ei
+        // enää kierrä sitä, joten tekstin jälkeen lisätty kuva jäisi
+        // yksin jakson alaosaan ja jättäisi viereensä tyhjän palstan.
+        osa.appendChild(kehys);
+      }
+    }
     for (const kappale of String(jakso.teksti ?? '').split('\n\n').filter(Boolean)) {
       osa.appendChild(this.nahtavyysKappale(kappale, linkit));
     }
-    if (jakso.kuva?.tiedosto) {
-      const kehys = this.nahtavyydenKuva(jakso.kuva);
-      kehys.classList.add('opas-kuva');
-      osa.appendChild(kehys);
-    }
+    if (kehys && !kapea) osa.appendChild(kehys);
     return osa;
   }
 
   /**
-   * KAINALONOSTOT (omistajan palaute 16.8.2026): kaksi lyhyttä lohkoa
-   * heti ingressin jälkeen — "Parasta täällä" lämpimällä pohjalla ja
-   * "Hyvä tietää" viileällä.
+   * KAINALOTAULU (omistajan palaute 16.8.2026 opas 2.1:stä: "liian
+   * raskas taulukko. Tee vain otsikkotasolla ja sijoita leipätekstin
+   * oikealle puolelle. Yksi taulu jossa vain pohjaväri muuttuu. Voi
+   * tehdä mini pop upin jota painamalla tulisi tarkemmat tiedot.").
    *
-   * Ne ovat lukijan pikasilmäys: ennen kuin juttu alkaa, matkailija
-   * näkee mitä kaupungista kannattaa hakea ja mitä siinä kannattaa
-   * varautua sietämään. Pari on YKSI elementti eikä kaksi irrallista,
-   * jotta ne pysyvät rinnakkain samassa reunassa eivätkä erkane
-   * toisistaan jaksojen väliin.
+   * Opas 2.1:n kaksipalstainen paneeli oli oma lohkonsa ingressin alla,
+   * ja siinä luki jokaisen rivin perustelu kokonaisena virkkeenä. Tässä
+   * versiossa taulu on yksi kapea kelluke leipätekstin oikealla
+   * puolella, ja NÄKYVISSÄ ON VAIN OTSIKKOTASO: aihe ja tähdet tai
+   * pelkkä aiheen nimi. Perustelu on rivin takana miniponnahduksessa.
    *
-   * Kunnioitus-pilari koskee myös varjopuolia: "Hyvä tietää" on
-   * faktoja matkailijalle, ei kaupungin mollausta — eikä siinä ole
-   * tähtiä, koska haitoille ei anneta arvosanoja.
+   * YKSI KEHYS, KAKSI VYÖHYKETTÄ. Sama typografia, sama reunus, sama
+   * otsikkoväri — ainoa ero on pohjaväri: lämmin ylhäällä (suositukset),
+   * viileä alla (varaukset). Siksi vyöhykeotsikot EIVÄT ota aksenttiaan
+   * lohkon väristä niin kuin 2.1:ssä: jos otsikkokin vaihtaisi väriä,
+   * eroja olisi kaksi eikä yksi.
+   *
+   * Miniponnahdus on pelin oma pikkuseloste (avaaPikkuseloste): ankkurin
+   * viereen asettuva pieni laatikko, joka sulkeutuu Escistä,
+   * ulkopuolisesta napautuksesta ja omasta ×:stään, ja joka osaa jo
+   * asettua avoimen dialogin sisään. Uusi kupla olisi ollut sama koodi
+   * uudestaan — ja huonompi, koska tämä hoitaa myös aria-expandedin.
+   *
+   * Kunnioitus-pilari koskee yhä varjopuolia: "Hyvä tietää" on faktoja
+   * matkailijalle, ei kaupungin mollausta, eikä siinä ole tähtiä —
+   * haitoille ei anneta arvosanoja.
    */
   opasKainalot(matkailu) {
     const parasta = matkailu?.parasta ?? [];
     const hyvaTietaa = matkailu?.hyvaTietaa ?? [];
     if (!parasta.length && !hyvaTietaa.length) return null;
-    const pari = html('div', 'opas-kainalot');
-    if (parasta.length) {
-      const lohko = html('aside', 'opas-kainalo opas-parasta');
-      lohko.appendChild(html('h3', 'opas-kainalo-otsikko', 'Parasta täällä'));
-      const lista = html('ul', 'opas-parasta-lista');
-      for (const rivi of parasta) {
-        const kohta = html('li', 'opas-parasta-rivi');
-        const paa = html('p', 'opas-parasta-paa');
-        paa.appendChild(html('span', 'opas-parasta-mita', rivi.mita ?? ''));
-        paa.appendChild(this.opasTahdet(rivi.tahdet));
-        kohta.appendChild(paa);
-        if (rivi.selite) kohta.appendChild(html('p', 'opas-parasta-selite', rivi.selite));
-        lista.appendChild(kohta);
+    const taulu = html('aside', 'opas-kainalo');
+    taulu.setAttribute('aria-label', 'Kaupunki lyhyesti');
+
+    /*
+     * Yksi rivi. Rivi on nappi vain silloin, kun sen takana on jotain
+     * avattavaa: selitteetön rivi ei saa näyttää painettavalta.
+     */
+    const rivi = (nimi, selite, tahdet) => {
+      const kohta = html('li', 'opas-vyo-rivi');
+      const sisus = (el) => {
+        el.appendChild(html('span', 'opas-vyo-nimi', nimi ?? ''));
+        if (tahdet != null) el.appendChild(this.opasTahdet(tahdet));
+        return el;
+      };
+      if (!selite) {
+        kohta.appendChild(sisus(html('span', 'opas-vyo-rivisisus')));
+        return kohta;
       }
-      lohko.appendChild(lista);
-      pari.appendChild(lohko);
+      const nappi = sisus(html('button', 'opas-vyo-rivisisus opas-vyo-nappi'));
+      nappi.type = 'button';
+      nappi.setAttribute('aria-expanded', 'false');
+      nappi.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Toinen napautus samaan riviin sulkee: rivi on katkaisija.
+        if (this.pikkuseloste?.ankkuri === nappi) this.suljePikkuseloste();
+        else this.avaaPikkuseloste(nappi, selite);
+      });
+      kohta.appendChild(nappi);
+      return kohta;
+    };
+
+    const vyohyke = (luokka, otsikko, rivit) => {
+      const osa = html('div', `opas-vyo ${luokka}`);
+      osa.appendChild(html('h3', 'opas-vyo-otsikko', otsikko));
+      const lista = html('ul', 'opas-vyo-lista');
+      for (const kohta of rivit) lista.appendChild(kohta);
+      osa.appendChild(lista);
+      taulu.appendChild(osa);
+    };
+
+    if (parasta.length) {
+      vyohyke('opas-vyo-lammin', 'Parasta täällä',
+        parasta.map((r) => rivi(r.mita, r.selite, r.tahdet)));
     }
     if (hyvaTietaa.length) {
-      const lohko = html('aside', 'opas-kainalo opas-hyva-tietaa');
-      lohko.appendChild(html('h3', 'opas-kainalo-otsikko', 'Hyvä tietää'));
-      const lista = html('ul', 'opas-hyva-lista');
-      for (const teksti of hyvaTietaa) {
-        lista.appendChild(html('li', 'opas-hyva-rivi', teksti));
-      }
-      lohko.appendChild(lista);
-      pari.appendChild(lohko);
+      vyohyke('opas-vyo-viilea', 'Hyvä tietää',
+        hyvaTietaa.map((r) => rivi(r.otsikko, r.teksti, null)));
     }
-    return pari;
+    return taulu;
   }
 
   /**
@@ -13699,6 +13784,11 @@ export class UI {
    */
   opasKaudet(matkailu) {
     const laatikko = this.opasLaatikko('Milloin matkaan?', 'opas-saa');
+    // Vuosikäyrä kelluu laatikon leipätekstin oikealla puolella
+    // (omistajan tilaus 16.8.2026), joten se on otsikon jälkeen mutta
+    // ennen tekstiä: kelluke tarvitsee tekstiä kierrettäväkseen.
+    const graafi = this.opasSaagraafi(matkailu.ilmasto);
+    if (graafi) laatikko.appendChild(graafi);
     if (matkailu.parasAika) {
       laatikko.appendChild(html('p', 'opas-parasaika', matkailu.parasAika));
     }
@@ -13719,6 +13809,209 @@ export class UI {
       laatikko.appendChild(lista);
     }
     return laatikko;
+  }
+
+  /**
+   * VUOSIKÄYRÄ (omistajan tilaus 16.8.2026: "lämpötilatauluun voisi
+   * leipätekstin oikealle puolelle tuoda pienen kuvan vuosiennusteesta
+   * ja sitä klikkaamalla se suurenisi isommaksi animoidusti").
+   *
+   * Piirretään käsin SVG:nä ilman kirjastoa: kaksitoista lukuparia on
+   * niin vähän dataa, ettei sen esittämiseen kannata tuoda peliin
+   * kaaviokirjastoa — koko piirto on alle sata riviä eikä pelissä ole
+   * ennestään yhtään kirjastoriippuvuutta.
+   *
+   * Pieni versio on OTSIKKOTASO niin kuin kainalotaulukin: vyöhyke,
+   * käyrät, kuukausien alkukirjaimet ja muutama asteviiva. Lukuarvot
+   * tulevat vasta suurennoksessa — pienessä koossa kaksitoista
+   * lukuparia olisi lukukelvoton ryteikkö.
+   *
+   * @param {Array<{kk: string, min: number, max: number}>} ilmasto
+   */
+  opasSaagraafi(ilmasto) {
+    const kuukaudet = (ilmasto ?? []).filter((k) => Number.isFinite(k?.min)
+      && Number.isFinite(k?.max));
+    if (kuukaudet.length < 2) return null;
+    const kehys = html('figure', 'opas-saagraafi');
+    const nappi = html('button', 'opas-saagraafi-nappi');
+    nappi.type = 'button';
+    nappi.setAttribute('aria-label', 'Vuoden lämpötilat — suurenna kuvaaja');
+    nappi.appendChild(this.saakayra(kuukaudet, false));
+    nappi.addEventListener('click', () => this.avaaSaagraafi(kuukaudet, nappi));
+    kehys.appendChild(nappi);
+    kehys.appendChild(html('figcaption', 'opas-saagraafi-teksti',
+      'Vuoden lämpötilat, yö ja päivä. Napauta suuremmaksi.'));
+    return kehys;
+  }
+
+  /**
+   * Itse kuvaaja: min–max-vyöhyke täytettynä, käyrät sen reunoilla,
+   * asteviivat taustalla ja kuukaudet alla.
+   *
+   * Asteikko haetaan datasta ja pyöristetään viiden asteen portaisiin,
+   * jottei nollaviiva jää kuvan ulkopuolelle lämpimissä kaupungeissa
+   * eikä pakkaspuoli katkea kylmissä — sama piirtäjä palvelee
+   * Reykjavíkia ja Kairoa ilman käsivirityksiä.
+   *
+   * @param {Array} kuukaudet 12 kuukauden min/max
+   * @param {boolean} luvut näytetäänkö lukuarvot (vain suurennoksessa)
+   */
+  saakayra(kuukaudet, luvut) {
+    const NS = 'http://www.w3.org/2000/svg';
+    // Suurennoksessa reunukset ovat väljemmät: käyrän päällä on
+    // lukuarvot, ja vuoden ensimmäinen luku törmäsi kapeammalla
+    // vasemmalla marginaalilla asteikon lukuun.
+    const L = luvut ? 36 : 26;
+    const O = luvut ? 14 : 8;
+    const Y = luvut ? 18 : 10;
+    const A = 20;
+    const W = 250;
+    const H = luvut ? 190 : 156;
+    const piirtoW = W - L - O;
+    const piirtoH = H - Y - A;
+    const lampotilat = kuukaudet.flatMap((k) => [k.min, k.max]);
+    const ala = Math.floor(Math.min(...lampotilat) / 5) * 5;
+    const yla = Math.ceil(Math.max(...lampotilat) / 5) * 5;
+    const askel = yla - ala > 25 ? 10 : 5;
+    const x = (i) => L + (piirtoW * i) / (kuukaudet.length - 1);
+    const y = (c) => Y + piirtoH - (piirtoH * (c - ala)) / (yla - ala);
+
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    svg.setAttribute('class', 'opas-saa-kuva');
+    svg.setAttribute('role', 'img');
+    const nimet = kuukaudet.map((k) => k.kk).join(', ');
+    svg.setAttribute('aria-label', `Kuukausien keskilämpötilat ${nimet}: `
+      + kuukaudet.map((k) => `${k.kk} ${k.min}–${k.max} °C`).join('; '));
+    const lisaa = (nimi, attrs, teksti = null) => {
+      const el = document.createElementNS(NS, nimi);
+      for (const [avain, arvo] of Object.entries(attrs)) el.setAttribute(avain, String(arvo));
+      if (teksti != null) el.textContent = teksti;
+      svg.appendChild(el);
+      return el;
+    };
+
+    // Asteviivat ja niiden luvut. Nolla-aste saa oman luokkansa: se on
+    // ainoa viiva, jolla on lukijalle merkitys ilman lukua.
+    for (let c = ala; c <= yla; c += askel) {
+      lisaa('line', {
+        x1: L, x2: W - O, y1: y(c), y2: y(c), class: c === 0 ? 'opas-saa-nolla' : 'opas-saa-ruudukko',
+      });
+      lisaa('text', { x: L - 5, y: y(c) + 3.5, class: 'opas-saa-aste' }, `${c}`);
+    }
+
+    // Vyöhyke: yötä pitkin oikealle, päivää pitkin takaisin vasemmalle.
+    const ylos = kuukaudet.map((k, i) => `${i ? 'L' : 'M'}${x(i)} ${y(k.max)}`).join(' ');
+    const alas = kuukaudet.map((k, i) => `L${x(kuukaudet.length - 1 - i)} `
+      + `${y(kuukaudet[kuukaudet.length - 1 - i].min)}`).join(' ');
+    lisaa('path', { d: `${ylos} ${alas} Z`, class: 'opas-saa-vyo' });
+    for (const [kentta, luokka] of [['max', 'opas-saa-paiva'], ['min', 'opas-saa-yo']]) {
+      lisaa('path', {
+        d: kuukaudet.map((k, i) => `${i ? 'L' : 'M'}${x(i)} ${y(k[kentta])}`).join(' '),
+        class: `opas-saa-kayra ${luokka}`,
+      });
+    }
+
+    // Kuukaudet alle. Pienessä koossa mahtuu vain alkukirjain; suuressa
+    // kolme kirjainta, jolloin tammi ja touko erottuvat toisistaan.
+    kuukaudet.forEach((k, i) => {
+      const nimi = String(k.kk ?? '');
+      lisaa('text', { x: x(i), y: H - 6, class: 'opas-saa-kk' },
+        luvut ? nimi.slice(0, 3) : nimi.slice(0, 1).toUpperCase());
+    });
+
+    // Lukuarvot vain suurennoksessa: päivälämpö käyrän yläpuolelle,
+    // yölämpö alapuolelle, jotta luku ei istu käyrän päällä.
+    if (luvut) {
+      kuukaudet.forEach((k, i) => {
+        lisaa('text', { x: x(i), y: y(k.max) - 6, class: 'opas-saa-luku opas-saa-paiva-luku' },
+          `${Math.round(k.max)}`);
+        lisaa('text', { x: x(i), y: y(k.min) + 12, class: 'opas-saa-luku opas-saa-yo-luku' },
+          `${Math.round(k.min)}`);
+      });
+    }
+    return svg;
+  }
+
+  /**
+   * Suurennos: kuvaaja kasvaa pienestä kelluketta vastaavasta paikasta
+   * ruudun keskelle. Animaatio on FLIP — suuri kuvaaja asetetaan
+   * paikalleen, mitataan, ja lähtöruutu piirretään sen päälle
+   * muunnoksena. Näin selain animoi vain transformia ja opacityä eikä
+   * asettelua lasketa kertaakaan uudestaan kesken liikkeen.
+   *
+   * Overlay menee avoimen dialogin sisään samasta syystä kuin
+   * pikkuseloste: <dialog>-modaali nostetaan omaan ylätasoonsa, ja
+   * muualle lisätty kerros jäisi sen alle näkymättömiin.
+   */
+  avaaSaagraafi(kuukaudet, ankkuri) {
+    const koti = ankkuri.closest('dialog[open]') ?? document.body;
+    const overlay = html('div', 'opas-saa-overlay');
+    const laatikko = html('div', 'opas-saa-suuri');
+    laatikko.appendChild(this.saakayra(kuukaudet, true));
+    laatikko.appendChild(html('p', 'opas-saa-suuri-teksti',
+      'Kuukausien keskimääräiset yö- ja päivälämpötilat (°C).'));
+    overlay.appendChild(laatikko);
+    koti.appendChild(overlay);
+    ankkuri.setAttribute('aria-expanded', 'true');
+
+    const hidas = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const muunnos = () => {
+      const a = ankkuri.getBoundingClientRect();
+      const b = laatikko.getBoundingClientRect();
+      if (!b.width || !b.height) return '';
+      return `translate(${a.left + a.width / 2 - (b.left + b.width / 2)}px, `
+        + `${a.top + a.height / 2 - (b.top + b.height / 2)}px) `
+        + `scale(${Math.max(a.width / b.width, 0.05)})`;
+    };
+    if (hidas) {
+      overlay.classList.add('nakyy');
+    } else {
+      laatikko.style.transform = muunnos();
+      laatikko.style.opacity = '0';
+      /*
+       * Kaksi ruutua: ensimmäisessä selain laskee lähtötyylin (pieni,
+       * läpinäkyvä, himmennys pois), toisessa siirtymä lähtee liikkeelle.
+       * Yhdellä rAF:lla selain ehtisi yhdistää molemmat samaan
+       * tyylilaskentaan, jolloin mikään ei animoituisi.
+       */
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (!overlay.isConnected) return;
+        overlay.classList.add('nakyy');
+        laatikko.classList.add('liikkuu');
+        laatikko.style.transform = '';
+        laatikko.style.opacity = '';
+      }));
+    }
+
+    let suljettu = false;
+    const sulje = () => {
+      if (suljettu) return;
+      suljettu = true;
+      document.removeEventListener('keydown', nappaimesta, true);
+      ankkuri.setAttribute('aria-expanded', 'false');
+      if (hidas) { overlay.remove(); return; }
+      // Sama matka takaisin. Poistetaan vasta siirtymän jälkeen, ja
+      // varmuusajastin siltä varalta ettei transitionend tule (esim.
+      // kun kerros ehditään irrottaa DOMista muuta kautta).
+      laatikko.style.transform = muunnos();
+      laatikko.style.opacity = '0';
+      overlay.classList.remove('nakyy');
+      const pois = () => overlay.remove();
+      laatikko.addEventListener('transitionend', pois, { once: true });
+      setTimeout(pois, 400);
+    };
+    const nappaimesta = (e) => {
+      if (e.key !== 'Escape') return;
+      // Suurennos on päällimmäisin: se saa Escin eikä päästä sitä
+      // eteenpäin dialogille, joka sulkeutuisi samasta näppäimestä.
+      e.preventDefault();
+      e.stopPropagation();
+      sulje();
+    };
+    overlay.addEventListener('click', sulje);
+    document.addEventListener('keydown', nappaimesta, true);
+    return overlay;
   }
 
   /** "Matkakassa" — €€-luokka merkkinä ja 4–5 ankkurihintaa. */

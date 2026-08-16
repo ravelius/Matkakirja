@@ -2251,14 +2251,26 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         /*
          * Osion valokuva otsikon alla oikealla, teksti kiertää.
-         * Lisenssi tarkistettu Commonsin API:sta 16.8.2026, kuva
-         * katsottu silmin.
+         *
+         * KUVA VAIHDETTU YKSINKERTAISEMPAAN (paketti O3, osa 5;
+         * omistajan palaute 16.8.2026: "Vähän yksinkertaisempi kuva kun
+         * on pienessä koossa"). Entinen terassikuva oli koko kadun
+         * levyinen näkymä, jossa oli tuoleja, pöytiä, ihmisiä ja
+         * julkisivuja — 10–17 rem leveänä siitä ei erottunut mitään.
+         * Tilalla yksi lähikuva-aihe, joka lukee heti pienenäkin ja
+         * kertoo saman asian kuin leipäteksti: terassipöytä ja kahvi.
+         * Lisenssi ja tekijä Commonsin API:sta 16.8.2026 (Restrictions
+         * tyhjä), sijainti kuvaustekstistä ("on a terrace table in
+         * Paris") ja kategoriasta Cafés in Paris — ei tiedostonimestä,
+         * joka on japaninkielinen eikä kerro paikasta mitään. Kuva
+         * katsottu silmin: pääaihe on keskellä ja alavasemmalla, joten
+         * oikean yläkulman yli kulkeva nauha ei peitä sitä.
          */
         kuva: {
-          tiedosto: 'Paris, à la terrasse du café, place Saint-André-des-Art, 2020.jpg',
-          selite: 'Terassin tuolit on käännetty kadulle päin — ohikulkijoiden '
-            + 'katselu kuuluu asiaan.',
-          lahde: 'besopha, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: 'MdJ 0038 MdJ Café-à-Paris.jpg',
+          selite: 'Musta kahvi ja cappuccino terassipöydällä; kuitti tuodaan '
+            + 'heti juoman mukana.',
+          lahde: '(Joenomias) Menno R. de Jong, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Pariisi on yllättävän pieni: kehäbulevardin sisään mahtuu '
           + 'vain runsaat sata neliökilometriä, ja kaupungin halki kävelee '
@@ -2352,14 +2364,38 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'instituutio: ruokatoreja pystytetään kadunvarsille pari '
                 + 'kertaa viikossa, ja niiltä ostetaan juustot, hedelmät '
                 + 'ja kukat.',
-              kuva: {
-                tiedosto: 'Paris 75006 Jardin du Luxembourg Bassin 20160502.jpg',
-                selite: 'Luxembourgin puutarhan altaalla purjehditaan '
-                  + 'vuokraveneillä: vene työnnetään liikkeelle kepillä ja '
-                  + 'odotetaan, että tuuli tuo sen takaisin toiselle '
-                  + 'reunalle.',
-                lahde: 'Wulf Alex, Wikimedia Commons (CC0)',
-              },
+              /*
+               * KARUSELLI (paketti O3, osa 3): Luxembourgin puistolle
+               * kolme kuvaa yhdessä kehyksessä. Järjestys seuraa jakson
+               * tekstiä — ensin allas ja purjeveneet, sitten irralliset
+               * tuolit, joista teksti puhuu, ja viimeisenä palatsin
+               * edusta iltavalossa, jossa samat tuolit ovat hajallaan.
+               * Kaikkien lisenssit todennettu Commonsin API:sta
+               * 16.8.2026 (Restrictions tyhjä), sijainti kuvaustekstistä
+               * ja kategorioista, ja jokainen kuva katsottu silmin.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Paris 75006 Jardin du Luxembourg Bassin 20160502.jpg',
+                  selite: 'Luxembourgin puutarhan altaalla purjehditaan '
+                    + 'vuokraveneillä: vene työnnetään liikkeelle kepillä ja '
+                    + 'odotetaan, että tuuli tuo sen takaisin toiselle '
+                    + 'reunalle.',
+                  lahde: 'Wulf Alex, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Paris 75006 Jardin du Luxembourg lawn 20160417 Fermob chairs.jpg',
+                  selite: 'Puiston irralliset rautatuolit saa raahata mihin '
+                    + 'haluaa; nämä on käännetty nurmen reunaan.',
+                  lahde: 'Jason Riedy, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Jardin du Luxembourg 2010.jpg',
+                  selite: 'Luxembourgin palatsi — nykyään Ranskan senaatti — '
+                    + 'ja sen edustan tuolit iltavalossa.',
+                  lahde: 'Marcin Białek, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
             },
             {
               otsikko: 'Leipomon kaupunki',
@@ -2372,8 +2408,16 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vuoden ajan. Leipomon naapurissa on tavallisesti '
                 + 'juustokauppa ja lihakauppa, ja illallinen syödään '
                 + 'myöhään — moni ravintola avaa vasta puoli kahdeksalta.',
+              /*
+               * KAPEA ASETTELU (omistajan palaute 16.8.2026:
+               * "Leipomokuva voisi olla pienemmällä ja teksti
+               * vasemmalla"). Kuva kelluu oikealla ja teksti kiertää.
+               * Kuva itsessään on ennallaan — vain sen koko ja paikka
+               * muuttuvat.
+               */
               kuva: {
                 tiedosto: 'La Désirade, 69 bis Rue Brancion, 75015 Paris, August 2015.jpg',
+                asettelu: 'kapea',
                 selite: 'Punainen leipomo Rue Brancionilla. Kyltissä lukee '
                   + 'ARTISAN BOULANGER ja PATISSIER, ja ohikulkija kantaa '
                   + 'patonkia kädessään.',
@@ -2390,8 +2434,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaupunki näyttää vanhemmalta kuin päivällä. '
                 + 'Eiffel-torni vastaa omalla tavallaan: pimeän tultua se '
                 + 'välkkyy viiden minuutin ajan aina tasatunnein.',
+              // Sama kapea asettelu kuin leipomojaksossa (omistaja
+              // 16.8.2026: "Sama iltakuvalle"). Pystykuva hyötyy siitä
+              // erikseen: täysleveänä se vei sivusta yli ruudullisen.
               kuva: {
                 tiedosto: 'Paris 75018 Rue du Mont-Cenis no 025 stairs towards Rue Saint-Vincent at night.jpg',
+                asettelu: 'kapea',
                 selite: 'Montmartren portaat yöllä Rue du Mont-Cenis\'llä. '
                   + 'Lyhdyt johtavat alas kukkulalta, ja kaukana '
                   + 'kimmeltävät kaupungin valot.',
@@ -2456,16 +2504,36 @@ export const KULTTUURI_KATEGORIAT = {
              * (hintataso ja hotellihuoneiden koko, taskuvarkaat metrossa
              * ja kärkikohteilla, Eiffel-tornin jonot, museokortin
              * jononohitus, elokuun lomakausi) — kaikki haettu 16.8.2026.
+             *
+             * OTSIKKO + TEKSTI (paketti O3, osa 1): kainalotaulussa
+             * näkyy vain otsikko, ja virke avautuu miniponnahduksesta.
+             * Otsikot ovat yhden asian nimiä eivätkä tiivistelmiä —
+             * "Taskuvarkaat" kertoo mistä on kyse, "Varo taskuvarkaita"
+             * yrittäisi kertoa jo koko asian kahdella sanalla.
              */
             hyvaTietaa: [
-              'Hintataso on Euroopan kärkeä, ja edullisessakin keskustan '
-                + 'hotellissa huone on tavallisesti 12–16 neliötä.',
-              'Taskuvarkaat työskentelevät metrossa, lentokenttäjunassa ja '
-                + 'kärkikohteiden ruuhkissa — lompakko etutaskuun.',
-              'Kärkikohteisiin jonotetaan: Eiffel-tornille voi mennä tunteja '
-                + 'aamullakin, ja museokortti on olemassa juuri jonojen takia.',
-              'Elokuussa noin puolet pariisilaisista on itse lomalla, ja moni '
-                + 'pieni kauppa ja ravintola on kiinni.',
+              {
+                otsikko: 'Hintataso',
+                teksti: 'Hintataso on Euroopan kärkeä, ja edullisessakin '
+                  + 'keskustan hotellissa huone on tavallisesti 12–16 neliötä.',
+              },
+              {
+                otsikko: 'Taskuvarkaat',
+                teksti: 'Taskuvarkaat työskentelevät metrossa, '
+                  + 'lentokenttäjunassa ja kärkikohteiden ruuhkissa — '
+                  + 'lompakko etutaskuun.',
+              },
+              {
+                otsikko: 'Jonot',
+                teksti: 'Kärkikohteisiin jonotetaan: Eiffel-tornille voi mennä '
+                  + 'tunteja aamullakin, ja museokortti on olemassa juuri '
+                  + 'jonojen takia.',
+              },
+              {
+                otsikko: 'Elokuun sulut',
+                teksti: 'Elokuussa noin puolet pariisilaisista on itse '
+                  + 'lomalla, ja moni pieni kauppa ja ravintola on kiinni.',
+              },
             ],
             parasAika: 'Paras aika on touko–kesäkuu ja syyskuu: päivät ovat '
               + 'pitkiä, lämpötila asettuu kahdenkymmenen tienoille eikä '
@@ -2521,6 +2589,31 @@ export const KULTTUURI_KATEGORIAT = {
                   + 'tammikuussa vajaat 60 tuntia koko kuussa, ja pimeä '
                   + 'tulee jo viideltä.',
               },
+            ],
+            /*
+             * VUOSIKÄYRÄN DATA (paketti O3, osa 2): kahdentoista
+             * kuukauden ilmastonormaalit. min = kuukauden keskimääräinen
+             * yölämpötila, max = keskimääräinen päivälämpötila.
+             *
+             * LÄHDE: en-Wikipedian Paris-artikkelin ilmastotaulukko
+             * (Météo-France, Parc Montsouris, normaalikausi 1991–2020),
+             * haettu 16.8.2026. Samat luvut, joista yllä olevat kausien
+             * lämpöhaarukat on pyöristetty — kaudet ovat siis tämän
+             * taulukon tiivistelmä eivätkä eri lähde.
+             */
+            ilmasto: [
+              { kk: 'tammi', min: 3.2, max: 7.6 },
+              { kk: 'helmi', min: 3.3, max: 8.8 },
+              { kk: 'maalis', min: 5.6, max: 12.8 },
+              { kk: 'huhti', min: 7.9, max: 16.6 },
+              { kk: 'touko', min: 11.1, max: 20.2 },
+              { kk: 'kesä', min: 14.2, max: 23.4 },
+              { kk: 'heinä', min: 16.2, max: 25.7 },
+              { kk: 'elo', min: 16.0, max: 25.6 },
+              { kk: 'syys', min: 13.0, max: 21.5 },
+              { kk: 'loka', min: 9.9, max: 16.5 },
+              { kk: 'marras', min: 6.2, max: 11.1 },
+              { kk: 'joulu', min: 3.8, max: 8.0 },
             ],
             hintataso: '€€€',
             /*
