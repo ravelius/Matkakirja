@@ -81,12 +81,12 @@ Omistajan kaksi linjausta 16.8.2026:
 
 | Kaupunki | Pystykuva etusivulla | Oppaan eka karuselli |
 | --- | --- | --- |
-| Pariisi | ✅ Eiffel-torni (FP, PD) | ⬜ (avauskuva yksin) |
+| Pariisi | ✅ Eiffel-torni (FP, PD) | ✅ 3 kuvaa |
 | Lontoo | ✅ Elizabeth Tower (FP) | ✅ 3 kuvaa |
-| Berliini | ✅ Fernsehturm (FP) | ⬜ |
-| Wien | ✅ Stephansdomin katto (QI-tekijä) | ⬜ |
-| Rooma | ✅ Trevin suihkulähde (QI) | ⬜ |
-| Kööpenhamina | ✅ Nyhavn (QI) | ⬜ |
+| Berliini | ✅ Fernsehturm (FP) | ✅ 3 kuvaa |
+| Wien | ✅ Stephansdomin katto | ✅ 3 kuvaa |
+| Rooma | ✅ Trevin suihkulähde (QI) | ✅ 3 kuvaa |
+| Kööpenhamina | ✅ Nyhavn (QI) | ✅ 3 kuvaa |
 | Helsinki | ✅ Uspenskin katedraali (QI) | ⬜ (ei opastaittoa) |
 
 ### Ehdokkaat, jotka on jo todennettu API:sta
