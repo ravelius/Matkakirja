@@ -3084,6 +3084,10 @@ export class UI {
   vahdiNakymanKokoa() {
     if (this.nakymaVahti) return;
     this.nakymanLeveys = this.mittaaNakyma();
+    // Lähtökorkeus talteen: ilman sitä ensimmäinen vertailu ei voi
+    // havaita hyppyä, ja juuri ensimmäinen taustapaluu on se hetki,
+    // jolloin korkeus on väärä.
+    this.nakymanKorkeus = this.mittaaNakymanKorkeus();
     this.nakymaElvytyksia = 0;
     this.nakymaVahti = () => this.tarkistaNakyma();
     window.addEventListener('resize', this.nakymaVahti);
@@ -3116,7 +3120,31 @@ export class UI {
       return;
     }
     if (document.hidden) return;
-    if (leveys === edellinen && !this.nakymaEpavarma) return;
+    /*
+     * KORKEUS LAUKAISEE ELVYTYKSEN SIINÄ MISSÄ LEVEYSKIN (omistajan
+     * havainto 16.8.2026: peli jää iPadilla tilaan, jossa alanapit
+     * puuttuvat ja kartta on piirretty väärän kokoiseksi, mutta karttaa
+     * voi vierittää — ja tila korjaantuu itsestään myöhemmin).
+     *
+     * Vahti seurasi tähän asti VAIN leveyttä, koska leveys ratkaisee
+     * palstojen määrän. Kartta ja alapalkki mitoitetaan kuitenkin
+     * KORKEUDESTA (fitViewBox), ja taustalta palatessa juuri korkeus on
+     * se, joka ehtii olla hetken väärä: leveys pysyy samana, joten
+     * vahti totesi "ei muutosta" ja palasi — eikä kukaan laskenut
+     * karttaa uusiksi. Se selittää myös itsestään korjaantumisen:
+     * seuraava tapahtuma, joka sattui muuttamaan LEVEYTTÄ, teki
+     * elvytyksen jälkijunassa.
+     *
+     * Kynnys on karkea (8 %), koska puhelimen osoiterivi liikuttaa
+     * korkeutta jatkuvasti pikkuriikkisesti — vain selvä hyppy on
+     * merkki siitä, että näkymä on oikeasti toinen.
+     */
+    const korkeus = this.mittaaNakymanKorkeus();
+    const edellinenKorkeus = this.nakymanKorkeus || 0;
+    const korkeusHyppasi = korkeus > 0 && edellinenKorkeus > 0
+      && Math.abs(korkeus - edellinenKorkeus) > edellinenKorkeus * 0.08;
+    if (korkeus > 0) this.nakymanKorkeus = korkeus;
+    if (leveys === edellinen && !korkeusHyppasi && !this.nakymaEpavarma) return;
     this.nakymanLeveys = leveys;
     this.nakymaEpavarma = false;
     this.ajastaNakymanElvytys();
