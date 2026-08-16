@@ -85,9 +85,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Temple Station underground train City of Westminster London England 01.jpg',
-          selite: 'Metrojuna Temple-asemalla: punaiset ovet, keltaiset tangot '
-            + 'ja Underground-tunnus kyljessä. Laiturin reunaan on '
-            + 'maalattu tuttu varoitus mind the gap.',
+          selite: 'Metrojuna Temple-asemalla — laiturissa tuttu varoitus: '
+            + 'mind the gap.',
           lahde: 'Acabashi, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Lontoo ei ole yksi kaupunki vaan kokoelma kyliä, jotka ovat '
@@ -829,9 +828,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Café Sperl, Wien (1).jpg',
-          selite: 'Café Sperlin kulmajulkisivu Mariahilfissä. Kahvila avattiin '
-            + 'vuonna 1880, ja sen sisustus on yhä pääosin alkuperäinen — '
-            + 'samoin tapa, jolla vieras saa jäädä pöytään tunneiksi.',
+          selite: 'Café Sperl on tarjonnut pöydän ja lehden vuodesta 1880 — '
+            + 'vieras saa jäädä tunneiksi.',
           lahde: '© 1971markus, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Wien on kaupunki, jossa istuudutaan. Kahvila ei ole täällä '
@@ -1417,9 +1415,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Berlin - Kürfurstendamm Gehsteig.jpg',
-          selite: 'Kurfürstendammin jalkakäytävä kesäpäivänä: kahvilan pöydät, '
-            + 'päivänvarjot ja kukkalaatikot vievät puolet leveästä '
-            + 'käytävästä, ja kävelijät kulkevat puiden varjossa.',
+          selite: 'Kahvilat valtaavat puolet Kurfürstendammin leveästä '
+            + 'jalkakäytävästä.',
           lahde: 'Marek Śliwecki, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Berliini on väljä kaupunki: pinta-alaltaan se on lähes '
@@ -2259,10 +2256,8 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Paris, à la terrasse du café, place Saint-André-des-Art, 2020.jpg',
-          selite: 'Kahvilan terassi Place Saint-André-des-Arts\'illa: punaiset '
-            + 'markiisit, tiiviisti aseteltuja rottinkituoleja ja '
-            + 'liitutaulu päivän listoineen. Tuolit on käännetty kadulle '
-            + 'päin, koska ohikulkijoiden katselu kuuluu asiaan.',
+          selite: 'Terassin tuolit on käännetty kadulle päin — ohikulkijoiden '
+            + 'katselu kuuluu asiaan.',
           lahde: 'besopha, Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Pariisi on yllättävän pieni: kehäbulevardin sisään mahtuu '
@@ -4173,9 +4168,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Roma- Piazza Navona - 52380663568.jpg',
-          selite: 'Piazza Navona iltapäivällä. Pitkänomainen aukio seuraa '
-            + 'antiikin kilpa-areenan muotoa: keskellä on obeliski ja '
-            + 'Berninin lähde, laidoilla ravintoloiden markiisit.',
+          selite: 'Piazza Navona seuraa yhä antiikin kilpa-areenan muotoa.',
           lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Rooma on ulkoilmakaupunki: aukiot ovat sen olohuoneita, ja '
@@ -4775,7 +4768,7 @@ export const KULTTUURI_KATEGORIAT = {
         kuva: {
           tiedosto: 'Allas Sea Pool 2.jpg',
           selite: 'Allas-merikylpylän altaat kelluvat meressä keskellä '
-            + 'kaupunkia, ja taustalla kohoaa Uspenskin katedraali.',
+            + 'kaupunkia.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Helsinki on merikaupunki, jonka keskustan kiertää '
@@ -7775,9 +7768,7 @@ export const KULTTUURI_KATEGORIAT = {
          */
         kuva: {
           tiedosto: 'Copenhagen Cyclists (19200075809).jpg',
-          selite: 'Pyöräilijöitä ylittämässä risteystä sinistä pyöräkaistaa '
-            + 'pitkin — arkinen näky, sillä yli puolet kaupunkilaisten '
-            + 'matkoista taittuu pyörällä.',
+          selite: 'Yli puolet kaupunkilaisten matkoista taittuu pyörällä.',
           lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Kööpenhamina on rento kaupunki, joka koetaan parhaiten '

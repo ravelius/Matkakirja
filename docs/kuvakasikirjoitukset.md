@@ -16,6 +16,8 @@ speksataan kaupunkikohtaisesti ENNEN hakua. Jokaiselle kaupungille:
    kaupungin iloisin ja kutsuvin arkinäkymä värikylläisenä —
    ihmisiä nauttimassa kaupungista (terassi, ranta, tori,
    piknik). Tämä kuva myy matkan; ei monumenttia, ei hämärää.
+   Selite YHTEEN lyhyeen lauseeseen (~90 mrk) — pitkä kuvateksti
+   on etusivulla raskas (omistaja 16.8.2026).
 
 Käsikirjoitus on toive, ei pakko: jos speksattua kuvaa ei löydy
 Commonsista laadukkaana (FP/QI- ja valokategoriat ensin), etsijä
