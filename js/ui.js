@@ -11588,7 +11588,16 @@ export class UI {
   piirraMaaEtusivu(kategoria) {
     const kohde = this.arrivalKategoria;
     kohde.replaceChildren();
-    kohde.appendChild(html('h3', 'aihe-nimi', kategoria.nimi));
+    /*
+     * LIPPU MAAN NIMEN PERÄÄN (omistajan tilaus 16.8.2026). Karttasivu
+     * piirtyy tästä omalla piirrollaan eikä piirraKategoriasta, joten
+     * v785:ssä lisätty maaLippu-kenttä ei yksin riittänyt — otsikko
+     * syntyi täällä ilman lippua (omistajan havainto: "maan etusivulta
+     * puuttuu lippu maan nimen perästä otsikossa"). Lippu tehdään
+     * samalla apurilla kuin aihesivuilla, joten se on myös sama nappi
+     * lipun tarinaan siellä missä tarina on.
+     */
+    kohde.appendChild(this.aiheenOtsikko(kategoria));
     const kartta = kategoria.kartta;
     // Kartta ennen tekstiä: kellutus koskee vain sen jälkeen tulevaa.
     const kehys = html('div', 'maakartta-kehys');
@@ -11812,6 +11821,53 @@ export class UI {
     }
   }
 
+  /**
+   * Aihesivun otsikkorivi: nimi, mahdollinen kehittäjätagi ja maan
+   * lippu perässä.
+   *
+   * Oma metodinsa, koska SAMA rivi tarvitaan kahdessa piirrossa:
+   * tavallisilla aihesivuilla (piirraKategoria) ja maan karttasivulla
+   * (piirraMaaEtusivu), joka piirtyy kokonaan omalla koodillaan. Kun
+   * lippu oli vain piirraKategoriassa, karttasivun otsikko jäi ilman
+   * lippua vaikka data oli kunnossa — omistajan havainto 16.8.2026.
+   */
+  aiheenOtsikko(kategoria) {
+    const nimi = html('h3', 'aihe-nimi', kategoria.nimi);
+    // Kehittäjän liitteissä osion valmiusaste värichippinä
+    // otsikon perässä (omistajan tilaus 15.8.2026).
+    if (kategoria.tagi) {
+      nimi.appendChild(html('span', `kehittaja-tagi ${kategoria.tagi.luokka}`,
+        kategoria.tagi.teksti));
+    }
+    // Maan sivun tunnisteena lippu otsikkorivin oikeassa reunassa
+    // (omistajan toive 7.8.2026) — nimessä ei enää maan genetiiviä.
+    if (kategoria.maaLippu) {
+      const lippu = document.createElement('img');
+      lippu.className = 'aihe-lippu';
+      lippu.alt = kategoria.maa ?? '';
+      lippu.title = kategoria.maa ?? '';
+      asetaKuva(lippu, lippuUrl(kategoria.maaLippu, 96), lippuVara(kategoria.maaLippu, 96));
+      /*
+       * LIPPU ON NAPPI, JOS SILLE ON TARINA (omistajan tilaus
+       * 15.8.2026: "Tee lipusta klikattava" — pilotti Suomi ja
+       * Saksa). Maa ilman lipputietoja pitää entisen pelkän kuvan.
+       */
+      const tiedot = LIPPUTIEDOT[kategoria.maaLippu];
+      if (tiedot) {
+        const nappi = html('button', 'aihe-lippu-nappi');
+        nappi.type = 'button';
+        nappi.title = `${tiedot.maa} — lipun tarina`;
+        nappi.setAttribute('aria-label', `${tiedot.maa} — avaa lipun tarina`);
+        nappi.appendChild(lippu);
+        nappi.addEventListener('click', () => this.avaaLippuikkuna(kategoria.maaLippu));
+        nimi.appendChild(nappi);
+      } else {
+        nimi.appendChild(lippu);
+      }
+    }
+    return nimi;
+  }
+
   piirraKategoria(kategoria, kohde = this.arrivalKategoria, { otsikko = true, sitaatti = true } = {}) {
     kohde.replaceChildren();
     if (!kategoria) return;
@@ -11821,42 +11877,7 @@ export class UI {
     // lähtee pois kun samaan koteloon piirtyy tavallinen sivu.
     kohde.classList.toggle('yksipalsta', Boolean(kategoria.yksipalsta));
     // Kuvake ei kerro nimeä, joten nimi lukee sisällön yllä.
-    if (otsikko) {
-      const nimi = html('h3', 'aihe-nimi', kategoria.nimi);
-      // Kehittäjän liitteissä osion valmiusaste värichippinä
-      // otsikon perässä (omistajan tilaus 15.8.2026).
-      if (kategoria.tagi) {
-        nimi.appendChild(html('span', `kehittaja-tagi ${kategoria.tagi.luokka}`,
-          kategoria.tagi.teksti));
-      }
-      // Maan sivun tunnisteena lippu otsikkorivin oikeassa reunassa
-      // (omistajan toive 7.8.2026) — nimessä ei enää maan genetiiviä.
-      if (kategoria.maaLippu) {
-        const lippu = document.createElement('img');
-        lippu.className = 'aihe-lippu';
-        lippu.alt = kategoria.maa ?? '';
-        lippu.title = kategoria.maa ?? '';
-        asetaKuva(lippu, lippuUrl(kategoria.maaLippu, 96), lippuVara(kategoria.maaLippu, 96));
-        /*
-         * LIPPU ON NAPPI, JOS SILLE ON TARINA (omistajan tilaus
-         * 15.8.2026: "Tee lipusta klikattava" — pilotti Suomi ja
-         * Saksa). Maa ilman lipputietoja pitää entisen pelkän kuvan.
-         */
-        const tiedot = LIPPUTIEDOT[kategoria.maaLippu];
-        if (tiedot) {
-          const nappi = html('button', 'aihe-lippu-nappi');
-          nappi.type = 'button';
-          nappi.title = `${tiedot.maa} — lipun tarina`;
-          nappi.setAttribute('aria-label', `${tiedot.maa} — avaa lipun tarina`);
-          nappi.appendChild(lippu);
-          nappi.addEventListener('click', () => this.avaaLippuikkuna(kategoria.maaLippu));
-          nimi.appendChild(nappi);
-        } else {
-          nimi.appendChild(lippu);
-        }
-      }
-      kohde.appendChild(nimi);
-    }
+    if (otsikko) kohde.appendChild(this.aiheenOtsikko(kategoria));
     /*
      * Litteä nostolista piirretään vanhalla piirrolla: siinä on
      * musiikkilinkit, ääninäytteet ja "Lue lisää aiheesta" -napit,

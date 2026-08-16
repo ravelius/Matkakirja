@@ -2639,25 +2639,39 @@ export const KULTTUURI_KATEGORIAT = {
         /*
          * Osion valokuva otsikon alla oikealla, teksti kiertää.
          *
-         * KUVA VAIHDETTU YKSINKERTAISEMPAAN (paketti O3, osa 5;
-         * omistajan palaute 16.8.2026: "Vähän yksinkertaisempi kuva kun
-         * on pienessä koossa"). Entinen terassikuva oli koko kadun
-         * levyinen näkymä, jossa oli tuoleja, pöytiä, ihmisiä ja
-         * julkisivuja — 10–17 rem leveänä siitä ei erottunut mitään.
-         * Tilalla yksi lähikuva-aihe, joka lukee heti pienenäkin ja
-         * kertoo saman asian kuin leipäteksti: terassipöytä ja kahvi.
-         * Lisenssi ja tekijä Commonsin API:sta 16.8.2026 (Restrictions
-         * tyhjä), sijainti kuvaustekstistä ("on a terrace table in
-         * Paris") ja kategoriasta Cafés in Paris — ei tiedostonimestä,
-         * joka on japaninkielinen eikä kerro paikasta mitään. Kuva
-         * katsottu silmin: pääaihe on keskellä ja alavasemmalla, joten
-         * oikean yläkulman yli kulkeva nauha ei peitä sitä.
+         * ETUSIVUKUVAN KAAVA (omistajan linjaus 16.8.2026: "kuva pitää
+         * olla yksinkertainen, laadukas ja houkutteleva eli wow efekti
+         * jostain maan erikoisuudesta"). Tämä on osion myyntikuva, ei
+         * kuvitus: se näkyy noin 272 pikselin levyisenä, ja jos siitä
+         * ei erota yhtä asiaa yhdellä silmäyksellä, se ei tee
+         * tehtäväänsä.
+         *
+         * Kaava monistukseen:
+         *   1. YKSI aihe, joka täyttää ruudun — ei katunäkymää, ei
+         *      useaa kohdetta, ei ihmisjoukkoa.
+         *   2. Aiheen on oltava maan tai kaupungin OMA erikoisuus,
+         *      sellainen jonka takia sinne matkustetaan.
+         *   3. Commonsin Featured picture tai Quality image, jos
+         *      sellainen on olemassa — ne on jo arvioitu laadun takia.
+         *   4. Selkeä valo ja rauhallinen tausta; pääaihe keskellä tai
+         *      alavasemmalla, koska oikean yläkulman yli kulkee nauha.
+         *
+         * Pariisin kaksi edellistä yritystä kaatuivat kohtaan 1 ja 2:
+         * terassinäkymä oli sekava pienessä koossa, ja sitä seurannut
+         * kahvikuva oli kyllä yksinkertainen mutta olisi voinut olla
+         * mistä tahansa kaupungista — omistaja: "tämä kuva ei
+         * houkuttele matkustamaan". Nyt tässä on Eiffel-torni: yksi
+         * pystysuora aihe tyhjää taivasta vasten, Commonsin Featured
+         * picture, Quality image ja Valued image, ja tekijän
+         * public domainiin luovuttama. Lisenssi ja Restrictions
+         * tarkistettu API:sta 16.8.2026, sijainti kuvaustekstistä
+         * ("seen from the Champ de Mars, Paris"), kuva katsottu silmin.
          */
         kuva: {
-          tiedosto: 'MdJ 0038 MdJ Café-à-Paris.jpg',
-          selite: 'Musta kahvi ja cappuccino terassipöydällä; kuitti tuodaan '
-            + 'heti juoman mukana.',
-          lahde: '(Joenomias) Menno R. de Jong, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Tour Eiffel Wikimedia Commons.jpg',
+          selite: 'Eiffel-torni Champ de Marsin nurmelta: kolmesataa metriä '
+            + 'ristikkorautaa kesätaivasta vasten.',
+          lahde: 'Benh LIEU SONG, Wikimedia Commons (public domain)',
         },
         kappale: 'Pariisi on yllättävän pieni: kehäbulevardin sisään mahtuu '
           + 'vain runsaat sata neliökilometriä, ja kaupungin halki kävelee '
