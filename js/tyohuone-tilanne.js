@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v769 — karttatekstin loppu: piirroskarttojen oma ohje',
   'v768 — Matkailijalle 5 kaupunkiin (Berliini, Pariisi, Lontoo, Rooma, Wien)',
   'v767 — vaakunan ajoittainen tumma laatikko: pitäisi olla poissa',
   'v766 — opas: otsikko VIHDOIN näkyviin; kuvat tekstin lomaan',
