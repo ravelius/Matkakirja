@@ -3582,6 +3582,23 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Sacré-Cœur', lat: 48.8868, lon: 2.343, wiki: 'Sacré-Cœur' },
       { nimi: 'Panthéon', lat: 48.8462, lon: 2.3464, wiki: 'Panthéon' },
       { nimi: 'Notre-Dame', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali' },
+      /*
+       * KOLME LISÄKOHDETTA (paketti O4, omistajan linjaus 16.8.2026:
+       * "Nähtävyyksiä voi olla 6–15 per kaupunki"). Listan lopussa,
+       * jotta kartan numerointi 1–8 ei siirry. Koordinaatit
+       * fi-Wikipedian artikkeleista (prop=coordinates), ja kaikki
+       * kolme ovat kartan rajojen sisällä (pohjoinen 48,8976, etelä
+       * 48,8414, länsi 2,2657, itä 2,3788) — siksi Père-Lachaise
+       * (itä 2,3933) ja katakombit (etelä 48,8338) EIVÄT ole mukana:
+       * ne vaatisivat kartan uudelleenrajauksen.
+       *
+       * Ei piirroksia (miniatyyrit.js): nämä näkyvät
+       * numeroympyröinä, kunnes miniatyyrit generoidaan. Sama
+       * ratkaisu kuin paketissa K1.
+       */
+      { nimi: 'Orsayn taidemuseo', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo' },
+      { nimi: 'Palais Garnier', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier' },
+      { nimi: 'Place des Vosges', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
     ],
   },
   budapest: {

@@ -494,4 +494,85 @@ export const SAATIEDOT = {
     keskilampo: [1.3, 1.3, 3.1, 7.2, 11.7, 15.3, 17.7, 17.5, 14.1, 9.7, 5.6, 2.6],
     sade: [51, 42, 43, 41, 51, 73, 72, 76, 57, 61, 50, 53],
   },
+
+  /*
+   * ALUEET JA LOPUT KAUPUNGIT (Opus 16.8.2026). Näiltä puuttuivat
+   * koordinaatit, koska niillä ei ole omaa kohdekarttaa, josta rajojen
+   * keskipisteen voisi laskea. Koordinaatit on nyt haettu
+   * fi-Wikipedian artikkeleista (prop=coordinates) — samoista, joihin
+   * pelin lauta jo viittaa.
+   *
+   * VIISI KOHDETTA ON ALUE EIKÄ PISTE (Islanti, Lappi, Kreeta,
+   * Sisilia, Alpit). Alueella ei ole yhtä säätä, joten jokaiselle on
+   * valittu EDUSTAVA MITTAUSPISTE: alueen pääkaupunki tai suurin
+   * kaupunki, joka on merkitty rivin yläpuolelle. Alppien piste on
+   * Innsbruck; korkealla vuorilla on kylmempää kuin laaksossa, joten
+   * luvut kertovat alppikaupungin eivätkä huippujen säästä.
+   *
+   * Normaalit on laskettu samalla menetelmällä kuin paketin muutkin
+   * rivit: Open-Meteon arkisto (ERA5), jakso 1991-2020.
+   */
+  // Mittauspiste: Reykjavík.
+  islanti: {
+    lat: 64.14,
+    lon: -21.9,
+    keskilampo: [-1.1, -0.9, 0.1, 3, 6.5, 9.9, 11.6, 10.8, 8.1, 4, 1, -0.8],
+    sade: [131, 131, 118, 104, 92, 80, 86, 104, 134, 121, 121, 133],
+  },
+  // Mittauspiste: Rovaniemi.
+  lappi: {
+    lat: 66.5,
+    lon: 25.73,
+    keskilampo: [-10, -9.9, -5.4, 0, 6.4, 12.7, 15.9, 13.6, 8.2, 1.2, -3.8, -7.4],
+    sade: [36, 30, 33, 34, 51, 70, 81, 70, 55, 52, 48, 43],
+  },
+  // Mittauspiste: Iraklion.
+  kreeta: {
+    lat: 35.33,
+    lon: 25.13,
+    keskilampo: [11.1, 11.4, 13.1, 16.2, 20.6, 24.7, 26.6, 26.5, 23.9, 20.2, 16.1, 12.6],
+    sade: [72, 71, 57, 38, 29, 10, 3, 5, 20, 38, 50, 70],
+  },
+  // Mittauspiste: Palermo.
+  sisilia: {
+    lat: 38.12,
+    lon: 13.36,
+    keskilampo: [11.3, 11.2, 13, 15.3, 19.2, 23.4, 26.2, 26.8, 23.5, 20.2, 16.1, 12.8],
+    sade: [69, 72, 67, 59, 36, 15, 7, 19, 61, 81, 68, 72],
+  },
+  // Mittauspiste: Innsbruck.
+  alpit: {
+    lat: 47.27,
+    lon: 11.39,
+    keskilampo: [-1, 0.8, 4.6, 8.2, 12.9, 16.9, 18.7, 18.6, 14.6, 10.4, 4.5, 0],
+    sade: [82, 77, 107, 113, 172, 194, 198, 201, 138, 117, 103, 91],
+  },
+  // Mittauspiste: Sanaa.
+  sana: {
+    lat: 15.4,
+    lon: 44.21,
+    keskilampo: [15.3, 16.8, 18, 19.5, 21.5, 22.7, 21.8, 21.3, 21.3, 17.8, 15.7, 14.9],
+    sade: [8, 7, 31, 47, 21, 2, 19, 34, 1, 7, 3, 2],
+  },
+  // Mittauspiste: Aden.
+  aden: {
+    lat: 12.8,
+    lon: 45.03,
+    keskilampo: [24.2, 24.5, 26.1, 28.1, 30.3, 31.7, 32.1, 31.3, 30.8, 28.4, 26.4, 24.9],
+    sade: [5, 3, 4, 8, 7, 8, 15, 38, 21, 10, 3, 3],
+  },
+  // Mittauspiste: Salala.
+  salalah: {
+    lat: 17.02,
+    lon: 54.08,
+    keskilampo: [21.4, 22.5, 25, 27.5, 28.8, 28.4, 26.4, 25.4, 26, 27.3, 25.9, 23.1],
+    sade: [2, 1, 10, 4, 40, 13, 6, 5, 8, 11, 8, 2],
+  },
+  // Mittauspiste: Mosul.
+  mosul: {
+    lat: 36.37,
+    lon: 43.12,
+    keskilampo: [7, 8.6, 12.8, 18.2, 24.9, 31.7, 35.4, 34.8, 29.7, 23, 14.3, 8.8],
+    sade: [70, 63, 64, 42, 16, 1, 0, 0, 1, 19, 50, 62],
+  },
 };

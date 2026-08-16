@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v788 — Pariisissa 11 kohdetta; sää kaikissa 70 kaupungissa',
   'v787 — lippu maan otsikkoon, Eiffel etusivulle Pariisiin',
   'v786 — opas 5 kaupunkiin: tsekkaa ennen koko Euroopan ajoa',
   'v785 — sääennuste 32 lehteen, maasivun nimiö, oppaan graafi',
