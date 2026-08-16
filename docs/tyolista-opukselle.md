@@ -48,6 +48,13 @@ lisäohjeita:
 
 ## Paketti M1: Matkailijalle-monistus viiteen kaupunkiin (Opus 20, tilattu 16.8.2026)
 
+**✅ VALMIS (Opus 20, katselmoitu ja julkaistu v768:ssa 16.8.2026):**
+viisi matkailijalle-osiota + 3 etusivukuvan vaihtoa; Fable todensi
+kaikki 34 lisenssiä itse API:sta ja katsoi kuvat silmin (2 pientä
+selitekorjausta mergessä). Avoinna: Berliinin Siegessäule-panoraama
+(rajatapaus, omistajan päätettävä) ja erä 2 (Praha, Amsterdam,
+Tukholma).
+
 Omistajan tilaus 16.8.2026: "Monista viiteen" — Kööpenhaminan
 lehtimalli (v766:n muodossa, jossa opasartikkelin kuvat on
 TAITETTU tekstin lomaan) monistetaan viiteen kaupunkiin:

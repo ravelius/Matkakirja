@@ -73,6 +73,134 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (Kööpenhaminan mallista monistettu 16.8.2026).
+       * Taustatiedot Wikipediasta ja Wikivoyagesta — teksti omaa.
+       */
+      matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Lisenssi tarkistettu Commonsin API:sta 16.8.2026, kuva
+         * katsottu silmin.
+         */
+        kuva: {
+          tiedosto: 'Temple Station underground train City of Westminster London England 01.jpg',
+          selite: 'Metrojuna Temple-asemalla: punaiset ovet, keltaiset tangot '
+            + 'ja Underground-tunnus kyljessä. Laiturin reunaan on '
+            + 'maalattu tuttu varoitus mind the gap.',
+          lahde: 'Acabashi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Lontoo ei ole yksi kaupunki vaan kokoelma kyliä, jotka ovat '
+          + 'kasvaneet kiinni toisiinsa: jokaisella on oma torinsa, '
+          + 'pubinsa ja puistonsa. Kaupunkia kuljetaan metrolla, jota '
+          + 'sanotaan putkeksi, ja punaisilla kaksikerrosbusseilla, '
+          + 'joiden yläkerran etupenkki on kaupungin halvin '
+          + 'näköalapaikka. Suuret museot ovat maksuttomia, joten '
+          + 'sadepäivä ei mene hukkaan. Ja koska liikenne kulkee '
+          + 'vasemmalla, jalankulkijalle on maalattu suojatien reunaan '
+          + 'ohje: katso oikealle.',
+        artikkeli: {
+          nimi: 'Matkailijan Lontoo',
+          teksti: 'Lontoo on iso, mutta se on tehty helpoksi kulkea. Metro '
+            + 'avattiin vuonna 1863 maailman ensimmäisenä, ja sen '
+            + 'yksitoista linjaa vievät lähes kaikkialle; maksuvälineeksi '
+            + 'riittää pankkikortti, jota kosketetaan lukijaan sisään '
+            + 'mennessä ja ulos tullessa. Bussit ovat hitaampia mutta '
+            + 'näyttävät enemmän. Kävelijän kannattaa muistaa yksi asia: '
+            + 'liikenne kulkee vasemmalla, joten katse käännetään ensin '
+            + 'oikealle — monessa risteyksessä ohje on maalattu '
+            + 'asfalttiin.'
+            + '\n\n'
+            + 'Keskustan puistot ovat entisiä kuninkaallisia '
+            + 'metsästysmaita, ja ne muodostavat yhtenäisen vihreän vyön '
+            + 'Westminsteristä länteen. St James\'s Parkin lammella asuu '
+            + 'pelikaaneja, joita puistossa on pidetty 1660-luvulta '
+            + 'lähtien — ensimmäiset olivat Venäjän suurlähettilään '
+            + 'lahja. Naapurissa vaihdetaan vartio: karvalakkiset '
+            + 'kaartilaiset marssivat soittokuntineen Buckinghamin '
+            + 'palatsin edustalle, eikä katsomisesta peritä maksua. Hyde '
+            + 'Parkin kulmassa taas kuka tahansa saa nousta puhumaan '
+            + 'mistä tahansa.'
+            + '\n\n'
+            + 'Lontoon suuret museot ovat ilmaisia. British Museum, '
+            + 'National Gallery, Natural History Museum ja Tate Modern '
+            + 'eivät peri pääsymaksua, joten niihin voi poiketa tunniksi '
+            + 'kuin kirjastoon. Torit ovat toinen ilmainen huvi: Borough '
+            + 'Marketilla myydään juustoa, ostereita ja paellaa metrin '
+            + 'levyisestä pannusta, Portobello Roadilla vanhaa tavaraa ja '
+            + 'Columbia Roadilla sunnuntaisin kukkia. Mitään ei ole pakko '
+            + 'ostaa — katseleminen kuuluu asiaan.'
+            + '\n\n'
+            + 'Pubi on englantilaisen kaupungin olohuone. Juomat ja ruoka '
+            + 'tilataan tiskiltä, sillä pöytiin ei tulla ottamaan '
+            + 'tilausta, ja listalla on tavallisesti piirakkaa, '
+            + 'paistettua kalaa ja perunoita sekä sunnuntaisin paisti '
+            + 'lisukkeineen. Vanhimmat pubit ovat sisustukseltaan '
+            + 'komeita: Princess Louisessa Holbornissa on kaiverretut '
+            + 'lasit, koristepeilit ja painokuvioitu kattopelti '
+            + '1890-luvulta. Iltapäivätee on oma seremoniansa — teen '
+            + 'kanssa tarjotaan scone-leivoksia hillon ja paksun kerman '
+            + 'kera.'
+            + '\n\n'
+            + 'Illalla mennään teatteriin. West Endissä on noin '
+            + 'neljäkymmentä teatteria, joissa on esitys lähes joka ilta, '
+            + 'ja halvimmat liput lähtevät Leicester Squaren '
+            + 'lippukojusta samana päivänä. Näytöksen jälkeen Covent '
+            + 'Garden on lähellä: entinen vihannestori on nyt '
+            + 'lasikattoinen kauppahalli, jonka edessä esiintyy '
+            + 'katutaiteilijoita. Thamesin etelärannan kävelyreitti '
+            + 'jatkuu iltamyöhään, ja sillalta katsottuna kaupunki '
+            + 'näyttää parhaimmillaan.',
+          /*
+           * Artikkelin kuvat taitettuina tekstin lomaan (taitto:
+           * 'ripoteltu'): ensimmäinen avauskappaleen jälkeen, loput
+           * kelluvat tasajaolla aiheensa kappaleen kohdalle (puisto,
+           * Borough Market, pubi, Covent Garden). Lisenssit tarkistettu
+           * Commonsin API:sta 16.8.2026, kuvat katsottu silmin ja
+           * sijainti varmistettu kuvaustekstistä ja luokista.
+           */
+          taitto: 'ripoteltu',
+          kuvat: [
+            {
+              tiedosto: 'London, Piccadilly Circus -- 2016 -- 4866.jpg',
+              selite: 'Piccadilly Circus keskipäivällä. Shaftesburyn '
+                + 'muistolähteen portailla istutaan eväiden kanssa; '
+                + 'lähteen huipulla oleva siivekäs hahmo tunnetaan '
+                + 'Erosina, vaikka se esittää tämän veljeä Anterosta.',
+              lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'London, St. James\'s Park -- 2016 -- 4820.jpg',
+              selite: 'St James\'s Parkin lampi lokakuussa: nokikanoja '
+                + 'vedessä, riippapajut rannalla ja puiden takana '
+                + 'Whitehallin tornit.',
+              lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Dishing out the paella, Borough Market, London 2024-01-30.jpg',
+              selite: 'Borough Marketin kojulla annostellaan paellaa metrin '
+                + 'levyisestä pannusta: simpukoita, katkarapuja ja '
+                + 'herneitä keltaisen riisin seassa.',
+              lahde: 'Alaskan Dude, Wikimedia Commons (CC BY 2.0)',
+            },
+            {
+              tiedosto: 'Princess Louise pub interior, High Holborn - London 13 Mar 2013.jpg',
+              selite: 'Princess Louise -pubin tiski Holbornissa. Tumma puu, '
+                + 'kaiverretut lasiseinäkkeet ja painokuvioitu kattopelti '
+                + 'ovat 1890-luvulta.',
+              lahde: 'David, Wikimedia Commons (CC BY 2.0)',
+            },
+            {
+              tiedosto: 'Covent Garden in the evening. - geograph.org.uk - 7428887.jpg',
+              selite: 'Covent Garden iltavalaistuksessa: lasikattoisen '
+                + 'kauppahallin kaaret hehkuvat, ja märät liuskekivet '
+                + 'heijastavat lyhtyjen valon.',
+              lahde: 'Peter Evans, Wikimedia Commons (CC BY-SA 2.0)',
+            },
+          ],
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Canaletto maalasi myös Lontoon',
@@ -661,13 +789,17 @@ export const KULTTUURI_KATEGORIAT = {
         + 'jonka kuuluisin ratas kulkee hitaammin kuin sinä kävelet.',
       kansikuvat: [
         {
-          tiedosto: 'Wien Stephansdom dach.jpg',
-          selite: 'Stephansdomin kattoa läheltä: siihen on ladottu noin 250 000 '
-            + 'lasitettua tiiltä kymmenessä eri värissä. Kuoriosan '
-            + 'eteläpuolella levittää siipiään kaksipäinen keisarinkotka, ja '
-            + 'sen ympärillä lukee nurkka kerrallaan 1-8-3-1, katon '
-            + 'uusimisvuosi.',
-          lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 3.0)',
+          // Kuva vaihdettu 16.8.2026 (Opus 20:n silmätarkistus): vanha
+          // Wien Stephansdom dach.jpg oli lähikuva kattotiilistä — pelkkä
+          // yksityiskohta, ei kaupunkia, ja se oli lehden ISO avauskuva,
+          // koska Wienillä ei ole avauskuvakarusellia. Tilalle laaja
+          // näkymä Michaelerplatzilta.
+          tiedosto: 'Wien-Hofburg-138-Michaelerplatz-2009-gje.jpg',
+          selite: 'Hofburgin kaareva julkisivu Michaelerplatzilla. Keisarien '
+            + 'talvipalatsi kasvoi kuudensadan vuoden aikana kokonaiseksi '
+            + 'kaupunginosaksi: nykyään sen siivissä on museoita, '
+            + 'kansalliskirjasto ja presidentin työhuoneet.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Schönbrunn September 2023 1.jpg',
@@ -685,6 +817,138 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Moahim, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (Kööpenhaminan mallista monistettu 16.8.2026).
+       * Taustatiedot Wikipediasta ja Wikivoyagesta — teksti omaa.
+       */
+      matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Lisenssi tarkistettu Commonsin API:sta 16.8.2026, kuva
+         * katsottu silmin.
+         */
+        kuva: {
+          tiedosto: 'Café Sperl, Wien (1).jpg',
+          selite: 'Café Sperlin kulmajulkisivu Mariahilfissä. Kahvila avattiin '
+            + 'vuonna 1880, ja sen sisustus on yhä pääosin alkuperäinen — '
+            + 'samoin tapa, jolla vieras saa jäädä pöytään tunneiksi.',
+          lahde: '© 1971markus, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Wien on kaupunki, jossa istuudutaan. Kahvila ei ole täällä '
+          + 'pikapysähdys vaan paikka, jossa yhden kahvin hinnalla saa '
+          + 'pöydän, sanomalehden ja niin paljon aikaa kuin haluaa. '
+          + 'Keskusta on pieni ja kävellen kierrettävä, ja sen ympäri '
+          + 'kaartaa Ring — leveä kehäkatu, joka rakennettiin puretun '
+          + 'kaupunginmuurin paikalle ja jota pitkin raitiovaunut '
+          + 'kulkevat yhä. Musiikkia on kaikkialla, eikä siihen tarvitse '
+          + 'olla varakas: oopperan seisomapaikka maksaa vähemmän kuin '
+          + 'lounas.',
+        artikkeli: {
+          nimi: 'Matkailijan Wien',
+          teksti: 'Wien on suurkaupunki, joka tuntuu pieneltä. Vanha keskusta '
+            + 'mahtuu Ringin sisään ja sen halki kävelee vartissa; kaikki '
+            + 'muu on raitiovaunun päässä. Linjat 1 ja 2 kulkevat Ringiä '
+            + 'pitkin ja ohittavat matkalla oopperan, parlamentin, '
+            + 'kaupungintalon ja yliopiston, joten halvin kaupunkikierros '
+            + 'on tavallinen raitiovaunulippu. Kadut ovat leveitä, koska '
+            + 'ne suunniteltiin 1860-luvulta alkaen keisarin käskystä '
+            + 'paraatikaduiksi vanhojen linnoitusten paikalle.'
+            + '\n\n'
+            + 'Kahvilaperinne on Wienissä niin vahva, että se on merkitty '
+            + 'Unescon aineettoman kulttuuriperinnön luetteloon. '
+            + 'Tarjoilija tuo kahvin hopeatarjottimella ja sen viereen '
+            + 'lasin vesijohtovettä. Kahvia tilataan nimellä eikä koolla: '
+            + 'kleiner Brauner on pieni kahvi tilkalla kermaa, Melange '
+            + 'muistuttaa maitokahvia ja Einspänner tarjoillaan lasissa '
+            + 'vispikerman alla. Lehdet roikkuvat puukehikoissa ja kuka '
+            + 'tahansa saa lukea ne, ja moni kahvila tarjoaa myös ruokaa '
+            + '— listalla on leivosten lisäksi wieninleikettä ja '
+            + 'perunasalaattia.'
+            + '\n\n'
+            + 'Musiikkikaupungin maine ei ole pelkkää historiaa. '
+            + 'Valtionoopperassa on esitys lähes joka ilta syyskuusta '
+            + 'kesäkuuhun, ja ohjelmisto vaihtuu päivittäin: samassa '
+            + 'talossa voi olla eri ooppera kolmena iltana peräkkäin. '
+            + 'Seisomapaikkoja myydään vasta esityspäivänä ja ne maksavat '
+            + 'toistakymmentä euroa, joten jonoon asetutaan hyvissä '
+            + 'ajoin. Kesäisin oopperan seinään ripustetaan suuri '
+            + 'valkokangas, jolta esityksiä katsotaan aukiolla ilmaiseksi.'
+            + '\n\n'
+            + 'Naschmarkt on Wienin vanhin ja suurin tori: puolentoista '
+            + 'kilometrin mittainen kojurivi, jolla myydään juustoja, '
+            + 'oliiveja, mausteita ja sieniä ja jonka päässä on '
+            + 'lauantaisin kirpputori. Ruokapöydän klassikko on '
+            + 'wieninleike, ohueksi taottu ja korppujauhoissa paistettu '
+            + 'vasikanleike, joka tarjoillaan sitruunalohkon ja '
+            + 'perunasalaatin kanssa. Makean puolella ovat Sachertorte, '
+            + 'omenastrudel ja Kaiserschmarrn eli revitty paksu '
+            + 'pannukakku. Kadunkulmien makkarakojut, Würstelstandit, '
+            + 'ovat auki myöhään ja niissä syödään seisten.'
+            + '\n\n'
+            + 'Ilta vietetään mieluiten ulkona. Kaupungin laidalla, '
+            + 'Grinzingissä ja Nussdorfissa, ovat heurigerit: '
+            + 'viinitilojen omat tarjoilupihat, joissa myydään talon '
+            + 'uutta viiniä ja yksinkertaista ruokaa noutopöydästä. '
+            + 'Portin päällä roikkuva havunoksa kertoo, että paikka on '
+            + 'auki — sitä sanotaan sanalla ausg\'steckt. Wien on '
+            + 'harvinaisuus suurkaupunkien joukossa, sillä sen omien '
+            + 'rajojen sisällä viljellään viiniä kaupallisessa mitassa, '
+            + 'ja viinimäille pääsee raitiovaunulla ja bussilla. '
+            + 'Keskustan puolella ilta jatkuu Praterin puistossa, jonka '
+            + 'valot syttyvät hämärän tullen.',
+          /*
+           * Artikkelin kuvat taitettuina tekstin lomaan (taitto:
+           * 'ripoteltu'): ensimmäinen avauskappaleen jälkeen, loput
+           * kelluvat tasajaolla aiheensa kappaleen kohdalle
+           * (wieninleike kahvilassa, oopperan katsomo, Naschmarkt,
+           * heuriger). Lisenssit tarkistettu Commonsin API:sta
+           * 16.8.2026, kuvat katsottu silmin ja sijainti varmistettu
+           * kuvaustekstistä ja luokista.
+           */
+          taitto: 'ripoteltu',
+          kuvat: [
+            {
+              tiedosto: 'Straßenbahn Ringstraße Wien 1.jpg',
+              selite: 'Raitiovaunu Burgringin pysäkillä Ringillä. '
+                + 'Matalalattiainen ULF-vaunu kulkee niin lähellä katua, '
+                + 'ettei kyytiin nousemiseen tarvita askelmaa.',
+              lahde: 'Stb1er (Dario Premm), Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Cafe Hawelka 1.jpg',
+              selite: 'Wieninleike Café Hawelkassa: ohueksi taottu ja '
+                + 'korppujauhoissa paistettu leike, kulhollinen '
+                + 'perunasalaattia ja sitruunalohko lautasen reunalla.',
+              lahde: 'Geolina163, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Wien - Staatsoper, Zuschauerraum.JPG',
+              selite: 'Valtionoopperan katsomo tyhjänä. Permannon takana '
+                + 'nousevat parvikerrokset, ja seisomapaikat ovat '
+                + 'ylimpinä — niiden lippu maksaa murto-osan '
+                + 'istumapaikasta.',
+              lahde: 'C.Stadler/Bwag, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Wien, Naschmarkt -- 2018 -- 3109.jpg',
+              selite: 'Naschmarktin kojun sienivalikoima käsin kirjoitettujen '
+                + 'hintakylttien alla: herkkutatteja, siitakkeja ja '
+                + 'osterivinokkaita laatikoittain, takana omenoita ja '
+                + 'sitruunoita.',
+              lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Wien Heurigen-Lokal 2014 1.jpg',
+              selite: 'Heurigerin piha Grinzingissä. Keltaisen talon päädyssä '
+                + 'lukee AUSG\'STECKT — talon uutta viiniä on tarjolla — '
+                + 'ja pihalla odottavat puiset penkit ja pöydät '
+                + 'viiniköynnösten alla.',
+              lahde: 'Otto Domes, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+          ],
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Ratas, joka kulkee kävelyä hitaammin',
@@ -1139,6 +1403,139 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Ansgar Koreng, Wikimedia Commons (CC BY 3.0 DE)',
         },
       ],
+      /*
+       * Matkailijalle (Kööpenhaminan mallista monistettu 16.8.2026):
+       * kaupunki turistin näkökulmasta kartan jälkeen + pidempi
+       * pop-up-artikkeli, jonka kuvat on taitettu tekstin lomaan.
+       * Taustatiedot Wikipediasta ja Wikivoyagesta — teksti omaa.
+       */
+      matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Lisenssi tarkistettu Commonsin API:sta 16.8.2026, kuva
+         * katsottu silmin.
+         */
+        kuva: {
+          tiedosto: 'Berlin - Kürfurstendamm Gehsteig.jpg',
+          selite: 'Kurfürstendammin jalkakäytävä kesäpäivänä: kahvilan pöydät, '
+            + 'päivänvarjot ja kukkalaatikot vievät puolet leveästä '
+            + 'käytävästä, ja kävelijät kulkevat puiden varjossa.',
+          lahde: 'Marek Śliwecki, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Berliini on väljä kaupunki: pinta-alaltaan se on lähes '
+          + 'yhdeksän kertaa Pariisin kokoinen, joten vierailija oppii '
+          + 'nopeasti luottamaan keltaisiin U- ja S-Bahn-juniin. '
+          + 'Kaupunginosat ovat kuin omia pikkukaupunkejaan — Kreuzbergin '
+          + 'kahvilakadut, Charlottenburgin bulevardit ja Mitten museot '
+          + 'ovat saman lipun päässä toisistaan. Historia ei ole täällä '
+          + 'museossa vaan kadulla: muurin paikka on merkitty katuun '
+          + 'kaksinkertaisella noppakivirivillä. Ja koska tilaa riittää, '
+          + 'kesät vietetään ulkona — puistoissa, kanavan rannoilla ja '
+          + 'entisen lentokentän kiitoradalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Berliini',
+          teksti: 'Berliiniin ei tulla katsomaan yhtä nähtävyyttä vaan '
+            + 'kokemaan kaupunkia, joka on levinnyt laajalle. Etäisyydet '
+            + 'ovat pitkiä, joten ensimmäinen ostos on päivälippu: '
+            + 'U-Bahn, S-Bahn, raitiovaunut ja bussit kulkevat samalla '
+            + 'lipulla. Keltaiset vaunut ovat itsessään näky — linja U1 '
+            + 'ajaa osan matkastaan korkealla katujen yläpuolella ja '
+            + 'ylittää Spreen vanhalla tiilisillalla. Pyörä on toinen '
+            + 'luonteva kulkuneuvo, sillä kaupunki on tasainen: se on '
+            + 'rakennettu suolle ja hiekalle.'
+            + '\n\n'
+            + 'Toinen päivä kannattaa kävellä. Mitten kortteleissa ovat '
+            + 'museot, Brandenburgin portti ja Unter den Lindenin '
+            + 'lehmuskuja, mutta kiinnostavinta on se, mitä ei enää ole: '
+            + 'Berliinin muurin paikka on merkitty katuun kaksinkertaisella '
+            + 'noppakivirivillä, joka juoksee ajoradan poikki keskellä '
+            + 'kaupunkia. Bernauer Straßella muurin kohdalle on jätetty '
+            + 'aukea kaistale ja pystytetty muistopaikka, josta näkee, '
+            + 'miten leveä raja todella oli — talot purettiin molemmilta '
+            + 'puolilta. Kaupunki katkaistiin yhdessä yössä 13. elokuuta '
+            + '1961, ja se pysyi katkaistuna 28 vuotta.'
+            + '\n\n'
+            + 'Berliiniläinen viettää vapaapäivänsä ulkona. Tempelhofin '
+            + 'entinen lentokenttä on nykyään puisto, jossa kiitoradat on '
+            + 'jätetty paikoilleen: niillä rullaluistellaan, pyöräillään ja '
+            + 'lennätetään leijoja, ja kentän laidalla on palstaviljelmiä. '
+            + 'Sunnuntaisin Mauerpark täyttyy kirpputorista ja '
+            + 'ulkoilmakaraokesta, ja helteillä kaupunki tyhjenee järville '
+            + '— Wannsee ja Müggelsee ovat junamatkan päässä. Kaupungin '
+            + 'pinta-alasta noin kolmannes on puistoa, metsää ja vettä.'
+            + '\n\n'
+            + 'Ruoka on Berliinissä katuruokaa parhaimmillaan. Currywurst '
+            + '— paistettu makkara paloina, päällä ketsuppia ja '
+            + 'curryjauhetta — keksittiin kaupungissa vuonna 1949, ja se '
+            + 'syödään pahvilautaselta puuhaarukalla kojun vieressä '
+            + 'seisten. Toinen klassikko on döner kebab leivässä: sen '
+            + 'nykymuoto syntyi Berliinin turkkilaisten siirtolaisten '
+            + 'kojuissa 1970-luvulla. Kreuzbergin turkkilainen tori myy '
+            + 'juustoja ja vihanneksia kanaalin rannalla, ja aamiaista '
+            + 'tarjoillaan monessa kahvilassa iltapäivään asti.'
+            + '\n\n'
+            + 'Ilta alkaa Spätiltä. Spätkauf on pieni kioskikauppa, joka '
+            + 'on auki myöhään; sen edessä on usein muutama jakkara, ja '
+            + 'niillä istutaan juttelemassa kuin kadun omalla terassilla. '
+            + 'Kreuzbergin ja Neuköllnin kadut heräävät vasta myöhään, ja '
+            + 'klubiperinne — Berliini on ollut teknomusiikin keskuksia '
+            + '1990-luvun alusta — pitää osan paikoista auki aamuun. '
+            + 'Rauhallisempi ilta löytyy kanavan rannalta tai '
+            + 'ulkoilmaelokuvista, joita näytetään kesäisin puistoissa ja '
+            + 'sisäpihoilla.',
+          /*
+           * Artikkelin kuvat taitettuina tekstin lomaan (taitto:
+           * 'ripoteltu'): ensimmäinen kuva avauskappaleen jälkeen, loput
+           * kelluvat tasajaolla niin että kukin osuu aiheensa kappaleen
+           * kohdalle (muurin muistopaikka, Tempelhof, currywurst,
+           * Spätkauf). Lisenssit tarkistettu Commonsin API:sta
+           * 16.8.2026, kuvat katsottu silmin; jokaisen sijainti
+           * varmistettu kuvaustekstistä ja luokista.
+           */
+          taitto: 'ripoteltu',
+          kuvat: [
+            {
+              tiedosto: 'Berlin - Eierkühlhaus, Oberbaumbrücke & U-Bahn.jpg',
+              selite: 'Keltainen U-Bahn-juna ylittää Spreen Oberbaumbrücken '
+                + 'yläkantta pitkin. Punatiilinen silta vuodelta 1896 oli '
+                + 'kylmän sodan aikana rajanylityspaikka; takana kohoaa '
+                + 'entinen munavarasto.',
+              lahde: 'JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Gedenkstätte Berliner Mauer, 170514, ako.jpg',
+              selite: 'Berliinin muurin muistopaikka Bernauer Straßella '
+                + 'aamuauringossa. Muurin ja sen takaisen vartioidun '
+                + 'kaistaleen paikalle on jätetty avoin nurmikenttä '
+                + 'keskelle korttelia.',
+              lahde: 'Ansgar Koreng, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Berlin Tempelhof Airport Runway 09L - Tempelhofer Feld (15159356029).jpg',
+              selite: 'Tempelhofin entisen lentokentän kiitorata iltavalossa. '
+                + 'Kenttä suljettiin 2008 ja radat jätettiin paikoilleen — '
+                + 'nyt niitä pitkin kävellään, pyöräillään ja '
+                + 'rullaluistellaan.',
+              lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
+            },
+            {
+              tiedosto: '2023-01-23 Currywurst in Berlin.jpg',
+              selite: 'Currywurst pahvilautasella: paistettu makkara paloina, '
+                + 'päällä ketsuppia ja curryjauhetta. Puuhaarukka kuuluu '
+                + 'asiaan.',
+              lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Kreuzberg by night, Berlin, May 14th, 2025 - 05.jpg',
+              selite: 'Spätkauf Oranienstraßella Kreuzbergissa toukokuisena '
+                + 'iltana. Kioski on auki myöhään, ja sen edustan '
+                + 'jakkaroilla istutaan kuin kadun omalla terassilla.',
+              lahde: 'Plaksie, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+          ],
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Gaertner maalasi Berliinin talo talolta',
@@ -1781,12 +2178,17 @@ export const KULTTUURI_KATEGORIAT = {
         + 'pronssisesta tähdestä kadun kivissä.',
       kansikuvat: [
         {
-          tiedosto: 'Chimera Notre Dame Paris.jpg',
-          selite: 'Kivinen siivekäs olento istuu Notre-Damen tornien välisellä '
-            + 'kaiteella leuka käsien varassa ja katsoo kaupungin yli. Nämä '
-            + 'kimeerat eivät ole keskiaikaisia, vaan Viollet-le-Duc '
-            + 'veistätti ne 1800-luvun korjaustöissä.',
-          lahde: 'Lupo, Wikimedia Commons (CC BY-SA 3.0)',
+          // Kuva vaihdettu 16.8.2026 (Opus 20:n silmätarkistus): vanha
+          // Chimera Notre Dame Paris.jpg oli haalistunut filmiskannaus,
+          // jossa kaupunki hukkui utuun. Sama Le Stryge -kimeera
+          // terävämpänä ja kirkkaampana.
+          tiedosto: 'Gárgola de Notre-Dame.jpg',
+          selite: 'Kivinen siivekäs olento nojaa kaiteeseen Notre-Damen tornien '
+            + 'välissä, leuka käsien varassa, ja katsoo kaupungin yli; '
+            + 'takana kohoaa Montmartren kukkula. Nämä kimeerat eivät ole '
+            + 'keskiaikaisia, vaan Viollet-le-Duc veistätti ne 1800-luvun '
+            + 'korjaustöissä.',
+          lahde: 'Chosovi, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
           tiedosto: 'Cariatide Wallace 1.jpg',
@@ -1819,10 +2221,16 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Sharon Mollerus, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'Paris la nuit 2016 09 06 (72) (33553876733).jpg',
-          selite: 'Seine yöllä: katulyhtyjen kulta väreilee virrassa, kaksi '
-            + 'jokilaivaa kohtaa Île Saint-Louis\'n rantamuurin edustalla.',
-          lahde: 'Carl Campbell, Wikimedia Commons (CC BY 2.0)',
+          // Kuva vaihdettu 16.8.2026 (Opus 20:n silmätarkistus): vanha
+          // yökuva Seineltä oli tumma ja kohiseva, ja kennon pölypilkut
+          // näkyivät taivaalla. Tilalle päivänvalossa otettu yleisnäkymä,
+          // josta karusellista puuttunut Eiffel-torni vihdoin näkyy.
+          tiedosto: 'Paris July 2011-33.jpg',
+          selite: 'Näkymä Trocadérolta: suihkulähdealtaan takana kohoaa '
+            + 'Eiffel-torni, ja sen kaarien alta jatkuu Marsin kentän '
+            + 'puistokaista. Altaan reunanurmikoilla istuu väkeä kuin '
+            + 'kaupungin yhteisellä parvekkeella.',
+          lahde: 'Alvesgaspar, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           tiedosto: 'Paris - Jardin des Tuileries - Arc de Triomphe du Carrousel - PA00085992 - 003.jpg',
@@ -1832,6 +2240,135 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Thesupermat, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (Kööpenhaminan mallista monistettu 16.8.2026).
+       * Taustatiedot Wikipediasta ja Wikivoyagesta — teksti omaa.
+       */
+      matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Lisenssi tarkistettu Commonsin API:sta 16.8.2026, kuva
+         * katsottu silmin.
+         */
+        kuva: {
+          tiedosto: 'Paris, à la terrasse du café, place Saint-André-des-Art, 2020.jpg',
+          selite: 'Kahvilan terassi Place Saint-André-des-Arts\'illa: punaiset '
+            + 'markiisit, tiiviisti aseteltuja rottinkituoleja ja '
+            + 'liitutaulu päivän listoineen. Tuolit on käännetty kadulle '
+            + 'päin, koska ohikulkijoiden katselu kuuluu asiaan.',
+          lahde: 'besopha, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Pariisi on yllättävän pieni: kehäbulevardin sisään mahtuu '
+          + 'vain runsaat sata neliökilometriä, ja kaupungin halki kävelee '
+          + 'päivässä. Kadut on tehty istumista varten, ja yhden kahvin '
+          + 'hinnalla saa terassipaikan pitkäksi aikaa. Kaupunki jakautuu '
+          + 'kahteenkymmeneen kaupunginosaan, jotka kiertyvät keskustasta '
+          + 'ulospäin kuin etanan kuori — numero kertoo heti, kuinka '
+          + 'kaukana keskustasta ollaan. Seine halkaisee kaupungin kahtia, '
+          + 'ja sen kivetyt rannat ovat kesäisin kaupunkilaisten '
+          + 'oleskelupaikka.',
+        artikkeli: {
+          nimi: 'Matkailijan Pariisi',
+          teksti: 'Pariisia ei kannata yrittää nähdä kokonaan. Kaupunki on '
+            + 'tiivis ja matala: Haussmannin 1800-luvun kaavassa talot '
+            + 'ladottiin saman korkuisiksi, ja siksi katot muodostavat '
+            + 'yhtenäisen sinkkimeren, jonka yli näkee kauas. Metro on '
+            + 'Euroopan tiheimpiä — asemia on yli kolmesataa, eikä '
+            + 'keskustassa juuri missään ole viittäsataa metriä pidempi '
+            + 'matka lähimmälle asemalle. Silti paras kulkutapa on '
+            + 'kävely, koska kiinnostavin osa Pariisia on kadun tasolla: '
+            + 'leipomon ikkuna, sisäpiha portin takana, sininen '
+            + 'emalinen kadunnimikyltti.'
+            + '\n\n'
+            + 'Seinen rannat ovat kaupungin pisin kävelyreitti. Jokea '
+            + 'reunustavat kivimuurit, ja niiden päällä seisovat vihreät '
+            + 'peltilaatikot: bouquinistit myyvät niistä käytettyjä '
+            + 'kirjoja, vanhoja lehtiä ja julisteita, ja ammattikunta on '
+            + 'ollut rannoilla 1500-luvulta asti. Kauppiaita on '
+            + 'parisensataa ja laatikoita satoja, ja ne aukeavat säällä '
+            + 'kuin säällä. Jokilaiva näyttää saman reitin vedestä käsin: '
+            + 'Île de la Citén kärjen, sillat ja Louvren pitkän '
+            + 'julkisivun.'
+            + '\n\n'
+            + 'Pariisilaisen oma tapa viettää päivää on yksinkertainen: '
+            + 'istua alas. Luxembourgin puutarhassa on tuhansia irrallisia '
+            + 'rautatuoleja, jotka saa raahata mihin haluaa — aurinkoon, '
+            + 'varjoon tai altaan reunalle, jossa lapset työntävät '
+            + 'vuokrattuja purjeveneitä liikkeelle kepillä. Kahvilassa '
+            + 'yksi kahvi ostaa pöydän tunniksi eikä kiirettä ole. '
+            + 'Toriaamu on toinen instituutio: ruokatoreja pystytetään '
+            + 'kadunvarsille pari kertaa viikossa, ja niiltä ostetaan '
+            + 'juustot, hedelmät ja kukat.'
+            + '\n\n'
+            + 'Leipomo on pariisilaisen arjen keskus. Patonki on suojattu '
+            + 'asetuksella: perinteinen baguette de tradition saa sisältää '
+            + 'vain jauhoja, vettä, suolaa ja hiivaa, eikä sitä saa '
+            + 'missään vaiheessa pakastaa. Kaupungissa järjestetään joka '
+            + 'vuosi kilpailu parhaasta patongista, ja voittaja toimittaa '
+            + 'leipänsä presidentin palatsiin vuoden ajan. Leipomon '
+            + 'naapurissa on tavallisesti juustokauppa ja lihakauppa, ja '
+            + 'illallinen syödään myöhään — moni ravintola avaa vasta '
+            + 'puoli kahdeksalta.'
+            + '\n\n'
+            + 'Illalla kannattaa nousta ylös. Montmartre on kukkula '
+            + 'kaupungin pohjoisreunalla, ja sinne noustaan portaita, '
+            + 'joita on satoja; ylhäältä Sacré-Cœurin edustalta koko '
+            + 'Pariisi levittyy eteen matalana ja tasaisena. Alempana '
+            + 'kujat ovat kapeita ja hiljaisia, ja katulyhtyjen alla '
+            + 'kaupunki näyttää vanhemmalta kuin päivällä. Eiffel-torni '
+            + 'vastaa omalla tavallaan: pimeän tultua se välkkyy viiden '
+            + 'minuutin ajan aina tasatunnein.',
+          /*
+           * Artikkelin kuvat taitettuina tekstin lomaan (taitto:
+           * 'ripoteltu'): ensimmäinen avauskappaleen jälkeen, loput
+           * kelluvat tasajaolla aiheensa kappaleen kohdalle
+           * (bouquinistit, Luxembourgin allas, leipomo, Montmartre).
+           * Lisenssit tarkistettu Commonsin API:sta 16.8.2026, kuvat
+           * katsottu silmin ja sijainti varmistettu kuvaustekstistä.
+           */
+          taitto: 'ripoteltu',
+          kuvat: [
+            {
+              tiedosto: 'Paris sunset from Tour Montparnasse observation deck - 6.jpg',
+              selite: 'Auringonlasku Tour Montparnassen näköalatasanteelta. '
+                + 'Matala kattomeri jatkuu horisonttiin, ja siitä nousee '
+                + 'esiin vain Eiffel-torni — Pariisi on rakennettu '
+                + 'leveäksi eikä korkeaksi.',
+              lahde: 'APK, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Paris 75005 Quai de Montebello Bouquinistes 20071014.jpg',
+              selite: 'Bouquinistin laatikko auki Quai de Montebellolla: '
+                + 'käytettyjä kirjoja, vanhoja Le Petit Journalin '
+                + 'etusivuja ja postikorttitelineitä.',
+              lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 3.0)',
+            },
+            {
+              tiedosto: 'Paris 75006 Jardin du Luxembourg Bassin 20160502.jpg',
+              selite: 'Luxembourgin puutarhan altaalla purjehditaan '
+                + 'vuokraveneillä: vene työnnetään liikkeelle kepillä ja '
+                + 'odotetaan, että tuuli tuo sen takaisin toiselle '
+                + 'reunalle.',
+              lahde: 'Wulf Alex, Wikimedia Commons (CC0)',
+            },
+            {
+              tiedosto: 'La Désirade, 69 bis Rue Brancion, 75015 Paris, August 2015.jpg',
+              selite: 'Punainen leipomo Rue Brancionilla. Kyltissä lukee '
+                + 'ARTISAN BOULANGER ja PATISSIER, ja ohikulkija kantaa '
+                + 'patonkia kädessään.',
+              lahde: 'Besopha, Wikimedia Commons (CC BY 2.0)',
+            },
+            {
+              tiedosto: 'Paris 75018 Rue du Mont-Cenis no 025 stairs towards Rue Saint-Vincent at night.jpg',
+              selite: 'Montmartren portaat yöllä Rue du Mont-Cenis\'llä. '
+                + 'Lyhdyt johtavat alas kukkulalta, ja kaukana '
+                + 'kimmeltävät kaupungin valot.',
+              lahde: 'AlfvanBeem, Wikimedia Commons (CC0)',
+            },
+          ],
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Tornissa on 72 nimeä kullalla',
@@ -3496,14 +4033,145 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Spanish Steps & Trinita dei Monti from Piazza di Spagna Rome.jpg',
-          selite: 'Espanjalaiset portaat iltapäivän valossa. Yläpäässä seisoo '
-            + 'Trinità dei Montin kirkko kahtine kellotorneineen ja niiden '
-            + 'välissä obeliski; portailla istuu ihmisiä ja alhaalla kulkee '
-            + 'ohikulkijoita.',
-          lahde: 'Peter J StB Green, Wikimedia Commons (CC BY-SA 3.0)',
+          // Kuva vaihdettu 16.8.2026 (Opus 20:n silmätarkistus): vanha
+          // filmiskannaus oli utuinen ja taivas puhkipalanut. Tilalle
+          // sama aukio terävänä ja värit tallella.
+          tiedosto: 'Roma, Piazza di Spagna (2).jpg',
+          selite: 'Piazza di Spagna kesäiltapäivällä. Oikealla nousevat '
+            + 'Espanjalaiset portaat, joissa on 135 askelmaa, ja aukiolla '
+            + 'kulkee väkeä ostoskatujen ja portaiden väliä. Talojen '
+            + 'okra ja terrakotta ovat Rooman keskustan vakiovärit.',
+          lahde: 'Palickap, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (Kööpenhaminan mallista monistettu 16.8.2026).
+       * Taustatiedot Wikipediasta ja Wikivoyagesta — teksti omaa.
+       */
+      matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Lisenssi tarkistettu Commonsin API:sta 16.8.2026, kuva
+         * katsottu silmin.
+         */
+        kuva: {
+          tiedosto: 'Roma- Piazza Navona - 52380663568.jpg',
+          selite: 'Piazza Navona iltapäivällä. Pitkänomainen aukio seuraa '
+            + 'antiikin kilpa-areenan muotoa: keskellä on obeliski ja '
+            + 'Berninin lähde, laidoilla ravintoloiden markiisit.',
+          lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Rooma on ulkoilmakaupunki: aukiot ovat sen olohuoneita, ja '
+          + 'niillä istutaan lähteen reunalla ilman että pitää ostaa '
+          + 'mitään. Keskusta on pieni ja se kävellään läpi, mutta '
+          + 'mukulakivet ovat epätasaisia — kengät kannattaa valita sen '
+          + 'mukaan. Kaupunki on kasattu kerroksittain, ja saman '
+          + 'korttelin sisällä voi olla antiikin pylväs, keskiaikainen '
+          + 'torni ja barokkikirkko. Vettä saa kadulta ilmaiseksi, sillä '
+          + 'pieniä valurautahanoja pulppuaa ympäri kaupunkia.',
+        artikkeli: {
+          nimi: 'Matkailijan Rooma',
+          teksti: 'Roomassa kuljetaan jalan. Keskusta on tiheä ja kadut '
+            + 'kapeita, eikä metro auta paljon: linjoja on vain kolme, '
+            + 'koska joka kerta kun maata kaivetaan, vastaan tulee '
+            + 'antiikin muureja ja työ pysähtyy vuosiksi. Katukiveys on '
+            + 'nimeltään sanpietrini: pieniä mustia laavakiviä, jotka on '
+            + 'ladottu viuhkakuvioon. Kartan saa unohtaa hetkeksi, sillä '
+            + 'kujalta käännytään toiselle ja yhtäkkiä edessä on aukio, '
+            + 'jota ei osannut odottaa.'
+            + '\n\n'
+            + 'Moni parhaista asioista on ilmainen. Kaupungissa on yli '
+            + 'kaksituhatta pientä juomavesihanaa, joita sanotaan '
+            + 'nasoneiksi eli isoiksi neniksi kaarevan putkensa takia: '
+            + 'vesi virtaa niistä koko ajan, ja osa siitä kulkee yhä '
+            + 'samoja reittejä kuin antiikin akveduktien vesi. Aukioiden '
+            + 'lähteet ovat kaupungin omia maamerkkejä ja niiden reunalla '
+            + 'istutaan. Kirkkoja on satoja, ja niihin astutaan sisään '
+            + 'ilman lippua — monen seinällä roikkuu maalaus, joka olisi '
+            + 'muualla museon pääteos.'
+            + '\n\n'
+            + 'Roomalainen keittiö on yksinkertaista ja tiukkaa. Neljä '
+            + 'klassista pastaa — carbonara, cacio e pepe, gricia ja '
+            + 'amatriciana — tehdään kaikki muutamasta aineksesta: '
+            + 'pecorinojuustosta, mustapippurista, possunposkesta ja '
+            + 'munasta tai tomaatista. Kermaa ei carbonaraan kuulu, ja '
+            + 'siitä ollaan tarkkoja. Kahvi juodaan seisten tiskin '
+            + 'ääressä, jolloin se on halvempaa kuin pöytään '
+            + 'tarjoiltuna, ja pizzaa myydään palana painon mukaan: '
+            + 'myyjä leikkaa saksilla juuri sen kokoisen palan kuin '
+            + 'pyydetään.'
+            + '\n\n'
+            + 'Torit kertovat kaupungista enemmän kuin nähtävyydet. '
+            + 'Campo de\' Fiorilla myydään aamuisin vihanneksia, '
+            + 'mausteita ja kukkia, ja aukion keskellä seisoo kaapuun '
+            + 'puettu pronssipatsas: Giordano Bruno, joka poltettiin '
+            + 'samalla paikalla vuonna 1600. Testaccion katetulla torilla '
+            + 'syödään lounasta kojujen ääressä, ja Trasteveren kujilla '
+            + 'pyykki kuivuu yhä ikkunoiden välissä. Molemmat ovat '
+            + 'kävelymatkan päässä keskustasta mutta tuntuvat toiselta '
+            + 'kaupungilta.'
+            + '\n\n'
+            + 'Ilta alkaa kävelyllä. Roomalaiset kutsuvat sitä nimellä '
+            + 'passeggiata: pukeudutaan, lähdetään ulos, kierretään sama '
+            + 'reitti kuin eilenkin, pysähdytään jäätelölle ja tavataan '
+            + 'tuttuja. Auringonlaskun aikaan kannattaa nousta '
+            + 'Gianicolo-kukkulalle, josta koko keskusta näkyy yhdellä '
+            + 'silmäyksellä ja kattojen väri vaihtuu okrasta ruusuiseksi. '
+            + 'Pimeän tultua rauniot valaistaan, ja Colosseumin kaarien '
+            + 'läpi näkyy taivas.',
+          /*
+           * Artikkelin kuvat taitettuina tekstin lomaan (taitto:
+           * 'ripoteltu'): ensimmäinen avauskappaleen jälkeen, loput
+           * kelluvat tasajaolla aiheensa kappaleen kohdalle (nasone,
+           * carbonara, Campo de' Fiori, Gianicolon näkymä). Lisenssit
+           * tarkistettu Commonsin API:sta 16.8.2026, kuvat katsottu
+           * silmin ja sijainti varmistettu kuvaustekstistä ja luokista.
+           */
+          taitto: 'ripoteltu',
+          kuvat: [
+            {
+              tiedosto: 'Vicolo del Cedro, Trastevere, Rome, Lazio, Italy - panoramio.jpg',
+              selite: 'Vicolo del Cedro Trasteveressä keskipäivällä: okran ja '
+                + 'terrakotan väriset seinät, vihreät ikkunaluukut ja '
+                + 'kattoterassilla kukkiva köynnös. Kadun kiveys on '
+                + 'mukulakiveä laidasta laitaan.',
+              lahde: 'trolvag, Wikimedia Commons (CC BY-SA 3.0)',
+            },
+            {
+              tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
+              selite: 'Nasone eli roomalainen juomavesihana Piazza della '
+                + 'Rotondalla Pantheonin edessä. Vesi virtaa putkesta '
+                + 'lakkaamatta, ja ohikulkijat juovat siitä kädestä.',
+              lahde: 'Lalupa, Wikimedia Commons (CC BY-SA 3.0)',
+            },
+            {
+              tiedosto: 'Spaghetti Carbonara, Trastevere, Roma.jpg',
+              selite: 'Carbonara sellaisena kuin se Roomassa tehdään: '
+                + 'spagettia, munankeltuaista, pecorinoa ja mustapippuria, '
+                + 'päällä rapeaksi paistettuja possunlihasuikaleita. '
+                + 'Kermaa ei ole.',
+              lahde: 'Robot8A, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+            {
+              tiedosto: 'Campo dei Fiori.jpg',
+              selite: 'Campo de\' Fiorin aamutori valkoisten päivänvarjojen '
+                + 'alla. Aukion keskellä kohoaa Giordano Brunon patsas, '
+                + 'joka pystytettiin 1889 sille paikalle, jossa hänet '
+                + 'poltettiin.',
+              lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
+            },
+            {
+              tiedosto: 'Roma, veduta dal gianicolo 01.JPG',
+              selite: 'Rooma Gianicolo-kukkulalta illan valossa: kattomeri, '
+                + 'kupolit ja niiden takana lumihuippuiset vuoret. '
+                + 'Auringonlaskun aikaan koko keskusta värjäytyy '
+                + 'ruusuiseksi.',
+              lahde: 'Sailko, Wikimedia Commons (CC BY-SA 3.0)',
+            },
+          ],
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Kolikko olan yli',
