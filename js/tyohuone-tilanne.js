@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v781 — nauha koko osion yli, leveämpi, pehmeämmät värit',
   'v780 — opas 2.1: kainalot, uusi paletti, iso otsikko, lämmin kuva',
   'v779 — etusivulla yksi diagonaalinauha: Matkaopas',
   'v778 — Matkailijalle-kuvateksti napakaksi (7 kaupunkia)',
