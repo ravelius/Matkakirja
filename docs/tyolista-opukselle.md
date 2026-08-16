@@ -46,6 +46,55 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
+## Paketti P1: Pariisin etusivukuvat uusiksi (Opus 21, tilattu 16.8.2026)
+
+Omistajan uusi kuvakonsepti 16.8.2026 kaupunkilehtien etusivuille —
+**pilotti Pariisi; muihin kaupunkeihin EI kosketa ennen omistajan
+hyväksyntää:**
+
+> "Ensimmäinen kuva voisi olla aina tunnelmallinen laajakulma
+> kaupungin tärkeimmältä paikalta. Kuvassa saisi olla visuaalista
+> voimaa, esim. kuvattu illalla tai aamulla tai muuten
+> mielenkiintoisempi kuva kuin perus päivänvalossa kuvattu."
+
+**Haara:** `claude/opus21-pariisi-etusivu`
+
+1. **Iso avauskuva** (`pariisi`-kategorian `avauskuvat[0]`,
+   js/packs/kulttuuri-kategoriat.js): korvaa nykyinen kattokuva
+   ('Rooftops seen from Notre-Dame…' — omistaja: "huono, kun näkyy
+   vain kattoja"). Tilalle tunnelmallinen VAAKAMUOTOINEN laajakulma
+   kaupungin tärkeimmältä paikalta erikoisessa valossa (ilta, aamu,
+   sininen hetki, auringonlasku, usva) — esim. Eiffel-torni
+   Trocadérolta iltavalossa, Seine siltoineen auringonlaskussa,
+   Louvren pyramidi sinisellä hetkellä, Pont Alexandre III. EI
+   perus keskipäivän valoa, EI pelkkää yksityiskohtaa.
+2. **Pikkurivin kuvat** (`kansikuvat[0]` ja `[1]`): pikkurivi RAJAA
+   kuvat vaakasuikaleiksi, joten pystykuva rajautuu rumasti —
+   Wallace-kaivo (pysty) on vaihdettava, ja kimeerakin saa vaihtua,
+   jos tilalle löytyy vahvempi VAAKAKUVA. Valitse kuvat, jotka
+   kestävät vaakarajauksen (pääaihe keskellä kuvaa pystysuunnassa).
+   Muut avauskuvat (Trocadéro, Carrousel) saavat jäädä, elleivät
+   uudet löydöt ole selvästi parempia.
+3. **Mistä etsitään** (uusi hakustrategia — tästä konseptista tuli
+   tarve): Commonsin juryttämät parhaimmistokategoriat, esim.
+   Category:Featured pictures of Paris, Category:Quality images of
+   Paris ja niiden alakategoriat, sekä valo-/aikakategoriat
+   (Category:Night in Paris, sunset/sunrise/blue hour -kategoriat).
+   Nämä ovat käymätön kultakaivos — hakusana-API löytää vain nimen
+   perusteella, kategoriat laadun. Lisenssisäännöt ennallaan: vain
+   PD/CC, lisenssi + tekijä API:sta, sijainti kuvaustekstistä (EI
+   tiedostonimestä — nimiansat!), JOKAINEN kuva silmin.
+4. Selitteet uusiksi vaihdettujen kuvien mukaan; vanhojen
+   selitteiden asiatiedot saa siirtää, jos aihe säilyy.
+5. Portit: `node --test tests/*.test.mjs`,
+   `node tools/tarkista-kaksoisavaimet.mjs`. ÄLÄ aja
+   uusi-versio.mjs:ää äläkä koske dist/-kansioon. EI PR:ää eikä
+   mergeä. Kosketa vain tiedostoja js/packs/kulttuuri-kategoriat.js
+   ja viesti-fable.md (repon juureen).
+6. Checkpoint-commit ≥ 30 min välein. Raporttiin: jokaisen ehdokkaan
+   kohdalla mistä kategoriasta löytyi, lisenssi + tekijä, miksi
+   valittiin/hylättiin, ja vaakarajauksen kesto pikkukuvissa.
+
 ## Paketti M1: Matkailijalle-monistus viiteen kaupunkiin (Opus 20, tilattu 16.8.2026)
 
 **✅ VALMIS (Opus 20, katselmoitu ja julkaistu v768:ssa 16.8.2026):**
