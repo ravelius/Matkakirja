@@ -1500,7 +1500,13 @@ class Pollo {
     el.alt = kuva.selite ?? reitti.kohde ?? '';
     el.decoding = 'async';
     el.draggable = false;
-    asetaKuva(el, valokuvaUrl(kuva.tiedosto, 640), valokuvaVara(kuva.tiedosto, 640));
+    /*
+     * 1024 eikä 640 (16.8.2026): popupin kortti sai kasvaa 320:stä
+     * 640 pikseliin, ja 640 pikselin lähde olisi tarkan näytön
+     * puolikkaalla tarkkuudella. Sama porras on käytössä muissakin
+     * suurissa kuvissa (kohdekartta 1000, teoskuva 900–1600).
+     */
+    asetaKuva(el, valokuvaUrl(kuva.tiedosto, 1024), valokuvaVara(kuva.tiedosto, 1024));
     kortti.appendChild(el);
 
     // Kuvateksti on jutun oma, valmiiksi kirjoitettu ja tarkistettu.
