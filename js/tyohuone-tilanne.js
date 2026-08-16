@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v794 — Wien, Rooma ja Kööpenhamina: pystykuva etusivulle',
   'v793 — Orsayn museo saa piirroksen Pariisin kartalle',
   'v792 — Pariisin kartalle piirrokset: ooppera ja Place des Vosges',
   'v791 — Berliini pystykuva; alanapit iPadilla; isompi pystykuva',

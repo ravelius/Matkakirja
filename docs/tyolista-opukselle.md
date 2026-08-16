@@ -84,9 +84,9 @@ Omistajan kaksi linjausta 16.8.2026:
 | Pariisi | ✅ Eiffel-torni (FP, PD) | ⬜ (avauskuva yksin) |
 | Lontoo | ✅ Elizabeth Tower (FP) | ✅ 3 kuvaa |
 | Berliini | ✅ Fernsehturm (FP) | ⬜ |
-| Wien | ⬜ | ⬜ |
-| Rooma | ⬜ | ⬜ |
-| Kööpenhamina | ⬜ | ⬜ |
+| Wien | ✅ Stephansdomin katto (QI-tekijä) | ⬜ |
+| Rooma | ✅ Trevin suihkulähde (QI) | ⬜ |
+| Kööpenhamina | ✅ Nyhavn (QI) | ⬜ |
 | Helsinki | ⬜ | ⬜ |
 
 ### Ehdokkaat, jotka on jo todennettu API:sta
@@ -95,19 +95,24 @@ Nämä voi ottaa käyttöön suoraan — lisenssi ja Restrictions tarkistettu
 16.8.2026, mutta kuvaa EI ole vielä katsottu silmin eikä kuvatekstiä
 kirjoitettu:
 
-- **Rooma:** `Fontana di Trevi by TC.jpg` (FP, CC BY-SA 4.0,
-  Tomascastelazo, 4000×6000). HUOM: kuva on Oceanus-veistos
-  lähikuvana, ei koko suihkulähde — harkitse, tunnistaako lukija
-  siitä Rooman. Vaihtoehtoja kannattaa hakea kategoriasta
-  *Featured pictures of Rome* (32 kuvaa).
-- **Wien:** kategoriasta *Featured pictures of Vienna* (102 kuvaa)
-  löytyi vain vaakakuvia Schönbrunnista ja Belvederestä. Stephansdomin
-  torni on luonteva pystyaihe; hakusanoja `Stephansdom Südturm`.
-- **Kööpenhamina ja Helsinki:** *Featured pictures of Helsinki* on
-  vain 6 kuvaa eikä sisällä maamerkkejä. Kööpenhaminan FP-kuvat
-  Nyhavnista ovat vaakakuvia. Molemmille kannattaa etsiä Quality
-  image -tason pystykuva (tuomiokirkko, Rundetårn, Nyhavn pystyyn
-  rajattuna).
+Wien, Rooma ja Kööpenhamina ratkesivat v794:ssä — ratkaisu löytyi
+Featured picture -kategorioiden sijaan **Quality image -haulla**
+(`gsrsearch=<kohde> incategory:"Quality images"`, suodatus
+`korkeus > leveys × 1,2`). FP-kategoriat ovat näissä maissa
+luonto- ja tapahtumapainotteisia eivätkä sisällä maamerkkejä.
+
+**Helsinki on yhä auki.** Kategoriasta *Helsinki Cathedral* löytyi 13
+pystykuvaa, mutta katsotut olivat katunäkymiä eivätkä täytä kaavan
+kohtaa 1 (yksi aihe, joka täyttää ruudun). Katsomatta jäi
+`Senaatintori (Helsinki Senate Square) elokuussa 2018 02.jpg`
+(Paasikivi, CC BY-SA 4.0, 2714×3483) — lisenssi on todennettu,
+kuva EI vielä katsottu. Muita mahdollisia aiheita: Temppeliaukion
+kirkko ylhäältä, Suomenlinnan Kuninkaanportti, Uspenskin katedraali.
+
+HUOM RAJAPINNASTA: Commons kuristaa (429 "too many requests")
+nopeasti. Pyyntöjen väliin 8 s ja uusintoihin 15/30/45 s, muuten
+vastaus on HTML-virhesivu — ja jos sen tallentaa kuvaksi, tiedosto
+näyttää jpg:ltä mutta on HTML:ää.
 
 ### Karusellit
 
