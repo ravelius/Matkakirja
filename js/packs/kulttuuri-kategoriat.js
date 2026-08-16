@@ -5601,11 +5601,29 @@ export const KULTTUURI_KATEGORIAT = {
        * 15.8.2026, kuvat katsottu silmin.
        */
       matkailijalle: {
+        /*
+         * ETUSIVUKUVA VAIHDETTU PYSTYKUVAAN (omistajan linjaus
+         * 16.8.2026; kaava kirjoitettuna Pariisin kohdalle tässä
+         * samassa tiedostossa). Vanha merikylpyläkuva ei siirtynyt
+         * mihinkään, koska sama aihe on jo jutun kuvissa
+         * ("Allas Sea Pool in September 2019") — kaksi kuvaa samasta
+         * altaasta samalla sivulla olisi toistoa.
+         *
+         * Uspenskin katedraali suoraan edestä: punatiili, kultaiset
+         * sipulikupolit ja tyhjä sininen taivas. Yksi aihe, joka
+         * täyttää ruudun, ja Helsingin oma erikoisuus — Länsi-Euroopan
+         * suurin ortodoksinen kirkko. Commonsin Quality image.
+         *
+         * Lisenssi ja Restrictions (tyhjä) tarkistettu API:sta
+         * 16.8.2026, sijainti kuvaustekstistä ("Uspenski Catedral,
+         * Helsinki") ja kategorioista ("Churches in Helsinki") eikä
+         * tiedostonimestä, kuva katsottu silmin.
+         */
         kuva: {
-          tiedosto: 'Allas Sea Pool 2.jpg',
-          selite: 'Allas-merikylpylän altaat kelluvat meressä keskellä '
-            + 'kaupunkia.',
-          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Catedral Uspenski, Helsinki, Finlandia, 2012-08-14, DD 05.JPG',
+          selite: 'Uspenskin katedraali Katajanokan kalliolla: punatiilinen '
+            + 'julkisivu, vihertävät katot ja kullatut sipulikupolit.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Helsinki on merikaupunki, jonka keskustan kiertää '
           + 'jalan: satama, torit ja puistot ovat muutaman korttelin '
