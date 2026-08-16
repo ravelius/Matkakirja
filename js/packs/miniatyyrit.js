@@ -45,11 +45,10 @@ export const MINIATYYRIT = {
     'Sacré-Cœur': 'assets/kartat/miniatyyrit/pariisi-sacre-coeur.webp',
     Panthéon: 'assets/kartat/miniatyyrit/pariisi-pantheon.webp',
     'Notre-Dame': 'assets/kartat/miniatyyrit/pariisi-notre-dame.webp',
-    // Paketti O4 (16.8.2026). Orsayn museo odottaa vielä piirrosta —
-    // ensimmäinen yritys näytti yleiseltä pikkuasemalta, joten se
-    // piirretään uudestaan tarkennetulla promptilla. Siihen asti
-    // kartalla numeroympyrä, kuten koodi tekee kohteelle ilman
-    // miniatyyriä.
+    // Paketti O4 (16.8.2026). Orsay vaati kolme yritystä: yleinen
+    // pikkuasema, matala laatikko ja vasta kolmantena talon
+    // tunnusmerkki eli koko pituudelta kaartuva lasikatto.
+    'Orsayn taidemuseo': 'assets/kartat/miniatyyrit/pariisi-orsayn-taidemuseo.webp',
     'Palais Garnier': 'assets/kartat/miniatyyrit/pariisi-palais-garnier.webp',
     'Place des Vosges': 'assets/kartat/miniatyyrit/pariisi-place-des-vosges.webp',
   },
