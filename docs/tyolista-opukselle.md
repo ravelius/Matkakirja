@@ -121,12 +121,60 @@ Molemmissa tapauksissa vastaus on HTML-virhesivu. Jos sen tallentaa
 tarkista ladatut kuvat `file`-komennolla ennen kuin luulet
 katsoneesi ne.
 
-### Karusellit
+### Karusellit ✅ (v796)
 
-Jokainen opas tarvitsee ensimmäiseen jaksoonsa kaksi kuvaa lisää.
-Lontoossa se ratkesi ilman uutta hankintaa: etusivulta vapautunut
-kuva siirtyi jaksoon, jonka teksti kertoo samasta aiheesta. Sama
-temppu kannattaa kokeilla joka kaupungissa ensin.
+Ratkesi joka kaupungissa niin, että kuvat valittiin **jakson tekstin**
+mukaan eikä kaupungin yleisistä maamerkeistä: Pariisin teksti mainitsee
+sanatarkasti emaloidun kadunnimikyltin, Rooman teksti nimeää kiveyksen
+sanpietriniksi. Lontoossa temppu oli, että etusivulta vapautunut kuva
+siirtyi jaksoon, jonka teksti kertoo samasta aiheesta — se toimii
+edelleen ensimmäisenä yrityksenä joka kaupungissa.
+
+## Paketti O6: opas kuuteen uuteen kaupunkiin (tilattu 16.8.2026) 🟡 KESKEN
+
+Omistaja: *"rakenna samaan malliin seuraavaksi bagdad, teheran, soul,
+tokio, shanghai ja tripoli"*. Malli = Pariisin Matkailijalle-osio:
+pystykuva etusivulla, `taitto: 'opas'`, viisi jaksoa, ensimmäisessä
+kolmen kuvan karuselli ja `matkailu`-lohko.
+
+**Lähtötilanne on kahdenlainen, ja se muuttaa työmäärän:**
+
+| Kaupunki | Kaupunkiosio | Matkailijalle | Mitä puuttuu |
+| --- | --- | --- | --- |
+| Bagdad | ✅ 188 riviä, 6 nostoa | ❌ | koko opas |
+| Teheran | ✅ 196 riviä, 6 nostoa | ❌ | koko opas |
+| Tokio | ✅ 191 riviä, 6 nostoa | ❌ | koko opas |
+| Soul | ❌ | ❌ | koko osio + opas |
+| Shanghai | ❌ | ❌ | koko osio + opas |
+| Tripoli | ❌ | ❌ | koko osio + opas |
+
+Kaikki kuusi ovat pelin laudalla (`asia.js`, `africa.js`,
+`middleeast.js`), ja `KULTTUURI_KATEGORIAT` on avaimennettu kaupungin
+id:llä — eli osion voi lisätä suoraan avaimilla `soul`, `shanghai`,
+`tripoli` ilman muutoksia muualle.
+
+**Faktapohja on jo repossa.** Nostot ovat todennettua kaanonia, ja
+niistä saa oppaan jaksot ilman uutta lähdetyötä. Bagdadissa esimerkiksi
+al-Rashid-katu (1914, pylväskäytävät, purettiin 700 taloa), kahvilat
+(ensimmäinen 1590, 285 kpl vuoteen 1903, istikan/quri/takht, al-Zahawi
+1917) ja Shorjan tori (nimi persian sanasta *shurchah*). Nämä riittävät
+viiteen jaksoon sellaisenaan.
+
+**Kuvapooli on paljon eurooppalaisia ohuempi, ja se on työn pullonkaula.**
+Bagdadissa hakusanahaut `Al-Rashid Street`, `Baghdad coffeehouse`,
+`Baghdad market` ja `Baghdad monument` palauttivat kaikki **nolla**
+osumaa, koska kuvia ei ole kuvailtu englanniksi. Kategoriahaku toimi:
+
+- `Category:Coffeehouses in Baghdad` → 5 kuvaa, mm. Shabandarin kahvila
+  al-Mutanabbi-kadulla (CC BY-SA 4.0) ja al-Beiruti (CC0)
+- `Category:Streets in Baghdad` → 40 käyttökelpoista
+- Mustansiriyan koraanikoulusta (1233) useita, myös pystykuvia
+
+Nämä eivät ole vielä katsottuja eivätkä käyttöön hyväksyttyjä.
+
+**Ohje seuraavalle:** hae kategorioilla, älä hakusanoilla, kun kaupunki
+on arabian-, persian-, korean- tai kiinankielinen. Hakusanahaku etsii
+englanninkielisestä kuvauskentästä, jota näissä kuvissa usein ei ole.
 
 ## Paketti O4: Nähtävyyksiä lisää (Pariisi pilottina, tilattu 16.8.2026) 🟡 KESKEN
 

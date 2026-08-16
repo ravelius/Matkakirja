@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 797, teksti: 'Oppaan otsikko esiin loveuksen alta' },
   { v: 796, teksti: 'Viiden oppaan avauskuva kolmen kuvan karuselliksi' },
   { v: 795, teksti: 'Helsingin etusivulle Uspenskin katedraali' },
   { v: 794, teksti: 'Wien, Rooma ja Kööpenhamina: pystykuva etusivulle' },
