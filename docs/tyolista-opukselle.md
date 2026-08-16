@@ -67,6 +67,50 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
+## Paketti O4: Nähtävyyksiä lisää (Pariisi pilottina, tilattu 16.8.2026)
+
+Omistajan linjaus 16.8.2026: **"Nähtävyyksiä voi olla 6–15 per
+kaupunki riippuen kuinka paljon mielekkäitä kohteita kaupungilla on
+tarjota."** Nykytila mitattuna (Opus 16.8.2026): 53 kaupungista
+**46:lla on tasan kuusi kohdetta** eli haarukan alaraja. Poikkeukset:
+Helsinki ja Kööpenhamina 9, Pariisi 8, Wien, Budapest ja Bukarest 7.
+Kuutonen ei siis ole harkittu määrä vaan lähtötaso, joka on jäänyt
+päälle.
+
+**Pariisi ensin, omistajan tsekattavaksi.** Kun se on hyväksytty,
+sama tehdään muille suurille kaupungeille (Lontoo, Rooma, Berliini,
+Wien, Praha, Istanbul, Madrid, Barcelona…) — pienemmät kaupungit
+saavat jäädä kuuteen, jos enempää mielekästä ei ole.
+
+### RAJAUS (sitova)
+
+Saat koskea VAIN näihin: `js/packs/maakartat.js` (VAIN pariisi-avaimen
+`kohteet`), `js/packs/nahtavyysjutut.js` (VAIN pariisi-avain) ja
+tarvittaessa miniatyyripiirrokset uusille kohteille. ET koske muihin
+kaupunkeihin, et lehtiin, et oppaaseen.
+
+### Mitä tehdään
+
+1. **Pariisi 8 → 12–14 kohdetta.** Ehdotetut lisäykset (omistaja
+   valitsee/karsii): Montmartre ja Sacré-Cœurin portaat, Musée
+   d'Orsay, Sainte-Chapelle, Marais, Père-Lachaise, Seinen rannat
+   (bouquinistit), Île de la Cité. Versailles on kaupungin
+   ulkopuolella — oma päätöksensä.
+2. **Jokainen uusi kohde tarvitsee kolme asiaa:** karttapisteen
+   (lat/lon `maakartat.js`:ään), miniatyyripiirroksen (yksi otto per
+   kohde, ks. piirrosputken kustannussääntö) ja oman
+   nähtävyysjutun kuvineen ja lisenssitodennuksineen.
+3. **Kaksi kohdetta on ilman juttua jo nyt** — korjaa ne samalla:
+   Wienin **Schönbrunn** ja Budapestin **Sankarien aukio** ovat
+   kartalla mutta avaavat wiki-ponnahduksen oman juttunsa sijaan.
+
+### Valmis malli
+
+Nykyiset Pariisin jutut `nahtavyysjutut.js`:ssä ovat malli sekä
+pituudelle että rakenteelle. Kuvasäännöt ovat samat kuin aina:
+lisenssit erätodennuksella API:sta, sijainti kuvauksesta ja
+kategorioista, jokainen kuva katsotaan silmin.
+
 ## Paketti O3: Matkailijan opas 2.2 — kevyt kainalo, säägraafi, kuvahionta (Opus 27, tilattu 16.8.2026) ✅ VALMIS
 
 **Kuittaus (Opus sijaispäätoimittaja 16.8.2026):** Opus 27 toimitti
