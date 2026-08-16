@@ -90,9 +90,11 @@ kontissa, joten korjaus on perusteltu tiukennus eikä todennettu ruudulla.
    kirjoitettu rivi renderöityy TYHJÄNÄ. Opus 27 harkitsi
    yhteensopivuushaaraa ja jätti sen pois perustellusti (hiljainen vika
    olisi pahempi). **Sano tämä monistuserän tehtävänannossa suoraan.**
-2. **`tools/kuvateksti-audit.mjs` ei kata `jaksot[].kuva`** — ja kenttä
-   voi nyt olla myös LISTA (Luxembourg 3, Seine 4). Työkalun laajennus
-   on omistajan listalla ehto oppaan monistukselle.
+2. ~~`tools/kuvateksti-audit.mjs` ei kata `jaksot[].kuva`~~ **TEHTY
+   illalla** (v786:n yhteydessä): audit kattaa nyt
+   `matkailijalle.kuva`, `artikkeli.kuvat` ja `jaksot[].kuva` myös
+   listamuodossa. Tämä oli omistajan ehto monistukselle, joten se
+   tehtiin ensin.
 3. **`tools/hae-commons.mjs` kaatuu kuristusvastaukseen.** Commons
    vastaa ruuhkassa tekstillä "You are making too many requests", ja
    työkalu yrittää jäsentää sen JSONina. Yhden `if`-lauseen korjaus.
