@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 790, teksti: 'Lontoo: pystykuva etusivulle, karuselli oppaan alkuun' },
   { v: 789, teksti: 'iPad: korkeuden muutos laskee kartan uusiksi' },
   { v: 788, teksti: 'Pariisiin 3 kohdetta, sää kaikkiin 70 kaupunkiin' },
   { v: 787, teksti: 'Lippu maasivun otsikkoon, Eiffel etusivulle, kuvakaava' },
