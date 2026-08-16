@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v786 — opas 5 kaupunkiin: tsekkaa ennen koko Euroopan ajoa',
   'v785 — sääennuste 32 lehteen, maasivun nimiö, oppaan graafi',
   'v784 — iPad: käy toisessa apissa ja palaa; alanapit paikallaan',
   'v783 — säägraafi elää, Seinen karuselli, paperi ehyt',

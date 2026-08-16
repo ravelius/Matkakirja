@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 786, teksti: 'Opas 5 kaupunkiin: Lontoo, Wien, Berliini, Rooma, Kbh' },
   { v: 785, teksti: 'Sää 32 lehteen, oppaan graafi lehden omaksi, maan nimiö' },
   { v: 784, teksti: 'iPad: kortin alanapit eivät katoa taustapaluun jälkeen' },
   { v: 783, teksti: 'Opas: säägraafi lehtityyliin, Seine-karuselli, paperi' },
