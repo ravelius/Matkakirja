@@ -10415,10 +10415,25 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   border-top: 3px double rgba(70, 51, 31, 0.75);
   border-radius: 0 0 8px 8px;
   background: #fcf8ec;
-  /* Nauhan ankkuri ja leikkuri: nauha kulkee osion yläreunasta
-   * oikeaan sivureunaan ja katkeaa siististi osion rajoihin. */
+  /*
+   * PANEELI PIIRRETÄÄN LOPPUUN (omistajan löytö 16.8.2026
+   * iPad-kuvakaappauksesta): vaaleampi pohja loppui ilman reunaa
+   * keskelle paperia, ja koska ero lehden paperiin on vain muutama
+   * prosentti, raja luki ruudulla piirtovirheenä eikä paneelin
+   * alareunana. Sivut ja alareuna saavat saman musteen ohuena
+   * viivana ja paneeli kevyen varjon: nyt vaalea pohja on selvästi
+   * esine paperin päällä.
+   */
+  border-right: 1px solid rgba(70, 51, 31, 0.28);
+  border-bottom: 1px solid rgba(70, 51, 31, 0.28);
+  border-left: 1px solid rgba(70, 51, 31, 0.28);
+  box-shadow: 0 2px 6px -3px rgba(70, 51, 31, 0.4);
+  /* Nauhan ankkuri: nauha kulkee osion yläreunasta oikeaan
+   * sivureunaan. Leikkurina on nauhan oma kotelo
+   * (.opas-nauha-kotelo, overflow: hidden), EI tämä osio — osion
+   * leikkuri söi hiljaa ylivuotavan rivin, ja iPadilla kuvan
+   * lähderivin viimeinen sana katosi sen alle. */
   position: relative;
-  overflow: hidden;
 }
 
 .matkailijalle .wiki-btn {
