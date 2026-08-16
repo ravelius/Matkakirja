@@ -36,3 +36,6 @@ ios/*.xcodeproj/
 ios/build/
 ios/kaannos.log
 ios/DerivedData/
+
+# Yhden tiedoston versio rakennetaan Pages-ajossa — ei committoida.
+dist/
