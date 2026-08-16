@@ -46,6 +46,101 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
+## Paketti A1: Äänet R2:een + hybridivälimuisti (Opus 24, tilattu 16.8.2026)
+
+Omistajan päätös 16.8.2026 (Raamattu, Äänet-osio): äänet jaellaan
+R2:sta; esilataus vain ydinsetille; OFFLINE EI OLE TAVOITE. Tausta:
+sw.js esilataa nyt 420 äänitiedostoa (~200 Mt) joka asennuksessa.
+
+**Haara:** `claude/opus24-aanet-r2`
+
+1. Tutki ENSIN miten kuvapeili toimii: `.github/workflows/peilaa.yml`
+   (R2-vienti ja sen salaisuudet) ja js:n kuva-URL-rakennus
+   (valokuvaUrl + peiliosoite). Äänet tehdään SAMALLA arkkitehtuurilla
+   — älä keksi uutta mekanismia.
+2. Uusi `.github/workflows/vie-aanet.yml` (workflow_dispatch + push
+   main kun assets/audio muuttuu): vie assets/audio R2:een samoin
+   salaisuuksin/poluin kuin peilaa.yml (oma alipolku, esim. audio/).
+   Aja dokumentaatio-osuus kuntoon mutta ÄLÄ poista audiotiedostoja
+   repostä tässä paketissa — poisto on Fablen erillinen PR sen
+   jälkeen, kun R2-jakelu on todettu tuotannossa toimivaksi.
+3. js: äänipolut R2:n kautta samalla varamekanismilla kuin kuvilla
+   (peili ensin, paikallinen polku varalla siirtymän ajan). Tee
+   yksi apufunktio (esim. aaniUrl) ja käytä sitä joka soittokohdassa.
+4. sw.js: SHELL-listalta pois KAIKKI assets/audio-polut PAITSI
+   ydinsetti = huudahdus-*.mp3 ja lyhyet käyttöliittymätehosteet
+   (listaa raporttiin mitkä jäivät ja miksi). Muille äänille
+   runtime-välimuisti: cache-first + talletus ensimmäisellä
+   kuuntelulla (sama malli kuin kuvien runtime-cache, jos sellainen
+   on — katso sw.js:n fetch-käsittelijä).
+5. Savuke: playwright-ajo jossa jokin luenta/taustaääni soi
+   R2-polusta (verkkopyyntö näkyy R2-osoitteeseen) ja huudahdus soi
+   välimuistista. Portit: `node --test tests/*.test.mjs`,
+   `node tools/tarkista-kaksoisavaimet.mjs`.
+6. RAJAUS: kosketa vain sw.js, äänipolkuja rakentavat js-tiedostot,
+   .github/workflows/vie-aanet.yml ja viesti-fable.md. ÄLÄ koske
+   ui.js:n taittokoodiin äläkä css:ään (Opus 25 työstää niitä
+   rinnakkain), ÄLÄ poista tiedostoja, ÄLÄ aja uusi-versio.mjs:ää,
+   EI PR:ää eikä mergeä. Checkpoint-push ≥ 30 min välein.
+   R2-avaimet ovat GitHub-salaisuuksia — niitä ei tulosteta koskaan.
+
+## Paketti O1: Matkailijan opas 2.0 — Pariisi-pilotti (Opus 25, tilattu 16.8.2026)
+
+Omistajan linjaus 16.8.2026 (Raamattu, Kaupungit-osio): opas on
+pelin kevyt ja viihteellinen osa, joka houkuttelee matkustamaan —
+iloisemmat värit, jaksotettu taitto, laatikot. Ripoteltu taitto
+todettiin levottomaksi; tämä korvaa sen opasartikkeleissa.
+
+**Haara:** `claude/opus25-opas2`
+
+1. UUSI TAITTO `taitto: 'opas'` (js/ui.js): artikkeli renderöidään
+   AIHEJAKSOINA — pieni väliotsikko → kappale → KOKO PALSTAN
+   levyinen kuva kuvatekstillä. Ei kellukkeita. Lisäksi:
+   - `nosto`: yksi lause isolla antiikvalla koristeviivoin
+     jaksojen 2 ja 3 väliin.
+   - Laatikko "Milloin matkaan?": parasAika-lause + kausirivit
+     (kausi · kuukaudet · lämpöhaarukka · luonnehdinta).
+   - Laatikko "Matkakassa": €€-luokka + 4–5 ankkurihintaa.
+   - Laatikko "Suunnittele matka": 3–4 linkkiä (uuteen välilehteen,
+     rel=noopener).
+   Järjestys: ingressi → jakso1 → Milloin matkaan? → jakso2 →
+   nosto → jakso3 → Matkakassa → loput jaksot → Suunnittele matka
+   → lähderivi. Vanha teksti+kuvat-muoto (ripoteltu) EI saa hajota
+   — muut kaupungit käyttävät sitä kunnes monistetaan.
+2. DATAMALLI (js/packs/kulttuuri-kategoriat.js, VAIN pariisi):
+   artikkeli.jaksot = [{otsikko, teksti, kuva:{tiedosto,selite,
+   lahde}}], artikkeli.nosto, artikkeli.matkailu = {parasAika,
+   kaudet:[{nimi,kk,lampo,kuvaus}], hintataso,
+   hinnat:[{mita,hinta}], linkit:[{nimi,url}]}.
+3. PARIISI-PILOTTI: jaa nykyinen 5 kappaleen teksti jaksoiksi
+   väliotsikoin (Perille ja liikkeelle · Seine · Istumisen taito ·
+   Leipomon kaupunki · Ilta), nykyiset 5 kuvaa jaksoihin, nostoksi
+   'Kahvilassa yksi kahvi ostaa pöydän tunniksi, eikä kiirettä
+   ole.' Kaudet + lämmöt en-wikin Paris climate normals
+   -taulukosta (lähde kommenttiin); hinnat realistisina
+   haarukkoina (espresso tiskillä, patonki, metrolippu,
+   museolippu, bistroillallinen); linkit: parisjeteaime.com,
+   Wikivoyagen Pariisi, RATP.
+4. VÄRI-ILME (css/styles.css): opas saa oman iloisen paletin —
+   lämmin vaalea pohjaväri, kolme aksenttia (turkoosi,
+   postimerkinpunainen, aurinkokeltainen); laatikot vaaleilla
+   aksenttipohjilla, nosto aksenttivärillä. Pysyy pelin
+   paperiestetiikassa: sävyt kuin vanhassa matkajulisteessa, ei
+   neonia. ETUSIVULLE pirteä KULMALAPPU Matkailijalle-osioon:
+   postikortti/matkalippuhenkinen vino lappu "Matkailijan opas",
+   joka avaa oppaan — kevyt kallistus, iloinen väri, sopii
+   pergamenttiin.
+5. Silmätarkistus: paikallinen palvelin + playwright-kaappaukset
+   oppaasta (leveä + kapea näkymä) ja etusivun lapusta; arvio
+   raporttiin, kaappauksia EI committoida.
+6. RAJAUS: kosketa vain js/ui.js, css/styles.css,
+   js/packs/kulttuuri-kategoriat.js (vain pariisin
+   matkailijalle-osuus) ja viesti-fable.md. ÄLÄ koske sw.js:ään
+   äläkä äänikoodiin (Opus 24 työstää niitä rinnakkain), ÄLÄ koske
+   muihin kaupunkeihin, ÄLÄ aja uusi-versio.mjs:ää, EI PR:ää eikä
+   mergeä. Portit: node --test tests/*.test.mjs +
+   tarkista-kaksoisavaimet. Checkpoint-push ≥ 30 min välein.
+
 ## Paketti K3: Kuvakäsikirjoitukset lopuille piirroskaupungeille (Opus 23, tilattu 16.8.2026)
 
 **✅ VALMIS (Opus 23, katselmoitu ja mergetty 16.8.2026):** kuusi
