@@ -46,7 +46,20 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
-## Paketti O2: Matkailijan opas 2.1 — kainalo, paletti, otsikko (Opus 26, tilattu 16.8.2026)
+## Paketti O2: Matkailijan opas 2.1 — kainalo, paletti, otsikko (Opus 26, tilattu 16.8.2026) ✅ VALMIS
+
+**Kuittaus (Fable 16.8.2026):** Opus 26 toimitti koko paketin ja
+raportin; julkaistu v780. Paletti 2.1 (terrakotta johtaa, petrooli
+tukee, kulta koristaa; kaikki parit WCAG AA mitattuina), kainalopari
+kaksipalstaisena ingressin alla (kelluke hylätty mitatulla
+317 px:n kololla — perustelu hyväksytty), display-otsikko antiikvalla,
+avauskuva vaihdettu FP-kuvaan Tour Saint-Jacques au crépuscule
+(Fabien Barrau, CC BY-SA 4.0 — lisenssi todennettu itse API:sta,
+kuva katsottu silmin; kaukainen valaistu Eiffel hyväksytty de
+minimis -perusteella, Restrictions-kenttä tyhjä). Raportin
+havainto 1 (kulmalapun tekstivuoto) raukesi: v779 korvasi lapun
+diagonaalinauhalla. Havainnot 2–3 (kuvateksti-auditin jaksot-aukko,
+€€€-asteikko) jonossa ennen monistuserää.
 
 Omistajan palaute Pariisin opas 2.0:sta 16.8.2026: sivulle kaivataan
 kainalonostot (parasta + varjopuolet), koko sivun väripaletti on

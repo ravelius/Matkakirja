@@ -2297,13 +2297,28 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'osa Pariisia on kadun tasolla: leipomon ikkuna, '
                 + 'sisäpiha portin takana, sininen emalinen '
                 + 'kadunnimikyltti.',
+              /*
+               * AVAUSKUVA VAIHDETTU LÄMPIMÄKSI (omistajan palaute
+               * 16.8.2026: jakson 1 sininen Montparnasse-panoraama
+               * vaihdetaan lämminsävyiseen näkymään). Tilalle Commonsin
+               * Featured picture (Assessments|featured=1, myös päivän
+               * kuva 25.7.2024): hämärän persikkainen taivas, lämpimästi
+               * valaistu torni ja etualalla juuri se matala sinkkikatto-
+               * meri, josta jakson teksti puhuu. Lisenssi ja tekijä
+               * Commonsin API:sta, sijainti kuvaustekstistä ("Tour
+               * Saint-Jacques au crépuscule, Paris") eikä tiedostonimestä,
+               * kuva katsottu silmin 16.8.2026. Vanha Montparnasse-kuva
+               * poistettiin kokonaan: uusi kuva kertoo saman asian
+               * (matala kaupunki, jonka yli näkee kauas) lämpimänä.
+               */
               kuva: {
-                tiedosto: 'Paris sunset from Tour Montparnasse observation deck - 6.jpg',
-                selite: 'Auringonlasku Tour Montparnassen näköalatasanteelta. '
-                  + 'Matala kattomeri jatkuu horisonttiin, ja siitä nousee '
-                  + 'esiin vain Eiffel-torni — Pariisi on rakennettu '
-                  + 'leveäksi eikä korkeaksi.',
-                lahde: 'APK, Wikimedia Commons (CC BY-SA 4.0)',
+                tiedosto: 'Tour Saint-Jacques au crépuscule.jpg',
+                selite: 'Tour Saint-Jacques hämärän kajossa, ympärillään '
+                  + 'matala sinkkikattojen ja savupiippujen meri. Kaukana '
+                  + 'horisontissa erottuvat Invalidien kupoli ja '
+                  + 'Eiffel-torni — Pariisi on rakennettu leveäksi eikä '
+                  + 'korkeaksi.',
+                lahde: 'Fabien Barrau, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
             {
@@ -2392,6 +2407,66 @@ export const KULTTUURI_KATEGORIAT = {
           nosto: 'Kahvilassa yksi kahvi ostaa pöydän tunniksi, eikä kiirettä '
             + 'ole.',
           matkailu: {
+            /*
+             * KAINALONOSTOT (omistajan palaute 16.8.2026). Tähdet ovat
+             * toimituksellinen arvio asteikolla 1–3, eivät mitattu luku:
+             * ne kertovat, kannattaako matkailijan tulla Pariisiin
+             * nimenomaan tämän asian takia. Selitteiden faktat on
+             * tarkistettu — museokortin kohdemäärä ja metron viimeinen
+             * juna en-Wikivoyagen Paris-artikkelista (haettu 16.8.2026),
+             * leipomo- ja kävelyhavainnot ovat jaksojen omaa,
+             * lähteellistä leipätekstiä.
+             */
+            parasta: [
+              {
+                mita: 'Museot',
+                tahdet: 3,
+                selite: 'Louvre yksin täyttää päivän, ja museokortti kattaa '
+                  + 'yli 70 kohdetta.',
+              },
+              {
+                mita: 'Ruoka',
+                tahdet: 3,
+                selite: 'Leipomo on joka korttelissa, ja patongilla on oma '
+                  + 'asetuksensa.',
+              },
+              {
+                mita: 'Kävely-ympäristö',
+                tahdet: 3,
+                selite: 'Kaupungin halki kävelee päivässä, ja Seinen rannat '
+                  + 'ovat yhtenäinen reitti.',
+              },
+              {
+                mita: 'Iltatunnelma',
+                tahdet: 2,
+                selite: 'Terassit ja katulyhdyt kantavat pitkälle, mutta '
+                  + 'viimeinen metro menee jo puoli kahdelta.',
+              },
+              {
+                mita: 'Lapsille',
+                tahdet: 2,
+                selite: 'Luxembourgin vuokraveneet ilahduttavat, jonot eivät.',
+              },
+            ],
+            /*
+             * VARJOPUOLET ILMAN PELOTTELUA (Kunnioitus-pilari koskee
+             * myös näitä): jokainen kohta on matkailijalle hyödyllinen
+             * fakta, ei kaupungin mollausta, eikä yhdellekään anneta
+             * tähtiä. Lähteet ovat en-Wikivoyagen Paris-artikkeli
+             * (hintataso ja hotellihuoneiden koko, taskuvarkaat metrossa
+             * ja kärkikohteilla, Eiffel-tornin jonot, museokortin
+             * jononohitus, elokuun lomakausi) — kaikki haettu 16.8.2026.
+             */
+            hyvaTietaa: [
+              'Hintataso on Euroopan kärkeä, ja edullisessakin keskustan '
+                + 'hotellissa huone on tavallisesti 12–16 neliötä.',
+              'Taskuvarkaat työskentelevät metrossa, lentokenttäjunassa ja '
+                + 'kärkikohteiden ruuhkissa — lompakko etutaskuun.',
+              'Kärkikohteisiin jonotetaan: Eiffel-tornille voi mennä tunteja '
+                + 'aamullakin, ja museokortti on olemassa juuri jonojen takia.',
+              'Elokuussa noin puolet pariisilaisista on itse lomalla, ja moni '
+                + 'pieni kauppa ja ravintola on kiinni.',
+            ],
             parasAika: 'Paras aika on touko–kesäkuu ja syyskuu: päivät ovat '
               + 'pitkiä, lämpötila asettuu kahdenkymmenen tienoille eikä '
               + 'helle vaivaa. Elokuu on lämmin mutta puolityhjä — noin '
