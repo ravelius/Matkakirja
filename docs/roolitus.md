@@ -34,6 +34,10 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
   docs/tyolista-opukselle.md.
 - **UI-koodi, rakenneuudistukset ja työkalut** (esim. kaupunki/maa-
   lehtijako, Maiden tiedot -varuste).
+- **Speksioppi (omistajan havainto 16.8.2026):** tarkasti rajattu
+  toimeksianto tuottaa Opukselta erinomaista jälkeä; väljä rajaus
+  johtaa turhien asioiden toteuttamiseen. Jokaiseen pakettiin:
+  täsmälliset tiedostot, mitä EI tehdä, ja valmis malli.
 - **Ei koske tarinateksteihin** — jos lehden teko vaatisi
   tarinatekstin muutosta, havainto kirjataan ja lähetetään Fablelle.
 
@@ -107,6 +111,8 @@ Työtapa on siksi tämä:
 | Opus 21 (Pariisin etusivukuvat) | — ARKISTOITU 16.8.: ehti valita sinisen hetken Notre-Damen ennen omistajan tarkennusta (pääkuvaksi Eiffel); löytö kierrätettiin nostoksi paketissa P1. Korvaaja: Opus 22. | 16.8.2026 |
 | Opus 22 (Pariisin etusivukuvat, Eiffel) | session_014vdqqNQs2d7QTu1NA1CnAZ — VALMIS 16.8.2026 (paketti P1, julkaistu v771). Huippuraportti: tarkisti rajauksen oikeasta CSS:stä (4:3, korjasi tehtävänannon oletuksen), todensi Eiffelin iltavalaistuksen FoP-riskin valituista puhtaaksi, hylkäykset perusteltu. | 16.8.2026 |
 | Opus 23 (kuvakäsikirjoitukset) | session_01VD9oQ9okXp1x7pPip77B21 — VALMIS 16.8.2026 (paketti K3: kuusi käsikirjoitusta, mergetty ilman versiota; hyvin perustellut tärkeysjärjestykset, mm. Nyhavn ohi merenneidon ja Kaarlensillan kaksoisnäkymän välttäminen). | 16.8.2026 |
+| Opus 24 (äänet R2:een) | session_01E5Y9qMZyQwULAVUvzHy6vB (paketti A1: R2-jakelu + hybridivälimuisti, haara claude/opus24-aanet-r2; EI ui.js/css — rinnakkain Opus 25:n kanssa; EI mergeä itse) | 16.8.2026 |
+| Opus 25 (opas 2.0) | session_01SuUo9cn1n2qQNo7BN2MgbE (paketti O1: jaksotaitto + laatikot + väri-ilme + kulmalappu, Pariisi-pilotti, haara claude/opus25-opas2; EI sw.js/äänikoodia; EI mergeä itse) | 16.8.2026 |
 | Fable max (apusessio) | session_01NQpicvHRAzUpX4NfcYwsyv (Fable max 2; EI vastaanota viestejä tilinvaihdon jälkeen — uusi tili perustaa oman Max-session tarvittaessa. Vanha session_01U8Nqxu… arkistoitu 11.8. konttivian takia) | 11.8.2026 |
 | Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/arkisto/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
 | Opus 2 | — (arkistoitu source_url-vian takia; Bahrain siirretty Opus 1:lle, perustetaan uudelleen kun ME-kohdekarttajono aukeaa) | 10.8.2026 |
