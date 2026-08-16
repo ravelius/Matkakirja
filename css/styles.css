@@ -11408,6 +11408,58 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   line-height: 1.15;
 }
 
+/*
+ * KAIUTIN OTSIKON PERÄSSÄ (omistajan tilaus 16.8.2026). Nappi asuu nyt
+ * otsikon sisällä (ui.js avaaNahtavyys), joten oletussääntöjen absoluut-
+ * tinen asemointi puretaan ja nappi ladotaan tekstin perään.
+ *
+ * Ilme on sama kuin lehden ja "Lue lisää" -ikkunan kaiuttimella: pelkkä
+ * mustepiirros ilman nappikehystä ja ilman pyöreää taustaa. Osuma-alue
+ * on 40 px, vaikka kuvake on pienempi.
+ *
+ * Valitsimessa on `.dialog button` mukana samasta syystä kuin muissakin
+ * kaiutinsäännöissä: dialogien yleissääntö maalaa jokaisen napin
+ * pergamenttilaatikoksi ja voittaisi muuten tarkkuudessa.
+ */
+#nahtavyys-otsikko > button.lukija-nappi,
+.dialog #nahtavyys-otsikko > button.lukija-nappi {
+  position: static;
+  transform: none;
+  display: inline-grid;
+  place-items: center;
+  vertical-align: baseline;
+  width: 1.9rem;
+  height: 1.9rem;
+  min-width: 40px;
+  min-height: 40px;
+  margin-left: 0.35rem;
+  /* Kuvake istuu otsikon riville: 40 px:n osuma-alue on isompi kuin
+     rivinkorkeus, joten ylimääräinen tila ei saa venyttää riviä. */
+  margin-block: -0.5rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: rgba(70, 51, 31, 0.62);
+}
+
+#nahtavyys-otsikko > button.lukija-nappi:hover:not(:disabled),
+#nahtavyys-otsikko > button.lukija-nappi:focus-visible,
+.dialog #nahtavyys-otsikko > button.lukija-nappi:hover:not(:disabled),
+.dialog #nahtavyys-otsikko > button.lukija-nappi:focus-visible {
+  background: none;
+  color: rgba(70, 51, 31, 1);
+}
+
+/* Luennan tila kerrotaan meripihkaisella musteella, ei taustalla —
+   sama linjaus kuin muissa kaiuttimissa. */
+#nahtavyys-otsikko > button.lukija-nappi.lukee,
+.dialog #nahtavyys-otsikko > button.lukija-nappi.lukee {
+  background: none;
+  box-shadow: none;
+  color: #a8741a;
+}
+
 /* Lyhyet kappaleet: väljä riviväli ja selvä väli kappaleiden välissä,
  * jotta silmä löytää aina seuraavan aloituksen. */
 .nahtavyys-kappale {
@@ -12746,23 +12798,12 @@ body.maatiedot-tila .fact-card {
 
 /* Piilotus on kumottava nimenomaisesti: dialogin yleinen nappisääntö
    asettaa displayn, ja pelkkä [hidden] häviäisi sille kaskadissa. */
-.dialog.nahtavyys-arkki .nahtavyys-nuoli[hidden],
-.dialog.nahtavyys-arkki .nahtavyys-laskuri[hidden] { display: none; }
+.dialog.nahtavyys-arkki .nahtavyys-nuoli[hidden] { display: none; }
 
 /*
- * Laskuri hampurilaisnapin VIEREEN eikä vastakkaiseen kulmaan: vasen
- * yläkulma on vuosiluku- ja kohdenumerorivin (`.nahtavyys-aika`) oma
- * paikka, ja pilleri jäi sen päälle. Oikeassa yläkulmassa on tilaa,
- * koska aikarivi on lyhyt ja vasempaan tasattu. 3.1rem on napin leveys
- * (2.1) + sen oma reunaetäisyys (0.6) + rako.
+ * Kohdelaskurin ("5/6") säännöt poistettiin 16.8.2026 yhdessä
+ * elementin kanssa (omistajan päätös). Sama tieto on aikarivillä.
  */
-.dialog.nahtavyys-arkki .nahtavyys-laskuri {
-  top: 0.75rem;
-  right: 3.1rem;
-  bottom: auto;
-  left: auto;
-  z-index: 8;
-}
 
 /*
  * Leveällä ruudulla nuolet siirtyvät kokonaan kortin ulkopuolelle
