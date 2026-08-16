@@ -342,6 +342,15 @@ export const RAAMATTU = {
       kohdat: [
         'Kaikki kuvat PD/CC Commonsista, silmin tarkistettuina; '
           + 'tekijä ja lisenssi näkyvissä.',
+        'Etusivukuvien kaava (omistaja 16.8.2026): kuva-aiheet '
+          + 'speksataan kaupunkikohtaisesti ENNEN hakua '
+          + '(docs/kuvakasikirjoitukset.md). Pääkuva = tärkein kohde '
+          + 'näyttävänä laajakulmana erikoisvalossa (karuselliin voi '
+          + 'lisätä muita näyttäviä); pikkunosto 1 = toiseksi tärkein '
+          + 'kohde; pikkunosto 2 = yllättävä, oivaltava yksityiskohta. '
+          + 'Pikkunostoihin ei karusellia ja vain vaakarajauksen '
+          + 'kestäviä kuvia. Haut Commonsin FP/QI- ja '
+          + 'valokategorioista.',
         'Media omasta peilistä (R2), peilaus automaattinen.',
         'Faktat tarkistetaan, lähteet merkitään. API-avaimia ei '
           + 'koskaan repoon eikä lokiin.',
@@ -407,7 +416,7 @@ export const RAAMATTU = {
           + 'pistokokeet.',
         'docs/tutki-aiheet.md · docs/tyolista-opukselle.md · '
           + 'docs/kaariteksti-sapluuna.md · docs/mantereen-resepti.md '
-          + '— sisältöreseptit.',
+          + '· docs/kuvakasikirjoitukset.md — sisältöreseptit.',
         'CONTRIBUTING.md — avoin lähdekoodi + tekniset periaatteet. '
           + 'README.md — esittely.',
         'docs/viesti-fable.md — viestikanava, ei ohje. docs/arkisto/ '
