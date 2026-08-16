@@ -11581,8 +11581,16 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * oppaassa. Kohina jää päälle taustakuvana, joten paperin tuntu
  * säilyy — vaihdettu on vain sen alla oleva väri. Tämä koskee vain
  * korttia: arkki sai yltä pelkät muuttujat, ei uutta ulkoasua.
+ *
+ * VALITSIN ON KOLMIOSAINEN TARKOITUKSELLA (omistajan löytö
+ * 16.8.2026 iPad-kuvakaappauksesta): arkin oma sääntö
+ * `.dialog.arkki .dialog-card` on tarkempi kuin
+ * `.nahtavyys-kortti.opas-kortti`, joten opas 2.1:n lämmin paperi ei
+ * koskaan päässyt voimaan. Kortti jäi lehden viileäksi, ja oppaan
+ * omat laatikot loistivat sitä vasten lämpiminä laikkuina — juuri se
+ * raja, jonka omistaja näki ruudulla. Älä laske tarkkuutta takaisin.
  */
-.nahtavyys-kortti.opas-kortti {
+.dialog.arkki .dialog-card.opas-kortti {
   background-color: var(--opas-pohja);
   color: var(--opas-muste);
 }
@@ -11995,21 +12003,88 @@ button.opas-saagraafi-nappi {
 
 /*
  * PETROOLI KÄYRILLE. Päivä on ylempi käyrä ja yö alempi, ja niiden
- * väliin jäävä vyöhyke on saman värin vesitetty pinta — vuorokauden
- * vaihteluväli on siis kuvassa pinta-alaa, ei kahta irrallista viivaa.
- * Kumpikaan käyrä ei tarvitse omaa väriä: ylempi on aina päivä.
+ * väliin jäävä vyöhyke on saman värin liuku — vuorokauden vaihteluväli
+ * on siis kuvassa pinta-alaa, ei kahta irrallista viivaa. Kumpikaan
+ * käyrä ei tarvitse omaa väriä: ylempi on aina päivä.
+ *
+ * ELÄVÖINTI on lainattu maalehden vuosiennusteesta (.vuosisaa,
+ * omistajan tilaus 16.8.2026): käyrä piirtyy vasemmalta oikealle,
+ * täyttö ja pisteet ilmestyvät sen vanaan, ja liikeherkkyys sammuttaa
+ * koko sarjan alla. Ajat ovat lehden ajat, jotta kaksi graafia
+ * käyttäytyy samalla tavalla eikä toinen tunnu hitaammalta.
  */
-.opas-saa-vyo { fill: rgba(29, 90, 94, 0.17); }
+.opas-saa-vyo {
+  opacity: 0;
+  animation: saa-ilmesty 900ms ease-out 450ms forwards;
+}
 
 .opas-saa-kayra {
   fill: none;
   stroke: var(--opas-syva);
   stroke-linejoin: round;
   stroke-linecap: round;
+  /* pathLength="1" JS:ssä: piirto vasemmalta oikealle. */
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: saa-viiva-piirto 1100ms ease-out 150ms forwards;
 }
 
 .opas-saa-paiva { stroke-width: 2; }
 .opas-saa-yo { stroke-width: 1.4; opacity: 0.72; }
+
+.opas-saa-piste {
+  fill: var(--opas-syva);
+  opacity: 0;
+  animation: saa-ilmesty 300ms ease-out forwards;
+}
+
+.opas-saa-yo-piste { fill-opacity: 0.72; }
+
+/* Kuluva kuukausi: haalea kaista pystyyn ja lihavoitu kirjain — sama
+ * ele kuin lehdessä, oppaan petroolilla. */
+.opas-saa-kuluva-kaista { fill: rgba(29, 90, 94, 0.07); }
+
+.opas-saa-kuluva {
+  font-weight: 700;
+  fill: var(--opas-syva);
+}
+
+.opas-saa-pohjaviiva {
+  stroke: rgba(58, 42, 21, 0.32);
+  stroke-width: 1;
+}
+
+/*
+ * Ääripäiden lukemat pienessä graafissa: halo pitää luvun luettavana
+ * käyrän ja ruudukon päällä (paint-order kuten lehdessä).
+ */
+.opas-saa-arvo {
+  font-family: var(--font-type);
+  font-size: 9px;
+  font-weight: 700;
+  text-anchor: middle;
+  fill: var(--opas-syva);
+  paint-order: stroke;
+  stroke: rgba(248, 239, 220, 0.9);
+  stroke-width: 2.5px;
+  opacity: 0;
+  animation: saa-ilmesty 400ms ease-out 1100ms forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opas-saa-vyo,
+  .opas-saa-kayra,
+  .opas-saa-piste,
+  .opas-saa-arvo { animation: none; }
+
+  .opas-saa-kayra { stroke-dashoffset: 0; }
+
+  .opas-saa-vyo,
+  .opas-saa-piste,
+  .opas-saa-arvo { opacity: 1; }
+
+  .opas-saa-yo { opacity: 0.72; }
+}
 
 .opas-saa-ruudukko {
   stroke: rgba(58, 42, 21, 0.15);
