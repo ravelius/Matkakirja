@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 777, teksti: 'Matkailijalle: kyltti kuvan kulmaan, vaaleampi tausta' },
   { v: 776, teksti: 'Matkailijan opas 2.0: jaksot, laatikot, värit (Pariisi)' },
   { v: 775, teksti: 'Poistoerä: 455 ääntä pois repostä, jakelu R2:sta' },
   { v: 774, teksti: 'Äänet R2-jakeluun; esilataus 242 Mt → 62 Mt' },

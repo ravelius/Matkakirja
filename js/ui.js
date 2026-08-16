@@ -12355,10 +12355,38 @@ export class UI {
      * napautussuurennos kuin nostojen kuvilla; kaupunki ilman
      * kuva-kenttää taittuu ennalleen.
      */
+    /*
+     * Oppaaseen johtaa KOLME sisäänkäyntiä (omistajan taitto-ohje
+     * 16.8.2026): kuvan yläkulman vino kyltti, itse kuva ja
+     * leipätekstin lopun Lue lisää -linkki. Sama avaaja kaikille.
+     */
+    const avaaOpas = tiedot.artikkeli?.teksti
+      ? () => this.avaaNahtavyys(tiedot.artikkeli, null, {
+        henkilolinkit: [], valikko: false,
+      })
+      : null;
+    const luoLappu = () => {
+      const lappu = html('button', 'opas-lappu');
+      lappu.type = 'button';
+      lappu.appendChild(html('span', 'opas-lappu-leima', 'Opas'));
+      lappu.appendChild(html('span', 'opas-lappu-nimi', 'Matkailijan opas'));
+      lappu.appendChild(html('span', 'opas-lappu-vihje', 'säät · hinnat · vinkit'));
+      lappu.addEventListener('click', avaaOpas);
+      return lappu;
+    };
     if (tiedot.kuva?.tiedosto) {
       const kotelo = html('figure', 'matkailijalle-kuva');
       const kuva = document.createElement('img');
       this.varustaNostonKuva(kuva, tiedot.kuva, 640);
+      if (avaaOpas) {
+        // Kuva on oppaan sisäänkäynti, ei suurennos: kaappausvaihe
+        // ohittaa varustaNostonKuvan suurennoskuuntelijan.
+        kuva.addEventListener('click', (e) => {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+          avaaOpas();
+        }, true);
+      }
       kotelo.appendChild(kuva);
       if (tiedot.kuva.selite) {
         const teksti = html('figcaption', 'kuvateksti', tiedot.kuva.selite);
@@ -12367,31 +12395,27 @@ export class UI {
         }
         kotelo.appendChild(teksti);
       }
+      // Kyltti kuvan oikeaan yläkulmaan, osin kuvan päälle (CSS
+      // asemoi ja kallistaa).
+      if (avaaOpas) kotelo.appendChild(luoLappu());
       lohko.appendChild(kotelo);
     }
+    let viimeinenKappale = null;
     for (const kappale of tiedot.kappale.split('\n\n').filter(Boolean)) {
-      lohko.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
+      viimeinenKappale = html('p', 'kaupunkikartta-esittely', kappale);
+      lohko.appendChild(viimeinenKappale);
     }
-    if (tiedot.artikkeli?.teksti) {
-      /*
-       * KULMALAPPU oppaaseen (omistajan tilaus 16.8.2026): entinen
-       * paperinappi ei kertonut, että linkin takana on lehden kevein
-       * ja iloisin osa. Tilalle vino postikortti-/matkalippulappu,
-       * jonka väri ja kallistus erottuvat pergamentista jo
-       * silmäyksellä. Nappi yhä, ei <a> — kohde on saman ikkunan
-       * sisältö eikä osoite.
-       */
-      const lappu = html('button', 'opas-lappu');
-      lappu.type = 'button';
-      lappu.appendChild(html('span', 'opas-lappu-leima', 'Opas'));
-      lappu.appendChild(html('span', 'opas-lappu-nimi', 'Matkailijan opas'));
-      lappu.appendChild(html('span', 'opas-lappu-vihje', 'säät · hinnat · vinkit'));
-      // Henkilölinkit tyhjinä: artikkeli ei ole kartan kohde, eikä
-      // kaupungin henkilölinkkejä sovelleta sen tekstiin.
-      lappu.addEventListener('click', () => this.avaaNahtavyys(tiedot.artikkeli, null, {
-        henkilolinkit: [], valikko: false,
-      }));
-      lohko.appendChild(lappu);
+    if (avaaOpas && viimeinenKappale) {
+      const lue = html('button', 'opas-lue-lisaa', 'Lue lisää matkailijan oppaasta →');
+      lue.type = 'button';
+      lue.addEventListener('click', avaaOpas);
+      viimeinenKappale.appendChild(document.createTextNode(' '));
+      viimeinenKappale.appendChild(lue);
+    }
+    // Kuvaton kaupunki saa lapun entiselle paikalleen tekstin alle —
+    // kylttiä ei voi ripustaa kuvaan, jota ei ole.
+    if (avaaOpas && !tiedot.kuva?.tiedosto) {
+      lohko.appendChild(luoLappu());
     }
     kohde.appendChild(lohko);
   }
