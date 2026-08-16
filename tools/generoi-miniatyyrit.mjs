@@ -363,6 +363,19 @@ const KUVAT = [
     + 'Moorish-style palace with onion domes and slender minarets, '
     + 'a wooden roller coaster and strings of garden lanterns among '
     + 'trees'],
+  // ── Pariisi, kohteet 9–11 (paketti O4, 16.8.2026) ────────────────
+  ['pariisi-orsayn-taidemuseo', 'a former grand railway station turned '
+    + 'art museum on a river embankment: a long pale stone facade with '
+    + 'two huge round clock faces, tall arched windows and a slate '
+    + 'mansard roof'],
+  ['pariisi-palais-garnier', 'an opulent 19th-century opera house: a '
+    + 'wide ornate facade with paired columns and arches, gilded '
+    + 'statues along the roofline and a low green copper dome behind '
+    + 'a sculpted pediment'],
+  ['pariisi-place-des-vosges', 'a symmetrical square framed by '
+    + 'identical three-storey houses of red brick with pale stone '
+    + 'trim, steep blue-grey roofs and an arcaded ground floor, with '
+    + 'a small formal park of clipped trees in the middle'],
   // ── Kööpenhamina, kohteet 7–9 (paketti K1, 16.8.2026) ────────────
   ['kobenhavn-vapahtajan-kirkko', 'a tall dark-brick baroque church '
     + 'whose slender spire is wrapped by an EXTERNAL gilded spiral '

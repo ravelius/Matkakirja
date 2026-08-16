@@ -7574,7 +7574,19 @@ body.katselu #newgame-btn { display: none; }
    * reunukseen, WebKit toisin. Kun yläpehmustetta ei ole, erimielisyys
    * katoaa: rivi pysähtyy paperin reunaan molemmissa.
    */
-  padding: 0 var(--arkki-reunus) 1.9rem;
+  /*
+   * ALALAIDAN TURVA-ALUE MYÖS LEVEÄLLÄ RUUDULLA (omistajan havainto
+   * 16.8.2026 iPadilla: "alanapit häviävät, saan ne hetkellisesti
+   * näkyviin kun vedän sivua ylös sormella mutta kun vapautan sormen
+   * sivu laskeutuu hieman ja napit katoavat").
+   *
+   * Varaus oli tähän asti vain puhelimen media queryssä (<700 px),
+   * mutta kotipalkki on myös iPadissa: leveällä ruudulla kortin
+   * alalaita jäi sen alle, ja napit sai näkyviin vain ylivenytyksellä.
+   * env() on nolla laitteilla joilla palkkia ei ole, joten tämä ei
+   * muuta mitään muualla.
+   */
+  padding: 0 var(--arkki-reunus) calc(1.9rem + env(safe-area-inset-bottom, 0px));
 }
 
 .dialog.arkki .arrival-palstat { padding-top: var(--arkki-yla); }
@@ -11427,11 +11439,19 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 /*
  * Ensimmäinen kuva (omistajan ohje 8.8.2026): vaakakuva saa levitä
  * koko palstalle — se avaa jutun kuin lehden pääkuva. Pystykuva ei
- * kanna isona kapeassa kortissa, joten se pysyy muita pienempänä.
- * Suuntaluokan (kuva-vaaka/kuva-pysty) lisää ui.js kuvan latauduttua.
+ * kanna isona kapeassa kortissa, joten se pysyy vaakakuvaa
+ * kapeampana. Suuntaluokan (kuva-vaaka/kuva-pysty) lisää ui.js kuvan
+ * latauduttua.
+ *
+ * PIKSELIKATTO NOSTETTU 240 → 420 (omistajan havainto 16.8.2026
+ * iPadilla: "tämä kuva näkyy liian pienenä"). Prosenttiosuus oli jo
+ * oikea, mutta 240 px:n katto puri leveällä ruudulla ennen sitä: iPadin
+ * kortti on yli tuhat pikseliä leveä, ja pystykuva jäi siinä
+ * postimerkiksi. 46 % ratkaisee kapealla ruudulla kuten ennenkin, ja
+ * katto vasta leveällä.
  */
 .nahtavyys-ensikuva.kuva-vaaka { max-width: 100%; }
-.nahtavyys-ensikuva.kuva-pysty { max-width: min(46%, 240px); }
+.nahtavyys-ensikuva.kuva-pysty { max-width: min(46%, 420px); }
 
 /*
  * Tekstin lomaan taitetut kelluvat pikkukuvat (omistajan tilaus
