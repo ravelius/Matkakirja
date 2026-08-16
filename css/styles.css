@@ -10409,8 +10409,12 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .matkailijalle {
   clear: both;
   margin-top: 1.1rem;
-  padding-top: 0.7rem;
+  /* Vaaleampi paneeli kuin lehden paperi (omistaja 16.8.2026):
+   * osio on pelin kevyt kulma ja saa hohtaa hieman valoisampana. */
+  padding: 0.7rem 0.9rem 0.9rem;
   border-top: 3px double rgba(70, 51, 31, 0.75);
+  border-radius: 0 0 8px 8px;
+  background: #fcf8ec;
 }
 
 .matkailijalle .wiki-btn {
@@ -10418,9 +10422,61 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   margin: 0.2rem auto 0;
 }
 
-/* Opaslappu korvasi paperinapin 16.8.2026 (paketti O1) — kelluvan
- * kuvan alle se ei silti saa vuotaa. */
+/* Opaslappu korvasi paperinapin 16.8.2026 (paketti O1). Kuvattomassa
+ * kaupungissa lappu on tekstin alla eikä saa vuotaa kellukkeen alle. */
 .matkailijalle .opas-lappu { clear: both; }
+
+/*
+ * KYLTTI KUVAN KULMASSA (omistajan taitto-ohje 16.8.2026: "oik.
+ * yläreunaan osin kuvan päälle matkaopas kyltti diagonaali").
+ * Kuvakotelo ankkuroi, lappu nousee puoliksi kuvan päälle ja
+ * kallistuu vastakkaiseen suuntaan kuin oppaan oma lappu — kuin
+ * matkalippu olisi kiinnitetty valokuvan kulmaan.
+ */
+.matkailijalle-kuva { position: relative; }
+
+.matkailijalle-kuva .opas-lappu {
+  position: absolute;
+  top: -1rem;
+  right: -0.4rem;
+  z-index: 2;
+  clear: none;
+  margin: 0;
+  max-width: 11.5rem;
+  padding: 0.4rem 0.8rem 0.45rem 1.3rem;
+  transform: rotate(6deg);
+}
+
+.matkailijalle-kuva .opas-lappu:hover {
+  transform: rotate(6deg) scale(1.05);
+}
+
+/* Kuva on oppaan sisäänkäynti — osoitin kertoo sen. */
+.matkailijalle-kuva img { cursor: pointer; }
+
+/* Leipätekstin lopun linkki oppaaseen (omistaja 16.8.2026).
+ * Valitsin ja appearance-nollaus voittavat lehden yleisen
+ * nappityylin — linkki näyttää linkiltä, ei napilta. */
+.matkailijalle .opas-lue-lisaa {
+  display: inline;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #1c6f6b;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.matkailijalle .opas-lue-lisaa:hover { color: #b8402c; }
 
 .kaupunkikartta-otsikko {
   margin: 0 0 0.6rem;
