@@ -1053,13 +1053,45 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'raitiovaunulippu. Kadut ovat leveitä, koska ne '
                 + 'suunniteltiin 1860-luvulta alkaen keisarin käskystä '
                 + 'paraatikaduiksi vanhojen linnoitusten paikalle.',
-              kuva: {
-                tiedosto: 'Straßenbahn Ringstraße Wien 1.jpg',
-                selite: 'Raitiovaunu Burgringin pysäkillä Ringillä. '
-                  + 'Matalalattiainen ULF-vaunu kulkee niin lähellä katua, '
-                  + 'ettei kyytiin nousemiseen tarvita askelmaa.',
-                lahde: 'Stb1er (Dario Premm), Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              /*
+               * KARUSELLI (omistajan linjaus 16.8.2026). Kolme kuvaa
+               * seuraavat jakson tekstiä: ensin vaunu, sitten kaksi
+               * niistä taloista, jotka Ringiä kiertävän linjan ikkunasta
+               * näkyvät — parlamentti raatihuoneen torneineen ja
+               * yliopisto. Kaksi uutta kuvaa todennettu Commonsin
+               * API:sta 16.8.2026 (Restrictions tyhjä), sijainti
+               * kuvaustekstistä ja kategorioista, katsottu silmin.
+               *
+               * Kolmanneksi harkittiin iltakuvaa Ringistä (Ring am
+               * Abend), mutta se oli niin tumma, ettei vaunuja erottanut
+               * pienessä koossa.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Straßenbahn Ringstraße Wien 1.jpg',
+                  selite: 'Raitiovaunu Burgringin pysäkillä Ringillä. '
+                    + 'Matalalattiainen ULF-vaunu kulkee niin lähellä katua, '
+                    + 'ettei kyytiin nousemiseen tarvita askelmaa.',
+                  lahde: 'Stb1er (Dario Premm), Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Wien Doktor Karl Renner Ring Parlament Rathaus-1900.jpg',
+                  selite: 'Näkymä Ringin raitiovaunupysäkiltä parlamentti'
+                    + 'talolle: kreikkalaisen temppelin mallinen '
+                    + 'pylväsjulkisivu ja sen edessä kullattu patsas '
+                    + 'suihkulähteen päällä. Takana kohoaa raatihuoneen '
+                    + 'torni.',
+                  lahde: 'Isiwal, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Universität Vienna June 2006 164.jpg',
+                  selite: 'Yliopiston päärakennus Ringin varrella. Aukiolla '
+                    + 'seisoo muistomerkki, jonka huipulla on kullattu '
+                    + 'siivekäs hahmo; puiden takana näkyy vaalea '
+                    + 'julkisivu ja kaarevat ikkunarivit.',
+                  lahde: 'Gryffindor, Wikimedia Commons (CC BY-SA 2.5)',
+                },
+              ],
             },
             {
               otsikko: 'Kahvila on instituutio',
@@ -1792,14 +1824,38 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vanhalla tiilisillalla. Pyörä on toinen luonteva '
                 + 'kulkuneuvo, sillä kaupunki on tasainen: se on '
                 + 'rakennettu suolle ja hiekalle.',
-              kuva: {
-                tiedosto: 'Berlin - Eierkühlhaus, Oberbaumbrücke & U-Bahn.jpg',
-                selite: 'Keltainen U-Bahn-juna ylittää Spreen '
-                  + 'Oberbaumbrücken yläkantta pitkin. Punatiilinen silta '
-                  + 'vuodelta 1896 oli kylmän sodan aikana '
-                  + 'rajanylityspaikka; takana kohoaa entinen munavarasto.',
-                lahde: 'JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              /*
+               * KARUSELLI (omistajan linjaus 16.8.2026). Kolme kuvaa
+               * seuraavat jakson tekstiä: U-Bahn korkealla Spreen yllä,
+               * keltainen raitiovaunu ja S-Bahn — kaikki samalla
+               * päivälipulla. Kaksi uutta kuvaa todennettu Commonsin
+               * API:sta 16.8.2026 (Restrictions tyhjä), sijainti
+               * kuvaustekstistä ja kategorioista, katsottu silmin.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Berlin - Eierkühlhaus, Oberbaumbrücke & U-Bahn.jpg',
+                  selite: 'Keltainen U-Bahn-juna ylittää Spreen '
+                    + 'Oberbaumbrücken yläkantta pitkin. Punatiilinen silta '
+                    + 'vuodelta 1896 oli kylmän sodan aikana '
+                    + 'rajanylityspaikka; takana kohoaa entinen munavarasto.',
+                  lahde: 'JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Flexity-Berlin nr 9001 M2 Prenzlauer Berg.jpg',
+                  selite: 'Raitiovaunu linjalla M2 Prenzlauer Alleella. '
+                    + 'Kiskot kulkevat omalla nurmikaistallaan keskellä '
+                    + 'katua, ja vaunu on samaa keltaista kuin metrojunat.',
+                  lahde: 'Jacek Rużyczka, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'S-Bahn at Hauptbahnhof Berlin.JPG',
+                  selite: 'S-Bahn-juna lähtee Berliinin päärautatie'
+                    + 'asemalta pitkällä valotusajalla kuvattuna: '
+                    + 'puna-keltainen juna venyy viivaksi lasiholvin alla.',
+                  lahde: 'Martin Falbisoner, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
             },
             {
               otsikko: 'Muurin paikka',
@@ -2812,15 +2868,48 @@ export const KULTTUURI_KATEGORIAT = {
                * poistettiin kokonaan: uusi kuva kertoo saman asian
                * (matala kaupunki, jonka yli näkee kauas) lämpimänä.
                */
-              kuva: {
-                tiedosto: 'Tour Saint-Jacques au crépuscule.jpg',
-                selite: 'Tour Saint-Jacques hämärän kajossa, ympärillään '
-                  + 'matala sinkkikattojen ja savupiippujen meri. Kaukana '
-                  + 'horisontissa erottuvat Invalidien kupoli ja '
-                  + 'Eiffel-torni — Pariisi on rakennettu leveäksi eikä '
-                  + 'korkeaksi.',
-                lahde: 'Fabien Barrau, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              /*
+               * KARUSELLI (omistajan linjaus 16.8.2026: "Matkaopas
+               * sivun eka kuva voisi olla aina kolmen upean kuvan
+               * karuselli"). Kolme kuvaa seuraavat jakson tekstiä
+               * järjestyksessä: matala kattojen meri, metro ja se
+               * kadun taso, jota teksti kehottaa katsomaan.
+               *
+               * Kaksi uutta kuvaa: lisenssit ja Restrictions (tyhjä)
+               * Commonsin API:sta 16.8.2026, sijainti kuvaustekstistä
+               * ja kategorioista eikä tiedostonimestä, molemmat
+               * Quality image ja katsottu silmin.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Tour Saint-Jacques au crépuscule.jpg',
+                  selite: 'Tour Saint-Jacques hämärän kajossa, ympärillään '
+                    + 'matala sinkkikattojen ja savupiippujen meri. Kaukana '
+                    + 'horisontissa erottuvat Invalidien kupoli ja '
+                    + 'Eiffel-torni — Pariisi on rakennettu leveäksi eikä '
+                    + 'korkeaksi.',
+                  lahde: 'Fabien Barrau, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Metro station entrance (édicule Guimard) Porte Dauphine Paris 16e 001.jpg',
+                  selite: 'Metron sisäänkäynti Porte Dauphinen asemalla: '
+                    + 'viuhkaksi levitetty lasikatos vihreiden valurauta'
+                    + 'kaarien varassa ja keskellä keltainen '
+                    + 'MÉTROPOLITAIN-kyltti. Hector Guimard suunnitteli '
+                    + 'sisäänkäynnit 1900-luvun alussa.',
+                  lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Street sign avenue de Tourville Paris.jpg',
+                  selite: 'Emaloitu kadunnimikyltti vuodelta 1890 '
+                    + 'seitsemännessä kaupunginosassa. Pariisin kyltit '
+                    + 'kertovat myös kuka nimen takana on: tässä amiraali '
+                    + 'ja Ranskan marsalkka Tourville, 1642–1701. '
+                    + 'Kylttiä kannattelevat kiveen veistetyt siivekkäät '
+                    + 'päät.',
+                  lahde: 'Jastrow, Wikimedia Commons (CC BY 3.0)',
+                },
+              ],
             },
             {
               otsikko: 'Seine',
@@ -4904,14 +4993,40 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'laavakiviä, jotka on ladottu viuhkakuvioon. Kartan saa '
                 + 'unohtaa hetkeksi, sillä kujalta käännytään toiselle ja '
                 + 'yhtäkkiä edessä on aukio, jota ei osannut odottaa.',
-              kuva: {
-                tiedosto: 'Vicolo del Cedro, Trastevere, Rome, Lazio, Italy - panoramio.jpg',
-                selite: 'Vicolo del Cedro Trasteveressä keskipäivällä: '
-                  + 'okran ja terrakotan väriset seinät, vihreät '
-                  + 'ikkunaluukut ja kattoterassilla kukkiva köynnös. '
-                  + 'Kadun kiveys on mukulakiveä laidasta laitaan.',
-                lahde: 'trolvag, Wikimedia Commons (CC BY-SA 3.0)',
-              },
+              /*
+               * KARUSELLI (omistajan linjaus 16.8.2026). Kolme kuvaa
+               * kulkevat jakson tekstin mukana: kapea kuja, sen kiveys
+               * lähikuvana ja lopuksi se aukio, jota ei osannut odottaa.
+               * Kaksi uutta kuvaa todennettu Commonsin API:sta
+               * 16.8.2026 (Restrictions tyhjä), sijainti kuvaus-
+               * tekstistä ja kategorioista, katsottu silmin.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Vicolo del Cedro, Trastevere, Rome, Lazio, Italy - panoramio.jpg',
+                  selite: 'Vicolo del Cedro Trasteveressä keskipäivällä: '
+                    + 'okran ja terrakotan väriset seinät, vihreät '
+                    + 'ikkunaluukut ja kattoterassilla kukkiva köynnös. '
+                    + 'Kadun kiveys on mukulakiveä laidasta laitaan.',
+                  lahde: 'trolvag, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Sampietrini.jpg',
+                  selite: 'Sanpietrini lähietäisyydeltä: kämmenen '
+                    + 'kokoiset basalttinupit on ladottu loivin kaarin '
+                    + 'riviin toisensa perään. Kulkijan jalka tuntee '
+                    + 'jokaisen sauman.',
+                  lahde: 'Alessio Damato, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Piazza sant Ignazio Rome.jpg',
+                  selite: 'Piazza Sant\'Ignazio: kujien takaa avautuu pieni '
+                    + 'aukio, jonka okranväriset talot on muotoiltu '
+                    + 'kaareviksi. Filippo Raguzzini suunnitteli aukion '
+                    + 'vuosina 1727–1728.',
+                  lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
             },
             {
               otsikko: 'Ilmainen Rooma',
@@ -8674,15 +8789,38 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'valittu toistuvasti maailman parhaaksi '
                 + 'pyöräilykaupungiksi. Vuokrapyörän saa kaikkialta, ja '
                 + 'kuljettajaton metro paikkaa sateiset päivät.',
-              // Kuva siirtyi tähän osion etusivulta (16.8.2026): se
-              // kuuluu juuri tähän jaksoon, jossa teksti kertoo
-              // pyöräilystä. Lisenssi ennallaan.
-              kuva: {
-                tiedosto: 'Copenhagen Cyclists (19200075809).jpg',
-                selite: 'Aamuruuhka pyöräkaistalla: yli puolet '
-                  + 'kaupunkilaisten matkoista taittuu pyörällä.',
-                lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
-              },
+              /*
+               * KARUSELLI (omistajan linjaus 16.8.2026). Ensimmäinen
+               * kuva siirtyi tähän osion etusivulta, koska teksti
+               * kertoo juuri pyöräilystä; kaksi muuta jatkavat samaa
+               * ajatusta: oma silta pyörille ja metro, johon pyörän saa
+               * työntää mukaan. Uudet kuvat todennettu Commonsin
+               * API:sta 16.8.2026 (Restrictions tyhjä), sijainti
+               * kuvaustekstistä ja kategorioista, katsottu silmin.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Copenhagen Cyclists (19200075809).jpg',
+                  selite: 'Aamuruuhka pyöräkaistalla: yli puolet '
+                    + 'kaupunkilaisten matkoista taittuu pyörällä.',
+                  lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Cykelslangen (Dybbøls Bro).JPG',
+                  selite: 'Cykelslangen eli pyöräkäärme: oranssi kansi '
+                    + 'kaartaa satama-altaan yli pelkästään pyöriä varten. '
+                    + 'Kaiteessa toivotetaan tervetulleeksi uudelle '
+                    + 'pyöräsillalle.',
+                  lahde: 'Orf3us, Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'København Metro 20100507 0317F (8455266869).jpg',
+                  selite: 'Metrovaunun sisällä Islands Bryggen asemalla. '
+                    + 'Matkustaja työntää pyörän mukaansa ovesta — sateella '
+                    + 'pyörä ja metro kulkevat samaa matkaa.',
+                  lahde: 'Johan Wessman / News Øresund, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
             },
             {
               otsikko: 'Kävelykatu ja kanaalit',
