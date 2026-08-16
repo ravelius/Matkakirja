@@ -4190,3 +4190,42 @@ test('arkin korkeus mitataan pikseleinä eikä jätetä dvh:n varaan', () => {
   assert.match(vahti, /mitoitaArkinKorkeus\(\)/,
     'näkymävahti ei päivitä arkin korkeutta');
 });
+
+/*
+ * KORKEUDEN MUUTOS LAUKAISEE ELVYTYKSEN.
+ *
+ * Omistajan havainto 16.8.2026 iPadilla: peli jää tilaan, jossa
+ * alanapit puuttuvat ja kartta on piirretty väärän kokoiseksi, mutta
+ * karttaa voi vierittää — ja tila korjaantuu itsestään myöhemmin.
+ *
+ * Syy: näkymävahti seurasi vain LEVEYTTÄ, koska leveys ratkaisee
+ * palstojen määrän. Kartta ja alapalkki mitoitetaan kuitenkin
+ * korkeudesta, ja taustalta palatessa juuri korkeus ehtii olla hetken
+ * väärä. Leveys pysyi samana, joten vahti totesi "ei muutosta" eikä
+ * kukaan laskenut karttaa uusiksi. Itsestään korjaantuminen selittyy
+ * samalla: seuraava LEVEYTTÄ muuttanut tapahtuma teki elvytyksen
+ * jälkijunassa.
+ */
+test('näkymävahti reagoi myös korkeuden hyppyyn', () => {
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const vahti = ui.match(/tarkistaNakyma\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.ok(vahti, 'tarkistaNakyma puuttuu');
+  assert.match(vahti, /mittaaNakymanKorkeus\(\)/,
+    'vahti ei mittaa korkeutta lainkaan');
+  assert.match(vahti, /korkeusHyppasi/,
+    'vahti ei vertaa korkeutta edelliseen — leveysmuutos jäisi ainoaksi laukaisijaksi');
+  /*
+   * Poistumisehdon on otettava korkeushyppy huomioon. Jos tästä
+   * katoaa korkeusehto, vahti palaa entiseen ja vika palaa
+   * sellaisenaan.
+   */
+  const poistuma = vahti.match(/if \(leveys === edellinen[^\n]*\n/)?.[0] ?? '';
+  assert.match(poistuma, /korkeusHyppasi/,
+    `poistumisehto ei tunne korkeushyppyä: ${poistuma.trim()}`);
+
+  // Lähtökorkeus on otettava talteen, muuten ensimmäinen vertailu ei
+  // voi havaita mitään.
+  const alustus = ui.match(/vahdiNakymanKokoa\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.match(alustus, /nakymanKorkeus = this\.mittaaNakymanKorkeus\(\)/,
+    'lähtökorkeutta ei oteta talteen vahtia käynnistettäessä');
+});
