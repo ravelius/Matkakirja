@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 773, teksti: 'Maxin työlista: moduulirakenne + dokumenttiremontti' },
   { v: 772, teksti: 'Raamattuun: äänet R2:sta, oppaan ilme, speksioppi' },
   { v: 771, teksti: 'Pariisin etusivu: Eiffel, Orsay, Notre-Dame, Vivienne' },
   { v: 770, teksti: 'Etusivukuvien kaava Raamattuun + 4 kuvakäsikirjoitusta' },

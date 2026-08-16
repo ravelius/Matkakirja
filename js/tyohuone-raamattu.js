@@ -430,8 +430,10 @@ export const RAAMATTU = {
         'docs/roolitus.md — työnjako, viestintä, julkaisusäännöt, '
           + 'pistokokeet.',
         'docs/tutki-aiheet.md · docs/tyolista-opukselle.md · '
-          + 'docs/kaariteksti-sapluuna.md · docs/mantereen-resepti.md '
-          + '· docs/kuvakasikirjoitukset.md — sisältöreseptit.',
+          + 'docs/tyolista-maxille.md · docs/kaariteksti-sapluuna.md '
+          + '· docs/mantereen-resepti.md · '
+          + 'docs/kuvakasikirjoitukset.md — sisältöreseptit ja '
+          + 'työlistat.',
         'CONTRIBUTING.md — avoin lähdekoodi + tekniset periaatteet. '
           + 'README.md — esittely.',
         'docs/viesti-fable.md — viestikanava, ei ohje. docs/arkisto/ '
@@ -446,8 +448,10 @@ export const RAAMATTU = {
           + 'dokumenttiremontti. docs-kansiossa on Raamatun kanssa '
           + 'päällekkäisiä ohjeita; tavoite on Raamattu AINOANA '
           + 'linjauslähteenä + roolitus ja mallit + moduulikohtaiset '
-          + 'ohjeet siisteinä omina md-tiedostoinaan. Fable ajaa '
-          + 'max-tilassa heti, kun viikkokreditit uusiutuvat (17.8.).',
+          + 'ohjeet siisteinä omina md-tiedostoinaan. Ajetaan '
+          + 'OMASSA max-sessiossa 17.8. kredittien uusiuduttua; '
+          + 'samalla suunnitellaan pelin selkeä moduulirakenne '
+          + '(docs/tyolista-maxille.md). Fable johtaa high-tasolla.',
         'Työkalujen alkukommentit ovat käyttöohjeita. Sääntö, jonka '
           + 'kone voi valvoa, kirjataan testiksi.',
         'Työhuone integroidaan peliin kehittäjävivun taakse — ei '
