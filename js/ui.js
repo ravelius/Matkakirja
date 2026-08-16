@@ -13440,7 +13440,22 @@ export class UI {
     }
     // Uusi juttu, uusi teksti: edellisen kohteen luenta ei saa jatkua.
     pysaytaLukija();
-    this.varustaLukija(dialogi, () => dialogi.querySelector('.nahtavyys-kortti'));
+    const kaiutin = this.varustaLukija(dialogi, () => dialogi.querySelector('.nahtavyys-kortti'));
+    /*
+     * KAIUTIN OTSIKON PERÄÄN (omistajan tilaus 16.8.2026:
+     * "kaiuttimen voisi siirtää otsikon perään"). Oletuksena nappi on
+     * dialogin lapsi ja asemoitu oikeaan yläkulmaan, jossa se osui
+     * hampurilaisvalikon alle omaksi irralliseksi merkikseen. Otsikon
+     * sisällä se on osa nimeä: "Belvedere 🔊".
+     *
+     * Sama siirto tehdään jo lehdessä (sijoitaLehtiKaiutin), ja
+     * liitaLukija etsii napin koko puusta juuri siksi — siirretty
+     * nappi löytyy eikä kaksosta synny.
+     */
+    const otsikko = document.getElementById('nahtavyys-otsikko');
+    if (kaiutin && otsikko && kaiutin.parentElement !== otsikko) {
+      otsikko.appendChild(kaiutin);
+    }
   }
 
   /**
@@ -13545,19 +13560,24 @@ export class UI {
     const dialogi = document.getElementById('nahtavyys-dialog');
     const edellinen = document.getElementById('nahtavyys-edellinen');
     const seuraava = document.getElementById('nahtavyys-seuraava');
-    const laskuri = document.getElementById('nahtavyys-laskuri');
-    if (!dialogi || !edellinen || !seuraava || !laskuri) return;
+    if (!dialogi || !edellinen || !seuraava) return;
 
     const lista = this.nahtavyysKohteet()
       .filter(({ k }) => k.teksti && (k.kuvat?.length ?? 0) > 0);
     const kohdalla = lista.findIndex(({ k }) => k.nimi === kohde.nimi);
-    // Alle kaksi selattavaa (tai kohde listan ulkopuolelta): ei nuolia,
-    // ei laskuria — popup näyttää täsmälleen samalta kuin ennen.
+    /*
+     * Alle kaksi selattavaa (tai kohde listan ulkopuolelta): ei nuolia
+     * — popup näyttää täsmälleen samalta kuin ennen.
+     *
+     * Kohdelaskuri ("5/6") poistettiin omistajan päätöksellä
+     * 16.8.2026: sama tieto on jo aikarivillä ("KOHDE 5 · 1712–1723"),
+     * eikä yläkulmassa tarvita kolmatta merkkiä hampurilaisen ja
+     * kaiuttimen rinnalle.
+     */
     const selattava = kohdalla >= 0 && lista.length > 1;
     this.nahtavyysSelaus = selattava ? { lista, kohdalla } : null;
-    for (const el of [edellinen, seuraava, laskuri]) el.hidden = !selattava;
+    for (const el of [edellinen, seuraava]) el.hidden = !selattava;
     if (!selattava) return;
-    laskuri.textContent = `${kohdalla + 1}/${lista.length}`;
 
     if (!dialogi.dataset.selausKytketty) {
       dialogi.dataset.selausKytketty = '1';
