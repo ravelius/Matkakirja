@@ -12011,6 +12011,17 @@ button.opas-saagraafi-nappi {
  * kun omistaja pyysi käyttämään "juuri samaa" graafia (16.8.2026).
  */
 
+/* Kuvateksti on kelluketta varten oma sääntönsä: ilman sitä figcaption
+ * perii oppaan väliotsikon terrakotan ja koon. */
+.opas-saagraafi-teksti {
+  margin: 0.3rem 0 0;
+  font-family: var(--font-type);
+  font-size: 0.64rem;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: var(--opas-muste-hento);
+}
+
 /*
  * MINIPONNAHDUS oppaan paletissa. Kupla on pelin yhteinen pikkuseloste
  * (avaaPikkuseloste), joka menee avoimen dialogin sisään — oppaassa

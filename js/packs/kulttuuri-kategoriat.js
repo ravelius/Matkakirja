@@ -2447,13 +2447,23 @@ export const KULTTUURI_KATEGORIAT = {
                * Kuva itsessään on ennallaan — vain sen koko ja paikka
                * muuttuvat.
                */
+              /*
+               * KUVA VAIHDETTU NÄYTTÄVÄMPÄÄN (omistaja 16.8.2026: "koita
+               * löytää visuaalisesti laadukkaammat kuvat näihin
+               * kahteen"). Entinen Rue Brancionin punainen liikekulma oli
+               * tavallinen katukuva; tämä on Commonsin Quality Image
+               * (kategoria Quality images of shops in Paris) ja lukee myös
+               * kapeana, koska kyltti on vaakasuora ja kontrasti kova.
+               * Sijainti kuvaustekstistä: "64 rue Saint-Dominique in the
+               * 7th district of Paris", jossa myös vuosiluku 1900.
+               */
               kuva: {
-                tiedosto: 'La Désirade, 69 bis Rue Brancion, 75015 Paris, August 2015.jpg',
+                tiedosto: 'Boulangerie 64 rue Saint-Dominique Paris 7e.jpg',
                 asettelu: 'kapea',
-                selite: 'Punainen leipomo Rue Brancionilla. Kyltissä lukee '
-                  + 'ARTISAN BOULANGER ja PATISSIER, ja ohikulkija kantaa '
-                  + 'patonkia kädessään.',
-                lahde: 'Besopha, Wikimedia Commons (CC BY 2.0)',
+                selite: 'Vuodesta 1900 säilynyt leipomonjulkisivu Rue '
+                  + 'Saint-Dominiquella: kultakirjaimet mustalla ja '
+                  + 'maalatut kuvalaatat oven molemmin puolin.',
+                lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
             {
@@ -2466,16 +2476,31 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaupunki näyttää vanhemmalta kuin päivällä. '
                 + 'Eiffel-torni vastaa omalla tavallaan: pimeän tultua se '
                 + 'välkkyy viiden minuutin ajan aina tasatunnein.',
-              // Sama kapea asettelu kuin leipomojaksossa (omistaja
-              // 16.8.2026: "Sama iltakuvalle"). Pystykuva hyötyy siitä
-              // erikseen: täysleveänä se vei sivusta yli ruudullisen.
+              /*
+               * KUVA VAIHDETTU (omistaja 16.8.2026: "koita löytää
+               * visuaalisesti laadukkaammat kuvat näihin kahteen").
+               * Entinen portaikkokuva oli pimeä ja sameа, eikä Commonsista
+               * löytynyt Montmartren portaista yhtään laatutason yökuvaa
+               * (kaikki ovat mustavalkoisia, päivänvalossa tai
+               * puhelinkuvia). Tilalla on Commonsin Featured picture ja
+               * Quality image, joka lunastaa jakson lupauksen suoraan:
+               * kaupunki on hämärässä matala ja tasainen ja Eiffel-torni
+               * seisoo valaistuna keskellä.
+               *
+               * EI KAPEA, vaan koko palstan levyinen: kuva on 3,2:1
+               * panoraama, ja 40 %:n leveydellä siitä tulisi lukukelvoton
+               * nauha. Leveänäkin se on matala, joten se ei hallitse sivua
+               * kuten entinen pystykuva. Kuvausteksti kertoo paikan
+               * ("from the Maine-Montparnasse tower"), ja selite sanoo sen
+               * ääneen — jakson teksti puhuu Montmartresta, joten kuva ei
+               * saa väittää olevansa sieltä.
+               */
               kuva: {
-                tiedosto: 'Paris 75018 Rue du Mont-Cenis no 025 stairs towards Rue Saint-Vincent at night.jpg',
-                asettelu: 'kapea',
-                selite: 'Montmartren portaat yöllä Rue du Mont-Cenis\'llä. '
-                  + 'Lyhdyt johtavat alas kukkulalta, ja kaukana '
-                  + 'kimmeltävät kaupungin valot.',
-                lahde: 'AlfvanBeem, Wikimedia Commons (CC0)',
+                tiedosto: 'Paris Night.jpg',
+                selite: 'Kaupunki hämärässä Montparnassen tornista: matalaa '
+                  + 'kattomerta niin kauas kuin näkee, ja Eiffel-torni '
+                  + 'valaistuna keskellä.',
+                lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
           ],
