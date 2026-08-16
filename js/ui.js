@@ -9144,7 +9144,21 @@ export class UI {
     const maa = this.game?.pack?.map?.countryShapes?.[iso];
     const otsikko = this.tutkiMaaNimi ?? maa?.nimi ?? '';
     const kartta = MAAKARTAT[iso];
-    if (kartta) return { id: 'maa-etusivu', nimi: `${otsikko} kartalla`, kartta };
+    /*
+     * OTSIKKO ON PELKKÄ MAAN NIMI JA LIPPU SEN PERÄSSÄ (omistajan
+     * tilaus 16.8.2026). Ennen tässä luki "Ranska kartalla", vaikka
+     * kartta näkyy sivulla itsestään — nimiö kertoo nyt saman kuin
+     * kaupunkilehden masto: paikan nimen. Lippu tulee samasta
+     * maaLippu-mekanismista kuin maan aihesivuilla, joten se on myös
+     * sama nappi lipun tarinaan niillä mailla, joilla se on.
+     */
+    if (kartta) {
+      return maa?.lippu
+        ? {
+          id: 'maa-etusivu', nimi: otsikko, kartta, maaLippu: maa.lippu, maa: otsikko,
+        }
+        : { id: 'maa-etusivu', nimi: otsikko, kartta };
+    }
     const osa = (MAA_KATEGORIAT[iso] ?? [])[0] ?? null;
     if (!osa) return null;
     return maa?.lippu ? { ...osa, maaLippu: maa.lippu, maa: otsikko } : osa;
@@ -10262,7 +10276,13 @@ export class UI {
      * silti kannata olla kahdessa paikassa (ks. Lontoon jako v349).
      */
     this.maanSivut = [];
-    if (maakartta) this.maanSivut.push({ id: 'maa-etusivu', nimi: otsikonMaa, kartta: maakartta });
+    if (maakartta) {
+      this.maanSivut.push(maanLippu
+        ? {
+          id: 'maa-etusivu', nimi: otsikonMaa, kartta: maakartta, maaLippu: maanLippu, maa: otsikonMaa,
+        }
+        : { id: 'maa-etusivu', nimi: otsikonMaa, kartta: maakartta });
+    }
     for (const osa of (maanIso ? MAA_KATEGORIAT[maanIso] ?? [] : [])) {
       this.maanSivut.push(maanLippu ? { ...osa, maaLippu: maanLippu, maa: otsikonMaa } : osa);
     }
@@ -10650,7 +10670,12 @@ export class UI {
       .map((osa) => (maa.lippu ? { ...osa, maaLippu: maa.lippu, maa: otsikko } : osa));
     const numerot = { id: 'maa-numeroina', nimi: `${otsikko} numeroina`, numerot: iso };
     const sisalto = [
-      ...(kartta ? [{ id: 'maa-etusivu', nimi: `${otsikko} kartalla`, kartta }] : []),
+      // Otsikkona pelkkä maan nimi ja lippu perässä, ks. maalehdenEkaSivu.
+      ...(kartta ? [maa.lippu
+        ? {
+          id: 'maa-etusivu', nimi: otsikko, kartta, maaLippu: maa.lippu, maa: otsikko,
+        }
+        : { id: 'maa-etusivu', nimi: otsikko, kartta }] : []),
       ...aiheet,
       numerot,
     ];
@@ -13861,7 +13886,7 @@ export class UI {
     // Vuosikäyrä kelluu laatikon leipätekstin oikealla puolella
     // (omistajan tilaus 16.8.2026), joten se on otsikon jälkeen mutta
     // ennen tekstiä: kelluke tarvitsee tekstiä kierrettäväkseen.
-    const graafi = this.opasSaagraafi(matkailu.ilmasto);
+    const graafi = this.opasSaagraafi(SAATIEDOT[this.arrivalShownFor]);
     if (graafi) laatikko.appendChild(graafi);
     if (matkailu.parasAika) {
       laatikko.appendChild(html('p', 'opas-parasaika', matkailu.parasAika));
@@ -13890,240 +13915,33 @@ export class UI {
    * leipätekstin oikealle puolelle tuoda pienen kuvan vuosiennusteesta
    * ja sitä klikkaamalla se suurenisi isommaksi animoidusti").
    *
-   * Piirretään käsin SVG:nä ilman kirjastoa: kaksitoista lukuparia on
-   * niin vähän dataa, ettei sen esittämiseen kannata tuoda peliin
-   * kaaviokirjastoa — koko piirto on alle sata riviä eikä pelissä ole
-   * ennestään yhtään kirjastoriippuvuutta.
+   * TÄSSÄ ON MAALEHDEN OMA GRAAFI, EI JÄLJITELMÄ (omistajan tarkennus
+   * 16.8.2026: *"tee vielä enemmän tämän näköinen tai paras kaikista,
+   * käytä juuri samaa"*). Opas 2.2 piirsi ensin oman min–max-käyränsä,
+   * ja 2.3 lainasi siihen lehden tyylikeinot. Nyt tässä kutsutaan
+   * suoraan `piirraVuosiSaa`ta (js/saa.js): sama kultakäyrä, samat
+   * sadepalkit, samat asteikot ja sama lähde — kaksi graafia samassa
+   * pelissä ei enää eroa toisistaan millään tavalla.
    *
-   * Pieni versio on OTSIKKOTASO niin kuin kainalotaulukin: vyöhyke,
-   * käyrät, kuukausien alkukirjaimet ja muutama asteviiva. Lukuarvot
-   * tulevat vasta suurennoksessa — pienessä koossa kaksitoista
-   * lukuparia olisi lukukelvoton ryteikkö.
+   * Data tulee samasta paketista kuin lehdenkin (SAATIEDOT, ERA5
+   * 1991–2020), joten oppaalla ei ole omaa ilmastodataansa
+   * ylläpidettävänä eikä kaupungin lukuja ole kahdessa paikassa.
+   * Kaupunki ilman säätietoja taittuu ilman graafia.
    *
-   * @param {Array<{kk: string, min: number, max: number}>} ilmasto
+   * @param {{keskilampo: number[], sade: number[]}} tiedot
    */
-  opasSaagraafi(ilmasto) {
-    const kuukaudet = (ilmasto ?? []).filter((k) => Number.isFinite(k?.min)
-      && Number.isFinite(k?.max));
-    if (kuukaudet.length < 2) return null;
+  opasSaagraafi(tiedot) {
+    if (!tiedot?.keskilampo?.length || !tiedot?.sade?.length) return null;
     const kehys = html('figure', 'opas-saagraafi');
     const nappi = html('button', 'opas-saagraafi-nappi');
     nappi.type = 'button';
-    nappi.setAttribute('aria-label', 'Vuoden lämpötilat — suurenna kuvaaja');
-    nappi.appendChild(this.saakayra(kuukaudet, false));
-    nappi.addEventListener('click', () => this.avaaSaagraafi(kuukaudet, nappi));
+    nappi.setAttribute('aria-label', 'Sää vuoden mittaan — suurenna kuvaaja');
+    nappi.appendChild(piirraVuosiSaa(tiedot));
+    nappi.addEventListener('click', () => this.avaaSaagraafi(tiedot, nappi));
     kehys.appendChild(nappi);
     kehys.appendChild(html('figcaption', 'opas-saagraafi-teksti',
-      'Vuoden lämpötilat, yö ja päivä. Napauta suuremmaksi.'));
+      'Sää vuoden mittaan. Napauta suuremmaksi.'));
     return kehys;
-  }
-
-  /**
-   * Itse kuvaaja: min–max-vyöhyke täytettynä, käyrät sen reunoilla,
-   * asteviivat taustalla ja kuukaudet alla.
-   *
-   * Asteikko haetaan datasta ja pyöristetään viiden asteen portaisiin,
-   * jottei nollaviiva jää kuvan ulkopuolelle lämpimissä kaupungeissa
-   * eikä pakkaspuoli katkea kylmissä — sama piirtäjä palvelee
-   * Reykjavíkia ja Kairoa ilman käsivirityksiä.
-   *
-   * TYYLI ON MAALEHDEN VUOSIENNUSTEESTA (omistajan tilaus 16.8.2026:
-   * "Milloin matkaan sääkarttaan katso tyyli maalehden sään
-   * vuosiennusteesta"). Lehden graafista (js/saa.js piirraVuosiSaa)
-   * lainataan viisi asiaa, jotka tekevät siitä eläväisen:
-   *
-   *   1. PEHMEÄ KÄYRÄ. Catmull–Rom-pisteistä bezier-segmentit, ei
-   *      kulmikasta murtoviivaa. Lämpötila ei hyppää kuukauden
-   *      vaihteessa, joten kaari on myös rehellisempi kuin taite.
-   *   2. LIUKUTÄYTTÖ vyöhykkeen alla, ei tasaista väriä.
-   *   3. PISTEET kuukausikohdissa käyrän vanaan.
-   *   4. ÄÄRIPÄIDEN LUKEMAT käyrälle halolla — pienikin graafi kertoo
-   *      lämpimimmän ja kylmimmän kuukauden ilman asteikon lukemista.
-   *      Tämä korvaa opas 2.2:n ensimmäisen version mykän pikkukuvan.
-   *   5. KULUVA KUUKAUSI haaleana kaistana ja lihavoituna kirjaimena:
-   *      lukija näkee heti, missä kohtaa vuotta hän itse on.
-   *
-   * Väreiksi EI oteta lehden kultaa ja sateensinistä vaan oppaan oma
-   * petrooli: tyyli lainataan, paletti ei. Lehden graafissa on lisäksi
-   * sadepalkit, joita tässä ei ole — oppaan data on lämpötila, ja
-   * keksittyä sadetta ei piirretä.
-   *
-   * @param {Array} kuukaudet 12 kuukauden min/max
-   * @param {boolean} luvut näytetäänkö lukuarvot (vain suurennoksessa)
-   */
-  saakayra(kuukaudet, luvut) {
-    const NS = 'http://www.w3.org/2000/svg';
-    // Suurennoksessa reunukset ovat väljemmät: käyrän päällä on
-    // lukuarvot, ja vuoden ensimmäinen luku törmäsi kapeammalla
-    // vasemmalla marginaalilla asteikon lukuun.
-    const L = luvut ? 36 : 26;
-    const O = luvut ? 14 : 8;
-    const Y = luvut ? 18 : 10;
-    const A = 20;
-    const W = 250;
-    const H = luvut ? 190 : 156;
-    const piirtoW = W - L - O;
-    const piirtoH = H - Y - A;
-    const lampotilat = kuukaudet.flatMap((k) => [k.min, k.max]);
-    const ala = Math.floor(Math.min(...lampotilat) / 5) * 5;
-    const yla = Math.ceil(Math.max(...lampotilat) / 5) * 5;
-    const askel = yla - ala > 25 ? 10 : 5;
-    const x = (i) => L + (piirtoW * i) / (kuukaudet.length - 1);
-    const y = (c) => Y + piirtoH - (piirtoH * (c - ala)) / (yla - ala);
-
-    const svg = document.createElementNS(NS, 'svg');
-    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-    svg.setAttribute('class', 'opas-saa-kuva');
-    svg.setAttribute('role', 'img');
-    const nimet = kuukaudet.map((k) => k.kk).join(', ');
-    svg.setAttribute('aria-label', `Kuukausien keskilämpötilat ${nimet}: `
-      + kuukaudet.map((k) => `${k.kk} ${k.min}–${k.max} °C`).join('; '));
-    const lisaa = (nimi, attrs, teksti = null) => {
-      const el = document.createElementNS(NS, nimi);
-      for (const [avain, arvo] of Object.entries(attrs)) el.setAttribute(avain, String(arvo));
-      if (teksti != null) el.textContent = teksti;
-      svg.appendChild(el);
-      return el;
-    };
-
-    /*
-     * Liukuväri vyöhykkeen täytteeksi (lehden tapaan <defs>issä).
-     * Tunniste on eri pienelle ja suurelle, koska molemmat voivat olla
-     * DOMissa yhtä aikaa suurennoksen ajan — sama id kahdesti tarkoittaisi,
-     * että selain sitoo molemmat ensimmäiseen.
-     */
-    const liukuId = luvut ? 'opas-saa-liuku-suuri' : 'opas-saa-liuku';
-    const defs = lisaa('defs', {});
-    const liuku = document.createElementNS(NS, 'linearGradient');
-    liuku.setAttribute('id', liukuId);
-    liuku.setAttribute('x1', '0');
-    liuku.setAttribute('y1', '0');
-    liuku.setAttribute('x2', '0');
-    liuku.setAttribute('y2', '1');
-    for (const [kohta, vari] of [['0%', 'rgba(29, 90, 94, 0.3)'], ['100%', 'rgba(29, 90, 94, 0.07)']]) {
-      const pysakki = document.createElementNS(NS, 'stop');
-      pysakki.setAttribute('offset', kohta);
-      pysakki.setAttribute('stop-color', vari);
-      liuku.appendChild(pysakki);
-    }
-    defs.appendChild(liuku);
-
-    // Kuluvan kuukauden kaista taustimmaksi, ennen ruudukkoa.
-    const kuluva = new Date().getMonth();
-    if (kuluva < kuukaudet.length) {
-      const puolikas = (W - L - O) / ((kuukaudet.length - 1) * 2);
-      lisaa('rect', {
-        class: 'opas-saa-kuluva-kaista',
-        x: (x(kuluva) - puolikas).toFixed(1),
-        y: Y - 4,
-        width: (puolikas * 2).toFixed(1),
-        height: (piirtoH + 4).toFixed(1),
-        rx: 2,
-      });
-    }
-
-    // Asteviivat ja niiden luvut. Nolla-aste saa oman luokkansa: se on
-    // ainoa viiva, jolla on lukijalle merkitys ilman lukua.
-    for (let c = ala; c <= yla; c += askel) {
-      lisaa('line', {
-        x1: L, x2: W - O, y1: y(c), y2: y(c), class: c === 0 ? 'opas-saa-nolla' : 'opas-saa-ruudukko',
-      });
-      lisaa('text', { x: L - 5, y: y(c) + 3.5, class: 'opas-saa-aste' }, `${c}°`);
-    }
-
-    /*
-     * Pehmeä polku Catmull–Rom-pisteistä (sama muunnos kuin lehden
-     * vuosigraafissa): jokaiselle välille lasketaan kaksi kontrolli-
-     * pistettä naapureiden erotuksesta.
-     */
-    const kaari = (pisteet) => {
-      let d = `M${pisteet[0][0].toFixed(1)} ${pisteet[0][1].toFixed(1)}`;
-      for (let i = 0; i < pisteet.length - 1; i += 1) {
-        const p0 = pisteet[Math.max(0, i - 1)];
-        const p1 = pisteet[i];
-        const p2 = pisteet[i + 1];
-        const p3 = pisteet[Math.min(pisteet.length - 1, i + 2)];
-        const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
-        const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
-        d += ` C${c1[0].toFixed(1)} ${c1[1].toFixed(1)}, ${c2[0].toFixed(1)} ${c2[1].toFixed(1)},`
-          + ` ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
-      }
-      return d;
-    };
-    const paivat = kuukaudet.map((k, i) => [x(i), y(k.max)]);
-    const yot = kuukaudet.map((k, i) => [x(i), y(k.min)]);
-
-    /*
-     * Vyöhyke: päiväkäyrää pitkin oikealle ja yökäyrää pitkin takaisin.
-     * Paluumatka piirretään käännetyistä pisteistä samalla kaarifunktiolla,
-     * jotta alareuna on yhtä pehmeä kuin yläreuna.
-     */
-    lisaa('path', {
-      class: 'opas-saa-vyo',
-      fill: `url(#${liukuId})`,
-      d: `${kaari(paivat)} L${yot[yot.length - 1][0].toFixed(1)} `
-        + `${yot[yot.length - 1][1].toFixed(1)} `
-        + `${kaari([...yot].reverse()).slice(1)} Z`,
-    });
-    for (const [pisteet, luokka] of [[paivat, 'opas-saa-paiva'], [yot, 'opas-saa-yo']]) {
-      lisaa('path', { d: kaari(pisteet), class: `opas-saa-kayra ${luokka}`, pathLength: 1 });
-    }
-
-    // Pisteet kuukausikohtiin käyrän vanaan, porrastettuna kuten lehdessä.
-    for (const [pisteet, luokka] of [[paivat, 'opas-saa-paiva-piste'], [yot, 'opas-saa-yo-piste']]) {
-      pisteet.forEach(([px, py], i) => {
-        const piste = lisaa('circle', {
-          class: `opas-saa-piste ${luokka}`, cx: px.toFixed(1), cy: py.toFixed(1), r: luvut ? 2.1 : 1.5,
-        });
-        piste.style.animationDelay = `${250 + i * 60}ms`;
-      });
-    }
-
-    // Kuukaudet alle. Pienessä koossa mahtuu vain alkukirjain; suuressa
-    // kolme kirjainta, jolloin tammi ja touko erottuvat toisistaan.
-    kuukaudet.forEach((k, i) => {
-      const nimi = String(k.kk ?? '');
-      lisaa('text', { x: x(i), y: H - 6, class: i === kuluva ? 'opas-saa-kk opas-saa-kuluva' : 'opas-saa-kk' },
-        luvut ? nimi.slice(0, 3) : nimi.slice(0, 1).toUpperCase());
-    });
-    lisaa('line', {
-      class: 'opas-saa-pohjaviiva', x1: L, x2: W - O, y1: Y + piirtoH, y2: Y + piirtoH,
-    });
-
-    if (luvut) {
-      // Suurennoksessa joka kuukausi kertoo lukunsa: päivälämpö käyrän
-      // yläpuolelle, yölämpö alapuolelle, jottei luku istu käyrän päällä.
-      kuukaudet.forEach((k, i) => {
-        lisaa('text', { x: x(i), y: y(k.max) - 7, class: 'opas-saa-luku opas-saa-paiva-luku' },
-          `${Math.round(k.max)}`);
-        lisaa('text', { x: x(i), y: y(k.min) + 13, class: 'opas-saa-luku opas-saa-yo-luku' },
-          `${Math.round(k.min)}`);
-      });
-    } else {
-      /*
-       * Pienessä koossa vain ääripäät (lehden tapa): lämpimimmän
-       * kuukauden päivälämpö ja kylmimmän yölämpö. Kaksi lukua kertoo
-       * vuoden haarukan, eikä pikkukuva ole enää mykkä.
-       */
-      const lampeinI = kuukaudet.reduce((paras, k, i) => (k.max > kuukaudet[paras].max ? i : paras), 0);
-      const kylminI = kuukaudet.reduce((paras, k, i) => (k.min < kuukaudet[paras].min ? i : paras), 0);
-      /*
-       * Luku pysyy piirtoalueen sisällä. Kylmin kuukausi on tavallisesti
-       * tammi- tai joulukuu eli käyrän päässä, ja keskitetty luku valuisi
-       * siellä asteikon lukujen päälle (ensimmäisessä versiossa "3°" istui
-       * kiinni "0°":ssa). Reunapehmuste on puolet luvun leveydestä.
-       */
-      const pidaSisalla = (arvo) => Math.min(Math.max(arvo, L + 11), W - O - 11);
-      lisaa('text', {
-        x: pidaSisalla(x(lampeinI)), y: y(kuukaudet[lampeinI].max) - 6,
-        class: 'opas-saa-arvo opas-saa-paiva-luku',
-      }, `${Math.round(kuukaudet[lampeinI].max)}°`);
-      lisaa('text', {
-        x: pidaSisalla(x(kylminI)), y: y(kuukaudet[kylminI].min) + 12,
-        class: 'opas-saa-arvo opas-saa-yo-luku',
-      }, `${Math.round(kuukaudet[kylminI].min)}°`);
-    }
-    return svg;
   }
 
   /**
@@ -14137,13 +13955,15 @@ export class UI {
    * pikkuseloste: <dialog>-modaali nostetaan omaan ylätasoonsa, ja
    * muualle lisätty kerros jäisi sen alle näkymättömiin.
    */
-  avaaSaagraafi(kuukaudet, ankkuri) {
+  avaaSaagraafi(tiedot, ankkuri) {
     const koti = ankkuri.closest('dialog[open]') ?? document.body;
     const overlay = html('div', 'opas-saa-overlay');
     const laatikko = html('div', 'opas-saa-suuri');
-    laatikko.appendChild(this.saakayra(kuukaudet, true));
+    laatikko.appendChild(piirraVuosiSaa(tiedot));
+    // Sama lähderivi sanasta sanaan kuin lehden omassa suurennoksessa
+    // (naytaVuosiSaa) — sama graafi ansaitsee saman selitteen.
     laatikko.appendChild(html('p', 'opas-saa-suuri-teksti',
-      'Kuukausien keskimääräiset yö- ja päivälämpötilat (°C).'));
+      'Käyrä keskilämpö °C · palkit sademäärä mm · Open-Meteo (ERA5), 1991–2020'));
     overlay.appendChild(laatikko);
     koti.appendChild(overlay);
     ankkuri.setAttribute('aria-expanded', 'true');

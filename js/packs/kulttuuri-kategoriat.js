@@ -2447,13 +2447,23 @@ export const KULTTUURI_KATEGORIAT = {
                * Kuva itsessään on ennallaan — vain sen koko ja paikka
                * muuttuvat.
                */
+              /*
+               * KUVA VAIHDETTU NÄYTTÄVÄMPÄÄN (omistaja 16.8.2026: "koita
+               * löytää visuaalisesti laadukkaammat kuvat näihin
+               * kahteen"). Entinen Rue Brancionin punainen liikekulma oli
+               * tavallinen katukuva; tämä on Commonsin Quality Image
+               * (kategoria Quality images of shops in Paris) ja lukee myös
+               * kapeana, koska kyltti on vaakasuora ja kontrasti kova.
+               * Sijainti kuvaustekstistä: "64 rue Saint-Dominique in the
+               * 7th district of Paris", jossa myös vuosiluku 1900.
+               */
               kuva: {
-                tiedosto: 'La Désirade, 69 bis Rue Brancion, 75015 Paris, August 2015.jpg',
+                tiedosto: 'Boulangerie 64 rue Saint-Dominique Paris 7e.jpg',
                 asettelu: 'kapea',
-                selite: 'Punainen leipomo Rue Brancionilla. Kyltissä lukee '
-                  + 'ARTISAN BOULANGER ja PATISSIER, ja ohikulkija kantaa '
-                  + 'patonkia kädessään.',
-                lahde: 'Besopha, Wikimedia Commons (CC BY 2.0)',
+                selite: 'Vuodesta 1900 säilynyt leipomonjulkisivu Rue '
+                  + 'Saint-Dominiquella: kultakirjaimet mustalla ja '
+                  + 'maalatut kuvalaatat oven molemmin puolin.',
+                lahde: 'Moonik, Wikimedia Commons (CC BY-SA 3.0)',
               },
             },
             {
@@ -2466,16 +2476,31 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaupunki näyttää vanhemmalta kuin päivällä. '
                 + 'Eiffel-torni vastaa omalla tavallaan: pimeän tultua se '
                 + 'välkkyy viiden minuutin ajan aina tasatunnein.',
-              // Sama kapea asettelu kuin leipomojaksossa (omistaja
-              // 16.8.2026: "Sama iltakuvalle"). Pystykuva hyötyy siitä
-              // erikseen: täysleveänä se vei sivusta yli ruudullisen.
+              /*
+               * KUVA VAIHDETTU (omistaja 16.8.2026: "koita löytää
+               * visuaalisesti laadukkaammat kuvat näihin kahteen").
+               * Entinen portaikkokuva oli pimeä ja sameа, eikä Commonsista
+               * löytynyt Montmartren portaista yhtään laatutason yökuvaa
+               * (kaikki ovat mustavalkoisia, päivänvalossa tai
+               * puhelinkuvia). Tilalla on Commonsin Featured picture ja
+               * Quality image, joka lunastaa jakson lupauksen suoraan:
+               * kaupunki on hämärässä matala ja tasainen ja Eiffel-torni
+               * seisoo valaistuna keskellä.
+               *
+               * EI KAPEA, vaan koko palstan levyinen: kuva on 3,2:1
+               * panoraama, ja 40 %:n leveydellä siitä tulisi lukukelvoton
+               * nauha. Leveänäkin se on matala, joten se ei hallitse sivua
+               * kuten entinen pystykuva. Kuvausteksti kertoo paikan
+               * ("from the Maine-Montparnasse tower"), ja selite sanoo sen
+               * ääneen — jakson teksti puhuu Montmartresta, joten kuva ei
+               * saa väittää olevansa sieltä.
+               */
               kuva: {
-                tiedosto: 'Paris 75018 Rue du Mont-Cenis no 025 stairs towards Rue Saint-Vincent at night.jpg',
-                asettelu: 'kapea',
-                selite: 'Montmartren portaat yöllä Rue du Mont-Cenis\'llä. '
-                  + 'Lyhdyt johtavat alas kukkulalta, ja kaukana '
-                  + 'kimmeltävät kaupungin valot.',
-                lahde: 'AlfvanBeem, Wikimedia Commons (CC0)',
+                tiedosto: 'Paris Night.jpg',
+                selite: 'Kaupunki hämärässä Montparnassen tornista: matalaa '
+                  + 'kattomerta niin kauas kuin näkee, ja Eiffel-torni '
+                  + 'valaistuna keskellä.',
+                lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 4.0)',
               },
             },
           ],
@@ -2621,31 +2646,6 @@ export const KULTTUURI_KATEGORIAT = {
                   + 'tammikuussa vajaat 60 tuntia koko kuussa, ja pimeä '
                   + 'tulee jo viideltä.',
               },
-            ],
-            /*
-             * VUOSIKÄYRÄN DATA (paketti O3, osa 2): kahdentoista
-             * kuukauden ilmastonormaalit. min = kuukauden keskimääräinen
-             * yölämpötila, max = keskimääräinen päivälämpötila.
-             *
-             * LÄHDE: en-Wikipedian Paris-artikkelin ilmastotaulukko
-             * (Météo-France, Parc Montsouris, normaalikausi 1991–2020),
-             * haettu 16.8.2026. Samat luvut, joista yllä olevat kausien
-             * lämpöhaarukat on pyöristetty — kaudet ovat siis tämän
-             * taulukon tiivistelmä eivätkä eri lähde.
-             */
-            ilmasto: [
-              { kk: 'tammi', min: 3.2, max: 7.6 },
-              { kk: 'helmi', min: 3.3, max: 8.8 },
-              { kk: 'maalis', min: 5.6, max: 12.8 },
-              { kk: 'huhti', min: 7.9, max: 16.6 },
-              { kk: 'touko', min: 11.1, max: 20.2 },
-              { kk: 'kesä', min: 14.2, max: 23.4 },
-              { kk: 'heinä', min: 16.2, max: 25.7 },
-              { kk: 'elo', min: 16.0, max: 25.6 },
-              { kk: 'syys', min: 13.0, max: 21.5 },
-              { kk: 'loka', min: 9.9, max: 16.5 },
-              { kk: 'marras', min: 6.2, max: 11.1 },
-              { kk: 'joulu', min: 3.8, max: 8.0 },
             ],
             hintataso: '€€€',
             /*
