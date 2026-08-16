@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v798 — pöllön kuvat aukeavat isoina myös isolla ruudulla',
   'v797 — oppaan otsikko esiin: iPhone ja iPad, yläreuna',
   'v796 — viiden oppaan avauskuva kolmen kuvan karuselliksi',
   'v795 — Helsingin etusivulle Uspenskin katedraali',

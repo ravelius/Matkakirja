@@ -13564,8 +13564,22 @@ dialog.pollo-kuvatausta:focus-visible { outline: none; }
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: min(20rem, calc(100vw - 2rem));
-  max-height: calc(100vh - 3rem);
+  /*
+   * LEVEYS SEURAA RUUTUA (omistajan havainto 16.8.2026: "pöllön kuvat
+   * aukeavat liian pieninä ainakin iPadissa"). Katto oli 20rem eli
+   * 320 px riippumatta ruudusta, joten iPadilla popup jäi pikkuruiseksi
+   * keskelle isoa näyttöä. 40rem on sama 640 px kuin nähtävyysarkin
+   * leveys (.dialog.nahtavyys-arkki, min(90vw, 640px)) — popup on nyt
+   * saman kokoinen kuin muutkin kortit eikä keksi omaa mittaansa.
+   * Puhelimella ratkaisee edelleen calc(100vw - 2rem).
+   */
+  width: min(40rem, calc(100vw - 2rem));
+  /*
+   * dvh eikä vh, ja turva-alueet mukaan: sama sääntö kuin arkeilla.
+   * vh ei jousta iOS:n osoiterivin mukana, ja ilman turvavarausta
+   * pystykuva ylsi loveuksen ja kotipalkin ali.
+   */
+  max-height: calc(100dvh - 3rem - var(--turva-yla) - var(--turva-ala));
   overflow-y: auto;
   padding: 0.6rem;
   border: 1px solid var(--pollo-viiva);
@@ -13583,6 +13597,17 @@ img.pollo-kuva {
   display: block;
   width: 100%;
   height: auto;
+  /*
+   * Korkeuskatto tuli leveyden mukana: kun kortti sai kasvaa 640
+   * pikseliin, pystykuva olisi venynyt niin korkeaksi, että kuvateksti
+   * ja Avaa juttu -nappi olisivat jääneet vieritettävän alle. Katossa
+   * on varattu tila kuvatekstille, napille ja pehmusteille. Selain
+   * kaventaa kuvan itse suhteessa, joten margin-inline pitää sen
+   * keskellä korttia.
+   */
+  max-height: calc(100dvh - 14rem - var(--turva-yla) - var(--turva-ala));
+  margin-inline: auto;
+  object-fit: contain;
   border-radius: 6px;
   /* Sama seepiasävytys kuin lehden kuvilla ei kuulu tänne: kuva on
      popupin ainoa sisältö ja saa näkyä sellaisenaan. */
