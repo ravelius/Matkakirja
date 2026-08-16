@@ -87,7 +87,7 @@ Omistajan kaksi linjausta 16.8.2026:
 | Wien | ✅ Stephansdomin katto (QI-tekijä) | ⬜ |
 | Rooma | ✅ Trevin suihkulähde (QI) | ⬜ |
 | Kööpenhamina | ✅ Nyhavn (QI) | ⬜ |
-| Helsinki | ⬜ | ⬜ |
+| Helsinki | ✅ Uspenskin katedraali (QI) | ⬜ (ei opastaittoa) |
 
 ### Ehdokkaat, jotka on jo todennettu API:sta
 
@@ -101,18 +101,25 @@ Featured picture -kategorioiden sijaan **Quality image -haulla**
 `korkeus > leveys × 1,2`). FP-kategoriat ovat näissä maissa
 luonto- ja tapahtumapainotteisia eivätkä sisällä maamerkkejä.
 
-**Helsinki on yhä auki.** Kategoriasta *Helsinki Cathedral* löytyi 13
-pystykuvaa, mutta katsotut olivat katunäkymiä eivätkä täytä kaavan
-kohtaa 1 (yksi aihe, joka täyttää ruudun). Katsomatta jäi
-`Senaatintori (Helsinki Senate Square) elokuussa 2018 02.jpg`
-(Paasikivi, CC BY-SA 4.0, 2714×3483) — lisenssi on todennettu,
-kuva EI vielä katsottu. Muita mahdollisia aiheita: Temppeliaukion
-kirkko ylhäältä, Suomenlinnan Kuninkaanportti, Uspenskin katedraali.
+Helsinki ratkesi v795:ssä. Tuomiokirkosta ei löytynyt kelvollista
+pystykuvaa — kaikki katsotut olivat katunäkymiä — mutta **Uspenskin
+katedraali** on yhtä tunnistettava ja paremmin kuvattu.
 
-HUOM RAJAPINNASTA: Commons kuristaa (429 "too many requests")
-nopeasti. Pyyntöjen väliin 8 s ja uusintoihin 15/30/45 s, muuten
-vastaus on HTML-virhesivu — ja jos sen tallentaa kuvaksi, tiedosto
-näyttää jpg:ltä mutta on HTML:ää.
+### Kaksi ansaa Commonsin haussa
+
+1. **Rate limit.** Rajapinta vastaa "You are making too many
+   requests" eikä hellitä nopeasti. Pyyntöjen väliin 8 s ja
+   uusintoihin 15/30/45 s.
+2. **Robottikäytäntö.** `upload.wikimedia.org` (imageinfon antama
+   `thumburl`) torjuu latauksen kokonaan: *"Your request does not
+   comply with our robot policy."* Käytä sen sijaan
+   `commons.wikimedia.org/w/thumb.php?f=<nimi>&w=800` ja **korvaa
+   välilyönnit alaviivoilla** — muuten vastaus on 500.
+
+Molemmissa tapauksissa vastaus on HTML-virhesivu. Jos sen tallentaa
+`.jpg`-nimellä, tiedosto näyttää kuvalta mutta ei ole sellainen —
+tarkista ladatut kuvat `file`-komennolla ennen kuin luulet
+katsoneesi ne.
 
 ### Karusellit
 
