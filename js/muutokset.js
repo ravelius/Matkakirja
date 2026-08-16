@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 793, teksti: 'Orsayn museolle piirros kartalle' },
   { v: 792, teksti: 'Pariisin uusille kohteille piirrokset kartalle' },
   { v: 791, teksti: 'Berliini: Fernsehturm etusivulle pystykuvana' },
   { v: 790, teksti: 'Lontoo: pystykuva etusivulle, karuselli oppaan alkuun' },
