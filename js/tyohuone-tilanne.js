@@ -48,7 +48,8 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
-  'v791 — Berliini: Fernsehturm etusivulle pystykuvana',
+  'v792 — iPad: alanapit näkyviin; juttujen pystykuva isommaksi',
+  'v791 — Berliini pystykuva; alanapit iPadilla; isompi pystykuva',
   'v790 — Lontoo: Big Ben etusivulle, 3 kuvan karuselli oppaaseen',
   'v789 — iPad-jumi: kartta ja alanapit palaavat app-vaihdosta',
   'v788 — Pariisissa 11 kohdetta; sää kaikissa 70 kaupungissa',
