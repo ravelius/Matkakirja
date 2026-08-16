@@ -123,3 +123,86 @@ Ennallaan siitä, mihin jäit: opas 2.x:n monistus muihin kaupunkeihin
 
 Opus 27 on kuitattu VALMIS-tilaan. Sen sessio on yhä auki valmiudessa;
 en arkistoinut sitä ilman omistajan lupaa.
+
+---
+
+# JATKO-OSA: illan työt (v783–v787)
+
+Omistaja jatkoi ohjaamista illalla, ja päivä venyi. Yhteenveto siitä,
+mitä luovutuksen kirjoittamisen JÄLKEEN tapahtui.
+
+## Julkaisut
+
+| Versio | PR | Sisältö |
+| --- | --- | --- |
+| v785 | #1177 | Sääennuste 32 lehteen, oppaan graafi lehden omaksi, maasivun nimiö |
+| v786 | #1178 | Matkailijan opas viiteen kaupunkiin |
+| v787 | #1179 | Lippu maasivun otsikkoon, Eiffel etusivulle, etusivukuvan kaava |
+
+## Isoin asia: opas on nyt kuudessa kaupungissa
+
+Omistaja hyväksyi monistuksen ja tilasi sen viiteen kaupunkiin
+(Lontoo, Wien, Berliini, Rooma, Kööpenhamina) omaa tsekkiään varten.
+Ne on tehty. **Teksti ei ole uutta**: jokaisen artikkelin viisi
+kappaletta olivat jo aiheittain jaettuja ja oppaan jaksomitassa, joten
+ne siirtyivät jaksoihin sanatarkasti ja kuvat seurasivat aiheitaan.
+Uutta ovat ingressi, nosto ja matkailu-lohko.
+
+**Matkakassa puuttuu kaikista viidestä** ja se on tietoinen aukko:
+Pariisin hinnat ovat operaattorin ja museon omilta sivuilta
+päivämäärällä tarkistettuina, enkä päässyt vastaaviin lähteisiin
+näille kaupungeille (TfL 403, Wikivoyagessa ei ajantasaisia hintoja).
+Keksittyjä hintoja en kirjoita. Laatikko ilmestyy heti kun
+`matkailu.hinnat` täytetään — viisi riviä per kaupunki.
+
+## Sääennuste puuttui 41 lehtikaupungista
+
+Ei kahdesta, kuten omistaja arveli. 32 sai rivinsä `SAATIEDOT`-
+pakettiin; normaalit laskettu ERA5:stä (1991–2020) samalla
+menetelmällä kuin paketin vanhat rivit, ja menetelmä varmistettiin
+ajamalla se Lontoolle, jonka rivi oli jo olemassa. **Yhdeksän kohdetta
+jäi ilman**: islanti, lappi, kreeta, sisilia, alpit, sana, aden,
+salalah, mosul — niillä ei ole kohdekarttaa, josta koordinaatit
+lukisi. Ne tarvitsevat päätöksen.
+
+## Oppaan graafi on nyt kirjaimellisesti lehden graafi
+
+Omistaja: *"käytä juuri samaa."* Oma käyräpiirrin (208 riviä JS,
+135 riviä CSS) ja oppaan oma ilmastodata poistettiin; opas kutsuu nyt
+`piirraVuosiSaa`ta. Kaupungin luvut ovat yhdessä paikassa, ja
+monistuksessa graafi tulee mukana ilman uutta dataa.
+
+## Kaksi bugia, jotka kannattaa tietää
+
+1. **Opas 2.1:n lämmin paperi ei ollut koskaan voimassa.** Arkin oma
+   `.dialog.arkki .dialog-card` on tarkempi valitsin kuin
+   `.nahtavyys-kortti.opas-kortti`. Kaskadi voitti hiljaa.
+2. **Maan karttasivu piirtyy omalla koodillaan.** Lisäsin lipun
+   dataan (v785) ja se ei näkynyt (v787 korjasi): `piirraMaaEtusivu`
+   rakensi otsikkonsa itse. Otsikkorivi on nyt yhteinen apuri.
+   Tämä on hyvä muistaa aina kun maan sivuille lisätään jotain.
+
+## Uusi paketti työlistalla: O4, nähtävyyksiä lisää
+
+Omistajan linjaus: nähtävyyksiä saa olla 6–15 per kaupunki. Mittasin:
+**53 kaupungista 46:lla on tasan kuusi** eli haarukan alaraja — kuutonen
+ei ole harkittu määrä vaan lähtötaso. Pariisi on paketissa pilottina
+(8 → 12–14), ja samalla korjataan kaksi kohdetta, jotka ovat kartalla
+ilman omaa juttuaan: Wienin Schönbrunn ja Budapestin Sankarien aukio.
+
+## Linjaukset, jotka kuuluvat Raamattuun
+
+Omistaja pyysi kirjaamaan maasivun otsikkolinjauksen Raamattuun. En
+kirjoita sinne, koska tämän session sitova raja on että vain sinä
+kirjoitat Raamattuun — kerroin sen omistajalle. **Kirjaa nämä kaksi:**
+
+1. **Maalehden nimiö** on pelkkä maan nimi ja lippu sen perässä.
+   Aiemmin luki "Ranska kartalla", vaikka kartta näkyy sivulla
+   itsestään.
+2. **Etusivukuvan kaava** (kuuluu osioon "Kuvat ja lähteet"):
+   Matkailijalle-osion kuva on osion myyntikuva. Yksi aihe joka
+   täyttää ruudun, paikan oma erikoisuus, Featured/Quality image jos
+   sellainen on, selkeä valo ja pääaihe pois nauhan alta. Omistajan
+   sanoin: *"yksinkertainen, laadukas ja houkutteleva eli wow efekti
+   jostain maan erikoisuudesta."* Kaava on nyt työlistassa; Raamattuun
+   siitä kuuluu tiivistelmä.
