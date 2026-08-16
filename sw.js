@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.773';
+const CACHE = 'matkakirja-2026-08-09.774';
 const SHELL = [
   './',
   './index.html',
@@ -147,7 +147,27 @@ const SHELL = [
   './assets/varusteet/varuste-vertailu.jpg',
   './assets/varusteet/varuste-maatiedot.jpg',
   './assets/varusteet/varuste-radio.jpg',
-  // Aarrelöydön huudahdukset ääneen (sama repliikki kuin kortilla).
+  /*
+   * ÄÄNTEN YDINSETTI — ainoat äänitiedostot, jotka esiladataan.
+   *
+   * Tällä listalla oli 16.8.2026 asti 420 äänitiedostoa eli noin 200 Mt,
+   * ja ne haettiin joka asennuksessa. Niistä 195 Mt oli luentoja, joista
+   * yksittäinen pelaaja kuulee murto-osan: peli latasi jokaiselle
+   * kaikkien maanosien kertojaäänet, myös niiden kaupunkien, joihin hän
+   * ei koskaan matkusta.
+   *
+   * Loput jaellaan nyt ämpäristä (js/media.js aaniUrl) ja tallentuvat
+   * AANICACHEen sinä hetkenä kun ne ensi kerran soivat — sama malli kuin
+   * valokuvilla. Omistajan linjaus 16.8.2026: OFFLINE-PELAUS EI OLE
+   * TAVOITE, joten välimuisti on nopeutta varten eikä lupaus.
+   *
+   * Ydinsettiin jäävät kaksi lajia, joilla myöhästyminen kuuluisi:
+   * aarrelöydön huudahdukset (sama repliikki kuin kortilla) ja
+   * käyttöliittymän lyhyet tehosteet (alempana). Yhteensä 39 tiedostoa,
+   * noin 1,3 Mt. Ne EIVÄT kulje ämpärin kautta, koska silloin peli
+   * pyytäisi eri osoitetta kuin minkä tämä lista esilatasi — sääntö on
+   * js/media.js:n YDINAANI, ja nämä kaksi listaa kuuluvat yhteen.
+   */
   './assets/audio/huudahdus-300-1.mp3',
   './assets/audio/huudahdus-300-2.mp3',
   './assets/audio/huudahdus-300-3.mp3',
@@ -361,132 +381,8 @@ const SHELL = [
   './assets/kartat/amsterdam-varikartta.png',
   './assets/kartat/kobenhavn-varikartta.png',
   './assets/kartat/venetsia-keskusta.png',
-  './assets/audio/intro-puhe.mp3',
-  // Tarinakaaren luennat (saapuminen/kohtaaminen/aarre × 41 kohdetta).
-  './assets/audio/puhe-kaari-aarre-alpit.mp3',
-  './assets/audio/puhe-kaari-aarre-amsterdam.mp3',
-  './assets/audio/puhe-kaari-aarre-ateena.mp3',
-  './assets/audio/puhe-kaari-aarre-barcelona.mp3',
-  './assets/audio/puhe-kaari-aarre-berliini.mp3',
-  './assets/audio/puhe-kaari-aarre-budapest.mp3',
-  './assets/audio/puhe-kaari-aarre-bukarest.mp3',
-  './assets/audio/puhe-kaari-aarre-dublin.mp3',
-  './assets/audio/puhe-kaari-aarre-dubrovnik.mp3',
-  './assets/audio/puhe-kaari-aarre-edinburgh.mp3',
-  './assets/audio/puhe-kaari-aarre-granada.mp3',
-  './assets/audio/puhe-kaari-aarre-helsinki.mp3',
-  './assets/audio/puhe-kaari-aarre-islanti.mp3',
-  './assets/audio/puhe-kaari-aarre-istanbul.mp3',
-  './assets/audio/puhe-kaari-aarre-kiova.mp3',
-  './assets/audio/puhe-kaari-aarre-kobenhavn.mp3',
-  './assets/audio/puhe-kaari-aarre-krakova.mp3',
-  './assets/audio/puhe-kaari-aarre-kreeta.mp3',
-  './assets/audio/puhe-kaari-aarre-lappi.mp3',
-  './assets/audio/puhe-kaari-aarre-lissabon.mp3',
-  './assets/audio/puhe-kaari-aarre-lontoo.mp3',
-  './assets/audio/puhe-kaari-aarre-madrid.mp3',
-  './assets/audio/puhe-kaari-aarre-marseille.mp3',
-  './assets/audio/puhe-kaari-aarre-moskova.mp3',
-  './assets/audio/puhe-kaari-aarre-odessa.mp3',
-  './assets/audio/puhe-kaari-aarre-oslo.mp3',
-  './assets/audio/puhe-kaari-aarre-pariisi.mp3',
-  './assets/audio/puhe-kaari-aarre-pietari.mp3',
-  './assets/audio/puhe-kaari-aarre-praha.mp3',
-  './assets/audio/puhe-kaari-aarre-riika.mp3',
-  './assets/audio/puhe-kaari-aarre-rooma.mp3',
-  './assets/audio/puhe-kaari-aarre-sarajevo.mp3',
-  './assets/audio/puhe-kaari-aarre-sisilia.mp3',
-  './assets/audio/puhe-kaari-aarre-sofia.mp3',
-  './assets/audio/puhe-kaari-aarre-tallinna.mp3',
-  './assets/audio/puhe-kaari-aarre-tromssa.mp3',
-  './assets/audio/puhe-kaari-aarre-tukholma.mp3',
-  './assets/audio/puhe-kaari-aarre-varsova.mp3',
-  './assets/audio/puhe-kaari-aarre-venetsia.mp3',
-  './assets/audio/puhe-kaari-aarre-vilna.mp3',
-  './assets/audio/puhe-kaari-aarre-wien.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-alpit.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-amsterdam.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-ateena.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-barcelona.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-berliini.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-budapest.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-bukarest.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-dublin.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-dubrovnik.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-edinburgh.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-granada.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-helsinki.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-islanti.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-istanbul.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-kiova.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-kobenhavn.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-krakova.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-kreeta.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-lappi.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-lissabon.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-lontoo.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-madrid.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-marseille.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-moskova.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-odessa.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-oslo.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-pariisi.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-pietari.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-praha.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-riika.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-rooma.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-sarajevo.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-sisilia.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-sofia.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-tallinna.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-tromssa.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-tukholma.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-varsova.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-venetsia.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-vilna.mp3',
-  './assets/audio/puhe-kaari-kohtaaminen-wien.mp3',
-  './assets/audio/puhe-kaari-saapuminen-alpit.mp3',
-  './assets/audio/puhe-kaari-saapuminen-amsterdam.mp3',
-  './assets/audio/puhe-kaari-saapuminen-ateena.mp3',
-  './assets/audio/puhe-kaari-saapuminen-barcelona.mp3',
-  './assets/audio/puhe-kaari-saapuminen-berliini.mp3',
-  './assets/audio/puhe-kaari-saapuminen-budapest.mp3',
-  './assets/audio/puhe-kaari-saapuminen-bukarest.mp3',
-  './assets/audio/puhe-kaari-saapuminen-dublin.mp3',
-  './assets/audio/puhe-kaari-saapuminen-dubrovnik.mp3',
-  './assets/audio/puhe-kaari-saapuminen-edinburgh.mp3',
-  './assets/audio/puhe-kaari-saapuminen-granada.mp3',
-  './assets/audio/puhe-kaari-saapuminen-helsinki.mp3',
-  './assets/audio/puhe-kaari-saapuminen-islanti.mp3',
-  './assets/audio/puhe-kaari-saapuminen-istanbul.mp3',
-  './assets/audio/puhe-kaari-saapuminen-kiova.mp3',
-  './assets/audio/puhe-kaari-saapuminen-kobenhavn.mp3',
-  './assets/audio/puhe-kaari-saapuminen-krakova.mp3',
-  './assets/audio/puhe-kaari-saapuminen-kreeta.mp3',
-  './assets/audio/puhe-kaari-saapuminen-lappi.mp3',
-  './assets/audio/puhe-kaari-saapuminen-lissabon.mp3',
-  './assets/audio/puhe-kaari-saapuminen-lontoo.mp3',
-  './assets/audio/puhe-kaari-saapuminen-madrid.mp3',
-  './assets/audio/puhe-kaari-saapuminen-marseille.mp3',
-  './assets/audio/puhe-kaari-saapuminen-moskova.mp3',
-  './assets/audio/puhe-kaari-saapuminen-odessa.mp3',
-  './assets/audio/puhe-kaari-saapuminen-oslo.mp3',
-  './assets/audio/puhe-kaari-saapuminen-pariisi.mp3',
-  './assets/audio/puhe-kaari-saapuminen-pietari.mp3',
-  './assets/audio/puhe-kaari-saapuminen-praha.mp3',
-  './assets/audio/puhe-kaari-saapuminen-riika.mp3',
-  './assets/audio/puhe-kaari-saapuminen-rooma.mp3',
-  './assets/audio/puhe-kaari-saapuminen-sarajevo.mp3',
-  './assets/audio/puhe-kaari-saapuminen-sisilia.mp3',
-  './assets/audio/puhe-kaari-saapuminen-sofia.mp3',
-  './assets/audio/puhe-kaari-saapuminen-tallinna.mp3',
-  './assets/audio/puhe-kaari-saapuminen-tromssa.mp3',
-  './assets/audio/puhe-kaari-saapuminen-tukholma.mp3',
-  './assets/audio/puhe-kaari-saapuminen-varsova.mp3',
-  './assets/audio/puhe-kaari-saapuminen-venetsia.mp3',
-  './assets/audio/puhe-kaari-saapuminen-vilna.mp3',
-  './assets/audio/puhe-kaari-saapuminen-wien.mp3',
-  './assets/audio/puhe-lento-alku.mp3',
+  // Käyttöliittymän lyhyet tehosteet — ydinsetin toinen puolisko
+  // (ks. huudahdusten kohdalla oleva selitys).
   './assets/audio/efekti-klik.mp3',
   './assets/audio/efekti-paperi.mp3',
   './assets/audio/efekti-kolikot.mp3',
@@ -511,228 +407,6 @@ const SHELL = [
   './assets/audio/efekti-jumissa.mp3',
   './assets/audio/efekti-vuoro.mp3',
   './assets/audio/efekti-voitto.mp3',
-  // Maailmanradion viritysäänet (js/packs/viritysaanet.js). Nämä tulevat
-  // koriin, vaikka itse lähetystä ei offline saakaan: soitin näyttää ja
-  // kuulostaa oikealta siihen asti, että se toteaa verkon puuttuvan.
-  './assets/audio/viritys-taajuustungos.mp3',
-  './assets/audio/viritys-raskaskohina.mp3',
-  './assets/audio/viritys-tyhjakaista.mp3',
-  './assets/audio/viritys-datasignaali.mp3',
-  './assets/audio/viritys-asteikonpaa.mp3',
-  './assets/audio/musiikki-visa-afrikka-1.mp3',
-  './assets/audio/musiikki-visa-afrikka-2.mp3',
-  './assets/audio/musiikki-visa-afrikka-3.mp3',
-  './assets/audio/puhe-africa-saapuminen-tanger.mp3',
-  './assets/audio/puhe-europe-saapuminen-ateena.mp3',
-  './assets/audio/puhe-europe-saapuminen-alpit.mp3',
-  './assets/audio/puhe-europe-saapuminen-amsterdam.mp3',
-  './assets/audio/puhe-europe-saapuminen-barcelona.mp3',
-  './assets/audio/puhe-europe-saapuminen-berliini.mp3',
-  './assets/audio/puhe-europe-saapuminen-budapest.mp3',
-  './assets/audio/puhe-europe-saapuminen-bukarest.mp3',
-  './assets/audio/puhe-europe-saapuminen-dublin.mp3',
-  './assets/audio/puhe-europe-saapuminen-edinburgh.mp3',
-  // Isoisän visa- ja aarresitaatit (pilotti: 4 kaupunkia).
-  './assets/audio/puhe-europe-saapuminen-granada.mp3',
-  './assets/audio/puhe-europe-saapuminen-helsinki.mp3',
-  './assets/audio/puhe-europe-saapuminen-islanti.mp3',
-  './assets/audio/puhe-europe-saapuminen-istanbul.mp3',
-  './assets/audio/puhe-europe-saapuminen-kiova.mp3',
-  './assets/audio/puhe-europe-saapuminen-kobenhavn.mp3',
-  './assets/audio/puhe-europe-saapuminen-krakova.mp3',
-  './assets/audio/puhe-europe-saapuminen-lappi.mp3',
-  './assets/audio/puhe-europe-saapuminen-lissabon.mp3',
-  './assets/audio/puhe-europe-saapuminen-madrid.mp3',
-  './assets/audio/puhe-europe-saapuminen-marseille.mp3',
-  './assets/audio/puhe-europe-saapuminen-moskova.mp3',
-  './assets/audio/puhe-europe-saapuminen-odessa.mp3',
-  './assets/audio/puhe-europe-saapuminen-oslo.mp3',
-  './assets/audio/puhe-europe-saapuminen-pietari.mp3',
-  './assets/audio/puhe-europe-saapuminen-praha.mp3',
-  './assets/audio/puhe-europe-saapuminen-riika.mp3',
-  './assets/audio/puhe-europe-saapuminen-sarajevo.mp3',
-  './assets/audio/puhe-europe-saapuminen-tallinna.mp3',
-  './assets/audio/puhe-europe-saapuminen-tromssa.mp3',
-  './assets/audio/puhe-europe-saapuminen-tukholma.mp3',
-  './assets/audio/puhe-europe-saapuminen-varsova.mp3',
-  './assets/audio/puhe-europe-saapuminen-vilna.mp3',
-  './assets/audio/puhe-europe-saapuminen-wien.mp3',
-  './assets/audio/puhe-europe-saapuminen-dubrovnik.mp3',
-  './assets/audio/puhe-europe-saapuminen-kreeta.mp3',
-  './assets/audio/puhe-europe-saapuminen-lontoo.mp3',
-  './assets/audio/puhe-europe-saapuminen-pariisi.mp3',
-  './assets/audio/puhe-europe-saapuminen-rooma.mp3',
-  './assets/audio/puhe-europe-saapuminen-sisilia.mp3',
-  './assets/audio/puhe-europe-saapuminen-sofia.mp3',
-  './assets/audio/puhe-europe-saapuminen-venetsia.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-aden.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-ankara.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-bagdad.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-damaskos.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-doha.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-dubai.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-halab.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-isfahan.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-izmir.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-jerusalem.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-kapadokia.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-kuwait.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-luxor.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-masqat.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-medina.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-mekka.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-mosul.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-nikosia.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-persepolis.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-petra.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-riad.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-rubalkhali.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-salalah.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-sana.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-siinai.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-tabriz.mp3',
-  './assets/audio/puhe-middleeast-saapuminen-teheran.mp3',
-  './assets/audio/puhe-asia-saapuminen-borneo.mp3',
-  './assets/audio/puhe-asia-saapuminen-chennai.mp3',
-  './assets/audio/puhe-asia-saapuminen-colombo.mp3',
-  './assets/audio/puhe-asia-saapuminen-delhi.mp3',
-  './assets/audio/puhe-asia-saapuminen-jakarta.mp3',
-  './assets/audio/puhe-asia-saapuminen-kabul.mp3',
-  './assets/audio/puhe-asia-saapuminen-karachi.mp3',
-  './assets/audio/puhe-asia-saapuminen-kathmandu.mp3',
-  './assets/audio/puhe-asia-saapuminen-kolkata.mp3',
-  './assets/audio/puhe-asia-saapuminen-mumbai.mp3',
-  './assets/audio/puhe-asia-saapuminen-singapore.mp3',
-  './assets/audio/puhe-asia-saapuminen-sumatra.mp3',
-  './assets/audio/puhe-asia-saapuminen-yangon.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-anchorage.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-appalakit.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-bermuda.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-chicago.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-churchill.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-denver.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-grandcanyon.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-guatemala.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-halifax.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-havanna.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-hawaii.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-houston.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-iqaluit.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-labrador.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-losangeles.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-managua.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-merida.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-mexico.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-miami.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-monterrey.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-montreal.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-mountrushmore.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-neworleans.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-newyork.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-nome.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-nuuk.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-panama.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-sanfrancisco.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-sanjuan.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-santafe.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-stjohns.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-toronto.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-vancouver.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-whitehorse.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-winnipeg.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-yellowknife.mp3',
-  './assets/audio/puhe-northamerica-saapuminen-yellowstone.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-antofagasta.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-asuncion.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-bananal.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-boavista.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-bogota.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-buenosaires.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-campogrande.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-caphorn.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-caracas.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-cayenne.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-falkland.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-galapagos.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-iguazu.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-iquitos.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-joaopessoa.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-lima.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-macapa.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-machupicchu.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-manaus.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-montevideo.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-portoalegre.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-portovelho.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-puertomontt.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-puntaarenas.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-quito.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-rio.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-robinsoncrusoe.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-salta.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-salvador.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-sanambrosio.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-santacruz.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-santarem.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-saoluis.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-saopaulo.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-titicaca.mp3',
-  './assets/audio/puhe-southamerica-saapuminen-valparaiso.mp3',
-  './assets/audio/puhe-oceania-saapuminen-adelaide.mp3',
-  './assets/audio/puhe-oceania-saapuminen-alicesprings.mp3',
-  './assets/audio/puhe-oceania-saapuminen-auckland.mp3',
-  './assets/audio/puhe-oceania-saapuminen-bali.mp3',
-  './assets/audio/puhe-oceania-saapuminen-birdsville.mp3',
-  './assets/audio/puhe-oceania-saapuminen-brisbane.mp3',
-  './assets/audio/puhe-oceania-saapuminen-broome.mp3',
-  './assets/audio/puhe-oceania-saapuminen-cairns.mp3',
-  './assets/audio/puhe-oceania-saapuminen-christchurch.mp3',
-  './assets/audio/puhe-oceania-saapuminen-cooberpedy.mp3',
-  './assets/audio/puhe-oceania-saapuminen-darwin.mp3',
-  './assets/audio/puhe-oceania-saapuminen-dili.mp3',
-  './assets/audio/puhe-oceania-saapuminen-exmouth.mp3',
-  './assets/audio/puhe-oceania-saapuminen-geraldton.mp3',
-  './assets/audio/puhe-oceania-saapuminen-hobart.mp3',
-  './assets/audio/puhe-oceania-saapuminen-honiara.mp3',
-  './assets/audio/puhe-oceania-saapuminen-kalgoorlie.mp3',
-  './assets/audio/puhe-oceania-saapuminen-melbourne.mp3',
-  './assets/audio/puhe-oceania-saapuminen-milfordsound.mp3',
-  './assets/audio/puhe-oceania-saapuminen-mountisa.mp3',
-  './assets/audio/puhe-oceania-saapuminen-norfolk.mp3',
-  './assets/audio/puhe-oceania-saapuminen-noumea.mp3',
-  './assets/audio/puhe-oceania-saapuminen-nullarbor.mp3',
-  './assets/audio/puhe-oceania-saapuminen-perth.mp3',
-  './assets/audio/puhe-oceania-saapuminen-portmoresby.mp3',
-  './assets/audio/puhe-oceania-saapuminen-portvila.mp3',
-  './assets/audio/puhe-oceania-saapuminen-sepik.mp3',
-  './assets/audio/puhe-oceania-saapuminen-suva.mp3',
-  './assets/audio/puhe-oceania-saapuminen-sydney.mp3',
-  './assets/audio/puhe-oceania-saapuminen-townsville.mp3',
-  './assets/audio/puhe-oceania-saapuminen-uluru.mp3',
-  './assets/audio/puhe-oceania-saapuminen-wellington.mp3',
-  './assets/audio/puhe-asia-saapuminen-astana.mp3',
-  './assets/audio/puhe-asia-saapuminen-bangkok.mp3',
-  './assets/audio/puhe-asia-saapuminen-hanoi.mp3',
-  './assets/audio/puhe-asia-saapuminen-hongkong.mp3',
-  './assets/audio/puhe-asia-saapuminen-irkutsk.mp3',
-  './assets/audio/puhe-asia-saapuminen-jakutsk.mp3',
-  './assets/audio/puhe-asia-saapuminen-jekaterinburg.mp3',
-  './assets/audio/puhe-asia-saapuminen-kamtsatka.mp3',
-  './assets/audio/puhe-asia-saapuminen-kashgar.mp3',
-  './assets/audio/puhe-asia-saapuminen-lhasa.mp3',
-  './assets/audio/puhe-asia-saapuminen-magadan.mp3',
-  './assets/audio/puhe-asia-saapuminen-manila.mp3',
-  './assets/audio/puhe-asia-saapuminen-novosibirsk.mp3',
-  './assets/audio/puhe-asia-saapuminen-peking.mp3',
-  './assets/audio/puhe-asia-saapuminen-sahalin.mp3',
-  './assets/audio/puhe-asia-saapuminen-samarkand.mp3',
-  './assets/audio/puhe-asia-saapuminen-shanghai.mp3',
-  './assets/audio/puhe-asia-saapuminen-soul.mp3',
-  './assets/audio/puhe-asia-saapuminen-taipei.mp3',
-  './assets/audio/puhe-asia-saapuminen-tokio.mp3',
-  './assets/audio/puhe-asia-saapuminen-ulanbator.mp3',
-  './assets/audio/puhe-asia-saapuminen-vladivostok.mp3',
-  './assets/audio/puhe-asia-saapuminen-xian.mp3',
   // Liput (tools/fetch-flags.mjs) — pieniä ja tarvitaan heti saapumiskortilla.
   './assets/liput/algeria.png',
   './assets/liput/austria.png',
@@ -815,44 +489,6 @@ const SHELL = [
   './assets/liput/syria.png',
   './assets/liput/united-arab-emirates.png',
   './assets/liput/yemen.png',
-  './assets/audio/puhe-africa-saapuminen-kairo.mp3',
-  './assets/audio/puhe-africa-saapuminen-marrakech.mp3',
-  './assets/audio/puhe-africa-saapuminen-lagos.mp3',
-  './assets/audio/puhe-africa-saapuminen-karthago.mp3',
-  './assets/audio/puhe-africa-saapuminen-tshadjarvi.mp3',
-  './assets/audio/puhe-africa-saapuminen-viktorianputoukset.mp3',
-  './assets/audio/puhe-africa-saapuminen-nairobi.mp3',
-  './assets/audio/puhe-africa-saapuminen-sthelena.mp3',
-  './assets/audio/puhe-africa-saapuminen-tripoli.mp3',
-  './assets/audio/puhe-africa-saapuminen-murzuk.mp3',
-  './assets/audio/puhe-africa-saapuminen-alkufra.mp3',
-  './assets/audio/puhe-africa-saapuminen-sahara.mp3',
-  './assets/audio/puhe-africa-saapuminen-ahaggar.mp3',
-  './assets/audio/puhe-africa-saapuminen-timbuktu.mp3',
-  './assets/audio/puhe-africa-saapuminen-gao.mp3',
-  './assets/audio/puhe-africa-saapuminen-dakar.mp3',
-  './assets/audio/puhe-africa-saapuminen-sierraleone.mp3',
-  './assets/audio/puhe-africa-saapuminen-kappalmas.mp3',
-  './assets/audio/puhe-africa-saapuminen-kumasi.mp3',
-  './assets/audio/puhe-africa-saapuminen-orjarannikko.mp3',
-  './assets/audio/puhe-africa-saapuminen-kano.mp3',
-  './assets/audio/puhe-africa-saapuminen-kamerun.mp3',
-  './assets/audio/puhe-africa-saapuminen-kongo.mp3',
-  './assets/audio/puhe-africa-saapuminen-angola.mp3',
-  './assets/audio/puhe-africa-saapuminen-namib.mp3',
-  './assets/audio/puhe-africa-saapuminen-kapkaupunki.mp3',
-  './assets/audio/puhe-africa-saapuminen-kimberley.mp3',
-  './assets/audio/puhe-africa-saapuminen-mosambik.mp3',
-  './assets/audio/puhe-africa-saapuminen-madagaskar.mp3',
-  './assets/audio/puhe-africa-saapuminen-sansibar.mp3',
-  './assets/audio/puhe-africa-saapuminen-kilimandzaro.mp3',
-  './assets/audio/puhe-africa-saapuminen-viktoria.mp3',
-  './assets/audio/puhe-africa-saapuminen-tanganjika.mp3',
-  './assets/audio/puhe-africa-saapuminen-bahrelghazal.mp3',
-  './assets/audio/puhe-africa-saapuminen-darfur.mp3',
-  './assets/audio/puhe-africa-saapuminen-suakin.mp3',
-  './assets/audio/puhe-africa-saapuminen-addisabeba.mp3',
-  './assets/audio/puhe-africa-saapuminen-rashafun.mp3',
 ];
 
 /*
@@ -868,7 +504,13 @@ const SHELL = [
  * kaupungin myötä — asennus olisi kasvanut kohtuuttomaksi. Sen sijaan
  * kuva tallentuu välimuistiin sinä hetkenä kun pelaaja sen ensi kerran
  * näkee (ks. KUVACACHE alempana), joten kerran nähty kaupunki toimii
- * offline. Peli itse, äänet ja kartat haetaan yhä etukäteen.
+ * offline.
+ *
+ * SAMA KOSKEE NYT ÄÄNIÄ (omistajan linjaus 16.8.2026). Luennat,
+ * visamusiikki ja viritysäänet tulevat ämpäristä ja tallentuvat
+ * AANICACHEen ensimmäisellä kuuntelulla; esilatauksessa on enää
+ * ydinsetti (huudahdukset ja tehosteet), joka on osa MEDIA-erää kuten
+ * ennenkin. Peli itse ja kartat haetaan yhä kokonaan etukäteen.
  */
 // Linssikuvat kuuluvat samaan erään: yölinssin kuva on satoja kilotavuja,
 // eikä sen katkennut lataus saa kaataa koko asennusta. Ilman tätä rivi
@@ -908,6 +550,87 @@ const KUVACACHE = 'matkakirja-wikikuvat-v1';
 const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
 
 /*
+ * Äänten ajonaikainen välimuisti (omistajan linjaus 16.8.2026).
+ *
+ * Oma kori, jota versionvaihto ei tyhjennä — kuten kuvilla. Äänet ovat
+ * kuvia isompia eivätkä vanhene version mukana: kerran kuultu luenta ei
+ * saa latautua uudelleen joka päivityksellä.
+ *
+ * Kori on kuvista ERILLÄÄN tarkoituksella. Luennat ovat satoja
+ * kilotavuja kappale, ja jos selaimen kiintiö täyttyy, kaadettavaksi
+ * pitää voida valita se kori, joka ei riko lehtien ulkoasua.
+ */
+const AANICACHE = 'matkakirja-aanet-v1';
+
+/**
+ * Osittaisvastaus (206) välimuistista noudetusta kokonaisesta äänestä.
+ *
+ * TÄMÄ ON KORIN EHTO, EI KORISTE. Cache API EI OTA VASTAAN 206-vastausta
+ * (`cache.put` hylkää sen), ja juuri sellaisen <audio>-elementti yleensä
+ * pyytää: Safari lähettää Range-otsakkeen aina, Chrome useimmiten.
+ * Ilman tätä koria ei siis koskaan täyttyisi — tai jos täyttyisi, siitä
+ * tarjottu 200-vastaus katkaisisi selaimen kelauksen. Siksi verkosta
+ * haetaan aina koko tiedosto, ja pala leikataan täällä.
+ *
+ * Tuntematon tai kelvoton alue palauttaa koko vastauksen; se on
+ * laillinen vastaus Range-pyyntöön eikä jätä ääntä soimatta.
+ */
+async function aaniPalanen(vastaus, alue) {
+  const tavut = await vastaus.clone().arrayBuffer();
+  const osuma = /^bytes=(\d*)-(\d*)$/.exec(alue.trim());
+  if (!osuma || (osuma[1] === '' && osuma[2] === '')) return vastaus;
+  const koko = tavut.byteLength;
+  // "bytes=-500" tarkoittaa viimeistä 500 tavua, ei alkua 0.
+  const alku = osuma[1] === '' ? Math.max(0, koko - Number(osuma[2])) : Number(osuma[1]);
+  const loppu = osuma[1] === '' || osuma[2] === ''
+    ? koko - 1
+    : Math.min(Number(osuma[2]), koko - 1);
+  if (!Number.isFinite(alku) || alku > loppu || alku >= koko) {
+    return new Response(null, {
+      status: 416,
+      headers: { 'Content-Range': `bytes */${koko}` },
+    });
+  }
+  const pala = tavut.slice(alku, loppu + 1);
+  return new Response(pala, {
+    status: 206,
+    statusText: 'Partial Content',
+    headers: {
+      'Content-Type': vastaus.headers.get('Content-Type') ?? 'audio/mpeg',
+      'Content-Length': String(pala.byteLength),
+      'Content-Range': `bytes ${alku}-${loppu}/${koko}`,
+      'Accept-Ranges': 'bytes',
+    },
+  });
+}
+
+/**
+ * Ääni peilistä: välimuisti ensin, talletus ensimmäisellä kuuntelulla.
+ *
+ * Nouto tehdään ILMAN pyynnön omaa Range-otsaketta ja CORS-tilassa —
+ * vain kokonainen, läpinäkyvä 200-vastaus kelpaa koriin. Jos CORS ei
+ * onnistu (peli avattu muualta kuin ravelius.github.io:sta, tai ämpärin
+ * sääntö on poistettu), pyyntö menee läpi sellaisenaan eikä mitään
+ * talleteta: ääni soi, mutta vasta verkon kautta.
+ */
+async function aaniPeilista(pyynto) {
+  const kori = await caches.open(AANICACHE);
+  const alue = pyynto.headers.get('range');
+  let vastaus = await kori.match(pyynto.url);
+  if (!vastaus) {
+    const haettu = await fetch(pyynto.url, { mode: 'cors' }).catch(() => null);
+    if (!haettu || !haettu.ok || haettu.status !== 200) {
+      return fetch(pyynto).catch(() => haettu ?? Response.error());
+    }
+    // Kiintiön täyttyminen ei saa jättää ääntä soimatta: talletus on
+    // pelkkää nopeutta, ja vastaus palautetaan joka tapauksessa.
+    await kori.put(pyynto.url, haettu.clone()).catch(() => {});
+    vastaus = haettu;
+  }
+  return alue ? aaniPalanen(vastaus, alue) : vastaus;
+}
+
+/*
  * Työhuoneen tiedostot — sama palvelutyöntekijä, eri strategia.
  *
  * Miksi yksi työntekijä kahdelle sovellukselle:
@@ -938,7 +661,7 @@ self.addEventListener('activate', (event) => {
     caches
       .keys()
       .then((keys) => Promise.all(
-        keys.filter((k) => k !== CACHE && k !== KUVACACHE
+        keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE
           // Lukijaäänen pysyvät säilöt (js/puhe.js) eivät ole tämän
           // workerin omia — siivous ei saa tuhota niitä versionvaihdossa.
           && !k.startsWith('matkakirja-puhe-')).map((k) => caches.delete(k))))
@@ -966,76 +689,90 @@ self.addEventListener('fetch', (event) => {
     // verkkotunnus. Ehto on silti tiukka, koska destination === 'image'
     // rajaa jo valmiiksi vain kuviin.
     //
-    // Peilin äänet jäävät tarkoituksella pois: ne ovat satoja
-    // megatavuja, ja selaimen oma välimuisti riittää niille.
+    // Äänet ovat oma haaransa heti kuvien jälkeen: ne tarvitsevat
+    // Range-käsittelyn (ks. aaniPalanen), jota kuvat eivät tarvitse.
     const kuvalahde = event.request.destination === 'image'
       && (osoite.hostname === 'upload.wikimedia.org'
         || (osoite.hostname === 'commons.wikimedia.org'
           && osoite.pathname.startsWith('/wiki/Special:FilePath/'))
         || (osoite.hostname.endsWith('.r2.dev')
           && /^\/(kuvat|liput)\//.test(osoite.pathname)));
-    if (!kuvalahde) return;
+    if (kuvalahde) {
+      /*
+       * CORS-nouto vain sinne, mistä sen tiedetään onnistuvan.
+       *
+       * Wikimedia lähettää Access-Control-Allow-Origin: *, joten sieltä
+       * vastaus on tavallinen (ei opaakki) ja kelpaa koriin sellaisenaan.
+       *
+       * Peili (R2:n oma pub-*.r2.dev-osoite) EI lähetä sitä otsaketta.
+       * Sinne tehty { mode: 'cors' } -nouto hylätään aina — ja juuri niin
+       * kävi: jokainen peilikuva epäonnistui palvelutyöntekijässä, ja peli
+       * eli koko ajan Commons-varareitin varassa. Yksittäinen kuva näytti
+       * silti toimivan, joten vika ei näkynyt mistään — paitsi silloin kun
+       * kuvia pyydettiin monta kerralla ja Commons alkoi rajoittaa: silloin
+       * pino jäi tyhjäksi tai kuva rikkinäiseksi.
+       *
+       * Peilille tehdään siis pyyntö sellaisenaan (kuvan oma no-cors),
+       * jolloin se onnistuu. Vastausta ei panna koriin: opaakki vastaus
+       * vie selaimen kiintiölaskennassa moninkertaisen tilan todelliseen
+       * kokoonsa nähden, ja peilin kuvilla on 30 vuorokauden
+       * Cache-Control, jonka selaimen oma välimuisti hoitaa.
+       *
+       * Offline-tuen saa takaisin lisäämällä ämpäriin CORS-säännön
+       * (Cloudflare: R2 > Settings > CORS policy, AllowedOrigins *).
+       * Silloin tämän ehdon voi poistaa.
+       *
+       * ── PÄIVITYS 6.8.2026: ÄMPÄRISSÄ ON NYT CORS-SÄÄNTÖ ──
+       *
+       * Tarkistettu vastauksen otsakkeista: kun pyyntö tulee osoitteesta
+       * https://ravelius.github.io, ämpäri vastaa
+       * `access-control-allow-origin: https://ravelius.github.io`.
+       * Peilikuvat voidaan siis panna koriin siinä missä Commonsinkin.
+       *
+       * Se ei ole pelkkä offline-parannus vaan korjaus toistuvaan
+       * vikaan: r2.dev on Cloudflaren rajoitettu kehitysosoite, ja
+       * lehden kansi pyytää kymmeniä kuvia kerralla. Kun mitään ei
+       * säilötty, joka avaus oli uusi purske — ja purske laukaisi
+       * katkaisijan (js/media.js), jolloin kuvat jäivät rikki. Kerran
+       * nähty kuva ei enää lähde verkkoon lainkaan.
+       *
+       * CORS-nouto YRITETÄÄN ensin ja tavallinen nouto jää varareitiksi.
+       * Näin peli toimii yhä sellaisenaan muualta avattuna (yhden
+       * tiedoston versio levyltä, oma verkkotunnus), jolloin ämpärin
+       * sääntö ei osu pyyntöön: silloin kuva haetaan kuten ennenkin
+       * eikä sitä säilötä.
+       */
+      event.respondWith(
+        caches.open(KUVACACHE).then(async (kuvat) => {
+          const osuma = await kuvat.match(event.request.url);
+          if (osuma) return osuma;
+          const vastaus = await fetch(event.request.url, { mode: 'cors' }).catch(() => null);
+          if (vastaus && vastaus.ok) {
+            kuvat.put(event.request.url, vastaus.clone());
+            return vastaus;
+          }
+          /*
+           * CORS ei onnistunut. Kuvan oma no-cors-pyyntö menee silti
+           * läpi — vastaus on opaakki eikä kelpaa koriin, mutta kuva
+           * näkyy. Tämä on sama reitti kuin ennen tätä muutosta.
+           */
+          return fetch(event.request).catch(() => vastaus ?? Response.error());
+        }),
+      );
+      return;
+    }
     /*
-     * CORS-nouto vain sinne, mistä sen tiedetään onnistuvan.
-     *
-     * Wikimedia lähettää Access-Control-Allow-Origin: *, joten sieltä
-     * vastaus on tavallinen (ei opaakki) ja kelpaa koriin sellaisenaan.
-     *
-     * Peili (R2:n oma pub-*.r2.dev-osoite) EI lähetä sitä otsaketta.
-     * Sinne tehty { mode: 'cors' } -nouto hylätään aina — ja juuri niin
-     * kävi: jokainen peilikuva epäonnistui palvelutyöntekijässä, ja peli
-     * eli koko ajan Commons-varareitin varassa. Yksittäinen kuva näytti
-     * silti toimivan, joten vika ei näkynyt mistään — paitsi silloin kun
-     * kuvia pyydettiin monta kerralla ja Commons alkoi rajoittaa: silloin
-     * pino jäi tyhjäksi tai kuva rikkinäiseksi.
-     *
-     * Peilille tehdään siis pyyntö sellaisenaan (kuvan oma no-cors),
-     * jolloin se onnistuu. Vastausta ei panna koriin: opaakki vastaus
-     * vie selaimen kiintiölaskennassa moninkertaisen tilan todelliseen
-     * kokoonsa nähden, ja peilin kuvilla on 30 vuorokauden
-     * Cache-Control, jonka selaimen oma välimuisti hoitaa.
-     *
-     * Offline-tuen saa takaisin lisäämällä ämpäriin CORS-säännön
-     * (Cloudflare: R2 > Settings > CORS policy, AllowedOrigins *).
-     * Silloin tämän ehdon voi poistaa.
-     *
-     * ── PÄIVITYS 6.8.2026: ÄMPÄRISSÄ ON NYT CORS-SÄÄNTÖ ──
-     *
-     * Tarkistettu vastauksen otsakkeista: kun pyyntö tulee osoitteesta
-     * https://ravelius.github.io, ämpäri vastaa
-     * `access-control-allow-origin: https://ravelius.github.io`.
-     * Peilikuvat voidaan siis panna koriin siinä missä Commonsinkin.
-     *
-     * Se ei ole pelkkä offline-parannus vaan korjaus toistuvaan
-     * vikaan: r2.dev on Cloudflaren rajoitettu kehitysosoite, ja
-     * lehden kansi pyytää kymmeniä kuvia kerralla. Kun mitään ei
-     * säilötty, joka avaus oli uusi purske — ja purske laukaisi
-     * katkaisijan (js/media.js), jolloin kuvat jäivät rikki. Kerran
-     * nähty kuva ei enää lähde verkkoon lainkaan.
-     *
-     * CORS-nouto YRITETÄÄN ensin ja tavallinen nouto jää varareitiksi.
-     * Näin peli toimii yhä sellaisenaan muualta avattuna (yhden
-     * tiedoston versio levyltä, oma verkkotunnus), jolloin ämpärin
-     * sääntö ei osu pyyntöön: silloin kuva haetaan kuten ennenkin
-     * eikä sitä säilötä.
+     * Peilin omat äänitiedostot (audio/): välimuisti ensin, talletus
+     * ensimmäisellä kuuntelulla. Ämpärissä on kaksi äänikansiota ja
+     * molemmat kuuluvat tänne — audio/ on pelin oma äänite (luenta,
+     * musiikki, viritysääni) ja aanet/ ulkopuolelta peilattu
+     * äänimaisema. Ne käyttäytyvät soitossa samoin, joten myös
+     * välimuistin on kohdeltava niitä samoin.
      */
-    event.respondWith(
-      caches.open(KUVACACHE).then(async (kuvat) => {
-        const osuma = await kuvat.match(event.request.url);
-        if (osuma) return osuma;
-        const vastaus = await fetch(event.request.url, { mode: 'cors' }).catch(() => null);
-        if (vastaus && vastaus.ok) {
-          kuvat.put(event.request.url, vastaus.clone());
-          return vastaus;
-        }
-        /*
-         * CORS ei onnistunut. Kuvan oma no-cors-pyyntö menee silti
-         * läpi — vastaus on opaakki eikä kelpaa koriin, mutta kuva
-         * näkyy. Tämä on sama reitti kuin ennen tätä muutosta.
-         */
-        return fetch(event.request).catch(() => vastaus ?? Response.error());
-      }),
-    );
+    if (osoite.hostname.endsWith('.r2.dev') && /^\/(?:audio|aanet)\//.test(osoite.pathname)) {
+      event.respondWith(aaniPeilista(event.request));
+      return;
+    }
     return;
   }
   // Repon omat valokuvat: sama kori kuin wikikuvilla, jotta ne eivät

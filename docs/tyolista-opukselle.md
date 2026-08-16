@@ -48,6 +48,12 @@ lisäohjeita:
 
 ## Paketti A1: Äänet R2:een + hybridivälimuisti (Opus 24, tilattu 16.8.2026)
 
+**✅ VALMIS (Opus 24, katselmoitu ja julkaistu v774:ssä 16.8.2026):**
+esilataus 242 → 62 Mt (äänet 181 Mt → 1,16 Mt / 39 tiedostoa);
+savuke 9/9, ml. ämpäri-404:n varareitti. Fablen jonossa:
+vie-aanet-ajo, tuotantotodennus, poistoerä (455 tiedostoa) ja
+työhuoneen R2-palkin audio-osuus (pieni jatkotyö main.js:ään).
+
 Omistajan päätös 16.8.2026 (Raamattu, Äänet-osio): äänet jaellaan
 R2:sta; esilataus vain ydinsetille; OFFLINE EI OLE TAVOITE. Tausta:
 sw.js esilataa nyt 420 äänitiedostoa (~200 Mt) joka asennuksessa.

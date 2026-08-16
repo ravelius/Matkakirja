@@ -45,6 +45,7 @@
 // requestAnimationFrame-silmukkaa. Kartta ei siis nyki virityksen alla.
 
 import { sfx } from '../sound.js';
+import { haeAani } from '../media.js';
 import { VIRITYSAANET, viritysPolku, arvoViritysaani } from '../packs/viritysaanet.js';
 
 /*
@@ -930,7 +931,10 @@ function haeNauha(audioCtx, aani) {
   if (valmis) return valmis;
 
   const lupaus = (async () => {
-    const vastaus = await fetch(viritysPolku(aani));
+    // haeAani: ämpäri ensin, repon polku varalla (js/media.js).
+    // Viritysäänet eivät ole enää sw.js:n esilatauslistalla, joten tämä
+    // on oikeasti verkkohaku ensimmäisellä kerralla.
+    const vastaus = await haeAani(viritysPolku(aani));
     if (!vastaus.ok) throw new Error(`HTTP ${vastaus.status}`);
     const tavut = await vastaus.arrayBuffer();
     // decodeAudioData ottaa myös takaisinkutsut; lupausmuoto on se, jota
@@ -951,8 +955,9 @@ function haeNauha(audioCtx, aani) {
  * EI PURA NIITÄ. Purkaminen veisi muistia turhaan — pelaaja ehkä avaa
  * radion mutta ei soita mitään. Nouto taas on 284 kt kerran ja poistaa
  * ainoan kohdan, jossa viritys voisi alkaa myöhässä: ensimmäisen
- * napautuksen. Palvelutyöntekijä on jo esiladannut nämä (sw.js SHELL),
- * joten tavallisesti tämä ei tee mitään verkkoon.
+ * napautuksen. Nouto menee ämpäriin (js/media.js haeAani) ja jää
+ * palvelutyöntekijän äänikoriin, joten seuraavilla kerroilla tämä ei
+ * tee mitään verkkoon.
  */
 export function esilataaViritysaanet(audioCtx = null) {
   if (viritystapa() !== 'nauha') return;
@@ -962,7 +967,7 @@ export function esilataaViritysaanet(audioCtx = null) {
   const kori = audioCtx ? nauhakori(audioCtx) : null;
   for (const aani of VIRITYSAANET) {
     if (kori?.has(aani.tiedosto)) continue;
-    fetch(viritysPolku(aani)).then((v) => v.arrayBuffer()).catch(() => {
+    haeAani(viritysPolku(aani)).then((v) => v.arrayBuffer()).catch(() => {
       /* nouto on pelkkää etukäteistyötä: virhe hoidetaan vasta haeNauhassa */
     });
   }
