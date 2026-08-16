@@ -24,6 +24,27 @@
 > ja vaihtaa visuaalisesti heikot. Esimerkki hylättävästä: kuva jossa
 > pääosassa on varjo tai yksityiskohta eikä itse kaupunki.
 
+> **ETUSIVUKUVAN KAAVA (omistajan linjaus 16.8.2026):** kaupungin
+> Matkailijalle-osion kuva on osion myyntikuva, ei kuvitus. Se näkyy
+> noin 272 pikselin levyisenä, joten sen on toimittava pienenä.
+> Omistajan sanoin: *"kuva pitää olla yksinkertainen, laadukas ja
+> houkutteleva eli wow efekti jostain maan erikoisuudesta."*
+>
+> 1. **Yksi aihe, joka täyttää ruudun.** Ei katunäkymää, ei useaa
+>    kohdetta, ei ihmisjoukkoa.
+> 2. **Aiheen on oltava paikan oma erikoisuus** — se, jonka takia
+>    sinne matkustetaan. Kuva, joka voisi olla mistä tahansa
+>    kaupungista, ei kelpaa, vaikka se olisi kuinka siisti.
+> 3. **Commonsin Featured picture tai Quality image**, jos sellainen on
+>    olemassa: ne on jo arvioitu laadun takia.
+> 4. **Selkeä valo ja rauhallinen tausta.** Pääaihe keskelle tai
+>    alavasemmalle — oikean yläkulman yli kulkee Matkaopas-nauha.
+>
+> Pariisissa meni kaksi yritystä: terassinäkymä oli pienessä koossa
+> sekava, ja sitä seurannut kahvikuva oli yksinkertainen mutta olisi
+> voinut olla mistä tahansa (*"tämä kuva ei houkuttele
+> matkustamaan"*). Kolmas osui: Eiffel-torni tyhjää taivasta vasten.
+
 ## Vakiokäynnistys
 
 Jos saat tehtäväksi "jatka työlistaa" (tai vastaavaa), toimi näin ilman
