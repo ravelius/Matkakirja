@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v802 — lehden alanapit kotipalkin yläpuolelle iPadilla',
   'v801 — kohdekortti: kaiutin otsikon perään, 5/6 pois',
   'v800 — etusivun avausteksti pergamentille, ei tummalle',
   'v799 — arkin alalaidan napit takaisin ruudulle iPadilla',

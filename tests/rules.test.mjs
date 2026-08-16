@@ -4205,6 +4205,37 @@ test('arkin inline-katto vähentää turva-alueet', () => {
 });
 
 /*
+ * KOTIPALKIN VARA EI SAA KADOTA MEDIA QUERYSSÄ.
+ *
+ * Omistajan havainto 16.8.2026: *"vieläkin sama bugi alhaalla"* —
+ * arkin alalaidan napit olivat yhä kotipalkin alla iPadilla, vaikka
+ * v791 lisäsi varan. Syy: `@media (min-width: 700px)` ylikirjoitti
+ * kortin pehmusteen pelkällä `2.2rem`:llä, ja 700 px on juuri iPadin
+ * raja. Korjaus päti siis puhelimeen muttei siihen laitteeseen, jolla
+ * vika nähtiin.
+ *
+ * Arkki on tällä leveydellä koko ruudun korkuinen (height: 100dvh),
+ * joten pehmuste on ainoa paikka, jossa kotipalkille voi varata tilaa.
+ */
+test('arkin alapehmuste varaa kotipalkin myös leveällä ruudulla', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+
+  // Jokainen .dialog.arkki .dialog-card -sääntö, joka asettaa paddingin.
+  const saannot = [...css.matchAll(
+    /\.dialog\.arkki \.dialog-card \{([\s\S]*?)\n\s*\}/g,
+  )].map((m) => m[1]).filter((runko) => /\n\s*padding:/.test(runko));
+
+  assert.ok(saannot.length >= 2,
+    `padding-sääntöjä pitäisi olla vähintään kaksi (perus + leveä), löytyi ${saannot.length}`);
+
+  for (const runko of saannot) {
+    const padding = runko.match(/\n\s*padding:[^;]+;/)?.[0] ?? '';
+    assert.match(padding, /safe-area-inset-bottom/,
+      `arkin kortin padding ei varaa kotipalkkia: ${padding.trim()}`);
+  }
+});
+
+/*
  * ARKIN KORKEUSKATTO EI SAA NOJATA PELKKÄÄN dvh:hon.
  *
  * Omistajan havainto 16.8.2026 iPadilla: *"alareunasta puuttuu
