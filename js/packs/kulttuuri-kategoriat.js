@@ -2274,105 +2274,215 @@ export const KULTTUURI_KATEGORIAT = {
           + 'kaukana keskustasta ollaan. Seine halkaisee kaupungin kahtia, '
           + 'ja sen kivetyt rannat ovat kesäisin kaupunkilaisten '
           + 'oleskelupaikka.',
+        /*
+         * MATKAILIJAN OPAS 2.0 — PARIISI-PILOTTI (paketti O1,
+         * 16.8.2026). Taitto vaihdettiin ripotellusta jaksotettuun:
+         * leipäteksti on sanatarkasti sama kuin ennen, mutta jaettu
+         * viiteen aihejaksoon väliotsikoin, ja kunkin jakson oma kuva
+         * on koko palstan levyinen. Kuvat, selitteet ja lisenssit ovat
+         * ennallaan (tarkistettu Commonsin API:sta 16.8.2026) — vain
+         * niiden paikka jutussa on uusi.
+         */
         artikkeli: {
           nimi: 'Matkailijan Pariisi',
-          teksti: 'Pariisia ei kannata yrittää nähdä kokonaan. Kaupunki on '
-            + 'tiivis ja matala: Haussmannin 1800-luvun kaavassa talot '
-            + 'ladottiin saman korkuisiksi, ja siksi katot muodostavat '
-            + 'yhtenäisen sinkkimeren, jonka yli näkee kauas. Metro on '
-            + 'Euroopan tiheimpiä — asemia on yli kolmesataa, eikä '
-            + 'keskustassa juuri missään ole viittäsataa metriä pidempi '
-            + 'matka lähimmälle asemalle. Silti paras kulkutapa on '
-            + 'kävely, koska kiinnostavin osa Pariisia on kadun tasolla: '
-            + 'leipomon ikkuna, sisäpiha portin takana, sininen '
-            + 'emalinen kadunnimikyltti.'
-            + '\n\n'
-            + 'Seinen rannat ovat kaupungin pisin kävelyreitti. Jokea '
-            + 'reunustavat kivimuurit, ja niiden päällä seisovat vihreät '
-            + 'peltilaatikot: bouquinistit myyvät niistä käytettyjä '
-            + 'kirjoja, vanhoja lehtiä ja julisteita, ja ammattikunta on '
-            + 'ollut rannoilla 1500-luvulta asti. Kauppiaita on '
-            + 'parisensataa ja laatikoita satoja, ja ne aukeavat säällä '
-            + 'kuin säällä. Jokilaiva näyttää saman reitin vedestä käsin: '
-            + 'Île de la Citén kärjen, sillat ja Louvren pitkän '
-            + 'julkisivun.'
-            + '\n\n'
-            + 'Pariisilaisen oma tapa viettää päivää on yksinkertainen: '
-            + 'istua alas. Luxembourgin puutarhassa on tuhansia irrallisia '
-            + 'rautatuoleja, jotka saa raahata mihin haluaa — aurinkoon, '
-            + 'varjoon tai altaan reunalle, jossa lapset työntävät '
-            + 'vuokrattuja purjeveneitä liikkeelle kepillä. Kahvilassa '
-            + 'yksi kahvi ostaa pöydän tunniksi eikä kiirettä ole. '
-            + 'Toriaamu on toinen instituutio: ruokatoreja pystytetään '
-            + 'kadunvarsille pari kertaa viikossa, ja niiltä ostetaan '
-            + 'juustot, hedelmät ja kukat.'
-            + '\n\n'
-            + 'Leipomo on pariisilaisen arjen keskus. Patonki on suojattu '
-            + 'asetuksella: perinteinen baguette de tradition saa sisältää '
-            + 'vain jauhoja, vettä, suolaa ja hiivaa, eikä sitä saa '
-            + 'missään vaiheessa pakastaa. Kaupungissa järjestetään joka '
-            + 'vuosi kilpailu parhaasta patongista, ja voittaja toimittaa '
-            + 'leipänsä presidentin palatsiin vuoden ajan. Leipomon '
-            + 'naapurissa on tavallisesti juustokauppa ja lihakauppa, ja '
-            + 'illallinen syödään myöhään — moni ravintola avaa vasta '
-            + 'puoli kahdeksalta.'
-            + '\n\n'
-            + 'Illalla kannattaa nousta ylös. Montmartre on kukkula '
-            + 'kaupungin pohjoisreunalla, ja sinne noustaan portaita, '
-            + 'joita on satoja; ylhäältä Sacré-Cœurin edustalta koko '
-            + 'Pariisi levittyy eteen matalana ja tasaisena. Alempana '
-            + 'kujat ovat kapeita ja hiljaisia, ja katulyhtyjen alla '
-            + 'kaupunki näyttää vanhemmalta kuin päivällä. Eiffel-torni '
-            + 'vastaa omalla tavallaan: pimeän tultua se välkkyy viiden '
-            + 'minuutin ajan aina tasatunnein.',
-          /*
-           * Artikkelin kuvat taitettuina tekstin lomaan (taitto:
-           * 'ripoteltu'): ensimmäinen avauskappaleen jälkeen, loput
-           * kelluvat tasajaolla aiheensa kappaleen kohdalle
-           * (bouquinistit, Luxembourgin allas, leipomo, Montmartre).
-           * Lisenssit tarkistettu Commonsin API:sta 16.8.2026, kuvat
-           * katsottu silmin ja sijainti varmistettu kuvaustekstistä.
-           */
-          taitto: 'ripoteltu',
-          kuvat: [
+          taitto: 'opas',
+          // Oppaassa teksti-kenttä on INGRESSI: yksi lause ennen
+          // ensimmäistä väliotsikkoa. Leipäteksti asuu jaksoissa.
+          teksti: 'Pariisia ei kannata yrittää nähdä kokonaan.',
+          jaksot: [
             {
-              tiedosto: 'Paris sunset from Tour Montparnasse observation deck - 6.jpg',
-              selite: 'Auringonlasku Tour Montparnassen näköalatasanteelta. '
-                + 'Matala kattomeri jatkuu horisonttiin, ja siitä nousee '
-                + 'esiin vain Eiffel-torni — Pariisi on rakennettu '
-                + 'leveäksi eikä korkeaksi.',
-              lahde: 'APK, Wikimedia Commons (CC BY-SA 4.0)',
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupunki on tiivis ja matala: Haussmannin 1800-luvun '
+                + 'kaavassa talot ladottiin saman korkuisiksi, ja siksi '
+                + 'katot muodostavat yhtenäisen sinkkimeren, jonka yli '
+                + 'näkee kauas. Metro on Euroopan tiheimpiä — asemia on '
+                + 'yli kolmesataa, eikä keskustassa juuri missään ole '
+                + 'viittäsataa metriä pidempi matka lähimmälle asemalle. '
+                + 'Silti paras kulkutapa on kävely, koska kiinnostavin '
+                + 'osa Pariisia on kadun tasolla: leipomon ikkuna, '
+                + 'sisäpiha portin takana, sininen emalinen '
+                + 'kadunnimikyltti.',
+              kuva: {
+                tiedosto: 'Paris sunset from Tour Montparnasse observation deck - 6.jpg',
+                selite: 'Auringonlasku Tour Montparnassen näköalatasanteelta. '
+                  + 'Matala kattomeri jatkuu horisonttiin, ja siitä nousee '
+                  + 'esiin vain Eiffel-torni — Pariisi on rakennettu '
+                  + 'leveäksi eikä korkeaksi.',
+                lahde: 'APK, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
-              tiedosto: 'Paris 75005 Quai de Montebello Bouquinistes 20071014.jpg',
-              selite: 'Bouquinistin laatikko auki Quai de Montebellolla: '
-                + 'käytettyjä kirjoja, vanhoja Le Petit Journalin '
-                + 'etusivuja ja postikorttitelineitä.',
-              lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 3.0)',
+              otsikko: 'Seine',
+              teksti: 'Seinen rannat ovat kaupungin pisin kävelyreitti. Jokea '
+                + 'reunustavat kivimuurit, ja niiden päällä seisovat '
+                + 'vihreät peltilaatikot: bouquinistit myyvät niistä '
+                + 'käytettyjä kirjoja, vanhoja lehtiä ja julisteita, ja '
+                + 'ammattikunta on ollut rannoilla 1500-luvulta asti. '
+                + 'Kauppiaita on parisensataa ja laatikoita satoja, ja ne '
+                + 'aukeavat säällä kuin säällä. Jokilaiva näyttää saman '
+                + 'reitin vedestä käsin: Île de la Citén kärjen, sillat ja '
+                + 'Louvren pitkän julkisivun.',
+              kuva: {
+                tiedosto: 'Paris 75005 Quai de Montebello Bouquinistes 20071014.jpg',
+                selite: 'Bouquinistin laatikko auki Quai de Montebellolla: '
+                  + 'käytettyjä kirjoja, vanhoja Le Petit Journalin '
+                  + 'etusivuja ja postikorttitelineitä.',
+                lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 3.0)',
+              },
             },
             {
-              tiedosto: 'Paris 75006 Jardin du Luxembourg Bassin 20160502.jpg',
-              selite: 'Luxembourgin puutarhan altaalla purjehditaan '
-                + 'vuokraveneillä: vene työnnetään liikkeelle kepillä ja '
-                + 'odotetaan, että tuuli tuo sen takaisin toiselle '
-                + 'reunalle.',
-              lahde: 'Wulf Alex, Wikimedia Commons (CC0)',
+              otsikko: 'Istumisen taito',
+              teksti: 'Pariisilaisen oma tapa viettää päivää on '
+                + 'yksinkertainen: istua alas. Luxembourgin puutarhassa on '
+                + 'tuhansia irrallisia rautatuoleja, jotka saa raahata '
+                + 'mihin haluaa — aurinkoon, varjoon tai altaan reunalle, '
+                + 'jossa lapset työntävät vuokrattuja purjeveneitä '
+                + 'liikkeelle kepillä. Kahvilassa yksi kahvi ostaa pöydän '
+                + 'tunniksi eikä kiirettä ole. Toriaamu on toinen '
+                + 'instituutio: ruokatoreja pystytetään kadunvarsille pari '
+                + 'kertaa viikossa, ja niiltä ostetaan juustot, hedelmät '
+                + 'ja kukat.',
+              kuva: {
+                tiedosto: 'Paris 75006 Jardin du Luxembourg Bassin 20160502.jpg',
+                selite: 'Luxembourgin puutarhan altaalla purjehditaan '
+                  + 'vuokraveneillä: vene työnnetään liikkeelle kepillä ja '
+                  + 'odotetaan, että tuuli tuo sen takaisin toiselle '
+                  + 'reunalle.',
+                lahde: 'Wulf Alex, Wikimedia Commons (CC0)',
+              },
             },
             {
-              tiedosto: 'La Désirade, 69 bis Rue Brancion, 75015 Paris, August 2015.jpg',
-              selite: 'Punainen leipomo Rue Brancionilla. Kyltissä lukee '
-                + 'ARTISAN BOULANGER ja PATISSIER, ja ohikulkija kantaa '
-                + 'patonkia kädessään.',
-              lahde: 'Besopha, Wikimedia Commons (CC BY 2.0)',
+              otsikko: 'Leipomon kaupunki',
+              teksti: 'Leipomo on pariisilaisen arjen keskus. Patonki on '
+                + 'suojattu asetuksella: perinteinen baguette de tradition '
+                + 'saa sisältää vain jauhoja, vettä, suolaa ja hiivaa, '
+                + 'eikä sitä saa missään vaiheessa pakastaa. Kaupungissa '
+                + 'järjestetään joka vuosi kilpailu parhaasta patongista, '
+                + 'ja voittaja toimittaa leipänsä presidentin palatsiin '
+                + 'vuoden ajan. Leipomon naapurissa on tavallisesti '
+                + 'juustokauppa ja lihakauppa, ja illallinen syödään '
+                + 'myöhään — moni ravintola avaa vasta puoli kahdeksalta.',
+              kuva: {
+                tiedosto: 'La Désirade, 69 bis Rue Brancion, 75015 Paris, August 2015.jpg',
+                selite: 'Punainen leipomo Rue Brancionilla. Kyltissä lukee '
+                  + 'ARTISAN BOULANGER ja PATISSIER, ja ohikulkija kantaa '
+                  + 'patonkia kädessään.',
+                lahde: 'Besopha, Wikimedia Commons (CC BY 2.0)',
+              },
             },
             {
-              tiedosto: 'Paris 75018 Rue du Mont-Cenis no 025 stairs towards Rue Saint-Vincent at night.jpg',
-              selite: 'Montmartren portaat yöllä Rue du Mont-Cenis\'llä. '
-                + 'Lyhdyt johtavat alas kukkulalta, ja kaukana '
-                + 'kimmeltävät kaupungin valot.',
-              lahde: 'AlfvanBeem, Wikimedia Commons (CC0)',
+              otsikko: 'Ilta',
+              teksti: 'Illalla kannattaa nousta ylös. Montmartre on kukkula '
+                + 'kaupungin pohjoisreunalla, ja sinne noustaan portaita, '
+                + 'joita on satoja; ylhäältä Sacré-Cœurin edustalta koko '
+                + 'Pariisi levittyy eteen matalana ja tasaisena. Alempana '
+                + 'kujat ovat kapeita ja hiljaisia, ja katulyhtyjen alla '
+                + 'kaupunki näyttää vanhemmalta kuin päivällä. '
+                + 'Eiffel-torni vastaa omalla tavallaan: pimeän tultua se '
+                + 'välkkyy viiden minuutin ajan aina tasatunnein.',
+              kuva: {
+                tiedosto: 'Paris 75018 Rue du Mont-Cenis no 025 stairs towards Rue Saint-Vincent at night.jpg',
+                selite: 'Montmartren portaat yöllä Rue du Mont-Cenis\'llä. '
+                  + 'Lyhdyt johtavat alas kukkulalta, ja kaukana '
+                  + 'kimmeltävät kaupungin valot.',
+                lahde: 'AlfvanBeem, Wikimedia Commons (CC0)',
+              },
             },
           ],
+          /*
+           * Tekstinosto jaksojen 2 ja 3 väliin (omistajan speksi antoi
+           * lauseen sanatarkasti). Lause on jakson 3 leipätekstistä:
+           * lehtinosto toistaa jutun oman virkkeen, se ei ole uusi väite.
+           */
+          nosto: 'Kahvilassa yksi kahvi ostaa pöydän tunniksi, eikä kiirettä '
+            + 'ole.',
+          matkailu: {
+            parasAika: 'Paras aika on touko–kesäkuu ja syyskuu: päivät ovat '
+              + 'pitkiä, lämpötila asettuu kahdenkymmenen tienoille eikä '
+              + 'helle vaivaa. Elokuu on lämmin mutta puolityhjä — noin '
+              + 'puolet pariisilaisista on silloin itse lomalla, ja moni '
+              + 'pieni kauppa on kiinni.',
+            /*
+             * KAUSIEN LÄMPÖHAARUKAT: kauden kuukausien keskimääräinen
+             * yölämpötila (alaraja) ja päivälämpötila (yläraja)
+             * pyöristettynä kokonaisiksi asteiksi. Luvut ovat
+             * en-Wikipedian Paris-artikkelin ilmastotaulukosta (Parc
+             * Montsouris, normaalikausi 1991–2020; haettu 16.8.2026):
+             *   päivä °C  I–XII: 7,6 8,8 12,8 16,6 20,2 23,4 25,7 25,6
+             *                    21,5 16,5 11,1 8,0
+             *   yö    °C  I–XII: 3,2 3,3  5,6  7,9 11,1 14,2 16,2 16,0
+             *                    13,0  9,9  6,2 3,8
+             *   aurinkotunnit: tammikuu 59, heinäkuu 222 (vuosi 1717)
+             * Valoisan ajan pituudet, Paris Plages ja elokuun lomakausi
+             * ovat Wikivoyagen Paris-artikkelista (haettu 16.8.2026).
+             */
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '6–20 °C',
+                kuvaus: 'Puistot heräävät ja terassit avataan. Sää vaihtelee '
+                  + 'saman päivän sisällä, joten takki kannattaa ottaa '
+                  + 'mukaan aurinkoisenakin aamuna.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '14–26 °C',
+                kuvaus: 'Aurinko on ylhäällä kuudesta lähes kymmeneen illalla, '
+                  + 'ja Seinen rannoille ajetaan heinä–elokuuksi hiekkaa. '
+                  + 'Helleaallot nostavat lämpötilan ajoittain yli '
+                  + 'kolmenkymmenenviiden asteen.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '6–22 °C',
+                kuvaus: 'Syyskuu on yhä lämmin ja valoisa, marraskuu jo '
+                  + 'harmaa. Kaupungin oma vuosi alkaa syyskuussa, kun '
+                  + 'koulut ja näyttelykaudet käynnistyvät.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '3–9 °C',
+                kuvaus: 'Pakkanen jää harvoin päälle ja lunta sataa vain '
+                  + 'muutamana päivänä, mutta aurinkoa on niukasti: '
+                  + 'tammikuussa vajaat 60 tuntia koko kuussa, ja pimeä '
+                  + 'tulee jo viideltä.',
+              },
+            ],
+            hintataso: '€€€',
+            /*
+             * ANKKURIHINNAT 2026. Metro- ja päivälippu ovat
+             * Île-de-France Mobilitésin 1.1.2026 hinnastosta ja Louvren
+             * pääsymaksu museon omalta sivulta (ETA-alueen hinta;
+             * ETA:n ulkopuolelta 32 €). Molemmat tarkistettu 16.8.2026.
+             * Kahvi, patonki ja illallinen ovat tavanomaisia
+             * katuhintahaarukoita eivätkä yhden lähteen lukuja.
+             */
+            hinnat: [
+              { mita: 'Espresso tiskillä', hinta: '1,50–2,50 €' },
+              { mita: 'Patonki leipomosta', hinta: '1,20–1,60 €' },
+              { mita: 'Metrolippu (päivälippu 12,30 €)', hinta: '2,55 €' },
+              { mita: 'Museolippu (Louvre 22 €)', hinta: '12–22 €' },
+              { mita: 'Illallinen bistrossa', hinta: '25–45 €' },
+            ],
+            linkit: [
+              {
+                nimi: 'Paris je t’aime — kaupungin oma matkailusivu',
+                url: 'https://parisjetaime.com/',
+              },
+              {
+                nimi: 'Wikivoyage: Pariisi',
+                url: 'https://fi.wikivoyage.org/wiki/Pariisi',
+              },
+              {
+                nimi: 'RATP — metro, bussit ja liput',
+                url: 'https://www.ratp.fr/en',
+              },
+            ],
+          },
           lahde: 'Wikipedia',
         },
       },
