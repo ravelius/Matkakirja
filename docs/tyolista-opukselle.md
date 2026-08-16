@@ -46,7 +46,24 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
-## Paketti O3: Matkailijan opas 2.2 — kevyt kainalo, säägraafi, kuvahionta (Opus 27, tilattu 16.8.2026)
+## Paketti O3: Matkailijan opas 2.2 — kevyt kainalo, säägraafi, kuvahionta (Opus 27, tilattu 16.8.2026) ✅ VALMIS
+
+**Kuittaus (Opus sijaispäätoimittaja 16.8.2026):** Opus 27 toimitti
+kaikki viisi osaa ja perusteellisen raportin; julkaistu **v782**
+(PR #1173). Kainalotaulu on yksi kehys kahdella pohjavärillä ja rivit
+avaavat pelin oman pikkuselosteen; säägraafi on käsin piirretty SVG,
+jonka 24 ilmastolukua todennettiin erikseen en-Wikipedian
+Paris-weatherboxista (Météo-France, Parc Montsouris 1991–2020);
+Luxembourg-karuselli käyttää olemassa olevaa `nahtavyydenKaruselli`-
+mekanismia; kapea asettelu tehtiin `flow-root`-luokalla eikä
+`:has()`-valitsimella. Kaikki kolme uutta kuvaa todennettiin
+Commonsin API:sta (Restrictions tyhjä) ja katsottiin silmin; sijainti
+luettiin kuvauksesta ja kategorioista. Julkaisussa korjattiin yksi
+katselmoinnissa löytynyt vika: pelin yleinen `button:hover`-tausta
+maalasi kainalorivin ja säägraafin tummaksi laatikoksi oppaan
+paperille. Raportin havainnot 1–7 (mm. `hyvaTietaa`-datamallin
+rikkova muutos monistukselle ja `kuvateksti-audit.mjs`:n
+jaksot[].kuva-aukko) on viety Fablen 17.8. käsittelyyn.
 
 Omistajan palaute opas 2.1:stä ja lehden etusivusta 16.8.2026
 (iPad-kuvakaappauksista). Viisi osaa — kaikki koskevat vain Pariisia
