@@ -15044,6 +15044,23 @@ export class UI {
     // on heti esillä täydessä koossaan.
     const nakyy = this.game.phase === 'pickstart' && !this.katselu;
     this.introEl.hidden = !nakyy;
+    /*
+     * PERGAMENTTI KOKO PANEELIIN AVAUKSEN AJAKSI (omistajan havainto
+     * 16.8.2026 iPadilla: "etusivu näkyy väärin").
+     *
+     * Avausteksti kirjoittuu kartan alapuoliseen tyhjään tilaan, kuten
+     * tämän metodin kuvaus sanoo — mutta se tila oli pergamentin sijaan
+     * paneelin tummaa pohjaa (#241a12). Maailmankartta on leveä ja
+     * säilyttää kuvasuhteensa, joten korkealla ruudulla sen alle jää
+     * paneelia, jota kartta ei peitä: iPadilla mitattuna reilut 300 px,
+     * ja teksti putosi kokonaan sen tummalle alueelle.
+     *
+     * Sama vika on ratkaistu ennenkin puhelimen lähikuvassa
+     * (body.aloitus-zoom .map-pane): siellä paneeli sai saman
+     * pergamenttiliu'un kuin kartta, jottei tumma pohja paista reunoilta.
+     * Tässä on sama tilanne ilman zoomia, joten sama keino.
+     */
+    document.body.classList.toggle('aloitusnakyma', nakyy);
     // Uusi peli tuo tekstin takaisin täyteen näkyvyyteen häivytyksestä —
     // mutta lähikuvassa teksti on väistynyt tarkoituksella, joten sitä ei
     // palauteta joka renderöinnillä.

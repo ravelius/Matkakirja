@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 800, teksti: 'Etusivun avausteksti pergamentille' },
   { v: 799, teksti: 'Arkin alalaita takaisin ruudulle' },
   { v: 798, teksti: 'Pöllön kuvapopup isommaksi' },
   { v: 797, teksti: 'Oppaan otsikko esiin loveuksen alta' },

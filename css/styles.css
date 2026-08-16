@@ -925,8 +925,16 @@ button, .brand, .turn-pill, .fact-card h2 {
 /* Lähikuvassa kartta ei aina peitä paneelia kokonaan (liu'un alussa se
    on vasta kasvamassa). Paneelin oma tumma tausta paistoi tällöin
    reunoilta; sama pergamentin väriliuku kuin kartalla peittää sen. */
+/*
+ * Sama pergamentti myös AVAUSNÄKYMÄSSÄ ilman zoomia (omistajan havainto
+ * 16.8.2026 iPadilla). Maailmankartta on leveä ja säilyttää
+ * kuvasuhteensa, joten korkealla ruudulla sen alapuolelle jää paneelia,
+ * jota kartta ei peitä — ja juuri siihen tilaan avausteksti kirjoittuu.
+ * Ilman tätä teksti oli tummalla pohjalla keskellä tyhjää.
+ */
 body.aloitus-zoom .map-pane,
-body.manner-zoom .map-pane {
+body.manner-zoom .map-pane,
+body.aloitusnakyma .map-pane {
   background: radial-gradient(circle at 50% 46%, #f6e7c6 0%, #ecd8ae 55%, #cfae79 100%);
 }
 
