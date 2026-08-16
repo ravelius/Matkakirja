@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 781, teksti: 'Etusivun nauha koko osion yli, pehmeämmät värit' },
   { v: 780, teksti: 'Opas 2.1: kainalot, paletti, iso otsikko, lämmin kuva' },
   { v: 779, teksti: 'Etusivun opaskyltti: yksi diagonaalinauha' },
   { v: 778, teksti: 'Matkailijalle-kuvatekstit yhteen lauseeseen (7 kaupunkia)' },

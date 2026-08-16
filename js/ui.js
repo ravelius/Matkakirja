@@ -12396,10 +12396,12 @@ export class UI {
         }
         kotelo.appendChild(teksti);
       }
-      // Nauha kuvan oikeaan yläkulmaan (CSS leikkaa kulmaan).
-      if (avaaOpas) kotelo.appendChild(luoNauha());
       lohko.appendChild(kotelo);
     }
+    // Nauha koko osion oikeaan yläkulmaan (omistajan tarkennus
+    // 16.8.2026: nauha kulkee kuvan reunan yli, vaalean pohjan
+    // yläreunasta oikeaan sivureunaan) — kiinnitys osioon, ei kuvaan.
+    if (avaaOpas) lohko.appendChild(luoNauha());
     let viimeinenKappale = null;
     for (const kappale of tiedot.kappale.split('\n\n').filter(Boolean)) {
       viimeinenKappale = html('p', 'kaupunkikartta-esittely', kappale);
@@ -12412,8 +12414,6 @@ export class UI {
       viimeinenKappale.appendChild(document.createTextNode(' '));
       viimeinenKappale.appendChild(lue);
     }
-    // Kuvattomassa kaupungissa nauhalle ei ole kulmaa — Lue lisää
-    // -linkki tekstin lopussa riittää sisäänkäynniksi.
     kohde.appendChild(lohko);
   }
 
