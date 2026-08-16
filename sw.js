@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.791';
+const CACHE = 'matkakirja-2026-08-09.792';
 const SHELL = [
   './',
   './index.html',
@@ -256,6 +256,8 @@ const SHELL = [
   './assets/kartat/miniatyyrit/pariisi-sacre-coeur.webp',
   './assets/kartat/miniatyyrit/pariisi-pantheon.webp',
   './assets/kartat/miniatyyrit/pariisi-notre-dame.webp',
+  './assets/kartat/miniatyyrit/pariisi-palais-garnier.webp',
+  './assets/kartat/miniatyyrit/pariisi-place-des-vosges.webp',
   './assets/kartat/miniatyyrit/lontoo-buckinghamin-palatsi.webp',
   './assets/kartat/miniatyyrit/lontoo-trafalgar-square.webp',
   './assets/kartat/miniatyyrit/lontoo-big-ben.webp',
