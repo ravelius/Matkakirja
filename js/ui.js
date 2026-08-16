@@ -13572,6 +13572,10 @@ export class UI {
       p.classList.add('opas-ingressi');
       sisalto.appendChild(p);
     }
+    // Kainalot heti ingressin jälkeen, ennen ensimmäistä jaksoa: ne
+    // ovat lukijan pikasilmäys kaupunkiin ennen kuin juttu alkaa.
+    const kainalot = this.opasKainalot(matkailu);
+    if (kainalot) sisalto.appendChild(kainalot);
     // Jakson indeksi → lohko, joka tulee sen JÄLKEEN.
     const valiin = new Map();
     if (matkailu?.parasAika || matkailu?.kaudet?.length) {
@@ -13609,6 +13613,75 @@ export class UI {
       osa.appendChild(kehys);
     }
     return osa;
+  }
+
+  /**
+   * KAINALONOSTOT (omistajan palaute 16.8.2026): kaksi lyhyttä lohkoa
+   * heti ingressin jälkeen — "Parasta täällä" lämpimällä pohjalla ja
+   * "Hyvä tietää" viileällä.
+   *
+   * Ne ovat lukijan pikasilmäys: ennen kuin juttu alkaa, matkailija
+   * näkee mitä kaupungista kannattaa hakea ja mitä siinä kannattaa
+   * varautua sietämään. Pari on YKSI elementti eikä kaksi irrallista,
+   * jotta ne pysyvät rinnakkain samassa reunassa eivätkä erkane
+   * toisistaan jaksojen väliin.
+   *
+   * Kunnioitus-pilari koskee myös varjopuolia: "Hyvä tietää" on
+   * faktoja matkailijalle, ei kaupungin mollausta — eikä siinä ole
+   * tähtiä, koska haitoille ei anneta arvosanoja.
+   */
+  opasKainalot(matkailu) {
+    const parasta = matkailu?.parasta ?? [];
+    const hyvaTietaa = matkailu?.hyvaTietaa ?? [];
+    if (!parasta.length && !hyvaTietaa.length) return null;
+    const pari = html('div', 'opas-kainalot');
+    if (parasta.length) {
+      const lohko = html('aside', 'opas-kainalo opas-parasta');
+      lohko.appendChild(html('h3', 'opas-kainalo-otsikko', 'Parasta täällä'));
+      const lista = html('ul', 'opas-parasta-lista');
+      for (const rivi of parasta) {
+        const kohta = html('li', 'opas-parasta-rivi');
+        const paa = html('p', 'opas-parasta-paa');
+        paa.appendChild(html('span', 'opas-parasta-mita', rivi.mita ?? ''));
+        paa.appendChild(this.opasTahdet(rivi.tahdet));
+        kohta.appendChild(paa);
+        if (rivi.selite) kohta.appendChild(html('p', 'opas-parasta-selite', rivi.selite));
+        lista.appendChild(kohta);
+      }
+      lohko.appendChild(lista);
+      pari.appendChild(lohko);
+    }
+    if (hyvaTietaa.length) {
+      const lohko = html('aside', 'opas-kainalo opas-hyva-tietaa');
+      lohko.appendChild(html('h3', 'opas-kainalo-otsikko', 'Hyvä tietää'));
+      const lista = html('ul', 'opas-hyva-lista');
+      for (const teksti of hyvaTietaa) {
+        lista.appendChild(html('li', 'opas-hyva-rivi', teksti));
+      }
+      lohko.appendChild(lista);
+      pari.appendChild(lohko);
+    }
+    return pari;
+  }
+
+  /**
+   * Tähtiarvio 1–3. Tyhjät tähdet piirretään mukaan, koska pelkkä
+   * "★★" ei kerro lukijalle onko asteikko kolmen vai viiden — ja
+   * kolmen tähden rivi erottuu kahden tähden rivistä vasta, kun
+   * asteikko on näkyvissä. Ruudunlukijalle menee sanallinen arvio,
+   * ei tähtimerkkejä.
+   */
+  opasTahdet(maara) {
+    const n = Math.max(0, Math.min(3, Math.round(Number(maara) || 0)));
+    const kehys = html('span', 'opas-tahdet');
+    kehys.setAttribute('role', 'img');
+    kehys.setAttribute('aria-label', `${n}/3 tähteä`);
+    for (let i = 1; i <= 3; i += 1) {
+      const tahti = html('span', i <= n ? 'opas-tahti' : 'opas-tahti opas-tahti-tyhja', '★');
+      tahti.setAttribute('aria-hidden', 'true');
+      kehys.appendChild(tahti);
+    }
+    return kehys;
   }
 
   /** Oppaan laatikon runko: otsikkorivi ja aksenttipohja luokasta. */

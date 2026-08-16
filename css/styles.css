@@ -10422,17 +10422,6 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   margin: 0.2rem auto 0;
 }
 
-/* Opaslappu korvasi paperinapin 16.8.2026 (paketti O1). Kuvattomassa
- * kaupungissa lappu on tekstin alla eikä saa vuotaa kellukkeen alle. */
-.matkailijalle .opas-lappu { clear: both; }
-
-/*
- * KYLTTI KUVAN KULMASSA (omistajan taitto-ohje 16.8.2026: "oik.
- * yläreunaan osin kuvan päälle matkaopas kyltti diagonaali").
- * Kuvakotelo ankkuroi, lappu nousee puoliksi kuvan päälle ja
- * kallistuu vastakkaiseen suuntaan kuin oppaan oma lappu — kuin
- * matkalippu olisi kiinnitetty valokuvan kulmaan.
- */
 .matkailijalle-kuva { position: relative; }
 
 /*
@@ -10462,8 +10451,10 @@ button.opas-nauha {
   border: none;
   border-radius: 0;
   transform: rotate(45deg);
-  background: #b8402c;
-  color: #fdf3e3;
+  /* Paletti 2.1:n pääaksentti ja pohja — sisäänkäynti ja opas
+   * ovat samaa lehteä. */
+  background: #a53a22;
+  color: #f8efdc;
   font-family: var(--font-type);
   font-size: 0.7rem;
   letter-spacing: 0.16em;
@@ -11525,24 +11516,49 @@ button.opas-nauha:hover { filter: brightness(1.08); }
  * kevyt ja viihteellinen osa, joka houkuttelee matkustamaan — se saa
  * käyttää muuta lehteä iloisempia värejä.
  *
- * Paletti on vanhan matkajulisteen paletti, ei neonia: painovärit ovat
- * himmeitä ja hieman likaisia, koska 1930-luvun kivipaino ei osannut
- * kirkkaampaa. Kolme aksenttia riittää — turkoosi (meri ja juna),
- * postimerkinpunainen (leima) ja aurinkokeltainen (juliste) — ja
- * jokainen niistä on kiinni yhdessä tehtävässä: turkoosi on sää,
- * punainen on nosto ja lappu, keltainen on raha. Muuttujat asuvat
- * kortilla, jotta sama paletti kelpaa sellaisenaan etusivun lapulle
- * (ks. .opas-lappu, joka määrittelee ne uudestaan omaan käyttöönsä).
+ * PALETTI 2.1 (omistajan palaute 16.8.2026: 2.0:n paletti oli "hieman
+ * kökkö" ja vaati uudelleenajattelun). Vika ei ollut sävyissä vaan
+ * siinä, että aksentteja oli KOLME YHTÄ VAHVAA ja jokaisella oli oma
+ * pohjavärinsä: turkoosi sää, keltainen raha, punainen linkit. Silmä
+ * ei löytänyt niistä johtajaa, ja kolme eri sävyistä laatikkoa luki
+ * kolmena irrallisena tarralla, vaikka ne ovat samaa lajia. Lisäksi
+ * keltainen otsikko omalla pohjallaan jäi kontrastiin 2,1:1 — se ei
+ * ollut vain makuasia vaan luettavuusvirhe.
+ *
+ * Uusi jako on HIERARKIA, ei aihekoodi. Kaksi aksenttia, selvin
+ * rooleina:
+ *
+ *   PÄÄAKSENTTI terrakotta  = oppaan oma ääni. Otsikko, väliotsikot,
+ *                             laatikoiden otsikot, nosto, "Parasta
+ *                             täällä". Lämmin, joten se soittaa samaa
+ *                             säveltä kuin paperi.
+ *   TUKIAKSENTTI petrooli   = faktat ja uloskäynnit. Lämpötilat,
+ *                             hinnat, ulkoiset linkit ja "Hyvä
+ *                             tietää". Viileä vastapaino, jota on
+ *                             vähän.
+ *   KULTA                   = pelkkä koriste: tähdet ja €-luokka.
+ *                             Tummennettu okraksi, jotta se yltää
+ *                             AA-kontrastiin joka pohjalla.
+ *
+ * Laatikot saavat YHDEN yhteisen hiekkapohjan (--opas-sivu), joten ne
+ * lukevat sarjana. Ainoa paikka, jossa lämmin ja viileä pohja
+ * erottavat kaksi lohkoa toisistaan, ovat kainalot — siellä ero
+ * TARKOITTAA jotain (parasta vs. varjopuolet).
+ *
+ * Vanhan matkajulisteen henki säilyy: painovärit ovat himmeitä ja
+ * hieman likaisia, ei neonia, ja paperikohina jää päälle.
  */
 .nahtavyys-kortti.opas-kortti {
-  --opas-pohja: #fbf2dd;
+  --opas-pohja: #f8efdc;
   --opas-muste: #3a2a15;
-  --opas-turkoosi: #1c6f6b;
-  --opas-turkoosi-vaalea: #dcefe9;
-  --opas-punainen: #b8402c;
-  --opas-punainen-vaalea: #f7e2da;
-  --opas-keltainen: #d99a1f;
-  --opas-keltainen-vaalea: #fbeecb;
+  --opas-muste-hento: #6d5942;
+  --opas-aksentti: #a53a22;
+  --opas-aksentti-vesi: #f6ddc8;
+  --opas-syva: #1d5a5e;
+  --opas-syva-vesi: #e0eae7;
+  --opas-kulta: #7f570b;
+  --opas-sivu: #f2e5c8;
+  --opas-viiva: rgba(165, 58, 34, 0.3);
   /*
    * Lämmin pohja korvaa lehden viileän painopaperin (#f5f0e2) vain
    * oppaassa. Kohina jää päälle taustakuvana, joten paperin tuntu
@@ -11552,11 +11568,45 @@ button.opas-nauha:hover { filter: brightness(1.08); }
   color: var(--opas-muste);
 }
 
-/* Ingressi: yksi lause isommalla, kuin lehtijutun aloitus. */
+/*
+ * OTSIKKO DISPLAY-KOKOON (omistajan palaute 16.8.2026: "'Matkailijan
+ * Pariisi' -otsikko isommaksi"). Kortin oletusotsikko on 21,6 px
+ * kirjoituskoneella; oppaassa se on julisteen nimiö.
+ *
+ * Kirjasin vaihtuu antiikvaksi (--font-luku), koska kirjoituskone
+ * levenee display-koossa niin paljon, että kaksisanainen nimi katkeaa
+ * puhelimessa kolmelle riville. Antiikva on oppaassa jo käytössä
+ * nostossa ja laatikoiden leipätekstissä, joten se ei tuo korttiin
+ * uutta ääntä — se vain nostaa nimen otsikon kokoiseksi.
+ */
+.opas-arkki #nahtavyys-otsikko {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-luku);
+  font-size: clamp(2rem, 6.4vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  color: var(--opas-aksentti);
+}
+
+/* Kohde-/vuosirivi on oppaassa osaston nimi, ja se saa saman
+ * lämpimän sävyn kuin muukin sivumuste. */
+.opas-arkki .nahtavyys-aika { color: var(--opas-muste-hento); }
+
+/*
+ * Ingressi: yksi lause isommalla, kuin lehtijutun aloitus. Se on
+ * mustetta eikä aksenttia — otsikko yläpuolella kantaa jo terrakotan,
+ * ja kaksi peräkkäistä väripintaa söisi otsikon uuden koon.
+ * Ohut viiva alla erottaa sen ensimmäisestä jaksosta.
+ */
 .opas-kortti .opas-ingressi {
-  font-size: 1.14rem;
-  line-height: 1.5;
-  color: var(--opas-turkoosi);
+  font-family: var(--font-luku);
+  font-size: 1.24rem;
+  line-height: 1.45;
+  color: var(--opas-muste);
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--opas-viiva);
+  margin-bottom: 1.1rem;
 }
 
 .opas-jakso { margin: 0 0 1.35rem; }
@@ -11573,8 +11623,8 @@ button.opas-nauha:hover { filter: brightness(1.08); }
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--opas-turkoosi);
-  border-bottom: 1px solid rgba(28, 111, 107, 0.35);
+  color: var(--opas-aksentti);
+  border-bottom: 1px solid var(--opas-viiva);
   padding-bottom: 0.28rem;
 }
 
@@ -11594,6 +11644,156 @@ button.opas-nauha:hover { filter: brightness(1.08); }
   border-radius: 3px;
 }
 
+/* ── KAINALONOSTOT ────────────────────────────────────────────────────
+ *
+ * Omistajan palaute 16.8.2026: oppaaseen kaivataan kainalonostot heti
+ * ingressin jälkeen, oikeaan reunaan, ja kapealla ruudulla täysleveinä
+ * allekkain.
+ *
+ * TAITTO ON PANEELI, EI KELLUKE — ja tämä poikkeaa tehtävänannon
+ * sanamuodosta ("oikeaan reunaan"), joten syy on mitattu eikä makuasia:
+ *
+ * Kelluvana oikeassa laidassa (leveys 46 %) pari on 660 px korkea,
+ * mutta ensimmäisen jakson leipätekstiä on vain 343 px. Kellukkeen
+ * viereen jää siis 317 px korkea tyhjä kolo, ja koska koko palstan
+ * levyinen jaksokuva ei mahdu kellukkeen viereen, kolo ei täyty
+ * seuraavallakaan aineksella. Kaventaminen pahentaa asian: kapeampi
+ * kainalo on korkeampi ja jättää leipätekstille vielä vähemmän rivejä.
+ * Tehtävänannon sisältömitalla (4–6 aihetta + 3–4 varjopuolta) kolo on
+ * siis rakenteellinen eikä säädettävissä.
+ *
+ * Paneelina koloa ei synny lainkaan: pari on ingressin alla omana
+ * kaksipalstaisena lohkonaan, lämmin vasemmalla ja viileä oikealla.
+ * Rinnakkain ne myös LUKEVAT parina — pinottuina oikeassa laidassa ne
+ * näyttäisivät kahdelta erilliseltä laatikolta, eikä "parasta vastaan
+ * varjopuolet" -asetelma välittyisi. Kapealla ruudulla taitto on
+ * täsmälleen tehtävänannon mukainen: täysleveinä allekkain.
+ *
+ * Jos omistaja haluaa silti kellukkeen, vaihto on tässä säännössä
+ * yhden rivin kokoinen (float: right + width: 46 %).
+ */
+.opas-kainalot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0 0 1.4rem;
+}
+
+.opas-kainalo {
+  padding: 0.8rem 1rem 0.9rem;
+  border: 1px solid rgba(58, 42, 21, 0.18);
+  border-radius: 3px;
+}
+
+/*
+ * LÄMMIN JA VIILEÄ POHJA ovat oppaan ainoa paikka, jossa väri koodaa
+ * sisältöä: ne erottavat suosituksen ja varauksen toisistaan yhdellä
+ * silmäyksellä. Muualla paletti 2.1 koodaa hierarkiaa, ei aihetta.
+ */
+.opas-parasta {
+  background: var(--opas-aksentti-vesi);
+  border-left: 5px solid var(--opas-aksentti);
+}
+
+.opas-hyva-tietaa {
+  background: var(--opas-syva-vesi);
+  border-left: 5px solid var(--opas-syva);
+}
+
+.opas-kainalo-otsikko {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.opas-parasta .opas-kainalo-otsikko { color: var(--opas-aksentti); }
+.opas-hyva-tietaa .opas-kainalo-otsikko { color: var(--opas-syva); }
+
+.opas-parasta-lista,
+.opas-hyva-lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.opas-parasta-rivi { margin: 0 0 0.5rem; }
+.opas-parasta-rivi:last-child { margin-bottom: 0; }
+
+/*
+ * Aiherivi: nimike vasemmalle, tähdet oikealle. Tähdet omaan
+ * sarakkeeseensa eikä nimikkeen perään, jotta ne asettuvat riveittäin
+ * samaan linjaan ja rivit ovat vertailtavissa yhdellä silmäyksellä.
+ */
+.opas-parasta-paa {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.opas-parasta-mita {
+  font-family: var(--font-type);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--opas-muste);
+}
+
+.opas-tahdet {
+  flex: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  color: var(--opas-kulta);
+}
+
+/* Tyhjä tähti jää asteikoksi: sama merkki himmeänä, jotta kolmen ja
+ * kahden tähden rivit erottuvat toisistaan ilman selitystä. */
+.opas-tahti-tyhja { opacity: 0.26; }
+
+.opas-parasta-selite {
+  margin: 0.05rem 0 0;
+  font-family: var(--font-luku);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--opas-muste);
+}
+
+/* Varjopuolet ovat virkkeitä eivätkä arvosanoja: ei tähtiä, ei
+ * numeroita, vain lyhyt luetelmaviiva pääaksentin sijaan syvässä
+ * sävyssä — sama väri kuin lohkon otsikossa. */
+.opas-hyva-rivi {
+  position: relative;
+  margin: 0 0 0.45rem;
+  padding-left: 0.85rem;
+  font-family: var(--font-luku);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--opas-muste);
+}
+
+.opas-hyva-rivi:last-child { margin-bottom: 0; }
+
+.opas-hyva-rivi::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--opas-syva);
+}
+
+/*
+ * Kapealla ruudulla kainalot ovat täysleveinä allekkain (tehtävänannon
+ * mukaisesti): kahdessa palstassa kummallekin jäisi noin 150 px, jossa
+ * jokainen rivi katkeaisi parin sanan jälkeen.
+ */
+@media (max-width: 639px) {
+  .opas-kainalot { grid-template-columns: 1fr; gap: 0.85rem; }
+}
+
 /*
  * TEKSTINOSTO jaksojen 2 ja 3 väliin: yksi lause isolla antiikvalla,
  * koristeviivat ylä- ja alapuolella. Ei lainausmerkkejä — lause on
@@ -11603,8 +11803,8 @@ button.opas-nauha:hover { filter: brightness(1.08); }
   clear: both;
   margin: 1.5rem 0;
   padding: 0.9rem 0.6rem;
-  border-top: 3px double var(--opas-punainen);
-  border-bottom: 3px double var(--opas-punainen);
+  border-top: 3px double var(--opas-aksentti);
+  border-bottom: 3px double var(--opas-aksentti);
   text-align: center;
 }
 
@@ -11614,20 +11814,28 @@ button.opas-nauha:hover { filter: brightness(1.08); }
   font-size: 1.32rem;
   font-style: italic;
   line-height: 1.4;
-  color: var(--opas-punainen);
+  color: var(--opas-aksentti);
 }
 
 /*
- * LAATIKOT: vaalea aksenttipohja, sama aksentti reunaviivana ja
- * otsikossa. Laatikko on aside eikä osa lukuvirtaa, joten se saa
- * erottua — mutta pohjat ovat niin vaaleita, että teksti pysyy
- * mustana paperilla eikä värilapulla.
+ * LAATIKOT: YKSI YHTEINEN HIEKKAPOHJA kaikille kolmelle (paletti 2.1).
+ * Aiemmin jokaisella laatikolla oli oma aksenttinsa ja oma vaalea
+ * pohjansa, jolloin ne lukivat kolmena irrallisena tarrana — vaikka ne
+ * ovat samaa lajia: sivuhuomioita leipätekstin rinnalla. Nyt laji
+ * näkyy: sama pohja, sama otsikkoväri, sama reunus. Sisällön ero
+ * kerrotaan otsikolla, ei värillä.
+ *
+ * Laatikko on aside eikä osa lukuvirtaa, joten se saa erottua — mutta
+ * pohja on niin vaalea, että teksti pysyy mustana paperilla eikä
+ * värilapulla.
  */
 .opas-laatikko {
   clear: both;
   margin: 1.3rem 0;
   padding: 0.85rem 1rem 0.95rem;
-  border: 1px solid rgba(58, 42, 21, 0.25);
+  color: var(--opas-aksentti);
+  background: var(--opas-sivu);
+  border: 1px solid rgba(58, 42, 21, 0.18);
   border-left: 5px solid currentcolor;
   border-radius: 3px;
 }
@@ -11640,21 +11848,6 @@ button.opas-nauha:hover { filter: brightness(1.08); }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: inherit;
-}
-
-.opas-saa {
-  color: var(--opas-turkoosi);
-  background: var(--opas-turkoosi-vaalea);
-}
-
-.opas-kassa {
-  color: var(--opas-keltainen);
-  background: var(--opas-keltainen-vaalea);
-}
-
-.opas-suunnittele {
-  color: var(--opas-punainen);
-  background: var(--opas-punainen-vaalea);
 }
 
 /* Laatikoiden leipäteksti on mustaa mustetta, ei aksenttia: aksentti
@@ -11718,18 +11911,22 @@ button.opas-nauha:hover { filter: brightness(1.08); }
 }
 
 /* Lämpöhaarukka omalle rivilleen kirjoituskoneella: se on numero, ja
- * numerot ladotaan tässä pelissä aina kirjoituskoneella. */
+ * numerot ladotaan tässä pelissä aina kirjoituskoneella. Väri on
+ * tukiaksentti: petrooli on paletissa 2.1 faktojen väri. */
 .opas-kausi-lampo {
   display: block;
   font-family: var(--font-type);
   font-size: 0.86rem;
   font-weight: 700;
-  color: var(--opas-turkoosi);
+  color: var(--opas-syva);
 }
 
 .opas-kausi-kuvaus { display: block; }
 
-/* Hintaluokka: iso keltainen leima otsikkorivin oikeassa laidassa. */
+/* Hintaluokka: kullattu leima otsikkorivin oikeassa laidassa. Kulta on
+ * paletissa 2.1 pelkkä koriste (tähdet ja €-luokka), ja se on
+ * tummennettu okraksi, jotta se yltää AA-kontrastiin hiekkapohjalla —
+ * entinen #d99a1f jäi lukuun 2,1:1 eli käytännössä lukukelvottomaksi. */
 .opas-hintataso {
   float: right;
   margin-left: 0.6rem;
@@ -11737,15 +11934,19 @@ button.opas-nauha:hover { filter: brightness(1.08); }
   font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 1;
-  color: var(--opas-keltainen);
+  color: var(--opas-kulta);
 }
 
-.opas-hinta-arvo {
+/* Luokka ennen elementtiä: .opas-laatikko dd asettaa leipätekstin
+ * mustaksi, ja hintaluku on dd — ilman laatikkoa valitsimessa musta
+ * voittaisi tarkkuudessa eikä luku saisi tukiaksenttiaan. */
+.opas-laatikko .opas-hinta-arvo {
   font-family: var(--font-type);
   font-size: 0.88rem;
   font-weight: 700;
   text-align: right;
   white-space: nowrap;
+  color: var(--opas-syva);
 }
 
 .opas-linkkilista {
@@ -11757,10 +11958,12 @@ button.opas-nauha:hover { filter: brightness(1.08); }
   gap: 0.4rem;
 }
 
+/* Ulkoinen linkki on paletissa 2.1 tukiaksentti: petrooli on faktojen
+ * ja uloskäyntien väri, ja se erottaa linkin terrakottaotsikoista. */
 .opas-linkki {
   font-family: var(--font-type);
   font-size: 0.9rem;
-  color: var(--opas-punainen);
+  color: var(--opas-syva);
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
@@ -11791,91 +11994,6 @@ button.opas-nauha:hover { filter: brightness(1.08); }
   .opas-laatikko { padding: 1rem 1.25rem 1.15rem; }
   .opas-kaudet { grid-template-columns: minmax(9rem, auto) 1fr; }
   .opas-nosto-teksti { font-size: 1.5rem; }
-}
-
-/*
- * ETUSIVUN KULMALAPPU (omistajan tilaus 16.8.2026): "pirteä
- * postikortti/matkalippuhenkinen vino lappu 'Matkailijan opas'".
- *
- * Lappu on matkalippu: keltainen paperi, punainen leimakulma,
- * katkoviivainen repäisyreuna vasemmassa laidassa ja kevyt kallistus.
- * Kallistus on pieni (-2,2°) — pergamentilla iso kulma näyttäisi
- * vahingolta eikä tyyliltä. Muuttujat ovat lapulla omat, koska lappu
- * asuu lehden etusivulla eikä opaskortin sisällä.
- */
-.opas-lappu {
-  --opas-lappu-pohja: #fbeecb;
-  --opas-lappu-muste: #3a2a15;
-  --opas-lappu-punainen: #b8402c;
-  --opas-lappu-turkoosi: #1c6f6b;
-  position: relative;
-  display: block;
-  margin: 1rem auto 0.6rem;
-  padding: 0.6rem 1.1rem 0.65rem 1.6rem;
-  min-height: 0;
-  max-width: min(19rem, 100%);
-  text-align: left;
-  background: var(--opas-lappu-pohja);
-  border: 1px solid rgba(184, 64, 44, 0.55);
-  border-radius: 3px;
-  box-shadow: 2px 3px 0 rgba(58, 42, 21, 0.18);
-  transform: rotate(-2.2deg);
-  cursor: pointer;
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
-}
-
-/* Repäisyreuna: pystykatkoviiva lipun vasemmassa laidassa, kuin
- * kannasta irrotettava osa. */
-.opas-lappu::before {
-  content: "";
-  position: absolute;
-  top: 0.35rem;
-  bottom: 0.35rem;
-  left: 0.85rem;
-  border-left: 2px dashed rgba(184, 64, 44, 0.5);
-}
-
-/* Leimakulma: pieni punainen kolmio oikeaan yläkulmaan. */
-.opas-lappu::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-left: 1.5rem solid transparent;
-  border-top: 1.5rem solid var(--opas-lappu-punainen);
-}
-
-.opas-lappu:hover,
-.opas-lappu:focus-visible {
-  transform: rotate(-2.2deg) translateY(-2px);
-  box-shadow: 3px 5px 0 rgba(58, 42, 21, 0.22);
-}
-
-.opas-lappu-leima {
-  display: block;
-  font-family: var(--font-type);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--opas-lappu-punainen);
-}
-
-.opas-lappu-nimi {
-  display: block;
-  font-family: var(--font-luku);
-  font-size: 1.16rem;
-  line-height: 1.2;
-  color: var(--opas-lappu-muste);
-}
-
-.opas-lappu-vihje {
-  display: block;
-  margin-top: 0.15rem;
-  font-family: var(--font-type);
-  font-size: 0.66rem;
-  letter-spacing: 0.08em;
-  color: var(--opas-lappu-turkoosi);
 }
 
 /* ── LEHDEN ALANAPIT ───────────────────────────────────────────────────
