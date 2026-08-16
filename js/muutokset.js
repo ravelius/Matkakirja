@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 802, teksti: 'Arkin alanapit kotipalkin ylapuolelle iPadilla' },
   { v: 801, teksti: 'Kaiutin otsikon perään, kohdelaskuri pois' },
   { v: 800, teksti: 'Etusivun avausteksti pergamentille' },
   { v: 799, teksti: 'Arkin alalaita takaisin ruudulle' },

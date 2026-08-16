@@ -8994,6 +8994,15 @@ export class UI {
     // kaupungeissa, suora leikattu reuna.)
     this.arrivalDialog.classList.add('arkki');
     if (!this.arrivalDialog.open) this.arrivalDialog.showModal();
+    /*
+     * KORKEUSKATTO HETI AVATTAESSA (16.8.2026). Katto asetettiin tähän
+     * asti vain näkymävahdista, joten vasta avattu arkki eli CSS:n
+     * dvh-arvoilla siihen saakka kunnes ruudun koko sattui muuttumaan.
+     * Mitattuna: juuri avatun arkin inline-katto oli tyhjä ja kortti
+     * täsmälleen ruudun korkuinen. Leveys mitoitetaan jo avattaessa
+     * (mitoitaArkki); tämä on sen pystysuora pari.
+     */
+    this.mitoitaArkinKorkeus();
     // Lukemisen ajaksi äänimaisema madaltuu; close-kuuntelija (constructor)
     // palauttaa sen, sulkeutuipa lehti mitä reittiä tahansa.
     hiljennaAmbienssi('lehti');

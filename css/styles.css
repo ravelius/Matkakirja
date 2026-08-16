@@ -7621,7 +7621,21 @@ body.katselu #newgame-btn { display: none; }
   .dialog.arkki .dialog-card {
     --arkki-reunus: 2.2rem;
     --arkki-yla: 2rem;
-    padding: 0 var(--arkki-reunus) 2.2rem;
+    /*
+     * KOTIPALKIN VARA MYÖS TÄÄLLÄ (omistajan havainto 16.8.2026:
+     * "vieläkin sama bugi alhaalla").
+     *
+     * Perussääntö sai varan jo v791:ssä, mutta tämä sääntö ylikirjoitti
+     * sen pelkällä 2.2rem:llä — ja 700 px on juuri iPadin raja. Niinpä
+     * korjaus päti puhelimeen muttei siihen laitteeseen, jolla vika
+     * nähtiin. Arkki on tällä leveydellä koko ruudun korkuinen
+     * (height: 100dvh, lehden sivu kädessä), joten alalaidan napit
+     * osuivat suoraan kotipalkin alle.
+     *
+     * Korkeutta ei kavenneta, koska täysi korkeus on tarkoitus:
+     * pehmuste on oikea paikka varata tila.
+     */
+    padding: 0 var(--arkki-reunus) calc(2.2rem + env(safe-area-inset-bottom, 0px));
   }
 }
 
