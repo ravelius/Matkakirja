@@ -80,14 +80,24 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         /*
          * Osion valokuva otsikon alla oikealla, teksti kiertää.
-         * Lisenssi tarkistettu Commonsin API:sta 16.8.2026, kuva
-         * katsottu silmin.
+         *
+         * PYSTYKUVA JA YKSI AIHE (omistajan linjaus 16.8.2026:
+         * "kaikissa kaupungeissa tässä voisi olla pystykuva ... se
+         * näytti hyvältä Pariisissa"). Kaava on työlistassa: yksi aihe
+         * joka täyttää ruudun, paikan oma erikoisuus, Featured tai
+         * Quality image jos sellainen on. Tässä Commonsin Featured
+         * picture Elizabeth Towerista — Lontoon vastine Pariisin
+         * Eiffelille, pystysuora ja tunnistettava heti 272 pikselinkin
+         * levyisenä.
+         *
+         * Entinen metrokuva ei kadonnut: se siirtyi jakson 1
+         * karuselliin, jonka teksti kertoo juuri metrosta.
          */
         kuva: {
-          tiedosto: 'Temple Station underground train City of Westminster London England 01.jpg',
-          selite: 'Metrojuna Temple-asemalla — laiturissa tuttu varoitus: '
-            + 'mind the gap.',
-          lahde: 'Acabashi, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Elizabeth Tower 2014-09-21 205MP.jpg',
+          selite: 'Elizabeth Tower eli Big Ben Westminsterin sillan '
+            + 'takana; kellotorni on 96 metriä korkea.',
+          lahde: 'Colin, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Lontoo ei ole yksi kaupunki vaan kokoelma kyliä, jotka ovat '
           + 'kasvaneet kiinni toisiinsa: jokaisella on oma torinsa, '
@@ -129,14 +139,36 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'muistaa yksi asia: liikenne kulkee vasemmalla, joten '
                 + 'katse käännetään ensin oikealle — monessa risteyksessä '
                 + 'ohje on maalattu asfalttiin.',
-              kuva: {
-                tiedosto: 'London, Piccadilly Circus -- 2016 -- 4866.jpg',
-                selite: 'Piccadilly Circus keskipäivällä. Shaftesburyn '
-                  + 'muistolähteen portailla istutaan eväiden kanssa; '
-                  + 'lähteen huipulla oleva siivekäs hahmo tunnetaan '
-                  + 'Erosina, vaikka se esittää tämän veljeä Anterosta.',
-                lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              /*
+               * OPPAAN ENSIMMÄINEN KUVA ON KARUSELLI (omistajan linjaus
+               * 16.8.2026: "Matkaopas sivun eka kuva voisi olla aina
+               * kolmen upean kuvan karuselli"). Kolme kuvaa seuraavat
+               * jakson tekstiä: katu, metro ja bussi. Metrokuva on sama,
+               * joka oli aiemmin etusivun osiossa — se sopii tähän
+               * paremmin, koska teksti kertoo juuri metrosta.
+               */
+              kuva: [
+                {
+                  tiedosto: 'London, Piccadilly Circus -- 2016 -- 4866.jpg',
+                  selite: 'Piccadilly Circus keskipäivällä. Shaftesburyn '
+                    + 'muistolähteen portailla istutaan eväiden kanssa; '
+                    + 'lähteen huipulla oleva siivekäs hahmo tunnetaan '
+                    + 'Erosina, vaikka se esittää tämän veljeä Anterosta.',
+                  lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Temple Station underground train City of Westminster London England 01.jpg',
+                  selite: 'Metrojuna Temple-asemalla — laiturissa tuttu '
+                    + 'varoitus: mind the gap.',
+                  lahde: 'Acabashi, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'London (UK), Bus -- 2010 -- 6.jpg',
+                  selite: 'Punainen kaksikerrosbussi kadun varressa; kuvan '
+                    + 'vaunu kuuluu vanhaan Routemaster-mallistoon.',
+                  lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
             },
             {
               otsikko: 'Kuninkaalliset puistot',
