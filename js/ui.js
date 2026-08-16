@@ -3076,9 +3076,26 @@ export class UI {
        * LÖYSEMPI kuin CSS — ja juuri siitä otsikon peitto syntyi.
        */
       const pehmuste = arkki.classList.contains('nahtavyys-arkki') ? 3 : 1.6;
-      arkki.style.maxHeight = korkeus
+      const katto = korkeus
         ? `${Math.round(korkeus - pehmuste * rem - turvat)}px`
         : '';
+      arkki.style.maxHeight = katto;
+      /*
+       * KATTO MYÖS KORTILLE (omistajan havainto 16.8.2026 iPadilla:
+       * "alaosa ei näy kunnolla"). Kortilla on oma CSS-katto
+       * `calc(100dvh - 1.6rem)`, joka EI vähennä turva-alueita. Kun
+       * v797 kavensi dialogin kattoa turva-alueiden verran, kortti jäi
+       * entiselleen ja kasvoi dialoginsa yli — mitattuna 32 px
+       * iPadilla. Kortti on dialogin sisällä, joten ylijäämä työntää
+       * juuri kortin alalaidan napit (Etsi kätkö, Jatka matkaa, Sulje)
+       * ruudun alle. Sama pikselikatto kummallekin pitää ne yhdessä.
+       *
+       * Nähtävyyskortti käyttää CSS:ssä max-height: inherit, joten
+       * tämä vain vahvistaa sen saman arvon pikseleinä — ja suojaa
+       * senkin jumiutuneelta dvh:lta.
+       */
+      const kortti = arkki.querySelector('.dialog-card');
+      if (kortti) kortti.style.maxHeight = katto;
     }
   }
 
