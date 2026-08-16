@@ -7466,7 +7466,14 @@ body.katselu #newgame-btn { display: none; }
 .dialog.arkki {
   width: calc(100vw - 1.6rem);
   max-width: none;
-  max-height: calc(100dvh - 1.6rem);
+  /*
+   * Turva-alueet mukaan (16.8.2026): ilman niitä arkki ulottuu
+   * loveuksen ja kotipalkin ali. JS kirjoittaa saman katon
+   * pikseleinä (mitoitaArkinKorkeus), koska dvh jumiutuu iOS:llä —
+   * mutta CSS:n on oltava samaa mieltä siltä varalta, että JS ei ole
+   * vielä ehtinyt ajaa.
+   */
+  max-height: calc(100dvh - 1.6rem - var(--turva-yla) - var(--turva-ala));
 }
 
 /*
@@ -7483,7 +7490,13 @@ body.katselu #newgame-btn { display: none; }
 .dialog.arkki .dialog-card {
   width: calc(100vw - 1.6rem);
   max-width: none;
-  max-height: calc(100dvh - 1.6rem);
+  /*
+   * SAMA KATTO KUIN DIALOGILLA, turva-alueet mukaan lukien. Kortti
+   * asuu dialogin sisällä: jos sen katto on löysempi, se kasvaa
+   * dialoginsa yli ja alalaidan napit valuvat ruudun alle (omistajan
+   * havainto 16.8.2026 iPadilla, mitattu ylitys 32 px).
+   */
+  max-height: calc(100dvh - 1.6rem - var(--turva-yla) - var(--turva-ala));
   /*
    * Käsinpiirretty ääriviiva: epäsymmetrinen pyöristys molemmilla
    * akseleilla tekee reunasta piirretyn eikä lasketun. Sama keino kuin

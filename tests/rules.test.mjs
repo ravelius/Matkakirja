@@ -4186,6 +4186,22 @@ test('arkin inline-katto vähentää turva-alueet', () => {
     '--turva-yla ei enää tule env()-arvosta, jolloin JS lukee nollaa');
   assert.match(css, /--turva-ala:\s*env\(safe-area-inset-bottom/,
     '--turva-ala ei enää tule env()-arvosta, jolloin JS lukee nollaa');
+
+  /*
+   * KATTO KUULUU MYÖS KORTILLE. Omistajan havainto 16.8.2026:
+   * *"alaosa ei näy kunnolla ipadilla"* — v797 kavensi DIALOGIN
+   * kattoa turva-alueiden verran, mutta kortilla on oma
+   * `calc(100dvh - 1.6rem)`, joka ei kaventunut. Kortti kasvoi
+   * dialoginsa yli (mitattu 32 px iPadilla) ja työnsi alalaidan
+   * napit ruudun alle. Kortti on dialogin sisällä, joten sen katto ei
+   * saa koskaan olla dialogin kattoa löysempi.
+   */
+  assert.match(katto, /dialog-card/,
+    'kattoa ei kirjoiteta kortille — kortti voi kasvaa dialoginsa yli');
+
+  const korttiSaanto = css.match(/\.dialog\.arkki \.dialog-card \{[\s\S]*?max-height:[^;]+;/)?.[0] ?? '';
+  assert.match(korttiSaanto, /--turva-yla/,
+    '.dialog.arkki .dialog-card -katto ei vähennä turva-alueita');
 });
 
 /*
