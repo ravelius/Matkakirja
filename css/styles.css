@@ -11455,6 +11455,36 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   background: none;
   box-shadow: none;
   color: rgba(70, 51, 31, 0.62);
+  /* Kuvakkeen koko sidotaan otsikkoon (alla), joten napin on perittävä
+     otsikon kirjasinkoko eikä käytettävä napin omaa. */
+  font-size: inherit;
+}
+
+/*
+ * KUVAKE OTSIKON KOKOISEKSI (omistajan tilaus 16.8.2026: "suurenna
+ * kaiuttimen kuvaa otsikkoon sopivammaksi"). Yleissääntö antaa
+ * kaiuttimelle 1,05rem eli 16,8 px, kun kohdekortin otsikko on
+ * 1,35rem eli 21,6 px — kuvake näytti otsikon vieressä pieneltä.
+ *
+ * Mitta on nyt 1em eli TÄSMÄLLEEN otsikon kirjasinkoko, jolloin
+ * kuvake ja kirjaimet ovat samaa korkeutta. Katto on 2rem, koska sama
+ * otsikko kasvaa oppaassa julisteen kokoon (clamp .. 2.9rem) — ilman
+ * kattoa kaiutin kasvaisi siellä mukana ja veisi puolet rivistä.
+ */
+/*
+ * .icon-glyph asettaa kääreelle oman 1,15rem:n kirjasinkoon, joka
+ * katkaisisi em-ketjun otsikkoon (mitattuna kuvake jäi 18 px:iin
+ * 21,6 px:n sijaan). Perintä palauttaa ketjun.
+ */
+#nahtavyys-otsikko > button.lukija-nappi .icon-glyph,
+.dialog #nahtavyys-otsikko > button.lukija-nappi .icon-glyph {
+  font-size: inherit;
+}
+
+#nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg,
+.dialog #nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg {
+  width: min(1em, 2rem);
+  height: min(1em, 2rem);
 }
 
 #nahtavyys-otsikko > button.lukija-nappi:hover:not(:disabled),
