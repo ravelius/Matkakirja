@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v771 — Pariisin etusivukuvat: tsekkaa ja hyväksy monistus',
   'v770 — Raamatussa etusivukuvien kaava (Kuvat ja lähteet)',
   'v769 — karttatekstin loppu: piirroskarttojen oma ohje',
   'v768 — Matkailijalle 5 kaupunkiin (Berliini, Pariisi, Lontoo, Rooma, Wien)',

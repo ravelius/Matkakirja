@@ -81,6 +81,15 @@ kun omistaja on hyväksynyt Pariisin pilotin).
 
 ## Paketti P1: Pariisin etusivukuvat uusiksi (Opus 22, tilattu 16.8.2026)
 
+**✅ VALMIS (Opus 22, katselmoitu ja julkaistu v771:ssä 16.8.2026):**
+4 uutta jurytettyä kuvaa (Eiffel + Pont Alexandre III sinisellä
+hetkellä pääkuvaksi; Orsay auringonlaskussa; Notre-Dame; Galerie
+Vivienne yllätysnostona). Fable todensi lisenssit + Restrictions-
+kentät API:sta ja katsoi kuvat silmin. TÄRKEÄ OPPI: pikkurivin
+rajaus on 4:3 (ei vaakasuikale) ja Eiffelin iltavalaistuksen
+tekijänoikeus tarkistettava yökuvista joka kerta. Odottaa
+omistajan tsekkiä ennen muiden kaupunkien hakuja.
+
 Omistajan uusi kuvakonsepti 16.8.2026 kaupunkilehtien etusivuille —
 **pilotti Pariisi; muihin kaupunkeihin EI kosketa ennen omistajan
 hyväksyntää:**
