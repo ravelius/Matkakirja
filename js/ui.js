@@ -51,7 +51,7 @@ import {
   AFRICA_VALOKUVAT, lippuUrl, lippuVara, valokuvaSuurennos, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
 import {
-  asetaKuva, peiliPetti, peilinLaji, aaniOsoite, onPeilista,
+  asetaKuva, peiliPetti, peilinLaji, aaniOsoite, aaniUrl, haeAani, onPeilista,
 } from './media.js';
 import { AFRICA_SAAPUMISET } from './packs/africa-saapumiset.js';
 import { AFRICA_KULTTUURI, KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
@@ -14802,7 +14802,7 @@ export class UI {
     // matkakirjan kuvauksen ja ei kertojaa -tila ei mitään.
     if (kertojaTila() !== 'pitka') return;
     this.stopIntroVoice();
-    const audio = new Audio('assets/audio/intro-puhe.mp3');
+    const audio = new Audio(aaniUrl('assets/audio/intro-puhe.mp3'));
     audio.volume = puheVoima();
     this.pehmeaLoppu(audio);
     this.introVoice = audio;
@@ -14977,7 +14977,23 @@ export class UI {
     this.stopDiaryVoice();
     if (this.radioModuuli && !this.radioModuuli.luentaSallittu()) return;
     if (!url || !sfx.enabled) return;
-    const audio = new Audio(url);
+    /*
+     * Luennat tulevat ämpäristä (js/media.js aaniUrl), repon polku on
+     * varareitti. Ämpärin pettäessä siirrytään siihen kerran ja
+     * merkitään virhe äänipeilin katkaisijalle — sama kahden portaan
+     * malli kuin äänimaisemilla ja visamusiikilla.
+     */
+    const audio = new Audio(aaniUrl(url));
+    let varareittiKokeiltu = false;
+    audio.addEventListener('error', () => {
+      if (varareittiKokeiltu || this.diaryVoice !== audio) return;
+      if (!onPeilista(audio.getAttribute('src'))) return;
+      varareittiKokeiltu = true;
+      peiliPetti('aanet');
+      audio.src = url;
+      audio.load();
+      audio.play().catch(() => { /* varareittikään ei soi — hiljaisuus */ });
+    });
     audio.volume = puheVoima();
     this.pehmeaLoppu(audio);
     this.diaryVoice = audio;
@@ -15060,7 +15076,11 @@ export class UI {
       const lupaus = (async () => {
         const ctx = sfx.ensureContext();
         if (!ctx) return null;
-        const data = await fetch(url).then((r) => (r.ok ? r.arrayBuffer() : Promise.reject()));
+        // haeAani hoitaa saman peili-ensin-varareitin kuin soitto (ja
+        // merkitsee katkaisijaan), joten lauserajaa ei lasketa eri
+        // tiedostosta kuin mitä soitetaan.
+        const data = await haeAani(url)
+          .then((r) => (r.ok ? r.arrayBuffer() : Promise.reject()));
         const buf = await ctx.decodeAudioData(data);
         const kanava = buf.getChannelData(0);
         const ikkuna = Math.floor(buf.sampleRate * 0.05);
@@ -17373,7 +17393,7 @@ export class UI {
    * hihkaisukin on ääninäyttelyä.
    */
   soitaHihkaisu(lahde) {
-    const audio = new Audio(lahde);
+    const audio = new Audio(aaniUrl(lahde));
     audio.volume = puheVoima();
     // Tausta väistyy hihkaisun ajaksi kuten luennoilla; merkitsePuhuja
     // vapauttaa roolin ended/error-tapahtumista.

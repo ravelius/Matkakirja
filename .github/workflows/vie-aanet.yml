@@ -1,0 +1,158 @@
+# Vie pelin omat äänitiedostot ämpäriin (Cloudflare R2).
+#
+# Tämä on peilaa.yml:n pikkuveli, ja ero on siinä KUKA tiedostot tekee.
+# Peilaus noutaa aineiston muualta (Commons, Freesound, archive.org) ja
+# panee siitä kopion talteen. Nämä äänet syntyvät täällä: ElevenLabsin
+# luennat, tehosteet, huudahdukset ja visamusiikki generoidaan
+# tools/generoi-*.mjs-työkaluilla assets/audio-kansioon. Repo on siis
+# lähde eikä varmuuskopio, ja ajon tehtävä on vain siirtää se ämpäriin.
+#
+# MIKSI (omistajan linjaus 16.8.2026, Raamattu → "Äänet ja luennat"):
+# sw.js esilatasi joka asennuksessa 420 äänitiedostoa, noin 200 Mt.
+# Niistä 195 Mt oli luentoja, joista yksittäinen pelaaja kuulee
+# murto-osan — peli latasi jokaiselle kaikkien maanosien kertojaäänet.
+# Nyt esiladataan vain ydinsetti (huudahdukset ja lyhyet tehosteet) ja
+# loput haetaan täältä sitä mukaa kuin niitä kuunnellaan.
+#
+# ÄMPÄRIN KANSIOT. Peilaus kirjoittaa kansioihin kuvat/, liput/ ja
+# aanet/. Tämä ajo kirjoittaa VAIN kansioon audio/, eikä koskaan koske
+# muihin. Kaksi äänikansiota ei ole sekaannus vaan sääntö:
+#
+#   aanet/  ulkopuolelta peilattu äänimaisema. Nimi lasketaan
+#           lähdeosoitteesta (js/media.js peiliAaniPolku).
+#   audio/  pelin oma äänite. Nimi on sama kuin repossa
+#           (js/media.js aaniUrl): assets/audio/x.mp3 → audio/x.mp3.
+#
+# Nimisääntö on tarkoituksella se yksinkertaisin mahdollinen — sama
+# nimi molemmin puolin — koska pelin polunrakennus ja tämä ajo eivät saa
+# eriytyä. Jos nimeen tehtäisiin muunnos, se olisi toinen kopio
+# säännöstä, ja juuri sellainen kopio ehti kerran eriytyä peilauksessa
+# (ks. js/media.js turvanimi-kommentti). Tiedostonimet ovat jo
+# valmiiksi ascii-siistejä, joten muunnokselle ei ole tarvetta.
+#
+# Salaisuudet ovat tämän repon Actions-asetuksissa eivätkä koskaan
+# täällä — samat neljä kuin peilaa.yml:ssä:
+#   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
+
+name: Vie äänet R2:een
+
+on:
+  push:
+    branches: [main]
+    paths:
+      # Uusi tai muuttunut äänite. Tämä on ainoa polku, joka voi
+      # muuttaa vietävää aineistoa.
+      - 'assets/audio/**'
+      # Ajo itse: näin sen muutokset tulevat kokeilluiksi heti eivätkä
+      # jää piiloon seuraavaan äänitteeseen asti (sama syy kuin
+      # peilaa.yml:ssä).
+      - '.github/workflows/vie-aanet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Yksi ajo kerrallaan: kaksi rinnakkaista kirjoittaisi samoihin
+# avaimiin. Oma ryhmänsä, ei peilauksen — nämä eivät koske samoihin
+# kansioihin, joten niiden ei tarvitse jonottaa toistensa perässä.
+concurrency:
+  group: vie-aanet
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    # Koko kansio on noin 200 Mt. Ensimmäinen ajo vie sen kokonaan;
+    # myöhemmin --size-only jättää muuttumattomat väliin ja ajo on
+    # minuutin luokkaa.
+    timeout-minutes: 60
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+      # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
+    steps:
+      - uses: actions/checkout@v4
+
+      # Puuttuva salaisuus tulee muuten vastaan vasta aws-clin virheenä
+      # "Invalid endpoint: https://.r2.cloudflarestorage.com", josta ei
+      # arvaa mistä on kyse. Arvoja ei tulosteta, vain onko ne asetettu.
+      - name: Tarkista että salaisuudet ovat tallessa
+        env:
+          TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          AVAIN: ${{ secrets.R2_ACCESS_KEY_ID }}
+          SALAISUUS: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AMPARI: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$TILI" ]      || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "$AVAIN" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "$SALAISUUS" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$AMPARI" ]    || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            echo "Lisää ne osoitteessa Settings > Secrets and variables >"
+            echo "Actions > Repository secrets. Huomaa: salaisuudet ovat"
+            echo "repokohtaisia — toiseen repoon lisätyt eivät näy täällä."
+            exit 1
+          fi
+          echo "Kaikki neljä salaisuutta löytyvät."
+
+      # Tyhjä kansio menisi sync-komennosta läpi vihreänä eikä veisi
+      # mitään. Vihreä ajo, joka ei vienyt mitään, on pahempi kuin
+      # punainen: se näyttää siltä että ämpäri on ajan tasalla.
+      - name: Tarkista että vietävää on
+        run: |
+          set -euo pipefail
+          maara=$(find assets/audio -type f -name '*.mp3' | wc -l)
+          echo "assets/audio: $maara tiedostoa, $(du -sh assets/audio | cut -f1)"
+          if [ "$maara" -eq 0 ]; then
+            echo "::error::assets/audio on tyhjä — ei vietävää."
+            exit 1
+          fi
+
+      - name: Vie ämpäriin
+        run: |
+          set -euo pipefail
+          aws s3 sync assets/audio \
+            "s3://${{ secrets.R2_BUCKET }}/audio" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --size-only --no-progress \
+            --content-type audio/mpeg \
+            --cache-control "public, max-age=2592000"
+          # --delete on tarkoituksella pois, samasta syystä kuin
+          # peilauksessa: vanha tiedosto ämpärissä ei haittaa ketään,
+          # mutta vahingossa tyhjentynyt ämpäri veisi pelin äänet
+          # kaikilta kerralla. Poistot tehdään käsin, kun jokin äänite
+          # oikeasti korvataan.
+
+      # Sama tarkistus kuin peilauksessa: pelkkä onnistunut sync ei
+      # kerro, näkyykö tiedosto julkisesta osoitteesta CORS-otsakkeineen.
+      # Juuri niitä peli tarvitsee: sw.js noutaa äänen { mode: 'cors' }
+      # -pyynnöllä omaan koriinsa, ja ilman otsaketta nouto epäonnistuisi
+      # hiljaa jokaisella pelaajalla.
+      - name: Tarkista että aineisto vastaa ja CORS on kunnossa
+        run: |
+          set -euo pipefail
+          # GET-pyynnöllä: R2 vertaa metodia CORS-säännön
+          # AllowedMethods-listaan, eikä HEADiin tule otsaketta lainkaan
+          # kun sääntö sallii vain GETin.
+          tarkista() {
+            vastaus=$(curl -sS -D- -o /dev/null --max-time 30 -r 0-99 \
+              -H 'Origin: https://ravelius.github.io' "$JULKINEN/audio/$1")
+            koodi=$(printf '%s' "$vastaus" | grep -m1 -oE 'HTTP/[0-9.]+ [0-9]+' | tail -1 | awk '{print $2}')
+            cors=$(printf '%s' "$vastaus" | grep -ic '^access-control-allow-origin' || true)
+            echo "audio/$1 -> $koodi, CORS $cors"
+            case "$koodi" in 200|206) ;; *) exit 1 ;; esac
+            test "$cors" != "0"
+          }
+          # Yksi kummastakin lajista: ydinsetin ulkopuolinen luenta on se,
+          # jota peli oikeasti hakee ämpäristä, ja tehoste kertoo että
+          # koko kansio meni perille eikä vain luentojen alkupää.
+          tarkista "$(ls assets/audio | grep '^puhe-' | head -1)"
+          tarkista "$(ls assets/audio | grep '^efekti-' | head -1)"

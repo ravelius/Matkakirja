@@ -40,6 +40,77 @@ const R2_JUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
 export const PEILI_JUURI = R2_JUURI;
 export const AANI_JUURI = R2_JUURI;
 
+/*
+ * REPON OMAT ÄÄNITIEDOSTOT OVAT MYÖS ÄMPÄRISSÄ (linjaus 16.8.2026).
+ *
+ * Ämpärissä on kaksi äänikansiota, ja ne ovat eri asioita:
+ *
+ *   aanet/  ulkopuolelta peilatut äänimaisemat (Freesound, archive.org).
+ *           Nimi lasketaan lähdeosoitteesta, ks. peiliAaniPolku.
+ *   audio/  pelin omat äänitteet, jotka syntyvät täällä (ElevenLabs-
+ *           luennat, tehosteet, huudahdukset, visamusiikki). Nimi on
+ *           sama kuin repossa: assets/audio/x.mp3 -> audio/x.mp3.
+ *
+ * Jälkimmäinen syntyi siitä, että sw.js esilatasi joka asennuksessa 420
+ * äänitiedostoa, yhteensä noin 200 megatavua — ja niistä 195 Mt oli
+ * luentoja, joista yksittäinen pelaaja kuulee murto-osan. Nyt esiladataan
+ * vain ydinsetti (alla) ja loput haetaan ämpäristä sitä mukaa kuin niitä
+ * kuunnellaan. Vienti: .github/workflows/vie-aanet.yml.
+ *
+ * OFFLINE-PELAUS EI OLE TAVOITE (omistajan linjaus 16.8.2026):
+ * verkkoyhteyden saa olettaa, ja välimuisti on nopeutta varten.
+ */
+const AANI_ALIPOLKU = 'audio/';
+
+/*
+ * YDINSETTI: esiladataan asennuksessa ja soitetaan repon omasta polusta.
+ *
+ * Nämä kaksi lajia ovat pelin nopeimmat äänet: tehoste kuuluu samalla
+ * hetkellä kun sormi osuu laattaan, ja huudahdus samalla hetkellä kun
+ * aarre paljastuu. Verkkohaku ehtisi juuri ja juuri myöhästyä, ja
+ * myöhästynyt tehoste on pahempi kuin ei tehostetta lainkaan. Yhteensä
+ * ne ovat 39 tiedostoa ja noin 1,3 Mt, eli asennus pysyy kevyenä.
+ *
+ * Ydinsetti EI kulje ämpärin kautta lainkaan — muuten sw.js:n
+ * esilataama kopio jäisi käyttämättä, koska peli pyytäisi eri osoitetta.
+ * Nämä tiedostot jäävät siis repoon myös silloin, kun loput poistetaan.
+ */
+const YDINAANI = /^(?:efekti|huudahdus)-/;
+
+/**
+ * Repon oman äänitiedoston nimi polusta, tai null jos polku ei osoita
+ * assets/audio-kansioon.
+ *
+ * Sama polku kirjoitetaan pelissä kahdella tavalla ('assets/audio/x.mp3'
+ * ja './assets/audio/x.mp3'), joten molemmat kelpaavat. Kysely- ja
+ * ankkuriosat (#alku=20) eivät kuulu nimeen — sama sääntö kuin
+ * peiliAaniPolussa.
+ */
+export function omaAaniPolku(polku) {
+  if (typeof polku !== 'string') return null;
+  const osuma = polku.match(/(?:^|\/)assets\/audio\/([^/?#]+)/);
+  return osuma ? osuma[1] : null;
+}
+
+/**
+ * Repon oman äänitiedoston osoite: ämpäri ensin, repon polku varalla.
+ *
+ * TÄMÄ ON PELIN AINOA PAIKKA, jossa assets/audio-polusta tehdään
+ * soitettava osoite. Kutsuja säilyttää alkuperäisen polun ja siirtyy
+ * siihen, jos ämpäri pettää (onPeilista + peiliPetti('aanet') kuten
+ * äänimaisemilla) — varareitti toimii niin kauan kuin tiedosto on vielä
+ * repossa.
+ *
+ * Ydinsetti ja katkaisijan sammuttama peili palauttavat polun
+ * sellaisenaan, jolloin tiedosto tulee pelin omasta välimuistista.
+ */
+export function aaniUrl(polku) {
+  const nimi = omaAaniPolku(polku);
+  if (!nimi || YDINAANI.test(nimi)) return polku;
+  if (!peiliKaytossa('aanet')) return polku;
+  return `${AANI_JUURI}${AANI_ALIPOLKU}${nimi}`;
+}
+
 /**
  * Turvallinen tiedostonimi mistä tahansa merkkijonosta.
  *
@@ -257,16 +328,23 @@ export function nollaaPeili() {
 // --- äänet --------------------------------------------------------------------
 
 /**
- * Äänitteen osoite peilistä, jos se on peilattu. Vain Freesoundin ja
- * archive.orgin äänitteet ovat peilissä; muut (esim. omat assets-
- * tiedostot) palautuvat sellaisenaan.
+ * Äänitteen osoite peilistä, jos se on peilattu. Peilissä ovat sekä
+ * Freesoundin ja archive.orgin äänitteet (aanet/) että repon omat
+ * äänitiedostot ydinsettiä lukuun ottamatta (audio/, ks. aaniUrl).
+ * Muut osoitteet palautuvat sellaisenaan.
  */
 export function aaniOsoite(url) {
-  if (!url || !peiliKaytossa('aanet')) return url;
+  if (!url) return url;
+  // Repon oma äänitiedosto kulkee oman sääntönsä kautta (audio/), ja se
+  // osaa jättää ydinsetin rauhaan. Ilman tätä haaraa jokainen
+  // soittokohta joutuisi valitsemaan kahden funktion väliltä sen
+  // mukaan, mistä ääni sattuu tulemaan.
+  if (omaAaniPolku(url)) return aaniUrl(url);
+  if (!peiliKaytossa('aanet')) return url;
   // peiliAaniPolku tunnistaa itse, mitkä osoitteet ovat peilissä:
-  // se palauttaa null kaikelle muulle (repon omat tiedostot, arkiston
-  // lähdesivut). Erillistä esikarsintaa ei tarvita — se olisi toinen
-  // paikka, jossa sääntö voisi eriytyä.
+  // se palauttaa null kaikelle muulle (arkiston lähdesivut). Erillistä
+  // esikarsintaa ei tarvita — se olisi toinen paikka, jossa sääntö
+  // voisi eriytyä.
   const polku = peiliAaniPolku(url);
   return polku ? `${AANI_JUURI}${polku}` : url;
 }
@@ -292,7 +370,10 @@ export async function haeAani(url) {
  */
 export function peilinLaji(osoite) {
   if (typeof osoite !== 'string') return null;
-  if (osoite.startsWith(AANI_JUURI) && /\/aanet\//.test(osoite)) return 'aanet';
+  // Molemmat äänikansiot kuuluvat äänipeilille: aanet/ on ulkopuolelta
+  // peilattu äänimaisema, audio/ pelin oma äänite. Kumpikin vika kertoo
+  // samasta palvelimesta, ja kumpikaan ei saa sammuttaa kuvapeiliä.
+  if (osoite.startsWith(AANI_JUURI) && /\/(?:aanet|audio)\//.test(osoite)) return 'aanet';
   if (osoite.startsWith(PEILI_JUURI)) return 'kuvat';
   return null;
 }

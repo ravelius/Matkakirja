@@ -13,6 +13,9 @@
  * työhuoneen avauksella.
  */
 import { sfx } from './sound.js';
+// Ehdokkaiden ja esikuuntelujen osoitteet kulkevat samaa reittiä kuin
+// pelissä: ämpäri ensin, repon polku varalla (js/media.js).
+import { aaniOsoite } from './media.js';
 import {
   EHDOKKAAT, kaikkiValinnat, valitseAani, valittuAani, jaaAlku,
   TYYPPI_EHDOKKAAT, TYYPPI_NIMET, KAUPUNGIT_TYYPEITTAIN,
@@ -95,7 +98,7 @@ export function kaynnistaAanistudio() {
     }
     if (soiva) edellinen = { ...soiva, kohta: soitin.currentTime };
     soiva = ehdokas;
-    soitin.src = ehdokas.url;
+    soitin.src = aaniOsoite(ehdokas.url);
     asetaTaso();
     mika.textContent = `▶ ${ehdokas.nimi}`;
     const kohta = ehdokas.kohta ?? ehdokas.alku ?? 0;
@@ -705,7 +708,7 @@ export function kaynnistaAanistudio() {
         puheEsikuuntelu.pause();
         return;
       }
-      puheEsikuuntelu ??= new Audio('assets/audio/intro-puhe.mp3');
+      puheEsikuuntelu ??= new Audio(aaniOsoite('assets/audio/intro-puhe.mp3'));
       puheEsikuuntelu.volume = Number(liuku.value);
       puheEsikuuntelu.play().catch(() => {});
     });
@@ -748,7 +751,7 @@ export function kaynnistaAanistudio() {
         nimi.textContent = teksti;
         soitto.addEventListener('click', () => {
           huudahdusSoitin?.pause();
-          huudahdusSoitin = new Audio(`assets/audio/huudahdus-${avain}-${i + 1}.mp3`);
+          huudahdusSoitin = new Audio(aaniOsoite(`assets/audio/huudahdus-${avain}-${i + 1}.mp3`));
           huudahdusSoitin.volume = puheVoima();
           huudahdusSoitin.play().catch(() => {});
         });
