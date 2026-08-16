@@ -57,24 +57,37 @@ hyväksyntää:**
 > voimaa, esim. kuvattu illalla tai aamulla tai muuten
 > mielenkiintoisempi kuva kuin perus päivänvalossa kuvattu."
 
-**Haara:** `claude/opus21-pariisi-etusivu`
+**Haara:** `claude/opus22-pariisi-etusivu` (Opus 21:n aloitus
+peruttiin, kun omistaja tarkensi asettelun; sen löytämä sinisen
+hetken Notre-Dame siirtyy nostoksi, ks. kohta 2.)
+
+**Omistajan tarkennus 16.8.2026:** "pariisin pääkuva pitäisi olla
+varmaan eiffel torni ja pienempiin nostoihin notredame ja kolmas
+sitten joku mielenkiintoinen vähän erilainen nosto."
 
 1. **Iso avauskuva** (`pariisi`-kategorian `avauskuvat[0]`,
    js/packs/kulttuuri-kategoriat.js): korvaa nykyinen kattokuva
    ('Rooftops seen from Notre-Dame…' — omistaja: "huono, kun näkyy
-   vain kattoja"). Tilalle tunnelmallinen VAAKAMUOTOINEN laajakulma
-   kaupungin tärkeimmältä paikalta erikoisessa valossa (ilta, aamu,
-   sininen hetki, auringonlasku, usva) — esim. Eiffel-torni
-   Trocadérolta iltavalossa, Seine siltoineen auringonlaskussa,
-   Louvren pyramidi sinisellä hetkellä, Pont Alexandre III. EI
-   perus keskipäivän valoa, EI pelkkää yksityiskohtaa.
+   vain kattoja"). Tilalle **EIFFEL-TORNI** — tunnelmallinen
+   VAAKAMUOTOINEN laajakulma erikoisessa valossa (ilta, aamu,
+   sininen hetki, auringonlasku, usva); esim. Trocadérolta tai
+   Seinen yli kuvattuna. EI perus keskipäivän valoa. HUOM:
+   avauskuvat[1] on jo päivänvalo-Trocadéro Eiffelillä — vaihda
+   sekin tai poista, ettei karuselliin tule kahta samaa näkymää.
 2. **Pikkurivin kuvat** (`kansikuvat[0]` ja `[1]`): pikkurivi RAJAA
-   kuvat vaakasuikaleiksi, joten pystykuva rajautuu rumasti —
-   Wallace-kaivo (pysty) on vaihdettava, ja kimeerakin saa vaihtua,
-   jos tilalle löytyy vahvempi VAAKAKUVA. Valitse kuvat, jotka
-   kestävät vaakarajauksen (pääaihe keskellä kuvaa pystysuunnassa).
-   Muut avauskuvat (Trocadéro, Carrousel) saavat jäädä, elleivät
-   uudet löydöt ole selvästi parempia.
+   kuvat vaakasuikaleiksi, joten pystykuva rajautuu rumasti.
+   - `kansikuvat[0]`: **NOTRE-DAME**. Opus 21 löysi jo hyvän:
+     'Notre-Dame de Paris and Île de la Cité at dusk 140516 1.jpg'
+     (DXR, CC BY-SA 3.0; Featured picture + Quality image, Blue
+     hour in Paris) — käytä se, jos se kestää vaakarajauksen;
+     muuten hae vastaava vaakavahvempi.
+   - `kansikuvat[1]`: **joku mielenkiintoinen, vähän erilainen
+     nosto** — yllättävä aihe tai kuvakulma, ei kolmatta
+     monumenttipostikorttia (esim. metron jugend-sisäänkäynti,
+     passage-kauppakäytävä, bouquinistit hämärässä, kattojen
+     sinkkimaailma erikoisvalossa — sinun silmäsi päättää).
+   Wallace-kaivo (pysty) ja nykyinen kimeera poistuvat.
+   Muut avauskuvat (Carrousel) saavat jäädä.
 3. **Mistä etsitään** (uusi hakustrategia — tästä konseptista tuli
    tarve): Commonsin juryttämät parhaimmistokategoriat, esim.
    Category:Featured pictures of Paris, Category:Quality images of
