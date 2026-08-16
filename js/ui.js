@@ -898,6 +898,11 @@ const AARIVIIVAN_ASETTUMIS_MS = 750;
 const NAKYMAN_VAHIMMAISLEVEYS = 240;
 const NAKYMAN_KUTISTUMISRAJA = 0.75;
 const NAKYMAN_ELVYTYSVIIVE = 120;
+/*
+ * Sama roskaraja korkeudelle: matalinkin puhelin vaakatasossa on yli
+ * 300 px, joten sitä pienempi luku on mittausvirhe eikä laite.
+ */
+const NAKYMAN_VAHIMMAISKORKEUS = 300;
 // Kuinka paljon pergamenttia jatketaan kartan alle avaustekstiä varten.
 const INTRO_SPACE = 0.5;
 // Kuinka paljon lautaa lasketaan yläreunasta aloitusnäkymässä.
@@ -2993,6 +2998,62 @@ export class UI {
   }
 
   /**
+   * Näkymän korkeus pikseleinä.
+   *
+   * Tässä valitaan tarkoituksella PIENEMPI kahdesta mitasta, toisin
+   * kuin leveydessä. Syy on oireessa, jota tämä palvelee (omistajan
+   * havainto 16.8.2026 iPadilla: *"alareunasta puuttuu
+   * navigointinäppäimet jotka jäävät jonkun vaalean laatikon taakse.
+   * Bugi alkaa kun käy jossain toisessa sovelluksessa ja palaa
+   * takaisin"*): jos kortti on NÄKYVÄÄ ruutua korkeampi, sen
+   * alanapit valuvat ruudun ali — eikä niitä saa esiin
+   * vierittämälläkään, koska sisältö mahtuu korttiin eikä kortti
+   * enää vieri. Liian matala kortti on vain hieman ruma; liian
+   * korkea kortti vie napit kokonaan. Siksi epävarmuus ratkaistaan
+   * pienemmän hyväksi.
+   */
+  mittaaNakymanKorkeus() {
+    const asettelu = Math.round(document.documentElement?.clientHeight || 0);
+    const visuaali = Math.round(window.visualViewport?.height || window.innerHeight || 0);
+    const zoomaton = !window.visualViewport
+      || Math.abs((window.visualViewport.scale ?? 1) - 1) < 0.05;
+    const kelpo = [asettelu, zoomaton ? visuaali : 0]
+      .filter((mitta) => mitta >= NAKYMAN_VAHIMMAISKORKEUS);
+    return kelpo.length ? Math.min(...kelpo) : 0;
+  }
+
+  /**
+   * ARKIN KORKEUS PIKSELEINÄ, EI dvh-YKSIKÖINÄ.
+   *
+   * CSS antaa arkille katon `100dvh - 1.6rem`, ja kortti perii sen
+   * (`max-height: inherit`). dvh on kuitenkin täsmälleen yhtä altis
+   * jumiutumaan kuin vw: WKWebView pitää taustalta palatessa vanhan
+   * viewportin voimassa, ja jos vanha oli korkeampi kuin nykyinen
+   * ruutu, kortti kasvaa ruudun ali. Silloin kortin alalaidan napit
+   * ("Etsi kätkö", "Jatka matkaa", "Sulje") jäävät näkymättömiin
+   * vaalean paperin alle, eikä niitä saa esiin vierittämällä.
+   *
+   * Leveys on jo hoidettu samalla tavalla (mitoitaArkki); tämä on sen
+   * pystysuora pari. Roskamitalla katto POISTETAAN eikä arvata:
+   * silloin CSS:n oma dvh-sääntö saa ratkaista, kuten ennenkin.
+   */
+  mitoitaArkinKorkeus() {
+    /*
+     * Kaikki arkit, ei vain saapumiskortti: sama katto koskee myös
+     * nähtävyys- ja opasarkkia (#nahtavyys-dialog), jonka alalaidassa
+     * on Sulje-nappi. Ne ovat eri dialog-elementtejä mutta saavat
+     * korkeutensa samasta CSS-säännöstä.
+     */
+    const arkit = document.querySelectorAll('dialog.arkki');
+    if (!arkit.length) return;
+    const korkeus = this.mittaaNakymanKorkeus();
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+    // Sama pehmuste kuin CSS:ssä: 1.6rem eli 0.8rem molempiin päihin.
+    const katto = korkeus ? `${Math.round(korkeus - 1.6 * rem)}px` : '';
+    for (const arkki of arkit) arkki.style.maxHeight = katto;
+  }
+
+  /**
    * NÄKYMÄN ELVYTYS (omistajan havainto 13.8.2026 iPadilla:
    * *"lehti oli ensin leveä ja monipalstainen, ja taustakäynnin
    * jälkeen se avautui kapeana yksipalstaisena"*).
@@ -3034,6 +3095,13 @@ export class UI {
 
   tarkistaNakyma() {
     if (this.dead) return;
+    /*
+     * Korkeus päivitetään joka heräämisellä eikä vasta leveyden
+     * muuttuessa: taustalta palatessa ruudun korkeus voi muuttua
+     * (osoiterivi, jaettu näyttö, Stage Manager) ilman että leveys
+     * liikahtaa lainkaan — ja juuri se vei alanapit ruudun ali.
+     */
+    if (!document.hidden) this.mitoitaArkinKorkeus();
     const leveys = this.mittaaNakyma();
     const edellinen = this.nakymanLeveys || 0;
     const roska = !leveys || leveys < NAKYMAN_VAHIMMAISLEVEYS;
@@ -3136,6 +3204,9 @@ export class UI {
   mitoitaArkki() {
     const dialog = this.arrivalDialog;
     if (!dialog?.classList.contains('arkki')) return;
+    // Korkeus samalla kertaa: sivunvaihto on juuri se hetki, jolloin
+    // kortin mitat kirjoitetaan pikseleinä.
+    this.mitoitaArkinKorkeus();
     const leveys = this.nakymanLeveys || this.mittaaNakyma();
     if (!leveys || leveys < NAKYMAN_VAHIMMAISLEVEYS) return;
     const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
@@ -13509,6 +13580,9 @@ export class UI {
   mitoitaNahtavyysDialogi() {
     const dialogi = document.getElementById('nahtavyys-dialog');
     if (!dialogi) return;
+    // Korkeus samalla kertaa kuin leveys: kortin alalaidassa on
+    // Sulje-nappi, joka jää ruudun ali jos katto on vanhentunut.
+    this.mitoitaArkinKorkeus();
     const mitta = this.mittaaNakyma() || 0;
     dialogi.style.width = mitta >= 760
       ? `${Math.min(Math.round(mitta * 0.84), 840)}px`

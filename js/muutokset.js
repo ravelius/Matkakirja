@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 784, teksti: 'iPad: kortin alanapit eivät katoa taustapaluun jälkeen' },
   { v: 783, teksti: 'Opas: säägraafi lehtityyliin, Seine-karuselli, paperi' },
   { v: 782, teksti: 'Opas 2.2: kevyt kainalotaulu, säägraafi, kuvahionta' },
   { v: 781, teksti: 'Etusivun nauha koko osion yli, pehmeämmät värit' },

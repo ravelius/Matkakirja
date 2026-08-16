@@ -4145,3 +4145,48 @@ test('valokuvakysymys ei näytä kuvaa siitä kaupungista, jossa seistään', ()
       'kuva ei ole siitä kaupungista, jossa seistään');
   }
 });
+
+/*
+ * ARKIN KORKEUSKATTO EI SAA NOJATA PELKKÄÄN dvh:hon.
+ *
+ * Omistajan havainto 16.8.2026 iPadilla: *"alareunasta puuttuu
+ * navigointi näppäimet jotka jäävät jonkun vaalean laatikon taakse.
+ * Bugi alkaa kun käy jossain toisessa sovelluksessa ja palaa
+ * takaisin."* Sama perhe kuin aiemmat leveysoireet: WKWebView pitää
+ * taustalta palatessa vanhan viewportin voimassa, ja jos vanha oli
+ * korkeampi kuin nykyinen ruutu, dvh-katto venyttää kortin ruudun ali.
+ * Silloin kortin alanapit (Etsi kätkö, Jatka matkaa, Sulje) katoavat
+ * paperin alle — eikä niitä saa esiin vierittämälläkään, koska sisältö
+ * mahtuu venyneeseen korttiin eikä kortti enää vieri.
+ *
+ * Leveys on jo mitattu ja kirjoitettu pikseleinä (mitoitaArkki). Tämä
+ * testi vartioi, että korkeudella on sama turva ja että se herää
+ * samoista tapahtumista.
+ */
+test('arkin korkeus mitataan pikseleinä eikä jätetä dvh:n varaan', () => {
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+
+  const mittaus = ui.match(/mittaaNakymanKorkeus\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.ok(mittaus, 'mittaaNakymanKorkeus puuttuu ui.js:stä');
+  assert.match(mittaus, /NAKYMAN_VAHIMMAISKORKEUS/,
+    'korkeusmitta ei hylkää roskalukemia');
+  /*
+   * PIENEMPI VOITTAA. Liian matala kortti on hieman ruma, liian korkea
+   * vie napit kokonaan — epävarmuus ratkaistaan siis pienemmän hyväksi.
+   * Jos tämä vaihtuu joskus Math.maxiksi, vika palaa sellaisenaan.
+   */
+  assert.match(mittaus, /Math\.min\(/,
+    'korkeudeksi ei valita pienempää mittaa — kortti voi venyä ruudun ali');
+
+  const katto = ui.match(/mitoitaArkinKorkeus\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.ok(katto, 'mitoitaArkinKorkeus puuttuu ui.js:stä');
+  assert.match(katto, /dialog\.arkki/,
+    'katto ei koske kaikkia arkkeja (myös nähtävyys- ja opasarkki tarvitsee sen)');
+  assert.match(katto, /maxHeight/, 'katto ei kirjoita max-heightia');
+
+  // Vahti herää taustapaluusta: ilman tätä kutsua katto jäisi vanhaksi
+  // juuri siinä tilanteessa, jossa vika ilmenee.
+  const vahti = ui.match(/tarkistaNakyma\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.match(vahti, /mitoitaArkinKorkeus\(\)/,
+    'näkymävahti ei päivitä arkin korkeutta');
+});
