@@ -46,7 +46,35 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
-## Paketti P1: Pariisin etusivukuvat uusiksi (Opus 21, tilattu 16.8.2026)
+## Paketti K3: Kuvakäsikirjoitukset lopuille piirroskaupungeille (Opus 23, tilattu 16.8.2026)
+
+Omistajan kaava on kirjattu Raamattuun (osio "Kuvat ja lähteet") ja
+docs/kuvakasikirjoitukset.md:n alkuun; Fable kirjoitti mallit
+(Pariisi, Lontoo, Berliini, Rooma). Tämä paketti KIRJOITTAA
+käsikirjoitukset — kuvahakuja EI tehdä tässä (ne tilataan erikseen,
+kun omistaja on hyväksynyt Pariisin pilotin).
+
+**Haara:** `claude/opus23-kuvakasikirjoitukset`
+
+1. Kirjoita docs/kuvakasikirjoitukset.md-tiedostoon käsikirjoitus
+   kuudelle kaupungille TÄSMÄLLEEN Fablen mallien muodolla ja
+   mitalla: **Helsinki, Kööpenhamina, Wien, Praha, Amsterdam,
+   Tukholma** (tässä järjestyksessä).
+2. Jokaiseen: pääkuva = kaupungin tärkein kohde + valotoive;
+   nosto 1 = toiseksi tärkein kohde; nosto 2 = yllättävä ja
+   oivaltava yksityiskohta, joka kertoo kaupungista jotain omaa
+   (katso mallien yllätykset — Ampelmännchen, Pantheonin valokeila).
+   Tärkeysjärjestys on toimituksellinen arvio: mieti mitä matkailija
+   oikeasti pitää kaupungin ykkösenä ja kakkosena.
+3. **Checkpoint-push kahden ensimmäisen kaupungin (Helsinki,
+   Kööpenhamina) jälkeen** — Fable tarkastaa suunnan siitä; jatka
+   heti pushin jälkeen odottamatta.
+4. Portit: `node --test tests/*.test.mjs` (dokumenttitesti valvoo
+   karttaa — tiedosto on jo Raamatun kartalla, älä muuta karttaa).
+5. Kosketa VAIN tiedostoja docs/kuvakasikirjoitukset.md ja
+   viesti-fable.md (repon juureen). EI PR:ää eikä mergeä.
+
+## Paketti P1: Pariisin etusivukuvat uusiksi (Opus 22, tilattu 16.8.2026)
 
 Omistajan uusi kuvakonsepti 16.8.2026 kaupunkilehtien etusivuille —
 **pilotti Pariisi; muihin kaupunkeihin EI kosketa ennen omistajan

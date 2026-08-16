@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 770, teksti: 'Etusivukuvien kaava Raamattuun + 4 kuvakäsikirjoitusta' },
   { v: 769, teksti: 'Piirroskarttojen ohjeteksti ajan tasalle (10 kaupunkia)' },
   { v: 768, teksti: 'Matkailijalle: Berliini, Pariisi, Lontoo, Rooma, Wien' },
   { v: 767, teksti: 'Vaakunan ajoittainen tumma laatikko: oma paperi napeille' },

@@ -112877,6 +112877,15 @@ const RAAMATTU = {
       kohdat: [
         'Kaikki kuvat PD/CC Commonsista, silmin tarkistettuina; '
           + 'tekijä ja lisenssi näkyvissä.',
+        'Etusivukuvien kaava (omistaja 16.8.2026): kuva-aiheet '
+          + 'speksataan kaupunkikohtaisesti ENNEN hakua '
+          + '(docs/kuvakasikirjoitukset.md). Pääkuva = tärkein kohde '
+          + 'näyttävänä laajakulmana erikoisvalossa (karuselliin voi '
+          + 'lisätä muita näyttäviä); pikkunosto 1 = toiseksi tärkein '
+          + 'kohde; pikkunosto 2 = yllättävä, oivaltava yksityiskohta. '
+          + 'Pikkunostoihin ei karusellia ja vain vaakarajauksen '
+          + 'kestäviä kuvia. Haut Commonsin FP/QI- ja '
+          + 'valokategorioista.',
         'Media omasta peilistä (R2), peilaus automaattinen.',
         'Faktat tarkistetaan, lähteet merkitään. API-avaimia ei '
           + 'koskaan repoon eikä lokiin.',
@@ -112942,7 +112951,7 @@ const RAAMATTU = {
           + 'pistokokeet.',
         'docs/tutki-aiheet.md · docs/tyolista-opukselle.md · '
           + 'docs/kaariteksti-sapluuna.md · docs/mantereen-resepti.md '
-          + '— sisältöreseptit.',
+          + '· docs/kuvakasikirjoitukset.md — sisältöreseptit.',
         'CONTRIBUTING.md — avoin lähdekoodi + tekniset periaatteet. '
           + 'README.md — esittely.',
         'docs/viesti-fable.md — viestikanava, ei ohje. docs/arkisto/ '
@@ -113008,6 +113017,7 @@ const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 const TESTATTAVAA = [
+  'v770 — Raamatussa etusivukuvien kaava (Kuvat ja lähteet)',
   'v769 — karttatekstin loppu: piirroskarttojen oma ohje',
   'v768 — Matkailijalle 5 kaupunkiin (Berliini, Pariisi, Lontoo, Rooma, Wien)',
   'v767 — vaakunan ajoittainen tumma laatikko: pitäisi olla poissa',
@@ -184419,6 +184429,7 @@ class UI {
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 const MUUTOKSET = [
+  { v: 770, teksti: 'Etusivukuvien kaava Raamattuun + 4 kuvakäsikirjoitusta' },
   { v: 769, teksti: 'Piirroskarttojen ohjeteksti ajan tasalle (10 kaupunkia)' },
   { v: 768, teksti: 'Matkailijalle: Berliini, Pariisi, Lontoo, Rooma, Wien' },
   { v: 767, teksti: 'Vaakunan ajoittainen tumma laatikko: oma paperi napeille' },
@@ -185285,7 +185296,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.769';
+const APP_VERSION = '2026-08-09.770';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
