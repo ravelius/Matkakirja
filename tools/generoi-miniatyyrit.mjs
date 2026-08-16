@@ -364,10 +364,15 @@ const KUVAT = [
     + 'a wooden roller coaster and strings of garden lanterns among '
     + 'trees'],
   // ── Pariisi, kohteet 9–11 (paketti O4, 16.8.2026) ────────────────
+  // Ensimmäinen yritys (16.8.2026) tuotti yleisen pikkuaseman, jossa
+  // oli kaksi kellotornia — siksi prompti kieltää nyt tornit ja kuvut
+  // ja korostaa matalaa, hyvin pitkää julkisivua.
   ['pariisi-orsayn-taidemuseo', 'a former grand railway station turned '
-    + 'art museum on a river embankment: a long pale stone facade with '
-    + 'two huge round clock faces, tall arched windows and a slate '
-    + 'mansard roof'],
+    + 'art museum standing along a river quay: one very long and LOW '
+    + 'pale limestone facade, much wider than it is tall, with a row '
+    + 'of seven tall arched windows and two huge round clock faces '
+    + 'set flat into the wall; a flat slate roof edged with a stone '
+    + 'balustrade and small statues. NO towers, NO domes, NO spires'],
   ['pariisi-palais-garnier', 'an opulent 19th-century opera house: a '
     + 'wide ornate facade with paired columns and arches, gilded '
     + 'statues along the roofline and a low green copper dome behind '

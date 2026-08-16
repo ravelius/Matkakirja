@@ -48,7 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
-  'v792 — iPad: alanapit näkyviin; juttujen pystykuva isommaksi',
+  'v792 — Pariisin kartalle piirrokset: ooppera ja Place des Vosges',
   'v791 — Berliini pystykuva; alanapit iPadilla; isompi pystykuva',
   'v790 — Lontoo: Big Ben etusivulle, 3 kuvan karuselli oppaaseen',
   'v789 — iPad-jumi: kartta ja alanapit palaavat app-vaihdosta',
