@@ -994,11 +994,31 @@ export const KULTTUURI_KATEGORIAT = {
          * Lisenssi tarkistettu Commonsin API:sta 16.8.2026, kuva
          * katsottu silmin.
          */
+        /*
+         * ETUSIVUKUVA VAIHDETTU PYSTYKUVAAN (omistajan linjaus
+         * 16.8.2026; kaava kirjoitettuna Pariisin kohdalle tässä
+         * samassa tiedostossa). Kahvilakuva oli sisäkuva, joka olisi
+         * voinut olla mistä tahansa vanhasta eurooppalaisesta
+         * kahvilasta — se ei täytä kohtaa 2 eli kaupungin omaa
+         * erikoisuutta. Tilalla Stephansdomin kuvioitu kattotiilikatto
+         * ja sen yllä kohoava torni: Wienin oma tunnus, jota ei ole
+         * missään muualla, ja jonka kuvio erottuu pienessäkin koossa.
+         *
+         * Lisenssi ja Restrictions (tyhjä) tarkistettu Commonsin
+         * API:sta 16.8.2026, sijainti kuvaustekstistä ("St. Stephen's
+         * Cathedral (Stephansdom) ... in Vienna") ja kategoriasta
+         * "Roofs of St. Stephen's Cathedral, Vienna" eikä
+         * tiedostonimestä, kuva katsottu silmin.
+         */
         kuva: {
-          tiedosto: 'Café Sperl, Wien (1).jpg',
-          selite: 'Café Sperl on tarjonnut pöydän ja lehden vuodesta 1880 — '
-            + 'vieras saa jäädä tunneiksi.',
-          lahde: '© 1971markus, Wikimedia Commons (CC BY-SA 4.0)',
+          // Nimi on yhdellä rivillä tarkoituksella: peilaustyökalu
+          // poimii vain ensimmäisen palan (tests/media.test.mjs).
+          // eslint-disable-next-line max-len
+          tiedosto: 'Austria-00035 - St. Stephen\'s Cathedral (Stephansdom) Roof (9076913294).jpg',
+          selite: 'Stephansdomin katto: lasitetut tiilet on ladottu '
+            + 'vaakuna- ja vinoneliökuvioiksi, ja niiden yllä kohoaa '
+            + 'kirkon torni.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
         },
         kappale: 'Wien on kaupunki, jossa istuudutaan. Kahvila ei ole täällä '
           + 'pikapysähdys vaan paikka, jossa yhden kahvin hinnalla saa '
@@ -1053,14 +1073,29 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'roikkuvat puukehikoissa ja kuka tahansa saa lukea ne, '
                 + 'ja moni kahvila tarjoaa myös ruokaa — listalla on '
                 + 'leivosten lisäksi wieninleikettä ja perunasalaattia.',
-              kuva: {
-                tiedosto: 'Cafe Hawelka 1.jpg',
-                asettelu: 'kapea',
-                selite: 'Wieninleike Café Hawelkassa: ohueksi taottu ja '
-                  + 'korppujauhoissa paistettu leike, kulhollinen '
-                  + 'perunasalaattia ja sitruunalohko lautasen reunalla.',
-                lahde: 'Geolina163, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              /*
+               * KARUSELLI: kahvilasali ensin, ruoka perään. Salikuva
+               * siirtyi tähän osion etusivulta (16.8.2026) — se kertoo
+               * juuri sen, mitä teksti sanoo kahvilasta paikkana, ja
+               * leikekuva kertoo mitä pöydästä saa. Lisenssit ennallaan.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Café Sperl, Wien (1).jpg',
+                  selite: 'Café Sperlin sali: marmoripöydät, punainen '
+                    + 'plyysi ja lehdet puukehikoissa. Talo on tarjonnut '
+                    + 'pöydän ja lehden vuodesta 1880, ja vieras saa '
+                    + 'jäädä tunneiksi.',
+                  lahde: '© 1971markus, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Cafe Hawelka 1.jpg',
+                  selite: 'Wieninleike Café Hawelkassa: ohueksi taottu ja '
+                    + 'korppujauhoissa paistettu leike, kulhollinen '
+                    + 'perunasalaattia ja sitruunalohko lautasen reunalla.',
+                  lahde: 'Geolina163, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
             },
             {
               otsikko: 'Ooppera joka ilta',
@@ -4820,10 +4855,23 @@ export const KULTTUURI_KATEGORIAT = {
          * Lisenssi tarkistettu Commonsin API:sta 16.8.2026, kuva
          * katsottu silmin.
          */
+        /*
+         * ETUSIVUKUVA VAIHDETTU PYSTYKUVAAN (omistajan linjaus
+         * 16.8.2026; kaava kirjoitettuna Pariisin kohdalle tässä
+         * samassa tiedostossa). Aukionäkymä oli laaja ja pienessä
+         * koossa sekava. Tilalla Trevin suihkulähde suoraan edestä:
+         * yksi aihe, joka täyttää ruudun, ja Rooman tunnetuin
+         * yksittäinen kohde. Commonsin Quality image.
+         *
+         * Lisenssi ja Restrictions (tyhjä) tarkistettu API:sta
+         * 16.8.2026, sijainti kuvaustekstistä ("Trevi fountain, Rome,
+         * Italy") eikä tiedostonimestä, kuva katsottu silmin.
+         */
         kuva: {
-          tiedosto: 'Roma- Piazza Navona - 52380663568.jpg',
-          selite: 'Piazza Navona seuraa yhä antiikin kilpa-areenan muotoa.',
-          lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: 'Rome (IT), Trevi-Brunnen -- 2013 -- 3593.jpg',
+          selite: 'Trevin suihkulähde: keskellä merenjumala Oceanus, '
+            + 'sivuilla merihevoset ja alla portaittain putoava vesi.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Rooma on ulkoilmakaupunki: aukiot ovat sen olohuoneita, ja '
           + 'niillä istutaan lähteen reunalla ilman että pitää ostaa '
@@ -4919,14 +4967,29 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'ääressä, ja Trasteveren kujilla pyykki kuivuu yhä '
                 + 'ikkunoiden välissä. Molemmat ovat kävelymatkan päässä '
                 + 'keskustasta mutta tuntuvat toiselta kaupungilta.',
-              kuva: {
-                tiedosto: 'Campo dei Fiori.jpg',
-                selite: 'Campo de\' Fiorin aamutori valkoisten '
-                  + 'päivänvarjojen alla. Aukion keskellä kohoaa Giordano '
-                  + 'Brunon patsas, joka pystytettiin 1889 sille '
-                  + 'paikalle, jossa hänet poltettiin.',
-                lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
-              },
+              /*
+               * KARUSELLI: kauppatori ensin, sitten aukio jolla vain
+               * istutaan. Navona-kuva siirtyi tähän osion etusivulta
+               * (16.8.2026) — jakso kertoo Rooman aukioista, joten se
+               * kuuluu tänne. Lisenssit ennallaan.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Campo dei Fiori.jpg',
+                  selite: 'Campo de\' Fiorin aamutori valkoisten '
+                    + 'päivänvarjojen alla. Aukion keskellä kohoaa Giordano '
+                    + 'Brunon patsas, joka pystytettiin 1889 sille '
+                    + 'paikalle, jossa hänet poltettiin.',
+                  lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Roma- Piazza Navona - 52380663568.jpg',
+                  selite: 'Piazza Navona seuraa yhä antiikin kilpa-areenan '
+                    + 'pitkulaista muotoa: areena oli tässä ensin, ja talot '
+                    + 'nousivat katsomon paikalle.',
+                  lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
             },
             {
               otsikko: 'Ilta',
@@ -8539,10 +8602,24 @@ export const KULTTUURI_KATEGORIAT = {
          * (omistajan tilaus 15.8.2026). Lisenssit tarkistettu
          * Commonsin API:sta 15.8.2026, kuvat katsottu silmin.
          */
+        /*
+         * ETUSIVUKUVAN KAAVA (omistajan linjaus 16.8.2026, koko kaava
+         * kirjoitettuna Pariisin kohdalle tässä samassa tiedostossa):
+         * yksi aihe, kaupungin oma erikoisuus, laadukas ja pystykuva.
+         * Aiempi pyöräkuva oli katunäkymä, ja sen aihe — pyöräily —
+         * kerrotaan nyt jakson 1 kuvana, jossa se kuuluu tekstiin.
+         *
+         * Nyhavn on Kööpenhaminan tunnetuin näkymä: värikkäät
+         * kapeat talot ja niiden edessä puinen purjevene. Commonsin
+         * Quality image. Lisenssi ja Restrictions (tyhjä) tarkistettu
+         * API:sta 16.8.2026, sijainti kuvaustekstistä ("Nyhavn,
+         * Copenhagen") eikä tiedostonimestä, kuva katsottu silmin.
+         */
         kuva: {
-          tiedosto: 'Copenhagen Cyclists (19200075809).jpg',
-          selite: 'Yli puolet kaupunkilaisten matkoista taittuu pyörällä.',
-          lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: 'Nyhavn 9-11, København.jpg',
+          selite: 'Nyhavnin värikkäät talot ja niiden edessä puinen '
+            + 'purjevene — kanaalin ranta on kaupungin tunnetuin näkymä.',
+          lahde: 'Liberaler Humanist, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Kööpenhamina on rento kaupunki, joka koetaan parhaiten '
           + 'satulasta: yli puolet kaupunkilaisten matkoista taittuu '
@@ -8579,6 +8656,15 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'valittu toistuvasti maailman parhaaksi '
                 + 'pyöräilykaupungiksi. Vuokrapyörän saa kaikkialta, ja '
                 + 'kuljettajaton metro paikkaa sateiset päivät.',
+              // Kuva siirtyi tähän osion etusivulta (16.8.2026): se
+              // kuuluu juuri tähän jaksoon, jossa teksti kertoo
+              // pyöräilystä. Lisenssi ennallaan.
+              kuva: {
+                tiedosto: 'Copenhagen Cyclists (19200075809).jpg',
+                selite: 'Aamuruuhka pyöräkaistalla: yli puolet '
+                  + 'kaupunkilaisten matkoista taittuu pyörällä.',
+                lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
+              },
             },
             {
               otsikko: 'Kävelykatu ja kanaalit',
