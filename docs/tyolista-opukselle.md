@@ -67,7 +67,30 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
-## Paketti O4: Nähtävyyksiä lisää (Pariisi pilottina, tilattu 16.8.2026)
+## Paketti O4: Nähtävyyksiä lisää (Pariisi pilottina, tilattu 16.8.2026) 🟡 KESKEN
+
+**Kuittaus (Opus 16.8.2026):** Pariisi 8 → **11 kohdetta** (v788):
+Orsayn taidemuseo, Palais Garnier ja Place des Vosges. Faktat
+fi-Wikipediasta rajapinnan kautta, kuvat Commonsin API-todennuksella
+ja silmin katsottuina.
+
+**Kesken jäi kaksi kohdetta:** Pompidou-keskus ja Invalidipalatsi.
+Pompidoulle ei löytynyt Commonsin laatuluokista kuvaa ennen kuin
+rajapinta alkoi kuristaa (repossa on kyllä yksi todennettu
+sisäkuva `maa-kategoriat.js`:ssä, mutta saman kuvan toistoa kahdessa
+paikassa ei kannata tehdä), ja Invalidipalatsin fi-artikkelia ei
+löytynyt sillä nimellä. Molemmat ovat suoraviivaisia, kun rajapinta
+vastaa normaalisti.
+
+**Père-Lachaise ja katakombit EIVÄT MAHDU** Pariisin karttarajoihin
+(itäraja 2,3788 ja eteläraja 48,8414). Ne vaativat kartan
+uudelleenrajauksen — oma päätöksensä.
+
+**Piirrokset puuttuvat:** kolme uutta kohdetta näkyvät kartalla
+numeroympyröinä, kunnes `tools/generoi-miniatyyrit.mjs` ajetaan.
+Generointi vaatii API-avaimen eikä sitä voi ajaa työsessiosta.
+
+Alkuperäinen tilaus:
 
 Omistajan linjaus 16.8.2026: **"Nähtävyyksiä voi olla 6–15 per
 kaupunki riippuen kuinka paljon mielekkäitä kohteita kaupungilla on

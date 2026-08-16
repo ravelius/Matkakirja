@@ -1944,6 +1944,107 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KOLME LISÄKOHDETTA (paketti O4, omistajan linjaus 16.8.2026:
+     * "Nähtävyyksiä voi olla 6–15 per kaupunki"). Pariisilla oli
+     * kahdeksan; nyt yksitoista. Kartan numerointi tulee järjestyksestä,
+     * joten nämä ovat maakartat.js:ssä listan lopussa eivätkä siirrä
+     * vanhoja 1–8:aa. Ei piirroksia (miniatyyrit.js): kartalla
+     * numeroympyrät, kuten koodi tekee kohteelle ilman piirrosta —
+     * sama ratkaisu kuin Kööpenhaminan paketissa K1.
+     *
+     * Faktat fi-Wikipedian artikkeleista (haettu rajapinnasta
+     * 16.8.2026), kuvien lisenssit Commonsin API:sta ja jokainen kuva
+     * katsottu silmin.
+     */
+    'Orsayn taidemuseo': {
+      aika: '1900',
+      teksti: 'Orsayn museo oli ensin rautatieasema. Victor Laloux\'n '
+          + 'suunnittelema Gare d\'Orsay valmistui vuonna 1900 '
+          + 'maailmannäyttelyyn, ja sinne johtava rata kulki useita '
+          + 'kilometrejä tunnelissa Seinen eteläpuolisten rantakatujen '
+          + 'alla.'
+        + '\n\n'
+        + 'Asema suljettiin jo 1939, ja rakennus seisoi vuosikymmeniä '
+          + 'vailla käyttöä. Museoksi se avattiin joulukuussa 1986 '
+          + 'italialaisen Gae Aulentin suunnitelmien mukaan, ja muut '
+          + 'Pariisin museot — Louvre ja Pompidou-keskus muiden '
+          + 'muassa — siirsivät sinne kokoelmiaan.'
+        + '\n\n'
+        + 'Talossa on maailman merkittävin ranskalaisen impressionismin '
+          + 'kokoelma: Manet, Monet, Cézanne, Degas, Renoir ja van '
+          + 'Gogh. Postikorttimyynnin perusteella suosituin teos on '
+          + 'Renoirin Bal du moulin de la Galette vuodelta 1876.',
+      kuvat: [
+        {
+          tiedosto: 'Musee d\'Orsay and Pont Royal, North-West view 140402 1.jpg',
+          selite: 'Orsayn museo Seinen rannalla auringonnousun aikaan. '
+            + 'Entisen aseman kellotaulu erottuu julkisivussa, ja '
+            + 'vasemmalla kaartuu Pont Royal.',
+          lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palais Garnier': {
+      aika: '1875',
+      teksti: 'Uuden oopperatalon suunnittelukilpailu julkistettiin '
+          + 'joulukuussa 1860, ja siihen osallistui 171 kilpailijaa. '
+          + 'Voittajaksi julistettiin toukokuussa 1861 yksimielisesti '
+          + 'nuori Charles Garnier, joka ei ollut vielä vakiinnuttanut '
+          + 'asemaansa — viimeinen sana valinnassa oli keisari '
+          + 'Napoleon III:lla.'
+        + '\n\n'
+        + 'Paikka oli hankala: paroni Haussmannin osoittama tontti oli '
+          + 'vinoneliön muotoinen, ja sen ympärille oli tulossa korkeita '
+          + 'taloja. Garnier ratkaisi asian tekemällä talosta '
+          + 'näyttämön myös ulkopuolelta — portaikko ja lämpiö ovat '
+          + 'yhtä koreat kuin katsomo.'
+        + '\n\n'
+        + 'Taloa sanottiin pitkään yksinkertaisesti Pariisin oopperaksi. '
+          + 'Nimi vaihtui arkkitehdin mukaan vasta 1989, kun Opéra '
+          + 'Bastille valmistui; nykyään Palais Garnier on Pariisin '
+          + 'oopperan baletin koti.',
+      kuvat: [
+        {
+          tiedosto: 'Palais Garnier Paris June 2010 002.jpg',
+          selite: 'Palais Garnier Galeries Lafayetten katolta nähtynä: '
+            + 'veistoksin koristeltu päätykolmio, vihertävä kattokupu '
+            + 'ja taustalla Montparnassen torni.',
+          lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Place des Vosges': {
+      aika: '1612',
+      teksti: 'Place des Vosges on Pariisin vanhin aukio. Se rakennettiin '
+          + 'kuningas Henrik IV:n määräyksestä hovielämän julkiseksi '
+          + 'keskukseksi, mutta valmistui vasta kuninkaan kuoleman '
+          + 'jälkeen — vihkiäisiä vietettiin 1612 Ludvig XIII:n ja Anna '
+          + 'Itävaltalaisen häiden yhteydessä, eikä kuningaspari '
+          + 'koskaan asunut siellä.'
+        + '\n\n'
+        + 'Aukiota ympäröi 36 kolmikerroksista taloa, yhdeksän joka '
+          + 'sivulla, ja kaikilla on samanlainen punatiilinen julkisivu '
+          + 'ja aumakatto. Korkeampina erottuvat kuninkaan ja '
+          + 'kuningattaren paviljongit etelä- ja pohjoislaidalla. '
+          + '1600-luvulla aukiolla järjestettiin turnajaisia.'
+        + '\n\n'
+        + 'Nimi oli Place Royale vuoteen 1800, jolloin se vaihdettiin '
+          + 'Vosgesin departementin mukaan. Aukion laidalla asui '
+          + 'kuusitoista vuotta kirjailija Victor Hugo.',
+      kuvat: [
+        {
+          tiedosto: 'Paris Place des Vosges Arkaden 1.jpg',
+          selite: 'Aukiota kiertävä pylväskäytävä: vaaleat kiviholvit ja '
+            + 'niiden välissä punatiilinen sahalaitakuvio, joka toistuu '
+            + 'kaikkien 36 talon julkisivuissa.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   helsinki: {
     'Temppeliaukion kirkko': {
