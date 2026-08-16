@@ -208,3 +208,46 @@ kirjoitat Raamattuun — kerroin sen omistajalle. **Kirjaa nämä kaksi:**
    sanoin: *"yksinkertainen, laadukas ja houkutteleva eli wow efekti
    jostain maan erikoisuudesta."* Kaava on nyt työlistassa; Raamattuun
    siitä kuuluu tiivistelmä.
+
+## Ilta jatkui: v791–v794
+
+**iPadin kaksi vikaa korjattu (v791).** Alanapit katosivat maasivulla,
+koska turva-alueen (`env(safe-area-inset-bottom)`) varaus oli vain
+puhelinkokojen media queryssä — iPadilla kotipalkki peitti napit.
+Varaus siirtyi kortin perussääntöön. Samassa versiossa juttujen
+pystykuvan kokokatto nousi, koska Palais Garnier näkyi liian pienenä.
+
+**Kuvien haku onnistuu ajurilla.** Omistaja kysyi, voiko kuvia hakea
+muuta kautta — kyllä: `.github/workflows/` ajaa GitHubin ajurilla, ja
+repon salaisuudet (GOOGLE_API_KEY, EUROPEANA_API) ovat siellä
+käytettävissä. Kehityskontissa niitä ei ole. Ajo tehdään
+työhaarasta, ja tulos on artefakti, joka ladataan ja katsotaan silmin
+ennen committia.
+
+**Pariisin kolme uutta kohdetta saivat piirrokset (v792–v793).**
+Miniatyyrigeneraattorin kohdelista on käsin ylläpidetty, joten uudet
+kohteet piti lisätä sinne ensin — ilman sitä ajo kaatuu heti
+"Ei kohteita". Orsay vaati kolme yritystä: prompti kuvasi vain
+julkisivun, ja piirtäjä täytti loput omillaan. Vasta kun promptiin
+tuli talon oma tunnusmerkki (koko pituudelta kaartuva lasikatto),
+kuvasta tuli Orsay eikä yleinen pikkuasema. **Opetus promptiin:
+kerro se yksi asia, jota kohteella on ja muilla ei.**
+
+**Kolme kaupunkia sai pystykuvan etusivulle (v794):** Wien
+(Stephansdomin kuvioitu katto), Rooma (Trevin suihkulähde) ja
+Kööpenhamina (Nyhavn). Vapautuneet kuvat eivät kadonneet vaan
+siirtyivät siihen oppaan jaksoon, jonka teksti kertoo samasta
+aiheesta — sama temppu kuin Lontoossa, ja se toimii joka kerta.
+
+**Helsinki jäi kesken** ja **oppaiden kolmen kuvan karusellit
+samoin.** Syy on sama: Commons alkoi vastata "You are making too many
+requests" ja jatkoi sitä viiden minuutin tauonkin jälkeen. Vaarallinen
+piirre: virhevastaus on HTML-sivu, ja jos sen tallentaa kuvaksi,
+tiedosto näyttää jpg:ltä. Tarkista ladatut kuvat `file`-komennolla.
+
+**Hakutapa, joka toimi** ja kannattaa monistaa: Featured picture
+-kategoriat ovat näissä maissa luonto- ja tapahtumapainotteisia
+eivätkä sisällä maamerkkejä. Sen sijaan
+`gsrsearch=<kohde> incategory:"Quality images"` ja suodatus
+`korkeus > leveys × 1,2` tuotti kaikissa kolmessa kaupungissa
+kelvollisen pystykuvan ensimmäisellä yrityksellä.
