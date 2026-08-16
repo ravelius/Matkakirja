@@ -3036,6 +3036,21 @@ export class UI {
    * Leveys on jo hoidettu samalla tavalla (mitoitaArkki); tämä on sen
    * pystysuora pari. Roskamitalla katto POISTETAAN eikä arvata:
    * silloin CSS:n oma dvh-sääntö saa ratkaista, kuten ennenkin.
+   *
+   * TURVA-ALUEET ON VÄHENNETTÄVÄ TÄÄLLÄ (omistajan havainto 16.8.2026:
+   * *"iPhonella matkaoppaan otsikko jää piiloon ja ipadillakin se on
+   * liian yläreunassa kiinni"*). Tämä inline-katto voittaa CSS:n
+   * jokaisen max-height-säännön, myös nähtävyysarkin oman
+   * `calc(100dvh - 3rem - turva-yla - turva-ala)`:n. Kun se vähensi
+   * vain 1,6 remiä eikä turva-alueita lainkaan, kortti sai kasvaa
+   * loveuksen ja kotipalkin ali. Opasarkki on ANKKUROITU ALAREUNAAN,
+   * joten koko ylijäämä valuu ylös — ja ensimmäisenä sen alle jää
+   * otsikko. iPadilla loveusvara on pieni, joten siellä otsikko ei
+   * kadonnut vaan painui kiinni yläreunaan; sama vika, eri annos.
+   *
+   * Mitta luetaan `--turva-yla`- ja `--turva-ala`-muuttujista, koska
+   * env() ei ole luettavissa JS:stä suoraan. Ne ovat :rootissa juuri
+   * tätä varten.
    */
   mitoitaArkinKorkeus() {
     /*
@@ -3047,10 +3062,24 @@ export class UI {
     const arkit = document.querySelectorAll('dialog.arkki');
     if (!arkit.length) return;
     const korkeus = this.mittaaNakymanKorkeus();
-    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
-    // Sama pehmuste kuin CSS:ssä: 1.6rem eli 0.8rem molempiin päihin.
-    const katto = korkeus ? `${Math.round(korkeus - 1.6 * rem)}px` : '';
-    for (const arkki of arkit) arkki.style.maxHeight = katto;
+    const juuri = getComputedStyle(document.documentElement);
+    const rem = parseFloat(juuri.fontSize) || 16;
+    const turva = (nimi) => parseFloat(juuri.getPropertyValue(nimi)) || 0;
+    // clientHeight ulottuu loveuksen ja kotipalkin ali, koska sivu on
+    // viewport-fit=cover. Katon on siis annettava ne takaisin.
+    const turvat = turva('--turva-yla') + turva('--turva-ala');
+    for (const arkki of arkit) {
+      /*
+       * Pehmuste on sama kuin arkin omassa CSS-säännössä: lehdellä
+       * 1,6rem, nähtävyys- ja opasarkilla 3rem. Jos tämä olisi
+       * kummallekin 1,6rem, inline-katto olisi nähtävyysarkilla
+       * LÖYSEMPI kuin CSS — ja juuri siitä otsikon peitto syntyi.
+       */
+      const pehmuste = arkki.classList.contains('nahtavyys-arkki') ? 3 : 1.6;
+      arkki.style.maxHeight = korkeus
+        ? `${Math.round(korkeus - pehmuste * rem - turvat)}px`
+        : '';
+    }
   }
 
   /**

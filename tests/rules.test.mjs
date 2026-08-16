@@ -4147,6 +4147,48 @@ test('valokuvakysymys ei näytä kuvaa siitä kaupungista, jossa seistään', ()
 });
 
 /*
+ * INLINE-KATON ON VÄHENNETTÄVÄ TURVA-ALUEET.
+ *
+ * Omistajan havainto 16.8.2026: *"iPhonella matkaoppaan otsikko jää
+ * piiloon ja ipadillakin se on liian yläreunassa kiinni."*
+ *
+ * Juurisyy: mitoitaArkinKorkeus kirjoittaa max-heightin INLINE-tyylinä,
+ * joka voittaa CSS:n jokaisen säännön — myös nähtävyysarkin oman
+ * `calc(100dvh - 3rem - turva-yla - turva-ala)`:n. Kun inline-katto
+ * vähensi vain 1,6 remiä eikä turva-alueita lainkaan, kortti sai
+ * kasvaa loveuksen ali. Opasarkki on ankkuroitu alareunaan, joten
+ * ylijäämä valuu YLÖS ja ensimmäisenä sen alle jää otsikko.
+ *
+ * Mitattu selaimessa iPhonen turva-arvoilla (59/34 px): vanhalla
+ * kaavalla otsikon yläreuna oli 36 px eli loveuksen alla, uudella
+ * 151 px. iPadilla 33 px → 91 px.
+ */
+test('arkin inline-katto vähentää turva-alueet', () => {
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const katto = ui.match(/mitoitaArkinKorkeus\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.ok(katto, 'mitoitaArkinKorkeus puuttuu ui.js:stä');
+
+  for (const muuttuja of ['--turva-yla', '--turva-ala']) {
+    assert.match(katto, new RegExp(muuttuja),
+      `katto ei lue ${muuttuja}-muuttujaa — kortti kasvaa turva-alueen ali`);
+  }
+
+  /*
+   * Nähtävyys- ja opasarkilla CSS varaa 3rem, lehdellä 1,6rem. Jos
+   * inline-katto antaa molemmille saman pienen pehmusteen, se on
+   * opasarkilla LÖYSEMPI kuin CSS ja otsikon peitto palaa.
+   */
+  assert.match(katto, /nahtavyys-arkki/,
+    'katto ei erottele nähtävyysarkkia — sen pehmuste on CSS:ssä isompi');
+
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  assert.match(css, /--turva-yla:\s*env\(safe-area-inset-top/,
+    '--turva-yla ei enää tule env()-arvosta, jolloin JS lukee nollaa');
+  assert.match(css, /--turva-ala:\s*env\(safe-area-inset-bottom/,
+    '--turva-ala ei enää tule env()-arvosta, jolloin JS lukee nollaa');
+});
+
+/*
  * ARKIN KORKEUSKATTO EI SAA NOJATA PELKKÄÄN dvh:hon.
  *
  * Omistajan havainto 16.8.2026 iPadilla: *"alareunasta puuttuu
