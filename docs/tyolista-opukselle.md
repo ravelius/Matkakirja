@@ -67,6 +67,55 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
+## Paketti O5: Pystykuvat ja opaskarusellit loppuun (tilattu 16.8.2026)
+
+Omistajan kaksi linjausta 16.8.2026:
+
+1. **Etusivun Matkailijalle-kuva on PYSTYKUVA kaikissa kaupungeissa.**
+   Kaava on tämän tiedoston alussa (yksi aihe, paikan oma erikoisuus,
+   Featured/Quality image, pääaihe pois nauhan alta).
+2. **Matkaoppaan ENSIMMÄINEN kuva on aina kolmen upean kuvan
+   karuselli.**
+
+### Tehty (Opus 16.8.2026)
+
+| Kaupunki | Pystykuva etusivulla | Oppaan eka karuselli |
+| --- | --- | --- |
+| Pariisi | ✅ Eiffel-torni (FP, PD) | ⬜ (avauskuva yksin) |
+| Lontoo | ✅ Elizabeth Tower (FP) | ✅ 3 kuvaa |
+| Berliini | ✅ Fernsehturm (FP) | ⬜ |
+| Wien | ⬜ | ⬜ |
+| Rooma | ⬜ | ⬜ |
+| Kööpenhamina | ⬜ | ⬜ |
+| Helsinki | ⬜ | ⬜ |
+
+### Ehdokkaat, jotka on jo todennettu API:sta
+
+Nämä voi ottaa käyttöön suoraan — lisenssi ja Restrictions tarkistettu
+16.8.2026, mutta kuvaa EI ole vielä katsottu silmin eikä kuvatekstiä
+kirjoitettu:
+
+- **Rooma:** `Fontana di Trevi by TC.jpg` (FP, CC BY-SA 4.0,
+  Tomascastelazo, 4000×6000). HUOM: kuva on Oceanus-veistos
+  lähikuvana, ei koko suihkulähde — harkitse, tunnistaako lukija
+  siitä Rooman. Vaihtoehtoja kannattaa hakea kategoriasta
+  *Featured pictures of Rome* (32 kuvaa).
+- **Wien:** kategoriasta *Featured pictures of Vienna* (102 kuvaa)
+  löytyi vain vaakakuvia Schönbrunnista ja Belvederestä. Stephansdomin
+  torni on luonteva pystyaihe; hakusanoja `Stephansdom Südturm`.
+- **Kööpenhamina ja Helsinki:** *Featured pictures of Helsinki* on
+  vain 6 kuvaa eikä sisällä maamerkkejä. Kööpenhaminan FP-kuvat
+  Nyhavnista ovat vaakakuvia. Molemmille kannattaa etsiä Quality
+  image -tason pystykuva (tuomiokirkko, Rundetårn, Nyhavn pystyyn
+  rajattuna).
+
+### Karusellit
+
+Jokainen opas tarvitsee ensimmäiseen jaksoonsa kaksi kuvaa lisää.
+Lontoossa se ratkesi ilman uutta hankintaa: etusivulta vapautunut
+kuva siirtyi jaksoon, jonka teksti kertoo samasta aiheesta. Sama
+temppu kannattaa kokeilla joka kaupungissa ensin.
+
 ## Paketti O4: Nähtävyyksiä lisää (Pariisi pilottina, tilattu 16.8.2026) 🟡 KESKEN
 
 **Kuittaus (Opus 16.8.2026):** Pariisi 8 → **11 kohdetta** (v788):
