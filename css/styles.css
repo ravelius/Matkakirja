@@ -11974,9 +11974,16 @@ button.opas-saagraafi-nappi:hover:not(:disabled) {
  * rivit näyttäisivät rikkinäisiltä, jos osa riveistä olisi kapeampia
  * kuin muut.
  */
+/*
+ * Kelluke on 15 rem eikä 12 rem: lehden graafissa on sadepalkit ja
+ * kaksi asteikkoa, ja sen tekstit on mitoitettu 300 yksikön leveään
+ * viewBoxiin. 12 rem:ssä akseliluvut menivät lukukelvottomiksi;
+ * 15 rem on kapein leveys, jossa ne yhä erottuvat. Leipätekstille jää
+ * yhä kierrettävää myös kortin kapeimmalla leveällä mitalla.
+ */
 .opas-saagraafi {
   float: right;
-  width: 12rem;
+  width: 15rem;
   margin: 0.1rem 0 0.6rem 1rem;
 }
 
@@ -11996,140 +12003,13 @@ button.opas-saagraafi-nappi {
   cursor: zoom-in;
 }
 
-.opas-saa-kuva {
-  display: block;
-  width: 100%;
-  height: auto;
-  /* Hento hiekka pohjaksi: vaaleampi kuin laatikon oma pohja, jotta
-   * kuvaaja erottuu laatikosta ilman omaa väriaksenttia. */
-  background: var(--opas-pohja);
-  border: 1px solid rgba(58, 42, 21, 0.25);
-  border-radius: 3px;
-}
-
-.opas-saagraafi-teksti {
-  margin: 0.3rem 0 0;
-  font-family: var(--font-type);
-  font-size: 0.64rem;
-  line-height: 1.35;
-  letter-spacing: 0.02em;
-  color: var(--opas-muste-hento);
-}
-
 /*
- * PETROOLI KÄYRILLE. Päivä on ylempi käyrä ja yö alempi, ja niiden
- * väliin jäävä vyöhyke on saman värin liuku — vuorokauden vaihteluväli
- * on siis kuvassa pinta-alaa, ei kahta irrallista viivaa. Kumpikaan
- * käyrä ei tarvitse omaa väriä: ylempi on aina päivä.
- *
- * ELÄVÖINTI on lainattu maalehden vuosiennusteesta (.vuosisaa,
- * omistajan tilaus 16.8.2026): käyrä piirtyy vasemmalta oikealle,
- * täyttö ja pisteet ilmestyvät sen vanaan, ja liikeherkkyys sammuttaa
- * koko sarjan alla. Ajat ovat lehden ajat, jotta kaksi graafia
- * käyttäytyy samalla tavalla eikä toinen tunnu hitaammalta.
+ * Graafi on lehden oma .vuosisaa (js/saa.js piirraVuosiSaa), joten
+ * sen värit, animaatiot ja typografia tulevat lehden säännöistä —
+ * täällä sitä ei tyylitellä uusiksi. Kelluke antaa vain mitat ja
+ * kehyksen: opas 2.2:n oma käyräpiirrin CSS-sääntöineen poistettiin,
+ * kun omistaja pyysi käyttämään "juuri samaa" graafia (16.8.2026).
  */
-.opas-saa-vyo {
-  opacity: 0;
-  animation: saa-ilmesty 900ms ease-out 450ms forwards;
-}
-
-.opas-saa-kayra {
-  fill: none;
-  stroke: var(--opas-syva);
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  /* pathLength="1" JS:ssä: piirto vasemmalta oikealle. */
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: saa-viiva-piirto 1100ms ease-out 150ms forwards;
-}
-
-.opas-saa-paiva { stroke-width: 2; }
-.opas-saa-yo { stroke-width: 1.4; opacity: 0.72; }
-
-.opas-saa-piste {
-  fill: var(--opas-syva);
-  opacity: 0;
-  animation: saa-ilmesty 300ms ease-out forwards;
-}
-
-.opas-saa-yo-piste { fill-opacity: 0.72; }
-
-/* Kuluva kuukausi: haalea kaista pystyyn ja lihavoitu kirjain — sama
- * ele kuin lehdessä, oppaan petroolilla. */
-.opas-saa-kuluva-kaista { fill: rgba(29, 90, 94, 0.07); }
-
-.opas-saa-kuluva {
-  font-weight: 700;
-  fill: var(--opas-syva);
-}
-
-.opas-saa-pohjaviiva {
-  stroke: rgba(58, 42, 21, 0.32);
-  stroke-width: 1;
-}
-
-/*
- * Ääripäiden lukemat pienessä graafissa: halo pitää luvun luettavana
- * käyrän ja ruudukon päällä (paint-order kuten lehdessä).
- */
-.opas-saa-arvo {
-  font-family: var(--font-type);
-  font-size: 9px;
-  font-weight: 700;
-  text-anchor: middle;
-  fill: var(--opas-syva);
-  paint-order: stroke;
-  stroke: rgba(248, 239, 220, 0.9);
-  stroke-width: 2.5px;
-  opacity: 0;
-  animation: saa-ilmesty 400ms ease-out 1100ms forwards;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .opas-saa-vyo,
-  .opas-saa-kayra,
-  .opas-saa-piste,
-  .opas-saa-arvo { animation: none; }
-
-  .opas-saa-kayra { stroke-dashoffset: 0; }
-
-  .opas-saa-vyo,
-  .opas-saa-piste,
-  .opas-saa-arvo { opacity: 1; }
-
-  .opas-saa-yo { opacity: 0.72; }
-}
-
-.opas-saa-ruudukko {
-  stroke: rgba(58, 42, 21, 0.15);
-  stroke-width: 1;
-}
-
-/* Nolla-aste on ainoa viiva, jolla on merkitys ilman lukuaan. */
-.opas-saa-nolla {
-  stroke: rgba(58, 42, 21, 0.4);
-  stroke-width: 1;
-}
-
-.opas-saa-aste,
-.opas-saa-kk,
-.opas-saa-luku {
-  font-family: var(--font-type);
-  font-size: 9px;
-  fill: var(--opas-muste-hento);
-}
-
-.opas-saa-aste { text-anchor: end; }
-.opas-saa-kk { text-anchor: middle; }
-
-.opas-saa-luku {
-  text-anchor: middle;
-  font-weight: 700;
-  fill: var(--opas-syva);
-}
-
-.opas-saa-yo-luku { opacity: 0.75; }
 
 /*
  * MINIPONNAHDUS oppaan paletissa. Kupla on pelin yhteinen pikkuseloste
@@ -12193,9 +12073,6 @@ button.opas-saagraafi-nappi {
   color: var(--opas-muste-hento);
 }
 
-/* Suuressa kuvaajassa on kuukausiluvut, joten se saa olla korkeampi
- * ja väljempi kuin kelluke. */
-.opas-saa-suuri .opas-saa-kuva { border: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   .opas-saa-overlay,

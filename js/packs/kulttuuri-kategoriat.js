@@ -2622,31 +2622,6 @@ export const KULTTUURI_KATEGORIAT = {
                   + 'tulee jo viideltä.',
               },
             ],
-            /*
-             * VUOSIKÄYRÄN DATA (paketti O3, osa 2): kahdentoista
-             * kuukauden ilmastonormaalit. min = kuukauden keskimääräinen
-             * yölämpötila, max = keskimääräinen päivälämpötila.
-             *
-             * LÄHDE: en-Wikipedian Paris-artikkelin ilmastotaulukko
-             * (Météo-France, Parc Montsouris, normaalikausi 1991–2020),
-             * haettu 16.8.2026. Samat luvut, joista yllä olevat kausien
-             * lämpöhaarukat on pyöristetty — kaudet ovat siis tämän
-             * taulukon tiivistelmä eivätkä eri lähde.
-             */
-            ilmasto: [
-              { kk: 'tammi', min: 3.2, max: 7.6 },
-              { kk: 'helmi', min: 3.3, max: 8.8 },
-              { kk: 'maalis', min: 5.6, max: 12.8 },
-              { kk: 'huhti', min: 7.9, max: 16.6 },
-              { kk: 'touko', min: 11.1, max: 20.2 },
-              { kk: 'kesä', min: 14.2, max: 23.4 },
-              { kk: 'heinä', min: 16.2, max: 25.7 },
-              { kk: 'elo', min: 16.0, max: 25.6 },
-              { kk: 'syys', min: 13.0, max: 21.5 },
-              { kk: 'loka', min: 9.9, max: 16.5 },
-              { kk: 'marras', min: 6.2, max: 11.1 },
-              { kk: 'joulu', min: 3.8, max: 8.0 },
-            ],
             hintataso: '€€€',
             /*
              * ANKKURIHINNAT 2026. Metro- ja päivälippu ovat
