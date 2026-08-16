@@ -2344,13 +2344,45 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'aukeavat säällä kuin säällä. Jokilaiva näyttää saman '
                 + 'reitin vedestä käsin: Île de la Citén kärjen, sillat ja '
                 + 'Louvren pitkän julkisivun.',
-              kuva: {
-                tiedosto: 'Paris 75005 Quai de Montebello Bouquinistes 20071014.jpg',
-                selite: 'Bouquinistin laatikko auki Quai de Montebellolla: '
-                  + 'käytettyjä kirjoja, vanhoja Le Petit Journalin '
-                  + 'etusivuja ja postikorttitelineitä.',
-                lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 3.0)',
-              },
+              /*
+               * KARUSELLI (omistajan tilaus 16.8.2026: "lisää seinestä
+               * muutama kuva lisää ja laita ne nykyisen kuvan kanssa
+               * karuselliin"). Järjestys seuraa jakson tekstiä: ensin
+               * ranta ja kivimuuri laatikkoriveineen, sitten yksi
+               * laatikko auki lähikuvana, sitten jokilaiva ja viimeisenä
+               * se näkymä, jonka laivasta näkee — Île de la Citén kärki
+               * ja Pont Neuf. Lisenssit todennettu Commonsin API:sta
+               * 16.8.2026 (Restrictions tyhjä kaikilla), sijainti
+               * kuvaustekstistä ja kategorioista, jokainen katsottu
+               * silmin.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Quai Saint-Michel, Paris 5 May 2016.jpg',
+                  selite: 'Kivimuurin harjalla rivi vihreitä laatikoita, '
+                    + 'muurin juurella alempi ranta kävelijöille.',
+                  lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Paris 75005 Quai de Montebello Bouquinistes 20071014.jpg',
+                  selite: 'Bouquinistin laatikko auki Quai de Montebellolla: '
+                    + 'käytettyjä kirjoja, vanhoja Le Petit Journalin '
+                    + 'etusivuja ja postikorttitelineitä.',
+                  lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Bateaux Mouches Paris 2011.jpg',
+                  selite: 'Jokilaiva liukuu Pont Neufin kaaren ali kansi '
+                    + 'täynnä matkustajia.',
+                  lahde: 'Daniel Stockman, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Île de la Cité shortly before sunrise, West View 140320 1.jpg',
+                  selite: 'Île de la Citén kärki ja Pont Neuf hetkeä ennen '
+                    + 'auringonnousua.',
+                  lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
             },
             {
               otsikko: 'Istumisen taito',
