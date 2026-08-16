@@ -54,3 +54,78 @@ Opus samalla muodolla, ja Fable tarkastaa.
   auringonlasku Tiberin ja Angelokastellin sillan yli.
 - **Nosto 2:** yllätys: valokeila Pantheonin okuluksesta sisätilaan
   — tai Vespa mukulakivikujalla aamuvalossa.
+
+## Helsinki
+
+- **Pääkuva:** Tuomiokirkko ja Senaatintori laajakulmassa
+  erikoisvalossa — kesäyön valo, sininen hetki tai lumen hohde
+  iltavalaistuksessa. Karuselliin sopii merenpuoleinen
+  kaupunkisiluetti Kauppatorin tai Eteläsataman suunnasta.
+- **Nosto 1:** Suomenlinna — Kuninkaanportti tai vallien niemi
+  matalassa aamu- tai iltavalossa, meri mukana kuvassa.
+- **Nosto 2:** yllätys: jäänmurtajat talvilevossa Katajanokan
+  laiturissa, jäätynyt meri ympärillä — kaupunki, joka joutuu
+  aukaisemaan oman merensä joka talvi. Tai vihreä raitiovaunu
+  lumisateessa.
+
+## Kööpenhamina
+
+- **Pääkuva:** Nyhavn — värikäs talorivi ja puiset purjealukset
+  kanavan varrella ilta- tai sinisen hetken valossa, julkisivut ja
+  lyhdyt veteen heijastuen.
+- **Nosto 1:** Tivoli pimeän tultua: lyhtyrivit, karusellit ja
+  puutarhan valot. Puisto on nimenomaan iltakohde, joten
+  päivänvalokuva myy sen alakanttiin.
+- **Nosto 2:** yllätys: polkupyörärivistö ruuhka-aikaan Dronning
+  Louises Bro -sillalla — kaupunki, jossa pyörä on pääkulkuneuvo
+  eikä harrastus. Tai Vor Frelsersin kirkon ulkopuolinen
+  kierreportaikko tornin kyljessä.
+
+## Wien
+
+- **Pääkuva:** Schönbrunnin linna ja puutarha Gloriettelta
+  kuvattuna aamu-usvassa tai auringonlaskussa — laajakulma, jossa
+  koko puutarha-akseli avautuu linnalle asti.
+- **Nosto 1:** Stephansdom eli Pyhän Tapanin tuomiokirkko:
+  kuviollinen tiilikatto ja torni iltavalossa tai sinisellä
+  hetkellä.
+- **Nosto 2:** yllätys: wieniläisen kahvihuoneen sisäkuva —
+  marmoripöydät, puiset lehtitelineet ja himmeät kruunut
+  (kahvilakulttuuri on Unescon aineetonta perintöä). Tai Otto
+  Wagnerin jugendpaviljonki Karlsplatzilla.
+
+## Praha
+
+- **Pääkuva:** Kaarlensilta aamu-usvassa, Prahan linna ja Pyhän
+  Vituksen tuomiokirkko siluettina takana — laajakulma, jossa
+  silta ja Vltava kantavat kuvan.
+- **Nosto 1:** Vanhankaupungin tori sinisellä hetkellä: Týn-kirkon
+  tornit ja raatihuoneen astronominen kello valaistuina.
+- **Nosto 2:** yllätys: Nerudova-kadun maalatut talomerkit
+  (kultainen avain, kaksi aurinkoa, viulu) — talojen nimikyltit
+  ajalta ennen katunumeroita. Tai Malá Stranan punainen kattomeri
+  Petříniltä aamuvalossa.
+
+## Amsterdam
+
+- **Pääkuva:** kanaalikehä sinisellä hetkellä — esimerkiksi
+  Brouwersgracht tai Herengrachtin siltarivi, jossa kaarisiltojen
+  valorivit heijastuvat tyyneen veteen.
+- **Nosto 1:** Rijksmuseum: valaistu julkisivu hämärässä
+  Museumpleinin altaan yli, koko rakennus vaakakuvassa.
+- **Nosto 2:** yllätys: kanaalitalojen nostoparrut ja eteenpäin
+  kallistuvat päätyjulkisivut — kapeat portaat pakottivat
+  hilaamaan huonekalut ikkunasta sisään. Tai rivi
+  Amsterdammertje-pollareita iltavalossa.
+
+## Tukholma
+
+- **Pääkuva:** Gamla stanin ja Riddarholmenin siluetti veden yli
+  auringonlaskussa tai sinisellä hetkellä, esimerkiksi
+  Monteliusvägenin suunnasta.
+- **Nosto 1:** Vasa-laiva museosalissaan — 1600-luvun sotalaiva
+  kokonaisena, kohdevalot tummassa puussa.
+- **Nosto 2:** yllätys: metroaseman louhittu kallioholvi
+  maalattuna (Kungsträdgården, Solna centrum, Stadionin
+  sateenkaari) — maailman pisin taidegalleria. Tai Östermalmin
+  kauppahallin tiiliholvit.

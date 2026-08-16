@@ -48,6 +48,11 @@ lisäohjeita:
 
 ## Paketti K3: Kuvakäsikirjoitukset lopuille piirroskaupungeille (Opus 23, tilattu 16.8.2026)
 
+**✅ VALMIS (Opus 23, katselmoitu ja mergetty 16.8.2026):** kuusi
+käsikirjoitusta mallien muodolla; Fable tarkasti suunnan kahden
+kaupungin checkpointista ja hyväksyi kokonaisuuden sellaisenaan.
+Kuvahaut tilataan erikseen Pariisi-pilotin hyväksynnän jälkeen.
+
 Omistajan kaava on kirjattu Raamattuun (osio "Kuvat ja lähteet") ja
 docs/kuvakasikirjoitukset.md:n alkuun; Fable kirjoitti mallit
 (Pariisi, Lontoo, Berliini, Rooma). Tämä paketti KIRJOITTAA
