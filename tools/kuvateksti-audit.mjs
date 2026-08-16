@@ -10,6 +10,9 @@
  *   kategoria.lista[].kohteet[0].selite (ensimmäinen kuvallinen)
  *                              -> figcaption.vinkki-hero-teksti
  *   nahtavyysjutut kuvat[].selite -> figcaption.nahtavyys-kuvateksti
+ *   matkailijalle.kuva.selite  -> figcaption.kuvateksti (etusivun osio)
+ *   matkailijalle.artikkeli.jaksot[].kuva(t).selite
+ *                              -> figcaption.nahtavyys-kuvateksti (opas)
  *   VUORIKUVAT[].selite        -> #wiki-kuvateksti (kuratoituGalleria)
  *   maasto-tekstit kappaleet[].selite -> #wiki-kuvateksti
  *   valokuvat-pakettien selite -> postikortti p.kuvateksti
@@ -58,6 +61,36 @@ async function lehdet() {
         // Menovinkkisivun hero = ensimmäinen kuvallinen kohde.
         const eka = (kat.lista ?? []).flatMap((r) => r.kohteet ?? []).find((k) => k.tiedosto);
         if (eka) mittaa('vinkki-hero', nimi, eka.selite, { paikka, kuva: eka.tiedosto });
+        /*
+         * MATKAILIJALLE-OSIO JA MATKAILIJAN OPAS (lisätty 16.8.2026).
+         * Tämä aukko oli Opus 25:n avoin havainto ja omistajan ehto
+         * oppaan monistukselle: opasjaksojen kuvatekstit renderöityvät
+         * ruudulle (ui.js opasJakso -> figcaption.nahtavyys-kuvateksti)
+         * mutta jäivät auditin ulkopuolelle, joten niiden pituutta ei
+         * mitannut mikään.
+         *
+         * Jakson `kuva` voi olla YKSI KUVA TAI LISTA (karuselli,
+         * paketti O3): molemmat muodot mitataan, muuten karusellin
+         * selitteet katoaisivat mittauksesta juuri kun niitä tulee
+         * lisää.
+         */
+        const matkailijalle = kat.matkailijalle;
+        if (matkailijalle?.kuva?.selite) {
+          mittaa('matkailijalle', nimi, matkailijalle.kuva.selite,
+            { paikka, kuva: matkailijalle.kuva.tiedosto });
+        }
+        for (const jakso of matkailijalle?.artikkeli?.jaksot ?? []) {
+          const kuvat = Array.isArray(jakso.kuva) ? jakso.kuva : [jakso.kuva];
+          for (const k of kuvat) {
+            if (k?.selite) {
+              mittaa('opasjakso', nimi, k.selite,
+                { paikka: `${paikka}/${jakso.otsikko ?? '?'}`, kuva: k.tiedosto });
+            }
+          }
+        }
+        for (const k of matkailijalle?.artikkeli?.kuvat ?? []) {
+          mittaa('opaskuva', nimi, k.selite, { paikka, kuva: k.tiedosto });
+        }
       }
     }
   };
