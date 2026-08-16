@@ -12373,14 +12373,25 @@ export class UI {
       lohko.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
     }
     if (tiedot.artikkeli?.teksti) {
-      const nappi = html('button', 'wiki-btn', 'Matkailijan opas');
-      nappi.type = 'button';
+      /*
+       * KULMALAPPU oppaaseen (omistajan tilaus 16.8.2026): entinen
+       * paperinappi ei kertonut, että linkin takana on lehden kevein
+       * ja iloisin osa. Tilalle vino postikortti-/matkalippulappu,
+       * jonka väri ja kallistus erottuvat pergamentista jo
+       * silmäyksellä. Nappi yhä, ei <a> — kohde on saman ikkunan
+       * sisältö eikä osoite.
+       */
+      const lappu = html('button', 'opas-lappu');
+      lappu.type = 'button';
+      lappu.appendChild(html('span', 'opas-lappu-leima', 'Opas'));
+      lappu.appendChild(html('span', 'opas-lappu-nimi', 'Matkailijan opas'));
+      lappu.appendChild(html('span', 'opas-lappu-vihje', 'säät · hinnat · vinkit'));
       // Henkilölinkit tyhjinä: artikkeli ei ole kartan kohde, eikä
       // kaupungin henkilölinkkejä sovelleta sen tekstiin.
-      nappi.addEventListener('click', () => this.avaaNahtavyys(tiedot.artikkeli, null, {
+      lappu.addEventListener('click', () => this.avaaNahtavyys(tiedot.artikkeli, null, {
         henkilolinkit: [], valikko: false,
       }));
-      lohko.appendChild(nappi);
+      lohko.appendChild(lappu);
     }
     kohde.appendChild(lohko);
   }
@@ -13048,8 +13059,25 @@ export class UI {
 
     const sisalto = document.getElementById('nahtavyys-sisalto');
     sisalto.textContent = '';
-    const kappaleet = String(kohde.teksti ?? '').split('\n\n').filter(Boolean);
-    const kuvat = (kohde.kuvat ?? []).slice(0, 5);
+    /*
+     * OPASTAITTO (omistajan linjaus 16.8.2026, Raamattu/Kaupungit:
+     * "Matkailijan opas on pelin kevyt ja viihteellinen osa, joka
+     * houkuttelee matkustamaan" — aihejaksot isoine kuvineen,
+     * tekstinosto sekä sää-, hinta- ja suunnittelulaatikot).
+     *
+     * Oma haara eikä lisäys entiseen: opas ei ole kappalevirta kuvineen
+     * vaan jaksoista koottu sivu, jossa laatikot ja nosto tulevat
+     * jaksojen VÄLIIN määrätyssä järjestyksessä. Ripoteltu-taitto
+     * (kaikki muut kaupungit, kunnes opas monistetaan) kulkee
+     * entisellään alla — kappaleet ja kuvat tyhjennetään vain siltä
+     * varalta, ettei kumpikaan haara maalaa samaa ainesta kahdesti.
+     */
+    const opas = kohde.taitto === 'opas' && Boolean(kohde.jaksot?.length);
+    kortti?.classList.toggle('opas-kortti', opas);
+    dialogi.classList.toggle('opas-arkki', opas);
+    if (opas) this.taitaOpas(sisalto, kohde, linkit);
+    const kappaleet = opas ? [] : String(kohde.teksti ?? '').split('\n\n').filter(Boolean);
+    const kuvat = opas ? [] : (kohde.kuvat ?? []).slice(0, 5);
     /*
      * Useampi kuva näytetään KARUSELLINA yhden kehyksen sisällä
      * (omistajan palaute 10.8.2026: peräkkäin ladottuina lisäkuvat
@@ -13133,7 +13161,9 @@ export class UI {
 
     // Jutun ensimmäinen kuva saa oman luokkansa: vaakana se levenee
     // koko palstalle, pystynä se pysyy pienenä (omistajan ohje).
-    sisalto.querySelector('.nahtavyys-kuvakehys')?.classList.add('nahtavyys-ensikuva');
+    // Oppaassa EI: siellä jokainen jaksokuva on koko palstan levyinen,
+    // ja ensikuvan pystysääntö kutistaisi ensimmäisen jaksokuvan.
+    if (!opas) sisalto.querySelector('.nahtavyys-kuvakehys')?.classList.add('nahtavyys-ensikuva');
 
     if (kohde.wiki) {
       const nappi = html('button', 'wiki-btn', 'Lue lisää aiheesta');
@@ -13491,6 +13521,160 @@ export class UI {
     if (kuva.lahde) teksti.appendChild(html('span', 'nahtavyys-lahde', kuva.lahde));
     kehys.appendChild(teksti);
     return kehys;
+  }
+
+  /**
+   * MATKAILIJAN OPAS: jaksotettu taitto (paketti O1, omistajan linjaus
+   * 16.8.2026). Nähtävyysjuttu on kappalevirta, jonka kuvat ripotellaan
+   * sekaan; opas on toisenlainen lukukokemus — se on selailtava sivu,
+   * jossa lukija hyppii otsikosta laatikkoon ja takaisin.
+   *
+   * Kiinteä järjestys omistajan speksistä:
+   *   ingressi → jakso 1 → Milloin matkaan? → jakso 2 → nosto →
+   *   jakso 3 → Matkakassa → loput jaksot → Suunnittele matka
+   *
+   * Laatikot sidotaan jaksojen VÄLIIN indeksillä eikä lasketa suhteessa
+   * jaksojen määrään: sijainti on toimituksellinen päätös (sää tulee
+   * heti liikkumisen jälkeen, hinnat vasta kun kaupungin tapa elää on
+   * kerrottu), eikä se saa liikkua sen mukaan, montako jaksoa
+   * kaupungille sattuu kirjoitetuksi. Lyhyemmän oppaan väliin
+   * mahtumattomat laatikot tulevat jaksojen perään omassa
+   * järjestyksessään, jotta mikään ei katoa.
+   */
+  taitaOpas(sisalto, kohde, linkit) {
+    const jaksot = kohde.jaksot ?? [];
+    const matkailu = kohde.matkailu ?? null;
+    // Ingressi: artikkelin oma teksti-kenttä on oppaassa lyhyt
+    // aloituslause, ei koko juttu (jaksoissa on leipäteksti).
+    for (const kappale of String(kohde.teksti ?? '').split('\n\n').filter(Boolean)) {
+      const p = this.nahtavyysKappale(kappale, linkit);
+      p.classList.add('opas-ingressi');
+      sisalto.appendChild(p);
+    }
+    // Jakson indeksi → lohko, joka tulee sen JÄLKEEN.
+    const valiin = new Map();
+    if (matkailu?.parasAika || matkailu?.kaudet?.length) {
+      valiin.set(0, () => this.opasKaudet(matkailu));
+    }
+    if (kohde.nosto) valiin.set(1, () => this.opasNosto(kohde.nosto));
+    if (matkailu?.hintataso || matkailu?.hinnat?.length) {
+      valiin.set(2, () => this.opasKassa(matkailu));
+    }
+    jaksot.forEach((jakso, i) => {
+      sisalto.appendChild(this.opasJakso(jakso, linkit));
+      const lohko = valiin.get(i);
+      if (lohko) sisalto.appendChild(lohko());
+    });
+    for (const [i, lohko] of valiin) {
+      if (i >= jaksot.length) sisalto.appendChild(lohko());
+    }
+    if (matkailu?.linkit?.length) sisalto.appendChild(this.opasLinkit(matkailu));
+  }
+
+  /**
+   * Oppaan aihejakso: pieni väliotsikko → kappale(et) → KOKO PALSTAN
+   * levyinen kuva kuvatekstillä. Ei kellukkeita — omistajan havainto
+   * 16.8.2026 oli, että ripoteltu kuvataitto on opasjutussa levoton.
+   */
+  opasJakso(jakso, linkit) {
+    const osa = html('section', 'opas-jakso');
+    if (jakso.otsikko) osa.appendChild(html('h3', 'opas-valiotsikko', jakso.otsikko));
+    for (const kappale of String(jakso.teksti ?? '').split('\n\n').filter(Boolean)) {
+      osa.appendChild(this.nahtavyysKappale(kappale, linkit));
+    }
+    if (jakso.kuva?.tiedosto) {
+      const kehys = this.nahtavyydenKuva(jakso.kuva);
+      kehys.classList.add('opas-kuva');
+      osa.appendChild(kehys);
+    }
+    return osa;
+  }
+
+  /** Oppaan laatikon runko: otsikkorivi ja aksenttipohja luokasta. */
+  opasLaatikko(otsikko, luokka) {
+    const laatikko = html('aside', `opas-laatikko ${luokka}`);
+    laatikko.appendChild(html('h3', 'opas-laatikko-otsikko', otsikko));
+    return laatikko;
+  }
+
+  /**
+   * "Milloin matkaan?" — parasAika-lause ja kausirivit
+   * (kausi · kuukaudet · lämpöhaarukka · luonnehdinta). Lämmöt tulevat
+   * datasta valmiiksi muotoiltuna merkkijonona, koska haarukan
+   * pyöristys on toimituksellinen päätös eikä laskutoimitus.
+   */
+  opasKaudet(matkailu) {
+    const laatikko = this.opasLaatikko('Milloin matkaan?', 'opas-saa');
+    if (matkailu.parasAika) {
+      laatikko.appendChild(html('p', 'opas-parasaika', matkailu.parasAika));
+    }
+    if (matkailu.kaudet?.length) {
+      const lista = html('dl', 'opas-kaudet');
+      for (const kausi of matkailu.kaudet) {
+        const nimi = html('dt', 'opas-kausi-nimi');
+        nimi.appendChild(html('span', 'opas-kausi-sana', kausi.nimi ?? ''));
+        if (kausi.kk) nimi.appendChild(html('span', 'opas-kausi-kk', kausi.kk));
+        lista.appendChild(nimi);
+        const tiedot = html('dd', 'opas-kausi-tiedot');
+        if (kausi.lampotila) {
+          tiedot.appendChild(html('span', 'opas-kausi-lampo', kausi.lampotila));
+        }
+        if (kausi.kuvaus) tiedot.appendChild(html('span', 'opas-kausi-kuvaus', kausi.kuvaus));
+        lista.appendChild(tiedot);
+      }
+      laatikko.appendChild(lista);
+    }
+    return laatikko;
+  }
+
+  /** "Matkakassa" — €€-luokka merkkinä ja 4–5 ankkurihintaa. */
+  opasKassa(matkailu) {
+    const laatikko = this.opasLaatikko('Matkakassa', 'opas-kassa');
+    if (matkailu.hintataso) {
+      // Luokka otsikkoriville eikä omaksi lohkokseen: kelluvana
+      // erillisenä kappaleena se asettui vasta ensimmäisen hintarivin
+      // kohdalle, jolloin se näytti kuuluvan siihen riviin.
+      const merkki = html('span', 'opas-hintataso', matkailu.hintataso);
+      merkki.setAttribute('aria-label', `Hintataso ${matkailu.hintataso}`);
+      laatikko.firstChild.appendChild(merkki);
+    }
+    if (matkailu.hinnat?.length) {
+      const lista = html('dl', 'opas-hinnat');
+      for (const rivi of matkailu.hinnat) {
+        lista.appendChild(html('dt', 'opas-hinta-mita', rivi.mita ?? ''));
+        lista.appendChild(html('dd', 'opas-hinta-arvo', rivi.hinta ?? ''));
+      }
+      laatikko.appendChild(lista);
+    }
+    return laatikko;
+  }
+
+  /**
+   * "Suunnittele matka" — 3–4 ulkoista linkkiä. Uuteen välilehteen ja
+   * rel="noopener noreferrer": peli jää auki taakse, eikä avattu sivu
+   * pääse käsiksi avaajaansa window.openerin kautta.
+   */
+  opasLinkit(matkailu) {
+    const laatikko = this.opasLaatikko('Suunnittele matka', 'opas-suunnittele');
+    const lista = html('ul', 'opas-linkkilista');
+    for (const linkki of matkailu.linkit ?? []) {
+      const rivi = html('li', 'opas-linkkirivi');
+      const osoite = html('a', 'opas-linkki', linkki.nimi ?? linkki.url);
+      osoite.href = linkki.url;
+      osoite.target = '_blank';
+      osoite.rel = 'noopener noreferrer';
+      rivi.appendChild(osoite);
+      lista.appendChild(rivi);
+    }
+    laatikko.appendChild(lista);
+    return laatikko;
+  }
+
+  /** Tekstinosto: yksi lause isolla antiikvalla, koristeviivat CSS:stä. */
+  opasNosto(teksti) {
+    const lohko = html('blockquote', 'opas-nosto');
+    lohko.appendChild(html('p', 'opas-nosto-teksti', teksti));
+    return lohko;
   }
 
   /**

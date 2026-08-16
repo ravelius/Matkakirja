@@ -92,6 +92,14 @@ sw.js esilataa nyt 420 äänitiedostoa (~200 Mt) joka asennuksessa.
 
 ## Paketti O1: Matkailijan opas 2.0 — Pariisi-pilotti (Opus 25, tilattu 16.8.2026)
 
+**✅ VALMIS (Opus 25, katselmoitu ja julkaistu v776:ssa 16.8.2026):**
+jaksotaitto + 3 laatikkoa + nosto + väripaletti + kulmalappu;
+ripoteltu-regressio tarkistettu kaikista kaupungeista. Ilmasto
+1991–2020-normaaleista lähteineen; espresso/patonki/illallinen
+ovat haarukoita ilman yhtä lähdettä (tietoinen). MONISTUKSEEN:
+kuvateksti-audit ei kata matkailijalle-kuvia (jaksot[].kuva) —
+korjattava audit-työkaluun ennen monistuserää.
+
 Omistajan linjaus 16.8.2026 (Raamattu, Kaupungit-osio): opas on
 pelin kevyt ja viihteellinen osa, joka houkuttelee matkustamaan —
 iloisemmat värit, jaksotettu taitto, laatikot. Ripoteltu taitto
