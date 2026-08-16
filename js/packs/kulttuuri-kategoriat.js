@@ -1704,14 +1704,22 @@ export const KULTTUURI_KATEGORIAT = {
       matkailijalle: {
         /*
          * Osion valokuva otsikon alla oikealla, teksti kiertää.
-         * Lisenssi tarkistettu Commonsin API:sta 16.8.2026, kuva
-         * katsottu silmin.
+         *
+         * PYSTYKUVA JA YKSI AIHE (omistajan linjaus 16.8.2026), sama
+         * kaava kuin Pariisissa ja Lontoossa: Commonsin Featured
+         * picture, pystysuora, tunnistettava heti pienenä. Berliinin
+         * vastine on Fernsehturm — kaupungin korkein rakennus ja sen
+         * selvin tunnus.
+         *
+         * Entinen Kurfürstendammin kahvilakuva ei kadonnut: se siirtyi
+         * jakson 4 karuselliin, jonka teksti kertoo syömisestä ja
+         * kahviloista.
          */
         kuva: {
-          tiedosto: 'Berlin - Kürfurstendamm Gehsteig.jpg',
-          selite: 'Kahvilat valtaavat puolet Kurfürstendammin leveästä '
-            + 'jalkakäytävästä.',
-          lahde: 'Marek Śliwecki, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Berliner Fernsehturm November 2013.jpg',
+          selite: 'Fernsehturm auringonlaskun aikaan: 368 metriä korkea '
+            + 'torni näkyy lähes joka puolelta kaupunkia.',
+          lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
         },
         kappale: 'Berliini on väljä kaupunki: pinta-alaltaan se on lähes '
           + 'yhdeksän kertaa Pariisin kokoinen, joten vierailija oppii '
@@ -1815,14 +1823,27 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'juustoja ja vihanneksia kanaalin rannalla, ja '
                 + 'aamiaista tarjoillaan monessa kahvilassa iltapäivään '
                 + 'asti.',
-              kuva: {
-                tiedosto: '2023-01-23 Currywurst in Berlin.jpg',
-                asettelu: 'kapea',
-                selite: 'Currywurst pahvilautasella: paistettu makkara '
-                  + 'paloina, päällä ketsuppia ja curryjauhetta. '
-                  + 'Puuhaarukka kuuluu asiaan.',
-                lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              /*
+               * Kaksi kuvaa: kojun annos ja kahvilaterassi. Jälkimmäinen
+               * oli aiemmin etusivun osiossa ja siirtyi tähän, kun
+               * etusivu sai pystykuvan — jakson teksti kertoo myös
+               * kahviloista, joissa aamiaista tarjoillaan iltapäivään.
+               */
+              kuva: [
+                {
+                  tiedosto: '2023-01-23 Currywurst in Berlin.jpg',
+                  selite: 'Currywurst pahvilautasella: paistettu makkara '
+                    + 'paloina, päällä ketsuppia ja curryjauhetta. '
+                    + 'Puuhaarukka kuuluu asiaan.',
+                  lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Berlin - Kürfurstendamm Gehsteig.jpg',
+                  selite: 'Kahvilat valtaavat puolet Kurfürstendammin '
+                    + 'leveästä jalkakäytävästä.',
+                  lahde: 'Marek Śliwecki, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
             },
             {
               otsikko: 'Ilta',
