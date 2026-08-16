@@ -10435,21 +10435,48 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  */
 .matkailijalle-kuva { position: relative; }
 
-.matkailijalle-kuva .opas-lappu {
+/*
+ * YKSI DIAGONAALINEN KULMANAUHA (omistajan tarkennus 16.8.2026:
+ * "vain yksi diagonaali palkki jonka päällä pelkkä matkaopas —
+ * kaikki muut rimpsut pois"). Kotelo leikkaa nauhan kuvan
+ * kulmaan; nauha on 45 asteessa ja peittää kulman viistosti.
+ */
+.opas-nauha-kotelo {
   position: absolute;
-  top: -1rem;
-  right: -0.4rem;
+  top: 0;
+  right: 0;
   z-index: 2;
-  clear: none;
-  margin: 0;
-  max-width: 11.5rem;
-  padding: 0.4rem 0.8rem 0.45rem 1.3rem;
-  transform: rotate(6deg);
+  width: 7.2rem;
+  height: 7.2rem;
+  overflow: hidden;
+  pointer-events: none;
 }
 
-.matkailijalle-kuva .opas-lappu:hover {
-  transform: rotate(6deg) scale(1.05);
+button.opas-nauha {
+  position: absolute;
+  top: 1.45rem;
+  right: -3.3rem;
+  width: 12rem;
+  min-height: 0;
+  padding: 0.32rem 0;
+  border: none;
+  border-radius: 0;
+  transform: rotate(45deg);
+  background: #b8402c;
+  color: #fdf3e3;
+  font-family: var(--font-type);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(58, 42, 21, 0.35);
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  appearance: none;
 }
+
+button.opas-nauha:hover { filter: brightness(1.08); }
 
 /* Kuva on oppaan sisäänkäynti — osoitin kertoo sen. */
 .matkailijalle-kuva img { cursor: pointer; }

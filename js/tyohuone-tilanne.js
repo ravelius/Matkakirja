@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v779 — etusivulla yksi diagonaalinauha: Matkaopas',
   'v778 — Matkailijalle-kuvateksti napakaksi (7 kaupunkia)',
   'v777 — Matkailijalle: kyltti kuvan kulmassa, Lue lisää -linkki',
   'v776 — Pariisin opas 2.0: jaksot, sää, hinnat, linkit, lappu',

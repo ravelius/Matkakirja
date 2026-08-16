@@ -12365,14 +12365,15 @@ export class UI {
         henkilolinkit: [], valikko: false,
       })
       : null;
-    const luoLappu = () => {
-      const lappu = html('button', 'opas-lappu');
-      lappu.type = 'button';
-      lappu.appendChild(html('span', 'opas-lappu-leima', 'Opas'));
-      lappu.appendChild(html('span', 'opas-lappu-nimi', 'Matkailijan opas'));
-      lappu.appendChild(html('span', 'opas-lappu-vihje', 'säät · hinnat · vinkit'));
-      lappu.addEventListener('click', avaaOpas);
-      return lappu;
+    // Yksi diagonaalinen kulmanauha, teksti pelkkä "Matkaopas"
+    // (omistajan tarkennus 16.8.2026: "kaikki muut rimpsut pois").
+    const luoNauha = () => {
+      const kotelo = html('span', 'opas-nauha-kotelo');
+      const nappi = html('button', 'opas-nauha', 'Matkaopas');
+      nappi.type = 'button';
+      nappi.addEventListener('click', avaaOpas);
+      kotelo.appendChild(nappi);
+      return kotelo;
     };
     if (tiedot.kuva?.tiedosto) {
       const kotelo = html('figure', 'matkailijalle-kuva');
@@ -12395,9 +12396,8 @@ export class UI {
         }
         kotelo.appendChild(teksti);
       }
-      // Kyltti kuvan oikeaan yläkulmaan, osin kuvan päälle (CSS
-      // asemoi ja kallistaa).
-      if (avaaOpas) kotelo.appendChild(luoLappu());
+      // Nauha kuvan oikeaan yläkulmaan (CSS leikkaa kulmaan).
+      if (avaaOpas) kotelo.appendChild(luoNauha());
       lohko.appendChild(kotelo);
     }
     let viimeinenKappale = null;
@@ -12412,11 +12412,8 @@ export class UI {
       viimeinenKappale.appendChild(document.createTextNode(' '));
       viimeinenKappale.appendChild(lue);
     }
-    // Kuvaton kaupunki saa lapun entiselle paikalleen tekstin alle —
-    // kylttiä ei voi ripustaa kuvaan, jota ei ole.
-    if (avaaOpas && !tiedot.kuva?.tiedosto) {
-      lohko.appendChild(luoLappu());
-    }
+    // Kuvattomassa kaupungissa nauhalle ei ole kulmaa — Lue lisää
+    // -linkki tekstin lopussa riittää sisäänkäynniksi.
     kohde.appendChild(lohko);
   }
 
