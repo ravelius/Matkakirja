@@ -46,6 +46,121 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
+## Paketti O3: Matkailijan opas 2.2 — kevyt kainalo, säägraafi, kuvahionta (Opus 27, tilattu 16.8.2026)
+
+Omistajan palaute opas 2.1:stä ja lehden etusivusta 16.8.2026
+(iPad-kuvakaappauksista). Viisi osaa — kaikki koskevat vain Pariisia
+(pilotti; monistus tulee myöhemmin erikseen).
+
+### RAJAUS (sitova)
+
+Saat koskea VAIN näihin: `js/ui.js` (opas-metodit ja
+piirraMatkailijalle-kuvadatan käyttö), `css/styles.css` (opas- ja
+matkailijalle-osiot), `js/packs/kulttuuri-kategoriat.js` (VAIN
+pariisi-avaimen sisältö) ja raporttitiedosto `viesti-fable.md` repon
+juureen. ET koske: `sw.js`, `js/media.js`, `js/packs/maakartat.js`,
+muut kaupungit, ripoteltu-taittokoodi muiden kaupunkien osalta,
+`tools/uusi-versio.mjs`. EI PR:ää, EI mergeä, EI versionostoa —
+Fable julkaisee. Checkpoint-push omalle haaralle vähintään 30 min
+välein. Kaappauksia EI committoida.
+
+### Osa 1: kainalopari → yksi kevyt taulu leipätekstin oikealle
+
+Omistaja: "liian raskas taulukko. Tee vain otsikkotasolla ja sijoita
+leipätekstin oikealle puolelle. Yksi taulu jossa vain pohjaväri
+muuttuu. Voi tehdä mini pop upin jota painamalla tulisi tarkemmat
+tiedot."
+
+- YKSI laatikko, joka kelluu leipätekstin oikealla puolella (float
+  right, leveys n. 15–17 rem) ensimmäisen jakson tekstin vierestä
+  alkaen. Otsikkotaso vain: parasta-rivit muodossa "Museot ★★★"
+  (nimi + tähdet, EI selitteitä) ja hyvä tietää -rivit lyhyinä
+  otsikkoina (EI kokonaisia virkkeitä).
+- Laatikon sisällä kaksi vyöhykettä, jotka eroavat VAIN pohjaväriltä:
+  lämmin (parasta) ylhäällä, viileä (hyvä tietää) alla. Sama
+  typografia, sama reunus, yksi yhtenäinen kehys.
+- Datamalli: `hyvaTietaa` muutetaan muotoon `[{otsikko, teksti}]` —
+  keksi jokaiselle nykyiselle kohdalle napakka otsikko (esim.
+  "Hintataso", "Taskuvarkaat", "Jonot", "Elokuun sulut"); nykyinen
+  virketeksti siirtyy teksti-kenttään. `parasta` säilyy ennallaan.
+- Rivin napautus avaa MINIPONNAHDUKSEN, jossa sen rivin selite/teksti
+  (kevyt pieni dialogi tai kupla laatikon vieressä — EI koko ruudun
+  arkki). Esc/ulkopuolen napautus sulkee. Ruudunlukijalle
+  aria-expanded tms. asianmukaisesti.
+- Kapealla (<640 px) laatikko täysleveänä ingressin alla kuten nyt.
+- Opas 2.1:n kaksipalstainen kainalopaneeli ja sen CSS poistetaan
+  (kuollutta koodia ei jätetä).
+
+### Osa 2: säägraafi Milloin matkaan? -laatikon viereen
+
+Omistaja: "lämpötilatauluun voisi leipätekstin oikealle puolelle
+tuoda pienen kuvan vuosiennusteesta ja sitä klikkaamalla se suurenisi
+isommaksi animoidusti."
+
+- Lisää dataan `matkailu.ilmasto`: 12 kuukauden normaalit
+  `[{kk: 'tammi', min, max}]` Pariisille. Lähde: Wikipedian
+  Paris-artikkelin ilmastotaulukko (Météo-France 1991–2020) —
+  kirjaa lähde ja hakupäivä datakommenttiin ja raporttiin.
+- Piirrä ui.js:ssä PIENI SVG-vuosikäyrä (ei kirjastoja): min–max-
+  vyöhyke täytettynä + käyrät, kuukausien alkukirjaimet x-akselilla,
+  muutama °C-viiva. Paletti 2.1:n värit (petrooli käyrille, hento
+  hiekka pohjalle). Koko n. 11–13 rem, kelluu Milloin matkaan?
+  -laatikon leipätekstin oikealla puolella.
+- Napautus suurentaa graafin animoidusti (CSS-transitio pienestä
+  keskelle ruutua, esim. FLIP tai transform-scale overlay +
+  himmennystausta); suuressa versiossa myös lukuarvot. Toinen
+  napautus/Esc palauttaa animoidusti takaisin.
+
+### Osa 3: Luxembourgin puiston karuselli
+
+- Jakson 3 (Luxembourg) kuvalle karuselli: nykyisen kuvan rinnalle
+  2–3 lisäkuvaa puistosta Commonsin FP/QI/valokategorioista.
+- Kuvasäännöt (sitovat): lisenssit erätodennuksella suoraan API:sta
+  (extmetadata: LicenseShortName|Artist|Restrictions), vain PD/CC,
+  tekijä lähderiville, sijainti kuvaustekstistä/kategorioista EI
+  tiedostonimestä (nimiansat!), JOKAINEN kuva katsotaan silmin ennen
+  kytkemistä. Selitteet yhteen lauseeseen (~90 mrk).
+- Tekninen toteutus: jaksokuvan `kuva` voi olla myös lista — käytä
+  samaa karusellimekanismia kuin lehden avauskuvissa, jos se on
+  järkevästi uudelleenkäytettävissä; muuten kevyt oma toteutus
+  (nuolet + pisteet). Raportoi kumman valitsit ja miksi.
+
+### Osa 4: leipomo- ja iltakuva pienemmiksi, teksti kiertää
+
+Omistaja: "Leipomokuva voisi olla pienemmällä ja teksti vasemmalla.
+Sama iltakuvalle."
+
+- Lisää jaksokuville asetteluvaihtoehto (esim. `kuva.asettelu:
+  'kapea'`): kuva kelluu oikealla n. 38–42 % leveydellä ja jakson
+  teksti kiertää vasemmalla. Oletus säilyy täysleveänä.
+- Käytä kapeaa asettelua leipomojaksossa ja iltajaksossa (tarkista
+  itse, missä jaksoissa nämä kuvat ovat). Kapealla ruudulla kuva
+  palaa täysleveäksi.
+
+### Osa 5: etusivun Matkailijalle-kuva yksinkertaisemmaksi
+
+Omistaja: "Etsi parempi kuva etusivulle siihen missä on nauha kuvan
+päällä. Vähän yksinkertaisempi kuva kun on pienessä koossa."
+
+- Nykyinen terassikuva on pienessä koossa (10–17 rem) liian
+  sekava. Etsi tilalle kuva, jossa on YKSI selkeä, lämmin ja iloinen
+  aihe, joka lukee heti pienenäkin (esim. kahvilapöytä lähikuvana,
+  metroaseman jugendkyltti, leipomon ikkuna yhdellä aiheella —
+  sinun valintasi, perustele). FP/QI/valokategoria-etusija; samat
+  sitovat kuvasäännöt kuin osassa 3. Vaihda
+  `matkailijalle.kuva` (tiedosto + yhden lauseen selite + lähderivi).
+- HUOM: diagonaalinauha kulkee osion oikean yläkulman yli — pääaihe
+  ei saa jäädä nauhan alle (nauha ylittää kuvan oikean yläkulman).
+
+### Raportti
+
+`viesti-fable.md` repon juureen: mitä teit, perustelut (erityisesti
+osan 1 taittoratkaisu ja osan 5 kuvavalinta hylättyine
+ehdokkaineen), kuvien lisenssitaulukko, portit (testit +
+kaksoisavaimet), kaappausarviot leveänä ja kapeana (EI committoida),
+regressiotarkistus muihin kaupunkeihin (ripoteltu ennallaan),
+havainnot joita ET korjannut.
+
 ## Paketti O2: Matkailijan opas 2.1 — kainalo, paletti, otsikko (Opus 26, tilattu 16.8.2026) ✅ VALMIS
 
 **Kuittaus (Fable 16.8.2026):** Opus 26 toimitti koko paketin ja
