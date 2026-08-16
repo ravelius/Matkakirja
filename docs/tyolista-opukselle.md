@@ -176,6 +176,42 @@ Nämä eivät ole vielä katsottuja eivätkä käyttöön hyväksyttyjä.
 on arabian-, persian-, korean- tai kiinankielinen. Hakusanahaku etsii
 englanninkielisestä kuvauskentästä, jota näissä kuvissa usein ei ole.
 
+## Paketti O7: Afrikan kaupungit valmiiksi (tilattu 16.8.2026) ⬜ ODOTTAA
+
+Omistaja: *"kun nykyiset kaupungit valmiit jatka Afrikassa kaupunkien
+tekemistä valmiiksi"*. Aloitetaan siis heti kun paketti O6 (kuusi
+kaupunkia) ja O4:n lisänähtävyydet ovat maalissa.
+
+**Mitattu tilanne 16.8.2026:** Afrikan laudalla on **39 kaupunkia,
+joista lehti on yhdellä** (Kairo — ja sekin tuli Lähi-idän kautta).
+Puuttuvat 38:
+
+```
+tanger karthago tripoli murzuk alkufra sahara ahaggar marrakech
+timbuktu gao dakar sierraleone kappalmas kumasi orjarannikko kano
+lagos tshadjarvi kamerun kongo angola namib sthelena kapkaupunki
+viktorianputoukset kimberley mosambik madagaskar sansibar nairobi
+kilimandzaro viktoria tanganjika bahrelghazal darfur suakin
+addisabeba rashafun
+```
+
+Tripoli on jo paketissa O6, joten se putoaa tästä listasta pois.
+
+**Huomioita, jotka kannattaa tietää ennen aloitusta:**
+
+- Osa kohteista ei ole kaupunkeja vaan alueita (sahara, ahaggar,
+  namib, tshadjarvi, tanganjika, kilimandzaro, viktorianputoukset,
+  orjarannikko, bahrelghazal, darfur). Niille kaupunkilehden malli ei
+  sellaisenaan sovi — sama kysymys ratkaistiin jo Euroopassa
+  (islanti, lappi, kreeta, sisilia, alpit): ne ovat lehtinä mutta
+  ilman kohdekarttaa. Kysy omistajalta, halutaanko sama ratkaisu.
+- Kuvahaku on tehtävä **kategorioilla eikä hakusanoilla** (ks. paketti
+  O6:n ohje). Tämä pätee Afrikassa vielä vahvemmin kuin Lähi-idässä:
+  englanninkielistä kuvauskenttää on harvassa.
+- Faktapohja: `africa-artikkelit.js`, `africa-saapumiset.js`,
+  `africa-valokuvat.js` ja `africa-maatiedot.js` sisältävät jo
+  tarkistettua aineistoa jokaisesta kohteesta.
+
 ## Paketti O4: Nähtävyyksiä lisää (Pariisi pilottina, tilattu 16.8.2026) 🟡 KESKEN
 
 **Kuittaus (Opus 16.8.2026):** Pariisi 8 → **11 kohdetta** (v788):
