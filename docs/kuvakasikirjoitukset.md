@@ -12,6 +12,10 @@ speksataan kaupunkikohtaisesti ENNEN hakua. Jokaiselle kaupungille:
 3. **Pikkunosto 2** (kansikuvat[1]): yllättävä, oivaltava
    yksityiskohta — ei kolmatta monumenttipostikorttia. Sama
    vaakarajausvaatimus.
+4. **Oppaan kuva** (matkailijalle.kuva, osiokuva otsikon alla):
+   kaupungin iloisin ja kutsuvin arkinäkymä värikylläisenä —
+   ihmisiä nauttimassa kaupungista (terassi, ranta, tori,
+   piknik). Tämä kuva myy matkan; ei monumenttia, ei hämärää.
 
 Käsikirjoitus on toive, ei pakko: jos speksattua kuvaa ei löydy
 Commonsista laadukkaana (FP/QI- ja valokategoriat ensin), etsijä
@@ -26,6 +30,10 @@ Opus samalla muodolla, ja Fable tarkastaa.
 - **Nosto 1:** Notre-Dame — sinisen hetken FP-kuva Seinen yli.
 - **Nosto 2:** yllätys etsijän silmällä (metron jugend-sisäänkäynti,
   passage-käytävä, bouquinistit hämärässä…).
+- **Oppaan kuva:** värikäs kahvilaterassi tai piknik Seinen
+  rannalla auringossa — nykyinen Saint-André-des-Arts'n terassi
+  on oikea aihe; vaihdetaan vain, jos löytyy värikylläisempi ja
+  iloisempi.
 
 ## Lontoo
 

@@ -297,6 +297,13 @@ export const RAAMATTU = {
         'Kohteita saa olla entistä enemmän per kaupunki — kartta on '
           + 'zoomattava (linjaus 15.8.2026). Uudet kaupunkikartat '
           + 'tehdään 5 kaupungin erissä omistajan tsekattavaksi.',
+        'MATKAILIJAN OPAS on pelin kevyt ja viihteellinen osa, joka '
+          + 'houkuttelee matkustamaan itse kohteeseen (linjaus '
+          + '16.8.2026): se saa käyttää muuta lehteä iloisempia '
+          + 'värejä, ja etusivulla siihen kutsuu pirteä kulmalappu. '
+          + 'Rakenne: aihejaksot isoine kuvineen, tekstinosto sekä '
+          + 'sää-, hinta- ja suunnittelulaatikot '
+          + '(docs/kuvakasikirjoitukset.md + työlistan speksit).',
         'Valmiustilanne kaupungeittain: Tilanne-välilehti, ei tämä.',
       ],
     },
@@ -334,6 +341,14 @@ export const RAAMATTU = {
         'Lisäksi tehosteet, mietintämusiikki, äänimaisemat ja '
           + 'musiikkinäytteet. Uudet taustaäänet LUFS-mitataan heti '
           + '(testi valvoo).',
+        'ÄÄNTEN JAKELU (linjaus 16.8.2026): audiotiedostot jaellaan '
+          + 'R2:sta kuten kuvatkin, eivät gitistä. Esiladataan vain '
+          + 'pieni ydinsetti (huudahdukset, käyttöliittymä-äänet); '
+          + 'luennat, taustaäänet ja musiikki haetaan ja '
+          + 'välimuistitetaan tarvepohjaisesti.',
+        'OFFLINE-PELAUS EI OLE TAVOITE (omistaja 16.8.2026): '
+          + 'verkkoyhteyden saa olettaa; välimuisti on nopeutta '
+          + 'varten, ei offline-lupaus.',
       ],
     },
     {
@@ -422,6 +437,17 @@ export const RAAMATTU = {
         'docs/viesti-fable.md — viestikanava, ei ohje. docs/arkisto/ '
           + 'ja docs/raportit/ — ei ohjeita; vanhentunut tilannekuva '
           + 'arkistoidaan heti.',
+        'TYÖSESSIOIDEN SPEKSIOPPI (omistajan havainto 16.8.2026): '
+          + 'tarkasti rajattu toimeksianto tuottaa Opukselta '
+          + 'erinomaista jälkeä; väljä rajaus johtaa turhien asioiden '
+          + 'toteuttamiseen. Jokaiseen pakettiin: täsmälliset '
+          + 'tiedostot, mitä EI tehdä, ja valmis malli.',
+        'TOTEUTUSLISTA — KIIREELLINEN (omistaja 16.8.2026): '
+          + 'dokumenttiremontti. docs-kansiossa on Raamatun kanssa '
+          + 'päällekkäisiä ohjeita; tavoite on Raamattu AINOANA '
+          + 'linjauslähteenä + roolitus ja mallit + moduulikohtaiset '
+          + 'ohjeet siisteinä omina md-tiedostoinaan. Fable ajaa '
+          + 'max-tilassa heti, kun viikkokreditit uusiutuvat (17.8.).',
         'Työkalujen alkukommentit ovat käyttöohjeita. Sääntö, jonka '
           + 'kone voi valvoa, kirjataan testiksi.',
         'Työhuone integroidaan peliin kehittäjävivun taakse — ei '
