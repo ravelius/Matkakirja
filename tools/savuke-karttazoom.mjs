@@ -153,7 +153,7 @@ const mittaa = () => sivu.evaluate(() => {
       };
     }),
     jana: document.querySelector('.kartta-mittajana')?.getBoundingClientRect().width ?? 0,
-    sivu: window.matkakirja.ui.tutkiSivu ?? window.matkakirja.ui.tutkiSivuIndeksi ?? null,
+    sivu: window.matkakirja.ui.lehtitila.tutkiSivu ?? null,
   };
 });
 
@@ -214,8 +214,11 @@ async function kierros(nimi, { satelliitissa = false } = {}) {
   await sivu.screenshot({ path: join(ULOS, `zoom-${KAUPUNKI}-2-${nimi}-rulla.png`), clip: laatikko });
 
   // --- raahaus panoroi eikä vaihda lehden sivua ---
-  const sivuEnnen = await sivu.evaluate(() => window.matkakirja.ui.tutkiSivuNyt
-    ?? document.querySelector('.tutki-sivu.nakyy')?.id ?? null);
+  // (tutkiSivuNyt-kenttää ei ole koskaan ollut UI:ssa — savukevartija
+  // löysi kuolleen luvun 17.8.2026; sivu tunnistetaan DOMista.)
+  const sivuEnnen = await sivu.evaluate(
+    () => document.querySelector('.tutki-sivu.nakyy')?.id ?? null,
+  );
   await sivu.mouse.move(keski.x + 160, keski.y);
   await sivu.mouse.down();
   for (let i = 1; i <= 8; i += 1) await sivu.mouse.move(keski.x + 160 - i * 30, keski.y + i * 6);
@@ -229,8 +232,9 @@ async function kierros(nimi, { satelliitissa = false } = {}) {
       && raahattu.lava.x + raahattu.lava.w >= raahattu.kehys.x + raahattu.kehys.w - 0.6,
     'panorointi pysyy kuvan reunoissa (ei valkoista rakoa)',
   );
-  const sivuJalkeen = await sivu.evaluate(() => window.matkakirja.ui.tutkiSivuNyt
-    ?? document.querySelector('.tutki-sivu.nakyy')?.id ?? null);
+  const sivuJalkeen = await sivu.evaluate(
+    () => document.querySelector('.tutki-sivu.nakyy')?.id ?? null,
+  );
   vaadi(sivuEnnen === sivuJalkeen, 'raahaus ei vaihda lehden sivua');
   await sivu.screenshot({ path: join(ULOS, `zoom-${KAUPUNKI}-3-${nimi}-panoroitu.png`), clip: laatikko });
 
@@ -336,14 +340,18 @@ async function kierros(nimi, { satelliitissa = false } = {}) {
    * numeroympyrän napautus voisi hukkua kumpaan tahansa. Kohteen
    * jutun on auettava zoomatussa kartassa aivan kuten zoomaamattomassa.
    */
+  /*
+   * Nähtävyysjuttu avataan moduulifunktiolla (js/nahtavyydet.js, M4)
+   * eikä ui-metodilla, joten sitä ei voi enää kietoa laskuriin —
+   * avaus todetaan alla dialogin auki-tilasta. (Savukevartijan löytö
+   * 17.8.2026: vanha ui.avaaNahtavyys-kietaisu kaatui M4:n jälkeen.)
+   */
   await sivu.evaluate(() => {
     const ui = window.matkakirja.ui;
     ui.kohdeAvauksia = 0;
     if (!ui.alkuperainenWiki) {
       ui.alkuperainenWiki = ui.openWikiArticle.bind(ui);
       ui.openWikiArticle = (...a) => { ui.kohdeAvauksia += 1; return ui.alkuperainenWiki(...a); };
-      ui.alkuperainenNahtavyys = ui.avaaNahtavyys.bind(ui);
-      ui.avaaNahtavyys = (...a) => { ui.kohdeAvauksia += 1; return ui.alkuperainenNahtavyys(...a); };
     }
   });
   await sivu.click('.kartta-zoomi button[aria-label="Lähennä karttaa"]', { force: true });
@@ -355,7 +363,8 @@ async function kierros(nimi, { satelliitissa = false } = {}) {
   });
   await sivu.mouse.click(pisteLaatikko.x, pisteLaatikko.y);
   await sivu.waitForTimeout(700);
-  vaadi(await sivu.evaluate(() => window.matkakirja.ui.kohdeAvauksia) === 1,
+  vaadi(await sivu.evaluate(() => window.matkakirja.ui.kohdeAvauksia === 1
+    || Boolean(document.getElementById('nahtavyys-dialog')?.open)),
     'zoomattuna kohteen napautus avaa jutun');
   await sivu.keyboard.press('Escape');
   await sivu.waitForTimeout(400);

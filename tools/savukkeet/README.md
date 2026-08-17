@@ -37,6 +37,15 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-kaupunkitaulut | Kaupunkilehtien taulut |
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |
 
+**Savukevartija** (`node tools/tarkista-savukkeet.mjs`, CI:ssä joka
+PR:lle): vertaa kaikkien savukkeiden `ui.X`-kutsut ja -luvut UI:n
+toteutukseen tekstitasolla ja kaatuu puuttuvista — savukkeet eivät
+aja porteissa, joten siirretty metodi tai kenttä katkaisisi ne
+muuten hiljaa. Kun lisäät savukkeeseen oman mittarikentän, kirjoita
+se samassa tiedostossa (`ui.mittari = 0`) ennen lukua; lehtitilan
+kenttiin viitataan `ui.lehtitila.X`-muodossa (kentät dokumentoitu
+ui.js:n rakentimessa).
+
 Laajempi kartta- ja pöllötestistö on `tools/savuke-kartan-sujuvuus.mjs`
 (Chromium + WEBKIT=1) ja `tools/savuke-pollo.mjs` — ne ovat asuneet
 repossa alusta asti.

@@ -1077,7 +1077,7 @@ const tekstilinkki = await sivu.evaluate(async () => {
   return {
     onLinkkia: true,
     lehtiAuki: document.getElementById('arrival-dialog').open,
-    maalehti: Boolean(ui.tutkiMaaLehti),
+    maalehti: Boolean(ui.lehtitila.tutkiMaaLehti),
     chatKiinni: document.querySelector('.pollo-paneeli').hidden,
   };
 });
@@ -1453,7 +1453,7 @@ vaadi('pelin oma aineisto on mukana',
 const vanhentunut = await sivu.evaluate(async () => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
   const ui = window.matkakirja.ui;
-  ui.arrivalMaaTiedot = { nimi: 'Kreikka' };
+  ui.lehtitila.arrivalMaaTiedot = { nimi: 'Kreikka' };
   if (!document.querySelector('.pollo-paneeli').hidden) {
     document.getElementById('board').dispatchEvent(
       new PointerEvent('pointerdown', { bubbles: true }),
@@ -1468,7 +1468,7 @@ const vanhentunut = await sivu.evaluate(async () => {
   document.querySelector('.pollo-kentta').value = 'Missä maassa tämä kaupunki on?';
   document.querySelector('.pollo-rivi').dispatchEvent(new Event('submit', { cancelable: true }));
   await odota(900);
-  ui.arrivalMaaTiedot = null;
+  ui.lehtitila.arrivalMaaTiedot = null;
   return true;
 });
 const ehdotusRunko = rungot.filter((r) => r.tehtava === 'ehdotukset').at(-1) ?? {};
@@ -1495,7 +1495,7 @@ const sofia = await sivu.evaluate(async () => {
     board: { cityById: new Map(pack.cities.map((c) => [c.id, c])) },
     dayCount: () => 12,
   });
-  const vanhaUi = { arrivalMaaTiedot: { nimi: 'Kreikka' }, tutkiMaaLehti: 'GRC' };
+  const vanhaUi = { lehtitila: { arrivalMaaTiedot: { nimi: 'Kreikka' }, tutkiMaaLehti: 'GRC' } };
   // Sama lähde kuin kartan maakyltillä (ui.js drawCountryBorders).
   const kyltinMaa = EUROPE.map.countryShapes[EUROPE.map.cityCountry.sofia]?.nimi ?? '';
   // Lauta, jolla kaupungin maalle ei ole muotoa: maan pitää jäädä pois.
@@ -1534,7 +1534,7 @@ const lehdessa = await sivu.evaluate(async () => {
   ui.openArrival(ui.game.board.cityById.get('lontoo'));
   await new Promise((r) => setTimeout(r, 900));
   // Selataan aihesivulle, jolla on minitehtävä.
-  const sivu = (ui.tutkiSivut ?? []).findIndex((s) => s?.tehtava);
+  const sivu = (ui.lehtitila.tutkiSivut ?? []).findIndex((s) => s?.tehtava);
   if (sivu >= 0) ui.naytaTutkiSivu(sivu + 1, { heti: true });
   await new Promise((r) => setTimeout(r, 700));
   const lehti = document.getElementById('arrival-dialog');

@@ -505,8 +505,9 @@ export const RAAMATTU = {
         'TOTEUTETTU 17.8.2026: dokumenttiremontti (D1–D7) ja '
           + 'moduulijako (M1–M6) ajettiin Max-sessiossa, Fable '
           + 'katselmoi ja mergasi. Raamattu on ainoa linjauslähde; '
-          + 'moduuliohjeet docs/moduulit/-kansiossa. Avoinna: M7 '
-          + '(Kartta-luokka, omistajan päätös) ja lehtitila-olio. '
+          + 'moduuliohjeet docs/moduulit/-kansiossa. Lehtitila-olio '
+          + 'ja savukevartija tehty 17.8.2026. Avoinna: M7 '
+          + '(Kartta-luokka, omistajan päätös). '
           + 'Max-työlista arkistoitu (docs/arkisto/).',
         'docs/moduulirakenne-suunnitelma.md · '
           + 'docs/dokumenttiremontti-suunnitelma.md — Max-session '

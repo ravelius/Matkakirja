@@ -4,8 +4,9 @@
  * kehittäjä-, Raamattu- ja tilannelehtien avaukset. Siirretty
  * js/ui.js:stä 17.8.2026 (remontin M5a–M5b, malli B —
  * docs/moduulirakenne-suunnitelma.md). Funktiot saavat ui-olion
- * ensimmäisenä parametrinaan ja kirjoittavat vain lehtipiirteen
- * kenttiä (ui.arrival*, ui.tutki*, ui.maanSivut). Pöllö, lukija,
+ * ensimmäisenä parametrinaan ja kirjoittavat lehden muistitilaa vain
+ * ui.lehtitila-olioon (kentät dokumentoitu ui.js:n rakentimessa) sekä
+ * arrival*-DOM-kahvoihin. Pöllö, lukija,
  * nähtävyydet ja main kutsuvat näitä ui-olion delegaattorien
  * kautta (suora tuonti tekisi tuontisyklin).
  */
@@ -252,16 +253,16 @@ export function rakennaSivut(ui, cityId) {
    * sivua, koska listat ovat erilliset — mutta samaa sisältöä ei
    * silti kannata olla kahdessa paikassa (ks. Lontoon jako v349).
    */
-  ui.maanSivut = [];
+  ui.lehtitila.maanSivut = [];
   if (maakartta) {
-    ui.maanSivut.push(maanLippu
+    ui.lehtitila.maanSivut.push(maanLippu
       ? {
         id: 'maa-etusivu', nimi: otsikonMaa, kartta: maakartta, maaLippu: maanLippu, maa: otsikonMaa,
       }
       : { id: 'maa-etusivu', nimi: otsikonMaa, kartta: maakartta });
   }
   for (const osa of (maanIso ? MAA_KATEGORIAT[maanIso] ?? [] : [])) {
-    ui.maanSivut.push(maanLippu ? { ...osa, maaLippu: maanLippu, maa: otsikonMaa } : osa);
+    ui.lehtitila.maanSivut.push(maanLippu ? { ...osa, maaLippu: maanLippu, maa: otsikonMaa } : osa);
   }
   /*
    * Lehtitaitto (omistajan toive 5.8.2026): aihe, jonka id on
@@ -297,7 +298,7 @@ export function rakennaSivut(ui, cityId) {
    * osoitteet kattavat koko maan eivätkä vain tätä kaupunkia.
    */
   if (lehti) {
-    const vinkit = ui.maanSivut.find((s) => s.id === 'menovinkit');
+    const vinkit = ui.lehtitila.maanSivut.find((s) => s.id === 'menovinkit');
     if (vinkit) kategoriat.push(vinkit);
   }
   /*
@@ -317,15 +318,15 @@ export function rakennaSivut(ui, cityId) {
     // on jo taivutettu: "EGYPTI NUMEROINA".
     const nimi = otsikonMaa ? `${otsikonMaa} numeroina` : 'Maa numeroina';
     // Numerot ovat maan tietoa, joten ne kuuluvat maalehteen.
-    ui.maanSivut.push({ id: 'maa-numeroina', nimi, numerot: maanIso });
+    ui.lehtitila.maanSivut.push({ id: 'maa-numeroina', nimi, numerot: maanIso });
   }
-  ui.tutkiLehti = lehti;
+  ui.lehtitila.tutkiLehti = lehti;
   // Karttamaissa maaosasto ei asu etusivulla: kulmalinkki vie sen
   // omalle sivulleen, eikä sama sisältö saa näkyä kahdesti.
-  ui.tutkiMaaEtusivu = Boolean(maakartta);
+  ui.lehtitila.tutkiMaaEtusivu = Boolean(maakartta);
   if (maakartta) ui.arrivalMaa.hidden = true;
-  ui.tutkiMaaIso = maanIso;
-  ui.tutkiMaaNimi = otsikonMaa ?? null;
+  ui.lehtitila.tutkiMaaIso = maanIso;
+  ui.lehtitila.tutkiMaaNimi = otsikonMaa ?? null;
   // Liitelinkki päiväysrivillä: "Suomi-liite" (omistajan taitto-ohje 9.8.2026).
   ui.arrivalMaaLinkki.textContent = maakartta ? `${otsikonMaa}-liite` : '';
   ui.arrivalDialog.classList.toggle('lehti', lehti);
@@ -344,7 +345,7 @@ export function rakennaSivut(ui, cityId) {
   // väistyy liitelinkin tieltä (linkki peitti päiväyksen iPhonella,
   // omistajan havainto 9.8.2026) — linkissä lukee sama maa, joten
   // tieto ei katoa. CSS: .pvm-maa.
-  const maanNimi = ui.arrivalMaaTiedot?.nimi;
+  const maanNimi = ui.lehtitila.arrivalMaaTiedot?.nimi;
   ui.arrivalLehtiPvm.replaceChildren();
   if (lehti) {
     if (maanNimi) ui.arrivalLehtiPvm.appendChild(html('span', 'pvm-maa', `${maanNimi} · `));
@@ -354,15 +355,15 @@ export function rakennaSivut(ui, cityId) {
   naytaLehtiSaa(ui, lehti ? cityId : null);
   ui.arrivalLiuskat.replaceChildren();
   ui.arrivalLiuskat.hidden = true;
-  ui.tutkiSivut = kategoriat;
+  ui.lehtitila.tutkiSivut = kategoriat;
   // Kansi talteen sisällysvalikkoa varten: Etusivu-rivi saa siitä
   // pikkukuvan ja ingressin kuten muutkin rivit (omistajan havainto
   // 14.8.2026: "Kannesta puuttuu kuva ja tekstit").
-  ui.tutkiKansi = kansi ?? null;
+  ui.lehtitila.tutkiKansi = kansi ?? null;
   // Kaupunkilehti aukeaa aina kaupunkitilassa; maalehti on oma
   // näkymänsä, joka avataan kartalta (avaaMaalehti).
-  ui.tutkiTila = 'kaupunki';
-  ui.tutkiMaaLehti = null;
+  ui.lehtitila.tutkiTila = 'kaupunki';
+  ui.lehtitila.tutkiMaaLehti = null;
   // Vasta tässä tiedetään, onko maaosasto omalla sivullaan, joten
   // mediarivit ratkaistaan uudestaan (ks. paivitaMediarivit).
   paivitaMediarivit(ui);
@@ -376,7 +377,7 @@ export function rakennaSivut(ui, cityId) {
  * yksi eikä alanappeja piirretä lainkaan (paivitaTutkiAlapalkki).
  */
 export function tutkiSivuja(ui) {
-  return 1 + (ui.tutkiSivut?.length ?? 0);
+  return 1 + (ui.lehtitila.tutkiSivut?.length ?? 0);
 }
 
 /**
@@ -390,7 +391,7 @@ export function tutkiSivuja(ui) {
 export function tutkiEkaSivu(ui) {
   // Maalehdellä ja kehittäjän liitteillä ei ole kaupunkikantta:
   // indeksi 0 on kaupunkilehden etusivu, jota niillä ei ole.
-  return (ui.tutkiTila === 'maa' || ui.tutkiTila === 'kehittaja') ? 1 : 0;
+  return (ui.lehtitila.tutkiTila === 'maa' || ui.lehtitila.tutkiTila === 'kehittaja') ? 1 : 0;
 }
 
 /**
@@ -405,7 +406,7 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
   ui.mitoitaArkki();
   const sivuja = tutkiSivuja(ui);
   const i = Math.min(Math.max(indeksi, tutkiEkaSivu(ui)), sivuja - 1);
-  ui.tutkiSivu = i;
+  ui.lehtitila.tutkiSivu = i;
   const etusivu = i === 0;
   if (ui.arrivalPalstat) ui.arrivalPalstat.hidden = !etusivu;
   /*
@@ -422,9 +423,9 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
    * paikassa — ja Maiden tiedot -varusteella sen voisi pelata
    * matkustamatta minnekään.
    */
-  const visasivu = ui.tutkiTila !== 'maa' && ui.tutkiTila !== 'kehittaja'
-    && (ui.tutkiLehti && sivuja > 1 ? i === 1 : etusivu);
-  ui.arrivalKulttuuri.hidden = !visasivu || !ui.kulttuuriSaatavilla;
+  const visasivu = ui.lehtitila.tutkiTila !== 'maa' && ui.lehtitila.tutkiTila !== 'kehittaja'
+    && (ui.lehtitila.tutkiLehti && sivuja > 1 ? i === 1 : etusivu);
+  ui.arrivalKulttuuri.hidden = !visasivu || !ui.lehtitila.kulttuuriSaatavilla;
 
   // Kaupungin kohdekartta lehden etusivun loppuun (omistajan
   // tarkennus 7.8.2026: "kartta pitäisi olla jo ihan ensimmäisellä
@@ -438,8 +439,8 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
    * avattiin kaupunkilehden liitenapista, koska arrivalShownFor
    * osoittaa yhä kaupunkiin.
    */
-  const karttaEtusivulla = etusivu && ui.tutkiTila !== 'maa'
-    && KAUPUNKIKARTAT[ui.arrivalShownFor];
+  const karttaEtusivulla = etusivu && ui.lehtitila.tutkiTila !== 'maa'
+    && KAUPUNKIKARTAT[ui.lehtitila.arrivalShownFor];
   ui.arrivalKaupunkiKartta.hidden = !karttaEtusivulla;
   ui.arrivalKaupunkiKartta.replaceChildren();
   if (karttaEtusivulla) {
@@ -458,15 +459,15 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
    * ei näy, koska siellä radio on maaosaston omalla rivillä.
    */
   if (ui.arrivalMediaKaupunki) {
-    ui.arrivalMediaKaupunki.hidden = ui.tutkiTila === 'maa' || !etusivu
+    ui.arrivalMediaKaupunki.hidden = ui.lehtitila.tutkiTila === 'maa' || !etusivu
       || !ui.arrivalMediaKaupunki.childElementCount;
   }
 
   // Etusivu ei ole aihesivu, joten aiheiden numerointi alkaa vasta
   // sivulta 1: sivu 1 on ensimmäinen aihe, ei toinen.
-  const kategoria = etusivu ? null : (ui.tutkiSivut?.[i - 1] ?? null);
+  const kategoria = etusivu ? null : (ui.lehtitila.tutkiSivut?.[i - 1] ?? null);
   // Kulmalinkki maaosioon näkyy vain karttamaan etusivulla.
-  ui.arrivalMaaLinkki.hidden = !etusivu || !ui.tutkiMaaEtusivu;
+  ui.arrivalMaaLinkki.hidden = !etusivu || !ui.lehtitila.tutkiMaaEtusivu;
   // Karttasivu ja tilastosivu piirtyvät omilla piirroillaan — ne
   // ovat karttaa ja käyriä, eivät nostolistoja.
   ui.arrivalKategoria.classList.toggle('maa-etusivu', Boolean(kategoria?.kartta));
@@ -485,7 +486,7 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
    * korjaamaan. Rivi siirretään, ei kopioida: sama elementti palaa
    * paikalleen seuraavalla rakennaSivut-ajolla.
    */
-  if (ui.tutkiTila === 'maa' && i === 1 && !kategoria?.kartta
+  if (ui.lehtitila.tutkiTila === 'maa' && i === 1 && !kategoria?.kartta
     && ui.arrivalMedia && !ui.arrivalMedia.hidden) {
     ui.arrivalKategoria.insertBefore(ui.arrivalMedia, ui.arrivalKategoria.firstChild);
   }
@@ -538,10 +539,10 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
  * uudelleen (esipuskuroiKuvat pitää kirjaa).
  */
 export function esilataaViereisetSivut(ui, sivu) {
-  const kuvat = [...ui.lehdenSivunKuvat(ui.tutkiSivut?.[sivu] ?? null)];
+  const kuvat = [...ui.lehdenSivunKuvat(ui.lehtitila.tutkiSivut?.[sivu] ?? null)];
   if (sivu - 2 >= 0) {
-    kuvat.push(...ui.lehdenSivunKuvat(ui.tutkiSivut?.[sivu - 2] ?? null));
-  } else if (sivu === 1 && ui.tutkiTila !== 'maa') {
+    kuvat.push(...ui.lehdenSivunKuvat(ui.lehtitila.tutkiSivut?.[sivu - 2] ?? null));
+  } else if (sivu === 1 && ui.lehtitila.tutkiTila !== 'maa') {
     // Ensimmäisen aihesivun edellinen on lehden etusivu; maalehdellä
     // sitä ei ole (tutkiEkaSivu on siellä 1).
     kuvat.push(...ui.kaupunkilehdenEtusivunKuvat());
@@ -559,7 +560,7 @@ export function esilataaViereisetSivut(ui, sivu) {
  */
 export function sijoitaLehtiKaiutin(ui, nappi) {
   if (!nappi) return;
-  const etusivulla = (ui.tutkiSivu ?? 0) === 0;
+  const etusivulla = (ui.lehtitila.tutkiSivu ?? 0) === 0;
   const koti = (etusivulla ? ui.arrivalCity
     : ui.arrivalKategoria?.querySelector('.aihe-nimi')) ?? ui.arrivalCity;
   if (koti && nappi.parentElement !== koti) koti.appendChild(nappi);
@@ -664,12 +665,12 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
    * eikä kohtaamista. Ne piilotetaan tässä, ja kaupunkilehti
    * palauttaa ne omalla rakennaSivut-ajollaan.
    */
-  ui.tutkiTila = 'maa';
-  ui.tutkiMaaLehti = iso;
-  ui.tutkiSivut = sivut;
-  ui.tutkiKansi = null;
-  ui.tutkiLehti = true;
-  ui.tutkiMaaEtusivu = false;
+  ui.lehtitila.tutkiTila = 'maa';
+  ui.lehtitila.tutkiMaaLehti = iso;
+  ui.lehtitila.tutkiSivut = sivut;
+  ui.lehtitila.tutkiKansi = null;
+  ui.lehtitila.tutkiLehti = true;
+  ui.lehtitila.tutkiMaaEtusivu = false;
   ui.arrivalDialog.classList.add('lehti', 'arkki');
   ui.arrivalDialog.classList.toggle('maalehti', true);
   piirraLehtiKuvat(ui, null);
@@ -695,7 +696,7 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
    * vasen palsta oli pahimmillaan kokonaan tyhjä — omistajan
    * havainto 10.8.2026 ilta).
    */
-  ui.arrivalMaaTiedot = maa;
+  ui.lehtitila.arrivalMaaTiedot = maa;
   ui.arrivalMaaNimi.textContent = otsikko;
   ui.arrivalMaaIntro.textContent = '';
   ui.arrivalMaaWiki.hidden = true;
@@ -712,7 +713,7 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
   naytaMaaTunnusluvut(ui, iso);
   // Uutisten dialogivartija vertaa arrivalShownForiin — se osoittaa
   // yhä viimeksi avattuun kaupunkiin, joten se kelpaa tässä avaimeksi.
-  naytaMaaUutiset(ui, iso, ui.arrivalShownFor);
+  naytaMaaUutiset(ui, iso, ui.lehtitila.arrivalShownFor);
   const maanAvain = maa.wiki ?? maa.nimi;
   const omaMaaIntro = ARTIKKELIT[maanAvain]?.intro;
   if (omaMaaIntro) {
@@ -720,7 +721,7 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
   } else {
     cachedSummary(maanAvain).then((summary) => {
       // Lehti on voitu sulkea tai vaihtaa toiseen maahan haun aikana.
-      if (!ui.arrivalDialog.open || ui.tutkiMaaLehti !== iso) return;
+      if (!ui.arrivalDialog.open || ui.lehtitila.tutkiMaaLehti !== iso) return;
       if (summary?.extract) ui.arrivalMaaIntro.textContent = shortIntro(summary.extract);
     });
   }
@@ -754,12 +755,12 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
 export function avaaKehittajaLehti(ui, otsikko, sivut) {
   if (!kehittajaTilaPaalla() || !sivut?.length) return;
   ui.varmistaLehtiMitta();
-  ui.tutkiTila = 'kehittaja';
-  ui.tutkiMaaLehti = null;
-  ui.tutkiSivut = sivut;
-  ui.tutkiKansi = null;
-  ui.tutkiLehti = true;
-  ui.tutkiMaaEtusivu = false;
+  ui.lehtitila.tutkiTila = 'kehittaja';
+  ui.lehtitila.tutkiMaaLehti = null;
+  ui.lehtitila.tutkiSivut = sivut;
+  ui.lehtitila.tutkiKansi = null;
+  ui.lehtitila.tutkiLehti = true;
+  ui.lehtitila.tutkiMaaEtusivu = false;
   ui.arrivalDialog.classList.add('lehti', 'arkki');
   ui.arrivalDialog.classList.toggle('maalehti', true);
   piirraLehtiKuvat(ui, null);
@@ -837,7 +838,7 @@ export function avaaTilanneLehti(ui) {
 /** Sivun vaihto suuntaan (+1 seuraava, -1 edellinen). */
 export function vaihdaTutkiSivu(ui, suunta) {
   const sivuja = tutkiSivuja(ui);
-  const uusi = (ui.tutkiSivu ?? 0) + suunta;
+  const uusi = (ui.lehtitila.tutkiSivu ?? 0) + suunta;
   if (uusi < tutkiEkaSivu(ui) || uusi >= sivuja) return false;
   sfx.play('paper');
   naytaTutkiSivu(ui, uusi, { suunta });
@@ -874,9 +875,9 @@ export function paivitaTutkiAlapalkki(ui) {
   const ei = document.getElementById('arrival-no');
   if (!kyllä || !ei) return;
   const sivuja = tutkiSivuja(ui);
-  const viimeisella = (ui.tutkiSivu ?? 0) >= sivuja - 1;
-  const etusivulla = (ui.tutkiSivu ?? 0) === 0;
-  const maalehti = ui.tutkiTila === 'maa';
+  const viimeisella = (ui.lehtitila.tutkiSivu ?? 0) >= sivuja - 1;
+  const etusivulla = (ui.lehtitila.tutkiSivu ?? 0) === 0;
+  const maalehti = ui.lehtitila.tutkiTila === 'maa';
   /*
    * Kohtaaminen/kätkö JOKAISEN kaupunkisivun alareunassa
    * (omistajan tarkennus 9.8.2026: "etsi kätkö pitää olla
@@ -891,7 +892,7 @@ export function paivitaTutkiAlapalkki(ui) {
   if (maalehti) {
     kyllä.hidden = true;
   } else {
-    const kaupunki = ui.game.board?.cityById?.get(ui.arrivalShownFor) ?? null;
+    const kaupunki = ui.game.board?.cityById?.get(ui.lehtitila.arrivalShownFor) ?? null;
     if (kaupunki) ui.paivitaTehtavaNappi(kaupunki);
     else kyllä.hidden = true;
   }
@@ -908,12 +909,12 @@ export function paivitaTutkiAlapalkki(ui) {
     liite = html('button', 'maa-liite-nappi');
     liite.type = 'button';
     liite.addEventListener('click', () => {
-      if (ui.tutkiMaaIso) avaaMaalehti(ui, ui.tutkiMaaIso);
+      if (ui.lehtitila.tutkiMaaIso) avaaMaalehti(ui, ui.lehtitila.tutkiMaaIso);
     });
     ei.parentElement?.appendChild(liite);
   }
-  const liiteNimi = ui.tutkiMaaNimi;
-  liite.hidden = maalehti || !viimeisella || !ui.tutkiMaaIso || !liiteNimi;
+  const liiteNimi = ui.lehtitila.tutkiMaaNimi;
+  liite.hidden = maalehti || !viimeisella || !ui.lehtitila.tutkiMaaIso || !liiteNimi;
   // Pelkkä "Suomi-liite" (omistajan tarkennus 9.8.2026).
   liite.textContent = liiteNimi ? `${liiteNimi}-liite` : '';
 
@@ -961,9 +962,9 @@ export function paivitaTutkiAlapalkki(ui) {
     // se luki ennen "Sisällys", koska sisällysluettelo oli oma
     // sivunsa — nyt luettelo on vain alapalkin pop-upissa.
     if (i <= 0) return 'Etusivu';
-    return ui.tutkiSivut?.[i - 1]?.nimi ?? '';
+    return ui.lehtitila.tutkiSivut?.[i - 1]?.nimi ?? '';
   };
-  const nyt = ui.tutkiSivu ?? 0;
+  const nyt = ui.lehtitila.tutkiSivu ?? 0;
   const edellinen = palkki.querySelector('.edellinen');
   const seuraava = palkki.querySelector('.seuraava');
   edellinen.querySelector('.alanappi-aihe').textContent = sivunNimi(nyt - 1);
@@ -1006,7 +1007,7 @@ export function varmistaLehtiHampurilainen(ui, nakyviin) {
    * tai siirretään joka sivunäytöllä (naytaTutkiSivu →
    * paivitaTutkiNavi → paivitaTutkiAlapalkki).
    */
-  const etusivulla = (ui.tutkiSivu ?? 0) === 0;
+  const etusivulla = (ui.lehtitila.tutkiSivu ?? 0) === 0;
   const koti = (etusivulla ? ui.arrivalCity
     : ui.arrivalKategoria?.querySelector('.aihe-nimi')) ?? ui.arrivalCity;
   let nappi = ui.arrivalDialog.querySelector('.lehti-hampurilainen');
@@ -1035,7 +1036,7 @@ export function avaaSisallysvalikko(ui, { ylhaalla = false } = {}) {
   const vanha = ui.arrivalDialog.querySelector(':scope > .sisallys-levy');
   if (vanha) { vanha.remove(); return; }
   // Sisällyssivua ei enää ole: lehden sivut OVAT sisällys.
-  const sisallys = ui.tutkiSivut ?? [];
+  const sisallys = ui.lehtitila.tutkiSivut ?? [];
   // Ylälaidan hampurilaisesta levy laskeutuu YLÄREUNAAN (omistaja
   // 14.8.2026); alapalkin hampurilaisesta se nousee alhaalta kuten
   // ennenkin.
@@ -1119,8 +1120,8 @@ export function avaaSisallysvalikko(ui, { ylhaalla = false } = {}) {
  * raahauslogiikkansa, eikä Tutki-ikkunan ele saa vuotaa sinne.
  */
 export function kytkeTutkiSelaus(ui, kortti) {
-  if (ui.tutkiSelausKytketty) return;
-  ui.tutkiSelausKytketty = true;
+  if (ui.lehtitila.tutkiSelausKytketty) return;
+  ui.lehtitila.tutkiSelausKytketty = true;
   let alku = null;
   kortti.addEventListener('pointerdown', (e) => {
     if (e.pointerType === 'mouse' && e.button !== 0) { alku = null; return; }
@@ -1273,7 +1274,7 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null) {
  */
 export function naytaLehtiSaa(ui, cityId) {
   const tiedot = cityId ? SAATIEDOT[cityId] : null;
-  ui.lehtiSaaTiedot = tiedot ?? null;
+  ui.lehtitila.lehtiSaaTiedot = tiedot ?? null;
   ui.arrivalSaa.hidden = !tiedot;
   if (!tiedot) return;
   const kuukausi = new Date().getMonth();
@@ -1281,7 +1282,7 @@ export function naytaLehtiSaa(ui, cityId) {
     `${kuukausiSsa(kuukausi)} keskimäärin ${Math.round(tiedot.keskilampo[kuukausi])}°, sadetta ${tiedot.sade[kuukausi]} mm`);
   haeSaaTanaan(tiedot.lat, tiedot.lon).then((saa) => {
     // Pelaaja on voinut ehtiä jatkaa matkaa haun aikana.
-    if (!saa || ui.arrivalShownFor !== cityId) return;
+    if (!saa || ui.lehtitila.arrivalShownFor !== cityId) return;
     const kuvaus = saaKuvaus(saa.koodi);
     const sade = saa.sademaara >= 1 ? `, sadetta ${Math.round(saa.sademaara)} mm` : '';
     asetaSaaRivi(ui, kuvaus.kuvake,
@@ -1303,7 +1304,7 @@ export function asetaSaaRivi(ui, kuvake, teksti) {
  * ilman verkkoa.
  */
 export function naytaVuosiSaa(ui) {
-  const tiedot = ui.lehtiSaaTiedot;
+  const tiedot = ui.lehtitila.lehtiSaaTiedot;
   if (!tiedot) return;
   ui.suljeKulttuuriKuva();
   ui.lisaaKevytHuntu();
@@ -1312,7 +1313,7 @@ export function naytaVuosiSaa(ui) {
   sulku.type = 'button';
   sulku.setAttribute('aria-label', 'Sulje sää');
   kortti.appendChild(sulku);
-  const nimi = ui.game.board.cities.find((c) => c.id === ui.arrivalShownFor)?.name ?? '';
+  const nimi = ui.game.board.cities.find((c) => c.id === ui.lehtitila.arrivalShownFor)?.name ?? '';
   kortti.appendChild(html('p', 'kuvateksti vuosisaa-otsikko', `Sää vuoden mittaan — ${nimi}`));
   kortti.appendChild(piirraVuosiSaa(tiedot));
   /*
@@ -1332,7 +1333,7 @@ export function naytaVuosiSaa(ui) {
     'Käyrä keskilämpö °C · palkit sademäärä mm · Open-Meteo (ERA5), 1991–2020'));
   kortti.addEventListener('click', () => ui.suljeKulttuuriKuva());
   ui.arrivalDialog.appendChild(kortti);
-  ui.kulttuuriKuvaEl = kortti;
+  ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
   sfx.play('paper');
 }
@@ -1350,7 +1351,7 @@ export function naytaMaaUutiset(ui, iso, cityId) {
   if (!lahde) return;
   haeUutiset(iso).then((uutiset) => {
     if (!uutiset.length) return;
-    if (!ui.arrivalDialog.open || ui.arrivalShownFor !== cityId) return;
+    if (!ui.arrivalDialog.open || ui.lehtitila.arrivalShownFor !== cityId) return;
     // "Uutisissa tänään" ja lähde suluissa (omistajan sanamuoto).
     ui.arrivalUutiset.querySelector('.uutiset-nimio').textContent =
       `Uutisissa tänään (${lahde.nimi})`;
@@ -1552,6 +1553,6 @@ export function avaaUutinen(ui, uutinen, lahde) {
 
   kortti.addEventListener('click', () => ui.suljeKulttuuriKuva());
   ui.arrivalDialog.appendChild(kortti);
-  ui.kulttuuriKuvaEl = kortti;
+  ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
 }

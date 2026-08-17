@@ -243,7 +243,7 @@ await sivu.evaluate(async () => {
 const kansi = await sivu.evaluate(async () => {
   const kuvat = await import('/js/packs/africa-valokuvat.js');
   const { ui } = window.matkakirja;
-  const teos = ui.tutkiKansi?.kansikuvat?.[0];
+  const teos = ui.lehtitila.tutkiKansi?.kansikuvat?.[0];
   return {
     odotettu: teos ? kuvat.valokuvaUrl(teos.tiedosto, 1200) : null,
     piirretty: document.querySelector('#arrival-lehti-paakuva img')?.getAttribute('src') ?? null,
@@ -269,9 +269,9 @@ vaadi('kohdekartan kuva pyydetään saapumisesta',
 const seuraavaSivu = await sivu.evaluate(async () => {
   const kuvat = await import('/js/packs/africa-valokuvat.js');
   const { ui } = window.matkakirja;
-  const nosto = (ui.tutkiSivut?.[0]?.nostot ?? []).find((n) => n.tiedosto);
+  const nosto = (ui.lehtitila.tutkiSivut?.[0]?.nostot ?? []).find((n) => n.tiedosto);
   return {
-    sivu: ui.tutkiSivu,
+    sivu: ui.lehtitila.tutkiSivu,
     odotettu: nosto ? kuvat.valokuvaUrl(nosto.tiedosto, 900) : null,
   };
 });
@@ -369,7 +369,7 @@ const naapuri = await sivu.evaluate(async () => {
   const kuvat = await import('/js/packs/africa-valokuvat.js');
   const { ui } = window.matkakirja;
   // Sivun 4 edellinen on sivu 3, jonka sisältö on tutkiSivut[2].
-  const nosto = (ui.tutkiSivut?.[2]?.nostot ?? []).find((n) => n.tiedosto);
+  const nosto = (ui.lehtitila.tutkiSivut?.[2]?.nostot ?? []).find((n) => n.tiedosto);
   return { osoite: nosto ? kuvat.valokuvaUrl(nosto.tiedosto, 900) : null, sivuja: ui.tutkiSivuja() };
 });
 const ennenHyppya = pyynnot.includes(naapuri.osoite);
