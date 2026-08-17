@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 833, teksti: '13 uutta kaupunkia laudoille ja maailmankartalle' },
   { v: 832, teksti: 'Firenze Euroopan laudalle' },
   { v: 831, teksti: 'Tampere ja Rovaniemi Euroopan laudalle' },
   { v: 830, teksti: 'M7b: panorointi ja eleet Kartta-luokkaan' },

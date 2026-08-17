@@ -639,6 +639,15 @@ export const ASIA_VALOKUVAT = {
         + 'kaikki tulee yhä laivalla tai lentäen.',
     },
   },
+  kanton: {
+    tiedosto: '02540-Guangzhou.jpg',
+    vuosi: '2016',
+    lahde: 'xiquinhosilva, Commons (CC BY 2.0)',
+    selite: 'Kantonin uusi keskusta Helmijoen toiselta rannalta. Sama joki '
+      + 'toi 1800-luvulla teelastit ja ulkomaiset kauppahuoneet aivan '
+      + 'kaupungin kylkeen; nykyään rannalla seisovat pilvenpiirtäjät ja '
+      + 'oopperatalo, mutta laivaväylä kulkee yhä samaa uomaa.',
+  },
   kapadokia: {
     tiedosto: 'Cappadocia LOC matpc.12157.jpg',
     vuosi: '1935',
@@ -719,6 +728,15 @@ export const ASIA_VALOKUVAT = {
         + 'suurin moskeija, ja aukio sen edessä on yhä sama tori, jolla '
         + 'melonikauppiaat seisoivat sata vuotta sitten.',
     },
+  },
+  kioto: {
+    tiedosto: 'Torii path with lantern at Fushimi Inari Taisha Shrine, Kyoto, Japan.jpg',
+    vuosi: '2019',
+    lahde: 'Basile Morin, Commons (CC BY-SA 4.0)',
+    selite: 'Fushimi Inarin pyhäkön torii-käytävä Kiotossa. Portit ovat '
+      + 'lahjoituksia: jokaisen pylvääseen on maalattu lahjoittajan nimi ja '
+      + 'pystytyspäivä, ja niitä nousee vuorenrinnettä ylös tuhansia '
+      + 'peräkkäin niin tiiviisti, että polusta tulee tunneli.',
   },
   kuwait: {
     tiedosto: 'The Persian problem; an examination of the rival positions of Russia and Great Britain in Persia, with some account of the Persian gulf and the Bagdad railway (1903) (14763432082).jpg',
@@ -894,6 +912,15 @@ export const ASIA_VALOKUVAT = {
         + 'Kaupungissa asuu noin 90 000 ihmistä, ja siitä lähtee sisämaahan '
         + 'Kolyman maantie — kaupungin ainoa maayhteys muualle.',
     },
+  },
+  mandalay: {
+    tiedosto: 'Mandalay-Kuthodaw 01-von Mandalay Hill-gje.jpg',
+    vuosi: '1976',
+    lahde: 'Gerd Eichmann, Commons (CC BY-SA 4.0)',
+    selite: 'Kuthodawin pagodi Mandalay Hillin rinteeltä kuvattuna. '
+      + 'Kultaisen stupan ympärillä seisoo 729 pientä valkoista kappelia, '
+      + 'ja jokaisen sisällä on yksi marmoritaulu: yhdessä ne ovat '
+      + 'buddhalainen kaanon kivessä, maailman suurimmaksi kutsuttu kirja.',
   },
   masqat: {
     tiedosto: 'The Persian problem; an examination of the rival positions of Russia and Great Britain in Persia, with some account of the Persian gulf and the Bagdad railway (1903) (14577292147).jpg',
@@ -1674,6 +1701,15 @@ export const ASIA_VALOKUVAT = {
         + 'takana kukkulat, joilla gerikaupunginosat alkavat. Kaupungissa '
         + 'asuu noin puolet koko Mongolian väestöstä.',
     },
+  },
+  varanasi: {
+    tiedosto: 'Varanasi, India, Varanasi eternal, Panorama.jpg',
+    vuosi: '2007',
+    lahde: 'Vyacheslav Argenberg, Commons (CC BY 4.0)',
+    selite: 'Varanasin vanhakaupunki ja Ganges katolta katsottuna. Talot ja '
+      + 'temppelit laskeutuvat portaina aivan veteen asti — nuo portaat '
+      + 'ovat ghatit, joilla peseydytään auringonnousussa ja poltetaan '
+      + 'vainajat. Vastaranta on tyhjä hiekkaa, eikä sinne rakenneta.',
   },
   vladivostok: {
     tiedosto: 'Владивосток в начале XX века.jpg',

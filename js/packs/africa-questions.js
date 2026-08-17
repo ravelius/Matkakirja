@@ -6,6 +6,112 @@
 // Vaihtoehdot sekoitetaan vasta kysyttäessä, joten oikea vastaus voi olla tässä missä vain.
 
 export const AFRICA_QUESTIONS = {
+  fes: [
+    {
+      q: 'Minkä maan kaupunki Fès on?',
+      options: ['Marokko', 'Algeria', 'Tunisia', 'Mauritania'],
+      correct: 0,
+      level: 1,
+      hint: 'Maa on Afrikan luoteiskulmassa, Gibraltarin salmen eteläpuolella.',
+      fact: 'Fès on Fès-Meknèsin hallintoalueella, ja siellä oli vuonna 2014 noin 1,1 miljoonaa asukasta.',
+      source: 'https://fi.wikipedia.org/wiki/F%C3%A8s',
+    },
+    {
+      q: 'Mikä on Fès al Bali?',
+      options: [
+        'muurien ympäröimä vanhakaupunki',
+        'kaupungin satama',
+        'vuorisola Atlaksella',
+        'aavikkokeidas etelässä',
+      ],
+      correct: 0,
+      level: 2,
+      hint: 'Sitä pidetään maailman suurimpana autottomana kaupunkialueena.',
+      fact: 'Alue nimettiin Unescon maailmanperintökohteeksi vuonna 1981 nimellä Fèsin medina.',
+      source: 'https://fi.wikipedia.org/wiki/F%C3%A8s',
+    },
+    {
+      q: 'Millä vuosisadalla Fès perustettiin?',
+      options: ['800-luvulla', '300-luvulla', '1300-luvulla', '1700-luvulla'],
+      correct: 0,
+      level: 2,
+      hint: 'Perustajana pidetään Idris II:ta, ja työ tehtiin vuosien 789 ja 808 välillä.',
+      fact: 'Vanha kaupunki perustettiin idrisidien dynastian pääkaupungiksi.',
+      source: 'https://fi.wikipedia.org/wiki/F%C3%A8s',
+    },
+    {
+      q: 'Minkä dynastian aikana Fès kukoisti maansa pääkaupunkina?',
+      options: ['marinidien', 'fatimidien', 'osmanien', 'umaijadien'],
+      correct: 0,
+      level: 3,
+      hint: 'Dynastia hallitsi maata keskiajan loppupuolella, idrisidien jälkeen.',
+      fact: 'Fèsistä tuli myös malikiittisen islaminuskon keskus.',
+      source: 'https://fi.wikipedia.org/wiki/F%C3%A8s',
+    },
+    {
+      q: 'Minkä päähineen nimi on peräisin Fèsin kaupungista?',
+      options: ['fetsi', 'turbaani', 'kalpakki', 'panamahattu'],
+      correct: 0,
+      level: 3,
+      hint: 'Päähine on punainen, pyöreä ja tasakattoinen.',
+      fact: 'Fèsin talous on yhä perinteinen: tekstiilejä, käsiteollisuutta ja maataloustuotteiden jalostusta.',
+      source: 'https://fi.wikipedia.org/wiki/F%C3%A8s',
+    },
+  ],
+
+  lalibela: [
+    {
+      q: 'Minkä maan kaupunki Lalibela on?',
+      options: ['Etiopia', 'Sudan', 'Kenia', 'Somalia'],
+      correct: 0,
+      level: 1,
+      hint: 'Maa on Afrikan sarven ylängöllä, ja sen pääkaupunki on Addis Abeba.',
+      fact: 'Lalibela on maan pohjoisosassa Amharan osavaltiossa noin 2 500 metrin korkeudessa.',
+      source: 'https://fi.wikipedia.org/wiki/Lalibela',
+    },
+    {
+      q: 'Mistä Lalibela on tunnettu?',
+      options: [
+        'kallioon hakatuista kirkoista',
+        'pyramideista',
+        'kalliolinnoituksesta',
+        'suuresta moskeijasta',
+      ],
+      correct: 0,
+      level: 2,
+      hint: 'Rakennuksia ei muurattu kivistä vaan louhittiin basalttiin.',
+      fact: 'Kohteet ovat Unescon maailmanperintöluettelossa. Neljän rakennuksen seinät on hakattu kokonaan irti kalliosta.',
+      source: 'https://fi.wikipedia.org/wiki/Lalibela',
+    },
+    {
+      q: 'Kuinka monta kallioon kaiverrettua suojelukohdetta Lalibelassa on?',
+      options: ['11', '3', '24', '40'],
+      correct: 0,
+      level: 2,
+      hint: 'Kirkot jaetaan kahteen ryhmään, joissa on viisi kummassakin, ja yksi jää ryhmien ulkopuolelle.',
+      fact: 'Biete Medhani Alemin eli Vapahtajan talon uskotaan olevan maailman suurin monoliittikirkko.',
+      source: 'https://fi.wikipedia.org/wiki/Lalibela',
+    },
+    {
+      q: 'Minkä nimisen puron mukaan Lalibelan kirkot jaetaan kahteen ryhmään?',
+      options: ['Jordanjoen', 'Sinisen Niilin', 'Awashin', 'Tekezén'],
+      correct: 0,
+      level: 3,
+      hint: 'Nimi on lainattu Pyhältä maalta.',
+      fact: 'Pohjoiseen ryhmään kuuluu viisi kirkkoa, samoin eteläiseen.',
+      source: 'https://fi.wikipedia.org/wiki/Lalibela',
+    },
+    {
+      q: 'Millä vuosisadoilla Lalibelan kalliokirkot rakennettiin?',
+      options: ['700–1200-luvuilla', '1500–1700-luvuilla', '300–400-luvuilla', '1800-luvulla'],
+      correct: 0,
+      level: 3,
+      hint: 'Arkeologisten todisteiden mukaan työ eteni viidessä vaiheessa.',
+      fact: 'Lalibela on yhä pyhä kaupunki ja pyhiinvaelluskohde, vaikka asukkaita oli vuonna 2012 vain runsaat 21 000.',
+      source: 'https://fi.wikipedia.org/wiki/Lalibela',
+    },
+  ],
+
   tripoli: [
     {
       q: 'Minkä maan pääkaupunki Tripoli on?',
@@ -1901,6 +2007,24 @@ export const AFRICA_FACTS = {
     'Jemaa el-Fnan torilla ilta on näytelmä: tarinankertojat, käärmeenlumoajat ja ruokakojujen savu. Aamulla sama aukio on melkein tyhjä — tori herää vasta auringon laskiessa.',
     {
       text: 'Kaupungin muurit on muurattu punertavasta savesta, ja ilta-auringossa koko kaupunki hehkuu. Atlasvuorten lumihuiput näkyvät basaarin katoilta — lunta ja aavikkoa samassa katseessa.',
+      voice: 'isoisa',
+    },
+  ],
+  fes: [
+    { text: 'Fès perustettiin 800-luvulla, ja sen vanhaakaupunkia Fès al Balia pidetään maailman suurimpana autottomana kaupunkialueena.', source: 'https://fi.wikipedia.org/wiki/F%C3%A8s' },
+    { text: 'Kaupunki kukoisti marinidien dynastian aikana Marokon pääkaupunkina, ja siitä tuli malikiittisen islaminuskon keskus.', source: 'https://fi.wikipedia.org/wiki/F%C3%A8s' },
+    { text: 'Punainen tasakattoinen päähine fetsi on saanut nimensä tästä kaupungista.', source: 'https://fi.wikipedia.org/wiki/F%C3%A8s' },
+    {
+      text: 'Vanhassakaupungissa ei kulje yksikään vaunu, koska kujat ovat kapeammat kuin akseliväli. Kaikki kannetaan aasin selässä, ja aasi väistää ihmistä yhtä vähän kuin Lontoossa vaunu väistää jalankulkijaa.',
+      voice: 'isoisa',
+    },
+  ],
+  lalibela: [
+    { text: 'Lalibelan kirkot on hakattu basalttikallioon, eikä muurattu kivistä; neljän kirkon seinät on irrotettu kalliosta kokonaan.', source: 'https://fi.wikipedia.org/wiki/Lalibela' },
+    { text: 'Kallioon kaiverrettuja suojelukohteita on yksitoista, ja ne rakennettiin viidessä vaiheessa 700–1200-lukujen aikana.', source: 'https://fi.wikipedia.org/wiki/Lalibela' },
+    { text: 'Kaupunki on noin 2 500 metrin korkeudessa, ja se on yhä pyhiinvaelluskohde.', source: 'https://fi.wikipedia.org/wiki/Lalibela' },
+    {
+      text: 'Kirkkoja ei ole rakennettu maasta ylös vaan kalliosta alas, ja siksi niitä ei näe ennen kuin seisoo niiden katolla. Kaivos tuottaa kultaa, tämä louhos tuotti kirkon.',
       voice: 'isoisa',
     },
   ],

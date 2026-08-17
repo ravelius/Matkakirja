@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v833 — 11 uutta kaupunkia laudoilla ja maailmankartalla (Kioto, Varanasi, Mandalay, Kanton, Sevilla, Bergen, Fès, Lalibela, Sitka, Ouro Preto, Dunedin) — pisteet, reitit, visat ja kuvakortit; ei vielä lehtiä',
   'v832 — Firenze Euroopan laudalla lehtineen (avaa lehti: kansi, Kuvataide-sivu, opas, kohdekartta)',
   'v831 — Tampere Euroopan laudalla lehtineen (avaa lehti!); Lappi on nyt Rovaniemi (lehti vielä vanha Lappi-lehti)',
   'v830 — LAITETESTI iPad/iPhone: kartan eleet (raahaus, liuku, nipistys, rullazoom) toimivat kuten ennen',

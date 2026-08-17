@@ -353,7 +353,13 @@ const EU_CITIES = [
     // Gibraltarin salmen yli Afrikkaan.
   },
   { id: 'barcelona', name: 'Barcelona', wiki: 'Barcelona', ambience: 'satama', x: 244, y: 800, la: 'start', lx: 16, ly: 5 },
-  { id: 'granada', name: 'Granada', ambience: 'kaupunki', wiki: 'Granada', x: 142, y: 916, la: 'end', lx: -16, ly: 5 },
+  // Granadan nimikyltti käännettiin oikealle, jotta Sevilla mahtuu sen
+  // länsipuolelle Guadalquivirin suunnalle.
+  { id: 'granada', name: 'Granada', ambience: 'kaupunki', wiki: 'Granada', x: 142, y: 916, la: 'start', lx: 16, ly: 5 },
+  // Sevilla on kartalla noin 70 km todellista paikkaansa lounaassa, Doñanan
+  // suunnalla: kaavan mukainen piste jäisi 46 yksikön päähän Granadasta,
+  // kun laudan vähimmäisväli on 60.
+  { id: 'sevilla', name: 'Sevilla', wiki: 'Sevilla', ambience: 'kaupunki', x: 81, y: 917, la: 'end', lx: -16, ly: 5 },
   { id: 'amsterdam', name: 'Amsterdam', wiki: 'Amsterdam', ambience: 'satama', x: 305, y: 516, la: 'start', lx: 16, ly: 5 },
   { id: 'berliini', name: 'Berliini', wiki: 'Berliini', ambience: 'kaupunki', x: 468, y: 512, airport: true },
   { id: 'praha', name: 'Praha', wiki: 'Praha', ambience: 'kaupunki', x: 488, y: 576, la: 'end', lx: -16, ly: 5 },
@@ -434,6 +440,7 @@ const EU_CITIES = [
     // Ruotsinlaiva Ahvenanmaalle — Suomen laudalle.
   },
   { id: 'oslo', name: 'Oslo', wiki: 'Oslo', ambience: 'metsa', x: 418, y: 318, la: 'end', lx: -16, ly: 5 },
+  { id: 'bergen', name: 'Bergen', wiki: 'Bergen', ambience: 'satama', x: 313, y: 305, la: 'end', lx: -16, ly: 5 },
   { id: 'kobenhavn', name: 'Kööpenhamina', wiki: 'Kööpenhamina', ambience: 'satama', x: 452, y: 429, la: 'start', lx: 16, ly: 5 },
   /*
    * Kohteen id pysyy 'lappi' — siihen viitataan kymmenissä tiedostoissa
@@ -480,6 +487,9 @@ const EU_EDGES = [
   { a: 'madrid', b: 'barcelona', steps: 3 },
   { a: 'madrid', b: 'granada', steps: 3 },
   { a: 'granada', b: 'lissabon', steps: 4 },
+  { a: 'sevilla', b: 'granada', steps: 2 },
+  { a: 'sevilla', b: 'lissabon', steps: 2 },
+  { a: 'sevilla', b: 'madrid', steps: 3 },
 
   // Keski-Eurooppa
   { a: 'amsterdam', b: 'berliini', steps: 4 },
@@ -535,12 +545,15 @@ const EU_EDGES = [
   { a: 'tampere', b: 'lappi', steps: 3 },
   { a: 'lappi', b: 'tromssa', steps: 3 },
   { a: 'tromssa', b: 'oslo', steps: 6 },
+  { a: 'bergen', b: 'oslo', steps: 3 },
   { a: 'oslo', b: 'tukholma', steps: 3 },
   { a: 'oslo', b: 'kobenhavn', steps: 3 },
   { a: 'tukholma', b: 'kobenhavn', steps: 3 },
 
   // Laivareitit
   { a: 'lontoo', b: 'amsterdam', steps: 3, type: 'sea' },
+  // Pohjanmeren yli Skotlantiin: Bergenin vanha väylä länttä kohti.
+  { a: 'bergen', b: 'edinburgh', steps: 5, type: 'sea', via: [[270, 330], [230, 350], [200, 380]] },
   { a: 'lontoo', b: 'dublin', steps: 3, type: 'sea',
     via: [[225, 570], [170, 576], [110, 600], [70, 592], [100, 540], [100, 505]] },
   { a: 'dublin', b: 'edinburgh', steps: 3, type: 'sea' },
@@ -626,12 +639,15 @@ export const EUROPE = {
         kuva: 'assets/aarteet/aarre-europe-topaz.jpg',
       },
     }),
-    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (43).
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (45).
     // Tampere toi 42:nnen ja sen laatta lisättiin yleisimpään
     // aarteeseen (meripihka, topaz 10 -> 11); Firenze toi 43:nnen ja
     // sen laatta otettiin tyhjistä (12 -> 13), jottei aarteiden määrä
-    // muutu kaupungin lisäämisen sivutuotteena.
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 11, empty: 13 },
+    // muutu kaupungin lisäämisen sivutuotteena. Sevilla ja Bergen
+    // (17.8.2026) toivat 44:nnen ja 45:nnen: yksi topaasiin (11 -> 12)
+    // ja yksi tyhjiin (13 -> 14) samalla jaolla kuin omissa
+    // haaroissaan.
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 12, empty: 14 },
   },
 
   questions: EUROPE_QUESTIONS,
