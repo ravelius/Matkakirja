@@ -12,8 +12,8 @@ import {
   wantsHint,
 } from './ai.js';
 import {
-  DUEL_BYPASS_SHOES, DUEL_PRIZE, EXPLORE_REWARD, FIFTY_FIFTY_PRICE, FLIGHT_PRICE,
-  HARD_BONUS, HINT_PRICE, MANNERLENTO_NAPPI, QUIZ_SECONDS, SEA_FARE,
+  DUEL_PRIZE, FLIGHT_PRICE,
+  HINT_PRICE, MANNERLENTO_NAPPI, SEA_FARE,
 } from './game.js';
 import {
   factSource, factText, factVoice, isSourceUrl, PACKS, packById, sourceLabel, voiceTitle,
@@ -26,7 +26,7 @@ import {
   MERKKI_SOITA, REVEAL_SUB, VIIVA_IKONIT, aarreIkoni, aarrekuvanOsoitteet,
   alkuKehykset, arvoHuudahdus, ekaLause, esilataaKuvat, html, jaaKappaleiksi,
   jaljenKehykset, kierraKehykset, kuvitukseton, lahdemerkinta, liuskaIkoniSvg,
-  onVanhaKuva, pehmeaPolku, piirraLeipa, poimiNostoVirke, polunPituus,
+  onVanhaKuva, pehmeaPolku, polunPituus,
   cachedImage, cachedSummary, kehittajaTilaPaalla,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
@@ -42,8 +42,16 @@ import {
 import {
   naytaMaaTunnusluvut, paivitaMediarivit, piirraKategoria,
 } from './maalehti.js';
+// Remontin M6: luenta ja visa.
+import {
+  haivytaJaSiivoa, haivytaLuenta, lueKertojana, lueMerkinta,
+  merkitsePuhuja, playDiaryVoice, playIntroVoice, stopDiaryVoice,
+  stopIntroVoice, vapautaPuhuja,
+} from './luenta.js';
+import {
+  answerDuelUi, answerQuiz, renderDuel, renderQuiz, stopQuizTimer,
+} from './visa.js';
 // Mallin B pilotit (remontin M3): liput, karttazoom ja vertailutila.
-import { avaaLippuikkuna } from './liput.js';
 import {
   piirraMaatiedotMaat, piirraVertailuMaat, rakennaVertailuPalkki,
   tahdistaMaatiedot,
@@ -58,7 +66,7 @@ import { taitaOpas } from './opas.js';
 // galleriat (siirretty tästä tiedostosta 17.8.2026, remontin M1).
 import {
   ARTIKKELIT, EI_VALOKUVAKYSYMYKSEEN, HAVAINTOLUENNAT, KAIKKI_VALOKUVAT,
-  KIELET, KOHTAAMISLUENNAT, KULTTUURIT, LAUTA_TUNNUSLUVUT, MAATIEDOT,
+  KULTTUURIT, LAUTA_TUNNUSLUVUT,
   OMAT_GALLERIAT, SAAPUMISLUENNAT, SAAPUMISTEKSTIT, VALOKUVAT, luentaLauta,
 } from './sisaltotaulut.js';
 // iOS-kuoren kytkennät. Selaimessa jokainen näistä on mykkä (js/natiivi.js).
@@ -73,22 +81,12 @@ import { fetchArticle, fetchImages, suurennusportaat } from './wiki.js';
 // niputtaa moduulit samaan näkyvyysalueeseen ja poistaa import-rivit, joten alias
 // katoaisi ja nimi jäisi määrittelemättä. Siksi lautakohtaiset nimet ovat
 // yksilöllisiä jo lähdetiedostoissa.
-import { piirraAfrikanPulma, onAfrikanPulma } from './packs/africa-puzzles.js';
-import { piirraEuroopanPulma } from './packs/europe-puzzles.js';
 
-/**
- * Pulman piirros oikeasta laudasta. Tunnisteet ovat yksilöllisiä yli
- * lautojen, joten oikea piirtäjä löytyy kysymällä.
- */
-function drawPuzzle(svg, id, data) {
-  if (onAfrikanPulma(id)) piirraAfrikanPulma(svg, id, data);
-  else piirraEuroopanPulma(svg, id, data);
-}
 import {
   lippuUrl, lippuVara, valokuvaSuurennos, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
 import {
-  asetaKuva, peiliPetti, peilinLaji, aaniOsoite, aaniUrl, haeAani, onPeilista,
+  asetaKuva, peiliPetti, peilinLaji, aaniOsoite, aaniUrl, onPeilista,
 } from './media.js';
 import { KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
 import { TARINAKAARI, KAARI_LAUDAT, kaariLuentaSoi } from './packs/tarinakaari.js';
@@ -99,14 +97,12 @@ import { TARINAKAARI, KAARI_LAUDAT, kaariLuentaSoi } from './packs/tarinakaari.j
  * ylikirjoitus veisi mukanaan kaiken, mitä siihen on käsin korjattu.
  * Yksi ylimääräinen tiedosto on halvempi kuin yksi menetetty.
  */
-import { radioMaalle } from './packs/radiot.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import {
-  MAAKARTAT, KAUPUNKIKARTAT, karttapiste, mittakaava,
+  MAAKARTAT, KAUPUNKIKARTAT, mittakaava,
 } from './packs/maakartat.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
-import { LIPPUTIEDOT } from './packs/lipputiedot.js';
 import { polloAnkkuri, polloSulje, polloVihje, polloVihjePois } from './pollo.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
@@ -141,8 +137,8 @@ async function cachedGallery(title) {
 }
 import { sfx, treasureSound } from './sound.js';
 import {
-  playPlaceAmbience, startQuizMusic, stopPlaceStream, stopQuizMusic,
-  vaimennaTausta, palautaTausta, puheAlkoi, puheLoppui,
+  playPlaceAmbience, stopPlaceStream, stopQuizMusic,
+  vaimennaTausta, palautaTausta,
   hiljennaAmbienssi, palautaAmbienssi,
 } from './ambience-stream.js';
 import {
@@ -220,41 +216,6 @@ const BOT_QUIZ_DELAY = 1500; // botin kysymys jää hetkeksi näkyviin luettavak
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
 // Animaatioiden rytmi millisekunteina.
-/*
- * Luennan loppuhäivytys. Aiempi neljännessekunti oli niin lyhyt, että
- * kertoja katkesi töksähtäen (omistajan havainto) — etenkin lyhyessä
- * kertojatilassa, jossa ääni pysäytettiin lauserajalla ilman häivytystä
- * lainkaan. Puolitoista sekuntia riittää pehmentämään lopun ilman että
- * viimeinen sana hukkuu, koska käyrä on aluksi loiva.
- */
-const LUENNAN_HAIPYMA_S = 1.5;
-/*
- * Nauhoituksen LUONNOLLISEN lopun häivytys on eri asia.
- *
- * Yllä oleva puolitoista sekuntia on oikea silloin, kun luenta
- * katkaistaan kesken tiedoston lauserajalla: siinä häivytys korvaa
- * töksähtävän katkon keskellä puhetta. Nauhoituksen omassa lopussa se
- * on väärin — se alkaa jo puolitoista sekuntia ennen loppua ja nielee
- * viimeisen sanan (omistajan havainto).
- *
- * Lopussa tarvitaan vain sen verran, ettei soittimen pysäytys napsahda.
- *
- * VIISIKYMMENTÄ MILLISEKUNTIA EI RIITTÄNYT. Voimakkuutta säädetään
- * ruudunpäivityksen tahdissa eli noin 16 millisekunnin välein, joten
- * viimeinen säätö osui pahimmillaan kolmasosaan täydestä
- * voimakkuudesta — ja siitä syntyi napsahdus. Se kuului vain osassa
- * äänitteitä (omistajan havainto), koska osa loppuu jo valmiiksi
- * hiljaisuuteen eikä niissä ole mitä napsahtaa.
- *
- * Nyt häivytys on hitusen pidempi ja saavuttaa NOLLAN selvästi ennen
- * tiedoston loppua. Viimeiset parikymmentä millisekuntia ovat
- * hiljaisuutta, ja vasta siinä soitin pysäytetään.
- */
-const LOPUN_HAIPYMA_S = 0.12;
-/** Kuinka kauan ennen loppua ääni on jo täysin vaiennut. */
-const LOPUN_HILJAISUUS_S = 0.025;
-/** Pehmennyskäyrä: alkaa hitaasti, jyrkkenee lopussa (ease-in). */
-const pehmene = (t) => Math.max(0, Math.min(1, t)) ** 1.8;
 
 const STEP_MS = 190; // yksi askel kartalla
 const FLIGHT_MS = 900;
@@ -415,11 +376,6 @@ export function kirjoituksenKesto(teksti, tahti = INTRO_TYPE_MS) {
   }
   return ms;
 }
-// Tehtäväkortti paljastuu vaiheittain: kehys, tauko, kysymys, tauko,
-// vaihtoehdot. Kirjoituskone on etusivua ripeämpi mutta rauhallisempi
-// kuin pelitilanneilmoitukset.
-const QUIZ_TYPE_MS = 95;
-const QUIZ_PAUSE_MS = 700;
 /*
  * Avaustekstin kirjasinkoko sovitetaan kaistaan näiden rajojen sisällä.
  *
@@ -1306,7 +1262,7 @@ export class UI {
       }
       // Ääni ehti sulkeutua (esim. korttien vaihto) — aloitetaan alusta.
       if (this.diaryFullUrl) {
-        this.playDiaryVoice(this.diaryFullUrl);
+        playDiaryVoice(this, this.diaryFullUrl);
         return;
       }
       /*
@@ -1334,7 +1290,7 @@ export class UI {
       // ohje 14.8.2026): säilön voi tuhota erikseen, kun tekstit
       // kirjoitetaan uusiksi, ja äänen voi vaihtaa muista lukuäänistä
       // riippumatta.
-      if (this.lueMerkinta(teksti)) return;
+      if (lueMerkinta(this, teksti)) return;
       lueAaneen(teksti, this.factKuuntele, { persoona: 'merkinnat', sailio: 'merkinnat' });
     });
 
@@ -1482,7 +1438,7 @@ export class UI {
       if (luenta) {
         this.diaryVoice = null;
         this.luentaTauolla = null;
-        this.haivytaJaSiivoa(luenta);
+        haivytaJaSiivoa(this, luenta);
       }
       sfx.play('paper');
       const jatka = this.jatkaKysymykseen;
@@ -2227,8 +2183,8 @@ export class UI {
     stopPlaceStream();
     stopQuizMusic();
     sfx.stopFlight();
-    this.stopIntroVoice();
-    this.stopDiaryVoice();
+    stopIntroVoice(this);
+    stopDiaryVoice(this);
     // Uusi peli vaientaa myös sivujen luennan: se on documentin
     // ulkopuolinen puhuja eikä lopu itsestään pelin vaihtuessa.
     pysaytaLukija();
@@ -2252,7 +2208,7 @@ export class UI {
     clearTimeout(this.tarkkuusAjastin);
     if (this.previewFrame) cancelAnimationFrame(this.previewFrame);
     for (const timer of Object.values(this.typeTimers ?? {})) clearTimeout(timer);
-    this.stopQuizTimer();
+    stopQuizTimer(this);
     for (const lappu of this.taustaLaput ?? []) lappu.removeEventListener('click', this.lappuTausta);
     for (const lappu of this.peruutusLaput ?? []) lappu.removeEventListener('cancel', this.lappuPeruutus);
     // Nipistyksen kuuntelijat pois: ne ovat paneelissa, joka jää eloon.
@@ -4040,8 +3996,8 @@ export class UI {
      * sx/sy/yleisSkaala jäävät laskennasta käyttämättä samasta syystä.
      */
     void sx; void sy; void yleisSkaala;
-    this.stopIntroVoice();
-    this.stopDiaryVoice();
+    stopIntroVoice(this);
+    stopDiaryVoice(this);
     this.svg.style.transition = '';
     this.tyonnaAvausteksti(0);
     this.asetaPan(this.panX, this.panY);
@@ -4056,8 +4012,8 @@ export class UI {
    * Ilman taukoa moottori hukkui puheen ja meren alle.
    */
   zoomAanellaJaViiveella(liuku, kesto = ZOOM_MS) {
-    this.stopIntroVoice();
-    this.stopDiaryVoice();
+    stopIntroVoice(this);
+    stopDiaryVoice(this);
     vaimennaTausta();
     clearTimeout(this.zoomAlkuAjastin);
     this.zoomAlkuAjastin = setTimeout(() => {
@@ -6610,7 +6566,7 @@ export class UI {
     const lontoo = game.board.cityById.get('lontoo');
     if (lontoo && lontoo.id !== city.id) {
       // Lukuääni väistyy, kun matka alkaa.
-      this.stopIntroVoice();
+      stopIntroVoice(this);
       this.introEl.classList.add('intro-fade');
       // Repliikki ennen siirtoa, jotta rng-kutsut osuvat samaan kohtaan.
       const line = game.firstFlightLine(city.id);
@@ -6629,7 +6585,7 @@ export class UI {
           // hetki aikaistui LENNON_PUHE_MS:ään: ääni saa olla edellä ja
           // teksti perässä.
           if (!this.dead && kertojaTila() === 'pitka') {
-            this.playDiaryVoice('assets/audio/puhe-lento-alku.mp3');
+            playDiaryVoice(this, 'assets/audio/puhe-lento-alku.mp3');
           }
         }, LENNON_PUHE_MS);
       }
@@ -6657,7 +6613,7 @@ export class UI {
       return;
     }
     // Nappula siirtyy ilman animaatiota: oikotie saa näyttää oikotieltä.
-    this.haivytaLuenta();
+    haivytaLuenta(this);
     this.suljeMatkavalikko();
     this.doAction(() => game.actionKehittajaSiirto(city.id));
   }
@@ -6668,7 +6624,7 @@ export class UI {
     if (this.radioPaalla()) return;
     const { game } = this;
     // Nopanheitto keskeyttää tarinan: luenta häipyy pehmeästi pois.
-    this.haivytaLuenta();
+    haivytaLuenta(this);
     this.run(
       () => {
         const chosen = game.actionTravel('land');
@@ -7010,7 +6966,7 @@ export class UI {
       this.factImage.hidden = true;
       this.factKuuntele.hidden = true;
       this.naytaFactValokuva(null);
-      this.stopDiaryVoice();
+      stopDiaryVoice(this);
       return;
     }
 
@@ -7045,7 +7001,7 @@ export class UI {
       this.factImage.hidden = true;
       this.factKuuntele.hidden = true;
       this.naytaFactValokuva(null);
-      this.stopDiaryVoice();
+      stopDiaryVoice(this);
       this.typeText(this.factText, aikataulu.text);
       return;
     }
@@ -7137,21 +7093,21 @@ export class UI {
           this.naytaMerkinnanKaiutin(false);
           if (this.luettuSaapuminen !== luentaAvain) {
             this.luettuSaapuminen = luentaAvain;
-            this.stopDiaryVoice();
+            stopDiaryVoice(this);
             // Kertojan tila (yläpalkin valikko): pitkä lukee koko
             // merkinnän, lyhyt vain ensimmäisen lauseen — kaiutinnappi
             // jatkaa loput. Ei kertojaa → ei autoluentaa.
             const tila = kertojaTila();
             if (tila === 'lyhyt') {
               this.merkintaJatko = jatkoTeksti || null;
-              this.lueMerkinta(eka, { viive: 1000 });
+              lueMerkinta(this, eka, { viive: 1000 });
             } else if (tila === 'pitka') {
-              this.lueMerkinta([uusi.kuvaus, uusi.nosto].filter(Boolean).join(' '), { viive: 1000 });
+              lueMerkinta(this, [uusi.kuvaus, uusi.nosto].filter(Boolean).join(' '), { viive: 1000 });
             }
           } else {
             // Sama merkintä uudelleen ruudulle (vihje, aikataulu) —
             // mahdollinen vanha äänite kiinni, luentaa ei aloiteta.
-            this.stopDiaryVoice();
+            stopDiaryVoice(this);
           }
           return;
         }
@@ -7176,18 +7132,18 @@ export class UI {
           // sen hetkellisesti.
           const tila = kertojaTila();
           if (tila === 'ei') {
-            this.stopDiaryVoice();
+            stopDiaryVoice(this);
           } else if (tila === 'lyhyt') {
-            this.playDiaryVoice(this.diaryFullUrl, {
+            playDiaryVoice(this, this.diaryFullUrl, {
               ekaLauseeseen: true,
               osuus: eka.length / (uusi.kuvaus.length + 1 + (uusi.nosto?.length ?? 0)),
               viive: 1000,
             });
           } else {
-            this.playDiaryVoice(this.diaryFullUrl, { viive: 1000 });
+            playDiaryVoice(this, this.diaryFullUrl, { viive: 1000 });
           }
         } else {
-          this.stopDiaryVoice();
+          stopDiaryVoice(this);
         }
         return;
       }
@@ -7234,11 +7190,11 @@ export class UI {
           this.naytaMerkinnanKaiutin(false);
           if (this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
             this.luettuSaapuminen = luentaAvain;
-            this.stopDiaryVoice();
+            stopDiaryVoice(this);
             this.merkintaJatko = loput || null;
-            this.lueMerkinta(eka, { viive: 1000 });
+            lueMerkinta(this, eka, { viive: 1000 });
           } else {
-            this.stopDiaryVoice();
+            stopDiaryVoice(this);
           }
           return;
         }
@@ -7249,14 +7205,14 @@ export class UI {
         this.naytaMerkinnanKaiutin(Boolean(havaintoLauta));
         if (havaintoLauta && this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
           this.luettuSaapuminen = luentaAvain;
-          this.playDiaryVoice(this.diaryFullUrl, {
+          playDiaryVoice(this, this.diaryFullUrl, {
             ekaLauseeseen: true,
             // Ensimmäisen virkkeen osuus tekstistä ohjaa tauon valintaa.
             osuus: teksti.length ? eka.length / teksti.length : null,
             viive: 1000,
           });
         } else {
-          this.stopDiaryVoice();
+          stopDiaryVoice(this);
         }
         return;
       }
@@ -7275,7 +7231,7 @@ export class UI {
     this.uusiFactKey(key);
     this.factKuuntele.hidden = true;
     this.naytaFactValokuva(player.pos.type === 'city' ? city.id : null, city.name);
-    this.stopDiaryVoice();
+    stopDiaryVoice(this);
 
     // Otsikko kertoo kumpi ääni puhuu, alarivi paikan.
     const onRoute = player.pos.type === 'edge';
@@ -7471,7 +7427,7 @@ export class UI {
     this.paivitaTutkiSyke();
     this.renderActions();
     this.renderFact();
-    this.renderQuiz();
+    renderQuiz(this);
     // Linssit tahdistetaan joka piirrossa, mutta työ tehdään vasta kun
     // jokin oikeasti muuttui: uusi löytö, uusi lauta tai uusi kerros.
     void this.paivitaLinssit();
@@ -9474,7 +9430,7 @@ export class UI {
       this.introShown = false;
       this.introRunko.textContent = '';
       this.introLopetus.textContent = '';
-      this.stopIntroVoice();
+      stopIntroVoice(this);
       this.suljeAloitusportti();
       return;
     }
@@ -9487,7 +9443,7 @@ export class UI {
       return;
     }
     this.introShown = true;
-    this.playIntroVoice();
+    playIntroVoice(this);
     // Avausteksti kirjoittuu selvästi hitaammin kuin muut: se on matkan
     // ensimmäinen hetki eikä pelitilanteen ilmoitus. Viimeinen rivi
     // kirjoittuu omaan lihavoituun elementtiinsä, jotta kysymys erottuu
@@ -9879,436 +9835,6 @@ export class UI {
     this.aloitusportti = null;
   }
 
-  /**
-   * Avausteksti luettuna: omistajan ElevenLabsilla tuottama lukuääni
-   * (assets/audio/intro-puhe.mp3). Selain ei salli ääntä ennen
-   * ensimmäistä kosketusta — silloin puhe alkaa vasta ensimmäisestä
-   * napautuksesta. Puuttuva tiedosto ei haittaa: virhe ohitetaan.
-   */
-  playIntroVoice() {
-    if (!sfx.enabled) return;
-    // Vain pitkä kertoja lukee avaustekstin: lyhyt lukee pelkän
-    // matkakirjan kuvauksen ja ei kertojaa -tila ei mitään.
-    if (kertojaTila() !== 'pitka') return;
-    this.stopIntroVoice();
-    const audio = new Audio(aaniUrl('assets/audio/intro-puhe.mp3'));
-    audio.volume = puheVoima();
-    this.pehmeaLoppu(audio);
-    this.introVoice = audio;
-    this.merkitsePuhuja(audio);
-    audio.play().catch(() => {
-      const aloita = () => {
-        if (this.introVoice === audio && this.game.phase === 'pickstart' && !this.dead) {
-          audio.play().catch(() => {});
-        }
-      };
-      window.addEventListener('pointerdown', aloita, { once: true });
-    });
-  }
-
-  stopIntroVoice() {
-    const vanha = this.introVoice;
-    this.introVoice = null;
-    if (!vanha) return;
-    this.haivytaJaSiivoa(vanha);
-  }
-
-  /**
-   * Häivyttää HTMLAudio-äänen pehmeästi ja siivoaa sen perässä —
-   * myös puhujan rooli vapautuu, jotta tausta palaa täyteen voimaan.
-   * Aiemmin intro-puhe katkesi kuin veitsellä, kun matka alkoi
-   * (omistajan palaute 10.8.2026: edellisen näkymän äänten pitää
-   * feidautua ulos samalla kun lennon ääni feidautuu sisään).
-   *
-   * HUOM nimestä: tämä EI saa olla haivytaAani — luokassa on
-   * saman niminen luentojen häivytys (pause ilman siivousta, koska
-   * kaiutinnappi voi jatkaa samasta kohdasta), ja JavaScriptissä
-   * myöhempi metodi ylikirjoittaa aiemman äänettömästi. Juuri niin
-   * kävikin (löytyi 10.8.2026): stopIntroVoice sai pause-version,
-   * puhujan rooli jäi vapauttamatta ja tausta jäi väistöön.
-   */
-  haivytaJaSiivoa(audio, kesto = 600) {
-    const alkuVoima = audio.volume;
-    const t0 = performance.now();
-    const askel = () => {
-      const osuus = (performance.now() - t0) / kesto;
-      if (osuus >= 1 || audio.paused) {
-        audio.pause();
-        audio.removeAttribute('src');
-        this.vapautaPuhuja(audio);
-        return;
-      }
-      audio.volume = alkuVoima * (1 - osuus);
-      setTimeout(askel, 40);
-    };
-    askel();
-  }
-
-  /**
-   * Merkitsee äänen puhujaksi: tausta väistyy niin kauan kuin yksikin
-   * puhuu. Vapautus tapahtuu kerran ja vain kerran — 'ended' ja
-   * 'error' voivat molemmat laueta, ja kaksinkertainen vapautus
-   * nostaisi taustan kesken toisen luennan.
-   */
-  merkitsePuhuja(audio) {
-    if (!audio || audio.puhujaMerkitty) return;
-    audio.puhujaMerkitty = true;
-    puheAlkoi();
-    const lopeta = () => this.vapautaPuhuja(audio);
-    audio.addEventListener('ended', lopeta);
-    audio.addEventListener('error', lopeta);
-  }
-
-  /** Vapauttaa äänen puhujan roolista; turvallista kutsua monta kertaa. */
-  vapautaPuhuja(audio) {
-    if (!audio?.puhujaMerkitty) return;
-    audio.puhujaMerkitty = false;
-    this.luennat?.delete(audio);
-    puheLoppui();
-  }
-
-  /**
-   * Saapumismerkinnän lukuääni. Soi kerran kun merkintä ilmestyy ja
-   * vaikenee, kun tietoruutu vaihtaa aihetta. Puuttuva tiedosto (esim.
-   * lauta jolle puhetta ei ole tuotettu) ohitetaan hiljaa.
-   * `ekaLauseeseen` pysäyttää toiston ensimmäisen virkkeen jälkeiseen
-   * hiljaisuuteen — kaiutinnappi jatkaa samasta kohdasta.
-   */
-  /*
-   * Omistajan ehto 4.8.2026: radiotilassa kaupungin matkakirja saa
-   * päivittyä, mutta ilman luenta-ääntä. Kaksi ääntä yhtä aikaa on
-   * sekasotku. Yksi tarkistus kattaa kaikki kuusi luennan
-   * aloituskohtaa, koska ne kaikki kulkevat tästä.
-   */
-  /**
-   * MERKINNÄN LUENTA LUKIJAÄÄNELLÄ (omistajan päätös 14.8.2026:
-   * ElevenLabs-äänitteet pois käytöstä toistaiseksi, tilalle
-   * striimattu ääni).
-   *
-   * Sama lukija kuin kaiutinnapilla (js/lukija.js), persoona
-   * 'merkinnat' ja oma äänisäilö. Tausta väistyy luennan ajaksi kuten
-   * äänitteillä: puheAlkoi ennen aloitusta ja puheLoppui lukijan
-   * loppukoukusta — koukku laukeaa myös pysäytyksestä ja virheestä,
-   * joten tausta ei voi jäädä vaimeaksi.
-   *
-   * Lyhyttä tilaa (vain ensimmäinen virke) varten kutsuja antaa
-   * tekstiksi pelkän ensimmäisen virkkeen ja panee loput talteen
-   * this.merkintaJatko-kenttään — kaiutinnappi jatkaa siitä.
-   *
-   * @returns {boolean} lähtikö luenta (tai sen ajastus) käyntiin
-   */
-  lueMerkinta(teksti, { viive = 0 } = {}) {
-    if (this.radioModuuli && !this.radioModuuli.luentaSallittu()) return false;
-    const puhuttava = String(teksti ?? '').trim();
-    if (!puhuttava || !lukijaTuettu()) return false;
-    const aloita = () => {
-      puheAlkoi();
-      const lahti = lueAaneen(puhuttava, this.factKuuntele, {
-        persoona: 'merkinnat',
-        sailio: 'merkinnat',
-        onLoppu: () => puheLoppui(),
-      });
-      if (!lahti) puheLoppui();
-    };
-    if (viive > 0) {
-      // Sama hengähdys kuin äänitteillä; merkinnän vaihtuminen kesken
-      // odotuksen peruu aloituksen (factKey on jo ehtinyt vaihtua).
-      const avain = this.factKey;
-      setTimeout(() => {
-        if (this.factKey === avain) aloita();
-      }, viive);
-    } else {
-      aloita();
-    }
-    return true;
-  }
-
-  /**
-   * KERTOJAN LUENTA LUKIJAÄÄNELLÄ (omistajan päätös 14.8.2026:
-   * ElevenLabs-äänitteet pois käytöstä toistaiseksi, tilalle
-   * striimattu ääni). Kohtaamisten tervehdykset, löytöhetken
-   * repliikit ja tarinakaaren aarretekstit luetaan samalla lukijalla
-   * kuin lehdet — persoona 'kertoja' ja kertojan oma äänisäilö,
-   * joten vakiotekstit generoidaan kerran ja soivat sen jälkeen
-   * säilöistä. Tausta väistyy kuten äänitteillä (puheAlkoi/-Loppui).
-   *
-   * Sivuvaikutuksena luennan saavat myös kohtaamiset, joille
-   * äänitettä ei koskaan nauhoitettu (uudet kaupungit).
-   *
-   * @returns {boolean} lähtikö luenta (tai sen ajastus) käyntiin —
-   *   false pudottaa kutsujan äänitevarapolulle
-   */
-  lueKertojana(teksti, { viive = 0, onLoppu = null } = {}) {
-    if (this.radioModuuli && !this.radioModuuli.luentaSallittu()) return false;
-    const puhuttava = String(teksti ?? '').trim();
-    if (!puhuttava || !puheTuettu()) return false;
-    const aloita = () => {
-      puheAlkoi();
-      const lahti = lueAaneen(puhuttava, null, {
-        persoona: 'kertoja',
-        sailio: 'kertoja',
-        onLoppu: () => {
-          puheLoppui();
-          onLoppu?.();
-        },
-      });
-      if (!lahti) {
-        puheLoppui();
-        onLoppu?.();
-      }
-    };
-    if (viive > 0) setTimeout(aloita, viive);
-    else aloita();
-    return true;
-  }
-
-  playDiaryVoice(url, { ekaLauseeseen = false, osuus = null, viive = 0 } = {}) {
-    this.stopDiaryVoice();
-    if (this.radioModuuli && !this.radioModuuli.luentaSallittu()) return;
-    if (!url || !sfx.enabled) return;
-    /*
-     * Luennat tulevat ämpäristä (js/media.js aaniUrl), repon polku on
-     * varareitti. Ämpärin pettäessä siirrytään siihen kerran ja
-     * merkitään virhe äänipeilin katkaisijalle — sama kahden portaan
-     * malli kuin äänimaisemilla ja visamusiikilla.
-     */
-    const audio = new Audio(aaniUrl(url));
-    let varareittiKokeiltu = false;
-    audio.addEventListener('error', () => {
-      if (varareittiKokeiltu || this.diaryVoice !== audio) return;
-      if (!onPeilista(audio.getAttribute('src'))) return;
-      varareittiKokeiltu = true;
-      peiliPetti('aanet');
-      audio.src = url;
-      audio.load();
-      audio.play().catch(() => { /* varareittikään ei soi — hiljaisuus */ });
-    });
-    audio.volume = puheVoima();
-    this.pehmeaLoppu(audio);
-    this.diaryVoice = audio;
-    // Kirjanpito kaikista luennoista: pysäytys hiljentää myös sellaisen
-    // äänen, joka ei enää ole diaryVoice mutta soi yhä.
-    (this.luennat ??= new Set()).add(audio);
-    // Tausta väistyy puheen ajaksi (omistajan havainto: puhetta oli
-    // vaikea kuulla). Merkintä tehdään tähän eikä play():n jälkeen,
-    // jotta se pariutuu varmasti vapautuksen kanssa myös silloin kun
-    // soitto ei koskaan käynnisty.
-    this.merkitsePuhuja(audio);
-    if (ekaLauseeseen) {
-      this.lauseTauko(url, osuus).then((raja) => {
-        if (this.diaryVoice !== audio || raja == null) return;
-        const vahti = () => {
-          if (audio.jatkettu) {
-            audio.removeEventListener('timeupdate', vahti);
-            return;
-          }
-          // Häivytys alkaa jo ennen lauserajaa, jotta ääni on hiljainen
-          // juuri silloin kun se loppuu — pelkkä pause() katkaisi sen
-          // töksähtäen (omistajan havainto).
-          if (audio.currentTime >= raja - LUENNAN_HAIPYMA_S) {
-            audio.removeEventListener('timeupdate', vahti);
-            this.haivytaAani(audio);
-          }
-        };
-        audio.addEventListener('timeupdate', vahti);
-      });
-    }
-    const aloita = () => {
-      audio.play().then(() => {
-        // play() on asynkroninen: jos luenta ehti vaihtua tai pysähtyä
-        // käynnistyksen aikana, myöhässä herännyt ääni pysäytetään heti —
-        // muuten kaksi luentaa soi päällekkäin (omistajan havainto).
-        if (this.diaryVoice !== audio) audio.pause();
-      }).catch((virhe) => {
-        /*
-         * Virhe näkyviin. Aiemmin se niellettiin kokonaan, ja silloin
-         * "ääni ei kuulu" -vika ei jätä mitään jälkeä mihinkään.
-         * iOS hylkää play():n NotAllowedError-virheellä, jos kutsu ei
-         * enää liity käyttäjän eleeseen — sen erottaa nyt latausvirheestä.
-         */
-        console.warn('luenta ei käynnistynyt:', virhe?.name ?? virhe, url);
-        if (this.diaryVoice === audio) this.diaryVoice = null;
-        // Käynnistymätön luenta ei laukaise elementin omia tapahtumia,
-        // mutta kuuntelijat (mm. aarrekortin odotus) tarvitsevat lopun
-        // signaalin — muuten ne odottaisivat varmuusrajaansa asti.
-        audio.dispatchEvent(new Event('error'));
-      });
-    };
-    // Pieni hengähdys ennen luennan alkua (omistajan toive): kortti ehtii
-    // asettua ennen kuin lukija aloittaa. Pysäytys ohittaa odottavan
-    // luennan, koska diaryVoice ei enää osoita tähän ääneen.
-    if (viive > 0) {
-      setTimeout(() => {
-        if (this.diaryVoice === audio) aloita();
-      }, viive);
-    } else {
-      aloita();
-    }
-    // Kutsuja saa kahvan luentaan: aarrekortti pysyy esillä luennan
-    // ajan ja sen ruksi feidaa juuri tämän äänen (playTokenReveal).
-    return audio;
-  }
-
-  /**
-   * Ensimmäisen virkkeen jälkeisen hengähdyksen paikka äänitteessä.
-   * Pelkkä "ensimmäinen hiljaisuus" osui lukijan hengitykseen ja katkaisi
-   * virkkeen kesken (omistajan havainto), joten raja valitaan nyt
-   * tekstistä lasketun arvion läheltä: ensimmäisen virkkeen osuus koko
-   * tekstistä kertoo, missä kohdassa puhetta virkkeen loppu suunnilleen
-   * on, ja sitä lähin vähintään 0,3 sekunnin hiljaisuus voittaa.
-   * Lasketaan kerran per tiedosto ja muistetaan.
-   */
-  lauseTauko(url, osuus = null) {
-    this.lauseTauot ??= new Map();
-    const avain = `${url}|${osuus == null ? '' : osuus.toFixed(3)}`;
-    if (!this.lauseTauot.has(avain)) {
-      const lupaus = (async () => {
-        const ctx = sfx.ensureContext();
-        if (!ctx) return null;
-        // haeAani hoitaa saman peili-ensin-varareitin kuin soitto (ja
-        // merkitsee katkaisijaan), joten lauserajaa ei lasketa eri
-        // tiedostosta kuin mitä soitetaan.
-        const data = await haeAani(url)
-          .then((r) => (r.ok ? r.arrayBuffer() : Promise.reject()));
-        const buf = await ctx.decodeAudioData(data);
-        const kanava = buf.getChannelData(0);
-        const ikkuna = Math.floor(buf.sampleRate * 0.05);
-        let huippu = 0;
-        for (let i = 0; i < kanava.length; i += 16) huippu = Math.max(huippu, Math.abs(kanava[i]));
-        const raja = huippu * 0.04;
-        // Ikkunoittainen äänekkyys: siitä puheen alku ja loppu sekä
-        // puheen sisään jäävät hiljaisuudet.
-        const aanekas = [];
-        for (let i = 0; i < kanava.length; i += ikkuna) {
-          let maksimi = 0;
-          const loppu = Math.min(i + ikkuna, kanava.length);
-          for (let j = i; j < loppu; j += 4) maksimi = Math.max(maksimi, Math.abs(kanava[j]));
-          aanekas.push(maksimi >= raja);
-        }
-        const eka = aanekas.indexOf(true);
-        const vika = aanekas.lastIndexOf(true);
-        if (eka < 0) return null;
-        const s = 0.05; // yhden ikkunan kesto sekunteina
-        const tauot = []; // vähintään 0,3 s hiljaisuuksien alkukohdat
-        let alkoi = -1;
-        for (let i = eka; i <= vika + 1; i++) {
-          if (i <= vika && !aanekas[i]) {
-            if (alkoi < 0) alkoi = i;
-          } else {
-            if (alkoi >= 0 && (i - alkoi) * s >= 0.3) tauot.push(alkoi * s);
-            alkoi = -1;
-          }
-        }
-        if (!tauot.length) return null; // yksivirkkeinen — soi kokonaan
-        const puheAlku = eka * s;
-        const puheLoppu = (vika + 1) * s;
-        let valinta = null;
-        if (osuus == null) {
-          // Ilman tekstiarviota kelpaa ensimmäinen tauko 1,2 s jälkeen.
-          valinta = tauot.find((t) => t >= 1.2) ?? null;
-        } else {
-          // Arvio virkkeen lopusta puheen kestoon sovitettuna — lähin
-          // tauko voittaa, jolloin hengitystauko kesken virkkeen häviää
-          // aina oikealle virkerajalle.
-          const arvio = puheAlku + (puheLoppu - puheAlku) * osuus;
-          for (const t of tauot) {
-            if (valinta == null || Math.abs(t - arvio) < Math.abs(valinta - arvio)) valinta = t;
-          }
-        }
-        // Tauon alku + pieni hengähdys, jotta sana ehtii loppuun.
-        return valinta == null ? null : valinta + 0.15;
-      })().catch(() => null);
-      this.lauseTauot.set(avain, lupaus);
-    }
-    return this.lauseTauot.get(avain);
-  }
-
-  /**
-   * Pehmeä loppu puhetiedostoille: viimeinen neljännessekunti häivytetään
-   * ja toisto pysäytetään juuri ennen tiedoston reunaa. ElevenLabsin
-   * tiedosto päättyy keskeltä signaalia, ja kova reuna kuului pienenä
-   * töksähdyksenä (omistajan havainto etusivulla) — pehmennys tehdään
-   * toistossa, joten tiedostoja ei tarvinnut generoida uusiksi.
-   */
-  pehmeaLoppu(audio) {
-    const perus = audio.volume;
-    let rampissa = false;
-    const rullaa = () => {
-      if (audio.paused || !audio.duration) {
-        rampissa = false;
-        audio.volume = perus;
-        return;
-      }
-      const jaljella = audio.duration - audio.currentTime;
-      /*
-       * Ääntä EI pysäytetä ennen aikojaan.
-       *
-       * Aiemmin soitin pysäytettiin, kun loppuun oli 50 millisekuntia —
-       * ja sitä ennen ääni oli jo häivytetty puolentoista sekunnin ajan.
-       * Yhdessä ne söivät viimeisen sanan. Nyt nauhoitus soi loppuun
-       * asti ja vain aivan viimeinen hetki vaimenee, jottei pysäytys
-       * napsahda.
-       */
-      if (jaljella <= LOPUN_HILJAISUUS_S) {
-        // Pysäytys osuu jo vaienneeseen ääneen eikä voi napsahtaa.
-        audio.volume = 0;
-        audio.pause();
-        rampissa = false;
-        return;
-      }
-      if (jaljella < LOPUN_HAIPYMA_S) {
-        const matka = (jaljella - LOPUN_HILJAISUUS_S) / (LOPUN_HAIPYMA_S - LOPUN_HILJAISUUS_S);
-        audio.volume = perus * Math.max(0, Math.min(1, matka));
-      }
-      requestAnimationFrame(rullaa);
-    };
-    // timeupdate on liian harva häivytykseen (~4 krt/s): se vain
-    // käynnistää tiheän rampin, kun loppu lähestyy. Puoli sekuntia
-    // ennen loppua on riittävä varoaika 50 millisekunnin häivytykselle.
-    audio.addEventListener('timeupdate', () => {
-      if (rampissa || !audio.duration) return;
-      if (audio.duration - audio.currentTime < LOPUN_HAIPYMA_S + 0.5) {
-        rampissa = true;
-        requestAnimationFrame(rullaa);
-      }
-    });
-  }
-
-  /**
-   * Häivyttää soivan luennan pois annetussa ajassa. Käytetään myös
-   * lyhyen kertojan lauserajalla: siellä ääni pysähtyi ennen kesken
-   * sanaa, koska pause() tuli ilman häivytystä.
-   */
-  haivytaAani(audio, kesto = LUENNAN_HAIPYMA_S * 1000) {
-    const perus = audio.volume;
-    const t0 = performance.now();
-    const askel = (nyt) => {
-      if (audio.paused) return;
-      const t = Math.min(1, Math.max(0, (nyt - t0) / kesto));
-      audio.volume = perus * pehmene(1 - t);
-      if (t < 1) requestAnimationFrame(askel);
-      else audio.pause();
-    };
-    requestAnimationFrame(askel);
-  }
-
-  stopDiaryVoice() {
-    this.diaryVoice = null;
-    this.luentaTauolla = null;
-    // Laitteen lukija on saman kaiuttimen takana kuin generoitu äänite,
-    // joten "luenta kiinni" tarkoittaa myös sitä.
-    if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
-    // Kaikki luennat kiinni — myös mahdollinen myöhästelijä, joka ei
-    // enää ollut diaryVoice mutta soi yhä.
-    for (const audio of [...(this.luennat ?? [])]) {
-      audio.pause();
-      audio.removeAttribute('src');
-      // Vapautus ennen tyhjennystä: muuten laskuri jäisi plussalle eikä
-      // tausta palaisi enää koskaan täyteen voimaan.
-      this.vapautaPuhuja(audio);
-    }
-    this.luennat?.clear();
-  }
 
   /** Kaupungin tunnus laudan kanssa: sama nimi voi olla kahdella laudalla. */
   kaupunkiAvain(city) {
@@ -10839,7 +10365,7 @@ export class UI {
     if (halutaan) {
       // Kertoja vaikenee radion tieltä. Radio sulkee itse kaupungin
       // äänimaiseman, mutta se ei tunne luentaa eikä voi tuoda ui.js:ää.
-      this.stopDiaryVoice();
+      stopDiaryVoice(this);
       /*
        * Radiotilassa ruudulla on vain kartta ja soitin.
        *
@@ -11500,620 +11026,6 @@ export class UI {
     if (!this.eventDialog.open) this.eventDialog.showModal();
   }
 
-  renderQuiz() {
-    if (this.dead) return; // kesken jäänyt animaatioketju voi kutsua tätä vielä destroyn jälkeen
-    const { game } = this;
-    this.renderEvent();
-    if (game.phase === 'duel' && game.duel) {
-      this.renderDuel();
-      return;
-    }
-    const quiz = game.quiz;
-    if (game.phase !== 'quiz' || !quiz) {
-      this.stopQuizTimer();
-      stopQuizMusic();
-      if (this.quizDialog.open) this.quizDialog.close();
-      return;
-    }
-
-    const city = game.board.cityById.get(quiz.cityId);
-    const hardTag = quiz.hard ? ` · vaikea kysymys +${HARD_BONUS} p` : '';
-    // Kohtaaminen koskee tavallista visaa: muut muodot (pulma, väittämä,
-    // valokuva, lippu, portti) pitävät omat kehyshahmonsa.
-    const kohtaaminen = (!quiz.kind && !quiz.gate) ? (KOHTAAMISET[quiz.cityId] ?? null) : null;
-    const tervehdysAvain = `${game.pack.id}:${quiz.cityId}`;
-    /*
-     * Tarinakaaren kohtaaminen syrjäyttää tavallisen tervehdyksen:
-     * kaupungin ensimmäisessä aarrevisassa puhuu kaaren henkilö, ja
-     * hänen kysymyksensä on visan kysymys (game.js pariutti ne).
-     * Avain merkitään nähdyksi, ettei vanha tervehdyshahmo esittäydy
-     * heti perään toisessa visassa.
-     */
-    const kaariTarina = quiz.kaari ? (TARINAKAARI[quiz.cityId] ?? null) : null;
-    const tervehdys = kaariTarina
-      ? kaariTarina.kohtaaminen
-      : (kohtaaminen && !this.kohtaamisetNahty.has(tervehdysAvain)
-        ? kohtaaminen.tervehdys
-        : null);
-    // Pulman piirros ensin, kysymysrivi alla — kortti on isoisän luonnos.
-    // HUOM: SVGElement ei peri HTMLElementiä, joten .hidden-ominaisuus ei
-    // heijastu attribuuttiin — se jäisi päälle ja [hidden]-sääntö piilottaisi
-    // piirroksen pysyvästi. Attribuuttia on siis käsiteltävä suoraan.
-    this.quizSketch.toggleAttribute('hidden', quiz.kind !== 'puzzle');
-    if (quiz.kind === 'puzzle' && this.sketchFor !== quiz) {
-      this.sketchFor = quiz;
-      this.quizSketch.textContent = '';
-      drawPuzzle(this.quizSketch, quiz.puzzleId, quiz.sketchData);
-    }
-    // Piirroksen selite: kertoo mitä luonnoksessa näkyy.
-    this.quizSelite.hidden = quiz.kind !== 'puzzle' || !quiz.selite;
-    if (!this.quizSelite.hidden) this.quizSelite.textContent = quiz.selite;
-
-    // Valokuvakysymyksen kuva ladataan kerran per kysymys. Jos kuvaa ei
-    // saada (esim. verkko katkesi kysymyksen avauduttua), tilalle jää
-    // kysymysteksti — vaihtoehtoihin voi silti vastata tai antaa ajan
-    // valua umpeen.
-    this.quizPhoto.hidden = quiz.kind !== 'photo' && quiz.kind !== 'flag';
-    if (quiz.kind === 'photo' && this.photoShownFor !== quiz) {
-      this.photoShownFor = quiz;
-      this.quizPhoto.removeAttribute('src');
-      // Kuratoitu valokuva samasta putkesta kuin postikortit ja liput:
-      // paikallinen kopio tai peili ensin, Commons varalla.
-      if (quiz.photoFile) {
-        asetaKuva(this.quizPhoto,
-          valokuvaUrl(quiz.photoFile, 640), valokuvaVara(quiz.photoFile, 640));
-        this.quizPhoto.alt = 'Matkavalokuvaajan vedos';
-      }
-    }
-    /*
-     * Lippu tulee samaan kehykseen kuin valokuva, mutta se on repossa
-     * eikä verkossa — kysymys toimii siis myös yhteydettömänä. Alt-teksti
-     * ei saa kertoa maata: se olisi vastaus.
-     */
-    this.quizPhoto.classList.toggle('quiz-lippu', quiz.kind === 'flag');
-    if (quiz.kind === 'flag' && this.photoShownFor !== quiz) {
-      this.photoShownFor = quiz;
-      asetaKuva(this.quizPhoto, lippuUrl(quiz.flagFile, 320), lippuVara(quiz.flagFile, 320));
-      this.quizPhoto.alt = 'Tullimiehen näyttämä lippu';
-    }
-
-    // Leima näkyy vain pulmissa ja valokuvissa: irrallinen "Tietovisa"-sana
-    // on turha, kun kehys kertoo kuka kysymyksen esittää.
-    this.quizBadge.hidden = !['puzzle', 'photo', 'flag'].includes(quiz.kind);
-    this.quizBadge.textContent = { photo: 'Valokuva', flag: 'Lippu' }[quiz.kind] ?? 'Pulma';
-    let otsikko;
-    if (quiz.kind === 'puzzle') {
-      otsikko = `Isoisän luonnoskirjasta — ${quiz.title}`;
-    } else if (quiz.kind === 'claim') {
-      // Väittämässä puhuu isoisä, ei peli: otsikko kertoo äänen ja paikan,
-      // jota merkintä koskee — se on usein muu kuin pelaajan sijainti.
-      const aihe = quiz.place ? ` · ${quiz.place}` : '';
-      otsikko = `Isoisän päiväkirjasta, 1873${aihe} — pitääkö tämä yhä paikkansa?`;
-    } else if (quiz.gate) {
-      otsikko = `${city.name} — portti: ${quiz.gate.label}`;
-    } else if (kaariTarina) {
-      // Tarinakaaren kohtaaminen: kehyksenä kaupunki ja kohtaaminen —
-      // henkilö esittäytyy itse repliikissään.
-      otsikko = `${city.name} — kohtaaminen:${hardTag}`;
-    } else if (kohtaaminen) {
-      // Tarinallinen kohtaaminen (omistajan toive 5.8.2026): nimetty
-      // paikallinen hahmo kysyy, ei satunnainen kysyjä.
-      otsikko = `${city.name} — ${kohtaaminen.frame}:${hardTag}`;
-    } else {
-      // Kehystarina: paikallinen kysyjä. Vanhassa tallenteessa kehystä ei
-      // ole, jolloin otsikkona on pelkkä kaupunki.
-      otsikko = quiz.frame
-        ? `${city.name} — ${quiz.frame}:${hardTag}`
-        : `${city.name}${hardTag}`;
-    }
-    // Kortti paljastuu vaiheittain kirjoituskoneella: ensin kehystarina,
-    // pieni tauko, sitten kysymys, tauko, ja vasta lopuksi vaihtoehdot.
-    // Samalla kääntyy päiväkirjan sivu ja hiljainen mietintämusiikki alkaa.
-    if (this.typedQuizFor !== quiz) {
-      this.typedQuizFor = quiz;
-      this.quizStage = 0;
-      // Edellisen kysymyksen mahdollinen aloitusportti pois.
-      this.quizAloita.hidden = true;
-      this.jatkaKysymykseen = null;
-      sfx.play('quizOpen');
-      startQuizMusic(this.game.pack.id);
-      this.quizQuestion.textContent = '';
-      this.quizKohtaaminen.textContent = '';
-      this.quizKohtaaminen.hidden = !tervehdys;
-      /*
-       * Kohtaamiskuva tekstin oikealle puolelle, jos kohteelle on
-       * generoitu muotokuva (omistajan pilotti 10.8.2026: Ateena ja
-       * Sofia ensin). Kuva on kaaridatan kuva-kenttä; puuttuva
-       * tiedosto piilottaa kuvan äänettömästi onerror-varasolulla.
-       */
-      const kohtaamisKuva = tervehdys ? (kaariTarina?.kuva ?? null) : null;
-      if (this.quizKohtaaminenKuva) {
-        if (kohtaamisKuva) {
-          this.quizKohtaaminenKuva.src = kohtaamisKuva;
-          this.quizKohtaaminenKuva.onerror = () => { this.quizKohtaaminenKuva.hidden = true; };
-        }
-        this.quizKohtaaminenKuva.hidden = !kohtaamisKuva;
-      }
-      /*
-       * Vanha isoisän sitaattilohko poistui, kun tarinakaari korvasi
-       * sen (omistajan tilaus 9.8.2026): isoisän jälki kulkee nyt
-       * kohtaamisen ja sen kysymyksen kautta, ei erillisenä
-       * sitaattina kysymyksen yllä.
-       */
-      this.quizIsoisa.hidden = true;
-      const vaihtoehdot = () => {
-        if (this.dead || this.typedQuizFor !== quiz) return;
-        this.quizStage = 2;
-        this.renderQuiz();
-      };
-      const kysymys = () => {
-        if (this.dead || this.typedQuizFor !== quiz) return;
-        this.quizStage = 1;
-        this.typeText(this.quizQuestion, quiz.question, 'quiz', () => {
-          this.typeTimers.quiz = setTimeout(vaihtoehdot, QUIZ_PAUSE_MS);
-        }, QUIZ_TYPE_MS);
-      };
-      // Kohtaamisen avaus kirjoittuu otsikon ja kysymyksen väliin —
-      // vain ensi kerralla; sen jälkeen hahmo menee suoraan asiaan.
-      const avaus = () => {
-        if (this.dead || this.typedQuizFor !== quiz) return;
-        if (!tervehdys) {
-          kysymys();
-          return;
-        }
-        this.kohtaamisetNahty.add(tervehdysAvain);
-        // Tervehdys luetaan ääneen kirjoituskoneen rinnalla (omistajan
-        // rajaus 7.8.2026: "riittää vain alkutarinan luenta"). Kertoja
-        // lukee kehyksen ja hahmo repliikkinsä omalla äänellään.
-        // Lukijaääni ensin (14.8.2026) — se kattaa myös kohtaamiset,
-        // joille äänitettä ei ole; äänite on varapolku.
-        if (kertojaTila() !== 'ei'
-          && !this.lueKertojana(tervehdys, { viive: 300 })) {
-          if (kaariTarina && kaariLuentaSoi(kaariTarina, 'kohtaaminen')) {
-            this.playDiaryVoice(
-              `assets/audio/puhe-kaari-kohtaaminen-${quiz.cityId}.mp3`,
-              { viive: 300 },
-            );
-          } else if (!kaariTarina && KOHTAAMISLUENNAT.has(quiz.cityId)) {
-            this.playDiaryVoice(
-              `assets/audio/puhe-kohtaaminen-${quiz.cityId}-tervehdys.mp3`,
-              { viive: 300 },
-            );
-          }
-        }
-        this.typeText(this.quizKohtaaminen, tervehdys, 'quiz', () => {
-          /*
-           * Peli alkaa vasta Aloita peli -napista (omistajan toive
-           * 10.8.2026): kertojan luenta saa loppua rauhassa, kysymys
-           * ja vaihtoehdot tulevat esiin painalluksesta, ja tiimalasi
-           * käynnistyy vasta niiden myötä (esilla-ehto alla). Botille
-           * porttia ei jätetä — se vastaa suoraan pelitilaan.
-           */
-          if (this.game.player.isBot) {
-            this.typeTimers.quiz = setTimeout(kysymys, QUIZ_PAUSE_MS);
-            return;
-          }
-          this.jatkaKysymykseen = kysymys;
-          this.quizAloita.hidden = false;
-        }, QUIZ_TYPE_MS);
-      };
-      this.typeText(this.quizCity, otsikko, 'quiz', () => {
-        this.typeTimers.quiz = setTimeout(avaus, QUIZ_PAUSE_MS);
-      }, QUIZ_TYPE_MS);
-    } else if ((this.quizStage ?? 2) >= 2) {
-      // Itsekorjaus valmiille kortille: jos jokin muu kirjoitus on ehtinyt
-      // sotkea tekstit (esim. edellisen pelin kesken jäänyt kirjoituskone),
-      // ne asetetaan kerralla kokonaan — muuten vaihtoehdot ja tulos
-      // näkyisivät väärän kysymyksen alla.
-      if (this.quizCity.textContent !== otsikko) this.quizCity.textContent = otsikko;
-      if (this.quizQuestion.textContent !== String(quiz.question)) {
-        this.quizQuestion.textContent = quiz.question;
-      }
-    }
-    this.syncOptions(quiz, (i) => this.answerQuiz(i));
-    // Vaihtoehdot ja apukeinot pysyvät piilossa, kunnes kysymys on
-    // kirjoitettu loppuun. Vanha tallenne (ei quizStage-arvoa) näyttää
-    // kaiken heti.
-    const esilla = (this.quizStage ?? 2) >= 2 || quiz.chosen !== null;
-    this.quizOptions.hidden = !esilla;
-
-    const answered = quiz.chosen !== null;
-    // Vastauksen jälkeen näytetään ensin pelkkä tuomio, ja vasta aarteen
-    // paljastuksen jälkeen löytö ja selitys.
-    const revealed = this.revealShownFor === quiz;
-
-    // Apukeinot: 40 punnalla sanallinen vihje, 80 punnalla kaksi väärää pois.
-    const p = game.player;
-    const used = quiz.hidden.length > 0;
-    // Väittämässä on kaksi vaihtoehtoa ja karttakysymykseen vastataan
-    // kartalta, joten 50:50 ei kuulu niihin lainkaan.
-    this.quizFifty.hidden = !esilla || answered || p.isBot || quiz.options.length < 4;
-    this.quizFifty.disabled = used || p.money < FIFTY_FIFTY_PRICE;
-    this.quizFifty.textContent = used ? '50:50 käytetty' : `50:50 (${FIFTY_FIFTY_PRICE} p)`;
-
-    this.quizHint.hidden = !esilla || answered || p.isBot || !quiz.hint;
-    this.quizHint.disabled = quiz.hintShown || p.money < HINT_PRICE;
-    this.quizHint.textContent = quiz.hintShown ? 'Vihje ostettu' : `Vihje (${HINT_PRICE} p)`;
-
-    this.quizHintText.hidden = !quiz.hintShown;
-    if (quiz.hintShown) this.quizHintText.textContent = quiz.hint;
-
-    // Tiimalasi käynnistyy vasta, kun vaihtoehdot ovat esillä — lukuaikaa
-    // ei kuluteta kirjoituskoneen naksutteluun.
-    if (esilla) {
-      this.renderTimer(quiz);
-    } else {
-      this.quizTimerEl.hidden = true;
-      this.stopQuizTimer();
-    }
-
-    this.quizResult.hidden = !answered;
-    if (answered) {
-      this.quizResult.className = `quiz-result ${quiz.right ? 'right' : 'wrong'}`;
-      this.quizResult.textContent = '';
-
-      if (!revealed) {
-        const verdict = quiz.timedOut ? 'Aika loppui!' : quiz.right ? 'Oikein!' : 'Väärin.';
-        this.quizResult.appendChild(html('strong', 'quiz-verdict', verdict));
-      } else {
-        const found = quiz.found ? game.aarreTyyppi(quiz.found, quiz.cityId) : null;
-        const body = html('div');
-        if (quiz.gate && quiz.right) {
-          body.appendChild(html('strong', '', `◈ Portti aukeaa — ${quiz.gate.label}!`));
-          body.appendChild(html('span', 'muted', 'Tieto avasi tien: matka jatkuu ilmaiseksi.'));
-        } else if (quiz.right && found) {
-          // Iso kuva (omistajan toive 10.8.2026: "kuva saisi olla
-          // isommalla") — aarre on rivin pääasia, ei kuvake.
-          this.quizResult.appendChild(aarreIkoni(found, quiz.found, 56));
-          body.appendChild(html('strong', '', `Löysit: ${found.name}`));
-        } else if (quiz.right && quiz.explore) {
-          /*
-           * Laatattoman kohtaamisen voitto on AARRE eikä pelkkä
-           * rahapalkkio (omistajan palaute 10.8.2026 Ateenasta):
-           * kaaren aarreteksti sulkee tarinan ja kertoja lukee sen —
-           * sama pari kuin laatan paljastuksessa (playTokenReveal).
-           */
-          const kaariAarre = quiz.kaari ? TARINAKAARI[quiz.cityId]?.aarre : null;
-          body.appendChild(html('strong', '', kaariAarre
-            ? `Kätkö löytyi! +${EXPLORE_REWARD} puntaa.`
-            : `Oikein! Löytöpalkkio +${EXPLORE_REWARD} puntaa.`));
-          if (kaariAarre) {
-            /*
-             * Kätkökuva laatattoman löydön tuloskorttiin (omistajan
-             * pilotti 10.8.2026): löytö NÄKYY eikä ole vain rivi
-             * tekstiä — sama henki kuin laatan paljastuskortissa.
-             */
-            const katko = document.createElement('img');
-            katko.className = 'katko-kuva';
-            katko.src = 'assets/kohtaamiset/kohtaaminen-katko.jpg';
-            katko.alt = 'Kätkö';
-            katko.onerror = () => katko.remove();
-            body.appendChild(katko);
-            body.appendChild(html('span', 'kohtaaminen-repliikki', kaariAarre));
-            if (this.aarreLuentaFor !== quiz && kertojaTila() !== 'ei') {
-              this.aarreLuentaFor = quiz;
-              // Lukijaääni ensin (14.8.2026); äänite varapolkuna.
-              if (!this.lueKertojana(kaariAarre, { viive: 600 })
-                && kaariLuentaSoi(TARINAKAARI[quiz.cityId], 'aarre')) {
-                this.playDiaryVoice(
-                  `assets/audio/puhe-kaari-aarre-${quiz.cityId}.mp3`,
-                  { viive: 600 },
-                );
-              }
-            }
-          }
-        } else if (quiz.right) {
-          body.appendChild(html('strong', '', 'Oikein!'));
-        } else {
-          const lead = quiz.timedOut ? 'Aika loppui. ' : '';
-          body.appendChild(
-            html('strong', '', `${lead}Oikea vastaus oli "${quiz.options[quiz.correct]}".`),
-          );
-          body.appendChild(
-            html('span', 'muted', 'Vuoro vaihtuu — seuraavalla vuorolla saat uuden kysymyksen.'),
-          );
-        }
-        // Hahmon repliikki päättää kohtaamisen: löytö, tyhjä kätkö tai
-        // lohdutus väärästä vastauksesta.
-        if (kohtaaminen) {
-          const repliikki = !quiz.right
-            ? kohtaaminen.vaarin
-            : (quiz.explore || (quiz.found && quiz.found !== 'empty'))
-              ? kohtaaminen.loyto
-              : kohtaaminen.tyhja;
-          if (repliikki) body.appendChild(html('span', 'kohtaaminen-repliikki', repliikki));
-          /*
-           * Löytöhetken sananvaihto luetaan ääneen (omistajan rajaus
-           * 7.8.2026: hahmon ja pelaajan lyhyt dialogi, "nyt kiireesti
-           * seuraavaan paikkaan"). Vain löytö — tyhjä ja väärin jäävät
-           * lukematta. renderQuiz ajetaan paljastuksen jälkeen monta
-           * kertaa, joten vahti pitää luennan yhdessä aloituksessa.
-           */
-          if (repliikki === kohtaaminen.loyto && this.loytoLuentaFor !== quiz
-            && kertojaTila() !== 'ei') {
-            this.loytoLuentaFor = quiz;
-            // Lukijaääni ensin (14.8.2026); äänite varapolkuna.
-            if (!this.lueKertojana(repliikki, { viive: 300 })
-              && KOHTAAMISLUENNAT.has(quiz.cityId)) {
-              this.playDiaryVoice(
-                `assets/audio/puhe-kohtaaminen-${quiz.cityId}-loyto.mp3`,
-                { viive: 300 },
-              );
-            }
-          }
-        }
-        if (quiz.fact) body.appendChild(html('span', 'muted', quiz.fact));
-        const quizSource = this.sourceLine(quiz.source);
-        if (quizSource) body.appendChild(quizSource);
-        this.quizResult.appendChild(body);
-      }
-    }
-    this.quizContinue.hidden = !answered || !revealed || game.player.isBot;
-
-    if (!this.quizDialog.open) this.quizDialog.showModal();
-  }
-
-  /** Rosvon kaksintaistelu: 8 vaihtoehtoa, helpotukset ja hevosenkenkäohitus. */
-  renderDuel() {
-    const { game } = this;
-    const duel = game.duel;
-    const p = game.player;
-
-    this.quizBadge.hidden = true;
-    // Kaksintaistelussa ei ole kohtaamista — edellisen visan tervehdys
-    // ja kohtaamiskuva eivät saa jäädä kortille.
-    this.quizKohtaaminen.hidden = true;
-    if (this.quizKohtaaminenKuva) this.quizKohtaaminenKuva.hidden = true;
-    this.quizCity.textContent = `Rosvon kaksintaistelu — ${p.name}`;
-    // Kaksintaistelu ei käytä vaiheittaista paljastusta: vaihtoehdot ovat
-    // heti esillä, eikä edellisen kortin piilotus saa jäädä päälle.
-    this.quizStage = 2;
-    this.quizOptions.hidden = false;
-    if (this.typedQuizFor !== duel) {
-      this.typedQuizFor = duel;
-      startQuizMusic(this.game.pack.id);
-      this.typeText(this.quizQuestion, duel.question, 'quiz');
-    } else if (this.quizQuestion.textContent !== String(duel.question)) {
-      // Sama itsekorjaus kuin tietovisassa: teksti ei saa jäädä eriämään.
-      this.quizQuestion.textContent = duel.question;
-    }
-    this.syncOptions(duel, (i) => this.answerDuelUi(i));
-
-    const answered = duel.chosen !== null;
-    const revealed = this.revealShownFor === duel;
-
-    // Helpotus rosvolta: puolet rahoista, puolet vääristä pois.
-    const toll = Math.floor(p.money / 2);
-    this.quizFifty.hidden = answered || p.isBot;
-    this.quizFifty.disabled = duel.reliefs >= 2 || toll <= 0;
-    if (duel.reliefs >= 2) this.quizFifty.textContent = 'Helpotukset käytetty';
-    else this.ikonoi(this.quizFifty, 'kallo', `Helpotus (rosvo vie ${toll} p)`);
-
-    // Kolmella hevosenkengällä pääsee ohi.
-    this.quizHint.hidden = answered || p.isBot || p.horseshoes < DUEL_BYPASS_SHOES;
-    this.quizHint.disabled = false;
-    this.ikonoi(this.quizHint, 'kenka', `Ohita rosvo (${DUEL_BYPASS_SHOES} kenkää)`);
-
-    this.quizHintText.hidden = duel.reliefs === 0;
-    if (duel.reliefs > 0) {
-      this.quizHintText.textContent = `Rosvo on vienyt ${duel.taken} puntaa.`;
-    }
-
-    this.renderTimer(duel);
-
-    this.quizResult.hidden = !answered;
-    if (answered) {
-      this.quizResult.className = `quiz-result ${duel.right ? 'right' : 'wrong'}`;
-      this.quizResult.textContent = '';
-      if (!revealed) {
-        const verdict = duel.timedOut ? 'Aika loppui!' : duel.right ? 'Oikein!' : 'Väärin.';
-        this.quizResult.appendChild(html('strong', 'quiz-verdict', verdict));
-      } else {
-        const body = html('div');
-        if (duel.right && duel.prize) {
-          body.appendChild(html('strong', '', `Voitit rosvon — saalis ${duel.prize} puntaa!`));
-        } else if (duel.right) {
-          body.appendChild(html('strong', '', 'Voitit rosvon — loput rahat säilyvät.'));
-        } else {
-          const lead = duel.timedOut ? 'Aika loppui. ' : '';
-          body.appendChild(
-            html('strong', '', `${lead}Rosvo vei rahat — oikea vastaus oli "${duel.options[duel.correct]}".`),
-          );
-        }
-        if (duel.fact) body.appendChild(html('span', 'muted', duel.fact));
-        const duelSource = this.sourceLine(duel.source);
-        if (duelSource) body.appendChild(duelSource);
-        this.quizResult.appendChild(body);
-      }
-    }
-    this.quizContinue.hidden = !answered || !revealed || p.isBot;
-
-    if (!this.quizDialog.open) this.quizDialog.showModal();
-  }
-
-  /** Vastaus rosvolle: tuomio, tauko ja selitys — kuten tietovisassa. */
-  answerDuelUi(index) {
-    const { game } = this;
-    this.stopQuizTimer();
-    this.run(() => game.answerDuel(index), {
-      after: async () => {
-        const duel = game.duel;
-        if (!duel) return;
-        sfx.play(duel.right ? 'correct' : 'robber');
-        natiiviVastaus(Boolean(duel.right));
-        this.renderQuiz();
-        await this.wait(this.reducedMotion ? 200 : 900);
-        this.revealShownFor = duel;
-        this.renderQuiz();
-        await this.wait(this.reducedMotion ? 0 : 500);
-      },
-    });
-  }
-
-  // --- tiimalasi ------------------------------------------------------------
-
-  /** Käynnistää tai pysäyttää vastausajan sen mukaan, kuka on vuorossa. */
-  renderTimer(quiz) {
-    // Toimii sekä tietovisalle että kaksintaistelulle: molemmilla on
-    // chosen- ja seconds-kentät.
-    // Pulmassa ei ole kelloa: se on päättelytehtävä, ei nopeuskilpailu.
-    const show = !this.game.player.isBot && quiz.chosen === null && quiz.kind !== 'puzzle';
-    this.quizTimerEl.hidden = !show;
-    if (!show) {
-      this.stopQuizTimer();
-      return;
-    }
-    if (this.timedQuiz !== quiz) this.startQuizTimer(quiz);
-  }
-
-  startQuizTimer(quiz) {
-    this.stopQuizTimer();
-    this.timedQuiz = quiz;
-    this.remaining = (quiz.seconds ?? QUIZ_SECONDS) * 1000;
-    this.lastTick = performance.now();
-    this.lastWhole = Math.ceil(this.remaining / 1000);
-    if (!this.reducedMotion) {
-      this.hourglass.classList.remove('turning');
-      void this.hourglass.getBoundingClientRect();
-      this.hourglass.classList.add('turning');
-    }
-    this.updateTimer();
-    this.quizTimer = setInterval(() => this.tickTimer(), 100);
-  }
-
-  stopQuizTimer() {
-    if (this.quizTimer) clearInterval(this.quizTimer);
-    this.quizTimer = null;
-    this.timedQuiz = null;
-  }
-
-  tickTimer() {
-    const now = performance.now();
-    const dt = now - this.lastTick;
-    this.lastTick = now;
-    // Animaatioiden ajaksi kello pysähtyy, jotta aikaa ei kulu odotellessa.
-    if (this.busy) return;
-
-    this.remaining = Math.max(0, this.remaining - dt);
-    const quiz = this.game.quiz;
-    if (quiz) quiz.seconds = Math.ceil(this.remaining / 1000);
-    this.updateTimer();
-
-    const whole = Math.ceil(this.remaining / 1000);
-    if (whole !== this.lastWhole) {
-      this.lastWhole = whole;
-      if (whole > 0 && whole <= 10) sfx.play('tick');
-    }
-    if (this.remaining <= 0) this.timeUp();
-  }
-
-  updateTimer() {
-    const secs = Math.ceil(this.remaining / 1000);
-    this.quizSeconds.textContent = String(secs);
-    this.quizTimerEl.classList.toggle('urgent', secs <= 10);
-    this.setSand(1 - this.remaining / (QUIZ_SECONDS * 1000));
-  }
-
-  /**
-   * Piirtää hiekan tiimalasiin: ylhäällä pinta valuu suppilon muotoisena
-   * kuoppana kohti kaulaa, alhaalla kasa nousee pyöreänä kekona.
-   */
-  setSand(progress) {
-    const t = Math.min(1, Math.max(0, progress));
-    const cx = 22;
-
-    // Yläkupu: leveä ylhäällä (y 8.4), kapea kaulassa (y 33.6).
-    const surface = 8.4 + t * 25.2;
-    const topHalf = Math.max(0, 12.8 - (surface - 8.4) * 0.4901);
-    const dip = 1.5 * (1 - t) + 0.25;
-    this.hgTopSand.setAttribute(
-      'd',
-      t >= 0.999
-        ? ''
-        : `M ${(cx - topHalf).toFixed(2)} ${surface.toFixed(2)} `
-          + `Q ${cx} ${(surface + dip * 2).toFixed(2)} ${(cx + topHalf).toFixed(2)} ${surface.toFixed(2)} `
-          + `L 22.45 33.6 L 21.55 33.6 Z`,
-    );
-
-    // Alakupu: hiekka kertyy pohjalle (y 60.2) ja nousee kohti kaulaa (y 34.4).
-    const level = 60.2 - t * 25.8;
-    const botHalf = Math.min(12.8, 0.45 + (level - 34.4) * 0.4787);
-    const height = 60.2 - level;
-    const mound = Math.min(2.6, height * 0.5, (level - 34.4) * 0.4);
-    this.hgBottomSand.setAttribute(
-      'd',
-      t <= 0.001
-        ? ''
-        : `M 9.2 60.2 L 34.8 60.2 L ${(cx + botHalf).toFixed(2)} ${level.toFixed(2)} `
-          + `Q ${cx} ${(level - mound * 2).toFixed(2)} ${(cx - botHalf).toFixed(2)} ${level.toFixed(2)} Z`,
-    );
-
-    // Virtaava hiekka näkyy vain niin kauan kuin sitä riittää.
-    const flowing = t > 0.004 && t < 0.999;
-    this.hgStream.style.display = flowing ? '' : 'none';
-    this.hgStream.setAttribute('height', Math.max(0, level - 33.6).toFixed(2));
-  }
-
-  /** Aika loppui: sama rytmi kuin väärässä vastauksessa, mutta ilman paljastusta. */
-  timeUp() {
-    this.stopQuizTimer();
-    const { game } = this;
-    if (game.phase === 'duel' && game.duel && game.duel.chosen === null) {
-      this.run(() => game.timeoutDuel(), {
-        after: async () => {
-          const duel = game.duel;
-          if (!duel) return;
-          sfx.play('timeout');
-          // Aika loppui = väärä vastaus: putki katkeaa.
-          natiiviVastaus(false);
-          this.renderQuiz();
-          await this.wait(this.reducedMotion ? 200 : 900);
-          this.revealShownFor = duel;
-          this.renderQuiz();
-          await this.wait(this.reducedMotion ? 0 : 500);
-        },
-      });
-      return;
-    }
-    if (game.phase !== 'quiz' || !game.quiz || game.quiz.chosen !== null) return;
-    this.run(() => game.timeoutQuiz(), {
-      after: async () => {
-        const quiz = game.quiz;
-        if (!quiz) return;
-        sfx.play('timeout');
-        natiiviVastaus(false);
-        this.renderQuiz();
-        await this.wait(this.reducedMotion ? 200 : 900);
-        this.revealShownFor = quiz;
-        this.renderQuiz();
-        await this.wait(this.reducedMotion ? 0 : 500);
-      },
-    });
-  }
-
-  /**
-   * Vastaus tietovisaan: ensin "Oikein!"/"Väärin.", pieni tauko ja sitten
-   * aarteen paljastus, jossa iso laatta kääntyy ympäri.
-   */
-  answerQuiz(index) {
-    const { game } = this;
-    this.stopQuizTimer();
-    this.run(() => game.answerQuiz(index), {
-      after: async () => {
-        const quiz = game.quiz;
-        if (!quiz) return;
-        sfx.play(quiz.right ? 'correct' : 'wrong');
-        // Tärähdys ja oikeiden vastausten putki (iOS-kuori).
-        natiiviVastaus(Boolean(quiz.right));
-        this.renderQuiz();
-        await this.wait(this.reducedMotion ? 200 : 850);
-        if (quiz.right && quiz.found) await this.playTokenReveal(quiz.found);
-        this.revealShownFor = quiz;
-        this.renderQuiz();
-        if (!quiz.right) await this.wait(this.reducedMotion ? 0 : 500);
-      },
-    });
-  }
 
   /**
    * Aarteen paljastus ruudun keskellä. Aarre, jolla on oma AI-kuva
@@ -12137,9 +11049,9 @@ export class UI {
     audio.volume = puheVoima();
     // Tausta väistyy hihkaisun ajaksi kuten luennoilla; merkitsePuhuja
     // vapauttaa roolin ended/error-tapahtumista.
-    this.merkitsePuhuja(audio);
+    merkitsePuhuja(this, audio);
     (this.luennat ??= new Set()).add(audio);
-    audio.play().catch(() => this.vapautaPuhuja(audio));
+    audio.play().catch(() => vapautaPuhuja(this, audio));
   }
 
   async playTokenReveal(type) {
@@ -12220,14 +11132,14 @@ export class UI {
         // Lukijaääni ensin (14.8.2026); sen loppu välittyy kortin
         // odotukseen onLoppu-koukusta. Äänite on varapolku.
         let luentaPaattyi = null;
-        const tts = this.lueKertojana(kaari.aarre, {
+        const tts = lueKertojana(this, kaari.aarre, {
           viive: hihkaisu ? 3400 : 900,
           onLoppu: () => luentaPaattyi?.(),
         });
         if (tts) {
           lukijaValmis = new Promise((resolve) => { luentaPaattyi = resolve; });
         } else if (kaariLuentaSoi(kaari, 'aarre')) {
-          luenta = this.playDiaryVoice(`assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 3400 : 900 }) ?? null;
+          luenta = playDiaryVoice(this, `assets/audio/puhe-kaari-aarre-${this.game.quiz.cityId}.mp3`, { viive: hihkaisu ? 3400 : 900 }) ?? null;
         }
       }
     }
@@ -12327,8 +11239,8 @@ export class UI {
      */
     if (luenta) {
       if (this.diaryVoice === luenta) this.diaryVoice = null;
-      if (!luenta.ended && !luenta.paused) this.haivytaJaSiivoa(luenta);
-      else this.vapautaPuhuja(luenta);
+      if (!luenta.ended && !luenta.paused) haivytaJaSiivoa(this, luenta);
+      else vapautaPuhuja(this, luenta);
     }
     overlay.remove();
     // Löytö päätyy matkalaukkuun: yläreunan Laukku-nappi heilahtaa
@@ -12501,57 +11413,10 @@ export class UI {
     // Radiotilassa kartalla ei liikuta.
     if (this.radioPaalla()) return;
     // Nopanheitto keskeyttää tarinan: luenta häipyy pehmeästi pois.
-    this.haivytaLuenta();
+    haivytaLuenta(this);
     this.run(() => this.game.actionRoll(), { after: (result) => this.animateDie(result.die) });
   }
 
-  /**
-   * Häivyttää käynnissä olevan luennan pehmeästi pois (nopanheitto
-   * keskeyttää tarinan — omistajan toive: ei töksähdystä). Tauolla
-   * oleva tai jo hiljainen luenta suljetaan suoraan.
-   */
-  haivytaLuenta(kestoMs = 700) {
-    const audio = this.diaryVoice;
-    if (!audio || audio.paused) {
-      this.stopDiaryVoice();
-      return;
-    }
-    // Irrotetaan heti, jotta seuraava luenta saa alkaa puhtaalta pöydältä.
-    this.diaryVoice = null;
-    this.luentaTauolla = null;
-    const alku = audio.volume;
-    const t0 = performance.now();
-    const askel = (nyt) => {
-      const t = Math.min(1, (nyt - t0) / kestoMs);
-      audio.volume = alku * (1 - t);
-      if (t < 1 && !audio.paused) {
-        requestAnimationFrame(askel);
-      } else {
-        audio.pause();
-        audio.removeAttribute('src');
-        this.luennat?.delete(audio);
-        /*
-         * Vapautus puhujan roolista, samasta syystä kuin
-         * stopDiaryVoicessa: muuten laskuri jää plussalle eikä tausta
-         * palaa enää koskaan täyteen voimaan.
-         *
-         * Tämä puuttui, ja se näkyi juuri kehittäjätilassa (omistajan
-         * havainto: "taustaäänet katoavat kun jonkun aikaa hypin
-         * kartalla"). Jokainen hyppy kutsuu haivytaLuentaa, ja
-         * pysäytetty luenta ei laukaise enää 'ended'- eikä
-         * 'error'-tapahtumaa — eli sitä, jonka varassa merkitsePuhujan
-         * vapautus muuten on. Yksikin keskeytetty luenta jätti taustan
-         * pysyvästi puheen alle (0,25), eikä laskuri palannut nollaan
-         * enää istunnon aikana.
-         *
-         * Vasta häivytyksen päätteeksi eikä heti alussa: tausta nousee
-         * silloin kun luenta oikeasti vaikenee, ei sen päälle.
-         */
-        this.vapautaPuhuja(audio);
-      }
-    };
-    requestAnimationFrame(askel);
-  }
 
   /** Siirto: nappula hyppii reittiä pitkin piste kerrallaan. */
   doMove(key) {
@@ -13146,7 +12011,7 @@ export class UI {
       if (game.duel.chosen !== null) this.run(() => game.closeDuel());
       else if (wantsDuelBypass(game)) this.run(() => game.actionDuelBypass());
       else if (wantsDuelRelief(game)) this.run(() => game.actionDuelRelief());
-      else this.answerDuelUi(chooseDuelAnswer(game));
+      else answerDuelUi(this, chooseDuelAnswer(game));
       return;
     }
 
@@ -13154,7 +12019,7 @@ export class UI {
       if (game.quiz.chosen !== null) this.run(() => game.closeQuiz());
       else if (wantsHint(game)) this.run(() => game.actionHint());
       else if (wantsFiftyFifty(game)) this.run(() => game.actionFiftyFifty());
-      else this.answerQuiz(chooseQuizAnswer(game));
+      else answerQuiz(this, chooseQuizAnswer(game));
       return;
     }
 

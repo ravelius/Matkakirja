@@ -3512,7 +3512,8 @@ test('toimintonappien alta ei vaalenneta karttaa', () => {
 });
 
 test('luennan loppuhäivytys ei niele viimeistä sanaa', () => {
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  // Luennan koneisto ja häivytysvakiot muuttivat js/luenta.js:ään (M6).
+  const ui = readFileSync(new URL('../js/luenta.js', import.meta.url), 'utf8');
 
   /*
    * Kaksi eri häivytystä, ja ero on olennainen.
@@ -3548,7 +3549,7 @@ test('luennan loppuhäivytys ei niele viimeistä sanaa', () => {
   assert.ok(hiljaisuus <= 0.06, 'hiljaisuus on niin pitkä että siihen mahtuu tavu');
   assert.ok(loppu > hiljaisuus * 2, 'häivytykselle ei jää matkaa hiljaisuuden päälle');
 
-  const pehmea = ui.slice(ui.indexOf('  pehmeaLoppu('), ui.indexOf('  pehmeaLoppu(') + 2000);
+  const pehmea = ui.slice(ui.indexOf('function pehmeaLoppu('), ui.indexOf('function pehmeaLoppu(') + 2000);
   assert.match(pehmea, /LOPUN_HILJAISUUS_S/, 'pysäytys ei odota hiljaisuutta');
   assert.match(pehmea, /LOPUN_HAIPYMA_S/, 'loppu käyttää väärää häivytystä');
 });
