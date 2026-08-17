@@ -4,15 +4,12 @@ Koottu 9.8.2026 Euroopan ja Lähi-idän kokemuksesta (omistajan pyyntö).
 Tämä on järjestys, jolla kokonainen uusi manner rakennetaan peliin, ja
 kuka sen tekee. Voimassa olevat roolit: docs/roolitus.md.
 
-## Roolit yhdellä rivillä
+## Roolit
 
-| Sessio   | Malli    | Vastuu |
-|----------|----------|--------|
-| Fable    | Fable 5  | Tarina ja kaanon, tarinakaari (tekstit + luennat + pelikytkentä), aarrekuvat, koordinointi, päätökset, julkaisujen ristiriidat |
-| Opus 1   | Opus     | Lehdet: kaupunkilehdet, maalehdet aihesivuineen, minitehtävät, menovinkit, lehtien kuvat |
-| Opus 2   | Opus     | Kartat: lautageometria, maakartat (reliefit), kohdekartat, introt, laudan kytkennät |
-| Sonnet 1 | Sonnet   | QA: faktatarkistus, integraatiotestaus selaimessa, kuva- ja linkkiauditoinnit, duplikaatit |
-| Sonnet 2 | Sonnet   | Nähtävyysjutut kohdekarttojen numeropisteisiin + kuvakuraatio |
+Voimassa oleva työnjako ja mallikohtaiset työtavat: docs/roolitus.md.
+(Tässä ollut viiden session roolitaulukko poistettiin
+dokumenttiremontin D5:ssä 17.8.2026 vanhentuneena — työtä tekevät
+nyt Fablen sisäiset agentit, ks. roolitus.)
 
 ## Työjärjestys (vaiheet ja portit)
 
@@ -50,11 +47,11 @@ kuka sen tekee. Voimassa olevat roolit: docs/roolitus.md.
    oikealla selaimella (myös tallennus/lataus), kuvien ja linkkien
    auditointi, duplikaattihaku. Verkkolöydökset epävarma-merkinnällä.
 
-## Julkaisukuri (kaikki sessiot)
+## Julkaisukuri
 
-- `git fetch origin main` JUURI ennen versionumeron valintaa ja
-  muutokset.js:n ylimmän rivin tarkistus — 9.8. tuli kaksi
-  numerotuplaa (v467, v468), kun kuusi julkaisijaa oli liikkeellä.
+Julkaisusäännöt ovat docs/roolitus.md:ssä (versionosto työkalulla,
+testien lukeminen, squash-merge). Prosessin oma lisähuomio säilyy:
+
 - Testit ajetaan ennen mergeä; punainen main pysäyttää myös
   DEPLOYN (Julkaise peli -workflow ohittaa deployn punaisella).
 - Työhuone- ja docs-muutokset eivät nosta versiota, mutta menevät

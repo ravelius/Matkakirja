@@ -1,5 +1,9 @@
 # Kaupunkilehtien etusivukuvien käsikirjoitukset
 
+*(Linjaus: Raamattu › Kuvat ja lähteet — etusivukuvien ja
+Matkailijalle-kuvan kaavat. Tämä on kaupunkikohtainen työdokumentti,
+joka soveltaa kaavaa.)*
+
 Omistajan kaava (16.8.2026, kirjattu Raamattuun): kuva-aiheet
 speksataan kaupunkikohtaisesti ENNEN hakua. Jokaiselle kaupungille:
 
