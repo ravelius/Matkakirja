@@ -250,6 +250,25 @@ menetelmällä kuin 32 kaupungin erässä:
 | salalah | Salalah | 17.02 | 54.09 |
 | mosul | Mosul | 36.34 | 43.13 |
 
+### Osa 3: luonnehdinta vuosiennusteen yhteyteen (tilattu 17.8.2026)
+
+Omistaja: "kaupunkien otsikossa olevaan vuosiennusteeseen voisi
+lisätä muutaman lauseen luonnehdinnan vuoden säävaihteluista,
+millaiset kesät ja talvet ovat."
+
+- Jokaiselle vuosiennusteen omaavalle kaupungille 2–3 lauseen
+  luonnehdinta: millainen kesä, millainen talvi, mikä vuodenkierrossa
+  on paikalle ominaista (sadekaudet, helteet, pimeys, monsuuni tms.).
+- Faktapohja: kaupungin omat normaalit (SAATIEDOT) + tunnettu
+  ilmastotyyppi; väitteet joita normaalit eivät tue merkitään
+  lähteellä. Ei keksittyjä yksityiskohtia.
+- Sävy: lehden oma, tiivis ja konkreettinen — ei säätiedotusjargonia.
+  Kirjoita malliksi 3–5 kaupunkia ja pushaa checkpoint ennen koko
+  erän ajoa, jotta Fable voi tarkistaa sävyn.
+- Tekninen sijoitus: luonnehdinta graafin yhteyteen otsikkoalueelle —
+  suunnittele taitto itse (lyhyt teksti graafin alla tai vieressä),
+  raportoi ratkaisu.
+
 ## Paketti O4: Nähtävyyksiä lisää (Pariisi pilottina, tilattu 16.8.2026) 🟡 KESKEN
 
 **Kuittaus (Opus 16.8.2026):** Pariisi 8 → **11 kohdetta** (v788):
