@@ -215,6 +215,26 @@ test('nimi ei jää kaupunkiympyrän alle', async () => {
  * oli. Uusilta kaupungeilta sisältö puuttuu tieten tahtoen, eikä tämä
  * ole se paikka, joka siitä huomauttaa.
  */
+/*
+ * KAARETTOMAT KAUPUNGIT — tietoinen poikkeus, EI löysennys.
+ *
+ * Omistajan linjaus (Raamattu, Kaupunkilehdet-osio, 17.8.2026 / v811):
+ * "UUSIIN KAUPUNKEIHIN JA MAIHIN EI VIELÄ TARINAKAARTA — ei
+ * matkakirjatekstejä, ei kohtaamisia; kaari kirjoitetaan myöhemmin
+ * uuden mallin mukaan." Näiltä kahdeksalta 17.8.2026 lisätyltä
+ * kaupungilta vaaditaan siksi toistaiseksi vain tiesitkö-tiedot ja
+ * kysymykset (rules.test.mjs vartioi ne) — EI saapumistekstiä eikä
+ * omaa artikkelia. Kun kaupungin kaari kirjoitetaan, se POISTETAAN
+ * tästä listasta, jolloin alla olevat testit alkavat taas vaatia
+ * siltä kaiken. Listaan ei lisätä kaupunkeja ilman omistajan
+ * linjausta.
+ */
+const KAARETTOMAT = new Set([
+  'kioto', 'varanasi', 'mandalay', 'kanton', // asia
+  'sevilla', 'bergen', // europe
+  'fes', 'lalibela', // africa
+]);
+
 async function vanhanMaailmanKaupungit() {
   const { PACKS } = await import('../js/pack.js');
   const lahteet = ['europe', 'africa', 'middleeast', 'asia'];
@@ -233,8 +253,14 @@ test('jokaisella vanhan maailman kaupungilla on saapumisteksti', async () => {
   const { ASIA_SAAPUMISET } = await import('../js/packs/asia-saapumiset.js');
   const tekstit = { ...AFRICA_SAAPUMISET, ...EUROPE_SAAPUMISET, ...ASIA_SAAPUMISET };
   const { kaupungit } = await vanhanMaailmanKaupungit();
-  const ilman = kaupungit.filter((c) => !tekstit[c.id]).map((c) => c.id);
+  const ilman = kaupungit
+    .filter((c) => !KAARETTOMAT.has(c.id))
+    .filter((c) => !tekstit[c.id]).map((c) => c.id);
   assert.deepEqual(ilman, [], 'näiltä kaupungeilta puuttuu matkakirjan merkintä');
+  // Kaarettomalle EI myöskään saa kirjoittaa merkintää listaa
+  // purkamatta: teksti ilman listan siivousta ohittaisi vartioinnin.
+  const salaa = kaupungit.filter((c) => KAARETTOMAT.has(c.id) && tekstit[c.id]).map((c) => c.id);
+  assert.deepEqual(salaa, [], 'kaupungilla on merkintä mutta se on yhä KAARETTOMAT-listalla');
 });
 
 test('saapumistekstissä on molemmat äänet', async () => {
@@ -320,7 +346,9 @@ test('jokaisella vanhan maailman kaupungilla on oma artikkeli', async () => {
   const { ASIA_ARTIKKELIT } = await import('../js/packs/asia-artikkelit.js');
   const kaikki = { ...OMAT_ARTIKKELIT, ...EUROPE_ARTIKKELIT, ...ASIA_ARTIKKELIT };
   const { kaupungit } = await vanhanMaailmanKaupungit();
-  const ilman = kaupungit.filter((c) => !kaikki[c.wiki ?? c.name]).map((c) => c.id);
+  const ilman = kaupungit
+    .filter((c) => !KAARETTOMAT.has(c.id))
+    .filter((c) => !kaikki[c.wiki ?? c.name]).map((c) => c.id);
   assert.deepEqual(ilman, [], 'näiltä kaupungeilta puuttuu oma artikkeli');
 });
 

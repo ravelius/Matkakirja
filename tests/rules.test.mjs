@@ -245,8 +245,31 @@ for (const pack of PACKS) {
       assert.ok(voices.includes('isoisa'), `${city.id}: isoisän merkintä puuttuu`);
       assert.ok(voices.includes('nuori'), `${city.id}: nuoren havainto puuttuu`);
     }
-    const extra = Object.keys(pack.placeFacts).filter((id) => !pack.cities.some((c) => c.id === id));
+    /*
+     * EI VIELÄ MAAILMANKARTALLA — tietoinen poikkeus, EI löysennys.
+     *
+     * Kolme 17.8.2026 lisättyä uuden maailman kaupunkia (Sitka,
+     * Ouro Preto, Dunedin) on omilla mannerlaudoillaan mutta niitä ei
+     * leivottu maailmankartan CITIES-listaan tässä julkaisussa
+     * (päätoimittajan rajaus: vain vanhan maailman kahdeksan uutta
+     * kaupunkia vietiin käsin leivottuun karttaan; täysgenerointi ei
+     * ole ajettavissa, koska tools/tee-maailmankartta.mjs tuo
+     * poistuneen js/packs/vanhamaailma.js:n). Niiden tiesitkö-tiedot
+     * valuvat lähdepakoista maailmankartan yhdisteeseen, ja tämä
+     * testi huomauttaisi niistä aiheesta. Kun kaupungit lisätään
+     * maailmankartalle (tai täysgenerointi korjataan), poista ne
+     * tästä listasta — testi alkaa taas vaatia täyttä kattavuutta.
+     */
+    const EI_VIELA_MAAILMANKARTALLA = pack.id === 'maailmankartta'
+      ? new Set(['sitka', 'ouropreto', 'dunedin']) : new Set();
+    const extra = Object.keys(pack.placeFacts).filter(
+      (id) => !pack.cities.some((c) => c.id === id) && !EI_VIELA_MAAILMANKARTALLA.has(id),
+    );
     assert.deepEqual(extra, [], 'tietoja kaupungeille joita ei ole laudalla');
+    // Poikkeuslistan on vastattava todellisuutta molempiin suuntiin:
+    // jos kaupunki nousee laudalle, lista on purettava.
+    const turhat = [...EI_VIELA_MAAILMANKARTALLA].filter((id) => pack.cities.some((c) => c.id === id));
+    assert.deepEqual(turhat, [], 'kaupunki on jo laudalla — poista EI_VIELA_MAAILMANKARTALLA-listalta');
   });
 
   test(`${pack.id}: laudalla on nopan lepopaikka`, () => {
