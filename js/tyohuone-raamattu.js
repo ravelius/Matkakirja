@@ -183,7 +183,7 @@ export const RAAMATTU = {
       tila: 'luonnos',
       kohdat: [
         'Laatta joka kaupungissa; oikea vastaus kääntää, alta löytyy '
-          + 'AINA aarre. Ei rosvoa, ei tyhjää, ei hevosenkenkää.',
+          + 'AINA aarre.',
         'AARTEET: pieni paikallisaarre (~100–250 p) · iso '
           + 'paikallisaarre (~500–800 p) · mantereen 1000 p aarre · '
           + 'PÄÄAARRE (2000 p + jää matkalaukkuun). Arvo vaihtelee '
@@ -198,8 +198,6 @@ export const RAAMATTU = {
           + 'p/kpl) — eivät löydy laatoista.',
         'Pääaarre voi osua mantereen ensimmäiseen kätköön; varma '
           + 'viimeisessä. Löytö avaa mannerlennon seuraavalle.',
-        'Erillistä vihjejärjestelmää ei ole — aarrevihjeet ovat '
-          + 'tekstien sivuhuomioita.',
       ],
     },
     {
@@ -309,10 +307,6 @@ export const RAAMATTU = {
           + 'Rakenne: aihejaksot isoine kuvineen, tekstinosto sekä '
           + 'sää- ja suunnittelulaatikot '
           + '(docs/kuvakasikirjoitukset.md + työlistan speksit).',
-        'EI MATKAKASSA-OSIOTA (omistaja 17.8.2026): hintoja ei '
-          + 'luetella oppaassa. Riittää, että sivun alun '
-          + 'kainalotaulu kertoo onko kohde halpa (plussana) vai '
-          + 'kallis (miinuksena).',
         'Valmiustilanne kaupungeittain: Tilanne-välilehti, ei tämä.',
       ],
     },
@@ -363,9 +357,6 @@ export const RAAMATTU = {
           + 'pieni ydinsetti (huudahdukset, käyttöliittymä-äänet); '
           + 'luennat, taustaäänet ja musiikki haetaan ja '
           + 'välimuistitetaan tarvepohjaisesti.',
-        'OFFLINE-PELAUS EI OLE TAVOITE (omistaja 16.8.2026): '
-          + 'verkkoyhteyden saa olettaa; välimuisti on nopeutta '
-          + 'varten, ei offline-lupaus.',
       ],
     },
     {
@@ -472,6 +463,24 @@ export const RAAMATTU = {
           + 'run/doAction-portin kautta.',
         'Laiska raja (dynaaminen tuonti), kun moduuli ei kuulu yhden '
           + 'tiedoston versioon (linssit, maakäyrät).',
+      ],
+    },
+    {
+      otsikko: 'Poistetut ideat',
+      tila: 'toimintatapa kirjattu 17.8.2026',
+      kohdat: [
+        'TOIMINTATAPA (omistaja 17.8.2026): pelistä poistettu idea '
+          + 'ei jää varsinaisiin osioihin selityksineen — kohta '
+          + 'poistetaan ja idea kirjataan tähän yhdellä rivillä. '
+          + 'Raamattu pidetään mahdollisimman lyhyenä ja tiiviinä.',
+        '— Matkakassa-osio oppaassa (17.8.2026); hintataso kerrotaan '
+          + 'sivun alun kainalotaulussa plussana/miinuksena.',
+        '— Offline-pelaus tavoitteena (16.8.2026); verkkoyhteyden '
+          + 'saa olettaa, välimuisti on nopeutta varten.',
+        '— Rosvo-, tyhjä- ja hevosenkenkälaatat; laatan alta löytyy '
+          + 'aina aarre.',
+        '— Erillinen vihjejärjestelmä; aarrevihjeet ovat tekstien '
+          + 'sivuhuomioita.',
       ],
     },
     {
