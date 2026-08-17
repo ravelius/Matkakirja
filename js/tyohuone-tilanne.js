@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v805 — Matkailijan Teheran: toinen kuudesta',
   'v804 — Matkailijan Bagdad: ensimmäinen kuudesta uudesta',
   'v803 — kaiuttimen kuvake otsikon kokoiseksi kohdekortissa',
   'v802 — lehden alanapit kotipalkin yläpuolelle iPadilla',

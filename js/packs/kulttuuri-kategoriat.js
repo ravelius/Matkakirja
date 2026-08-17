@@ -11694,6 +11694,254 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Mardetanha, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * MATKAILIJAN TEHERAN (paketti O6). Sama rakenne kuin Bagdadilla
+       * ja Pariisilla. Faktat repon omasta kaanonista (Teheranin
+       * nostot ja nahtavyysjutut.js: basaari, Golestan, Dar al-Fonun,
+       * kansallismuseo). Lisenssit ja Restrictions (tyhjä kaikilla)
+       * Commonsin API:sta 16.8.2026, sijainnit kuvaustekstistä ja
+       * kategorioista, jokainen kuva katsottu silmin.
+       */
+      matkailijalle: {
+        /*
+         * Azadin torni: yksi aihe alhaalta kuvattuna, valkoinen marmori
+         * tyhjää taivasta vasten. Teheranin oma maamerkki ja
+         * tunnistettava pienessäkin koossa.
+         */
+        kuva: {
+          tiedosto: 'Azadibybagtash01.jpg',
+          selite: 'Azadin torni alhaalta: valkoinen marmoriholvi kaartuu '
+            + 'ristikkokuvioksi, jonka läpi näkyy taivas.',
+          lahde: 'Zahrabagtash, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Teheran on nuori pääkaupunki vanhassa maassa, ja se '
+          + 'nousee Elbursin etelärinnettä niin jyrkästi, että '
+          + 'pohjoisosassa on useita asteita viileämpää kuin '
+          + 'eteläosassa. Suunnistaminen on siksi helppoa: vuoret ovat '
+          + 'aina pohjoisessa, ylämäki vie ylös ja alamäki vanhaan '
+          + 'kaupunkiin. Vanha ydin on etelässä, jossa basaarin katetut '
+          + 'kujat, Golestanin palatsi ja kansallismuseo ovat '
+          + 'kävelymatkan päässä toisistaan. Vapaapäivänä kaupunkilaiset '
+          + 'nousevat Darbandin polkua puron vartta ylös vuorille.',
+        artikkeli: {
+          nimi: 'Matkailijan Teheran',
+          taitto: 'opas',
+          teksti: 'Teheranissa suunnan löytää katsomalla ylöspäin: '
+            + 'vuoret ovat aina pohjoisessa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Teheran on rakennettu Elbursin etelärinteelle noin '
+                + '1 200 metrin korkeuteen, ja siitä on kulkijalle apua: '
+                + 'vuoret ovat aina pohjoisessa, joten ylämäki vie '
+                + 'pohjoiseen ja alamäki etelään. Kaupungin pohjoisosat '
+                + 'ovat satoja metrejä eteläosia korkeammalla, ja siellä '
+                + 'on samaan aikaan päivästä useita asteita viileämpää. '
+                + 'Ensimmäinen ostos on metrokortti. Metro avattiin '
+                + 'vuonna 1999, ja se on kasvanut nopeasti: vuonna 2011 '
+                + 'sillä tehtiin jo runsaat neljäkymmentä miljoonaa '
+                + 'matkaa kuukaudessa. Kadulla huomaa pian, että '
+                + 'moottoripyörä on kaupungin oma kulkuneuvo — niitä '
+                + 'seisoo jalkakäytävän reunassa pitkinä riveinä. Ruuhka '
+                + 'on tosiasia, ja se näkyy myös ilmassa: vuoret estävät '
+                + 'ilman vaihtumisen, joten kaupungin ylle laskeutuu '
+                + 'ajoittain saastesumu. Kävelijälle on rakennettu '
+                + 'omiakin reittejä, ja Tabiat-silta vie jalankulkijat '
+                + 'moottoritien yli kahden puiston välillä.',
+              // Karuselli: metro, moottoripyörät ja kävelysilta — kolme
+              // tapaa liikkua, kaikki mainittu jakson tekstissä.
+              kuva: [
+                {
+                  tiedosto: 'Tehran Subway.jpg',
+                  selite: 'Metrojuna saapuu asemalle. Vuonna 1999 avattu '
+                    + 'verkko on kaupungin nopein tapa päästä päästä '
+                    + 'päähän.',
+                  lahde: 'Mehrraz, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Estacionamiento de motocicletas, Teherán, Irán, 2016-09-17, DD 56.jpg',
+                  selite: 'Moottoripyöriä jalkakäytävän reunassa pitkänä '
+                    + 'rivinä — kaupungin oma kulkuneuvo, joka mahtuu '
+                    + 'ruuhkan läpi.',
+                  lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Tabi\'at Bridge - panoramio.jpg',
+                  selite: 'Tabiat-silta vie jalankulkijat moottoritien yli '
+                    + 'kahden puiston välillä. Taustalla näkyy Elburs, '
+                    + 'joka on aina pohjoisessa.',
+                  lahde: 'Ali Safdarian, Wikimedia Commons (CC BY 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Basaarin kymmenen kilometriä',
+              teksti: 'Teheranin basaari ei ole yksi halli vaan '
+                + 'käytäväverkosto, jossa kujaa on yhteensä yli '
+                + 'kymmenen kilometriä. Sisäänkäyntejä on useita, ja '
+                + 'pääovena pidetään Sabze Meydania. Kukin käytävä on '
+                + 'erikoistunut omaan tavaraansa, ja kujilla on omat '
+                + 'nimensä — seinän emalikilvessä lukee esimerkiksi '
+                + 'Kadkhodan kuja. Kaupan lisäksi alueella on omat '
+                + 'moskeijansa, majatalonsa ja pankkinsa, joten se on '
+                + 'kaupunki kaupungin sisällä. Pohjoisosassa on Shaahin '
+                + 'moskeija, jonka perustukset laskettiin 1810 ja joka '
+                + 'valmistui 1825. Vielä 1870-luvulla koko Teheran oli '
+                + 'muurien ympäröimä linnake, katettu basaari ja kolme '
+                + 'asuinkorttelia. Katse kannattaa nostaa kattoon: '
+                + 'kujien yllä toistuu tiiliholvi toisensa perään, ja '
+                + 'päivänvalo tulee sisään niiden aukoista.',
+              kuva: {
+                tiedosto: 'Bazar de Téhéran (2).jpg',
+                selite: 'Basaarin holvikatto sisältä. Tiiliholvit '
+                  + 'seuraavat toisiaan kujan yllä, ja päivänvalo putoaa '
+                  + 'sisään holvien aukoista.',
+                lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Palatsit ja museot',
+              teksti: 'Golestanin palatsi on qajar-ajan Teheran '
+                + 'tiivistettynä, ja se kuuluu Unescon '
+                + 'maailmanperintöön. Pihan laidalla avautuu kuisti, '
+                + 'jonka alla seisoo marmorivaltaistuin. Palatsin ovissa '
+                + 'ja kaakelikentissä toistuu sama kuvio: keltainen '
+                + 'leijona ja sen takaa nouseva aurinko. Pihan perällä '
+                + 'kohoaa Shams-ol-Emareh eli auringon rakennus — 35 '
+                + 'metriä, viisi kerrosta ja kaksi samanmuotoista '
+                + 'tornia. Se oli valmistuessaan 1867 kaupungin korkein '
+                + 'talo ja ensimmäinen, jonka rakenteissa käytettiin '
+                + 'metallia. Katolle asennettiin kello, jonka Britannian '
+                + 'kuningatar Viktoria lahjoitti Naser al-Din Shahille; '
+                + 'lyönti oli niin kova, että se määrättiin '
+                + 'vaimennettavaksi, ja kello vaikeni yli sadaksi '
+                + 'vuodeksi. Se löi taas 12. marraskuuta 2012. '
+                + 'Kävelymatkan päässä ovat Dar al-Fonun, Iranin '
+                + 'ensimmäinen moderni korkeakoulu vuodelta 1851, ja '
+                + 'kansallismuseo.',
+              kuva: {
+                tiedosto: 'Golestan door.JPG',
+                selite: 'Golestanin palatsin ovet ja niitä kehystävä '
+                  + 'kaakelikenttä. Turkoosin ja keltaisen kuvioissa '
+                  + 'toistuu leijona, jonka takaa nousee aurinko.',
+                lahde: 'مانفی, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Pöydässä',
+              teksti: 'Iranin kansallisruokana pidetään chelow kababia: '
+                + 'höyrytettyä riisiä ja vartaassa paistettua lihaa. '
+                + 'Pöytään kuuluvat voi, sumakkijauhe, basilika, sipuli '
+                + 'ja grillattu tomaatti, ja juomaksi otetaan doogh eli '
+                + 'suolainen jogurttijuoma. Vanha basaaritapa on tarkka '
+                + '— varras lasketaan riisin päälle, liha painetaan '
+                + 'paikalleen ohuella lavash-leivällä ja varras vedetään '
+                + 'nopeasti pois. Toinen perusruoka on abgusht eli '
+                + 'lihaliemi, joka tunnetaan myös astiansa mukaan '
+                + 'nimellä dizi; se syödään kahdessa vaiheessa, ensin '
+                + 'liemi leivän kera ja sitten kiinteä osa survottuna. '
+                + 'Jokaiseen riisiruokaan kuuluu tahdig, padan pohjalle '
+                + 'paistunut rapea kuori, joka perinteisesti tarjotaan '
+                + 'vieraalle. Leipä ostetaan omasta uunistaan: sangak '
+                + 'paistetaan kuumien pikkukivien päällä, ja nimi tulee '
+                + 'persian kiveä tarkoittavasta sanasta sang.',
+              kuva: {
+                tiedosto: 'Sangak bread in Tehran, national bread of Iran. (42426069272).jpg',
+                asettelu: 'kapea',
+                selite: 'Sangak-leipä tulee uunista. Taikina paistetaan '
+                  + 'kuumien pikkukivien päällä, ja kivet jättävät '
+                  + 'leipään kuoppaisen pinnan.',
+                lahde: 'Ninara, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Ylös vuorille',
+              teksti: 'Teheranilaisen vapaapäivä suuntautuu ylöspäin. '
+                + 'Kaupungin pohjoislaidalla Darbandissa polku nousee '
+                + 'puron vartta pitkin, ja rinteeseen on rakennettu '
+                + 'porrasmainen rivi ravintoloita ja teehuoneita, joissa '
+                + 'istutaan matoilla veden yläpuolella. Samasta '
+                + 'suunnasta lähtevät vaellusreitit Tochalille. Tochalin '
+                + 'talviurheilukeskus on 2 820–3 850 metrin '
+                + 'korkeudessa, ja sinne pääsee köysiradalla Velenjakin '
+                + 'kaupunginosasta. Alempana Tajrishissa on oma '
+                + 'basaarinsa. Selkeällä säällä idässä näkyy Damavand, '
+                + '5 610 metriä, Iranin korkein kohta ja Aasian korkein '
+                + 'tulivuori; Teheranista sinne on runsaat kuusikymmentä '
+                + 'kilometriä. Persialainen puutarha on oma '
+                + 'taidemuotonsa, ja sen muoto ei ole vain koriste — se '
+                + 'kertoo, että vettä on.',
+              kuva: {
+                tiedosto: 'Darband, Teherán, Irán, 2016-09-18, DD 13.jpg',
+                asettelu: 'kapea',
+                selite: 'Darbandin puro ja sen ylle rakennetut '
+                  + 'teehuoneet. Rinteeseen on ladottu porrasmainen rivi '
+                  + 'terasseja, joilla istutaan matoilla veden '
+                  + 'yläpuolella.',
+                lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Basaari',
+                tahdet: 3,
+                selite: 'Yli kymmenen kilometriä katettua kujaa, joissa '
+                  + 'jokaisella on oma tavaransa ja oma nimensä.',
+              },
+              {
+                mita: 'Vuoret kaupungin laidalla',
+                tahdet: 3,
+                selite: 'Darbandin polku ja Tochalin köysirata alkavat '
+                  + 'kaupungin pohjoisreunalta.',
+              },
+              {
+                mita: 'Palatsit ja museot',
+                tahdet: 3,
+                selite: 'Golestanin palatsi kuuluu maailmanperintöön, ja '
+                  + 'kansallismuseossa on Suolamies.',
+              },
+              {
+                mita: 'Ruokapöytä',
+                tahdet: 3,
+                selite: 'Chelow kabab, abgusht ja tahdig ovat arkiruokaa, '
+                  + 'ja sangak tulee omasta uunistaan.',
+              },
+              {
+                mita: 'Puutarhat ja teehuoneet',
+                tahdet: 2,
+                selite: 'Persialaisen puutarhan vesikanava ja vuorten '
+                  + 'teehuoneet ovat samaa ajatusta: vettä on.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Korkeusero',
+                teksti: 'Pohjoinen Teheran on satoja metrejä etelää '
+                  + 'korkeammalla, ja siellä on samaan aikaan päivästä '
+                  + 'useita asteita viileämpää.',
+              },
+              {
+                otsikko: 'Ilmanlaatu',
+                teksti: 'Vuoret estävät ilman vaihtumisen, joten '
+                  + 'kaupungin ylle laskeutuu ajoittain saastesumu.',
+              },
+              {
+                otsikko: 'Kuiva kausi',
+                teksti: 'Kuiva kausi kestää kesäkuusta syyskuuhun, ja '
+                  + 'koko vuoden sademäärä jää noin 230 millimetriin.',
+              },
+              {
+                otsikko: 'Etäisyydet',
+                teksti: 'Kaupunki on levinnyt laajalle ja liikenne on '
+                  + 'tiheää; metro on usein pintaliikennettä nopeampi.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Kaksikymmentätuhatta katsojaa saman kehän ympärille',
