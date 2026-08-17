@@ -119,6 +119,11 @@ const NA_CITIES = [
   { id: 'anchorage', name: 'Anchorage', wiki: 'Anchorage', ambience: 'pohjoinen', x: 343, y: 234, airport: true, la: 'start', lx: 16, ly: 5 },
   { id: 'whitehorse', name: 'Whitehorse', wiki: 'Whitehorse', ambience: 'pohjoinen', x: 414, y: 278, la: 'middle', lx: 0, ly: 28 },
   { id: 'yellowknife', name: 'Yellowknife', wiki: 'Yellowknife', ambience: 'pohjoinen', x: 530, y: 290, la: 'middle', lx: 0, ly: -22 },
+  // Sitka on saarikaupunki Baranofinsaarella, eikä Alexanderin saaristoa
+  // ole piirretty laudan ääriviivoihin — piste on siksi rannikon ulkopuolella
+  // kuten Sansibar Afrikan laudalla. Piste on noin 75 km todellista
+  // paikkaansa etelässä, jotta Whitehorse jää vähimmäisvälin (50) päähän.
+  { id: 'sitka', name: 'Sitka', wiki: 'Sitka', ambience: 'meri', x: 392, y: 324, la: 'end', lx: -16, ly: 5 },
   { id: 'vancouver', name: 'Vancouver', wiki: 'Vancouver', ambience: 'satama', x: 447, y: 422, airport: true, la: 'end', lx: -16, ly: 5 },
   { id: 'yellowstone', name: 'Yellowstone', wiki: 'Yellowstonen kansallispuisto', ambience: 'metsa', x: 527, y: 493, la: 'end', lx: -16, ly: 5 },
   { id: 'mountrushmore', name: 'Mount Rushmore', wiki: 'Mount Rushmore', ambience: 'ylanko', x: 586, y: 489, la: 'middle', lx: -14, ly: -24 },
@@ -210,6 +215,9 @@ const NA_EDGES = [
   // Laivareitit
   { a: 'anchorage', b: 'vancouver', steps: 6, type: 'sea',
     via: [[316, 274], [342, 303], [380, 359], [415, 402]] },
+  // Sisäkäytävä eli Inside Passage: Sitkasta pohjoiseen ja etelään.
+  { a: 'sitka', b: 'anchorage', steps: 4, type: 'sea', via: [[370, 290], [345, 265]] },
+  { a: 'sitka', b: 'vancouver', steps: 4, type: 'sea', via: [[405, 355], [415, 375]] },
   { a: 'sanfrancisco', b: 'hawaii', steps: 7, type: 'sea',
     via: [[350, 588], [265, 606]] },
   { a: 'hawaii', b: 'losangeles', steps: 7, type: 'sea',
@@ -262,7 +270,7 @@ export const NORTHAMERICA = {
   cities: NA_CITIES,
   edges: NA_EDGES,
   airRoutes: NA_AIR_ROUTES,
-  islands: ['nuuk', 'stjohns', 'havanna', 'sanjuan', 'bermuda', 'hawaii'],
+  islands: ['nuuk', 'stjohns', 'havanna', 'sanjuan', 'bermuda', 'hawaii', 'sitka'],
   minCityDistance: 50,
 
   tokens: {
@@ -286,7 +294,7 @@ export const NORTHAMERICA = {
         kuva: 'assets/aarteet/aarre-northamerica-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 12 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 13 },
   },
 
   questions: NORTHAMERICA_QUESTIONS,

@@ -69,7 +69,13 @@ const AFRICA_CITIES = [
   // Marrakech täyttää Marokon tyhjän kulman (omistajan laajennus): karavaani-
   // kaupan portti Saharaan. Oikea sijainti osuisi pelkistetyn rannikon
   // ulkopuolelle, joten piste on hivenen sisämaahan päin.
-  { id: 'marrakech', name: 'Marrakech', wiki: 'Marrakech', ambience: 'basaari', x: 193, y: 122 },
+  // Nimikyltti siirrettiin pisteen vasemmalle puolelle, jotta Fès mahtuu
+  // koilliseen.
+  { id: 'marrakech', name: 'Marrakech', wiki: 'Marrakech', ambience: 'basaari', x: 193, y: 122, la: 'end', lx: -16, ly: 5 },
+  // Fès on kartalla noin 260 km todellista paikkaansa itäkaakossa, yhä
+  // Marokon puolella: kaavan mukainen piste jäisi 26 yksikön päähän
+  // Tangerista ja 48:n päähän Marrakechista, kun vähimmäisväli on 55.
+  { id: 'fes', name: 'Fès', wiki: 'Fès', ambience: 'basaari', x: 236, y: 84, la: 'start', lx: 16, ly: 5 },
   { id: 'timbuktu', name: 'Timbuktu', wiki: 'Timbuktu', ambience: 'aavikko', x: 212, y: 285, la: 'end', lx: -16, ly: 5 },
   { id: 'gao', name: 'Gao', wiki: 'Gao', ambience: 'aavikko', x: 306, y: 318, la: 'start', lx: 16, ly: 5 },
   {
@@ -111,6 +117,10 @@ const AFRICA_CITIES = [
   { id: 'darfur', name: 'Darfur', wiki: 'Darfur', ambience: 'savanni', x: 575, y: 318 },
   { id: 'suakin', name: 'Suakin', wiki: 'Suakin', ambience: 'meri', x: 764, y: 261 },
   { id: 'addisabeba', name: 'Addis Abeba', wiki: 'Addis Abeba', ambience: 'ylanko', x: 783, y: 387, airport: true, la: 'end', lx: -16, ly: 5 },
+  // Lalibela on kartalla noin 165 km todellista paikkaansa pohjoisessa,
+  // yhä Etiopian ylängöllä: oikealta paikalta Addis Abeba jäisi 38
+  // yksikön päähän, kun laudan vähimmäisväli on 55.
+  { id: 'lalibela', name: 'Lalibela', wiki: 'Lalibela', ambience: 'ylanko', x: 787, y: 331, la: 'start', lx: 16, ly: 5 },
   { id: 'rashafun', name: 'Ras Hafun', wiki: 'Ras Hafun', ambience: 'meri', x: 940, y: 368, la: 'end', lx: -18, ly: -4 },
 ];
 
@@ -139,6 +149,9 @@ const AFRICA_EDGES = [
   // jätettiin pois, ettei luoteiskulma näytä ruuhkaiselta (omistaja).
   { a: 'tanger', b: 'marrakech', steps: 2 },
   { a: 'marrakech', b: 'timbuktu', steps: 4 },
+  // Fèsin karavaanitie: rannikolta sisämaahan ja Atlaksen yli etelään.
+  { a: 'tanger', b: 'fes', steps: 2 },
+  { a: 'fes', b: 'marrakech', steps: 2 },
   { a: 'ahaggar', b: 'gao', steps: 2 },
   { a: 'timbuktu', b: 'gao', steps: 1 },
   { a: 'timbuktu', b: 'dakar', steps: 4 },
@@ -178,6 +191,8 @@ const AFRICA_EDGES = [
   { a: 'viktoria', b: 'bahrelghazal', steps: 3 },
   { a: 'bahrelghazal', b: 'darfur', steps: 2 },
   { a: 'bahrelghazal', b: 'addisabeba', steps: 3 },
+  { a: 'addisabeba', b: 'lalibela', steps: 2 },
+  { a: 'lalibela', b: 'suakin', steps: 2 },
   { a: 'addisabeba', b: 'suakin', steps: 3 },
   { a: 'addisabeba', b: 'rashafun', steps: 3 },
   { a: 'addisabeba', b: 'kilimandzaro', steps: 3 },
@@ -272,7 +287,7 @@ export const AFRICA = {
       },
     }),
     // 37 laattakaupunkia seitsemän uuden paikan jälkeen (omistajan laajennus).
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 9, empty: 11 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 10, empty: 12 },
   },
 
   questions: AFRICA_QUESTIONS,

@@ -9,6 +9,112 @@
 // tässä missä tahansa kohdassa.
 
 export const EUROPE_QUESTIONS = {
+  sevilla: [
+    {
+      q: 'Minkä joen rannalla Sevilla sijaitsee?',
+      options: ['Guadalquivir', 'Ebro', 'Tajo', 'Duero'],
+      correct: 0,
+      level: 1,
+      hint: 'Joki on Andalusian pääväylä, ja sitä pitkin merilaivat pääsivät sisämaahan asti.',
+      fact: 'Sevilla on Andalusian itsehallintoalueen ja Sevillan maakunnan pääkaupunki.',
+      source: 'https://fi.wikipedia.org/wiki/Sevilla',
+    },
+    {
+      q: 'Millä nimellä roomalaiset tunsivat Sevillan?',
+      options: ['Hispalis', 'Emerita', 'Tarraco', 'Gades'],
+      correct: 0,
+      level: 3,
+      hint: 'Julius Caesar rakennutti kaupungin ympärille muurit vuonna 45 eaa.',
+      fact: 'Maurit puolestaan kutsuivat kaupunkia nimellä Ishbiliya.',
+      source: 'https://fi.wikipedia.org/wiki/Sevilla',
+    },
+    {
+      q: 'Mitä Sevillasta vietiin roomalaisaikana Roomaan amforoissa?',
+      options: ['oliiviöljyä', 'olutta', 'hunajaa', 'suolaa'],
+      correct: 0,
+      level: 2,
+      hint: 'Tuote puristetaan hedelmästä, joka kasvaa Välimeren ympärillä.',
+      fact: 'Lähistöllä sijaitseva Itálican kaupunki on nykyään yksi Espanjan merkittävimmistä arkeologisista kohteista.',
+      source: 'https://fi.wikipedia.org/wiki/Sevilla',
+    },
+    {
+      q: 'Mikä yksinoikeus Sevillalla oli Amerikan löytymisen jälkeen?',
+      options: [
+        'yksinoikeus kauppaan Amerikkojen kanssa',
+        'yksinoikeus hopean lyömiseen',
+        'yksinoikeus laivojen rakentamiseen',
+        'yksinoikeus karttojen painamiseen',
+      ],
+      correct: 0,
+      level: 3,
+      hint: 'Etuoikeus siirrettiin Cádiziin vuonna 1717, kun joki madaltui vaikeakulkuiseksi.',
+      fact: 'Kaupunki kasvoi tuolloin 150 000 asukkaallaan Euroopan kolmanneksi suurimmaksi.',
+      source: 'https://fi.wikipedia.org/wiki/Sevilla',
+    },
+    {
+      q: 'Mikä on Sevillan katedraalin kellotorni, joka jäi jäljelle vanhasta moskeijasta?',
+      options: ['Giralda', 'Torre de Oro', 'Alcázar', 'Casa Lonja'],
+      correct: 0,
+      level: 2,
+      hint: 'Torni on 97 metriä korkea ja kaupungin symboli.',
+      fact: 'Santa Marían katedraali valmistui vuonna 1506, ja siitä tuli maailman suurin goottilainen katedraali.',
+      source: 'https://fi.wikipedia.org/wiki/Sevilla',
+    },
+  ],
+
+  bergen: [
+    {
+      q: 'Minkä maan kaupunki Bergen on?',
+      options: ['Norja', 'Ruotsi', 'Tanska', 'Islanti'],
+      correct: 0,
+      level: 1,
+      hint: 'Kaupunkia kutsutaan maan läntisen rannikkomaakunnan pääkaupungiksi.',
+      fact: 'Bergen on asukasluvultaan maansa toiseksi suurin kunta; asukkaita oli vuonna 2024 yli 294 000.',
+      source: 'https://fi.wikipedia.org/wiki/Bergen',
+    },
+    {
+      q: 'Millä nimellä Bergenin hansakauppiaiden ranta-alue tunnetaan?',
+      options: ['Bryggen', 'Nyhavn', 'Vippetangen', 'Nyboder'],
+      correct: 0,
+      level: 2,
+      hint: 'Puinen vanhakaupunki sataman rannassa on Unescon maailmanperintöluettelossa.',
+      fact: 'Saksalaiset hansakauppiaat perustivat kaupunkiin siirtokunnan noin vuonna 1350.',
+      source: 'https://fi.wikipedia.org/wiki/Bergen',
+    },
+    {
+      q: 'Mikä oli Bergenin tärkein vientitavara keskiajalla?',
+      options: ['kuivattu turska', 'terva', 'rautamalmi', 'villakangas'],
+      correct: 0,
+      level: 2,
+      hint: 'Tavara tuotiin Pohjois-Norjasta ja kuljetettiin muualle Eurooppaan.',
+      fact: 'Norjaan tuotiin vastineeksi viljaa, vaatteita ja mausteita.',
+      source: 'https://fi.wikipedia.org/wiki/Bergen',
+    },
+    {
+      q: 'Minä vuonna Bergenistä tuli Norjan pääkaupunki?',
+      options: ['1217', '1070', '1299', '1349'],
+      correct: 0,
+      level: 3,
+      hint: 'Haakon IV Haakoninpoika siirsi aseman Nidarokselta eli nykyiseltä Trondheimilta.',
+      fact: 'Oslo korvasi Bergenin pääkaupunkina vuonna 1299. Kaupungin itsensä perusti kuningas Olav Kyrre vuonna 1070.',
+      source: 'https://fi.wikipedia.org/wiki/Bergen',
+    },
+    {
+      q: 'Miksi Bergeniä kutsutaan?',
+      options: [
+        'seitsemän vuoren kaupungiksi',
+        'tuhannen saaren kaupungiksi',
+        'keskiyön kaupungiksi',
+        'pohjolan Venetsiaksi',
+      ],
+      correct: 0,
+      level: 2,
+      hint: 'Korkein niistä, Ulriken, yltää 643 metriin — vaikka kaupungissa on niitä enemmänkin.',
+      fact: 'Bergen on kuuluisa sateistaan: sadetta saadaan keskimäärin kahtena päivänä kolmesta.',
+      source: 'https://fi.wikipedia.org/wiki/Bergen',
+    },
+  ],
+
   dublin: [
     {
       q: 'Minkä maan pääkaupunki Dublin on?',
@@ -2070,6 +2176,24 @@ export const EUROPE_FACTS = {
     'Kaupunki tunnettiin ennen nimillä Bysantion ja Konstantinopoli, ja se oli kahden valtakunnan pääkaupunki lähes 1 600 vuoden ajan.',
     {
       text: 'Kaupunki seisoo kahden maanosan päällä, ja salmen yli soudetaan kuin kadun poikki. Basaarissa opin, että hinta on keskustelu eikä numero.',
+      voice: 'isoisa',
+    },
+  ],
+  sevilla: [
+    { text: 'Sevilla on Andalusian pääkaupunki Guadalquivirjoen rannalla. Maurit kutsuivat sitä nimellä Ishbiliya ja roomalaiset Hispalis.', source: 'https://fi.wikipedia.org/wiki/Sevilla' },
+    { text: 'Amerikan löytymisen jälkeen kaupunkiin sijoitettiin kauppakamari, jolla oli yksinoikeus kauppaan Amerikkojen kanssa. Kauppa siirtyi Cádiziin vuonna 1717.', source: 'https://fi.wikipedia.org/wiki/Sevilla' },
+    { text: 'Santa Marían katedraali valmistui 1506 ja on maailman suurin goottilainen katedraali. Sen kellotorni Giralda on entisen moskeijan minareetti.', source: 'https://fi.wikipedia.org/wiki/Sevilla' },
+    {
+      text: 'Joki on kaupungin koko onni ja koko onnettomuus: se toi Amerikan laivat tähän asti, ja kun se madaltui, kauppa muutti alavirtaan eikä palannut. Kultainen torni seisoo yhä rannassa laskemassa lasteja, joita ei enää tule.',
+      voice: 'isoisa',
+    },
+  ],
+  bergen: [
+    { text: 'Bergenin perusti kuningas Olav Kyrre vuonna 1070, ja se oli Norjan pääkaupunki vuosina 1217–1299.', source: 'https://fi.wikipedia.org/wiki/Bergen' },
+    { text: 'Hansakauppiaiden ranta-alue Bryggen on Unescon maailmanperintökohde. Tärkein kauppatavara oli Pohjois-Norjasta tuotu kuivattu turska.', source: 'https://fi.wikipedia.org/wiki/Bergen' },
+    { text: 'Bergenin satama on tonnimääriltään Pohjoismaiden suurin tavaraliikenteen satama, ja kaupungissa sataa keskimäärin kahtena päivänä kolmesta.', source: 'https://fi.wikipedia.org/wiki/Bergen' },
+    {
+      text: 'Vuoret erottavat tämän kaupungin muusta maasta niin tarkasti, että sinne on helpompi purjehtia kuin ajaa. Kauppahuoneiden kirjat ovat saksaksi, vaikka Hansan valta loppui kolmesataa vuotta sitten.',
       voice: 'isoisa',
     },
   ],

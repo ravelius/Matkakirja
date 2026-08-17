@@ -711,6 +711,15 @@ export const AFRICA_VALOKUVAT = {
       + 'perään.',
     },
   },
+  lalibela: {
+    tiedosto: 'The Bete Giyorgis.jpg',
+    vuosi: '2008',
+    lahde: 'Tmanahan344, Commons (CC BY-SA 3.0)',
+    selite: 'Bete Giyorgis eli Pyhän Yrjön kirkko Lalibelassa. Sitä ei '
+      + 'rakennettu vaan louhittiin: kallioon hakattiin ensin '
+      + 'ristinmuotoinen kuilu ja sen keskelle jätetystä kivimöhkäleestä '
+      + 'veistettiin kirkko katosta alaspäin, ikkunat ja ovet mukaan lukien.',
+  },
   rashafun: {
     lisat: [
       {
@@ -805,6 +814,15 @@ export const AFRICA_VALOKUVAT = {
       + 'Marrakechissa yhä rakentaa, joten torni hallitsee kaupunkia '
       + 'kuten 800 vuotta sitten.',
     },
+  },
+  fes: {
+    tiedosto: 'Tanneries in Fes.jpg',
+    vuosi: '2017',
+    lahde: 'Tulit, Commons (CC BY-SA 4.0)',
+    selite: 'Chouaran nahkurialtaat Fèsin medinassa. Valkoisissa altaissa '
+      + 'vuodat puhdistetaan kalkissa, värillisissä ne värjätään kasvi- ja '
+      + 'mineraaliväreillä. Työ tehdään yhä käsin ja jaloin samalla tavalla '
+      + 'kuin 1000-luvulla, ja taustalla nousee medinan savitalojen rinne.',
   },
   timbuktu: {
     lisat: [
