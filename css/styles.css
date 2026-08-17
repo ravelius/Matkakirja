@@ -8722,6 +8722,23 @@ button.lukija-nappi.lukee,
 
 .vuosisaa-otsikko { font-weight: 700; }
 
+/*
+ * LUONNEHDINTA graafin ja lähderivin välissä (omistajan toive
+ * 17.8.2026). Se on lehden leipätekstiä eikä kuvatekstiä: antiikva,
+ * väljä riviväli ja täysi musteväri, jotta se erottuu alapuolisesta
+ * hennosta lähderivistä eikä sekoitu siihen. Kortti on enintään noin
+ * 460 pikseliä leveä, joten rivi jää tällä koolla runsaaseen
+ * kuuteenkymmeneen merkkiin — luettava mitta kolmelle lauseelle.
+ */
+.vuosisaa-luonnehdinta {
+  margin: 0.7rem 0 0;
+  font-family: var(--font-luku);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  text-align: left;
+  color: #2d2010;
+}
+
 .vuosisaa {
   display: block;
   width: 100%;
@@ -11692,10 +11709,9 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  *                             täällä". Lämmin, joten se soittaa samaa
  *                             säveltä kuin paperi.
  *   TUKIAKSENTTI petrooli   = faktat ja uloskäynnit. Lämpötilat,
- *                             hinnat, ulkoiset linkit ja "Hyvä
- *                             tietää". Viileä vastapaino, jota on
- *                             vähän.
- *   KULTA                   = pelkkä koriste: tähdet ja €-luokka.
+ *                             ulkoiset linkit ja "Hyvä tietää".
+ *                             Viileä vastapaino, jota on vähän.
+ *   KULTA                   = pelkkä koriste: parasta-rivien tähdet.
  *                             Tummennettu okraksi, jotta se yltää
  *                             AA-kontrastiin joka pohjalla.
  *
@@ -12243,8 +12259,7 @@ button.opas-saagraafi-nappi {
  * luonnehdinta oikealla. Grid eikä taulukko, koska kapealla ruudulla
  * sarakkeet menevät allekkain — taulukko ei taitu.
  */
-.opas-kaudet,
-.opas-hinnat {
+.opas-kaudet {
   display: grid;
   gap: 0.3rem 0.9rem;
   margin: 0;
@@ -12264,16 +12279,7 @@ button.opas-saagraafi-nappi {
   clear: right;
 }
 
-/*
- * Hintarivi on päinvastoin kuin kausirivi: oikealla on lyhyt luku,
- * joka ei saa katketa ("1,50–\n2,50 €" kolmella rivillä puhelimessa),
- * ja vasemmalla nimike, joka saa rivittyä. Siksi arvo mitoitetaan
- * sisällön mukaan ja nimike vie loput.
- */
-.opas-hinnat { grid-template-columns: 1fr auto; }
-
-.opas-kausi-nimi,
-.opas-hinta-mita {
+.opas-kausi-nimi {
   margin: 0;
   font-family: var(--font-type);
   font-size: 0.82rem;
@@ -12288,8 +12294,7 @@ button.opas-saagraafi-nappi {
   opacity: 0.7;
 }
 
-.opas-kausi-tiedot,
-.opas-hinta-arvo {
+.opas-kausi-tiedot {
   margin: 0;
   font-family: var(--font-luku);
   font-size: 0.94rem;
@@ -12308,32 +12313,6 @@ button.opas-saagraafi-nappi {
 }
 
 .opas-kausi-kuvaus { display: block; }
-
-/* Hintaluokka: kullattu leima otsikkorivin oikeassa laidassa. Kulta on
- * paletissa 2.1 pelkkä koriste (tähdet ja €-luokka), ja se on
- * tummennettu okraksi, jotta se yltää AA-kontrastiin hiekkapohjalla —
- * entinen #d99a1f jäi lukuun 2,1:1 eli käytännössä lukukelvottomaksi. */
-.opas-hintataso {
-  float: right;
-  margin-left: 0.6rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  color: var(--opas-kulta);
-}
-
-/* Luokka ennen elementtiä: .opas-laatikko dd asettaa leipätekstin
- * mustaksi, ja hintaluku on dd — ilman laatikkoa valitsimessa musta
- * voittaisi tarkkuudessa eikä luku saisi tukiaksenttiaan. */
-.opas-laatikko .opas-hinta-arvo {
-  font-family: var(--font-type);
-  font-size: 0.88rem;
-  font-weight: 700;
-  text-align: right;
-  white-space: nowrap;
-  color: var(--opas-syva);
-}
 
 .opas-linkkilista {
   margin: 0;

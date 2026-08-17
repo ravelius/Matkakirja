@@ -11415,6 +11415,19 @@ export class UI {
     const nimi = this.game.board.cities.find((c) => c.id === this.arrivalShownFor)?.name ?? '';
     kortti.appendChild(html('p', 'kuvateksti vuosisaa-otsikko', `Sää vuoden mittaan — ${nimi}`));
     kortti.appendChild(piirraVuosiSaa(tiedot));
+    /*
+     * LUONNEHDINTA graafin ALLE eikä viereen (omistajan toive
+     * 17.8.2026: "muutaman lauseen luonnehdinta vuoden
+     * säävaihteluista"). Kortti on kapea — enintään 480 pikseliä — ja
+     * graafi täyttää sen leveyden, joten viereen jäisi tekstille vain
+     * muutama sana riville. Alla teksti saa koko palstan ja lukee
+     * graafin selityksenä: ensin kuva, sitten mitä siinä näkyy, ja
+     * vasta viimeisenä lähderivi. Kenttä on valinnainen: ilman sitä
+     * kortti näyttää täsmälleen samalta kuin ennen.
+     */
+    if (tiedot.luonnehdinta) {
+      kortti.appendChild(html('p', 'vuosisaa-luonnehdinta', tiedot.luonnehdinta));
+    }
     kortti.appendChild(html('p', 'kuvalahde',
       'Käyrä keskilämpö °C · palkit sademäärä mm · Open-Meteo (ERA5), 1991–2020'));
     kortti.addEventListener('click', () => this.suljeKulttuuriKuva());
@@ -13775,12 +13788,15 @@ export class UI {
    *
    * Kiinteä järjestys omistajan speksistä:
    *   ingressi → jakso 1 → Milloin matkaan? → jakso 2 → nosto →
-   *   jakso 3 → Matkakassa → loput jaksot → Suunnittele matka
+   *   loput jaksot → Suunnittele matka
+   *
+   * Matkakassa-laatikko poistettiin 17.8.2026 omistajan päätöksellä
+   * ("tämä osio voidaan poistaa"): hintoja ei luetella oppaassa, vaan
+   * hintataso kerrotaan kainalotaulussa plussana tai miinuksena.
    *
    * Laatikot sidotaan jaksojen VÄLIIN indeksillä eikä lasketa suhteessa
    * jaksojen määrään: sijainti on toimituksellinen päätös (sää tulee
-   * heti liikkumisen jälkeen, hinnat vasta kun kaupungin tapa elää on
-   * kerrottu), eikä se saa liikkua sen mukaan, montako jaksoa
+   * heti liikkumisen jälkeen), eikä se saa liikkua sen mukaan, montako jaksoa
    * kaupungille sattuu kirjoitetuksi. Lyhyemmän oppaan väliin
    * mahtumattomat laatikot tulevat jaksojen perään omassa
    * järjestyksessään, jotta mikään ei katoa.
@@ -13810,9 +13826,6 @@ export class UI {
       valiin.set(0, () => this.opasKaudet(matkailu));
     }
     if (kohde.nosto) valiin.set(1, () => this.opasNosto(kohde.nosto));
-    if (matkailu?.hintataso || matkailu?.hinnat?.length) {
-      valiin.set(2, () => this.opasKassa(matkailu));
-    }
     jaksot.forEach((jakso, i) => {
       sisalto.appendChild(this.opasJakso(jakso, linkit, i === 0 ? kainalo : null));
       const lohko = valiin.get(i);
@@ -14149,28 +14162,6 @@ export class UI {
     overlay.addEventListener('click', sulje);
     document.addEventListener('keydown', nappaimesta, true);
     return overlay;
-  }
-
-  /** "Matkakassa" — €€-luokka merkkinä ja 4–5 ankkurihintaa. */
-  opasKassa(matkailu) {
-    const laatikko = this.opasLaatikko('Matkakassa', 'opas-kassa');
-    if (matkailu.hintataso) {
-      // Luokka otsikkoriville eikä omaksi lohkokseen: kelluvana
-      // erillisenä kappaleena se asettui vasta ensimmäisen hintarivin
-      // kohdalle, jolloin se näytti kuuluvan siihen riviin.
-      const merkki = html('span', 'opas-hintataso', matkailu.hintataso);
-      merkki.setAttribute('aria-label', `Hintataso ${matkailu.hintataso}`);
-      laatikko.firstChild.appendChild(merkki);
-    }
-    if (matkailu.hinnat?.length) {
-      const lista = html('dl', 'opas-hinnat');
-      for (const rivi of matkailu.hinnat) {
-        lista.appendChild(html('dt', 'opas-hinta-mita', rivi.mita ?? ''));
-        lista.appendChild(html('dd', 'opas-hinta-arvo', rivi.hinta ?? ''));
-      }
-      laatikko.appendChild(lista);
-    }
-    return laatikko;
   }
 
   /**
