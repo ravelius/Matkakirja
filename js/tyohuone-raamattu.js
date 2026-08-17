@@ -507,6 +507,9 @@ export const RAAMATTU = {
           + 'docs/dokumenttiremontti-suunnitelma.md — Max-session '
           + 'suunnitelmat 17.8.2026 (hyväksytty v808; toteutettu '
           + 'D1–D7 ja M1–M6, ks. Moduulit-osio).',
+        'docs/tuotantosuunnitelma.md — jäljellä olevien kaupunkien '
+          + 'ja maiden tuotantosuunnitelma (Fablemax 17.8.2026; '
+          + 'EHDOTUS, odottaa omistajan hyväksyntää).',
         'Työkalujen alkukommentit ovat käyttöohjeita. Sääntö, jonka '
           + 'kone voi valvoa, kirjataan testiksi.',
         'Työhuone integroidaan peliin kehittäjävivun taakse — ei '

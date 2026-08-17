@@ -48,6 +48,12 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v822 — tuotantosuunnitelma (docs/tuotantosuunnitelma.md): lue ja päätä',
+  'v821 — remontti valmis: luenta+visa moduuleiksi, ui.js -37 %',
+  'v820 — remontti M5c: maalehti moduuliksi',
+  'v819 — remontti M5b: kuvataitto+sää+uutiset lehteen',
+  'v818 — remontti M5a: lehden sivukoneisto moduuliksi',
+  'v817 — remontti M4: opas+nähtävyydet moduuleiksi',
   'v816 — Matkailijan Tokio, Soul, Shanghai ja Tripoli (O6 valmis)',
   'v815 — remontti M3: liput, karttazoom, vertailu moduuleiksi',
   'v814 — remontti M2: UI:n apurit omaan moduuliin',
