@@ -14101,10 +14101,13 @@ export const NAHTAVYYSJUTUT = {
         },
         {
           tiedosto: 'Front view of Marcus Aurelius Arch.jpg',
-          selite: 'Kaaren sisus alhaalta kuvattuna: neljä suurta '
-            + 'holvikaarta kohtaavat keskellä, ja niiden yläpuolella '
-            + 'näkyy kupolin kahdeksankulmainen sisäpinta. Aukosta '
-            + 'erottuu palmuja ja kauempana moskeijan kupoli.',
+          selite: 'Kaaren alta katsottuna: etummaisen holvin takaa '
+            + 'näkyy vastakkainen kaariaukko, ja niiden välissä kaartuu '
+            + 'kasettikoristeltu kupoli, jonka kivipaneelit ovat '
+            + 'kuluneet mutta kuviot yhä erottuvat. Aukosta erottuu '
+            + 'palmuja ja valkoinen talo vihreäkärkisine minareetteineen. '
+            + 'Kaaren alla seisoo kaksi nuorta miestä, joista näkee, '
+            + 'kuinka korkea rakennus on.',
           lahde: 'أوس, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -14165,10 +14168,11 @@ export const NAHTAVYYSJUTUT = {
           + 'eurooppalaisen ja ottomaanisen sekoitus — samaa '
           + 'yhdistelmää näkee medinan moskeijoissa, joissa '
           + 'marmoripylväät ja kaakelipinnat ovat rinnakkain '
-          + 'arabialaisen kalligrafian kanssa. Ottomaanit rakensivat '
-          + 'julkisia kellotorneja valtakuntansa kaupunkeihin '
-          + '1800-luvun jälkipuoliskolla, ja Tripolin torni kuuluu '
-          + 'samaan sarjaan.'
+          + 'arabialaisen kalligrafian kanssa. Tornista ei ole '
+          + 'Wikipedian artikkelia millään kielellä, ja sen '
+          + 'rakennusvuodesta liikkuu toisistaan poikkeavia tietoja; '
+          + 'tässä jutussa kerrotaan siksi vain se, minkä rakennus '
+          + 'itse näyttää.'
         + '\n\n'
         + 'Aukiolta lähtee kujia joka suuntaan, ja tornin ympärillä '
           + 'on kauppoja katutasossa. Rappaus on paikoin lohkeillut ja '

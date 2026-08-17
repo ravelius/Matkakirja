@@ -3817,9 +3817,12 @@ export const KAUPUNKIKARTAT = {
     },
     varikartta: 'assets/kartat/tripoli-varikartta.png',
     esittely: 'Tripolin vanhakaupunki näkyy kartalla yhtenä selvänä '
-      + 'kuviona: tumma viiva kiertää viisikulmion, ja sen sisällä '
-      + 'kadut hajoavat kujiksi, joita ei voi ajaa autolla. Viiva on '
-      + 'kaupunginmuuri. Viisikulmion muodon vanhakaupunki sai '
+      + 'kuviona: tumma viiva kiertää viisikulmion, ja sen sisällä on '
+      + 'yhtenäinen vaalea ala muutamine ohuine viivoineen. Viiva on '
+      + 'kaupunginmuuri, ja ala on medina — se näyttää kartalla '
+      + 'tyhjältä siksi, että sen kujat ovat liian kapeita ajettaviksi '
+      + 'eikä niitä ole kaikkia edes merkitty karttoihin. Viisikulmion '
+      + 'muodon vanhakaupunki sai '
       + '1500-luvun puolivälissä, kun ottomaanien ensimmäinen '
       + 'käskynhaltija Darghut rakensi linnoitukset uudelleen. Muurin '
       + 'sisäpuoli on vain noin kuudensadan metrin levyinen, eli koko '
