@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v837 — iPad: kartta ei enää bugaa taustapaluussa (vaalea kaista, jäätynyt piirto) — testaa: raahaa karttaa, vaihda appia sormi pohjassa, palaa',
   'v836 — E00 2/2: Tokion, Soulin ja Shanghain kohdekartat ja kohteet — koko kuusikko valmis, tarkista pelissä',
   'v835 — E00 1/2: Bagdadin, Teheranin ja Tripolin kohdekartat ja kohteet (avaa lehdet ja kartat pelissä — omistaja tarkistaa suoraan pelistä)',
   'v834 — iPhone: lehti täyttää ruudun alas asti (sumennettu alakaista pois) — testaa myös taustapaluun jälkeen',
