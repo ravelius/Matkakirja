@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v841 — syvä lähikuva (maailmankartta) terävöityy heti zoomin jälkeen — kokeile nopeaa zoomailua syvällä zoomilla',
   'v840 — iPad: Firenzen Matkailijan opas — karussellikuvan yläpuolella ollut tumma palkki pois; tarkista myös alareunan kuvateksti ja lähderivi taustapaluun jälkeen',
   'v839 — zoomaile nopeasti sisään/ulos ja lopeta: kartta tarkentuu nyt parissa sekunnissa eikä jätä sumeita laikkuja',
   'v838 — kolme turhaa suoraa reittiä pois (Helsinki–Rovaniemi, Granada–Lissabon, Addis Abeba–Suakin) — ketjut uusien kaupunkien kautta',
