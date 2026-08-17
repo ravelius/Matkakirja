@@ -47,6 +47,7 @@ function kaikkiViittaukset() {
     poimi(fs.readFileSync(path.join('js/packs', tiedosto), 'utf8'));
   }
   poimi(fs.readFileSync('js/ui.js', 'utf8'));
+  poimi(fs.readFileSync('js/sisaltotaulut.js', 'utf8'));
   return [...nimet].sort();
 }
 

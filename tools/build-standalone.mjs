@@ -195,6 +195,8 @@ const MODULES = [
    * Viisas Pöllö ENNEN ui.js:ää: ui.js tuo polloAnkkurin ja polloSuljen
    * staattisesti, ja main.js kutsuu asennaPolloa moduulitasolla.
    */
+  // Sisältötaulut ennen ui.js:ää (ui tuo ne; pakat ovat jo yllä).
+  'js/sisaltotaulut.js',
   'js/pollo-haku.js',
   'js/pollo.js',
   'js/ui.js',

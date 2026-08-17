@@ -170,7 +170,7 @@ const nuku = (ms) => execFileSync('sleep', [String(ms / 1000)]);
 function kohteet() {
   const paketit = readdirSync(join(JUURI, 'js/packs'))
     .map((f) => readFileSync(join(JUURI, 'js/packs', f), 'utf8')).join('\n');
-  const muut = ['js/aani-ehdokkaat.js', 'js/ui.js']
+  const muut = ['js/aani-ehdokkaat.js', 'js/ui.js', 'js/sisaltotaulut.js']
     .map((f) => readFileSync(join(JUURI, f), 'utf8')).join('\n');
   const kaikki = `${paketit}\n${muut}`;
   /*
