@@ -338,3 +338,55 @@ min agenttiaikaa; erä (7 yksikköä, kirjoittajat rinnan + kuvajono)
    + PR-raportit erittäin, vai haluaako omistaja tsekin useammin?
 8. **Remonttijäämien ajoitus**: hyväksytäänkö "välipäivinä
    tuotannon rinnalla" (luku 9) — vai kokonaan Afrikan jälkeen?
+
+## 11. Päivityskirjaus 17.8. illalta (Fable; toteumat ja tarkennukset)
+
+Kirjattu illan 17 julkaisun (v823–v839) toteumista. Nämä
+tarkentavat lukuja 4–6, eivät kumoa niitä.
+
+### 11.1 Mitatut toteumat
+
+- Täysi kaupunkilehti sisäisenä agenttityönä: **Tampere ~430 k,
+  Firenze ~510 k tokenia** (sis. kuvat, kohdekartan ja selain-
+  todennuksen). E00-viimeistely (kohdekartta + kohteet + jono):
+  **~120–130 k/kaupunki** (3 kaupungin erä ~390 k).
+- Koko ennätyspäivä (13 sisältö-/korjauserää) kulutti **27 %
+  viikon kokonaiskiintiöstä ja 41 % Fable-kiintiöstä** — Fablen
+  kulutus tuli Fablemax-ajoista (M7, integroinnit, suunnitelmat),
+  ei sisältötyöstä.
+
+### 11.2 Malli- ja effort-jako (sitova työtapa jatkossa)
+
+- **Sonnet**: mekaaninen työ — kuvien lataus/todennusjonot,
+  kontaktiarkit, karttapiirron ajot, lautadata, mapdata, QA-listat.
+- **Opus**: sisältö, jossa laatu ratkaisee — lehtitekstit, jutut,
+  luonnehdinnat, faktatyö.
+- **Fable**: vain päätoimittajuus (linjaukset, katselmoinnit,
+  julkaisut). Fablemaxia ei käytetä Afrikassa.
+- Erät ajetaan workflow-orkestrointina, jossa effort per vaihe:
+  mekaaninen matala, sisältö keskitaso, vaativin tarkistus korkea.
+
+### 11.3 Kuvalähteet (pilotti 17.8. + Flickr-testi)
+
+Neljä lähdettä, työnjako: **Commons** ensisijainen →
+**Finna** Suomi + historiakuvat (usage_B-suodatin; otsikoihin ei
+luoteta, silmätarkistus pakollinen) → **Library of Congress**
+1800–1900-luvun matkakuvastot (rights-valkolista; maa varmistetaan
+tietueesta — "Tripoli" voi olla Libanonia) → **Flickr** nykykatu-
+ja ruokakuvat (tools/hae-flickr.mjs + Actions; lisenssi aina
+getInfo-tietueesta, vain BY/BY-SA/CC0/PDM). Openverse vain
+löytöhakemistona. Ruokakuvien laatukriteerit:
+docs/moduulit/kaupunkilehti.md.
+
+### 11.4 Budjetti ja tarkistuskäytäntö
+
+- Käytössä **2 × Max 20** -tilaukset; tilinvaihto kun kokonais-
+  kiintiö ~80 % tai Fable ~85 %. Kapulanvaihto: puhdas työpuu,
+  erät julkaistu tai haaroissa, merkintä viesti-fable.md:hen.
+- **Omistajan tarkistus tapahtuu suoraan pelissä** (linjaus 17.8.
+  illalla): kontaktiarkkeja ei enää toimiteta, julkaisu heti kun
+  portit ovat vihreät. Tämä korvaa luvun 4 kohdan 5 arkkivaiheen
+  ja luvun 10 kohdan 4 kuittausmekaniikan — lähtölupa Afrikkaan
+  on silti omistajan.
+- E00 on valmis ja julkaistu (v835–v836); E0 voidaan käynnistää
+  lähtöluvasta.
