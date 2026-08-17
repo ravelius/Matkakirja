@@ -101,15 +101,16 @@ test('voimaTasolle laskee oikean suunnan', () => {
 test('kertoja väistää taustan ja laskuri palautuu', async () => {
   // Omistaja: "Vieläkin on vaikea kuulla puhetta." Syy oli, ettei
   // kertoja väistänyt taustaa lainkaan — vain näyte ja zoomausääni.
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
-  assert.match(ui, /puheAlkoi\(\)/, 'kertoja ei ilmoita väistöstä');
-  assert.match(ui, /puheLoppui\(\)/, 'väistöä ei vapauteta');
-  // Molemmat kertojat: avausteksti ja päiväkirja.
-  const kutsut = [...ui.matchAll(/this\.merkitsePuhuja\(/g)].length;
+  // Luennan koneisto muutti js/luenta.js:ään remontin M6:ssa.
+  const luenta = readFileSync(new URL('../js/luenta.js', import.meta.url), 'utf8');
+  assert.match(luenta, /puheAlkoi\(\)/, 'kertoja ei ilmoita väistöstä');
+  assert.match(luenta, /puheLoppui\(\)/, 'väistöä ei vapauteta');
+  // Molemmat kertojat: avausteksti ja päiväkirja. Määrittely ei ole kutsu.
+  const kutsut = [...luenta.matchAll(/(?<!function )merkitsePuhuja\(ui/g)].length;
   assert.ok(kutsut >= 2, `vain ${kutsut} kertojaa merkitty — molemmat tarvitaan`);
   // Pysäytys vapauttaa, muuten laskuri jäisi plussalle eikä tausta
   // palaisi enää koskaan täyteen voimaan.
-  assert.match(ui, /vapautaPuhuja\(audio\)/);
+  assert.match(luenta, /vapautaPuhuja\(ui, audio\)/);
 
   const { puheAlkoi, puheLoppui, nollaaPuhujat } = await import('../js/ambience-stream.js');
   nollaaPuhujat();
@@ -171,13 +172,15 @@ test('jokainen luennan lopetus vapauttaa myös puhujan', () => {
    * jokaiselta luennan pudottavalta kohdalta erikseen: jos pudotat
    * luennan, vapauta se.
    */
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  // Luennan koneisto muutti js/luenta.js:ään remontin M6:ssa; funktiot
+  // ovat nyt moduulitasolla (export function X(ui, ...)).
+  const ui = readFileSync(new URL('../js/luenta.js', import.meta.url), 'utf8');
 
-  /** Metodin runko nimellä: seuraavaan sarakkeeseen 2 asti. */
+  /** Funktion runko nimellä: seuraavaan sarakkeeseen 0 asti. */
   const runko = (nimi) => {
-    const alku = ui.indexOf(`\n  ${nimi}(`);
-    assert.ok(alku > 0, `${nimi}: metodia ei löydy ui.js:stä`);
-    return ui.slice(alku, ui.indexOf('\n  }\n', alku));
+    const alku = ui.indexOf(`\nexport function ${nimi}(`);
+    assert.ok(alku > 0, `${nimi}: funktiota ei löydy luenta.js:stä`);
+    return ui.slice(alku, ui.indexOf('\n}\n', alku));
   };
 
   /*
@@ -195,7 +198,7 @@ test('jokainen luennan lopetus vapauttaa myös puhujan', () => {
    * määritelty kahdesti.
    */
   assert.equal(
-    [...ui.matchAll(/\n {2}haivyta\w*\(/g)].map((m) => m[0].trim()).filter((n, i, l) => l.indexOf(n) !== i).length,
+    [...ui.matchAll(/\nexport function (haivyta\w*)\(/g)].map((m) => m[1]).filter((n, i, l) => l.indexOf(n) !== i).length,
     0,
     'kaksi saman nimistä häivytysmetodia — myöhempi ylikirjoittaa aiemman äänettömästi',
   );
@@ -213,7 +216,7 @@ test('jokainen luennan lopetus vapauttaa myös puhujan', () => {
    * luennat-joukosta, on lopetuskohta ja sen on vapautettava puhuja.
    * Näin uusi lopetusreitti ei pääse syntymään ilman vapautusta.
    */
-  const metodit = [...ui.matchAll(/\n {2}([a-zA-ZäöåÄÖÅ][\w]*)\(/g)].map((m) => m[1]);
+  const metodit = [...ui.matchAll(/\nexport function ([a-zA-ZäöåÄÖÅ][\w]*)\(/g)].map((m) => m[1]);
   for (const nimi of new Set(metodit)) {
     const teksti = runko(nimi);
     if (!/luennat\?\.(delete|clear)\(/.test(teksti)) continue;
