@@ -30,8 +30,8 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 ## Opus — toimitus: lehdet ja koodi
 
 - **Matkasanomat:** lehtisivut, aihesivut, kuvat, kartat, mediat,
-  nähtävyysjutut, menovinkit — resepti docs/tutki-aiheet.md ja
-  docs/tyolista-opukselle.md.
+  nähtävyysjutut, menovinkit — resepti docs/moduulit/kaupunkilehti.md +
+  docs/moduulit/maalehti.md ja docs/tyolista-opukselle.md.
 - **UI-koodi, rakenneuudistukset ja työkalut** (esim. kaupunki/maa-
   lehtijako, Maiden tiedot -varuste).
 - **Speksioppi (omistajan havainto 16.8.2026):** tarkasti rajattu

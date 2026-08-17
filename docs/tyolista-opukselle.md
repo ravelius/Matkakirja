@@ -1078,7 +1078,7 @@ todisti monistuksen: pelkkää dataa, ei koodimuutoksia. Seuraavat
 maapaketit tässä järjestyksessä: Ranska, USA, Japani, Brasilia,
 Australia — yksi maa per PR, kaupunkikansi samassa erässä.
 
-**Vaiheistettu monistusohje on docs/tutki-aiheet.md:n lopussa**
+**Vaiheistettu monistusohje on docs/moduulit/maalehti.md:ssä**
 ("Lehtimaan monistusohje") — se on kirjoitettu niin, että sen voi
 ajaa läpi ilman aiempaa kontekstia. Seuraa sitä kohta kohdalta,
 erityisesti kuvien silmätarkistusta ja uutislähteen testausta.
@@ -1213,10 +1213,10 @@ Tason osat kaupunkia kohti:
    kuninkaan päivä); Ruotsi: Juhlat (juhannus, Lucia, kräftskiva);
    Britannia/Lontoo: Urheilu (jalkapallon synty, Wimbledon); Egypti:
    Rakennukset (pyramidit-insinöörinäkökulma). Sama nostomuoto ja
-   mitat kuin muillakin aiheilla (docs/tutki-aiheet.md), enintään 9
+   mitat kuin muillakin aiheilla (docs/moduulit/kaupunkilehti.md), enintään 9
    aihetta per lehti.
 6. **Musiikki soi**: musiikkiNayte (vapaa äänite, mp3/transkoodi) tai
-   esikuuntelu-hakutermi — ohje docs/tutki-aiheet.md:ssä. Tehty
+   esikuuntelu-hakutermi — ohje docs/moduulit/kaupunkilehti.md:ssä. Tehty
    kaikille viidelle maalle v325; uusille maille alusta asti.
 7. **Sarjakuva lehden viimeiseksi aiheeksi** (7.8.2026, malli DEU:
    Max ja Morits): maan klassikko, jonka tekijä on ollut kuolleena
@@ -1294,7 +1294,7 @@ Muista joka PR:ssä: kuvien silmätarkistus 480 px, Playwright-kaappaukset
 Omistajan visio ("Tee vain kaikki"): kansisivullisen kaupungin
 Tutki-ikkuna on paikallislehti. Kuusi osaa, suunnittelusessio toteuttaa
 itse — Opuksen ei tarvitse ottaa näistä paketteja, mutta uudet maapaketit
-saavat noudattaa lehtimallia (resepti: docs/tutki-aiheet.md).
+saavat noudattaa lehtimallia (resepti: docs/moduulit/kaupunkilehti.md).
 
 1. ✅ v270: Etusivutaitto — masto (ylärivi, kaupungin nimi isolla,
    päiväysrivi), kansiosio etusivulle, maa omana osastonaan samalle
@@ -7013,7 +7013,7 @@ kokoisena. Mittaus paljasti sen, koodin lukeminen ei olisi.
 
 ## v307 — Espanjan lehtipaketti: Madrid ja Espanja (6.8.2026)
 
-Neljäs lehtimaa monistusohjeen (docs/tutki-aiheet.md) mukaan, kohta
+Neljäs lehtimaa monistusohjeen (docs/moduulit/maalehti.md) mukaan, kohta
 kohdalta. Sama maaosasto palvelee Madridia, Barcelonaa ja Granadaa.
 
 **Kansi.** Goyan Madrid galleriana (San Isidron niitty pääkuvana, viisi

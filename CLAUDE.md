@@ -29,8 +29,8 @@ Pages-julkaisussa — dist/-kansiota EI committoida, historia paisuisi).
   kirjoitetaan (prosessi, kiintiöt, tarkistuslistat).
 - Perustuslaki (viisi pilaria) on Raamatun osiossa "Perustuslaki";
   tekniset jatkeet (laudan hyväksyminen, etukäteispuskuri) CONTRIBUTING.md:ssä.
-- docs/tutki-aiheet.md ja docs/tyolista-opukselle.md — lehtimalli
-  ja lehtityön ohjeet.
+- docs/moduulit/kaupunkilehti.md, docs/moduulit/maalehti.md ja
+  docs/tyolista-opukselle.md — lehtimalli ja lehtityön ohjeet.
 
 ## Tärkeimmät säännöt
 

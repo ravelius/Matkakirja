@@ -451,7 +451,8 @@ export const RAAMATTU = {
           + '(vain Fable kirjoittaa).',
         'docs/roolitus.md — työnjako, viestintä, julkaisusäännöt, '
           + 'pistokokeet.',
-        'docs/tutki-aiheet.md · docs/tyolista-opukselle.md · '
+        'docs/moduulit/kaupunkilehti.md · '
+          + 'docs/moduulit/maalehti.md · docs/tyolista-opukselle.md · '
           + 'docs/tyolista-maxille.md · docs/moduulit/tarinakaari.md '
           + '· docs/mantereen-resepti.md · '
           + 'docs/kuvakasikirjoitukset.md — sisältöreseptit ja '
