@@ -1633,7 +1633,50 @@ export class UI {
     // clientHeight ulottuu loveuksen ja kotipalkin ali, koska sivu on
     // viewport-fit=cover. Katon on siis annettava ne takaisin.
     const turvat = turva('--turva-yla') + turva('--turva-ala');
+    /*
+     * PUHELIMEN LEHTI ON KOKO RUUTU — SIITÄ EI VÄHENNETÄ MITÄÄN
+     * (omistajan kaappaus 17.8.2026 iPhonella, Berliinin lehti:
+     * *"lehtidialogin alareunaan jää sumennettu vaakakaista, jonka
+     * takaa näkyy kartta, ja alanavigointi jää sen alle"*).
+     *
+     * CSS:ssä kapean ruudun (<700 px) lehti on tarkoituksella
+     * `inset: 0; margin: 0; height: 100dvh` ja turva-alueet varataan
+     * KORTIN PEHMUSTEENA (`padding-bottom: 2.6rem + safe-area`), ei
+     * korkeutta kaventamalla. Tämä pikselikatto kuitenkin vähensi
+     * 1,6 remiä JA molemmat turva-alueet myös siellä — ja koska arkki
+     * on ankkuroitu ylös (top: 0), koko vähennys valui yhdeksi
+     * tyhjäksi kaistaksi ALAREUNAAN: mitattuna 25,6 + 59 + 34 =
+     * 119 px eli 14 % iPhonen ruudusta. Kaistan läpi kuulsi kartta
+     * dialogin sumennetun ::backdropin takaa, ja lehden alanapit
+     * jäivät sen yläpuolelle mutta ruudun alalaidasta katsottuna
+     * "kaistan taakse".
+     *
+     * Kapealla ruudulla katto on siis mitattu näkymä sellaisenaan —
+     * ja se kirjoitetaan myös korkeudeksi, koska juuri sen 100dvh on
+     * altis jumiutumaan taustapaluussa (sama syy kuin koko
+     * pikselimitoituksella: ks. mitoitaArkki). Leveällä ruudulla
+     * arkki kelluu keskitettynä paperina, jolloin turva-alueiden
+     * vähennys on oikein — ja nähtävyysarkki on keskitetty myös
+     * puhelimessa (.dialog.nahtavyys-arkki, margin: auto), joten se
+     * pitää vanhan laskun kaikilla leveyksillä.
+     */
+    const leveys = this.nakymanLeveys || this.mittaaNakyma();
+    const kapea = leveys >= NAKYMAN_VAHIMMAISLEVEYS && leveys < 700;
     for (const arkki of arkit) {
+      if (kapea && !arkki.classList.contains('nahtavyys-arkki')) {
+        const taysi = korkeus ? `${korkeus}px` : '';
+        for (const el of [arkki, arkki.querySelector('.dialog-card')]) {
+          if (!el) continue;
+          el.style.maxHeight = taysi;
+          el.style.height = taysi;
+        }
+        continue;
+      }
+      // Leveä ruutu (tai nähtävyysarkki): mahdollinen kapean tilan
+      // inline-korkeus pois, muuten se jäisi kääntyessä voimaan.
+      arkki.style.height = '';
+      const kortinKorkeus = arkki.querySelector('.dialog-card');
+      if (kortinKorkeus) kortinKorkeus.style.height = '';
       /*
        * Pehmuste on sama kuin arkin omassa CSS-säännössä: lehdellä
        * 1,6rem, nähtävyys- ja opasarkilla 3rem. Jos tämä olisi
@@ -7545,10 +7588,16 @@ export class UI {
     // tai muun dialogikäytön tielle.
     this.arrivalDialog.style.width = '';
     this.arrivalDialog.style.maxWidth = '';
+    // Myös pystymitat: sama dialogi palvelee ilman arkki-luokkaa
+    // (saapumiskortti), eikä sille kuulu lehden pikselikorkeus.
+    this.arrivalDialog.style.height = '';
+    this.arrivalDialog.style.maxHeight = '';
     const arkkiKortti = this.arrivalDialog.querySelector('.dialog-card');
     if (arkkiKortti) {
       arkkiKortti.style.width = '';
       arkkiKortti.style.maxWidth = '';
+      arkkiKortti.style.height = '';
+      arkkiKortti.style.maxHeight = '';
     }
     if (this.arrivalDialog.open) this.arrivalDialog.close();
     // Tauolle jäänyt luenta jatkuu, kun palataan karttanäkymään — mutta
