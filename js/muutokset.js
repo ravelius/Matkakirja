@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 835, teksti: 'Bagdad, Teheran ja Tripoli valmiiksi: kohdekartat' },
   { v: 834, teksti: 'Lehti täyttää puhelimen ruudun; alakaista pois' },
   { v: 833, teksti: '13 uutta kaupunkia laudoille ja maailmankartalle' },
   { v: 832, teksti: 'Firenze Euroopan laudalle' },
