@@ -1,4 +1,10 @@
-# Kaaritekstien sapluuna — näin uuden maanosan tarinat kirjoitetaan
+# Tarinakaari — moduuliohje: näin uuden maanosan tarinat kirjoitetaan
+
+*(Moduuli: Tarinakaari — docs/moduulirakenne-suunnitelma.md luku 3.
+Linjaukset ja kaanon: Raamattu, docs/tarina.md ja
+docs/isoisan-raamattu.md — tämä dokumentti kertoo vain MITEN.
+Siirretty sellaisenaan tiedostosta docs/kaariteksti-sapluuna.md
+17.8.2026, dokumenttiremontin D2.)*
 
 *(Fable max 10.8.2026, omistajan tilauksesta. Tämä on pysyvä ohje:
 koko prosessi, jolla uuden laudan kaaritekstit syntyvät, kaikkine

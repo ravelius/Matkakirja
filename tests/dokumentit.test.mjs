@@ -19,8 +19,15 @@ const RAAMATTU = readFileSync(new URL('../js/tyohuone-raamattu.js', import.meta.
 const DOCS = new URL('../docs/', import.meta.url);
 
 test('jokainen docs/-ohjedokumentti on Raamatun kartalla', () => {
-  const tiedostot = readdirSync(DOCS)
-    .filter((n) => n.endsWith('.md'));
+  // Moduulikohtaiset ohjeet (docs/moduulit/, dokumenttiremontin D2)
+  // ovat ohjeita siinä missä juuritasonkin — sama karttavaatimus.
+  const tiedostot = [
+    ...readdirSync(DOCS).filter((n) => n.endsWith('.md')),
+    ...(existsSync(new URL('moduulit/', DOCS))
+      ? readdirSync(new URL('moduulit/', DOCS))
+        .filter((n) => n.endsWith('.md')).map((n) => `moduulit/${n}`)
+      : []),
+  ];
   for (const nimi of tiedostot) {
     assert.ok(RAAMATTU.includes(`docs/${nimi}`),
       `docs/${nimi} puuttuu Raamatun ohjedokumenttikartalta `
