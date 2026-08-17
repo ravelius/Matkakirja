@@ -182,6 +182,14 @@ Omistaja: *"kun nykyiset kaupungit valmiit jatka Afrikassa kaupunkien
 tekemistä valmiiksi"*. Aloitetaan siis heti kun paketti O6 (kuusi
 kaupunkia) ja O4:n lisänähtävyydet ovat maalissa.
 
+**Aluepäätös (omistaja 17.8.2026, Fable kirjasi):** Afrikan noin
+kymmenen aluekohdetta (Sahara, Ahaggar, Namib, Tšad-järvi,
+Tanganjika, Kilimandžaro, Viktorian putoukset, Orjarannikko,
+Bahr el-Ghazal, Darfur) käsitellään samoin kuin Euroopan vastaavat
+(Islanti, Lappi, Kreeta, Sisilia, Alpit): **lehti tehdään, mutta ei
+kohdekarttaa**. Sääennusteen likikoordinaatit valitaan alueen
+tunnetuimmasta pisteestä paketin O5 osan 2 tapaan.
+
 **Mitattu tilanne 16.8.2026:** Afrikan laudalla on **39 kaupunkia,
 joista lehti on yhdellä** (Kairo — ja sekin tuli Lähi-idän kautta).
 Puuttuvat 38:
