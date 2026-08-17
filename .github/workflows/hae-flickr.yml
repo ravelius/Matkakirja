@@ -1,0 +1,84 @@
+# Flickr-kuvahaku (nykyaikaiset katukuvat ja etenkin ruokakuvat, joissa
+# Commons/LoC/Europeana ovat heikkoja — ks. tools/hae-flickr.mjs ja
+# docs/moduulit/kaupunkilehti.md).
+#
+# MIKSI TÄMÄ ON OLEMASSA: avain on repon salaisuuksissa (FLICKR_API_KEY),
+# eikä sitä saa kopioida mihinkään muualle — ei keskusteluun, ei
+# tiedostoon, ei tulosteeseen. Salaisuus on luettavissa vain GitHubin
+# ajossa, joten haku ajetaan täällä ja tulos noudetaan artefaktina.
+# Sama malli kuin tools/hae-freesound.mjs + tools/hae-kaupunkikuvat.mjs.
+#
+# Ajetaan käsin (workflow_dispatch): kuvahaku on kertaluonteista
+# aineistotyötä eikä kuulu jokaiseen puskuun.
+#
+# HUOM: haettu artefakti on silmätarkistettava ennen peliin liittämistä
+# (jokainen kuva erikseen, myös lisenssin osalta) — tämä työnkulku vain
+# kokoaa ehdokkaat.
+
+name: Kuvahaku (Flickr)
+
+on:
+  workflow_dispatch:
+    inputs:
+      haku:
+        description: 'Hakusanat (esim. "street food market Bangkok")'
+        required: true
+      lat:
+        description: 'Paikkarajaus: leveysaste (valinnainen, esim. 13.75)'
+        required: false
+        default: ''
+      lon:
+        description: 'Paikkarajaus: pituusaste (valinnainen, esim. 100.50)'
+        required: false
+        default: ''
+      sade:
+        description: 'Hakusäde kilometreinä lat/lon:in kanssa'
+        required: false
+        default: '10'
+      maara:
+        description: 'Kuinka monta kuvaa haetaan'
+        required: false
+        default: '20'
+
+permissions:
+  contents: read
+
+jobs:
+  hae:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Hae kuvat Flickristä
+        env:
+          # Avain tulee repon salaisuuksista, vain tälle askeleelle.
+          # Sitä ei tulosteta eikä kirjoiteta lokiin missään vaiheessa.
+          FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
+          # Syötteet ympäristömuuttujina, ei suoraan komentoriville
+          # upotettuna — käyttäjän hakusana voi sisältää merkkejä,
+          # jotka rikkoisivat shell-tulkinnan tai sallisivat injektion.
+          HAKU: ${{ inputs.haku }}
+          LAT: ${{ inputs.lat }}
+          LON: ${{ inputs.lon }}
+          SADE: ${{ inputs.sade }}
+          MAARA: ${{ inputs.maara }}
+        run: |
+          set -euo pipefail
+          args=(--haku "$HAKU" --maara "$MAARA")
+          if [ -n "$LAT" ] && [ -n "$LON" ]; then
+            args+=(--lat "$LAT" --lon "$LON" --sade "$SADE")
+          fi
+          node tools/hae-flickr.mjs "${args[@]}"
+
+      - name: Talleta aineisto (kuvat + manifesti, silmätarkistukseen)
+        uses: actions/upload-artifact@v4
+        with:
+          name: flickr-aineisto
+          path: tools/flickr-aineisto/
+          if-no-files-found: error
+          retention-days: 14

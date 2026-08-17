@@ -128,6 +128,57 @@ aina kun voit**, jotta kuvakkeet pysyvät tuttuina kaupungista toiseen.
 - Kuvat päätyvät R2-peiliin itsestään: push mainiin käynnistää
   `.github/workflows/peilaa.yml`:n, joka peilaa uudet viittaukset.
 
+### Flickr täydentävänä lähteenä
+
+*(Työkalu: `tools/hae-flickr.mjs` + `.github/workflows/hae-flickr.yml`.)*
+
+Commons, Library of Congress ja Europeana (ks. `tools/hae-kaupunkikuvat.mjs`)
+painottuvat vanhaan arkistomateriaaliin ja institutionaaliseen kuvastoon.
+Käytä Flickriä TÄYDENTÄVÄNÄ lähteenä silloin kun ne eivät riitä —
+erityisesti kahdessa tilanteessa:
+
+1. **Nykyaikainen katukuva.** Commonsin kaupunkikategoriat ovat usein
+   vanhoja tai virastomaisia; Flickrissä on tuoretta, elävää katukuvaa.
+2. **Ruokakuvat.** Tämä on juuri se aihe, jossa nykyiset kuvat ovat
+   esteettisesti heikkoja — arkistokuvissa ruokaa on tuskin ollenkaan,
+   ja Flickr on paras vapaasti lisensoitu lähde sille.
+
+**Todennusputki** (kaksivaiheinen, samaan tapaan kuin Commons-haku):
+`flickr.photos.search` hakee ehdokkaat lisenssirajattuna (id:t 4, 5, 9,
+10 — CC BY 2.0, CC BY-SA 2.0, CC0, PDM; EI koskaan NC- tai
+ND-lisenssejä), mutta lisenssi VARMISTETAAN jokaiselle kuvalle vielä
+erikseen `flickr.photos.getInfo`-kutsulla ennen latausta. Tekijä
+poimitaan `owner.realname`:sta (tai `username`, jos realname puuttuu) —
+EI tiedostonimestä. Alle 1200 px kuvat hylätään kuten Commonsissakin.
+
+**Etusija instituutioille ja vakiintuneille kuvaajille.** Flickrissä
+lisenssin merkitsee lataaja itse, ei mikään yhteisövalvottu
+mekanismi — toisin kuin Commonsissa. Siksi käyttäjän ilmoittamaan
+lisenssiin luotetaan lähtökohtaisesti vain vakiintuneilta tileiltä
+(kaupungin matkailuvirasto, tunnettu valokuvaaja, Flickr Commons
+-osallistuja tms.), ja JOKAINEN Flickr-kuva katsotaan silmin ennen
+peliin liittämistä, aivan kuten Commons-kuvatkin.
+
+### Ruokakuvien laatukriteerit
+
+Nykyiset ruokakuvat ovat heikkoja — näitä kriteerejä käytetään sekä
+Flickr-ehdokkaita valittaessa että Commons-ehdokkaita seulottaessa:
+
+- **Luonnonvalo, ei salamavälähdystä.** Salama litistää ruoan ja
+  tekee siitä keinotekoisen näköisen; päivänvalo tai pehmeä
+  sisävalo toimii aina paremmin.
+- **Läheltä kuvattu**, annos tai valmistustyö täyttää kuva-alan —
+  ei kaukaa otettua ravintolan yleiskuvaa, josta ruoka erottuu
+  vaivoin.
+- **Annos tai tekeminen pääosassa.** Käsi joka muotoilee taikinaa,
+  wokki joka savuaa, tori jolla kauppias punnitsee — tekeminen
+  kertoo yhtä paljon kuin lopputulos.
+- **EI laminoituja ruokalistoja, hintakylttejä tai pöytäasetelmia**
+  ilman ruokaa. Ne eivät ole ruokakuvia vaan kuvia ruokalistoista.
+- **Tori, keittiö ja käsityö ovat parempia kuin studiomainen
+  ravintola-annos.** Isoisän matkapäiväkirjan henki on paikan päällä
+  nähtyä arkea, ei ravintola-arvostelun kansikuvaa.
+
 ## Kulttuurivisa ja litteä taulu
 
 Kulttuurivisa (`kysymys`) asuu yhä litteässä taulussa

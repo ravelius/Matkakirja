@@ -1,0 +1,41 @@
+{
+  "photo": {
+    "id": "53201000003",
+    "secret": "ccc333",
+    "server": "65535",
+    "farm": 66,
+    "dateuploaded": "1668000000",
+    "isfavorite": 0,
+    "license": "9",
+    "safety_level": "0",
+    "rotation": 0,
+    "owner": {
+      "nsid": "33333333@N00",
+      "username": "citywalker",
+      "realname": "",
+      "location": "",
+      "path_alias": "citywalker"
+    },
+    "title": { "_content": "Old town street corner" },
+    "description": { "_content": "A quiet cobblestone street corner in the old town, taken with a phone camera." },
+    "dates": {
+      "posted": "1668000000",
+      "taken": "2022-11-20 16:45:00",
+      "takengranularity": "0",
+      "takenunknown": "0",
+      "lastupdate": "1668000100"
+    },
+    "views": "12",
+    "tags": {
+      "tag": [
+        { "id": "1", "author": "33333333@N00", "raw": "street", "_content": "street" }
+      ]
+    },
+    "urls": {
+      "url": [
+        { "type": "photopage", "_content": "https://www.flickr.com/photos/citywalker/53201000003/" }
+      ]
+    }
+  },
+  "stat": "ok"
+}

@@ -1,0 +1,42 @@
+{
+  "photo": {
+    "id": "53201000004",
+    "secret": "ddd444",
+    "server": "65535",
+    "farm": 66,
+    "dateuploaded": "1707000000",
+    "isfavorite": 0,
+    "license": "5",
+    "safety_level": "0",
+    "rotation": 0,
+    "owner": {
+      "nsid": "44444444@N00",
+      "username": "torikuvaaja",
+      "realname": "Maria Torikuvaaja",
+      "location": "Helsinki, Finland",
+      "path_alias": "torikuvaaja"
+    },
+    "title": { "_content": "Market stall vendor arranging vegetables" },
+    "description": { "_content": "A market vendor arranging fresh vegetables on a stall table in daylight." },
+    "dates": {
+      "posted": "1707000000",
+      "taken": "2024-02-10 11:00:00",
+      "takengranularity": "0",
+      "takenunknown": "0",
+      "lastupdate": "1707000100"
+    },
+    "views": "301",
+    "tags": {
+      "tag": [
+        { "id": "1", "author": "44444444@N00", "raw": "market", "_content": "market" },
+        { "id": "2", "author": "44444444@N00", "raw": "vegetables", "_content": "vegetables" }
+      ]
+    },
+    "urls": {
+      "url": [
+        { "type": "photopage", "_content": "https://www.flickr.com/photos/torikuvaaja/53201000004/" }
+      ]
+    }
+  },
+  "stat": "ok"
+}
