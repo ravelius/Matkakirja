@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 840, teksti: 'Oppaan karussellikuvan yläpuolinen tumma palkki pois' },
   { v: 839, teksti: 'Kartta tarkentuu heti nopean zoomailun jälkeen' },
   { v: 838, teksti: 'Turhat suorat reitit pois uusien kaupunkien tieltä' },
   { v: 837, teksti: 'Kartta ei jää jumiin taustapaluussa' },

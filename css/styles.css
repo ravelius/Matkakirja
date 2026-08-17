@@ -11645,7 +11645,43 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * .arrival-kuva-laskuri-luokista, pyyhkäisy vaihtaa kuvaa (ui.js).
  * Ikkuna tarvitsee vain ankkurin nuolille ja pilleille.
  */
-.karuselli-ikkuna { position: relative; }
+/*
+ * IKKUNAN ON OLTAVA TÄSMÄLLEEN KUVAN KOKOINEN (omistajan kuvakaappaus
+ * 17.8.2026 iPadilla, Firenzen Matkailijan opas: *"karussellikuvan
+ * yläosaan piirtyy tumma alue — johtuu karusellista"*).
+ *
+ * Nuolet ovat `position: absolute; top: 0; bottom: 0` tämän ikkunan
+ * suhteen, joten ne maalaavat laitaliukuvärinsä TÄSMÄLLEEN sinne, minne
+ * ikkuna yltää. Oppaan ensimmäisessä jaksossa kainalotaulu kelluu
+ * oikealla (`.opas-kainalo`, float: right), ja silloin nämä kaksi
+ * laatikkoa käyttäytyvät eri tavalla:
+ *
+ *   – KUVA on lohkotason korvattu elementti, eikä sellainen saa CSS:n
+ *     mukaan mennä kellukkeen päälle: se työntyi kellukkeen ali.
+ *   – IKKUNA on tavallinen lohko, joka saa mennä kellukkeen ali: se
+ *     alkoi siitä, mihin teksti loppui.
+ *
+ * Ikkunasta tuli siis kuvaa korkeampi, ja erotus jäi kuvan YLÄPUOLELLE
+ * — juuri sinne maalautuivat molempien nuolialueiden tummat
+ * liukuvärit. Mitattuna iPadin pystyasennossa 29 px ja vaaka-asennossa
+ * 108 px leveä palkki paperin (ja kainalotaulun alarivien) päällä.
+ *
+ * `clear: both` vie koko kehyksen kellukkeiden alapuolelle, jolloin
+ * ikkuna alkaa samasta kohdasta kuin kuva — kuva oli siellä jo ennen
+ * tätä, joten taitto ei muutu, vain haamupalkki katoaa. `flow-root`
+ * on vyö henkselien lisäksi: oma lohkomuotoiluympäristö pitää ikkunan
+ * kuvan mittaisena, vaikka eteen tulisi joskus toinen kelluke.
+ *
+ * Nuolialueita EI kavenneta: laitanapautus on oppaan ja lehden yhteinen
+ * ele (omistajan toive 10.8.2026), ja liukuväri on se, joka kertoo
+ * laidan olevan selattava. Vika oli mitoituksessa, ei ominaisuudessa.
+ */
+.nahtavyys-karuselli { clear: both; }
+
+.karuselli-ikkuna {
+  position: relative;
+  display: flow-root;
+}
 
 /* Henkilölinkki nähtävyystekstissä: nimi näyttää lehden linkiltä
  * (sama muste, pisteviiva-alleviivaus) mutta on nappi, joka avaa

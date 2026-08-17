@@ -4327,6 +4327,49 @@ test('kapealla ruudulla lehtiarkki saa koko mitatun korkeuden', () => {
 });
 
 /*
+ * ROSKAMITTA EI SAA PALAUTTAA dvh:TA VOIMAAN.
+ *
+ * mitoitaArkinKorkeus poisti katon kokonaan, kun mittaus palautti
+ * nollan — ja silloin arkki jäi CSS:n `100dvh`-säännön varaan. Juuri
+ * se dvh jumiutuu WKWebView'n taustapaluussa: liian pieneksi jäänyt
+ * arkki jättää alleen sumennetun ::backdropin tumman kaistan (sama
+ * oire kuin v834:ssä puhelimen lehdessä). Roskamitalla pidetään siis
+ * viimeisin kelvollinen PIKSELImitta, ei dvh:ta.
+ */
+test('arkin katto ei putoa dvh:n varaan roskamitalla', () => {
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const katto = ui.match(/mitoitaArkinKorkeus\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.ok(katto, 'mitoitaArkinKorkeus puuttuu ui.js:stä');
+  assert.match(katto, /if \(mitattu\) this\.arkinKelpoKorkeus = mitattu;/,
+    'kelvollista korkeusmittaa ei oteta talteen');
+  assert.match(katto, /mitattu \|\| this\.arkinKelpoKorkeus/,
+    'roskamitalla ei palata viimeisimpään kelvolliseen mittaan — katto putoaa jumiutuvan dvh:n varaan');
+});
+
+/*
+ * KARUSELLIN IKKUNA ON TÄSMÄLLEEN KUVAN KOKOINEN.
+ *
+ * Omistajan kuvakaappaus 17.8.2026 iPadilla (Firenzen Matkailijan
+ * opas): karussellikuvan yläpuolelle piirtyi tumma palkki. Nuolet ovat
+ * `top: 0; bottom: 0` ikkunan suhteen, ja kun oppaan kainalotaulu
+ * kelluu oikealla, KUVA (lohkotason korvattu elementti) väistää
+ * kellukkeen mutta IKKUNA (tavallinen lohko) ei — ikkunasta tuli
+ * kuvaa korkeampi ja erotukseen maalautuivat nuolten liukuvärit
+ * (mitattu 29 px pystyssä, 108 px vaakana).
+ */
+test('karusellin ikkuna ei jää kuvaa korkeammaksi kellukkeen vieressä', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  assert.match(css, /\.nahtavyys-karuselli \{[^}]*clear:\s*both/,
+    'karusellikehys ei väistä kellukkeita (clear) — ikkuna venyy kuvan yläpuolelle');
+  const ikkuna = css.match(/\.karuselli-ikkuna \{[\s\S]*?\n\}/)?.[0] ?? '';
+  assert.ok(ikkuna, '.karuselli-ikkuna puuttuu tyyleistä');
+  assert.match(ikkuna, /position:\s*relative/,
+    'nuolet tarvitsevat ikkunalta asemointiankkurin');
+  assert.match(ikkuna, /display:\s*flow-root/,
+    'ikkuna ei muodosta omaa lohkomuotoiluympäristöä — kelluke venyttää sen taas kuvan yli');
+});
+
+/*
  * KORKEUDEN MUUTOS LAUKAISEE ELVYTYKSEN.
  *
  * Omistajan havainto 16.8.2026 iPadilla: peli jää tilaan, jossa
