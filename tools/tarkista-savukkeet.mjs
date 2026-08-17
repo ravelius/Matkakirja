@@ -25,6 +25,10 @@
 //      olion dokumentoitu kenttä (ui.js:n rakentimen literaali) —
 //      väärä avain tarkoittaisi, että savuke luulee nollaavansa
 //      tilaa, jota peli ei lue.
+//   4. ui.kartta.X (remontin M7): X:n on oltava Kartta-luokan metodi
+//      (js/kartta.js) tai kartta*-tiedostojen asettama kenttä. Ilman
+//      tätä ui.kartta ohittuisi pelkkänä kenttänä ja siirron katkoma
+//      savuke vaikenisi — juuri se M3–M5a:n vika, jota vartija vahtii.
 //
 // RAJAT: vain ensimmäinen pistetaso tarkistetaan (ui.game.x ohittuu
 // game-kenttänä) eikä destrukturointia (const { x } = ui) tunnisteta —
@@ -32,7 +36,7 @@
 // mieluummin kuin vaikenee: jos jäsennys tuottaa epäilyttävän vähän
 // nimiä, ajo päättyy virheeseen.
 
-import { readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -83,6 +87,36 @@ function lueKentat(puhdasUi) {
   return kentat;
 }
 
+// Kartta-luokan metodit ja kartta*-tiedostojen asettamat kentät
+// (remontin M7). Ennen siirtoa js/kartta.js:ää ei ole — silloin joukot
+// ovat tyhjät ja jokainen ui.kartta.X-viittaus on vika, ei ohitus.
+function lueKartta() {
+  const metodit = new Set();
+  const kentat = new Set();
+  if (!existsSync(join(root, 'js/kartta.js'))) return { metodit, kentat };
+  for (const tiedosto of readdirSync(join(root, 'js'))) {
+    if (!/^kartta.*\.js$/.test(tiedosto)) continue;
+    const puhdas = tyhjaaEiKoodi(read(join('js', tiedosto)));
+    const alku = puhdas.indexOf('export class Kartta');
+    if (alku >= 0) {
+      const runko = puhdas.slice(alku);
+      const re = new RegExp(`^  (?:static\\s+|async\\s+|get\\s+|set\\s+)*(${NIMI})\\s*\\(`, 'gm');
+      for (const m of runko.matchAll(re)) metodit.add(m[1]);
+    }
+    const asetus = `\\s*(?:\\?\\?=|\\|\\|=|&&=|=(?!=))`;
+    for (const m of puhdas.matchAll(new RegExp(`\\bthis\\.(${NIMI})${asetus}`, 'g'))) {
+      kentat.add(m[1]);
+    }
+    for (const m of puhdas.matchAll(new RegExp(`\\bkartta\\.(${NIMI})${asetus}`, 'g'))) {
+      kentat.add(m[1]);
+    }
+  }
+  if (metodit.size > 0 && metodit.size < 30) {
+    throw new Error(`Kartta-luokasta löytyi vain ${metodit.size} metodia — tarkista lukutapa`);
+  }
+  return { metodit, kentat };
+}
+
 // lehtitila-olion dokumentoidut kentät (ui.js:n rakentimen literaali).
 function lueLehtitilanKentat(puhdasUi) {
   const alku = puhdasUi.indexOf('this.lehtitila = {');
@@ -113,16 +147,17 @@ function savukeTiedostot() {
   return listat.sort();
 }
 
-// Poimii tiedostosta kaikki ui.X- ja ui.lehtitila.X-viittaukset.
-// Palauttaa { rivi, nimi, lehtitilanJasen, kutsu, kirjoitus }.
+// Poimii tiedostosta kaikki ui.X-, ui.lehtitila.X- ja ui.kartta.X-
+// viittaukset. Palauttaa { rivi, nimi, omistaja, jasen, kutsu, kirjoitus }.
 function poimiViittaukset(puhdas) {
   const viittaukset = [];
   const re = new RegExp(
-    `\\bui\\.(?:(lehtitila)(?:\\?\\.|\\.)(${NIMI})|(${NIMI}))`, 'g',
+    `\\bui\\.(?:(lehtitila|kartta)(?:\\?\\.|\\.)(${NIMI})|(${NIMI}))`, 'g',
   );
   for (const m of puhdas.matchAll(re)) {
     const nimi = m[3] ?? m[1];
-    const lehtitilanJasen = m[2] ?? null;
+    const omistaja = m[2] ? m[1] : null;
+    const jasen = m[2] ?? null;
     const jatko = puhdas.slice(m.index + m[0].length).replace(/^\s+/, '');
     const kutsu = jatko.startsWith('(') || jatko.startsWith('?.(');
     const kirjoitus = /^(?:\?\?=|\|\|=|&&=|=(?![=>]))/.test(jatko);
@@ -131,7 +166,7 @@ function poimiViittaukset(puhdas) {
     // ui.avaaNahtavyys-kietaisu kaatui hiljaa M4:n jälkeen.
     const sidonta = jatko.startsWith('.bind(');
     const rivi = puhdas.slice(0, m.index).split('\n').length;
-    viittaukset.push({ rivi, nimi, lehtitilanJasen, kutsu, kirjoitus, sidonta });
+    viittaukset.push({ rivi, nimi, omistaja, jasen, kutsu, kirjoitus, sidonta });
   }
   return viittaukset;
 }
@@ -142,6 +177,7 @@ const puhdasUi = tyhjaaEiKoodi(read('js/ui.js'));
 const metodit = lueMetodit(puhdasUi);
 const kentat = lueKentat(puhdasUi);
 const lehtitila = lueLehtitilanKentat(puhdasUi);
+const kartta = lueKartta();
 
 const viat = [];
 let viittauksia = 0;
@@ -150,13 +186,25 @@ for (const tiedosto of savukeTiedostot()) {
   viittauksia += viittaukset.length;
   // Savukkeen itse kirjoittamat kentät (mittarit, monkeypatchit)
   // kelpaavat saman tiedoston lukuihin ja kutsuihin.
-  const omat = new Set(viittaukset.filter((v) => v.kirjoitus && !v.lehtitilanJasen)
+  const omat = new Set(viittaukset.filter((v) => v.kirjoitus && !v.jasen)
     .map((v) => v.nimi));
+  const omatKartan = new Set(viittaukset
+    .filter((v) => v.kirjoitus && v.omistaja === 'kartta').map((v) => v.jasen));
   for (const v of viittaukset) {
-    if (v.lehtitilanJasen) {
-      if (!lehtitila.has(v.lehtitilanJasen)) {
-        viat.push(`${tiedosto}:${v.rivi} ui.lehtitila.${v.lehtitilanJasen} ei ole `
+    if (v.omistaja === 'lehtitila') {
+      if (!lehtitila.has(v.jasen)) {
+        viat.push(`${tiedosto}:${v.rivi} ui.lehtitila.${v.jasen} ei ole `
           + 'lehtitila-olion kenttä (ks. js/ui.js rakentimen literaali)');
+      }
+      continue;
+    }
+    if (v.omistaja === 'kartta') {
+      // Sidonta vaatii toteutuksen nimen; kutsulle ja luvulle kelpaa
+      // myös savukkeen oma kirjoitus samassa tiedostossa (kuten ui.X).
+      const loytyy = kartta.metodit.has(v.jasen) || kartta.kentat.has(v.jasen);
+      if (!loytyy && (v.sidonta || !omatKartan.has(v.jasen))) {
+        viat.push(`${tiedosto}:${v.rivi} ui.kartta.${v.jasen} ei ole Kartta-luokan `
+          + 'metodi eikä kartta*-tiedostojen asettama kenttä (js/kartta.js)');
       }
       continue;
     }
