@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v824 — lehdet toimivat kuten ennen (tila koottu yhteen olioon); pöllön nähtävyyslinkki avaa taas jutun',
   'v823 — Islanti kartalla paikallaan; sääosion luonnehdinta joka kaupungissa (avaa muutama lehti); Bagdad+Teheran hintataso',
   'v822 — tuotantosuunnitelma (docs/tuotantosuunnitelma.md): lue ja päätä',
   'v821 — remontti valmis: luenta+visa moduuleiksi, ui.js -37 %',

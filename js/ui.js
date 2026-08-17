@@ -59,7 +59,7 @@ import {
 } from './vertailu.js';
 // Remontin M4: nähtävyydet+kohdekartta ja Matkailijan opas.
 import {
-  mitoitaNahtavyysDialogi, nahtavyydenKaruselli,
+  avaaNahtavyys, mitoitaNahtavyysDialogi, nahtavyydenKaruselli,
 } from './nahtavyydet.js';
 import { taitaOpas } from './opas.js';
 // Lautojen yhdistetyt sisältötaulut, luentajoukot ja kuratoidut
@@ -8657,6 +8657,13 @@ export class UI {
   tutkiSivuja() { return tutkiSivuja(this); }
   piirraMaatiedotMaat() { return piirraMaatiedotMaat(this); }
   nahtavyydenKaruselli(kuvat) { return nahtavyydenKaruselli(this, kuvat); }
+
+  /*
+   * Ohut delegaattori: pöllön nähtävyyslinkki avaa jutun ui:n kautta.
+   * Kutsu jäi M4:ssä huomaamatta ilman delegaattoria (?.-kutsu vaikeni),
+   * ja savukevartija toi sen esiin 17.8.2026.
+   */
+  avaaNahtavyys(kohde, numero, asetukset) { return avaaNahtavyys(this, kohde, numero, asetukset); }
   avaaRaamattuLehti() { return avaaRaamattuLehti(this); }
 
   avaaTilanneLehti() { return avaaTilanneLehti(this); }
