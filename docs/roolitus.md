@@ -93,13 +93,15 @@ Työtapa on siksi tämä:
 | Rooli | Sessio-id | Kirjattu |
 | --- | --- | --- |
 | Fable | session_018vkp6HxpLR4gxZJFGscSan (uuden tilin päätoimittajasessio, kapulanvaihdon jatkaja; edellinen: session_01BPysCfxscsVyzAEYmb88Zr) | 14.8.2026 |
-| Opus sijaispäätoimittaja | session_01UYGkdCJHbFNwexqqHJ9SqA (hoiti Fablen orkestroinnin 16.–17.8. viikkolimiitin ajan erinomaisesti: v782–v805, mm. paketti O3, oppaan monistus, sääennusteet, iPad-korjaukset. Fable palasi 17.8. aamulla — sijainen jatkaa työsessiona ja raportoi VAIN Fablelle (omistajan ohje 17.8.); työjono docs/tyolista-opukselle.md, seuraavana kuuden oppaan sarjan loppu + paketti O5. Ei kirjoita Raamattuun eikä kaanoniin.) | 17.8.2026 |
-| Fable Max (remontti) | session_01Q1M9ZT5Yr1Gbi3eqUyoHHC (moduulirakenne + dokumenttiremontti docs/tyolista-maxille.md:n mukaan, haara claude/fable-max-remontti; SUUNNITELMA ensin, toteutus vasta omistajan hyväksynnällä; Fable-roolin sessio eli saa kirjoittaa Raamattuun koordinoidusti) | 17.8.2026 |
-| Opus 9 (Siperia erä 3) | session_015mZjGUdxeUyykSgPhqYKnd (Kamtšatka + Sahalin + Vladivostok haaralla claude/opus9-siperia-era3; uusi kuvatekstisääntö suoraan; EI uutisia/kohtaamisia; raportointi viesti-fable.md:llä, EI trigger-työkaluja) | 15.8.2026 |
-| Opus 11 (zoom-pilotti) | session_01EkYbtyhoS3YVFFUMsvomid (zoomattava/panoroitava kaupunkikartta, pilotti 2 VAIN Berliini haaralla claude/opus11-zoom; skaalaus 52 kaupunkiin vasta omistajan kuittauksella; raportointi viesti-fable.md:llä) | 15.8.2026 |
-| Opus 1 | session_018rsYBddUoko7DSajtpoEKy (jatkosessio 5; ME-maalehdet VALMIIT v574 — luovutuspaperi docs/arkisto/opus1-tilanne.md 1e; sessiot 1–4 arkistoitu) | 11.8.2026 |
-| Sonnet 1 | session_0184WdPeGzjAbnuXjWvquN8Q | 10.8.2026 (5. yritys; aiemmat kaatuivat source_url-vikaan, ks. arkisto/fable-tilanne) |
-| Opus 5 (koodi + kuvatyöt) | session_01PD29g5Bs2A6TQSMNnrHRDc (Opus 5 (2): toteuttaa seitsemän tähteä + lento -mekaniikkaa haaralle claude/opus5-vuorikuvat; UUSI FABLE katselmoi ja julkaisee. Vanha session_015Ezqr… arkistoitu — sen mekaniikkakartoitus ja galleriaurakka 52/52 mainissa) | 11.8.2026 |
+| Fable Max (remontti) | session_01Q1M9ZT5Yr1Gbi3eqUyoHHC (moduuli- ja dokumenttiremontti hyväksyttyjen suunnitelmien mukaan: M0–M3 + D1–D6 mainissa 17.8.; M4 odottaa Fablen "O6 mainissa" -ilmoitusta, D7 M-sarjan loppua. Herää Fablen mergeistä webhookilla; Fable-roolin sessio, saa kirjoittaa Raamattuun koordinoidusti) | 17.8.2026 |
+
+**Kaikki Opus- ja Sonnet-työsessiot arkistoitu 17.8.2026** (omistaja;
+mm. sijaispäätoimittaja v782–v805:n jälkeen, Opus 27 paketin O3
+jälkeen — historia docs/arkisto/sessiohistoria-2026-08.md).
+Sisältötyön tekevät nykyään FABLEN SISÄISET AGENTIT, jotka saavat
+tehtävänsä perustamispromptissa ja raportoivat automaattisesti —
+herätysongelmaa ei ole. Omistajan parvilupa lehtityöhön 17.8.
+(docs/tyolista-maxille.md kohta 4).
 
 ## Työn seuranta (10.8.2026 — omistajan kysymys "tekevätkö sessiot työtä?")
 
