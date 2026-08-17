@@ -153,7 +153,7 @@ const mittaa = () => sivu.evaluate(() => {
       };
     }),
     jana: document.querySelector('.kartta-mittajana')?.getBoundingClientRect().width ?? 0,
-    sivu: window.matkakirja.ui.lehtitila.tutkiSivu ?? window.matkakirja.ui.tutkiSivuIndeksi ?? null,
+    sivu: window.matkakirja.ui.lehtitila.tutkiSivu ?? null,
   };
 });
 
@@ -214,8 +214,11 @@ async function kierros(nimi, { satelliitissa = false } = {}) {
   await sivu.screenshot({ path: join(ULOS, `zoom-${KAUPUNKI}-2-${nimi}-rulla.png`), clip: laatikko });
 
   // --- raahaus panoroi eikä vaihda lehden sivua ---
-  const sivuEnnen = await sivu.evaluate(() => window.matkakirja.ui.tutkiSivuNyt
-    ?? document.querySelector('.tutki-sivu.nakyy')?.id ?? null);
+  // (tutkiSivuNyt-kenttää ei ole koskaan ollut UI:ssa — savukevartija
+  // löysi kuolleen luvun 17.8.2026; sivu tunnistetaan DOMista.)
+  const sivuEnnen = await sivu.evaluate(
+    () => document.querySelector('.tutki-sivu.nakyy')?.id ?? null,
+  );
   await sivu.mouse.move(keski.x + 160, keski.y);
   await sivu.mouse.down();
   for (let i = 1; i <= 8; i += 1) await sivu.mouse.move(keski.x + 160 - i * 30, keski.y + i * 6);
@@ -229,8 +232,9 @@ async function kierros(nimi, { satelliitissa = false } = {}) {
       && raahattu.lava.x + raahattu.lava.w >= raahattu.kehys.x + raahattu.kehys.w - 0.6,
     'panorointi pysyy kuvan reunoissa (ei valkoista rakoa)',
   );
-  const sivuJalkeen = await sivu.evaluate(() => window.matkakirja.ui.tutkiSivuNyt
-    ?? document.querySelector('.tutki-sivu.nakyy')?.id ?? null);
+  const sivuJalkeen = await sivu.evaluate(
+    () => document.querySelector('.tutki-sivu.nakyy')?.id ?? null,
+  );
   vaadi(sivuEnnen === sivuJalkeen, 'raahaus ei vaihda lehden sivua');
   await sivu.screenshot({ path: join(ULOS, `zoom-${KAUPUNKI}-3-${nimi}-panoroitu.png`), clip: laatikko });
 
