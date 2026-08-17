@@ -2,7 +2,8 @@
 
 import { MUUTOKSET } from './muutokset.js';
 import { Game } from './game.js';
-import { UI, kehittajaTilaPaalla, asetaKehittajaTila } from './ui.js';
+import { UI } from './ui.js';
+import { kehittajaTilaPaalla, asetaKehittajaTila } from './ui-apurit.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import { startQuizMusic, stopPlaceStream, stopQuizMusic } from './ambience-stream.js';
@@ -43,7 +44,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.817';
+const APP_VERSION = '2026-08-09.818';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
