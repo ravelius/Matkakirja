@@ -197,6 +197,8 @@ const MODULES = [
    */
   // Sisältötaulut ennen ui.js:ää (ui tuo ne; pakat ovat jo yllä).
   'js/sisaltotaulut.js',
+  // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
+  'js/ui-apurit.js',
   'js/pollo-haku.js',
   'js/pollo.js',
   'js/ui.js',
