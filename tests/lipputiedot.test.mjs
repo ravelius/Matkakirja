@@ -34,3 +34,51 @@ test('avaimet ovat pelin tuntemia lipputiedostoja', () => {
       + 'kategoria.maaLippu ei koskaan osu siihen');
   }
 });
+
+/*
+ * ISON LIPUN TERÄVYYS (omistajan iPad-havainto 17.8.2026: Soulin lehden
+ * lippuikkunassa lippu näytti sumealta ja porrastuneelta).
+ *
+ * Syy oli pikselimitoissa: repon lippukopiot on tallennettu SAAPUMIS-
+ * KORTIN kokoisiksi (120 tai 250 px leveitä), mutta lippuikkuna näyttää
+ * lipun 404 CSS-pikselin levyisenä — iPadin kaksinkertaisella tiheydellä
+ * 809 ja iPhonen kolminkertaisella 1213 laitepikseliä. Sama ansa oli
+ * aiemmin valokuvien suurennoksessa (13.8.2026).
+ *
+ * Vartio lukee PNG-otsakkeista, riittääkö paikalliskopio ikkunan
+ * tarpeeseen. Jos ei riitä, js/liput.js:n on pyydettävä suurennos
+ * Commonsista (lippuVara) ja jätettävä paikalliskopio varareitiksi.
+ * Jos repoon joskus haetaan isot liput, tämä vartio sallii paluun
+ * paikalliseen lähteeseen ilman muutoksia.
+ */
+const LIPUT_JS = readFileSync(new URL('../js/liput.js', import.meta.url), 'utf8');
+const TARVE_LAITEPIKSELIA = 809;
+
+function pngLeveys(polku) {
+  const otsake = readFileSync(polku).subarray(0, 24);
+  if (otsake.readUInt32BE(0) !== 0x89504e47) return null;
+  return otsake.readUInt32BE(16);
+}
+
+test('lippuikkunan iso lippu on tarpeeksi suuri iPadin pikselitiheydelle', () => {
+  const pyydetty = Number(LIPUT_JS.match(/ISO_LIPPU_LEVEYS = (\d+)/)?.[1] ?? 0);
+  assert.ok(pyydetty >= TARVE_LAITEPIKSELIA,
+    `js/liput.js pyytää lippua ${pyydetty} px leveänä — ikkuna näyttää sen `
+    + `${TARVE_LAITEPIKSELIA} laitepikselin levyisenä iPadilla`);
+
+  const pienimmat = [];
+  for (const avain of Object.keys(LIPPUTIEDOT)) {
+    const tiedosto = LIPUT_PAIKALLISET.get(avain);
+    if (!tiedosto) continue;
+    const leveys = pngLeveys(new URL(`../assets/liput/${tiedosto}`, import.meta.url));
+    if (leveys !== null && leveys < TARVE_LAITEPIKSELIA) pienimmat.push(`${tiedosto} (${leveys} px)`);
+  }
+  if (!pienimmat.length) return;
+  assert.match(
+    LIPUT_JS,
+    /asetaKuva\(iso, lippuVara\(tiedosto, ISO_LIPPU_LEVEYS\), lippuUrl\(tiedosto, ISO_LIPPU_LEVEYS\)\)/,
+    'paikalliskopiot ovat ikkunaa pienempiä (esim. '
+    + `${pienimmat.slice(0, 3).join(', ')}), joten ison lipun on tultava `
+    + 'suurennoksena Commonsista ja paikalliskopion jäätävä varareitiksi',
+  );
+});

@@ -11,6 +11,24 @@ import { lippuUrl, lippuVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { html } from './ui-apurit.js';
 
+/*
+ * ISON LIPUN LEVEYS PIKSELEINÄ.
+ *
+ * Kortti on enintään 27 rem (432 px) leveä ja lippu sen pehmusteiden
+ * sisällä 404 px; iPadin kaksinkertaisella pikselitiheydellä se on 809
+ * ja iPhonen kolminkertaisella 1213 laitepikseliä. 1280 riittää siis
+ * terävään kuvaan kaikilla omistajan laitteilla ilman ylimääräistä
+ * latausta.
+ */
+const ISO_LIPPU_LEVEYS = 1280;
+
+/*
+ * Vieritysvara kortin reunaan, kun tarkennettu tuodaan näkyviin.
+ * Sama suuruusluokka kuin kortin pehmuste (0,8 rem), jotta laatta ei
+ * liimaudu kiinni reunaviivaan.
+ */
+const TARKENNUS_REUNUS = 10;
+
 /**
  * LIPPUIKKUNA (omistajan tilaus 15.8.2026: "Tee lipusta klikattava
  * jolloin lippu aukeaa isompana omaan ikkunaan otsikkona maan nimi.
@@ -54,7 +72,25 @@ export function avaaLippuikkuna(tiedosto) {
   iso.className = 'lippu-iso';
   iso.decoding = 'async';
   iso.draggable = false;
-  asetaKuva(iso, lippuUrl(tiedosto, 640), lippuVara(tiedosto, 640));
+  /*
+   * SUURENNOS HAETAAN COMMONSISTA, PAIKALLISKOPIO ON VARA.
+   *
+   * lippuUrl palauttaa repon paikalliskopion, ja se on tallennettu
+   * SAAPUMISKORTIN kokoiseksi: 149 lipusta 169:stä on 120 px leveitä,
+   * loput 250 px (tools/fetch-flags.mjs). Leveysparametri ei vaikuta
+   * siihen lainkaan — sama ansa kuin valokuvien suurennoksessa
+   * (omistajan havainto 13.8.2026). Lippuikkuna venytti 120 px:n
+   * kuvan 404 CSS-pikseliin, mikä on iPadilla 809 laitepikseliä eli
+   * 6,7-kertainen suurennos: mitattu iPad-emuloinnilla 17.8.2026, ja
+   * juuri siltä lippu näytti — sumealta ja porrastuneelta.
+   *
+   * Ikkunassa on kerrallaan yksi lippu, joten Commonsin pyyntöraja
+   * (se, minkä takia liput ylipäätään ovat repossa) ei ole tässä
+   * ongelma. Vaakunat ja versioliput ovat repossa jo valmiiksi
+   * suurina (480 ja 960 px), joten ne pysyvät paikallisina.
+   * Yhteydettä paikalliskopio kelpaa varaksi: pienenä, mutta näkyy.
+   */
+  asetaKuva(iso, lippuVara(tiedosto, ISO_LIPPU_LEVEYS), lippuUrl(tiedosto, ISO_LIPPU_LEVEYS));
   iso.alt = `${tiedot.maa} — nykyinen lippu`;
   kortti.appendChild(iso);
   kortti.appendChild(html('p', 'lippu-valinta', 'Nykyinen lippu'));
@@ -92,6 +128,57 @@ export function avaaLippuikkuna(tiedosto) {
     kortti.querySelectorAll('.tarkennettu, .terava-haara')
       .forEach((t) => t.classList.remove('tarkennettu', 'terava-haara'));
   };
+  /*
+   * TARKENNETTU VIERITETÄÄN NÄKYVIIN VASTA TÄYDESSÄ KOOSSAAN.
+   *
+   * Vanha rivi ajoi scrollIntoView'n heti seuraavassa ruudussa, jolloin
+   * kasvu oli vasta alkanut: vaakuna oli animaation alussa 0,55-kokoinen
+   * ja versiolippu vielä skaalaamaton, joten selain mittasi laatan
+   * PIENENÄ, totesi sen mahtuvan näkyviin eikä vierittänyt mitään.
+   * Kymmenesosasekuntia myöhemmin laatta oli täysikokoinen ja työntyi
+   * kortin näkyvän alueen ohi — mitattu iPad-emuloinnilla (834 × 1112,
+   * dsf 2) ennen korjausta: Etelä-Korean vaakuna ulottui 52,9 px,
+   * Japanin 67,8 px ja Saksan 254,1 px kortin alareunan alapuolelle.
+   * Kortin pyöristetty alalaita katkaisi kuvatekstin kesken rivin, ja
+   * juuri se näytti siltä kuin laatikko työntyisi ulos ikkunasta.
+   *
+   * Nyt odotetaan, että laatan omat animaatiot ja siirtymät ovat ohi, ja
+   * vieritetään sen jälkeen mitatun geometrian mukaan. Absoluuttisesti
+   * sijoitettu selite roikkuu laatan laatikon ULKOPUOLELLA, joten se
+   * mitataan erikseen. Jos tarkennettu on korkeampi kuin kortin näkyvä
+   * alue, yläreuna voittaa: mieluummin leikkaus alalaidasta kuin kuva,
+   * jonka yläosa on jo vieritetty pois.
+   */
+  const vieritaNakyviin = (elementti) => {
+    if (!kortti.isConnected || !elementti.classList.contains('tarkennettu')) return;
+    const k = kortti.getBoundingClientRect();
+    const laatikot = [elementti, ...elementti.querySelectorAll('.lippu-versio-selite')]
+      .map((el) => el.getBoundingClientRect())
+      .filter((r) => r.width > 0 && r.height > 0);
+    if (!laatikot.length) return;
+    const ala = Math.max(...laatikot.map((r) => r.bottom));
+    const yla = Math.min(...laatikot.map((r) => r.top));
+    let siirto = 0;
+    if (ala > k.bottom - TARKENNUS_REUNUS) siirto = ala - (k.bottom - TARKENNUS_REUNUS);
+    if (yla - siirto < k.top + TARKENNUS_REUNUS) siirto = yla - (k.top + TARKENNUS_REUNUS);
+    if (Math.abs(siirto) < 1) return;
+    const rauhallisesti = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    kortti.scrollBy({ top: siirto, behavior: rauhallisesti ? 'auto' : 'smooth' });
+  };
+  /*
+   * Animaatiot ja siirtymät syntyvät vasta tyylilaskennassa, joka ajetaan
+   * requestAnimationFrame-kutsujen JÄLKEEN — siksi ne kysytään vasta
+   * toisessa ruudussa. Varakello pitää huolen siitä, että vieritys tulee
+   * silloinkin, kun animaatio perutaan kesken (esim. uusi napautus).
+   */
+  const vieritaKunKasvanut = (elementti) => {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const animaatiot = elementti.getAnimations?.({ subtree: true }) ?? [];
+      const odotus = Promise.allSettled(animaatiot.map((a) => a.finished));
+      const varakello = new Promise((valmis) => { setTimeout(valmis, 600); });
+      Promise.race([odotus, varakello]).then(() => vieritaNakyviin(elementti));
+    }));
+  };
   const tarkenna = (elementti) => {
     const auki = elementti.classList.contains('tarkennettu');
     tyhjennaTarkennus();
@@ -99,7 +186,7 @@ export function avaaLippuikkuna(tiedosto) {
     kortti.classList.add('tarkennus');
     elementti.classList.add('tarkennettu');
     elementti.parentElement.classList.add('terava-haara');
-    requestAnimationFrame(() => elementti.scrollIntoView({ block: 'nearest', behavior: 'smooth' }));
+    vieritaKunKasvanut(elementti);
   };
   kortti.addEventListener('click', (e) => {
     if (!kortti.classList.contains('tarkennus')) return;

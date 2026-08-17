@@ -35,6 +35,7 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-lehden-mitta | Arkin leveys (jumiutunut viewportti, resize) |
 | savuke-paivityspopup | Versionumeron päivitysnappi |
 | savuke-kaupunkitaulut | Kaupunkilehtien taulut |
+| savuke-lippuikkuna | Lippuikkunan pikselit (ison lipun terävyys, tarkennettu vaakuna kortin sisällä) |
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |
 
 **Savukevartija** (`node tools/tarkista-savukkeet.mjs`, CI:ssä joka
