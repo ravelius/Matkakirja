@@ -19,10 +19,13 @@ const MODULES = [
   'js/wiki.js',
   'js/media.js',
   'js/saa.js',
-  'js/uutiset.js',
   'js/packs/maailma-questions.js',
   'js/packs/maailma.js',
   'js/packs/africa-questions.js',
+  // mapart ennen pulmapiirtäjiä: africa- ja europe-puzzles tuovat
+  // sen, eikä mapart itse tuo mitään. (Järjestyssääntö: riippuvuus
+  // aina ennen tuojaansa — tools/tarkista-niputus.mjs valvoo.)
+  'js/mapart.js',
   'js/packs/africa-puzzles.js',
   'js/packs/africa-borders.js',
   'js/packs/africa-countries.js',
@@ -54,6 +57,8 @@ const MODULES = [
   'js/packs/kohtaamiset.js',
   'js/packs/paivan-kuvat.js',
   'js/packs/uutislahteet.js',
+  // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).
+  'js/uutiset.js',
   // Viisaan Pöllön rajapinta-asetus. Pelkkä vakio, jonka js/pollo.js lukee.
   'js/packs/pollo-asetukset.js',
   'js/packs/europe-valokuvat.js',
@@ -100,7 +105,19 @@ const MODULES = [
    * vasta ajossa; tarkista aina dist/matkakirja.html selaimessa.
    * Kunnollinen korjaus on kääriä jokainen moduuli omaan sulkeumaansa;
    * se on yhä oma työnsä.
+   *
+   * HUOMIO (moduuliremontin M0, 17.8.2026): listalla on ~19 pakettia,
+   * joita mikään listan moduuli ei tuo staattisesti (linssipakat,
+   * koelaudat, asteaineistot, viritysäänet, päivän kuvat) — niputuksessa
+   * ne ovat kuollutta painoa (~1,4 Mt) ja pelkkää törmäyspintaa. Niitä
+   * EI poistettu tässä, koska tests/sw.test.mjs vaatii kaikki
+   * js/packs-tiedostot listalle — kaksi vartijaa vaatii vastakkaista,
+   * ja ristiriidan purku on kirjattu Fablelle päätettäväksi.
+   * Nimitörmäykset, kaksoislistaukset ja järjestysvirheet vartioi nyt
+   * tools/tarkista-niputus.mjs, jonka CI ajaa joka PR:lle.
    */
+  // passport ennen omistusta: omistus.js tuo sen staattisesti.
+  'js/passport.js',
   'js/linssit/rekisteri.js',
   'js/linssit/omistus.js',
   'js/packs/valokuvat-paikalliset.js',
@@ -169,7 +186,6 @@ const MODULES = [
   'js/packs/linssi-yokartta.js',
   'js/packs/linssi-topografia-kuva.js',
   'js/pack.js',
-  'js/passport.js',
   /*
    * iOS-kuoren kytkennät. Yhden tiedoston versiossa siltaa ei ole
    * koskaan olemassa, mutta moduuli tulee mukaan, koska sekä ui.js että
@@ -185,7 +201,6 @@ const MODULES = [
   'js/ambience-stream.js',
   'js/die.js',
   'js/rules.js',
-  'js/mapart.js',
   'js/game.js',
   'js/ai.js',
   /*
