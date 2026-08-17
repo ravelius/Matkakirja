@@ -1229,7 +1229,22 @@ export const KULTTUURI_KATEGORIAT = {
                   + 'mutta yöelämä on rauhallisempaa kuin naapureissa.',
               },
             ],
+            /*
+             * HINTATASO on kainalotaulun ensimmäinen varaus, koska
+             * Matkakassa-laatikko poistui oppaasta 17.8.2026 ja
+             * hintataso kerrotaan nyt vain tässä. Lähde: en-Wikivoyagen
+             * Vienna-artikkelin Sleep-osio (haettu 17.8.2026), jonka
+             * mukaan hinnat ovat korkeammat kuin naapurimaissa tai
+             * muualla Itävallassa ja vanhojen talojen huoneet ovat
+             * usein pieniä.
+             */
             hyvaTietaa: [
+              {
+                otsikko: 'Hintataso',
+                teksti: 'Majoitus maksaa enemmän kuin naapurimaissa tai '
+                  + 'muualla Itävallassa, ja vanhoissa taloissa huone on '
+                  + 'usein pieni.',
+              },
               {
                 otsikko: 'Sunnuntain sulut',
                 teksti: 'Kaupat ovat sunnuntaisin kiinni; auki ovat vain '
@@ -1989,6 +2004,24 @@ export const KULTTUURI_KATEGORIAT = {
                 tahdet: 3,
                 selite: 'Kadut heräävät myöhään, ja klubiperinne pitää '
                   + 'osan paikoista auki aamuun asti.',
+              },
+              /*
+               * HINTATASO on Berliinissä plussa eikä miinus — se on
+               * pääkaupungiksi edullinen. Lähde: en-Wikivoyagen
+               * Berlin-artikkeli (haettu 17.8.2026): hotelleja on
+               * rakennettu enemmän kuin kysyntää riittää, mistä seuraa
+               * "comparatively cheap prices even in the 5 star
+               * category" (sesongin ulkopuolella 110 €/yö ei ole
+               * harvinaista), ja taksi on "a bit less expensive than
+               * in many other big Central European cities".
+               */
+              {
+                mita: 'Hintataso',
+                tahdet: 3,
+                selite: 'Hotelleja on rakennettu enemmän kuin kysyntää '
+                  + 'riittää, joten majoitus on suurkaupungiksi '
+                  + 'edullista — taksikin on halvempi kuin muissa '
+                  + 'Keski-Euroopan suurkaupungeissa.',
               },
             ],
             hyvaTietaa: [
@@ -3224,22 +3257,6 @@ export const KULTTUURI_KATEGORIAT = {
                   + 'tammikuussa vajaat 60 tuntia koko kuussa, ja pimeä '
                   + 'tulee jo viideltä.',
               },
-            ],
-            hintataso: '€€€',
-            /*
-             * ANKKURIHINNAT 2026. Metro- ja päivälippu ovat
-             * Île-de-France Mobilitésin 1.1.2026 hinnastosta ja Louvren
-             * pääsymaksu museon omalta sivulta (ETA-alueen hinta;
-             * ETA:n ulkopuolelta 32 €). Molemmat tarkistettu 16.8.2026.
-             * Kahvi, patonki ja illallinen ovat tavanomaisia
-             * katuhintahaarukoita eivätkä yhden lähteen lukuja.
-             */
-            hinnat: [
-              { mita: 'Espresso tiskillä', hinta: '1,50–2,50 €' },
-              { mita: 'Patonki leipomosta', hinta: '1,20–1,60 €' },
-              { mita: 'Metrolippu (päivälippu 12,30 €)', hinta: '2,55 €' },
-              { mita: 'Museolippu (Louvre 22 €)', hinta: '12–22 €' },
-              { mita: 'Illallinen bistrossa', hinta: '25–45 €' },
             ],
             linkit: [
               {
@@ -5159,7 +5176,25 @@ export const KULTTUURI_KATEGORIAT = {
                   + 'avautuva kattomeri.',
               },
             ],
+            /*
+             * HINTATASO ensimmäisenä varauksena (Matkakassa-laatikko
+             * poistui oppaasta 17.8.2026). Lähde: en-Wikivoyagen
+             * Rome-artikkeli (haettu 17.8.2026): keskustan hotellit
+             * ovat "costly", turistialueilla samasta annoksesta maksaa
+             * helposti tuplahinnan ("you'll often pay double the going
+             * rate"), ja kaupunki perii majoitusveron 5 €/yö/henkilö
+             * kolmen tähden hotelleihin asti ja 10 € neljän ja viiden
+             * tähden hotelleissa — käteisellä.
+             */
             hyvaTietaa: [
+              {
+                otsikko: 'Hintataso',
+                teksti: 'Keskustan hotellit ovat kalliita ja '
+                  + 'nähtävyyksien vieressä samasta annoksesta maksaa '
+                  + 'helposti tuplasti; päälle tulee kaupungin '
+                  + 'majoitusvero 5–10 euroa yöltä, joka maksetaan '
+                  + 'käteisellä.',
+              },
               {
                 otsikko: 'Kesän helle',
                 teksti: 'Heinä- ja elokuussa päivälämpötila nousee yli '

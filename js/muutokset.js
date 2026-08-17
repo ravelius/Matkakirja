@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 810, teksti: 'Matkakassa pois, hintatasorivit, säänluonnehdinnat alkuun' },
   { v: 809, teksti: 'Raamattuun oppaan avauskuvan linjaus' },
   { v: 808, teksti: 'Moduuli- ja dokumenttiremontin suunnitelmat hyväksytty' },
   { v: 807, teksti: 'Raamattuun Matkakassa-linjaus; työlistaan paketti O5' },

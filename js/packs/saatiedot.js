@@ -9,6 +9,13 @@
  *   lat, lon  — ennustehaku (Open-Meteo, avaimeton ja CORS-avoin)
  *   keskilampo[12] — kuukauden keskilämpö °C, tammikuusta joulukuuhun
  *   sade[12]  — kuukauden sademäärä mm
+ *   luonnehdinta — VALINNAINEN 2–3 lauseen kuvaus vuodenkierrosta
+ *                  (omistajan toive 17.8.2026). Se näkyy vuosigraafin
+ *                  alla lehden vuosiennustekortissa. Väitteet nousevat
+ *                  saman rivin omista normaaleista; jos mukana on
+ *                  tunnettu ilmastopiirre (monsuuni, kaamos), lähde
+ *                  kirjataan rivin viereen kommenttiin. Ilman kenttää
+ *                  kortti näkyy ennallaan.
  *
  * Normaalit ovat staattista dataa TARKOITUKSELLA: vuosigraafi ja
  * ennusteen varateksti toimivat myös ilman verkkoa (lentokoneessa).
@@ -31,6 +38,13 @@ export const SAATIEDOT = {
     lon: 31.23,
     keskilampo: [13.6, 14.7, 17.5, 21.3, 25.2, 27.9, 29.0, 29.1, 27.4, 24.2, 19.5, 15.2],
     sade: [4, 4, 4, 1, 0, 0, 0, 0, 0, 1, 2, 2],
+    luonnehdinta: 'Kairossa vuosi jakautuu kuumaan ja lämpimään, ei '
+      + 'sateiseen ja kuivaan: touko–syyskuussa sadetta ei kirjaudu '
+      + 'lainkaan, ja sateisinkin talvikuukausi jää neljään '
+      + 'millimetriin. Heinä- ja elokuussa keskilämpö on lähes '
+      + 'kolmekymmentä astetta, eli päivällä selvästi enemmän. Talvi '
+      + 'on se aika, jolloin keskipäivälläkin voi kävellä — tammikuun '
+      + 'keskilämpö on neljäntoista tienoilla.',
   },
   // Madrid on 650 metrin korkeudessa keskellä ylätasankoa: kesä on
   // kuumempi ja talvi kylmempi kuin rannikon Espanjassa, ja heinäkuun
@@ -319,6 +333,12 @@ export const SAATIEDOT = {
     lon: 2.32,
     keskilampo: [4.3, 4.7, 7.5, 10.5, 14.1, 17.4, 19.6, 19.5, 16.1, 12.3, 7.8, 4.8],
     sade: [52, 48, 51, 50, 65, 58, 54, 57, 47, 61, 59, 68],
+    luonnehdinta: 'Pariisin vuosi on lauhkea molemmista päistään: '
+      + 'kylmimmässäkin kuussa keskilämpö pysyy neljässä asteessa ja '
+      + 'kuumimmassa se jää kahdenkymmenen alle. Sadetta tulee joka '
+      + 'kuukausi jokseenkin saman verran — kuivaa kautta ei ole, ja '
+      + 'sateisin kuukausi on joulukuu eikä mikään kesäkuukausi. Ero '
+      + 'kesän ja talven välillä on siis enemmän valon kuin veden ero.',
   },
   ateena: {
     lat: 37.97,
@@ -403,6 +423,13 @@ export const SAATIEDOT = {
     lon: 24.95,
     keskilampo: [-4, -4.9, -1.9, 3.6, 9.8, 14.3, 17.9, 16.8, 12.1, 6.2, 1.8, -1.5],
     sade: [50, 42, 37, 37, 44, 71, 75, 76, 58, 63, 63, 57],
+    luonnehdinta: 'Talvi on pitkä ja pakkasen puolella joulukuusta '
+      + 'maaliskuuhun; helmikuu on kylmin, keskimäärin viisi astetta '
+      + 'nollan alapuolella. Kesä on lyhyt ja lauhkea — heinäkuun '
+      + 'kahdeksantoista astetta on jo vuoden huippu — mutta valoa '
+      + 'riittää yöhön asti. Sateisinta ei ole kevät vaan loppukesä ja '
+      + 'syksy, jolloin kuukausikertymä nousee reiluun seitsemäänkymmeneen '
+      + 'millimetriin.',
   },
   tallinna: {
     lat: 59.44,
@@ -518,6 +545,13 @@ export const SAATIEDOT = {
     lon: -21.9,
     keskilampo: [-1.1, -0.9, 0.1, 3, 6.5, 9.9, 11.6, 10.8, 8.1, 4, 1, -0.8],
     sade: [131, 131, 118, 104, 92, 80, 86, 104, 134, 121, 121, 133],
+    luonnehdinta: 'Reykjavíkin vuosi on kapea: kylmimmän ja '
+      + 'lämpimimmän kuukauden ero on runsaat kaksitoista astetta, kun '
+      + 'mantereella se on moninkertainen. Talvi ei ole kylmä vaan märkä '
+      + '— tammikuun keskilämpö on aivan nollan tuntumassa, mutta '
+      + 'sadetta tulee puolitoista kertaa niin paljon kuin kesällä. Kesä '
+      + 'ei puolestaan oikeastaan lämpene: heinäkuussa keskimäärin '
+      + 'kaksitoista astetta, ja niitä paistetaan yöttömässä valossa.',
   },
   // Mittauspiste: Rovaniemi.
   lappi: {
@@ -567,6 +601,21 @@ export const SAATIEDOT = {
     lon: 54.08,
     keskilampo: [21.4, 22.5, 25, 27.5, 28.8, 28.4, 26.4, 25.4, 26, 27.3, 25.9, 23.1],
     sade: [2, 1, 10, 4, 40, 13, 6, 5, 8, 11, 8, 2],
+    /*
+     * Khareef eli lounaismonsuuni kesä-syyskuussa on Dhofarin
+     * tunnettu ilmastopiirre: en-Wikipedian Salalah-artikkelin
+     * Climate-osio (haettu 17.8.2026) kertoo, että kesät ovat
+     * viileämpiä kuin muualla Omanissa ja että heinä-elokuu ovat
+     * hyvin pilvisiä ja sumuisia, vaikka varsinaista sadetta kertyy
+     * vähän. Sama näkyy tämän rivin normaaleissa lämpötilakuoppana.
+     */
+    luonnehdinta: 'Vuoden kuumin aika ei ole keskikesä vaan touko–kesäkuu: '
+      + 'elokuuhun mennessä keskilämpö on laskenut yli kolme astetta, kun '
+      + 'lounaismonsuuni khareef vetää merestä pilven ja sumun '
+      + 'rannikolle. Kesä on siis Salalassa se viileä vuodenaika, ja '
+      + 'muu vuosi on paahtavaa aavikkoa. Talvi on lämmin ja kuiva — '
+      + 'tammikuussa runsaat kaksikymmentä astetta ja sadetta pari '
+      + 'millimetriä koko kuussa.',
   },
   // Mittauspiste: Mosul.
   mosul: {
