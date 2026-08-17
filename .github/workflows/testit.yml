@@ -25,3 +25,11 @@ jobs:
         run: npm test
       - name: Kaksoisavaimet
         run: node tools/tarkista-kaksoisavaimet.mjs
+      # Moduuliremontin M0 (17.8.2026): niputusvirheet (nimitörmäys,
+      # järjestys, irrallinen listaus) eivät näy testeissä, koska
+      # kokoaminen onnistuu ja vika ilmenee vasta selaimessa. Siksi
+      # kokoaja ja sen vartija ajetaan joka PR:lle.
+      - name: Niputustarkistus
+        run: node tools/tarkista-niputus.mjs
+      - name: Yhden tiedoston versio kokoontuu
+        run: node tools/build-standalone.mjs
