@@ -149,14 +149,24 @@ const AS_CITIES = [
     // Sama kaupunki on myös Maailma-laudalla.
   },
   { id: 'soul', name: 'Soul', wiki: 'Soul (kaupunki)', ambience: 'kaupunki', x: 826, y: 436, la: 'start', lx: 16, ly: 5 },
+  // Kioto on kartalla noin 200 km todellista paikkaansa lounaassa. Tokio
+  // jäisi oikealta paikalta 32 yksikön päähän, ja laudan vähimmäisväli on
+  // 50 — Honshūn kaksi kaupunkia eivät mahdu kartalle omille paikoilleen.
+  { id: 'kioto', name: 'Kioto', wiki: 'Kioto', ambience: 'kaupunki', x: 888, y: 451, la: 'start', lx: 16, ly: 5 },
   { id: 'xian', name: 'Xi’an', wiki: 'Xi’an', ambience: 'kaupunki', x: 684, y: 491, la: 'end', lx: -16, ly: 5 },
   { id: 'shanghai', name: 'Shanghai', wiki: 'Shanghai', ambience: 'satama', x: 787, y: 507, airport: true, la: 'start', lx: 16, ly: 5 },
   { id: 'taipei', name: 'Taipei', wiki: 'Taipei', ambience: 'kaupunki', x: 805, y: 584, la: 'start', lx: 16, ly: 5 },
   { id: 'hongkong', name: 'Hongkong', wiki: 'Hongkong', ambience: 'satama', x: 739, y: 607, airport: true, la: 'end', lx: -16, ly: 5 },
+  // Kanton on Helmijoen suistossa vain runsaan sadan kilometrin päässä
+  // Hongkongista eli laudan mittakaavassa saman pisteen päällä. Piste on
+  // siirretty pohjoiseen sisämaahan vähimmäisvälin (50) verran, noin
+  // 470 km, jotta molemmat mahtuvat kartalle omina kohteinaan.
+  { id: 'kanton', name: 'Kanton', wiki: 'Kanton', ambience: 'satama', x: 710, y: 565, la: 'end', lx: -16, ly: 5 },
   { id: 'manila', name: 'Manila', wiki: 'Manila', ambience: 'satama', x: 822, y: 675, airport: true, la: 'start', lx: 16, ly: 5 },
   { id: 'hanoi', name: 'Hanoi', wiki: 'Hanoi', ambience: 'kaupunki', x: 660, y: 630, la: 'end', lx: -16, ly: 5 },
   { id: 'bangkok', name: 'Bangkok', wiki: 'Bangkok', ambience: 'basaari', x: 603, y: 708, airport: true, la: 'end', lx: -16, ly: 24 },
   { id: 'yangon', name: 'Yangon', wiki: 'Yangon', ambience: 'basaari', x: 559, y: 671, la: 'end', lx: -16, ly: 5 },
+  { id: 'mandalay', name: 'Mandalay', wiki: 'Mandalay', ambience: 'basaari', x: 564, y: 615, la: 'start', lx: 16, ly: 5 },
   {
     id: 'singapore', name: 'Singapore', wiki: 'Singapore', ambience: 'satama', x: 634, y: 851, start: true, airport: true, la: 'middle', lx: 0, ly: 30,
   },
@@ -167,9 +177,15 @@ const AS_CITIES = [
     // Indonesian saariketju jatkuu idässä Oseanian laudalle.
   },
   { id: 'lhasa', name: 'Lhasa', wiki: 'Lhasa', ambience: 'vuoristo', x: 535, y: 519, la: 'start', lx: 16, ly: 5 },
-  { id: 'kathmandu', name: 'Kathmandu', wiki: 'Kathmandu', ambience: 'vuoristo', x: 468, y: 545, la: 'middle', lx: 0, ly: 24 },
+  // Kathmandun ja Kolkatan nimikyltit siirrettiin, jotta Varanasi mahtuu
+  // Gangesin laaksoon niiden väliin.
+  { id: 'kathmandu', name: 'Kathmandu', wiki: 'Kathmandu', ambience: 'vuoristo', x: 468, y: 545, la: 'start', lx: 16, ly: 24 },
   { id: 'delhi', name: 'Delhi', wiki: 'Delhi', ambience: 'basaari', x: 398, y: 509, airport: true, la: 'end', lx: -16, ly: 5 },
-  { id: 'kolkata', name: 'Kolkata', wiki: 'Kalkutta', ambience: 'basaari', x: 490, y: 598, la: 'end', lx: -16, ly: 5 },
+  { id: 'kolkata', name: 'Kolkata', wiki: 'Kalkutta', ambience: 'basaari', x: 490, y: 598, la: 'start', lx: 16, ly: -6 },
+  // Varanasi on kartalla noin 250 km todellista paikkaansa lounaassa:
+  // Kathmandu jäisi oikealta paikalta 26 yksikön päähän, kun laudan
+  // vähimmäisväli on 50.
+  { id: 'varanasi', name: 'Varanasi', wiki: 'Varanasi', ambience: 'basaari', x: 424, y: 570, la: 'end', lx: -16, ly: -6 },
   {
     id: 'mumbai', name: 'Mumbai', wiki: 'Mumbai', ambience: 'kaupunki', x: 331, y: 591, start: true, airport: true, la: 'end', lx: -16, ly: 5,
     // Sama kaupunki on myös Maailma-laudalla.
@@ -211,6 +227,10 @@ const AS_EDGES = [
   { a: 'kathmandu', b: 'lhasa', steps: 4 },
   { a: 'kathmandu', b: 'kolkata', steps: 3 },
   { a: 'lhasa', b: 'xian', steps: 6 },
+  // Gangesin laakso: Delhistä Varanasin kautta Kolkataan.
+  { a: 'delhi', b: 'varanasi', steps: 3 },
+  { a: 'varanasi', b: 'kathmandu', steps: 2 },
+  { a: 'varanasi', b: 'kolkata', steps: 3 },
 
   // Intia ja Kaakkois-Aasia
   { a: 'mumbai', b: 'chennai', steps: 5 },
@@ -221,6 +241,11 @@ const AS_EDGES = [
   { a: 'bangkok', b: 'hanoi', steps: 4 },
   { a: 'bangkok', b: 'singapore', steps: 6 },
   { a: 'hanoi', b: 'hongkong', steps: 4 },
+  // Irrawaddyn laakso: Yangonista Mandalayhin nousee rautatie, ja idässä
+  // vuoristopolut vievät Siamiin ja Tonkiniin.
+  { a: 'yangon', b: 'mandalay', steps: 3 },
+  { a: 'mandalay', b: 'bangkok', steps: 5 },
+  { a: 'mandalay', b: 'hanoi', steps: 5 },
 
   // Kiina, Korea ja Japani
   { a: 'peking', b: 'xian', steps: 4 },
@@ -229,6 +254,10 @@ const AS_EDGES = [
   { a: 'xian', b: 'shanghai', steps: 5 },
   { a: 'shanghai', b: 'hongkong', steps: 5 },
   { a: 'soul', b: 'vladivostok', steps: 4 },
+  // Helmijoki: Kantonista alavirtaan Hongkongiin, länteen Tonkiniin.
+  { a: 'kanton', b: 'hongkong', steps: 2 },
+  { a: 'kanton', b: 'hanoi', steps: 3 },
+  { a: 'kioto', b: 'tokio', steps: 3 },
 
   // Laivareitit
   { a: 'vladivostok', b: 'sahalin', steps: 4, type: 'sea', via: [[870, 328]] },
@@ -237,6 +266,7 @@ const AS_EDGES = [
   { a: 'sahalin', b: 'tokio', steps: 5, type: 'sea', via: [[896, 334], [894, 389]] },
   { a: 'tokio', b: 'soul', steps: 4, type: 'sea', via: [[923, 476], [882, 509], [842, 488]] },
   { a: 'tokio', b: 'shanghai', steps: 5, type: 'sea', via: [[919, 478], [856, 514]] },
+  { a: 'kioto', b: 'shanghai', steps: 5, type: 'sea', via: [[860, 500], [820, 512]] },
   { a: 'shanghai', b: 'taipei', steps: 4, type: 'sea', via: [[815, 540]] },
   { a: 'taipei', b: 'manila', steps: 4, type: 'sea', via: [[818, 625]] },
   { a: 'hongkong', b: 'manila', steps: 4, type: 'sea', via: [[776, 654]] },
@@ -310,7 +340,7 @@ export const ASIA = {
         kuva: 'assets/aarteet/aarre-asia-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 7, topaz: 9, empty: 10 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 8, topaz: 10, empty: 11 },
   },
 
   questions: ASIA_QUESTIONS,

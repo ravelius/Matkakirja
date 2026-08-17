@@ -5,6 +5,64 @@
 // source = osoite, josta tieto on tarkistettu. Merkitään vain luetuista lähteistä.
 
 export const NORTHAMERICA_QUESTIONS = {
+  sitka: [
+    {
+      q: 'Minkä osavaltion saaristossa Sitka sijaitsee?',
+      options: ['Alaskan', 'Oregonin', 'Mainen', 'Montanan'],
+      correct: 0,
+      level: 1,
+      hint: 'Osavaltio ostettiin Venäjältä vuonna 1867.',
+      fact: 'Sitka on Baranofinsaaren länsilaidalla Alexanderin saaristossa.',
+      source: 'https://fi.wikipedia.org/wiki/Sitka',
+    },
+    {
+      q: 'Millä nimellä Sitka tunnettiin vuosina 1804–1867?',
+      options: ['Novo-Arkhangelsk', 'Fort Ross', 'Nikolajevsk', 'Port Clarence'],
+      correct: 0,
+      level: 2,
+      hint: 'Nimi kunnioitti erästä Vienanmeren satamakaupunkia.',
+      fact: 'Venäläinen nimi vaihtui vasta, kun Alaska myytiin Yhdysvalloille vuonna 1867.',
+      source: 'https://fi.wikipedia.org/wiki/Sitka',
+    },
+    {
+      q: 'Kuka perusti alueelle ensimmäisen venäläisen siirtokunnan vuonna 1799?',
+      options: ['Aleksandr Baranov', 'Vitus Bering', 'Nikolai Rezanov', 'Grigori Šelihov'],
+      correct: 0,
+      level: 3,
+      hint: 'Hän oli Venäläis-amerikkalaisen kauppakomppanian ensimmäinen kuvernööri.',
+      fact: 'Tlingitit tuhosivat linnoituksen vuonna 1802. Perustaja palasi paikalle 1804 ja rakensi uuden.',
+      source: 'https://fi.wikipedia.org/wiki/Sitka',
+    },
+    {
+      q: 'Mistä Sitkan nimi on peräisin?',
+      options: [
+        'tlingitin kielen sanasta Sheet’ká',
+        'venäjän sanasta, joka tarkoittaa satamaa',
+        'englantilaisen tutkimusmatkailijan nimestä',
+        'espanjankielisestä sanasta sitio',
+      ],
+      correct: 0,
+      level: 2,
+      hint: 'Nimi on alueen alkuperäiskansan kieltä.',
+      fact: 'Sana merkitsee suunnilleen "kansa Sheen ulkopuolella".',
+      source: 'https://fi.wikipedia.org/wiki/Sitka',
+    },
+    {
+      q: 'Mikä on erikoista Sitkan pinta-alassa?',
+      options: [
+        'se on pinta-alaltaan Yhdysvaltain suurin kaupunki',
+        'se on Yhdysvaltain pienin kaupunki',
+        'se on kokonaan jäätikön päällä',
+        'se jakautuu kahden osavaltion alueelle',
+      ],
+      correct: 0,
+      level: 3,
+      hint: 'Kaupunkiin kuuluu saaria ja vuonoja yhteensä yli 7 000 neliökilometrin verran.',
+      fact: 'Asukkaita oli vuoden 2020 väestönlaskennassa kuitenkin vain 8 382.',
+      source: 'https://fi.wikipedia.org/wiki/Sitka',
+    },
+  ],
+
   nome: [
     {
       q: 'Minkä osavaltion rannikolla Nome sijaitsee?',
@@ -1943,6 +2001,15 @@ export const NORTHAMERICA_FACTS = {
     'Kaupungissa puhutaan arviolta yli 700 kieltä, mikä tekee siitä maailman kielellisesti monimuotoisimman.',
     {
       text: 'Satamassa nousee laivasta enemmän ihmisiä päivässä kuin kotikylässäni asuu, ja jokainen aikoo rikastua. Kaupungissa ei ole ainuttakaan kunnollista klubia, mutta liikettä on kuin muurahaispesässä.',
+      voice: 'isoisa',
+    },
+  ],
+  sitka: [
+    { text: 'Sitka on Baranofinsaaren länsilaidalla Alexanderin saaristossa ja on pinta-alaltaan Yhdysvaltain suurin kaupunki, vaikka asukkaita on vain runsaat 8 000.', source: 'https://fi.wikipedia.org/wiki/Sitka' },
+    { text: 'Kaupunki tunnettiin vuosina 1804–1867 nimellä Novo-Arkhangelsk, ja sen perusti Venäläis-amerikkalaisen kauppakomppanian kuvernööri Aleksandr Baranov.', source: 'https://fi.wikipedia.org/wiki/Sitka' },
+    { text: 'Kaupungin nimi tulee tlingitin kielen sanasta Sheet’ká.', source: 'https://fi.wikipedia.org/wiki/Sitka' },
+    {
+      text: 'Venäläiset myivät koko maanosansa kuusi vuotta sitten, ja hinta oli pienempi kuin yhden rautatien. Kirkon sipulikupoli seisoo yhä kukkulalla ja katsoo saaristoa, joka ei tiedä vaihtaneensa omistajaa.',
       voice: 'isoisa',
     },
   ],

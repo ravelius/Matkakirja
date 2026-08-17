@@ -895,6 +895,15 @@ export const SOUTHAMERICA_VALOKUVAT = {
         + 'peltoa, on nyt yhtenäinen korttelimatto.',
     },
   },
+  ouropreto: {
+    tiedosto: 'Igreja de São Francisco de Assis (Ouro Preto), vista aérea.jpg',
+    vuosi: '2026',
+    lahde: 'Rafael Lemieszek, Commons (CC BY-SA 4.0)',
+    selite: 'São Franciscon kirkko ja Ouro Preton tiilikattoinen vanhakaupunki '
+      + 'ylhäältä. Kaupunki kasvoi 1700-luvun kultaryntäyksestä ja oli '
+      + 'aikanaan yksi Amerikan suurimpia; kirkon vuolukiviveistokset ovat '
+      + 'Aleijadinhon, brasilialaisen barokin kuuluisimman mestarin, käsialaa.',
+  },
   portoalegre: {
     tiedosto: 'Porto Alegre, Rio Grande do Sul circa 1903.jpg',
     vuosi: 'noin 1903',

@@ -136,6 +136,10 @@ const SA_CITIES = [
     // Sama kaupunki on myös Maailma-laudalla.
   },
   { id: 'saopaulo', name: 'São Paulo', wiki: 'São Paulo', ambience: 'kaupunki', x: 682, y: 525, la: 'end', lx: -6, ly: 20 },
+  // Ouro Preto on kartalla noin 170 km todellista paikkaansa pohjoisessa,
+  // yhä Minas Geraisin kaivosylängöllä: oikealta paikalta Rio jäisi 31
+  // yksikön päähän, kun laudan vähimmäisväli on 50.
+  { id: 'ouropreto', name: 'Ouro Preto', wiki: 'Ouro Preto', ambience: 'vuoristo', x: 741, y: 482, la: 'start', lx: 16, ly: 5 },
   { id: 'iguazu', name: 'Iguazú', wiki: 'Iguassun putoukset', ambience: 'sademetsa', x: 603, y: 561, la: 'start', lx: 16, ly: 5 },
   { id: 'portoalegre', name: 'Porto Alegre', wiki: 'Porto Alegre', ambience: 'satama', x: 633, y: 616, la: 'start', lx: 16, ly: 5 },
   { id: 'antofagasta', name: 'Antofagasta', wiki: 'Antofagasta', ambience: 'aavikko', x: 417, y: 536, la: 'end', lx: -16, ly: 5 },
@@ -184,6 +188,10 @@ const SA_EDGES = [
   { a: 'joaopessoa', b: 'salvador', steps: 3 },
   { a: 'salvador', b: 'rio', steps: 5 },
   { a: 'rio', b: 'saopaulo', steps: 2 },
+  // Estrada Real: kultareitti kaivosylängöltä rannikolle.
+  { a: 'ouropreto', b: 'rio', steps: 2 },
+  { a: 'ouropreto', b: 'saopaulo', steps: 3 },
+  { a: 'ouropreto', b: 'salvador', steps: 4 },
   { a: 'saopaulo', b: 'campogrande', steps: 3 },
   { a: 'saopaulo', b: 'iguazu', steps: 3 },
   { a: 'saopaulo', b: 'portoalegre', steps: 3 },
@@ -290,7 +298,7 @@ export const SOUTHAMERICA = {
         kuva: 'assets/aarteet/aarre-southamerica-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 12 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 5, emerald: 6, topaz: 8, empty: 13 },
   },
 
   questions: SOUTHAMERICA_QUESTIONS,
