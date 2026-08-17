@@ -3640,10 +3640,11 @@ test('aloituskartan napautuszoomaus koskee vain maailmankarttaa', () => {
   // Sama ehto estää toisenkin haitan: kuuntelija on kaappausvaiheessa
   // ja pysäyttää tapahtuman, joten se söi kartan kohderenkaiden
   // napautukset mantereella.
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  // Remontin M7b: kuuntelija asuu js/kartta.js:n asennaPanoroinnissa.
+  const ui = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
   const kuuntelija = ui.match(/pane\.addEventListener\('click',[\s\S]*?\}, true\);/)?.[0] ?? '';
   assert.ok(kuuntelija, 'kartan napautuskuuntelijaa ei löytynyt');
-  assert.match(kuuntelija, /this\.game\.pack\.id !== 'maailma'/,
+  assert.match(kuuntelija, /this\.ui\.game\.pack\.id !== 'maailma'/,
     'napautuszoomaus on taas käytössä muillakin laudoilla');
   // Kiikari nousee vain aloituskartan zoomauksen perään: molemmat
   // luokat vaaditaan, joten yksi ei riitä.
@@ -3810,7 +3811,8 @@ test('nipistyszoomaus on olemassa', () => {
    * Testi ei osaa nipistää — se vartioi vain, että ele on olemassa.
    * Se olisi riittänyt estämään sen mitä tapahtui.
    */
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  // Remontin M7b: nipistysele asuu js/kartta.js:n asennaPanoroinnissa.
+  const ui = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
 
   // Kosketustapahtumat eikä osoitintapahtumat: iOS peruu jälkimmäiset
@@ -3865,6 +3867,8 @@ test('kartan isot kerrokset eivät käytä suodatinta', () => {
 
 test('bittikartta ladataan vain sormen irrotessa, ei kesken eleen', () => {
   const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  // Remontit M7a–M7b: kamera, panorointi ja eleet asuvat js/kartta.js:ssä.
+  const kartta = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
 
   /*
    * Omistajan linjaus: "Pitää olla sen verran bufferia että kesken eleen
@@ -3875,20 +3879,18 @@ test('bittikartta ladataan vain sormen irrotessa, ei kesken eleen', () => {
    * tuntuu nykäyksenä riippumatta siitä, kuinka pieni pala on uutta —
    * juuri niin kävi, kun lataus alkoi heti kun reuna lähestyi.
    */
-  const asetaPan = ui.slice(ui.indexOf('  asetaPan('), ui.indexOf('  asetaPan(') + 1200);
+  const asetaPan = kartta.slice(kartta.indexOf('  asetaPan('), kartta.indexOf('  asetaPan(') + 1200);
   assert.ok(!/taydennaTaide/.test(asetaPan), 'siirto lataa kesken eleen');
 
   // Kiinnekohtana paatan oma rekisteröinti: paneelissa on myös
   // elevahdin oma pointerup-kuuntelija (ks. asennaPanorointi), joten
   // pelkkä ensimmäinen pointerup osuisi väärään kohtaan tiedostoa.
-  const paata = ui.slice(ui.indexOf('    const paata = '),
-    ui.indexOf("    pane.addEventListener('pointerup', paata)"));
+  const paata = kartta.slice(kartta.indexOf('    const paata = '),
+    kartta.indexOf("    pane.addEventListener('pointerup', paata)"));
   assert.match(paata, /taydennaTaide/, 'sormen irrotessa ei ladata');
 
   // Näkymän asettuminen (zoom, koon muutos) siirtää aluetta ilman
   // yhtään sormen liikettä, joten sekin tarvitsee oman täydennyksen.
-  // Remontin M7a: fitViewBox asuu js/kartta.js:ssä.
-  const kartta = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
   const fit = kartta.slice(kartta.indexOf('  fitViewBox('), kartta.indexOf('  fitViewBox(') + 4500);
   assert.match(fit, /taydennaTaide/, 'näkymän asettuminen ei täydennä kuvaa');
 
