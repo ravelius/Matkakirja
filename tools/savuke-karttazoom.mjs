@@ -340,14 +340,18 @@ async function kierros(nimi, { satelliitissa = false } = {}) {
    * numeroympyrän napautus voisi hukkua kumpaan tahansa. Kohteen
    * jutun on auettava zoomatussa kartassa aivan kuten zoomaamattomassa.
    */
+  /*
+   * Nähtävyysjuttu avataan moduulifunktiolla (js/nahtavyydet.js, M4)
+   * eikä ui-metodilla, joten sitä ei voi enää kietoa laskuriin —
+   * avaus todetaan alla dialogin auki-tilasta. (Savukevartijan löytö
+   * 17.8.2026: vanha ui.avaaNahtavyys-kietaisu kaatui M4:n jälkeen.)
+   */
   await sivu.evaluate(() => {
     const ui = window.matkakirja.ui;
     ui.kohdeAvauksia = 0;
     if (!ui.alkuperainenWiki) {
       ui.alkuperainenWiki = ui.openWikiArticle.bind(ui);
       ui.openWikiArticle = (...a) => { ui.kohdeAvauksia += 1; return ui.alkuperainenWiki(...a); };
-      ui.alkuperainenNahtavyys = ui.avaaNahtavyys.bind(ui);
-      ui.avaaNahtavyys = (...a) => { ui.kohdeAvauksia += 1; return ui.alkuperainenNahtavyys(...a); };
     }
   });
   await sivu.click('.kartta-zoomi button[aria-label="Lähennä karttaa"]', { force: true });
@@ -359,7 +363,8 @@ async function kierros(nimi, { satelliitissa = false } = {}) {
   });
   await sivu.mouse.click(pisteLaatikko.x, pisteLaatikko.y);
   await sivu.waitForTimeout(700);
-  vaadi(await sivu.evaluate(() => window.matkakirja.ui.kohdeAvauksia) === 1,
+  vaadi(await sivu.evaluate(() => window.matkakirja.ui.kohdeAvauksia === 1
+    || Boolean(document.getElementById('nahtavyys-dialog')?.open)),
     'zoomattuna kohteen napautus avaa jutun');
   await sivu.keyboard.press('Escape');
   await sivu.waitForTimeout(400);

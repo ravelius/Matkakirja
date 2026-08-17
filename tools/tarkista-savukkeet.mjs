@@ -18,7 +18,9 @@
 //   2. LUKU ui.kenttä: kentän on oltava UI-luokan metodi, toteutuksen
 //      asettama kenttä (this.X = ui.js:ssä tai ui.X = js/-moduulissa)
 //      tai savukkeen itsensä samassa tiedostossa kirjoittama
-//      mittarikenttä (esim. ui.sivunvaihdot = 0).
+//      mittarikenttä (esim. ui.sivunvaihdot = 0). Poikkeus: ui.X.bind()
+//      vaatii aina toteutuksen nimen — monkeypatch kirjoittaa saman
+//      nimen, joten oma kirjoitus ei saa peittää kadonnutta metodia.
 //   3. ui.lehtitila.X luku JA kirjoitus: X:n on oltava lehtitila-
 //      olion dokumentoitu kenttä (ui.js:n rakentimen literaali) —
 //      väärä avain tarkoittaisi, että savuke luulee nollaavansa
@@ -124,8 +126,12 @@ function poimiViittaukset(puhdas) {
     const jatko = puhdas.slice(m.index + m[0].length).replace(/^\s+/, '');
     const kutsu = jatko.startsWith('(') || jatko.startsWith('?.(');
     const kirjoitus = /^(?:\?\?=|\|\|=|&&=|=(?![=>]))/.test(jatko);
+    // ui.X.bind(ui) = monkeypatchin pohja: X:n on oltava toteutuksen
+    // nimi, eikä savukkeen oma kirjoitus kelpaa alibiksi — juuri näin
+    // ui.avaaNahtavyys-kietaisu kaatui hiljaa M4:n jälkeen.
+    const sidonta = jatko.startsWith('.bind(');
     const rivi = puhdas.slice(0, m.index).split('\n').length;
-    viittaukset.push({ rivi, nimi, lehtitilanJasen, kutsu, kirjoitus });
+    viittaukset.push({ rivi, nimi, lehtitilanJasen, kutsu, kirjoitus, sidonta });
   }
   return viittaukset;
 }
@@ -152,6 +158,11 @@ for (const tiedosto of savukeTiedostot()) {
         viat.push(`${tiedosto}:${v.rivi} ui.lehtitila.${v.lehtitilanJasen} ei ole `
           + 'lehtitila-olion kenttä (ks. js/ui.js rakentimen literaali)');
       }
+      continue;
+    }
+    if (v.sidonta && !metodit.has(v.nimi) && !kentat.has(v.nimi)) {
+      viat.push(`${tiedosto}:${v.rivi} ui.${v.nimi}.bind(...) — ${v.nimi} ei ole `
+        + 'UI:n metodi eikä kenttä (savukkeen oma kirjoitus ei kelpaa sidontaan)');
       continue;
     }
     if (v.kutsu && !metodit.has(v.nimi) && !omat.has(v.nimi)) {
