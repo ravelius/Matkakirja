@@ -153,7 +153,7 @@ const mittaa = () => sivu.evaluate(() => {
       };
     }),
     jana: document.querySelector('.kartta-mittajana')?.getBoundingClientRect().width ?? 0,
-    sivu: window.matkakirja.ui.tutkiSivu ?? window.matkakirja.ui.tutkiSivuIndeksi ?? null,
+    sivu: window.matkakirja.ui.lehtitila.tutkiSivu ?? window.matkakirja.ui.tutkiSivuIndeksi ?? null,
   };
 });
 

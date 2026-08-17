@@ -175,7 +175,7 @@ const maalehti = await sivu.evaluate(async (NAPPI) => {
   ui.closeArrival();
   await odota(300);
   ui.avaaMaalehti('GBR');
-  for (let i = 0; i < 100 && (ui.tutkiSivut?.length ?? 0) < 3; i += 1) await odota(100);
+  for (let i = 0; i < 100 && (ui.lehtitila.tutkiSivut?.length ?? 0) < 3; i += 1) await odota(100);
   await odota(400);
   // Ensimmäinen sivu on kartta, jolla ei ole lippua — lippu asuu
   // aihesivujen otsikoissa (avaaMaalehti: maaLippu vain aiheille).

@@ -154,8 +154,8 @@ export function naytaMaaTunnusluvut(ui, iso) {
  * napit näkyisivät kahdesti samassa näkymässä.
  */
 export function paivitaMediarivit(ui) {
-  const city = ui.mediaKaupunki;
-  const iso = ui.mediaIso;
+  const city = ui.lehtitila.mediaKaupunki;
+  const iso = ui.lehtitila.mediaIso;
   for (const kohde of [ui.arrivalMedia, ui.arrivalMediaKaupunki]) {
     if (!kohde) continue;
     kohde.replaceChildren();
@@ -165,7 +165,7 @@ export function paivitaMediarivit(ui) {
     naytaKieliNappi(ui, city, ui.arrivalMediaKaupunki);
   }
   // Maaosaston rivi vain, kun osasto ei ole kaupungin etusivulla.
-  if (!(ui.tutkiMaaEtusivu || ui.tutkiTila === 'maa')) return;
+  if (!(ui.lehtitila.tutkiMaaEtusivu || ui.lehtitila.tutkiTila === 'maa')) return;
   /*
    * Maalehden voi avata mistä tahansa maasta (Maiden tiedot), eikä
    * se silloin ole se maa, jossa pelaaja seisoo. Radio on maan oma ja
@@ -173,7 +173,7 @@ export function paivitaMediarivit(ui) {
    * vieraan maan lehteen — se olisi väärästä paikasta. Siksi kaupunki
    * annetaan vain oman maan lehdelle.
    */
-  const maanIso = ui.tutkiTila === 'maa' ? (ui.tutkiMaaLehti ?? iso) : iso;
+  const maanIso = ui.lehtitila.tutkiTila === 'maa' ? (ui.lehtitila.tutkiMaaLehti ?? iso) : iso;
   naytaKieliNappi(ui, maanIso === iso ? city : null, ui.arrivalMedia, maanIso);
 }
 
@@ -432,7 +432,7 @@ export function rakennaSisallysLista(ui, sisallys, { suljeValikko = null, etusiv
      * pikkukuvana kannen pääkuva ja ingressinä kansiosion johdannon
      * ensimmäinen virke. Ilman kansidataa rivi näkyy entisellään.
      */
-    const kansi = ui.tutkiKansi;
+    const kansi = ui.lehtitila.tutkiKansi;
     const kansikuva = kansi?.kansikuvat?.[0]?.tiedosto ?? null;
     if (kansikuva) {
       const img = document.createElement('img');
@@ -473,7 +473,7 @@ export function rakennaSisallysLista(ui, sisallys, { suljeValikko = null, etusiv
     if (ingressi) teksti.appendChild(html('span', 'sisallys-ingressi', ingressi));
     rivi.appendChild(teksti);
     rivi.addEventListener('click', () => {
-      const i = (ui.tutkiSivut ?? []).indexOf(osa);
+      const i = (ui.lehtitila.tutkiSivut ?? []).indexOf(osa);
       if (i >= 0) {
         suljeValikko?.();
         ui.naytaTutkiSivu(i + 1, { suunta: 1 });

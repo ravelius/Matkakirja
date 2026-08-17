@@ -258,7 +258,7 @@ export function opasKaudet(ui, matkailu) {
   // Vuosikäyrä kelluu laatikon leipätekstin oikealla puolella
   // (omistajan tilaus 16.8.2026), joten se on otsikon jälkeen mutta
   // ennen tekstiä: kelluke tarvitsee tekstiä kierrettäväkseen.
-  const graafi = opasSaagraafi(SAATIEDOT[ui.arrivalShownFor]);
+  const graafi = opasSaagraafi(SAATIEDOT[ui.lehtitila.arrivalShownFor]);
   if (graafi) laatikko.appendChild(graafi);
   if (matkailu.parasAika) {
     laatikko.appendChild(html('p', 'opas-parasaika', matkailu.parasAika));

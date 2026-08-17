@@ -88,7 +88,7 @@ const tulos = await sivu.evaluate(async (iso) => {
     ui.game.pack = lauta;
   }
   ui.avaaMaalehti(iso);
-  return { ok: true, lauta: ui.game.pack.id, sivuja: ui.tutkiSivut?.length ?? 0 };
+  return { ok: true, lauta: ui.game.pack.id, sivuja: ui.lehtitila.tutkiSivut?.length ?? 0 };
 }, maa);
 console.log('avaus:', JSON.stringify(tulos).slice(0, 400));
 await sivu.waitForTimeout(3000);
@@ -97,10 +97,10 @@ for (const id of sivut.length ? sivut : ['']) {
   if (id) {
     const painettu = await sivu.evaluate((sid) => {
       const ui = window.matkakirja.ui;
-      const i = ui.tutkiSivut.findIndex((s) => s.id === sid);
-      if (i < 0) return ui.tutkiSivut.map((s) => s.id);
+      const i = ui.lehtitila.tutkiSivut.findIndex((s) => s.id === sid);
+      if (i < 0) return ui.lehtitila.tutkiSivut.map((s) => s.id);
       ui.naytaTutkiSivu(i + 1, { heti: true }); // 0 on lehden kansi
-      return { sivu: ui.tutkiSivut[i].id, indeksi: i };
+      return { sivu: ui.lehtitila.tutkiSivut[i].id, indeksi: i };
     }, id);
     console.log('liuska', id, '→', JSON.stringify(painettu).slice(0, 200));
     await sivu.waitForTimeout(2500);

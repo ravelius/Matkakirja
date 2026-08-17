@@ -66,7 +66,7 @@ const elvytys = await sivu.evaluate(async () => {
   const alkuperainen = ui.elvytaNakyma.bind(ui);
   ui.elvytaNakyma = () => { elvytyksia += 1; alkuperainen(); };
   // Uusi avaus virittää jälkitarkistukset.
-  ui.arrivalShownFor = null;
+  ui.lehtitila.arrivalShownFor = null;
   ui.openArrival(ui.game.board.cityById.get('lontoo'));
   await new Promise((r) => setTimeout(r, 600));
   // Simuloidaan: sivutus tapahtui vanhalla mitalla eikä yhtään
@@ -86,7 +86,7 @@ await sivu.setViewportSize({ width: 390, height: 844 });
 await sivu.waitForTimeout(400);
 await sivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
-  ui.arrivalShownFor = null;
+  ui.lehtitila.arrivalShownFor = null;
   ui.openArrival(ui.game.board.cityById.get('lontoo'));
 });
 await sivu.waitForTimeout(400);

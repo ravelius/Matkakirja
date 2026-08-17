@@ -137,7 +137,7 @@ test('kulttuurivisan vastaus löytyy kaupunkilehden kansisivulta', async () => {
 test('jokainen kohdekartta on avaimistettu laudan kaupunki-id:llä', async () => {
   /*
    * MIKSI TÄMÄ ON OLEMASSA. ui.js hakee kohdekartan
-   * KAUPUNKIKARTAT[this.arrivalShownFor] eli laudan kaupunki-id:llä.
+   * KAUPUNKIKARTAT[this.lehtitila.arrivalShownFor] eli laudan kaupunki-id:llä.
    * Jos kartta on avaimistettu jollain muulla nimellä, se ei
    * renderöidy lainkaan — eikä mikään kerro siitä: ei virhettä, ei
    * testiä, ei tyhjää laatikkoa. Sivu näyttää samalta kuin

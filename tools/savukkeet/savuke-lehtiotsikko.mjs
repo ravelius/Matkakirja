@@ -126,7 +126,7 @@ const kaupunki = await sivu.evaluate(async () => {
   rivit.find((r) => r.textContent.includes('Etusivu'))?.click();
   await odota(500);
   const etusivulle = {
-    sivu: ui.tutkiSivu,
+    sivu: ui.lehtitila.tutkiSivu,
     levySulkeutui: !document.querySelector('#arrival-dialog > .sisallys-levy'),
   };
   // Ulkopuolinen napautus sulkee (omistaja 14.8.2026): avataan levy
@@ -202,7 +202,7 @@ const maalehti = await sivu.evaluate(async () => {
   ui.avaaMaalehti('GBR');
   // Aihesivut latautuvat asynkronisesti — odotetaan kunnes sisällystä
   // on tarpeeksi (alapalkin hampurilainen vaatii ≥3 sivua).
-  for (let i = 0; i < 100 && (ui.tutkiSivut?.length ?? 0) < 3; i += 1) await odota(100);
+  for (let i = 0; i < 100 && (ui.lehtitila.tutkiSivut?.length ?? 0) < 3; i += 1) await odota(100);
   await odota(400);
   const hampurilainen = document.querySelector('.lehti-hampurilainen');
   const alapalkinNappi = document.querySelector('.tutki-alanapit .sisallysnappi');

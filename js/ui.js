@@ -980,6 +980,56 @@ export class UI {
     this.introRunko = document.getElementById('intro-runko');
     this.introLopetus = document.getElementById('intro-lopetus');
 
+    /*
+     * LEHTITILA — lehden, maalehden ja kohdekartan koko muistitila
+     * yhdessä oliossa (moduuliremontin M5:n jatkoaskel 17.8.2026).
+     * Tämä on kenttien AINOA dokumentointipaikka; lehti.js, maalehti.js,
+     * nahtavyydet.js ja opas.js lukevat ja kirjoittavat näitä
+     * ui.lehtitila-viitteen kautta. DOM-kahvat (this.arrivalDialog ym.
+     * getElementById-haut) eivät kuulu tähän: ne ovat kiinteitä
+     * elementtiviitteitä, eivät tilaa. Olio syntyy rakentimessa ja
+     * kuolee instanssin mukana, joten uusi peli nollaa tilan
+     * täsmälleen kuten ennenkin.
+     */
+    this.lehtitila = {
+      // — Kaupunkilehti (saapumiskortti) —
+      arrivalShownFor: undefined, // minkä kaupungin lehti on auki (city.id)
+      arrivalKuvat: [], // kansikuvakarusellin kuvalista
+      arrivalKuvaKohdalla: 0, // karusellin näkyvä kuva (indeksi)
+      arrivalMaaTiedot: undefined, // auki olevan maaosaston maatiedot
+      esilatattu: undefined, // minkä kaupungin lehtikuvat on esiladattu (city.id)
+      mediaKaupunki: undefined, // mediarivin kaupunki (radio/tv)
+      mediaIso: undefined, // mediarivin maakoodi (ISO)
+      lehtiSaaTiedot: undefined, // sääruudun tiedot (lehti.js täyttää)
+      lehtiMittaAjastin: undefined, // lehden mittavarmistuksen ajastin
+      lehtiMittaJalkiajastin: undefined, // ja sen jälkitarkistus
+      // — Kulttuuriosa: kuvakatselin ja ääninäytteet —
+      kulttuuriSaatavilla: undefined, // onko kaupungilla kulttuuriosa
+      kulttuuriKuvaEl: undefined, // avoin kuvakortti (luotu elementti)
+      kulttuuriHuntuEl: undefined, // kuvakortin taustahuntu
+      kulttuuriKuvaNappaimet: undefined, // katselimen näppäinkuuntelija
+      kulttuuriAani: undefined, // soiva ääninäyte { audio, nappi, nimi }
+      // — Lehden sivupino (tutki = Tutki-napista aukeava lehti) —
+      tutkiTila: undefined, // 'kaupunki' | 'maa' | 'kehittaja'
+      tutkiSivut: undefined, // sivulista (kategoriat)
+      tutkiSivu: undefined, // auki oleva sivu (indeksi)
+      tutkiKansi: undefined, // kansitiedot (null = ei kantta)
+      tutkiLehti: undefined, // onko auki lehtitaitto
+      tutkiMaaLehti: undefined, // maalehden ISO-koodi (null = kaupunkilehti)
+      tutkiMaaEtusivu: undefined, // onko maakarttaetusivu
+      tutkiMaaIso: undefined, // Maa numeroina -sivun data
+      tutkiMaaNimi: undefined, // otsikon maa
+      tutkiSelausKytketty: undefined, // selauseleet kytketty (kerran/lehti)
+      tutkiSyke: undefined, // Tutki-napin syke (kaupunkiavain)
+      // — Maalehti —
+      maanSivut: undefined, // maalehden sivulista
+      // — Nähtävyysjutut ja kohdekartta —
+      nahtavyysPino: undefined, // paluupino (edelliset jutut)
+      nahtavyysAuki: undefined, // avoin juttu { kohde, numero, … }
+      nahtavyysYlaVahti: undefined, // yläreunavahdin ajastin
+      nahtavyysSelaus: undefined, // juttujen selaustila { lista, kohdalla }
+    };
+
     this.arrivalDialog = document.getElementById('arrival-dialog');
     this.arrivalCity = document.getElementById('arrival-city');
     this.arrivalImage = document.getElementById('arrival-image');
@@ -987,17 +1037,15 @@ export class UI {
     // nuolet (omistajan toive). Suurennos aukeaa selatusta kohdasta.
     this.arrivalKuvakotelo = document.getElementById('arrival-kuvakotelo');
     this.arrivalKuvaLaskuri = document.getElementById('arrival-kuva-laskuri');
-    this.arrivalKuvat = [];
-    this.arrivalKuvaKohdalla = 0;
     this.arrivalImage.addEventListener('click', () => {
-      const city = this.game.board.cityById.get(this.arrivalShownFor);
+      const city = this.game.board.cityById.get(this.lehtitila.arrivalShownFor);
       if (city?.wiki) this.openLightbox(city.wiki, city.name, this.arrivalImage.src || null);
     });
     const selaaKuvaa = (askel) => {
-      if (this.arrivalKuvat.length < 2) return;
-      this.arrivalKuvaKohdalla = (this.arrivalKuvaKohdalla + askel
-        + this.arrivalKuvat.length) % this.arrivalKuvat.length;
-      this.arrivalImage.src = this.arrivalKuvat[this.arrivalKuvaKohdalla].src;
+      if (this.lehtitila.arrivalKuvat.length < 2) return;
+      this.lehtitila.arrivalKuvaKohdalla = (this.lehtitila.arrivalKuvaKohdalla + askel
+        + this.lehtitila.arrivalKuvat.length) % this.lehtitila.arrivalKuvat.length;
+      this.arrivalImage.src = this.lehtitila.arrivalKuvat[this.lehtitila.arrivalKuvaKohdalla].src;
       this.paivitaKuvaLaskuri();
     };
     document.getElementById('arrival-kuva-edellinen')
@@ -1005,11 +1053,11 @@ export class UI {
     document.getElementById('arrival-kuva-seuraava')
       .addEventListener('click', (e) => { e.stopPropagation(); selaaKuvaa(1); });
     this.arrivalImage.addEventListener('error', () => {
-      this.pudotaRikkiKuva(this.arrivalKuvat, this.arrivalImage, 'arrival');
+      this.pudotaRikkiKuva(this.lehtitila.arrivalKuvat, this.arrivalImage, 'arrival');
     });
     this.arrivalIntro = document.getElementById('arrival-intro');
     this.arrivalWiki = document.getElementById('arrival-wiki');
-    this.arrivalWiki.addEventListener('click', () => openWiki(this, this.arrivalShownFor));
+    this.arrivalWiki.addEventListener('click', () => openWiki(this, this.lehtitila.arrivalShownFor));
     // Maan tiedot kaupungin rinnalla: lohko täyttyy openArrivalissa.
     this.arrivalMaa = document.getElementById('arrival-maa');
     this.arrivalMaaNimi = document.getElementById('arrival-maa-nimi');
@@ -1034,7 +1082,7 @@ export class UI {
     });
     this.arrivalMaaWiki = document.getElementById('arrival-maa-wiki');
     this.arrivalMaaWiki.addEventListener('click', () => {
-      const maa = this.arrivalMaaTiedot;
+      const maa = this.lehtitila.arrivalMaaTiedot;
       if (maa) this.openWikiArticle(maa.wiki ?? maa.nimi, maa.nimi);
     });
     // Kaupungin elämää -lohko täytetään openArrivalissa.
@@ -1074,7 +1122,7 @@ export class UI {
      * avaa maalehden.
      */
     this.arrivalMaaLinkki.addEventListener('click', () => {
-      if (this.tutkiMaaIso) avaaMaalehti(this, this.tutkiMaaIso);
+      if (this.lehtitila.tutkiMaaIso) avaaMaalehti(this, this.lehtitila.tutkiMaaIso);
     });
     // Lehtitaitto (omistajan toive 5.8.2026): kaupungin oma kansiosio
     // taittuu etusivulle, ja masto kertoo että käsissä on paikallislehti.
@@ -1885,8 +1933,8 @@ export class UI {
     void document.body.offsetWidth;
     const mitattu = this.mittaaNakyma();
     if (mitattu >= NAKYMAN_VAHIMMAISLEVEYS) this.nakymanLeveys = mitattu;
-    clearTimeout(this.lehtiMittaAjastin);
-    clearTimeout(this.lehtiMittaJalkiajastin);
+    clearTimeout(this.lehtitila.lehtiMittaAjastin);
+    clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
     const tarkista = () => {
       if (this.dead || !this.arrivalDialog?.open) return;
       void document.body.offsetWidth;
@@ -1914,8 +1962,8 @@ export class UI {
       this.nakymanLeveys = nyt;
       this.elvytaNakyma();
     };
-    this.lehtiMittaAjastin = setTimeout(tarkista, 400);
-    this.lehtiMittaJalkiajastin = setTimeout(tarkista, 1600);
+    this.lehtitila.lehtiMittaAjastin = setTimeout(tarkista, 400);
+    this.lehtitila.lehtiMittaJalkiajastin = setTimeout(tarkista, 1600);
   }
 
   /*
@@ -1981,7 +2029,7 @@ export class UI {
     // oikea, joten palstat, kohdekartta ja käyrät piirtyvät sen mukaan.
     const kortti = this.arrivalDialog.querySelector('.dialog-card');
     const kohta = kortti?.scrollTop ?? 0;
-    naytaTutkiSivu(this, this.tutkiSivu ?? tutkiEkaSivu(this), { heti: true });
+    naytaTutkiSivu(this, this.lehtitila.tutkiSivu ?? tutkiEkaSivu(this), { heti: true });
     // Sivunvaihto vierittää alkuun; elvytys ei ole sivunvaihto, joten
     // lukukohta palautetaan.
     if (kortti) kortti.scrollTop = kohta;
@@ -2152,8 +2200,8 @@ export class UI {
     }
     clearTimeout(this.nakymaAjastin);
     // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
-    clearTimeout(this.lehtiMittaAjastin);
-    clearTimeout(this.lehtiMittaJalkiajastin);
+    clearTimeout(this.lehtitila.lehtiMittaAjastin);
+    clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
     // Pöllön vihjekupla ei saa ilmestyä kuolleen pelin ajastimesta.
     this.peruValintavihje();
     // Sama koskee ääriviivan asettumisen loppuajastinta.
@@ -6344,12 +6392,12 @@ export class UI {
     const stayBtn = this.iconButton('suurennuslasi', 'Tutki',
       game.travelModes().includes('stay') ? 'primary' : '');
     // Uudessa kaupungissa nappi sykkii, kunnes sitä on painettu kerran.
-    if (this.tutkiSyke && this.tutkiSyke === this.kaupunkiAvain(city)) {
+    if (this.lehtitila.tutkiSyke && this.lehtitila.tutkiSyke === this.kaupunkiAvain(city)) {
       stayBtn.classList.add('tutki-syke');
     }
     stayBtn.addEventListener('click', () => {
       sfx.play('paper');
-      this.tutkiSyke = null;
+      this.lehtitila.tutkiSyke = null;
       stayBtn.classList.remove('tutki-syke');
       // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
       // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
@@ -7538,10 +7586,10 @@ export class UI {
   }
 
   openArrival(city) {
-    if (this.arrivalShownFor === city.id && this.arrivalDialog.open) return;
+    if (this.lehtitila.arrivalShownFor === city.id && this.arrivalDialog.open) return;
     // Mitta kuntoon ennen kuin mitään sivutetaan (ks. varmistaLehtiMitta).
     this.varmistaLehtiMitta();
-    this.arrivalShownFor = city.id;
+    this.lehtitila.arrivalShownFor = city.id;
     // Matkakirjan luenta tauolle Tutki-näkymän ajaksi: se jatkaa samasta
     // kohdasta, kun pelaaja palaa karttanäkymään (omistajan toive).
     if (this.diaryVoice && !this.diaryVoice.paused) {
@@ -7557,8 +7605,8 @@ export class UI {
     this.arrivalImage.hidden = true;
     this.arrivalImage.removeAttribute('src');
     this.arrivalKuvakotelo.hidden = true;
-    this.arrivalKuvat = [];
-    this.arrivalKuvaKohdalla = 0;
+    this.lehtitila.arrivalKuvat = [];
+    this.lehtitila.arrivalKuvaKohdalla = 0;
     this.paivitaKuvaLaskuri();
     // Maalehti piilottaa esittelyrivin (ks. avaaMaalehti); kaupunkiin
     // palattaessa se on palautettava, tai se jäisi piiloon lopullisesti.
@@ -7581,7 +7629,7 @@ export class UI {
     // kaupunki→maa-kytkentää ei ole, lohko pysyy piilossa.
     const iso = this.game.pack.map?.cityCountry?.[city.id];
     const maa = iso ? this.game.pack.map?.countryShapes?.[iso] : null;
-    this.arrivalMaaTiedot = maa ?? null;
+    this.lehtitila.arrivalMaaTiedot = maa ?? null;
     this.arrivalMaa.hidden = !maa;
     this.arrivalMaaWiki.hidden = true;
     if (maa) {
@@ -7603,8 +7651,8 @@ export class UI {
       naytaMaaTunnusluvut(this, iso);
       naytaMaaUutiset(this, iso, city.id);
       // Mediarivit rakennetaan joka kaupungille uudestaan.
-      this.mediaKaupunki = city;
-      this.mediaIso = iso;
+      this.lehtitila.mediaKaupunki = city;
+      this.lehtitila.mediaIso = iso;
       paivitaMediarivit(this);
       // Oma lyhytnosto maasta (pilottimaat) näkyy heti ja voittaa wikin
       // automaattikatkelman; Lue lisää avaa oman artikkelin.
@@ -7625,11 +7673,11 @@ export class UI {
       // maapalstalle, jos kaupunkipalsta näyttää sen jo.
       if (maanAvain !== (city.wiki ?? city.name)) {
         cachedSummary(maanAvain).then((summary) => {
-          if (!this.arrivalDialog.open || this.arrivalShownFor !== city.id) return;
+          if (!this.arrivalDialog.open || this.lehtitila.arrivalShownFor !== city.id) return;
           if (!summary?.extract) return;
           if (!omaMaaIntro) this.arrivalMaaIntro.textContent = shortIntro(summary.extract);
           // Lehdessä ei ole Lue lisää -nappia (ks. rakennaSivut).
-          if (!this.tutkiLehti) this.arrivalMaaWiki.hidden = false;
+          if (!this.lehtitila.tutkiLehti) this.arrivalMaaWiki.hidden = false;
         });
       }
     }
@@ -7666,11 +7714,11 @@ export class UI {
 
     Promise.all([cachedSummary(city.wiki), cachedImage(city.wiki)]).then(([summary, image]) => {
       // Pelaaja on voinut ehtiä jatkaa matkaa haun aikana.
-      if (!this.arrivalDialog.open || this.arrivalShownFor !== city.id) return;
+      if (!this.arrivalDialog.open || this.lehtitila.arrivalShownFor !== city.id) return;
       if (!summary) return;
       // Lehtikaupungilla on omat kuvat ja riittävä teksti — wikin
       // karuselli ja Lue lisää eivät saa ponnahtaa haun valmistuttua.
-      if (this.tutkiLehti) return;
+      if (this.lehtitila.tutkiLehti) return;
       if (image) {
         this.arrivalImage.src = image;
         this.arrivalImage.alt = summary.title || city.name;
@@ -7679,9 +7727,9 @@ export class UI {
         // Galleria taustalla: kun lista on saatu, pikkukuvaan tulevat
         // hento laskuri ja selailunuolet.
         cachedGallery(city.wiki).then((lista) => {
-          if (this.arrivalShownFor !== city.id || lista.length < 2) return;
-          this.arrivalKuvat = lista;
-          this.arrivalKuvaKohdalla = Math.max(0, lista.findIndex((k) => k.src === image));
+          if (this.lehtitila.arrivalShownFor !== city.id || lista.length < 2) return;
+          this.lehtitila.arrivalKuvat = lista;
+          this.lehtitila.arrivalKuvaKohdalla = Math.max(0, lista.findIndex((k) => k.src === image));
           this.paivitaKuvaLaskuri();
           // Koko galleria latautuu taustalla heti — selaus ei odota verkkoa.
           esilataaKuvat(lista.map((k) => k.src));
@@ -7707,8 +7755,8 @@ export class UI {
    * kuten ennenkin. Siksi virheet niellään hiljaa.
    */
   esilataaKaupunki(city) {
-    if (!city || this.esilatattu === city.id) return;
-    this.esilatattu = city.id;
+    if (!city || this.lehtitila.esilatattu === city.id) return;
+    this.lehtitila.esilatattu = city.id;
     const kuvat = [];
     const aanet = [];
 
@@ -7734,7 +7782,7 @@ export class UI {
     // Wikipedian kuvagalleria: juuri sitä pelaaja selaa nuolilla.
     if (city.wiki) {
       cachedGallery(city.wiki).then((lista) => {
-        if (this.esilatattu !== city.id) return;
+        if (this.lehtitila.esilatattu !== city.id) return;
         this.esilataaOsoitteet(lista.map((k) => k.src), city.id);
       }).catch(() => { /* galleriaa ei saatu — selaus toimii silti */ });
     }
@@ -7758,7 +7806,7 @@ export class UI {
   esilataaOsoitteet(osoitteet, cityId, kerralla = 3) {
     const jono = osoitteet.filter(Boolean);
     const seuraava = () => {
-      if (this.dead || this.esilatattu !== cityId) return;
+      if (this.dead || this.lehtitila.esilatattu !== cityId) return;
       const url = jono.shift();
       if (!url) return;
       const kuva = new Image();
@@ -7790,7 +7838,7 @@ export class UI {
       muisti.add(url);
       jono.push(url);
     }
-    if (jono.length) this.esilataaOsoitteet(jono, this.esilatattu);
+    if (jono.length) this.esilataaOsoitteet(jono, this.lehtitila.esilatattu);
   }
 
   /**
@@ -7816,7 +7864,7 @@ export class UI {
   esilataaLehdet(city) {
     // Vain lehtikaupungeissa on kaksi lehteä; muualla saapumiskortti on
     // wikin varassa eikä sillä ole etusivua puskuroitavaksi.
-    if (!this.tutkiLehti) return;
+    if (!this.lehtitila.tutkiLehti) return;
     this.esipuskuroiKuvat([
       ...this.kaupunkilehdenEtusivunKuvat(city.id),
       // Maalehden etusivu kokonaisuudessaan.
@@ -7830,10 +7878,10 @@ export class UI {
    * pääkuvan 1200:lla ja enintään kaksi pikkukuvaa 640:llä), maan lippu
    * mastossa ja kohdekartta sivun pohjalla.
    */
-  kaupunkilehdenEtusivunKuvat(cityId = this.arrivalShownFor) {
+  kaupunkilehdenEtusivunKuvat(cityId = this.lehtitila.arrivalShownFor) {
     const kuvat = [];
-    const kansikuvat = this.tutkiKansi?.kansikuvat ?? [];
-    const avauskuvat = this.tutkiKansi?.avauskuvat ?? [];
+    const kansikuvat = this.lehtitila.tutkiKansi?.kansikuvat ?? [];
+    const avauskuvat = this.lehtitila.tutkiKansi?.avauskuvat ?? [];
     // Avauskuvakaupungissa iso paikka on panoraamakaruselli (900,
     // sama leveys kuin nahtavyydenKarusellissa) ja pikkurivillä ovat
     // kansikuvien kaksi ensimmäistä; muuten entinen taitto.
@@ -7846,7 +7894,7 @@ export class UI {
     for (const teos of kansikuvat.slice(avauskuvat.length ? 0 : 1, avauskuvat.length ? 2 : 3)) {
       if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 640));
     }
-    const lippu = this.arrivalMaaTiedot?.lippu;
+    const lippu = this.lehtitila.arrivalMaaTiedot?.lippu;
     if (lippu) kuvat.push(lippuUrl(lippu, 96));
     /*
      * Kohdekartta: oma julistekartta on paikallinen tiedosto, Commons-
@@ -7874,10 +7922,10 @@ export class UI {
    * muuten ensimmäinen aihe. Puskuri hakee siis juuri sen sivun, joka
    * liitelinkistä aukeaa.
    */
-  maalehdenEkaSivu(iso = this.tutkiMaaIso) {
+  maalehdenEkaSivu(iso = this.lehtitila.tutkiMaaIso) {
     if (!iso) return null;
     const maa = this.game?.pack?.map?.countryShapes?.[iso];
-    const otsikko = this.tutkiMaaNimi ?? maa?.nimi ?? '';
+    const otsikko = this.lehtitila.tutkiMaaNimi ?? maa?.nimi ?? '';
     const kartta = MAAKARTAT[iso];
     /*
      * OTSIKKO ON PELKKÄ MAAN NIMI JA LIPPU SEN PERÄSSÄ (omistajan
@@ -7986,7 +8034,7 @@ export class UI {
    * - muilla mailla ensimmäinen aihesivu samalla piirrolla
    *   (piirraKategoria ottaa kohde-elementin parametrina)
    */
-  maalehdenEtusivuRunko(iso = this.tutkiMaaIso) {
+  maalehdenEtusivuRunko(iso = this.lehtitila.tutkiMaaIso) {
     const sivu = this.maalehdenEkaSivu(iso);
     if (!sivu) return null;
     const runko = html('div', 'wiki-kategoria');
@@ -8081,7 +8129,7 @@ export class UI {
     this.arrivalKulttuuri.open = false;
     // Lehden etusivu näyttää visan; naytaTutkiSivu tarvitsee tiedon
     // siitä, onko sitä ylipäätään olemassa.
-    this.kulttuuriSaatavilla = Boolean(tiedot);
+    this.lehtitila.kulttuuriSaatavilla = Boolean(tiedot);
     if (!tiedot) return;
     /*
      * Nostot EIVÄT ole enää saapumiskortissa vaan Tutki-ikkunassa
@@ -8398,7 +8446,7 @@ export class UI {
     const nahtavyys = document.getElementById('nahtavyys-dialog');
     const isanta = nahtavyys?.open ? nahtavyys : this.arrivalDialog;
     isanta.appendChild(kortti);
-    this.kulttuuriKuvaEl = kortti;
+    this.lehtitila.kulttuuriKuvaEl = kortti;
   }
 
   /**
@@ -8423,17 +8471,17 @@ export class UI {
       }
     };
     document.addEventListener('keydown', nappaimet, { capture: true });
-    this.kulttuuriKuvaNappaimet = nappaimet;
+    this.lehtitila.kulttuuriKuvaNappaimet = nappaimet;
   }
 
   suljeKulttuuriKuva() {
-    this.kulttuuriKuvaEl?.remove();
-    this.kulttuuriKuvaEl = null;
-    this.kulttuuriHuntuEl?.remove();
-    this.kulttuuriHuntuEl = null;
-    if (this.kulttuuriKuvaNappaimet) {
-      document.removeEventListener('keydown', this.kulttuuriKuvaNappaimet, { capture: true });
-      this.kulttuuriKuvaNappaimet = null;
+    this.lehtitila.kulttuuriKuvaEl?.remove();
+    this.lehtitila.kulttuuriKuvaEl = null;
+    this.lehtitila.kulttuuriHuntuEl?.remove();
+    this.lehtitila.kulttuuriHuntuEl = null;
+    if (this.lehtitila.kulttuuriKuvaNappaimet) {
+      document.removeEventListener('keydown', this.lehtitila.kulttuuriKuvaNappaimet, { capture: true });
+      this.lehtitila.kulttuuriKuvaNappaimet = null;
     }
   }
 
@@ -8446,7 +8494,7 @@ export class UI {
     const huntu = html('div', 'kevythuntu');
     huntu.addEventListener('click', () => this.suljeKulttuuriKuva());
     this.arrivalDialog.appendChild(huntu);
-    this.kulttuuriHuntuEl = huntu;
+    this.lehtitila.kulttuuriHuntuEl = huntu;
   }
 
   /**
@@ -8455,7 +8503,7 @@ export class UI {
    * hiljaisempi luenta — ei täyttä voimaa.
    */
   kulttuuriAaniNapista(nosto, nappi) {
-    if (this.kulttuuriAani) {
+    if (this.lehtitila.kulttuuriAani) {
       this.pysaytaKulttuuriAani();
       return;
     }
@@ -8478,7 +8526,7 @@ export class UI {
     // "Kuuntele kieltä" ja "Kuuntele musiikkia", ja ilman tätä ne
     // muuttuivat pysäytettäessä "Kuuntele näyte" -napeiksi.
     const alkuperainen = nimio?.textContent ?? 'Kuuntele näyte';
-    this.kulttuuriAani = { audio, nappi, nimi: alkuperainen };
+    this.lehtitila.kulttuuriAani = { audio, nappi, nimi: alkuperainen };
     /*
      * Radionapissa lukee aseman nimi, ja se saa jäädä lukemaan sitä
      * myös soidessa: nimi on napin tunniste, ei kehotus. Muissa
@@ -8503,14 +8551,14 @@ export class UI {
     // Paikan taustaääni väistyy näytteen ajaksi ja palaa pysäytettäessä.
     vaimennaTausta();
     const nollaa = () => {
-      if (this.kulttuuriAani?.audio === audio) this.pysaytaKulttuuriAani();
+      if (this.lehtitila.kulttuuriAani?.audio === audio) this.pysaytaKulttuuriAani();
     };
     // Peilin pettäessä sama äänite haetaan alkuperäisestä lähteestä
     // ennen kuin näyte luovuttaa (ks. js/media.js).
     let varareittiKokeiltu = false;
     let toinenAaniKokeiltu = false;
     const petti = () => {
-      if (this.kulttuuriAani?.audio !== audio) return;
+      if (this.lehtitila.kulttuuriAani?.audio !== audio) return;
       if (!varareittiKokeiltu && onPeilista(audio.getAttribute('src'))) {
         varareittiKokeiltu = true;
         peiliPetti('aanet');
@@ -8549,8 +8597,8 @@ export class UI {
   }
 
   pysaytaKulttuuriAani() {
-    const soiva = this.kulttuuriAani;
-    this.kulttuuriAani = null;
+    const soiva = this.lehtitila.kulttuuriAani;
+    this.lehtitila.kulttuuriAani = null;
     if (!soiva) return;
     soiva.audio.pause();
     soiva.audio.removeAttribute('src');
@@ -8615,7 +8663,7 @@ export class UI {
 
   piirraMinitehtava(kohde, kategoria) {
     const { tehtava } = kategoria;
-    const cityId = this.arrivalShownFor;
+    const cityId = this.lehtitila.arrivalShownFor;
     /*
      * Maalehden aihe erotellaan maatunnuksella. Ilman sitä avain on
      * pakka:kaupunki:aihe, ja koska maan lehden saa auki kartalta
@@ -8625,8 +8673,8 @@ export class UI {
      * Kaupunki jää avaimeen, joten maan aihesivu palkitsee yhä
      * uudestaan saman maan toisessa kaupungissa.
      */
-    const aiheAvain = this.tutkiTila === 'maa' && this.tutkiMaaLehti
-      ? `${this.tutkiMaaLehti}:${kategoria.id}`
+    const aiheAvain = this.lehtitila.tutkiTila === 'maa' && this.lehtitila.tutkiMaaLehti
+      ? `${this.lehtitila.tutkiMaaLehti}:${kategoria.id}`
       : kategoria.id;
     const laatikko = html('div', 'minitehtava');
     laatikko.appendChild(html('p', 'minitehtava-otsikko', 'Lehden minitehtävä'));
@@ -9184,18 +9232,18 @@ export class UI {
       this.naytaWikiKuva(lista[this.wikiKuvaKohdalla].src);
       this.paivitaWikiKuvaLaskuri();
     } else {
-      this.arrivalKuvaKohdalla %= lista.length;
-      kuva.src = lista[this.arrivalKuvaKohdalla].src;
+      this.lehtitila.arrivalKuvaKohdalla %= lista.length;
+      kuva.src = lista[this.lehtitila.arrivalKuvaKohdalla].src;
       this.paivitaKuvaLaskuri();
     }
   }
 
   /** Pikkukuvan laskuri ja nuolet näkyvät vain, kun galleriassa on selattavaa. */
   paivitaKuvaLaskuri() {
-    const monta = this.arrivalKuvat.length > 1;
+    const monta = this.lehtitila.arrivalKuvat.length > 1;
     this.arrivalKuvaLaskuri.hidden = !monta;
     this.arrivalKuvaLaskuri.textContent = monta
-      ? `${this.arrivalKuvaKohdalla + 1}/${this.arrivalKuvat.length}` : '';
+      ? `${this.lehtitila.arrivalKuvaKohdalla + 1}/${this.lehtitila.arrivalKuvat.length}` : '';
     document.getElementById('arrival-kuva-edellinen').hidden = !monta;
     document.getElementById('arrival-kuva-seuraava').hidden = !monta;
   }
@@ -9360,7 +9408,7 @@ export class UI {
   }
 
   closeArrival() {
-    this.arrivalShownFor = null;
+    this.lehtitila.arrivalShownFor = null;
     this.suljeKulttuuriKuva();
     this.pysaytaKulttuuriAani();
     // Inline-mitat pois (ks. mitoitaArkki): suljettu dialogi palaa
@@ -9869,7 +9917,7 @@ export class UI {
     }
     const nyt = this.kaupunkiAvain(game.cityOf());
     if (nyt && !game.player.isBot && !this.kaydytEnnen.has(nyt) && kaydyt.has(game.cityOf().id)) {
-      this.tutkiSyke = nyt;
+      this.lehtitila.tutkiSyke = nyt;
     }
     for (const avain of avaimet) this.kaydytEnnen.add(avain);
   }

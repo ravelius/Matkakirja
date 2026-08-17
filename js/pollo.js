@@ -341,7 +341,7 @@ export function kokoaKonteksti({
  * mutta kelvollinen.
  *
  * SIJAINTI EI TULE KOSKAAN UI:STA. Maa luetaan pelinTilasta eli
- * kaupungista johdettuna; ui.arrivalMaaTiedot kertoo vain, minkä maan
+ * kaupungista johdettuna; ui.lehtitila.arrivalMaaTiedot kertoo vain, minkä maan
  * osasto lehdessä sattuu olemaan auki, ja se voi olla mikä tahansa maa
  * (Maiden tiedot -varuste). Sen käyttäminen sijaintina oli juuri se
  * vika, joka teki Sofiasta Kreikan pääkaupungin.
@@ -353,7 +353,7 @@ export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [
   const matkakirja = polloSiisti(doc?.getElementById?.('fact-text')?.textContent);
   // Maalehti kerrotaan nimeltä, jottei sen maaosasto sekoitu siihen
   // maahan, jossa pelaaja seisoo.
-  const maalehtiIso = lehtiAuki ? ui?.tutkiMaaLehti ?? null : null;
+  const maalehtiIso = lehtiAuki ? ui?.lehtitila?.tutkiMaaLehti ?? null : null;
   const lehdenMaa = polloMaanNimi(game, maalehtiIso);
   let nakyma = 'kartta';
   if (lehtiAuki && maalehtiIso) {
@@ -1730,7 +1730,7 @@ class Pollo {
   /** Lehden sivunvaihto: sivu 0 on kansi, siksi +1. */
   siirraSivulle(ui, sivuId) {
     if (!sivuId) return;
-    const i = (ui.tutkiSivut ?? []).findIndex((sivu) => sivu?.id === sivuId);
+    const i = (ui.lehtitila?.tutkiSivut ?? []).findIndex((sivu) => sivu?.id === sivuId);
     if (i >= 0) ui.naytaTutkiSivu?.(i + 1, { heti: true });
   }
 

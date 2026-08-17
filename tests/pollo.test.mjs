@@ -275,7 +275,7 @@ test('piilotettua lehden sivua ei lueta', () => {
 test('lueNakyma: koko paketti on spoilerivapaa ja mahtuu kattoon', () => {
   const konteksti = lueNakyma({
     game: teeGame(),
-    ui: { arrivalMaaTiedot: { nimi: 'Qatar' }, tutkiMaaLehti: null },
+    ui: { lehtitila: { arrivalMaaTiedot: { nimi: 'Qatar' }, tutkiMaaLehti: null } },
     doc: teeDoc({ lehti: teeLehti(), matkakirja: 'Saavuin Dohaan helmikuussa 1873.' }),
   });
   for (const kielletty of [VISA_KYSYMYS, VISA_VASTAUS, ...VISA_VAIHTOEHDOT]) {
@@ -304,7 +304,7 @@ test('lueNakyma kartalla: ei lehtitekstiä, ei kaatumista ilman peliä', () => {
  * OMISTAJAN HAVAINTO 13.8.2026. Pelaaja seisoi Sofiassa ja kartan
  * maakyltissä luki BULGARIA, mutta pöllö ehdotti kysymystä "Mikä on
  * Sofian rooli Kreikassa tänä päivänä?" ja vahvisti sen. Syy oli
- * kontekstissa: maa luettiin ui.arrivalMaaTiedoista, joka osoittaa
+ * kontekstissa: maa luettiin ui.lehtitila.arrivalMaaTiedoista, joka osoittaa
  * viimeksi avattuun MAALEHTEEN — Maiden tiedot -varusteella selattu
  * Kreikka jäi siihen roikkumaan. Nämä testit lukitsevat säännön: maa
  * johdetaan aina nykyisestä kaupungista, eikä vanhentunut kenttä voita.
@@ -328,11 +328,11 @@ test('pelinTila johtaa maan kaupungista pelin omalla kaupunki→maa-datalla', ()
 });
 
 test('vanhentunut maalehtikenttä ei voita kaupunkia: Sofia on Bulgariassa', () => {
-  // ui.arrivalMaaTiedot osoittaa Kreikkaan, koska pelaaja selasi
+  // ui.lehtitila.arrivalMaaTiedot osoittaa Kreikkaan, koska pelaaja selasi
   // Kreikan maalehteä. Sen EI saa näkyä sijaintina.
   const konteksti = lueNakyma({
     game: teeSofiaGame(),
-    ui: { arrivalMaaTiedot: { nimi: 'Kreikka' }, tutkiMaaLehti: 'GRC' },
+    ui: { lehtitila: { arrivalMaaTiedot: { nimi: 'Kreikka' }, tutkiMaaLehti: 'GRC' } },
     doc: teeDoc(),
   });
   assert.ok(konteksti.includes('Kaupunki, jossa pelaaja on: Sofia'), konteksti);
@@ -344,7 +344,7 @@ test('avoin vieraan maan lehti kerrotaan nimeltä, ei sijaintina', () => {
   const lehti = teeLehti();
   const konteksti = lueNakyma({
     game: teeSofiaGame(),
-    ui: { arrivalMaaTiedot: { nimi: 'Kreikka' }, tutkiMaaLehti: 'GRC' },
+    ui: { lehtitila: { arrivalMaaTiedot: { nimi: 'Kreikka' }, tutkiMaaLehti: 'GRC' } },
     doc: teeDoc({ lehti }),
   });
   assert.ok(konteksti.includes('Maa, jossa pelaaja on: Bulgaria'), konteksti);
@@ -359,7 +359,7 @@ test('tuntemattomalle maalle ei keksitä nimeä — maa jää pois kokonaan', ()
   // on piilossa. Väärä tai käsittämätön maa on pahempi kuin puuttuva.
   const konteksti = lueNakyma({
     game: teeSofiaGame({ cityCountry: { sofia: 'ZZZ' }, countryShapes: {} }),
-    ui: { arrivalMaaTiedot: { nimi: 'Kreikka' } },
+    ui: { lehtitila: { arrivalMaaTiedot: { nimi: 'Kreikka' } } },
     doc: teeDoc(),
   });
   assert.ok(konteksti.includes('Kaupunki, jossa pelaaja on: Sofia'), konteksti);

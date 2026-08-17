@@ -38,7 +38,7 @@ import { esilataaKuvat, html, lahdemerkinta, vuosiluku } from './ui-apurit.js';
  * (KAUPUNKIKARTAT).
  */
 export function piirraKaupunkiKartta(ui, kohde) {
-  const kartta = KAUPUNKIKARTAT[ui.arrivalShownFor];
+  const kartta = KAUPUNKIKARTAT[ui.lehtitila.arrivalShownFor];
   if (!kartta) return;
   const lohko = html('div', 'kaupunkikartta');
   lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Kaupunki kartalla'));
@@ -189,7 +189,7 @@ export function piirraKaupunkiKartta(ui, kohde) {
    * voittaa kohteen mahdollisen wiki-kentän (undefined ohittaa
    * sen), koska omalla jutulla ei näytetä "Lue lisää" -linkkiä.
    */
-  const kaupunki = ui.arrivalShownFor;
+  const kaupunki = ui.lehtitila.arrivalShownFor;
   // Piirrospisteet kerätään hajautusta varten (ks. metodin loppu).
   const piirrosPisteet = [];
   (kartta.kohteet ?? []).forEach((raaka, i) => {
@@ -428,7 +428,7 @@ export function piirraKaupunkiKartta(ui, kohde) {
  * Kaupunki ilman matkailijalle-kenttää ei näytä osiota.
  */
 export function piirraMatkailijalle(ui, kohde) {
-  const tiedot = ui.tutkiKansi?.matkailijalle;
+  const tiedot = ui.lehtitila.tutkiKansi?.matkailijalle;
   if (!tiedot?.kappale) return;
   const lohko = html('div', 'matkailijalle');
   lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Matkailijalle'));
@@ -618,20 +618,20 @@ export function avaaNahtavyys(ui, kohde, numero, {
    * tyhjentävät pinon — paluu koskee vain linkkipolkua, jolla ei
    * ole muuta reittiä takaisin.
    */
-  ui.nahtavyysPino ??= [];
+  ui.lehtitila.nahtavyysPino ??= [];
   const kortti = dialogi.querySelector('.nahtavyys-kortti');
   if (!palaa) {
-    if (muista && dialogi.open && ui.nahtavyysAuki) {
-      ui.nahtavyysPino.push({ ...ui.nahtavyysAuki, rulla: kortti?.scrollTop ?? 0 });
-    } else ui.nahtavyysPino = [];
+    if (muista && dialogi.open && ui.lehtitila.nahtavyysAuki) {
+      ui.lehtitila.nahtavyysPino.push({ ...ui.lehtitila.nahtavyysAuki, rulla: kortti?.scrollTop ?? 0 });
+    } else ui.lehtitila.nahtavyysPino = [];
   }
-  ui.nahtavyysAuki = { kohde, numero, henkilolinkit, valikko };
+  ui.lehtitila.nahtavyysAuki = { kohde, numero, henkilolinkit, valikko };
   const takaisin = document.getElementById('nahtavyys-takaisin');
   if (takaisin) {
     if (!takaisin.dataset.kytketty) {
       takaisin.dataset.kytketty = '1';
       takaisin.addEventListener('click', () => {
-        const edellinen = ui.nahtavyysPino.pop();
+        const edellinen = ui.lehtitila.nahtavyysPino.pop();
         if (!edellinen) return;
         avaaNahtavyys(ui, edellinen.kohde, edellinen.numero, {
           henkilolinkit: edellinen.henkilolinkit, palaa: true,
@@ -639,7 +639,7 @@ export function avaaNahtavyys(ui, kohde, numero, {
         });
       });
     }
-    takaisin.hidden = !ui.nahtavyysPino.length;
+    takaisin.hidden = !ui.lehtitila.nahtavyysPino.length;
   }
   /*
    * Nähtävyystekstissä mainittu henkilö linkitetään omaan juttuunsa
@@ -648,7 +648,7 @@ export function avaaNahtavyys(ui, kohde, numero, {
    * jonka kartalta juttu avattiin); henkilöjuttu itse avataan
    * tyhjällä listalla, ettei nimi linkitä itseensä.
    */
-  const linkit = henkilolinkit ?? (HENKILOLINKIT[ui.arrivalShownFor] ?? []);
+  const linkit = henkilolinkit ?? (HENKILOLINKIT[ui.lehtitila.arrivalShownFor] ?? []);
   /*
    * Sulku taustaa napauttamalla (omistajan toive 8.8.2026). Kortti
    * täyttää dialogin tarkalleen, joten dialogiin itseensä osuva
@@ -659,7 +659,7 @@ export function avaaNahtavyys(ui, kohde, numero, {
     dialogi.dataset.taustaSulkee = '1';
     dialogi.addEventListener('click', (e) => {
       if (e.target !== dialogi) return;
-      if (ui.kulttuuriKuvaEl) { ui.suljeKulttuuriKuva(); return; }
+      if (ui.lehtitila.kulttuuriKuvaEl) { ui.suljeKulttuuriKuva(); return; }
       dialogi.close();
     });
   }
@@ -738,7 +738,7 @@ export function avaaNahtavyys(ui, kohde, numero, {
    * jutut ja muut ei-karttakohteet eivät löydä piirrosta nimellään,
    * jolloin kappale taittuu ennalleen.
    */
-  const piirros = MINIATYYRIT[ui.arrivalShownFor]?.[kohde.nimi] ?? null;
+  const piirros = MINIATYYRIT[ui.lehtitila.arrivalShownFor]?.[kohde.nimi] ?? null;
 
   kappaleet.forEach((kappale, i) => {
     const kpl = nahtavyysKappale(ui, kappale, linkit);
@@ -818,7 +818,7 @@ export function avaaNahtavyys(ui, kohde, numero, {
    */
   // Edellisen avauksen vahti sammuu aina — myös paluupolulla,
   // ettei se nollaa juuri palautettua lukukohtaa.
-  clearInterval(ui.nahtavyysYlaVahti);
+  clearInterval(ui.lehtitila.nahtavyysYlaVahti);
   if (!palaa && kortti) {
     let kayttajaOtti = false;
     const irrota = () => { kayttajaOtti = true; };
@@ -827,14 +827,14 @@ export function avaaNahtavyys(ui, kohde, numero, {
     }
     const alku = performance.now();
     let rauhassa = null; // hetki, jolloin joka kuva oli valmis
-    ui.nahtavyysYlaVahti = setInterval(() => {
+    ui.lehtitila.nahtavyysYlaVahti = setInterval(() => {
       const nyt = performance.now();
       const kesken = [...kortti.querySelectorAll('img')].some((k) => !k.complete);
       if (kesken) rauhassa = null;
       else rauhassa ??= nyt;
       const valmis = nyt - alku > 2500 && rauhassa !== null && nyt - rauhassa > 700;
       if (kayttajaOtti || valmis || nyt - alku > 15000) {
-        clearInterval(ui.nahtavyysYlaVahti);
+        clearInterval(ui.lehtitila.nahtavyysYlaVahti);
         return;
       }
       if (kortti.scrollTop !== 0) kortti.scrollTop = 0;
@@ -977,14 +977,14 @@ export function varustaNahtavyysSelaus(ui, kohde) {
    * kaiuttimen rinnalle.
    */
   const selattava = kohdalla >= 0 && lista.length > 1;
-  ui.nahtavyysSelaus = selattava ? { lista, kohdalla } : null;
+  ui.lehtitila.nahtavyysSelaus = selattava ? { lista, kohdalla } : null;
   for (const el of [edellinen, seuraava]) el.hidden = !selattava;
   if (!selattava) return;
 
   if (!dialogi.dataset.selausKytketty) {
     dialogi.dataset.selausKytketty = '1';
     const siirry = (suunta) => {
-      const tila = ui.nahtavyysSelaus;
+      const tila = ui.lehtitila.nahtavyysSelaus;
       if (!tila) return false;
       const i = (tila.kohdalla + suunta + tila.lista.length) % tila.lista.length;
       const { k, numero } = tila.lista[i];
@@ -1023,7 +1023,7 @@ export function varustaNahtavyysSelaus(ui, kohde) {
     kortti?.addEventListener('pointerup', (e) => {
       const alku = veto;
       veto = null;
-      if (!alku || ui.kulttuuriKuvaEl) return;
+      if (!alku || ui.lehtitila.kulttuuriKuvaEl) return;
       const dx = e.clientX - alku.x;
       if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(e.clientY - alku.y)) {
         siirry(dx < 0 ? 1 : -1);
@@ -1041,7 +1041,7 @@ export function varustaNahtavyysSelaus(ui, kohde) {
  * kutsujalle — valikkoon kelpaa myös pelkkä wiki-kohde, selaukseen ei.
  */
 export function nahtavyysKohteet(ui) {
-  const kaupunki = ui.arrivalShownFor;
+  const kaupunki = ui.lehtitila.arrivalShownFor;
   return (KAUPUNKIKARTAT[kaupunki]?.kohteet ?? []).map((raaka, i) => {
     const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
     const k = juttu ? { ...raaka, wiki: undefined, ...juttu } : raaka;

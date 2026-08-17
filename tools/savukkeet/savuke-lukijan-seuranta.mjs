@@ -209,7 +209,7 @@ vaadi('pysäytys (paneelin rasti) poistaa maalauksen, kohtaluokan ja paneelin',
 const auto = await sivu.evaluate(async () => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
   const { ui } = window.matkakirja;
-  const sivuAlussa = ui.tutkiSivu;
+  const sivuAlussa = ui.lehtitila.tutkiSivu;
   document.querySelector('#arrival-dialog .lukija-nappi')?.click();
   await odota(900);
   const autoNappi = document.querySelector('.lukija-paneeli .lukija-auto-nappi');
@@ -230,11 +230,11 @@ const auto = await sivu.evaluate(async () => {
   let jatkuu = false;
   for (let i = 0; i < 60; i += 1) {
     await odota(500);
-    kaantyi = ui.tutkiSivu === sivuAlussa + 1;
+    kaantyi = ui.lehtitila.tutkiSivu === sivuAlussa + 1;
     jatkuu = Boolean(document.querySelector('#arrival-dialog .lukija-nappi.lukee'));
     if (kaantyi && jatkuu) break;
   }
-  return { paalla, sivuAlussa, sivuNyt: ui.tutkiSivu, kaantyi, jatkuu };
+  return { paalla, sivuAlussa, sivuNyt: ui.lehtitila.tutkiSivu, kaantyi, jatkuu };
 });
 vaadi('jatkuvan luennan kytkin löytyy paneelista ja menee päälle',
   auto.paalla, JSON.stringify(auto));
