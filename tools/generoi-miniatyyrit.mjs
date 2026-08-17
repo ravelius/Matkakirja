@@ -591,6 +591,133 @@ const KUVAT = [
     + 'stout re-used ancient stone columns whose capitals are '
     + 'visibly older and rougher than the rest, with plain green '
     + 'doors behind them'],
+
+  /*
+   * ── Tokio, kuusi kohdetta (E00-viimeistely 17.8.2026) ───────────
+   * VAIN JONOSSA, ei generoitu: js/packs/miniatyyrit.js:ssä ei ole
+   * tokiota eikä sw.js:n SHELLissä .webp-polkuja. Kartalla kohteet
+   * näkyvät siihen asti numeroympyröinä, kuten koodi tekee
+   * piirroksettomalle kohteelle. Yksi otto per kohde
+   * (kustannussääntö, docs/tyolista-opukselle.md).
+   *
+   * Kaksi kohdetta on tarkoituksella kuvattu ILMAN ihmisiä ja ilman
+   * kojuja (Kaminarimon, Sensō-ji): Asakusan valokuvissa on aina
+   * väkijoukko, ja miniatyyrin pitää lukea 84 pikselissä.
+   */
+  ['tokio-kaminarimon', 'a japanese temple gate with a steep grey '
+    + 'tiled roof carried on thick vermilion pillars, and hanging in '
+    + 'the middle of the opening one ENORMOUS red paper lantern, '
+    + 'wider than a man and nearly reaching the ground, with bold '
+    + 'dark characters down its front and a small metal plate at its '
+    + 'base. A guardian statue standing in a niche on each side. NO '
+    + 'people, NO market stalls'],
+  ['tokio-senso-ji', 'a large japanese buddhist temple hall raised on '
+    + 'a stone platform: a broad two-tiered roof with heavy curving '
+    + 'ridges and upturned corners, a row of vermilion pillars along '
+    + 'the front and a wide flight of steps up to it, with a slender '
+    + 'five-storey pagoda standing separately to one side. NO people'],
+  ['tokio-kanei-ji', 'a small quiet japanese temple among tall trees: '
+    + 'one modest wooden hall with a dark tiled hip roof and plain '
+    + 'timber posts, a stone lantern and a low stone-flagged path '
+    + 'leading to it. Deliberately humble, no vermilion, no crowd'],
+  ['tokio-tokion-kansallismuseo', 'a large symmetrical 1930s museum '
+    + 'building: a heavy pale stone facade of rectangular windows '
+    + 'with a central entrance, crowned by a wide JAPANESE tiled hip '
+    + 'roof with upturned eaves — an oriental roof on a western '
+    + 'building — seen across an empty forecourt with a fountain '
+    + 'basin in front'],
+  ['tokio-uenon-puisto', 'a broad park avenue of cherry trees in full '
+    + 'blossom arching over a wide gravel path, and beyond them an '
+    + 'open pond edged with tall reeds and a small many-sided temple '
+    + 'pavilion on a spit of land in the water'],
+  ['tokio-shitamachi-museo', 'a plain two-storey museum block with '
+    + 'large ground-floor windows, and shown inside them a '
+    + 'reconstructed old Tokyo alley: a narrow wooden shopfront with '
+    + 'a cloth shop-curtain over the door, a sliding paper screen '
+    + 'above it, wooden tubs and a hand water pump at the kerb'],
+
+  /*
+   * ── Soul, kuusi kohdetta (E00-viimeistely 17.8.2026) ────────────
+   * VAIN JONOSSA, ei generoitu (ks. Tampere yllä).
+   *
+   * Korealaisen palatsiarkkitehtuurin kolme tunnusmerkkiä on
+   * kirjoitettu jokaiseen kehotteeseen erikseen, koska ne erottavat
+   * sen japanilaisesta: kaksoisräystäs, jonka kulmat kaartuvat
+   * ylös, räystään alla vihreä-punainen ruutumainen koristemaalaus
+   * (dancheong) ja pyöreät punaiset pylväät kivijalustan päällä.
+   */
+  ['soul-gyeongbokgung', 'a korean royal throne hall on a wide stone '
+    + 'terrace with carved balustrades: a two-tiered grey tiled roof '
+    + 'with strongly upturned corners, red round pillars beneath, and '
+    + 'green-and-red painted latticework under the eaves. Two rows of '
+    + 'small low stone posts stand on the empty paved courtyard in '
+    + 'front. NO people'],
+  ['soul-bukchonin-hanok-kyla', 'a narrow sloping lane of traditional '
+    + 'korean houses seen from above: rows of grey curved tiled roofs '
+    + 'stepping down the hill on both sides, white stone walls with a '
+    + 'red angular geometric pattern along their top, and a wooden '
+    + 'gate. Modern glass towers small and hazy in the far distance'],
+  ['soul-changdeokgung', 'a square garden pond with a small round '
+    + 'island in the middle bearing one leaning pine tree, and on the '
+    + 'left bank a small korean pavilion standing partly over the '
+    + 'water on stone pillars, its grey tiled roof with upturned '
+    + 'corners and green-and-red painted eaves. Wooded slope behind'],
+  ['soul-jongmyo', 'one extremely long low shrine hall seen at an '
+    + 'oblique angle so it recedes far into the distance: an unbroken '
+    + 'grey tiled roof carried by an endless row of plain dark red '
+    + 'pillars with dark double doors between them, standing on a '
+    + 'high stone platform above a rough flagged courtyard. Austere, '
+    + 'no ornament, NO people'],
+  ['soul-tapgol-puisto', 'a tall slender ten-storey stone pagoda of '
+    + 'pale carved marble, its tiers stepping inwards like a stack of '
+    + 'small roofs, standing alone in a city park with a hexagonal '
+    + 'red-pillared pavilion beside it and pine trees around'],
+  ['soul-bosingak', 'a korean bell pavilion: an open upper storey '
+    + 'with a red railing raised on thick round red pillars, under a '
+    + 'wide grey tiled roof with sharply upturned corners and '
+    + 'green-and-red painted eaves, with a huge dark bronze bell '
+    + 'hanging in the shadow beneath. A low stone balustrade rings the '
+    + 'platform'],
+
+  /*
+   * ── Shanghai, kuusi kohdetta (E00-viimeistely 17.8.2026) ────────
+   * VAIN JONOSSA, ei generoitu (ks. Tampere yllä).
+   *
+   * Shanghain kohteista neljä on länsimaista 1900-luvun alun
+   * arkkitehtuuria ja kaksi kiinalaista. Kehotteissa on siksi
+   * kirjoitettu auki se, mikä erottaa ne toisistaan: kivijulkisivu
+   * ja kellotorni toisaalla, kaartuvat räystäänkulmat ja
+   * kalkkikivilohkareet toisaalla — ilman sitä malli sekoittaa
+   * tyylit keskenään.
+   */
+  ['shanghai-bund', 'a row of grand early-20th-century stone bank '
+    + 'buildings standing shoulder to shoulder along a wide riverside '
+    + 'embankment, seen from across the water: heavy grey classical '
+    + 'facades with columns and cornices, one domed clock tower rising '
+    + 'above the middle of the row. Flat empty water in front'],
+  ['shanghai-waibaidun-silta', 'a riveted steel truss bridge whose top '
+    + 'chord rises in two low humps like a camel\'s back, its lattice '
+    + 'of diagonal girders drawn clearly, crossing a narrow creek on '
+    + 'stone piers. Seen from the bank at a low angle. NO traffic'],
+  ['shanghai-rauhanhotelli', 'a ten-storey art deco corner tower of '
+    + 'pale granite: strong vertical window bands, stepped setbacks '
+    + 'near the top, and crowning it a very steep copper pyramid roof '
+    + 'weathered pale green. Arched shopfronts along the ground floor'],
+  ['shanghai-yu-puutarha', 'a classical chinese garden pond: a '
+    + 'two-storey dark red timber pavilion with sharply upcurving roof '
+    + 'corners stands at the water\'s edge, a low covered walkway runs '
+    + 'along the left bank, and a zigzag stone bridge crosses the '
+    + 'water. White pitted limestone rocks piled at the shore'],
+  ['shanghai-nanjing-katu', 'a broad pedestrian shopping street seen '
+    + 'down its length: tall vertical shop signs in chinese characters '
+    + 'stacked one above another on both sides, awnings and lanterns, '
+    + 'a paved street with low stone bollards down the middle. Busy '
+    + 'but drawn simply'],
+  ['shanghai-shanghain-museo', 'a modern museum building shaped like '
+    + 'an ancient chinese bronze cooking vessel: a low square base of '
+    + 'pale stone carrying a wide flat round drum, and from the rim of '
+    + 'the drum two curved arch-like handles rising into the air. Lawn '
+    + 'in front, NO people'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');

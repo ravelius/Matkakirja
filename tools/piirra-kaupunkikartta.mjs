@@ -1073,7 +1073,16 @@ const KAUPUNGIT = {
     // sitä ei ole: artikkelissa on {{Coord|format=dms|display=it}} ja
     // koordinaatti tulee Wikidatasta. Piste on siksi haettu
     // Overpassista (way 東京国立博物館 / Tokyo National Museum).
+    //
+    // REUNUS 17.8.2026 (E00-viimeistely, sama kuin Tampere ja
+    // Firenze): piirretty alue on 1,6-kertainen eli 5,0 x 3,5 km,
+    // mutta lepotilassa lehti näyttää yhä tarkalleen alla olevan
+    // rajat-alueen. Reunukselle osuvat Yanakan temppelikortteli
+    // luoteessa, Kappabashin keittiövälinekatu etelässä ja
+    // Sumida-joen itäranta — juuri sitä shitamachia, jonne
+    // panorointi jatkuu karttaa suurennettaessa.
     rajat: { pohjoinen: 35.7245, etela: 35.705, lansi: 139.7645, ita: 139.801 },
+    laajennus: 1.6,
   },
   isfahan: {
     // Isfahanin vanha ydin: Jameh-moskeija pohjoisessa, basaari sen
@@ -1176,6 +1185,91 @@ const KAUPUNGIT = {
     // Kadifekale jää ulos: linnavuori on 1,5 km itään ja sen ja agoran
     // välissä on jyrkkä rinne, joka venyttäisi rajauksen kaksinkertaiseksi.
     rajat: { pohjoinen: 38.426, etela: 38.413, lansi: 27.124, ita: 27.142 },
+  },
+  soul: {
+    /*
+     * Soulin vanha ydin Jongnon kaupunginosassa, 2,6 x 2,4 km.
+     * Ruutu alkaa pohjoisessa Bukchonin hanok-korttelista ja päättyy
+     * etelässä Cheonggyecheon-puroon, joka juoksee kuvan alalaidassa
+     * lännestä itään. Vasemmalla on Gyeongbokgungin palatsialue
+     * isona suorakaiteena, oikealla Changdeokgung ja sen alapuolella
+     * Jongmyon metsäinen esi-isien pyhäkkö — kolme suurta vihreää
+     * saareketta muuten tiiviissä ruudukossa.
+     *
+     * MIKSI TÄMÄ NURKKA SOULISTA. Soul on megakaupunki, jonka
+     * maamerkit ovat kymmenien kilometrien päässä toisistaan:
+     * Namsanin torni, Gangnam, Han-joki ja Olympiapuisto eivät mahdu
+     * mihinkään yhteen kaupunkikartan ruutuun. Jongno on ainoa
+     * nurkka, jossa kuusi lähteellistä kohdetta on kävelymatkan
+     * päässä toisistaan — ja se on myös se Soul, joka on vanhin:
+     * Joseon-dynastia perusti pääkaupunkinsa juuri tähän vuonna 1394.
+     * Han-joki jää 3 km etelään, Namsan 1,5 km, Sungnyemunin portti
+     * 1 km lounaaseen. Mukaan ottaminen kolminkertaistaisi ruudun ja
+     * muuttaisi vanhan ytimen täpläksi (Firenze-oppi).
+     *
+     * KOHTEIDEN PISTEET LÄHTEISTÄ, ei arvattuina. Viisi on
+     * en-Wikipedian coord-malleista ja Jongmyo Wikidatan P625:stä,
+     * koska artikkelissa ei ole koordinaattia:
+     *   Gyeongbokgung   37,5799 / 126,9768
+     *   Bukchon         37,5831 / 126,9836
+     *   Changdeokgung   37,5794 / 126,9928
+     *   Jongmyo         37,5747 / 126,9936  (Wikidata Q483948)
+     *   Tapgol-puisto   37,5711 / 126,9885
+     *   Bosingak        37,5699 / 126,9834
+     *
+     * palvelutiet: true — Bukchonin hanok-kujat ja Insadongin
+     * sivukujat ovat OSM:ssä service-teitä, ja ilman niitä kartan
+     * pohjoisosa jää tyhjäksi paperiksi juuri siinä kohdassa, jossa
+     * kohde on. Sama ratkaisu kuin Vilnassa ja Bagdadissa.
+     */
+    rajat: { pohjoinen: 37.587, etela: 37.5655, lansi: 126.9695, ita: 126.9985 },
+    laajennus: 1.6,
+    palvelutiet: true,
+  },
+  shanghai: {
+    /*
+     * Huangpu-joki tulee kuvaan oikeasta alakulmasta, kaartaa
+     * pohjoiseen ja poistuu oikeasta ylälaidasta; sen mutkan sisään
+     * jää Bund eli Waitan, ja mutkan pohjoispäässä Suzhou-puro
+     * yhtyy jokeen. Joki on kuvan juoni samalla tavalla kuin Tiber
+     * Roomassa: kaikki kuusi kohdetta ovat sen länsipuolella,
+     * rannasta 2,5 kilometrin päähän länteen.
+     *
+     * MIKSI TÄMÄ NURKKA SHANGHAISTA. Kaupungissa on 25 miljoonaa
+     * asukasta ja sen tunnetut kohteet ovat kymmenien kilometrien
+     * päässä toisistaan (Longhua etelässä, Jing'an lännessä,
+     * Zhujiajiao 50 km länteen). Bundin ja vanhankaupungin välinen
+     * kaistale on ainoa nurkka, jossa kuusi lähteellistä kohdetta on
+     * kävelymatkan päässä toisistaan — ja se on se Shanghai, joka
+     * kasvoi 1800-luvulla sopimussatamana eli isoisän aikaan.
+     *
+     * PUDONG JÄÄ TAHALLAAN REUNUKSELLE. Helmitorni on 121,4998 eli
+     * 430 metriä itärajan takana. Sisään ottaminen leventäisi ruudun
+     * 3,4 kilometriin ja litistäisi vanhankaupungin kujaverkon
+     * kuvan alalaitaan — sama virhe kuin Firenzen ensimmäisessä
+     * ajossa. Laajennus 1,6 näyttää Pudongin heti, kun karttaa
+     * suurentaa, ja lehden esittely kertoo mihin suuntaan se jää.
+     *
+     * KOHTEIDEN PISTEET LÄHTEISTÄ. Viisi on en-Wikipedian
+     * coord-mallista ja Shanghain museo Wikidatan P625:stä:
+     *   Bund (Waitan)      31,2380 / 121,4861
+     *   Waibaidun silta    31,2431 / 121,4900
+     *   Rauhanhotelli      31,2411 / 121,4846
+     *   Yu-puutarha        31,2292 / 121,4875
+     *   Nanjing-katu       31,2347 / 121,4744
+     *   Shanghain museo    31,2303 / 121,4706  (Wikidata)
+     * Kaupunginjumalan temppeli on lähteellinen varakohde mutta vain
+     * 165 metriä Yu-puutarhasta, joten numeroympyrät menisivät
+     * päällekkäin — sama ratkaisu kuin Tokion Hōzōmonin kanssa.
+     *
+     * palvelutiet: true — vanhankaupungin kujat Yu-puutarhan
+     * ympärillä ja Bundin takakorttelien sisäpihat ovat OSM:ssä
+     * service-teitä. Ilman niitä kuvan itäosa on pelkkiä
+     * pääkatuja.
+     */
+    rajat: { pohjoinen: 31.248, etela: 31.224, lansi: 121.4655, ita: 121.4955 },
+    laajennus: 1.6,
+    palvelutiet: true,
   },
   bagdad: {
     // Rusafan vanha puoli Tigrisin itärannalla: Mutanabbin kirjakatu,

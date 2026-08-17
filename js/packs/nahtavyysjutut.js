@@ -14039,6 +14039,624 @@ export const NAHTAVYYSJUTUT = {
     },
   },
   /*
+   * SOUL (E00-viimeistely 17.8.2026). Kuusi kohdetta, samat nimet
+   * merkki merkiltä kuin maakartat.js:n KAUPUNKIKARTAT.soul.kohteet
+   * — ui.js yhdistää taulut nimellä.
+   *
+   * Faktat en-Wikipedian rajapinnasta (action=query&prop=extracts)
+   * ja fi-Wikipedian johdannoista; kuvat haettu Commonsin
+   * KATEGORIOIDEN kautta (Gyeonghoeru, Geunjeongjeon, Injeongjeon,
+   * Buyongji, Jeongjeon (Jongmyo), Tapgol Park, Bosingak, Bukchon
+   * Hanok Village), koska hakusanahaku ei löydä koreankielisiä
+   * kuvauksia. Jokainen lisenssi todennettu extmetadatasta
+   * (LicenseShortName, Artist, Restrictions) ja jokainen kuva
+   * ladattu ja katsottu silmin.
+   *
+   * Kaksi jutuista nojaa 1906 otettuun valokuvasarjaan — se on
+   * lähinnä isoisän aikakautta, mitä Soulista on vapaana saatavilla.
+   */
+  soul: {
+    Gyeongbokgung: {
+      aika: '1395',
+      teksti: 'Joseon-dynastia perustettiin vuonna 1392, ja kaksi vuotta '
+          + 'myöhemmin se päätti siirtää pääkaupunkinsa Hanyangiin eli '
+          + 'nykyiseen Souliin. Palatsin rakentaminen alkoi joulukuussa '
+          + '1394 ja ensimmäinen vaihe valmistui syyskuussa 1395. Nimen '
+          + 'antoi virkamies Chŏng Tojŏn, ja se tarkoittaa suurten '
+          + 'siunausten palatsia — sanapari on lainattu vanhasta '
+          + 'kiinalaisesta runokokoelmasta. Kuningas Sejong Suuri, joka '
+          + 'hallitsi vuosina 1418–1450, teki palatsista päämajansa ja '
+          + 'kehitti täällä korean oman kirjaimiston hangulin.'
+        + '\n\n'
+          + 'Vuonna 1592 palatsi paloi maan tasalle Imjin-sodassa, ja '
+          + 'rahaa jälleenrakennukseen ei ollut. Se sai olla raunioina '
+          + 'lähes kolmesataa vuotta, kunnes kuningas Gojong rakennutti '
+          + 'sen uudelleen 1860-luvulla — isoisän matkan aikaan palatsi '
+          + 'oli siis juuri valmistunut uutena. Vuonna 1910 Japani '
+          + 'liitti Korean itseensä ja purki palatsin '
+          + 'järjestelmällisesti: noin viidestäsadasta rakennuksesta oli '
+          + 'vuoteen 1945 mennessä jäljellä neljäkymmentä, ja niiden '
+          + 'tilalle nousi siirtomaahallinnon toimistotalo.'
+        + '\n\n'
+          + 'Palautustyö alkoi toden teolla 1980-luvulla, ja sitä on '
+          + 'tehty kahdessa ohjelmassa, joista jälkimmäinen kestää '
+          + 'vuoteen 2045. Kymmeniä rakennuksia on jo pystytetty '
+          + 'uudelleen. Vahdinvaihto näytellään portilla kahdesti '
+          + 'päivässä, ja sisäänpääsy on ilmainen sille, joka saapuu '
+          + 'hanbokissa eli perinteisessä korealaisessa puvussa.',
+      kuvat: [
+        {
+          tiedosto: 'Front view of the Imperial Throne Hall Geunjeongjeon at Gyeongbokgung Palace with blue sky in Seoul.jpg',
+          selite: 'Valtaistuinsali Geunjeongjeon suoraan edestä: '
+            + 'kaksikerroksinen harmaa tiilikatto kaartuvine räystäineen, '
+            + 'sen alla vihreä-punainen koristemaalaus ja kaksi '
+            + 'kivikaiteista terassia. Tyhjällä laattapihalla seisoo '
+            + 'kahdessa rivissä matalia kivipaaluja, jotka merkitsivät '
+            + 'virkamiesten arvojärjestyksen. Takana kohoaa vuori.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Gyeongbokgung Gyeonghoeru 1906.png',
+          selite: 'Gyeonghoerun juhlapaviljonki vuonna 1906: kaksikerroksinen '
+            + 'puurakennus seisoo neliskulmaisen lammen rannassa '
+            + 'kymmenien kivipylväiden varassa, ja etualan vesi on '
+            + 'kokonaan lootuksenlehtien peitossa. Yläkerran kaiteen '
+            + 'takana ja pylväiden välissä näkyy vaaleisiin pukuihin '
+            + 'pukeutuneita ihmisiä.',
+          lahde: 'Asahi Shimbun (朝日新聞社), Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bukchonin hanok-kylä': {
+      aika: '1920-luku',
+      teksti: 'Bukchon tarkoittaa pohjoiskylää, ja nimi tulee siitä, että '
+          + 'kaupunginosa on Cheonggyecheon-puron ja Jongno-kadun '
+          + 'pohjoispuolella. Se oli Joseon-kaudella korkeiden '
+          + 'virkamiesten ja aateliston asuinaluetta: vuoden 1906 '
+          + 'väestörekisterin mukaan 43,6 prosenttia asukkaista kuului '
+          + 'tähän säätyyn. Talot olivat silloin isoja ja niitä oli '
+          + 'harvassa.'
+        + '\n\n'
+          + 'Nykyinen tiheä hanok-kortteli syntyi vasta 1920-luvulla, ja '
+          + 'sen takana on yksi mies. Kiinteistökehittäjä Chŏng Segwŏn '
+          + 'perusti noin vuonna 1920 ensimmäisen korealaisomisteisen '
+          + 'kiinteistöyhtiön ja alkoi rakentaa Bukchonia täyteen '
+          + 'pieniä hanok-taloja. Jälkeläisten mukaan valinta oli '
+          + 'tietoinen: hän halusi estää aluetta siirtymästä '
+          + 'japanilaisille ja rakensi korealaisia taloja, vaikka '
+          + 'siirtomaahallinto painosti toisin. Talot olivat aiempia '
+          + 'pienempiä mutta ajanmukaisia — niissä oli lasi-ikkunat ja '
+          + 'sähkö. Voitot hän ohjasi korealaisiin '
+          + 'kansallisuusliikkeisiin, muun muassa Korean kielen '
+          + 'seuralle, ja joutui siitä lopulta kidutetuksi ja '
+          + 'menetti omaisuutensa.'
+        + '\n\n'
+          + 'Alue julistettiin kansanperinnemaisemaksi vuonna 1976. '
+          + 'Turistit löysivät sen 2000-luvun lopulla, ja vuonna 2024 '
+          + 'kylässä kävi 6,4 miljoonaa vierailijaa — noin 6 100 '
+          + 'asukasta kohti. Siitä seurasi sääntöjä: tammikuusta 2025 '
+          + 'alkaen muut kuin majoittujat pääsevät kylään vain kello '
+          + '10:n ja 17:n välillä, ja asukkaat pyytävät kylteillään '
+          + 'hiljaisuutta.',
+      kuvat: [
+        {
+          tiedosto: 'Bukchon Hanok Village 01.jpg',
+          selite: 'Bukchonin kuja alamäkeen: molemmin puolin hanok-talojen '
+            + 'harmaat tiilikatot ja kaartuvat räystäät, oikealla valkoinen '
+            + 'kivimuuri, jonka yläreunassa on punaisella maalattu '
+            + 'kulmikas meanderikuvio. Kujan päässä avautuu nykyinen Soul: '
+            + 'lasitorneja utuisessa valossa ja niiden takana '
+            + 'Namsan-vuorella seisova torni.',
+          lahde: 'Bgag, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Bukchon Hanok Village 05.jpg',
+          selite: 'Hanok-talon portti läheltä: leveä kaksiosainen puuovi '
+            + 'rautarenkaineen, sen yllä kaartuva tiilikatto ja '
+            + 'ristikkoikkunoita. Portin molemmin puolin jatkuu muuri, '
+            + 'jonka vaaleaan kivipintaan on ladottu punaisia '
+            + 'kulmikkaita kuvioita. Katukyltissä lukee numero 49.',
+          lahde: 'Bgag, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Changdeokgung: {
+      aika: '1405',
+      teksti: 'Kuningas Taejong määräsi vuonna 1404 rakennettavaksi toisen '
+          + 'palatsin Gyeongbokgungin rinnalle, ja se valmistui '
+          + 'lokakuussa 1405. Nimi tarkoittaa kukoistavan hyveen '
+          + 'palatsia. Sivupalatsiksi tarkoitettu Changdeokgung osoittautui '
+          + 'kuninkaiden suosikiksi: he asuivat täällä mieluummin kuin '
+          + 'virallisessa pääpalatsissa, ja kun Imjin-sodan tuhot '
+          + 'korjattiin 1600-luvun alussa, vain Changdeokgung ja sen '
+          + 'naapuri kunnostettiin. Niin sivupalatsista tuli '
+          + 'käytännössä Joseonin pääpalatsi kolmeksi vuosisadaksi.'
+        + '\n\n'
+          + 'Valtaistuinsali Injeongjeon oli paikka, jossa uusi kuningas '
+          + 'kruunattiin ja jossa vieraat lähettiläät otettiin vastaan. '
+          + 'Sen edessä on laattapiha, ja pihan kivipaalut kertovat, '
+          + 'missä järjestyksessä hovin virkamiehet seisoivat. '
+          + 'Kuninkaallinen perhe asui palatsissa vielä sen jälkeenkin, '
+          + 'kun Korea vapautui vuonna 1945 — aina 1900-luvun lopulle '
+          + 'asti.'
+        + '\n\n'
+          + 'Palatsin kuuluisin osa on kuitenkin sen takana: Huwon eli '
+          + 'salainen puutarha, kymmenien hehtaarien metsäinen rinne, '
+          + 'jota kuninkaat rakastivat. Sen keskellä on Buyongji, '
+          + 'nelikulmainen lampi, jonka keskellä on pyöreä pieni saari — '
+          + 'muoto noudattaa vanhaa käsitystä siitä, että maa on '
+          + 'nelikulmainen ja taivas pyöreä. Puutarha on nykyisin '
+          + 'suurimmaksi osaksi avoinna, osa vain opastetuilla '
+          + 'kierroksilla. Changdeokgung otettiin Unescon '
+          + 'maailmanperintöluetteloon vuonna 1997.',
+      kuvat: [
+        {
+          tiedosto: 'Changdeok Palace, Seoul.11.jpg',
+          selite: 'Valtaistuinsali Injeongjeon edestä kirkkaassa '
+            + 'auringonpaisteessa: kaksikerroksinen harmaa tiilikatto, '
+            + 'jonka harjalla on valkoinen raita, sen alla vihreä-punainen '
+            + 'koristemaalaus ja rivi valkoisia ovipaneeleita. Edessä '
+            + 'nousee leveä kiviterassi, ja tyhjällä laattapihalla seisoo '
+            + 'kahdessa rivissä matalia kivipaaluja.',
+          lahde: 'Rtflakfizer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Changdeokgung, Seoul - Changdeokgung3136.jpg',
+          selite: 'Buyongji-lampi salaisessa puutarhassa: vasemmalla '
+            + 'seisoo pieni paviljonki kivipylväiden varassa osittain '
+            + 'veden päällä, keskellä lammessa on pyöreä kivireunainen '
+            + 'saari, jolla kasvaa mänty ja pensaita, ja oikealla '
+            + 'kohoaa toinen paviljonki portteineen. Vesi on '
+            + 'vihertävä ja heijastaa rakennukset.',
+          lahde: 'lumoplank, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Jongmyo: {
+      aika: '1394',
+      teksti: 'Kun kuningas Taejo siirsi pääkaupungin tänne vuonna 1394, '
+          + 'hän rakennutti palatsin viereen pyhäkön esi-isilleen. '
+          + 'Jongmyo on kungfutselainen kuninkaallinen esi-isien '
+          + 'pyhäkkö, ja Unescon mukaan se on maailman vanhin '
+          + 'säilynyt laatuaan. Paikan idea on kiinalaisesta '
+          + 'perinteestä: valtaistuimelta katsottuna esi-isien pyhäkön '
+          + 'kuului olla kuninkaan vasemmalla ja maan- ja '
+          + 'viljanjumalien pyhäkön oikealla.'
+        + '\n\n'
+          + 'Päärakennus Jeongjeon oli valmistuessaan arvioiden mukaan '
+          + 'Aasian pisimpiä rakennuksia. Siinä oli aluksi seitsemän '
+          + 'kammiota, joista kussakin säilytettiin yhden kuninkaan ja '
+          + 'hänen puolisoidensa sielutauluja. Kun uusia kuninkaita '
+          + 'kuoli, salia jatkettiin aina lännestä itään, ja lopulta '
+          + 'kammioita oli yhdeksäntoista. Niissä on nykyisin 19 '
+          + 'kuninkaan ja 30 kuningattaren taulut. Jokainen kammio on '
+          + 'tahallaan yksinkertainen ja koruton.'
+        + '\n\n'
+          + 'Japanilaiset polttivat pyhäkön Imjin-sodassa, mutta '
+          + 'alkuperäiset sielutaulut pelastuivat: ne oli piilotettu '
+          + 'erään tavallisen kansalaisen taloon. Uusi rakennus '
+          + 'valmistui 1601 ja seisoo yhä. Pyhäköllä on kolme porttia, '
+          + 'ja niiden käyttö oli tarkkaan jaettu — eteläportti oli '
+          + 'sielujen, itäportti kuninkaan ja länsiportti seremonian '
+          + 'esittäjien. Vuodesta 1932 vuoteen 2019 Jongmyon ja '
+          + 'palatsien välissä kulki katu; nyt se on tunnelissa ja '
+          + 'yhteys on palautettu. Kohde liitettiin Unescon '
+          + 'maailmanperintöluetteloon vuonna 1995.',
+      kuvat: [
+        {
+          tiedosto: 'Jeongjeon, Jongmyo Shrine (oblique) - Seoul, Korea.jpg',
+          selite: 'Jeongjeon-sali viistosti: hyvin pitkä matala rakennus '
+            + 'katoaa perspektiiviin, punaisia pylväitä ja tummia '
+            + 'kaksoisovia rivi toisensa jälkeen yhtenäisen harmaan '
+            + 'tiilikaton alla. Rakennus lepää korkealla kivijalustalla, '
+            + 'jolle nousee muutama porras, ja edessä on karkeasti '
+            + 'ladottu laattapiha.',
+          lahde: 'Daderot, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tapgol-puisto': {
+      aika: '1897',
+      teksti: 'Puiston paikalla oli 1400-luvulla Wongaksan buddhalainen '
+          + 'temppeli. Siitä on jäljellä kymmenkerroksinen kivipagodi, '
+          + 'joka antoi puistolle nimen: tap tarkoittaa koreaksi '
+          + 'pagodia. Pihalla on myös vuonna 1471 pystytetty muistokivi, '
+          + 'joka kertoo temppelin perustamisesta 1465. Sen jalusta on '
+          + 'kilpikonnan muotoinen graniittilohkare, runko marmoria ja '
+          + 'huipulla kaksi toisiinsa kietoutunutta lohikäärmettä. Kivi '
+          + 'on 4,9 metriä korkea.'
+        + '\n\n'
+          + 'Puistoksi alue järjestettiin vasta vuonna 1897. Ehdotus '
+          + 'tuli irlantilaiselta John McLeavy Brownilta, joka toimi '
+          + 'kuningas Gojongin neuvonantajana. Nimi oli pitkään '
+          + 'Pagoda-puisto ja muuttui Tapgol-puistoksi 28. toukokuuta '
+          + '1992. Pinta-alaa on puolitoista hehtaaria.'
+        + '\n\n'
+          + 'Puiston tärkein hetki oli 1. maaliskuuta 1919. Täällä '
+          + 'luettiin ensimmäisen kerran ääneen Korean '
+          + 'itsenäisyysjulistus, ja siitä alkoi maaliskuun ensimmäisen '
+          + 'liike — Korean itsenäisyysliikkeen laajin kansannousu. '
+          + 'Puistossa on nykyisin sarja reliefejä ja muistomerkki '
+          + 'liikkeelle. Arkisin paviljongin portailla istuu '
+          + 'kaupunkilaisia, ja portin ulkopuolella pelataan '
+          + 'janggia eli korealaista shakkia.',
+      kuvat: [
+        {
+          tiedosto: 'Pagoda 1906.png',
+          selite: 'Puisto vuonna 1906, pian perustamisensa jälkeen: '
+            + 'kymmenkerroksinen vaalea kivipagodi kohoaa keskellä ja '
+            + 'sen vieressä on tiilikattoinen paviljonki. Etualalla '
+            + 'kulkee soratie nuorten istutusten välissä, tiellä '
+            + 'kävelee vaaleisiin pukuihin pukeutuneita miehiä, ja '
+            + 'taustalla näkyy loivia vuoria.',
+          lahde: 'Asahi Shimbun (朝日新聞社), Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Tapgol Park, Seoul.jpg',
+          selite: 'Puiston paviljonki sateella: kuusikulmainen '
+            + 'punapylväinen rakennus harmaine tiilikattoineen seisoo '
+            + 'matalalla kiviportaikolla, ja portailla istuu rivi '
+            + 'ihmisiä. Ympärillä on märkä asfalttiaukio, isoja mäntyjä '
+            + 'ja niiden takana kerrostaloja.',
+          lahde: 'Tristan Surtel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Bosingak: {
+      aika: '1395',
+      teksti: 'Jongno tarkoittaa kellokatua, ja nimi tulee tästä '
+          + 'paviljongista. Ensimmäinen kellotorni pystytettiin vuonna '
+          + '1395, ja kello ripustettiin Hanyangiin vuonna 1398. '
+          + 'Rakennus seisoi vilkkaan torin keskellä ja oli osa '
+          + 'kaupungin puolustusjärjestelmää. Nimen Bosingak sille '
+          + 'antoi keisari Gojong vuonna 1895.'
+        + '\n\n'
+          + 'Kello oli kaupungin kello sanan varsinaisessa '
+          + 'merkityksessä. Sitä lyötiin kolmekymmentäkolme kertaa '
+          + 'kello neljä aamulla ja kello kymmenen illalla, ja niiden '
+          + 'lyöntien mukaan Soulin neljä kaupunginporttia avattiin ja '
+          + 'suljettiin. Illan lyöntien jälkeen kaupungissa oli '
+          + 'ulkonaliikkumiskielto. Kelloa käytettiin myös '
+          + 'palohälytyksenä.'
+        + '\n\n'
+          + 'Alkuperäinen kello tuhoutui tulipalossa vuonna 1597, ja '
+          + 'sen tilalle tuotiin Wongaksan temppelin kello, joka on '
+          + 'valettu vuonna 1468. Se sai suojelukohteen aseman 1948. '
+          + 'Vanha kello on nykyisin Korean kansallismuseossa ja '
+          + 'paviljongissa riippuu jäljennös. Nykyisin kelloa lyödään '
+          + 'vain kerran vuodessa, uudenvuodenyönä keskiyöllä — ja '
+          + 'väkeä tulee niin paljon, että metrojunat eivät sinä yönä '
+          + 'pysähdy viereisellä asemalla lainkaan.',
+      kuvat: [
+        {
+          tiedosto: 'Bosingak, Seoul.jpg',
+          selite: 'Kellopaviljonki lännestä nähtynä: punaisten pylväiden '
+            + 'varaan nostettu avoin yläkerta punaisine kaiteineen, sen '
+            + 'yllä leveä harmaa tiilikatto voimakkaasti kaartuvine '
+            + 'kulmineen ja räystään alla vihreä-punainen koristemaalaus. '
+            + 'Etuseinässä on kultakirjaiminen nimikilpi, ja rakennusta '
+            + 'kiertää matala kivikaide nurmikentän laidalla.',
+          lahde: 'Tristan Surtel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * SHANGHAI (E00-viimeistely 17.8.2026). Kuusi kohdetta, samat
+   * nimet merkki merkiltä kuin maakartat.js:n
+   * KAUPUNKIKARTAT.shanghai.kohteet.
+   *
+   * Faktat en-Wikipedian rajapinnasta (action=query&prop=extracts).
+   * Kuvat haettu Commonsin KATEGORIOIDEN kautta (The Bund,
+   * Waibaidu Bridge, Sassoon House, Yu Garden, East Nanjing Road,
+   * Shanghai Museum) — hakusanahaku ei löydä kiinankielisiä
+   * kuvauksia. Lisenssit todennettu extmetadatasta ja jokainen kuva
+   * ladattu ja katsottu silmin.
+   *
+   * PAINOTUS 1873:N SUUNTAAN, ei nykypolitiikkaan (Raamattu:
+   * Kaupungit). Waibaidun sillan jutussa on Lai Afongin valokuva
+   * juuri siitä puusillasta, joka rakennettiin 1873 — isoisän
+   * matkan vuonna.
+   */
+  shanghai: {
+    Bund: {
+      aika: '1843–',
+      teksti: 'Sana bund on lainattu englantiin hindustanista, ja se '
+          + 'tarkoitti alun perin patoa tai pengerrystä. Kiinan '
+          + 'sopimussatamissa se alkoi tarkoittaa juuri rannan '
+          + 'suuntaista pengerrettyä laituria. Kiinalainen nimi Waitan '
+          + 'ei liity siihen mitenkään: se tarkoittaa ulkorantaa ja '
+          + 'erottaa tämän pätkän vanhan kaupungin puoleisesta '
+          + 'sisärannasta.'
+        + '\n\n'
+          + 'Shanghai avattiin ulkomaiselle kaupalle vuonna 1843, ja '
+          + 'ranta oli aluksi brittiläinen siirtokunta. Vuonna 1863 '
+          + 'brittien ja amerikkalaisten alueet yhdistettiin '
+          + 'kansainväliseksi asutusalueeksi. Isoisän matkan aikaan '
+          + 'rannassa oli jo kauppahuoneiden konttoreita; kivinen '
+          + 'julkisivurivi, joka siellä nyt seisoo, nousi vasta '
+          + '1900-luvun alussa, kun Bundista tuli Itä-Aasian '
+          + 'rahamarkkinoiden keskus. 1940-luvulla kadun varrella oli '
+          + 'lähes kaikkien Kiinassa toimivien suurten rahalaitosten '
+          + 'pääkonttorit.'
+        + '\n\n'
+          + 'Katua on muutettu paljon. 1980-luvulla taifuunien '
+          + 'aiheuttamien tulvien takia rantaan rakennettiin korkea '
+          + 'pengerrys, ja siksi rantabulevardi on nykyisin noin '
+          + 'kymmenen metriä katutasoa ylempänä. 1990-luvulla '
+          + 'Zhongshan-katu levennettiin kymmenkaistaiseksi, ja '
+          + 'suurin osa vanhasta puistokaistasta katosi. Samalla '
+          + 'purettiin lauttalaiturit, jotka olivat koko rannan '
+          + 'alkuperäinen tarkoitus. Joen toisella puolella nousi '
+          + 'Pudongin pilvenpiirtäjien rivi, ja siitä syntyi näkymä, '
+          + 'jota kaupunki nyt myy: kaksi vuosisataa vastakkain '
+          + 'saman veden yli.',
+      kuvat: [
+        {
+          tiedosto: 'Shanghai The Bund (22219109059).jpg',
+          selite: 'Bundin julkisivurivi päivänvalossa: harmaita '
+            + 'kivijulkisivuja peräkkäin, keskellä kellotornillinen '
+            + 'kauppahuone jonka huipulla on ohut salko, oikealla '
+            + 'vaaleampi talo jonka katolla on koristeelliset '
+            + 'huippukaaret. Kattojen tangoissa liehuu punaisia lippuja, '
+            + 'ja taustalla kohoaa lasinen nykytorni.',
+          lahde: 'Gary Todd from Xinzheng, China, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Waibaidun silta': {
+      aika: '1908',
+      teksti: 'Ennen siltoja Suzhou-puron yli päästiin vain kolmella '
+          + 'lautalla. Vuonna 1856 brittiläinen liikemies Charles '
+          + 'Wills ja amerikkalainen Edward Cunningham perustivat '
+          + 'kahdenkymmenen sijoittajan voimin Kiinan ensimmäisen '
+          + 'siltayhtiön ja rakensivat puron suulle ensimmäisen '
+          + 'ulkomaalaisten sillan. Ylitys maksoi.'
+        + '\n\n'
+          + 'Vuonna 1873 kaupungin neuvosto rakennutti sen tilalle '
+          + 'uuden puusillan, ja silloin syntyi myös nimi Waibaidu. '
+          + 'Sen merkityksestä on kaksi selitystä. Toisen mukaan '
+          + 'kiinassa käytettiin sanoja li eli sisä ja wai eli ulko '
+          + 'erottamaan lähekkäisiä paikkoja toisistaan: kauempana '
+          + 'purossa oli toinen silta nimeltä Libaidu, ja tämä oli '
+          + 'ulompi. Toisen selityksen mukaan bai tarkoittaa '
+          + 'shanghain murteessa ilmaista — uudesta sillasta ei enää '
+          + 'peritty maksua.'
+        + '\n\n'
+          + 'Nykyinen silta on paikan neljäs, ja se avattiin 20. '
+          + 'tammikuuta 1908. Se on Kiinan ensimmäinen kokonaan '
+          + 'teräksinen silta ja maan ainoa säilynyt kamelinselkäinen '
+          + 'ristikkosilta: kaksi kaarevaa ristikkopalkkia, joiden '
+          + 'yläreuna nousee keskeltä kyttyräksi. Shanghain '
+          + 'kaupunginhallitus julisti sen suojelluksi rakennukseksi '
+          + '15. helmikuuta 1994. Alati muuttuvassa kaupungissa se on '
+          + 'yksi harvoista pysyvistä asioista.',
+      kuvat: [
+        {
+          tiedosto: 'Garden Bridge & Astor House on the Hong Que Side, Shanghai.jpg',
+          selite: 'Lai Afongin valokuva 1800-luvulta: puron yli kaartuu '
+            + 'kyttyräselkäinen puusilta kaiteineen, vedessä on rivi '
+            + 'kattoineen varustettuja jokiveneitä, ja vastarannalla '
+            + 'seisoo matalia vaaleita siirtomaataloja tummine '
+            + 'ikkunaluukkuineen. Etualalla on puurivi ja valkoinen '
+            + 'aita.',
+          lahde: 'Lai Afong, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Pont Waibaidu (1).jpg',
+          selite: 'Nykyinen terässilta illalla punaiseksi valaistuna: '
+            + 'ristikkokaari nousee kuvan vasemmasta laidasta '
+            + 'keskelle kyttyräksi ja laskeutuu vastarannalle. Takana '
+            + 'näkyy tumma tornitalo ja oikealla valaistu vanha '
+            + 'kulmatalo kupolitornineen. Vesi heijastaa valot.',
+          lahde: 'Guerinf, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Rauhanhotelli: {
+      aika: '1929',
+      teksti: 'Talon rakennutti Victor Sassoon, brittiläinen liikemies, '
+          + 'jonka suku oli irakilaisia sefardijuutalaisia ja jonka '
+          + 'kauppahuone E.D. Sassoon & Co. teki liiketoimia ympäri '
+          + 'Aasiaa. Hän osti Bundilta kokonaisen korttelin, jolla oli '
+          + 'pitkä julkisivu kahteen suuntaan, ja rakennutti sille '
+          + 'ensimmäisen korkean talonsa. Suunnittelijat olivat '
+          + 'arkkitehtitoimisto Palmer and Turner, runko teräsbetonia. '
+          + 'Työ alkoi 1926 ja valmistui 1929.'
+        + '\n\n'
+          + 'Sassoon House oli 77 metriä korkea kattolinjaan ja 83 '
+          + 'metriä huippuun — viisitoista metriä korkeampi kuin '
+          + 'seuraavaksi korkein talo Bundilla ja yksi Kaukoidän '
+          + 'ensimmäisistä korkeista rakennuksista. Julkisivu on '
+          + 'graniittia, yhdeksäs kerros ja katto terrakottaa. Joelle '
+          + 'päin on jyrkkä pyramidikatto, noin kymmenen metriä korkea '
+          + 'ja kuparilla päällystetty; kupari on hapettunut vaalean '
+          + 'vihreäksi. Kymmenes kerros oli kattohuoneisto, jossa '
+          + 'Sassoon itse asui.'
+        + '\n\n'
+          + 'Neljännestä yhdeksänteen kerrokseen tuli Cathay-hotelli, '
+          + 'joka oli aikansa ylellisin: siellä oli sisävesijohdot ja '
+          + 'kokonainen kerros niin sanottuja kansallishuoneita, '
+          + 'joista jokainen oli sisustettu eri maan tyyliin — '
+          + 'kirjailija Jonathan Kaufmanin mukaan Japanin huoneessa '
+          + 'oli tatamimatot, Intian huoneessa matot ja tyynyt ja '
+          + 'Kiinan huoneessa kiinalaiset huonekalut ja keramiikka. '
+          + 'Nimeksi tuli Rauhanhotelli vuonna 1956. Kadun toisella '
+          + 'puolella on hotellin eteläinen siipi, vuonna 1908 '
+          + 'valmistunut Palace Hotel.',
+      kuvat: [
+        {
+          tiedosto: 'Sassoon House 20250501.jpg',
+          selite: 'Sassoonin talo kadunkulmasta alaviistosta: kymmenen '
+            + 'kerrosta vaaleaa graniittia, pystysuorat ikkunanauhat ja '
+            + 'porrastuvat ylimmät kerrokset, ja huipulla jyrkkä, '
+            + 'vihertäväksi hapettunut kuparipyramidi. Katutasossa on '
+            + 'rivi korkeita kaari-ikkunoita, ja kadulla kulkee '
+            + 'ihmisiä.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Yu-puutarha': {
+      aika: '1559–1577',
+      teksti: 'Pan Yunduan aloitti puutarhan rakentamisen vuonna 1559 '
+          + 'Ming-kaudella lahjaksi isälleen, ministeri Pan Enille, '
+          + 'tämän vanhuudenpäiviksi. Hän ryhtyi työhön reputettuaan '
+          + 'yhden keisarillisista virkatutkinnoista. Nimi Yu '
+          + 'tarkoittaa vanhempia miellyttävää ja tyydyttävää. Työ '
+          + 'keskeytyi lähes kahdeksikymmeneksi vuodeksi, kun Pan '
+          + 'nimitettiin Sichuanin maaherraksi, ja jatkui vasta 1577.'
+        + '\n\n'
+          + 'Puutarhassa on yli neljäkymmentä erillistä näkymää: '
+          + 'paviljonkeja, kivimuodostelmia, lampia ja käytäviä, jotka '
+          + 'kaikki kiertyvät keskussalin ympärille. Kuuluisin '
+          + 'yksittäinen esine on Hieno jadekivi, 3,3 metriä korkea ja '
+          + 'viisi tonnia painava huokoinen lohkare. Kerrotaan, että '
+          + 'se oli matkalla Song-dynastian keisarin puutarhaan mutta '
+          + 'nostettiin Huangpu-joesta sen jälkeen, kun sitä kuljettanut '
+          + 'vene upposi. Pan itse piti puutarhassa esityksiä ja '
+          + 'juhlia: hänen päiväkirjamerkinnöistään vuosilta '
+          + '1586–1601 lähes kolme neljäsosaa koskee jotakin julkista '
+          + 'esitystä. Puutarha oli aikansa suurin Shanghaissa — ja '
+          + 'niin kallis, että se auttoi tuhoamaan suvun varallisuuden.'
+        + '\n\n'
+          + 'Puutarha vaurioitui 1800-luvulla monta kertaa. Vuonna '
+          + '1842 brittiarmeija käytti Huxintingin teehuonetta '
+          + 'tukikohtanaan muutaman päivän ajan, ja Taiping-kapinan '
+          + 'aikana Pienten miekkojen seura piti päämajaansa '
+          + 'Dianchunin salissa — kun Qing-joukot valtasivat alueen '
+          + 'takaisin, alkuperäisistä rakennuksista oli jäljellä '
+          + 'tuskin mitään. Teehuone seisoo yhä lammen keskellä, ja '
+          + 'sinne johtaa siksak-silta, jonka mutkat on tehty '
+          + 'perinteen mukaan pahoja henkiä varten: niiden uskottiin '
+          + 'kulkevan vain suoraan.',
+      kuvat: [
+        {
+          tiedosto: '20090510 Shanghai Yuyan 6573.jpg',
+          selite: 'Yu-puutarhan lampi: vasemmalla kulkee katettu '
+            + 'pylväskäytävä harmaine tiilikattoineen ja siitä lähtee '
+            + 'matala kivisilta veden yli, oikealla kohoaa '
+            + 'kaksikerroksinen tummanpunainen paviljonki, jonka '
+            + 'räystäänkulmat kaartuvat jyrkästi ylös. Rannassa on '
+            + 'valkoisia kalkkikivilohkareita ja vesi on vihreää.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '2014.11.16.121201 Jiuqu Bridge Yuyuan Park Shanghai.jpg',
+          selite: 'Huxintingin teehuone keskellä lampea: kaksikerroksinen '
+            + 'puutalo seisoo pylväiden varassa suoraan vedessä, '
+            + 'katonkulmat nousevat teräviksi kärjiksi ja parvekkeiden '
+            + 'kaiteissa on ristikkokuviointia. Vasemmalla näkyy '
+            + 'kivikaiteinen silta ja sillalla sateenvarjoja.',
+          lahde: 'Hermann Luyken, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nanjing-katu': {
+      aika: '1845',
+      teksti: 'Katu sai alkunsa vuonna 1845, jolloin se oli nimeltään '
+          + 'Park Lane ja ulottui Bundilta He\'nan-kadulle. Sitä '
+          + 'jatkettiin 1854 ja uudelleen kahdeksan vuotta myöhemmin, '
+          + 'ja vuonna 1862 kansainvälisen asutusalueen neuvosto antoi '
+          + 'sille virallisen nimen Nanking Road. Kiinalaiset sanoivat '
+          + 'sitä yksinkertaisesti Pääkaduksi.'
+        + '\n\n'
+          + '1900-luvun alussa kadun varrelle perustettiin kahdeksan '
+          + 'suurta tavarataloa ja joukko ketjuliikkeitä, ja siitä '
+          + 'tuli Shanghain ostoskatu. Toisen maailmansodan jälkeen '
+          + 'nimet järjestettiin uusiksi: entisestä Nanking Roadista '
+          + 'tuli Itä-Nanjing-katu ja sen länsipuolisesta jatkeesta, '
+          + 'aiemmasta Bubbling Well Roadista, Länsi-Nanjing-katu. '
+          + 'Yhdessä ne ovat viisi kilometriä pitkät.'
+        + '\n\n'
+          + 'Vuonna 2000 itäinen osuus muutettiin kävelykaduksi: 1 200 '
+          + 'metriä pitkä ja noin 28 metriä leveä pätkä He\'nanin '
+          + 'keskikadulta Xizangin keskikadulle. Vuosina 2019–2020 '
+          + 'kävelyalue jatkettiin aivan Bundille asti. Katua '
+          + 'pidetään yhtenä maailman vilkkaimmista ostoskaduista '
+          + 'Fifth Avenuen, Oxford Streetin, Orchard Roadin ja '
+          + 'Champs-Élysées\'n rinnalla — ja Champs-Élysées\'n '
+          + 'komitean aloitteesta katujen välille solmittiin '
+          + 'ystävyyssopimus.',
+      kuvat: [
+        {
+          tiedosto: 'East Nanjing road Shanghai.jpg',
+          selite: 'Itä-Nanjing-kadun kävelyosuus päivällä: molemmin '
+            + 'puolin nousee kerroksittain punaisia ja sinisiä '
+            + 'mainostauluja kiinalaisin kirjoitusmerkein, keskellä '
+            + 'katua on matalia kivipalloja ja istutuslaatikoita, ja '
+            + 'ihmisiä kulkee laatoitetulla kadulla. Perällä näkyy '
+            + 'lasitorni ja liikennevalot.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Shanghain museo': {
+      aika: '1996',
+      teksti: 'Museo perustettiin vuonna 1952, ja se avattiin yleisölle '
+          + 'entisen Shanghain laukkaseuran klubitalossa — samalla '
+          + 'kadulla, jonka varrella nykyinen rakennus on. Vuonna 1959 '
+          + 'se muutti Zhonghuin taloon, vakuutusyhtiöiden ja pankkien '
+          + 'entiseen konttoritaloon, ja jäi sinne yli kolmeksi '
+          + 'vuosikymmeneksi. Kokoelma kasvoi koko ajan, ja tilat '
+          + 'kävivät ahtaiksi.'
+        + '\n\n'
+          + 'Uusi talo on pitkälti yhden miehen ansiota. Ma Chengyuan, '
+          + 'museonjohtaja 1985–1999, sai kaupungilta tontin '
+          + 'Kansanaukiolta mutta ei rahaa: museon oli kerättävä '
+          + 'rakennusvarat itse. Ma vuokrasi vanhan talon '
+          + 'hongkongilaiselle rakennuttajalle ja sai 25 miljoonaa '
+          + 'dollaria, keräsi ulkomaanmatkoilla vielä kymmenen '
+          + 'miljoonaa ja sai lopulta kaupungilta 140 miljoonaa '
+          + 'juania puuttuvan osuuden kattamiseksi. Rakennustyö alkoi '
+          + 'elokuussa 1993, ja talo vihittiin 12. lokakuuta 1996.'
+        + '\n\n'
+          + 'Arkkitehti Xing Tonghe muotoili rakennuksen ding-astian '
+          + 'näköiseksi — ding on muinainen kolmi- tai nelijalkainen '
+          + 'pronssinen keittoastia, ja esikuvana sanotaan olleen '
+          + 'juuri Da Ke ding, joka on esillä museon sisällä. Pohja '
+          + 'on neliö ja yläosa ympyrä, mikä toistaa vanhan '
+          + 'kiinalaisen käsityksen maailmasta: pyöreä taivas, '
+          + 'neliskulmainen maa. Talo on 29,5 metriä korkea ja '
+          + 'viisikerroksinen, ja kokoelmassa on yli 120 000 esinettä '
+          + '— pronssia, keramiikkaa, kalligrafiaa, jadea, vanhoja '
+          + 'kolikoita, maalauksia, sinettejä ja huonekaluja.',
+      kuvat: [
+        {
+          tiedosto: '上海博物馆.jpg',
+          selite: 'Museo Kansanaukion nurmikon takaa: neliskulmainen '
+            + 'vaalea graniittijalusta, jonka päällä lepää matala '
+            + 'pyöreä rumpu, ja rummun reunasta nousee kaksi kaarevaa '
+            + 'korvaketta kuin pronssiastian sangat. Etualalla on '
+            + 'nurmikenttä ja punakeltaisia kukkapenkkejä, taustalla '
+            + 'lasisia tornitaloja.',
+          lahde: 'Mir7ror, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Shanghai Museum 20609-Shanghai (32914707972).jpg',
+          selite: 'Museon aula ylhäältä kuvattuna: keskellä nousee '
+            + 'symmetrinen kaksihaarainen porrasyhdistelmä '
+            + 'puukaiteineen, seinät ovat vaaleaa kiveä ja kulmissa on '
+            + 'riippuvia viherkasveja. Lattiaan on ladottu vihreästä '
+            + 'ja valkoisesta kivestä suuri pyöreä kuvio.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
    * TRIPOLI (E00-viimeistely 17.8.2026). Kuusi kohdetta, samat kuin
    * maakartat.js:n KAUPUNKIKARTAT.tripoli.kohteet — nimet ovat merkki
    * merkiltä samat, koska ui.js yhdistää taulut nimellä.
