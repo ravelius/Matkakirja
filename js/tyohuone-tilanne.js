@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v827 — Raamatun Karttalinssit-osiossa aikajana-ajo ja lavalinssi; Moduulit-osiossa M7+-hyväksyntä',
   'v826 — docs-siivous: Raamatussa Venäjä/Kabul- ja yksi otto -linjaukset; kaksi dokumenttia arkistoon',
   'v825 — Raamatun uusi Poistetut ideat -osio (kehittäjän liitteet): neljä riviä, pääosiot siistitty',
   'v824 — lehdet toimivat kuten ennen (tila koottu yhteen olioon); pöllön nähtävyyslinkki avaa taas jutun',

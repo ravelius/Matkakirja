@@ -219,6 +219,12 @@ export const RAAMATTU = {
           + 'kerralla.',
         'Toteutus: käsin tarkistettu data, pelin oma animaatio. '
           + 'Etusivulla kevyt vihjeanimaatio.',
+        'AIKAJANA-AJO (omistaja 17.8.2026): animaatiolinsseillä '
+          + 'yhteinen aikajanamoottori juoksevine vuosilukuineen — '
+          + 'pelaajan käynnistämä, ele keskeyttää.',
+        'LAVALINSSI (omistaja 17.8.2026): lähikuvakehyksen '
+          + 'linssityyppi ilmiöille, jotka eivät erotu laudan '
+          + 'mittakaavassa (esim. kaupungin kasvu; pilotti Rooma).',
       ],
     },
     {
@@ -519,12 +525,14 @@ export const RAAMATTU = {
           + 'moduulijako (M1–M6) ajettiin Max-sessiossa, Fable '
           + 'katselmoi ja mergasi. Raamattu on ainoa linjauslähde; '
           + 'moduuliohjeet docs/moduulit/-kansiossa. Lehtitila-olio '
-          + 'ja savukevartija tehty 17.8.2026. Avoinna: M7 '
-          + '(Kartta-luokka, omistajan päätös). '
+          + 'ja savukevartija tehty 17.8.2026. M7+ (Kartta-luokka '
+          + 'animaatiolinssialustaksi) hyväksytty 17.8.2026, työn '
+          + 'alla vaiheina M7a–M7f. '
           + 'Max-työlista arkistoitu (docs/arkisto/).',
         'docs/moduulirakenne-suunnitelma.md — moduulijaon '
-          + 'suunnitelma (M1–M6 toteutettu, M7 valmistelussa; '
-          + 'dokumenttiremontin suunnitelma arkistoitu 17.8.2026).',
+          + 'suunnitelma (M1–M6 toteutettu, M7+ hyväksytty ja työn '
+          + 'alla; dokumenttiremontin suunnitelma arkistoitu '
+          + '17.8.2026).',
         'docs/tuotantosuunnitelma.md — jäljellä olevien kaupunkien '
           + 'ja maiden tuotantosuunnitelma (Fablemax 17.8.2026; '
           + 'EHDOTUS, odottaa omistajan hyväksyntää).',

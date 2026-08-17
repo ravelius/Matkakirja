@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 827, teksti: 'Raamattuun M7+, aikajana-ajo ja lavalinssi' },
   { v: 826, teksti: 'Raamattuun kaksi linjausta, kaksi dokumenttia arkistoon' },
   { v: 825, teksti: 'Raamattuun Poistetut ideat -osio, päälinjat tiiviimmiksi' },
   { v: 824, teksti: 'Lehtitila-olio, savukevartija ja pöllön nähtävyyslinkki' },
