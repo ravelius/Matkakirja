@@ -6,12 +6,21 @@
 > kysymyksiä — koko kaari muuttuu myöhemmin. Tehdään VAIN
 > kaupunkilehti ja maalehti. Linjaus on Raamatussa (Kaupungit).
 >
-> **LEHTITAUKO (omistajan päätös 15.8.2026):** uusien lehtien
-> kirjoitus on tauolla, kunnes nykyiset lehdet on saatu paremmiksi
-> (mm. kaupunkilehtien avauskuvat vaakayleisnäkymiksi karusellilla ja
-> etusivujen pikkukuvien laatukierros — Fable koordinoi, pilotti
-> Pariisi). Älä aloita uutta lehtipakettia ennen kuin tämä huomautus
-> on poistettu.
+> **LEHTITAUKO (omistajan päätökset 15.8. ja 17.8.2026):** uusia
+> kaupunki- TAI maalehtiä ei aloiteta, ennen kuin nyt työn alla
+> olevat lehdet (O6:n kuusi kaupunkia viimeistelyineen: kohdekartat,
+> kohteet juttuineen, miniatyyrit, sää) on saatu TÄYSIN valmiiksi ja
+> omistaja on tarkistanut ne. Fable ilmoittaa omistajalle jokaisesta
+> valmistuvasta lehdestä; vasta kaikkien kuittausten jälkeen
+> jatketaan uusiin (mm. O7/Afrikka), ellei omistaja toisin käske.
+> Olemassa olevien lehtien parannus ja jälkityöt eivät riko taukoa.
+> Tarkistuksen ydin on KUVAT (omistaja 17.8.: "oikein valitut ja
+> laadukkaat kuvat ovat yksi iso haaste") — Fable toimittaa
+> jokaisesta valmistuvasta lehdestä kontaktiarkin kuvista
+> lisensseineen tarkistuksen pohjaksi. Loppuerän työstötapa
+> päätetään yhdessä omistajan kanssa tuotantosuunnitelman pohjalta
+> vasta kuittausten jälkeen; maalehtiin voi tulla vielä korjauksia,
+> joten uudet maalehtiavaukset odottavat samaa.
 >
 > **Piirrosputken kustannussääntö (omistajan päätös 16.8.2026,
 > budjetti nostettu tätä vastaan):** miniatyyripiirrokset

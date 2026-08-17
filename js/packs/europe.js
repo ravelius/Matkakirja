@@ -406,6 +406,21 @@ const EU_CITIES = [
   { id: 'kobenhavn', name: 'Kööpenhamina', wiki: 'Kööpenhamina', ambience: 'satama', x: 452, y: 429, la: 'start', lx: 16, ly: 5 },
   { id: 'lappi', name: 'Lappi', wiki: 'Lapin maakunta', ambience: 'pohjoinen', x: 705, y: 145, la: 'end', lx: -16, ly: 5 },
   { id: 'tromssa', name: 'Tromssa', wiki: 'Tromssa', ambience: 'pohjoinen', x: 577, y: 66, la: 'start', lx: 16, ly: 5 },
+  /*
+   * Islanti on laudan kaavan ULKOPUOLELLA, ja piste on siksi summittainen.
+   *
+   * Kaava kattaa pituusasteet -11°...41°. Reykjavík on -21.9°, joten
+   * kaava antaisi x = -210: piste jäisi laudan viewBoxin (0...1000)
+   * ulkopuolelle näkymättömiin, ja sen kaksi laivareittiä lähtisivät
+   * kartan reunan takaa. Siksi piste on pantu laudan yläkulmaan, missä
+   * ei ole rannikkoa vastaan sotimassa — tämä lauta ei enää ole
+   * pelattavissa vaan vain katselutilan (?lauta=europe) piirros.
+   *
+   * ÄLÄ käännä tästä lon/lat-arvoa: kaava lukisi 69.7°N 7.8°W eli
+   * avomeren Islannin koillispuolelta. Juuri niin maailmankartta peri
+   * väärän pisteen (omistajan kuvakaappaus 17.8.2026). Todellinen paikka
+   * annetaan käsin: tools/vanha-maailma.mjs TARKAT_PAIKAT.
+   */
   { id: 'islanti', name: 'Islanti', ambience: 'pohjoinen', wiki: 'Islanti', x: 62, y: 60, la: 'middle', lx: 0, ly: 42 },
 ];
 
