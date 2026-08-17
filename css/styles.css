@@ -11555,6 +11555,14 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * Vanhan matkajulisteen henki säilyy: painovärit ovat himmeitä ja
  * hieman likaisia, ei neonia, ja paperikohina jää päälle.
  */
+/*
+ * Muuttujat asetetaan sekä kortille että ARKILLE (dialogille), koska
+ * oppaan omat kerrokset — pikkuseloste ja säägraafin suurennos — menevät
+ * dialogin sisään mutta kortin ULKOPUOLELLE: <dialog>-modaali nostetaan
+ * omaan ylätasoonsa, joten kerrosta ei voi lisätä kortin sisään. Ilman
+ * arkin määrittelyä ne jäisivät ilman paletin värejä.
+ */
+.opas-arkki,
 .nahtavyys-kortti.opas-kortti {
   --opas-pohja: #f8efdc;
   --opas-muste: #3a2a15;
@@ -11566,11 +11574,15 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   --opas-kulta: #7f570b;
   --opas-sivu: #f2e5c8;
   --opas-viiva: rgba(165, 58, 34, 0.3);
-  /*
-   * Lämmin pohja korvaa lehden viileän painopaperin (#f5f0e2) vain
-   * oppaassa. Kohina jää päälle taustakuvana, joten paperin tuntu
-   * säilyy — vaihdettu on vain sen alla oleva väri.
-   */
+}
+
+/*
+ * Lämmin pohja korvaa lehden viileän painopaperin (#f5f0e2) vain
+ * oppaassa. Kohina jää päälle taustakuvana, joten paperin tuntu
+ * säilyy — vaihdettu on vain sen alla oleva väri. Tämä koskee vain
+ * korttia: arkki sai yltä pelkät muuttujat, ei uutta ulkoasua.
+ */
+.nahtavyys-kortti.opas-kortti {
   background-color: var(--opas-pohja);
   color: var(--opas-muste);
 }
@@ -11651,108 +11663,167 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   border-radius: 3px;
 }
 
-/* ── KAINALONOSTOT ────────────────────────────────────────────────────
+/*
+ * KAPEA JAKSOKUVA (omistajan palaute 16.8.2026: "Leipomokuva voisi olla
+ * pienemmällä ja teksti vasemmalla. Sama iltakuvalle").
  *
- * Omistajan palaute 16.8.2026: oppaaseen kaivataan kainalonostot heti
- * ingressin jälkeen, oikeaan reunaan, ja kapealla ruudulla täysleveinä
- * allekkain.
+ * Poikkeus koskee vain niitä jaksoja, joiden kuva on merkitty
+ * datassa kapeaksi: oletus on yhä koko palstan levyinen kuva. Kaksi
+ * kapeaa kuvaa viiden jakson jutussa rytmittää sivun — viisi kapeaa
+ * palauttaisi juuri sen ripotellun taiton, josta 2.0:ssa luovuttiin.
  *
- * TAITTO ON PANEELI, EI KELLUKE — ja tämä poikkeaa tehtävänannon
- * sanamuodosta ("oikeaan reunaan"), joten syy on mitattu eikä makuasia:
- *
- * Kelluvana oikeassa laidassa (leveys 46 %) pari on 660 px korkea,
- * mutta ensimmäisen jakson leipätekstiä on vain 343 px. Kellukkeen
- * viereen jää siis 317 px korkea tyhjä kolo, ja koska koko palstan
- * levyinen jaksokuva ei mahdu kellukkeen viereen, kolo ei täyty
- * seuraavallakaan aineksella. Kaventaminen pahentaa asian: kapeampi
- * kainalo on korkeampi ja jättää leipätekstille vielä vähemmän rivejä.
- * Tehtävänannon sisältömitalla (4–6 aihetta + 3–4 varjopuolta) kolo on
- * siis rakenteellinen eikä säädettävissä.
- *
- * Paneelina koloa ei synny lainkaan: pari on ingressin alla omana
- * kaksipalstaisena lohkonaan, lämmin vasemmalla ja viileä oikealla.
- * Rinnakkain ne myös LUKEVAT parina — pinottuina oikeassa laidassa ne
- * näyttäisivät kahdelta erilliseltä laatikolta, eikä "parasta vastaan
- * varjopuolet" -asetelma välittyisi. Kapealla ruudulla taitto on
- * täsmälleen tehtävänannon mukainen: täysleveinä allekkain.
- *
- * Jos omistaja haluaa silti kellukkeen, vaihto on tässä säännössä
- * yhden rivin kokoinen (float: right + width: 46 %).
+ * Jakso saa oman lohkomuotoiluympäristönsä, jottei kelluke vuoda
+ * seuraavan jakson väliotsikon viereen. Se tehdään jakson luokalla eikä
+ * .opas-jakso:has(...)-valitsimella, koska rakenteen tosiasia ei saa
+ * riippua :has-tuesta.
  */
-.opas-kainalot {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin: 0 0 1.4rem;
+.opas-jakso-kapea { display: flow-root; }
+
+.opas-kortti .opas-kuva-kapea {
+  float: right;
+  width: 40%;
+  margin: 0.15rem 0 0.6rem 1.1rem;
 }
 
-.opas-kainalo {
-  padding: 0.8rem 1rem 0.9rem;
-  border: 1px solid rgba(58, 42, 21, 0.18);
-  border-radius: 3px;
+/* Kapealla ruudulla kuva palaa täysleveäksi: 40 % puhelimen palstasta
+ * olisi noin 120 px, ja viereen jäävään tekstiin mahtuisi pari sanaa
+ * riville. */
+@media (max-width: 639px) {
+  .opas-kortti .opas-kuva-kapea {
+    float: none;
+    width: auto;
+    margin: 0.75rem 0 0.2rem;
+  }
+  /*
+   * Kuva myös takaisin tekstin PERÄÄN. Leveällä ruudulla se on
+   * DOMissa ennen leipätekstiä, koska kelluke tarvitsee tekstiä
+   * kierrettäväkseen — täysleveänä sama järjestys panisi nämä kaksi
+   * jaksoa lukemaan toisin päin kuin muut kolme.
+   */
+  .opas-jakso-kapea {
+    display: flex;
+    flex-direction: column;
+  }
+  .opas-kortti .opas-kuva-kapea { order: 1; }
 }
+
+/* ── KAINALOTAULU ─────────────────────────────────────────────────────
+ *
+ * Omistajan palaute 16.8.2026 opas 2.1:stä: "liian raskas taulukko. Tee
+ * vain otsikkotasolla ja sijoita leipätekstin oikealle puolelle. Yksi
+ * taulu jossa vain pohjaväri muuttuu."
+ *
+ * Opas 2.1:ssä pari oli kaksipalstainen paneeli ingressin alla, ja
+ * kellukkeesta luovuttiin, koska koko perustelutekstin kanssa se olisi
+ * jättänyt viereensä 317 px korkean kolon. Tässä versiossa se peruste
+ * on poistunut: näkyvissä on enää otsikkotaso (aihe + tähdet), joten
+ * yhdeksän riviä mahtuu noin 15 rem korkeuteen — eli suunnilleen
+ * ensimmäisen jakson leipätekstin mittaan. Kelluke on siis nyt sitä,
+ * mitä omistaja pyysi jo 2.1:ssä, ja mahtuu vasta nyt.
+ *
+ * YKSI KEHYS, KAKSI VYÖHYKETTÄ. Reunus, pyöristys ja typografia ovat
+ * yhteiset; ainoa ero on pohjaväri (lämmin = suositukset, viileä =
+ * varaukset). Siksi myöskään vyöhykeotsikot eivät vaihda väriä: jos ne
+ * vaihtaisivat, eroja olisi kaksi eikä yksi.
+ */
+.opas-kainalo {
+  float: right;
+  width: 16rem;
+  margin: 0.2rem 0 0.9rem 1.25rem;
+  border: 1px solid rgba(58, 42, 21, 0.22);
+  border-radius: 3px;
+  /* Vyöhykkeiden pohjavärit leikkautuvat kehyksen pyöristykseen, jotta
+   * taulu lukee yhtenä esineenä eikä kahtena päällekkäisenä lappuna. */
+  overflow: hidden;
+}
+
+.opas-vyo { padding: 0.55rem 0.7rem 0.6rem; }
 
 /*
- * LÄMMIN JA VIILEÄ POHJA ovat oppaan ainoa paikka, jossa väri koodaa
- * sisältöä: ne erottavat suosituksen ja varauksen toisistaan yhdellä
- * silmäyksellä. Muualla paletti 2.1 koodaa hierarkiaa, ei aihetta.
+ * POHJAVÄRI ON AINOA ERO. Se on oppaan ainoa paikka, jossa väri koodaa
+ * sisältöä eikä hierarkiaa: lämmin = mitä kannattaa hakea, viileä =
+ * mihin kannattaa varautua.
  */
-.opas-parasta {
-  background: var(--opas-aksentti-vesi);
-  border-left: 5px solid var(--opas-aksentti);
-}
+.opas-vyo-lammin { background: var(--opas-aksentti-vesi); }
+.opas-vyo-viilea { background: var(--opas-syva-vesi); }
 
-.opas-hyva-tietaa {
-  background: var(--opas-syva-vesi);
-  border-left: 5px solid var(--opas-syva);
-}
-
-.opas-kainalo-otsikko {
-  margin: 0 0 0.5rem;
+.opas-vyo-otsikko {
+  margin: 0 0 0.3rem;
   font-family: var(--font-type);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  color: var(--opas-muste-hento);
 }
 
-.opas-parasta .opas-kainalo-otsikko { color: var(--opas-aksentti); }
-.opas-hyva-tietaa .opas-kainalo-otsikko { color: var(--opas-syva); }
-
-.opas-parasta-lista,
-.opas-hyva-lista {
+.opas-vyo-lista {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.opas-parasta-rivi { margin: 0 0 0.5rem; }
-.opas-parasta-rivi:last-child { margin-bottom: 0; }
+/* Hiusviiva rivien väliin: taulussa on kaksi vyöhykettä ja yhdeksän
+ * riviä, ja ilman jakoviivaa rivit sulautuisivat luetteloksi, jossa
+ * silmä ei löydä kohtaa napautettavaksi. */
+.opas-vyo-rivi + .opas-vyo-rivi { border-top: 1px solid rgba(58, 42, 21, 0.13); }
 
-/*
- * Aiherivi: nimike vasemmalle, tähdet oikealle. Tähdet omaan
- * sarakkeeseensa eikä nimikkeen perään, jotta ne asettuvat riveittäin
- * samaan linjaan ja rivit ovat vertailtavissa yhdellä silmäyksellä.
- */
-.opas-parasta-paa {
+.opas-vyo-rivisisus {
   display: flex;
+  width: 100%;
   align-items: baseline;
   justify-content: space-between;
   gap: 0.5rem;
-  margin: 0;
+  padding: 0.3rem 0;
 }
 
-.opas-parasta-mita {
+/*
+ * Rivi on nappi. Yleinen nappisääntö toisi 42 px vähimmäiskorkeuden,
+ * pyöristetyn reunuksen ja tumman paneelitaustan — kaikki nollataan,
+ * jotta rivi näyttää riviltä. Elementti+luokka voittaa yleissäännön
+ * tarkkuudessa.
+ */
+button.opas-vyo-nappi {
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.opas-vyo-nimi {
   font-family: var(--font-type);
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.03em;
+  line-height: 1.3;
   color: var(--opas-muste);
+}
+
+/*
+ * Pisteviiva nimen alla kertoo, että rivin takana on lisää — ja se
+ * näkyy myös kosketusnäytöllä, jossa hover-vihjettä ei ole. Tämä on
+ * ainoa merkki: pieni nuoli tai plus joka riville olisi 16 rem
+ * levyisessä taulussa enemmän koristetta kuin opastusta.
+ */
+.opas-vyo-nappi .opas-vyo-nimi {
+  text-decoration: underline dotted rgba(58, 42, 21, 0.45);
+  text-underline-offset: 0.2em;
+}
+
+button.opas-vyo-nappi:hover .opas-vyo-nimi,
+button.opas-vyo-nappi[aria-expanded="true"] .opas-vyo-nimi {
+  color: var(--opas-aksentti);
+  text-decoration-color: var(--opas-aksentti);
 }
 
 .opas-tahdet {
   flex: none;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   letter-spacing: 0.06em;
   line-height: 1;
   color: var(--opas-kulta);
@@ -11762,43 +11833,28 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * kahden tähden rivit erottuvat toisistaan ilman selitystä. */
 .opas-tahti-tyhja { opacity: 0.26; }
 
-.opas-parasta-selite {
-  margin: 0.05rem 0 0;
-  font-family: var(--font-luku);
-  font-size: 0.92rem;
-  line-height: 1.4;
-  color: var(--opas-muste);
-}
-
-/* Varjopuolet ovat virkkeitä eivätkä arvosanoja: ei tähtiä, ei
- * numeroita, vain lyhyt luetelmaviiva pääaksentin sijaan syvässä
- * sävyssä — sama väri kuin lohkon otsikossa. */
-.opas-hyva-rivi {
-  position: relative;
-  margin: 0 0 0.45rem;
-  padding-left: 0.85rem;
-  font-family: var(--font-luku);
-  font-size: 0.92rem;
-  line-height: 1.4;
-  color: var(--opas-muste);
-}
-
-.opas-hyva-rivi:last-child { margin-bottom: 0; }
-
-.opas-hyva-rivi::before {
-  content: "–";
-  position: absolute;
-  left: 0;
-  color: var(--opas-syva);
-}
-
 /*
- * Kapealla ruudulla kainalot ovat täysleveinä allekkain (tehtävänannon
- * mukaisesti): kahdessa palstassa kummallekin jäisi noin 150 px, jossa
- * jokainen rivi katkeaisi parin sanan jälkeen.
+ * Kapealla ruudulla taulu on täysleveänä ingressin alla kuten ennenkin
+ * (tehtävänanto): 16 rem kellukkeen viereen jäisi puhelimessa noin
+ * 100 px leipätekstiä, jossa jokainen rivi katkeaisi parin sanan
+ * jälkeen. Kelluke puretaan kokonaan, jottei taulu jää kellumaan
+ * väliotsikon ja tekstin väliin puolileveänä.
  */
 @media (max-width: 639px) {
-  .opas-kainalot { grid-template-columns: 1fr; gap: 0.85rem; }
+  .opas-kainalo {
+    float: none;
+    width: auto;
+    margin: 0.4rem 0 1rem;
+  }
+  /* Taulu nousee ensimmäisen väliotsikon YLÄPUOLELLE eli ingressin
+   * alle. DOM-järjestys palvelee leveää näkymää (kelluke tarvitsee
+   * tekstiä kierrettäväkseen), joten järjestys vaihdetaan asettelussa
+   * eikä rakenteessa — vain tässä yhdessä jaksossa. */
+  .opas-jakso-kainalo {
+    display: flex;
+    flex-direction: column;
+  }
+  .opas-jakso-kainalo .opas-kainalo { order: -1; }
 }
 
 /*
@@ -11870,6 +11926,190 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   line-height: 1.5;
 }
 
+/* ── VUOSIKÄYRÄ ───────────────────────────────────────────────────────
+ *
+ * Omistajan tilaus 16.8.2026: "lämpötilatauluun voisi leipätekstin
+ * oikealle puolelle tuoda pienen kuvan vuosiennusteesta ja sitä
+ * klikkaamalla se suurenisi isommaksi animoidusti."
+ *
+ * Kelluke on laatikon SISÄLLÄ ja ennen leipätekstiä, joten parasAika-
+ * kappale kiertää sen. Kausilista on grid eikä siis kierrä kelluketta
+ * vaan kaventuu sen viereen — se on tässä oikea käytös: taulukkomaiset
+ * rivit näyttäisivät rikkinäisiltä, jos osa riveistä olisi kapeampia
+ * kuin muut.
+ */
+.opas-saagraafi {
+  float: right;
+  width: 12rem;
+  margin: 0.1rem 0 0.6rem 1rem;
+}
+
+/* Kuvaaja on nappi: yleisen nappisäännön mitat, reunus ja tumma tausta
+ * nollataan, jotta napissa näkyy vain kuvaaja. */
+button.opas-saagraafi-nappi {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: zoom-in;
+}
+
+.opas-saa-kuva {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Hento hiekka pohjaksi: vaaleampi kuin laatikon oma pohja, jotta
+   * kuvaaja erottuu laatikosta ilman omaa väriaksenttia. */
+  background: var(--opas-pohja);
+  border: 1px solid rgba(58, 42, 21, 0.25);
+  border-radius: 3px;
+}
+
+.opas-saagraafi-teksti {
+  margin: 0.3rem 0 0;
+  font-family: var(--font-type);
+  font-size: 0.64rem;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: var(--opas-muste-hento);
+}
+
+/*
+ * PETROOLI KÄYRILLE. Päivä on ylempi käyrä ja yö alempi, ja niiden
+ * väliin jäävä vyöhyke on saman värin vesitetty pinta — vuorokauden
+ * vaihteluväli on siis kuvassa pinta-alaa, ei kahta irrallista viivaa.
+ * Kumpikaan käyrä ei tarvitse omaa väriä: ylempi on aina päivä.
+ */
+.opas-saa-vyo { fill: rgba(29, 90, 94, 0.17); }
+
+.opas-saa-kayra {
+  fill: none;
+  stroke: var(--opas-syva);
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.opas-saa-paiva { stroke-width: 2; }
+.opas-saa-yo { stroke-width: 1.4; opacity: 0.72; }
+
+.opas-saa-ruudukko {
+  stroke: rgba(58, 42, 21, 0.15);
+  stroke-width: 1;
+}
+
+/* Nolla-aste on ainoa viiva, jolla on merkitys ilman lukuaan. */
+.opas-saa-nolla {
+  stroke: rgba(58, 42, 21, 0.4);
+  stroke-width: 1;
+}
+
+.opas-saa-aste,
+.opas-saa-kk,
+.opas-saa-luku {
+  font-family: var(--font-type);
+  font-size: 9px;
+  fill: var(--opas-muste-hento);
+}
+
+.opas-saa-aste { text-anchor: end; }
+.opas-saa-kk { text-anchor: middle; }
+
+.opas-saa-luku {
+  text-anchor: middle;
+  font-weight: 700;
+  fill: var(--opas-syva);
+}
+
+.opas-saa-yo-luku { opacity: 0.75; }
+
+/*
+ * MINIPONNAHDUS oppaan paletissa. Kupla on pelin yhteinen pikkuseloste
+ * (avaaPikkuseloste), joka menee avoimen dialogin sisään — oppaassa
+ * siis .opas-arkin lapseksi. Se saa oppaan paperin ja musteen, jottei
+ * lämpimän arkin päälle avaudu pelin viileä paneelisävy; muoto,
+ * asemointi ja sulkeminen pysyvät yhteisinä.
+ */
+.opas-arkki .pikkuseloste {
+  background: var(--opas-pohja);
+  color: var(--opas-muste);
+  border-color: rgba(58, 42, 21, 0.4);
+}
+
+.opas-arkki .pikkuseloste-teksti { font-family: var(--font-luku); }
+
+.opas-arkki button.pikkuseloste-sulje { color: var(--opas-muste-hento); }
+.opas-arkki button.pikkuseloste-sulje:hover { color: var(--opas-aksentti); }
+
+/*
+ * SUURENNOS. Kerros menee avoimen dialogin sisään (ks. avaaSaagraafi),
+ * ja liike on FLIP: suuri laatikko piirretään paikalleen ja vedetään
+ * muunnoksella pienen kuvaajan kohdalle, josta se palaa omaan kokoonsa.
+ * Selain animoi siis pelkkää transformia ja opacityä.
+ */
+.opas-saa-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(20, 12, 4, 0);
+  transition: background-color 0.28s ease-out;
+  cursor: zoom-out;
+}
+
+.opas-saa-overlay.nakyy { background: rgba(20, 12, 4, 0.55); }
+
+.opas-saa-suuri {
+  width: min(30rem, 100%);
+  padding: 1rem 1.1rem 0.85rem;
+  background: var(--opas-pohja);
+  color: var(--opas-muste);
+  border: 1px solid rgba(58, 42, 21, 0.35);
+  border-radius: 6px;
+  box-shadow: 0 10px 34px rgba(20, 12, 4, 0.45);
+  transform-origin: center center;
+}
+
+.opas-saa-suuri.liikkuu {
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1), opacity 0.3s ease-out;
+}
+
+.opas-saa-suuri-teksti {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-type);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--opas-muste-hento);
+}
+
+/* Suuressa kuvaajassa on kuukausiluvut, joten se saa olla korkeampi
+ * ja väljempi kuin kelluke. */
+.opas-saa-suuri .opas-saa-kuva { border: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .opas-saa-overlay,
+  .opas-saa-suuri.liikkuu { transition: none; }
+}
+
+/* Kapealla ruudulla kuvaaja on täysleveänä laatikon yläosassa: 12 rem
+ * kellukkeen viereen jäisi puhelimessa liian kapea tekstipalsta. */
+@media (max-width: 639px) {
+  .opas-saagraafi {
+    float: none;
+    width: auto;
+    max-width: 20rem;
+    margin: 0 auto 0.8rem;
+  }
+}
+
 /*
  * Kausirivit: nimi ja kuukaudet vasemmalla, lämpöhaarukka ja
  * luonnehdinta oikealla. Grid eikä taulukko, koska kapealla ruudulla
@@ -11883,7 +12123,18 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   align-items: baseline;
 }
 
-.opas-kaudet { grid-template-columns: minmax(7.5rem, auto) 1fr; }
+/*
+ * Kausilista alkaa vuosikäyrän ALTA. Grid ei kierrä kelluketta vaan
+ * kaventuu sen viereen — ja kaventuu koko korkeudeltaan, myös käyrän
+ * loputtua. Mitattuna se jätti laatikon oikeaan laitaan noin 190 × 290
+ * pikselin tyhjän alueen ja kavensi kausikuvaukset kolmelle riville.
+ * clear: right maksaa parasAika-kappaleen alle noin 25 pikseliä tyhjää
+ * ja antaa vastineeksi kausiriveille koko palstan.
+ */
+.opas-kaudet {
+  grid-template-columns: minmax(7.5rem, auto) 1fr;
+  clear: right;
+}
 
 /*
  * Hintarivi on päinvastoin kuin kausirivi: oikealla on lyhyt luku,

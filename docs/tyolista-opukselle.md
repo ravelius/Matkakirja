@@ -46,7 +46,20 @@ lisäohjeita:
    mainissa ei ole seuraavaa pakettia, kirjoita TILANTEEN loppuun
    havaintosi ja lopeta sessio siihen. Uudet paketit päättää omistaja.
 
-## Paketti O3: Matkailijan opas 2.2 — kevyt kainalo, säägraafi, kuvahionta (Opus 27, tilattu 16.8.2026)
+## Paketti O3: Matkailijan opas 2.2 — kevyt kainalo, säägraafi, kuvahionta (Opus 27, tilattu 16.8.2026) ✅ VALMIS
+
+**Kuittaus (Fable 16.8.2026):** kaikki viisi osaa toimitettu ja
+julkaistu v782:ssa. Kainalotaulu otsikkotasolla kellukkeena
+(pikkuseloste-komponentin uusiokäyttö miniponnahduksena), säägraafi
+SVG:nä FLIP-suurennoksella (Météo-France 1991–2020, luvut todennettu
+wikitekstistä), Luxembourg-karuselli (nahtavyydenKaruselli
+uusiokäyttönä), kapea jaksokuva-asettelu flow-rootilla, etusivulle
+kahvilähikuva. Lisenssit todennettu itse API:sta, kuvat katsottu
+silmin; esimerkillinen Restrictions=personality-hylkäys (FP-shakkikuva).
+MONISTUSVAROITUS: hyvaTietaa on nyt [{otsikko, teksti}] — vanha
+merkkijonomalli renderöityy tyhjänä; kuvateksti-auditin jaksot-aukon
+korjauksen pitää kattaa myös kuvalistat. Avoimet: €€€-asteikko,
+hae-commons.mjs:n 429-käsittely.
 
 Omistajan palaute opas 2.1:stä ja lehden etusivusta 16.8.2026
 (iPad-kuvakaappauksista). Viisi osaa — kaikki koskevat vain Pariisia
