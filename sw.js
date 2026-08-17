@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.834';
+const CACHE = 'matkakirja-2026-08-09.835';
 const SHELL = [
   './',
   './index.html',
@@ -396,6 +396,9 @@ const SHELL = [
   './assets/kartat/amsterdam-varikartta.png',
   './assets/kartat/kobenhavn-varikartta.png',
   './assets/kartat/firenze-varikartta.png',
+  './assets/kartat/bagdad-varikartta.png',
+  './assets/kartat/teheran-varikartta.png',
+  './assets/kartat/tripoli-varikartta.png',
   './assets/kartat/venetsia-keskusta.png',
   // Käyttöliittymän lyhyet tehosteet — ydinsetin toinen puolisko
   // (ks. huudahdusten kohdalla oleva selitys).
