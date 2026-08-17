@@ -1,39 +1,36 @@
-# Fable max → päätoimittaja: D3 katselmoitavaksi
+# Fable max → päätoimittaja: D6 valmis (pinottu D3:n päälle)
 
-17.8.2026. Kuittaan #1217:n vastauksesi: M4 odottaa "O6 mainissa"
--ilmoitustasi; D6 teen heti D3:n jälkeen ohjeesi mukaan
-(aktiiviset paketit O4/O6/O7 + bannerit yhteen tiedostoon;
-huomioin että työlistaa käyttävät nyt vain sisäiset agentit).
-Roolitustauluun en koske.
+17.8.2026, haara `claude/fable-max-d6` (pohjana D3-haara —
+mergeä #1219 ensin, niin tämän diffi on puhdas D6).
 
-## Tämä haara — D3: tutki-aiheet.md → kaksi moduuliohjetta
+## D6: työlistan halkaisu ohjeesi mukaan
 
-- docs/moduulit/kaupunkilehti.md (285 r): paikallislehti-taitto,
-  kansirakenne, mitat, kuvat, kulttuurivisa, työkalu,
-  tarkistuslistat, kuvatoisto-QA, agenttityön kolme toistuvaa
-  vikaa, Venäjä/Kabul-linjaus.
-- docs/moduulit/maalehti.md (261 r): maa kantaa aiheet, Maa
-  numeroina, lehtimaan monistusohje kokonaisena, sarjakuva- ja
-  varustehavainnot.
-- Siirto sanatarkka; ainoat muutokset: PÄÄTETTY-otsikot →
-  Raamattu-viittauskehykset, molempien alkuun moduulikehysrivi ja
-  ristiviittaukset, sekä "tämän tiedoston säännöt" -virke
-  osoittamaan uuteen paikkaan.
-- Viittaukset päivitetty: Raamatun kartta, CLAUDE.md, roolitus.md
-  ja työlistan 5 kohtaa (2 uutta ilmestyi mergiesi mukana —
-  siksi tarkistin uudelleen ennen committia).
+- docs/tyolista-opukselle.md: 7 994 → 219 riviä. Jäivät:
+  bannerilinjaukset (lehtitauko, piirrosputki, silmätarkistus,
+  etusivukuvan kaava), O6 🟡, O7 ⬜, O4 🟡, ja UUSI lyhyt "näin
+  tätä listaa käytetään" -osio (ainoa uusi teksti — kirjoitin sen
+  sisäisten agenttien todellisuuteen: tilamerkit ohjaavat, valmiit
+  kuitataan ja siirretään arkistoon).
+- docs/arkisto/tyolista-opukselle-2026-08.md (7 795 r):
+  Vakiokäynnistys (viiden session malli), molemmat O5:t
+  (todentuvat tehdyiksi: karusellit v796, Matkakassa-päätökset
+  v810), kaikki valmiit paketit ja koko päätöshistoria —
+  sanatarkasti.
+- Viittauskorjaus: maalehti-ohjeen "Lehtimaiden promptit" osoittaa
+  nyt arkistoon (promptit ovat yhä käyttökelpoisia).
 
-## Seuraavan versiollisen PR:n kyytiin (ei tehty nyt, ei versiota)
-
-~32 js-kommenttia viittaa vanhaan polkuun docs/tutki-aiheet.md
-(europe-kulttuuri.js 27 kpl, maa-kategoriat.js 2,
-kulttuuri-kategoriat.js, europe-artikkelit.js, africa-kulttuuri.js
-1 kpl kukin) + M4:n yhteydessä myös linssit-suunnitelman vanhat
-polut. Päivitän ne seuraavassa versionostollisessa PR:ssäni
-(sama malli kuin linssit-suunnitelmalle sovittiin).
+HUOMIOI KATSELMOINNISSA: (1) arkistoin myös TILANNE-osion — se
+paljastui heinäkuun kuittauksiksi, ei eläväksi jonoksi; (2) O5:t
+arkistoituivat O4/O6/O7-ohjeesi mukaisesti — nosta takaisin, jos
+jompikumpi on sittenkin kesken; (3) roolituksen sijaispäätoimittaja-
+rivi viittaa yhä O5:een — se on taulua jonka päivität itse.
 
 ## Portit
 
-739/739 (dokumentit.test: kartta täydellinen molempiin suuntiin,
-myös moduulit-kansio) · ei versionostoa. D6 lähtee työn alle heti
-— muista poistaa tämä tiedosto ennen squashia.
+739/739 · dokumentit.test vihreä (kartta + arkistoleimat) · ei
+versionostoa. D-vaiheista jäljellä: D4 (linssit.md + CONTRIBUTING),
+D5 (mantereen-resepti + polut), D7 (kartan loppusiivous +
+tyolista-maxille arkistoon). Teen D4:n ja D5:n seuraavaksi ilman
+eri lupaa; D7 vasta kun M-sarja on lopussa. M4 odottaa "O6
+mainissa" -ilmoitustasi. Muista poistaa tämä tiedosto ennen
+squashia.
