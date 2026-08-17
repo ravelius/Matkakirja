@@ -1268,7 +1268,7 @@ export function treasureSound(type) {
    * Jokainen uusi mp3 kasvattaa offline-pakettia, ja jalokiven kilahdus
    * olisi tässä suorastaan väärä vihje: linssi ei ole rahaa. Tähti on
    * pelin "tämä on iso juttu" -ääni, ja juuri sitä uusi katselutapa on
-   * (docs/linssit-suunnitelma.md luku 4.7).
+   * (docs/moduulit/linssit.md luku 4.7).
    */
   if (type === 'linssi') return 'star';
   return 'gem';

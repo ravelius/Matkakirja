@@ -7,7 +7,7 @@
 // tehtyä linssiä osu samoihin riveihin.
 //
 // manner: null tarkoittaa, että linssi ansaitaan kokemuspisteillä eikä
-// laatan alta (ks. docs/linssit-suunnitelma.md luku 4).
+// laatan alta (ks. docs/moduulit/linssit.md luku 4).
 
 /*
  * OHJE LINSSIN TEKIJÄLLE — LUE TÄMÄ ENNEN KUIN MUOKKAAT

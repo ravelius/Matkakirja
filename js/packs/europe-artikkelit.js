@@ -1738,7 +1738,7 @@ export const EUROPE_ARTIKKELIT = {
 
   Saksa: {
     // Lehden maaosasto nojaa tähän introon yksin (Berliinin lehti,
-    // ks. docs/tutki-aiheet.md): pituus noin kuusi virkettä.
+    // ks. docs/moduulit/kaupunkilehti.md): pituus noin kuusi virkettä.
     // Kappalejaot (\n\n) näkyvät maaosion aloitussivulla (omistajan
     // toive 7.8.2026: "teksti kartan vieressä voisi olla jaksotettu").
     intro: 'Saksa on Euroopan unionin väkirikkain maa: 83 miljoonaa '

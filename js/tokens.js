@@ -20,7 +20,7 @@ export const TOKEN_TYPES = {
   // Taikalasi on katselutapa eikä jalokivi: sen arvo puntina on nolla,
   // ja juuri siksi sillä on oltava revealTokenissa oma haara ennen
   // defaultia. Ilman sitä laatta maksaisi "+0 puntaa" ja kuulostaisi
-  // pettymykseltä (js/game.js, docs/linssit-suunnitelma.md luku 4.1).
+  // pettymykseltä (js/game.js, docs/moduulit/linssit.md luku 4.1).
   linssi: { id: 'linssi', name: 'Taikalasi', symbol: '◉', value: 0, color: '#7fb3c8' },
 };
 

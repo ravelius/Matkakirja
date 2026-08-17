@@ -25,7 +25,7 @@ export const EUROPE_KULTTUURI = {
      * Marseille sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Miksi Ranskan kansallislaulua kutsutaan Marseillaisiksi, vaikka se sävellettiin Strasbourgissa?',
@@ -48,7 +48,7 @@ export const EUROPE_KULTTUURI = {
      * Granada sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Mikä oli Alhambra ennen kuin siitä tuli museo?',
@@ -71,7 +71,7 @@ export const EUROPE_KULTTUURI = {
      * Krakova sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Miksi Krakovan Marian kirkon torvisoitto katkeaa aina kesken sävelen?',
@@ -94,7 +94,7 @@ export const EUROPE_KULTTUURI = {
      * Sarajevo sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Mistä sana sevdalinka on peräisin?',
@@ -134,7 +134,7 @@ export const EUROPE_KULTTUURI = {
      * Ateena sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     /*
      * Visa kysyi ennen evzonin puvun laskoksista, mutta se juttu
@@ -163,7 +163,7 @@ export const EUROPE_KULTTUURI = {
      * Rooma sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Miten Rooman akveduktit saivat veden liikkeelle?',
@@ -233,7 +233,7 @@ export const EUROPE_KULTTUURI = {
      * Sofia sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       // Ruusujuttu on nykyään Bulgarian maalehdessä, joten visa jäi
@@ -278,7 +278,7 @@ export const EUROPE_KULTTUURI = {
      * Edinburgh sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Miten Edinburghin Fringe-festivaali sai alkunsa vuonna 1947?',
@@ -300,7 +300,7 @@ export const EUROPE_KULTTUURI = {
      * Dublin sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Miten irlantilaiseen uilleann-säkkipilliin saadaan ilmaa?',
@@ -322,7 +322,7 @@ export const EUROPE_KULTTUURI = {
      * Pariisi sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Mitä pariisilainen leipuri saa palkinnoksi, jos voittaa kaupungin '
@@ -346,7 +346,7 @@ export const EUROPE_KULTTUURI = {
      * Lissabon sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Mistä portugalilaisten seinälaattojen nimi azulejo tulee?',
@@ -371,7 +371,7 @@ export const EUROPE_KULTTUURI = {
      * Ainutlaatuinen sisältö siirrettiin sinne: chotis
      * musiikkilinkkeineen kaupungin kanteen, cocido ja uudenvuoden
      * rypäleet Espanjan Ruoka-aiheeseen. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Mikä on madridilaisen chotis-tanssin tunnetuin sääntö?',
@@ -394,7 +394,7 @@ export const EUROPE_KULTTUURI = {
      * Barcelona sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Mitä katalaanien ihmistornin huipulle kiipeävä lapsi, enxaneta, '
@@ -418,7 +418,7 @@ export const EUROPE_KULTTUURI = {
      * Amsterdam sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Miksi Amsterdamin vanhat kanavatalot ovat niin kapeita?',
@@ -465,7 +465,7 @@ export const EUROPE_KULTTUURI = {
      * Wien sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       // Kunnan vuokra-asunnoista kertova juttu on nykyään Itävallan
@@ -510,7 +510,7 @@ export const EUROPE_KULTTUURI = {
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin sinne: Smetana lehden Musiikki-sivulle, chlebíček ja
      * nukketeatteri Arki ja tavat -sivulle. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Mikä oli erikoista siinä, miten Bedřich Smetana sävelsi Vltavan '
@@ -534,7 +534,7 @@ export const EUROPE_KULTTUURI = {
      * Budapest sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Mitä gulyás tarkoittaa Unkarissa?',
@@ -556,7 +556,7 @@ export const EUROPE_KULTTUURI = {
      * Varsova sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Mitä Fryderyk Chopinista palasi Varsovaan hänen kuolemansa '
@@ -579,7 +579,7 @@ export const EUROPE_KULTTUURI = {
      * Bukarest sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Minkä maailmanennätyksen Bukarestin Parlamenttipalatsi pitää?',
@@ -602,7 +602,7 @@ export const EUROPE_KULTTUURI = {
      * Kiova sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Miksi Kiovan Arsenalnan metroasema kaivettiin yli sadan metrin '
@@ -624,7 +624,7 @@ export const EUROPE_KULTTUURI = {
      * Odessa sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Miten Odessan alle syntyi noin 2 500 kilometriä käytäviä?',
@@ -646,7 +646,7 @@ export const EUROPE_KULTTUURI = {
      * Moskova sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Mitä Majakovskajan metroaseman katon 34 mosaiikkia esittävät?',
@@ -668,7 +668,7 @@ export const EUROPE_KULTTUURI = {
      * Pietari sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Miksi Eremitaašin kellareissa asuu kissoja?',
@@ -690,7 +690,7 @@ export const EUROPE_KULTTUURI = {
      * Tallinna sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       // Verkkoäänestysjuttu on nykyään Viron maalehdessä, joten visa jäi
@@ -746,7 +746,7 @@ export const EUROPE_KULTTUURI = {
      * Istanbul sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       // Teejuttu on nykyään Turkin maalehdessä, joten visa jäi
@@ -771,7 +771,7 @@ export const EUROPE_KULTTUURI = {
      * Helsinki sai kategoriat (kulttuuri-kategoriat.js), jotka
      * korvaavat litteät nostot Tutki-ikkunassa. Ainutlaatuinen sisältö
      * siirrettiin lehden sivuille. Tänne jää vain visa
-     * (docs/tutki-aiheet.md).
+     * (docs/moduulit/kaupunkilehti.md).
      */
     /*
      * Finlandia-kysymys siirtyi pois 9.8.2026, kun Sibelius-nosto
@@ -803,7 +803,7 @@ export const EUROPE_KULTTUURI = {
      * Apple Music -linkkeineen Ruotsin Musiikki-aiheeseen (omistajan
      * tarkennus 7.8.2026: yhtye on koko maan tarina — kannessa sen
      * paikan sai Vasa-laiva). Tänne jää vain visa, jonka aihe
-     * (metron taide) näkyy kannen nostossa (docs/tutki-aiheet.md).
+     * (metron taide) näkyy kannen nostossa (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Kuinka monella Tukholman noin sadasta metroasemasta on taidetta?',

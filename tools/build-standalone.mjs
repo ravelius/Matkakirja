@@ -203,6 +203,9 @@ const MODULES = [
   'js/liput.js',
   'js/karttazoom.js',
   'js/vertailu.js',
+  // M4: nähtävyydet ennen opasta (opas tuo sen apurit).
+  'js/nahtavyydet.js',
+  'js/opas.js',
   'js/pollo-haku.js',
   'js/pollo.js',
   'js/ui.js',

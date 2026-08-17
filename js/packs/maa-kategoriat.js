@@ -18,7 +18,7 @@
  *
  * Avain on ISO-3-maatunnus (sama kuin map.cityCountry ja RADIOT).
  * Kategorian muoto on sama kuin KULTTUURI_KATEGORIAT-taulussa, ja
- * samat säännöt pätevät (docs/tutki-aiheet.md): vakioaiheiden id:t,
+ * samat säännöt pätevät (docs/moduulit/maalehti.md): vakioaiheiden id:t,
  * kuvat ≥ 1200 px, lähde muodossa "Tekijä, Wikimedia Commons
  * (LISENSSI)". Monistusmitta on 5–6 aihetta ja 4–5 nostoa aihetta
  * kohti — Lontoo (54 nostoa) on lippulaiva, ei mittatikku.
@@ -3140,7 +3140,7 @@ export const MAA_KATEGORIAT = {
    * nostot on valittu koko maasta eikä pääkaupungista: Altamira on
    * Kantabriassa, Mezquita Córdobassa, Teide Kanarialla.
    *
-   * Viisi aihetta ohjeen vakiolistalta (docs/tutki-aiheet.md kohta 2).
+   * Viisi aihetta ohjeen vakiolistalta (docs/moduulit/maalehti.md kohta 2).
    * Tehtävä on Luonto-aiheessa, ja sen vastaus on saman sivun
    * tekstissä.
    */

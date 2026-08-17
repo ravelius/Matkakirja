@@ -34,7 +34,7 @@
  * (tests/pistenaytto.test.mjs).
  *
  * KAIKKI VÄRIT ATTRIBUUTTEINA, EI LUOKKINA. Sama sääntö kuin linsseillä
- * (docs/linssit-suunnitelma.md luku 2.2): näyttö voidaan piirtää myös
+ * (docs/moduulit/linssit.md luku 2.2): näyttö voidaan piirtää myös
  * irralliseen SVG:hen, joka ei peri sivun tyylitiedostoa, ja luokkaan
  * nojaava väri katoaisi silloin mustaksi läiskäksi.
  *

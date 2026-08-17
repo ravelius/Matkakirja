@@ -1883,7 +1883,7 @@ export function drawTokenIcon(parent, type) {
        * Lasi on läpikuultava eikä jalokiven tapaan täyteen väritetty:
        * linssi ei peitä maailmaa vaan näyttää siitä uuden puolen. Ilman
        * omaa haaraa tämä piirtyisi default-haaran jalokivenä
-       * (docs/linssit-suunnitelma.md luku 4.7).
+       * (docs/moduulit/linssit.md luku 4.7).
        */
       el('circle', { cx: -2, cy: -3, r: 7.4, class: 'icon-linssi-lasi' }, g);
       el('path', { d: 'M3.2,2.2 L9.6,8.8', class: 'icon-linssi-varsi' }, g);

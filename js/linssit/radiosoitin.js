@@ -9,7 +9,7 @@
  *
  * TÄMÄ MODUULI EI SOITA ÄÄNTÄ. Se on pelkkä laite: se näyttää tilan ja
  * kertoo painalluksista takaisinkutsuilla. Syy on sama kuin
- * linssimoottorissa (docs/linssit-suunnitelma.md luku 2.6): äänet ovat
+ * linssimoottorissa (docs/moduulit/linssit.md luku 2.6): äänet ovat
  * js/sound.js:n hallussa, ja kaksi paikkaa, jotka molemmat pysäyttävät
  * saman virran, päätyy ennen pitkää eri mieltä siitä kumpi soi.
  *
