@@ -48,6 +48,10 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v816 — Matkailijan Tokio, Soul, Shanghai ja Tripoli (O6 valmis)',
+  'v815 — remontti M3: liput, karttazoom, vertailu moduuleiksi',
+  'v814 — remontti M2: UI:n apurit omaan moduuliin',
+  'v813 — remontti M1: sisältötaulut omaan moduuliin',
   'v812 — miniatyyrityökaluun hybridimalli (ei nakyvia muutoksia)',
   'v811 — Raamatussa: uusiin kohteisiin vain lehdet, ei kaarta',
   'v810 — opas: Matkakassa pois, hintatasorivit; 5 säänluonnehdintaa',

@@ -13151,6 +13151,269 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Steven-L-Johnson, Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      /*
+       * MATKAILIJAN TOKIO (paketti O6, omistajan tilaus 16.8.2026).
+       * Rakenne on Bagdadin ja Pariisin mallista: pystykuva, kappale ja
+       * opastaitto viidellä jaksolla, joista ensimmäisessä on kolmen
+       * kuvan karuselli. Kaari (matkakirjateksti, kohtaaminen, kysymys)
+       * jätettiin tekemättä omistajan sitovalla päätöksellä 17.8.2026.
+       *
+       * FAKTAPOHJA. Repon oma kaanon (Uenon eläintarha 1882,
+       * Ameya-yokochō, Kappabashin muoviruoka, sentōn bandai, hikeshi,
+       * yose) on tässä samassa tiedostossa alempana. Uudet faktat:
+       * en-Wikipedia "Yamanote Line" (34,5 km, 30 asemaa, 59–65 min,
+       * uguisu-iro, sotomawari/uchimawari, liikennöintiajat),
+       * "Kappabashi" (nimen kaksi selitystä ja kappa-maskotti), "Sento"
+       * (bandai 315 / front 660, Fuji-laattamaalaus, pesu ennen
+       * altaaseen menoa), "Senso-ji" (628, Kannon-patsas Sumidasta,
+       * Nakamise-dōri, 1945 pommitus) sekä en-Wikivoyage "Tokyo"
+       * (ilmasto, hintataso) — kaikki haettu 17.8.2026.
+       *
+       * KUVAT. Haku kategorioilla ja Quality image -haulla, ei
+       * hakusanoilla. Lisenssit ja Restrictions-kenttä todennettu
+       * Commonsin API:sta erätodennuksella 17.8.2026, sijainti
+       * kuvaustekstistä ja kategorioista, ja jokainen kuva katsottu
+       * silmin. Hylätty: "Rush hour at Shinjuku 01.jpg"
+       * (Restrictions: personality).
+       */
+      matkailijalle: {
+        /*
+         * Etusivukuvan kaava: yksi aihe joka täyttää ruudun, paikan oma
+         * erikoisuus, pystykuva, Quality image. Sensō-jin
+         * viisikerroksinen pagodi seisoo punaisena tyhjää taivasta
+         * vasten, ja oikea yläkulma on pelkkää taivasta — Matkaopas-nauha
+         * ei peitä aihetta.
+         */
+        kuva: {
+          tiedosto: 'Five-storied Pagoda, Sensoji, Tokyo, 20240824 1103 5616.jpg',
+          selite: 'Sensō-jin viisikerroksinen pagodi Asakusassa: Tokion '
+            + 'vanhimman temppelin punainen maamerkki.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Tokio ei ole yksi kaupunki vaan kolmenkymmenen aseman '
+          + 'rengas. Yamanote-rata kiertää keskustan ympäri, ja lenkin '
+          + 'pohjois- ja itäpuolelle jää shitamachi, vanha alakaupunki. '
+          + 'Siellä matkailijan Tokio on kävelymatkan mittainen: Uenon '
+          + 'torikuja, keittiötavaran katu ja Asakusan temppeli ovat '
+          + 'peräkkäin parin kilometrin matkalla. Väliin mahtuu '
+          + 'kaupunginosan kylpylä, jonka piippu näkyy kattojen yli.',
+        artikkeli: {
+          nimi: 'Matkailijan Tokio',
+          taitto: 'opas',
+          teksti: 'Matkailijan Tokio on rengasrata ja sen itäpuolelle '
+            + 'jäävä alakaupunki.',
+          nosto: 'Koko lenkin voi ajaa ympäri tunnissa ja nousta pois '
+            + 'missä huvittaa — juna palaa samaan paikkaan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Tokion keskustan piirtää rengasrata. Yamanote-linja '
+                + 'kiertää 34,5 kilometrin lenkin kolmenkymmenen aseman '
+                + 'kautta, ja koko kierros kestää 59–65 minuuttia. Junat '
+                + 'ovat vaaleanvihreitä, ja värillä on oma nimi: '
+                + 'uguisu-iro, kerttusen vihreä. Myötäpäivään ajavat junat '
+                + 'ovat sotomawari eli ulkokehä, vastapäivään ajavat '
+                + 'uchimawari eli sisäkehä; junat kulkevat vasemmalla '
+                + 'kuten autotkin. Ensimmäinen lähtee vartin yli neljän '
+                + 'aamuyöllä ja viimeinen tulee perille yhden jälkeen. '
+                + 'Lenkin sisäpuoli on kaupungin ydin, ja sen pohjois- ja '
+                + 'itäpuolelle jää shitamachi eli alakaupunki. Sieltä '
+                + 'matkailijan kävely kannattaa aloittaa: Ueno, '
+                + 'Kappabashi ja Asakusa ovat peräkkäin saman parin '
+                + 'kilometrin matkalla, joten junaa tarvitaan vain '
+                + 'perille.',
+              /*
+               * KARUSELLI: kolme kuvaa seuraavat jakson tekstiä — rata,
+               * jonka ympäri kaupunki on rakennettu, ja ne kaksi katua,
+               * jotka teksti nimeää kävelyn varrelta.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Along Yamanote line between Harajuku and Shibuya.jpg',
+                  selite: 'Yamanote-radan raiteet Harajukun ja Shibuyan '
+                    + 'välillä; lenkki kiertää koko keskustan.',
+                  lahde: 'Syced, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Street View of Ameya-Yokocho.jpg',
+                  selite: 'Ameya-yokochōn kuja Uenossa kulkee Yamanote-radan '
+                    + 'penkereen vieressä.',
+                  lahde: 'そらみみ, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Kappabashi Street with Tokyo Skytree in Background, Tokyo 130810 1.jpg',
+                  selite: 'Kappabashi-dōrin katukyltti ja kadun päässä '
+                    + 'siintävä Skytree-torni.',
+                  lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Torikuja radan alla',
+              teksti: 'Uenon aseman kyljessä kulkee Ameya-yokochō, '
+                + 'ulkoilmatori, jonka pinta-ala on runsaat 15 000 '
+                + 'neliömetriä ja jolla on yli 250 liikettä. Se seuraa '
+                + 'Yamanote-radan vartta etelään, ja osa kaupoista on '
+                + 'suoraan ratasillan alla — kuja jatkuu holvin alla '
+                + 'käytävänä, jossa myydään kelloja, koruja ja vaatteita. '
+                + 'Nimestä on kaksi selitystä. Toisen mukaan takana on '
+                + 'sana ameya, karkkikauppa: sokerista oli sodan jälkeen '
+                + 'pulaa, ja kadulla oli makeiskauppa toisensa vieressä. '
+                + 'Toisen mukaan sana on Amerika, sillä kadulla myytiin '
+                + 'Yhdysvaltain armeijan ylijäämätavaraa. Lyhenne ameyoko '
+                + 'sopii kumpaankin. Kalatiskit ovat parhaimmillaan '
+                + 'aamulla, ja vuoden viimeiset päivät ovat kujan '
+                + 'vilkkaimmat: uudenvuoden ruoat ostetaan täältä.',
+              kuva: {
+                tiedosto: 'Ueno Ameya-Yokocho shops under track 2015.jpg',
+                selite: 'Ameya-yokochōn kauppakäytävä kulkee ratasillan '
+                  + 'alla Uenossa.',
+                lahde: 'Wpcpey, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Katu, jolla myydään muoviruokaa',
+              teksti: 'Uenon ja Asakusan välissä kulkee Kappabashi-dōri, '
+                + 'jonka liikkeet myyvät ravintoloille veitsiä, astioita, '
+                + 'uuneja ja kalusteita. Kadun erikoisuus on '
+                + 'näyteikkunoiden muoviruoka, shokuhin sampuru. '
+                + '1800-luvulla myyjä asetti oven eteen joka päivä '
+                + 'lautasellisen oikeaa ruokaa kirjoitetun listan sijasta; '
+                + '1920-luvun lopulla käsityöläiset tekivät samasta '
+                + 'annoksesta kestävän. Parafiini haalistui lämmössä, '
+                + 'joten 1980-luvun puolivälissä siirryttiin PVC-muoviin. '
+                + 'Kadun nimestäkin on kaksi selitystä: joko naapuruston '
+                + 'sadetakit, kappa, jotka kuivuivat sillalla, tai '
+                + 'kauppias Kihachi Kappaya, joka rahoitti kanavatyön. '
+                + 'Koska sana on äänteellisesti sama kuin vesihiisi '
+                + 'kappa, kauppiaat ovat ottaneet sen maskotikseen, ja '
+                + 'kujan hahmoja näkee kylteissä pitkin katua.',
+              kuva: {
+                tiedosto: 'Coffee cup-shaped balconies, Niimi Tableware, Kappabashi Dougu Street, Tokyo, Japan (side view).jpg',
+                asettelu: 'kapea',
+                selite: 'Kahvikupin muotoiset parvekkeet keittiötavaratalon '
+                  + 'kulmassa Kappabashi-dōrin päässä.',
+                lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kylpylä, jonka piippu näkyy kauas',
+              teksti: 'Sentō on maksullinen yhteiskylpylä ja yhä osa '
+                + 'kaupunginosan arkea. Sisäänkäynti muistuttaa temppeliä, '
+                + 'ja oviaukossa roikkuu noren-verho, jossa lukee yu eli '
+                + 'kuuma vesi. Vanhassa mallissa oven takana on bandai: '
+                + 'koroke, jolta vahtimestari näkee miesten ja naisten '
+                + 'puolelle yhtä aikaa. Tokiossa 660 kylpylässä on '
+                + 'nykyaikainen tiski ja enää 315:ssä vanha bandai. '
+                + 'Pesuhuoneen perällä on laattamaalaus, useimmiten '
+                + 'Fuji-vuori. Järjestys on tärkeä: peseytyminen tehdään '
+                + 'jakkaralla hanan ääressä, ja altaaseen mennään vasta '
+                + 'puhtaana — saippuaa tai pyyhettä ei viedä veteen. '
+                + 'Talon takana on kattilahuone, ja sen korkea piippu on '
+                + 'helpoin tapa löytää lähin kylpylä: se erottuu kattojen '
+                + 'yli kortteleiden päähän.',
+              kuva: {
+                tiedosto: '広尾湯の煙突.jpg',
+                asettelu: 'kapea',
+                selite: 'Hiroo-yun savupiippu Tokiossa: kylpylän nimi on '
+                  + 'maalattu piippuun pystyriviin.',
+                lahde: 'Syced, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Temppelin katu ja joki',
+              teksti: 'Asakusassa seisoo Sensō-ji, Tokion vanhin temppeli. '
+                + 'Tarinan mukaan kaksi kalastajaveljestä nosti vuonna '
+                + '628 Sumida-joesta Kannonin patsaan, ja kylän päämies '
+                + 'teki talostaan temppelin. Patsasta ei näytetä yleisölle '
+                + 'koskaan. Portilta päärakennukselle johtaa '
+                + 'Nakamise-dōri, kauppakuja, jonka kojuista ostetaan '
+                + 'viuhkoja, kampoja ja vastapaistettuja leivoksia. '
+                + 'Temppeli paloi 10. maaliskuuta 1945 pommituksessa, ja '
+                + 'päärakennus tehtiin uudelleen 1950-luvulla; kävijöitä '
+                + 'on yli 30 miljoonaa vuodessa, enemmän kuin missään '
+                + 'muussa maailman pyhäkössä. Sumida on kävelymatkan '
+                + 'päässä: joen yli näkyy Skytree, ja rantaa pitkin '
+                + 'pääsee kävellen tai vesibussilla eteenpäin.',
+              kuva: {
+                tiedosto: 'Nakamise, Asakusa, Tokyo as seen from the Asakusa Culture Tourist Information Center 20190420 1.jpg',
+                selite: 'Kaminarimon-portti ja Nakamise-dōrin kojurivi '
+                  + 'ylhäältä nähtynä Asakusassa.',
+                lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Rengasrata',
+                tahdet: 3,
+                selite: 'Yhdellä lipulla pääsee kolmellekymmenelle '
+                  + 'asemalle, eikä suuntaa tarvitse miettiä: juna palaa '
+                  + 'aina samaan paikkaan.',
+              },
+              {
+                mita: 'Alakaupungin kävely',
+                tahdet: 3,
+                selite: 'Ueno, Kappabashi ja Asakusa ovat peräkkäin parin '
+                  + 'kilometrin matkalla.',
+              },
+              {
+                mita: 'Kadun erikoisuudet',
+                tahdet: 3,
+                selite: 'Muoviruokakaupat, keittiöveitset ja radan alle '
+                  + 'jäävä torikuja ovat kaikki omalaatuisia näyttelyitä.',
+              },
+              {
+                mita: 'Kylpylät',
+                tahdet: 2,
+                selite: 'Kaupunginosan sentōn löytää piipusta, ja pääsy '
+                  + 'maksaa vähemmän kuin lounas.',
+              },
+              /*
+               * HINTATASO kainalotaulussa (omistajan päätös 17.8.2026:
+               * Matkakassa-osio poistettiin ja hintataso kerrotaan vain
+               * tässä). Lähde: en-Wikivoyage "Tokyo", Expenses (haettu
+               * 17.8.2026): "The cost of living in Tokyo is not as
+               * astronomical as it once was… comparable to most other
+               * large cities in the developed world."
+               */
+              {
+                mita: 'Hintataso',
+                tahdet: 2,
+                selite: 'Maineestaan huolimatta Tokio ei ole muita '
+                  + 'suurkaupunkeja kalliimpi, ja halpa syöminen on '
+                  + 'helppoa.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kostea kesä',
+                teksti: 'Heinä- ja elokuussa päivälämpötila on noin 31 '
+                  + 'astetta, mutta kosteus saa sen tuntumaan '
+                  + 'kuumemmalta.',
+              },
+              {
+                otsikko: 'Sadekausi',
+                teksti: 'Touko–kesäkuun tsuyu tuo kuukauden pilvistä '
+                  + 'tihkua ja välillä kaatosateita.',
+              },
+              {
+                otsikko: 'Ruuhkatunnit',
+                teksti: 'Yamanote-linja on aamuisin ja iltapäivisin '
+                  + 'täynnä; matkatavaroiden kanssa kannattaa väistää '
+                  + 'ruuhka-aika.',
+              },
+              {
+                otsikko: 'Kylpylän järjestys',
+                teksti: 'Sentōssa peseydytään ennen altaaseen menoa, '
+                  + 'eikä saippuaa tai pyyhettä viedä veteen.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Maan ensimmäinen yksikiskorata kulki eläintarhan halki',
@@ -13304,6 +13567,1100 @@ export const KULTTUURI_KATEGORIAT = {
           + 'liina, ja henkilöt erottuvat toisistaan vain '
           + 'äänenkorkeudesta ja pään asennosta.',
       },
+    },
+  ],
+  /*
+   * SOUL (paketti O6, omistajan tilaus 16.8.2026). Kaupungille ei ollut
+   * aiemmin lainkaan kulttuurikategoriaa, joten tässä on koko osio:
+   * johdanto, kansikuvat, nostot ja matkailijan opas. Tarinakaarta
+   * (matkakirjateksti, kohtaaminen, kysymys) EI tehdä — omistajan
+   * sitova päätös 17.8.2026.
+   *
+   * LÄHTEET (haettu 17.8.2026): en-Wikipedia "Namdaemun", "Seoul City
+   * Wall", "Bukchon Hanok Village", "Gwangjang Market",
+   * "Cheonggyecheon", "Insa-dong", "Gyeongbokgung" sekä en-Wikivoyage
+   * "Seoul" (kaupungin puoliskot, metro, ilmasto, hintataso).
+   *
+   * KUVAT: haku kategorioilla (Category:Bukchon Hanok Village,
+   * Category:Gwangjang Market, Category:Insadong) ja Quality
+   * image -haulla, ei hakusanoilla. Lisenssit ja Restrictions
+   * erätodennettu Commonsin API:sta, sijainti kuvaustekstistä ja
+   * kategorioista, jokainen kuva katsottu silmin. Hylätyt: "Hangwa
+   * street vendor at Insadong" ja "Insadong Street in Seoul"
+   * (tunnistettavia yksityishenkilöitä lähikuvassa), "Seoul city
+   * skyline at night from Namsan Mountain" (pääosassa oksat eikä
+   * kaupunki).
+   */
+  soul: [
+    {
+      id: 'kaupunki',
+      nimi: 'Soul',
+      johdanto: 'Soulin ympärillä oli 1300-luvulla 18,2 kilometrin muuri ja '
+        + 'kahdeksan porttia. Kaupunki kasvoi muurin yli, mutta portit '
+        + 'seisovat yhä liikenteen keskellä, ja niiden takana on '
+        + 'kortteli puutaloja, jotka rakennettiin 1920-luvulla '
+        + 'tarkoituksella korealaisiksi.',
+      kansikuvat: [
+        {
+          tiedosto: 'Traditional hanok houses at golden hour in Bukchon Hanok Village in Seoul.jpg',
+          selite: 'Hanok-taloja Bukchonin kortteleissa aamuauringossa. '
+            + 'Puurunkoisten talojen harjakatot on katettu harmailla '
+            + 'tiilillä, ja pihoja kiertää muuri, jonka alaosa on '
+            + 'mukulakiveä ja yläosa punatiiltä. Kadun päässä nousee '
+            + 'rinne, jonka takaa näkyy vuori.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Gwangjang Market, Seoul 2020-02-01.jpg',
+          selite: 'Gwangjangin torin käytävä talvipäivänä. Katettu kuja on '
+            + 'täynnä ihmisiä, kojujen yllä roikkuu punaisia '
+            + 'kylttilaattoja puhelinnumeroineen, ja tiskeillä on '
+            + 'kuivattua kalaa, vihanneksia ja pakattuja tavaroita.',
+          lahde: 'Stck w, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Yeouido Hangang Park from Mapo Bridge 1.jpg',
+          selite: 'Yeouidon rantapuisto Han-joen varrella Mapo-sillalta '
+            + 'kuvattuna. Etualalla on puistokenttä ja lehdettömiä puita, '
+            + 'takana joki siltoineen ja vastarannan talorivit; oikealla '
+            + 'kohoaa yksinäinen ruskea tornitalo.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * MATKAILIJAN SOUL. Rakenne on Bagdadin mallista: pystykuva,
+       * kappale ja opastaitto viidellä jaksolla, joista ensimmäisessä
+       * on kolmen kuvan karuselli. Kainalotaulussa on myös
+       * hintatasorivi (omistajan päätös 17.8.2026).
+       */
+      matkailijalle: {
+        /*
+         * Etusivukuvan kaava: yksi aihe joka täyttää ruudun, paikan oma
+         * erikoisuus, pystykuva, Quality image. Hyangwonjeongin
+         * kuusikulmainen paviljonki heijastuu lammesta, ja yläreuna on
+         * pelkkää taivasta ja vuorta — Matkaopas-nauha ei peitä aihetta.
+         */
+        kuva: {
+          tiedosto: 'Water reflection of Hyangwonjeong Pavilion at Gyeongbokgung Palace in Seoul.jpg',
+          selite: 'Hyangwonjeongin kuusikulmainen paviljonki heijastuu '
+            + 'lammesta Gyeongbokgungin palatsissa.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Soul on yli yhdeksän miljoonan asukkaan pääkaupunki, '
+          + 'jonka Han-joki jakaa kahtia: pohjoispuoli on Gangbuk ja '
+          + 'eteläpuoli Gangnam. Matkailijan Soul on pohjoisella '
+          + 'puolella, ja se on pieni — palatsi, puutalokortteli, '
+          + 'antiikkikatu ja kaupungin vanhin tori ovat kävelymatkan '
+          + 'päässä toisistaan. Väliin jää puro, joka kaivettiin '
+          + 'esiin moottoritien alta, ja portti, joka on rakennettu '
+          + 'uudelleen kahdesti kuudensadan vuoden aikana.',
+        artikkeli: {
+          nimi: 'Matkailijan Soul',
+          taitto: 'opas',
+          teksti: 'Matkailijan Soul mahtuu vanhan muurin sisään, ja loput '
+            + 'kaupungista kulkee metrolla.',
+          nosto: 'Vanha kaupunki on kävelymatkan mittainen: muurin '
+            + 'sisäpuolelle mahtuvat palatsi, tori ja puutalokortteli.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Han-joki jakaa Soulin kahtia. Pohjoispuoli Gangbuk '
+                + 'on vanha kaupunki, eteläpuoli Gangnam on rakennettu '
+                + 'pääosin 1970-luvun jälkeen. Matkailijan kohteet ovat '
+                + 'pohjoisella puolella, ja niiden keskipiste on '
+                + 'Gwanghwamunin aukio palatsin portin edessä. Sieltä '
+                + 'lähtevät sekä antiikkikatu Insadong että vanhan torin '
+                + 'kujat, joten kävellen pärjää pitkälle. Muuhun '
+                + 'kaupunkiin mennään metrolla, joka on matkustajamäärältään '
+                + 'maailman suurimpia: lyhin matka maksaa 1 250 wonia, ja '
+                + 'hinta nousee sadalla wonilla jokaista kymmenen '
+                + 'kilometrin jälkeistä viittä kilometriä kohti. '
+                + 'Lippukortti T-money kelpaa myös busseissa ja takseissa, '
+                + 'ja vaihto bussista metroon on kortilla maksuton. '
+                + 'Incheonin lentoasemalta keskustaan pääsee junalla '
+                + '43 minuutissa.',
+              /*
+               * KARUSELLI: kolme kuvaa seuraavat jakson tekstiä —
+               * aukio, jolta kävely alkaa, kujat joille se johtaa, ja
+               * portti, jonka ympäri kaupunki on kasvanut.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Gwanghwamun Plaza - Gwanghwamun gate - Gyeongbokgung Palace 2016 - hschrijver.jpg',
+                  selite: 'Gwanghwamunin portti ja aukio sen edessä ovat '
+                    + 'vanhan Soulin keskipiste.',
+                  lahde: 'Hschrijver, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Insadong Alley, Seoul, Korea.jpg',
+                  selite: 'Insadong-gilin sivukuja: osoitekilpi kertoo '
+                    + 'korttelin numeron talon kulmassa.',
+                  lahde: 'Ken Eckert, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Korea-Seoul-Namdaemun-Sungnyemun-16.jpg',
+                  selite: 'Sungnyemunin portti valaistuna: kaupunki on '
+                    + 'kasvanut sen ympärille joka suunnalta.',
+                  lahde: 'tylerdurden1, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kortteli kukkulan rinteessä',
+              teksti: 'Bukchon tarkoittaa pohjoista kylää: se on '
+                + 'Cheonggyecheon-puron ja Jongno-kadun pohjoispuolella '
+                + 'kahden palatsin välissä. Korttelien talot ovat hanokeja '
+                + 'eli korealaisia puutaloja, joiden lattian alla kulkee '
+                + 'ondol-lämmityskanava. Rinne on jyrkkä, joten kadut '
+                + 'nousevat portaittain ja katot laskeutuvat rivissä alas. '
+                + 'Talot ovat 1800-luvun lopulta ja 1900-luvun alusta, ja '
+                + 'suurin osa nykyisistä rakennettiin 1920-luvulta '
+                + 'alkaen. Bukchon on ennen kaikkea asuinalue: siellä asuu '
+                + 'noin 6 100 ihmistä, ja vuonna 2024 kävijöitä oli 6,4 '
+                + 'miljoonaa. Siksi kaupunki on rajannut vierailuajan '
+                + 'kymmenen ja viiden välille, ja asukkaat pyytävät '
+                + 'pitämään ryhmät pieninä ja äänet hiljaa. Ohje '
+                + 'kannattaa lukea niin kuin se on tarkoitettu: kadut ovat '
+                + 'jonkun kotikatuja.',
+              kuva: {
+                tiedosto: 'Traditional hanok houses on the corner of a steeply sloping street in Bukchon Hanok Village Seoul.jpg',
+                selite: 'Hanok-talo jyrkän kadun kulmassa Bukchonissa; '
+                  + 'muurin alaosa on mukulakiveä.',
+                lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Torilla syödään seisten',
+              teksti: 'Gwangjangin tori perustettiin 5. heinäkuuta 1905. '
+                + 'Japani oli ottanut haltuunsa Namdaemunin torin, ja '
+                + 'joukko korealaisia kauppiaita keräsi rahat uuteen '
+                + 'toriin, joka ei ollut vieraan vallan käsissä. Se oli '
+                + 'ensimmäinen tori, joka oli auki joka päivä eikä vain '
+                + 'markkinapäivinä; nimen se sai 1960. Nykyään torilla on '
+                + 'yli 5 000 liikettä 42 000 neliömetrillä ja noin 65 000 '
+                + 'kävijää päivässä. Kangasta myydään yhä, mutta '
+                + 'tunnetuin tori on ruokakujastaan. Siellä syödään '
+                + 'seisten kojun tiskin ääressä: bindaetteok on '
+                + 'mungpavuista jauhettu paksu lettu, joka paistetaan '
+                + 'öljyssä silmien edessä, ja mayak gimbap on peukalon '
+                + 'kokoinen riisirulla, jota syödään sinapinsiemenkastikkeen '
+                + 'kanssa. Torin nimi tulee kahdesta sillasta, Gwangkyosta '
+                + 'ja Jangkyosta, joiden välissä sen ensimmäinen '
+                + 'kauppahalli seisoi.',
+              kuva: {
+                tiedosto: 'Korean pancakes and pan-fried foods at Gwangjang Market.jpg',
+                selite: 'Jeon-lettuja ja paistettuja pikkuannoksia '
+                  + 'Gwangjangin torin kojun tiskillä.',
+                lahde: 'Bo Park, US Army, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Puro moottoritien alta',
+              teksti: 'Cheonggyecheon on lähes yksitoista kilometriä pitkä '
+                + 'puro, joka virtaa keskustan läpi lännestä itään. Se oli '
+                + 'vuosisatoja kaupungin viemäri, ja Joseon-kaudella se '
+                + 'ruopattiin ja penkat vahvistettiin muutaman vuoden '
+                + 'välein. Vuodesta 1958 alkaen uoma peitettiin betonilla, '
+                + 'ja päälle valmistui 1976 viiden ja puolen kilometrin '
+                + 'moottoritie. Vuonna 2003 se purettiin ja puro kaivettiin '
+                + 'esiin; työ maksoi yli 386 miljardia wonia ja valmistui '
+                + '2005. Vettä pumpataan uomaan päivittäin 120 000 tonnia '
+                + 'Han-joesta ja metroasemien pohjavesistä. Puron varrella '
+                + 'on 3,3–5,9 astetta viileämpää kuin muutaman korttelin '
+                + 'päässä kulkevalla kadulla, ja lajimäärä alueella on '
+                + 'moninkertaistunut. Kaupunkilaisille se on ennen kaikkea '
+                + 'kävelyreitti, joka kulkee katutason alapuolella.',
+              kuva: {
+                tiedosto: 'KOCIS Cheonggyecheon (stream) in Seoul (7085882037).jpg',
+                selite: 'Cheonggyecheonin uoma keskikaupungilla: vesi '
+                  + 'pulppuaa suihkuina kivetyn puron poikki.',
+                lahde: 'Korea.net / Korean Culture and Information Service, '
+                  + 'Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Viisi palatsia',
+              teksti: 'Joseon-dynastia rakensi Souliin viisi suurta '
+                + 'palatsia. Gyeongbokgung on niistä ensimmäinen ja '
+                + 'suurin, ja sen portti Gwanghwamun on kaupungin '
+                + 'keskipiste. Palatsin lammen keskellä seisoo Gyeonghoeru, '
+                + 'pilareiden varaan nostettu juhlasali, jossa otettiin '
+                + 'vastaan vieraita, ja pohjoisempana pienemmässä lammessa '
+                + 'kuusikulmainen Hyangwonjeong. Changdeokgung on '
+                + 'maailmanperintökohde ja oli hallitsijasuvun mieluisin '
+                + 'asuinpalatsi; sen takana on puutarha, jota sanotaan '
+                + 'salaiseksi puutarhaksi. Changgyeonggung oli aikanaan '
+                + 'eläintarhana ja Gyeonghuigungin paikalla toimi '
+                + 'lukio — molemmat kärsivät pahoin dynastian kaaduttua. '
+                + 'Deoksugung oli käytössä monarkian viimeisinä vuosina, '
+                + 'ja siellä perinteinen ja länsimainen rakennustapa '
+                + 'seisovat vierekkäin.',
+              kuva: {
+                tiedosto: 'Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg',
+                selite: 'Gyeonghoerun juhlasali seisoo kivipilareiden '
+                  + 'varassa palatsin lammessa.',
+                lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kävelymatkat',
+                tahdet: 3,
+                selite: 'Palatsi, antiikkikatu, tori ja puutalokortteli '
+                  + 'ovat kaikki muurin sisäpuolella.',
+              },
+              {
+                mita: 'Torin ruokakuja',
+                tahdet: 3,
+                selite: 'Gwangjangissa syödään seisten kojun tiskin '
+                  + 'ääressä, ja annos paistetaan silmien edessä.',
+              },
+              /*
+               * HINTATASO kainalotaulussa (omistajan päätös 17.8.2026).
+               * Lähde: en-Wikivoyage "Seoul" (haettu 17.8.2026): hyvä
+               * ateria sivulisukkeineen ₩5 000 tai alle, metron
+               * perusmaksu ₩1 250.
+               */
+              {
+                mita: 'Hintataso',
+                tahdet: 3,
+                selite: 'Kunnon aterian saa viidellä tuhannella wonilla ja '
+                  + 'metromatkan neljäsosalla siitä.',
+              },
+              {
+                mita: 'Metro',
+                tahdet: 3,
+                selite: 'Yksi maailman suurimmista verkoista, ja opasteet '
+                  + 'ovat myös latinalaisin kirjaimin.',
+              },
+              {
+                mita: 'Puron varsi',
+                tahdet: 2,
+                selite: 'Katutason alapuolella kulkeva reitti on kesällä '
+                  + 'viileämpi kuin viereinen katu.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sadekausi',
+                teksti: 'Kesä alkaa monsuunilla: kesä- ja heinäkuussa '
+                  + 'sataa runsaasti ja ilma on hyvin kostea.',
+              },
+              {
+                otsikko: 'Kylmä talvi',
+                teksti: 'Tammi- ja helmikuussa lämpötila painuu ajoittain '
+                  + 'alle kymmenen pakkasasteen, ja lunta sataa noin 28 '
+                  + 'päivänä vuodessa.',
+              },
+              {
+                otsikko: 'Bukchonin vierailuajat',
+                teksti: 'Puutalokortteliin pääsee kello 10–17, ja '
+                  + 'asukkaat pyytävät pitämään äänet hiljaa.',
+              },
+              {
+                otsikko: 'Bussien opasteet',
+                teksti: 'Metron opasteissa on englantia, mutta bussien '
+                  + 'reittitiedot ovat pysäkeillä vain koreaksi.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+      nostot: [
+        {
+          otsikko: 'Portti paloi, ja se tehtiin uudelleen vanhoin keinoin',
+          tiedosto: 'Korea-Seoul-Namdaemun-Sungnyemun-25.jpg',
+          teksti: 'Sungnyemun eli Namdaemun on Soulin vanhan '
+            + 'kaupunginmuurin eteläinen pääportti. Se valmistui vuonna '
+            + '1398 ja rakennettiin uudelleen 1447. Muuri kiersi '
+            + 'kaupungin 18,2 kilometrin matkalta ja oli korkeimmillaan '
+            + '6,1 metriä. Portti oli Soulin vanhin puurakennus, kunnes '
+            + 'se sytytettiin tuhopoltossa 10. helmikuuta 2008; '
+            + 'sammutustöissä oli yli 360 palomiestä, mutta yläkerta '
+            + 'tuhoutui. Ennallistus alkoi helmikuussa 2010 ja päättyi '
+            + 'huhtikuussa 2013, ja portti avattiin yleisölle saman '
+            + 'vuoden toukokuussa. Katon 22 000 tiiltä poltettiin '
+            + 'perinteisessä uunissa Buyeossa, ja työtä ohjasivat '
+            + 'piirustukset, jotka oli tehty edellisen korjauksen '
+            + 'yhteydessä 2005 juuri tällaisen tilanteen varalle.',
+          selite: 'Sungnyemunin portti Soulissa. Kaksikerroksinen puinen '
+            + 'porttirakennus tiilikattoineen seisoo kivijalustan päällä, '
+            + 'jonka läpi vie holvikäytävä. Vasemmalla kohoaa lasinen '
+            + 'toimistotalo, ja portin edessä on nurmikenttä ja matala '
+            + 'kaide.',
+          lahde: 'm-louis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kortteli, joka rakennettiin tarkoituksella korealaiseksi',
+          tiedosto: 'Flowery alley lined with hanok houses and red rosebush in Bukchon Hanok Village Seoul.jpg',
+          teksti: 'Bukchonin nykyinen ilme on pitkälti yhden ihmisen työtä. '
+            + 'Chŏng Segwŏn perusti noin vuonna 1920 ensimmäisen '
+            + 'korealaisomisteisen rakennusliikkeen Kŏnyangsan. Soulin '
+            + 'väkiluku kasvoi nopeasti, asunnoista oli pula ja japanilaiset '
+            + 'uudisasukkaat ostivat maata korealaisilta. Chŏng osti tontit '
+            + 'ja rakensi niille hanokeja japanilaistyylisten talojen '
+            + 'sijaan, vaikka siirtomaahallinto painosti toisin. Talot '
+            + 'olivat pienempiä kuin vanhan yläluokan kartanot mutta '
+            + 'nykyaikaisia: niissä oli lasi-ikkunat ja sähkö, joten '
+            + 'kortteliin pääsi asumaan tavallisia perheitä. Tuotoilla hän '
+            + 'rahoitti muun muassa korean kielen seuraa, ja vuoden 1942 '
+            + 'kielikahakassa hänet vangittiin ja kidutettiin ja omaisuutta '
+            + 'takavarikoitiin.',
+          selite: 'Kuja Bukchonin hanok-korttelissa aamuauringossa. '
+            + 'Vasemmalla nousee punatiilinen muuri, jonka yli kaartuu '
+            + 'punaisia ruusuja, ja oikealla on hanok-talon puinen '
+            + 'julkisivu ja tiilikaton räystäs. Kuja nousee loivasti '
+            + 'ylämäkeen.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Portinvartija seisoo sulkatöyhtö hatussa',
+          tiedosto: 'Royal Guard at Gwanghwamun Gate, Gyeongbokgung, Seoul.jpg',
+          teksti: 'Gyeongbokgung on Joseon-dynastian ensimmäinen ja tärkein '
+            + 'palatsi, ja sen pääportti Gwanghwamun aukiona edessään on '
+            + 'Soulin keskipiste. Portilla esitetään päivittäin '
+            + 'vartionvaihto: esiintyjillä on punainen viitta, leveä '
+            + 'punainen hattu, jossa on kaksi riikinkukon sulkaa, ja '
+            + 'kaulassa helmiketju. Palatsialueella toimivat myös Joseonin '
+            + 'palatsimuseo ja kansanperinteen museo. Portin sisäpuolella '
+            + 'lammen päällä seisoo juhlasali Gyeonghoeru ja pohjoisempana '
+            + 'kuusikulmainen Hyangwonjeongin paviljonki. Muut neljä '
+            + 'suurta palatsia ovat Changdeokgung salaisine puutarhoineen, '
+            + 'Changgyeonggung, Gyeonghuigung ja monarkian viimeisinä '
+            + 'vuosina käytetty Deoksugung.',
+          selite: 'Vartijaksi pukeutunut esiintyjä Gwanghwamunin portilla. '
+            + 'Punaisessa hatussa on kaksi pystyyn nostettua riikinkukon '
+            + 'sulkaa ja keltainen tunnus, viitta on punainen ja hihat '
+            + 'keltaiset, ja käsissä on vaakasuora sauva. Takana näkyy '
+            + 'palatsin portti.',
+          lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * SHANGHAI (paketti O6, omistajan tilaus 16.8.2026). Kaupungille ei
+   * ollut aiemmin kulttuurikategoriaa, joten tässä on koko osio:
+   * johdanto, kansikuvat, nostot ja matkailijan opas. Tarinakaarta EI
+   * tehdä (omistajan sitova päätös 17.8.2026).
+   *
+   * LÄHTEET (haettu 17.8.2026): en-Wikipedia "Shikumen", "The Bund",
+   * "Yu Garden", "Nanjing Road", "Xiaolongbao", "Shanghai Tower" sekä
+   * en-Wikivoyage "Shanghai" (Puxi/Pudong, metron hinnat, maglev,
+   * taksit).
+   *
+   * KUVAT: haku kategorioilla (Category:Shikumen, Category:Shikumen
+   * gates, Category:Lilong, Category:The Bund, Category:Yu Garden) ja
+   * Quality image -haulla. Lisenssit ja Restrictions erätodennettu
+   * Commonsin API:sta, sijainti kuvaustekstistä ja kategorioista,
+   * jokainen kuva katsottu silmin.
+   */
+  shanghai: [
+    {
+      id: 'kaupunki',
+      nimi: 'Shanghai',
+      johdanto: 'Shanghain vanha keskusta on kolme kaupunkia päällekkäin: '
+        + 'kiinalainen puutarha 1500-luvulta, kivikehyksisten ovien '
+        + 'kujakorttelit 1800-luvulta ja pankkitalojen rantakatu, jonka '
+        + 'vastarannalle nousi kolmessakymmenessä vuodessa Kiinan '
+        + 'korkein talo.',
+      kansikuvat: [
+        {
+          tiedosto: 'Shanghai-Bund-56-Kolonialstil-2012-gje.jpg',
+          selite: 'Rantakadun eli Bundin taloja aamuauringossa. Punatiilinen '
+            + 'kolmikerroksinen kauppahuone on koristeltu valkoisin '
+            + 'pylväin ja päätykolmioin, ja sen edessä aukiolla seisoo '
+            + 'pronssinen härkäpatsas. Taustalla näkyy lasisia '
+            + 'toimistotaloja.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Yu Garden Shanghai November 2017 012.jpg',
+          selite: 'Yun puutarhan lampi ja sen takana kaksikerroksinen sali. '
+            + 'Rantaa reunustavat harmaat kalkkikivikasat ja muotoon '
+            + 'leikatut pensaat, ja lammen yli vie matala kaiteellinen '
+            + 'silta. Talon julkisivu on tummanpunaista puuta.',
+          lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '2014.11.15.184711 East Nanjing Road Pedestrian Zone Shanghai.jpg',
+          selite: 'Itäisen Nanjing-kadun kävelykatu illalla. Molemmin puolin '
+            + 'katua kohoaa neonkylttien rivi, katulyhdyt palavat '
+            + 'keskikaistalla ja väkeä kulkee kadulla ristiin rastiin.',
+          lahde: 'Hermann Luyken, Wikimedia Commons (CC0)',
+        },
+      ],
+      /*
+       * MATKAILIJAN SHANGHAI. Rakenne on Bagdadin mallista: pystykuva,
+       * kappale ja opastaitto viidellä jaksolla, joista ensimmäisessä
+       * on kolmen kuvan karuselli. Kainalotaulussa on myös
+       * hintatasorivi (omistajan päätös 17.8.2026).
+       */
+      matkailijalle: {
+        /*
+         * Etusivukuvan kaava: yksi aihe joka täyttää ruudun, paikan oma
+         * erikoisuus, pystykuva, Quality image. Shanghain torni
+         * kiertyy alhaalta katsottuna kierteeksi taivasta vasten, eikä
+         * kuvassa ole muuta.
+         */
+        kuva: {
+          tiedosto: 'Shanghai Shanghai Tower 5166304.jpg',
+          selite: 'Shanghain torni alhaalta kuvattuna: 632 metriä korkea '
+            + 'lasirunko kiertyy ylöspäin kierteeksi.',
+          lahde: 'Ermell, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Shanghain jakaa kahtia Huangpu-joki: länsipuoli on Puxi '
+          + 'ja itäpuoli Pudong. Matkailijan Shanghai on Puxin puolella, '
+          + 'ja se on kolmessa kerroksessa. Kiinalainen vanhakaupunki '
+          + 'puutarhoineen on 1500-luvulta, kujakorttelit kivikehyksisine '
+          + 'ovineen 1800-luvun jälkipuolelta ja rantakadun pankkitalot '
+          + '1900-luvun alusta. Joen toisella puolella kaikki on '
+          + 'rakennettu vuoden 1990 jälkeen.',
+        artikkeli: {
+          nimi: 'Matkailijan Shanghai',
+          taitto: 'opas',
+          teksti: 'Matkailijan Shanghai on kolme kaupunkia päällekkäin ja '
+            + 'neljäs joen toisella puolella.',
+          nosto: 'Kaupunki luetaan kerroksina: puutarha, kuja, pankkitalo '
+            + 'ja lasitorni ovat kaikki saman kävelyn varrella.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Huangpu-joki jakaa Shanghain: länsipuoli Puxi on vanha '
+                + 'keskusta ja itäpuoli Pudong uusi. Kävelyn selkäranka on '
+                + 'itäinen Nanjing-katu, joka vie rantakadulta '
+                + 'Kansanaukiolle; siitä 1 200 metriä on kävelykatua, ja '
+                + 'leveyttä kadulla on 28 metriä. Rantakadun päässä alkaa '
+                + 'joenpuoleinen kävelytaso, jolta näkee vastarannan '
+                + 'tornit. Muualle mennään metrolla: verkko on maailman '
+                + 'laajimpia ja matka maksaa etäisyyden mukaan 3–10 '
+                + 'juania. Opasteet ja kuulutukset ovat myös englanniksi, '
+                + 'ja matkakortilla maksaa myös bussissa ja taksissa. '
+                + 'Pudongin lentoasemalta keskustan laitaan pääsee '
+                + 'magneettijunalla, joka kulki vuoteen 2021 asti 430 '
+                + 'kilometrin tuntinopeudella ja nykyään 300; lippu '
+                + 'maksaa 50–60 juania.',
+              /*
+               * KARUSELLI: kolme kuvaa seuraavat jakson tekstiä —
+               * kävelykatu, metro ja rantakadun kävelytaso.
+               */
+              kuva: [
+                {
+                  tiedosto: 'East Nanjing Pedestrian Shopping Street.jpg',
+                  selite: 'Itäinen Nanjing-katu on kävelykatua 1 200 metrin '
+                    + 'matkalta.',
+                  lahde: 'HeroicLife, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Guilin Road Station Train.jpg',
+                  selite: 'Metrojuna Guilin-kadun asemalla; laituri on '
+                    + 'erotettu radasta lasiseinällä.',
+                  lahde: 'Baycrest, Wikimedia Commons (CC BY-SA 2.5)',
+                },
+                {
+                  tiedosto: 'The Bund 20150914-10.jpg',
+                  selite: 'Rantakadun kävelytaso ja tullitalon kellotorni '
+                    + 'Huangpun rannassa.',
+                  lahde: 'そらみみ, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kujien kaupunki',
+              teksti: 'Shanghain oma talotyyppi on shikumen, kivikehyksinen '
+                + 'ovi. Nimi tulee shanghainkielen sanasta, joka tarkoittaa '
+                + 'kiven ympäröimää ovea: rivitalon oviaukon molemmin '
+                + 'puolin on kivipielet ja päällä koristeltu palkki. Talot '
+                + 'seisovat kiinni toisissaan suorien kujien varsilla, ja '
+                + 'kuja on nimeltään longtang. Tyyppi syntyi 1860-luvulla, '
+                + 'kun kaupunkiin tulvi väkeä maaseudulta ja sotien tieltä: '
+                + 'vuonna 1853 rakennettiin kymmenessä kuukaudessa 800 '
+                + 'puista rivitaloasuntoa, ja kun ne kiellettiin '
+                + 'paloherkkinä, tilalle tuli tiilirunkoinen shikumen. '
+                + 'Parhaimmillaan taloja oli 9 000 ja niissä asui 60 '
+                + 'prosenttia kaupunkilaisista. Kujat ovat yhä asuttuja: '
+                + 'pyykki kuivuu porttikäytävän yllä ja pihalla pestään '
+                + 'vihanneksia. Rakennustapa on ollut vuodesta 2010 '
+                + 'valtakunnallisessa aineettoman kulttuuriperinnön '
+                + 'luettelossa.',
+              kuva: {
+                tiedosto: '2019-05-02 Lilong in Shanghai.jpg',
+                selite: 'Kujakorttelin katot ylhäältä: rivi toisensa '
+                  + 'perään samanlaisia taloja.',
+                lahde: 'Mussi Katz, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Puutarha, jonka poika rakensi isälleen',
+              teksti: 'Yun puutarha on vanhankaupungin keskellä. Sen '
+                + 'rakennutti vuodesta 1559 alkaen Pan Yunduan isälleen Pan '
+                + 'Enille vanhuuden iloksi; nimi yu tarkoittaa vanhempien '
+                + 'mieliksi olemista. Työ alkoi, kun poika oli reputtanut '
+                + 'valtion virkatutkinnon, ja keskeytyi kahdeksitoista '
+                + 'vuodeksi, kun hänet nimitettiin Sichuanin '
+                + 'kuvernööriksi. Puutarha on kahden hehtaarin kokoinen ja '
+                + 'siihen on laskettu yli neljäkymmentä katseltavaa '
+                + 'kohtaa. Osat on erotettu toisistaan lohikäärmemuureilla, '
+                + 'joiden harja aaltoilee harmaana tiilenä, ja polut '
+                + 'mutkittelevat tarkoituksella: näkymän kuuluu avautua '
+                + 'kerrallaan vain osittain. Keskeisin esine on '
+                + 'Hienohko jadekivi, 3,3 metriä korkea ja viisi tonnia '
+                + 'painava huokoinen lohkare. Puutarhan laidalla lammen '
+                + 'päällä seisoo teehuone, jonne johtaa yhdeksän kertaa '
+                + 'kääntyvä silta.',
+              kuva: {
+                tiedosto: 'Yu Garden Shanghai November 2017 009.jpg',
+                selite: 'Yun puutarhan salin sisustus: lyhdyt, maisemamaalaus '
+                  + 'ja veistetyt jalopuutuolit.',
+                lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Pieni kori höyryä',
+              teksti: 'Xiaolongbao tarkoittaa pientä koria: nyytit '
+                + 'höyrytetään bambukorissa, jossa ne myös tarjotaan. Laji '
+                + 'on kotoisin Changzhousta, ja Shanghain oma tyyli syntyi '
+                + 'Nanxiangin kylässä, joka on nykyään kaupungin esikaupunki. '
+                + 'Kuori on ohut ja kuultava, ja sisällä on possua sekä '
+                + 'lientä. Liemi ei ole kaadettu sisään vaan hyydytetty: '
+                + 'täytteeseen käärittiin jähmettynyttä lihahyytelöä, joka '
+                + 'sulaa höyryssä. Nyytin päälle jää kiertävä poimuröyhelö, '
+                + 'ja korit kannetaan pöytään kuumina. Aamiaisruokana '
+                + 'xiaolongbao on tavallisin, ja korin viereen tulee '
+                + 'mustaa etikkaa ja silputtua inkivääriä. Ensimmäinen '
+                + 'suupala kannattaa ottaa varovasti — liemi on juuri niin '
+                + 'kuumaa kuin miltä näyttää.',
+              kuva: {
+                tiedosto: 'Yuyuan Street xiaolongbao.JPG',
+                selite: 'Xiaolongbao-nyyttejä bambukorissa Yun puutarhan '
+                  + 'kulmalla vanhassakaupungissa.',
+                lahde: 'Drew Lietzow, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Vastaranta kolmessakymmenessä vuodessa',
+              teksti: 'Rantakadulta katsottuna joen toinen puoli on '
+                + 'kokonaan uusi kaupunki. Pudong oli 1990-luvun alkuun '
+                + 'asti pääosin varastoja ja peltoa, ja siitä tehtiin '
+                + 'kehitysalue, jolle nousi rahoituskeskus. Kolme '
+                + 'pilvenpiirtäjää seisoo vierekkäin: Jin Mao, Shanghain '
+                + 'maailmankauppakeskus tunnusomaisine suorakaiteen '
+                + 'muotoisine aukkoineen ja Shanghain torni, joka on 632 '
+                + 'metriä korkea ja Kiinan korkein rakennus. Tornin '
+                + 'näköalataso 121. kerroksessa oli avatessaan maailman '
+                + 'korkein. Rantakadun puolella vesi on noussut '
+                + 'toiseenkin suuntaan: taifuunitulvien jälkeen rannalle '
+                + 'rakennettiin pato, joten kävelytaso on nyt noin '
+                + 'kymmenen metriä katutasoa ylempänä.',
+              kuva: {
+                tiedosto: 'Shanghai skyline waterfront pudong 5166168 69 70.jpg',
+                selite: 'Pudongin siluetti Huangpun yli: Helmitorni, Jin Mao '
+                  + 'ja Shanghain torni.',
+                lahde: 'Ermell, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kerrokset yhdellä kävelyllä',
+                tahdet: 3,
+                selite: 'Puutarha, kujakortteli, pankkitalojen rantakatu ja '
+                  + 'lasitornit mahtuvat samaan päivään.',
+              },
+              {
+                mita: 'Metro',
+                tahdet: 3,
+                selite: 'Maailman laajimpia verkkoja, opasteet myös '
+                  + 'englanniksi ja matka maksaa 3–10 juania.',
+              },
+              /*
+               * HINTATASO kainalotaulussa (omistajan päätös 17.8.2026).
+               * Lähde: en-Wikivoyage "Shanghai", Get around (haettu
+               * 17.8.2026): taksit "plentiful, and cheap by
+               * international standards", metro "cheap (¥3-10
+               * depending on distance)".
+               */
+              {
+                mita: 'Hintataso',
+                tahdet: 3,
+                selite: 'Taksit ovat kansainvälisesti katsoen halpoja ja '
+                  + 'metro halvempi kuin useimmissa suurkaupungeissa.',
+              },
+              {
+                mita: 'Kujakorttelit',
+                tahdet: 2,
+                selite: 'Shikumen-ovet ja longtang-kujat ovat kaupungin '
+                  + 'omaa arkkitehtuuria eivätkä näyttely.',
+              },
+              {
+                mita: 'Ruoka',
+                tahdet: 3,
+                selite: 'Xiaolongbao-korin saa aamiaiseksi kadulta, ja '
+                  + 'liemi on nyytin sisällä.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kujat ovat koteja',
+                teksti: 'Longtang-kortteleissa asutaan yhä, joten pihoille '
+                  + 'ei mennä ilman kutsua.',
+              },
+              {
+                otsikko: 'Kuuma liemi',
+                teksti: 'Xiaolongbaon sisällä on kiehuvan kuumaa lientä; '
+                  + 'nyyttiä maltetaan jäähdyttää hetki.',
+              },
+              {
+                otsikko: 'Kaupunki on iso',
+                teksti: 'Nähtävyydet ovat eri puolilla 24 miljoonan '
+                  + 'asukkaan kaupunkia, joten metromatkoihin kuluu aikaa.',
+              },
+              {
+                otsikko: 'Kahden rannan ero',
+                teksti: 'Vanha kaupunki on Puxin puolella; Pudongiin '
+                  + 'mennään erikseen joen ali tai yli.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+      nostot: [
+        {
+          otsikko: 'Ovi, joka on kehystetty kiveen',
+          tiedosto: 'A Type of Shikumen Gate in Shanghai.JPG',
+          teksti: 'Shikumen on Shanghain oma talotyyppi, joka syntyi '
+            + '1860-luvulla, kun länsimainen rivitalo sovitettiin '
+            + 'kiinalaiseen tapaan asua. Ovi on koko tyypin nimi: '
+            + 'oviaukon molemmin puolin ovat kivipielet, päällä '
+            + 'koristeltu palkki ja usein pieni päätykolmio. Portin '
+            + 'takana on kapea etupiha ja sen takana talo, joka on kaksi '
+            + 'tai kolme kerrosta korkea. Piha oli kompromissi: '
+            + 'perinteisessä kiinalaisessa talossa oli sisäpiha, ja '
+            + 'kaupungissa siitä tuli pieni valo- ja sadekuilu. '
+            + '1910-luvulta alkaen kujia levennettiin autoille ja talot '
+            + 'kapenivat, ja 1920-luvun uudessa mallissa oli kolme '
+            + 'kerrosta ja nykyaikaiset saniteettitilat. Rakennustapa '
+            + 'merkittiin Kiinan aineettoman kulttuuriperinnön '
+            + 'luetteloon vuonna 2010.',
+          selite: 'Shikumen-portti Shanghaissa. Tummaa puuovea kehystävät '
+            + 'harmaat kivipielet, joiden yläosassa on simpukkakuvioinen '
+            + 'koriste, ja oven päällä on kivipalkki ja koristelaatta. '
+            + 'Ovilehdistä on maali kulunut pois laikuittain.',
+          lahde: 'Livelikerw, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kivi, joka nostettiin joesta',
+          tiedosto: 'Yu Garden Shanghai November 2017 004.jpg',
+          teksti: 'Yun puutarhan kuuluisin esine on Hienohko jadekivi: 3,3 '
+            + 'metriä korkea ja noin viisi tonnia painava huokoinen '
+            + 'lohkare, jollaisia arvostettiin puutarhataiteessa reikien '
+            + 'ja kuluneiden muotojen takia. Tarinan mukaan kivi oli '
+            + 'matkalla keisari Huizongin puutarhaan 1100-luvulla, mutta '
+            + 'sitä kuljettanut vene upposi ja lohkare nostettiin '
+            + 'myöhemmin Huangpu-joesta. Puutarhalla on ollut vaiheikas '
+            + 'historia: brittiarmeija majoittui teehuoneeseen 1842, '
+            + 'Pienten miekkojen seura piti päämajaansa Dianchunin '
+            + 'salissa 1853–1855, ja sen jälkeen alkuperäisistä '
+            + 'rakennuksista oli jäljellä vain vähän. Puutarha '
+            + 'kunnostettiin 1956–1961 ja avattiin yleisölle 1961.',
+          selite: 'Yun puutarhan kivikkoa ja lampi. Rantaa reunustavat '
+            + 'pystyyn ladotut harmaat kalkkikivet, joiden välissä kasvaa '
+            + 'muotoon leikattuja mäntyjä ja vaahteroita, ja taustalla '
+            + 'näkyy puutarhan salien katonharjat.',
+          lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Porttikäytävä on korttelin oma katu',
+          tiedosto: 'Entrance of a Shikumen Lilong on Shanhaiguan Rd..JPG',
+          teksti: 'Kujakorttelin nimi on lilong ja kuja longtang. Kortteliin '
+            + 'mennään kadulta porttikäytävän läpi, ja sen yläpuolella on '
+            + 'usein kiveen hakattu korttelin nimi. Kujan varrella on '
+            + 'kaikki korttelin arki: pyykkinarut, polkupyörät, '
+            + 'kasvimaakulhot ja kadunpuoleisiin taloihin avatut pikkupuodit. '
+            + 'Kortteleita rakensivat 1800-luvun lopulla rakennusyhtiöt, '
+            + 'joille tyyppi oli tuottoisa: talot olivat kalliimpia kuin '
+            + 'puiset edeltäjänsä mutta kestävämpiä ja niistä sai '
+            + 'korkeamman vuokran. Suuri osa kortteleista on purettu '
+            + 'uudisrakentamisen tieltä, ja jäljellä olevissa asutaan yhä.',
+          selite: 'Kujakorttelin porttikäytävä Shanhaiguan-kadulla '
+            + 'Shanghaissa. Vaalean julkisivun keskellä on kaita '
+            + 'porttiaukko, jonka yli on pingotettu pyykkinaruja '
+            + 'vaatteineen; molemmin puolin on katutason puoteja ja '
+            + 'yläpuolella koristeltu päätykolmio.',
+          lahde: 'Livelikerw, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * TRIPOLI (paketti O6, omistajan tilaus 16.8.2026). Kaupungilla ei
+   * ollut avainta tässä tiedostossa lainkaan, joten tässä on koko
+   * osio: johdanto, kansikuvat, nostot ja matkailijan opas.
+   * Tarinakaarta EI tehdä (omistajan sitova päätös 17.8.2026).
+   *
+   * LÄHTEET (haettu 17.8.2026): en-Wikipedia "Tripoli, Libya",
+   * "Arch of Marcus Aurelius (Tripoli)", "Red Castle Museum",
+   * "Gurgi Mosque", "Martyrs' Square, Tripoli", "Libyan cuisine" sekä
+   * en-Wikivoyage "Tripoli" (medinan portit, kävely, hintataso,
+   * alkoholi, viisumi). Teen tarjoilutapa on repon omaa kaanonia
+   * (africa-kulttuuri.js).
+   *
+   * KUVAT: haku kategorioilla (Category:Tripoli Old Town,
+   * Category:Marcus Aurelius Arch in Tripoli, Category:Gurgi Mosque,
+   * Category:Tripoli Castle, Category:Old Tripoli Clock tower,
+   * Category:Bazeen), ei hakusanoilla. Lisenssit ja Restrictions
+   * erätodennettu Commonsin API:sta, sijainti kuvaustekstistä ja
+   * kategorioista, jokainen kuva katsottu silmin. Hylätty: "The Red
+   * Castle.jpg" (kuvaan poltettu tekijän nimimerkki) ja "Souq El
+   * Attara Tripoli Libya.JPG" (pääosassa selin oleva ohikulkija).
+   */
+  tripoli: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tripoli',
+      johdanto: 'Tripoli on nimeltään kolme kaupunkia: kreikan Tripolis '
+        + 'tarkoitti Oeaa, Sabrathaa ja Leptis Magnaa. Vain Oea jäi '
+        + 'henkiin, ja se on nykyinen Tripoli — vanhankaupungin '
+        + 'katuverkko on yhä roomalaisen kaavan mukainen, mutta '
+        + 'roomalaisesta ajasta on pystyssä enää yksi kaari.',
+      kansikuvat: [
+        {
+          tiedosto: 'Medina Tripoli Libya 2008.jpg',
+          selite: 'Vanhankaupungin kuja Tripolissa. Kapean kujan molemmin '
+            + 'puolin on avoimia puoteja, joiden edustat ovat täynnä '
+            + 'kiillotettuja kupari- ja messinkiastioita: kannuja, '
+            + 'tarjottimia ja pannuja. Kujan yllä on peltikatos, ja '
+            + 'perällä näkyy aurinkoinen aukio.',
+          lahde: 'Victor Korniyenko, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Al-Saraya al-Hamra Fortress, Tripoli (5282695461).jpg',
+          selite: 'Punainen linna eli As-Saraya al-Hamra vanhankaupungin '
+            + 'laidalla. Hiekankeltainen linnoitusmuuri kohoaa suoraan '
+            + 'kadun varresta, ja sen päällä on kaarikäytävällinen '
+            + 'rakennussiipi. Muurin edessä on lipputankojen rivi ja '
+            + 'liikennettä.',
+          lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Gurgi Mosque Exterior Tripoli Libya.JPG',
+          selite: 'Gurgin moskeija vanhassakaupungissa. Valkoinen minareetti '
+            + 'kohoaa palmujen yli, ja sen kahta parveketta kiertävät '
+            + 'vihreät kaiteet. Kadun varren talon seinässä on '
+            + 'värikkäitä maalauksia, ja edessä kasvaa köynnöksiä.',
+          lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * MATKAILIJAN TRIPOLI. Rakenne on Bagdadin mallista: pystykuva,
+       * kappale ja opastaitto viidellä jaksolla, joista ensimmäisessä
+       * on kolmen kuvan karuselli. Kainalotaulussa on myös
+       * hintatasorivi (omistajan päätös 17.8.2026).
+       */
+      matkailijalle: {
+        /*
+         * Etusivukuvan kaava: yksi aihe joka täyttää ruudun, paikan oma
+         * erikoisuus, pystykuva. Basaarikuja lyhtyineen ja mattoineen
+         * on juuri se, minkä takia Tripoliin mennään, ja yläreuna on
+         * vaaleaa valoa — Matkaopas-nauha ei peitä aihetta.
+         */
+        kuva: {
+          tiedosto: 'Tripoli - In der Altstadt 03.jpg',
+          selite: 'Vanhankaupungin torikuja: lasilyhtyjä, mattoja ja '
+            + 'köynnösten läpi siivilöityvä valo.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Tripoli on Libyan pääkaupunki ja noin 1,3 miljoonan '
+          + 'asukkaan satamakaupunki Välimeren rannalla. Matkailijan '
+          + 'Tripoli on vanhakaupunki eli medina: sen katuverkko on '
+          + 'peräisin roomalaisajalta, muurit seisovat yhä ja portteja '
+          + 'oli kolme. Sisällä on torikujia ammateittain, '
+          + 'ottomaaniaikaisia moskeijoita ja niiden keskellä yksi '
+          + 'marmorinen riemukaari vuodelta 165. Muurin ulkopuolelta '
+          + 'alkaa Marttyyrien aukio ja siitä kaupungin uusi puoli.',
+        artikkeli: {
+          nimi: 'Matkailijan Tripoli',
+          taitto: 'opas',
+          teksti: 'Matkailijan Tripoli on muurien sisällä, ja se '
+            + 'kierretään jalan.',
+          nosto: 'Kolmesta antiikin kaupungista vain Oea jäi asutuksi — '
+            + 'ja siksi sen roomalaiset rakennukset ovat myöhempien '
+            + 'talojen alla.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Tripoli on Välimeren rannalla kallioisella '
+                + 'niemekkeellä, ja kaupunki jakautuu kahtia: muurien '
+                + 'sisäpuolinen medina ja sen ulkopuolinen uusi kaupunki. '
+                + 'Medinan katuverkko on roomalaisajalta, jolloin muurit '
+                + 'rakennettiin suojaamaan sisämaan puolelta; '
+                + '700-luvulla muuri suljettiin myös merenpuoleiselta '
+                + 'sivulta. Portteja oli kolme: lännessä Bab Zanata, '
+                + 'kaakossa Bab Hawara ja pohjoisessa Bab al-Bahr eli '
+                + 'meriportti. Muurit ovat yhä pystyssä ja niiltä näkee '
+                + 'kaupungin yli. Vanhakaupunki kierretään jalan, sillä '
+                + 'kujat ovat kapeita eikä niissä aja mikään; taksilla '
+                + 'liikutaan uudella puolella. Lentokoneella tullaan '
+                + 'Mitigan kentälle, joka on kahdeksan kilometrin päässä '
+                + 'keskustasta, ja maanteitse Tunisian rajalta on noin '
+                + 'kolmen tunnin ajomatka.',
+              /*
+               * KARUSELLI: kolme kuvaa seuraavat jakson tekstiä —
+               * medinan kujat, joita pitkin kävely kulkee, ja niiden yli
+               * kohoava moskeijan minareetti.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Ahmed Pasha Karamanli Mosque on Souq El Mushir Street Tripoli Libya.JPG',
+                  selite: 'Souq al-Mushirin katu ja sen yllä Ahmed Pasha '
+                    + 'Karamanlin moskeijan minareetti.',
+                  lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Souq el Siagha Tripoli Libya.JPG',
+                  selite: 'Kultaseppien kuja Souq el Siagha kulkee '
+                    + 'medinan halki kapeana ja katettuna.',
+                  lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Souq El Attara Tripoli Libya.JPG',
+                  selite: 'Souq El Attaran kujalla myydään kankaita '
+                    + 'aurinkovarjojen alla.',
+                  lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kaari, joka jäi',
+              teksti: 'Medinan koillisreunalla seisoo Marcus Aureliuksen '
+                + 'riemukaari, kaupungin ainoa pystyssä oleva roomalainen '
+                + 'rakennus. Se pystytettiin vuonna 165 kokonaan '
+                + 'marmorista, ja rakennuttaja oli kaupungin virkamies '
+                + 'Gaius Calpurnius Celsus. Kaari on nelisivuinen — sen '
+                + 'läpi kulki kaksi katua ristiin — ja päällä on '
+                + 'harvinainen kahdeksankulmainen kupoli. Päätykolmioissa '
+                + 'ajavat kaupungin suojelusjumalat Apollo ja Minerva '
+                + 'vaunuissa, joita vetävät aarnikotkat ja sfinksit. '
+                + 'Neljä syvennystä on tyhjä; niissä seisseet patsaat '
+                + 'löydettiin 1800-luvun kaivauksissa. Vuosisatojen '
+                + 'aikana kaari hautautui osittain maahan, ja se '
+                + 'kaivettiin esiin ja kunnostettiin 1914–1918. '
+                + 'Ympäröivän aukion suunnitteli 1930-luvulla arkkitehti '
+                + 'Florestano Di Fausto.',
+              kuva: {
+                tiedosto: 'Arch Marcus Aurelius Tripoli.jpg',
+                selite: 'Luigi Mayerin väritetty painokuva kaaresta vuodelta '
+                  + '1803, jolloin se oli osin maan alla.',
+                lahde: 'Luigi Mayer, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Kujat ammateittain',
+              teksti: 'Medinan torit on jaettu ammattien mukaan, ja niin '
+                + 'ovat kujien nimetkin. Souq el Siagha on kultaseppien '
+                + 'kuja, Souq El Attara hajusteiden ja kankaiden, ja '
+                + 'kupariseppien kujalla työ kuuluu ennen kuin se näkyy: '
+                + 'ohutta peltiä taotaan kulhoiksi, tarjottimiksi ja '
+                + 'moskeijoiden minareettien huippukoristeiksi. Levy '
+                + 'kuumennetaan ahjossa ja muotoillaan käsin, ja valmiit '
+                + 'kappaleet nostetaan kujalle seinää vasten '
+                + 'kuivumaan ja kiillotettaviksi. Souq al-Mushirin katu '
+                + 'kulkee medinan halki ja siitä haarautuu sivukujia; '
+                + 'kujien yllä on peltikatoksia ja köynnöksiä, jotka '
+                + 'pitävät helteen loitolla. Vanhassakaupungissa toimii '
+                + 'myös hammam eli höyrykylpylä, jonka perustamisvuodeksi '
+                + 'kerrotaan 1670.',
+              kuva: {
+                tiedosto: 'Tripoli - Souq der Kupferschmiede 05.jpg',
+                asettelu: 'kapea',
+                selite: 'Kupariseppien tekemiä minareetin huippukoristeita '
+                  + 'seinää vasten torikujalla.',
+                lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Meren puolella oleva moskeija',
+              teksti: 'Gurgin moskeija valmistui vuonna 1834 Bab al-Bahrin '
+                + 'kaupunginosaan aivan meren tuntumaan. Sen rakennutti '
+                + 'laivaston kapteeni Mustafa Gurgi, ja nimi kertoo '
+                + 'suvun taustan: gurgi tarkoittaa arabiaksi '
+                + 'georgialaista. Rakennuksia on kolme yhdessä: moskeija, '
+                + 'hautakammio ja koulu. Minareetti on noin 25 metriä '
+                + 'korkea, ja sen kahden parvekkeen kaiteet on tehty '
+                + 'vihreästä marmorista. Kattoa jäsentää viisitoista '
+                + 'koristekupolia, rukoushuoneen pylväät ovat marmoria ja '
+                + 'seinät on peitetty maalatuilla laatoilla: '
+                + 'kasviaiheita, geometrisia kuvioita ja koraanijakeita '
+                + 'andalusialaisella kirjaintyylillä. Sisäpihalla on '
+                + 'perustajan hauta, kuten ottomaanien rakennuttamissa '
+                + 'moskeijoissa tavallisesti.',
+              kuva: {
+                tiedosto: 'Tripoli - Gurgi-Moschee 1833 bis 34 erbaut, Wand mit Fayencen.jpg',
+                asettelu: 'kapea',
+                selite: 'Gurgin moskeijan laattaseinä: maalattu kaarinäkymä '
+                  + 'keltaisen ja sinisen kuvioinnin keskellä.',
+                lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Bazin ja kolme lasillista teetä',
+              teksti: 'Libyan juhlaruoka on bazin. Ohrajauhot keitetään '
+                + 'suolatussa vedessä ja taikina hakataan tiiviiksi '
+                + 'omalla puukapulallaan, jota sanotaan magrafiksi. '
+                + 'Taikinasta muotoillaan kumpu keskelle vatia, ja '
+                + 'ympärille kaadetaan kastike: sipulia, lampaanlihaa, '
+                + 'tomaattisosetta, kurkumaa ja sarviapilaa. Reunoille '
+                + 'asetellaan perunat ja keitetyt kananmunat, ja '
+                + 'kylkeen tulee sitruunalohkoja ja vihreitä chilejä. '
+                + 'Rannikon ruokaan kuuluu myös kalaa, oliiviöljyä ja '
+                + 'pastaa — italialainen vaikutus näkyy esimerkiksi '
+                + 'imbakbaka-pataruoassa. Tee keitetään vahvaksi ja '
+                + 'vaahtoavaksi ja juodaan pienistä laseista useampi '
+                + 'kierros; viimeiseen lasiin lisätään usein '
+                + 'paahdettuja maapähkinöitä.',
+              kuva: {
+                tiedosto: 'بازين.jpg',
+                selite: 'Bazin tarjolla: ohrataikinakumpu kastikkeessa, '
+                  + 'ympärillä perunat, munat ja sitruuna.',
+                lahde: 'Fajria Derbash, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vanhakaupunki',
+                tahdet: 3,
+                selite: 'Roomalainen katuverkko, ottomaanien moskeijat ja '
+                  + 'ammattikujat mahtuvat yhden muurin sisään.',
+              },
+              {
+                mita: 'Riemukaari',
+                tahdet: 3,
+                selite: 'Vuoden 165 marmorikaari seisoo keskellä '
+                  + 'asuinkortteleita, ei museossa.',
+              },
+              /*
+               * HINTATASO kainalotaulussa (omistajan päätös 17.8.2026).
+               * Lähde: en-Wikivoyage "Tripoli", Eat (haettu 17.8.2026):
+               * "The quality of food in Tripoli is good and generally
+               * inexpensive by western standards."
+               */
+              {
+                mita: 'Hintataso',
+                tahdet: 3,
+                selite: 'Ruoka on hyvää ja länsimaisin mitoin edullista, '
+                  + 'vaikka hotellien kärkipää onkin kallis.',
+              },
+              {
+                mita: 'Käsityö',
+                tahdet: 2,
+                selite: 'Kupari- ja hopeasepät tekevät työtään kujilla, ja '
+                  + 'valmista voi ostaa samasta ovesta.',
+              },
+              {
+                mita: 'Meri',
+                tahdet: 2,
+                selite: 'Kaupunki on niemekkeellä, ja rannikolla on '
+                  + 'ajomatkan päässä hiekkarantoja.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Viisumi etukäteen',
+                teksti: 'Libyaan tarvitaan viisumi, joka haetaan ennen '
+                  + 'matkaa lähetystöstä; ehdot muuttuvat usein.',
+              },
+              {
+                otsikko: 'Ei alkoholia',
+                teksti: 'Alkoholi on Libyassa kielletty eikä sitä tarjoilla '
+                  + 'ravintoloissa tai hotelleissa.',
+              },
+              {
+                otsikko: 'Kesän helle',
+                teksti: 'Ilmasto on välimerellinen: kesä on kuuma ja kuiva, '
+                  + 'talvi viileä ja sateet vähäisiä.',
+              },
+              {
+                otsikko: 'Lentoyhteydet',
+                teksti: 'Suoria vuoroja Eurooppaan on harvassa; useimmiten '
+                  + 'tullaan Tunisin, Kairon tai Istanbulin kautta.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+      nostot: [
+        {
+          otsikko: 'Kolmesta kaupungista jäi yksi',
+          tiedosto: 'Arch of Marcus Aurelius - libya - قوس ماركوس أوريليوس - ليبيا.jpg',
+          teksti: 'Nimi Tripoli tulee kreikan sanoista treis poleis, kolme '
+            + 'kaupunkia: Oea, Sabratha ja Leptis Magna. Foinikialaiset '
+            + 'perustivat Oean 600-luvulla eaa., ja se on niistä ainoa, '
+            + 'joka on ollut asuttu keskeytyksettä tähän päivään asti. '
+            + 'Juuri siksi sen roomalaisesta ajasta on jäljellä niin '
+            + 'vähän: kahden muun kaupungin rauniot säilyivät, koska '
+            + 'niissä ei enää asuttu, mutta Oeassa vanhat rakennukset '
+            + 'purettiin rakennusaineeksi tai jäivät uusien alle. '
+            + 'Pystyssä on enää Marcus Aureliuksen riemukaari vuodelta '
+            + '165. Arabiaksi kaupunkia sanotaan Tarabulus al-Gharbiksi, '
+            + 'Lännen Tripoliksi, jotta se erottuu Libanonin Tripolista.',
+          selite: 'Marcus Aureliuksen riemukaari Tripolissa. Marmorinen '
+            + 'nelisivuinen kaari seisoo kaivetun aukion perällä '
+            + 'asuintalojen keskellä, ja sen edessä maassa on '
+            + 'pylväänpätkiä ja kivilohkareita. Kaaren päälle on jäänyt '
+            + 'myöhempää muurausta.',
+          lahde: 'Esam Tabone, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ottomaanien kellotorni seisoo kujien keskellä',
+          tiedosto: 'Clock tower in tripoli libya 03.jpg',
+          teksti: 'Medinan aukiolla seisoo ottomaaniaikainen kellotorni, '
+            + 'yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on '
+            + 'nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen '
+            + 'kerroksen kulmissa on parittain pylväitä, ja niiden päällä '
+            + 'kiertää koristeltu räystäslista. Muotokieli on '
+            + 'eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää '
+            + 'näkee myös medinan moskeijoissa, joissa marmoripylväät ja '
+            + 'kaakelipinnat ovat rinnakkain arabialaisen kalligrafian '
+            + 'kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on '
+            + 'kujilta helpoin kiintopiste: kun torni näkyy, tietää '
+            + 'olevansa medinan keskellä. Rappaus on paikoin lohkeillut '
+            + 'ja paljastanut alta kiviaineksen.',
+          selite: 'Vanhankaupungin kellotorni Tripolissa alaviistosta '
+            + 'kuvattuna. Vaalea torni kapenee ylöspäin kolmessa '
+            + 'kerroksessa, ja kulmissa on parittain valkoisia pylväitä '
+            + 'koristeltuine kapiteeleineen. Rappaus on lohkeillut '
+            + 'pylväiden pinnasta.',
+          lahde: 'Ridda Basheer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Pelti taotaan kujalla käsin',
+          tiedosto: 'Tinsmith working in Tripoli or Medina.jpg',
+          teksti: 'Vanhankaupungin kujilla työskentelee yhä peltiseppiä. '
+            + 'Työ on yksinkertaista ja hidasta: levy kuumennetaan '
+            + 'pienessä ahjossa, taivutetaan pihdeillä ja taotaan '
+            + 'muotoonsa vasaralla, minkä jälkeen saumat juotetaan. '
+            + 'Näin syntyvät kastelukannut, tarjottimet, kattilat ja '
+            + 'moskeijoiden huippukoristeet. Paja on tavallisesti sama '
+            + 'huone kuin myymälä, joten ostaja näkee, kuka tavaran on '
+            + 'tehnyt. Kupari- ja peltisepät ovat medinassa omalla '
+            + 'kujallaan, kuten kultasepät ja hajustekauppiaat omillaan '
+            + '— jako ammattien mukaan on vanha ja näkyy yhä kujien '
+            + 'nimissä.',
+          selite: 'Peltiseppä työssään Tripolin vanhassakaupungissa. Mies '
+            + 'pitelee pihdeillä levyä pienen ahjon liekin yllä; '
+            + 'ympärillä on kuparinvärisiä levyjä, kattiloita ja '
+            + 'valmiita astioita hyllyillä.',
+          lahde: 'Patrick André Perron, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
     },
   ],
   jekaterinburg: [

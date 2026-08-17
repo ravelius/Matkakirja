@@ -61,7 +61,16 @@ siirretään arkistoon. Uudet paketit lisää omistaja tai Fable.
 Valmiit paketit ja koko vanha historia:
 docs/arkisto/tyolista-opukselle-2026-08.md.
 
-## Paketti O6: opas kuuteen uuteen kaupunkiin (tilattu 16.8.2026) 🟡 KESKEN
+## Paketti O6: opas kuuteen uuteen kaupunkiin (tilattu 16.8.2026) ✅ VALMIS (v816, 17.8.2026)
+
+**Kuittaus (Fable 17.8.2026):** kaikki kuusi kaupunkia mainissa —
+Bagdad v804, Teheran v805 (sijainen), Tokio/Soul/Shanghai/Tripoli
+v816 (sisäinen agentti; Soul, Shanghai ja Tripoli saivat koko
+kaupunkiosion). 56 kuvaa kategoriahauilla, erälisenssitodennus +
+silmätarkistus + Fablen pistokoe 8/8. Ei tarinakaarta (linjaus
+17.8.). JÄLKITYÖT kirjattu: Bagdadin ja Teheranin kainaloista
+puuttuu hintatasorivi; Soulilta, Shanghailta ja Tripolilta puuttuu
+SAATIEDOT-rivi, kohdekartat ja miniatyyrit kaikilta kuudelta.
 
 Omistaja: *"rakenna samaan malliin seuraavaksi bagdad, teheran, soul,
 tokio, shanghai ja tripoli"*. Malli = Pariisin Matkailijalle-osio:
