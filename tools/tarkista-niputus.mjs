@@ -13,11 +13,11 @@
 //      top-level-nimen → "Identifier ... has already been declared".
 //   2. IRRALLINEN LISTAUS: listalla on moduuli, jota mikään listan
 //      tiedosto ei tuo staattisesti — sääntö build-standalonessa:
-//      sellaista ei saa listata (NS-törmäyksen oppi). POIKKEUS:
-//      js/packs-tiedostot ohitetaan, koska tests/sw.test.mjs vaatii
-//      ne kaikki listalle ("unohtunut paketti") — kaksi vartijaa
-//      vaatii vastakkaista, ja ristiriidan purku odottaa Fablen
-//      päätöstä. Törmäystarkistus 1 kattaa niidenkin pääriskin.
+//      sellaista ei saa listata (NS-törmäyksen oppi). Tarkoituksella
+//      niputtamattomat paketit kirjataan tests/sw.test.mjs:n
+//      NIPUTTAMATTOMAT-listaan (M0b, päätoimittajan päätös) — sw-
+//      testi vaatii jokaisen paketin jommallekummalle listalle, tämä
+//      työkalu kaataa tuomattoman MODULES-listauksen.
 //   3. JÄRJESTYSVIRHE: staattinen riippuvuus on listalla vasta
 //      tuojansa JÄLKEEN. Kun jokainen riippuvuus on ennen tuojaansa,
 //      moduulitason lukujärjestys on aina turvallinen.
@@ -201,14 +201,15 @@ for (const polku of moduulit) {
 }
 
 // 2. Irralliset listaukset: kukaan listalla ei tuo, eikä ole
-// käynnistystiedosto (main.js). js/packs ohitetaan (ks. otsake).
-let pakkoja = 0;
+// käynnistystiedosto (main.js).
 for (const polku of moduulit) {
   if (polku === 'js/main.js') continue;
   const tuotu = moduulit.some((toinen) => toinen !== polku && tuojat.get(toinen).has(polku));
-  if (tuotu) continue;
-  if (polku.startsWith('js/packs/')) { pakkoja++; continue; }
-  viat.push(`irrallinen listaus: ${polku} — mikään listan moduuli ei tuo sitä`);
+  if (!tuotu) {
+    viat.push(`irrallinen listaus: ${polku} — mikään listan moduuli ei tuo sitä `
+      + '(jos poisjättö niputuksesta on tarkoitus, poista listalta ja kirjaa '
+      + 'tests/sw.test.mjs:n NIPUTTAMATTOMAT-listaan)');
+  }
 }
 
 // 3. Järjestys: riippuvuus ennen tuojaansa.
@@ -226,5 +227,4 @@ if (viat.length) {
   for (const vika of viat) console.error(`  - ${vika}`);
   process.exit(1);
 }
-console.log(`niputus kunnossa: ${moduulit.length} moduulia, ${julistuksia} top-level-julistusta, ei törmäyksiä`
-  + (pakkoja ? ` (tiedoksi: ${pakkoja} tuomatonta js/packs-listausta, ks. otsake)` : ''));
+console.log(`niputus kunnossa: ${moduulit.length} moduulia, ${julistuksia} top-level-julistusta, ei törmäyksiä`);
