@@ -8,6 +8,7 @@ const SHELL = [
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
+  './js/kartta.js',
   './js/sisaltotaulut.js',
   './js/ui-apurit.js',
   './js/liput.js',
