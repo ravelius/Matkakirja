@@ -699,6 +699,21 @@ export const SAATIEDOT = {
       + 'syksy, jolloin kuukausikertymä nousee reiluun seitsemäänkymmeneen '
       + 'millimetriin.',
   },
+  // Tampere on sisämaassa 160 km Helsingistä pohjoiseen: talvi on
+  // kylmempi ja kesä hetken lämpimämpi kuin rannikolla.
+  tampere: {
+    lat: 61.50,
+    lon: 23.76,
+    keskilampo: [-5.3, -6, -2.6, 2.9, 9.5, 14.6, 17.5, 16.1, 11.1, 5.1, 0.7, -2.8],
+    sade: [40, 31, 32, 34, 46, 76, 84, 75, 55, 61, 50, 47],
+    luonnehdinta: 'Tampereen vuosi on jyrkkä: helmikuun keskilämpö on '
+      + 'kuusi astetta pakkasen puolella ja heinäkuun seitsemäntoista '
+      + 'lämpimän puolella, eli väliä on yli kaksikymmentä astetta. '
+      + 'Marraskuusta maaliskuuhun keskilämpö pysyy nollan alapuolella, '
+      + 'ja järvet jäätyvät joka talvi. Sadetta tulee eniten keskellä '
+      + 'kesää — heinäkuussa 84 millimetriä, helmikuussa vain 31 — eli '
+      + 'kuivin aika on lopputalvi eikä kesä.',
+  },
   tallinna: {
     lat: 59.44,
     lon: 24.75,
@@ -895,8 +910,8 @@ export const SAATIEDOT = {
    * fi-Wikipedian artikkeleista (prop=coordinates) — samoista, joihin
    * pelin lauta jo viittaa.
    *
-   * VIISI KOHDETTA ON ALUE EIKÄ PISTE (Islanti, Lappi, Kreeta,
-   * Sisilia, Alpit). Alueella ei ole yhtä säätä, joten jokaiselle on
+   * NELJÄ KOHDETTA ON ALUE EIKÄ PISTE (Islanti, Kreeta, Sisilia,
+   * Alpit). Alueella ei ole yhtä säätä, joten jokaiselle on
    * valittu EDUSTAVA MITTAUSPISTE: alueen pääkaupunki tai suurin
    * kaupunki, joka on merkitty rivin yläpuolelle. Alppien piste on
    * Innsbruck; korkealla vuorilla on kylmempää kuin laaksossa, joten
@@ -919,7 +934,8 @@ export const SAATIEDOT = {
       + 'ei puolestaan oikeastaan lämpene: heinäkuussa keskimäärin '
       + 'kaksitoista astetta, ja niitä paistetaan yöttömässä valossa.',
   },
-  // Mittauspiste: Rovaniemi.
+  // Mittauspiste: Rovaniemi (laudan id on yhä 'lappi'; kohde on
+  // 17.8.2026 alkaen kaupunki eikä alue, joten mittauspiste on kohde itse).
   /*
    * Luonnehdinnan viimeinen lause puhuu valosta eikä lämmöstä, joten
    * se on lähteestä: en-Wikipedian artikkeli "Arctic Circle" (haettu

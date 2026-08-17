@@ -1678,6 +1678,65 @@ export const EUROPE_QUESTIONS = {
     },
   ],
 
+  tampere: [
+    {
+      q: 'Minkä kahden järven välissä Tampere sijaitsee?',
+      options: [
+        'Näsijärven ja Pyhäjärven',
+        'Päijänteen ja Saimaan',
+        'Oulujärven ja Inarijärven',
+        'Puulan ja Kallaveden',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Ylempi järvi on noin 18 metriä alempaa korkeammalla, ja korkeusero purkautuu kaupungin läpi Tammerkosken koskijaksona.',
+      hint: 'Kaupungin keskustan halki virtaava koski yhdistää ne toisiinsa.',
+      source: 'https://fi.wikipedia.org/wiki/Tampere',
+    },
+    {
+      q: 'Kuka antoi Tampereelle kaupunkioikeudet vuonna 1779?',
+      options: [
+        'Ruotsin kuningas Kustaa III',
+        'Venäjän keisari Aleksanteri I',
+        'Kustaa Vaasa',
+        'Piispa Henrik',
+      ],
+      correct: 0,
+      fact: 'Perustamiskirja allekirjoitettiin 1. lokakuuta 1779. Kaupunki sai vapaakaupunkioikeudet 1821, mikä houkutteli tehtailijat kosken partaalle.',
+      hint: 'Perustaja hallitsi silloin koko Suomea Tukholmasta käsin.',
+      source: 'https://fi.wikipedia.org/wiki/Tampere',
+    },
+    {
+      q: 'Mikä on Näsinneula?',
+      options: ['näkötorni', 'kirkontorni', 'majakka', 'tehtaanpiippu'],
+      correct: 0,
+      level: 1,
+      fact: 'Näsinneula on 168 metriä korkea ja valmistui vuonna 1971. Huipulla on pyörivä ravintola, joka kiertää ympäri tunnissa.',
+      hint: 'Rakennuksen huipulle noustaan katselemaan maisemia.',
+    },
+    {
+      q: 'Missä Tampereen kaupunginosassa on Suomen vanhin yhä toimiva yleinen sauna?',
+      options: ['Pispalassa', 'Hervannassa', 'Kalevassa', 'Amurissa'],
+      correct: 0,
+      level: 3,
+      fact: 'Rajaportin sauna avattiin vuonna 1906 ja lämpiää yhä. Kaupunginosa kiipeää jyrkkää harjunrinnettä kahden järven välissä.',
+      hint: 'Kaupunginosa on rakennettu harjun rinteeseen puutaloista.',
+    },
+    {
+      q: 'Millä lisänimellä Tamperetta kutsuttiin tehdaskaupunkina 1800-luvulla?',
+      options: [
+        'Pohjolan Manchester',
+        'Pohjolan Pariisi',
+        'Pohjolan Ateena',
+        'Pohjolan Venetsia',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Puuvillatehtaat, verkatehtaat ja konepajat tekivät kaupungista Suomen teollisuuden keskuksen, ja vertailukohta haettiin Englannin tehdaskaupungista.',
+      hint: 'Esikuva oli englantilainen puuvillakaupunki.',
+    },
+  ],
+
   lappi: [
     {
       q: 'Mikä valoilmiö näkyy Lapin talvitaivaalla?',
@@ -2253,6 +2312,14 @@ export const EUROPE_FACTS = {
     'Tanskalainen sana hygge tarkoittaa lämmintä ja kiireetöntä yhdessäoloa — kynttilöitä, kahvia ja hyvää seuraa.',
     {
       text: 'Kaupungissa on huvipuisto lyhtyineen ja musiikkeineen, ja se on ollut auki jo kolmekymmentä vuotta. Tanska menetti äskettäin maakuntansa etelässä, eikä siitä puhuta päivällisellä.',
+      voice: 'isoisa',
+    },
+  ],
+  tampere: [
+    'Tampereen läpi virtaava Tammerkoski laskee Näsijärvestä Pyhäjärveen noin 18 metriä. Koski oli kaupungin ensimmäinen voimalaitos jo ennen kuin sähköä osattiin tehdä.',
+    'Pyynikinharju on maailman korkein pitkittäisharju: sen laki on 160 metriä merenpinnasta ja 80 metriä Pyhäjärven pintaa ylempänä.',
+    {
+      text: 'Kaupunki on kaksi järveä ja niiden välinen koski, ja kosken partaalla seisoo punatiilinen puuvillatehdas, joka on koko Pohjolan suurin työpaikka. Savupiippuja lasken viisitoista.',
       voice: 'isoisa',
     },
   ],

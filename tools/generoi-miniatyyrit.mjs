@@ -412,6 +412,41 @@ const KUVAT = [
     + 'ringed by a moat, neat parallel rows of long red-roofed '
     + 'barracks inside, and a small dark windmill standing on one '
     + 'bastion'],
+
+  /*
+   * ── Tampere, kuusi kohdetta (17.8.2026) ──────────────────────────
+   * Vain jonossa: näitä EI ole vielä generoitu, joten
+   * js/packs/miniatyyrit.js:ssä ei ole tamperetta eikä sw.js:n
+   * SHELLissä .webp-polkuja. Ajo tehdään Actionsissa, ja vasta sen
+   * jälkeen kuvat kytketään peliin (yksi otto per kohde,
+   * kustannussääntö yllä). Kartalla kohteet näkyvät siihen asti
+   * numeroympyröinä, kuten koodi tekee piirroksettomalle kohteelle.
+   */
+  ['tampere-nasinneula', 'a very tall slender concrete observation '
+    + 'tower rising from a small wooded headland by a lake: a plain '
+    + 'narrow shaft that widens near the top into a round two-level '
+    + 'pod ringed with windows, and one thin needle-like antenna '
+    + 'spire above it. NO other buildings'],
+  ['tampere-finlaysonin-tehdasalue', 'a long red-brick cotton mill '
+    + 'standing right at the edge of a rushing river: many rows of '
+    + 'identical tall arched windows, a stepped brick gable at the '
+    + 'near end and one very tall round brick chimney rising behind '
+    + 'the roof'],
+  ['tampere-museokeskus-vapriikki', 'a low red-brick 19th-century '
+    + 'factory workshop turned museum on a river bank: a long brick '
+    + 'facade of large multi-paned industrial windows with a modern '
+    + 'glass entrance canopy in the middle'],
+  ['tampere-hameensilta', 'a single wide stone arch road bridge over '
+    + 'a foaming rapid, with four bronze statues on low pedestals '
+    + 'standing along its granite parapet, two on each side'],
+  ['tampere-tampereen-tuomiokirkko', 'a grey granite national '
+    + 'romantic church: a broad rough-hewn stone body with a very '
+    + 'steep tiled roof and one thick square tower topped by a low '
+    + 'pyramid roof and small corner turrets'],
+  ['tampere-pyynikin-nakotorni', 'a short square observation tower '
+    + 'built of red granite blocks, standing among tall pines on a '
+    + 'gravel ridge: a railed open viewing platform at the top and a '
+    + 'small café building at its foot'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');

@@ -1392,6 +1392,46 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  Tampere: {
+    intro: 'Tampere on Pohjoismaiden suurin sisämaakaupunki ja Suomen '
+             + 'kolmanneksi väkirikkain: seudulla asuu noin 400 000 ihmistä. '
+             + 'Se on rakennettu kapealle kannakselle kahden järven väliin, '
+             + 'ja kannaksen halki laskee Tammerkoski.',
+    teksti: 'Ruotsin kuningas Kustaa III antoi Tammerkosken partaalla '
+              + 'olleelle kauppapaikalle kaupunkioikeudet 1. lokakuuta 1779. '
+              + 'Ratkaiseva etu tuli kuitenkin vasta 1821, kun kaupunki sai '
+              + 'vapaakaupunkioikeudet: tavaraa sai tuoda tullitta, ja '
+              + 'tehtailijoiden kannatti asettua juuri tänne. Koski putoaa '
+              + 'noin kahdeksantoista metriä Näsijärvestä Pyhäjärveen, ja '
+              + 'ennen sähköä sen voima otettiin talteen vesipyörillä ja '
+              + 'turbiineilla aivan tehdassalin vieressä.\n\nSkotlantilainen '
+              + 'James Finlayson perusti kosken länsirannalle konepajan 1820, '
+              + 'ja siitä kasvoi puuvillatehdas, joka oli 1800-luvun lopulla '
+              + 'Pohjoismaiden suurin teollisuuslaitos. Verkatehtaat, '
+              + 'paperitehdas ja konepajat seurasivat perässä, ja kaupunkia '
+              + 'alettiin kutsua Pohjolan Manchesteriksi. Finlaysonin '
+              + 'kutomosaliin sytytettiin sähkövalot maaliskuussa 1882 — '
+              + 'ensimmäisenä koko Pohjolassa.\n\nTehtaat ovat siirtyneet '
+              + 'muualle, mutta punatiiliset rakennukset ovat jääneet. '
+              + 'Finlaysonin ja Tampellan alueilla on nyt museoita, '
+              + 'elokuvateatteri, ravintoloita ja toimistoja, ja niiden '
+              + 'välissä koski kohisee entiseen tapaan. Kosken yli kaartuu '
+              + 'Hämeensilta, jonka kaiteilla seisoo neljä Wäinö Aaltosen '
+              + 'veistosta vuodelta 1929; itse silta uusittiin 2019 vanhan '
+              + 'kivisillan näköiseksi. Vuonna 1971 avattu 168-metrinen '
+              + 'Näsinneula on yhä Suomen korkein näkötorni, ja '
+              + 'raitiovaunut tulivat kaupunkiin 2021.\n\nKaupungin '
+              + 'länsipuolella kohoaa Pyynikinharju, maailman korkein '
+              + 'pitkittäisharju: sen laki on 160 metriä merenpinnasta ja '
+              + '80 metriä Pyhäjärveä ylempänä. Harjun päällä on vuonna '
+              + '1929 rakennettu 26-metrinen punagraniittinen näkötorni, '
+              + 'jonka kahvilan munkit ovat oma nähtävyytensä. '
+              + 'Harjun rinteillä on Pispalan puutalokaupunginosa, jossa '
+              + 'toimii Rajaportin sauna vuodelta 1906 — Suomen vanhin yhä '
+              + 'lämpiävä yleinen sauna.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
   Tukholma: {
     intro: 'Tukholma on Ruotsin pääkaupunki ja Pohjoismaiden suurin '
              + 'kaupunki: seudulla asuu yli kaksi miljoonaa ihmistä. Se on '
@@ -1478,6 +1518,46 @@ export const EUROPE_ARTIKKELIT = {
               + 'ostaa aluetta valtiolta. Kööpenhamina tavoittelee '
               + 'hiilineutraaliutta, ja jätevoimalan katolle on rakennettu '
               + 'laskettelurinne, joka avattiin 2019.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
+   * Laudan kohde 'lappi' on 17.8.2026 alkaen Rovaniemi, ja artikkeli
+   * haetaan avaimella city.wiki — siksi tämä uusi rivi. Alla oleva
+   * 'Lapin maakunta' on jätetty koskematta: se palvelee yhä
+   * maailmankartta.js:ää, jonka päätoimittaja generoi erikseen, ja
+   * lehden uudistus ratkaisee sen kohtalon.
+   */
+  Rovaniemi: {
+    intro: 'Rovaniemi on Lapin maakuntakeskus Kemijoen ja Ounasjoen '
+             + 'yhtymäkohdassa, kahdeksan kilometriä napapiirin '
+             + 'eteläpuolella. Asukkaita on noin 65 000, mutta pinta-alaa '
+             + 'runsaat 8 000 neliökilometriä — enemmän kuin monella '
+             + 'Euroopan pikkuvaltiolla.',
+    teksti: 'Kahden joen risteys on ollut kauppapaikka kauan ennen '
+              + 'kaupunkia: Ounasjokea pitkin tultiin pohjoisesta ja '
+              + 'Kemijokea myöten merelle. Markkinapaikasta tuli kunta 1929 '
+              + 'ja kauppala 1938. Kaupungin ympärillä on yhä Lapin '
+              + 'laajimmat metsät, ja jokien varsille rakennetut voimalat '
+              + 'ovat muuttaneet Kemijoen porrastetuksi altaiden '
+              + 'ketjuksi.\n\nLapin sota jätti kaupungista raunion. '
+              + 'Vetäytyvät saksalaisjoukot polttivat Rovaniemen lokakuussa '
+              + '1944, ja rakennuksista säilyi vain murto-osa. Alvar Aalto '
+              + 'laati jälleenrakennuskaavan 1946: pääkadut piirtävät '
+              + 'kartalle poronsarvet, ja urheilukenttä on sarvien välissä '
+              + 'kuin silmä. Aalto suunnitteli myöhemmin myös hallintokorttelin '
+              + 'Lappia-taloineen ja kirjastoineen.\n\nNapapiiri on kaupungin '
+              + 'tunnetuin viiva. Sen pohjoispuolella aurinko ei laske '
+              + 'keskikesällä eikä nouse keskitalvella; Rovaniemellä yötön yö '
+              + 'kestää runsaan kuukauden ja kaamos muutaman viikon. '
+              + 'Napapiirin kohdalle on kasvanut oma matkailukylänsä, jossa '
+              + 'joulupukilla on toimisto ympäri vuoden.\n\nKemijoen rannalla '
+              + 'seisoo Arktikum, vuonna 1992 avattu museo ja tiedekeskus, '
+              + 'jonka lasiputki työntyy sata metriä joen suuntaan. Siellä '
+              + 'kerrotaan arktisesta luonnosta ja Lapin ihmisistä, '
+              + 'saamelaisista ja jälleenrakennuksen sukupolvesta. '
+              + 'Rovaniemellä toimii myös Lapin yliopisto, maailman '
+              + 'pohjoisin yliopisto Euroopan unionissa.',
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
