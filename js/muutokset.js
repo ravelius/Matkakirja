@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 837, teksti: 'Kartta ei jää jumiin taustapaluussa' },
   { v: 836, teksti: 'Tokio, Soul ja Shanghai valmiiksi: kohdekartat' },
   { v: 835, teksti: 'Bagdad, Teheran ja Tripoli valmiiksi: kohdekartat' },
   { v: 834, teksti: 'Lehti täyttää puhelimen ruudun; alakaista pois' },
