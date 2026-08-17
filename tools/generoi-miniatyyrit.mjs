@@ -39,7 +39,21 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const MALLI = process.env.MINIATYYRI_MALLI ?? 'gemini-3-pro-image';
+/*
+ * HYBRIDIMALLI (omistajan päätös 17.8.2026, vertailuajo kuvatesti-
+ * arkilla): yksinkertaiset aiheet — tornit, patsaat, sillat,
+ * yksittäiset selkeät rakennukset — generoidaan halvalla mallilla
+ * (~puolet hinnasta, silmin todettu tasavertaiseksi), monimutkaiset
+ * rakennuskokonaisuudet (palatsit, katedraalit, saaret) kalliimmalla.
+ * Valinta tehdään kohdelistassa per kohde: kolmas alkio 'halpa'
+ * vaihtaa mallin. MINIATYYRI_MALLI-ympäristömuuttuja ohittaa
+ * molemmat. Vertailussa halvan mallin heikkoudet olivat portaiden
+ * kaltaiset liitoskohdat ja tiheä viiva monimutkaisissa kohteissa.
+ */
+const MALLI = 'gemini-3-pro-image';
+const HALPA_MALLI = 'gemini-3.1-flash-image';
+const valitseMalli = (merkinta) => process.env.MINIATYYRI_MALLI
+  ?? (merkinta === 'halpa' ? HALPA_MALLI : MALLI);
 /*
  * TÄYSI 1024 — EI PIENENNYSTÄ (omistajan palaute 15.8.2026:
  * "piirroksen resoluutio ei riitä"). Suurennettu piirros on 75 %
@@ -453,8 +467,8 @@ async function avaaPienentaja() {
   };
 }
 
-async function generoi(tunnus, aihe, pienentaja) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MALLI}:generateContent?key=${avain}`;
+async function generoi(tunnus, aihe, pienentaja, merkinta) {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${valitseMalli(merkinta)}:generateContent?key=${avain}`;
   const vastaus = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -488,10 +502,13 @@ async function generoi(tunnus, aihe, pienentaja) {
 
 const pienentaja = await avaaPienentaja();
 let onnistui = 0;
-for (const [tunnus, aihe] of jono) {
-  if (await generoi(tunnus, aihe, pienentaja)) onnistui++;
+for (const [tunnus, aihe, merkinta] of jono) {
+  if (await generoi(tunnus, aihe, pienentaja, merkinta)) onnistui++;
   await new Promise((r) => setTimeout(r, 2000));
 }
 await pienentaja.sulje();
-// Kustannussääntö 3: näkyvä hinta-arvio joka ajosta (~0,04 €/kuva).
-console.log(`Valmis: ${onnistui}/${jono.length}. Generointeja ${jono.length} ≈ ${(jono.length * 0.04).toFixed(2)} €.`);
+// Kustannussääntö 3: näkyvä hinta-arvio joka ajosta
+// (~0,04 €/pro-kuva, ~0,02 €/halpa).
+const halpoja = jono.filter(([, , m]) => m === 'halpa').length;
+const arvio = halpoja * 0.02 + (jono.length - halpoja) * 0.04;
+console.log(`Valmis: ${onnistui}/${jono.length}. Generointeja ${jono.length} (${halpoja} halvalla) ≈ ${arvio.toFixed(2)} €.`);

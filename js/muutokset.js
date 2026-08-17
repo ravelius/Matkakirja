@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 812, teksti: 'Miniatyyrigenerointiin hybridimalli (halpa/pro per kohde)' },
   { v: 811, teksti: 'Raamattuun: uusiin kohteisiin vain lehdet, ei kaarta' },
   { v: 810, teksti: 'Matkakassa pois, hintatasorivit, säänluonnehdinnat alkuun' },
   { v: 809, teksti: 'Raamattuun oppaan avauskuvan linjaus' },

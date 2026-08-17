@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v812 — miniatyyrityökaluun hybridimalli (ei nakyvia muutoksia)',
   'v811 — Raamatussa: uusiin kohteisiin vain lehdet, ei kaarta',
   'v810 — opas: Matkakassa pois, hintatasorivit; 5 säänluonnehdintaa',
   'v809 — Raamatussa: oppaan avauskuva = karuselli jakson tekstistä',
