@@ -115,4 +115,74 @@ export const MINIATYYRIT = {
     'Vasa-museo': 'assets/kartat/miniatyyrit/tukholma-vasa-museo.webp',
     Skansen: 'assets/kartat/miniatyyrit/tukholma-skansen.webp',
   },
+  /*
+   * Erät 1–2 Euroopan ulkopuolelle ja Suomeen (17.8.2026). Neljä
+   * kohdetta jäi pois katselmoinnissa hylättyinä — niiden promptit on
+   * korjattu tools/generoi-miniatyyrit.mjs:ään ja ne generoidaan
+   * uudelleen erässä 3: Tampereen tuomiokirkko (ei muistuttanut
+   * kohdetta), Marcus Aureliuksen riemukaari (paperikehys ja väärä
+   * muoto), Punainen linna (värillinen tyylirikko) ja Shitamachi-museo
+   * (isometrinen leikkauskuva valkopohjalla). Kohde ilman miniatyyriä
+   * toimii entiseen tapaan, joten aukot eivät riko karttaa.
+   */
+  tampere: {
+    Näsinneula: 'assets/kartat/miniatyyrit/tampere-nasinneula.webp',
+    'Finlaysonin tehdasalue': 'assets/kartat/miniatyyrit/tampere-finlaysonin-tehdasalue.webp',
+    'Museokeskus Vapriikki': 'assets/kartat/miniatyyrit/tampere-museokeskus-vapriikki.webp',
+    Hämeensilta: 'assets/kartat/miniatyyrit/tampere-hameensilta.webp',
+    'Pyynikin näkötorni': 'assets/kartat/miniatyyrit/tampere-pyynikin-nakotorni.webp',
+  },
+  firenze: {
+    Duomo: 'assets/kartat/miniatyyrit/firenze-duomo.webp',
+    'Palazzo Vecchio': 'assets/kartat/miniatyyrit/firenze-palazzo-vecchio.webp',
+    Uffizi: 'assets/kartat/miniatyyrit/firenze-uffizi.webp',
+    'Ponte Vecchio': 'assets/kartat/miniatyyrit/firenze-ponte-vecchio.webp',
+    'Santa Croce': 'assets/kartat/miniatyyrit/firenze-santa-croce.webp',
+    'Bobolin puutarha': 'assets/kartat/miniatyyrit/firenze-bobolin-puutarha.webp',
+  },
+  bagdad: {
+    'Mutanabbin katu': 'assets/kartat/miniatyyrit/bagdad-mutanabbin-katu.webp',
+    'Qushlan kellotorni': 'assets/kartat/miniatyyrit/bagdad-qushlan-kellotorni.webp',
+    Abbasidipalatsi: 'assets/kartat/miniatyyrit/bagdad-abbasidipalatsi.webp',
+    'Khan Mirjan': 'assets/kartat/miniatyyrit/bagdad-khan-mirjan.webp',
+    'Mustansiriya-koulu': 'assets/kartat/miniatyyrit/bagdad-mustansiriya-koulu.webp',
+    'Bagdadin museo': 'assets/kartat/miniatyyrit/bagdad-bagdadin-museo.webp',
+  },
+  teheran: {
+    'Teheranin basaari': 'assets/kartat/miniatyyrit/teheran-teheranin-basaari.webp',
+    'Golestanin palatsi': 'assets/kartat/miniatyyrit/teheran-golestanin-palatsi.webp',
+    'Dar al-Fonun': 'assets/kartat/miniatyyrit/teheran-dar-al-fonun.webp',
+    'Iranin kansallismuseo': 'assets/kartat/miniatyyrit/teheran-iranin-kansallismuseo.webp',
+    'Masoudiehin talo': 'assets/kartat/miniatyyrit/teheran-masoudiehin-talo.webp',
+    'Sepahsalarin moskeija': 'assets/kartat/miniatyyrit/teheran-sepahsalarin-moskeija.webp',
+  },
+  tripoli: {
+    'Darghutin moskeija': 'assets/kartat/miniatyyrit/tripoli-darghutin-moskeija.webp',
+    'Vanhankaupungin kellotorni': 'assets/kartat/miniatyyrit/tripoli-vanhankaupungin-kellotorni.webp',
+    'Karamanlin moskeija': 'assets/kartat/miniatyyrit/tripoli-karamanlin-moskeija.webp',
+    'an-Naqan moskeija': 'assets/kartat/miniatyyrit/tripoli-an-naqan-moskeija.webp',
+  },
+  tokio: {
+    Kaminarimon: 'assets/kartat/miniatyyrit/tokio-kaminarimon.webp',
+    'Sensō-ji': 'assets/kartat/miniatyyrit/tokio-senso-ji.webp',
+    "Kan'ei-ji": 'assets/kartat/miniatyyrit/tokio-kanei-ji.webp',
+    'Tokion kansallismuseo': 'assets/kartat/miniatyyrit/tokio-tokion-kansallismuseo.webp',
+    'Uenon puisto': 'assets/kartat/miniatyyrit/tokio-uenon-puisto.webp',
+  },
+  soul: {
+    Gyeongbokgung: 'assets/kartat/miniatyyrit/soul-gyeongbokgung.webp',
+    'Bukchonin hanok-kylä': 'assets/kartat/miniatyyrit/soul-bukchonin-hanok-kyla.webp',
+    Changdeokgung: 'assets/kartat/miniatyyrit/soul-changdeokgung.webp',
+    Jongmyo: 'assets/kartat/miniatyyrit/soul-jongmyo.webp',
+    'Tapgol-puisto': 'assets/kartat/miniatyyrit/soul-tapgol-puisto.webp',
+    Bosingak: 'assets/kartat/miniatyyrit/soul-bosingak.webp',
+  },
+  shanghai: {
+    Bund: 'assets/kartat/miniatyyrit/shanghai-bund.webp',
+    'Waibaidun silta': 'assets/kartat/miniatyyrit/shanghai-waibaidun-silta.webp',
+    Rauhanhotelli: 'assets/kartat/miniatyyrit/shanghai-rauhanhotelli.webp',
+    'Yu-puutarha': 'assets/kartat/miniatyyrit/shanghai-yu-puutarha.webp',
+    'Nanjing-katu': 'assets/kartat/miniatyyrit/shanghai-nanjing-katu.webp',
+    'Shanghain museo': 'assets/kartat/miniatyyrit/shanghai-shanghain-museo.webp',
+  },
 };

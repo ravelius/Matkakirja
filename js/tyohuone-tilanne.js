@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v844 — kohdekarttojen miniatyyripiirrokset kahdeksaan uuteen kaupunkiin: Tampere, Firenze, Bagdad, Teheran, Tripoli, Tokio, Soul ja Shanghai — tarkista että piirros näkyy kartalla numeroympyrän tilalla; neljä kohdetta jäi vielä ilman piirrosta (Tampereen tuomiokirkko, Marcus Aureliuksen riemukaari, Punainen linna, Shitamachi-museo)',
   'v843 — lippuikkuna (esim. Soul): iso lippu terävä myös iPadilla (haetaan nyt 1280 px:n kuvana), ja tunnus/versiolippu suurennettuna pysyy kortin sisällä selitteineen — ei enää katkeavaa kuvatekstiä alareunassa',
   'v842 — kuvakarusellien laitojen tummennus poistettu kaikkialta (lehden kansikuva, nostogalleria, nähtävyysjutut, opas) — tarkista että nuoli erottuu yhä vaalealla ja tummalla kuvalla; lisäksi lehden ja jutun alareunan sumea kaista kotipalkin yli iPadilla',
   'v841 — syvä lähikuva (maailmankartta) terävöityy heti zoomin jälkeen — kokeile nopeaa zoomailua syvällä zoomilla',

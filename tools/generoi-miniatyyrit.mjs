@@ -439,10 +439,22 @@ const KUVAT = [
   ['tampere-hameensilta', 'a single wide stone arch road bridge over '
     + 'a foaming rapid, with four bronze statues on low pedestals '
     + 'standing along its granite parapet, two on each side'],
-  ['tampere-tampereen-tuomiokirkko', 'a grey granite national '
-    + 'romantic church: a broad rough-hewn stone body with a very '
-    + 'steep tiled roof and one thick square tower topped by a low '
-    + 'pyramid roof and small corner turrets'],
+  /*
+   * UUSINTA (katselmointi 17.8.2026): ensimmäinen otto ei muistuttanut
+   * kohdetta lainkaan — "matala pyramidikatto ja kulmatornit" antoi
+   * yleisen linnamaisen kirkon. Tunnusmerkit kirjoitetaan nyt auki:
+   * JYRKKÄ SATULAKATTO, YKSI korkea nelikulmainen torni SUIPPO huippu
+   * ja PYÖREÄ RUUSUIKKUNA päädyssä — kolme asiaa, joista kirkon
+   * tunnistaa, eikä mitään muuta.
+   */
+  ['tampere-tampereen-tuomiokirkko', 'a Finnish national romantic '
+    + 'church built of rough grey granite blocks: a broad tall stone '
+    + 'nave under a VERY STEEP pitched saddle roof (two straight slopes '
+    + 'meeting in a sharp ridge, no pyramid, no hipped roof), a large '
+    + 'ROUND rose window high in the near gable end, and exactly ONE '
+    + 'tall square stone bell tower at the corner, its four straight '
+    + 'walls carrying a STEEP POINTED spire. Only one tower — no '
+    + 'second tower, no corner turrets, no dome'],
   ['tampere-pyynikin-nakotorni', 'a short square observation tower '
     + 'built of red granite blocks, standing among tall pines on a '
     + 'gravel ridge: a railed open viewing platform at the top and a '
@@ -563,11 +575,25 @@ const KUVAT = [
    * nähtävyysjuttuihin ja niiden todennettuihin valokuviin
    * (js/packs/nahtavyysjutut.js: tripoli).
    */
-  ['tripoli-marcus-aureliuksen-riemukaari', 'a small Roman triumphal '
-    + 'arch of white marble standing alone in a shallow excavated '
-    + 'hollow below street level: open on all four sides, a low '
-    + 'octagonal dome on top, and carved figures in the triangular '
-    + 'pediments over each arch'],
+  /*
+   * UUSINTA (katselmointi 17.8.2026): ensimmäisessä otossa kuvan
+   * ympärille piirtyi paperikehys (kaivanto luki arkin reunana) ja
+   * muoto meni väärin — tuli korkea yksiaukkoinen kaari. Kaivanto
+   * pudotettiin aiheesta kokonaan, ja tetrapylon-muoto sekä matala
+   * leveä mittasuhde sanotaan suoraan. Kehyskielto toistetaan aiheen
+   * sisällä samasta syystä kuin Tower Bridgessä.
+   */
+  ['tripoli-marcus-aureliuksen-riemukaari', 'a Roman TETRAPYLON '
+    + 'triumphal arch of white marble: a single square block pierced by '
+    + 'FOUR identical open archways, one on each of its four sides, so '
+    + 'you can see straight through it both ways. It is LOW AND WIDE — '
+    + 'clearly broader than it is tall, squat rather than soaring — and '
+    + 'a shallow DOME-LIKE pyramid cap sits on top, with a carved '
+    + 'triangular pediment over each archway. It stands directly on '
+    + 'flat ground at ground level. The warm cream paper background '
+    + 'fills the WHOLE square canvas edge to edge: absolutely NO frame, '
+    + 'no border, no rectangular panel, no sunken pit or excavated '
+    + 'hollow around it, no paper sheet edges'],
   ['tripoli-darghutin-moskeija', 'a low whitewashed North African '
     + 'mosque: a long flat-roofed block carrying a whole field of '
     + 'small round white domes, with one slender white minaret beside '
@@ -577,10 +603,22 @@ const KUVAT = [
     + 'it narrows in stages, each stage has pairs of small columns at '
     + 'the corners, and the top stage carries a round clock face on '
     + 'every side under an ornate cornice', 'halpa'],
-  ['tripoli-punainen-linna', 'a long low reddish-ochre fortress on a '
-    + 'rocky spur by the water: massive sloping walls with a few '
-    + 'small openings, and on the seaward bastion a row of tall open '
-    + 'stone arches standing above the ramparts'],
+  /*
+   * UUSINTA (katselmointi 17.8.2026): ensimmäinen otto oli värillinen
+   * tyylirikko — värisana "reddish-ochre" aiheessa veti mallin
+   * maalaamaan koko linnan värillä, vaikka tyylikääre pyytää yhtä
+   * mustetta. Väri on nyt pelkkä nimi ("Red Castle"), ei ohje, ja
+   * yksivärisyys toistetaan aiheen sisällä.
+   */
+  ['tripoli-punainen-linna', 'a big old seafront wall fortress '
+    + '(the Red Castle, Assai al-Hamra): a long low citadel rising '
+    + 'straight out of the harbour wall, massive sloping ramparts with '
+    + 'only a few small openings, a squat round corner bastion, and '
+    + 'above the ramparts a row of tall open stone arches; calm water '
+    + 'suggested with a few horizontal strokes along its foot. Drawn '
+    + 'STRICTLY as a one-colour dark sepia ink line drawing — no red, '
+    + 'no ochre, no colour of any kind anywhere, no painted or filled '
+    + 'walls, only ink outlines and sparse hatching on cream paper'],
   ['tripoli-karamanlin-moskeija', 'an Ottoman mosque built into a '
     + 'market street: a white arcade of pointed arches with '
     + 'brown-and-white striped voussoirs at street level, a roofline '
@@ -630,11 +668,25 @@ const KUVAT = [
     + 'blossom arching over a wide gravel path, and beyond them an '
     + 'open pond edged with tall reeds and a small many-sided temple '
     + 'pavilion on a spit of land in the water'],
-  ['tokio-shitamachi-museo', 'a plain two-storey museum block with '
-    + 'large ground-floor windows, and shown inside them a '
-    + 'reconstructed old Tokyo alley: a narrow wooden shopfront with '
-    + 'a cloth shop-curtain over the door, a sliding paper screen '
-    + 'above it, wooden tubs and a hand water pump at the kerb'],
+  /*
+   * UUSINTA (katselmointi 17.8.2026): ensimmäinen otto tuli
+   * isometrisenä leikkauskuvana valkoisella pohjalla — sisänäkymän
+   * pyytäminen ("shown inside them a reconstructed alley") sai mallin
+   * avaamaan seinän ja vaihtamaan sekä taustan että tyylin. Sisänäkymä
+   * pudotettiin kokonaan: kuva on tavallinen ulkonäkymä talosta
+   * samalla seepiaviivalla ja pergamenttitaustalla kuin muut.
+   */
+  ['tokio-shitamachi-museo', 'a modest two-storey museum building at '
+    + 'the edge of a park: a compact rectangular house seen from '
+    + 'OUTSIDE at a slight angle, plain walls, a row of large windows '
+    + 'along the ground floor and smaller ones above, a simple entrance '
+    + 'door in the middle, and a wide tiled hipped roof with slightly '
+    + 'upturned eaves; a couple of trees behind one corner. An ordinary '
+    + 'exterior view of the whole house standing closed and complete — '
+    + 'NOT a cutaway, NOT a cross-section, NOT an isometric floor plan, '
+    + 'no open walls and nothing visible inside. Same monochrome sepia '
+    + 'ink line style as the other sketches, on the warm cream paper '
+    + 'background filling the entire canvas — never a white background'],
 
   /*
    * ── Soul, kuusi kohdetta (E00-viimeistely 17.8.2026) ────────────
