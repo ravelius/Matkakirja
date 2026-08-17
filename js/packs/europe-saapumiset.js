@@ -1,7 +1,7 @@
 // Euroopan matkakirjamerkinnät: nuoren herran tunnepitoinen kuvaus ja
 // isoisän nosto, samaan malliin kuin Afrikassa. Rakentuu kaupunki
 // kerrallaan. Luennat: puhe-europe-saapuminen-<id>.mp3 (ks.
-// SAAPUMISLUENNAT js/ui.js:ssä — vain siellä listatuilla kaupungeilla
+// SAAPUMISLUENNAT js/sisaltotaulut.js:ssä — vain siellä listatuilla kaupungeilla
 // kaiutinnappi syttyy).
 //
 // Lontoon, Pariisin, Rooman ja Ateenan tekstit ovat Fablen kirjoittamia:

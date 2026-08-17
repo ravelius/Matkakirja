@@ -104,7 +104,7 @@ console.log(`${ehdotukset.length} kaupunkia, ${kaikkiNimet.length} eri kuvaa tar
 const tiedot = await tarkista(kaikkiNimet);
 
 /*
- * Laudat samassa järjestyksessä kuin js/ui.js:n KAIKKI_VALOKUVAT, ja
+ * Laudat samassa järjestyksessä kuin js/sisaltotaulut.js:n KAIKKI_VALOKUVAT, ja
  * samasta syystä: uusi valokuvapaketti on lisättävä molempiin, tai
  * tämä työkalu ei löydä sen kaupunkeja. Järjestys ratkaisee myös
  * päällekkäisyyden — pelissä myöhempi levitys voittaa, joten täällä

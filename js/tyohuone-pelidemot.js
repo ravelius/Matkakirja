@@ -73,7 +73,7 @@ const KIRJAIMET = 'ABCDEFGH';
 const LAUTA = packById('maailmankartta');
 
 /*
- * Sama kuvakokoelma kuin pelissä (ui.js: KAIKKI_VALOKUVAT). Valokuva-
+ * Sama kuvakokoelma kuin pelissä (sisaltotaulut.js: KAIKKI_VALOKUVAT). Valokuva-
  * kysymys tarvitsee poolin, jonka käyttöliittymä syöttää moottorille —
  * ilman sitä muoto putoaisi pois eikä demoa olisi.
  */
@@ -84,7 +84,7 @@ const KAIKKI_VALOKUVAT = {
 
 /*
  * Kuvat, jotka eivät kelpaa "mikä paikka tämä on" -kysymykseen. Sama
- * lista kuin ui.js:ssä (EI_VALOKUVAKYSYMYKSEEN); se on siellä moduulin
+ * lista kuin ui.js:ssä (EI_VALOKUVAKYSYMYKSEEN, nyk. js/sisaltotaulut.js); se on siellä moduulin
  * sisäinen vakio, joten demo toistaa sen. Jos listaa muutetaan, muuta
  * molemmat — muuten työhuone näyttäisi kysymyksen, jota pelissä ei ole.
  */

@@ -3772,7 +3772,7 @@ test('maailmankartta: sauman yli kulkeva reitti piirtyy yhtenäisenä', () => {
 
 test('yhdistetyt laudat ovat kaikissa sisältötauluissa', () => {
   /*
-   * Sisältötaulut ui.js:ssä on avainnettu laudan tunnuksella, ja uusi
+   * Sisältötaulut (js/sisaltotaulut.js) on avainnettu laudan tunnuksella, ja uusi
    * yhdistetty lauta on jäänyt niistä pois jo kolmesti. Ansa on
    * hiljainen: mikään ei kaadu, mitään ei näy lokissa, Tutki-ikkuna
    * vain jää vajaaksi. Maailmankartalta puuttuivat kaikki viisi.
@@ -3781,9 +3781,9 @@ test('yhdistetyt laudat ovat kaikissa sisältötauluissa', () => {
    * yhdessä, sen on oltava kaikissa. KIELET on tarkoituksella
    * suppeampi (vain Eurooppa on äänitetty), joten se on rajattu pois.
    */
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const taulut = readFileSync(new URL('../js/sisaltotaulut.js', import.meta.url), 'utf8');
   const laudat = (nimi) => {
-    const osuma = ui.match(new RegExp(`const ${nimi} = \\{([\\s\\S]*?)\\n\\};`));
+    const osuma = taulut.match(new RegExp(`const ${nimi} = \\{([\\s\\S]*?)\\n\\};`));
     assert.ok(osuma, `${nimi} ei löydy`);
     return new Set([...osuma[1].matchAll(/^\s{2}([a-z]+):/gm)].map((m) => m[1]));
   };

@@ -55,7 +55,7 @@
  * löytödialogi samaa luokkaa.
  * Tyhjä/väärin-repliikkejä EI lueta: ne tulevat vastauksen jälkeen,
  * kun pelaaja haluaa jo eteenpäin. Ääni soi vain, jos mp3 on
- * generoitu (ui.js: KOHTAAMISLUENNAT).
+ * generoitu (sisaltotaulut.js: KOHTAAMISLUENNAT).
  */
 export const KOHTAAMISET = {
   lontoo: {
