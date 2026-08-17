@@ -49,7 +49,8 @@ matkaopas kulkee laukussa koko maan ajan, vain kansilehti vaihtuu.
   tagesschaun uutiset, tagesschau24:n tv ja posetiivari Otto) —
   ja niiden perään Ranska, USA, Japani,
   Brasilia, Australia. Valmiit maakohtaiset promptit:
-  docs/tyolista-opukselle.md, "Lehtimaiden promptit".
+  docs/arkisto/tyolista-opukselle-2026-08.md, "Lehtimaiden
+  promptit" (arkistoitu D6:ssa — promptit ovat yhä käyttökelpoisia).
 
 Kuva-, mitta-, työkalu- ja tarkistussäännöt ovat
 docs/moduulit/kaupunkilehti.md:ssä ja pätevät sellaisinaan
