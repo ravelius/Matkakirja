@@ -896,6 +896,99 @@ vaadi('salamasarjan jälkeen jokainen näkyvä ruutu piirtyy oikealla tarkkuudel
   && salamaTila.puuttuu === 0 && salamaTila.vanhoja === 0,
   JSON.stringify(salamaTila));
 
+/*
+ * 11) SOVELLUS TAUSTALLE KESKEN PYYHKÄISYN (omistajan kuvakaappaus
+ * iPadilta 17.8.2026: "kartan vasempaan reunaan jää vaalea
+ * pystykaista").
+ *
+ * iOS ei toimita pointerup- eikä pointercancel-tapahtumaa webapille,
+ * joka jää taustalle sormen ollessa vielä ruudulla. Ennen korjausta
+ * kartanRaahaus jäi silloin pystyyn LOPUKSI ISTUNNOKSI, ja se yksin
+ * jäädyttää kartan koko piirron: taydennaTaide palaa heti,
+ * puskurirengas lykkää itseään, tarkkuusvahti ei pääse lepoon.
+ * Näkyvälle alueelle jää se kaistale, jonka ruudut eivät ehtineet
+ * valmistua — vaalea pergamenttikaista siinä reunassa, johon sarja
+ * jäi kesken.
+ *
+ * Ele syötetään ilman lopetusta, sitten dokumentti piiloon ja takaisin.
+ * Vaatimus: raahauslippu on alhaalla ja näkyvä alue on jälleen
+ * kokonaan katettu.
+ */
+await sivu.waitForTimeout(1500);
+await sivu.evaluate(() => {
+  const pane = window.matkakirja.ui.svg.parentElement;
+  const laheta = (tyyppi, x, y) => pane.dispatchEvent(new PointerEvent(tyyppi, {
+    bubbles: true, cancelable: true, composed: true, pointerId: 11,
+    pointerType: 'touch', isPrimary: true, clientX: x, clientY: y, buttons: 1,
+  }));
+  laheta('pointerdown', 300, 500);
+  for (let i = 1; i <= 20; i++) laheta('pointermove', 300 - i * 10, 500 - i * 5);
+  // Sormi EI nouse: sovellus vaihtuu kesken eleen.
+});
+await sivu.waitForTimeout(200);
+const raahausJumissa = await sivu.evaluate(() => window.matkakirja.ui.kartanRaahaus === true);
+vaadi('hylätty pyyhkäisy jättää raahauslipun pystyyn ennen taustalle menoa',
+  raahausJumissa === true);
+
+await sivu.evaluate(() => {
+  Object.defineProperty(document, 'visibilityState', { configurable: true, get: () => 'hidden' });
+  Object.defineProperty(document, 'hidden', { configurable: true, get: () => true });
+  document.dispatchEvent(new Event('visibilitychange'));
+});
+await sivu.waitForTimeout(600);
+const piilossa = await sivu.evaluate(() => ({
+  raahaus: window.matkakirja.ui.kartanRaahaus === true,
+  luokka: document.body.classList.contains('kartta-raahaus'),
+}));
+vaadi('taustalle mentäessä kesken jäänyt raahaus päättyy',
+  piilossa.raahaus === false && piilossa.luokka === false, JSON.stringify(piilossa));
+
+await sivu.evaluate(() => {
+  Object.defineProperty(document, 'visibilityState', { configurable: true, get: () => 'visible' });
+  Object.defineProperty(document, 'hidden', { configurable: true, get: () => false });
+  document.dispatchEvent(new Event('visibilitychange'));
+  window.dispatchEvent(Object.assign(new Event('pageshow'), { persisted: true }));
+});
+// Jumivahti (TARKKUUS_JUMI_MS 5 s) laskee vielä osoitinlipun, ja sarja
+// jatkuu vasta sen jälkeen — annetaan sille aikaa.
+for (let i = 0; i < 40; i++) {
+  const valmis = await sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    return !ui.eleKesken() && !ui.taidePiirtyy && !ui.taideOdottaa;
+  });
+  if (valmis) break;
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(500);
+}
+const paluu = await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const nakyva = ui.nakyvaAlue();
+  const koko = ui.taideRuutu;
+  const W = window.matkakirja.game.pack.map.width;
+  const kiertava = ui.kartta.kiertava();
+  const sarakkeita = kiertava ? Math.max(1, Math.round(W / koko)) : 0;
+  const pohjanVaraan = Boolean(ui.taidePohja)
+    && nakyva.skaala * ui.nykyinenTarkkuus() <= ui.pohjaTeho;
+  let puuttuu = 0;
+  if (!pohjanVaraan) {
+    for (let ry = Math.floor(nakyva.y / koko); ry <= Math.floor((nakyva.y + nakyva.h - 0.001) / koko); ry++) {
+      for (let rx = Math.floor(nakyva.x / koko); rx <= Math.floor((nakyva.x + nakyva.w - 0.001) / koko); rx++) {
+        const sarake = kiertava ? ((rx % sarakkeita) + sarakkeita) % sarakkeita : rx;
+        const avain = `${sarake},${ry}`;
+        if (!ui.taideRuudut.has(avain) && !ui.taideTyhjat.has(avain)) puuttuu++;
+      }
+    }
+  }
+  return {
+    raahaus: ui.kartanRaahaus === true, ele: ui.eleKesken(),
+    odottaa: ui.taideOdottaa === true, pohjanVaraan, puuttuu,
+  };
+});
+vaadi('taustapaluun jälkeen kartta ei jää jäätyneeksi eikä näkyvälle alueelle jää kaistaa',
+  paluu.raahaus === false && paluu.ele === false
+  && paluu.odottaa === false && paluu.puuttuu === 0,
+  JSON.stringify(paluu));
+
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
 await selain.close();

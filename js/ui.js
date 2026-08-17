@@ -2006,6 +2006,12 @@ export class UI {
       document.removeEventListener('visibilitychange', this.tarkkuusVahti);
       this.tarkkuusVahti = null;
     }
+    // Kartan elevahti (kartta.js) on niin ikään documentin kuuntelija:
+    // se päättää kesken jääneen raahauksen, kun sovellus menee taustalle.
+    if (this.eleVahti) {
+      document.removeEventListener('visibilitychange', this.eleVahti);
+      this.eleVahti = null;
+    }
     // Näkymän kokovahti kuuntelee ikkunaa ja dokumenttia — sama sääntö.
     if (this.nakymaVahti) {
       window.removeEventListener('resize', this.nakymaVahti);
@@ -2374,6 +2380,25 @@ export class UI {
      */
     const odotus = this.tarkkuusOdotus();
     if (odotus > 0) { this.ajastaTarkkuustarkistus(odotus); return; }
+    /*
+     * KESKEN JÄÄNYT RUUTUSARJA JATKUU LEVOSSA.
+     *
+     * Sarja katkeaa aina, kun ele alkaa kesken piirron (taideOdottaa),
+     * ja normaalisti sen jatkaa sormen irrotus (kartta.js
+     * jatkaKeskenJaanyt). Kun sovellus vaihtuu kesken eleen,
+     * irrotusta ei tule — eikä siis mitään, mikä jatkaisi sarjaa.
+     * Näkyvälle alueelle jää se kaistale, jonka ruudut eivät ehtineet
+     * valmistua, ja siinä näkyy pelkkä pergamentin pohjakerros:
+     * vaalea pystykaista siinä reunassa, johon sarja jäi kesken
+     * (omistajan kuvakaappaus iPadilta 17.8.2026).
+     *
+     * Tässä kohdassa eikä vahdissa, koska tämä on se piste, joka
+     * ajastaa itsensä uudelleen niin kauan kuin ele on kesken
+     * (tarkkuusOdotus yllä). Taustapaluu herättää vahdin, vahti
+     * tämän — ja jos ele on vielä pystyssä, jatko tapahtuu heti kun
+     * se laskee.
+     */
+    if (this.taideOdottaa && !this.taidePiirtyy) this.taydennaTaide({ heti: true });
     const nakyva = this.nakyvaAlue();
     if (!nakyva) return;
     const suhde = nakyva.skaala / this.taideSkaala;
@@ -2395,14 +2420,49 @@ export class UI {
    */
   eleKesken() {
     /*
-     * Jumiin jäänyt osoitinlippu ei saa pysäyttää piirtoa ikuisesti.
+     * Jumiin jäänyt ele ei saa pysäyttää piirtoa ikuisesti.
      * Sormi ei ole ruudulla viittä sekuntia liikkumatta; jos lippu on
      * sen jälkeen yhä pystyssä, tapahtuma on jäänyt saapumatta
      * (ikkunanvaihto, selaimen oma ele) ja lippu lasketaan alas.
+     *
+     * MOLEMMAT LIPUT, EI VAIN OSOITINLIPPU (omistajan kuvakaappaus
+     * iPadilta 17.8.2026: kartan vasempaan reunaan jää vaalea
+     * pystykaista, kun käy toisessa sovelluksessa ja palaa).
+     *
+     * Vahti kirjoitettiin osoitinlipulle, mutta paluuarvo lukee
+     * MYÖS raahauslipun — ja juuri se jää jumiin, kun sovellus
+     * vaihtuu kesken pyyhkäisyn: kartta.js laskee kartanRaahauksen
+     * vasta pointerup/pointercancel-tapahtumasta, eikä iOS toimita
+     * kumpaakaan taustalle jääneelle webapille. Mitattuna
+     * (Chromium, hylätty raahaus + taustapaluu): osoitinKartalla
+     * palautui itsestään viidessä sekunnissa, kartanRaahaus jäi
+     * pystyyn loputtomiin.
+     *
+     * Pystyyn jäänyt raahauslippu jäädyttää KOKO kartan piirron
+     * lopuksi istunnoksi: taydennaTaide palaa heti (kartanRaahaus
+     * && !heti), puskurirengas lykkää itseään joutohetkestä toiseen,
+     * tarkkuusvahti ei pääse koskaan lepoon eivätkä maastonimet
+     * päivity. Näkyvälle alueelle jäävät ne ruudut jotka ehtivät
+     * valmistua, ja lopun peittää pelkkä pergamentin pohjakerros —
+     * vaalea pystykaista siinä reunassa, johon sarja jäi kesken.
+     *
+     * Liuku pitää raahauslippua pystyssä tahallaan (ks. kartta.js
+     * pysaytaLiuku), mutta liuku sammuu alle kahdessa sekunnissa ja
+     * jokainen kosketus virkistää kartanEleHetken — viiden sekunnin
+     * hiljaisuus ei osu yhteenkään elävään eleeseen.
      */
-    if (this.osoitinKartalla
+    if ((this.osoitinKartalla || this.kartanRaahaus)
         && performance.now() - (this.kartanEleHetki ?? 0) > TARKKUUS_JUMI_MS) {
       this.osoitinKartalla = false;
+      if (this.kartanRaahaus) {
+        this.kartanRaahaus = false;
+        // Luokka syttyi saman eleen mukana; ilman poistoa kartan
+        // sykähdykset jäisivät sammuksiin lopuksi istunnoksi.
+        document.body.classList.remove('kartta-raahaus');
+        // Kesken jäänyt sarja saa jatkua heti, ei vasta seuraavasta
+        // eleestä: juuri se kaista on nyt piirtämättä.
+        this.taideOdottaa = true;
+      }
     }
     return Boolean(this.osoitinKartalla || this.kartanRaahaus);
   }
@@ -2692,6 +2752,11 @@ export class UI {
       }
     }
     if (!puuttuvat.length) {
+      // Mitään ei puutu: odottava työ on tehty, lippu alas. Ilman tätä
+      // kesken jäänyt sarja jäisi ikuisesti "odottavaksi" senkin
+      // jälkeen kun näkymä on jo kokonaan katettu, ja jokainen
+      // lepohetki rakentaisi saman tyhjän jonon uudestaan.
+      this.taideOdottaa = false;
       this.poistaVanhatRuudut();
       return;
     }

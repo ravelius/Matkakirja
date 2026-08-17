@@ -1758,7 +1758,7 @@ export class Kartta {
       this.asetaPan(alku.pan + dx, alku.panY + dy);
     });
 
-    const paata = (e) => {
+    const paata = (e, { salliLiuku = true } = {}) => {
       if (!alku || (e && e.pointerId !== alku.id)) return;
       // Sama varautuminen kuin kaappauksessa: peruuntunut osoitin heittää.
       if (liikkui) { try { pane.releasePointerCapture?.(alku.id); } catch { /* ei ollut */ } }
@@ -1773,7 +1773,7 @@ export class Kartta {
        * elettä — kartanRaahaus ja luokka jäävät pystyyn, ja lataus
        * odottaa liu'un loppua.
        */
-      if (liikkui && aloitaLiuku()) return;
+      if (salliLiuku && liikkui && aloitaLiuku()) return;
       // Sykähdykset palaavat heti kun sormi irtoaa.
       document.body.classList.remove('kartta-raahaus');
       /*
@@ -1786,10 +1786,49 @@ export class Kartta {
        * päällä, ja työ tehdään vasta kun ruutu on paikallaan.
        */
       this.ui.kartanRaahaus = false;
-      if (liikkui) this.ui.taydennaTaide({ heti: true });
+      if (!liikkui) return;
+      /*
+       * Piilossa olevalle sivulle ei rasteroida. Sarja jäisi kesken
+       * heti (iOS jäädyttää taustalle jääneen webapin) ja jättäisi
+       * taidePiirtyy-lipun pystyyn — sama jäätymä toista kautta.
+       * Merkitään vain odottavaksi; taustapaluun vahti jatkaa sarjan
+       * (ui.js tarkkuusVahti).
+       */
+      if (document.hidden) this.ui.taideOdottaa = true;
+      else this.ui.taydennaTaide({ heti: true });
     };
     pane.addEventListener('pointerup', paata);
     pane.addEventListener('pointercancel', paata);
+
+    /*
+     * --- SOVELLUS TAUSTALLE KESKEN PYYHKÄISYN ------------------------
+     *
+     * Omistajan kuvakaappaus iPadilta 17.8.2026: *"kun käy toisessa
+     * sovelluksessa ja palaa peliin, kartan vasempaan reunaan jää
+     * vaalea pystykaista."*
+     *
+     * Raahaus päättyy VAIN pointerup- tai pointercancel-tapahtumaan,
+     * eikä iOS toimita kumpaakaan webapille, joka jää taustalle
+     * sormen ollessa vielä ruudulla. Ele jää siis pystyyn:
+     * kartanRaahaus, body.kartta-raahaus ja osoittimen kaappaus.
+     * Mitattuna Chromiumissa (hylätty raahaus + taustapaluu):
+     * osoitinKartalla palautui ui.js:n jumivahdista viidessä
+     * sekunnissa, kartanRaahaus jäi pystyyn loputtomiin — ja se
+     * yksin riittää jäädyttämään kartan piirron lopuksi istunnoksi
+     * (ks. ui.js eleKesken).
+     *
+     * Ele päätetään siis siihen hetkeen, jolloin dokumentti menee
+     * piiloon: sormea ei voi vetää kartalla, joka ei ole ruudulla.
+     * ILMAN LIUKUA — liuku on requestAnimationFramen varassa eikä
+     * tikitä piilossa, joten se vain jättäisi saman lipun pystyyn
+     * toista kautta.
+     */
+    this.ui.eleVahti = () => {
+      if (!document.hidden) return;
+      pysaytaLiuku(true);
+      paata(null, { salliLiuku: false });
+    };
+    document.addEventListener('visibilitychange', this.ui.eleVahti);
 
     // Raahauksen jälkeinen click ei saa mennä kaupungille asti.
     // Sama kuuntelija hoitaa aloituskartan ensimmäisen napautuksen:
