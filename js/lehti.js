@@ -2,7 +2,7 @@
  * Lehden sivukoneisto: sivupinon rakennus (rakennaSivut), sivujen
  * näyttö ja selaus, sisällysvalikko, lukijakytkennät sekä maa-,
  * kehittäjä-, Raamattu- ja tilannelehtien avaukset. Siirretty
- * js/ui.js:stä 17.8.2026 (remontin M5a, malli B —
+ * js/ui.js:stä 17.8.2026 (remontin M5a–M5b, malli B —
  * docs/moduulirakenne-suunnitelma.md). Funktiot saavat ui-olion
  * ensimmäisenä parametrinaan ja kirjoittavat vain lehtipiirteen
  * kenttiä (ui.arrival*, ui.tutki*, ui.maanSivut). Pöllö, lukija,
@@ -16,11 +16,20 @@ import {
   pysaytaLukija, vieritaPehmeasti,
 } from './lukija.js';
 import { asetaKuva } from './media.js';
-import { piirraKaupunkiKartta, piirraMatkailijalle } from './nahtavyydet.js';
-import { lippuUrl, lippuVara } from './packs/africa-valokuvat.js';
+import {
+  nahtavyydenKaruselli, nahtavyydenKuva, piirraKaupunkiKartta,
+  piirraMatkailijalle,
+} from './nahtavyydet.js';
+import {
+  lippuUrl, lippuVara, valokuvaUrl, valokuvaVara,
+} from './packs/africa-valokuvat.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { KAUPUNKIKARTAT, MAAKARTAT } from './packs/maakartat.js';
+import { SAATIEDOT } from './packs/saatiedot.js';
+import {
+  haeSaaTanaan, kuukausiSsa, piirraVuosiSaa, saaKuvaus, SAA_IKONIT,
+} from './saa.js';
 import { ARTIKKELIT, KULTTUURIT } from './sisaltotaulut.js';
 import { sfx } from './sound.js';
 import { RAAMATTU } from './tyohuone-raamattu.js';
@@ -28,6 +37,9 @@ import { TESTATTAVAA, TILANNE } from './tyohuone-tilanne.js';
 import {
   cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, shortIntro,
 } from './ui-apurit.js';
+import {
+  haeArtikkeli, haeUutiset, kaannaSuomeksi, uutislahde,
+} from './uutiset.js';
 
 /**
  * Muotoilee koko artikkelin tekstin: MediaWiki extracts palauttaa
@@ -313,7 +325,7 @@ export function rakennaSivut(ui, cityId) {
   // Liitelinkki päiväysrivillä: "Suomi-liite" (omistajan taitto-ohje 9.8.2026).
   ui.arrivalMaaLinkki.textContent = maakartta ? `${otsikonMaa}-liite` : '';
   ui.arrivalDialog.classList.toggle('lehti', lehti);
-  ui.piirraLehtiKuvat(kansi?.kansikuvat, kansi?.avauskuvat);
+  piirraLehtiKuvat(ui, kansi?.kansikuvat, kansi?.avauskuvat);
   // Lehdessä ei ole Lue lisää -nappeja eikä wikin kuvakarusellia:
   // etusivun tekstit riittävät alkuun, ja syventyminen tapahtuu
   // sivuja kääntämällä. Kuvat ovat omia, tarkistettuja valintoja.
@@ -335,7 +347,7 @@ export function rakennaSivut(ui, cityId) {
     ui.arrivalLehtiPvm.appendChild(document.createTextNode(`${ui.game.dayCount()}. matkapäivä`));
   }
   ui.arrivalLehtiAla.hidden = !lehti;
-  ui.naytaLehtiSaa(lehti ? cityId : null);
+  naytaLehtiSaa(ui, lehti ? cityId : null);
   ui.arrivalLiuskat.replaceChildren();
   ui.arrivalLiuskat.hidden = true;
   ui.tutkiSivut = kategoriat;
@@ -656,7 +668,7 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
   ui.tutkiMaaEtusivu = false;
   ui.arrivalDialog.classList.add('lehti', 'arkki');
   ui.arrivalDialog.classList.toggle('maalehti', true);
-  ui.piirraLehtiKuvat(null);
+  piirraLehtiKuvat(ui, null);
   ui.arrivalPalstat.hidden = true;
   ui.arrivalKulttuuri.hidden = true;
   /*
@@ -696,7 +708,7 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
   ui.naytaMaaTunnusluvut(iso);
   // Uutisten dialogivartija vertaa arrivalShownForiin — se osoittaa
   // yhä viimeksi avattuun kaupunkiin, joten se kelpaa tässä avaimeksi.
-  ui.naytaMaaUutiset(iso, ui.arrivalShownFor);
+  naytaMaaUutiset(ui, iso, ui.arrivalShownFor);
   const maanAvain = maa.wiki ?? maa.nimi;
   const omaMaaIntro = ARTIKKELIT[maanAvain]?.intro;
   if (omaMaaIntro) {
@@ -709,7 +721,7 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
     });
   }
   ui.arrivalLehtiAla.hidden = false;
-  ui.naytaLehtiSaa(null);
+  naytaLehtiSaa(ui, null);
   if (!ui.arrivalDialog.open) ui.arrivalDialog.showModal();
   // Lukemisen ajaksi äänimaisema madaltuu; close-kuuntelija (constructor)
   // palauttaa sen, sulkeutuipa lehti mitä reittiä tahansa.
@@ -746,7 +758,7 @@ export function avaaKehittajaLehti(ui, otsikko, sivut) {
   ui.tutkiMaaEtusivu = false;
   ui.arrivalDialog.classList.add('lehti', 'arkki');
   ui.arrivalDialog.classList.toggle('maalehti', true);
-  ui.piirraLehtiKuvat(null);
+  piirraLehtiKuvat(ui, null);
   ui.arrivalPalstat.hidden = true;
   ui.arrivalKulttuuri.hidden = true;
   ui.arrivalIntro.textContent = '';
@@ -755,7 +767,7 @@ export function avaaKehittajaLehti(ui, otsikko, sivut) {
   ui.arrivalCity.textContent = otsikko;
   ui.arrivalLehtiPvm.textContent = 'Kehittäjän liite';
   ui.arrivalLehtiAla.hidden = false;
-  ui.naytaLehtiSaa(null);
+  naytaLehtiSaa(ui, null);
   if (!ui.arrivalDialog.open) ui.arrivalDialog.showModal();
   hiljennaAmbienssi('lehti');
   const arkki = ui.arrivalDialog.querySelector('.dialog-card');
@@ -1182,4 +1194,360 @@ export function kytkeTutkiSelaus(ui, kortti) {
       if (kortti.scrollTop > 4) vierita(true);
     } else if (e.clientY >= korkeus - kaista) vierita(false);
   });
+}
+
+/*
+ * Kuvataitto, sää ja uutiset (siirretty ui.js:stä remontin M5b:ssä):
+ * lehden etusivun kuvarivit, säärivi ja vuosisääkortti sekä maasivun
+ * uutislista käännöksineen. Kulttuurisuurennoksen koneisto (huntu,
+ * näppäimet, sulku) asuu yhä ui.js:ssä ja kutsutaan ui-olion kautta.
+ */
+
+/**
+ * Lehden etusivun kuvataitto (omistajan toive 5.8.2026): iso
+ * pääkuva maston alla ja pienempien kuvien rivi esittelytekstin
+ * jälkeen. Kuvat ovat kansikategorian omia, tarkistettuja valintoja
+ * (kansikuvat-kenttä) — eivät wikin satunnaiskaruselli. Napautus
+ * avaa selattavan suurennoksen, jossa koko sarja kulkee nuolilla.
+ */
+export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null) {
+  const lista = kuvat ?? [];
+  const panoraamat = avauskuvat ?? [];
+  ui.arrivalLehtiPaakuva.replaceChildren();
+  ui.arrivalLehtiKuvat.replaceChildren();
+  ui.arrivalLehtiPaakuva.hidden = !lista.length && !panoraamat.length;
+  ui.arrivalLehtiKuvat.hidden = panoraamat.length ? !lista.length : lista.length < 2;
+  if (!lista.length && !panoraamat.length) return;
+  const teeKuva = (teos, indeksi, leveys) => {
+    const kotelo = html('figure', 'lehti-kuva');
+    const kuva = document.createElement('img');
+    kuva.decoding = 'async';
+    kuva.draggable = false;
+    kuva.alt = teos.selite ?? '';
+    asetaKuva(kuva, valokuvaUrl(teos.tiedosto, leveys), valokuvaVara(teos.tiedosto, leveys));
+    ui.napautuksesta(kuva, () => ui.naytaKulttuuriKuva(teos, {
+      teokset: lista, kohdalla: indeksi,
+    }));
+    kotelo.appendChild(kuva);
+    if (teos.selite) {
+      const teksti = html('figcaption', 'kuvateksti', teos.selite);
+      if (teos.lahde) teksti.appendChild(html('span', 'lehti-kuvalahde', ` ${teos.lahde}`));
+      kotelo.appendChild(teksti);
+    }
+    return kotelo;
+  };
+  /*
+   * AVAUSKUVAT (omistajan tilaus 15.8.2026: "saisi olla laadukas
+   * vaakakuva jossa näkyy itse kaupunkia enemmän, sellainen
+   * yleisnäkymä. ja niitä voisi olla useampi karusellissa"): iso
+   * kuvapaikka on yleisnäkymien karuselli — sama komponentti kuin
+   * nähtävyysjutuissa, joten nuolet, laskuri, pyyhkäisy ja
+   * suurennos toimivat tutusti. Pikkuriville vapautuvat silloin
+   * kansikuvien KAKSI ENSIMMÄISTÄ, koska iso paikka ei enää syö
+   * niistä ensimmäistä. Kaupunki ilman avauskuvia taittuu ennalleen.
+   */
+  if (panoraamat.length) {
+    ui.arrivalLehtiPaakuva.appendChild(panoraamat.length > 1
+      ? nahtavyydenKaruselli(ui, panoraamat)
+      : nahtavyydenKuva(ui, panoraamat[0]));
+    for (let i = 0; i < Math.min(lista.length, 2); i += 1) {
+      ui.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
+    }
+    return;
+  }
+  ui.arrivalLehtiPaakuva.appendChild(teeKuva(lista[0], 0, 1200));
+  for (let i = 1; i < Math.min(lista.length, 3); i += 1) {
+    ui.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
+  }
+}
+
+/**
+ * Päivän sää lehden mastoon (omistajan toive 5.8.2026). Rivillä
+ * lukee heti kuukauden normaali — se toimii ilman verkkoa — ja
+ * ennusteen valmistuttua tilalle vaihtuu tämä päivä. Rivi on nappi:
+ * napautus avaa koko vuoden graafin (naytaVuosiSaa).
+ */
+export function naytaLehtiSaa(ui, cityId) {
+  const tiedot = cityId ? SAATIEDOT[cityId] : null;
+  ui.lehtiSaaTiedot = tiedot ?? null;
+  ui.arrivalSaa.hidden = !tiedot;
+  if (!tiedot) return;
+  const kuukausi = new Date().getMonth();
+  asetaSaaRivi(ui, 'pilvi',
+    `${kuukausiSsa(kuukausi)} keskimäärin ${Math.round(tiedot.keskilampo[kuukausi])}°, sadetta ${tiedot.sade[kuukausi]} mm`);
+  haeSaaTanaan(tiedot.lat, tiedot.lon).then((saa) => {
+    // Pelaaja on voinut ehtiä jatkaa matkaa haun aikana.
+    if (!saa || ui.arrivalShownFor !== cityId) return;
+    const kuvaus = saaKuvaus(saa.koodi);
+    const sade = saa.sademaara >= 1 ? `, sadetta ${Math.round(saa.sademaara)} mm` : '';
+    asetaSaaRivi(ui, kuvaus.kuvake,
+      `tänään ${saa.lampotila}° (${saa.alin}…${saa.ylin}°), ${kuvaus.teksti}${sade}`);
+  });
+}
+
+export function asetaSaaRivi(ui, kuvake, teksti) {
+  ui.arrivalSaa.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+    + `${SAA_IKONIT[kuvake] ?? SAA_IKONIT.pilvi}</svg>`
+    + '<span class="saa-teksti"></span><span class="saa-vihje">vuosiennuste ›</span>';
+  ui.arrivalSaa.querySelector('.saa-teksti').textContent = teksti;
+}
+
+/**
+ * Koko vuoden sää samana korttina kuin kulttuurikuvan suurennos:
+ * keskilämpökäyrä ja sadepalkit kuukausittain, napautus sulkee.
+ * Graafi piirtyy staattisista normaaleista, joten se aukeaa myös
+ * ilman verkkoa.
+ */
+export function naytaVuosiSaa(ui) {
+  const tiedot = ui.lehtiSaaTiedot;
+  if (!tiedot) return;
+  ui.suljeKulttuuriKuva();
+  ui.lisaaKevytHuntu();
+  const kortti = html('div', 'postikortti kulttuuri-suurennos vuosisaa-kortti');
+  const sulku = html('button', 'uutinen-sulku', '×');
+  sulku.type = 'button';
+  sulku.setAttribute('aria-label', 'Sulje sää');
+  kortti.appendChild(sulku);
+  const nimi = ui.game.board.cities.find((c) => c.id === ui.arrivalShownFor)?.name ?? '';
+  kortti.appendChild(html('p', 'kuvateksti vuosisaa-otsikko', `Sää vuoden mittaan — ${nimi}`));
+  kortti.appendChild(piirraVuosiSaa(tiedot));
+  /*
+   * LUONNEHDINTA graafin ALLE eikä viereen (omistajan toive
+   * 17.8.2026: "muutaman lauseen luonnehdinta vuoden
+   * säävaihteluista"). Kortti on kapea — enintään 480 pikseliä — ja
+   * graafi täyttää sen leveyden, joten viereen jäisi tekstille vain
+   * muutama sana riville. Alla teksti saa koko palstan ja lukee
+   * graafin selityksenä: ensin kuva, sitten mitä siinä näkyy, ja
+   * vasta viimeisenä lähderivi. Kenttä on valinnainen: ilman sitä
+   * kortti näyttää täsmälleen samalta kuin ennen.
+   */
+  if (tiedot.luonnehdinta) {
+    kortti.appendChild(html('p', 'vuosisaa-luonnehdinta', tiedot.luonnehdinta));
+  }
+  kortti.appendChild(html('p', 'kuvalahde',
+    'Käyrä keskilämpö °C · palkit sademäärä mm · Open-Meteo (ERA5), 1991–2020'));
+  kortti.addEventListener('click', () => ui.suljeKulttuuriKuva());
+  ui.arrivalDialog.appendChild(kortti);
+  ui.kulttuuriKuvaEl = kortti;
+  ui.rekisteroiSuurennosNappaimet();
+  sfx.play('paper');
+}
+
+/**
+ * Ajankohtaiset uutisotsikot maaosastoon paikallisella kielellä
+ * (omistajan toive 5.8.2026). Osio näkyy vain, kun maalla on lähde
+ * uutislahteet.js:ssä JA uutisvälitys on otettu käyttöön — muuten
+ * mitään ei haeta eikä näytetä. Otsikoita ei lyhennetä eikä
+ * mukailla; napautus avaa uutisen pelin kirjasimilla.
+ */
+export function naytaMaaUutiset(ui, iso, cityId) {
+  const lahde = uutislahde(iso);
+  ui.arrivalUutiset.hidden = true;
+  if (!lahde) return;
+  haeUutiset(iso).then((uutiset) => {
+    if (!uutiset.length) return;
+    if (!ui.arrivalDialog.open || ui.arrivalShownFor !== cityId) return;
+    // "Uutisissa tänään" ja lähde suluissa (omistajan sanamuoto).
+    ui.arrivalUutiset.querySelector('.uutiset-nimio').textContent =
+      `Uutisissa tänään (${lahde.nimi})`;
+    const lista = ui.arrivalUutiset.querySelector('.uutiset-lista');
+    lista.replaceChildren();
+    for (const uutinen of uutiset.slice(0, 3)) {
+      const rivi = html('button', 'uutinen-rivi');
+      rivi.type = 'button';
+      rivi.lang = lahde.kieli;
+      const teksti = html('span', 'uutinen-rivi-teksti', uutinen.otsikko);
+      // dir="auto": oikealta vasemmalle kirjoitettava otsikko (esim.
+      // arabia) asettuu oikein ilman kielikohtaista koodia.
+      teksti.dir = 'auto';
+      rivi.appendChild(teksti);
+      rivi.addEventListener('click', () => avaaUutinen(ui, uutinen, lahde));
+      lista.appendChild(rivi);
+      // Suomennos otsikon alle pienemmällä ja kevyemmällä — ilman
+      // etikettiä (omistajan toive).
+      kaannaSuomeksi(uutinen.otsikko, lahde.kieli).then((suomeksi) => {
+        if (!suomeksi || !rivi.isConnected) return;
+        const rivinSuomennos = html('span', 'uutinen-rivi-suomeksi', suomeksi);
+        rivinSuomennos.dir = 'auto';
+        teksti.appendChild(rivinSuomennos);
+      });
+      // Pikkukuva otsikon viereen (omistajan toive): sama
+      // artikkelihaku lämmittää muistin, joten popup aukeaa heti.
+      haeArtikkeli(uutinen.linkki).then((artikkeli) => {
+        if (!artikkeli?.kuva || !rivi.isConnected) return;
+        const pikkukuva = document.createElement('img');
+        pikkukuva.alt = '';
+        pikkukuva.loading = 'lazy';
+        pikkukuva.addEventListener('error', () => {
+          pikkukuva.remove();
+          rivi.classList.remove('kuvallinen');
+        });
+        pikkukuva.src = artikkeli.kuva;
+        rivi.prepend(pikkukuva);
+        rivi.classList.add('kuvallinen');
+      });
+    }
+    ui.arrivalUutiset.hidden = false;
+  });
+}
+
+/**
+ * Uutispopup pikkulehtenä (omistajan toive 7.8.2026): ylärivillä
+ * jutun päiväys ja Käännä-nappi, niiden alla lähteen nimiö lehden
+ * tuplaviivojen välissä, iso otsikko ja leipäteksti, jota
+ * artikkelin kuva taittaa — teksti juoksee kellutetun kuvan
+ * ympäri. Koko juttu haetaan uutissivulta workerin kautta, ja
+ * syötteen lyhyt kuvaus on vain varateksti. Tausta EI tummene;
+ * kortin sulkee sen napautus tai kulman rasti.
+ */
+export function avaaUutinen(ui, uutinen, lahde) {
+  ui.suljeKulttuuriKuva();
+  sfx.play('paper');
+  ui.lisaaKevytHuntu();
+  const kortti = html('div', 'postikortti kulttuuri-suurennos uutinen-kortti');
+  const sulku = html('button', 'uutinen-sulku', '×');
+  sulku.type = 'button';
+  sulku.setAttribute('aria-label', 'Sulje uutinen');
+  kortti.appendChild(sulku);
+
+  // Ylärivi: jutun päiväys vasemmalla, käännösnappi oikealla rastin
+  // vieressä. Kellonaika on lehdessä turha — päivä riittää.
+  const ylarivi = html('div', 'uutinen-ylarivi');
+  const aika = uutinen.aika ? new Date(uutinen.aika) : null;
+  ylarivi.appendChild(html('span', 'uutinen-paivays',
+    aika && !Number.isNaN(aika.getTime())
+      ? `${aika.getDate()}.${aika.getMonth() + 1}.${aika.getFullYear()}`
+      : ''));
+  const nappi = html('button', 'uutinen-kaanna', 'Käännä');
+  nappi.type = 'button';
+  ylarivi.appendChild(nappi);
+  kortti.appendChild(ylarivi);
+
+  // Lähteen nimiö kuin lehden masto: tuplaviiva yllä, ohut alla.
+  kortti.appendChild(html('p', 'uutinen-masto', lahde.nimi));
+
+  const otsikko = html('p', 'uutinen-otsikko', uutinen.otsikko);
+  otsikko.lang = lahde.kieli;
+  otsikko.dir = 'auto';
+  kortti.appendChild(otsikko);
+
+  /*
+   * Runko: artikkelin kuva on rungon SISÄLLÄ ja kelluu oikealla,
+   * jotta kappaleet juoksevat sen ympäri. Syötteen kuvaus näkyy
+   * heti, ja koko artikkeli korvaa sen kun haku valmistuu; jos
+   * artikkelia ei saada (esim. workerin vanha versio), kuvaus jää
+   * — popup ei ole koskaan tyhjä.
+   */
+  const runko = html('div', 'uutinen-runko');
+  const kuva = document.createElement('img');
+  kuva.className = 'uutinen-kuva';
+  kuva.alt = '';
+  kuva.hidden = true;
+  kuva.addEventListener('error', () => { kuva.hidden = true; });
+  runko.appendChild(kuva);
+  kortti.appendChild(runko);
+
+  /*
+   * Käännös vaihtaa otsikon ja kappaleet PAIKALLAAN samoihin
+   * elementteihin: suomi saa täsmälleen saman taiton ja tyylin kuin
+   * alkuperäinen (omistaja 7.8.2026: ei kursiivia, jutun pitää olla
+   * yhtä hyvän näköinen suomeksi), eikä kelluva kuva hypähdä.
+   */
+  let alkuperaiset = uutinen.kuvaus ? [uutinen.kuvaus] : [];
+  let naytaSuomi = false;
+  let suomennos = null;
+  const naytaOtsikko = (teksti, kieli) => {
+    otsikko.textContent = teksti;
+    otsikko.lang = kieli;
+  };
+  const naytaKappaleet = (tekstit, kieli) => {
+    for (const p of runko.querySelectorAll('p')) p.remove();
+    runko.lang = kieli;
+    for (const teksti of tekstit) {
+      const p = html('p', 'uutinen-kappale', teksti);
+      // dir="auto": oikealta vasemmalle kirjoitettava kieli (esim.
+      // arabia) asettuu oikein ilman kielikohtaista koodia.
+      p.dir = 'auto';
+      runko.appendChild(p);
+    }
+  };
+  if (alkuperaiset.length) naytaKappaleet(alkuperaiset, lahde.kieli);
+
+  /*
+   * Suomennos: otsikko ja kappaleet käännetään erikseen, jotta
+   * kappalejako säilyy. Jos ilmainen palvelu ehtyy kesken jutun,
+   * näytetään käännetyt kappaleet eikä sekakielistä loppua —
+   * otsikon on kuitenkin käännyttävä tai koko yritys hylätään.
+   */
+  const kaannaKaikki = async () => {
+    const otsikkoFi = await kaannaSuomeksi(uutinen.otsikko, lahde.kieli);
+    if (!otsikkoFi) return null;
+    const kappaleetFi = [];
+    for (const kappale of alkuperaiset) {
+      const fi = await kaannaSuomeksi(kappale, lahde.kieli);
+      if (!fi) break;
+      kappaleetFi.push(fi);
+    }
+    if (!kappaleetFi.length) return null;
+    return { otsikko: otsikkoFi, kappaleet: kappaleetFi };
+  };
+
+  haeArtikkeli(uutinen.linkki).then(async (artikkeli) => {
+    if (!kortti.isConnected || !artikkeli) return;
+    if (artikkeli.kuva) {
+      kuva.src = artikkeli.kuva;
+      kuva.hidden = false;
+    }
+    if (artikkeli.kappaleet?.length) {
+      alkuperaiset = artikkeli.kappaleet;
+      // Pelkästä kuvauksesta tehty suomennos ei kata artikkelia.
+      suomennos = null;
+      if (!naytaSuomi) {
+        naytaKappaleet(alkuperaiset, lahde.kieli);
+        return;
+      }
+      // Pelaaja ehti kääntää pelkän kuvauksen — käännetään koko
+      // juttu perään (valmiit palat ovat muistissa, haku on kevyt).
+      const koko = await kaannaKaikki();
+      if (!kortti.isConnected || !naytaSuomi || !koko) return;
+      suomennos = koko;
+      naytaOtsikko(koko.otsikko, 'fi');
+      naytaKappaleet(koko.kappaleet, 'fi');
+    }
+  });
+
+  // Sama nappi kulkee kahteen suuntaan: Käännä suomentaa myös
+  // otsikon, jolloin näkyvissä on pelkkää suomea, ja Palauta tuo
+  // alkuperäiskielen takaisin (omistajan malli 7.8.2026).
+  nappi.addEventListener('click', async (e) => {
+    e.stopPropagation();
+    if (naytaSuomi) {
+      naytaSuomi = false;
+      naytaOtsikko(uutinen.otsikko, lahde.kieli);
+      naytaKappaleet(alkuperaiset, lahde.kieli);
+      nappi.textContent = 'Käännä';
+      return;
+    }
+    if (!suomennos) {
+      nappi.textContent = 'Käännetään…';
+      nappi.disabled = true;
+      suomennos = await kaannaKaikki();
+      // Kortti on voitu ehtiä sulkea käännöksen aikana.
+      if (!kortti.isConnected) return;
+      nappi.disabled = false;
+      if (!suomennos) {
+        nappi.textContent = 'Yritä uudelleen';
+        return;
+      }
+    }
+    naytaSuomi = true;
+    naytaOtsikko(suomennos.otsikko, 'fi');
+    naytaKappaleet(suomennos.kappaleet, 'fi');
+    nappi.textContent = 'Palauta';
+  });
+
+  kortti.addEventListener('click', () => ui.suljeKulttuuriKuva());
+  ui.arrivalDialog.appendChild(kortti);
+  ui.kulttuuriKuvaEl = kortti;
+  ui.rekisteroiSuurennosNappaimet();
 }
