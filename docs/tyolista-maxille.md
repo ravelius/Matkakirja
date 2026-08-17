@@ -36,3 +36,41 @@ ensin, toteutus vasta omistajan hyväksynnän jälkeen:
 - Ohjedokumenttien kartta (Raamatun viimeinen osio) ja
   tests/dokumentit.test.mjs ajan tasalle joka vaiheessa.
 - Iso urakka: tee vaiheittain, checkpoint-commit per osa-alue.
+
+## 3. Viestintäprotokolla (todettu 17.8.2026, reittitesti PR #1207)
+
+PR-kommentti EI herätä sessiota, kun kommentti tulee samalta
+GitHub-tililtä (ravelius) — tilaus suodattaa omat tapahtumat.
+Todettu protokolla: SISÄLTÖ AINA GITIIN (Fable → Max: kommentti
+avoimeen kanava-PR:ään tai viesti-max-tiedosto; Max → Fable:
+viesti-fable.md + push), ja HERÄTYS omistajan yhden rivin
+tönäisyllä — tönäisyn ei tarvitse referoida sisältöä, Max lukee
+aktivoituessaan aina kanava-PR:n kommentit ja tuoreen mainin.
+
+## 4. Tuotantosuunnitelma: jäljellä olevat kaupungit ja maat (omistajan tilaus 17.8.2026)
+
+Kun nykyinen remonttiurakka (M-vaiheet + D-vaiheet) on valmis,
+mieti YHDESSÄ FABLEN KANSSA suunnitelma siitä, miten jäljellä
+olevat kaupungit ja maat saadaan tehtyä mahdollisimman NOPEASTI
+mutta myös TALOUDELLISESTI järkevästi. Kaikki työtavat saa
+kyseenalaistaa. Huomioi ainakin:
+
+- Työvoimamalli: Fablen sisäiset agentit (ei herätysongelmaa,
+  raportti tulee automaattisesti) vs. erilliset sessiot vs. Fable
+  itse — ja mikä työ kuuluu millekin. Sijaisen mitattu oppi:
+  agenttiparvi oli väärä työkalu kuvahakuun (2 ytimen katto,
+  Commonsin IP-kohtainen rajoitus) — kuvahaku yhteen tahdistettuun
+  jonoon, tekstit rinnakkain.
+- Toimivat tekniikat, jotka monistetaan kaavaksi: erälisenssi-
+  tarkistus (50 nimeä/kutsu), kontaktiarkkikatselu, kategoriahaku
+  hakusanojen sijaan (välttämätön ei-latinalaisissa maissa),
+  Actions-ajurit avaimellisiin töihin (generointi, kuvanouto).
+- Sisältökaavat: mikä on kaupungin/maan minimikokoonpano (lehti,
+  opas, kartta, liput, äänet) ja missä järjestyksessä erät
+  kannattaa ajaa; monistusvaroitukset (hyvaTietaa-muoto ym.).
+- Talous: mittaa kustannus per kaupunki nykytavalla (API-kulut +
+  token-kulut) ja esitä mihin kannattaa panostaa ja mistä karsia.
+- Laatuportit, jotka EIVÄT jousta: lisenssit API:sta, kuvat
+  silmin, faktat lähteistä, yksi generointiotto.
+- Tulos: suunnitelmadokumentti omistajan hyväksyttäväksi ennen
+  toimeenpanoa.
