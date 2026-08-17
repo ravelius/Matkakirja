@@ -1,0 +1,43 @@
+{
+  "photo": {
+    "id": "53201000001",
+    "secret": "aaa111",
+    "server": "65535",
+    "farm": 66,
+    "dateuploaded": "1684000000",
+    "isfavorite": 0,
+    "license": "4",
+    "safety_level": "0",
+    "rotation": 0,
+    "owner": {
+      "nsid": "11111111@N00",
+      "username": "somechef",
+      "realname": "Somchai Chef",
+      "location": "Bangkok, Thailand",
+      "path_alias": "somechef"
+    },
+    "title": { "_content": "Grilled skewers at a night market stall, Bangkok" },
+    "description": { "_content": "A vendor grilling meat skewers over charcoal at a night market food stall in Bangkok." },
+    "dates": {
+      "posted": "1684000000",
+      "taken": "2023-05-14 12:30:00",
+      "takengranularity": "0",
+      "takenunknown": "0",
+      "lastupdate": "1684000100"
+    },
+    "views": "245",
+    "tags": {
+      "tag": [
+        { "id": "1", "author": "11111111@N00", "raw": "street food", "_content": "streetfood" },
+        { "id": "2", "author": "11111111@N00", "raw": "bangkok", "_content": "bangkok" },
+        { "id": "3", "author": "11111111@N00", "raw": "night market", "_content": "nightmarket" }
+      ]
+    },
+    "urls": {
+      "url": [
+        { "type": "photopage", "_content": "https://www.flickr.com/photos/somechef/53201000001/" }
+      ]
+    }
+  },
+  "stat": "ok"
+}

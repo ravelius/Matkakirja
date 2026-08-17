@@ -1,0 +1,42 @@
+{
+  "photo": {
+    "id": "53201000002",
+    "secret": "bbb222",
+    "server": "65535",
+    "farm": 66,
+    "dateuploaded": "1688000000",
+    "isfavorite": 0,
+    "license": "1",
+    "safety_level": "0",
+    "rotation": 0,
+    "owner": {
+      "nsid": "22222222@N00",
+      "username": "hungrytraveler",
+      "realname": "",
+      "location": "",
+      "path_alias": "hungrytraveler"
+    },
+    "title": { "_content": "Ramen bowl close up, natural light" },
+    "description": { "_content": "A steaming bowl of ramen photographed from above in daylight." },
+    "dates": {
+      "posted": "1688000000",
+      "taken": "2023-07-02 09:15:00",
+      "takengranularity": "0",
+      "takenunknown": "0",
+      "lastupdate": "1688000100"
+    },
+    "views": "89",
+    "tags": {
+      "tag": [
+        { "id": "1", "author": "22222222@N00", "raw": "ramen", "_content": "ramen" },
+        { "id": "2", "author": "22222222@N00", "raw": "food", "_content": "food" }
+      ]
+    },
+    "urls": {
+      "url": [
+        { "type": "photopage", "_content": "https://www.flickr.com/photos/hungrytraveler/53201000002/" }
+      ]
+    }
+  },
+  "stat": "ok"
+}
