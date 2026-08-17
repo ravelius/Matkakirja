@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v809 — Raamatussa: oppaan avauskuva = karuselli jakson tekstistä',
   'v808 — remonttisuunnitelmat mainissa (docs/moduulirakenne + docs-remontti)',
   'v807 — Raamatussa: ei Matkakassaa; työlistassa paketti O5',
   'v806 — Raamatussa: maalehden nimiö, Matkailijalle-kuvan kaava',
