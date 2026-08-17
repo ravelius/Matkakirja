@@ -401,6 +401,7 @@ const SHELL = [
   './assets/kartat/tripoli-varikartta.png',
   './assets/kartat/tokio-varikartta.png',
   './assets/kartat/soul-varikartta.png',
+  './assets/kartat/shanghai-varikartta.png',
   './assets/kartat/venetsia-keskusta.png',
   // Käyttöliittymän lyhyet tehosteet — ydinsetin toinen puolisko
   // (ks. huudahdusten kohdalla oleva selitys).

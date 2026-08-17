@@ -2680,6 +2680,64 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Bosingak', lat: 37.5699, lon: 126.9834 },
     ],
   },
+  shanghai: {
+    polku: 'assets/kartat/shanghai-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 31.248, etela: 31.224, lansi: 121.4655, ita: 121.4955,
+    },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 17.8.2026).
+    piirtoRajat: {
+      pohjoinen: 31.2552, etela: 31.2168, lansi: 121.4565, ita: 121.5045,
+    },
+    varikartta: 'assets/kartat/shanghai-varikartta.png',
+    esittely: 'Kartan oikeaa laitaa hallitsee leveä joki, joka kaartaa '
+      + 'alhaalta ylös ja poistuu yläkulmasta. Se on Huangpu, ja sen '
+      + 'länsirannalla kulkeva kaartuva katu on Bund eli kiinaksi '
+      + 'Waitan. Vasemmalta tulee toinen, paljon kapeampi vesi, joka '
+      + 'mutkittelee kuin nauha ja yhtyy jokeen oikeassa yläkulmassa: '
+      + 'se on Suzhou-puro. Näiden kahden veden kainalo on se paikka, '
+      + 'jossa ulkomaiset kauppahuoneet aloittivat vuonna 1846 — '
+      + 'Shanghai avattiin sopimussatamaksi 1843, ja isoisän matkan '
+      + 'aikaan Bund oli jo täynnä kauppahuoneiden '
+      + 'konttoreita.\n\nKuvan alaosassa erottuu jotain, mitä muualla '
+      + 'kartalla ei ole: soikea katukehä, jonka sisällä kadut ovat '
+      + 'aivan eri kokoisia kuin ulkopuolella. Kehä on vanhan '
+      + 'kaupunginmuurin paikka. Muuri rakennettiin 1553 japanilaisia '
+      + 'merirosvoja vastaan ja purettiin 1912; sen tilalle tuli katu, '
+      + 'ja kehän sisään jäi kiinalainen vanhakaupunki kujineen. Juuri '
+      + 'siellä on Yu-puutarha. Kehän ulkopuolinen ruutukaava on '
+      + 'sopimussataman aikaista uutta kaupunkia.\n\nVasemmalla '
+      + 'puolella on iso vihreä alue, Kansanpuisto ja Kansanaukio. Se '
+      + 'oli 1860-luvulta lähtien laukkaradan sisäkenttä, ja radan '
+      + 'soikea muoto näkyy yhä katujen kulmissa. Sieltä itään lähtee '
+      + 'Nanjing-katu, kaupungin kauppakatu, joka johtaa suoraan '
+      + 'Bundille. Pudongin pilvenpiirtäjät ovat joen toisella '
+      + 'puolella heti kartan itäreunan takana — ne tulevat näkyviin, '
+      + 'kun karttaa suurentaa.',
+    kohteet: [
+      /*
+       * Kuusi kohdetta. Viisi pistettä en-Wikipedian coord-mallista
+       * ja Shanghain museo Wikidatan P625:stä (en-artikkelissa ei ole
+       * koordinaattia). Kaupunginjumalan temppeli on lähteellinen
+       * varakohde mutta vain 165 metriä Yu-puutarhasta, joten se
+       * jätettiin pois — numeroympyrät menisivät päällekkäin.
+       *
+       * fi-Wikipedia tarkistettu rajapinnasta: Bundista, Yu-
+       * puutarhasta ja Nanjing-kadusta ei ole fi-artikkelia, joten
+       * ne nojaavat omaan juttuunsa.
+       */
+      { nimi: 'Bund', lat: 31.238, lon: 121.4861 },
+      // Silta saa olla vedellä (tarkista-karttapisteet.mjs): piste on
+      // sillan keskellä Suzhou-puron päällä, koska juuri se on kohde.
+      { nimi: 'Waibaidun silta', lat: 31.2431, lon: 121.49 },
+      { nimi: 'Rauhanhotelli', lat: 31.2411, lon: 121.4846 },
+      { nimi: 'Yu-puutarha', lat: 31.2292, lon: 121.4875 },
+      { nimi: 'Nanjing-katu', lat: 31.2347, lon: 121.4744 },
+      { nimi: 'Shanghain museo', lat: 31.2303, lon: 121.4706 },
+    ],
+  },
   isfahan: {
     polku: 'assets/kartat/isfahan-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

@@ -1226,6 +1226,51 @@ const KAUPUNGIT = {
     laajennus: 1.6,
     palvelutiet: true,
   },
+  shanghai: {
+    /*
+     * Huangpu-joki tulee kuvaan oikeasta alakulmasta, kaartaa
+     * pohjoiseen ja poistuu oikeasta ylälaidasta; sen mutkan sisään
+     * jää Bund eli Waitan, ja mutkan pohjoispäässä Suzhou-puro
+     * yhtyy jokeen. Joki on kuvan juoni samalla tavalla kuin Tiber
+     * Roomassa: kaikki kuusi kohdetta ovat sen länsipuolella,
+     * rannasta 2,5 kilometrin päähän länteen.
+     *
+     * MIKSI TÄMÄ NURKKA SHANGHAISTA. Kaupungissa on 25 miljoonaa
+     * asukasta ja sen tunnetut kohteet ovat kymmenien kilometrien
+     * päässä toisistaan (Longhua etelässä, Jing'an lännessä,
+     * Zhujiajiao 50 km länteen). Bundin ja vanhankaupungin välinen
+     * kaistale on ainoa nurkka, jossa kuusi lähteellistä kohdetta on
+     * kävelymatkan päässä toisistaan — ja se on se Shanghai, joka
+     * kasvoi 1800-luvulla sopimussatamana eli isoisän aikaan.
+     *
+     * PUDONG JÄÄ TAHALLAAN REUNUKSELLE. Helmitorni on 121,4998 eli
+     * 430 metriä itärajan takana. Sisään ottaminen leventäisi ruudun
+     * 3,4 kilometriin ja litistäisi vanhankaupungin kujaverkon
+     * kuvan alalaitaan — sama virhe kuin Firenzen ensimmäisessä
+     * ajossa. Laajennus 1,6 näyttää Pudongin heti, kun karttaa
+     * suurentaa, ja lehden esittely kertoo mihin suuntaan se jää.
+     *
+     * KOHTEIDEN PISTEET LÄHTEISTÄ. Viisi on en-Wikipedian
+     * coord-mallista ja Shanghain museo Wikidatan P625:stä:
+     *   Bund (Waitan)      31,2380 / 121,4861
+     *   Waibaidun silta    31,2431 / 121,4900
+     *   Rauhanhotelli      31,2411 / 121,4846
+     *   Yu-puutarha        31,2292 / 121,4875
+     *   Nanjing-katu       31,2347 / 121,4744
+     *   Shanghain museo    31,2303 / 121,4706  (Wikidata)
+     * Kaupunginjumalan temppeli on lähteellinen varakohde mutta vain
+     * 165 metriä Yu-puutarhasta, joten numeroympyrät menisivät
+     * päällekkäin — sama ratkaisu kuin Tokion Hōzōmonin kanssa.
+     *
+     * palvelutiet: true — vanhankaupungin kujat Yu-puutarhan
+     * ympärillä ja Bundin takakorttelien sisäpihat ovat OSM:ssä
+     * service-teitä. Ilman niitä kuvan itäosa on pelkkiä
+     * pääkatuja.
+     */
+    rajat: { pohjoinen: 31.248, etela: 31.224, lansi: 121.4655, ita: 121.4955 },
+    laajennus: 1.6,
+    palvelutiet: true,
+  },
   bagdad: {
     // Rusafan vanha puoli Tigrisin itärannalla: Mutanabbin kirjakatu,
     // abbasidipalatsi, Qishlan kellotorni ja Bagdadin museo ovat

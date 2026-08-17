@@ -678,6 +678,46 @@ const KUVAT = [
     + 'green-and-red painted eaves, with a huge dark bronze bell '
     + 'hanging in the shadow beneath. A low stone balustrade rings the '
     + 'platform'],
+
+  /*
+   * ── Shanghai, kuusi kohdetta (E00-viimeistely 17.8.2026) ────────
+   * VAIN JONOSSA, ei generoitu (ks. Tampere yllä).
+   *
+   * Shanghain kohteista neljä on länsimaista 1900-luvun alun
+   * arkkitehtuuria ja kaksi kiinalaista. Kehotteissa on siksi
+   * kirjoitettu auki se, mikä erottaa ne toisistaan: kivijulkisivu
+   * ja kellotorni toisaalla, kaartuvat räystäänkulmat ja
+   * kalkkikivilohkareet toisaalla — ilman sitä malli sekoittaa
+   * tyylit keskenään.
+   */
+  ['shanghai-bund', 'a row of grand early-20th-century stone bank '
+    + 'buildings standing shoulder to shoulder along a wide riverside '
+    + 'embankment, seen from across the water: heavy grey classical '
+    + 'facades with columns and cornices, one domed clock tower rising '
+    + 'above the middle of the row. Flat empty water in front'],
+  ['shanghai-waibaidun-silta', 'a riveted steel truss bridge whose top '
+    + 'chord rises in two low humps like a camel\'s back, its lattice '
+    + 'of diagonal girders drawn clearly, crossing a narrow creek on '
+    + 'stone piers. Seen from the bank at a low angle. NO traffic'],
+  ['shanghai-rauhanhotelli', 'a ten-storey art deco corner tower of '
+    + 'pale granite: strong vertical window bands, stepped setbacks '
+    + 'near the top, and crowning it a very steep copper pyramid roof '
+    + 'weathered pale green. Arched shopfronts along the ground floor'],
+  ['shanghai-yu-puutarha', 'a classical chinese garden pond: a '
+    + 'two-storey dark red timber pavilion with sharply upcurving roof '
+    + 'corners stands at the water\'s edge, a low covered walkway runs '
+    + 'along the left bank, and a zigzag stone bridge crosses the '
+    + 'water. White pitted limestone rocks piled at the shore'],
+  ['shanghai-nanjing-katu', 'a broad pedestrian shopping street seen '
+    + 'down its length: tall vertical shop signs in chinese characters '
+    + 'stacked one above another on both sides, awnings and lanterns, '
+    + 'a paved street with low stone bollards down the middle. Busy '
+    + 'but drawn simply'],
+  ['shanghai-shanghain-museo', 'a modern museum building shaped like '
+    + 'an ancient chinese bronze cooking vessel: a low square base of '
+    + 'pale stone carrying a wide flat round drum, and from the rim of '
+    + 'the drum two curved arch-like handles rising into the air. Lawn '
+    + 'in front, NO people'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
