@@ -26,6 +26,7 @@ import {
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { kaariLuentaSoi, TARINAKAARI } from './packs/tarinakaari.js';
 import { KOHTAAMISLUENNAT } from './sisaltotaulut.js';
+import { sfx } from './sound.js';
 import { aarreIkoni, html } from './ui-apurit.js';
 
 /**

@@ -15,6 +15,7 @@ import {
 } from './lukija.js';
 import { aaniUrl, haeAani, onPeilista, peiliPetti } from './media.js';
 import { puheTuettu } from './puhe.js';
+import { sfx } from './sound.js';
 
 /*
  * Luennan loppuhäivytys. Aiempi neljännessekunti oli niin lyhyt, että
