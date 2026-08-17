@@ -212,6 +212,13 @@ const CITIES = [
   {"id":"krakova","name":"Krakova","wiki":"Krakova","ambience":"kaupunki","x":6497.9,"y":1387.5,"la":"start","lx":20,"ly":5},
   {"id":"alpit","name":"Alpit","wiki":"Alpit","ambience":"vuoristo","x":6077.8,"y":1490.4,"la":"start","lx":20,"ly":5},
   {"id":"venetsia","name":"Venetsia","wiki":"Venetsia","ambience":"satama","x":6248.4,"y":1582.8,"la":"start","lx":20,"ly":5},
+  // KÄSIN LISÄTTY 17.8.2026 samalla kaavalla kuin Tampere (ks. sen
+  // kommentti yllä): todellinen paikka 43,77°N 11,256°E projisoituna.
+  // Maalla; Venetsiaan 80,0 ja Roomaan 86,4 yks (raja 60), joten
+  // maailmankartalla EI tarvita lähdelaudan länsisiirtoa (europe.js
+  // siirsi Firenzen 412,746:een, koska laudan mittakaavassa väli jäi
+  // alle 60:n). Nimikilpi oikealle kuten lähdelaudalla.
+  {"id":"firenze","name":"Firenze","wiki":"Firenze","ambience":"kaupunki","x":6208.5,"y":1652.1,"la":"start","lx":20,"ly":5},
   {"id":"rooma","name":"Rooma","wiki":"Rooma","ambience":"kaupunki","x":6249.7,"y":1728.1,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"sisilia","name":"Sisilia","wiki":"Sisilia","ambience":"meri","x":6279.2,"y":1876.1,"la":"end","lx":-20,"ly":5},
   {"id":"ateena","name":"Ateena","wiki":"Ateena","ambience":"kaupunki","x":6624.7,"y":1882,"start":true,"airport":true,"la":"end","lx":-17,"ly":-16},
@@ -487,7 +494,11 @@ const EDGES = [
   {"a":"wien","b":"venetsia","steps":4},
   {"a":"alpit","b":"venetsia","steps":3},
   {"a":"alpit","b":"berliini","steps":4},
-  {"a":"venetsia","b":"rooma","steps":3},
+  // Firenze katkaisi suoran venetsia–rooma-yhteyden kahtia kuten
+  // lähdelaudalla (europe.js): suora reitti olisi ohittanut uuden
+  // kaupungin rinnakkaisena pikatienä.
+  {"a":"venetsia","b":"firenze","steps":2},
+  {"a":"firenze","b":"rooma","steps":2},
   {"a":"budapest","b":"sarajevo","steps":2},
   {"a":"sarajevo","b":"dubrovnik","steps":2},
   {"a":"sarajevo","b":"sofia","steps":3},
@@ -860,7 +871,11 @@ const EDGES = [
  * Siemenenä lähdelautojen ja vanhan maailman jo ratkaistut tunnukset;
  * loput haetaan Wikidatasta työkalulla tools/hae-maatunnukset.mjs.
  */
+<<<<<<< HEAD
 const CITY_COUNTRY = {"lontoo":"GBR","istanbul":"TUR","dublin":"IRL","edinburgh":"GBR","pariisi":"FRA","marseille":"FRA","lissabon":"PRT","madrid":"ESP","barcelona":"ESP","granada":"ESP","amsterdam":"NLD","berliini":"DEU","praha":"CZE","wien":"AUT","budapest":"HUN","varsova":"POL","krakova":"POL","alpit":"CHE","venetsia":"ITA","rooma":"ITA","sisilia":"ITA","ateena":"GRC","kreeta":"GRC","dubrovnik":"HRV","sarajevo":"BIH","sofia":"BGR","bukarest":"ROU","kiova":"UKR","odessa":"UKR","moskova":"RUS","pietari":"RUS","helsinki":"FIN","tampere":"FIN","tallinna":"EST","riika":"LVA","vilna":"LTU","tukholma":"SWE","oslo":"NOR","kobenhavn":"DNK","lappi":"FIN","tromssa":"NOR","islanti":"ISL","tanger":"MAR","kairo":"EGY","karthago":"TUN","tripoli":"LBY","murzuk":"LBY","alkufra":"LBY","sahara":"DZA","ahaggar":"DZA","marrakech":"MAR","timbuktu":"MLI","gao":"MLI","dakar":"SEN","sierraleone":"SLE","kappalmas":"LBR","kumasi":"GHA","orjarannikko":"NGA","kano":"NGA","lagos":"NGA","tshadjarvi":"TCD","kamerun":"CMR","kongo":"COD","angola":"AGO","namib":"NAM","sthelena":"SHN","kapkaupunki":"ZAF","viktorianputoukset":"ZWE","kimberley":"ZAF","mosambik":"MOZ","madagaskar":"MDG","sansibar":"TZA","nairobi":"KEN","kilimandzaro":"TZA","viktoria":"UGA","tanganjika":"COD","bahrelghazal":"SDS","darfur":"SDN","suakin":"SDN","addisabeba":"ETH","rashafun":"SOM","izmir":"TUR","ankara":"TUR","kapadokia":"TUR","nikosia":"CYP","halab":"SYR","damaskos":"SYR","petra":"JOR","siinai":"EGY","luxor":"EGY","medina":"SAU","mekka":"SAU","riad":"SAU","rubalkhali":"SAU","sana":"YEM","aden":"YEM","salalah":"OMN","masqat":"OMN","dubai":"ARE","doha":"QAT","kuwait":"KWT","bagdad":"IRQ","mosul":"IRQ","tabriz":"IRN","teheran":"IRN","isfahan":"IRN","persepolis":"IRN","tokio":"JPN","astana":"KAZ","novosibirsk":"RUS","irkutsk":"RUS","magadan":"RUS","kamtsatka":"RUS","sahalin":"RUS","vladivostok":"RUS","ulanbator":"MNG","peking":"CHN","soul":"KOR","xian":"CHN","shanghai":"CHN","taipei":"TWN","hongkong":"HKG","manila":"PHL","hanoi":"VNM","bangkok":"THA","yangon":"MMR","singapore":"SGP","sumatra":"IDN","borneo":"IDN","jakarta":"IDN","lhasa":"CHN","kathmandu":"NPL","delhi":"IND","kolkata":"IND","mumbai":"IND","chennai":"IND","colombo":"LKA","karachi":"PAK","kabul":"AFG","samarkand":"UZB","kashgar":"CHN","newyork":"USA","sanfrancisco":"USA","nome":"USA","anchorage":"USA","whitehorse":"CAN","yellowknife":"CAN","vancouver":"CAN","yellowstone":"USA","mountrushmore":"USA","winnipeg":"CAN","churchill":"CAN","iqaluit":"CAN","nuuk":"GRL","labrador":"CAN","stjohns":"CAN","halifax":"CAN","montreal":"CAN","toronto":"CAN","chicago":"USA","appalakit":"USA","bermuda":"GBR","denver":"USA","santafe":"USA","grandcanyon":"USA","losangeles":"USA","hawaii":"USA","houston":"USA","neworleans":"USA","miami":"USA","havanna":"CUB","sanjuan":"USA","monterrey":"MEX","mexico":"MEX","merida":"MEX","guatemala":"GTM","managua":"NIC","panama":"PAN","buenosaires":"ARG","caracas":"VEN","bogota":"COL","quito":"ECU","galapagos":"ECU","boavista":"BRA","cayenne":"FRA","macapa":"BRA","manaus":"BRA","santarem":"BRA","saoluis":"BRA","joaopessoa":"BRA","salvador":"BRA","iquitos":"PER","portovelho":"BRA","bananal":"BRA","machupicchu":"PER","titicaca":"PER","lima":"PER","santacruz":"BOL","campogrande":"BRA","rio":"BRA","saopaulo":"BRA","iguazu":"ARG","portoalegre":"BRA","antofagasta":"CHL","salta":"ARG","asuncion":"PRY","valparaiso":"CHL","robinsoncrusoe":"CHL","puertomontt":"CHL","falkland":"GBR","puntaarenas":"CHL","caphorn":"CHL","sydney":"AUS","perth":"AUS","melbourne":"AUS","brisbane":"AUS","cairns":"AUS","darwin":"AUS","adelaide":"AUS","alicesprings":"AUS","uluru":"AUS","broome":"AUS","kalgoorlie":"AUS","townsville":"AUS","hobart":"AUS","nullarbor":"AUS","mountisa":"AUS","geraldton":"AUS","portmoresby":"PNG","sepik":"PNG","honiara":"SLB","portvila":"VUT","noumea":"FRA","norfolk":"AUS","suva":"FJI","auckland":"NZL","wellington":"NZL","christchurch":"NZL","milfordsound":"NZL","dili":"TLS","bali":"IDN","jekaterinburg":"RUS","jakutsk":"RUS","montevideo":"URY","sanambrosio":"CHL","birdsville":"AUS","exmouth":"AUS","cooberpedy":"AUS"};
+=======
+const CITY_COUNTRY = {"lontoo":"GBR","istanbul":"TUR","dublin":"IRL","edinburgh":"GBR","pariisi":"FRA","marseille":"FRA","lissabon":"PRT","madrid":"ESP","barcelona":"ESP","granada":"ESP","amsterdam":"NLD","berliini":"DEU","praha":"CZE","wien":"AUT","budapest":"HUN","varsova":"POL","krakova":"POL","alpit":"CHE","venetsia":"ITA","firenze":"ITA","rooma":"ITA","sisilia":"ITA","ateena":"GRC","kreeta":"GRC","dubrovnik":"HRV","sarajevo":"BIH","sofia":"BGR","bukarest":"ROU","kiova":"UKR","odessa":"UKR","moskova":"RUS","pietari":"RUS","helsinki":"FIN","tampere":"FIN","tallinna":"EST","riika":"LVA","vilna":"LTU","tukholma":"SWE","oslo":"NOR","kobenhavn":"DNK","lappi":"FIN","tromssa":"NOR","islanti":"ISL","tanger":"MAR","kairo":"EGY","karthago":"TUN","tripoli":"LBY","murzuk":"LBY","alkufra":"LBY","sahara":"DZA","ahaggar":"DZA","marrakech":"MAR","timbuktu":"MLI","gao":"MLI","dakar":"SEN","sierraleone":"SLE","kappalmas":"LBR","kumasi":"GHA","orjarannikko":"NGA","kano":"NGA","lagos":"NGA","tshadjarvi":"TCD","kamerun":"CMR","kongo":"COD","angola":"AGO","namib":"NAM","sthelena":"SHN","kapkaupunki":"ZAF","viktorianputoukset":"ZWE","kimberley":"ZAF","mosambik":"MOZ","madagaskar":"MDG","sansibar":"TZA","nairobi":"KEN","kilimandzaro":"TZA","viktoria":"UGA","tanganjika":"COD","bahrelghazal":"SDS","darfur":"SDN","suakin":"SDN","addisabeba":"ETH","rashafun":"SOM","izmir":"TUR","ankara":"TUR","kapadokia":"TUR","nikosia":"CYP","halab":"SYR","damaskos":"SYR","petra":"JOR","siinai":"EGY","luxor":"EGY","medina":"SAU","mekka":"SAU","riad":"SAU","rubalkhali":"SAU","sana":"YEM","aden":"YEM","salalah":"OMN","masqat":"OMN","dubai":"ARE","doha":"QAT","kuwait":"KWT","bagdad":"IRQ","mosul":"IRQ","tabriz":"IRN","teheran":"IRN","isfahan":"IRN","persepolis":"IRN","tokio":"JPN","astana":"KAZ","novosibirsk":"RUS","irkutsk":"RUS","magadan":"RUS","kamtsatka":"RUS","sahalin":"RUS","vladivostok":"RUS","ulanbator":"MNG","peking":"CHN","soul":"KOR","xian":"CHN","shanghai":"CHN","taipei":"TWN","hongkong":"HKG","manila":"PHL","hanoi":"VNM","bangkok":"THA","yangon":"MMR","singapore":"SGP","sumatra":"IDN","borneo":"IDN","jakarta":"IDN","lhasa":"CHN","kathmandu":"NPL","delhi":"IND","kolkata":"IND","mumbai":"IND","chennai":"IND","colombo":"LKA","karachi":"PAK","kabul":"AFG","samarkand":"UZB","kashgar":"CHN","newyork":"USA","sanfrancisco":"USA","nome":"USA","anchorage":"USA","whitehorse":"CAN","yellowknife":"CAN","vancouver":"CAN","yellowstone":"USA","mountrushmore":"USA","winnipeg":"CAN","churchill":"CAN","iqaluit":"CAN","nuuk":"GRL","labrador":"CAN","stjohns":"CAN","halifax":"CAN","montreal":"CAN","toronto":"CAN","chicago":"USA","appalakit":"USA","bermuda":"GBR","denver":"USA","santafe":"USA","grandcanyon":"USA","losangeles":"USA","hawaii":"USA","houston":"USA","neworleans":"USA","miami":"USA","havanna":"CUB","sanjuan":"USA","monterrey":"MEX","mexico":"MEX","merida":"MEX","guatemala":"GTM","managua":"NIC","panama":"PAN","buenosaires":"ARG","caracas":"VEN","bogota":"COL","quito":"ECU","galapagos":"ECU","boavista":"BRA","cayenne":"FRA","macapa":"BRA","manaus":"BRA","santarem":"BRA","saoluis":"BRA","joaopessoa":"BRA","salvador":"BRA","iquitos":"PER","portovelho":"BRA","bananal":"BRA","machupicchu":"PER","titicaca":"PER","lima":"PER","santacruz":"BOL","campogrande":"BRA","rio":"BRA","saopaulo":"BRA","iguazu":"ARG","portoalegre":"BRA","antofagasta":"CHL","salta":"ARG","asuncion":"PRY","valparaiso":"CHL","robinsoncrusoe":"CHL","puertomontt":"CHL","falkland":"GBR","puntaarenas":"CHL","caphorn":"CHL","sydney":"AUS","perth":"AUS","melbourne":"AUS","brisbane":"AUS","cairns":"AUS","darwin":"AUS","adelaide":"AUS","alicesprings":"AUS","uluru":"AUS","broome":"AUS","kalgoorlie":"AUS","townsville":"AUS","hobart":"AUS","nullarbor":"AUS","mountisa":"AUS","geraldton":"AUS","portmoresby":"PNG","sepik":"PNG","honiara":"SLB","portvila":"VUT","noumea":"FRA","norfolk":"AUS","suva":"FJI","auckland":"NZL","wellington":"NZL","christchurch":"NZL","milfordsound":"NZL","dili":"TLS","bali":"IDN","jekaterinburg":"RUS","jakutsk":"RUS","montevideo":"URY","sanambrosio":"CHL","birdsville":"AUS","exmouth":"AUS","cooberpedy":"AUS"};
+>>>>>>> origin/claude/fable-int-firenze
 
 /*
  * Maiden rajat, nimet ja liput. Siirretty vanhalta yhdistetyltä
@@ -1050,7 +1065,11 @@ export const MAAILMANKARTTA = {
      * löytömannerta).
      */
     mannerTypes: Object.fromEntries(LAHDEPAKAT.map((p) => [p.id, p.tokens.types])),
+<<<<<<< HEAD
     // Laattamäärä = kaupunkien määrä (249): jokainen kaupunki saa
+=======
+    // Laattamäärä = kaupunkien määrä (250): jokainen kaupunki saa
+>>>>>>> origin/claude/fable-int-firenze
     // laatan, myös aloituskaupungit (omistajan päätös 10.8.2026).
     // Aloituskaupunkien 19 lisälaattaa ovat jalokiviä — ei uusia
     // tyhjiä, rosvoja eikä tähtiä, ettei alku ala pettymyksellä.
@@ -1065,9 +1084,17 @@ export const MAAILMANKARTTA = {
     // tähteä otettiin tyhjistä samalla perusteella kuin linssit
     // (77 -> 71).
     //
+<<<<<<< HEAD
     // TAMPERE (17.8.2026) nosti kaupunkimäärän 248 -> 249; lisälaatta
     // on topaasi kuten lähdelaudalla (europe.js: topaz 10 -> 11).
     counts: {"star":7,"horseshoe":11,"robber":18,"ruby":34,"emerald":43,"topaz":58,"empty":71,"linssi":7},
+=======
+    // TAMPERE JA FIRENZE (17.8.2026) nostivat kaupunkimäärän
+    // 248 -> 250; lisälaatat kuten lähdelaudalla (europe.js):
+    // Tampereen laatta topaasiin (57 -> 58), Firenzen tyhjiin
+    // (71 -> 72).
+    counts: {"star":7,"horseshoe":11,"robber":18,"ruby":34,"emerald":43,"topaz":58,"empty":72,"linssi":7},
+>>>>>>> origin/claude/fable-int-firenze
   },
 
   questions: yhdistaKysymykset(),

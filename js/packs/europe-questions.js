@@ -1637,6 +1637,52 @@ export const EUROPE_QUESTIONS = {
     },
   ],
 
+  firenze: [
+    {
+      q: 'Minkä maan kaupunki Firenze on?',
+      options: ['Italia', 'Espanja', 'Portugali', 'Kreikka'],
+      correct: 0,
+      level: 1,
+      fact: 'Firenze on Toscanan maakunnan pääkaupunki Keski-Italiassa, ja sen halki virtaa Arno-joki.',
+      hint: 'Maa on saappaan muotoinen niemimaa Välimerellä.',
+      source: 'https://fi.wikipedia.org/wiki/Firenze',
+    },
+    {
+      q: 'Kuka suunnitteli Firenzen tuomiokirkon kupolin?',
+      options: ['Filippo Brunelleschi', 'Leonardo da Vinci', 'Giotto di Bondone', 'Sandro Botticelli'],
+      correct: 0,
+      level: 3,
+      fact: 'Kupoli muurattiin vuosina 1420–1436 ilman kokonaista puista tukirakennelmaa, ja se on yhä maailman suurin tiilistä muurattu kupoli.',
+      hint: 'Mies voitti kupolikilpailun vuonna 1418 ja oli koulutukseltaan kultaseppä.',
+      source: 'https://fi.wikipedia.org/wiki/Santa_Maria_del_Fiore',
+    },
+    {
+      q: 'Mitä Ponte Vecchion kaupoissa on myyty vuodesta 1593 lähtien?',
+      options: ['kultasepäntöitä', 'lihaa', 'kalaa', 'kirjoja'],
+      correct: 0,
+      fact: 'Suurherttua Ferdinando I määräsi teurastajat pois sillalta vuonna 1593 ja antoi paikat kultasepille. Ponte Vecchio on ainoa Firenzen silta, jota ei tuhottu vuonna 1944.',
+      hint: 'Tavara on pientä, kallista ja kiiltävää.',
+      source: 'https://fi.wikipedia.org/wiki/Ponte_Vecchio',
+    },
+    {
+      q: 'Mitä italian sana uffizi tarkoittaa?',
+      options: ['virastoja', 'aarteita', 'kaaria', 'siltoja'],
+      correct: 0,
+      level: 3,
+      fact: 'Giorgio Vasari alkoi rakentaa taloa vuonna 1560 Medicien hallinnon työhuoneiksi. Taidekokoelma muutti sinne vasta myöhemmin, ja museona talo avattiin yleisölle 1769.',
+      hint: 'Talo rakennettiin alun perin työntekoa eikä taidetta varten.',
+      source: 'https://fi.wikipedia.org/wiki/Uffizi',
+    },
+    {
+      q: 'Kuka firenzeläinen runoilija kirjoitti Jumalaisen näytelmän?',
+      options: ['Dante Alighieri', 'Francesco Petrarca', 'Giovanni Boccaccio', 'Niccolò Machiavelli'],
+      correct: 0,
+      fact: 'Runoelma kirjoitettiin latinan sijasta toscanan puhekielellä, ja juuri siitä muotoutui nykyinen italian kirjakieli. Tekijä karkotettiin Firenzestä 1302 eikä palannut sinne koskaan.',
+      hint: 'Runoilija kulkee teoksessaan helvetin, kiirastulen ja paratiisin läpi.',
+      source: 'https://fi.wikipedia.org/wiki/Dante_Alighieri',
+    },
+  ],
+
   kobenhavn: [
     {
       q: 'Minkä maan pääkaupunki Kööpenhamina on?',
@@ -2307,6 +2353,15 @@ export const EUROPE_FACTS = {
       voice: 'isoisa',
     },
   ],
+  firenze: [
+    { text: 'Firenzessä lyötiin vuodesta 1252 kultarahaa nimeltä floriini, ja siitä tuli niin luotettu, että sillä maksettiin kauppavelkoja ympäri Eurooppaa.', source: 'https://fi.wikipedia.org/wiki/Floriini' },
+    { text: 'Michelangelon David seisoi kolme ja puoli vuosisataa ulkona Signorian aukiolla. Se siirrettiin sisätiloihin vuonna 1873, ja aukiolla on nykyään kopio.', source: 'https://fi.wikipedia.org/wiki/Daavid_(Michelangelo)' },
+    {
+      text: 'Hallitus muutti täältä Roomaan kaksi vuotta sitten, ja kaupunki maksaa yhä velkoja kaduista, jotka se levensi pääkaupungiksi. Signorian aukiolta nostettiin juuri jättiläispatsas katon alle suojaan.',
+      voice: 'isoisa',
+    },
+  ],
+
   kobenhavn: [
     'Kööpenhaminan ja Ruotsin Malmön yhdistää Juutinrauman silta, joka sukeltaa keskellä salmea tunneliin tekosaaren kautta.',
     'Tanskalainen sana hygge tarkoittaa lämmintä ja kiireetöntä yhdessäoloa — kynttilöitä, kahvia ja hyvää seuraa.',
