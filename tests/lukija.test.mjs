@@ -86,7 +86,7 @@ function aihesivu() {
 /**
  * Maalehden alku: tilastorivit, tervehdykset ja vasta sitten juttu.
  *
- * Rakenne on sama kuin js/ui.js naytaMaaTunnusluvut piirtää.
+ * Rakenne on sama kuin js/maalehti.js naytaMaaTunnusluvut piirtää.
  */
 function maalehdenAlku() {
   return el('div', { id: 'arrival-maa' },
