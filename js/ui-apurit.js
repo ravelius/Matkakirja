@@ -11,6 +11,10 @@ import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { tokenIconSvg } from './mapart.js';
 
+// Tapahtumakuplien kestot (siirretty ui.js:stä M3:ssa: myös
+// vertailutila tarvitsee oletuskeston ilman kiertotuontia).
+export const TOAST_MS = { die: 950, default: 1200 };
+
 // Pyyhkäisy: osuus silmukasta, jonka aikana valmis jälki häipyy pois
 // ennen kuin se piirtyy uudelleen. Ilman häivytystä koko reitti
 // katoaisi yhdellä ruudulla, ja se näkyisi nykäyksenä.

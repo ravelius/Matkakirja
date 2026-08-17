@@ -1,10 +1,11 @@
 /*
  * Vertailutila (v321): vertailulinssi ottaa karttanäkymän haltuunsa.
  *
- * Toteutus on neljässä paikassa — linssimoduuli, js/ui.js:n tila,
- * js/maakayrat.js:n piirto ja css. Testit lukevat lähdetekstin, koska
- * ui.js ei aukea Nodessa (DOM), ja vahtivat juuri ne kohdat, joissa
- * osat voivat eriytyä toisistaan.
+ * Toteutus on viidessä paikassa — linssimoduuli, js/vertailu.js
+ * (remontin M3: tila muutti omaan moduuliinsa), js/ui.js:n
+ * kytkennät, js/maakayrat.js:n piirto ja css. Testit lukevat
+ * lähdetekstin, koska ui.js ei aukea Nodessa (DOM), ja vahtivat
+ * juuri ne kohdat, joissa osat voivat eriytyä toisistaan.
  */
 
 import test from 'node:test';
@@ -15,16 +16,17 @@ import { VERTAILUVARIT, piirraVertailu } from '../js/maakayrat.js';
 import { LINSSI } from '../js/linssit/vertailu.js';
 
 const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+const vertailu = readFileSync(new URL('../js/vertailu.js', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
 const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 
 test('värilista on sama ui.js:ssä ja maakayrat.js:ssä', () => {
   /*
-   * ui.js pitää samaa listaa toisintona, koska alapalkki tarvitsee
+   * vertailu.js pitää samaa listaa toisintona, koska alapalkki tarvitsee
    * värit ennen kuin maakayrat.js on ladattu (laiska tuonti). Jos
    * listat eriytyvät, kartan lappu ja käyrä olisivat eri väriset.
    */
-  const rivi = ui.match(/const VERTAILUVARIT = \[([\s\S]*?)\];/)?.[1] ?? '';
+  const rivi = vertailu.match(/const VERTAILUVARIT = \[([\s\S]*?)\];/)?.[1] ?? '';
   const uiVarit = [...rivi.matchAll(/'([^']+)'/g)].map((m) => m[1]);
   assert.deepEqual(uiVarit, VERTAILUVARIT, 'värilistat eriytyivät');
 });
@@ -48,14 +50,14 @@ test('jokaisella värillä on viiva, laatta ja fill: none', () => {
 
 test('vertailutila on kartan tila, ei karttakerros', () => {
   assert.equal(LINSSI.kerros, false, 'vertailulinssi ei piirrä kerrosta');
-  assert.match(ui, /tahdistaVertailu\(tunnus === 'vertailu'\)/,
+  assert.match(ui, /tahdistaVertailu\(this, tunnus === 'vertailu'\)/,
     'tila ei kytkeydy linssin sytytyksestä');
-  assert.match(ui, /classList\.toggle\('vertailu-tila', halutaan\)/,
+  assert.match(vertailu, /classList\.toggle\('vertailu-tila', halutaan\)/,
     'bodyn luokkaa ei aseteta');
   // Kerros piirretään joka piirrossa uudestaan: ilman tätä kaupungit
   // palaisivat kartalle heti kun lauta piirretään uusiksi.
   const piirto = ui.match(/this\.drawCountryBorders\(\);[\s\S]{0,600}?this\.drawTokens\(\);/)?.[0] ?? '';
-  assert.match(piirto, /piirraVertailuMaat\(\)/, 'maakerrosta ei piirretä joka piirrossa');
+  assert.match(piirto, /piirraVertailuMaat\(this\)/, 'maakerrosta ei piirretä joka piirrossa');
 });
 
 test('kaupungit piilotetaan ja alanapit korvataan palkilla', () => {
@@ -64,21 +66,21 @@ test('kaupungit piilotetaan ja alanapit korvataan palkilla', () => {
     'kaupungit eivät katoa vertailutilassa');
   assert.match(saannot, /body\.vertailu-tila[^{]*\.actions[^{]*\{[^}]*visibility: hidden/,
     'alanapit eivät piiloudu');
-  assert.match(ui, /html\('button', 'primary vertailu-vertaa', 'Vertaa'\)/,
+  assert.match(vertailu, /html\('button', 'primary vertailu-vertaa', 'Vertaa'\)/,
     'Vertaa-nappi puuttuu palkista');
 });
 
 test('valintoja mahtuu neljä: kolme maata ja Suomi', () => {
-  assert.match(ui, /static get VERTAILU_MAX\(\) \{ return 4; \}/,
+  assert.match(vertailu, /export const VERTAILU_MAX = 4;/,
     'enimmäismäärä ei ole neljä');
-  assert.match(ui, /countryShapes\?\.FIN/, 'Suomea ei aseteta valmiiksi valinnaksi');
+  assert.match(vertailu, /countryShapes\?\.FIN/, 'Suomea ei aseteta valmiiksi valinnaksi');
 });
 
 test('vertailunäkymän kuori on index.htmlssä', () => {
   assert.match(html, /id="vertailu-dialog"/, 'dialogi puuttuu');
   assert.match(html, /id="vertailu-ylarivi"/, 'ylärivi puuttuu');
   assert.match(html, /id="vertailu-sisalto"/, 'sisältökotelo puuttuu');
-  assert.match(ui, /Muuta valintoja/, 'paluu kartalle puuttuu');
+  assert.match(vertailu, /Muuta valintoja/, 'paluu kartalle puuttuu');
 });
 
 test('piirraVertailu kestää tyhjän ja tuntemattoman maan', () => {

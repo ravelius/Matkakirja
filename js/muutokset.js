@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 815, teksti: 'Liput, karttazoom ja vertailu omiksi moduuleiksi (M3)' },
   { v: 814, teksti: 'UI:n apurit ja kehysmatikka omaan moduuliin (M2)' },
   { v: 813, teksti: 'Sisältötaulut omaksi moduulikseen (remontti M1)' },
   { v: 812, teksti: 'Miniatyyrigenerointiin hybridimalli (halpa/pro per kohde)' },
