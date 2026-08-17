@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v831 — Tampere Euroopan laudalla lehtineen (avaa lehti!); Lappi on nyt Rovaniemi (lehti vielä vanha Lappi-lehti)',
   'v830 — LAITETESTI iPad/iPhone: kartan eleet (raahaus, liuku, nipistys, rullazoom) toimivat kuten ennen',
   'v829 — kartta toimii kuten ennen (kamera omaksi moduulikseen): zoomi, panorointi, mannerzoom, lähikuvat',
   'v828 — taustapaperi ei näy enää millään ikkunamuodolla (kokeile kapea pysty- ja matala vaakaikkuna aloituskartalla ja mantereilla)',
