@@ -1744,9 +1744,28 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   pointer-events: none;
 }
 
-/* Hennot selailunuolet: kuvia voi vaihtaa avaamatta isoksi. Koko kuvan
-   vasen ja oikea laita on klikattavaa nuolialuetta; keskeltä kuva aukeaa
-   suurennokseen. Dialogin yleinen nappityyli kumotaan tässä. */
+/*
+ * Hennot selailunuolet: kuvia voi vaihtaa avaamatta isoksi. Koko kuvan
+ * vasen ja oikea laita on klikattavaa nuolialuetta; keskeltä kuva aukeaa
+ * suurennokseen. Dialogin yleinen nappityyli kumotaan tässä.
+ *
+ * LAITALIUKUVÄRI POISTETTU KAIKISTA KARUSELLEISTA (omistajan tilaus
+ * 17.8.2026 Firenzen lehden etusivun kuvakaappauksesta: *"Ota pois
+ * kaikkialta karuselleista"*). Nuolialue on 32 % kuvan leveydestä ja
+ * koko kuvan korkuinen, joten liukuväri tummensi kuvan molemmat laidat
+ * ylhäältä alas — kansikuva näytti siltä kuin siinä olisi vinjetti.
+ * Tämä yksi sääntö palvelee KAIKKIA karuselleja (lehden kansikuva ja
+ * nostogalleria: js/ui.js kaariNostoGalleria ja saapumiskuva;
+ * nähtävyysjuttujen ja oppaan jaksojen karuselli: js/nahtavyydet.js
+ * nahtavyydenKaruselli), joten poisto riittää tehdä kerran.
+ *
+ * OSUMA-ALUE JA ELE SÄILYVÄT ENNALLAAN: vain maali katosi, ei
+ * selattavuus. Nuolimerkki erottuu nyt omalla halollaan — kolme
+ * sisäkkäistä tekstivarjoa, jotka hehkuvat tummana tiiviisti glyyfin
+ * ympärillä. Vaalealla kuvalla halo antaa vaalealle merkille reunan,
+ * tummalla kuvalla merkki itse on vaalea. Halo on glyyfin kokoinen,
+ * ei laidan kokoinen — juuri se oli tilauksen ero.
+ */
 .dialog button.arrival-kuva-nuoli {
   position: absolute;
   top: 0;
@@ -1759,8 +1778,11 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   border-radius: 6px;
   background: transparent;
   box-shadow: none;
-  color: rgba(255, 250, 240, 0.95);
-  text-shadow: 0 1px 4px rgba(20, 14, 6, 0.9);
+  color: rgba(255, 250, 240, 0.98);
+  text-shadow:
+    0 0 2px rgba(20, 14, 6, 0.95),
+    0 0 6px rgba(20, 14, 6, 0.8),
+    0 1px 3px rgba(20, 14, 6, 0.9);
   font-size: 1.9rem;
   line-height: 1;
   cursor: pointer;
@@ -1768,31 +1790,26 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   margin: 0;
 }
 
+/* Hiiren alla vain merkki kirkastuu ja sen halo tiivistyy — tausta
+   pysyy läpinäkyvänä myös silloin (sama tilaus). */
 .dialog button.arrival-kuva-nuoli:hover:not(:disabled) {
-  color: rgba(255, 250, 240, 1);
-}
-
-.dialog button.arrival-kuva-nuoli.edellinen:hover:not(:disabled) {
-  background: linear-gradient(90deg, rgba(20, 14, 6, 0.38), transparent 55%);
-}
-
-.dialog button.arrival-kuva-nuoli.seuraava:hover:not(:disabled) {
-  background: linear-gradient(270deg, rgba(20, 14, 6, 0.38), transparent 55%);
+  color: #fff;
+  text-shadow:
+    0 0 2px rgba(20, 14, 6, 1),
+    0 0 8px rgba(20, 14, 6, 0.95),
+    0 1px 3px rgba(20, 14, 6, 0.95);
 }
 
 .dialog button.arrival-kuva-nuoli.edellinen {
   left: 0;
   justify-content: flex-start;
   padding-left: 0.35rem;
-  /* Hento tummennus kuvan laidassa kertoo, että laita on selailualue. */
-  background: linear-gradient(90deg, rgba(20, 14, 6, 0.28), transparent 55%);
 }
 
 .dialog button.arrival-kuva-nuoli.seuraava {
   right: 0;
   justify-content: flex-end;
   padding-right: 0.35rem;
-  background: linear-gradient(270deg, rgba(20, 14, 6, 0.28), transparent 55%);
 }
 
 .arrival-card .wiki-btn { margin: 0 0 0.7rem; }
@@ -7700,10 +7717,46 @@ body.katselu #newgame-btn { display: none; }
      * testataan tabletilla, se pätee työpöydällä — leveä ruutu saa
      * lisää karttaa reunoille, ei lisää palstaa. */
     width: min(calc(100vw - 6rem), 960px);
-    /* Koko ruudun korkeus ylhäältä alas kuin lehden sivu kädessä
-     * (omistajan toive 5.8.2026) — kartta jää näkyviin sivuille. */
-    height: 100dvh;
-    max-height: 100dvh;
+    /*
+     * Koko ruudun korkeus ylhäältä alas kuin lehden sivu kädessä
+     * (omistajan toive 5.8.2026) — kartta jää näkyviin sivuille.
+     * "Koko ruutu" on TURVA-ALUEIDEN SISÄPUOLINEN ruutu: sivu on
+     * viewport-fit=cover, joten 100dvh ulottuu loveuksen ja kotipalkin
+     * ali. Ks. seuraavan säännön perustelu.
+     */
+    height: calc(100dvh - var(--turva-yla) - var(--turva-ala));
+    max-height: calc(100dvh - var(--turva-yla) - var(--turva-ala));
+  }
+
+  /*
+   * TURVA-ALUEET SIJOITUKSEEN, EI KORKEUDEN PUOLIKKAIKSI (omistajan
+   * kuvakaappaus 17.8.2026 iPadilla, Firenzen lehden etusivu:
+   * alareunaan jää yhä sumennettu kaista).
+   *
+   * Arkki keskitetään automarginaaleilla, ja sen katto vähensi MOLEMMAT
+   * turva-alueet (mitoitaArkinKorkeus). Keskitys jakoi vähennyksen
+   * tasan ylä- ja alapäähän, vaikka turva-alueet ovat lähes aina
+   * epäsymmetriset: iPadilla ylä 0 px ja ala 34 px. Mitattuna
+   * 834x1112 -ruudulla lehtiarkki sai silloin ylös 30 px turhaa
+   * sumennettua kaistaa ja jäi alhaalla 4 px kotipalkin ALLE — sama
+   * puolittumisvirhe, jonka v834 korjasi kapealle ruudulle.
+   *
+   * Korjaus on sijoitus eikä uusi vähennys: `top`/`bottom` siirtävät
+   * arkin ankkurilaatikon turva-alueiden sisään, jolloin automarginaalit
+   * keskittävät sen TURVALLISEEN ruutuun. Silloin sekä ylä- että
+   * alapäähän jää sama näkyvä rako (pehmusteen puolikas) ja kotipalkin
+   * vaatima tila on kokonaan sen ulkopuolella. Katon laskua ei tarvitse
+   * muuttaa: se on täsmälleen "turvallinen ruutu miinus pehmuste".
+   *
+   * Lyhyt kortti pysyy keskitettynä kuten ennenkin — keskitys vain
+   * tapahtuu turvallisen ruudun sisällä (mitattu: lyhyt juttu 834x1112,
+   * rako 476 px ylhäällä ja 476 + kotipalkki alhaalla). Kapea ruutu
+   * (< 700 px) pitää oman koko ruudun asettelunsa, jossa turvat ovat
+   * kortin pehmusteena.
+   */
+  .dialog.arkki {
+    top: var(--turva-yla);
+    bottom: var(--turva-ala);
   }
 
   /*
@@ -11335,6 +11388,31 @@ button.opas-nauha:hover { filter: brightness(1.06); }
    * kortin reunoja, joten pystyvara lasketaan niiden yli. */
   max-height: calc(100dvh - 3rem
     - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+}
+
+/*
+ * SAMA TURVA-ALUEIDEN SIJOITUS KUIN LEHTIARKILLA (ks. `.dialog.arkki`
+ * ≥700 px). Nähtävyys- ja opasarkki palauttaa keskityksen omalla
+ * `inset: 0; margin: auto` -säännöllään yllä, ja koska se tulee
+ * tiedostossa myöhemmin samalla erottelutarkkuudella, se kumosi
+ * lehtiarkin turvallisen ankkurilaatikon: arkki keskittyi taas KOKO
+ * ruutuun ja turva-alueiden vähennys puolittui molempiin päihin
+ * (mitattu 834x1112, ala 34 px: ylä- ja alarako kumpikin 41 px, eli
+ * ylhäällä 41 px turhaa sumennettua kaistaa ja alhaalla vain 7 px
+ * kotipalkin yli). Ankkurilaatikko siirretään siis täälläkin
+ * turva-alueiden sisään; katto (100dvh − 3rem − turvat) on jo
+ * valmiiksi juuri tämän laatikon mitta.
+ *
+ * Vain leveä ruutu: kapealla ruudulla arkki on ankkuroitu alareunaan
+ * omalla marginaalillaan (`margin: auto auto calc(0.6rem + safe)`),
+ * joka varaa kotipalkin tilan jo itse — inset lisäisi sen toiseen
+ * kertaan.
+ */
+@media (min-width: 700px) {
+  .dialog.nahtavyys-arkki {
+    top: var(--turva-yla);
+    bottom: var(--turva-ala);
+  }
 }
 
 /*

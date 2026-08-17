@@ -4370,6 +4370,63 @@ test('karusellin ikkuna ei jää kuvaa korkeammaksi kellukkeen vieressä', () =>
 });
 
 /*
+ * KARUSELLINUOLTEN LAITALIUKUVÄRI POIS KAIKKIALTA.
+ *
+ * Omistajan tilaus 17.8.2026 Firenzen lehden etusivun kaappauksesta:
+ * *"Ota pois kaikkialta karuselleista"*. Nuolialue on 32 % kuvan
+ * leveydestä ja koko kuvan korkuinen, joten liukuväri tummensi kuvan
+ * molemmat laidat ylhäältä alas. Kaikki karusellit (lehden kansikuva
+ * ja nostogalleria, nähtävyysjutut, opas) käyttävät samaa luokkaa,
+ * joten yksi sääntöjoukko ratkaisee ne kaikki — ja yksi testi vartioi.
+ *
+ * Nuolen on silti erotuttava sekä vaalealta että tummalta kuvalta:
+ * erottuvuus on nyt glyyfin oma halo (text-shadow), ei laidan maali.
+ */
+test('karusellinuolissa ei ole laitaliukuväriä, mutta glyyfillä on halo', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const saannot = [...css.matchAll(/[^}]*\.arrival-kuva-nuoli[^{]*\{([^}]*)\}/g)]
+    .map((m) => m[1]);
+  assert.ok(saannot.length, '.arrival-kuva-nuoli puuttuu tyyleistä');
+  for (const runko of saannot) {
+    assert.ok(!/linear-gradient/.test(runko),
+      'karusellinuolella on yhä laitaliukuväri — se tummentaa kuvan laidan koko korkeudelta');
+    // Läpinäkyvä tausta kelpaa, väritetty ei.
+    const tausta = runko.match(/background(?:-color)?:\s*([^;]+);/)?.[1]?.trim();
+    assert.ok(!tausta || tausta === 'transparent' || tausta === 'none',
+      `karusellinuolen tausta ei ole läpinäkyvä (${tausta})`);
+  }
+  const perus = css.match(/\.dialog button\.arrival-kuva-nuoli \{[\s\S]*?\n\}/)?.[0] ?? '';
+  assert.match(perus, /text-shadow:/,
+    'nuolimerkiltä puuttuu halo — se katoaa vaalealle kuvalle ilman laitamaalia');
+});
+
+/*
+ * TURVA-ALUEET SIJOITUKSEEN, EI KORKEUDEN PUOLIKKAIKSI.
+ *
+ * Omistajan kuvakaappaus 17.8.2026 iPadilla (lehden etusivu):
+ * alareunaan jää sumennettu kaista. Leveällä ruudulla arkki keskitetään
+ * automarginaaleilla ja sen katto vähentää molemmat turva-alueet, joten
+ * keskitys jakoi vähennyksen tasan päihin, vaikka turvat ovat
+ * epäsymmetriset (iPadilla ylä 0, ala 34). Mitattuna 834x1112: ylös jäi
+ * 30 px turhaa kaistaa ja alhaalla arkki painui 4 px kotipalkin ali.
+ *
+ * Korjaus on ankkurilaatikon siirto turva-alueiden sisään — sekä
+ * lehtiarkille että nähtävyys-/opasarkille, jonka oma `inset: 0`
+ * kumoaisi muuten lehtiarkin säännön.
+ */
+test('leveällä ruudulla arkin ankkurilaatikko on turva-alueiden sisällä', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  for (const valitsin of ['\\.dialog\\.arkki', '\\.dialog\\.nahtavyys-arkki']) {
+    const saanto = new RegExp(
+      `${valitsin} \\{[^}]*top:\\s*var\\(--turva-yla\\)[^}]*bottom:\\s*var\\(--turva-ala\\)`,
+    );
+    assert.match(css, saanto,
+      `${valitsin.replace(/\\/g, '')} ei siirrä ankkurilaatikkoaan turva-alueiden sisään`
+      + ' — turvavähennys puolittuu taas kaistaksi väärään päähän');
+  }
+});
+
+/*
  * KORKEUDEN MUUTOS LAUKAISEE ELVYTYKSEN.
  *
  * Omistajan havainto 16.8.2026 iPadilla: peli jää tilaan, jossa
