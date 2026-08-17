@@ -486,6 +486,111 @@ const KUVAT = [
     + 'leading to an oval pond with a stone fountain on an islet, '
     + 'marble statues along the path and lemon trees in terracotta '
     + 'pots'],
+
+  /*
+   * ── Bagdad, kuusi kohdetta (E00-viimeistely 17.8.2026) ───────────
+   * VAIN JONOSSA, ei generoitu: piirrokset vaativat API-avaimen,
+   * jota työsessiossa ei ole. Kartalla kohteet näkyvät siihen asti
+   * numeroympyröinä. Kuvaukset on kirjoitettu kohteiden omien
+   * nähtävyysjuttujen ja niiden todennettujen valokuvien mukaan
+   * (js/packs/nahtavyysjutut.js: bagdad) — arkkitehtuurin
+   * tosiasioita, ei mielikuvia. Yksi otto per kohde.
+   */
+  ['bagdad-mutanabbin-katu', 'a narrow car-free old book-market '
+    + 'street: two-storey brick houses on both sides with projecting '
+    + 'wooden balconies and wrought-iron railings, open shopfronts at '
+    + 'street level and rows of books laid out flat on the paving '
+    + 'stones in front of them'],
+  ['bagdad-qushlan-kellotorni', 'a slender square Ottoman clock '
+    + 'tower of pale brick standing alone on a lawn: a plain tapering '
+    + 'shaft with one round clock face high up, a small arcaded '
+    + 'belfry stage above it and a pointed cap with a weather vane', 'halpa'],
+  ['bagdad-abbasidipalatsi', 'a medieval Mesopotamian brick palace '
+    + 'courtyard: two storeys of pointed arcades running all the way '
+    + 'round a square court, the arch hoods filled with deep '
+    + 'honeycomb muqarnas brickwork, and a low octagonal basin in the '
+    + 'middle of the yard'],
+  ['bagdad-khan-mirjan', 'a medieval brick caravanserai hall: a long '
+    + 'covered gallery spanned by a row of very tall pointed '
+    + 'transverse arches, two storeys of small merchant rooms behind '
+    + 'them, and a deep pointed-arch portal of carved brick at the '
+    + 'near end'],
+  ['bagdad-mustansiriya-koulu', 'a 13th-century brick madrasa seen '
+    + 'from the street: a long low facade with three pointed arched '
+    + 'openings, bands of patterned decorative brickwork above them '
+    + 'and a tall recessed pointed entrance portal at one end'],
+  ['bagdad-bagdadin-museo', 'a small museum in a traditional Baghdad '
+    + 'townhouse: a plain brick front with one large projecting '
+    + 'wooden oriel balcony (shanasheel) of fine lattice screens '
+    + 'jutting out over the street on carved brackets', 'halpa'],
+
+  /*
+   * ── Teheran, kuusi kohdetta (E00-viimeistely 17.8.2026) ──────────
+   * Sama tilanne kuin Bagdadissa: vain jonossa, ei generoitu.
+   * Kuvaukset nojaavat nähtävyysjuttujen valokuviin
+   * (js/packs/nahtavyysjutut.js: teheran).
+   */
+  ['teheran-teheranin-basaari', 'a long covered Persian bazaar '
+    + 'corridor seen down its length: a brick barrel-vaulted tunnel '
+    + 'with small round skylight openings punched through the '
+    + 'ceiling, arched shopfronts on both sides and carpets hanging '
+    + 'from the walls'],
+  ['teheran-golestanin-palatsi', 'a Qajar palace pavilion: a wide '
+    + 'open reception veranda carried on slender twisted columns, a '
+    + 'raised marble throne terrace in front of it, and every surface '
+    + 'above covered in small tiled and mirrored panels'],
+  ['teheran-dar-al-fonun', 'a 19th-century Persian college building '
+    + 'round a courtyard: a symmetrical two-storey brick range with '
+    + 'rows of tall arched windows on both floors and one taller '
+    + 'arched gateway in the middle'],
+  ['teheran-iranin-kansallismuseo', 'a plain red-brick museum '
+    + 'building whose entrance is one enormous pointed barrel-vault '
+    + 'archway modelled on an ancient Sasanian palace arch, filling '
+    + 'almost the whole front wall', 'halpa'],
+  ['teheran-masoudiehin-talo', 'a Qajar mansion: a two-storey facade '
+    + 'of tall arched windows filled with small coloured glass panes, '
+    + 'four fluted columns carrying a shallow porch, patterned '
+    + 'brick and tile panels, and a long rectangular garden pool in '
+    + 'front'],
+  ['teheran-sepahsalarin-moskeija', 'a large Persian mosque: a tall '
+    + 'tiled entrance iwan with a pointed arch, a low tiled dome '
+    + 'behind it, several slender round minarets around the court '
+    + 'and one square clock stage above the portal'],
+
+  /*
+   * ── Tripoli, kuusi kohdetta (E00-viimeistely 17.8.2026) ──────────
+   * Vain jonossa, ei generoitu. Kuvaukset nojaavat kohteiden omiin
+   * nähtävyysjuttuihin ja niiden todennettuihin valokuviin
+   * (js/packs/nahtavyysjutut.js: tripoli).
+   */
+  ['tripoli-marcus-aureliuksen-riemukaari', 'a small Roman triumphal '
+    + 'arch of white marble standing alone in a shallow excavated '
+    + 'hollow below street level: open on all four sides, a low '
+    + 'octagonal dome on top, and carved figures in the triangular '
+    + 'pediments over each arch'],
+  ['tripoli-darghutin-moskeija', 'a low whitewashed North African '
+    + 'mosque: a long flat-roofed block carrying a whole field of '
+    + 'small round white domes, with one slender white minaret beside '
+    + 'it that has a railed balcony and an ochre-coloured pointed cap'],
+  ['tripoli-vanhankaupungin-kellotorni', 'a slender square Ottoman '
+    + 'clock tower of whitewashed stone rising from a small square: '
+    + 'it narrows in stages, each stage has pairs of small columns at '
+    + 'the corners, and the top stage carries a round clock face on '
+    + 'every side under an ornate cornice', 'halpa'],
+  ['tripoli-punainen-linna', 'a long low reddish-ochre fortress on a '
+    + 'rocky spur by the water: massive sloping walls with a few '
+    + 'small openings, and on the seaward bastion a row of tall open '
+    + 'stone arches standing above the ramparts'],
+  ['tripoli-karamanlin-moskeija', 'an Ottoman mosque built into a '
+    + 'market street: a white arcade of pointed arches with '
+    + 'brown-and-white striped voussoirs at street level, a roofline '
+    + 'of many small white domes above it, and one slender minaret '
+    + 'with a balcony and a green conical cap'],
+  ['tripoli-an-naqan-moskeija', 'the courtyard arcade of a very old '
+    + 'North African mosque: whitewashed pointed arches resting on '
+    + 'stout re-used ancient stone columns whose capitals are '
+    + 'visibly older and rougher than the rest, with plain green '
+    + 'doors behind them'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');

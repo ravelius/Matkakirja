@@ -1023,7 +1023,14 @@ const KAUPUNGIT = {
     // ruudussa), eikä työkalu piirtänyt niitä millään kaupungilla.
     // Taso on lippujen takana kuten palvelutiet, joten yksikään vanha
     // kartta ei muutu.
+    //
+    // REUNUS 17.8.2026 (E00-viimeistely, sama kuin Tampere ja
+    // Firenze): piirretty alue on 1,6-kertainen eli 3,6 × 3,7 km,
+    // lepotila yhä alla oleva rajat-alue. Reunukselle osuvat
+    // Baharestanin aukio idässä, Park-e Shahr etelässä ja
+    // Enghelab-kadun linja pohjoisessa.
     rajat: { pohjoinen: 35.692, etela: 35.6715, lansi: 51.4115, ita: 51.4365 },
+    laajennus: 1.6,
     palvelutiet: true,
     jalkakaydat: true,
   },
@@ -1196,8 +1203,51 @@ const KAUPUNGIT = {
     // kartoittamatta — se voi tarkoittaa, että kadut on tagattu
     // luokkiin, joita vakiokysely ei pyydä. Laske ensin
     // `way["highway"]` ilman luokkasuodatinta ja vertaa.
+    //
+    // REUNUS 17.8.2026 (E00-viimeistely, sama kuin Tampere ja
+    // Firenze): piirretty alue on 1,6-kertainen eli 3,6 × 2,8 km,
+    // lepotila yhä alla oleva rajat-alue. Reunukselle osuvat Karkhin
+    // puoli lännessä siltoineen, Bab al-Sheikh idässä ja Tigrisin
+    // mutka etelässä.
     rajat: { pohjoinen: 33.348, etela: 33.332, lansi: 44.376, ita: 44.400 },
+    laajennus: 1.6,
     palvelutiet: true,
+  },
+  tripoli: {
+    /*
+     * Tripolin medina on pieni: muurien sisäpuoli on noin 600 × 700
+     * metriä, eli koko vanhakaupunki mahtuu Dubrovnikin kokoiseen
+     * ruutuun. Rajaus on siksi tarkoituksella TIUKKA (0,77 × 0,75 km,
+     * lähes neliö) — Firenzen oppi: laajempi ruutu tekisi ytimestä
+     * täplän 1900-luvun ruutukaavan keskelle.
+     *
+     * Ensimmäinen ajo 1,3 × 1,0 km:n ruudulla mitattiin ja hylättiin:
+     * medina jäi kuvan vasempaan puoliskoon ja kuuden kohteen väliin
+     * jäi niin vähän pikseleitä, että an-Naqan ja Karamanlin
+     * moskeijoiden numeroympyrät (75 m toisistaan) olisivat menneet
+     * päällekkäin. Tiukempi ruutu kasvattaa välit eikä jätä yhtään
+     * kohdetta ulkopuolelle.
+     *
+     * Kuvassa on koko se alue, jota matkailijan Tripoli tarkoittaa:
+     * muurirengas, sen sisällä kujaverkko, pohjoisreunalla Marcus
+     * Aureliuksen riemukaari ja kaakkoisnurkassa Punainen linna.
+     * Meri tulee reunukseen ylhäältä ja oikealta: medina on
+     * niemekkeellä, ja juuri siksi kaupunki on tässä.
+     *
+     * Kohteiden koordinaatit on ristiintarkistettu Overpassista ja
+     * en-Wikipedian coord-malleista 17.8.2026.
+     *
+     * palvelutiet JA jalkakaydat: true. Medinan kujat ovat OSM:ssä
+     * lähes kokonaan footway- ja service-teitä (mitattu ruudulle
+     * 32.8858–32.9086 / 13.1678–13.1902), joten vakiokysely jättäisi
+     * vanhankaupungin tyhjäksi paperiksi — sama vika kuin Vilnassa ja
+     * Bagdadissa, mutta täällä vielä jyrkempänä.
+     */
+    rajat: { pohjoinen: 32.9009, etela: 32.8942, lansi: 13.174, ita: 13.1822 },
+    laajennus: 1.6,
+    palvelutiet: true,
+    jalkakaydat: true,
+    meri: true,
   },
 };
 

@@ -14038,4 +14038,307 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TRIPOLI (E00-viimeistely 17.8.2026). Kuusi kohdetta, samat kuin
+   * maakartat.js:n KAUPUNKIKARTAT.tripoli.kohteet — nimet ovat merkki
+   * merkiltä samat, koska ui.js yhdistää taulut nimellä.
+   *
+   * Faktat en-Wikipedian rajapinnasta (action=query&prop=extracts,
+   * artikkelit Arch of Marcus Aurelius (Tripoli), Sidi Darghut Mosque,
+   * Red Castle of Tripoli, Karamanli Mosque, Al-Naqah Mosque ja
+   * Architecture of Libya). Kuvat todennettu Commonsin API:sta
+   * (LicenseShortName, Artist, Restrictions) ja KATSOTTU SILMIN
+   * kontaktiarkilta ennen valintaa.
+   *
+   * KELLOTORNI ON POIKKEUS eikä unohdus: siitä ei ole Wikipedian
+   * artikkelia millään kielellä, joten sen juttu kertoo vain sen,
+   * minkä kuvat ja kaupungin oma rakennushistoria kantavat. Vuosilukua
+   * ei väitetä, koska ainoa löytynyt lähde sille on Commons-kuvan
+   * lataajan oma kuvateksti.
+   *
+   * PÄÄLLEKKÄISYYS LEHDEN KANSSA on tietoinen ja rajattu: riemukaari
+   * ja kellotorni ovat myös kaupunkilehden nostoina, mutta jutut
+   * kertovat eri asiat (kaaren päiväys ja kaivaukset, ei nimihistoria)
+   * eivätkä käytä samoja kuvia. Jokainen tämän lohkon kuvatiedosto on
+   * tarkistettu koko js/packs-hakemistosta: yksikään ei esiinny
+   * muualla.
+   */
+  tripoli: {
+    'Marcus Aureliuksen riemukaari': {
+      aika: '165',
+      teksti: 'Kaari pystytettiin vuonna 165 kokonaan marmorista. '
+          + 'Rakennuttaja oli kaupungin virkamies Gaius Calpurnius '
+          + 'Celsus, ja kaari muistaa Lucius Veruksen voittoja '
+          + 'parthialaissodassa. Vuosi tiedetään poikkeuksellisen '
+          + 'tarkasti kaaren omasta piirtokirjoituksesta: keisarille '
+          + 'annetaan siinä arvonimi Armenicus mutta ei vielä Medicus '
+          + 'eikä Parthicus, jotka hän sai vuonna 166. Myöhempi vuosi '
+          + 'on siis poissuljettu.'
+        + '\n\n'
+        + 'Muoto on quadrifrons eli nelisivuinen: kaari on avoin joka '
+          + 'suuntaan, koska sen alitse kulki kaksi katua ristiin. '
+          + 'Päällä on harvinainen kahdeksankulmainen kupoli. '
+          + 'Päätykolmioissa ajavat kaupungin suojelusjumalat Apollo ja '
+          + 'Minerva kaksivaljakoissa, joita vetävät aarnikotkat ja '
+          + 'sfinksit. Neljä syvennystä on tyhjä; niissä seisseet '
+          + 'keisarien patsaat löydettiin 1800-luvun kaivauksissa.'
+        + '\n\n'
+        + 'Vuosisatojen mittaan kaari hautautui osittain maahan ja jäi '
+          + 'myöhempien talojen väliin. Se kaivettiin esiin ja '
+          + 'kunnostettiin vuosina 1914–1918, ja 1930-luvulla '
+          + 'arkkitehti Florestano Di Fausto suunnitteli sen ympärille '
+          + 'nykyisen aukion. Siksi kaari seisoo nyt katutasoa '
+          + 'alempana kuoppansa pohjalla.',
+      kuvat: [
+        {
+          tiedosto: 'Marcus Aurelius Arch Tripoli Libya.jpg',
+          selite: 'Riemukaari kaivetun aukion perällä. Marmorinen '
+            + 'nelisivuinen kaari seisoo katutasoa alempana, ja sen '
+            + 'ympärillä on nurmea ja kaiteella eristetty kaivausalue, '
+            + 'jonka reunoilla makaa pylväänpätkiä. Takana kohoaa '
+            + 'valkoisia taloja ja palmuja.',
+          lahde: 'Daniel and Kate Pett, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Front view of Marcus Aurelius Arch.jpg',
+          selite: 'Kaaren sisus alhaalta kuvattuna: neljä suurta '
+            + 'holvikaarta kohtaavat keskellä, ja niiden yläpuolella '
+            + 'näkyy kupolin kahdeksankulmainen sisäpinta. Aukosta '
+            + 'erottuu palmuja ja kauempana moskeijan kupoli.',
+          lahde: 'أوس, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Darghutin moskeija': {
+      aika: 'n. 1560',
+      teksti: 'Ottomaanit valtasivat Tripolin vuonna 1551 '
+          + 'johanniittaritareilta, ja ensimmäinen käskynhaltija '
+          + 'Darghut korjasi ja rakensi kaupungin linnoitukset '
+          + 'uudelleen. Vanhakaupunki sai silloin sen viisikulmaisen '
+          + 'muodon, joka sillä on yhä. Noin vuonna 1560 Darghut '
+          + 'rakennutti muurien sisään oman moskeijansa ja valitsi '
+          + 'paikaksi ritarien kirkon tontin. Perimätieto kertoo, '
+          + 'ettei kirkkorakennusta purettu vaan se otettiin uuden '
+          + 'rakennuksen sisään.'
+        + '\n\n'
+        + 'Darghut kaatui vuonna 1565 Maltan suuressa piirityksessä. '
+          + 'Hänen ruumiinsa tuotiin Tripoliin ja haudattiin tähän '
+          + 'moskeijaan, ja haudat ovat yhä toisen mihrabin vieressä. '
+          + 'Iskander Pasha teetti 1600-luvun alussa muutoksia: '
+          + 'minareetti muotoiltiin uudelleen vuonna 1602, ja '
+          + 'rakennusryhmään kuuluu myös höyrykylpylä.'
+        + '\n\n'
+        + 'Moskeija oli kaupungin ensimmäinen ottomaanityylinen, ja '
+          + 'sen rukoussali on T:n muotoinen kuten Anatolian '
+          + 'moskeijoissa. Katto koostui alun perin 27 pienestä '
+          + 'kupolista — se on libyalaisen rakennustavan tunnusmerkki, '
+          + 'joka toistuu myöhemmin kaupungin muissa moskeijoissa. '
+          + 'Rakennus vaurioitui pahoin toisen maailmansodan '
+          + 'pommituksissa, ja jälleenrakennuksessa kupoleita tuli '
+          + '32 eikä kaikkea palautettu ennalleen.',
+      kuvat: [
+        {
+          tiedosto: 'Darghut Mosque Exterior Tripoli Libya.JPG',
+          selite: 'Darghutin moskeija ja hautakammio kadulta: matala '
+            + 'valkoiseksi kalkittu rakennusryhmä, jonka katolla '
+            + 'kohoaa rivi pyöreitä kupoleita. Oikealla nousee '
+            + 'valkoinen minareetti, jonka parvekkeen yläpuolella on '
+            + 'okrankeltainen kärkiosa. Edessä on kadunvarsi ja '
+            + 'pysäköityjä autoja.',
+          lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanhankaupungin kellotorni': {
+      teksti: 'Kellotorni seisoo medinan aukiolla lähellä Souq '
+          + 'al-Mushirin katua, ja se on vanhankaupungin helpoin '
+          + 'kiintopiste: kujilla ei näy kauas, mutta torni näkyy. Se '
+          + 'on nelisivuinen ja kapenee ylöspäin kerroksittain, ja '
+          + 'jokaisen kerroksen kulmissa on parittain pylväitä '
+          + 'koristeltuine kapiteeleineen. Ylimmässä kerroksessa on '
+          + 'kellotaulu joka sivulla, joten aika näkyy mistä tahansa '
+          + 'suunnasta.'
+        + '\n\n'
+        + 'Torni on ottomaanien ajalta, ja sen muotokieli on '
+          + 'eurooppalaisen ja ottomaanisen sekoitus — samaa '
+          + 'yhdistelmää näkee medinan moskeijoissa, joissa '
+          + 'marmoripylväät ja kaakelipinnat ovat rinnakkain '
+          + 'arabialaisen kalligrafian kanssa. Ottomaanit rakensivat '
+          + 'julkisia kellotorneja valtakuntansa kaupunkeihin '
+          + '1800-luvun jälkipuoliskolla, ja Tripolin torni kuuluu '
+          + 'samaan sarjaan.'
+        + '\n\n'
+        + 'Aukiolta lähtee kujia joka suuntaan, ja tornin ympärillä '
+          + 'on kauppoja katutasossa. Rappaus on paikoin lohkeillut ja '
+          + 'paljastanut alta kiviaineksen. Pimeän tultua torni '
+          + 'valaistaan, ja se on silloin ainoa korkea valo koko '
+          + 'vanhassakaupungissa.',
+      kuvat: [
+        {
+          tiedosto: 'Old City’s Clock Tower.jpg',
+          selite: 'Kellotornin yläosa alaviistosta kirkasta taivasta '
+            + 'vasten: vaalea kaksikerroksinen huippu, jonka kulmissa '
+            + 'on parittain pylväitä, ja kellotaulu kahdella näkyvällä '
+            + 'sivulla. Räystäslistan yllä lentää lintuja.',
+          lahde: 'Mohamed Hwedi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Clock tower in tripoli libya 01.jpg',
+          selite: 'Torni kujalta katsottuna: valkoinen torni kohoaa '
+            + 'kaupan sinisten ovien ja kadun yli kulkevien '
+            + 'sähköjohtojen takaa, ja vasemmalla erottuu moskeijan '
+            + 'minareetti.',
+          lahde: 'Ridda Basheer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Punainen linna': {
+      aika: '1500-luku',
+      teksti: 'Linna seisoo vanhankaupungin kaakkoisnurkassa omalla '
+          + 'kalliollaan. Pohja on epäsäännöllinen nelikulmio, jonka '
+          + 'sivut ovat 115, 90, 130 ja 140 metriä, ja pinta-alaa on '
+          + 'noin 13 000 neliömetriä; muurien sisällä on useita '
+          + 'rakennuksia ja pihoja. Kaivauksissa on löytynyt '
+          + 'roomalaisajan jäänteitä, joten paikka voi olla yhtä vanha '
+          + 'kuin foinikialaisten Oea.'
+        + '\n\n'
+        + 'Nykyiset rakenteet ovat pääosin 1500-luvulta. Aragonian '
+          + 'kuningaskunta valtasi Tripolin vuonna 1510, ja vuodesta '
+          + '1530 linnaa pitivät johanniittaritarit, kunnes ottomaanit '
+          + 'ajoivat heidät pois 1551. Linnan kerrotaan saaneen '
+          + 'punamullan värinsä juuri silloin, ja siitä tulee sen '
+          + 'nimi. Ensimmäinen ottomaanien käskynhaltija Murad Agha '
+          + 'muutti linnan Pyhän Leonardin kirkon moskeijaksi, ja '
+          + 'seuraavat käskynhaltijat asuivat rakennuksessa. '
+          + 'Karamanlien suvun aikana 1711–1835 linna oli koko maan '
+          + 'vallan keskus.'
+        + '\n\n'
+        + 'Vuonna 1919 linnasta tehtiin museo — Libyan ensimmäinen. '
+          + 'Arkkitehti Armando Brasini uudisti sen 1922–1923 varsin '
+          + 'vapaalla kädellä: hän muokkasi Pyhän Yrjön bastionia '
+          + 'keskiaikaisemman näköiseksi, teki uuden vanhalta '
+          + 'näyttävän porttiholvin ja rakensi itäbastionin päälle '
+          + 'kaaririvin, josta tuli linnan tunnuskuva. Kaaret '
+          + 'katsoivat alun perin suoraan merelle; 1970-luvulla '
+          + 'rantatien rakentaminen jätti niiden alle lammen.',
+      kuvat: [
+        {
+          tiedosto: 'The Red Castle.jpg',
+          selite: 'Linna vedenrajasta kuvattuna iltavalossa: matala '
+            + 'hiekankeltainen linnoitusmassa jatkuu pitkänä koko '
+            + 'kuvan poikki, ja sen päällä erottuu kaaririvi. Edessä '
+            + 'oleva tyyni lampi heijastaa rakennuksen ja oranssin '
+            + 'taivaan.',
+          lahde: 'Abdulfatah Amr, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tripoli - Eingang zum Nationalmuseum.jpg',
+          selite: 'Linnan porttiholvi kadulta: kaaren yläpuolella on '
+            + 'arabiankielinen kirjoitus, sivuilla vanhoja '
+            + 'pylväänpätkiä ja ylhäällä kaksi suurta kaariaukkoa, '
+            + 'joista näkyy taivas ja kasveja.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Karamanlin moskeija': {
+      aika: '1736–1738',
+      teksti: 'Ahmed Karamanli nousi valtaan vuonna 1711 ja perusti '
+          + 'suvun, joka hallitsi Tripolia yli sata vuotta. Kaupungin '
+          + 'loistoaika ajoittuu juuri siihen, ja hän lisäsi '
+          + 'kaupunkikuvaan paljon. Souq al-Mushirin varrelle noussut '
+          + 'moskeija rakennettiin vuosina 1736–1738, ja se on yhä '
+          + 'yksi kaupungin suurimmista ja tärkeimmistä. Samaan '
+          + 'kokonaisuuteen kuuluvat koulu ja Ahmed Beyn hautakammio, '
+          + 'ja sisään pääsee kolmelta sivulta.'
+        + '\n\n'
+        + 'Rukoussali on hypostyyli eli pylväsmetsä: marmoripylväät '
+          + 'kannattavat kahtakymmentäviittä kupolia. Sisäpinnat on '
+          + 'peitetty lasitteen alle maalatuilla laatoilla ja '
+          + 'veistetyllä stukkokoristelulla. Minareetti on suippo '
+          + 'ottomaanien tapaan — sama muoto toistuu kaupungin muissa '
+          + 'saman ajan moskeijoissa.'
+        + '\n\n'
+        + 'Kokonaisuus edustaa ottomaanien maakuntatyyliä, ja se '
+          + 'muistuttaa saman ajan rakennuksia ottomaanien Tunisiassa. '
+          + 'Kadun puolella moskeijan kylkeä kiertää kaarikäytävä, '
+          + 'jonka alla on kauppoja: torikuja ja moskeija ovat samaa '
+          + 'rakennusta.',
+      kuvat: [
+        {
+          tiedosto: 'Ahmed Pasha Karamanli Mosque Interior Tripoli Libya.JPG',
+          selite: 'Rukoussali sisältä: paksut vaaleat marmoripylväät '
+            + 'seisovat riveissä ja niiden päältä nousevat valkoiset '
+            + 'holvit kupoleihin. Kattoon on ripustettu kristallikruunuja, '
+            + 'seinässä on värilasi-ikkuna, ja lattialla on maton '
+            + 'päällä muutama rukoilija.',
+          lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'المدينة القديمة-جامع احمد باشا.jpg',
+          selite: 'Moskeijan katupuoli: valkoinen kaarikäytävä, jonka '
+            + 'kaaret on raidoitettu ruskealla ja valkoisella kivellä '
+            + 'ja joiden holveissa riippuu lyhtyjä. Takana kohoaa '
+            + 'valkoinen minareetti, jonka parvekkeen yläpuolella on '
+            + 'vihreä suippokärki.',
+          lahde: 'WisiW, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'an-Naqan moskeija': {
+      aika: '973',
+      teksti: 'an-Naqa on Tripolin vanhin islamilaisen ajan rakennus. '
+          + 'Sen historiaa ei tunneta hyvin eikä kaikkia korjauksia '
+          + 'osata ajoittaa, mutta se rakennettiin todennäköisesti '
+          + 'vuonna 973 fatimidikalifi al-Muizzin käskystä: kalifi '
+          + 'oleskeli kaupungissa juuri silloin siirtäessään hovinsa '
+          + 'Ifriqiyasta Egyptiin.'
+        + '\n\n'
+        + 'Nimi tarkoittaa naaraskamelia, ja siitä kerrotaan kaksi '
+          + 'toisilleen sukua olevaa tarinaa. Toisen mukaan kaupungin '
+          + 'asukkaat tarjosivat Amr ibn al-Aasille 600-luvulla '
+          + 'aarteilla kuormatun naaraskamelin, jotta hän säästäisi '
+          + 'kaupungin; hän kieltäytyi lahjasta ja käski rakentaa '
+          + 'rahoilla moskeijan. Toisen mukaan kalifi al-Muizz antoi '
+          + 'kaupunkilaisille kullalla kuormatun naaraskamelin '
+          + 'kiitokseksi vieraanvaraisuudesta, ja kullalla '
+          + 'rakennettiin tämä moskeija.'
+        + '\n\n'
+        + 'Pohjakaava on epäsäännöllinen, mikä kertoo monista '
+          + 'muutoksista. Lattia on nykyään neljäkymmentä senttiä '
+          + 'katutasoa alempana, koska kaupunki on noussut ympäriltä. '
+          + 'Rukoussali on jaettu pylväsriveillä seitsemään laivaan, '
+          + 'ja sen 36 pylvästä ovat uudelleen käytettyä roomalaista '
+          + 'ja bysanttilaista marmoria ja graniittia — myös osa '
+          + 'kapiteeleista on roomalaisia. Rakennus vaurioitui pahoin '
+          + 'espanjalaismiehityksen aikana 1500-luvulla, ja '
+          + 'piirtokirjoituksen mukaan käskynhaltija Safar Dey '
+          + 'rakennutti sen uudelleen vuosina 1610–1611.',
+      kuvat: [
+        {
+          tiedosto: '2 Tripoli En-Naga mosque (51791288947).jpg',
+          selite: 'Moskeijan pihakäytävä: valkoisiksi kalkitut '
+            + 'suippokaaret lepäävät paksujen kivipylväiden päällä, ja '
+            + 'pylväiden kapiteelit ovat selvästi vanhempaa ja '
+            + 'karkeampaa kiveä kuin muu rakennus. Kaarien takana on '
+            + 'vihreiksi maalattuja ovia ja lattialla itämaisia mattoja.',
+          lahde: 'Libyan Studies, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Naga Mosque Exterior Tripoli Libya.JPG',
+          selite: 'Moskeijan ulkosivu kujalta: umpinainen valkoiseksi '
+            + 'kalkittu seinä, jossa on vain muutama pieni ikkuna '
+            + 'korkealla. Kujaa pitkin kävelee valkoasuinen mies, ja '
+            + 'seinien yli kulkee sähköjohtoja.',
+          lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

@@ -2832,6 +2832,14 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 33.348, etela: 33.332, lansi: 44.376, ita: 44.400,
     },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, E00-viimeistely 17.8.2026). Lepotilassa lehti näyttää
+    // yhä tarkalleen yllä olevan rajat-alueen; reunus paljastuu
+    // zoomatessa ja panoroitaessa.
+    piirtoRajat: {
+      pohjoinen: 33.3528, etela: 33.3272, lansi: 44.3688, ita: 44.4072,
+    },
+    varikartta: 'assets/kartat/bagdad-varikartta.png',
     esittely: 'Bagdad perustettiin vuonna 762 Tigrisin länsirannalle '
       + 'täydellisen pyöreäksi kaupungiksi. Siitä ei ole jäljellä '
       + 'mitään: pyöreä kaupunki on maan alla nykykaupunginosien '
