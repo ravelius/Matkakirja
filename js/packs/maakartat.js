@@ -2653,6 +2653,14 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 35.692, etela: 35.6715, lansi: 51.4115, ita: 51.4365,
     },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, E00-viimeistely 17.8.2026). Reunukselle jäävät
+    // Baharestanin aukio idässä ja Park-e Shahr lännessä; lepotilassa
+    // lehti näyttää yhä pelkän rajat-alueen.
+    piirtoRajat: {
+      pohjoinen: 35.69815, etela: 35.66535, lansi: 51.404, ita: 51.444,
+    },
+    varikartta: 'assets/kartat/teheran-varikartta.png',
     esittely: 'Teheranin vanha ydin on kartalla ruutu, jonka halki '
       + 'kulkee kaksi pitkää suoraa väylää pohjoisesta etelään. '
       + 'Vasemmassa laidassa on laaja puisto, jonka sisäiset polut '
@@ -3793,6 +3801,59 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ibn Tulunin moskeija', lat: 30.0288, lon: 31.2497, wiki: 'Ibn Tulunin moskeija' },
       { nimi: 'Saladinin linnoitus', lat: 30.0287, lon: 31.2599, wiki: 'Saladinin linnoitus' },
       { nimi: 'Khan el-Khalili', lat: 30.0477, lon: 31.2622, wiki: 'Khan el-Khalili' },
+    ],
+  },
+  tripoli: {
+    polku: 'assets/kartat/tripoli-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 32.9009, etela: 32.8942, lansi: 13.174, ita: 13.1822,
+    },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 17.8.2026). Reunukselle jäävät satama ja Marttyyrien
+    // aukio; lepotilassa lehti näyttää yhä pelkän rajat-alueen.
+    piirtoRajat: {
+      pohjoinen: 32.90291, etela: 32.89219, lansi: 13.17154, ita: 13.18466,
+    },
+    varikartta: 'assets/kartat/tripoli-varikartta.png',
+    esittely: 'Tripolin vanhakaupunki näkyy kartalla yhtenä selvänä '
+      + 'kuviona: tumma viiva kiertää viisikulmion, ja sen sisällä '
+      + 'kadut hajoavat kujiksi, joita ei voi ajaa autolla. Viiva on '
+      + 'kaupunginmuuri. Viisikulmion muodon vanhakaupunki sai '
+      + '1500-luvun puolivälissä, kun ottomaanien ensimmäinen '
+      + 'käskynhaltija Darghut rakensi linnoitukset uudelleen. Muurin '
+      + 'sisäpuoli on vain noin kuudensadan metrin levyinen, eli koko '
+      + 'medina kävellään ristiin vartissa.\n\n'
+      + 'Kaupunki on paljon muuriaan vanhempi. Foinikialaiset '
+      + 'perustivat tähän Oean, ja roomalaisajan suora ristikkokaava '
+      + 'on yhä kujaverkon alla. Kahden pääkadun risteykseen '
+      + 'pystytettiin vuonna 165 Marcus Aureliuksen riemukaari, joka '
+      + 'on kartan pohjoisosassa. Kaakkoisnurkassa muurin ulkopuolella '
+      + 'kohoaa Punainen linna omalla kalliollaan, ja sen takana '
+      + 'kartta jatkuu satamaan: meri tulee kuvaan ylhäältä ja '
+      + 'oikealta, sillä medina on niemekkeellä. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Kuusi kohdetta pohjoisesta etelään. Koordinaatit on
+       * ristiintarkistettu Overpassista ja en-Wikipedian
+       * coord-malleista 17.8.2026.
+       *
+       * KAKSI KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS, ja syy on
+       * mitattu eikä mieltymys:
+       *  - Gurgin moskeija on 53 metrin päässä riemukaaresta, eli
+       *    niiden numeroympyrät olisivat menneet lähes päällekkäin.
+       *    Moskeija saa oman jaksonsa kaupunkilehden oppaassa.
+       *  - Marttyyrien aukio jää muurin ulkopuolelle reunukselle.
+       *    Sen tunnettuus on nykypolitiikkaa, joka ei kuulu peliin
+       *    (Raamattu: turvalinjat).
+       */
+      { nimi: 'Marcus Aureliuksen riemukaari', lat: 32.8999, lon: 13.1758 },
+      { nimi: 'Darghutin moskeija', lat: 32.8988, lon: 13.1772 },
+      { nimi: 'Vanhankaupungin kellotorni', lat: 32.8962, lon: 13.1792 },
+      { nimi: 'Punainen linna', lat: 32.8960, lon: 13.1806 },
+      { nimi: 'Karamanlin moskeija', lat: 32.8952, lon: 13.1796 },
+      { nimi: 'an-Naqan moskeija', lat: 32.8953, lon: 13.1788 },
     ],
   },
   lontoo: {
