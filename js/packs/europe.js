@@ -364,6 +364,22 @@ const EU_CITIES = [
   { id: 'alpit', name: 'Alpit', wiki: 'Alpit', ambience: 'vuoristo', x: 352, y: 640, la: 'end', lx: -16, ly: 5 },
   // Venetsia on Adrianmeren pohjukassa Milanon tilalla (omistajan valinta).
   { id: 'venetsia', name: 'Venetsia', ambience: 'satama', wiki: 'Venetsia', x: 448, y: 698, la: 'start', lx: 16, ly: -6 },
+  /*
+   * FIRENZE ON SIIRRETTY LÄNTEEN, ja se on mitattu päätös eikä
+   * huolimattomuus. Oikea paikka (43,77° N, 11,256° E) on laudan
+   * kaavalla (427, 742), mutta siitä on Venetsiaan vain 49 ja Roomaan
+   * 56 yksikköä — lauta vaatii kaupunkien väliksi 60 (minCityDistance),
+   * jotta nimikilvet eivät mene päällekkäin. Venetsia ja Rooma ovat
+   * molemmat omilla oikeilla paikoillaan ja vain 94 yksikön päässä
+   * toisistaan, joten väliin mahtuva piste on pakko työntää sivuun
+   * niiden yhdysviivalta. (412, 746) on lähin sallittu piste, joka on
+   * maalla: se vastaa Toscanan rannikkoseutua Pisan ja Livornon
+   * suunnalla, eli kaupunki on samassa maakunnassa mutta noin 65 km
+   * lounaaseen. Sama ratkaisu kuin Wienillä, Budapestilla, Alpeilla ja
+   * Sarajevolla — ks. Sarajevon kommentti alempana.
+   */
+  // Nimi oikealle: vasemmalla se peittäisi Marseillen laatan.
+  { id: 'firenze', name: 'Firenze', wiki: 'Firenze', ambience: 'kaupunki', x: 412, y: 746, la: 'start', lx: 16, ly: 5 },
   { id: 'rooma', name: 'Rooma', wiki: 'Rooma', ambience: 'kaupunki', x: 451, y: 792, airport: true, la: 'end', lx: -16, ly: 5 },
   { id: 'sisilia', name: 'Sisilia', wiki: 'Sisilia', ambience: 'meri', x: 468, y: 891, la: 'end', lx: -16, ly: 5 },
   {
@@ -478,7 +494,17 @@ const EU_EDGES = [
   { a: 'wien', b: 'venetsia', steps: 4 },
   { a: 'alpit', b: 'venetsia', steps: 3 },
   { a: 'alpit', b: 'berliini', steps: 4 },
-  { a: 'venetsia', b: 'rooma', steps: 3 },
+  /*
+   * Firenze katkaisi vanhan venetsia–rooma-yhteyden (3 askelta)
+   * kahdeksi. Molemmat pätkät ovat 60 yksikköä pitkiä, ja laudan
+   * muut samanmittaiset maayhteydet (Krakova–Varsova, Sarajevo–
+   * Dubrovnik, Budapest–Sarajevo) maksavat kaksi askelta — sama
+   * hinta siis tässäkin. Suora Venetsia–Rooma poistettiin, koska se
+   * olisi kulkenut Firenzen ohi rinnakkaisena pikatienä ja tehnyt
+   * uudesta kaupungista väliinjäävän mutkan.
+   */
+  { a: 'venetsia', b: 'firenze', steps: 2 },
+  { a: 'firenze', b: 'rooma', steps: 2 },
   // Bosnian rata: Budapestista Sarajevoon ja vuorten yli rannikolle.
   { a: 'budapest', b: 'sarajevo', steps: 2 },
   { a: 'sarajevo', b: 'dubrovnik', steps: 2 },
@@ -600,10 +626,12 @@ export const EUROPE = {
         kuva: 'assets/aarteet/aarre-europe-topaz.jpg',
       },
     }),
-    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (42). Tampere
-    // toi 42:nnen, ja se lisättiin yleisimpään aarteeseen (meripihka),
-    // jotta laattapinon suhteet pysyvät entisellään.
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 11, empty: 12 },
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (43).
+    // Tampere toi 42:nnen ja sen laatta lisättiin yleisimpään
+    // aarteeseen (meripihka, topaz 10 -> 11); Firenze toi 43:nnen ja
+    // sen laatta otettiin tyhjistä (12 -> 13), jottei aarteiden määrä
+    // muutu kaupungin lisäämisen sivutuotteena.
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 11, empty: 13 },
   },
 
   questions: EUROPE_QUESTIONS,

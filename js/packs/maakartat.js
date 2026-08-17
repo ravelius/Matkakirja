@@ -4823,6 +4823,56 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pyynikin näkötorni', lat: 61.4936, lon: 23.7208, wiki: 'Pyynikin näkötorni' },
     ],
   },
+  firenze: {
+    polku: 'assets/kartat/firenze-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 43.778, etela: 43.7605, lansi: 11.243, ita: 11.27 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari).
+    piirtoRajat: { pohjoinen: 43.78325, etela: 43.75525, lansi: 11.2349, ita: 11.2781 },
+    varikartta: 'assets/kartat/firenze-varikartta.png',
+    esittely: 'Firenzen vanhakaupunki on pieni: kartan reunasta reunaan on '
+      + 'noin kaksi kilometriä, ja kaikki kohteet ovat kävelymatkan päässä '
+      + 'toisistaan. Kaupunki alkoi roomalaisena varuskuntana vuonna 59 '
+      + 'eaa., ja sen suorakulmainen sotilasruutukaava on yhä kartalla '
+      + 'näkyvissä keskellä muuten mutkittelevaa kujaverkkoa. Keskiajalla '
+      + 'kaupunki kasvoi villakankaan ja pankkien varassa niin isoksi, '
+      + 'että se joutui rakentamaan muurinsa kolmesti uudelleen. Viimeiset '
+      + 'muurit purettiin 1860-luvulla, kun Firenze oli Italian '
+      + 'pääkaupunki, ja niiden paikalle tuli leveä kehäkatujen '
+      + 'rengas — se erottuu kartalla vanhan ytimen ympärillä.\n\nArno '
+      + 'virtaa kartan halki lännestä itään ja jakaa kaupungin kahtia. '
+      + 'Pohjoispuolella on vanha ydin: Duomon kupoli, Signorian aukio ja '
+      + 'Uffizi joen rannassa. Eteläpuolta sanotaan Oltrarnoksi eli '
+      + '"Arnon takaiseksi", ja siellä ovat käsityöläisten korttelit ja '
+      + 'Bobolin puutarhan iso vihreä kiila. Joen yli johtaa useita '
+      + 'siltoja, joista vanhin ja kuuluisin on Ponte Vecchio — kartalla '
+      + 'se erottuu siitä, että sen päällä on taloja. Kohteet ovat '
+      + 'kartalla numeroituina pisteinä: napautus tuo esiin nimikyltin, '
+      + 'ja kyltistä aukeaa kohteen oma juttu.',
+    kohteet: [
+      /*
+       * KAKSI ANSAA fi.wikipediassa, molemmat tarkistettu
+       * rajapinnasta 17.8.2026:
+       *  - `Boboli` ja `Bobolin puutarha` EIVÄT ole artikkeleita;
+       *    puutarhasta ei ole fi-artikkelia lainkaan, joten kohde jää
+       *    ilman wiki-linkkiä ja nojaa omaan juttuunsa.
+       *  - `Santa Croce` yksinään on täsmennyssivu; Firenzen kirkosta
+       *    kertoo `Basilica di Santa Croce`.
+       */
+      { nimi: 'Duomo', lat: 43.7731, lon: 11.256, wiki: 'Santa Maria del Fiore' },
+      { nimi: 'Palazzo Vecchio', lat: 43.7694, lon: 11.2558, wiki: 'Palazzo Vecchio' },
+      { nimi: 'Uffizi', lat: 43.7676, lon: 11.2553, wiki: 'Uffizi' },
+      // Silta saa olla vedellä (tarkista-karttapisteet.mjs): piste on
+      // sillan keskellä, koska juuri se on kohde.
+      { nimi: 'Ponte Vecchio', lat: 43.768, lon: 11.2531, wiki: 'Ponte Vecchio' },
+      { nimi: 'Santa Croce', lat: 43.7686, lon: 11.2624, wiki: 'Basilica di Santa Croce' },
+      // Puutarha on iso; piste on sen pohjoispäässä Pitti-palatsin
+      // takana, jotta se ei osu kartan vasempaan alanurkkaan
+      // mittakaavajanan päälle.
+      { nimi: 'Bobolin puutarha', lat: 43.7645, lon: 11.25 },
+    ],
+  },
   dubrovnik: {
     polku: 'assets/kartat/dubrovnik-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

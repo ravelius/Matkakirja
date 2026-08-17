@@ -902,6 +902,25 @@ export const SAATIEDOT = {
       + 'elokuu. Meri kaventaa vuoden kuudentoista asteen mittaiseksi, '
       + 'mikä on vähemmän kuin missään muualla Itämeren piirissä.',
   },
+  // Firenze on Arnon laaksossa vuorten ympäröimänä eikä rannikolla,
+  // ja se näkyy luvuissa: kesä on kuumempi ja talvi viileämpi kuin
+  // saman leveyspiirin rannikkokaupungeissa. Ennustepiste on
+  // kaupungin oma sijainti (43,77 N, 11,256 E) eikä laudan siirretty
+  // karttapiste — sää haetaan oikeasta Firenzestä.
+  firenze: {
+    lat: 43.77,
+    lon: 11.26,
+    keskilampo: [5.3, 6.0, 9.4, 12.8, 17.1, 21.5, 24.4, 24.5, 19.7, 15.0, 10.2, 6.2],
+    sade: [67, 76, 72, 82, 74, 48, 29, 33, 86, 113, 128, 97],
+    luonnehdinta: 'Firenzen vuosi on jyrkkä: heinä- ja elokuun '
+      + 'keskilämpö kohoaa yli 24 asteen, ja päivälämpötila nousee '
+      + 'silloin kolmeenkymmeneen. Samat kuukaudet ovat vuoden '
+      + 'kuivimmat — heinäkuussa sadetta kertyy noin 29 millimetriä. '
+      + 'Sateet tulevat syksyllä: loka- ja marraskuussa kertyy '
+      + 'yhteensä yli kaksisataa millimetriä, enemmän kuin koko '
+      + 'kesäkuukausina yhteensä. Talvi on leuto mutta kostea, ja '
+      + 'tammikuun keskilämpö jää viiden asteen tienoille.',
+  },
 
   /*
    * ALUEET JA LOPUT KAUPUNGIT (Opus 16.8.2026). Näiltä puuttuivat

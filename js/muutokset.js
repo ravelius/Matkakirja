@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 832, teksti: 'Firenze Euroopan laudalle' },
   { v: 831, teksti: 'Tampere ja Rovaniemi Euroopan laudalle' },
   { v: 830, teksti: 'M7b: panorointi ja eleet Kartta-luokkaan' },
   { v: 829, teksti: 'M7a: kamera omaksi Kartta-luokaksi' },
