@@ -1186,6 +1186,46 @@ const KAUPUNGIT = {
     // välissä on jyrkkä rinne, joka venyttäisi rajauksen kaksinkertaiseksi.
     rajat: { pohjoinen: 38.426, etela: 38.413, lansi: 27.124, ita: 27.142 },
   },
+  soul: {
+    /*
+     * Soulin vanha ydin Jongnon kaupunginosassa, 2,6 x 2,4 km.
+     * Ruutu alkaa pohjoisessa Bukchonin hanok-korttelista ja päättyy
+     * etelässä Cheonggyecheon-puroon, joka juoksee kuvan alalaidassa
+     * lännestä itään. Vasemmalla on Gyeongbokgungin palatsialue
+     * isona suorakaiteena, oikealla Changdeokgung ja sen alapuolella
+     * Jongmyon metsäinen esi-isien pyhäkkö — kolme suurta vihreää
+     * saareketta muuten tiiviissä ruudukossa.
+     *
+     * MIKSI TÄMÄ NURKKA SOULISTA. Soul on megakaupunki, jonka
+     * maamerkit ovat kymmenien kilometrien päässä toisistaan:
+     * Namsanin torni, Gangnam, Han-joki ja Olympiapuisto eivät mahdu
+     * mihinkään yhteen kaupunkikartan ruutuun. Jongno on ainoa
+     * nurkka, jossa kuusi lähteellistä kohdetta on kävelymatkan
+     * päässä toisistaan — ja se on myös se Soul, joka on vanhin:
+     * Joseon-dynastia perusti pääkaupunkinsa juuri tähän vuonna 1394.
+     * Han-joki jää 3 km etelään, Namsan 1,5 km, Sungnyemunin portti
+     * 1 km lounaaseen. Mukaan ottaminen kolminkertaistaisi ruudun ja
+     * muuttaisi vanhan ytimen täpläksi (Firenze-oppi).
+     *
+     * KOHTEIDEN PISTEET LÄHTEISTÄ, ei arvattuina. Viisi on
+     * en-Wikipedian coord-malleista ja Jongmyo Wikidatan P625:stä,
+     * koska artikkelissa ei ole koordinaattia:
+     *   Gyeongbokgung   37,5799 / 126,9768
+     *   Bukchon         37,5831 / 126,9836
+     *   Changdeokgung   37,5794 / 126,9928
+     *   Jongmyo         37,5747 / 126,9936  (Wikidata Q483948)
+     *   Tapgol-puisto   37,5711 / 126,9885
+     *   Bosingak        37,5699 / 126,9834
+     *
+     * palvelutiet: true — Bukchonin hanok-kujat ja Insadongin
+     * sivukujat ovat OSM:ssä service-teitä, ja ilman niitä kartan
+     * pohjoisosa jää tyhjäksi paperiksi juuri siinä kohdassa, jossa
+     * kohde on. Sama ratkaisu kuin Vilnassa ja Bagdadissa.
+     */
+    rajat: { pohjoinen: 37.587, etela: 37.5655, lansi: 126.9695, ita: 126.9985 },
+    laajennus: 1.6,
+    palvelutiet: true,
+  },
   bagdad: {
     // Rusafan vanha puoli Tigrisin itärannalla: Mutanabbin kirjakatu,
     // abbasidipalatsi, Qishlan kellotorni ja Bagdadin museo ovat

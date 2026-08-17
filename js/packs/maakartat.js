@@ -2626,6 +2626,60 @@ export const KAUPUNKIKARTAT = {
 
     ],
   },
+  soul: {
+    polku: 'assets/kartat/soul-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 37.587, etela: 37.5655, lansi: 126.9695, ita: 126.9985,
+    },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 17.8.2026).
+    piirtoRajat: {
+      pohjoinen: 37.59345, etela: 37.55905, lansi: 126.9608, ita: 127.0072,
+    },
+    varikartta: 'assets/kartat/soul-varikartta.png',
+    esittely: 'Soul on kymmenen miljoonan asukkaan kaupunki, mutta '
+      + 'tämä kartta näyttää siitä vain kaksi ja puoli kilometriä: sen '
+      + 'nurkan, josta kaikki alkoi. Joseon-dynastia siirsi '
+      + 'pääkaupunkinsa tänne vuonna 1394 ja rakensi kolme asiaa '
+      + 'ensimmäisenä — palatsin, esi-isien pyhäkön ja kellotornin. Ne '
+      + 'kaikki ovat yhä kartalla, ja niiden väliin mahtuu kävellen '
+      + 'puoli tuntia.\n\nKartan ilme syntyy kolmesta suuresta '
+      + 'aitauksesta, jotka rikkovat muuten tiheän ruudukon. '
+      + 'Vasemmalla ylhäällä on Gyeongbokgungin palatsi paksun '
+      + 'muurin sisällä; sen alueella erottuu kaksi vesiallasta, iso '
+      + 'suorakaide ja pieni pyöreä lampi. Oikeassa yläkulmassa on '
+      + 'toinen ja vielä laajempi aitaus, Changdeokgung, jonka '
+      + 'takapihalla mutkittelee metsäinen puutarha omine '
+      + 'lampineen. Sen alapuolella on soikea vihreä saareke: '
+      + 'Jongmyon pyhäkkö, jonne kuninkaiden sielut kannettiin '
+      + 'kuoleman jälkeen.\n\nKuvan alalaidassa kulkee lännestä itään '
+      + 'kapea vesiviiva. Se on Cheonggyecheon, puro joka jakoi vanhan '
+      + 'kaupungin pohjoiseen ja eteläiseen puoliskoon — sen '
+      + 'pohjoispuolta sanotaan yhä Bukchoniksi eli pohjoiskyläksi. '
+      + 'Puron ja palatsien välissä on Jongno, kellokatu, ja sen '
+      + 'varrella kaksi loppua kohdetta. Namsanin torni, Han-joki ja '
+      + 'Gangnam jäävät kaikki tämän ruudun ulkopuolelle etelään.',
+    kohteet: [
+      /*
+       * Kuusi kohdetta. Pisteet lähteistä eikä arvattuina: viisi
+       * en-Wikipedian coord-mallista ja Jongmyo Wikidatan P625:stä,
+       * koska en-artikkelissa ei ole koordinaattia lainkaan.
+       *
+       * fi-Wikipedia tarkistettu rajapinnasta 17.8.2026: palatsin
+       * artikkeli on nimellä `Gyeongbok` (ei Gyeongbokgung), ja
+       * Changdeokgung sekä Jongmyo ovat omilla nimillään.
+       * Bukchonista, Tapgol-puistosta ja Bosingakista EI ole
+       * fi-artikkelia, joten ne nojaavat omaan juttuunsa.
+       */
+      { nimi: 'Gyeongbokgung', lat: 37.5799, lon: 126.9768, wiki: 'Gyeongbok' },
+      { nimi: 'Bukchonin hanok-kylä', lat: 37.5831, lon: 126.9836 },
+      { nimi: 'Changdeokgung', lat: 37.5794, lon: 126.9928, wiki: 'Changdeokgung' },
+      { nimi: 'Jongmyo', lat: 37.5747, lon: 126.9936, wiki: 'Jongmyo' },
+      { nimi: 'Tapgol-puisto', lat: 37.5711, lon: 126.9885 },
+      { nimi: 'Bosingak', lat: 37.5699, lon: 126.9834 },
+    ],
+  },
   isfahan: {
     polku: 'assets/kartat/isfahan-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',

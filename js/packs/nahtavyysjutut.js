@@ -14039,6 +14039,315 @@ export const NAHTAVYYSJUTUT = {
     },
   },
   /*
+   * SOUL (E00-viimeistely 17.8.2026). Kuusi kohdetta, samat nimet
+   * merkki merkiltä kuin maakartat.js:n KAUPUNKIKARTAT.soul.kohteet
+   * — ui.js yhdistää taulut nimellä.
+   *
+   * Faktat en-Wikipedian rajapinnasta (action=query&prop=extracts)
+   * ja fi-Wikipedian johdannoista; kuvat haettu Commonsin
+   * KATEGORIOIDEN kautta (Gyeonghoeru, Geunjeongjeon, Injeongjeon,
+   * Buyongji, Jeongjeon (Jongmyo), Tapgol Park, Bosingak, Bukchon
+   * Hanok Village), koska hakusanahaku ei löydä koreankielisiä
+   * kuvauksia. Jokainen lisenssi todennettu extmetadatasta
+   * (LicenseShortName, Artist, Restrictions) ja jokainen kuva
+   * ladattu ja katsottu silmin.
+   *
+   * Kaksi jutuista nojaa 1906 otettuun valokuvasarjaan — se on
+   * lähinnä isoisän aikakautta, mitä Soulista on vapaana saatavilla.
+   */
+  soul: {
+    Gyeongbokgung: {
+      aika: '1395',
+      teksti: 'Joseon-dynastia perustettiin vuonna 1392, ja kaksi vuotta '
+          + 'myöhemmin se päätti siirtää pääkaupunkinsa Hanyangiin eli '
+          + 'nykyiseen Souliin. Palatsin rakentaminen alkoi joulukuussa '
+          + '1394 ja ensimmäinen vaihe valmistui syyskuussa 1395. Nimen '
+          + 'antoi virkamies Chŏng Tojŏn, ja se tarkoittaa suurten '
+          + 'siunausten palatsia — sanapari on lainattu vanhasta '
+          + 'kiinalaisesta runokokoelmasta. Kuningas Sejong Suuri, joka '
+          + 'hallitsi vuosina 1418–1450, teki palatsista päämajansa ja '
+          + 'kehitti täällä korean oman kirjaimiston hangulin.'
+        + '\n\n'
+          + 'Vuonna 1592 palatsi paloi maan tasalle Imjin-sodassa, ja '
+          + 'rahaa jälleenrakennukseen ei ollut. Se sai olla raunioina '
+          + 'lähes kolmesataa vuotta, kunnes kuningas Gojong rakennutti '
+          + 'sen uudelleen 1860-luvulla — isoisän matkan aikaan palatsi '
+          + 'oli siis juuri valmistunut uutena. Vuonna 1910 Japani '
+          + 'liitti Korean itseensä ja purki palatsin '
+          + 'järjestelmällisesti: noin viidestäsadasta rakennuksesta oli '
+          + 'vuoteen 1945 mennessä jäljellä neljäkymmentä, ja niiden '
+          + 'tilalle nousi siirtomaahallinnon toimistotalo.'
+        + '\n\n'
+          + 'Palautustyö alkoi toden teolla 1980-luvulla, ja sitä on '
+          + 'tehty kahdessa ohjelmassa, joista jälkimmäinen kestää '
+          + 'vuoteen 2045. Kymmeniä rakennuksia on jo pystytetty '
+          + 'uudelleen. Vahdinvaihto näytellään portilla kahdesti '
+          + 'päivässä, ja sisäänpääsy on ilmainen sille, joka saapuu '
+          + 'hanbokissa eli perinteisessä korealaisessa puvussa.',
+      kuvat: [
+        {
+          tiedosto: 'Front view of the Imperial Throne Hall Geunjeongjeon at Gyeongbokgung Palace with blue sky in Seoul.jpg',
+          selite: 'Valtaistuinsali Geunjeongjeon suoraan edestä: '
+            + 'kaksikerroksinen harmaa tiilikatto kaartuvine räystäineen, '
+            + 'sen alla vihreä-punainen koristemaalaus ja kaksi '
+            + 'kivikaiteista terassia. Tyhjällä laattapihalla seisoo '
+            + 'kahdessa rivissä matalia kivipaaluja, jotka merkitsivät '
+            + 'virkamiesten arvojärjestyksen. Takana kohoaa vuori.',
+          lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Gyeongbokgung Gyeonghoeru 1906.png',
+          selite: 'Gyeonghoerun juhlapaviljonki vuonna 1906: kaksikerroksinen '
+            + 'puurakennus seisoo neliskulmaisen lammen rannassa '
+            + 'kymmenien kivipylväiden varassa, ja etualan vesi on '
+            + 'kokonaan lootuksenlehtien peitossa. Yläkerran kaiteen '
+            + 'takana ja pylväiden välissä näkyy vaaleisiin pukuihin '
+            + 'pukeutuneita ihmisiä.',
+          lahde: 'Asahi Shimbun (朝日新聞社), Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bukchonin hanok-kylä': {
+      aika: '1920-luku',
+      teksti: 'Bukchon tarkoittaa pohjoiskylää, ja nimi tulee siitä, että '
+          + 'kaupunginosa on Cheonggyecheon-puron ja Jongno-kadun '
+          + 'pohjoispuolella. Se oli Joseon-kaudella korkeiden '
+          + 'virkamiesten ja aateliston asuinaluetta: vuoden 1906 '
+          + 'väestörekisterin mukaan 43,6 prosenttia asukkaista kuului '
+          + 'tähän säätyyn. Talot olivat silloin isoja ja niitä oli '
+          + 'harvassa.'
+        + '\n\n'
+          + 'Nykyinen tiheä hanok-kortteli syntyi vasta 1920-luvulla, ja '
+          + 'sen takana on yksi mies. Kiinteistökehittäjä Chŏng Segwŏn '
+          + 'perusti noin vuonna 1920 ensimmäisen korealaisomisteisen '
+          + 'kiinteistöyhtiön ja alkoi rakentaa Bukchonia täyteen '
+          + 'pieniä hanok-taloja. Jälkeläisten mukaan valinta oli '
+          + 'tietoinen: hän halusi estää aluetta siirtymästä '
+          + 'japanilaisille ja rakensi korealaisia taloja, vaikka '
+          + 'siirtomaahallinto painosti toisin. Talot olivat aiempia '
+          + 'pienempiä mutta ajanmukaisia — niissä oli lasi-ikkunat ja '
+          + 'sähkö. Voitot hän ohjasi korealaisiin '
+          + 'kansallisuusliikkeisiin, muun muassa Korean kielen '
+          + 'seuralle, ja joutui siitä lopulta kidutetuksi ja '
+          + 'menetti omaisuutensa.'
+        + '\n\n'
+          + 'Alue julistettiin kansanperinnemaisemaksi vuonna 1976. '
+          + 'Turistit löysivät sen 2000-luvun lopulla, ja vuonna 2024 '
+          + 'kylässä kävi 6,4 miljoonaa vierailijaa — noin 6 100 '
+          + 'asukasta kohti. Siitä seurasi sääntöjä: tammikuusta 2025 '
+          + 'alkaen muut kuin majoittujat pääsevät kylään vain kello '
+          + '10:n ja 17:n välillä, ja asukkaat pyytävät kylteillään '
+          + 'hiljaisuutta.',
+      kuvat: [
+        {
+          tiedosto: 'Bukchon Hanok Village 01.jpg',
+          selite: 'Bukchonin kuja alamäkeen: molemmin puolin hanok-talojen '
+            + 'harmaat tiilikatot ja kaartuvat räystäät, oikealla valkoinen '
+            + 'kivimuuri, jonka yläreunassa on punaisella maalattu '
+            + 'kulmikas meanderikuvio. Kujan päässä avautuu nykyinen Soul: '
+            + 'lasitorneja utuisessa valossa ja niiden takana '
+            + 'Namsan-vuorella seisova torni.',
+          lahde: 'Bgag, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Bukchon Hanok Village 05.jpg',
+          selite: 'Hanok-talon portti läheltä: leveä kaksiosainen puuovi '
+            + 'rautarenkaineen, sen yllä kaartuva tiilikatto ja '
+            + 'ristikkoikkunoita. Portin molemmin puolin jatkuu muuri, '
+            + 'jonka vaaleaan kivipintaan on ladottu punaisia '
+            + 'kulmikkaita kuvioita. Katukyltissä lukee numero 49.',
+          lahde: 'Bgag, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Changdeokgung: {
+      aika: '1405',
+      teksti: 'Kuningas Taejong määräsi vuonna 1404 rakennettavaksi toisen '
+          + 'palatsin Gyeongbokgungin rinnalle, ja se valmistui '
+          + 'lokakuussa 1405. Nimi tarkoittaa kukoistavan hyveen '
+          + 'palatsia. Sivupalatsiksi tarkoitettu Changdeokgung osoittautui '
+          + 'kuninkaiden suosikiksi: he asuivat täällä mieluummin kuin '
+          + 'virallisessa pääpalatsissa, ja kun Imjin-sodan tuhot '
+          + 'korjattiin 1600-luvun alussa, vain Changdeokgung ja sen '
+          + 'naapuri kunnostettiin. Niin sivupalatsista tuli '
+          + 'käytännössä Joseonin pääpalatsi kolmeksi vuosisadaksi.'
+        + '\n\n'
+          + 'Valtaistuinsali Injeongjeon oli paikka, jossa uusi kuningas '
+          + 'kruunattiin ja jossa vieraat lähettiläät otettiin vastaan. '
+          + 'Sen edessä on laattapiha, ja pihan kivipaalut kertovat, '
+          + 'missä järjestyksessä hovin virkamiehet seisoivat. '
+          + 'Kuninkaallinen perhe asui palatsissa vielä sen jälkeenkin, '
+          + 'kun Korea vapautui vuonna 1945 — aina 1900-luvun lopulle '
+          + 'asti.'
+        + '\n\n'
+          + 'Palatsin kuuluisin osa on kuitenkin sen takana: Huwon eli '
+          + 'salainen puutarha, kymmenien hehtaarien metsäinen rinne, '
+          + 'jota kuninkaat rakastivat. Sen keskellä on Buyongji, '
+          + 'nelikulmainen lampi, jonka keskellä on pyöreä pieni saari — '
+          + 'muoto noudattaa vanhaa käsitystä siitä, että maa on '
+          + 'nelikulmainen ja taivas pyöreä. Puutarha on nykyisin '
+          + 'suurimmaksi osaksi avoinna, osa vain opastetuilla '
+          + 'kierroksilla. Changdeokgung otettiin Unescon '
+          + 'maailmanperintöluetteloon vuonna 1997.',
+      kuvat: [
+        {
+          tiedosto: 'Changdeok Palace, Seoul.11.jpg',
+          selite: 'Valtaistuinsali Injeongjeon edestä kirkkaassa '
+            + 'auringonpaisteessa: kaksikerroksinen harmaa tiilikatto, '
+            + 'jonka harjalla on valkoinen raita, sen alla vihreä-punainen '
+            + 'koristemaalaus ja rivi valkoisia ovipaneeleita. Edessä '
+            + 'nousee leveä kiviterassi, ja tyhjällä laattapihalla seisoo '
+            + 'kahdessa rivissä matalia kivipaaluja.',
+          lahde: 'Rtflakfizer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Changdeokgung, Seoul - Changdeokgung3136.jpg',
+          selite: 'Buyongji-lampi salaisessa puutarhassa: vasemmalla '
+            + 'seisoo pieni paviljonki kivipylväiden varassa osittain '
+            + 'veden päällä, keskellä lammessa on pyöreä kivireunainen '
+            + 'saari, jolla kasvaa mänty ja pensaita, ja oikealla '
+            + 'kohoaa toinen paviljonki portteineen. Vesi on '
+            + 'vihertävä ja heijastaa rakennukset.',
+          lahde: 'lumoplank, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Jongmyo: {
+      aika: '1394',
+      teksti: 'Kun kuningas Taejo siirsi pääkaupungin tänne vuonna 1394, '
+          + 'hän rakennutti palatsin viereen pyhäkön esi-isilleen. '
+          + 'Jongmyo on kungfutselainen kuninkaallinen esi-isien '
+          + 'pyhäkkö, ja Unescon mukaan se on maailman vanhin '
+          + 'säilynyt laatuaan. Paikan idea on kiinalaisesta '
+          + 'perinteestä: valtaistuimelta katsottuna esi-isien pyhäkön '
+          + 'kuului olla kuninkaan vasemmalla ja maan- ja '
+          + 'viljanjumalien pyhäkön oikealla.'
+        + '\n\n'
+          + 'Päärakennus Jeongjeon oli valmistuessaan arvioiden mukaan '
+          + 'Aasian pisimpiä rakennuksia. Siinä oli aluksi seitsemän '
+          + 'kammiota, joista kussakin säilytettiin yhden kuninkaan ja '
+          + 'hänen puolisoidensa sielutauluja. Kun uusia kuninkaita '
+          + 'kuoli, salia jatkettiin aina lännestä itään, ja lopulta '
+          + 'kammioita oli yhdeksäntoista. Niissä on nykyisin 19 '
+          + 'kuninkaan ja 30 kuningattaren taulut. Jokainen kammio on '
+          + 'tahallaan yksinkertainen ja koruton.'
+        + '\n\n'
+          + 'Japanilaiset polttivat pyhäkön Imjin-sodassa, mutta '
+          + 'alkuperäiset sielutaulut pelastuivat: ne oli piilotettu '
+          + 'erään tavallisen kansalaisen taloon. Uusi rakennus '
+          + 'valmistui 1601 ja seisoo yhä. Pyhäköllä on kolme porttia, '
+          + 'ja niiden käyttö oli tarkkaan jaettu — eteläportti oli '
+          + 'sielujen, itäportti kuninkaan ja länsiportti seremonian '
+          + 'esittäjien. Vuodesta 1932 vuoteen 2019 Jongmyon ja '
+          + 'palatsien välissä kulki katu; nyt se on tunnelissa ja '
+          + 'yhteys on palautettu. Kohde liitettiin Unescon '
+          + 'maailmanperintöluetteloon vuonna 1995.',
+      kuvat: [
+        {
+          tiedosto: 'Jeongjeon, Jongmyo Shrine (oblique) - Seoul, Korea.jpg',
+          selite: 'Jeongjeon-sali viistosti: hyvin pitkä matala rakennus '
+            + 'katoaa perspektiiviin, punaisia pylväitä ja tummia '
+            + 'kaksoisovia rivi toisensa jälkeen yhtenäisen harmaan '
+            + 'tiilikaton alla. Rakennus lepää korkealla kivijalustalla, '
+            + 'jolle nousee muutama porras, ja edessä on karkeasti '
+            + 'ladottu laattapiha.',
+          lahde: 'Daderot, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tapgol-puisto': {
+      aika: '1897',
+      teksti: 'Puiston paikalla oli 1400-luvulla Wongaksan buddhalainen '
+          + 'temppeli. Siitä on jäljellä kymmenkerroksinen kivipagodi, '
+          + 'joka antoi puistolle nimen: tap tarkoittaa koreaksi '
+          + 'pagodia. Pihalla on myös vuonna 1471 pystytetty muistokivi, '
+          + 'joka kertoo temppelin perustamisesta 1465. Sen jalusta on '
+          + 'kilpikonnan muotoinen graniittilohkare, runko marmoria ja '
+          + 'huipulla kaksi toisiinsa kietoutunutta lohikäärmettä. Kivi '
+          + 'on 4,9 metriä korkea.'
+        + '\n\n'
+          + 'Puistoksi alue järjestettiin vasta vuonna 1897. Ehdotus '
+          + 'tuli irlantilaiselta John McLeavy Brownilta, joka toimi '
+          + 'kuningas Gojongin neuvonantajana. Nimi oli pitkään '
+          + 'Pagoda-puisto ja muuttui Tapgol-puistoksi 28. toukokuuta '
+          + '1992. Pinta-alaa on puolitoista hehtaaria.'
+        + '\n\n'
+          + 'Puiston tärkein hetki oli 1. maaliskuuta 1919. Täällä '
+          + 'luettiin ensimmäisen kerran ääneen Korean '
+          + 'itsenäisyysjulistus, ja siitä alkoi maaliskuun ensimmäisen '
+          + 'liike — Korean itsenäisyysliikkeen laajin kansannousu. '
+          + 'Puistossa on nykyisin sarja reliefejä ja muistomerkki '
+          + 'liikkeelle. Arkisin paviljongin portailla istuu '
+          + 'kaupunkilaisia, ja portin ulkopuolella pelataan '
+          + 'janggia eli korealaista shakkia.',
+      kuvat: [
+        {
+          tiedosto: 'Pagoda 1906.png',
+          selite: 'Puisto vuonna 1906, pian perustamisensa jälkeen: '
+            + 'kymmenkerroksinen vaalea kivipagodi kohoaa keskellä ja '
+            + 'sen vieressä on tiilikattoinen paviljonki. Etualalla '
+            + 'kulkee soratie nuorten istutusten välissä, tiellä '
+            + 'kävelee vaaleisiin pukuihin pukeutuneita miehiä, ja '
+            + 'taustalla näkyy loivia vuoria.',
+          lahde: 'Asahi Shimbun (朝日新聞社), Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Tapgol Park, Seoul.jpg',
+          selite: 'Puiston paviljonki sateella: kuusikulmainen '
+            + 'punapylväinen rakennus harmaine tiilikattoineen seisoo '
+            + 'matalalla kiviportaikolla, ja portailla istuu rivi '
+            + 'ihmisiä. Ympärillä on märkä asfalttiaukio, isoja mäntyjä '
+            + 'ja niiden takana kerrostaloja.',
+          lahde: 'Tristan Surtel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Bosingak: {
+      aika: '1395',
+      teksti: 'Jongno tarkoittaa kellokatua, ja nimi tulee tästä '
+          + 'paviljongista. Ensimmäinen kellotorni pystytettiin vuonna '
+          + '1395, ja kello ripustettiin Hanyangiin vuonna 1398. '
+          + 'Rakennus seisoi vilkkaan torin keskellä ja oli osa '
+          + 'kaupungin puolustusjärjestelmää. Nimen Bosingak sille '
+          + 'antoi keisari Gojong vuonna 1895.'
+        + '\n\n'
+          + 'Kello oli kaupungin kello sanan varsinaisessa '
+          + 'merkityksessä. Sitä lyötiin kolmekymmentäkolme kertaa '
+          + 'kello neljä aamulla ja kello kymmenen illalla, ja niiden '
+          + 'lyöntien mukaan Soulin neljä kaupunginporttia avattiin ja '
+          + 'suljettiin. Illan lyöntien jälkeen kaupungissa oli '
+          + 'ulkonaliikkumiskielto. Kelloa käytettiin myös '
+          + 'palohälytyksenä.'
+        + '\n\n'
+          + 'Alkuperäinen kello tuhoutui tulipalossa vuonna 1597, ja '
+          + 'sen tilalle tuotiin Wongaksan temppelin kello, joka on '
+          + 'valettu vuonna 1468. Se sai suojelukohteen aseman 1948. '
+          + 'Vanha kello on nykyisin Korean kansallismuseossa ja '
+          + 'paviljongissa riippuu jäljennös. Nykyisin kelloa lyödään '
+          + 'vain kerran vuodessa, uudenvuodenyönä keskiyöllä — ja '
+          + 'väkeä tulee niin paljon, että metrojunat eivät sinä yönä '
+          + 'pysähdy viereisellä asemalla lainkaan.',
+      kuvat: [
+        {
+          tiedosto: 'Bosingak, Seoul.jpg',
+          selite: 'Kellopaviljonki lännestä nähtynä: punaisten pylväiden '
+            + 'varaan nostettu avoin yläkerta punaisine kaiteineen, sen '
+            + 'yllä leveä harmaa tiilikatto voimakkaasti kaartuvine '
+            + 'kulmineen ja räystään alla vihreä-punainen koristemaalaus. '
+            + 'Etuseinässä on kultakirjaiminen nimikilpi, ja rakennusta '
+            + 'kiertää matala kivikaide nurmikentän laidalla.',
+          lahde: 'Tristan Surtel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
    * TRIPOLI (E00-viimeistely 17.8.2026). Kuusi kohdetta, samat kuin
    * maakartat.js:n KAUPUNKIKARTAT.tripoli.kohteet — nimet ovat merkki
    * merkiltä samat, koska ui.js yhdistää taulut nimellä.

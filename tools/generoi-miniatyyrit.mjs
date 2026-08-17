@@ -635,6 +635,49 @@ const KUVAT = [
     + 'reconstructed old Tokyo alley: a narrow wooden shopfront with '
     + 'a cloth shop-curtain over the door, a sliding paper screen '
     + 'above it, wooden tubs and a hand water pump at the kerb'],
+
+  /*
+   * ── Soul, kuusi kohdetta (E00-viimeistely 17.8.2026) ────────────
+   * VAIN JONOSSA, ei generoitu (ks. Tampere yllä).
+   *
+   * Korealaisen palatsiarkkitehtuurin kolme tunnusmerkkiä on
+   * kirjoitettu jokaiseen kehotteeseen erikseen, koska ne erottavat
+   * sen japanilaisesta: kaksoisräystäs, jonka kulmat kaartuvat
+   * ylös, räystään alla vihreä-punainen ruutumainen koristemaalaus
+   * (dancheong) ja pyöreät punaiset pylväät kivijalustan päällä.
+   */
+  ['soul-gyeongbokgung', 'a korean royal throne hall on a wide stone '
+    + 'terrace with carved balustrades: a two-tiered grey tiled roof '
+    + 'with strongly upturned corners, red round pillars beneath, and '
+    + 'green-and-red painted latticework under the eaves. Two rows of '
+    + 'small low stone posts stand on the empty paved courtyard in '
+    + 'front. NO people'],
+  ['soul-bukchonin-hanok-kyla', 'a narrow sloping lane of traditional '
+    + 'korean houses seen from above: rows of grey curved tiled roofs '
+    + 'stepping down the hill on both sides, white stone walls with a '
+    + 'red angular geometric pattern along their top, and a wooden '
+    + 'gate. Modern glass towers small and hazy in the far distance'],
+  ['soul-changdeokgung', 'a square garden pond with a small round '
+    + 'island in the middle bearing one leaning pine tree, and on the '
+    + 'left bank a small korean pavilion standing partly over the '
+    + 'water on stone pillars, its grey tiled roof with upturned '
+    + 'corners and green-and-red painted eaves. Wooded slope behind'],
+  ['soul-jongmyo', 'one extremely long low shrine hall seen at an '
+    + 'oblique angle so it recedes far into the distance: an unbroken '
+    + 'grey tiled roof carried by an endless row of plain dark red '
+    + 'pillars with dark double doors between them, standing on a '
+    + 'high stone platform above a rough flagged courtyard. Austere, '
+    + 'no ornament, NO people'],
+  ['soul-tapgol-puisto', 'a tall slender ten-storey stone pagoda of '
+    + 'pale carved marble, its tiers stepping inwards like a stack of '
+    + 'small roofs, standing alone in a city park with a hexagonal '
+    + 'red-pillared pavilion beside it and pine trees around'],
+  ['soul-bosingak', 'a korean bell pavilion: an open upper storey '
+    + 'with a red railing raised on thick round red pillars, under a '
+    + 'wide grey tiled roof with sharply upturned corners and '
+    + 'green-and-red painted eaves, with a huge dark bronze bell '
+    + 'hanging in the shadow beneath. A low stone balustrade rings the '
+    + 'platform'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
