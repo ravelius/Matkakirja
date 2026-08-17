@@ -319,6 +319,27 @@ export function sovitaMaailma({ leveys = 12000, lon0 = -30, etela = -58, pohjoin
 
 // --- kaupunkien kokoaminen ---------------------------------------------------
 
+/*
+ * Käsin annetut lon/lat-paikat: laudan oma piste EI ole käännettävissä.
+ *
+ * KAANTEISET olettaa, että kaupungin x/y on laskettu laudan kaavasta.
+ * Useimmiten se pitää, mutta ei aina: Eurooppa-laudan kaava kattaa
+ * pituusasteet -11°...41°, eikä Islanti (-21.9°) mahdu sinne lainkaan
+ * — kaava antaisi negatiivisen x:n. Siksi Islannin lautapiste on
+ * aikanaan pantu laudan yläkulmaan summittain (x 62, y 60), ja käännös
+ * luki siitä 69.7°N 7.8°W eli avomeren Islannin koillispuolelta.
+ * Maailmankartta peri virheen: piste seisoi meressä saaren vieressä
+ * (omistajan kuvakaappaus 17.8.2026).
+ *
+ * Näissä tapauksissa ainoa oikea korjaus on antaa todellinen paikka
+ * käsin. Lautapistettä ei voi korjata, koska laudalla ei ole sille
+ * paikkaa.
+ */
+export const TARKAT_PAIKAT = {
+  // Reykjavíkin seutu; Islanti on Eurooppa-laudan kaavan ulkopuolella.
+  islanti: [-21.94, 64.15],
+};
+
 /**
  * Kaikkien neljän laudan kaupungit lon/lat-koordinaatteina.
  * Sama kaupunki voi olla usealla laudalla (Istanbul, Kairo, Teheran);
@@ -333,7 +354,9 @@ export async function kaupungit(laudat = VANHA_MAAILMA) {
     const alkuperainen = mapdata(id);
     for (const c of pack.cities) {
       let lonlat;
-      if (alkuperainen) {
+      if (TARKAT_PAIKAT[c.id]) {
+        lonlat = TARKAT_PAIKAT[c.id];
+      } else if (alkuperainen) {
         lonlat = alkuperainen.cities[c.id];
         if (!lonlat) continue;
       } else {

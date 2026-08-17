@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 823, teksti: 'Islanti paikalleen, säänluonnehdinta joka kaupunkiin' },
   { v: 822, teksti: 'Tuotantosuunnitelma jäljellä oleville kohteille' },
   { v: 821, teksti: 'Luenta ja visa omiksi moduuleikseen (M6)' },
   { v: 820, teksti: 'Maalehti ja sisällys omaksi moduulikseen (M5c)' },

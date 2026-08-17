@@ -326,6 +326,11 @@ export const RAAMATTU = {
         'MAALEHDEN NIMIÖ (omistaja 16.8.2026): pelkkä maan nimi ja '
           + 'lippu sen perässä — ei selittäviä lisäsanoja ("Ranska '
           + 'kartalla"), kartta näkyy sivulla itsestään.',
+        'MAALEHDEN LAAJUUS (omistaja 17.8.2026): määräytyy maan '
+          + 'SISÄLLÖN mukaan, ei kohdemäärän. Jokainen maa '
+          + 'suunnitellaan ennen tekemistä: mitä siellä on, mitä '
+          + 'kannattaa nostaa esiin — ja toteutetaan siinä '
+          + 'laajuudessa kuin tarve on.',
         'Pyhät kaupungit: oma sivutyyppi, johdannot kirjoittaa '
           + 'Fable.',
         'PITKÄT ARTIKKELIT (idea): professorimaisia syväjuttuja, '

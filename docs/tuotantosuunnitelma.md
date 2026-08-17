@@ -62,9 +62,9 @@ teknisen esivaiheen (mantereen-resepti, Dubai-oppi).
 
 | # | Velka | Määrä | Koko |
 |---|---|---|---|
-| J1 | Hintatasorivi kainaloon: Bagdad, Teheran | 2 | pieni |
-| J2 | SAATIEDOT-rivi: Soul, Shanghai, Tripoli | 3 | pieni |
-| J3 | Säänluonnehdinta (5/70 tehty) — odottaa sävyhyväksyntää | 65 | ~130 k tok |
+| J1 | ✅ TEHTY 17.8. — Hintatasorivi kainaloon: Bagdad, Teheran | 2 | pieni |
+| J2 | ✅ TEHTY 17.8. — SAATIEDOT-rivi: Soul, Shanghai, Tripoli | 3 | pieni |
+| J3 | ✅ TEHTY 17.8. — Säänluonnehdinta kaikilla 73 rivillä | 65 | ~130 k tok |
 | J4 | MAAKARTAT-rivi puuttuu lehtimaalta (JOR, BHR + 10 Aasian maata) | 12 | ~120 k tok |
 | J5 | Kohdekartta puuttuu kansikaupungilta (8 Siperiaa, Soul, Shanghai, Tripoli, Aden, Mosul, Salalah, Sana) | 15 | oma virta |
 | J6 | Miniatyyrit puuttuvat karttakaupungilta (~260 piirrosta) | 43 | virta käynnissä |
@@ -309,16 +309,25 @@ min agenttiaikaa; erä (7 yksikköä, kirjoittajat rinnan + kuvajono)
 1. **Erien koko ja tahti**: sopiiko 9 erää à 6–9 yksikköä, ja
    montako erää viikossa kreditit sallivat (3/vko → ~3 viikkoa;
    1/päivä → ~2 viikkoa)?
-2. **Maalehtien porrastus** (skenaario B): täysi 5×4 vain 9
-   monikohdemaalle, suppea 3–4 aihetta yhden kohteen maille — vai
-   täysi kaikille (A, +1,5 M tok) tai lykkäys 17 maalta (C, −2,5 M
-   tok mutta ohuet lehdet)?
+2. **Maalehtien laajuus — PÄÄTETTY (omistaja 17.8.2026, kirjattu
+   Raamattuun):** laajuus määräytyy maan SISÄLLÖN mukaan, ei
+   kohdemäärän (A/B/C-porrastus hylätty). Jokainen maa
+   suunnitellaan ennen tekemistä: mitä siellä on, mitä kannattaa
+   nostaa esiin — ja toteutetaan tarpeen laajuudessa. Käytännössä
+   erän ensimmäinen askel on maakohtainen sisältösuunnitelma
+   (aihelista + laajuusesitys), joka kirjataan erän PR-kuvaukseen;
+   token-arviot skaalautuvat tämän mukaan (B-skenaarion luvut
+   säilyvät suuruusluokka-arviona).
 3. **Alueiden opas**: esitys EI (Euroopan malli). Halutaanko
    poikkeuksena opas 1–2 tähtialueelle (esim. Kilimandžaro,
    Viktorian putoukset)?
-4. **Aloituslupa ja lehtitauon kuittaus**: O7 alkaa vasta kun
-   avauskuvakierros on omistajan mielestä maalissa — kuittaus?
-   (Jälkityöerä JE1 voidaan ajaa heti taukoa rikkomatta.)
+4. **Aloituslupa — PÄÄTETTY (omistaja 17.8.2026): tauko jatkuu.**
+   Uusia kaupunki- tai maalehtiä ei aloiteta ennen kuin O6:n kuusi
+   kaupunkia on viimeistelty TÄYSIN valmiiksi (E00: kohdekartat,
+   kohteet juttuineen, miniatyyrit, sää) ja omistaja on tarkistanut
+   ja kuitannut ne lehti kerrallaan — Fable ilmoittaa jokaisesta
+   valmistuvasta. O7/Afrikka alkaa vasta kuittausten jälkeen.
+   Jälkityöt (JE-erät) ajetaan taukoa rikkomatta.
 5. **Luonnehdintojen sävy**: hyväksytäänkö 5 mallia (Kairo, Pariisi,
    Helsinki, Islanti, Salalah), jolloin JE2 + uudet kohteet saavat
    luonnehdinnan heti säärivin yhteydessä?

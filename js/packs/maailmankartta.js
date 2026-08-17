@@ -233,7 +233,14 @@ const CITIES = [
   {"id":"kobenhavn","name":"Kööpenhamina","wiki":"Kööpenhamina","ambience":"satama","x":6251.4,"y":1133.7,"la":"start","lx":20,"ly":5},
   {"id":"lappi","name":"Lappi","wiki":"Lapin maakunta","ambience":"pohjoinen","x":6690.6,"y":584.6,"la":"start","lx":20,"ly":5},
   {"id":"tromssa","name":"Tromssa","wiki":"Tromssa","ambience":"pohjoinen","x":6468.4,"y":412.6,"la":"start","lx":20,"ly":5},
-  {"id":"islanti","name":"Islanti","wiki":"Islanti","ambience":"pohjoinen","x":5574.3,"y":399.1,"la":"middle","lx":0,"ly":-24},
+  // KÄSIN KORJATTU 17.8.2026 (kuten satamat-rannalle ja korjaa-merireitit
+  // kirjoittavat: yksi rivi kerrallaan koostajan jälkeen). Piste oli
+  // 5574.3,399.1 eli avomerellä Islannin koillispuolella, koska
+  // Eurooppa-laudan käänteiskaava luki summittaisesta kulmapisteestä
+  // 69.7°N 7.8°W. Uusi paikka on Reykjavíkin seutu 64.15°N 21.94°W
+  // projisoituna (5102.0,711.9) ja siirrettynä maalle koostajan omalla
+  // maalle()-haulla. Lähdekorjaus: tools/vanha-maailma.mjs TARKAT_PAIKAT.
+  {"id":"islanti","name":"Islanti","wiki":"Islanti","ambience":"pohjoinen","x":5106,"y":711.9,"la":"middle","lx":0,"ly":-24},
   {"id":"tanger","name":"Tanger","wiki":"Tanger","ambience":"basaari","x":5643.1,"y":1964.6,"start":true,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"kairo","name":"Kairo","wiki":"Kairo","ambience":"basaari","x":6874.2,"y":2180.9,"start":true,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"karthago","name":"Karthago","wiki":"Karthago","ambience":"meri","x":6108.1,"y":1921.9,"la":"start","lx":20,"ly":5},
@@ -505,8 +512,8 @@ const EDGES = [
   {"a":"tukholma","b":"helsinki","type":"sea","steps":2,"via":[[6604,957]]},
   {"a":"helsinki","b":"tallinna","type":"sea","steps":1,"via":[[6607,963],[6607,999],[6619,1017]]},
   {"a":"riika","b":"tukholma","type":"sea","steps":3,"via":[[6526,1073],[6474,1018]]},
-  {"a":"islanti","b":"edinburgh","type":"sea","steps":5,"via":[[5831,444],[6022,510],[5988,779],[5883,972],[5823,1055]]},
-  {"a":"islanti","b":"tromssa","type":"sea","steps":5,"via":[[5970,335],[6248,349]]},
+  {"a":"islanti","b":"edinburgh","type":"sea","steps":5,"via":[[5060,738],[5090,768],[5186,768],[5312,894],[5480,978],[5738,978],[5792,1038]]},
+  {"a":"islanti","b":"tromssa","type":"sea","steps":5,"via":[[5170,765],[5344,765],[5704,405],[6424,405]]},
   {"a":"tanger","b":"karthago","steps":4},
   {"a":"karthago","b":"tripoli","steps":1},
   {"a":"tanger","b":"sahara","steps":5},
@@ -819,7 +826,7 @@ const EDGES = [
   {"a":"dili","b":"bali","type":"sea","steps":5},
   {"a":"broome","b":"dili","type":"sea","steps":5},
   {"a":"brisbane","b":"noumea","type":"sea","steps":6},
-  {"a":"islanti","b":"nuuk","type":"sea","steps":4,"via":[[5213,405],[4931,687],[4649,687],[4403,933],[4331,939],[4289,903],[4229,897],[4187,873],[4115,771]]},
+  {"a":"islanti","b":"nuuk","type":"sea","steps":4,"via":[[4594,743],[4402,935],[4330,941],[4288,905],[4222,899],[4186,869],[4138,821],[4120,773],[4102,755]]},
   {"a":"dublin","b":"stjohns","type":"sea","steps":5,"via":[[5647,1281],[5635,1305],[5593,1311],[5539,1341],[5059,1341],[4987,1413],[4231,1413]]},
   {"a":"lissabon","b":"newyork","type":"sea","steps":6},
   {"a":"dakar","b":"joaopessoa","type":"sea","steps":5,"via":[[5199,2814],[5120,2905],[5043,2996],[4966,3087],[4890,3178],[4813,3270],[4737,3361]]},

@@ -10168,6 +10168,24 @@ export const KULTTUURI_KATEGORIAT = {
                 selite: 'Rusafan kohteet ovat lähekkäin, mutta helle '
                   + 'sanelee kellonajan.',
               },
+              /*
+               * HINTATASO kainalotaulussa (omistajan päätös 17.8.2026:
+               * Matkakassa-osio poistettiin ja hintataso kerrotaan vain
+               * tässä). Lähteet en-Wikivoyagesta, molemmat haettu
+               * 17.8.2026: "Baghdad", Get around — "Taxis are also
+               * plentiful and quite cheap to use"; "Iraq", Eat —
+               * "Street food is abundant and inexpensive throughout the
+               * country", ja Sleep — Bagdadin hotelleissa "rates start
+               * at around 50 USD per night in winter and 70 USD per
+               * night in summer". Siksi plussa mutta kahdella tähdellä:
+               * arki on halpaa, yöpyminen ei.
+               */
+              {
+                mita: 'Hintataso',
+                tahdet: 2,
+                selite: 'Katuruoka ja taksit ovat halpoja, mutta '
+                  + 'hotelliyöstä maksaa vähintään viisikymmentä dollaria.',
+              },
             ],
             hyvaTietaa: [
               {
@@ -11948,6 +11966,25 @@ export const KULTTUURI_KATEGORIAT = {
                 tahdet: 2,
                 selite: 'Persialaisen puutarhan vesikanava ja vuorten '
                   + 'teehuoneet ovat samaa ajatusta: vettä on.',
+              },
+              /*
+               * HINTATASO kainalotaulussa (omistajan päätös 17.8.2026).
+               * Lähteet en-Wikivoyagesta, haettu 17.8.2026: "Tehran",
+               * Get around — "Tehran has an inexpensive but confusing
+               * bus network" ja metrolippu 7 000 rialia, sekä Sleep —
+               * "The old-styled Mosaferkhanehs and budget hotels are
+               * often low quality and overpriced". Lisäksi "Iran", Get
+               * around: "Iranian transport is of high quality, and is
+               * very affordable." Plussa siis, mutta kahdella tähdellä:
+               * liikkuminen on halpaa, halvin yöpyminen ei ole hintansa
+               * väärti.
+               */
+              {
+                mita: 'Hintataso',
+                tahdet: 2,
+                selite: 'Metro ja bussit maksavat lähes olemattoman '
+                  + 'summan, mutta halvimmat hotellit eivät ole hintansa '
+                  + 'väärti.',
               },
             ],
             hyvaTietaa: [
