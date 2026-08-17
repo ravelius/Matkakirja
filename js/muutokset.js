@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 804, teksti: 'Matkailijan Bagdad: opas kuudesta uudesta' },
   { v: 803, teksti: 'Kaiuttimen kuvake otsikon kokoiseksi' },
   { v: 802, teksti: 'Arkin alanapit kotipalkin ylapuolelle iPadilla' },
   { v: 801, teksti: 'Kaiutin otsikon perään, kohdelaskuri pois' },

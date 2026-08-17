@@ -9903,6 +9903,264 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Hussein A.Al-mukhtar, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * MATKAILIJAN BAGDAD (paketti O6, omistajan tilaus 16.8.2026:
+       * "rakenna samaan malliin seuraavaksi bagdad, teheran, soul,
+       * tokio, shanghai ja tripoli"). Rakenne on monistettu Pariisin
+       * mallista: pystykuva, kappale ja opastaitto viidellä jaksolla,
+       * joista ensimmäisessä on kolmen kuvan karuselli.
+       *
+       * Faktat ovat repon omaa kaanonia — Bagdadin nostoista alempana
+       * tässä samassa tiedostossa (al-Rashid-katu 1914, kahvilat 1590
+       * ja 285 kpl vuoteen 1903, Shorjan tori, Bab al-Wastani,
+       * Zumurrud Khatunin hauta, Mustansiriya) — eikä uutta lähdetyötä
+       * tarvittu. Lisenssit ja Restrictions (tyhjä kaikilla)
+       * tarkistettu Commonsin API:sta 16.8.2026, sijainnit
+       * kuvaustekstistä ja kategorioista eikä tiedostonimestä, ja
+       * jokainen kuva katsottu silmin.
+       */
+      matkailijalle: {
+        /*
+         * Etusivukuvan kaava (kirjoitettuna Pariisin kohdalle): yksi
+         * aihe joka täyttää ruudun, paikan oma erikoisuus, pystykuva.
+         * Qushlan kellotorni seisoo palmujen yllä yhtenä pystysuorana
+         * hahmona tyhjää taivasta vasten — Bagdadin oma maamerkki,
+         * joka erottuu pienessäkin koossa. Sijainti varmistettu
+         * kategoriasta (Qushla) ja kuvaustekstistä.
+         */
+        kuva: {
+          tiedosto: 'Alqushla tower.jpg',
+          selite: 'Qushlan kellotorni kasarmiaukiolla. Ottomaanien '
+            + 'rakennuttama torni kohoaa palmujen yli, ja aukiolla '
+            + 'luetaan yhä runoja ääneen.',
+          lahde: 'Yasin Alqaisy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Bagdad on kahdeksan miljoonan asukkaan pääkaupunki, '
+          + 'jonka Tigris jakaa kahtia: itäpuoli on Rusafa ja '
+          + 'länsipuoli Karkh. Matkailijan Bagdad on Rusafan puolella, '
+          + 'ja se on pieni — kirjakatu, kasarmiaukio, karavaaniseraaji '
+          + 'ja abbasidien palatsi ovat kaikki kävelymatkan päässä '
+          + 'toisistaan. Kaupunki on tiiltä, koska tasangolla ei ole '
+          + 'rakennuskiveä. Päivän rytmin sanelee helle, ja tee tulee '
+          + 'lasissa eikä kupissa.',
+        artikkeli: {
+          nimi: 'Matkailijan Bagdad',
+          taitto: 'opas',
+          teksti: 'Matkailijan Bagdad mahtuu yhdelle joenrannalle, '
+            + 'mutta kahdeksansadan vuoden päähän.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Bagdad jakautuu joen mukaan kahtia: Tigrisin '
+                + 'itäpuoli on Rusafa ja länsipuoli Karkh. Vuonna 762 '
+                + 'perustettu pyöreä kaupunki oli länsirannalla, mutta '
+                + 'siitä ei ole jäljellä mitään näkyvää — vanha '
+                + 'säilynyt puoli on toisella rannalla. Rusafan kohteet '
+                + 'ovat kävelymatkan päässä toisistaan ja eri '
+                + 'aikakausilta: abbasidien 1200-luku, Mirjanin '
+                + 'karavaaniseraaji 1300-luvulta, ottomaanien '
+                + 'kasarmiaukio ja 1900-luvun kirjakatu. Kävelyn '
+                + 'selkäranka on al-Rashid-katu, joka avattiin vuonna '
+                + '1914 ensimmäisenä väylänä, jolle vaunut mahtuivat; '
+                + 'linjauksen tieltä purettiin noin 700 taloa. Kadulle '
+                + 'tehtiin jalkakäytävät ja niiden päälle '
+                + 'pylväskäytävät, jotka varjostavat kulkijaa. Katu '
+                + 'kulkee Tigrisin suuntaisesti, joten suunnistaminen '
+                + 'on helppoa: joki on koko ajan samalla puolella. '
+                + 'Kesällä kävely kannattaa ajoittaa aamuun ja iltaan, '
+                + 'sillä heinä- ja elokuun keskilämpötila on yli 38 '
+                + 'astetta.',
+              /*
+               * KARUSELLI (omistajan linjaus: oppaan ensimmäinen kuva
+               * on aina kolmen kuvan karuselli). Kolme kuvaa seuraavat
+               * tekstiä: kävelyn selkäranka, sen varren portti ja
+               * kadun oma elämä.
+               */
+              kuva: [
+                {
+                  tiedosto: 'شارع الرشيد 7.jpg',
+                  selite: 'Al-Rashid-katu pylväskäytävineen. Pylväiden '
+                    + 'varaan nousevat ulkonevat parvekkeet, ja käytävä '
+                    + 'varjostaa kulkijaa koko matkan.',
+                  lahde: 'Ali.tinbo, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Al-Mutanabbi Street Gate.png',
+                  selite: 'Mutanabbin kadun kaariportti. Kadun toisessa '
+                    + 'päässä portti, toisessa runoilijan patsas '
+                    + 'Tigrisin rannalla.',
+                  lahde: 'Ayham4002, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'An Iraqi man sells fruit at a market in Al Rashid, Baghdad, Iraq.jpg',
+                  selite: 'Hedelmäkauppias al-Rashidin torilla. Appelsiinit '
+                    + 'ja granaattiomenat ovat laatikoissa myyjän edessä, '
+                    + 'banaanit riippuvat katoksesta.',
+                  lahde: 'James (Jim) Gordon, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kirjojen katu',
+              teksti: 'Mutanabbin katu on alle kilometrin mittainen ja '
+                + 'autoton. Väliin mahtuu kirjakauppoja, kustantamoja '
+                + 'ja kirjapainoja, ja kauppojen edessä kirjat ladotaan '
+                + 'riveihin suoraan katukiveykseen. Nimi tulee '
+                + 'runoilija Abu at-Tayyib al-Mutanabbista (n. 915–965), '
+                + 'joka aloitti kirjoittamisen yhdeksänvuotiaana ja '
+                + 'jonka säkeitä siteerataan arabimaailmassa yhä '
+                + 'sananlaskuina. Kirjakauppa on paikalla vanhaa perua, '
+                + 'sillä tässä oli abbasidien aikaan Bagdadin '
+                + 'ensimmäinen kirjakauppiaiden tori; nykyinen katu '
+                + 'vihittiin vuonna 1932. Täältä on lähtöisin sanonta, '
+                + 'jonka mukaan Kairo kirjoittaa, Beirut kustantaa ja '
+                + 'Bagdad lukee. Kadun päästä jatkuu Souk al-Sarai, '
+                + 'enintään 300 metrin kuja, jossa myytiin ennen nahkaa '
+                + 'ja nykyään vihkoja, paperia ja koulukirjoja.',
+              kuva: {
+                tiedosto: 'مشهد للكتب وهي تفترش الارض في شارع المتنبي.jpg',
+                selite: 'Kirjat levitettyinä katukiveykselle Mutanabbin '
+                  + 'kadulla. Kannet on ladottu riveihin niin pitkälle '
+                  + 'kuin kuja jatkuu, ja ostajat kävelevät niiden '
+                  + 'välissä.',
+                lahde: 'Mondalawy, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Istikan, maqam ja tarinankertoja',
+              teksti: 'Ensimmäinen bagdadilainen kahvila avattiin vuonna '
+                + '1590. Vuoden 1882 luettelo tunsi niitä 184, ja '
+                + 'vuoteen 1903 mennessä määrä oli 285. Kilpailu '
+                + 'asiakkaista oli kova: omistajat palkkasivat laulajia '
+                + 'esittämään irakilaista maqamia ja tarinankertojia '
+                + 'iltoihin. Al-Rashid-kadun al-Zahawin kahvila avattiin '
+                + '1917 ja sai nimensä runoilija Jamil Sidqi '
+                + 'al-Zahawista; 1930-luvulla siellä kävi bengalilainen '
+                + 'runoilija Rabindranath Tagore. Mutanabbin kadun '
+                + 'Shabandar on samaa vuosikertaa ja Bagdadin vanhimpia '
+                + 'yhä toimivia, ja sen seinät on peitetty vanhoilla '
+                + 'valokuvilla. Kahvilassa tilataan tee eikä kahvia, ja '
+                + 'se tarjotaan istikan-lasissa puisella takht-penkillä.',
+              kuva: {
+                tiedosto: 'مقهى الشابندر في بغداد.jpg',
+                asettelu: 'kapea',
+                selite: 'Tee Shabandarin kahvilassa: kuulanmuotoinen '
+                  + 'istikan-lasi sinisellä lautasella, sokeri pohjalla '
+                  + 'ja lusikka lasissa.',
+                lahde: 'Mohammdaon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Tiili kestää',
+              teksti: 'Tasangolla ei ole rakennuskiveä, joten Bagdad on '
+                + 'rakennettu tiilestä. Mustansiriya-koulussa oli saman '
+                + 'katon alla hammam, sairaala, apteekki ja keittiö, ja '
+                + 'talossa asui kolmekymmentä orpoa, jotka saivat saman '
+                + 'palkkion ja ruoan kuin muut opiskelijat. '
+                + 'Porttihallissa seisoi vuonna 1235 valmistunut '
+                + 'vesikello: seinään oli kuvattu taivas ja siihen kaksi '
+                + 'kultaista haukkaa, ja tunnin täyttyessä haukan nokka '
+                + 'aukeni ja pudotti pronssipallon kulhoon. Tiili '
+                + 'poltettiin kahdella lämmöllä: kantavat tiilet kovassa '
+                + 'kuumuudessa kestäviksi, koristetiilet matalammassa '
+                + 'niin että niitä pystyi veistämään. Khan Mirjan on '
+                + 'vuosina 1356–1358 rakennettu majatalo, jossa on 45 '
+                + 'huonetta eikä lainkaan avointa keskuspihaa.',
+              kuva: {
+                tiedosto: 'المدرسة المستنصرية في بغداد (3).jpg',
+                selite: 'Mustansiriya-koulun sisäpiha ja sen '
+                  + 'vesiallas. Tiiliseinien kaarikäytävät ja palmut '
+                  + 'heijastuvat veteen; talo on yksi maailman '
+                  + 'vanhimpia yhä seisovia korkeakoulurakennuksia.',
+                lahde: 'Taisir Mahdi, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Joki, masgouf ja ilta',
+              teksti: 'Tigris on kaupungin keskiviiva. Vuonna 1932 joen '
+                + 'yli vei veneiden varaan rakennettu silta, jonka '
+                + 'keskiosa avattiin laivojen tieltä; nykyään siltoja on '
+                + 'kymmenkunta ja ne ovat kiinteitä. Itärantaa myötäilee '
+                + 'Abu Nuwasin katu puistoineen, ja rannalla seisoo '
+                + 'Šahrazadin patsas — Tuhannen ja yhden yön tarinoissa '
+                + 'seikkailee myös Bagdadin kalifi Harun al-Rashid. Joen '
+                + 'oma ruoka on masgouf: kala halkaistaan selästä ja '
+                + 'pystytetään avotulen sivuun tunniksi, joten työn '
+                + 'tekee savu ja säteilylämpö eikä liekki. Aterian '
+                + 'rinnalle ostetaan tanoor-leipää, joka läiskäistään '
+                + 'saviuunin kuumaan sisäseinään ja paistuu muutamassa '
+                + 'minuutissa. Illalla joen rannalle ja Qushlan aukiolle '
+                + 'tullaan vasta, kun päivän kuumin hetki on ohi.',
+              kuva: {
+                tiedosto: 'The famed masgouf - Flickr - Al Jazeera English.jpg',
+                selite: 'Masgouf valmistumassa: Tigrisistä pyydetyt kalat '
+                  + 'on halkaistu selästä ja pystytetty vartaisiin '
+                  + 'avotulen sivuun, jolloin ne kypsyvät savussa ja '
+                  + 'säteilylämmössä.',
+                lahde: 'Al Jazeera English, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kirjakatu',
+                tahdet: 3,
+                selite: 'Alle kilometrin autoton katu, jolla kirjat '
+                  + 'ladotaan suoraan katukiveykseen.',
+              },
+              {
+                mita: 'Kahvilat',
+                tahdet: 3,
+                selite: 'Perinne vuodesta 1590; tee tulee istikan-lasissa '
+                  + 'ja penkillä saa istua niin kauan kuin haluaa.',
+              },
+              {
+                mita: 'Tiiliarkkitehtuuri',
+                tahdet: 3,
+                selite: 'Mustansiriya, Khan Mirjan ja Bab al-Wastani ovat '
+                  + 'kaikki kävelymatkan päässä toisistaan.',
+              },
+              {
+                mita: 'Ruoka',
+                tahdet: 2,
+                selite: 'Masgouf kypsyy avotulen sivussa tunnin, ja '
+                  + 'tanoor-leipä paistuu saviuunin seinässä.',
+              },
+              {
+                mita: 'Kävely-ympäristö',
+                tahdet: 2,
+                selite: 'Rusafan kohteet ovat lähekkäin, mutta helle '
+                  + 'sanelee kellonajan.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesän helle',
+                teksti: 'Heinä- ja elokuun keskilämpötila on yli 38 '
+                  + 'astetta, joten kävely ajoitetaan aamuun ja iltaan.',
+              },
+              {
+                otsikko: 'Kuiva kausi',
+                teksti: 'Kesäkuusta lokakuuhun sadetta ei tule '
+                  + 'käytännössä lainkaan.',
+              },
+              {
+                otsikko: 'Kaksi rantaa',
+                teksti: 'Matkailijan kohteet ovat Rusafan puolella; '
+                  + 'Karkhin puolelle mennään erikseen.',
+              },
+              {
+                otsikko: 'Pyöreää kaupunkia ei näe',
+                teksti: 'Vuoden 762 pyöreästä kaupungista ei ole '
+                  + 'jäljellä mitään näkyvää, eikä sen muuria ole '
+                  + 'löydetty.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
       nostot: [
         {
           otsikko: 'Porteista jäi jäljelle yksi',
