@@ -2597,6 +2597,12 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 35.7245, etela: 35.705, lansi: 139.7645, ita: 139.801,
     },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 17.8.2026).
+    piirtoRajat: {
+      pohjoinen: 35.73035, etela: 35.69915, lansi: 139.75355, ita: 139.81195,
+    },
+    varikartta: 'assets/kartat/tokio-varikartta.png',
     esittely: 'Kartalla on kaksi erilaista Tokiota. Vasemmassa '
       + 'laidassa on laaja puisto, jonka eteläkärjessä on '
       + 'munanmuotoinen lampi, ja sen kupeessa kulkee etelästä '

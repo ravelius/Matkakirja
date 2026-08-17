@@ -591,6 +591,50 @@ const KUVAT = [
     + 'stout re-used ancient stone columns whose capitals are '
     + 'visibly older and rougher than the rest, with plain green '
     + 'doors behind them'],
+
+  /*
+   * ── Tokio, kuusi kohdetta (E00-viimeistely 17.8.2026) ───────────
+   * VAIN JONOSSA, ei generoitu: js/packs/miniatyyrit.js:ssä ei ole
+   * tokiota eikä sw.js:n SHELLissä .webp-polkuja. Kartalla kohteet
+   * näkyvät siihen asti numeroympyröinä, kuten koodi tekee
+   * piirroksettomalle kohteelle. Yksi otto per kohde
+   * (kustannussääntö, docs/tyolista-opukselle.md).
+   *
+   * Kaksi kohdetta on tarkoituksella kuvattu ILMAN ihmisiä ja ilman
+   * kojuja (Kaminarimon, Sensō-ji): Asakusan valokuvissa on aina
+   * väkijoukko, ja miniatyyrin pitää lukea 84 pikselissä.
+   */
+  ['tokio-kaminarimon', 'a japanese temple gate with a steep grey '
+    + 'tiled roof carried on thick vermilion pillars, and hanging in '
+    + 'the middle of the opening one ENORMOUS red paper lantern, '
+    + 'wider than a man and nearly reaching the ground, with bold '
+    + 'dark characters down its front and a small metal plate at its '
+    + 'base. A guardian statue standing in a niche on each side. NO '
+    + 'people, NO market stalls'],
+  ['tokio-senso-ji', 'a large japanese buddhist temple hall raised on '
+    + 'a stone platform: a broad two-tiered roof with heavy curving '
+    + 'ridges and upturned corners, a row of vermilion pillars along '
+    + 'the front and a wide flight of steps up to it, with a slender '
+    + 'five-storey pagoda standing separately to one side. NO people'],
+  ['tokio-kanei-ji', 'a small quiet japanese temple among tall trees: '
+    + 'one modest wooden hall with a dark tiled hip roof and plain '
+    + 'timber posts, a stone lantern and a low stone-flagged path '
+    + 'leading to it. Deliberately humble, no vermilion, no crowd'],
+  ['tokio-tokion-kansallismuseo', 'a large symmetrical 1930s museum '
+    + 'building: a heavy pale stone facade of rectangular windows '
+    + 'with a central entrance, crowned by a wide JAPANESE tiled hip '
+    + 'roof with upturned eaves — an oriental roof on a western '
+    + 'building — seen across an empty forecourt with a fountain '
+    + 'basin in front'],
+  ['tokio-uenon-puisto', 'a broad park avenue of cherry trees in full '
+    + 'blossom arching over a wide gravel path, and beyond them an '
+    + 'open pond edged with tall reeds and a small many-sided temple '
+    + 'pavilion on a spit of land in the water'],
+  ['tokio-shitamachi-museo', 'a plain two-storey museum block with '
+    + 'large ground-floor windows, and shown inside them a '
+    + 'reconstructed old Tokyo alley: a narrow wooden shopfront with '
+    + 'a cloth shop-curtain over the door, a sliding paper screen '
+    + 'above it, wooden tubs and a hand water pump at the kerb'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');

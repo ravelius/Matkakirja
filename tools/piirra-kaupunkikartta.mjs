@@ -1073,7 +1073,16 @@ const KAUPUNGIT = {
     // sitä ei ole: artikkelissa on {{Coord|format=dms|display=it}} ja
     // koordinaatti tulee Wikidatasta. Piste on siksi haettu
     // Overpassista (way 東京国立博物館 / Tokyo National Museum).
+    //
+    // REUNUS 17.8.2026 (E00-viimeistely, sama kuin Tampere ja
+    // Firenze): piirretty alue on 1,6-kertainen eli 5,0 x 3,5 km,
+    // mutta lepotilassa lehti näyttää yhä tarkalleen alla olevan
+    // rajat-alueen. Reunukselle osuvat Yanakan temppelikortteli
+    // luoteessa, Kappabashin keittiövälinekatu etelässä ja
+    // Sumida-joen itäranta — juuri sitä shitamachia, jonne
+    // panorointi jatkuu karttaa suurennettaessa.
     rajat: { pohjoinen: 35.7245, etela: 35.705, lansi: 139.7645, ita: 139.801 },
+    laajennus: 1.6,
   },
   isfahan: {
     // Isfahanin vanha ydin: Jameh-moskeija pohjoisessa, basaari sen
