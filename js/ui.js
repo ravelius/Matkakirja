@@ -2888,7 +2888,7 @@ export class UI {
         // Tyhjä ruutu kirjataan tyhjänä: sitä ei piirretä eikä pyydetä uudestaan.
         if (kuva === RUUTU_TYHJA) {
           this.taideTyhjat.add(avain);
-          this.siivoaKatetutVanhat();
+          this.siivoaKatetutVanhat(nyt);
           continue;
         }
         // Eleen takia luovutettu ruutu pyydetään uudestaan eleen jälkeen.
@@ -2898,10 +2898,15 @@ export class UI {
         // Uusi ruutu alimmaiseksi: vanhan mittakaavan ruudut jäävät
         // päälle siihen asti, kunnes koko näkymä on katettu.
         this.taideRyhma.insertBefore(kuva, this.taideRyhma.firstChild);
-        // Uusi ruutu peittää alleen jääneen vanhan: jos sen koko alue on
-        // nyt katettu, sumea kerros lähtee heti eikä vasta renkaan
-        // valmistuttua.
-        this.siivoaKatetutVanhat();
+        /*
+         * Uusi ruutu peittää alleen jääneen vanhan: jos sen näkyvä osa
+         * on nyt katettu, sumea kerros lähtee heti eikä vasta renkaan
+         * valmistuttua. Näkyvä alue annetaan valmiina (`nyt`, luettu
+         * tämän kierroksen alussa): uuden lukeman pakottama asettelu
+         * maksoi mitattuna 54 ms per ruutu 4x-kuristuksella, eikä
+         * näkymä voi liikkua kesken sarjan — ele katkaisisi sen.
+         */
+        this.siivoaKatetutVanhat(nyt);
         /*
          * Kehyksen mittainen hengähdys ruutujen väliin. Nopealla
          * reitillä ruudun maalaus on synkronista työtä (drawImage
@@ -3177,30 +3182,95 @@ export class UI {
    * piirretty (tai kirjattu tyhjäksi, jolloin siinä ei ole mitään
    * piirrettävää). Siksi mitään ei voi paljastua tyhjänä, ja kartta
    * tarkentuu keskeltä ulospäin samassa tahdissa kuin ruudut valmistuvat.
+   *
+   * "Se alue, jonka päälle ruutu ulottuu" on syvässä lähikuvassa
+   * ruudun NÄKYVÄ osa eikä koko ruutu — ks. perustelu alempaa.
+   *
+   * @param tiedettyNakyva  jo luettu näkyvä alue, jos kutsujalla on
+   *                        sellainen; säästää yhden asettelun (54 ms
+   *                        per ruutu 4x-kuristuksella).
    */
-  siivoaKatetutVanhat() {
+  siivoaKatetutVanhat(tiedettyNakyva = null) {
     if (!this.taideVanhat?.length || !(this.taideRuutu > 0)) return;
     const koko = this.taideRuutu;
     // Kiertävällä laudalla nykyruudut on avainnettu kierrettyyn
     // sarakkeeseen; vanhan ruudun oma x on samalla tavalla laudan
     // sisällä, mutta pyöristys voi työntää viimeisen sarakkeen yli.
     const kiertava = this.kartta.kiertava();
-    const sarakkeita = kiertava
-      ? Math.max(1, Math.round(this.game.pack.map.width / koko)) : 0;
-    const katettu = (solmu) => {
-      const x = Number(solmu.getAttribute('x'));
-      const y = Number(solmu.getAttribute('y'));
-      const w = Number(solmu.getAttribute('width'));
-      const h = Number(solmu.getAttribute('height'));
-      if (![x, y, w, h].every(Number.isFinite) || w <= 0 || h <= 0) return false;
-      for (let ry = Math.floor(y / koko); ry <= Math.floor((y + h - 0.001) / koko); ry++) {
-        for (let rx = Math.floor(x / koko); rx <= Math.floor((x + w - 0.001) / koko); rx++) {
+    const W = this.game.pack.map.width;
+    const sarakkeita = kiertava ? Math.max(1, Math.round(W / koko)) : 0;
+    /*
+     * SYVÄSSÄ LÄHIKUVASSA RIITTÄÄ, ETTÄ NÄKYVÄ OSA ON KATETTU
+     * (omistajan iPad-kaappaus Itä-Afrikan rannikolta: yläosa sumea,
+     * alaosa terävä pitkään).
+     *
+     * Vanha ruutu on loitonnetun mittakaavan kokoinen, eli syvässä
+     * lähikuvassa se peittää KYMMENIÄ uuden ruudukon ruutuja — myös
+     * niitä, jotka ovat näkyvän alueen ulkopuolella eli puskurirenkaassa.
+     * Kun poisto vaati koko ruudun kattamista, näkyvä osa jäi sumean
+     * kerroksen alle siihen asti, kunnes rengas oli piirretty loppuun.
+     * Mitattuna (Chromium, iPad-viewport, syvä lähikuva maailmankartalla,
+     * zoomikerroin 136):
+     *
+     *   yksi nipistys     näkyvä katettu 1510 ms → terävä vasta 7553 ms
+     *   kuusi zoomisykliä näkyvä katettu 1837 ms → terävä vasta 6181 ms
+     *   sama 4x hidastettuna (WebKit-hinta): 4649 → 28457 ms
+     *
+     * Koko se ero oli puskurirenkaan piirtoa, jota kukaan ei katso.
+     *
+     * Alta ei silti voi paljastua tyhjää: pyramidin pohjataso kattaa
+     * koko laudan ja on kaiken tarkan alla. Siksi tämä helpotus vaatii
+     * pohjan olemassaolon — ilman sitä pätee vanha, tiukempi sääntö.
+     * Näkyvän alueen ULKOPUOLELLA olevat vanhat ruudut noudattavat
+     * vanhaa sääntöä sellaisenaan: ne eivät peitä mitään, ja niistä on
+     * hyötyä reunan yli vieritettäessä siihen asti kunnes rengas ehtii.
+     */
+    const nakyva = this.taidePohja ? (tiedettyNakyva ?? this.nakyvaAlue()) : null;
+    const alueKatettu = (x0, y0, x1, y1) => {
+      for (let ry = Math.floor(y0 / koko); ry <= Math.floor((y1 - 0.001) / koko); ry++) {
+        for (let rx = Math.floor(x0 / koko); rx <= Math.floor((x1 - 0.001) / koko); rx++) {
           const sarake = kiertava ? ((rx % sarakkeita) + sarakkeita) % sarakkeita : rx;
           const avain = `${sarake},${ry}`;
           if (!this.taideRuudut.has(avain) && !this.taideTyhjat.has(avain)) return false;
         }
       }
       return true;
+    };
+    const katettu = (solmu) => {
+      const x = Number(solmu.getAttribute('x'));
+      const y = Number(solmu.getAttribute('y'));
+      const w = Number(solmu.getAttribute('width'));
+      const h = Number(solmu.getAttribute('height'));
+      if (![x, y, w, h].every(Number.isFinite) || w <= 0 || h <= 0) return false;
+      if (nakyva) {
+        /*
+         * Leikkaus näkyvään alueeseen. Kiertävällä laudalla ruutu voi
+         * näkyä kierron kopion kautta, jolloin näkymä on laudan
+         * leveyden verran sivussa ruudun omista koordinaateista —
+         * siksi ikkunaa kokeillaan myös siirrettynä.
+         */
+        let osui = false;
+        let kaikki = true;
+        for (const siirto of kiertava ? [-W, 0, W] : [0]) {
+          const ax = Math.max(x, nakyva.x + siirto);
+          const bx = Math.min(x + w, nakyva.x + nakyva.w + siirto);
+          const ay = Math.max(y, nakyva.y);
+          const by = Math.min(y + h, nakyva.y + nakyva.h);
+          if (ax >= bx || ay >= by) continue;
+          osui = true;
+          if (!alueKatettu(ax, ay, bx, by)) kaikki = false;
+        }
+        /*
+         * Näkyvän ULKOPUOLELLA olevaa ruutua ei tutkita lainkaan: se ei
+         * peitä mitään, ja renkaan valmistuttua poistaVanhatRuudut vie
+         * sen joka tapauksessa. Koko ruudun läpikäynti maksaisi turhaan
+         * — syvässä lähikuvassa loitonnetun mittakaavan ruutu osuu
+         * satoihin uuden ruudukon ruutuihin, ja tämä ajetaan jokaisen
+         * valmistuneen ruudun jälkeen.
+         */
+        return osui ? kaikki : false;
+      }
+      return alueKatettu(x, y, x + w, y + h);
     };
     const jaljelle = [];
     for (const solmu of this.taideVanhat) {

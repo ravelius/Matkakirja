@@ -1049,6 +1049,94 @@ vaadi('nopea zoomailu ei jätä yhtään ruutua kirjanpidon ulkopuolelle',
 vaadi('nopean zoomailun jälkeen näkyvän alueen päälle ei jää vanhan mittakaavan ruutuja',
   zoomailu.sumeitaPaalla === 0, JSON.stringify(zoomailu));
 
+/*
+ * 13) NÄKYVÄ ALUE TERÄVÄKSI ODOTTAMATTA PUSKURIRENGASTA (omistajan
+ * iPad-kaappaus 17.8.2026 Itä-Afrikan rannikolta: "yläosa sumea,
+ * alaosa terävä pitkään", syvä lähikuva maailmankartalla).
+ *
+ * Vanhan mittakaavan ruutu jää uusien PÄÄLLE kunnes se poistetaan, ja
+ * poisto vaati aiemmin, että ruudun KOKO ala on katettu uusilla.
+ * Syvässä lähikuvassa yksi vanha ruutu peittää kymmeniä uusia — myös
+ * puskurirenkaan ruudut näkyvän alueen ulkopuolella — joten näkyvä osa
+ * jäi sumean kerroksen alle siihen asti kunnes rengas oli piirretty
+ * loppuun. Mitattuna (Chromium, iPad-viewport, zoomikerroin 136):
+ *
+ *   yksi nipistys      näkyvä katettu 1510 ms → terävä vasta 7553 ms
+ *   4x kuristettuna    4649 ms → 28457 ms
+ *   korjattuna         terävä samalla hetkellä kuin katettu
+ *
+ * Vartioitava asia: sillä hetkellä kun näkyvä alue on ensi kerran
+ * kokonaan katettu nykyisellä mittakaavalla, sen päällä ei saa olla
+ * yhtään vanhan mittakaavan ruutua — vaikka rengas olisi yhä kesken.
+ */
+/*
+ * Syvä lähikuva ensin: juuri siellä vanha ruutu on monta uutta ruutua
+ * leveä ja ulottuu näkyvän alueen ohi puskurirenkaaseen. Matalassa
+ * zoomissa vanha ja uusi ruutu ovat lähes samankokoisia eikä ero
+ * mittaudu.
+ */
+await sivu.waitForTimeout(2000);
+for (let i = 0; i < 5; i++) {
+  // eslint-disable-next-line no-await-in-loop
+  const muuttui = await sivu.evaluate(() => window.matkakirja.ui.kartta.zoomaaPainikkeella(1));
+  if (!muuttui) break;
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(1800);
+}
+await sivu.waitForTimeout(4000);
+await nipista(1.45, 8, 14);
+let hetki = null;
+// Väljä ikkuna: korjatulla koodilla tästä poistutaan heti kun näkyvä
+// alue on katettu, mutta ilman korjausta katteen valmistuminen kestää
+// hitaalla ajokoneella sekunteja — ja juuri se sample halutaan nähdä.
+for (let i = 0; i < 150; i++) {
+  // eslint-disable-next-line no-await-in-loop
+  const n = await sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    const nakyva = ui.nakyvaAlue();
+    const koko = ui.taideRuutu;
+    if (!nakyva || !koko || !ui.taideSkaala) return null;
+    const suhde = nakyva.skaala / ui.taideSkaala;
+    if (suhde > 1.02 || suhde < 0.98) return null;
+    if (ui.taidePohja && nakyva.skaala * ui.nykyinenTarkkuus() <= ui.pohjaTeho) {
+      return { pohjanVaraan: true };
+    }
+    const W = window.matkakirja.game.pack.map.width;
+    const kiertava = ui.kartta.kiertava();
+    const sar = kiertava ? Math.max(1, Math.round(W / koko)) : 0;
+    let yht = 0; let on = 0;
+    for (let ry = Math.floor(nakyva.y / koko); ry <= Math.floor((nakyva.y + nakyva.h - 0.001) / koko); ry++) {
+      for (let rx = Math.floor(nakyva.x / koko); rx <= Math.floor((nakyva.x + nakyva.w - 0.001) / koko); rx++) {
+        const s = kiertava ? ((rx % sar) + sar) % sar : rx;
+        yht += 1;
+        if (ui.taideRuudut.has(`${s},${ry}`) || ui.taideTyhjat.has(`${s},${ry}`)) on += 1;
+      }
+    }
+    const nyt = new Set(ui.taideRuudut.values());
+    const sumeat = [...ui.taideRyhma.querySelectorAll('image')].filter((s) => {
+      if (nyt.has(s)) return false;
+      const x = +s.getAttribute('x'); const y = +s.getAttribute('y');
+      const w = +s.getAttribute('width'); const h = +s.getAttribute('height');
+      return x + w > nakyva.x && x < nakyva.x + nakyva.w
+        && y + h > nakyva.y && y < nakyva.y + nakyva.h;
+    }).length;
+    return {
+      pohjanVaraan: false, katettu: yht > 0 && on === yht, on, yht, sumeat,
+      rengasJono: ui.taideRengas?.jono?.length ?? 0,
+    };
+  });
+  if (n?.pohjanVaraan) { hetki = n; break; }
+  if (n?.katettu) { hetki = n; break; }
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(100);
+}
+if (hetki?.pohjanVaraan) {
+  console.log('ohit  näkyvä alue terävä heti katettuaan — näkymä pohjatason varassa');
+} else {
+  vaadi('näkyvä alue on terävä heti katettuaan, odottamatta puskurirengasta',
+    Boolean(hetki) && hetki.sumeat === 0, JSON.stringify(hetki));
+}
+
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
 await selain.close();
