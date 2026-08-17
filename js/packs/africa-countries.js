@@ -259,6 +259,7 @@ export const AFRICA_COUNTRY_SHAPES = {
 export const AFRICA_CITY_COUNTRY = {
   tanger: 'MAR',
   marrakech: 'MAR',
+  fes: 'MAR',
   // St. Helena on Britannian merentakainen alue — ei omaa maakytkentää.
   kairo: 'EGY',
   tripoli: 'LBY',
@@ -297,5 +298,6 @@ export const AFRICA_CITY_COUNTRY = {
   darfur: 'SDN',
   suakin: 'SDN',
   addisabeba: 'ETH',
+  lalibela: 'ETH',
   rashafun: 'SOM',
 };
