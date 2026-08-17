@@ -43,6 +43,148 @@ export function paperi(map) {
 /** Yhteensopivuus: oletuslauta 1000 x 1000. */
 export const PAPER = paperi({ width: 1000, height: 1000 });
 
+/*
+ * PERGAMENTIN POHJA: PAPERI EI SAA LOPPUA MISSÄÄN RUUDUN MUODOSSA.
+ *
+ * Omistajan vaatimus 17.8.2026: sivun oma taustapaperi ei saa koskaan
+ * pilkottaa laudan pergamentin takaa.
+ *
+ * paperi() mitoittaa arkin laudan mukaan (vara 1,3 x pidempi sivu). Se
+ * riittää tavallisessa ikkunassa muttei venytetyssä. Kokonäkymässä lauta
+ * sovitetaan ruutuun, joten näkyvä alue on laudan KORKEUS kertaa ruudun
+ * kuvasuhde (leveä ikkuna) tai laudan LEVEYS jaettuna sillä (kapea
+ * ikkuna). MITATTU 400 x 2400 pikselin ikkunassa: Maailma-laudalla
+ * (1150 x 800) näkyvä alue on 6900 yksikköä korkea ja arkki vain 3790 —
+ * loput ruudusta oli sivun omaa taustaa, ja väliin jäi vaakasuora sauma.
+ *
+ * Arkkia ei saa kasvattaa sen korjaamiseksi. Kaksi syytä:
+ *
+ *   1. paperi() rajaa myös rasteroinnin (ikkunaPaperilla, pohjanMitat).
+ *   2. #paper-grad on arkin rajauslaatikon yksiköissä, joten venytetty
+ *      arkki venyttäisi liukuvärin mukanaan ja vaalentaisi koko kartan.
+ *
+ * Siksi pohja on OMA, elävä kerros arkin alla:
+ *
+ *   1. Se on laudan juuriryhmän ensimmäinen lapsi eikä kuulu
+ *      rasteroitavaan taideryhmään. Se on pakko: bittikarttapyramidin
+ *      pohjataso kattaa yleiskuvassa vain laudan ja 12 % sen ympäriltä
+ *      (pohjanMitat), ja vektorit poistetaan heti kun pohja on valmis —
+ *      taideryhmään piirretty jatke katoaisi siinä samassa.
+ *   2. Sen liukuväri on sama ellipsi täsmälleen samassa kohdassa kuin
+ *      arkin #paper-grad, mutta userSpaceOnUse-yksiköissä. Arkin
+ *      alueella väri on siis sama kuin ennenkin eikä saumaa synny;
+ *      arkin ulkopuolella liukuväri on jo päättynyt reunaväriinsä
+ *      (#cfae79) ja jatkuu sinä.
+ *   3. Kiertävällä laudalla pohja EI jatku sivuille — sama syy kuin
+ *      paperi():ssa, ks. sen kommentti.
+ */
+
+/*
+ * Ruudun äärimmäinen kuvasuhde, jolle paperi mitoitetaan. 9 kattaa 9:1
+ * ja 1:9; puhelimen pystyruutu on 1:2,2 ja levein työpöytäikkuna
+ * käytännössä alle 4:1. Laudan mitta kahdesti päälle, koska näkymän
+ * keskus ei ole aina laudan keskellä (avausnäkymän tekstitila nostaa
+ * laudan ylös, ks. js/ui.js INTRO_SPACE).
+ */
+const RUUDUN_SUHDE = 9;
+
+export function paperinPohja(map) {
+  const w = map?.width ?? 1000;
+  const h = map?.height ?? 1000;
+  const arkki = paperi(map);
+  const korkeus = Math.max(arkki.h, w * RUUDUN_SUHDE + h * 2);
+  const y = h / 2 - korkeus / 2;
+  if (map?.kiertava) return { x: 0, y, w, h: korkeus };
+  const leveys = Math.max(arkki.w, h * RUUDUN_SUHDE + w * 2);
+  return { x: w / 2 - leveys / 2, y, w: leveys, h: korkeus };
+}
+
+/*
+ * RAE ON KARTALLA KAHDESTI — JA POHJAN ON SILTI VASTATTAVA SITÄ.
+ *
+ * Bittikarttaruutuun ja pyramidin pohjatasoon rae leivotaan ruudun
+ * omissa pikseleissä (piirraRakeisuus), ja elävä rect.grain kertautuu
+ * senkin päälle. Se on tarkoitus: leivottu rae antaa pinnan joka
+ * etäisyydellä, elävä on lähikuvassa niin suurta ettei se enää ole
+ * pintaa vaan tasainen tummennus.
+ *
+ * Pergamentin pohja saa vain elävän rakeen, joten ilman korjausta se
+ * olisi rasteroitua karttaa noin 4,5 % vaaleampi. MITATTU 1280 x 800
+ * ruudulla ensimmäisestä korjausyrityksestä: kartta 220,201,161 vastaan
+ * pohja 229,211,172 — vaalea kehys bittikarttapohjan ympärillä, eli
+ * sauma toisessa paikassa.
+ *
+ * Siksi pohjan liukuväriin leivotaan rakeen KESKIMÄÄRÄINEN tummennus.
+ * Kerroin lasketaan rakeen omista vakioista: kohinan keskiarvo on 0,5,
+ * siitä alfa 0,3 (grainTile) ja peitto 0,5 (css .grain).
+ *
+ * Korjaus osuu oikein myös silloin, kun elävä rae on piilossa
+ * (body.linssi-valokuva, body.flight-active): silloin kartalla on rae
+ * kerran ja pohjalla kerran. Ainoa kohta, jossa se on väärä, on lyhyt
+ * hetki laudan luonnin jälkeen ennen kuin vektorit on rasteroitu.
+ */
+const RAKEEN_VARI = [115, 92, 56];
+const RAKEEN_KESKIALFA = 0.5 * 0.3 * 0.5;
+
+function raetta(hex) {
+  const luku = (i) => parseInt(hex.slice(1 + i * 2, 3 + i * 2), 16);
+  return `#${[0, 1, 2].map((i) => {
+    const pohja = luku(i) * (1 - RAKEEN_KESKIALFA + RAKEEN_KESKIALFA * RAKEEN_VARI[i] / 255);
+    return Math.round(pohja).toString(16).padStart(2, '0');
+  }).join('')}`;
+}
+
+/*
+ * Pohjan liukuväri: #paper-grad uudelleen, mutta laudan yksiköissä.
+ *
+ * #paper-grad on objectBoundingBox-yksiköissä (cx 50 %, cy 46 %, r 62 %),
+ * eli se on ARKIN kokoinen ellipsi — vaakasäde 0,62 x arkin leveys,
+ * pystysäde 0,62 x arkin korkeus. Sama ellipsi kirjoitetaan tässä
+ * kiinteisiin koordinaatteihin, jolloin se ei enää riipu siitä
+ * suorakaiteesta, jota sillä täytetään. Vain niin isompi pohja voi
+ * saada arkin kanssa täsmälleen saman sävyn joka pisteessä.
+ */
+const POHJAN_LIUKUVARI = 'paper-pohja-grad';
+
+export function paperiPohjanLiukuvari(defs, map = null) {
+  const arkki = paperi(map);
+  const cx = arkki.x + arkki.w * 0.5;
+  const cy = arkki.y + arkki.h * 0.46;
+  const venytys = arkki.h / arkki.w;
+  const grad = el('radialGradient', {
+    id: POHJAN_LIUKUVARI,
+    gradientUnits: 'userSpaceOnUse',
+    cx: cx.toFixed(2),
+    cy: cy.toFixed(2),
+    r: (arkki.w * 0.62).toFixed(2),
+    // Ympyrä ellipsiksi: y venytetään arkin kuvasuhteen mukaan keskuksen
+    // ympäri (y' = venytys * y + cy * (1 - venytys)).
+    gradientTransform: `translate(0 ${(cy * (1 - venytys)).toFixed(2)})`
+      + ` scale(1 ${venytys.toFixed(5)})`,
+  }, defs);
+  // Samat pysäkit kuin #paper-grad:ssa, rakeen keskitummennus leivottuna
+  // (ks. raetta yllä).
+  el('stop', { offset: '0%', 'stop-color': raetta('#f6e7c6') }, grad);
+  el('stop', { offset: '55%', 'stop-color': raetta('#ecd8ae') }, grad);
+  el('stop', { offset: '100%', 'stop-color': raetta('#cfae79') }, grad);
+  return grad;
+}
+
+/**
+ * Ruudun täyttävä pergamentti kaiken muun alle. Kutsutaan laudan
+ * juuriryhmän ENSIMMÄISENÄ, ennen rasteroitavaa taideryhmää.
+ */
+export function drawPaperPohja(svg, map = null, defs = null) {
+  const alue = paperinPohja(map);
+  paperiPohjanLiukuvari(defs ?? el('defs', {}, svg), map);
+  el('rect', {
+    x: alue.x, y: alue.y, width: alue.w, height: alue.h,
+    class: 'paper-pohja',
+    fill: `url(#${POHJAN_LIUKUVARI})`,
+    'pointer-events': 'none',
+  }, svg);
+}
+
 /**
  * Deterministinen 0–1 -arvo merkkijonosta (FNV-1a). Sama piirre saa aina saman
  * pienen poikkeaman, joten kartta näyttää käsin piirretyltä mutta ei väreile.
@@ -463,7 +605,19 @@ export function drawParchment(svg, map = null) {
 
 /** Paperin rakeisuus ja tummuvat reunat piirretään päällimmäiseksi. */
 export function drawPaperOverlay(svg, map = null) {
-  const PAPER = paperi(map);
+  /*
+   * Rae seuraa POHJAA eikä arkkia (paperinPohja, ei paperi).
+   *
+   * Rae on tässä elävä kerros — sitä ei rasteroida taiteen mukana (ks.
+   * pilkoTaide, joka jättää sen pois) — ja se on ainoa asia, joka antaa
+   * paperille pinnan. Jos se loppuisi arkin reunaan, venytetyssä
+   * ruudussa pohjan jatke olisi sileää väriä arkin rakeisen pinnan
+   * vieressä: sauma katoaisi väristä mutta jäisi pintaan.
+   *
+   * Laatta on kuvio (#grain-kuvio), joten isompi suorakaide ei maksa
+   * muistia — selain maalaa vain näkyvän osan.
+   */
+  const PAPER = paperinPohja(map);
   el('rect', {
     x: PAPER.x, y: PAPER.y, width: PAPER.w, height: PAPER.h,
     class: 'grain', fill: 'url(#grain-kuvio)',

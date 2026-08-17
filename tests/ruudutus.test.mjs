@@ -26,6 +26,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { paperi, paperinPohja } from '../js/mapart.js';
 
 const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
 
@@ -201,4 +202,95 @@ test('sarja hengähtää kehyksen verran ruutujen välissä', () => {
     'ruutujen välistä puuttuu kehyksen hengähdys');
   assert.match(runko, /setTimeout\(\(\) => \{ cancelAnimationFrame\(kehys\); jatka\(\); \}, \d+\)/,
     'hengähdykseltä puuttuu taustavälilehden varareitti');
+});
+
+/*
+ * PERGAMENTTI TÄYTTÄÄ RUUDUN, OLI RUUTU MINKÄ MUOTOINEN TAHANSA.
+ *
+ * Omistajan vaatimus 17.8.2026: sivun oma taustapaperi ei saa koskaan
+ * pilkottaa laudan pergamentin takaa. Vika näkyi venytetyssä ikkunassa:
+ * 400 x 2400 pikselin ruudussa Maailma-laudan (1150 x 800) näkyvä alue
+ * on 6900 yksikköä korkea, ja arkki oli vain 3790.
+ *
+ * Korjaus on OMA kerros arkin alla (js/mapart.js paperinPohja) — ei
+ * suurempi arkki. Nämä testit vahtivat molempia puolia: pohja riittää
+ * venytettyynkin ruutuun, JA arkki pysyy ennallaan, koska siitä
+ * riippuvat sekä rasterointi-ikkunat (ikkunaPaperilla, pohjanMitat)
+ * että paperin liukuvärin mittakaava.
+ */
+
+/** Kokonäkymän näkyvä alue, kun lauta sovitetaan annetun muotoiseen ruutuun. */
+function kokonakyma(map, kuvasuhde) {
+  const laudanSuhde = map.width / map.height;
+  const w = kuvasuhde >= laudanSuhde ? map.height * kuvasuhde : map.width;
+  const h = kuvasuhde >= laudanSuhde ? map.height : map.width / kuvasuhde;
+  return { x: map.width / 2 - w / 2, y: map.height / 2 - h / 2, w, h };
+}
+
+const LAUDAT = [
+  { nimi: 'Maailma-aloituslauta', width: 1150, height: 800 },
+  { nimi: 'europe', width: 1000, height: 1000 },
+  { nimi: 'maailmankartta', width: 12000, height: 5399, kiertava: true },
+];
+
+test('arkin mitat eivät muutu: rasterointi ja liukuväri nojaavat niihin', () => {
+  assert.deepEqual(paperi({ width: 1000, height: 1000 }),
+    { x: -1300, y: -1300, w: 3600, h: 3600 }, 'arkin kaava on muuttunut');
+  assert.deepEqual(paperi({ width: 12000, height: 5399, kiertava: true }),
+    { x: 0, y: -15600, w: 12000, h: 36599 },
+    'kiertävän laudan arkki jatkuu sivuille — kopio ja alkuperäinen tummuvat päällekkäin');
+  // Piirto käyttää arkkia paperiin ja asteverkkoon, pohjaa vain ruudun
+  // täyttöön ja rakeeseen.
+  assert.match(art, /export function drawParchment\(svg, map = null\) \{\n\s*const PAPER = paperi\(map\);/,
+    'arkin paperisuorakaide ei enää käytä paperi():a');
+  assert.match(art, /export function pohjanMitat[\s\S]{0,400}const alue = paperi\(map\);/,
+    'pyramidin pohjataso ei enää rajaudu arkkiin');
+});
+
+test('pergamentin pohja peittää venytetynkin ruudun', () => {
+  for (const map of LAUDAT) {
+    const arkki = paperi(map);
+    const pohja = paperinPohja(map);
+
+    // Pohja sisältää arkin, joten arkin reuna ei voi jäädä pohjan yli.
+    assert.ok(pohja.y <= arkki.y && pohja.y + pohja.h >= arkki.y + arkki.h,
+      `${map.nimi}: pohja ei kata arkkia pystysuunnassa`);
+    assert.ok(pohja.x <= arkki.x && pohja.x + pohja.w >= arkki.x + arkki.w,
+      `${map.nimi}: pohja ei kata arkkia vaakasuunnassa`);
+
+    // Kiertävällä laudalla pohja EI jatku sivuille: <use>-kopio tuo
+    // paperin, ja päällekkäinen rae tummuisi (ks. paperi()).
+    if (map.kiertava) {
+      assert.equal(pohja.x, 0, `${map.nimi}: kiertävä pohja alkaa laudan ulkopuolelta`);
+      assert.equal(pohja.w, map.width, `${map.nimi}: kiertävä pohja jatkuu sivuille`);
+    }
+
+    // Kokonäkymä muun muassa 6:1 ja 1:6 -ruudussa — juuri ne muodot,
+    // joissa vika näkyi.
+    for (const suhde of [6, 1 / 6, 4, 1 / 4, 16 / 9, 9 / 16]) {
+      const nakyva = kokonakyma(map, suhde);
+      assert.ok(pohja.y <= nakyva.y && pohja.y + pohja.h >= nakyva.y + nakyva.h,
+        `${map.nimi}: paperi loppuu pystysuunnassa kuvasuhteella ${suhde.toFixed(2)}`);
+      if (map.kiertava) continue; // vaakasuunnan hoitaa kierron kopio
+      assert.ok(pohja.x <= nakyva.x && pohja.x + pohja.w >= nakyva.x + nakyva.w,
+        `${map.nimi}: paperi loppuu vaakasuunnassa kuvasuhteella ${suhde.toFixed(2)}`);
+    }
+  }
+});
+
+test('pohja on rasteroitavan taideryhmän ulkopuolella ja rae seuraa pohjaa', () => {
+  /*
+   * Pohja EI voi olla taideryhmässä: yleiskuvassa taide on
+   * bittikarttapyramidin pohjataso, joka kattaa vain laudan ja 12 % sen
+   * ympäriltä, ja vektorit poistetaan heti sen valmistuttua.
+   */
+  const pohjaKutsu = ui.indexOf('drawPaperPohja(svg, pack.map');
+  const staattinen = ui.indexOf("el('g', { class: 'staattinen' }, root)");
+  assert.ok(pohjaKutsu > 0, 'pergamentin pohjaa ei piirretä lainkaan');
+  assert.ok(pohjaKutsu < staattinen,
+    'pohja piirretään vasta taideryhmän jälkeen — se jäisi kartan päälle');
+  // Rae kattaa pohjan eikä pelkkää arkkia: muuten jatke olisi sileää
+  // väriä rakeisen pinnan vieressä.
+  assert.match(art, /export function drawPaperOverlay[\s\S]{0,900}const PAPER = paperinPohja\(map\);/,
+    'rakeisuus ei kata pergamentin pohjaa');
 });
