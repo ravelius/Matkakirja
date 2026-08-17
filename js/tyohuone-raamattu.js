@@ -297,6 +297,11 @@ export const RAAMATTU = {
         'Kohteita saa olla entistä enemmän per kaupunki — kartta on '
           + 'zoomattava (linjaus 15.8.2026). Uudet kaupunkikartat '
           + 'tehdään 5 kaupungin erissä omistajan tsekattavaksi.',
+        'UUSIIN KAUPUNKEIHIN JA MAIHIN EI VIELÄ TARINAKAARTA '
+          + '(omistaja 17.8.2026): ei matkakirjatekstejä, ei '
+          + 'kohtaamisia eikä kysymyksiä — koko kaari tulee '
+          + 'muuttumaan. Tehdään VAIN kaupunkilehti ja maalehti; '
+          + 'kaari kirjoitetaan myöhemmin uuden mallin mukaan.',
         'MATKAILIJAN OPAS on pelin kevyt ja viihteellinen osa, joka '
           + 'houkuttelee matkustamaan itse kohteeseen (linjaus '
           + '16.8.2026): se saa käyttää muuta lehteä iloisempia '

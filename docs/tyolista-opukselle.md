@@ -1,5 +1,11 @@
 # Työlista toteuttajalle (Opus)
 
+> **EI TARINAKAARTA UUSIIN KOHTEISIIN (omistajan sitova päätös
+> 17.8.2026):** kun uusia kaupunkeja ja maita kirjoitetaan (mm.
+> paketit O6 ja O7), EI tehdä matkakirjatekstejä, kohtaamisia eikä
+> kysymyksiä — koko kaari muuttuu myöhemmin. Tehdään VAIN
+> kaupunkilehti ja maalehti. Linjaus on Raamatussa (Kaupungit).
+>
 > **LEHTITAUKO (omistajan päätös 15.8.2026):** uusien lehtien
 > kirjoitus on tauolla, kunnes nykyiset lehdet on saatu paremmiksi
 > (mm. kaupunkilehtien avauskuvat vaakayleisnäkymiksi karusellilla ja
