@@ -179,6 +179,7 @@ import {
   drawHemisphereFrames,
   drawLand,
   drawPaperOverlay,
+  drawPaperPohja,
   drawParchment,
   drawTerrain,
   drawTokenIcon,
@@ -5135,7 +5136,7 @@ export class UI {
     this.contentBox = this.boardBounds();
     this.svg.textContent = '';
 
-    drawDefs(this.svg);
+    const maarittelyt = drawDefs(this.svg);
     // Kaikki piirretään juuriryhmään: esikatselu siirtää ryhmää, ei SVG:tä,
     // jolloin elementin taakse ei paljastu tyhjää taustaa raahatessa.
     const root = el('g', { class: 'board-root' }, this.svg);
@@ -5169,6 +5170,19 @@ export class UI {
     } else {
       this.laudanKierto = null;
     }
+
+    /*
+     * Pergamentin pohja ENSIMMÄISENÄ ja rasteroitavan taideryhmän
+     * ULKOPUOLELLE.
+     *
+     * Tämä on se kerros, joka takaa ettei sivun taustapaperi pilkota
+     * laudan takaa millään ruudun muodolla (omistajan vaatimus
+     * 17.8.2026). Se ei voi olla taideryhmässä: yleiskuvassa taide on
+     * bittikarttapyramidin pohjataso, joka kattaa vain laudan ja 12 %
+     * sen ympäriltä, ja vektorit poistetaan heti sen valmistuttua.
+     * Perustelut kokonaisuudessaan js/mapart.js paperinPohja.
+     */
+    drawPaperPohja(svg, pack.map, maarittelyt);
 
     /*
      * Kartan raskas, muuttumaton osa omaan ryhmäänsä.
