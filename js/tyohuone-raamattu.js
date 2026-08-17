@@ -302,8 +302,12 @@ export const RAAMATTU = {
           + '16.8.2026): se saa käyttää muuta lehteä iloisempia '
           + 'värejä, ja etusivulla siihen kutsuu pirteä kulmalappu. '
           + 'Rakenne: aihejaksot isoine kuvineen, tekstinosto sekä '
-          + 'sää-, hinta- ja suunnittelulaatikot '
+          + 'sää- ja suunnittelulaatikot '
           + '(docs/kuvakasikirjoitukset.md + työlistan speksit).',
+        'EI MATKAKASSA-OSIOTA (omistaja 17.8.2026): hintoja ei '
+          + 'luetella oppaassa. Riittää, että sivun alun '
+          + 'kainalotaulu kertoo onko kohde halpa (plussana) vai '
+          + 'kallis (miinuksena).',
         'Valmiustilanne kaupungeittain: Tilanne-välilehti, ei tämä.',
       ],
     },

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v807 — Raamatussa: ei Matkakassaa; työlistassa paketti O5',
   'v806 — Raamatussa: maalehden nimiö, Matkailijalle-kuvan kaava',
   'v805 — Matkailijan Teheran: toinen kuudesta',
   'v804 — Matkailijan Bagdad: ensimmäinen kuudesta uudesta',
