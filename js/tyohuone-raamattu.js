@@ -385,6 +385,8 @@ export const RAAMATTU = {
           + 'selkeä valo, lukee pienessä koossa ja pääaihe ei jää '
           + 'diagonaalinauhan alle.',
         'Media omasta peilistä (R2), peilaus automaattinen.',
+        'Miniatyyripiirrokset generoidaan yhdellä otolla per kohde '
+          + '(kustannuslinjaus 16.8.2026).',
         'Faktat tarkistetaan, lähteet merkitään. API-avaimia ei '
           + 'koskaan repoon eikä lokiin.',
       ],
@@ -413,6 +415,8 @@ export const RAAMATTU = {
           + '— ne ovat perushistoriaa.',
         'Mekka ja Medina vain omistajan erillisellä päätöksellä, '
           + 'kunnioittavasti.',
+        'Venäjän kaupungit ja Kabul mukana, mutta ilman '
+          + 'uutisosiota (omistaja 13.8.2026).',
         'Grimshaw ei ole koskaan vaarallinen. Kukaan ei iva '
           + 'paikallisia — koskee myös kohtaamishahmoja.',
       ],
@@ -518,10 +522,9 @@ export const RAAMATTU = {
           + 'ja savukevartija tehty 17.8.2026. Avoinna: M7 '
           + '(Kartta-luokka, omistajan päätös). '
           + 'Max-työlista arkistoitu (docs/arkisto/).',
-        'docs/moduulirakenne-suunnitelma.md · '
-          + 'docs/dokumenttiremontti-suunnitelma.md — Max-session '
-          + 'suunnitelmat 17.8.2026 (hyväksytty v808; toteutettu '
-          + 'D1–D7 ja M1–M6, ks. Moduulit-osio).',
+        'docs/moduulirakenne-suunnitelma.md — moduulijaon '
+          + 'suunnitelma (M1–M6 toteutettu, M7 valmistelussa; '
+          + 'dokumenttiremontin suunnitelma arkistoitu 17.8.2026).',
         'docs/tuotantosuunnitelma.md — jäljellä olevien kaupunkien '
           + 'ja maiden tuotantosuunnitelma (Fablemax 17.8.2026; '
           + 'EHDOTUS, odottaa omistajan hyväksyntää).',

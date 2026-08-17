@@ -1,5 +1,9 @@
 # Dokumenttiremontti — suunnitelma
 
+**ARKISTOITU 17.8.2026** (docs-auditin toimilista: suunnitelma on
+TOTEUTETTU kokonaan, D1–D7 mergattu — valmis suunnitelma ei ole
+voimassa oleva ohje).
+
 *(Fable max 17.8.2026, docs/arkisto/tyolista-maxille-2026-08.md
 kohta 2. TILA: TOTEUTETTU — hyväksytty v808, vaiheet D1–D7 ajettu
 ja mergattu 17.8.2026.
