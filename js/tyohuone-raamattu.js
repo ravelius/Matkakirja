@@ -373,6 +373,11 @@ export const RAAMATTU = {
           + 'Pikkunostoihin ei karusellia ja vain vaakarajauksen '
           + 'kestäviä kuvia. Haut Commonsin FP/QI- ja '
           + 'valokategorioista.',
+        'OPPAAN AVAUSKUVA (linjaus 17.8.2026): aina kolmen kuvan '
+          + 'karuselli, ja kuvat valitaan JAKSON TEKSTIN mukaan eikä '
+          + 'kaupungin yleisistä maamerkeistä — jos teksti mainitsee '
+          + 'emalikyltin, se myös näkyy. Karuselli on sisältöä, ei '
+          + 'koriste.',
         'MATKAILIJALLE-KUVAN KAAVA (omistaja 16.8.2026): osion kuva '
           + 'on sen myyntikuva — yksi aihe joka täyttää ruudun, '
           + 'paikan oma erikoisuus ("wow-efekti"), FP/QI jos on, '
