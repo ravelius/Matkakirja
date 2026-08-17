@@ -1,6 +1,7 @@
 /*
  * KARTTA — laudan kamera: viewbox, zoomiportaat, mannerzoom,
- * aloituszoom, zoomiliuku ja koordinaattimuunnokset (remontin M7a,
+ * aloituszoom, zoomiliuku, koordinaattimuunnokset sekä panorointi
+ * ja eleet (remontit M7a ja M7b,
  * suunnitelma scratchpadin m7-suunnitelma.md → docs/moduulirakenne-
  * suunnitelma.md:n M7-rivi).
  *
@@ -153,6 +154,12 @@ const ALOITUS_ZOOM_MS = 3600;
 const ZOOM_PEHMENNYS = 'cubic-bezier(0.68, 0, 0.3, 1)';
 // Hiljainen hetki ennen zoomausta, jotta moottoriääni erottuu.
 const ZOOM_TAUKO_MS = 260;
+/*
+ * Hiiren rullan vähimmäisväli. Tarkka rulla ja trackpad lähettävät
+ * kymmeniä tapahtumia yhdestä eleestä, ja ilman väliä kartta hyppäisi
+ * portaikon läpi yhdellä nykäisyllä.
+ */
+const RULLAN_VALI_MS = 220;
 // Aloituskartan lähikuvan suurennos yleiskuvaan nähden.
 const ALOITUS_ZOOM = 3.1;
 
@@ -445,9 +452,57 @@ export class Kartta {
       const keskiX = this.ui.zoomAnkkuri ?? box.x + box.w / 2;
       this.ui.panX = paneW / 2 - (keskiX - box.x) * skaala;
     }
-    this.ui.asetaPan(this.ui.panX);
+    this.asetaPan(this.ui.panX);
     this.placeFactCard(paneW, paneH);
   }
+
+  /**
+   * Siirtää karttaa; rajat pitävät kartan ruudulla. Aloituskartalla
+   * liikutaan vain vaakasuunnassa (panVaraY = 0), mantereella molempiin.
+   */
+  asetaPan(x, y = this.ui.panY ?? 0) {
+    if (this.ui.panJakso) {
+      /*
+       * Kiertävällä kartalla vieritys ei pysähdy vaan kiertää ympäri.
+       *
+       * Arvo pidetään välillä [-jakso, 0). Kun se ylittää rajan, se
+       * hyppää tasan yhden laudan leveyden verran — ja koska sisällöstä
+       * on kopio juuri sen päässä, ruudulla ei muutu mikään. Sauma on
+       * olemassa vain lukuna.
+       */
+      const j = this.ui.panJakso;
+      this.ui.panX = ((x % j) + j) % j - j;
+    } else {
+      this.ui.panX = Math.min(0, Math.max(-(this.ui.panVara ?? 0), x));
+    }
+    this.ui.panY = Math.min(0, Math.max(-(this.ui.panVaraY ?? 0), y));
+    this.ui.svg.style.transform =
+      `translate3d(${this.ui.panX.toFixed(1)}px, ${this.ui.panY.toFixed(1)}px, 0)`;
+    /*
+     * Siirron aikana EI piirretä bittikarttaa.
+     *
+     * Aiemmin tässä tilattiin uusi kuva heti kun reuna lähestyi, ja
+     * juuri se tökki: rasterointi vie satoja millisekunteja
+     * pääsäikeessä, ja sormen alla se tuntuu nykäyksenä. Puskuria on
+     * ruudullisen verran joka suuntaan, eli koko sen matkan minkä yksi
+     * pyyhkäisy voi karttaa siirtää, joten kesken eleen ei tarvitse
+     * piirtää mitään (omistajan linjaus).
+     */
+  }
+
+  /*
+   * --- zoomipainikkeet ------------------------------------------------
+   *
+   * Omistajan toive: "universaalit zoomipainikkeet kartalle kaikille
+   * alustoille". Aiemmin lähikuvaan pääsi vain automaattisesti ja vain
+   * kapealla ruudulla; tietokoneella karttaa ei voinut lähentää lainkaan.
+   *
+   * Painikkeet käyttävät samaa lähikuvakoneistoa kuin automaattinen
+   * mannerzoom — vain zoomitaso vaihtuu. mannerZoomTarpeen() rajaa
+   * ainoastaan AUTOMAATTISEN zoomauksen (Eurooppa, kapea ruutu), ja
+   * fitViewBox katsoo pelkkää this.ui.mannerZoom-lippua, joten painikkeilla
+   * lähikuva aukeaa millä tahansa laudalla ja millä tahansa ruudulla.
+   */
 
   /**
    * Ollaanko avausnäkymässä, jossa kartalla on oma lähikuvansa ja
@@ -855,7 +910,7 @@ export class Kartta {
       this.ui.panX = paneW / 2 - (keskus.x - box.x) * skaala;
       this.ui.panY = paneH / 2 - (keskus.y - ylaReuna) * skaala;
     }
-    this.ui.asetaPan(this.ui.panX, this.ui.panY);
+    this.asetaPan(this.ui.panX, this.ui.panY);
     this.placeFactCard(paneW, paneH);
     if (this.ui.dieThrown && this.ui.boardDie) this.ui.boardDie.place(this.dieRestingSpot());
   }
@@ -1008,7 +1063,7 @@ export class Kartta {
     stopDiaryVoice(this);
     this.ui.svg.style.transition = '';
     this.tyonnaAvausteksti(0);
-    this.ui.asetaPan(this.ui.panX, this.ui.panY);
+    this.asetaPan(this.ui.panX, this.ui.panY);
     document.body.classList.remove('manner-odottaa');
     this.ui.taydennaTaide?.({ heti: true });
   }
@@ -1095,7 +1150,7 @@ export class Kartta {
     document.body.classList.add('zoom-kaynnissa');
     // Avausteksti lähtee liikkeelle samalla hetkellä kuin kartta.
     this.tyonnaAvausteksti(kesto);
-    this.ui.asetaPan(this.ui.panX, this.ui.panY);
+    this.asetaPan(this.ui.panX, this.ui.panY);
     clearTimeout(this.ui.zoomAjastin);
     this.ui.zoomAjastin = setTimeout(() => {
       this.ui.svg.style.transition = '';
@@ -1153,6 +1208,632 @@ export class Kartta {
   zoomTarpeen() {
     if (this.ui.katselu || this.ui.reducedMotion) return false;
     return (this.ui.svg.parentElement?.clientWidth ?? 0) < 700;
+  }
+
+  /**
+   * Vaakapanorointi lähikuvassa. Sormen liike siirtää karttaa; pystyyn ei
+   * reagoida. Raahauksen ajaksi kartan animaatiot vaimennetaan
+   * (omistajan toive), jotta ruudunpäivitys pysyy nopeana.
+   */
+  asennaPanorointi() {
+    const pane = this.ui.svg.parentElement;
+    let alku = null;
+    let liikkui = false;
+
+    /*
+     * ELEVAHTI TARKKUUSTARKISTUSTA VARTEN.
+     *
+     * Rasterointi vie satoja millisekunteja pääsäikeessä, eikä se saa
+     * käynnistyä sormen ollessa kartalla eikä eleiden välissä (ks.
+     * tarkistaTarkkuus). Kuuntelijat ovat KAAPPAUSVAIHEESSA ja
+     * passiivisia: ne eivät saa muuttaa eleen kulkua eivätkä jäädä
+     * väliin, vaikka varsinainen käsittelijä pysäyttäisi kuplinnan.
+     *
+     * pointermove vain napin ollessa pohjassa: pelkkä hiiren lepääminen
+     * kartalla ei ole ele, ja muuten työpöydällä tarkistus ei
+     * tapahtuisi koskaan.
+     */
+    const osoittimet = new Set();
+    const paalla = { capture: true, passive: true };
+    pane.addEventListener('pointerdown', (e) => {
+      osoittimet.add(e.pointerId);
+      this.ui.osoitinKartalla = true;
+      this.ui.merkitseKartanEle();
+      // Sormi kartalle = liukuva kartta pysähtyy siihen paikkaan.
+      pysaytaLiuku(true);
+      // Pöllön vihjekupla katoaa heti, kun kartalla tapahtuu jotain.
+      this.ui.kartallaKosketettu();
+    }, paalla);
+    /*
+     * Sormen irrotessa jatketaan kesken jäänyttä piirtoa.
+     *
+     * taydennaTaide keskeyttää sarjansa, jos ele alkaa kesken kaiken
+     * (taideOdottaa). Raahauksen oma lopetus jatkaa sarjaa vain, jos
+     * kartta oikeasti liikkui — pelkän napautuksen jälkeen kesken jäänyt
+     * sarja jäisi muuten odottamaan seuraavaa näkymän asettumista, ja
+     * kartalla näkyisi siihen asti tyhjää pergamenttia.
+     */
+    const jatkaKeskenJaanyt = () => {
+      if (this.ui.dead || !this.ui.taideOdottaa || this.ui.taidePiirtyy) return;
+      if (this.ui.eleKesken()) return;
+      this.ui.taydennaTaide({ heti: true });
+    };
+    const irrota = (e) => {
+      osoittimet.delete(e.pointerId);
+      this.ui.osoitinKartalla = osoittimet.size > 0;
+      this.ui.merkitseKartanEle();
+      if (!this.ui.osoitinKartalla) jatkaKeskenJaanyt();
+    };
+    pane.addEventListener('pointerup', irrota, paalla);
+    pane.addEventListener('pointercancel', irrota, paalla);
+    pane.addEventListener('pointermove', (e) => {
+      if (e.buttons || osoittimet.size) this.ui.merkitseKartanEle();
+    }, paalla);
+    /*
+     * Kosketus omina tapahtuminaan: iOS peruu osoitintapahtumat kesken
+     * nipistyksen (ks. nipistyksen kommentti alempana), jolloin
+     * pointercancel tyhjentäisi joukon ja vahti luulisi kartan olevan
+     * rauhassa — vaikka kaksi sormea on yhä ruudulla.
+     */
+    pane.addEventListener('touchstart', () => {
+      this.ui.osoitinKartalla = true;
+      this.ui.merkitseKartanEle();
+      // iOS voi perua osoitintapahtumat (ks. yllä), joten liuku
+      // pysäytetään myös kosketuksesta.
+      pysaytaLiuku(true);
+      this.ui.kartallaKosketettu();
+    }, paalla);
+    pane.addEventListener('touchmove', () => this.ui.merkitseKartanEle(), paalla);
+    const kosketusLoppui = (e) => {
+      if (e.touches.length === 0) this.ui.osoitinKartalla = osoittimet.size > 0;
+      this.ui.merkitseKartanEle();
+      if (!this.ui.osoitinKartalla) jatkaKeskenJaanyt();
+    };
+    pane.addEventListener('touchend', kosketusLoppui, paalla);
+    pane.addEventListener('touchcancel', kosketusLoppui, paalla);
+    pane.addEventListener('wheel', () => this.ui.merkitseKartanEle(), paalla);
+
+    /*
+     * --- nipistys ---------------------------------------------------
+     *
+     * Omistajan toive: zoomaus nipistyseleen taakse. Painikkeet jäävät,
+     * koska tietokoneella ei nipistetä.
+     *
+     * KOSKETUSTAPAHTUMAT eikä osoitintapahtumat. Ero on ratkaiseva
+     * iOS:llä: `touch-action: none` estää siellä vierityksen mutta EI
+     * selaimen omaa nipistyszoomia. Safari aloittaa oman eleensä ja
+     * peruu osoitintapahtumat kesken kaiken, jolloin käsittelijä ei saa
+     * elettä koskaan valmiiksi — omistajan havainto: "nipistys ei tee
+     * mitään". `touchmove`in preventDefault pysäyttää sivun zoomin, ja
+     * se toimii sekä Safarissa että Chromessa.
+     *
+     * Ele piirretään CSS-muunnoksella ja mittakaava lukitaan vasta kun
+     * sormet irtoavat. Sama sääntö kuin siirrossa ja samasta syystä:
+     * rasterointi vie satoja millisekunteja pääsäikeessä.
+     *
+     * Muunnoksen origo on elementin vasen yläkulma, joten sormien
+     * keskipiste pysyy paikallaan kun siirto lasketaan
+     *   t = m - (m - siirto) * suhde
+     */
+    let nipistys = null;
+
+    const kaksiSormea = (e) => {
+      const [a, b] = [e.touches[0], e.touches[1]];
+      return {
+        etaisyys: Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY),
+        // Asiakaskoordinaatteina: paneelin suhteen laskettu keskipiste
+        // ei kelpaa ankkuriksi, koska elementti ei ala paneelin kulmasta.
+        keski: { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 },
+      };
+    };
+
+    /*
+     * Ruudun piste laudan koordinaateiksi — ELEMENTIN OMASTA
+     * SIJAINNISTA, ei zoomimuuttujista.
+     *
+     * Ensin laskin tämän kaavalla panX/panY ja zoomYlaReuna. Kaava on
+     * oikein, mutta se olettaa SVG:n alkavan paneelin vasemmasta
+     * yläkulmasta. Pystysuunnassa se ei pidä paikkaansa: lähikuvassa
+     * elementti on `align-self: flex-start`, aloituskartalla `center`,
+     * ja asettelu siirtää sitä. Ero näkyi juuri niin kuin omistaja
+     * kuvasi — kartta heilahti sormien irrotessa, ja heilahdus oli
+     * lähes kokonaan pystysuuntainen.
+     *
+     * getBoundingClientRect ja viewBox kertovat totuuden ilman
+     * oletuksia, ja sama laskenta kelpaa kumpaankin suuntaan.
+     */
+    const laudanKuvaus = () => {
+      const r = this.ui.svg.getBoundingClientRect();
+      const vb = this.ui.svg.viewBox?.baseVal;
+      if (!r.width || !vb?.width) return null;
+      return { r, vb, pxPerYks: r.width / vb.width };
+    };
+
+    /**
+     * Asiakaskoordinaatti laudan koordinaatiksi — tai null, jos lautaa
+     * ei juuri nyt voi mitata.
+     *
+     * EI KOSKAAN nollapistettä. Aiempi versio palautti virhetilassa
+     * { x: 0, y: 0 }, ja se on laudalla oikea paikka: maailmankartan
+     * vasen ylänurkka. Kun mittaus petti kesken nipistyksen, eleen
+     * ankkuriksi tuli origo ja koko näkymä sinkosi sinne (omistajan
+     * havainto iPadilta 13.8.2026: "hyppää ihan eri kohtaan, yleensä
+     * Grönlantiin"). Null pakottaa kutsujan valitsemaan järkevän
+     * varapisteen sen sijaan, että virhe naamioituisi koordinaatiksi.
+     */
+    const laudalle = (asiakas) => {
+      const k = laudanKuvaus();
+      if (!k || !Number.isFinite(asiakas?.x) || !Number.isFinite(asiakas?.y)) return null;
+      const p = {
+        x: k.vb.x + (asiakas.x - k.r.left) / k.pxPerYks,
+        y: k.vb.y + (asiakas.y - k.r.top) / k.pxPerYks,
+      };
+      return Number.isFinite(p.x) && Number.isFinite(p.y) ? p : null;
+    };
+
+    /** Onko piste olemassa ja molemmat koordinaatit äärellisiä lukuja? */
+    const kelpaa = (p) => Boolean(p) && Number.isFinite(p.x) && Number.isFinite(p.y);
+
+    /**
+     * Eleen ankkuri: sormien alla oleva laudan piste, tai jos sitä ei
+     * saada mitattua, NÄKYMÄN KESKIPISTE. Keskipiste on ainoa varapiste,
+     * joka ei koskaan heitä näkymää minnekään — zoomi vain syvenee
+     * siihen mitä pelaaja jo katsoo.
+     */
+    const varmaAnkkuri = (asiakas) => {
+      const suora = laudalle(asiakas);
+      if (suora) return suora;
+      const n = this.ui.nakyvaAlue();
+      if (n) return { x: n.x + n.w / 2, y: n.y + n.h / 2 };
+      const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
+      return { x: box.x + box.w / 2, y: box.y + box.h / 2 };
+    };
+
+    const aloitaNipistys = (e) => {
+      const { etaisyys, keski } = kaksiSormea(e);
+      if (etaisyys < 24) return;
+      /*
+       * Kokonäkymästä nipistettäessä EI enää hypätä lähikuvatilaan
+       * eleen alussa. Aiempi versio teki juuri sen: se sytytti
+       * mannerZoomin ja ajoi fitViewBoxin heti kahden sormen osuessa
+       * ruutuun, jolloin näkymä loikkasi saapumisportaaseen pelaajan
+       * nappulan kohdalle — kesken pelaajan oman eleen ja yleensä aivan
+       * muualle kuin minne sormet osoittivat (omistajan havainto:
+       * "sisään zoomattaessa kartta saattaa hypätä kokonaan eri
+       * kohtaan"). Kerroin ei hyppyä tarvitse: kokonäkymässä
+       * zoomiKerroin on portaikon pohja (1), ja ele piirtyy CSS-
+       * muunnoksena siitä eteenpäin. Lähikuvatilaan siirrytään vasta
+       * paataNipistyksessä, kun tiedetään mihin kohtaan ja kuinka
+       * syvälle ele päätyi.
+       */
+      nipistys = {
+        etaisyys,
+        keski,
+        kohde: varmaAnkkuri(keski),
+        panX: this.ui.panX ?? 0,
+        panY: this.ui.panY ?? 0,
+        kerroin: this.zoomiKerroin,
+        suhde: 1,
+        /*
+         * Paneelin sijainti mitataan KERRAN eleen alussa. Paneeli ei
+         * liiku nipistyksen aikana (muunnos kohdistuu karttaan, ei
+         * paneeliin), mutta getBoundingClientRect pakottaa asettelun
+         * laskennan — ja ison laudan asettelu maksaa kymmeniä
+         * millisekunteja. Joka touchmovella se söi kehysbudjetin
+         * (mitattuna profiilissa suurin JS-kuluerä eleen aikana).
+         */
+        laatikko: pane.getBoundingClientRect(),
+      };
+      alku = null;
+      liikkui = false;
+      this.ui.kartanRaahaus = true;
+      document.body.classList.add('kartta-raahaus');
+      // Kartta lähtee kahden sormen alla liikkeelle: päiväkirja riviksi.
+      this.ui.asetaPaivakirjanKoko(true);
+      this.ui.svg.style.transition = '';
+    };
+
+    const paivitaNipistys = (e) => {
+      if (!nipistys || e.touches.length < 2) return;
+      const { etaisyys } = kaksiSormea(e);
+      const { pienin, suurin } = this.zoomiRajat();
+      // Rajat kertoimessa eikä suhteessa: sama katto riippumatta siitä,
+      // mistä ele alkoi.
+      const kerroin = Math.min(suurin, Math.max(pienin, nipistys.kerroin * (etaisyys / nipistys.etaisyys)));
+      nipistys.suhde = kerroin / nipistys.kerroin;
+      // Eleen alussa mitattu paneelin sijainti (ks. aloitaNipistys).
+      const laatikko = nipistys.laatikko ?? pane.getBoundingClientRect();
+      const m = { x: nipistys.keski.x - laatikko.left, y: nipistys.keski.y - laatikko.top };
+      const tx = m.x - (m.x - nipistys.panX) * nipistys.suhde;
+      const ty = m.y - (m.y - nipistys.panY) * nipistys.suhde;
+      // Kelvoton luku muunnoksessa hylkäisi koko tyylin ja kartta
+      // nykäisisi takaisin — parempi jättää edellinen asento voimaan.
+      if (!Number.isFinite(tx) || !Number.isFinite(ty)) return;
+      this.ui.svg.style.transform =
+        `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${nipistys.suhde.toFixed(4)})`;
+    };
+
+    const paataNipistys = () => {
+      if (!nipistys) return;
+      const { pienin } = this.zoomiRajat();
+      const kerroin = nipistys.kerroin * nipistys.suhde;
+      const kohde = nipistys.kohde;
+      const keski = nipistys.keski;
+      nipistys = null;
+      this.ui.kartanRaahaus = false;
+      document.body.classList.remove('kartta-raahaus');
+      this.ui.svg.style.transform = '';
+      // Napautus eleen jälkeen ei saa valita kaupunkia.
+      this.ui.raahattiin = true;
+      setTimeout(() => { this.ui.raahattiin = false; }, 0);
+      // Alarajalle nipistäminen palaa kokonäkymään: sama kuin
+      // loitonnusnapin viimeinen painallus.
+      if (kerroin <= pienin * 1.02) {
+        this.nollaaAloitusZoom();
+        this.fitViewBox();
+        this.paivitaZoomiNapit();
+        return;
+      }
+      // Kokonäkymästä alkanut ele astuu lähikuvatilaan vasta tässä,
+      // kun eleen lopputulos tunnetaan (ks. aloitaNipistys).
+      if (!this.ui.mannerZoom && !this.ui.aloitusZoom) {
+        this.ui.mannerZoom = true;
+        document.body.classList.add('manner-zoom');
+      }
+      /*
+       * Uusi mittakaava — ja sen jälkeen ankkuri takaisin sormien alle.
+       *
+       * fitViewBox keskittää kartan zoomKohteeseen eli ruudun KESKELLE.
+       * Eleen aikana ankkuri on kuitenkin sormien keskipisteessä, ja jos
+       * se lopuksi siirretään ruudun keskelle, kartta heilahtaa juuri sen
+       * verran kuin sormet olivat keskeltä sivussa. Omistaja: "kartta
+       * heilahtaa rajusti kun sormet päästää irti."
+       *
+       * Siksi vieritys lasketaan tässä uudelleen suoraan ankkurista:
+       * piste, joka oli sormien alla, on siellä yhä.
+       *
+       * Kelvoton ankkuri EI kelpaa kohteeksi: silloin zoomKohde jää
+       * tyhjäksi ja sovitaMannerZoom keskittää pelaajan nappulaan —
+       * ei koskaan laudan origoon (Grönlanti-hyppy, ks. laudalle).
+       */
+      this.ui.zoomiVapaa = kerroin;
+      this.ui.zoomKohde = kelpaa(kohde) ? kohde : null;
+      this.ui.panX = null;
+      this.ui.panY = null;
+      this.fitViewBox();
+      const k = laudanKuvaus();
+      if (k && kelpaa(kohde) && kelpaa(keski)) {
+        // Elementin asettelusijainti = nykyinen kulma miinus nykyinen siirto.
+        const asetteluX = k.r.left - (this.ui.panX ?? 0);
+        const asetteluY = k.r.top - (this.ui.panY ?? 0);
+        this.asetaPan(
+          keski.x - asetteluX - (kohde.x - k.vb.x) * k.pxPerYks,
+          keski.y - asetteluY - (kohde.y - k.vb.y) * k.pxPerYks,
+        );
+      }
+      this.paivitaZoomiNapit();
+      this.ui.taydennaTaide({ heti: true });
+    };
+
+    this.ui.nipistysKuuntelijat = [
+      ['touchstart', (e) => {
+        if (e.touches.length !== 2) return;
+        e.preventDefault();
+        aloitaNipistys(e);
+      }],
+      ['touchmove', (e) => {
+        /*
+         * ALOITUS MYÖS LIIKKEESTÄ (omistajan iPad-havainto v639:
+         * "zoomi hyppii edelleen"). Kun sormet laskeutuvat alle
+         * aloituskynnyksen (24 px) päähän toisistaan — tavallinen
+         * tapa aloittaa nipistys — aloitaNipistys palasi tyhjin käsin
+         * EIKÄ elettä yritetty enää koskaan uudestaan. Kosketuksia ei
+         * silloin myöskään estetty, joten Safari otti eleen itselleen
+         * ja zoomasi koko sivua: kartta "hyppäsi" aivan muualle.
+         * Nyt kahden sormen liike estetään aina selaimelta ja aloitus
+         * yritetään joka liikkeellä, kunnes sormet ovat kyllin
+         * etäällä — ele alkaa siitä asennosta, ei alkuperäisestä.
+         */
+        if (!nipistys && e.touches.length === 2) {
+          e.preventDefault();
+          aloitaNipistys(e);
+          return;
+        }
+        if (!nipistys) return;
+        e.preventDefault();
+        paivitaNipistys(e);
+      }],
+      ['touchend', (e) => { if (nipistys && e.touches.length < 2) paataNipistys(); }],
+      ['touchcancel', () => { if (nipistys) paataNipistys(); }],
+      // Safarin oma ele: estetään, ettei sivu zoomaa kartan alta.
+      ['gesturestart', (e) => e.preventDefault()],
+      ['gesturechange', (e) => e.preventDefault()],
+      /*
+       * HIIREN RULLA ZOOMAA (omistajan toive).
+       *
+       * Työpöydällä kartalla oli vain +/- -painikkeet, ja rulla vieritti
+       * sivua kartan alta. Rulla on se, mihin käsi tarttuu kartalla
+       * ensimmäisenä.
+       *
+       * Rulla kulkee samat portaat kuin painikkeet — ei vapaata
+       * mittakaavaa. Portaat on valittu niin, ettei mikään paikka näy
+       * kahdesti (rajaaSkaala), ja vapaa rulla ohittaisi sen rajan.
+       *
+       * Kohdistus kursoriin: zoomKohde asetetaan siihen kartan pisteeseen,
+       * joka on osoittimen alla, jolloin kuva laajenee siitä eikä ruudun
+       * keskeltä. Painikkeet pitävät keskipisteen, koska niillä ei ole
+       * osoitinta.
+       *
+       * Nykäisyjä hillitään: tarkka rulla (trackpad) lähettää kymmeniä
+       * tapahtumia yhdestä eleestä, ja jokainen niistä olisi kokonainen
+       * porras.
+       */
+      ['wheel', (e) => {
+        if (nipistys) return;
+        if (this.avausNakymassa() || this.ui.radioPaalla()) return;
+        e.preventDefault();
+        /*
+         * Läppärin kahden sormen vieritys EI zoomaa (omistajan toive
+         * 10.8.2026: "voisiko sen vaihtaa nipistyseleeseen") —
+         * trackpadin nipistys tulee selaimissa ctrl+rullana, ja
+         * vieritys pieninä jatkuvina pikselideltoina usein
+         * vaaka-akselin kera. Hiiren rullan naksu on rividelta
+         * (deltaMode ≠ 0) tai iso pystydelta ilman vaakaa — se
+         * zoomaa yhä, kuten alkuperäinen toive vaati.
+         */
+        const nipistysEle = e.ctrlKey || e.metaKey;
+        const rullanNaksu = e.deltaMode !== 0
+          || (Math.abs(e.deltaY) >= 50 && e.deltaX === 0);
+        if (!nipistysEle && !rullanNaksu) return;
+        const nyt = performance.now();
+        if (nyt - (this.ui.rullanHetki ?? 0) < RULLAN_VALI_MS) return;
+        const suunta = e.deltaY < 0 ? 1 : -1;
+        const kohta = this.kartanKohta(e.clientX, e.clientY);
+        this.ui.rullanHetki = nyt;
+        this.ui.rullanKohta = kohta;
+        this.zoomaaPainikkeella(suunta);
+        this.ui.rullanKohta = null;
+      }],
+    ];
+    for (const [nimi, kasittele] of this.ui.nipistysKuuntelijat) {
+      pane.addEventListener(nimi, kasittele, { passive: false });
+    }
+    /** Onko nipistys kesken? Siirto ei saa sekaantua siihen. */
+    const nipistetaan = () => nipistys !== null;
+
+    /*
+     * --- liukupanorointi -------------------------------------------
+     *
+     * Omistajan toive (13.8.2026): "Earthissa vieritys ei lopu heti
+     * kun sormi irtoaa vaan hidastuu pehmeästi."
+     *
+     * Liuku on samaa elettä kuin raahaus, vain ilman sormea: se elää
+     * kokonaan asetaPanissa eli CSS-muunnoksessa, ja kartanRaahaus
+     * pidetään pystyssä koko liu'un ajan. Niin rasterointi ja
+     * tarkkuusvahti kohtelevat liukua kuin sormi olisi yhä kartalla —
+     * kumpikaan ei pääse tökkäisemään kesken liikkeen, ja bittikartta
+     * täydennetään vasta kun kartta on oikeasti pysähtynyt. Sama
+     * sääntö kuin sormella: "lataus aina vain juuri kun sormi irtoaa."
+     *
+     * Nopeus mitataan viimeisten ~120 ms:n näytteistä eikä kahdesta
+     * viimeisestä tapahtumasta: kosketuksen viime parit värähtelevät,
+     * ja pelkästä parista laskettu suunta heittelehtii.
+     */
+    const LIUKU_IKKUNA_MS = 120; // nopeus mitataan tältä hännältä
+    const LIUKU_KYNNYS = 0.25; // px/ms — hitaampi irrotus ei liu'u
+    const LIUKU_SAMMUU = 0.02; // px/ms — tässä liuku katsotaan ohi
+    const LIUKU_KATTO = 2.5; // px/ms — hurjinkin heitto pysyy aisoissa
+    const LIUKU_PUOLIINTUMIS_MS = 190; // kitka: vauhti puolittuu tässä ajassa
+    let liuku = null;
+    const naytteet = [];
+
+    /**
+     * Sammuttaa liu'un. Keskeytys (uusi sormi, zoomi, laudan nollaus)
+     * jättää täydennyksen odottamaan seuraavaa sopivaa hetkeä —
+     * rasterointia ei koskaan aloiteta juuri kun sormi laskeutuu.
+     */
+    const pysaytaLiuku = (keskeytys = false) => {
+      if (!liuku) return;
+      cancelAnimationFrame(liuku.pyynto);
+      liuku = null;
+      this.ui.kartanRaahaus = false;
+      document.body.classList.remove('kartta-raahaus');
+      if (keskeytys) this.ui.taideOdottaa = true;
+    };
+    // Laudan nollaus ja zoomipainikkeet pysäyttävät liu'un tästä.
+    this.ui.pysaytaLiuku = pysaytaLiuku;
+
+    const liukuAskel = (t) => {
+      if (!liuku || this.ui.dead) return;
+      // Katto askeleelle: taustavälilehden jälkeinen jättikehys ei saa
+      // singota karttaa.
+      const dt = Math.min(64, Math.max(1, t - liuku.viime));
+      liuku.viime = t;
+      const ennenX = this.ui.panX ?? 0;
+      const ennenY = this.ui.panY ?? 0;
+      this.asetaPan(ennenX + liuku.vx * dt, ennenY + liuku.vy * dt);
+      /*
+       * Pehmeä pysäytys reunalle: asetaPan rajaa siirron, ja jos
+       * akseli ei enää liikkunut edes puolta pyydetystä, ollaan
+       * laidassa — sen suunnan vauhti sammutetaan heti eikä jäädä
+       * puskemaan rajaa vasten. Kiertävällä kartalla vaakasuunnalla
+       * ei ole laitaa (arvo kiertää), joten tarkistus ohitetaan.
+       */
+      if (liuku.vx && !this.ui.panJakso
+          && Math.abs((this.ui.panX ?? 0) - ennenX) < Math.abs(liuku.vx * dt) / 2) liuku.vx = 0;
+      if (liuku.vy
+          && Math.abs((this.ui.panY ?? 0) - ennenY) < Math.abs(liuku.vy * dt) / 2) liuku.vy = 0;
+      // Eksponentiaalinen kitka: aikapohjainen, jotta tuntuma ei
+      // riipu ruudun virkistystaajuudesta.
+      const vaimennus = 0.5 ** (dt / LIUKU_PUOLIINTUMIS_MS);
+      liuku.vx *= vaimennus;
+      liuku.vy *= vaimennus;
+      if (Math.hypot(liuku.vx, liuku.vy) < LIUKU_SAMMUU) {
+        pysaytaLiuku();
+        // Liuku päättyi: lepo alkaa nyt, ja kuva täydennetään kuten
+        // sormen irrotessa — täsmälleen yksi loppukirjaus.
+        this.ui.merkitseKartanEle();
+        this.ui.taydennaTaide({ heti: true });
+        return;
+      }
+      liuku.pyynto = requestAnimationFrame(liukuAskel);
+    };
+
+    /** Käynnistää liu'un raahauksen päätteeksi. Tosi, jos lähti. */
+    const aloitaLiuku = () => {
+      if (this.ui.reducedMotion || this.ui.dead) return false;
+      const nyt = performance.now();
+      while (naytteet.length && nyt - naytteet[0].t > LIUKU_IKKUNA_MS + 40) naytteet.shift();
+      if (naytteet.length < 2) return false;
+      const eka = naytteet[0];
+      const vika = naytteet[naytteet.length - 1];
+      const dt = vika.t - eka.t;
+      if (dt < 30) return false;
+      let vx = (vika.x - eka.x) / dt;
+      // Pystyvauhti vain siellä, missä pystysuuntaan voi panoroida —
+      // aloituskartalla liike on yksiulotteista kuten raahauskin.
+      let vy = this.ui.panVaraY ? (vika.y - eka.y) / dt : 0;
+      const vauhti = Math.hypot(vx, vy);
+      if (vauhti < LIUKU_KYNNYS) return false;
+      if (vauhti > LIUKU_KATTO) {
+        vx *= LIUKU_KATTO / vauhti;
+        vy *= LIUKU_KATTO / vauhti;
+      }
+      liuku = { vx, vy, viime: nyt, pyynto: 0 };
+      liuku.pyynto = requestAnimationFrame(liukuAskel);
+      return true;
+    };
+
+    pane.addEventListener('pointerdown', (e) => {
+      if (nipistetaan()) return;
+      if (!this.ui.aloitusZoom && !this.ui.mannerZoom) return;
+      if (!this.ui.panVara && !this.ui.panVaraY && !this.ui.panJakso) return;
+      alku = {
+        x: e.clientX, y: e.clientY, pan: this.ui.panX ?? 0, panY: this.ui.panY ?? 0, id: e.pointerId,
+      };
+      liikkui = false;
+      // Uusi ele, uusi nopeushistoria.
+      naytteet.length = 0;
+      // Kesken oleva zoomausliuku ei saa jarruttaa raahausta.
+      clearTimeout(this.ui.zoomAjastin);
+      this.ui.svg.style.transition = '';
+      // HUOM: osoitinta EI kaapata tässä. Kaappaus ohjaisi myös
+      // click-tapahtuman paneelille, jolloin pelkkä napautus ei enää
+      // osuisi kaupunkiin. Kaappaus otetaan vasta kun liike ylittää
+      // kynnyksen eli kyse on oikeasti raahauksesta.
+    });
+
+    pane.addEventListener('pointermove', (e) => {
+      if (nipistetaan()) return;
+      if (!alku || e.pointerId !== alku.id) return;
+      const dx = e.clientX - alku.x;
+      // Mantereella liikutaan molempiin suuntiin, aloituskartalla vain
+      // vaakaan (panVaraY on siellä nolla).
+      const dy = this.ui.panVaraY ? e.clientY - alku.y : 0;
+      // Pieni kynnys: pelkkä napautus ei saa laskea raahaukseksi eikä
+      // sammuttaa sykähdyksiä turhaan.
+      if (!liikkui && Math.hypot(dx, dy) < 6) return;
+      if (!liikkui) {
+        liikkui = true;
+        this.ui.kartanRaahaus = true;
+        document.body.classList.add('kartta-raahaus');
+        // Kaappaus voi heittää NotFoundErrorin, jos osoitin ehti
+        // peruuntua (iOS peruu osoittimet oman eleensä alta) — raahaus
+        // toimii silloinkin, kaappaus vain jää tekemättä.
+        try { pane.setPointerCapture?.(e.pointerId); } catch { /* ei kaappausta */ }
+        /*
+         * Päiväkirja yhdelle riville heti kun kartta lähtee liikkeelle
+         * — ja vain kerran eleen aikana (omistajan toive: kortti ei saa
+         * napsahdella kesken vierityksen). Tämä haara on kynnyksen
+         * takana ja suoritetaan eleessä täsmälleen kerran, ja
+         * asetaPaivakirjanKoko palaa saman tien, jos lappu on jo pieni.
+         */
+        this.ui.asetaPaivakirjanKoko(true);
+      }
+      // Nopeusnäyte liukua varten; vanhat putoavat ikkunan takaa pois.
+      naytteet.push({ t: e.timeStamp || performance.now(), x: e.clientX, y: e.clientY });
+      while (naytteet.length > 2 && naytteet[naytteet.length - 1].t - naytteet[0].t > LIUKU_IKKUNA_MS) {
+        naytteet.shift();
+      }
+      this.asetaPan(alku.pan + dx, alku.panY + dy);
+    });
+
+    const paata = (e) => {
+      if (!alku || (e && e.pointerId !== alku.id)) return;
+      // Sama varautuminen kuin kaappauksessa: peruuntunut osoitin heittää.
+      if (liikkui) { try { pane.releasePointerCapture?.(alku.id); } catch { /* ei ollut */ } }
+      alku = null;
+      // Raahauksen päättävä napautus ei saa valita kaupunkia: lippu
+      // luetaan click-vaiheessa (alla) ja nollataan vasta sen jälkeen.
+      this.ui.raahattiin = liikkui;
+      if (liikkui) setTimeout(() => { this.ui.raahattiin = false; }, 0);
+      /*
+       * Vauhdikas irrotus jatkaa liukuna (omistajan toive): kartta
+       * hidastuu pehmeästi eikä pysähdy kuin seinään. Liuku on samaa
+       * elettä — kartanRaahaus ja luokka jäävät pystyyn, ja lataus
+       * odottaa liu'un loppua.
+       */
+      if (liikkui && aloitaLiuku()) return;
+      // Sykähdykset palaavat heti kun sormi irtoaa.
+      document.body.classList.remove('kartta-raahaus');
+      /*
+       * Bittikartta täydennetään VAIN tässä: heti kun sormi irtoaa
+       * (tai liukuAskeleessa, kun liuku on pysähtynyt — se on saman
+       * eleen loppu).
+       *
+       * Omistajan linjaus: "lataus siis aina vain juuri kun sormi
+       * irtoaa, ei muulloin." Ele saa kulkea täysin valmiin kuvan
+       * päällä, ja työ tehdään vasta kun ruutu on paikallaan.
+       */
+      this.ui.kartanRaahaus = false;
+      if (liikkui) this.ui.taydennaTaide({ heti: true });
+    };
+    pane.addEventListener('pointerup', paata);
+    pane.addEventListener('pointercancel', paata);
+
+    // Raahauksen jälkeinen click ei saa mennä kaupungille asti.
+    // Sama kuuntelija hoitaa aloituskartan ensimmäisen napautuksen:
+    // zoomaus lähtee mistä tahansa kohdasta karttaa eikä vaadi osumaa
+    // kaupunkiin (omistajan toive). Kaappausvaiheessa, jotta kaupungin
+    // oma napautus ei ehdi valita lähtöpaikkaa.
+    pane.addEventListener('click', (e) => {
+      if (this.ui.raahattiin) {
+        e.stopPropagation();
+        e.preventDefault();
+        return;
+      }
+      if (this.ui.aloitusZoom || !this.zoomTarpeen()) return;
+      // Zoomaus lähtee vain itse kartalta. Kartan päällä kelluu muutakin
+      // — lentokalvo "Astu mantereelle" -nappeineen, aloitusportti,
+      // matkakirjan kortti — ja koska tämä kuuntelija on kaappaus-
+      // vaiheessa, se söi niiden napautukset ennen kuin ne ehtivät
+      // nappiin asti. Lentokalvo jäi silloin ruudulle eikä Euroopan
+      // kartta auennut lainkaan.
+      if (!e.target.closest('svg')) return;
+      // Sama napautuszoomaus toimii myös silloin, kun maailmankartalle
+      // palataan kesken matkan (omistajan havainto): kartta on yhtä pieni
+      // kummallakin kerralla. Aloitusportin takana zoomausta ei tarjota.
+      if (!this.ui.aloitettu || this.ui.aloitusportti) return;
+      /*
+       * Vain maailmankartalla. Mantereilla on oma lähikuvansa
+       * (zoomaaMantereelle), eikä aloituskartan napautuszoomaus kuulu
+       * niille lainkaan.
+       *
+       * Ilman tätä ehtoa napautus lisäsi bodyyn aloitus-zoom-luokan.
+       * Euroopassa fitViewBox palaa sen jälkeen mannerzoomin haarasta
+       * eikä ehdi nollata lippua, joten kartta zoomasi uudelleen ja
+       * perään syttyi kiikari — joka kuuluu vain etusivulle (omistajan
+       * havainto: laivamatkan valinta Ateenassa).
+       *
+       * Sama ehto lopettaa toisenkin haitan: kuuntelija on
+       * kaappausvaiheessa ja pysäyttää tapahtuman, joten mantereella se
+       * söi kartalla olevien kohderenkaiden napautukset.
+       */
+      if (this.ui.game.pack.id !== 'maailma') return;
+      e.stopPropagation();
+      e.preventDefault();
+      this.zoomaaAloituskartta(this.kartanKohta(e.clientX, e.clientY));
+    }, true);
   }
 
   /**
