@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v839 — zoomaile nopeasti sisään/ulos ja lopeta: kartta tarkentuu nyt parissa sekunnissa eikä jätä sumeita laikkuja',
   'v838 — kolme turhaa suoraa reittiä pois (Helsinki–Rovaniemi, Granada–Lissabon, Addis Abeba–Suakin) — ketjut uusien kaupunkien kautta',
   'v837 — iPad: kartta ei enää bugaa taustapaluussa (vaalea kaista, jäätynyt piirto) — testaa: raahaa karttaa, vaihda appia sormi pohjassa, palaa',
   'v836 — E00 2/2: Tokion, Soulin ja Shanghain kohdekartat ja kohteet — koko kuusikko valmis, tarkista pelissä',
