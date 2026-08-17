@@ -4289,6 +4289,44 @@ test('arkin korkeus mitataan pikseleinä eikä jätetä dvh:n varaan', () => {
 });
 
 /*
+ * PUHELIMEN LEHDESTÄ EI VÄHENNETÄ TURVA-ALUEITA.
+ *
+ * Omistajan kaappaus 17.8.2026 iPhonella (Berliinin kaupunkilehti):
+ * *"lehtidialogin alareunaan jää sumennettu vaakakaista, jonka takaa
+ * näkyy pelin kartta, ja lehden alanavigointi jää kaistan alle"*.
+ *
+ * Syy oli tässä katossa. Kapealla ruudulla CSS tekee lehdestä koko
+ * ruudun (`inset: 0; margin: 0; height: 100dvh`) ja varaa turva-alueet
+ * KORTIN PEHMUSTEENA. Kun pikselikatto vähensi 1,6 remiä ja molemmat
+ * turva-alueet myös siellä, ylösankkuroitu arkki kutistui ja koko
+ * vähennys jäi tyhjäksi kaistaksi alareunaan (mitattu 119 px eli 14 %
+ * iPhonen ruudusta). Kaistan läpi kuulsi kartta dialogin sumennetun
+ * ::backdropin takaa.
+ *
+ * Kapealla ruudulla katto on siis mitattu näkymä sellaisenaan; leveällä
+ * arkki kelluu keskitettynä, jolloin vähennys on oikein.
+ */
+test('kapealla ruudulla lehtiarkki saa koko mitatun korkeuden', () => {
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const katto = ui.match(/mitoitaArkinKorkeus\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.ok(katto, 'mitoitaArkinKorkeus puuttuu ui.js:stä');
+
+  // Sama 700 px:n raja kuin CSS:n media queryissä ja mitoitaArkissa.
+  assert.match(katto, /< 700/,
+    'katto ei erottele kapeaa ruutua — puhelimen täysruutulehti kutistuu turva-alueiden verran');
+  // Nähtävyysarkki on keskitetty myös puhelimessa, joten se pitää
+  // vanhan laskun: ilman poikkeusta se venyisi loveuksen ali.
+  assert.match(katto, /kapea && !arkki\.classList\.contains\('nahtavyys-arkki'\)/,
+    'kapean ruudun täysikorkeus ei rajaudu lehtiarkkiin');
+  // Myös height kirjoitetaan pikseleinä: juuri CSS:n 100dvh on se,
+  // joka jumiutuu taustapaluussa.
+  assert.match(katto, /style\.height = taysi/,
+    'kapean ruudun korkeutta ei kirjoiteta pikseleinä (100dvh jää jumiutuvaksi)');
+  assert.match(katto, /arkki\.style\.height = '';/,
+    'leveällä ruudulla kapean tilan inline-korkeutta ei nollata — kääntäminen jättäisi sen voimaan');
+});
+
+/*
  * KORKEUDEN MUUTOS LAUKAISEE ELVYTYKSEN.
  *
  * Omistajan havainto 16.8.2026 iPadilla: peli jää tilaan, jossa
