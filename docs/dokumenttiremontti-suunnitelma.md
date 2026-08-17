@@ -1,7 +1,8 @@
 # Dokumenttiremontti — suunnitelma
 
-*(Fable max 17.8.2026, docs/tyolista-maxille.md kohta 2. TILA:
-ODOTTAA OMISTAJAN HYVÄKSYNTÄÄ — mitään siirtoa ei ole tehty.
+*(Fable max 17.8.2026, docs/arkisto/tyolista-maxille-2026-08.md
+kohta 2. TILA: TOTEUTETTU — hyväksytty v808, vaiheet D1–D7 ajettu
+ja mergattu 17.8.2026.
 Toteutus vaiheittain tämän suunnitelman mukaan hyväksynnän
 jälkeen; isot Raamattu-muutokset koordinoidaan päätoimittajan
 kanssa ennen mergeä.)*

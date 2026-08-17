@@ -101,7 +101,7 @@ jälkeen — historia docs/arkisto/sessiohistoria-2026-08.md).
 Sisältötyön tekevät nykyään FABLEN SISÄISET AGENTIT, jotka saavat
 tehtävänsä perustamispromptissa ja raportoivat automaattisesti —
 herätysongelmaa ei ole. Omistajan parvilupa lehtityöhön 17.8.
-(docs/tyolista-maxille.md kohta 4).
+(docs/arkisto/tyolista-maxille-2026-08.md kohta 4).
 
 ## Työn seuranta (10.8.2026 — omistajan kysymys "tekevätkö sessiot työtä?")
 

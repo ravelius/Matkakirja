@@ -1,3 +1,8 @@
+> **ARKISTOITU 17.8.2026.** Remontti on toteutettu: moduulijako
+> M1–M6 ja dokumenttiremontti D1–D7 ovat mainissa. Avoimet asiat
+> (M7-päätös, lehtitila-olio, tuotantosuunnitelma §4) elävät Fablen
+> jonossa ja Raamatun Moduulit-osiossa — tämä paperi on historiaa.
+
 # Työlista Maxille (Fable-tason max-sessio)
 
 Ajetaan 17.8.2026, kun viikkokreditit ovat uusiutuneet. Omistaja

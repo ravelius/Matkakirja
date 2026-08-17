@@ -1,8 +1,8 @@
 # Pelin moduulirakenne — suunnitelma
 
-*(Fable max 17.8.2026, docs/tyolista-maxille.md kohta 1. TILA:
-ODOTTAA OMISTAJAN HYVÄKSYNTÄÄ — yhtään koodimuutosta ei ole tehty
-eikä tehdä ennen hyväksyntää. Kartoitus tehty tuoreesta mainista
+*(Fable max 17.8.2026, docs/arkisto/tyolista-maxille-2026-08.md
+kohta 1. TILA: HYVÄKSYTTY v808; vaiheet M1–M6 toteutettu ja
+mergattu 17.8.2026, valinnainen M7 odottaa omistajan päätöstä. Kartoitus tehty tuoreesta mainista
 (v806); kaikki portit ajettu lähtötilassa vihreinä: 739/739 testiä,
 ei kaksoisavaimia, standalone kokoontuu.)*
 

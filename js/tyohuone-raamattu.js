@@ -440,6 +440,36 @@ export const RAAMATTU = {
       ],
     },
     {
+      otsikko: 'Moduulit',
+      tila: 'linjaus 17.8.2026 (remontin M1–M6, suunnitelman luku 3)',
+      kohdat: [
+        'Kaksitoista moduulia, kullakin yksi vastuu. Tekninen '
+          + 'sisältö (tiedostolistat, siirtomallit) ei kuulu tähän '
+          + 'vaan moduuliohjeisiin (docs/moduulit/) ja '
+          + 'suunnitelmaan.',
+        'Ydin = pelitila ja säännöt · Kartta = laudan piirto ja '
+          + 'kamera · Linssit = karttakerrokset sopimuksineen · '
+          + 'Tarinakaari = saapumiset, kohtaamiset, aarteet · '
+          + 'Kätköpelit = visa, pulmat, tiimalasi (js/visa.js).',
+        'Kaupunkilehti = lehden taitto ja sivupino (js/lehti.js) · '
+          + 'Maalehti ja liput (js/maalehti.js, js/liput.js) · '
+          + 'Matkailijan opas (js/opas.js) · Nähtävyydet ja '
+          + 'kohdekartta (js/nahtavyydet.js).',
+        'Äänet ja lukija = kaikki kuuluva: tehosteet, kertojaluennat '
+          + '(js/luenta.js), laiteääni · Viisas Pöllö = chat-apuri · '
+          + 'Alusta = käynnistys, tallennus, jakelu ja työhuone.',
+        'RAJAPINTASÄÄNNÖT: datapaketit eivät tuo mitään — ne ovat '
+          + 'lehtiä puussa.',
+        'Pinnat tuovat toisiaan vain kirjatusti ja yksisuuntaisesti '
+          + '(opas → nähtävyydet, lehti → maalehti, visa → luenta); '
+          + 'kehäriski kierretään ui-delegaattorilla.',
+        'Ydin ei tunne pintoja; pinnat kutsuvat Ydintä vain '
+          + 'run/doAction-portin kautta.',
+        'Laiska raja (dynaaminen tuonti), kun moduuli ei kuulu yhden '
+          + 'tiedoston versioon (linssit, maakäyrät).',
+      ],
+    },
+    {
       otsikko: 'Ohjedokumenttien kartta',
       tila: 'luonnos (omistajan tilaus 15.8.2026)',
       kohdat: [
@@ -453,7 +483,7 @@ export const RAAMATTU = {
           + 'pistokokeet.',
         'docs/moduulit/linssit.md · docs/moduulit/kaupunkilehti.md · '
           + 'docs/moduulit/maalehti.md · docs/tyolista-opukselle.md · '
-          + 'docs/tyolista-maxille.md · docs/moduulit/tarinakaari.md '
+          + 'docs/moduulit/tarinakaari.md '
           + '· docs/mantereen-resepti.md · '
           + 'docs/kuvakasikirjoitukset.md — sisältöreseptit ja '
           + 'työlistat.',
@@ -467,18 +497,16 @@ export const RAAMATTU = {
           + 'erinomaista jälkeä; väljä rajaus johtaa turhien asioiden '
           + 'toteuttamiseen. Jokaiseen pakettiin: täsmälliset '
           + 'tiedostot, mitä EI tehdä, ja valmis malli.',
-        'TOTEUTUSLISTA — KIIREELLINEN (omistaja 16.8.2026): '
-          + 'dokumenttiremontti. docs-kansiossa on Raamatun kanssa '
-          + 'päällekkäisiä ohjeita; tavoite on Raamattu AINOANA '
-          + 'linjauslähteenä + roolitus ja mallit + moduulikohtaiset '
-          + 'ohjeet siisteinä omina md-tiedostoinaan. Ajetaan '
-          + 'OMASSA max-sessiossa 17.8. kredittien uusiuduttua; '
-          + 'samalla suunnitellaan pelin selkeä moduulirakenne '
-          + '(docs/tyolista-maxille.md). Fable johtaa high-tasolla.',
+        'TOTEUTETTU 17.8.2026: dokumenttiremontti (D1–D7) ja '
+          + 'moduulijako (M1–M6) ajettiin Max-sessiossa, Fable '
+          + 'katselmoi ja mergasi. Raamattu on ainoa linjauslähde; '
+          + 'moduuliohjeet docs/moduulit/-kansiossa. Avoinna: M7 '
+          + '(Kartta-luokka, omistajan päätös) ja lehtitila-olio. '
+          + 'Max-työlista arkistoitu (docs/arkisto/).',
         'docs/moduulirakenne-suunnitelma.md · '
           + 'docs/dokumenttiremontti-suunnitelma.md — Max-session '
-          + 'suunnitelmat 17.8.2026 (odottavat omistajan '
-          + 'hyväksyntää; toteutus vasta sen jälkeen).',
+          + 'suunnitelmat 17.8.2026 (hyväksytty v808; toteutettu '
+          + 'D1–D7 ja M1–M6, ks. Moduulit-osio).',
         'Työkalujen alkukommentit ovat käyttöohjeita. Sääntö, jonka '
           + 'kone voi valvoa, kirjataan testiksi.',
         'Työhuone integroidaan peliin kehittäjävivun taakse — ei '
