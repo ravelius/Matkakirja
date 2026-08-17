@@ -464,6 +464,10 @@ export const RAAMATTU = {
           + 'OMASSA max-sessiossa 17.8. kredittien uusiuduttua; '
           + 'samalla suunnitellaan pelin selkeä moduulirakenne '
           + '(docs/tyolista-maxille.md). Fable johtaa high-tasolla.',
+        'docs/moduulirakenne-suunnitelma.md · '
+          + 'docs/dokumenttiremontti-suunnitelma.md — Max-session '
+          + 'suunnitelmat 17.8.2026 (odottavat omistajan '
+          + 'hyväksyntää; toteutus vasta sen jälkeen).',
         'Työkalujen alkukommentit ovat käyttöohjeita. Sääntö, jonka '
           + 'kone voi valvoa, kirjataan testiksi.',
         'Työhuone integroidaan peliin kehittäjävivun taakse — ei '
