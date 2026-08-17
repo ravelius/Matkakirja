@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 820, teksti: 'Maalehti ja sisällys omaksi moduulikseen (M5c)' },
   { v: 819, teksti: 'Kuvataitto, sää ja uutiset lehti.js:ään (M5b)' },
   { v: 818, teksti: 'Lehden sivukoneisto omaksi moduulikseen (M5a)' },
   { v: 817, teksti: 'Opas ja nähtävyydet omiksi moduuleiksi (M4)' },
