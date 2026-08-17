@@ -251,3 +251,129 @@ eivätkä sisällä maamerkkejä. Sen sijaan
 `gsrsearch=<kohde> incategory:"Quality images"` ja suodatus
 `korkeus > leveys × 1,2` tuotti kaikissa kolmessa kaupungissa
 kelvollisen pystykuvan ensimmäisellä yrityksellä.
+
+---
+
+# KAPULANVAIHTO TAKAISIN FABLELLE (17.8.2026)
+
+Omistaja 17.8.2026: *"Fable on takaisin. Raportoi jatkossa vain
+fablelle."* Tämä osio on koko sijaisvuoron yhteenveto. Sen jälkeen
+raportoin roolituksen mukaisesti vain tähän tiedostoon gitillä — en
+trigger-työkaluilla enkä omistajalle.
+
+## Julkaistu sijaisvuorolla: v791–v805 (15 versiota, kaikki mainissa)
+
+**Sisältö**
+
+| Versio | Mitä |
+| --- | --- |
+| v792–v793 | Pariisin kolmelle uudelle kohteelle miniatyyripiirrokset |
+| v794 | Wien, Rooma, Kööpenhamina: pystykuva etusivulle |
+| v795 | Helsinki: Uspenskin katedraali etusivulle |
+| v796 | Viiden oppaan avauskuva kolmen kuvan karuselliksi (paketti O5 valmis) |
+| v804 | **Matkailijan Bagdad** — paketin O6 ensimmäinen |
+| v805 | **Matkailijan Teheran** — toinen |
+
+**Käyttöliittymä (omistajan iPad- ja iPhone-havainnot)**
+
+| Versio | Vika ja juurisyy |
+| --- | --- |
+| v791 | Maasivun alanapit kotipalkin alla; turva-alue oli vain puhelimen media queryssä |
+| v797 | Oppaan otsikko loveuksen alla; JS:n inline-katto voitti CSS:n eikä vähentänyt turva-alueita |
+| v798 | Pöllön kuvapopup 320 px riippumatta ruudusta → 640 px, lähde 1024 px |
+| v799 | **Oma regressio v797:stä:** kavensin dialogin kattoa mutta en kortin, jolloin kortti kasvoi dialoginsa yli 32 px |
+| v800 | Etusivun avausteksti tummalla pohjalla; se on aina ollut `--map-ink` eli pergamenttityyli |
+| v801 | Kohdekortin kaiutin otsikon perään, 5/6-laskuri pois kokonaan |
+| v802 | **Sama alanappivika kolmatta kertaa:** v791:n vara oli perussäännössä, mutta `@media (min-width: 700px)` ylikirjoitti sen — ja 700 px on juuri iPadin raja |
+| v803 | Kaiuttimen kuvake otsikon kokoiseksi (18 → 22 px) |
+
+## Kolme asiaa, jotka kannattaa muistaa
+
+**1. Turva-alueperhe puri neljä kertaa illassa.** Aina samasta syystä:
+mitta asetettiin yhdelle tasolle mutta ei kaikille. Jos jokin reuna
+käyttäytyy oudosti iPadilla, epäile ensimmäisenä sitä, että jokin
+media query tai sisempi laatikko ylikirjoittaa varauksen. Testit
+`tests/rules.test.mjs`:ssä vartioivat nyt tätä: katto luetaan
+`--turva-yla`/`--turva-ala`-muuttujista, se kirjoitetaan myös
+kortille, ja JOKAISEN arkin kortin padding-säännön on varattava
+`safe-area-inset-bottom`.
+
+**2. Commonsin kaksi ansaa.** Rate limit (8 s pyyntöjen väliin,
+uusinnat 15/30/45 s) ja `upload.wikimedia.org`:n robottikäytäntö.
+Lataa `commons.wikimedia.org/w/thumb.php?f=<nimi>&w=…` ja **korvaa
+välilyönnit alaviivoilla**. Molemmat palauttavat HTML-sivun, joka
+`.jpg`-nimellä tallennettuna näyttää kuvalta.
+
+**3. Hae kategorioilla, älä hakusanoilla,** kun kaupunki on arabian-,
+persian-, korean-, kiinan- tai japaninkielinen. Bagdadissa hakusanat
+`Al-Rashid Street`, `Baghdad coffeehouse` ja `Baghdad market`
+palauttivat kaikki NOLLA osumaa; `Category:Coffeehouses in Baghdad`
+antoi viisi kuvaa.
+
+## Agenttiparvi: mitä opin, ja miksi se oli hidas
+
+Ajoin 10 agentin parven (6 opasta + 4 nähtävyyslistaa). **Se oli
+väärä työkalu, ja sanon sen suoraan.**
+
+- Koneessa on 4 ydintä, ja rinnakkaisuuden katto on ytimet − 2 = **2
+  agenttia kerrallaan**. Kymmenen agenttia jonotti pareittain viitenä
+  kierroksena, 15–27 min kukin: 85 minuuttia.
+- Commonsin rajoitus on IP-kohtainen, ja kaikki agentit jakavat saman
+  IP:n. Rinnakkaisuus ei siis voinut auttaa pullonkaulaan alunperin.
+
+**Mikä toimi sen sijaan:** kun otin tulokset itselleni, tarkistin 86
+kuvaehdokkaan lisenssit **kahdella** API-kutsulla (`titles=` ottaa 50
+nimeä kerralla) — 20 sekuntia. Ja katsoin kuvat kontaktiarkkeina
+(3×3-ruudukko, jossa kaupunki, kohta ja lisenssi kunkin alla), jolloin
+86 kuvaa mahtui kymmeneen katseluun. Tahti nousi noin 15 minuuttiin
+per kaupunki.
+
+**Suositus:** teksti kannattaa tehdä agenteilla tai itse (ei tarvitse
+rajapintaa; repon nostot ovat valmis faktapohja), mutta kuvahaku
+yhteen tahdistettuun jonoon.
+
+## Kesken ja seuraavaksi
+
+**Paketti O6, neljä kaupunkia jäljellä:** Tokio, Soul, Shanghai,
+Tripoli. Kaikkien tekstit ja kuvaehdokkaat ovat valmiina — agenttien
+tuotokset ja lisenssitarkistus talteen otettuna. **Kuvia ei ole
+katsottu silmin** näiden neljän osalta, joten ne eivät ole
+julkaisukelpoisia sellaisenaan.
+
+**Omistaja hyväksyi 17.8.2026 kaksi asiaa (eivät siis enää auki):**
+
+1. `js/packs/asia-questions.js:681` maglev-fakta korjataan: väittää
+   431 km/h ja alle 8 min, mutta matkanopeus laskettiin toukokuussa
+   2021 kolmeensataan ja matka kestää 8 min 10 s.
+2. Tripolille tehdään **koko kaupunkiosio** (johdanto, kansikuvat,
+   nostot) eikä vain opasta — sillä ei ole avainta
+   `kulttuuri-kategoriat.js`:ssä lainkaan.
+
+**Paketti O4 kesken:** Lontoo, Berliini, Wien ja Rooma ovat yhä
+kuudessa nähtävyydessä eli haarukan alarajalla. Parven neljä
+nähtävyysagenttia ehtivät tuottaa ehdotuksia; ne ovat journalissa
+`wf_7c6db5a1-b6f`.
+
+**Paketti O7 odottaa (omistajan tilaus):** Afrikan kaupungit
+valmiiksi. Mitattu tilanne: 39 kaupunkia, lehti yhdellä (Kairo).
+Kirjattu `docs/tyolista-opukselle.md`:hen.
+
+**PÄÄTÖSTÄ VAATIVA KYSYMYS (kysyin omistajalta, vastausta ei ole
+tullut):** Afrikan 38:sta noin kymmenen ei ole kaupunkeja vaan
+alueita — Sahara, Ahaggar, Namib, Tšad-järvi, Tanganjika,
+Kilimandžaro, Viktorian putoukset, Orjarannikko, Bahr el-Ghazal,
+Darfur. Euroopassa vastaava ratkaistiin niin, että Islanti, Lappi,
+Kreeta, Sisilia ja Alpit saivat lehden mutta ei kohdekarttaa. Käykö
+sama Afrikassa? Vastaus muuttaa noin neljänneksen paketin O7 työstä.
+
+## Raamattuun kuuluvat linjaukset (en kirjoita sinne)
+
+Aiemmassa osiossa mainitut kaksi ovat yhä kirjaamatta: maalehden
+nimiö (pelkkä maan nimi + lippu) ja etusivukuvan kaava. Niiden
+lisäksi kolmas tältä vuorolta:
+
+**Oppaan avauskuva on aina kolmen kuvan karuselli, ja kuvat valitaan
+JAKSON TEKSTIN mukaan** eikä kaupungin yleisistä maamerkeistä.
+Pariisin teksti mainitsee emaloidun kadunnimikyltin, Rooman nimeää
+kiveyksen sanpietriniksi — ja nyt ne myös näkyvät. Tämä on se ero,
+joka tekee karusellista sisältöä eikä koristetta.
