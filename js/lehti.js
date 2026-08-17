@@ -15,6 +15,10 @@ import {
   kaynnistaLukija, kokoaLuettavaTeksti, liitaLukija, paivitaLukija,
   pysaytaLukija, vieritaPehmeasti,
 } from './lukija.js';
+import {
+  naytaMaaTunnusluvut, paivitaMediarivit, piirraKategoria,
+  piirraMaaEtusivu, piirraMaaNumerotSivu, rakennaSisallysLista,
+} from './maalehti.js';
 import { asetaKuva } from './media.js';
 import {
   nahtavyydenKaruselli, nahtavyydenKuva, piirraKaupunkiKartta,
@@ -361,7 +365,7 @@ export function rakennaSivut(ui, cityId) {
   ui.tutkiMaaLehti = null;
   // Vasta tässä tiedetään, onko maaosasto omalla sivullaan, joten
   // mediarivit ratkaistaan uudestaan (ks. paivitaMediarivit).
-  ui.paivitaMediarivit();
+  paivitaMediarivit(ui);
   naytaTutkiSivu(ui, 0, { heti: true });
 }
 
@@ -466,9 +470,9 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
   // Karttasivu ja tilastosivu piirtyvät omilla piirroillaan — ne
   // ovat karttaa ja käyriä, eivät nostolistoja.
   ui.arrivalKategoria.classList.toggle('maa-etusivu', Boolean(kategoria?.kartta));
-  if (kategoria?.kartta) ui.piirraMaaEtusivu(kategoria);
-  else if (kategoria?.numerot) ui.piirraMaaNumerotSivu(kategoria);
-  else ui.piirraKategoria(kategoria);
+  if (kategoria?.kartta) piirraMaaEtusivu(ui, kategoria);
+  else if (kategoria?.numerot) piirraMaaNumerotSivu(ui, kategoria);
+  else piirraKategoria(ui, kategoria);
   ui.arrivalKategoria.hidden = !kategoria;
   /*
    * Mediarivi maalehden ensimmäiselle sivulle myös silloin, kun
@@ -705,7 +709,7 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
   ui.arrivalMaaKartta.textContent = '';
   const minikartta = ui.piirraMaakartta(iso, null);
   if (minikartta) ui.arrivalMaaKartta.appendChild(minikartta);
-  ui.naytaMaaTunnusluvut(iso);
+  naytaMaaTunnusluvut(ui, iso);
   // Uutisten dialogivartija vertaa arrivalShownForiin — se osoittaa
   // yhä viimeksi avattuun kaupunkiin, joten se kelpaa tässä avaimeksi.
   naytaMaaUutiset(ui, iso, ui.arrivalShownFor);
@@ -730,7 +734,7 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
   if (arkki) kytkeTutkiSelaus(ui, arkki);
   // Radio ja tv seuraavat lehteä: maalehdessä ne ovat SEN maan,
   // ei sen, jossa pelaaja sattuu seisomaan (ks. paivitaMediarivit).
-  ui.paivitaMediarivit();
+  paivitaMediarivit(ui);
   // Maalehti alkaa maan etusivulta (indeksi 0 on kaupunkilehden
   // kansi, jota maalehdellä ei ole — siksi sivu 1).
   naytaTutkiSivu(ui, 1, { heti: true });
@@ -1070,7 +1074,7 @@ export function avaaSisallysvalikko(ui, { ylhaalla = false } = {}) {
    * selaamalla. Maalehdessä riviä ei ole, koska maalehti alkaa
    * suoraan aihesivulta (tutkiEkaSivu 1) eikä kantta ole.
    */
-  levy.appendChild(ui.rakennaSisallysLista(sisallys, {
+  levy.appendChild(rakennaSisallysLista(ui, sisallys, {
     suljeValikko: sulje,
     etusivuRivi: tutkiEkaSivu(ui) === 0,
   }));

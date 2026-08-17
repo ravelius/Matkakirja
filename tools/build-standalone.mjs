@@ -206,6 +206,8 @@ const MODULES = [
   // M4: nähtävyydet ennen opasta (opas tuo sen apurit).
   'js/nahtavyydet.js',
   'js/opas.js',
+  // M5c: maalehden koneisto ennen lehteä (lehti tuo sen piirtäjät).
+  'js/maalehti.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).
   'js/lehti.js',
   'js/pollo-haku.js',
