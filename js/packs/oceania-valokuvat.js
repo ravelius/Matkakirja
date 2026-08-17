@@ -553,6 +553,55 @@ export const OCEANIA_VALOKUVAT = {
         + 'noustaan satoja portaita ylös niemen selkää pitkin.',
     },
   },
+  dunedin: {
+    tiedosto: 'Sailing ship Alcestis being towed past Goat Island-Rakiriri, Otago Harbour, after running aground, probably 1880s (3056547339).jpg',
+    vuosi: '1880-luku',
+    lahde: 'David De Maus, Alexander Turnbull Library / National Library NZ, '
+      + 'Commons (ei tunnettuja tekijänoikeusrajoituksia)',
+    selite: 'Purjelaiva Alcestis hinataan irti kareilta Otagon lahdella '
+      + 'joskus 1880-luvulla; höyryhinaaja vetää vasemmalla ja takana '
+      + 'kohoaa Goat Island eli Rakiriri. Lasinegatiiviin on kirjoitettu '
+      + 'käsin "Alcestis ashore". Lahti on kapea ja matala, ja juuri '
+      + 'siksi Dunedinin oikea satama on sen suulla Port Chalmersissa.',
+    lisat: [
+      {
+        tiedosto: 'Dunedin Railway Station Full Exterior.jpg',
+        vuosi: '2009',
+        lahde: 'Antilived, Commons (CC BY-SA 3.0)',
+        selite: 'Dunedinin rautatieasema, vuonna 1906 valmistunut '
+          + 'flaamilaisen renessanssin tyylinen edustusrakennus mustasta '
+          + 'basaltista ja vaaleasta hiekkakivestä. Kellotorni kohoaa 37 '
+          + 'metriin. Asema rakennettiin kaupungille, joka oli juuri '
+          + 'menettänyt asemansa maan suurimpana.',
+      },
+      {
+        tiedosto: '00 1518 Dunedin (New Zealand) - Railway Station.jpg',
+        vuosi: '2009',
+        lahde: 'W. Bulach, Commons (CC BY-SA 4.0)',
+        selite: 'Aseman pääsalin mosaiikkilattia. Keskellä on veturi '
+          + 'tähtikuvion sisällä ja ympärillä toistuu Uuden-Seelannin '
+          + 'rautateiden NZR-monogrammi ja veturinpyörä. Lattia on ladottu '
+          + 'pienistä posliinilaatoista pala palalta.',
+      },
+      {
+        tiedosto: 'Otago Peninsula and Harbour Cone.jpg',
+        vuosi: '2013',
+        lahde: 'Pseudopanax, Commons (PD)',
+        selite: 'Otagon niemimaa ja Harbour Cone Larnach Castlen huipulta '
+          + 'nähtynä. Niemimaa on sammuneen tulivuoren jäännös, ja sen '
+          + 'ruohoiset kartiot erottavat lahden avomerestä.',
+      },
+    ],
+    uusi: {
+      tiedosto: 'Port Chalmers from Centenary lookout.jpg',
+      lahde: 'Pseudopanax, Commons (PD)',
+      selite: 'Port Chalmers nykyään Centenary-näköalapaikalta. Keskellä '
+        + 'lahtea näkyy sama Goat Island eli Rakiriri, jonka ohi Alcestis '
+        + 'hinattiin. Villalaivojen tilalla laiturissa on nyt '
+        + 'konttiterminaali, mutta kaupungin puutalot rinteessä ovat '
+        + 'pitkälti samat.',
+    },
+  },
   exmouth: {
     lisat: [
       {

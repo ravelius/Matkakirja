@@ -5,6 +5,69 @@
 // source = osoite, josta tieto on tarkistettu. Merkitään vain luetuista lähteistä.
 
 export const OCEANIA_QUESTIONS = {
+  dunedin: [
+    {
+      q: 'Minkä maan kaupunki Dunedin on?',
+      options: ['Uusi-Seelanti', 'Australia', 'Fidži', 'Samoa'],
+      correct: 0,
+      level: 1,
+      hint: 'Maa muodostuu kahdesta suuresta saaresta Tyynenmeren eteläosassa.',
+      fact: 'Dunedin on Eteläsaaren kaakkoisosassa Tyynenmeren rannikolla, ja siellä oli vuonna 2020 noin 134 100 asukasta.',
+      source: 'https://fi.wikipedia.org/wiki/Dunedin_(Uusi-Seelanti)',
+    },
+    {
+      q: 'Minkä kaupungin mukaan Dunedin on saanut nimensä?',
+      options: ['Edinburgh', 'Dublin', 'Aberdeen', 'Glasgow'],
+      correct: 0,
+      level: 2,
+      hint: 'Nimi on gaelinkielinen muoto Dùn Èideann.',
+      fact: 'Kaupungin maorinkielinen nimi on Ōtepoti.',
+      source: 'https://fi.wikipedia.org/wiki/Dunedin_(Uusi-Seelanti)',
+    },
+    {
+      q: 'Kuka perusti Dunedinin vuonna 1848?',
+      options: [
+        'Skotlannin vapaakirkon maallikkojärjestö',
+        'Britannian laivasto',
+        'hollantilainen kauppakomppania',
+        'maoriheimojen liitto',
+      ],
+      correct: 0,
+      level: 2,
+      hint: 'Perustajat tulivat Britanniasta, ja paikka valittiin puutavaravarantojen ja viljelymahdollisuuksien takia.',
+      fact: 'Ennen sitä Otago Harbourista oli kehittynyt 1830-luvun loppuun mennessä merkittävä valaanpyyntisatama.',
+      source: 'https://fi.wikipedia.org/wiki/Dunedin_(Uusi-Seelanti)',
+    },
+    {
+      q: 'Mikä muutti Dunedinin nopeasti suurkaupungiksi vuodesta 1861 alkaen?',
+      options: [
+        'Otagon kultaryntäys',
+        'rautatien valmistuminen',
+        'valaanpyynnin kielto',
+        'villamarkkinoiden avautuminen',
+      ],
+      correct: 0,
+      level: 3,
+      hint: 'Asukasluku nousi 1 700:sta lähes 15 000:een runsaassa vuosikymmenessä.',
+      fact: 'Dunedin oli hetkellisesti jopa Uuden-Seelannin suurin kaupunki. Kaupunginoikeudet se sai vuonna 1865.',
+      source: 'https://fi.wikipedia.org/wiki/Dunedin_(Uusi-Seelanti)',
+    },
+    {
+      q: 'Mikä Uuden-Seelannin ensimmäinen yliopisto perustettiin Dunediniin vuonna 1869?',
+      options: [
+        'Otagon yliopisto',
+        'Aucklandin yliopisto',
+        'Victorian yliopisto',
+        'Canterburyn yliopisto',
+      ],
+      correct: 0,
+      level: 3,
+      hint: 'Yliopisto on nimetty maakunnan mukaan, samoin kuin kaupungin kultakenttien ryntäys.',
+      fact: 'Kultaryntäyksen jälkeen kaupungista kehittyi Eteläsaaren villateollisuuden johtonimi.',
+      source: 'https://fi.wikipedia.org/wiki/Dunedin_(Uusi-Seelanti)',
+    },
+  ],
+
   melbourne: [
     {
       q: 'Missä maassa Melbourne sijaitsee?',
@@ -1666,6 +1729,15 @@ export const OCEANIA_QUESTIONS = {
 };
 
 export const OCEANIA_FACTS = {
+  dunedin: [
+    { text: 'Dunedin perustettiin vuonna 1848, ja sen nimi on gaelinkielinen muoto Skotlannin pääkaupungin nimestä: Dùn Èideann eli Edinburgh.', source: 'https://fi.wikipedia.org/wiki/Dunedin_(Uusi-Seelanti)' },
+    { text: 'Heinäkuussa 1861 alkanut Otagon kultaryntäys nosti asukasluvun 1 700:sta lähes 15 000:een, ja kaupunki oli hetken Uuden-Seelannin suurin.', source: 'https://fi.wikipedia.org/wiki/Dunedin_(Uusi-Seelanti)' },
+    { text: 'Kaupungin keskusta on 23 kilometriä pitkän Otago Harbour -lahden kärjessä, ja lahden suulla on Port Chalmersin satama.', source: 'https://fi.wikipedia.org/wiki/Dunedin_(Uusi-Seelanti)' },
+    {
+      text: 'Kaksitoista vuotta sitten täällä asui vajaat kaksi tuhatta sielua; kulta toi loput. Yliopisto on neljä vuotta vanha ja koko maan ensimmäinen, mutta kadulla puhutaan yhä huuhtomoista eikä luennoista.',
+      voice: 'isoisa',
+    },
+  ],
   sydney: [
     'Sydneyn oopperatalon katto koostuu betonisista kuorista, jotka on päällystetty yli miljoonalla laatalla.',
     'Kaupungin satama on yksi maailman suurimmista luonnonsatamista.',

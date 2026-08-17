@@ -153,6 +153,10 @@ const OC_CITIES = [
   { id: 'wellington', name: 'Wellington', wiki: 'Wellington', ambience: 'kaupunki', x: 845, y: 795, la: 'start', lx: 16, ly: 5 },
   { id: 'christchurch', name: 'Christchurch', wiki: 'Christchurch', ambience: 'kaupunki', x: 801, y: 830, la: 'start', lx: 16, ly: 12 },
   { id: 'milfordsound', name: 'Milford Sound', wiki: 'Milford Sound', ambience: 'vuoristo', x: 746, y: 842, la: 'end', lx: -16, ly: 5 },
+  // Dunedin on oikealla paikallaan Otagon rannikolla. Se on lähempänä
+  // naapureitaan kuin laudan vanha vähimmäisväli 50 salli — ks.
+  // minCityDistance alempana.
+  { id: 'dunedin', name: 'Dunedin', wiki: 'Dunedin (Uusi-Seelanti)', ambience: 'satama', x: 778, y: 858, la: 'start', lx: 16, ly: 20 },
   { id: 'dili', name: 'Dili', wiki: 'Dili', ambience: 'satama', x: 191, y: 280, la: 'middle', lx: 0, ly: -22 },
   {
     id: 'bali', name: 'Bali', wiki: 'Bali', ambience: 'sademetsa', x: 29, y: 306, airport: true, la: 'middle', lx: 0, ly: 28,
@@ -199,6 +203,9 @@ const OC_EDGES = [
   // Uusi-Seelanti
   { a: 'auckland', b: 'wellington', steps: 5 },
   { a: 'christchurch', b: 'milfordsound', steps: 5 },
+  // Otagon rannikko ja sisämaan reitti järvialueen yli.
+  { a: 'christchurch', b: 'dunedin', steps: 3 },
+  { a: 'dunedin', b: 'milfordsound', steps: 3 },
 
   // Laivareitit
   { a: 'cairns', b: 'portmoresby', steps: 4, type: 'sea', via: [[499, 324], [507, 293]] },
@@ -254,9 +261,16 @@ export const OCEANIA = {
   islands: [
     'hobart', 'portmoresby', 'sepik', 'honiara', 'portvila', 'noumea', 'norfolk',
     'suva', 'auckland', 'wellington', 'christchurch', 'milfordsound',
-    'dili', 'bali',
+    'dunedin', 'dili', 'bali',
   ],
-  minCityDistance: 50,
+  // Kevennetty 50 → 35, jotta Dunedin mahtuu Eteläsaarelle omalle
+  // paikalleen (omistajan laajennus). Lauta kattaa Balista Fidžille, ja
+  // sillä mittakaavalla koko Eteläsaari on noin 90 yksikköä pitkä:
+  // Christchurch ja Milford Sound jäävät 36 yksikön päähän Dunedinista,
+  // joten vanha 50 olisi vaatinut kaupungin siirtämistä mereen.
+  // Sama ratkaisu kuin Afrikan laudalla, jossa väli kevennettiin 75 → 55
+  // Lagosin takia. Nimikylttien törmäystesti vartioi luettavuutta erikseen.
+  minCityDistance: 35,
 
   tokens: {
     // Topaasin tilalla opaali: Coober Pedy tuottaa valtaosan maailman
@@ -279,7 +293,7 @@ export const OCEANIA = {
         kuva: 'assets/aarteet/aarre-oceania-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 6, topaz: 7, empty: 9 },
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 4, emerald: 6, topaz: 7, empty: 10 },
   },
 
   questions: OCEANIA_QUESTIONS,
