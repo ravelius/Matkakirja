@@ -2578,6 +2578,75 @@ export const EUROPE_VALOKUVAT = {
     },
   },
 
+  /*
+   * FIRENZE (17.8.2026). Ennen–nyt-pari on kuvattu SAMASTA PISTEESTÄ:
+   * Alinarin albumiinivedos Monte alle Crocilta ja sama näkymä
+   * Piazzale Michelangelolta 2022. Terassi kuvan etualalla valmistui
+   * 1869, joten vanha vedos on isoisän matkan aikoihin.
+   * Lisäkuvista kolme on samaa Rijksmuseumin Alinari-sarjaa (CC0).
+   */
+  firenze: {
+    lisat: [
+      {
+        tiedosto: 'S. Maria Novella te Florence 371 (serietitel), RP-F-00-261.jpg',
+        vuosi: '1800-luvun loppu',
+        lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        selite: 'Santa Maria Novellan aukio albumiinivedoksella. Kirkon '
+          + 'marmorijulkisivu on sama kuin nyt, mutta aukio on tyhjä hiekkakenttä '
+          + 'ja sen laidassa seisoo kaksi kääntöpylvästä, joiden ympäri '
+          + 'kilpa-ajettiin vaunuilla.',
+      },
+      {
+        tiedosto: 'Binnenplaats van het Palazzo Vecchio te Florence No. 1951 (serietitel), RP-F-00-263.jpg',
+        vuosi: '1800-luvun loppu',
+        lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        selite: 'Palazzo Vecchion sisäpiha samalta ajalta. Pylväät on koristeltu '
+          + 'kullatuin kuvioin, ja keskellä seisoo suihkulähde '
+          + 'porraskorokkeella. Piha on tyhjä ja hiljainen.',
+      },
+      {
+        tiedosto: 'Beeld in de Bobolituinen in Florence No. 2958 Firenze R. Giardino di Boboli. La Dovizia (Tacca e Salvini) (titel op object), RP-F-2010-169.jpg',
+        vuosi: '1800-luvun loppu',
+        lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        selite: 'La Dovizia eli Runsaus Bobolin puutarhassa. Marmorinainen '
+          + 'kohottaa kädessään viljalyhdettä ja kantaa toisessa hedelmäkoria, '
+          + 'ja taustalla on leikattu pensasseinä. Kuvatekstin mukaan '
+          + 'vedos on Alinarin veljesten sarjasta.',
+      },
+      {
+        tiedosto: 'Flood level florence misericordia.jpg',
+        vuosi: '2013',
+        lahde: 'Panek, Wikimedia Commons (CC BY-SA 4.0)',
+        selite: 'Marmorilaatta talon seinässä kolmen metrin korkeudella: '
+          + '"IL 4 NOVEMBRE 1966 L\'ACQUA DELL\'ARNO ARRIVÒ QUI" — tähän asti '
+          + 'Arnon vesi nousi. Vastaavia laattoja on ympäri keskustaa.',
+      },
+      {
+        tiedosto: 'Firenze, piazza della signoria di notte (2020), 03.jpg',
+        vuosi: '2020',
+        lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        selite: 'Signorian aukio yöllä. Vasemmalla valaistuna Neptunuksen '
+          + 'suihkulähde, keskellä tyhjä kivikenttä ja ympärillä valaistut '
+          + 'talorivit — päivällä samassa paikassa on tuhansia ihmisiä.',
+      },
+    ],
+    tiedosto: 'Gezicht op Florence vanaf de Monte alle Croci FIRENZE Panorama preso dal Monte alle Croci. (titel op object), RP-F-F01093-AV.jpg',
+    vuosi: '1800-luvun loppu',
+    lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+    selite: 'Firenze Monte alle Crocin rinteeltä albumiinivedoksella. Arno '
+      + 'kaartaa kuvan halki, Ponte Vecchio ja kolme muuta siltaa erottuvat '
+      + 'vasemmalla, ja horisontissa nousevat Palazzo Vecchion torni ja '
+      + 'tuomiokirkon kupoli. Etualan kaiteellinen terassi on Piazzale '
+      + 'Michelangelo, joka valmistui 1869.',
+    uusi: {
+      tiedosto: 'Vista de Florencia desde Piazzale Michelangelo, Italia, 2022-09-18, DD 199.jpg',
+      lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+      selite: 'Sama näkymä samalta terassilta noin 150 vuotta myöhemmin. '
+        + 'Sillat, joen mutka, torni ja kupoli ovat paikoillaan; uutta on '
+        + 'vain rantakatujen liikenne ja puiden korkeus.',
+    },
+  },
+
   kobenhavn: {
 
     lisat: [

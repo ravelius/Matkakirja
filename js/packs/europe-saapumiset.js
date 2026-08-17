@@ -632,6 +632,21 @@ export const EUROPE_SAAPUMISET = {
       + 'ja nimikin vaihtui.',
   },
 
+  firenze: {
+    kuvaus: 'Kadut olivat kapeat ja varjoisat, ja sitten aukio '
+      + 'avautui ja kupoli täytti koko taivaan. Ruokapaikassa ei '
+      + 'kysytty, kuinka kypsäksi pihvi paistetaan.',
+    nosto: 'Isoisä kirjoitti: "Signorian aukiolta vietiin jättiläinen '
+      + 'katon alle, ja jalusta jäi tyhjäksi." Jalustalla seisoo nyt '
+      + 'kopio — ja jono.',
+    luenta: '[curious] Kadut olivat kapeat ja varjoisat, [excited] ja '
+      + 'sitten aukio avautui ja kupoli täytti koko taivaan. '
+      + '[warmly] Ruokapaikassa ei kysytty, kuinka kypsäksi pihvi '
+      + 'paistetaan. [softly] Isoisä kirjoitti: "Signorian aukiolta '
+      + 'vietiin jättiläinen katon alle, ja jalusta jäi tyhjäksi." '
+      + '[warmly] Jalustalla seisoo nyt kopio — ja jono.',
+  },
+
   kobenhavn: {
     kuvaus: 'Ensimmäinen ääni ei ollut auto vaan polkupyörän kello — '
       + 'pyöriä tuli sillan yli sadoittain. Illalla keskellä '

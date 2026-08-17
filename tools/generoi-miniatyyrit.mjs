@@ -447,6 +447,45 @@ const KUVAT = [
     + 'built of red granite blocks, standing among tall pines on a '
     + 'gravel ridge: a railed open viewing platform at the top and a '
     + 'small café building at its foot'],
+  /*
+   * ── Firenze, kuusi kohdetta (17.8.2026) ─────────────────────────
+   * EI VIELÄ GENEROITU: piirrokset vaativat API-avaimen, jota
+   * työsessiossa ei ole. Kartalla kohteet näkyvät siihen asti
+   * numeroympyröinä, kuten koodi tekee kohteelle ilman piirrosta.
+   * Kun avain on käytettävissä:
+   *   node tools/generoi-miniatyyrit.mjs firenze-duomo …
+   * Yksi otto per kohde (kustannussääntö, docs/tyolista-opukselle.md).
+   */
+  ['firenze-duomo', 'a renaissance cathedral dominated by an enormous '
+    + 'octagonal terracotta-red brick dome with eight white marble '
+    + 'ribs and a small white lantern on top, beside a tall slender '
+    + 'square bell tower; walls striped in white, green and pink '
+    + 'marble'],
+  ['firenze-palazzo-vecchio', 'a fortress-like medieval town hall: a '
+    + 'blocky rusticated stone cube with a row of small arched '
+    + 'windows, a projecting crenellated battlement gallery near the '
+    + 'top, and one very tall off-centre stone tower with a clock '
+    + 'face and a crenellated crown'],
+  ['firenze-uffizi', 'two long identical narrow renaissance office '
+    + 'wings facing each other across a very narrow courtyard, each '
+    + 'with an arcaded ground floor and rows of tall windows, joined '
+    + 'at the far end by an arch — a corridor of stone seen in '
+    + 'perspective'],
+  ['firenze-ponte-vecchio', 'a low medieval stone arch bridge '
+    + 'completely built over with small shuttered shops of mismatched '
+    + 'heights, extra rooms propped over the water on wooden struts, '
+    + 'and a continuous row of small windows running above them along '
+    + 'the whole bridge'],
+  ['firenze-santa-croce', 'a wide gothic basilica facade of white, '
+    + 'green and pink marble panels: three gables, three pointed '
+    + 'portals, a large round rose window in the centre and a '
+    + 'six-pointed star at the very top, with a slender brick bell '
+    + 'tower rising behind on the right'],
+  ['firenze-bobolin-puutarha', 'a formal italian renaissance garden '
+    + 'on a slope: a long avenue of clipped hedges and cypresses '
+    + 'leading to an oval pond with a stone fountain on an islet, '
+    + 'marble statues along the path and lemon trees in terracotta '
+    + 'pots'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
