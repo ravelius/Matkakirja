@@ -486,7 +486,12 @@ const EU_EDGES = [
   { a: 'madrid', b: 'lissabon', steps: 3 },
   { a: 'madrid', b: 'barcelona', steps: 3 },
   { a: 'madrid', b: 'granada', steps: 3 },
-  { a: 'granada', b: 'lissabon', steps: 4 },
+  /*
+   * Suora granada–lissabon (4) poistettu: Sevilla istuu käytännössä
+   * reitin varrella (noin 25 yksikön päässä suorasta linjasta, kun
+   * laudan vähimmäisväli on 60), ja ketju sevilla–granada (2) +
+   * sevilla–lissabon (2) maksaa saman neljä askelta.
+   */
   { a: 'sevilla', b: 'granada', steps: 2 },
   { a: 'sevilla', b: 'lissabon', steps: 2 },
   { a: 'sevilla', b: 'madrid', steps: 3 },
@@ -533,11 +538,12 @@ const EU_EDGES = [
   { a: 'kiova', b: 'moskova', steps: 5 },
   { a: 'moskova', b: 'pietari', steps: 4 },
   { a: 'pietari', b: 'helsinki', steps: 3 },
-  { a: 'helsinki', b: 'lappi', steps: 4 },
   /*
-   * Tampereen haara. Suora helsinki–lappi jää paikalleen, jottei
-   * pohjoisen matka kallistu — Tampereen kautta pääsee samaan
-   * suuntaan yhtä silmälukua kalliimmalla mutta aarrelaatan kanssa.
+   * Suora helsinki–lappi (4) poistettu (omistajan tilaus 17.8.2026):
+   * Tampere istuu käytännössä reitin varrella, ja ketju
+   * helsinki–tampere (2) + tampere–lappi (3) maksaa vain yhden
+   * askelen enemmän (5 vs. 4) — sama hinta kuin laudan muilla
+   * vastaavilla korvauksilla (esim. Firenze, Sevilla).
    * Askelmitoitus naapureiden mukaan: 66 px / 2 ja 111 px / 3 eli
    * 33 ja 37 pikseliä silmälukua kohti (laudan haarukka on 26–50).
    */

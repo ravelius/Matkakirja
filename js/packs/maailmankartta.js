@@ -528,10 +528,11 @@ const EDGES = [
   {"a":"madrid","b":"lissabon","steps":3},
   {"a":"madrid","b":"barcelona","steps":3},
   {"a":"madrid","b":"granada","steps":3},
+  // Suora granada–lissabon (4) poistettu käsin 17.8.2026 kuten
+  // lähdelaudalla: Sevilla on reitin varrella ja ketju maksaa saman.
   {"a":"sevilla","b":"granada","steps":2},
   {"a":"sevilla","b":"lissabon","steps":2},
   {"a":"sevilla","b":"madrid","steps":3},
-  {"a":"granada","b":"lissabon","steps":4},
   {"a":"amsterdam","b":"berliini","steps":4},
   {"a":"berliini","b":"praha","steps":2},
   {"a":"berliini","b":"varsova","steps":4},
@@ -566,10 +567,9 @@ const EDGES = [
   {"a":"kiova","b":"moskova","steps":5},
   {"a":"moskova","b":"pietari","steps":4},
   {"a":"pietari","b":"helsinki","steps":3},
-  {"a":"helsinki","b":"lappi","steps":4},
   // Tampereen haara kuten lähdelaudalla (europe.js): suora
-  // helsinki–lappi jää rinnalle, Tampereen kautta sama suunta
-  // yhtä silmälukua kalliimmin.
+  // helsinki–lappi (4) poistettu käsin 17.8.2026, koska Tampere on
+  // reitin varrella ja ketju maksaa vain yhden askelen enemmän.
   {"a":"helsinki","b":"tampere","steps":2},
   {"a":"tampere","b":"lappi","steps":3},
   {"a":"lappi","b":"tromssa","steps":3},
@@ -642,7 +642,8 @@ const EDGES = [
   {"a":"viktoria","b":"bahrelghazal","steps":3},
   {"a":"bahrelghazal","b":"darfur","steps":2},
   {"a":"bahrelghazal","b":"addisabeba","steps":3},
-  {"a":"addisabeba","b":"suakin","steps":3},
+  // Suora addisabeba–suakin (3) poistettu käsin 17.8.2026 kuten
+  // lähdelaudalla: Lalibela on reitin varrella, ketju vain +1 askel.
   {"a":"addisabeba","b":"lalibela","steps":2},
   {"a":"lalibela","b":"suakin","steps":2},
   {"a":"addisabeba","b":"rashafun","steps":3},
