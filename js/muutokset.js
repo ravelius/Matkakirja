@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 806, teksti: 'Raamattuun maalehden nimiö ja Matkailijalle-kuvan kaava' },
   { v: 805, teksti: 'Matkailijan Teheran' },
   { v: 804, teksti: 'Matkailijan Bagdad: opas kuudesta uudesta' },
   { v: 803, teksti: 'Kaiuttimen kuvake otsikon kokoiseksi' },
