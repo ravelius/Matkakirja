@@ -98,7 +98,7 @@ await sivu.evaluate(() => {
 });
 await sivu.waitForTimeout(2500);
 const lahikuvassa = await sivu.evaluate(() => {
-  window.matkakirja.ui.zoomaaPainikkeella(1);
+  window.matkakirja.ui.kartta.zoomaaPainikkeella(1);
   return true;
 });
 await sivu.waitForTimeout(3000);
@@ -315,7 +315,7 @@ const ankkurinSiirtyma = (p, kx, ky) => sivu.evaluate(({ piste, x, y }) => {
   const px = r.width / vb.width;
   let dx = (piste.x - vb.x) * px + r.left - x;
   const dy = (piste.y - vb.y) * px + r.top - y;
-  if (ui.kiertava()) {
+  if (ui.kartta.kiertava()) {
     const jakso = window.matkakirja.game.pack.map.width * px;
     dx = ((dx % jakso) + jakso) % jakso;
     dx = Math.min(dx, jakso - dx);
@@ -324,7 +324,7 @@ const ankkurinSiirtyma = (p, kx, ky) => sivu.evaluate(({ piste, x, y }) => {
 }, { piste: p, x: kx, y: ky });
 
 await sivu.waitForTimeout(1500);
-const ankkuriEnnen = await sivu.evaluate(() => window.matkakirja.ui.kartanKohta(195, 420));
+const ankkuriEnnen = await sivu.evaluate(() => window.matkakirja.ui.kartta.kartanKohta(195, 420));
 await nipista(1.3);
 await sivu.waitForTimeout(400);
 const ankkuri = await ankkurinSiirtyma(ankkuriEnnen, 195, 420);
@@ -394,7 +394,7 @@ vaadi('levossa kartta on näkymän tarkkuudessa',
 // 5) JATKUVA ELESARJA: väärä mittakaava odottaa lepoa eikä keskeytä elettä.
 await nollaa();
 await sivu.evaluate(() => { window.matkakirja.ui.taideSkaala *= 0.88; });
-await sivu.evaluate(() => { window.matkakirja.ui.fitViewBox(); });
+await sivu.evaluate(() => { window.matkakirja.ui.kartta.fitViewBox(); });
 for (let i = 0; i < 3; i++) { await panoroi(160, 16); await sivu.waitForTimeout(200); }
 const sarjanAikana = await mittarit();
 vaadi('elesarjan aikana ei pakoteta rasterointia sormen alla',
@@ -434,7 +434,7 @@ await sivu.evaluate(() => {
   ui.taideSkaala *= 0.9;
   ui.kartanEleHetki = null;
   ui.osoitinKartalla = false;
-  ui.fitViewBox();
+  ui.kartta.fitViewBox();
 });
 await sivu.waitForTimeout(900);
 const ensi = await mittarit();
@@ -626,13 +626,13 @@ vaadi('ääriviiva-animaatio ei lisää rasterointia levon yli',
 await sivu.waitForTimeout(2000);
 await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
-  ui.nollaaAloitusZoom();
-  ui.fitViewBox();
-  ui.paivitaZoomiNapit();
+  ui.kartta.nollaaAloitusZoom();
+  ui.kartta.fitViewBox();
+  ui.kartta.paivitaZoomiNapit();
 });
 await sivu.waitForTimeout(2500);
 const yleisEnnen = await sivu.evaluate(() => ({
-  kohta: window.matkakirja.ui.kartanKohta(195, 420),
+  kohta: window.matkakirja.ui.kartta.kartanKohta(195, 420),
   manner: window.matkakirja.ui.mannerZoom,
 }));
 await nipista(1.5);
@@ -831,10 +831,10 @@ vaadi('pohjatason rae kattaa koko pohjan (ei sävyrajaa laatan reunalla)',
 await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
   ui.kartanEleHetki = null;
-  ui.fitViewBox();
+  ui.kartta.fitViewBox();
 });
 await sivu.waitForTimeout(2500);
-const salamaEnnen = await sivu.evaluate(() => window.matkakirja.ui.kartanKohta(195, 420));
+const salamaEnnen = await sivu.evaluate(() => window.matkakirja.ui.kartta.kartanKohta(195, 420));
 for (const k of [1.7, 0.65, 1.5, 0.7, 1.6]) {
   // eslint-disable-next-line no-await-in-loop
   await nipista(k, 4, 8);
@@ -866,7 +866,7 @@ const salamaTila = await sivu.evaluate(() => {
     && nakyva && nakyva.skaala * ui.nykyinenTarkkuus() <= ui.pohjaTeho);
   const koko = ui.taideRuutu;
   const W = window.matkakirja.game.pack.map.width;
-  const kiertava = ui.kiertava();
+  const kiertava = ui.kartta.kiertava();
   const sarakkeita = kiertava ? Math.max(1, Math.round(W / koko)) : 0;
   let puuttuu = 0;
   if (!pohjanVaraan) {
@@ -884,7 +884,7 @@ const salamaTila = await sivu.evaluate(() => {
       ? Math.round((nakyva.skaala / ui.taideSkaala) * 1000) / 1000 : null,
     puuttuu,
     vanhoja: ui.taideVanhat?.length ?? 0,
-    kerroin: Math.round((ui.zoomiVapaa || ui.zoomiKerroin) * 100) / 100,
+    kerroin: Math.round((ui.zoomiVapaa || ui.kartta.zoomiKerroin) * 100) / 100,
   };
 });
 vaadi('salamasarjan ankkuri ei loiki',

@@ -215,6 +215,9 @@ const MODULES = [
   'js/lehti.js',
   'js/pollo-haku.js',
   'js/pollo.js',
+  // M7a: laudan kamera ennen ui:ta (ui tuo Kartan; kartta tuo äänet ja
+  // luennan, jotka ovat yllä).
+  'js/kartta.js',
   'js/ui.js',
 
   'js/muutokset.js',

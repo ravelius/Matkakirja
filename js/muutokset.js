@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 829, teksti: 'M7a: kamera omaksi Kartta-luokaksi' },
   { v: 828, teksti: 'Pergamentti täyttää ruudun kaikilla ikkunamuodoilla' },
   { v: 827, teksti: 'Raamattuun M7+, aikajana-ajo ja lavalinssi' },
   { v: 826, teksti: 'Raamattuun kaksi linjausta, kaksi dokumenttia arkistoon' },

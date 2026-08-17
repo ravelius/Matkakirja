@@ -3669,7 +3669,8 @@ test('uusi peli tyhjentää muistit vasta varmistuksen jälkeen', () => {
 });
 
 test('zoomiportaat lasketaan laudan koosta eikä kiinteinä kertoimina', () => {
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  // Remontin M7a: kameravakiot asuvat js/kartta.js:ssä.
+  const ui = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
   const askel = Number(ui.match(/const ZOOMI_ASKEL = ([\d.]+)/)?.[1]);
   const lahin = Number(ui.match(/const ZOOMI_LAHIN = ([\d.]+)/)?.[1]);
   const osuus = Number(ui.match(/const SAAPUMIS_OSUUS = ([\d.]+)/)?.[1]);
@@ -3678,7 +3679,7 @@ test('zoomiportaat lasketaan laudan koosta eikä kiinteinä kertoimina', () => {
   assert.ok(lahin <= 100, 'lähimmän portaan pitää yltää kaupungin ympäristöön');
 
   /*
-   * Sama koodi kuin ui.js:n zoomiTasot ja saapumisPorras. Testi ei voi
+   * Sama koodi kuin kartta.js:n zoomiTasot ja saapumisPorras. Testi ei voi
    * kutsua niitä suoraan (ne tarvitsevat DOMin), joten portaat lasketaan
    * samoista vakioista.
    */
@@ -3724,7 +3725,8 @@ test('zoomiportaat lasketaan laudan koosta eikä kiinteinä kertoimina', () => {
 });
 
 test('zoomipainikkeet toimivat kaikilla laudoilla ja ruuduilla', () => {
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  // Remontin M7a: zoomaaPainikkeella asuu js/kartta.js:ssä.
+  const ui = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   assert.match(html, /id="zoom-in"/);
   assert.match(html, /id="zoom-out"/);
@@ -3885,7 +3887,9 @@ test('bittikartta ladataan vain sormen irrotessa, ei kesken eleen', () => {
 
   // Näkymän asettuminen (zoom, koon muutos) siirtää aluetta ilman
   // yhtään sormen liikettä, joten sekin tarvitsee oman täydennyksen.
-  const fit = ui.slice(ui.indexOf('  fitViewBox('), ui.indexOf('  fitViewBox(') + 4500);
+  // Remontin M7a: fitViewBox asuu js/kartta.js:ssä.
+  const kartta = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
+  const fit = kartta.slice(kartta.indexOf('  fitViewBox('), kartta.indexOf('  fitViewBox(') + 4500);
   assert.match(fit, /taydennaTaide/, 'näkymän asettuminen ei täydennä kuvaa');
 
   // Puskuri on kokonainen ruudullinen joka suuntaan: se on se matka,

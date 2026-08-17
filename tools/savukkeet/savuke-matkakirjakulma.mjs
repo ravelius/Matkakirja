@@ -41,14 +41,14 @@ await sivu.waitForTimeout(1500);
 
 const tulos = await sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
-  ui.placeFactCard(800, 600);
+  ui.kartta.placeFactCard(800, 600);
   const alussa = ui.factCard?.dataset.corner;
   // Zoomataan merelliseen oikeaan yläreunaan — vanha merilaskenta
   // olisi tässä valinnut 'tr':n.
   const vb = ui.svg.viewBox.baseVal;
   const leveys = vb.width;
   ui.svg.setAttribute('viewBox', `${vb.x + leveys * 0.6} ${vb.y} ${leveys * 0.4} ${vb.height * 0.4}`);
-  ui.placeFactCard(800, 600);
+  ui.kartta.placeFactCard(800, 600);
   const zoomattuna = ui.factCard?.dataset.corner;
   const pilleriVaisto = ui.maaPilleri?.dataset?.kortti ?? null;
   return { alussa, zoomattuna, pilleriVaisto };

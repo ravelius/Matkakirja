@@ -210,6 +210,8 @@ import { MAASTO_TEKSTIT } from './packs/maasto-tekstit.js';
 import { MAASTO_TEKSTIT_MALLI } from './packs/maasto-tekstit-malli.js';
 import { MERISYVYYS } from './packs/maailmankartta-syvyys.js';
 import { MAASTON_VARJOSTUS } from './packs/maailmankartta-varjostus.js';
+// Remontin M7a: laudan kamera ja koordinaatit (malli B).
+import { INTRO_SPACE, Kartta } from './kartta.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -320,10 +322,6 @@ const NAKYMAN_ELVYTYSVIIVE = 120;
  * 300 px, joten sitä pienempi luku on mittausvirhe eikä laite.
  */
 const NAKYMAN_VAHIMMAISKORKEUS = 300;
-// Kuinka paljon pergamenttia jatketaan kartan alle avaustekstiä varten.
-const INTRO_SPACE = 0.5;
-// Kuinka paljon lautaa lasketaan yläreunasta aloitusnäkymässä.
-const INTRO_TOP = 0.05;
 // Kirjoituskoneen tahti: avaus saa naksua rauhassa, muut tekstit ripeästi.
 const TYPE_MS = 50;
 const INTRO_TYPE_MS = 190;
@@ -688,137 +686,9 @@ function sykkeenArvo(arvot, osuus) {
   return arvot[0] + (arvot[1] - arvot[0]) * osuus;
 }
 
-/*
- * Mantereiden lähikuva puhelimella. Ilme hiotaan ensin Euroopalla
- * (omistajan päätös); muut laudat lisätään tähän settiin sitä mukaa kuin
- * ne on käyty läpi.
- */
-const ZOOMATTAVAT = new Set(['europe', 'maailmankartta']);
-const MANNER_ZOOM = 2.3;        // vanha kiinteä kerroin; nykyään portaat lasketaan
-
-/*
- * Zoomiportaat (omistajan toive: painikkeet kaikille alustoille).
- *
- * Portaat kerrotaan siitä, kuinka LEVEÄ pala lautaa näkyy — ei siitä,
- * moninkertainen lähikuva on yleiskuvaan.
- *
- * Ero ratkaisee isolla laudalla. Ennen portaat olivat kertoimia
- * [1, 1.5, 2.3, 3.4, 5]. Tuhannen yksikön laudalla suurin porras näytti
- * 200 yksikköä eli kaupungin ympäristön, mutta yhdistetyllä 7200
- * yksikön laudalla sama kerroin näytti 1440 yksikköä — koko Euroopan.
- * Sama nappi tarkoitti eri asiaa eri laudalla, ja isolla laudalla ei
- * päässyt lähelle lainkaan (omistajan havainto).
- *
- * Luvut ovat samat kuin vanhat kertoimet tuhannen yksikön laudalla
- * (1000/1.5 = 667, 1000/2.3 = 435 ja niin edelleen), joten pienet
- * laudat käyttäytyvät täsmälleen kuten ennen. Kaksi uutta porrasta
- * jatkavat lähemmäs: niitä tarvitaan vasta isolla laudalla.
- *
- * Portaat eivät ole tasavälein: alapäässä ero on pieni, jotta yleiskuvan
- * ja ensimmäisen lähikuvan välillä ei hypätä liikaa, ja yläpäässä
- * suurempi, koska lähellä pieni muutos ei enää tunnu miltään.
- */
-/*
- * Portaat lasketaan puolitoistakertaisina askelina laudan leveydestä
- * lähimpään portaaseen asti.
- *
- * Kiinteä lista näkyviä leveyksiä ei kelvannut. Sen tihein porras oli
- * 667 yksikköä, ja se on tuhannen yksikön laudalla sopiva ensiaskel
- * mutta 7200 yksikön laudalla jo kaupungin ympäristö: yleiskuvan ja
- * ensimmäisen portaan väliin jäi yhdentoista kertaluokan hyppy.
- * Omistajan havainto iPadilta: "zoomautuu aivan liian lähelle Ateenaa."
- *
- * Suhteellinen askel korjaa sen itsestään. Tuhannen yksikön laudalla
- * portaat ovat 1000, 667, 444, 296, 198, 132, 88 — käytännössä samat
- * kuin vanhat kertoimet [1, 1.5, 2.3, 3.4, 5] ja kaksi lisää
- * lähemmäs. Isolla laudalla väliin syntyy portaita sitä mukaa kuin
- * lautaa on enemmän.
- */
-const ZOOMI_ASKEL = 1.5;
-// Lähin porras: yhden kaupungin ympäristö millä tahansa laudalla.
-const ZOOMI_LAHIN = 88;
-
-/*
- * Mihin saapumiszoom pysähtyy.
- *
- * Osuus laudasta on sama kuin ennen (vanha MANNER_ZOOM 2.3 näytti
- * 1/2,3 eli 43 % laudasta). Isolla laudalla pelkkä osuus veisi liian
- * kauas, joten sille on lisäksi yläraja yksikköinä: 2400 yksikköä
- * vastaa yhdistetyllä kartalla noin viittäkymmentä pituusastetta eli
- * Lissabonista Moskovaan — omistajan toive oli, että saavuttaessa
- * näkyy Eurooppa eikä koko vanha maailma.
- */
-const SAAPUMIS_OSUUS = 0.43;
-/*
- * 2400 yksikköä oli yhä liian laaja: iPadilla näkyi Marseillesta
- * Jerusalemiin (omistajan kuvakaappaus). 1500 osuu portaalle 1422, joka
- * on noin kolmekymmentä pituusastetta — Lontoosta Varsovaan, eli
- * Eurooppa siinä mielessä kuin omistaja sen tarkoitti.
- */
-const SAAPUMIS_LEVEIN = 1500;
-// Puhelimen kapealla ruudulla saapuminen saa olla pykälän lähempänä
-// (omistajan iPhone-palaute 10.8.2026): 1400 yksikön näkymä on
-// kapealla ruudulla liian laaja (650: omistajan tarkennus 10.8.
-// illalla — vielä pykälä lähemmäs).
-const SAAPUMIS_LEVEIN_KAPEA = 650;
-const MANNER_ZOOM_VIIVE = 1400; // kokonäkymä näkyy tämän verran ennen zoomausta
-// Kuinka suuri osa ruudusta varataan laudan eteläpuolelle, jotta
-// alarivin nappien alle jäävät kaupungit saa panoroitua näkyviin.
-const ALAKAISTA = 0.3;
-// Sama pohjoiseen: matkakirjan kortti peittää laudan yläreunan, joten
-// pohjoisimmat kaupungit (Tromssa, Lappi, Islanti) tarvitsevat tilaa,
-// johon panoroida (omistajan havainto).
-const YLAKAISTA = 0.26;
-// Zoomausliu'un kesto. Omistajan palaute on vienyt tätä pidemmäksi
-// kerta kerralta: 600 ms → 1200 → 2000 → 2400.
-/*
- * Loitonnuksen varmuusvara: osuus laudan leveydestä, joka jää aina
- * näkymän ulkopuolelle, jottei sauma näy kahtena (ks. rajaaSkaala).
- */
-const SAUMAN_VARA = 0.03;
-/*
- * Saapumisnäkymän siirto kohdemantereen suuntaan (ks. mantereenKeskitys).
- * OSUUS on matka mantereen painopisteeseen; SIIRTO_X ja SIIRTO_Y
- * rajaavat sen osuuteen näkyvästä alasta, jottei kaupunki karkaa
- * laitaan. Y on tiukempi, koska ruutu on matalampi kuin leveä ja
- * kaupungin yläpuolella on matkakirjan kortti.
- */
-const MANNER_PAINO = 0.5;
-const MANNER_SIIRTO_X = 0.26;
-const MANNER_SIIRTO_Y = 0.2;
-/*
- * Saapumisliu'un lähtölaajuus isolla laudalla: monenko kertaisena
- * näkymä avautuu ennen kuin se laskeutuu lähikuvaan. Kokonäkymästä ei
- * lähdetä (ks. zoomaaMantereelle).
- *
- * Nostettu 2,6:sta omistajan pyynnöstä: "aloita zoomaus hieman
- * kauempaa kuin tällä hetkellä". 3,6 on yhä selvästi alle kokonäkymän
- * — maailmankartalla se on noin kolmasosa laudan leveydestä eli
- * mannerta ympäristöineen, ei maapalloa.
- */
-const MANNER_LAAJUUS = 3.6;
-/*
- * Zoomiliu'un kesto. Nostettu 2400:sta omistajan havainnon jälkeen:
- * "zoomaus tökkii kun kartta yrittää pysyä perässä piirtämisessä.
- * zoomausvauhti voisi olla ainakin hitaampi." Hitaampi liuku antaa
- * bittikartalle aikaa, ja liikkeestä tulee samalla arvokkaampi.
- */
-const ZOOM_MS = 3400;
-// Etusivun zoomaus vielä tätäkin hitaammin (omistajan toive): se on
-// pelin avaus, ja koko maailmankartta on iso matka lähikuvaan.
-const ALOITUS_ZOOM_MS = 3600;
-// Kiihdytys ja jarrutus molemmissa päissä (omistajan toive): kartta
-// lähtee liikkeelle hyvin hitaasti, kiihtyy vähitellen täyteen
-// vauhtiin ja jarruttaa pitkään. Ensimmäinen ohjauspiste on kaukana
-// oikealla juuri siksi, että alku on tarpeeksi verkkainen.
-// HUOM: sama arvo on js/sound.js:ssä, jotta äänen korkeus seuraa
-// samaa kaarta. Jos muutat toisen, muuta myös toinen.
-const ZOOM_PEHMENNYS = 'cubic-bezier(0.68, 0, 0.3, 1)';
-// Hiljainen hetki ennen zoomausta, jotta moottoriääni erottuu.
 // Lehden minitehtävän palkkio: pienempi kuin kulttuurivisan, koska
 // vastaus lukee samalla sivulla.
 const MINITEHTAVA_PALKKIO = 10;
-const ZOOM_TAUKO_MS = 260;
 /*
  * Hiiren rullan vähimmäisväli. Tarkka rulla ja trackpad lähettävät
  * kymmeniä tapahtumia yhdestä eleestä, ja ilman väliä kartta hyppäisi
@@ -871,8 +741,6 @@ const TARKKUUS_JUMI_MS = 5000;
  * pääsee nyt väliin.
  */
 const RUUDUN_YKSIKOT_ENINTAAN = 2000;
-// Aloituskartan lähikuvan suurennos yleiskuvaan nähden.
-const ALOITUS_ZOOM = 3.1;
 /*
  * Palautelomakkeen vastaanottava ulkopuolinen palvelu. Tyhjänä lomakkeen
  * tilalla näkyy GitHub-linkki, joten palaute toimii ilman asetuksia.
@@ -899,6 +767,8 @@ const TURN_WIDTH = 560; // pidettävä samana kuin .turn-card css:ssä
 export class UI {
   constructor(game, { onNewGame, onChange }) {
     this.game = game;
+    // Remontin M7a: kamera ja koordinaatit asuvat Kartta-oliossa.
+    this.kartta = new Kartta(this);
     this.onNewGame = onNewGame;
     this.onChange = onChange;
     this.botTimer = null;
@@ -1554,7 +1424,7 @@ export class UI {
       if (!nappi) continue;
       const kasittele = (e) => {
         e.stopPropagation();
-        this.zoomaaPainikkeella(suunta);
+        this.kartta.zoomaaPainikkeella(suunta);
       };
       nappi.addEventListener('click', kasittele);
       this.zoomiKuuntelijat.push([nappi, kasittele]);
@@ -1655,8 +1525,8 @@ export class UI {
     this.drawBoardFor(this.game.pack);
     this.boardDie = new BoardDie(this.mapPane);
     this.asennaPanorointi();
-    this.fitViewBox();
-    this.observer = new ResizeObserver(() => this.fitViewBox());
+    this.kartta.fitViewBox();
+    this.observer = new ResizeObserver(() => this.kartta.fitViewBox());
     this.observer.observe(this.svg.parentElement);
     this.vahdiNakymanKokoa();
     this.render();
@@ -2021,7 +1891,7 @@ export class UI {
      */
     const meta = document.querySelector('meta[name="viewport"]');
     if (meta) meta.setAttribute('content', meta.getAttribute('content'));
-    this.fitViewBox();
+    this.kartta.fitViewBox();
     // Avoin nähtävyysjuttu mitoitetaan uusiksi samasta syystä kuin
     // lehti alla: vanhentunut viewportti oli voinut kaventaa sen.
     if (document.getElementById('nahtavyys-dialog')?.open) mitoitaNahtavyysDialogi(this);
@@ -2081,101 +1951,10 @@ export class UI {
     document.body.dataset.pack = pack.id;
     // Lauta vaihtui: mahdollinen edellinen lähikuva puretaan, ja uudelle
     // mantereelle ajastetaan oma zoomaus kokonäkymän jälkeen.
-    this.nollaaAloitusZoom();
+    this.kartta.nollaaAloitusZoom();
     this.drawBoard();
-    this.fitViewBox();
-    this.ajastaMannerZoom();
-  }
-
-  /**
-   * Pelisisällön rajauslaatikko: kaupungit nimineen, reitit, lentokaaret ja
-   * koristeet. Näkymä sovitetaan tähän eikä koko karttapohjaan, jolloin lauta
-   * näkyy mahdollisimman suurena eikä tyhjää merta jää reunoille.
-   */
-  boardBounds() {
-    const { board, pack } = this.game;
-    // Valmiiksi rajattu lauta (esim. Maailma) käyttää omaa kehystään.
-    // Kopio, koska aloitusnäkymä kasvattaa laatikkoa eikä pakkaa saa muuttaa.
-    if (pack.map.frame) return this.withIntroSpace({ ...pack.map.frame });
-
-    const pts = [];
-    // Karkea arvio nimikirjaimen leveydestä. Aloituskaupungit piirtyvät
-    // isommalla versaalifontilla (21px, kirjainväli 0.1em), joten niissä
-    // kirjain vie puolitoista kertaa tavallisen levyn — muuten esimerkiksi
-    // Aasian Tokio jäisi rajauksen ulkopuolelle ja leikkautuisi reunaan.
-    const CHAR_W = 9.5;
-    const START_CHAR_W = 15.2;
-    const STROKE = 2; // nimen vaalea reunusviiva levittää tekstiä hieman
-    for (const c of board.cities) {
-      pts.push([c.x - 34, c.y - 34], [c.x + 34, c.y + 34]);
-      const w = c.name.length * (c.start ? START_CHAR_W : CHAR_W) + STROKE * 2;
-      const anchor = c.la ?? 'middle';
-      const lx = c.x + (c.lx ?? 0);
-      const ly = c.y + (c.ly ?? -(c.start ? 28 : 19));
-      const x0 = anchor === 'start' ? lx : anchor === 'end' ? lx - w : lx - w / 2;
-      pts.push([x0, ly - 18], [x0 + w, ly + 6]);
-    }
-    for (const e of board.edges) {
-      for (const p of e.poly) pts.push(p);
-    }
-    for (const route of this.game.airRoutes) {
-      const a = board.cityById.get(route.a);
-      const b = board.cityById.get(route.b);
-      pts.push([(a.x + b.x) / 2 + (b.y - a.y) * 0.12, (a.y + b.y) / 2 - (b.x - a.x) * 0.12]);
-    }
-    const d = pack.decor;
-    pts.push(
-      [d.compass.x - d.compass.r - 14, d.compass.y - d.compass.r - 26],
-      [d.compass.x + d.compass.r + 14, d.compass.y + d.compass.r + 14],
-    );
-    const titleHalf = Math.max(110, d.mapLabel.length * 12.5);
-    pts.push([d.mapLabelPos.x - titleHalf, d.mapLabelPos.y - 34], [d.mapLabelPos.x + titleHalf, d.mapLabelPos.y + 60]);
-    if (d.ship) pts.push([d.ship.x - 62, d.ship.y - 56], [d.ship.x + 62, d.ship.y + 46]);
-    if (d.serpent) pts.push([d.serpent.x - 96, d.serpent.y - 26], [d.serpent.x + 96, d.serpent.y + 30]);
-
-    let minX = Infinity;
-    let minY = Infinity;
-    let maxX = -Infinity;
-    let maxY = -Infinity;
-    for (const [x, y] of pts) {
-      if (x < minX) minX = x;
-      if (y < minY) minY = y;
-      if (x > maxX) maxX = x;
-      if (y > maxY) maxY = y;
-    }
-    const pad = 12;
-    const box = { x: minX - pad, y: minY - pad, w: maxX - minX + pad * 2, h: maxY - minY + pad * 2 };
-    /*
-     * Kiertävällä kartalla vaakarajaus on laudan leveys, ei sisällön.
-     *
-     * Sisällöstä laskettu laatikko on täällä väärä mitta: rannikot ja
-     * reitit JATKUVAT laudan reunan yli, koska sauman ylittävät viivat
-     * pidetään yhtenäisinä. Mitattuna laatikko oli 24860 yksikköä eli
-     * yli kaksi maapalloa, ja kaikki siitä johdettu meni mukana —
-     * kierron jakso, elementin leveys ja loitonnuksen raja.
-     *
-     * Pystysuunta lasketaan yhä sisällöstä: siellä ei kierretä.
-     */
-    if (this.kiertava()) {
-      box.x = 0;
-      box.w = pack.map.width;
-    }
-    // Aloitusnäkymässä pergamenttia jatketaan kartan alapuolelle, jotta
-    // avausteksti mahtuu siihen ja lauta nousee ruudun yläreunaan. Näkymä
-    // keskittää laatikon, joten alaosan kasvattaminen nostaa karttaa ylös.
-    return this.withIntroSpace(box);
-  }
-
-  /**
-   * Aloitusnäkymässä pergamenttia jatketaan kartan alapuolelle avaustekstiä
-   * varten. Näkymä kiinnitetään yläreunaan (fitViewBox), joten kasvatus
-   * nostaa laudan ruudun ylälaitaan ja jättää tekstille tyhjän alaosan.
-   */
-  withIntroSpace(box) {
-    // Katselutila (?lauta=) ei näytä avaustekstiä, joten pergamenttia ei
-    // jatketa — muuten lauta kutistuu ja jää yläreunaan (omistajan havainto).
-    if (this.game.phase !== 'pickstart' || this.katselu) return box;
-    return { ...box, h: box.h * (1 + INTRO_SPACE) };
+    this.kartta.fitViewBox();
+    this.kartta.ajastaMannerZoom();
   }
 
   destroy() {
@@ -2330,203 +2109,6 @@ export class UI {
   }
 
   /**
-   * Sovittaa näkymän pelisisällön rajauslaatikkoon ja venyttää sen ruudun
-   * muotoiseksi, jolloin pergamentti täyttää koko alueen ja pelialue näkyy
-   * mahdollisimman suurena. Kartta on staattinen: sitä ei zoomata eikä
-   * raahata, joten kaikki on aina esillä.
-   */
-  /** Kiertääkö tämän laudan kartta ympäri? */
-  kiertava() {
-    return this.game?.pack?.map?.kiertava === true;
-  }
-
-  /*
-   * Pienin sallittu mittakaava kiertävällä kartalla.
-   *
-   * Omistajan vaatimus: yksi paikka ei saa näkyä kahdessa kohdassa
-   * samaan aikaan. Näkyvä leveys on paneelin leveys jaettuna
-   * mittakaavalla, joten mittakaava ei saa alittaa arvoa
-   * paneeli / maailman leveys.
-   *
-   * Raja tarvitaan erikseen lähikuvassa, koska siellä mittakaava
-   * lasketaan KORKEUDEN mukaan. Leveässä ja matalassa ikkunassa
-   * (2400 x 420) korkeus kutistaa mittakaavan niin pieneksi, että
-   * maailma mahtui ruudulle kahdesti — mitattu, ei arvattu.
-   */
-  rajaaSkaala(skaala, paneW, box) {
-    if (!this.kiertava()) return skaala;
-    /*
-     * Raja on laudan leveys MIINUS pieni varmuusvara.
-     *
-     * Tasan laudan levyinen näkymä on teoriassa oikein: sauma osuu
-     * ruudun laitaan eikä mikään näy kahdesti. Käytännössä ei osu.
-     * Näkyvä leveys lasketaan paneelin pikselileveydestä, joka on
-     * murtoluku, ja pyöristys, laitteen pikselisuhde ja kartan omien
-     * viivojen paksuus vievät reunimmaisen kaistaleen milloin
-     * kummallekin puolelle — omistajan havainto: "siinä näkyy sama
-     * paikka kahteen kertaan, kun se on kokonaan zoomattu ulos."
-     *
-     * Vara maksaa kolme prosenttia loitonnusta ja tekee saumasta aina
-     * saumattoman. Se on halvempi kuin kaksi kertaa piirtyvä ranta.
-     */
-    return Math.max(skaala, paneW / (box.w * (1 - SAUMAN_VARA)));
-  }
-
-  fitViewBox() {
-    const pane = this.svg.parentElement;
-    const w = pane.clientWidth;
-    const h = pane.clientHeight;
-    if (!w || !h) return;
-    const box = this.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
-    // Katselutila (?lauta=) näyttää laudan kuin pelissä: ei porttia eikä
-    // avaustekstiä, vaikka vaihe on pickstart.
-    const alkuun = this.game.phase === 'pickstart' && !this.katselu;
-    // Leveällä ikkunalla (Mac) lauta täyttäisi koko korkeuden ja alareunan
-    // kelluvat kortit ruuhkautuisivat kartan eteläosan päälle: kun korkeus
-    // on rajoittava mitta, laudalta varataan alakaista korteille. Kapealla
-    // ruudulla leveys rajoittaa, kaista jää nollaan eikä asettelu muutu.
-    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
-    const kaista = !alkuun && w / box.w > h / box.h ? Math.min(h * 0.2, rem * 7) : 0;
-    /*
-     * Loitonnuksen raja kiertävällä kartalla (omistajan vaatimus): yksi
-     * paikka ei saa näkyä kahdessa kohdassa samaan aikaan.
-     *
-     * Näkyvä leveys on w / scale, joten se ei saa ylittää laudan
-     * leveyttä. Ilman rajaa leveä ja matala ikkuna teki juuri sen:
-     * korkeus rajoitti mittakaavaa, ja 2000 x 400 pikselin ikkunaan
-     * olisi mahtunut kaksi maapalloa vierekkäin.
-     *
-     * Raja leikkaa pystysuunnasta eikä vaakasuunnasta — kartan ylä- ja
-     * alalaidassa on merta, kaupungit ovat keskellä.
-     */
-    let scale = Math.min(w / box.w, (h - kaista) / box.h);
-    if (this.kiertava()) scale = this.rajaaSkaala(scale, w, box);
-    const vw = w / scale;
-    const vh = h / scale;
-    this.viewBoxSize = { vw, vh };
-    // Aloitusnäkymässä lauta on ennen Aloita seikkailu -nappia keskellä
-    // ruutua (pystyruudulla alaosa ammotti muuten tyhjänä), ja nousee
-    // portin auettua ylös, jolloin alle jäävä kaista annetaan kokonaan
-    // avaustekstille suurella fontilla. Pelissä sisältö keskitetään
-    // kaistan yläpuoliseen osaan.
-    let vy;
-    if (alkuun && !this.aloitettu) {
-      const laudanKorkeus = box.h / (1 + INTRO_SPACE);
-      vy = box.y + laudanKorkeus / 2 - vh / 2;
-    } else if (alkuun) {
-      vy = box.y - box.h * INTRO_TOP;
-    } else {
-      vy = box.y + box.h / 2 - (h - kaista) / (2 * scale);
-    }
-    this.svg.setAttribute(
-      'viewBox',
-      `${box.x + box.w / 2 - vw / 2} ${vy} ${vw} ${vh}`,
-    );
-    /*
-     * Tarkkuustarkistus ajastetaan JOKAISESTA fitViewBoxista, myös
-     * lähikuvien haaroista. taydennaTaide sietää viidenneksen eron, ja
-     * juuri siihen väliin sumea kartta jäi (ks. tarkistaTarkkuus).
-     */
-    this.ajastaTarkkuustarkistus();
-    // Aloituskartan lähikuva hoitaa oman rajauksensa ja kokonsa.
-    if (this.aloitusZoom && alkuun) {
-      this.sovitaAloitusZoom(w, h);
-      this.taydennaTaide?.();
-      return;
-    }
-    if (this.mannerZoom && !alkuun) {
-      this.sovitaMannerZoom(w, h);
-      this.taydennaTaide?.();
-      return;
-    }
-    // Lähikuvasta poistuttaessa (kaupunki valittu, uusi peli) kartta
-    // palaa paneelin kokoiseksi: inline-mitat ja siirto pois.
-    if (this.aloitusZoom || this.mannerZoom || this.svg.style.width) this.nollaaAloitusZoom();
-    if (alkuun) this.placeIntro(box, vy, vh, h);
-    this.placeFactCard(w, h);
-    // Noppa lepää kartan koordinaateissa, joten se siirretään uuteen mittakaavaan.
-    if (this.dieThrown && this.boardDie) this.boardDie.place(this.dieRestingSpot());
-    /*
-     * Kartan kuva päivitetään AINA kun näkymä asettuu.
-     *
-     * Ilman tätä ensimmäinen kuva jäi voimaan: se piirtyi heti laudan
-     * luonnin jälkeen, jolloin viewBox oli vielä oletusarvoinen
-     * 1000 x 1000, ja ikkunaksi tuli 3000 yksikköä. Kun näkymä sen
-     * jälkeen asettui 6379 yksikön levyiseksi, mikään ei pyytänyt uutta
-     * kuvaa — yleiskuvassa ei panoroida — ja kartta jäi kaistaleeksi.
-     */
-    this.taydennaTaide?.();
-  }
-
-  /**
-   * Aloituskartan lähikuva puhelimella (omistajan toive).
-   *
-   * Kapealla ruudulla koko maailmankartta mahtuu näytölle niin pienenä,
-   * ettei yksittäistä kaupunkia voi osua sormella. Siksi ensimmäinen
-   * napautus zoomaa kartan lähemmäs sen sijaan että valitsisi kaupungin,
-   * ja avausteksti väistyy tieltä.
-   *
-   * Lähikuvassa kartta piirretään niin, että sen KORKEUS täyttää
-   * paneelin; leveyttä jää yli, ja se selataan sivusuunnassa. Pystyyn ei
-   * jää liikuttavaa, joten panorointi on yksiulotteista.
-   *
-   * Panorointi tehdään CSS-muunnoksella eikä viewBoxia siirtämällä:
-   * muunnos on kompositorin työtä, joten selain käyttää valmista
-   * rasteria eikä piirrä koko karttaa uudelleen joka kehyksellä. Se on
-   * käytännössä sama kuin kartan muuttaminen kuvaksi, mutta kartta
-   * pysyy tarkkana ja napautukset osuvat oikeisiin kohtiin itsestään.
-   */
-  /**
-   * Kaupunkien pystysuunnan keskikohta laudalla. Aloituskartan lähikuva
-   * rajataan tähän eikä laudan keskelle: maailmankartan navat ovat
-   * tyhjää merta, ja niiden näyttäminen veisi tilan kaupungeilta.
-   */
-  kaupunkienKeskiY(box, laudanKorkeus) {
-    const ys = (this.game.board?.cities ?? []).map((c) => c.y);
-    if (!ys.length) return box.y + laudanKorkeus / 2;
-    return (Math.min(...ys) + Math.max(...ys)) / 2;
-  }
-
-  sovitaAloitusZoom(paneW, paneH) {
-    const box = this.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
-    // Rajauslaatikko ilman avaustekstin varaamaa alaosaa: lähikuvassa
-    // teksti on jo väistynyt, joten koko korkeus on laudan käytössä.
-    const laudanKorkeus = box.h / (1 + INTRO_SPACE);
-    const yleiskuva = Math.min(paneW / box.w, paneH / box.h);
-    const skaala = this.rajaaSkaala(yleiskuva * ALOITUS_ZOOM, paneW, box);
-    const leveys = Math.round(box.w * skaala);
-    // Kartta täyttää paneelin myös pystysuunnassa. Näkymä rajataan
-    // kaupunkien korkeudelle eikä laudan keskelle: maailmankartan ylä-
-    // ja alalaidassa ovat pallonpuoliskojen napa-alueet, joissa ei ole
-    // yhtään napautettavaa kohdetta eikä mannerta (omistajan havainto).
-    const nakyvaKorkeus = paneH / skaala;
-    const vy = this.kaupunkienKeskiY(box, laudanKorkeus) - nakyvaKorkeus / 2;
-    // Kiertävällä kartalla yksi ruudullinen yli laudan leveyden: se on
-    // kaistale, jonka <use>-kopio täyttää kun vieritys kiertyy ympäri.
-    const yliLeveys = this.kiertava() ? Math.ceil(paneW) : 0;
-    const nakyvaYks = box.w + yliLeveys / skaala;
-    this.svg.setAttribute('viewBox', `${box.x} ${vy} ${nakyvaYks} ${nakyvaKorkeus}`);
-    this.svg.style.width = `${leveys + yliLeveys}px`;
-    this.svg.style.height = `${Math.round(nakyvaKorkeus * skaala)}px`;
-    this.svg.style.flex = '0 0 auto';
-    this.svg.style.alignSelf = 'center';
-    this.viewBoxSize = { vw: nakyvaYks, vh: nakyvaKorkeus };
-    this.zoomYlaReuna = vy;
-    this.zoomSkaala = skaala;
-    // Panorointivara: kuinka paljon karttaa jää ruudun ulkopuolelle.
-    // Kiertävällä kartalla varaa ei ole — on jakso, joka kiertää ympäri.
-    this.panJakso = this.kiertava() ? leveys : 0;
-    this.panVara = this.kiertava() ? 0 : Math.max(0, leveys - paneW);
-    // Aloituskohta: sama kohta kartasta, joka oli keskellä yleiskuvassa.
-    if (this.panX == null) {
-      const keskiX = this.zoomAnkkuri ?? box.x + box.w / 2;
-      this.panX = paneW / 2 - (keskiX - box.x) * skaala;
-    }
-    this.asetaPan(this.panX);
-    this.placeFactCard(paneW, paneH);
-  }
-
-  /**
    * Siirtää karttaa; rajat pitävät kartan ruudulla. Aloituskartalla
    * liikutaan vain vaakasuunnassa (panVaraY = 0), mantereella molempiin.
    */
@@ -2575,167 +2157,6 @@ export class UI {
    */
 
   /**
-   * Ollaanko avausnäkymässä, jossa kartalla on oma lähikuvansa ja
-   * avausteksti? Katselutila (?lauta=) on vaiheeltaan pickstart mutta
-   * näyttää laudan kuin pelissä. Sama ehto on fitViewBoxissa.
-   */
-  avausNakymassa() {
-    return this.game.phase === 'pickstart' && !this.katselu;
-  }
-
-  /** Nykyinen zoomiporras; kokonäkymässä 0. */
-  get zoomiIndeksi() {
-    if (!this.mannerZoom) return 0;
-    return this.zoomiPorras ?? this.saapumisPorras();
-  }
-
-  /**
-   * Zoomiportaat tälle laudalle kertoimina. Porras 0 on kokonäkymä.
-   *
-   * Kerroin lasketaan laudan leveydestä, jotta sama nappi tuo yhtä
-   * lähelle kaikilla laudoilla. Portaat, jotka olisivat kokonäkymää
-   * kauempana, jätetään pois: pienellä laudalla ei ole mieltä tarjota
-   * porrasta, joka näyttäisi lautaa enemmän kuin sitä on.
-   */
-  zoomiTasot() {
-    const leveys = this.contentBox?.w ?? 1000;
-    const tasot = [1];
-    let nakyva = leveys / ZOOMI_ASKEL;
-    while (nakyva > ZOOMI_LAHIN * 1.05) {
-      tasot.push(leveys / nakyva);
-      nakyva /= ZOOMI_ASKEL;
-    }
-    tasot.push(leveys / ZOOMI_LAHIN);
-    return tasot;
-  }
-
-  /**
-   * Porras, johon mantereelle saavuttaessa zoomataan.
-   *
-   * Valitaan se porras, joka on lähimpänä tavoiteltua näkyvää leveyttä.
-   * Kiinteä indeksi ei kelpaa, koska portaiden määrä riippuu laudan
-   * koosta: sama numero olisi pienellä laudalla lähikuva ja isolla
-   * suurpiirteinen yleisnäkymä.
-   */
-  saapumisPorras() {
-    const leveys = this.contentBox?.w ?? 1000;
-    const kapea = (this.mapPane?.clientWidth ?? window.innerWidth) < 700;
-    const tavoite = Math.min(leveys * SAAPUMIS_OSUUS, kapea ? SAAPUMIS_LEVEIN_KAPEA : SAAPUMIS_LEVEIN);
-    const tasot = this.zoomiTasot();
-    let paras = 1;
-    for (let i = 1; i < tasot.length; i++) {
-      if (Math.abs(leveys / tasot[i] - tavoite) < Math.abs(leveys / tasot[paras] - tavoite)) paras = i;
-    }
-    return paras;
-  }
-
-  /** Zoomikerroin, jolla sovitaMannerZoom laskee lähikuvan mitat. */
-  get zoomiKerroin() {
-    /*
-     * Nipistys antaa minkä tahansa kertoimen portaiden välistä, ja
-     * silloin se voittaa portaikon. Painikkeet nollaavat sen, jolloin
-     * portaat palaavat käyttöön: kaksi eri tapaa zoomata samaan
-     * lukuun, eikä niiden tarvitse olla samaa mieltä.
-     */
-    if (this.zoomiVapaa) return this.zoomiVapaa;
-    const tasot = this.zoomiTasot();
-    return tasot[this.zoomiIndeksi] ?? tasot[this.saapumisPorras()] ?? MANNER_ZOOM;
-  }
-
-  /** Pienin ja suurin sallittu kerroin: portaikon päät. */
-  zoomiRajat() {
-    const tasot = this.zoomiTasot();
-    return { pienin: tasot[0] ?? 1, suurin: tasot.at(-1) ?? MANNER_ZOOM };
-  }
-
-  /**
-   * Kartan piste, joka on juuri nyt paneelin keskellä. Zoomatessa tämä
-   * pidetään paikallaan — muuten kartta karkaisi käsistä joka
-   * painalluksella, koska lähikuva keskitettäisiin aina laudan keskelle.
-   *
-   * Käänteisluku sovitaMannerZoomin sijoituksesta:
-   *   panX = paneW / 2 - (kohde.x - box.x) * skaala
-   */
-  nykyinenKeskipiste() {
-    const pane = this.svg.parentElement;
-    if (!pane || !this.zoomSkaala || !this.mannerZoom) return null;
-    const box = this.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
-    return {
-      x: box.x + (pane.clientWidth / 2 - (this.panX ?? 0)) / this.zoomSkaala,
-      y: (this.zoomYlaReuna ?? box.y)
-        + (pane.clientHeight / 2 - (this.panY ?? 0)) / this.zoomSkaala,
-    };
-  }
-
-  /**
-   * Siirtyy zoomiportaissa. suunta on +1 (lähemmäs) tai -1 (kauemmas).
-   * Palauttaa true, jos taso muuttui.
-   */
-  zoomaaPainikkeella(suunta) {
-    if (this.dead || !this.svg) return false;
-    // Painike ja rulla ovat yhtä lailla kartan käsittelyä: tarkkuuden
-    // uudelleenrasterointi odottaa niiden jälkeen saman levon kuin
-    // sormeneleen jälkeen (ks. tarkistaTarkkuus). Liukuva kartta
-    // pysähtyy, ettei liuku kirjoita siirtoa uuden näkymän päälle.
-    this.pysaytaLiuku?.(true);
-    this.merkitseKartanEle();
-    // Avausnäkymässä kartalla on oma lähikuvansa ja avausteksti; sinne
-    // painikkeet eivät kuulu. Katselutila (?lauta=) näyttää laudan kuin
-    // pelissä, joten siellä ne kuuluvat — sama ehto kuin fitViewBoxissa.
-    if (this.avausNakymassa()) return false;
-
-    const tasot = this.zoomiTasot();
-    /*
-     * Nipistyksen jälkeen ollaan portaiden VÄLISSÄ. Painike siirtyy
-     * silloin lähimpään portaaseen menosuunnassa — ei indeksiin, jota
-     * ei ole.
-     */
-    const vapaa = this.zoomiVapaa;
-    const nykyinen = vapaa
-      ? tasot.findIndex((t) => (suunta > 0 ? t > vapaa * 1.02 : t >= vapaa * 0.98))
-      : this.zoomiIndeksi;
-    const lahin = nykyinen < 0 ? tasot.length - 1 : nykyinen;
-    const uusi = vapaa
-      ? Math.min(tasot.length - 1, Math.max(0, suunta > 0 ? lahin : lahin - 1))
-      : Math.min(tasot.length - 1, Math.max(0, lahin + suunta));
-    this.zoomiVapaa = 0;
-    if (!vapaa && uusi === nykyinen) return false;
-
-    /*
-     * Keskipiste luetaan ENNEN tason vaihtoa, vanhalla mittakaavalla.
-     * Rullalla se on osoittimen alla oleva kartan piste, painikkeilla
-     * ruudun keskipiste — painikkeella ei ole osoitinta.
-     */
-    const keskipiste = this.rullanKohta ?? this.nykyinenKeskipiste();
-
-    if (uusi === 0) {
-      // Takaisin kokonäkymään: lähikuvan mitat ja siirto pois.
-      this.nollaaAloitusZoom();
-      this.fitViewBox();
-      this.paivitaZoomiNapit();
-      return true;
-    }
-
-    this.zoomiPorras = uusi;
-    if (!this.mannerZoom) {
-      // Kokonäkymästä lähikuvaan. Ilman aiempaa keskipistettä
-      // kohdistetaan pelaajan nappulaan, jotta lähennys vie sinne missä
-      // peli on menossa eikä laudan geometriseen keskipisteeseen.
-      this.mannerZoom = true;
-      document.body.classList.add('manner-zoom');
-      this.zoomKohde = this.pelaajanKohta() ?? null;
-    } else {
-      this.zoomKohde = keskipiste;
-    }
-    // panX/panY nolliksi, jotta sovitaMannerZoom keskittää zoomKohteeseen.
-    this.panX = null;
-    this.panY = null;
-    this.fitViewBox();
-    this.paivitaZoomiNapit();
-    return true;
-  }
-
-  /**
    * Muuttaa kartan staattisen taiteen yhdeksi kuvaksi.
    *
    * Rajaus on pergamentin koko eikä laudan: paperi jatkuu reunojen yli,
@@ -2771,7 +2192,7 @@ export class UI {
     const tyylitelty = tyylitSisaan(ryhma);
     const maarittelyt = this.svg.querySelector('defs');
     this.taide = pilkoTaide(tyylitelty, ryhma, maarittelyt,
-      { leveys: this.kiertava() ? this.game.pack.map.width : 0 })
+      { leveys: this.kartta.kiertava() ? this.game.pack.map.width : 0 })
       ?? valmisteleTaide(tyylitelty, maarittelyt);
     this.taideRuudut = new Map();
     this.taideTyhjat = new Set();
@@ -3191,7 +2612,7 @@ export class UI {
        * ruutu on aina pikselibudjetin sisällä eli tarkka, ja työ
        * pilkkoutuu paloihin, joiden välissä sormi ehtii liikkua.
        */
-      if (this.kiertava()) {
+      if (this.kartta.kiertava()) {
         const W = this.game.pack.map.width;
         this.taideRuutu = W / Math.max(1, Math.ceil(W / this.taideRuutu));
       }
@@ -3224,7 +2645,7 @@ export class UI {
     const koko = this.taideRuutu;
     const arkki = paperi(this.game.pack.map);
     const PUSKURI = 1; // ruudullista joka suuntaan: koko pyyhkäisyn matka
-    const kiertava = this.kiertava();
+    const kiertava = this.kartta.kiertava();
     const W = this.game.pack.map.width;
     /*
      * Kiertävällä kartalla ruudut EIVÄT rajaudu laudan leveyteen — ne
@@ -3651,551 +3072,6 @@ export class UI {
     this.taideVektorit = [];
   }
 
-  /** Vuorossa olevan pelaajan nappulan kohta laudan koordinaateissa. */
-  pelaajanKohta() {
-    // turn voi olla määrittelemättä heti tallennuksen latauduttua
-    // (mitattu 8.8.2026: players oli jo paikallaan, turn ei) — silloin
-    // players[undefined] hukkasi pelaajan ja kartta keskittyi laudan
-    // keskelle. Yksinpelissä oletus 0 on aina oikein.
-    const pelaaja = this.game.players?.[this.game.turn ?? 0];
-    const kaupunki = pelaaja && this.game.board?.cityById?.get(pelaaja.pos?.city);
-    return kaupunki ? { x: kaupunki.x, y: kaupunki.y } : null;
-  }
-
-  /**
-   * Painikkeiden tila: kumpikin himmenee kun porras on päässä. Nappi ei
-   * katoa vaan menee pois käytöstä — katoava nappi saa sormen etsimään
-   * sitä, ja kartan reunassa se olisi erityisen ärsyttävää.
-   */
-  /**
-   * Onko maiden tiedot -tila päällä: napista tai varusteesta.
-   *
-   * Kaksi lähdettä yhdelle tilalle tarvitsee yhden totuuden, tai
-   * varusteen vaihto sammuttaisi napilla avatun tilan.
-   */
-  maatiedotHalutaan() {
-    // Vain varusteesta (omistajan tarkennus 10.8.2026 ilta: "maiden
-    // tietojen vapaasta katsomisesta missä tahansa sijainnissa pitää
-    // tehdä oma varuste") — varusteeton ohituspolku poistui.
-    return this.linssiValittu === 'maatiedot';
-  }
-
-  /** Napin ulkoasu ja näkyvyys: vain laudoilla, joilla on maiden rajat. */
-  paivitaMaalehtiNappi() {
-    const nappi = document.getElementById('maalehti-nappi');
-    if (!nappi) return;
-    const rajat = Boolean(this.game?.pack?.map?.countryShapes);
-    // Nappi näkyy vasta kun Maiden tiedot on KYTKETTY PÄÄLLE
-    // päävalikosta (omistajan tarkennus 10.8.2026 ilta: "pitäisi olla
-    // oletuksena poissa näkyvistä. se tulisi vain jos kyseinen varuste
-    // kytketään päälle") — pelkkä omistus ei riitä. Kartalla nappi
-    // toimii varusteen pikakatkaisijana.
-    nappi.hidden = !rajat || this.avausNakymassa() || !this.maatiedotHalutaan();
-    nappi.setAttribute('aria-pressed', String(this.maatiedotHalutaan()));
-  }
-
-  paivitaZoomiNapit() {
-    // Maiden lehdet -nappi elää samaa elämää kuin zoomi: se piiloutuu
-    // avausnäkymässä ja palaa kartan mukana. Kutsu on ennen zoomin
-    // varhaista paluuta, jottei se jää tekemättä.
-    this.paivitaMaalehtiNappi();
-    const sisaan = document.getElementById('zoom-in');
-    const ulos = document.getElementById('zoom-out');
-    if (!sisaan || !ulos) return;
-    const piilossa = this.avausNakymassa();
-    const ryhma = sisaan.parentElement;
-    if (ryhma) ryhma.hidden = piilossa;
-    sisaan.disabled = this.zoomiIndeksi >= this.zoomiTasot().length - 1;
-    ulos.disabled = this.zoomiIndeksi <= 0;
-  }
-
-  /** Palauttaa kartan tavalliseen kokoonsa (uusi peli, laudan vaihto). */
-  nollaaAloitusZoom() {
-    // Liukuva kartta ei saa jäädä kirjoittamaan siirtoa nollatun
-    // näkymän päälle.
-    this.pysaytaLiuku?.(true);
-    this.aloitusZoom = false;
-    this.mannerZoom = false;
-    // Porras oletukselle: seuraava lähikuva alkaa taas saapumistasolta.
-    this.zoomiPorras = null;
-    this.panX = null;
-    this.panY = null;
-    this.panVara = 0;
-    this.panVaraY = 0;
-    this.panJakso = 0;
-    this.zoomiVapaa = 0;
-    this.svg.style.transition = '';
-    this.svg.style.transform = '';
-    this.svg.style.width = '';
-    this.svg.style.height = '';
-    this.svg.style.flex = '';
-    this.svg.style.alignSelf = '';
-    clearTimeout(this.mannerAjastin);
-    clearTimeout(this.kiikariAjastin);
-    clearTimeout(this.zoomAjastin);
-    clearTimeout(this.korttiAjastin);
-    document.body.classList.remove(
-      'aloitus-zoom', 'manner-zoom', 'kartta-raahaus', 'kiikari-paalla',
-      'zoom-kaynnissa', 'manner-odottaa',
-    );
-  }
-
-  /**
-   * Mantereen lähikuva puhelimella (omistajan toive). Sama idea kuin
-   * aloituskartalla, mutta kartta on panoroitavissa kaikkiin neljään
-   * suuntaan — manner on isompi kuin ruutu joka suuntaan.
-   *
-   * Toistaiseksi vain Euroopalla: ilme hiotaan siellä kuntoon ennen kuin
-   * sama tuodaan muille laudoille (lisää laudan id ZOOMATTAVAT-settiin).
-   */
-  mannerZoomTarpeen() {
-    if (this.katselu || this.reducedMotion) return false;
-    if (this.game.phase === 'pickstart') return false;
-    if (!ZOOMATTAVAT.has(this.game.pack.id)) return false;
-    // Lentokalvon aikana lauta piirtyy jo taustalle, mutta pelaaja ei näe
-    // sitä. Zoomaus odottaa Astu mantereelle -napin painallusta
-    // (omistajan havainto: zoomaus ehti tapahtua lennon aikana).
-    if (document.body.classList.contains('flight-active')) return false;
-    // Isolla laudalla lähikuva tarvitaan aina, myös leveällä ruudulla:
-    // kokonäkymä näyttäisi koko vanhan maailman kerralla, eikä siitä
-    // erota mitään.
-    if (this.isoLauta()) return true;
-    return (this.svg.parentElement?.clientWidth ?? 0) < 700;
-  }
-
-  /**
-   * Onko lauta niin iso, ettei kokonäkymästä ole hyötyä?
-   *
-   * Vanhat laudat ovat 1000 yksikköä leveitä, ja niiden kokonäkymä on
-   * luettava. Yhdistetty vanha maailma on 7200, ja kokonäkymässä
-   * Lissabonista Tokioon mahtuu puhelimen ruudulle — kaupungit ovat
-   * pisteitä eikä nimiä erota. Omistajan toive: lennettäessä kartan
-   * pitää olla valmiiksi yhtä lähellä kuin ennenkin, ja loput näkyvät
-   * vasta jos pelaaja itse loitontaa.
-   */
-  isoLauta() {
-    return (this.contentBox?.w ?? 1000) > 2000;
-  }
-
-  /**
-   * Saapumisnäkymän keskipiste: kaupunki, mutta kohdemantereen suuntaan
-   * siirrettynä.
-   *
-   * Omistajan havainto: "nyt kartta keskittää kaupungin ja Tangerin
-   * kohdalla näkyy Eurooppaa yhtä paljon kuin Aasiaa." Tanger on
-   * Afrikan pohjoisimmassa kulmassa, joten kaupunki keskellä tarkoittaa,
-   * että puolet ruudusta on sitä mannerta, jonne ei olla tultu.
-   *
-   * Painopiste lasketaan saman mantereen kaupungeista (map.cityManner),
-   * ei mantereen muodosta: kaupungit ovat se, mitä pelissä tehdään, ja
-   * ne ovat valmiina laudan koordinaateissa. Kiertävällä kartalla
-   * jokainen kaupunki tuodaan ensin lähimmäksi kohdetta — muuten
-   * Beringinsalmen molemmin puolin ulottuva Aasia antaisi painopisteen
-   * keskeltä Atlanttia.
-   *
-   * Siirto on osittainen ja rajattu. Koko matka painopisteeseen veisi
-   * kaupungin ruudun laitaan, ja kaupunki on se, mihin on tultu.
-   */
-  mantereenKeskitys(kohde, paneW, paneH, skaala) {
-    const kartta = this.game.pack.map;
-    const manner = kohde?.id && kartta?.cityManner?.[kohde.id];
-    if (!manner || !skaala) return kohde;
-    const W = this.kiertava() ? kartta.width : 0;
-    let summaX = 0;
-    let summaY = 0;
-    let montako = 0;
-    for (const kaupunki of this.game.board.cities ?? []) {
-      if (kartta.cityManner[kaupunki.id] !== manner) continue;
-      let x = kaupunki.x;
-      if (W) {
-        while (x - kohde.x > W / 2) x -= W;
-        while (x - kohde.x < -W / 2) x += W;
-      }
-      summaX += x;
-      summaY += kaupunki.y;
-      montako += 1;
-    }
-    if (montako < 2) return kohde;
-    const rajaX = (paneW / skaala) * MANNER_SIIRTO_X;
-    const rajaY = (paneH / skaala) * MANNER_SIIRTO_Y;
-    const vali = (arvo, raja) => Math.max(-raja, Math.min(raja, arvo));
-    return {
-      x: kohde.x + vali((summaX / montako - kohde.x) * MANNER_PAINO, rajaX),
-      y: kohde.y + vali((summaY / montako - kohde.y) * MANNER_PAINO, rajaY),
-    };
-  }
-
-  /** Mantereen lähikuvan mitat ja rajat. */
-  sovitaMannerZoom(paneW, paneH) {
-    /*
-     * Vanhentunut panorointi hylätään, kun ruudun koko on muuttunut
-     * laskennan jälkeen. Latauksessa pan ehdittiin laskea ennen kuin
-     * asettelu oli lopullinen, ja väärä arvo jäi voimaan — kartta
-     * aukesi aina keskelle Atlanttia vaikka kohde (pelaajan kaupunki)
-     * oli koko ajan oikein (omistajan havainto 8.8.2026, v386;
-     * mitattu: sama laskenta oikealla koolla keskittää täsmälleen).
-     * Käsin panorointi säilyy niin kauan kuin koko ei muutu.
-     */
-    if (this.panX != null
-      && (this.panKoko?.w !== paneW || this.panKoko?.h !== paneH)) {
-      this.panX = null;
-      this.panY = null;
-    }
-    this.panKoko = { w: paneW, h: paneH };
-    const box = this.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
-    const yleiskuva = Math.min(paneW / box.w, paneH / box.h);
-    // Zoomitaso tulee portaikosta: automaattinen saapumiszoom käyttää
-    // oletusporrasta, painikkeet siirtävät sitä.
-    const skaala = this.rajaaSkaala(yleiskuva * this.zoomiKerroin, paneW, box);
-    // Laudan eteläpuolelle varataan tilaa alarivin nappien verran, jotta
-    // eteläisimmät kaupungit saa panoroitua niiden alta pois (omistajan
-    // havainto: Kreeta ja Ateena jäivät nappien alle). Tila ei muuta
-    // zoomaustasoa — se vain jatkaa panoroitavaa aluetta, ja siihen
-    // osuu kartan oma Pohjois-Afrikan kaistale.
-    const etelaJatko = (paneH * ALAKAISTA) / skaala;
-    // Sama tila laudan pohjoispuolelle (omistajan havainto: myös
-    // pohjoisesta hukkui kaupunkeja). Ylhäällä tilan vievät matkakirjan
-    // kortti ja kartan yläreuna, joten Tromssa ja Lappi jäivät piiloon
-    // eikä niiden yläpuolella ollut mitään, mihin panoroida. Kartan
-    // pergamentti jatkuu rajauksen yli joka suuntaan (mapart.js PAPER),
-    // joten kaista näyttää kartalta eikä tyhjältä.
-    const pohjoisJatko = (paneH * YLAKAISTA) / skaala;
-    const ylaReuna = box.y - pohjoisJatko;
-    const korkeusYks = box.h + pohjoisJatko + etelaJatko;
-    /*
-     * Kiertävällä kartalla piirretään yksi ruudullinen yli laudan
-     * leveyden. Se on juuri se kaistale, jonka <use>-kopio täyttää, ja
-     * juuri se mitä tarvitaan kun vieritys on kiertymässä ympäri.
-     */
-    const jakso = Math.round(box.w * skaala);
-    const yliLeveys = this.kiertava() ? Math.ceil(paneW) : 0;
-    const nakyvaYks = box.w + yliLeveys / skaala;
-    const leveys = jakso + yliLeveys;
-    const korkeus = Math.round(korkeusYks * skaala);
-    this.svg.setAttribute('viewBox', `${box.x} ${ylaReuna} ${nakyvaYks} ${korkeusYks}`);
-    this.svg.style.width = `${leveys}px`;
-    this.svg.style.height = `${korkeus}px`;
-    this.svg.style.flex = '0 0 auto';
-    this.svg.style.alignSelf = 'flex-start';
-    this.viewBoxSize = { vw: nakyvaYks, vh: korkeusYks };
-    this.zoomSkaala = skaala;
-    this.zoomYlaReuna = ylaReuna;
-    this.panJakso = this.kiertava() ? jakso : 0;
-    this.panVara = this.kiertava() ? 0 : Math.max(0, leveys - paneW);
-    this.panVaraY = Math.max(0, korkeus - paneH);
-    if (this.panX == null || this.panY == null) {
-      /*
-       * Ilman asetettua kohdetta keskitetään PELAAJAAN, ei laudan
-       * geometriseen keskipisteeseen — maailmanlaudalla keskipiste on
-       * keskellä Atlanttia, ja päivityksen jälkeinen uusi lataus
-       * aukesi aina sinne (omistajan havainto 8.8.2026, v386).
-       */
-      const kohde = this.zoomKohde ?? this.pelaajanKohta()
-        ?? { x: box.x + box.w / 2, y: box.y + box.h / 2 };
-      const keskus = this.mantereenKeskitys(kohde, paneW, paneH, skaala);
-      this.panX = paneW / 2 - (keskus.x - box.x) * skaala;
-      this.panY = paneH / 2 - (keskus.y - ylaReuna) * skaala;
-    }
-    this.asetaPan(this.panX, this.panY);
-    this.placeFactCard(paneW, paneH);
-    if (this.dieThrown && this.boardDie) this.boardDie.place(this.dieRestingSpot());
-  }
-
-  /**
-   * Mantereelle saavuttaessa näytetään ensin kokonäkymä ja vasta sen
-   * jälkeen zoomataan pelinappulan kohdalle (omistajan toive): pelaaja
-   * ehtii nähdä, minne on tullut, ennen kuin kartta menee lähelle.
-   */
-  ajastaMannerZoom() {
-    clearTimeout(this.mannerAjastin);
-    if (!this.mannerZoomTarpeen() || this.mannerZoom) {
-      document.body.classList.remove('manner-odottaa');
-      return;
-    }
-    /*
-     * Isolla laudalla kokonäkymää ei näytetä lainkaan.
-     *
-     * Kokonäkymä on siellä siksi, että pelaaja näkee minne on tullut.
-     * Vanhalla maailmalla se ei kerro sitä: koko manner mahtuu ruudulle
-     * niin pienenä, ettei kaupunkeja erota. Silloin on parempi laskeutua
-     * suoraan lähikuvaan, kuten pienemmillä laudoilla ennenkin.
-     */
-    if (this.isoLauta()) {
-      this.zoomaaMantereelle();
-      return;
-    }
-    // Matkakirja ja toimintonapit odottavat zoomauksen loppuun (omistajan
-    // toive): pelaaja näkee ensin mantereen kokonaan ja saa sen jälkeen
-    // vasta kortit eteensä.
-    document.body.classList.add('manner-odottaa');
-    this.mannerAjastin = setTimeout(() => {
-      if (this.dead || !this.mannerZoomTarpeen() || this.mannerZoom) return;
-      this.zoomaaMantereelle();
-    }, MANNER_ZOOM_VIIVE);
-  }
-
-  /** Zoomaa mantereen kartan nappulan kohdalle pehmeästi liukuen. */
-  zoomaaMantereelle() {
-    if (this.mannerZoom) return;
-    const [vx, vy, vw, vh] = (this.svg.getAttribute('viewBox') ?? '0 0 1000 1000')
-      .split(/\s+/).map(Number);
-    // Kohde: pelaajan nappula, tai näkymän keskus jos sitä ei löydy.
-    // pelaajanKohta on toinen varareitti: uudelleenlatauksessa cityOf
-    // ei palauttanut koordinaatteja, ja näkymä putosi laudan keskelle
-    // — maailmanlaudalla keskelle Atlanttia (omistajan havainto
-    // 8.8.2026, v386: "Päivityksen jälkeen kartta siirtyy aina tänne").
-    const oma = this.game.cityOf?.();
-    const kohde = oma && Number.isFinite(oma.x)
-      ? { x: oma.x, y: oma.y, id: oma.id }
-      : (this.pelaajanKohta() ?? { x: vx + vw / 2, y: vy + vh / 2 });
-
-    this.mannerZoom = true;
-    this.panX = null;
-    this.panY = null;
-    this.zoomKohde = kohde;
-    document.body.classList.add('manner-zoom');
-    this.fitViewBox();
-    /*
-     * EI LIUKUA (omistajan päätös 7.8.2026): *"ota zoomausanimaatiot
-     * pois kun tullaan aloitusnäytöltä lentokoneella mantereelle. peli
-     * vain siis siirtyy suoraan oikeaan zoom tasoon ilman
-     * animaatiota."*
-     *
-     * Tässä oli ennen kaksi liukua: isolla laudalla saapuminen
-     * MANNER_LAAJUUS-kertaisesta näkymästä ja muilla laudoilla liuku
-     * napautuskohdasta. Molemmat poistettiin — fitViewBox yllä on jo
-     * asettanut lopullisen näkymän, joten mitään muuta ei tarvita.
-     *
-     * Zoomausääni lähti mukana: se soi täsmälleen liu'un mittaisena
-     * (js/sound.js ZOOM_VAUHTI), eikä moottorin humaus ilman liikettä
-     * kerro mitään. asetaZoomAlku ja asetaSaapumisAlku jäävät
-     * käyttöön aloituskartan omassa zoomissa (zoomaaAloituskartta).
-     *
-     * Kuva pyydetään heti oikealla mittakaavalla: ilman tätä ruudut
-     * jäisivät yleiskuvan tarkkuuteen siihen asti, kunnes jokin muu
-     * kutsuisi täydennyksen.
-     */
-    this.paivitaZoomiNapit();
-    document.body.classList.remove('manner-odottaa');
-    this.taydennaTaide?.({ heti: true });
-  }
-
-  /**
-   * Saapumisliu'un alkuasento isolla laudalla: sama näkymä
-   * MANNER_LAAJUUS kertaa laajempana.
-   *
-   * Keskipiste luetaan lopullisesta panoroinnista eikä lasketa
-   * kohteesta. Kiertävällä kartalla panX on normalisoitu välille
-   * [-jakso, 0), ja kohde voi näkyä ruudulla kierron kopion kautta —
-   * jolloin kohteesta laskettu piste olisi maailman leveyden verran
-   * pielessä ja liuku lentäisi koko kartan poikki.
-   */
-  asetaSaapumisAlku(paneW, paneH) {
-    if (this.reducedMotion) return;
-    const s = 1 / MANNER_LAAJUUS;
-    // Ruudun keskipiste elementin omissa pikseleissä, sellaisena kuin
-    // se juuri nyt on.
-    const ex = paneW / 2 - (this.panX ?? 0);
-    const ey = paneH / 2 - (this.panY ?? 0);
-    const tx = paneW / 2 - s * ex;
-    const ty = paneH / 2 - s * ey;
-    this.svg.style.transition = 'none';
-    this.svg.style.transform =
-      `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${s.toFixed(4)})`;
-    // Pakotettu asettelu, jotta selain näkee alkuasennon omana tilanaan.
-    void this.svg.getBoundingClientRect();
-  }
-
-  /**
-   * Zoomaa aloituskartan lähikuvaan. Avausteksti häivytetään ensin pois,
-   * jotta lauta saa koko ruudun. Kutsutaan ensimmäisestä napautuksesta.
-   */
-  zoomaaAloituskartta(kohta = null) {
-    if (this.aloitusZoom) return;
-    const pane = this.svg.parentElement;
-    const paneW = pane.clientWidth;
-    const paneH = pane.clientHeight;
-    // Yleiskuvan rajaus talteen: liu'un alkuasento lasketaan siitä.
-    const [vx, vy, vw, vh] = (this.svg.getAttribute('viewBox') ?? '0 0 1000 1000')
-      .split(/\s+/).map(Number);
-    const yleisSkaala = paneW / vw;
-    // Tarkennuspiste: se kohta karttaa, johon käyttäjä napautti — ei
-    // näkymän keskus (omistajan toive: zoomaus keskittyy napautettuun
-    // kohtaan riippumatta siitä, osuiko se kaupunkiin).
-    const fokus = kohta ?? { x: vx + vw / 2, y: vy + vh / 2 };
-    // Napautuskohta ruudulla ennen zoomausta: siitä liuku lähtee.
-    const sx = (fokus.x - vx) * yleisSkaala;
-    const sy = (fokus.y - vy) * yleisSkaala;
-
-    this.aloitusZoom = true;
-    this.panX = null;
-    this.zoomAnkkuri = fokus.x;
-    document.body.classList.add('aloitus-zoom');
-    this.fitViewBox();
-    // Renkaat piirretään uudelleen, jotta napautus valitsee kaupungin
-    // eikä enää zoomaa.
-    this.drawTargets();
-    /*
-     * SUORAAN LÄHIKUVAAN (omistajan päätös 10.8.2026, iPhone-palaute):
-     * ei liukua, ei zoomausääntä eikä kiikaria — kartta vaihtuu heti
-     * vieritettävään lähikuvaan. fitViewBox on jo asettanut näkymän;
-     * tässä siivotaan liu'un varaan jääneet tilat. Liu'un koneisto
-     * (asetaZoomAlku, zoomAanellaJaViiveella, kaynnistaZoomLiuku) jää
-     * paikalleen mutta kutsumatta, jos animaatioon halutaan palata.
-     * sx/sy/yleisSkaala jäävät laskennasta käyttämättä samasta syystä.
-     */
-    void sx; void sy; void yleisSkaala;
-    stopIntroVoice(this);
-    stopDiaryVoice(this);
-    this.svg.style.transition = '';
-    this.tyonnaAvausteksti(0);
-    this.asetaPan(this.panX, this.panY);
-    document.body.classList.remove('manner-odottaa');
-    this.taydennaTaide?.({ heti: true });
-  }
-
-  /**
-   * Zoomausäänen tieltä raivataan hetki hiljaisuutta (omistajan toive):
-   * lukuääni lopetetaan kokonaan ja taustaäänimaisema vaimennetaan, ja
-   * vasta pienen viiveen jälkeen zoomausääni ja liuku käynnistyvät.
-   * Ilman taukoa moottori hukkui puheen ja meren alle.
-   */
-  zoomAanellaJaViiveella(liuku, kesto = ZOOM_MS) {
-    stopIntroVoice(this);
-    stopDiaryVoice(this);
-    vaimennaTausta();
-    clearTimeout(this.zoomAlkuAjastin);
-    this.zoomAlkuAjastin = setTimeout(() => {
-      if (this.dead) return;
-      // Moottori soi täsmälleen liu'un mittaisena, ja sen korkeus
-      // seuraa liu'un vauhtia (js/sound.js ZOOM_VAUHTI).
-      sfx.play('zoom', { kesto: kesto / 1000 });
-      liuku();
-      // Taustamaisema palaa vasta kun moottori on vaiennut.
-      clearTimeout(this.zoomTaustaAjastin);
-      this.zoomTaustaAjastin = setTimeout(() => {
-        if (!this.dead) palautaTausta();
-      }, kesto + 300);
-    }, ZOOM_TAUKO_MS);
-  }
-
-  /** Napautuskohta ruudulla kartan omiksi koordinaateiksi. */
-  kartanKohta(clientX, clientY) {
-    const r = this.svg.getBoundingClientRect();
-    const [vx, vy, vw, vh] = (this.svg.getAttribute('viewBox') ?? '0 0 1000 1000')
-      .split(/\s+/).map(Number);
-    if (!r.width || !r.height) return null;
-    return {
-      x: vx + ((clientX - r.left) / r.width) * vw,
-      y: vy + ((clientY - r.top) / r.height) * vh,
-    };
-  }
-
-  /**
-   * Pehmeä siirtymä yleiskuvasta lähikuvaan.
-   *
-   * Kartta on jo piirretty lähikuvan tarkkuudella, ja siirtymä tehdään
-   * pelkällä CSS-muunnoksella: se on kompositorin työtä, joten selain
-   * rasteroi kartan kerran ja venyttää valmista rasteria. Tämä on sama
-   * asia kuin kartan tekeminen ennalta bittikartaksi (omistajan ehdotus),
-   * mutta ilman erillistä kuvaa — eikä lopputulos sumene, koska
-   * animaation päättyessä ruudulla on täysi tarkkuus.
-   */
-  asetaZoomAlku(fokus, sx, sy, yleisSkaala) {
-    if (this.reducedMotion) return;
-    const box = this.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
-    const s = yleisSkaala / this.zoomSkaala;
-    // Tarkennuspiste elementin omissa pikseleissä lähikuvan mitoilla.
-    const ex = (fokus.x - box.x) * this.zoomSkaala;
-    const ey = (fokus.y - (this.zoomYlaReuna ?? box.y)) * this.zoomSkaala;
-    // Alkuasento: sama piste pysyy siinä kohdassa ruutua, jossa se oli
-    // napautushetkellä — kuva laajenee napautetusta kohdasta ulospäin.
-    const tx = sx - s * ex;
-    const ty = sy - s * ey;
-    this.svg.style.transition = 'none';
-    this.svg.style.transform = `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${s.toFixed(4)})`;
-    // Pakotettu asettelu, jotta selain näkee alkuasennon omana tilanaan
-    // eikä hyppää suoraan loppuun.
-    void this.svg.getBoundingClientRect();
-  }
-
-  /**
-   * Käynnistää liu'un alkuasennosta lähikuvaan.
-   *
-   * Kiikariefekti nostetaan esiin vasta, kun liuku on valmis (omistajan
-   * toive) — liikkuvan kuvan päällä sumennus on sekä rumaa että
-   * puhelimelle raskasta. Feidauksen hoitaa css.
-   */
-  kaynnistaZoomLiuku(kesto = ZOOM_MS) {
-    if (this.reducedMotion) return;
-    this.svg.style.transition = `transform ${kesto}ms ${ZOOM_PEHMENNYS}`;
-    // Liu'un ajaksi kartan oma reunahäivytys sammuu (omistajan
-    // havainto). Lähikuvan kartta on rajattu kaupunkien korkeuteen,
-    // joten liu'un alussa se ei täytä paneelia — häivytys piirtyi
-    // paljaalle taustalle ja näkyi ruudun laidoissa tummina kaarina.
-    document.body.classList.add('zoom-kaynnissa');
-    // Avausteksti lähtee liikkeelle samalla hetkellä kuin kartta.
-    this.tyonnaAvausteksti(kesto);
-    this.asetaPan(this.panX, this.panY);
-    clearTimeout(this.zoomAjastin);
-    this.zoomAjastin = setTimeout(() => {
-      this.svg.style.transition = '';
-      document.body.classList.remove('zoom-kaynnissa');
-      // Liuku ohi: nyt kuva saa piirtyä loppuun.
-      this.taydennaTaide?.({ heti: true });
-    }, kesto + 60);
-    clearTimeout(this.kiikariAjastin);
-    // Kortit takaisin näkyviin, kun liuku on ohi.
-    clearTimeout(this.korttiAjastin);
-    this.korttiAjastin = setTimeout(() => {
-      if (!this.dead) document.body.classList.remove('manner-odottaa');
-    }, kesto);
-    // Kiikariefekti poistettiin kartasta kokonaan (omistajan päätös
-    // 10.8.2026) — 'kiikari-paalla' ei enää syty mistään.
-  }
-
-  /**
-   * Avausteksti työntyy alas täsmälleen sen verran kuin kartan alareuna
-   * liikkuu (omistajan toive): teksti ei häivy erikseen vaan kasvava
-   * kartta työntää sen ruudun alle.
-   *
-   * Matka mitataan geometriasta eikä arvata prosenttina. Alkuasento on
-   * jo asetettu (asetaZoomAlku), joten kartan alareunan voi lukea
-   * suoraan; loppuasento lasketaan lähikuvan mitoista. Kesto ja
-   * pehmennys ovat samat kuin kartalla, joten liike on samaa tahtia
-   * koko matkan eikä vain päätepisteissä.
-   *
-   * Tekstistä ei tarvitse tehdä kuvaa: siirto on pelkkä transform,
-   * jonka selain hoitaa kompositorissa ilman uudelleenlatomista tai
-   * -piirtoa. will-change varmistaa oman kerroksen, joka on juuri se
-   * hyöty, jonka kuva antaisi.
-   */
-  tyonnaAvausteksti(kesto) {
-    const teksti = this.introEl;
-    if (!teksti || teksti.hidden || !this.aloitusZoom) return;
-    const pane = this.mapPane.getBoundingClientRect();
-    const alkuAla = this.svg.getBoundingClientRect().bottom;
-    const korkeus = parseFloat(this.svg.style.height) || pane.height;
-    const loppuAla = pane.top + (this.panY ?? 0) + korkeus;
-    // Vähintään paneelin verran, jottei teksti jää näkyviin silloinkaan
-    // kun kartta sattuu kasvamaan odotettua vähemmän.
-    const siirto = Math.max(pane.height - teksti.offsetTop, loppuAla - alkuAla);
-    teksti.style.setProperty('--intro-tyonto', `${Math.round(siirto)}px`);
-    teksti.style.setProperty('--intro-kesto', `${kesto}ms`);
-    teksti.style.setProperty('--intro-pehmennys', ZOOM_PEHMENNYS);
-    teksti.classList.add('intro-pois');
-  }
-
-  /**
-   * Onko lähikuva tarpeen? Vain kapealla ruudulla: leveällä koko lauta
-   * näkyy kerralla riittävän isona, eikä ylimääräinen napautus tuo
-   * mitään (omistajan toive koski nimenomaan puhelinta).
-   */
-  zoomTarpeen() {
-    if (this.katselu || this.reducedMotion) return false;
-    return (this.svg.parentElement?.clientWidth ?? 0) < 700;
-  }
-
   /**
    * Vaakapanorointi lähikuvassa. Sormen liike siirtää karttaa; pystyyn ei
    * reagoida. Raahauksen ajaksi kartan animaatiot vaimennetaan
@@ -4398,7 +3274,7 @@ export class UI {
         kohde: varmaAnkkuri(keski),
         panX: this.panX ?? 0,
         panY: this.panY ?? 0,
-        kerroin: this.zoomiKerroin,
+        kerroin: this.kartta.zoomiKerroin,
         suhde: 1,
         /*
          * Paneelin sijainti mitataan KERRAN eleen alussa. Paneeli ei
@@ -4422,7 +3298,7 @@ export class UI {
     const paivitaNipistys = (e) => {
       if (!nipistys || e.touches.length < 2) return;
       const { etaisyys } = kaksiSormea(e);
-      const { pienin, suurin } = this.zoomiRajat();
+      const { pienin, suurin } = this.kartta.zoomiRajat();
       // Rajat kertoimessa eikä suhteessa: sama katto riippumatta siitä,
       // mistä ele alkoi.
       const kerroin = Math.min(suurin, Math.max(pienin, nipistys.kerroin * (etaisyys / nipistys.etaisyys)));
@@ -4441,7 +3317,7 @@ export class UI {
 
     const paataNipistys = () => {
       if (!nipistys) return;
-      const { pienin } = this.zoomiRajat();
+      const { pienin } = this.kartta.zoomiRajat();
       const kerroin = nipistys.kerroin * nipistys.suhde;
       const kohde = nipistys.kohde;
       const keski = nipistys.keski;
@@ -4455,9 +3331,9 @@ export class UI {
       // Alarajalle nipistäminen palaa kokonäkymään: sama kuin
       // loitonnusnapin viimeinen painallus.
       if (kerroin <= pienin * 1.02) {
-        this.nollaaAloitusZoom();
-        this.fitViewBox();
-        this.paivitaZoomiNapit();
+        this.kartta.nollaaAloitusZoom();
+        this.kartta.fitViewBox();
+        this.kartta.paivitaZoomiNapit();
         return;
       }
       // Kokonäkymästä alkanut ele astuu lähikuvatilaan vasta tässä,
@@ -4486,7 +3362,7 @@ export class UI {
       this.zoomKohde = kelpaa(kohde) ? kohde : null;
       this.panX = null;
       this.panY = null;
-      this.fitViewBox();
+      this.kartta.fitViewBox();
       const k = laudanKuvaus();
       if (k && kelpaa(kohde) && kelpaa(keski)) {
         // Elementin asettelusijainti = nykyinen kulma miinus nykyinen siirto.
@@ -4497,7 +3373,7 @@ export class UI {
           keski.y - asetteluY - (kohde.y - k.vb.y) * k.pxPerYks,
         );
       }
-      this.paivitaZoomiNapit();
+      this.kartta.paivitaZoomiNapit();
       this.taydennaTaide({ heti: true });
     };
 
@@ -4556,7 +3432,7 @@ export class UI {
        */
       ['wheel', (e) => {
         if (nipistys) return;
-        if (this.avausNakymassa() || this.radioPaalla()) return;
+        if (this.kartta.avausNakymassa() || this.radioPaalla()) return;
         e.preventDefault();
         /*
          * Läppärin kahden sormen vieritys EI zoomaa (omistajan toive
@@ -4574,10 +3450,10 @@ export class UI {
         const nyt = performance.now();
         if (nyt - (this.rullanHetki ?? 0) < RULLAN_VALI_MS) return;
         const suunta = e.deltaY < 0 ? 1 : -1;
-        const kohta = this.kartanKohta(e.clientX, e.clientY);
+        const kohta = this.kartta.kartanKohta(e.clientX, e.clientY);
         this.rullanHetki = nyt;
         this.rullanKohta = kohta;
-        this.zoomaaPainikkeella(suunta);
+        this.kartta.zoomaaPainikkeella(suunta);
         this.rullanKohta = null;
       }],
     ];
@@ -4788,7 +3664,7 @@ export class UI {
         e.preventDefault();
         return;
       }
-      if (this.aloitusZoom || !this.zoomTarpeen()) return;
+      if (this.aloitusZoom || !this.kartta.zoomTarpeen()) return;
       // Zoomaus lähtee vain itse kartalta. Kartan päällä kelluu muutakin
       // — lentokalvo "Astu mantereelle" -nappeineen, aloitusportti,
       // matkakirjan kortti — ja koska tämä kuuntelija on kaappaus-
@@ -4818,7 +3694,7 @@ export class UI {
       if (this.game.pack.id !== 'maailma') return;
       e.stopPropagation();
       e.preventDefault();
-      this.zoomaaAloituskartta(this.kartanKohta(e.clientX, e.clientY));
+      this.kartta.zoomaaAloituskartta(this.kartta.kartanKohta(e.clientX, e.clientY));
     }, true);
   }
 
@@ -5042,98 +3918,10 @@ export class UI {
     kerros.remove();
   }
 
-  /**
-   * Päiväkirjakortti asetetaan sille kartan nurkalle, jossa on eniten merta.
-   * Näin kortti ei koskaan peitä mannerta ja lauta näkyy kokonaisena. Kortti
-   * on kartan päällä, joten jokin nurkka menetetään joka tapauksessa — meri
-   * on niistä halvin.
-   *
-   * Alanurkat hylätään, jos kortti ja toimintokortti eivät mahdu rinnakkain:
-   * silloin ne peittäisivät toisensa.
-   */
-  placeFactCard(paneW, paneH) {
-    /*
-     * MATKAKIRJA ON AINA VASEMMASSA YLÄNURKASSA.
-     *
-     * Omistaja 5.8.2026: *"Matkakirja saisi olla aina kartan
-     * yläreunassa."* — alanurkat kiellettiin, koska siellä ovat
-     * toimintonapit.
-     *
-     * Omistaja 14.8.2026: kortti hyppi zoomatessa oikeaan reunaan,
-     * koska vasen/oikea ratkaistiin näkyvän viewBoxin merenpinta-alan
-     * mukaan ja zoomi muutti laskentaa. *"Saisiko sen korjattua
-     * pysymään aina vasemmassa yläreunassa?"* — valinta poistettiin
-     * kokonaan; kiinteä paikka voittaa kelluvan optimoinnin.
-     */
-    this.factCard.dataset.corner = 'tl';
-    // Linssin selitekortti väistää päiväkirjaa: se saa oman nurkkansa
-    // vasta kun päiväkirjan nurkka on tiedossa.
-    this.sijoitaLinssiSelite();
-  }
-
-  /** Kartan koordinaatit kartta-alueen pikseleiksi. */
-  mapToPane({ x, y }) {
-    const point = this.svg.createSVGPoint();
-    point.x = x;
-    point.y = y;
-    const screen = point.matrixTransform(this.svg.getScreenCTM());
-    const rect = this.mapPane.getBoundingClientRect();
-    return { x: screen.x - rect.left, y: screen.y - rect.top };
-  }
-
-  /**
-   * Nopan lepopaikka: avomerta, jotta noppa ei jää kenenkään nappulan tai
-   * kaupungin päälle. Paikka arpoutuu hieman joka heitolla, jotta noppa ei
-   * osu aina täsmälleen samaan kohtaan. Päiväkirjakortti hakeutuu
-   * merellisimpään kulmaan — usein samaan, jonne nopan paikka on valittu —
-   * joten kortin kulmaa väistetään peilaamalla paikka vastakkaiselle
-   * sivulle (tai pakan omaan varapaikkaan decor.dieSpotAlt).
-   */
-  dieRestingSpot() {
-    const pane = this.mapPane;
-    const w = pane.clientWidth || 600;
-    const h = pane.clientHeight || 600;
-    const decor = this.game.pack.decor;
-    let spot = decor.dieSpot;
-    const corner = this.factCard?.hidden ? null : this.factCard?.dataset.corner;
-    if (corner) {
-      const spotCorner = (spot.y < 0.5 ? 't' : 'b') + (spot.x < 0.5 ? 'l' : 'r');
-      if (spotCorner === corner) spot = decor.dieSpotAlt ?? { x: 1 - spot.x, y: spot.y };
-    }
-    const jitter = this.dieJitter ?? { x: 0, y: 0 };
-    return {
-      x: w * (spot.x + jitter.x),
-      y: h * (spot.y + jitter.y),
-    };
-  }
-
-  /** Kohdat, joihin maastokuvioita ei saa piirtää: kaupungit, nimet ja reitit. */
-  mapObstacles() {
-    const { board } = this.game;
-    const spots = [];
-    for (const c of board.cities) {
-      spots.push({ x: c.x, y: c.y });
-      spots.push({ x: c.x + (c.lx ?? 0), y: c.y + (c.ly ?? -20) });
-      spots.push({ x: c.x + 21, y: c.y + 17 }); // laatan paikka
-    }
-    for (const e of board.edges) {
-      const a = board.cityById.get(e.a);
-      const b = board.cityById.get(e.b);
-      const steps = Math.max(e.steps * 2, 4);
-      for (let i = 0; i <= steps; i++) {
-        const t = i / steps;
-        spots.push({ x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t });
-      }
-    }
-    return spots;
-  }
-
-  // --- kartta -------------------------------------------------------------
-
   drawBoard() {
     const { board, pack } = this.game;
     const { decor } = pack;
-    this.contentBox = this.boardBounds();
+    this.contentBox = this.kartta.boardBounds();
     this.svg.textContent = '';
 
     const maarittelyt = drawDefs(this.svg);
@@ -5158,7 +3946,7 @@ export class UI {
      * näkyvä alue on aina [0, leveys + ruudullinen]. Vasemmalle
      * puolelle ei siis koskaan katsota.
      */
-    if (this.kiertava()) {
+    if (this.kartta.kiertava()) {
       root.setAttribute('id', 'lauta-sisalto');
       const kopio = el('use', {
         class: 'lauta-kierto',
@@ -5409,7 +4197,7 @@ export class UI {
       { x: decor.compass.x, y: decor.compass.y, r: decor.compass.r + 45 },
       ...decor.waveSkip,
     ]);
-    drawTerrain(taide, pack.map, this.mapObstacles(), decor.terrainBands);
+    drawTerrain(taide, pack.map, this.kartta.mapObstacles(), decor.terrainBands);
     drawCompass(taide, decor.compass.x, decor.compass.y, decor.compass.r);
     drawDoodles(taide, decor);
 
@@ -5913,7 +4701,7 @@ export class UI {
       // ovat liian pieniä osuttaviksi (omistajan havainto). Zoomauksen
       // hoitaa paneelin oma kuuntelija (asennaPanorointi), joten tässä
       // riittää olla valitsematta kaupunkia.
-      const zoomaa = this.zoomTarpeen() && !this.aloitusZoom;
+      const zoomaa = this.kartta.zoomTarpeen() && !this.aloitusZoom;
       for (const c of game.board.cities) {
         for (const x of this.kiertoKohdat(c.x)) {
           const g = el('g', { class: 'target' }, this.targetLayer);
@@ -5984,7 +4772,7 @@ export class UI {
    * napautettavalta mutta ei ole sitä.
    */
   kiertoKohdat(x) {
-    if (!this.kiertava()) return [x];
+    if (!this.kartta.kiertava()) return [x];
     return [x, x + this.game.pack.map.width];
   }
 
@@ -7468,7 +6256,7 @@ export class UI {
     if (this.game.pack.id !== this.drawnPackId) this.drawBoardFor(this.game.pack);
     // Zoomiportaan päät ja näkyvyys tarkistetaan joka piirrossa: vaihe
     // vaihtuu, lauta vaihtuu ja automaattinen saapumiszoom muuttaa tasoa.
-    this.paivitaZoomiNapit();
+    this.kartta.paivitaZoomiNapit();
     this.drawCountryBorders();
     /*
      * Vertailutilan maakerros piirretään joka piirrossa uudestaan
@@ -9586,7 +8374,7 @@ export class UI {
       this.aloitettu = true;
       this.suljeAloitusportti();
       // Lauta siirtyy keskeltä ylös tekstin tieltä heti portin auettua.
-      this.fitViewBox();
+      this.kartta.fitViewBox();
       this.render();
     });
     keskus.appendChild(nappi);
@@ -10607,9 +9395,9 @@ export class UI {
     // Maiden tiedot on samaa perhettä: kartan tila, ei kerros. Tila
     // voi olla päällä myös kartan omasta napista, joten varusteen
     // vaihto ei saa sammuttaa sitä yksin (ks. maatiedotHalutaan).
-    tahdistaMaatiedot(this, this.maatiedotHalutaan());
+    tahdistaMaatiedot(this, this.kartta.maatiedotHalutaan());
     if (this.dead) return;
-    this.paivitaMaalehtiNappi();
+    this.kartta.paivitaMaalehtiNappi();
     this.paivitaLinssiNappi();
     this.paivitaLinssiTiedot();
     this.piirraLinssiSelite();
@@ -11859,7 +10647,7 @@ export class UI {
      * levyiseksi koko saapumisen ajaksi.
      */
     document.body.classList.remove('flight-active');
-    this.ajastaMannerZoom();
+    this.kartta.ajastaMannerZoom();
     overlay.classList.add('flight-leaving');
     await this.wait(280);
     overlay.remove();
@@ -11993,8 +10781,8 @@ export class UI {
     // kartan päällä (ks. renderActions).
     const player = this.game.player;
     this.dieJitter = { x: (Math.random() - 0.5) * 0.06, y: (Math.random() - 0.5) * 0.05 };
-    const from = this.mapToPane(pixelOf(this.game.board, player.pos));
-    const to = this.dieRestingSpot();
+    const from = this.kartta.mapToPane(pixelOf(this.game.board, player.pos));
+    const to = this.kartta.dieRestingSpot();
     this.dieThrown = true;
 
     /*
