@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v829 — kartta toimii kuten ennen (kamera omaksi moduulikseen): zoomi, panorointi, mannerzoom, lähikuvat',
   'v828 — taustapaperi ei näy enää millään ikkunamuodolla (kokeile kapea pysty- ja matala vaakaikkuna aloituskartalla ja mantereilla)',
   'v827 — Raamatun Karttalinssit-osiossa aikajana-ajo ja lavalinssi; Moduulit-osiossa M7+-hyväksyntä',
   'v826 — docs-siivous: Raamatussa Venäjä/Kabul- ja yksi otto -linjaukset; kaksi dokumenttia arkistoon',
