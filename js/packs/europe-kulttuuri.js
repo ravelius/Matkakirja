@@ -854,6 +854,27 @@ export const EUROPE_KULTTUURI = {
     },
   },
 
+  /*
+   * Tampereen litteässä taulussa on VAIN kulttuurivisa: kaupungin
+   * jutut asuvat lehdessä (kulttuuri-kategoriat.js), eivätkä ne saa
+   * näkyä kahdesti (tests/lehdet.test.mjs).
+   */
+  tampere: {
+    kysymys: {
+      q: 'Kuinka paljon korkeammalla Näsijärvi on kuin Pyhäjärvi?',
+      options: [
+        'Noin 18 metriä',
+        'Noin kolme metriä',
+        'Noin 60 metriä',
+        'Ne ovat samalla tasolla',
+      ],
+      correct: 0,
+      fact: 'Koko korkeusero purkautuu kaupungin keskustan halki '
+              + 'Tammerkoskena. Juuri se voima pyöritti puuvillatehtaan '
+              + 'koneita ennen sähköä — ja tuotti myöhemmin sähkön.',
+    },
+  },
+
   lappi: {
     kysymys: {
       q: 'Mitä näistä kielistä puhutaan vain Suomessa?',

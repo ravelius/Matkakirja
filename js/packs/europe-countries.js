@@ -418,6 +418,7 @@ export const EUROPE_CITY_COUNTRY = {
   praha: 'CZE',
   riika: 'LVA',
   tallinna: 'EST',
+  tampere: 'FIN',
   tromssa: 'NOR',
   tukholma: 'SWE',
   varsova: 'POL',

@@ -13303,6 +13303,190 @@ export const NAHTAVYYSJUTUT = {
    * kertoo temppelin ja maan tarinan, ja Uenon puisto viittaa
    * siihen vain yhdellä lauseella.
    */
+  /*
+   * TAMPERE (17.8.2026). Kuusi kohdetta, samat kuin
+   * maakartat.js:n KAUPUNKIKARTAT.tampere.kohteet — nimet ovat
+   * merkki merkiltä samat, koska ui.js yhdistää taulut nimellä.
+   * Faktat fi-Wikipedian rajapinnasta (action=query&prop=extracts),
+   * kuvat todennettu Commonsin API:sta ja katsottu silmin.
+   */
+  tampere: {
+    'Näsinneula': {
+      aika: '1971',
+      teksti: 'Näsinneula avattiin Särkänniemen niemenkärkeen vuonna 1971. '
+          + 'Kokonaiskorkeus on 168 metriä, josta itse torniosaa on 134,5 '
+          + 'metriä; loppu on huipun antennimasto. Tornia pidettiin '
+          + 'Suomen korkeimpana rakennuksena yli viisikymmentä vuotta, ja '
+          + 'näkötornina se on maan korkein yhä.'
+        + '\n\n'
+        + 'Huipulla on kaksi kerrosta: alempi on näköalatasanne ja ylempi '
+          + 'ravintola, joka pyörii akselinsa ympäri. Yksi kierros kestää '
+          + 'tunnin, eli aterian aikana ehtii nähdä sekä Näsijärven '
+          + 'pohjoiseen että Pyhäjärven etelään — ja niiden välissä koko '
+          + 'kaupungin.'
+        + '\n\n'
+        + 'Kun Tukholman Kaknäsin torni suljettiin yleisöltä vuonna 2018, '
+          + 'Näsinneulasta tuli samalla Pohjoismaiden korkein näkötorni. '
+          + 'Tornin juurella on huvipuisto, akvaario ja Sara Hildénin '
+          + 'taidemuseo.',
+      kuvat: [
+        {
+          tiedosto: 'Näsinneula tower 20230615.jpg',
+          selite: 'Näsinneulan huippu kesäisenä päivänä: betonivarren päällä '
+            + 'levenee tummalasinen kaksikerroksinen kori, jonka päältä '
+            + 'nousee ohut antennimasto. Alareunassa näkyy lehtipuiden latvoja.',
+          lahde: 'Santeri Viinamäki, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Finlaysonin tehdasalue': {
+      aika: '1820',
+      teksti: 'Skotlantilainen James Finlayson perusti konepajan Tammerkosken '
+          + 'yläjuoksun länsirannalle vuonna 1820. Hänen omia rakennuksiaan '
+          + 'ei ole enää jäljellä: hän myi tehtaan 1836, ja uudet omistajat '
+          + 'käänsivät sen puuvillatehtaaksi, joka kasvoi 1800-luvun lopulla '
+          + 'Pohjoismaiden suurimmaksi teollisuuslaitokseksi.'
+        + '\n\n'
+        + 'Tehdasalueen kuuluisin sali on Plevna, jonne sytytettiin '
+          + 'maaliskuussa 1882 sähkövalot ensimmäisenä koko Pohjolassa. '
+          + 'Virta tuli tehtaan omasta voimalaitoksesta koskessa. Salissa '
+          + 'toimii nykyään elokuvateatteri, ja saman korttelin muissa '
+          + 'taloissa on museoita, panimo, ravintoloita ja työhuoneita.'
+        + '\n\n'
+        + 'Kosken toisella rannalla on Tampellan vastaava tehdasalue. '
+          + 'Kumpikaan ei ole enää teollisuuskäytössä, mutta rakennukset '
+          + 'ovat lähes kaikki paikoillaan, ja niiden välistä pääsee '
+          + 'kävelemään kosken rantaan.',
+      kuvat: [
+        {
+          tiedosto: 'Finlayson seen from Frenckell square.jpg',
+          selite: 'Finlaysonin pitkä punatiilinen tehdasrakennus '
+            + 'Frenckellinaukion takana ilta-auringossa: viisi kerrosta '
+            + 'kaari-ikkunoita, seinässä iso Finlayson-teksti ja oikealla '
+            + 'kohoaa yksinäinen tiilipiippu.',
+          lahde: 'JIP, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Museokeskus Vapriikki': {
+      aika: '1996',
+      teksti: 'Vapriikki avattiin yleisölle syksyllä 1996 Tampellan tehtaan '
+          + 'entiseen verstaaseen Tammerkosken itärannalla. Nimi tulee '
+          + 'ruotsin tehdasta tarkoittavasta sanasta fabrik. Talon vanhimmat '
+          + 'osat ovat 1880-luvulta, ja rakennus kuuluu valtakunnallisesti '
+          + 'merkittävään Tammerkosken teollisuusmaisemaan.'
+        + '\n\n'
+        + 'Museokeskuksessa on noin 14 000 neliömetriä, josta puolet on '
+          + 'näyttelytilaa. Näyttelyt vaihtuvat tiuhaan ja käsittelevät '
+          + 'Tampereen ja Pirkanmaan historiaa, luonnontieteitä, tekniikkaa '
+          + 'ja arkeologiaa — saman katon alla ovat myös jääkiekkomuseo, '
+          + 'kenkämuseo ja luonnontieteellinen museo.'
+        + '\n\n'
+        + 'Rakennus suojeltiin asemakaavalla vuonna 1995, vuosi ennen '
+          + 'museon avaamista. Kosken puoleiselta kävelysillalta näkee '
+          + 'suoraan kuivattuun uomaan, jossa vesi juoksi ennen turbiineille.',
+      kuvat: [
+        {
+          tiedosto: 'Vapriikki.jpg',
+          selite: 'Vapriikin punatiilinen verstasrakennus koskenrannalla: '
+            + 'pitkä rivi korkeita kaari-ikkunoita, päädyssä lukee '
+            + 'VAPRIIKKI, ja edessä laskeutuu kiviverhoiltu penger '
+            + 'kosken uomaan.',
+          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hämeensilta': {
+      aika: '1929',
+      teksti: 'Hämeensilta vie kaupungin pääkadun Hämeenkadun Tammerkosken '
+          + 'yli. Se on 68 metriä pitkä yksiaukkoinen holvisilta, jonka '
+          + 'julkisivut on verhoiltu Kalvolan punertavalla graniitilla. '
+          + 'Nykyinen silta valmistui vuonna 2019, mutta se rakennettiin '
+          + 'tarkoituksella edeltäjänsä eli vuoden 1929 kivisillan näköiseksi.'
+        + '\n\n'
+        + 'Sillan kaiteilla seisoo neljä Wäinö Aaltosen pronssiveistosta '
+          + 'vuodelta 1929: metsästäjä, erämies, kauppias ja verontuoja. '
+          + 'Ne kuvaavat elinkeinoja, joilla Hämeessä on eletty, ja niitä '
+          + 'pidetään 1920-luvun klassistisen kuvanveiston merkittävimpinä '
+          + 'töinä Suomessa. Uudistuksen ajaksi patsaat siirrettiin pois ja '
+          + 'nostettiin sitten takaisin paikoilleen.'
+        + '\n\n'
+        + 'Sillalta näkee kosken molempiin suuntiin: pohjoiseen tehtaiden '
+          + 'väliin ja etelään Laukontorille, josta lähtevät Pyhäjärven '
+          + 'laivat.',
+      kuvat: [
+        {
+          tiedosto: 'Hämeensilta, Tampere.jpg',
+          selite: 'Hämeensilta vedenpinnan tasalta: leveä graniittiholvi '
+            + 'kaartuu kosken yli, kaiteella kävelee ihmisiä ja oikeassa '
+            + 'päässä erottuu vihertävä pronssipatsas jalustallaan.',
+          lahde: 'Eteil, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tampereen tuomiokirkko': {
+      aika: '1902–1907',
+      teksti: 'Kirkko rakennettiin vuosina 1902–1907 arkkitehti Lars Sonckin '
+          + 'suunnitelmien mukaan. Se tunnettiin aluksi Johanneksen kirkkona '
+          + 'ja siitä tuli Tampereen hiippakunnan tuomiokirkko vasta 1923. '
+          + 'Rakennusaine on Uudenkaupungin harmaa graniitti, jota louhittiin '
+          + 'muun muassa Lepäisten saaresta, ja tyyli on kansallisromantiikkaa: '
+          + 'karkeaksi jätetty kivi, jyrkät katot ja paksu nelisivuinen torni.'
+        + '\n\n'
+        + 'Kuuluisin osa on sisällä. Hugo Simberg maalasi holveihin ja '
+          + 'lehtereille freskot vuosina 1904–1906, ja niistä tunnetuin on '
+          + 'Haavoittunut enkeli. Kaariholvin ympäri kiertää siivekäs '
+          + 'käärme — aihe, josta seurakunnassa käytiin kiivas kiista '
+          + 'ennen kuin se sai jäädä.'
+        + '\n\n'
+        + 'Alttaritaulun maalasi Magnus Enckell. Kirkkoa ympäröi '
+          + 'Tuomiokirkonpuisto, ja se on Tampereen keskustan korkein '
+          + 'kivirakennus rautatieaseman suunnalta katsottuna.',
+      kuvat: [
+        {
+          tiedosto: 'Tampereen tuomiokirkko (T02).jpg',
+          selite: 'Tuomiokirkon torni alaviistosta: harmaata lohkokiveä, '
+            + 'jyrkkä punatiilinen huippu ja pieni kuparinvihreä risti. '
+            + 'Vasemmalla näkyy sivutornin katto ja oikealla iso kuusi.',
+          lahde: 'Old Pionear, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyynikin näkötorni': {
+      aika: '1929',
+      teksti: 'Torni valmistui Pyynikinharjun laelle vuonna 1929 '
+          + 'apulaiskaupunginarkkitehti Vilho Kolhon suunnitelmien mukaan. '
+          + 'Se on 26 metriä korkea ja tehty Ahvenanmaalta louhitusta '
+          + 'punagraniitista. Harjun laki on 152 metriä merenpinnasta, joten '
+          + 'tornin tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa.'
+        + '\n\n'
+        + 'Pyynikinharju on maailman korkein pitkittäisharju: se kohoaa '
+          + '160 metriin merenpinnasta ja 80 metriä Pyhäjärven pintaa '
+          + 'ylemmäs. Harju on soraa ja hiekkaa, ja sen rinteillä kasvaa '
+          + 'vanhoja petäjiä, joiden juuret jäävät osittain ilmaan, kun '
+          + 'hiekka vierii vuosien mittaan alaspäin.'
+        + '\n\n'
+        + 'Tornin juurella toimii munkkikahvila, joka on ainakin yhtä '
+          + 'kuuluisa kuin näköala. Sokerissa kieritetyt munkit paistetaan '
+          + 'paikan päällä, ja niiden kanssa juodaan kahvia tai simaa.',
+      kuvat: [
+        {
+          tiedosto: 'Pyynikki tower.jpg',
+          selite: 'Pyynikin punagraniittinen näkötorni mäntyjen välissä: '
+            + 'lieriömäinen torni, jonka huipulla on ikkunarivi ja lipputanko. '
+            + 'Juurella on kahvilarakennus, pöytiä ja jonottavia ihmisiä, '
+            + 'vasemmalla nousee valkopunainen radiomasto.',
+          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
   tokio: {
     'Kaminarimon': {
       aika: '941',

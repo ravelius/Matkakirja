@@ -842,9 +842,10 @@ export const MAAKARTAT = {
     lahde: 'Urutseg, Wikimedia Commons (public domain)',
     rajat: { pohjoinen: 70.4, etela: 59.5, lansi: 19.0, ita: 32.0 },
     /*
-     * Laudan Lappi-kohde on tässä Rovaniemi: se istuu napapiirillä eli
-     * kartan opettavaisimmalla näkymättömällä viivalla, ja se on se
-     * Lapin paikka, jonka suomalainen pelaaja tuntee.
+     * Laudan pohjoisin Suomen kohde (id 'lappi') on Rovaniemi: se
+     * istuu napapiirillä eli kartan opettavaisimmalla näkymättömällä
+     * viivalla, ja se on se Lapin paikka, jonka suomalainen pelaaja
+     * tuntee. Laudalla kohteen nimi on 17.8.2026 alkaen Rovaniemi.
      */
     kaupungit: [
       { nimi: 'Helsinki', lat: 60.171, lon: 24.938, paa: true },
@@ -4769,6 +4770,57 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vapahtajan kirkko', lat: 55.6729, lon: 12.594, wiki: 'Vapahtajamme kirkko' },
       { nimi: 'Rosenborgin linna', lat: 55.6859, lon: 12.5773, wiki: 'Rosenborgin linna' },
       { nimi: 'Kastellet', lat: 55.6912, lon: 12.5938, wiki: 'Kastellet (Kööpenhamina)' },
+    ],
+  },
+  tampere: {
+    polku: 'assets/kartat/tampere-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 61.509, etela: 61.489, lansi: 23.715, ita: 23.783 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 17.8.2026).
+    piirtoRajat: { pohjoinen: 61.515, etela: 61.483, lansi: 23.6946, ita: 23.8034 },
+    varikartta: 'assets/kartat/tampere-varikartta.png',
+    esittely: 'Tampere on rakennettu kannakselle kahden järven väliin. '
+      + 'Näsijärvi on kartan yläreunassa ja Pyhäjärvi alalaidassa, ja '
+      + 'niiden pinnoilla on kahdeksantoista metriä korkeuseroa. Ero '
+      + 'purkautuu Tammerkoskena, joka juoksee kartan keskellä '
+      + 'pohjoisesta etelään noin kilometrin matkan. Juuri se koski on '
+      + 'koko kaupungin syy: sen partaalle nousivat 1800-luvulla '
+      + 'puuvillatehdas, verkatehdas, paperitehdas ja konepajat, ja '
+      + 'kaupunkia alettiin kutsua Pohjolan Manchesteriksi. Isoisän '
+      + 'matkan aikaan Tampereella asui noin kuusi tuhatta ihmistä ja '
+      + 'Finlaysonin tehdas oli Pohjoismaiden suurin '
+      + 'työpaikka.\n\nKartalla kosken länsipuolella on Finlaysonin '
+      + 'punatiilinen tehdaskortteli ja itäpuolella Tampella, jonka '
+      + 'verstaassa toimii nykyään museokeskus Vapriikki. Kosken yli '
+      + 'kulkee kaupungin pääkatu Hämeenkatu, joka jatkuu oikealle '
+      + 'rautatieasemalle asti — rata näkyy kuvassa pystysuorana '
+      + 'juovana keskustan takana. Vasemmalla kohoaa Pyynikinharju, '
+      + 'maailman korkein pitkittäisharju, ja sen laella seisoo '
+      + 'punagraniittinen näkötorni. Pohjoisessa Näsijärven rantaan '
+      + 'työntyy Särkänniemen niemi, jonka kärjessä on Näsinneula. '
+      + 'Kohteet ovat kartalla pieninä piirroksina: napautus suurentaa '
+      + 'piirroksen ja tuo esiin nimikyltin, ja kyltistä aukeaa kohteen '
+      + 'oma juttu.',
+    kohteet: [
+      /*
+       * Kuusi kohdetta, kaikki tarkistettu fi-Wikipedian rajapinnasta
+       * 17.8.2026 (action=query&redirects) — yksikään otsikko ei ole
+       * täsmennyssivu eikä kaima:
+       *   Näsinneula · Finlaysonin tehdasalue · Hämeensilta ·
+       *   Tampereen tuomiokirkko · Museokeskus Vapriikki ·
+       *   Pyynikin näkötorni
+       * Hämeensillan piste on SILLALLA eli veden päällä; se on
+       * sallittua (tarkista-karttapisteet.mjs: sillat ja majakat).
+       */
+      // Torni seisoo niemen kärjessä: piste on siirretty muutaman
+      // kymmenen metriä sisämaahan, jottei numeroympyrä istu vedessä.
+      { nimi: 'Näsinneula', lat: 61.5052, lon: 23.7422, wiki: 'Näsinneula' },
+      { nimi: 'Finlaysonin tehdasalue', lat: 61.4996, lon: 23.753, wiki: 'Finlaysonin tehdasalue' },
+      { nimi: 'Museokeskus Vapriikki', lat: 61.5022, lon: 23.7657, wiki: 'Museokeskus Vapriikki' },
+      { nimi: 'Hämeensilta', lat: 61.4979, lon: 23.7626, wiki: 'Hämeensilta' },
+      { nimi: 'Tampereen tuomiokirkko', lat: 61.4966, lon: 23.7744, wiki: 'Tampereen tuomiokirkko' },
+      { nimi: 'Pyynikin näkötorni', lat: 61.4936, lon: 23.7208, wiki: 'Pyynikin näkötorni' },
     ],
   },
   dubrovnik: {
