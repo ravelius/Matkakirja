@@ -1626,7 +1626,29 @@ export class UI {
      */
     const arkit = document.querySelectorAll('dialog.arkki');
     if (!arkit.length) return;
-    const korkeus = this.mittaaNakymanKorkeus();
+    /*
+     * ROSKAMITTA EI PALAUTA dvh:TA VOIMAAN (17.8.2026).
+     *
+     * Tässä luki ennen pelkkä `mittaaNakymanKorkeus()`. Kun se palautti
+     * nollan — taustapaluun ensimmäisillä ruuduilla WKWebView ilmoittaa
+     * hetkeksi roskakorkeuden — katto POISTETTIIN ja arkki jäi CSS:n
+     * `100dvh`-säännön varaan. Juuri se dvh on kuitenkin se mitta, joka
+     * jumiutuu taustalta palatessa (sama syy kuin koko
+     * pikselimitoituksella, ks. mitoitaArkki): jos jumiin jäänyt dvh on
+     * ruutua PIENEMPI, arkki jää lyhyeksi ja sen alle jää sumennetun
+     * ::backdropin tumma kaista — sama oire, jonka omistaja näki
+     * puhelimen lehdessä (v834) ja iPadin oppaassa 17.8.2026.
+     *
+     * Roskamitalla pidetään siis viimeisin KELVOLLINEN pikselimitta.
+     * Se on aina lähempänä totuutta kuin jumiutunut dvh, ja seuraava
+     * kelvollinen mittaus (näkymävahti herää resizesta,
+     * orientationchangesta, pageshow'sta ja visibilitychangesta)
+     * korjaa sen. Vasta jos kelvollista mittaa ei ole vielä koskaan
+     * saatu, katto jätetään CSS:n huoleksi kuten ennenkin.
+     */
+    const mitattu = this.mittaaNakymanKorkeus();
+    if (mitattu) this.arkinKelpoKorkeus = mitattu;
+    const korkeus = mitattu || this.arkinKelpoKorkeus || 0;
     const juuri = getComputedStyle(document.documentElement);
     const rem = parseFloat(juuri.fontSize) || 16;
     const turva = (nimi) => parseFloat(juuri.getPropertyValue(nimi)) || 0;
