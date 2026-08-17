@@ -70,7 +70,7 @@ const MODULES = [
    * niitä checkModuleList kaataisi kokoajan.
    *
    * Kaikki muu linssikoneisto jää pois, koska yhden tiedoston versio ei
-   * saa linssejä lainkaan (docs/linssit-suunnitelma.md luku 2.1, sama
+   * saa linssejä lainkaan (docs/moduulit/linssit.md luku 2.1, sama
    * tarkoituksellinen raja kuin valokuvilla ja äänillä): js/ui.js tuo
    * kerros.js:n ja radio.js:n dynaamisesti, ja niiden tuonti kaatuu
    * täällä hallitusti.

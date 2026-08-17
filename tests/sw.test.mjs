@@ -112,7 +112,7 @@ test('linssimoduuleissa ei ole SVG-suodattimia', () => {
   assert.deepEqual(loydot, [],
     'linssikerroksessa ei saa olla SVG-suodattimia: iOS:n webapp-tila palauttaa '
     + 'suodatetun kerroksen tyhjänä taustalta palatessa. Esilaske pehmeys kuvaan '
-    + 'tai <pattern>-laattaan (docs/linssit-suunnitelma.md luku 1.7)');
+    + 'tai <pattern>-laattaan (docs/moduulit/linssit.md luku 1.7)');
 });
 
 /*
@@ -128,7 +128,7 @@ test('linssimoduuleissa ei ole SVG-suodattimia', () => {
  * Linssimoduulit (js/linssit/) EIVÄT kuulu listalle: ne tuodaan
  * dynaamisesti ja yhden tiedoston versio jää tarkoituksella ilman
  * linssejä, kuten se jää ilman valokuvia ja ääniä
- * (docs/linssit-suunnitelma.md luku 2.1). Siksi tämä testi vertaa vain
+ * (docs/moduulit/linssit.md luku 2.1). Siksi tämä testi vertaa vain
  * karttapaketteja.
  *
  * NIPUTTAMATTOMAT-poikkeuslista (moduuliremontin M0b, 17.8.2026,
