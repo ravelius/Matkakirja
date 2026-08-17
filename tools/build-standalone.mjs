@@ -44,7 +44,6 @@ const MODULES = [
   'js/packs/oceania-valokuvat.js',
   'js/packs/asia-maatiedot.js',
   'js/packs/radiot.js',
-  'js/packs/viritysaanet.js',
   'js/packs/europe-kulttuuri.js',
   'js/packs/kulttuuri-kategoriat.js',
   'js/packs/maa-kategoriat.js',
@@ -55,7 +54,6 @@ const MODULES = [
   'js/packs/henkilot.js',
   'js/packs/saatiedot.js',
   'js/packs/kohtaamiset.js',
-  'js/packs/paivan-kuvat.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).
   'js/uutiset.js',
@@ -106,15 +104,15 @@ const MODULES = [
    * Kunnollinen korjaus on kääriä jokainen moduuli omaan sulkeumaansa;
    * se on yhä oma työnsä.
    *
-   * HUOMIO (moduuliremontin M0, 17.8.2026): listalla on ~19 pakettia,
-   * joita mikään listan moduuli ei tuo staattisesti (linssipakat,
-   * koelaudat, asteaineistot, viritysäänet, päivän kuvat) — niputuksessa
-   * ne ovat kuollutta painoa (~1,4 Mt) ja pelkkää törmäyspintaa. Niitä
-   * EI poistettu tässä, koska tests/sw.test.mjs vaatii kaikki
-   * js/packs-tiedostot listalle — kaksi vartijaa vaatii vastakkaista,
-   * ja ristiriidan purku on kirjattu Fablelle päätettäväksi.
-   * Nimitörmäykset, kaksoislistaukset ja järjestysvirheet vartioi nyt
-   * tools/tarkista-niputus.mjs, jonka CI ajaa joka PR:lle.
+   * M0b (17.8.2026, päätoimittajan päätös): NS-törmäyksen sääntö
+   * pätee nyt koko listaan — 21 pakettia, joita mikään listan
+   * moduuli ei tuo staattisesti (linssipakat, koelaudat,
+   * asteaineistot, viritysäänet, päivän kuvat), poistettiin
+   * kuolleena painona (~1,4 Mt). Tarkoituksella niputtamattomat
+   * paketit kirjataan tests/sw.test.mjs:n NIPUTTAMATTOMAT-listaan
+   * perusteluineen; tools/tarkista-niputus.mjs kaataa ajon, jos
+   * listalle jää tuomaton moduuli, ja sw-testi kaatuu, jos paketti
+   * puuttuu molemmilta listoilta.
    */
   // passport ennen omistusta: omistus.js tuo sen staattisesti.
   'js/passport.js',
@@ -156,35 +154,16 @@ const MODULES = [
   'js/packs/northamerica.js',
   'js/packs/southamerica-questions.js',
   'js/packs/southamerica.js',
-  'js/packs/suomi-questions.js',
-  'js/packs/suomi.js',
-  'js/packs/istanbul-questions.js',
-  'js/packs/istanbul.js',
   // Sama syy kuin edellä: maailmankartta.js lukee MAAILMANKARTAN_MAASTOn
   // moduulitasolla, joten maasto on niputettava ensin.
   'js/packs/maailmankartta-maasto.js',
   'js/packs/maailmankartta.js',
   'js/packs/maailmankartta-nimet.js',
-  'js/packs/maasto-vedet.js',
-  'js/packs/maasto-korkeus.js',
-  'js/packs/maasto-nimet-vuoret.js',
   'js/packs/vuori-valokuvat.js',
-  'js/packs/maasto-nimet-vedet.js',
   'js/packs/maailmankartta-syvyys.js',
   'js/packs/maasto-tekstit-malli.js',
   'js/packs/maasto-tekstit.js',
   'js/packs/maailmankartta-varjostus.js',
-  'js/packs/linssi-topografia.js',
-  'js/packs/linssi-maaluvut.js',
-  'js/packs/linssi-muuttoliike.js',
-  'js/packs/linssi-historia.js',
-  'js/packs/linssi-leviaminen.js',
-  'js/packs/linssi-ilmasto.js',
-  'js/packs/linssi-kielet.js',
-  'js/packs/linssi-tahdet.js',
-  'js/packs/linssi-tuulet.js',
-  'js/packs/linssi-yokartta.js',
-  'js/packs/linssi-topografia-kuva.js',
   'js/pack.js',
   /*
    * iOS-kuoren kytkennät. Yhden tiedoston versiossa siltaa ei ole

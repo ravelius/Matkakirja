@@ -130,7 +130,51 @@ test('linssimoduuleissa ei ole SVG-suodattimia', () => {
  * linssejä, kuten se jää ilman valokuvia ja ääniä
  * (docs/linssit-suunnitelma.md luku 2.1). Siksi tämä testi vertaa vain
  * karttapaketteja.
+ *
+ * NIPUTTAMATTOMAT-poikkeuslista (moduuliremontin M0b, 17.8.2026,
+ * päätoimittajan päätös): paketti, jota mikään MODULES-listan moduuli
+ * ei tuo staattisesti, on niputuksessa pelkkää kuollutta painoa ja
+ * törmäyspintaa (NS-törmäyksen oppi build-standalonen kommentissa) —
+ * selaimessa data jää saavuttamattomaksi, koska dynaaminen import
+ * kaatuu yhden tiedoston versiossa joka tapauksessa. Tällaiset paketit
+ * listataan tähän NIMELTÄ, jotta poisjättö on aina tietoinen päätös
+ * eikä unohdus: tuntematon puuttuva paketti kaataa testin edelleen.
+ * Symmetrian vartija alla estää tiedoston olemisen molemmilla
+ * listoilla, ja tools/tarkista-niputus.mjs kaataa ajon, jos listattu
+ * moduuli jää ilman tuojaa.
  */
+const NIPUTTAMATTOMAT = new Set([
+  // Linssien aineistopaketit: vain linssimoduulit (js/linssit/) tuovat
+  // näitä, ja ne jäävät listalta pois yllä kerrotusta syystä.
+  'js/packs/linssi-historia.js',
+  'js/packs/linssi-ilmasto.js',
+  'js/packs/linssi-kielet.js',
+  'js/packs/linssi-leviaminen.js',
+  'js/packs/linssi-maaluvut.js',
+  'js/packs/linssi-muuttoliike.js',
+  'js/packs/linssi-tahdet.js',
+  'js/packs/linssi-topografia-kuva.js',
+  'js/packs/linssi-topografia.js',
+  'js/packs/linssi-tuulet.js',
+  'js/packs/linssi-yokartta.js',
+  // Koelaudat poistettiin pelin rekisteristä (js/pack.js) — tiedostot
+  // jäävät repoon mahdollista myöhempää käyttöä varten.
+  'js/packs/istanbul-questions.js',
+  'js/packs/istanbul.js',
+  'js/packs/suomi-questions.js',
+  'js/packs/suomi.js',
+  // Asteaineistot: lähdedataa, josta projisoidut versiot on jo
+  // niputettu (maailmankartta-maasto, maailmankartta-nimet).
+  'js/packs/maasto-korkeus.js',
+  'js/packs/maasto-nimet-vedet.js',
+  'js/packs/maasto-nimet-vuoret.js',
+  'js/packs/maasto-vedet.js',
+  // Radiosoittimen ja päivän kuvien aineistot: tuojat (viritin.js,
+  // työhuone) eivät ole niputuksessa.
+  'js/packs/viritysaanet.js',
+  'js/packs/paivan-kuvat.js',
+]);
+
 test('yhden tiedoston versio niputtaa kaikki karttapaketit', () => {
   const kokooja = readFileSync(join(JUURI, 'tools/build-standalone.mjs'), 'utf8');
   const lohko = kokooja.match(/const MODULES = \[([\s\S]*?)\n\];/);
@@ -139,10 +183,20 @@ test('yhden tiedoston versio niputtaa kaikki karttapaketit', () => {
     .filter((rivi) => !kommenttirivi(rivi))
     .flatMap((rivi) => [...rivi.matchAll(/'([^']+)'/g)].map((m) => m[1]));
 
-  const unohtui = moduulitLevylla('js/packs').filter((p) => !listatut.includes(p));
+  const unohtui = moduulitLevylla('js/packs')
+    .filter((p) => !listatut.includes(p) && !NIPUTTAMATTOMAT.has(p));
   assert.deepEqual(unohtui, [],
     'nämä karttapaketit puuttuvat tools/build-standalone.mjs:n MODULES-listalta — '
-    + 'yhden tiedoston versio jäisi vajaaksi');
+    + 'yhden tiedoston versio jäisi vajaaksi. Jos poisjättö on tarkoitus, '
+    + 'kirjaa paketti NIPUTTAMATTOMAT-listaan perusteluineen');
+
+  const tuplana = listatut.filter((p) => NIPUTTAMATTOMAT.has(p));
+  assert.deepEqual(tuplana, [],
+    'paketti on sekä MODULES- että NIPUTTAMATTOMAT-listalla — poista toisesta');
+
+  const kadonneet = [...NIPUTTAMATTOMAT].filter((p) => !existsSync(join(JUURI, p)));
+  assert.deepEqual(kadonneet, [],
+    'NIPUTTAMATTOMAT viittaa paketteihin joita ei enää ole — siivoa lista');
 
   const haamut = listatut.filter((p) => p.startsWith('js/packs/') && !existsSync(join(JUURI, p)));
   assert.deepEqual(haamut, [],
