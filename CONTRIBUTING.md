@@ -143,7 +143,7 @@ Vaiheet:
 Linssi on läpikuultava karttakerros, joka selittää maailmaa: ilmastovyöhykkeet,
 korkeuserot, muuttoliike, yön valot. Pelaaja ansaitsee linssit laattojen alta ja
 kokemuspisteillä, ja kerrallaan päällä on tarkalleen yksi. Koko rakennusohje
-perusteluineen on [docs/linssit-suunnitelma.md](docs/linssit-suunnitelma.md);
+perusteluineen on [docs/moduulit/linssit.md](docs/moduulit/linssit.md);
 tässä on se, mitä tekijän pitää tehdä.
 
 Tunnus (esim. `ilmasto`) on sama joka paikassa: tiedostonimi, rekisterin avain ja
@@ -274,7 +274,7 @@ Mitä testit vahtivat:
   (Helsinki, Sydney, laudan reunat).
 
 Ennen kuin linssi on valmis, käy läpi tarkistuslista
-[docs/linssit-suunnitelma.md](docs/linssit-suunnitelma.md) luvusta 9.
+[docs/moduulit/linssit.md](docs/moduulit/linssit.md) luvusta 9.
 
 ## Ennen pull requestia
 
