@@ -1325,6 +1325,15 @@ export const NORTHAMERICA_VALOKUVAT = {
         + 'keskustassa savitiilityyliä myös uusilta taloilta.',
     },
   },
+  sitka: {
+    tiedosto: 'Sitka, AK - breakwater, Crescent Harbor, and skyline 01.jpg',
+    vuosi: '2023',
+    lahde: 'Joe Mabel, Commons (CC BY-SA 4.0)',
+    selite: 'Crescent Harborin aallonmurtaja ja kalastuslaivasto Sitkassa. '
+      + 'Kaupunki oli Venäjän Amerikan pääkaupunki turkiskaupan aikaan ja '
+      + 'siirtyi Yhdysvalloille 1867, kun Alaska myytiin; meri elättää sen '
+      + 'yhä, vaikka saaliina ovat nyt turkisten sijasta kala ja ravut.',
+  },
   stjohns: {
     tiedosto: 'Artist sketching the St. John\'s Harbour and skyline (c. 1910).jpg',
     vuosi: 'noin 1890',

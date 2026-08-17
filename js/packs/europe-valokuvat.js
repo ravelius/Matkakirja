@@ -1205,6 +1205,15 @@ export const EUROPE_VALOKUVAT = {
     },
   },
 
+  sevilla: {
+    tiedosto: 'The cathedral and some roofs over Seville Spain.jpg',
+    vuosi: '2012',
+    lahde: 'Jebulon, Commons (CC0)',
+    selite: 'Sevillan katedraali ja Giralda-torni kattojen yli Kultaisesta '
+      + 'tornista katsottuna. Torni oli alun perin moskeijan minareetti; '
+      + 'kellotapuli ja tuulikukko lisättiin sen päälle vasta 1500-luvulla, '
+      + 'ja alaosan tiiliverkko on yhä 1100-luvulta.',
+  },
   barcelona: {
 
     lisat: [
@@ -2527,6 +2536,15 @@ export const EUROPE_VALOKUVAT = {
     },
   },
 
+  bergen: {
+    tiedosto: 'Bergen.Bryggen.1.jpg',
+    vuosi: '2008',
+    lahde: 'Erik Christensen, Commons (CC BY-SA 3.0)',
+    selite: 'Bryggen eli hansakauppiaiden ranta Bergenissä. Kapeat puutalot '
+      + 'seisovat yhä samoilla kivijaloilla kuin keskiajalla, vaikka ranta '
+      + 'on palanut ja noussut uudelleen monta kertaa. Kylttien kalannimet '
+      + 'kertovat, millä kaupungilla vaurautensa tehtiin: kuivatulla turskalla.',
+  },
   kobenhavn: {
 
     lisat: [
