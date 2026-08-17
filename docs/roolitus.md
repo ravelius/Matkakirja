@@ -93,7 +93,8 @@ Työtapa on siksi tämä:
 | Rooli | Sessio-id | Kirjattu |
 | --- | --- | --- |
 | Fable | session_018vkp6HxpLR4gxZJFGscSan (uuden tilin päätoimittajasessio, kapulanvaihdon jatkaja; edellinen: session_01BPysCfxscsVyzAEYmb88Zr) | 14.8.2026 |
-| Opus sijaispäätoimittaja | session_01UYGkdCJHbFNwexqqHJ9SqA (hoitaa Fablen orkestroinnin 16.8.2026 loppuun asti Fablen viikkolimiitin ajan; omistaja ohjaa suoraan. Fable palaa 17.8. Ei kirjoita Raamattuun eikä kaanoniin — linjaustason havainnot kootaan Fablelle luovutuspaperiin.) | 16.8.2026 |
+| Opus sijaispäätoimittaja | session_01UYGkdCJHbFNwexqqHJ9SqA (hoiti Fablen orkestroinnin 16.–17.8. viikkolimiitin ajan erinomaisesti: v782–v805, mm. paketti O3, oppaan monistus, sääennusteet, iPad-korjaukset. Fable palasi 17.8. aamulla — sijainen jatkaa työsessiona ja raportoi VAIN Fablelle (omistajan ohje 17.8.); työjono docs/tyolista-opukselle.md, seuraavana kuuden oppaan sarjan loppu + paketti O5. Ei kirjoita Raamattuun eikä kaanoniin.) | 17.8.2026 |
+| Fable Max (remontti) | session_01Q1M9ZT5Yr1Gbi3eqUyoHHC (moduulirakenne + dokumenttiremontti docs/tyolista-maxille.md:n mukaan, haara claude/fable-max-remontti; SUUNNITELMA ensin, toteutus vasta omistajan hyväksynnällä; Fable-roolin sessio eli saa kirjoittaa Raamattuun koordinoidusti) | 17.8.2026 |
 | Opus 6 (Siperia-lehdet) | — ARKISTOITU 15.8. klo 23:05Z: erät 1–2 mainissa (v659/v663/v673), mutta sessio ei enää herännyt trigger-viesteihin (toimitusvika). Erä 3 siirtyi Opus 9:lle. | 15.8.2026 |
 | Opus 7 (satelliittikartta) | — ARKISTOITU 15.8.: pilotti 1 mainissa (v658), zoom-toimeksianto ei koskaan tavoittanut (toimitusvika). Pilotti 2 siirtyi Opus 11:lle. | 15.8.2026 |
 | Opus 8 (kuvatekstit) | — ARKISTOITU 15.8.: vaiheen 1 kartoitus valmis haaralla claude/opus8-kuvatekstit (551/3582 yli rajan, mittatyökalu tools/kuvateksti-audit.mjs), herätykset eivät tavoittaneet. Korjauserät siirtyivät Opus 10:lle. | 15.8.2026 |

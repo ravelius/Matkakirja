@@ -212,6 +212,44 @@ Tripoli on jo paketissa O6, joten se putoaa tästä listasta pois.
   `africa-valokuvat.js` ja `africa-maatiedot.js` sisältävät jo
   tarkistettua aineistoa jokaisesta kohteesta.
 
+## Paketti O5: omistajan päätökset 17.8. — Matkakassa pois + 9 säätöntä kohdetta (sijaispäätoimittajalle, tilattu 17.8.2026)
+
+Fable kirjasi omistajan aamun 17.8. päätökset. Kaksi pientä osaa:
+
+### Osa 1: Matkakassa-osio pois oppaista (omistajan päätös)
+
+Omistaja: "tämä osio voidaan poistaa. Riittää kun sivun alussa on
+plus- tai miinuslistalla onko halpa vai kallis kohde."
+
+- Poista Matkakassa-laatikko oppaan taitosta (`opasKassa` + CSS +
+  `matkailu.hinnat`/`hintataso`-kenttien käyttö ja Pariisin data).
+  Kuollutta koodia ei jätetä. Tämä kuittaa samalla avoimen
+  €€€-asteikko-havainnon (asteikkoa ei enää näytetä) ja poistaa
+  viiden uuden oppaan Matkakassa-aukon (hintalähteitä ei tarvita).
+- Varmista, että jokaisen oppaan kainalotaulussa hintataso näkyy:
+  halpa kohde plussana (Parasta täällä) tai kallis miinuksena
+  (Hyvä tietää). Pariisilla on jo "Hintataso"-rivi; lisää vastaava
+  rivi muihin oppaisiin niiden omalla faktapohjalla.
+- Linjaus on Raamatussa (Kaupungit-osio, kirjattu v807:ssä).
+
+### Osa 2: sääennuste yhdeksälle kohteelle likikoordinaateilla
+
+Omistaja: "arvioi joku paikka suurinpiirtein." Fable valitsi
+edustuspisteet — laske ERA5-normaalit (1991–2020) samalla
+menetelmällä kuin 32 kaupungin erässä:
+
+| kohde | piste | lat | lon |
+| --- | --- | --- | --- |
+| islanti | Reykjavík | 64.15 | -21.94 |
+| lappi | Rovaniemi | 66.50 | 25.73 |
+| kreeta | Heraklion | 35.34 | 25.14 |
+| sisilia | Palermo | 38.12 | 13.36 |
+| alpit | Innsbruck | 47.27 | 11.39 |
+| sana | Sanaa | 15.35 | 44.21 |
+| aden | Aden | 12.79 | 45.03 |
+| salalah | Salalah | 17.02 | 54.09 |
+| mosul | Mosul | 36.34 | 43.13 |
+
 ## Paketti O4: Nähtävyyksiä lisää (Pariisi pilottina, tilattu 16.8.2026) 🟡 KESKEN
 
 **Kuittaus (Opus 16.8.2026):** Pariisi 8 → **11 kohdetta** (v788):
