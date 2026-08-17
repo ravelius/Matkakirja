@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 842, teksti: 'Karusellinuolten tummennus pois kuvien laidoista' },
   { v: 841, teksti: 'Syvä lähikuva tarkentuu odottamatta puskurirengasta' },
   { v: 840, teksti: 'Oppaan karussellikuvan yläpuolinen tumma palkki pois' },
   { v: 839, teksti: 'Kartta tarkentuu heti nopean zoomailun jälkeen' },
