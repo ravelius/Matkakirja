@@ -5,6 +5,59 @@
 // source = osoite, josta tieto on tarkistettu. Merkitään vain luetuista lähteistä.
 
 export const SOUTHAMERICA_QUESTIONS = {
+  ouropreto: [
+    {
+      q: 'Minkä maan kaupunki Ouro Preto on?',
+      options: ['Brasilia', 'Peru', 'Kolumbia', 'Bolivia'],
+      correct: 0,
+      level: 1,
+      hint: 'Maa on maanosansa suurin, ja siellä puhutaan portugalia.',
+      fact: 'Ouro Preto on Minas Geraisin osavaltiossa, ja siellä oli vuonna 2016 noin 74 000 asukasta.',
+      source: 'https://fi.wikipedia.org/wiki/Ouro_Preto',
+    },
+    {
+      q: 'Mitä kaupungin nimi Ouro Preto tarkoittaa?',
+      options: ['musta kulta', 'korkea vuori', 'pyhä lähde', 'vanha silta'],
+      correct: 0,
+      level: 2,
+      hint: 'Nimi viittaa malmiin, jota alueelta louhittiin — ja sen tummaan sävyyn.',
+      fact: 'Kaupunki perustettiin 1600-luvun lopussa ja oli Brasilian kultaryntäyksen keskipisteitä 1700-luvulla.',
+      source: 'https://fi.wikipedia.org/wiki/Ouro_Preto',
+    },
+    {
+      q: 'Minkä ansiosta Ouro Preto valittiin Unescon maailmanperintöluetteloon?',
+      options: [
+        'barokkiarkkitehtuurinsa',
+        'luolamaalaustensa',
+        'sademetsänsä',
+        'satamansa',
+      ],
+      correct: 0,
+      level: 2,
+      hint: 'Kaupunki on säilyttänyt siirtomaa-aikaisen asunsa lähes sellaisenaan.',
+      fact: 'Kullalla koristellut kirkot ja kuvanveistäjä Aleijadinhon työt tekivät kaupungista kuuluisan.',
+      source: 'https://fi.wikipedia.org/wiki/Ouro_Preto',
+    },
+    {
+      q: 'Minkä liikkeen lähtöpaikka Ouro Preto oli vuonna 1789?',
+      options: ['Inconfidência Mineira', 'Cabanagem', 'Sabinada', 'Farroupilha'],
+      correct: 0,
+      level: 3,
+      hint: 'Liike halusi irrottaa maan Portugalista ja perustaa tasavallan.',
+      fact: 'Kaupungissa vaikuttivat myös taidemaalari Mestre Athayde ja runoilija Thomas Gonzaga.',
+      source: 'https://fi.wikipedia.org/wiki/Ouro_Preto',
+    },
+    {
+      q: 'Minkä osavaltion alueella Ouro Preto sijaitsee?',
+      options: ['Minas Gerais', 'Bahia', 'Pará', 'Amazonas'],
+      correct: 0,
+      level: 3,
+      hint: 'Osavaltion nimi tarkoittaa portugaliksi yleisiä kaivoksia.',
+      fact: 'Kaupunkiin perustettiin vuonna 1876 kaivostekniikkakoulu Escola de Minas.',
+      source: 'https://fi.wikipedia.org/wiki/Ouro_Preto',
+    },
+  ],
+
   caracas: [
     {
       q: 'Minkä maan pääkaupunki Caracas on?',
@@ -1951,6 +2004,15 @@ export const SOUTHAMERICA_FACTS = {
     'Panaman kannas mutkittelee niin, että kanavassa purjehditaan Atlantilta Tyynellemerelle luoteesta kaakkoon.',
     {
       text: 'Kannas on kapeimmillaan päivän matka, ja täällä puhutaan kanavan kaivamisesta merestä toiseen. Ranskalaiset aikovat yrittää; pidän suunnitelmaa liian optimistisena.',
+      voice: 'isoisa',
+    },
+  ],
+  ouropreto: [
+    { text: 'Ouro Preto tarkoittaa mustaa kultaa. Kaupunki perustettiin 1600-luvun lopussa ja oli Brasilian kultaryntäyksen keskipisteitä 1700-luvulla.', source: 'https://fi.wikipedia.org/wiki/Ouro_Preto' },
+    { text: 'Kaupunki on Unescon maailmanperintökohde barokkiarkkitehtuurinsa ansiosta, ja siellä on säilynyt siirtomaa-aikainen asu lähes kokonaan.', source: 'https://fi.wikipedia.org/wiki/Ouro_Preto' },
+    { text: 'Vuonna 1789 kaupungista käynnistyi Inconfidência Mineira -liike, joka tähtäsi Brasilian irrottamiseen Portugalista.', source: 'https://fi.wikipedia.org/wiki/Ouro_Preto' },
+    {
+      text: 'Vuoren kupeessa on kirkkoja enemmän kuin kujia, ja jokainen niistä on kullattu sillä, mikä louhittiin sen alta. Kultaryntäys loppui sata vuotta sitten, ja kaupunki jäi paikoilleen kuin unohtunut kello.',
       voice: 'isoisa',
     },
   ],
