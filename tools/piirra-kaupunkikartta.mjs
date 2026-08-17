@@ -468,6 +468,28 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 41.9135, etela: 41.8845, lansi: 12.4455, ita: 12.5005 },
     laajennus: 1.6,
   },
+  firenze: {
+    // Arno halkoo kuvan vaakasuoraan alakolmanneksesta, ja kaikki
+    // kuusi kohdetta ovat sen molemmin puolin kävelymatkan päässä
+    // toisistaan: Duomo, Palazzo Vecchio, Uffizi ja Santa Croce
+    // pohjoisrannalla, Ponte Vecchio joen päällä ja Boboli
+    // eteläpuolella Pitti-palatsin takana.
+    //
+    // Rajaus on tarkoituksella PIENI (2,2 × 1,9 km), ja se on mitattu
+    // päätös. Ensimmäinen ajo 2,7 × 2,6 km:n ruudulla näytti
+    // Firenzen keskiaikaisen ytimen pikkuruisena täplänä keskellä
+    // 1800-luvun kehäkatuja, ja kaksi kohdetta kuudesta (Palazzo
+    // Vecchio ja Uffizi, 180 m toisistaan) jäivät numeroympyröinä
+    // päällekkäin. Tiukempi ruutu kasvattaa kohteiden välit ilman
+    // että yksikään jää ulkopuolelle — ja se näyttää juuri sen, mikä
+    // Firenzessä on katsomisen arvoista: kujaverkon Duomon ympärillä.
+    // Piazzale Michelangelo (43.7629) jää etelärajan alle — se ei ole
+    // kartan kohde vaan reunuksen maisemapiste.
+    //
+    // Ei merta: Ligurianmeri on 80 km lännessä.
+    rajat: { pohjoinen: 43.778, etela: 43.7605, lansi: 11.243, ita: 11.27 },
+    laajennus: 1.6,
+  },
   krakova: {
     // Planty on kuvan juoni: purettu kaupunginmuuri jätti soikean
     // puistokehän, ja sen sisällä on keskiaikainen ruutukaava

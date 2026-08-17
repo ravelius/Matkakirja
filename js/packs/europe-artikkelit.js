@@ -450,6 +450,42 @@ export const EUROPE_ARTIKKELIT = {
     lahde: 'Wikipedia (CC BY-SA)',
   },
 
+  Firenze: {
+    intro: 'Firenze on Toscanan pääkaupunki Arno-joen varrella, ja siellä '
+      + 'asuu noin 360 000 ihmistä. Vanhakaupunki on niin pieni, että sen '
+      + 'kävelee ristiin puolessa tunnissa — ja juuri siitä kaupungista '
+      + 'renessanssi lähti liikkeelle.',
+    teksti: 'Firenze perustettiin roomalaisten sotilaskaupungiksi vuonna 59 '
+      + 'eaa., ja sen suorakulmainen ruutukaava näkyy keskustan kaduissa '
+      + 'yhä. Keskiajalla kaupunki rikastui villakankaasta ja pankeista. '
+      + 'Vuonna 1252 se alkoi lyödä omaa kultarahaa, floriinia, ja siitä '
+      + 'tuli niin luotettu, että sillä maksettiin velkoja ympäri '
+      + 'Eurooppaa. Rahan takana olivat pankkiirisuvut, joista '
+      + 'mahtavimmaksi nousi Medici.\n\n'
+      + 'Medicit eivät olleet ruhtinaita vaan kauppiaita, ja he ostivat '
+      + 'valtansa rahalla ja taiteella. He tilasivat töitä Donatellolta, '
+      + 'Botticellilta, Leonardolta ja Michelangelolta, ja heidän '
+      + 'kaupungissaan syntyi se, mitä nykyään kutsutaan renessanssiksi: '
+      + 'ajatus siitä, että ihminen ja hänen mittansa kuuluvat taiteen ja '
+      + 'tieteen keskiöön. Filippo Brunelleschi muurasi tuomiokirkkoon '
+      + 'kupolin, jota kukaan ei ollut osannut rakentaa sadan vuoden '
+      + 'aikana — se valmistui 1436 ja on yhä maailman suurin tiilikupoli.'
+      + '\n\nFirenzeläinen Dante Alighieri kirjoitti Jumalaisen näytelmän '
+      + 'latinan sijaan oman kaupunkinsa puhekielellä, ja siitä kehittyi '
+      + 'nykyinen italian kirjakieli. Firenzestä on siis lähtöisin sekä '
+      + 'maan kieli että sen taide — ja lyhyen aikaa myös sen hallitus: '
+      + 'kaupunki oli Italian pääkaupunki vuosina 1865–1871, kunnes '
+      + 'hallitus muutti Roomaan. Noiden kuuden vuoden aikana kaupungin '
+      + 'muurit purettiin ja niiden tilalle rakennettiin leveät kehäkadut.'
+      + '\n\nArno on antanut kaupungille kaupan ja vienyt siltä paljon. '
+      + '4. marraskuuta 1966 joki tulvi yli äyräiden, vesi nousi '
+      + 'keskustassa paikoin yli neljän metrin ja liejua jäi kirjastoihin '
+      + 'ja kirkkoihin. Tuhansia teoksia pelastivat nuoret vapaaehtoiset, '
+      + 'joita alettiin kutsua nimellä angeli del fango, mudan enkelit. '
+      + 'Osaa kirjoista kunnostetaan yhä.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
   Dubrovnik: {
     intro: 'Dubrovnik on muurien ympäröimä satamakaupunki Kroatian '
       + 'eteläkärjessä Adrianmeren rannalla. Vanhaa kaupunkia kiertää '

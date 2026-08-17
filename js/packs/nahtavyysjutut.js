@@ -20,6 +20,236 @@
  */
 
 export const NAHTAVYYSJUTUT = {
+  firenze: {
+    Duomo: {
+      aika: '1296–1436',
+      teksti: 'Firenzen tuomiokirkon eli Santa Maria del Fioren '
+          + 'peruskivi laskettiin vuonna 1296, ja rakennustyötä johti '
+          + 'ensin Arnolfo di Cambio. Kirkosta tehtiin tahallaan '
+          + 'valtava — kaupunki halusi Pisaa ja Sienaa suuremman — ja '
+          + 'juuri siitä syntyi ongelma, jota kukaan ei osannut '
+          + 'ratkaista: aukko kuorin päällä oli 45 metriä leveä, '
+          + 'eikä sellaista holvia ollut Rooman jälkeen rakennettu. '
+          + 'Aukko oli auki taivaalle yli sata vuotta.'
+        + '\n\n'
+        + 'Vuonna 1418 kaupunki järjesti kilpailun, ja sen voitti '
+          + 'kultaseppä Filippo Brunelleschi. Hänen ratkaisunsa oli '
+          + 'kaksi kuorta sisäkkäin ja tiilet ladottuna '
+          + 'kalanruotokuvioon, jolloin muuraus kannatti itse itsensä '
+          + 'työn edetessä eikä koko aukon täyttävää puutelinettä '
+          + 'tarvittu. Tiiliä kului yli neljä miljoonaa. Kupoli '
+          + 'valmistui 1436, ja se on yhä maailman suurin tiilistä '
+          + 'muurattu kupoli.'
+        + '\n\n'
+        + 'Marmorijulkisivu on paljon nuorempi kuin kirkko: '
+          + 'alkuperäinen jäi kesken, ja nykyinen valko-viher-punainen '
+          + 'julkisivu valmistui vasta vuonna 1887. Viereinen '
+          + 'kellotorni on Giotton suunnittelema, ja sen huipulle '
+          + 'kiipeää 414 porrasta.',
+      kuvat: [
+        {
+          tiedosto: 'Florence, Duomo di Firenze.jpg',
+          selite: 'Tuomiokirkon itäpää, kellotorni ja etualalla '
+            + 'kahdeksankulmainen kastekappale. Kaikki kolme on '
+            + 'vuorattu valkoisella, vihreällä ja punaisella marmorilla, '
+            + 'ja takana kohoaa tiilikupoli.',
+          lahde: 'George M. Groutas, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'The Facade of Cattedrale di Santa Maria del Fiore (Cathedral of Saint Mary of the Flowers), Florence.jpg',
+          selite: 'Julkisivun keskiportaali läheltä. Marmorikuvio jatkuu '
+            + 'seinästä toiseen pikkuruisiin yksityiskohtiin asti, ja '
+            + 'oven yläpuolella on kultapohjainen mosaiikki.',
+          lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palazzo Vecchio': {
+      aika: '1299–1314',
+      teksti: 'Palazzo Vecchio rakennettiin kaupungin hallituksen '
+          + 'taloksi vuosina 1299–1314. Se näyttää linnalta, ja se on '
+          + 'linna: paksut kiviseinät, ampuma-aukot ja 94 metriä '
+          + 'korkea torni kertovat ajasta, jolloin kaupungin sisäiset '
+          + 'riidat ratkottiin aseilla. Talossa istui Signoria, '
+          + 'kaupungin yhdeksän valittua hallitusmiestä, jotka asuivat '
+          + 'virkakautensa ajan sisällä eivätkä saaneet poistua.'
+        + '\n\n'
+        + 'Vuonna 1540 Cosimo I de\' Medici muutti taloon, ja hän '
+          + 'muutti sen palatsiksi. Kun hovi siirtyi 1565 joen toiselle '
+          + 'puolelle Pitti-palatsiin, vanha talo sai nimen Palazzo '
+          + 'Vecchio, "vanha palatsi". Sisällä on Viidensadan sali, '
+          + 'joka rakennettiin 1494 suurta kansanneuvostoa varten ja '
+          + 'jonka seiniä Leonardo da Vinci ja Michelangelo saivat '
+          + 'saman aikaan maalattavakseen — kumpikaan ei saanut työtään '
+          + 'valmiiksi.'
+        + '\n\n'
+        + 'Oven vieressä seisoo Michelangelon Davidin kopio. '
+          + 'Alkuperäinen seisoi paikalla vuodesta 1504 aina vuoteen '
+          + '1873, jolloin se siirrettiin sään takia sisätiloihin '
+          + 'Accademian museoon. Talo on yhä Firenzen kaupungintalo.',
+      kuvat: [
+        {
+          tiedosto: 'Italie, Florence, Piazza della Signoria, Palazzo Vecchio (1299-1314), Torre di Arnolfo et les blasons (50130860426).jpg',
+          selite: 'Julkisivu alaviistosta: karkeaa kiveä, kaksoisikkunoita ja '
+            + 'ylimpänä ulkoneva ampumakäytävä. Sen kaarissa on rivi '
+            + 'maalattuja vaakunoita, ja takaa nousee Arnolfon torni '
+            + 'kellotauluineen.',
+          lahde: 'Marie Thérèse Hébert & Jean Robert Thibault from Québec, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Uffizi: {
+      aika: '1560–1581',
+      teksti: 'Uffizi ei ole rakennettu museoksi vaan virastotaloksi. '
+          + 'Nimi tarkoittaa italiaksi yksinkertaisesti "virastoja": '
+          + 'Cosimo I halusi kaupungin hallinnon toimistot yhteen '
+          + 'taloon, ja Giorgio Vasari alkoi rakentaa niitä vuonna '
+          + '1560. Tuloksena on pitkä kapea U, jonka avoin sisäpiha '
+          + 'johtaa Signorian aukiolta suoraan Arnon rannalle.'
+        + '\n\n'
+        + 'Medicit alkoivat säilyttää talon ylimmässä kerroksessa '
+          + 'omaa taidekokoelmaansa, jota sai käydä katsomassa '
+          + 'pyynnöstä jo 1500-luvun lopulla. Yleisölle museo avattiin '
+          + 'vuonna 1769. Kokoelma pysyi Firenzessä yhden ihmisen '
+          + 'ansiosta: suvun viimeinen jäsen Anna Maria Luisa de\' '
+          + 'Medici testamenttasi kaiken kaupungille ehdolla, ettei '
+          + 'mitään saa koskaan viedä sieltä pois.'
+        + '\n\n'
+        + 'Kokoelmassa ovat muun muassa Botticellin Venuksen syntymä '
+          + 'ja Kevät, Leonardon Enkelin ilmestys ja Michelangelon '
+          + 'Pyhä perhe. Talon ylös johtavan käytävän katto on '
+          + 'maalattu koko pituudeltaan groteskikuvioin — sekin oli '
+          + 'alun perin virkamiesten käytävä.',
+      kuvat: [
+        {
+          tiedosto: 'Piazzale degli Uffizi perspective view, Florence, Italy, August 2025.jpg',
+          selite: 'Uffizin sisäpiha ylhäältä. Kaksi identtistä siipeä '
+            + 'reunustaa kapeaa kujaa, jonka päässä näkyy Palazzo Vecchion '
+            + 'torni ja sen takana tuomiokirkon kupoli.',
+          lahde: 'Verum3414, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ponte Vecchio': {
+      aika: '1345',
+      teksti: 'Arnon kapeimmalla kohdalla on ollut silta roomalaisajoista '
+          + 'asti. Nykyinen kivisilta rakennettiin vuonna 1345 sen '
+          + 'jälkeen, kun edellinen oli hävinnyt vuoden 1333 tulvassa. '
+          + 'Sillan päällä on ollut kauppoja alusta lähtien, ja niiden '
+          + 'vuokrat maksoivat sillan kunnossapidon.'
+        + '\n\n'
+        + 'Ensimmäiset kauppiaat olivat teurastajia, nahkureita ja '
+          + 'kalakauppiaita — jokeen oli kätevä heittää se, mitä ei '
+          + 'myyty. Vuonna 1593 suurherttua Ferdinando I sai tarpeekseen '
+          + 'hajusta ja määräsi heidät pois: tilalle tulivat kultasepät '
+          + 'ja jalokivikauppiaat, ja samat ammatit ovat sillalla yhä. '
+          + 'Kauppojen takaseinistä työntyy joen ylle puisia lisäkkeitä, '
+          + 'jotka on rakennettu sitä mukaa kuin tilaa on tarvittu.'
+        + '\n\n'
+        + 'Kauppojen katon yllä kulkee suljettu käytävä, Vasarin '
+          + 'käytävä, jota myöten ruhtinasperhe pääsi Palazzo '
+          + 'Vecchiosta Pitti-palatsiin joutumatta kaduille. '
+          + 'Elokuussa 1944 vetäytyvät joukot räjäyttivät Firenzen '
+          + 'kaikki sillat — paitsi tämän.',
+      kuvat: [
+        {
+          tiedosto: 'Ponte Vecchio at sunset from Piazzale Michelangelo Florence 2023 dllu.jpg',
+          selite: 'Ponte Vecchio ylhäältä ilta-auringossa. Sillan päällä on '
+            + 'yhtenäinen talorivi, ja sen yläpuolella kulkee kapea '
+            + 'ikkunarivi — Vasarin käytävä. Taustalla näkyvät kaupungin '
+            + 'muut sillat, joissa ei ole taloja.',
+          lahde: 'Daniel Lu (User:dllu), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Santa Croce': {
+      aika: '1294–1442',
+      teksti: 'Santa Croce on fransiskaanien kirkko, ja se on maailman '
+          + 'suurin: 115 metriä pitkä kolmilaivainen halli, jonka '
+          + 'rakentaminen alkoi vuonna 1294 ja joka vihittiin 1442. '
+          + 'Fransiskaanit olivat köyhyyslupauksen tehnyt veljeskunta, '
+          + 'ja siksi kirkon katto on paljasta puuta eikä holvattu '
+          + 'kivi — mutta kaupungin rikkaat suvut maksoivat sen '
+          + 'kappelit ja saivat vastineeksi hautapaikkansa.'
+        + '\n\n'
+        + 'Niin siitä tuli Firenzen hautakirkko. Lattian alla ja '
+          + 'seinustoilla lepäävät Michelangelo, Galileo Galilei, '
+          + 'Niccolò Machiavelli ja säveltäjä Gioacchino Rossini. '
+          + 'Danten valtava muistomerkki on sekin täällä, mutta arkku '
+          + 'on tyhjä: runoilija kuoli karkotettuna Ravennassa, eikä '
+          + 'kaupunki ole saanut häntä takaisin.'
+        + '\n\n'
+        + 'Sivukappeleissa on Giotton 1300-luvun freskoja, ja '
+          + 'pihalla seisoo Brunelleschin suunnittelema Pazzin '
+          + 'kappeli. Marraskuussa 1966 Arno tulvi kirkkoon lähes '
+          + 'viiden metrin korkeuteen ja vaurioitti pahoin Cimabuen '
+          + 'krusifiksia — siitä tuli tulvan tunnetuin uhri.',
+      kuvat: [
+        {
+          tiedosto: 'Basilica di Santa Croce (12437).jpg',
+          selite: 'Kirkon julkisivu koko leveydeltään. Valkoista, vihreää ja '
+            + 'vaaleanpunaista marmoria, keskellä pyöreä ruusuikkuna ja '
+            + 'ylimpänä kuusisakarainen tähti. Vasemmalla portaiden '
+            + 'vieressä seisoo Danten patsas.',
+          lahde: 'Rhododendrites, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Basílica de la Santa Cruz, Florencia, Italia, 2022-09-18, DD 116-118 HDR.jpg',
+          selite: 'Sivukappelin holvi alhaalta kuvattuna. Ristiholvin kaikki '
+            + 'lohkot ja seinät on maalattu täyteen kuvia 1300-luvun '
+            + 'tapaan, ja taustalla erottuu kirkon paljas puinen kattopalkisto.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bobolin puutarha': {
+      aika: '1550-luvulta',
+      teksti: 'Kun Medicit ostivat Pitti-palatsin vuonna 1549, sen takana '
+          + 'oleva rinne oli tyhjä. Cosimo I:n puoliso Eleonora di '
+          + 'Toledo antoi tehdä siitä puutarhan, ja työ jatkui '
+          + 'sukupolvia: Niccolò Tribolo aloitti, Bartolomeo Ammannati '
+          + 'ja Bernardo Buontalenti jatkoivat. Tuloksena on noin '
+          + '45 hehtaarin puisto keskellä kaupunkia.'
+        + '\n\n'
+        + 'Boboli on italialaisen puutarhan malliesimerkki: puut on '
+          + 'leikattu seiniksi, näkymät on suunnattu kuin lavasteet ja '
+          + 'jokaisen käytävän päässä odottaa jotakin. Palatsin takana '
+          + 'on amfiteatteri, jossa esitettiin ensimmäisiä oopperoita, '
+          + 'ja pitkän sypressikujan päässä on Isolotto: soikea lampi, '
+          + 'jonka keskisaarella Giambolognan Okeanos-suihkulähde '
+          + 'seisoo veden ympäröimänä.'
+        + '\n\n'
+        + 'Buontalentin luola on puutarhan omituisin nurkka. Se on '
+          + 'rakennettu näyttämään tippukiviluolalta: seinät ovat '
+          + 'kivimöykkyjä, paimenia ja eläimiä, ja hämärässä '
+          + 'perähuoneessa kylpee Venus. Puisto avattiin yleisölle '
+          + 'vuonna 1766, ja se on ollut kaupunkilaisten oma puisto '
+          + 'siitä lähtien.',
+      kuvat: [
+        {
+          tiedosto: 'Jardín de Bóboli, Florencia, Italia, 2022-09-19, DD 34.jpg',
+          selite: 'Pitti-palatsin takajulkisivu ja sen edessä oleva '
+            + 'amfiteatterin hiekkakenttä. Kentän laidalla seisoo '
+            + 'marmoripatsas, ja rinne nousee loivasti palatsista poispäin.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Florence, Giardino di Boboli, Isolotto 7.jpg',
+          selite: 'Isolotto eli soikea lampi. Sitä kiertää rautakaide ja '
+            + 'reunuksella on kivimaljakoita; vastarannalla näkyy rivi '
+            + 'sitruunapuita ruukuissa leikatun pensasseinän edessä.',
+          lahde: 'Armin Kleiner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+
   berliini: {
     Valtiopäivätalo: {
       aika: '1894',

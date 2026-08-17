@@ -8699,6 +8699,439 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * FIRENZEN LEHTI (17.8.2026). Rakenne on kopioitu Kööpenhaminan
+   * mallista: kansi + yksi aihesivu, avauskuvien karuselli, oma
+   * Matkailijalle-osio taitolla 'opas'. Kaikki 35 kuvaa on todennettu
+   * Commonsin rajapinnasta (lisenssi, tekijä, Restrictions tyhjä) ja
+   * KATSOTTU SILMIN esikatselusta ennen valintaa; hylätyt on kirjattu
+   * PR-kuvaukseen.
+   *
+   * EI TARINAKAARTA (omistajan linjaus 17.8.2026): kaupungille ei
+   * kirjoiteta kohtaamista eikä kaaritekstejä, vain lehti.
+   */
+  firenze: [
+    {
+      id: 'kaupunki',
+      nimi: 'Firenze',
+      johdanto: 'Toscanan pääkaupunki on niin pieni, että sen kävelee ristiin '
+        + 'puolessa tunnissa — ja niin täynnä, että siihen ei riitä viikko. '
+        + 'Arno jakaa sen kahtia, ja kupoli näkyy joka kadunkulmasta.',
+      kansikuvat: [
+        {
+          tiedosto: 'Apartments on the Ponte Vecchio. Florence, Italy.jpg',
+          selite: 'Ponte Vecchion kauppojen takaseinä joen puolelta. Huoneet '
+            + 'roikkuvat sillan reunan yli puisten vinotukien varassa, ja '
+            + 'yhdellä on parveke köynnöksineen keskellä Arnoa.',
+          lahde: 'Ввласенко, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Via dei Calzaioli - panoramio (1).jpg',
+          selite: 'Orsanmichelen kulma Via dei Calzaiuolilla: kirkon seinässä '
+            + 'on kiltojen tilaama pyhimyspatsas omassa kaarikomerossaan, ja '
+            + 'kadun päässä näkyy Giotton kellotorni.',
+          lahde: 'Dora Dragoni, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * Avauskuvat: kolme vaakayleisnäkymää karusellissa (omistajan
+       * tilaus 15.8.2026). Firenzen kolme klassista katselusuuntaa —
+       * etelän kukkulalta, kellotornista alas ja joelta.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Panorama di Firenze centro visto dal Piazzale Michelangelo.jpg',
+          selite: 'Koko vanhakaupunki Piazzale Michelangelolta katsottuna: '
+            + 'vasemmalla Palazzo Vecchion torni, oikealla tuomiokirkon '
+            + 'tiilikupoli ja valkoinen kellotorni, ja välissä tiivis '
+            + 'punatiilikattojen matto Arnon rantaan asti.',
+          lahde: 'PROPOLI87, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'View from Giotto IMG 4586.JPG',
+          selite: 'Näkymä Giotton kellotornista lounaaseen. Katot ovat lähes '
+            + 'samalla korkeudella niin pitkälle kuin näkee — ainoa '
+            + 'poikkeus on Palazzo Vecchion torni vasemmalla. Kaukana '
+            + 'kukkulan juurella erottuu Pitti-palatsin pitkä julkisivu.',
+          lahde: 'Deror avi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Arno river sunset, Florence, Italy.jpg',
+          selite: 'Arno auringonlaskun aikaan. Joki on tyyni kuin peili, ja '
+            + 'sen molemmin puolin nousevat rantamuurit ja talorivit; '
+            + 'keskellä kuvaa kaartuu Ponte Vecchio kauppoineen.',
+          lahde: 'hozinja, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (omistajan linjaus 16.8.2026): yksi aihe,
+         * paikan oma erikoisuus, laadukas pystykuva, rauhallinen tausta.
+         * Firenzen erikoisuus on kupoli, ja tässä se on kolmen värisen
+         * marmorin keskellä kirkasta taivasta vasten.
+         */
+        kuva: {
+          tiedosto: 'Santa Maria del Fiore Cathedral Florence 04 2024 0907.jpg',
+          selite: 'Tuomiokirkon kolme osaa yhdessä kuvassa: kastekappelin '
+            + 'raidallinen marmoriseinä, Giotton kellotorni ja niiden '
+            + 'välissä Brunelleschin tiilikupoli kultaisine huippulyhtyineen.',
+          lahde: 'Mariordo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Firenzeen ei tulla yhden nähtävyyden takia vaan siksi, että '
+          + 'niitä on kävelymatkan päässä toisistaan enemmän kuin ehtii '
+          + 'katsoa. Vanhakaupunki on noin kahden kilometrin levyinen, '
+          + 'autoton ja tasainen, ja sen halki kulkee Arno. Yhden päivän '
+          + 'ehtii kiertää Duomon, Signorian aukion, Uffizin ja Ponte '
+          + 'Vecchion — ja illalla kävellä joen yli Oltrarnon puolelle, '
+          + 'jossa hinnat laskevat ja jonot loppuvat.',
+        artikkeli: {
+          nimi: 'Matkailijan Firenze',
+          teksti: 'Firenze on kaupunki, jonka läpi kävellään — ei ohitse.',
+          nosto: 'Kaikki kuusi kohdetta ovat kartalla kahden kilometrin '
+            + 'sisällä toisistaan.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja jalkapatikkaan',
+              teksti: 'Firenzeen tullaan junalla: Santa Maria Novellan asema '
+                + 'on kävelymatkan päässä tuomiokirkolta, ja lentokenttä '
+                + 'on niin lähellä keskustaa, että raitiovaunu vie sinne '
+                + 'vartissa. Autoilla ei tee mitään. Koko vanhakaupunki on '
+                + 'rajoitusaluetta, jonne yksityisautot eivät päivällä '
+                + 'aja, ja kadut ovat kiveä ja kapeita. Kävellen pärjää '
+                + 'kaikkialle: pisin väli kohteesta toiseen on parikymmentä '
+                + 'minuuttia.',
+              kuva: [
+                {
+                  tiedosto: 'Florence 020 streets of Florence.JPG',
+                  selite: 'Kivetty kauppakatu Duomon ja Signorian aukion '
+                    + 'välissä. Autoja ei näy yhtään — ainoa ajoneuvo on '
+                    + 'keltainen pikkuauto keskellä katua.',
+                  lahde: 'Filius humanitas, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Via dei Calzaiuoli, Florence (26609473351).jpg',
+                  selite: 'Via dei Calzaiuoli täynnä kävelijöitä. Katu '
+                    + 'yhdistää kaupungin kaksi aukiota, ja sen päässä '
+                    + 'kohoaa Giotton kellotorni.',
+                  lahde: 'Dimitris Kamaras from Athens, Greece, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Piazza della Signoria din Florenta.jpg',
+                  selite: 'Signorian aukio keskipäivällä: laaja kivetty '
+                    + 'kenttä, Cosimo I:n ratsastajapatsas keskellä ja '
+                    + 'oikealla Palazzo Vecchion kivijulkisivu.',
+                  lahde: 'Cezar Suceveanu, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kupoli ja jonot',
+              teksti: 'Tuomiokirkko on ilmainen, mutta kupoliin, '
+                + 'kellotorniin, kastekappeliin ja museoon tarvitaan '
+                + 'yhteislippu ja aikavaraus. Kupolin 463 porrasta '
+                + 'nousevat kahden kuoren välissä, ja huipulta näkee koko '
+                + 'Toscanan — mutta reitti on kapea eikä siltä pääse '
+                + 'kääntymään takaisin. Giotton kellotornissa on 414 '
+                + 'porrasta ja vapaammat välitasanteet, ja sieltä näkyy '
+                + 'itse kupoli, jota kupolin päältä ei tietenkään näe.',
+              kuva: {
+                tiedosto: 'Firenze Cattedrale di Santa Maria del Fiore Esterno Cupola 1.jpg',
+                asettelu: 'kapea',
+                selite: 'Kupoli alhaalta: kahdeksan valkoista marmoririvaa '
+                  + 'jakaa punatiilikatteen lohkoihin, ja huipulla on '
+                  + 'lyhty kultapallon kera.',
+                lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Museot yhtenä päivänä',
+              teksti: 'Uffizi ja Accademia ovat kaupungin kaksi ruuhkaisinta '
+                + 'museota, ja molempiin kannattaa varata lippu etukäteen. '
+                + 'Uffizissa on Botticelli, Leonardo ja Michelangelo, '
+                + 'Accademiassa Michelangelon David. Kolmas ja hiljaisin on '
+                + 'joen eteläpuolella Palazzo Pitti, jonka lipulla pääsee '
+                + 'myös Bobolin puutarhaan. Maanantaisin Uffizi on kiinni.',
+              kuva: {
+                tiedosto: 'Ceiling of Uffizi Gallery.jpg',
+                asettelu: 'kapea',
+                selite: 'Uffizin käytävän maalattu katto. Koko holvi on '
+                  + 'peitetty groteskikuvioilla: kiehkuroita, lintuja, '
+                  + 'pieniä maisemia ja vaakunoita kultakehysten välissä.',
+                lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Torilla ja pöydässä',
+              teksti: 'Mercato Centrale on 1870-luvulla rakennettu '
+                + 'kaarihalli, jonka alakerta on yhä kauppatori: pastaa, '
+                + 'juustoa, kuivattuja tomaatteja ja lihatiskejä. '
+                + 'Katuruoka on lampredotto, häränmahasta keitetty täyte '
+                + 'sämpylässä, ja sitä myydään vaunuista kadunkulmissa. '
+                + 'Ravintolassa tilataan bistecca alla fiorentina, joka '
+                + 'punnitaan ennen paistamista ja tuodaan pöytään '
+                + 'sisältä punaisena — kypsyysastetta ei kysytä.',
+              kuva: {
+                tiedosto: 'Mercato Centrale near the San Lorenzo Market (Florence) (3867491803).jpg',
+                selite: 'Kauppahallin koju: koreissa kuivattuja tomaatteja, '
+                  + 'pastapusseja ja mausteita, ja jokaisen edessä '
+                  + 'käsinkirjoitettu hintalappu.',
+                lahde: 'bongo vongo, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Ilta',
+              teksti: 'Ilta alkaa aperitiivista noin kuudelta: lasin hinnalla '
+                + 'saa usein pöytään myös pientä syötävää. Sen jälkeen '
+                + 'kannattaa kävellä joen yli Oltrarnoon, jossa on '
+                + 'käsityöläisten verstaita ja halvempia ravintoloita, tai '
+                + 'nousta Piazzale Michelangelolle katsomaan, kuinka '
+                + 'kaupungin valot syttyvät. Signorian aukio ja Palazzo '
+                + 'Vecchio ovat auki myös pimeällä, ja aukion patsaat on '
+                + 'valaistu.',
+              kuva: {
+                tiedosto: 'Firenze Palazzo Vecchio 02.jpg',
+                asettelu: 'kapea',
+                selite: 'Palazzo Vecchio hämärissä kadun päässä. Torni ja '
+                  + 'vaakunarivi on valaistu lämpimäksi, ja alhaalla '
+                  + 'kadulla kävellään vielä.',
+                lahde: 'Andrzej Otrębski, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kävely-ympäristö',
+                tahdet: 3,
+                selite: 'Tasainen, autoton ja pieni keskusta, jossa kaikki '
+                  + 'on kahden kilometrin sisällä.',
+              },
+              {
+                mita: 'Taide',
+                tahdet: 3,
+                selite: 'Uffizi, Accademia ja Pitti kolmen korttelin '
+                  + 'säteellä — renessanssin kotikaupunki.',
+              },
+              {
+                mita: 'Ruoka',
+                tahdet: 3,
+                selite: 'Bistecca, lampredotto ja kauppahalli; toscanalainen '
+                  + 'keittiö on yksinkertaista ja tukevaa.',
+              },
+              {
+                mita: 'Näköalat',
+                tahdet: 3,
+                selite: 'Kupoli, kellotorni ja Piazzale Michelangelo — '
+                  + 'kolme eri korkeutta samaan kaupunkiin.',
+              },
+              {
+                mita: 'Lapsille',
+                tahdet: 2,
+                selite: 'Bobolin puutarha ja tornien portaat kiinnostavat; '
+                  + 'museojonot eivät.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Jonot ja liput',
+                teksti: 'Uffiziin, Accademiaan ja kupoliin varataan aika '
+                  + 'etukäteen — ilman varausta jono voi olla tunteja.',
+              },
+              {
+                otsikko: 'Hintataso',
+                teksti: 'Keskusta on Italian kalleimpia; muutama kortteli '
+                  + 'joen eteläpuolelle laskee laskun tuntuvasti.',
+              },
+              {
+                otsikko: 'Kesän helle',
+                teksti: 'Laakso kerää lämmön: heinä–elokuussa päivälämpötila '
+                  + 'nousee kolmeenkymmeneen eikä merituulta ole.',
+              },
+              {
+                otsikko: 'Kirkkojen pukukoodi',
+                teksti: 'Olkapäät ja polvet peitetään; ilman sitä ovelta '
+                  + 'käännytetään myös helteellä.',
+              },
+            ],
+            parasAika: 'Paras aika on huhti–kesäkuu ja syys–lokakuu: silloin '
+              + 'on lämmintä mutta ei tukalaa, ja puistot ovat vihreitä. '
+              + 'Heinä- ja elokuu ovat kuumia ja täynnä, ja marraskuu on '
+              + 'vuoden sateisin kuukausi.',
+            /*
+             * KAUSIEN LÄMPÖHAARUKAT: kauden kylmimmän kuukauden
+             * keskimääräinen yölämpötila ja lämpimimmän kuukauden
+             * keskimääräinen päivälämpötila kokonaisiksi asteiksi
+             * pyöristettynä. Open-Meteon arkistosta (ERA5, 1991–2020),
+             * laskettu 17.8.2026 samasta pisteestä kuin lehden säärivi.
+             */
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '4–22 °C',
+                kuvaus: 'Maaliskuu on vielä viileä ja sateinen, mutta '
+                  + 'toukokuussa istutaan jo ulkona iltaan asti.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '16–30 °C',
+                kuvaus: 'Kuuma ja kuiva: heinäkuussa sadetta tulee vain '
+                  + 'kolmisenkymmentä millimetriä koko kuukaudessa. '
+                  + 'Keskipäivä vietetään varjossa.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '7–25 °C',
+                kuvaus: 'Syyskuu on vuoden miellyttävin kuukausi. Loka- ja '
+                  + 'marraskuussa sataa eniten koko vuodesta.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '2–11 °C',
+                kuvaus: 'Leuto mutta kostea. Lunta tulee harvoin, ja '
+                  + 'museoissa on tilaa.',
+              },
+            ],
+            linkit: [
+              { nimi: 'Visit Florence — kaupungin oma matkailusivu', url: 'https://www.feelflorence.it/en' },
+              { nimi: 'Wikivoyage: Firenze', url: 'https://fi.wikivoyage.org/wiki/Firenze' },
+              { nimi: 'Uffizi — liput ja aukioloajat', url: 'https://www.uffizi.it/' },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+      nostot: [
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Aukko, joka oli auki sata vuotta',
+          tiedosto: 'Firenze Campanile di Giotto Vista su la Cupola della Cattedrale di Santa Maria del Fiore 09.jpg',
+          teksti: 'Tuomiokirkko aloitettiin 1296 tahallaan liian isona: kuorin '
+            + 'päälle jäi 45 metriä leveä aukko, jollaista ei ollut Rooman '
+            + 'jälkeen katettu. Se oli auki taivaalle yli sata vuotta. Vuoden '
+            + '1418 kilpailun voitti kultaseppä Filippo Brunelleschi, jonka '
+            + 'ratkaisu oli kaksi kuorta sisäkkäin ja tiilet ladottuna '
+            + 'kalanruotokuvioon: muuraus kannatti itse itsensä, joten koko '
+            + 'aukon täyttävää puutelinettä ei tarvittu. Tiiliä kului yli '
+            + 'neljä miljoonaa, ja kupoli valmistui 1436.',
+          selite: 'Kupoli kellotornista katsottuna. Katteen päällä näkyy '
+            + 'valkoinen huippulyhty, jonka kaiteella seisoo ihmisiä — '
+            + 'sinne noustaan kahden kuoren välistä.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Santa Maria del Fiore',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Raha, joka kelpasi kaikkialla',
+          tiedosto: 'Fiorino d\'oro.jpg',
+          teksti: 'Firenze alkoi lyödä omaa kultarahaa vuonna 1252. Floriinissa '
+            + 'oli aina sama määrä kultaa ja aina sama kuva: toisella '
+            + 'puolella kaupungin liljavaakuna, toisella Johannes Kastaja. '
+            + 'Juuri muuttumattomuus teki siitä luotetun — kauppias tiesi '
+            + 'mitä sai, vaikka raha olisi kulkenut kolmen maan läpi. Rahan '
+            + 'takana olivat pankkiirisuvut, joista mahtavimmaksi nousi '
+            + 'Medici. Se ei ollut ruhtinassuku vaan kauppiassuku, joka osti '
+            + 'valtansa rahalla ja taiteella.',
+          selite: 'Floriini molemmilta puolilta. Vasemmalla kaupungin lilja ja '
+            + 'kirjoitus FLORENTIA, oikealla Johannes Kastaja seisomassa '
+            + 'sädekehä päänsä ympärillä.',
+          lahde: 'CNG (Classical Numismatic Group), Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Floriini',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Pihvi, jota ei kysytä kypsäksi',
+          tiedosto: 'Bistecca alla fiorentina (400gr).jpg',
+          teksti: 'Bistecca alla fiorentina on T-luupihvi, joka leikataan '
+            + 'chianina-rodun naudasta ja jonka pitää olla vähintään kolme '
+            + 'sormea paksu. Se paistetaan hiilillä ilman öljyä ja ilman '
+            + 'mausteita — suola tulee vasta lopuksi — ja se tuodaan pöytään '
+            + 'sisältä punaisena. Kypsyysastetta ei kysytä eikä tarjota. '
+            + 'Pihvi punnitaan ennen paistamista ja hinta lasketaan kilon '
+            + 'mukaan, joten se tilataan tavallisesti kahdelle.',
+          selite: 'Paistettu T-luupihvi metallilautasella. Luu erottuu '
+            + 'keskellä T-kirjaimena, ja liha on pinnalta ruskea mutta '
+            + 'leikkauspinnalta punainen.',
+          lahde: 'Number55, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Yhdessä pikkukaupungissa työskentelivät sadan vuoden sisällä '
+        + 'Donatello, Botticelli, Leonardo ja Michelangelo. Sitä aikaa alettiin '
+        + 'myöhemmin kutsua renessanssiksi.',
+      tehtava: {
+        kysymys: 'Mitä kahta rakennusta Vasarin käytävä yhdistää?',
+        vaihtoehdot: [
+          'Kahta kirkkoa',
+          'Rautatieasemaa ja toria',
+          'Palazzo Vecchiota ja Pitti-palatsia',
+          'Kahta kaupunginporttia',
+        ],
+        oikea: 2,
+        fakta: 'Giorgio Vasari rakennutti käytävän vuonna 1565, ja se kulkee '
+          + 'Uffizin läpi ja Ponte Vecchion kauppojen katon yli joen toiselle '
+          + 'puolelle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Jumalatar simpukan päällä',
+          tiedosto: 'The Birth of Venus by Sandro Botticelli-Uffizi.jpg',
+          teksti: 'Sandro Botticelli maalasi Venuksen syntymän noin 1485, ja se '
+            + 'oli aikanaan poikkeuksellinen: keskiajan jälkeen tuskin kukaan '
+            + 'oli maalannut lähes luonnollisen kokoista alastonta '
+            + 'antiikinjumalatarta. Teos on tehty kankaalle temperalla eikä '
+            + 'seinään freskona, ja Venuksen hiuksissa on aitoa kultaa. '
+            + 'Vasemmalla puhaltavat tuulet kuljettavat simpukan rantaan, '
+            + 'oikealla odottaa vaatetta pitelevä vuodenaikojen jumalatar. '
+            + 'Maalaus on Uffizissa, samassa salissa kuin Botticellin Kevät.',
+          selite: 'Maalaus kultakehyksissä: Venus seisoo suuren simpukankuoren '
+            + 'päällä keskellä, vasemmalla lentävät tuulihahmot ja oikealla '
+            + 'kukkakuvioiseen pukuun pukeutunut nainen ojentaa viittaa.',
+          lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Venuksen syntymä (Botticelli)',
+        },
+        {
+          otsikko: 'Jättiläinen muutti sisälle',
+          tiedosto: 'Accademia David Florence 04 2024 0578 5x7.jpg',
+          teksti: 'Michelangelo veisti Davidin vuosina 1501–1504 marmorilohkareesta, '
+            + 'jonka kaksi muuta kuvanveistäjää oli jo pilannut ja hylännyt. '
+            + 'Patsas on 5,17 metriä korkea. Se oli tarkoitus nostaa '
+            + 'tuomiokirkon katolle, mutta valmiina se todettiin liian '
+            + 'hienoksi piilotettavaksi, ja se pystytettiin Palazzo Vecchion '
+            + 'oven viereen. Siellä se seisoi 369 vuotta. Vuonna 1873 patsas '
+            + 'siirrettiin sään ja vaurioiden takia sisätiloihin Accademian '
+            + 'museoon, ja aukiolle tuli myöhemmin kopio.',
+          selite: 'David museon kupolisalissa korkealla jalustalla. Marmori on '
+            + 'vaalea ja kiiltävä, ja patsaan juurella seisoo tiivis '
+            + 'joukko katsojia — mittasuhteen näkee heistä.',
+          lahde: 'Mariordo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Daavid (veistos)',
+        },
+        {
+          otsikko: 'Ruhtinaan oma käytävä',
+          tiedosto: 'Inside view of the Vasari Corridor (corridoio vasariano) in Florence, Italy (1).jpg',
+          teksti: 'Kun Cosimo I muutti hovinsa joen eteläpuolelle Pitti-palatsiin, '
+            + 'hän ei halunnut kulkea kaduilla kansan seassa. Giorgio Vasari '
+            + 'rakennutti vuonna 1565 katetun käytävän, joka lähtee Palazzo '
+            + 'Vecchiosta, kulkee Uffizin läpi, ylittää Arnon Ponte Vecchion '
+            + 'kauppojen katon päällä ja päättyy Pitti-palatsiin. Matkaa on '
+            + 'noin kilometri. Juuri tämän käytävän takia sillan '
+            + 'teurastajat karkotettiin 1593: haju nousi ikkunoihin.',
+          selite: 'Käytävän sisältä: kapea suora holvikäytävä katoaa '
+            + 'perspektiiviin, molemmilla seinillä riippuu tummia '
+            + 'kehystettyjä muotokuvia ja lattia on punaruskeaa laattaa.',
+          lahde: 'Diomidis Spinellis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
   kobenhavn: [
     {
       id: 'kaupunki',

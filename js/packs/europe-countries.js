@@ -402,6 +402,7 @@ export const EUROPE_CITY_COUNTRY = {
   bukarest: 'ROU',
   dublin: 'IRL',
   edinburgh: 'GBR',
+  firenze: 'ITA',
   helsinki: 'FIN',
   istanbul: 'TUR',
   kiova: 'UKR',

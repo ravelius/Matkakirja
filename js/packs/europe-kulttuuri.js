@@ -836,6 +836,25 @@ export const EUROPE_KULTTUURI = {
     },
   },
 
+  firenze: {
+    kysymys: {
+      q: 'Mikä Firenzessä lyöty kultaraha kelpasi maksuksi ympäri '
+           + 'keskiajan Eurooppaa?',
+      options: [
+        'Floriini',
+        'Dukaatti',
+        'Guldeni',
+        'Taalari',
+      ],
+      correct: 0,
+      fact: 'Kolikkoa alettiin lyödä vuonna 1252, ja siinä oli aina sama '
+              + 'kultamäärä ja sama kuva: kaupungin liljavaakuna toisella '
+              + 'puolella ja Johannes Kastaja toisella. Juuri muuttumattomuus '
+              + 'teki siitä luotetun — kauppias tiesi mitä sai, vaikka raha '
+              + 'olisi kulkenut kolmen maan läpi.',
+    },
+  },
+
   kobenhavn: {
     kysymys: {
       q: 'Kuinka suuri osa Kööpenhaminan työ- ja koulumatkoista tehdään '
