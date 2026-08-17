@@ -515,6 +515,28 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
     meri: true,
   },
+  tampere: {
+    /*
+     * Kannas kahden järven välissä: Näsijärvi työntyy kuvan
+     * yläreunaan luoteesta ja Pyhäjärvi alareunaan lounaasta, ja
+     * niiden välissä kulkee Tammerkoski pohjoisesta etelään aivan
+     * kuvan keskellä. Rajaus alkaa lännessä Pyynikinharjulta (jotta
+     * näkötorni mahtuu mukaan) ja päättyy idässä rautatiehen, joka
+     * piirtyy kuvaan pystysuorana viivana keskustan takana.
+     *
+     * Kuvasuhde on 1,63 (3,6 × 2,2 km) eli laudan levein rajaus
+     * Dubrovnikin jälkeen. Syy on sama kuin Kööpenhaminassa: kaupunki
+     * itse on kapea ja pitkä, ja pystysuunnassa on pelkkää vettä.
+     */
+    rajat: { pohjoinen: 61.509, etela: 61.489, lansi: 23.715, ita: 23.783 },
+    laajennus: 1.6,
+    /*
+     * meri: 'maa' kuten Kööpenhaminassa — kuvassa on kaksi eri järveä
+     * eikä yhtä avovettä, joten täyttö on käännettävä. Katso koeajon
+     * varoitusprosentti ja käännä lippua, jos täyttö osuu väärin.
+     */
+    meri: 'maa',
+  },
   kobenhavn: {
     // Satamakanava halkoo kuvan pohjois–eteläsuunnassa: vasemmalla
     // vanha kaupunki Tivolista Rundetårniin, oikealla Christianshavn

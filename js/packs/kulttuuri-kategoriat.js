@@ -5943,6 +5943,438 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TAMPERE (17.8.2026). Lehti on tehty Kööpenhaminan mallin mukaan:
+   * kansi (kansikuvat + avauskuvat + Matkailijalle-opas + kolme
+   * nostoa) ja yksi aihesivu minitehtävineen. Kaikki kuvat todennettu
+   * Commonsin API:sta 17.8.2026 (LicenseShortName, Artist,
+   * Restrictions — jokainen tyhjä) ja KATSOTTU SILMIN 900 pikselin
+   * esikatselusta; katsottu-havainnot ovat selitteissä.
+   *
+   * Avain on paljas kaupunki-id, joten sama lehti palvelee sekä
+   * Euroopan laudan Tamperetta että Suomi-laudan Tamperetta.
+   *
+   * EI TARINAKAARTA (omistajan linjaus 17.8.2026): ei matkakirjan
+   * kaaritekstejä eikä kohtaamista.
+   */
+  tampere: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tampere',
+      johdanto: 'Kaupunki kahden järven välissä, kosken molemmin puolin. '
+        + 'Punatiiliset tehdassalit ovat nyt museoita ja elokuvateattereita, '
+        + 'mutta koski kohisee niiden seinustalla entiseen tapaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Tampere Cathedral.jpg',
+          selite: 'Tampereen tuomiokirkko harmaasta graniitista: paksu '
+            + 'nelisivuinen torni, jyrkät punatiilikatot ja pyöreä ruusuikkuna '
+            + 'päädyssä. Lars Sonck suunnitteli kirkon, ja se valmistui 1907.',
+          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Pispala01.jpg',
+          selite: 'Pispalan puutaloja harjun rinteessä: punainen ja harmaa '
+            + 'talo portaiden molemmin puolin, ruskan oranssit puut ja '
+            + 'niiden takana Näsijärvi saarineen.',
+          lahde: 'Mikkoau, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * Avauskuvat: etusivun iso kuvapaikka selaa näitä yleisnäkymiä,
+       * kansikuvat siirtyvät pikkuriville (sama sopimus kuin
+       * Kööpenhaminassa).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Tammerkoski view.jpg',
+          selite: 'Tammerkosken uoma tehtaiden välissä: vasemmalla Frenckellin '
+            + 'matala tiilirakennus kaari-ikkunoineen, oikealla Tampellan '
+            + 'kuusikerroksinen punatiiliseinä, ja niiden välissä kapea '
+            + 'kävelysilta kosken yli.',
+          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Koskipuisto,Tampere.jpg',
+          selite: 'Koskipuisto kesäpäivänä: kosken alajuoksu levenee '
+            + 'tyyneksi altaaksi, rannoilla kulkee kaiteilla varustettu '
+            + 'kävelytie, ja taustalla kaartuu silta ja nousee Takon '
+            + 'tehtaan tiilipiippu.',
+          lahde: 'Callesan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Näsinneula from Lentävänniemi.jpg',
+          selite: 'Näsinneula Näsijärven takaa katsottuna: torni nousee '
+            + 'yksin puurajan yli, vasemmalla erottuu Särkänniemen '
+            + 'vuoristoradan punainen kaari, ja edessä kiitää moottorivene.',
+          lahde: 'Eemyoha, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (omistajan linjaus 16.8.2026): yksi aihe,
+         * paikan oma erikoisuus, laadukas pystykuva, rauhallinen
+         * tausta. Näsinneula tyhjää sinistä taivasta vasten täyttää
+         * kaikki neljä kohtaa, ja kuva on Commonsin Quality image.
+         */
+        kuva: {
+          tiedosto: 'Näsinneula 2020.jpg',
+          selite: 'Näsinneula alhaalta kuvattuna: betonivarsi nousee '
+            + 'pilvettömään taivaaseen ja levenee huipulla pyöreäksi '
+            + 'kaksikerroksiseksi koriksi.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Tampere on pienen kaupungin kokoinen suurkaupunki: kaikki '
+          + 'oleellinen mahtuu kahden järven väliselle kannakselle, ja sen '
+          + 'halki kävelee puolessa tunnissa. Keskellä kohisee Tammerkoski, '
+          + 'jonka molemmin puolin seisovat vanhat punatiiliset tehtaat — '
+          + 'nykyään museoita, elokuvateattereita ja ravintoloita. Lännessä '
+          + 'kohoaa Pyynikinharju, pohjoisessa siintää Näsijärvi ja '
+          + 'kaupungin yllä seisoo Näsinneula, Suomen korkein näkötorni.',
+        artikkeli: {
+          nimi: 'Matkailijan Tampere',
+          teksti: 'Tampereeseen ei tutustuta museossa vaan kävelemällä '
+            + 'kosken vartta.',
+          nosto: 'Kahden järven korkeusero on kahdeksantoista metriä — ja '
+            + 'juuri se rakensi koko kaupungin.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Helsingistä Tampereelle pääsee junalla puolessatoista '
+                + 'tunnissa, ja asemalta lähtee suoraan kaupungin pääkatu '
+                + 'Hämeenkatu, joka päättyy kosken yli vievälle '
+                + 'Hämeensillalle. Sen varrella kulkevat raitiovaunut: linjat '
+                + 'avattiin elokuussa 2021, ja ne vievät keskustasta sekä '
+                + 'Pyynikin suuntaan että itään Hervantaan. Keskusta itsessään '
+                + 'on niin tiivis, ettei kulkuneuvoa oikeastaan tarvita.',
+              kuva: {
+                tiedosto: 'Raitiovaunu1 Tampere Tammerfors 240725.jpg',
+                selite: 'Vihreä raitiovaunu numero 1 Hämeenkadulla '
+                  + 'Keskustorin kohdalla. Kiskot kaartavat etualalla '
+                  + 'kivetyksen halki, ja taustalla on 1900-luvun alun '
+                  + 'kivitaloja.',
+                lahde: 'Drefer, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Koski ja punatiili',
+              teksti: 'Tammerkosken rannat ovat Suomen vanhinta '
+                + 'teollisuusmaisemaa ja yksi maan kansallismaisemista. '
+                + 'Kosken länsirannalla on Finlaysonin tehdaskortteli ja '
+                + 'itärannalla Tampella; kummassakaan ei enää tehdä '
+                + 'kangasta, mutta rakennukset ovat paikoillaan. Kortteleiden '
+                + 'läpi kulkee kävelyreitti, jonka varrella on museoita, '
+                + 'elokuvateatteri, panimo ja työhuoneita. Kosken voi ylittää '
+                + 'monesta kohtaa, ja jokainen silta antaa eri näkymän.',
+              kuva: {
+                tiedosto: 'Finlayson 2018.jpg',
+                selite: 'Finlaysonin viisikerroksinen punatiilinen '
+                  + 'tehdasrakennus Frenckellinaukion laidalla, takana '
+                  + 'yksinäinen tiilipiippu ja katolla Suomen lippu. Alhaalla '
+                  + 'on ravintolan punainen markiisi.',
+                lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Harju, torni ja munkki',
+              teksti: 'Keskustasta kävelee vartissa Pyynikinharjulle, joka on '
+                + 'maailman korkein pitkittäisharju: laki on 160 metriä '
+                + 'merenpinnasta ja 80 metriä Pyhäjärven pintaa ylempänä. '
+                + 'Harjun päällä seisoo vuonna 1929 punagraniitista rakennettu '
+                + '26-metrinen näkötorni, jonka tasanteelta näkyvät molemmat '
+                + 'järvet yhtä aikaa. Tornin juurella on munkkikahvila, jonka '
+                + 'sokeroidut munkit ja sima ovat vähintään yhtä tunnettuja '
+                + 'kuin näköala.',
+              kuva: {
+                tiedosto: 'Pyynikki observation tower doughnut cafe on 1st May 2016.jpg',
+                selite: 'Sokerissa kieritetty munkki ja lasillinen simaa '
+                  + 'metallitarjottimella. Lasin kyljessä lukee PYYNIKIN '
+                  + 'MUNKKIKAHVILA.',
+                lahde: 'Lauren Stevens, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mustamakkara ja torit',
+              teksti: 'Tampereen oma ruoka on mustamakkara: verestä, ohrasta ja '
+                + 'sianlihasta tehty paksu makkara, joka syödään lämpimänä ja '
+                + 'puolukkahillon kanssa. Sitä myydään Tammelantorilla ja '
+                + 'Laukontorilla suoraan luukulta, eikä sitä ole tapana ottaa '
+                + 'lautaselle vaan pahvivadille. Laukontorilta lähtevät myös '
+                + 'Pyhäjärven laivat, ja Tammelantori on aamuisin kaupungin '
+                + 'vilkkain paikka.',
+              kuva: {
+                tiedosto: 'Mustamakkara2019.jpg',
+                selite: 'Kaksi paksua, lähes mustaa makkaraa pahvivadilla ja '
+                  + 'niiden vieressä kirkkaanpunainen puolukkahillo. '
+                  + 'Makkaran leikatusta päästä näkyy karkea ohrainen sisus.',
+                lahde: 'Onsilla / Wikimedia Commons, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ilta',
+              teksti: 'Illalla tehdasalueet heräävät toiseen elämään. '
+                + 'Finlaysonin vanhassa kutomossa toimii elokuvateatteri, '
+                + 'ja saman korttelin sisäpihoilla on ravintoloita ja '
+                + 'baareja valonauhojen alla. Teatteria on kolmessa talossa, '
+                + 'ja kesäisin Pyynikin kesäteatterin katsomo pyörii '
+                + 'akselinsa ympäri niin, että näyttämö vaihtuu keskellä '
+                + 'esitystä. Kaupungin yllä pyörii sekin: Näsinneulan '
+                + 'ravintola tekee kierroksensa tunnissa.',
+              kuva: {
+                tiedosto: 'Finlaysonin kulmilta.jpg',
+                selite: 'Finlaysonin sisäpiha yöllä: valaistu vaalea '
+                  + 'tehdasrakennus kaari-ikkunoineen, vasemmalla '
+                  + 'punatiilinen siipi ja niiden välistä nousee tiilipiippu '
+                  + 'tummansinistä taivasta vasten.',
+                lahde: 'Laura Jokisalo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Tehdasmaisema',
+                tahdet: 3,
+                selite: 'Kosken molemmin puolin seisovat 1800-luvun '
+                  + 'punatiilitehtaat, ja kaikki ovat auki kävelijälle.',
+              },
+              {
+                mita: 'Näköalat',
+                tahdet: 3,
+                selite: 'Näsinneula, Pyynikin torni ja Pispalan harjanne — '
+                  + 'kolme eri korkeutta samaan maisemaan.',
+              },
+              {
+                mita: 'Kävely-ympäristö',
+                tahdet: 3,
+                selite: 'Keskusta on kannaksen kokoinen: kaikki mahtuu '
+                  + 'puolen tunnin kävelymatkan sisään.',
+              },
+              {
+                mita: 'Ruoka',
+                tahdet: 2,
+                selite: 'Mustamakkara ja munkit ovat omia klassikoitaan, '
+                  + 'ja torikauppa on yhä arkista.',
+              },
+              {
+                mita: 'Lapsille',
+                tahdet: 3,
+                selite: 'Särkänniemen huvipuisto, akvaario ja Muumimuseo '
+                  + 'ovat kaikki keskustan tuntumassa.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Hintataso',
+                teksti: 'Pohjoismaisittain keskitasoa ja selvästi Helsinkiä '
+                  + 'edullisempi — majoitus etenkin.',
+              },
+              {
+                otsikko: 'Talvi',
+                teksti: 'Marraskuusta maaliskuuhun keskilämpö on pakkasen '
+                  + 'puolella ja järvet jäätyvät. Kenkien pito ratkaisee.',
+              },
+              {
+                otsikko: 'Kesäsade',
+                teksti: 'Sateisin kuukausi on heinäkuu, ei syksy: '
+                  + 'sadetakki kuuluu kesälaukkuun.',
+              },
+              {
+                otsikko: 'Kesäkausi',
+                teksti: 'Osa kohteista, muun muassa Amurin museokortteli, '
+                  + 'on auki vain touko–syyskuussa.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–elokuu: harjun polut ovat '
+              + 'kuivat, järvillä kulkee laivoja ja kesäteatteri pyörii. '
+              + 'Syyskuussa ruska värjää Pispalan rinteet, ja talvella '
+              + 'kaupunki on hiljaisempi mutta jäätyneet järvet avaavat '
+              + 'omat reittinsä.',
+            /*
+             * KAUSIEN LÄMPÖHAARUKAT: kauden kylmimmän kuukauden
+             * keskimääräinen yölämpötila ja lämpimimmän kuukauden
+             * keskimääräinen päivälämpötila kokonaisiksi asteiksi
+             * pyöristettynä. Open-Meteon arkisto (ERA5, 1991–2020),
+             * laskettu 17.8.2026 samasta pisteestä kuin lehden säärivi
+             * (saatiedot.js: tampere).
+             */
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '−5…14 °C',
+                kuvaus: 'Maaliskuu on yhä talvea, mutta toukokuussa '
+                  + 'lämpötila nousee jo neljääntoista ja illat venyvät '
+                  + 'pitkiksi.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '11–21 °C',
+                kuvaus: 'Lämpimin ja samalla sateisin aika: heinäkuussa '
+                  + 'sataa 84 millimetriä, mutta yö tuskin pimenee.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '−1…14 °C',
+                kuvaus: 'Syyskuu on vielä leuto ja ruska kirkas. '
+                  + 'Marraskuussa keskilämpö painuu nollan tuntumaan.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '−8…−1 °C',
+                kuvaus: 'Pakkasta on tasaisesti ja järvet ovat jäässä. '
+                  + 'Helmikuu on kylmin kuukausi, keskimäärin kuusi '
+                  + 'astetta nollan alapuolella.',
+              },
+            ],
+            linkit: [
+              { nimi: 'Visit Tampere — kaupungin oma matkailusivu', url: 'https://visittampere.fi/' },
+              { nimi: 'Wikivoyage: Tampere', url: 'https://fi.wikivoyage.org/wiki/Tampere' },
+              { nimi: 'Nysse — raitiovaunut, bussit ja liput', url: 'https://www.nysse.fi/' },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+      nostot: [
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Koski, joka putoaa kahdeksantoista metriä',
+          tiedosto: 'Tammerkoski Tampere Finland 2025-7-24.jpg',
+          teksti: 'Tampere on rakennettu kapealle kannakselle kahden järven '
+            + 'väliin. Näsijärvi on pohjoisessa ja Pyhäjärvi etelässä, ja '
+            + 'niiden pinnoilla on kahdeksantoista metriä korkeuseroa. Ero '
+            + 'purkautuu keskustan halki juoksevana Tammerkoskena, ja juuri '
+            + 'sen partaalle kaupunki syntyi. Koski oli ensimmäinen '
+            + 'voimalaitos: vesipyörät ja myöhemmin turbiinit pyörittivät '
+            + 'tehdassaleja aivan rannassa, ja myöhemmin sama vesi tuotti '
+            + 'sähkön. Tammerkoski on nykyään yksi Suomen '
+            + 'kansallismaisemista, ja sen rantoja pitkin kävellään '
+            + 'tehtaalta toiselle.',
+          selite: 'Tammerkosken alajuoksu kesäpäivänä. Vasemmalla on hotellin '
+            + 'valkoinen seinä ja vihreäkupolinen talo, keskellä kaartuu '
+            + 'Hämeensillan graniittiholvi ja oikealla nousee Takon tehtaan '
+            + 'punainen tiilipiippu.',
+          lahde: 'Drefer, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tammerkoski',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Neljä patsasta sillan kaiteella',
+          tiedosto: 'Hämeensilta 2017.jpg',
+          teksti: 'Hämeensilta vie kaupungin pääkadun kosken yli. Sen '
+            + 'kaiteilla seisoo neljä Wäinö Aaltosen pronssiveistosta '
+            + 'vuodelta 1929: metsästäjä, erämies, kauppias ja verontuoja. '
+            + 'Patsaat ovat 1920-luvun klassismin tunnetuimpia töitä '
+            + 'Suomessa, ja ne kuvaavat neljää elinkeinoa, joilla seudulla '
+            + 'on eletty. Silta itse uusittiin vuonna 2019, mutta se '
+            + 'rakennettiin vanhan kivisillan näköiseksi ja verhoiltiin '
+            + 'samalla punertavalla graniitilla — patsaat nostettiin '
+            + 'takaisin paikoilleen.',
+          selite: 'Hämeensillan graniittiholvi vedenpinnan tasalta kuvattuna. '
+            + 'Kaiteen päällä erottuu yksi pronssinen mieshahmo, ja sillan '
+            + 'alta näkyy vastarannan puistoa.',
+          lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hämeensilta',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Ravintola, joka pyörii tunnissa ympäri',
+          tiedosto: 'Näsinneula view 8.jpg',
+          teksti: 'Näsinneula avattiin vuonna 1971 Särkänniemen niemen '
+            + 'kärkeen. Se on 168 metriä korkea ja oli yli viisikymmentä '
+            + 'vuotta Suomen korkein rakennus; näkötornina se on maan korkein '
+            + 'yhä. Huipulla on näköalatasanne ja sen yläpuolella pyörivä '
+            + 'ravintola, joka tekee täyden kierroksen tunnissa — pöydästä '
+            + 'näkee saman aterian aikana sekä Näsijärven että Pyhäjärven. '
+            + 'Tornin juurella on huvipuisto, akvaario ja Sara Hildénin '
+            + 'taidemuseo.',
+          selite: 'Särkänniemi ylhäältä Näsinneulasta katsottuna: niemen '
+            + 'kärjessä kiemurtelee punainen vuoristorata, keskellä nousee '
+            + 'keltainen pudotustorni, ja ympärillä on karusellit, laituri ja '
+            + 'järvi joka suunnalla.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Näsinneula',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Skotlantilainen osti kosken vuonna 1820, ja sadassa vuodessa '
+        + 'kalastajakylästä tuli Pohjolan Manchester. Tehtaat ovat lähteneet, '
+        + 'mutta tiiliseinät jäivät paikoilleen.',
+      tehtava: {
+        kysymys: 'Mikä syttyi Finlaysonin kutomosalissa vuonna 1882 '
+          + 'ensimmäisenä koko Pohjolassa?',
+        vaihtoehdot: [
+          'Sähkövalo',
+          'Kaasulyhty',
+          'Öljylamppu',
+          'Kynttiläkruunu',
+        ],
+        oikea: 0,
+        fakta: 'Kutomo sai virtansa tehtaan omasta voimalaitoksesta '
+          + 'Tammerkoskessa. Sali on yhä olemassa: nykyään siinä toimii '
+          + 'elokuvateatteri.',
+      },
+      nostot: [
+        {
+          otsikko: 'Skotlantilainen, joka osti kosken',
+          tiedosto: 'Finlaysonin tehdas Tampereella vuonna 1880.jpg',
+          teksti: 'James Finlayson oli skotlantilainen konepajamies, joka oli '
+            + 'työskennellyt Pietarissa ennen kuin hän vuonna 1820 perusti '
+            + 'konepajan Tammerkosken yläjuoksulle. Paikka oli valittu '
+            + 'kosken takia: se antoi voiman, jota Suomessa ei muualta '
+            + 'saanut. Finlayson myi tehtaan 1836, ja uudet omistajat '
+            + 'käänsivät sen puuvillatehtaaksi. Vuosisadan lopulla se oli '
+            + 'Pohjoismaiden suurin teollisuuslaitos ja työllisti tuhansia '
+            + '— enimmäkseen naisia ja lapsia.',
+          selite: 'Puupiirros Finlaysonin tehtaasta vuodelta 1880: monikerroksisia '
+            + 'tehdassaleja ikkunariveineen, yksi korkea savupiippu ja etualalla '
+            + 'kivikkoinen koski, jonka yli on rakennettu aita ja kävelysilta.',
+          lahde: 'K. K., Wikimedia Commons (PD)',
+          wiki: 'Finlaysonin tehdasalue',
+        },
+        {
+          otsikko: 'Valo syttyi kutomosalissa',
+          tiedosto: 'Filnaysonin Plevna Heli Haavisto (15937912363).jpg',
+          teksti: 'Maaliskuussa 1882 Finlaysonin uuteen kutomosaliin '
+            + 'sytytettiin sähkövalot. Ne olivat ensimmäiset koko '
+            + 'Pohjolassa — aiemmin kuin Tukholmassa, Kööpenhaminassa tai '
+            + 'Oslossa. Virta tuli tehtaan omasta voimalaitoksesta '
+            + 'Tammerkoskessa, ja syy oli käytännöllinen: kutojan on '
+            + 'nähtävä lanka myös pimeällä, ja avoliekki oli puuvillasalissa '
+            + 'jatkuva palonvaara. Sali sai nimekseen Plevna, ja siinä '
+            + 'toimii nykyään elokuvateatteri.',
+          selite: 'Plevnan pitkä punatiilinen julkisivu talvella. Portin '
+            + 'yläpuolella lukee FINLAYSON & C:o ja katolla on elokuva'
+            + 'teatterin keltainen kyltti; kadulla on lunta ja autoja.',
+          lahde: 'Museokeskus Vapriikki, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kortteli, jossa asuttiin neljä perhettä huoneessa',
+          tiedosto: 'Amuri museum of workers’ housing1.jpg',
+          teksti: 'Tehdas tarvitsi työväkeä, ja työväki tarvitsi asunnon. '
+            + 'Amurin kaupunginosa rakennettiin 1860-luvulta alkaen '
+            + 'puutaloiksi, joissa yhtä huonetta jakoi tavallisesti useampi '
+            + 'perhe ja keittiö oli yhteinen. Kortteli purettiin lähes '
+            + 'kokonaan 1970-luvulla, mutta yksi jätettiin museoksi: viisi '
+            + 'asuintaloa ja neljä piharakennusta, joiden huoneet on sisustettu '
+            + 'vuosien 1882 ja 1973 väliltä. Museo on auki touko–syyskuussa.',
+          selite: 'Amurin museokorttelin valkoinen puuportti auki: portista '
+            + 'näkyy hiekkakäytävä, keltainen piharakennus ja koivu, ja '
+            + 'oikealla nousee vaalea lautaseinä.',
+          lahde: 'Visa580, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Amurin museokortteli',
+        },
+      ],
+    },
+  ],
   tallinna: [
     {
       id: 'kaupunki',

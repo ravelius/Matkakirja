@@ -2372,6 +2372,57 @@ export const EUROPE_VALOKUVAT = {
     },
   },
 
+  /*
+   * Tampere (17.8.2026). Ennen–nyt-pari on sama paikka kahtena aikana:
+   * Hämeensilta Tammerkosken yli. Vanha vedos on Alex Federleyn kuva
+   * noin 1900–1910 (rautasilta), uusi Tiia Monnon kuva 2021
+   * (graniittisilta). Kaikki lisenssit todennettu Commonsin API:sta ja
+   * kuvat katsottu silmin 17.8.2026.
+   */
+  tampere: {
+    lisat: [
+      {
+        tiedosto: 'Finlaysonin alue vuonna 1955. Kuva Veikko Kanninen, Vapriikin kuva-arkisto. (16247336630).jpg',
+        vuosi: '1955',
+        lahde: 'Museokeskus Vapriikki, Wikimedia Commons (CC BY 2.0)',
+        selite: 'Finlaysonin tehdasalue ylhäältä vuonna 1955: pitkiä '
+          + 'tehdassaleja rinteessä, korkea savupiippu keskellä ja oikealla '
+          + 'iso kaari-ikkunainen halli aivan Tammerkosken rannassa.',
+      },
+      {
+        tiedosto: 'Finlaysonin sähköveturi Pikku-Pässi 1950-luvulla. Kuva Vapriikin kuva-arkisto. (16408774116).jpg',
+        vuosi: '1950-luku',
+        lahde: 'Museokeskus Vapriikki, Wikimedia Commons (CC BY 2.0)',
+        selite: 'Finlaysonin oma sähköveturi Pikku-Pässi vetämässä '
+          + 'kippivaunuja lumisella pihalla. Yläpuolella kulkee tehtaan '
+          + 'kuljetinsilta, ja ajolangat riippuvat pylväiden varassa.',
+      },
+      {
+        tiedosto: 'Pispala hillside on 1st May 2016.jpg',
+        vuosi: '2016',
+        lahde: 'Lauren Stevens, Wikimedia Commons (CC BY-SA 4.0)',
+        selite: 'Näkymä Pispalan rinteeltä Näsijärvelle vappuna. Alhaalla '
+          + 'on punatiilinen tehdas savupiippuineen, edessä lahti saarineen '
+          + 'ja kaukana vastarannalla kaupunki.',
+      },
+    ],
+    tiedosto: 'Tampere ca 1900-1910. - 14195290548.jpg',
+    vuosi: 'noin 1900–1910',
+    lahde: 'Åbo Akademi University Library, Wikimedia Commons (CC BY 2.0)',
+    selite: 'Hämeensilta ja Tammerkoski Alex Federleyn kuvaamana. Silta on '
+      + 'vielä ristikkokaiteinen rautasilta, kaiteella nojaa kaksi miestä '
+      + 'lakit päässä, ja kosken takana avautuu Hämeenkatu kivitaloineen. '
+      + 'Oikealla puistossa on koristeellinen puinen paviljonki.',
+    uusi: {
+      tiedosto: 'Hämeensilta 2021.jpg',
+      lahde: 'Tiia Monto, Commons (CC BY-SA 4.0)',
+      selite: 'Sama silta tänään. Vuoden 1929 kivisilta korvattiin 2019 '
+        + 'uudella, joka rakennettiin vanhan näköiseksi ja verhoiltiin '
+        + 'punertavalla graniitilla. Kaiteella seisoo yhä yksi Wäinö '
+        + 'Aaltosen neljästä pronssiveistoksesta.',
+    },
+  },
+
   tukholma: {
 
     lisat: [

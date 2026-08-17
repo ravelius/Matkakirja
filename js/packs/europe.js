@@ -395,6 +395,21 @@ const EU_CITIES = [
     id: 'helsinki', name: 'Helsinki', wiki: 'Helsinki', ambience: 'metsa', x: 688, y: 303, airport: true, la: 'end', lx: -16, ly: -12,
     // Suomen oma lauta avautuu Helsingistä.
   },
+  /*
+   * TAMPERE JA LAUDAN VÄHIMMÄISVÄLI. Laudan projektiolla
+   * x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3 Tampere (61,498 N,
+   * 23,761 E) osuisi pisteeseen 667, 276 — vain 34 pikselin päähän
+   * Helsingistä (688, 303). Euroopan lauta vaatii kaupunkien väliksi
+   * 60 pikseliä (minCityDistance), ja syy on mekaaninen eikä
+   * esteettinen: aarrelaatta piirretään kohtaan (x+22, y+18), joten
+   * tosipaikallaan Tampereen laatta istuisi suoraan Helsingin pallon
+   * päällä. Kaupunki on siksi siirretty samaa Helsinki–Tampere-
+   * suuntaa pitkin pohjoiseen pisteeseen 657, 245 (≈ 66 px
+   * Helsingistä). Pituuspiiri pysyy lähes oikeana (23,2° vs. 23,8°);
+   * leveyspiiri liukuu Keuruun korkeudelle. Nimikilpi lähtee
+   * vasemmalle omalle rivilleen, jottei se osu Helsingin kilpeen.
+   */
+  { id: 'tampere', name: 'Tampere', wiki: 'Tampere', ambience: 'metsa', x: 657, y: 245, la: 'end', lx: -14, ly: -9 },
   { id: 'tallinna', name: 'Tallinna', wiki: 'Tallinna', ambience: 'kaupunki', x: 684, y: 374, la: 'start', lx: 14, ly: 12 },
   { id: 'riika', name: 'Riika', wiki: 'Riika', ambience: 'kaupunki', x: 648, y: 434, la: 'end', lx: -14, ly: 14 },
   { id: 'vilna', name: 'Vilna', wiki: 'Vilna', ambience: 'kaupunki', x: 703, y: 470, la: 'start', lx: 16, ly: 5 },
@@ -404,7 +419,13 @@ const EU_CITIES = [
   },
   { id: 'oslo', name: 'Oslo', wiki: 'Oslo', ambience: 'metsa', x: 418, y: 318, la: 'end', lx: -16, ly: 5 },
   { id: 'kobenhavn', name: 'Kööpenhamina', wiki: 'Kööpenhamina', ambience: 'satama', x: 452, y: 429, la: 'start', lx: 16, ly: 5 },
-  { id: 'lappi', name: 'Lappi', wiki: 'Lapin maakunta', ambience: 'pohjoinen', x: 705, y: 145, la: 'end', lx: -16, ly: 5 },
+  /*
+   * Kohteen id pysyy 'lappi' — siihen viitataan kymmenissä tiedostoissa
+   * (kysymykset, saapumiset, valokuvat, säätiedot, kategoriat). Nimi ja
+   * wiki ovat 17.8.2026 alkaen Rovaniemi: koordinaatit ovat aina olleet
+   * Rovaniemen (napapiiri), ja laudalla on nyt alueen sijasta kaupunki.
+   */
+  { id: 'lappi', name: 'Rovaniemi', wiki: 'Rovaniemi', ambience: 'pohjoinen', x: 705, y: 145, la: 'end', lx: -16, ly: 5 },
   { id: 'tromssa', name: 'Tromssa', wiki: 'Tromssa', ambience: 'pohjoinen', x: 577, y: 66, la: 'start', lx: 16, ly: 5 },
   { id: 'islanti', name: 'Islanti', ambience: 'pohjoinen', wiki: 'Islanti', x: 62, y: 60, la: 'middle', lx: 0, ly: 42 },
 ];
@@ -462,6 +483,15 @@ const EU_EDGES = [
   { a: 'moskova', b: 'pietari', steps: 4 },
   { a: 'pietari', b: 'helsinki', steps: 3 },
   { a: 'helsinki', b: 'lappi', steps: 4 },
+  /*
+   * Tampereen haara. Suora helsinki–lappi jää paikalleen, jottei
+   * pohjoisen matka kallistu — Tampereen kautta pääsee samaan
+   * suuntaan yhtä silmälukua kalliimmalla mutta aarrelaatan kanssa.
+   * Askelmitoitus naapureiden mukaan: 66 px / 2 ja 111 px / 3 eli
+   * 33 ja 37 pikseliä silmälukua kohti (laudan haarukka on 26–50).
+   */
+  { a: 'helsinki', b: 'tampere', steps: 2 },
+  { a: 'tampere', b: 'lappi', steps: 3 },
   { a: 'lappi', b: 'tromssa', steps: 3 },
   { a: 'tromssa', b: 'oslo', steps: 6 },
   { a: 'oslo', b: 'tukholma', steps: 3 },
@@ -555,7 +585,10 @@ export const EUROPE = {
         kuva: 'assets/aarteet/aarre-europe-topaz.jpg',
       },
     }),
-    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 10, empty: 12 },
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (42). Tampere
+    // toi 42:nnen, ja se lisättiin yleisimpään aarteeseen (meripihka),
+    // jotta laattapinon suhteet pysyvät entisellään.
+    counts: { star: 1, horseshoe: 2, robber: 3, ruby: 6, emerald: 7, topaz: 11, empty: 12 },
   },
 
   questions: EUROPE_QUESTIONS,

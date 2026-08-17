@@ -649,6 +649,19 @@ export const EUROPE_SAAPUMISET = {
       + 'Kävelin samasta portista sisään.',
   },
 
+  /*
+   * Tampere (17.8.2026). Ei luenta-kenttää: ääntä ei ole generoitu,
+   * eikä kaupunki ole SAAPUMISLUENNAT-listalla (js/sisaltotaulut.js).
+   */
+  tampere: {
+    kuvaus: 'Kaupunki kuuluu ennen kuin se näkyy: kosken kohina kantaa '
+      + 'sillalle asti. Punatiilinen tehdas seisoo aivan veden päällä, '
+      + 'ja sen ikkunoissa palaa valo keskellä päivää.',
+    nosto: 'Isoisä kirjoitti: "Täällä syttyi sähkövalo ennen kuin '
+      + 'missään muualla Pohjolassa — ja kutojat tekevät työnsä sen '
+      + 'alla kuin se olisi tavallista." Se on nyt tavallista.',
+  },
+
   lappi: {
     kuvaus: 'Ajoimme neljä tuntia, ja jossain kohtaa metsä madaltui '
       + 'tunturiksi. Järvellä ei näkynyt toista rantaa, ja kaupan '
