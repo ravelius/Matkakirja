@@ -40,7 +40,7 @@ ensin, toteutus vasta omistajan hyväksynnän jälkeen:
 ## 3. Viestintäprotokolla (todettu 17.8.2026, reittitesti PR #1207)
 
 PR-kommentti EI herätä sessiota, kun kommentti tulee samalta
-GitHub-tililtä (ravelius) — tilaus suodattaa omat tapahtumat.
+GitHub-tilitä (ravelius) — tilaus suodattaa omat tapahtumat.
 Todettu protokolla: SISÄLTÖ AINA GITIIN (Fable → Max: kommentti
 avoimeen kanava-PR:ään tai viesti-max-tiedosto; Max → Fable:
 viesti-fable.md + push), ja HERÄTYS omistajan yhden rivin
@@ -55,19 +55,25 @@ olevat kaupungit ja maat saadaan tehtyä mahdollisimman NOPEASTI
 mutta myös TALOUDELLISESTI järkevästi. Kaikki työtavat saa
 kyseenalaistaa. Huomioi ainakin:
 
+- PARVILUPA (omistaja 17.8.2026): Fable saa käyttää
+  agenttiparvia (Workflow-orkestrointia) kaupunki- ja
+  maalehtityössä. Suunnitelman pitää kertoa, MITEN parvea
+  käytetään fiksusti — sijaisen mitattu oppi: tekstityö ja
+  faktahaku rinnakkain toimii, mutta Commons-kuvahaku EI
+  rinnakkaistu (IP-kohtainen rajoitus, 2 ytimen katto) vaan
+  kuuluu yhteen tahdistettuun jonoon.
 - Työvoimamalli: Fablen sisäiset agentit (ei herätysongelmaa,
   raportti tulee automaattisesti) vs. erilliset sessiot vs. Fable
-  itse — ja mikä työ kuuluu millekin. Sijaisen mitattu oppi:
-  agenttiparvi oli väärä työkalu kuvahakuun (2 ytimen katto,
-  Commonsin IP-kohtainen rajoitus) — kuvahaku yhteen tahdistettuun
-  jonoon, tekstit rinnakkain.
+  itse — ja mikä työ kuuluu millekin.
 - Toimivat tekniikat, jotka monistetaan kaavaksi: erälisenssi-
   tarkistus (50 nimeä/kutsu), kontaktiarkkikatselu, kategoriahaku
   hakusanojen sijaan (välttämätön ei-latinalaisissa maissa),
-  Actions-ajurit avaimellisiin töihin (generointi, kuvanouto).
-- Sisältökaavat: mikä on kaupungin/maan minimikokoonpano (lehti,
-  opas, kartta, liput, äänet) ja missä järjestyksessä erät
-  kannattaa ajaa; monistusvaroitukset (hyvaTietaa-muoto ym.).
+  Actions-ajurit avaimellisiin töihin (generointi, kuvanouto),
+  hybridimalli miniatyyreissä (v812).
+- Sisältökaavat: mikä on kaupungin/maan minimikokoonpano — HUOM
+  omistajan sitova päätös 17.8.: VAIN kaupunkilehti ja maalehti,
+  EI tarinakaarta (Raamattu, Kaupungit) — ja missä järjestyksessä
+  erät kannattaa ajaa; monistusvaroitukset (hyvaTietaa-muoto ym.).
 - Talous: mittaa kustannus per kaupunki nykytavalla (API-kulut +
   token-kulut) ja esitä mihin kannattaa panostaa ja mistä karsia.
 - Laatuportit, jotka EIVÄT jousta: lisenssit API:sta, kuvat
