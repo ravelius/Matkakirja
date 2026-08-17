@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v836 — E00 2/2: Tokion, Soulin ja Shanghain kohdekartat ja kohteet — koko kuusikko valmis, tarkista pelissä',
   'v835 — E00 1/2: Bagdadin, Teheranin ja Tripolin kohdekartat ja kohteet (avaa lehdet ja kartat pelissä — omistaja tarkistaa suoraan pelistä)',
   'v834 — iPhone: lehti täyttää ruudun alas asti (sumennettu alakaista pois) — testaa myös taustapaluun jälkeen',
   'v833 — 11 uutta kaupunkia laudoilla ja maailmankartalla (Kioto, Varanasi, Mandalay, Kanton, Sevilla, Bergen, Fès, Lalibela, Sitka, Ouro Preto, Dunedin) — pisteet, reitit, visat ja kuvakortit; ei vielä lehtiä',
