@@ -10,6 +10,8 @@ import { HUUDAHDUKSET } from './aani-ehdokkaat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { tokenIconSvg } from './mapart.js';
+import { fetchImage, fetchSummary } from './wiki.js';
+import { OMAT_TIIVISTELMAT } from './packs/omat-tiivistelmat.js';
 
 // Tapahtumakuplien kestot (siirretty ui.js:stä M3:ssa: myös
 // vertailutila tarvitsee oletuskeston ilman kiertotuontia).
@@ -773,4 +775,63 @@ export function poimiNostoVirke(nostot) {
     }
   }
   return paras;
+}
+
+/*
+ * Kehittäjätila (omistajan toive): kaupunkiin pääsee napauttamalla sen
+ * laattaa, jolloin minkä tahansa kaupungin sisältöä voi katsoa ilman
+ * että sinne pitää pelata.
+ *
+ * Tila säilyy selaimessa, koska sisällön tarkastelu jatkuu yleensä
+ * seuraavallakin avauksella. Se ei kuulu pelin tallennukseen: tila on
+ * laitteen asetus eikä pelitilanteen osa, eikä sen pidä matkustaa
+ * tallennuksen mukana.
+ */
+const KEHITTAJA_AVAIN = 'matkakirja-kehittaja';
+
+export function kehittajaTilaPaalla() {
+  try {
+    return localStorage.getItem(KEHITTAJA_AVAIN) === '1';
+  } catch {
+    return false; // yksityinen selaus
+  }
+}
+
+export function asetaKehittajaTila(paalla) {
+  try {
+    if (paalla) localStorage.setItem(KEHITTAJA_AVAIN, '1');
+    else localStorage.removeItem(KEHITTAJA_AVAIN);
+  } catch {
+    /* yksityinen selaus: tila jää vain tälle istunnolle */
+  }
+}
+
+// Tiivistelmät ja kuvat haetaan kerran per artikkeli: sama kuva näkyy
+// sekä saapumiskortissa että Lue lisää -dialogissa ilman uutta hakua.
+const wikiSummaryCache = new Map();
+const wikiImageCache = new Map();
+
+export async function cachedSummary(title) {
+  if (!wikiSummaryCache.has(title)) {
+    // Oma suomenkielinen tiivistelmä paikkaa puuttuvan tai englannin-
+    // kielisen wikitekstin — ja toimii myös ilman verkkoa. Kunnollinen
+    // fi-artikkeli ohittaa oman tekstin itsestään. Wikihaun kuva
+    // säilytetään, otsikko pysyy pelin omana.
+    wikiSummaryCache.set(title, fetchSummary(title).then((summary) => {
+      const oma = OMAT_TIIVISTELMAT[title];
+      if (!oma || (summary && summary.lang === 'fi')) return summary;
+      return { ...(summary ?? {}), title, extract: oma, lang: 'fi', oma: true };
+    }).catch(() => {
+      const oma = OMAT_TIIVISTELMAT[title];
+      return oma ? { title, extract: oma, lang: 'fi', oma: true } : null;
+    }));
+  }
+  return wikiSummaryCache.get(title);
+}
+
+export async function cachedImage(title) {
+  if (!wikiImageCache.has(title)) {
+    wikiImageCache.set(title, cachedSummary(title).then((s) => fetchImage(s)));
+  }
+  return wikiImageCache.get(title);
 }

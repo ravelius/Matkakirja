@@ -212,11 +212,11 @@ test('tilastosivun otsikko on maan nimi nominatiivissa', () => {
    * "Maa numeroina" -sivu (v311) on maan sivu siinä missä muutkin,
    * joten siinä lukee "EGYPTI NUMEROINA" (omistajan toive 7.8.2026).
    * Otsikko on nominatiivissa, koska "numeroina" on jo taivutettu —
-   * genetiivi antaisi "Egyptin numeroina". Sivu syntyy ui.js:ssä eikä
-   * aineistossa, joten testi lukee lähdetekstin: ui.js ei aukea
-   * Nodessa DOM:in takia.
+   * genetiivi antaisi "Egyptin numeroina". Sivu syntyy lehden
+   * sivukoneistossa (js/lehti.js, remontin M5a) eikä aineistossa,
+   * joten testi lukee lähdetekstin: se ei aukea Nodessa DOM:in takia.
    */
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const ui = readFileSync(new URL('../js/lehti.js', import.meta.url), 'utf8');
   const kohta = ui.slice(ui.indexOf("id: 'maa-numeroina'") - 400, ui.indexOf("id: 'maa-numeroina'") + 120);
   assert.match(kohta, /\$\{otsikonMaa\} numeroina/, 'otsikossa pitää olla maan nimi');
   // Maadataton lauta saa yhä yleisnimen — otsikko ei saa jäädä tyhjäksi.

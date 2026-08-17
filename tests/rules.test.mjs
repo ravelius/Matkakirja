@@ -3610,7 +3610,8 @@ test('kehittäjän siirto vie kaupunkiin kuluttamatta peliä', () => {
 
 test('kehittäjätila on salasanan takana ja pois päältä oletuksena', () => {
   const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  // Kehittäjätilan kytkin muutti ui-apureihin remontin M5a:ssa.
+  const ui = readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8');
   // Salasana on kevyt lukko: se estää vahingossa avaamisen. Jos tarkistus
   // katoaa, tila aukeaa yhdellä napautuksella kenen tahansa käsissä.
   // Koodit ovat lähdekoodissa vain tiivisteinä (13.8.2026): plaintext
