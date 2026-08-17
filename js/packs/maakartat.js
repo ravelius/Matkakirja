@@ -4823,8 +4823,6 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pyynikin näkötorni', lat: 61.4936, lon: 23.7208, wiki: 'Pyynikin näkötorni' },
     ],
   },
-<<<<<<< HEAD
-=======
   firenze: {
     polku: 'assets/kartat/firenze-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -4875,7 +4873,6 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Bobolin puutarha', lat: 43.7645, lon: 11.25 },
     ],
   },
->>>>>>> origin/claude/fable-int-firenze
   dubrovnik: {
     polku: 'assets/kartat/dubrovnik-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
