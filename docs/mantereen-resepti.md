@@ -17,24 +17,24 @@ nyt Fablen sisäiset agentit, ks. roolitus.)
    Tarinalinjaukset mantereelle (docs/tarina.md), herkkyysrajaukset
    (ei sotasisältöä; pyhät paikat kunnioittavasti ulkopuolelta),
    kaupunkilista ja laudan rajaus omistajan kanssa.
-2. **Lautageometria — Opus 2.** Maiden rajat (<manner>-countries.js),
+2. **Lautageometria — sisältöagentti.** Maiden rajat (<manner>-countries.js),
    kaupunkien paikat, laattamäärät. PILOTTI ensin: kuvakaappaus
    Fablelle hyväksyntään ennen jatkoa. **Samassa erässä
    map.cityCountry-taulu** (Dubai-oppi: ilman sitä menovinkit, liput
    ja maa numeroina eivät syty, ja puute huomataan vasta lehdessä).
-3. **Maakartat (reliefit) — Opus 2, erissä.** Lisenssit Commonsin
+3. **Maakartat (reliefit) — sisältöagentti, erissä.** Lisenssit Commonsin
    rajapinnasta, pisteet pelin karttapiste()-funktiolla JA
    pikselivärin vesitarkistuksella, katselu lehden 340 px koossa.
-4. **Lehdet — Opus 1, erissä.** Kaupunkilehdet (kansi + aihesivu +
+4. **Lehdet — sisältöagentti, erissä.** Kaupunkilehdet (kansi + aihesivu +
    minitehtävä; menovinkit maalehdestä) ja maalehtien aihesivut.
    Esitarkistin ajetaan LOPPUUN ennen liittämistä; kuva katsotaan
    silmin 480 px:ssä; kuvan pitää olla siitä maasta, jota sivu
    käsittelee. Vanhat jutut siirretään sanatarkasti kopioimalla.
-5. **Kohdekartat — Opus 2, lehtien tahdissa.** Sääntö: kartta
+5. **Kohdekartat — sisältöagentti, lehtien tahdissa.** Sääntö: kartta
    mergetään vasta kun kaupungin lehti on mainissa. Rajaus kohteen
    omassa mittakaavassa (Dubai 2,8 km oli oikein, ohjeen 5–8 km ei
    ole laki). Valmistelu saa alkaa rinnakkain lehden kanssa.
-6. **Nähtävyysjutut — Sonnet 2, kohdekarttojen tahdissa.**
+6. **Nähtävyysjutut — sisältöagentti, kohdekarttojen tahdissa.**
    Kuvakuraatio: useita kandidaatteja per kohde, jokainen katsotaan,
    valinta perustellaan; wiki-täsmennysansat kirjataan.
 7. **Tarinakaari — Fable.** Tekstit (saapuminen + kohtaaminen&kysymys
@@ -42,7 +42,7 @@ nyt Fablen sisäiset agentit, ks. roolitus.)
    luennat (ElevenLabs) → pelikytkentä (KAARI_LAUDAT + lipun
    poisto). Manneraarteiden kuvat (AI, mustasta nousevat) jos manner
    tarvitsee uudet.
-8. **QA-portit — Sonnet 1, joka vaiheen perään.** Faktatarkistus
+8. **QA-portit — QA-agentti, joka vaiheen perään.** Faktatarkistus
    kaaren kysymyksille (+ anakronismit vuoteen 1873), integraatio-QA
    oikealla selaimella (myös tallennus/lataus), kuvien ja linkkien
    auditointi, duplikaattihaku. Verkkolöydökset epävarma-merkinnällä.
