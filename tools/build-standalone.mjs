@@ -199,6 +199,10 @@ const MODULES = [
   'js/sisaltotaulut.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
+  // Mallin B pilotit ennen ui.js:ää (ui tuo ne).
+  'js/liput.js',
+  'js/karttazoom.js',
+  'js/vertailu.js',
   'js/pollo-haku.js',
   'js/pollo.js',
   'js/ui.js',
