@@ -2665,7 +2665,27 @@ export class UI {
         const W = this.game.pack.map.width;
         this.taideRuutu = W / Math.max(1, Math.ceil(W / this.taideRuutu));
       }
-      this.taideVanhat = [...this.taideRuudut.values()];
+      /*
+       * VANHAT KERTYVÄT, EIVÄT KORVAUDU (omistajan iPad-havainto
+       * 17.8.2026: *"kun zoomailee nopeasti sisään ja ulos ja lopettaa,
+       * kuvaan jää pitkäksi aikaa epäteräviä laikkuja"*).
+       *
+       * Tässä oli sijoitus, joka HEITTI EDELLISEN sukupolven listan
+       * pois. Vanhat ruudut jäävät DOMiin uusien PÄÄLLE siihen asti
+       * kunnes poistaVanhatRuudut poistaa ne (ks. insertBefore alempana),
+       * ja poisto käy vain tämän listan läpi. Kun mittakaava vaihtui
+       * uudestaan ennen kuin lista ehti tyhjentyä — juuri sitä nopea
+       * zoomailu tekee — edellisen sukupolven solmut katosivat
+       * kirjanpidosta mutta EIVÄT ruudulta: ne jäivät orvoiksi, eikä
+       * mikään poistanut niitä enää koskaan.
+       *
+       * Mitattuna (Chromium, iPad-viewport, kuusi nopeaa zoomisykliä
+       * Euroopan lähikuvassa): 31 orpoa ruutua, joista 13 peitti näkyvää
+       * aluetta. Ne jäivät paikoilleen koko lopun istunnon — kartta ei
+       * tarkentunut hitaasti vaan ei lainkaan, ja jokainen orpo piti
+       * lisäksi objektiosoitteensa elossa iOS:n muistibudjetissa.
+       */
+      this.taideVanhat = [...(this.taideVanhat ?? []), ...this.taideRuudut.values()];
       this.taideRuudut = new Map();
       this.taideTyhjat = new Set();
     }
@@ -2844,7 +2864,11 @@ export class UI {
           () => this.dead || this.eleKesken(), this.taideLahde);
         if (this.dead || skaala !== this.taideSkaala) continue;
         // Tyhjä ruutu kirjataan tyhjänä: sitä ei piirretä eikä pyydetä uudestaan.
-        if (kuva === RUUTU_TYHJA) { this.taideTyhjat.add(avain); continue; }
+        if (kuva === RUUTU_TYHJA) {
+          this.taideTyhjat.add(avain);
+          this.siivoaKatetutVanhat();
+          continue;
+        }
         // Eleen takia luovutettu ruutu pyydetään uudestaan eleen jälkeen.
         if (!kuva && this.eleKesken()) { this.taideOdottaa = true; break; }
         if (!kuva) continue;
@@ -2852,6 +2876,10 @@ export class UI {
         // Uusi ruutu alimmaiseksi: vanhan mittakaavan ruudut jäävät
         // päälle siihen asti, kunnes koko näkymä on katettu.
         this.taideRyhma.insertBefore(kuva, this.taideRyhma.firstChild);
+        // Uusi ruutu peittää alleen jääneen vanhan: jos sen koko alue on
+        // nyt katettu, sumea kerros lähtee heti eikä vasta renkaan
+        // valmistuttua.
+        this.siivoaKatetutVanhat();
         /*
          * Kehyksen mittainen hengähdys ruutujen väliin. Nopealla
          * reitillä ruudun maalaus on synkronista työtä (drawImage
@@ -2950,11 +2978,12 @@ export class UI {
         const kuva = await rasteroiRuutu(this.taide, ikkuna, skaala, tarkkuus,
           () => this.dead || this.eleKesken(), this.taideLahde);
         if (this.dead || this.taideRengas !== tyo || skaala !== this.taideSkaala) return;
-        if (kuva === RUUTU_TYHJA) this.taideTyhjat.add(avain);
+        if (kuva === RUUTU_TYHJA) { this.taideTyhjat.add(avain); this.siivoaKatetutVanhat(); }
         else if (kuva) {
           this.taideRuudut.set(avain, kuva);
           // Alimmaiseksi, kuten näkyvätkin: vanhat jäävät päälle.
           this.taideRyhma.insertBefore(kuva, this.taideRyhma.firstChild);
+          this.siivoaKatetutVanhat();
         } else if (this.eleKesken()) {
           // Luovutettu ruutu takaisin jonon kärkeen: se piirretään
           // seuraavalla joutohetkellä, kun sormi on irronnut.
@@ -3105,6 +3134,59 @@ export class UI {
     }
     this.taideVanhat = [];
     this.poistaVektorit();
+  }
+
+  /**
+   * Poistaa ne vanhan mittakaavan ruudut, joiden alue on JO katettu
+   * uusilla — kesken sarjan, ruutu kerrallaan.
+   *
+   * Miksi tämä on erikseen: uusi ruutu menee taideRyhmässä alimmaiseksi,
+   * eli vanhan mittakaavan ruutu jää sen PÄÄLLE (ks. insertBefore
+   * taydennaTaidessa). Se on tahallista — muuten kartalla vilahtaisi
+   * tyhjää pergamenttia joka kerta kun zoomataan. Mutta poisto tapahtui
+   * vasta kun koko puskurirengas oli valmis, ja rengas on yhdeksän
+   * ruudullista, jotka piirtyvät yksi kerrallaan joutohetkinä. Näkyvä
+   * osa oli terävä jo aikaa sitten, mutta pelaaja näki yhä sen päällä
+   * makaavan sumean kerroksen: mitattuna yksi nipistys Euroopan
+   * lähikuvassa 5632 ms.
+   *
+   * Peittävyys ei ole arvio vaan tarkistus. Vanha ruutu poistetaan
+   * vasta kun JOKAINEN nykyruudukon ruutu, jonka päälle se ulottuu, on
+   * piirretty (tai kirjattu tyhjäksi, jolloin siinä ei ole mitään
+   * piirrettävää). Siksi mitään ei voi paljastua tyhjänä, ja kartta
+   * tarkentuu keskeltä ulospäin samassa tahdissa kuin ruudut valmistuvat.
+   */
+  siivoaKatetutVanhat() {
+    if (!this.taideVanhat?.length || !(this.taideRuutu > 0)) return;
+    const koko = this.taideRuutu;
+    // Kiertävällä laudalla nykyruudut on avainnettu kierrettyyn
+    // sarakkeeseen; vanhan ruudun oma x on samalla tavalla laudan
+    // sisällä, mutta pyöristys voi työntää viimeisen sarakkeen yli.
+    const kiertava = this.kartta.kiertava();
+    const sarakkeita = kiertava
+      ? Math.max(1, Math.round(this.game.pack.map.width / koko)) : 0;
+    const katettu = (solmu) => {
+      const x = Number(solmu.getAttribute('x'));
+      const y = Number(solmu.getAttribute('y'));
+      const w = Number(solmu.getAttribute('width'));
+      const h = Number(solmu.getAttribute('height'));
+      if (![x, y, w, h].every(Number.isFinite) || w <= 0 || h <= 0) return false;
+      for (let ry = Math.floor(y / koko); ry <= Math.floor((y + h - 0.001) / koko); ry++) {
+        for (let rx = Math.floor(x / koko); rx <= Math.floor((x + w - 0.001) / koko); rx++) {
+          const sarake = kiertava ? ((rx % sarakkeita) + sarakkeita) % sarakkeita : rx;
+          const avain = `${sarake},${ry}`;
+          if (!this.taideRuudut.has(avain) && !this.taideTyhjat.has(avain)) return false;
+        }
+      }
+      return true;
+    };
+    const jaljelle = [];
+    for (const solmu of this.taideVanhat) {
+      if (!katettu(solmu)) { jaljelle.push(solmu); continue; }
+      solmu.remove();
+      if (solmu.dataset?.osoite) URL.revokeObjectURL(solmu.dataset.osoite);
+    }
+    this.taideVanhat = jaljelle;
   }
 
   /**

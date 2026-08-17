@@ -989,6 +989,66 @@ vaadi('taustapaluun jälkeen kartta ei jää jäätyneeksi eikä näkyvälle alu
   && paluu.odottaa === false && paluu.puuttuu === 0,
   JSON.stringify(paluu));
 
+/*
+ * 12) NOPEA ZOOMAILU SISÄÄN JA ULOS (omistajan iPad-havainto 17.8.2026:
+ * *"kun zoomailee nopeasti sisään ja ulos ja lopettaa, kartta tarkentuu
+ * todella hitaasti — kuvaan jää pitkäksi aikaa epäteräviä laikkuja"*).
+ *
+ * Uuden mittakaavan ruutu menee taideRyhmässä ALIMMAISEKSI, eli vanhan
+ * mittakaavan ruutu jää sen päälle siihen asti kunnes poistaVanhatRuudut
+ * poistaa sen. Poisto käy läpi taideVanhat-listan — ja se lista
+ * KORVATTIIN joka kerta kun mittakaava vaihtui. Nopeassa zoomailussa
+ * lista ei ehtinyt tyhjentyä vaihtojen välissä, joten edellisen
+ * sukupolven solmut katosivat kirjanpidosta mutta eivät ruudulta.
+ *
+ *   ennen korjausta (Chromium, iPad-viewport, kuusi zoomisykliä):
+ *     31 orpoa ruutua, 13 niistä näkyvän alueen päällä — pysyvästi
+ *   korjauksen jälkeen: 0 orpoa, näkyvä alue terävä 2,3 sekunnissa
+ *
+ * Vartioitava asia on kaksiosainen: yksikään ruutu ei saa jäädä
+ * kirjanpidon ulkopuolelle, eikä näkyvän alueen päälle saa jäädä
+ * vanhan mittakaavan ruutuja sen jälkeen kun kartta on saanut levätä.
+ */
+await sivu.waitForTimeout(2000);
+for (let i = 0; i < 6; i++) {
+  await nipista(1.45, 6, 12);
+  await sivu.waitForTimeout(80);
+  await nipista(0.72, 6, 12);
+  await sivu.waitForTimeout(80);
+}
+await nipista(1.45, 6, 12);
+const kerros = () => sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  const nyt = new Set(ui.taideRuudut.values());
+  const vanhat = new Set(ui.taideVanhat ?? []);
+  const solmut = [...ui.taideRyhma.querySelectorAll('image')];
+  const n = ui.nakyvaAlue();
+  const paalla = solmut.filter((s) => {
+    if (nyt.has(s)) return false;
+    const x = +s.getAttribute('x'); const y = +s.getAttribute('y');
+    const w = +s.getAttribute('width'); const h = +s.getAttribute('height');
+    return x + w > n.x && x < n.x + n.w && y + h > n.y && y < n.y + n.h;
+  });
+  return {
+    orpoja: solmut.filter((s) => !nyt.has(s) && !vanhat.has(s)).length,
+    sumeitaPaalla: paalla.length,
+    ruutuja: ui.taideRuudut.size,
+    piirtyy: ui.taidePiirtyy,
+  };
+});
+let zoomailu = null;
+for (let i = 0; i < 40; i++) {
+  // eslint-disable-next-line no-await-in-loop
+  zoomailu = await kerros();
+  if (!zoomailu.piirtyy && zoomailu.sumeitaPaalla === 0 && zoomailu.orpoja === 0) break;
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(500);
+}
+vaadi('nopea zoomailu ei jätä yhtään ruutua kirjanpidon ulkopuolelle',
+  zoomailu.orpoja === 0, JSON.stringify(zoomailu));
+vaadi('nopean zoomailun jälkeen näkyvän alueen päälle ei jää vanhan mittakaavan ruutuja',
+  zoomailu.sumeitaPaalla === 0, JSON.stringify(zoomailu));
+
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
 await selain.close();
