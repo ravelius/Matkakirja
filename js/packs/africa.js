@@ -191,9 +191,14 @@ const AFRICA_EDGES = [
   { a: 'viktoria', b: 'bahrelghazal', steps: 3 },
   { a: 'bahrelghazal', b: 'darfur', steps: 2 },
   { a: 'bahrelghazal', b: 'addisabeba', steps: 3 },
+  /*
+   * Suora addisabeba–suakin (3) poistettu: Lalibela istuu käytännössä
+   * reitin varrella (noin 12 yksikön päässä suorasta linjasta, kun
+   * laudan vähimmäisväli on 55), ja ketju addisabeba–lalibela (2) +
+   * lalibela–suakin (2) maksaa vain yhden askelen enemmän (4 vs. 3).
+   */
   { a: 'addisabeba', b: 'lalibela', steps: 2 },
   { a: 'lalibela', b: 'suakin', steps: 2 },
-  { a: 'addisabeba', b: 'suakin', steps: 3 },
   { a: 'addisabeba', b: 'rashafun', steps: 3 },
   { a: 'addisabeba', b: 'kilimandzaro', steps: 3 },
 
