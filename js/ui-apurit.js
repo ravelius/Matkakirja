@@ -266,7 +266,7 @@ export function aarreIkoni(token, type, size) {
  * Valittu linssi on laitteen katseluasetus, ei pelin tapahtuma.
  *
  * Siksi se ei kuulu pelitallennukseen vaan omaan avaimeensa kuten
- * äänet ja kertoja (docs/linssit-suunnitelma.md luku 5.3). Kelvoton tai
+ * äänet ja kertoja (docs/moduulit/linssit.md luku 5.3). Kelvoton tai
  * omistamaton arvo ohitetaan hiljaa: tallennus voi olla vanhalta
  * versiolta, jossa linssi oli toisen niminen.
  */

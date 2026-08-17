@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 817, teksti: 'Opas ja nähtävyydet omiksi moduuleiksi (M4)' },
   { v: 816, teksti: 'Opas ja kaupunkiosiot: Tokio, Soul, Shanghai, Tripoli' },
   { v: 815, teksti: 'Liput, karttazoom ja vertailu omiksi moduuleiksi (M3)' },
   { v: 814, teksti: 'UI:n apurit ja kehysmatikka omaan moduuliin (M2)' },

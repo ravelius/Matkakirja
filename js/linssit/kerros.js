@@ -10,7 +10,7 @@
  * MOOTTORIA EI SAA TUODA STAATTISESTI js/ui.js:ään. Yhden tiedoston
  * version kokoaja (tools/build-standalone.mjs) vaatii, että jokainen
  * `from './...'`-tuonti löytyy sen MODULES-listalta, ja linssit eivät
- * kuulu sinne (docs/linssit-suunnitelma.md luku 2.1: yhden tiedoston
+ * kuulu sinne (docs/moduulit/linssit.md luku 2.1: yhden tiedoston
  * versio ei saa linssejä, sama tarkoituksellinen raja kuin valokuvilla
  * ja äänillä). Kutsuja tuo tämän dynaamisesti:
  *
@@ -77,7 +77,7 @@ function oletusRyhma() {
 function sopimusvirhe(tunnus, viesti) {
   return new Error(
     `Linssi "${tunnus}" rikkoo linssisopimusta: ${viesti}. `
-    + 'Ks. docs/linssit-suunnitelma.md luku 2.',
+    + 'Ks. docs/moduulit/linssit.md luku 2.',
   );
 }
 

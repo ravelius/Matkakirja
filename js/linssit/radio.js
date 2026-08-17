@@ -28,7 +28,7 @@
  * yhdellä valinnaisella kutsulla, ks. kerroVaihe — mikä asteikolla
  * liikkuu ja miten, on radiosoitin.js:n ja css/radio.css:n asia.
  *
- * RADIO ON POIKKEUS LINSSISOPIMUKSESSA (docs/linssit-suunnitelma.md
+ * RADIO ON POIKKEUS LINSSISOPIMUKSESSA (docs/moduulit/linssit.md
  * luku 2, kenttä `kerros: false`). Kaksi sopimuksen sääntöä rikkoutuisi,
  * jos ne otettaisiin kirjaimellisesti:
  *
@@ -1650,7 +1650,7 @@ export function pois() {
  * Toiseksi css/styles.css on toisen työvaiheen hallussa: tälle tilalle ei
  * ole siellä luokkia, joten jokainen väri ja viivanleveys annetaan
  * SVG-attribuuttina — sama sääntö kuin linssikerroksella
- * (docs/linssit-suunnitelma.md luku 2.2).
+ * (docs/moduulit/linssit.md luku 2.2).
  *
  * Kolme ulkoasua, jotta yhdellä silmäyksellä näkee mitä voi painaa:
  *

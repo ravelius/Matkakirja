@@ -797,7 +797,7 @@ export const KULTTUURI_KATEGORIAT = {
    * (ESP), ja sama maaosasto palvelee myös Barcelonaa ja Granadaa.
    *
    * Litteät nostot europe-kulttuuri.js:ssä purettiin ohjeen mukaan
-   * (docs/tutki-aiheet.md kohta 1): chotis siirtyi tänne
+   * (docs/moduulit/kaupunkilehti.md kohta 1): chotis siirtyi tänne
    * musiikkilinkkeineen — se on myös kulttuurivisan aihe, joten visan
    * vastaus löytyy kannelta — ja cocido sekä uudenvuoden rypäleet
    * siirtyivät Espanjan Ruoka-aiheeseen, jonne ne kuuluvat: molemmat

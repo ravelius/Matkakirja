@@ -13,7 +13,7 @@
  *
  * --- miksi tässä ei ole yhtään laskentaa ---
  *
- * Kaikki työ on tehty rakennusaikana (docs/linssit-suunnitelma.md
+ * Kaikki työ on tehty rakennusaikana (docs/moduulit/linssit.md
  * luku 1.5): tools/tee-reliefikartta.mjs värittää ETOPO1:n
  * korkeusruudukon hypsometrisellä asteikolla, varjostaa sen
  * kuvitteellisella auringolla luoteesta ja projisoi tuloksen laudan

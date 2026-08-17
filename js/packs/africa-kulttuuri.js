@@ -101,7 +101,7 @@ export const AFRICA_KULTTUURI = {
      * EGY, 5.8.2026), jotka korvaavat litteät nostot Tutki-ikkunassa.
      * Ainutlaatuinen sisältö siirrettiin sinne: Umm Kulthum
      * musiikkilinkkeineen kaupungin kanteen, ahwa ja Mahfouz maan ja
-     * kaupungin nostoihin. Tänne jää vain visa (docs/tutki-aiheet.md).
+     * kaupungin nostoihin. Tänne jää vain visa (docs/moduulit/kaupunkilehti.md).
      */
     kysymys: {
       q: 'Kenen laulajan radiokonsertit hiljensivät Kairon kadut kerran kuussa?',
