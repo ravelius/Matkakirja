@@ -314,6 +314,9 @@ export const RAAMATTU = {
         'Joka lehtimaalla maalehti: 2–4 aihesivua (3 juttua/sivu), '
           + 'minitehtävät, menovinkit, Maa numeroina.',
         'Kuva ja aihe aina omasta maasta — naapurilta ei lainata.',
+        'MAALEHDEN NIMIÖ (omistaja 16.8.2026): pelkkä maan nimi ja '
+          + 'lippu sen perässä — ei selittäviä lisäsanoja ("Ranska '
+          + 'kartalla"), kartta näkyy sivulla itsestään.',
         'Pyhät kaupungit: oma sivutyyppi, johdannot kirjoittaa '
           + 'Fable.',
         'PITKÄT ARTIKKELIT (idea): professorimaisia syväjuttuja, '
@@ -366,6 +369,11 @@ export const RAAMATTU = {
           + 'Pikkunostoihin ei karusellia ja vain vaakarajauksen '
           + 'kestäviä kuvia. Haut Commonsin FP/QI- ja '
           + 'valokategorioista.',
+        'MATKAILIJALLE-KUVAN KAAVA (omistaja 16.8.2026): osion kuva '
+          + 'on sen myyntikuva — yksi aihe joka täyttää ruudun, '
+          + 'paikan oma erikoisuus ("wow-efekti"), FP/QI jos on, '
+          + 'selkeä valo, lukee pienessä koossa ja pääaihe ei jää '
+          + 'diagonaalinauhan alle.',
         'Media omasta peilistä (R2), peilaus automaattinen.',
         'Faktat tarkistetaan, lähteet merkitään. API-avaimia ei '
           + 'koskaan repoon eikä lokiin.',
