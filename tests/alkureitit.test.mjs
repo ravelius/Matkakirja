@@ -11,10 +11,12 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
+import { ALKUREITIT } from '../js/ui.js';
+// Kehysmatematiikka muutti omaan moduuliinsa remontin M2:ssa.
 import {
   polunPituus, alkuKehykset, kierraKehykset, jaljenKehykset,
-  ALKUREITIT, JALJEN_PYYHKAISY,
-} from '../js/ui.js';
+  JALJEN_PYYHKAISY,
+} from '../js/ui-apurit.js';
 import { jaaAlku } from '../js/aani-ehdokkaat.js';
 
 const UI = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
