@@ -405,6 +405,33 @@ export const RAAMATTU = {
       ],
     },
     {
+      otsikko: 'Lukijoiden ehdotukset',
+      tila: 'luonnos',
+      kohdat: [
+        'KANAVA (omistajan tilaus 18.8.2026): palautelomake laajenee '
+          + 'niin, että pelaaja voi lähettää kuvia ja juttuideoita '
+          + 'lehtiin. Lähetykset ladataan ämpäriin ja ne näkyvät '
+          + 'AUTOMAATTISESTI omistajalle työhuoneen uudella '
+          + 'Lukijoilta-lehdellä (hampurilaisvalikko) — Fablen '
+          + 'esikuratointi kommentteineen ajetaan vain omistajan '
+          + 'komennolla "kuratoi", eikä mikään julkaisu tapahdu ilman '
+          + 'omistajan arviota.',
+        'Lomake ehdottaa automaattisesti sitä sivua, jolla pelaaja on; '
+          + 'vapaa tarkennuskenttä on vapaaehtoinen. Pelaaja voi antaa '
+          + 'nimen tai nimimerkin pelin kredititteihin ja sähköpostin, '
+          + 'jos haluaa viestin kun kuratointi on valmis — molemmat '
+          + 'vapaaehtoisia, ja sähköposti jää vain omistajan nähville '
+          + '(ei koskaan repoon eikä peliin).',
+        'Pöllö opastaa kanavan käyttöön ja saa joskus ehdottaa '
+          + 'minipuhekuplassa osallistumista ("haluatko osallistua '
+          + 'pelin rakentamiseen?").',
+        'Lähetetyt kuvat eivät ole pelisisältöä ennen kuin omistaja on '
+          + 'hyväksynyt ne ja lisenssi on varmistettu — lomake pyytää '
+          + 'vakuutuksen, että kuva on lähettäjän oma ja saa julkaista '
+          + '(CC BY -henkisesti); ilman sitä kuvaa ei oteta lehteen.',
+      ],
+    },
+    {
       otsikko: 'Talous ja palkkiot',
       tila: 'luonnos',
       kohdat: [
