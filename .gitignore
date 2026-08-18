@@ -39,3 +39,8 @@ ios/DerivedData/
 
 # Yhden tiedoston versio rakennetaan Pages-ajossa — ei committoida.
 dist/
+
+# Lukijoiden ehdotukset -workerin täytetty asetus syntyy templatesta
+# julkaisuajossa (envsubst) ja sisältää ämpärin nimen — pohja
+# wrangler.toml.template on repossa, tulos ei.
+worker/ehdotukset/wrangler.toml

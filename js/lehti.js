@@ -13,6 +13,10 @@
 
 import { hiljennaAmbienssi } from './ambience-stream.js';
 import {
+  asetaEhdotusAvain, ehdotusAika, ehdotusAvain, ehdotusKaytossa,
+  ehdotusKuvaOsoite, haeEhdotukset,
+} from './ehdotukset.js';
+import {
   kaynnistaLukija, kokoaLuettavaTeksti, liitaLukija, paivitaLukija,
   pysaytaLukija, vieritaPehmeasti,
 } from './lukija.js';
@@ -833,6 +837,128 @@ export function avaaTilanneLehti(ui) {
     }],
   }];
   avaaKehittajaLehti(ui, 'Tilannelehti', sivut);
+}
+
+/* ------------------------------------------------------------------ *
+ * LUKIJOILTA — pelaajien lähettämät kuvat ja juttuideat
+ * (Raamattu, osio "Lukijoiden ehdotukset").
+ *
+ * Lehti hakee ehdotukset workerilta kuratointiavaimella ja näyttää ne
+ * uusin ensin: yksi ehdotus = yksi sivu. Avain kysytään kerran ja se
+ * jää laitteen muistiin. Sähköposti näkyy vain täällä — se ei ole
+ * missään repossa eikä pelin datassa.
+ * ------------------------------------------------------------------ */
+
+/** Ohje- tai virhesivu, kun listaa ei voi näyttää. */
+function lukijoiltaOhjeSivu(teksti) {
+  return [{
+    id: 'lukijoilta-ohje',
+    nimi: 'Lukijoilta',
+    yksipalsta: true,
+    nostot: [{ otsikko: 'Lukijoilta', teksti }],
+  }];
+}
+
+/** Yhden ehdotuksen tiedot leipätekstiksi. */
+function lukijoiltaTiedot(e) {
+  const rivit = [];
+  if (e.teksti) rivit.push(e.teksti);
+  if (e.sivu) rivit.push(`Sivuehdotus: ${e.sivu}`);
+  if (e.tarkenne) rivit.push(`Tarkenne: ${e.tarkenne}`);
+  rivit.push(`Nimimerkki: ${e.nimimerkki || '(ei annettu)'}`
+    + (e.saaKrediitteihin ? ' — saa näkyä krediiteissä' : ' — ei krediitteihin'));
+  rivit.push(`Sähköposti: ${e.sahkoposti || '(ei annettu)'}`);
+  if (e.kuvat?.length) {
+    rivit.push(`Kuvia: ${e.kuvat.length}`
+      + (e.lisenssivakuutus ? ' — lisenssivakuutus annettu' : ' — EI lisenssivakuutusta'));
+  }
+  // Kuratoinnin tila ja palkkio (päätoimittajan tarkennus 18.8.2026:
+  // läpäissyt ehdotus palkitaan pelirahalla lunastuskoodilla).
+  rivit.push(`Tila: ${e.tila ?? 'uusi'}`);
+  if (e.palkkio != null) rivit.push(`Palkkio: ${e.palkkio} p`);
+  if (e.lunastuskoodi) rivit.push(`Lunastuskoodi: ${e.lunastuskoodi}`);
+  if (e.kommentti) rivit.push(`Kuratointi: ${e.kommentti}`);
+  return rivit.join('\n\n');
+}
+
+/** Ehdotuslistasta lehden sivut: etusivu + yksi sivu per ehdotus. */
+function lukijoiltaSivut(ehdotukset, avain) {
+  const etusivu = {
+    id: 'lukijoilta-etusivu',
+    nimi: 'Lukijoilta',
+    yksipalsta: true,
+    nostot: [{
+      otsikko: `${ehdotukset.length} ehdotusta`,
+      teksti: ehdotukset.length
+        ? 'Uusin ensin. Yksi ehdotus sivua kohti: kuvat, teksti, '
+          + 'sivuehdotus ja lähettäjän tiedot. Sähköposti näkyy vain '
+          + 'täällä — sitä ei viedä peliin eikä repoon.\n\n'
+          + 'Kuratointi ("kuratoi"-ajo) kirjoittaa kommentin, tilan, '
+          + 'palkkion ja lunastuskoodin samaan meta.jsoniin.'
+        : 'Yhtään ehdotusta ei ole vielä tullut.',
+    }],
+  };
+  const sivut = ehdotukset.map((e, i) => ({
+    id: `lukijoilta-${i}`,
+    nimi: `${ehdotusAika(e.aikaleima)} · ${e.nimimerkki || 'Nimetön'}`,
+    yksipalsta: true,
+    nostot: [
+      { otsikko: e.sivu || 'Ehdotus', teksti: lukijoiltaTiedot(e) },
+      ...(e.kuvat ?? []).map((kuva, j) => ({
+        otsikko: `Kuva ${j + 1}`,
+        kuvaUrl: ehdotusKuvaOsoite(e.kansio, kuva.tiedosto, avain),
+        selite: kuva.tiedosto,
+        teksti: '',
+      })),
+    ],
+  }));
+  return [etusivu, ...sivut];
+}
+
+/**
+ * Avaa Lukijoilta-lehden. Avain kysytään kerran ja talletetaan
+ * laitteelle; väärä avain unohdetaan heti, jotta seuraava avaus kysyy
+ * uudestaan.
+ */
+export async function avaaLukijoiltaLehti(ui) {
+  if (!kehittajaTilaPaalla()) return;
+  if (!ehdotusKaytossa()) {
+    avaaKehittajaLehti(ui, 'Lukijoilta', lukijoiltaOhjeSivu(
+      'Kanavaa ei ole vielä kytketty: js/ehdotukset.js:n EHDOTUS_OSOITE on '
+      + 'tyhjä. Julkaise worker (Actions → Lukijoiden ehdotukset: julkaise '
+      + 'worker) ja liitä sen osoite vakioon. Ohje: docs/moduulit/lukijoilta.md.',
+    ));
+    return;
+  }
+  let avain = ehdotusAvain();
+  if (!avain) {
+    avain = (window.prompt('Lukijoilta-avain (EHDOTUS_AVAIN):') ?? '').trim();
+    if (avain) asetaEhdotusAvain(avain);
+  }
+  if (!avain) {
+    avaaKehittajaLehti(ui, 'Lukijoilta', lukijoiltaOhjeSivu(
+      'Ilman avainta ehdotuksia ei voi lukea. Avain on GitHubin salaisuus '
+      + 'EHDOTUS_AVAIN, sama jolla worker julkaistiin. Avaa lehti uudelleen '
+      + 'ja syötä avain — se jää tälle laitteelle.',
+    ));
+    return;
+  }
+
+  avaaKehittajaLehti(ui, 'Lukijoilta', lukijoiltaOhjeSivu('Haetaan ehdotuksia…'));
+  try {
+    const ehdotukset = await haeEhdotukset(avain);
+    // Lehti on voitu sulkea haun aikana — silloin sitä ei avata takaisin.
+    if (!ui.arrivalDialog?.open || ui.lehtitila.tutkiTila !== 'kehittaja') return;
+    avaaKehittajaLehti(ui, 'Lukijoilta', lukijoiltaSivut(ehdotukset, avain));
+  } catch (virhe) {
+    // Väärä avain pois muistista, tai lehti kysyisi sitä turhaan
+    // ikuisesti oikeanakin.
+    if (/avain/i.test(virhe.message)) asetaEhdotusAvain('');
+    if (!ui.arrivalDialog?.open || ui.lehtitila.tutkiTila !== 'kehittaja') return;
+    avaaKehittajaLehti(ui, 'Lukijoilta', lukijoiltaOhjeSivu(
+      `Ehdotuksia ei saatu haettua: ${virhe.message}`,
+    ));
+  }
 }
 
 /** Sivun vaihto suuntaan (+1 seuraava, -1 edellinen). */

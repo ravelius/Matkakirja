@@ -705,6 +705,20 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
         }, { once: true });
       }
       lohko.appendChild(kuva);
+    } else if (nosto.kuvaUrl) {
+      /*
+       * SUORA OSOITE (Lukijoilta-lehti, js/lehti.js): lukijan
+       * lähettämä kuva tulee workerin kautta eikä ole pelin peilissä,
+       * joten sille ei ole valokuvaUrl-polkua eikä varareittiä.
+       * Tavallinen img riittää — jos kuva ei lataudu, se jää tyhjäksi
+       * eikä vie muuta sivua mukanaan.
+       */
+      kuva = document.createElement('img');
+      kuva.decoding = 'async';
+      kuva.draggable = false;
+      kuva.alt = nosto.selite ?? nosto.otsikko ?? 'Lukijan lähettämä kuva';
+      kuva.src = nosto.kuvaUrl;
+      lohko.appendChild(kuva);
     }
     // Kuvateksti ja lähderivi HETI kuvan alle kuten lehtijutussa —
     // leipäteksti vasta niiden jälkeen (omistajan toive 5.8.2026;

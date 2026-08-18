@@ -1,0 +1,36 @@
+# Lukijoiden ehdotukset -workerin asetusPOHJA.
+#
+# TÄMÄ ON TEMPLATE, EI VALMIS ASETUS. Ämpärin nimi ja sallitut originit
+# tulevat ympäristömuuttujista julkaisuhetkellä (envsubst), jotta
+# repoon ei jää tunnisteita eikä osoitteita:
+#
+#   .github/workflows/ehdotukset-worker.yml
+#     envsubst < wrangler.toml.template > wrangler.toml
+#     wrangler deploy
+#     wrangler secret put EHDOTUS_AVAIN
+#
+# Tilitunnus (account_id) EI ole täällä: wrangler lukee sen
+# ympäristömuuttujasta CLOUDFLARE_ACCOUNT_ID, joka on ajon salaisuus.
+#
+# Muuttujat, jotka envsubst korvaa:
+#   ${EHDOTUS_BUCKET}    R2-ämpärin nimi (oletus matkakirja-ehdotukset)
+#   ${EHDOTUS_ORIGINIT}  sallitut originit pilkulla erotettuna
+
+name = "matkakirja-ehdotukset"
+main = "worker.js"
+compatibility_date = "2026-08-18"
+
+[vars]
+# Worker ei päästä ketään läpi ennen kuin tässä on pelin oma osoite:
+# puolivalmis asetus on kiinni, ei auki. Paikallinen kehityspalvelin
+# (localhost) kelpaa aina, sitä ei tarvitse listata.
+EHDOTUS_ORIGINIT = "${EHDOTUS_ORIGINIT}"
+
+# YKSITYINEN ämpäri: mukana voi olla lähettäjän sähköpostiosoite, joten
+# tämä ei ole sama kuin pelin julkinen media-peili.
+[[r2_buckets]]
+binding = "EHDOTUKSET"
+bucket_name = "${EHDOTUS_BUCKET}"
+
+# Salaisuus EHDOTUS_AVAIN asetetaan erikseen (wrangler secret put) —
+# sitä ei kirjoiteta tähän tiedostoon missään vaiheessa.
