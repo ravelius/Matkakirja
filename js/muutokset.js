@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 880, teksti: '30 miniatyyriä: Kairo kokonaan + uudet kohteet' },
   { v: 879, teksti: 'Ehdotuslomakkeeseen saate ja pro-rasti selitteineen' },
   { v: 878, teksti: '15 uutta nähtävyyskohdetta kuuteen kaupunkiin' },
   { v: 877, teksti: 'Miniatyyrit sävytetty kartan pohjaväriin' },

@@ -129,6 +129,8 @@ export const MINIATYYRIT = {
     'Museokeskus Vapriikki': 'assets/kartat/miniatyyrit/tampere-museokeskus-vapriikki.webp',
     Hämeensilta: 'assets/kartat/miniatyyrit/tampere-hameensilta.webp',
     'Pyynikin näkötorni': 'assets/kartat/miniatyyrit/tampere-pyynikin-nakotorni.webp',
+    'Amurin työläismuseokortteli': 'assets/kartat/miniatyyrit/tampere-amurin-tyolaismuseokortteli.webp',
+    'Tallipiha': 'assets/kartat/miniatyyrit/tampere-tallipiha.webp',
   },
   firenze: {
     Duomo: 'assets/kartat/miniatyyrit/firenze-duomo.webp',
@@ -137,6 +139,9 @@ export const MINIATYYRIT = {
     'Ponte Vecchio': 'assets/kartat/miniatyyrit/firenze-ponte-vecchio.webp',
     'Santa Croce': 'assets/kartat/miniatyyrit/firenze-santa-croce.webp',
     'Bobolin puutarha': 'assets/kartat/miniatyyrit/firenze-bobolin-puutarha.webp',
+    'Bargello': 'assets/kartat/miniatyyrit/firenze-bargello.webp',
+    "Galleria dell'Accademia": 'assets/kartat/miniatyyrit/firenze-galleria-dellaccademia.webp',
+    'Santa Maria Novella': 'assets/kartat/miniatyyrit/firenze-santa-maria-novella.webp',
   },
   bagdad: {
     'Mutanabbin katu': 'assets/kartat/miniatyyrit/bagdad-mutanabbin-katu.webp',
@@ -145,6 +150,8 @@ export const MINIATYYRIT = {
     'Khan Mirjan': 'assets/kartat/miniatyyrit/bagdad-khan-mirjan.webp',
     'Mustansiriya-koulu': 'assets/kartat/miniatyyrit/bagdad-mustansiriya-koulu.webp',
     'Bagdadin museo': 'assets/kartat/miniatyyrit/bagdad-bagdadin-museo.webp',
+    'al-Wazirin moskeija': 'assets/kartat/miniatyyrit/bagdad-al-wazirin-moskeija.webp',
+    'Haydarkhanan moskeija': 'assets/kartat/miniatyyrit/bagdad-haydarkhanan-moskeija.webp',
   },
   teheran: {
     'Teheranin basaari': 'assets/kartat/miniatyyrit/teheran-teheranin-basaari.webp',
@@ -153,6 +160,8 @@ export const MINIATYYRIT = {
     'Iranin kansallismuseo': 'assets/kartat/miniatyyrit/teheran-iranin-kansallismuseo.webp',
     'Masoudiehin talo': 'assets/kartat/miniatyyrit/teheran-masoudiehin-talo.webp',
     'Sepahsalarin moskeija': 'assets/kartat/miniatyyrit/teheran-sepahsalarin-moskeija.webp',
+    'Bagh-e Mellin portti': 'assets/kartat/miniatyyrit/teheran-bagh-e-mellin-portti.webp',
+    'Toopkhanen aukio': 'assets/kartat/miniatyyrit/teheran-toopkhanen-aukio.webp',
   },
   tripoli: {
     'Darghutin moskeija': 'assets/kartat/miniatyyrit/tripoli-darghutin-moskeija.webp',
@@ -161,6 +170,7 @@ export const MINIATYYRIT = {
     'an-Naqan moskeija': 'assets/kartat/miniatyyrit/tripoli-an-naqan-moskeija.webp',
     'Marcus Aureliuksen riemukaari': 'assets/kartat/miniatyyrit/tripoli-marcus-aureliuksen-riemukaari.webp',
     'Punainen linna': 'assets/kartat/miniatyyrit/tripoli-punainen-linna.webp',
+    'Gurgin moskeija': 'assets/kartat/miniatyyrit/tripoli-gurgin-moskeija.webp',
   },
   tokio: {
     Kaminarimon: 'assets/kartat/miniatyyrit/tokio-kaminarimon.webp',
@@ -169,6 +179,10 @@ export const MINIATYYRIT = {
     'Tokion kansallismuseo': 'assets/kartat/miniatyyrit/tokio-tokion-kansallismuseo.webp',
     'Uenon puisto': 'assets/kartat/miniatyyrit/tokio-uenon-puisto.webp',
     'Shitamachi-museo': 'assets/kartat/miniatyyrit/tokio-shitamachi-museo.webp',
+    'Hanayashiki': 'assets/kartat/miniatyyrit/tokio-hanayashiki.webp',
+    'Kyū-Iwasaki-tei': 'assets/kartat/miniatyyrit/tokio-kyu-iwasaki-tei.webp',
+    'Ueno Tōshō-gū': 'assets/kartat/miniatyyrit/tokio-ueno-tosho-gu.webp',
+    'Uenon asema': 'assets/kartat/miniatyyrit/tokio-uenon-asema.webp',
   },
   soul: {
     Gyeongbokgung: 'assets/kartat/miniatyyrit/soul-gyeongbokgung.webp',
@@ -177,6 +191,9 @@ export const MINIATYYRIT = {
     Jongmyo: 'assets/kartat/miniatyyrit/soul-jongmyo.webp',
     'Tapgol-puisto': 'assets/kartat/miniatyyrit/soul-tapgol-puisto.webp',
     Bosingak: 'assets/kartat/miniatyyrit/soul-bosingak.webp',
+    'Gwanghwamun': 'assets/kartat/miniatyyrit/soul-gwanghwamun.webp',
+    'Insadong': 'assets/kartat/miniatyyrit/soul-insadong.webp',
+    'Jogyesa': 'assets/kartat/miniatyyrit/soul-jogyesa.webp',
   },
   shanghai: {
     Bund: 'assets/kartat/miniatyyrit/shanghai-bund.webp',
@@ -185,5 +202,21 @@ export const MINIATYYRIT = {
     'Yu-puutarha': 'assets/kartat/miniatyyrit/shanghai-yu-puutarha.webp',
     'Nanjing-katu': 'assets/kartat/miniatyyrit/shanghai-nanjing-katu.webp',
     'Shanghain museo': 'assets/kartat/miniatyyrit/shanghai-shanghain-museo.webp',
+    'Dajingin pavilonki': 'assets/kartat/miniatyyrit/shanghai-dajingin-pavilonki.webp',
+    'Fuyoun moskeija': 'assets/kartat/miniatyyrit/shanghai-fuyoun-moskeija.webp',
+    'Kaupunginjumalan temppeli': 'assets/kartat/miniatyyrit/shanghai-kaupunginjumalan-temppeli.webp',
+  },
+  // Erä 4 (18.8.2026): Kairon lehden viimeistely — kaikki 10 kohdetta.
+  kairo: {
+    'Kairon torni': 'assets/kartat/miniatyyrit/kairo-kairon-torni.webp',
+    'Egyptin museo': 'assets/kartat/miniatyyrit/kairo-egyptin-museo.webp',
+    'Tahririn aukio': 'assets/kartat/miniatyyrit/kairo-tahririn-aukio.webp',
+    'Abdeenin palatsi': 'assets/kartat/miniatyyrit/kairo-abdeenin-palatsi.webp',
+    'Ibn Tulunin moskeija': 'assets/kartat/miniatyyrit/kairo-ibn-tulunin-moskeija.webp',
+    'Sulttaani Hassanin moskeija': 'assets/kartat/miniatyyrit/kairo-sulttaani-hassanin-moskeija.webp',
+    'Bab Zuweila': 'assets/kartat/miniatyyrit/kairo-bab-zuweila.webp',
+    'Saladinin linnoitus': 'assets/kartat/miniatyyrit/kairo-saladinin-linnoitus.webp',
+    'Khan el-Khalili': 'assets/kartat/miniatyyrit/kairo-khan-el-khalili.webp',
+    'Al-Azhar-puisto': 'assets/kartat/miniatyyrit/kairo-al-azhar-puisto.webp',
   },
 };
