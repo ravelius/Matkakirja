@@ -540,7 +540,7 @@ const KUVAT = [
     + 'first floor'],
 
   /*
-   * ── Bagdad, kuusi kohdetta (E00-viimeistely 17.8.2026) ───────────
+   * ── Bagdad, kahdeksan kohdetta (E00 17.8., +2 18.8.2026) ─────────
    * VAIN JONOSSA, ei generoitu: piirrokset vaativat API-avaimen,
    * jota työsessiossa ei ole. Kartalla kohteet näkyvät siihen asti
    * numeroympyröinä. Kuvaukset on kirjoitettu kohteiden omien
@@ -575,9 +575,29 @@ const KUVAT = [
     + 'townhouse: a plain brick front with one large projecting '
     + 'wooden oriel balcony (shanasheel) of fine lattice screens '
     + 'jutting out over the street on carved brackets', 'halpa'],
+  /*
+   * Kaksi uutta bagdadilaista (kohdemäärien nosto 18.8.2026).
+   * Kummankin aiheessa sanotaan minareetin muoto suoraan, koska
+   * ottomaanibagdadin minareetti ei ole sylinteri vaan kapeneva
+   * tiilivarsi, jonka parvekkeen alla on kennosto ja jonka huippu
+   * on uurrettu kupu.
+   */
+  ['bagdad-haydarkhanan-moskeija', 'a large Ottoman-era Baghdad '
+    + 'mosque of pale yellow brick: one tapering round brick minaret '
+    + 'patterned all over with turquoise glazed diamonds, a deep '
+    + 'honeycomb muqarnas corbel under its railed balcony and a '
+    + 'ribbed melon-shaped cap on top; beside it a low blue tiled '
+    + 'dome and a wall of pointed arched recesses filled with '
+    + 'blue-and-white star tilework'],
+  ['bagdad-al-wazirin-moskeija', 'a 16th-century Ottoman mosque by a '
+    + 'river: a tall slender brick minaret covered in turquoise '
+    + 'zigzag glazed patterning with a bulbous tiled crown, a low '
+    + 'shallow dome of the same green-blue glaze beside it, and a '
+    + 'plain brick courtyard wall below set with a few blue tiled '
+    + 'panels'],
 
   /*
-   * ── Teheran, kuusi kohdetta (E00-viimeistely 17.8.2026) ──────────
+   * ── Teheran, kahdeksan kohdetta (E00 17.8., +2 18.8.2026) ────────
    * Sama tilanne kuin Bagdadissa: vain jonossa, ei generoitu.
    * Kuvaukset nojaavat nähtävyysjuttujen valokuviin
    * (js/packs/nahtavyysjutut.js: teheran).
@@ -608,9 +628,29 @@ const KUVAT = [
     + 'tiled entrance iwan with a pointed arch, a low tiled dome '
     + 'behind it, several slender round minarets around the court '
     + 'and one square clock stage above the portal'],
+  /*
+   * Kaksi uutta teheranilaista (kohdemäärien nosto 18.8.2026).
+   * Toopkhaneh on aukio eikä rakennus, joten aiheeksi on otettu se,
+   * mikä aukiosta on kuvissa: pitkä kaarikäytävärakennus ja tykit.
+   * Aihe EI nimeä aukiota, koska kohteen nimi vetää tekstiä kuvaan
+   * (sama ansa kuin East Side Galleryssä).
+   */
+  ['teheran-toopkhanen-aukio', 'a long low 19th-century Persian '
+    + 'artillery barracks range closing one side of a wide open '
+    + 'square: two storeys of small identical arched openings running '
+    + 'the whole length, a taller arched gateway block in the middle, '
+    + 'two old bronze field cannons standing on the bare ground in '
+    + 'front, and a line of snow-capped mountains far behind. No '
+    + 'text, no letters, no signs anywhere'],
+  ['teheran-bagh-e-mellin-portti', 'a free-standing Persian city '
+    + 'gate of pale yellow brick: one tall pointed archway with '
+    + 'ornate wooden doors set deep in it, a pair of stout round '
+    + 'brick columns on each side, and painted tile panels above the '
+    + 'arch showing a lion with a sun rising behind it. Two small '
+    + 'square turrets on the roofline'],
 
   /*
-   * ── Tripoli, kuusi kohdetta (E00-viimeistely 17.8.2026) ──────────
+   * ── Tripoli, seitsemän kohdetta (E00 17.8., +1 18.8.2026) ────────
    * Vain jonossa, ei generoitu. Kuvaukset nojaavat kohteiden omiin
    * nähtävyysjuttuihin ja niiden todennettuihin valokuviin
    * (js/packs/nahtavyysjutut.js: tripoli).
@@ -669,9 +709,22 @@ const KUVAT = [
     + 'stout re-used ancient stone columns whose capitals are '
     + 'visibly older and rougher than the rest, with plain green '
     + 'doors behind them'],
+  /*
+   * Seitsemäs tripolilainen (kohdemäärien nosto 18.8.2026). Aihe on
+   * koko rakennus eikä oven yksityiskohta, koska miniatyyri luetaan
+   * 84 pikselissä: ovi lukisi pelkkänä laatikkona. Kupolien määrä
+   * (15) ja minareetin kahdeksankulmainen varsi sanotaan suoraan.
+   */
+  ['tripoli-gurgin-moskeija', 'a whitewashed North African mosque of '
+    + 'the 1830s: a low square block whose flat roof carries a whole '
+    + 'field of about fifteen small round white domes, one slender '
+    + 'minaret rising beside it with TWO railed balconies one above '
+    + 'the other and a pointed cap, and in the near wall one narrow '
+    + 'arched doorway framed in pale marble with a band of patterned '
+    + 'tiles around it. NO people'],
 
   /*
-   * ── Tokio, kuusi kohdetta (E00-viimeistely 17.8.2026) ───────────
+   * ── Tokio, kymmenen kohdetta (E00 17.8., +4 18.8.2026) ──────────
    * VAIN JONOSSA, ei generoitu: js/packs/miniatyyrit.js:ssä ei ole
    * tokiota eikä sw.js:n SHELLissä .webp-polkuja. Kartalla kohteet
    * näkyvät siihen asti numeroympyröinä, kuten koodi tekee
@@ -727,9 +780,41 @@ const KUVAT = [
     + 'no open walls and nothing visible inside. Same monochrome sepia '
     + 'ink line style as the other sketches, on the warm cream paper '
     + 'background filling the entire canvas — never a white background'],
+  /*
+   * Neljä uutta tokiolaista (kohdemäärien nosto 18.8.2026).
+   * Hanayashiki on huvipuisto eikä rakennus, joten aiheessa
+   * korostetaan sitä, mikä siitä lukee pienenä: yksi kierros
+   * vuoristorataa ja talojen ahtaus ympärillä.
+   */
+  ['tokio-ueno-tosho-gu', 'an ornate shinto shrine gate of the Edo '
+    + 'period standing between two low walls: a small square gatehouse '
+    + 'with a steeply curving cusped gable over its opening, a copper '
+    + 'tiled roof with upturned corners, and every surface of the '
+    + 'woodwork below covered in dense carved ornament of dragons, '
+    + 'birds and flowers. Tall dark conifers close behind. NO people'],
+  ['tokio-uenon-asema', 'a big 1930s concrete railway station: a long '
+    + 'low pale symmetrical facade with a row of tall narrow windows '
+    + 'across the middle floor, one round clock high above them, and a '
+    + 'flat cantilevered entrance canopy running along the ground '
+    + 'floor. Seen straight on from across an empty forecourt. NO '
+    + 'text, NO letters, no signs'],
+  ['tokio-hanayashiki', 'a tiny old amusement park crammed into one '
+    + 'small city block, seen from above at an angle: a single narrow '
+    + 'roller coaster track looping right round the plot and passing '
+    + 'over the roofs of the park buildings, a small carousel with a '
+    + 'striped canopy and a little tower ride inside the loop, and '
+    + 'ordinary houses pressed right up against the fence on every '
+    + 'side'],
+  ['tokio-kyu-iwasaki-tei', 'a large white wooden western-style '
+    + 'mansion of the 1890s standing on a lawn: a two-storey '
+    + 'colonnaded veranda along the whole front with slender columns '
+    + 'and a balustrade on both levels, a polygonal glazed bay '
+    + 'projecting at one corner, and a row of small pointed finials '
+    + 'along the roofline. A low japanese tiled roof of a separate '
+    + 'wing just visible at one end'],
 
   /*
-   * ── Soul, kuusi kohdetta (E00-viimeistely 17.8.2026) ────────────
+   * ── Soul, yhdeksän kohdetta (E00 17.8., +3 18.8.2026) ───────────
    * VAIN JONOSSA, ei generoitu (ks. Tampere yllä).
    *
    * Korealaisen palatsiarkkitehtuurin kolme tunnusmerkkiä on
@@ -770,9 +855,33 @@ const KUVAT = [
     + 'green-and-red painted eaves, with a huge dark bronze bell '
     + 'hanging in the shadow beneath. A low stone balustrade rings the '
     + 'platform'],
+  /*
+   * Kolme uutta soulilaista (kohdemäärien nosto 18.8.2026).
+   * Gwanghwamunissa on sanottava kolme kaarta erikseen, tai malli
+   * piirtää yhden; Insadong on katu eikä rakennus, ja Jogyesan
+   * tunnusmerkki on lyhtykatos eikä itse halli.
+   */
+  ['soul-gwanghwamun', 'a korean palace gate: a massive pale stone '
+    + 'base pierced by THREE identical round-arched passages side by '
+    + 'side, and standing on top of it a wooden gate tower with a '
+    + 'double grey tiled roof whose corners curve sharply upwards and '
+    + 'green-and-red painted latticework under the eaves. One carved '
+    + 'stone guardian beast sits on the ground beside the base. NO '
+    + 'people, NO text'],
+  ['soul-insadong', 'a narrow pedestrian shopping street of low '
+    + 'two-storey buildings with shop fronts open to the pavement, '
+    + 'young leafy trees along both sides, and a line of round paper '
+    + 'lanterns strung across the street overhead. A small awninged '
+    + 'stall at one kerb. NO text, NO letters, no readable signs'],
+  ['soul-jogyesa', 'a korean buddhist temple courtyard roofed over '
+    + 'entirely by a dense canopy of thousands of small round paper '
+    + 'lotus lanterns hung on wires from side to side; beneath them '
+    + 'one big old twin-trunked tree, and behind it the temple hall '
+    + 'with a grey tiled roof with upturned corners and green-and-red '
+    + 'painted eaves and latticed doors'],
 
   /*
-   * ── Shanghai, kuusi kohdetta (E00-viimeistely 17.8.2026) ────────
+   * ── Shanghai, yhdeksän kohdetta (E00 17.8., +3 18.8.2026) ───────
    * VAIN JONOSSA, ei generoitu (ks. Tampere yllä).
    *
    * Shanghain kohteista neljä on länsimaista 1900-luvun alun
@@ -810,6 +919,30 @@ const KUVAT = [
     + 'pale stone carrying a wide flat round drum, and from the rim of '
     + 'the drum two curved arch-like handles rising into the air. Lawn '
     + 'in front, NO people'],
+  /*
+   * Kolme uutta shanghailaista (kohdemäärien nosto 18.8.2026), kaikki
+   * muurin sisäisestä vanhastakaupungista. Fuyoun moskeija on
+   * kiinalainen kaupunkitalo eikä kupolimoskeija, ja se sanotaan
+   * aiheessa suoraan — muuten malli piirtää minareetin.
+   */
+  ['shanghai-kaupunginjumalan-temppeli', 'a chinese temple hall seen '
+    + 'from the front: a grey tiled roof with dramatically upswept '
+    + 'ridge ends, a row of dark red round pillars along the front, '
+    + 'carved and gilded panels above the doorways, and a big bronze '
+    + 'incense burner standing on the paved court in front of it. NO '
+    + 'people'],
+  ['shanghai-fuyoun-moskeija', 'a three-storey chinese townhouse that '
+    + 'is a mosque: a plain pale rendered street facade with rows of '
+    + 'ordinary rectangular windows, one arched doorway in the middle '
+    + 'with a small carved plaque above it, and on the flat roof a '
+    + 'little open pavilion with a chinese tiled roof for watching '
+    + 'the moon. Absolutely NO minaret, NO dome'],
+  ['shanghai-dajingin-pavilonki', 'the last surviving stretch of an '
+    + 'old chinese city wall: a grey brick rampart with square '
+    + 'crenellations and small rectangular loopholes running across '
+    + 'the foreground, and rising directly behind it a two-storey '
+    + 'wooden pavilion with red walls, latticed windows and two '
+    + 'strongly upswept grey tiled roofs'],
 
   /*
    * ── Kairo, kymmenen kohdetta (lehden viimeistely 18.8.2026) ──────

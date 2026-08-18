@@ -10966,6 +10966,103 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAKSI UUTTA KOHDETTA (kohdemäärien nosto 18.8.2026). Kartalta
+     * puuttui kokonaan moskeija; nyt niitä on kaksi eri vuosisadalta.
+     * Al-Rashid-katu jätettiin ottamatta, koska sillä on jo oma
+     * nostonsa kaupunkilehden arkisivulla (perustelu maakartat.js).
+     *
+     * SISÄLTÖRAJAUS PÄTEE: Haydarkhanan moskeija on Irakin
+     * 1900-luvun mielenosoitusten paikka, ja se kerrotaan lyhyesti ja
+     * tuomitsematta; vuoden 2003 jälkeistä aikaa ei käsitellä.
+     */
+    'Haydarkhanan moskeija': {
+      aika: '1819–1827',
+      teksti: 'Moskeijan paikalla on ollut rukoushuone ainakin 1100-luvulta, '
+        + 'jolloin kalifi al-Nasir laski sille perustukset. Nimi '
+        + 'juontuu kahdesta suunnasta: vanhemman selityksen mukaan '
+        + 'takana on Haydar-niminen sufi, uudemman mukaan '
+        + 'bagdadilainen kauppiasvanhin Haydar Pasha Jalabi, joka '
+        + 'perusti viereisen Haydarin kylpylän ja on haudattu tänne '
+        + 'sukulaisineen. Nykyisen rakennuksen rakennutti vuosina '
+        + '1819–1827 Dawud Pasha, Bagdadin mamelukkihallitsijoista '
+        + 'viimeinen.'
+        + '\n\n'
+        + 'Dawud Pasha perusti moskeijan viereen koulun, '
+        + 'al-Dawudiyyan, ja kirjaston. Rakennusta korjattiin 1827 ja '
+        + 'uudelleen 1890. Pohja on tarkka neliö, ja rukoussuunta '
+        + 'osoittaa suoraan al-Rashid-kadulle; juuri mittasuhteiden '
+        + 'tasaisuutta pidetään sen kauneuden syynä. Ovia on kolme ja '
+        + 'ne ovat marmoria, ja väreinä ovat sininen ja keltainen. '
+        + 'Ulkoseinää kiertää kalligrafianauha, jonka kirjoitti '
+        + 'mestari Hashem Muhammad al-Baghdadi vuoden 1972 korjauksen '
+        + 'yhteydessä; samassa työssä löytyi kivi, jonka mukaan eräs '
+        + 'Hassan oli uudistanut rakennusta jo 1792.'
+        + '\n\n'
+        + 'Irakilaiset kutsuvat moskeijaa vallankumouksen moskeijaksi. '
+        + 'Kevään 1920 kokoontumiset alkoivat täältä, ja moskeijan '
+        + 'aukiosta tuli päivittäinen kokoontumispaikka eikä vain '
+        + 'rukouspaikka; runoilijat lausuivat portailla, ja väkeä tuli '
+        + 'Karbalaa myöten. Moskeija on Mutanabbin kadun portin '
+        + 'vieressä, eli kirjatorille kävellään sen ohi.',
+      kuvat: [
+        {
+          tiedosto: 'Minaret of the Haydar-Khana Mosque.png',
+          selite: 'Moskeijan minareetti alhaalta kuvattuna. Vaaleaan '
+            + 'tiilivarteen on ladottu turkoosista laatasta '
+            + 'vinoneliökuvioita, ja parvekkeen alla on tiheä '
+            + 'muqarnas-kennosto sinisenä ja kultaisena. Huippu on kuin '
+            + 'uurrettu melonin puolikas. Oikealla jatkuu seinä, jonka '
+            + 'kaarisyvennyksissä on tähtikuvioisia laattapaneeleja.',
+          lahde: 'Ayham4002, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'al-Wazirin moskeija': {
+      aika: '1599',
+      teksti: 'Moskeijan rakennutti vuonna 1599 Hasan Pasha, Bagdadin '
+        + 'ottomaanikäskynhaltija eli vezir — siitä nimi, '
+        + 'käskynhaltijan moskeija. Paikalla oli aiemmin ollut '
+        + 'abbasidikautinen Dhu al-Manaran moskeija, ja irakilaisen '
+        + 'historioitsijan Imad Abd al-Salam Raufin mukaan tässä '
+        + 'seisoi myös vuonna 1106 perustettu koulu. Hasan Pasha '
+        + 'uudisti rakennuksen ja perusti sen yhteyteen '
+        + 'korkeakoulun, jossa opetettiin sekä järkitieteitä että '
+        + 'uskonnollisia aineita.'
+        + '\n\n'
+        + 'Moskeija on Souk al-Sarain kupeessa, ja sen puutarha '
+        + 'ulottuu Tigrisin rantaan. Vuonna 1604 viereen rakennettiin '
+        + 'joelle antava Hasan Pashan kahvila. Vuonna 1686 upseeri '
+        + 'Ahmed Agha rakensi länsisiiven uudelleen ja lisäsi korkean '
+        + 'kupolin. Rakennusta on uudistettu niin monta kertaa, että '
+        + 'irakilaisen tutkijan Sherif Youssefin mukaan minareetti on '
+        + 'ainoa osa, joka on säilynyt alkuperäisessä asussaan.'
+        + '\n\n'
+        + 'Sisäpiha on yli tuhat neliömetriä, ja seiniä kiertävät '
+        + 'kuvionauhat ja kirjoitukset. Kupoli on peitetty lasitetulla '
+        + 'laatalla ja marmorilla, sisällä on tippukivimäisiä '
+        + 'muqarnas-holvauksia, koraanijakeita ja kasviaiheita. '
+        + 'Rukoustilaa on kesäpuolella noin 330:lle ja talvipuolella '
+        + '500:lle. Brittiläinen matkakirjailija James Silk Buckingham '
+        + 'kävi moskeijassa ja kuvasi vuonna 1827 ilmestyneessä '
+        + 'kirjassaan Travels in Mesopotamia sen "hienon kupolin ja '
+        + 'korkean minareetin".',
+      kuvat: [
+        {
+          tiedosto: 'Al-Wazeer Mosque.png',
+          selite: 'Moskeija kadulta. Vasemmalla nousee tiilinen '
+            + 'minareetti, jonka pintaa kiertävät turkoosit '
+            + 'vinoneliökuviot ja jonka huipulla on sipulinmuotoinen '
+            + 'laatoitettu kruunu; oikealla on matala kupoli samaa '
+            + 'vihreänsinistä laattaa. Pihamuurissa on sinisiä '
+            + 'kaakelipaneeleja, ja seinällä on moskeijan '
+            + 'arabiankielinen nimikilpi.',
+          lahde: 'Ayham4002, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   /*
    * İzmirin nähtävyysjutut (nippu 2, 12.8.2026). Nikosia on jaettu
@@ -13449,6 +13546,99 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAKSI UUTTA KOHDETTA (kohdemäärien nosto 18.8.2026). Molemmat
+     * ovat kartan tyhjässä keskiosassa, ja molemmat kertovat siitä
+     * mitä Qajar-kaupungin ulkopuolelle jäi: tykkivarasto ja
+     * harjoituskenttä, joista tuli aukio ja puisto.
+     */
+    'Toopkhanen aukio': {
+      aika: '1867',
+      teksti: 'Aukio rakennettiin vuonna 1867, kun Naser al-Din Shaahin '
+        + 'Teheran kasvoi vanhan muurinsa yli. Se tehtiin '
+        + 'Dowlat-portin entisen paikan pohjoispuolelle, ja nimeksi tuli '
+        + 'Toopkhaneh eli tykkitalo: aukion laidalla oli tykistön '
+        + 'varasto ja kasarmi, joka vartioi shaahin asuinpalatsia '
+        + 'Golestania parin korttelin päässä. Muoto on suorakaide, ja '
+        + 'sen neljästä kulmasta lähtee kuusi katua — Amir Kabir, '
+        + 'Naser Khosrow, Bab Homayoun, Sepah, Ferdowsi ja Lalezar.'
+        + '\n\n'
+        + 'Aukion varrelle nousi 1800-luvun lopulla se, mikä oli '
+        + 'Teheranissa uutta: lennätinlaitos, kaupungintalo ja Persian '
+        + 'keisarillisen pankin talo. Lennätinlaitos purettiin 1970 ja '
+        + 'kaupungintalo 1969; ensimmäisen tilalle tuli iso '
+        + 'betonirakennus ja jälkimmäisen paikalla oli lähes viisi '
+        + 'vuosikymmentä pysäköintikenttä. Kaupungintalosta on '
+        + 'sittemmin alettu rakentaa jäljennöstä.'
+        + '\n\n'
+        + 'Nimi on vaihtunut jokaisen vallanvaihdoksen mukana. Vuoden '
+        + '1921 vallankaappauksen jälkeen aukio nimettiin Sepahin '
+        + 'aukioksi sen rakennuksen mukaan, jossa Reza Khan toimi '
+        + 'sotaministerinä, ja keskelle pystytettiin hänen patsaansa. '
+        + 'Patsas kaadettiin vuoden 1979 vallankumouksessa, ja aukio '
+        + 'sai virallisen nykynimensä Imam Khomeinin aukio. '
+        + 'Teheranilaisten puheessa se on yhä Toopkhaneh.',
+      kuvat: [
+        /*
+         * Kuva on Naser al-Din Shaahin ranskalaisen henkilääkärin
+         * Jean-Baptiste Feuvrierin kirjasta eli aivan aukion omalta
+         * ajalta. Commonsin toinen ja terävämpi otos samasta aukiosta
+         * ("1910 Gun Square Teheran.png") jätettiin pois, koska
+         * upload.wikimedia.org vastasi sen kohdalla toistuvasti
+         * HTTP 429 — kuva ei olisi latautunut pelaajalle.
+         */
+        {
+          tiedosto: '3 Sal Dar Darbar-e Iran (page 364 crop)1.jpg',
+          selite: 'Toopkhanen aukio Qajar-kaudella ylhäältä kuvattuna. '
+            + 'Aukion perää reunustaa pitkä kaksikerroksinen '
+            + 'kaarikäytävärakennus, jonka keskellä on korkeampi '
+            + 'porttiosa; avoimella kentällä seisoo kaksi tykkiä ja '
+            + 'rivi paljaita puita, ja taustalla häämöttää vuorijono.',
+          lahde: 'Jean-Baptiste Feuvrier, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bagh-e Mellin portti': {
+      aika: '1920-luku',
+      teksti: 'Portin takana oleva alue oli Qajar-kaudella Meydan-e Mashq, '
+        + 'harjoituskenttä. Siellä oli varuskunnan ampumarata, ja '
+        + 'siellä persialainen kasakkaprikaati harjoitteli '
+        + 'paraatimarssia. Naser al-Din Shaahin aikana kentän laidalle '
+        + 'rakennettiin kasakkatalo, jota Mozaffar ad-Din Shaahin '
+        + 'aikana muutettiin.'
+        + '\n\n'
+        + 'Reza Shaahin kaudella kenttä muutettiin lyhyeksi aikaa '
+        + 'julkiseksi puistoksi, ja silloin sille tehtiin portti, joka '
+        + 'antoi koko alueelle sen nykyisen nimen Bagh-e Melli eli '
+        + 'kansallispuutarha. Portin suunnitteli Mirza Mehdi Khan '
+        + 'Shaghaghi, jonka arvonimi oli Momtahen od-Dowleh, ja se '
+        + 'valmistui ennen toista maailmansotaa. Julkisivu on '
+        + 'keltaista tiiltä ja siihen on upotettu maalattuja '
+        + 'kaakelitauluja: leijona ja aurinko, sotilashahmoja ja '
+        + 'kukkakuvioita.'
+        + '\n\n'
+        + 'Puistoa ei jäänyt. Kentän ympärille nousivat valtion talot '
+        + 'ja museot, ja nykyisin portin takaa löytyvät ulkoministeriön '
+        + 'yhdeksäs rakennus eli entinen poliisitalo, taideyliopisto '
+        + 'entisessä kasakkatalossa, Malekin kansalliskirjasto ja '
+        + '-museo, posti- ja viestintämuseo sekä Iranin kansallismuseo. '
+        + 'Portti on siis nimeltään puutarhan portti, mutta se johtaa '
+        + 'kortteliin, jossa on kaupungin museot.',
+      kuvat: [
+        {
+          tiedosto: 'National Garden Gate Tehran October 2017.jpg',
+          selite: 'Portin julkisivu vinosti alhaalta. Keltatiilisen '
+            + 'seinän edessä on rivi paksuja pyöreitä pilareita, ja '
+            + 'niiden välissä avautuu korkea holvikaari, jonka '
+            + 'syvennyksessä on koristeellinen puuovi. Kaaren yläpuolella '
+            + 'on maalattuja kaakelitauluja, joista yhdessä erottuu '
+            + 'leijona ja aurinko.',
+          lahde: 'Behnam Badiee, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   /*
    * Isfahanin nähtävyysjutut (nippu 2, 13.8.2026). Kaupungin viisi
@@ -14396,11 +14586,195 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * NELJÄ UUTTA KOHDETTA (kohdemäärien nosto 18.8.2026). Nämä eivät
+     * ole kaupunkilehden oppaassa — Kappabashi ja Ameya-yokochō ovat,
+     * ja siksi ne jätettiin kartalta pois (perustelu maakartat.js).
+     * Faktat en-Wikipedian rajapinnasta, kuvat Commonsin luokista ja
+     * jokainen katsottu silmin ennen valintaa.
+     */
+    'Ueno Tōshō-gū': {
+      aika: '1627',
+      teksti: 'Pyhäkkö perustettiin vuonna 1627 Tokugawa Ieyasun muistoksi. '
+        + 'Ieyasu oli shogunaatin perustaja, ja kuolemansa jälkeen hänet '
+        + 'nostettiin jumaluudeksi nimellä Tōshō Daigongen, "suuri '
+        + 'idästä loistava ilmestys". Pyhäkön rakennutti sotapäällikkö '
+        + 'Tōdō Takatora, ja päärakennus uusittiin 1651 Ieyasun '
+        + 'pojanpojan, kolmannen shogunin Tokugawa Iemitsun toimesta. '
+        + 'Vuoteen 1868 asti pyhäkkö oli osa viereistä Kan\'ei-jin '
+        + 'buddhalaistemppeliä; nykyisin siellä palvotaan myös kahta '
+        + 'muuta shogunia, Yoshimunea ja Yoshinobua.'
+        + '\n\n'
+        + 'Vuoden 1651 karamon-portti on kullattu joka pinnaltaan. Sen '
+        + 'pylväisiin on veistetty kaksi lohikäärmettä, nouseva '
+        + 'Noboriryū ja laskeva Kudariryū, ja tarinan mukaan ne käyvät '
+        + 'joka yö juomassa Shinobazu-lammelta. Veistokset pannaan '
+        + 'Hidari Jingorōn nimiin — mestarin, jota ei ehkä ole ollut '
+        + 'olemassakaan ja jonka nimeen liitetään myös Nikkōn '
+        + 'kuuluisan Tōshō-gūn koristeita. Portin ja sen viereisen '
+        + 'sukibei-aidan kaiverruksissa sanotaan olevan yli kaksisataa '
+        + 'kasvi- ja eläinlajia.'
+        + '\n\n'
+        + 'Merkittävintä pyhäkössä on se, mitä sille ei ole tapahtunut. '
+        + 'Uenon kukkula paloi vuoden 1868 taistelussa, jossa '
+        + 'shogunaatin viimeiset joukot lyötiin ja Kan\'ei-ji tuhoutui; '
+        + 'vuoden 1923 maanjäristys kaatoi puolet alakaupungista, ja '
+        + 'sota poltti loput. Tōshō-gū seisoo yhä 1600-luvun asussaan, '
+        + 'ja useat sen rakennuksista on luokiteltu tärkeiksi '
+        + 'kulttuuriomaisuuksiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Ueno Tōshō-gū 1.jpg',
+          selite: 'Pyhäkön kullattu karamon-portti kuparinvihreän '
+            + 'tiilikaton alla. Keskellä kaartuu koristeellinen '
+            + 'päätykaari, jonka alla riippuu valkoisia paperisuikaleita '
+            + 'köydessä, ja punaisiksi maalattujen seinien pinnat ovat '
+            + 'täynnä kullattuja kaiverruksia. Portin edessä seisoo '
+            + 'joukko kävijöitä.',
+          lahde: 'Fraxinus2, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tôshôgû-schrijn in het Ueno-park in Tokyo Ueno Tôshôgû (titel op object), RP-F-F01177-G.jpg',
+          selite: 'Käsin väritetty valokuva samasta portista 1800-luvulta. '
+            + 'Kivetty käytävä johtaa suoraan portille, kaksi '
+            + 'kimonoon pukeutunutta hahmoa seisoo käytävän laidoilla '
+            + 'sateenvarjoineen, ja taustan tummien havupuiden seassa '
+            + 'kukkii vaaleanpunainen kirsikka.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Uenon asema': {
+      aika: '1883',
+      teksti: 'Asema avattiin 28. heinäkuuta 1883, ja se oli sata vuotta '
+        + 'pohjoisen Japanin pääteasema. Tōhokun radan junat tulivat '
+        + 'tänne ja loppuivat tähän, ja siksi Ueno ei ole tokiolaisille '
+        + 'mikä tahansa asema: se on ovi, josta pohjoisesta tullaan '
+        + 'kaupunkiin töihin. Runoilija Ishikawa Takuboku kirjoitti '
+        + 'käyvänsä asemalla vain kuullakseen väkijoukossa kotiseutunsa '
+        + 'murretta. Runo on asemalla muistolaatassa.'
+        + '\n\n'
+        + 'Ensimmäinen asemarakennus tuhoutui vuoden 1923 '
+        + 'maanjäristyksen tulipaloissa. Kun uuden perustuksia '
+        + 'kaivettiin, maasta nousi luita, miekkoja ja keihäitä: ne '
+        + 'olivat vuoden 1868 Uenon taistelusta, joka käytiin samalla '
+        + 'kukkulalla. Nykyinen rakennus vihittiin käyttöön 1932, ja se '
+        + 'on yhä paikallaan — matala vaalea julkisivu, jonka '
+        + 'keskellä on kello ja katolla aseman nimi isoin kirjaimin.'
+        + '\n\n'
+        + 'Asemasta on lähtenyt kaksi ensimmäistä. Vuonna 1927 täältä '
+        + 'Asakusaan avattiin Japanin ensimmäinen metrolinja, ja sodan '
+        + 'jälkeen aseman edustalle syntyi kaupungin tunnetuin '
+        + 'mustanpörssin tori, josta kasvoi Ameya-yokochōn kuja. '
+        + 'Aseman tunneleissa asui tuolloin sotaorpoja. '
+        + 'Pääteaseman asema päättyi vaiheittain: Tōhokun '
+        + 'luotijuna ylsi Uenoon 1985 ja jatkoi Tokion asemalle 1991.',
+      kuvat: [
+        {
+          tiedosto: 'Ueno Station Main Building.jpg',
+          selite: 'Uenon aseman pääjulkisivu. Vaalean betonirakennuksen '
+            + 'keskellä on rivi korkeita ikkunoita ja niiden yläpuolella '
+            + 'pyöreä kello; katolla lukee vihrein kirjaimin aseman nimi '
+            + 'sekä japaniksi että latinalaisin aakkosin. Alhaalla '
+            + 'kulkee matala sisäänkäyntikatos ja edustalla keltainen '
+            + 'taksi.',
+          lahde: 'Sushiya, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Hanayashiki: {
+      aika: '1853',
+      teksti: 'Hanayashiki avattiin vuonna 1853, Edo-kauden viimeisinä '
+        + 'vuosina, eikä se ollut huvipuisto vaan kukkatarha. Nimi '
+        + 'tarkoittaa kukkakartanoa, ja sen suunnitteli puutarhuri '
+        + 'Morita Rokusaburō; kahtena ensimmäisenä vuosikymmenenä '
+        + 'täällä katsottiin pioneja ja krysanteemeja. Noin vuonna '
+        + '1872, aivan Meiji-kauden alussa, tarhaan tuotiin eläimiä ja '
+        + 'huvilaitteita. Sitä pidetään Japanin vanhimpana '
+        + 'huvipuistona.'
+        + '\n\n'
+        + 'Taishō-kaudella ja Shōwan alkuvuosina paikka oli maan '
+        + 'tunnetuimpia eläintarhoja, ja sen uutiset olivat tiikerin '
+        + 'viisosia ja Japanin ensimmäinen leijonanpentu. Vuoden 1923 '
+        + 'maanjäristyksessä useimmat eläimet lopetettiin ennen kuin '
+        + 'tuli ehti häkeille; niiden muistoksi pystytettiin 1930 '
+        + 'muistomerkki, ja henkiin jääneet myytiin 1935 Sendain '
+        + 'eläintarhaan. Vuonna 1944 koko puisto purettiin '
+        + 'ilmapuolustuslain nojalla palokujaksi.'
+        + '\n\n'
+        + 'Puisto rakennettiin uudelleen 1947. Vuonna 1953 valmistui '
+        + 'Yomiuri-vuoristorata, joka on yhä Japanin vanhin käytössä '
+        + 'oleva. Rata mahtuu tontille vain siksi, että se kiertää '
+        + 'puiston omien rakennusten kattojen yli ja sukeltaa '
+        + 'naapuritalojen väliin — koko huvipuisto on pienempi kuin '
+        + 'moni yksittäinen laite muualla.',
+      kuvat: [
+        {
+          tiedosto: 'Asakusa Hanayashiki -03.jpg',
+          selite: 'Hanayashiki ylhäältä kuvattuna. Sinivalkoinen '
+            + 'vuoristorata kiertää tiiviin tontin päästä päähän ja '
+            + 'kulkee talojen kattojen yli; sisään mahtuvat vielä '
+            + 'karuselli, raidallinen sirkusteltta ja pinkki '
+            + 'kuppikaruselli. Ympärillä nousevat asuintalot aivan '
+            + 'aidan viereen.',
+          lahde: 'Aimaimyi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kyū-Iwasaki-tei': {
+      aika: '1896',
+      teksti: 'Tontti oli Edo-kaudella Sakakibara-suvun kaupunkiasunnon '
+        + 'paikka. Vuonna 1896 sen osti Iwasaki Hisaya, Mitsubishin '
+        + 'perustajan Iwasaki Yatarōn poika, joka oli kolme vuotta '
+        + 'aiemmin noussut yhtiön kolmanneksi johtajaksi. Hisaya '
+        + 'palkkasi arkkitehdiksi britti Josiah Conderin, joka oli '
+        + 'kutsuttu Japaniin opettamaan länsimaista rakennustaidetta '
+        + 'ja jonka oppilaista tuli Meiji-Japanin ensimmäinen '
+        + 'arkkitehtipolvi.'
+        + '\n\n'
+        + 'Länsimainen päärakennus on kaksikerroksinen puutalo, jonka '
+        + 'esikuva on 1600-luvun englantilainen jaakobiininen tyyli. '
+        + 'Eteläsivulla on pylväskuisti, jonka yläkerran pylväät ovat '
+        + 'joonialaisia — malli on Pennsylvaniasta, sillä Hisaya oli '
+        + 'juuri valmistunut Pennsylvanian yliopistosta. Sisällä '
+        + 'seiniä peittää kinkarakawashi: washi-paperi, johon '
+        + 'painetaan metallifolio puukuviorullalla ja jota vasaroidaan '
+        + 'harjalla, kunnes se näyttää värjätyltä nahalta. Tekniikka '
+        + 'kehitettiin Japanissa ja sitä vietiin Eurooppaan. '
+        + 'Biljarditalo tehtiin sveitsiläisen vuoristomajan näköiseksi '
+        + 'ja yhdistettiin päärakennukseen maanalaisella käytävällä.'
+        + '\n\n'
+        + 'Länsitalon kylkeen rakennettiin japanilainen siipi, joka oli '
+        + 'alun perin suurempi kuin koko länsitalo ja jonka '
+        + 'liukuovet maalasi aikansa tunnettu taiteilija Hashimoto '
+        + 'Gahō. Rakennuksia oli yli kaksikymmentä; jäljellä on kolme. '
+        + 'Sodan jälkeen miehityshallinto otti talon haltuunsa, ja '
+        + 'palautuksen jälkeen siinä toimi korkeimman oikeuden '
+        + 'koulutuslaitos vuoteen 1970. Vuodesta 2001 paikkaa on '
+        + 'hoitanut Tokion kaupunki, ja tontti on alle puolet '
+        + 'alkuperäisestä.',
+      kuvat: [
+        {
+          tiedosto: 'Kyu Iwasaki Tei Garden (180139793).jpeg',
+          selite: 'Iwasakien länsimainen päärakennus nurmikentän takaa. '
+            + 'Valkoiseksi maalatun puutalon eteläsivulla on '
+            + 'kaksikerroksinen pylväskuisti kaidekoristeineen, oikealla '
+            + 'pullistuu monikulmainen lasiveranta, ja katonharjalla on '
+            + 'rivi teräviä koristepiikkejä. Vasemmalla näkyy '
+            + 'japanilaisen siiven matala katto.',
+          lahde: 'Takuya Matsuyama, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   /*
-   * SOUL (E00-viimeistely 17.8.2026). Kuusi kohdetta, samat nimet
-   * merkki merkiltä kuin maakartat.js:n KAUPUNKIKARTAT.soul.kohteet
-   * — ui.js yhdistää taulut nimellä.
+   * SOUL (E00-viimeistely 17.8.2026, kohdemäärä nostettu yhdeksään
+   * 18.8.2026). Samat nimet merkki merkiltä kuin maakartat.js:n
+   * KAUPUNKIKARTAT.soul.kohteet — ui.js yhdistää taulut nimellä.
    *
    * Faktat en-Wikipedian rajapinnasta (action=query&prop=extracts)
    * ja fi-Wikipedian johdannoista; kuvat haettu Commonsin
@@ -14705,11 +15079,146 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KOLME UUTTA KOHDETTA (kohdemäärien nosto 18.8.2026). Cheonggyecheon
+     * jätettiin kartalta pois, koska se on jo oppaan jaksona "Puro
+     * moottoritien alta" (perustelu maakartat.js).
+     */
+    Gwanghwamun: {
+      aika: '1395',
+      teksti: 'Gwanghwamun on Gyeongbokgungin eteläportti ja koko '
+        + 'Joseon-kauden Soulin pääportti. Se valmistui vuoden 1395 '
+        + 'yhdeksännessä kuussa ja sai nimensä 1426 kuningas Sejong '
+        + 'Suurelta; nimi luetaan yleensä "valo levittää maan hyveen '
+        + 'joka suuntaan". Kolmen kiviholvin yläpuolella lepää '
+        + 'puinen porttitorni, ja portin edessä istuu kivinen '
+        + 'haetae, tarueläin, jonka uskottiin torjuvan tulipalot ja '
+        + 'pahat henget. Portin katon alapinta on maalattu täyteen '
+        + 'feeniksejä, lohikäärmehevosia ja kilpikonnia.'
+        + '\n\n'
+        + 'Portti on tuhoutunut ja rakennettu uudelleen useammin kuin '
+        + 'mikään muu Soulin rakennus. Se paloi vuoden 1592 sodassa. '
+        + 'Kuningas Gojongin aikaan se pystytettiin uudelleen '
+        + 'aiempaa korkeampana, ja vuonna 1870 määrättiin porttiin '
+        + 'asennettavaksi iso kello. Japanin siirtomaakaudella portti '
+        + 'siirrettiin 1927 palatsin itälaidalle, ja Korean sodassa '
+        + '1950–1953 sen puuosa paloi kokonaan pois. Kivi jäi.'
+        + '\n\n'
+        + 'Vuoden 1968 jälleenrakennus tehtiin betonista ja teräksestä, '
+        + 'ja se oli tahallinen valinta: modernit materiaalit '
+        + 'esittivät maan modernisoitumista. Nykyinen portti on '
+        + 'vuodelta 2010. Se purettiin ja siirrettiin 14,5 metriä '
+        + 'etelään takaisin alkuperäiselle paikalleen ja käännettiin '
+        + 'palatsin pohjois–eteläakselin suuntaiseksi. Puurakenne '
+        + 'johdettiin vuonna 1925 piirretyistä mittapiirustuksista ja '
+        + 'nimikilpi vanhoista lasilevyvalokuvista; puu vaadittiin '
+        + 'kotimaiseksi männyksi. Portin edessä vaihdetaan vartiota '
+        + 'tunnin välein.',
+      kuvat: [
+        {
+          tiedosto: 'Gwanghwamun 2012.jpg',
+          selite: 'Gwanghwamun vinosti alhaalta. Vaalean kivimuurin '
+            + 'kolmen holvikaaren yllä lepää puinen porttitorni, jonka '
+            + 'räystään alusta on maalattu tiheään vihreällä, '
+            + 'punaisella ja sinisellä, ja keskellä riippuu musta '
+            + 'nimikilpi kultaisin merkein. Holvien edessä seisoo '
+            + 'vartiosto sinisissä, punaisissa ja keltaisissa puvuissa '
+            + 'lippuineen.',
+          lahde: 'Komatta, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Insadong: {
+      aika: '1392–',
+      teksti: 'Insadong on kortteli Jongnon pohjoispuolella, ja sen nimi on '
+        + 'kahden vanhan kaupunginosan nimien alkutavuista: In ja Sa. '
+        + 'Niitä erotti puro, joka kulki nykyisen pääkadun kohdalla. '
+        + 'Alue rakentui viisisataa vuotta sitten virkamiesten '
+        + 'asuinseuduksi, ja monet kadunvarren taloista olivat '
+        + 'alun perin kauppiaiden ja virkamiesten koteja; osa on '
+        + 'eläkkeelle jääneiden ylimysten suuria pihataloja. Ne ovat '
+        + 'nyt ravintoloita ja liikkeitä.'
+        + '\n\n'
+        + 'Antiikkikaupaksi kortteli muuttui siirtomaakaudella, kun '
+        + 'varakkaat korealaiset joutuivat muuttamaan pois ja myymään '
+        + 'omaisuutensa. Korean sodan jälkeen tänne asettui maan '
+        + 'taide- ja kahvilaelämä. Nykyisin Insadongissa on arviolta '
+        + 'neljäkymmentä prosenttia koko maan antiikkiliikkeistä ja '
+        + 'taidegallerioista ja yhdeksänkymmentä prosenttia '
+        + 'perinteisistä paperikaupoista. Kadun varrella on Soulin '
+        + 'vanhin kirjakauppa Tongmungwan ja vanhin teehuone '
+        + 'Kyung-in.'
+        + '\n\n'
+        + 'Katu on jalankulkijoiden, ja siellä tehdään käsityötä '
+        + 'näkyvissä: kalligrafiaa kirjoitetaan päivittäin, ja '
+        + 'pansori-laulua esitetään kadulla. Ruoat ovat samat kuin '
+        + 'kaupungin muillakin kaduilla — gimbap, odeng ja '
+        + 'bungeoppang eli kalanmuotoinen papupullataikina. 2000-luvun '
+        + 'alussa alueen nopea uudisrakentaminen pysäytettiin '
+        + 'asukkaiden vastustuksen jälkeen kahdeksi vuodeksi.',
+      kuvat: [
+        {
+          tiedosto: '2012-05-11 Insadong.jpg',
+          selite: 'Insadongin pääkatu iltapäivällä. Kadun yllä roikkuu '
+            + 'rivi värikkäitä paperilyhtyjä puiden oksien välissä, '
+            + 'liikkeiden kylttejä on seinillä päällekkäin, ja '
+            + 'kivetyllä kadulla kävelee ihmisiä puvuissa ja '
+            + 'ostoskasseineen. Vasemmassa laidassa on katukoju '
+            + 'aurinkovarjon alla.',
+          lahde: 'Mario Sánchez Prada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Jogyesa: {
+      aika: '1910',
+      teksti: 'Joseon-dynastia suosi konfutselaisuutta ja työnsi '
+        + 'buddhalaisuuden pois pääkaupungista vuoriston temppeleihin. '
+        + 'Jogyesa on se temppeli, joka toi buddhalaisuuden takaisin '
+        + 'kaupungin keskustaan. Sen edeltäjä perustettiin 1395, '
+        + 'mutta nykyinen temppeli syntyi 1910 nimellä Gakhwangsa. '
+        + 'Siirtomaakaudella siitä tuli korealaisen buddhalaisuuden '
+        + 'vastarinnan keskus, kun Japani yritti liittää sen omiin '
+        + 'lahkoihinsa.'
+        + '\n\n'
+        + 'Päärakennus Daeungjeon valmistui 1938, ja sen hirret ovat '
+        + 'Paektu-vuoren mäntyä. Nimi vaihtui Taegosaksi 1938 ja '
+        + 'nykyiseen muotoon 1954, kun temppelistä tehtiin Jogye-'
+        + 'suuntakunnan päätemppeli — se on Korean suurin buddhalainen '
+        + 'suuntakunta, ja se yhdistää zen-perinteen ja '
+        + 'tekstikoulukunnat. Pihalla kasvaa kaksi noin '
+        + 'viisisatavuotiasta puuta: kiinalaisten lähetyssaarnaajien '
+        + 'tuoma valkomänty, joka on luonnonmuistomerkki, ja 26 metriä '
+        + 'korkea japaninpagodipuu.'
+        + '\n\n'
+        + 'Vuoden näyttävin viikko on Buddhan syntymäpäivän aika, '
+        + 'jolloin temppelin piha katetaan tuhansilla lootuslyhdyillä '
+        + 'ja Jongno-katua pitkin kulkee lyhtykulkue Dongdaemunin '
+        + 'portilta temppelille. Juhlan juuret ovat yli tuhannen '
+        + 'vuoden takana Yhdistyneen Sillan ajassa, jolloin sitä '
+        + 'vietettiin vuoden ensimmäisenä täysikuun päivänä. '
+        + 'Temppeliin pääsee kadulta yhden pylvään portista, iljumun, '
+        + 'joka merkitsee rajaa arjen ja Buddhan maailman välillä.',
+      kuvat: [
+        {
+          tiedosto: "Jogye Temple near Buddha's birthday, Seoul.jpg",
+          selite: 'Temppelin piha lootuslyhtyjen alla. Tuhannet '
+            + 'punaiset, keltaiset, vihreät ja siniset lyhdyt on '
+            + 'ripustettu tiiviiksi katoksi koko pihan yli, ja niiden '
+            + 'läpi siivilöityvä valo täplittää hiekkaa. Keskellä '
+            + 'kasvaa vanha kaksihaarainen puu, ja takana näkyy '
+            + 'päärakennuksen kirjavaksi maalattu julkisivu.',
+          lahde: 'Rtflakfizer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   /*
-   * SHANGHAI (E00-viimeistely 17.8.2026). Kuusi kohdetta, samat
-   * nimet merkki merkiltä kuin maakartat.js:n
-   * KAUPUNKIKARTAT.shanghai.kohteet.
+   * SHANGHAI (E00-viimeistely 17.8.2026, kohdemäärä nostettu
+   * yhdeksään 18.8.2026). Samat nimet merkki merkiltä kuin
+   * maakartat.js:n KAUPUNKIKARTAT.shanghai.kohteet.
    *
    * Faktat en-Wikipedian rajapinnasta (action=query&prop=extracts).
    * Kuvat haettu Commonsin KATEGORIOIDEN kautta (The Bund,
@@ -15014,9 +15523,137 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KOLME UUTTA KOHDETTA (kohdemäärien nosto 18.8.2026), kaikki
+     * muurin sisäisestä kiinalaisesta vanhastakaupungista — vastapaino
+     * sopimussataman puolelle, jolla kuudesta ensimmäisestä oli neljä.
+     */
+    'Kaupunginjumalan temppeli': {
+      aika: '1403',
+      teksti: 'Kiinalaisessa kansanuskossa jokaisella muuratulla '
+        + 'kaupungilla oli oma suojelushenkensä, chenghuang, jonka nimi '
+        + 'tarkoittaa kirjaimellisesti muuria ja vallihautaa. '
+        + 'Shanghain temppeli oli alun perin Jinshanin eli '
+        + 'Kultavuoren saaren hengelle omistettu, ja se muutettiin '
+        + 'kaupunginjumalan temppeliksi vuonna 1403 — merkiksi siitä, '
+        + 'että Shanghai oli noussut omaksi hallinnolliseksi '
+        + 'kaupungikseen.'
+        + '\n\n'
+        + 'Jumalia on kolme, ja kaikki kolme olivat eläviä ihmisiä. '
+        + 'Huo Guang oli Han-dynastian kansleri, joka kuoli 68 eaa. ja '
+        + 'joka tunnetaan siitä, että hän pani viralta yhden nuoren '
+        + 'keisarin ja nosti tilalle toisen. Qin Yubo (1295–1373) oli '
+        + 'shanghailainen virkamies, joka kieltäytyi kahdesti Mingin '
+        + 'perustajan kutsusta hoviin ennen kuin suostui; kuolemansa '
+        + 'jälkeen keisari nimesi hänet kaupunginjumalaksi. Chen '
+        + 'Huacheng (1776–1842) oli kenraali, joka vastasi Shanghain '
+        + 'puolustuksesta ensimmäisessä oopiumisodassa ja kaatui '
+        + 'taistelussa.'
+        + '\n\n'
+        + 'Temppeli oli laajimmillaan 1800-luvun alkupuolella, ja sen '
+        + 'ympärille kasvoi tori: kaupat asettuivat kaduille, joilla '
+        + 'kävijät kulkivat, ja koko kortteli sai temppelin nimen. '
+        + 'Kulttuurivallankumouksen aikana temppeli suljettiin ja '
+        + 'päähalli oli vuosikausia korukauppana. Vuonna 1994 se '
+        + 'palautettiin temppeliksi taolaisille papeille, ja '
+        + 'perusteellisen korjauksen jälkeen se vihittiin uudelleen '
+        + 'lokakuussa 2006.',
+      kuvat: [
+        {
+          tiedosto: '20090510 Shanghai City God Temple 6514.jpg',
+          selite: 'Temppelin alttari. Kaksi kullattua istuvaa hahmoa '
+            + 'kohoaa lähes kattoon asti: vasemmalla punakasvoinen ja '
+            + 'mustapartainen vartija kättään kohottaen, oikealla '
+            + 'rauhallinen virkamieshahmo mustassa hatussa kädet ristissä '
+            + 'rinnalla. Edessä on rivi sinivalkoisia posliinimaljakoita '
+            + 'ja appelsiineja uhrilautasella.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fuyoun moskeija': {
+      aika: '1870',
+      teksti: 'Ennen moskeijaa Shanghain muslimit — suurin osa heistä '
+        + 'Nanjingista muuttaneita kauppiaita — vuokrasivat rukoiluun '
+        + 'kaksi taloa. Vuonna 1870, Tongzhi-keisarin yhdeksäntenä '
+        + 'hallitusvuotena, kolmekymmentäyksi miestä keräsi rahat, '
+        + 'osti neljänsadan neliömetrin tontin vanhankaupungin '
+        + 'kujilta ja rakensi tähän moskeijan. Sitä laajennettiin '
+        + 'ja korjattiin 1897, 1905, 1936 ja 1979.'
+        + '\n\n'
+        + 'Rakennus on kolmikerroksinen ja Qing-kauden kiinalaista '
+        + 'rakennustapaa: ulkoa se on kaupunkitalo muiden joukossa, '
+        + 'eikä kadulle näy kupolia eikä minareettia. Sisään '
+        + 'tullaan suorakaiteen muotoiselle pihalle, jonka '
+        + 'pohjoislaidalla on peseytymistila ja eteläpäässä '
+        + 'rukoushuone. Katolla on Wangyue-paviljonki, kuun '
+        + 'katselupaikka: siitä tähystettiin uutta kuuta, joka aloittaa '
+        + 'ja päättää paastokuukauden. Kattopalkit on maalattu '
+        + 'kuviollisiksi ja lattiaan on kaiverrettu läpileikattuja '
+        + 'koristeita.'
+        + '\n\n'
+        + 'Moskeija oli pitkään kaupungin muslimien hallinnollinen ja '
+        + 'sivistyksellinen keskus. Täällä perustettiin Wu Benin '
+        + 'alakoulu, Shanghain ensimmäinen islamilainen koulu, ja '
+        + 'täällä toimi vuonna 1909 perustettu Shanghain islamilainen '
+        + 'johtokunta. Nykyisin talo on ennen kaikkea rukouspaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Fuyou Road Mosque - Prayer Hall.jpg',
+          selite: 'Moskeijan rukoushuone. Tumma puinen palkkikatto ja '
+            + 'kiinalaiset ristikkoikkunat kehystävät salin, jonka '
+            + 'lattialla on rivissä sinivalkoisia rukousmattoja. '
+            + 'Perällä on kullattu mihrab-syvennys arabiankielisine '
+            + 'kirjoituksineen, sen molemmin puolin kaksi vanhaa '
+            + 'kaappikelloa, ja katosta riippuu suuri lootuksenmuotoinen '
+            + 'kruunu.',
+          lahde: 'Chongkian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dajingin pavilonki': {
+      aika: '1553',
+      teksti: 'Shanghain kaupunginmuuri rakennettiin vuonna 1553 '
+        + 'japanilaisia merirosvoja vastaan, ja se kiersi kiinalaisen '
+        + 'vanhankaupungin lähes ympyränä. Muuri purettiin vuonna '
+        + '1912, ja sen paikalle vedettiin katu — sen soikea kehä '
+        + 'näkyy kartalla yhä. Yksi pala jäi: Dajingin pavilonki on '
+        + 'ainoa kohta, jossa kaupunginmuuria on yhä pystyssä.'
+        + '\n\n'
+        + 'Muurin päällä seisoo rakennus, joka on samalla temppeli. '
+        + 'Muurinharjan hammastus, ampuma-aukot ja harmaa '
+        + 'tiililadonta ovat alkuperäisiä; niiden takaa nousee '
+        + 'kaksikerroksinen paviljonki kaartuvine räystäineen ja '
+        + 'punaisine puuseinineen. Vuonna 1959 kokonaisuus '
+        + 'luokiteltiin kaupungin suojelukohteeksi, ja korjauksen '
+        + 'jälkeen se avattiin yleisölle 1995.'
+        + '\n\n'
+        + 'Sisällä on pieni museo, jonka näyttely on vanhan Shanghain '
+        + 'valokuvia — juuri sitä kaupunkia, joka jäi muurin sisään '
+        + 'ja jota Bundin puolelta tullut kävijä ei nähnyt. '
+        + 'Rakennuksen ulko-ovi on tavallisen kadun varrella, ja '
+        + 'ohikulkija saattaa kävellä ohi huomaamatta, että katu '
+        + 'itse on muurin paikka.',
+      kuvat: [
+        {
+          tiedosto: 'Dajing Ge ramparts.jpg',
+          selite: 'Kaupunginmuurin viimeinen pala. Harmaasta tiilestä '
+            + 'ladottu muuri on hammastettu ylhäältä, ja jokaisessa '
+            + 'hampaassa on neliskulmainen ampuma-aukko. Muurin takaa '
+            + 'nousee kaksikerroksinen paviljonki, jonka punaruskeat '
+            + 'puuseinät ja ikkunarivit jäävät kahden voimakkaasti '
+            + 'kaartuvan tiilikaton väliin.',
+          lahde: 'World Imaging, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   /*
-   * TRIPOLI (E00-viimeistely 17.8.2026). Kuusi kohdetta, samat kuin
+   * TRIPOLI (E00-viimeistely 17.8.2026, kohdemäärä nostettu
+   * seitsemään 18.8.2026). Samat kohteet kuin
    * maakartat.js:n KAUPUNKIKARTAT.tripoli.kohteet — nimet ovat merkki
    * merkiltä samat, koska ui.js yhdistää taulut nimellä.
    *
@@ -15317,6 +15954,56 @@ export const NAHTAVYYSJUTUT = {
             + 'korkealla. Kujaa pitkin kävelee valkoasuinen mies, ja '
             + 'seinien yli kulkee sähköjohtoja.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * SEITSEMÄS KOHDE (kohdemäärien nosto 18.8.2026). Juttu on
+     * tarkoituksella eri kuin oppaan jakso "Meren puolella oleva
+     * moskeija": opas kertoo rakennuksen osat (minareetin mitat,
+     * kupolit, laatat, hauta), tämä kertoo rakennuttajan, ajankohdan
+     * ja sen, mitä kaupungille tapahtui heti perään. Kuvat ovat eri
+     * tiedostoja kuin oppaassa.
+     */
+    'Gurgin moskeija': {
+      aika: '1834',
+      teksti: 'Moskeijan rakennutti laivaston kapteeni Mustafa Gurgi, ja '
+        + 'nimi kertoo suvun taustan: gurgi on arabiaa ja tarkoittaa '
+        + 'georgialaista. Ottomaanien valtakunta kokosi hallintonsa ja '
+        + 'laivastonsa väkeä kaukaa reunoiltaan, ja Tripolissa se '
+        + 'näkyi sukuniminä, jotka kertovat mistä isoisä oli tullut. '
+        + 'Gurgi valitsi paikakseen Bab al-Bahrin eli Merenportin '
+        + 'kaupunginosan aivan rannan tuntumassa, muutaman '
+        + 'kymmenen metrin päästä roomalaisesta riemukaaresta.'
+        + '\n\n'
+        + 'Valmistumisvuosi 1834 tekee moskeijasta vanhankaupungin '
+        + 'viimeisen suuren rakennuksen ennen vallanvaihtoa. Tripolia '
+        + 'oli hallinnut Karamanlien suku vuodesta 1711; Yusuf '
+        + 'Karamanli luopui vallasta 1832, ja vuonna 1835 sulttaani '
+        + 'otti kaupungin suoraan hallintaansa. Rakennustyön aikana '
+        + 'kaupungissa siis vaihtui isäntä, ja moskeijaan jäivät '
+        + 'molemmat maut: pohjaratkaisu on sama kolmen osan '
+        + 'kokonaisuus kuin Ahmed Pasha Karamanlin moskeijassa — '
+        + 'rukoushuone, hautakammio ja koulu — mutta koristelu '
+        + 'sekoittaa eurooppalaista ja islamilaista muotokieltä.'
+        + '\n\n'
+        + 'Moskeijaan on kaksi sisäänkäyntiä, toinen lännestä '
+        + 'al-Akwashin kadulta ja toinen pohjoisesta lyhyeltä '
+        + 'kujalta. Kumpikin on kapea ovi kalkitussa seinässä, eikä '
+        + 'kadulle näy juuri muuta kuin marmorikehys ja laattareunus: '
+        + 'medinan rakennukset kääntävät koristeensa sisäänpäin, ja '
+        + 'ohikulkija näkee niistä vain oven.',
+      kuvat: [
+        {
+          tiedosto: 'Tripoli - Gurgi-Moschee 1833 bis 34 erbaut, Eingangstor.jpg',
+          selite: 'Moskeijan sisäänkäynti kujalta. Vihreä kaksiosainen ovi '
+            + 'on koristeltu valkoisilla tähtinapeilla, ja sen ympärillä '
+            + 'on marmorista veistetty suippokaari. Kehystä reunustavat '
+            + 'sini-vihreät kaakelinauhat, yläpuolella on '
+            + 'arabiankielinen laattataulu, ja seinään on kiinnitetty '
+            + 'kilpi, jossa lukee moskeijan nimi.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       lahde: 'Wikipedia',

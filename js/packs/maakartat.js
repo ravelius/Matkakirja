@@ -2614,16 +2614,45 @@ export const KAUPUNKIKARTAT = {
       + 'Sumida-joki, ja sen ja ruudukon välissä erottuu pieni '
       + 'suorakaiteen muotoinen alue: Sensō-jin temppelipiiri. '
       + 'Kohteet jakautuvat kahteen ryhmään aivan kuin kaupunkikin — '
-      + 'Kaminarimon ja Sensō-ji idässä, ja lännessä Uenon kukkulalla '
-      + 'puisto, kansallismuseo, Kan\'ei-ji ja Shitamachi-museo.',
+      + 'idässä Kaminarimon, Sensō-ji ja niiden takana huvipuisto '
+      + 'Hanayashiki, ja lännessä Uenon kukkulalla puisto, '
+      + 'kansallismuseo, Kan\'ei-ji, Tōshō-gū, Shitamachi-museo ja '
+      + 'Iwasakien talo. Väliin jää asema, jonne pohjoisen junat '
+      + 'tulevat.',
     kohteet: [
+      /*
+       * KYMMENEN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
+       * Neljä lisättyä ovat Ueno Tōshō-gū, Uenon asema, Hanayashiki ja
+       * Kyū-Iwasaki-tei. Pisteet en-Wikipedian coord-malleista ja
+       * Wikidatan P625:stä, ristiintarkistettuina Overpassista.
+       *
+       * MIKSI EI PÄÄTOIMITTAJAN ESITTÄMIÄ NELJÄÄ. Keisarillisen
+       * palatsin itäpuutarhat (35,686/139,757), Meiji-pyhäkkö
+       * (35,676/139,699) ja Shibuyan risteys (35,660/139,700) ovat
+       * kaikki tämän rajauksen ULKOPUOLELLA — 5–10 km lännessä ja
+       * etelässä — eikä Tokion maamerkkejä saa yhteen ruutuun (ks.
+       * tools/piirra-kaupunkikartta.mjs:n tokio-lohko). Yanakan vanha
+       * kortteli (35,7276) jää 345 metriä pohjoisrajan yli eli
+       * reunukselle, jossa se ei näkyisi lepotilassa lainkaan.
+       * Kappabashi ja Ameya-yokochō mahtuisivat, mutta ne ovat jo
+       * kaupunkilehden oppaan omina jaksoina ("Katu, jolla myydään
+       * muoviruokaa", "Torikuja radan alla") — juttu olisi ollut
+       * saman tekstin toisinto. Nämä neljä eivät ole lehdessä.
+       *
+       * Kaikki kymmenen ajettu tools/tarkista-karttapisteet.mjs:llä:
+       * maalla, mittakaavajanan ulkopuolella, ja ainoa päällekkäisyys
+       * on Sensō-ji × Hanayashiki 8 % eli "tavallista".
+       */
       { nimi: 'Kaminarimon', lat: 35.7111, lon: 139.7964 },
       { nimi: 'Sensō-ji', lat: 35.7147, lon: 139.7968 },
+      { nimi: 'Hanayashiki', lat: 35.7155, lon: 139.7947 },
       { nimi: 'Kan\'ei-ji', lat: 35.7214, lon: 139.7743 },
       { nimi: 'Tokion kansallismuseo', lat: 35.7191, lon: 139.7758 },
+      { nimi: 'Ueno Tōshō-gū', lat: 35.7154, lon: 139.7706 },
+      { nimi: 'Uenon asema', lat: 35.7134, lon: 139.7767 },
       { nimi: 'Uenon puisto', lat: 35.7122, lon: 139.7711 },
       { nimi: 'Shitamachi-museo', lat: 35.7102, lon: 139.7726 },
-
+      { nimi: 'Kyū-Iwasaki-tei', lat: 35.7097, lon: 139.7678 },
     ],
   },
   soul: {
@@ -2658,24 +2687,44 @@ export const KAUPUNKIKARTAT = {
       + 'kaupungin pohjoiseen ja eteläiseen puoliskoon — sen '
       + 'pohjoispuolta sanotaan yhä Bukchoniksi eli pohjoiskyläksi. '
       + 'Puron ja palatsien välissä on Jongno, kellokatu, ja sen '
-      + 'varrella kaksi loppua kohdetta. Namsanin torni, Han-joki ja '
-      + 'Gangnam jäävät kaikki tämän ruudun ulkopuolelle etelään.',
+      + 'varrella loput kohteet: Insadongin käsityökatu, Jogyesan '
+      + 'temppeli, Tapgol-puisto ja Bosingak. Palatsin edessä seisoo '
+      + 'Gwanghwamun, jonka kautta koko akseli alkaa. Namsanin torni, '
+      + 'Han-joki ja Gangnam jäävät kaikki tämän ruudun ulkopuolelle '
+      + 'etelään.',
     kohteet: [
       /*
-       * Kuusi kohdetta. Pisteet lähteistä eikä arvattuina: viisi
-       * en-Wikipedian coord-mallista ja Jongmyo Wikidatan P625:stä,
-       * koska en-artikkelissa ei ole koordinaattia lainkaan.
+       * YHDEKSÄN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
+       * Pisteet lähteistä eikä arvattuina: en-Wikipedian coord-malleista
+       * ja Wikidatan P625:stä (Jongmyo, Insa-dong), koska
+       * en-artikkelissa ei aina ole koordinaattia lainkaan.
        *
-       * fi-Wikipedia tarkistettu rajapinnasta 17.8.2026: palatsin
-       * artikkeli on nimellä `Gyeongbok` (ei Gyeongbokgung), ja
-       * Changdeokgung sekä Jongmyo ovat omilla nimillään.
-       * Bukchonista, Tapgol-puistosta ja Bosingakista EI ole
-       * fi-artikkelia, joten ne nojaavat omaan juttuunsa.
+       * MIKSI EI PÄÄTOIMITTAJAN ESITTÄMIÄ KAHTA. Namdaemun eli
+       * Sungnyemun (37,5600) on 610 metriä eteläreunan alapuolella ja
+       * N Seoul Tower (37,5512) kokonaan toisella kukkulalla — sen
+       * esittelyteksti sanoo itsekin, että Namsan jää ulos.
+       * Kummankin tilalle otettiin saman roolin täyttävä kohde
+       * rajauksen sisältä: portiksi Gwanghwamun ja asukkaiden omaksi
+       * paikaksi Jogyesa. Cheonggyecheon mahtuisi (Cheonggyen aukio
+       * 37,569/126,978, tarkistettu maalle), mutta se on jo
+       * kaupunkilehden oppaan jaksona "Puro moottoritien alta".
+       *
+       * fi-Wikipedia tarkistettu rajapinnasta: palatsin artikkeli on
+       * nimellä `Gyeongbok` (ei Gyeongbokgung), ja Changdeokgung sekä
+       * Jongmyo ovat omilla nimillään. Bukchonista, Tapgol-puistosta,
+       * Bosingakista, Gwanghwamunista, Insadongista ja Jogyesasta EI
+       * ole fi-artikkelia, joten ne nojaavat omaan juttuunsa.
+       *
+       * tarkista-karttapisteet: kaikki yhdeksän maalla, yksikään ei
+       * peitä mittakaavajanaa eikä yksikään pari mene päällekkäin.
        */
       { nimi: 'Gyeongbokgung', lat: 37.5799, lon: 126.9768, wiki: 'Gyeongbok' },
+      { nimi: 'Gwanghwamun', lat: 37.576, lon: 126.977 },
       { nimi: 'Bukchonin hanok-kylä', lat: 37.5831, lon: 126.9836 },
       { nimi: 'Changdeokgung', lat: 37.5794, lon: 126.9928, wiki: 'Changdeokgung' },
       { nimi: 'Jongmyo', lat: 37.5747, lon: 126.9936, wiki: 'Jongmyo' },
+      { nimi: 'Insadong', lat: 37.573, lon: 126.9862 },
+      { nimi: 'Jogyesa', lat: 37.5739, lon: 126.9819 },
       { nimi: 'Tapgol-puisto', lat: 37.5711, lon: 126.9885 },
       { nimi: 'Bosingak', lat: 37.5699, lon: 126.9834 },
     ],
@@ -2718,15 +2767,32 @@ export const KAUPUNKIKARTAT = {
       + 'kun karttaa suurentaa.',
     kohteet: [
       /*
-       * Kuusi kohdetta. Viisi pistettä en-Wikipedian coord-mallista
-       * ja Shanghain museo Wikidatan P625:stä (en-artikkelissa ei ole
-       * koordinaattia). Kaupunginjumalan temppeli on lähteellinen
-       * varakohde mutta vain 165 metriä Yu-puutarhasta, joten se
-       * jätettiin pois — numeroympyrät menisivät päällekkäin.
+       * YHDEKSÄN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
+       * Pisteet en-Wikipedian coord-malleista ja Wikidatan P625:stä
+       * (Shanghain museo, Kaupunginjumalan temppeli, Dajingin
+       * pavilonki); Fuyoun moskeijan piste on Overpassista, koska
+       * artikkelin koordinaatti on pyöristetty kahteen desimaaliin ja
+       * osoittaisi kortteleiden yli.
+       *
+       * KAUPUNGINJUMALAN TEMPPELI OTETTIIN NYT MUKAAN, vaikka tässä
+       * luki ennen että se jätettiin pois. Syy oli mitattu — 165
+       * metriä Yu-puutarhasta — ja se mitattiin uudelleen: reunuksen
+       * jälkeen (piirtoRajat 1,6× 17.8.2026) lava on 1,6-kertainen
+       * pikseleissä, ja tarkista-karttapisteet antaa peittoasteeksi
+       * 13 % eli "tavallista, ei toimenpidettä". Vanhan kaupungin
+       * tärkeintä paikkaa ei kannata jättää pois 13 prosentin takia.
+       *
+       * MIKSI EI PÄÄTOIMITTAJAN ESITTÄMIÄ KOLMEA. Jing'anin temppeli
+       * (121,445), Tianzifang (31,210) ja Longhua (31,174/121,450)
+       * ovat kaikki rajauksen ulkopuolella — Longhua kahdeksan
+       * kilometriä etelässä. Tilalle valittiin kolme vanhan kaupungin
+       * kohdetta, jotka ovat samalla vastapaino sopimussataman
+       * puolelle: temppeli, kaupunginmuurin viimeinen pala ja
+       * moskeija, jonka kaupungin oma muslimiyhteisö rakensi 1870.
        *
        * fi-Wikipedia tarkistettu rajapinnasta: Bundista, Yu-
        * puutarhasta ja Nanjing-kadusta ei ole fi-artikkelia, joten
-       * ne nojaavat omaan juttuunsa.
+       * ne nojaavat omaan juttuunsa. Ei myöskään kolmesta uudesta.
        */
       { nimi: 'Bund', lat: 31.238, lon: 121.4861 },
       // Silta saa olla vedellä (tarkista-karttapisteet.mjs): piste on
@@ -2734,8 +2800,11 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Waibaidun silta', lat: 31.2431, lon: 121.49 },
       { nimi: 'Rauhanhotelli', lat: 31.2411, lon: 121.4846 },
       { nimi: 'Yu-puutarha', lat: 31.2292, lon: 121.4875 },
+      { nimi: 'Kaupunginjumalan temppeli', lat: 31.2278, lon: 121.4881 },
+      { nimi: 'Fuyoun moskeija', lat: 31.2298, lon: 121.4842 },
       { nimi: 'Nanjing-katu', lat: 31.2347, lon: 121.4744 },
       { nimi: 'Shanghain museo', lat: 31.2303, lon: 121.4706 },
+      { nimi: 'Dajingin pavilonki', lat: 31.2265, lon: 121.4788 },
     ],
   },
   isfahan: {
@@ -2790,14 +2859,39 @@ export const KAUPUNKIKARTAT = {
       + 'vaan katettujen kujien kortteli, ja juuri siksi sen kujat '
       + 'näkyvät kartalla jalankulkureitteinä eivätkä katuina. '
       + 'Kohteet nousevat etelästä pohjoiseen: basaari alimpana, sen '
-      + 'yläpuolella Golestanin palatsi ja Dar al-Fonun, ja ylimpänä '
-      + 'kansallismuseo lännessä sekä Masoudiehin talo ja '
-      + 'Sepahsalarin moskeija idässä.',
+      + 'yläpuolella Golestanin palatsi ja Dar al-Fonun, niiden '
+      + 'pohjoispuolella Toopkhanen aukio keskellä kuvaa, ja ylimpänä '
+      + 'kansallismuseo ja Bagh-e Mellin portti lännessä sekä '
+      + 'Masoudiehin talo ja Sepahsalarin moskeija idässä.',
     kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
+       * Molemmat lisätyt ovat en-Wikipedian coord-malleista
+       * (Imam Khomeini Square, National Garden).
+       *
+       * MIKSI EI PÄÄTOIMITTAJAN ESITTÄMIÄ. Teheranin basaari on jo
+       * listan ensimmäinen kohde, ja sekä Tabiat-silta (35,7546) että
+       * Milad-torni (35,7448/51,3752) ovat kilometrejä rajauksen
+       * ulkopuolella pohjoisessa ja lännessä. Tilalle valittiin kaksi
+       * kohdetta, jotka ovat rajauksen sisällä ja tyhjässä keskiosassa:
+       * Toopkhanen aukio, kaupungin ensimmäinen moderni aukio vuodelta
+       * 1867 eli isoisän matkan ajalta, ja Bagh-e Mellin portti.
+       *
+       * NIMI ON ARKIMUOTO EIKÄ VIRALLINEN: aukion virallinen nimi on
+       * nykyään Imam Khomeinin aukio, mutta teheranilaiset sanovat
+       * yhä Toopkhaneh, ja peli kertoo paikan sen omalla historialla
+       * (Raamattu: geopolitiikka kuvataan, ei tuomita). Nimenvaihdot
+       * kerrotaan jutussa.
+       *
+       * tarkista-karttapisteet: kaikki kahdeksan maalla, ei janan
+       * päällä, ei yhtään päällekkäistä paria.
+       */
       { nimi: 'Teheranin basaari', lat: 35.675, lon: 51.4194 },
       { nimi: 'Golestanin palatsi', lat: 35.6797, lon: 51.4203 },
       { nimi: 'Dar al-Fonun', lat: 35.6838, lon: 51.4219 },
+      { nimi: 'Toopkhanen aukio', lat: 35.6857, lon: 51.4215 },
       { nimi: 'Iranin kansallismuseo', lat: 35.687, lon: 51.4146 },
+      { nimi: 'Bagh-e Mellin portti', lat: 35.6877, lon: 51.4168 },
       { nimi: 'Masoudiehin talo', lat: 35.689, lon: 51.4281 },
       { nimi: 'Sepahsalarin moskeija', lat: 35.6888, lon: 51.4329 },
     ],
@@ -2973,15 +3067,40 @@ export const KAUPUNKIKARTAT = {
       + 'säilynyt puoli on toisella rannalla.\n\n'
       + 'Tämä kartta on Rusafa, Tigrisin itäranta. Kaikki kuvan '
       + 'kohteet ovat kävelymatkan päässä toisistaan, ja ne ovat eri '
-      + 'aikakausilta: abbasidien 1200-luku, Mirjanin karavaaniseraaji '
-      + '1359, ottomaanien kasarmiaukio ja 1900-luvun kirjakatu.',
+      + 'aikakausilta: abbasidien 1200-luku, al-Wazirin moskeija 1599, '
+      + 'Mirjanin karavaaniseraaji 1359, Haydarkhanan moskeija '
+      + '1820-luvulta, ottomaanien kasarmiaukio ja 1900-luvun '
+      + 'kirjakatu.',
     kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA (kohdemäärien nosto 18.8.2026; ennen kuusi).
+       * Molemmat lisätyt pisteet Overpassista ja ristiintarkistettu
+       * en-Wikipedian coord-mallista (al-Wazeer 33,3392/44,3885).
+       *
+       * MIKSI EI PÄÄTOIMITTAJAN ESITTÄMIÄ. Mustansiriya-koulu ja
+       * Mutanabbin kirjakatu OLIVAT JO listalla, ja al-Rashid-kadulla
+       * on jo oma nostonsa kaupunkilehden arkisivulla ("Ensimmäinen
+       * leveä katu"). Kartalta puuttui sen sijaan kokonaan yksi
+       * rakennustyyppi: moskeija. Nyt niitä on kaksi, kahdelta eri
+       * vuosisadalta ja saman kadun varrelta.
+       *
+       * RAJAUS SISÄLLÖLLE PÄTEE MYÖS NÄIHIN (ks. lohkon alku):
+       * Haydarkhanan moskeijan 1900-luvun mielenosoitushistoria
+       * kuvataan lyhyesti ja tuomitsematta, eikä vuoden 2003 jälkeistä
+       * aikaa käsitellä.
+       *
+       * tarkista-karttapisteet: molemmat maalla, ei janan päällä.
+       * al-Wazir menee 12–15 % päällekkäin museon ja Mustansiriyan
+       * kanssa, mikä on työkalun asteikolla "tavallista".
+       */
       { nimi: 'Mutanabbin katu', lat: 33.3410, lon: 44.3888 },
       { nimi: 'Qushlan kellotorni', lat: 33.3412, lon: 44.3860 },
       { nimi: 'Abbasidipalatsi', lat: 33.3431, lon: 44.3835 },
+      { nimi: 'Haydarkhanan moskeija', lat: 33.3425, lon: 44.3894 },
       { nimi: 'Khan Mirjan', lat: 33.3386, lon: 44.3925 },
       { nimi: 'Mustansiriya-koulu', lat: 33.3385, lon: 44.3896 },
       { nimi: 'Bagdadin museo', lat: 33.3401, lon: 44.3895 },
+      { nimi: 'al-Wazirin moskeija', lat: 33.3392, lon: 44.3885 },
     ],
   },
   masqat: {
@@ -3960,20 +4079,31 @@ export const KAUPUNKIKARTAT = {
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
-       * Kuusi kohdetta pohjoisesta etelään. Koordinaatit on
-       * ristiintarkistettu Overpassista ja en-Wikipedian
-       * coord-malleista 17.8.2026.
+       * SEITSEMÄN KOHDETTA pohjoisesta etelään (kohdemäärien nosto
+       * 18.8.2026; ennen kuusi). Koordinaatit on ristiintarkistettu
+       * Overpassista ja en-Wikipedian coord-malleista.
        *
-       * KAKSI KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS, ja syy on
-       * mitattu eikä mieltymys:
-       *  - Gurgin moskeija on 53 metrin päässä riemukaaresta, eli
-       *    niiden numeroympyrät olisivat menneet lähes päällekkäin.
-       *    Moskeija saa oman jaksonsa kaupunkilehden oppaassa.
-       *  - Marttyyrien aukio jää muurin ulkopuolelle reunukselle.
-       *    Sen tunnettuus on nykypolitiikkaa, joka ei kuulu peliin
-       *    (Raamattu: turvalinjat).
+       * GURGIN MOSKEIJA OTETTIIN NYT MUKAAN, ja se kumoaa sen mitä
+       * tässä luki. Vanha peruste oli mitattu: moskeija on 56 metriä
+       * riemukaaresta, ja kuuden kohteen aikaan numeroympyrät olisivat
+       * osuneet lähes päällekkäin. Luku mitattiin uudelleen sen
+       * jälkeen, kun kartalle tuli reunus (piirtoRajat 1,6×
+       * 17.8.2026): lava on nyt 1,6-kertainen pikseleissä, ja
+       * tarkista-karttapisteet antaa parille peittoasteeksi 3 % eli
+       * "tavallista, ei toimenpidettä". Este on siis poistunut, ja
+       * päätoimittajan tilaus (18.8.2026) nimesi juuri Gurgin.
+       *
+       * PÄÄLLEKKÄISYYS OPPAAN KANSSA on tietoinen ja sama kuin
+       * riemukaarella ja kellotornilla: oppaan jakso "Meren puolella
+       * oleva moskeija" kertoo rakennuksen osat, ja nähtävyysjuttu
+       * kertoo rakennuttajan ja ajankohdan. Kuvatiedostot ovat eri.
+       *
+       * MARTTYYRIEN AUKIO on yhä pois: se jää muurin ulkopuolelle
+       * reunukselle, ja sen tunnettuus on nykypolitiikkaa, joka ei
+       * kuulu peliin (Raamattu: turvalinjat).
        */
       { nimi: 'Marcus Aureliuksen riemukaari', lat: 32.8999, lon: 13.1758 },
+      { nimi: 'Gurgin moskeija', lat: 32.8995, lon: 13.1754 },
       { nimi: 'Darghutin moskeija', lat: 32.8988, lon: 13.1772 },
       { nimi: 'Vanhankaupungin kellotorni', lat: 32.8962, lon: 13.1792 },
       { nimi: 'Punainen linna', lat: 32.8960, lon: 13.1806 },
