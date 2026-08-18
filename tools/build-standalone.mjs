@@ -206,6 +206,10 @@ const MODULES = [
   // Lukijoiden ehdotukset ennen lehteä ja ui:ta (molemmat tuovat sen;
   // moduuli tuo vain ui-apurit, joka on yllä).
   'js/ehdotukset.js',
+  // Pro-tuottajan tekijäsivu ennen lähderivien piirtäjiä (nähtävyydet
+  // ja maalehti tuovat sen; moduuli tuo ehdotukset ja ui-apurit, jotka
+  // ovat yllä).
+  'js/tekijakortti.js',
   // Mallin B pilotit ennen ui.js:ää (ui tuo ne).
   'js/liput.js',
   'js/karttazoom.js',

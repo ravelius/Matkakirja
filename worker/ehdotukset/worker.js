@@ -11,8 +11,12 @@
  *
  * Sidokset ja salaisuudet:
  *   EHDOTUKSET        R2-ämpäri (YKSITYINEN — sisältää sähköposteja)
- *   EHDOTUS_AVAIN     salaisuus: lista-, kohde- ja kommenttireitin avain
+ *   EHDOTUS_AVAIN     salaisuus: lista-, kohde-, kommentti- ja
+ *                     pro-omistajareittien avain
  *   EHDOTUS_ORIGINIT  muuttuja: sallitut originit pilkulla erotettuna
+ *
+ * Sama worker palvelee myös pro-sisällöntuottajia (worker/ehdotukset/
+ * pro.js): tuottajien koodit, profiilit ja julkiset tekijäsivut.
  */
 
 import { kasittele } from './kasittelija.js';

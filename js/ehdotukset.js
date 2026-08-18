@@ -3,7 +3,11 @@
  * "Lukijoiden ehdotukset").
  *
  * Pelaaja voi lähettää palautelomakkeen laajennuksella kuvan tai
- * juttuidean siihen lehteen, jota hän on juuri lukemassa. Lähetys
+ * juttuidean siihen lehteen, jota hän on juuri lukemassa. Saman
+ * lomakkeen perässä on PRO-OSIO: omistajan henkilökohtaisesti
+ * hyväksymä ammattilainen (valokuvaaja, tutkija) kirjautuu
+ * sähköpostillaan ja pysyvällä koodillaan ja saa oman tekijäsivun
+ * (js/tekijakortti.js) vastineeksi laadukkaasta sisällöstä. Lähetys
  * menee Cloudflare Workerin kautta yksityiseen ämpäriin
  * (worker/ehdotukset/), josta omistaja lukee sen työhuoneen
  * Lukijoilta-lehdellä. Mikään ei päädy peliin ennen omistajan
@@ -44,6 +48,25 @@ export const EHDOTUS_KUVIA = 3;
 /** Selaimessa skaalatun kuvan pisin sivu ja jpeg-laatu. */
 const EHDOTUS_KUVAN_SIVU = 2048;
 const EHDOTUS_KUVAN_LAATU = 0.85;
+
+/*
+ * PRO-SISÄLLÖNTUOTTAJAT.
+ *
+ * Tuottajan tunnus (sähköposti + koodi) laitteen muistissa. Koodi on
+ * PYSYVÄ, joten muistin tyhjentyminen ei ole vahinko: sama pari
+ * kirjautuu uudestaan. Siksi tämä on mukavuus eikä istunto — koodia
+ * ei uusita eikä vanhenneta.
+ */
+export const PRO_TALLE = 'matkakirja-pro-tunnus';
+
+/** Profiilikuvan pisin sivu: tekijäsivun kuva on pieni muotokuva. */
+const PRO_KUVAN_SIVU = 1024;
+
+/** Linkkejä enintään — sama raja kuin workerissa. */
+export const PRO_LINKKEJA = 3;
+
+/** Esittelyn merkkikatto — sama raja kuin workerissa. */
+export const PRO_ESITTELY = 600;
 
 /** Kupla vasta, kun peliä on pelattu tämän verran. */
 const EHDOTUS_KUPLAN_VIIVE_MS = 10 * 60 * 1000;
@@ -91,10 +114,15 @@ export function asetaEhdotusAvain(avain) {
  * osaa purkaa), alkuperäinen tiedosto lähtee sellaisenaan ja worker
  * torjuu sen tarvittaessa selkeällä viestillä.
  *
+ * Pisin sivu on parametri, koska pro-tuottajan omakuva on pieni
+ * muotokuva tekijäsivulle (1024 px riittää) eikä lehteen taitettava
+ * valokuva.
+ *
  * @param {File} tiedosto valittu kuva
+ * @param {number} sivu pisin sivu pikseleinä
  * @returns {Promise<Blob|File>} skaalattu kuva tai alkuperäinen
  */
-export async function skaalaaEhdotusKuva(tiedosto) {
+export async function skaalaaEhdotusKuva(tiedosto, sivu = EHDOTUS_KUVAN_SIVU) {
   try {
     const kuva = await new Promise((valmis, virhe) => {
       const osoite = URL.createObjectURL(tiedosto);
@@ -104,7 +132,7 @@ export async function skaalaaEhdotusKuva(tiedosto) {
       elementti.src = osoite;
     });
     const suurin = Math.max(kuva.naturalWidth, kuva.naturalHeight);
-    const kerroin = suurin > EHDOTUS_KUVAN_SIVU ? EHDOTUS_KUVAN_SIVU / suurin : 1;
+    const kerroin = suurin > sivu ? sivu / suurin : 1;
     // Jo valmiiksi pieni jpeg kannattaa lähettää sellaisenaan: uudelleen
     // pakkaaminen vain huonontaa sitä.
     if (kerroin === 1 && tiedosto.type === 'image/jpeg') return tiedosto;
@@ -177,6 +205,73 @@ export async function haeEhdotukset(avain) {
 /** Kuvan osoite työhuoneelle (kulkee avaimen kanssa workerin kautta). */
 export function ehdotusKuvaOsoite(kansio, tiedosto, avain) {
   return `${EHDOTUS_OSOITE}/kohde/${encodeURIComponent(`${kansio}/${tiedosto}`)}`
+    + `?avain=${encodeURIComponent(avain)}`;
+}
+
+/* ------------------------------------------------------------------ *
+ * Työhuoneen pro-osio (omistajan reitit, EHDOTUS_AVAIN)
+ * ------------------------------------------------------------------ */
+
+/** Yhteinen virheenkäsittely omistajan pro-kutsuille. */
+async function omistajanKutsu(polku, avain, asetukset = {}) {
+  const erotin = polku.includes('?') ? '&' : '?';
+  const vastaus = await fetch(
+    `${EHDOTUS_OSOITE}${polku}${erotin}avain=${encodeURIComponent(avain)}`, asetukset,
+  );
+  let data = null;
+  try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
+  if (vastaus.status === 401) throw new Error('Avain ei kelpaa.');
+  if (!vastaus.ok) throw new Error(data?.virhe ?? `HTTP ${vastaus.status}`);
+  return data ?? {};
+}
+
+/**
+ * Kaikki pro-tuottajat koodeineen ja profiilitiloineen.
+ *
+ * @param {string} avain kuratointiavain
+ * @returns {Promise<Array<object>>} tuottajien tietueet
+ */
+export async function haeProTuottajat(avain) {
+  const data = await omistajanKutsu('/pro-lista', avain);
+  return data.tuottajat ?? [];
+}
+
+/**
+ * Lisää tuottajan (tai palauttaa olemassa olevan koodin).
+ *
+ * @param {string} avain kuratointiavain
+ * @param {string} sahkoposti tuottajan osoite
+ * @param {string} nimi näkyvä nimi (vapaaehtoinen)
+ * @returns {Promise<object>} { ok, uusi, tuottaja }
+ */
+export function lisaaProTuottaja(avain, sahkoposti, nimi = '') {
+  return omistajanKutsu('/pro-tuottaja', avain, {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ sahkoposti, nimi }),
+  });
+}
+
+/**
+ * Omistajan päätös odottavasta profiilista.
+ *
+ * @param {string} avain kuratointiavain
+ * @param {string} sahkoposti tuottajan osoite
+ * @param {'julkaistu'|'hylatty'} tila päätös
+ * @param {string} kommentti vapaaehtoinen viesti tuottajalle
+ * @returns {Promise<object>} { ok, tuottaja }
+ */
+export function paataProProfiili(avain, sahkoposti, tila, kommentti = '') {
+  return omistajanKutsu('/pro-hyvaksy', avain, {
+    method: 'PUT',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ sahkoposti, tila, kommentti }),
+  });
+}
+
+/** Odottavan profiilikuvan osoite työhuoneelle (kulkee avaimen kanssa). */
+export function proKuvaOsoite(tekijaId, avain) {
+  return `${EHDOTUS_OSOITE}/pro-kuva/${encodeURIComponent(tekijaId)}`
     + `?avain=${encodeURIComponent(avain)}`;
 }
 
@@ -397,6 +492,306 @@ export function ehdotusOsio(sivu = '') {
       nappi.disabled = false;
       huomio.textContent = `Lähetys ei onnistunut: ${err.message}. Kokeile hetken päästä uudelleen.`;
     }
+  });
+
+  return lohko;
+}
+
+/* ------------------------------------------------------------------ *
+ * PRO-SISÄLLÖNTUOTTAJAT
+ *
+ * Kutsuttu ammattilainen (valokuvaaja, tutkija) kirjautuu
+ * sähköpostilla ja omistajalta saamallaan pysyvällä koodilla. Sen
+ * jälkeen hän voi lähettää oman tekijäsivunsa: kuva, esittely ja
+ * 1–3 linkkiä. Profiili menee jonoon — omistaja päättää, mikä
+ * julkaistaan (worker/ehdotukset/pro.js).
+ *
+ * MIKSI SAMASSA LOMAKKEESSA: pro-tuottajakin on ensin pelaaja, ja
+ * hänelle on kerrottu missä kanava on. Erillinen kirjautumissivu
+ * olisi pelin ulkopuolinen liite; taitettu osio ei näy kenellekään,
+ * joka ei sitä etsi.
+ * ------------------------------------------------------------------ */
+
+/** Tuottajan tunnuspari laitteen muistista. */
+export function proTunnus() {
+  try {
+    const teksti = localStorage.getItem(PRO_TALLE);
+    if (!teksti) return null;
+    const tunnus = JSON.parse(teksti);
+    return tunnus?.sahkoposti && tunnus?.koodi ? tunnus : null;
+  } catch {
+    return null; // yksityinen selaus tai rikkinäinen arvo
+  }
+}
+
+/** Talteen tai pois (tyhjä arvo unohtaa parin). */
+export function asetaProTunnus(tunnus) {
+  try {
+    if (tunnus?.sahkoposti && tunnus?.koodi) {
+      localStorage.setItem(PRO_TALLE, JSON.stringify({
+        sahkoposti: tunnus.sahkoposti, koodi: tunnus.koodi,
+      }));
+    } else {
+      localStorage.removeItem(PRO_TALLE);
+    }
+  } catch {
+    /* yksityinen selaus: pari kysytään uudestaan seuraavalla kerralla */
+  }
+}
+
+/**
+ * Tarkistaa sähköposti–koodi-parin workerilta.
+ *
+ * @param {string} sahkoposti tuottajan osoite
+ * @param {string} koodi omistajalta saatu pysyvä koodi
+ * @returns {Promise<object>} { ok, nimi, tekijaId, tila, profiili }
+ */
+export async function tarkistaPro(sahkoposti, koodi) {
+  const vastaus = await fetch(`${EHDOTUS_OSOITE}/pro-tarkista`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ sahkoposti, koodi }),
+  });
+  let data = null;
+  try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
+  if (!vastaus.ok) throw new Error(data?.virhe ?? `HTTP ${vastaus.status}`);
+  return data ?? { ok: true };
+}
+
+/**
+ * Lähettää tuottajan profiilin (kuva + esittely + linkit).
+ *
+ * @param {object} profiili { sahkoposti, koodi, esittely, linkit, kuva }
+ * @returns {Promise<object>} workerin vastaus
+ */
+export async function lahetaProProfiili(profiili) {
+  const lomake = new FormData();
+  lomake.append('sahkoposti', profiili.sahkoposti ?? '');
+  lomake.append('koodi', profiili.koodi ?? '');
+  lomake.append('esittely', profiili.esittely ?? '');
+  for (const linkki of profiili.linkit ?? []) lomake.append('linkit', linkki);
+  if (profiili.kuva) lomake.append('kuva', profiili.kuva);
+
+  const vastaus = await fetch(`${EHDOTUS_OSOITE}/pro-profiili`, {
+    method: 'POST', body: lomake,
+  });
+  let data = null;
+  try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
+  if (!vastaus.ok) throw new Error(data?.virhe ?? `HTTP ${vastaus.status}`);
+  return data ?? { ok: true };
+}
+
+/** Tuottajan tilan suomeksi lomakkeen tilariville. */
+function proTilaTeksti(tila) {
+  if (tila === 'odottaa') return 'Profiili odottaa julkaisua.';
+  if (tila === 'julkaistu') return 'Tekijäsivusi on julkaistu pelissä.';
+  if (tila === 'hylatty') return 'Profiilia ei julkaistu — voit lähettää uuden.';
+  return 'Et ole vielä lähettänyt profiilia.';
+}
+
+/**
+ * Kirjautuneen tuottajan näkymä: omakuva, esittely ja linkit.
+ *
+ * @param {object} tunnus { sahkoposti, koodi }
+ * @param {object} tiedot workerin /pro-tarkista-vastaus
+ * @returns {HTMLElement} näkymä
+ */
+function proNakyma(tunnus, tiedot) {
+  const lohko = html('div', 'pro-nakyma');
+
+  const tervehdys = html('p', 'periaate-teksti',
+    `Hei ${tiedot.nimi || tunnus.sahkoposti}! Tässä on oma tekijäsivusi. `
+    + 'Se näkyy pelaajalle kuviesi lähderiviltä.');
+  lohko.appendChild(tervehdys);
+
+  const tila = html('p', 'periaate-huomio', proTilaTeksti(tiedot.tila));
+  tila.setAttribute('role', 'status');
+  lohko.appendChild(tila);
+  if (tiedot.kommentti) {
+    lohko.appendChild(html('p', 'periaate-huomio', `Omistajan viesti: ${tiedot.kommentti}`));
+  }
+
+  /* --- omakuva --- */
+  const kuvaNimio = html('label', 'periaate-nimio', 'Oma kuva (1 kpl)');
+  const kuvaKentta = html('input', 'periaate-kentta');
+  kuvaKentta.type = 'file';
+  kuvaKentta.accept = 'image/jpeg,image/png,image/webp';
+  kuvaNimio.appendChild(kuvaKentta);
+  lohko.appendChild(kuvaNimio);
+  const kuvaTieto = html('p', 'periaate-huomio',
+    tiedot.profiili?.kuva ? 'Kuva on tallessa. Uusi valinta korvaa sen.' : '');
+  kuvaTieto.setAttribute('role', 'status');
+  lohko.appendChild(kuvaTieto);
+
+  /* --- esittely --- */
+  const esittely = html('textarea', 'periaate-kentta');
+  esittely.rows = 4;
+  esittely.maxLength = PRO_ESITTELY;
+  esittely.placeholder = `Lyhyt esittely (enintään ${PRO_ESITTELY} merkkiä)`;
+  esittely.setAttribute('aria-label', 'Esittely');
+  esittely.value = tiedot.profiili?.esittely ?? '';
+  lohko.appendChild(esittely);
+
+  /* --- linkit --- */
+  lohko.appendChild(html('p', 'periaate-huomio',
+    `Linkit omille sivuillesi (enintään ${PRO_LINKKEJA}, http- tai https-osoite).`));
+  const linkkiKentat = [];
+  for (let i = 0; i < PRO_LINKKEJA; i += 1) {
+    const kentta = html('input', 'periaate-kentta');
+    kentta.type = 'url';
+    kentta.placeholder = i === 0 ? 'https://omatsivut.fi' : 'Lisälinkki (vapaaehtoinen)';
+    kentta.setAttribute('aria-label', `Linkki ${i + 1}`);
+    kentta.value = tiedot.profiili?.linkit?.[i]?.url ?? '';
+    linkkiKentat.push(kentta);
+    lohko.appendChild(kentta);
+  }
+
+  const nappi = html('button', 'primary periaate-laheta', 'Lähetä profiili');
+  nappi.type = 'button';
+  lohko.appendChild(nappi);
+
+  const ulos = html('button', 'ghost pro-ulos', 'Unohda tunnukseni tältä laitteelta');
+  ulos.type = 'button';
+  lohko.appendChild(ulos);
+
+  const huomio = html('p', 'periaate-huomio');
+  huomio.setAttribute('role', 'status');
+  lohko.appendChild(huomio);
+
+  let valittu = null;
+  kuvaKentta.addEventListener('change', async () => {
+    const tiedosto = (kuvaKentta.files ?? [])[0];
+    if (!tiedosto) { valittu = null; kuvaTieto.textContent = ''; return; }
+    kuvaTieto.textContent = 'Valmistellaan kuvaa…';
+    valittu = await skaalaaEhdotusKuva(tiedosto, PRO_KUVAN_SIVU);
+    const megat = (valittu.size ?? 0) / (1024 * 1024);
+    kuvaTieto.textContent = `Kuva valmiina (${megat.toFixed(1)} Mt).`;
+  });
+
+  nappi.addEventListener('click', async () => {
+    if (!esittely.value.trim()) {
+      huomio.textContent = 'Kirjoita lyhyt esittely.';
+      esittely.focus();
+      return;
+    }
+    nappi.disabled = true;
+    huomio.textContent = 'Lähetetään…';
+    try {
+      const vastaus = await lahetaProProfiili({
+        ...tunnus,
+        esittely: esittely.value.trim(),
+        linkit: linkkiKentat.map((k) => k.value.trim()).filter(Boolean),
+        kuva: valittu,
+      });
+      nappi.disabled = false;
+      valittu = null;
+      kuvaKentta.value = '';
+      tila.textContent = proTilaTeksti('odottaa');
+      huomio.textContent = vastaus.viesti
+        ?? 'Profiili odottaa julkaisua — saat krediitin kun ensimmäinen '
+          + 'kuvasi julkaistaan lehdessä.';
+    } catch (err) {
+      console.warn('Pro-profiilin lähetys ei onnistunut:', err);
+      nappi.disabled = false;
+      huomio.textContent = `Lähetys ei onnistunut: ${err.message}`;
+    }
+  });
+
+  ulos.addEventListener('click', () => {
+    asetaProTunnus(null);
+    huomio.textContent = 'Tunnukset unohdettu. Avaa osio uudelleen ja kirjaudu koodillasi.';
+    nappi.disabled = true;
+  });
+
+  return lohko;
+}
+
+/**
+ * "Olen pro-sisällöntuottaja" -osio palautelomakkeen loppuun.
+ *
+ * Kirjautuminen on sähköposti + koodi. Pari talletetaan laitteelle
+ * vasta kun worker on vahvistanut sen — väärä pari ei jää muistiin
+ * kummittelemaan. Jos muisti on tyhjentynyt, sama pari kirjautuu
+ * uudestaan: koodi on pysyvä.
+ *
+ * @returns {HTMLElement|null} osio tai null, jos kanavaa ei ole
+ */
+export function proOsio() {
+  if (!ehdotusKaytossa()) return null;
+
+  const lohko = html('details', 'periaate-ehdotus periaate-pro');
+  lohko.appendChild(html('summary', 'periaate-valiotsikko', 'Olen pro-sisällöntuottaja'));
+
+  const johdanto = html('p', 'periaate-teksti');
+  johdanto.textContent = 'Omistaja kutsuu peliin ammattilaisia — valokuvaajia ja '
+    + 'tutkijoita. Kutsutut saavat sähköpostiinsa koodin, jolla pääsee '
+    + 'rakentamaan oman tekijäsivun: kuva, esittely ja linkit omille sivuille. '
+    + 'Sivu avautuu pelaajalle kuvasi lähderiviltä.';
+  lohko.appendChild(johdanto);
+
+  const sisus = html('div', 'pro-sisus');
+  lohko.appendChild(sisus);
+
+  const kirjautuminen = html('div', 'pro-kirjautuminen');
+  const posti = html('input', 'periaate-kentta');
+  posti.type = 'email';
+  posti.placeholder = 'Sähköposti';
+  posti.setAttribute('aria-label', 'Pro-tuottajan sähköposti');
+  kirjautuminen.appendChild(posti);
+
+  const koodi = html('input', 'periaate-kentta');
+  koodi.type = 'text';
+  koodi.autocapitalize = 'characters';
+  koodi.spellcheck = false;
+  koodi.placeholder = 'Koodi (8 merkkiä)';
+  koodi.setAttribute('aria-label', 'Pro-tuottajan koodi');
+  kirjautuminen.appendChild(koodi);
+
+  const nappi = html('button', 'primary periaate-laheta', 'Kirjaudu');
+  nappi.type = 'button';
+  kirjautuminen.appendChild(nappi);
+
+  const huomio = html('p', 'periaate-huomio');
+  huomio.setAttribute('role', 'status');
+  kirjautuminen.appendChild(huomio);
+  sisus.appendChild(kirjautuminen);
+
+  const avaa = async (tunnus, { hiljaa = false } = {}) => {
+    try {
+      const tiedot = await tarkistaPro(tunnus.sahkoposti, tunnus.koodi);
+      asetaProTunnus(tunnus);
+      sisus.replaceChildren(proNakyma(tunnus, tiedot));
+      return true;
+    } catch (err) {
+      // Muistista tullut pari on voinut vanhentua (omistaja poistanut
+      // tuottajan). Unohdetaan se, mutta ei säikäytetä pelaajaa
+      // virheviestillä, jota hän ei pyytänyt.
+      asetaProTunnus(null);
+      if (!hiljaa) huomio.textContent = err.message;
+      return false;
+    }
+  };
+
+  nappi.addEventListener('click', async () => {
+    const tunnus = { sahkoposti: posti.value.trim(), koodi: koodi.value.trim() };
+    if (!tunnus.sahkoposti || !tunnus.koodi) {
+      huomio.textContent = 'Kirjoita sähköposti ja koodi.';
+      return;
+    }
+    nappi.disabled = true;
+    huomio.textContent = 'Tarkistetaan…';
+    const ok = await avaa(tunnus);
+    if (!ok) nappi.disabled = false;
+  });
+
+  // Muistissa oleva pari avaa näkymän suoraan, kun osio avataan
+  // ensimmäisen kerran — ei turhaa verkkopyyntöä ennen sitä.
+  let kokeiltu = false;
+  lohko.addEventListener('toggle', () => {
+    if (!lohko.open || kokeiltu) return;
+    kokeiltu = true;
+    const muistissa = proTunnus();
+    if (muistissa) avaa(muistissa, { hiljaa: true });
   });
 
   return lohko;

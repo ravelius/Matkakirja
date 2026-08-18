@@ -18,6 +18,7 @@ import { LIPPUTIEDOT } from './packs/lipputiedot.js';
 import { karttapiste } from './packs/maakartat.js';
 import { radioMaalle } from './packs/radiot.js';
 import { KIELET, MAATIEDOT } from './sisaltotaulut.js';
+import { taytaLahderivi } from './tekijakortti.js';
 import {
   html, lahdemerkinta, MERKKI_SOITA, piirraLeipa, poimiNostoVirke,
   suojaa,
@@ -727,7 +728,11 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     // kutistuu kuvan mittoihin: kuvateksti ei saa ylittää kuvan
     // reunaa (omistajan toive).
     const selite = nosto.selite ? html('p', 'selite', nosto.selite) : null;
-    const lahde = nosto.lahde ? html('p', 'lahde', lahdemerkinta(nosto.lahde)) : null;
+    // Pro-tuottajan kuvassa (`tekijaId`) tekijän nimi on lähderivillä
+    // painike, joka avaa tekijäsivun (js/tekijakortti.js). Ilman
+    // kenttää rivi on tavallista tekstiä kuten ennen.
+    const lahde = nosto.lahde
+      ? taytaLahderivi(html('p', 'lahde'), lahdemerkinta(nosto.lahde), nosto) : null;
     if (kuva && (selite || lahde)) {
       const kehys = html('div', 'kuvakehys');
       kehys.appendChild(kuva);
@@ -750,6 +755,19 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       nappi.addEventListener('click', () => ui.openWikiArticle(nosto.wiki, nosto.otsikko));
       // Heti leipätekstin loppuun, ei erilliseksi lohkoksi sivun
       // pohjalle (omistajan toive 5.8.2026).
+      leipa.appendChild(nappi);
+    }
+    /*
+     * TOIMINTONAPIT — vain kehittäjälehdillä (js/lehti.js: Lukijoilta
+     * ja sen pro-osio). Nosto voi kantaa napit, joilla omistaja tekee
+     * päätöksen suoraan lehdestä, koska työhuone ON lehti eikä
+     * erillistä hallintapaneelia ole. Pelin sisältöpaketeissa kenttää
+     * ei ole eikä saa olla: pelaajan lehti on lukemista varten.
+     */
+    for (const toiminto of nosto.toiminnot ?? []) {
+      const nappi = html('button', 'wiki-btn', toiminto.nimi);
+      nappi.type = 'button';
+      nappi.addEventListener('click', () => toiminto.tehtava(nappi));
       leipa.appendChild(nappi);
     }
     ui.lisaaNostonLinkki(leipa, nosto);

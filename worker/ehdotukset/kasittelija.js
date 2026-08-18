@@ -19,10 +19,16 @@
  *   GET  /kohde/<polku>?avain= vain avaimella (kuvan nouto)
  *   PUT  /kommentti?avain=…    vain avaimella (kuratointi)
  *
+ * PRO-SISÄLLÖNTUOTTAJAT (/pro-… ja /tekija/…) ovat saman workerin
+ * jatke omassa moduulissaan: worker/ehdotukset/pro.js. Reititys on
+ * täällä, jotta CORS-, avain- ja origin-portit ovat yhdessä paikassa.
+ *
  * SÄHKÖPOSTI ei vuoda mihinkään muualle kuin meta.jsoniin yksityisessä
  * ämpärissä: sitä ei kirjoiteta lokiin eikä palauteta kenellekään
  * ilman avainta.
  */
+
+import { proOmistajanPolku, proPolku, proReitti, proSelaimenPolku } from './pro.js';
 
 /** Sallitut kuvatyypit ja niiden tiedostopäätteet. */
 export const KUVA_TYYPIT = {
@@ -398,6 +404,31 @@ export async function kasittele(pyynto, env, apurit = {}) {
       return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
     }
     return laheta(pyynto, env, kors, apurit);
+  }
+
+  /*
+   * PRO-PALIKKA. Portit ovat samat kolme kuin ehdotuskanavalla, mutta
+   * eri poluilla: omistajan reitit avaimella, tuottajan selainreitit
+   * origin-tarkistuksella (kuten /laheta) ja julkinen tekijäsivu ilman
+   * kumpaakaan — se ei sisällä sähköpostia eikä koodia.
+   */
+  if (proPolku(url.pathname)) {
+    if (proOmistajanPolku(url.pathname) && !avainKelpaa(url, env)) {
+      return vastaa({ virhe: 'Avain puuttuu tai ei kelpaa' }, { status: 401, ...kors });
+    }
+    if (proSelaimenPolku(url.pathname) && !sallittuOrigin(origin, sallitut)) {
+      return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
+    }
+    if (!env.EHDOTUKSET) {
+      return vastaa({ virhe: 'Ämpäri ei ole kytketty' }, { status: 503, ...kors });
+    }
+    return proReitti({
+      pyynto,
+      url,
+      env,
+      kors,
+      apu: { vastaa, otsakkeet: korsOtsakkeet, vertaa: vertaaSalaisuus },
+    });
   }
 
   const avaimellinen = url.pathname === '/lista' || url.pathname === '/kommentti'
