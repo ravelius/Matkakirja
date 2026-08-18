@@ -147,6 +147,32 @@ const KUVAT = [
     + 'scholar\'s cap with a tiny gold tassel, a gnarled wooden staff '
     + 'in one wing and a small gleaming medal on a ribbon, radiating '
     + 'calm ancient wisdom'],
+
+  /*
+   * EMO-LUONNOKSET (18.8.2026): omistaja haluaa nähdä vaihtoehdot,
+   * joissa emolla on kalevalainen asuste PÄÄLLÄÄN. Väliaikaiset
+   * avaimet — valittu versio korvaa viisas-pollon --uusiksi-ajolla
+   * ja nämä poistetaan.
+   */
+  ['emo-luonnos-a', 'a large dignified Eurasian eagle-owl (prominent '
+    + 'ear tufts, deep orange eyes, dark grey-brown plumage) perched '
+    + 'on a gently kantele-curved wooden branch, wearing a narrow '
+    + 'traditional Karelian woven band draped across its chest like '
+    + 'a ceremonial sash — red and white geometric folk embroidery '
+    + 'pattern, modest width, resting naturally on the feathers; no '
+    + 'hat, no spectacles, nothing else worn; a thin red Karelian '
+    + 'embroidery band as a small ornament strip at the bottom of '
+    + 'the vignette, no frame around the picture'],
+
+  ['emo-luonnos-b', 'a large dignified Eurasian eagle-owl (prominent '
+    + 'ear tufts, deep orange eyes, dark grey-brown plumage) perched '
+    + 'on a gently kantele-curved wooden branch, wearing a small '
+    + 'ancient copper-and-silver neck ornament in Finnish Iron Age '
+    + 'style — a modest crescent-shaped pendant on a thin cord '
+    + 'resting on its chest feathers, patinated metal with simple '
+    + 'spiral engravings; no hat, no spectacles, nothing else worn; '
+    + 'a thin red Karelian embroidery band as a small ornament strip '
+    + 'at the bottom of the vignette, no frame around the picture'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
