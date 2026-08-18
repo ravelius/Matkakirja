@@ -9749,6 +9749,188 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+      /*
+     * Neljä uutta juttua 18.8.2026 (Dubain lehden viimeistely, kartta
+     * 6 → 10 kohteeseen). Lähde en-Wikipedia (Al Ahmadiya School,
+     * Grand Mosque of Dubai, Dubai Spice Souk, Dubai Textile Souk,
+     * Al Ras, Dubai Creek), tiivistetty omin sanoin. Kuvien lisenssit,
+     * tekijät ja koot todennettu Commonsin API:sta ja jokainen kuva
+     * katsottu silmin.
+     *
+     * KAKSI EHDOKASTA HYLÄTTIIN LÄHDEPOHJAN TAKIA: Naifin linnoituksesta
+     * ei ole Wikipedia-artikkelia lainkaan (usein siteerattu vuosiluku
+     * 1939 ei löydy mistään tarkistetusta lähteestä), ja Al Seefin
+     * artikkeli on pääosin akateemista kritiikkiä keinotekoisesti
+     * vanhennetusta rakentamisesta — kumpikaan ei kanna juttua ilman
+     * keksimistä. Tilalle valittiin kaksi suukia, joista on kunnon
+     * artikkeli.
+     */
+    'Al Ahmadiyan koulu': {
+      aika: '1912',
+      teksti: 'Ennen kouluja lapset opiskelivat Dubaissa moskeijoiden '
+          + 'yhteydessä. Vuonna 1912 helmikaupalla rikastunut Sheikh '
+          + 'Ahmed Bin Dalmouk rakennutti Deiran Al Rasiin talon, joka '
+          + 'oli tarkoitettu pelkkään opetukseen — se on Dubain vanhin '
+          + 'tunnettu muodollinen oppilaitos. Perustaja ei ehtinyt '
+          + 'nähdä työtään valmiina: hänen poikansa Mohammed viimeisteli '
+          + 'rakennuksen ja antoi koululle isänsä nimen.'
+        + '\n\n'
+        + 'Opettajiksi saatiin aikansa tunnetuimpia dubailaisia '
+          + 'lakioppineita ja islamin tutkijoita, ja koulun penkeiltä '
+          + 'nousi sukupolvi, joka myöhemmin rakensi emiraatin '
+          + 'liike-elämän: oppilaina olivat muun muassa Easa Al-Gurg, '
+          + 'Majid Al Futtaim ja Abdulla Al Ghurair.'
+        + '\n\n'
+        + 'Talo säilyi, ja Dubain hallitus alkoi kunnostaa sitä vuoden '
+          + '1994 puolivälissä. Museona koulu vihittiin 20. maaliskuuta '
+          + '2000. Se seisoo yhä samassa korttelissa kuin kultasuuk, '
+          + 'maustesuuk ja kaupungin vanhin yleinen kirjasto — Al Ras '
+          + 'on Deiran läntisin ja vanhimpia kaupunginosia.',
+      kuvat: [
+        {
+          tiedosto: 'Al Ahmadiya School in Dubai - building front side.jpg',
+          selite: 'Koulun julkisivu aukiolta: yläkerrassa kiertää avoin '
+            + 'kaarikäytävä ja sen yllä rivi veistettyjä kipsiritilöitä, '
+            + 'alakerran ikkunoissa on valkoiset stukkokehykset ja '
+            + 'ovi aukeaa koristekaaren alta.',
+          lahde: 'أمين علوان, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Al Ahmadiya School in Dubai - building front side with the area around the building.jpg',
+          selite: 'Sama talo laajemmasta kulmasta: vasemmalla naapurin '
+            + 'katolta kohoaa nelisivuinen tuulitorni, edessä on '
+            + 'hiekkakenttä kyyhkyineen ja oikealla jatkuu korkea '
+            + 'savirapattu muuri.',
+          lahde: 'أمين علوان, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri moskeija': {
+      aika: '1900',
+      teksti: 'Paikalla aloitti vuonna 1900 kuttab eli koraanikoulu, '
+          + 'jossa ensimmäiset oppilaat opettelivat Koraania ulkoa. '
+          + 'Samana vuonna rakennettiin moskeija. Se purettiin ja '
+          + 'rakennettiin uudelleen 1960, ja vielä kerran 1998 — '
+          + 'nykyinen talo on siis vasta kolmas, mutta se tehtiin '
+          + 'tarkoituksella lähemmäs alkuperäistä 1900-luvun alun '
+          + 'moskeijaa kuin väliin jäänyt versio.'
+        + '\n\n'
+        + 'Minareetti kohoaa 70 metriin ja on Dubain korkein. Muoto on '
+          + 'majakkamainen ja tyyli anatolialainen — se näkyy '
+          + 'vanhankaupungin yli kuin merimerkki. Katolla on 45 pientä '
+          + 'ja yhdeksän suurta kupolia. Sisäänkäynnin edessä nousee '
+          + 'kuusi porrasta viiden pylvään väliin, ja niiden yllä on '
+          + 'suuri koraaninteksti. Seinät on jätetty hiekanharmaiksi ja '
+          + 'koristelemattomiksi; värit ovat puuikkunoiden '
+          + 'käsintehdyssä lasimaalauksessa.'
+        + '\n\n'
+        + 'Rukoussaliin mahtuu 1 200 ihmistä, ja moskeija hallitsee '
+          + 'vanhaa kaupunkia. Se seisoo tekstiilisuukin ja Al Fahidin '
+          + 'linnoituksen välissä, joten sen ohi kulkee jokainen, joka '
+          + 'kävelee suukilta museolle.',
+      kuvat: [
+        {
+          tiedosto: 'Bur Dubai Grand Mosque.jpg',
+          selite: 'Minareetti alaviistosta: kahdeksankulmainen torni '
+            + 'nousee kahden parvekkeen ohi kuunsirppihuippuun, ja sen '
+            + 'alla juoksee sakarareunainen räystäslista, '
+            + 'kalligrafiapaneeli ja rivi veistettyjä puuovia.',
+          lahde: 'Ankur Panchbudhe, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Grand Mosque Bur Dubai.jpg',
+          selite: 'Koko moskeija kadun toiselta puolen: hiekanvärinen '
+            + 'julkisivu, katolla rivi valkoisia kupoleita ja oikeassa '
+            + 'reunassa minareetti, joka kohoaa selvästi korkeammalle '
+            + 'kuin mikään ympärillä.',
+          lahde: 'Guilhem Vellut, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Maustesuuk: {
+      aika: 'Al Ras, Deira',
+      teksti: 'Maustesuuk tunnetaan myös nimellä Old Souk. Se on '
+          + 'Deirassa Al Rasin alueella Baniyas Streetillä, aivan '
+          + 'kultasuukin kyljessä ja kivenheiton päässä Old Soukin '
+          + 'abra-laiturista — vene tuo ostajat Bur Dubain puolelta '
+          + 'suoraan sen eteen.'
+        + '\n\n'
+        + 'Suuk on kapeiden kujien verkosto, jonka varrella on sekä '
+          + 'avoimia kojuja että katettuja liikkeitä. Tavara on esillä '
+          + 'kujalle asti: suitsuketta, shishatupakkaa sekä '
+          + 'arabialaisen ja eteläaasialaisen keittiön yrttejä ja '
+          + 'mausteita. Mausteiden lomassa myydään myös kankaita, '
+          + 'teetä, mattoja ja taloustavaraa. Hinta ei ole kyltissä '
+          + 'vaan neuvottelussa — valtaosa kaupasta käydään tinkimällä.'
+        + '\n\n'
+        + 'Suuk elää nykyään enemmän matkailusta kuin ruokakaupasta. '
+          + 'Mausteliikkeiden määrä ei ole viime vuosina kasvanut, '
+          + 'koska dubailaiset ostavat mausteensa yhä useammin '
+          + 'suurmyymälästä.',
+      kuvat: [
+        {
+          tiedosto: 'Dubai Spice Souk 2018.jpg',
+          selite: 'Maustekuja katetun katon alla: tiskille on ladottu '
+            + 'rivi pusseja, joissa on saflorin oranssia, kuivattuja '
+            + 'ruusunnuppuja, hibiskusta, kuivattuja limettejä ja '
+            + 'vuorisuolamöhkäleitä.',
+          lahde: 'Frodlekis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Spice souk @ Deira @ Dubai (15696929358).jpg',
+          selite: 'Kojun tiski läheltä: chilijauhetta, timjamia, '
+            + 'chilihiutaleita ja yrttejä pusseissa, takana '
+            + 'kanelikuoria nipuissa ja verkkopusseja pähkinöitä, '
+            + 'yhdessä pussissa metallikauha.',
+          lahde: 'Guilhem Vellut from Annecy, France, Wikimedia Commons '
+            + '(CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tekstiilisuuk: {
+      aika: '1890-luku',
+      teksti: 'Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja '
+          + 'maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita '
+          + 'hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja '
+          + 'suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti '
+          + 'suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä '
+          + 'Arabian suurimmilla suukeilla.'
+        + '\n\n'
+        + 'Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat '
+          + 'ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea '
+          + 'puukaarikäytävä, joka on suunniteltu tuulettamaan '
+          + 'kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja '
+          + 'veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset '
+          + 'arabialaislamput; teräspilarit ovat myöhempi lisä, kun '
+          + 'alkuperäinen rakenne heikkeni.'
+        + '\n\n'
+        + 'Kankaiden rinnalla suukissa näkyy Intian ja Pakistanin '
+          + 'vaikutus: sivukujalla, jota kutsutaan Hindi Laneksi, '
+          + 'myydään bindejä, rannerenkaita, kukkia ja sareja. '
+          + 'Kaupallinen merkitys on sittemmin haihtunut — '
+          + '1930-luvun lama pysäytti creekin kaupan ja sota heikensi '
+          + 'sitä lisää — ja nykyään suuk elää matkailijoista.',
+      kuvat: [
+        {
+          tiedosto: 'Bur Dubai Textile Souq (8970533953).jpg',
+          selite: 'Suukin kuja sinisellä hetkellä: puinen tynnyriholvi '
+            + 'kattotuoleineen kaartuu kujan yli, lyhdyt palavat '
+            + 'pilareissa, ja kangaskauppojen edessä riippuu kuosikankaita.',
+          lahde: 'Fabio Achilli from Milano, Italy, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Grand Souq, Bur Dubai.jpg',
+          selite: 'Sama kuja päivällä: matalan puukaton alla molemmin '
+            + 'puolin seinämät taiteltuja pashminoita ja huiveja '
+            + 'väririveissä, ja katosta roikkuu perinteinen lyhty.',
+          lahde: 'Jpbowen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   /*
    * Dohan nähtävyysjutut (nippu 2, 12.8.2026). Kolme kohdetta — Souq
