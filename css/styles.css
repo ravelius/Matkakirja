@@ -6739,7 +6739,11 @@ body.katselu #newgame-btn { display: none; }
 
 /* Palauteikkuna: sama pergamentti-ilme kuin periaateikkunassa, mutta
  * pienempi — yksi selitys, yksi kenttä ja lähetys. */
-.palaute-lappu .periaate-kortti { max-width: 30rem; }
+/* Kortti on dialogia (620 px) kapeampi — ilman automarginaalia se
+ * istui dialogin vasemmassa reunassa ja koko lappu näytti olevan
+ * sivussa (omistajan havainto 18.8.2026: "Pop-up-ikkunan voisi
+ * keskittää"). */
+.palaute-lappu .periaate-kortti { max-width: 30rem; margin-inline: auto; }
 
 .palaute-tilanne {
   margin: 0 0 0.6rem;

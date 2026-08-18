@@ -8439,11 +8439,15 @@ export class UI {
   lisaaEhdotusOsio(lohko, tilanne = '') {
     const osio = ehdotusOsio(this.ehdotusSivu(tilanne));
     if (osio) lohko.appendChild(osio);
-    // PRO-SISÄLLÖNTUOTTAJAT saman lomakkeen perään: kutsuttu
-    // ammattilainen kirjautuu koodillaan ja rakentaa oman
-    // tekijäsivunsa. Osio on suljettu eikä näy sille, joka ei etsi.
+    // PRO-SISÄLLÖNTUOTTAJAT: rasti ENNEN Lähetä ehdotus -nappia
+    // (omistajan tarkennus 18.8.2026) — kutsuttu ammattilainen
+    // kirjautuu koodillaan ja rakentaa oman tekijäsivunsa. Rasti on
+    // kiinni eikä näy sille, joka ei etsi.
     const pro = proOsio();
-    if (pro) lohko.appendChild(pro);
+    if (!pro) return;
+    const laheta = osio?.querySelector('.periaate-laheta');
+    if (laheta) laheta.before(pro);
+    else lohko.appendChild(pro);
   }
 
   /**

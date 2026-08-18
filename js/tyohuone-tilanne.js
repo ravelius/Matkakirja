@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v883 — palautelappu: kortti keskitetty ruudulle (istui ennen dialogin vasemmassa reunassa) ja pro-rasti i-nappeineen on nyt ENNEN Lähetä ehdotus -nappia',
   'v882 — laukun tietäjärivi: vasemmalla avatar + tasonimike (esim. Maailmanmatkaaja) ja i heti sen perässä, oikeassa reunassa vain pisteet ("210 tp") — Tietäjä-sana pois',
   'v881 — pöllön valmiskysymykset ja ehdota-nappi: avaa pöllö Firenzessä (laatta tai lehti) — syöterivin yllä 2 valmista kysymystä + väkänen (väkänen/vieritys näyttää kaikki 5), napautus kysyy ja sen jälkeen palataan normaaleihin jatkokysymyksiin; pilottikaupungit Firenze, Tampere, Kairo, Tokio, Pariisi, Helsinki (muilla alue ei näy); paneelin oikeassa yläkulmassa pieni "Ehdota sisältöä" -nappi, joka avaa saman lomakkeen kuin hampurilainen — myös lehden päältä',
   'v880 — 30 uutta miniatyyriä: Kairon kaikki 10 kohdetta sekä Tampereen, Firenzen ja E00-kuusikon uudet kohteet piirroksina (numeroympyrät pois) — avaa esim. Kairon ja Tokion kartat; sävy istuu pohjaan (v877)',
