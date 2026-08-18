@@ -637,7 +637,7 @@ export function timeUp(ui) {
 
 /**
  * Vastaus tietovisaan: ensin "Oikein!"/"Väärin.", pieni tauko ja sitten
- * aarteen paljastus, jossa iso laatta kääntyy ympäri.
+ * aarteen paljastus, jossa löydön generoitu kuva nousee mustasta.
  */
 export function answerQuiz(ui, index) {
   const { game } = ui;

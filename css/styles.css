@@ -5009,17 +5009,6 @@ body.flight-active .fact-card {
 .icon-linssi-varsi { fill: none; stroke: #3b2a13; stroke-width: 3.4; stroke-linecap: round; }
 .icon-linssi-kajo { fill: none; stroke: rgba(255, 255, 255, 0.8); stroke-width: 1.4; stroke-linecap: round; }
 
-/* Viisas Pöllö laattakuvakkeena (löytyy ensimmäisen laatan alta):
-   sama seepiaviiva kuin pöllönapissa, täyttö vain silmäterissä. */
-.icon-pollo-viiva {
-  fill: none;
-  stroke: #3b2a13;
-  stroke-width: 1.3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.icon-pollo-silma { fill: #3b2a13; stroke: none; }
-
 .icon-gem { stroke: #3b2a13; stroke-width: 1.5; stroke-linejoin: round; }
 .icon-gem-facets { fill: none; stroke: rgba(255, 255, 255, 0.55); stroke-width: 1.1; }
 .gem-ruby { fill: #d2402f; }
@@ -5618,15 +5607,19 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
 
 .quiz-hint-text::before { content: "✎"; font-style: normal; opacity: 0.7; }
 
-/* --- aarteen paljastus: iso laatta kääntyy 3D:nä --- */
+/* --- aarteen paljastus: generoitu kuva nousee mustasta --- */
 
+/* Tausta on lähes musta, jotta aarrekuvan oma musta pohja sulautuu
+ * saumatta eikä mitään reunaa näy (omistajan palaute 9.8.2026).
+ * Sama pohja kaikille paljastuksille — kääntyvää seepialaattaa ei
+ * enää ole (omistajan linjaus 18.8.2026). */
 .reveal-overlay {
   position: fixed;
   inset: 0;
   display: grid;
   place-items: center;
   gap: 1rem;
-  background: radial-gradient(circle at 50% 45%, rgba(26, 16, 7, 0.72), rgba(12, 8, 3, 0.92));
+  background: radial-gradient(circle at 50% 45%, rgba(8, 5, 2, 0.94), rgba(0, 0, 0, 0.985));
   z-index: 20;
   animation: fade-in 0.25s ease-out;
 }
@@ -5663,95 +5656,21 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
 @keyframes fade-in { from { opacity: 0; } }
 @keyframes fade-out { to { opacity: 0; } }
 
+/* Kortti on yhtenä pinona: kuva ja sen alla tekstit. Pitkä esittely
+ * (esim. Viisas Pöllö) voi ylittää matalan näytön — silloin pino saa
+ * vierittyä sisällään sen sijaan, että viimeinen rivi jäisi reunan
+ * taakse. Mahtuvaa korttia tämä ei muuta mitenkään. */
 .reveal-scene {
   display: grid;
   justify-items: center;
   gap: 1.5rem;
-  perspective: 1100px;
+  max-height: 100%;
+  overflow-y: auto;
+  padding-inline: 1rem;
+  scrollbar-width: none;
 }
 
-/* Laatta ja sen taakse piirtyvät sädeviivat samassa ruudussa. */
-.reveal-stage {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: min(52vmin, 280px);
-  aspect-ratio: 1;
-  transform-style: preserve-3d;
-}
-
-.reveal-rays {
-  position: absolute;
-  width: 168%;
-  height: 168%;
-  overflow: visible;
-  opacity: 0;
-  transform: scale(0.82) rotate(-6deg);
-  transition: opacity 0.5s ease-out, transform 0.7s cubic-bezier(0.2, 1.1, 0.4, 1);
-  pointer-events: none;
-}
-
-.reveal-rays path {
-  fill: none;
-  stroke: rgba(246, 226, 184, 0.5);
-  stroke-linecap: round;
-}
-
-.reveal-rays.shown { opacity: 1; transform: scale(1) rotate(0deg); }
-
-.reveal-disc {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  transform: rotateY(0deg) rotateZ(-2deg);
-  transition: transform 0.9s cubic-bezier(0.32, 0.86, 0.24, 1);
-  animation: disc-drop 0.42s cubic-bezier(0.2, 1.4, 0.4, 1);
-}
-
-/* Kääntö ei ole täysin suora, jotta liike näyttää kädellä käännetyltä. */
-.reveal-disc.flipped { transform: rotateY(180deg) rotateZ(2.5deg); }
-
-@keyframes disc-drop {
-  from { transform: rotateY(0deg) rotateZ(-9deg) scale(0.62) translateY(-26px); opacity: 0; }
-}
-
-.reveal-face {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  /* Varjo kuuluu tahkolle: .reveal-disc ei saa suodatinta, koska se litistäisi 3D:n. */
-  filter: drop-shadow(0 20px 24px rgba(0, 0, 0, 0.5));
-}
-
-.reveal-face svg { width: 100%; height: 100%; overflow: visible; }
-
-.reveal-front { transform: rotateY(180deg); }
-
-.reveal-disc-body { stroke: none; }
-
-.reveal-ring {
-  fill: none;
-  stroke: var(--map-ink);
-  stroke-width: 2.6;
-  stroke-linejoin: round;
-  opacity: 0.85;
-}
-
-.reveal-ring.thin { stroke-width: 1.4; opacity: 0.5; stroke-dasharray: 9 6; }
-
-.reveal-ticks path { stroke: var(--map-ink); stroke-width: 1.5; opacity: 0.45; }
-.reveal-hatch path { stroke: rgba(70, 51, 31, 0.3); stroke-width: 1.1; fill: none; }
-
-.reveal-mark {
-  font-family: "Iowan Old Style", Georgia, serif;
-  font-size: 96px;
-  fill: rgba(70, 51, 31, 0.72);
-}
+.reveal-scene::-webkit-scrollbar { display: none; }
 
 .reveal-caption {
   display: grid;
@@ -5773,12 +5692,6 @@ body[data-pack='suomi'] .gem-topaz { fill: #4a6fb3; }
   font-size: 1.08rem;
   color: #f0d9a8;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-}
-
-/* Aarrekuvallinen paljastus: tausta lähes mustaksi, jotta kuvan oma
- * musta pohja sulautuu saumatta eikä mitään reunaa näy. */
-.reveal-overlay.kuvallinen {
-  background: radial-gradient(circle at 50% 45%, rgba(8, 5, 2, 0.94), rgba(0, 0, 0, 0.985));
 }
 
 /* AI-piirretty aarre nousee mustasta kortin keskelle ilman kehyksiä
@@ -6385,7 +6298,6 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
   .quiz-question { font-size: 1rem; margin-bottom: 0.7rem; }
   .dialog-card { padding: 0.8rem 0.85rem; }
   .dialog { width: calc(100% - 1rem); }
-  .reveal-disc { width: min(56vmin, 200px); }
   .reveal-caption strong { font-size: 1.25rem; }
 }
 

@@ -4019,9 +4019,6 @@ test('kartan kerroksilla ei ole suodattimia, ja viittaukset osuvat', () => {
   const maaritellyt = new Set(
     [...art.matchAll(/el\('filter',\s*\{\s*id:\s*'([^']+)'/g)].map((m) => m[1]),
   );
-  // Paljastusanimaatio rakentaa suodattimensa nimen lennossa.
-  maaritellyt.add('reveal-rough-back');
-  maaritellyt.add('reveal-rough-front');
   const viitatut = [...`${art}\n${ui}`.matchAll(/url\(#([a-z0-9-]+)\)/g)].map((m) => m[1]);
   for (const id of new Set(viitatut)) {
     if (!id.includes('rough')) continue;

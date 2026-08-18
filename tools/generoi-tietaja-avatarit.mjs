@@ -13,10 +13,10 @@
  * toiselle. Untuvikosta Suurtietäjäksi.
  *
  * Käyttö:  NODE_USE_ENV_PROXY=1 node tools/generoi-tietaja-avatarit.mjs [avain …]
- *          Avain on muotoa taso-01; ilman argumentteja generoidaan
- *          kaikki kymmenen. KATSO JOKAINEN KUVA SILMIN ennen peliin
- *          kytkemistä.
- * Ulos:    assets/tietaja/taso-NN.jpg suoraan 512×512:na.
+ *          Avain on muotoa taso-01 (ja viisas-pollo); ilman
+ *          argumentteja generoidaan kaikki. KATSO JOKAINEN KUVA
+ *          SILMIN ennen peliin kytkemistä.
+ * Ulos:    assets/tietaja/<avain>.jpg suoraan 512×512:na.
  *
  * KUSTANNUSSÄÄNTÖ (sama kuin miniatyyreissä, omistajan päätös
  * 16.8.2026): yksi otto per avain; hylätyt generoidaan uudelleen
@@ -74,6 +74,28 @@ const POLLO = 'a round-faced tawny owl with large warm amber eyes, '
   + 'cream and chestnut-brown feathers';
 
 const KUVAT = [
+  /*
+   * VIISAS PÖLLÖ ITSE (omistajan tilaus 18.8.2026, kalevalainen kehys
+   * hyväksytty). Pöllö löytyy ensimmäisen laatan alta omana
+   * aarteenaan, ja paljastuskortti näyttää tämän kuvan (js/pollo.js
+   * POLLO_AARRE.kuva).
+   *
+   * ERI LAJI KUIN PELAAJAN AVATAR: Viisas Pöllö on EMO — suuri
+   * huuhkaja — kun taas tasoavatarit ovat lehtopöllöjä. Siksi tämä
+   * ei käytä POLLO-runkoa lainkaan. Ei tasorekvisiittaa: ei hattua,
+   * ei laseja, ei mitalia. Vanhuus ja viisaus ovat höyhenissä ja
+   * katseessa, ja ainoa koriste on ohut karjalaisen kirjonnan
+   * henkinen nauha vinjetin alareunassa — vihje, ei kehys.
+   */
+  ['viisas-pollo', 'a great and dignified Eurasian eagle-owl with '
+    + 'prominent ear tufts, deep orange eyes and a dark brown-grey '
+    + 'plumage, ancient and wise, perched on a gently curving branch '
+    + 'that arcs like the body of a kantele. At the very bottom of the '
+    + 'vignette runs one thin narrow ribbon of restrained red Karelian '
+    + 'folk embroidery ornament — a hint only, NOT a frame around the '
+    + 'picture. No hat, no cap, no spectacles, no medal, no staff, no '
+    + 'book, no props of any kind'],
+
   ['taso-01', `${POLLO} as a tiny newly-hatched owlet: a fluffy round `
     + 'ball of pale downy feathers, oversized curious amber eyes, '
     + 'stubby little wings, standing slightly wobbly on a small bare '

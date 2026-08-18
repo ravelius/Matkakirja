@@ -182,7 +182,7 @@ export const RAAMATTU = {
       otsikko: 'Aarteet ja eteneminen',
       tila: 'luonnos',
       kohdat: [
-        'Laatta joka kaupungissa; oikea vastaus kääntää, alta löytyy '
+        'Laatta joka kaupungissa; oikea vastaus paljastaa, alta löytyy '
           + 'AINA aarre.',
         'AARTEET: pieni paikallisaarre (~100–250 p) · iso '
           + 'paikallisaarre (~500–800 p) · mantereen 1000 p aarre · '

@@ -708,10 +708,11 @@ Ilman näitä linssi näkyy timanttina ja kuulostaa timantilta:
 
 1. `REVEAL_SUB` (`js/ui.js` 720–725): rivi `linssi:` — muuten alarivi on
    `+0 puntaa`.
-2. `drawTokenIcon` (`js/mapart.js` 857–904): oma `case` — `default`
-   (891–901) on jalokivi. Sama kuvake kelpaa myös
-   `revealFaceSvg`-paljastukseen (925–994) ja `tokenIconSvg`-laukkuun
-   (1016–1026).
+2. `drawTokenIcon` (`js/mapart.js`): oma `case` — `default` on
+   jalokivi. Sama kuvake kelpaa `tokenIconSvg`-laukkuun. Paljastus ei
+   käytä piirtokuvakkeita lainkaan: se näyttää linssin oman
+   varustekuvan (`assets/varusteet/varuste-<tunnus>.jpg`) samassa
+   uudessa paljastusnäkymässä kuin aarrekuvat.
 3. `treasureSound` (`js/sound.js` 1112–1118): oma haara — `default`
    palauttaa `'gem'`. Ensimmäisessä versiossa `'star'`-ääni kelpaa;
    omaa äänitiedostoa ei lisätä (jokainen uusi mp3 kasvattaa SHELLiä).

@@ -510,16 +510,33 @@ export const POLLO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
  * Sävy on tarinakaaren aarretekstien sävy: minämuotoista kerrontaa,
  * jonka sisällä puhutaan suoraan. Kohderyhmä on 13 vuotta täyttäneet
  * ja aikuiset, joten pöllö on kohtelias matkakumppani eikä maskotti.
+ *
+ * KALEVALAINEN KEHYS (päätoimittajan kaanonteksti, omistaja hyväksyi
+ * 18.8.2026): Viisas Pöllö on tietäjien ikivanha matkakumppani, ja
+ * isoisä oli hänen oppilaistaan viimeisin. Tekstiä ei muuteta ilman
+ * päätoimittajaa.
  */
 export const POLLO_AARRE = {
+  /*
+   * Pöllön oma generoitu muotokuva. Sama tyylikääre kuin
+   * tietäjätasojen avatareilla (tools/generoi-tietaja-avatarit.mjs,
+   * avain viisas-pollo), mutta ERI LAJI: Viisas Pöllö on suuri
+   * huuhkaja, tasoavatarit lehtopöllöjä. Paljastuskortti näyttää
+   * kuvan uudessa paljastusnäkymässä; puuttuva tiedosto jättää
+   * pelkän tekstin.
+   */
+  kuva: 'assets/tietaja/viisas-pollo.jpg',
   huudahdus: 'Se liikkui — kätkössä oli jotain elävää!',
   nimi: 'Viisas Pöllö',
-  selite: 'Isoisän matkakumppani liittyy matkaan',
-  esittely: 'Kätkön reunalta nousi pölyä, ja pölyn keskeltä katsoi lintu. '
-    + '"Viisas Pöllö", se sanoi ja kumarsi. "Kuljin isoisänne mukana koko '
-    + 'sen vuoden 1873 enkä ole sen jälkeen kunnolla nukkunut. Kysykää '
-    + 'minulta matkalla mitä tahansa — kaupungeista, kartoista, Aarnin '
-    + 'luettelosta. Visan vastauksia en anna; niistä te selviätte itse."',
+  selite: 'Tietäjien ikivanha matkakumppani liittyy seuraan',
+  esittely: 'Kätkön reunalta nousi pölyä, ja pölyn keskeltä katsoi suuri '
+    + 'huuhkaja. "Minä olen Viisas Pöllö", se sanoi ja kumarsi hitaasti. '
+    + '"Olen kulkenut tietäjien matkassa niin kauan kuin sanoja on etsitty '
+    + '— isoisänne oli oppilaistani viimeisin. Nyt otan teidät siipieni '
+    + 'suojaan tiedon tielle. Kysykää minulta kaupungeista, kartoista ja '
+    + 'Aarnin luettelosta: jokaisella asialla on syntynsä, ja joka synnyn '
+    + 'tuntee, se asian hallitsee. Visan vastauksia en anna — ne teidän on '
+    + 'löydettävä itse."',
 };
 
 /** Mikrofoni samalla viivakynällä. */

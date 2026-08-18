@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.858';
+const CACHE = 'matkakirja-2026-08-09.859';
 const SHELL = [
   './',
   './index.html',
@@ -359,6 +359,7 @@ const SHELL = [
   './assets/kartat/miniatyyrit/tokio-tokion-kansallismuseo.webp',
   './assets/kartat/miniatyyrit/tokio-uenon-puisto.webp',
   './assets/kartat/miniatyyrit/tokio-shitamachi-museo.webp',
+  './assets/tietaja/viisas-pollo.jpg',
   './assets/kartat/miniatyyrit/soul-gyeongbokgung.webp',
   './assets/kartat/miniatyyrit/soul-bukchonin-hanok-kyla.webp',
   './assets/kartat/miniatyyrit/soul-changdeokgung.webp',

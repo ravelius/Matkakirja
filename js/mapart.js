@@ -2045,37 +2045,6 @@ export function drawTokenIcon(parent, type) {
       el('path', { d: 'M-6.6,-4.4 A5,5 0 0 1 -2.8,-7.8', class: 'icon-linssi-kajo' }, g);
       break;
 
-    case 'pollo': {
-      /*
-       * VIISAS PÖLLÖ AARTEENA (omistajan tilaus 18.8.2026): pöllö
-       * löytyy ensimmäisen laatan alta, joten paljastuskortin
-       * kääntyvälle laatalle tarvitaan sen oma kuvake.
-       *
-       * Sama seepiaviivapiirros kuin pöllönapissa (js/pollo.js
-       * POLLO_IKONI), mutta polut on kirjoitettu tähän auki eikä
-       * tuotu: js/mapart.js on kartan piirtokerros eikä saa riippua
-       * pöllömoduulista. Napin ikoni on 24 x 24 -ruudukossa, tämä
-       * ruudukko on keskitetty, joten koko kuva siirretään
-       * ryhmätransformilla — luvut pysyvät silloin luettavina
-       * rinnakkain napin kanssa.
-       */
-      const owl = el('g', { transform: 'translate(-12,-12)' }, g);
-      const viiva = (d) => el('path', { d, class: 'icon-pollo-viiva' }, owl);
-      viiva('M6.4 5.2 8.4 7.6');            // vasen töyhtö
-      viiva('M17.6 5.2 15.6 7.6');          // oikea töyhtö
-      viiva('M12 3.7c3.3 0 5.7 2.6 5.7 6.3 0 5.1-2.3 8.5-5.7 8.5'
-        + 's-5.7-3.4-5.7-8.5c0-3.7 2.4-6.3 5.7-6.3z'); // pää ja vartalo
-      el('circle', { cx: 9.6, cy: 9.5, r: 1.9, class: 'icon-pollo-viiva' }, owl);
-      el('circle', { cx: 14.4, cy: 9.5, r: 1.9, class: 'icon-pollo-viiva' }, owl);
-      el('circle', { cx: 9.6, cy: 9.5, r: 0.75, class: 'icon-pollo-silma' }, owl);
-      el('circle', { cx: 14.4, cy: 9.5, r: 0.75, class: 'icon-pollo-silma' }, owl);
-      viiva('M12 11.3 11 13.1h2z');         // nokka
-      viiva('M8.7 14.7c1 .9 1.9 1.3 3.3 1.3s2.3-.4 3.3-1.3'); // siiven raja
-      viiva('M9.4 18.4v1.6M14.6 18.4v1.6'); // jalat
-      viiva('M4.4 20.2h15.2');              // oksa
-      break;
-    }
-
     default: {
       // Jalokivi: hiottu kanta ja särmät.
       el('path', {
@@ -2091,7 +2060,7 @@ export function drawTokenIcon(parent, type) {
   return g;
 }
 
-// --- aarteen paljastus: käsin piirretty laatta ------------------------------
+// --- käsin piirretyt apumuodot ---------------------------------------------
 
 /** Käsin piirretyn näköinen ympyrä: säde heittelee hieman kulman mukaan. */
 function wobblyCircle(radius, seed, amount = 2.4, steps = 46) {
@@ -2102,102 +2071,6 @@ function wobblyCircle(radius, seed, amount = 2.4, steps = 46) {
     pts.push([Math.cos(a) * r, Math.sin(a) * r]);
   }
   return `${pts.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(2)},${y.toFixed(2)}`).join(' ')} Z`;
-}
-
-/**
- * Iso pelilaatta paljastusanimaatioon. Kaikki viivat on piirretty kevyesti
- * heittelehtivinä, ja mustepinta saa saman rosoisuussuodattimen kuin kartta.
- * @param {'back'|'front'} side kumpi puoli
- * @param {string} [type] laattatyyppi etupuolelle
- */
-export function revealFaceSvg(side, type) {
-  const svg = el('svg', {
-    viewBox: '-100 -100 200 200',
-    class: `reveal-svg reveal-${side}-art`,
-    role: 'img',
-    'aria-hidden': 'true',
-  });
-
-  const defs = el('defs', {}, svg);
-  const rough = el('filter', {
-    id: `reveal-rough-${side}`, x: '-12%', y: '-12%', width: '124%', height: '124%',
-  }, defs);
-  el('feTurbulence', {
-    type: 'turbulence', baseFrequency: '0.021', numOctaves: 3, seed: side === 'back' ? 5 : 12,
-    result: 'noise',
-  }, rough);
-  el('feDisplacementMap', {
-    in: 'SourceGraphic', in2: 'noise', scale: 3.4, xChannelSelector: 'R', yChannelSelector: 'G',
-  }, rough);
-
-  const paper = el('radialGradient', { id: `reveal-paper-${side}`, cx: '38%', cy: '32%' }, defs);
-  el('stop', { offset: '0%', 'stop-color': '#f8ecd0' }, paper);
-  el('stop', { offset: '58%', 'stop-color': '#ecd8ab' }, paper);
-  el('stop', { offset: '100%', 'stop-color': '#cfae76' }, paper);
-
-  const g = el('g', { filter: `url(#reveal-rough-${side})` }, svg);
-
-  // Laatan pohja ja kaksi käsin vedettyä kehää.
-  el('path', {
-    d: wobblyCircle(92, `${side}-disc`, 2.6),
-    fill: `url(#reveal-paper-${side})`,
-    class: 'reveal-disc-body',
-  }, g);
-  el('path', { d: wobblyCircle(88, `${side}-ring1`, 1.8), class: 'reveal-ring' }, g);
-  el('path', { d: wobblyCircle(80, `${side}-ring2`, 2.2), class: 'reveal-ring thin' }, g);
-
-  // Reunan viivoitus antaa piirretyn syvyyden.
-  const ticks = el('g', { class: 'reveal-ticks' }, g);
-  for (let i = 0; i < 40; i++) {
-    const a = (i / 40) * Math.PI * 2 + vary(`${side}-tick-a${i}`, 0.03);
-    const inner = 80 + vary(`${side}-tick-i${i}`, 1.5);
-    const outer = inner + 4.5 + vary(`${side}-tick-o${i}`, 1.6);
-    el('path', {
-      d: `M${(Math.cos(a) * inner).toFixed(2)},${(Math.sin(a) * inner).toFixed(2)} `
-        + `L${(Math.cos(a) * outer).toFixed(2)},${(Math.sin(a) * outer).toFixed(2)}`,
-    }, ticks);
-  }
-
-  if (side === 'back') {
-    // Kääntöpuoli: ristiviivoitus ja käsin piirretty kysymysmerkki.
-    const hatch = el('g', { class: 'reveal-hatch' }, g);
-    for (let i = -7; i <= 7; i++) {
-      const off = i * 11 + vary(`hatch${i}`, 1.4);
-      const len = Math.sqrt(Math.max(0, 76 * 76 - off * off));
-      el('path', {
-        d: `M${(-len).toFixed(1)},${off.toFixed(1)} L${len.toFixed(1)},${(off + vary(`hatch-e${i}`, 1.6)).toFixed(1)}`,
-        transform: 'rotate(28)',
-      }, hatch);
-    }
-    el('text', {
-      x: 0, y: 30, class: 'reveal-mark', 'text-anchor': 'middle',
-      transform: `rotate(${vary('mark', 3).toFixed(2)})`,
-    }, g).textContent = '?';
-  } else {
-    // Etupuoli: aarteen kuvake samalla piirrostyylillä kuin kartalla.
-    const icon = el('g', { transform: 'scale(4.6)' }, g);
-    drawTokenIcon(icon, type);
-  }
-  return svg;
-}
-
-/** Käsin piirretyt sädeviivat paljastuksen taustalle. */
-export function revealRaysSvg() {
-  const svg = el('svg', {
-    viewBox: '-100 -100 200 200', class: 'reveal-rays', 'aria-hidden': 'true',
-  });
-  const g = el('g', {}, svg);
-  for (let i = 0; i < 22; i++) {
-    const a = (i / 22) * Math.PI * 2 + vary(`ray${i}`, 0.05);
-    const inner = 52 + vary(`ray-i${i}`, 4);
-    const outer = 78 + vary(`ray-o${i}`, 16);
-    el('path', {
-      d: `M${(Math.cos(a) * inner).toFixed(1)},${(Math.sin(a) * inner).toFixed(1)} `
-        + `L${(Math.cos(a) * outer).toFixed(1)},${(Math.sin(a) * outer).toFixed(1)}`,
-      'stroke-width': (1 + hash01(`ray-w${i}`) * 1.6).toFixed(2),
-    }, g);
-  }
-  return svg;
 }
 
 /** Sama kuvake itsenäisenä SVG:nä HTML-paneeleihin. */
