@@ -644,6 +644,55 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * Neljä uutta juttua 18.8.2026 (Kairon lehden viimeistely, kartta
+     * 6 → 10 kohteeseen). Lähde en-Wikipedia (Mosque-Madrasa of
+     * Sultan Hasan, Bab Zuwayla, Al-Azhar Park, Abdeen Palace),
+     * tiivistetty omin sanoin. Kuvat todennettu Commonsin API:sta
+     * (lisenssi, extmetadata.Artist, Restrictions tyhjä) ja katsottu
+     * silmin 18.8.2026.
+     */
+    'Abdeenin palatsi': {
+      aika: '1874',
+      teksti: 'Kairoa hallittiin keskiajalta asti linnoituskukkulalta, '
+          + 'kunnes kediivi Ismail päätti toisin. Hän rakennutti '
+          + 'tasamaalle keskustaan eurooppalaistyylisen palatsin ja '
+          + 'siirsi hallinnon sinne vuonna 1874 — samalla '
+          + 'vuosikymmenellä, jolla hän avasi leveäkatuisen keskustan '
+          + 'Pariisin malliin. Palatsi sai nimensä Abdeen Beystä, jonka '
+          + 'pieni kartano paikalla oli aiemmin seissyt.'
+        + '\n\n'
+        + 'Rakentaminen kesti kymmenen vuotta ja piirtäjänä oli '
+          + 'ranskalainen arkkitehti Léon Rousseau. Huoneita on 500, ja '
+          + 'saleja koristavat kullatut listat ja suuri kellokokoelma. '
+          + 'Rahaa paloi: rakennus maksoi 700 000 Egyptin puntaa ja '
+          + 'kalustus lähes kolme kertaa enemmän. Kuningas Fuad käytti '
+          + 'myöhemmin pelkkiin pariisilaishuonekaluihin yli 18 '
+          + 'miljoonaa frangia.'
+        + '\n\n'
+        + 'Nykyään palatsi on museo. Alakerrassa on ase-, hopea- ja '
+          + 'asiakirjakokoelmat — muun muassa ottomaanisulttaanin '
+          + 'määräyskirje, jolla Muhammad Alin suku aikanaan sai '
+          + 'Egyptin hallintaansa. Yläkerrokset, kuninkaallisten '
+          + 'entiset asuintilat, on varattu valtiovieraille.',
+      kuvat: [
+        {
+          tiedosto: 'GD-EG-Caire-Abedin001.JPG',
+          selite: 'Palatsin pääjulkisivu ja takorautaportti. Egyptin '
+            + 'lippu liehuu keskiosan yllä.',
+          lahde: 'Gérard Ducher (user:Néfermaât), Wikimedia Commons '
+            + '(CC BY-SA 2.5)',
+        },
+        {
+          tiedosto: 'Abdin Palace 1870s.jpg',
+          selite: 'Palatsi valokuvassa 1870-luvulta, pian '
+            + 'valmistumisensa jälkeen: aukio sen edessä on vielä '
+            + 'raivaamatta.',
+          lahde: 'Émile Béchard, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
     'Ibn Tulunin moskeija': {
       aika: '879',
       teksti: 'Ibn Tulunin moskeija valmistui vuonna 879 Kairoon. Sen '
@@ -666,6 +715,77 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Moskeijan sisäpiha ja taustalla kiertyvä '
             + 'spiraaliminareetti.',
           lahde: 'Berthold Werner, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sulttaani Hassanin moskeija': {
+      aika: '1356–1363',
+      teksti: 'Sulttaani Hasan aloitti moskeijansa vuonna 1356 keskellä '
+          + 'ruttoaaltojen runtelemaa Kairoa. Hankkeesta tuli '
+          + 'keskiaikaisen kaupungin kallein: työ nieli aikalaiskirjuri '
+          + 'al-Maqrizin mukaan 30 000 dirhamia joka päivä, ja rahasta '
+          + 'osa tuli ruttoon kuolleiden emiirien omaisuuksista, jotka '
+          + 'olivat siirtyneet valtiolle. Jättiläinen on 150 metriä '
+          + 'pitkä ja 36 metriä korkea, ja sisällä toimi neljä koulua — '
+          + 'yksi kullekin sunnalaisen lainopin koulukunnalle.'
+        + '\n\n'
+        + 'Rakentajaansa hanke ei tuonut onnea. Vuonna 1361 yksi '
+          + 'rakenteilla olevista minareeteista sortui ja alle jäi noin '
+          + 'kolmesataa ihmistä; samana vuonna sulttaani murhattiin, '
+          + 'eikä hänen ruumistaan koskaan löydetty. Komeaan '
+          + 'hautakammioon haudattiin lopulta hänen kaksi poikaansa. '
+          + 'Eteläinen minareetti on mamelukkiajan korkein: sen huippu '
+          + 'nousi 84 metriin.'
+        + '\n\n'
+        + 'Järeä rakennus linnoituksen naapurissa kelpasi myös '
+          + 'sotavälineeksi: kapinalliset nousivat katolle sinkoamaan '
+          + 'ammuksia linnoitukseen, ja moni sulttaani yritti siksi '
+          + 'purkaa koko talon — vuonna 1500 yritys hylättiin kolmen '
+          + 'tuloksettoman päivän jälkeen. Vielä 1660 hautakammion '
+          + 'kupolin kerrottiin olevan täynnä tykinkuulien jälkiä.',
+      kuvat: [
+        {
+          tiedosto: 'Kairo Sultan Hassan Moschee BW 1.jpg',
+          selite: 'Hautakammion kupoli ja moskeijan kaksi minareettia '
+            + 'linnoituksen suunnasta. Oikealla erottuu naapurin, '
+            + 'al-Rifa\'in moskeijan, seinää.',
+          lahde: 'Berthold Werner, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bab Zuweila': {
+      aika: '1092',
+      teksti: 'Bab Zuweila on vanhan muurikaupungin eteläportti ja yksi '
+          + 'sen kolmesta säilyneestä portista. Kiviportin rakennutti '
+          + 'visiiri Badr al-Jamali vuonna 1092, ja nimensä se sai '
+          + 'Zuwayla-berberiheimosta, jonka sotilaita majoitettiin '
+          + 'portin luona kaupungin ensimmäisinä vuosina. Puiset '
+          + 'ovipuoliskot painavat kolme ja puoli tonnia kumpikin.'
+        + '\n\n'
+        + 'Portin päällä seisovat minareetit eivät kuulu itse porttiin '
+          + 'vaan viereiseen moskeijaan. Portin luona oli vankila, ja '
+          + 'siellä istunut mamelukki vannoi rakentavansa tilalle '
+          + 'moskeijan, jos vielä pääsisi valtaan. Hän pääsi: sulttaani '
+          + 'al-Mu\'ayyad purki vankilan ja pystytti moskeijansa '
+          + '1415–1422 käyttäen portin torneja minareettiensa '
+          + 'jalustoina. Tornien parvekkeille pääsee yhä kiipeämään.'
+        + '\n\n'
+        + 'Tasanteelta portin päältä sulttaanit seurasivat Mekkaan '
+          + 'lähtevän pyhiinvaelluskulkueen juhlasaattoa, ja rumpalit '
+          + 'soittivat sieltä aina, kun tärkeä emiiri saapui '
+          + 'kaupunkiin. Portilla oli synkempikin virka '
+          + 'mestauspaikkana. Maanpinta on noussut lähes kaksi metriä '
+          + 'portin valmistumisen jälkeen — sen juuret kaivettiin '
+          + 'esiin entisöinnissä vuosina 1999–2003.',
+      kuvat: [
+        {
+          tiedosto: 'Bab Zuweila, Cairo (1) (52087518412).jpg',
+          selite: 'Portin kaksi pyöreää tornia ja niiden päällä '
+            + 'al-Mu\'ayyadin moskeijan minareetit. Vasemmalla vanhan '
+            + 'kadun taloja puuerkkereineen.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -717,6 +837,42 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Khan el-Khalili 2019.jpg',
           selite: 'Kimaltavia lyhtyjä basaarin kojussa.',
           lahde: 'Mohammed Moussa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Azhar-puisto': {
+      aika: '2005',
+      teksti: 'Viisisataa vuotta kairolaiset kärräsivät roskansa ja '
+          + 'rakennusjätteensä muurin taakse Darassan kukkuloille. '
+          + 'Jätettä kertyi paikoin neljänkymmenen metrin paksuudelta, '
+          + 'eikä kukaan rakentanut mäille mitään — maa ei kantanut. '
+          + 'Vuonna 1984 Aga Khan päätti lahjoittaa Kairolle puiston, '
+          + 'ja paikaksi valittiin juuri tämä jätemäki vanhan kaupungin '
+          + 'kupeessa.'
+        + '\n\n'
+        + 'Työmaasta tuli kaivaus: täyttömaata vietiin pois yli '
+          + 'miljoona kuutiometriä, ja kesken kaiken suunnitelmaan '
+          + 'jouduttiin sovittamaan kolme kaupungin juomavesisäiliötä. '
+          + 'Roskien alta paljastui yllätys — Saladinin ajan '
+          + '1100-luvun kaupunginmuuri torneineen, puolentoista '
+          + 'kilometrin matkalta. Muuri kunnostettiin, ja työhön '
+          + 'palkattiin väkeä viereisestä Darb al-Ahmarin '
+          + 'kaupunginosasta.'
+        + '\n\n'
+        + 'Puisto avattiin vuonna 2005. Kolmellekymmenelle hehtaarille '
+          + 'istutettiin palmukujia, hedelmätarhoja ja islamilaisen '
+          + 'puutarhaperinteen suoria vesikanavia suihkulähteineen. '
+          + 'Ahtaassa kivikaupungissa se on harvinaisuus: iso vihreä '
+          + 'alue, jonka penkereiltä näkee minareettien ylle. Puisto on '
+          + 'listattu maailman kuudenkymmenen parhaan julkisen tilan '
+          + 'joukkoon.',
+      kuvat: [
+        {
+          tiedosto: 'Al-Azhar-Park 2016-03-28l.jpg',
+          selite: 'Puiston vesikanava ja puutarhat; taustalla kohoavat '
+            + 'linnoitus ja Muhammad Alin moskeijan kupolit.',
+          lahde: 'Djehouty, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',

@@ -3905,9 +3905,24 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kairon torni', lat: 30.0459, lon: 31.2243 },
       { nimi: 'Egyptin museo', lat: 30.0478, lon: 31.2336 },
       { nimi: 'Tahririn aukio', lat: 30.0444, lon: 31.2357, wiki: 'Tahririn aukio' },
+      /*
+       * Täydennys 6 → 10 kohteeseen (18.8.2026, Kairon lehden
+       * viimeistely nykystandardiin): Abdeenin palatsi, Sulttaani
+       * Hassanin moskeija, Bab Zuweila ja Al-Azhar-puisto.
+       * Koordinaatit Nominatimista; yhdelläkään neljästä ei ole
+       * suomenkielistä artikkelia, joten ne ovat pelkkiä merkkejä
+       * kuten torni ja museo. Kaikki mahtuvat alkuperäiseen
+       * rajaukseen. Bab Zuweila esiintyy kannen Roberts-galleriassa
+       * litografiana — nähtävyysjuttu on kirjoitettu tarkoituksella
+       * eri kulmasta (portin käyttötavat, ei basaarikauppa).
+       */
+      { nimi: 'Abdeenin palatsi', lat: 30.0434, lon: 31.2478 },
       { nimi: 'Ibn Tulunin moskeija', lat: 30.0288, lon: 31.2497, wiki: 'Ibn Tulunin moskeija' },
+      { nimi: 'Sulttaani Hassanin moskeija', lat: 30.0324, lon: 31.2562 },
+      { nimi: 'Bab Zuweila', lat: 30.0428, lon: 31.2579 },
       { nimi: 'Saladinin linnoitus', lat: 30.0287, lon: 31.2599, wiki: 'Saladinin linnoitus' },
       { nimi: 'Khan el-Khalili', lat: 30.0477, lon: 31.2622, wiki: 'Khan el-Khalili' },
+      { nimi: 'Al-Azhar-puisto', lat: 30.0401, lon: 31.2641 },
     ],
   },
   tripoli: {
