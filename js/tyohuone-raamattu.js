@@ -235,6 +235,17 @@ export const RAAMATTU = {
       otsikko: 'Viisas Pöllö',
       tila: 'luonnos — ideointi, ei vielä toteutukseen',
       kohdat: [
+        'PÖLLÖ ON AARRE (omistaja 18.8.2026): peli alkaa ilman '
+          + 'pöllöä — nappi piilossa, ei kuplia eikä vihjeitä, eikä '
+          + 'ennen ensimmäistä laattaa anneta ohjeita tai korvaavaa '
+          + 'opastetta. Pöllö löytyy omana aarteenaan ensimmäisen '
+          + 'käännetyn laatan alta (mikä tahansa laatta); laatan oma '
+          + 'sisältö ja palkkiot säilyvät, pöllö tulee lisänä eikä '
+          + 'tuo pisteitä, rahaa eikä laukkutavaraa. Laukussa pöllön '
+          + 'paikka on tietäjäpisterivin kuvake, ei TAVARAT-ruudukko. '
+          + 'Ennen löytöä syntyneet tasonnousuonnittelut puretaan '
+          + 'jonosta löydön jälkeen. Vanhassa tallennuksessa pöllö on '
+          + 'valmiiksi löydetty.',
         'Ruudulla aina pieni pöllö → chat. Vastaa näkyvästä '
           + 'sisällöstä (saa kontekstin) + vapaa kenttä + '
           + 'kysymysehdotukset.',
