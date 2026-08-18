@@ -3331,6 +3331,19 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Topkapın palatsi', lat: 41.0128, lon: 28.984, wiki: 'Topkapın palatsi' },
       { nimi: 'Galatan torni', lat: 41.0256, lon: 28.9742, wiki: 'Galatan torni' },
       { nimi: 'Üsküdar', lat: 41.0254, lon: 29.0156, wiki: 'Üsküdar' },
+      /*
+       * Neljä lisäkohdetta 18.8.2026 (6 → 10, lehden viimeistely).
+       * Koordinaatit Nominatimista, kaikki rajauksen sisällä ja
+       * vähintään 13 prosenttiyksikön päässä lähimmästä naapurista,
+       * joten numeroympyrät eivät mene päällekkäin. Kaksi osuu
+       * määritelmän mukaan vedelle: silta ylittää lahden ja
+       * Neitsyttorni seisoo omalla luodollaan salmessa — molemmat ovat
+       * oikein, ks. tools/tarkista-karttapisteet.mjs:n otsake.
+       */
+      { nimi: 'Süleymaniyen moskeija', lat: 41.0162, lon: 28.964 },
+      { nimi: 'Galatan silta', lat: 41.0201, lon: 28.9731 },
+      { nimi: 'Sirkecin asema', lat: 41.0152, lon: 28.9764 },
+      { nimi: 'Neitsyttorni', lat: 41.0211, lon: 29.0041 },
     ],
   },
   lissabon: {

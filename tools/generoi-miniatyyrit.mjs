@@ -1000,6 +1000,62 @@ const KUVAT = [
     + 'middle of a palm-lined promenade, low flower beds and lawns '
     + 'stepping down on both sides, and a small domed pavilion at '
     + 'the far end', 'halpa'],
+
+  /*
+   * ── Istanbul, kymmenen kohdetta (lehden viimeistely 18.8.2026) ───
+   * VAIN JONOSSA, ei generoitu: piirrokset vaativat API-avaimen, jota
+   * työsessiossa ei ole. Kartalla kohteet näkyvät siihen asti
+   * numeroympyröinä — Istanbulilla ei ole ollut yhtään miniatyyriä.
+   * Kuvaukset on kirjoitettu nähtävyysjuttujen todennettujen
+   * valokuvien mukaan (js/packs/nahtavyysjutut.js: istanbul) —
+   * arkkitehtuurin tosiasioita, ei mielikuvia. Yksi otto per kohde.
+   */
+  ['istanbul-suuri-basaari', 'a covered bazaar street: a long stone '
+    + 'passage roofed with a row of shallow vaults painted with red '
+    + 'and blue arabesque bands, arched shopfronts on both sides, and '
+    + 'ornate metal lanterns hanging on chains from the vault. NO '
+    + 'people'],
+  ['istanbul-sininen-moskeija', 'a great Ottoman mosque with a '
+    + 'cascade of grey lead domes stepping up to one large central '
+    + 'dome, and six slender pencil-thin minarets with pointed caps '
+    + 'and two or three small balconies each, rising around it'],
+  ['istanbul-hagia-sofia', 'a massive low pinkish-buff Byzantine '
+    + 'basilica: one very wide shallow dome flanked by two half-domes '
+    + 'stepping down, heavy buttresses along the flanks, and four '
+    + 'plain stone minarets of unequal design standing at the corners'],
+  ['istanbul-topkapin-palatsi', 'a low Ottoman palace pavilion in a '
+    + 'walled garden: wide overhanging eaves on slender columns, a '
+    + 'shallow lead dome with a gilded finial, marble-framed arched '
+    + 'windows and a colonnaded porch in front', 'halpa'],
+  ['istanbul-galatan-torni', 'a tall round stone tower rising alone '
+    + 'from a slope of tiled rooftops: a cylindrical grey shaft with '
+    + 'small rectangular windows, a projecting railed balcony near '
+    + 'the top, a ring of arched windows above it and a pointed '
+    + 'conical roof'],
+  ['istanbul-uskudar', 'a small waterfront mosque built right at the '
+    + 'shore: a single square domed prayer hall with one slim '
+    + 'minaret, an arcaded courtyard wall beside it, and a stone quay '
+    + 'with water lapping at its foot', 'halpa'],
+  ['istanbul-suleymaniyen-moskeija', 'a hilltop imperial mosque: one '
+    + 'large central dome with half-domes cascading down on two '
+    + 'sides, rows of arched windows in the drum, and four slender '
+    + 'minarets at the corners of a walled forecourt, the two inner '
+    + 'ones clearly taller than the outer ones'],
+  ['istanbul-galatan-silta', 'a long low modern road bridge across a '
+    + 'harbour inlet: a flat wide deck on plain concrete piers, a '
+    + 'railing lined with fishing rods along the top, and a second '
+    + 'lower level under the deck filled with a row of small '
+    + 'restaurant fronts with awnings. NO people'],
+  ['istanbul-sirkecin-asema', 'a 19th-century orientalist railway '
+    + 'terminus: a symmetrical facade of pale stone banded with dark '
+    + 'red brick, a large round rose window over the central arched '
+    + 'entrance, two square clock towers flanking it and a glazed '
+    + 'dome on the roof between them'],
+  ['istanbul-neitsyttorni', 'a small white stone tower on a tiny '
+    + 'rocky islet surrounded by water: a low single-storey building '
+    + 'with a red tiled roof at the base, an octagonal tower rising '
+    + 'from it with a railed gallery, a dark lead cupola and a very '
+    + 'tall thin flagpole at the top', 'halpa'],
 ];
 
 const uusiksi = process.argv.includes('--uusiksi');
