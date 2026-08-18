@@ -8542,82 +8542,6 @@ button.lukija-nappi.lukee,
  * display: flex voittaisi hidden-attribuutin ilman tätä. */
 .lukija-paneeli[hidden] { display: none; }
 
-/*
- * ── PYSYVÄ KELLUVA KAIUTIN (omistajan tilaus 18.8.2026) ──────────
- *
- * Lukijan pysyvä kahva ruudun oikeassa ylälaidassa: näkyy niin kauan
- * kuin luenta on päällä (myös tauolla) ja avaa saman säätöpaneelin kuin
- * sivun oma kaiutin. Paikan (top/right pikseleinä) laskee js/lukija.js
- * kelluvanPaikka: kotelo asettuu näkymän ylälaidan pysyvien elementtien
- * ALLE — kartan hampurilaisen, lehden tarttuvan otsikkorivin kaiuttimen
- * ja jutun valikkonapin — eikä koskaan niiden päälle.
- *
- * position: fixed, koska sama kotelo elää sekä bodyssa (kartta) että
- * avoimen dialogin ylätasossa (lehti, juttu, opas).
- *
- * Sama tyyliperhe kuin muilla kelluvilla napeilla: pyöreä
- * pergamenttinappula ja pelkkä mustepiirros, ei emojia.
- */
-.lukija-kelluva {
-  position: fixed;
-  z-index: 8;
-}
-
-.lukija-kelluva .lukija-kelluva-nappi,
-.dialog .lukija-kelluva .lukija-kelluva-nappi {
-  width: 2.1rem;
-  height: 2.1rem;
-  min-width: 2.1rem;
-  min-height: 2.1rem;
-  padding: 0;
-  display: grid;
-  place-items: center;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(246, 231, 198, 0.92);
-  color: rgba(70, 51, 31, 0.78);
-  box-shadow: 0 2px 8px rgba(40, 28, 14, 0.28);
-  cursor: pointer;
-  transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
-
-.lukija-kelluva .lukija-kelluva-nappi .viiva-ikoni svg {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-/* Tila hillitysti: lukeva kaiutin saa meripihkaisen kehän, tauolla
-   oleva jää pelkäksi pergamentiksi. Sama sävy kuin luennan
-   korostuksella — yksi väri kertoo kaikkialla "tätä luetaan". */
-.lukija-kelluva .lukija-kelluva-nappi.lukee,
-.dialog .lukija-kelluva .lukija-kelluva-nappi.lukee {
-  background: rgba(234, 184, 78, 0.42);
-  color: rgba(70, 51, 31, 0.95);
-  box-shadow: 0 0 0 2px rgba(168, 116, 26, 0.45), 0 2px 8px rgba(40, 28, 14, 0.28);
-}
-
-.lukija-kelluva .lukija-kelluva-nappi.tauolla,
-.dialog .lukija-kelluva .lukija-kelluva-nappi.tauolla {
-  background: rgba(246, 231, 198, 0.92);
-  color: rgba(70, 51, 31, 0.55);
-}
-
-.lukija-kelluva .lukija-kelluva-nappi:hover:not(:disabled),
-.lukija-kelluva .lukija-kelluva-nappi:focus-visible,
-.dialog .lukija-kelluva .lukija-kelluva-nappi:hover:not(:disabled),
-.dialog .lukija-kelluva .lukija-kelluva-nappi:focus-visible {
-  color: rgba(70, 51, 31, 1);
-}
-
-/* Paneeli laskeutuu kelluvan napin alle sen oikeaan reunaan. Toinen
-   valitsin on mukana, koska #arrival-dialog .lukija-paneeli voittaisi
-   tunnisteellaan pelkän luokkaparin. */
-.lukija-paneeli.lukija-paneeli-kelluva,
-#arrival-dialog .lukija-paneeli.lukija-paneeli-kelluva {
-  top: calc(100% + 0.3rem);
-  right: 0;
-}
-
 /* Lehdessä kaiutin istuu tarttuvassa otsikkorivissä, joten paneeli
  * laskeutuu otsikkorivin ALLE eikä ruudun yläkulmaan napin päälle.
  * Mitta kattaa korkeimmankin otsikon (etusivun nimiö ~3.4rem).
@@ -12626,14 +12550,91 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * nostossa ja laatikoiden leipätekstissä, joten se ei tuo korttiin
  * uutta ääntä — se vain nostaa nimen otsikon kokoiseksi.
  */
+/*
+ * TARTTUVA OTSIKKORIVI (omistajan tilaus 18.8.2026: "lisätä
+ * matkaopassivulle samanlainen kelluva otsikko missä on kaiuttimen
+ * kuva"). Sama resepti kuin lehden nimiöllä (#arrival-city): rivi
+ * tarttuu vieritysalueen yläreunaan, levittyy negatiivisilla
+ * marginaaleilla paperin reunaan ja saa oman paperitaustansa, jottei
+ * alta vierivä teksti kuulla läpi. Oma piirtokerros translateZ:llä
+ * samasta syystä kuin lehdessä (iOS:n vieritys nyki blend-modea).
+ * top: 0 vaatii, ettei kortilla ole yläpehmustetta (selaimet ovat
+ * eri mieltä top: 0:n paikasta pehmusteen kanssa, ks. lehtiarkin
+ * kommentti) — pehmuste siirretään otsikkoriville itselleen.
+ * Oikeaan reunaan jää tila kaiuttimelle (alla), ettei pitkä nimi
+ * juokse napin alle.
+ */
+.dialog.arkki.nahtavyys-arkki.opas-arkki .nahtavyys-kortti { padding-top: 0; }
+
 .opas-arkki #nahtavyys-otsikko {
-  margin: 0 0 0.55rem;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  transform: translateZ(0);
+  margin: 0 -1.15rem 0.55rem;
+  padding: 0.7rem calc(1.15rem + 2.7rem) 0.4rem 1.15rem;
+  background-color: var(--opas-pohja);
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
   font-family: var(--font-luku);
   font-size: clamp(2rem, 6.4vw, 2.9rem);
   font-weight: 700;
   line-height: 1.04;
   letter-spacing: -0.01em;
   color: var(--opas-aksentti);
+}
+
+/* Kortin pehmuste levenee 700 px:ssä (1.15rem → 2rem); otsikkorivin
+   levitys ja sisennys seuraavat samaa mittaa. */
+@media (min-width: 700px) {
+  .opas-arkki #nahtavyys-otsikko {
+    margin-inline: -2rem;
+    padding-inline: 2rem calc(2rem + 2.7rem);
+  }
+}
+
+/*
+ * Kaiutin otsikkorivin oikeaan reunaan, korkeussuunnassa keskitettynä
+ * (omistajan tilaus 18.8.2026: "keskitä korkeussuunnassa se ja siirrä
+ * oikeaan reunaan") — sama asema kuin lehden otsikkorivin
+ * kaiuttimella. Kumoaa yleisen jutturivisäännön (yllä), joka latoo
+ * napin otsikkotekstin perään.
+ */
+.opas-arkki #nahtavyys-otsikko > button.lukija-nappi,
+.dialog.opas-arkki #nahtavyys-otsikko > button.lukija-nappi {
+  position: absolute;
+  top: 50%;
+  right: 1.15rem;
+  transform: translateY(-50%);
+  margin: 0;
+  place-items: center end;
+}
+
+@media (min-width: 700px) {
+  .opas-arkki #nahtavyys-otsikko > button.lukija-nappi,
+  .dialog.opas-arkki #nahtavyys-otsikko > button.lukija-nappi {
+    right: 2rem;
+  }
+}
+
+/* Kaiuttimen kuvake otsikkorivissä lehden kokoa (24 px) — otsikon
+   em-koko (jopa 2.9rem) tekisi siitä rivin hallitsevan merkin. */
+.opas-arkki #nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg,
+.dialog.opas-arkki #nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Säätöpaneeli laskeutuu tarttuvan otsikkorivin ALLE kaiuttimen
+   linjaan — ei dialogin yläkulmaan otsikon päälle. Mitta kattaa
+   korkeimmankin nimiön (2.9rem + pehmusteet). */
+.opas-arkki .lukija-paneeli {
+  top: 4.6rem;
+  right: 1.15rem;
+}
+
+@media (min-width: 700px) {
+  .opas-arkki .lukija-paneeli { right: 2rem; }
 }
 
 /* Kohde-/vuosirivi on oppaassa osaston nimi, ja se saa saman

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 897, teksti: 'Oppaalle tarttuva otsikkorivi; kelluva kaiutin pois' },
   { v: 896, teksti: 'Valittavat siirtokohteet erottuvat: punarengas ja halo' },
   { v: 895, teksti: 'Pöllön juttu aukeaa chatin päälle, sulku palaa chattiin' },
   { v: 894, teksti: 'Paljastuskortti vaalealle sumealle pohjalle' },
