@@ -518,12 +518,18 @@ button, .brand, .turn-pill, .fact-card h2 {
 
 .paavalikko .valikko-alarivi .viiva-ikoni svg { width: 26px; height: 26px; }
 
-.paavalikko .valikko-alarivi .palaute-kulma {
-  /* Huutomerkki on tekstiä, ei 26 px:n viivakuvake — pienempi koko
-   * näytti vajaalta naapuriensa rinnalla (omistaja 13.8.2026). */
-  font-size: 1.55rem;
+.paavalikko .valikko-alarivi .valikko-tekstinappi {
+  /* Tekstinapit "uusi" ja "ehdota" (omistaja 18.8.2026): leveys
+   * sisällön mukaan niin että sana mahtuu, korkeus ja tausta samat
+   * kuin Äänet-rivin napeilla. */
+  width: auto;
+  min-width: 54px;
+  padding: 0 1.1rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
   font-weight: 600;
   line-height: 1;
+  letter-spacing: 0.04em;
 }
 
 /* Kertojavalikko: nappi näyttää nykyisen tilan kuvakkeen ja avaa alleen

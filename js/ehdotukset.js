@@ -30,7 +30,7 @@ import { html } from './ui-apurit.js';
  * 'https://matkakirja-ehdotukset.tunnus.workers.dev'.
  * Ohje kokonaisuudessaan: docs/moduulit/lukijoilta.md.
  */
-export const EHDOTUS_OSOITE = '';
+export const EHDOTUS_OSOITE = 'https://matkakirja-ehdotukset.samireivinen.workers.dev';
 
 /** Kuratointiavain laitteen muistissa (työhuoneen Lukijoilta-lehti). */
 export const EHDOTUS_AVAIN_TALLE = 'matkakirja-ehdotus-avain';

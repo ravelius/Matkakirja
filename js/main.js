@@ -44,7 +44,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.853';
+const APP_VERSION = '2026-08-09.854';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -740,7 +740,6 @@ document.getElementById('nollaa-ok').addEventListener('click', () => {
   merkitsePaivitys();
   tyhjennaMuistit();
 });
-document.getElementById('rules-btn').addEventListener('click', () => rulesDialog.showModal());
 // Passi kuuluu pelaajalle eikä yksittäiselle pelille, joten nappi kytketään
 // kerran täällä eikä käyttöliittymän mukana joka uudessa pelissä.
 // Kukkaropilleri on samalla matkalaukun nappi (omistajan toive).
