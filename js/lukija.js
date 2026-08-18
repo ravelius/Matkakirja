@@ -247,7 +247,6 @@ export const LUKIJAN_OHITETTAVAT = [
 
   // Lukija itse ei kuulu luettavaan.
   '.lukija-nappi',
-  '.lukija-kelluva',
 ];
 
 /**
@@ -1142,7 +1141,6 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
     onLoppu: loppui,
     onTila: (t) => {
       paivitaOhjain(merkki, t);
-      paivitaKelluva(t);
       seuranta?.paivita(t);
     },
     onVirhe: (vaihe) => {
@@ -1511,153 +1509,15 @@ function ohjainIkoni(nimi) {
 /** Avoin paneeli: { elementti, merkki, taukoNappi, kappaleRivi, … } tai null. */
 let ohjain = null;
 
-/* ------------------------------------------------------------------ */
-/* PYSYVÄ KELLUVA KAIUTIN (omistajan tilaus 18.8.2026)                 */
-/* ------------------------------------------------------------------ */
-
 /*
- * "Kun lukija on kytketty päälle, oikeassa yläreunassa näkyy KOKO AJAN
- * kaiuttimen kuvake." Säätöpaneeli piiloutuu neljässä sekunnissa, ja
- * sen jälkeen säätimet olivat vain sivun oman pikkukaiuttimen takana —
- * sen etsiminen kesken kuuntelun on juuri se työ, jota kuuntelija ei
- * halua tehdä. Kelluva kaiutin on lukijan pysyvä kahva: se on näkyvissä
- * niin kauan kuin luenta on päällä (myös tauolla) ja JOKAISESSA
- * näkymässä, jossa lukija toimii — lehdessä, oppaassa, jutussa ja
- * kartalla, jossa matkakirjan merkintä luetaan ilman dialogia.
- *
- * UUTTA PANEELIA EI RAKENNETA. Napautus avaa saman säätöpaneelin
- * (avaaOhjain), joka aukeaa sivun omasta kaiuttimestakin — tauko,
- * kappalehypyt, laskuri, jatkuva luenta ja lopetus. Toinen napautus
- * vipuaa paneelin piiloon luentaa katkaisematta.
- *
- * PAIKKA: oikea yläkulma — mutta EI pysyvän elementin päälle. Kartalla
- * yläkulmassa on hampurilainen, lehdessä sivun oma tarttuva otsikkorivi
- * kaiuttimineen ja jutussa nähtävyysvalikon nappi. Kelluva kaiutin
- * asettuu niiden ALLE: ankkuriksi otetaan näkymän ylälaidan oikeanpuoleiset
- * pysyvät elementit, ja nappi laskeutuu alimman alle sen oikeaan reunaan
- * kohdistettuna.
- *
- * ISÄNTÄ RATKAISTAAN NÄKYMÄSTÄ. Avoin <dialog> on selaimen omassa
- * ylätasossa, joten bodyyn ripustettu nappi jäisi sen alle näkymättömiin
- * — sama syy kuin pikkuselosteella ja säägraafin suurennoksella.
+ * ERILLISTÄ KELLUVAA KAIUTINTA EI ENÄÄ OLE (omistaja 18.8.2026
+ * illalla): v868:n pysyvä pyöreä kaiutinkahva kellui lehden kuvien
+ * päällä otsikkorivin kaiuttimen ALLA — kaksi kaiutinta samassa
+ * kulmassa. Luennan pysyvä kahva on nyt sivun tarttuvan otsikkorivin
+ * oma kaiutin (lehti ja Matkailijan opas): se pysyy näkyvissä
+ * vieritettäessä ja avaa säätöpaneelin myös kesken luennan
+ * (liitaLukija-napin vipulogiikka alla).
  */
-const KELLUVAN_ANKKURIT = [
-  '.lukija-nappi',              // sivun oma kaiutin (lehti, juttu, opas)
-  '.lehti-hampurilainen',       // lehden oma yläpalkki
-  '.nahtavyys-valikko-nappi',   // nähtävyysjutun valikko
-  'header.topbar',              // kartta: ylärivi hampurilaisineen
-  '.maa-pilleri',               // kartan oikean yläkulman maapilleri
-];
-
-/** Kelluvan säätimen kotelo ja nappi, tai null jos sitä ei ole. */
-let kelluva = null;
-
-/** Näkymän isäntä: päällimmäinen avoin dialogi, muuten body. */
-function kelluvanIsanta() {
-  if (typeof document === 'undefined') return null;
-  const dialogit = [...document.querySelectorAll('dialog')].filter((d) => d.open);
-  return dialogit[dialogit.length - 1] ?? document.body ?? null;
-}
-
-/** Kelluvan napin paikka: alimman ylälaidan ankkurin alapuolelle. */
-function kelluvanPaikka(isanta) {
-  const win = isanta?.ownerDocument?.defaultView ?? window;
-  const leveys = win.innerWidth || 0;
-  const korkeus = win.innerHeight || 0;
-  let ala = 0;
-  let oikea = null;
-  for (const valitsin of KELLUVAN_ANKKURIT) {
-    for (const el of isanta.querySelectorAll?.(valitsin) ?? []) {
-      if (el.hidden || kelluva?.kotelo?.contains?.(el)) continue;
-      const r = el.getBoundingClientRect?.();
-      // Vain ylälaidan pysyvät elementit ovat ankkureita: keskellä sivua
-      // oleva samanniminen nappi ei saa työntää säädintä alas.
-      if (!r?.width || !r.height || r.top > korkeus * 0.35) continue;
-      if (r.bottom > ala) ala = r.bottom;
-      if (oikea === null || leveys - r.right < oikea) oikea = leveys - r.right;
-    }
-  }
-  // OIKEA REUNA ON PAPERIN MARGINAALI, EI TEKSTIPALSTA. Ankkurin
-  // (sivun oma kaiutin) mukaan tasattuna nappi jäi juuri palstan
-  // päälle ja peitti lehden liitelinkin; kortin reunaan tasattuna se
-  // istuu tekstin ja paperin repaleisen reunan väliin.
-  const kortti = isanta.querySelector?.('.dialog-card');
-  const kr = kortti?.getBoundingClientRect?.();
-  if (kr?.width) oikea = Math.min(oikea ?? Infinity, Math.max(0, leveys - kr.right) + 2);
-  if (!ala) {
-    // Ei ankkuria: kortin oma yläkulma (dialogi) tai ruudun kulma.
-    ala = Math.max(0, kr?.top ?? 0);
-  }
-  return { yla: ala + 8, oikea: Math.max(6, oikea ?? 6) };
-}
-
-/** Luo kotelon ja napin, jos niitä ei vielä ole. */
-function varmistaKelluva(isanta) {
-  if (kelluva && kelluva.isanta === isanta && kelluva.kotelo.isConnected) return kelluva;
-  poistaKelluva();
-  const doc = isanta.ownerDocument ?? document;
-  const kotelo = doc.createElement('div');
-  kotelo.className = 'lukija-kelluva';
-  const nappi = doc.createElement('button');
-  nappi.type = 'button';
-  nappi.className = 'lukija-kelluva-nappi';
-  nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${KAIUTIN_IKONI}</span>`;
-  nappi.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (!ajossa) { poistaKelluva(); return; }
-    // Laitteen omalla äänellä paneelia ei ole: nappi pysäyttää.
-    if (!ajossa.soitin) { pysaytaLukija(); return; }
-    if (ohjain?.merkki === ajossa.merkki && kotelo.contains(ohjain.elementti)) {
-      vipuaOhjain();
-      return;
-    }
-    avaaOhjain(kotelo, ajossa.nappi);
-  });
-  // Napautus säätimeen ei saa valua taustalle (dialogin sulkijat ym.).
-  kotelo.addEventListener('click', (e) => e.stopPropagation());
-  kotelo.appendChild(nappi);
-  isanta.appendChild(kotelo);
-  const sijoita = () => paivitaKelluva();
-  const win = doc.defaultView ?? window;
-  win.addEventListener?.('resize', sijoita);
-  kelluva = { kotelo, nappi, isanta, sijoita, win };
-  return kelluva;
-}
-
-function poistaKelluva() {
-  if (!kelluva) return;
-  // Paneeli seuraa kotelon mukana: se on kotelon lapsi.
-  if (kelluva.kotelo.contains(ohjain?.elementti)) suljeOhjain();
-  kelluva.win?.removeEventListener?.('resize', kelluva.sijoita);
-  kelluva.kotelo.remove();
-  kelluva = null;
-}
-
-/**
- * Näkyvyys, paikka ja tila yhdellä kutsulla.
- *
- * Kutsutaan jokaisesta luennan tilanmuutoksesta (merkitseTila) ja
- * soittimen ilmoituksesta, joten säädin ei jää roikkumaan kartalle
- * luennan päätyttyä eikä katoa sivunvaihdossa.
- */
-function paivitaKelluva(tila = null) {
-  if (typeof document === 'undefined') return;
-  if (!ajossa) { poistaKelluva(); return; }
-  const isanta = kelluvanIsanta();
-  if (!isanta) return;
-  const nyt = varmistaKelluva(isanta);
-  const tauolla = tila ? Boolean(tila.tauolla) : Boolean(ajossa.soitin?.tauolla?.());
-  // Tila kerrotaan hillitysti: lukeva kaiutin saa meripihkan, tauolla
-  // oleva palaa mustepiirrokseksi (sama väripari kuin sivun omalla).
-  nyt.nappi.classList.toggle('lukee', !tauolla);
-  nyt.nappi.classList.toggle('tauolla', tauolla);
-  const nimi = tauolla ? 'Luenta tauolla — avaa säätimet' : 'Lukija lukee — avaa säätimet';
-  nyt.nappi.title = nimi;
-  nyt.nappi.setAttribute('aria-label', nimi);
-  const paikka = kelluvanPaikka(isanta);
-  nyt.kotelo.style.top = `${Math.round(paikka.yla)}px`;
-  nyt.kotelo.style.right = `${Math.round(paikka.oikea)}px`;
-}
 
 function suljeOhjain() {
   if (!ohjain) return;
@@ -1727,19 +1587,9 @@ function avaaOhjain(isanta, nappi) {
   const nyt = ajossa;
   if (!nyt?.soitin || nyt.nappi !== nappi) return;
   suljeOhjain();
-  /*
-   * YKSI PANEELI, YKSI PAIKKA. Kun kelluva säädin on näkyvissä, paneeli
-   * aukeaa AINA sen alle — myös sivun omasta kaiuttimesta painettuna.
-   * Kaksi eri paikkaa samalle paneelille tarkoittaisi, että kapealla
-   * ruudulla toinen niistä osuu kelluvan napin päälle.
-   */
-  const koti = kelluva?.kotelo ?? isanta;
-  const doc = koti.ownerDocument;
+  const doc = isanta.ownerDocument;
   const paneeli = doc.createElement('div');
-  // Kelluvan säätimen alle avattu paneeli asettuu kotelon alalaitaan
-  // eikä dialogin yläkulmaan (CSS: .lukija-paneeli-kelluva).
-  paneeli.className = koti === kelluva?.kotelo
-    ? 'lukija-paneeli lukija-paneeli-kelluva' : 'lukija-paneeli';
+  paneeli.className = 'lukija-paneeli';
   // Paneelin napautus ei saa valua taustalle (dialogin sulkijat ym.).
   paneeli.addEventListener('click', (e) => e.stopPropagation());
   // Käyttö pitää paneelin näkyvissä — piiloutumislaskuri alkaa alusta
@@ -1787,7 +1637,7 @@ function avaaOhjain(isanta, nappi) {
     autoNappi.setAttribute('aria-pressed', autoLuenta() ? 'true' : 'false');
   }
   tee('sulje', SEIS_OTSIKKO, () => pysaytaLukija());
-  koti.appendChild(paneeli);
+  isanta.appendChild(paneeli);
   ohjain = {
     elementti: paneeli, merkki: nyt.merkki, taukoNappi, kappaleRivi, edellinen, seuraava,
     ajastin: null,
@@ -1801,9 +1651,6 @@ function avaaOhjain(isanta, nappi) {
 
 /** Napin ulkoasu ja saavutettava nimi seuraavat luennan tilaa. */
 function merkitseTila(nappi, lukee) {
-  // Kelluva säädin seuraa luennan tilaa myös silloin, kun luennalla ei
-  // ole omaa nappia (matkakirjan merkintä kartalla, pöllön vastaus).
-  paivitaKelluva();
   if (!nappi) return;
   nappi.classList?.toggle('lukee', Boolean(lukee));
   // Lukijaäänellä nappi vipuaa soittimen (pysäytys on paneelissa);
@@ -2011,8 +1858,8 @@ export function paivitaLukija(nappi, { vahimmais = LUETTAVAN_VAHIMMAIS } = {}) {
  * katsoo kuvaa, jonka pöllö juuri näytti — joten puhe saa jatkua
  * sen alla (omistajan tilaus 18.8.2026).
  *
- * Lukijan omat pinnat (lukija-paneeli, kelluva kaiutin) eivät ole
- * kumpaakaan lajia, joten ne eivät osu sääntöön — ja automoodin
+ * Lukijan oma pinta (lukija-paneeli) ei ole
+ * kumpaakaan lajia, joten se ei osu sääntöön — ja automoodin
  * sivunkäännöt vaihtavat sisältöä jo auki olevassa dialogissa, joten
  * nekään eivät osu. Kaksi ikkunaa ei näy tarkkailijalle ja kutsuu
  * pysäytystä itse: maalehti (sisältö vaihtuu auki olevaan dialogiin,

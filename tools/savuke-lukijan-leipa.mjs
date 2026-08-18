@@ -1,13 +1,15 @@
 /*
- * SELAINSAVUKE: lukijan leipätekstipolitiikka ja pysyvä kaiutinsäädin.
+ * SELAINSAVUKE: lukijan leipätekstipolitiikka ja luennan kahva.
  *
  * Yksikkötestit näkevät valinnan pienoismallilla; tämä ajaa saman
  * valinnan OIKEASSA DOMissa (Firenzen matkaopas, Firenzen lehden
  * etusivu, yksi nähtävyysjuttu) ja kirjoittaa luentalistat
  * tekstitiedostoiksi, jotta ennen/jälkeen-ero on luettavissa.
  *
- * Lisäksi kaapataan kelluva kaiutin kartalla ja lehdessä leveällä ja
- * kapealla ruudulla.
+ * Lisäksi todistetaan luennan kahva (v896): kelluvaa säädintä ei ole,
+ * otsikkorivin kaiutin vipuaa paneelin myös kesken luennan, ja
+ * Matkailijan oppaan tarttuva otsikkorivi pitää kaiuttimen oikeassa
+ * reunassa korkeussuunnassa keskitettynä.
  *
  *   node tools/savuke-lukijan-leipa.mjs
  *   KAAPPAUSKANSIO=/polku node tools/savuke-lukijan-leipa.mjs
@@ -173,26 +175,24 @@ for (const [nimi, tulos] of Object.entries(tulokset)) {
   console.log(`${nimi}: ${rivit.length} kohtaa → luenta-${nimi}-${leima}.txt`);
 }
 
-/* --- 4) Kelluvan kaiuttimen kaappaukset -------------------------- */
+/* --- 4) Luennan kahva: otsikkorivin kaiutin (ei kelluvaa) --------- */
 async function kaappaa(nimi) {
   await sivu.screenshot({ path: join(ULOS, `${nimi}-${leima}.png`) });
 }
 
-/** Kelluvan säätimen tila ja paikka suhteessa ylälaidan ankkuriin. */
-const kelluvanTila = () => sivu.evaluate(() => {
-  const kotelo = document.querySelector('.lukija-kelluva');
-  if (!kotelo) return { on: false };
-  const r = kotelo.getBoundingClientRect();
-  const oma = document.querySelector('.lukija-nappi:not(.lukija-kelluva-nappi)');
-  const hamppari = document.querySelector('header.topbar, .lehti-hampurilainen');
-  const a = oma?.getBoundingClientRect?.() ?? hamppari?.getBoundingClientRect?.() ?? null;
+/** Kahvan tila: kelluvaa säädintä EI saa olla (poistettu v896),
+ *  sivun oma kaiutin on ainoa kahva ja kertoo luennan tilan.
+ *  Kartalla kahva on merkinnän oma kuuntelunappi (#fact-kuuntele). */
+const kahvanTila = () => sivu.evaluate(() => {
+  const kelluva = document.querySelector('.lukija-kelluva');
+  const kahvat = [...document.querySelectorAll('.lukija-nappi, #fact-kuuntele')]
+    .filter((n) => !n.hidden && n.offsetParent !== null);
+  // Kartan nappi jää dialogin alle näkyviin — lukeva kahva ensin.
+  const oma = kahvat.find((n) => n.classList.contains('lukee')) ?? kahvat[0] ?? null;
   return {
-    on: true,
-    tila: kotelo.firstChild?.className ?? '',
-    ylhaalla: r.top < window.innerHeight * 0.5,
-    oikealla: r.right > window.innerWidth * 0.5,
-    ankkurinAlla: a ? r.top >= a.bottom : null,
-    isanta: kotelo.parentElement?.id || kotelo.parentElement?.tagName,
+    kelluvia: kelluva ? 1 : 0,
+    omaKaiutin: Boolean(oma),
+    lukee: oma?.classList.contains('lukee') ?? null,
   };
 });
 
@@ -222,13 +222,13 @@ await sivu.evaluate(async () => {
   await new Promise((r) => setTimeout(r, 600));
 });
 console.log('kartta leveä:', await kuuntele('#fact-kuuntele'),
-  JSON.stringify(await kelluvanTila()));
+  JSON.stringify(await kahvanTila()));
 await kaappaa('kaiutin-kartta-leveä');
 
 await sivu.setViewportSize({ width: 390, height: 844 });
 await sivu.waitForTimeout(700);
 console.log('kartta kapea:', await kuuntele('#fact-kuuntele'),
-  JSON.stringify(await kelluvanTila()));
+  JSON.stringify(await kahvanTila()));
 await kaappaa('kaiutin-kartta-kapea');
 
 // Lehti kapealla: avaa Firenze ja paina sivun omaa kaiutinta.
@@ -238,7 +238,7 @@ await sivu.evaluate(async () => {
   await new Promise((r) => setTimeout(r, 1400));
 });
 console.log('lehti kapea:', await kuuntele('#arrival-dialog .lukija-nappi'),
-  JSON.stringify(await kelluvanTila()));
+  JSON.stringify(await kahvanTila()));
 await kaappaa('kaiutin-lehti-kapea');
 
 // Lehti leveällä: ikkunan koon muutos pysäyttää luennan (sivu piirtyy
@@ -246,34 +246,66 @@ await kaappaa('kaiutin-lehti-kapea');
 await sivu.setViewportSize({ width: 1280, height: 900 });
 await sivu.waitForTimeout(900);
 console.log('lehti leveä:', await kuuntele('#arrival-dialog .lukija-nappi'),
-  JSON.stringify(await kelluvanTila()));
+  JSON.stringify(await kahvanTila()));
 await kaappaa('kaiutin-lehti-leveä');
 
-// Kelluvan napautus avaa saman säätöpaneelin — sen alle, ei dialogin
-// yläkulmaan.
-await sivu.click('.lukija-kelluva-nappi');
+// Otsikkorivin kaiutin on luennan kahva myös kesken luennan: uusi
+// napautus vipuaa säätöpaneelin näkyviin ja piiloon luentaa
+// katkaisematta (kelluva kahva poistettu v896).
+await sivu.click('#arrival-dialog .lukija-nappi');
 await sivu.waitForTimeout(400);
-// Nappi vipuaa: jos sivun oma kaiutin ehti jo avata paneelin, ensimmäinen
-// napautus sulki sen — toinen tuo sen takaisin.
 if (await sivu.evaluate(() => document.querySelector('.lukija-paneeli')?.hidden !== false)) {
-  await sivu.click('.lukija-kelluva-nappi');
+  await sivu.click('#arrival-dialog .lukija-nappi');
   await sivu.waitForTimeout(400);
 }
 const paneeli = await sivu.evaluate(() => {
   const p = document.querySelector('.lukija-paneeli');
-  const k = document.querySelector('.lukija-kelluva');
-  if (!p || !k) return { on: false };
+  const n = document.querySelector('#arrival-dialog .lukija-nappi');
+  if (!p || !n) return { on: false };
   const pr = p.getBoundingClientRect();
-  const kr = k.getBoundingClientRect();
+  // Vertailu kuvakkeeseen, ei 40 px:n osuma-alueeseen: osuma-alue
+  // jatkuu kuvakkeen ali, eikä paneelin tarvitse väistää sitä.
+  const ir = (n.querySelector('svg') ?? n).getBoundingClientRect();
   return {
     on: !p.hidden,
-    kotelossa: k.contains(p),
-    napinAlla: pr.top >= kr.bottom - 1,
+    dialogissa: Boolean(p.closest('#arrival-dialog')),
+    napinAlla: pr.top >= ir.bottom - 1,
+    lukeeYha: n.classList.contains('lukee'),
     nappeja: p.querySelectorAll('button').length,
   };
 });
-console.log('paneeli kelluvasta:', JSON.stringify(paneeli));
+console.log('paneeli otsikkorivin kaiuttimesta:', JSON.stringify(paneeli));
 await kaappaa('kaiutin-paneeli-lehti');
+
+/* --- 5) Matkailijan oppaan tarttuva otsikkorivi (v896) ------------ */
+const opasRivi = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  document.getElementById('arrival-dialog')?.close();
+  await new Promise((r) => setTimeout(r, 400));
+  ui.openArrival(ui.game.board.cityById.get('firenze'));
+  await new Promise((r) => setTimeout(r, 1200));
+  const opas = ui.lehtitila.tutkiKansi?.matkailijalle?.artikkeli;
+  if (!opas) return 'ei opasta';
+  ui.avaaNahtavyys(opas, null, { henkilolinkit: [], valikko: false });
+  await new Promise((r) => setTimeout(r, 900));
+  // Vieritys todistaa tarttumisen: otsikon on pysyttävä ylälaidassa.
+  const kortti = document.querySelector('#nahtavyys-dialog .nahtavyys-kortti');
+  kortti.scrollTop = 600;
+  await new Promise((r) => setTimeout(r, 300));
+  const otsikko = document.getElementById('nahtavyys-otsikko');
+  const kaiutin = otsikko.querySelector('.lukija-nappi');
+  const or = otsikko.getBoundingClientRect();
+  const kr = kortti.getBoundingClientRect();
+  const nr = kaiutin?.getBoundingClientRect?.() ?? null;
+  return {
+    tarttuu: Math.abs(or.top - kr.top) < 2,
+    kaiutinOn: Boolean(kaiutin) && !kaiutin.hidden,
+    keskitetty: nr ? Math.abs((nr.top + nr.bottom) / 2 - (or.top + or.bottom) / 2) < 3 : null,
+    oikealla: nr ? or.right - nr.right < 40 : null,
+  };
+});
+console.log('oppaan otsikkorivi:', JSON.stringify(opasRivi));
+await kaappaa('opas-otsikkorivi-leveä');
 
 console.log('sivuvirheet:', virheet.length ? virheet.slice(0, 5) : 'ei yhtään');
 await selain.close();

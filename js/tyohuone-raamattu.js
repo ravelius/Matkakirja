@@ -402,11 +402,14 @@ export const RAAMATTU = {
           + 'luentaan pääsee merkitsemällä data-lukija="leipa") — '
           + 'ohituslista vaatisi muistamista joka taittolajista ja '
           + 'unohdus vuotaisi ääneen, valkolistan virhe kuuluu heti.',
-        'LUKIJAN PYSYVÄ KAHVA (omistaja 18.8.2026): luennan ajan '
-          + 'ruudun oikeassa ylälaidassa on pysyvä kaiutin kaikissa '
-          + 'näkymissä, aina pysyvien yläelementtien alapuolella eikä '
-          + 'koskaan niiden päällä. Se avaa saman säätöpaneelin kuin '
-          + 'sivun oma kaiutin — uutta säädintä ei rakenneta.',
+        'LUKIJAN PYSYVÄ KAHVA (omistaja 18.8.2026, tarkennettu samana '
+          + 'iltana): luennan kahva on sivun tarttuvan otsikkorivin '
+          + 'kaiutin — lehdissä ja Matkailijan oppaassa rivi pysyy '
+          + 'näkyvissä vieritettäessä, kaiutin sen oikeassa reunassa '
+          + 'korkeussuunnassa keskitettynä. Se avaa säätöpaneelin myös '
+          + 'kesken luennan; erillistä kelluvaa kaiutinta ei ole '
+          + '(v868:n kelluva kahva poistettu — kaksi kaiutinta samassa '
+          + 'kulmassa).',
         'LUENTAPOLKU: äänite soi kun luenta-kenttä vastaa '
           + 'näyttötekstiä; muuttunut teksti striimataan. Uusia '
           + 'äänitteitä EI generoida — kaikki uusitaan kerralla, kun '
