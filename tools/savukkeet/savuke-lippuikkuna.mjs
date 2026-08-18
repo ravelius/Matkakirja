@@ -12,7 +12,13 @@
  *     ISO_LIPPU_LEVEYS), ja jos se ehtii latautua, sen luonnollisen
  *     leveyden on katettava näytön laitepikselit.
  *
- *  2. RAJAUS. Napautettu vaakuna tai versiolippu kasvaa animaationa;
+ *  2. LEIKKAUSRAKENNE. Kehys (paperi, reuna, varjo) ja vierityskotelo
+ *     (overflow + clip-path) ovat eri elementit. Yhdistettyinä toinen
+ *     tehtävä syö toisen: leikkaus söisi varjon, ja ilman leikkausta
+ *     WebKit päästää sumennetun sisällön kortin pyöristetyn reunan yli
+ *     (omistajan iPad-havainto 18.8.2026).
+ *
+ *  3. RAJAUS. Napautettu vaakuna tai versiolippu kasvaa animaationa;
  *     ennen korjausta vieritys mitattiin kesken kasvun, jolloin laatta
  *     jäi osittain kortin näkyvän alueen ULKOPUOLELLE (Etelä-Korea
  *     52,9 px, Japani 67,8 px, Saksa 254,1 px alareunan alapuolelle) ja
@@ -128,8 +134,27 @@ for (const [asento, viewport] of ASENNOT) {
       const laatikot = [laatta, ...laatta.querySelectorAll('.lippu-versio-selite')]
         .map((el) => el.getBoundingClientRect())
         .filter((r) => r.width > 0 && r.height > 0);
+      /*
+       * Kehyksen ja vierityskotelon työnjako: kehys heittää varjon eikä
+       * leikkaa, kotelo leikkaa eikä heitä varjoa. Jos ne joskus
+       * yhdistetään takaisin yhdeksi elementiksi, sumennettu sisältö
+       * karkaa taas WebKitissä kortin pyöristetyn reunan yli.
+       */
+      const kehys = document.querySelector('.lippu-kehys');
+      const kehyksenTyyli = kehys && getComputedStyle(kehys);
+      const kortinTyyli = getComputedStyle(kortti);
       return {
         ...mitta,
+        rakenne: {
+          kehysOnVanhempi: kortti.parentElement === kehys,
+          kehyksellaVarjo: Boolean(kehyksenTyyli && kehyksenTyyli.boxShadow !== 'none'),
+          // Kehys ei saa leikata itseään: clip-path tai maski söisi varjon.
+          kehysEiLeikkaaItseaan: Boolean(kehyksenTyyli
+            && kehyksenTyyli.clipPath === 'none' && kehyksenTyyli.maskImage === 'none'),
+          kotelonLeikkaus: kortinTyyli.clipPath,
+          koteloEiVarjoa: kortinTyyli.boxShadow === 'none',
+          sumennettuKotelonSisalla: kortti.contains(document.querySelector('.lippu-iso')),
+        },
         tarkennus: {
           paalla: kortti.classList.contains('tarkennus'),
           ohiAlta: +(Math.max(...laatikot.map((r) => r.bottom)) - k.bottom).toFixed(1),
@@ -153,6 +178,14 @@ for (const [asento, viewport] of ASENNOT) {
         tulos.luonnollinen >= tulos.laitepikselit,
         `luonnollinen ${tulos.luonnollinen} px < näytöllä ${tulos.laitepikselit} px`);
     }
+    vaadi(`${maa} ${asento}: kehys varjoineen ja leikkaava vierityskotelo erillään`,
+      tulos.rakenne?.kehysOnVanhempi === true
+        && tulos.rakenne.kehyksellaVarjo === true
+        && tulos.rakenne.kehysEiLeikkaaItseaan === true
+        && /^inset\(/.test(tulos.rakenne.kotelonLeikkaus ?? '')
+        && tulos.rakenne.koteloEiVarjoa === true
+        && tulos.rakenne.sumennettuKotelonSisalla === true,
+      JSON.stringify(tulos.rakenne));
     vaadi(`${maa} ${asento}: tarkennettu laatta mahtuu kortin sisään`,
       tulos.tarkennus?.paalla === true
         && tulos.tarkennus.ohiAlta <= 0
