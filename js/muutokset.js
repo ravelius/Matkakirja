@@ -13,7 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 856, teksti: 'Pöllö löytyy ensimmäisestä laatasta aarteena' },
+  { v: 857, teksti: 'Pro-tuottajat: koodit, profiilit ja tekijasivut' },
+  { v: 856, teksti: 'Viisas Pöllö on löydettävä aarre' },
   { v: 855, teksti: 'Tietäjätasot ja matkalaukku-uudistus' },
   { v: 854, teksti: 'Ehdotuskanava auki: uusi- ja ehdota-napit valikkoon' },
   { v: 853, teksti: 'Lukijoiden ehdotukset: lomake, työhuonelehti ja pöllö' },

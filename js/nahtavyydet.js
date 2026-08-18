@@ -22,6 +22,7 @@ import {
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { sfx } from './sound.js';
+import { taytaLahderivi } from './tekijakortti.js';
 import { esilataaKuvat, html, lahdemerkinta, vuosiluku } from './ui-apurit.js';
 
 /**
@@ -1155,7 +1156,12 @@ export function nahtavyydenKuva(ui, kuva) {
   kehys.appendChild(el);
   const teksti = html('figcaption', 'nahtavyys-kuvateksti');
   if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
-  if (kuva.lahde) teksti.appendChild(html('span', 'nahtavyys-lahde', kuva.lahde));
+  // Lähderivi: pro-tuottajan kuvassa tekijän nimi on painike, joka
+  // avaa tekijäsivun (js/tekijakortti.js). Ilman `tekijaId`-kenttää
+  // rivi on tavallista tekstiä kuten ennen.
+  if (kuva.lahde) {
+    teksti.appendChild(taytaLahderivi(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
+  }
   kehys.appendChild(teksti);
   return kehys;
 }
@@ -1203,7 +1209,9 @@ export function nahtavyydenKaruselli(ui, kuvat) {
     el = uusi;
     teksti.replaceChildren();
     if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
-    if (kuva.lahde) teksti.appendChild(html('span', 'nahtavyys-lahde', kuva.lahde));
+    if (kuva.lahde) {
+      teksti.appendChild(taytaLahderivi(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
+    }
     laskuri.textContent = `${kohta + 1}/${kuvat.length}`;
   };
 

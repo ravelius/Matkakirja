@@ -431,6 +431,16 @@ export const RAAMATTU = {
           + 'esikuratointi kommentteineen ajetaan vain omistajan '
           + 'komennolla "kuratoi", eikä mikään julkaisu tapahdu ilman '
           + 'omistajan arviota.',
+        'PRO-TUOTTAJAT (omistaja 18.8.2026): kanava vain omistajan '
+          + 'henkilökohtaisesti kutsumille ammattilaisille. Omistaja '
+          + 'myöntää pysyvän koodin työhuoneesta; vastineeksi '
+          + 'sisällöstä tuottaja saa krediitin ja tekijäsivun (oma '
+          + 'kuva, esittely, linkit). Kolme sääntöä: (1) mikään ei '
+          + 'näy pelaajalle ennen omistajan hyväksyntää ja muutos '
+          + 'palaa jonoon, (2) sähköposti ja koodi eivät koskaan '
+          + 'vuoda julkiseen vastaukseen eivätkä lokiin, (3) lupa '
+          + 'aina lupapohjalla (rinnakkainen ei-yksinomainen '
+          + 'lisenssi, peruutus koskee uusia julkaisuja).',
         'Lomake ehdottaa automaattisesti sitä sivua, jolla pelaaja on; '
           + 'vapaa tarkennuskenttä on vapaaehtoinen. Pelaaja voi antaa '
           + 'nimen tai nimimerkin pelin kredititteihin ja sähköpostin, '
@@ -573,6 +583,10 @@ export const RAAMATTU = {
           + 'työlistat.',
         'docs/moduulit/lukijoilta.md — lukijoiden ehdotukset: worker, '
           + 'lomake, Lukijoilta-lehti ja kuratointi.',
+        'docs/pro-lisenssilupa.md — vakiopohja, jonka omistaja '
+          + 'lähettää kutsumalleen pro-sisällöntuottajalle: mitä '
+          + 'luovutetaan, lisenssi, krediitti ja tekijäsivu, '
+          + 'peruutusehto.',
         'CONTRIBUTING.md — avoin lähdekoodi + tekniset periaatteet. '
           + 'README.md — esittely.',
         'docs/viesti-fable.md — viestikanava, ei ohje. docs/arkisto/ '

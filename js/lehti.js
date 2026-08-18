@@ -14,7 +14,8 @@
 import { hiljennaAmbienssi } from './ambience-stream.js';
 import {
   asetaEhdotusAvain, ehdotusAika, ehdotusAvain, ehdotusKaytossa,
-  ehdotusKuvaOsoite, haeEhdotukset,
+  ehdotusKuvaOsoite, haeEhdotukset, haeProTuottajat, lisaaProTuottaja,
+  paataProProfiili, proKuvaOsoite,
 } from './ehdotukset.js';
 import {
   kaynnistaLukija, kokoaLuettavaTeksti, liitaLukija, paivitaLukija,
@@ -881,6 +882,131 @@ function lukijoiltaTiedot(e) {
   return rivit.join('\n\n');
 }
 
+/* ------------------------------------------------------------------ *
+ * PRO-SISÄLLÖNTUOTTAJAT Lukijoilta-lehden perässä.
+ *
+ * Työhuone ON lehti, joten pro-palikan hallinta on lehden sivuja:
+ * yksi yhteenvetosivu, jolta lisätään tuottaja, ja yksi sivu per
+ * tuottaja koodeineen, profiileineen ja päätösnappeineen. Napit
+ * kulkevat noston `toiminnot`-kentässä (js/maalehti.js).
+ *
+ * KOODI NÄKYY VAIN TÄÄLLÄ. Omistaja kopioi sen sähköpostiin; se ei
+ * ole missään repossa eikä pelin datassa.
+ * ------------------------------------------------------------------ */
+
+/** Tuottajan tila suomeksi. */
+function proTila(tila) {
+  if (tila === 'odottaa') return 'odottaa hyväksyntää';
+  if (tila === 'julkaistu') return 'julkaistu';
+  if (tila === 'hylatty') return 'hylätty';
+  return 'kutsuttu, ei vielä profiilia';
+}
+
+/** Yhden tuottajan tiedot leipätekstiksi. */
+function proTiedot(t) {
+  const rivit = [
+    `Sähköposti: ${t.sahkoposti}`,
+    `Koodi: ${t.koodi}   (kopioi tämä tuottajalle — pysyvä)`,
+    `Tekijätunnus: ${t.tekijaId}   (kuvan lähderiville: tekijaId)`,
+    `Tila: ${proTila(t.tila)}`,
+  ];
+  if (t.profiili?.esittely) rivit.push(`Esittely: ${t.profiili.esittely}`);
+  for (const linkki of t.profiili?.linkit ?? []) rivit.push(`Linkki: ${linkki.url}`);
+  if (t.profiili?.paivitetty) rivit.push(`Profiili päivitetty: ${ehdotusAika(t.profiili.paivitetty)}`);
+  if (t.julkaistu) rivit.push(`Julkaistu: ${ehdotusAika(t.julkaistu)}`);
+  if (t.kommentti) rivit.push(`Oma kommentti: ${t.kommentti}`);
+  return rivit.join('\n\n');
+}
+
+/** Päätösnapit odottavalle profiilille. */
+function proNapit(ui, t, avain) {
+  if (!t.profiili) return [];
+  const paata = (tila) => async (nappi) => {
+    const kommentti = (window.prompt(
+      tila === 'julkaistu'
+        ? 'Kommentti tuottajalle (vapaaehtoinen):'
+        : 'Miksi profiilia ei julkaista? (näkyy tuottajalle)',
+    ) ?? '').trim();
+    nappi.disabled = true;
+    try {
+      await paataProProfiili(avain, t.sahkoposti, tila, kommentti);
+      // Lehti haetaan uudestaan, jotta tilat ovat varmasti ne, mitä
+      // workerissa on — ei arvausta paikallisesta tilasta.
+      avaaLukijoiltaLehti(ui);
+    } catch (virhe) {
+      nappi.disabled = false;
+      nappi.textContent = `Ei onnistunut: ${virhe.message}`;
+    }
+  };
+  return [
+    { nimi: t.tila === 'julkaistu' ? 'Julkaise uudelleen' : 'Julkaise', tehtava: paata('julkaistu') },
+    { nimi: 'Hylkää', tehtava: paata('hylatty') },
+  ];
+}
+
+/** Pro-osion sivut: yhteenveto + yksi sivu per tuottaja. */
+function proSivut(ui, tuottajat, avain) {
+  const odottavat = tuottajat.filter((t) => t.tila === 'odottaa').length;
+  const yhteenveto = {
+    id: 'lukijoilta-pro',
+    nimi: 'Pro-tuottajat',
+    yksipalsta: true,
+    nostot: [{
+      otsikko: `${tuottajat.length} pro-tuottajaa`,
+      teksti: (odottavat
+        ? `${odottavat} profiilia odottaa hyväksyntääsi.\n\n`
+        : 'Yksikään profiili ei odota hyväksyntää.\n\n')
+        + 'Pro-tuottaja on henkilökohtaisesti kutsumasi ammattilainen: '
+        + 'hän saa krediitin ja oman tekijäsivun peliin vastineeksi '
+        + 'laadukkaasta sisällöstä. Lisää tuottaja, kopioi hänen '
+        + 'koodinsa ja lähetä se lupapohjan kanssa '
+        + '(docs/pro-lisenssilupa.md).\n\n'
+        + 'Kun tuottajan kuva julkaistaan, lisää kuvan lähderiville '
+        + 'kentät tekija ja tekijaId — silloin nimestä tulee '
+        + 'painike, joka avaa tekijäsivun.',
+      toiminnot: [{
+        nimi: 'Lisää pro-tuottaja',
+        tehtava: async (nappi) => {
+          const sahkoposti = (window.prompt('Tuottajan sähköposti:') ?? '').trim();
+          if (!sahkoposti) return;
+          const nimi = (window.prompt('Tuottajan nimi (näkyy pelissä):') ?? '').trim();
+          nappi.disabled = true;
+          try {
+            const tulos = await lisaaProTuottaja(avain, sahkoposti, nimi);
+            window.alert(`${tulos.uusi ? 'Uusi tuottaja' : 'Tuottaja oli jo listalla'}\n\n`
+              + `${tulos.tuottaja.nimi}\n${tulos.tuottaja.sahkoposti}\n\n`
+              + `KOODI: ${tulos.tuottaja.koodi}\n\n`
+              + 'Koodi on pysyvä. Kopioi se tuottajalle lupapohjan kanssa.');
+            avaaLukijoiltaLehti(ui);
+          } catch (virhe) {
+            nappi.disabled = false;
+            nappi.textContent = `Ei onnistunut: ${virhe.message}`;
+          }
+        },
+      }],
+    }],
+  };
+  const sivut = tuottajat.map((t, i) => ({
+    id: `lukijoilta-pro-${i}`,
+    nimi: `${t.nimi || t.sahkoposti} · ${proTila(t.tila)}`,
+    yksipalsta: true,
+    nostot: [
+      {
+        otsikko: t.nimi || t.sahkoposti,
+        teksti: proTiedot(t),
+        toiminnot: proNapit(ui, t, avain),
+      },
+      ...(t.profiili?.kuva ? [{
+        otsikko: 'Profiilikuva',
+        kuvaUrl: proKuvaOsoite(t.tekijaId, avain),
+        selite: t.profiili.kuva.tiedosto,
+        teksti: '',
+      }] : []),
+    ],
+  }));
+  return [yhteenveto, ...sivut];
+}
+
 /** Ehdotuslistasta lehden sivut: etusivu + yksi sivu per ehdotus. */
 function lukijoiltaSivut(ehdotukset, avain) {
   const etusivu = {
@@ -894,7 +1020,8 @@ function lukijoiltaSivut(ehdotukset, avain) {
           + 'sivuehdotus ja lähettäjän tiedot. Sähköposti näkyy vain '
           + 'täällä — sitä ei viedä peliin eikä repoon.\n\n'
           + 'Kuratointi ("kuratoi"-ajo) kirjoittaa kommentin, tilan, '
-          + 'palkkion ja lunastuskoodin samaan meta.jsoniin.'
+          + 'palkkion ja lunastuskoodin samaan meta.jsoniin.\n\n'
+          + 'Pro-sisällöntuottajat ovat lehden lopussa omilla sivuillaan.'
         : 'Yhtään ehdotusta ei ole vielä tullut.',
     }],
   };
@@ -946,10 +1073,26 @@ export async function avaaLukijoiltaLehti(ui) {
 
   avaaKehittajaLehti(ui, 'Lukijoilta', lukijoiltaOhjeSivu('Haetaan ehdotuksia…'));
   try {
-    const ehdotukset = await haeEhdotukset(avain);
+    /*
+     * Ehdotukset ja pro-tuottajat rinnakkain: kaksi eri listaa
+     * samassa lehdessä. Pro-listan kaatuminen ei saa viedä
+     * ehdotuksia mukanaan (esimerkiksi jos worker on vanha eikä
+     * tunne pro-reittejä vielä), joten sen virhe niellään tyhjäksi
+     * listaksi.
+     */
+    const [ehdotukset, tuottajat] = await Promise.all([
+      haeEhdotukset(avain),
+      haeProTuottajat(avain).catch((virhe) => {
+        console.warn('Pro-tuottajien haku ei onnistunut:', virhe);
+        return [];
+      }),
+    ]);
     // Lehti on voitu sulkea haun aikana — silloin sitä ei avata takaisin.
     if (!ui.arrivalDialog?.open || ui.lehtitila.tutkiTila !== 'kehittaja') return;
-    avaaKehittajaLehti(ui, 'Lukijoilta', lukijoiltaSivut(ehdotukset, avain));
+    avaaKehittajaLehti(ui, 'Lukijoilta', [
+      ...lukijoiltaSivut(ehdotukset, avain),
+      ...proSivut(ui, tuottajat, avain),
+    ]);
   } catch (virhe) {
     // Väärä avain pois muistista, tai lehti kysyisi sitä turhaan
     // ikuisesti oikeanakin.

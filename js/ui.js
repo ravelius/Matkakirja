@@ -107,7 +107,8 @@ import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import {
   POLLO_AARRE, polloAnkkuri, polloPaivitaNakyvyys, polloSulje, polloVihje, polloVihjePois,
 } from './pollo.js';
-import { ajastaEhdotusKupla, ehdotusOsio } from './ehdotukset.js';
+import { ajastaEhdotusKupla, ehdotusOsio, proOsio } from './ehdotukset.js';
+import { taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import { seuraavaTietajataso, tietajataso } from './tietajatasot.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
@@ -6663,7 +6664,9 @@ export class UI {
       this.lisaaNostonLinkki(lohko, nosto);
       const lahteet = [lahdemerkinta(nosto.lahde), nosto.aaniLahde]
         .filter(Boolean).join(' · ');
-      if (lahteet) lohko.appendChild(html('p', 'kulttuuri-lahde', lahteet));
+      if (lahteet) {
+        lohko.appendChild(taytaLahderivi(html('p', 'kulttuuri-lahde'), lahteet, nosto));
+      }
       lista.appendChild(lohko);
     }
 
@@ -7308,7 +7311,16 @@ export class UI {
     kuva.replaceWith(kotelo);
     kotelo.appendChild(kuva);
     const teokset = [
-      { otsikko: nosto.otsikko, tiedosto: nosto.tiedosto, selite: nosto.selite, lahde: nosto.lahde },
+      {
+        otsikko: nosto.otsikko,
+        tiedosto: nosto.tiedosto,
+        selite: nosto.selite,
+        lahde: nosto.lahde,
+        // Pro-tuottajan tekijäsivu kulkee teoskohtaisesti: sarjan
+        // kuvat voivat olla eri tekijöiltä (js/tekijakortti.js).
+        tekija: nosto.tekija,
+        tekijaId: nosto.tekijaId,
+      },
       ...nosto.galleria,
     ];
     /*
@@ -7331,7 +7343,7 @@ export class UI {
       kuva.alt = teos.selite ?? teos.otsikko ?? nosto.otsikko;
       kuva.galleriaTila = { teokset, kohdalla };
       if (selite) selite.textContent = teos.selite ?? '';
-      if (lahde) lahde.textContent = teos.lahde ?? nosto.lahde ?? '';
+      if (lahde) taytaLahderivi(lahde, teos.lahde ?? nosto.lahde ?? '', teos);
       laskuri.textContent = `${kohdalla + 1} / ${teokset.length}`;
     };
     const nuoli = (luokka, merkki, nimi, suunta) => {
@@ -8368,6 +8380,11 @@ export class UI {
   lisaaEhdotusOsio(lohko, tilanne = '') {
     const osio = ehdotusOsio(this.ehdotusSivu(tilanne));
     if (osio) lohko.appendChild(osio);
+    // PRO-SISÄLLÖNTUOTTAJAT saman lomakkeen perään: kutsuttu
+    // ammattilainen kirjautuu koodillaan ja rakentaa oman
+    // tekijäsivunsa. Osio on suljettu eikä näy sille, joka ei etsi.
+    const pro = proOsio();
+    if (pro) lohko.appendChild(pro);
   }
 
   /**
