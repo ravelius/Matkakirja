@@ -144,6 +144,10 @@ export const LUKIJAN_OHITETTAVAT = [
   '.maakartta-kotelo',
   '.maakartta-piste',
   '.kartta-mittajana',
+  // Kartan päällä oleva napautusopaste (18.8.2026) on ohjetta eikä
+  // juttua — se on kehyksellä eikä lavalla, joten kotelon ohitus ei
+  // kata sitä.
+  '.kartta-opaste',
 
   // Lehden päivämäärä on taittoa, ei juttua (omistajan toive).
   '#arrival-lehti-pvm',
