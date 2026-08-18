@@ -1,0 +1,83 @@
+# Generoi varustekuvat (linssit) GitHubin ajurilla.
+#
+# MIKSI: GOOGLE_API_KEY asuu repon salaisuutena eikä kehityskontissa,
+# joten generointi ei onnistu sieltä käsin. Ajuri ajaa saman putken
+# (tools/generoi-varustekuvat.mjs) ja jättää tulokset artefaktiksi —
+# Fable lataa, KATSOO SILMIN ja committaa hyväksytyt.
+#
+# KUSTANNUSSÄÄNTÖ (omistajan päätös 16.8.2026): tunnukset on AINA
+# annettava käsin. HUOM: toisin kuin miniatyyrityökalu, tämä työkalu
+# EI ohita jo tehtyjä kuvia vaan kirjoittaa aina päälle — ajurin
+# checkout on kertakäyttöinen, joten repoon ei silti muutu mitään.
+# Yksi generointi ≈ 0,04 €.
+#
+# KÄYTTÖ: Actions → "Generoi varustekuvat" → Run workflow → tunnukset
+# välilyönnein (topografia vesistot radio vertailu maatiedot).
+# Tulos on varusteet-artefakti (512 px jpg), elää 3 päivää.
+
+name: Generoi varustekuvat
+
+on:
+  workflow_dispatch:
+    inputs:
+      tunnukset:
+        description: 'Varustetunnukset välilyönnein (topografia vesistot radio vertailu maatiedot)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Playwright tulee repon omasta package.jsonista — Chromium vain
+      # kuvien pienennykseen (1024 → 512).
+      - name: Asenna riippuvuudet ja Chromium
+        run: |
+          set -euo pipefail
+          npm install --no-fund --no-audit
+          npx playwright install --with-deps chromium
+          echo "CHROMIUM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' -type f | head -1)" >> "$GITHUB_ENV"
+
+      # Avain kulkee vain ympäristömuuttujana; työkalu peittää sen
+      # virheviesteistä eikä tulosta sitä koskaan.
+      - name: Generoi
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          TUNNUKSET: ${{ inputs.tunnukset }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GOOGLE_API_KEY:-}" ]; then
+            echo "::error title=GOOGLE_API_KEY puuttuu::Lisää salaisuus Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          if [ -z "${CHROMIUM:-}" ]; then
+            CHROMIUM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' | head -1)
+            export CHROMIUM
+          fi
+          # shellcheck disable=SC2086
+          node tools/generoi-varustekuvat.mjs $TUNNUKSET
+          uudet=$(git status --porcelain assets/varusteet/ | awk '{print $2}' | grep '\.jpg$' || true)
+          if [ -z "$uudet" ]; then
+            echo "::error title=Ei kuvia::Generointi ei tuottanut yhtään uutta tiedostoa."
+            exit 1
+          fi
+          mkdir -p ulos
+          for f in $uudet; do cp "$f" ulos/; done
+          ls -la ulos/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: varusteet
+          path: ulos/
+          retention-days: 3
+          if-no-files-found: warn
