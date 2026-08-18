@@ -8888,53 +8888,22 @@ export class UI {
     }
 
     /*
-     * Varusteet: tämän matkan aikana löydetyt linssit.
+     * VARUSTEET EIVÄT OLE ENÄÄ TAVAROISSA (omistaja 18.8.2026:
+     * "Varusteet ovat nyt kahteen kertaan. Nuo graafisemmat ovat
+     * parempia."). Linssit näkyivät tässä näyttölistana JA alempana
+     * Varusteet-osaston kytkiminä; nyt ne piirtyvät vain kytkiminä,
+     * samoilla varustekuvilla (rakennaLinssivalikko).
      *
-     * Lista luetaan pelaajan omasta linssit-kentästä eikä finds-listasta
-     * kahdesta syystä: finds saa 'linssi'-merkinnän myös silloin, kun
-     * kotelo oli tyhjä (kaikki jo omistettu), ja yllä oleva suodatin
-     * päästää läpi vain arvokkaat laatat — linssi on arvoton puntina.
-     *
-     * Nimi tulee linssimoduulista, jos se on jo ladattu. Ellei ole,
-     * rivi kertoo silti mitä laukussa on: laattatyypin nimi on
-     * "Taikalasi", ei tyhjä.
+     * Tyhjän laukun viesti katsoo siksi myös omistetut linssit:
+     * pelkkien linssien kanssa "Laukku on vielä tyhjä" valehtelisi,
+     * koska varusteet ovat laukussa heti listan alla. Silloin todetaan
+     * vain, ettei aarteita vielä ole. Omistus luetaan omistus.js:stä
+     * (passin leimat + kehittäjätila), ei pelkästä p.linssit-kentästä.
      */
-    /*
-     * Omistetut EIKÄ pelaajan oma kenttä.
-     *
-     * p.linssit on se, mitä pelaaja on LÖYTÄNYT. Omistukseen kuuluu
-     * lisäksi passin leimat (aiemmat pelikerrat) ja kehittäjätilan
-     * lahja — ja juuri jälkimmäinen puuttui: kehittäjätilassa radio
-     * toimi yläpalkin valitsimesta mutta laukku väitti olevansa tyhjä.
-     * Omistuksesta on yksi totuus, ja se on omistus.js.
-     */
-    const omat = this.linssiTuki?.omistus?.omistetut?.(game, p) ?? new Set(p.linssit ?? []);
-    for (const tunnus of omat) {
-      const linssi = this.linssiTuki?.kaikki.find((l) => l.tunnus === tunnus) ?? null;
-      /*
-       * LINSSIN OMA KUVAKE, EI LAATTATYYPIN.
-       *
-       * Kaikki kolme varustetta piirtyivät samana suurennuslasina, koska
-       * ne saivat laattatyypin 'linssi' kuvakkeen — laatta on se, mistä
-       * varuste löytyi, ei se mitä se on. Omistajan havainto: "näihin
-       * voisi päivittää kuvakkeet vastaamaan paremmin tavaroiden
-       * ominaisuuksia."
-       *
-       * Kuvake tulee linssimoduulista samassa muodossa kuin
-       * valitsimessa (24 × 24 -polkuja ilman <svg>-kuorta), joten
-       * laukussa ja valikossa on sama kuva samasta esineestä. Jos
-       * moduulia ei ole vielä ladattu, varalla on laattatyypin kuvake.
-       */
-      // Varustekuva (10.8.2026) samalla pyöreällä rajauksella kuin
-      // aarteet; viivaikoni jää varasoluksi jos kuva ei lataudu.
-      rivi(
-        aarreIkoni({ kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: linssi?.nimi ?? 'Varuste' }, 'linssi', 44),
-        linssi?.nimi ?? game.tokenTypes.linssi?.name ?? 'Varuste',
-      );
-    }
-
     if (!this.passportFinds.childElementCount) {
-      this.passportFinds.appendChild(html('p', 'muted', 'Laukku on vielä tyhjä.'));
+      const omat = this.linssiTuki?.omistus?.omistetut?.(game, p) ?? new Set(p.linssit ?? []);
+      const teksti = omat.size ? 'Ei vielä matkalöytöjä.' : 'Laukku on vielä tyhjä.';
+      this.passportFinds.appendChild(html('p', 'muted', teksti));
     }
   }
 
@@ -9279,12 +9248,17 @@ export class UI {
   suljeLinssivalikko() {}
 
   /**
-   * Valitsimen sisältö: kuvakerivi ja sen alla valitun linssin nimi,
-   * kuvaus ja lähde.
+   * Valitsimen sisältö: varustekuvien ruudukko ja sen alla valitun
+   * linssin nimi ja yhden rivin kuvaus.
    *
-   * Kuvio on Tutki-ikkunan aiheliuskoista (rakennaLiuskat): kuvakkeet
-   * yhdellä rivillä, valittu liuska samaa paperia kuin sisältö alla.
-   * Rooli on kuitenkin aria-pressed eikä role="tab" — role="tab" lupaa
+   * KUVAT VIIVAKUVAKKEIDEN TILALLE (omistaja 18.8.2026: "Nuo
+   * graafisemmat ovat parempia. Varusteista voisi ottaa selitystekstit
+   * pois. Varustetta klikkaamalla kuitenkin alas tulee teksti siitä,
+   * mitä ne tekevät."). Napit ovat samoja pyöreitä varustekuvia kuin
+   * Tavarat-listalla ennen ollut näyttörivi — nimi ei ole kuvan alla
+   * vaan tulee valittaessa tietolohkoon (paivitaLinssiTiedot).
+   *
+   * Rooli on aria-pressed eikä role="tab" — role="tab" lupaa
    * nuolinäppäinnavigoinnin, jota tässä pelissä ei ole yhdessäkään
    * liuskarivissä (suunnitelman luku 5.2).
    */
@@ -9301,9 +9275,9 @@ export class UI {
     liuskat.setAttribute('aria-label', 'Linssit');
     // "Ei linssiä" on aina ensimmäisenä: paluu tavalliseen karttaan on
     // yhtä lähellä kuin linssin valinta.
-    liuskat.appendChild(this.linssiLiuska(null, 'Ei linssiä', LINSSI_EI_IKONI));
+    liuskat.appendChild(this.linssiLiuska(null, 'Ei linssiä'));
     for (const linssi of linssit) {
-      liuskat.appendChild(this.linssiLiuska(linssi.tunnus, linssi.nimi, linssi.ikoni));
+      liuskat.appendChild(this.linssiLiuska(linssi.tunnus, linssi.nimi));
     }
     this.linssiValikko.appendChild(liuskat);
     this.linssiTiedot = html('div', 'linssi-tiedot');
@@ -9312,15 +9286,24 @@ export class UI {
     this.paivitaLinssiTiedot();
   }
 
-  linssiLiuska(tunnus, nimi, ikoni) {
+  linssiLiuska(tunnus, nimi) {
     const nappi = html('button');
     nappi.type = 'button';
     nappi.dataset.linssi = tunnus ?? '';
-    // Nimi jää saavutettavuuteen ja pitkään painallukseen, vaikka
-    // ruudulla näkyy vain kuvake.
+    // Nimi jää saavutettavuuteen ja pitkään painallukseen, koska
+    // ruudulla näkyy vain kuva ilman nimilappua.
     nappi.title = nimi;
     nappi.setAttribute('aria-label', nimi);
-    nappi.innerHTML = liuskaIkoniSvg(ikoni);
+    if (tunnus) {
+      // Sama pyöreä rajaus kuin aarteilla; jos kuva ei lataudu,
+      // aarreIkoni pudottaa tilalle laattatyypin viivakuvakkeen.
+      nappi.appendChild(aarreIkoni({ kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: nimi }, 'linssi', 64));
+    } else {
+      // "Ei linssiä" ei ole esine, jolla olisi valokuva: yliviivatut
+      // taikalasit pyöreässä kehyksessä pitävät sen samassa rivissä
+      // kuvien kanssa mutta selvästi "paljain silmin" -valintana.
+      nappi.innerHTML = liuskaIkoniSvg(LINSSI_EI_IKONI, 30);
+    }
     nappi.addEventListener('click', () => this.valitseLinssi(tunnus));
     return nappi;
   }

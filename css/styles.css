@@ -3311,12 +3311,13 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  * tausta, varjo); laukussa se on osasto muiden joukossa, joten kuori
  * puretaan ja ruudukko istuu suoraan laukun paperille.
  *
- * Ruudut ovat noin 58 pikselin neliöitä (`auto-fill`), eivät
- * sarakkeeseen venytettyjä: laukku on tavaroineen paljon leveämpi kuin
- * entinen 144 pikselin pudotusvalikko, ja kolmeen sarakkeeseen jaettuna
- * kuvakenapista tuli 185 pikselin lautanen. 58 px on sama mitta kuin
- * valikossa (59 px) eli reilusti kosketuskohteen minimin yli, ja
- * sarakemäärä kasvaa itsestään ruudun mukana.
+ * KUVANAPIT NELIÖIDEN TILALLE (omistaja 18.8.2026: "Nuo graafisemmat
+ * ovat parempia"). Napit ovat samoja pyöreitä varustekuvia kuin
+ * Tavarat-ruudukon aarteet, kolme riviin kuten Tavaroissa, ilman
+ * nimilappua — nimi ja kuvaus tulevat valittaessa .linssi-tiedot-
+ * lohkoon ruudukon alle. Nappi itsessään on pelkkä ympyrä: reunus
+ * tulee kuvan omasta kehyksestä (.aarre-ikoni) ja valinta piirretään
+ * messinkirenkaana napin ympärille.
  */
 .passport-card .linssi-kotelo { position: static; }
 
@@ -3332,37 +3333,72 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 }
 
 .passport-card .linssi-valikko .linssi-liuskat {
-  grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
-  justify-content: start;
-  gap: 0.45rem;
-  padding-bottom: 0.6rem;
+  /* Sama kolmen sarakkeen jako kuin #passport-finds-ruudukossa. */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 0.7rem 0.5rem;
+  padding: 0.4rem 0 0.7rem;
   /* Laukku on vaaleaa pergamenttia: erotinviiva on mustetta, ei
      tumman paneelin vaaleaa reunaa. */
   border-bottom-color: rgba(70, 51, 31, 0.28);
 }
 
 /*
- * Ruudut ovat laukun materiaalia: vaalea paperi ohuella mustereunalla.
- * Valikon tummat sävyt (rgba(53, 39, 26, .55)) katosivat pergamenttia
- * vasten lähes mustiksi läiskiksi.
+ * Nappi on pyöreä ja kuvansa kokoinen: neliön reunat ja paneelitausta
+ * pois, jotta ruudukossa on vain esineitä eikä laatikoita. 64 px on
+ * reilusti kosketuskohteen minimin yli ja mahtuu kolmen sarakkeeseen
+ * kapeimmallakin puhelimella (sarake on ~100 px 390 px:n ruudulla).
  */
 .passport-card .linssi-valikko .linssi-liuskat button {
-  background: rgba(252, 241, 212, 0.5);
-  border-color: rgba(70, 51, 31, 0.35);
+  aspect-ratio: 1;
+  width: 64px;
+  max-width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 50%;
   color: #46331f;
+}
+
+.passport-card .linssi-valikko .linssi-liuskat button img.aarre-ikoni {
+  width: 100%;
+  height: 100%;
 }
 
 .passport-card .linssi-valikko .linssi-liuskat button:hover {
-  background: rgba(252, 241, 212, 0.9);
+  background: none;
   color: #46331f;
+  box-shadow: 0 0 0 2px rgba(122, 85, 20, 0.35);
 }
 
-/* Valittu varuste erottuu tummemmalla musteella ja täydemmällä
-   paperilla — kulta katoaisi vaalealle pohjalle. */
+/*
+ * "Ei linssiä" ei ole valokuva vaan viivakuvake: se saa oman pyöreän
+ * pergamenttikiekkonsa samalla kehysrenkaalla kuin varustekuvat
+ * (.aarre-ikoni-varjo), jotta rivi pysyy yhtenäisenä.
+ */
+.passport-card .linssi-valikko .linssi-liuskat button[data-linssi=''] {
+  background: rgba(252, 241, 212, 0.55);
+  box-shadow: 0 0 0 1.5px rgba(94, 74, 47, 0.55);
+}
+
+.passport-card .linssi-valikko .linssi-liuskat button[data-linssi='']:hover {
+  background: rgba(252, 241, 212, 0.9);
+  box-shadow: 0 0 0 2px rgba(122, 85, 20, 0.45);
+}
+
+/* Valittu varuste saa selvän messinkirenkaan (sama sävymaailma kuin
+   aktiivinapeissa): sisempi tumma messinki ja ulompi vaalea hohde. */
 .passport-card .linssi-valikko .linssi-liuskat button.paalla {
-  background: rgba(198, 158, 82, 0.3);
-  border-color: rgba(70, 51, 31, 0.75);
+  background: none;
   color: #46331f;
+  box-shadow: 0 0 0 2.5px rgba(122, 85, 20, 0.9), 0 0 0 5.5px rgba(198, 158, 82, 0.35);
+}
+
+.passport-card .linssi-valikko .linssi-liuskat button[data-linssi=''].paalla {
+  background: rgba(252, 241, 212, 0.9);
 }
 
 /* Valitun varusteen nimi ja kuvaus liuskojen alla: keskitetty kuten

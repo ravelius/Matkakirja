@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 870, teksti: 'Laukun varusteet yhdeksi kuvaruudukoksi' },
   { v: 869, teksti: 'Uudet selkeämmät varustekuvat laukkuun' },
   { v: 868, teksti: 'Lukija lukee vain leipätekstit; pysyvä kaiutin' },
   { v: 867, teksti: 'Pöllön ehdotuskupla osoittaa hampurilaiseen' },
