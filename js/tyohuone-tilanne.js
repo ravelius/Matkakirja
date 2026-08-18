@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v889 — tietäjätasojen rajat korotettu (Utelias kulkija 150 tp … Tietäjä iänikuinen 8000 tp): tasot nousevat selvästi harvemmin; vanhassa tallennuksessa nimike voi pudota, pisteet säilyvät — tarkista laukun tietäjärivi ja tasogalleria',
   'v888 — pöllö ja paljastukset: 1) UUSI PELI → ensimmäinen käännetty laatta antaa VAIN Viisaan Pöllön (uusi kahden lauseen esittely) — laatan omaa aarrekorttia, rahaa tai tavaraa EI tule, ja tuloskortti sanoo "Löysit: Viisas Pöllö"; toinen laatta paljastuu normaalisti (jos eka laatta olisi ollut mantereen unohdettu aarre, se siirtyy toisen kääntämättömän laatan alle eikä katoa); 2) kaikki aarretekstit (tarinakaaren aarreosat) tiivistetty enintään kahteen lauseeseen — tekstit uudistuivat, joten niiden vanhat luennat on mykistetty generointijonoon; 3) kertoja EI enää lue aarrekortteja, pöllökorttia eikä kohtaamisen tervehdystä (hihkaisu ja vastausrepliikin luenta säilyvät); 4) paljastuskortin selite ja kaariteksti kirkkaammat mustaa vasten (omistajan kaappaus)',
   'v887 — kehittäjän Luvut-sivu: turha Kaikista-sarake pois (Tehty näyttää jo x/y) ja alalaidan harhautunut maaliite-nappi (esim. Kreikka-liite) poistui kehittäjän liitteistä',
   'v886 — pöllön kuplat: tasonnousun juhlakupla ilmestyy nyt MATKALAUKUN pillerin alle ylös (kärki ylös kohti laukkua), ja jokainen puhekupla häipyy napauttamalla sitä',

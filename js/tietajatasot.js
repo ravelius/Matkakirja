@@ -49,6 +49,15 @@
  * ensimmäisen raja on 0: pelaaja on Untuvikko heti ensimmäisestä
  * pisteestään — itse asiassa jo ennen sitä.
  *
+ * MITOITUS (omistaja 18.8.2026: "aivan liian helpot" — alkuperäiset
+ * rajat 40…2400 ylittyivät tasoa/päivä). Aktiivinen pelipäivä tuottaa
+ * noin 150–250 tp, ja nimikkeen on tarkoitus olla matkan mitta:
+ * ensimmäinen nousu tulee vielä ensimmäisenä päivänä, mutta ylin
+ * taso vaatii kymmeniä pelipäiviä. Rajaväli kasvaa joka tasolla
+ * (150 → 2000), jotta loppupää tuntuu ansaitulta. Vanhat
+ * tallennukset kestävät korotuksen: taso lasketaan aina pisteistä,
+ * joten nimike voi pudota — pisteet eivät.
+ *
  * Onnittelu on matkapäiväkirjan ääntä: juhlava mutta lyhyt, ja se
  * puhuu isoisästä tai Aarnista. Kohderyhmä on 13 vuotta täyttäneet ja
  * aikuiset, joten sävy on kunnioittava eikä lapsekas.
@@ -65,7 +74,7 @@ export const TIETAJATASOT = [
   {
     taso: 2,
     nimi: 'Utelias kulkija',
-    raja: 40,
+    raja: 150,
     varssy: 'Kysyvä ei tiellä eksy, / utelias uran löytää.',
     onnittelu: 'Sinusta on tullut Utelias kulkija! Kysymykset ovat matkan paras '
       + 'eväs — isoisäsi täytti niillä kokonaisen vihkon ennen lähtöä.',
@@ -73,7 +82,7 @@ export const TIETAJATASOT = [
   {
     taso: 3,
     nimi: 'Kartanlukija',
-    raja: 100,
+    raja: 400,
     varssy: 'Monta on polkua maalla, / kartta kaikki kertoelee.',
     onnittelu: 'Sinusta on tullut Kartanlukija! Isoisäsi hymyilisi — kartta '
       + 'aukeaa sille, joka on oppinut katsomaan.',
@@ -81,7 +90,7 @@ export const TIETAJATASOT = [
   {
     taso: 4,
     nimi: 'Maailmanmatkaaja',
-    raja: 200,
+    raja: 800,
     varssy: 'Matka kulkijansa mittaa, / maailma sylin avavi.',
     onnittelu: 'Sinusta on tullut Maailmanmatkaaja! Sen nimen isoisäsi kirjoitti '
       + 'passiinsa ammatiksi — nyt se on sinunkin.',
@@ -89,7 +98,7 @@ export const TIETAJATASOT = [
   {
     taso: 5,
     nimi: 'Löytöretkeilijä',
-    raja: 350,
+    raja: 1400,
     varssy: 'Rohkea rajoille astuu, / löytäjälle maat aukeevat.',
     onnittelu: 'Sinusta on tullut Löytöretkeilijä! Aarni olisi kohottanut '
       + 'hattuaan: löytäminen alkaa siitä, että uskaltaa lähteä.',
@@ -97,7 +106,7 @@ export const TIETAJATASOT = [
   {
     taso: 6,
     nimi: 'Tarinankerääjä',
-    raja: 550,
+    raja: 2200,
     varssy: 'Sanat saappaissa kulkevat, / tarinat tulevat kotiin.',
     onnittelu: 'Sinusta on tullut Tarinankerääjä! Isoisä sanoi, että matkalta '
       + 'tuodaan kotiin vain kahta lajia tavaraa: pölyä saappaissa ja tarinoita.',
@@ -105,7 +114,7 @@ export const TIETAJATASOT = [
   {
     taso: 7,
     nimi: 'Aarteentuntija',
-    raja: 800,
+    raja: 3200,
     varssy: 'Kiilto ei kultaa todista, / tuntija todeksi tietää.',
     onnittelu: 'Sinusta on tullut Aarteentuntija! Nyt erotat kiillosta sen, mikä '
       + 'on oikeasti unohdettua — juuri sitä Aarnin luettelo vaatii.',
@@ -113,7 +122,7 @@ export const TIETAJATASOT = [
   {
     taso: 8,
     nimi: 'Maailmantuntija',
-    raja: 1200,
+    raja: 4500,
     varssy: 'Nimet muuttuvat paikoiksi, / paikat muistoiksi muuttuvat.',
     onnittelu: 'Sinusta on tullut Maailmantuntija! Maailma ei ole enää nimiä '
       + 'kartalla vaan paikkoja, joissa olet ollut.',
@@ -121,7 +130,7 @@ export const TIETAJATASOT = [
   {
     taso: 9,
     nimi: 'Isoisän perillinen',
-    raja: 1700,
+    raja: 6000,
     varssy: 'Kirja kädestä käteen käy, / tieto suvussa syvenee.',
     onnittelu: 'Sinusta on tullut Isoisän perillinen! Vuoden 1873 matkapäiväkirja '
       + 'on nyt yhtä paljon sinun kuin hänen.',
@@ -135,7 +144,7 @@ export const TIETAJATASOT = [
      * jossa Viisas Pöllö on tietäjien matkakumppani.
      */
     nimi: 'Tietäjä iänikuinen',
-    raja: 2400,
+    raja: 8000,
     varssy: 'Sanat saatu, synnyt tietty, / tie vie tietäjän kotihin.',
     onnittelu: 'Sinusta on tullut Tietäjä iänikuinen! Aarni, isoisäsi ja sinä — kolme '
       + 'nimeä samassa luettelossa. Kauemmas tämä matka ei vie.',
