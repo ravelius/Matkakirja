@@ -4565,15 +4565,16 @@ export class UI {
     rivi('Kukkaro', `£${p.money}`);
 
     /*
-     * TIETÄJÄRIVI: nimike ja pisteet samassa arvossa ("Kartanlukija ·
-     * 145 tp"), ja rivin edessä NYKYISEN TASON AVATAR pyöreänä
-     * kuvakkeena (omistajan tilaus 18.8.2026). Ennen tässä oli pöllön
-     * viivakuvake; muotokuva kertoo saman asian ja lisäksi sen, kuinka
-     * pitkällä matka on — kuva vaihtuu joka nousussa.
+     * TIETÄJÄRIVI: nimike on rivin selite ja oikeassa reunassa vain
+     * pisteet (omistajan tarkennus 18.8.2026: "Tietäjä-tekstin voisi
+     * korvata tuolla maailmanmatkaajatekstillä ja i voisi olla sen
+     * perässä ja oikeassa reunassa vain pisteet"). Rivin edessä on
+     * NYKYISEN TASON AVATAR pyöreänä kuvakkeena — muotokuva kertoo
+     * roolin, ja kuva vaihtuu joka nousussa.
      */
     const pisteet = p.xp ?? 0;
     const taso = tietajataso(pisteet);
-    const tietajaRivi = rivi('Tietäjä', `${taso.nimi} · ${pisteet} tp`);
+    const tietajaRivi = rivi(taso.nimi, `${pisteet} tp`);
     const avatar = document.createElement('img');
     avatar.className = 'find-avatar';
     avatar.src = tietajaAvatar(taso);
@@ -4582,10 +4583,11 @@ export class UI {
     avatar.draggable = false;
     tietajaRivi.prepend(avatar);
     /*
-     * i-NAPPI RIVIN PERÄÄN (omistajan tilaus 18.8.2026): mistä pisteet
-     * tulevat ja mitä tasoja on olemassa. Selitys ei mahdu laukkuun,
-     * joten se on minipopupissa (js/tietajagalleria.js) — pikkuseloste
-     * ei riitä, koska mukana on kymmenen kuvan ruudukko.
+     * i-NAPPI HETI NIMIKKEEN PERÄÄN (omistajan tarkennus 18.8.2026;
+     * pisteet jäävät yksin oikeaan reunaan): mistä pisteet tulevat ja
+     * mitä tasoja on olemassa. Selitys ei mahdu laukkuun, joten se on
+     * minipopupissa (js/tietajagalleria.js) — pikkuseloste ei riitä,
+     * koska mukana on kymmenen kuvan ruudukko.
      *
      * Nappi lainaa pikkuselosteen `seloste-nappi`-asun: samassa
      * laukussa on jo Aarnin luettelon i-nappi, eivätkä kaksi i-nappia
@@ -4596,7 +4598,7 @@ export class UI {
     info.title = 'Tietäjän tie';
     info.setAttribute('aria-label', 'Mikä tietäjätaso on?');
     info.addEventListener('click', () => avaaTietajagalleria(pisteet));
-    tietajaRivi.appendChild(info);
+    tietajaRivi.querySelector('.find-text').after(info);
 
     /*
      * EDISTYMISPALKKI rivin alle: täyttyy nykyisen tason alusta
