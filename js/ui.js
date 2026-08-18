@@ -34,7 +34,7 @@ import {
 import {
   avaaKehittajaLehti, avaaLukijoiltaLehti, avaaMaalehti, avaaRaamattuLehti,
   avaaSisallysvalikko,
-  avaaTilanneLehti, jatkaLehdenLuentaa, kytkeTutkiSelaus, naytaMaaUutiset,
+  avaaTilanneLehti, avaaTilastoLehti, jatkaLehdenLuentaa, kytkeTutkiSelaus, naytaMaaUutiset,
   naytaTutkiSivu, naytaVuosiSaa, openWiki, rakennaSivut, renderArticle,
   renderMaastoArtikkeli, sijoitaLehtiKaiutin, tutkiEkaSivu, tutkiSivuja,
   vaihdaTutkiSivu, varustaLukija,
@@ -7214,6 +7214,8 @@ export class UI {
   avaaRaamattuLehti() { return avaaRaamattuLehti(this); }
 
   avaaTilanneLehti() { return avaaTilanneLehti(this); }
+
+  avaaTilastoLehti() { return avaaTilastoLehti(this); }
 
   avaaLukijoiltaLehti() { return avaaLukijoiltaLehti(this); }
 

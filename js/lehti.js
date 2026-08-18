@@ -44,6 +44,7 @@ import { ARTIKKELIT, KULTTUURIT } from './sisaltotaulut.js';
 import { sfx } from './sound.js';
 import { RAAMATTU } from './tyohuone-raamattu.js';
 import { TESTATTAVAA, TILANNE } from './tyohuone-tilanne.js';
+import { raamatunTaulusivu, tilastoSivut } from './tyohuone-tilastot.js';
 import {
   cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, shortIntro,
 } from './ui-apurit.js';
@@ -795,10 +796,10 @@ export function avaaRaamattuLehti(ui) {
       otsikko: `Päivitetty ${RAAMATTU.paivitetty}`,
       teksti: RAAMATTU.johdanto,
     }],
-  }, ...RAAMATTU.osiot.map((osio, i) => {
+  }, ...RAAMATTU.osiot.flatMap((osio, i) => {
     // Valmiusaste värichippinä otsikossa "Tila:"-rivin sijaan.
     const valmis = (osio.tila ?? '').startsWith('hyväksytty');
-    return {
+    const sivu = {
       id: `raamattu-${i}`,
       nimi: osio.otsikko,
       yksipalsta: true,
@@ -809,6 +810,13 @@ export function avaaRaamattuLehti(ui) {
         teksti: (osio.kohdat ?? []).join('\n\n'),
       }],
     };
+    /*
+     * Aarteet ja tutki kätkö -pelit saavat osionsa perään pelidatasta
+     * lasketun taulusivun (siirretty poistetulta työhuonesivustolta
+     * 18.8.2026 — se liitti samat taulut samoihin osioihin).
+     */
+    const taulu = raamatunTaulusivu(osio, i);
+    return taulu ? [sivu, taulu] : [sivu];
   })];
   avaaKehittajaLehti(ui, 'Raamattu', sivut);
 }
@@ -838,6 +846,15 @@ export function avaaTilanneLehti(ui) {
     }],
   }];
   avaaKehittajaLehti(ui, 'Tilannelehti', sivut);
+}
+
+/**
+ * Tilastot-lehti: rakennustyön tilanne mantereittain, maittain ja
+ * kaupungeittain (omistajan tilaus 18.8.2026). Sivut lasketaan
+ * pelidatasta vasta avattaessa — js/tyohuone-tilastot.js.
+ */
+export function avaaTilastoLehti(ui) {
+  avaaKehittajaLehti(ui, 'Tilastot', tilastoSivut());
 }
 
 /* ------------------------------------------------------------------ *

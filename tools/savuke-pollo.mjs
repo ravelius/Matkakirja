@@ -1976,7 +1976,7 @@ await sivu.route('**wikipedia.org/api/rest_v1/page/summary/**', (route) => route
     title: 'Koekuva',
     extract: 'K'.repeat(220),
     // Tiedostonimi ei saa osua BAD_IMAGE-suodattimeen (logo, icon, …).
-    thumbnail: { source: 'http://127.0.0.1:8734/assets/tyohuone-192.png' },
+    thumbnail: { source: 'http://127.0.0.1:8734/assets/kohtaamiset/kohtaaminen-ateena.jpg' },
     content_urls: { desktop: { page: 'https://fi.wikipedia.org/wiki/Koekuva' } },
   }),
 }));

@@ -1,6 +1,6 @@
 # Osallistuminen
 
-Kiitos kiinnostuksesta! Lue ensin pelin perustuslaki: Raamatun osio "Perustuslaki: viisi pilaria" (js/tyohuone-raamattu.js, työhuoneen Raamattu-välilehti) —
+Kiitos kiinnostuksesta! Lue ensin pelin perustuslaki: Raamatun osio "Perustuslaki: viisi pilaria" (js/tyohuone-raamattu.js; pelissä kehittäjätilan Raamattu-lehti) —
 ne kertovat, millä perusteilla sisältö hyväksytään peliin. Tämä peli on rakennettu niin, että uusien lautojen ja
 kysymysten lisääminen on mahdollisimman helppoa — myös ilman syvää
 ohjelmointikokemusta. Kaikki muutokset tehdään pull requesteina, ja testit

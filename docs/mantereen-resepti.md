@@ -54,8 +54,9 @@ testien lukeminen, squash-merge). Prosessin oma lisähuomio säilyy:
 
 - Testit ajetaan ennen mergeä; punainen main pysäyttää myös
   DEPLOYN (Julkaise peli -workflow ohittaa deployn punaisella).
-- Työhuone- ja docs-muutokset eivät nosta versiota, mutta menevät
-  mainiin.
+- Pelkät docs-muutokset eivät nosta versiota, mutta menevät mainiin.
+  Työhuone on 18.8.2026 alkaen osa peliä (kehittäjävivun lehdet),
+  joten sen muutokset nostavat version kuten muukin koodi.
 
 ## Opit ja kehityskohteet (9.8. kerätty)
 
@@ -82,8 +83,8 @@ testien lukeminen, squash-merge). Prosessin oma lisähuomio säilyy:
    .github/workflows/testit.yml ajaa testit joka PR:lle; pakolliseksi
    portiksi omistaja kytkee sen branch protectionista (ohje
    työnkulkutiedostossa). (c) KÄYTÄNTÖ — pienet muutokset niputetaan
-   isompiin eriin kun julkaisijoita on monta. (d) KATETTU — työhuoneen
-   etusivu näyttää jo kymmenen tuoreinta julkaisua muutoslokista
+   isompiin eriin kun julkaisijoita on monta. (d) KATETTU — pelin
+   versionumeroa napauttamalla aukeaa koko päivitysloki
    automaattisesti; roolikohtainen tilannetaulu pysyy käsin
    kirjoitettuna, koska se on tulkintaa eikä dataa.
 

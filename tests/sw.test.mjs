@@ -18,15 +18,15 @@ test('kaikki SHELLin tiedostot ovat olemassa', () => {
 });
 
 /*
- * Työhuoneen omat moduulit eivät kuulu pelin SHELLiin.
+ * KAIKKI js/-moduulit kuuluvat SHELLiin — myös js/tyohuone-*.js.
  *
- * Sama palvelutyöntekijä palvelee molempia sovelluksia (sama laajuus ei
- * voi kuulua kahdelle), mutta eri strategialla: työhuoneen tiedostot
- * haetaan verkosta ensin eikä niitä esiladata. Niiden lisääminen pelin
- * SHELL-listalle kasvattaisi pelin latauskokoa turhaan — peli ei tarvitse
- * työhuonetta lentokoneessa.
+ * Ennen 18.8.2026 työhuone oli erillinen sivusto (tyohuone.html), joka
+ * jakoi pelin kanssa palvelutyöntekijän mutta haki omat tiedostonsa
+ * verkosta ensin; ne oli siksi rajattu tästä testistä pois. Sivusto
+ * purettiin ja työhuone elää nyt pelin sisällä kehittäjävivun takana,
+ * joten sen moduulit ovat pelin moduuleja: ui.js tuo ne staattisesti,
+ * ja yksikin puuttuja jättäisi KOKO pelin käynnistymättä offline.
  */
-const VAIN_TYOHUONE = /^js\/tyohuone-/;
 
 /*
  * Hakemistot, joiden jokainen .js-tiedosto kuuluu pelin SHELLiin.
@@ -59,7 +59,7 @@ function moduulitLevylla(hakemisto) {
 
 test('kaikki js-moduulit ovat SHELLissä', () => {
   const levy = SKANNATTAVAT.flatMap(moduulitLevylla);
-  const unohtui = levy.filter((p) => !SHELL.includes(p) && !VAIN_TYOHUONE.test(p));
+  const unohtui = levy.filter((p) => !SHELL.includes(p));
   assert.deepEqual(unohtui, [],
     'nämä moduulit puuttuvat sw.js:n SHELL-listalta — offline hajoaisi. Korjaus on '
     + `sw.js:n SHELL-listaan: ${unohtui.map((p) => `'./${p}',`).join(' ')}`);
@@ -274,7 +274,7 @@ test('yhdistämismerkkejä ei ole jäänyt tiedostoihin', () => {
       if (merkki.test(readFileSync(tiedosto, 'utf8'))) loydot.push(`${kansio}/${nimi}`);
     }
   }
-  for (const juuriTiedosto of ['index.html', 'tyohuone.html', 'sw.js']) {
+  for (const juuriTiedosto of ['index.html', 'sw.js']) {
     const tiedosto = join(JUURI, juuriTiedosto);
     if (existsSync(tiedosto) && merkki.test(readFileSync(tiedosto, 'utf8'))) loydot.push(juuriTiedosto);
   }

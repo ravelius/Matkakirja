@@ -24,7 +24,7 @@ css/styles.css:lle (14 143 riviä); turvallinen siirtymäpolku.
 | js/packs/ | 90 | 131 882 | sisältödataa — jo moduulimaista |
 | js/linssit/ | 11 | ~11 000 | paras nykyinen moduuliesimerkki (rekisteri + sopimus) |
 | css | 4 | 16 760 | styles.css 14 143; radio.css laiskasti ladattava ennakkotapaus |
-| tyohuone.html | 1 | 1 733 | sisältää ~1 515 rivin inline-sovelluksen |
+| tyohuone.html | 1 | 1 733 | erillissivusto — purettu peliin 18.8.2026 |
 | testit | 34 | — | 739 testiä; osa lukee ui.js:ää TEKSTINÄ (ks. 2.4) |
 
 ### 2.2 ui.js:n sisäinen rakenne
@@ -199,13 +199,14 @@ pelitila virtaa game → UI-pinnat → run/doAction → game.
 12. **Alusta, jakelu ja työhuone** — käynnistys, tallennus,
     valikot, versiot, peili, offline-kuori, iOS-kuori sekä
     kehittäjän työhuone. Koodi: main.js, natiivi.js, media.js,
-    sw.js, tools/build-standalone.mjs, tools/uusi-versio.mjs,
-    tyohuone.html + tyohuone-*.js (inline-sovellus aikanaan omaksi
-    js/tyohuone-app.js:ksi). Jaetut tiedostot dokumentoitu:
-    tyohuone-raamattu.js ja -tilanne.js luetaan pelissä
-    (kehittäjän liitteet), tyohuone-kehitys-data.js
-    tarinakaaresta. Ohjeet: docs/moduulit/tyohuone.md ja
-    docs/moduulit/jakelu.md.
+    sw.js, tools/build-standalone.mjs, tools/uusi-versio.mjs.
+    Työhuone EI ole enää erillinen sivusto: tyohuone.html ja sen
+    omat moduulit poistettiin 18.8.2026, ja työhuone on pelin
+    kehittäjävivun takana lehtinä (js/lehti.js: Raamattu,
+    Tilannelehti, Tilastot, Lukijoilta). Jäljelle jääneet
+    tyohuone-*.js ovat pelin dataa: -raamattu, -tilanne ja
+    -tilastot luetaan liitteisiin, -pelit Raamatun pelitauluun ja
+    -kehitys-data tarinakaareen.
 
 Rajapintasäännöt (linssisopimuksen malliin, testattaviksi):
 

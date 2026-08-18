@@ -585,6 +585,20 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     ui.piirraKulttuuriNostot(kohde, kategoria.nostot ?? []);
     return;
   }
+  /*
+   * OMA PIIRTO (kehittäjän liitteet, Tilastot-lehti 18.8.2026).
+   *
+   * Sivu, jonka sisältö ei ole nostoja vaan taulukko tai muu
+   * rakennelma, tuo mukanaan oman piirtofunktionsa. Sama malli kuin
+   * kartta- ja numerosivuilla (js/lehti.js naytaTutkiSivu), mutta
+   * täällä, koska otsikko ja yksipalstaisuus tulevat kategoriasta.
+   * PELIN sisältöpaketeissa kenttää ei ole eikä saa olla: pelaajan
+   * lehti on luettavaa tekstiä.
+   */
+  if (kategoria.rakenna) {
+    kategoria.rakenna(kohde, ui);
+    return;
+  }
   if (kategoria.johdanto) {
     kohde.appendChild(html('p', 'johdanto', kategoria.johdanto));
   }
