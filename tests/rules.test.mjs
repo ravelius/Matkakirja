@@ -4401,6 +4401,35 @@ test('karusellinuolissa ei ole laitaliukuväriä, mutta glyyfillä on halo', () 
 });
 
 /*
+ * NUOLEN TAUSTA ON LÄPINÄKYVÄ MYÖS TILOISSA (omistajan kuvakaappaus
+ * 18.8.2026 iPadilla, Pariisin lehden kansikuva: kuvan oikea kolmannes
+ * vaalean harson peitossa, terävä pystyreuna).
+ *
+ * Edellinen testi katsoo vain sääntöjä, joissa `.arrival-kuva-nuoli`
+ * MAINITAAN — mutta harson maalasi dialogin YLEINEN nappisääntö
+ * `.dialog button:hover:not(:disabled)` (tausta rgba(255,255,255,0.6)),
+ * jonka erottelutarkkuus (0,3,1) on korkeampi kuin nuolen perussäännön
+ * (0,2,1). Kun v842 poisti nuolen omat hover-liukuvärit (0,4,1), mikään
+ * ei enää voittanut yleissääntöä, ja iPadin tahmea hover jätti harson
+ * pysyväksi. Vartija vaatii siksi nimenomaisen tilasäännön, jonka
+ * tarkkuus riittää yleissäännön yli.
+ */
+test('karusellinuolen tausta pysyy läpinäkyvänä hoverissa, fokuksessa ja painalluksessa', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  for (const tila of [':hover', ':focus', ':focus-visible', ':active']) {
+    const valitsin = `.dialog button.arrival-kuva-nuoli${tila}`;
+    const paikka = css.indexOf(valitsin);
+    assert.ok(paikka > -1,
+      `nuolelle puuttuu ${tila}-sääntö — dialogin yleinen nappitausta maalaa laidan`);
+    // Sen sääntöjoukon rungossa, johon valitsin kuuluu, on oltava
+    // läpinäkyvä tausta.
+    const runko = css.slice(paikka).match(/^[^{]*\{([^}]*)\}/)?.[1] ?? '';
+    assert.match(runko, /background:\s*transparent;/,
+      `nuolen ${tila}-sääntö ei nollaa taustaa läpinäkyväksi`);
+  }
+});
+
+/*
  * TURVA-ALUEET SIJOITUKSEEN, EI KORKEUDEN PUOLIKKAIKSI.
  *
  * Omistajan kuvakaappaus 17.8.2026 iPadilla (lehden etusivu):
