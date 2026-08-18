@@ -14240,6 +14240,42 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       /*
+       * AVAUSKUVAT (18.8.2026, Flickr-erä): etusivun iso kuvapaikka
+       * selaa kolmea yleisnäkymää, ja kansikuvista jää pikkuriville
+       * kaksi ensimmäistä (kolmas siirtyy suurennoksen sarjaan).
+       * Tokiosta ei saa yhtä siluettia niin kuin pienemmästä
+       * kaupungista, joten karuselli katsoo sitä kolmesta suunnasta:
+       * mereltä, joen suulta ja alakaupungin kattojen yli.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'flickr-15047197338.jpg',
+          selite: 'Kaupunki merenlahden takana kirkkaana kesäpäivänä: '
+            + 'vastarannalla kulkee satamalaitureiden ja varastohallien '
+            + 'rivi, sen takana nousee tornitalojen seinämä, ja edessä '
+            + 'sinisellä vedellä kulkee valkoinen matkustajalaiva.',
+          lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'flickr-24802871038.jpg',
+          selite: 'Joen suu talvisena päivänä: veden yli kaartuu kaksi '
+            + 'valkoista teräskaarta saman sillan päissä, ja molemmilla '
+            + 'rannoilla kohoaa tornitaloja — vasemmalla ruskeaksi '
+            + 'laatoitettu toimistotalo, oikealla vaalea asuintorni.',
+          lahde: 'Dr. Matthias Ripp, Flickr (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'flickr-54125112487.jpg',
+          selite: 'Pilvenpiirtäjien rivi alakaupungin kattojen yli '
+            + 'katsottuna. Etualalla on matalia asuin- ja liiketaloja '
+            + 'parvekkeineen ja katolle nostettuine vesisäiliöineen, ja '
+            + 'niiden takana nousee toimistotornien seinämä — vasemmalla '
+            + 'porrastettu harmaa torni, keskellä lasinen kotelon '
+            + 'muotoinen talo.',
+          lahde: "Pom', Flickr (CC BY-SA 2.0)",
+        },
+      ],
+      /*
        * MATKAILIJAN TOKIO (paketti O6, omistajan tilaus 16.8.2026).
        * Rakenne on Bagdadin ja Pariisin mallista: pystykuva, kappale ja
        * opastaitto viidellä jaksolla, joista ensimmäisessä on kolmen
@@ -14311,9 +14347,11 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kilometrin matkalla, joten junaa tarvitaan vain '
                 + 'perille.',
               /*
-               * KARUSELLI: kolme kuvaa seuraavat jakson tekstiä — rata,
-               * jonka ympäri kaupunki on rakennettu, ja ne kaksi katua,
-               * jotka teksti nimeää kävelyn varrelta.
+               * KARUSELLI: rata, jonka ympäri kaupunki on rakennettu, ja
+               * ne kaksi katua, jotka teksti nimeää kävelyn varrelta.
+               * Perään liitettiin 18.8.2026 kaksi Flickr-kuvaa siitä,
+               * mitä lenkin sisäpuolelle jää: kaupungin laajuus ylhäältä
+               * ja linnanvallihauta, jonka ympäri koko rengas kiertää.
                */
               kuva: [
                 {
@@ -14334,6 +14372,24 @@ export const KULTTUURI_KATEGORIAT = {
                     + 'siintävä Skytree-torni.',
                   lahde: 'DXR, Wikimedia Commons (CC BY-SA 3.0)',
                 },
+                {
+                  tiedosto: 'flickr-24537021080.jpg',
+                  selite: 'Kaupunki ylhäältä auringonlaskun aikaan: talomeri '
+                    + 'jatkuu tasaisena taivaanrantaan asti, oikeassa '
+                    + 'laidassa kaartuu kaupunkimoottoritie kattojen '
+                    + 'yläpuolella, ja pilvien raosta paistaa aurinko '
+                    + 'keltaisena.',
+                  lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-51334303085.jpg',
+                  selite: 'Linnan vallihauta ja sen takana valkoinen '
+                    + 'kulmatorni, jonka päällä on kaksi mustaa '
+                    + 'tiilikattoa. Torni seisoo kaltevan kivimuurin '
+                    + 'päällä, vesi heijastaa sen ja muurin, ja etualalla '
+                    + 'kaartuu männyn oksa kuvan yli.',
+                  lahde: 'Bernard Spragg. NZ, Flickr (Public Domain Mark)',
+                },
               ],
             },
             {
@@ -14352,12 +14408,23 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'sopii kumpaankin. Kalatiskit ovat parhaimmillaan '
                 + 'aamulla, ja vuoden viimeiset päivät ovat kujan '
                 + 'vilkkaimmat: uudenvuoden ruoat ostetaan täältä.',
-              kuva: {
-                tiedosto: 'Ueno Ameya-Yokocho shops under track 2015.jpg',
-                selite: 'Ameya-yokochōn kauppakäytävä kulkee ratasillan '
-                  + 'alla Uenossa.',
-                lahde: 'Wpcpey, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              kuva: [
+                {
+                  tiedosto: 'Ueno Ameya-Yokocho shops under track 2015.jpg',
+                  selite: 'Ameya-yokochōn kauppakäytävä kulkee ratasillan '
+                    + 'alla Uenossa.',
+                  lahde: 'Wpcpey, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'flickr-54184684642.jpg',
+                  selite: 'Kalatiskiltä pöytään: kaksi nigiriä puulaudalla. '
+                    + 'Etummaisen päällä on paksu, vaaleanpunaiseksi '
+                    + 'juovikas tonnikalaviipale, joka kaartuu riisipaakun '
+                    + 'yli molemmin puolin, ja takana on toinen annos '
+                    + 'valkoista kalaa.',
+                  lahde: "Pom', Flickr (CC BY-SA 2.0)",
+                },
+              ],
             },
             {
               otsikko: 'Katu, jolla myydään muoviruokaa',
@@ -14376,13 +14443,60 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Koska sana on äänteellisesti sama kuin vesihiisi '
                 + 'kappa, kauppiaat ovat ottaneet sen maskotikseen, ja '
                 + 'kujan hahmoja näkee kylteissä pitkin katua.',
-              kuva: {
-                tiedosto: 'Coffee cup-shaped balconies, Niimi Tableware, Kappabashi Dougu Street, Tokyo, Japan (side view).jpg',
-                asettelu: 'kapea',
-                selite: 'Kahvikupin muotoiset parvekkeet keittiötavaratalon '
-                  + 'kulmassa Kappabashi-dōrin päässä.',
-                lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              /*
+               * KARUSELLI (18.8.2026): kadun kylttitalon perään neljä
+               * valokuvaa niistä oikeista annoksista, joita
+               * näyteikkunoiden muovikappaleet jäljittelevät — juuri ne
+               * ovat tämän kadun asiakkaiden tuotteita.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Coffee cup-shaped balconies, Niimi Tableware, Kappabashi Dougu Street, Tokyo, Japan (side view).jpg',
+                  asettelu: 'kapea',
+                  selite: 'Kahvikupin muotoiset parvekkeet keittiötavaratalon '
+                    + 'kulmassa Kappabashi-dōrin päässä.',
+                  lahde: 'Basile Morin, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'flickr-16200454374.jpg',
+                  selite: 'Nuudelikulho sinikuvioisessa kupissa: vaaleassa '
+                    + 'sameassa liemessä kelluu ohut vaalea lihaviipale, '
+                    + 'puolikas keltakeltuainen kananmuna, vaaleanpunainen '
+                    + 'kalamassakiekko ja kourallinen silputtua '
+                    + 'kevätsipulia, ja oikeassa laidassa törröttää '
+                    + 'tummanvihreä merileväliuska.',
+                  lahde: 'Zengame, Flickr (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-10626604003.jpg',
+                  selite: 'Nuudeliravintolan pyöreä paperilyhty katon rajassa. '
+                    + 'Valkoiseen paperiin on maalattu mustalla siveltimellä '
+                    + 'liikkeen nimi tavumerkein ja alle punainen '
+                    + 'nelikulmainen leimamerkki; lyhdyn vieressä roikkuu '
+                    + 'valkoinen nyöri.',
+                  lahde: 'Zengame, Flickr (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-47492986562.jpg',
+                  selite: 'Grilliravintolan lautanen: valkoisella '
+                    + 'neliölautasella on ohuita naudanlihaviipaleita, '
+                    + 'joiden rasva kulkee lihassa hienona valkoisena '
+                    + 'verkkona. Viipaleet on aseteltu vihreän bambunlehden '
+                    + 'kahden puolen, ja koristeena on violetti orkidean '
+                    + 'terälehti.',
+                  lahde: 'Kanesue, Flickr (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-40579744563.jpg',
+                  selite: 'Lounastarjotin grilliravintolassa: keskellä '
+                    + 'pöytää on upotettu hiiligrilli, sen ympärillä kulho '
+                    + 'valkoista riisiä, kulho keittoa merilevänpaloineen, '
+                    + 'lautasellinen kimchiä ja kurkkua sekä kolmiosainen '
+                    + 'kastikelautanen, jonka keskilokerossa kelluu '
+                    + 'sitruunaviipale.',
+                  lahde: 'Kanesue, Flickr (CC BY 2.0)',
+                },
+              ],
             },
             {
               otsikko: 'Kylpylä, jonka piippu näkyy kauas',
@@ -14423,12 +14537,47 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'muussa maailman pyhäkössä. Sumida on kävelymatkan '
                 + 'päässä: joen yli näkyy Skytree, ja rantaa pitkin '
                 + 'pääsee kävellen tai vesibussilla eteenpäin.',
-              kuva: {
-                tiedosto: 'Nakamise, Asakusa, Tokyo as seen from the Asakusa Culture Tourist Information Center 20190420 1.jpg',
-                selite: 'Kaminarimon-portti ja Nakamise-dōrin kojurivi '
-                  + 'ylhäältä nähtynä Asakusassa.',
-                lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              /*
+               * KARUSELLI (18.8.2026): portti ylhäältä, sama portti
+               * kadun tasalta, kujan makeiskoju ja se torni, joka joen
+               * yli näkyy — jakson kolme paikkaa järjestyksessä.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Nakamise, Asakusa, Tokyo as seen from the Asakusa Culture Tourist Information Center 20190420 1.jpg',
+                  selite: 'Kaminarimon-portti ja Nakamise-dōrin kojurivi '
+                    + 'ylhäältä nähtynä Asakusassa.',
+                  lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'flickr-15204166021.jpg',
+                  selite: 'Temppelin portti kadun toiselta puolen '
+                    + 'iltapäivällä. Etualalla kulkee leveä valkoinen '
+                    + 'suojatie, sen takana odottaa väkeä jalkakäytävällä, '
+                    + 'ja portin punaisen katoksen alla riippuu iso '
+                    + 'paperilyhty; oikealla palaa katulyhtypylvään viisi '
+                    + 'kupua.',
+                  lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-25880389523.jpg',
+                  selite: 'Katukojun makeisia tikkujen nokassa: banaaneja, '
+                    + 'jotka on kastettu turkoosiin ja tummanruskeaan '
+                    + 'kuorrutteeseen ja koristeltu pinkeillä raidoilla ja '
+                    + 'värillisillä nonparelleilla. Tikut seisovat '
+                    + 'pystyssä valkoisessa reikälevyssä.',
+                  lahde: 'Jon Connell, Flickr (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-16339556998.jpg',
+                  selite: 'Lähetystorni valaistuna illalla kanavan takaa '
+                    + 'katsottuna: runko hehkuu alhaalta ylös kullankeltaisena '
+                    + 'ja vaihtuu ylempänä turkoosiksi ja violetiksi. Alhaalla '
+                    + 'kadun varrella palavat liikkeiden kyltit, ja tornin '
+                    + 'värit heijastuvat mustasta vedestä.',
+                  lahde: 'Yoshikazu TAKADA, Flickr (CC BY 2.0)',
+                },
+              ],
             },
           ],
           matkailu: {
@@ -14714,6 +14863,65 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kohoaa yksinäinen ruskea tornitalo.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        /*
+         * Kansikuvia on nyt viisi, mutta pikkuriville mahtuu kaksi
+         * ensimmäistä (avauskuvat veivät ison paikan) — loput näkyvät
+         * suurennoksen selattavassa sarjassa. Nämä kaksi vastaavat
+         * suoraan lehden johdantoa: portti, joka seisoo yhä liikenteen
+         * keskellä, ja se, mitä vanhan itäportin paikalle rakennettiin.
+         */
+        {
+          tiedosto: 'flickr-48968719746.jpg',
+          selite: 'Vanha kaupunginportti keskellä liikennettä. '
+            + 'Kaksikerroksinen puinen porttitalo vihreine kattopalkkeineen '
+            + 'seisoo harmaan kivijalustan päällä, jonka läpi vie musta '
+            + 'holvikäytävä; edessä ajaa autoja ja takana kohoaa lasisia '
+            + 'toimistotaloja.',
+          lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'flickr-48966437893.jpg',
+          selite: 'Hopeanharmaa metallipintainen rakennus yöllä: pyöristetty '
+            + 'seinämä kaartuu maasta ylös ja jatkuu vaakasuorana '
+            + 'aallonharjana kuvan poikki. Alhaalla nousee valaistu '
+            + 'kävelyramppi, oikealla liehuu lippurivi ja taustalla palaa '
+            + 'tornitalon vihreä kärki.',
+          lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT (18.8.2026, Flickr-erä): etusivun iso kuvapaikka
+       * selaa kolmea yleisnäkymää, ja kansikuvista jää pikkuriville
+       * kaksi ensimmäistä. Soul luetaan parhaiten korkealta — kaksi
+       * ensimmäistä on otettu kaupungin keskellä olevalta kukkulalta ja
+       * kolmas joen toiselta puolelta.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'flickr-48753082278.jpg',
+          selite: 'Kaupunki kukkulan laelta kirkkaana syyspäivänä: '
+            + 'etualalla laskeutuu metsäinen rinne, sen takana leviää '
+            + 'matalien talojen meri laaksoon, ja taustalla kohoaa '
+            + 'sinertävä vuorijono rantaan asti.',
+          lahde: 'cafuego, Flickr (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'flickr-14775785519.jpg',
+          selite: 'Aurinko nousee usvan läpi kaupungin yllä. Oikeassa '
+            + 'laidassa kohoaa punavalkoinen ristikkomasto, alhaalla '
+            + 'levittäytyy matalien talojen kortteleita, ja kaukana '
+            + 'kimaltaa joki siltoineen.',
+          lahde: 'Kristoffer Trolle, Flickr (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'flickr-23010178486.jpg',
+          selite: 'Joen takainen kaupunginosa auringonlaskun aikaan: '
+            + 'kerrostalorivistön yllä kaartuu raidallinen pilviverho, '
+            + 'taivas hehkuu oranssina pilvien alla, ja keskeltä nousee '
+            + 'yksinäinen kapeneva torni, jonka huipulla on vielä '
+            + 'nostureita.',
+          lahde: 'Carmine.shot, Flickr (CC BY 2.0)',
+        },
       ],
       /*
        * MATKAILIJAN SOUL. Rakenne on Bagdadin mallista: pystykuva,
@@ -14791,6 +14999,15 @@ export const KULTTUURI_KATEGORIAT = {
                     + 'kasvanut sen ympärille joka suunnalta.',
                   lahde: 'tylerdurden1, Wikimedia Commons (CC BY 2.0)',
                 },
+                {
+                  tiedosto: 'flickr-30596173403.jpg',
+                  selite: 'Joen eteläpuoli yöllä: sillan kaide kaartuu '
+                    + 'oikealle, katuvalot jatkuvat rivissä kauas, ja '
+                    + 'kerrostalojen ikkunat palavat vaaleansinisinä. '
+                    + 'Keskellä kohoaa kapeneva lasitorni, jonka kylkeen '
+                    + 'on juovitettu valonauhoja.',
+                  lahde: 'Tony, Flickr (CC BY 2.0)',
+                },
               ],
             },
             {
@@ -14835,12 +15052,25 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kanssa. Torin nimi tulee kahdesta sillasta, Gwangkyosta '
                 + 'ja Jangkyosta, joiden välissä sen ensimmäinen '
                 + 'kauppahalli seisoi.',
-              kuva: {
-                tiedosto: 'Korean pancakes and pan-fried foods at Gwangjang Market.jpg',
-                selite: 'Jeon-lettuja ja paistettuja pikkuannoksia '
-                  + 'Gwangjangin torin kojun tiskillä.',
-                lahde: 'Bo Park, US Army, Wikimedia Commons (PD)',
-              },
+              kuva: [
+                {
+                  tiedosto: 'Korean pancakes and pan-fried foods at Gwangjang Market.jpg',
+                  selite: 'Jeon-lettuja ja paistettuja pikkuannoksia '
+                    + 'Gwangjangin torin kojun tiskillä.',
+                  lahde: 'Bo Park, US Army, Wikimedia Commons (PD)',
+                },
+                {
+                  tiedosto: 'flickr-41646399301.jpg',
+                  selite: 'Katukojun tiski illalla: myyjä pitää kudotuin '
+                    + 'käsinein kaasupoltinta padan reunalla ja liekki '
+                    + 'osuu ritilän päällä olevaan annokseen, jolloin '
+                    + 'höyry nousee valkoisena pilvenä. Oikealla on '
+                    + 'kuoritut kastanjat pellillä ja sinivalkoisissa '
+                    + 'pahvimukeissa, takana paahdettuja bataatteja, ja '
+                    + 'ylhäällä riippuu hintakyltti ₩5 000.',
+                  lahde: 'Marc DUPUY, Flickr (CC BY-SA 2.0)',
+                },
+              ],
             },
             {
               otsikko: 'Puro moottoritien alta',
@@ -14883,12 +15113,37 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Deoksugung oli käytössä monarkian viimeisinä vuosina, '
                 + 'ja siellä perinteinen ja länsimainen rakennustapa '
                 + 'seisovat vierekkäin.',
-              kuva: {
-                tiedosto: 'Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg',
-                selite: 'Gyeonghoerun juhlasali seisoo kivipilareiden '
-                  + 'varassa palatsin lammessa.',
-                lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              /*
+               * KARUSELLI (18.8.2026): juhlasali kahtena vuodenaikana ja
+               * palatsin piha vuoren juurella — jakso puhuu viidestä
+               * palatsista, joten yksi kuva ei riitä.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg',
+                  selite: 'Gyeonghoerun juhlasali seisoo kivipilareiden '
+                    + 'varassa palatsin lammessa.',
+                  lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'flickr-45979304321.jpg',
+                  selite: 'Sama juhlasali syksyllä lammen toiselta puolelta: '
+                    + 'kaksikerroksinen sali seisoo kivipilaririvin päällä '
+                    + 'kivetyllä saarekkeella, ja koko rakennus heijastuu '
+                    + 'tyynestä vedestä. Vasemmalla kellastuvat puut ja '
+                    + 'niiden takana kohoaa kallioinen vuori.',
+                  lahde: 'wikiphotographer, Flickr (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-48977306141.jpg',
+                  selite: 'Palatsin piha alkusyksystä: hiekkakäytävä johtaa '
+                    + 'valkoiseen muuriin ja sen pieneen porttiin, käytävän '
+                    + 'reunoilla on punalehtisiä pensaita ja kallistuneita '
+                    + 'mäntyjä, ja muurin takaa kohoaa jyrkkä vuori, jonka '
+                    + 'rinteessä näkyy paljasta kalliota.',
+                  lahde: 'Jean-Pierre Dalbéra, Flickr (CC BY 2.0)',
+                },
+              ],
             },
           ],
           matkailu: {
@@ -15080,6 +15335,41 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskikaistalla ja väkeä kulkee kadulla ristiin rastiin.',
           lahde: 'Hermann Luyken, Wikimedia Commons (CC0)',
         },
+        /*
+         * Neljäs kansikuva näkyy pikkurivin sijaan suurennoksen
+         * selattavassa sarjassa (avauskuva vei ison paikan, ja
+         * pikkuriville mahtuu kaksi). Se sanoo lehden johdannon
+         * yhdessä ruudussa: vanha temppeli seisoo lasitornien välissä.
+         */
+        {
+          tiedosto: 'flickr-30366279333.jpg',
+          selite: 'Kullattu temppelikatto lasitornien välissä '
+            + 'auringonlaskun aikaan. Vasemmalla kaartuu sininen '
+            + 'lasijulkisivu ja oikealla punaiseksi hehkuva tornitalo, '
+            + 'niiden välissä nousee monikerroksinen kultainen stupa, ja '
+            + 'alhaalla jonottaa autoja leveällä kadulla; aivan etualalla '
+            + 'on pinkkejä köynnöskukkia.',
+          lahde: 'lwtt93, Flickr (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVA (18.8.2026, Flickr-erä): etusivun iso kuvapaikka on
+       * yksi vaakayleisnäkymä, ei karuselli — tästä erästä kelpasi
+       * yleisnäkymäksi vain tämä yksi kuva, ja pikkuriville jäävät
+       * kansikuvien kaksi ensimmäistä. Kuva on otettu joen itäpuolelta
+       * länteen, eli juuri siitä suunnasta, josta lehden viimeinen
+       * opasjakso katsoo takaisin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'flickr-32354797618.jpg',
+          selite: 'Vanha keskusta ylhäältä sinisenä hetkenä: alareunassa '
+            + 'kaartuu leveä joki, sen rannassa kulkee valaistu '
+            + 'kivitalojen rivi, ja niiden takaa nousee tornitalojen '
+            + 'meri usvaan asti. Katujen autonvalot piirtävät punaisia '
+            + 'juovia, ja oikealla taivas hehkuu vielä oranssina.',
+          lahde: 'Franck Michel, Flickr (CC BY 2.0)',
+        },
       ],
       /*
        * MATKAILIJAN SHANGHAI. Rakenne on Bagdadin mallista: pystykuva,
@@ -15154,6 +15444,16 @@ export const KULTTUURI_KATEGORIAT = {
                     + 'Huangpun rannassa.',
                   lahde: 'そらみみ, Wikimedia Commons (CC BY-SA 4.0)',
                 },
+                {
+                  tiedosto: 'flickr-44705397404.jpg',
+                  selite: 'Kävelykadun neonkylttejä lähietäisyydeltä yöllä: '
+                    + 'talon kyljessä laskeutuu kaksi pystyriviä '
+                    + 'valoputkikirjoitusta, vasemmanpuoleinen sinisenä '
+                    + 'punaisissa kehyksissä ja oikeanpuoleinen '
+                    + 'vaaleanvihreänä punaisella pohjalla. Alimmassa '
+                    + 'ruudussa lukee latinalaisin kirjaimin HUNTLEY.',
+                  lahde: 'Franck Michel, Flickr (CC BY 2.0)',
+                },
               ],
             },
             {
@@ -15199,12 +15499,25 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'painava huokoinen lohkare. Puutarhan laidalla lammen '
                 + 'päällä seisoo teehuone, jonne johtaa yhdeksän kertaa '
                 + 'kääntyvä silta.',
-              kuva: {
-                tiedosto: 'Yu Garden Shanghai November 2017 009.jpg',
-                selite: 'Yun puutarhan salin sisustus: lyhdyt, maisemamaalaus '
-                  + 'ja veistetyt jalopuutuolit.',
-                lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
-              },
+              kuva: [
+                {
+                  tiedosto: 'Yu Garden Shanghai November 2017 009.jpg',
+                  selite: 'Yun puutarhan salin sisustus: lyhdyt, maisemamaalaus '
+                    + 'ja veistetyt jalopuutuolit.',
+                  lahde: 'King of Hearts, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'flickr-50101388983.jpg',
+                  selite: 'Puutarhan laidan lampi illalla: kaksikerroksisten '
+                    + 'puutalojen ylöskaartuvat räystäät on ääriviivoitettu '
+                    + 'kullankeltaisin valoin, ja koko rivi heijastuu '
+                    + 'tummasta vedestä. Vasemmalla kelluu pieni '
+                    + 'lumpeensaareke, oikealla seisoo valkoinen '
+                    + 'naisenkuva kivijalustalla, ja takana palavat '
+                    + 'myyntikojujen keltaiset varjot.',
+                  lahde: 'Steve FUNG, Flickr (CC BY-SA 2.0)',
+                },
+              ],
             },
             {
               otsikko: 'Pieni kori höyryä',
@@ -15221,12 +15534,40 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'mustaa etikkaa ja silputtua inkivääriä. Ensimmäinen '
                 + 'suupala kannattaa ottaa varovasti — liemi on juuri niin '
                 + 'kuumaa kuin miltä näyttää.',
-              kuva: {
-                tiedosto: 'Yuyuan Street xiaolongbao.JPG',
-                selite: 'Xiaolongbao-nyyttejä bambukorissa Yun puutarhan '
-                  + 'kulmalla vanhassakaupungissa.',
-                lahde: 'Drew Lietzow, Wikimedia Commons (PD)',
-              },
+              /*
+               * KARUSELLI (18.8.2026): nyyttikorin perään kaksi kuvaa
+               * niistä paikoista, joista korin ostaa — korttelin oma
+               * pikkuravintola ja aamiaispuoti, jonka listalla ovat
+               * juuri tämän kaupungin aamun ruoat.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Yuyuan Street xiaolongbao.JPG',
+                  selite: 'Xiaolongbao-nyyttejä bambukorissa Yun puutarhan '
+                    + 'kulmalla vanhassakaupungissa.',
+                  lahde: 'Drew Lietzow, Wikimedia Commons (PD)',
+                },
+                {
+                  tiedosto: 'flickr-42164576345.jpg',
+                  selite: 'Korttelin ruokapaikka yöllä: julkisivun yllä palaa '
+                    + 'musta valotaulu, jonka kiinalaiset merkit on tehty '
+                    + 'valkoisista lampuista ja kehys keltaisesta '
+                    + 'valonauhasta. Ikkunaan on teipattu kuvallisia '
+                    + 'ruokalistoja, sisällä istuu ruokailijoita, ja '
+                    + 'jalkakäytävällä seisoo kaksi sähköskootteria.',
+                  lahde: 'Franck Michel, Flickr (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'flickr-44774108052.jpg',
+                  selite: 'Aamiaispuodin ovi illalla. Sisäänkäynnin yli '
+                    + 'kaartuu valkoinen holvi, jota kiertää värillinen '
+                    + 'lamppurivi, ja alla hehkuvat vihreät ja punaiset '
+                    + 'neonmerkit sekä piirretty possunkuva. Vihreässä '
+                    + 'kyltissä luetellaan aamun ruoat, ja avoimesta '
+                    + 'ovesta näkyy tyhjiä pöytiä ja tiiliseinä.',
+                  lahde: 'Franck Michel, Flickr (CC BY 2.0)',
+                },
+              ],
             },
             {
               otsikko: 'Vastaranta kolmessakymmenessä vuodessa',
@@ -15243,12 +15584,24 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'toiseenkin suuntaan: taifuunitulvien jälkeen rannalle '
                 + 'rakennettiin pato, joten kävelytaso on nyt noin '
                 + 'kymmenen metriä katutasoa ylempänä.',
-              kuva: {
-                tiedosto: 'Shanghai skyline waterfront pudong 5166168 69 70.jpg',
-                selite: 'Pudongin siluetti Huangpun yli: Helmitorni, Jin Mao '
-                  + 'ja Shanghain torni.',
-                lahde: 'Ermell, Wikimedia Commons (CC0)',
-              },
+              kuva: [
+                {
+                  tiedosto: 'Shanghai skyline waterfront pudong 5166168 69 70.jpg',
+                  selite: 'Pudongin siluetti Huangpun yli: Helmitorni, Jin Mao '
+                    + 'ja Shanghain torni.',
+                  lahde: 'Ermell, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'flickr-45493688424.jpg',
+                  selite: 'Sama torni kadun tasalta yöllä: kierteinen '
+                    + 'lasijulkisivu nousee matalan valkoisen '
+                    + 'toimistotalon takaa ja jatkuu ulos kuvasta. '
+                    + 'Vasemmalla palaa punainen pystykyltti, oikealla '
+                    + 'toimiston ikkunarivit, ja kadun poikki venyy ohi '
+                    + 'ajaneen auton valojuova.',
+                  lahde: 'Franck Michel, Flickr (CC BY 2.0)',
+                },
+              ],
             },
           ],
           matkailu: {

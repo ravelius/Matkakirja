@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v852 — Flickr-valokuvat Tokion, Soulin ja Shanghain lehtiin (29 kpl): avaa kaikki kolme lehteä — etusivun avauskuvakaruselli on uusi (Shanghaissa yksi kuva, ei nuolia), kansikuvien pikkurivi näyttää nyt kaksi ja loput ovat suurennoksen sarjassa. Oppaan jaksot: Tokio (Perille ja liikkeelle, Torikuja radan alla, Katu jolla myydään muoviruokaa, Temppelin katu ja joki), Soul (Perille ja liikkeelle, Torilla syödään seisten, Viisi palatsia), Shanghai (Perille ja liikkeelle, Puutarha, Pieni kori höyryä, Vastaranta). Tarkista että kuvat latautuvat, tekijä + lisenssi näkyvät joka kuvatekstissä ja että Soulin avauskuvan (metsäinen kukkula) suurennos on SAMA rajaus kuin sivulla — se on rajattu jättipanoraamasta',
   'v851 — iPad: lippuikkunan tarkennustila (esim. Ranska, vaakuna suurennettuna): sumennettu sisältö leikkautuu nyt kortin pyöristyksen SISÄÄN eikä sen yli; testaa myös pitkän kortin (Saksa) vieritys sormella',
   'v850 — Raamatun Lukijoiden ehdotukset -osioon palkkiolinjaus: läpäissyt ehdotus palkitaan pelirahalla lunastuskoodilla, omistaja päättää summan',
   'v849 — Raamatussa uusi Lukijoiden ehdotukset -osio (kehittäjän liitteet): pelaajien kuva- ja juttuideakanavan linjaus',
