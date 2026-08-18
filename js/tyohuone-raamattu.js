@@ -429,6 +429,12 @@ export const RAAMATTU = {
           + 'hyväksynyt ne ja lisenssi on varmistettu — lomake pyytää '
           + 'vakuutuksen, että kuva on lähettäjän oma ja saa julkaista '
           + '(CC BY -henkisesti); ilman sitä kuvaa ei oteta lehteen.',
+        'PALKKIO (omistaja 18.8.2026): kuratoinnin läpäissyt ehdotus '
+          + 'palkitaan pelirahalla. Omistaja määrittelee summan aluksi '
+          + 'itse ehdotuksen laadun mukaan. Palkkio toimitetaan '
+          + 'lunastuskoodilla, jonka pelaaja syöttää peliin (pelissä '
+          + 'ei ole tilejä, joten koodi on ainoa reitti oikealle '
+          + 'pelaajalle).',
       ],
     },
     {
