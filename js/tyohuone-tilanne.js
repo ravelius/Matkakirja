@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v898 — Tietäjän tie -galleria (laukun i-nappi): nykyinen avatar isona selitystekstin oikealla puolella nimikkeineen; ruudukko alla ennallaan (sama pöllö näkyy tarkoituksella kahdesti)',
   'v897 — luennan kahvat: 1) lehdissä (esim. Sofia) kuvien päällä kellunut pyöreä kaiutinnappi on POISSA — otsikkorivin kaiutin aloittaa luennan ja avaa säätimet myös kesken luennan; 2) Matkailijan oppaassa (esim. Kööpenhamina) otsikkorivi pysyy nyt näkyvissä vieritettäessä kuten lehdissä, ja sen kaiutin on oikeassa reunassa korkeussuunnassa keskitettynä',
   'v896 — heitä noppaa: valittavat kohteet nyt vaalea kultalevy + punainen katkoviivarengas + pehmeästi laajeneva kultahalo — erottuvatko yhdellä silmäyksellä merellä ja maalla?',
   'v895 — pöllön linkistä avattu nähtävyysjuttu (esim. Duomo) avautuu nyt chatin päälle ja jutun sulkeminen palauttaa pöllö-chattiin, ei kartalle; lehtilinkit väistävät chatin kuten ennen',
