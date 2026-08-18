@@ -532,3 +532,73 @@ test('latinalaiset peilinimet eivät muutu tiivistekorjauksesta', () => {
   assert.equal(peiliKuvaPolku('View of Stepantsminda.jpg', 'kuvat'),
     'kuvat/view-of-stepantsminda.jpg');
 });
+
+/*
+ * FLICKR-KUVAT KULKEVAT ERI REITTIÄ KUIN COMMONS-KUVAT.
+ *
+ * Pelin kuvamalli laskee sekä peilipolun että alkuperäisen osoitteen
+ * `tiedosto:`-nimestä olettaen, että nimi on Commonsin. Flickr-kuvaa ei
+ * ole Commonsissa eikä peilissä, joten molemmat osoitteet olisivat
+ * 404. Sen portaat ovat repon oma kopio (assets/valokuvat) ja Flickrin
+ * kokoversio — ja juuri siksi jokaisella lehteen päätyvällä
+ * Flickr-kuvalla ON OLTAVA repokopio: ilman sitä kuva jäisi yhden
+ * ulkopuolisen palvelimen varaan, mitä peli ei salli millekään
+ * aineistolle.
+ */
+test('jokaisella Flickr-kuvalla on repokopio ja lähdetiedot', async () => {
+  const { VALOKUVAT_FLICKR } = await import('../js/packs/valokuvat-flickr.js');
+  const { VALOKUVAT_PAIKALLISET } = await import('../js/packs/valokuvat-paikalliset.js');
+  const kansio = join(JUURI, 'js/packs');
+  const kaytossa = new Set();
+  for (const nimi of readdirSync(kansio).filter((f) => f.endsWith('.js'))) {
+    const teksti = readFileSync(join(kansio, nimi), 'utf8');
+    for (const osuma of teksti.matchAll(/^\s*tiedosto:\s*'(flickr-[^']*)'/gm)) {
+      kaytossa.add(osuma[1]);
+    }
+  }
+  assert.ok(kaytossa.size > 0, 'Flickr-kuvia pitäisi olla käytössä');
+  for (const tiedosto of kaytossa) {
+    const tieto = VALOKUVAT_FLICKR.get(tiedosto);
+    assert.ok(tieto, `${tiedosto} puuttuu VALOKUVAT_FLICKR-taulusta`);
+    assert.match(tieto.osoite, /^https:\/\/live\.staticflickr\.com\//, tiedosto);
+    assert.match(tieto.sivu, /^https:\/\/www\.flickr\.com\/photos\//, tiedosto);
+    assert.ok(tieto.tekija, `${tiedosto}: tekijä puuttuu`);
+    assert.match(tieto.lisenssi, /^(CC BY 2\.0|CC BY-SA 2\.0|CC0|PDM)$/, tiedosto);
+    const paikallinen = VALOKUVAT_PAIKALLISET.get(tiedosto);
+    assert.ok(paikallinen, `${tiedosto} puuttuu paikallisten kopioiden kartasta`);
+    assert.ok(existsSync(join(JUURI, 'assets/valokuvat', paikallinen)),
+      `${tiedosto}: repokopio puuttuu kansiosta assets/valokuvat`);
+  }
+});
+
+test('Flickr-kuva haetaan repokopiosta, Flickr jää varareitiksi', async () => {
+  const { valokuvaUrl, valokuvaVara, valokuvaSuurennos } = await import('../js/packs/africa-valokuvat.js');
+  const { VALOKUVAT_FLICKR } = await import('../js/packs/valokuvat-flickr.js');
+  const [tiedosto] = [...VALOKUVAT_FLICKR.keys()];
+  const vanhaLocation = globalThis.location;
+  globalThis.location = { protocol: 'https:' };
+  try {
+    assert.equal(valokuvaUrl(tiedosto, 1200), `assets/valokuvat/${tiedosto}`,
+      'selaimessa Flickr-kuva tulee repon omasta kansiosta');
+  } finally {
+    if (vanhaLocation === undefined) delete globalThis.location;
+    else globalThis.location = vanhaLocation;
+  }
+  // Varareitti ja suurennos menevät Flickriin — eivät Commonsiin, jossa
+  // tiedostoa ei ole. Alkuperäiskokoa (_o, jopa 6000 px) ei pyydetä.
+  for (const osoite of [valokuvaVara(tiedosto, 640), valokuvaSuurennos(tiedosto, 1600)]) {
+    assert.match(osoite, /^https:\/\/live\.staticflickr\.com\/.*_[bh]\.jpg$/, osoite);
+  }
+  // Commons-kuva ei saa eksyä Flickr-reitille.
+  assert.match(valokuvaVara('Souvlaki in Athens.JPG', 640), /commons\.wikimedia\.org/);
+});
+
+test('peilaus- ja hakutyökalu ohittavat Flickr-nimet', () => {
+  const tyokalu = readFileSync(join(JUURI, 'tools/peilaa-media.mjs'), 'utf8');
+  assert.match(tyokalu, /VALOKUVAT_FLICKR/,
+    'peilaustyökalun pitää suodattaa Flickr-nimet pois — muuten joka ajo '
+    + 'hakee niitä Commonsista ja saa 404:n');
+  const haku = readFileSync(join(JUURI, 'tools/fetch-photos.mjs'), 'utf8');
+  assert.match(haku, /VALOKUVAT_FLICKR/,
+    'kuvahakutyökalun pitää ohittaa Flickr-nimet');
+});

@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v846 — Flickr-valokuvat Tampereen ja Firenzen lehtiin (19 kpl): avaa molemmat lehdet — avauskuvakaruselli, kansikuvien suurennos ja Matkailijan oppaan jaksot (Koski ja punatiili, Mustamakkara ja torit, Ilta / Perille ja jalkapatikkaan, Museot yhtenä päivänä, Torilla ja pöydässä, Ilta); tarkista että kuvat latautuvat ja tekijä + lisenssi näkyvät joka kuvatekstissä',
   'v845 — Raamatun Kuvat ja lähteet -osiossa uusi linjaus: kaikki sisältö ämpäristä (R2-peili), uusi lähde vasta kun peilausputki kattaa sen; kuvalähdelista päivitetty (Commons, Finna, LoC, Flickr)',
   'v844 — kohdekarttojen miniatyyripiirrokset kahdeksaan uuteen kaupunkiin: Tampere, Firenze, Bagdad, Teheran, Tripoli, Tokio, Soul ja Shanghai — tarkista että piirros näkyy kartalla numeroympyrän tilalla; neljä kohdetta jäi vielä ilman piirrosta (Tampereen tuomiokirkko, Marcus Aureliuksen riemukaari, Punainen linna, Shitamachi-museo)',
   'v843 — lippuikkuna (esim. Soul): iso lippu terävä myös iPadilla (haetaan nyt 1280 px:n kuvana), ja tunnus/versiolippu suurennettuna pysyy kortin sisällä selitteineen — ei enää katkeavaa kuvatekstiä alareunassa',

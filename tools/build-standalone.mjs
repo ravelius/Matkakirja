@@ -119,6 +119,7 @@ const MODULES = [
   'js/linssit/rekisteri.js',
   'js/linssit/omistus.js',
   'js/packs/valokuvat-paikalliset.js',
+  'js/packs/valokuvat-flickr.js',
   'js/packs/liput-paikalliset.js',
   'js/packs/lippu-tekijat.js',
   'js/packs/africa-valokuvat.js',
