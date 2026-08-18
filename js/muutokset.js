@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 867, teksti: 'Pöllön ehdotuskupla osoittaa hampurilaiseen' },
   { v: 866, teksti: 'Varustekuvien uusinta: selkeät promptit ja ajuri' },
   { v: 865, teksti: 'Tampereelle 8 ja Firenzeen 9 nähtävyyskohdetta' },
   { v: 864, teksti: 'Tilastolehden sarakeotsikot näkyviin iPadilla' },

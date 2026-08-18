@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v867 — pöllön ehdotuskutsu ("Haluatko osallistua…") ilmestyy nyt hampurilaisnapin ALLE kärki ylöspäin kohti nappia (näkyy vain kerran per laite; nollaus: localStorage-avain matkakirja-ehdotus-kupla pois)',
   'v865 — Tampereella 8 ja Firenzessä 9 kohdetta (oli kummassakin 6): uudet ovat Tallipiha ja Amurin työläismuseokortteli sekä Galleria dell\'Accademia, Santa Maria Novella ja Bargello — avaa molemmat kohdekartat ja uusien kohteiden jutut; uudet näkyvät vielä numeroympyröinä (miniatyyrit generoimatta), ja Firenzen oppaan nosto sanoo nyt "yhdeksän kohdetta"',
   'v864 — tilastolehti iPadilla: vieritä Mantereet-taulua vaakaan — kaikkien sarakkeiden otsikot (Lehti…Kieli, Maalehti…Radio) pysyvät näkyvissä (aiemmin osa katosi vierityksessä)',
   'v863 — tietäjäavatarit: avaa matkalaukku — tietäjärivin edessä on nykyisen tason PYÖREÄ MUOTOKUVA (pöllökuvake pois), rivin alla ohut kultainen edistymispalkki seuraavaan rajaan ja rivin perässä i-nappi, joka avaa Tietäjän tie -minipopupin (selitys + kaikki 10 tasoa kuvineen; saavuttamattomat himmeinä, nykyinen kehystettynä; sulkeutuu ruksista, taustasta ja Escistä). Tasonnousussa pöllön kupla on uusi: iso avatar, kalevalainen värssy kursiivilla kahdella rivillä ja onnittelu (40 tp tulee vastaan nopeasti). Ylin taso on nyt "Tietäjä iänikuinen" (ei Suurtietäjä)',

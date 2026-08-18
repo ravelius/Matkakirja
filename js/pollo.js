@@ -1207,8 +1207,17 @@ class Pollo {
    * menee kuplan LÄPI (css: pointer-events: none), jotta se ei varasta
    * kartalta yhtään osumaa.
    */
-  naytaVihje(teksti) {
+  naytaVihje(teksti, kohde) {
     if (!teksti || this.auki || this.nappi.hidden) return;
+    /*
+     * Kupla voi osoittaa muuallekin kuin pöllönappiin: 'valikko'
+     * ankkuroi sen hampurilaisnapin alle kärki ylöspäin, koska
+     * ehdotuskutsun toiminto asuu siellä (omistaja 18.8.2026:
+     * "Infokyltti pitäisi osoittaa hampurilaiseen"). Ankkuri
+     * talletetaan, jotta asetaVihjeenPaikka osaa saman valinnan.
+     */
+    this.vihjeAnkkuri = kohde === 'valikko'
+      ? this.doc.getElementById('menu-btn') : null;
     /*
      * Siirtovaiheessa alanappiriviä ei piirretä lainkaan (js/ui.js
      * renderActions), joten napin ankkuripaikka on irronnut puusta ja
@@ -1221,6 +1230,7 @@ class Pollo {
     this.kiinnita();
     const kupla = this.varmistaKupla();
     kupla.classList.remove('pollo-vihje-juhla');
+    kupla.classList.toggle('pollo-vihje-ylos', Boolean(this.vihjeAnkkuri));
     kupla.textContent = teksti;
     kupla.hidden = false;
     this.asetaVihjeenPaikka();
@@ -1253,7 +1263,11 @@ class Pollo {
   naytaOnnittelu({ teksti = '', kuva = '', sakeet = [] } = {}) {
     if (!teksti || this.auki || this.nappi.hidden) return;
     this.kiinnita();
+    // Juhla puhutaan aina pöllönapin vierestä — mahdollinen
+    // valikkoankkuri edelliseltä vihjeeltä ei saa jäädä voimaan.
+    this.vihjeAnkkuri = null;
     const kupla = this.varmistaKupla();
+    kupla.classList.remove('pollo-vihje-ylos');
     kupla.classList.add('pollo-vihje-juhla');
     kupla.replaceChildren();
     if (kuva) {
@@ -1288,14 +1302,25 @@ class Pollo {
     const kupla = this.vihje;
     if (!kupla || kupla.hidden) return;
     const ikkuna = this.doc.defaultView ?? window;
-    const nappi = this.nappi.getBoundingClientRect();
+    // Ankkuri on yleensä pöllönappi; valikkovihjeellä hampurilainen
+    // (ks. naytaVihje). Ankkurin alle mentäessä kärki on ylhäällä,
+    // joten kupla asemoidaan topilla — bottom ja top nollataan
+    // ristiin, koska sama elementti kiertää molemmissa asennoissa.
+    const ankkuri = this.vihjeAnkkuri ?? this.nappi;
+    const nappi = ankkuri.getBoundingClientRect();
     const leveys = kupla.getBoundingClientRect().width;
     const marginaali = 8;
     const keskitetty = nappi.left + nappi.width / 2 - leveys / 2;
     const vasen = Math.max(marginaali,
       Math.min(keskitetty, (ikkuna.innerWidth || 0) - leveys - marginaali));
     kupla.style.left = `${Math.round(vasen)}px`;
-    kupla.style.bottom = `${Math.round((ikkuna.innerHeight || 0) - nappi.top + 10)}px`;
+    if (this.vihjeAnkkuri) {
+      kupla.style.bottom = '';
+      kupla.style.top = `${Math.round(nappi.bottom + 10)}px`;
+    } else {
+      kupla.style.top = '';
+      kupla.style.bottom = `${Math.round((ikkuna.innerHeight || 0) - nappi.top + 10)}px`;
+    }
   }
 
   /** Kupla pois: pelaaja teki valinnan, koski karttaa tai vaihe vaihtui. */
@@ -3169,9 +3194,14 @@ export function polloSulje() {
  * Näyttää pöllönapin vieressä kiinteän vihjekuplan (js/ui.js
  * paivitaValintavihje). Ei tekoälykutsua eikä keskustelun avausta —
  * pelkkä lause siitä, mitä pelaajalta odotetaan.
+ *
+ * @param {string} [kohde] 'valikko' ankkuroi kuplan hampurilaisnappiin
+ *   kärki ylöspäin — kupla osoittaa sinne, mistä kutsuttu toiminto
+ *   löytyy (omistaja 18.8.2026 ehdotuskutsusta: "Infokyltti pitäisi
+ *   osoittaa hampurilaiseen").
  */
-export function polloVihje(teksti) {
-  nykyinenPollo?.naytaVihje(teksti);
+export function polloVihje(teksti, kohde) {
+  nykyinenPollo?.naytaVihje(teksti, kohde);
 }
 
 /**
