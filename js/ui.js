@@ -7029,20 +7029,25 @@ export class UI {
       sfx.play('paper');
       nayta();
     } : null);
-    /*
-     * Suurennos liitetään PÄÄLLIMMÄISEEN avoimeen dialogiin. Modaali
-     * (showModal) elää selaimen top layer -kerroksessa, joka peittää
-     * kaiken ulkopuolisen z-indexistä riippumatta — kun kuvaa
-     * napautettiin nähtävyysikkunassa, arrivalDialogiin liitetty
-     * suurennos jäi ikkunan TAAKSE (omistajan löytö 8.8.2026).
-     * Saman dialogin lapsena suurennos on samassa kerroksessa ja
-     * z-index 70 nostaa sen kortin ylle; position: fixed kattaa yhä
-     * koko ruudun, koska dialogilla ei ole transformia.
-     */
-    const nahtavyys = document.getElementById('nahtavyys-dialog');
-    const isanta = nahtavyys?.open ? nahtavyys : this.arrivalDialog;
-    isanta.appendChild(kortti);
+    this.suurennosIsanta().appendChild(kortti);
     this.lehtitila.kulttuuriKuvaEl = kortti;
+  }
+
+  /**
+   * PÄÄLLIMMÄINEN avoin dialogi suurennospopupien isännäksi. Modaali
+   * (showModal) elää selaimen top layer -kerroksessa, joka peittää
+   * kaiken ulkopuolisen z-indexistä riippumatta — kun kuvaa
+   * napautettiin nähtävyysikkunassa, arrivalDialogiin liitetty
+   * suurennos jäi ikkunan TAAKSE (omistajan löytö 8.8.2026).
+   * Saman dialogin lapsena suurennos on samassa kerroksessa ja
+   * z-index 70 nostaa sen kortin ylle; position: fixed kattaa yhä
+   * koko ruudun, koska dialogilla ei ole transformia. Sama sääntö
+   * koskee kaikkia postikortteja ja niiden huntua — vuosisääkortti
+   * aukeaa nyt myös Matkailijan oppaasta eli nähtävyysikkunasta.
+   */
+  suurennosIsanta() {
+    const nahtavyys = document.getElementById('nahtavyys-dialog');
+    return nahtavyys?.open ? nahtavyys : this.arrivalDialog;
   }
 
   /**
@@ -7089,7 +7094,9 @@ export class UI {
   lisaaKevytHuntu() {
     const huntu = html('div', 'kevythuntu');
     huntu.addEventListener('click', () => this.suljeKulttuuriKuva());
-    this.arrivalDialog.appendChild(huntu);
+    // Sama isäntä kuin kortilla — muuten huntu jäisi nähtävyys-
+    // ikkunan taakse, kun kortti avataan sen sisältä.
+    this.suurennosIsanta().appendChild(huntu);
     this.lehtitila.kulttuuriHuntuEl = huntu;
   }
 

@@ -1588,9 +1588,17 @@ export function asetaSaaRivi(ui, kuvake, teksti) {
  * keskilämpökäyrä ja sadepalkit kuukausittain, napautus sulkee.
  * Graafi piirtyy staattisista normaaleista, joten se aukeaa myös
  * ilman verkkoa.
+ *
+ * SAMA KORTTI KAIKKIALLE (omistajan tilaus 18.8.2026: "matkaopas
+ * käyttää aivan samaa ikkunaa ja pohjaa kuin kaupunkilehti"): myös
+ * Matkailijan oppaan vuosikäyrä avaa tämän kortin, joten otsikko,
+ * luonnehdinta ja lähderivi ovat molemmissa täsmälleen samat.
+ * Varakanava SAATIEDOISTA kattaa polun, jossa kortti avataan ennen
+ * kuin lehden säärivi on ehtinyt tallettaa tietonsa.
  */
 export function naytaVuosiSaa(ui) {
-  const tiedot = ui.lehtitila.lehtiSaaTiedot;
+  const tiedot = ui.lehtitila.lehtiSaaTiedot
+    ?? SAATIEDOT[ui.lehtitila.arrivalShownFor] ?? null;
   if (!tiedot) return;
   ui.suljeKulttuuriKuva();
   ui.lisaaKevytHuntu();
@@ -1617,7 +1625,9 @@ export function naytaVuosiSaa(ui) {
   }
   kortti.appendChild(html('p', 'kuvalahde', vuosiSaaSelite(tiedot)));
   kortti.addEventListener('click', () => ui.suljeKulttuuriKuva());
-  ui.arrivalDialog.appendChild(kortti);
+  // Päällimmäiseen avoimeen dialogiin (ks. ui.suurennosIsanta):
+  // oppaasta avattuna kortti jäisi muuten nähtävyysikkunan taakse.
+  ui.suurennosIsanta().appendChild(kortti);
   ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
   sfx.play('paper');
@@ -1837,7 +1847,8 @@ export function avaaUutinen(ui, uutinen, lahde) {
   });
 
   kortti.addEventListener('click', () => ui.suljeKulttuuriKuva());
-  ui.arrivalDialog.appendChild(kortti);
+  // Sama isäntäsääntö kuin muilla postikorteilla (ui.suurennosIsanta).
+  ui.suurennosIsanta().appendChild(kortti);
   ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
 }

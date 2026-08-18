@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 876, teksti: 'Oppaan vuosisää avaa saman sääkortin kuin lehti' },
   { v: 875, teksti: 'E00-lehdet: aihesivut ja avauskuvat' },
   { v: 874, teksti: 'Laukku kapeampi iPadilla, varusteet 4 riviin' },
   { v: 873, teksti: 'Kairon lehti täydennetty: kohteet ja opas' },

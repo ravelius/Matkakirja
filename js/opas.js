@@ -7,9 +7,8 @@
  * nähtävyysmoduulista (yksisuuntainen tuonti).
  */
 
-import { el } from './mapart.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
-import { piirraVuosiSaa, vuosiSaaSelite } from './saa.js';
+import { piirraVuosiSaa } from './saa.js';
 import { html } from './ui-apurit.js';
 import {
   nahtavyydenKaruselli, nahtavyydenKuva, nahtavyysKappale,
@@ -258,7 +257,7 @@ export function opasKaudet(ui, matkailu) {
   // Vuosikäyrä kelluu laatikon leipätekstin oikealla puolella
   // (omistajan tilaus 16.8.2026), joten se on otsikon jälkeen mutta
   // ennen tekstiä: kelluke tarvitsee tekstiä kierrettäväkseen.
-  const graafi = opasSaagraafi(SAATIEDOT[ui.lehtitila.arrivalShownFor]);
+  const graafi = opasSaagraafi(ui, SAATIEDOT[ui.lehtitila.arrivalShownFor]);
   if (graafi) laatikko.appendChild(graafi);
   if (matkailu.parasAika) {
     laatikko.appendChild(html('p', 'opas-parasaika', matkailu.parasAika));
@@ -300,104 +299,29 @@ export function opasKaudet(ui, matkailu) {
  * ylläpidettävänä eikä kaupungin lukuja ole kahdessa paikassa.
  * Kaupunki ilman säätietoja taittuu ilman graafia.
  *
+ * SUURENNOS ON LEHDEN VUOSISÄÄKORTTI (omistajan tilaus 18.8.2026:
+ * "matkaopas käyttää aivan samaa ikkunaa ja pohjaa kuin
+ * kaupunkilehti"). Napautus kutsuu ui.naytaVuosiSaata (js/lehti.js) —
+ * sama kortti, sama otsikko, sama luonnehdinta graafin alla ja sama
+ * lähderivi kuin lehden säärivistä avattuna. Oppaan oma FLIP-overlay
+ * poistettiin samalla: kaksi suurennosta samalle graafille oli
+ * monistus, ja luonnehdinta puuttui oppaan versiosta kokonaan.
+ * Kortti osaa avautua nähtävyysikkunan sisään (ui.suurennosIsanta).
+ *
  * @param {{keskilampo: number[], sade: number[], ylin?: number[], alin?: number[]}} tiedot
  */
-export function opasSaagraafi(tiedot) {
+export function opasSaagraafi(ui, tiedot) {
   if (!tiedot?.keskilampo?.length || !tiedot?.sade?.length) return null;
   const kehys = html('figure', 'opas-saagraafi');
   const nappi = html('button', 'opas-saagraafi-nappi');
   nappi.type = 'button';
   nappi.setAttribute('aria-label', 'Sää vuoden mittaan — suurenna kuvaaja');
   nappi.appendChild(piirraVuosiSaa(tiedot));
-  nappi.addEventListener('click', () => avaaSaagraafi(tiedot, nappi));
+  nappi.addEventListener('click', () => ui.naytaVuosiSaa());
   kehys.appendChild(nappi);
   kehys.appendChild(html('figcaption', 'opas-saagraafi-teksti',
     'Sää vuoden mittaan. Napauta suuremmaksi.'));
   return kehys;
-}
-
-/**
- * Suurennos: kuvaaja kasvaa pienestä kelluketta vastaavasta paikasta
- * ruudun keskelle. Animaatio on FLIP — suuri kuvaaja asetetaan
- * paikalleen, mitataan, ja lähtöruutu piirretään sen päälle
- * muunnoksena. Näin selain animoi vain transformia ja opacityä eikä
- * asettelua lasketa kertaakaan uudestaan kesken liikkeen.
- *
- * Overlay menee avoimen dialogin sisään samasta syystä kuin
- * pikkuseloste: <dialog>-modaali nostetaan omaan ylätasoonsa, ja
- * muualle lisätty kerros jäisi sen alle näkymättömiin.
- */
-export function avaaSaagraafi(tiedot, ankkuri) {
-  const koti = ankkuri.closest('dialog[open]') ?? document.body;
-  const overlay = html('div', 'opas-saa-overlay');
-  const laatikko = html('div', 'opas-saa-suuri');
-  laatikko.appendChild(piirraVuosiSaa(tiedot));
-  // Sama lähderivi sanasta sanaan kuin lehden omassa suurennoksessa
-  // (naytaVuosiSaa) — sama graafi ansaitsee saman selitteen. Rivi
-  // tulee js/saa.js:stä, jotta kaistallinen ja kaistaton sanamuoto
-  // pysyvät molemmissa paikoissa samoina.
-  laatikko.appendChild(html('p', 'opas-saa-suuri-teksti', vuosiSaaSelite(tiedot)));
-  overlay.appendChild(laatikko);
-  koti.appendChild(overlay);
-  ankkuri.setAttribute('aria-expanded', 'true');
-
-  const hidas = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  const muunnos = () => {
-    const a = ankkuri.getBoundingClientRect();
-    const b = laatikko.getBoundingClientRect();
-    if (!b.width || !b.height) return '';
-    return `translate(${a.left + a.width / 2 - (b.left + b.width / 2)}px, `
-      + `${a.top + a.height / 2 - (b.top + b.height / 2)}px) `
-      + `scale(${Math.max(a.width / b.width, 0.05)})`;
-  };
-  if (hidas) {
-    overlay.classList.add('nakyy');
-  } else {
-    laatikko.style.transform = muunnos();
-    laatikko.style.opacity = '0';
-    /*
-     * Kaksi ruutua: ensimmäisessä selain laskee lähtötyylin (pieni,
-     * läpinäkyvä, himmennys pois), toisessa siirtymä lähtee liikkeelle.
-     * Yhdellä rAF:lla selain ehtisi yhdistää molemmat samaan
-     * tyylilaskentaan, jolloin mikään ei animoituisi.
-     */
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      if (!overlay.isConnected) return;
-      overlay.classList.add('nakyy');
-      laatikko.classList.add('liikkuu');
-      laatikko.style.transform = '';
-      laatikko.style.opacity = '';
-    }));
-  }
-
-  let suljettu = false;
-  const sulje = () => {
-    if (suljettu) return;
-    suljettu = true;
-    document.removeEventListener('keydown', nappaimesta, true);
-    ankkuri.setAttribute('aria-expanded', 'false');
-    if (hidas) { overlay.remove(); return; }
-    // Sama matka takaisin. Poistetaan vasta siirtymän jälkeen, ja
-    // varmuusajastin siltä varalta ettei transitionend tule (esim.
-    // kun kerros ehditään irrottaa DOMista muuta kautta).
-    laatikko.style.transform = muunnos();
-    laatikko.style.opacity = '0';
-    overlay.classList.remove('nakyy');
-    const pois = () => overlay.remove();
-    laatikko.addEventListener('transitionend', pois, { once: true });
-    setTimeout(pois, 400);
-  };
-  const nappaimesta = (e) => {
-    if (e.key !== 'Escape') return;
-    // Suurennos on päällimmäisin: se saa Escin eikä päästä sitä
-    // eteenpäin dialogille, joka sulkeutuisi samasta näppäimestä.
-    e.preventDefault();
-    e.stopPropagation();
-    sulje();
-  };
-  overlay.addEventListener('click', sulje);
-  document.addEventListener('keydown', nappaimesta, true);
-  return overlay;
 }
 
 /**

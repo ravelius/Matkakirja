@@ -12947,54 +12947,12 @@ button.opas-saagraafi-nappi {
 .opas-arkki button.pikkuseloste-sulje:hover { color: var(--opas-aksentti); }
 
 /*
- * SUURENNOS. Kerros menee avoimen dialogin sisään (ks. avaaSaagraafi),
- * ja liike on FLIP: suuri laatikko piirretään paikalleen ja vedetään
- * muunnoksella pienen kuvaajan kohdalle, josta se palaa omaan kokoonsa.
- * Selain animoi siis pelkkää transformia ja opacityä.
+ * SUURENNOS on lehden vuosisääkortti (js/lehti.js naytaVuosiSaa) —
+ * sama ikkuna ja pohja kuin kaupunkilehdessä (omistajan tilaus
+ * 18.8.2026), joten sillä ei ole oppaan omia tyylejä. Oppaan oma
+ * FLIP-overlay (.opas-saa-overlay/.opas-saa-suuri) poistettiin
+ * samalla kuin sen piirtokoodi.
  */
-.opas-saa-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 70;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  background: rgba(20, 12, 4, 0);
-  transition: background-color 0.28s ease-out;
-  cursor: zoom-out;
-}
-
-.opas-saa-overlay.nakyy { background: rgba(20, 12, 4, 0.55); }
-
-.opas-saa-suuri {
-  width: min(30rem, 100%);
-  padding: 1rem 1.1rem 0.85rem;
-  background: var(--opas-pohja);
-  color: var(--opas-muste);
-  border: 1px solid rgba(58, 42, 21, 0.35);
-  border-radius: 6px;
-  box-shadow: 0 10px 34px rgba(20, 12, 4, 0.45);
-  transform-origin: center center;
-}
-
-.opas-saa-suuri.liikkuu {
-  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1), opacity 0.3s ease-out;
-}
-
-.opas-saa-suuri-teksti {
-  margin: 0.5rem 0 0;
-  font-family: var(--font-type);
-  font-size: 0.7rem;
-  letter-spacing: 0.02em;
-  color: var(--opas-muste-hento);
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-  .opas-saa-overlay,
-  .opas-saa-suuri.liikkuu { transition: none; }
-}
 
 /* Kapealla ruudulla kuvaaja on täysleveänä laatikon yläosassa: 12 rem
  * kellukkeen viereen jäisi puhelimessa liian kapea tekstipalsta. */
