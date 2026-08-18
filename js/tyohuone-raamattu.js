@@ -378,6 +378,20 @@ export const RAAMATTU = {
         'Viisas Kertoja lukee saapumiset, kohtaamiset ja '
           + 'aarretekstit. Luenta = teksti sanasta sanaan; arvottavia '
           + 'pulmia ei lueta.',
+        'LUENTAPOLITIIKKA (omistaja 18.8.2026): lukija lukee VAIN '
+          + 'varsinaiset leipätekstit ja niiden otsikot. Taulukot, '
+          + 'kainalorivit, nostolistat, kuvatekstit, lähderivit, '
+          + 'opasteet ja napit jäävät aina lukematta; otsikko luetaan '
+          + 'vain jos sen alta löytyy leipätekstiä. Valinta tehdään '
+          + 'VALKOLISTANA (uusi taittolaji on oletuksena hiljainen; '
+          + 'luentaan pääsee merkitsemällä data-lukija="leipa") — '
+          + 'ohituslista vaatisi muistamista joka taittolajista ja '
+          + 'unohdus vuotaisi ääneen, valkolistan virhe kuuluu heti.',
+        'LUKIJAN PYSYVÄ KAHVA (omistaja 18.8.2026): luennan ajan '
+          + 'ruudun oikeassa ylälaidassa on pysyvä kaiutin kaikissa '
+          + 'näkymissä, aina pysyvien yläelementtien alapuolella eikä '
+          + 'koskaan niiden päällä. Se avaa saman säätöpaneelin kuin '
+          + 'sivun oma kaiutin — uutta säädintä ei rakenneta.',
         'LUENTAPOLKU: äänite soi kun luenta-kenttä vastaa '
           + 'näyttötekstiä; muuttunut teksti striimataan. Uusia '
           + 'äänitteitä EI generoida — kaikki uusitaan kerralla, kun '

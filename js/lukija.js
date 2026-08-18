@@ -22,18 +22,57 @@
  *   4. Ei mitään näistä → nappia ei näytetä lainkaan. Piilotettu nappi
  *      on parempi kuin nappi, joka tuottaa hiljaisuuden.
  *
- * MITÄ LUETAAN — JA MITÄ EI
+ * MITÄ LUETAAN — JA MITÄ EI (omistajan linjaus 18.8.2026)
  *
- * Teksti kootaan sivun DOMista valinnalla, joka OHITTAA kolme asiaa:
+ * LUKIJA LUKEE VAIN LEIPÄTEKSTIT JA NIIDEN OTSIKOT. Valinta on
+ * VALKOLISTA eikä ohituslista: kerääjä poimii sivulta nimenomaan
+ * leipätekstielementit (kappale-elementit) ja niitä johtavat otsikot,
+ * ja KAIKKI muu jää ulkopuolelle ilman että sitä tarvitsee luetella.
  *
- *   a) lähdemerkinnät (.lahde, .kuvalahde, .nahtavyys-lahderivi …).
- *      Ne ovat lisenssin ehto ruudulla, mutta ääneen luettuna
- *      "Kuva: Wellcome Collection, CC BY 4.0" katkaisee jutun.
- *   b) kuvatekstit ja selitteet (figcaption, .kuvateksti, .selite …).
- *      Ne kuuluvat kuvaan, jota kuuntelija ei näe.
- *   c) VISAT JA TEHTÄVÄT vaihtoehtoineen. Tämä on spoilerisuoja, sama
- *      periaate kuin pöllöllä (js/pollo.js SPOILERI_LOHKOT): lukija ei
- *      saa lausua oikeaa vastausta ennen kuin pelaaja on vastannut.
+ * MIKSI NÄIN PÄIN. Ohituslista oli auki toiseen suuntaan: jokainen
+ * uusi taittolaji piti muistaa lisätä siihen, ja se joka unohtui,
+ * vuoti luentaan. Matkaoppaan (16.8.2026) mukana tuli kerralla neljä
+ * uutta lajia — kainalotaulun tähtirivit ("Parasta täällä", "Hyvä
+ * tietää"), kausitaulun lämpöhaarukat, säägraafin kuvateksti ja
+ * linkkilista — ja kaikki neljä luettiin ääneen, koska mitään niistä
+ * ei ollut listalla (omistajan havainto 18.8.2026, Firenzen opas).
+ * Valkolista on auki oikeaan suuntaan: uusi taulukko, lista tai
+ * selitepalkki on hiljainen ilman yhtäkään koodiriviä, ja jos uusi
+ * leipätekstilaji jää lukematta, sen kuulee heti.
+ *
+ * LEIPÄTEKSTI = KAPPALE-ELEMENTTI (<p>) ja sellaiseksi merkitty
+ * lohko (data-lukija="leipa"). Pelin jokainen varsinainen
+ * leipäteksti on kappale-elementissä — nähtävyysjutun kappaleet,
+ * lehden nostojen leipä, oppaan jaksot ja ingressi, matkakirjan
+ * merkintä, Wikipedian tiivistelmä. Taulukot (<dl>, <table>),
+ * listarivit (<li>), kuvatekstit (<figcaption>) ja irralliset
+ * selitepalkit eivät ole kappale-elementtejä, joten ne ovat ulkona
+ * lajinsa perusteella eivätkä nimensä.
+ *
+ * OTSIKKO LUETAAN VAIN, JOS SEN ALTA LÖYTYY LEIPÄTEKSTIÄ. Otsikko ei
+ * ole oma kohtansa vaan seuraavan leipätekstin esirivi; otsikko,
+ * jonka alle ei tule yhtään kappaletta, jää lukematta kokonaan.
+ * Näin "Parasta täällä", "Hyvä tietää" ja "Suunnittele matka"
+ * vaikenevat itsestään, kun niiden sisältö on listaa — ja "Milloin
+ * matkaan?" luetaan otsikkoineen, koska sen alla ON leipätekstiä
+ * (aloituskappale "Paras aika on…").
+ *
+ * OTSIKON KANTAMA LOPPUU OMAAN LOHKOONSA. Otsikko voi johtaa vain
+ * sitä ympäröivän merkitysalueen (<aside>, <section>, <figure>,
+ * <ul>, <li>, <table> …) sisällä olevaan leipätekstiin. Ilman tätä
+ * kainalotaulun otsikot valuivat ulos taulusta ja liimautuivat
+ * jakson leipätekstiin: "Perille ja jalkapatikkaan. Parasta täällä.
+ * Hyvä tietää. Firenzeen tullaan junalla…". Pelkkä <div> on taittoa
+ * eikä merkitysalue, joten se ei katkaise kantamaa — lehden nostossa
+ * otsikko ja leipä asuvat eri diveissä.
+ *
+ * VALKOLISTAN SISÄLLÄ ON YHÄ OHITUSLISTA (LUKIJAN_OHITETTAVAT).
+ * Osa kappale-elementeistä ei ole juttua: lähderivit, kuvatekstit,
+ * lehden masto ja — tärkeimpänä — VISAT JA TEHTÄVÄT vaihtoehtoineen
+ * (spoilerisuoja, sama periaate kuin pöllöllä js/pollo.js
+ * SPOILERI_LOHKOT: lukija ei saa lausua oikeaa vastausta ennen kuin
+ * pelaaja on vastannut). Lista ei enää kasva taittolajeista vaan
+ * vain näistä poikkeuksista.
  *
  * Piilotetut lohkot jäävät pois itsestään, koska [hidden]-elementit
  * ohitetaan — lehden kaikki sivut asuvat samassa dialogissa ja vain
@@ -81,11 +120,14 @@ export const LUETTAVAN_KATTO = 12000;
 export const LUETTAVAN_VAHIMMAIS = 80;
 
 /**
- * MITÄ JÄTETÄÄN LUKEMATTA.
+ * MITÄ JÄTETÄÄN LUKEMATTA VALKOLISTAN SISÄLLÄ.
  *
- * Kolme ryhmää: lähdemerkinnät, kuvatekstit ja pelin tehtävät. Jos
- * peliin tulee uusi lähde- tai selite-luokka, se lisätään tähän — tai
- * elementille annetaan attribuutti data-lukija="ei", joka toimii ilman
+ * Nämä ovat kappale-elementtejä (tai niiden osia), jotka eivät ole
+ * juttua: lähdemerkinnät, kuvatekstit, lehden masto ja pelin
+ * tehtävät. Taulukot, listat ja selitepalkit EIVÄT ole enää täällä —
+ * ne jäävät pois lajinsa perusteella (ks. tiedoston alun linjaus).
+ * Uusi lähde- tai selite-luokka lisätään tähän, tai elementille
+ * annetaan attribuutti data-lukija="ei", joka toimii ilman
  * koodimuutosta.
  */
 export const LUKIJAN_OHITETTAVAT = [
@@ -162,6 +204,12 @@ export const LUKIJAN_OHITETTAVAT = [
   // uutisotsikot itse ovat nappeja ja jäävät pois jo tagilistalla.
   '.uutiset-nimio',
 
+  // Nähtävyysjutun tunnusrivi ("Kohde 3 · 1296–1436") on otsikon
+  // yläpuolinen seliterivi, ei jutun aloitus (omistajan linjaus
+  // 18.8.2026). Ilman tätä se luettiin ensimmäisenä ja vei samalla
+  // otsikon ohituksen, jolloin jutun nimi luettiin sen perään.
+  '.nahtavyys-aika',
+
   // Kuvatekstit, selitteet ja karttojen numeroselitykset.
   '.kuvateksti',
   '.nahtavyys-kuvateksti',
@@ -199,7 +247,61 @@ export const LUKIJAN_OHITETTAVAT = [
 
   // Lukija itse ei kuulu luettavaan.
   '.lukija-nappi',
+  '.lukija-kelluva',
 ];
+
+/**
+ * VALKOLISTA: leipätekstielementit.
+ *
+ * Kappale-elementin (<p>) lisäksi kelpaa mikä tahansa lohko, joka on
+ * merkitty data-lukija="leipa" — sillä uusi taittolaji saadaan
+ * luentaan ilman koodimuutosta, samaan tapaan kuin data-lukija="ei"
+ * ottaa pois. Merkitty lohko luetaan yhtenä palana: jos sen sisällä on
+ * omia kappale-elementtejä, luenta kuuluu oikein mutta korostus jää
+ * pois (kartoitaOsa ei kartoita sisäkkäisiä lohkoja).
+ */
+const LEIPATAGIT = new Set(['P']);
+
+export const LUKIJAN_LEIPA = ['[data-lukija="leipa"]'];
+
+/**
+ * VALKOLISTA: otsikkoelementit.
+ *
+ * Otsikkotagien lisäksi otsikoksi kelpaa data-lukija="otsikko" ja
+ * menovinkkirivin nimi (.vinkki-nimi): hakemistorivin nimi on rivin
+ * otsikko, ja ilman sitä luenta lukisi selityksen kertomatta, mistä
+ * kohteesta puhutaan. Kuvaukseton rivi jää nimineen lukematta, kuten
+ * jokainen leipätekstitön otsikko.
+ */
+const OTSIKKOTAGIT = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6']);
+
+export const LUKIJAN_OTSIKOT = ['[data-lukija="otsikko"]', '.vinkki-nimi'];
+
+/**
+ * MERKITYSALUEET: näiden rajalla otsikon kantama loppuu.
+ *
+ * Alueen sisällä alkanut otsikko ei voi johtaa alueen ulkopuoliseen
+ * leipätekstiin. <div> ei ole tässä joukossa tarkoituksella: se on
+ * taittoa, ja lehden nostossa otsikko ja leipäteksti asuvat eri
+ * diveissä saman noston sisällä.
+ */
+const MERKITYSALUEET = new Set([
+  'ASIDE', 'SECTION', 'ARTICLE', 'FIGURE', 'FIGCAPTION', 'BLOCKQUOTE',
+  'TABLE', 'THEAD', 'TBODY', 'TFOOT', 'TR', 'TD', 'TH',
+  'UL', 'OL', 'LI', 'DL', 'DT', 'DD',
+  'NAV', 'HEADER', 'FOOTER', 'MAIN', 'DETAILS', 'FORM', 'FIELDSET',
+]);
+
+/**
+ * Napit, jotka OVAT leipätekstiä.
+ *
+ * Kappaleen sisällä mainittu henkilö on nappi omaan juttuunsa
+ * (js/nahtavyydet.js nahtavyysKappale). Ilman tätä poikkeusta nimi
+ * katosi luennasta kesken virkkeen: "Helsingin keskustan suunnitteli
+ * ." Poikkeus koskee vain kappaleen sisäistä tekstiä — kaikki muut
+ * napit ovat käyttöliittymää.
+ */
+const LUKIJAN_SISANAPIT = ['.henkilo-linkki'];
 
 /**
  * Tagit, joita ei lueta lainkaan.
@@ -236,14 +338,27 @@ function siisti(teksti) {
  * dialogissa, ja ilman tätä lukija lukisi koko lehden yhdellä
  * napautuksella.
  */
-function ohitetaanko(el, ohita) {
-  const tagi = String(el.nodeName ?? el.tagName ?? '').toUpperCase();
-  if (OHITETTAVAT_TAGIT.has(tagi)) return true;
-  if (el.hidden === true) return true;
-  if (el.getAttribute?.('aria-hidden') === 'true') return true;
-  for (const valitsin of ohita) {
+/*
+ * Nimi on lukijan oma (lukijaOsuu eikä osuu): yhden tiedoston koonti
+ * (tools/build-standalone.mjs) on yhtä näkyvyysaluetta, ja
+ * js/pollo-haku.js julistaa oman osuu-funktionsa. Sama syy kuin
+ * lukijaPaloittele-nimessä alempana.
+ */
+function lukijaOsuu(el, valitsimet) {
+  for (const valitsin of valitsimet) {
     if (el.matches?.(valitsin)) return true;
   }
+  return false;
+}
+
+function ohitetaanko(el, ohita) {
+  if (el.hidden === true) return true;
+  if (el.getAttribute?.('aria-hidden') === 'true') return true;
+  if (lukijaOsuu(el, ohita)) return true;
+  const tagi = String(el.nodeName ?? el.tagName ?? '').toUpperCase();
+  // Nappi on käyttöliittymää — paitsi kappaleen sisäinen henkilölinkki,
+  // joka on osa virkettä (ks. LUKIJAN_SISANAPIT).
+  if (OHITETTAVAT_TAGIT.has(tagi)) return !lukijaOsuu(el, LUKIJAN_SISANAPIT);
   return false;
 }
 
@@ -252,99 +367,109 @@ function paate(teksti) {
   return /[.!?:;…]$/.test(teksti) ? teksti : `${teksti}.`;
 }
 
-/** Otsikkotagit ensimmäisen otsikon ohitusta varten. */
-const OTSIKKOTAGIT = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6']);
+/**
+ * Yhden leipäteksti- tai otsikkoelementin luettava teksti.
+ *
+ * Kerätään elementin koko alipuusta ohitukset huomioiden. Tekstisolmut
+ * liitetään välilyönnillä ja siisti() luhistaa tyhjätilan — sama
+ * kävely toistetaan kartoitaOsassa, joka osoittaa soivan palan takaisin
+ * ruudun tekstiin.
+ */
+function palanTeksti(el, ohita) {
+  const osat = [];
+  const kavele = (solmu) => {
+    if (solmu.nodeType === 3) {
+      osat.push(solmu.data ?? solmu.textContent ?? '');
+      return;
+    }
+    if (solmu.nodeType !== 1) return;
+    if (ohitetaanko(solmu, ohita)) return;
+    for (const lapsi of solmu.childNodes ?? []) kavele(lapsi);
+  };
+  for (const lapsi of el.childNodes ?? []) kavele(lapsi);
+  return siisti(osat.join(' '));
+}
 
 /**
- * Kerää luettavat kohdat elementin sisältä lohkoelementteineen.
+ * Kerää luettavat kohdat elementin sisältä.
  *
- * Kohta = {teksti, osat, otsikko}, jossa osat kertovat mistä
- * lohkoelementeistä teksti tuli ja millä merkkiväleillä — sillä
- * lukija maalaa kuuluvat virkkeet ruudulle ja vierittää sivua
- * luennan perässä (omistajan tilaukset 14.8.2026).
+ * Kohta = {teksti, osat, otsikollinen}, jossa osat kertovat mistä
+ * elementeistä teksti tuli ja millä merkkiväleillä — sillä lukija
+ * maalaa kuuluvat virkkeet ruudulle ja vierittää sivua luennan
+ * perässä (omistajan tilaukset 14.8.2026).
+ *
+ * VALKOLISTA (omistajan linjaus 18.8.2026, ks. tiedoston alku): vain
+ * leipätekstielementit ja niitä johtavat otsikot päätyvät kohdiksi.
+ * Kaikki muu — taulukot, listat, kuvatekstit, opasteet, napit — jää
+ * ulos ilman erillistä mainintaa.
+ *
+ * VÄLIOTSIKKO ON KOHDAN ESIRIVI (omistajan tilaus 14.8.2026: "Yhdistä
+ * väliotsikko sitä seuraavaan leipätekstiin lukijassa"): otsikko ei
+ * ole oma pysähdyspaikkansa vaan seuraavan kappaleen alku, ja
+ * peräkkäiset otsikot (osasto + alaotsikko) liittyvät samaan kohtaan.
+ * OTSIKKO ILMAN LEIPÄTEKSTIÄ JÄÄ LUKEMATTA kokonaan.
  *
  * LUENTA ALKAA AINA LEIPÄTEKSTISTÄ (omistajan tarkennus 14.8.2026:
  * "aloita aina vain leipätekstistä"). KAIKKI otsikot ennen
- * ensimmäistä leipätekstipalaa ohitetaan — masto, sivuotsikko ja
+ * ensimmäistä leipätekstiä ohitetaan — masto, sivuotsikko ja
  * mahdollinen alaotsikko ovat samaa taittoa, jonka lukija juuri näki
  * avatessaan sivun.
  */
 function keraaKohdat(juuri, { ohita, ohitaEkaOtsikko }) {
   const kohdat = [];
-  let kertyma = [];
-  let kertymaLohko = null;
+  // Otsikot, jotka odottavat leipätekstiä. syvyys kertoo, minkä
+  // merkitysalueen sisältä otsikko poimittiin: alueen päättyessä sen
+  // sisällä alkaneet odottajat unohtuvat (kantaman raja).
+  let odottavat = [];
+  let syvyys = 0;
   // "Leipäteksti on alkanut" — sitä ennen jokainen otsikko ohitetaan.
   let leipaAlkoi = !ohitaEkaOtsikko;
-  const katkaise = () => {
-    const teksti = siisti(kertyma.join(' '));
-    const lohko = kertymaLohko;
-    kertyma = [];
-    kertymaLohko = null;
-    if (!teksti) return;
-    const tagi = String(lohko?.nodeName ?? lohko?.tagName ?? '').toUpperCase();
-    kohdat.push({
-      teksti: paate(teksti),
-      osat: [{ solmu: lohko, alku: 0, pituus: teksti.length }],
-      otsikko: OTSIKKOTAGIT.has(tagi),
-    });
+
+  const lisaaKohta = (raaka, solmu) => {
+    const palat = [...odottavat, { raaka, solmu }];
+    odottavat = [];
+    let teksti = '';
+    const osat = [];
+    for (const pala of palat) {
+      const siirto = teksti ? teksti.length + 1 : 0;
+      const kokonainen = paate(pala.raaka);
+      teksti = teksti ? `${teksti} ${kokonainen}` : kokonainen;
+      osat.push({ solmu: pala.solmu, alku: siirto, pituus: pala.raaka.length });
+    }
+    // otsikollinen-lippu: soitin pitää tällaisen kohdan edellä
+    // pidemmän tauon (omistajan tilaus 15.8.2026 — "pieni tauko ennen
+    // kun tulee uusi otsikko").
+    kohdat.push({ teksti, osat, otsikko: false, otsikollinen: palat.length > 1 });
     leipaAlkoi = true;
   };
-  const kavele = (solmu, lohkoEl) => {
-    if (solmu.nodeType === 3) {
-      kertyma.push(solmu.data ?? solmu.textContent ?? '');
-      kertymaLohko = kertymaLohko ?? lohkoEl;
-      return;
-    }
+
+  const kavele = (solmu) => {
     if (solmu.nodeType !== 1) return;
     if (ohitetaanko(solmu, ohita)) return;
     const tagi = String(solmu.nodeName ?? solmu.tagName ?? '').toUpperCase();
-    if (!leipaAlkoi && OTSIKKOTAGIT.has(tagi)) return;
-    const lohko = LOHKOTAGIT.has(tagi);
-    if (lohko) katkaise();
-    for (const lapsi of solmu.childNodes ?? []) kavele(lapsi, lohko ? solmu : lohkoEl);
-    if (lohko) katkaise();
+    if (OTSIKKOTAGIT.has(tagi) || lukijaOsuu(solmu, LUKIJAN_OTSIKOT)) {
+      if (!leipaAlkoi) return;
+      const teksti = palanTeksti(solmu, ohita);
+      if (teksti) odottavat.push({ raaka: teksti, solmu, syvyys });
+      return;
+    }
+    if (LEIPATAGIT.has(tagi) || lukijaOsuu(solmu, LUKIJAN_LEIPA)) {
+      const teksti = palanTeksti(solmu, ohita);
+      if (teksti) lisaaKohta(teksti, solmu);
+      return;
+    }
+    const alue = MERKITYSALUEET.has(tagi);
+    if (alue) syvyys += 1;
+    for (const lapsi of solmu.childNodes ?? []) kavele(lapsi);
+    if (!alue) return;
+    syvyys -= 1;
+    // Alueen sisällä alkanut otsikko ei johda alueen ulkopuolelle.
+    odottavat = odottavat.filter((o) => o.syvyys <= syvyys);
   };
-  kavele(juuri, juuri);
-  katkaise();
-  return kohdat;
-}
 
-/**
- * VÄLIOTSIKKO LIITETÄÄN SEURAAVAAN LEIPÄTEKSTIIN (omistajan tilaus
- * 14.8.2026: "Yhdistä väliotsikko sitä seuraavaan leipätekstiin
- * lukijassa — siis siihen kun lukijan säätimellä hypitään kohtien
- * välissä"). Otsikko ei ole oma pysähdyspaikkansa vaan kohdan
- * esirivi: hyppy laskeutuu otsikkoon ja jatkaa suoraan kappaleeseen.
- * Peräkkäiset otsikot (osasto + alaotsikko) liitetään samaan kohtaan.
- * Hännäksi jäänyt otsikko ilman leipätekstiä jää omaksi kohdakseen.
- */
-function niputaOtsikot(kohdat) {
-  const tulos = [];
-  let odottavat = [];
-  for (const kohta of kohdat) {
-    if (kohta.otsikko) {
-      odottavat.push(kohta);
-      continue;
-    }
-    if (!odottavat.length) {
-      tulos.push(kohta);
-      continue;
-    }
-    let teksti = '';
-    const osat = [];
-    for (const osa of [...odottavat, kohta]) {
-      const siirto = teksti ? teksti.length + 1 : 0;
-      teksti = teksti ? `${teksti} ${osa.teksti}` : osa.teksti;
-      for (const pala of osa.osat) osat.push({ ...pala, alku: pala.alku + siirto });
-    }
-    // otsikollinen-lippu säilyttää tiedon otsikosta niputuksen yli:
-    // soitin pitää tällaisen kohdan edellä pidemmän tauon (omistajan
-    // tilaus 15.8.2026 — "pieni tauko ennen kun tulee uusi otsikko").
-    tulos.push({ teksti, osat, otsikko: false, otsikollinen: true });
-    odottavat = [];
-  }
-  tulos.push(...odottavat);
-  return tulos;
+  kavele(juuri);
+  // Hännäksi jäänyt otsikko ilman leipätekstiä ei ole oma kohtansa.
+  return kohdat;
 }
 
 /** Kokonaispituuden katto: leikkaus virkkeen rajalta kuten ennenkin. */
@@ -384,7 +509,7 @@ export function kokoaLuettavatKohdat(juuri, {
   ohita = LUKIJAN_OHITETTAVAT, katto = LUETTAVAN_KATTO, ohitaEkaOtsikko = true,
 } = {}) {
   if (!juuri) return [];
-  return rajaaKattoon(niputaOtsikot(keraaKohdat(juuri, { ohita, ohitaEkaOtsikko })), katto);
+  return rajaaKattoon(keraaKohdat(juuri, { ohita, ohitaEkaOtsikko }), katto);
 }
 
 /**
@@ -1011,6 +1136,7 @@ function aloitaPuheLuenta(puhuttava, nappi, persoona, sailio = null, kunLoppuu =
     onLoppu: loppui,
     onTila: (t) => {
       paivitaOhjain(merkki, t);
+      paivitaKelluva(t);
       seuranta?.paivita(t);
     },
     onVirhe: (vaihe) => {
@@ -1379,6 +1505,154 @@ function ohjainIkoni(nimi) {
 /** Avoin paneeli: { elementti, merkki, taukoNappi, kappaleRivi, … } tai null. */
 let ohjain = null;
 
+/* ------------------------------------------------------------------ */
+/* PYSYVÄ KELLUVA KAIUTIN (omistajan tilaus 18.8.2026)                 */
+/* ------------------------------------------------------------------ */
+
+/*
+ * "Kun lukija on kytketty päälle, oikeassa yläreunassa näkyy KOKO AJAN
+ * kaiuttimen kuvake." Säätöpaneeli piiloutuu neljässä sekunnissa, ja
+ * sen jälkeen säätimet olivat vain sivun oman pikkukaiuttimen takana —
+ * sen etsiminen kesken kuuntelun on juuri se työ, jota kuuntelija ei
+ * halua tehdä. Kelluva kaiutin on lukijan pysyvä kahva: se on näkyvissä
+ * niin kauan kuin luenta on päällä (myös tauolla) ja JOKAISESSA
+ * näkymässä, jossa lukija toimii — lehdessä, oppaassa, jutussa ja
+ * kartalla, jossa matkakirjan merkintä luetaan ilman dialogia.
+ *
+ * UUTTA PANEELIA EI RAKENNETA. Napautus avaa saman säätöpaneelin
+ * (avaaOhjain), joka aukeaa sivun omasta kaiuttimestakin — tauko,
+ * kappalehypyt, laskuri, jatkuva luenta ja lopetus. Toinen napautus
+ * vipuaa paneelin piiloon luentaa katkaisematta.
+ *
+ * PAIKKA: oikea yläkulma — mutta EI pysyvän elementin päälle. Kartalla
+ * yläkulmassa on hampurilainen, lehdessä sivun oma tarttuva otsikkorivi
+ * kaiuttimineen ja jutussa nähtävyysvalikon nappi. Kelluva kaiutin
+ * asettuu niiden ALLE: ankkuriksi otetaan näkymän ylälaidan oikeanpuoleiset
+ * pysyvät elementit, ja nappi laskeutuu alimman alle sen oikeaan reunaan
+ * kohdistettuna.
+ *
+ * ISÄNTÄ RATKAISTAAN NÄKYMÄSTÄ. Avoin <dialog> on selaimen omassa
+ * ylätasossa, joten bodyyn ripustettu nappi jäisi sen alle näkymättömiin
+ * — sama syy kuin pikkuselosteella ja säägraafin suurennoksella.
+ */
+const KELLUVAN_ANKKURIT = [
+  '.lukija-nappi',              // sivun oma kaiutin (lehti, juttu, opas)
+  '.lehti-hampurilainen',       // lehden oma yläpalkki
+  '.nahtavyys-valikko-nappi',   // nähtävyysjutun valikko
+  'header.topbar',              // kartta: ylärivi hampurilaisineen
+  '.maa-pilleri',               // kartan oikean yläkulman maapilleri
+];
+
+/** Kelluvan säätimen kotelo ja nappi, tai null jos sitä ei ole. */
+let kelluva = null;
+
+/** Näkymän isäntä: päällimmäinen avoin dialogi, muuten body. */
+function kelluvanIsanta() {
+  if (typeof document === 'undefined') return null;
+  const dialogit = [...document.querySelectorAll('dialog')].filter((d) => d.open);
+  return dialogit[dialogit.length - 1] ?? document.body ?? null;
+}
+
+/** Kelluvan napin paikka: alimman ylälaidan ankkurin alapuolelle. */
+function kelluvanPaikka(isanta) {
+  const win = isanta?.ownerDocument?.defaultView ?? window;
+  const leveys = win.innerWidth || 0;
+  const korkeus = win.innerHeight || 0;
+  let ala = 0;
+  let oikea = null;
+  for (const valitsin of KELLUVAN_ANKKURIT) {
+    for (const el of isanta.querySelectorAll?.(valitsin) ?? []) {
+      if (el.hidden || kelluva?.kotelo?.contains?.(el)) continue;
+      const r = el.getBoundingClientRect?.();
+      // Vain ylälaidan pysyvät elementit ovat ankkureita: keskellä sivua
+      // oleva samanniminen nappi ei saa työntää säädintä alas.
+      if (!r?.width || !r.height || r.top > korkeus * 0.35) continue;
+      if (r.bottom > ala) ala = r.bottom;
+      if (oikea === null || leveys - r.right < oikea) oikea = leveys - r.right;
+    }
+  }
+  // OIKEA REUNA ON PAPERIN MARGINAALI, EI TEKSTIPALSTA. Ankkurin
+  // (sivun oma kaiutin) mukaan tasattuna nappi jäi juuri palstan
+  // päälle ja peitti lehden liitelinkin; kortin reunaan tasattuna se
+  // istuu tekstin ja paperin repaleisen reunan väliin.
+  const kortti = isanta.querySelector?.('.dialog-card');
+  const kr = kortti?.getBoundingClientRect?.();
+  if (kr?.width) oikea = Math.min(oikea ?? Infinity, Math.max(0, leveys - kr.right) + 2);
+  if (!ala) {
+    // Ei ankkuria: kortin oma yläkulma (dialogi) tai ruudun kulma.
+    ala = Math.max(0, kr?.top ?? 0);
+  }
+  return { yla: ala + 8, oikea: Math.max(6, oikea ?? 6) };
+}
+
+/** Luo kotelon ja napin, jos niitä ei vielä ole. */
+function varmistaKelluva(isanta) {
+  if (kelluva && kelluva.isanta === isanta && kelluva.kotelo.isConnected) return kelluva;
+  poistaKelluva();
+  const doc = isanta.ownerDocument ?? document;
+  const kotelo = doc.createElement('div');
+  kotelo.className = 'lukija-kelluva';
+  const nappi = doc.createElement('button');
+  nappi.type = 'button';
+  nappi.className = 'lukija-kelluva-nappi';
+  nappi.innerHTML = `<span class="icon-glyph viiva-ikoni">${KAIUTIN_IKONI}</span>`;
+  nappi.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!ajossa) { poistaKelluva(); return; }
+    // Laitteen omalla äänellä paneelia ei ole: nappi pysäyttää.
+    if (!ajossa.soitin) { pysaytaLukija(); return; }
+    if (ohjain?.merkki === ajossa.merkki && kotelo.contains(ohjain.elementti)) {
+      vipuaOhjain();
+      return;
+    }
+    avaaOhjain(kotelo, ajossa.nappi);
+  });
+  // Napautus säätimeen ei saa valua taustalle (dialogin sulkijat ym.).
+  kotelo.addEventListener('click', (e) => e.stopPropagation());
+  kotelo.appendChild(nappi);
+  isanta.appendChild(kotelo);
+  const sijoita = () => paivitaKelluva();
+  const win = doc.defaultView ?? window;
+  win.addEventListener?.('resize', sijoita);
+  kelluva = { kotelo, nappi, isanta, sijoita, win };
+  return kelluva;
+}
+
+function poistaKelluva() {
+  if (!kelluva) return;
+  // Paneeli seuraa kotelon mukana: se on kotelon lapsi.
+  if (kelluva.kotelo.contains(ohjain?.elementti)) suljeOhjain();
+  kelluva.win?.removeEventListener?.('resize', kelluva.sijoita);
+  kelluva.kotelo.remove();
+  kelluva = null;
+}
+
+/**
+ * Näkyvyys, paikka ja tila yhdellä kutsulla.
+ *
+ * Kutsutaan jokaisesta luennan tilanmuutoksesta (merkitseTila) ja
+ * soittimen ilmoituksesta, joten säädin ei jää roikkumaan kartalle
+ * luennan päätyttyä eikä katoa sivunvaihdossa.
+ */
+function paivitaKelluva(tila = null) {
+  if (typeof document === 'undefined') return;
+  if (!ajossa) { poistaKelluva(); return; }
+  const isanta = kelluvanIsanta();
+  if (!isanta) return;
+  const nyt = varmistaKelluva(isanta);
+  const tauolla = tila ? Boolean(tila.tauolla) : Boolean(ajossa.soitin?.tauolla?.());
+  // Tila kerrotaan hillitysti: lukeva kaiutin saa meripihkan, tauolla
+  // oleva palaa mustepiirrokseksi (sama väripari kuin sivun omalla).
+  nyt.nappi.classList.toggle('lukee', !tauolla);
+  nyt.nappi.classList.toggle('tauolla', tauolla);
+  const nimi = tauolla ? 'Luenta tauolla — avaa säätimet' : 'Lukija lukee — avaa säätimet';
+  nyt.nappi.title = nimi;
+  nyt.nappi.setAttribute('aria-label', nimi);
+  const paikka = kelluvanPaikka(isanta);
+  nyt.kotelo.style.top = `${Math.round(paikka.yla)}px`;
+  nyt.kotelo.style.right = `${Math.round(paikka.oikea)}px`;
+}
+
 function suljeOhjain() {
   if (!ohjain) return;
   clearTimeout(ohjain.ajastin);
@@ -1447,9 +1721,19 @@ function avaaOhjain(isanta, nappi) {
   const nyt = ajossa;
   if (!nyt?.soitin || nyt.nappi !== nappi) return;
   suljeOhjain();
-  const doc = isanta.ownerDocument;
+  /*
+   * YKSI PANEELI, YKSI PAIKKA. Kun kelluva säädin on näkyvissä, paneeli
+   * aukeaa AINA sen alle — myös sivun omasta kaiuttimesta painettuna.
+   * Kaksi eri paikkaa samalle paneelille tarkoittaisi, että kapealla
+   * ruudulla toinen niistä osuu kelluvan napin päälle.
+   */
+  const koti = kelluva?.kotelo ?? isanta;
+  const doc = koti.ownerDocument;
   const paneeli = doc.createElement('div');
-  paneeli.className = 'lukija-paneeli';
+  // Kelluvan säätimen alle avattu paneeli asettuu kotelon alalaitaan
+  // eikä dialogin yläkulmaan (CSS: .lukija-paneeli-kelluva).
+  paneeli.className = koti === kelluva?.kotelo
+    ? 'lukija-paneeli lukija-paneeli-kelluva' : 'lukija-paneeli';
   // Paneelin napautus ei saa valua taustalle (dialogin sulkijat ym.).
   paneeli.addEventListener('click', (e) => e.stopPropagation());
   // Käyttö pitää paneelin näkyvissä — piiloutumislaskuri alkaa alusta
@@ -1497,7 +1781,7 @@ function avaaOhjain(isanta, nappi) {
     autoNappi.setAttribute('aria-pressed', autoLuenta() ? 'true' : 'false');
   }
   tee('sulje', SEIS_OTSIKKO, () => pysaytaLukija());
-  isanta.appendChild(paneeli);
+  koti.appendChild(paneeli);
   ohjain = {
     elementti: paneeli, merkki: nyt.merkki, taukoNappi, kappaleRivi, edellinen, seuraava,
     ajastin: null,
@@ -1511,6 +1795,9 @@ function avaaOhjain(isanta, nappi) {
 
 /** Napin ulkoasu ja saavutettava nimi seuraavat luennan tilaa. */
 function merkitseTila(nappi, lukee) {
+  // Kelluva säädin seuraa luennan tilaa myös silloin, kun luennalla ei
+  // ole omaa nappia (matkakirjan merkintä kartalla, pöllön vastaus).
+  paivitaKelluva();
   if (!nappi) return;
   nappi.classList?.toggle('lukee', Boolean(lukee));
   // Lukijaäänellä nappi vipuaa soittimen (pysäytys on paneelissa);

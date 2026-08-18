@@ -8351,6 +8351,82 @@ button.lukija-nappi.lukee,
  * display: flex voittaisi hidden-attribuutin ilman tätä. */
 .lukija-paneeli[hidden] { display: none; }
 
+/*
+ * ── PYSYVÄ KELLUVA KAIUTIN (omistajan tilaus 18.8.2026) ──────────
+ *
+ * Lukijan pysyvä kahva ruudun oikeassa ylälaidassa: näkyy niin kauan
+ * kuin luenta on päällä (myös tauolla) ja avaa saman säätöpaneelin kuin
+ * sivun oma kaiutin. Paikan (top/right pikseleinä) laskee js/lukija.js
+ * kelluvanPaikka: kotelo asettuu näkymän ylälaidan pysyvien elementtien
+ * ALLE — kartan hampurilaisen, lehden tarttuvan otsikkorivin kaiuttimen
+ * ja jutun valikkonapin — eikä koskaan niiden päälle.
+ *
+ * position: fixed, koska sama kotelo elää sekä bodyssa (kartta) että
+ * avoimen dialogin ylätasossa (lehti, juttu, opas).
+ *
+ * Sama tyyliperhe kuin muilla kelluvilla napeilla: pyöreä
+ * pergamenttinappula ja pelkkä mustepiirros, ei emojia.
+ */
+.lukija-kelluva {
+  position: fixed;
+  z-index: 8;
+}
+
+.lukija-kelluva .lukija-kelluva-nappi,
+.dialog .lukija-kelluva .lukija-kelluva-nappi {
+  width: 2.1rem;
+  height: 2.1rem;
+  min-width: 2.1rem;
+  min-height: 2.1rem;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(246, 231, 198, 0.92);
+  color: rgba(70, 51, 31, 0.78);
+  box-shadow: 0 2px 8px rgba(40, 28, 14, 0.28);
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lukija-kelluva .lukija-kelluva-nappi .viiva-ikoni svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Tila hillitysti: lukeva kaiutin saa meripihkaisen kehän, tauolla
+   oleva jää pelkäksi pergamentiksi. Sama sävy kuin luennan
+   korostuksella — yksi väri kertoo kaikkialla "tätä luetaan". */
+.lukija-kelluva .lukija-kelluva-nappi.lukee,
+.dialog .lukija-kelluva .lukija-kelluva-nappi.lukee {
+  background: rgba(234, 184, 78, 0.42);
+  color: rgba(70, 51, 31, 0.95);
+  box-shadow: 0 0 0 2px rgba(168, 116, 26, 0.45), 0 2px 8px rgba(40, 28, 14, 0.28);
+}
+
+.lukija-kelluva .lukija-kelluva-nappi.tauolla,
+.dialog .lukija-kelluva .lukija-kelluva-nappi.tauolla {
+  background: rgba(246, 231, 198, 0.92);
+  color: rgba(70, 51, 31, 0.55);
+}
+
+.lukija-kelluva .lukija-kelluva-nappi:hover:not(:disabled),
+.lukija-kelluva .lukija-kelluva-nappi:focus-visible,
+.dialog .lukija-kelluva .lukija-kelluva-nappi:hover:not(:disabled),
+.dialog .lukija-kelluva .lukija-kelluva-nappi:focus-visible {
+  color: rgba(70, 51, 31, 1);
+}
+
+/* Paneeli laskeutuu kelluvan napin alle sen oikeaan reunaan. Toinen
+   valitsin on mukana, koska #arrival-dialog .lukija-paneeli voittaisi
+   tunnisteellaan pelkän luokkaparin. */
+.lukija-paneeli.lukija-paneeli-kelluva,
+#arrival-dialog .lukija-paneeli.lukija-paneeli-kelluva {
+  top: calc(100% + 0.3rem);
+  right: 0;
+}
+
 /* Lehdessä kaiutin istuu tarttuvassa otsikkorivissä, joten paneeli
  * laskeutuu otsikkorivin ALLE eikä ruudun yläkulmaan napin päälle.
  * Mitta kattaa korkeimmankin otsikon (etusivun nimiö ~3.4rem).

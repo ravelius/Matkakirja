@@ -168,7 +168,8 @@ test('maston kaupunkinimi ei kuluta otsikko-ohitusta (omistajan havainto 14.8.20
     el('h2', { id: 'arrival-city' }, t('Kairo')),
     el('h3', { luokat: ['aihe-nimi'] }, t('Egyptin historia')),
     el('p', {}, t('Niili tulvi joka kesä.')),
-    el('h3', {}, t('Väliotsikko')));
+    el('h3', {}, t('Väliotsikko')),
+    el('p', {}, t('Sato korjattiin syksyllä.')));
   const teksti = kokoaLuettavaTeksti(kortti);
   assert.ok(!/Kairo/.test(teksti), teksti);
   assert.ok(!/Egyptin historia/.test(teksti), teksti);
@@ -239,12 +240,13 @@ test('aria-hidden ja data-lukija="ei" ohitetaan', () => {
 });
 
 test('jokainen pala saa päätemerkin, jotta lukija pitää tauon', () => {
-  // Väliotsikko leipätekstin jälkeen saa pisteen; alun otsikko ohitetaan.
+  // Väliotsikko leipätekstin edellä saa pisteen; alun otsikko ohitetaan.
   const sivu = el('div', {},
     el('h3', {}, t('Sivun otsikko')),
     el('p', {}, t('Kappale?')),
-    el('h3', {}, t('Otsikko')));
-  assert.equal(kokoaLuettavaTeksti(sivu), 'Kappale?\nOtsikko.');
+    el('h3', {}, t('Otsikko')),
+    el('p', {}, t('Jatko')));
+  assert.equal(kokoaLuettavaTeksti(sivu), 'Kappale?\nOtsikko. Jatko.');
 });
 
 test('kaikki alun otsikot ohitetaan — luenta alkaa leipätekstistä (omistajan tarkennus 14.8.2026)', () => {
@@ -330,6 +332,146 @@ test('maalehden tilastorivit ja tervehdykset jäävät lukematta', () => {
   for (const kielletty of ['37,9', '603 500', 'V-Dem', 'Dobryi', 'Zdrastvuite', '67 %']) {
     assert.ok(!teksti.includes(kielletty), `tilastolohko vuoti luentaan: ${kielletty}`);
   }
+});
+
+/* ---------------------------------------------------------------- */
+/* LEIPÄTEKSTIPOLITIIKKA (omistajan linjaus 18.8.2026)               */
+/* ---------------------------------------------------------------- */
+
+/**
+ * Matkaoppaan taitto pienoiskoossa (js/opas.js): jakso, jonka sisällä
+ * kelluu kainalotaulu, ja "Milloin matkaan?" -laatikko graafeineen ja
+ * kausitauluineen. Juuri tästä sivusta omistaja teki havainnon
+ * 18.8.2026 — kaikki neljä listalajia luettiin ääneen.
+ */
+function opassivu() {
+  return el('div', { luokat: ['nahtavyys-kortti'] },
+    el('h2', {}, t('Matkailijan Firenze')),
+    el('p', { luokat: ['opas-ingressi'] }, t('Firenze on kaupunki, jonka läpi kävellään.')),
+    el('section', { luokat: ['opas-jakso', 'opas-jakso-kainalo'] },
+      el('h3', { luokat: ['opas-valiotsikko'] }, t('Perille ja jalkapatikkaan')),
+      el('aside', { luokat: ['opas-kainalo'] },
+        el('div', { luokat: ['opas-vyo', 'opas-vyo-lammin'] },
+          el('h3', { luokat: ['opas-vyo-otsikko'] }, t('Parasta täällä')),
+          el('ul', { luokat: ['opas-vyo-lista'] },
+            el('li', { luokat: ['opas-vyo-rivi'] },
+              el('span', { luokat: ['opas-vyo-rivisisus'] },
+                el('span', { luokat: ['opas-vyo-nimi'] }, t('Renessanssitaide')))))),
+        el('div', { luokat: ['opas-vyo', 'opas-vyo-viilea'] },
+          el('h3', { luokat: ['opas-vyo-otsikko'] }, t('Hyvä tietää')),
+          el('ul', { luokat: ['opas-vyo-lista'] },
+            el('li', { luokat: ['opas-vyo-rivi'] },
+              el('span', { luokat: ['opas-vyo-rivisisus'] },
+                el('span', { luokat: ['opas-vyo-nimi'] }, t('Jonot'))))))),
+      el('p', { luokat: ['nahtavyys-kappale'] }, t('Firenzeen tullaan junalla.'))),
+    el('aside', { luokat: ['opas-laatikko', 'opas-saa'] },
+      el('h3', { luokat: ['opas-laatikko-otsikko'] }, t('Milloin matkaan?')),
+      el('figure', { luokat: ['opas-saagraafi'] },
+        el('figcaption', { luokat: ['opas-saagraafi-teksti'] },
+          t('Sää vuoden mittaan. Napauta suuremmaksi.'))),
+      el('p', { luokat: ['opas-parasaika'] }, t('Paras aika on huhti–kesäkuu.')),
+      el('dl', { luokat: ['opas-kaudet'] },
+        el('dt', { luokat: ['opas-kausi-nimi'] },
+          el('span', { luokat: ['opas-kausi-sana'] }, t('Kevät')),
+          el('span', { luokat: ['opas-kausi-kk'] }, t('maalis–toukokuu'))),
+        el('dd', { luokat: ['opas-kausi-tiedot'] },
+          el('span', { luokat: ['opas-kausi-lampo'] }, t('4–22 °C')),
+          el('span', { luokat: ['opas-kausi-kuvaus'] }, t('Maaliskuu on viileä.'))))),
+    el('section', { luokat: ['opas-jakso'] },
+      el('h3', { luokat: ['opas-valiotsikko'] }, t('Kupoli ja jonot')),
+      el('figure', { luokat: ['nahtavyys-kuvakehys'] },
+        el('img', {}),
+        el('figcaption', { luokat: ['nahtavyys-kuvateksti'] }, t('Kupoli alhaalta.'))),
+      el('p', { luokat: ['nahtavyys-kappale'] }, t('Tuomiokirkko on ilmainen.'))),
+    el('aside', { luokat: ['opas-laatikko', 'opas-suunnittele'] },
+      el('h3', { luokat: ['opas-laatikko-otsikko'] }, t('Suunnittele matka')),
+      el('ul', { luokat: ['opas-linkkilista'] },
+        el('li', { luokat: ['opas-linkkirivi'] },
+          el('a', { luokat: ['opas-linkki'] }, t('Visit Florence'))))));
+}
+
+test('OPAS: kainalotaulun nosto-osiot jäävät kokonaan lukematta otsikoita myöten', () => {
+  const teksti = kokoaLuettavaTeksti(opassivu());
+  for (const kielletty of ['Parasta täällä', 'Hyvä tietää', 'Renessanssitaide', 'Jonot.']) {
+    assert.ok(!teksti.includes(kielletty), `kainalo vuoti luentaan: ${kielletty}\n${teksti}`);
+  }
+});
+
+test('OPAS: Milloin matkaan luetaan otsikkoineen — mutta vain aloituskappale', () => {
+  const teksti = kokoaLuettavaTeksti(opassivu());
+  // Otsikon alla ON leipätekstiä, joten otsikko kuuluu luentaan.
+  assert.match(teksti, /Milloin matkaan\? Paras aika on huhti–kesäkuu\./);
+  // Kausitaulu ja säägraafin kuvateksti eivät.
+  for (const kielletty of ['Kevät', 'maalis–toukokuu', '4–22 °C', 'Napauta suuremmaksi']) {
+    assert.ok(!teksti.includes(kielletty), `kainalorivi vuoti luentaan: ${kielletty}\n${teksti}`);
+  }
+});
+
+test('OPAS: jakson otsikko ja leipäteksti yhdessä, kuvateksti pois', () => {
+  const teksti = kokoaLuettavaTeksti(opassivu());
+  assert.match(teksti, /Kupoli ja jonot\. Tuomiokirkko on ilmainen\./);
+  assert.ok(!teksti.includes('Kupoli alhaalta'), teksti);
+  // Kainalon otsikot eivät valu jakson leipätekstin eteen.
+  assert.match(teksti, /Perille ja jalkapatikkaan\. Firenzeen tullaan junalla\./);
+});
+
+test('OPAS: linkkilaatikko on pelkkiä linkkejä — otsikko ja linkit vaikenevat', () => {
+  const teksti = kokoaLuettavaTeksti(opassivu());
+  assert.ok(!teksti.includes('Suunnittele matka'), teksti);
+  assert.ok(!teksti.includes('Visit Florence'), teksti);
+});
+
+test('otsikko ilman leipätekstiä jää lukematta myös sivun hännässä', () => {
+  const sivu = el('div', {},
+    el('p', {}, t('Avauskappale.')),
+    el('h3', {}, t('Kuvia matkalta')),
+    el('figure', {}, el('img', {}), el('figcaption', {}, t('Kuvateksti.'))));
+  assert.equal(kokoaLuettavaTeksti(sivu), 'Avauskappale.');
+});
+
+test('taulukot, listat ja irralliset selitepalkit eivät ole leipätekstiä', () => {
+  const sivu = el('div', {},
+    el('p', {}, t('Tämä on leipätekstiä.')),
+    el('table', {},
+      el('tr', {}, el('th', {}, t('Vuosi')), el('td', {}, t('1873')))),
+    el('div', { luokat: ['jokin-uusi-selitepalkki'] }, t('Selite ilman luokkaa listalla.')),
+    el('dl', {}, el('dt', {}, t('Termi')), el('dd', {}, t('Selitys'))));
+  assert.equal(kokoaLuettavaTeksti(sivu), 'Tämä on leipätekstiä.');
+});
+
+test('menovinkkirivin nimi luetaan selityksensä otsikkona, lähde ei', () => {
+  const sivu = el('div', { luokat: ['vinkkisivu'] },
+    el('p', { luokat: ['johdanto'] }, t('Britannian kokoelmat ovat verkossa.')),
+    el('h4', { luokat: ['vinkki-ryhma'] }, t('Museot ja taide')),
+    el('ul', { luokat: ['vinkkilista'] },
+      el('li', { luokat: ['vinkki'] },
+        el('div', { luokat: ['vinkki-teksti'] },
+          el('a', { luokat: ['vinkki-nimi'] }, t('National Gallery')),
+          el('p', { luokat: ['vinkki-selitys'] }, t('Kokoelmassa on 2 400 maalausta.')),
+          el('p', { luokat: ['vinkki-lahde'] }, t('Kuva: Commons (PD)')))),
+      el('li', { luokat: ['vinkki'] },
+        el('div', { luokat: ['vinkki-teksti'] },
+          el('a', { luokat: ['vinkki-nimi'] }, t('Nimi ilman kuvausta'))))));
+  const teksti = kokoaLuettavaTeksti(sivu);
+  assert.match(teksti, /Museot ja taide\. National Gallery\. Kokoelmassa on 2 400 maalausta\./);
+  // Kuvaukseton rivi on pelkkä nimi — otsikko ilman leipätekstiä.
+  assert.ok(!teksti.includes('Nimi ilman kuvausta'), teksti);
+  assert.ok(!teksti.includes('Commons'), teksti);
+});
+
+test('kappaleen sisäinen henkilölinkki luetaan — nimi ei saa kadota virkkeestä', () => {
+  const sivu = el('div', {},
+    el('p', {}, t('Keskustan suunnitteli '),
+      el('button', { luokat: ['henkilo-linkki'] }, t('Engel')),
+      t(' vuonna 1816.')));
+  assert.match(kokoaLuettavaTeksti(sivu), /Engel/);
+});
+
+test('data-lukija="leipa" nostaa oman lohkon luentaan valkolistan yli', () => {
+  const sivu = el('div', {},
+    el('div', { attrs: { 'data-lukija': 'leipa' } }, t('Erikoistaitto luetaan.')),
+    el('div', {}, t('Tavallinen div vaikenee.')));
+  assert.equal(kokoaLuettavaTeksti(sivu), 'Erikoistaitto luetaan.');
 });
 
 /*
