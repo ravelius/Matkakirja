@@ -408,6 +408,23 @@ export function piirraKaupunkiKartta(ui, kohde) {
    */
   lohko.appendChild(tyokalut);
   kehys.appendChild(kotelo);
+  /*
+   * OPASTE KARTAN PÄÄLLE (omistajan tilaus 18.8.2026): ohje kohteiden
+   * napauttamisesta oli ennen jokaisen kaupungin esittelytekstin
+   * viimeisenä virkkeenä — kaksitoista kertaa sama lause leipätekstissä,
+   * kaukana siitä kartasta, jota se koskee. Nyt se on pieni kyltti
+   * kartan oikeassa yläkulmassa ja kirjoitetaan VAIN tähän, joten
+   * uusi kaupunki saa sen ilman omaa riviään.
+   *
+   * Kyltti kuuluu KEHYKSEEN eikä lavalle: lava zoomaa ja panoroi, ja
+   * opaste on ohje eikä maisemaa — sen paikan on pysyttävä samana.
+   * `pointer-events: none` pitää panorointiotteen ja kohteiden
+   * napautukset ennallaan kyltin alla. Luenta ohittaa sen
+   * (js/lukija.js: .kartta-opaste).
+   */
+  const opaste = html('div', 'kartta-opaste', 'Napauta nähtävyyttä, saat lisätietoja.');
+  opaste.setAttribute('aria-hidden', 'true');
+  kehys.appendChild(opaste);
   lohko.appendChild(kehys);
   lohko.appendChild(selitteet);
   lohko.appendChild(lahderivi);

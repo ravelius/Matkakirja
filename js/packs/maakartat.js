@@ -3480,9 +3480,7 @@ export const KAUPUNKIKARTAT = {
       + 'ainoa tie mereen kulkee penkereen ali kapeana väylänä. Penkereeltä '
       + 'etelään levittäytyy kartan levein raita, ratapiha, joka päättyy '
       + 'päärautatieasemaan. Rata loppuu siihen: junat peruuttavat ulos. '
-      + 'Oikeassa alanurkassa on oma pieni kartta Suomenlinnasta. Kohteet '
-      + 'ovat kartalla pieninä piirroksina: napautus suurentaa piirroksen '
-      + 'ja tuo esiin nimikyltin, ja kyltistä aukeaa kohteen oma juttu.',
+      + 'Oikeassa alanurkassa on oma pieni kartta Suomenlinnasta.',
     kohteet: [
       /*
        * Lännestä itään ja lopuksi etelään. Kauppatori jätettiin pois
@@ -3585,9 +3583,7 @@ export const KAUPUNKIKARTAT = {
       + 'siltaa. Ylhäällä levittäytyy avoin vesi, entinen merenlahti IJ, ja '
       + 'siellä on kaupungin satama. Keskusasema ei ole rannalla vaan veden '
       + 'päällä: se rakennettiin 1880-luvulla kolmelle tekosaarelle, jotka '
-      + 'kasattiin hiekasta lahden pohjaan. Kohteet ovat kartalla pieninä '
-      + 'piirroksina: napautus suurentaa piirroksen ja tuo esiin '
-      + 'nimikyltin, ja kyltistä aukeaa kohteen oma juttu.',
+      + 'kasattiin hiekasta lahden pohjaan.',
     kohteet: [
       /*
        * Rembrandtin talosta ei ole suomenkielistä artikkelia, joten se
@@ -3688,9 +3684,7 @@ export const KAUPUNKIKARTAT = {
       + 'pisteessä ja piirtää kartalle tähden; sen keskellä seisoo '
       + 'Riemukaari. Ylhäällä oikealla kohoaa Montmartre, kaupungin korkein '
       + 'kukkula, 130 metriä merenpinnan yläpuolella, ja sen laella on '
-      + 'valkoinen Sacré-Cœur. Kohteet ovat kartalla pieninä piirroksina: '
-      + 'napautus suurentaa piirroksen ja tuo esiin nimikyltin, ja kyltistä '
-      + 'aukeaa kohteen oma juttu.',
+      + 'valkoinen Sacré-Cœur.',
     kohteet: [
       /*
        * Laaja rajaus, 15.8.2026 alkaen 8,3 km (pelin laajin on nyt
@@ -3804,10 +3798,7 @@ export const KAUPUNKIKARTAT = {
       + 'silta — seuraava valmistui vasta 1841. Vanhankaupungin kadut ovat '
       + 'kapeita ja mutkaisia, ja ne kulkevat pari metriä alkuperäistä '
       + 'ylempänä: 1200-luvulla koko kaupunginosan maanpinta nostettiin '
-      + 'tulvien takia, ja vanhat pohjakerrokset jäivät kellareiksi. '
-      + 'Kohteet ovat kartalla pieninä piirroksina: napautus suurentaa '
-      + 'piirroksen ja tuo esiin nimikyltin, ja kyltistä aukeaa kohteen oma '
-      + 'juttu.',
+      + 'tulvien takia, ja vanhat pohjakerrokset jäivät kellareiksi.',
     kohteet: [
       /*
        * Lännestä itään: Petřínin kukkulalta Václavin aukion yläpäähän.
@@ -3862,9 +3853,7 @@ export const KAUPUNKIKARTAT = {
       + 'kadut ovat kapeita ja mutkaisia, ulkopuolella leveitä ja suoria. '
       + 'Koillisessa kaartaa Donaukanal, ja sen takana levittäytyy Praterin '
       + 'vihreä — entinen keisarin metsästysmaa, jonka reunalla pyörii '
-      + 'jättiratas. Kohteet ovat kartalla pieninä piirroksina: napautus '
-      + 'suurentaa piirroksen ja tuo esiin nimikyltin, ja kyltistä aukeaa '
-      + 'kohteen oma juttu.',
+      + 'jättiratas.',
     kohteet: [
       /*
        * Lännestä itään. Belvedere on 89 %:n kohdalla ja jättiratas
@@ -4012,9 +4001,7 @@ export const KAUPUNKIKARTAT = {
       + 'taloilla.\n\nThames on vuorovesijoki: pinta nousee ja laskee '
       + 'Lontoon kohdalla noin seitsemän metriä kahdesti päivässä, ja '
       + 'laskuveden aikaan rannalta löytyy yhä savipiippuja ja '
-      + 'keskiaikaisia nuppineuloja. Kohteet ovat kartalla pieninä '
-      + 'piirroksina: napautus suurentaa piirroksen ja tuo esiin '
-      + 'nimikyltin, ja kyltistä aukeaa kohteen oma juttu.',
+      + 'keskiaikaisia nuppineuloja.',
     kohteet: [
       {
         nimi: 'Buckinghamin palatsi',
@@ -4112,9 +4099,7 @@ export const KAUPUNKIKARTAT = {
       + 'karhu, ja karhupatsaita tulee kaduilla vastaan vähän väliä.\n\n'
       + 'Kylmän sodan jäljet näkyvät yhä: muurin linja on merkitty '
       + 'keskustaan katukiveyksen kaksoisrivinä, ja idän ja lännen '
-      + 'katuvalot hohtavat öisin eri sävyissä. Kohteet ovat kartalla '
-      + 'pieninä piirroksina: napautus suurentaa piirroksen ja tuo esiin '
-      + 'nimikyltin, ja kyltistä aukeaa kohteen oma juttu.',
+      + 'katuvalot hohtavat öisin eri sävyissä.',
     kohteet: [
       /*
        * Järjestys on kartan numerointi (omistajan taittopäätös
@@ -4194,9 +4179,7 @@ export const KAUPUNKIKARTAT = {
       + 'Kartan keskellä on Gamla stan, vanhakaupunki, jonka kujat '
       + 'kiertelevät samoja mutkia kuin keskiajalla. Kapein niistä on 90 '
       + 'senttiä leveä. Idässä levittäytyy Djurgården, entinen kuninkaan '
-      + 'metsästyspuisto, jossa ovat nyt museot ja huvipuisto. Kohteet ovat '
-      + 'kartalla pieninä piirroksina: napautus suurentaa piirroksen ja tuo '
-      + 'esiin nimikyltin, ja kyltistä aukeaa kohteen oma juttu.',
+      + 'metsästyspuisto, jossa ovat nyt museot ja huvipuisto.',
     kohteet: [
       /*
        * Lännestä itään: kaupungintalolta Skansenille. Jokaisen wiki on
@@ -4277,9 +4260,7 @@ export const KAUPUNKIKARTAT = {
       + 'sekava, että muutamat suorat kadut erottuvat siitä heti — ne on '
       + 'puhkaistu talojen läpi vasta myöhemmin. Oikeassa alalaidassa '
       + 'katuverkko harvenee ja tilalle tulee antiikin alue: siellä ovat '
-      + 'Forum ja Colosseum. Kohteet ovat kartalla pieninä piirroksina: '
-      + 'napautus suurentaa piirroksen ja tuo esiin nimikyltin, ja kyltistä '
-      + 'aukeaa kohteen oma juttu.',
+      + 'Forum ja Colosseum.',
     kohteet: [
       /*
        * Numerointi kulkee lännestä itään, eli samassa järjestyksessä
@@ -4918,9 +4899,7 @@ export const KAUPUNKIKARTAT = {
       + 'on Kastellet, ja sen takana rannalla istuu Pieni merenneito. '
       + 'Kanavan itäpuolella on Christianshavn, jonka omat kanavat näkyvät '
       + 'suorina juovina — se rakennettiin hollantilaiseen tapaan '
-      + 'kaivamalla. Kohteet ovat kartalla pieninä piirroksina: napautus '
-      + 'suurentaa piirroksen ja tuo esiin nimikyltin, ja kyltistä aukeaa '
-      + 'kohteen oma juttu.',
+      + 'kaivamalla.',
     kohteet: [
       /*
        * AMALIENBORG ON ANSA. fi.wikipedian `Amalienborg` EI ole
@@ -4988,10 +4967,7 @@ export const KAUPUNKIKARTAT = {
       + 'juovana keskustan takana. Vasemmalla kohoaa Pyynikinharju, '
       + 'maailman korkein pitkittäisharju, ja sen laella seisoo '
       + 'punagraniittinen näkötorni. Pohjoisessa Näsijärven rantaan '
-      + 'työntyy Särkänniemen niemi, jonka kärjessä on Näsinneula. '
-      + 'Kohteet ovat kartalla pieninä piirroksina: napautus suurentaa '
-      + 'piirroksen ja tuo esiin nimikyltin, ja kyltistä aukeaa kohteen '
-      + 'oma juttu.',
+      + 'työntyy Särkänniemen niemi, jonka kärjessä on Näsinneula.',
     kohteet: [
       /*
        * Kuusi kohdetta, kaikki tarkistettu fi-Wikipedian rajapinnasta
@@ -5037,9 +5013,7 @@ export const KAUPUNKIKARTAT = {
       + '"Arnon takaiseksi", ja siellä ovat käsityöläisten korttelit ja '
       + 'Bobolin puutarhan iso vihreä kiila. Joen yli johtaa useita '
       + 'siltoja, joista vanhin ja kuuluisin on Ponte Vecchio — kartalla '
-      + 'se erottuu siitä, että sen päällä on taloja. Kohteet ovat '
-      + 'kartalla numeroituina pisteinä: napautus tuo esiin nimikyltin, '
-      + 'ja kyltistä aukeaa kohteen oma juttu.',
+      + 'se erottuu siitä, että sen päällä on taloja.',
     kohteet: [
       /*
        * KAKSI ANSAA fi.wikipediassa, molemmat tarkistettu
