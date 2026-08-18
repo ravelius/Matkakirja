@@ -1364,6 +1364,95 @@ test('version 1 tallennus kääntyy mannerkohtaiseksi', () => {
   assert.equal(puhdas.starFound, false);
 });
 
+// --- Viisas Pöllö on löydettävä aarre (omistajan tilaus 18.8.2026) --------
+
+test('pöllö löytyy ensimmäisestä laatasta eikä laatan sisältö muutu', () => {
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 31,
+  });
+  assert.equal(game.polloLoydetty, false, 'peli alkoi pöllö mukanaan');
+  assert.equal(game.takePolloPaljastus(), false, 'paljastus odotti ilman löytöä');
+
+  game.player.pos = { type: 'city', city: 'lima' };
+  game.world.tokens.set('lima', 'ruby');
+  const rahaEnnen = game.player.money;
+  const pisteetEnnen = game.player.xp;
+  const loydot = game.player.finds.length;
+
+  assert.equal(game.revealToken('lima'), 'ruby', 'laatan oma tyyppi muuttui');
+  assert.equal(game.polloLoydetty, true, 'pöllöä ei löytynyt ensimmäisestä laatasta');
+  // Laatan oma sisältö säilyy täysin: pöllö on lisä, ei tilalle.
+  assert.equal(game.player.finds.length, loydot + 1, 'löytö ei kirjautunut');
+  assert.equal(game.player.finds.at(-1), 'ruby');
+  assert.ok(game.player.money > rahaEnnen, 'jalokivi ei tuonut rahaa');
+  assert.equal(game.player.xp, pisteetEnnen, 'pöllö antoi tietäjäpisteitä');
+
+  // Paljastus poimitaan täsmälleen kerran.
+  assert.equal(game.takePolloPaljastus(), true);
+  assert.equal(game.takePolloPaljastus(), false, 'paljastus toistui');
+
+  // Toinen laatta ei enää löydä pöllöä uudelleen.
+  game.player.pos = { type: 'city', city: 'kairo' };
+  game.world.tokens.set('kairo', 'emerald');
+  game.revealToken('kairo');
+  assert.equal(game.takePolloPaljastus(), false, 'pöllö löytyi kahdesti');
+});
+
+test('pöllön löytö kulkee tallennuksen läpi ja vanha tallennus saa pöllön', () => {
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [{ name: 'Yksin', color: '#f00', start: null }],
+    pack,
+    seed: 31,
+  });
+
+  // Löytämätön peli säilyy löytämättömänä myös tallennuksen yli.
+  const alku = JSON.parse(JSON.stringify(game.toJSON()));
+  assert.equal(alku.polloLoydetty, false);
+  assert.equal(Game.fromJSON(alku).polloLoydetty, false);
+
+  game.player.pos = { type: 'city', city: 'lima' };
+  game.world.tokens.set('lima', 'ruby');
+  game.revealToken('lima');
+  const data = JSON.parse(JSON.stringify(game.toJSON()));
+  assert.equal(data.polloLoydetty, true);
+  const palautettu = Game.fromJSON(data);
+  assert.equal(palautettu.polloLoydetty, true, 'löydetty pöllö katosi tallennuksessa');
+  assert.equal(palautettu.polloPaljastus, false, 'paljastus toistuisi latauksessa');
+
+  // Vanha tallennus (kenttää ei ole): pöllö on jo mukana matkalla.
+  const vanha = JSON.parse(JSON.stringify(game.toJSON()));
+  delete vanha.polloLoydetty;
+  assert.equal(Game.fromJSON(vanha).polloLoydetty, true,
+    'vanha tallennus menetti pöllönsä');
+});
+
+test('botin kääntämä laatta ei vie pöllön löytöhetkeä pelaajalta', () => {
+  const pack = packById('maailmankartta');
+  const game = new Game({
+    players: [
+      { name: 'Botti', color: '#00f', start: null, isBot: true },
+      { name: 'Pelaaja', color: '#f00', start: null },
+    ],
+    pack,
+    seed: 31,
+  });
+  assert.ok(game.player.isBot, 'testin oletus: botti aloittaa');
+  game.player.pos = { type: 'city', city: 'lima' };
+  game.world.tokens.set('lima', 'ruby');
+  game.revealToken('lima');
+  assert.equal(game.polloLoydetty, false, 'botti löysi pöllön');
+
+  game.current = 1;
+  game.player.pos = { type: 'city', city: 'kairo' };
+  game.world.tokens.set('kairo', 'emerald');
+  game.revealToken('kairo');
+  assert.equal(game.polloLoydetty, true, 'pelaaja ei löytänyt pöllöä');
+});
+
 test('tuntematon tallennusversio hylätään yhä', () => {
   assert.equal(Game.fromJSON({ version: 3, players: [] }), null);
   assert.equal(Game.fromJSON({ version: 0, players: [] }), null);

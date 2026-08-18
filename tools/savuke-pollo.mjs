@@ -566,7 +566,16 @@ async function avaaPeli(ctx, { sanelu = true, silta = false } = {}) {
     const g = window.matkakirja.game;
     if (g.phase === 'pickstart') g.actionPickStart('lontoo', null);
     g.player.money = 2000;
+    /*
+     * PÖLLÖ ON AARRE (omistajan tilaus 18.8.2026): uudessa pelissä
+     * nappi on piilossa, kunnes ensimmäinen laatta on käännetty. Tämä
+     * savuke tutkii pöllön TOIMINTAA, ei sen löytymistä, joten löytö
+     * kuitataan tässä suoraan — muuten jokainen osio joutuisi ensin
+     * pelaamaan visan läpi.
+     */
+    g.polloLoydetty = true;
     window.matkakirja.ui.render();
+    window.matkakirjaPollo?.paivitaNakyvyys?.();
   });
   await sivu.waitForTimeout(900);
   return { sivu, virheet };

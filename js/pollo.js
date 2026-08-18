@@ -498,6 +498,30 @@ export const POLLO_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
   + '<path d="M4.4 20.2h15.2"/>'
   + '</svg>';
 
+/*
+ * PÖLLÖ ON AARRE (omistajan tilaus 18.8.2026).
+ *
+ * Peli alkaa ilman pöllöä, ja se löytyy ensimmäisen käännetyn laatan
+ * alta omana aarteenaan — laatan oma sisältö säilyy koskemattomana,
+ * pöllö tulee sen lisäksi. Kortin tekstit ovat samassa muodossa kuin
+ * muidenkin aarteiden: nuoren herran huudahdus, aarteen nimi, lyhyt
+ * selite ja kerronnallinen jatko (js/ui.js naytaPolloAarre).
+ *
+ * Sävy on tarinakaaren aarretekstien sävy: minämuotoista kerrontaa,
+ * jonka sisällä puhutaan suoraan. Kohderyhmä on 13 vuotta täyttäneet
+ * ja aikuiset, joten pöllö on kohtelias matkakumppani eikä maskotti.
+ */
+export const POLLO_AARRE = {
+  huudahdus: 'Se liikkui — kätkössä oli jotain elävää!',
+  nimi: 'Viisas Pöllö',
+  selite: 'Isoisän matkakumppani liittyy matkaan',
+  esittely: 'Kätkön reunalta nousi pölyä, ja pölyn keskeltä katsoi lintu. '
+    + '"Viisas Pöllö", se sanoi ja kumarsi. "Kuljin isoisänne mukana koko '
+    + 'sen vuoden 1873 enkä ole sen jälkeen kunnolla nukkunut. Kysykää '
+    + 'minulta matkalla mitä tahansa — kaupungeista, kartoista, Aarnin '
+    + 'luettelosta. Visan vastauksia en anna; niistä te selviätte itse."',
+};
+
 /** Mikrofoni samalla viivakynällä. */
 const MIKKI_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
   + '<rect x="9" y="2.8" width="6" height="11.4" rx="3"/>'
@@ -1109,23 +1133,44 @@ class Pollo {
   }
 
   /**
-   * Näkyvyyssääntö: pöllö ei ole etusivun alkutekstin päällä.
+   * Näkyvyyssääntö: pöllö on löydettävä, eikä se ole alkutekstin päällä.
    *
-   * Alkuteksti on #intro, joka on näkyvissä vain lähtöpaikkaa
-   * valittaessa. Kun se väistyy, pöllö ilmestyy — eikä koskaan
-   * itsestään avaudu, vain näy. Alanappirivissä ollessaan pöllö
-   * noudattaa lisäksi rivin omaa piilotuslogiikkaa (js/ui.js).
+   * KAKSI EHTOA. Alkuteksti on #intro, joka on näkyvissä vain
+   * lähtöpaikkaa valittaessa; kun se väistyy, pöllö saa ilmestyä —
+   * eikä koskaan itsestään avaudu, vain näy. TOISEKSI pöllö on aarre
+   * (omistajan tilaus 18.8.2026): peli alkaa ilman sitä, ja nappi
+   * ilmestyy vasta kun ensimmäinen laatta on kääntynyt
+   * (game.polloLoydetty). Ennen sitä myös kuplat vaikenevat itsestään,
+   * koska naytaVihje ei näytä mitään piilossa olevan napin vierestä.
+   *
+   * Ehto on nimenomaan `=== false`: jos peliä ei ole (työhuoneen
+   * esikatselu, savuke, testi), pöllö näkyy kuten ennenkin.
+   * Alanappirivissä ollessaan pöllö noudattaa lisäksi rivin omaa
+   * piilotuslogiikkaa (js/ui.js).
    */
   nakyyko() {
     const intro = this.doc.getElementById('intro');
-    return !intro || intro.hidden;
+    if (intro && !intro.hidden) return false;
+    const game = this.haeUi?.()?.game ?? null;
+    return game?.polloLoydetty !== false;
   }
 
-  paivitaNakyvyys() {
+  /**
+   * @param {boolean} korosta pieni ilmestymisliike (löytöhetki).
+   */
+  paivitaNakyvyys(korosta = false) {
     const nakyy = this.nakyyko();
     this.nappi.hidden = !nakyy;
     if (!nakyy && this.auki) this.sulje();
     if (!nakyy) this.piilotaVihje();
+    // Löytöhetkellä nappi nytkähtää kerran esiin, jottei se vain
+    // ilmesty riviin huomaamatta. Luokka poistetaan animaation
+    // jälkeen, ettei se jää estämään seuraavaa nytkäystä.
+    if (nakyy && korosta) {
+      this.nappi.classList.remove('pollo-ilmestyy');
+      void this.nappi.offsetWidth;
+      this.nappi.classList.add('pollo-ilmestyy');
+    }
   }
 
   /* --- paikallinen vihjekupla ------------------------------------- */
@@ -3063,6 +3108,18 @@ export function polloVihje(teksti) {
 /** Vihjekupla pois. */
 export function polloVihjePois() {
   nykyinenPollo?.piilotaVihje();
+}
+
+/**
+ * Näkyvyys uudelleen arvioitavaksi. Pöllö on aarre, joten napin
+ * näkyminen riippuu pelin tilasta (game.polloLoydetty) — ja se voi
+ * vaihtua kesken istunnon kahdesta syystä: uusi peli piilottaa pöllön
+ * (js/ui.js mount) ja ensimmäinen laatta löytää sen (playTokenReveal).
+ *
+ * @param {boolean} korosta pieni ilmestymisliike (löytöhetki).
+ */
+export function polloPaivitaNakyvyys(korosta = false) {
+  nykyinenPollo?.paivitaNakyvyys(korosta);
 }
 
 /**
