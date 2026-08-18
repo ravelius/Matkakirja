@@ -15336,10 +15336,44 @@ dialog.minipopup:focus-visible { outline: none; }
  * rivissä on kolme ja laajemmalla neljä — sama tapa kuin laukun
  * varusteruudukossa.
  */
-.tietaja-galleria-selitys {
+/* Yläosa: selitys vasemmalla, nykyinen taso isona oikealla. */
+.tietaja-galleria-yla {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
   margin: 0 0 0.7rem;
+}
+
+.tietaja-galleria-selitys {
+  margin: 0;
   font-size: 0.9rem;
   line-height: 1.55;
+  flex: 1;
+}
+
+.tietaja-nykyinen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex: none;
+}
+
+.tietaja-nykyinen-kuva {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(122, 85, 20, 0.6);
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 4px rgba(217, 161, 59, 0.22);
+}
+
+.tietaja-nykyinen-nimi {
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  color: #46331f;
+  text-align: center;
 }
 
 .tietaja-galleria {

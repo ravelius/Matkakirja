@@ -45,6 +45,25 @@ export function avaaTietajagalleria(pisteet = 0) {
 
   const selitys = html('p', 'tietaja-galleria-selitys', TIETAJASELITYS);
 
+  /*
+   * NYKYINEN TASO ISONA selitystekstin oikealla puolella (omistajan
+   * tilaus 18.8.2026). Sama pöllö näkyy alempana ruudukossa toiseen
+   * kertaan — se on tarkoitus: ylhäällä "kuka olen nyt", alhaalla
+   * koko matka.
+   */
+  const isoKuva = document.createElement('img');
+  isoKuva.className = 'tietaja-nykyinen-kuva';
+  isoKuva.src = tietajaAvatar(nyt);
+  isoKuva.alt = '';
+  isoKuva.decoding = 'async';
+  isoKuva.draggable = false;
+  const nykyinen = html('div', 'tietaja-nykyinen');
+  nykyinen.appendChild(isoKuva);
+  nykyinen.appendChild(html('span', 'tietaja-nykyinen-nimi', nyt.nimi));
+  const ylarivi = html('div', 'tietaja-galleria-yla');
+  ylarivi.appendChild(selitys);
+  ylarivi.appendChild(nykyinen);
+
   const ruudukko = html('ul', 'tietaja-galleria');
   for (const taso of TIETAJATASOT) {
     const kohta = html('li', 'tietaja-galleria-kohta');
@@ -78,7 +97,7 @@ export function avaaTietajagalleria(pisteet = 0) {
 
   return avaaMinipopup({
     otsikko: 'Tietäjän tie',
-    sisalto: [selitys, ruudukko],
+    sisalto: [ylarivi, ruudukko],
     luokka: 'tietaja-popup',
   });
 }
