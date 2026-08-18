@@ -1423,6 +1423,10 @@ class Pollo {
       // role="status": ruudunlukija kertoo vihjeen ilman että se
       // sieppaa kohdistuksen kesken vuoron.
       this.vihje.setAttribute('role', 'status');
+      // Napautus häivyttää kuplan (omistaja 18.8.2026: "Pöllön
+      // puhekuplia pitää häipyä jos sitä koskettaa") — kupla ei siis
+      // enää päästä kosketusta lävitseen, vaan ottaa sen sulkeutuakseen.
+      this.vihje.addEventListener('pointerdown', () => this.piilotaVihje());
       this.doc.body.appendChild(this.vihje);
     }
     return this.vihje;
@@ -1443,11 +1447,16 @@ class Pollo {
   naytaOnnittelu({ teksti = '', kuva = '', sakeet = [] } = {}) {
     if (!teksti || this.auki || this.nappi.hidden) return;
     this.kiinnita();
-    // Juhla puhutaan aina pöllönapin vierestä — mahdollinen
-    // valikkoankkuri edelliseltä vihjeeltä ei saa jäädä voimaan.
-    this.vihjeAnkkuri = null;
+    /*
+     * Juhlakupla ilmestyy MATKALAUKUN kohdalle ylös (omistaja
+     * 18.8.2026: "sehän pitää tulla matkalaukun kohdalle ylös") —
+     * tasonnousu näkyy laukun tietäjärivillä, joten kupla osoittaa
+     * sinne. Ilman pilleriä (esim. työhuoneen esikatselu) pudotaan
+     * pöllönapin viereen.
+     */
+    this.vihjeAnkkuri = this.doc.getElementById('turn-pill');
     const kupla = this.varmistaKupla();
-    kupla.classList.remove('pollo-vihje-ylos');
+    kupla.classList.toggle('pollo-vihje-ylos', Boolean(this.vihjeAnkkuri));
     kupla.classList.add('pollo-vihje-juhla');
     kupla.replaceChildren();
     if (kuva) {
