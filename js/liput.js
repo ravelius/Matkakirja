@@ -53,6 +53,16 @@ export function avaaLippuikkuna(tiedosto) {
   });
   dialogi.addEventListener('close', () => dialogi.remove());
 
+  /*
+   * KEHYS JA VIERITYSKOTELO OVAT ERI ELEMENTIT (omistajan iPad-havainto
+   * 18.8.2026: "läpinäkyvyys bugi vieläkin"). Kehys maalaa paperin,
+   * reunan ja varjon; kortti vierittää ja LEIKKAA sisällön pyöristetyn
+   * reunan sisään myös silloin, kun sisältö on filterin takia noussut
+   * omalle piirtokerrokselleen. Perustelut: css/styles.css, .lippu-kehys.
+   * Kortti pitää entisen luokkansa, joten kaikki .lippu-kortti-säännöt
+   * ja tarkennuslogiikka osuvat samaan elementtiin kuin ennenkin.
+   */
+  const kehys = html('div', 'lippu-kehys');
   const kortti = html('div', 'lippu-kortti');
   const yla = html('div', 'lippu-ylarivi');
   yla.appendChild(html('h2', 'lippu-otsikko', tiedot.maa));
@@ -151,7 +161,13 @@ export function avaaLippuikkuna(tiedosto) {
    */
   const vieritaNakyviin = (elementti) => {
     if (!kortti.isConnected || !elementti.classList.contains('tarkennettu')) return;
-    const k = kortti.getBoundingClientRect();
+    /*
+     * Näkyvä alue mitataan KEHYKSESTÄ, ei vierityskotelosta: kehyksen
+     * reunalaatikko on se ikkunan reuna, jonka pelaaja näkee (kotelo on
+     * reunaviivan verran sisempänä). Näin vieritys osuu samaan pikseliin
+     * kuin ennen kehyksen ja kotelon eriyttämistä.
+     */
+    const k = kehys.getBoundingClientRect();
     const laatikot = [elementti, ...elementti.querySelectorAll('.lippu-versio-selite')]
       .map((el) => el.getBoundingClientRect())
       .filter((r) => r.width > 0 && r.height > 0);
@@ -249,7 +265,8 @@ export function avaaLippuikkuna(tiedosto) {
   }
   if (tiedot.lahde) kortti.appendChild(html('p', 'lahde', tiedot.lahde));
 
-  dialogi.appendChild(kortti);
+  kehys.appendChild(kortti);
+  dialogi.appendChild(kehys);
   document.body.appendChild(dialogi);
   try {
     dialogi.showModal();
