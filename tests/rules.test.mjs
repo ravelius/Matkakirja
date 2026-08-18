@@ -4489,7 +4489,20 @@ test('arkin katto ei putoa dvh:n varaan roskamitalla', () => {
  * geometria on vanhaa (WKWebView oikaisee asettelun ilman resizea,
  * tai paluun ensihetken mitat ovat vanhat ja oikenevat myöhemmin).
  * Paluu näkyviin ajaa siksi idempotentin sovituksen (fitViewBox +
- * nähtävyyskatto) heti sekä 400 ja 1600 ms päästä.
+ * nähtävyyskatto) heti.
+ *
+ * KOLMAS KIERROS (18.8.2026, omistaja: "ongelma tulee aina"
+ * sovellusvaihdosta ja paluusta): kiinteät 400/1600 ms jälkiajot
+ * eivät riittäneet — jäädytetyn prosessin ajastimet laukeavat
+ * paluussa heti peräkkäin ennen kuin WKWebView on palauttanut oikeat
+ * mitat, ja sanelunäppäimistö voi muuttaa mittoja vielä sekunteja
+ * myöhemmin. Sovituksen perässä juoksee siksi VAKIINTUMISSILMUKKA:
+ * mitat luetaan PALUU_TAHTI_MS välein PALUU_KESTO_MS ajan, ja sovitus
+ * ajetaan aina kun mitat muuttuivat tai dokumentti ei peitä ruutua
+ * (paluunMitat — musta alakulma tarkoitti, että html/body oli ruutua
+ * pienempi). Lisäksi visualViewportin resize/scroll ja tekstikentän
+ * jättö (focusout, sanelunäppäimistö aukeaa joka kentälle) johtavat
+ * geometrian uudelleen.
  */
 test('taustapaluu sovittaa kartan geometrian uudelleen', () => {
   const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
@@ -4499,14 +4512,36 @@ test('taustapaluu sovittaa kartan geometrian uudelleen', () => {
     'sovitus ei herää taustapaluusta');
   assert.match(vahdinta, /addEventListener\('pageshow', this\.paluuVahti\)/,
     'sovitus ei herää sivun palautuksesta välimuistista');
+  // Visuaaliviewportin oikaisu: resize JA scroll, harvennettuna.
+  assert.match(vahdinta, /visualViewport\?\.addEventListener\('resize', this\.oikaisuVahti\)/,
+    'visualViewportin resize ei johda geometriaa uudelleen');
+  assert.match(vahdinta, /visualViewport\?\.addEventListener\('scroll', this\.oikaisuVahti\)/,
+    'visualViewportin scroll ei johda geometriaa uudelleen');
+  // Tekstikentän jättö: dokumenttitason focusout kattaa kaikki kentät.
+  assert.match(vahdinta, /addEventListener\('focusout', this\.kenttaVahti, true\)/,
+    'tekstikentän jättö ei johda geometriaa uudelleen (sanelunäppäimistö)');
   const sovitus = ui.match(/sovitaTaustapaluu\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
   assert.ok(sovitus, 'sovitaTaustapaluu puuttuu ui.js:stä');
   assert.match(sovitus, /fitViewBox\(\)/, 'sovitus ei laske kartan geometriaa uusiksi');
-  assert.match(sovitus, /400\)/, 'sovitukselta puuttuu 400 ms:n jälkitarkistus');
-  assert.match(sovitus, /1600\)/, 'sovitukselta puuttuu 1600 ms:n jälkitarkistus');
+  // Vakiintumissilmukka kiinteiden jälkiajojen tilalla.
+  assert.match(sovitus, /paluunMitat\(\)/,
+    'sovitukselta puuttuu vakiintumissilmukan mittaus');
+  assert.match(sovitus, /PALUU_KESTO_MS/,
+    'vakiintumissilmukalla ei ole kestoa — se ei jatka tarkistamista paluun jälkeen');
+  assert.match(sovitus, /PALUU_TAHTI_MS/,
+    'vakiintumissilmukalla ei ole tahtia');
+  assert.match(sovitus, /\|\| !tila\.kattaa\) sovita\(\)/,
+    'silmukka ei sovita, kun dokumentti ei peitä ruutua (musta kulma)');
+  // Peittomittaus: dokumentti vs. visuaalinen viewportti + vieritysjäämä.
+  const mitat = ui.match(/paluunMitat\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.ok(mitat, 'paluunMitat puuttuu ui.js:stä');
+  assert.match(mitat, /docW >= vvW - 2 && docH >= vvH - 2/,
+    'peittomittaus ei vertaa dokumenttia ruudun mittoihin');
   // Purku: kuollut instanssi ei saa jäädä sovittamaan uuden rinnalle.
   assert.match(ui, /removeEventListener\('visibilitychange', this\.paluuVahti\)/,
     'sovitusvahtia ei pureta destroy-polulla');
+  assert.match(ui, /removeEventListener\('focusout', this\.kenttaVahti, true\)/,
+    'tekstikenttävahtia ei pureta destroy-polulla');
 });
 
 /*

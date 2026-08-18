@@ -1128,6 +1128,9 @@ class Pollo {
       e.preventDefault();
       this.kysy(this.kentta.value);
     });
+    // Näppäimistön sulkeutuminen (kentän jättö) johtaa näkymän
+    // geometrian uudelleen — vahti on dokumenttitasolla ja kattaa
+    // kaikki pelin tekstikentät, ei vain tämän (ui.js kenttaVahti).
     this.lomake = lomake;
     syote.appendChild(lomake);
 
@@ -1685,6 +1688,10 @@ class Pollo {
     this.paneeli.hidden = true;
     this.nappi.setAttribute('aria-expanded', 'false');
     this.nappi.classList.remove('auki');
+    // Paneelin sulku on paluu kartalle: geometria johdetaan uudelleen
+    // samasta syystä kuin dialogin sulussa (ui.js peiteVahti) — pöllö
+    // ei ole dialog, joten peitevahti ei näe sitä (ks. oikaiseNakyma).
+    this.oikaiseNakyma();
   }
 
   /**
@@ -3011,6 +3018,17 @@ class Pollo {
   }
 
   /**
+   * Näkymän geometria uusiksi pelin sovituksella (ui.js
+   * sovitaTaustapaluu): kutsutaan hetkinä, joina iOS:n näppäimistö
+   * tai sanelupalkki on juuri poistunut ja viewport on voinut jäädä
+   * vääräksi ilman yhtään tapahtumaa. Työhuoneen esikatselussa ja
+   * testeissä peliä ei ole — silloin ei tehdä mitään.
+   */
+  oikaiseNakyma() {
+    this.haeUi?.()?.sovitaTaustapaluu?.();
+  }
+
+  /**
    * Mikkinapin ulkoasu: kuunteleva vai lepäävä.
    *
    * SANELUTILALLA ON OMA SISÄLTÖNSÄ (omistajan tilaus 13.8.2026).
@@ -3021,6 +3039,18 @@ class Pollo {
    */
   merkitseMikki(kuuntelee) {
     const paalla = Boolean(kuuntelee);
+    /*
+     * SANELUN LOPPU JOHTAA NÄKYMÄN GEOMETRIAN UUDELLEEN (18.8.2026,
+     * kartan tilaperheen kolmas kierros — omistajan kaappauksessa
+     * paloi iOS:n mikrofonimerkki, ja koko sovelluskehys oli jäänyt
+     * väärän kokoiseksi). iOS:n sanelupalkki ja näppäimistö muuttavat
+     * viewporttia, eikä WKWebView aina toimita palautuksesta yhtään
+     * tapahtumaa. Kaikki sanelun loppupolut (onend, virhe, natiivi-
+     * päätös, lopetus) kulkevat tämän metodin kautta, joten
+     * pois-siirtymä on luotettava ankkurihetki: sovitus on
+     * idempotentti ja turha ajo halpa (ui.js sovitaTaustapaluu).
+     */
+    if (!paalla && this.mikki.classList.contains('kuuntelee')) this.oikaiseNakyma();
     this.mikki.classList.toggle('kuuntelee', paalla);
     this.mikki.setAttribute('aria-pressed', paalla ? 'true' : 'false');
     const nimi = paalla ? 'Lopeta sanelu' : 'Kysy ääneen';
