@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 887, teksti: 'Luvuista turha sarake pois; liitenappi vain lehtiin' },
   { v: 886, teksti: 'Onnittelukupla laukun kohdalle; kupla pois kosketuksesta' },
   { v: 885, teksti: 'Ääninapit kuntoon; luenta lakkaa kortin mukana' },
   { v: 884, teksti: 'Pöllön väkänen alas; pro-kirjautuminen pohjalle' },
