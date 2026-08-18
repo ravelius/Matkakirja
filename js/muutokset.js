@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 847, teksti: 'Neljä uusittua miniatyyriä kartalle (erä 3)' },
   { v: 846, teksti: 'Flickr-valokuvat Firenzen ja Tampereen lehtiin' },
   { v: 845, teksti: 'Raamattuun: kaikki sisältö ämpäristä (R2-peili)' },
   { v: 844, teksti: 'Miniatyyripiirrokset kahdeksaan uuteen kaupunkiin' },

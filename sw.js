@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.846';
+const CACHE = 'matkakirja-2026-08-09.847';
 const SHELL = [
   './',
   './index.html',
@@ -325,6 +325,7 @@ const SHELL = [
   './assets/kartat/miniatyyrit/tampere-museokeskus-vapriikki.webp',
   './assets/kartat/miniatyyrit/tampere-hameensilta.webp',
   './assets/kartat/miniatyyrit/tampere-pyynikin-nakotorni.webp',
+  './assets/kartat/miniatyyrit/tampere-tampereen-tuomiokirkko.webp',
   './assets/kartat/miniatyyrit/firenze-duomo.webp',
   './assets/kartat/miniatyyrit/firenze-palazzo-vecchio.webp',
   './assets/kartat/miniatyyrit/firenze-uffizi.webp',
@@ -347,11 +348,14 @@ const SHELL = [
   './assets/kartat/miniatyyrit/tripoli-vanhankaupungin-kellotorni.webp',
   './assets/kartat/miniatyyrit/tripoli-karamanlin-moskeija.webp',
   './assets/kartat/miniatyyrit/tripoli-an-naqan-moskeija.webp',
+  './assets/kartat/miniatyyrit/tripoli-marcus-aureliuksen-riemukaari.webp',
+  './assets/kartat/miniatyyrit/tripoli-punainen-linna.webp',
   './assets/kartat/miniatyyrit/tokio-kaminarimon.webp',
   './assets/kartat/miniatyyrit/tokio-senso-ji.webp',
   './assets/kartat/miniatyyrit/tokio-kanei-ji.webp',
   './assets/kartat/miniatyyrit/tokio-tokion-kansallismuseo.webp',
   './assets/kartat/miniatyyrit/tokio-uenon-puisto.webp',
+  './assets/kartat/miniatyyrit/tokio-shitamachi-museo.webp',
   './assets/kartat/miniatyyrit/soul-gyeongbokgung.webp',
   './assets/kartat/miniatyyrit/soul-bukchonin-hanok-kyla.webp',
   './assets/kartat/miniatyyrit/soul-changdeokgung.webp',
