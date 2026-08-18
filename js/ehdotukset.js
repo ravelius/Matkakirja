@@ -329,9 +329,9 @@ export function ajastaEhdotusKupla(nayta) {
 export function ehdotusOsio(sivu = '') {
   if (!ehdotusKaytossa()) return null;
 
-  const lohko = html('details', 'periaate-ehdotus');
-  const nimio = html('summary', 'periaate-valiotsikko', 'Ehdota lehteen');
-  lohko.appendChild(nimio);
+  // Omistajan päätös 18.8.2026: osio näkyy suoraan ilman otsikkoa ja
+  // vipua — vain pro-osio on vivun takana.
+  const lohko = html('div', 'periaate-ehdotus');
 
   const johdanto = html('p', 'periaate-teksti');
   johdanto.textContent = 'Näitkö matkallasi kuvan tai aiheen, joka kuuluisi '
