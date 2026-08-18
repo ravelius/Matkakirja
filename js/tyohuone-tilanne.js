@@ -48,6 +48,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v879 — ehdotuslomake: uusi saateteksti ("Näitkö matkallasi kuvan tai aiheen…"), ja pro-osio on nyt rasti "Haluan hakea pro-sisällöntuottajaksi" + pieni i, joka avaa selitteen minipopupissa; rasti paljastaa kirjautumisen',
   'v878 — kohdekartoille 15 uutta nähtävyyttä: Tokio 6→10 (Ueno Tōshō-gū, Uenon asema, Hanayashiki, Kyū-Iwasaki-tei), Soul 6→9 (Gwanghwamun, Insadong, Jogyesa), Shanghai 6→9 (Kaupunginjumalan temppeli, Fuyoun moskeija, Dajingin pavilonki), Bagdad 6→8 (Haydarkhanan ja al-Wazirin moskeijat), Teheran 6→8 (Toopkhanen aukio, Bagh-e Mellin portti), Tripoli 6→7 (Gurgin moskeija) — avaa kartat ja parit uudet jutut; uusilla kohteilla ei ole vielä miniatyyripiirrosta, joten ne näkyvät numeroympyröinä',
   'v877 — miniatyyrit sävytetty kartan pohjaväriin (kaikki 120): piirroksen paperi ei enää hohda vaaleampana kartan päällä — katso esim. Firenzen tai Helsingin kartta ja suurennos; uudet kuvat saavat sävyn automaattisesti leikkurista',
   'v876 — oppaan vuosisää samalle pohjalle kuin lehden: avaa Firenzen Matkailijan opas ja napauta Milloin matkaan -laatikon kuvaajaa — aukeaa sama sääkortti kuin lehden vuosiennusteesta (otsikko, luonnehdinta ja lähderivi graafin alla), napautus/Esc sulkee kortin muttei opasta; oppaan oma pelkistetty suurennos poistui',

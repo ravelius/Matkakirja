@@ -23,6 +23,7 @@
  */
 
 import { html } from './ui-apurit.js';
+import { avaaMinipopup } from './minipopup.js';
 
 /*
  * Workerin osoite. Tyhjänä lomakkeen ehdotusosio ja työhuoneen
@@ -333,10 +334,13 @@ export function ehdotusOsio(sivu = '') {
   // vipua — vain pro-osio on vivun takana.
   const lohko = html('div', 'periaate-ehdotus');
 
+  // Saateteksti täsmälleen omistajan sanoin (18.8.2026).
   const johdanto = html('p', 'periaate-teksti');
   johdanto.textContent = 'Näitkö matkallasi kuvan tai aiheen, joka kuuluisi '
-    + 'johonkin pelin lehteen? Lähetä se tästä. Omistaja käy ehdotukset läpi '
-    + 'eikä mitään julkaista ilman hänen hyväksyntäänsä.';
+    + 'johonkin pelin lehteen? Lähetä se tästä. Tiimi käy ehdotuksesi läpi '
+    + 'ja kaikki hyvät ja sopivat muutokset lisätään peliin. Mikäli haluat '
+    + 'lisätä peliin enemmän sisältöä, voit hakea pro-sisällöntuottaja '
+    + 'statusta.';
   lohko.appendChild(johdanto);
 
   /* --- kuvat --- */
@@ -719,18 +723,47 @@ function proNakyma(tunnus, tiedot) {
 export function proOsio() {
   if (!ehdotusKaytossa()) return null;
 
-  const lohko = html('details', 'periaate-ehdotus periaate-pro');
-  lohko.appendChild(html('summary', 'periaate-valiotsikko', 'Olen pro-sisällöntuottaja'));
+  /*
+   * Vivun tilalla on RASTI + i (omistaja 18.8.2026): "sivulla voisi
+   * olla checkbox 'Haluan hakea pro-sisällöntuottajaksi' ja sen
+   * perässä pieni i joka avaisi pop-up selitteen, mikä pro on".
+   * Rasti paljastaa kirjautumisen; selitysteksti muutti minipopupiin,
+   * jottei lomake kasva ennen kuin pelaaja on kiinnostunut.
+   */
+  const lohko = html('div', 'periaate-ehdotus periaate-pro');
 
-  const johdanto = html('p', 'periaate-teksti');
-  johdanto.textContent = 'Omistaja kutsuu peliin ammattilaisia — valokuvaajia ja '
-    + 'tutkijoita. Kutsutut saavat sähköpostiinsa koodin, jolla pääsee '
-    + 'rakentamaan oman tekijäsivun: kuva, esittely ja linkit omille sivuille. '
-    + 'Sivu avautuu pelaajalle kuvasi lähderiviltä.';
-  lohko.appendChild(johdanto);
+  const rivi = html('div', 'pro-rasti-rivi');
+  const nimio = html('label', 'pro-rasti-nimio');
+  const rasti = html('input');
+  rasti.type = 'checkbox';
+  rasti.className = 'pro-rasti';
+  nimio.appendChild(rasti);
+  nimio.appendChild(document.createTextNode(' Haluan hakea pro-sisällöntuottajaksi'));
+  rivi.appendChild(nimio);
+
+  const seloste = html('button', 'seloste-nappi', 'i');
+  seloste.type = 'button';
+  seloste.setAttribute('aria-label', 'Mikä on pro-sisällöntuottaja?');
+  seloste.addEventListener('click', () => {
+    avaaMinipopup({
+      otsikko: 'Pro-sisällöntuottaja',
+      sisalto: 'Omistaja kutsuu peliin ammattilaisia — valokuvaajia ja '
+        + 'tutkijoita. Kutsutut saavat koodin, jolla pääsee rakentamaan '
+        + 'oman tekijäsivun: kuva, esittely ja linkit omille sivuille. '
+        + 'Tekijäsivu avautuu pelaajalle kuviesi lähderiviltä, eli nimesi '
+        + 'kulkee jokaisen kuvasi mukana.',
+      luokka: 'pro-seloste',
+    });
+  });
+  rivi.appendChild(seloste);
+  lohko.appendChild(rivi);
+
+  const avattava = html('div', 'pro-avattava');
+  avattava.hidden = true;
+  lohko.appendChild(avattava);
 
   const sisus = html('div', 'pro-sisus');
-  lohko.appendChild(sisus);
+  avattava.appendChild(sisus);
 
   const kirjautuminen = html('div', 'pro-kirjautuminen');
   const posti = html('input', 'periaate-kentta');
@@ -784,11 +817,12 @@ export function proOsio() {
     if (!ok) nappi.disabled = false;
   });
 
-  // Muistissa oleva pari avaa näkymän suoraan, kun osio avataan
+  // Muistissa oleva pari avaa näkymän suoraan, kun rasti pannaan
   // ensimmäisen kerran — ei turhaa verkkopyyntöä ennen sitä.
   let kokeiltu = false;
-  lohko.addEventListener('toggle', () => {
-    if (!lohko.open || kokeiltu) return;
+  rasti.addEventListener('change', () => {
+    avattava.hidden = !rasti.checked;
+    if (!rasti.checked || kokeiltu) return;
     kokeiltu = true;
     const muistissa = proTunnus();
     if (muistissa) avaa(muistissa, { hiljaa: true });
