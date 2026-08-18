@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 906, teksti: 'Avauskuvat Ateenaan, Madridiin ja Barcelonaan' },
   { v: 905, teksti: 'Avauskuvat Roomaan, Wieniin ja Amsterdamiin' },
   { v: 904, teksti: 'Sankarien aukion mitat lahteineen hu-Wikipediasta' },
   { v: 903, teksti: 'Sankarien aukiolle oma juttu; Helsingin opas nykymalliin' },

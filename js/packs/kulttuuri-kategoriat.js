@@ -1875,6 +1875,46 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNayteNimi: 'La Gran Vía -zarzuela — Emilio Sagi-Barba, PD',
         },
       ],
+          /*
+       * AVAUSKUVAT (18.8.2026): kolme ilmansuuntaa ja kolme valoa.
+       * Keskustan katolta ulospäin, luoteesta sisäänpäin kohti
+       * Kuninkaanlinnaa ja kaakosta sisäänpäin auringonlaskussa.
+       * Yhdessä ne kertovat sekä kattomeren, monumentit että
+       * lähiöiden Madridin. Lisenssit, tekijät ja koot todennettu
+       * Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Azotea del Circulo de Bellas Artes, Madrid.jpg',
+          selite: 'Kattoterassilta yli keskustan: vasemmalla kaartuu '
+            + 'vaalea kulmatalo, jonka katolla on punaiset markiisit, '
+            + 'keskellä nousee kirkon musta teräväkärkinen kupoli, ja '
+            + 'niiden takaa alkaa tasainen tiilikattojen meri. '
+            + 'Horisontissa erottuvat lasitornit ja niiden takana '
+            + 'vuorijono.',
+          lahde: 'Nicolas Vigier, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Palacio Real y Catedral de la Almudena de Madrid 03.jpg',
+          selite: 'Kuninkaanlinna ja Almudenan katedraali näkötornista '
+            + 'katsottuna: keskellä levittäytyy linnan pitkä vaalea '
+            + 'julkisivu tasaisine ikkunariveineen, oikealla nousevat '
+            + 'katedraalin harmaa kupoli ja kellotornit. Takana alkavat '
+            + 'punatiiliset lähiökorttelit ja ylhäällä kuiva keltainen '
+            + 'ylätasanko.',
+          lahde: 'Luis García ( Zaqarbal ), Wikimedia Commons '
+            + '(CC BY-SA 3.0 es)',
+        },
+        {
+          tiedosto: 'Puesta de Sol - Cerro del Tio Pio - Madrid - 00.jpg',
+          selite: 'Auringonlasku Cerro del Tío Pío -kukkulalta kohti '
+            + 'keskustaa: etualalla toistuu rivi punatiilisiä '
+            + 'kerrostaloja, joiden päädyissä on suuret holvikaaret ja '
+            + 'katoilla jyrkät harjat. Kaupunki jatkuu horisonttiin, '
+            + 'jossa aurinko tulee esiin sadekuuron harmaan verhon alta.',
+          lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'urheilu',
@@ -3791,6 +3831,43 @@ export const KULTTUURI_KATEGORIAT = {
           ],
         },
       ],
+          /*
+       * AVAUSKUVAT (18.8.2026): kolme etäisyyttä ja kolme
+       * vuorokaudenaikaa. Akropoliin laelta ULOS luoteeseen,
+       * Hymettos-vuorelta koko kaupunkilaakso idästä ja Areiopagilta
+       * yöllä katutasolle. Akropolis itse on jo nähtävyysjutuissa,
+       * joten sitä ei nosteta pääaiheeksi. Lisenssit, tekijät ja koot
+       * todennettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Atenas, 03.jpg',
+          selite: 'Akropoliin laelta luoteeseen: vasemmalla laskeutuu '
+            + 'kallion vaalea seinämä, alempana levittäytyy antiikin '
+            + 'agoran puistomainen kaivausalue Hefaistoksen temppeleineen, '
+            + 'ja sen takaa alkavat Plakan punatiilikatot. Kaupunki '
+            + 'jatkuu valkoisena kerrostalomattona vuorten juurelle asti.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'The Acropolis from Mount Hymettus on February 9, 2020.jpg',
+          selite: 'Sama kaupunki Hymettos-vuorelta katsottuna monen '
+            + 'kilometrin päästä: Akropoliin kallio kutistuu pieneksi '
+            + 'saarekkeeksi keskelle kuvaa, ja kaikkialla muualla on '
+            + 'matalaa vaaleaa kerrostaloa horisontin vuorijonoon asti. '
+            + 'Helmikuinen ilma on utuinen.',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Athens at night on September 28, 2022.jpg',
+          selite: 'Keskusta yöllä Areiopagin kalliolta: etualan katoilla '
+            + 'hehkuvat valaistut kattoravintolat ja -puutarhat, '
+            + 'takana nousevat asuinkerrostalojen rivit valaistuine '
+            + 'ikkunoineen, ja alhaalla kulkee kapea kuja liikkeiden '
+            + 'kylttien alla.',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'arki',
@@ -5118,6 +5195,44 @@ export const KULTTUURI_KATEGORIAT = {
             + 'erottuvat ylhäältä pieninä kahdeksankulmioina.',
           lahde: 'Alhzeiia, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Eixample',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (18.8.2026): vuori, ruudukko ja satama — se
+       * kolmijako, joka selittää Barcelonan muodon. Katolta merelle,
+       * ilmasta sataman yli iltavalossa ja kukkulalta koko ruudukon
+       * yli sinisellä hetkellä. Sagrada Família ja Barceloneta ovat jo
+       * muualla lehdessä. Lisenssit, tekijät ja koot todennettu
+       * Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Barcelona rooftops.jpg',
+          selite: 'Kattoja kohti merta: etualalla ovat vanhankaupungin '
+            + 'tiiviit korttelit vesisäiliöineen ja antenneineen, '
+            + 'keskellä kohoaa kivinen tornitalo, jonka katolla on suuri '
+            + 'pyöreä kello, ja sen takana satamaköysiradan '
+            + 'ristikkotorni. Perällä avautuu satama nostureineen ja '
+            + 'avomeri.',
+          lahde: 'Jvhertum, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Barcelona in evening light (49598614983).jpg',
+          selite: 'Ilmasta sataman yli iltavalossa: etualalla kaartuu '
+            + 'aallonmurtaja ja sen takana on satama-allas laivoineen ja '
+            + 'kelluvine kävelysiltoineen. Rannasta alkaa kaupungin '
+            + 'tiivis kattomatto, joka nousee horisontissa Collserolan '
+            + 'vihreille kukkuloille.',
+          lahde: 'Mike McBey, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Barcelona desde El Carmelo.JPG',
+          selite: 'Sininen hetki El Carmelin kukkulalta: Eixamplen '
+            + 'ruudukko piirtyy alla suorina oransseina katulinjoina, '
+            + 'vasemmalla hohtaa Torre Glòriesin luotisuora runko ja '
+            + 'oikealla seisoo valonheittimin valaistu Sagrada Família '
+            + 'nostureineen. Horisontissa on tumma meri.',
+          lahde: 'Jcca76, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
