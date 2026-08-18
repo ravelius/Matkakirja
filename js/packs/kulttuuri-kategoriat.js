@@ -1119,6 +1119,45 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Golem',
         },
       ],
+          /*
+       * AVAUSKUVAT (18.8.2026): kolme suuntaa ja kolme hetkeä. Pohjoisen
+       * rinteeltä alas jokeen ja sen siltoihin, etelästä Vyšehradilta
+       * ylös jokea kohti linnaa, ja kattojen yli linnan siluettiin
+       * auringon ollessa matalalla. Kaarlensilta ja Vanhankaupungin
+       * tori ovat jo lehdessä eivätkä toistu. Lisenssit, tekijät ja
+       * koot todennettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Vltava river in Prague.jpg',
+          selite: 'Vltava lokakuisena iltapäivänä: etualalla on '
+            + 'klassisistisen palatsin liuskekatto vihreine kupoleineen '
+            + 'ja valkoisine savupiippuineen, ja joen yli kaartuu useita '
+            + 'siltoja peräkkäin. Vasemmalla kohoavat vanhankaupungin '
+            + 'katot ja torninhuiput, takana metsäiset kukkulat.',
+          lahde: 'Dmitry A. Mottl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vltava River from Vysehrad (34378141343).jpg',
+          selite: 'Sama joki etelästä aamuauringossa: etualalla sen '
+            + 'ylittää ruskeaksi ruostunut teräsristikkosilta, ja sen '
+            + 'takana on kivikaarinen katusilta. Vastarannalla nousevat '
+            + 'punaiset tiilikatot, ja harjanteella seisovat linnan '
+            + 'pitkä siipirakennus ja katedraalin terävät tornit.',
+          lahde: 'Nan Palmero from San Antonio, TX, USA, '
+            + 'Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: '2009-04-25 Sunrise in Prague 05.jpg',
+          selite: 'Kattojen yli linnan siluettiin: etualalla ovat '
+            + 'lähitalojen punaruskeat tiilikatot kattoikkunoineen, ja '
+            + 'niiden takana levittäytyy usvainen kattomeri. '
+            + 'Horisontissa erottuvat mustana linnan kattoharja ja '
+            + 'katedraalin kaksi kärkitornia, ja aurinko seisoo '
+            + 'matalalla aivan niiden vieressä.',
+          lahde: 'Szilas, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
     },
     {
       id: 'musiikki',
@@ -2707,6 +2746,47 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNayteNimi: 'Vivaldi: Kevät, 1. osa — John Harrison, viulu (CC BY-SA)',
         },
       ],
+          /*
+       * AVAUSKUVAT (18.8.2026): kolme korkeutta. Kaupungin omilta
+       * katoilta alas, kellotornista Bacinon yli koko rantajulkisivuun
+       * ja kanavan pinnalta veneestä. Canal Grande, Rialto ja San
+       * Marco ovat jo lehdessä eivätkä toistu.
+       *
+       * TOINEN KUVA VAIHDETTIIN valmisteluvaiheessa: ehdotettu näkymä
+       * Lidolta oli harmaa ja kaupunki jäi ohueksi viivaksi veden ja
+       * pilviverhon väliin. Tilalle etsittiin sama ajatus — kaupunki
+       * laguunin takaa — kirkkaassa valossa. Lisenssit, tekijät ja
+       * koot todennettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Views of Venice, near Canal Grande5.jpg',
+          selite: 'Katot ylhäältä: kuvan täyttävät ruskeanpunaiset '
+            + 'tiilikatot, valkoiset savupiiput ja puiset kattoterassit '
+            + 'kaiteineen — venetsialaiset kutsuvat niitä altanoiksi. '
+            + 'Keskellä kohoaa tiilinen kellotorni, jonka huipulla on '
+            + 'vaalea kivinen sipulikupoli.',
+          lahde: 'dconvertini, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Views from the Campanile of Basilica di San Giorgio Maggiore (Venice) 03.jpg',
+          selite: 'Kellotornista Bacinon yli: etualalla kaartuu '
+            + 'aallonmurtaja pienine majakkoineen ja sen suojassa on '
+            + 'rivi purjeveneitä. Turkoosin veden takana levittäytyy '
+            + 'kaupungin koko rantajulkisivu, josta kohoavat Markuksen '
+            + 'kampanile ja dogen palatsin vaalea kaaririvistö.',
+          lahde: 'Derbrauni, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Canale Venezia sole.jpg',
+          selite: 'Kapea sivukanava veneestä nähtynä: oikealla nousee '
+            + 'talorivi vaaleanpunaisine rappauksineen, vihreine '
+            + 'ikkunaluukkuineen ja pyykkinaruineen, ja vedenrajassa '
+            + 'aukeavat holvatut oviaukot ja rautaportit. Alareunassa '
+            + 'näkyy gondolin musta keula.',
+          lahde: 'Francesca Lissoni, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'rakennukset',
@@ -2971,6 +3051,45 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valuu kannelta ja rannalla seisoo katsojia.',
           lahde: 'Tuntematon lehtikuvaaja, Wikimedia Commons (public domain)',
           wiki: 'Vasa (laiva)',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (18.8.2026): kolme katselusuuntaa ja kaksi
+       * vuodenaikaa. Suoraan ylhäältä (vanhakaupunki on saari),
+       * idästä veden yli talvella ja koillisesta rantabulevardilta
+       * kesällä. Slussen, Riddarholmen ja Stortorget ovat jo
+       * lehdessä eivätkä toistu. Lisenssit, tekijät ja koot todennettu
+       * Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Gamla stan February 2013 01.jpg',
+          selite: 'Vanhakaupunki ilmasta helmikuussa: saaren täyttää '
+            + 'tiivis korttelirykelmä, jonka keltaiset, punaiset ja '
+            + 'vihreät katot kiertyvät kapeiden kujien ympärille. '
+            + 'Yläreunassa erottuu kuninkaanlinnan neliömäinen sisäpiha, '
+            + 'oikealla kaartuu rantakatu laivoineen, ja vedessä '
+            + 'ajelehtii jäälauttoja.',
+          lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Skeppsbrokajen Gamla Stan from Skeppsholmen Stockholm 2016 01.jpg',
+          selite: 'Talvinen keskipäivä salmen rannassa: etualalla on '
+            + 'lumen peittämä nurmikko penkkeineen ja lehdettömine '
+            + 'puineen, ja vastarannalla seisoo keltaisten, ruskeiden '
+            + 'ja oranssien julkisivujen rivi lumisine kattoineen. '
+            + 'Laiturissa on iso valkoinen laiva ja rannalla '
+            + 'koristeltu joulukuusi.',
+          lahde: 'Julian Herzog (Website), Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Stockholm (15103231170).jpg',
+          selite: 'Rantabulevardi syyskuun iltapäivänä: oikealla nousee '
+            + 'pitkä rivi 1800-luvun lopun kivitaloja tornipäätteineen '
+            + 'ja vihreine kuparikattoineen, ja niiden edessä kulkee '
+            + 'puurivi ja leveä kivilaituri. Laituriin on kiinnitetty '
+            + 'vanhoja puuveneitä ja purjeveneitä mastoineen.',
+          lahde: 'Magnus Johansson, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
