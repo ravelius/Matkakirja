@@ -2029,6 +2029,28 @@ export class UI {
     }
   }
 
+  /**
+   * Lue lisää -arkin leveys PIKSELEINÄ mitatusta näkymästä, samasta
+   * syystä kuin mitoitaNahtavyysDialogi: WKWebView:n jämähtänyt
+   * viewportti voi jättää CSS:n min-width-ehdon laukeamatta, jolloin
+   * artikkeli jäi iPadilla puhelimen 620 pikselin kaistaksi
+   * (omistajan kaappaus 18.8.2026, Schönbrunn). Sama mitta ja raja
+   * kuin CSS:ssä (min(92 %, 860 px) 700 pikselistä alkaen); kapealla
+   * ruudulla inline-mitat tyhjennetään ja CSS hoitaa asian ennallaan.
+   * Myös max-width kirjoitetaan, koska .dialog- ja .wiki-card-
+   * perussääntöjen 620 pikselin katto jäisi muuten voimaan.
+   */
+  mitoitaWikiDialogi() {
+    const dialogi = this.wikiDialog;
+    if (!dialogi) return;
+    const mitta = this.mittaaNakyma() || 0;
+    const px = mitta >= 700 ? `${Math.min(Math.round(mitta * 0.92), 860)}px` : '';
+    dialogi.style.width = px;
+    dialogi.style.maxWidth = px;
+    const kortti = dialogi.querySelector('.wiki-card');
+    if (kortti) kortti.style.maxWidth = px;
+  }
+
   /** Asettelu uusiksi oikealla mitalla. Kutsutaan vain kun mitta on kelvollinen. */
   elvytaNakyma() {
     this.nakymaElvytyksia = (this.nakymaElvytyksia ?? 0) + 1;
@@ -2050,6 +2072,9 @@ export class UI {
     // Avoin nähtävyysjuttu mitoitetaan uusiksi samasta syystä kuin
     // lehti alla: vanhentunut viewportti oli voinut kaventaa sen.
     if (document.getElementById('nahtavyys-dialog')?.open) mitoitaNahtavyysDialogi(this);
+    // Sama huolto Lue lisää -arkille (omistajan kaappaus 18.8.2026:
+    // wiki-artikkeli kapeana kaistana iPadilla).
+    if (this.wikiDialog?.open) this.mitoitaWikiDialogi();
     if (!this.arrivalDialog?.open) return;
     // Avoinna oleva lehti sivutetaan uudelleen: kortin leveys on nyt
     // oikea, joten palstat, kohdekartta ja käyrät piirtyvät sen mukaan.
@@ -7699,6 +7724,9 @@ export class UI {
       this.wikiSource.textContent = '';
     }
     if (!this.wikiDialog.open) this.wikiDialog.showModal();
+    // Leveys pikseleinä heti avattaessa — jumiutunut viewportti ei
+    // saa kaventaa artikkelia puhelinpalstaksi (ks. mitoitaWikiDialogi).
+    this.mitoitaWikiDialogi();
     this.nollaaDialoginVieritys(this.wikiDialog);
     /*
      * Kaiutin artikkelin ylälaitaan. Teksti valmistuu vasta

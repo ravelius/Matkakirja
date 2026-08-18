@@ -2025,6 +2025,44 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    Schönbrunn: {
+      aika: '1696–1780',
+      teksti: 'Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi '
+          + 'haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard '
+          + 'Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, '
+          + 'mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian '
+          + 'aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun '
+          + 'puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441.'
+        + '\n\n'
+        + 'Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli '
+          + 'puutarhassa eläintarhansa, joka toimii yhä — se on maailman '
+          + 'vanhin. Kymmenen vuotta myöhemmin palatsissa soitti '
+          + 'keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, '
+          + 'jonka taidot Maria Teresia pani kokeeseen peittämällä '
+          + 'koskettimet kankaalla. Napoleonkin majoittui palatsiin '
+          + 'sotaretkillään kahdesti, vuosina 1805 ja 1809.'
+        + '\n\n'
+        + 'Puutarhan perällä mäen laella seisoo Gloriette-paviljonki, joka '
+          + 'rakennettiin 1775 juhlistamaan Habsburgien mahtia — sen luota '
+          + 'avautuu näkymä palatsin yli koko kaupunkiin. Pommitukset '
+          + 'vaurioittivat palatsia pahoin 1945, mutta se korjattiin, ja '
+          + 'vuonna 1996 Schönbrunn puutarhoineen otettiin Unescon '
+          + 'maailmanperintöluetteloon.',
+      kuvat: [
+        {
+          tiedosto: 'Schloss Schönbrunn Wien 2014 (Zuschnitt 2).jpg',
+          selite: 'Kesäpalatsi ja sen kuviopuutarhat Gloriette-mäeltä '
+            + 'nähtynä, taustalla kaupunki.',
+          lahde: 'Thomas Wolf (foto-tw.de), Wikimedia Commons (CC BY-SA 3.0 DE)',
+        },
+        {
+          tiedosto: 'Wien - Schönbrunn, Gloriette.JPG',
+          selite: 'Gloriette-paviljonki mäen laella puutarhan perällä.',
+          lahde: 'C.Stadler/Bwag, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   budapest: {
     Kalastajanlinnake: {
