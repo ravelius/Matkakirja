@@ -105,14 +105,37 @@ vaadi('peli käynnistyy niputetussa versiossa', tila.peli === true, JSON.stringi
 vaadi('alanappirivi rakentuu', tila.rivi === 1 && tila.monitoimi === 1, JSON.stringify(tila));
 vaadi('pöllönappi on paikallaan', tila.pollo === 1, JSON.stringify(tila));
 
-// Pöllö on nukkuva (osoitetta ei ole asetettu repossa) — ei virhettä.
-const nukkuu = await sivu.evaluate(async () => {
+/*
+ * PÖLLÖNAPIN NAPAUTUS AVAA PANEELIN.
+ *
+ * Ennen tässä vaadittiin nimenomaan "Pöllö ei ole vielä hereillä"
+ * -tilaa. Se oli oikein niin kauan kuin js/packs/pollo-asetukset.js oli
+ * tyhjä, mutta omistaja otti välityspalvelimen käyttöön ja kirjoitti
+ * osoitteen repoon — sen jälkeen paneeli avautuu aina tervehdykseen,
+ * eikä nukkuvaa tilaa voi enää syntyä. Tarkistus jäi siis vaatimaan
+ * tilaa, jota pelissä ei ole: FAIL kertoi savukkeen vanhentumisesta,
+ * ei pelin viasta.
+ *
+ * Nyt vaaditaan se, mikä tässä savukkeessa on oikeasti tärkeää:
+ * niputetussa versiossa pöllöpaneeli AUKEAA ja saa sisältöä. Kumpikin
+ * kelpaa — tervehdys (osoite asetettu) tai nukkuva tila (osoite
+ * tyhjä) — koska molemmat todistavat, että pollo.js:n koodi elää
+ * yhdessä tiedostossa. Verkkoon ei mennä kummassakaan tapauksessa:
+ * savuke katkaisee ulkoiset osoitteet, eikä pelkkä avaus lähetä
+ * kysymystä.
+ */
+const paneeli = await sivu.evaluate(async () => {
   document.querySelector('.pollo-nappi')?.click();
   await new Promise((r) => setTimeout(r, 600));
-  return document.querySelector('.pollo-nukkuu-otsikko')?.textContent ?? '';
+  const nukkuu = document.querySelector('.pollo-nukkuu-otsikko')?.textContent ?? '';
+  const tervehdys = document.querySelector('.pollo-virta .pollo-viesti')?.textContent ?? '';
+  return {
+    auki: document.querySelectorAll('.pollo-paneeli:not([hidden])').length,
+    teksti: (nukkuu || tervehdys).slice(0, 80),
+  };
 });
-vaadi('pöllö näyttää hereillä-tilan ilman osoitetta', /ei ole vielä hereillä/.test(nukkuu),
-  nukkuu || '(tyhjä)');
+vaadi('pöllöpaneeli aukeaa napautuksesta', paneeli.auki === 1 && paneeli.teksti.length > 0,
+  JSON.stringify(paneeli));
 
 vaadi('ei virheitä koko ajon aikana', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 

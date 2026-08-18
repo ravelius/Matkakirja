@@ -20,19 +20,28 @@
  * jottei se osu päällekkäin samasta pisteiden lisäyksestä syntyneen
  * linssilöydön kuplan kanssa.
  *
- * AVATARIT: tools/generoi-tietaja-avatarit.mjs tuottaa jokaiselle
- * tasolle pöllömuotokuvan nimellä `assets/tietaja/taso-NN.jpg`, jossa
- * NN on tämän taulukon `taso` kaksinumeroisena. Kuvia ei vielä käytetä
- * missään; kun ne otetaan käyttöön, polku johdetaan tasonumerosta eikä
- * uutta kenttää tarvita. Sama työkalu tekee myös Viisaan Pöllön oman
- * muotokuvan (avain `viisas-pollo`), jonka aarteenpaljastus näyttää
- * (js/pollo.js POLLO_AARRE.kuva).
+ * AVATARIT: jokaisella tasolla on pöllömuotokuva nimellä
+ * `assets/tietaja/taso-NN.jpg`, jossa NN on tämän taulukon `taso`
+ * kaksinumeroisena. Polku JOHDETAAN tasonumerosta (tietajaAvatar), eikä
+ * taulukossa ole kuvakenttää: yksi luku ei voi mennä eri tahtiin
+ * tiedostonimen kanssa. Kuvat näkyvät kolmessa paikassa — matkalaukun
+ * tietäjärivin pyöreä kuvake, tasonnousun onnittelukupla ja tasogallerian
+ * ruudukko (js/tietajagalleria.js). Sama tyylikääre myös Viisaan Pöllön
+ * omassa muotokuvassa (assets/tietaja/viisas-pollo.jpg), jonka
+ * aarteenpaljastus näyttää (js/pollo.js POLLO_AARRE.kuva) — mutta eri
+ * laji: emo on suuri huuhkaja, tasoavatarit lehtopöllöjä.
+ *
+ * VÄRSSYT: jokaisella tasolla on kalevalamittainen kaksisäkeinen värssy
+ * (päätoimittajan kaanonteksti, omistaja hyväksyi 18.8.2026). Säkeet
+ * erottaa kauttaviiva, ja näyttäjä jakaa ne kahdelle riville
+ * (varssynSakeet). Teksti on runoa eikä ohjetta: sitä ei muuteta ilman
+ * päätoimittajaa.
  *
  * OMA MODUULI: taulukko on sisältöä (päätoimittajan päätös
  * 18.8.2026), ja sekä js/game.js (nousun tunnistus) että js/ui.js
  * (matkalaukun nimikerivi) lukevat sitä. Ei riippuvuuksia — moduuli on
- * pelkkää dataa ja kolme funktiota, joten se voi olla niputuslistalla
- * ennen kumpaakin lukijaansa.
+ * pelkkää dataa ja muutama pieni funktio, joten se voi olla
+ * niputuslistalla ennen kaikkia lukijoitaan.
  */
 
 /**
@@ -49,6 +58,7 @@ export const TIETAJATASOT = [
     taso: 1,
     nimi: 'Untuvikko',
     raja: 0,
+    varssy: 'Pieni on pesästä lähtö, / suuri siitä tie alkavi.',
     onnittelu: 'Matka alkaa, Untuvikko! Isoisä kirjoitti ensimmäiselle sivulleen, '
       + 'että jokainen maailmanmatka alkaa yhdestä ainoasta askeleesta.',
   },
@@ -56,6 +66,7 @@ export const TIETAJATASOT = [
     taso: 2,
     nimi: 'Utelias kulkija',
     raja: 40,
+    varssy: 'Kysyvä ei tiellä eksy, / utelias uran löytää.',
     onnittelu: 'Sinusta on tullut Utelias kulkija! Kysymykset ovat matkan paras '
       + 'eväs — isoisäsi täytti niillä kokonaisen vihkon ennen lähtöä.',
   },
@@ -63,6 +74,7 @@ export const TIETAJATASOT = [
     taso: 3,
     nimi: 'Kartanlukija',
     raja: 100,
+    varssy: 'Monta on polkua maalla, / kartta kaikki kertoelee.',
     onnittelu: 'Sinusta on tullut Kartanlukija! Isoisäsi hymyilisi — kartta '
       + 'aukeaa sille, joka on oppinut katsomaan.',
   },
@@ -70,6 +82,7 @@ export const TIETAJATASOT = [
     taso: 4,
     nimi: 'Maailmanmatkaaja',
     raja: 200,
+    varssy: 'Matka kulkijansa mittaa, / maailma sylin avavi.',
     onnittelu: 'Sinusta on tullut Maailmanmatkaaja! Sen nimen isoisäsi kirjoitti '
       + 'passiinsa ammatiksi — nyt se on sinunkin.',
   },
@@ -77,6 +90,7 @@ export const TIETAJATASOT = [
     taso: 5,
     nimi: 'Löytöretkeilijä',
     raja: 350,
+    varssy: 'Rohkea rajoille astuu, / löytäjälle maat aukeevat.',
     onnittelu: 'Sinusta on tullut Löytöretkeilijä! Aarni olisi kohottanut '
       + 'hattuaan: löytäminen alkaa siitä, että uskaltaa lähteä.',
   },
@@ -84,6 +98,7 @@ export const TIETAJATASOT = [
     taso: 6,
     nimi: 'Tarinankerääjä',
     raja: 550,
+    varssy: 'Sanat saappaissa kulkevat, / tarinat tulevat kotiin.',
     onnittelu: 'Sinusta on tullut Tarinankerääjä! Isoisä sanoi, että matkalta '
       + 'tuodaan kotiin vain kahta lajia tavaraa: pölyä saappaissa ja tarinoita.',
   },
@@ -91,6 +106,7 @@ export const TIETAJATASOT = [
     taso: 7,
     nimi: 'Aarteentuntija',
     raja: 800,
+    varssy: 'Kiilto ei kultaa todista, / tuntija todeksi tietää.',
     onnittelu: 'Sinusta on tullut Aarteentuntija! Nyt erotat kiillosta sen, mikä '
       + 'on oikeasti unohdettua — juuri sitä Aarnin luettelo vaatii.',
   },
@@ -98,6 +114,7 @@ export const TIETAJATASOT = [
     taso: 8,
     nimi: 'Maailmantuntija',
     raja: 1200,
+    varssy: 'Nimet muuttuvat paikoiksi, / paikat muistoiksi muuttuvat.',
     onnittelu: 'Sinusta on tullut Maailmantuntija! Maailma ei ole enää nimiä '
       + 'kartalla vaan paikkoja, joissa olet ollut.',
   },
@@ -105,20 +122,66 @@ export const TIETAJATASOT = [
     taso: 9,
     nimi: 'Isoisän perillinen',
     raja: 1700,
+    varssy: 'Kirja kädestä käteen käy, / tieto suvussa syvenee.',
     onnittelu: 'Sinusta on tullut Isoisän perillinen! Vuoden 1873 matkapäiväkirja '
       + 'on nyt yhtä paljon sinun kuin hänen.',
   },
   {
     taso: 10,
-    nimi: 'Suurtietäjä',
+    /*
+     * TIETÄJÄ IÄNIKUINEN (päätoimittajan kaanonteksti, omistaja
+     * hyväksyi 18.8.2026). Entinen "Suurtietäjä" oli oma keksintömme;
+     * tämä on Kalevalan oma sanapari ja istuu kalevalaiseen kehykseen,
+     * jossa Viisas Pöllö on tietäjien matkakumppani.
+     */
+    nimi: 'Tietäjä iänikuinen',
     raja: 2400,
-    onnittelu: 'Sinusta on tullut Suurtietäjä! Aarni, isoisäsi ja sinä — kolme '
+    varssy: 'Sanat saatu, synnyt tietty, / tie vie tietäjän kotihin.',
+    onnittelu: 'Sinusta on tullut Tietäjä iänikuinen! Aarni, isoisäsi ja sinä — kolme '
       + 'nimeä samassa luettelossa. Kauemmas tämä matka ei vie.',
   },
 ];
 
 /** Pisteiden näyttömuoto: "145 tp". Yksi paikka, jottei lyhenne pääse eroon. */
 export const TIETAJAPISTE_LYHENNE = 'tp';
+
+/**
+ * Tason avatarin polku. Johdetaan tasonumerosta, jotta kuvatiedosto ja
+ * taulukko eivät voi mennä eri tahtiin. Polku on repon juuresta, koska
+ * peli tarjoillaan aina juuresta (index.html, sw.js SHELL).
+ */
+export function tietajaAvatar(taso) {
+  const numero = Number.isFinite(taso?.taso) ? taso.taso : Number(taso) || 1;
+  return `assets/tietaja/taso-${String(numero).padStart(2, '0')}.jpg`;
+}
+
+/**
+ * Värssyn kaksi säettä erillisinä riveinä. Kaanonteksti on yhtenä
+ * merkkijonona kauttaviivalla erotettuna (helpompi lukea ja tarkistaa
+ * yhdeltä riviltä), mutta näytöllä se on aina kaksi riviä — juuri se
+ * tekee siitä värssyn eikä lauseen.
+ */
+export function varssynSakeet(varssy) {
+  return String(varssy ?? '').split('/').map((s) => s.trim()).filter(Boolean);
+}
+
+/**
+ * Kuinka pitkällä nykyisen tason sisällä ollaan, 0…1.
+ *
+ * Palkki täyttyy NYKYISEN tason alusta seuraavan tason rajaan ja
+ * nollautuu noustessa, eli se mittaa matkaa seuraavaan nimikkeeseen —
+ * ei koko matkaa ylimmälle tasolle. Ylimmällä tasolla ei ole seuraavaa
+ * rajaa, joten osuus on täysi 1 ja näyttäjä piilottaa palkin.
+ */
+export function tietajatasonOsuus(pisteet) {
+  const luku = Number.isFinite(pisteet) ? pisteet : 0;
+  const nyt = tietajataso(luku);
+  const seuraava = seuraavaTietajataso(luku);
+  if (!seuraava) return 1;
+  const matka = seuraava.raja - nyt.raja;
+  if (matka <= 0) return 1;
+  return Math.min(1, Math.max(0, (luku - nyt.raja) / matka));
+}
 
 /**
  * Pelaajan nykyinen taso pisteillä. Palauttaa aina tason — myös

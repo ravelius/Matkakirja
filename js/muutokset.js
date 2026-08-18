@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 863, teksti: 'Tietäjäavatarit, värssyt ja tasogalleria' },
   { v: 862, teksti: 'Kohdekartan ohje kartan päälle opasteeksi' },
   { v: 861, teksti: 'Palautedialogi suoraan ehdotuslomakkeeksi' },
   { v: 860, teksti: 'Työhuoneen tilastot peliin, erillissivusto pois' },
