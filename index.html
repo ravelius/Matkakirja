@@ -155,36 +155,41 @@
             <span class="viiva-ikoni"><svg viewBox="0 0 24 24"><path d="M4.5 7h15M4.5 12h15M4.5 17h15"/></svg></span>
           </button>
           <!--
-            PÄÄVALIKKO ILMAN ALIVALIKKOJA (omistajan toive 5.8.2026:
-            "hampurilaisesta voisi suoraan avautua kaikki varusteet sekä
-            äänisäädöt nappeina ja ihan alalla olisi säännöt ja uusi peli
-            napit keskitettynä — näin päästäisiin kaikkiin suoraan käsiksi
-            ilman lisäklikkailuja").
+            PÄÄVALIKKO ON PELIN YMPÄRYKSIÄ, EI PELISISÄLTÖÄ (omistajan
+            päätös 18.8.2026): ylhäältä alas äänet, kaksi leveää
+            tekstinappia, kehittäjän työhuone ja pohjarivi. Kaikki muu
+            pelisisältö on poistettu.
 
-            Varusteet ja Äänet olivat ennen nappeja, jotka avasivat oman
-            paneelinsa valikon sisällä. Kaksi napautusta yhden asian
-            takana on paljon, kun asioita on kaikkiaan kahdeksan — ja
-            paneelit avautuivat päällekkäin valikon päälle, mikä vaati
-            oman poikkeussääntönsä sulkulogiikkaan (js/main.js).
+            VARUSTEET SIIRTYIVÄT MATKALAUKKUUN. Linssivalitsin
+            (#linssi-kotelo) oli tässä 5.8.2026 alkaen, mutta laukku on
+            paikka, jossa matkan tavarat ovat — ja kaksi paikkaa samalle
+            kytkimelle on yksi liikaa. Kotelo asuu nyt
+            #passport-dialogissa; tunnisteet ovat entiset, joten
+            js/ui.js kytkee sen kuten ennenkin.
 
-            Nyt molemmat ovat auki valmiiksi otsikkonsa alla, ja valikko
-            on yksi pystysuora luettelo. Kotelot (.linssi-kotelo,
-            .kertoja-kotelo) jäivät, koska muu koodi tuntee ne — mutta
-            niissä ei ole enää avausnappia.
+            Kotelo (.kertoja-kotelo) jäi, koska muu koodi tuntee sen —
+            mutta siinä ei ole enää avausnappia, vaan rivit ovat auki
+            valmiiksi otsikkonsa alla.
           -->
           <div id="paavalikko" class="paavalikko" hidden>
-            <!-- Varustekotelo on piilossa, kunnes pelaaja löytää
-                 ensimmäisen varusteen: löytämätöntä ei näytetä edes
-                 harmaana, tai valikko kertoisi mitä on vielä hakematta. -->
-            <div id="linssi-kotelo" class="linssi-kotelo" hidden>
-              <p class="valikko-otsikko">Varusteet</p>
-              <div id="linssi-valikko" class="linssi-valikko"></div>
-            </div>
             <!-- Kertojan äänet: mykistys / ei kertojaa / lyhyt / pitkä.
                  Rivit rakennetaan js/main.js:ssä. -->
             <div class="kertoja-kotelo">
               <p class="valikko-otsikko">Äänet</p>
               <div id="kertoja-valikko" class="kertoja-valikko"></div>
+            </div>
+            <!-- Uusi peli ja ehdotuskanava LEVEINÄ TEKSTINAPPEINA
+                 allekkain (omistajan päätös 18.8.2026): v854:n kapeat
+                 kuvakeleveät "uusi"/"ehdota" olivat liian pienet
+                 kohteet, ja teksti kertoo mitä nappi tekee ilman
+                 arvailua. Rivi saa korostua: nämä ovat valikon ainoat
+                 komennot. -->
+            <div class="valikko-alarivi">
+              <button id="newgame-btn" class="ghost valikko-tekstinappi" type="button"
+                      title="Uusi peli" aria-label="Uusi peli">uusi peli</button>
+              <button id="palaute-kulma" class="palaute-kulma valikko-tekstinappi" type="button"
+                      aria-label="Ehdota sisältöä tai lähetä palautetta tästä kohdasta"
+                      title="Ehdota sisältöä tai lähetä palautetta tästä kohdasta">ehdota sisältöä</button>
             </div>
             <!-- TYÖHUONE (omistajan tilaus 15.8.2026: "lukijaääni myös
                  kehittäjän alle. tee tyyliin sopivammat painikkeet
@@ -216,16 +221,6 @@
                 <span>Lukijaääni</span>
               </button>
               <div id="tyohuone-palkit" class="tyohuone-palkit"></div>
-            </div>
-            <!-- Uusi peli ja ehdotus/palaute tekstinappeina yhdellä
-                 rivillä (omistajan päätös 18.8.2026: sääntönappi pois,
-                 kuvakkeet tekstiksi "uusi" ja "ehdota"). -->
-            <div class="valikko-alarivi">
-              <button id="newgame-btn" class="ghost valikko-tekstinappi" type="button"
-                      title="Uusi peli" aria-label="Uusi peli">uusi</button>
-              <button id="palaute-kulma" class="palaute-kulma valikko-tekstinappi" type="button"
-                      aria-label="Ehdota tai lähetä palautetta tästä kohdasta"
-                      title="Ehdota tai lähetä palautetta tästä kohdasta">ehdota</button>
             </div>
             <!--
               VALIKON POHJARIVI (omistajan päätös 12.8.2026): vasemmalla
@@ -594,11 +589,20 @@
   </dialog>
 
   <!-- Isoisän matkalaukku: sisällä passi leimoineen ja matkan tavarat -->
-  <dialog id="passport-dialog" class="dialog">
+  <dialog id="passport-dialog" class="dialog" aria-label="Isoisän matkalaukku">
    <div class="dialog-card passport-card" tabindex="-1" autofocus>
-    <h2>Isoisän matkalaukku</h2>
-    <p class="muted">Laukku kulkee mukana koko matkan: sisällä on Aarnin
-      luettelo ja matkalta kertyneet tavarat.</p>
+    <!--
+      OTSIKKO JA ALKUTEKSTI POISTETTU (omistajan tilaus 18.8.2026,
+      kuvakaappaus iPhonen pystyasennosta): laukku avautuu ylärivin
+      pillerin alta kiinni palkkiin, joten kukaan ei ole epätietoinen
+      siitä, mikä ikkuna on auki — ja johdantokappale toisti sen, minkä
+      osastojen otsikot kertovat. Vapautunut tila menee matkan uusille
+      riveille (tietäjänimike ja kolme laskuria).
+
+      Saavutettava nimi ei kadonnut: dialogin avaava nappi
+      (#turn-pill) kertoo aria-labelissaan, että se avaa isoisän
+      matkalaukun.
+    -->
     <p class="passport-count">Matka</p>
     <div id="passport-progress" class="passport-finds"></div>
     <!--
@@ -620,6 +624,29 @@
     <div id="passport-aarteet" class="laukku-aarteet"></div>
     <p class="passport-count">Tavarat</p>
     <div id="passport-finds" class="passport-finds"></div>
+    <!--
+      VARUSTEET ELI LINSSIVALITSIN (omistajan päätös 18.8.2026:
+      "matkalaukku on jatkossa AINOA paikka, josta linssit kytketään
+      päälle ja pois").
+
+      Kotelo oli 5.8.2026 alkaen hampurilaisvalikossa. Valikko on pelin
+      ympäryksiä — versio, äänet, uusi peli — ja linssi on matkan
+      tavara: se löytyy laatan alta ja se kannetaan laukussa. Nyt
+      kytkin on samassa paikassa kuin esine.
+
+      TUNNISTEET OVAT ENTISET (#linssi-kotelo, #linssi-valikko), joten
+      js/ui.js rakentaa ja tahdistaa valitsimen täsmälleen kuten ennen:
+      kuvakeruudukko, valitun linssin nimi ja yhden rivin kuvaus — ja
+      linssittömänä "Kartta sellaisena kuin isoisä sen piirsi."
+
+      Kotelo on piilossa, kunnes pelaaja löytää ensimmäisen varusteen:
+      löytämätöntä ei näytetä edes harmaana, tai laukku kertoisi mitä
+      on vielä hakematta.
+    -->
+    <div id="linssi-kotelo" class="linssi-kotelo" hidden>
+      <p class="passport-count">Varusteet</p>
+      <div id="linssi-valikko" class="linssi-valikko"></div>
+    </div>
     <!-- Nimikilpi siirtyi laukusta ylärivin logoon (omistajan toive
          5.8.2026): logoa napauttamalla se avautuu isompana, ja saman
          ikkunan alla ovat tekijätiedot ja lähdeluettelo. -->
@@ -804,7 +831,7 @@
         vuoro päättyy, ja seuraavalla vuorolla samassa kaupungissa saa uuden kysymyksen.</p>
       <p><b>Vaikeat kysymykset.</b> Vaikeaa kysymystä ei enää valita erikseen
         aarrekaupungissa: se on varattu <b>tietoporteille</b>, joista maan oma
-        kartta aukeaa. Oikeasta vastauksesta saa 25 kokemuspistettä.</p>
+        kartta aukeaa. Oikeasta vastauksesta saa 25 tietäjäpistettä.</p>
       <p><b>Aikaraja.</b> Vastausaikaa on 45 sekuntia. Tiimalasi valuu kysymyksen vieressä,
         ja jos hiekka loppuu, vastaus lasketaan vääräksi ja vuoro päättyy.</p>
       <p><b>Rahan käyttö.</b> 40 puntaa ostaa sanallisen vihjeen, 80 puntaa poistaa
@@ -827,15 +854,20 @@
       <p><b>Kaksi ääntä.</b> Tietoruutu kertoo siitä paikasta, jossa vuorossa oleva
         pelaaja on, ja siinä puhuu vuorotellen kaksi ääntä: <b>isoisän päiväkirja</b>
         vuodelta 1873 ja <b>nuoren herran havainto</b> tästä päivästä.</p>
-      <p><b>Kokemuspisteet ja tieto.</b> Pisteitä kertyy matkasta eikä onnesta:
+      <p><b>Tietäjäpisteet ja tieto.</b> Pisteitä kertyy matkasta eikä onnesta:
         uudesta kaupungista 10, uudesta laudasta 50, vaikeasta
-        kysymyksestä 25 ja jokaisesta unohdetusta aarteesta 100. Yläpalkin tietoprosentti kertoo,
+        kysymyksestä 25 ja jokaisesta unohdetusta aarteesta 100. Tietoprosentti kertoo,
         kuinka moneen kysymykseen olet vastannut oikein — kaksintaistelut mukaan
-        lukien. Rahat, pisteet ja sijainti näkyvät yläpalkissa; tavarat matkalaukussa.</p>
+        lukien. Rahat ja päivämäärä näkyvät yläpalkissa; pisteet, tiedot ja tavarat
+        matkalaukussa.</p>
+      <p><b>Tietäjätasot.</b> Pisteet nostavat nimikettä: Untuvikosta (0 tp) Uteliaan
+        kulkijan (40 tp) ja Kartanlukijan (100 tp) kautta aina Suurtietäjään (2400 tp).
+        Nousu ei tuo muuta kuin uuden nimikkeen — pöllö onnittelee ja nimike näkyy
+        matkalaukussa.</p>
       <p><b>Matkalaukku.</b> Yläpalkin kukkaropilleriä napauttamalla aukeaa isoisän matkalaukku.
-        Sisällä on vihreä passi, johon jää leima jokaisesta laudasta — leimat
-        säilyvät myös uusiin peleihin — sekä matkan tavarat: unohdettu aarre,
-        hevosenkengät ja jalokivet.</p>
+        Sisällä ovat matkan luvut, Aarnin luettelo, matkalta kertyneet tavarat ja
+        <b>varusteet</b> — laukku on ainoa paikka, josta linssit kytketään kartalle
+        päälle ja pois.</p>
       <p><b>Päivitys.</b> Yläpalkin <b>Päivitä</b> hakee uusimman version pelistä —
         kesken oleva peli säilyy. Versio: <span id="app-version">–</span>.</p>
       <p class="muted"><b>Kotisääntö:</b> jos pelaaja on jumissa (esim. Sansibarissa ilman

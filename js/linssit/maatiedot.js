@@ -25,7 +25,7 @@
  * olisi kahden tilan sekasikiö.
  *
  * Löytyminen noudattaa varusteiden yleistä mallia: manner: null
- * rekisterissä tarkoittaa, että linssi ansaitaan kokemuspisteillä
+ * rekisterissä tarkoittaa, että linssi ansaitaan tietäjäpisteillä
  * (js/linssit/omistus.js, LINSSIKYNNYKSET).
  */
 

@@ -378,11 +378,14 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 /*
- * Molemmat paneelit ovat nyt valikon sisällä eivätkä sen päällä: pois
- * absoluuttinen asemointi, oma tausta ja oma reunus. Ne olivat
+ * Äänipaneeli on nyt valikon sisällä eikä sen päällä: pois
+ * absoluuttinen asemointi, oma tausta ja oma reunus. Se oli
  * pudotusvalikon kuori, ja pudotusvalikkoa ei enää ole.
+ *
+ * (Sama sääntö koski linssivalitsinta, kunnes se muutti
+ * matkalaukkuun 18.8.2026 — sen vastine on nyt
+ * `.passport-card .linssi-valikko`.)
  */
-.paavalikko .linssi-valikko,
 .paavalikko .kertoja-valikko {
   align-items: center;
   position: static;
@@ -393,20 +396,6 @@ button, .brand, .turn-pill, .fact-card h2 {
   border: 0;
   border-radius: 0;
   box-shadow: none;
-}
-
-/*
- * VARUSTERUUDUKKO NELJÄÄN SARAKKEESEEN.
- *
- * Neljä saraketta on ruudukon oma rytmi, ei nappien määrästä johdettu:
- * varusteita on tulossa yksitoista, joten rivejä tulee lisää mutta
- * sarakemäärä pysyy samana. (`auto-fill` antoi kolme saraketta, ja
- * leveys heilui varusteiden määrän mukana.)
- */
-.paavalikko .linssi-valikko .linssi-liuskat {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.4rem;
 }
 
 /*
@@ -434,24 +423,12 @@ button, .brand, .turn-pill, .fact-card h2 {
  * kanssa valikko kutistui 82 pikseliin ja napit latautuivat päällekkäin.
  * Nappeja on kolme eikä rivin tarvitse rivittyä.
  */
-.paavalikko .kertoja-valikko,
-.paavalikko .valikko-alarivi {
+.paavalikko .kertoja-valikko {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 0.5rem;
 }
-
-/*
- * Ruudut täyttävät sarakkeensa. Ruudukossa `width: auto` venyy jo
- * itsestään, joten tämä ei muuta mitattua leveyttä — se kirjoittaa
- * aikeen näkyviin, koska `.linssi-liuskat button` asettaa `width: auto`
- * eri tarkoituksessa (selitekortin liuskarivi ei ole ruudukko).
- */
-.paavalikko .linssi-valikko .linssi-liuskat button { width: 100%; }
-
-/* Varusteen kuvaus keskitetään kuten otsikot ja napit. */
-.paavalikko .linssi-tiedot { text-align: center; padding-top: 0.5rem; }
 
 /*
  * Nappi on leveämpi kuin korkea (54 × 44). Kolme leveää nappia täyttää
@@ -485,17 +462,24 @@ button, .brand, .turn-pill, .fact-card h2 {
 .paavalikko .kertoja-valikko .tappa { display: none; }
 
 /*
- * Säännöt ja uusi peli alimmaisena: komentoja eivätkä säätimiä, joten
- * ne erotetaan viivalla ja keskitetään omalle rivilleen.
+ * ── VALIKON KOMENNOT: KAKSI LEVEÄÄ TEKSTINAPPIA ──────────────────────
+ *
+ * Omistajan päätös 18.8.2026: "uusi peli" ja sen alla "ehdota
+ * sisältöä", koko rivin levyisinä ja allekkain. v854:n kapeat
+ * kuvakeleveät napit ("uusi", "ehdota") olivat sekä pieni kohde että
+ * arvoituksellinen teksti; leveä nappi kertoo mitä se tekee ja on
+ * sormelle helppo.
+ *
+ * Napit SAAVAT korostua: valikossa ei ole enää muuta pelisisältöä,
+ * joten nämä kaksi ovat sen ainoat komennot.
  */
 .valikko-alarivi {
-  /* Ladelma (flex, space-between, väli) on yhteinen Äänet-rivin kanssa,
-     ks. "VALIKON KAKSI ALINTA RIVIÄ TÄYTTÄVÄT LEVEYDEN". Täällä ovat
-     vain ne mitat, jotka ovat tämän rivin omia. */
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
   align-self: center;
   /* Rivi on koko valikon levyinen, jotta yläpuolen vaakaviiva jatkuu
-   * laidasta laitaan (omistaja 13.8.2026); napit keskittää
-   * justify-content, ei rivin kutistuminen. */
+   * laidasta laitaan (omistaja 13.8.2026). */
   width: 100%;
   margin-top: 0.5rem;
   padding-top: 0.7rem;
@@ -503,33 +487,40 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 .paavalikko .valikko-alarivi button {
-  /* Täsmälleen sama mitta ja tausta kuin Äänet-rivin kuvakenapeilla
-   * (54 × 44) — rivit ovat päällekkäin, ja eri koko näyttäisi
-   * virheeltä (omistaja 13.8.2026). */
-  width: 54px;
-  height: 44px;
-  min-height: 0;
-  padding: 0;
+  /* Koko leveys, sormen mittainen korkeus. Ei kiinteää leveyttä: napin
+   * pituus on valikon pituus, ei sanan. */
+  width: 100%;
+  min-height: 44px;
+  padding: 0.55rem 0.9rem;
   justify-content: center;
   background: rgba(53, 39, 26, 0.55);
   border: 1.2px solid var(--line);
   border-radius: 8px;
 }
 
-.paavalikko .valikko-alarivi .viiva-ikoni svg { width: 26px; height: 26px; }
-
 .paavalikko .valikko-alarivi .valikko-tekstinappi {
-  /* Tekstinapit "uusi" ja "ehdota" (omistaja 18.8.2026): leveys
-   * sisällön mukaan niin että sana mahtuu, korkeus ja tausta samat
-   * kuin Äänet-rivin napeilla. */
-  width: auto;
-  min-width: 54px;
-  padding: 0 1.1rem;
-  border-radius: 8px;
-  font-size: 1.05rem;
+  /* Korostus: kullan sävyinen teksti ja hieman vahvempi kehys kuin
+     äänipainikkeilla — nämä ovat komentoja, ne saavat erottua.
+     Kirjasin on valikon oma eikä käsiala: palautenappi peri
+     `--font-hand`-käsialan ajalta, jolloin se oli pelkkä huutomerkki
+     kartan kulmassa, eikä käsiala kanna kahta sanaa. */
+  color: var(--accent);
+  border-color: var(--accent-dark);
+  font-family: inherit;
+  font-size: 1.02rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.15;
   letter-spacing: 0.04em;
+  /* Täysleveä nappi ei skaalaudu osoittimen alla: kasvava laatikko
+     työntäisi valikkoa. Korostus tehdään taustalla. */
+  transform: none;
+}
+
+.paavalikko .valikko-alarivi .valikko-tekstinappi:hover,
+.paavalikko .valikko-alarivi .valikko-tekstinappi:focus-visible {
+  background: var(--panel-2);
+  color: var(--ink-light);
+  transform: none;
 }
 
 /* Kertojavalikko: nappi näyttää nykyisen tilan kuvakkeen ja avaa alleen
@@ -3184,35 +3175,51 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  * tumma samettitarjotin poistettu, tavarat istuvat suoraan laukun
  * paperilla ja selitteet perivät kortin tekstivärin.
  */
+/*
+ * KOLME TAVARAA RINNAKKAIN (omistajan tilaus 18.8.2026, kuvakaappaus
+ * iPhonen pystyasennosta): kiinteä 108 pikselin ruutu mahtui kapealla
+ * puhelimella vain kahdesti, ja kolmas putosi omalle rivilleen —
+ * laukku venyi pitkäksi juuri kun siihen tuli uusia rivejä.
+ *
+ * Ruudukko eikä kiertyvä flex-rivi: `repeat(3, minmax(0, 1fr))` jakaa
+ * leveyden aina kolmeen yhtä suureen sarakkeeseen, olipa ruutu 320 tai
+ * 520 pikseliä leveä. Silloin tavarat myös latautuvat suoriin
+ * pystyriveihin sen sijaan että viimeinen rivi jäisi vajaaksi.
+ */
 #passport-finds {
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.8rem 1.1rem;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem 0.5rem;
+  align-items: start;
+  justify-items: center;
   padding: 0.4rem 0;
 }
 
 #passport-finds .find {
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.25rem;
   /*
-   * 76 -> 92 px ja pakotettu tavutus. Nimet ovat yhdyssanoja
-   * ("Topografialinssi", "Vesistölinssi"), eikä sanan sisältä löydy
-   * katkaisukohtaa: 76 pikselin ruudussa ne valuivat naapurin päälle ja
-   * selitteet menivät päällekkäin. Mitattu: kolme selitettä sulautui
-   * yhdeksi rimpsuksi.
+   * Ruutu on sarakkeensa levyinen, ei kiinteä. Nimet ovat yhdyssanoja
+   * ("Topografialinssi", "Vesistölinssi") eikä sanan sisältä löydy
+   * katkaisukohtaa, joten pakotettu tavutus (.find-text) on yhä
+   * paikallaan — muuten pitkä nimi valuisi naapurin päälle.
    */
-  width: 108px;
+  width: 100%;
   text-align: center;
   /*
-   * 0,76 -> 0,68 rem. Pisin nimi on "Topografialinssi" eli kuusitoista
-   * merkkiä, ja tässä kirjasimessa merkki on noin 0,6 em: 108 pikseliä
-   * riittää sille yhdellä rivillä vasta tällä koolla. Katkeaminen
-   * keskeltä sanaa ("Maailmanradi / o") näyttää virheeltä, ei taitolta.
+   * 0,68 -> 0,58 rem. Sarake kapeni kolmanneksella, kun rinnakkain
+   * mahtuu kolme; pisin nimi ("Topografialinssi") on kuusitoista
+   * merkkiä ja mahtuu kapeaan sarakkeeseen yhdellä rivillä vasta tällä
+   * koolla — mitattu 390 px:n puhelimella, jossa sarake on ~100 px.
    */
-  font-size: 0.68rem;
+  font-size: 0.58rem;
   line-height: 1.25;
 }
+
+/* Kuva kutistuu sarakkeen mukana: 44 px:n aarrekuvake on kapealla
+   puhelimella leveämpi kuin sen sarake. `height: auto` pitää
+   kuvasuhteen, koska korkeus tulee elementin omasta attribuutista. */
+#passport-finds .find img { max-width: 100%; height: auto; }
 
 #passport-finds .find-text { overflow-wrap: anywhere; }
 
@@ -3224,6 +3231,117 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   text-transform: uppercase;
   color: var(--accent);
 }
+
+/*
+ * ── MATKARIVIN KUVAKE JA TIETÄJÄNIMIKE ───────────────────────────────
+ *
+ * Omistajan tilaus 18.8.2026: tietäjäpisteiden riville pöllökuvake
+ * (viivakuvaketyyli kuten muut), nimike aina näkyviin pisteiden
+ * yhteydessä ja seuraavan tason raja hienovaraisesti.
+ *
+ * Kuvake on rivin ensimmäinen solu, ei tekstin sisällä: silloin
+ * selitteet alkavat samasta kohdasta riippumatta siitä, onko rivillä
+ * kuvaa. Kuvattomien rivien sisennys tulee siitä, että ne alkavat
+ * suoraan tekstillä — matkalohkossa on vain yksi kuvake, eikä sarake
+ * saa varata tilaa tyhjänä muilta.
+ */
+.find-ikoni {
+  display: inline-flex;
+  flex: 0 0 auto;
+  color: var(--accent);
+}
+
+.find-ikoni svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Silmäterät ovat ainoa täytetty muoto — sama sopimus kuin muilla
+   viivakuvakkeilla (js/ui-apurit.js VIIVA_IKONIT). */
+.find-ikoni svg .taytto { fill: currentColor; stroke: none; }
+
+/* Seuraava taso on vihje eikä mittari: pienempi, himmeämpi ja
+   oikeaan reunaan pisteiden alle. */
+.tietaja-seuraava {
+  margin: -0.05rem 0 0.2rem;
+  text-align: right;
+  font-size: 0.68rem;
+  font-style: italic;
+  color: rgba(70, 51, 31, 0.6);
+}
+
+/*
+ * ── VARUSTEET MATKALAUKUSSA ──────────────────────────────────────────
+ *
+ * Valitsin muutti hampurilaisvalikosta laukkuun 18.8.2026. Paneeli oli
+ * valikossa pudotusvalikon kuori (absoluuttinen asemointi, oma tumma
+ * tausta, varjo); laukussa se on osasto muiden joukossa, joten kuori
+ * puretaan ja ruudukko istuu suoraan laukun paperille.
+ *
+ * Ruudut ovat noin 58 pikselin neliöitä (`auto-fill`), eivät
+ * sarakkeeseen venytettyjä: laukku on tavaroineen paljon leveämpi kuin
+ * entinen 144 pikselin pudotusvalikko, ja kolmeen sarakkeeseen jaettuna
+ * kuvakenapista tuli 185 pikselin lautanen. 58 px on sama mitta kuin
+ * valikossa (59 px) eli reilusti kosketuskohteen minimin yli, ja
+ * sarakemäärä kasvaa itsestään ruudun mukana.
+ */
+.passport-card .linssi-kotelo { position: static; }
+
+.passport-card .linssi-valikko {
+  position: static;
+  width: auto;
+  max-width: none;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.passport-card .linssi-valikko .linssi-liuskat {
+  grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
+  justify-content: start;
+  gap: 0.45rem;
+  padding-bottom: 0.6rem;
+  /* Laukku on vaaleaa pergamenttia: erotinviiva on mustetta, ei
+     tumman paneelin vaaleaa reunaa. */
+  border-bottom-color: rgba(70, 51, 31, 0.28);
+}
+
+/*
+ * Ruudut ovat laukun materiaalia: vaalea paperi ohuella mustereunalla.
+ * Valikon tummat sävyt (rgba(53, 39, 26, .55)) katosivat pergamenttia
+ * vasten lähes mustiksi läiskiksi.
+ */
+.passport-card .linssi-valikko .linssi-liuskat button {
+  background: rgba(252, 241, 212, 0.5);
+  border-color: rgba(70, 51, 31, 0.35);
+  color: #46331f;
+}
+
+.passport-card .linssi-valikko .linssi-liuskat button:hover {
+  background: rgba(252, 241, 212, 0.9);
+  color: #46331f;
+}
+
+/* Valittu varuste erottuu tummemmalla musteella ja täydemmällä
+   paperilla — kulta katoaisi vaalealle pohjalle. */
+.passport-card .linssi-valikko .linssi-liuskat button.paalla {
+  background: rgba(198, 158, 82, 0.3);
+  border-color: rgba(70, 51, 31, 0.75);
+  color: #46331f;
+}
+
+/* Valitun varusteen nimi ja kuvaus liuskojen alla: keskitetty kuten
+   tavaroiden selitteet, ja laukun oma muste. */
+.passport-card .linssi-tiedot { padding-top: 0.6rem; text-align: center; }
+.passport-card .linssi-nimi { color: #46331f; }
+.passport-card .linssi-lyhyt { color: rgba(70, 51, 31, 0.85); }
 
 
 /*
@@ -6448,7 +6566,14 @@ body.katselu #newgame-btn { display: none; }
 }
 
 .versio-paivitys .viiva-ikoni { display: inline-flex; }
-.versio-paivitys .viiva-ikoni svg { width: 1em; height: 1em; }
+/*
+ * Kuvake hieman tekstiä suuremmaksi (omistajan päätös 18.8.2026).
+ * Nappi on pelkkä kuvake, ja tekstinkorkuisena (1 em ≈ 11 px) se oli
+ * pienin kohde koko valikossa. 1,45 em ≈ 16 px kasvattaa kuvan mutta
+ * jättää napin yhä pohjarivin mittaiseksi — se ei saa kilpailla
+ * valikon komentonappien kanssa.
+ */
+.versio-paivitys .viiva-ikoni svg { width: 1.45em; height: 1.45em; }
 
 /* Haun aikana kuvake pyörii — pelkän kuvakkeen napissa ei ole
    tekstiriviä, joka kertoisi "Päivitetään…". */

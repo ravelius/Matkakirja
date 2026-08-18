@@ -4,7 +4,7 @@
  *
  * Kaikki linssien palkitsemislogiikka on tässä yhdessä tiedostossa,
  * jotta js/game.js:ään tulee vain kutsuja. Peli tuntee linsseistä siis
- * täsmälleen kaksi asiaa: laattatyypin "linssi" ja kokemuspisterajan.
+ * täsmälleen kaksi asiaa: laattatyypin "linssi" ja tietäjäpisterajan.
  *
  * OMISTUS ON KAHDEN VARASTON UNIONI, ja se on päätös eikä sivuseuraus:
  *
@@ -30,12 +30,12 @@ import { LINSSIT } from './rekisteri.js';
 export const LEIMA_ETULIITE = 'linssi:';
 
 /*
- * Kokemuspisteiden löytöreitti: neljä kynnystä, neljä linssiä, jotka
+ * Tietäjäpisteiden löytöreitti: neljä kynnystä, neljä linssiä, jotka
  * eivät ole minkään mantereen laatan alla (rekisterissä manner: null).
  *
  * Mittakaava tulee pelin omista XP-vakioista (js/game.js 88–94):
  * uusi kaupunki 10, uusi lauta 50, vaikea vastaus 25, pääaarre 100.
- * 400 kp on siis noin kaksikymmentä uutta kaupunkia vastauksineen —
+ * 400 tp on siis noin kaksikymmentä uutta kaupunkia vastauksineen —
  * ensimmäinen palkinto tulee selvästi pelin aikana ja viimeinen vaatii
  * pitkän matkan.
  */
@@ -163,8 +163,8 @@ async function leimaaPassiin(r) {
  * Jos se on jo omistettu — mikä on toisella pelikerralla tavallista,
  * koska passin leimat säilyvät — annetaan ensimmäinen omistamaton
  * linssi rekisterijärjestyksessä. Laattalinssit tarjotaan ensin ja
- * kokemuspistelinssit vasta niiden loputtua: muuten palaava pelaaja
- * saisi koko kokemuspistereitin ilmaiseksi seitsemällä laatalla.
+ * tietäjäpistelinssit vasta niiden loputtua: muuten palaava pelaaja
+ * saisi koko tietäjäpistereitin ilmaiseksi seitsemällä laatalla.
  *
  * null tarkoittaa, ettei annettavaa ole; kutsuja kohtelee laattaa
  * silloin tyhjänä.
@@ -184,12 +184,12 @@ export function linssiKaupungista(game, cityId, player = game.player) {
 }
 
 /**
- * Kokemuspistekynnysten tarkistus. Palauttaa myönnetyt tunnukset, jotta
+ * Tietäjäpistekynnysten tarkistus. Palauttaa myönnetyt tunnukset, jotta
  * kutsuja voi kertoa niistä pelaajalle.
  *
  * Kynnys ylittyy vain kerran: vertailu tehdään pistemäärään ennen ja
  * jälkeen, ei nykyiseen summaan. Yksi kutsu voi ylittää kaksi kynnystä
- * (pääaarre + ennätys antaa 300 kp kerralla), joten lista käydään läpi
+ * (pääaarre + ennätys antaa 300 tp kerralla), joten lista käydään läpi
  * kokonaan.
  */
 export function tarkistaKynnys(game, player, ennen, jalkeen) {
@@ -200,7 +200,7 @@ export function tarkistaKynnys(game, player, ennen, jalkeen) {
     // Omistus luetaan uudelleen joka kierroksella, koska edellinen
     // myönnetty linssi muutti sitä.
     const tunnus = ensimmainenOmistamaton(omistetut(game, player), (r) => r.manner === null);
-    if (!tunnus) break; // kaikki kokemuspistelinssit on jo löydetty
+    if (!tunnus) break; // kaikki tietäjäpistelinssit on jo löydetty
     myonna(game, player, tunnus);
     uudet.push(tunnus);
   }

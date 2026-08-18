@@ -474,7 +474,7 @@ yhdistämisristiriitaa.
 // yhden rivin muutos yhteen tiedostoon, eivätkä kaksi samaan aikaan
 // tehtyä linssiä osu samoihin riveihin.
 //
-// manner: null tarkoittaa, että linssi ansaitaan kokemuspisteillä eikä
+// manner: null tarkoittaa, että linssi ansaitaan tietäjäpisteillä eikä
 // laatan alta (ks. docs/linssit-suunnitelma.md luku 4).
 export const LINSSIT = [
   { tunnus: 'historia',     manner: 'middleeast',    tuo: () => import('./historia.js') },
@@ -513,7 +513,7 @@ rivejä.
 ## 4. Aarrekytkentä
 
 Omistajan päätökset (`docs/tyolista-opukselle.md` 103–130): yksi aarre
-per maanosa; löytäminen laatan alta **ja** kokemuspisteillä; linssit ovat
+per maanosa; löytäminen laatan alta **ja** tietäjäpisteillä; linssit ovat
 pysyviä, varusteet kuluvat.
 
 ### 4.1 Uusi laattatyyppi
@@ -547,7 +547,7 @@ Seitsemän laattaa, koska maailmankartalla on seitsemän lähdealuetta
 (`LAHTEET`, `js/packs/maailmankartta.js` 39): europe, africa, middleeast,
 asia, northamerica, southamerica, oceania. **Yksi laatta per manner** on
 siis kirjaimellisesti totta. Loput neljä linssiä ansaitaan
-kokemuspisteillä.
+tietäjäpisteillä.
 
 Muut laudat eivät saa linssilaattoja ensimmäisessä erässä: niiden
 `counts` pysyy ennallaan.
@@ -613,10 +613,10 @@ Haaran sisältö on mallinnettu `horseshoe`-haaran (1739–1746) mukaan:
 yksi `say`-rivi ja yksi `emit('treasure', …)`, ja lopuksi yhteinen
 `checkWin()` + `return type` kuten ennen.
 
-### 4.5 Kokemuspistereitti
+### 4.5 Tietäjäpistereitti
 
 `awardXp` (`js/game.js` 468–471) on **ainoa portti**, jonka läpi jokainen
-kokemuspiste kulkee (kahdeksan kutsupaikkaa: 488, 492, 563, 1330, 1342,
+tietäjäpiste kulkee (kahdeksan kutsupaikkaa: 488, 492, 563, 1330, 1342,
 1358, 1373, 1724). Kynnystarkistus kuuluu siis tähän yhteen funktioon:
 
 ```js
@@ -634,19 +634,19 @@ Kynnykset (`js/linssit/omistus.js`):
 LINSSIKYNNYKSET = [400, 800, 1400, 2200]
 ```
 
-Neljä kynnystä, neljä kokemuspistelinssiä (`manner: null`):
+Neljä kynnystä, neljä tietäjäpistelinssiä (`manner: null`):
 `maaluvut`, `muuttoliike`, `radio`, `tahdet`. Kun kynnys ylittyy, myönnä
 seuraava omistamaton `manner: null` -linssi rekisterijärjestyksessä.
 
 Mittakaava: XP-vakiot ovat `XP_NEW_CITY 10`, `XP_NEW_BOARD 50`,
 `XP_HARD_ANSWER 25`, `XP_STAR 100`, `XP_PUZZLE 25`, `XP_EXPLORE 15`,
-`XP_RECORD 200` (`js/game.js` 88–94). 400 kp on siis noin
+`XP_RECORD 200` (`js/game.js` 88–94). 400 tp on siis noin
 kaksikymmentä uutta kaupunkia vastauksineen — ensimmäinen palkinto tulee
 selvästi pelin aikana, viimeinen vaatii pitkän matkan.
 
 **Tapahtumalaji on `aid`, ei `treasure`.** `playEvents` suodattaa
 `treasure`- ja `robber`-tapahtumat pois (`js/ui.js` 7594–7604), koska ne
-nähdään paljastusanimaatiossa. Kokemuspisteillä ansaittu linssi ei tule
+nähdään paljastusanimaatiossa. Tietäjäpisteillä ansaittu linssi ei tule
 laatan alta, joten `treasure` katoaisi näkymättömiin. `aid`-lajilla on
 jo ääni `EVENT_SOUND`-taulussa (`js/ui.js` 714).
 
@@ -723,9 +723,19 @@ Ilman näitä linssi näkyy timanttina ja kuulostaa timantilta:
 
 ## 5. Käyttöliittymä
 
-### 5.1 Valitsin: oma kotelo ylärivissä, pudotuspaneeli alla
+### 5.1 Valitsin: matkalaukussa (18.8.2026)
 
-Konkreettinen ratkaisu, ei vaihtoehtolista:
+> **VOIMASSA OLEVA PAIKKA: MATKALAUKKU.** Valitsin (`#linssi-kotelo`,
+> `#linssi-valikko`) asuu `#passport-dialog`-ikkunassa "Varusteet"-
+> osastona, ja se on ainoa paikka, josta linssit kytketään päälle ja
+> pois (omistajan päätös 18.8.2026). Tunnisteet, `js/ui.js`:n
+> rakennaLinssivalikko ja koko tahdistus ovat entiset — vain kotelon
+> paikka `index.html`:ssä vaihtui, ja kuori purettiin CSS:ssä
+> (`.passport-card .linssi-valikko`). Alla oleva kuvaus ylärivin
+> napista ja pudotuspaneelista on suunnitteluhistoriaa: nappi siirtyi
+> ensin hampurilaisvalikkoon (5.8.2026) ja sieltä laukkuun.
+
+Konkreettinen ratkaisu, ei vaihtoehtolista (historia):
 
 **`.linssi-kotelo` ylärivin `.topbar-actions`-lohkoon kertojanapin
 vasemmalle puolelle** (`index.html` 52–63). Nappi näyttää nykyisen
@@ -818,7 +828,7 @@ kerran laukeavana 220 ms häivytyksenä kerroksen omalla
 js/linssit/
   kerros.js          moottori: piirto, elementtilaskenta, rasterointi, vaihto
   rekisteri.js       yksitoista riviä, ainoa yhteinen tiedosto
-  omistus.js         laatta, kokemuspistekynnys, passi, tallennus
+  omistus.js         laatta, tietäjäpistekynnys, passi, tallennus
   historia.js        \
   ilmasto.js          |
   kielet.js           |

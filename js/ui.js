@@ -106,6 +106,8 @@ import {
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { polloAnkkuri, polloSulje, polloVihje, polloVihjePois } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio } from './ehdotukset.js';
+// Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
+import { seuraavaTietajataso, tietajataso } from './tietajatasot.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 
@@ -298,6 +300,13 @@ const AUTO_ROLL_MS = 320; // tauko ennen itsestään pyörähtävää noppaa
  */
 const VALINTAVIHJEEN_VIIVE = 15000;
 const VALINTAVIHJEEN_TEKSTI = 'Napauta korostettua kohdetta kartalla, niin matka jatkuu.';
+/*
+ * Tietäjätason onnittelukupla pöllönapin vieressä (naytaTietajaNousut).
+ * Lause on pari riviä pitkä, ja tämä on se aika, jonka se saa olla
+ * yksin ennen kuin seuraava nousu vaihtaa sen. Viimeinen kupla jää
+ * näkyviin, kunnes pelaaja koskee karttaan.
+ */
+const TIETAJAKUPLA_MS = 4200;
 /*
  * Maan ääriviivan piirtoanimaatio (animoiMaanAariviiva). Piirto on
  * omistajan toivomat "parisen sekuntia". Väläys poistui kokonaan
@@ -4471,23 +4480,97 @@ export class UI {
     this.kelloEdellinen = kello;
   }
 
-  /** Matkan tiedot passiin: missä ollaan, paljonko kokemusta ja tietoa. */
+  /**
+   * Matkan tiedot laukkuun: missä ollaan, paljonko tietäjäpisteitä ja
+   * tietoa — ja kuinka pitkällä matka on kolmella mittarilla.
+   *
+   * LUVUT LASKETAAN AINA PELITILASTA (omistajan tilaus 18.8.2026), ei
+   * omasta kirjanpidosta. Laukku rakentaa sisältönsä joka avauksella
+   * (js/main.js), joten laskurit ovat tuoreita eikä niitä tarvitse
+   * tallentaa erikseen: käydyt kaupungit ovat maailman visited-joukossa
+   * ja löytyneet aarteet starsFound-taulussa, jotka molemmat kulkevat
+   * tallennuksessa mukana.
+   */
   renderProgress() {
     const { game } = this;
     const p = game.player;
     this.passportProgress.textContent = '';
 
-    const rivi = (label, value) => {
+    const rivi = (label, value, ikoni = null) => {
       const row = html('div', 'find');
+      if (ikoni) {
+        const kuva = viivaIkoni(ikoni);
+        if (kuva) {
+          kuva.classList.add('find-ikoni');
+          row.appendChild(kuva);
+        }
+      }
       row.appendChild(html('span', 'find-text', label));
       row.appendChild(html('span', 'find-value', value));
       this.passportProgress.appendChild(row);
+      return row;
     };
 
     const city = this.factCity(p.pos);
     rivi('Sijainti', p.pos.type === 'edge' ? `matkalla — ${city.name}` : city.name);
     rivi('Kukkaro', `£${p.money}`);
-    rivi('Kokemus', `${p.xp ?? 0} kp`);
+
+    /*
+     * TIETÄJÄRIVI: nimike ja pisteet samassa arvossa ("Kartanlukija ·
+     * 145 tp"), pöllön kuvake rivin edessä. Pöllö on se, joka onnittelee
+     * tason noususta, joten sen kuva kuuluu juuri tälle riville.
+     */
+    const pisteet = p.xp ?? 0;
+    const taso = tietajataso(pisteet);
+    rivi('Tietäjä', `${taso.nimi} · ${pisteet} tp`, 'pollo');
+    /*
+     * Seuraava raja hienovaraisesti oman rivinsä alle: se on vihje eikä
+     * mittari, joten se on pienemmällä ja himmeämmällä. Ylimmällä
+     * tasolla riviä ei ole lainkaan — "seuraava: ei mitään" on huonompi
+     * kuin hiljaisuus.
+     */
+    const seuraava = seuraavaTietajataso(pisteet);
+    if (seuraava) {
+      this.passportProgress.appendChild(html(
+        'p',
+        'tietaja-seuraava',
+        `Seuraava taso ${seuraava.raja} tp: ${seuraava.nimi}`,
+      ));
+    }
+
+    // Aarteet: sama laskenta kuin Aarnin luettelossa, jotta laukun kaksi
+    // aarrelukua eivät voi mennä eri tahtiin.
+    const { kaikki, loydetyt } = this.aarreLuettelo();
+    rivi('Avatut aarteet', `${loydetyt.length} / ${kaikki.length}`);
+
+    /*
+     * Kaupungit ja maat TÄLTÄ LAUDALTA. Lauta on maailmankartta, jolla
+     * peliä pelataan (js/pack.js: "PELI on yksi lauta"), ja sen
+     * kaupungit ovat pakkauksen omaa dataa — MAX ei siis voi mennä eri
+     * tahtiin sisällön kanssa.
+     *
+     * Maa luetaan map.cityCountry-taulusta, samasta lähteestä kuin
+     * kartan maakyltti ja maalehti. Kaupunki ilman maatunnusta
+     * (Jerusalem) ei kasvata kumpaakaan lukua — se on rehellisempää
+     * kuin arvata sille maa.
+     */
+    const kaydyt = game.worldOf?.(p)?.visited ?? new Set();
+    const kaupunkeja = game.pack?.cities?.length ?? 0;
+    if (kaupunkeja) rivi('Käydyt kaupungit', `${kaydyt.size} / ${kaupunkeja}`);
+
+    const maaTaulu = game.pack?.map?.cityCountry ?? null;
+    if (maaTaulu) {
+      const kaikkiMaat = new Set(Object.values(maaTaulu).filter(Boolean));
+      if (kaikkiMaat.size) {
+        const kaydytMaat = new Set();
+        for (const cityId of kaydyt) {
+          const iso = maaTaulu[cityId];
+          if (iso) kaydytMaat.add(iso);
+        }
+        rivi('Käydyt maat', `${kaydytMaat.size} / ${kaikkiMaat.size}`);
+      }
+    }
+
     const tieto = game.knowledgePercent(p);
     if (tieto !== null) rivi('Tieto tästä laudasta', `${tieto} %`);
   }
@@ -8522,11 +8605,19 @@ export class UI {
     auki.laatikko.remove();
   }
 
-  /** Matkalaukku: matkan tiedot, Aarnin luettelo ja tavarat. */
+  /**
+   * Matkalaukku: matkan tiedot, Aarnin luettelo, tavarat ja varusteet.
+   *
+   * Varusteiden valitsin (#linssi-kotelo) muutti hampurilaisvalikosta
+   * tänne 18.8.2026 — laukku on ainoa paikka, josta linssit kytketään
+   * kartalle. Valitsin tahdistetaan avattaessa, jotta juuri löytynyt
+   * linssi on siellä heti eikä vasta seuraavan piirron jälkeen.
+   */
   openPassport() {
     this.renderProgress();
     this.renderAarteet();
     this.renderFinds();
+    void this.paivitaLinssit();
     if (!this.passportDialog.open) this.passportDialog.showModal();
     this.nollaaDialoginVieritys(this.passportDialog);
     this.asemoiLaukku();
@@ -10505,6 +10596,32 @@ export class UI {
       const box = this.buildToast(event);
       await this.wait(this.reducedMotion ? 0 : TOAST_MS[event.kind] ?? TOAST_MS.default);
       await this.removeToast(box);
+    }
+    await this.naytaTietajaNousut();
+  }
+
+  /**
+   * PÖLLÖ ONNITTELEE TIETÄJÄTASON NOUSUSTA (päätoimittajan päätös
+   * 18.8.2026). Nousu ei anna mitään muuta kuin uuden nimikkeen, joten
+   * ilmoitus on koko palkinto — ja se on pöllön ääni, ei kartan päälle
+   * lentävä tapahtumakupla.
+   *
+   * VASTA TAPAHTUMAKUPLIEN JÄLKEEN. Sama pisteiden lisäys voi ylittää
+   * linssikynnyksen ja tietäjätason yhtä aikaa (aarre 100 + ennätys 200
+   * = 300 kerralla). Linssilöytö näkyy kartan päällä tapahtumakuplana
+   * ja tason nousu pöllönapin vieressä puhekuplana; päällekkäin ne
+   * peittäisivät toisensa, joten ne näytetään peräkkäin — ensin
+   * tapahtumat, sitten pöllö.
+   *
+   * Useampi nousu kerralla näkyy myös peräkkäin: kupla vaihtuu, ja
+   * viimeinen jää näkyviin kunnes pelaaja koskee karttaan.
+   */
+  async naytaTietajaNousut() {
+    const nousut = this.game.takeTietajaNousut?.() ?? [];
+    for (const taso of nousut) {
+      if (this.dead) return;
+      polloVihje(taso.onnittelu);
+      await this.wait(this.reducedMotion ? 0 : TIETAJAKUPLA_MS);
     }
   }
 

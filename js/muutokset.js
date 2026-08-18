@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 855, teksti: 'Tietäjätasot ja matkalaukku-uudistus' },
   { v: 854, teksti: 'Ehdotuskanava auki: uusi- ja ehdota-napit valikkoon' },
   { v: 853, teksti: 'Lukijoiden ehdotukset: lomake, työhuonelehti ja pöllö' },
   { v: 852, teksti: 'Flickr-kuvat Tokion, Soulin ja Shanghain lehtiin' },

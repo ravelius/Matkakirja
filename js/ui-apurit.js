@@ -534,6 +534,29 @@ export const VIIVA_IKONIT = {
     + '<rect x="4.6" y="8.4" width="14.8" height="12" rx="3.4"/>'
     + '<path d="M4.7 14.6h14.6"/>'
     + '<rect x="10.4" y="13.1" width="3.2" height="3.8" rx="1.1"/>',
+  /*
+   * SEEPIAPÖLLÖ. Sama piirros kuin pöllönapissa (js/pollo.js
+   * POLLO_IKONI), mutta ilman <svg>-kuorta — tässä sarjassa kuvakkeet
+   * ovat pelkkiä polkuja, ja viivaIkoni() kääräisee ne.
+   *
+   * Kaksoiskappale on tarkoituksellinen: js/pollo.js ei tuo tätä
+   * tiedostoa, ja niputettu yhden tiedoston versio (MODULES) latoisi
+   * kehäriippuvuuden. Piirros on lyhyt ja muuttumaton; jos se joskus
+   * muuttuu, molemmat on päivitettävä.
+   *
+   * Käyttö: matkalaukun tietäjäpisterivi (omistajan tilaus 18.8.2026)
+   * — pöllö on se, joka onnittelee tason noususta, joten sen kuvake
+   * kuuluu samalle riville.
+   */
+  pollo: '<path d="M6.4 5.2 8.4 7.6"/><path d="M17.6 5.2 15.6 7.6"/>'
+    + '<path d="M12 3.7c3.3 0 5.7 2.6 5.7 6.3 0 5.1-2.3 8.5-5.7 8.5s-5.7-3.4-5.7-8.5c0-3.7 2.4-6.3 5.7-6.3z"/>'
+    + '<circle cx="9.6" cy="9.5" r="1.9"/><circle cx="14.4" cy="9.5" r="1.9"/>'
+    + '<circle class="taytto" cx="9.6" cy="9.5" r="0.75"/>'
+    + '<circle class="taytto" cx="14.4" cy="9.5" r="0.75"/>'
+    + '<path d="M12 11.3 11 13.1h2z"/>'
+    + '<path d="M8.7 14.7c1 .9 1.9 1.3 3.3 1.3s2.3-.4 3.3-1.3"/>'
+    + '<path d="M9.4 18.4v1.6M14.6 18.4v1.6"/>'
+    + '<path d="M4.4 20.2h15.2"/>',
   noppa: '<rect x="3.6" y="3.6" width="16.8" height="16.8" rx="3.2"/><g class="taytto"><circle cx="8.2" cy="8.2" r="1.25"/><circle cx="15.8" cy="8.2" r="1.25"/><circle cx="12" cy="12" r="1.25"/><circle cx="8.2" cy="15.8" r="1.25"/><circle cx="15.8" cy="15.8" r="1.25"/></g>',
   kompassi: '<circle cx="12" cy="12" r="8.4"/><path d="M12 5.8 14.3 12 12 18.2 9.7 12z"/><circle class="taytto" cx="12" cy="12" r="1"/>',
   nuoli: '<path d="M9.5 6.2 5 10.6l4.5 4.4"/><path d="M5 10.6h9.2a4.6 4.6 0 1 1 0 9.2H9.5"/>',
