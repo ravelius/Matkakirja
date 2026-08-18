@@ -1,0 +1,193 @@
+# Julkaisee Lukijoiden ehdotukset -workerin (worker/ehdotukset/).
+#
+# MITÄ TÄMÄ ON: pelaajien lähettämät kuvat ja juttuideat menevät tämän
+# workerin kautta YKSITYISEEN R2-ämpäriin, josta omistaja lukee ne
+# pelin työhuoneen Lukijoilta-lehdellä. Ämpäri ei ole sama kuin pelin
+# julkinen media-peili: lähetyksissä voi olla sähköpostiosoitteita.
+# Arkkitehtuuri ja kuratointiprosessi: docs/moduulit/lukijoilta.md.
+#
+# AJO KÄSIN (workflow_dispatch): Actions → "Lukijoiden ehdotukset:
+# julkaise worker" → Run workflow. Ajo ei käynnisty pushista, koska
+# julkaisu on omistajan päätös eikä sivuvaikutus.
+#
+# SALAISUUDET (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN  pakollinen — Workers- ja R2-oikeuksin
+#   R2_ACCOUNT_ID         pakollinen — on jo olemassa (peilaus käyttää)
+#   EHDOTUS_AVAIN         pakollinen — satunnainen avain, jolla
+#                         työhuoneen Lukijoilta-lehti lukee ehdotukset
+#   EHDOTUS_BUCKET        vapaaehtoinen — ämpärin nimi, oletus
+#                         matkakirja-ehdotukset (ajo luo sen jos puuttuu)
+#
+# Salaisuuksien ARVOJA ei tulosteta missään vaiheessa: avain menee
+# wranglerille putkessa (printf | wrangler secret put), ei komennon
+# argumenttina eikä tiedostona.
+
+name: 'Lukijoiden ehdotukset: julkaise worker'
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Yksi julkaisu kerrallaan; keskeneräistä ei katkaista.
+concurrency:
+  group: ehdotukset-worker
+  cancel-in-progress: false
+
+env:
+  # Mistä peli tulee. Worker vertaa tätä pyynnön Origin-otsakkeeseen,
+  # joka on aina pelkkä alkuosa ILMAN polkua. Useampi arvo erotetaan
+  # pilkulla. Localhost kelpaa aina ilman listausta.
+  EHDOTUS_ORIGINIT: 'https://ravelius.github.io'
+  WRANGLER_VERSIO: 'wrangler@4'
+  WRANGLER_SEND_METRICS: 'false'
+  CI: 'true'
+
+jobs:
+  julkaisu:
+    name: Julkaise worker
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Puuttuva salaisuus tulee muuten vastaan vasta wranglerin
+      # sekavana virheenä. Näin ajo kertoo heti mikä nimi puuttuu —
+      # arvoja ei tulosteta, vain onko ne asetettu (sama malli kuin
+      # peilaa.yml:ssä).
+      - name: Tarkista että salaisuudet ovat tallessa
+        env:
+          TUNNUS: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          AVAIN: ${{ secrets.EHDOTUS_AVAIN }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$TUNNUS" ] || puuttuu="$puuttuu CLOUDFLARE_API_TOKEN"
+          [ -n "$TILI" ]   || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "$AVAIN" ]  || puuttuu="$puuttuu EHDOTUS_AVAIN"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            echo "Lisää ne osoitteessa Settings > Secrets and variables >"
+            echo "Actions > Repository secrets."
+            echo "EHDOTUS_AVAIN on satunnainen merkkijono, jonka annat myös"
+            echo "työhuoneen Lukijoilta-lehdelle. Ohje: docs/moduulit/lukijoilta.md"
+            exit 1
+          fi
+          echo "Kaikki kolme salaisuutta löytyvät."
+
+      - name: Asenna wrangler
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/wrangler"
+          npm install --prefix "$RUNNER_TEMP/wrangler" --no-fund --no-audit "$WRANGLER_VERSIO"
+          echo "WRANGLER=$RUNNER_TEMP/wrangler/node_modules/.bin/wrangler" >> "$GITHUB_ENV"
+
+      # Ämpäri luodaan vain jos sitä ei ole. Olemassa olevaan ei
+      # kosketa — siellä ovat kaikki tähänastiset ehdotukset.
+      - name: Etsi tai luo ämpäri
+        working-directory: ${{ runner.temp }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          EHDOTUS_BUCKET: ${{ secrets.EHDOTUS_BUCKET }}
+        run: |
+          set -euo pipefail
+          ampari="${EHDOTUS_BUCKET:-matkakirja-ehdotukset}"
+          if ! "$WRANGLER" r2 bucket list > "$RUNNER_TEMP/r2-lista.txt" 2> "$RUNNER_TEMP/r2-virhe.log"; then
+            echo "::error title=R2-listaus epäonnistui::Tarkista, että CLOUDFLARE_API_TOKEN kelpaa (Workers R2 Storage: Edit) ja R2_ACCOUNT_ID on oikein."
+            cat "$RUNNER_TEMP/r2-virhe.log"
+            exit 1
+          fi
+          if grep -q "$ampari" "$RUNNER_TEMP/r2-lista.txt"; then
+            echo "Ämpäri $ampari on jo olemassa."
+          else
+            echo "Ämpäriä $ampari ei ole — luodaan."
+            "$WRANGLER" r2 bucket create "$ampari"
+          fi
+          echo "EHDOTUS_AMPARI=$ampari" >> "$GITHUB_ENV"
+
+      # Asetustiedosto syntyy templatesta: ämpärin nimi ja originit
+      # tulevat ympäristöstä, eikä repoon jää tunnisteita.
+      - name: Rakenna wrangler.toml templatesta
+        env:
+          EHDOTUS_BUCKET: ${{ env.EHDOTUS_AMPARI }}
+        run: |
+          set -euo pipefail
+          envsubst '${EHDOTUS_BUCKET} ${EHDOTUS_ORIGINIT}' \
+            < worker/ehdotukset/wrangler.toml.template \
+            > worker/ehdotukset/wrangler.toml
+          # Tarkistus, ettei yksikään paikkamerkki jäänyt täyttämättä:
+          # tyhjä bucket_name julkaisisi workerin ilman varastoa.
+          if grep -q '\${' worker/ehdotukset/wrangler.toml; then
+            echo "::error::wrangler.toml jäi vajaaksi — paikkamerkki täyttämättä."
+            exit 1
+          fi
+          cat worker/ehdotukset/wrangler.toml
+
+      - name: Julkaise worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          "$WRANGLER" deploy --config worker/ehdotukset/wrangler.toml 2>&1 \
+            | tee "$RUNNER_TEMP/deploy.log"
+          osoite=$(grep -Eo 'https://[A-Za-z0-9._-]+\.workers\.dev' "$RUNNER_TEMP/deploy.log" | head -1 || true)
+          if [ -n "$osoite" ]; then
+            echo "EHDOTUS_OSOITE=$osoite" >> "$GITHUB_ENV"
+          else
+            echo "::warning title=Osoitetta ei löytynyt::Julkaisu meni läpi, mutta workers.dev-osoitetta ei tunnistettu tulosteesta. Katso ajon loki."
+          fi
+
+      # Avain menee wranglerille putkessa: se ei näy komentorivillä, ei
+      # ympäristölistauksessa eikä jää tiedostoksi ajurille.
+      - name: Aseta lukuavain workerin salaisuudeksi
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          EHDOTUS_AVAIN: ${{ secrets.EHDOTUS_AVAIN }}
+        run: |
+          set -euo pipefail
+          set +x
+          printf '%s' "$EHDOTUS_AVAIN" \
+            | "$WRANGLER" secret put EHDOTUS_AVAIN --config worker/ehdotukset/wrangler.toml
+
+      - name: Kerro mitä julkaistiin
+        if: success()
+        run: |
+          {
+            echo "## Lukijoiden ehdotukset on julkaistu"
+            echo
+            if [ -n "${EHDOTUS_OSOITE:-}" ]; then
+              echo "**Workerin osoite:**"
+              echo
+              echo "\`\`\`"
+              echo "$EHDOTUS_OSOITE"
+              echo "\`\`\`"
+            else
+              echo "Osoitetta ei saatu poimittua automaattisesti — se on muotoa"
+              echo "\`https://matkakirja-ehdotukset.<tunnuksesi>.workers.dev\`."
+            fi
+            echo
+            echo "**Kerro tämä osoite Fablelle**, niin se kirjataan pelin"
+            echo "\`EHDOTUS_OSOITE\`-vakioon (js/ehdotukset.js). Ennen sitä"
+            echo "lomakkeen ehdotusosio ja Lukijoilta-lehti ovat piilossa —"
+            echo "mikään ei ole rikki."
+            echo
+            echo "- Ämpäri: \`${EHDOTUS_AMPARI}\` (yksityinen)"
+            echo "- Sallittu origin: \`$EHDOTUS_ORIGINIT\` (+ localhost)"
+            echo "- Lukuavain: asetettu workerin salaisuudeksi (ei näy lokissa)"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # Täytetty asetus ei sisällä salaisuuksia, mutta se ei kuulu
+      # mihinkään pysyvään.
+      - name: Siivoa väliaikainen asetus
+        if: always()
+        run: rm -f worker/ehdotukset/wrangler.toml

@@ -200,6 +200,9 @@ const MODULES = [
   'js/sisaltotaulut.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
+  // Lukijoiden ehdotukset ennen lehteä ja ui:ta (molemmat tuovat sen;
+  // moduuli tuo vain ui-apurit, joka on yllä).
+  'js/ehdotukset.js',
   // Mallin B pilotit ennen ui.js:ää (ui tuo ne).
   'js/liput.js',
   'js/karttazoom.js',

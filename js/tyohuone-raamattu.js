@@ -551,6 +551,8 @@ export const RAAMATTU = {
           + '· docs/mantereen-resepti.md · '
           + 'docs/kuvakasikirjoitukset.md — sisältöreseptit ja '
           + 'työlistat.',
+        'docs/moduulit/lukijoilta.md — lukijoiden ehdotukset: worker, '
+          + 'lomake, Lukijoilta-lehti ja kuratointi.',
         'CONTRIBUTING.md — avoin lähdekoodi + tekniset periaatteet. '
           + 'README.md — esittely.',
         'docs/viesti-fable.md — viestikanava, ei ohje. docs/arkisto/ '

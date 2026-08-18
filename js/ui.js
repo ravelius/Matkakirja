@@ -32,7 +32,8 @@ import {
 } from './ui-apurit.js';
 // Remontin M5a: lehden sivukoneisto.
 import {
-  avaaKehittajaLehti, avaaMaalehti, avaaRaamattuLehti, avaaSisallysvalikko,
+  avaaKehittajaLehti, avaaLukijoiltaLehti, avaaMaalehti, avaaRaamattuLehti,
+  avaaSisallysvalikko,
   avaaTilanneLehti, jatkaLehdenLuentaa, kytkeTutkiSelaus, naytaMaaUutiset,
   naytaTutkiSivu, naytaVuosiSaa, openWiki, rakennaSivut, renderArticle,
   renderMaastoArtikkeli, sijoitaLehtiKaiutin, tutkiEkaSivu, tutkiSivuja,
@@ -104,6 +105,7 @@ import {
 } from './packs/maakartat.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { polloAnkkuri, polloSulje, polloVihje, polloVihjePois } from './pollo.js';
+import { ajastaEhdotusKupla, ehdotusOsio } from './ehdotukset.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 
@@ -1525,6 +1527,17 @@ export class UI {
     this.vahdiNakymanKokoa();
     this.render();
     this.esilataaAarrekuvat();
+    /*
+     * PÖLLÖN KUTSU OSALLISTUA (Raamattu, osio "Lukijoiden
+     * ehdotukset"): kymmenen minuutin pelaamisen jälkeen pöllönapin
+     * viereen ilmestyy kerran — ja vain kerran koko pelaajan
+     * historiassa — kupla, joka kertoo kanavasta. Ajastus, lippu ja
+     * teksti ovat js/ehdotukset.js:ssä; tässä on vain kuplan
+     * näyttäjä, sama kuin valintavihjeellä.
+     */
+    this.ehdotusKuplaAjastin = ajastaEhdotusKupla((teksti) => {
+      if (!this.dead) polloVihje(teksti);
+    });
   }
 
   /* --- näkymän koko ja sen elpyminen taustalta ---------------------- */
@@ -2022,6 +2035,10 @@ export class UI {
     // uuden pelin rinnalle, ja ilman lippua ne piirtäisivät vanhan pelin
     // tilaa uuden päälle (esim. edellisen pelin kysymyksen tekstin).
     this.dead = true;
+    // Ehdotuskuplan ajastin voi olla kymmenen minuutin päässä: uusi
+    // peli ei saa periä vanhan instanssin kuplaa.
+    clearTimeout(this.ehdotusKuplaAjastin);
+    this.ehdotusKuplaAjastin = null;
     // Tarkkuusvahti on documentin kuuntelija: ilman purkua kuollut
     // instanssi jäisi tarkkailemaan näkyvyyttä uuden pelin rinnalle.
     if (this.tarkkuusVahti) {
@@ -7072,6 +7089,8 @@ export class UI {
 
   avaaTilanneLehti() { return avaaTilanneLehti(this); }
 
+  avaaLukijoiltaLehti() { return avaaLukijoiltaLehti(this); }
+
   piirraMinitehtava(kohde, kategoria) {
     const { tehtava } = kategoria;
     const cityId = this.lehtitila.arrivalShownFor;
@@ -8144,6 +8163,7 @@ export class UI {
     const lohko = html('div', 'periaate-lomake');
     if (!PALAUTE_LOMAKE) {
       lohko.appendChild(this.palauteGithub(tilanne));
+      this.lisaaEhdotusOsio(lohko, tilanne);
       return lohko;
     }
 
@@ -8207,7 +8227,39 @@ export class UI {
         huomio.textContent = 'Lähetys ei onnistunut. Kokeile hetken päästä uudelleen.';
       }
     });
+    this.lisaaEhdotusOsio(lohko, tilanne);
     return lohko;
+  }
+
+  /**
+   * LUKIJOIDEN EHDOTUKSET -osio palautelomakkeen perään (Raamattu,
+   * osio "Lukijoiden ehdotukset"). Osio on oma moduulinsa
+   * (js/ehdotukset.js) ja se on piilossa, kunnes EHDOTUS_OSOITE on
+   * asetettu — palaute toimii täsmälleen kuten ennen.
+   *
+   * Sivuehdotus tulee pelin nykyisestä näkymästä, jotta pelaajan ei
+   * tarvitse osata nimetä lehteä itse.
+   */
+  lisaaEhdotusOsio(lohko, tilanne = '') {
+    const osio = ehdotusOsio(this.ehdotusSivu(tilanne));
+    if (osio) lohko.appendChild(osio);
+  }
+
+  /**
+   * Sivutunniste ehdotukseen: sama tilannekuvaus kuin palautteessa
+   * (lauta · kaupunki) ja sen perään auki olevan lehden sivu, jos
+   * lehti on auki. Selkokieltä, koska pelaaja näkee sen lomakkeessa.
+   */
+  ehdotusSivu(tilanne = '') {
+    const osat = [tilanne || this.palauteTilanne()].filter(Boolean);
+    try {
+      const { tutkiSivut, tutkiSivu } = this.lehtitila;
+      const sivu = tutkiSivut?.[tutkiSivu ?? 0];
+      if (this.lehtitila.tutkiLehti && sivu?.nimi) osat.push(sivu.nimi);
+    } catch (err) {
+      console.warn('Lehden sivun luku ehdotusta varten ei onnistunut:', err);
+    }
+    return osat.join(' · ');
   }
 
   /**

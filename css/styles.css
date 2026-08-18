@@ -4729,6 +4729,53 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
   color: #6d5a3c;
 }
 
+/*
+ * LUKIJOIDEN EHDOTUKSET (js/ehdotukset.js): palautelomakkeen perässä
+ * oma taitettava osio, jotta palautteen lähettäminen pysyy yhtä
+ * yksinkertaisena kuin ennen. Kentät perivät .periaate-kentta-tyylin;
+ * tässä on vain osion kehys, rastirivit ja piilokenttä.
+ */
+.periaate-ehdotus {
+  margin-top: 1.1rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed rgba(122, 85, 20, 0.35);
+}
+
+.periaate-ehdotus > summary {
+  cursor: pointer;
+  margin: 0;
+}
+
+.periaate-nimio {
+  display: block;
+  margin-top: 0.7rem;
+  font-family: var(--font-type);
+  font-size: 0.82rem;
+  color: #6d5a3c;
+}
+
+.periaate-rasti {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-top: 0.6rem;
+  font-family: var(--font-type);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #6d5a3c;
+}
+
+.periaate-rasti input { margin-top: 0.15rem; }
+
+/* Hunajapurkki: robotille näkyvä, ihmiselle ei. */
+.periaate-hunaja {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
 .periaate-oikeudet {
   margin: 1.2rem 0 0;
   text-align: center;
