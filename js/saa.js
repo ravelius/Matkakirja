@@ -111,9 +111,11 @@ function kelpaaKaista(ylin, alin) {
 
 /**
  * Graafin lähderivi. Kaistallinen ja kaistaton kortti selitetään eri
- * lauseella, ja koska sama rivi näkyy sekä lehdessä (naytaVuosiSaa)
- * että matkailijan oppaassa (avaaSaagraafi), se asuu täällä yhtenä
- * totuutena eikä kahtena kopiona.
+ * lauseella. Rivi näkyy vuosisääkortissa (js/lehti.js naytaVuosiSaa),
+ * jonka sekä lehden säärivi että matkailijan oppaan vuosikäyrä
+ * avaavat (18.8.2026 lähtien sama kortti molemmissa) — rivi asuu
+ * täällä graafin vierellä, koska sanamuoto seuraa kaistan olemassa-
+ * oloa eli piirtimen omaa dataa.
  */
 export function vuosiSaaSelite(tiedot) {
   const kaista = kelpaaKaista(tiedot?.ylin, tiedot?.alin);
