@@ -369,8 +369,9 @@ export const RAAMATTU = {
       otsikko: 'Kuvat ja lähteet',
       tila: 'luonnos',
       kohdat: [
-        'Kaikki kuvat PD/CC Commonsista, silmin tarkistettuina; '
-          + 'tekijä ja lisenssi näkyvissä.',
+        'Kaikki kuvat PD/CC (Commons, Finna, LoC, Flickr — lisenssi '
+          + 'aina rajapinnasta), silmin tarkistettuina; tekijä ja '
+          + 'lisenssi näkyvissä.',
         'Etusivukuvien kaava (omistaja 16.8.2026): kuva-aiheet '
           + 'speksataan kaupunkikohtaisesti ENNEN hakua '
           + '(docs/kuvakasikirjoitukset.md). Pääkuva = tärkein kohde '
@@ -390,7 +391,13 @@ export const RAAMATTU = {
           + 'paikan oma erikoisuus ("wow-efekti"), FP/QI jos on, '
           + 'selkeä valo, lukee pienessä koossa ja pääaihe ei jää '
           + 'diagonaalinauhan alle.',
-        'Media omasta peilistä (R2), peilaus automaattinen.',
+        'KAIKKI SISÄLTÖ ÄMPÄRISTÄ (omistaja 18.8.2026): pelin '
+          + 'lataama media tarjoillaan aina omasta peilistä (R2), '
+          + 'alkuperäisosoite on vain varareitti. Uusi kuva- tai '
+          + 'äänilähde saa tulla peliin vasta kun peilausputki '
+          + '(tools/peilaa-media.mjs) kattaa sen osoitteet. Repon '
+          + 'mukana kulkevat tiedostot (esim. miniatyyrit, liput) '
+          + 'ovat osa sovellusta eivätkä tarvitse peiliä.',
         'Miniatyyripiirrokset generoidaan yhdellä otolla per kohde '
           + '(kustannuslinjaus 16.8.2026).',
         'Faktat tarkistetaan, lähteet merkitään. API-avaimia ei '
