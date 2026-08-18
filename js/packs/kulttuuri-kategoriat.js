@@ -6449,6 +6449,42 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Igor123121, Wikimedia Commons (CC BY 4.0)',
         },
       ],
+          /*
+       * AVAUSKUVAT (18.8.2026): katutaso, kaukonäkymä ja ilmakuva.
+       * Katse, etäisyys ja vuorokaudenaika vaihtuvat joka kuvassa.
+       * Wawelin piha, Sukiennicen holvi ja Mariankirkon julkisivu ovat
+       * jo lehdessä eivätkä toistu. Lisenssit, tekijät ja koot
+       * todennettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Main Market Square, view from S, Old Town, Kraków, Poland.jpg',
+          selite: 'Suuri tori etelästä: vasemmalla seisoo yksinään '
+            + 'raatihuoneen tiilitorni kelloineen, keskellä on matala ja '
+            + 'pitkä kangashalli kaarikäytävineen, ja oikealla pieni '
+            + 'valkoinen kirkko vihreine kupoleineen. Aukion laidoilla '
+            + 'nousee rivi vaaleanpunaisia, keltaisia ja punaisia taloja.',
+          lahde: 'Zygmunt Put, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '20200808 Widok z Kopca Krakusa na Stare Miasto w Krakowie wczesnym rankiem 0557 3430.jpg',
+          selite: 'Vanhakaupunki aamu-usvassa eteläpuolen kumpareelta: '
+            + 'kattojen yli nousevat vasemmalla nelisivuinen tiilitorni, '
+            + 'keskellä valtava jyrkkä kirkonlaivan katto ja oikealla '
+            + 'kaksitorninen tiilikirkko. Koko kuva on aamu-usvan '
+            + 'sinipunaiseksi pehmentämä.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Krakow - Wawel and Old Town from balloon.jpg',
+          selite: 'Vanhakaupunki ylhäältä syysiltapäivällä: vasemmassa '
+            + 'laidassa on Wawelin kukkula punakattoisine '
+            + 'linnarakennuksineen, sen alla Veiksel ja silta. Keskellä '
+            + 'levittäytyy tiivis kattomeri, jota halkovat kapeat kadut, '
+            + 'ja vanhaakaupunkia kiertää ruskanvärinen puistovyöhyke.',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'arki',
@@ -6589,6 +6625,46 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kellotaulu erottuu tummaa myrskypilveä vasten.',
           lahde: 'Adrian Grycuk, Wikimedia Commons (CC BY-SA 3.0 pl)',
           wiki: 'Varsovan linna',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (18.8.2026): joki, katutaso ja nykykeskusta.
+       * Yhdessä ne kertovat Varsovan kaksijakoisuuden — jälleenrakennettu
+       * vanhakaupunki ja lasitornien keskusta. Kuninkaanlinna ja
+       * Łazienkin puisto ovat jo lehdessä eivätkä toistu. Lisenssit,
+       * tekijät ja koot todennettu Commonsin API:sta, kuvat katsottu
+       * silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Old Town in Warsaw view from Vistula 2019a.jpg',
+          selite: 'Vanhakaupunki Veikselin toiselta puolelta: '
+            + 'rantatörmällä seisoo rivi kapeita valkoisia, keltaisia ja '
+            + 'punaruskeita taloja punaisine tiilikattoineen, ja '
+            + 'vasemmalla nousee punatiilinen goottilainen kirkko '
+            + 'vihertävine kuparikattoineen. Joki on tyyni ja heijastaa '
+            + 'talot, puissa on vasta hiirenkorvat.',
+          lahde: 'Adrian Grycuk, Wikimedia Commons (CC BY-SA 3.0 PL)',
+        },
+        {
+          tiedosto: '2018-07-08 Krakowskie Przedmieście, Warszawa.jpg',
+          selite: 'Leveä kävelykatu matalassa auringossa: taivas on '
+            + 'lähes musta sadepilvistä, mutta talojen julkisivut '
+            + 'hehkuvat oranssinkeltaisina. Vasemmalla kohoaa vaalea '
+            + 'kellotorni vihreine kupoleineen, oikealla on ravintoloiden '
+            + 'terassipöytiä, ja kivetty katu kiiltää valossa lähes '
+            + 'tyhjänä.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Panoramic view from Palace of Culture and Science in Warsaw.jpg',
+          selite: 'Nykykeskusta ylhäältä pilvisenä päivänä: keskellä '
+            + 'nousee purjeeksi kaartuva lasitorni, vasemmalla tumma '
+            + 'pilvenpiirtäjä antenneineen ja oikealla vaaleanvihreä '
+            + 'hotellitorni. Alhaalla näkyvät ostoskeskuksen kaartuva '
+            + 'lasikatto ja monikaistainen katu, jolla kulkee keltaisia '
+            + 'raitiovaunuja.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -7518,6 +7594,44 @@ export const KULTTUURI_KATEGORIAT = {
             + 'miekka ja kädessä tanko. Pinta on tummunut vihertäväksi.',
           lahde: 'Kynnap, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Tallinnan raatihuone',
+        },
+      ],
+          /*
+       * AVAUSKUVAT (18.8.2026): kolme suuntaa ja kaksi vuodenaikaa.
+       * Toompealta alakaupungin ja muurien yli merelle, Kohtuotsalta
+       * raatihuoneen tornin takaa uuteen keskustaan, ja kaupunki
+       * kokonaan siluettina mereltä talvella — sama näkymä, jonka
+       * mereltä saapuja näkee ensimmäisenä. Lisenssit, tekijät ja koot
+       * todennettu Commonsin API:sta, kuvat katsottu silmin.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Tallinn Landmarks 01.jpg',
+          selite: 'Alakaupunki Toompean rinteeltä kesäpäivänä: etualalla '
+            + 'kohoaa kaupunginmuurin harmaita kivitorneja punaisine '
+            + 'kartiokattoineen, ja keskellä nousee Olevisten kirkon '
+            + 'vaalea torni tummine huippuineen. Horisontissa siintää '
+            + 'meri ja sataman rakenteita.',
+          lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tallinn view from Kohtuotsa 2018.jpg',
+          selite: 'Kohtuotsan näköalapaikalta uuteen keskustaan: '
+            + 'alareunassa ovat vanhankaupungin punaiset tiilikatot ja '
+            + 'päätykolmiot, ja niiden yllä kohoaa raatihuoneen kapea '
+            + 'tumma torni tuuliviireineen. Tornin takana seisoo rivi '
+            + 'lasipintaisia toimistotorneja — keskiaikainen ja '
+            + 'nykyinen kaupunki samassa kuvassa.',
+          lahde: 'VargaA, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Talvine Tallinn.jpg',
+          selite: 'Kaupungin siluetti meren takaa talvipäivänä: '
+            + 'etualalla rannassa on jäälohkareita ja rikkonaista '
+            + 'ahtojäätä, kauempana meri on auki ja höyryää pakkasessa. '
+            + 'Usvan yläpuolella erottuu torniviiva kirkkojen kapeine '
+            + 'huippuineen ja oikealla sataman nostureita.',
+          lahde: 'Enel Lepik, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },

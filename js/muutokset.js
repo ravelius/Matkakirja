@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 909, teksti: 'Avauskuvat Varsovaan, Krakovaan ja Tallinnaan' },
   { v: 908, teksti: 'Avauskuvat Prahaan, Tukholmaan ja Venetsiaan' },
   { v: 907, teksti: 'Avauskuvat Lissaboniin, Dubliniin ja Edinburghiin' },
   { v: 906, teksti: 'Avauskuvat Ateenaan, Madridiin ja Barcelonaan' },
