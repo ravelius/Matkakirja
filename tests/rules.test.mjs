@@ -4241,23 +4241,21 @@ test('valokuvakysymys ei näytä kuvaa siitä kaupungista, jossa seistään', ()
 });
 
 /*
- * INLINE-KATON ON VÄHENNETTÄVÄ TURVA-ALUEET.
+ * NÄHTÄVYYSARKIN INLINE-KATON ON VÄHENNETTÄVÄ TURVA-ALUEET.
  *
  * Omistajan havainto 16.8.2026: *"iPhonella matkaoppaan otsikko jää
  * piiloon ja ipadillakin se on liian yläreunassa kiinni."*
  *
- * Juurisyy: mitoitaArkinKorkeus kirjoittaa max-heightin INLINE-tyylinä,
- * joka voittaa CSS:n jokaisen säännön — myös nähtävyysarkin oman
- * `calc(100dvh - 3rem - turva-yla - turva-ala)`:n. Kun inline-katto
- * vähensi vain 1,6 remiä eikä turva-alueita lainkaan, kortti sai
- * kasvaa loveuksen ali. Opasarkki on ankkuroitu alareunaan, joten
- * ylijäämä valuu YLÖS ja ensimmäisenä sen alle jää otsikko.
- *
- * Mitattu selaimessa iPhonen turva-arvoilla (59/34 px): vanhalla
- * kaavalla otsikon yläreuna oli 36 px eli loveuksen alla, uudella
- * 151 px. iPadilla 33 px → 91 px.
+ * Nähtävyys- ja opasarkki (#nahtavyys-dialog) on ainoa arkki, joka
+ * saa yhä korkeutensa JS:stä (lehtiarkin pystymitat ovat 18.8.2026
+ * alkaen CSS-ankkureita — ks. seuraava testi). Sen inline-katto
+ * voittaa CSS:n jokaisen max-height-säännön, joten sen on itse
+ * vähennettävä turva-alueet ja käytettävä CSS:n kanssa samaa 3remin
+ * pehmustetta — löysempi katto päästäisi kortin loveuksen ali ja
+ * otsikko peittyisi (mitattu iPhonen turva-arvoilla 59/34 px:
+ * vanhalla kaavalla otsikon yläreuna 36 px eli loveuksen alla).
  */
-test('arkin inline-katto vähentää turva-alueet', () => {
+test('nähtävyysarkin inline-katto vähentää turva-alueet', () => {
   const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
   const katto = ui.match(/mitoitaArkinKorkeus\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
   assert.ok(katto, 'mitoitaArkinKorkeus puuttuu ui.js:stä');
@@ -4267,13 +4265,11 @@ test('arkin inline-katto vähentää turva-alueet', () => {
       `katto ei lue ${muuttuja}-muuttujaa — kortti kasvaa turva-alueen ali`);
   }
 
-  /*
-   * Nähtävyys- ja opasarkilla CSS varaa 3rem, lehdellä 1,6rem. Jos
-   * inline-katto antaa molemmille saman pienen pehmusteen, se on
-   * opasarkilla LÖYSEMPI kuin CSS ja otsikon peitto palaa.
-   */
+  // Katto koskee VAIN nähtävyysarkkia; lehtiarkki elää ankkureilla.
   assert.match(katto, /nahtavyys-arkki/,
-    'katto ei erottele nähtävyysarkkia — sen pehmuste on CSS:ssä isompi');
+    'katto ei erottele nähtävyysarkkia');
+  assert.match(katto, /3 \* rem/,
+    'katto ei käytä CSS:n 3remin pehmustetta — löysempi katto palauttaa otsikon peiton');
 
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
   assert.match(css, /--turva-yla:\s*env\(safe-area-inset-top/,
@@ -4283,19 +4279,12 @@ test('arkin inline-katto vähentää turva-alueet', () => {
 
   /*
    * KATTO KUULUU MYÖS KORTILLE. Omistajan havainto 16.8.2026:
-   * *"alaosa ei näy kunnolla ipadilla"* — v797 kavensi DIALOGIN
-   * kattoa turva-alueiden verran, mutta kortilla on oma
-   * `calc(100dvh - 1.6rem)`, joka ei kaventunut. Kortti kasvoi
-   * dialoginsa yli (mitattu 32 px iPadilla) ja työnsi alalaidan
-   * napit ruudun alle. Kortti on dialogin sisällä, joten sen katto ei
-   * saa koskaan olla dialogin kattoa löysempi.
+   * *"alaosa ei näy kunnolla ipadilla"* — kortti kasvoi dialoginsa
+   * yli (mitattu 32 px iPadilla) ja työnsi alalaidan napit ruudun
+   * alle, kun katto oli vain dialogilla.
    */
   assert.match(katto, /dialog-card/,
     'kattoa ei kirjoiteta kortille — kortti voi kasvaa dialoginsa yli');
-
-  const korttiSaanto = css.match(/\.dialog\.arkki \.dialog-card \{[\s\S]*?max-height:[^;]+;/)?.[0] ?? '';
-  assert.match(korttiSaanto, /--turva-yla/,
-    '.dialog.arkki .dialog-card -katto ei vähennä turva-alueita');
 });
 
 /*
@@ -4330,97 +4319,108 @@ test('arkin alapehmuste varaa kotipalkin myös leveällä ruudulla', () => {
 });
 
 /*
- * ARKIN KORKEUSKATTO EI SAA NOJATA PELKKÄÄN dvh:hon.
+ * LEHTIARKIN PYSTYMITAT OVAT ANKKUREITA, EIVÄT KORKEUSARVOJA.
  *
- * Omistajan havainto 16.8.2026 iPadilla: *"alareunasta puuttuu
- * navigointi näppäimet jotka jäävät jonkun vaalean laatikon taakse.
- * Bugi alkaa kun käy jossain toisessa sovelluksessa ja palaa
- * takaisin."* Sama perhe kuin aiemmat leveysoireet: WKWebView pitää
- * taustalta palatessa vanhan viewportin voimassa, ja jos vanha oli
- * korkeampi kuin nykyinen ruutu, dvh-katto venyttää kortin ruudun ali.
- * Silloin kortin alanapit (Etsi kätkö, Jatka matkaa, Sulje) katoavat
- * paperin alle — eikä niitä saa esiin vierittämälläkään, koska sisältö
- * mahtuu venyneeseen korttiin eikä kortti enää vieri.
+ * 18.8.2026, koko v784–v851-perheen juurisyy (omistajan kuvakaappaus
+ * Firenzen lehdestä iPadilla: "Alareuna bugittaa vieläkin"). Lehden
+ * alareuna oli johdettu korkeusARVOSTA — CSS:ssä 100dvh:sta, JS:ssä
+ * mitatuista pikseleistä — ja jokainen arvolähde voi WebKitissä
+ * vanhentua: dvh/vw jumiutuvat taustapaluussa, visualViewport
+ * valehtelee hetkittäin ja resize voi jäädä tulematta, jolloin JS:n
+ * kertaalleen kirjoittama pikselimitta jää voimaan ikuisesti.
+ * Jokainen vanhentuma näkyi alareunassa: sumea ::backdrop-kaista
+ * liian lyhyen arkin alla tai alanapit ruudun alla liian pitkän.
  *
- * Leveys on jo mitattu ja kirjoitettu pikseleinä (mitoitaArkki). Tämä
- * testi vartioi, että korkeudella on sama turva ja että se herää
- * samoista tapahtumista.
+ * Uusi malli: arkki venytetään top/bottom-ankkureilla fixed-laatikon
+ * (= asetteluviewportin) reunoihin ja kortti täyttää sen
+ * prosenteilla. Ankkurit ratkeavat asetteluviewportista, joka on
+ * WKWebView'ssä oikein silloinkin kun dvh on jumissa (v784 osoitti:
+ * clientHeight oikein, dvh väärin). Tämä testi vartioi, ettei
+ * kumpaankaan mediahaaraan palaa dvh:ta eikä JS:ään korkeuskirjoitusta.
  */
-test('arkin korkeus mitataan pikseleinä eikä jätetä dvh:n varaan', () => {
+test('lehtiarkin pystymitat ovat ankkureita eivätkä korkeusarvoja', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+
+  // Yksikään .dialog.arkki-säännöstön korkeus ei saa nojata dvh:hon.
+  // Haetaan kaikki säännöt, joiden valitsin alkaa .dialog.arkki
+  // (nahtavyys-arkin omat säännöt ovat .dialog.nahtavyys-arkki ja
+  // .dialog.arkki.nahtavyys-arkki — jälkimmäinen EI ala pisteellä+
+  // arkki-parilla yksin, joten se rajataan pois erikseen).
+  const arkkiSaannot = [...css.matchAll(/^(\s*)\.dialog\.arkki[^{]*\{[\s\S]*?\n\1\}/gm)]
+    .map((m) => m[0])
+    .filter((s) => !s.includes('nahtavyys'));
+  assert.ok(arkkiSaannot.length >= 4, `arkki-sääntöjä löytyi vain ${arkkiSaannot.length}`);
+  for (const saanto of arkkiSaannot) {
+    for (const rivi of saanto.match(/^\s*(?:max-)?height:[^;]+;/gm) ?? []) {
+      assert.doesNotMatch(rivi, /dvh/,
+        `lehtiarkin pystymitta nojaa taas dvh:hon (jumiutuu WKWebView'ssä): ${rivi.trim()}`);
+    }
+  }
+
+  // Leveä ruutu: ankkurit turva-alueiden sisään ja venytys (height:
+  // auto + margin 0) — alareuna on määritelmänsä mukaan näkyvän
+  // alueen alareuna miinus turva-ala miinus rako.
+  assert.match(css, /top: calc\(var\(--turva-yla\) \+ 0\.8rem\);/,
+    'leveän ruudun yläankkuri puuttuu');
+  assert.match(css, /bottom: calc\(var\(--turva-ala\) \+ 0\.8rem\);/,
+    'leveän ruudun ala-ankkuri puuttuu');
+
+  // JS ei kirjoita lehtiarkille korkeuksia: mitoitaArkinKorkeus vain
+  // siivoaa vanhat inline-mitat ja jättää ankkurit voimaan.
   const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
-
-  const mittaus = ui.match(/mittaaNakymanKorkeus\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
-  assert.ok(mittaus, 'mittaaNakymanKorkeus puuttuu ui.js:stä');
-  assert.match(mittaus, /NAKYMAN_VAHIMMAISKORKEUS/,
-    'korkeusmitta ei hylkää roskalukemia');
-  /*
-   * PIENEMPI VOITTAA. Liian matala kortti on hieman ruma, liian korkea
-   * vie napit kokonaan — epävarmuus ratkaistaan siis pienemmän hyväksi.
-   * Jos tämä vaihtuu joskus Math.maxiksi, vika palaa sellaisenaan.
-   */
-  assert.match(mittaus, /Math\.min\(/,
-    'korkeudeksi ei valita pienempää mittaa — kortti voi venyä ruudun ali');
-
   const katto = ui.match(/mitoitaArkinKorkeus\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
   assert.ok(katto, 'mitoitaArkinKorkeus puuttuu ui.js:stä');
-  assert.match(katto, /dialog\.arkki/,
-    'katto ei koske kaikkia arkkeja (myös nähtävyys- ja opasarkki tarvitsee sen)');
-  assert.match(katto, /maxHeight/, 'katto ei kirjoita max-heightia');
+  assert.match(katto, /el\.style\.height = '';/,
+    'lehtiarkin vanhoja inline-korkeuksia ei siivota — vanha pikselimitta voi jäädä ankkurien tielle');
+  assert.match(katto, /el\.style\.maxHeight = '';/,
+    'lehtiarkin vanhaa inline-kattoa ei siivota');
 
-  // Vahti herää taustapaluusta: ilman tätä kutsua katto jäisi vanhaksi
-  // juuri siinä tilanteessa, jossa vika ilmenee.
+  // Vahti kutsuu siivousta yhä joka heräämisellä (nähtävyysarkin katto
+  // ja mahdollisten vanhojen inline-mittojen purku).
   const vahti = ui.match(/tarkistaNakyma\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
   assert.match(vahti, /mitoitaArkinKorkeus\(\)/,
-    'näkymävahti ei päivitä arkin korkeutta');
+    'näkymävahti ei päivitä arkkien korkeuksia');
+
+  // Korkeusmittari säilyy nähtävyysarkkia ja korkeushyppyvahtia
+  // varten: roskaraja ja pienemmän mitan valinta eivät saa kadota.
+  const mittaus = ui.match(/mittaaNakymanKorkeus\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.ok(mittaus, 'mittaaNakymanKorkeus puuttuu ui.js:stä');
+  assert.match(mittaus, /NAKYMAN_VAHIMMAISKORKEUS/, 'korkeusmitta ei hylkää roskalukemia');
+  assert.match(mittaus, /Math\.min\(/,
+    'korkeudeksi ei valita pienempää mittaa — nähtävyyskortti voi venyä ruudun ali');
 });
 
 /*
- * PUHELIMEN LEHDESTÄ EI VÄHENNETÄ TURVA-ALUEITA.
+ * PUHELIMEN LEHTI ON KOKO RUUTU VENYTYKSENÄ, EI dvh:NA.
  *
  * Omistajan kaappaus 17.8.2026 iPhonella (Berliinin kaupunkilehti):
  * *"lehtidialogin alareunaan jää sumennettu vaakakaista, jonka takaa
  * näkyy pelin kartta, ja lehden alanavigointi jää kaistan alle"*.
- *
- * Syy oli tässä katossa. Kapealla ruudulla CSS tekee lehdestä koko
- * ruudun (`inset: 0; margin: 0; height: 100dvh`) ja varaa turva-alueet
- * KORTIN PEHMUSTEENA. Kun pikselikatto vähensi 1,6 remiä ja molemmat
- * turva-alueet myös siellä, ylösankkuroitu arkki kutistui ja koko
- * vähennys jäi tyhjäksi kaistaksi alareunaan (mitattu 119 px eli 14 %
- * iPhonen ruudusta). Kaistan läpi kuulsi kartta dialogin sumennetun
- * ::backdropin takaa.
- *
- * Kapealla ruudulla katto on siis mitattu näkymä sellaisenaan; leveällä
- * arkki kelluu keskitettynä, jolloin vähennys on oikein.
+ * Kapealla ruudulla lehti on koko ruutu ja turva-alueet varataan
+ * kortin pehmusteena. Koko ruutu määritellään inset 0 + height auto
+ * -venytyksenä: se seuraa asetteluviewporttia joka asettelussa eikä
+ * voi jumiutua kuten 100dvh tai kertaalleen mitattu pikseliluku.
  */
-test('kapealla ruudulla lehtiarkki saa koko mitatun korkeuden', () => {
-  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
-  const katto = ui.match(/mitoitaArkinKorkeus\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
-  assert.ok(katto, 'mitoitaArkinKorkeus puuttuu ui.js:stä');
-
-  // Sama 700 px:n raja kuin CSS:n media queryissä ja mitoitaArkissa.
-  assert.match(katto, /< 700/,
-    'katto ei erottele kapeaa ruutua — puhelimen täysruutulehti kutistuu turva-alueiden verran');
-  // Nähtävyysarkki on keskitetty myös puhelimessa, joten se pitää
-  // vanhan laskun: ilman poikkeusta se venyisi loveuksen ali.
-  assert.match(katto, /kapea && !arkki\.classList\.contains\('nahtavyys-arkki'\)/,
-    'kapean ruudun täysikorkeus ei rajaudu lehtiarkkiin');
-  // Myös height kirjoitetaan pikseleinä: juuri CSS:n 100dvh on se,
-  // joka jumiutuu taustapaluussa.
-  assert.match(katto, /style\.height = taysi/,
-    'kapean ruudun korkeutta ei kirjoiteta pikseleinä (100dvh jää jumiutuvaksi)');
-  assert.match(katto, /arkki\.style\.height = '';/,
-    'leveällä ruudulla kapean tilan inline-korkeutta ei nollata — kääntäminen jättäisi sen voimaan');
+test('kapean ruudun lehtiarkki venytetään koko ruutuun ankkureilla', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const kapea = css.match(/@media \(max-width: 699px\) \{[\s\S]*?\n\}/)?.[0] ?? '';
+  assert.ok(kapea, 'kapean ruudun media-lohko puuttuu');
+  const arkki = kapea.match(/\.dialog\.arkki \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.match(arkki, /inset: 0;/, 'kapean ruudun arkkia ei ankkuroida joka reunaan');
+  assert.match(arkki, /height: auto;/,
+    'kapean ruudun arkki ei venytä ankkureihin — korkeusarvo voi vanhentua');
+  const kortti = kapea.match(/\.dialog\.arkki \.dialog-card \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.match(kortti, /height: 100%;/,
+    'kapean ruudun kortti ei täytä venytettyä dialogia prosentteina');
 });
 
 /*
- * ROSKAMITTA EI SAA PALAUTTAA dvh:TA VOIMAAN.
+ * NÄHTÄVYYSARKIN KATTO EI PUTOA dvh:N VARAAN ROSKAMITALLA.
  *
  * mitoitaArkinKorkeus poisti katon kokonaan, kun mittaus palautti
  * nollan — ja silloin arkki jäi CSS:n `100dvh`-säännön varaan. Juuri
- * se dvh jumiutuu WKWebView'n taustapaluussa: liian pieneksi jäänyt
- * arkki jättää alleen sumennetun ::backdropin tumman kaistan (sama
- * oire kuin v834:ssä puhelimen lehdessä). Roskamitalla pidetään siis
- * viimeisin kelvollinen PIKSELImitta, ei dvh:ta.
+ * se dvh jumiutuu WKWebView'n taustapaluussa. Roskamitalla pidetään
+ * siis viimeisin kelvollinen PIKSELImitta, ei dvh:ta.
  */
 test('arkin katto ei putoa dvh:n varaan roskamitalla', () => {
   const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
@@ -4430,6 +4430,38 @@ test('arkin katto ei putoa dvh:n varaan roskamitalla', () => {
     'kelvollista korkeusmittaa ei oteta talteen');
   assert.match(katto, /mitattu \|\| this\.arkinKelpoKorkeus/,
     'roskamitalla ei palata viimeisimpään kelvolliseen mittaan — katto putoaa jumiutuvan dvh:n varaan');
+});
+
+/*
+ * TAUSTAPALUU JOHTAA KARTAN GEOMETRIAN UUDELLEEN, EI VERTAA MUISTETTUUN.
+ *
+ * Omistajan kuvakaappaus 18.8.2026 (Afrikka-näkymä iPadilla): kartan
+ * vasempaan reunaan jäi pergamentinvärinen pystykaista, kartta oli
+ * työntynyt oikealle ja vasemman ylänurkan tekstit piirtyivät
+ * päällekkäin — sama oirepari kuin v789:ssä ja v837:ssä. Aiemmat
+ * vahdit elvyttivät vain kun MITATTU koko erosi MUISTETUSTA;
+ * taustapaluussa on tiloja, joissa mitat täsmäävät mutta piirretty
+ * geometria on vanhaa (WKWebView oikaisee asettelun ilman resizea,
+ * tai paluun ensihetken mitat ovat vanhat ja oikenevat myöhemmin).
+ * Paluu näkyviin ajaa siksi idempotentin sovituksen (fitViewBox +
+ * nähtävyyskatto) heti sekä 400 ja 1600 ms päästä.
+ */
+test('taustapaluu sovittaa kartan geometrian uudelleen', () => {
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const vahdinta = ui.match(/vahdiNakymanKokoa\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.match(vahdinta, /this\.paluuVahti = /, 'taustapaluun sovitusvahti puuttuu');
+  assert.match(vahdinta, /addEventListener\('visibilitychange', this\.paluuVahti\)/,
+    'sovitus ei herää taustapaluusta');
+  assert.match(vahdinta, /addEventListener\('pageshow', this\.paluuVahti\)/,
+    'sovitus ei herää sivun palautuksesta välimuistista');
+  const sovitus = ui.match(/sovitaTaustapaluu\(\) \{[\s\S]*?\n {2}\}/)?.[0] ?? '';
+  assert.ok(sovitus, 'sovitaTaustapaluu puuttuu ui.js:stä');
+  assert.match(sovitus, /fitViewBox\(\)/, 'sovitus ei laske kartan geometriaa uusiksi');
+  assert.match(sovitus, /400\)/, 'sovitukselta puuttuu 400 ms:n jälkitarkistus');
+  assert.match(sovitus, /1600\)/, 'sovitukselta puuttuu 1600 ms:n jälkitarkistus');
+  // Purku: kuollut instanssi ei saa jäädä sovittamaan uuden rinnalle.
+  assert.match(ui, /removeEventListener\('visibilitychange', this\.paluuVahti\)/,
+    'sovitusvahtia ei pureta destroy-polulla');
 });
 
 /*
@@ -4531,9 +4563,12 @@ test('karusellinuolen tausta pysyy läpinäkyvänä hoverissa, fokuksessa ja pai
  */
 test('leveällä ruudulla arkin ankkurilaatikko on turva-alueiden sisällä', () => {
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  // Lehtiarkilla ankkuri sisältää myös näkyvän raon (+ 0.8rem, ks.
+  // ankkurimalli 18.8.2026); nähtävyysarkilla se on paljas turva-arvo.
   for (const valitsin of ['\\.dialog\\.arkki', '\\.dialog\\.nahtavyys-arkki']) {
     const saanto = new RegExp(
-      `${valitsin} \\{[^}]*top:\\s*var\\(--turva-yla\\)[^}]*bottom:\\s*var\\(--turva-ala\\)`,
+      `${valitsin} \\{[^}]*top:\\s*(?:var|calc\\(var)\\(--turva-yla\\)[^}]*`
+      + `bottom:\\s*(?:var|calc\\(var)\\(--turva-ala\\)`,
     );
     assert.match(css, saanto,
       `${valitsin.replace(/\\/g, '')} ei siirrä ankkurilaatikkoaan turva-alueiden sisään`
