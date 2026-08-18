@@ -23,16 +23,21 @@ tunnistettava yksilö (esim. Kristian IV:n kruunu).
 
 ## Yhtenäinen tyyli (liitetään jokaisen promptin alkuun)
 
-> Vintage children's adventure book illustration of [ESINE],
-> painted in warm gouache with fine ink outlines. The object sits
-> centered on aged parchment paper background with soft vignette
-> edges, lit warmly from the upper left like candlelight. Rich
-> detail on the object, plain background, no text, no people,
-> no borders. Square 1:1. Muted antique palette with one strong
-> accent color from the object itself.
+Voimassa oleva kääre on `tools/generoi-aarrekuvat.mjs`:n `TYYLI` —
+omistajan palaute 9.8.2026 vaihtoi pergamenttitaustan mustaan
+("generoi aarteet uudestaan niin että nousevat mustasta… kuva ilman
+rajoja keskelle jonka ympärille tekstit"):
 
-Sävy: sama kuin pelin arkkien paperitausta (#f7f5f0 → kellertävä
-pergamentti), jotta kortti istuu paljastusruutuun.
+> Vintage children's adventure book illustration of [ESINE],
+> painted in warm gouache with fine ink outlines, emerging from
+> pure black darkness. The object is centered and lit warmly by
+> unseen candlelight from the upper left; everything around it
+> fades smoothly into solid pure black (#000000) at the edges.
+> No background scenery, no parchment, no frame, no border, no
+> text, no people, no candle visible. […]
+
+Sävy: esine hehkuu kynttilänvalossa mustaa vasten, jolloin kuvan reunat
+sulautuvat saumatta paljastuskortin mustaan taustaan.
 
 ## Esinepromptit ([ESINE]-kohtaan; suluissa pohjakuva jos käytetään)
 
@@ -114,17 +119,41 @@ pergamentti), jotta kortti istuu paljastusruutuun.
 31. Lapin kulta (Suomi) — "gold flakes in a wooden panning dish
     with cold river water"
 
-## Tilanne 9.8.2026
+## Tilanne 18.8.2026
 
-Kaikki 21 manneraarretta generoitu `gemini-3-pro-image`-mallilla
-(tools/generoi-aarrekuvat.mjs), pienennetty 640 px JPEG:ksi ja
-kytketty peliin (assets/aarteet/, v455). Pääaarteet (22–31) odottavat
-omistajan erillistä tilausta.
+Kaikki 28 maailmankartan aarrekuvaa generoitu `gemini-3-pro-image`-
+mallilla (tools/generoi-aarrekuvat.mjs), pienennetty 640 px JPEG:ksi ja
+kytketty peliin (assets/aarteet/): seitsemän mannerta × (tähti + rubiini
++ smaragdi + topaasi).
 
-## Putki (valmiina ajettavaksi kun avain tulee)
+**Paljastusnäkymiä on enää yksi** (omistajan linjaus 18.8.2026): löytö
+nousee mustasta generoituna kuvana, ja tekstit asettuvat sen ympärille.
+Vanha kääntyvä seepialaatta sädeviivoineen on poistettu koodista,
+tyyleistä ja dokumenteista. Laatta, jolta kuva vielä puuttuu, näyttää
+saman kortin PELKKINÄ TEKSTEINÄ — kuva on siis ainoa keino saada kortti
+näyttämään miltään.
 
-1. `AARRE_API_KEY=... node tools/generoi-aarrekuvat.mjs` (skripti
-   kirjoitetaan avaimen tyypin mukaan — OpenAI tai Google).
+Ilman generoitua kuvaa ovat vielä:
+
+- **Viisas Pöllö** (`assets/tietaja/viisas-pollo.jpg`, avain
+  `viisas-pollo`) — generoidaan tietäjäavatarien putkella
+  (tools/generoi-tietaja-avatarit.mjs), koska se on hahmomuotokuva eikä
+  esine. Kun kuva on katselmoitu, se lisätään myös sw.js:n SHELLiin.
+- Rekisteristä poistettujen koelautojen aarteet: **Suomi** (Lapin kulta,
+  Spektroliitti, Rubiini, Smaragdi) ja **Istanbul** (Sulttaanin
+  timantti, Turkoosi, Rubiini, Smaragdi) — promptit 30–31 alla.
+- **Vanha maailma / aloitusnäytön lauta** (Magellanin kompassi + kolme
+  jalokiveä), prompti 29.
+- Kuvattomat laatat, jotka EIVÄT ole aarteita: hevosenkenkä, rosvo ja
+  tyhjä kotelo. Näillä ei ole koskaan ollut kuvaa; jos omistaja haluaa
+  niillekin kortin kuvan, se on oma tilauksensa.
+
+Taikalasi käyttää varustekuvaansa (`assets/varusteet/varuste-*.jpg`)
+samassa näkymässä.
+
+## Putki
+
+1. `NODE_USE_ENV_PROXY=1 GOOGLE_API_KEY=... node tools/generoi-aarrekuvat.mjs [avain …]`
 2. Ulos: `assets/aarteet/aarre-<tunnus>.png`, 1024×1024, ~200-400 kt.
 3. Silmätarkistus jokaiselle (sama laatupassi kuin valokuville).
 4. Pakettien `kuva`-kentät osoitetaan paikallisiin tiedostoihin

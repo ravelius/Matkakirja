@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 859, teksti: 'Kaikki aarteet uuteen paljastusnäkymään' },
   { v: 858, teksti: 'Vuosisäähän ylin ja alin lämpötila (vaihteluvyöhyke)' },
   { v: 857, teksti: 'Pro-tuottajat: koodit, profiilit ja tekijasivut' },
   { v: 856, teksti: 'Viisas Pöllö on löydettävä aarre' },

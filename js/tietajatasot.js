@@ -24,7 +24,9 @@
  * tasolle pöllömuotokuvan nimellä `assets/tietaja/taso-NN.jpg`, jossa
  * NN on tämän taulukon `taso` kaksinumeroisena. Kuvia ei vielä käytetä
  * missään; kun ne otetaan käyttöön, polku johdetaan tasonumerosta eikä
- * uutta kenttää tarvita.
+ * uutta kenttää tarvita. Sama työkalu tekee myös Viisaan Pöllön oman
+ * muotokuvan (avain `viisas-pollo`), jonka aarteenpaljastus näyttää
+ * (js/pollo.js POLLO_AARRE.kuva).
  *
  * OMA MODUULI: taulukko on sisältöä (päätoimittajan päätös
  * 18.8.2026), ja sekä js/game.js (nousun tunnistus) että js/ui.js

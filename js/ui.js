@@ -191,8 +191,6 @@ import {
   drawTerrain,
   drawTokenIcon,
   drawWaves,
-  revealFaceSvg,
-  revealRaysSvg,
   tokenIconSvg,
   paperi,
   kasinPiirretty,
@@ -9695,16 +9693,6 @@ export class UI {
 
 
   /**
-   * Aarteen paljastus ruudun keskellä. Aarre, jolla on oma AI-kuva
-   * (star/ruby/emerald/topaz), NOUSEE MUSTASTA: kuva keskelle ilman
-   * kehyksiä ja tekstit sen ympärille (omistajan palaute 9.8.2026 —
-   * vanha kääntyvä laattakuva oli kuvan rinnalla sekava). Kuvattomat
-   * laatat (kenkä, rosvo, tyhjä, linssi) ja aarrekuvattomat laudat
-   * (Suomi, Istanbul) kääntyvät entiseen tapaan. Maailmankartalla
-   * aarre on löytömantereen aarre (aarreTyyppi; kaupunki on visan
-   * kaupunki, sillä paljastus tulee aina visan voitosta).
-   */
-  /**
    * Nuoren herran hihkaisu aarteen paljastushetkellä (omistajan
    * tilaus 10.8.2026: "pitäisi kuulua se lyhyt hihkaisu jee").
    * Kolme sävyä kierrossa (riemu, hämmästys, hykertely). Vain
@@ -9721,6 +9709,62 @@ export class UI {
     audio.play().catch(() => vapautaPuhuja(this, audio));
   }
 
+  /**
+   * PALJASTUSKORTIN RUNKO — YKSI AINOA MALLI (omistajan linjaus
+   * 18.8.2026: "käytä jatkossa vain uudenlaista aarteenpaljastumis-
+   * näkymää … vanhat aarteet ja vanha aarreikkuna poistetaan
+   * kaikkialta").
+   *
+   * Löytö NOUSEE MUSTASTA: generoitu kuva keskelle ilman kehyksiä ja
+   * tekstit sen ympärille. Kääntyvää seepialaattaa sädeviivoineen ei
+   * enää ole — myöskään laatoille, joilta generoitu kuva vielä
+   * puuttuu: ne näyttävät saman kortin pelkkinä teksteinä, kunnes
+   * kuva on tehty. Sama runko palvelee laattapaljastusta ja Viisasta
+   * Pöllöä, jottei kahta erilaista aarreikkunaa pääse syntymään
+   * uudestaan.
+   *
+   * @param {string|null} kuva kuvan polku (assets/…) tai null
+   * @param {string} alt kuvan tekstivastine
+   * @returns {{overlay: HTMLElement, scene: HTMLElement, caption: HTMLElement,
+   *   kuvaEl: HTMLImageElement|null, ruksi: HTMLElement}}
+   */
+  rakennaPaljastus(kuva, alt) {
+    const overlay = html('div', 'reveal-overlay');
+    const scene = html('div', 'reveal-scene');
+    let kuvaEl = null;
+    if (kuva) {
+      kuvaEl = document.createElement('img');
+      kuvaEl.className = 'reveal-aarrekuva';
+      kuvaEl.alt = alt;
+      const [osoite, vara] = aarrekuvanOsoitteet(kuva);
+      // Puuttuva tiedosto (yhden tiedoston versio levyltä) ei saa
+      // jättää rikkinäistä kuvaketta — kortti jatkaa tekstillä.
+      asetaKuva(kuvaEl, osoite, vara, () => kuvaEl.remove());
+      scene.appendChild(kuvaEl);
+    }
+    const caption = html('div', 'reveal-caption');
+    scene.appendChild(caption);
+    overlay.appendChild(scene);
+    /*
+     * Ruksi kortin kulmaan ja kortti esillä koko luennan ajan
+     * (omistajan palaute 10.8.2026: "aarre häviää näkyvistä ennen
+     * kuin lukija ehtii lukea repliikkinsä loppuun"). Koko kortti
+     * sulkeutuu napautuksesta muutenkin — ruksi on sen näkyvä kahva.
+     */
+    const ruksi = html('button', 'reveal-sulje', '×');
+    ruksi.type = 'button';
+    ruksi.setAttribute('aria-label', 'Sulje paljastus');
+    overlay.appendChild(ruksi);
+    return { overlay, scene, caption, kuvaEl, ruksi };
+  }
+
+  /**
+   * Aarteen paljastus ruudun keskellä. Kuva on laattatyypin oma
+   * generoitu aarrekuva (packs/*.js kuva-kenttä) tai taikalasin
+   * varustekuva. Maailmankartalla aarre on löytömantereen aarre
+   * (aarreTyyppi; kaupunki on visan kaupunki, sillä paljastus tulee
+   * aina visan voitosta).
+   */
   async playTokenReveal(type) {
     const token = this.game.aarreTyyppi(type, this.game.quiz?.cityId);
     /*
@@ -9733,40 +9777,15 @@ export class UI {
      * Varustekuva (omistajan tilaus 10.8.2026: "tee varusteet kuviksi
      * samoin kuin aarteet"): löytynyt linssi nousee mustasta omalla
      * toimintakuvallaan kuten aarteet. Tunnus on jo tapahtumajonossa
-     * (revealToken kirjoitti sen); tyhjä kotelo jää kääntyväksi
-     * laataksi, koska sillä ei ole varustetta näytettävänä.
+     * (revealToken kirjoitti sen); tyhjä kotelo jää kuvattomaksi,
+     * koska sillä ei ole varustetta näytettävänä.
      */
     const linssiTunnus = type === 'linssi'
       ? (this.game.events?.find((e) => e.linssi)?.linssi ?? null) : null;
-    const onKuva = Boolean(token.kuva) || Boolean(linssiTunnus);
-    const overlay = html('div', `reveal-overlay${onKuva ? ' kuvallinen' : ''}`);
-    const scene = html('div', 'reveal-scene');
+    const kuva = linssiTunnus
+      ? `assets/varusteet/varuste-${linssiTunnus}.jpg` : (token.kuva ?? null);
+    const { overlay, caption, kuvaEl } = this.rakennaPaljastus(kuva, token.name);
 
-    let disc = null;
-    let aarrekuva = null;
-    let rays = null;
-    if (onKuva) {
-      aarrekuva = document.createElement('img');
-      aarrekuva.className = 'reveal-aarrekuva';
-      aarrekuva.alt = token.name;
-      const [osoite, vara] = aarrekuvanOsoitteet(linssiTunnus
-        ? `assets/varusteet/varuste-${linssiTunnus}.jpg` : token.kuva);
-      // Puuttuva tiedosto (yhden tiedoston versio levyltä) ei saa
-      // jättää rikkinäistä kuvaketta — kortti jatkaa tekstillä.
-      asetaKuva(aarrekuva, osoite, vara, () => aarrekuva.remove());
-    } else {
-      disc = html('div', `reveal-disc ${type}`);
-      const back = html('div', 'reveal-face reveal-back');
-      back.appendChild(revealFaceSvg('back'));
-      const front = html('div', 'reveal-face reveal-front');
-      front.appendChild(revealFaceSvg('front', type));
-      disc.appendChild(back);
-      disc.appendChild(front);
-      rays = revealRaysSvg();
-      rays.classList.add('reveal-rays');
-    }
-
-    const caption = html('div', 'reveal-caption');
     // Nuoren herran huudahdus ensin — se kuuluu juuri siihen hetkeen,
     // kun aarre tulee näkyviin; cliffhanger-teksti vasta sen jälkeen.
     const huudahdus = arvoHuudahdus(type, token);
@@ -9814,21 +9833,11 @@ export class UI {
      * Taikalasin kohdalla "Taikalasi" ei kerro vielä mitään: pelaajan
      * pitää nähdä KUMPI lasi löytyi ja mitä sillä näkee. Nimi ja kuvaus
      * asuvat linssimoduulissa (suunnitelman luku 3), joten ne haetaan
-     * dynaamisella tuonnilla — eikä laatan kääntyminen jää sitä
-     * odottamaan, vaan teksti täydentyy paikalleen kun se saapuu.
+     * dynaamisella tuonnilla — eikä kortin nousu jää sitä odottamaan,
+     * vaan teksti täydentyy paikalleen kun se saapuu.
      */
     if (type === 'linssi') void this.taydennaLinssiPaljastus(caption);
 
-    if (onKuva) {
-      scene.appendChild(aarrekuva);
-    } else {
-      const stage = html('div', 'reveal-stage');
-      stage.appendChild(rays);
-      stage.appendChild(disc);
-      scene.appendChild(stage);
-    }
-    scene.appendChild(caption);
-    overlay.appendChild(scene);
     // Dialogi on top layerissa, joten paljastus lisätään sen sisään.
     this.quizDialog.appendChild(overlay);
 
@@ -9837,18 +9846,12 @@ export class UI {
     // pitää ehtiä lukea. Napautus tai ruksi ohittaa odotuksen.
     const seliteMs = ((REVEAL_SUB[type] ?? '').length + (kaari?.aarre?.length ?? 0)) * 45;
     /*
-     * Ruksi kortin kulmaan ja kortti esillä koko luennan ajan
-     * (omistajan palaute 10.8.2026: "aarre häviää näkyvistä ennen
-     * kuin lukija ehtii lukea repliikkinsä loppuun"). Kortti odottaa
-     * sekä vähimmäislukuajan ETTÄ luennan lopun; ruksi tai napautus
-     * sulkee heti, ja silloin kertoja feidataan pois — muuten ääni
-     * jatkuisi tyhjän kartan päällä. Varmuusraja pitää huolen, ettei
-     * jumittunut äänen lataus jätä korttia ikuiseksi ruudulle.
+     * Kortti odottaa sekä vähimmäislukuajan ETTÄ luennan lopun; ruksi
+     * tai napautus sulkee heti, ja silloin kertoja feidataan pois —
+     * muuten ääni jatkuisi tyhjän kartan päällä. Varmuusraja pitää
+     * huolen, ettei jumittunut äänen lataus jätä korttia ikuiseksi
+     * ruudulle.
      */
-    const ruksi = html('button', 'reveal-sulje', '×');
-    ruksi.type = 'button';
-    ruksi.setAttribute('aria-label', 'Sulje paljastus');
-    overlay.appendChild(ruksi);
     const napautus = new Promise((resolve) => {
       overlay.addEventListener('pointerdown', resolve, { once: true });
     });
@@ -9863,36 +9866,18 @@ export class UI {
     const odota = (min) => Promise.race([Promise.all([this.wait(min), luentaValmis]), napautus]);
 
     if (this.reducedMotion) {
-      if (onKuva) {
-        aarrekuva.classList.add('shown');
-      } else {
-        disc.classList.add('flipped');
-        rays.classList.add('shown');
-      }
+      kuvaEl?.classList.add('shown');
       caption.classList.add('shown');
       sfx.play(treasureSound(type));
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       await odota(900 + seliteMs);
-    } else if (onKuva) {
+    } else {
       // Kuva nousee mustasta: hidas häivytys ja kasvu, ei kääntöä.
       await this.wait(420);
-      aarrekuva.classList.add('shown');
+      kuvaEl?.classList.add('shown');
       sfx.play(treasureSound(type));
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
       await this.wait(760);
-      caption.classList.add('shown');
-      await odota(1250 + seliteMs);
-      overlay.classList.add('leaving');
-      await this.wait(300);
-    } else {
-      await this.wait(420);
-      disc.classList.add('flipped');
-      sfx.play('flip');
-      await this.wait(760);
-      sfx.play('clack');
-      sfx.play(treasureSound(type));
-      if (hihkaisu) this.soitaHihkaisu(hihkaisu);
-      rays.classList.add('shown');
       caption.classList.add('shown');
       await odota(1250 + seliteMs);
       overlay.classList.add('leaving');
@@ -9926,10 +9911,11 @@ export class UI {
   /**
    * VIISAS PÖLLÖ PALJASTUU AARTEENA (omistajan tilaus 18.8.2026).
    *
-   * Sama kortti ja sama rytmi kuin laatan paljastuksessa: laatta
-   * kääntyy, sädeviivat syttyvät ja tekstit nousevat. Pöllöllä ei ole
-   * AI-aarrekuvaa, joten se käyttää kääntyvää laattaa kuten kenkä ja
-   * taikalasi — kuvake piirretään js/mapart.js:n omalla haarallaan.
+   * Sama kortti ja sama rytmi kuin laatan paljastuksessa: pöllön oma
+   * generoitu muotokuva (POLLO_AARRE.kuva, tools/generoi-tietaja-
+   * avatarit.mjs avain viisas-pollo) nousee mustasta ja tekstit
+   * asettuvat sen ympärille. Kääntyvää laattaa ei ole enää millään
+   * paljastuksella (omistajan linjaus 18.8.2026).
    *
    * Ei pisteitä, ei rahaa, ei laukkutavaraa: pöllön paikka
    * matkalaukussa on tietäjäpisterivin kuvake, joka on ollut siellä
@@ -9939,36 +9925,14 @@ export class UI {
    * kuplat puretaan.
    */
   async naytaPolloAarre() {
-    const overlay = html('div', 'reveal-overlay');
-    const scene = html('div', 'reveal-scene');
-
-    const stage = html('div', 'reveal-stage');
-    const disc = html('div', 'reveal-disc pollo');
-    const back = html('div', 'reveal-face reveal-back');
-    back.appendChild(revealFaceSvg('back'));
-    const front = html('div', 'reveal-face reveal-front');
-    front.appendChild(revealFaceSvg('front', 'pollo'));
-    disc.appendChild(back);
-    disc.appendChild(front);
-    const rays = revealRaysSvg();
-    rays.classList.add('reveal-rays');
-    stage.appendChild(rays);
-    stage.appendChild(disc);
-    scene.appendChild(stage);
-
-    const caption = html('div', 'reveal-caption');
+    const { overlay, caption, kuvaEl } = this.rakennaPaljastus(
+      POLLO_AARRE.kuva, POLLO_AARRE.nimi,
+    );
     caption.appendChild(html('span', 'reveal-huudahdus', POLLO_AARRE.huudahdus));
     caption.appendChild(html('strong', '', POLLO_AARRE.nimi));
     caption.appendChild(html('span', '', POLLO_AARRE.selite));
     caption.appendChild(html('p', 'reveal-isoisa', POLLO_AARRE.esittely));
-    scene.appendChild(caption);
-    overlay.appendChild(scene);
     this.quizDialog.appendChild(overlay);
-
-    const ruksi = html('button', 'reveal-sulje', '×');
-    ruksi.type = 'button';
-    ruksi.setAttribute('aria-label', 'Sulje paljastus');
-    overlay.appendChild(ruksi);
 
     /*
      * Esittely luetaan kertojan äänellä kuten tarinakaaren
@@ -9994,19 +9958,15 @@ export class UI {
     const seliteMs = (POLLO_AARRE.selite.length + POLLO_AARRE.esittely.length) * 45;
 
     if (this.reducedMotion) {
-      disc.classList.add('flipped');
-      rays.classList.add('shown');
+      kuvaEl?.classList.add('shown');
       caption.classList.add('shown');
       sfx.play(treasureSound('star'));
       await odota(900 + seliteMs);
     } else {
       await this.wait(420);
-      disc.classList.add('flipped');
-      sfx.play('flip');
-      await this.wait(760);
-      sfx.play('clack');
+      kuvaEl?.classList.add('shown');
       sfx.play(treasureSound('star'));
-      rays.classList.add('shown');
+      await this.wait(760);
       caption.classList.add('shown');
       await odota(1250 + seliteMs);
       overlay.classList.add('leaving');
