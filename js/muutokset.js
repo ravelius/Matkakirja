@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 849, teksti: 'Raamattuun: lukijoiden ehdotukset -kanavan linjaus' },
   { v: 848, teksti: 'Karusellinuolen vaalea harso pois napautuksen jälkeen' },
   { v: 847, teksti: 'Neljä uusittua miniatyyriä kartalle (erä 3)' },
   { v: 846, teksti: 'Flickr-valokuvat Firenzen ja Tampereen lehtiin' },
