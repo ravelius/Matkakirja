@@ -2006,6 +2006,11 @@ export function paivitaLukija(nappi, { vahimmais = LUETTAVAN_VAHIMMAIS } = {}) {
  * eikä uusi ikkunatyyppi unohdu säännön ulkopuolelle, kunhan se on
  * dialog tai postikortti.
  *
+ * YKSI POIKKEUS: pöllön kuvasuurennos (.pollo-kuvatausta, pollo.js).
+ * Kuvan avaaminen kuuluu meneillään olevaan vastaukseen — pelaaja
+ * katsoo kuvaa, jonka pöllö juuri näytti — joten puhe saa jatkua
+ * sen alla (omistajan tilaus 18.8.2026).
+ *
  * Lukijan omat pinnat (lukija-paneeli, kelluva kaiutin) eivät ole
  * kumpaakaan lajia, joten ne eivät osu sääntöön — ja automoodin
  * sivunkäännöt vaihtavat sisältöä jo auki olevassa dialogissa, joten
@@ -2023,6 +2028,9 @@ if (typeof document !== 'undefined' && typeof MutationObserver === 'function') {
     for (const muutos of muutokset) {
       if (muutos.type === 'attributes') {
         if (muutos.target.tagName === 'DIALOG' && muutos.target.open) {
+          // Pöllön kuvasuurennos on saman vastauksen katsomista, ei
+          // sisällöstä poistumista: puhe jatkuu (omistaja 18.8.2026).
+          if (muutos.target.classList.contains('pollo-kuvatausta')) continue;
           pysaytaLukija();
           return;
         }
