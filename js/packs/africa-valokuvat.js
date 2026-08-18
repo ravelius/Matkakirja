@@ -1409,6 +1409,16 @@ export function valokuvaVara(tiedosto, leveys) {
  * megatavua — puhelinverkossa se olisi hitaampi kuin hyödyllinen.
  */
 export function valokuvaSuurennos(tiedosto, leveys) {
+  /*
+   * Rajattu Flickr-kuva (`rajattu: true`) on repossa eri rajauksena kuin
+   * Flickrissä: jättipanoraamasta on otettu keskiosa. Sen suurennos on
+   * siksi repon oma kopio — muuten napautus vaihtaisi kuvan toiseksi
+   * kuin se, jonka pelaaja näki ja jota kuvateksti selittää.
+   */
+  if (VALOKUVAT_FLICKR.get(tiedosto)?.rajattu) {
+    const paikallinen = VALOKUVAT_PAIKALLISET.get(tiedosto);
+    if (paikallinen && omaKansio()) return `assets/valokuvat/${paikallinen}`;
+  }
   return flickrOsoite(tiedosto, 'h') ?? commonsUrl(tiedosto, leveys);
 }
 
