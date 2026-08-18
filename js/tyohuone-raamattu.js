@@ -273,7 +273,7 @@ export const RAAMATTU = {
         'Pelin on auettava siitä mitä ruudulla näkyy — ei ulkoa '
           + 'opettelua. Kuvat oikeita ja tarkistettuja.',
         'Rahalla apua: visavihje ja 50:50 (hinnat: Talous).',
-        'Katalogi ja uudet ehdotukset: Pelit-välilehti. Uudet '
+        'Katalogi ja uudet ehdotukset: Raamatun Pelit taulukkona -sivu. Uudet '
           + 'tyypit pilotoidaan yhdessä kaupungissa.',
       ],
     },
@@ -328,7 +328,7 @@ export const RAAMATTU = {
           + 'Rakenne: aihejaksot isoine kuvineen, tekstinosto sekä '
           + 'sää- ja suunnittelulaatikot '
           + '(docs/kuvakasikirjoitukset.md + työlistan speksit).',
-        'Valmiustilanne kaupungeittain: Tilanne-välilehti, ei tämä.',
+        'Valmiustilanne kaupungeittain: Tilastot-lehti, ei tämä.',
       ],
     },
     {
@@ -512,7 +512,7 @@ export const RAAMATTU = {
           + 'superlinssi = alle 80 päivän palkinto · visavihje / '
           + 'aarrevihje = ks. Talous · johtolause = isoisän äänen '
           + 'esittelytapa · lehtikaupunki / maalehti = luettava '
-          + 'lehti · työhuone = kehittäjän sivusto.',
+          + 'lehti · työhuone = kehittäjävivun takaiset lehdet pelissä.',
       ],
     },
     {

@@ -208,5 +208,6 @@ docs/kapulanvaihto.md arkistoitiin 15.8. — odottavat omistajaa):
    tekstityyli on määritelty omistajan kanssa (isoisan-raamattu.md,
    "AVOIMET PÄÄTÖKSET").
 
-Ajantasainen tilannetaulu on `js/tyohuone-tilanne.js` (työhuoneen
-etusivu).
+Ajantasainen tilannetaulu on `js/tyohuone-tilanne.js` (pelissä
+kehittäjätilan Tilannelehti — erillinen työhuonesivusto poistettiin
+18.8.2026).

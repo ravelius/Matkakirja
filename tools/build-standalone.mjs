@@ -137,6 +137,7 @@ const MODULES = [
   // versioon.
   'js/tyohuone-raamattu.js',
   'js/tyohuone-tilanne.js',
+  'js/tyohuone-pelit.js',
   // Lukijaäänen oletusten näyttökopio (main.js tuo sen dialogiin).
   'js/puhe-oletukset.js',
   'js/packs/tarinakaari.js',
@@ -220,6 +221,10 @@ const MODULES = [
   // M6: luenta ennen visaa (visa tuo kertojafunktiot).
   'js/luenta.js',
   'js/visa.js',
+  // Tilastot-lehti ennen lehteä (lehti.js tuo sen staattisesti). Se
+  // lukee pack.js:n, sisältötaulut ja ui-apurit, jotka ovat yllä —
+  // laskenta tapahtuu vasta kun liite avataan.
+  'js/tyohuone-tilastot.js',
   // M5c: maalehden koneisto ennen lehteä (lehti tuo sen piirtäjät).
   'js/maalehti.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).

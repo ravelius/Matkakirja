@@ -34,7 +34,7 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-vuosisaa | Vuosisääkortti (käyrä, sadepalkit, korostus) |
 | savuke-lehden-mitta | Arkin leveys (jumiutunut viewportti, resize) |
 | savuke-paivityspopup | Versionumeron päivitysnappi |
-| savuke-kaupunkitaulut | Kaupunkilehtien taulut |
+| savuke-kehittajalehti | Kehittäjän liitteet: Raamattu, Tilannelehti ja Tilastot-lehden vetolaatikkotaulu |
 | savuke-lippuikkuna | Lippuikkunan pikselit (ison lipun terävyys, tarkennettu vaakuna kortin sisällä) |
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |
 

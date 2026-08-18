@@ -4,6 +4,10 @@
  *  2. Raamattu aukeaa lehtenä: sivuja johdanto + jokainen osio,
  *     sisältö oikeasta datasta, sivunvaihto toimii.
  *  3. Tilannelehti aukeaa: Tilanne- ja Testattavaa-sivut riveineen.
+ *  4. Tilastot-lehti (18.8.2026, korvaa poistetun tyohuone.html:n
+ *     kaupunkitaulusavukkeen): mannerrivit aukeavat ja sulkeutuvat,
+ *     maan alla ovat sen kaupungit, ja leveä taulu vierittyy omassa
+ *     kotelossaan eikä venytä sivua vaakaan 390 px ruudulla.
  *
  * Pöllöpalvelin katkaistaan — liitteet eivät saa tuottaa verkkokutsuja.
  */
@@ -70,7 +74,11 @@ const raamattu = await sivu.evaluate(async () => {
     auki: Boolean(dialogi?.open),
     otsikko,
     sivuja: ui.tutkiSivuja(),
-    odotus: m.RAAMATTU.osiot.length + 2, // kansi-indeksi 0 + johdanto + osiot
+    // kansi-indeksi 0 + johdanto + osiot + osioiden generoidut
+    // taulusivut (Aarteet, Tutki kätkö -pelit).
+    odotus: m.RAAMATTU.osiot.length + 2
+      + m.RAAMATTU.osiot.filter((o) => o.otsikko.startsWith('Aarteet')
+        || o.otsikko.startsWith('Tutki kätkö')).length,
     ekaOk: /Raamattu/.test(eka),
     sisaltoOk: runko.includes('Koko pelin idea yhdessä dokumentissa'),
     toinenOk: /Ydinajatus/.test(toinen),
@@ -117,6 +125,109 @@ vaadi('Tilannelehti aukeaa ja Testattavaa-sivu seuraa',
 
 mkdirSync('/tmp/matkakirja-kaappaukset', { recursive: true });
 await sivu.screenshot({ path: '/tmp/matkakirja-kaappaukset/kehittajalehti.png' });
+
+// 4. Tilastot-lehti: vetolaatikot ja vaakavieritys.
+const avaaTilastot = async () => sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  document.querySelector('#arrival-dialog [aria-label="Sulje"], #arrival-dialog .dialog-close')?.click();
+  await odota(400);
+  document.getElementById('menu-btn')?.click();
+  await odota(200);
+  document.getElementById('tilastot-lehti-btn')?.click();
+  await odota(900);
+});
+await avaaTilastot();
+
+const tilastot = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const nakyvat = (valitsin) => [...document.querySelectorAll(valitsin)]
+    .filter((r) => !r.hidden).length;
+  const mannerit = [...document.querySelectorAll('#arrival-dialog .tk-manner')];
+  const alku = {
+    mantereita: mannerit.length,
+    maatNakyvissa: nakyvat('#arrival-dialog .tk-maa'),
+    kaupungitNakyvissa: nakyvat('#arrival-dialog .tk-kaupunki'),
+  };
+  // Eurooppa auki → maat näkyviin.
+  mannerit[0].click();
+  await odota(120);
+  const auki = {
+    maat: nakyvat('#arrival-dialog .tk-maa'),
+    kaupungit: nakyvat('#arrival-dialog .tk-kaupunki'),
+  };
+  // Ensimmäinen näkyvä maa auki → sen kaupungit näkyviin.
+  const maa = [...document.querySelectorAll('#arrival-dialog .tk-maa')].find((r) => !r.hidden);
+  const maanNimi = maa.querySelector('.tk-nimi-rivi b')?.textContent ?? '';
+  maa.click();
+  await odota(120);
+  const maaAuki = { kaupungit: nakyvat('#arrival-dialog .tk-kaupunki'), maanNimi };
+  // Manner kiinni → kaiken pitää sulkeutua.
+  mannerit[0].click();
+  await odota(120);
+  const kiinni = {
+    maat: nakyvat('#arrival-dialog .tk-maa'),
+    kaupungit: nakyvat('#arrival-dialog .tk-kaupunki'),
+  };
+  return { alku, auki, maaAuki, kiinni };
+});
+vaadi('Tilastot: mannerrivit aukeavat ja sulkeutuvat',
+  tilastot.alku.mantereita === 7 && tilastot.alku.maatNakyvissa === 0
+  && tilastot.auki.maat > 0 && tilastot.auki.kaupungit === 0
+  && tilastot.maaAuki.kaupungit > 0
+  && tilastot.kiinni.maat === 0 && tilastot.kiinni.kaupungit === 0,
+  JSON.stringify(tilastot));
+
+// Järjestysvipu: aakkoset → valmiit ylimpänä (omistajan toive).
+const jarjestys = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const napit = [...document.querySelectorAll('#arrival-dialog .tk-vipu-nappi')];
+  const maidenNimet = async () => {
+    const manner = document.querySelector('#arrival-dialog .tk-manner');
+    manner.click();
+    await odota(150);
+    return [...document.querySelectorAll('#arrival-dialog .tk-maa')]
+      .filter((r) => !r.hidden)
+      .map((r) => r.querySelector('.tk-nimi-rivi b').textContent);
+  };
+  const aakkoset = await maidenNimet();
+  napit[1].click();
+  await odota(250);
+  const valmius = await maidenNimet();
+  const muistettu = window.localStorage.getItem('matkakirja-tilastot-jarjestys');
+  napit[0].click();
+  await odota(250);
+  return { aakkoset: aakkoset.slice(0, 3), valmius: valmius.slice(0, 3), muistettu };
+});
+vaadi('Tilastot: järjestysvipu vaihtaa maiden järjestyksen ja muistaa valinnan',
+  jarjestys.aakkoset.length === 3
+  && jarjestys.aakkoset.join() !== jarjestys.valmius.join()
+  && jarjestys.muistettu === 'valmius',
+  JSON.stringify(jarjestys));
+
+// Kaappaukset: kooste ja auki oleva manner. Kortti vierittyy itse,
+// joten kuvat otetaan lehtidialogista.
+await avaaTilastot();
+await sivu.screenshot({ path: '/tmp/matkakirja-kaappaukset/tilastot-kooste.png' });
+const leveys = await sivu.evaluate(async () => {
+  const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+  const mannerit = [...document.querySelectorAll('#arrival-dialog .tk-manner')];
+  mannerit[0].click();
+  await odota(150);
+  const maa = [...document.querySelectorAll('#arrival-dialog .tk-maa')].find((r) => !r.hidden);
+  maa.click();
+  await odota(150);
+  const kortti = document.querySelector('#arrival-dialog .dialog-card');
+  const kotelo = document.querySelector('#arrival-dialog .tk-vieri');
+  return {
+    sivuVieritys: document.documentElement.scrollWidth > document.documentElement.clientWidth,
+    korttiVieritys: kortti.scrollWidth > kortti.clientWidth + 1,
+    koteloVierittyy: kotelo.scrollWidth > kotelo.clientWidth,
+  };
+});
+vaadi('Tilastot: leveä taulu vierittyy vain omassa kotelossaan (390 px)',
+  !leveys.sivuVieritys && !leveys.korttiVieritys && leveys.koteloVierittyy,
+  JSON.stringify(leveys));
+await sivu.screenshot({ path: '/tmp/matkakirja-kaappaukset/tilastot-manner-auki.png' });
 
 await selain.close();
 palvelin.close();

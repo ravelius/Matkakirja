@@ -11,7 +11,8 @@ import { kertojaTila, asetaKertojaTila } from './aani-ehdokkaat.js';
 import { asennaPollo } from './pollo.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
-  asetaPuheenNopeus, luePuheAsetukset, puheenNopeus, tallennaPuheAsetukset,
+  asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset, puheenNopeus,
+  puheenVoima, tallennaPuheAsetukset,
 } from './puhe.js';
 import { lueAaneen, pysaytaLukija } from './lukija.js';
 import { PUHE_OLETUKSET } from './puhe-oletukset.js';
@@ -44,7 +45,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.859';
+const APP_VERSION = '2026-08-09.860';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1084,6 +1085,9 @@ const puheAaniValinta = document.getElementById('puhe-aani');
 const puheOhjeKentta = document.getElementById('puhe-ohje');
 const puheNopeusLiuku = document.getElementById('puhe-nopeus');
 const puheNopeusArvo = document.getElementById('puhe-nopeus-arvo');
+// Voimakkuus siirtyi poistetulta työhuonesivustolta 18.8.2026.
+const puheVoimaLiuku = document.getElementById('puhe-voima');
+const puheVoimaArvo = document.getElementById('puhe-voima-arvo');
 
 const PUHE_AANIVAIHTOEHDOT = ['alloy', 'ash', 'ballad', 'coral', 'echo',
   'fable', 'nova', 'onyx', 'sage', 'shimmer', 'verse'];
@@ -1099,8 +1103,10 @@ const PUHE_NAYTTEET = {
 /** Napin näkyvyys seuraa kehittäjätilaa. */
 function paivitaPuheSaadin() {
   if (puheSaadinNappi) puheSaadinNappi.hidden = !kehittajaTilaPaalla();
-  // Työhuone (omistajan tilaus 15.8.2026): Raamattu, Tilannelehti ja
-  // Lukijaääni tyylinappeina + tilannepalkit — vain vivun takana.
+  // Työhuone (omistajan tilaus 15.8.2026, laajennettu 18.8.2026):
+  // Raamattu, Tilannelehti, Tilastot, Lukijoilta ja Lukijaääni
+  // tyylinappeina + tilannepalkit — vain vivun takana. Erillistä
+  // työhuonesivustoa ei enää ole.
   const kehittajaKotelo = document.getElementById('kehittaja-kotelo');
   if (kehittajaKotelo) kehittajaKotelo.hidden = !kehittajaTilaPaalla();
 }
@@ -1283,6 +1289,9 @@ document.getElementById('raamattu-lehti-btn')?.addEventListener('click', () => {
 document.getElementById('tilanne-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaTilanneLehti();
 });
+document.getElementById('tilastot-lehti-btn')?.addEventListener('click', () => {
+  window.matkakirja?.ui?.avaaTilastoLehti();
+});
 document.getElementById('lukijoilta-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaLukijoiltaLehti();
 });
@@ -1314,6 +1323,10 @@ function lataaPuheKentat() {
   puheOhjeKentta.value = oma.ohje ?? '';
   puheNopeusLiuku.value = String(puheenNopeus());
   puheNopeusArvo.textContent = `${puheenNopeus().toFixed(2)}×`;
+  if (puheVoimaLiuku) {
+    puheVoimaLiuku.value = String(puheenVoima());
+    puheVoimaArvo.textContent = `${puheenVoima().toFixed(2)}×`;
+  }
 }
 
 /** Tallettaa äänen ja promptin heti muutoksesta — ei erillistä nappia. */
@@ -1337,6 +1350,11 @@ if (puheDialog && puheSaadinNappi) {
   puheNopeusLiuku.addEventListener('input', () => {
     const nopeus = asetaPuheenNopeus(Number(puheNopeusLiuku.value));
     puheNopeusArvo.textContent = `${nopeus.toFixed(2)}×`;
+  });
+  // Voimakkuus vaikuttaa heti soivaan ääneen (js/puhe.js vahvistin).
+  puheVoimaLiuku?.addEventListener('input', () => {
+    const voima = asetaPuheenVoima(Number(puheVoimaLiuku.value));
+    puheVoimaArvo.textContent = `${voima.toFixed(2)}×`;
   });
   document.getElementById('puhe-oletus').addEventListener('click', () => {
     const kaikki = luePuheAsetukset();

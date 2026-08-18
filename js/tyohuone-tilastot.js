@@ -1,0 +1,809 @@
+/*
+ * TILASTOT — kehittäjän liite, joka kertoo missä rakennustyö menee
+ * (omistajan tilaus 18.8.2026: "siirrä työhuonesivuston tarpeellinen
+ * sisältö pelin kehittäjätilaan ja poista erillissivusto").
+ *
+ * Erillinen tyohuone.html poistettiin tämän myötä kokonaan. Sen kaksi
+ * aidosti käytössä ollutta taulua — Laudat ja Kaupunkilehdet
+ * mantereittain — yhdistyvät tässä yhdeksi vetolaatikkotauluksi, joka
+ * on rakennettu omistajan pyytämään järjestykseen:
+ *
+ *   MANNER  →  sen MAAT  →  kunkin maan KAUPUNGIT
+ *
+ * Mannerrivi on nappi. Auki klikattaessa paljastuvat sen maat, ja
+ * maarivi taas paljastaa omat kaupunkinsa. Näin lehdet ryhmittyvät
+ * niin, että maan rivin alla näkyvät aina juuri sen kaupungit.
+ *
+ * TILA LASKETAAN AINA PELIDATASTA, EI KÄSIN YLLÄPIDETYSTÄ LISTASTA.
+ * Jokainen sarake lukee saman paketin kuin peli itse (ks. LAHTEET
+ * alla), joten taulu ei voi näyttää vanhentunutta tietoa: kun paketti
+ * muuttuu, luku muuttuu samalla latauksella. Tämä oli erillisen
+ * työhuoneen paras piirre ja se säilyy sellaisenaan.
+ *
+ * LAHTEET sarakkeittain:
+ *   Lehti        KULTTUURI_KATEGORIAT[kaupunki], osio id 'kaupunki'
+ *   Aihesivut    saman listan muut osiot
+ *   Kartta       KAUPUNKIKARTAT[kaupunki]
+ *   Jutut        NAHTAVYYSJUTUT[kaupunki][kohde].teksti tai kohteen oma
+ *   Miniat.      MINIATYYRIT[kaupunki][kohde]
+ *   Merkintä     TARINAKAARI (kaari) tai SAAPUMISTEKSTIT (vanha)
+ *   Luenta       SAAPUMISLUENNAT ('lauta:kaupunki')
+ *   Sää          SAATIEDOT[kaupunki]
+ *   Kohtaam.     KOHTAAMISET[kaupunki]
+ *   Ääni         kaupungin oma ambience-kenttä laudalla
+ *   Kuvat        KAIKKI_VALOKUVAT[kaupunki]
+ *   Visa         laudan questions[kaupunki]
+ *   Maalehti     MAA_KATEGORIAT[maatunnus]
+ *   Maakartta    MAAKARTAT[maatunnus]
+ *   Lippu        maailmankartan countryShapes[maatunnus].lippu
+ *   Luvut        MAATIEDOT[maatunnus]
+ *   Radio        RADIOT[maatunnus]
+ */
+
+import { PACKS } from './pack.js';
+import { html } from './ui-apurit.js';
+import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
+import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
+import { KAUPUNKIKARTAT, MAAKARTAT } from './packs/maakartat.js';
+import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
+import { MINIATYYRIT } from './packs/miniatyyrit.js';
+import { SAATIEDOT } from './packs/saatiedot.js';
+import { KOHTAAMISET } from './packs/kohtaamiset.js';
+import { RADIOT } from './packs/radiot.js';
+import { TARINAKAARI } from './packs/tarinakaari.js';
+import { PELIT as KATKOPELIT } from './tyohuone-pelit.js';
+import {
+  SAAPUMISTEKSTIT, MAATIEDOT, KAIKKI_VALOKUVAT, ARTIKKELIT,
+  KIELET, SAAPUMISLUENNAT, luentaLauta,
+} from './sisaltotaulut.js';
+
+/*
+ * Mantereet siinä järjestyksessä, jossa työ etenee — ei
+ * aakkosjärjestyksessä. Yhdistelmälaudat maailma ja maailmankartta
+ * puuttuvat tarkoituksella: ne toistavat samat kaupungit, ja niiden
+ * rivit olisivat kaksinkertaista kirjanpitoa (sama rajaus oli
+ * erillisen työhuoneen tauluissa).
+ */
+const MANTEREET = [
+  ['europe', 'Eurooppa'],
+  ['middleeast', 'Lähi-itä'],
+  ['asia', 'Aasia'],
+  ['africa', 'Afrikka'],
+  ['oceania', 'Oseania'],
+  ['northamerica', 'Pohjois-Amerikka'],
+  ['southamerica', 'Etelä-Amerikka'],
+];
+
+/** Järjestysvalinnan muistipaikka (omistajan toive 18.8.2026). */
+const JARJESTYS_AVAIN = 'matkakirja-tilastot-jarjestys';
+
+function lueJarjestys() {
+  try {
+    return window.localStorage?.getItem(JARJESTYS_AVAIN) === 'valmius'
+      ? 'valmius' : 'aakkoset';
+  } catch { return 'aakkoset'; }
+}
+
+function tallennaJarjestys(arvo) {
+  try { window.localStorage?.setItem(JARJESTYS_AVAIN, arvo); } catch { /* yksityinen tila */ }
+}
+
+/*
+ * Kaupungin osat. Jokainen on yksi yksikkö valmiusasteessa, ja sama
+ * lista tuottaa sekä sarakkeet että osuuden — kaksi eri listaa
+ * ajautuisi väistämättä erilleen.
+ *
+ * `arvo` palauttaa joko totuusarvon (✓ / –) tai parin [tehty, kaikki],
+ * jolloin solu näyttää suhteen ja osuus saa murto-osan.
+ */
+const KAUPUNGIN_OSAT = [
+  {
+    avain: 'lehti',
+    otsikko: 'Lehti',
+    selite: 'kaupungilla on lehden kansiosio',
+    arvo: (c) => (KULTTUURI_KATEGORIAT[c.id] ?? []).some((k) => k.id === 'kaupunki'),
+  },
+  {
+    avain: 'aiheet',
+    otsikko: 'Aihesivut',
+    selite: 'kaupungin omat aihesivut kansiosion lisäksi',
+    arvo: (c) => (KULTTUURI_KATEGORIAT[c.id] ?? []).filter((k) => k.id !== 'kaupunki').length > 0,
+    luku: (c) => (KULTTUURI_KATEGORIAT[c.id] ?? []).filter((k) => k.id !== 'kaupunki').length,
+  },
+  {
+    avain: 'kartta',
+    otsikko: 'Kartta',
+    selite: 'piirretty kohdekartta',
+    arvo: (c) => Boolean(KAUPUNKIKARTAT[c.id]),
+  },
+  {
+    avain: 'jutut',
+    otsikko: 'Jutut',
+    selite: 'kartan kohteet, jotka avaavat oman jutun',
+    arvo: (c) => {
+      const kohteet = KAUPUNKIKARTAT[c.id]?.kohteet ?? [];
+      if (!kohteet.length) return null;
+      const tehty = kohteet.filter((k) => NAHTAVYYSJUTUT[c.id]?.[k.nimi]?.teksti || k.teksti).length;
+      return [tehty, kohteet.length];
+    },
+  },
+  {
+    avain: 'miniat',
+    otsikko: 'Miniat.',
+    selite: 'kartan kohteet, joilla on miniatyyripiirros',
+    arvo: (c) => {
+      const kohteet = KAUPUNKIKARTAT[c.id]?.kohteet ?? [];
+      if (!kohteet.length) return null;
+      const tehty = kohteet.filter((k) => MINIATYYRIT[c.id]?.[k.nimi]).length;
+      return [tehty, kohteet.length];
+    },
+  },
+  {
+    avain: 'merkinta',
+    otsikko: 'Merkintä',
+    selite: 'matkakirjamerkintä: "kaari" on uudistettu teksti, "vanha" vanhan mallin saapuminen',
+    arvo: (c) => Boolean(TARINAKAARI[c.id] || SAAPUMISTEKSTIT.maailmankartta[c.id]),
+    teksti: (c) => {
+      if (TARINAKAARI[c.id]) return 'kaari';
+      if (SAAPUMISTEKSTIT.maailmankartta[c.id]) return 'vanha';
+      return null;
+    },
+  },
+  {
+    avain: 'luenta',
+    otsikko: 'Luenta',
+    selite: 'merkinnän ääniluenta on generoitu',
+    arvo: (c, p) => Boolean(luentaLauta(SAAPUMISLUENNAT, p.id, c.id)),
+  },
+  {
+    avain: 'saa',
+    otsikko: 'Sää',
+    selite: 'säänormaalit vuosigraafiin',
+    arvo: (c) => Boolean(SAATIEDOT[c.id]),
+  },
+  {
+    avain: 'kohtaaminen',
+    otsikko: 'Kohtaam.',
+    selite: 'kaupungin kohtaamishahmo',
+    arvo: (c) => Boolean(KOHTAAMISET[c.id]),
+  },
+  {
+    avain: 'aani',
+    otsikko: 'Ääni',
+    selite: 'äänimaisema',
+    arvo: (c) => Boolean(c.ambience),
+  },
+  {
+    avain: 'kuvat',
+    otsikko: 'Kuvat',
+    selite: 'vanha valokuva eli kuvakortti',
+    arvo: (c) => Boolean(KAIKKI_VALOKUVAT[c.id]),
+  },
+  {
+    avain: 'artikkeli',
+    otsikko: 'Artikkeli',
+    selite: 'oma kirjoitettu artikkeli',
+    arvo: (c) => {
+      const a = ARTIKKELIT[c.wiki ?? c.name];
+      return Boolean(a?.artikkeli ?? a?.teksti);
+    },
+  },
+  {
+    avain: 'visa',
+    otsikko: 'Visa',
+    selite: 'tietovisakysymykset',
+    arvo: (c, p) => (p.questions?.[c.id] ?? []).length > 0,
+    luku: (c, p) => (p.questions?.[c.id] ?? []).length,
+  },
+  {
+    avain: 'kieli',
+    otsikko: 'Kieli',
+    selite: 'kielinäyte kaupungista',
+    arvo: (c) => Boolean(KIELET.maailmankartta[c.id]),
+  },
+];
+
+/*
+ * Maan omat osat. Ne eivät kuulu millekään yksittäiselle kaupungille
+ * vaan koko maalle, ja maalehti on niistä raskain työ (5–6 aihetta ×
+ * 4–5 nostoa) — siksi se on omana sarakkeenaan eikä kaupunkirivillä
+ * toistettuna.
+ */
+const MAAN_OSAT = [
+  {
+    avain: 'maalehti',
+    otsikko: 'Maalehti',
+    selite: 'maan lehden aihesivut',
+    arvo: (iso) => (MAA_KATEGORIAT[iso] ?? []).length > 0,
+    luku: (iso) => (MAA_KATEGORIAT[iso] ?? []).length,
+  },
+  {
+    avain: 'maakartta',
+    otsikko: 'Maakartta',
+    selite: 'maalehden korkokartta',
+    arvo: (iso) => Boolean(MAAKARTAT[iso]),
+  },
+  {
+    avain: 'lippu',
+    otsikko: 'Lippu',
+    selite: 'maalla on lippu kartalla',
+    arvo: (iso, maa) => Boolean(maa?.lippu),
+  },
+  {
+    avain: 'luvut',
+    otsikko: 'Luvut',
+    selite: 'maan tunnusluvut',
+    arvo: (iso) => Boolean(MAATIEDOT.maailmankartta[iso]),
+  },
+  {
+    avain: 'radio',
+    otsikko: 'Radio',
+    selite: 'radiolähetys maasta',
+    arvo: (iso) => Boolean(RADIOT[iso]),
+  },
+];
+
+/** Osan arvo tehty/kaikki-pariksi, jotta osuus lasketaan yhdellä säännöllä. */
+function pariksi(arvo) {
+  if (arvo === null || arvo === undefined) return null;
+  if (Array.isArray(arvo)) return arvo;
+  return [arvo ? 1 : 0, 1];
+}
+
+/*
+ * Yksi kaupunkirivi laskettuna. Lauta annetaan mukaan, koska
+ * kysymykset ja luennat ovat laudan omia (sama kaupunki voi olla
+ * usealla laudalla).
+ */
+function kaupunginTila(c, p) {
+  const solut = {};
+  let tehty = 0;
+  let kaikki = 0;
+  for (const osa of KAUPUNGIN_OSAT) {
+    const pari = pariksi(osa.arvo(c, p));
+    solut[osa.avain] = {
+      pari,
+      teksti: osa.teksti?.(c, p) ?? null,
+      luku: osa.luku?.(c, p) ?? null,
+    };
+    if (pari) { tehty += pari[0]; kaikki += pari[1]; }
+  }
+  return {
+    id: c.id, nimi: c.name, solut, tehty, kaikki,
+    osuus: kaikki ? tehty / kaikki : 0,
+  };
+}
+
+/** Yhden maan omat solut (maalehti, kartta, lippu, luvut, radio). */
+function maanTila(iso, maa) {
+  const solut = {};
+  let tehty = 0;
+  let kaikki = 0;
+  for (const osa of MAAN_OSAT) {
+    const pari = pariksi(osa.arvo(iso, maa));
+    solut[osa.avain] = { pari, luku: osa.luku?.(iso, maa) ?? null };
+    if (pari) { tehty += pari[0]; kaikki += pari[1]; }
+  }
+  return { solut, tehty, kaikki };
+}
+
+/** Rivijoukon sarakesummat: jokainen sarake omana tehty/kaikki-parinaan. */
+function summaa(rivit, avaimet) {
+  const summa = {};
+  for (const avain of avaimet) {
+    let tehty = 0;
+    let kaikki = 0;
+    let oli = false;
+    for (const rivi of rivit) {
+      const pari = rivi.solut?.[avain]?.pari ?? rivi.summa?.[avain];
+      if (!pari) continue;
+      oli = true;
+      tehty += pari[0];
+      kaikki += pari[1];
+    }
+    summa[avain] = oli ? [tehty, kaikki] : null;
+  }
+  return summa;
+}
+
+/*
+ * Koko taulun tila kerralla: mantereet, niiden maat ja maiden
+ * kaupungit. Lasketaan vasta kun lehti avataan, joten pelin
+ * käynnistys ei maksa tästä mitään.
+ */
+export function laskeTilastot() {
+  const maailma = PACKS.find((p) => p.id === 'maailmankartta');
+  const maaVara = maailma?.map?.cityCountry ?? {};
+  const muodot = maailma?.map?.countryShapes ?? {};
+  const mantereet = [];
+  for (const [id, nimi] of MANTEREET) {
+    const p = PACKS.find((x) => x.id === id);
+    if (!p) continue;
+    const maittain = new Map();
+    for (const c of p.cities) {
+      const iso = p.map?.cityCountry?.[c.id] ?? maaVara[c.id] ?? null;
+      const avain = iso ?? '—';
+      if (!maittain.has(avain)) {
+        maittain.set(avain, {
+          iso,
+          nimi: iso ? (muodot[iso]?.nimi ?? iso) : 'maatunnus puuttuu',
+          ...maanTila(iso, iso ? muodot[iso] : null),
+          kaupungit: [],
+        });
+      }
+      maittain.get(avain).kaupungit.push(kaupunginTila(c, p));
+    }
+    const maat = [...maittain.values()].map((maa) => {
+      const summa = summaa(maa.kaupungit, KAUPUNGIN_OSAT.map((o) => o.avain));
+      const kaupunkiTehty = maa.kaupungit.reduce((s, k) => s + k.tehty, 0);
+      const kaupunkiKaikki = maa.kaupungit.reduce((s, k) => s + k.kaikki, 0);
+      const tehty = kaupunkiTehty + maa.tehty;
+      const kaikki = kaupunkiKaikki + maa.kaikki;
+      return { ...maa, summa, tehty, kaikki, osuus: kaikki ? tehty / kaikki : 0 };
+    });
+    const kaupungit = maat.flatMap((m) => m.kaupungit);
+    const summa = {
+      ...summaa(kaupungit, KAUPUNGIN_OSAT.map((o) => o.avain)),
+      ...summaa(maat, MAAN_OSAT.map((o) => o.avain)),
+    };
+    const tehty = maat.reduce((s, m) => s + m.tehty, 0);
+    const kaikki = maat.reduce((s, m) => s + m.kaikki, 0);
+    mantereet.push({
+      id,
+      nimi,
+      maat,
+      kaupunkeja: kaupungit.length,
+      summa,
+      tehty,
+      kaikki,
+      osuus: kaikki ? tehty / kaikki : 0,
+    });
+  }
+  return mantereet;
+}
+
+/* ------------------------------------------------------------------ *
+ * PIIRTO
+ * ------------------------------------------------------------------ */
+
+const SARAKKEET = [
+  ...KAUPUNGIN_OSAT.map((o) => ({ ...o, taso: 'kaupunki' })),
+  ...MAAN_OSAT.map((o) => ({ ...o, taso: 'maa' })),
+];
+
+/*
+ * Solun sävy valmiusasteen mukaan (omistajan tarkennus 18.8.2026:
+ * "kevyt väritys sallittu ... hillityt sävyt pelin pergamentti-
+ * palettiin sovitettuina"). Kolme luokkaa riittää: valmis, kesken,
+ * puuttuu. Sävyt ovat samat kuin Raamatun valmiuschipeissä.
+ */
+function savy(pari) {
+  if (!pari || !pari[1]) return 'tk-tyhja';
+  if (pari[0] >= pari[1]) return 'tk-valmis';
+  if (pari[0] > 0) return 'tk-kesken';
+  return 'tk-puuttuu';
+}
+
+/** Solun teksti: ✓/– kaupunkiriveillä, suhde kooterivillä. */
+function soluTeksti(pari, { koonti, teksti, luku }) {
+  if (!pari) return '·';
+  if (teksti) return teksti;
+  if (koonti) return `${pari[0]}/${pari[1]}`;
+  if (pari[1] === 1) return pari[0] ? (luku ? `✓ ${luku}` : '✓') : '–';
+  return `${pari[0]}/${pari[1]}`;
+}
+
+function solu(pari, valinnat = {}) {
+  const td = html('td', `tk-num ${savy(pari)}`, soluTeksti(pari, valinnat));
+  return td;
+}
+
+/** Osuuspalkki nimisolun alle: yksi silmäys kertoo missä mennään. */
+function palkki(osuus) {
+  const kotelo = html('div', 'tk-palkki');
+  const tayte = html('div', 'tk-palkki-tayte');
+  tayte.style.width = `${Math.round(osuus * 100)}%`;
+  kotelo.appendChild(tayte);
+  return kotelo;
+}
+
+/** Mantereen tiivistelmä nimen alle ("lehdet 28/44 · kartat 12/44"). */
+function tiivistelma(manner) {
+  const osat = [];
+  const lisaa = (nimi, avain) => {
+    const pari = manner.summa[avain];
+    if (pari) osat.push(`${nimi} ${pari[0]}/${pari[1]}`);
+  };
+  lisaa('lehdet', 'lehti');
+  lisaa('kartat', 'kartta');
+  lisaa('merkinnät', 'merkinta');
+  lisaa('maalehdet', 'maalehti');
+  lisaa('liput', 'lippu');
+  return osat.join(' · ');
+}
+
+/** Nimisolu: sisennys, avausnuoli ja osuus. */
+function nimisolu(nimi, { taso, avattava, osuus, lisa }) {
+  const td = html('td', `tk-nimi tk-taso-${taso}`);
+  const sisus = html('div', 'tk-nimi-sisus');
+  if (avattava) sisus.appendChild(html('span', 'tk-nuoli', '▸'));
+  const teksti = html('div', 'tk-nimi-teksti');
+  const rivi = html('div', 'tk-nimi-rivi');
+  rivi.appendChild(html('b', '', nimi));
+  if (osuus != null) {
+    rivi.appendChild(html('span', 'tk-osuus', `${Math.round(osuus * 100)} %`));
+  }
+  teksti.appendChild(rivi);
+  if (osuus != null) teksti.appendChild(palkki(osuus));
+  if (lisa) teksti.appendChild(html('div', 'tk-lisa', lisa));
+  sisus.appendChild(teksti);
+  td.appendChild(sisus);
+  return td;
+}
+
+/**
+ * Tilastotaulu kokonaisuudessaan. Rakennetaan uudestaan joka kerta,
+ * kun järjestys vaihtuu — taulu on muutaman sadan rivin kokoinen,
+ * eikä osittainen päivitys olisi sen arvoista.
+ */
+function piirraTaulu(kohde, mantereet, jarjestys) {
+  const kotelo = html('div', 'tk-vieri');
+  const taulu = html('table', 'tk-taulu');
+  const otsikkoRivi = html('tr');
+  otsikkoRivi.appendChild(html('th', 'tk-nimi', 'Kohde'));
+  for (const s of SARAKKEET) {
+    const th = html('th', 'tk-num', s.otsikko);
+    th.title = s.selite;
+    otsikkoRivi.appendChild(th);
+  }
+  const paa = html('thead');
+  paa.appendChild(otsikkoRivi);
+  taulu.appendChild(paa);
+  const runko = html('tbody');
+
+  /* Järjestys: aakkoset tai valmiit ylimpänä (omistajan toive). */
+  const jarjesta = (lista) => (jarjestys === 'valmius'
+    ? [...lista].sort((a, b) => b.osuus - a.osuus || a.nimi.localeCompare(b.nimi, 'fi'))
+    : [...lista].sort((a, b) => a.nimi.localeCompare(b.nimi, 'fi')));
+
+  for (const manner of mantereet) {
+    const mannerRivi = html('tr', 'tk-rivi tk-manner');
+    mannerRivi.tabIndex = 0;
+    mannerRivi.setAttribute('role', 'button');
+    mannerRivi.setAttribute('aria-expanded', 'false');
+    mannerRivi.appendChild(nimisolu(manner.nimi, {
+      taso: 'manner',
+      avattava: true,
+      osuus: manner.osuus,
+      lisa: `${manner.maat.length} maata · ${manner.kaupunkeja} kaupunkia — ${tiivistelma(manner)}`,
+    }));
+    for (const s of SARAKKEET) {
+      mannerRivi.appendChild(solu(manner.summa[s.avain], { koonti: true }));
+    }
+    runko.appendChild(mannerRivi);
+
+    const maaRivit = [];
+    for (const maa of jarjesta(manner.maat)) {
+      const maaRivi = html('tr', 'tk-rivi tk-maa');
+      maaRivi.hidden = true;
+      maaRivi.tabIndex = 0;
+      maaRivi.setAttribute('role', 'button');
+      maaRivi.setAttribute('aria-expanded', 'false');
+      maaRivi.appendChild(nimisolu(maa.nimi, {
+        taso: 'maa',
+        avattava: true,
+        osuus: maa.osuus,
+        lisa: `${maa.kaupungit.length} kaupunkia`,
+      }));
+      for (const s of SARAKKEET) {
+        maaRivi.appendChild(s.taso === 'maa'
+          ? solu(maa.solut[s.avain]?.pari, { luku: maa.solut[s.avain]?.luku })
+          : solu(maa.summa[s.avain], { koonti: true }));
+      }
+      runko.appendChild(maaRivi);
+
+      const kaupunkiRivit = [];
+      for (const kaupunki of jarjesta(maa.kaupungit)) {
+        const rivi = html('tr', 'tk-rivi tk-kaupunki');
+        rivi.hidden = true;
+        rivi.appendChild(nimisolu(kaupunki.nimi, { taso: 'kaupunki', osuus: null }));
+        for (const s of SARAKKEET) {
+          if (s.taso === 'maa') { rivi.appendChild(html('td', 'tk-num tk-tyhja', '·')); continue; }
+          const tieto = kaupunki.solut[s.avain];
+          rivi.appendChild(solu(tieto.pari, { teksti: tieto.teksti, luku: tieto.luku }));
+        }
+        runko.appendChild(rivi);
+        kaupunkiRivit.push(rivi);
+      }
+
+      const avaaMaa = () => {
+        const auki = maaRivi.getAttribute('aria-expanded') === 'true';
+        maaRivi.setAttribute('aria-expanded', auki ? 'false' : 'true');
+        maaRivi.classList.toggle('auki', !auki);
+        for (const r of kaupunkiRivit) r.hidden = auki;
+      };
+      maaRivi.addEventListener('click', avaaMaa);
+      maaRivi.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); avaaMaa(); }
+      });
+      maaRivit.push({ maaRivi, kaupunkiRivit });
+    }
+
+    const avaaManner = () => {
+      const auki = mannerRivi.getAttribute('aria-expanded') === 'true';
+      mannerRivi.setAttribute('aria-expanded', auki ? 'false' : 'true');
+      mannerRivi.classList.toggle('auki', !auki);
+      for (const { maaRivi, kaupunkiRivit } of maaRivit) {
+        maaRivi.hidden = auki;
+        // Mantereen sulkeminen sulkee myös auki jääneet maat, muuten
+        // seuraava avaus paljastaisi kaupunkeja ilman maarivejään.
+        if (auki) {
+          maaRivi.setAttribute('aria-expanded', 'false');
+          maaRivi.classList.remove('auki');
+          for (const r of kaupunkiRivit) r.hidden = true;
+        }
+      }
+    };
+    mannerRivi.addEventListener('click', avaaManner);
+    mannerRivi.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); avaaManner(); }
+    });
+  }
+
+  taulu.appendChild(runko);
+  kotelo.appendChild(taulu);
+  kohde.appendChild(kotelo);
+}
+
+/** Järjestysvipu ja ohje taulun yläpuolelle. */
+function piirraOhjausrivi(kohde, piirraUudelleen) {
+  const rivi = html('div', 'tk-ohjaus');
+  rivi.appendChild(html('span', 'tk-ohjaus-nimi', 'Järjestys'));
+  const napit = html('div', 'tk-vipu');
+  const vaihtoehdot = [['aakkoset', 'aakkosittain'], ['valmius', 'valmiit ylimpänä']];
+  for (const [arvo, nimi] of vaihtoehdot) {
+    const nappi = html('button', 'tk-vipu-nappi', nimi);
+    nappi.type = 'button';
+    nappi.setAttribute('aria-pressed', String(lueJarjestys() === arvo));
+    nappi.addEventListener('click', () => {
+      tallennaJarjestys(arvo);
+      piirraUudelleen();
+    });
+    napit.appendChild(nappi);
+  }
+  rivi.appendChild(napit);
+  kohde.appendChild(rivi);
+}
+
+/** Koko sivun piirto (kutsutaan kategorian rakenna-koukusta). */
+function piirraTilastosivu(kohde) {
+  const mantereet = laskeTilastot();
+  const piirra = () => {
+    // Otsikko on jo piirretty; tyhjennetään vain oma sisältömme.
+    kohde.querySelectorAll('.tk-ohjaus, .tk-vieri, .tk-selite').forEach((n) => n.remove());
+    piirraOhjausrivi(kohde, piirra);
+    piirraTaulu(kohde, mantereet, lueJarjestys());
+    kohde.appendChild(html('p', 'tk-selite',
+      'Napauta mannerta: sen maat avautuvat, ja maan napautus paljastaa '
+      + 'sen kaupungit. ✓ = tehty, – = puuttuu, suhde = tehdyt kaikista. '
+      + 'Kooterivien luvut ovat sarakkeen summa. Osuus on rivin kaikkien '
+      + 'osien keskiarvo, maan omat osat mukaan lukien. Kaikki luvut '
+      + 'lasketaan pelin omista paketeista lehteä avattaessa — käsin '
+      + 'ylläpidettyä listaa ei ole.'));
+  };
+  piirra();
+}
+
+/* ------------------------------------------------------------------ *
+ * LEHDEN SIVUT
+ * ------------------------------------------------------------------ */
+
+/** Kokonaisluvut: montako mitäkin koko pelissä on. */
+function kokonaisluvut(mantereet) {
+  const kaupungit = new Set();
+  const maat = new Set();
+  for (const manner of mantereet) {
+    for (const maa of manner.maat) {
+      if (maa.iso) maat.add(maa.iso);
+      for (const k of maa.kaupungit) kaupungit.add(k.id);
+    }
+  }
+  const laske = (avain, taso) => {
+    let tehty = 0;
+    let kaikki = 0;
+    for (const manner of mantereet) {
+      const pari = manner.summa[avain];
+      if (!pari) continue;
+      tehty += pari[0];
+      kaikki += pari[1];
+    }
+    return { tehty, kaikki, taso };
+  };
+  return {
+    kaupunkeja: kaupungit.size,
+    maita: maat.size,
+    rivit: [...KAUPUNGIN_OSAT, ...MAAN_OSAT]
+      .map((o) => ({ nimi: o.otsikko, selite: o.selite, ...laske(o.avain) })),
+  };
+}
+
+/** Luvut-sivu: sama tieto tekstinä, suurin puute ensin. */
+function piirraLuvut(kohde) {
+  const mantereet = laskeTilastot();
+  const { kaupunkeja, maita, rivit } = kokonaisluvut(mantereet);
+  kohde.appendChild(html('p', 'johdanto',
+    `${kaupunkeja} eri kaupunkia ${maita} maassa seitsemällä mantereella. `
+    + 'Rivit ovat suurin puute ensin: mitä pidempi matka täyteen, sitä '
+    + 'ylempänä. Luvut lasketaan samoista paketeista kuin taulu.'));
+  kohde.appendChild(html('p', 'tk-selite',
+    'Kaikista-sarake laskee mannerrivit, joten porttikaupungit '
+    + '(Istanbul, Kairo, Teheran) ovat siinä kahdesti — ne kuuluvat '
+    + 'kahdelle laudalle. Kohdesarakkeet (Jutut, Miniat.) laskevat '
+    + 'kohdekarttojen kohteita, eivät kaupunkeja.'));
+  const kotelo = html('div', 'tk-vieri');
+  const taulu = html('table', 'tk-taulu tk-luvut');
+  const otsikko = html('tr');
+  for (const t of ['Osa', 'Tehty', 'Kaikista', 'Puuttuu']) {
+    otsikko.appendChild(html('th', t === 'Osa' ? 'tk-nimi' : 'tk-num', t));
+  }
+  const paa = html('thead');
+  paa.appendChild(otsikko);
+  taulu.appendChild(paa);
+  const runko = html('tbody');
+  const jarjestetyt = [...rivit].sort((a, b) => (b.kaikki - b.tehty) - (a.kaikki - a.tehty));
+  for (const rivi of jarjestetyt) {
+    const tr = html('tr', 'tk-rivi');
+    const nimi = html('td', 'tk-nimi');
+    nimi.appendChild(html('b', '', rivi.nimi));
+    nimi.appendChild(html('div', 'tk-lisa', rivi.selite));
+    tr.appendChild(nimi);
+    tr.appendChild(solu([rivi.tehty, rivi.kaikki], { koonti: true }));
+    tr.appendChild(html('td', 'tk-num', String(rivi.kaikki)));
+    tr.appendChild(html('td', 'tk-num', String(rivi.kaikki - rivi.tehty)));
+    runko.appendChild(tr);
+  }
+  taulu.appendChild(runko);
+  kotelo.appendChild(taulu);
+  kohde.appendChild(kotelo);
+}
+
+/* ------------------------------------------------------------------ *
+ * RAAMATUN GENEROIDUT TAULUT
+ *
+ * Poistetun työhuonesivuston Raamattu-välilehti liitti kahteen osioon
+ * taulukon, joka luettiin suoraan pelidatasta (omistajan tilaus
+ * 11.8.2026: "listata selkeästi kaikki tutki kätkö pelit sekä kaikki
+ * aarteet taulukoituna"). Taulut siirtyvät tänne ja liittyvät pelin
+ * Raamattu-lehteen omina sivuinaan — ne eivät voi vanhentua, koska
+ * lähde on sama kuin pelillä.
+ * ------------------------------------------------------------------ */
+
+const MANNERNIMI = {
+  europe: 'Eurooppa',
+  middleeast: 'Lähi-itä',
+  africa: 'Afrikka',
+  asia: 'Aasia',
+  northamerica: 'Pohjois-Amerikka',
+  southamerica: 'Etelä-Amerikka',
+  oceania: 'Oseania',
+};
+
+/** Yksinkertainen taulukko otsikoineen omassa vierityskotelossaan. */
+function pikataulu(otsikot, rivit) {
+  const kotelo = html('div', 'tk-vieri');
+  const taulu = html('table', 'tk-taulu');
+  const paa = html('thead');
+  const otsRivi = html('tr');
+  for (const o of otsikot) otsRivi.appendChild(html('th', '', o));
+  paa.appendChild(otsRivi);
+  taulu.appendChild(paa);
+  const runko = html('tbody');
+  for (const rivi of rivit) {
+    const tr = html('tr', 'tk-rivi');
+    rivi.forEach((solunSisus, i) => {
+      tr.appendChild(html('td', i === 0 ? 'tk-nimi' : '', String(solunSisus)));
+    });
+    runko.appendChild(tr);
+  }
+  taulu.appendChild(runko);
+  kotelo.appendChild(taulu);
+  return kotelo;
+}
+
+/** Mantereiden aarteet ja laattojen jakauma maailmankartan datasta. */
+function piirraAarretaulut(kohde) {
+  const maailma = PACKS.find((p) => p.id === 'maailmankartta');
+  const mannerit = Object.entries(maailma?.tokens?.mannerTypes ?? {});
+  const eka = mannerit[0]?.[1] ?? {};
+  kohde.appendChild(html('p', 'johdanto',
+    'Mantereiden aarteet — jokaisella mantereella omansa; laatta '
+    + 'paljastaa sen mantereen aarteen, jolta se löytyy. Unohdettu aarre '
+    + 'on Aarnin luettelon päämäärä, joka avaa mannerlennon.'));
+  kohde.appendChild(pikataulu(
+    ['Manner', 'Unohdettu aarre', `Aarre +${eka.ruby?.value ?? 1000} p`,
+      `Aarre +${eka.emerald?.value ?? 600} p`, `Aarre +${eka.topaz?.value ?? 300} p`],
+    mannerit.map(([manner, t]) => [
+      MANNERNIMI[manner] ?? manner,
+      t.star?.name ?? '?', t.ruby?.name ?? '?',
+      t.emerald?.name ?? '?', t.topaz?.name ?? '?',
+    ]),
+  ));
+  const maarat = maailma?.tokens?.counts ?? {};
+  const yhteensa = Object.values(maarat).reduce((a, b) => a + b, 0);
+  kohde.appendChild(html('p', 'tk-selite',
+    `Laattojen jakauma (${yhteensa} laattaa, yksi joka kaupungissa):`));
+  kohde.appendChild(pikataulu(['Laatta', 'Kpl', 'Vaikutus'], [
+    ['Pääaarre (unohdettu aarre)', maarat.star ?? 0,
+      '+2000 p JA jää matkalaukkuun näkyviin — avaa mannerlennon'],
+    [`Aarre +${eka.ruby?.value ?? 1000} p`, maarat.ruby ?? 0, 'Muuttuu heti rahaksi'],
+    [`Aarre +${eka.emerald?.value ?? 600} p`, maarat.emerald ?? 0, 'Muuttuu heti rahaksi'],
+    [`Aarre +${eka.topaz?.value ?? 300} p`, maarat.topaz ?? 0, 'Muuttuu heti rahaksi'],
+    ['Hevosenkenkä', maarat.horseshoe ?? 0, 'Varuste: kolmella hevosenkengällä rosvon voi ohittaa'],
+    ['Ryöstäjä', maarat.robber ?? 0, 'Vie rahat — tai voita kaksintaistelu'],
+    ['Tyhjä', maarat.empty ?? 0, 'Kätkö on tyhjä'],
+    ['Taikalasi', maarat.linssi ?? 0, 'Varuste: uusi tapa katsoa karttaa'],
+  ]));
+}
+
+/** Tutki kätkö -pelien katalogi (js/tyohuone-pelit.js). */
+function piirraPelitaulu(kohde) {
+  kohde.appendChild(html('p', 'johdanto',
+    `${KATKOPELIT.johdanto} Päivitetty ${KATKOPELIT.paivitetty}; Fable ylläpitää.`));
+  kohde.appendChild(pikataulu(['Peli', 'Tila', 'Kuvaus'], [
+    ...KATKOPELIT.nykyiset.map((p) => [p.nimi, p.tila, p.kuvaus]),
+    ...KATKOPELIT.ehdotukset.map((p) => [p.nimi, 'ehdotus — ei päätetty', p.kuvaus]),
+  ]));
+  kohde.appendChild(html('p', 'tk-selite',
+    'Ehdotuksia EI ole päätetty. Jokaisessa on mietitty valmiiksi, mihin '
+    + 'tarinoihin tyyppi istuu; valitut pilotoidaan yhdessä kaupungissa '
+    + 'ennen monistusta. Periaatteet: '
+    + KATKOPELIT.periaatteet.join(' · ')));
+}
+
+/**
+ * Raamatun osioon liittyvä generoitu taulusivu, tai null jos osiolla
+ * ei sellaista ole. Kutsutaan js/lehti.js:n avaaRaamattuLehti-
+ * funktiosta, joka pujottaa sivun osion perään.
+ */
+export function raamatunTaulusivu(osio, i) {
+  if (osio.otsikko.startsWith('Aarteet')) {
+    return {
+      id: `raamattu-${i}-aarteet`,
+      nimi: 'Aarteet taulukkona',
+      yksipalsta: true,
+      rakenna: piirraAarretaulut,
+    };
+  }
+  if (osio.otsikko.startsWith('Tutki kätkö')) {
+    return {
+      id: `raamattu-${i}-pelit`,
+      // Nimi eroaa Raamatun oman osion otsikosta, muuten sisällys-
+      // valikossa olisi kaksi samannimistä riviä peräkkäin.
+      nimi: 'Pelit taulukkona',
+      yksipalsta: true,
+      rakenna: piirraPelitaulu,
+    };
+  }
+  return null;
+}
+
+/**
+ * Tilastot-lehden sivut. Ensimmäinen sivu on itse taulu — se on
+ * lehden koko syy olla olemassa.
+ */
+export function tilastoSivut() {
+  return [
+    {
+      id: 'tilastot-taulu',
+      nimi: 'Mantereet',
+      yksipalsta: true,
+      rakenna: piirraTilastosivu,
+    },
+    {
+      id: 'tilastot-luvut',
+      nimi: 'Luvut',
+      yksipalsta: true,
+      rakenna: piirraLuvut,
+    },
+  ];
+}

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.859';
+const CACHE = 'matkakirja-2026-08-09.860';
 const SHELL = [
   './',
   './index.html',
@@ -100,6 +100,14 @@ const SHELL = [
   './js/packs/europe-saapumiset.js',
   './js/packs/tarinakaari.js',
   './js/tyohuone-kehitys-data.js',
+  // Kehittäjän liitteet (Raamattu, Tilanne, Tilastot ja sen
+  // pelikatalogi). Erillisen työhuonesivuston purkauduttua 18.8.2026
+  // nämä ovat pelin omia moduuleja: ui.js tuo ne staattisesti, joten
+  // ilman esilatausta koko peli jäisi offline käynnistymättä.
+  './js/tyohuone-raamattu.js',
+  './js/tyohuone-tilanne.js',
+  './js/tyohuone-pelit.js',
+  './js/tyohuone-tilastot.js',
   './js/packs/asia-saapumiset.js',
   './js/packs/northamerica-saapumiset.js',
   './js/packs/southamerica-saapumiset.js',
@@ -709,30 +717,16 @@ async function aaniPeilista(pyynto) {
 }
 
 /*
- * Työhuoneen tiedostot — sama palvelutyöntekijä, eri strategia.
+ * ERILLINEN TYÖHUONESIVUSTO ON POISTETTU (18.8.2026).
  *
- * Miksi yksi työntekijä kahdelle sovellukselle:
- *
- * Palvelutyöntekijän laajuus on sen oman hakemiston polku, ja sekä peli
- * että työhuone asuvat sivuston juuressa. Kaksi eri työntekijää samassa
- * laajuudessa EI toimi rinnakkain: jälkimmäinen rekisteröinti korvaa
- * edellisen. Peli ja työhuone siis vuorottelivat, ja jokainen vaihto
- * asensi työntekijän uudelleen.
- *
- * Näkyvät seuraukset olivat kaksi:
- *  1. Työhuoneessa vilkkui ikuisesti "uusi versio ladattu" -palkki,
- *     koska asennus alkoi joka avauksella alusta.
- *  2. Pelin offline-välimuisti tuhoutui aina kun työhuone avattiin —
- *     ja peli on julkaistu tuote, jonka pitää käynnistyä lentokoneessa.
- *
- * Jälkimmäinen oli vaarallisempi eikä näkynyt mitenkään.
- *
- * Strategiat pysyvät erillisinä: peli välimuisti ensin (aukeaa
- * lentokoneessa), työhuone verkko ensin (kertoo mikä pelissä juuri nyt
- * on, ja siinä vanha tieto on pahempi kuin hidas lataus).
+ * Tässä oli oma verkko-ensin-strategiansa tyohuone.html:lle ja sen
+ * moduuleille: kaksi sovellusta jakoi yhden palvelutyöntekijän, koska
+ * sama laajuus ei voi kuulua kahdelle. Sivusto purettiin ja työhuone
+ * elää nyt pelin sisällä kehittäjävivun takana (Raamattu-, Tilanne-,
+ * Tilastot- ja Lukijoilta-lehdet), joten js/tyohuone-*.js ovat pelin
+ * omia moduuleja ja kuuluvat SHELLiin kuten muutkin — välimuisti
+ * ensin, jotta peli käynnistyy lentokoneessa.
  */
-const TYOHUONE = (osoite) => /(?:^|\/)tyohuone(?:[-.]|$)/.test(osoite.pathname)
-  || /\/(?:css|js)\/tyohuone-/.test(osoite.pathname);
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -868,38 +862,6 @@ self.addEventListener('fetch', (event) => {
     );
     return;
   }
-  /*
-   * Työhuone: verkko ensin, välimuisti vain turvaverkoksi.
-   *
-   * Vain onnistuneet vastaukset talteen. Ilman tätä 404-sivu jäisi
-   * koriin ja näyttäisi ikuisesti siltä, ettei tiedostoa ole — vaikka
-   * se olisi jo lisätty.
-   */
-  if (TYOHUONE(osoite)) {
-    event.respondWith((async () => {
-      try {
-        /*
-         * no-cache ohittaa selaimen http-välimuistin: GitHub Pages
-         * antaa tiedostoille max-age=600, ja ilman tätä omistaja
-         * näki jopa 10 minuuttia vanhaa työhuonetta heti julkaisun
-         * jälkeen (havainto 8.8.2026). ETag-tarkistus pitää haun
-         * kevyenä — muuttumaton tiedosto palaa 304:nä.
-         */
-        const vastaus = await fetch(event.request, { cache: 'no-cache' });
-        if (vastaus && vastaus.ok) {
-          const kopio = vastaus.clone();
-          caches.open(CACHE).then((kori) => kori.put(event.request, kopio));
-        }
-        return vastaus;
-      } catch (virhe) {
-        const talletettu = await caches.match(event.request);
-        if (talletettu) return talletettu;
-        throw virhe;
-      }
-    })());
-    return;
-  }
-
   event.respondWith(
     caches.match(event.request).then((hit) => {
       const network = fetch(event.request)

@@ -41,14 +41,11 @@ jobs:
       - name: Kerää julkaistavat tiedostot
         run: |
           mkdir -p _site/dist
-          # Peli ja työhuone ovat kaksi sovellusta mutta JAKAVAT
-          # palvelutyöntekijän (sw.js): sama laajuus ei voi kuulua
-          # kahdelle työntekijälle. Manifesteja on silti kaksi, ja jos
-          # työhuoneen oma jää kopioimatta, sivu latautuu mutta ei
-          # asennu kotivalikkoon — ja se näkyy vasta puhelimella.
+          # Yksi sovellus, yksi manifesti, yksi palvelutyöntekijä.
+          # Erillinen työhuonesivusto (tyohuone.html + oma manifesti)
+          # poistettiin 18.8.2026: työhuone on nyt pelin sisällä
+          # kehittäjävivun takana (hampurilaisvalikon TYÖHUONE-osio).
           cp index.html manifest.webmanifest sw.js .nojekyll _site/
-          # tyohuone-kasikirja.html poistui v698:n siivouksessa.
-          cp tyohuone.html tyohuone.webmanifest _site/
           cp -r css js assets docs _site/
           cp dist/matkakirja.html _site/dist/
 
