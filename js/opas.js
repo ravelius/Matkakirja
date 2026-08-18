@@ -9,7 +9,7 @@
 
 import { el } from './mapart.js';
 import { SAATIEDOT } from './packs/saatiedot.js';
-import { piirraVuosiSaa } from './saa.js';
+import { piirraVuosiSaa, vuosiSaaSelite } from './saa.js';
 import { html } from './ui-apurit.js';
 import {
   nahtavyydenKaruselli, nahtavyydenKuva, nahtavyysKappale,
@@ -300,7 +300,7 @@ export function opasKaudet(ui, matkailu) {
  * ylläpidettävänä eikä kaupungin lukuja ole kahdessa paikassa.
  * Kaupunki ilman säätietoja taittuu ilman graafia.
  *
- * @param {{keskilampo: number[], sade: number[]}} tiedot
+ * @param {{keskilampo: number[], sade: number[], ylin?: number[], alin?: number[]}} tiedot
  */
 export function opasSaagraafi(tiedot) {
   if (!tiedot?.keskilampo?.length || !tiedot?.sade?.length) return null;
@@ -333,9 +333,10 @@ export function avaaSaagraafi(tiedot, ankkuri) {
   const laatikko = html('div', 'opas-saa-suuri');
   laatikko.appendChild(piirraVuosiSaa(tiedot));
   // Sama lähderivi sanasta sanaan kuin lehden omassa suurennoksessa
-  // (naytaVuosiSaa) — sama graafi ansaitsee saman selitteen.
-  laatikko.appendChild(html('p', 'opas-saa-suuri-teksti',
-    'Käyrä keskilämpö °C · palkit sademäärä mm · Open-Meteo (ERA5), 1991–2020'));
+  // (naytaVuosiSaa) — sama graafi ansaitsee saman selitteen. Rivi
+  // tulee js/saa.js:stä, jotta kaistallinen ja kaistaton sanamuoto
+  // pysyvät molemmissa paikoissa samoina.
+  laatikko.appendChild(html('p', 'opas-saa-suuri-teksti', vuosiSaaSelite(tiedot)));
   overlay.appendChild(laatikko);
   koti.appendChild(overlay);
   ankkuri.setAttribute('aria-expanded', 'true');

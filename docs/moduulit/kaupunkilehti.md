@@ -41,7 +41,10 @@ vaadi koodimuutoksia:
   napautuksesta koko vuoden graafin, kun sille on rivi
   `js/packs/saatiedot.js`:ssä (lat/lon + kuukausinormaalit; normaalien
   laskutapa kerrotaan tiedoston alussa). Ilman riviä lehti näkyy
-  ilman säätä — mitään ei tarvitse koodata.
+  ilman säätä — mitään ei tarvitse koodata. Graafissa on lisäksi
+  vaihteluvyöhyke, joka piirtyy rivin `ylin`- ja `alin`-kentistä;
+  ne hakee `tools/hae-saanormaalit.mjs`, ja ilman niitä graafi
+  näkyy ennallaan pelkkänä keskilämpökäyränä.
 - **Kohtaaminen (v274):** "Etsi kätkö" -napin tilalla kohtaamis-
   kaupungissa on hahmon kutsu (esim. "Tapaa gondolieeri"), ja hahmo
   kehystää aarretehtävän tervehdyksineen ja repliikkeineen. Data:

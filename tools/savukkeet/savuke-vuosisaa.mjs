@@ -3,11 +3,16 @@
  *  1. Kortti aukeaa säärivistä ja vihjeessä lukee "vuosiennuste".
  *  2. Graafissa on pehmeä käyräpolku, alue, palkit, ääripäiden lukemat
  *     ja kuluvan kuukauden korostus.
- *  3. Kuvakaappaus silmätarkistukseen.
+ *  3. Vaihteluvyöhyke (omistajan toive 18.8.2026) on käyrän takana ja
+ *     asteikko venyy sen mukaan.
+ *  4. Kuvakaappaukset silmätarkistukseen useasta ilmastosta.
  */
 import http from 'node:http';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
+
+const ULOS = process.env.KAAPPAUSKANSIO ?? '/tmp/matkakirja-kaappaukset';
+mkdirSync(ULOS, { recursive: true });
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
@@ -44,28 +49,68 @@ sivu.on('pageerror', (v) => virheet.push(String(v)));
 await sivu.goto(osoite, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 
-const tulos = await sivu.evaluate(async () => {
-  const ui = window.matkakirja.ui;
-  ui.openArrival(ui.game.board.cityById.get('lontoo'));
-  await new Promise((r) => setTimeout(r, 500));
-  const rivi = document.querySelector('.lehti-saa');
-  const vihje = rivi?.querySelector('.saa-vihje')?.textContent ?? '';
-  ui.naytaVuosiSaa();
-  await new Promise((r) => setTimeout(r, 1600));
-  const svg = document.querySelector('.vuosisaa');
-  return {
-    vihje,
-    kortti: Boolean(document.querySelector('.vuosisaa-kortti')),
-    kayra: Boolean(svg?.querySelector('path.saa-viiva')),
-    alue: Boolean(svg?.querySelector('path.saa-alue')),
-    palkkeja: svg?.querySelectorAll('.saa-palkki').length ?? 0,
-    arvoja: svg?.querySelectorAll('.saa-arvo').length ?? 0,
-    kaista: Boolean(svg?.querySelector('.saa-kuluva-kaista')),
-    kuluva: Boolean(svg?.querySelector('.saa-kuluva')),
-    liuku: Boolean(svg?.querySelector('#vuosisaa-liuku')),
-    viivaOffset: svg ? getComputedStyle(svg.querySelector('.saa-viiva')).strokeDashoffset : '',
-  };
-});
+/*
+ * Yhden kaupungin kortti auki ja mitat talteen. Sama funktio ajetaan
+ * usealle kaupungille: Lontoo on varsinainen koekappale, muut ovat
+ * ääri-ilmastoja, joissa kaista venyttää asteikkoa eniten.
+ */
+async function avaaKortti(id) {
+  return sivu.evaluate(async (kaupunki) => {
+    const ui = window.matkakirja.ui;
+    ui.suljeKulttuuriKuva();
+    const kohde = ui.game.board.cityById.get(kaupunki);
+    if (!kohde) return null;
+    ui.openArrival(kohde);
+    await new Promise((r) => setTimeout(r, 500));
+    const rivi = document.querySelector('.lehti-saa');
+    const vihje = rivi?.querySelector('.saa-vihje')?.textContent ?? '';
+    /*
+     * Odotus kattaa kaikki kortin animaatiot varmuusvaralla: käyrän
+     * piirto on 150 + 1100 ms ja ääripäiden lukemat 1100 + 400 ms.
+     * Aiempi 1600 ms jätti niin ohuen marginaalin, että kuormitettu
+     * kone ehti jäädä kesken piirron.
+     */
+    ui.naytaVuosiSaa();
+    await new Promise((r) => setTimeout(r, 2400));
+    const svg = document.querySelector('.vuosisaa');
+    const luku = (s) => [...(svg?.querySelectorAll(s) ?? [])].map((e) => e.textContent);
+    /*
+     * Kaistan pitää OIKEASTI ympäröidä käyrä eikä vain olla olemassa.
+     * Mitta otetaan poluista itsestään: kaistan rajauslaatikon on
+     * katettava käyrän rajauslaatikko pystysuunnassa. Tämä paljastaa
+     * sekä väärin päin lasketun kaistan että asteikon, joka ei venynyt
+     * kaistan mukana.
+     */
+    const kaistaEl = svg?.querySelector('path.saa-kaista');
+    const viivaEl = svg?.querySelector('path.saa-viiva');
+    const kaistaBox = kaistaEl?.getBBox?.();
+    const viivaBox = viivaEl?.getBBox?.();
+    return {
+      vihje,
+      kortti: Boolean(document.querySelector('.vuosisaa-kortti')),
+      kayra: Boolean(viivaEl),
+      alue: Boolean(svg?.querySelector('path.saa-alue')),
+      palkkeja: svg?.querySelectorAll('.saa-palkki').length ?? 0,
+      arvoja: svg?.querySelectorAll('.saa-arvo').length ?? 0,
+      kaista: Boolean(svg?.querySelector('.saa-kuluva-kaista')),
+      kuluva: Boolean(svg?.querySelector('.saa-kuluva')),
+      liuku: Boolean(svg?.querySelector('#vuosisaa-liuku')),
+      vyohyke: Boolean(kaistaEl),
+      // Sietovara on pehmeän käyrän ylityksille: Catmull–Rom kaartaa
+      // jyrkän ääripään ohi hiukan, eikä pikselin heitto ole vika.
+      vyohykeYmparoi: Boolean(kaistaBox && viivaBox
+        && kaistaBox.y <= viivaBox.y + 1.5
+        && kaistaBox.y + kaistaBox.height >= viivaBox.y + viivaBox.height - 1.5),
+      vyohykeOpacity: kaistaEl ? getComputedStyle(kaistaEl).opacity : '',
+      asteikko: luku('.saa-akseli').filter((t) => t.endsWith('°')),
+      selite: document.querySelector('.vuosisaa-kortti .kuvalahde')?.textContent ?? '',
+      aria: svg?.getAttribute('aria-label') ?? '',
+      viivaOffset: viivaEl ? getComputedStyle(viivaEl).strokeDashoffset : '',
+    };
+  }, id);
+}
+
+const tulos = await avaaKortti('lontoo');
 vaadi('säärivin vihjeessä lukee vuosiennuste', /vuosiennuste/i.test(tulos.vihje), tulos.vihje);
 vaadi('vuosisääkortti aukeaa', tulos.kortti);
 vaadi('käyrä on pehmeä polku ja sen alla on liukuvärialue',
@@ -76,9 +121,30 @@ vaadi('kuluva kuukausi korostuu kaistalla ja kirjaimella',
   tulos.kaista && tulos.kuluva, JSON.stringify(tulos));
 vaadi('käyrän piirto on valmis (dashoffset 0)',
   parseFloat(tulos.viivaOffset) === 0, tulos.viivaOffset);
+vaadi('vaihteluvyöhyke on piirretty', tulos.vyohyke);
+vaadi('vyöhyke ympäröi keskilämpökäyrän', tulos.vyohykeYmparoi, JSON.stringify(tulos));
+vaadi('vyöhykkeen häivytys on valmis', parseFloat(tulos.vyohykeOpacity) === 1, tulos.vyohykeOpacity);
+vaadi('lähderivi kertoo kaistasta', /kaista tyypillinen vaihteluväli/.test(tulos.selite), tulos.selite);
+vaadi('aria-label kertoo vaihteluvälistä', /vaihteluväli/.test(tulos.aria), tulos.aria);
+vaadi('lämpöasteikossa on nollaviiva', tulos.asteikko.includes('0°'), tulos.asteikko.join(' '));
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 
-await sivu.locator('.vuosisaa-kortti').screenshot({ path: '/tmp/matkakirja-kaappaukset/vuosisaa.png' });
+await sivu.locator('.vuosisaa-kortti').screenshot({ path: `${ULOS}/vuosisaa.png` });
+
+/*
+ * Silmätarkistuksen kaappaukset aloituslaudan kaupungeista: Kairon
+ * aavikkovuorokausi repii kaistan leveäksi, Moskovan talvi vie sen
+ * pakkasen puolelle ja Tokio jää siltä väliltä. Kaupunki, jota tämän
+ * pelin laudalla ei ole, ohitetaan hiljaa — savuke ei saa kaatua
+ * laudan kokoonpanoon.
+ */
+for (const id of ['kairo', 'moskova', 'tokio', 'ateena']) {
+  const otos = await avaaKortti(id);
+  if (!otos?.kortti) { console.log(`ohi   ${id} — ei tällä laudalla`); continue; }
+  await sivu.locator('.vuosisaa-kortti').screenshot({ path: `${ULOS}/vuosisaa-${id}.png` });
+  console.log(`kuva  ${id}: asteikko ${otos.asteikko.join(' ')}`
+    + `${otos.vyohyke ? '' : '  (EI KAISTAA)'}`);
+}
 await selain.close();
 palvelin.close();
 console.log(`\n${lapi}/${kaikki} läpi.`);
