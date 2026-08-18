@@ -2217,6 +2217,74 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+      /*
+     * SANKARIEN AUKIO (18.8.2026): tämä oli koko Euroopan laudan ainoa
+     * kartan kohde, joka avasi Wikipedia-ponnahduksen oman jutun
+     * sijaan (mitattu tools-ajolla; Wienin Schönbrunn korjattiin
+     * v892:ssa). Lähde en-Wikipedia (Heroes' Square (Budapest),
+     * Museum of Fine Arts (Budapest), Hall of Art, Budapest),
+     * tiivistetty omin sanoin; kuvien lisenssit ja tekijät todennettu
+     * Commonsin API:sta ja kuvat katsottu silmin.
+     *
+     * PYLVÄÄN KORKEUTTA EI MAINITA: lehden kansikuvan selite sanoo
+     * "36 metriä korkea pylväs", mutta lukua ei löydy en-Wikipedian
+     * artikkeleista. Se on jätetty tästä jutusta pois eikä toistettu.
+     */
+    'Sankarien aukio': {
+      aika: '1896–1906',
+      teksti: 'Unkarilaiset laskevat valtionsa alkavan vuodesta 896, '
+          + 'jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. '
+          + 'Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen '
+          + 'kaupunginosan: Andrássy-katu jatkettiin, sen alle '
+          + 'louhittiin Manner-Euroopan ensimmäinen metro, ja kadun '
+          + 'päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, '
+          + 'aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta '
+          + '1906. Suunnittelija oli arkkitehti Albert Schickedanz, '
+          + 'joka piirsi myös aukion molemmat museot.'
+        + '\n\n'
+        + 'Keskellä kohoaa pylväs, jonka huipulla arkkienkeli Gabriel '
+          + 'kantaa oikeassa kädessään Unkarin pyhää kruunua ja '
+          + 'vasemmassa kaksivartista ristiä. Pylvään juurella ratsastaa '
+          + 'seitsemän magyaripäällikköä Árpád etunenässä — heistä '
+          + 'tiedetään historiallisesti hyvin vähän, ja sekä puvut että '
+          + 'hevoset ovat kuvanveistäjän mielikuvitusta. Kaarevissa '
+          + 'pylväiköissä seisoo neljätoista Unkarin hallitsijaa ja '
+          + 'vapaustaistelijaa, ja pylväiköiden päällä on neljä '
+          + 'allegoriaa: työ ja vauraus, sota, rauha sekä tieto ja kunnia.'
+        + '\n\n'
+        + 'Kaikki eivät ole seisoneet siellä alusta asti. Kun aukio '
+          + 'rakennettiin, Unkari oli osa Itävalta-Unkaria ja vasemman '
+          + 'pylväikön viisi viimeistä paikkaa kuuluivat Habsburgeille '
+          + 'aina Frans Joosefiin asti. Muistomerkki vaurioitui toisessa '
+          + 'maailmansodassa, ja jälleenrakennuksessa Habsburgit '
+          + 'korvattiin toisilla hahmoilla. Aukion edessä on '
+          + 'sankarien muistokivi, jota oppaat kutsuvat usein '
+          + 'tuntemattoman sotilaan haudaksi — se ei ole hauta, eikä '
+          + 'Unkarissa ole sellaista lainkaan. Kiven alla on sen sijaan '
+          + 'arteesinen kaivo: se porattiin valmiiksi 1878, ulottuu '
+          + '971 metrin syvyyteen ja antaa 74-asteista vettä viereiseen '
+          + 'Széchenyin kylpylään.',
+      kuvat: [
+        {
+          tiedosto: "Heroes' Square (Budapest) 20180824.jpg",
+          selite: 'Aukio sivusta: keskellä uurrettu pylväs, jonka '
+            + 'huipulla Gabriel levittää siipensä, pylvään juurella '
+            + 'ratsastajien pronssiryhmä, ja molemmin puolin kaartuvat '
+            + 'pylväiköt patsaineen. Aukion kivetys jatkuu tyhjänä '
+            + 'kuvan alareunaan.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Statues (Seven chieftains) in Heroes\' Square, Budapest (2026).jpg',
+          selite: 'Seitsemän päällikön ryhmä läheltä: hevoset ovat '
+            + 'patinoituneet vihreiksi, ratsastajilla on sarvipäähineet '
+            + 'ja turkikset, ja jalustan kiveen on veistetty '
+            + 'koristereliefi.',
+          lahde: 'Max263, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   pariisi: {
     'Eiffel-torni': {
