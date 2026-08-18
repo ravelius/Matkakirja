@@ -2045,6 +2045,37 @@ export function drawTokenIcon(parent, type) {
       el('path', { d: 'M-6.6,-4.4 A5,5 0 0 1 -2.8,-7.8', class: 'icon-linssi-kajo' }, g);
       break;
 
+    case 'pollo': {
+      /*
+       * VIISAS PÖLLÖ AARTEENA (omistajan tilaus 18.8.2026): pöllö
+       * löytyy ensimmäisen laatan alta, joten paljastuskortin
+       * kääntyvälle laatalle tarvitaan sen oma kuvake.
+       *
+       * Sama seepiaviivapiirros kuin pöllönapissa (js/pollo.js
+       * POLLO_IKONI), mutta polut on kirjoitettu tähän auki eikä
+       * tuotu: js/mapart.js on kartan piirtokerros eikä saa riippua
+       * pöllömoduulista. Napin ikoni on 24 x 24 -ruudukossa, tämä
+       * ruudukko on keskitetty, joten koko kuva siirretään
+       * ryhmätransformilla — luvut pysyvät silloin luettavina
+       * rinnakkain napin kanssa.
+       */
+      const owl = el('g', { transform: 'translate(-12,-12)' }, g);
+      const viiva = (d) => el('path', { d, class: 'icon-pollo-viiva' }, owl);
+      viiva('M6.4 5.2 8.4 7.6');            // vasen töyhtö
+      viiva('M17.6 5.2 15.6 7.6');          // oikea töyhtö
+      viiva('M12 3.7c3.3 0 5.7 2.6 5.7 6.3 0 5.1-2.3 8.5-5.7 8.5'
+        + 's-5.7-3.4-5.7-8.5c0-3.7 2.4-6.3 5.7-6.3z'); // pää ja vartalo
+      el('circle', { cx: 9.6, cy: 9.5, r: 1.9, class: 'icon-pollo-viiva' }, owl);
+      el('circle', { cx: 14.4, cy: 9.5, r: 1.9, class: 'icon-pollo-viiva' }, owl);
+      el('circle', { cx: 9.6, cy: 9.5, r: 0.75, class: 'icon-pollo-silma' }, owl);
+      el('circle', { cx: 14.4, cy: 9.5, r: 0.75, class: 'icon-pollo-silma' }, owl);
+      viiva('M12 11.3 11 13.1h2z');         // nokka
+      viiva('M8.7 14.7c1 .9 1.9 1.3 3.3 1.3s2.3-.4 3.3-1.3'); // siiven raja
+      viiva('M9.4 18.4v1.6M14.6 18.4v1.6'); // jalat
+      viiva('M4.4 20.2h15.2');              // oksa
+      break;
+    }
+
     default: {
       // Jalokivi: hiottu kanta ja särmät.
       el('path', {

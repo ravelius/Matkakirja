@@ -104,7 +104,9 @@ import {
   MAAKARTAT, KAUPUNKIKARTAT, mittakaava,
 } from './packs/maakartat.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
-import { polloAnkkuri, polloSulje, polloVihje, polloVihjePois } from './pollo.js';
+import {
+  POLLO_AARRE, polloAnkkuri, polloPaivitaNakyvyys, polloSulje, polloVihje, polloVihjePois,
+} from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio } from './ehdotukset.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import { seuraavaTietajataso, tietajataso } from './tietajatasot.js';
@@ -1518,6 +1520,19 @@ export class UI {
     this.valintavihjeViive = VALINTAVIHJEEN_VIIVE;
     this.valintavihjeAjastin = null;
     this.valintavihjeVaihe = false;
+    /*
+     * PÖLLÖN KUPLAT ODOTTAVAT LÖYTYMISTÄ (omistajan tilaus 18.8.2026).
+     *
+     * Pöllö on aarre, eikä sitä ole pelissä ennen ensimmäistä laattaa.
+     * Kuplia ehtii silti syntyä: heti ensimmäisestä kaupungista tulee
+     * 60 tietäjäpistettä (uusi lauta 50 + uusi kaupunki 10), mikä
+     * ylittää tason 2 rajan (40 tp) jo ennen kuin yhtään laattaa on
+     * käännetty. Siksi jono eikä pelkkä vaikeneminen: ennen löytymistä
+     * kuplan teksti pannaan talteen ja puretaan paljastuksen jälkeen
+     * (puraPolloJono) — muuten pelaaja menettäisi ensimmäisen
+     * tietäjätasonsa onnittelun kokonaan.
+     */
+    this.polloJono = [];
 
     this.viewBoxSize = { vw: 1000, vh: 1000 };
     // Aloituskartan lähikuva ja sen vaakapanorointi (puhelin).
@@ -1545,8 +1560,32 @@ export class UI {
      * näyttäjä, sama kuin valintavihjeellä.
      */
     this.ehdotusKuplaAjastin = ajastaEhdotusKupla((teksti) => {
-      if (!this.dead) polloVihje(teksti);
+      if (!this.dead) this.polloKupla(teksti);
     });
+    /*
+     * PÖLLÖN NÄKYVYYS UUDELLE PELILLE. Nappi katoaa ja ilmestyy pelin
+     * tilan mukana (game.polloLoydetty), ja uusi peli vaihtaa UI:n
+     * alta ilman että #intro liikkuu — pöllön oma tarkkailija ei siis
+     * huomaisi mitään. Ilman tätä riviä edellisen pelin löytämä pöllö
+     * jäisi riviin uudenkin pelin alkuun.
+     */
+    polloPaivitaNakyvyys();
+  }
+
+  /**
+   * Pöllön minipuhekupla: heti jos pöllö on löytynyt, muuten jonoon.
+   *
+   * Ennen ensimmäistä laattaa pöllöä ei ole pelissä, eikä sen napin
+   * vieressä voi näyttää mitään. Kupla ei kuitenkaan saa hävitä: se
+   * odottaa löytöhetkeä ja tulee heti paljastuksen jälkeen.
+   */
+  polloKupla(teksti) {
+    if (!teksti || this.dead) return;
+    if (this.game?.polloLoydetty === false) {
+      this.polloJono.push(teksti);
+      return;
+    }
+    polloVihje(teksti);
   }
 
   /* --- näkymän koko ja sen elpyminen taustalta ---------------------- */
@@ -4998,7 +5037,10 @@ export class UI {
   paivitaValintavihje() {
     const { game } = this;
     const odottaaValintaa = game.phase === 'move' && !game.player?.isBot
-      && !this.katselu && !this.busy && !this.radioPaalla();
+      && !this.katselu && !this.busy && !this.radioPaalla()
+      // Pöllö on aarre (18.8.2026): ennen ensimmäistä laattaa se ei ole
+      // pelissä eikä siis vinkkaa mitään — ajastintakaan ei viritetä.
+      && game.polloLoydetty !== false;
     if (!odottaaValintaa) {
       if (this.valintavihjeVaihe) this.peruValintavihje();
       this.valintavihjeVaihe = false;
@@ -9854,6 +9896,115 @@ export class UI {
     // Löytö päätyy matkalaukkuun: yläreunan Laukku-nappi heilahtaa
     // eloisasti merkiksi (omistajan toive). Tyhjä laatta ei tuo mitään.
     if (type !== 'empty') this.elavoitaLaukku();
+    /*
+     * ENSIMMÄISEN LAATAN ALTA LÖYTYY MYÖS PÖLLÖ (omistajan tilaus
+     * 18.8.2026). Laatan oma sisältö on juuri nähty kokonaan, ja
+     * pöllö tulee sen PERÄÄN omana korttinaan — ei tilalle. Portti on
+     * tässä eikä kutsupaikoissa, koska jokainen käännetty laatta
+     * kulkee tämän metodin läpi.
+     */
+    if (this.game.takePolloPaljastus?.()) await this.naytaPolloAarre();
+  }
+
+  /**
+   * VIISAS PÖLLÖ PALJASTUU AARTEENA (omistajan tilaus 18.8.2026).
+   *
+   * Sama kortti ja sama rytmi kuin laatan paljastuksessa: laatta
+   * kääntyy, sädeviivat syttyvät ja tekstit nousevat. Pöllöllä ei ole
+   * AI-aarrekuvaa, joten se käyttää kääntyvää laattaa kuten kenkä ja
+   * taikalasi — kuvake piirretään js/mapart.js:n omalla haarallaan.
+   *
+   * Ei pisteitä, ei rahaa, ei laukkutavaraa: pöllön paikka
+   * matkalaukussa on tietäjäpisterivin kuvake, joka on ollut siellä
+   * jo ennen löytöä. Kortti kertoo vain, kuka tuli matkaan.
+   *
+   * Lopuksi nappi ilmestyy alanappiriviin ja löytymistä odottaneet
+   * kuplat puretaan.
+   */
+  async naytaPolloAarre() {
+    const overlay = html('div', 'reveal-overlay');
+    const scene = html('div', 'reveal-scene');
+
+    const stage = html('div', 'reveal-stage');
+    const disc = html('div', 'reveal-disc pollo');
+    const back = html('div', 'reveal-face reveal-back');
+    back.appendChild(revealFaceSvg('back'));
+    const front = html('div', 'reveal-face reveal-front');
+    front.appendChild(revealFaceSvg('front', 'pollo'));
+    disc.appendChild(back);
+    disc.appendChild(front);
+    const rays = revealRaysSvg();
+    rays.classList.add('reveal-rays');
+    stage.appendChild(rays);
+    stage.appendChild(disc);
+    scene.appendChild(stage);
+
+    const caption = html('div', 'reveal-caption');
+    caption.appendChild(html('span', 'reveal-huudahdus', POLLO_AARRE.huudahdus));
+    caption.appendChild(html('strong', '', POLLO_AARRE.nimi));
+    caption.appendChild(html('span', '', POLLO_AARRE.selite));
+    caption.appendChild(html('p', 'reveal-isoisa', POLLO_AARRE.esittely));
+    scene.appendChild(caption);
+    overlay.appendChild(scene);
+    this.quizDialog.appendChild(overlay);
+
+    const ruksi = html('button', 'reveal-sulje', '×');
+    ruksi.type = 'button';
+    ruksi.setAttribute('aria-label', 'Sulje paljastus');
+    overlay.appendChild(ruksi);
+
+    /*
+     * Esittely luetaan kertojan äänellä kuten tarinakaaren
+     * aarretekstit, ja kortti odottaa luennan loppuun asti — teksti on
+     * pitkä, eikä pöllön ensiesiintyminen saa katketa kesken lauseen.
+     * Napautus tai ruksi ohittaa odotuksen.
+     */
+    let lukijaValmis = null;
+    if (kertojaTila() !== 'ei') {
+      let luentaPaattyi = null;
+      const tts = lueKertojana(this, POLLO_AARRE.esittely, {
+        viive: 900,
+        onLoppu: () => luentaPaattyi?.(),
+      });
+      if (tts) lukijaValmis = new Promise((resolve) => { luentaPaattyi = resolve; });
+    }
+    const napautus = new Promise((resolve) => {
+      overlay.addEventListener('pointerdown', resolve, { once: true });
+    });
+    const luentaValmis = lukijaValmis
+      ? Promise.race([lukijaValmis, this.wait(30000)]) : Promise.resolve();
+    const odota = (min) => Promise.race([Promise.all([this.wait(min), luentaValmis]), napautus]);
+    const seliteMs = (POLLO_AARRE.selite.length + POLLO_AARRE.esittely.length) * 45;
+
+    if (this.reducedMotion) {
+      disc.classList.add('flipped');
+      rays.classList.add('shown');
+      caption.classList.add('shown');
+      sfx.play(treasureSound('star'));
+      await odota(900 + seliteMs);
+    } else {
+      await this.wait(420);
+      disc.classList.add('flipped');
+      sfx.play('flip');
+      await this.wait(760);
+      sfx.play('clack');
+      sfx.play(treasureSound('star'));
+      rays.classList.add('shown');
+      caption.classList.add('shown');
+      await odota(1250 + seliteMs);
+      overlay.classList.add('leaving');
+      await this.wait(300);
+    }
+    pysaytaLukija();
+    overlay.remove();
+    /*
+     * Nappi riviin pienen nytkäyksen kera. Löytymistä odottaneet
+     * kuplat purkautuvat itsestään seuraavassa tapahtumaerässä
+     * (naytaTietajaNousut), joka ajetaan heti tämän jälkeen — siellä
+     * ne asettuvat oikeaan järjestykseen laatan omien
+     * tapahtumakuplien perään.
+     */
+    polloPaivitaNakyvyys(true);
   }
 
   /**
@@ -10618,9 +10769,24 @@ export class UI {
    */
   async naytaTietajaNousut() {
     const nousut = this.game.takeTietajaNousut?.() ?? [];
-    for (const taso of nousut) {
+    /*
+     * ENNEN PÖLLÖN LÖYTYMISTÄ ONNITTELU JÄÄ JONOON (omistajan tilaus
+     * 18.8.2026). Pöllöä ei ole pelissä ennen ensimmäistä laattaa,
+     * eikä sen napin vieressä ole mihin kuplaa kiinnittää — ja tason
+     * nousuja ehtii varmasti tulla: ensimmäinen kaupunki antaa 60 tp
+     * (uusi lauta 50 + uusi kaupunki 10) eli jo tason 2 (40 tp).
+     * Jono puretaan seuraavassa tapahtumaerässä löydön jälkeen.
+     */
+    if (this.game.polloLoydetty === false) {
+      for (const taso of nousut) this.polloJono.push(taso.onnittelu);
+      return;
+    }
+    // Odottaneet kuplat ensin, sitten tämän hetken nousut.
+    const jono = this.polloJono;
+    this.polloJono = [];
+    for (const teksti of [...jono, ...nousut.map((t) => t.onnittelu)]) {
       if (this.dead) return;
-      polloVihje(taso.onnittelu);
+      polloVihje(teksti);
       await this.wait(this.reducedMotion ? 0 : TIETAJAKUPLA_MS);
     }
   }

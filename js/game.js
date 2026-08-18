@@ -279,6 +279,22 @@ export class Game {
      * pisteiden lisäys näytä kahta ilmoitusta päällekkäin.
      */
     this.tietajaNousut = [];
+    /*
+     * VIISAS PÖLLÖ ON AARRE (omistajan tilaus 18.8.2026).
+     *
+     * Pelin alussa pöllöä ei ole: nappi on piilossa eikä pöllö puhu
+     * mitään. Se löytyy OMANA AARTEENAAN ensimmäisen käännetyn laatan
+     * alta (revealToken) — laatan oma sisältö säilyy koskemattomana,
+     * pöllö tulee sen LISÄKSI eikä maksa mitään: ei pisteitä, ei
+     * rahaa, ei tasapainomuutosta.
+     *
+     * Lippu tallennetaan (toJSON), koska se on pelaajan etenemistä.
+     * `polloPaljastus` sen sijaan on istunnon hetkellinen viesti
+     * käyttöliittymälle ("näytä paljastusanimaatio nyt"), joka
+     * poimitaan takePolloPaljastuksella eikä koskaan päädy levylle.
+     */
+    this.polloLoydetty = false;
+    this.polloPaljastus = false;
     // Avaus on pelkkää kerrontaa: sääntöasiat ovat Säännöt-dialogissa eivätkä
     // lokirivejä. Laudan intro-teksti jää pakkoihin muuta käyttöä varten.
     // Vaellus alkaa lähtöpisteen valinnalla, jos sitä ei ole annettu valmiiksi.
@@ -558,6 +574,16 @@ export class Game {
     const events = this.events;
     this.events = [];
     return events;
+  }
+
+  /**
+   * Odottaako pöllön paljastus näyttämistä? Kutsu nollaa lipun, joten
+   * animaatio ajetaan täsmälleen kerran (js/ui.js playTokenReveal).
+   */
+  takePolloPaljastus() {
+    const odottaa = this.polloPaljastus === true;
+    this.polloPaljastus = false;
+    return odottaa;
   }
 
   /** Poimii tietäjätason nousut pöllön kuplia varten ja tyhjentää jonon. */
@@ -2224,6 +2250,20 @@ export class Game {
     this.revealed.set(cityId, type);
 
     const p = this.player;
+    /*
+     * PÖLLÖ LÖYTYY ENSIMMÄISEN LAATAN ALTA (omistajan tilaus
+     * 18.8.2026). Mikä tahansa laatta kelpaa — myös tyhjä, rosvo tai
+     * hevosenkenkä: löytö ei ole palkinto oikeasta laatasta vaan
+     * matkakumppanin ensitapaaminen. Laatan oma sisältö kulkee alla
+     * ennallaan, eikä pöllö tuo pisteitä, rahaa eikä tavaraa.
+     *
+     * Vain ihmispelaajalle: pöllö puhuu pelaajalle, ei botille, joten
+     * botin kääntämä laatta ei vie löytöhetkeä pelaajalta.
+     */
+    if (!this.polloLoydetty && !p.isBot) {
+      this.polloLoydetty = true;
+      this.polloPaljastus = true;
+    }
     const token = this.aarreTyyppi(type, cityId);
     p.finds.push(type);
     // Mistä mantereelta laatta löytyi — passi näyttää maailmankartan
@@ -2389,6 +2429,7 @@ export class Game {
       scheduleShown: [...this.scheduleShown],
       recordNoted: this.recordNoted,
       recordMark: this.recordMark,
+      polloLoydetty: this.polloLoydetty,
       winnerId: this.winner ? this.winner.id : null,
       turnCount: this.turnCount,
       log: this.log,
@@ -2500,6 +2541,19 @@ export class Game {
     game.scheduleShown = new Set(data.scheduleShown ?? []);
     game.recordNoted = !!data.recordNoted;
     game.recordMark = data.recordMark ?? null;
+    /*
+     * VANHAT TALLENNUKSET: PÖLLÖ ON JO LÖYDETTY.
+     *
+     * Kenttä syntyi vasta pöllöaarteen myötä, joten sen puuttuminen
+     * tarkoittaa tallennusta ajalta, jolloin pöllö oli mukana pelin
+     * alusta asti. Kesken oleva matka ei saa menettää kumppaniaan, ja
+     * uudelleen "löytäminen" olisi vielä oudompaa — siksi puuttuva
+     * kenttä luetaan aina todeksi. Uusi peli kirjoittaa kenttään
+     * epätoden, joten heti alussa tallennettu ja ladattu peli ei
+     * vahingossa saa pöllöä (lippu on tallennuksessa mukana).
+     */
+    game.polloLoydetty = data.polloLoydetty ?? true;
+    game.polloPaljastus = false;
     game.lastPath = null;
     game.winner = data.winnerId === null ? null : game.players[data.winnerId] ?? null;
     game.turnCount = data.turnCount ?? 1;

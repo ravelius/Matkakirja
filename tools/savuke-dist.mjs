@@ -86,7 +86,12 @@ await sivu.waitForTimeout(2000);
 await sivu.evaluate(() => {
   const g = window.matkakirja?.game;
   if (g?.phase === 'pickstart') g.actionPickStart('lontoo', null);
+  // Pöllö on aarre (18.8.2026): nappi on piilossa ennen ensimmäistä
+  // laattaa. Tämä savuke tarkistaa niputetun version rakenteen, joten
+  // löytö kuitataan suoraan.
+  if (g) g.polloLoydetty = true;
   window.matkakirja?.ui?.render();
+  window.matkakirjaPollo?.paivitaNakyvyys?.();
 });
 await sivu.waitForTimeout(1200);
 
