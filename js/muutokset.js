@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 861, teksti: 'Palautedialogi suoraan ehdotuslomakkeeksi' },
   { v: 860, teksti: 'Työhuoneen tilastot peliin, erillissivusto pois' },
   { v: 859, teksti: 'Kaikki aarteet uuteen paljastusnäkymään' },
   { v: 858, teksti: 'Vuosisäähän ylin ja alin lämpötila (vaihteluvyöhyke)' },

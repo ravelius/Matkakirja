@@ -8299,7 +8299,8 @@ export class UI {
   palauteKentat(tilanne = '') {
     const lohko = html('div', 'periaate-lomake');
     if (!PALAUTE_LOMAKE) {
-      lohko.appendChild(this.palauteGithub(tilanne));
+      // Omistajan päätös 18.8.2026: ei GitHub-linkkiä eikä alkutekstiä —
+      // ehdotuskanava on ainoa palautetie, ja se näkyy suoraan.
       this.lisaaEhdotusOsio(lohko, tilanne);
       return lohko;
     }
@@ -8405,27 +8406,6 @@ export class UI {
   }
 
   /**
-   * Varareitti, kun lomakepalvelua ei ole vielä asetettu: palaute
-   * GitHubin kautta. Julkinen kanava, ei sähköpostiosoitetta.
-   */
-  palauteGithub(tilanne = '') {
-    const laatikko = html('p', 'periaate-huomio');
-    const linkki = html('a', 'periaate-linkki', 'Lähetä palautetta GitHubissa');
-    const otsikko = tilanne
-      ? `Palautetta: ${tilanne}`
-      : 'Palautetta Unohdetusta aarteesta';
-    const runko = `\n\n---\nMatkakirja v${peliVersio()}`
-      + (tilanne ? `\nKohta pelissä: ${tilanne}` : '');
-    linkki.href = 'https://github.com/ravelius/Matkakirja/issues/new'
-      + `?title=${encodeURIComponent(otsikko)}`
-      + `&body=${encodeURIComponent(runko)}`;
-    linkki.target = '_blank';
-    linkki.rel = 'noopener';
-    laatikko.appendChild(linkki);
-    return laatikko;
-  }
-
-  /**
    * Alakulman huutomerkki (omistajan toive): palaute juuri siitä
    * kohdasta peliä, jossa pelaaja on. Ikkuna kertoo lyhyesti mistä on
    * kyse ja näyttää, mikä tilanne kulkee viestin mukana.
@@ -8440,18 +8420,6 @@ export class UI {
 
     const otsikko = html('h2', 'periaate-otsikko', 'Kerro mitä huomasit');
     kortti.appendChild(otsikko);
-
-    const selitys = html('p', 'periaate-teksti');
-    selitys.textContent = 'Tätä kautta voit lähettää palautetta '
-      + 'mahdollisista virheistä tai kehitysehdotuksista juuri tässä '
-      + 'kohdassa peliä. Kerro lyhyesti mitä näet ja mitä odotit.';
-    kortti.appendChild(selitys);
-
-    if (tilanne) {
-      const rivi = html('p', 'palaute-tilanne');
-      rivi.textContent = `Viestin mukana lähtee: ${tilanne}`;
-      kortti.appendChild(rivi);
-    }
 
     kortti.appendChild(this.palauteKentat(tilanne));
 
