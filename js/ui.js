@@ -4501,6 +4501,18 @@ export class UI {
       for (const kx of this.kiertoKohdat(x)) {
         const g = el('g', { class: 'target' }, this.targetLayer);
         el('circle', { cx: kx, cy: y, r: 30, class: 'target-hit' }, g);
+        /*
+         * Pelkkä koriste renkaan alla: pehmeästi laajeneva kultahalo,
+         * jolla valittavat kohteet erottuvat kartasta (omistajan
+         * havainto 18.8.2026). Ei osu klikkauksiin (pointer-events:
+         * none CSS:ssä) — osuma-alue on yllä oleva target-hit.
+         */
+        el('circle', {
+          cx: kx,
+          cy: y,
+          r: opt.city ? 22 : 14,
+          class: 'target-halo',
+        }, g);
         el('circle', {
           cx: kx,
           cy: y,
