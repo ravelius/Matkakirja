@@ -84,7 +84,7 @@
  */
 
 import {
-  esihaePala, luoPuheSoitin, paloitteleVirkkeiksi, puheTuettu,
+  esihaePala, kappaleenPalat, luoPuheSoitin, puheTuettu,
 } from './puhe.js';
 /*
  * Taustaäänen väistö luennan ajaksi (omistajan tilaus 15.8.2026:
@@ -543,9 +543,11 @@ export function kokoaLuettavaTeksti(juuri, asetukset = {}) {
  *      (samat ohitukset, sama ohitaEkaOtsikko)
  *   2. kohdat[0] on ensimmäinen kappale; sivu avataan aina ylhäältä,
  *      joten luenta alkaa siitä (nakyvaKohta palauttaa 0)
- *   3. puheen pilkonta antaa koko jonon ENSIMMÄISEN VIRKKEEN omana
- *      palanaan (js/puhe.js pilkoPaloiksi), jotta luenta alkaa heti —
- *      juuri se virke haetaan tässä
+ *   3. puheen pilkonta antaa KOKO ENSIMMÄISEN KAPPALEEN yhtenä
+ *      palana (js/puhe.js kappaleenPalat; omistaja 18.8.2026 —
+ *      palaraja kesken kappaleen kuului intonaatiohyppynä), joten
+ *      juuri se pala haetaan tässä. Puskurin merkitys vain kasvoi:
+ *      generoitava aloituspala on nyt kokonainen kappale.
  *
  * Persoona ja säilölohko ratkaistaan samalla säännöllä kuin
  * lueAaneen, ja nopeusasetus tulee mukaan avaimeen puhe.js:ssä.
@@ -567,7 +569,11 @@ export function esipuskuroiLuenta(juuri, {
    */
   const pituus = kohdat.reduce((summa, k) => summa + k.teksti.length, kohdat.length - 1);
   if (pituus < vahimmais) return null;
-  const eka = paloitteleVirkkeiksi(kohdat[0].teksti)[0];
+  // Sama johto kuin soittimessa: ensimmäinen ei-tyhjä rivi on
+  // ensimmäinen kappale, ja sen ensimmäinen pala on koko kappale
+  // (tai kattoon pilkottu alku, jos kappale on ylipitkä).
+  const ekaRivi = String(kohdat[0].teksti).split('\n').find((r) => r.trim());
+  const eka = ekaRivi ? kappaleenPalat(ekaRivi)[0]?.teksti : null;
   if (!eka) return null;
   const lohko = sailio !== undefined ? sailio : (persoona === 'pollo' ? null : persoona);
   esihaePala(eka, persoona, lohko);
