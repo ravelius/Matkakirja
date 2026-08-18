@@ -204,6 +204,10 @@ export const RAAMATTU = {
       otsikko: 'Karttalinssit',
       tila: 'luonnos',
       kohdat: [
+        'LINSSIT KYTKETÄÄN VAIN MATKALAUKUSTA (omistaja '
+          + '18.8.2026): hampurilaisvalikko on pelin ympäryksiä '
+          + '(äänet, uusi peli, ehdota sisältöä, versio), ei '
+          + 'pelisisältöä.',
         'Kartta on pelin keskusesine, ei valikko: pelaaja oppii '
           + 'näkemään siitä yhä uusia asioita.',
         'Linssi = animoitu visualisointi kartalla juoksevine '
@@ -445,7 +449,12 @@ export const RAAMATTU = {
           + 'oikeat vastaukset.',
         'MENOT: laiva ja lento · mannerraja 1000 p · varusteet '
           + '~1000 p · visavihje ja 50:50.',
-        'Kokemuspisteet nostavat tasoa ja kysymysten vaikeutta.',
+        'Kokemuspisteet ovat pelaajalle TIETÄJÄPISTEITÄ (tp; '
+          + 'omistaja 18.8.2026). Ne nostavat kymmentä tietäjätasoa '
+          + '(Untuvikko 0 tp → Suurtietäjä 2400 tp, js/tietajatasot.js) '
+          + 'ja kysymysten vaikeutta. Tasonnousu ei anna muuta kuin '
+          + 'nimikkeen; pöllö onnittelee minipuhekuplalla. Nimikkeet '
+          + 'ja rajat ovat päätoimittajan sisältöpäätös.',
         'Varusteet ovat linssejä; ostetaan kaupasta. Superlinssi '
           + 'vain ansaitsemalla.',
         'KAKSI VIHJETTÄ: visavihje = ostettava apu visassa; '
