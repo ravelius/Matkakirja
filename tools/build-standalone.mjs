@@ -204,19 +204,21 @@ const MODULES = [
   'js/sisaltotaulut.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
-  // Lukijoiden ehdotukset ennen lehteä ja ui:ta (molemmat tuovat sen;
+  // Minipopup ennen ehdotuksia ja tasogalleriaa (molemmat tuovat sen;
   // moduuli tuo vain ui-apurit, joka on yllä).
+  'js/minipopup.js',
+  // Lukijoiden ehdotukset ennen lehteä ja ui:ta (molemmat tuovat sen;
+  // moduuli tuo ui-apurit ja minipopupin, jotka ovat yllä).
   'js/ehdotukset.js',
   // Pro-tuottajan tekijäsivu ennen lähderivien piirtäjiä (nähtävyydet
   // ja maalehti tuovat sen; moduuli tuo ehdotukset ja ui-apurit, jotka
   // ovat yllä).
   'js/tekijakortti.js',
   /*
-   * Minipopup ennen tasogalleriaa ja tasogalleria ennen ui.js:ää:
-   * galleria tuo minipopupin, ui.js gallerian. Molemmat tuovat lisäksi
-   * ui-apurit ja tietajatasot, jotka ovat jo yllä.
+   * Tasogalleria ennen ui.js:ää: galleria tuo minipopupin (yllä) ja
+   * ui.js gallerian. Molemmat tuovat lisäksi ui-apurit ja
+   * tietajatasot, jotka ovat jo yllä.
    */
-  'js/minipopup.js',
   'js/tietajagalleria.js',
   // Mallin B pilotit ennen ui.js:ää (ui tuo ne).
   'js/liput.js',

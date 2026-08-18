@@ -4950,6 +4950,28 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
   margin: 0;
 }
 
+/*
+ * Pro-osion rastirivi (omistaja 18.8.2026): vivun tilalla checkbox
+ * "Haluan hakea pro-sisällöntuottajaksi" ja pieni i, joka avaa
+ * minipopup-selitteen. Rasti perii periaate-rastin kirjasimen; i on
+ * sama seloste-nappi kuin laukussa.
+ */
+.pro-rasti-rivi {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pro-rasti-nimio {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--font-type);
+  font-size: 0.82rem;
+  color: #6d5a3c;
+}
+
 .periaate-nimio {
   display: block;
   margin-top: 0.7rem;
