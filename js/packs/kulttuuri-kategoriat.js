@@ -11226,6 +11226,46 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       /*
+       * AVAUSKUVAT (18.8.2026, E00-täydennys): etusivun iso kuvapaikka
+       * selaa kolmea yleisnäkymää samaan tapaan kuin Tokiossa.
+       * Flickrin paikkahaku on Bagdadissa harva, joten kuvat ovat
+       * Commonsista. Bagdad luetaan joen kautta: kaupunki ilmasta
+       * Tigrisin silmukan ympärillä, kaupunginosa minareetteineen ja
+       * ilta joen rannalta. Lisenssit ja tekijät Commonsin API:sta,
+       * sijainnit kuvaustekstistä ja kategorioista, jokainen kuva
+       * katsottu silmin 18.8.2026.
+       */
+      avauskuvat: [
+        {
+          tiedosto: '160731-D-PB383-021 Tigris River flows through Baghdad, July 2016.JPG',
+          selite: 'Tigris kaartaa kaupungin halki ilmasta katsottuna: joki '
+            + 'tekee leveän silmukan, jonka niemellä on matalaa '
+            + 'rakennuskantaa ja rannoilla palmulehtoja ja '
+            + 'viljelypalstoja. Etualalla risteilee kaupunkimoottoritie '
+            + 'liittymineen, ja oikealla piirtyy voimalan savupiippuja.',
+          lahde: 'DoD photo by Navy Petty Officer 2nd Class Dominique A. '
+            + 'Pineiro, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'The city of Baghdad is seen from the air.jpg',
+          selite: 'Kaupunginosa ilmasta iltapäivävalossa: tasakattoisten '
+            + 'talojen keskeltä nousee kaakeloitu minareetti ja '
+            + 'kupolikattoinen moskeija, kortteleiden välissä kasvaa '
+            + 'palmuja, ja takana kaartuu moottoritien ylikulku '
+            + 'liikenneympyrän yli.',
+          lahde: 'Chairman of the Joint Chiefs of Staff, Wikimedia Commons '
+            + '(CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Mesopotamian sunset.jpg',
+          selite: 'Auringonlasku Tigrisin yllä: aurinko painuu vastarannan '
+            + 'talojen ja puiden taakse, taivas hehkuu oranssina ja joki '
+            + 'heijastaa värin. Rannan tuntumassa kelluu pieni vene, ja '
+            + 'etualalla tummuu pensaikko.',
+          lahde: 'Silver mahmoud, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
        * MATKAILIJAN BAGDAD (paketti O6, omistajan tilaus 16.8.2026:
        * "rakenna samaan malliin seuraavaksi bagdad, teheran, soul,
        * tokio, shanghai ja tripoli"). Rakenne on monistettu Pariisin
@@ -13032,6 +13072,47 @@ export const KULTTUURI_KATEGORIAT = {
             + 'perunanlohkoja kuviolliseen pahvivuokaan, ja vieressä on '
             + 'matala pelti tummaksi grillattua ruokaa.',
           lahde: 'Mardetanha, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT (18.8.2026, E00-täydennys): etusivun iso kuvapaikka
+       * selaa kolmea yleisnäkymää samaan tapaan kuin Tokiossa.
+       * Flickrin paikkahaku on Teheranissa harva, joten kuvat ovat
+       * Commonsista. Teheran luetaan aina Alborzia vasten — vuorimuuri
+       * on kaupungin kiintopiste, ja se on kaikissa kolmessa:
+       * Milad-tornista, kattojen yli ja pohjoisista kortteleista.
+       * Ensimmäinen on Commonsin Featured picture. HUOM: asia-
+       * valokuvat.js käyttää jo Tabiat-sillan siluettikuvaa (Tehran
+       * skyline- Alborz Mountains on background), joten se jätettiin
+       * pois toistona. Lisenssit ja tekijät Commonsin API:sta,
+       * sijainnit kuvaustekstistä ja kategorioista, jokainen kuva
+       * katsottu silmin 18.8.2026.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'North of tehran.jpg',
+          selite: 'Pohjois-Teheran Milad-tornista kuvattuna kirkkaana '
+            + 'kevätpäivänä: talomeri jatkuu lumihuippuisen '
+            + 'Alborz-vuoriston juurelle asti, pilvet heittävät '
+            + 'kaupungin ylle suuria varjolaikkuja, ja korttelien väliin '
+            + 'jää vihreitä puistokaistoja.',
+          lahde: 'Amir Pashaei, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'A clean day in -Tehran . East of city. (4184590177).jpg',
+          selite: 'Itäistä kaupunkia kattojen yli: etualalla tasakattoja '
+            + 'ilmastointilaitteineen, vasemmalla harmaa tornitalo ja '
+            + 'keskeneräinen teräsrunko, ja taustalla kohoaa lumen '
+            + 'peittämä vuorimuuri pilvien alla.',
+          lahde: 'Jadi from Iran, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: '971009-AVAN-NorthView.jpg',
+          selite: 'Pohjoiset kaupunginosat talvipäivänä: vaaleiden '
+            + 'kerrostalojen välissä seisoo nostureita, keskellä '
+            + 'kortteleita tummanvihreä puistometsikkö, ja koko näkymän '
+            + 'päättää Alborzin luminen rintama.',
+          lahde: 'Safa.daneshvar, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -15519,6 +15600,108 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * ARKI JA ILTA (18.8.2026, E00-täydennys): Soulin ensimmäinen
+     * aihesivu kansiosion rinnalle. Aiheeksi valittiin illanvietto,
+     * koska KOR-maalehti kattaa jo historian, rakennukset, ruoan,
+     * kuvataiteen, luonnon ja musiikin (K-pop mukaan lukien), ja
+     * kaupungin kansi kattaa portit, Bukchonin, palatsit ja
+     * Gwangjangin torin. LÄHTEET: en-Wikipedia "Jjimjilbang",
+     * "Pojangmacha" ja "PC bang" (haettu 18.8.2026). KUVAT: lisenssit
+     * ja tekijät Commonsin API:sta, sijainti (Soul) kuvaustekstistä,
+     * jokainen kuva katsottu silmin. Kulttuurivisa tarkistettu
+     * (asia-questions.js soul: hangul, Han-joki, Gyeongbokgung,
+     * kulttuurivienti) — minitehtävä ei osu siihen.
+     */
+    {
+      id: 'arki',
+      nimi: 'Arki ja ilta',
+      johdanto: 'Soulin ilta ei lopu illalliseen: kadulle nousee '
+        + 'telttakoju, kylpylä on auki läpi yön, ja pelihallissa '
+        + 'istutaan vierekkäin, vaikka kotona odottaisi oma kone.',
+      nostot: [
+        {
+          otsikko: 'Koju on nimeltään katettu vaunu',
+          tiedosto: 'Seoul street food 2011 march 20.jpg',
+          teksti: 'Pojangmacha tarkoittaa katettua vaunua: kärry, jonka '
+            + 'ympärille pingotetaan iltaisin katos. Malli syntyi '
+            + '1950-luvulla, jolloin runko oli puuta ja kate '
+            + 'puuvillakangasta; sittemmin puu vaihtui metalliin, kangas '
+            + 'pressuun ja karbidilamput ledeihin. Vuonna 2012 kojuja '
+            + 'laskettiin Soulissa noin 3 100. Tiskiltä ostetaan '
+            + 'riisikakkuja tulisessa kastikkeessa, kalakakkuvartaita ja '
+            + 'täytettyjä lettuja, ja syödään seisten tai matalalla '
+            + 'jakkaralla. Illan pimetessä moni koju muuttuu '
+            + 'pikkuravintolaksi, jossa istutaan soju-lasin ääressä '
+            + 'pitkään; tunnetuimmat kojurivit ovat Jongnon varrella.',
+          selite: 'Pojangmacha-koju iltapimeällä Soulissa. Punaisen '
+            + 'pressukatoksen kirkas ikkuna avautuu tiskille, jolla on '
+            + 'vartaita, kastikepulloja ja talouspaperirulla; myyjä '
+            + 'nostaa annosta paistoaltaasta ja kaksi asiakasta odottaa '
+            + 'teltan suojassa. Taustalla palavat kadun neonkyltit.',
+          lahde: 'LinasD, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kylpylään voi jäädä yöksi',
+          tiedosto: 'Dragon Hill Spa & Resort, Seoul (49175167692).jpg',
+          teksti: 'Jjimjilbang on korealainen kylpylä, jossa kylpyosastot '
+            + 'ovat erikseen miehille ja naisille mutta yhteinen puoli '
+            + 'kaikille: lämmitetyllä lattialla loikoillaan, syödään ja '
+            + 'katsotaan televisiota ovella annetuissa t-paidassa ja '
+            + 'shortseissa. Saunat ovat holvimaisia uuneja, joiden '
+            + 'seiniä on rapattu jadejauheella, suolalla tai '
+            + 'mineraaleilla. Perinteinen kiuassauna hanjeungmak '
+            + 'mainitaan kuningas Sejongin aikakirjoissa 1400-luvulla, '
+            + 'jolloin valtion tukemia saunoja hoitivat '
+            + 'buddhalaismunkit. Moni kylpylä palvelee läpi yön, ja '
+            + 'makuusaliin voi jäädä nukkumaan — perheille se on halpa '
+            + 'viikonlopunvietto.',
+          selite: 'Dragon Hill -kylpylän talo Yongsanissa Soulissa. '
+            + 'Vaalean palatsimaisen julkisivun katolla lukee '
+            + 'sinisin kirjaimin kylpylän nimi ja 24H, ja kadun puolella '
+            + 'on koristeellinen portti kylttirivistöineen. Etualalla on '
+            + 'pyöriä ja skoottereita pysäköitynä puun ympärille.',
+          lahde: 'Matt Kieffer from London, United Kingdom, Wikimedia '
+            + 'Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Halliin mennään, vaikka kotona on kone',
+          tiedosto: 'T1 Base Camp PC bang interior - 2023-07-21.jpg',
+          teksti: 'PC bang tarkoittaa PC-huonetta: sali täynnä '
+            + 'pelikoneita, joiden ääressä istutaan tuntimaksulla. '
+            + 'Vaikka lähes joka kodissa on nopea verkkoyhteys, halliin '
+            + 'mennään kavereiden takia — ja koska koneet ovat '
+            + 'tehokkaampia kuin omat. Kasvun sysäsi liikkeelle '
+            + 'StarCraft-peli vuonna 1998, ja hallien määrä nousi '
+            + 'sadasta noin 25 000:een vuosina 1997–2011. Moni '
+            + 'korealainen verkkopeli palkitsee hallista kirjautuvan '
+            + 'pelaajan ylimääräisellä pelivaluutalla, ja useimmat '
+            + 'hallit ovat auki vuorokauden ympäri. Suuret turnaukset '
+            + 'katsotaan yhdessä hallin ruuduilta kuin urheilua — mitä '
+            + 'kilpapelaaminen Etelä-Koreassa onkin.',
+          selite: 'Pelihalli Hongdaen kaupunginosassa Soulissa. Matalien '
+            + 'väliseinien lokeroissa on rivikaupalla näyttöjä ja '
+            + 'punavalkoisia pelituoleja, käytävän lattiaa reunustaa '
+            + 'valonauha, ja seinillä on punaisia kylttejä ja '
+            + 'palkintovuosien taulu. Käytävällä kävelee kaksi kävijää.',
+          lahde: 'Wvdp, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä pelin ilmestyminen vuonna 1998 käynnisti '
+          + 'PC bang -hallien kasvun?',
+        vaihtoehdot: [
+          'StarCraft',
+          'Tetris',
+          'Pac-Man',
+          'Minecraft',
+        ],
+        oikea: 0,
+        fakta: 'Hallien määrä nousi StarCraftin vanavedessä sadasta noin '
+          + '25 000:een reilussa kymmenessä vuodessa, ja '
+          + 'kilpapelaamisesta kasvoi Etelä-Koreassa katsomourheilua.',
+      },
+    },
   ],
   /*
    * SHANGHAI (paketti O6, omistajan tilaus 16.8.2026). Kaupungille ei
@@ -15973,6 +16156,108 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * ARKI (18.8.2026, E00-täydennys): Shanghain ensimmäinen aihesivu
+     * kansiosion rinnalle. Aiheeksi valittiin kaupunkilaisten arki,
+     * koska CHN-maalehti kattaa jo historian, ruoan, kuvataiteen,
+     * luonnon ja tieteen, ja kaupungin kansi kattaa shikumenit, Yun
+     * puutarhan, Bundin ja xiaolongbaon (siksi aamiaisnosto kertoo
+     * cifantuanista, ei nyyteistä). LÄHTEET: en-Wikipedia "Shanghai
+     * Marriage Market", "Cifantuan", "Youtiao" ja "Shanghainese"
+     * (haettu 18.8.2026). KUVAT: lisenssit ja tekijät Commonsin
+     * API:sta, sijainti kuvaustekstistä ja kategorioista (cifantuan:
+     * Category:Cuisine of Shanghai), jokainen kuva katsottu silmin.
+     * Kulttuurivisa tarkistettu (asia-questions.js shanghai: Jangtse,
+     * Bund, maglev) — minitehtävä ei osu siihen.
+     */
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Shanghain arki alkaa kadunkulmasta, jossa aamiainen '
+        + 'kääritään riisiin. Viikonloppuna puistossa vanhemmat '
+        + 'etsivät lapsilleen puolisoa paperi-ilmoituksin, ja bussi '
+        + 'kuuluttaa pysäkit kielellä, jota muu Kiina ei ymmärrä.',
+      nostot: [
+        {
+          otsikko: 'Vanhemmat pitävät torilla lastensa puolta',
+          tiedosto: 'Notices at marriage market, Shanghai.JPG',
+          teksti: 'Kansanpuiston kulmassa toimii avioliittotori: '
+            + 'vanhemmat kokoontuvat lauantaisin ja sunnuntaisin '
+            + 'puoliltapäivin etsimään naimattomille aikuisille '
+            + 'lapsilleen puolisoa. Lapsen tiedot — syntymävuosi, '
+            + 'pituus, koulutus, ammatti, tulot ja horoskooppimerkki — '
+            + 'kirjoitetaan arkille, joka ripustetaan narulle tai '
+            + 'avatun sateenvarjon päälle, ja sitten kävellään lukemassa '
+            + 'muiden arkkeja ja jututetaan lupaavien kohdalla. Tori on '
+            + 'toiminut vuodesta 2004, ja moni käy siellä vuosikausia: '
+            + 'osumia syntyy harvoin, ja osa vanhemmista ei ole '
+            + 'kertonut ilmoituksesta lapselleen lainkaan.',
+          selite: 'Avioliittotorin ilmoituksia Kansanpuistossa '
+            + 'Shanghaissa. Katetun käytävän seinälle on ripustettu '
+            + 'narujen varaan rivikaupalla valkoisia ja punaisia '
+            + 'paperiarkkeja käsin kirjoitettuine tietoineen, ja '
+            + 'oikealla kaksi ihmistä istuu taittopöydän ääressä '
+            + 'keltaisen sateenvarjon alla.',
+          lahde: 'Jpbowen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Aamiainen kääritään riisiin',
+          tiedosto: 'CiFanTuan2.jpg',
+          teksti: 'Shanghain aamiainen ostetaan kadunkulman luukulta. '
+            + 'Cifantuan tehdään käsissä: tahmea riisi taputellaan '
+            + 'levyksi, keskelle pannaan pätkä youtiaoa eli rapeaa '
+            + 'uppopaistettua taikinatankoa ja suolakasvista tai '
+            + 'sokeria, ja paketti kierretään tiukaksi pötköksi. '
+            + 'Kylkeen otetaan kulhollinen soijamaitoa, makeana tai '
+            + 'suolaisena. Youtiaoon liittyy tarina: tangot paistetaan '
+            + 'pareittain, koska parin sanotaan esittävän 1100-luvun '
+            + 'virkamiestä ja hänen vaimoaan, joiden juoni koitui '
+            + 'kansallissankarina pidetyn kenraali Yue Fein tuhoksi. '
+            + 'Kansa on siitä asti paistanut petturit öljyssä joka '
+            + 'aamu uudelleen.',
+          selite: 'Cifantuan lähikuvassa: tahmeista riisinjyvistä '
+            + 'puristetun pötkön sisältä pilkistää rapeaksi paistetun '
+            + 'youtiao-tangon kullanruskea kierre. Pötköä pidellään '
+            + 'muovipussin läpi, ja oikeassa reunassa näkyy syömäpuikko.',
+          lahde: 'Galaxyharrylion, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaupungilla on oma kieli',
+          tiedosto: 'Shanghai Bus Route 14 at Dalian Rd. in China 20250706.jpg',
+          teksti: 'Kujilla ja toreilla puhutaan shanghainkieltä, joka '
+            + 'kuuluu wu-kieliin eikä aukea mandariinia osaavalle. '
+            + 'Puhujia on noin 14 miljoonaa, ja kieli muotoutui sataman '
+            + 'mukana: kun kaupunki avattiin kaupalle 1850-luvulla, '
+            + 'muuttajat toivat Suzhousta ja Ningbosta murteensa, jotka '
+            + 'sulautuivat paikalliseen puheeseen. Yleiskielen opetus '
+            + 'työnsi shanghain syrjään, ja kouluissa sen käyttöä '
+            + 'hillittiin vuodesta 1992, mutta 2010-luvulla suunta '
+            + 'kääntyi: ensimmäinen shanghainkielinen romaani ilmestyi '
+            + '2011, bussit alkoivat kuuluttaa pysäkkejä shanghaiksi '
+            + '2013, ja 2017 kieltä oppi myös puhelimen ääniavustaja.',
+          selite: 'Linjan 14 sinivalkoinen johdinauto Dalian-kadulla '
+            + 'Shanghaissa. Auton kyljessä on kiinalaisin merkein '
+            + 'teksti sadan vuoden bussiliikenteestä, katolla '
+            + 'virroitintangot, ja takana kohoaa porrastettu '
+            + 'toimistotorni puiden yllä.',
+          lahde: '4084470 0.smil, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Keitä youtiao-taikinatankojen kaksoisparin sanotaan '
+          + 'esittävän?',
+        vaihtoehdot: [
+          'Kenraalin tuhonnutta virkamiestä ja tämän vaimoa',
+          'Kahta riitaisaa leipuria',
+          'Keisaria ja keisarinnaa',
+          'Kahta lohikäärmettä',
+        ],
+        oikea: 0,
+        fakta: 'Tarinan virkamies juonitteli kenraali Yue Fein tuhon, ja '
+          + 'youtiaon kantoninkielinen nimi tarkoittaa öljyssä '
+          + 'paistettua paholaista.',
+      },
+    },
   ],
   /*
    * TRIPOLI (paketti O6, omistajan tilaus 16.8.2026). Kaupungilla ei
@@ -16031,6 +16316,44 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vihreät kaiteet. Kadun varren talon seinässä on '
             + 'värikkäitä maalauksia, ja edessä kasvaa köynnöksiä.',
           lahde: 'Abdul-Jawad Elhusuni, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT (18.8.2026, E00-täydennys): etusivun iso kuvapaikka
+       * selaa kolmea yleisnäkymää samaan tapaan kuin Tokiossa.
+       * Flickrin paikkahaku on Tripolissa harva, joten kuvat ovat
+       * Commonsista. Tripoli luetaan mereltä: rantabulevardi ilmasta,
+       * sama katu maan tasalta ja lopuksi koko niemi lentokoneen
+       * ikkunasta. Hylätty: "Dath al-Imad towers" (taustalla
+       * hallitsijan kuvataulu) ja "Tripoli CBD Panorama" (saumainen
+       * kooste, roskainen etuala). Lisenssit ja tekijät Commonsin
+       * API:sta, sijainnit kuvaustekstistä ja kategorioista, jokainen
+       * kuva katsottu silmin 18.8.2026.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Tripoli aerial view.jpg',
+          selite: 'Rantabulevardi ilmasta iltapäivällä: kaareva '
+            + 'hotellitorni ja tornitalojen rivi seisovat aivan meren '
+            + 'tuntumassa, rantatie seuraa kivistä aallonmurtajaa, ja '
+            + 'edustalla lepää tyyni merenlahti.',
+          lahde: 'Moomkenb3, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tripoli CBD.JPG',
+          selite: 'Rantakadun varsi maan tasalta: vasemmalla kohoaa '
+            + 'kaareva lasijulkisivuinen hotelli, edempänä neljä '
+            + 'kahdeksankulmaista tornitaloa vierekkäin, ja leveällä '
+            + 'kadulla ajaa autoja palmuistutusten välissä.',
+          lahde: 'Jaw101ie, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'TRIPOLI.TRABLUS CITY - panoramio.jpg',
+          selite: 'Koko kaupunki lentokoneen ikkunasta: niemi ja satama '
+            + 'aallonmurtajineen työntyvät siniseen mereen, rantaviiva '
+            + 'kaartuu kaukaisuuteen, ja talomeri jatkuu rannasta '
+            + 'sisämaan tasangolle asti.',
+          lahde: 'Kayhan ERTUGRUL, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       /*
@@ -16338,6 +16661,112 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Patrick André Perron, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+    },
+    /*
+     * KAUPPA JA KARAVAANIT (18.8.2026, E00-täydennys): Tripolin
+     * ensimmäinen aihesivu kansiosion rinnalle. Aiheeksi valittiin
+     * kaupunki kaupan solmuna, koska kansi ja opas kattavat jo
+     * medinan kujat, käsityöläiset ja rakennukset, ja
+     * nahtavyysjutut.js kertoo Punaisesta linnasta, Darghutista ja
+     * Karamanlin moskeijasta — niiden tarinoita ei toisteta tässä.
+     * LBY-maalehteä ei ole, joten maapuolen toistoa ei voi syntyä.
+     * LÄHTEET: en-Wikipedia "Trans-Saharan trade" (Ghadamesin tie,
+     * Ibn Battutan karavaanikoot, Tripoli–Murzuk–Tšad-reitin
+     * merkitys), "Ghadames" ja "USS Philadelphia (1799)" (haettu
+     * 18.8.2026). KUVAT: lisenssit ja tekijät Commonsin API:sta,
+     * jokainen katsottu silmin; karavaanikuva on Furlongin
+     * Tripoli-matkakirjasta (1909, PD), ja sen aukeaman teksti
+     * kuvaa juuri keskipäivän leiriä. Kulttuurivisa tarkistettu
+     * (africa-kulttuuri.js tripoli: malouf) — minitehtävä ei osu
+     * siihen.
+     */
+    {
+      id: 'kauppa',
+      nimi: 'Kauppa ja karavaanit',
+      johdanto: 'Tripoli oli Saharan portti Välimerelle: satamaan '
+        + 'päättyi karavaanitie aavikon takaa, ja merellä kaupungin '
+        + 'kaapparit perivät ohikulkijoilta maksun — kunnes yksi '
+        + 'saalis poltettiin keskellä satamaa.',
+      nostot: [
+        {
+          otsikko: 'Tuhat kamelia yhdessä jonossa',
+          tiedosto: 'The gateway to the Sahara; observations and experiences in Tripoli (1909) (14781737231).jpg',
+          teksti: 'Tripoli oli Saharan ylittävän kaupan pohjoinen pää. '
+            + 'Ghadamesin tie toi kaupunkiin kultaa ja norsunluuta '
+            + 'Nigerjoen varrelta asti, ja toinen reitti kulki Murzukin '
+            + 'keitaan kautta Tšadjärvelle — sitä pitkin on arvioitu '
+            + 'kulkeneen valtaosan Välimeren rannikon ja Keski-Afrikan '
+            + 'liikenteestä kahden vuosituhannen ajan. Matkaaja Ibn '
+            + 'Battutan mukaan tavallisessa karavaanissa kulki noin '
+            + 'tuhat kamelia ja suurimmissa kaksitoista tuhatta. Vettä '
+            + 'ei voitu kantaa koko matkalle, joten edeltä lähetettiin '
+            + 'juoksijoita keitaille: sieltä tuotiin vettä karavaania '
+            + 'vastaan, kun perillä oltiin vasta päivien päästä.',
+          selite: 'Karavaanin keskipäivän leiri Tripolin takamaalla '
+            + 'valokuvassa vuodelta 1909. Lastatut kamelit makaavat '
+            + 'hiekkakuopan pohjalla kuormat kyljillään, ja miehet '
+            + 'lepäävät viittakankaista kepeillä pystytettyjen '
+            + 'varjokatosten alla.',
+          lahde: 'Internet Archive Book Images, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Etappikaupungin kadut kulkevat talojen alla',
+          tiedosto: "Ghadames - Le vie della città antica all'ombra - panoramio.jpg",
+          teksti: 'Karavaanitien ensimmäinen suuri etappi Tripolista '
+            + 'lounaaseen oli Ghadamesin keidas 462 kilometrin päässä — '
+            + 'aavikon helmeksi sanottu kaupunki, joka on Saharan '
+            + 'laidan vanhimpia. Sen vanha osa on rakennettu helteen '
+            + 'ehdoilla: kadut kulkevat talojen alla katettuina '
+            + 'käytävinä, joihin aurinko ei yllä. Talo jakautuu '
+            + 'kerroksiin — pohjakerros on varasto, jonne karavaanin '
+            + 'kuorma laskettiin, keskikerros kuuluu perheelle, ja '
+            + 'kattoterassit muodostavat naisten oman kulkureitistön '
+            + 'kaupungin yli. Vanhakaupunki on maailmanperintökohde, ja '
+            + 'se palveli Saharan-kaupan tukikohtana 1800-luvulle asti.',
+          selite: 'Ghadamesin vanhankaupungin katu: valkoiseksi kalkittu '
+            + 'käytävä kulkee talojen alla, kattoa kannattavat paksut '
+            + 'palmunrunkopalkit, ja seinustalla on muurattuja '
+            + 'istuinpenkkejä. Käytävän perältä lankeaa valoaukosta '
+            + 'auringonvalo hiekkalattialle.',
+          lahde: 'giomodica, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Fregatti paloi keskellä satamaa',
+          tiedosto: 'Burning of the uss philadelphia.jpg',
+          teksti: 'Merellä Tripolin tulot perustuivat kaappaukseen: '
+            + 'kauppalaivoja otettiin lunnaita vastaan, ja valtiot '
+            + 'maksoivat suojelumaksua, jotta niiden lipun alla sai '
+            + 'purjehtia rauhassa. Vuonna 1801 kiista maksuista johti '
+            + 'sotaan Yhdysvaltain kanssa. Saartoa ajanut fregatti '
+            + 'Philadelphia ajoi lokakuussa 1803 kartoittamattomalle '
+            + 'riutalle sataman edustalla, ja miehistö jäi vangiksi. '
+            + 'Jottei laiva jäisi kaappareille, '
+            + 'luutnantti Stephen Decatur purjehti helmikuussa 1804 '
+            + 'satamaan 83 vapaaehtoisen kanssa paikallisalukseksi '
+            + 'naamioidulla laivalla ja poltti fregatin '
+            + 'ankkuripaikalleen. Sota päättyi 1805, ja Yhdysvaltain '
+            + 'merijalkaväen hymnissä lauletaan yhä Tripolin rannoista.',
+          selite: 'Edward Moranin maalaus vuodelta 1897: Philadelphia '
+            + 'palaa yöllä Tripolin satamassa liekkien lyödessä '
+            + 'mastoihin, ja etualalla Decaturin miehet pakenevat '
+            + 'pienellä purjealuksella. Palon kajo heijastuu aallokosta.',
+          lahde: 'Edward Moran, Wikimedia Commons (PD)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta kamelia tavallisessa Saharan '
+          + 'karavaanissa Ibn Battutan mukaan kulki?',
+        vaihtoehdot: [
+          'Noin tuhat',
+          'Noin sata',
+          'Noin kymmenen',
+          'Noin sata tuhatta',
+        ],
+        oikea: 0,
+        fakta: 'Suurimmissa karavaaneissa laskettiin kaksitoista tuhatta '
+          + 'kamelia, ja juomavettä tuotiin keitailta karavaania '
+          + 'vastaan matkan varrelle.',
+      },
     },
   ],
   jekaterinburg: [
