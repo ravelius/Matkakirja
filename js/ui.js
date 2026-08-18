@@ -1568,7 +1568,9 @@ export class UI {
      * näyttäjä, sama kuin valintavihjeellä.
      */
     this.ehdotusKuplaAjastin = ajastaEhdotusKupla((teksti) => {
-      if (!this.dead) this.polloKupla(teksti);
+      // Kohde 'valikko': ehdota-nappi asuu hampurilaisessa, joten
+      // kupla osoittaa sinne (omistaja 18.8.2026).
+      if (!this.dead) this.polloKupla(teksti, 'valikko');
     });
     /*
      * PÖLLÖN NÄKYVYYS UUDELLE PELILLE. Nappi katoaa ja ilmestyy pelin
@@ -1587,13 +1589,13 @@ export class UI {
    * vieressä voi näyttää mitään. Kupla ei kuitenkaan saa hävitä: se
    * odottaa löytöhetkeä ja tulee heti paljastuksen jälkeen.
    */
-  polloKupla(teksti) {
+  polloKupla(teksti, kohde) {
     if (!teksti || this.dead) return;
     if (this.game?.polloLoydetty === false) {
-      this.polloJono.push({ teksti });
+      this.polloJono.push({ teksti, kohde });
       return;
     }
-    polloVihje(teksti);
+    polloVihje(teksti, kohde);
   }
 
   /**
@@ -1603,7 +1605,7 @@ export class UI {
   naytaPolloKupla(kupla) {
     if (!kupla?.teksti) return;
     if (kupla.kuva || kupla.sakeet?.length) polloOnnittelu(kupla);
-    else polloVihje(kupla.teksti);
+    else polloVihje(kupla.teksti, kupla.kohde);
   }
 
   /* --- näkymän koko ja sen elpyminen taustalta ---------------------- */
